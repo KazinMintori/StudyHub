@@ -51,6 +51,7 @@ export default withMermaid(
         {
           text: 'Môn học khác',
           items: [
+            { text: '📊 Giải thuật nền tảng cho KH Dữ liệu', link: '/giai-thuat-du-lieu/' },
             { text: '⚡ Cấu trúc dữ liệu & Giải thuật', link: '/dsa/' },
             { text: '📐 Toán rời rạc', link: '/discrete-math/' }
           ]
@@ -116,6 +117,14 @@ export default withMermaid(
             text: 'Vật lý Đại cương 2',
             items: [
               { text: '1. Tổng quan & Lộ trình môn học', link: '/vat-ly-2/' }
+            ]
+          }
+        ],
+        '/giai-thuat-du-lieu/': [
+          {
+            text: 'Giải thuật nền tảng cho KH Dữ liệu',
+            items: [
+              { text: '0. Mục lục & Lộ trình môn học', link: '/giai-thuat-du-lieu/' }
             ]
           }
         ],
