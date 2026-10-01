@@ -1,6 +1,6 @@
 # Giải Thuật Nền Tảng Cho Khoa Học Dữ Liệu 📊🔬
 
-Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundations of Data Science / Fundamental Algorithms for Data Science) cung cấp nền tảng toán học và thuật toán hiện đại để giải quyết các bài toán dữ liệu quy mô lớn: hình học không gian nhiều chiều, giảm chiều dữ liệu (SVD, Random Projection), thuật toán dòng dữ liệu (Streaming Algorithms), phân cụm và mô hình đồ thị.
+Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundations of Data Science / Algorithmic Foundations of Data Science) cung cấp nền tảng toán học và thuật toán hiện đại để giải quyết các bài toán dữ liệu quy mô lớn: mô hình hoá bài toán dữ liệu lớn, tính toán phân tán Map-Reduce, phân tích liên kết (PageRank), tìm kiếm tương đồng (MinHash, LSH), chỉ mục véc-tơ, thuật toán dòng dữ liệu (Streaming), nén dữ liệu và cấu trúc dữ liệu ngoài bộ nhớ chính.
 
 ---
 
@@ -8,10 +8,10 @@ Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundatio
 
 ```mermaid
 flowchart LR
-    A["1. Không gian nhiều chiều<br/>(Curse of Dim, Quả cầu d-chiều)"] --> B["2. Phân rã Ma trận & SVD<br/>(Best Rank-k, PCA, NMF)"]
-    B --> C["3. Thuật toán Dòng dữ liệu<br/>(Streaming, Reservoir, Sketch)"]
-    C --> D["4. Phân cụm Dữ liệu<br/>(k-means, Spectral Clustering)"]
-    D --> E["5. Đồ thị & Random Walk<br/>(Markov Chain, PageRank)"]
+    A["1. Mô hình Thuật toán<br/>(Đặc tả, Giới hạn, Bonferroni)"] --> B["2. Phân tán Map-Reduce<br/>(Map, Shuffle, Reduce, Hadoop)"]
+    B --> C["3. Phân tích Đồ thị<br/>(PageRank, Random Walk, Spam)"]
+    C --> D["4. Tìm kiếm Tương đồng<br/>(Jaccard, MinHash, LSH)"]
+    D --> E["5. Dòng Dữ liệu & Nén<br/>(Bloom Filter, Sketch, Huffman)"]
 ```
 
 ---
@@ -20,18 +20,27 @@ flowchart LR
 
 | Bài | Tên chuyên đề | Trạng thái |
 |---|---|---|
-| **00** | **Mục lục & Khung chương trình** | ✅ Sẵn sàng |
-| **01** | Hình học trong không gian nhiều chiều (High-Dimensional Space) | ⏳ Chờ nạp bài |
-| **02** | Phân rã ma trận giá trị kỳ dị (SVD) & Giảm chiều dữ liệu | ⏳ Chờ nạp bài |
-| **03** | Bước ngẫu nhiên và Xích Markov (Random Walks & Markov Chains) | ⏳ Chờ nạp bài |
-| **04** | Thuật toán cho dòng dữ liệu lớn (Streaming Algorithms & Sketching) | ⏳ Chờ nạp bài |
-| **05** | Phân cụm dữ liệu & Spectral Clustering | ⏳ Chờ nạp bài |
-| **06** | Mô hình đồ thị, Đồ thị ngẫu nhiên & Thuật toán PageRank | ⏳ Chờ nạp bài |
+| **Bài 01** | [**Bài toán dữ liệu lớn và mô hình thuật toán**](./bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md) *(Đặc tả, độ đo tương đồng Jaccard, tiêu chí đánh giá thuật toán và nguyên lý Bonferroni)* | ✅ **Đã hoàn thành** |
+| **Bài 02** | [**Mô hình tính toán Map-Reduce**](./bai-02-mapreduce-va-xu-ly-du-lieu-lon.md) *(Mô hình lập trình Map/Reduce/Combine, nhân ma trận, mô hình chi phí và thực hành Hadoop)* | ✅ **Đã hoàn thành** |
+| **Bài 03** | [**PageRank: Mô hình và tính toán**](./bai-03-pagerank-mo-hinh-va-tinh-toan.md) *(Random Surfer, Power Iteration, xử lý Dead Ends và Spider Traps)* | ⏳ Đang biên soạn |
+| **Bài 04** | PageRank theo chủ đề và chống spam liên kết (Topic-Sensitive & TrustRank) | ⏳ Chờ nạp bài |
+| **Bài 05** | Tìm tập tương đồng & Kỹ thuật Shingling / MinHash | ⏳ Chờ nạp bài |
+| **Bài 06** | Tìm kiếm lân cận cục bộ (Locality-Sensitive Hashing - LSH) | ⏳ Chờ nạp bài |
+| **Bài 07** | Tìm kiếm véc-tơ quy mô lớn (Vector Search, HNSW, PQ) | ⏳ Chờ nạp bài |
+| **Bài 08** | Khai phá dòng dữ liệu I: Lấy mẫu và Bộ lọc Bloom (Bloom Filter) | ⏳ Chờ nạp bài |
+| **Bài 09** | Khai phá dòng dữ liệu II: Đếm phân biệt (Flajolet-Martin) và Count-Min Sketch | ⏳ Chờ nạp bài |
+| **Bài 10** | Nén dữ liệu không mất mát: Mã hoá Huffman và Lempel-Ziv | ⏳ Chờ nạp bài |
+| **Bài 11** | Nén dữ liệu có mất mát: Biến đổi Cosin rời rạc (DCT) và JPEG | ⏳ Chờ nạp bài |
+| **Bài 12** | Thuật toán ngoài bộ nhớ chính (External Memory) & Sắp xếp ngoài (Merge Sort) | ⏳ Chờ nạp bài |
+| **Bài 13** | Cấu trúc dữ liệu cây ngoài bộ nhớ: B-Tree và các biến thể | ⏳ Chờ nạp bài |
+| **Bài 14** | Chỉ mục không gian: R-Tree và truy vấn phạm vi đa chiều | ⏳ Chờ nạp bài |
+| **Bài 15** | Phân cụm dữ liệu quy mô lớn (BFR, CURE) và Tổng kết học phần | ⏳ Chờ nạp bài |
 
 ---
 
 ## 📖 Giáo trình & Nguồn Tham khảo Chuẩn Quốc tế
 
-1. **"Foundations of Data Science"** — *Avrim Blum, John Hopcroft, Ravindran Kannan* (Cambridge University Press). Giáo trình tiêu chuẩn vàng cho các môn giải thuật khoa học dữ liệu tại các đại học hàng đầu thế giới (Cornell, CMU).
-2. **"Mining of Massive Datasets" (MMDS)** — *Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman* (Stanford University).
-3. **Bài giảng & Slide môn học:** Khoa Công nghệ Thông tin — Trường Đại học Công nghệ (ĐHQGHN).
+1. **"Mining of Massive Datasets" (MMDS)** — *Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman* (Stanford University / Cambridge University Press).
+2. **"Foundations of Data Science"** — *Avrim Blum, John Hopcroft, Ravindran Kannan* (Cambridge University Press).
+3. **Dean & Ghemawat:** *"MapReduce: Simplified Data Processing on Large Clusters"* (Google / OSDI 2004).
+4. **Slide bài giảng:** Khoa Công nghệ Thông tin — Trường Đại học Công nghệ (ĐHQGHN).

@@ -124,7 +124,9 @@ export default withMermaid(
           {
             text: 'Giải thuật nền tảng cho KH Dữ liệu',
             items: [
-              { text: '0. Mục lục & Lộ trình môn học', link: '/giai-thuat-du-lieu/' }
+              { text: '0. Mục lục & Lộ trình môn học', link: '/giai-thuat-du-lieu/' },
+              { text: 'Bài 01: Bài toán dữ liệu lớn & Mô hình thuật toán', link: '/giai-thuat-du-lieu/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan' },
+              { text: 'Bài 02: Mô hình tính toán Map-Reduce', link: '/giai-thuat-du-lieu/bai-02-mapreduce-va-xu-ly-du-lieu-lon' }
             ]
           }
         ],
