@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470">
+<title>Chỉ xét 40 người thuộc B</title>
+<desc>Dữ liệu giả định; mỗi chấm là một người. 10 người thuộc cả A và B.</desc>
+<rect width="1000" height="470" fill="#F7F5EF"/>
+<g font-family="Arial, sans-serif" fill="#17212B">
+<text x="60" y="62" font-size="36" font-weight="bold">40 người thuộc B</text>
+<text x="60" y="106" font-size="25">Mỗi chấm = 1 người. Dữ liệu giả định.</text>
+<rect x="53" y="148" width="698" height="236" rx="8" fill="none" stroke="#007C78" stroke-width="4"/>
+<text x="780" y="213" font-size="27" fill="#7B3F86">10 thuộc</text>
+<text x="780" y="247" font-size="27" fill="#7B3F86">A ∩ B</text>
+<line x1="724" y1="185" x2="773" y2="220" stroke="#7B3F86" stroke-width="3"/>
+<text x="780" y="318" font-size="27" fill="#007C78">B có</text>
+<text x="780" y="352" font-size="27" fill="#007C78">40 người</text>
+<line x1="752" y1="337" x2="773" y2="337" stroke="#007C78" stroke-width="3"/>
+<circle data-person="1" cx="92" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="2" cx="161" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="3" cx="230" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="4" cx="299" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="5" cx="368" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="6" cx="437" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="7" cx="506" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="8" cx="575" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="9" cx="644" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="10" cx="713" cy="182" r="16" fill="#7B3F86" stroke="#7B3F86" stroke-width="2"/>
+<circle data-person="11" cx="92" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="12" cx="161" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="13" cx="230" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="14" cx="299" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="15" cx="368" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="16" cx="437" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="17" cx="506" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="18" cx="575" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="19" cx="644" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="20" cx="713" cy="238" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="21" cx="92" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="22" cx="161" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="23" cx="230" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="24" cx="299" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="25" cx="368" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="26" cx="437" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="27" cx="506" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="28" cx="575" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="29" cx="644" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="30" cx="713" cy="294" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="31" cx="92" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="32" cx="161" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="33" cx="230" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="34" cx="299" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="35" cx="368" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="36" cx="437" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="37" cx="506" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="38" cx="575" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="39" cx="644" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<circle data-person="40" cx="713" cy="350" r="16" fill="#F7F5EF" stroke="#007C78" stroke-width="4"/>
+<text x="60" y="434" font-size="25">Trong 40 người thuộc B, có 10 người cũng thuộc A.</text>
+</g>
+</svg>

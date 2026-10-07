@@ -1,0 +1,19 @@
+{
+  "method": "Exact rational arithmetic with Python fractions.Fraction; assertions executed.",
+  "values": {
+    "x0": "0",
+    "df_x0": "-6",
+    "alpha": "1/4",
+    "x1": "3/2",
+    "df_x1": "-3",
+    "x2": "9/4",
+    "f_x0": "9",
+    "f_x1": "9/4",
+    "f_x2": "9/16",
+    "alpha_2_x1": "12",
+    "alpha_2_f_x1": "81"
+  },
+  "slide_note_consistency": "Exact slide text, equations, table, speaker notes and self-study text found in companion; all 8 anchors exist.",
+  "core_minutes": 12,
+  "render": "Not performed by evaluation request; layout and glyphs remain unverified."
+}

@@ -1,0 +1,26 @@
+{
+  "subject": "Tối ưu hóa",
+  "audience": "Sinh viên đã học đạo hàm, lần đầu học tối ưu lồi",
+  "known": [
+    "Gradient",
+    "Bất đẳng thức"
+  ],
+  "unknown": [
+    "Vì sao điều kiện điểm dừng đủ trong bài toán lồi"
+  ],
+  "learner_question": "Gradient bằng 0 thì tại sao đã đủ để kết luận tối ưu?",
+  "observable_goal": "Chỉ được bước dùng tính lồi và giải thích vì sao f(y) không nhỏ hơn f(x*)",
+  "content_kind": "theorem",
+  "mode": "study-note",
+  "protected_facts": [
+    "f: R^n -> R khả vi và lồi",
+    "Bài toán không ràng buộc",
+    "So sánh với mọi y trong R^n"
+  ],
+  "source": {
+    "id": "SYNTH-CONVEX-01",
+    "location": "Nguồn thử nghiệm tự viết; tham khảo bất đẳng thức bậc nhất trong Boyd & Vandenberghe, Convex Optimization, mục 3.1.3",
+    "excerpt": "Giả sử f: R^n -> R khả vi và lồi. Khi đó f(y) >= f(x) + grad f(x)^T(y-x) với mọi x,y. Nếu grad f(x*) = 0 thì x* là điểm cực tiểu toàn cục của f."
+  },
+  "domain": "optimization"
+}

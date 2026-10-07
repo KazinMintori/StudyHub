@@ -1,0 +1,18 @@
+{
+  "status": "no-structural-errors-detected",
+  "scope": "Declared structure only; semantic, language, and render QA remain required.",
+  "spec_sha256": "dc248b1b713d948fe990614eae3e3e4f96b4ebae417b6b0e5da617e57f4c48d1",
+  "counts": {
+    "lectures": 1,
+    "slides": 8,
+    "source_units": 3,
+    "source_visuals": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "estimated_core_minutes": {
+    "L01": 12.0
+  },
+  "errors": [],
+  "warnings": []
+}

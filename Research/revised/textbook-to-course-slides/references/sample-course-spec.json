@@ -1,0 +1,363 @@
+{
+  "skill_version": "6.1.0",
+  "config": {
+    "target_language": "vi-VN",
+    "delivery_mode": "live-with-study-companion",
+    "assumed_term_ids": [
+      "TERM-PROPORTION"
+    ],
+    "audience": "Sinh viên đã biết tỉ lệ, chưa học xác suất có điều kiện.",
+    "source_provenance": "Đoạn nguồn thử nghiệm do người soạn skill viết, trong behavior-tests.md; dữ liệu hoàn toàn giả định."
+  },
+  "lectures": [
+    {
+      "id": "L01",
+      "title": "Lecture 1: Xác suất có điều kiện",
+      "session_minutes": 15
+    }
+  ],
+  "source_units": [
+    {
+      "id": "SRC-EXAMPLE",
+      "location": "behavior-tests.md, mục 2, ví dụ 100 người",
+      "priority": "essential",
+      "treatment": "core",
+      "slide_ids": [
+        "L01-S001",
+        "L01-S002",
+        "L01-S003"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "SRC-DEFINITION",
+      "location": "behavior-tests.md, mục 2, định nghĩa với P(B) > 0",
+      "priority": "essential",
+      "treatment": "core",
+      "slide_ids": [
+        "L01-S004"
+      ],
+      "reason": ""
+    }
+  ],
+  "source_visuals": [],
+  "glossary": [
+    {
+      "id": "TERM-PROPORTION",
+      "canonical": "Tỉ lệ"
+    },
+    {
+      "id": "TERM-A",
+      "canonical": "Nhóm / biến cố A"
+    },
+    {
+      "id": "TERM-B",
+      "canonical": "Nhóm / biến cố B"
+    },
+    {
+      "id": "TERM-INTERSECTION",
+      "canonical": "Giao của A và B"
+    },
+    {
+      "id": "TERM-PROBABILITY",
+      "canonical": "Xác suất trong ví dụ chọn ngẫu nhiên một người"
+    },
+    {
+      "id": "TERM-CONDITIONAL",
+      "canonical": "Xác suất có điều kiện"
+    }
+  ],
+  "slides": [
+    {
+      "id": "L01-S001",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "example",
+      "title": "Ta đang xét một nhóm 100 người",
+      "learning_goal": "Xác định nhóm B và những người đồng thời thuộc A.",
+      "source_unit_ids": [
+        "SRC-EXAMPLE"
+      ],
+      "prerequisite_slide_ids": [],
+      "introduced_term_ids": [
+        "TERM-A",
+        "TERM-B",
+        "TERM-INTERSECTION"
+      ],
+      "used_term_ids": [
+        "TERM-A",
+        "TERM-B",
+        "TERM-INTERSECTION"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Có 40 người thuộc nhóm B. Trong số đó, 10 người cũng thuộc nhóm A; họ thuộc giao của A và B, ký hiệu A ∩ B.",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-EXAMPLE"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Dữ liệu giả định. Mỗi chấm trong hình biểu diễn một người.",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [
+            "SRC-EXAMPLE"
+          ],
+          "rationale": "Giải thích cách đọc sơ đồ; mỗi chấm tương ứng với một người."
+        }
+      ],
+      "visuals": [
+        {
+          "id": "V-100",
+          "kind": "supplementary",
+          "claim": "40 người thuộc B, gồm 10 người thuộc cả A và B, nằm trong tổng nhóm 100.",
+          "asset_ref": "references/sample-assets/group-100.svg",
+          "provenance": "Sơ đồ tự tạo từ dữ liệu giả định trong đoạn nguồn thử.",
+          "alt_text": "Lưới 100 chấm. B là 40 chấm ở bốn hàng đầu; 10 chấm hàng đầu thuộc cả A và B."
+        }
+      ],
+      "speaker_notes": "Yêu cầu người học chỉ ra vùng B và phần A ∩ B. Không kết luận có bao nhiêu người thuộc A ở ngoài B.",
+      "next_bridge": "Nếu biết người được chọn thuộc B, ta còn xét những người nào?",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "L01-S002",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "explanation",
+      "title": "Biết người được chọn thuộc B, ta chỉ xét 40 người",
+      "learning_goal": "Giải thích vì sao nhóm đang xét còn 40 người.",
+      "source_unit_ids": [
+        "SRC-EXAMPLE"
+      ],
+      "prerequisite_slide_ids": [
+        "L01-S001"
+      ],
+      "introduced_term_ids": [],
+      "used_term_ids": [
+        "TERM-A",
+        "TERM-B",
+        "TERM-INTERSECTION"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Thông tin người đó thuộc B loại 60 người ngoài B khỏi nhóm đang xét. Trong 40 người còn lại, 10 người cũng thuộc A.",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-EXAMPLE"
+          ]
+        }
+      ],
+      "visuals": [
+        {
+          "id": "V-40",
+          "kind": "supplementary",
+          "claim": "Sau khi giới hạn vào B, mẫu số là 40 và tử số là 10.",
+          "asset_ref": "references/sample-assets/group-40.svg",
+          "provenance": "Sơ đồ tự tạo giữ nguyên 40 đối tượng thuộc B từ hình 100 người.",
+          "alt_text": "40 chấm trong nhóm B, trong đó 10 chấm hàng đầu thuộc cả A và B."
+        }
+      ],
+      "speaker_notes": "Để người học nói mẫu số trước khi đưa phép tính.",
+      "next_bridge": "Phần thuộc A chiếm bao nhiêu trong nhóm 40 người?",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "L01-S003",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "worked-example",
+      "title": "Trong nhóm B, tỉ lệ cũng thuộc A là 10/40",
+      "learning_goal": "Tính tỉ lệ và giải thích tử số, mẫu số.",
+      "source_unit_ids": [
+        "SRC-EXAMPLE"
+      ],
+      "prerequisite_slide_ids": [
+        "L01-S002"
+      ],
+      "introduced_term_ids": [],
+      "used_term_ids": [
+        "TERM-PROPORTION",
+        "TERM-A",
+        "TERM-B",
+        "TERM-INTERSECTION"
+      ],
+      "body": [
+        {
+          "type": "equation",
+          "latex": "\\frac{10}{40}=\\frac14=0{,}25",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-EXAMPLE"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Tử số đếm những người thuộc cả A và B. Mẫu số đếm 40 người thuộc B, vì điều kiện đã cho giới hạn nhóm đang xét vào B.",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-EXAMPLE"
+          ]
+        }
+      ],
+      "visuals": [],
+      "speaker_notes": "Phân biệt tỉ lệ này với 10/100 của cả nhóm ban đầu.",
+      "next_bridge": "Ta có thể viết phép tính này bằng xác suất thay cho số đếm.",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "L01-S004",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "definition",
+      "title": "Xác suất có điều kiện",
+      "learning_goal": "Nối phép tính số đếm với định nghĩa và điều kiện dùng.",
+      "source_unit_ids": [
+        "SRC-DEFINITION"
+      ],
+      "prerequisite_slide_ids": [
+        "L01-S003"
+      ],
+      "introduced_term_ids": [
+        "TERM-PROBABILITY",
+        "TERM-CONDITIONAL"
+      ],
+      "used_term_ids": [
+        "TERM-A",
+        "TERM-B",
+        "TERM-INTERSECTION",
+        "TERM-PROBABILITY",
+        "TERM-CONDITIONAL"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Giả sử ta chọn ngẫu nhiên một người, mỗi người có khả năng được chọn như nhau. Trong ví dụ này, xác suất của một nhóm là số người thuộc nhóm chia cho 100.",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [
+            "SRC-DEFINITION"
+          ],
+          "rationale": "Nêu giả định lấy mẫu cần thiết để diễn giải tỉ lệ số đếm thành xác suất."
+        },
+        {
+          "type": "text",
+          "text": "P(A|B), đọc là xác suất A khi biết B, là xác suất có điều kiện. Với P(B) > 0:",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-DEFINITION"
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}=\\frac{10/100}{40/100}=\\frac{10}{40}",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-DEFINITION"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Điều kiện P(B) > 0 bảo đảm mẫu số khác 0. Khi P(B) = 0, công thức tỉ số này không xác định.",
+          "provenance": "source-adaptation",
+          "source_unit_ids": [
+            "SRC-DEFINITION"
+          ]
+        }
+      ],
+      "visuals": [],
+      "speaker_notes": "Giới thiệu ký hiệu P. Không suy rộng công thức số đếm đồng khả năng sang mọi không gian mẫu. Nếu nội dung không vừa, tách phần cầu nối xác suất thành slide riêng và cập nhật đặc tả.",
+      "next_bridge": "Kiểm tra xem ta có chọn đúng nhóm làm mẫu số không.",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "L01-S005",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "checkpoint",
+      "title": "Mẫu số là 100 hay 40?",
+      "learning_goal": "Nhận ra lỗi bỏ qua thông tin điều kiện.",
+      "source_unit_ids": [],
+      "prerequisite_slide_ids": [
+        "L01-S004"
+      ],
+      "introduced_term_ids": [],
+      "used_term_ids": [
+        "TERM-CONDITIONAL",
+        "TERM-B"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Một lời giải cho kết quả 10/100. Lời giải đó đã xét sai nhóm nào? Hãy giải thích trước khi xem trang tiếp theo.",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [],
+          "rationale": "Đề bài và lời đáp tự kiểm được soạn riêng để đạt mục tiêu học."
+        }
+      ],
+      "visuals": [],
+      "checkpoint": {
+        "prompt": "Vì sao 10/100 không phải kết quả xác suất A khi đã biết B trong ví dụ?",
+        "answer": "Mẫu số phải là 40, vì chỉ xét những người thuộc B.",
+        "rationale": "10/100 dùng nhóm ban đầu thay vì nhóm phù hợp thông tin điều kiện.",
+        "anticipated_error": "Giữ mẫu số 100 vì đó là tổng số người trong dữ kiện.",
+        "feedback": "Hãy chỉ ra người nào còn có thể được chọn khi đã biết người đó thuộc B, rồi đếm nhóm ấy.",
+        "answer_placement": "next_slide",
+        "answer_slide_id": "L01-S006",
+        "provenance": "pedagogical-addition",
+        "source_unit_ids": [],
+        "provenance_rationale": "Câu hỏi và phản hồi được viết để kiểm tra việc chọn đúng nhóm điều kiện."
+      },
+      "speaker_notes": "Cho thời gian suy nghĩ. Đáp án chỉ hiển thị ở trang tiếp theo.",
+      "next_bridge": "Đối chiếu lý do chọn mẫu số với thông tin đã biết.",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "L01-S006",
+      "lecture_id": "L01",
+      "layer": "core",
+      "role": "feedback",
+      "title": "Mẫu số phải đếm nhóm còn được xét",
+      "learning_goal": "Giải thích lựa chọn mẫu số và tự sửa lỗi.",
+      "source_unit_ids": [],
+      "prerequisite_slide_ids": [
+        "L01-S005"
+      ],
+      "introduced_term_ids": [],
+      "used_term_ids": [
+        "TERM-A",
+        "TERM-B",
+        "TERM-CONDITIONAL"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Mẫu số là 40. Khi đã biết người được chọn thuộc B, những người ngoài B không còn thuộc nhóm đang xét.",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [],
+          "rationale": "Đề bài và lời đáp tự kiểm được soạn riêng để đạt mục tiêu học."
+        },
+        {
+          "type": "equation",
+          "latex": "P(A\\mid B)=10/40=0{,}25",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [],
+          "rationale": "Đề bài và lời đáp tự kiểm được soạn riêng để đạt mục tiêu học."
+        },
+        {
+          "type": "text",
+          "text": "Muốn kiểm tra mẫu số, hãy hỏi: với thông tin đã biết, ta còn xét những trường hợp nào?",
+          "provenance": "pedagogical-addition",
+          "source_unit_ids": [],
+          "rationale": "Đề bài và lời đáp tự kiểm được soạn riêng để đạt mục tiêu học."
+        }
+      ],
+      "visuals": [],
+      "speaker_notes": "Nếu người học chọn 100, quay lại hình nhóm B thay vì chỉ nhắc lại công thức.",
+      "next_bridge": "",
+      "estimated_minutes": 1
+    }
+  ]
+}

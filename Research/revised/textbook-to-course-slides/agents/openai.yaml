@@ -1,0 +1,6 @@
+interface:
+  display_name: "Slide bài giảng từ giáo trình"
+  short_description: "Slide, lời giảng và note nhất quán từ nguồn học thuật"
+  default_prompt: "Dùng $textbook-to-course-slides tạo bài giảng từ nguồn này với slide, lời giảng tự nhiên và note tự học đầy đủ."
+policy:
+  allow_implicit_invocation: true

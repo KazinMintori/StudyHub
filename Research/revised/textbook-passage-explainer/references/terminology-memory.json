@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "language": "vi-VN",
+  "scope": "Curated seed for teaching, not an exhaustive dictionary or national terminology standard.",
+  "sources": {
+    "HCMUE-CONTRACTION": {
+      "url": "https://journal.hcmue.edu.vn/index.php/hcmuejos/article/view/3961",
+      "purpose": "Vietnamese title and indexed abstract use ánh xạ co; English title uses contraction mappings.",
+      "checked": "2026-10-07"
+    },
+    "MARITIME-BANACH": {
+      "url": "https://scholar.dlu.edu.vn/thuvienso/bitstream/DLU123456789/127194/1/41639-1333-137963-1-10-20191203.pdf",
+      "purpose": "Indexed primary article, page 81, definition with 0 <= alpha < 1 and complete metric space for Banach theorem. Full PDF fetch failed in this pass.",
+      "checked": "2026-10-07"
+    },
+    "CTU-OPT": {
+      "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/download/4457/4174/9846",
+      "purpose": "Primary Vietnamese article, printed pages 92-93, uses điểm khả thi, miền khả thi, tập khả thi; evidence of usage, not a national standard.",
+      "checked": "2026-10-07"
+    },
+    "CTU-TENSOR": {
+      "url": "https://cns.ctu.edu.vn/images/upload/daotao/decuong/TN545.pdf",
+      "purpose": "Official Tensor Analysis syllabus, section 6, PDF page 2, uses phép co tensor.",
+      "checked": "2026-10-07"
+    },
+    "NUMPY-TENSOR": {
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.tensordot.html",
+      "purpose": "Official documentation distinguishes summation over paired axes and tensor contraction; not evidence of Vietnamese usage.",
+      "checked": "2026-10-07"
+    },
+    "BOYD-OPT": {
+      "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+      "purpose": "Concept reference: sections 4.1, 5.1, 5.5, 9.2-9.3; PDF read in the earlier revision. Fetch unavailable in the terminology pass; Vietnamese phrasings below are separately labeled."
+    },
+    "BERKELEY-TENSOR": {
+      "url": "https://math.berkeley.edu/~ltomczak/notes/Mich2022/DG_Notes.pdf",
+      "purpose": "Primary lecture notes, section 2.6: contraction pairs upper and lower indices; not evidence of Vietnamese terminology.",
+      "checked": "2026-10-07"
+    }
+  },
+  "terms": [
+    {
+      "id": "fixed-point.contraction",
+      "domain": "fixed-point",
+      "english": [
+        "contraction mapping",
+        "contractive mapping",
+        "contraction"
+      ],
+      "concept": "A mapping with a uniform distance bound d(Tx,Ty) <= q d(x,y), for all x,y, for one 0 <= q < 1.",
+      "technical_vi": "ánh xạ co",
+      "variants": [
+        "ánh xạ co chặt"
+      ],
+      "lecture_vi": "Ánh xạ T làm khoảng cách giữa hai điểm giảm theo cùng một hệ số q nhỏ hơn 1.",
+      "avoid_in_this_sense": [
+        "ánh xạ hợp đồng",
+        "ánh xạ hợp đồng hóa"
+      ],
+      "protected_meaning": [
+        "Cùng một q cho mọi cặp điểm",
+        "0 <= q < 1; không thay bằng q <= 1",
+        "Điểm bất động duy nhất theo định lý Banach cần thêm không gian metric đầy đủ, khác rỗng và T:X->X"
+      ],
+      "evidence": {
+        "vi_usage": "observed-primary",
+        "source_ids": [
+          "HCMUE-CONTRACTION",
+          "MARITIME-BANACH"
+        ]
+      }
+    },
+    {
+      "id": "tensor.contraction",
+      "domain": "tensor-algebra",
+      "english": [
+        "tensor contraction",
+        "contraction of a tensor",
+        "contraction"
+      ],
+      "concept": "Summation over appropriately paired tensor indices; in array products, summation of products over chosen matching axes.",
+      "technical_vi": "phép co tensor",
+      "variants": [
+        "phép lấy co"
+      ],
+      "lecture_vi": "Ta cộng theo các chỉ số được ghép; các chỉ số còn lại xác định các thành phần của kết quả.",
+      "avoid_in_this_sense": [
+        "hợp đồng tensor",
+        "ánh xạ co tensor"
+      ],
+      "protected_meaning": [
+        "Không tự gán tính chất co khoảng cách",
+        "Giữ đúng chỉ số ghép, miền tổng và kích thước",
+        "Trường hợp co trong một tensor không đồng nhất với mọi phép tích hai tensor",
+        "Tensor hình học: ghép một chỉ số trên và một dưới; cùng loại cần metric/cấu trúc thích hợp"
+      ],
+      "evidence": {
+        "vi_usage": "observed-primary-for-preferred-term; variant-project-choice",
+        "source_ids": [
+          "CTU-TENSOR",
+          "NUMPY-TENSOR",
+          "BERKELEY-TENSOR"
+        ]
+      }
+    },
+    {
+      "id": "optimization.feasible-point",
+      "domain": "optimization",
+      "english": [
+        "feasible point"
+      ],
+      "concept": "A point in the domain that satisfies all constraints of the problem.",
+      "technical_vi": "điểm khả thi",
+      "variants": [],
+      "lecture_vi": "Nếu x thỏa mọi ràng buộc của bài toán thì x là một điểm khả thi.",
+      "avoid_in_this_sense": [
+        "điểm khả dụng"
+      ],
+      "protected_meaning": [
+        "Mọi ràng buộc, không chỉ một ràng buộc",
+        "Thuộc miền xác định",
+        "Khả thi chưa có nghĩa tối ưu"
+      ],
+      "evidence": {
+        "vi_usage": "observed-primary",
+        "source_ids": [
+          "CTU-OPT",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.feasible-solution",
+      "domain": "optimization",
+      "english": [
+        "feasible solution"
+      ],
+      "concept": "A candidate solution satisfying the constraints; it need not be an optimizer.",
+      "technical_vi": "nghiệm khả thi",
+      "variants": [
+        "phương án khả thi"
+      ],
+      "lecture_vi": "Phương án này thỏa các ràng buộc; ta còn phải so giá trị hàm mục tiêu để xét tối ưu.",
+      "avoid_in_this_sense": [
+        "nghiệm khả dụng"
+      ],
+      "protected_meaning": [
+        "Không đổi feasible thành optimal",
+        "Giữ nghĩa solution theo loại bài toán"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.feasible-set",
+      "domain": "optimization",
+      "english": [
+        "feasible set",
+        "feasible region"
+      ],
+      "concept": "The set of all points satisfying all constraints in the domain.",
+      "technical_vi": "tập khả thi",
+      "variants": [
+        "miền khả thi"
+      ],
+      "lecture_vi": "Tập khả thi gồm tất cả những điểm x được phép xét sau khi kiểm tra các ràng buộc.",
+      "avoid_in_this_sense": [],
+      "protected_meaning": [
+        "Toàn bộ tập điểm thỏa ràng buộc",
+        "Tập có thể rỗng; không tự giả định tồn tại nghiệm"
+      ],
+      "evidence": {
+        "vi_usage": "observed-primary",
+        "source_ids": [
+          "CTU-OPT",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.feasibility-problem",
+      "domain": "optimization",
+      "english": [
+        "feasibility problem"
+      ],
+      "concept": "Find a point satisfying constraints or establish infeasibility, according to the stated problem.",
+      "technical_vi": "bài toán tìm điểm khả thi",
+      "variants": [
+        "bài toán khả thi"
+      ],
+      "lecture_vi": "Ở đây ta cần tìm một điểm thỏa mọi ràng buộc; chưa tối thiểu hóa một hàm mục tiêu khác.",
+      "avoid_in_this_sense": [],
+      "protected_meaning": [
+        "Không tự thêm mục tiêu tối ưu",
+        "Phân biệt chưa tìm thấy với chứng minh không có điểm khả thi"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.current-iterate",
+      "domain": "optimization",
+      "english": [
+        "current iterate",
+        "current point"
+      ],
+      "concept": "The current point/value x_k in an iterative sequence, distinct from its index k.",
+      "technical_vi": "điểm lặp hiện tại",
+      "variants": [
+        "điểm đang xét",
+        "x_k khi ký hiệu đã rõ"
+      ],
+      "lecture_vi": "Ở bước k, ta tính gradient tại x_k.",
+      "avoid_in_this_sense": [
+        "điểm hiện hành",
+        "điểm lặp hiện hành"
+      ],
+      "protected_meaning": [
+        "x_k là điểm hoặc giá trị; k là chỉ số",
+        "Không dùng x_k nếu nguồn chưa xác định ký hiệu"
+      ],
+      "evidence": {
+        "vi_usage": "project-editorial-choice",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.gradient",
+      "domain": "optimization",
+      "english": [
+        "gradient"
+      ],
+      "concept": "Vector of partial derivatives, under the differentiability assumptions of the lesson.",
+      "technical_vi": "gradient",
+      "variants": [
+        "vectơ gradient"
+      ],
+      "lecture_vi": "Gradient gom các đạo hàm riêng tại điểm đang xét.",
+      "avoid_in_this_sense": [],
+      "protected_meaning": [
+        "Giữ điểm lấy đạo hàm",
+        "Không đồng nhất gradient với hướng giảm hoặc độ dời"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.stationary-point",
+      "domain": "optimization",
+      "english": [
+        "stationary point"
+      ],
+      "concept": "In the differentiable unconstrained setting here, a point where the gradient is zero.",
+      "technical_vi": "điểm dừng",
+      "variants": [],
+      "lecture_vi": "Tại điểm dừng, gradient bằng 0; điều đó chưa đủ cho tối ưu nếu thiếu các giả thiết cần thiết.",
+      "avoid_in_this_sense": [
+        "điểm tĩnh"
+      ],
+      "protected_meaning": [
+        "Ngữ cảnh khả vi, không ràng buộc trong mục này",
+        "Không biến điểm dừng thành nghiệm tối ưu trong mọi bài"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.stationarity",
+      "domain": "optimization",
+      "english": [
+        "stationarity condition",
+        "stationary condition"
+      ],
+      "concept": "The relevant zero-gradient condition in a stated problem, potentially for a Lagrangian rather than the original objective.",
+      "technical_vi": "điều kiện dừng",
+      "variants": [],
+      "lecture_vi": "Ta lập điều kiện dừng cho đúng hàm đang xét; cần phân biệt f với hàm Lagrange L.",
+      "avoid_in_this_sense": [
+        "điều kiện tính dừng"
+      ],
+      "protected_meaning": [
+        "Giữ hàm, biến và điều kiện đang xét",
+        "Điều kiện dừng không tự tạo bước cập nhật nếu chưa có mô hình"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.descent-direction",
+      "domain": "optimization",
+      "english": [
+        "descent direction"
+      ],
+      "concept": "A direction permitting local decrease; for differentiable f, grad f(x)^T d < 0 is a sufficient condition for sufficiently small positive steps.",
+      "technical_vi": "hướng giảm",
+      "variants": [],
+      "lecture_vi": "Hướng d giúp f giảm khi ta đi từ x một bước dương đủ nhỏ.",
+      "avoid_in_this_sense": [
+        "hướng hạ xuống"
+      ],
+      "protected_meaning": [
+        "Điểm đang xét x",
+        "Bước dương đủ nhỏ, không phải mọi bước dương",
+        "Không nhầm hướng d với độ dời alpha*d"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.update-step",
+      "domain": "optimization",
+      "english": [
+        "update step",
+        "update"
+      ],
+      "concept": "Update can refer to the operation, displacement or step parameter; source notation determines the intended object.",
+      "technical_vi": "bước cập nhật",
+      "variants": [
+        "phép cập nhật",
+        "độ dời khi nguồn chỉ x_(k+1)-x_k"
+      ],
+      "lecture_vi": "Tính độ dời rồi cộng vào x_k để được x_(k+1); gọi riêng hướng và tham số bước nếu có.",
+      "avoid_in_this_sense": [
+        "tạo bước đi"
+      ],
+      "protected_meaning": [
+        "Xác định đối tượng bằng công thức trước khi chọn từ",
+        "Không đồng nhất hướng, tham số bước, độ dời và điểm mới"
+      ],
+      "evidence": {
+        "vi_usage": "project-editorial-choice",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.free-sign",
+      "domain": "optimization",
+      "english": [
+        "free in sign",
+        "unrestricted in sign",
+        "no sign restriction",
+        "equality multiplier"
+      ],
+      "concept": "No sign restriction is imposed on the stated real variable or equality multiplier; other equations may still constrain its value.",
+      "technical_vi": "không bị giới hạn dấu",
+      "variants": [
+        "không bị ràng buộc về dấu"
+      ],
+      "lecture_vi": "Nhân tử của ràng buộc đẳng thức có thể âm, bằng 0 hoặc dương; các điều kiện khác vẫn phải thỏa.",
+      "avoid_in_this_sense": [
+        "tự do dấu"
+      ],
+      "protected_meaning": [
+        "Bao gồm số 0",
+        "Được phép về dấu chưa có nghĩa là nhân tử tại nghiệm",
+        "Không áp cùng quy ước cho nhân tử bất đẳng thức"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.active-constraint",
+      "domain": "optimization",
+      "english": [
+        "active constraint",
+        "binding constraint"
+      ],
+      "concept": "For g_i(x) <= 0, the inequality is active at a specified feasible point when g_i(x)=0.",
+      "technical_vi": "ràng buộc chặt tại điểm đang xét",
+      "variants": [
+        "ràng buộc hoạt động; theo glossary môn",
+        "ràng buộc tích cực chỉ nếu giáo trình của môn dùng và định nghĩa rõ"
+      ],
+      "lecture_vi": "Tại x, ràng buộc g_i(x) <= 0 trở thành đẳng thức g_i(x)=0.",
+      "avoid_in_this_sense": [],
+      "protected_meaning": [
+        "Chặt tại một điểm cụ thể",
+        "Không suy nhân tử phải khác 0",
+        "Giữ quy ước dấu của ràng buộc"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; Vietnamese naming varies and was not independently established as universal",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.free-variable",
+      "domain": "optimization",
+      "english": [
+        "free variable",
+        "unrestricted variable"
+      ],
+      "concept": "In the mathematical-programming sense here, a real variable without a sign restriction, subject to other constraints if specified.",
+      "technical_vi": "biến tự do",
+      "variants": [
+        "biến không bị giới hạn dấu khi cần làm rõ"
+      ],
+      "lecture_vi": "Biến này có thể nhận giá trị âm, bằng 0 hoặc dương; ta vẫn phải kiểm tra các ràng buộc khác.",
+      "avoid_in_this_sense": [
+        "biến miễn phí"
+      ],
+      "protected_meaning": [
+        "Lĩnh vực quy hoạch toán học",
+        "Không áp định nghĩa này cho biến tự do trong logic hoặc biến phụ thuộc tham số của đại số tuyến tính"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    }
+  ]
+}

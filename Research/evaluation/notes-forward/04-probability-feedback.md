@@ -1,0 +1,1 @@
+Em chọn đúng 10 người vừa thuộc A vừa thuộc B. Bước cần sửa là mẫu số: khi đã biết người được chọn thuộc B, ta chỉ xét 40 người trong B. Vì vậy, \(P(A\mid B)=10/40=0{,}25\); \(10/100\) là \(P(A\cap B)\). Nếu có 12 người trong nhóm B cũng thuộc A, em sẽ chia 12 cho số nào?
