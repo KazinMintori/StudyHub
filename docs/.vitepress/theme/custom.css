@@ -1,5 +1,8 @@
 :root {
   --vp-font-family-base: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --site-title-font: 'Space Grotesk', 'Be Vietnam Pro', -apple-system, sans-serif;
+  --site-title-weight: 700;
+  --site-title-letter-spacing: -0.8px;
   --vp-c-brand-1: #244bd6;
   --vp-c-brand-2: #1b3cac;
   --vp-c-brand-3: #244bd6;
@@ -41,9 +44,15 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 button:disabled { opacity: .55; cursor: wait; }
 :where(a, button, input, select, textarea):focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 4px; }
-.VPNavBarTitle .title { letter-spacing: -.6px; font-size: 18px; font-weight: 700; }
-.VPNavBarTitle .title::before { content: 'U'; background: #244bd6; color: white; width: 29px; height: 29px; display: grid; place-items: center; font-size: 19px; font-weight: 700; border-radius: 4px; margin-right: 10px; }
+.VPNavBarTitle .title {
+  font-family: var(--site-title-font);
+  letter-spacing: var(--site-title-letter-spacing);
+  font-size: 19px;
+  font-weight: var(--site-title-weight);
+}
+.VPNavBarTitle .title::before { content: 'U'; background: #244bd6; color: white; width: 29px; height: 29px; display: grid; place-items: center; font-family: var(--site-title-font); font-size: 19px; font-weight: 700; border-radius: 4px; margin-right: 10px; }
 .VPNavBarMenuLink, .VPNavBarMenuGroup .study-button { font-size: 13px; }
+.VPNavBarSearch { display: none !important; }
 .VPHome { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 .VPFooter { padding: 24px !important; }
 .VPFooter .message, .VPFooter .copyright { font-size: 12px; }
@@ -51,6 +60,7 @@ button:disabled { opacity: .55; cursor: wait; }
 .eyebrow { font-size: 11px; line-height: 1.7; letter-spacing: 1.6px; font-weight: 600; color: var(--vp-c-text-2); }
 .eyebrow span { padding: 0 8px; color: var(--vp-c-border); }
 .small { font-size: 12px; line-height: 1.7; color: var(--vp-c-text-2); }
+.home-intro .eyebrow { font-family: var(--site-title-font); font-size: 11px; letter-spacing: 2px; }
 .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 335px; gap: 68px; padding: 68px 0 56px; align-items: center; border-bottom: 1px solid var(--vp-c-divider); }
 .intro-copy h1 { margin: 22px 0; font-size: clamp(32px, 3.4vw, 47px); line-height: 1.28; letter-spacing: -1.7px; font-weight: 650; }
 .intro-copy h1 span { color: var(--vp-c-brand-1); }
