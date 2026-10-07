@@ -17,10 +17,10 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
   <main class="study-home">
     <section class="home-intro">
       <div class="intro-copy">
-        <p class="eyebrow">UET STUDY HUB <span>/</span> KHÔNG GIAN TỰ HỌC</p>
+        <p class="eyebrow">UETỆ <span>/</span> KHÔNG GIAN TỰ HỌC</p>
         <h1>Học hiểu bản chất.<br><span>Ôn tập có hệ thống.</span></h1>
         <p class="intro-description">Bài giảng, công thức và ví dụ được sắp xếp theo từng học phần. Bắt đầu từ điều chưa hiểu, học từng chút một.</p>
-        <div class="button-row"><a class="study-button primary" href="#hoc-phan">Chọn học phần <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/guide/')">Cách học với Study Hub <span aria-hidden="true">↗</span></a></div>
+        <div class="button-row"><a class="study-button primary" href="#hoc-phan">Chọn học phần <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/guide/')">Cách học với UETệ <span aria-hidden="true">↗</span></a></div>
         <div class="intro-meta"><span>{{ courses.length.toString().padStart(2, '0') }} học phần hiện tại</span><span>Tìm kiếm toàn bộ bài giảng</span><span>Sáng & tối</span></div>
       </div>
       <aside class="start-panel">

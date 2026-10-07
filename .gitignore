@@ -39,3 +39,6 @@ __pycache__/
 .venv/
 env/
 venv/
+
+# Binary / documents
+*.pdf

@@ -1,4 +1,4 @@
-name: Deploy UET Study Hub to GitHub Pages
+name: Deploy UETệ to GitHub Pages
 
 on:
   push:
