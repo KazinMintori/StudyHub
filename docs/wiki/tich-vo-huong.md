@@ -9,6 +9,8 @@ next: false
 
 Tích vô hướng u·v là tổng các tích thành phần tương ứng. Với vector Euclid, u·v = ‖u‖‖v‖cos θ, liên hệ với góc giữa hai vector. Tích bằng 0 với hai vector khác 0 nghĩa là chúng vuông góc.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Góc, chiếu và dấu.** Tích vô hướng dương khi góc nhỏ hơn 90°, âm khi góc lớn hơn 90°, bằng 0 khi hai vector khác 0 vuông góc. Hình chiếu vô hướng của u lên hướng đơn vị n là u·n.

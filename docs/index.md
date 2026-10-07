@@ -1,7 +1,7 @@
 ---
 layout: home
 markdownStyles: false
-title: Học hiểu bản chất
+title: Bài giảng ôn tập cho sinh viên UET
 description: Bài giảng UET, lộ trình ôn tập và công cụ học tập cá nhân.
 ---
 

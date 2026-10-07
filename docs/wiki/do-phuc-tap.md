@@ -9,6 +9,8 @@ next: false
 
 Độ phức tạp mô tả thời gian hoặc bộ nhớ tăng thế nào theo kích thước đầu vào n. O(f(n)) là chặn trên tiệm cận, bỏ qua hệ số hằng và các hạng nhỏ hơn khi n đủ lớn. Cần nêu đang xét trường hợp tốt, trung bình hay xấu nhất; ký hiệu O tự nó không nói điều đó.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Big-O, Θ và Ω.** O là chặn trên tiệm cận; Ω là chặn dưới; Θ là chặn trên và dưới cùng bậc. Một thuật toán Θ(n) cũng thuộc O(n²), nhưng O(n²) là mô tả kém chặt hơn.

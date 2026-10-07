@@ -1,4 +1,7 @@
 import { findCourse } from './course-catalog.mjs'
+import { readingMetadata } from './reading-metadata.mjs'
+export const lectureParts = [{ id: 'notes', name: 'Notes' }, { id: 'slides', name: 'Slides' }, { id: 'kien-thuc-can-co', name: 'Kiến thức nền' }]
+export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5
 
 export const lecturePath = (courseId, slug, part = '') => `/${courseId}/bai-giang/${slug}${part ? `#${part}` : ''}`
 export function findLecture(courseId, slug) { return findCourse(courseId)?.lessons.find(lesson => lesson.slug === slug) }

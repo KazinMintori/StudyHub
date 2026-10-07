@@ -7,7 +7,7 @@ import FieldSimulation from './FieldSimulation.vue'
 import { courses, cards } from './data'
 import { readStored, writeStored, storageMessage } from './storage'
 
-const tabs = [{ id: 'flashcards', name: 'Flashcard' }, { id: 'notes', name: 'Ghi chú' }, { id: 'simulation', name: 'Mô phỏng' }, { id: 'focus', name: 'Tập trung' }]
+const tabs = [{ id: 'flashcards', name: 'Flashcard' }, { id: 'notes', name: 'Ghi chú' }, { id: 'focus', name: 'Hẹn giờ' }, { id: 'simulation', name: 'Mô phỏng' }]
 const active = ref('flashcards'), subject = ref('all'), index = ref(0), revealed = ref(false), remembered = ref({})
 const deck = computed(() => cards.filter(c => subject.value === 'all' || c.course === subject.value))
 const current = computed(() => deck.value[index.value % deck.value.length])
@@ -51,25 +51,25 @@ onUnmounted(() => window.removeEventListener('hashchange', syncHash))
 
 <template>
   <main class="study-workspace">
-    <header class="workspace-heading"><a class="small text-link" :href="withBase('/')">← Trang chủ</a><p class="eyebrow">HỌC CHỦ ĐỘNG</p><h1>Góc học tập</h1><p>Ôn điều đã học, ghi điều đã hiểu, thử điều còn thắc mắc.</p></header>
+    <header class="workspace-heading"><a class="small text-link" :href="withBase('/')">← Trang chủ</a><h1>Góc học tập</h1><p>Flashcard, ghi chú, hẹn giờ và mô phỏng để ôn bài.</p></header>
     <nav class="workspace-tabs" aria-label="Công cụ học tập"><a v-for="tab in tabs" :key="tab.id" :href="`#${tab.id}`" :aria-current="active === tab.id ? 'page' : undefined" @click.prevent="changeTab(tab.id)">{{ tab.name }}</a></nav>
     <p v-if="storageMessage" class="storage-message" role="status">{{ storageMessage }}</p>
 
     <section v-show="active === 'flashcards'" id="flashcards" class="workspace-section" aria-labelledby="flash-heading">
-      <div class="section-heading"><div><p class="eyebrow">TỰ KIỂM TRA KIẾN THỨC</p><h2 id="flash-heading">Nhớ trước khi xem đáp án</h2></div><label class="select-label">Học phần<select v-model="subject"><option value="all">Tất cả học phần</option><option v-for="c in courses" :key="c.id" :value="c.id">{{ c.name }}</option></select></label></div>
+      <div class="section-heading"><div><h2 id="flash-heading">Nhớ trước khi xem đáp án</h2></div><label class="select-label">Học phần<select v-model="subject"><option value="all">Tất cả học phần</option><option v-for="c in courses" :key="c.id" :value="c.id">{{ c.name }}</option></select></label></div>
       <div class="flashcard-progress"><span>{{ knownCount }} / {{ deck.length }} thẻ đã nhớ</span><progress :value="knownCount" :max="deck.length" :aria-label="`${knownCount} trên ${deck.length} thẻ đã nhớ`"></progress><button class="text-link" @click="resetReview">Ôn lại từ đầu</button></div>
       <article class="flashcard">
         <div class="flashcard-top"><span>{{ courseName(current.course) }}</span><span>{{ index + 1 }} / {{ deck.length }}</span></div>
         <p class="flashcard-question">{{ current.q }}</p>
-        <div v-if="revealed" class="flashcard-answer" aria-live="polite"><span class="eyebrow">GIẢI THÍCH</span><p>{{ current.a }}</p><a class="text-link" :href="withBase(current.lesson ? `/${current.course}/bai-giang/${current.lesson}#notes` : `/${current.course}/`)">Xem lại {{ current.lesson ? 'bài giảng' : 'lộ trình môn học' }} <span aria-hidden="true">↗</span></a></div>
+        <div v-if="revealed" class="flashcard-answer" aria-live="polite"><p>{{ current.a }}</p><a class="text-link" :href="withBase(current.lesson ? `/${current.course}/bai-giang/${current.lesson}#notes` : `/${current.course}/`)">Xem lại {{ current.lesson ? 'bài giảng' : 'lộ trình môn học' }}</a></div>
         <button v-else class="study-button primary" @click="revealed = true">Xem đáp án</button>
       </article>
-      <div class="flashcard-actions"><button class="study-button" @click="next(-1)">← Thẻ trước</button><div v-if="revealed" class="button-row"><button class="study-button" @click="review(false)">Cần ôn lại</button><button class="study-button primary" @click="review(true)">Đã nhớ</button></div><button class="study-button" @click="next(1)">Thẻ tiếp →</button></div>
+      <div class="flashcard-actions"><button class="study-button" @click="next(-1)">← Thẻ trước</button><div v-if="revealed" class="button-row"><button class="study-button" @click="review(false)">Chưa nhớ</button><button class="study-button success" @click="review(true)">Đã nhớ</button></div><button class="study-button" @click="next(1)">Thẻ tiếp →</button></div>
       <p class="small tool-explanation">Thử trả lời bằng lời của mình trước khi mở đáp án. Tiến độ được lưu riêng cho từng thẻ trên trình duyệt này.</p>
     </section>
 
     <section v-show="active === 'notes'" id="notes" class="workspace-section" aria-labelledby="notes-heading">
-      <div class="section-heading"><div><p class="eyebrow">SỔ TAY CÁ NHÂN</p><h2 id="notes-heading">Ghi lại bằng lời của bạn</h2></div><label class="select-label">Sổ ghi chú<select v-model="noteSubject" @change="loadNote"><option value="general">Ghi chú chung</option><option v-for="c in courses" :key="c.id" :value="c.id">{{ c.name }}</option></select></label></div>
+      <div class="section-heading"><div><h2 id="notes-heading">Ghi lại bằng lời của bạn</h2></div><label class="select-label">Sổ ghi chú<select v-model="noteSubject" @change="loadNote"><option value="general">Ghi chú chung</option><option v-for="c in courses" :key="c.id" :value="c.id">{{ c.name }}</option></select></label></div>
       <div class="notes-toolbar"><div class="button-row"><button class="study-button" :aria-pressed="mode === 'edit'" @click="mode = 'edit'">Soạn thảo</button><button class="study-button" :aria-pressed="mode === 'preview'" @click="mode = 'preview'">Xem trước</button></div><div class="button-row"><button class="study-button" @click="saveNote">Lưu ghi chú</button><button class="study-button primary" @click="downloadNote">Tải .md</button></div></div>
       <label v-show="mode === 'edit'" class="notes-editor"><span class="small">Markdown · # tiêu đề · **in đậm** · - danh sách</span><textarea v-model="note" :disabled="!loaded" spellcheck="false" aria-label="Nội dung ghi chú Markdown"></textarea></label>
       <div v-if="mode === 'preview'" class="note-preview vp-doc" v-html="renderedNote"></div>
@@ -77,7 +77,7 @@ onUnmounted(() => window.removeEventListener('hashchange', syncHash))
       <p class="small tool-explanation">Ghi chú nằm trên trình duyệt này. Tải file .md để sao lưu hoặc mở trên thiết bị khác.</p>
     </section>
 
-    <section v-show="active === 'simulation'" id="simulation" class="workspace-section" aria-labelledby="simulation-heading"><p class="eyebrow">VẬT LÝ ĐẠI CƯƠNG 2</p><h2 id="simulation-heading">Nhìn thấy hướng của điện trường</h2><FieldSimulation /></section>
-    <section v-show="active === 'focus'" id="focus" class="workspace-section workspace-focus"><FocusTimer /><div><p class="eyebrow">MỘT VIỆC MỖI LẦN</p><h2>Cho việc học một khoảng riêng.</h2><ol class="focus-guide"><li>Chọn một bài hoặc một câu hỏi cụ thể.</li><li>Bắt đầu phiên 25 hoặc 50 phút.</li><li>Ghi lại điều chưa hiểu để xử lý sau.</li><li>Dành 5 phút nghỉ trước phiên tiếp theo.</li></ol><a class="text-link" :href="withBase('/guide/')">Đọc thêm về phương pháp học →</a></div></section>
+    <section v-show="active === 'simulation'" id="simulation" class="workspace-section" aria-labelledby="simulation-heading"><h2 id="simulation-heading">Nhìn thấy hướng của điện trường</h2><FieldSimulation /></section>
+    <section v-show="active === 'focus'" id="focus" class="workspace-section workspace-focus"><FocusTimer /><div><h2>Hẹn giờ tập trung</h2><ol class="focus-guide"><li>Chọn một bài hoặc một câu hỏi cụ thể.</li><li>Bắt đầu phiên 25 hoặc 50 phút.</li><li>Ghi lại điều chưa hiểu để xử lý sau.</li><li>Dành 5 phút nghỉ trước phiên tiếp theo.</li></ol><a class="text-link" :href="withBase('/guide/')">Đọc thêm về phương pháp học</a></div></section>
   </main>
 </template>

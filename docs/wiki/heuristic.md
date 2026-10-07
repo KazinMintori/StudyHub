@@ -9,6 +9,8 @@ next: false
 
 Heuristic h(n) ước lượng chi phí từ trạng thái n đến đích. Nó giúp ưu tiên hướng tìm kiếm có triển vọng. Một ước lượng admissible không vượt chi phí tối ưu thực sự còn lại; consistent còn thỏa h(n) ≤ c(n,n′) + h(n′) trên mỗi cạnh.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Điều kiện tối ưu của A*.** Với h(goal)=0, admissible yêu cầu h không vượt chi phí tối ưu còn lại. Consistent yêu cầu h(n)≤c(n,n′)+h(n′) cho mỗi cạnh. Consistency giúp f không giảm dọc đường đi và cho phép đóng trạng thái thuận lợi hơn trong graph search.

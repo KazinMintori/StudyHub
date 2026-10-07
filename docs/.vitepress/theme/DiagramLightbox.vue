@@ -38,11 +38,11 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 
 <style>
 .diagram-dialog { width: min(1100px, 94vw); max-width: 94vw; height: 88vh; max-height: 88vh; margin: auto; padding: 20px; border: 1px solid var(--vp-c-border); border-radius: 10px; background: var(--vp-c-bg); color: var(--vp-c-text-1); }
-.diagram-dialog::backdrop { background: #121a24aa; }
-.diagram-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 15px; font-size: 14px; padding-bottom: 18px; border-bottom: 1px solid var(--vp-c-divider); }
+.diagram-dialog::backdrop { background: var(--scrim); }
+.diagram-toolbar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); font-size: var(--fs-small); padding-bottom: var(--space-4); border-bottom: 1px solid var(--vp-c-divider); }
 .diagram-scroll { overflow: auto; height: calc(100% - 75px); padding-top: 25px; }
 .diagram-media { margin: auto; }
 .diagram-media svg { width: 100% !important; height: auto !important; max-width: none !important; }
 .diagram-media img { width: 100%; height: auto; }
-@media (max-width: 600px) { .diagram-toolbar > span { display: none; }.diagram-dialog { padding: 12px; }.diagram-toolbar .study-button { padding: 7px 10px; font-size: 11px; } }
+@media (max-width: 600px) { .diagram-toolbar > span { display: none; }.diagram-dialog { padding: 12px; }.diagram-toolbar .study-button { padding: 7px 10px; font-size: var(--fs-small); } }
 </style>

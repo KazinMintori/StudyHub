@@ -9,6 +9,8 @@ next: false
 
 Hàm gom một công việc có tên, nhận tham số và có thể trả kết quả bằng return. Tham số là tên trong định nghĩa; đối số là giá trị truyền khi gọi. In ra màn hình bằng print khác trả kết quả: print chủ yếu tạo tác động phụ, còn return cho phép dùng kết quả trong biểu thức tiếp theo.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tham số có thể dùng chung đối tượng.** Truyền list vào một hàm rồi sửa list tại chỗ có thể làm dữ liệu của bên gọi thay đổi. Gán lại tên tham số bên trong hàm thường không gán lại tên ở bên gọi.

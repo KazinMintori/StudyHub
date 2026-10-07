@@ -2,13 +2,11 @@
 course: giai-thuat-du-lieu
 lecture: bai-03-pagerank-mo-hinh-va-tinh-toan
 section: lecture
-title: "Bài 3: PageRank: mô hình và tính toán"
-prerequisites: ["do-thi","ma-tran","xac-suat-co-dieu-kien"]
+title: "PageRank: mô hình & tính toán"
+prerequisites: ["do-thi","ma-tran"]
 lessonStatus: ready
 description: "Mô hình người lướt ngẫu nhiên (Random Surfer), ma trận liên kết, xử lý nút cụt và bẫy liên kết, biểu diễn thưa, tính toán MapReduce theo khối và phân tích chi phí."
 ---
-
-# Bài 03 — PageRank: mô hình và tính toán
 
 Học phần **Giải thuật nền tảng của Khoa học dữ liệu**, học kỳ 1 năm học 2026–2027.
 
@@ -312,7 +310,7 @@ $$a=\frac3{13},\quad b=\frac4{13},\quad c=\frac6{13}.$$
 Kiểm phương trình ba: $\frac1{13}+\frac2{13}+\frac3{13}=\frac6{13}$; hai phương trình đầu thỏa trực tiếp. Tổng ba điểm bằng 1.
 :::
 
-### Bài 2 — MMDS 5.1.2 (trang 188, cùng Hình 5.7): thêm bước nhảy, $\beta=0{,}8$
+### Bài 2 — MMDS 5.1.2: thêm bước nhảy với hệ số 0,8
 
 ::: exercise
 Tính PageRank của từng trang trong Hình 5.7 với $\beta=0{,}8$.

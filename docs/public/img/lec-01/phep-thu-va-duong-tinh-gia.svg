@@ -1,64 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#244bd6"/>
-      <stop offset="100%" stop-color="#1b3cac"/>
+      <stop offset="0%" stop-color="#5a37a8"/>
+      <stop offset="100%" stop-color="#5a37a8"/>
     </linearGradient>
     <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#edf2fe"/>
-      <stop offset="100%" stop-color="#e2ebfd"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#eee9fb"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ecfdf5"/>
-      <stop offset="100%" stop-color="#d1fae5"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef2f2"/>
-      <stop offset="100%" stop-color="#fee2e2"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
   </defs>
-  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#f5f4f9" stroke-width="1.5"/>
   
-    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Bùng nổ số phép thử và Hiện tượng dương tính giả (Nguyên lý Bonferroni)</text>
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1f1c2b" text-anchor="middle">Bùng nổ số phép thử và Hiện tượng dương tính giả (Nguyên lý Bonferroni)</text>
     
     <!-- Trials Box -->
-    <rect x="40" y="60" width="310" height="150" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5"/>
-    <text x="195" y="85" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Tổng số phép thử khổng lồ:</text>
-    <text x="60" y="110" font-size="11" fill="#334155">• Chọn cặp người: C(10⁹, 2) ≈ 5 × 10¹⁷</text>
-    <text x="60" y="130" font-size="11" fill="#334155">• Chọn cặp ngày: C(1000, 2) ≈ 5 × 10⁵</text>
-    <rect x="55" y="145" width="280" height="35" rx="4" fill="#ffffff" stroke="#93c5fd"/>
-    <text x="195" y="167" font-size="12" font-weight="700" fill="#244bd6" text-anchor="middle">Số phép thử = C(P, 2) · C(T, 2) ≈ 2.5 × 10²³</text>
-    <text x="195" y="198" font-size="10" fill="#64748b" text-anchor="middle">Mỗi phép thử có xác suất p² = 10⁻¹⁸</text>
+    <rect x="40" y="60" width="310" height="150" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.5"/>
+    <text x="195" y="85" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Tổng số phép thử khổng lồ:</text>
+    <text x="60" y="110" font-size="14" fill="#4f4a62">• Chọn cặp người: C(10⁹, 2) ≈ 5 × 10¹⁷</text>
+    <text x="60" y="130" font-size="14" fill="#4f4a62">• Chọn cặp ngày: C(1000, 2) ≈ 5 × 10⁵</text>
+    <rect x="55" y="145" width="280" height="35" rx="4" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="195" y="167" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Số phép thử = C(P, 2) · C(T, 2) ≈ 2.5 × 10²³</text>
+    <text x="195" y="198" font-size="14" fill="#5a37a8" text-anchor="middle">Mỗi phép thử có xác suất p² = 10⁻¹⁸</text>
 
     <!-- Arrow -->
-    <path d="M 355 135 L 400 135" stroke="#ef4444" stroke-width="2.5" marker-end="url(#redArrow)"/>
+    <path d="M 355 135 L 400 135" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#redArrow)"/>
 
     <!-- Expectation Box -->
-    <rect x="410" y="60" width="310" height="150" rx="8" fill="url(#softAmber)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
-    <text x="565" y="85" font-size="13" font-weight="700" fill="#b45309" text-anchor="middle">Kỳ vọng số cặp trùng ngẫu nhiên:</text>
-    <rect x="425" y="102" width="280" height="50" rx="6" fill="#ffffff" stroke="#fcd34d"/>
-    <text x="565" y="125" font-size="12" fill="#78350f" text-anchor="middle">E[X] = 2.5 × 10²³ × 10⁻¹⁸</text>
-    <text x="565" y="144" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">≈ 249.750 CẶP TRÙNG!</text>
-    <text x="565" y="175" font-size="11" font-weight="600" fill="#1e293b" text-anchor="middle">Trùng ngẫu nhiên lấn át dấu hiệu thật!</text>
-    <text x="565" y="195" font-size="10" fill="#78350f" text-anchor="middle">Không thể kết luận họ cấu kết chỉ vì có trùng</text>
+    <rect x="410" y="60" width="310" height="150" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="565" y="85" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Kỳ vọng số cặp trùng ngẫu nhiên:</text>
+    <rect x="425" y="102" width="280" height="50" rx="6" fill="#ffffff" stroke="#5a37a8"/>
+    <text x="565" y="125" font-size="14" fill="#5a37a8" text-anchor="middle">E[X] = 2.5 × 10²³ × 10⁻¹⁸</text>
+    <text x="565" y="144" font-size="16" font-weight="700" fill="#5a37a8" text-anchor="middle">≈ 249.750 CẶP TRÙNG!</text>
+    <text x="565" y="175" font-size="14" font-weight="600" fill="#1f1c2b" text-anchor="middle">Trùng ngẫu nhiên lấn át dấu hiệu thật!</text>
+    <text x="565" y="195" font-size="14" fill="#5a37a8" text-anchor="middle">Không thể kết luận họ cấu kết chỉ vì có trùng</text>
   
 </svg>

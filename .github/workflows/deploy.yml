@@ -45,6 +45,9 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run ci:build
 
+      - name: Check interface design tokens
+        run: npm run audit:tokens
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

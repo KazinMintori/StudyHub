@@ -9,6 +9,8 @@ next: false
 
 Ma trận là bảng số có hàng và cột; kích thước m × n nghĩa là m hàng, n cột. Nếu A có n cột và x có n phần tử thì Ax là vector có m phần tử. Mỗi phần tử của Ax là tổng tích giữa một hàng của A với x.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Điều kiện nhân và thứ tự.** Nếu A có shape m×n và B có shape n×p thì AB có shape m×p, với mỗi phần tử là tích vô hướng của một hàng A và một cột B. Nhìn chung AB khác BA; đôi khi BA còn không xác định.

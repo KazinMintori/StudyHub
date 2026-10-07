@@ -9,6 +9,8 @@ next: false
 
 Tổ hợp lồi là tổng có trọng số không âm và tổng trọng số bằng 1. Với hai điểm, λx+(1−λ)y, 0 ≤ λ ≤ 1, chạy trên đoạn thẳng nối chúng. Cho λ ngoài khoảng đó thường đưa điểm ra khỏi đoạn thẳng.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Nhiều điểm và điều kiện trọng số.** Một tổ hợp lồi có dạng Σᵢλᵢxᵢ với λᵢ≥0 và Σᵢλᵢ=1. Bao lồi là tập tất cả tổ hợp lồi của các điểm đã cho.

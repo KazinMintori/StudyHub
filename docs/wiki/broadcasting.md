@@ -9,6 +9,8 @@ next: false
 
 Broadcasting cho phép NumPy thực hiện phép toán trên các mảng có kích thước tương thích mà không cần viết vòng lặp mở rộng. So kích thước từ trục cuối: mỗi cặp phải bằng nhau hoặc có một bên bằng 1. Shape là bộ số mô tả kích thước theo từng trục.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Quy tắc tương thích.** So các kích thước từ trục cuối. Hai trục tương thích khi bằng nhau hoặc có một bên bằng 1; trục thiếu được coi như kích thước 1.

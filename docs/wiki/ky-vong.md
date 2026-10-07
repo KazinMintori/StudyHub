@@ -9,6 +9,8 @@ next: false
 
 Kỳ vọng là trung bình có trọng số theo xác suất. Với X rời rạc, E[X]=ΣxP(X=x). Đây là trung bình dài hạn khi điều kiện hội tụ phù hợp; nó không nhất thiết là một kết quả có thể quan sát trong một lần thử. Kỳ vọng của tổng bằng tổng kỳ vọng nếu các kỳ vọng tồn tại.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tồn tại và tuyến tính.** Kỳ vọng cần được kiểm tra tồn tại theo mô hình đang dùng. Với biến liên tục có mật độ, E[X]=∫x f(x)dx khi tích phân thích hợp tồn tại. Một phân phối có thể không có kỳ vọng hữu hạn.

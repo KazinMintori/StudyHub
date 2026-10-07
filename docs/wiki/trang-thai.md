@@ -9,6 +9,8 @@ next: false
 
 Trạng thái mô tả đủ thông tin để xác định tình huống hiện tại và các hành động hợp lệ tiếp theo. Bài toán tìm kiếm cần trạng thái đầu, tập hành động, quy tắc chuyển trạng thái và điều kiện đích. Trạng thái khác với nút tìm kiếm: nhiều đường đi có thể tới cùng một trạng thái.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Đủ thông tin cho tương lai.** Hai lịch sử khác nhau có thể gom thành cùng trạng thái nếu chúng cho cùng các hành động hợp lệ, chi phí và kết quả tương lai liên quan. Nếu lịch sử làm thay đổi lựa chọn tiếp theo, phải đưa thông tin đó vào trạng thái.

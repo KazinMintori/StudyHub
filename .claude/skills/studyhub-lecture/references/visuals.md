@@ -183,3 +183,13 @@ Xem mọi trang ở kích thước trình chiếu. Phóng các công thức, b�
 Kiểm tra thật trên output cuối: overflow, cắt glyph, đổi font, opacity, label collision, nguồn ảnh, đáp án bị lộ và thứ tự trang. Contact sheet một mình không đủ.
 
 Sau sửa, render lại các trang bị ảnh hưởng và kiểm tra liên kết / thứ tự nếu có tách hoặc gộp. Không báo “đã QA” khi chỉ chạy một phép đo tự động.
+
+
+## Quy tắc giao diện Mực tím trên giấy vở
+
+- Notes là tab mặc định; thứ tự Notes, Slides, Kiến thức nền. Địa chỉ cũ `#bai-tap` chuyển về Notes. Bài tập môn ở cuối Notes.
+- Không chèn mục lục trong Markdown: VitePress có mục lục bên phải và trên điện thoại.
+- Tiêu đề viết bằng chữ; không đặt công thức trong heading vì mục lục làm mất ký hiệu.
+- Công thức trong Notes và Wiki dùng `$…$`; chữ tiếng Việt nằm ngoài công thức.
+- Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
+- Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.

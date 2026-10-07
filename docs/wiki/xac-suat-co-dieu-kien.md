@@ -9,6 +9,8 @@ next: false
 
 P(A|B) là xác suất A khi biết B đã xảy ra. Với P(B)>0, P(A|B)=P(A∩B)/P(B): thu hẹp miền xét về B rồi tính phần của A trong miền đó. P(A|B) nhìn chung khác P(B|A).
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Định nghĩa và Bayes.** Với P(B)>0:

@@ -9,15 +9,17 @@ next: false
 
 Hàm f gán mỗi đầu vào hợp lệ đúng một đầu ra. Miền xác định là các đầu vào được phép; tập giá trị là các đầu ra thực sự nhận được. f: A → B mô tả đầu vào thuộc A và đầu ra thuộc B. Hợp hàm g∘f nghĩa là tính f trước, rồi đưa kết quả vào g.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Đơn ánh, toàn ánh và hàm ngược.** Đơn ánh nghĩa là hai đầu vào khác nhau cho hai đầu ra khác nhau. Toàn ánh lên tập B nghĩa là mọi phần tử của B đều là đầu ra của ít nhất một đầu vào. Song ánh thỏa cả hai và có hàm ngược trên B.
 
-Ví dụ f(x)=x² trên số thực không đơn ánh vì f(2)=f(−2). Thu hẹp miền về x≥0 làm hàm đơn ánh. Luôn nêu miền xét trước khi kết luận về hàm số.
+Ví dụ $f(x)=x^2$ trên số thực không đơn ánh vì f(2)=f(−2). Thu hẹp miền về x≥0 làm hàm đơn ánh. Luôn nêu miền xét trước khi kết luận về hàm số.
 
 ## Ví dụ
 
-f(x) = x², g(x) = x + 1: g(f(2)) = 5, nhưng f(g(2)) = 9.
+$f(x)=x^2$, g(x) = x + 1: g(f(2)) = 5, nhưng f(g(2)) = 9.
 
 ## Khi nào cần dùng?
 

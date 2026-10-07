@@ -9,6 +9,8 @@ next: false
 
 Hai biến cố A, B độc lập khi P(A∩B)=P(A)P(B). Khi P(B)>0, điều này tương đương P(A|B)=P(A). Độc lập khác loại trừ nhau: hai biến cố không thể cùng xảy ra và đều có xác suất dương sẽ không độc lập.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Độc lập từng đôi khác độc lập toàn bộ.** Với nhiều biến cố, yêu cầu từng cặp độc lập chưa đủ để kết luận mọi nhóm đều có xác suất giao bằng tích xác suất. Cần kiểm tra định nghĩa phù hợp với số biến cố.

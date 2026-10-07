@@ -9,6 +9,8 @@ next: false
 
 Quan hệ từ A đến B là một tập các cặp có thứ tự trong A×B. Với quan hệ trên A: phản xạ là mọi x có xRx; đối xứng là xRy kéo theo yRx; bắc cầu là xRy và yRz kéo theo xRz. Hàm là quan hệ đặc biệt với đúng một đầu ra cho mỗi đầu vào.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tương đương và thứ tự.** Quan hệ tương đương phản xạ, đối xứng và bắc cầu; nó chia tập thành các lớp tương đương. Quan hệ thứ tự bộ phận phản xạ, phản đối xứng và bắc cầu.

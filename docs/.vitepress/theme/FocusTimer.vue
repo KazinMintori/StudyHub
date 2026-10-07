@@ -30,8 +30,8 @@ onUnmounted(() => { save(); clearInterval(interval) })
 
 <template>
   <section class="focus-panel" aria-labelledby="focus-heading">
-    <div class="panel-heading"><h2 id="focus-heading">Một phiên tập trung</h2><span>Pomodoro</span></div>
-    <p>Chọn một việc. Dành trọn thời gian cho nó.</p>
+    <div class="panel-heading"><h2 id="focus-heading">Hẹn giờ tập trung</h2><span>Pomodoro</span></div>
+    <p>25 phút học, 5 phút nghỉ.</p>
     <div class="timer-display" role="timer" :aria-label="`Còn ${display}`">{{ display }}</div>
     <div class="timer-modes" aria-label="Thời lượng phiên">
       <button v-for="m in [25, 50, 5]" :key="m" :aria-pressed="minutes === m" @click="minutes = m; reset()">{{ m === 5 ? 'Nghỉ 5 phút' : `${m} phút` }}</button>

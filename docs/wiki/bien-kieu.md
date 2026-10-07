@@ -9,6 +9,8 @@ next: false
 
 Biến là tên dùng để truy cập giá trị; kiểu dữ liệu quy định các phép toán phù hợp. Trong Python, int biểu diễn số nguyên, float số thực gần đúng, str chuỗi, bool giá trị đúng/sai. Trong NumPy, dtype còn quy định kích thước và cách diễn giải dữ liệu trong bộ nhớ.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Giá trị và cách lưu.** Trong Python, tên biến tham chiếu tới đối tượng; có thể gán lại tên đó cho đối tượng khác kiểu. NumPy dtype mô tả biểu diễn cố định như int32, float64, ảnh hưởng miền giá trị và độ chính xác.

@@ -50,7 +50,7 @@ Markdown được hỗ trợ (VitePress + cấu hình trong `config.mjs`):
 | `::: solution` | Lời giải — **luôn gập**, đặt ngay sau exercise/hint | Hộp gập “Lời giải” |
 | `::: tip`, `::: info`, `::: warning`, `::: danger`, `::: details` | Hộp VitePress gốc; dùng có chủ đích (xem lecture-blueprint.md) | |
 | `<details><summary>…</summary>…</details>` | Đáp án câu tự kiểm ngắn | Gập |
-| `[[toc]]` | Mục lục trong bài dài | |
+| `(dùng mục lục của VitePress)` | Mục lục trong bài dài | |
 | `<CodeIllustration type="…" />` | Minh họa chạy được: `search`, `gradient`, `bayes`, `broadcast`, `mapreduce`, `field` | Component toàn cục, không cần import |
 
 Mỗi container mở bằng `::: tên` phải đóng bằng `:::` trên dòng riêng. Không lồng container cùng loại. Không đặt đáp án trong cùng hộp với đề.
@@ -118,3 +118,13 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Đặt hình ở chỗ khác `img/<lec>/` cạnh bài rồi viết đường dẫn tay → dễ gãy khi site chạy dưới `/StudyHub/`. Giữ quy ước đường dẫn tương đối như các bài hiện có và xem trang đã build.
 - Viết `$…$` hoặc `**…**` trong `concepts.mjs` → tab Kiến thức nền hiện nguyên ký tự.
 - Sửa `docs/wiki/<id>.md` nhưng không sửa `concepts.mjs` → định nghĩa trong tab Kiến thức nền (lấy từ concepts) và trang Wiki lệch nhau.
+
+
+## Quy tắc giao diện Mực tím trên giấy vở
+
+- Notes là tab mặc định; thứ tự Notes, Slides, Kiến thức nền. Địa chỉ cũ `#bai-tap` chuyển về Notes. Bài tập môn ở cuối Notes.
+- Không chèn mục lục trong Markdown: VitePress có mục lục bên phải và trên điện thoại.
+- Tiêu đề viết bằng chữ; không đặt công thức trong heading vì mục lục làm mất ký hiệu.
+- Công thức trong Notes và Wiki dùng `$…$`; chữ tiếng Việt nằm ngoài công thức.
+- Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
+- Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.

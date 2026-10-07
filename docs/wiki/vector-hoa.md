@@ -9,6 +9,8 @@ next: false
 
 Vector hóa biểu diễn thao tác trên cả mảng bằng các phép toán tối ưu thay vì một vòng lặp Python cho từng phần tử. Cần hiểu shape, dtype và quy tắc broadcasting để phép toán tương ứng đúng với điều định làm. Không phải mọi phép vector hóa đều giảm bộ nhớ.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tốc độ không phải tiêu chí duy nhất.** Phép toán trên mảng có thể chuyển vòng lặp sang mã tối ưu bên dưới, nhưng vẫn phải thực hiện công việc. Các mảng tạm có thể làm tăng bộ nhớ và đọc/ghi.

@@ -9,6 +9,8 @@ next: false
 
 Cây là đồ thị liên thông không có chu trình trong dạng vô hướng. Khi chọn một gốc, mỗi nút khác gốc có một nút cha; nút không có con gọi là lá. Độ sâu là số cạnh từ gốc tới nút. Cây nhị phân có tối đa hai con ở mỗi nút.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Chiều cao và thứ tự.** Chiều cao đo đường dài nhất từ gốc tới lá theo quy ước đã chọn. Với cây nhị phân tìm kiếm có khóa phân biệt, mọi khóa bên trái nhỏ hơn khóa gốc và bên phải lớn hơn. Quy tắc này phải đúng ở mọi cây con.

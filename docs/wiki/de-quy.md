@@ -9,6 +9,8 @@ next: false
 
 Hàm đệ quy gọi lại chính nó trên bài toán nhỏ hơn. Cần có điều kiện dừng và mỗi lần gọi phải tiến về điều kiện đó. Các lời gọi chưa hoàn thành nằm trên ngăn xếp; đệ quy quá sâu có thể vượt giới hạn ngăn xếp.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Hai yêu cầu kết thúc.** Có ít nhất một trường hợp cơ sở, và mọi nhánh lời gọi phải tiến về trường hợp cơ sở. Một hàm có câu lệnh dừng nhưng nhánh khác gọi lại với cùng tham số vẫn có thể không kết thúc.

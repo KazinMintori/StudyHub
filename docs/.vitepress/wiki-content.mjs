@@ -1,6 +1,9 @@
+import { formatWikiMath } from '../../scripts/wiki-math.mjs'
 import { concepts } from './concepts.mjs'
 
+import { mathAiWikiDetails } from './math-ai-foundations.mjs'
 export const wikiGroups = [
+  { name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','tap-loi','ham-loi','kkt'] },
   { name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','luong-tu','quy-nap','to-hop','quan-he'] },
   { name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
   { name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
@@ -10,6 +13,12 @@ export const wikiGroups = [
   { name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
 ]
 const connections = {
+  hessian:['gradient','ma-tran-psd','tri-rieng','ma-tran'],
+  'ma-tran-psd':['ma-tran','tri-rieng','hessian'],
+  'he-phuong-trinh':['ma-tran','vector','hessian'],
+  'tap-loi':['to-hop-loi','ham-loi','tap-hop'],
+  'ham-loi':['tap-loi','gradient','hessian'],
+  kkt:['gradient','ham-loi','he-phuong-trinh'],
   gradient:['dao-ham-rieng','vector','dao-ham','chuan','dien-the'],
   'dao-ham-rieng':['dao-ham','gradient','quy-tac-chuoi','ham-so'],
   'dao-ham':['gioi-han','ham-so','gradient','tich-phan','quy-tac-chuoi'],
@@ -41,6 +50,7 @@ export function relatedConcepts(id) {
   return [...new Set([group.ids[(index+1)%group.ids.length],group.ids[(index+group.ids.length-1)%group.ids.length],group.ids[0]])].filter(other=>other!==id)
 }
 export const wikiDetails = {
+  ...mathAiWikiDetails,
   'tap-hop':'**Quan hệ giữa các tập.** A là tập con của B khi mọi phần tử của A cũng thuộc B, ký hiệu A ⊆ B. Hai tập bằng nhau khi chúng chứa cùng các phần tử, không phụ thuộc thứ tự viết. Khi dùng phép bù, phải nêu tập vũ trụ đang xét.\n\nĐừng nhầm phần tử x với tập chỉ chứa x: x và {x} là hai đối tượng khác nhau. Khái niệm tập hợp được dùng để định nghĩa quan hệ, miền xác định của hàm số và không gian mẫu.',
   'ham-so':'**Đơn ánh, toàn ánh và hàm ngược.** Đơn ánh nghĩa là hai đầu vào khác nhau cho hai đầu ra khác nhau. Toàn ánh lên tập B nghĩa là mọi phần tử của B đều là đầu ra của ít nhất một đầu vào. Song ánh thỏa cả hai và có hàm ngược trên B.\n\nVí dụ f(x)=x² trên số thực không đơn ánh vì f(2)=f(−2). Thu hẹp miền về x≥0 làm hàm đơn ánh. Luôn nêu miền xét trước khi kết luận về hàm số.',
   'menh-de':'**Bảng chân trị.** Có thể liệt kê mọi tổ hợp đúng/sai của các mệnh đề thành phần để kiểm tra một biểu thức. Với n biến Boolean, bảng có 2ⁿ dòng. Hai biểu thức tương đương khi có cùng giá trị ở mọi dòng.\n\nLuật De Morgan: ¬(p∧q) tương đương ¬p∨¬q; ¬(p∨q) tương đương ¬p∧¬q. Phép kéo theo p→q tương đương ¬p∨q, không tương đương q→p.',
@@ -102,5 +112,5 @@ export const wikiDetails = {
 const htmlEscape = text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
 export function createWikiArticle(id) {
   const term=concepts[id], related=relatedConcepts(id)
-  return `---\ntitle: ${JSON.stringify(term.name)}\nwikiTerm: ${id}\nprev: false\nnext: false\n---\n\n# ${term.name}\n\n${term.definition}\n\n## Giải thích kỹ thuật\n\n${wikiDetails[id]}\n\n## Ví dụ\n\n${term.example}\n\n## Khi nào cần dùng?\n\n${term.use}\n\n## Tự kiểm tra\n\n${term.question}\n\n<details><summary>Xem đáp án</summary>\n\n${term.answer}\n\n</details>\n\n## Thuật ngữ liên quan\n\n${related.map(other=>`- [${htmlEscape(concepts[other].name)}](./${other}.md)`).join('\n')}\n`
+  return `---\ntitle: ${JSON.stringify(term.name)}\nwikiTerm: ${id}\nprev: false\nnext: false\n---\n\n# ${term.name}\n\n${formatWikiMath(term.definition)}\n\n<WikiUsage />\n\n## Giải thích kỹ thuật\n\n${formatWikiMath(wikiDetails[id])}\n\n## Ví dụ\n\n${formatWikiMath(term.example)}\n\n## Khi nào cần dùng?\n\n${formatWikiMath(term.use)}\n\n## Tự kiểm tra\n\n${formatWikiMath(term.question)}\n\n<details><summary>Xem đáp án</summary>\n\n${formatWikiMath(term.answer)}\n\n</details>\n\n## Thuật ngữ liên quan\n\n${related.map(other=>`- [${htmlEscape(concepts[other].name)}](./${other}.md)`).join('\n')}\n`
 }

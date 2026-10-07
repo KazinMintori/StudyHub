@@ -9,6 +9,8 @@ next: false
 
 Đồ thị G = (V, E) gồm tập đỉnh V và tập cạnh E nối các đỉnh. Đồ thị có hướng phân biệt u → v với v → u; đồ thị vô hướng thì không. Trọng số là số gắn trên cạnh, thường biểu diễn khoảng cách hoặc chi phí. Đường đi là chuỗi cạnh liên tiếp.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Biểu diễn đồ thị.** Danh sách kề lưu láng giềng của từng đỉnh và thường cần O(|V|+|E|) bộ nhớ. Ma trận kề dùng bảng |V|×|V|, thuận tiện kiểm tra cạnh nhưng cần O(|V|²) bộ nhớ.

@@ -9,6 +9,8 @@ next: false
 
 Hàng đợi lấy phần tử theo thứ tự vào trước, ra trước (FIFO). Thêm ở cuối và lấy ở đầu. Trong BFS, hàng đợi giữ các nút chờ duyệt, nên các nút ở tầng hiện tại được xử lý trước tầng tiếp theo.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Chi phí cài đặt.** Hàng đợi có thể dùng danh sách liên kết hoặc vùng nhớ vòng. Trong mô hình thích hợp, thêm cuối và lấy đầu đều tốn O(1). Xóa phần tử đầu của một mảng bằng cách dịch toàn bộ phần còn lại có thể tốn O(n).

@@ -1,80 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="100%" height="100%" style="background:#f8fafc; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="100%" height="100%" style="background:#f5f4f9; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
   <defs>
     <filter id="shadow" x="-8%" y="-8%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#5a37a8"/>
     </marker>
     <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#5a37a8"/>
     </marker>
   </defs>
 
   <!-- Title / Legend -->
-  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">Xử lý Nút cụt (Dead End) bằng cơ chế bù điểm toàn cục</text>
-  <text x="360" y="52" text-anchor="middle" font-size="12" fill="#64748b">Khi xóa cạnh C → A, C có bậc ra 0. Điểm δ = r_C được phân phối lại đều δ/n = r_C/4 cho cả 4 trang</text>
+  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#1f1c2b">Xử lý Nút cụt (Dead End) bằng cơ chế bù điểm toàn cục</text>
+  <text x="360" y="52" text-anchor="middle" font-size="14" fill="#5a37a8">Khi xóa cạnh C → A, C có bậc ra 0. Điểm δ = r_C được phân phối lại đều δ/n = r_C/4 cho cả 4 trang</text>
 
   <!-- Regular links (dimmed) -->
   <!-- A -> B -->
-  <path d="M 235 120 C 310 95, 410 95, 485 120" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 235 120 C 310 95, 410 95, 485 120" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- B -> A -->
-  <path d="M 485 140 C 410 165, 310 165, 235 140" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 485 140 C 410 165, 310 165, 235 140" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- A -> C -->
-  <path d="M 190 165 L 190 295" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 190 165 L 190 295" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- A -> D -->
-  <path d="M 225 150 L 490 310" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 225 150 L 490 310" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- B -> D -->
-  <path d="M 525 165 L 525 295" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 525 165 L 525 295" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- D -> B -->
-  <path d="M 505 295 L 505 165" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 505 295 L 505 165" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
   <!-- D -> C -->
-  <path d="M 485 340 L 235 340" fill="none" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 485 340 L 235 340" fill="none" stroke="#eee9fb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
 
   <!-- Redistribution from Dead End C (Amber dashed lines) -->
   <!-- C -> A -->
-  <path d="M 215 295 C 235 240, 235 220, 215 165" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
+  <path d="M 215 295 C 235 240, 235 220, 215 165" fill="none" stroke="#5a37a8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
   <!-- C -> B -->
-  <path d="M 225 315 C 330 250, 410 200, 485 150" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
+  <path d="M 225 315 C 330 250, 410 200, 485 150" fill="none" stroke="#5a37a8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
   <!-- C -> D -->
-  <path d="M 235 325 C 320 310, 400 310, 480 325" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
+  <path d="M 235 325 C 320 310, 400 310, 480 325" fill="none" stroke="#5a37a8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
   <!-- C -> C (self loop redistribute) -->
-  <path d="M 175 345 C 130 380, 130 300, 170 320" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
+  <path d="M 175 345 C 130 380, 130 300, 170 320" fill="none" stroke="#5a37a8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arr-amber)"/>
 
   <!-- Nodes -->
   <!-- Node A -->
   <g transform="translate(200, 130)" filter="url(#shadow)">
-    <circle r="32" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#1e3a8a">A</text>
-    <text y="48" text-anchor="middle" font-size="11" fill="#2563eb">+ β·δ/4</text>
+    <circle r="32" fill="#f5f4f9" stroke="#5a37a8" stroke-width="2"/>
+    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#5a37a8">A</text>
+    <text y="48" text-anchor="middle" font-size="14" fill="#5a37a8">+ β·δ/4</text>
   </g>
 
   <!-- Node B -->
   <g transform="translate(520, 130)" filter="url(#shadow)">
-    <circle r="32" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
-    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">B</text>
-    <text y="48" text-anchor="middle" font-size="11" fill="#d97706">+ β·δ/4</text>
+    <circle r="32" fill="#ffffff" stroke="#5a37a8" stroke-width="2"/>
+    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#1f1c2b">B</text>
+    <text y="48" text-anchor="middle" font-size="14" fill="#5a37a8">+ β·δ/4</text>
   </g>
 
   <!-- Node C (DEAD END) -->
   <g transform="translate(200, 330)" filter="url(#shadow)">
-    <circle r="34" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
-    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#b45309">C</text>
-    <rect x="-42" y="44" width="84" height="22" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="1.2"/>
-    <text y="59" text-anchor="middle" font-size="11" font-weight="700" fill="#b91c1c">NÚT CỤT (dC=0)</text>
+    <circle r="34" fill="#eee9fb" stroke="#5a37a8" stroke-width="3"/>
+    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#5a37a8">C</text>
+    <rect x="-42" y="44" width="84" height="22" rx="4" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.2"/>
+    <text y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">NÚT CỤT (dC=0)</text>
   </g>
 
   <!-- Node D -->
   <g transform="translate(520, 330)" filter="url(#shadow)">
-    <circle r="32" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
-    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">D</text>
-    <text y="48" text-anchor="middle" font-size="11" fill="#d97706">+ β·δ/4</text>
+    <circle r="32" fill="#ffffff" stroke="#5a37a8" stroke-width="2"/>
+    <text y="5" text-anchor="middle" font-size="18" font-weight="800" fill="#1f1c2b">D</text>
+    <text y="48" text-anchor="middle" font-size="14" fill="#5a37a8">+ β·δ/4</text>
   </g>
 
   <!-- Bottom Explanatory Box -->
   <g transform="translate(360, 415)">
-    <rect x="-240" y="-18" width="480" height="36" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
-    <text y="4" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">
+    <rect x="-240" y="-18" width="480" height="36" rx="8" fill="#eee9fb" stroke="#eee9fb" stroke-width="1.2"/>
+    <text y="4" text-anchor="middle" font-size="14" font-weight="600" fill="#5a37a8">
       Phần bù chung: [(1 − β) + β·δ] / n bảo toàn tổng phân phối xác suất ∑ r_i = 1
     </text>
   </g>

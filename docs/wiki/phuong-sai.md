@@ -9,6 +9,8 @@ next: false
 
 Phương sai Var(X)=E[(X−E[X])²] đo mức phân tán quanh kỳ vọng. Độ lệch chuẩn là căn bậc hai của phương sai nên có cùng đơn vị với X. Với mẫu và mục tiêu ước lượng phương sai tổng thể không chệch, công thức phổ biến chia tổng bình phương độ lệch cho n−1.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Công thức kỹ thuật.** Với moment bậc hai hữu hạn:

@@ -9,6 +9,8 @@ next: false
 
 Giá trị thiếu biểu thị thông tin chưa được biết hoặc không có; nó khác số 0 hay chuỗi rỗng có ý nghĩa. Trong tính toán số, NaN thường đại diện giá trị không xác định. Không kiểm tra NaN bằng phép so sánh bằng thông thường; dùng isna/isnan thích hợp.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **NaN không bằng chính nó.** So sánh NaN==NaN cho false trong số thực IEEE thông thường. Dùng chức năng isna/isnan phù hợp thay vì kiểm tra bằng nhau. pandas còn có các dạng biểu diễn thiếu khác tùy kiểu dữ liệu.

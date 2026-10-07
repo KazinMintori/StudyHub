@@ -1,27 +1,36 @@
 <script setup>
-import { ref, onMounted, watch, nextTick } from 'vue'
-import { useRoute, useData } from 'vitepress'
-import { studyLink as withBase } from './links'
+import { computed, onMounted, onBeforeUnmount, onUnmounted, watch, nextTick } from 'vue'
+import { useRoute } from 'vitepress'
+import { useLecture } from './lecture-state'
+import { lecturePath } from '../lecture-model.mjs'
+import { studyLink } from './links'
 import { readStored, writeStored, storageMessage } from './storage'
-import { canonicalLesson, migrateProgress } from './progress-migration'
-const route = useRoute(), { page, frontmatter } = useData()
-const done = ref(false), readable = ref(false)
-function lessonPath() { const base = import.meta.env.BASE_URL; return canonicalLesson('/' + route.path.slice(base.length).replace(/^\//, '')) }
+import { useStudyProgress, isCompleted, toggleCompleted, progressKey } from './progress'
+const route = useRoute(), { course, lesson, part } = useLecture()
+useStudyProgress()
+const readable = computed(() => lesson.value?.status === 'ready')
+const nextLesson = computed(() => course.value?.lessons[course.value.lessons.indexOf(lesson.value) + 1])
+let frame, trackedPath = '', trackedTitle = ''
 async function load() {
   await nextTick()
-  readable.value = frontmatter.value.section === 'lecture' && frontmatter.value.lessonStatus === 'ready'
-  if (!readable.value) return
-  migrateProgress()
-  const path = lessonPath()
-  done.value = !!(readStored('studyhub_completed', {}) || {})[path]
-  writeStored('studyhub_last_lesson', { path, title: page.value.title })
+  if (!readable.value) { trackedPath = ''; return }
+  trackedPath = progressKey(course.value, lesson.value)
+  trackedTitle = lesson.value.title
+  const previous = readStored('studyhub_last_lesson', null)
+  writeStored('studyhub_last_lesson', { ...(previous?.path === trackedPath ? previous : {}), path: trackedPath, title: lesson.value.title })
 }
-function toggle() {
-  const completed = readStored('studyhub_completed', {}) || {}
-  completed[lessonPath()] = !done.value
-  if (writeStored('studyhub_completed', completed)) done.value = completed[lessonPath()]
+function recordHeading() {
+  if (part.value !== 'notes' || !trackedPath) return
+  const headings = [...document.querySelectorAll('.main > .vp-doc h2[id]')]
+  if (!headings.length) return
+  const heading = headings.filter(h => h.getBoundingClientRect().top <= 160).at(-1)
+  const previous = readStored('studyhub_last_lesson', {})
+  writeStored('studyhub_last_lesson', { ...previous, path: trackedPath, title: trackedTitle, heading: heading?.id || '', headingTitle: heading?.textContent.replace(/\u200b/g, '').trim() || '' })
 }
-onMounted(load)
+function scroll() { if (frame) cancelAnimationFrame(frame); frame = requestAnimationFrame(recordHeading) }
+onMounted(() => { load(); window.addEventListener('scroll', scroll, { passive: true }); window.addEventListener('pagehide', recordHeading) })
+onBeforeUnmount(recordHeading)
+onUnmounted(() => { cancelAnimationFrame(frame); window.removeEventListener('scroll', scroll); window.removeEventListener('pagehide', recordHeading) })
 watch(() => route.path, load)
 </script>
-<template><div v-if="readable" class="lesson-actions"><button class="study-button" :aria-pressed="done" @click="toggle">{{ done ? 'Đã hoàn thành' : 'Đánh dấu đã học' }}</button><a :href="withBase('/goc-hoc-tap#notes')">Ghi chú bài học <span aria-hidden="true">↗</span></a><span v-if="storageMessage" role="status">{{ storageMessage }}</span></div></template>
+<template><section v-if="readable" v-show="part === 'notes'" class="lesson-actions"><button class="study-button" :class="isCompleted(course, lesson) ? 'success' : 'primary'" :aria-pressed="isCompleted(course, lesson)" @click="toggleCompleted(course, lesson)">{{ isCompleted(course, lesson) ? 'Đã học' : 'Đánh dấu đã học' }}</button><nav aria-label="Sau bài học"><a v-if="nextLesson" class="text-link" :href="studyLink(lecturePath(course.id, nextLesson.slug))">Tiếp: {{ nextLesson.title }}</a><a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện của môn</a></nav><p v-if="storageMessage" role="status">{{ storageMessage }}</p></section></template>

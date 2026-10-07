@@ -1,64 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#244bd6"/>
-      <stop offset="100%" stop-color="#1b3cac"/>
+      <stop offset="0%" stop-color="#5a37a8"/>
+      <stop offset="100%" stop-color="#5a37a8"/>
     </linearGradient>
     <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#edf2fe"/>
-      <stop offset="100%" stop-color="#e2ebfd"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#eee9fb"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ecfdf5"/>
-      <stop offset="100%" stop-color="#d1fae5"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef2f2"/>
-      <stop offset="100%" stop-color="#fee2e2"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
   </defs>
-  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#f5f4f9" stroke-width="1.5"/>
   
-    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Tính xác suất trùng trong 2 ngày dưới giả thiết độc lập</text>
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1f1c2b" text-anchor="middle">Tính xác suất trùng trong 2 ngày dưới giả thiết độc lập</text>
     
     <!-- Day 1 Calc -->
-    <rect x="50" y="60" width="280" height="145" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5"/>
-    <text x="190" y="88" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Trùng trong 1 ngày bất kỳ</text>
-    <text x="70" y="115" font-size="11" fill="#334155">• Cả 2 cùng đi: q² = (0.01)² = 10⁻⁴</text>
-    <text x="70" y="135" font-size="11" fill="#334155">• Cùng chọn 1 trong H = 10⁵ khách sạn: 1/H</text>
-    <rect x="70" y="150" width="240" height="35" rx="4" fill="#ffffff" stroke="#93c5fd"/>
-    <text x="190" y="172" font-size="13" font-weight="700" fill="#244bd6" text-anchor="middle">p = q² / H = 10⁻⁹</text>
+    <rect x="50" y="60" width="280" height="145" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.5"/>
+    <text x="190" y="88" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Trùng trong 1 ngày bất kỳ</text>
+    <text x="70" y="115" font-size="14" fill="#4f4a62">• Cả 2 cùng đi: q² = (0.01)² = 10⁻⁴</text>
+    <text x="70" y="135" font-size="14" fill="#4f4a62">• Cùng chọn 1 trong H = 10⁵ khách sạn: 1/H</text>
+    <rect x="70" y="150" width="240" height="35" rx="4" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="190" y="172" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">p = q² / H = 10⁻⁹</text>
 
     <!-- Multiplication Arrow -->
-    <path d="M 335 132 L 420 132" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="377" y="120" font-size="11" font-weight="700" fill="#244bd6" text-anchor="middle">Độc lập</text>
+    <path d="M 335 132 L 420 132" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="377" y="120" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Độc lập</text>
 
     <!-- 2 Days Calc -->
-    <rect x="430" y="60" width="280" height="145" rx="8" fill="url(#softGreen)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
-    <text x="570" y="88" font-size="13" font-weight="700" fill="#065f46" text-anchor="middle">Trùng trong cả 2 ngày đã chọn</text>
-    <text x="450" y="115" font-size="11" fill="#334155">• Do 2 ngày độc lập với nhau:</text>
-    <text x="450" y="135" font-size="11" fill="#334155">• Pr(trùng s VÀ t) = Pr(s) × Pr(t)</text>
-    <rect x="450" y="150" width="240" height="35" rx="4" fill="#ffffff" stroke="#86efac"/>
-    <text x="570" y="172" font-size="14" font-weight="700" fill="#b91c1c" text-anchor="middle">p² = 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸</text>
-    <text x="570" y="198" font-size="10" fill="#065f46" text-anchor="middle">Xác suất 1 phép thử cực kỳ nhỏ!</text>
+    <rect x="430" y="60" width="280" height="145" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="570" y="88" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Trùng trong cả 2 ngày đã chọn</text>
+    <text x="450" y="115" font-size="14" fill="#4f4a62">• Do 2 ngày độc lập với nhau:</text>
+    <text x="450" y="135" font-size="14" fill="#4f4a62">• Pr(trùng s VÀ t) = Pr(s) × Pr(t)</text>
+    <rect x="450" y="150" width="240" height="35" rx="4" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="570" y="172" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">p² = 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸</text>
+    <text x="570" y="198" font-size="14" fill="#5a37a8" text-anchor="middle">Xác suất 1 phép thử cực kỳ nhỏ!</text>
   
 </svg>

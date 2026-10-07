@@ -9,6 +9,8 @@ next: false
 
 Hàng đợi ưu tiên lấy phần tử dựa trên khóa ưu tiên, thay vì thời điểm thêm. Với min-priority queue, khóa nhỏ nhất được lấy trước. Heap là một cách cài đặt phổ biến, cho thêm và lấy phần tử ưu tiên trong O(log n).
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Heap không phải danh sách đã sắp xếp hoàn toàn.** Min-heap giữ khóa của nút cha không lớn hơn khóa của các con; do đó phần tử nhỏ nhất ở gốc. Các nút ở những nhánh khác nhau không nhất thiết có thứ tự.

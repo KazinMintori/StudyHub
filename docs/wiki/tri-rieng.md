@@ -9,6 +9,8 @@ next: false
 
 Nếu Av = λv với v khác vector không, v là vector riêng của ma trận vuông A và λ là trị riêng tương ứng. Biến đổi A chỉ co giãn hoặc đổi chiều v mà không đưa nó ra khỏi đường thẳng ban đầu.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Cách tìm trị riêng.** Từ Av=λv suy ra (A−λI)v=0. Để có nghiệm v≠0 trong hữu hạn chiều, ma trận A−λI phải suy biến; do đó det(A−λI)=0.

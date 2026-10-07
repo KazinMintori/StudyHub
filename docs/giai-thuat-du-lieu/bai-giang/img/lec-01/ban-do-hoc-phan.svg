@@ -1,87 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#244bd6"/>
-      <stop offset="100%" stop-color="#1b3cac"/>
+      <stop offset="0%" stop-color="#5a37a8"/>
+      <stop offset="100%" stop-color="#5a37a8"/>
     </linearGradient>
     <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#edf2fe"/>
-      <stop offset="100%" stop-color="#e2ebfd"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#eee9fb"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ecfdf5"/>
-      <stop offset="100%" stop-color="#d1fae5"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef2f2"/>
-      <stop offset="100%" stop-color="#fee2e2"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
   </defs>
-  <rect width="760" height="260" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="760" height="260" rx="12" fill="#ffffff" stroke="#f5f4f9" stroke-width="1.5"/>
   
-    <text x="380" y="25" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Bản đồ cấu trúc học phần: Giải thuật nền tảng của Khoa học dữ liệu (UET.DSE2053)</text>
+    <text x="380" y="25" font-size="15" font-weight="700" fill="#1f1c2b" text-anchor="middle">Bản đồ cấu trúc học phần: Giải thuật nền tảng của Khoa học dữ liệu (UET.DSE2053)</text>
     
     <!-- Central Node Bài 01 -->
-    <rect x="40" y="90" width="130" height="80" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <rect x="40" y="90" width="130" height="80" rx="8" fill="#5a37a8" filter="url(#shadow)"/>
     <text x="105" y="125" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Bài 01: Nền tảng</text>
-    <text x="105" y="145" font-size="10" fill="#e2ebfd" text-anchor="middle">Dữ liệu lớn &amp; Mô hình</text>
+    <text x="105" y="145" font-size="14" fill="#eee9fb" text-anchor="middle">Dữ liệu lớn &amp; Mô hình</text>
 
     <!-- 5 Branches -->
     <!-- Branch 1: Phân tán & Xếp hạng -->
-    <path d="M 175 105 L 250 55" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
-    <rect x="255" y="35" width="225" height="42" rx="6" fill="url(#softBlue)" stroke="#244bd6"/>
-    <text x="367" y="52" font-size="11" font-weight="700" fill="#1e3a8a" text-anchor="middle">Nhánh 1: Phân tán &amp; Xếp hạng</text>
-    <text x="367" y="68" font-size="10" fill="#334155" text-anchor="middle">Bài 02 MapReduce · 03 PageRank · 04 TrustRank</text>
+    <path d="M 175 105 L 250 55" stroke="#5a37a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="255" y="35" width="225" height="42" rx="6" fill="#eee9fb" stroke="#5a37a8"/>
+    <text x="367" y="52" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Nhánh 1: Phân tán &amp; Xếp hạng</text>
+    <text x="367" y="68" font-size="14" fill="#4f4a62" text-anchor="middle">Bài 02 MapReduce · 03 PageRank · 04 TrustRank</text>
 
     <!-- Branch 2: Tương đồng & Tìm gần -->
-    <path d="M 175 120 L 250 95" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
-    <rect x="255" y="80" width="225" height="42" rx="6" fill="url(#softGreen)" stroke="#10b981"/>
-    <text x="367" y="97" font-size="11" font-weight="700" fill="#065f46" text-anchor="middle">Nhánh 2: Tương đồng &amp; Vector</text>
-    <text x="367" y="113" font-size="10" fill="#334155" text-anchor="middle">Bài 05 Shingle/MinHash · 06 LSH · 07 HNSW/PQ</text>
+    <path d="M 175 120 L 250 95" stroke="#5a37a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="255" y="80" width="225" height="42" rx="6" fill="#eee9fb" stroke="#5a37a8"/>
+    <text x="367" y="97" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Nhánh 2: Tương đồng &amp; Vector</text>
+    <text x="367" y="113" font-size="14" fill="#4f4a62" text-anchor="middle">Bài 05 Shingle/MinHash · 06 LSH · 07 HNSW/PQ</text>
 
     <!-- Branch 3: Dòng dữ liệu & Cửa sổ -->
-    <path d="M 175 135 L 250 140" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
-    <rect x="255" y="125" width="225" height="42" rx="6" fill="url(#softAmber)" stroke="#f59e0b"/>
-    <text x="367" y="142" font-size="11" font-weight="700" fill="#b45309" text-anchor="middle">Nhánh 3: Dòng dữ liệu &amp; Cửa sổ</text>
-    <text x="367" y="158" font-size="10" fill="#334155" text-anchor="middle">Bài 08 Sampling/Bloom · 09 Count-Min/DGIM</text>
+    <path d="M 175 135 L 250 140" stroke="#5a37a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="255" y="125" width="225" height="42" rx="6" fill="#eee9fb" stroke="#5a37a8"/>
+    <text x="367" y="142" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Nhánh 3: Dòng dữ liệu &amp; Cửa sổ</text>
+    <text x="367" y="158" font-size="14" fill="#4f4a62" text-anchor="middle">Bài 08 Sampling/Bloom · 09 Count-Min/DGIM</text>
 
     <!-- Branch 4: Nén dữ liệu -->
-    <path d="M 175 150 L 250 185" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
-    <rect x="255" y="170" width="225" height="42" rx="6" fill="#fdf4ff" stroke="#c084fc"/>
-    <text x="367" y="187" font-size="11" font-weight="700" fill="#7e22ce" text-anchor="middle">Nhánh 4: Nén dữ liệu</text>
-    <text x="367" y="203" font-size="10" fill="#334155" text-anchor="middle">Bài 10 Huffman · Bài 11 LZ77/LZ78/JPEG</text>
+    <path d="M 175 150 L 250 185" stroke="#5a37a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="255" y="170" width="225" height="42" rx="6" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="367" y="187" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Nhánh 4: Nén dữ liệu</text>
+    <text x="367" y="203" font-size="14" fill="#4f4a62" text-anchor="middle">Bài 10 Huffman · Bài 11 LZ77/LZ78/JPEG</text>
 
     <!-- Branch 5: Lưu trữ & Truy vấn -->
-    <path d="M 175 165 L 250 230" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
-    <rect x="255" y="215" width="225" height="42" rx="6" fill="#f8fafc" stroke="#64748b"/>
-    <text x="367" y="232" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">Nhánh 5: Lưu trữ &amp; Truy vấn</text>
-    <text x="367" y="248" font-size="10" fill="#475569" text-anchor="middle">Bài 12 Sắp ngoài · 13 B-Tree · 14 R-Tree · 15 Join</text>
+    <path d="M 175 165 L 250 230" stroke="#5a37a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="255" y="215" width="225" height="42" rx="6" fill="#f5f4f9" stroke="#5a37a8"/>
+    <text x="367" y="232" font-size="14" font-weight="700" fill="#4f4a62" text-anchor="middle">Nhánh 5: Lưu trữ &amp; Truy vấn</text>
+    <text x="367" y="248" font-size="14" fill="#6b6580" text-anchor="middle">Bài 12 Sắp ngoài · 13 B-Tree · 14 R-Tree · 15 Join</text>
 
     <!-- Connecting prerequisite lines to Bài 15 -->
-    <path d="M 485 236 L 530 236" stroke="#64748b" stroke-width="1.5" marker-end="url(#grayArrow)"/>
-    <rect x="535" y="165" width="185" height="92" rx="6" fill="url(#softBlue)" stroke="#244bd6"/>
-    <text x="627" y="190" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">Bài 15: Nối bảng Join</text>
-    <text x="627" y="210" font-size="10" fill="#334155" text-anchor="middle">• Nhận hỗ trợ từ Bài 12, 13</text>
-    <text x="627" y="228" font-size="10" fill="#334155" text-anchor="middle">• Kết hợp phân tán Bài 02</text>
-    <text x="627" y="245" font-size="10" fill="#244bd6" font-weight="600" text-anchor="middle">Tổng hợp toàn học phần</text>
+    <path d="M 485 236 L 530 236" stroke="#5a37a8" stroke-width="1.5" marker-end="url(#grayArrow)"/>
+    <rect x="535" y="165" width="185" height="92" rx="6" fill="#eee9fb" stroke="#5a37a8"/>
+    <text x="627" y="190" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Bài 15: Nối bảng Join</text>
+    <text x="627" y="210" font-size="14" fill="#4f4a62" text-anchor="middle">• Nhận hỗ trợ từ Bài 12, 13</text>
+    <text x="627" y="228" font-size="14" fill="#4f4a62" text-anchor="middle">• Kết hợp phân tán Bài 02</text>
+    <text x="627" y="245" font-size="14" fill="#5a37a8" font-weight="600" text-anchor="middle">Tổng hợp toàn học phần</text>
   
 </svg>

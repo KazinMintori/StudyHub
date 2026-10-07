@@ -7,7 +7,9 @@ next: false
 
 # Quy tắc chuỗi
 
-Đạo hàm của hợp hàm nhân tốc độ thay đổi của lớp ngoài với lớp trong: d[g(f(x))]/dx = g′(f(x))f′(x). Với nhiều biến, cộng các đóng góp theo mọi đường phụ thuộc. Đây là nền tảng của lan truyền ngược.
+Đạo hàm của hợp hàm nhân tốc độ thay đổi của lớp ngoài với lớp trong: d[g(f(x))]/dx = g′(f(x))$f'(x)$. Với nhiều biến, cộng các đóng góp theo mọi đường phụ thuộc. Đây là nền tảng của lan truyền ngược.
+
+<WikiUsage />
 
 ## Giải thích kỹ thuật
 

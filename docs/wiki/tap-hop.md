@@ -9,6 +9,8 @@ next: false
 
 Một tập hợp là một nhóm các phần tử được xác định rõ. x ∈ A nghĩa là x thuộc A. A ∪ B gồm phần tử thuộc ít nhất một tập; A ∩ B gồm phần tử thuộc cả hai; A \ B loại những phần tử của B khỏi A. Tập rỗng không chứa phần tử nào.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Quan hệ giữa các tập.** A là tập con của B khi mọi phần tử của A cũng thuộc B, ký hiệu A ⊆ B. Hai tập bằng nhau khi chúng chứa cùng các phần tử, không phụ thuộc thứ tự viết. Khi dùng phép bù, phải nêu tập vũ trụ đang xét.

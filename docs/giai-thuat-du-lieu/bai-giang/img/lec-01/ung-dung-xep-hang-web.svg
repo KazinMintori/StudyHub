@@ -1,75 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#244bd6"/>
-      <stop offset="100%" stop-color="#1b3cac"/>
+      <stop offset="0%" stop-color="#5a37a8"/>
+      <stop offset="100%" stop-color="#5a37a8"/>
     </linearGradient>
     <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#edf2fe"/>
-      <stop offset="100%" stop-color="#e2ebfd"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#eee9fb"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ecfdf5"/>
-      <stop offset="100%" stop-color="#d1fae5"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef2f2"/>
-      <stop offset="100%" stop-color="#fee2e2"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
   </defs>
-  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#f5f4f9" stroke-width="1.5"/>
   
-    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Đồ thị liên kết PageRank 3 đỉnh: Cập nhật lặp r = M·r</text>
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1f1c2b" text-anchor="middle">Đồ thị liên kết PageRank 3 đỉnh: Cập nhật lặp r = M·r</text>
     
     <!-- Node y -->
-    <circle cx="150" cy="130" r="34" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <circle cx="150" cy="130" r="34" fill="#5a37a8" filter="url(#shadow)"/>
     <text x="150" y="136" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">y</text>
     <!-- Self loop on y -->
-    <path d="M 125 110 C 90 60, 160 40, 155 95" fill="none" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="125" y="55" font-size="11" fill="#244bd6" font-weight="600">tự trỏ y</text>
+    <path d="M 125 110 C 90 60, 160 40, 155 95" fill="none" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="125" y="55" font-size="14" fill="#5a37a8" font-weight="600">tự trỏ y</text>
 
     <!-- Node a -->
-    <circle cx="380" cy="130" r="34" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <circle cx="380" cy="130" r="34" fill="#5a37a8" filter="url(#shadow)"/>
     <text x="380" y="136" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">a</text>
 
     <!-- Node m -->
-    <circle cx="610" cy="130" r="34" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <circle cx="610" cy="130" r="34" fill="#5a37a8" filter="url(#shadow)"/>
     <text x="610" y="136" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">m</text>
 
     <!-- y to a -->
-    <path d="M 185 120 L 340 120" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M 185 120 L 340 120" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
     <!-- a to y -->
-    <path d="M 345 140 L 190 140" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M 345 140 L 190 140" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
 
     <!-- a to m -->
-    <path d="M 415 120 L 570 120" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M 415 120 L 570 120" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
     <!-- m to a -->
-    <path d="M 575 140 L 420 140" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M 575 140 L 420 140" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
 
-    <text x="265" y="110" font-size="12" fill="#244bd6" text-anchor="middle">y → a (1/2)</text>
-    <text x="265" y="160" font-size="12" fill="#244bd6" text-anchor="middle">a → y (1/2)</text>
-    <text x="495" y="110" font-size="12" fill="#244bd6" text-anchor="middle">a → m (1/2)</text>
-    <text x="495" y="160" font-size="12" fill="#244bd6" text-anchor="middle">m → a (1)</text>
+    <text x="265" y="110" font-size="14" fill="#5a37a8" text-anchor="middle">y → a (1/2)</text>
+    <text x="265" y="160" font-size="14" fill="#5a37a8" text-anchor="middle">a → y (1/2)</text>
+    <text x="495" y="110" font-size="14" fill="#5a37a8" text-anchor="middle">a → m (1/2)</text>
+    <text x="495" y="160" font-size="14" fill="#5a37a8" text-anchor="middle">m → a (1)</text>
 
-    <text x="380" y="215" font-size="12" fill="#64748b" text-anchor="middle">Điểm của mỗi trang phụ thuộc vào điểm của các trang trỏ tới nó qua từng vòng lặp</text>
+    <text x="380" y="215" font-size="14" fill="#5a37a8" text-anchor="middle">Điểm của mỗi trang phụ thuộc vào điểm của các trang trỏ tới nó qua từng vòng lặp</text>
   
 </svg>

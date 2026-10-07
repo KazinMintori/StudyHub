@@ -9,6 +9,8 @@ next: false
 
 Tính toán phân tán chia công việc và dữ liệu cho nhiều máy liên lạc qua mạng. Tổng thời gian gồm tính toán, truyền dữ liệu và đồng bộ. Một máy chậm hoặc phân vùng dữ liệu không đều có thể quyết định thời gian của cả pha; thêm máy không bảo đảm nhanh hơn tương ứng.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Thời gian và lỗi.** Thời gian của một pha đồng bộ thường bị quyết định bởi tác vụ hoàn thành chậm nhất, không phải trung bình. Chi phí truyền gồm độ trễ khởi tạo và lượng dữ liệu chia băng thông.

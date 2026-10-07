@@ -9,6 +9,8 @@ next: false
 
 Đạo hàm riêng lấy đạo hàm theo một biến trong khi giữ các biến còn lại không đổi. Với hàm nhiều biến, một đạo hàm riêng chỉ mô tả một hướng thay đổi; cần tập hợp chúng để có gradient.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Giữ biến khác không đổi.** ∂f/∂x được tính bằng cách dịch x và giữ y, z… cố định. Với f(x,y)=x²y, ta có ∂f/∂x=2xy và ∂f/∂y=x².

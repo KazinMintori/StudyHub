@@ -16,7 +16,7 @@ Bài tham chiếu tốt trong repo: `docs/giai-thuat-du-lieu/bai-giang/bai-03-pa
 | `## Tóm tắt` | Trả lời câu hỏi mở đầu; liệt kê điều đã làm được, kèm điều kiện | Mỗi dòng kiểm tra được, không phải khẩu hiệu |
 | `## Nguồn và đọc thêm` | Tài liệu thật, đến chương/mục/trang; tách nguồn của bài với đọc thêm | Người học mở được và tìm đúng chỗ |
 
-Số mục H2 theo nội dung, không theo mẫu. Đánh số H2 (`## 1.`) khi bài dài để dễ tham chiếu; `[[toc]]` cho bài trên khoảng 300 dòng.
+Số mục H2 theo nội dung, không theo mẫu. Đánh số H2 (`## 1.`) khi bài dài để dễ tham chiếu; `(dùng mục lục của VitePress)` cho bài trên khoảng 300 dòng.
 
 ## 2. Cụm khái niệm: đơn vị giảng chính
 
@@ -97,7 +97,7 @@ description: "<Phạm vi bài trong một câu.>"
 
 <Đoạn mở: câu hỏi của bài, nối với bài trước, sau bài học làm được gì, cần biết gì trước.>
 
-[[toc]]
+(dùng mục lục của VitePress)
 
 ## 1. <Vấn đề cụ thể>
 
@@ -147,3 +147,13 @@ description: "<Phạm vi bài trong một câu.>"
 ```
 
 Đổi `lessonStatus` sang `ready` chỉ khi các phần đã đầy đủ và catalog đã có slide.
+
+
+## Quy tắc giao diện Mực tím trên giấy vở
+
+- Notes là tab mặc định; thứ tự Notes, Slides, Kiến thức nền. Địa chỉ cũ `#bai-tap` chuyển về Notes. Bài tập môn ở cuối Notes.
+- Không chèn mục lục trong Markdown: VitePress có mục lục bên phải và trên điện thoại.
+- Tiêu đề viết bằng chữ; không đặt công thức trong heading vì mục lục làm mất ký hiệu.
+- Công thức trong Notes và Wiki dùng `$…$`; chữ tiếng Việt nằm ngoài công thức.
+- Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
+- Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.

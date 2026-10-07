@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import { themePrintedSvg } from './svg-theme.mjs'
 import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
@@ -1190,14 +1191,14 @@ const diagrams = {
     <rect x="330" y="55" width="390" height="65" rx="6" fill="url(#softAmber)" stroke="#f59e0b"/>
     <text x="345" y="78" font-size="12" font-weight="700" fill="#b45309">(a) Tăng thời gian lên T = 2000 ngày:</text>
     <text x="345" y="98" font-size="11" fill="#78350f">C(2000, 2) tăng gần 4 lần → Kỳ vọng tăng 4 lần:</text>
-    <text x="630" y="98" font-size="12" font-weight="700" fill="#b91c1c">E ≈ 999.500 cặp</text>
+    <text x="345" y="116" font-size="14" font-weight="700" fill="#b91c1c">E ≈ 999.500 cặp</text>
 
     <!-- Branch B -->
     <path d="M 215 150 L 320 175" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
     <rect x="330" y="145" width="390" height="65" rx="6" fill="url(#softGreen)" stroke="#10b981"/>
     <text x="345" y="168" font-size="12" font-weight="700" fill="#065f46">(b) Tăng P = 2 tỷ người, H = 200.000 khách sạn:</text>
     <text x="345" y="188" font-size="11" fill="#047857">C(P, 2) tăng gần 4 lần, nhưng p² giảm đúng 4 lần →</text>
-    <text x="630" y="188" font-size="12" font-weight="700" fill="#047857">E ≈ 249.750 (Gần như không đổi)</text>
+    <text x="345" y="206" font-size="14" font-weight="700" fill="#047857">E ≈ 249.750 (Gần như không đổi)</text>
   `),
 
   // 37. bai-tap-ba-ngay.svg
@@ -1254,7 +1255,7 @@ const diagrams = {
 console.log(`Generating ${Object.keys(diagrams).length} SVGs...`)
 for (const [name, content] of Object.entries(diagrams)) {
   for (const dir of targets) {
-    await writeFile(path.join(dir, name), content.trim(), 'utf8')
+    await writeFile(path.join(dir, name), themePrintedSvg(content.trim()), 'utf8')
   }
 }
 console.log('All 38 SVGs generated successfully in both targets!')

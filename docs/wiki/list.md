@@ -9,6 +9,8 @@ next: false
 
 List Python là dãy có thứ tự, có thể thay đổi và có thể chứa nhiều kiểu đối tượng. Chỉ mục bắt đầu từ 0; chỉ mục âm đếm từ cuối. append thêm ở cuối. List khác mảng NumPy: list * 2 lặp lại dãy, không nhân số trong dãy.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Mutable và aliasing.** List có thể thay đổi tại chỗ. Gán b=a cho hai tên dùng cùng đối tượng; b=a.copy() tạo list mới nhưng chỉ sao chép nông, nên các đối tượng lồng bên trong có thể vẫn dùng chung.

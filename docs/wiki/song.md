@@ -9,6 +9,8 @@ next: false
 
 Sóng tuần hoàn có chu kỳ T, tần số f=1/T, bước sóng λ và tốc độ truyền v=fλ. Pha xác định trạng thái dao động tại một vị trí và thời điểm. Hai sóng có cùng tần số giao thoa tùy độ lệch pha; cùng pha tăng cường, ngược pha có thể triệt tiêu nếu biên độ bằng nhau.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Pha của sóng điều hòa.** Một mô hình thường dùng là y(x,t)=A cos(kx−ωt+φ₀), với k=2π/λ và ω=2πf. Dấu trong pha quyết định hướng truyền theo quy ước tọa độ.

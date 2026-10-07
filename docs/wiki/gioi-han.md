@@ -9,6 +9,8 @@ next: false
 
 Giới hạn mô tả giá trị mà hàm hoặc dãy tiến gần tới. lim x→a f(x) = L không yêu cầu f(a) phải được xác định hay bằng L. Khi kiểm tra hội tụ, cần xét hành vi khi số bước tăng, thay vì chỉ nhìn một vài giá trị đầu.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Một phía và liên tục.** Giới hạn hai phía tại a tồn tại khi giới hạn từ trái và từ phải cùng tồn tại và bằng nhau. Hàm liên tục tại a cần f(a) xác định và bằng giới hạn.

@@ -9,6 +9,8 @@ next: false
 
 Hàm băm chuyển dữ liệu thành một giá trị trong miền đích hữu hạn. Đầu vào khác nhau có thể trùng giá trị băm: đó là va chạm. Hàm băm cần phù hợp với mục tiêu: tra cứu, chia phân vùng hay bảo mật có các yêu cầu khác nhau.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Va chạm cần xử lý.** Bảng băm phải có cách phân biệt các khóa rơi vào cùng vùng, chẳng hạn liên kết danh sách hoặc tìm vị trí khác. Một hash hữu hạn không thể đảm bảo không va chạm cho miền đầu vào vô hạn.

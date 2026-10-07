@@ -9,6 +9,8 @@ next: false
 
 Công của lực không đổi trên độ dời s là W=F·s; tổng quát là tích phân đường của lực theo độ dời. Công đo sự truyền năng lượng, có thể dương, âm hoặc bằng 0. Đơn vị joule (J)=N·m. Với lực thế, công của lực bằng độ giảm thế năng.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tích phân đường.** Khi lực thay đổi, công được tính bởi W=∫F·dl, không chỉ lấy một giá trị lực nhân độ dài quãng đường. Với lực thế, W từ A tới B bằng U(A)−U(B), độc lập đường đi.

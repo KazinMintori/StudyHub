@@ -1,0 +1,26 @@
+.course-shell > h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-5) 0 var(--space-4); }
+.course-description { font-size: var(--fs-lead); line-height: 1.55; color: var(--ink-2); max-width: 800px; }
+.book-breadcrumbs { display: flex; gap: var(--space-2); color: var(--ink-3); font-size: var(--fs-small); line-height: 1.45; }
+.book-breadcrumbs a:hover { color: var(--tim); }
+.course-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); font-size: var(--fs-small); color: var(--ink-3); margin: var(--space-4) 0 var(--space-6); font-variant-numeric: tabular-nums; }
+.course-meta a { color: var(--tim); display: inline-flex; align-items: center; min-height: 44px; }
+.course-part-section { margin-top: var(--space-7); }
+.part-banner h2 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.35; margin-bottom: var(--space-2); }
+.part-description { color: var(--ink-2); font-size: var(--fs-ui); margin-bottom: var(--space-4); }
+.lecture-list { border-top: 1px solid var(--rule); margin-top: var(--space-4); }
+.lecture-list > article { border-bottom: 1px solid var(--rule); }
+.lecture-row { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-5) var(--space-3); transition: background var(--motion-fast) var(--ease); }
+.lecture-row:hover { background: var(--canvas); }
+.lesson-number { font-size: var(--fs-read); font-variant-numeric: tabular-nums; color: var(--ink-3); min-width: 24px; }
+.lecture-list-copy { flex: 1; min-width: 0; }
+.lecture-list-copy h3 { font-size: var(--fs-read); line-height: 1.45; font-weight: 600; }
+.lecture-list-copy p { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-2); }
+.lesson-status { color: var(--vang); font-size: var(--fs-small); flex-shrink: 0; }
+.lesson-status.done { color: var(--xanh); }
+.course-wiki-footnote { margin-top: var(--space-7); border-top: 1px solid var(--rule); padding-top: var(--space-5); font-size: var(--fs-ui); color: var(--ink-2); }
+.course-wiki-footnote a { color: var(--tim); }
+.course-parent { font-family: var(--font-ui); font-size: var(--fs-small); color: var(--tim); display: inline-flex; min-height: 44px; align-items: center; }
+@media (max-width: 767px) {
+  .lecture-row { gap: var(--space-3); flex-wrap: wrap; }
+  .lesson-status { margin-left: 36px; }
+}

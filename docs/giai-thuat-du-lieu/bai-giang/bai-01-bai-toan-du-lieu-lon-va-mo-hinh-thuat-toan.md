@@ -2,13 +2,11 @@
 course: giai-thuat-du-lieu
 lecture: bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan
 section: lecture
-title: "Bài 1: Bài toán dữ liệu lớn và mô hình thuật toán"
+title: "Dữ liệu lớn & mô hình thuật toán"
 prerequisites: ["do-phuc-tap","phan-tan","bam"]
 lessonStatus: ready
 description: "Khảo sát các bài toán dữ liệu lớn Bài 02–15, giới hạn tài nguyên và mô hình thuật toán. Bài toán tìm cặp tài liệu gần trùng, độ đo Jaccard, tiêu chí đánh giá và nguyên lý Bonferroni về giới hạn suy luận."
 ---
-
-# Bài 1: Bài toán dữ liệu lớn và mô hình thuật toán
 
 ## Nội dung và kết quả buổi học
 

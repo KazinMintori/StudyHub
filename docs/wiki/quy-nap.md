@@ -9,6 +9,8 @@ next: false
 
 Để chứng minh P(n) với mọi số nguyên n ≥ n₀: kiểm tra trường hợp cơ sở n₀, rồi giả sử P(k) đúng và chứng minh P(k+1). Hai bước đi cùng nhau: bước cơ sở khởi đầu chuỗi, bước suy diễn truyền tính đúng sang số tiếp theo.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Giả thiết quy nạp không phải kết luận đã chứng minh.** Nó chỉ được dùng trong bước suy diễn để đi từ k tới k+1. Quy nạp mạnh cho phép giả sử mọi trường hợp từ n₀ đến k đúng.

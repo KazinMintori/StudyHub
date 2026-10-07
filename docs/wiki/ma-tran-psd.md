@@ -1,0 +1,42 @@
+---
+title: "Ma trận nửa xác định dương"
+wikiTerm: ma-tran-psd
+prev: false
+next: false
+---
+
+# Ma trận nửa xác định dương
+
+Ma trận đối xứng thực P là nửa xác định dương (PSD), viết P⪰0, nếu vᵀPv≥0 với mọi vector v. P dương xác định (PD) nếu vᵀPv>0 với mọi v khác 0. Dấu từng phần tử không quyết định PSD.
+
+<WikiUsage />
+
+## Giải thích kỹ thuật
+
+Với $P=P^T$, điều kiện $P\succeq0$ tương đương mọi trị riêng của $P$ không âm. Điều kiện $P\succ0$ tương đương mọi trị riêng dương. Ký hiệu $P\succeq Q$ nghĩa là $P-Q$ PSD, khác so sánh từng phần tử.
+
+Ví dụ $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ PSD dù có phần tử âm, vì dạng toàn phương là $(v_1-v_2)^2$. Với $A^TA$, tính PD đòi hỏi các cột A độc lập: $Av=0$ chỉ có $v=0$. Nguồn: Convex Optimization, §A.5.2 và §2.2.5.
+
+## Ví dụ
+
+P=[[1,2],[2,1]] không PSD: với v=(1,−1), vᵀPv=−2. Ma trận AᵀA luôn PSD vì vᵀAᵀAv=‖Av‖².
+
+## Khi nào cần dùng?
+
+Kiểm Hessian và ràng buộc ma trận; nhận biết khi nào hệ Newton có hướng giảm.
+
+## Tự kiểm tra
+
+Ma trận diag(1,0) là PSD hay PD?
+
+<details><summary>Xem đáp án</summary>
+
+PSD, không PD: với v=(0,1) khác 0, dạng toàn phương bằng 0.
+
+</details>
+
+## Thuật ngữ liên quan
+
+- [Ma trận](./ma-tran.md)
+- [Trị riêng &amp; vector riêng](./tri-rieng.md)
+- [Hessian](./hessian.md)

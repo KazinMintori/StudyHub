@@ -9,6 +9,8 @@ next: false
 
 Mảng lưu các phần tử theo thứ tự và dùng chỉ mục để truy cập. Mảng liên tiếp trong bộ nhớ cho phép tính địa chỉ từ vị trí và kích thước phần tử. Cần phân biệt mảng số có cùng kiểu với list Python có thể chứa các đối tượng khác kiểu.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Địa chỉ và kích thước phần tử.** Trong mảng liên tiếp, địa chỉ phần tử i bằng địa chỉ đầu cộng i lần kích thước phần tử. Công thức giải thích truy cập trực tiếp O(1), nhưng không áp dụng nguyên dạng cho mọi đối tượng dãy.

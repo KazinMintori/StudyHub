@@ -12,7 +12,7 @@ Quan hệ là cách chúng ta mô tả mối liên kết giữa các phần tử
 
 ---
 
-## 1. Bốn Tính Chất Cơ Bản của Quan hệ Trên Tập $A$
+## 1. Bốn tính chất cơ bản của quan hệ trên một tập
 
 Cho quan hệ hai ngôi $R$ trên tập $A$:
 

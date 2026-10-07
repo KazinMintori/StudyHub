@@ -4,6 +4,9 @@
   "description": "Kho tài liệu và bài giảng ôn tập môn học UET",
   "type": "module",
   "scripts": {
+    "audit:tokens": "node scripts/check-design-tokens.mjs",
+    "audit:ui": "node scripts/audit-ui.mjs",
+    "verify:redesign": "node scripts/verify-redesign.mjs",
     "sync:courses": "node scripts/sync-courses.mjs",
     "ci:build": "node scripts/sync-courses.mjs && vitepress build docs",
     "dev": "vitepress dev docs",
@@ -23,6 +26,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.0",
+    "@fontsource/be-vietnam-pro": "^5.3.0",
     "debug": "^4.4.3",
     "markdown-it": "^15.0.2",
     "markdown-it-mathjax3": "^4.3.2",

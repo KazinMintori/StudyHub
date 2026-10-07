@@ -9,6 +9,8 @@ next: false
 
 Chuẩn đo độ lớn của vector. Chuẩn Euclid ‖x‖₂ = √(x₁² + … + xₙ²). Khoảng cách giữa hai điểm x, y là ‖x−y‖₂. Chuẩn không âm và chỉ bằng 0 ở vector không.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Các chuẩn thường gặp.** Với x=(x₁,…,xₙ), ‖x‖₁=Σ|xᵢ|, ‖x‖₂=√Σxᵢ², ‖x‖∞=max|xᵢ|. Mỗi chuẩn tạo một cách đo khoảng cách d(x,y)=‖x−y‖.

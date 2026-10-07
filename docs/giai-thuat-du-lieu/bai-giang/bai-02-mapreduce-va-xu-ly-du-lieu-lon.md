@@ -431,7 +431,7 @@ $$
 
 Ví dụ slide: máy 1 chạy A, B (mỗi tác vụ 2 s), máy 2 chạy C, D (mỗi tác vụ 3 s), máy 3 chạy E (3 s). $T_{\text{pha}} = \max(4, 6, 3) = 6$ s.
 
-### 4.3. Thời gian cộng $n$ số trên $P$ máy
+### 4.3. Thời gian cộng nhiều số trên nhiều máy
 
 Với $\tau > 0$ là thời gian một phép cộng, một tác vụ Reduce gộp tuần tự:
 
@@ -451,7 +451,7 @@ $$
 
 Thêm máy giảm phần Map nhưng **tăng** phần gộp tuần tự. Từ công thức, $T_P$ nhỏ nhất khi $n/P + P$ nhỏ nhất, tức $P = \sqrt{n}$ (đạo hàm $-n/P^2 + 1 = 0$). Với $n = 16$, tối ưu là $P = 4$. Nhận xét này suy ra từ mô hình gộp tuần tự của slide; gộp theo cây sẽ cho lịch khác.
 
-### 4.4. Chi phí đầu vào tác vụ $C = I + H$ (MMDS 2.5.1)
+### 4.4. Chi phí đầu vào và chi phí khởi tạo tác vụ (MMDS 2.5.1)
 
 **Quy ước MMDS:** chi phí một tác vụ là **kích thước đầu vào** của nó; chi phí thuật toán là tổng trên mọi tác vụ.
 

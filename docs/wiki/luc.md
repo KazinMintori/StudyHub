@@ -9,6 +9,8 @@ next: false
 
 Lực là vector mô tả tương tác. Trong cơ học Newton cho vật khối lượng không đổi, tổng lực F = ma. Khi có nhiều lực, cộng vector các lực. Lực không bằng vận tốc: tổng lực bằng 0 nghĩa là gia tốc bằng 0, vật có thể đứng yên hoặc chuyển động thẳng đều.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Cộng vector và hệ quy chiếu.** Trong cơ học Newton với khối lượng không đổi, tổng lực bằng ma trong hệ quy chiếu quán tính. Từng lực có thể khác 0 dù tổng lực bằng 0.

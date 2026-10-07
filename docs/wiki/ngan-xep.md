@@ -9,6 +9,8 @@ next: false
 
 Ngăn xếp lấy phần tử theo thứ tự vào sau, ra trước (LIFO). push đặt phần tử lên đỉnh; pop lấy phần tử trên đỉnh. Ngăn xếp lời gọi lưu những hàm đang chờ kết quả, giúp giải thích hoạt động của đệ quy.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Ngăn xếp lời gọi.** Khi hàm A gọi B, thông tin để tiếp tục A được giữ lại. B hoàn tất trước khi A tiếp tục, phù hợp thứ tự LIFO. Với đệ quy, mỗi lời gọi thường tạo một khung ngăn xếp mới.

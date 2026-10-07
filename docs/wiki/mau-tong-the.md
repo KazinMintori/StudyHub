@@ -9,6 +9,8 @@ next: false
 
 Tổng thể là toàn bộ đối tượng nghiên cứu; mẫu là phần được quan sát. Tham số mô tả tổng thể, thống kê mô tả mẫu. Lấy mẫu lệch có thể làm kết luận sai dù mẫu rất lớn. Ước lượng cần gắn với cách lấy mẫu và giả định.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Ước lượng có sai số lấy mẫu.** Hai mẫu khác nhau từ cùng tổng thể có thể cho trung bình khác nhau. Độ bất định này khác với sai lệch hệ thống do cách chọn mẫu.

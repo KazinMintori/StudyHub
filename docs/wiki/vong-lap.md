@@ -9,6 +9,8 @@ next: false
 
 if chọn nhánh theo điều kiện Boolean. for duyệt các phần tử của đối tượng lặp; while chạy chừng nào điều kiện còn đúng. Cần xác định trạng thái thay đổi và điều kiện dừng. Trong Python, thụt lề xác định khối lệnh.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Bất biến và kết thúc.** Bất biến vòng lặp là điều đúng trước và sau mỗi lần lặp, giúp chứng minh kết quả. Cần thêm đại lượng giảm hoặc miền hữu hạn để giải thích tại sao vòng lặp dừng.

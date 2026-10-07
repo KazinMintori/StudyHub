@@ -9,6 +9,8 @@ next: false
 
 n! = 1×2×…×n, với 0!=1. Chọn k phần tử từ n phần tử phân biệt, không xét thứ tự, có C(n,k)=n!/[k!(n−k)!] cách. Nếu xét thứ tự hoặc cho phép lặp thì phải dùng mô hình đếm khác.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Đếm theo mô hình.** Chọn k từ n không xét thứ tự, không lặp dùng C(n,k). Chọn có thứ tự, không lặp dùng n!/(n−k)!. Nếu chọn có thứ tự và có lặp, mỗi vị trí có n lựa chọn, nên có nᵏ dãy.

@@ -84,7 +84,7 @@ flowchart LR
     R --> Rec2["Đệ quy QuickSort Phải"]
 ```
 
-###  Bẫy Đi Thi: Khi nào QuickSort bị tụt xuống $\mathcal{O}(n^2)$?
+### Khi nào QuickSort có thời gian bậc hai?
 - Nếu mảng đã có thứ tự sẵn (hoặc ngược chiều) mà bạn luôn chọn **phần tử đầu tiên hoặc cuối cùng** làm Pivot:
   - Một bên sẽ có $0$ phần tử, bên còn lại có $n - 1$ phần tử.
   - Cây đệ quy bị lệch hẳn 1 bên thành cây thoái hóa sâu $n$ tầng.

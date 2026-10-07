@@ -2,103 +2,12 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { findCourse } from '../course-catalog.mjs'
-import { lecturePath, lectureSlides } from '../lecture-model.mjs'
+import { lecturePath, lectureSlides, readingMinutes } from '../lecture-model.mjs'
 import { studyLink } from './links'
+import { useStudyProgress, isCompleted, courseCompleted } from './progress'
 const { frontmatter } = useData()
 const course = computed(() => findCourse(frontmatter.value.course))
-
-function getLesson(c, slug) {
-  return c?.lessons?.find(l => l.slug === slug)
-}
-
-function getLessonIndex(c, slug) {
-  const idx = c?.lessons?.findIndex(l => l.slug === slug)
-  return idx >= 0 ? idx : 0
-}
+const groups = computed(() => course.value.parts?.length ? course.value.parts.map(p => ({ ...p, entries: p.lessons.map(slug => course.value.lessons.find(l => l.slug === slug)).filter(Boolean) })) : [{ title: 'Bài giảng', entries: course.value.lessons }])
+useStudyProgress()
 </script>
-
-<template>
-  <main v-if="course" class="course-overview course-shell">
-    <a class="text-link small" :href="studyLink('/')">← Thư viện môn học</a>
-    <p class="eyebrow">HỌC PHẦN {{ course.code }}</p>
-    <h1>{{ course.name }}</h1>
-    <p class="course-description">{{ course.description }}</p>
-
-    <!-- Bookmark Parts Breakdown -->
-    <template v-if="course.parts && course.parts.length">
-      <div v-for="(part, pIdx) in course.parts" :key="part.title" class="course-part-section">
-        <div class="part-banner">
-          <h2 class="part-title">{{ part.title }}</h2>
-          <p v-if="part.description" class="part-description">{{ part.description }}</p>
-        </div>
-
-        <div class="lecture-list">
-          <article v-for="slug in part.lessons" :key="slug">
-            <template v-if="getLesson(course, slug)">
-              <span class="course-number">{{ String(getLessonIndex(course, slug) + 1).padStart(2, '0') }}</span>
-              <div class="lecture-list-copy">
-                <a class="lecture-title-link" :href="studyLink(lecturePath(course.id, slug))">
-                  <h3>{{ getLesson(course, slug).title }}</h3>
-                </a>
-                <p>
-                  {{ getLesson(course, slug).status === 'ready'
-                    ? `${lectureSlides(course, getLesson(course, slug)).length} slide · Notes chi tiết · ${getLesson(course, slug).prerequisites.length} kiến thức nền`
-                    : 'Đang biên soạn · có nền tảng để chuẩn bị' }}
-                </p>
-                <nav aria-label="Chọn phần của bài giảng">
-                  <a :href="studyLink(lecturePath(course.id, slug, 'slides'))">Slides</a>
-                  <a :href="studyLink(lecturePath(course.id, slug, 'notes'))">Notes</a>
-                  <a :href="studyLink(lecturePath(course.id, slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
-                  <a :href="studyLink(lecturePath(course.id, slug, 'bai-tap'))">Bài tập</a>
-                </nav>
-              </div>
-              <a class="lecture-open" :href="studyLink(lecturePath(course.id, slug))" :aria-label="`Mở ${getLesson(course, slug).title}`">→</a>
-            </template>
-          </article>
-        </div>
-      </div>
-    </template>
-
-    <!-- Fallback flat list -->
-    <template v-else>
-      <div class="lecture-list-heading">
-        <h2>Bài giảng</h2>
-        <p>Mỗi bài gồm Slides, Notes, Kiến thức nền và Bài tập. Chọn bài trước, rồi học theo phần bạn cần.</p>
-      </div>
-      <div class="lecture-list">
-        <article v-for="(lesson, i) in course.lessons" :key="lesson.slug">
-          <span class="course-number">{{ String(i + 1).padStart(2, '0') }}</span>
-          <div class="lecture-list-copy">
-            <a class="lecture-title-link" :href="studyLink(lecturePath(course.id, lesson.slug))">
-              <h3>{{ lesson.title }}</h3>
-            </a>
-            <p>
-              {{ lesson.status === 'ready'
-                ? `${lectureSlides(course, lesson).length} slide · Notes chi tiết · ${lesson.prerequisites.length} kiến thức nền`
-                : 'Đang biên soạn · có nền tảng để chuẩn bị' }}
-            </p>
-            <nav aria-label="Chọn phần của bài giảng">
-              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'slides'))">Slides</a>
-              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'notes'))">Notes</a>
-              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
-              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'bai-tap'))">Bài tập</a>
-            </nav>
-          </div>
-          <a class="lecture-open" :href="studyLink(lecturePath(course.id, lesson.slug))" :aria-label="`Mở ${lesson.title}`">→</a>
-        </article>
-      </div>
-    </template>
-
-    <div class="course-wiki-footnote">
-      <div>
-        <h2>Gặp thuật ngữ chưa quen?</h2>
-        <p>Wiki giải thích từng khái niệm và kết nối những nền tảng liên quan. Bạn có thể mở Wiki từ thuật ngữ ngay trong bài.</p>
-      </div>
-      <a class="study-button" :href="studyLink('/wiki/')">Tra cứu Wiki →</a>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
-      <a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Hệ thống bài tập ôn luyện môn học →</a>
-      <a class="text-link" :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu tham khảo của môn →</a>
-    </div>
-  </main>
-</template>
+<template><main v-if="course" class="course-overview course-shell"><nav class="book-breadcrumbs" aria-label="Đường dẫn"><a :href="studyLink('/')">Trang chủ</a><span>/</span><span>Học phần</span></nav><h1>{{ course.name }}</h1><p class="course-description">{{ course.description }}</p><div class="course-meta"><span>Đã học {{ courseCompleted(course) }}/{{ course.lessons.length }} bài</span><span>{{ course.foundations.length }} khái niệm nền</span><a :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện</a><a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a></div><section v-for="group in groups" :key="group.title" class="course-part-section"><header class="part-banner"><h2>{{ group.title }}</h2><p v-if="group.description" class="part-description">{{ group.description }}</p></header><div class="lecture-list"><article v-for="lesson in group.entries" :key="lesson.slug"><a class="lecture-row" :href="studyLink(lecturePath(course.id, lesson.slug))"><span class="lesson-number">{{ lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span><div class="lecture-list-copy"><h3>{{ lesson.title }}</h3><p>{{ lectureSlides(course, lesson).length }} slide · {{ lesson.prerequisites.length }} khái niệm nền<span v-if="lesson.status === 'ready'"> · khoảng {{ readingMinutes(course.id, lesson.slug) }} phút đọc</span></p></div><span v-if="isCompleted(course, lesson)" class="lesson-status done">Đã học</span><span v-else-if="lesson.status !== 'ready'" class="lesson-status">Bản nháp</span></a></article></div></section><p class="course-wiki-footnote">Gặp thuật ngữ lạ? <a :href="studyLink('/wiki/')">Tra trong Wiki.</a></p></main></template>

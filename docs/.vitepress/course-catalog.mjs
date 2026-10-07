@@ -1,3 +1,4 @@
+import { mathAiCourse } from './math-ai-course.mjs'
 const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
 
@@ -45,33 +46,7 @@ export const courseCatalog = [
       slide('Biểu diễn tri thức bằng logic', ['Mệnh đề diễn tả phát biểu đúng/sai; logic vị từ diễn tả đối tượng và quan hệ.', 'Phân biệt lượng từ “mọi” với “tồn tại”; luôn xác định miền xét.', 'Suy luận cần luật hợp lệ, không chỉ dựa trên một vài ví dụ đúng.'], '14-logic-bieu-dien-tri-thuc', '¬∀x P(x) ⇔ ∃x ¬P(x)')
     ], illustration: 'search'
   },
-  {
-    id: 'toan-cho-ai', code: '02', name: 'Cơ sở toán cho AI', short: 'Toán cho AI', current: true,
-    description: 'Đọc tối ưu hóa từ hàm mục tiêu, đạo hàm đến hình học của tập lồi.',
-    foundations: ['tap-hop', 'ham-so', 'vector', 'ma-tran', 'tich-vo-huong', 'chuan', 'gioi-han', 'dao-ham', 'dao-ham-rieng', 'gradient', 'quy-tac-chuoi', 'tri-rieng', 'to-hop-loi'],
-    parts: [
-      {
-        title: 'Phần 1. Tối ưu hóa và Gradient Descent',
-        description: 'Hàm mục tiêu, hướng giảm dốc và cập nhật tham số đạo hàm riêng.',
-        lessons: ['bai-01-nhap-mon-toi-uu']
-      },
-      {
-        title: 'Phần 2. Hình học tập lồi và phân tích nghiệm',
-        description: 'Tập lồi, tổ hợp lồi, hàm lồi và tính chất cực tiểu toàn cục.',
-        lessons: ['bai-02-tap-loi']
-      }
-    ],
-    lessons: [
-      lesson('bai-01-nhap-mon-toi-uu', 'Nhập môn tối ưu hóa', ['ham-so', 'vector', 'dao-ham', 'gradient', 'chuan']),
-      lesson('bai-02-tap-loi', 'Tập lồi & hình học của nghiệm', ['tap-hop', 'vector', 'tich-vo-huong', 'to-hop-loi'])
-    ],
-    slides: [
-      slide('Một bài toán tối ưu có ba thành phần', ['Biến quyết định biểu diễn điều có thể thay đổi.', 'Hàm mục tiêu đo điều muốn giảm hoặc tăng.', 'Ràng buộc xác định miền nghiệm khả thi; phải kiểm tra nghiệm có nằm trong miền đó không.'], 'bai-01-nhap-mon-toi-uu', 'min f(x), với x thuộc miền khả thi'),
-      slide('Đọc gradient trước khi cập nhật', ['Gradient gom các đạo hàm riêng, chỉ hướng tăng nhanh nhất tại điểm khả vi.', 'Đi ngược gradient để tìm hướng giảm cục bộ.', 'Tốc độ học quyết định độ dài bước; bước quá lớn có thể làm mất hội tụ.'], 'bai-01-nhap-mon-toi-uu', 'x mới = x cũ − η∇f(x cũ)', 'f(x)=x²: x mới=(1−2η)x cũ; với 0<η<1, giá trị |x| giảm.'),
-      slide('Tập lồi: đoạn thẳng vẫn ở trong tập', ['Lấy hai điểm bất kỳ trong tập và nối chúng bằng đoạn thẳng.', 'Nếu mọi điểm trên đoạn đều thuộc tập, đó là tập lồi.', 'Tổ hợp lồi dùng trọng số không âm, tổng trọng số bằng 1.'], 'bai-02-tap-loi', 'λx + (1−λ)y, 0 ≤ λ ≤ 1'),
-      slide('Các phép xây dựng tập lồi', ['Giao của các tập lồi vẫn lồi.', 'Siêu phẳng và nửa không gian là các cấu trúc cơ bản.', 'Ảnh và ảnh ngược qua ánh xạ affine bảo toàn tính lồi; phép hợp nói chung không bảo toàn.'], 'bai-02-tap-loi')
-    ], illustration: 'gradient'
-  },
+  mathAiCourse,
   {
     id: 'xac-suat-thong-ke', code: '03', name: 'Xác suất thống kê', short: 'Xác suất thống kê', current: true,
     description: 'Đi từ biến cố và xác suất có điều kiện đến phân phối, kỳ vọng và biến thiên.',

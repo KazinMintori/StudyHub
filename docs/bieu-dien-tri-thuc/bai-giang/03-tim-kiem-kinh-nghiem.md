@@ -18,7 +18,7 @@ lessonStatus: ready
 3. **IDA\*** — phiên bản tiết kiệm bộ nhớ của A\*.
 :::
 
-## 3.0 Đồ thị mẫu (giống hệt Chương 2, có thêm giá trị $h$)
+## 3.0 Đồ thị mẫu với giá trị heuristic
 
 ```mermaid
 flowchart LR
@@ -157,7 +157,7 @@ Kết quả: $S \to A \to B \to C \to G$, chi phí $= 7$ — **đúng bằng t�
 **Sai.** A\* chỉ được phép báo cáo lời giải khi **lấy đích ra khỏi hàng đợi** (tức đích có $f$ nhỏ nhất trong Open), *không* phải ngay khi đích *xuất hiện* trong Open. Nếu dừng sớm ngay khi thấy đích, thuật toán có thể trả về một đường đi không tối ưu.
 :::
 
-### Vì sao A\* tối ưu? (khi $h$ chấp nhận được, tìm kiếm trên **cây**)
+### Vì sao A* tối ưu khi heuristic chấp nhận được trên cây?
 
 Gọi $C^*$ là chi phí tối ưu thật. Giả sử A\* mở rộng đỉnh đích $B$ không tối ưu trước đỉnh đích tối ưu $A$. Khi đó tồn tại một đỉnh $n$ trên đường đi tối ưu tới $A$ còn nằm trong hàng đợi. Ta có:
 
@@ -175,7 +175,7 @@ Suy ra $f(n) \le f(A) \le f(B)$ → mọi tổ tiên của $A$ (và chính $A$) 
 UCS tạo ra các vòng tròn đồng tâm quanh điểm xuất phát (vì $h=0$), còn A\* với heuristic tốt sẽ "kéo dài" các đường đồng mức đó về phía đích, khiến vùng phải quét hẹp hơn hẳn.
 :::
 
-### Mở rộng: A\* khi $h = 0$ chính là thuật toán Dijkstra (CLRS)
+### Mở rộng: A* với heuristic bằng không là Dijkstra
 
 Khi bỏ hẳn heuristic ($h(n) \equiv 0$), A\* suy biến thành UCS — về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein, chương 22.3): thay hàng đợi FIFO của BFS bằng một **hàng đợi ưu tiên tối thiểu** khoá theo $g(n)$, lặp `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
 

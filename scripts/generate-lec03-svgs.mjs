@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { themePrintedSvg } from './svg-theme.mjs'
 
 const publicDir = path.resolve('docs/public/img/lec-03')
 const docDir = path.resolve('docs/giai-thuat-du-lieu/bai-giang/img/lec-03')
@@ -451,8 +452,8 @@ svgs['ex-fig-54.svg'] = `
 `
 
 for (const [name, content] of Object.entries(svgs)) {
-  fs.writeFileSync(path.join(publicDir, name), content.trim(), 'utf8')
-  fs.writeFileSync(path.join(docDir, name), content.trim(), 'utf8')
+  fs.writeFileSync(path.join(publicDir, name), themePrintedSvg(content.trim()), 'utf8')
+  fs.writeFileSync(path.join(docDir, name), themePrintedSvg(content.trim()), 'utf8')
   console.log(`Generated ${name}`)
 }
 

@@ -1,0 +1,53 @@
+.VPNavBar .VPNavBarTitle .title { font-size: var(--fs-h3); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0; color: var(--ink); }
+.VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
+.VPNavBar .VPNavBarSearch .DocSearch-Button { color: var(--ink-3); border-color: var(--control); border-radius: var(--radius); min-height: 40px; background: var(--canvas); }
+.VPNavBar .DocSearch-Button-Placeholder { font-size: var(--fs-small); }
+.VPNavBar .DocSearch-Button-Key, .VPNavBar .DocSearch-Button-Key:first-child:after { font-size: var(--fs-small); color: var(--ink-3); }
+.VPNavBar .content-body { background: var(--paper); }
+.VPHome { padding-bottom: 0; margin-bottom: 0; }
+.study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }
+.site-footer { max-width: 1184px; margin: var(--space-6) auto 0; padding: var(--space-5) var(--space-6); border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; font-size: var(--fs-small); color: var(--ink-3); }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+.site-footer a, .site-footer button { color: var(--tim); min-height: 44px; display: inline-flex; align-items: center; }
+.site-footer p { max-width: 640px; }
+.VPSidebar .VPSidebarItem .text { font-size: var(--fs-ui); line-height: 1.45; }
+.Layout .VPDoc .content-container { max-width: 620px; }
+.Layout .VPDoc.has-aside .content-container { max-width: 620px; }
+.Layout .VPLocalNav button, .VPDocFooter .pager-link .desc { font-size: var(--fs-small); }
+.VPDoc .aside { width: 220px; padding-left: var(--space-6); }
+.VPDoc .aside-container { width: 188px; }
+.VPDocAsideOutline .outline-link { font-size: var(--fs-small); white-space: normal; text-overflow: clip; line-height: 1.45; padding: var(--space-1) 0; color: var(--ink-3); }
+.VPDocAsideOutline .outline-title { font-size: var(--fs-small); }
+.VPDoc .outline-link.active { color: var(--tim); }
+.lecture-alt .VPDoc .aside { display: none; }
+.Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content { max-width: 100%; }
+.lecture-alt:not(.lecture-slides-layout) .VPDoc .content-container { max-width: 960px; }
+.Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content-container { max-width: 960px; }
+.lecture-alt .main > .vp-doc, .lecture-alt .VPDocFooter { display: none; }
+.lecture-layout .VPDocFooter .prev-next { display: none; }
+.lecture-layout .VPDocFooter { padding-top: var(--space-4); margin-top: 0; }
+.lecture-layout .VPDocFooter .last-updated { display: none; }
+.lecture-layout .VPDoc.has-sidebar .content { padding-left: var(--space-5); padding-right: var(--space-5); }
+@media (min-width: 1440px) {
+  .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 760px; }
+  .lecture-layout .VPDoc .content { max-width: 808px; }
+  .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 620px; }
+  .Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content { max-width: 100%; }
+  .lecture-alt:not(.lecture-slides-layout) .VPDoc .content-container { max-width: 960px; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* VitePress exposes no token for this intermediate menu breakpoint. */
+  .VPNavBar .VPNavBarMenu, .VPNavBar .VPNavBarExtra, .VPNavBar .VPNavBarAppearance { display: none !important; }
+  .VPNavBar .VPNavBarHamburger { display: flex !important; }
+  .VPNav .VPNavScreen { display: block !important; }
+  .VPNavBar .DocSearch-Button-Placeholder, .VPNavBar .DocSearch-Button-Keys { display: none; }
+}
+@media (max-width: 767px) {
+  .study-home, .course-shell, .study-workspace { padding: var(--space-6) 20px var(--space-7); }
+  .site-footer { padding: var(--space-5) 20px; gap: var(--space-3); }
+  .lecture-layout .VPDoc { padding: var(--space-3) 20px var(--space-7); }
+  .lecture-layout .VPDoc.has-sidebar .content { padding: 0; }
+  .lecture-layout .VPLocalNav { display: none; }
+}
+
+.Layout.lecture-slides-layout .VPDoc.has-aside .content-container { max-width: 688px; }

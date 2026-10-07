@@ -9,6 +9,8 @@ next: false
 
 Dictionary ánh xạ khóa tới giá trị. Khóa cần hashable và là duy nhất; gán lại cùng một khóa thay giá trị cũ. Dùng d[key] khi chắc chắn khóa có mặt, hoặc d.get(key, mặc_định) khi khóa có thể thiếu.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Hashable và tra cứu.** Dictionary dùng khóa hashable, nghĩa là phù hợp với yêu cầu băm và so sánh bằng nhau. List thông thường không hashable nên không thể dùng trực tiếp làm khóa.

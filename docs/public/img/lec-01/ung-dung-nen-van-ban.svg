@@ -1,72 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#244bd6"/>
-      <stop offset="100%" stop-color="#1b3cac"/>
+      <stop offset="0%" stop-color="#5a37a8"/>
+      <stop offset="100%" stop-color="#5a37a8"/>
     </linearGradient>
     <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#edf2fe"/>
-      <stop offset="100%" stop-color="#e2ebfd"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#eee9fb"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ecfdf5"/>
-      <stop offset="100%" stop-color="#d1fae5"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef2f2"/>
-      <stop offset="100%" stop-color="#fee2e2"/>
+      <stop offset="0%" stop-color="#f5f4f9"/>
+      <stop offset="100%" stop-color="#eee9fb"/>
     </linearGradient>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f1c2b" flood-opacity="0.08"/>
     </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
     <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5a37a8"/>
     </marker>
   </defs>
-  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#f5f4f9" stroke-width="1.5"/>
   
-    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Nén văn bản không mất thông tin: Khôi phục chính xác chuỗi gốc</text>
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1f1c2b" text-anchor="middle">Nén văn bản không mất thông tin: Khôi phục chính xác chuỗi gốc</text>
     
     <!-- Original string -->
-    <rect x="40" y="60" width="200" height="145" rx="8" fill="#ffffff" stroke="#244bd6" stroke-width="1.5" filter="url(#shadow)"/>
-    <text x="140" y="88" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Chuỗi văn bản gốc</text>
-    <rect x="55" y="105" width="170" height="35" rx="4" fill="url(#softAmber)"/>
-    <text x="140" y="128" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">aabaacabcabcb</text>
-    <text x="140" y="165" font-size="11" fill="#64748b" text-anchor="middle">Các cụm lặp: ab, abc</text>
-    <text x="140" y="185" font-size="11" fill="#64748b" text-anchor="middle">Kích thước: 13 ký tự</text>
+    <rect x="40" y="60" width="200" height="145" rx="8" fill="#ffffff" stroke="#5a37a8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="140" y="88" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Chuỗi văn bản gốc</text>
+    <rect x="55" y="105" width="170" height="35" rx="4" fill="#eee9fb"/>
+    <text x="140" y="128" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">aabaacabcabcb</text>
+    <text x="140" y="165" font-size="14" fill="#5a37a8" text-anchor="middle">Các cụm lặp: ab, abc</text>
+    <text x="140" y="185" font-size="14" fill="#5a37a8" text-anchor="middle">Kích thước: 13 ký tự</text>
 
     <!-- Compression arrow -->
-    <path d="M 255 132 L 345 132" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="300" y="122" font-size="11" font-weight="600" fill="#244bd6" text-anchor="middle">Mã hóa LZ</text>
+    <path d="M 255 132 L 345 132" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="300" y="122" font-size="14" font-weight="600" fill="#5a37a8" text-anchor="middle">Mã hóa LZ</text>
 
     <!-- Compressed Representation -->
-    <rect x="360" y="60" width="210" height="145" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5"/>
-    <text x="465" y="88" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Bản lưu trữ nén</text>
-    <rect x="375" y="105" width="180" height="25" rx="4" fill="#ffffff" stroke="#bfdbfe"/>
-    <text x="465" y="122" font-size="11" font-weight="600" fill="#244bd6" text-anchor="middle">Bit stream mã hóa</text>
-    <rect x="375" y="138" width="180" height="25" rx="4" fill="#ffffff" stroke="#bfdbfe"/>
-    <text x="465" y="155" font-size="11" font-weight="600" fill="#244bd6" text-anchor="middle">+ Từ điển / Cây mã</text>
-    <text x="465" y="188" font-size="10" fill="#64748b" text-anchor="middle">Phải tính cả dung lượng phụ trợ!</text>
+    <rect x="360" y="60" width="210" height="145" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="1.5"/>
+    <text x="465" y="88" font-size="14" font-weight="700" fill="#5a37a8" text-anchor="middle">Bản lưu trữ nén</text>
+    <rect x="375" y="105" width="180" height="25" rx="4" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="465" y="122" font-size="14" font-weight="600" fill="#5a37a8" text-anchor="middle">Bit stream mã hóa</text>
+    <rect x="375" y="138" width="180" height="25" rx="4" fill="#ffffff" stroke="#eee9fb"/>
+    <text x="465" y="155" font-size="14" font-weight="600" fill="#5a37a8" text-anchor="middle">+ Từ điển / Cây mã</text>
+    <text x="465" y="188" font-size="14" fill="#5a37a8" text-anchor="middle">Phải tính cả dung lượng phụ trợ!</text>
 
     <!-- Decompress arrow -->
-    <path d="M 585 132 L 670 132" stroke="#10b981" stroke-width="2.5" marker-end="url(#greenArrow)"/>
-    <text x="627" y="122" font-size="11" font-weight="600" fill="#10b981" text-anchor="middle">Giải mã</text>
+    <path d="M 585 132 L 670 132" stroke="#5a37a8" stroke-width="2.5" marker-end="url(#greenArrow)"/>
+    <text x="627" y="122" font-size="14" font-weight="600" fill="#5a37a8" text-anchor="middle">Giải mã</text>
 
     <!-- Decoded match -->
-    <rect x="680" y="85" width="40" height="95" rx="4" fill="url(#softGreen)" stroke="#10b981"/>
-    <text x="700" y="130" font-size="16" font-weight="700" fill="#047857" text-anchor="middle" transform="rotate(-90 700 130)">100% Khớp</text>
+    <rect x="680" y="85" width="40" height="95" rx="4" fill="#eee9fb" stroke="#5a37a8"/>
+    <text x="700" y="130" font-size="16" font-weight="700" fill="#5a37a8" text-anchor="middle" transform="rotate(-90 700 130)">100% Khớp</text>
   
 </svg>

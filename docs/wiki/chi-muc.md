@@ -9,6 +9,8 @@ next: false
 
 Chỉ mục chọn vị trí; lát cắt start:stop:step chọn một dãy vị trí. Với list và mảng Python/NumPy theo vị trí, stop không được lấy. Cần phân biệt chỉ mục vị trí với nhãn trong pandas: loc thường gồm nhãn cuối, còn iloc theo quy tắc vị trí.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Nhãn và vị trí không giống nhau.** pandas loc theo nhãn, iloc theo vị trí; hai giá trị cùng là số nguyên vẫn có thể được hiểu theo hai cách khác nhau. Một lát cắt loc thường gồm nhãn cuối, còn iloc không gồm vị trí cuối.

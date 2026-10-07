@@ -1,99 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="100%" height="100%" style="background:#f8fafc; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="100%" height="100%" style="background:#f5f4f9; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
   <defs>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1f1c2b" flood-opacity="0.06"/>
     </filter>
   </defs>
 
   <!-- Header -->
-  <text x="380" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">Chia khối ma trận liên kết theo MapReduce (MMDS 5.2.3–5.2.4)</text>
-  <text x="380" y="52" text-anchor="middle" font-size="12" fill="#64748b">Chia vector thành k = 2 dải và ma trận M₀ thành k² = 4 khối để mỗi tác vụ Map vừa RAM</text>
+  <text x="380" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#1f1c2b">Chia khối ma trận liên kết theo MapReduce (MMDS 5.2.3–5.2.4)</text>
+  <text x="380" y="52" text-anchor="middle" font-size="14" fill="#5a37a8">Chia vector thành k = 2 dải và ma trận M₀ thành k² = 4 khối để mỗi tác vụ Map vừa RAM</text>
 
   <!-- Matrix Grid Outer Frame -->
   <!-- Center matrix at (260, 120) to (580, 420): size 320x280 -->
 
   <!-- Column Headers: Source Strips V_b -->
-  <rect x="260" y="75" width="150" height="35" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-  <text x="335" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Dải nguồn 1: V₁ = {A, B}</text>
-  <text x="335" y="106" text-anchor="middle" font-size="10" fill="#3b82f6">Vector đầu vào: r₁ = [rA, rB]ᵀ</text>
+  <rect x="260" y="75" width="150" height="35" rx="6" fill="#f5f4f9" stroke="#5a37a8" stroke-width="1.5"/>
+  <text x="335" y="94" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Dải nguồn 1: V₁ = {A, B}</text>
+  <text x="335" y="106" text-anchor="middle" font-size="14" fill="#5a37a8">Vector đầu vào: r₁ = [rA, rB]ᵀ</text>
 
-  <rect x="430" y="75" width="150" height="35" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-  <text x="505" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">Dải nguồn 2: V₂ = {C, D}</text>
-  <text x="505" y="106" text-anchor="middle" font-size="10" fill="#3b82f6">Vector đầu vào: r₂ = [rC, rD]ᵀ</text>
+  <rect x="430" y="75" width="150" height="35" rx="6" fill="#f5f4f9" stroke="#5a37a8" stroke-width="1.5"/>
+  <text x="505" y="94" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Dải nguồn 2: V₂ = {C, D}</text>
+  <text x="505" y="106" text-anchor="middle" font-size="14" fill="#5a37a8">Vector đầu vào: r₂ = [rC, rD]ᵀ</text>
 
   <!-- Row Headers: Destination Strips U_a -->
-  <rect x="45" y="130" width="195" height="125" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="142" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">Dải đích 1: U₁ = {A, B}</text>
-  <text x="142" y="200" text-anchor="middle" font-size="11" fill="#16a34a">Tích lũy ra: z₁ = [zA, zB]ᵀ</text>
+  <rect x="45" y="130" width="195" height="125" rx="6" fill="#f5f4f9" stroke="#5a37a8" stroke-width="1.5"/>
+  <text x="142" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Dải đích 1: U₁ = {A, B}</text>
+  <text x="142" y="200" text-anchor="middle" font-size="14" fill="#5a37a8">Tích lũy ra: z₁ = [zA, zB]ᵀ</text>
 
-  <rect x="45" y="275" width="195" height="125" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="142" y="325" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">Dải đích 2: U₂ = {C, D}</text>
-  <text x="142" y="345" text-anchor="middle" font-size="11" fill="#16a34a">Tích lũy ra: z₂ = [zC, zD]ᵀ</text>
+  <rect x="45" y="275" width="195" height="125" rx="6" fill="#f5f4f9" stroke="#5a37a8" stroke-width="1.5"/>
+  <text x="142" y="325" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Dải đích 2: U₂ = {C, D}</text>
+  <text x="142" y="345" text-anchor="middle" font-size="14" fill="#5a37a8">Tích lũy ra: z₂ = [zC, zD]ᵀ</text>
 
   <!-- 4 Blocks -->
   <!-- Block M11 -->
   <g transform="translate(260, 130)" filter="url(#shadow)">
-    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8"/>
-    <text x="75" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Khối M₁₁</text>
-    <text x="75" y="42" text-anchor="middle" font-size="10.5" fill="#64748b">Nguồn {A, B} → Đích {A, B}</text>
-    <line x1="15" y1="52" x2="135" y2="52" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="25" y="74" font-size="11" font-weight="600" fill="#2563eb">• B → A (đóng góp 1/2)</text>
-    <text x="25" y="96" font-size="11" font-weight="600" fill="#2563eb">• A → B (đóng góp 1/3)</text>
-    <text x="25" y="115" font-size="10" fill="#94a3b8">Số cạnh: 2 | Bậc toàn cục: 3, 2</text>
+    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#eee9fb" stroke-width="1.8"/>
+    <text x="75" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="#1f1c2b">Khối M₁₁</text>
+    <text x="75" y="42" text-anchor="middle" font-size="14" fill="#5a37a8">Nguồn {A, B} → Đích {A, B}</text>
+    <line x1="15" y1="52" x2="135" y2="52" stroke="#f5f4f9" stroke-width="1"/>
+    <text x="25" y="74" font-size="14" font-weight="600" fill="#5a37a8">• B → A (đóng góp 1/2)</text>
+    <text x="25" y="96" font-size="14" font-weight="600" fill="#5a37a8">• A → B (đóng góp 1/3)</text>
+    <text x="25" y="115" font-size="14" fill="#5a37a8">Số cạnh: 2 | Bậc toàn cục: 3, 2</text>
   </g>
 
   <!-- Block M12 -->
   <g transform="translate(430, 130)" filter="url(#shadow)">
-    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8"/>
-    <text x="75" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Khối M₁₂</text>
-    <text x="75" y="42" text-anchor="middle" font-size="10.5" fill="#64748b">Nguồn {C, D} → Đích {A, B}</text>
-    <line x1="15" y1="52" x2="135" y2="52" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="25" y="74" font-size="11" font-weight="600" fill="#2563eb">• C → A (đóng góp 1/1)</text>
-    <text x="25" y="96" font-size="11" font-weight="600" fill="#2563eb">• D → B (đóng góp 1/2)</text>
-    <text x="25" y="115" font-size="10" fill="#94a3b8">Số cạnh: 2 | Bậc toàn cục: 1, 2</text>
+    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#eee9fb" stroke-width="1.8"/>
+    <text x="75" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="#1f1c2b">Khối M₁₂</text>
+    <text x="75" y="42" text-anchor="middle" font-size="14" fill="#5a37a8">Nguồn {C, D} → Đích {A, B}</text>
+    <line x1="15" y1="52" x2="135" y2="52" stroke="#f5f4f9" stroke-width="1"/>
+    <text x="25" y="74" font-size="14" font-weight="600" fill="#5a37a8">• C → A (đóng góp 1/1)</text>
+    <text x="25" y="96" font-size="14" font-weight="600" fill="#5a37a8">• D → B (đóng góp 1/2)</text>
+    <text x="25" y="115" font-size="14" fill="#5a37a8">Số cạnh: 2 | Bậc toàn cục: 1, 2</text>
   </g>
 
   <!-- Block M21 -->
   <g transform="translate(260, 275)" filter="url(#shadow)">
-    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8"/>
-    <text x="75" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Khối M₂₁</text>
-    <text x="75" y="42" text-anchor="middle" font-size="10.5" fill="#64748b">Nguồn {A, B} → Đích {C, D}</text>
-    <line x1="15" y1="52" x2="135" y2="52" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="25" y="68" font-size="11" font-weight="600" fill="#2563eb">• A → C (1/3), A → D (1/3)</text>
-    <text x="25" y="86" font-size="11" font-weight="600" fill="#2563eb">• B → D (1/2)</text>
-    <rect x="20" y="94" width="110" height="20" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-width="0.8"/>
-    <text x="75" y="108" text-anchor="middle" font-size="9.5" font-weight="700" fill="#b45309">Combine gộp 2 đóng góp vào D</text>
+    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#eee9fb" stroke-width="1.8"/>
+    <text x="75" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="#1f1c2b">Khối M₂₁</text>
+    <text x="75" y="42" text-anchor="middle" font-size="14" fill="#5a37a8">Nguồn {A, B} → Đích {C, D}</text>
+    <line x1="15" y1="52" x2="135" y2="52" stroke="#f5f4f9" stroke-width="1"/>
+    <text x="25" y="68" font-size="14" font-weight="600" fill="#5a37a8">• A → C (1/3), A → D (1/3)</text>
+    <text x="25" y="86" font-size="14" font-weight="600" fill="#5a37a8">• B → D (1/2)</text>
+    <rect x="20" y="94" width="110" height="20" rx="3" fill="#eee9fb" stroke="#5a37a8" stroke-width="0.8"/>
+    <text x="75" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Combine gộp 2 đóng góp vào D</text>
   </g>
 
   <!-- Block M22 -->
   <g transform="translate(430, 275)" filter="url(#shadow)">
-    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8"/>
-    <text x="75" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Khối M₂₂</text>
-    <text x="75" y="42" text-anchor="middle" font-size="10.5" fill="#64748b">Nguồn {C, D} → Đích {C, D}</text>
-    <line x1="15" y1="52" x2="135" y2="52" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="25" y="74" font-size="11" font-weight="600" fill="#2563eb">• D → C (đóng góp 1/2)</text>
-    <text x="25" y="96" font-size="10.5" fill="#94a3b8">(C không trỏ C hoặc D)</text>
-    <text x="25" y="115" font-size="10" fill="#94a3b8">Số cạnh: 1 | Bậc toàn cục: 2</text>
+    <rect width="150" height="125" rx="8" fill="#ffffff" stroke="#eee9fb" stroke-width="1.8"/>
+    <text x="75" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="#1f1c2b">Khối M₂₂</text>
+    <text x="75" y="42" text-anchor="middle" font-size="14" fill="#5a37a8">Nguồn {C, D} → Đích {C, D}</text>
+    <line x1="15" y1="52" x2="135" y2="52" stroke="#f5f4f9" stroke-width="1"/>
+    <text x="25" y="74" font-size="14" font-weight="600" fill="#5a37a8">• D → C (đóng góp 1/2)</text>
+    <text x="25" y="96" font-size="14" fill="#5a37a8">(C không trỏ C hoặc D)</text>
+    <text x="25" y="115" font-size="14" fill="#5a37a8">Số cạnh: 1 | Bậc toàn cục: 2</text>
   </g>
 
   <!-- Memory Footprint Sidebar / Summary -->
   <g transform="translate(605, 130)">
-    <rect width="135" height="270" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-    <text x="67" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Bộ nhớ 1 tác vụ Map</text>
-    <line x1="15" y1="40" x2="120" y2="40" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="15" y="65" font-size="11" font-weight="600" fill="#334155">B_task ≈ 16n/k + B_buf</text>
-    <text x="15" y="90" font-size="10.5" fill="#64748b">• Giữ dải vào r_b</text>
-    <text x="15" y="110" font-size="10.5" fill="#64748b">• Giữ dải tích lũy z_a</text>
-    <text x="15" y="130" font-size="10.5" fill="#64748b">• Đọc khối qua đệm</text>
-    <line x1="15" y1="145" x2="120" y2="145" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="67" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Với n = 4, k = 2:</text>
-    <text x="67" y="195" text-anchor="middle" font-size="14" font-weight="800" fill="#15803d">32 bytes + đệm</text>
-    <text x="15" y="225" font-size="10" fill="#64748b">Tiết kiệm đáng kể khi n quy mô hàng tỷ trang web.</text>
+    <rect width="135" height="270" rx="8" fill="#f5f4f9" stroke="#f5f4f9" stroke-width="1.5"/>
+    <text x="67" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1f1c2b">Bộ nhớ 1 tác vụ Map</text>
+    <line x1="15" y1="40" x2="120" y2="40" stroke="#eee9fb" stroke-width="1"/>
+    <text x="15" y="65" font-size="14" font-weight="600" fill="#4f4a62">B_task ≈ 16n/k + B_buf</text>
+    <text x="15" y="90" font-size="14" fill="#5a37a8">• Giữ dải vào r_b</text>
+    <text x="15" y="110" font-size="14" fill="#5a37a8">• Giữ dải tích lũy z_a</text>
+    <text x="15" y="130" font-size="14" fill="#5a37a8">• Đọc khối qua đệm</text>
+    <line x1="15" y1="145" x2="120" y2="145" stroke="#eee9fb" stroke-width="1"/>
+    <text x="67" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#5a37a8">Với n = 4, k = 2:</text>
+    <text x="67" y="195" text-anchor="middle" font-size="14" font-weight="800" fill="#5a37a8">32 bytes + đệm</text>
+    <text x="15" y="225" font-size="14" fill="#5a37a8">Tiết kiệm đáng kể khi n quy mô hàng tỷ trang web.</text>
   </g>
 
   <!-- Bottom workflow indicator -->
   <g transform="translate(380, 445)">
-    <text text-anchor="middle" font-size="12" font-weight="600" fill="#475569">
+    <text text-anchor="middle" font-size="14" font-weight="600" fill="#6b6580">
       Map(B_ab, r_b)  →  Combine(i, sum)  →  Truyền mạng (Shuffle)  →  Reduce(i, L_i) hoàn tất véc tơ z_a
     </text>
   </g>

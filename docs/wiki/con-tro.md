@@ -9,6 +9,8 @@ next: false
 
 Con trỏ lưu địa chỉ một vùng dữ liệu; tham chiếu cho phép nhiều tên cùng truy cập một đối tượng. Thay đổi dữ liệu qua một tên có thể được thấy qua tên khác. Sao chép địa chỉ hoặc tham chiếu không đồng nghĩa với sao chép dữ liệu.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Sở hữu dữ liệu và vòng đời.** Con trỏ hay tham chiếu có thể cho phép nhiều tên truy cập cùng vùng dữ liệu. Cần biết ai quản lý bộ nhớ và dữ liệu còn hợp lệ bao lâu. Trong ngôn ngữ có quản lý bộ nhớ thủ công, dùng địa chỉ sau khi giải phóng là lỗi.

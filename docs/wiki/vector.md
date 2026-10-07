@@ -9,6 +9,8 @@ next: false
 
 Vector là danh sách có thứ tự các thành phần, thường biểu diễn vị trí, lực hoặc đặc trưng. Cộng hai vector cùng số chiều bằng cách cộng từng thành phần; nhân với một số bằng cách nhân mọi thành phần. Vector khác đại lượng vô hướng ở chỗ nó có nhiều thành phần hoặc mang cả hướng.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Thành phần phụ thuộc cơ sở.** Cùng một vector hình học có thể có bộ tọa độ khác nhau trong hai hệ cơ sở. Việc cộng và nhân vô hướng cần thống nhất cơ sở và số chiều.

@@ -6,40 +6,23 @@ import { concepts } from '../concepts.mjs'
 import { studyLink } from './links'
 import { readStored, writeStored, storageMessage } from './storage'
 const { course, lesson, part } = useLecture(), index = ref(0), understood = ref({})
-const slides = computed(() => lectureSlides(course.value,lesson.value)), current = computed(() => slides.value[index.value])
-const required = computed(() => (lesson.value?.prerequisites || []).filter(id=>concepts[id]))
-function load() { index.value=0; understood.value=readStored(`studyhub_foundations_${course.value?.id}`,{}) || {} }
-function toggle(id) { const next={...understood.value,[id]:!understood.value[id]}; if(writeStored(`studyhub_foundations_${course.value.id}`,next))understood.value=next }
-function next(direction) { index.value=Math.max(0,Math.min(slides.value.length-1,index.value+direction)) }
+const slides = computed(() => lectureSlides(course.value, lesson.value)), current = computed(() => slides.value[index.value])
+const required = computed(() => (lesson.value?.prerequisites || []).filter(id => concepts[id]))
+const understoodCount = computed(() => required.value.filter(id => understood.value[id]).length)
+function load() { index.value = 0; understood.value = readStored(`studyhub_foundations_${course.value?.id}`, {}) || {} }
+function toggle(id) { const next = { ...understood.value, [id]: !understood.value[id] }; if (writeStored(`studyhub_foundations_${course.value.id}`, next)) understood.value = next }
+function next(direction) { index.value = Math.max(0, Math.min(slides.value.length - 1, index.value + direction)) }
 function keyboard(event) { if(part.value!=='slides'||/INPUT|TEXTAREA|SELECT/.test(event.target.tagName))return; if(event.key==='ArrowRight'){event.preventDefault();next(1)} if(event.key==='ArrowLeft'){event.preventDefault();next(-1)} }
-onMounted(()=>{load();window.addEventListener('keydown',keyboard)});onUnmounted(()=>window.removeEventListener('keydown',keyboard));watch(()=>lesson.value?.slug,load)
+onMounted(() => { load(); window.addEventListener('keydown', keyboard) })
+onUnmounted(() => { window.removeEventListener('keydown', keyboard) })
+watch(() => lesson.value?.slug, load)
 </script>
-<template>
-  <div v-if="course && lesson" class="lecture-panels">
-    <section v-if="part==='slides'" class="lecture-slides" aria-label="Slides của bài giảng">
-      <p class="eyebrow">Ý CHÍNH CỦA BÀI NÀY</p>
-      <article v-if="current" class="course-slide" aria-live="polite"><p class="eyebrow">{{ index+1 }} / {{ slides.length }}</p><h2>{{ current.title }}</h2><ul><li v-for="bullet in current.bullets" :key="bullet">{{ bullet }}</li></ul><p v-if="current.formula" class="slide-formula">{{ current.formula }}</p><p v-if="current.example" class="slide-example"><strong>Ví dụ:</strong> {{ current.example }}</p></article>
-      <p v-else class="empty-state">Slides của bài đang được biên soạn.</p>
-      <div v-if="current" class="slide-controls"><button class="study-button" :disabled="index===0" @click="next(-1)">← Trước</button><span>{{ index+1 }} / {{ slides.length }} · Phím ← →</span><button class="study-button primary" :disabled="index===slides.length-1" @click="next(1)">Tiếp →</button></div>
-    </section>
-    <section v-else-if="part==='kien-thuc-can-co'" class="lecture-foundations" aria-label="Kiến thức nền của bài giảng">
-      <p class="eyebrow">CHUẨN BỊ CHO BÀI NÀY</p><h2>Kiến thức nền</h2><p>Những nền tảng được dùng trong <strong>{{ lesson.title }}</strong>. Nếu cần hiểu sâu hơn, mở bài viết Wiki của thuật ngữ.</p>
-      <article v-for="id in required" :key="id" class="foundation-entry" :id="`nen-tang-${id}`"><div class="foundation-entry-heading"><h3><a class="study-term" :data-term="id" :href="studyLink(`/wiki/${id}`)">{{ concepts[id].name }}</a></h3><button class="study-button" :aria-pressed="!!understood[id]" @click="toggle(id)">{{ understood[id] ? 'Đã hiểu' : 'Đánh dấu đã hiểu' }}</button></div><p>{{ concepts[id].definition }}</p><div class="foundation-example"><h4>Ví dụ</h4><p>{{ concepts[id].example }}</p></div><p class="foundation-use"><strong>Dùng để:</strong> {{ concepts[id].use }}</p><details><summary>Tự kiểm tra: {{ concepts[id].question }}</summary><p>{{ concepts[id].answer }}</p></details><a class="text-link" :href="studyLink(`/wiki/${id}`)">Đọc kỹ {{ concepts[id].name }} trong Wiki →</a></article>
-      <p v-if="storageMessage" role="status" class="storage-message">{{ storageMessage }}</p>
-    </section>
-    <section v-else-if="part==='bai-tap'" class="lecture-exercises" aria-label="Bài tập của bài giảng">
-      <p class="eyebrow">LUYỆN TẬP VÀ VẬN DỤNG</p>
-      <h2>Bài tập ôn luyện</h2>
-      <p>Hệ thống bài tập lý thuyết, phân tích giải thuật và bài toán tính toán của <strong>{{ lesson.title }}</strong>.</p>
-      <div class="lecture-exercise-box">
-        <div class="exercise-intro-card">
-          <h3>Hệ thống bài tập môn {{ course.name }}</h3>
-          <p>Tất cả bài tập theo từng phần học phần được tổng hợp tại chuyên mục bài tập ôn luyện của môn, bao gồm cả bài toán phân tích tiệm cận, tính toán từng bước và lời giải gợi ý.</p>
-          <a class="study-button primary" :href="studyLink(`/${course.id}/bai-tap`)">
-            Xem toàn bộ bài tập môn {{ course.name }} →
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
-</template>
+<template><div v-if="course && lesson" class="lecture-panels">
+  <section v-if="part==='slides'" class="lecture-slides" aria-label="Slides của bài giảng">
+    <p class="eyebrow">Ý CHÍNH CỦA BÀI NÀY</p>
+    <article v-if="current" class="course-slide" aria-live="polite"><p class="eyebrow">{{ index+1 }} / {{ slides.length }}</p><h2>{{ current.title }}</h2><ul><li v-for="bullet in current.bullets" :key="bullet">{{ bullet }}</li></ul><p v-if="current.formula" class="slide-formula">{{ current.formula }}</p><p v-if="current.example" class="slide-example"><strong>Ví dụ:</strong> {{ current.example }}</p></article>
+    <p v-else class="empty-state">Slides của bài đang được biên soạn.</p>
+    <div v-if="current" class="slide-controls"><button class="study-button" :disabled="index===0" @click="next(-1)">← Trước</button><span>{{ index+1 }} / {{ slides.length }} · Phím ← →</span><button class="study-button primary" :disabled="index===slides.length-1" @click="next(1)">Tiếp →</button></div>
+  </section>
+  <section v-else-if="part === 'kien-thuc-can-co'" class="lecture-foundations" aria-label="Kiến thức nền của bài giảng"><div class="foundations-heading"><h2>Kiến thức nền cho bài này</h2><span role="status">Đã hiểu {{ understoodCount }}/{{ required.length }}</span></div><p>Những khái niệm bài dùng mà không giảng lại.</p><article v-for="id in required" :id="`nen-tang-${id}`" :key="id" class="foundation-entry"><div class="foundation-entry-heading"><label class="foundation-check"><input type="checkbox" :checked="!!understood[id]" :aria-label="`Đã hiểu ${concepts[id].name}`" @change="toggle(id)"></label><details><summary><strong>{{ concepts[id].name }}</strong><span>{{ concepts[id].definition.split(/(?<=[.!?])\s/)[0] }}</span></summary><div class="foundation-content"><p>{{ concepts[id].definition }}</p><h4>Ví dụ</h4><p>{{ concepts[id].example }}</p><p><strong>Dùng để:</strong> {{ concepts[id].use }}</p><details><summary>Tự kiểm tra: {{ concepts[id].question }}</summary><p>{{ concepts[id].answer }}</p></details><a class="text-link" :href="studyLink(`/wiki/${id}`)">Đọc {{ concepts[id].name }} trong Wiki</a></div></details></div></article><p v-if="storageMessage" role="status" class="storage-message">{{ storageMessage }}</p></section>
+</div></template>

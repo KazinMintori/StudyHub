@@ -4,22 +4,25 @@ import { courseCatalog } from './course-catalog.mjs'
 import { wikiGroups } from './wiki-content.mjs'
 import { concepts } from './concepts.mjs'
 import { termLinks } from './term-links.mjs'
+import { renderStudySearch } from './search-render.mjs'
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+
+const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
+const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
 
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: true, lastUpdated: true,
   head:[
     ['link',{rel:'icon',href:`${base}favicon.svg`}],
     ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
-    ['meta',{name:'theme-color',content:'#244bd6'}],
-    ['link',{rel:'preconnect',href:'https://fonts.googleapis.com'}],
-    ['link',{rel:'preconnect',href:'https://fonts.gstatic.com',crossorigin:''}],
-    ['link',{rel:'stylesheet',href:'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@600;700&family=Lora:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@600;700&display=swap'}]
+    ['meta',{name:'theme-color',content:colorToken('paper')}]
   ],
   markdown:{
     math:true,
-    lineNumbers:true,
+    lineNumbers:false,
     config:md=>{
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = state.src
@@ -31,17 +34,40 @@ export default withMermaid(defineConfig({
           .replace(/^::: hint(?:\s+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`);
       });
       md.use(termLinks,base)
+      // Only standalone images become figures; escape alt text before inserting captions.
+      md.core.ruler.after('inline', 'study_image_captions', state => {
+        for (let i = 1; i < state.tokens.length - 1; i++) {
+          const token = state.tokens[i]
+          if (token.type !== 'inline' || state.tokens[i-1].type !== 'paragraph_open') continue
+          const children = token.children?.filter(child => child.type !== 'text' || child.content.trim()) || []
+          if (children.length !== 1 || children[0].type !== 'image') continue
+          const image = children[0]
+          const caption = image.content
+          state.tokens[i-1].tag = 'figure'
+          state.tokens[i-1].attrSet('class', 'lecture-figure')
+          state.tokens[i+1].tag = 'figure'
+          if (caption) {
+            const token = new state.Token('html_inline', '', 0)
+            token.content = `<figcaption>${md.utils.escapeHtml(caption)}</figcaption>`
+            state.tokens[i].children.push(token)
+          }
+        }
+      })
     }
   },
-  mermaid:{theme:'default',themeVariables:{fontSize:'14px',fontFamily:'Inter, system-ui, sans-serif'},flowchart:{htmlLabels:true,padding:18,curve:'basis'}},
+  mermaid:{theme:'base',themeVariables:{fontSize:'15px',fontFamily:'Be Vietnam Pro, sans-serif',primaryColor:colorToken('tim-soft'),primaryBorderColor:colorToken('tim'),primaryTextColor:colorToken('ink')},flowchart:{htmlLabels:true,padding:18,curve:'basis'}},
   appearance:true,
-  vite:{optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
+  vite:{resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('./theme/StudyMermaid.vue',import.meta.url))}},optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
   themeConfig:{
-    logo:{light:'/logo.png',dark:'/logo-dark.png',alt:'UET Polytechnic'},
+    sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
+    search:{provider:'local',options:{
+      _render:renderStudySearch,
+      miniSearch:{options:{processTerm:term=>term.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{M}/gu,'').replace(/đ/g,'d')}},
+      translations:{button:{buttonText:'Tìm bài, thuật ngữ',buttonAriaLabel:'Tìm bài giảng và thuật ngữ'},modal:{displayDetails:'Hiện chi tiết',resetButtonTitle:'Xóa tìm kiếm',backButtonTitle:'Đóng tìm kiếm',noResultsText:'Không tìm thấy kết quả',footer:{selectText:'Chọn',navigateText:'Di chuyển',closeText:'Đóng'}}}
+    }},
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
-      {text:'Trang chủ',link:'/'},
-      {text:'Học phần',items:courseCatalog.map(c=>({text:c.name,link:`/${c.id}/`}))},
+      {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
     sidebar:{
@@ -57,7 +83,7 @@ export default withMermaid(defineConfig({
             const lesson = course.lessons.find(l => l.slug === slug)
             if (!lesson) return null
             return {
-              text: lesson.title + (lesson.status==='draft'?' (đang biên soạn)':''),
+              text: (course.id==='toan-cho-ai'?`Lecture ${String(lesson.number).padStart(2,'0')}. `:'') + lesson.title + (lesson.status==='draft'?' (đang biên soạn)':''),
               link: `/${course.id}/bai-giang/${lesson.slug}`
             }
           }).filter(Boolean)
@@ -72,8 +98,7 @@ export default withMermaid(defineConfig({
       ],
       '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'},{text:'Đóng góp nội dung',link:'/guide/contribute'}]}]
     },
-    outline:{level:[2,3],label:'Mục lục bài viết'},
+    outline:{level:2,label:'Mục lục'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
-    footer:{message:'Tài liệu học tập dành cho sinh viên UET',copyright:'Bản quyền nội dung © 2026 UETệ'}
   }
 }))

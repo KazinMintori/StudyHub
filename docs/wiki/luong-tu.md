@@ -9,6 +9,8 @@ next: false
 
 Vị từ P(x) là phát biểu có biến; khi gán x ta mới biết đúng hay sai. ∀x P(x) nói rằng P đúng với mọi x trong miền xét. ∃x P(x) nói rằng có ít nhất một x thỏa P. Phủ định đổi ∀ thành ∃ và phủ định mệnh đề bên trong, hoặc ngược lại.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Thứ tự lượng từ có thể đổi ý nghĩa.** ∀x∃y P(x,y) cho phép chọn y khác nhau theo từng x. ∃y∀x P(x,y) yêu cầu một y duy nhất dùng được cho mọi x.

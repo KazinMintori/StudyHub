@@ -90,7 +90,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-### Quy tắc 3: Biến đếm nhân đôi hoặc chia đôi $\rightarrow \mathcal{O}(\log n)$
+### Quy tắc 3: biến đếm nhân đôi hoặc chia đôi cho thời gian logarithm
 
 ```cpp
 // Biến i tăng theo cấp số nhân: i = 1, 2, 4, 8, 16...

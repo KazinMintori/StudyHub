@@ -9,6 +9,8 @@ next: false
 
 Điện tích là đại lượng vật lý có hai dấu dương và âm, đo bằng coulomb (C). Cùng dấu đẩy nhau, trái dấu hút nhau trong tương tác tĩnh điện. Tổng điện tích của hệ cô lập được bảo toàn; dấu và độ lớn là hai thông tin riêng.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Nguồn và điện tích thử.** Điện tích nguồn tạo điện trường; điện tích thử được dùng để mô tả lực tại điểm xét. Định nghĩa E dùng điện tích thử dương đủ nhỏ để không làm thay đổi phân bố nguồn trong mô hình.

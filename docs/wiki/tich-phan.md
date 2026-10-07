@@ -9,6 +9,8 @@ next: false
 
 Tích phân xác định cộng dồn các đóng góp rất nhỏ trên một miền. Trong một biến, ∫ₐᵇ f(x)dx là diện tích có dấu dưới đồ thị. Khi f có nguyên hàm F phù hợp, giá trị này bằng F(b)−F(a). Tích phân đường và mặt mở rộng ý tưởng cộng dồn dọc đường hoặc trên mặt.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Tích phân có dấu và đổi cận.** Đổi thứ tự cận làm đổi dấu. Nếu f âm trên một khoảng, phần đóng góp tích phân ở đó âm; diện tích hình học cần xét |f|.

@@ -9,6 +9,8 @@ next: false
 
 Thông lượng của trường qua mặt là tổng thành phần trường vuông góc với mặt. Với trường đều và mặt phẳng, Φ=E·n A=EA cos θ, θ là góc với pháp tuyến chứ không phải với mặt. Mặt kín quy ước pháp tuyến hướng ra ngoài.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Hướng của diện tích.** Vector diện tích bằng pháp tuyến đơn vị nhân phần tử diện tích. Mặt kín dùng pháp tuyến hướng ra ngoài; khi đổi hướng pháp tuyến, thông lượng đổi dấu.

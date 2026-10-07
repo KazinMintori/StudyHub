@@ -7,25 +7,27 @@ next: false
 
 # Gradient
 
-Gradient ∇f là vector các đạo hàm riêng. Tại điểm khả vi, nó chỉ hướng tăng nhanh nhất của f theo khoảng cách Euclid. Hướng −∇f là hướng giảm nhanh nhất tại điểm đó; một bước quá dài theo hướng này vẫn có thể làm giá trị tăng.
+Gradient $\nabla f$ là vector các đạo hàm riêng. Tại điểm khả vi, nó chỉ hướng tăng nhanh nhất của f theo khoảng cách Euclid. Hướng $-\nabla f$ là hướng giảm nhanh nhất tại điểm đó; một bước quá dài theo hướng này vẫn có thể làm giá trị tăng.
+
+<WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Công thức và xấp xỉ cục bộ.** Với hàm khả vi f: ℝⁿ→ℝ, gradient là:
+**Công thức và xấp xỉ cục bộ.** Với hàm khả vi $f:\mathbb{R}^n\to\mathbb{R}$, gradient là:
 
 $$\nabla f(x)=\left(\frac{\partial f}{\partial x_1},\ldots,\frac{\partial f}{\partial x_n}\right).$$
 
-Với độ dời nhỏ Δx, ta có f(x+Δx)≈f(x)+∇f(x)·Δx. Đạo hàm theo hướng đơn vị u bằng ∇f(x)·u, lớn nhất khi u cùng hướng gradient nếu gradient khác 0. Khi gradient bằng 0, không có một hướng tăng nhanh nhất được xác định từ công thức này.
+Với độ dời nhỏ $\Delta x$, ta có $f(x+\Delta x)\approx f(x)+\nabla f(x)\cdot\Delta x$. Đạo hàm theo hướng đơn vị u bằng $\nabla f(x)\cdot u$, lớn nhất khi u cùng hướng gradient nếu gradient khác 0. Khi gradient bằng 0, không có một hướng tăng nhanh nhất được xác định từ công thức này.
 
-**Gradient Descent** cập nhật x mới=x cũ−η∇f(x cũ). Hướng giảm là thông tin cục bộ; bước η quá dài vẫn có thể làm f tăng. Với f(x)=x², x mới=(1−2η)x cũ: 0<η<1 làm |x| giảm, η=1 làm đổi dấu giữ độ lớn, η>1 có thể gây phân kỳ.
+**Gradient Descent** cập nhật $x_{k+1}=x_k-\eta\nabla f(x_k)$. Hướng giảm là thông tin cục bộ; bước η quá dài vẫn có thể làm f tăng. Với $f(x)=x^2$, $x_{k+1}=(1-2\eta)x_k$: $0<\eta<1$ làm |x| giảm, $\eta=1$ làm đổi dấu giữ độ lớn, $\eta>1$ có thể gây phân kỳ.
 
 ## Ví dụ
 
-f(x,y) = x²+y²: ∇f = (2x, 2y). Tại (1, 2), gradient là (2, 4).
+$f(x,y)=x^2+y^2$: $\nabla f=(2x,2y)$. Tại (1, 2), gradient là (2, 4).
 
 ## Khi nào cần dùng?
 
-Hiểu Gradient Descent và E = −∇V.
+Hiểu Gradient Descent và $\mathbf{E}=-\nabla V$.
 
 ## Tự kiểm tra
 

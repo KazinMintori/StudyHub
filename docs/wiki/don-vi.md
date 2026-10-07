@@ -9,6 +9,8 @@ next: false
 
 Mỗi đại lượng cần đơn vị để diễn giải con số. Các đại lượng chỉ cộng được khi cùng thứ nguyên; hai vế phương trình phải cùng thứ nguyên. Các tiền tố như milli = 10⁻³, micro = 10⁻⁶ cần được đổi thống nhất trước khi tính.
 
+<WikiUsage />
+
 ## Giải thích kỹ thuật
 
 **Kiểm tra thứ nguyên.** Hai vế công thức phải có cùng thứ nguyên. Phép cộng cũng cần các hạng cùng thứ nguyên, nhưng hệ số có thể mang đơn vị để làm biểu thức hợp lệ.
