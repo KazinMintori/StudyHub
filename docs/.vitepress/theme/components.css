@@ -33,9 +33,65 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .vp-doc th { background: var(--canvas); font-weight: 600; }
 .vp-doc tr { background: var(--paper); border: 0; }
 .vp-doc tr:nth-child(2n) { background: var(--canvas); }
-.vp-doc mjx-container[display=true], .slide-formula mjx-container[display=true] { display: block; overflow-x: auto; overflow-y: hidden; max-width: 100%; padding: var(--space-2) 0; margin: 20px 0; }
-.vp-doc mjx-container { min-width: 0; }
-.vp-doc mjx-container:not([display=true]) { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+.vp-doc mjx-container { min-width: 0; color: inherit; }
+.vp-doc mjx-container:not([display=true]) {
+  display: inline-block;
+  max-width: none !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  padding: 0 0.1em;
+  margin: 0;
+  vertical-align: -0.05em;
+  scrollbar-width: none;
+}
+.vp-doc mjx-container:not([display=true])::-webkit-scrollbar {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+.vp-doc mjx-container[display=true] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: var(--space-3) var(--space-2);
+  margin: var(--space-5) 0;
+  text-align: center;
+  font-size: 1.05em;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+.vp-doc mjx-container[display=true]::-webkit-scrollbar {
+  height: 4px;
+}
+.vp-doc mjx-container[display=true]::-webkit-scrollbar-track {
+  background: transparent;
+}
+.vp-doc mjx-container[display=true]::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 4px;
+}
+.vp-doc mjx-container[display=true]::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-3);
+}
+.slide-formula mjx-container[display=true] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: var(--space-2) 0;
+  margin: 12px 0;
+  text-align: center;
+  scrollbar-width: thin;
+}
+.vp-doc mjx-box {
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.vp-doc .custom-block mjx-container[display=true] {
+  margin: var(--space-4) 0;
+}
 .vp-doc img { height: auto; max-width: 100%; border-radius: var(--radius); }
 .lecture-figure { margin: var(--space-6) 0; }
 .lecture-figure img { display: block; margin: 0 auto; }
@@ -52,13 +108,16 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .term-preview > span { font-size: var(--fs-small); color: var(--ink-3); }
 .coffee-dialog { max-width: min(480px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow-y: auto; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper); color: var(--ink); box-shadow: var(--shadow); }
 .coffee-dialog::backdrop { background: var(--scrim); }
-.coffee-dialog header { display: flex; align-items: start; justify-content: space-between; gap: var(--space-4); }
+.coffee-dialog header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.coffee-dialog-header { display: flex; align-items: center; gap: var(--space-3); }
+.coffee-dialog-logo { width: 32px; height: 32px; flex-shrink: 0; display: block; }
 .coffee-dialog h2 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.35; }
 .coffee-dialog p { margin: var(--space-4) 0; color: var(--ink-2); }
-.coffee-dialog img { display: block; width: 240px; max-width: 100%; margin: var(--space-5) auto; background: var(--printed-paper); border-radius: var(--radius); }
+.coffee-dialog .coffee-qr-img { display: block; width: 240px; max-width: 100%; margin: var(--space-5) auto; background: var(--printed-paper); border-radius: var(--radius); }
 .coffee-dialog dl { display: grid; gap: var(--space-2); overflow-wrap: anywhere; }
 .coffee-dialog dt { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-3); }
 .coffee-dialog dd { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); font-variant-numeric: tabular-nums; }
+.coffee-dialog dd.coffee-acc-val { font-family: var(--font-code); font-size: var(--fs-lead); font-weight: 600; color: var(--tim); }
 .code-illustration { min-width: 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); margin: var(--space-6) 0; font-family: var(--font-ui); }
 .code-illustration svg { display: block; width: 100%; max-height: 370px; margin: var(--space-5) 0; }
 .code-illustration svg:not(.field-canvas) text { font-family: var(--font-ui); font-size: 17px; fill: var(--ink); }
