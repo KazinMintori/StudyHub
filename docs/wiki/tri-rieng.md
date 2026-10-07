@@ -1,0 +1,40 @@
+---
+title: "Trị riêng & vector riêng"
+wikiTerm: tri-rieng
+prev: false
+next: false
+---
+
+# Trị riêng & vector riêng
+
+Nếu Av = λv với v khác vector không, v là vector riêng của ma trận vuông A và λ là trị riêng tương ứng. Biến đổi A chỉ co giãn hoặc đổi chiều v mà không đưa nó ra khỏi đường thẳng ban đầu.
+
+## Giải thích kỹ thuật
+
+**Cách tìm trị riêng.** Từ Av=λv suy ra (A−λI)v=0. Để có nghiệm v≠0 trong hữu hạn chiều, ma trận A−λI phải suy biến; do đó det(A−λI)=0.
+
+Trị riêng có thể là số phức với ma trận thực. Ma trận đối xứng thực có trị riêng thực và một cơ sở vector riêng trực chuẩn. Không phải mọi ma trận đều có đủ vector riêng độc lập để chéo hóa.
+
+## Ví dụ
+
+A = [[2,0],[0,3]]: (1,0) là vector riêng với λ = 2; (0,1) với λ = 3.
+
+## Khi nào cần dùng?
+
+Đọc phân tích tuyến tính, PCA và hành vi lặp ma trận.
+
+## Tự kiểm tra
+
+Vector không có được chọn làm vector riêng không?
+
+<details><summary>Xem đáp án</summary>
+
+Không. Định nghĩa yêu cầu v khác vector không.
+
+</details>
+
+## Thuật ngữ liên quan
+
+- [Ma trận](./ma-tran.md)
+- [Vector](./vector.md)
+- [Chuẩn vector](./chuan.md)

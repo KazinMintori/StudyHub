@@ -4,8 +4,13 @@
   "description": "Kho tài liệu và bài giảng ôn tập môn học UET",
   "type": "module",
   "scripts": {
+    "sync:courses": "node scripts/sync-courses.mjs",
+    "ci:build": "node scripts/sync-courses.mjs && vitepress build docs",
+    "dev": "vitepress dev docs",
+    "build": "node scripts/sync-courses.mjs && vitepress build docs && node scripts/export-static.mjs",
+    "preview": "vitepress preview docs",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node scripts/sync-courses.mjs && vitepress build docs && node scripts/export-static.mjs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [
@@ -18,8 +23,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "debug": "^4.4.3",
+    "markdown-it": "^15.0.2",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^11.4.1",
+    "puppeteer": "^25.12.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17"
   }

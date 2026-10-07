@@ -1,0 +1,51 @@
+import { readFile, writeFile, mkdir, access } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
+import { courseCatalog } from '../docs/.vitepress/course-catalog.mjs'
+import { concepts } from '../docs/.vitepress/concepts.mjs'
+import { createWikiArticle } from '../docs/.vitepress/wiki-content.mjs'
+
+const root = fileURLToPath(new URL('../', import.meta.url)), docs = path.join(root,'docs')
+const exists = async file => { try { await access(file); return true } catch { return false } }
+const redirect = target => `---\nlayout: page\nsearch: false\nredirectTo: ${JSON.stringify(target)}\n---\n\n<OldCourseLink />\n`
+for (const course of courseCatalog) {
+  const dir=path.join(docs,course.id), lectures=path.join(dir,'bai-giang')
+  await mkdir(lectures,{recursive:true})
+  await mkdir(path.join(dir,'notes'),{recursive:true})
+  for (const lesson of course.lessons) {
+    const target=path.join(lectures,`${lesson.slug}.md`), old=path.join(dir,'notes',`${lesson.slug}.md`)
+    if (!await exists(target)) {
+      let source=await readFile(old,'utf8')
+      // Keep authored Notes intact during migration, updating their sibling links.
+      const metadata=[]
+      while (true) {
+        const front=source.match(/^\s*---\r?\n([\s\S]*?)\r?\n---\s*/)
+        if(front){metadata.push(front[1]);source=source.slice(front[0].length);continue}
+        const comment=source.match(/^\s*<!--[\s\S]*?-->\s*/)
+        if(comment){source=source.slice(comment[0].length);continue}
+        break
+      }
+      const extra=metadata.flatMap(block=>block.split(/\r?\n/)).filter(line=>/^description:/.test(line)).slice(-1).join('\n')
+      source=source.replace(/^# .+\r?\n/m,'')
+      source=source.replace(/\]\(\.\/([^\s)]+)\)/g,(match,url)=>{
+        const [file,hash]=url.split('#'), slug=file.replace(/\.md$/,'')
+        if(course.lessons.some(l=>l.slug===slug))return `](/${course.id}/bai-giang/${file}${hash?`#${hash}`:''})`
+        return `](/${course.id}/${file==='index.md'?'index.md':`notes/${file}`}${hash?`#${hash}`:''})`
+      })
+      await writeFile(target,`---\ncourse: ${course.id}\nlecture: ${lesson.slug}\nsection: lecture\ntitle: ${JSON.stringify(lesson.title)}\nprerequisites: ${JSON.stringify(lesson.prerequisites)}\nlessonStatus: ${lesson.status}\n${extra}\n---\n\n${source}`)
+    }
+    await writeFile(old,redirect(`/${course.id}/bai-giang/${lesson.slug}.html`))
+    await writeFile(path.join(dir,`${lesson.slug}.md`),redirect(`/${course.id}/bai-giang/${lesson.slug}.html`))
+  }
+  await writeFile(path.join(dir,'index.md'),`---\nlayout: page\ntitle: ${JSON.stringify(course.name)}\ncourse: ${course.id}\nsection: overview\noutline: false\n---\n\n<CourseOverview />\n`)
+  await writeFile(path.join(dir,'notes/index.md'),redirect(`/${course.id}/`))
+  await writeFile(path.join(dir,'slides.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: slides\n---\n\n<LegacyCourseRoute />\n`)
+  await writeFile(path.join(dir,'kien-thuc-can-co.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: foundations\n---\n\n<LegacyCourseRoute />\n`)
+}
+await mkdir(path.join(docs,'wiki'),{recursive:true})
+await writeFile(path.join(docs,'wiki/index.md'),'---\nlayout: page\ntitle: Wiki thuật ngữ\n---\n\n<WikiIndex />\n')
+for (const id of Object.keys(concepts)) {
+  const file=path.join(docs,'wiki',`${id}.md`)
+  if (!await exists(file)) await writeFile(file,createWikiArticle(id))
+}
+console.log(`Synced ${courseCatalog.length} courses with lecture bundles and ${Object.keys(concepts).length} Wiki articles.`)

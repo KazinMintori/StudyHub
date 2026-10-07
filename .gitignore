@@ -5,6 +5,32 @@ Thumbs.db
 # VitePress cache and build outputs
 docs/.vitepress/cache
 docs/.vitepress/dist
+dist/
+/assets/
+.static-export.json
+qa/
+
+# Local working material and generated root preview files
+/.agents/
+/backups/
+/Research/
+/bieu-dien-tri-thuc/
+/discrete-math/
+/dsa/
+/giai-thuat-du-lieu/
+/guide/
+/toan-cho-ai/
+/vat-ly-2/
+/wiki/
+/xac-suat-thong-ke/
+/xu-ly-du-lieu/
+/index.html
+/404.html
+/goc-hoc-tap.html
+/favicon.svg
+/logo.svg
+/hashmap.json
+/vp-icons.css
 
 # Python
 __pycache__/
