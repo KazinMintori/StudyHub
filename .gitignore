@@ -13,6 +13,7 @@ qa/
 
 # Local working material and generated root preview files
 /.agents/
+/Research/
 /backups/
 /bieu-dien-tri-thuc/
 /discrete-math/

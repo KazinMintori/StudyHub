@@ -16,7 +16,6 @@
 .lecture-list-copy h3 { font-size: var(--fs-read); line-height: 1.45; font-weight: 600; }
 .lecture-list-copy p { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-2); }
 .lesson-status { color: var(--vang); font-size: var(--fs-small); flex-shrink: 0; }
-.lesson-status.done { color: var(--xanh); }
 .course-wiki-footnote { margin-top: var(--space-7); border-top: 1px solid var(--rule); padding-top: var(--space-5); font-size: var(--fs-ui); color: var(--ink-2); }
 .course-wiki-footnote a { color: var(--tim); }
 .course-parent { font-family: var(--font-ui); font-size: var(--fs-small); color: var(--tim); display: inline-flex; min-height: 44px; align-items: center; }

@@ -1,8 +1,6 @@
 .VPNavBar .VPNavBarTitle .title { font-size: var(--fs-h3); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0; color: var(--ink); }
 .VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
-.VPNavBar .VPNavBarSearch .DocSearch-Button { color: var(--ink-3); border-color: var(--control); border-radius: var(--radius); min-height: 40px; background: var(--canvas); }
-.VPNavBar .DocSearch-Button-Placeholder { font-size: var(--fs-small); }
-.VPNavBar .DocSearch-Button-Key, .VPNavBar .DocSearch-Button-Key:first-child:after { font-size: var(--fs-small); color: var(--ink-3); }
+.VPNavBar .VPNavBarSearch { display: none !important; }
 .VPNavBar .content-body { background: var(--paper); }
 .VPHome { padding-bottom: 0; margin-bottom: 0; }
 .study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }
@@ -40,7 +38,6 @@
   .VPNavBar .VPNavBarMenu, .VPNavBar .VPNavBarExtra, .VPNavBar .VPNavBarAppearance { display: none !important; }
   .VPNavBar .VPNavBarHamburger { display: flex !important; }
   .VPNav .VPNavScreen { display: block !important; }
-  .VPNavBar .DocSearch-Button-Placeholder, .VPNavBar .DocSearch-Button-Keys { display: none; }
 }
 @media (max-width: 767px) {
   .study-home, .course-shell, .study-workspace { padding: var(--space-6) 20px var(--space-7); }

@@ -5,9 +5,8 @@ import { useLecture } from './lecture-state'
 import { lecturePath } from '../lecture-model.mjs'
 import { studyLink } from './links'
 import { readStored, writeStored, storageMessage } from './storage'
-import { useStudyProgress, isCompleted, toggleCompleted, progressKey } from './progress'
+import { progressKey } from './progress'
 const route = useRoute(), { course, lesson, part } = useLecture()
-useStudyProgress()
 const readable = computed(() => lesson.value?.status === 'ready')
 const nextLesson = computed(() => course.value?.lessons[course.value.lessons.indexOf(lesson.value) + 1])
 let frame, trackedPath = '', trackedTitle = ''
@@ -33,4 +32,4 @@ onBeforeUnmount(recordHeading)
 onUnmounted(() => { cancelAnimationFrame(frame); window.removeEventListener('scroll', scroll); window.removeEventListener('pagehide', recordHeading) })
 watch(() => route.path, load)
 </script>
-<template><section v-if="readable" v-show="part === 'notes'" class="lesson-actions"><button class="study-button" :class="isCompleted(course, lesson) ? 'success' : 'primary'" :aria-pressed="isCompleted(course, lesson)" @click="toggleCompleted(course, lesson)">{{ isCompleted(course, lesson) ? 'Đã học' : 'Đánh dấu đã học' }}</button><nav aria-label="Sau bài học"><a v-if="nextLesson" class="text-link" :href="studyLink(lecturePath(course.id, nextLesson.slug))">Tiếp: {{ nextLesson.title }}</a><a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện của môn</a></nav><p v-if="storageMessage" role="status">{{ storageMessage }}</p></section></template>
+<template><section v-if="readable" v-show="part === 'notes'" class="lesson-actions"><nav aria-label="Sau bài học"><a v-if="nextLesson" class="text-link" :href="studyLink(lecturePath(course.id, nextLesson.slug))">Tiếp: {{ nextLesson.title }}</a><a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện của môn</a></nav><p v-if="storageMessage" role="status">{{ storageMessage }}</p></section></template>

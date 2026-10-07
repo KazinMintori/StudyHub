@@ -27,9 +27,9 @@ Mở [Góc học tập](/goc-hoc-tap) để dùng các công cụ:
 - **Mô phỏng điện trường:** đặt điện tích dương hoặc âm để quan sát hướng điện trường tổng hợp. Các nút thêm và xóa cũng dùng được bằng bàn phím.
 - **Pomodoro:** chọn 25 hoặc 50 phút tập trung, 5 phút nghỉ. Đồng hồ giữ thời gian khi chuyển trang hoặc tải lại.
 
-Ở mỗi bài giảng, dùng “Đánh dấu đã học” để lưu tiến độ. Trang chủ sẽ hiển thị bài đã mở gần nhất để bạn tiếp tục.
+Trang chủ sẽ hiển thị bài đã mở gần nhất để bạn tiếp tục đọc.
 
-Tiến độ và ghi chú được lưu cục bộ trên trình duyệt hiện tại, chưa đồng bộ giữa các thiết bị. Hãy tải ghi chú trước khi xóa dữ liệu trình duyệt.
+Ghi chú được lưu cục bộ trên trình duyệt hiện tại, chưa đồng bộ giữa các thiết bị. Hãy tải ghi chú trước khi xóa dữ liệu trình duyệt.
 
 ## 3 Bước Ôn Tập Khuyên Dùng
 

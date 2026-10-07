@@ -4,7 +4,6 @@ import { courseCatalog } from './course-catalog.mjs'
 import { wikiGroups } from './wiki-content.mjs'
 import { concepts } from './concepts.mjs'
 import { termLinks } from './term-links.mjs'
-import { renderStudySearch } from './search-render.mjs'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 
@@ -60,11 +59,6 @@ export default withMermaid(defineConfig({
   vite:{resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('./theme/StudyMermaid.vue',import.meta.url))}},optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
   themeConfig:{
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
-    search:{provider:'local',options:{
-      _render:renderStudySearch,
-      miniSearch:{options:{processTerm:term=>term.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{M}/gu,'').replace(/đ/g,'d')}},
-      translations:{button:{buttonText:'Tìm bài, thuật ngữ',buttonAriaLabel:'Tìm bài giảng và thuật ngữ'},modal:{displayDetails:'Hiện chi tiết',resetButtonTitle:'Xóa tìm kiếm',backButtonTitle:'Đóng tìm kiếm',noResultsText:'Không tìm thấy kết quả',footer:{selectText:'Chọn',navigateText:'Di chuyển',closeText:'Đóng'}}}
-    }},
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
       {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
