@@ -8,11 +8,11 @@ lessonStatus: ready
 description: "Tách hướng và độ dài bước, chạy gradient và Newton, lập hệ Newton–KKT và kiểm phần dư."
 ---
 
-Các bài trước cho điều kiện nghiệm; bài này tìm cách đi tới nghiệm bằng một dãy cập nhật. Ta phải chọn hướng, chọn độ dài bước và kiểm tiêu chí dừng. Ba quyết định ấy cần được phân biệt ngay cả khi chúng nằm trong một dòng code.
+Các bài trước cho ta điều kiện nhận biết nghiệm tối ưu; bài này tìm cách đi tới nghiệm bằng một dãy cập nhật. Ta phải chọn hướng, chọn độ dài bước và kiểm tiêu chí dừng. Ba quyết định ấy cần được phân biệt ngay cả khi chúng nằm trong một dòng code.
 
 Ví dụ xuyên suốt tự đặt là $f(x,y)=\tfrac12(x^2+10y^2)$, khởi đầu $(2,2)$. Độ cong theo $y$ gấp 10 lần theo $x$, nên nó giúp nhìn rõ vì sao một tốc độ học chung có thể khó chọn.
 
-Sau bài, bạn có thể truy vết gradient, tự thực hiện backtracking, tính bước Newton bằng giải hệ, và lập hệ cập nhật khi có đẳng thức. Đọc mục 1–3 trước; mục 4 về tự tương hợp và mục 5–6 về ràng buộc là hai cụm học tiếp riêng.
+Sau bài, bạn có thể truy vết gradient, tự thực hiện backtracking, tính bước Newton bằng giải hệ, và lập hệ cập nhật khi có đẳng thức. Lần đọc đầu nên dừng sau mục 3. Mục 4 về tự tương hợp và mục 5–6 về ràng buộc là hai chặng nâng cao có thể học riêng.
 
 ## 1. Hướng giảm không quyết định toàn bộ bước
 
@@ -131,7 +131,7 @@ Vế trái đo độ cong thay đổi nhanh đến đâu; vế phải so nó v�
 
 Ví dụ $f(x)=-\log x$, $x>0$, có $f''=1/x^2$ và $f'''=-2/x^3$. Hai vế cùng bằng $2/x^3$. Hàm toàn phương lồi cũng thỏa vì đạo hàm bậc ba bằng 0.
 
-Điều kiện này phục vụ phân tích Newton mà không dựa vào các hằng số độ cong toàn cục trong hệ tọa độ hiện tại. Nó không nói mọi hàm lồi đều thỏa. Ta giữ định nghĩa và ví dụ trong tuyến chính; các cận số vòng lặp chi tiết nằm ở §9.6.3–9.6.4 để đọc sau khi đã chạy được thuật toán.
+Điều kiện này phục vụ phân tích Newton mà không dựa vào các hằng số độ cong toàn cục trong hệ tọa độ hiện tại. Nó không nói mọi hàm lồi đều thỏa. Phần này chỉ giữ định nghĩa và một ví dụ; các cận số vòng lặp chi tiết ở §9.6.3–9.6.4 phù hợp cho lần đọc sau, khi bạn đã tự chạy được thuật toán.
 
 ## 5. Có đẳng thức: hướng phải ở trong miền khả thi
 

@@ -4,12 +4,11 @@
 .VPNavBar .content-body { background: var(--paper); }
 .VPHome { padding-bottom: 0; margin-bottom: 0; }
 .study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }
-.site-footer { max-width: 1184px; margin: var(--space-6) auto 0; padding: var(--space-5) var(--space-6); border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; font-size: var(--fs-small); color: var(--ink-3); }
-.site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+.site-footer { max-width: 1184px; margin: var(--space-6) auto 0; padding: var(--space-5) var(--space-6); border-top: 1px solid var(--rule); display: flex; justify-content: center; align-items: center; gap: var(--space-5); flex-wrap: wrap; font-size: var(--fs-small); color: var(--ink-3); }
 .site-footer a, .site-footer button { color: var(--tim); min-height: 44px; display: inline-flex; align-items: center; }
+.site-footer button:hover { color: var(--tim-hover); }
 .coffee-footer-btn { gap: var(--space-2); }
 .coffee-footer-icon { width: 18px; height: 18px; flex-shrink: 0; display: block; }
-.site-footer p { max-width: 640px; }
 .VPSidebar .VPSidebarItem .text { font-size: var(--fs-ui); line-height: 1.45; }
 .Layout .VPDoc .content-container { max-width: 620px; }
 .Layout .VPDoc.has-aside .content-container { max-width: 620px; }

@@ -12,7 +12,7 @@ Một mô hình dự đoán sai thì ta nên đổi tham số theo hướng nào
 
 Sau bài, bạn có thể kiểm kích thước trong phép nhân ma trận, tự tính gradient của loss bình phương và giải thích vì sao giả định nhiễu Gauss dẫn tới bình phương tối thiểu.
 
-**Cách học:** đọc mục 1–2 rồi làm tự kiểm; đọc mục 3–4 rồi dừng ở ví dụ gradient; cuối cùng nối xác suất với hồi quy ở mục 5–6. Tab Kiến thức nền ôn hàm số và đạo hàm một biến. Các ký hiệu mới đều được giải thích trong Notes.
+**Cách học:** đọc mục 1–2 rồi làm câu tự kiểm; tiếp tục với gradient và Hessian ở mục 3–4; cuối cùng nối xác suất với hồi quy ở mục 5–6. Nếu hàm số hoặc đạo hàm một biến còn chưa chắc, mở tab Kiến thức nền trước. Trong Notes, thuật ngữ có gạch chấm mở một ghi chú ngắn ngay trên trang.
 
 ## 1. Từ một dự đoán đến một vector dự đoán
 
@@ -130,7 +130,7 @@ Số hạng cuối không âm và chỉ bằng 0 tại $w^*$; vì vậy nghiệm
 
 Dấu từng phần tử ma trận không đủ để kiểm PSD. Ma trận $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ có phần tử dương nhưng với $d=(1,-1)$, $d^THd=-2$. Ngược lại, $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ có phần tử âm nhưng $d^THd=(d_1-d_2)^2\ge0$.
 
-**Điểm dừng:** trước khi sang xác suất, hãy giải thích được vì sao $A^TA$ luôn PSD, và vì sao PSD chưa bảo đảm PD. Nếu $Ad=0$ với một $d\ne0$, độ cong theo hướng đó bằng 0.
+**Trước khi đọc tiếp:** hãy tự giải thích vì sao $A^TA$ luôn PSD, và vì sao PSD chưa bảo đảm PD. Nếu $Ad=0$ với một $d\ne0$, độ cong theo hướng đó bằng 0.
 
 ## 5. Xác suất một biến và nhiều biến: đừng nhầm mật độ với xác suất
 

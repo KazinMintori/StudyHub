@@ -12,7 +12,7 @@ description: "Từ lựa chọn khả thi đến tập lồi, hàm lồi và ch�
 
 Sau bài, bạn có thể viết biến–mục tiêu–ràng buộc, phân biệt tập lồi với hàm lồi, và chỉ ra điều kiện nào làm một điểm dừng trở thành nghiệm toàn cục.
 
-**Ba điểm dừng:** mục 1 cho mô hình; mục 2–3 cho hình học; mục 4–6 cho chứng nhận nghiệm. Đọc Bài 00 nếu các phép nhân $x^Ty$, $v^THv$ còn chưa rõ. Phần [hình học bổ sung](../doc-them/hinh-hoc-tap-loi.md) giữ các khái niệm nón, phối cảnh và Pareto để đọc sau khi đã nắm tuyến chính.
+Bạn có thể chia bài thành ba chặng: mục 1 học cách lập mô hình; mục 2–3 xây trực giác hình học; mục 4–6 dùng cấu trúc lồi để chứng nhận nghiệm. Nếu các phép nhân $x^Ty$, $v^THv$ còn chưa rõ, hãy ôn lại Bài 00. Các khái niệm nón, phối cảnh và Pareto được tách sang phần [hình học bổ sung](../doc-them/hinh-hoc-tap-loi.md) để lần đọc đầu không bị quá tải.
 
 ## 1. Chọn điều gì, chấm bằng gì, giới hạn ở đâu?
 

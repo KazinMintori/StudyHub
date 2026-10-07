@@ -91,6 +91,10 @@ Mỗi `id` trong `prerequisites` phải tồn tại ở **cả ba** chỗ, nếu
 
 `aliases` quyết định liên kết tự động: `term-links.mjs` nối **lần xuất hiện đầu tiên trong mỗi đoạn inline** của Notes/Wiki tới `/wiki/<id>.html`, bỏ qua tiêu đề, code, công thức và link có sẵn; so khớp không phân biệt hoa thường và theo ranh giới từ. Chọn alias đúng cách người Việt viết trong bài, kể cả biến thể (“véc-tơ”, “vector”). Tránh alias quá chung (“hàm”, “tập”) vì sẽ gắn link nhầm khắp nơi.
 
+Liên kết thuật ngữ dùng hai tầng: bấm vào từ có gạch chấm để mở **ghi chú nhanh** ngay cạnh văn bản, rồi bấm nút trong thẻ để sang bài Wiki. Ghi chú nhanh lấy `name`, `definition` và `example` trong `concepts.mjs`; vì vậy ba trường này phải ngắn, tự đứng được và không chứa Markdown/LaTeX. `wikiDetails` và `docs/wiki/<id>.md` mới là nơi khai triển ký hiệu, điều kiện, ngộ nhận và liên hệ. Không nhồi toàn bộ bài Wiki vào ghi chú nhanh.
+
+Một khái niệm khó được dạy ngay trong Notes vẫn có thể có mục Wiki để người học tra nhanh và đào sâu. Việc có mục Wiki **không tự biến nó thành prerequisite**: chỉ thêm vào `lesson.prerequisites` khi bài sử dụng khái niệm mà không dạy lại.
+
 Chọn `prerequisites` là các khái niệm **bài này dùng mà không dạy lại**, xếp theo thứ tự nên đọc; không gắn toàn bộ `foundations` của môn. Khái niệm mới mà bài dạy thì nằm trong Notes, không phải ở Kiến thức nền.
 
 ## 6. Lệnh kiểm tra

@@ -26,6 +26,7 @@ Phần kiểm tra tự động của script nằm ở `scripts/tests/test_tools.
 | S10 | Bài thực hành Python/NumPy/pandas | Code trong bài chạy được; output in trong bài khớp output thật; nêu phiên bản thư viện khi hành vi phụ thuộc phiên bản | Output tự viết không chạy thử; dùng API đã bỏ |
 | S11 | Nguồn PDF có trang OCR lỗi ký hiệu (“P(B) ? 0”) | Ghi chỗ mơ hồ, đối chiếu ảnh trang nếu có, không đoán | Giảng như chắc chắn ký tự là “>” |
 | S12 | Một chương dài gấp ba một bài bình thường | Đề xuất tách bài theo điểm kết thúc nhiệm vụ học, nói rõ phần chuyển sang bài sau | Nén bằng cách xóa điều kiện, bước suy luận hoặc ví dụ |
+| S13 | Notes dày thuật ngữ, người học muốn xem nhanh rồi mới quyết định mở Wiki | Thuật ngữ khó có `concepts` ngắn và `wikiDetails` sâu; bấm/tap mở ghi chú nhanh có ví dụ và nút sang Wiki; dùng được bằng bàn phím, Escape đóng, mobile không tràn màn hình | Nhấp thuật ngữ lập tức đẩy người học khỏi Notes; chỉ hoạt động khi hover; nhồi công thức dài vào tooltip; thêm mọi thuật ngữ Wiki vào prerequisites |
 
 Bất biến chung cho mọi tình huống S: không bịa nguồn/trích dẫn/số liệu; mọi số đã tính lại; Notes tự học được mà không cần giảng viên; Slides không chứa khẳng định Notes không có.
 

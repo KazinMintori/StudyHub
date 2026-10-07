@@ -14,7 +14,7 @@ Ta tiếp tục bài $\min(x-2)^2$ với $x\le1$ từ Bài 01. Ví dụ này t�
 
 Sau bài, bạn có thể tính hàm đối ngẫu bằng cách tối ưu theo $x$ trước, kiểm đủ các nhóm KKT và dùng khoảng cách đối ngẫu để đánh giá một điểm khả thi.
 
-**Cách học:** mục 1–3 cho cận dưới; mục 4 cho Slater; mục 5–6 cho KKT một và nhiều chiều. Không cần nhớ tên KKT trước khi đọc: ta sẽ suy ra vai trò của từng điều kiện.
+Nếu học lần đầu, hãy đọc mục 1–3 để thấy cận dưới được tạo ra thế nào. Mục 4 giải thích khi nào cận ấy chạm giá trị tối ưu; mục 5–6 mới gom các kết quả thành điều kiện KKT. Bạn chưa cần nhớ tên bốn nhóm điều kiện trước khi hiểu vai trò của từng nhóm.
 
 ## 1. Dấu của nhân tử đến từ đâu?
 
@@ -157,7 +157,7 @@ Với $x$ khả thi gốc và $(\lambda,\nu)$ khả thi đối ngẫu,
 
 $$0\le f_0(x)-p^*\le f_0(x)-g(\lambda,\nu).$$
 
-Vế phải là **khoảng cách đối ngẫu** của cặp đang có; nó cho cận trên của độ thiếu tối ưu mà không cần biết $p^*$. Tại $x=0$, $\lambda=2$ trong ví dụ một chiều, $f_0=4$, $g=1$, gap $=3$. Điểm ấy đúng là kém tối ưu 3.
+Vế phải là **khoảng cách đối ngẫu** của cặp đang có; nó cho cận trên của độ thiếu tối ưu mà không cần biết $p^*$. Tại $x=0$, $\lambda=2$ trong ví dụ một chiều, $f_0=4$, $g=1$, nên khoảng cách bằng 3. Điểm ấy đúng là kém tối ưu 3.
 
 Nếu thay ràng buộc bằng $x\le b$, gần $b=1$ và còn $b<2$, nghiệm là $x=b$, giá trị $(b-2)^2$. Đạo hàm theo $b$ tại 1 là $-2=-\lambda^*$. Cho thêm một lượng nhỏ giới hạn làm giá trị tối ưu giảm với tốc độ xấp xỉ 2. Diễn giải độ nhạy cần điều kiện tính khả vi của hàm giá trị; không coi nhân tử là dự báo chính xác cho mọi thay đổi lớn.
 
@@ -186,7 +186,7 @@ Ràng buộc $w-1/2\le0$, dừng $14(1/2)-11+\lambda=0$ cho $\lambda=4$. Nhân t
 
 ## Tóm tắt
 
-Đối ngẫu yếu đến từ dấu của nhân tử và phép infimum. Slater là một điều kiện đủ để cận tốt nhất chạm giá trị gốc. KKT là các điều kiện có vai trò cụ thể; trong bài lồi, chúng nối cực tiểu Lagrangian với nghiệm khả thi. Gap giúp đánh giá một cặp nghiệm trước khi nó hoàn hảo.
+Đối ngẫu yếu đến từ dấu của nhân tử và phép infimum. Slater là một điều kiện đủ để cận tốt nhất chạm giá trị gốc. KKT gồm những điều kiện có vai trò riêng; trong bài lồi, chúng nối cực tiểu Lagrangian với nghiệm khả thi. Khoảng cách đối ngẫu cho biết cặp nghiệm hiện tại còn cách tối ưu nhiều nhất bao nhiêu.
 
 ## Nguồn và đọc thêm
 

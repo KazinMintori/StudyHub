@@ -69,6 +69,8 @@ Trước khi sửa, ghi những phần phải giữ: điều kiện, miền, ph�
 
 Với một cụm bài, kiểm tra mật độ khuôn như “ta có thể thấy rằng”, “điều quan trọng ở đây”, “trực giác đằng sau”, “một cách tự nhiên”. Sửa khi chúng lặp hoặc che lý do, không thay chúng bằng một bộ từ đồng nghĩa khác. Không đặt điểm phần trăm “giống giáo sư”.
 
+Khi người học gặp nhiều thuật ngữ mới trong một đoạn, đừng kéo hết định nghĩa dài vào giữa lập luận và cũng đừng để từ lạ tự trôi qua. Giữ trong câu phần nghĩa cần cho bước hiện tại; thêm mục Wiki với định nghĩa ngắn và ví dụ để ghi chú nhanh mở được tại chỗ. Tránh câu meta chỉ có ích cho người soạn như “tuyến nội dung”, “theo yêu cầu của bạn”, “implementation này”; gọi thẳng phần học, nguồn hoặc phần cài đặt mà sinh viên đang đọc.
+
 ## Những khuôn đã thấy trong bài trên site
 
 Rà riêng các khuôn sau khi biên tập Notes; chi tiết và cách sửa ở [lecture-blueprint.md](lecture-blueprint.md) mục 4:

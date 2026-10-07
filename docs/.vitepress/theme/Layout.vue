@@ -39,7 +39,7 @@ watch(()=>route.path,()=>syncLecturePart())
     <template #layout-bottom>
       <DiagramLightbox />
       <TermPreview />
-      <footer class="site-footer"><p>Tài liệu ôn tập do sinh viên UET biên soạn. Thấy sai sót? <a href="https://github.com/KazinMintori/StudyHub/issues">Báo trên GitHub.</a></p><nav aria-label="Liên kết chân trang"><a href="https://github.com/KazinMintori/StudyHub">Mã nguồn</a><button v-if="frontmatter.layout === 'home'" class="coffee-footer-btn" @click="openCoffeeModal"><img :src="withBase('/coffee-logo.svg')" alt="" class="coffee-footer-icon" width="18" height="18" /><span>Buy me a coffee</span></button></nav></footer>
+      <footer v-if="frontmatter.layout === 'home'" class="site-footer"><button class="coffee-footer-btn" @click="openCoffeeModal"><img :src="withBase('/coffee-logo.svg')" alt="" class="coffee-footer-icon" width="18" height="18" /><span>Buy me a coffee</span></button></footer>
       <BuyMeCoffee v-if="frontmatter.layout === 'home'" />
     </template>
   </Layout>

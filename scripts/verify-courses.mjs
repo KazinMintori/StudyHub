@@ -17,9 +17,9 @@ for(const id of ids){assert(wikiDetails[id]);assert(relatedConcepts(id).length);
 for(const c of courseCatalog)for(const l of c.lessons){const source=await readFile(`docs/${c.id}/bai-giang/${l.slug}.md`,'utf8');assert(source.includes(`lecture: ${l.slug}`));assert(source.includes('section: lecture'));if(l.status==='ready')assert(lectureSlides(c,l).length)}
 const md=new MarkdownIt().use(termLinks,'/Study_UET/')
 const rendered=md.render('Gradient và đạo hàm riêng. `gradient` [vector](https://example.com)',{relativePath:'toan-cho-ai/bai-giang/example.md'})
-assert(rendered.includes('/wiki/gradient.html'));assert(rendered.includes('<code>gradient</code>'))
+assert(rendered.includes('data-wiki="/wiki/gradient.html"'));assert(rendered.includes('aria-haspopup="dialog"'));assert(rendered.includes('<code>gradient</code>'))
 const wiki=md.render('Gradient dùng vector và đạo hàm riêng.',{relativePath:'wiki/gradient.md'})
-assert(!wiki.includes('href="/wiki/gradient.html"'));assert(wiki.includes('/wiki/vector.html'))
+assert(!wiki.includes('data-wiki="/wiki/gradient.html"'));assert(wiki.includes('data-wiki="/wiki/vector.html"'))
 assert((await readFile('docs/wiki/gradient.md','utf8')).includes(String.fromCharCode(92)+'nabla'))
 assert.deepEqual(searchTrace({A:['B','C'],B:['D'],C:[],D:[]},'dfs').at(-1).visited,['A','B','D','C'])
 assert.equal(gradientTrace(2,.5,1)[1],0);assert(Math.abs(bayesCounts(.2,.8,.3).posterior-.4)<1e-10);assert.deepEqual(wordCountTrace('UET học uet').counts,[['uet',2],['học',1]])
@@ -52,9 +52,9 @@ try{
   await go('/wiki/');assert.equal(await page.$$eval('.wiki-entry-list>a',els=>els.length),ids.length)
   await page.type('.wiki-filters input','dao ham rieng');assert(await page.$('.wiki-entry-list a[href$="/dao-ham-rieng.html"]'))
   await go('/wiki/gradient.html');assert.equal(await page.$eval('.vp-doc h1',el=>el.textContent.replaceAll(String.fromCharCode(8203),'').trim()),'Gradient');assert(await page.$('mjx-container'))
-  assert.equal(await page.$('.vp-doc a.study-term[href$="/gradient.html"]'),null)
-  const link=await page.$('.vp-doc p a.study-term[href$="/dao-ham-rieng.html"]');assert(link);await link.focus();await page.waitForSelector('#study-term-preview');await page.keyboard.press('Escape');assert.equal(await page.$('#study-term-preview'),null)
-  await link.click();await page.waitForFunction(()=>location.pathname.endsWith('/wiki/dao-ham-rieng.html'));assert(await page.$('.vp-doc p a.study-term'))
+  assert.equal(await page.$('.vp-doc button.study-term[data-term="gradient"]'),null)
+  const link=await page.$('.vp-doc p button.study-term[data-term="dao-ham-rieng"]');assert(link);await link.focus();await page.waitForSelector('#study-term-preview[role="tooltip"]');await page.keyboard.press('Escape');assert.equal(await page.$('#study-term-preview'),null)
+  await link.click();await page.waitForSelector('#study-term-preview[role="dialog"]');assert.equal(await page.$eval('.vp-doc p button.study-term[data-term="dao-ham-rieng"]',el=>el.getAttribute('aria-expanded')),'true');assert(await page.$('#study-term-preview .term-preview-example'));await page.click('#study-term-preview .term-preview-wiki');await page.waitForFunction(()=>location.pathname.endsWith('/wiki/dao-ham-rieng.html'));assert(await page.$('.vp-doc p button.study-term'))
   assert(await page.$('.wiki-backlinks'));await page.goBack({waitUntil:'networkidle0'});assert.match(page.url(),/wiki\/gradient/);assert(await page.$('.wiki-backlinks a[href*="bai-giang"]'))
  })
  await check('Prerequisites are specific to each lecture and keep understood progress',async()=>{
@@ -70,7 +70,7 @@ try{
  })
  await check('Notes retain math, diagrams and executable illustrations',async()=>{
   await go('/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.html#notes');assert(await page.$('mjx-container'));await page.waitForSelector('.mermaid svg');await button('Bước tiếp →','.code-illustration');assert.match(await page.$eval('.trace-state',el=>el.textContent),/Vừa thăm A/)
-  const glossary=await page.$('.vp-doc p a.study-term');assert(glossary);await glossary.click();await page.waitForFunction(()=>location.pathname.startsWith('/wiki/'))
+  const glossary=await page.$('.vp-doc p button.study-term');assert(glossary);await glossary.click();await page.waitForSelector('#study-term-preview[role="dialog"]');assert(await page.$('#study-term-preview .term-preview-wiki'))
  })
  await check('Search finds standalone Wiki articles and lecture parts',async()=>{
   await go('/');await page.click('.DocSearch-Button');await page.waitForSelector('.VPLocalSearchBox input');await page.type('.VPLocalSearchBox input','Gradient')

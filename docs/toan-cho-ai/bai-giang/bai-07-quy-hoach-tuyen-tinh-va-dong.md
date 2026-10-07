@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Từ đa diện và nghiệm cơ sở đến Bellman hữu hạn tất định; so hai cách giải một bài đường đi."
 ---
 
-Một bài phân bổ nguồn lực có thể được giải bằng hình học đa diện. Một chuỗi quyết định có thể được giải bằng cách tính phần còn lại từ cuối về đầu. Lecture này đặt LP và quy hoạch động cạnh nhau, rồi dùng một bài đường đi để chỉ ra chúng có thể gặp nhau ở đâu.
+Một bài phân bổ nguồn lực có thể được giải bằng hình học đa diện. Một chuỗi quyết định có thể được giải bằng cách tính phần còn lại từ cuối về đầu. Bài này đặt LP và quy hoạch động cạnh nhau, rồi dùng một bài đường đi để chỉ ra mối liên hệ giữa hai cách giải.
 
 Sau bài, bạn có thể đưa LP về dạng chuẩn, kiểm một nghiệm cơ sở khả thi, tính bảng Bellman và thu hồi đường đi. Mục 1–3 là cụm LP; mục 4–6 là cụm quy hoạch động. Các dữ liệu số dưới đây đều tự đặt.
 
@@ -82,7 +82,7 @@ Sai. Điều kiện khả thi chỉ đòi không âm. Chẳng hạn hệ $x+s=0$
 
 Xét chuỗi hữu hạn $t=0,\ldots,T-1$. Ở bước $t$, trạng thái $s$, chọn hành động $a\in\mathcal A_t(s)$, chịu chi phí $c_t(s,a)$ và chuyển tất định tới $T_t(s,a)$. Cuối chuỗi chịu chi phí $h(s_T)$.
 
-**Hàm giá trị** $V_t(s)$ là chi phí nhỏ nhất từ trạng thái đó đến cuối. Công thức **Bellman**:
+**Hàm giá trị Bellman** $V_t(s)$ là chi phí nhỏ nhất từ trạng thái đó đến cuối. Công thức **Bellman**:
 
 $$V_T(s)=h(s),\qquad
 V_t(s)=\min_{a\in\mathcal A_t(s)}\left[c_t(s,a)+V_{t+1}(T_t(s,a))\right].$$

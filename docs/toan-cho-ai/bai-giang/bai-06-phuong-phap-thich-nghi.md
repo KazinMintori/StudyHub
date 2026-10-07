@@ -12,7 +12,7 @@ Gradient của một tọa độ có thể liên tục lớn hơn tọa độ kh
 
 Sau bài, bạn có thể tự tính các trạng thái của Adam ở hai bước đầu, phân biệt tổng tích lũy với trung bình mũ, và giải thích điều một mô phỏng nhỏ có thể hoặc không thể chứng minh.
 
-**Cách học:** mục 1–3 là tuyến tính toán bậc nhất; mục 4–5 là tuyến độ cong; mục 6 là cách đánh giá. Mỗi phép bình phương, căn và chia giữa vector ở mục 1–3 đều thực hiện theo từng tọa độ, không phải phép nhân ma trận.
+Nếu học lần đầu, hãy đọc mục 1–3 và tự tính hai bước Adam trước. Mục 4–5 chuyển sang các phương pháp dùng độ cong; mục 6 giải thích cách so sánh chúng công bằng. Trong mục 1–3, mọi phép bình phương, căn và chia giữa các vector đều được thực hiện theo từng tọa độ, không phải phép nhân ma trận.
 
 ## 1. AdaGrad: giữ tổng bình phương từ bước đầu
 
@@ -32,7 +32,7 @@ $s_1=4$, độ dời thứ nhất $-0.1$.
 
 $s_2=8$, độ dời thứ hai $-0.1/\sqrt2\approx-0.07071$.
 
-Chuỗi gradient này được cung cấp để kiểm công thức, không được mô tả là gradient của một thí nghiệm train thật.
+Chuỗi gradient này chỉ dùng để kiểm công thức; nó không phải kết quả của một quá trình huấn luyện thực.
 :::
 
 ## 2. RMSProp: giảm trọng số của quá khứ xa
@@ -130,7 +130,7 @@ Với $y_k^Ts_k>0$, đặt $\rho_k=1/(y_k^Ts_k)$. Công thức BFGS nghịch đ�
 
 $$M_{k+1}=(I-\rho_ks_ky_k^T)M_k(I-\rho_ky_ks_k^T)+\rho_ks_ks_k^T.$$
 
-Nếu $M_k\succ0$ và điều kiện độ cong dương đúng, cập nhật giữ tính dương xác định. Khi $y^Ts$ bằng 0 hoặc âm, không chia tiếp như thể đã đủ giả thiết; implementation phải có cách bỏ hoặc sửa cập nhật. Hướng là $d=-M_kg_k$, rồi tìm kiếm độ dài bước.
+Nếu $M_k\succ0$ và điều kiện độ cong dương đúng, cập nhật giữ tính dương xác định. Khi $y^Ts$ bằng 0 hoặc âm, không chia tiếp như thể đã đủ giả thiết; phần cài đặt phải bỏ hoặc sửa cập nhật. Hướng là $d=-M_kg_k$, rồi mới tìm độ dài bước.
 
 Ví dụ tự đặt $M_0=I$, $s=(1,0)$, $y=(2,0)$ cho $\rho=1/2$, $M_1=\operatorname{diag}(1/2,1)$. Ta kiểm $M_1y=s$. Toàn ma trận dày cần bộ nhớ bậc $n^2$; L-BFGS giữ một số cặp $(s,y)$ để tính hướng mà không lưu ma trận đầy đủ. Việc dùng gradient lô nhỏ còn phải xét nhiễu khi đo $y$.
 
@@ -138,7 +138,7 @@ Ví dụ tự đặt $M_0=I$, $s=(1,0)$, $y=(2,0)$ cho $\rho=1/2$, $M_1=\operato
 
 Một phép so sánh hữu ích giữ cùng mô hình, dữ liệu, khởi tạo, seed và ngân sách; mỗi phương pháp được chọn siêu tham số theo cùng quy tắc validation. Báo riêng số bước, số lượt qua dữ liệu và thời gian, vì một bước Newton khác chi phí một bước SGD.
 
-Lưu tối thiểu loss train, loss validation, tốc độ học, cỡ lô và tiêu chí dừng. Khi tiếp tục một optimizer có trạng thái, lưu cả moment/vận tốc và bộ đếm. Chỉ lưu tham số mô hình rồi gọi là “tiếp tục đúng bước trước” sẽ bỏ mất trạng thái thuật toán.
+Tối thiểu cần lưu loss trên tập train, loss trên tập validation, tốc độ học, cỡ lô và tiêu chí dừng. Khi tiếp tục một bộ tối ưu có trạng thái, hãy lưu cả các trung bình mũ hoặc vận tốc cùng bộ đếm. Chỉ lưu tham số mô hình thì bước chạy sau không còn tiếp nối đúng trạng thái trước đó.
 
 Mô phỏng ở mục 3 giúp đọc công thức và phát hiện sai dấu hoặc sai bộ đếm. Nó chưa cho biết phương pháp nào tốt nhất trên một mạng sâu hoặc một phân phối dữ liệu thật. Muốn trả lời câu hỏi ấy cần thí nghiệm đúng điều kiện vừa nêu.
 
@@ -177,6 +177,6 @@ AdaGrad tích lũy lịch sử, RMSProp dùng trung bình mũ, Adam kết hợp 
 - Goodfellow, Bengio & Courville, [*Deep Learning*, §8.5–8.6](https://www.deeplearningbook.org/contents/optimization.html): RMSProp, Adam và phương pháp độ cong. Công thức BFGS được trình bày đầy đủ để người học kiểm điều kiện secant; ví dụ ma trận tự đặt.
 - Công thức BFGS và điều kiện giữ PD đối chiếu với Madeleine Udell, [Quasi-Newton Methods, ORIE 6326](https://web.stanford.edu/~udell/orie6326/lectures/quasinewton.pdf), phần BFGS inverse update và positive definiteness.
 - Kingma & Ba, [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980), Algorithm 1: các moment và hiệu chỉnh bias. Bản minh họa dùng epsilon ngoài căn theo công thức này.
-- Các chuỗi gradient, hệ hai chiều và bài tập là dữ liệu tự đặt, có kiểm toán bằng chương trình.
+- Các chuỗi gradient, hệ hai chiều và bài tập là dữ liệu tự đặt, đã được kiểm tra lại bằng chương trình.
 
 [Bài 05](./bai-05-toi-uu-huan-luyen.md) · [Bài 07 — LP và quy hoạch động](./bai-07-quy-hoach-tuyen-tinh-va-dong.md).

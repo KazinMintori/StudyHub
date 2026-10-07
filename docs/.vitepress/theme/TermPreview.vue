@@ -1,31 +1,203 @@
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { useRoute, withBase } from 'vitepress'
 import { concepts } from '../concepts.mjs'
-const route = useRoute(), term = ref(null), position = ref({}), tooltip = ref(null)
-let anchor, timer
-function close() { clearTimeout(timer); anchor?.removeAttribute('aria-describedby'); term.value = null; anchor = null }
-function show(link) {
+
+const route = useRoute()
+const term = ref(null)
+const wikiHref = ref('')
+const position = ref({})
+const popover = ref(null)
+const closeButton = ref(null)
+const pinned = ref(false)
+
+let anchor
+let timer
+
+function clearAnchor(link = anchor) {
+  link?.removeAttribute('aria-describedby')
+  link?.setAttribute('aria-expanded', 'false')
+}
+
+function close({ restoreFocus = false } = {}) {
   clearTimeout(timer)
-  if (!link || !concepts[link.dataset.term]) return
-  if (anchor !== link) anchor?.removeAttribute('aria-describedby')
-  anchor = link; term.value = concepts[link.dataset.term]; link.setAttribute('aria-describedby','study-term-preview')
-  const rect = link.getBoundingClientRect(), width = Math.min(360, window.innerWidth - 32)
-  position.value = { width: `${width}px`, left: `${Math.max(16,Math.min(rect.left, window.innerWidth-width-16))}px`, ...(rect.bottom + 235 < window.innerHeight ? { top: `${rect.bottom+9}px` } : { bottom: `${Math.max(16, window.innerHeight-rect.top+9)}px` }) }
+  const previousAnchor = anchor
+  clearAnchor(previousAnchor)
+  term.value = null
+  wikiHref.value = ''
+  pinned.value = false
+  anchor = null
+  if (restoreFocus && previousAnchor?.isConnected) previousAnchor.focus()
 }
-function over(event) { const link = event.target.closest?.('a.study-term'); if (link) show(link) }
-function out(event) { if (anchor?.contains(event.target) && !tooltip.value?.contains(event.relatedTarget)) timer = setTimeout(close, 120) }
-function key(event) { if (event.key === 'Escape') close() }
-function keepOpen() { clearTimeout(timer) }
+
+function updatePosition() {
+  if (!anchor || !term.value) return
+
+  const gutter = window.innerWidth < 640 ? 12 : 16
+  const width = Math.min(360, window.innerWidth - gutter * 2)
+
+  if (window.innerWidth < 640) {
+    position.value = {
+      left: `${gutter}px`,
+      right: `${gutter}px`,
+      bottom: `calc(${gutter}px + env(safe-area-inset-bottom, 0px))`
+    }
+    return
+  }
+
+  const rect = anchor.getBoundingClientRect()
+  const height = popover.value?.getBoundingClientRect().height || 280
+  const top = Math.max(gutter, Math.min(rect.top, window.innerHeight - height - gutter))
+
+  if (window.innerWidth - rect.right >= width + gutter * 2) {
+    position.value = { width: `${width}px`, left: `${rect.right + gutter}px`, top: `${top}px` }
+  } else if (rect.left >= width + gutter * 2) {
+    position.value = { width: `${width}px`, left: `${rect.left - width - gutter}px`, top: `${top}px` }
+  } else {
+    const left = Math.max(gutter, Math.min(rect.left, window.innerWidth - width - gutter))
+    if (rect.bottom + height + gutter <= window.innerHeight) {
+      position.value = { width: `${width}px`, left: `${left}px`, top: `${rect.bottom + gutter}px` }
+    } else {
+      position.value = { width: `${width}px`, left: `${left}px`, bottom: `${window.innerHeight - rect.top + gutter}px` }
+    }
+  }
+}
+
+async function show(link, { persist = false } = {}) {
+  clearTimeout(timer)
+  const nextTerm = concepts[link?.dataset.term]
+  if (!link || !nextTerm) return
+
+  if (anchor !== link) clearAnchor()
+  anchor = link
+  term.value = nextTerm
+  wikiHref.value = withBase(link.dataset.wiki)
+  pinned.value = persist
+  link.setAttribute('aria-expanded', persist ? 'true' : 'false')
+  if (persist) link.removeAttribute('aria-describedby')
+  else link.setAttribute('aria-describedby', 'study-term-preview')
+
+  await nextTick()
+  updatePosition()
+  if (persist) closeButton.value?.focus()
+}
+
+function over(event) {
+  if (pinned.value || event.pointerType === 'touch') return
+  const link = event.target.closest?.('button.study-term')
+  if (link) show(link)
+}
+
+function out(event) {
+  if (pinned.value) return
+  if (anchor?.contains(event.target) && !popover.value?.contains(event.relatedTarget)) {
+    timer = setTimeout(close, 140)
+  }
+}
+
+function focusIn(event) {
+  if (pinned.value) return
+  const link = event.target.closest?.('button.study-term')
+  if (link) show(link)
+}
+
+function focusOut(event) {
+  if (pinned.value) return
+  if (anchor?.contains(event.target) && !popover.value?.contains(event.relatedTarget)) {
+    timer = setTimeout(close, 140)
+  }
+}
+
+function click(event) {
+  const link = event.target.closest?.('button.study-term')
+  if (!link) {
+    if (pinned.value && !popover.value?.contains(event.target)) close()
+    return
+  }
+  if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
+  event.preventDefault()
+  event.stopPropagation()
+  show(link, { persist: true })
+}
+
+function key(event) {
+  if (event.key === 'Escape' && term.value) close({ restoreFocus: pinned.value })
+}
+
+function keepOpen() {
+  clearTimeout(timer)
+}
+
+function leavePopover(event) {
+  if (!pinned.value && !anchor?.contains(event.relatedTarget)) timer = setTimeout(close, 140)
+}
+
 function scroll(event) {
-  if (tooltip.value?.contains(event.target)) return
-  if (anchor && (document.activeElement === anchor || anchor.matches(':hover'))) {
-    const rect = anchor.getBoundingClientRect()
-    if (rect.bottom > 0 && rect.top < window.innerHeight) show(anchor)
-    else close()
-  } else close()
+  if (popover.value?.contains(event.target)) return
+  if (!anchor) return
+  const rect = anchor.getBoundingClientRect()
+  if (rect.bottom <= 0 || rect.top >= window.innerHeight) close()
+  else updatePosition()
 }
-onMounted(() => { document.addEventListener('pointerover',over); document.addEventListener('pointerout',out); document.addEventListener('focusin',over); document.addEventListener('focusout',out); document.addEventListener('keydown',key); window.addEventListener('scroll',scroll,true) })
-onUnmounted(() => { close(); document.removeEventListener('pointerover',over); document.removeEventListener('pointerout',out); document.removeEventListener('focusin',over); document.removeEventListener('focusout',out); document.removeEventListener('keydown',key); window.removeEventListener('scroll',scroll,true) }); watch(() => route.path,close)
+
+onMounted(() => {
+  document.addEventListener('pointerover', over)
+  document.addEventListener('pointerout', out)
+  document.addEventListener('focusin', focusIn)
+  document.addEventListener('focusout', focusOut)
+  window.addEventListener('click', click, true)
+  document.addEventListener('keydown', key)
+  window.addEventListener('scroll', scroll, true)
+  window.addEventListener('resize', updatePosition)
+})
+
+onUnmounted(() => {
+  close()
+  document.removeEventListener('pointerover', over)
+  document.removeEventListener('pointerout', out)
+  document.removeEventListener('focusin', focusIn)
+  document.removeEventListener('focusout', focusOut)
+  window.removeEventListener('click', click, true)
+  document.removeEventListener('keydown', key)
+  window.removeEventListener('scroll', scroll, true)
+  window.removeEventListener('resize', updatePosition)
+})
+
+watch(() => route.path, () => close())
 </script>
-<template><Teleport to="body"><aside v-if="term" ref="tooltip" id="study-term-preview" role="tooltip" class="term-preview" :style="position" @pointerenter="keepOpen" @pointerleave="close"><strong>{{ term.name }}</strong><p>{{ term.definition }}</p><span>Nhấn thuật ngữ để mở bài viết Wiki và các khái niệm liên quan.</span></aside></Teleport></template>
+
+<template>
+  <Teleport to="body">
+    <aside
+      v-if="term"
+      id="study-term-preview"
+      ref="popover"
+      class="term-preview"
+      :class="{ 'is-pinned': pinned }"
+      :style="position"
+      :role="pinned ? 'dialog' : 'tooltip'"
+      :aria-labelledby="pinned ? 'study-term-preview-title' : undefined"
+      @pointerenter="keepOpen"
+      @pointerleave="leavePopover"
+    >
+      <div class="term-preview-heading">
+        <div>
+          <span class="term-preview-kicker">Ghi chú nhanh</span>
+          <strong id="study-term-preview-title">{{ term.name }}</strong>
+        </div>
+        <button
+          v-if="pinned"
+          ref="closeButton"
+          type="button"
+          class="term-preview-close"
+          aria-label="Đóng ghi chú nhanh"
+          @click="close({ restoreFocus: true })"
+        >Đóng</button>
+      </div>
+      <p>{{ term.definition }}</p>
+      <p class="term-preview-example"><span>Ví dụ:</span> {{ term.example }}</p>
+      <a v-if="pinned" class="term-preview-wiki" :href="wikiHref">Đọc bài Wiki đầy đủ <span aria-hidden="true">→</span></a>
+      <span v-else class="term-preview-hint">Nhấp để giữ ghi chú và mở đường dẫn tới Wiki.</span>
+    </aside>
+  </Teleport>
+</template>

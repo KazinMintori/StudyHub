@@ -8,11 +8,11 @@ lessonStatus: ready
 description: "Nhận diện các dạng tối ưu lồi, cải dạng tương đương và phân biệt xấp xỉ với nới lỏng."
 ---
 
-Ta đã biết thế nào là tập lồi và hàm lồi. Bây giờ câu hỏi là: một mô hình viết trên giấy có cung cấp được chứng nhận tính lồi không? Bài này tập đọc cấu trúc trước khi chọn thuật toán. Cùng một bài toán có thể hiện ra khó hoặc dễ tùy cách biểu diễn.
+Ta đã biết thế nào là tập lồi và hàm lồi. Bây giờ cần trả lời một câu thực tế hơn: nhìn vào một mô hình, làm sao biết đó là bài toán lồi? Bài này tập đọc cấu trúc trước khi chọn thuật toán. Cùng một bài toán có thể khó hoặc dễ nhận ra là lồi tùy cách biểu diễn.
 
 Sau bài, bạn có thể kiểm dạng chuẩn, nhận diện LP/QP/SOCP/SDP, thêm biến phụ có giải thích, và phân biệt một nghiệm của bài nới lỏng với nghiệm của bài gốc.
 
-**Cách học:** mục 1–2 là tuyến chính; mục 3 cho phép cải dạng; mục 4–5 để đọc các mô hình mở rộng. Nếu tên nón còn lạ, đọc định nghĩa ngắn ở mục 4 rồi quay lại ví dụ. Nội dung tập lồi của phiên bản cũ đã được bố trí ở [Bài 01](./bai-01-nhap-mon-toi-uu.md) và [đọc thêm hình học](../doc-them/hinh-hoc-tap-loi.md); địa chỉ bài này được giữ để các liên kết cũ còn hoạt động.
+Nếu học lần đầu, hãy đọc mục 1–2 để nhận dạng dạng chuẩn, rồi mục 3 để hiểu cách thêm biến phụ. Mục 4–5 mở rộng sang bài toán nón, xấp xỉ và nới lỏng; bạn có thể đọc sau. Nếu tên các nón còn lạ, chỉ cần đọc định nghĩa ngắn trước khi theo ví dụ. Phần tập lồi được đặt ở [Bài 01](./bai-01-nhap-mon-toi-uu.md), còn phần hình học sâu hơn nằm trong [bài đọc thêm](../doc-them/hinh-hoc-tap-loi.md).
 
 ## 1. Dạng chuẩn đòi điều gì?
 
@@ -74,7 +74,7 @@ Xét bài $\min_x\max_i f_i(x)$. Thêm biến $t$:
 
 $$\min_{x,t}t\quad\text{sao cho }f_i(x)\le t\ \forall i.$$
 
-Với một $x$, mọi $t$ khả thi đều không nhỏ hơn $\max_i f_i(x)$, và chọn $t$ bằng maximum luôn khả thi. Vì vậy tối ưu theo $t$ trả lại đúng mục tiêu cũ. Đây là **cải dạng tương đương**, không chỉ là một hình trông giống nhau. Nếu các $f_i$ lồi, các hàm $f_i(x)-t$ cũng lồi.
+Với một $x$, mọi $t$ khả thi đều không nhỏ hơn $\max_i f_i(x)$, và chọn $t$ đúng bằng giá trị lớn nhất ấy luôn khả thi. Vì vậy tối ưu theo $t$ trả lại đúng mục tiêu cũ. Đây là **cải dạng tương đương**, không chỉ là hai công thức trông gần giống nhau. Nếu các $f_i$ lồi, các hàm $f_i(x)-t$ cũng lồi.
 
 ::: example Khớp dữ liệu theo sai số tệ nhất
 $\min_w\|Aw-b\|_\infty$ tương đương
@@ -86,7 +86,7 @@ $\mathbf1$ là vector toàn 1. Hai bất đẳng thức cho mỗi phần dư $r_
 
 Với chuẩn 1, thêm $u_i$ sao cho $-u_i\le r_i\le u_i$, rồi cực tiểu $\sum_i u_i$. Tại tối ưu, có thể lấy $u_i=|r_i|$. Không cần thêm $u_i\ge0$: hai bất đẳng thức đã suy ra điều đó.
 
-**Điểm dừng:** bạn cần chỉ ra hai chiều: từ một nghiệm khả thi cũ, tạo biến phụ hợp lệ; từ một nghiệm khả thi mới, thu hồi đối tượng cũ và so giá trị. Bỏ một chiều có thể biến cải dạng thành nới lỏng.
+**Trước khi đọc tiếp:** hãy chỉ ra đủ hai chiều: từ một nghiệm khả thi cũ, tạo biến phụ hợp lệ; từ một nghiệm khả thi mới, thu hồi đối tượng cũ và so giá trị. Bỏ một chiều có thể biến cải dạng thành nới lỏng.
 
 ## 4. Nón giúp viết những ràng buộc khác
 

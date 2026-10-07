@@ -2,7 +2,7 @@
 name: studyhub-lecture
 description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm/viết lại bài trong docs/<môn>/bai-giang, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
 metadata:
-  version: "7.0.0"
+  version: "7.1.0"
   supersedes: "textbook-to-course-slides 6.1.0"
 ---
 
@@ -91,7 +91,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 13. Ghi file Notes với frontmatter đúng (repo-format.md mục 2). Hình vào `img/<lec>/` cạnh bài.
 14. Catalog: `lessons`, `parts`, `slides` (repo-format.md mục 4). Slides chiếu từ Notes đã khóa.
-15. Kiến thức nền: chọn `prerequisites`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu tự kiểm.
+15. Kiến thức nền: chọn `prerequisites`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu tự kiểm. Với bài dày thuật ngữ, thêm các khái niệm khó vào Wiki ngay cả khi chúng được dạy trong Notes để liên kết tự động có thể mở ghi chú nhanh; chỉ đưa chúng vào `prerequisites` nếu bài dùng mà không dạy lại.
 16. Đặt `lessonStatus: ready` chỉ khi mọi phần đầy đủ.
 
 ### E. Kiểm tra (không bỏ qua)

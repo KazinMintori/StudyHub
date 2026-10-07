@@ -43,6 +43,8 @@ Một cầu nối tiên quyết nên dạy đúng thao tác đang cần. Ví d�
 
 Nếu thiếu tiên quyết lớn đến mức thay đổi môn học, chỉ ra khoảng thiếu và đưa tuyến bổ trợ rõ ràng. Không lén thêm một giáo trình thứ hai làm bài phình ra.
 
+Với một bài có mật độ thuật ngữ cao, dùng ba tầng thay vì chen mọi giải thích vào mạch chính: Notes giữ nghĩa cần để theo lập luận; ghi chú nhanh nhắc định nghĩa và một ví dụ ngay tại từ đang đọc; Wiki giải thích kỹ thuật và liên hệ sâu hơn. Tầng phụ không được giấu lý do thiết yếu của bài. Nếu bỏ ghi chú nhanh và Wiki mà mạch Notes không còn hiểu được, Notes vẫn còn thiếu.
+
 ## 3. Chẩn đoán khoảng trống trong lời giải thích
 
 Với một ý trọng tâm, kiểm tra các câu hỏi sau; chỉ bổ sung câu trả lời còn cần thiết:

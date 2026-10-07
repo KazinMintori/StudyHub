@@ -8,11 +8,11 @@ lessonStatus: ready
 description: "Phân biệt mục tiêu train và đánh giá, truy vết SGD, momentum, Nesterov và khởi tạo Glorot."
 ---
 
-Ở Bài 04, mỗi bước biết gradient chính xác của toàn bộ mục tiêu. Khi mục tiêu là trung bình loss trên nhiều quan sát, tính gradient ấy có thể tốn nhiều công. Ta lấy một lô nhỏ dữ liệu để ước lượng, chấp nhận nhiễu trong từng bước và theo dõi cả chất lượng đánh giá.
+Ở Bài 04, ta giả sử mỗi bước đều tính được gradient chính xác của toàn bộ mục tiêu. Khi mục tiêu là trung bình loss trên nhiều quan sát, phép tính ấy có thể tốn nhiều công. Ta sẽ dùng một lô dữ liệu nhỏ để ước lượng gradient, chấp nhận dao động ở từng bước và theo dõi riêng chất lượng trên dữ liệu đánh giá.
 
 Sau bài, bạn có thể viết gradient lô nhỏ, giải thích tính không chệch dưới cách lấy mẫu đã nêu, tính hai bước momentum/Nesterov và xác định thang khởi tạo Glorot.
 
-**Cách học:** mục 1–3 cho mục tiêu và gradient ngẫu nhiên; mục 4–5 cho trạng thái cập nhật; mục 6 cho khởi tạo. Kiến thức xác suất cần dùng được nhắc tại chỗ. Phần học sâu dùng nguồn chính thức bổ sung theo yêu cầu của bạn; không lấy nội dung từ trang cấu trúc lecture.
+Bạn có thể học bài theo ba chặng: mục 1–3 làm rõ mục tiêu và gradient ngẫu nhiên; mục 4–5 theo dõi trạng thái cập nhật; mục 6 giải thích khởi tạo. Những kiến thức xác suất cần dùng được nhắc lại tại chỗ.
 
 ## 1. Huấn luyện đang cực tiểu đại lượng nào?
 
@@ -65,7 +65,7 @@ $$\theta_{t+1}=\theta_t-\eta_tg_{B_t}(\theta_t).$$
 
 Đầu vào của thuật toán là mô hình/loss, dữ liệu, điểm đầu, quy tắc lấy lô, lịch tốc độ học và tiêu chí dừng. Trạng thái tối thiểu là $\theta_t$ và vị trí trong quy trình dữ liệu. Một **epoch** là một lượt đi qua tập train trong quy trình chia lô không hoàn lại; số bước trong một epoch phụ thuộc cỡ lô.
 
-Không chọn điểm dừng chỉ vì một lô có gradient nhỏ. Có thể theo dõi trung bình loss train, validation theo lịch cố định và các phần dư phù hợp với bài toán. Trong mô hình không lồi, gradient nhỏ không tự chứng nhận tối ưu toàn cục.
+Không chọn điểm dừng chỉ vì một lô có gradient nhỏ. Có thể theo dõi trung bình loss trên tập train, loss trên tập validation theo một lịch cố định và các phần dư phù hợp với bài toán. Trong mô hình không lồi, gradient nhỏ không tự chứng nhận tối ưu toàn cục.
 
 ```python
 def sgd_scalar(theta, targets, rate, draws):
@@ -110,7 +110,7 @@ v_{t+1}=\mu v_t-\eta g_t,\quad
 
 Với lô nhỏ, thay $\nabla J$ bằng gradient lô tại điểm nhìn trước. Sự khác biệt ở **địa chỉ tính gradient**, không ở việc đổi tên vận tốc.
 
-Trong ví dụ mục 4, bước 1 vẫn đến $0.1$. Trước bước 2, điểm nhìn trước là $0.1+0.9(0.1)=0.19$, gradient $-0.81$. Vì vậy $v_2=0.171$, $\theta_2=0.271$. Đây là cách kiểm một implementation có thực sự dùng gradient nhìn trước hay không.
+Trong ví dụ mục 4, bước 1 vẫn đến $0.1$. Trước bước 2, điểm nhìn trước là $0.1+0.9(0.1)=0.19$, gradient $-0.81$. Vì vậy $v_2=0.171$, $\theta_2=0.271$. Phép tính này giúp kiểm tra phần cài đặt có thực sự lấy gradient tại điểm nhìn trước hay không.
 
 <MathLab type="optimizer" initial-method="momentum">
 
@@ -139,7 +139,7 @@ $$\operatorname{Var}(W)=\frac2{n_{\mathrm{in}}+n_{\mathrm{out}}}.$$
 
 Bản uniform tương ứng $W\sim U[-a,a]$, $a=\sqrt{6/(n_{\mathrm{in}}+n_{\mathrm{out}})}$, vì uniform đối xứng có phương sai $a^2/3$. Với fan-in 4, fan-out 2, $a=1$, phương sai $1/3$.
 
-Đây là lựa chọn dưới các giả định phân tích và kiểu activation xét trong nguồn, không phải định luật cho mọi kiến trúc. Activation phi tuyến và sự phụ thuộc giữa các đại lượng có thể đổi phép tính phương sai. Khi thử mô hình, vẫn phải quan sát kích thước activation và gradient.
+Đây là lựa chọn được suy ra dưới các giả định phân tích và loại hàm kích hoạt đang xét, không phải định luật cho mọi kiến trúc. Hàm kích hoạt phi tuyến và sự phụ thuộc giữa các đại lượng có thể làm phép tính phương sai thay đổi. Khi thử mô hình, vẫn phải theo dõi độ lớn của giá trị kích hoạt và gradient.
 
 ## Bài tập tự luyện
 

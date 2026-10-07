@@ -30,12 +30,11 @@ export function termLinks(md) {
             const id = aliases.get(match[0].toLocaleLowerCase('vi'))
             if (seen.has(id)) continue
             if (match.index > cursor) { const text = new state.Token('text', '', 0); text.content = token.content.slice(cursor, match.index); output.push(text) }
-            const open = new state.Token('link_open', 'a', 1)
-            // VitePress validates source-root links and adds its configured base
-            // when rendering them. Prepending the base here breaks validation.
-            open.attrs = [['href', `/wiki/${id}.html`], ['class', 'study-term'], ['data-term', id]]
+            const open = new state.Token('html_inline', '', 0)
+            open.content = `<button type="button" class="study-term" data-term="${id}" data-wiki="/wiki/${id}.html" aria-haspopup="dialog" aria-expanded="false" aria-controls="study-term-preview">`
             const text = new state.Token('text', '', 0); text.content = match[0]
-            output.push(open, text, new state.Token('link_close', 'a', -1))
+            const close = new state.Token('html_inline', '', 0); close.content = '</button>'
+            output.push(open, text, close)
             cursor = match.index + match[0].length; seen.add(id)
           }
           if (cursor < token.content.length) { const text = new state.Token('text', '', 0); text.content = token.content.slice(cursor); output.push(text) }
