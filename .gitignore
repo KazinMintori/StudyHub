@@ -48,3 +48,6 @@ venv/
 
 # Binary / documents
 *.pdf
+*.pptx
+output/
+

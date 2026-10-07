@@ -4,8 +4,9 @@ Website ôn tập VitePress cho sinh viên UET. Nội dung bằng tiếng Việt
 
 ## Skill phải dùng
 
-- Soạn, sửa, rà một bài giảng, thêm thuật ngữ Wiki, hoặc xuất slide PDF/PPTX từ một bài → `.claude/skills/studyhub-lecture`. Đọc `references/repo-format.md` của skill trước khi sửa file của site.
-- Người dùng dán một đoạn giáo trình và nhờ giảng, hoặc gửi bài làm để sửa → `.claude/skills/textbook-passage-explainer`.
+- Soạn, sửa, rà một bài giảng, thêm thuật ngữ Wiki, hoặc xuất slide PDF/PPTX từ một bài → `.agents/skills/studyhub-lecture` (hoặc `.claude/skills/studyhub-lecture`). Đọc `references/repo-format.md` của skill trước khi sửa file của site.
+- Người dùng dán một đoạn giáo trình và nhờ giảng, hoặc gửi bài làm để sửa → `.agents/skills/textbook-passage-explainer` (hoặc `.claude/skills/textbook-passage-explainer`).
+- Kiểm tra giao diện, responsive, UI/UX của website → `.agents/skills/web-design-reviewer`.
 
 Nguyên tắc chung khi viết nội dung học: đúng giả thiết và điều kiện của nguồn; mở bước khó thay vì khẳng định; mọi con số được tính lại bằng code; không bịa trích dẫn, năm tháng, số liệu hay “lỗi thường gặp”; tiếng Việt chuyên ngành tự nhiên, không khẩu hiệu.
 
