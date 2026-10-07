@@ -24,9 +24,22 @@ export default withMermaid(defineConfig({
     ],
     sidebar:{
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
-        {text:'Môn học',items:[{text:'Tổng quan',link:`/${course.id}/`}]},
-        {text:'Bài giảng',items:course.lessons.map(lesson=>({text:lesson.title+(lesson.status==='draft'?' (đang biên soạn)':''),link:`/${course.id}/bai-giang/${lesson.slug}`}))},
-        {text:'Tra cứu',items:[{text:'Wiki thuật ngữ',link:'/wiki/'}]}
+        {text: course.name, items:[{text:'📖 Tổng quan môn học',link:`/${course.id}/`}]},
+        ...(course.parts ? course.parts.map(part=>({
+          text: `🔖 ${part.title}`,
+          collapsed: false,
+          items: part.lessons.map(slug => {
+            const lesson = course.lessons.find(l => l.slug === slug)
+            if (!lesson) return null
+            return {
+              text: lesson.title + (lesson.status==='draft'?' (đang biên soạn)':''),
+              link: `/${course.id}/bai-giang/${lesson.slug}`
+            }
+          }).filter(Boolean)
+        })) : [
+          {text:'Bài giảng',items:course.lessons.map(lesson=>({text:lesson.title+(lesson.status==='draft'?' (đang biên soạn)':''),link:`/${course.id}/bai-giang/${lesson.slug}`}))}
+        ]),
+        {text:'Tra cứu & Học tập',items:[{text:'📚 Wiki thuật ngữ',link:'/wiki/'},{text:'🎯 Góc học tập',link:'/goc-hoc-tap'}]}
       ]])),
       '/wiki/':[
         {text:'Wiki học tập',items:[{text:'Tất cả thuật ngữ',link:'/wiki/'}]},

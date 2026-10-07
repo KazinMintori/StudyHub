@@ -21,7 +21,7 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
         <h1>Học hiểu bản chất.<br><span>Ôn tập có hệ thống.</span></h1>
         <p class="intro-description">Bài giảng, công thức và ví dụ được sắp xếp theo từng học phần. Bắt đầu từ điều chưa hiểu, học từng chút một.</p>
         <div class="button-row"><a class="study-button primary" href="#hoc-phan">Chọn học phần <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/guide/')">Cách học với Study Hub <span aria-hidden="true">↗</span></a></div>
-        <div class="intro-meta"><span>05 học phần hiện tại</span><span>Tìm kiếm toàn bộ bài giảng</span><span>Sáng & tối</span></div>
+        <div class="intro-meta"><span>{{ courses.length.toString().padStart(2, '0') }} học phần hiện tại</span><span>Tìm kiếm toàn bộ bài giảng</span><span>Sáng & tối</span></div>
       </div>
       <aside class="start-panel">
         <div class="start-panel-top"><span>{{ last ? 'TIẾP TỤC HỌC' : 'GỢI Ý BẮT ĐẦU' }}</span><span aria-hidden="true">UET</span></div>
@@ -45,7 +45,7 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
           </a>
           <p v-if="!visibleCourses.length" class="empty-state">Không tìm thấy học phần. Thử tên môn hoặc chủ đề khác.</p>
         </div>
-        <div class="other-courses"><span>Các môn khác</span><a :href="withBase('/dsa/')">Cấu trúc dữ liệu & Giải thuật</a><a :href="withBase('/discrete-math/')">Toán rời rạc</a><a :href="withBase('/giai-thuat-du-lieu/')">Giải thuật cho KH dữ liệu</a></div>
+        <div class="other-courses"><span>Các môn khác</span><a :href="withBase('/dsa/')">Cấu trúc dữ liệu & Giải thuật</a><a :href="withBase('/discrete-math/')">Toán rời rạc</a></div>
       </section>
       <aside class="study-side">
         <FocusTimer />

@@ -5,6 +5,28 @@ export const courseCatalog = [
     id: 'bieu-dien-tri-thuc', code: '01', name: 'Biểu diễn tri thức & Tìm kiếm', short: 'Tri thức & Tìm kiếm', current: true,
     description: 'Mô hình hóa bài toán, chọn cách tìm kiếm và biểu diễn tri thức để suy luận.',
     foundations: ['tap-hop', 'menh-de', 'luong-tu', 'do-thi', 'cay', 'trang-thai', 'hang-doi', 'ngan-xep', 'hang-doi-uu-tien', 'do-phuc-tap', 'heuristic', 'xac-suat-co-dieu-kien', 'doc-lap'],
+    parts: [
+      {
+        title: 'Phần I: Tổng quan & Tác tử thông minh',
+        description: 'Định nghĩa tác tử, môi trường và cấu trúc giải quyết vấn đề.',
+        lessons: ['01-gioi-thieu-tac-tu']
+      },
+      {
+        title: 'Phần II: Không gian Trạng thái & Thuật toán Tìm kiếm',
+        description: 'Chiến lược tìm kiếm mù và tìm kiếm có thông tin (Heuristic, A*).',
+        lessons: ['02-tim-kiem-mu', '03-tim-kiem-kinh-nghiem']
+      },
+      {
+        title: 'Phần III: Lý thuyết Trò chơi & Thỏa mãn Ràng buộc',
+        description: 'Đối kháng Minimax, cắt tỉa Alpha-Beta và bài toán CSP.',
+        lessons: ['04-tim-kiem-doi-khang', '05-csp']
+      },
+      {
+        title: 'Phần IV: Biểu diễn Tri thức & Suy luận Mạng Bayes',
+        description: 'Logic mệnh đề, logic vị từ và suy luận xác suất trong mạng Bayes.',
+        lessons: ['14-logic-bieu-dien-tri-thuc', '16-mang-bayes']
+      }
+    ],
     lessons: [
       lesson('01-gioi-thieu-tac-tu', 'Giới thiệu & tác tử thông minh', ['trang-thai', 'menh-de'], 'draft'),
       lesson('02-tim-kiem-mu', 'Tìm kiếm mù: BFS, DFS, UCS & IDS', ['do-thi', 'trang-thai', 'hang-doi', 'ngan-xep', 'hang-doi-uu-tien', 'do-phuc-tap']),
@@ -26,7 +48,22 @@ export const courseCatalog = [
     id: 'toan-cho-ai', code: '02', name: 'Cơ sở toán cho AI', short: 'Toán cho AI', current: true,
     description: 'Đọc tối ưu hóa từ hàm mục tiêu, đạo hàm đến hình học của tập lồi.',
     foundations: ['tap-hop', 'ham-so', 'vector', 'ma-tran', 'tich-vo-huong', 'chuan', 'gioi-han', 'dao-ham', 'dao-ham-rieng', 'gradient', 'quy-tac-chuoi', 'tri-rieng', 'to-hop-loi'],
-    lessons: [lesson('bai-01-nhap-mon-toi-uu', 'Nhập môn tối ưu hóa', ['ham-so', 'vector', 'dao-ham', 'gradient', 'chuan']), lesson('bai-02-tap-loi', 'Tập lồi & hình học của nghiệm', ['tap-hop', 'vector', 'tich-vo-huong', 'to-hop-loi'])],
+    parts: [
+      {
+        title: 'Phần I: Tối ưu hóa & Thuật toán Gradient',
+        description: 'Hàm mục tiêu, hướng giảm dốc và cập nhật tham số Gradient Descent.',
+        lessons: ['bai-01-nhap-mon-toi-uu']
+      },
+      {
+        title: 'Phần II: Hình học Lồi & Phân tích Nghiệm',
+        description: 'Tập lồi, tổ hợp lồi, hàm lồi và tính chất cực tiểu toàn cục.',
+        lessons: ['bai-02-tap-loi']
+      }
+    ],
+    lessons: [
+      lesson('bai-01-nhap-mon-toi-uu', 'Nhập môn tối ưu hóa', ['ham-so', 'vector', 'dao-ham', 'gradient', 'chuan']),
+      lesson('bai-02-tap-loi', 'Tập lồi & hình học của nghiệm', ['tap-hop', 'vector', 'tich-vo-huong', 'to-hop-loi'])
+    ],
     slides: [
       slide('Một bài toán tối ưu có ba thành phần', ['Biến quyết định biểu diễn điều có thể thay đổi.', 'Hàm mục tiêu đo điều muốn giảm hoặc tăng.', 'Ràng buộc xác định miền nghiệm khả thi; phải kiểm tra nghiệm có nằm trong miền đó không.'], 'bai-01-nhap-mon-toi-uu', 'min f(x), với x thuộc miền khả thi'),
       slide('Đọc gradient trước khi cập nhật', ['Gradient gom các đạo hàm riêng, chỉ hướng tăng nhanh nhất tại điểm khả vi.', 'Đi ngược gradient để tìm hướng giảm cục bộ.', 'Tốc độ học quyết định độ dài bước; bước quá lớn có thể làm mất hội tụ.'], 'bai-01-nhap-mon-toi-uu', 'x mới = x cũ − η∇f(x cũ)', 'f(x)=x²: x mới=(1−2η)x cũ; với 0<η<1, giá trị |x| giảm.'),
@@ -38,7 +75,28 @@ export const courseCatalog = [
     id: 'xac-suat-thong-ke', code: '03', name: 'Xác suất thống kê', short: 'Xác suất thống kê', current: true,
     description: 'Đi từ biến cố và xác suất có điều kiện đến phân phối, kỳ vọng và biến thiên.',
     foundations: ['tap-hop', 'khong-gian-mau', 'to-hop', 'xac-suat-co-dieu-kien', 'doc-lap', 'bien-ngau-nhien', 'ky-vong', 'phuong-sai', 'tich-phan', 'mau-tong-the'],
-    lessons: [lesson('01-xac-suat-va-bayes', 'Xác suất có điều kiện & Bayes', ['tap-hop', 'khong-gian-mau', 'xac-suat-co-dieu-kien', 'doc-lap']), lesson('02-bien-ngau-nhien', 'Biến ngẫu nhiên & phân phối', ['bien-ngau-nhien', 'to-hop', 'tich-phan']), lesson('03-ky-vong-phuong-sai', 'Kỳ vọng, phương sai & mẫu dữ liệu', ['ky-vong', 'phuong-sai', 'mau-tong-the'])],
+    parts: [
+      {
+        title: 'Phần I: Cơ sở Xác suất & Định lý Bayes',
+        description: 'Không gian mẫu, xác suất có điều kiện, tính độc lập và cập nhật niềm tin Bayes.',
+        lessons: ['01-xac-suat-va-bayes']
+      },
+      {
+        title: 'Phần II: Biến ngẫu nhiên & Quy luật Phân phối',
+        description: 'Biến ngẫu nhiên rời rạc, liên tục, hàm mật độ PDF và hàm phân phối tích lũy CDF.',
+        lessons: ['02-bien-ngau-nhien']
+      },
+      {
+        title: 'Phần III: Các đặc trưng Số & Thống kê Mẫu',
+        description: 'Kỳ vọng, phương sai, hiệp phương sai và ước lượng tham số từ mẫu dữ liệu.',
+        lessons: ['03-ky-vong-phuong-sai']
+      }
+    ],
+    lessons: [
+      lesson('01-xac-suat-va-bayes', 'Xác suất có điều kiện & Bayes', ['tap-hop', 'khong-gian-mau', 'xac-suat-co-dieu-kien', 'doc-lap']),
+      lesson('02-bien-ngau-nhien', 'Biến ngẫu nhiên & phân phối', ['bien-ngau-nhien', 'to-hop', 'tich-phan']),
+      lesson('03-ky-vong-phuong-sai', 'Kỳ vọng, phương sai & mẫu dữ liệu', ['ky-vong', 'phuong-sai', 'mau-tong-the'])
+    ],
     slides: [
       slide('Xác suất có điều kiện thay đổi miền xét', ['P(A|B) thu hẹp việc xét kết quả về biến cố B.', 'Hai biến cố độc lập không làm thay đổi xác suất của nhau.', 'Độc lập khác với loại trừ nhau.'], '01-xac-suat-va-bayes', 'P(A|B) = P(A∩B) / P(B), P(B)>0'),
       slide('Bayes cập nhật từ quan sát', ['Prior là xác suất trước quan sát.', 'Likelihood là mức phù hợp của quan sát khi giả thuyết đúng.', 'Posterior là xác suất sau quan sát; cần tính cả khả năng quan sát từ các giả thuyết khác.'], '01-xac-suat-va-bayes', 'P(A|B) = P(B|A)P(A) / P(B)'),
@@ -50,7 +108,30 @@ export const courseCatalog = [
     id: 'xu-ly-du-lieu', code: '04', name: 'Lập trình xử lý dữ liệu', short: 'Xử lý dữ liệu', current: true,
     description: 'Đọc và biến đổi dữ liệu bằng Python, NumPy và pandas một cách có kiểm chứng.',
     foundations: ['bien-kieu', 'list', 'dictionary', 'ham-lap-trinh', 'vong-lap', 'mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'],
-    lessons: [lesson('bai-01-tong-quan-cong-cu-chinh-sach-ai', 'Tổng quan, công cụ & quy trình học', ['bien-kieu', 'ham-lap-trinh']), lesson('bai-02-python-co-ban', 'Python cơ bản cho xử lý dữ liệu', ['bien-kieu', 'list', 'dictionary', 'vong-lap', 'ham-lap-trinh']), lesson('bai-03-numpy', 'NumPy & tư duy vector hóa', ['mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting']), lesson('bai-04-lam-quen-pandas', 'Làm quen với pandas', ['chi-muc', 'dictionary', 'gia-tri-thieu']), lesson('bai-05-series-dataframe-chuyen-sau', 'Series & DataFrame chuyên sâu', ['chi-muc', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'])],
+    parts: [
+      {
+        title: 'Phần I: Môi trường & Nền tảng Ngôn ngữ Python',
+        description: 'Thiết lập quy trình phân tích dữ liệu, kiểu dữ liệu cốt lõi, hàm và cấu trúc điều khiển.',
+        lessons: ['bai-01-tong-quan-cong-cu-chinh-sach-ai', 'bai-02-python-co-ban']
+      },
+      {
+        title: 'Phần II: Tính toán Vector với NumPy',
+        description: 'Mảng nhiều chiều ndarray, bộ nhớ liên tục, ufunc và cơ chế broadcasting.',
+        lessons: ['bai-03-numpy']
+      },
+      {
+        title: 'Phần III: Thao tác & Phân tích Dữ liệu với pandas',
+        description: 'Cấu trúc Series, DataFrame, lọc theo nhãn/vị trí, xử lý giá trị thiếu và gom nhóm GroupBy.',
+        lessons: ['bai-04-lam-quen-pandas', 'bai-05-series-dataframe-chuyen-sau']
+      }
+    ],
+    lessons: [
+      lesson('bai-01-tong-quan-cong-cu-chinh-sach-ai', 'Tổng quan, công cụ & quy trình học', ['bien-kieu', 'ham-lap-trinh']),
+      lesson('bai-02-python-co-ban', 'Python cơ bản cho xử lý dữ liệu', ['bien-kieu', 'list', 'dictionary', 'vong-lap', 'ham-lap-trinh']),
+      lesson('bai-03-numpy', 'NumPy & tư duy vector hóa', ['mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting']),
+      lesson('bai-04-lam-quen-pandas', 'Làm quen với pandas', ['chi-muc', 'dictionary', 'gia-tri-thieu']),
+      lesson('bai-05-series-dataframe-chuyen-sau', 'Series & DataFrame chuyên sâu', ['chi-muc', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'])
+    ],
     slides: [
       slide('Một quy trình phân tích có thể kiểm tra', ['Xác định câu hỏi trước khi chọn công cụ.', 'Giữ nguồn dữ liệu, môi trường và các bước biến đổi để tái lập kết quả.', 'Đọc và kiểm tra code sinh ra; người dùng chịu trách nhiệm về kết luận.'], 'bai-01-tong-quan-cong-cu-chinh-sach-ai'),
       slide('Python: kiểu, dãy và hàm', ['Phân biệt số, chuỗi, Boolean và container.', 'Chỉ mục từ 0; lát cắt theo vị trí không lấy điểm stop.', 'return cho kết quả để dùng tiếp, khác với print.'], 'bai-02-python-co-ban'),
@@ -63,7 +144,28 @@ export const courseCatalog = [
     id: 'vat-ly-2', code: '05', name: 'Vật lý đại cương 2', short: 'Vật lý 2', current: true,
     description: 'Hiểu điện trường và điện thế từ lực, vector, đạo hàm và tích phân.',
     foundations: ['vector', 'tich-vo-huong', 'chuan', 'dao-ham', 'dao-ham-rieng', 'gradient', 'tich-phan', 'dien-tich', 'luc', 'cong-nang-luong', 'dien-the', 'thong-luong', 'don-vi', 'song'],
-    lessons: [lesson('01-dien-truong-coulomb', 'Điện trường & định luật Coulomb', ['vector', 'chuan', 'dien-tich', 'luc', 'don-vi']), lesson('02-dien-the', 'Điện thế, công & gradient', ['cong-nang-luong', 'dien-the', 'dao-ham', 'gradient', 'tich-phan']), lesson('03-dinh-luat-gauss', 'Thông lượng & định luật Gauss', ['tich-vo-huong', 'thong-luong', 'tich-phan', 'dien-tich'])],
+    parts: [
+      {
+        title: 'Phần I: Tương tác Tĩnh điện & Điện trường',
+        description: 'Định luật Coulomb, nguyên lý chồng chất và vector cường độ điện trường.',
+        lessons: ['01-dien-truong-coulomb']
+      },
+      {
+        title: 'Phần II: Năng lượng Tĩnh điện & Điện thế',
+        description: 'Công của lực điện trường, điện thế, mặt đẳng thế và mối liên hệ vi phân với gradient.',
+        lessons: ['02-dien-the']
+      },
+      {
+        title: 'Phần III: Thông lượng & Định luật Gauss',
+        description: 'Thông lượng điện trường qua mặt kín và tính điện trường trong hệ có tính đối xứng cao.',
+        lessons: ['03-dinh-luat-gauss']
+      }
+    ],
+    lessons: [
+      lesson('01-dien-truong-coulomb', 'Điện trường & định luật Coulomb', ['vector', 'chuan', 'dien-tich', 'luc', 'don-vi']),
+      lesson('02-dien-the', 'Điện thế, công & gradient', ['cong-nang-luong', 'dien-the', 'dao-ham', 'gradient', 'tich-phan']),
+      lesson('03-dinh-luat-gauss', 'Thông lượng & định luật Gauss', ['tich-vo-huong', 'thong-luong', 'tich-phan', 'dien-tich'])
+    ],
     slides: [
       slide('Từ lực Coulomb tới điện trường', ['Điện tích cùng dấu đẩy nhau, trái dấu hút nhau.', 'Điện trường là lực trên một đơn vị điện tích thử dương.', 'Cộng vector các điện trường thành phần; không chỉ cộng độ lớn.'], '01-dien-truong-coulomb', 'E = F/q thử; |E điểm| = k|Q|/r²'),
       slide('Điện thế giúp tính công', ['Hiệu điện thế bằng độ thay đổi thế năng trên một đơn vị điện tích.', 'Điện trường hướng về phía điện thế giảm nhanh nhất.', 'Mặt đẳng thế vuông góc với điện trường ở nơi điện trường khác 0.'], '02-dien-the', 'E = −∇V; ΔU = qΔV'),
@@ -72,10 +174,67 @@ export const courseCatalog = [
     ], illustration: 'field'
   },
   {
-    id: 'dsa', code: '06', name: 'Cấu trúc dữ liệu & Giải thuật', short: 'CTDL & Giải thuật', current: false,
+    id: 'giai-thuat-du-lieu', code: '06', name: 'Giải thuật nền tảng của Khoa học dữ liệu', short: 'Giải thuật dữ liệu', current: true,
+    description: 'Đặc tả dữ liệu lớn, tính toán phân tán MapReduce, thuật toán PageRank và xử lý đồ thị quy mô lớn.',
+    foundations: ['do-phuc-tap', 'ham-lap-trinh', 'dictionary', 'khoa-gia-tri', 'bam', 'phan-tan', 'ket-hop', 'vector', 'ma-tran', 'do-thi', 'xac-suat-co-dieu-kien'],
+    parts: [
+      {
+        title: 'Phần I: Nền tảng Dữ liệu lớn & Mô hình Thuật toán',
+        description: 'Đặc tả bài toán, độ đo khoảng cách, tiêu chuẩn đánh giá và nguyên lý Bonferroni.',
+        lessons: ['bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan']
+      },
+      {
+        title: 'Phần II: Tính toán Phân tán MapReduce',
+        description: 'Mô hình lập trình Map/Shuffle/Reduce/Combine, nhân ma trận lớn và mô hình chi phí cụm máy.',
+        lessons: ['bai-02-mapreduce-va-xu-ly-du-lieu-lon']
+      },
+      {
+        title: 'Phần III: Phân tích Đồ thị & Xếp hạng Web (PageRank)',
+        description: 'Mô hình Random Surfer, Power Iteration, xử lý Dead Ends, Spider Traps và Damping Factor.',
+        lessons: ['bai-03-pagerank-mo-hinh-va-tinh-toan']
+      }
+    ],
+    lessons: [
+      lesson('bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'Dữ liệu lớn & mô hình thuật toán', ['do-phuc-tap', 'phan-tan', 'bam']),
+      lesson('bai-02-mapreduce-va-xu-ly-du-lieu-lon', 'MapReduce & xử lý dữ liệu lớn', ['khoa-gia-tri', 'phan-tan', 'ket-hop', 'ma-tran']),
+      lesson('bai-03-pagerank-mo-hinh-va-tinh-toan', 'PageRank: mô hình & tính toán', ['do-thi', 'ma-tran'])
+    ],
+    slides: [
+      slide('Dữ liệu lớn đổi nút thắt của thuật toán', ['Không chỉ xét CPU: bộ nhớ, đọc/ghi và mạng đều có chi phí.', 'Chọn mô hình tính toán phù hợp với nơi dữ liệu nằm.', 'Đánh giá lượng dữ liệu truyền cùng tổng công việc.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan'),
+      slide('Map → nhóm theo khóa → Reduce', ['Map phát các cặp khóa–giá trị.', 'Shuffle đưa các giá trị cùng khóa tới cùng nhóm.', 'Reduce xử lý từng nhóm để thu kết quả cuối.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon', '', 'Đếm từ: Map phát (từ,1), Reduce cộng các số 1 theo từ.'),
+      slide('Combine cần đúng tính chất phép gom', ['Gom cục bộ giúp giảm truyền dữ liệu.', 'Phép gom cần giữ được thông tin cho kết quả cuối và đáp ứng tính chất cần thiết.', 'Trung bình của các trung bình không đúng nếu nhóm có kích thước khác nhau; truyền (tổng, số lượng).'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon'),
+      slide('Thời gian pha do máy chậm nhất quyết định', ['Một phân vùng quá lớn làm những máy còn lại chờ.', 'Thêm máy có thể tăng chi phí đồng bộ và truyền.', 'Kiểm tra cân bằng tải, lượng truyền và khả năng phục hồi khi máy lỗi.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon'),
+      slide('PageRank: mô hình hóa sự quan trọng của trang', ['Một trang quan trọng nếu được trỏ bởi các trang quan trọng khác.', 'Random Surfer di chuyển ngẫu nhiên trên đồ thị liên kết Web.', 'Trạng thái dừng r = M*r chính là vector riêng ứng với trị riêng 1.'], 'bai-03-pagerank-mo-hinh-va-tinh-toan', 'r = β·M·r + (1−β)/N·1', 'β = 0.85 xử lý triệt để Spider Traps và Dead Ends.')
+    ], illustration: 'mapreduce'
+  },
+  {
+    id: 'dsa', code: '07', name: 'Cấu trúc dữ liệu & Giải thuật', short: 'CTDL & Giải thuật', current: false,
     description: 'Chọn cấu trúc lưu dữ liệu và đánh giá chi phí của từng cách xử lý.',
     foundations: ['mang', 'con-tro', 'de-quy', 'hang-doi', 'ngan-xep', 'cay', 'do-thi', 'do-phuc-tap', 'quy-nap'],
-    lessons: [lesson('complexity', 'Phân tích độ phức tạp', ['do-phuc-tap', 'quy-nap']), lesson('sorting', 'Thuật toán sắp xếp', ['mang', 'de-quy', 'do-phuc-tap']), lesson('searching', 'Thuật toán tìm kiếm', ['mang', 'do-phuc-tap']), lesson('trees', 'Cây & cây nhị phân', ['cay', 'con-tro', 'de-quy']), lesson('graphs', 'Đồ thị & thuật toán duyệt', ['do-thi', 'hang-doi', 'ngan-xep'])],
+    parts: [
+      {
+        title: 'Phần I: Nền tảng Phân tích Thuật toán',
+        description: 'Đánh giá thời gian và không gian qua ký hiệu Big-O và phương pháp quy nạp.',
+        lessons: ['complexity']
+      },
+      {
+        title: 'Phần II: Thuật toán Cơ sở: Sắp xếp & Tìm kiếm',
+        description: 'Các thuật toán sắp xếp kinh điển và tìm kiếm nhị phân trên dãy có thứ tự.',
+        lessons: ['sorting', 'searching']
+      },
+      {
+        title: 'Phần III: Cấu trúc Dữ liệu Phi tuyến tính',
+        description: 'Cây nhị phân, cây tìm kiếm, đồ thị và các thuật toán duyệt BFS, DFS.',
+        lessons: ['trees', 'graphs']
+      }
+    ],
+    lessons: [
+      lesson('complexity', 'Phân tích độ phức tạp', ['do-phuc-tap', 'quy-nap']),
+      lesson('sorting', 'Thuật toán sắp xếp', ['mang', 'de-quy', 'do-phuc-tap']),
+      lesson('searching', 'Thuật toán tìm kiếm', ['mang', 'do-phuc-tap']),
+      lesson('trees', 'Cây & cây nhị phân', ['cay', 'con-tro', 'de-quy']),
+      lesson('graphs', 'Đồ thị & thuật toán duyệt', ['do-thi', 'hang-doi', 'ngan-xep'])
+    ],
     slides: [
       slide('Đánh giá chi phí trước khi tối ưu code', ['Xác định kích thước đầu vào n.', 'Đếm thao tác chủ đạo và bộ nhớ phụ.', 'Nêu trường hợp đang xét và đừng coi Big-O là số giây thực tế.'], 'complexity'),
       slide('Sắp xếp: chọn theo bối cảnh', ['Insertion Sort phù hợp dữ liệu nhỏ hoặc gần có thứ tự.', 'Merge Sort có O(n log n) nhưng cần bộ nhớ phụ tùy cách cài đặt.', 'Quick Sort trung bình nhanh; lựa chọn pivot ảnh hưởng trường hợp xấu.'], 'sorting'),
@@ -84,27 +243,36 @@ export const courseCatalog = [
     ], illustration: 'search'
   },
   {
-    id: 'discrete-math', code: '07', name: 'Toán rời rạc', short: 'Toán rời rạc', current: false,
+    id: 'discrete-math', code: '08', name: 'Toán rời rạc', short: 'Toán rời rạc', current: false,
     description: 'Đọc logic, quan hệ và cấu trúc hữu hạn bằng các định nghĩa chính xác.',
     foundations: ['tap-hop', 'ham-so', 'menh-de', 'luong-tu', 'quy-nap', 'to-hop', 'quan-he', 'do-thi', 'cay'],
-    lessons: [lesson('logic', 'Logic mệnh đề & vị từ', ['menh-de', 'luong-tu']), lesson('relations', 'Quan hệ & ánh xạ', ['tap-hop', 'quan-he', 'ham-so']), lesson('graph-theory', 'Lý thuyết đồ thị cơ bản', ['do-thi', 'cay'])],
+    parts: [
+      {
+        title: 'Phần I: Logic Toán & Quy tắc Suy luận',
+        description: 'Logic mệnh đề, bảng chân trị, logic vị từ và các lượng từ toán học.',
+        lessons: ['logic']
+      },
+      {
+        title: 'Phần II: Tập hợp, Quan hệ & Ánh xạ',
+        description: 'Định nghĩa tập hợp, tích Descartes, quan hệ tương đương, thứ tự và hàm số.',
+        lessons: ['relations']
+      },
+      {
+        title: 'Phần III: Cơ sở Lý thuyết Đồ thị',
+        description: 'Đỉnh, cạnh, đường đi, chu trình, đồ thị Euler, Hamilton và cây liên thông.',
+        lessons: ['graph-theory']
+      }
+    ],
+    lessons: [
+      lesson('logic', 'Logic mệnh đề & vị từ', ['menh-de', 'luong-tu']),
+      lesson('relations', 'Quan hệ & ánh xạ', ['tap-hop', 'quan-he', 'ham-so']),
+      lesson('graph-theory', 'Lý thuyết đồ thị cơ bản', ['do-thi', 'cay'])
+    ],
     slides: [
       slide('Logic: kiểm tra giá trị đúng/sai', ['Dùng bảng chân trị để kiểm tra phát biểu.', 'Phép kéo theo chỉ sai khi tiền đề đúng, kết luận sai.', 'Phủ định lượng từ phải đổi “mọi” với “tồn tại”.'], 'logic'),
       slide('Quan hệ không nhất thiết là hàm', ['Quan hệ là tập các cặp có thứ tự.', 'Hàm yêu cầu mỗi đầu vào có đúng một đầu ra.', 'Kiểm tra phản xạ, đối xứng, bắc cầu khi xét quan hệ tương đương.'], 'relations'),
       slide('Đồ thị: bắt đầu từ đỉnh và cạnh', ['Phân biệt đồ thị có hướng với vô hướng.', 'Đường đi liên tiếp các cạnh; chu trình quay về điểm đầu.', 'Cây liên thông không có chu trình trong mô hình vô hướng.'], 'graph-theory')
     ], illustration: 'search'
-  },
-  {
-    id: 'giai-thuat-du-lieu', code: '08', name: 'Giải thuật nền tảng cho KH dữ liệu', short: 'Giải thuật dữ liệu', current: false,
-    description: 'Đọc mô hình dữ liệu lớn và thiết kế tính toán trên nhiều máy.',
-    foundations: ['do-phuc-tap', 'ham-lap-trinh', 'dictionary', 'khoa-gia-tri', 'bam', 'phan-tan', 'ket-hop', 'vector', 'ma-tran', 'do-thi', 'xac-suat-co-dieu-kien'],
-    lessons: [lesson('bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'Dữ liệu lớn & mô hình thuật toán', ['do-phuc-tap', 'phan-tan', 'bam']), lesson('bai-02-mapreduce-va-xu-ly-du-lieu-lon', 'MapReduce & xử lý dữ liệu lớn', ['khoa-gia-tri', 'phan-tan', 'ket-hop', 'ma-tran']), lesson('bai-03-pagerank-mo-hinh-va-tinh-toan', 'PageRank: mô hình & tính toán', ['do-thi', 'ma-tran'], 'draft')],
-    slides: [
-      slide('Dữ liệu lớn đổi nút thắt của thuật toán', ['Không chỉ xét CPU: bộ nhớ, đọc/ghi và mạng đều có chi phí.', 'Chọn mô hình tính toán phù hợp với nơi dữ liệu nằm.', 'Đánh giá lượng dữ liệu truyền cùng tổng công việc.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan'),
-      slide('Map → nhóm theo khóa → Reduce', ['Map phát các cặp khóa–giá trị.', 'Shuffle đưa các giá trị cùng khóa tới cùng nhóm.', 'Reduce xử lý từng nhóm để thu kết quả cuối.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon', '', 'Đếm từ: Map phát (từ,1), Reduce cộng các số 1 theo từ.'),
-      slide('Combine cần đúng tính chất phép gom', ['Gom cục bộ giúp giảm truyền dữ liệu.', 'Phép gom cần giữ được thông tin cho kết quả cuối và đáp ứng tính chất cần thiết.', 'Trung bình của các trung bình không đúng nếu nhóm có kích thước khác nhau; truyền (tổng, số lượng).'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon'),
-      slide('Thời gian pha do máy chậm nhất quyết định', ['Một phân vùng quá lớn làm những máy còn lại chờ.', 'Thêm máy có thể tăng chi phí đồng bộ và truyền.', 'Kiểm tra cân bằng tải, lượng truyền và khả năng phục hồi khi máy lỗi.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon')
-    ], illustration: 'mapreduce'
   }
 ]
 

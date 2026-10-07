@@ -392,3 +392,210 @@ button:disabled { opacity: .55; cursor: wait; }
   .wiki-filters { grid-template-columns: 1fr; gap: 16px; }.wiki-index h1 { font-size: 32px; }
   .wiki-entry-list { grid-template-columns: 1fr; gap: 15px; }.wiki-entry-list > a { padding: 20px; }
 }
+
+/* ========================================================
+   TEXTBOOK & WES MCKINNEY STYLE PRESENTATION
+   ======================================================== */
+
+/* Book Breadcrumbs & Badges */
+.book-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+  margin-bottom: 14px;
+}
+.book-breadcrumbs a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+.book-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.book-breadcrumbs .sep {
+  color: var(--vp-c-divider);
+}
+.book-breadcrumbs .part-crumb {
+  color: var(--vp-c-text-1);
+  font-weight: 550;
+}
+.lecture-header-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+.chapter-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #fff;
+  background: var(--vp-c-brand-1);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.part-badge-small {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+/* Course Overview Part Bookmarks */
+.course-part-section {
+  margin: 36px 0 20px;
+}
+.part-banner {
+  background: var(--vp-c-bg-soft);
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 12px;
+}
+.part-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.part-bookmark-icon {
+  font-size: 18px;
+}
+.part-title-row h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 0;
+  color: var(--vp-c-text-1);
+}
+.part-description {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: 6px 0 0;
+  line-height: 1.6;
+}
+
+/* Sidebar Part Bookmark Enhancement */
+.VPSidebar .group .title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+  padding: 10px 0 6px !important;
+  color: var(--vp-c-text-1) !important;
+}
+.VPSidebar .group .title-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Quarto & Wes McKinney Style Callouts (Admonitions) */
+.vp-doc .custom-block {
+  border-radius: 6px !important;
+  border-width: 0 0 0 4px !important;
+  border-style: solid !important;
+  margin: 24px 0 !important;
+  padding: 16px 20px !important;
+  line-height: 1.75 !important;
+}
+.vp-doc .custom-block .custom-block-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.3px !important;
+}
+.vp-doc .custom-block.info {
+  background: #f0f7ff !important;
+  border-color: #2b7fff !important;
+  color: #1e3a8a !important;
+}
+.dark .vp-doc .custom-block.info {
+  background: #172554 !important;
+  border-color: #3b82f6 !important;
+  color: #bfdbfe !important;
+}
+.vp-doc .custom-block.tip {
+  background: #f0fdf4 !important;
+  border-color: #16a34a !important;
+  color: #14532d !important;
+}
+.dark .vp-doc .custom-block.tip {
+  background: #052e16 !important;
+  border-color: #22c55e !important;
+  color: #bbf7d0 !important;
+}
+.vp-doc .custom-block.warning {
+  background: #fffbeb !important;
+  border-color: #d97706 !important;
+  color: #78350f !important;
+}
+.dark .vp-doc .custom-block.warning {
+  background: #451a03 !important;
+  border-color: #f59e0b !important;
+  color: #fde68a !important;
+}
+.vp-doc .custom-block.danger {
+  background: #fef2f2 !important;
+  border-color: #dc2626 !important;
+  color: #7f1d1d !important;
+}
+.dark .vp-doc .custom-block.danger {
+  background: #450a0a !important;
+  border-color: #ef4444 !important;
+  color: #fecaca !important;
+}
+
+/* Textbook Reading Typography */
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.vp-doc h1 {
+  font-size: 32px;
+  letter-spacing: -0.8px;
+  font-weight: 750;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.vp-doc h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 28px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+.vp-doc h3 {
+  font-size: 19px;
+  font-weight: 650;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.vp-doc p {
+  margin: 14px 0;
+}
+.vp-doc table {
+  margin: 20px 0;
+  font-size: 14px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.vp-doc th, .vp-doc td {
+  padding: 10px 14px;
+}
+.vp-doc blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--vp-c-brand-1);
+  padding-left: 16px;
+  color: var(--vp-c-text-2);
+  margin: 20px 0;
+}
+
