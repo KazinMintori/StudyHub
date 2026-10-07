@@ -1,6 +1,6 @@
 # Hướng Dẫn Ôn Tập Hiệu Quả 
 
-Website **UET Study Hub** được xây dựng nhằm mục đích giúp bạn và bạn bè vượt qua các kỳ thi môn học một cách nhẹ nhàng nhất, với phương châm: **"Hiểu bản chất thay vì học vẹt"**.
+Website **UETệ** được xây dựng nhằm mục đích giúp bạn và bạn bè vượt qua các kỳ thi môn học một cách nhẹ nhàng nhất, với phương châm: **"Hiểu bản chất thay vì học vẹt"**.
 
 ---
 
@@ -8,9 +8,9 @@ Website **UET Study Hub** được xây dựng nhằm mục đích giúp bạn v
 
 - **Slides:** nắm ý chính, công thức và trọng tâm của các bài đã có nội dung. Dùng nút hoặc phím mũi tên trái/phải để chuyển slide.
 - **Notes:** giải thích chi tiết, ví dụ và minh họa chạy bằng code. Các thuật ngữ có gạch chân chấm dẫn tới Wiki; rê chuột hoặc dùng Tab để xem giải thích nhanh, nhấn để đọc bài viết đầy đủ.
-- **Kiến thức cần có:** nền tảng riêng của bài đang học, gồm định nghĩa, ví dụ và câu hỏi tự kiểm tra. Có thể đánh dấu những mục đã hiểu.
+- **Kiến thức nền:** nền tảng riêng của bài đang học, gồm định nghĩa, ví dụ và câu hỏi tự kiểm tra. Có thể đánh dấu những mục đã hiểu.
 
-Từ trang môn học, chọn một bài giảng. Ba phần nằm trong cùng bài; khi đổi phần, tiêu đề và tiến độ vẫn thuộc bài đó. Nếu chưa chắc nền tảng, bắt đầu ở Kiến thức cần có. Sau đó xem Slides để định hướng và đọc Notes để học sâu.
+Từ trang môn học, chọn một bài giảng. Ba phần nằm trong cùng bài; khi đổi phần, tiêu đề và tiến độ vẫn thuộc bài đó. Nếu chưa chắc nền tảng, bắt đầu ở Kiến thức nền. Sau đó xem Slides để định hướng và đọc Notes để học sâu.
 
 ## Wiki thuật ngữ
 

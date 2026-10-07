@@ -42,13 +42,13 @@ function getLessonIndex(c, slug) {
                 </a>
                 <p>
                   {{ getLesson(course, slug).status === 'ready'
-                    ? `${lectureSlides(course, getLesson(course, slug)).length} slide · Notes chi tiết · ${getLesson(course, slug).prerequisites.length} nền tảng cần có`
+                    ? `${lectureSlides(course, getLesson(course, slug)).length} slide · Notes chi tiết · ${getLesson(course, slug).prerequisites.length} kiến thức nền`
                     : 'Đang biên soạn · có nền tảng để chuẩn bị' }}
                 </p>
                 <nav aria-label="Chọn phần của bài giảng">
                   <a :href="studyLink(lecturePath(course.id, slug, 'slides'))">Slides</a>
                   <a :href="studyLink(lecturePath(course.id, slug, 'notes'))">Notes</a>
-                  <a :href="studyLink(lecturePath(course.id, slug, 'kien-thuc-can-co'))">Kiến thức cần có</a>
+                  <a :href="studyLink(lecturePath(course.id, slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
                 </nav>
               </div>
               <a class="lecture-open" :href="studyLink(lecturePath(course.id, slug))" :aria-label="`Mở ${getLesson(course, slug).title}`">→</a>
@@ -62,7 +62,7 @@ function getLessonIndex(c, slug) {
     <template v-else>
       <div class="lecture-list-heading">
         <h2>Bài giảng</h2>
-        <p>Mỗi bài gồm Slides, Notes và Kiến thức cần có. Chọn bài trước, rồi học theo phần bạn cần.</p>
+        <p>Mỗi bài gồm Slides, Notes và Kiến thức nền. Chọn bài trước, rồi học theo phần bạn cần.</p>
       </div>
       <div class="lecture-list">
         <article v-for="(lesson, i) in course.lessons" :key="lesson.slug">
@@ -73,13 +73,13 @@ function getLessonIndex(c, slug) {
             </a>
             <p>
               {{ lesson.status === 'ready'
-                ? `${lectureSlides(course, lesson).length} slide · Notes chi tiết · ${lesson.prerequisites.length} nền tảng cần có`
+                ? `${lectureSlides(course, lesson).length} slide · Notes chi tiết · ${lesson.prerequisites.length} kiến thức nền`
                 : 'Đang biên soạn · có nền tảng để chuẩn bị' }}
             </p>
             <nav aria-label="Chọn phần của bài giảng">
               <a :href="studyLink(lecturePath(course.id, lesson.slug, 'slides'))">Slides</a>
               <a :href="studyLink(lecturePath(course.id, lesson.slug, 'notes'))">Notes</a>
-              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'kien-thuc-can-co'))">Kiến thức cần có</a>
+              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
             </nav>
           </div>
           <a class="lecture-open" :href="studyLink(lecturePath(course.id, lesson.slug))" :aria-label="`Mở ${lesson.title}`">→</a>
@@ -94,6 +94,9 @@ function getLessonIndex(c, slug) {
       </div>
       <a class="study-button" :href="studyLink('/wiki/')">Tra cứu Wiki →</a>
     </div>
-    <a class="text-link" :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu tham khảo của môn →</a>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+      <a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Hệ thống bài tập ôn luyện môn học →</a>
+      <a class="text-link" :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu tham khảo của môn →</a>
+    </div>
   </main>
 </template>

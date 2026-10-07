@@ -1,6 +1,6 @@
 # Thêm và cập nhật nội dung môn học
 
-Mỗi môn có nhiều bài giảng; **mỗi bài** gồm Slides, Notes và Kiến thức cần có. Ghi chú cá nhân trong Góc học tập là công cụ riêng của người học.
+Mỗi môn có nhiều bài giảng; **mỗi bài** gồm Slides, Notes và Kiến thức nền. Ghi chú cá nhân trong Góc học tập là công cụ riêng của người học.
 
 ## Notes: nơi viết nội dung chi tiết
 
@@ -16,7 +16,7 @@ lessonStatus: ready
 ---
 ```
 
-Khai báo bài với cùng slug trong `course-catalog.mjs`. Danh sách `prerequisites` của bài trong catalog quyết định những khái niệm nào xuất hiện ở phần Kiến thức cần có. Dùng ID từ `concepts.mjs`; tránh gắn toàn bộ nền tảng của môn cho mọi bài.
+Khai báo bài với cùng slug trong `course-catalog.mjs`. Danh sách `prerequisites` của bài trong catalog quyết định những khái niệm nào xuất hiện ở phần Kiến thức nền. Dùng ID từ `concepts.mjs`; tránh gắn toàn bộ nền tảng của môn cho mọi bài.
 
 Các thuật ngữ đã khai báo được liên kết tự động trong phần văn bản của Notes. Code, công thức, tiêu đề và liên kết đã viết sẵn được giữ nguyên. Khi cần liên kết rõ ràng ở một vị trí khác, dùng Markdown:
 
@@ -38,7 +38,7 @@ Các loại hiện có: `search` (BFS/DFS), `gradient`, `bayes`, `broadcast`, `m
 
 Khai báo Slides trong `course-catalog.mjs`. Thuộc tính `note` là slug bài giảng sở hữu slide. Giao diện chỉ lấy những Slides của bài đang mở; mỗi slide có tiêu đề, vài ý chính và công thức nếu cần. Bài chưa soạn được ghi rõ trạng thái.
 
-## Kiến thức cần có: giúp người đọc tự bù nền
+## Kiến thức nền: giúp người đọc tự bù nền
 
 Mỗi khái niệm trong `concepts.mjs` gồm:
 

@@ -22,8 +22,8 @@ onMounted(()=>{load();window.addEventListener('keydown',keyboard)});onUnmounted(
       <p v-else class="empty-state">Slides của bài đang được biên soạn.</p>
       <div v-if="current" class="slide-controls"><button class="study-button" :disabled="index===0" @click="next(-1)">← Trước</button><span>{{ index+1 }} / {{ slides.length }} · Phím ← →</span><button class="study-button primary" :disabled="index===slides.length-1" @click="next(1)">Tiếp →</button></div>
     </section>
-    <section v-else-if="part==='kien-thuc-can-co'" class="lecture-foundations" aria-label="Kiến thức cần có của bài giảng">
-      <p class="eyebrow">CHUẨN BỊ CHO BÀI NÀY</p><h2>Kiến thức cần có</h2><p>Những nền tảng được dùng trong <strong>{{ lesson.title }}</strong>. Nếu cần hiểu sâu hơn, mở bài viết Wiki của thuật ngữ.</p>
+    <section v-else-if="part==='kien-thuc-can-co'" class="lecture-foundations" aria-label="Kiến thức nền của bài giảng">
+      <p class="eyebrow">CHUẨN BỊ CHO BÀI NÀY</p><h2>Kiến thức nền</h2><p>Những nền tảng được dùng trong <strong>{{ lesson.title }}</strong>. Nếu cần hiểu sâu hơn, mở bài viết Wiki của thuật ngữ.</p>
       <article v-for="id in required" :key="id" class="foundation-entry" :id="`nen-tang-${id}`"><div class="foundation-entry-heading"><h3><a class="study-term" :data-term="id" :href="studyLink(`/wiki/${id}`)">{{ concepts[id].name }}</a></h3><button class="study-button" :aria-pressed="!!understood[id]" @click="toggle(id)">{{ understood[id] ? 'Đã hiểu' : 'Đánh dấu đã hiểu' }}</button></div><p>{{ concepts[id].definition }}</p><div class="foundation-example"><h4>Ví dụ</h4><p>{{ concepts[id].example }}</p></div><p class="foundation-use"><strong>Dùng để:</strong> {{ concepts[id].use }}</p><details><summary>Tự kiểm tra: {{ concepts[id].question }}</summary><p>{{ concepts[id].answer }}</p></details><a class="text-link" :href="studyLink(`/wiki/${id}`)">Đọc kỹ {{ concepts[id].name }} trong Wiki →</a></article>
       <p v-if="storageMessage" role="status" class="storage-message">{{ storageMessage }}</p>
     </section>

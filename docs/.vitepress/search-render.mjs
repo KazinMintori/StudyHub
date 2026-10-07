@@ -11,5 +11,5 @@ export function renderStudySearch(source,env,md) {
   const heading=(title,id)=>`<h2 id="${id}">${escape(title)} <a class="header-anchor" href="#${id}">Permalink</a></h2>`
   const title=`<h1>${escape(lesson.title)} <a class="header-anchor" href="#notes">Permalink</a></h1>`
   const slides=lectureSlides(course,lesson)
-  return title+html+heading('Slides · '+lesson.title,'slides')+`<p>${escape(slides.map(s=>`${s.title} ${s.bullets.join(' ')} ${s.formula||''}`).join(' '))}</p>`+heading('Kiến thức cần có · '+lesson.title,'kien-thuc-can-co')+`<p>${escape(lesson.prerequisites.map(id=>`${concepts[id].name}: ${concepts[id].definition}`).join(' '))}</p>`
+  return title+html+heading('Slides · '+lesson.title,'slides')+`<p>${escape(slides.map(s=>`${s.title} ${s.bullets.join(' ')} ${s.formula||''}`).join(' '))}</p>`+heading('Kiến thức nền · '+lesson.title,'kien-thuc-can-co')+`<p>${escape(lesson.prerequisites.map(id=>`${concepts[id].name}: ${concepts[id].definition}`).join(' '))}</p>`
 }
