@@ -394,24 +394,25 @@ button:disabled { opacity: .55; cursor: wait; }
 }
 
 /* ========================================================
-   TEXTBOOK & WES MCKINNEY STYLE PRESENTATION
+   CLEAN TEXTBOOK STYLING (MINIMALIST & ACADEMIC)
    ======================================================== */
 
-/* Book Breadcrumbs & Badges */
+/* Breadcrumbs & Header Meta */
 .book-breadcrumbs {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  font-size: 12px;
-  color: var(--vp-c-text-2);
-  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+  margin-bottom: 16px;
 }
 .book-breadcrumbs a {
-  color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-2);
   text-decoration: none;
 }
 .book-breadcrumbs a:hover {
+  color: var(--vp-c-text-1);
   text-decoration: underline;
 }
 .book-breadcrumbs .sep {
@@ -419,183 +420,168 @@ button:disabled { opacity: .55; cursor: wait; }
 }
 .book-breadcrumbs .part-crumb {
   color: var(--vp-c-text-1);
-  font-weight: 550;
 }
 .lecture-header-meta {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 12px 0 6px;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
 }
-.chapter-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  color: #fff;
-  background: var(--vp-c-brand-1);
-  padding: 3px 10px;
-  border-radius: 4px;
-}
-.part-badge-small {
-  display: inline-block;
-  font-size: 12px;
+.chapter-num {
   font-weight: 600;
+  color: var(--vp-c-text-1);
+  font-feature-settings: 'tnum';
+}
+.part-name {
   color: var(--vp-c-text-2);
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  padding: 3px 10px;
-  border-radius: 4px;
+}
+.draft-notice {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  font-style: italic;
+  margin: 12px 0;
 }
 
-/* Course Overview Part Bookmarks */
+/* Course Overview Part Sections */
 .course-part-section {
   margin: 36px 0 20px;
 }
 .part-banner {
-  background: var(--vp-c-bg-soft);
-  border-left: 4px solid var(--vp-c-brand-1);
-  padding: 16px 20px;
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 12px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
 }
-.part-title-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.part-bookmark-icon {
+.part-title {
   font-size: 18px;
-}
-.part-title-row h2 {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.3px;
   color: var(--vp-c-text-1);
+  margin: 0 0 4px;
 }
 .part-description {
   font-size: 13px;
   color: var(--vp-c-text-2);
-  margin: 6px 0 0;
+  margin: 0;
   line-height: 1.6;
 }
 
-/* Sidebar Part Bookmark Enhancement */
+/* Sidebar Part Structure */
 .VPSidebar .group .title {
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px !important;
-  padding: 10px 0 6px !important;
-  color: var(--vp-c-text-1) !important;
-}
-.VPSidebar .group .title-text {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  color: var(--vp-c-text-3) !important;
+  padding: 14px 0 6px !important;
 }
 
-/* Quarto & Wes McKinney Style Callouts (Admonitions) */
+/* Subtle, Professional Callouts */
 .vp-doc .custom-block {
-  border-radius: 6px !important;
-  border-width: 0 0 0 4px !important;
-  border-style: solid !important;
-  margin: 24px 0 !important;
-  padding: 16px 20px !important;
-  line-height: 1.75 !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  border-left-width: 4px !important;
+  border-radius: 4px !important;
+  margin: 20px 0 !important;
+  padding: 14px 18px !important;
+  background: var(--vp-c-bg-soft) !important;
+  color: var(--vp-c-text-1) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
 }
 .vp-doc .custom-block .custom-block-title {
   font-size: 14px !important;
-  font-weight: 700 !important;
-  margin-bottom: 8px !important;
-  letter-spacing: 0.3px !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+  letter-spacing: -0.2px !important;
 }
 .vp-doc .custom-block.info {
-  background: #f0f7ff !important;
-  border-color: #2b7fff !important;
-  color: #1e3a8a !important;
+  border-left-color: #3b82f6 !important;
 }
-.dark .vp-doc .custom-block.info {
-  background: #172554 !important;
-  border-color: #3b82f6 !important;
-  color: #bfdbfe !important;
+.vp-doc .custom-block.info .custom-block-title {
+  color: #2563eb !important;
+}
+.dark .vp-doc .custom-block.info .custom-block-title {
+  color: #60a5fa !important;
 }
 .vp-doc .custom-block.tip {
-  background: #f0fdf4 !important;
-  border-color: #16a34a !important;
-  color: #14532d !important;
+  border-left-color: #10b981 !important;
 }
-.dark .vp-doc .custom-block.tip {
-  background: #052e16 !important;
-  border-color: #22c55e !important;
-  color: #bbf7d0 !important;
+.vp-doc .custom-block.tip .custom-block-title {
+  color: #059669 !important;
+}
+.dark .vp-doc .custom-block.tip .custom-block-title {
+  color: #34d399 !important;
 }
 .vp-doc .custom-block.warning {
-  background: #fffbeb !important;
-  border-color: #d97706 !important;
-  color: #78350f !important;
+  border-left-color: #f59e0b !important;
 }
-.dark .vp-doc .custom-block.warning {
-  background: #451a03 !important;
-  border-color: #f59e0b !important;
-  color: #fde68a !important;
+.vp-doc .custom-block.warning .custom-block-title {
+  color: #d97706 !important;
+}
+.dark .vp-doc .custom-block.warning .custom-block-title {
+  color: #fbbf24 !important;
 }
 .vp-doc .custom-block.danger {
-  background: #fef2f2 !important;
-  border-color: #dc2626 !important;
-  color: #7f1d1d !important;
+  border-left-color: #ef4444 !important;
 }
-.dark .vp-doc .custom-block.danger {
-  background: #450a0a !important;
-  border-color: #ef4444 !important;
-  color: #fecaca !important;
+.vp-doc .custom-block.danger .custom-block-title {
+  color: #dc2626 !important;
+}
+.dark .vp-doc .custom-block.danger .custom-block-title {
+  color: #f87171 !important;
 }
 
-/* Textbook Reading Typography */
+/* Textbook Typography */
 .vp-doc {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--vp-c-text-1);
 }
 .vp-doc h1 {
-  font-size: 32px;
-  letter-spacing: -0.8px;
-  font-weight: 750;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  font-weight: 700;
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .vp-doc h2 {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.4px;
   border-top: 1px solid var(--vp-c-divider);
-  padding-top: 28px;
-  margin-top: 36px;
-  margin-bottom: 16px;
+  padding-top: 24px;
+  margin-top: 32px;
+  margin-bottom: 14px;
 }
 .vp-doc h3 {
-  font-size: 19px;
-  font-weight: 650;
-  margin-top: 28px;
-  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 .vp-doc p {
-  margin: 14px 0;
+  margin: 12px 0;
 }
 .vp-doc table {
-  margin: 20px 0;
-  font-size: 14px;
+  margin: 18px 0;
+  font-size: 13.5px;
   width: 100%;
   border-collapse: collapse;
 }
 .vp-doc th, .vp-doc td {
-  padding: 10px 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--vp-c-divider);
+}
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
 }
 .vp-doc blockquote {
-  font-style: italic;
-  border-left: 3px solid var(--vp-c-brand-1);
-  padding-left: 16px;
+  border-left: 3px solid var(--vp-c-divider);
+  padding-left: 14px;
   color: var(--vp-c-text-2);
-  margin: 20px 0;
+  margin: 16px 0;
+  font-style: normal;
 }
+
 

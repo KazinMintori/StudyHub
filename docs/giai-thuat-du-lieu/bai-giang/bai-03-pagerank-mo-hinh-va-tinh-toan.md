@@ -7,261 +7,198 @@ prerequisites: ["do-thi","ma-tran"]
 lessonStatus: ready
 ---
 
-> *"Một trang web quan trọng không phải vì nó tự nhận mình quan trọng, mà vì nó được các trang quan trọng khác trỏ liên kết đến."*  
-> — **Larry Page & Sergey Brin (1998)**
-
 ← [Bài 02: Map-Reduce](/giai-thuat-du-lieu/bai-giang/bai-02-mapreduce-va-xu-ly-du-lieu-lon.md) · [Mục lục](/giai-thuat-du-lieu/index.md)
 
-::: info Bài này giải quyết vấn đề gì?
-Khi World Wide Web bùng nổ vào cuối thập niên 1990 với hàng tỷ trang tài liệu, các công cụ tìm kiếm dựa trên văn bản thuần túy (Inverted Index, tần suất từ khoá TF-IDF) hoàn toàn thất bại trước nạn **spam từ khóa** (nhồi nhét từ ẩn màu trắng trên nền trắng để lừa máy tìm kiếm).
+## 1. Đặt bài toán và phân tích liên kết đồ thị Web
 
-Larry Page và Sergey Brin nhận ra rằng: **cấu trúc liên kết siêu văn bản (hyperlink)** giữa các trang web chính là một hệ thống bình chọn khổng lồ có trọng số. Bài học này trình bày:
-- **Mô hình toán học:** Biểu diễn Web dưới dạng đồ thị có hướng và Chuỗi Markov (Markov Chain).
-- **Thuật toán Power Iteration:** Tính toán vector riêng trạng thái dừng trên đồ thị hàng tỷ đỉnh.
-- **Hai cạm bẫy thực tế:** Xử lý triệt để hiện tượng **Dead Ends** (hố cụt) và **Spider Traps** (bẫy nhện) bằng cơ chế **Teleportation** với hệ số suy giảm $\beta$.
-- **Cài đặt quy mô lớn:** Kiến trúc tính toán lặp ma trận thưa thớt trên hạ tầng phân tán MapReduce.
-:::
+Trong các hệ thống tìm kiếm thông tin truyền thống (Information Retrieval), việc xếp hạng tài liệu dựa chủ yếu trên sự tương đồng văn bản giữa truy vấn và nội dung (như tần suất từ khóa TF-IDF hoặc BM25). Trên môi trường World Wide Web, phương pháp này bộc lộ hai hạn chế căn bản:
 
-**Nguồn đối chiếu:** MMDS (Leskovec–Rajaraman–Ullman) Chương 5: *Link Analysis* (mục 5.1–5.3); Bài báo gốc: *The Anatomy of a Large-Scale Hypertextual Web Search Engine* (Page & Brin, 1998).
+1. **Hiện tượng thao túng nội dung (Keyword Spamming):** Tác giả trang web có thể chủ động lặp lại từ khóa nhiều lần hoặc chèn văn bản ẩn để tăng thứ hạng tìm kiếm.
+2. **Thiếu độ đo độ tin cậy độc lập:** Nội dung trang web không phản ánh được mức độ uy tín thực tế của nguồn thông tin.
 
----
-
-## 1. Trực giác: Cấu trúc liên kết như một cuộc bỏ phiếu dân chủ có trọng số
-
-Hãy tưởng tượng bạn tìm kiếm từ khóa *"đại học"*:
-- Trang chủ của một trường đại học lớn có thể chỉ xuất hiện từ "đại học" vài lần.
-- Trong khi một kẻ spam tạo một trang cá nhân lặp lại từ "đại học" 10.000 lần.
-
-Nếu chỉ đếm từ khóa, trang spam sẽ thắng. Để giải quyết điều này, ta khai thác cấu trúc đồ thị:
-1. Mỗi **hyperlink** từ trang $j$ trỏ tới trang $i$ ($j \to i$) được xem là một **lá phiếu tín nhiệm** của $j$ dành cho $i$.
-2. Không phải lá phiếu nào cũng có giá trị như nhau: Lá phiếu từ một trang uy tín (như `wikipedia.org` hay `stanford.edu`) có trọng lượng lớn hơn gấp vạn lần lá phiếu từ một blog vô danh mới tạo.
-3. Nếu một trang uy tín $j$ trỏ tới quá nhiều liên kết (out-degree $d_j$ lớn), giá trị của từng lá phiếu bị chia đều: Mỗi trang con chỉ nhận được $\frac{1}{d_j}$ độ uy tín của $j$.
-
-```mermaid
-flowchart LR
-    A["Trang A (PageRank cao)"] -->|1/3 giá trị| B["Trang B"]
-    A -->|1/3 giá trị| C["Trang C"]
-    A -->|1/3 giá trị| D["Trang D"]
-    E["Trang cá nhân E"] -->|1 giá trị thấp| B
-
-    style A fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
-    style B fill:#e6f4ea,stroke:#137333,stroke-width:2px
-```
+Để giải quyết vấn đề trên, thuật toán PageRank (Brin & Page, 1998) tiếp cận bài toán xếp hạng dựa trên cấu trúc liên kết siêu văn bản (hyperlink structure):
+- Một liên kết có hướng từ trang $j$ đến trang $i$ ($j \to i$) được coi là một sự thừa nhận hoặc giới thiệu từ $j$ dành cho $i$.
+- Độ quan trọng của trang $i$ phụ thuộc vào số lượng trang trỏ đến $i$ và mức độ quan trọng của chính các trang trỏ đó.
 
 ---
 
-## 2. Mô hình toán học: Người lướt Web ngẫu nhiên (Random Surfer)
+## 2. Mô hình người lướt ngẫu nhiên và chuỗi Markov
 
-### 2.1. Chuỗi Markov trên đồ thị Web
+### 2.1. Không gian trạng thái và xác suất chuyển
 
-Giả sử mạng Web gồm $N$ trang $\{1, 2, \dots, N\}$. Một người lướt web ngẫu nhiên (Random Surfer) bắt đầu tại một trang bất kỳ. Tại mỗi bước:
-- Nếu đang ở trang $j$, người này chọn ngẫu nhiên một trong $d_j$ liên kết ra ngoài của $j$ với xác suất bằng nhau là $\frac{1}{d_j}$ để đi tới trang tiếp theo.
+Xét đồ thị có hướng $G = (V, E)$ biểu diễn mạng Web với $N = |V|$ đỉnh. Giả sử một người dùng duyệt web theo mô hình ngẫu nhiên (Random Surfer):
+- Tại thời điểm $t$, người dùng đang ở trang $j$.
+- Nếu trang $j$ có bậc ra $d_j > 0$, người dùng chọn ngẫu nhiên một trong $d_j$ liên kết ra ngoài với xác suất đồng đều $\frac{1}{d_j}$ để chuyển sang trang kế tiếp.
 
-Gọi $r_i$ là xác suất dài hạn (long-term probability) người lướt web dừng chân tại trang $i$. Theo nguyên lý dòng chảy bảo toàn xác suất:
-$$r_i = \sum_{j \to i} \frac{r_j}{d_j}$$
+Mô hình trên cấu thành một chuỗi Markov rời rạc thời gian trên không gian trạng thái hữu hạn $V$. Ma trận chuyển tiếp $M \in \mathbb{R}^{N \times N}$ được định nghĩa bởi:
 
-### 2.2. Ma trận chuyển tiếp Markov (Stochastic Matrix) $M$
+$$M_{ij} = \begin{cases} \frac{1}{d_j} & \text{nếu } (j, i) \in E \\ 0 & \text{ngược lại} \end{cases}$$
 
-Ta định nghĩa ma trận $M$ kích thước $N \times N$, trong đó phần tử $M_{ij}$ tại hàng $i$, cột $j$ biểu diễn xác suất chuyển từ trang $j$ sang trang $i$:
-$$M_{ij} = \begin{cases} \frac{1}{d_j} & \text{nếu có liên kết } j \to i \\ 0 & \text{ngược lại} \end{cases}$$
+Trong đó, phần tử $M_{ij}$ thể hiện xác suất chuyển từ trạng thái $j$ sang trạng thái $i$. Nếu mọi đỉnh đều có bậc ra $d_j > 0$, thì tổng mỗi cột của $M$ bằng 1:
+$$\sum_{i=1}^N M_{ij} = 1 \quad \forall j$$
+Khi đó $M$ là một ma trận ngẫu nhiên theo cột (column-stochastic matrix).
 
-::: tip Lưu ý quan trọng về quy ước chỉ số
-Cột $j$ của ma trận $M$ tổng bằng 1 (cột ngẫu nhiên - column stochastic). Lưu ý rằng $M_{ij}$ là dòng từ $j$ tới $i$ (hàng là đích đến, cột là điểm xuất phát).
-:::
+### 2.2. Phân phối dừng
 
-Khi đó, hệ phương trình xác suất được viết gọn dưới dạng ma trận:
+Gọi $r_i$ là xác suất người lướt ngẫu nhiên có mặt tại trang $i$ tại trạng thái cân bằng dài hạn. Theo phương trình cân bằng dòng xác suất:
+
+$$r_i = \sum_{j: (j, i) \in E} \frac{r_j}{d_j}$$
+
+Viết dưới dạng vector ma trận:
 $$\mathbf{r} = M \mathbf{r}$$
 
-Về mặt đại số tuyến tính: Vector điểm PageRank $\mathbf{r}$ chính là **vector riêng (eigenvector)** của ma trận $M$ ứng với **trị riêng $\lambda = 1$** (Perron-Frobenius Theorem).
+Vector $\mathbf{r} = [r_1, r_2, \dots, r_N]^T$ thỏa mãn điều kiện chuẩn hóa $\sum_{i=1}^N r_i = 1$. Về mặt đại số tuyến tính, $\mathbf{r}$ chính là vector riêng chính (principal eigenvector) của $M$ ứng với trị riêng $\lambda = 1$.
 
 ---
 
-## 3. Thuật toán Lặp lũy thừa (Power Iteration)
+## 3. Thuật toán lặp lũy thừa (Power Iteration)
 
-Vì mạng Web có hàng tỷ đỉnh, ta không thể tìm vector riêng bằng phép khử Gauss ($O(N^3)$). Thay vào đó, ta dùng thuật toán lặp số học **Power Iteration**:
+Đối với đồ thị Web quy mô lớn ($N > 10^9$), việc giải phương trình đặc trưng hoặc khử ma trận trực tiếp là không khả thi về mặt tính toán. Phương pháp số được sử dụng là **lặp lũy thừa** (Power Iteration):
 
-1. **Khởi tạo:** Gán điểm khởi đầu đều nhau cho mọi trang:
+### Thuật toán:
+
+1. **Khởi tạo:**
    $$\mathbf{r}^{(0)} = \left[ \frac{1}{N}, \frac{1}{N}, \dots, \frac{1}{N} \right]^T$$
-2. **Vòng lặp:** Tại bước $t+1$, nhân ma trận với vector của bước $t$:
+2. **Bước lặp:** Tại bước $t + 1$:
    $$\mathbf{r}^{(t+1)} = M \mathbf{r}^{(t)}$$
-3. **Điều kiện dừng:** Lặp cho đến khi khoảng cách giữa hai bước đủ nhỏ:
-   $$\sum_{i=1}^N \left| r_i^{(t+1)} - r_i^{(t)} \right| < \epsilon \quad (\text{thường chọn } \epsilon = 10^{-6})$$
+3. **Tiêu chuẩn hội tụ:** Dừng khi chuẩn chênh lệch nhỏ hơn ngưỡng $\epsilon$:
+   $$\|\mathbf{r}^{(t+1)} - \mathbf{r}^{(t)}\|_1 = \sum_{i=1}^N \left| r_i^{(t+1)} - r_i^{(t)} \right| < \epsilon$$
 
-Trên thực tế đồ thị Web, chỉ sau khoảng **30 đến 50 vòng lặp**, vector $\mathbf{r}$ đã hội tụ với độ chính xác rất cao!
-
----
-
-## 4. Hai cạm bẫy thực tế: Dead Ends & Spider Traps
-
-Mô hình lý thuyết trên chỉ hội tụ hoàn hảo khi đồ thị Web là **liên thông mạnh (strongly connected)** và **không có chu kỳ (aperiodic)**. Tuy nhiên, Web thực tế có cấu trúc rất lộn xộn, dẫn tới 2 lỗi nghiêm trọng:
-
-### 4.1. Dead Ends (Hố cụt)
-- **Hiện tượng:** Trang web không có bất kỳ liên kết ra ngoài nào ($d_j = 0$). Cột tương ứng trong $M$ toàn số 0.
-- **Hậu quả:** Khi người lướt web đến đây, họ không có đường đi tiếp. Điểm PageRank bị "rò rỉ" ra ngoài vũ trụ, sau mỗi vòng lặp tổng $\sum r_i$ giảm dần và cuối cùng **toàn bộ vector $\mathbf{r} \to \mathbf{0}$**.
-
-```mermaid
-flowchart LR
-    A["Trang A"] --> B["Trang B (Hố cụt - Không link ra)"]
-    C["Trang C"] --> B
-    style B fill:#fad2cf,stroke:#c5221f,stroke-width:2px
-```
-
-### 4.2. Spider Traps (Bẫy nhện)
-- **Hiện tượng:** Một trang hoặc một cụm trang chỉ có liên kết trỏ lẫn nhau hoặc tự trỏ về chính nó, không có liên kết nào thoát ra ngoài.
-- **Hậu quả:** Người lướt web đi vào và bị kẹt vĩnh viễn bên trong. Qua các vòng lặp, toàn bộ điểm PageRank của toàn bộ mạng Internet bị cụm này hút cạn ($r_{\text{trap}} \to 1$, tất cả các trang còn lại về $0$).
-
-```mermaid
-flowchart LR
-    A["Trang A"] --> B["Trang B"]
-    B --> C["Trang C (Tự trỏ lại mình)"]
-    C --> C
-    style C fill:#fce8b2,stroke:#f29900,stroke-width:2px
-```
+Theo định lý Perron-Frobenius, dãy $\{\mathbf{r}^{(t)}\}$ sẽ hội tụ về nghiệm duy nhất nếu ma trận $M$ là ngẫu nhiên, tối giản (irreducible) và phi chu kỳ (aperiodic).
 
 ---
 
-## 5. Giải pháp của Google: Damping Factor & Random Teleport
+## 4. Các cấu trúc đồ thị đặc biệt: Dead Ends và Spider Traps
 
-Để khắc phục đồng thời cả Spider Traps và Dead Ends, Brin và Page đề xuất cơ chế **Dịch chuyển tức thời ngẫu nhiên (Random Teleportation)**:
+Trên đồ thị thực tế, hai điều kiện tối giản và ngẫu nhiên thường bị vi phạm do hai cấu trúc sau:
 
-Tại mỗi bước, người lướt Web quyết định:
-1. Với xác suất $\beta$ (thường chọn $\beta = 0.85$): Tiếp tục bấm theo một liên kết ngẫu nhiên trên trang hiện tại.
-2. Với xác suất $1 - \beta$ (tương đương $15\%$): Nhàm chán và quyết định **nhảy tức thời** đến một trang web bất kỳ ngẫu nhiên trên toàn bộ Internet!
+### 4.1. Đỉnh cụt (Dead Ends)
+Đỉnh cụt là các trang không có liên kết ra ($d_j = 0$). Trong ma trận $M$, cột tương ứng chứa toàn giá trị 0 (ma trận trở thành sub-stochastic).
 
-### Công thức PageRank hoàn chỉnh:
+- **Hệ quả:** Xác suất tại các đỉnh này không được chuyển tiếp sang các đỉnh khác. Sau mỗi vòng lặp, tổng chuẩn $\|\mathbf{r}^{(t)}\|_1$ suy giảm dần về 0.
+- **Xử lý:** Quy ước nếu gặp đỉnh cụt, người dùng chuyển ngẫu nhiên đến một đỉnh bất kỳ trong toàn bộ mạng với xác suất $\frac{1}{N}$.
+
+### 4.2. Bẫy chu trình (Spider Traps)
+Bẫy chu trình là tập hợp các đỉnh chỉ có liên kết nội bộ, không có đường ra tới phần còn lại của đồ thị (ví dụ một trang tự trỏ vào chính nó).
+
+- **Hệ quả:** Xác suất tích tụ dần trong bẫy qua các bước lặp. Tại trạng thái dừng, toàn bộ điểm số của mạng dồn về các đỉnh trong bẫy ($r_i \to 1$), trong khi các đỉnh khác tiệm cận 0.
+
+---
+
+## 5. Mô hình suy giảm và bước nhảy ngẫu nhiên (Random Walk with Teleportation)
+
+Để đảm bảo tính hội tụ đồng thời giải quyết triệt để Dead Ends và Spider Traps, mô hình người lướt ngẫu nhiên được điều chỉnh bổ sung cơ chế **nhảy ngẫu nhiên (teleportation)**:
+
+Tại mỗi bước:
+- Với xác suất $\beta \in (0, 1)$, người dùng di chuyển theo liên kết có sẵn.
+- Với xác suất $1 - \beta$, người dùng nhảy ngẫu nhiên đến một trang bất kỳ trên toàn bộ mạng.
+
+Phương trình PageRank hiệu chỉnh:
 
 $$\mathbf{r} = \beta M \mathbf{r} + \frac{1 - \beta}{N} \mathbf{1}$$
 
 Trong đó:
-- $\beta \in (0, 1)$ gọi là **Hệ số suy giảm (Damping Factor)**.
-- $\mathbf{1}$ là vector toàn số 1 kích thước $N \times 1$.
-- Đại lượng $\frac{1 - \beta}{N}$ đóng vai trò là "mức thuế" tối thiểu chia đều cho mọi trang, đảm bảo không trang nào bị về 0 điểm và không bẫy nào có thể hút cạn điểm của mạng.
-
-::: tip Xử lý Dead Ends trong công thức
-Nếu gặp một trang hố cụt $j$ (cột trong $M$ toàn số 0), ta quy ước người dùng tại $j$ sẽ tự động teleport tới mọi trang với xác suất $\frac{1}{N}$.
-:::
+- $\beta$ là hệ số suy giảm (damping factor), thực nghiệm thực tế thường đặt $\beta = 0.85$.
+- $\mathbf{1} \in \mathbb{R}^{N \times 1}$ là vector gồm toàn phần tử 1.
+- Ma trận chuyển tiếp hiệu chỉnh tương đương:
+  $$A = \beta M + \frac{1 - \beta}{N} \mathbf{E}$$
+  với $\mathbf{E} = \mathbf{1}\mathbf{1}^T$. Ma trận $A$ là ma trận dương và ngẫu nhiên theo cột, đảm bảo chuỗi Markov có phân phối dừng duy nhất và hội tụ tuyến tính với tốc độ phụ thuộc vào $\beta$.
 
 ---
 
-## 6. Ví dụ tính toán chi tiết từng bước bằng số
+## 6. Ví dụ tính toán từng bước
 
-Xét một mạng Web nhỏ gồm 3 trang: **A, B, C** với các liên kết:
-- $A \to B, A \to C$ (A có 2 link ra: $d_A = 2$)
-- $B \to C$ (B có 1 link ra: $d_B = 1$)
-- $C \to A$ (C có 1 link ra: $d_C = 1$)
+Xét đồ thị gồm 3 trang $A, B, C$ với tập liên kết: $A \to B, A \to C, B \to C, C \to A$.
 
-```mermaid
-flowchart LR
-    A((A)) -->|1/2| B((B))
-    A -->|1/2| C((C))
-    B -->|1| C
-    C -->|1| A
-```
+Bậc ra: $d_A = 2, d_B = 1, d_C = 1$.
 
-### Bước 1: Thiết lập ma trận chuyển tiếp $M$
-
-Hàng 1 là đích A, Hàng 2 là B, Hàng 3 là C:
+Ma trận chuyển tiếp $M$:
 $$M = \begin{bmatrix}
 0 & 0 & 1 \\
 1/2 & 0 & 0 \\
 1/2 & 1 & 0
 \end{bmatrix}$$
 
-### Bước 2: Tính toán Power Iteration với $\beta = 0.85, N = 3$
+Chọn $\beta = 0.85, N = 3$. Thành phần nhảy ngẫu nhiên: $\frac{1 - \beta}{N} = \frac{0.15}{3} = 0.05$.
 
-Số hạng teleport cố định: $\frac{1 - \beta}{N} = \frac{0.15}{3} = 0.05$.
+### Bước 0:
+$$\mathbf{r}^{(0)} = \begin{bmatrix} 1/3 \\ 1/3 \\ 1/3 \end{bmatrix} \approx \begin{bmatrix} 0.3333 \\ 0.3333 \\ 0.3333 \end{bmatrix}$$
 
-- **Khởi tạo ($t = 0$):**
-  $$\mathbf{r}^{(0)} = \begin{bmatrix} 1/3 \\ 1/3 \\ 1/3 \end{bmatrix} \approx \begin{bmatrix} 0.3333 \\ 0.3333 \\ 0.3333 \end{bmatrix}$$
+### Bước 1:
+$$M \mathbf{r}^{(0)} = \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix}$$
+$$\mathbf{r}^{(1)} = 0.85 \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1917 \\ 0.4750 \end{bmatrix}$$
 
-- **Vòng lặp 1 ($t = 1$):**
-  $$M \mathbf{r}^{(0)} = \begin{bmatrix} 0 & 0 & 1 \\ 0.5 & 0 & 0 \\ 0.5 & 1 & 0 \end{bmatrix} \begin{bmatrix} 0.3333 \\ 0.3333 \\ 0.3333 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix}$$
-  $$\mathbf{r}^{(1)} = 0.85 \times \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1917 \\ 0.4750 \end{bmatrix}$$
+### Bước 2:
+$$M \mathbf{r}^{(1)} = \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix}$$
+$$\mathbf{r}^{(2)} = 0.85 \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.4538 \\ 0.1917 \\ 0.3546 \end{bmatrix}$$
 
-- **Vòng lặp 2 ($t = 2$):**
-  $$M \mathbf{r}^{(1)} = \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix} \implies \mathbf{r}^{(2)} = 0.85 \times \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.4538 \\ 0.1917 \\ 0.3546 \end{bmatrix}$$
-
-Sau khoảng 20 vòng lặp, nghiệm hội tụ về giá trị dừng:
+Sau khi lặp đến hội tụ ($\epsilon < 10^{-5}$):
 $$\mathbf{r}^* \approx \begin{bmatrix} 0.3877 \\ 0.2148 \\ 0.3975 \end{bmatrix}$$
 
-**Kết luận xếp hạng:** Trang **C** đứng đầu ($39.75\%$), kế tiếp là trang **A** ($38.77\%$), và cuối cùng là trang **B** ($21.48\%$). Điều này hoàn toàn khớp với trực quan: Trang C nhận được liên kết từ cả A và B!
+Thứ hạng các trang: $C > A > B$.
 
 ---
 
-## 7. Cài đặt PageRank trên MapReduce cho Dữ liệu lớn
+## 7. Cài đặt thuật toán trên mô hình phân tán MapReduce
 
-Khi $N = 100$ tỷ trang Web, ma trận $M$ chứa $10^{22}$ phần tử — không một siêu máy tính nào có thể lưu trực tiếp ma trận này trong RAM. Tuy nhiên, ma trận $M$ cực kỳ **thưa (sparse)** vì mỗi trang trung bình chỉ có khoảng 10–50 liên kết ra ngoài.
+Trong điều kiện $N$ rất lớn, việc tính toán $\mathbf{r}^{(t+1)} = \beta M \mathbf{r}^{(t)} + \frac{1 - \beta}{N} \mathbf{1}$ được tổ chức trên kiến trúc phân tán như sau:
 
-### Kiến trúc tính toán MapReduce cho mỗi vòng lặp:
-
-1. **Dữ liệu đầu vào:** Mỗi bản ghi gồm: `(Trang nguồn u, Điểm r_u hiện tại, Danh sách liên kết ra [v_1, v_2, ..., v_k])`
-2. **Hàm Map:**
-   - Với mỗi trang đích $v_i$ trong danh sách: Phát ra cặp `(v_i, r_u / k)`.
-   - Đồng thời phát lại cấu trúc đồ thị `(u, [v_1, ..., v_k])` để dùng cho vòng lặp tiếp theo.
-3. **Hàm Reduce:**
-   - Nhận khóa là trang đích $v$ và danh sách các phần đóng góp từ các trang trỏ tới nó.
-   - Cộng dồn: $S_v = \sum \text{contributions}$.
-   - Áp dụng hệ số suy giảm: $r_v^{\text{mới}} = \beta \cdot S_v + \frac{1 - \beta}{N}$.
-   - Ghi ra đĩa kết quả của vòng lặp này để làm đầu vào cho vòng lặp kế tiếp.
+- Biểu diễn đồ thị thưa: Mỗi dòng lưu bản ghi `(u, r_u, [v_1, v_2, ..., v_k])` với $u$ là trang nguồn, $r_u$ là điểm số tại bước hiện tại, và danh sách các đỉnh kề $v_i$.
+- **Giai đoạn Map:**
+  - Nhận đầu vào là bản ghi đỉnh $u$.
+  - Phát cặp khóa-giá trị: `(v_i, r_u / k)` cho từng đỉnh kề $v_i$.
+  - Phát lại cấu trúc đồ thị: `(u, [v_1, ..., v_k])` để duy trì dữ liệu liên kết cho vòng sau.
+- **Giai đoạn Reduce:**
+  - Nhóm theo khóa $v_i$.
+  - Tính tổng các giá trị đóng góp: $S_{v_i} = \sum \text{values}$.
+  - Tính điểm mới: $r_{v_i}^{\text{mới}} = \beta \cdot S_{v_i} + \frac{1 - \beta}{N}$.
+  - Ghi bản ghi cập nhật ra hệ thống lưu trữ phân tán.
 
 ---
 
-## 8. Mã nguồn Python thực nghiệm (Vectorized NumPy)
+## 8. Cài đặt tham khảo bằng Python
 
 ```python
 import numpy as np
 
-def compute_pagerank(M, beta=0.85, epsilon=1e-6, max_iter=100):
+def pagerank(M, beta=0.85, tol=1e-6, max_iter=100):
     """
-    Tính vector điểm PageRank bằng thuật toán Power Iteration.
+    Tính vector PageRank bằng phương pháp lặp lũy thừa.
     
     Tham số:
-        M: Ma trận chuyển tiếp Markov (N x N), column-stochastic
-        beta: Hệ số suy giảm Damping Factor (mặc định 0.85)
-        epsilon: Ngưỡng dừng sai số L1
+        M: np.ndarray, kích thước (N, N), ma trận chuyển tiếp Markov.
+        beta: float, hệ số suy giảm (mặc định 0.85).
+        tol: float, ngưỡng hội tụ cho chuẩn L1.
+        max_iter: int, số vòng lặp tối đa.
+        
+    Trả về:
+        r: np.ndarray, vector điểm phân phối dừng (N,).
     """
     N = M.shape[0]
-    # Khởi tạo vector điểm đều nhau
     r = np.ones(N) / N
     teleport = (1.0 - beta) / N
-    
-    for iteration in range(1, max_iter + 1):
-        r_new = beta * M.dot(r) + teleport
-        
-        # Kiểm tra độ lệch chuẩn L1
-        diff = np.sum(np.abs(r_new - r))
-        print(f"Vòng lặp {iteration:02d}: Điểm = {np.round(r_new, 4)}, Độ lệch = {diff:.6f}")
-        
-        r = r_new
-        if diff < epsilon:
-            print(f"--> Thuật toán hội tụ sau {iteration} vòng lặp!")
+
+    for it in range(max_iter):
+        r_next = beta * M.dot(r) + teleport
+        diff = np.linalg.norm(r_next - r, ord=1)
+        r = r_next
+        if diff < tol:
             break
-            
+
     return r
 
-# Khai báo đồ thị 3 đỉnh từ Ví dụ mục 6
-M = np.array([
-    [0.0, 0.0, 1.0],
-    [0.5, 0.0, 0.0],
-    [0.5, 1.0, 0.0]
-])
+if __name__ == '__main__':
+    # Ma trận chuyển tiếp ví dụ mục 6
+    M = np.array([
+        [0.0, 0.0, 1.0],
+        [0.5, 0.0, 0.0],
+        [0.5, 1.0, 0.0]
+    ])
 
-scores = compute_pagerank(M)
-print("\nKết quả PageRank cuối cùng:")
-for idx, page in enumerate(['A', 'B', 'C']):
-    print(f"Trang {page}: {scores[idx]:.4f} ({scores[idx]*100:.2f}%)")
+    scores = pagerank(M)
+    for idx, name in enumerate(['A', 'B', 'C']):
+        print(f"Trang {name}: {scores[idx]:.4f}")
 ```
-
----
-
-## 9. Câu hỏi tự kiểm tra & Thảo luận
-
-::: tip Câu hỏi ôn tập
-1. **Tại sao $\beta$ thường được chọn bằng 0.85 mà không phải 1.0 hay 0.5?**  
-   *Gợi ý:* Nếu $\beta = 1.0$, ta đối mặt nguy cơ Spider Trap và Dead End. Nếu $\beta$ quá nhỏ (ví dụ 0.1), thành phần ngẫu nhiên át đi cấu trúc liên kết thực tế. Giá trị 0.85 là điểm cân bằng lý tưởng được kiểm chứng qua thực nghiệm của Google.
-2. **Nếu một trang cố tình tạo ra 1.000 trang con rác tự trỏ về nó, nó có thể tăng PageRank lên vô hạn không?**  
-   *Gợi ý:* Hãy xem xét định luật bảo toàn dòng PageRank và thành phần "đánh thuế" $\beta$. Đây là cơ sở của thuật toán chống spam liên kết **TrustRank** (Bài 04).
-:::
 
 ---
 

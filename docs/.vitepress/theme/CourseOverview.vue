@@ -28,10 +28,7 @@ function getLessonIndex(c, slug) {
     <template v-if="course.parts && course.parts.length">
       <div v-for="(part, pIdx) in course.parts" :key="part.title" class="course-part-section">
         <div class="part-banner">
-          <div class="part-title-row">
-            <span class="part-bookmark-icon" aria-hidden="true">🔖</span>
-            <h2>{{ part.title }}</h2>
-          </div>
+          <h2 class="part-title">{{ part.title }}</h2>
           <p v-if="part.description" class="part-description">{{ part.description }}</p>
         </div>
 

@@ -1,5 +1,6 @@
 const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
+
 export const courseCatalog = [
   {
     id: 'bieu-dien-tri-thuc', code: '01', name: 'Biểu diễn tri thức & Tìm kiếm', short: 'Tri thức & Tìm kiếm', current: true,
@@ -7,23 +8,23 @@ export const courseCatalog = [
     foundations: ['tap-hop', 'menh-de', 'luong-tu', 'do-thi', 'cay', 'trang-thai', 'hang-doi', 'ngan-xep', 'hang-doi-uu-tien', 'do-phuc-tap', 'heuristic', 'xac-suat-co-dieu-kien', 'doc-lap'],
     parts: [
       {
-        title: 'Phần I: Tổng quan & Tác tử thông minh',
-        description: 'Định nghĩa tác tử, môi trường và cấu trúc giải quyết vấn đề.',
+        title: 'Phần 1. Tổng quan và tác tử thông minh',
+        description: 'Đặc tả tác tử, môi trường và cấu trúc giải quyết bài toán.',
         lessons: ['01-gioi-thieu-tac-tu']
       },
       {
-        title: 'Phần II: Không gian Trạng thái & Thuật toán Tìm kiếm',
-        description: 'Chiến lược tìm kiếm mù và tìm kiếm có thông tin (Heuristic, A*).',
+        title: 'Phần 2. Không gian trạng thái và thuật toán tìm kiếm',
+        description: 'Chiến lược tìm kiếm mù và tìm kiếm kinh nghiệm Heuristic, A*.',
         lessons: ['02-tim-kiem-mu', '03-tim-kiem-kinh-nghiem']
       },
       {
-        title: 'Phần III: Lý thuyết Trò chơi & Thỏa mãn Ràng buộc',
-        description: 'Đối kháng Minimax, cắt tỉa Alpha-Beta và bài toán CSP.',
+        title: 'Phần 3. Tìm kiếm đối kháng và bài toán ràng buộc',
+        description: 'Thuật toán Minimax, cắt tỉa Alpha-Beta và bài toán thỏa mãn ràng buộc.',
         lessons: ['04-tim-kiem-doi-khang', '05-csp']
       },
       {
-        title: 'Phần IV: Biểu diễn Tri thức & Suy luận Mạng Bayes',
-        description: 'Logic mệnh đề, logic vị từ và suy luận xác suất trong mạng Bayes.',
+        title: 'Phần 4. Biểu diễn tri thức và suy luận',
+        description: 'Logic vị từ, luật suy diễn và mô hình mạng Bayes.',
         lessons: ['14-logic-bieu-dien-tri-thuc', '16-mang-bayes']
       }
     ],
@@ -50,12 +51,12 @@ export const courseCatalog = [
     foundations: ['tap-hop', 'ham-so', 'vector', 'ma-tran', 'tich-vo-huong', 'chuan', 'gioi-han', 'dao-ham', 'dao-ham-rieng', 'gradient', 'quy-tac-chuoi', 'tri-rieng', 'to-hop-loi'],
     parts: [
       {
-        title: 'Phần I: Tối ưu hóa & Thuật toán Gradient',
-        description: 'Hàm mục tiêu, hướng giảm dốc và cập nhật tham số Gradient Descent.',
+        title: 'Phần 1. Tối ưu hóa và Gradient Descent',
+        description: 'Hàm mục tiêu, hướng giảm dốc và cập nhật tham số đạo hàm riêng.',
         lessons: ['bai-01-nhap-mon-toi-uu']
       },
       {
-        title: 'Phần II: Hình học Lồi & Phân tích Nghiệm',
+        title: 'Phần 2. Hình học tập lồi và phân tích nghiệm',
         description: 'Tập lồi, tổ hợp lồi, hàm lồi và tính chất cực tiểu toàn cục.',
         lessons: ['bai-02-tap-loi']
       }
@@ -77,17 +78,17 @@ export const courseCatalog = [
     foundations: ['tap-hop', 'khong-gian-mau', 'to-hop', 'xac-suat-co-dieu-kien', 'doc-lap', 'bien-ngau-nhien', 'ky-vong', 'phuong-sai', 'tich-phan', 'mau-tong-the'],
     parts: [
       {
-        title: 'Phần I: Cơ sở Xác suất & Định lý Bayes',
+        title: 'Phần 1. Cơ sở xác suất và định lý Bayes',
         description: 'Không gian mẫu, xác suất có điều kiện, tính độc lập và cập nhật niềm tin Bayes.',
         lessons: ['01-xac-suat-va-bayes']
       },
       {
-        title: 'Phần II: Biến ngẫu nhiên & Quy luật Phân phối',
+        title: 'Phần 2. Biến ngẫu nhiên và quy luật phân phối',
         description: 'Biến ngẫu nhiên rời rạc, liên tục, hàm mật độ PDF và hàm phân phối tích lũy CDF.',
         lessons: ['02-bien-ngau-nhien']
       },
       {
-        title: 'Phần III: Các đặc trưng Số & Thống kê Mẫu',
+        title: 'Phần 3. Các đặc trưng số và thống kê mẫu',
         description: 'Kỳ vọng, phương sai, hiệp phương sai và ước lượng tham số từ mẫu dữ liệu.',
         lessons: ['03-ky-vong-phuong-sai']
       }
@@ -110,17 +111,17 @@ export const courseCatalog = [
     foundations: ['bien-kieu', 'list', 'dictionary', 'ham-lap-trinh', 'vong-lap', 'mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'],
     parts: [
       {
-        title: 'Phần I: Môi trường & Nền tảng Ngôn ngữ Python',
+        title: 'Phần 1. Môi trường và ngôn ngữ Python',
         description: 'Thiết lập quy trình phân tích dữ liệu, kiểu dữ liệu cốt lõi, hàm và cấu trúc điều khiển.',
         lessons: ['bai-01-tong-quan-cong-cu-chinh-sach-ai', 'bai-02-python-co-ban']
       },
       {
-        title: 'Phần II: Tính toán Vector với NumPy',
+        title: 'Phần 2. Tính toán vector với NumPy',
         description: 'Mảng nhiều chiều ndarray, bộ nhớ liên tục, ufunc và cơ chế broadcasting.',
         lessons: ['bai-03-numpy']
       },
       {
-        title: 'Phần III: Thao tác & Phân tích Dữ liệu với pandas',
+        title: 'Phần 3. Thao tác và phân tích dữ liệu với pandas',
         description: 'Cấu trúc Series, DataFrame, lọc theo nhãn/vị trí, xử lý giá trị thiếu và gom nhóm GroupBy.',
         lessons: ['bai-04-lam-quen-pandas', 'bai-05-series-dataframe-chuyen-sau']
       }
@@ -146,18 +147,18 @@ export const courseCatalog = [
     foundations: ['vector', 'tich-vo-huong', 'chuan', 'dao-ham', 'dao-ham-rieng', 'gradient', 'tich-phan', 'dien-tich', 'luc', 'cong-nang-luong', 'dien-the', 'thong-luong', 'don-vi', 'song'],
     parts: [
       {
-        title: 'Phần I: Tương tác Tĩnh điện & Điện trường',
+        title: 'Phần 1. Tương tác tĩnh điện và điện trường',
         description: 'Định luật Coulomb, nguyên lý chồng chất và vector cường độ điện trường.',
         lessons: ['01-dien-truong-coulomb']
       },
       {
-        title: 'Phần II: Năng lượng Tĩnh điện & Điện thế',
-        description: 'Công của lực điện trường, điện thế, mặt đẳng thế và mối liên hệ vi phân với gradient.',
+        title: 'Phần 2. Năng lượng tĩnh điện và điện thế',
+        description: 'Công của lực điện trường, điện thế, mặt đẳng thế và gradient.',
         lessons: ['02-dien-the']
       },
       {
-        title: 'Phần III: Thông lượng & Định luật Gauss',
-        description: 'Thông lượng điện trường qua mặt kín và tính điện trường trong hệ có tính đối xứng cao.',
+        title: 'Phần 3. Thông lượng và định luật Gauss',
+        description: 'Thông lượng điện trường qua mặt kín và tính điện trường đối xứng.',
         lessons: ['03-dinh-luat-gauss']
       }
     ],
@@ -179,17 +180,17 @@ export const courseCatalog = [
     foundations: ['do-phuc-tap', 'ham-lap-trinh', 'dictionary', 'khoa-gia-tri', 'bam', 'phan-tan', 'ket-hop', 'vector', 'ma-tran', 'do-thi', 'xac-suat-co-dieu-kien'],
     parts: [
       {
-        title: 'Phần I: Nền tảng Dữ liệu lớn & Mô hình Thuật toán',
+        title: 'Phần 1. Nền tảng dữ liệu lớn và mô hình thuật toán',
         description: 'Đặc tả bài toán, độ đo khoảng cách, tiêu chuẩn đánh giá và nguyên lý Bonferroni.',
         lessons: ['bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan']
       },
       {
-        title: 'Phần II: Tính toán Phân tán MapReduce',
+        title: 'Phần 2. Tính toán phân tán MapReduce',
         description: 'Mô hình lập trình Map/Shuffle/Reduce/Combine, nhân ma trận lớn và mô hình chi phí cụm máy.',
         lessons: ['bai-02-mapreduce-va-xu-ly-du-lieu-lon']
       },
       {
-        title: 'Phần III: Phân tích Đồ thị & Xếp hạng Web (PageRank)',
+        title: 'Phần 3. Phân tích đồ thị và thuật toán PageRank',
         description: 'Mô hình Random Surfer, Power Iteration, xử lý Dead Ends, Spider Traps và Damping Factor.',
         lessons: ['bai-03-pagerank-mo-hinh-va-tinh-toan']
       }
@@ -213,17 +214,17 @@ export const courseCatalog = [
     foundations: ['mang', 'con-tro', 'de-quy', 'hang-doi', 'ngan-xep', 'cay', 'do-thi', 'do-phuc-tap', 'quy-nap'],
     parts: [
       {
-        title: 'Phần I: Nền tảng Phân tích Thuật toán',
+        title: 'Phần 1. Độ phức tạp và đánh giá thuật toán',
         description: 'Đánh giá thời gian và không gian qua ký hiệu Big-O và phương pháp quy nạp.',
         lessons: ['complexity']
       },
       {
-        title: 'Phần II: Thuật toán Cơ sở: Sắp xếp & Tìm kiếm',
+        title: 'Phần 2. Thuật toán sắp xếp và tìm kiếm',
         description: 'Các thuật toán sắp xếp kinh điển và tìm kiếm nhị phân trên dãy có thứ tự.',
         lessons: ['sorting', 'searching']
       },
       {
-        title: 'Phần III: Cấu trúc Dữ liệu Phi tuyến tính',
+        title: 'Phần 3. Cấu trúc dữ liệu cây và đồ thị',
         description: 'Cây nhị phân, cây tìm kiếm, đồ thị và các thuật toán duyệt BFS, DFS.',
         lessons: ['trees', 'graphs']
       }
@@ -248,17 +249,17 @@ export const courseCatalog = [
     foundations: ['tap-hop', 'ham-so', 'menh-de', 'luong-tu', 'quy-nap', 'to-hop', 'quan-he', 'do-thi', 'cay'],
     parts: [
       {
-        title: 'Phần I: Logic Toán & Quy tắc Suy luận',
+        title: 'Phần 1. Logic mệnh đề và vị từ',
         description: 'Logic mệnh đề, bảng chân trị, logic vị từ và các lượng từ toán học.',
         lessons: ['logic']
       },
       {
-        title: 'Phần II: Tập hợp, Quan hệ & Ánh xạ',
+        title: 'Phần 2. Tập hợp, quan hệ và ánh xạ',
         description: 'Định nghĩa tập hợp, tích Descartes, quan hệ tương đương, thứ tự và hàm số.',
         lessons: ['relations']
       },
       {
-        title: 'Phần III: Cơ sở Lý thuyết Đồ thị',
+        title: 'Phần 3. Cơ sở lý thuyết đồ thị',
         description: 'Đỉnh, cạnh, đường đi, chu trình, đồ thị Euler, Hamilton và cây liên thông.',
         lessons: ['graph-theory']
       }

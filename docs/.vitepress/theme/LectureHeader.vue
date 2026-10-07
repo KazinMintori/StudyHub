@@ -31,18 +31,17 @@ function select(id) {
     </nav>
 
     <div class="lecture-header-meta">
-      <span class="chapter-badge">BÀI {{ String(course.lessons.indexOf(lesson) + 1).padStart(2, '0') }}</span>
-      <span v-if="currentPart" class="part-badge-small">🔖 {{ currentPart.title }}</span>
+      <span class="chapter-num">Bài {{ String(course.lessons.indexOf(lesson) + 1).padStart(2, '0') }}</span>
+      <span v-if="currentPart" class="part-name">{{ currentPart.title }}</span>
     </div>
 
     <h1>{{ lesson.title }}</h1>
-    <p class="lecture-description">
-      {{ lesson.status === 'ready'
-        ? 'Tài liệu chuẩn mực theo phong cách sách giáo trình: Đọc lý thuyết, xem ví dụ thực tế và tra cứu công thức.'
-        : 'Bài giảng đang được biên soạn. Bạn có thể tra cứu kiến thức nền tảng trước.' }}
+
+    <p v-if="lesson.status !== 'ready'" class="draft-notice">
+      Nội dung chi tiết đang được hoàn thiện. Bạn có thể xem trước các khái niệm nền tảng.
     </p>
 
-    <nav class="course-tabs lecture-tabs" aria-label="Ba phần của bài giảng">
+    <nav class="course-tabs lecture-tabs" aria-label="Các phần của bài giảng">
       <a
         v-for="item in lectureParts"
         :key="item.id"
