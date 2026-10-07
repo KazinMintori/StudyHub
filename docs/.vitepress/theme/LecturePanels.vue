@@ -27,5 +27,19 @@ onMounted(()=>{load();window.addEventListener('keydown',keyboard)});onUnmounted(
       <article v-for="id in required" :key="id" class="foundation-entry" :id="`nen-tang-${id}`"><div class="foundation-entry-heading"><h3><a class="study-term" :data-term="id" :href="studyLink(`/wiki/${id}`)">{{ concepts[id].name }}</a></h3><button class="study-button" :aria-pressed="!!understood[id]" @click="toggle(id)">{{ understood[id] ? 'Đã hiểu' : 'Đánh dấu đã hiểu' }}</button></div><p>{{ concepts[id].definition }}</p><div class="foundation-example"><h4>Ví dụ</h4><p>{{ concepts[id].example }}</p></div><p class="foundation-use"><strong>Dùng để:</strong> {{ concepts[id].use }}</p><details><summary>Tự kiểm tra: {{ concepts[id].question }}</summary><p>{{ concepts[id].answer }}</p></details><a class="text-link" :href="studyLink(`/wiki/${id}`)">Đọc kỹ {{ concepts[id].name }} trong Wiki →</a></article>
       <p v-if="storageMessage" role="status" class="storage-message">{{ storageMessage }}</p>
     </section>
+    <section v-else-if="part==='bai-tap'" class="lecture-exercises" aria-label="Bài tập của bài giảng">
+      <p class="eyebrow">LUYỆN TẬP VÀ VẬN DỤNG</p>
+      <h2>Bài tập ôn luyện</h2>
+      <p>Hệ thống bài tập lý thuyết, phân tích giải thuật và bài toán tính toán của <strong>{{ lesson.title }}</strong>.</p>
+      <div class="lecture-exercise-box">
+        <div class="exercise-intro-card">
+          <h3>Hệ thống bài tập môn {{ course.name }}</h3>
+          <p>Tất cả bài tập theo từng phần học phần được tổng hợp tại chuyên mục bài tập ôn luyện của môn, bao gồm cả bài toán phân tích tiệm cận, tính toán từng bước và lời giải gợi ý.</p>
+          <a class="study-button primary" :href="studyLink(`/${course.id}/bai-tap`)">
+            Xem toàn bộ bài tập môn {{ course.name }} →
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>

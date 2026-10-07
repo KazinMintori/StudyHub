@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#244bd6"/>
+      <stop offset="100%" stop-color="#1b3cac"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2fe"/>
+      <stop offset="100%" stop-color="#e2ebfd"/>
+    </linearGradient>
+    <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Dung lượng lưu trữ: Dữ liệu mã hóa + Toàn bộ thông tin giải mã</text>
+    
+    <!-- File structure bar -->
+    <g transform="translate(60, 75)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      
+      <!-- Meta / Dictionary part -->
+      <rect x="0" y="0" width="220" height="60" rx="8" fill="url(#softAmber)" stroke="#f59e0b" stroke-width="2"/>
+      <text x="110" y="28" font-size="12" font-weight="700" fill="#b45309" text-anchor="middle">Thông tin phụ trợ</text>
+      <text x="110" y="46" font-size="11" fill="#78350f" text-anchor="middle">Cây mã, Từ điển, Header (H byte)</text>
+
+      <!-- Compressed payload -->
+      <rect x="220" y="0" width="420" height="60" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="2"/>
+      <text x="430" y="28" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">Dữ liệu mã nén (Payload)</text>
+      <text x="430" y="46" font-size="11" fill="#1e40af" text-anchor="middle">Chuỗi bit nén đã mã hóa (B byte)</text>
+    </g>
+
+    <text x="380" y="170" font-size="14" font-weight="700" fill="#1e293b" text-anchor="middle">Tổng kích thước lưu trữ = H (Phụ trợ) + B (Mã nén)</text>
+    <text x="380" y="195" font-size="11" fill="#64748b" text-anchor="middle">Với tệp nhỏ hoặc dữ liệu ngẫu nhiên: H + B có thể LỚN HƠN tệp gốc ban đầu!</text>
+  
+</svg>

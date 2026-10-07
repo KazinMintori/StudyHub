@@ -5,6 +5,7 @@ Thumbs.db
 # VitePress cache and build outputs
 docs/.vitepress/cache
 docs/.vitepress/dist
+docs/.vitepress/.temp
 dist/
 /assets/
 .static-export.json
@@ -29,8 +30,11 @@ qa/
 /goc-hoc-tap.html
 /favicon.svg
 /logo.svg
+/coffee-logo.svg
 /hashmap.json
 /vp-icons.css
+/*.png
+/img/
 
 # Python
 __pycache__/

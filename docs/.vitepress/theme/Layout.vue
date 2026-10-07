@@ -17,7 +17,7 @@ function syncLink(event) {
   if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return
   const anchor=event.target.closest?.('a[href]');if(!anchor)return
   const url=new URL(anchor.href,window.location.href)
-  if(url.origin===window.location.origin && url.pathname===window.location.pathname && ['#slides','#notes','#kien-thuc-can-co'].includes(url.hash))lecturePart.value=url.hash.slice(1)
+  if(url.origin===window.location.origin && url.pathname===window.location.pathname && ['#slides','#notes','#kien-thuc-can-co','#bai-tap'].includes(url.hash))lecturePart.value=url.hash.slice(1)
 }
 onMounted(()=>{syncLecturePart();window.addEventListener('hashchange',syncLecturePart);window.addEventListener('popstate',syncLecturePart);document.addEventListener('click',syncLink,true)})
 onUnmounted(()=>{window.removeEventListener('hashchange',syncLecturePart);window.removeEventListener('popstate',syncLecturePart);document.removeEventListener('click',syncLink,true)})

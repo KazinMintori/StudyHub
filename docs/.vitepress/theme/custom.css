@@ -50,7 +50,7 @@ button:disabled { opacity: .55; cursor: wait; }
   font-size: 19px;
   font-weight: var(--site-title-weight);
 }
-.VPNavBarTitle .title::before { content: 'U'; background: #244bd6; color: white; width: 29px; height: 29px; display: grid; place-items: center; font-family: var(--site-title-font); font-size: 19px; font-weight: 700; border-radius: 4px; margin-right: 10px; }
+.VPNavBarTitle .logo { height: 36px; width: auto; margin-right: 12px; object-fit: contain; }
 .VPNavBarMenuLink, .VPNavBarMenuGroup .study-button { font-size: 13px; }
 .VPNavBarSearch { display: none !important; }
 .VPHome { padding-bottom: 0 !important; margin-bottom: 0 !important; }
@@ -61,6 +61,13 @@ button:disabled { opacity: .55; cursor: wait; }
 .eyebrow span { padding: 0 8px; color: var(--vp-c-border); }
 .small { font-size: 12px; line-height: 1.7; color: var(--vp-c-text-2); }
 .home-intro .eyebrow { font-family: var(--site-title-font); font-size: 11px; letter-spacing: 2px; }
+.hero-brand { margin-bottom: 16px; }
+.hero-logo { height: 44px; width: auto; object-fit: contain; }
+.dark-only { display: none !important; }
+.light-only { display: block !important; }
+html.dark .dark-only { display: block !important; }
+html.dark .light-only { display: none !important; }
+.start-panel-logo { width: 22px; height: 22px; object-fit: contain; }
 .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 335px; gap: 68px; padding: 68px 0 56px; align-items: center; border-bottom: 1px solid var(--vp-c-divider); }
 .intro-copy h1 { margin: 22px 0; font-size: clamp(32px, 3.4vw, 47px); line-height: 1.28; letter-spacing: -1.7px; font-weight: 650; }
 .intro-copy h1 span { color: var(--vp-c-brand-1); }
@@ -372,6 +379,12 @@ button:disabled { opacity: .55; cursor: wait; }
 .lecture-foundations .foundation-example h4 { font-size: 12px; margin-bottom: 10px; font-weight: 600; }
 .lecture-foundations .foundation-entry { padding: 28px 0; }
 .lecture-foundations .foundation-entry details p { padding: 12px; background: var(--vp-c-bg-soft); border-radius: 5px; }
+.lecture-exercises > h2 { font-size: 25px; font-weight: 600; margin: 10px 0 18px; }
+.lecture-exercises > p:not(.eyebrow) { line-height: 1.9; font-size: 14px; color: var(--vp-c-text-2); }
+.lecture-exercise-box { margin-top: 24px; }
+.exercise-intro-card { background: var(--study-card); border: 1px solid var(--vp-c-border); border-radius: 6px; padding: 24px; }
+.exercise-intro-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.exercise-intro-card p { font-size: 14px; line-height: 1.8; color: var(--vp-c-text-2); margin-bottom: 20px; }
 .wiki-index h1 { font-size: 40px; line-height: 1.6; font-weight: 650; letter-spacing: -1px; margin: 12px 0; }
 .wiki-index > p:not(.eyebrow) { font-size: 15px; line-height: 1.9; max-width: 750px; color: var(--vp-c-text-2); }
 .wiki-filters { display: grid; grid-template-columns: 1fr 280px; gap: 22px; margin: 28px 0 16px; }

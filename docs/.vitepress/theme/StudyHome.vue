@@ -17,14 +17,18 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
   <main class="study-home">
     <section class="home-intro">
       <div class="intro-copy">
+        <div class="hero-brand">
+          <img class="hero-logo light-only" :src="withBase('/logo.png')" alt="UET Polytechnic Logo" />
+          <img class="hero-logo dark-only" :src="withBase('/logo-dark.png')" alt="UET Polytechnic Logo" />
+        </div>
         <p class="eyebrow">UETỆ <span>/</span> KHÔNG GIAN TỰ HỌC</p>
         <h1>Học hiểu bản chất.<br><span>Ôn tập có hệ thống.</span></h1>
         <p class="intro-description">Bài giảng, công thức và ví dụ được sắp xếp theo từng học phần. Bắt đầu từ điều chưa hiểu, học từng chút một.</p>
         <div class="button-row"><a class="study-button primary" href="#hoc-phan">Chọn học phần <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/guide/')">Cách học với UETệ <span aria-hidden="true">↗</span></a></div>
-        <div class="intro-meta"><span>{{ courses.length.toString().padStart(2, '0') }} học phần hiện tại</span><span>Tìm kiếm toàn bộ bài giảng</span><span>Sáng & tối</span></div>
+        <div class="intro-meta"><span>{{ courses.length.toString().padStart(2, '0') }} học phần</span><span>Tìm kiếm toàn bộ bài giảng</span><span>Sáng & tối</span></div>
       </div>
       <aside class="start-panel">
-        <div class="start-panel-top"><span>{{ last ? 'TIẾP TỤC HỌC' : 'GỢI Ý BẮT ĐẦU' }}</span><span aria-hidden="true">UET</span></div>
+        <div class="start-panel-top"><span>{{ last ? 'TIẾP TỤC HỌC' : 'GỢI Ý BẮT ĐẦU' }}</span><img class="start-panel-logo" :src="withBase('/favicon.png')" alt="UET" /></div>
         <p class="small">{{ last ? 'Bài học gần nhất của bạn' : 'Biểu diễn tri thức & Tìm kiếm' }}</p>
         <h2>{{ last?.title || 'Tìm kiếm mù: BFS, DFS, UCS & IDS' }}</h2>
         <p>Đọc lý thuyết, theo dõi ví dụ từng bước, rồi tự kiểm tra lại kiến thức.</p>
@@ -35,7 +39,7 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
 
     <div class="home-body">
       <section id="hoc-phan" class="course-section" aria-labelledby="course-heading">
-        <div class="section-heading"><div><p class="eyebrow">THƯ VIỆN BÀI GIẢNG</p><h2 id="course-heading">Học phần của bạn</h2></div><span class="small">Học kỳ hiện tại</span></div>
+        <div class="section-heading"><div><p class="eyebrow">THƯ VIỆN BÀI GIẢNG</p><h2 id="course-heading">Học phần</h2></div><span class="small">Tất cả môn học</span></div>
         <label class="course-search"><span>Lọc học phần</span><input v-model="query" type="search" placeholder="Tên môn hoặc chủ đề…"></label>
         <div class="course-list">
           <a v-for="course in visibleCourses" :key="course.id" class="course-row" :href="withBase(`/${course.id}/`)">
@@ -45,7 +49,6 @@ onMounted(() => { migrateProgress(); last.value = readStored('studyhub_last_less
           </a>
           <p v-if="!visibleCourses.length" class="empty-state">Không tìm thấy học phần. Thử tên môn hoặc chủ đề khác.</p>
         </div>
-        <div class="other-courses"><span>Các môn khác</span><a :href="withBase('/dsa/')">Cấu trúc dữ liệu & Giải thuật</a><a :href="withBase('/discrete-math/')">Toán rời rạc</a></div>
       </section>
       <aside class="study-side">
         <FocusTimer />

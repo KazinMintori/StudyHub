@@ -10,6 +10,7 @@ export default withMermaid(defineConfig({
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   head:[
     ['link',{rel:'icon',href:`${base}favicon.svg`}],
+    ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
     ['meta',{name:'theme-color',content:'#244bd6'}],
     ['link',{rel:'preconnect',href:'https://fonts.googleapis.com'}],
     ['link',{rel:'preconnect',href:'https://fonts.gstatic.com',crossorigin:''}],
@@ -35,6 +36,7 @@ export default withMermaid(defineConfig({
   appearance:true,
   vite:{optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
   themeConfig:{
+    logo:{light:'/logo.png',dark:'/logo-dark.png',alt:'UET Polytechnic'},
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
       {text:'Trang chủ',link:'/'},

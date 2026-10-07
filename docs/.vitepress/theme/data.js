@@ -1,5 +1,5 @@
 import { courseCatalog } from '../course-catalog.mjs'
-export const courses = courseCatalog.filter(course => course.current).map(course => ({
+export const courses = courseCatalog.map(course => ({
   ...course,
   tags: 'Slides · Notes · Nền tảng theo từng bài',
   first: course.lessons.find(lesson => lesson.status === 'ready')?.slug || '',

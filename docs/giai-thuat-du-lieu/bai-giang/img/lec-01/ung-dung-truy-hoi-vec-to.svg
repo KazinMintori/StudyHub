@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#244bd6"/>
+      <stop offset="100%" stop-color="#1b3cac"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2fe"/>
+      <stop offset="100%" stop-color="#e2ebfd"/>
+    </linearGradient>
+    <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Truy hồi vector: Tìm k đoạn văn bản gần nhất với truy vấn q</text>
+    
+    <!-- Query Vector -->
+    <rect x="40" y="65" width="170" height="135" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="125" y="92" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Truy vấn q</text>
+    <text x="125" y="115" font-size="11" fill="#334155" text-anchor="middle">Mã hóa thành vector:</text>
+    <rect x="55" y="130" width="140" height="30" rx="4" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="125" y="150" font-size="12" font-weight="600" fill="#244bd6" text-anchor="middle">[0.14, -0.82, ..., 0.45]</text>
+    <text x="125" y="185" font-size="11" fill="#64748b" text-anchor="middle">D = 3072 chiều</text>
+
+    <!-- Search process -->
+    <path d="M 215 130 L 330 130" stroke="#244bd6" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="272" y="120" font-size="11" fill="#244bd6" font-weight="600" text-anchor="middle">Kho 10 tỷ vector</text>
+
+    <!-- Vector Space -->
+    <rect x="340" y="60" width="220" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="450" y="82" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">Không gian vector embedding</text>
+    <!-- Query dot -->
+    <circle cx="450" cy="140" r="7" fill="#ef4444"/>
+    <text x="450" y="130" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">q</text>
+    <circle cx="450" cy="140" r="45" fill="none" stroke="#ef4444" stroke-dasharray="4,4"/>
+    <!-- Near neighbors -->
+    <circle cx="430" cy="135" r="5" fill="#10b981"/>
+    <circle cx="465" cy="125" r="5" fill="#10b981"/>
+    <circle cx="445" cy="165" r="5" fill="#10b981"/>
+    <!-- Far vectors -->
+    <circle cx="370" cy="100" r="4" fill="#94a3b8"/>
+    <circle cx="520" cy="170" r="4" fill="#94a3b8"/>
+    <circle cx="510" cy="95" r="4" fill="#94a3b8"/>
+    <text x="450" y="200" font-size="10" fill="#10b981" font-weight="600" text-anchor="middle">k láng giềng gần nhất</text>
+
+    <!-- Top-k results -->
+    <rect x="580" y="65" width="140" height="135" rx="8" fill="url(#softGreen)" stroke="#10b981" stroke-width="1.5"/>
+    <text x="650" y="92" font-size="13" font-weight="700" fill="#065f46" text-anchor="middle">Đầu ra top-k</text>
+    <rect x="595" y="105" width="110" height="20" rx="3" fill="#ffffff"/>
+    <text x="650" y="120" font-size="11" fill="#047857" text-anchor="middle">1. Đoạn doc 42</text>
+    <rect x="595" y="132" width="110" height="20" rx="3" fill="#ffffff"/>
+    <text x="650" y="147" font-size="11" fill="#047857" text-anchor="middle">2. Đoạn doc 108</text>
+    <rect x="595" y="159" width="110" height="20" rx="3" fill="#ffffff"/>
+    <text x="650" y="174" font-size="11" fill="#047857" text-anchor="middle">3. Đoạn doc 99</text>
+  
+</svg>

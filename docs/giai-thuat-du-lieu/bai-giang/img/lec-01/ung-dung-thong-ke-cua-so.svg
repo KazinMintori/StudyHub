@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#244bd6"/>
+      <stop offset="100%" stop-color="#1b3cac"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2fe"/>
+      <stop offset="100%" stop-color="#e2ebfd"/>
+    </linearGradient>
+    <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Thống kê trên cửa sổ trượt: Phân biệt số lượt vs số người phân biệt</text>
+    
+    <!-- Timeline Axis -->
+    <line x1="60" y1="120" x2="700" y2="120" stroke="#94a3b8" stroke-width="3"/>
+    <polygon points="705,120 695,114 695,126" fill="#94a3b8"/>
+    <text x="690" y="145" font-size="11" fill="#64748b">Thời gian t →</text>
+
+    <!-- Expired Area -->
+    <rect x="60" y="65" width="220" height="110" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-dasharray="4,4"/>
+    <text x="170" y="90" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">Dữ liệu quá hạn (&gt; 24h)</text>
+    <circle cx="120" cy="120" r="14" fill="#e2e8f0"/>
+    <text x="120" y="125" font-size="10" fill="#64748b" text-anchor="middle">User A</text>
+    <circle cx="190" cy="120" r="14" fill="#e2e8f0"/>
+    <text x="190" y="125" font-size="10" fill="#64748b" text-anchor="middle">User B</text>
+
+    <!-- Active Window Area -->
+    <rect x="310" y="55" width="370" height="130" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="2" filter="url(#shadow)"/>
+    <text x="495" y="80" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Cửa sổ gần đây (24 giờ qua)</text>
+
+    <!-- Events inside window -->
+    <circle cx="360" cy="120" r="16" fill="#93c5fd" stroke="#244bd6"/>
+    <text x="360" y="125" font-size="10" font-weight="700" fill="#1e3a8a" text-anchor="middle">User A</text>
+    
+    <circle cx="430" cy="120" r="16" fill="#86efac" stroke="#10b981"/>
+    <text x="430" y="125" font-size="10" font-weight="700" fill="#065f46" text-anchor="middle">User C</text>
+
+    <circle cx="500" cy="120" r="16" fill="#93c5fd" stroke="#244bd6"/>
+    <text x="500" y="125" font-size="10" font-weight="700" fill="#1e3a8a" text-anchor="middle">User A</text>
+
+    <circle cx="570" cy="120" r="16" fill="#93c5fd" stroke="#244bd6"/>
+    <text x="570" y="125" font-size="10" font-weight="700" fill="#1e3a8a" text-anchor="middle">User A</text>
+
+    <circle cx="640" cy="120" r="16" fill="#fcd34d" stroke="#f59e0b"/>
+    <text x="640" y="125" font-size="10" font-weight="700" fill="#78350f" text-anchor="middle">User D</text>
+
+    <!-- Stats below -->
+    <text x="495" y="165" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Tổng lượt truy cập = 5 lượt  |  Số người phân biệt = 3 (A, C, D)</text>
+    <text x="380" y="215" font-size="11" fill="#64748b" text-anchor="middle">Không thể chỉ dùng 1 bộ đếm tăng dần; cần cấu trúc cửa sổ (như thuật toán DGIM)</text>
+  
+</svg>

@@ -49,6 +49,7 @@ function getLessonIndex(c, slug) {
                   <a :href="studyLink(lecturePath(course.id, slug, 'slides'))">Slides</a>
                   <a :href="studyLink(lecturePath(course.id, slug, 'notes'))">Notes</a>
                   <a :href="studyLink(lecturePath(course.id, slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
+                  <a :href="studyLink(lecturePath(course.id, slug, 'bai-tap'))">Bài tập</a>
                 </nav>
               </div>
               <a class="lecture-open" :href="studyLink(lecturePath(course.id, slug))" :aria-label="`Mở ${getLesson(course, slug).title}`">→</a>
@@ -62,7 +63,7 @@ function getLessonIndex(c, slug) {
     <template v-else>
       <div class="lecture-list-heading">
         <h2>Bài giảng</h2>
-        <p>Mỗi bài gồm Slides, Notes và Kiến thức nền. Chọn bài trước, rồi học theo phần bạn cần.</p>
+        <p>Mỗi bài gồm Slides, Notes, Kiến thức nền và Bài tập. Chọn bài trước, rồi học theo phần bạn cần.</p>
       </div>
       <div class="lecture-list">
         <article v-for="(lesson, i) in course.lessons" :key="lesson.slug">
@@ -80,6 +81,7 @@ function getLessonIndex(c, slug) {
               <a :href="studyLink(lecturePath(course.id, lesson.slug, 'slides'))">Slides</a>
               <a :href="studyLink(lecturePath(course.id, lesson.slug, 'notes'))">Notes</a>
               <a :href="studyLink(lecturePath(course.id, lesson.slug, 'kien-thuc-can-co'))">Kiến thức nền</a>
+              <a :href="studyLink(lecturePath(course.id, lesson.slug, 'bai-tap'))">Bài tập</a>
             </nav>
           </div>
           <a class="lecture-open" :href="studyLink(lecturePath(course.id, lesson.slug))" :aria-label="`Mở ${lesson.title}`">→</a>

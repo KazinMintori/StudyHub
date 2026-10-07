@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Steam lines -->
+  <path d="M16 10c0-3 2-4 2-7" stroke="#FF813F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 9c0-3 2-4 2-7" stroke="#FF813F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 10c0-3 2-4 2-7" stroke="#FF813F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Cup body with shadow -->
+  <path d="M8 15h26v17c0 5.523-4.477 10-10 10h-6c-5.523 0-10-4.477-10-10V15z" fill="#FFDD00" stroke="#1E232A" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Coffee surface / rim -->
+  <path d="M8 19h26" stroke="#DDAA00" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cup handle -->
+  <path d="M34 19h4.5a5.5 5.5 0 0 1 0 11H34" stroke="#1E232A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart on cup -->
+  <path d="M21 27.5c-1.5-1.5-3.5-.2-3.5 1.5 0 2.2 3.5 4.5 3.5 4.5s3.5-2.3 3.5-4.5c0-1.7-2-3-3.5-1.5z" fill="#FF4E64"/>
+  <!-- Saucer / base -->
+  <path d="M6 44h30" stroke="#1E232A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

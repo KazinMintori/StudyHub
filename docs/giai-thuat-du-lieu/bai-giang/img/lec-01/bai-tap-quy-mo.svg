@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#244bd6"/>
+      <stop offset="100%" stop-color="#1b3cac"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2fe"/>
+      <stop offset="100%" stop-color="#e2ebfd"/>
+    </linearGradient>
+    <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Bài tập 1.2.1: Thay đổi riêng từng quy mô (a) T=2000 ngày vs (b) P=2 tỷ người</text>
+    
+    <!-- Base model -->
+    <rect x="40" y="90" width="170" height="80" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <text x="125" y="120" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Mô hình gốc</text>
+    <text x="125" y="142" font-size="11" fill="#e2ebfd" text-anchor="middle">E[X] ≈ 249.750 cặp</text>
+
+    <!-- Branch A -->
+    <path d="M 215 110 L 320 80" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="330" y="55" width="390" height="65" rx="6" fill="url(#softAmber)" stroke="#f59e0b"/>
+    <text x="345" y="78" font-size="12" font-weight="700" fill="#b45309">(a) Tăng thời gian lên T = 2000 ngày:</text>
+    <text x="345" y="98" font-size="11" fill="#78350f">C(2000, 2) tăng gần 4 lần → Kỳ vọng tăng 4 lần:</text>
+    <text x="630" y="98" font-size="12" font-weight="700" fill="#b91c1c">E ≈ 999.500 cặp</text>
+
+    <!-- Branch B -->
+    <path d="M 215 150 L 320 175" stroke="#244bd6" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="330" y="145" width="390" height="65" rx="6" fill="url(#softGreen)" stroke="#10b981"/>
+    <text x="345" y="168" font-size="12" font-weight="700" fill="#065f46">(b) Tăng P = 2 tỷ người, H = 200.000 khách sạn:</text>
+    <text x="345" y="188" font-size="11" fill="#047857">C(P, 2) tăng gần 4 lần, nhưng p² giảm đúng 4 lần →</text>
+    <text x="630" y="188" font-size="12" font-weight="700" fill="#047857">E ≈ 249.750 (Gần như không đổi)</text>
+  
+</svg>

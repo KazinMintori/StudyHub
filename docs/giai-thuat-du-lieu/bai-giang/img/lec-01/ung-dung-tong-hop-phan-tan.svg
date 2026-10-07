@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="100%" height="auto" style="max-width: 760px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#244bd6"/>
+      <stop offset="100%" stop-color="#1b3cac"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2fe"/>
+      <stop offset="100%" stop-color="#e2ebfd"/>
+    </linearGradient>
+    <linearGradient id="softAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="softGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="softRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#244bd6"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="760" height="240" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+    <text x="380" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Đếm từ phân tán: Gom toàn bộ dữ liệu vs Gom số đếm trung gian</text>
+    
+    <!-- Worker 1 -->
+    <rect x="40" y="55" width="180" height="70" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5"/>
+    <text x="130" y="80" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Máy phân tán 1</text>
+    <text x="130" y="102" font-size="12" fill="#334155" text-anchor="middle">Chứa: docA (có từ w)</text>
+
+    <!-- Worker 2 -->
+    <rect x="40" y="145" width="180" height="70" rx="8" fill="url(#softBlue)" stroke="#244bd6" stroke-width="1.5"/>
+    <text x="130" y="170" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Máy phân tán 2</text>
+    <text x="130" y="192" font-size="12" fill="#334155" text-anchor="middle">Chứa: docB (có từ w)</text>
+
+    <!-- Transfer labels -->
+    <path d="M 230 85 L 490 100" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#redArrow)"/>
+    <text x="340" y="82" font-size="11" fill="#dc2626" font-weight="600">Cách thô: Truyền cả văn bản (Nghẽn mạng)</text>
+
+    <path d="M 230 185 L 490 145" stroke="#10b981" stroke-width="2.5" marker-end="url(#greenArrow)"/>
+    <text x="340" y="178" font-size="11" fill="#059669" font-weight="700">MapReduce: Đếm cục bộ (w, c) rồi gửi</text>
+
+    <!-- Reducer -->
+    <rect x="500" y="70" width="220" height="120" rx="8" fill="url(#softGreen)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="610" y="98" font-size="14" font-weight="700" fill="#065f46" text-anchor="middle">Máy tổng hợp (Reducer)</text>
+    <rect x="520" y="112" width="180" height="30" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="610" y="132" font-size="12" font-weight="600" fill="#047857" text-anchor="middle">Tổng w = c₁ + c₂</text>
+    <text x="610" y="165" font-size="11" fill="#065f46" text-anchor="middle">Tránh quá tải 1 máy duy nhất</text>
+  
+</svg>

@@ -201,7 +201,11 @@ export const courseCatalog = [
       lesson('bai-03-pagerank-mo-hinh-va-tinh-toan', 'PageRank: mô hình & tính toán', ['do-thi', 'ma-tran'])
     ],
     slides: [
-      slide('Dữ liệu lớn đổi nút thắt của thuật toán', ['Không chỉ xét CPU: bộ nhớ, đọc/ghi và mạng đều có chi phí.', 'Chọn mô hình tính toán phù hợp với nơi dữ liệu nằm.', 'Đánh giá lượng dữ liệu truyền cùng tổng công việc.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan'),
+      slide('Dữ liệu lớn đổi nút thắt của thuật toán', ['Dữ liệu lớn hơn bộ nhớ RAM: tệp nhật ký D > M, không thể nạp trọn.', 'Dữ liệu phân tán trên nhiều máy: gom về một máy gây nghẽn mạng.', 'Số cặp bùng nổ bậc hai: N tài liệu tạo N(N−1)/2 cặp cần so sánh.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'D > M; C(N, 2) = N(N−1)/2', 'N = 10⁶ tài liệu tạo gần 500 tỷ cặp so sánh.'),
+      slide('Độ đo Jaccard và thuật toán xét mọi cặp', ['Biểu diễn tài liệu bằng tập hợp các đoạn ký tự (shingles).', 'Jaccard đo tỷ lệ giao trên hợp: J(S, T) = |S ∩ T| / |S ∪ T|.', 'Duyệt mọi cặp 1 ≤ i < j ≤ N bằng 2 con trỏ trong O(L), chi phí O(N²L).'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'J(S, T) = |S ∩ T| / |S ∪ T| ∈ [0, 1]', 'Ví dụ MMDS 3.1: giao 3, hợp 8 → J = 3/8; đạt ngưỡng khi τ ≤ 3/8.'),
+      slide('Đánh giá lời giải đa khía cạnh', ['Tính đúng: đáp ứng đặc tả trên mọi đầu vào hợp lệ, chứng minh bằng bất biến.', 'Tài nguyên: đếm phép tính, bộ nhớ làm việc lớn nhất, I/O đọc/ghi đĩa, dữ liệu mạng.', 'Vận hành: độ trễ truy vấn từng lượt, thông lượng QPS, chi phí xây dựng và cập nhật.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'recall@k(q) = |N̂_k(q) ∩ N_k(q)| / k', 'Ví dụ recall@5: chuẩn {a,b,c,d,e}, trả về {c,d,e,f,g} → recall = 3/5 = 60%.'),
+      slide('Giảm ứng viên và nguy cơ bỏ sót', ['Tạo tập ứng viên A trước khi tính Jaccard chính xác: R̂ = A ∩ R ⊆ R.', 'Hậu kiểm chỉ loại ứng viên sai (false positive), không cứu được cặp bị bỏ sót (false negative).', 'Để giữ tính đúng R̂ = R, bắt buộc bảo đảm R ⊆ A (không bỏ sót cặp đạt ngưỡng).'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'R̂ = A ∩ R ⊆ R', 'LSH khuếch đại xác suất để chọn đúng cặp tương đồng cao vào tập ứng viên A.'),
+      slide('Nguyên lý Bonferroni và giới hạn suy luận', ['Số phép thử bùng nổ tổ hợp: C(P, 2) · C(T, 2) biến cố cặp người–cặp ngày.', 'Mô hình độc lập, ngẫu nhiên: xác suất 1 phép thử p² = 10⁻¹⁸.', 'Kỳ vọng trùng ngẫu nhiên E[X] ≈ 249.750 biến cố: trùng ngẫu nhiên lấn át dấu hiệu thật.'], 'bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan', 'E[X] = C(P, 2) · C(T, 2) · p²', 'Trùng khách sạn chưa đủ chứng minh phối hợp; Jaccard cao chưa đủ chứng minh đạo văn.'),
       slide('Map → nhóm theo khóa → Reduce', ['Map phát các cặp khóa–giá trị.', 'Shuffle đưa các giá trị cùng khóa tới cùng nhóm.', 'Reduce xử lý từng nhóm để thu kết quả cuối.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon', '', 'Đếm từ: Map phát (từ,1), Reduce cộng các số 1 theo từ.'),
       slide('Combine cần đúng tính chất phép gom', ['Gom cục bộ giúp giảm truyền dữ liệu.', 'Phép gom cần giữ được thông tin cho kết quả cuối và đáp ứng tính chất cần thiết.', 'Trung bình của các trung bình không đúng nếu nhóm có kích thước khác nhau; truyền (tổng, số lượng).'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon'),
       slide('Thời gian pha do máy chậm nhất quyết định', ['Một phân vùng quá lớn làm những máy còn lại chờ.', 'Thêm máy có thể tăng chi phí đồng bộ và truyền.', 'Kiểm tra cân bằng tải, lượng truyền và khả năng phục hồi khi máy lỗi.'], 'bai-02-mapreduce-va-xu-ly-du-lieu-lon'),
@@ -209,7 +213,7 @@ export const courseCatalog = [
     ], illustration: 'mapreduce'
   },
   {
-    id: 'dsa', code: '07', name: 'Cấu trúc dữ liệu & Giải thuật', short: 'CTDL & Giải thuật', current: false,
+    id: 'dsa', code: '07', name: 'Cấu trúc dữ liệu & Giải thuật', short: 'CTDL & Giải thuật', current: true,
     description: 'Chọn cấu trúc lưu dữ liệu và đánh giá chi phí của từng cách xử lý.',
     foundations: ['mang', 'con-tro', 'de-quy', 'hang-doi', 'ngan-xep', 'cay', 'do-thi', 'do-phuc-tap', 'quy-nap'],
     parts: [
@@ -244,7 +248,7 @@ export const courseCatalog = [
     ], illustration: 'search'
   },
   {
-    id: 'discrete-math', code: '08', name: 'Toán rời rạc', short: 'Toán rời rạc', current: false,
+    id: 'discrete-math', code: '08', name: 'Toán rời rạc', short: 'Toán rời rạc', current: true,
     description: 'Đọc logic, quan hệ và cấu trúc hữu hạn bằng các định nghĩa chính xác.',
     foundations: ['tap-hop', 'ham-so', 'menh-de', 'luong-tu', 'quy-nap', 'to-hop', 'quan-he', 'do-thi', 'cay'],
     parts: [
