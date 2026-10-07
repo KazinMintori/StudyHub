@@ -7,6 +7,7 @@ import TermPreview from './TermPreview.vue'
 import LectureHeader from './LectureHeader.vue'
 import LecturePanels from './LecturePanels.vue'
 import WikiFooter from './WikiFooter.vue'
+import BuyMeCoffee from './BuyMeCoffee.vue'
 import { useData, useRoute } from 'vitepress'
 import { onMounted, onUnmounted, watch } from 'vue'
 import { lecturePart, syncLecturePart } from './lecture-state'
@@ -36,6 +37,7 @@ watch(()=>route.path,()=>syncLecturePart())
     <template #layout-bottom>
       <DiagramLightbox />
       <TermPreview />
+      <BuyMeCoffee />
     </template>
   </Layout>
 </template>

@@ -41,7 +41,8 @@ export default withMermaid(defineConfig({
     nav:[
       {text:'Trang chủ',link:'/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:c.name,link:`/${c.id}/`}))},
-      {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
+      {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'},
+      {text:'☕ Buy me a coffee',link:'#buy-me-a-coffee'}
     ],
     sidebar:{
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
@@ -73,6 +74,9 @@ export default withMermaid(defineConfig({
     },
     outline:{level:[2,3],label:'Mục lục bài viết'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
-    footer:{message:'Tài liệu học tập dành cho sinh viên UET',copyright:'Bản quyền nội dung © 2026 UETệ'}
+    footer:{
+      message:'Tài liệu học tập dành cho sinh viên UET • <a href="#buy-me-a-coffee" style="color:var(--vp-c-brand-1);text-decoration:underline;font-weight:550;">☕ Buy me a coffee</a>',
+      copyright:'Bản quyền nội dung © 2026 UETệ'
+    }
   }
 }))
