@@ -1,3 +1,0 @@
-Command: C:\Users\Ai\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe C:\Users\Ai\Documents\StudyHub\Research\revised\textbook-to-course-slides\scripts\audit_spec.py C:\Users\Ai\Documents\StudyHub\Research\evaluation\slides-forward\course-spec.json --asset-root C:\Users\Ai\Documents\StudyHub\Research\evaluation\slides-forward
-Exit code: 0
-Stderr:

@@ -14,7 +14,6 @@ qa/
 # Local working material and generated root preview files
 /.agents/
 /backups/
-/Research/evaluation/.validation-deps/
 /bieu-dien-tri-thuc/
 /discrete-math/
 /dsa/

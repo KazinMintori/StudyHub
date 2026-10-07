@@ -1,0 +1,6 @@
+interface:
+  display_name: "Giảng đoạn giáo trình"
+  short_description: "Giảng lại đoạn nguồn trong chat, viết note tự học, sửa bài làm"
+  default_prompt: "Dùng $textbook-passage-explainer giảng đoạn nguồn này, chỉ rõ bước khó và giả thiết được dùng ở đâu."
+policy:
+  allow_implicit_invocation: true

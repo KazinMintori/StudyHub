@@ -56,6 +56,22 @@ Nhúng minh họa trong Markdown bằng `<CodeIllustration type="search" />`. C�
 
 `node scripts/verify-courses.mjs` kiểm tra cả 8 môn, ba phần theo từng bài, Wiki, liên kết qua lại, tiến độ, đường dẫn cũ, minh họa và bố cục. Dùng `QA_URL` để chọn server cần kiểm tra; mặc định là `http://127.0.0.1:8080`.
 
+## Soạn bài bằng AI
+
+Hai skill trong `.claude/skills/` giúp trợ lý AI giảng bài như một giảng viên: đúng giả thiết, mở bước khó, ví dụ được tính lại, bài tập có lời giải gập và nguồn kiểm chứng được.
+
+- `studyhub-lecture`: biến tài liệu trong `raw_materials/<môn>/` thành bài giảng đủ Notes, Slides, Kiến thức nền và Wiki; sửa hoặc rà một bài; xuất slide PDF/PPTX. Ví dụ yêu cầu: “Soạn bài 3 môn Cơ sở toán cho AI từ raw_materials”.
+- `textbook-passage-explainer`: giảng lại một đoạn giáo trình trong chat, viết note tự học, sửa bài làm theo bước sai đầu tiên.
+
+Kiểm tra một bài sau khi soạn:
+
+```sh
+node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs toan-cho-ai/bai-02-tap-loi
+python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py docs/toan-cho-ai/bai-giang/bai-02-tap-loi.md --format text
+```
+
+`check_lecture.mjs` kiểm frontmatter, catalog, Kiến thức nền, Wiki, hình và container; `review_teaching_text.py` chỉ ra câu nên đọc lại. Cả hai chỉ hỗ trợ, không thay việc đọc nội dung và xem trang.
+
 ## Kiểm tra giao diện
 
 `scripts/verify-ui.mjs` kiểm tra chức năng và bố cục tại 375, 768, 1024, 1440 px, tạo ảnh kiểm tra trong `qa/`. Chạy server trước, rồi:

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Giảng giáo trình và viết note"
-  short_description: "Giải thích sâu, lời giảng tự nhiên, note tự học rõ ràng"
-  default_prompt: "Dùng $textbook-passage-explainer giảng đoạn nguồn này và viết note tự học, chỉ rõ bước khó và điều kiện được dùng."
-policy:
-  allow_implicit_invocation: true

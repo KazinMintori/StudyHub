@@ -1,0 +1,6 @@
+interface:
+  display_name: "Bài giảng StudyHub"
+  short_description: "Soạn/sửa bài giảng site: Notes, Slides, Kiến thức nền, Wiki như giảng viên"
+  default_prompt: "Dùng $studyhub-lecture soạn bài giảng từ raw_materials của môn này cho StudyHub, đủ Notes, Slides, Kiến thức nền và kiểm tra bằng check_lecture."
+policy:
+  allow_implicit_invocation: true
