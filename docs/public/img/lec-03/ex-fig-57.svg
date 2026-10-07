@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background:#f8fafc; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">Đồ thị Hình 5.7 MMDS (Bài tập 1 &amp; 2)</text>
+  <text x="300" y="58" text-anchor="middle" font-size="12" fill="#64748b">a → a, b, c (da=3) | b → a, c (db=2) | c → b, c (dc=2) — 7 cạnh, 2 khuyên</text>
+
+  <!-- Edges -->
+  <!-- Triangle layout: a: (180, 150) | b: (420, 150) | c: (300, 310) -->
+
+  <!-- Loop at a: a -> a -->
+  <path d="M 155 140 C 95 120, 95 60, 165 120" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- Loop at c: c -> c -->
+  <path d="M 285 335 C 240 395, 360 405, 325 335" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- a -> b -->
+  <path d="M 215 140 C 270 120, 330 120, 385 140" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+  <!-- b -> a -->
+  <path d="M 385 160 C 330 180, 270 180, 215 160" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- a -> c -->
+  <path d="M 200 175 L 280 285" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- b -> c -->
+  <path d="M 390 175 C 375 220, 350 250, 325 285" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+  <!-- c -> b -->
+  <path d="M 315 285 C 335 245, 365 210, 405 175" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- Nodes -->
+  <!-- Node a -->
+  <g transform="translate(180, 150)" filter="url(#shadow)">
+    <circle r="34" fill="url(#nodeGrad)" stroke="#2563eb" stroke-width="2.5"/>
+    <text y="6" text-anchor="middle" font-size="20" font-weight="800" fill="#1e3a8a">a</text>
+    <rect x="-35" y="40" width="70" height="20" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text y="54" text-anchor="middle" font-size="11" font-weight="600" fill="#1d4ed8">Bậc ra: 3</text>
+  </g>
+
+  <!-- Node b -->
+  <g transform="translate(420, 150)" filter="url(#shadow)">
+    <circle r="34" fill="url(#nodeGrad)" stroke="#64748b" stroke-width="2.5"/>
+    <text y="6" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">b</text>
+    <rect x="-35" y="40" width="70" height="20" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text y="54" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">Bậc ra: 2</text>
+  </g>
+
+  <!-- Node c -->
+  <g transform="translate(300, 310)" filter="url(#shadow)">
+    <circle r="34" fill="url(#nodeGrad)" stroke="#64748b" stroke-width="2.5"/>
+    <text y="6" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">c</text>
+    <rect x="-35" y="40" width="70" height="20" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text y="54" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">Bậc ra: 2</text>
+  </g>
+</svg>

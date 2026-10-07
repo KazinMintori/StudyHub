@@ -1,7 +1,16 @@
 <script setup>
-import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
-import { withBase } from 'vitepress'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { withBase, useData, useRoute } from 'vitepress'
 import { isCoffeeModalOpen, openCoffeeModal, closeCoffeeModal } from './coffee-state'
+
+const { frontmatter } = useData()
+const route = useRoute()
+
+const isHome = computed(() => {
+  if (frontmatter.value?.layout === 'home') return true
+  const cleanPath = (route.path || '').replace(/\/index(?:\.html)?$/, '/').replace(/\/+$/, '')
+  return cleanPath === '' || cleanPath === '/'
+})
 
 const dialog = ref(null)
 const copiedField = ref('')
@@ -114,8 +123,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- Floating Buy Me a Coffee Action Button -->
-  <aside class="coffee-widget-container" aria-label="Khu vực ủng hộ Buy Me a Coffee">
+  <div v-if="isHome" class="coffee-hub-wrapper">
+    <!-- Floating Buy Me a Coffee Action Button -->
+    <aside class="coffee-widget-container" aria-label="Khu vực ủng hộ Buy Me a Coffee">
     <button
       type="button"
       class="coffee-float-btn"
@@ -315,6 +325,7 @@ onUnmounted(() => {
       </footer>
     </div>
   </dialog>
+  </div>
 </template>
 
 <style scoped>

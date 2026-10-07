@@ -35,6 +35,7 @@ qa/
 /vp-icons.css
 /*.png
 /img/
+/public/
 
 # Python
 __pycache__/

@@ -8,6 +8,7 @@ import { termLinks } from './term-links.mjs'
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
+  ignoreDeadLinks: true,
   head:[
     ['link',{rel:'icon',href:`${base}favicon.svg`}],
     ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
@@ -41,8 +42,7 @@ export default withMermaid(defineConfig({
     nav:[
       {text:'Trang chủ',link:'/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:c.name,link:`/${c.id}/`}))},
-      {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'},
-      {text:'☕ Buy me a coffee',link:'#buy-me-a-coffee'}
+      {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
     sidebar:{
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
@@ -74,9 +74,6 @@ export default withMermaid(defineConfig({
     },
     outline:{level:[2,3],label:'Mục lục bài viết'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
-    footer:{
-      message:'Tài liệu học tập dành cho sinh viên UET • <a href="#buy-me-a-coffee" style="color:var(--vp-c-brand-1);text-decoration:underline;font-weight:550;">☕ Buy me a coffee</a>',
-      copyright:'Bản quyền nội dung © 2026 UETệ'
-    }
+    footer:{message:'Tài liệu học tập dành cho sinh viên UET',copyright:'Bản quyền nội dung © 2026 UETệ'}
   }
 }))

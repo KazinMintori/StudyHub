@@ -2,204 +2,429 @@
 course: giai-thuat-du-lieu
 lecture: bai-03-pagerank-mo-hinh-va-tinh-toan
 section: lecture
-title: "PageRank: mô hình & tính toán"
-prerequisites: ["do-thi","ma-tran"]
+title: "Bài 3: PageRank: mô hình và tính toán"
+prerequisites: ["do-thi","ma-tran","xac-suat-co-dieu-kien"]
 lessonStatus: ready
+description: "Mô hình người lướt ngẫu nhiên (Random Surfer), ma trận liên kết, xử lý nút cụt và bẫy liên kết, biểu diễn thưa, tính toán MapReduce theo khối và phân tích chi phí."
 ---
 
-← [Bài 02: Map-Reduce](/giai-thuat-du-lieu/bai-giang/bai-02-mapreduce-va-xu-ly-du-lieu-lon.md) · [Mục lục](/giai-thuat-du-lieu/index.md)
+# Bài 03 — PageRank: mô hình và tính toán
 
-## 1. Đặt bài toán và phân tích liên kết đồ thị Web
+Học phần **Giải thuật nền tảng của Khoa học dữ liệu**, học kỳ 1 năm học 2026–2027.
 
-Trong các hệ thống tìm kiếm thông tin truyền thống (Information Retrieval), việc xếp hạng tài liệu dựa chủ yếu trên sự tương đồng văn bản giữa truy vấn và nội dung (như tần suất từ khóa TF-IDF hoặc BM25). Trên môi trường World Wide Web, phương pháp này bộc lộ hai hạn chế căn bản:
-
-1. **Hiện tượng thao túng nội dung (Keyword Spamming):** Tác giả trang web có thể chủ động lặp lại từ khóa nhiều lần hoặc chèn văn bản ẩn để tăng thứ hạng tìm kiếm.
-2. **Thiếu độ đo độ tin cậy độc lập:** Nội dung trang web không phản ánh được mức độ uy tín thực tế của nguồn thông tin.
-
-Để giải quyết vấn đề trên, thuật toán PageRank (Brin & Page, 1998) tiếp cận bài toán xếp hạng dựa trên cấu trúc liên kết siêu văn bản (hyperlink structure):
-- Một liên kết có hướng từ trang $j$ đến trang $i$ ($j \to i$) được coi là một sự thừa nhận hoặc giới thiệu từ $j$ dành cho $i$.
-- Độ quan trọng của trang $i$ phụ thuộc vào số lượng trang trỏ đến $i$ và mức độ quan trọng của chính các trang trỏ đó.
+Tài liệu đi cùng [bộ trang chiếu Bài 03](#slides). Các lời giải bài tập được gập để người học thử tính trước khi đối chiếu.
 
 ---
 
-## 2. Mô hình người lướt ngẫu nhiên và chuỗi Markov
+## 1. Giới thiệu bài học
 
-### 2.1. Không gian trạng thái và xác suất chuyển
+Một công cụ tìm kiếm phải chọn và sắp xếp các trang phù hợp với truy vấn. Nội dung trang giúp đánh giá mức phù hợp; cấu trúc liên kết cung cấp thêm tín hiệu về tầm quan trọng của trang. PageRank xây dựng điểm từ cấu trúc này, không tự đo mức phù hợp với từng truy vấn.
 
-Xét đồ thị có hướng $G = (V, E)$ biểu diễn mạng Web với $N = |V|$ đỉnh. Giả sử một người dùng duyệt web theo mô hình ngẫu nhiên (Random Surfer):
-- Tại thời điểm $t$, người dùng đang ở trang $j$.
-- Nếu trang $j$ có bậc ra $d_j > 0$, người dùng chọn ngẫu nhiên một trong $d_j$ liên kết ra ngoài với xác suất đồng đều $\frac{1}{d_j}$ để chuyển sang trang kế tiếp.
+Bài học bắt đầu từ một đồ thị bốn trang có thể tính tay. Từ phép chia điểm theo liên kết, ta xây dựng mô hình xử lý được nút cụt và bẫy liên kết; sau đó chuyển phép tính sang dạng thưa và chia khối. Phần chi phí giải thích việc chia nhỏ tiết kiệm bộ nhớ ở đâu và vì sao thêm máy chưa chắc giảm thời gian theo cùng tỷ lệ.
 
-Mô hình trên cấu thành một chuỗi Markov rời rạc thời gian trên không gian trạng thái hữu hạn $V$. Ma trận chuyển tiếp $M \in \mathbb{R}^{N \times N}$ được định nghĩa bởi:
-
-$$M_{ij} = \begin{cases} \frac{1}{d_j} & \text{nếu } (j, i) \in E \\ 0 & \text{ngược lại} \end{cases}$$
-
-Trong đó, phần tử $M_{ij}$ thể hiện xác suất chuyển từ trạng thái $j$ sang trạng thái $i$. Nếu mọi đỉnh đều có bậc ra $d_j > 0$, thì tổng mỗi cột của $M$ bằng 1:
-$$\sum_{i=1}^N M_{ij} = 1 \quad \forall j$$
-Khi đó $M$ là một ma trận ngẫu nhiên theo cột (column-stochastic matrix).
-
-### 2.2. Phân phối dừng
-
-Gọi $r_i$ là xác suất người lướt ngẫu nhiên có mặt tại trang $i$ tại trạng thái cân bằng dài hạn. Theo phương trình cân bằng dòng xác suất:
-
-$$r_i = \sum_{j: (j, i) \in E} \frac{r_j}{d_j}$$
-
-Viết dưới dạng vector ma trận:
-$$\mathbf{r} = M \mathbf{r}$$
-
-Vector $\mathbf{r} = [r_1, r_2, \dots, r_N]^T$ thỏa mãn điều kiện chuẩn hóa $\sum_{i=1}^N r_i = 1$. Về mặt đại số tuyến tính, $\mathbf{r}$ chính là vector riêng chính (principal eigenvector) của $M$ ứng với trị riêng $\lambda = 1$.
+Sau bài học, sinh viên cần lập được ma trận liên kết và một vòng cập nhật; giải thích điều kiện hội tụ và dừng; mô tả Map, Combine, Reduce; tính các chi phí cơ bản; và cài đặt, kiểm thử phiên bản Python. Kiến thức sử dụng gồm đồ thị có hướng, phép nhân ma trận–véc tơ, xác suất cơ bản và mô hình MapReduce của Bài 02.
 
 ---
 
-## 3. Thuật toán lặp lũy thừa (Power Iteration)
+## 2. Bài toán Xếp hạng trang web
 
-Đối với đồ thị Web quy mô lớn ($N > 10^9$), việc giải phương trình đặc trưng hoặc khử ma trận trực tiếp là không khả thi về mặt tính toán. Phương pháp số được sử dụng là **lặp lũy thừa** (Power Iteration):
+**Đầu vào và đầu ra.** Đầu vào là đồ thị có hướng $G=(V,E)$, với $n=|V|$ trang và $m=|E|$ liên kết; cạnh $j\to i$ nghĩa là trang $j$ trỏ tới trang $i$. Hai liên kết cùng nguồn cùng đích được gộp thành một cạnh. Đầu ra là một điểm $r_i\ge 0$ cho mỗi trang, với quy ước chuẩn hóa $\sum_i r_i = 1$, và thứ tự giảm dần theo điểm (cho phép đồng hạng). Lưu ý chuẩn hóa tổng bằng 1 chưa xác định duy nhất cách chấm điểm — nhiều véc tơ khác nhau đều thỏa điều kiện này; quy tắc chấm điểm cụ thể là nội dung của phần 3.
 
-### Thuật toán:
+**Ví dụ chuẩn xuyên suốt bài giảng.** Ta dùng đồ thị bốn trang trong Hình 5.1 của giáo trình MMDS, $n=4$, $m=8$: A trỏ tới B, C, D; B trỏ tới A, D; C trỏ tới A; D trỏ tới B, C.
 
-1. **Khởi tạo:**
-   $$\mathbf{r}^{(0)} = \left[ \frac{1}{N}, \frac{1}{N}, \dots, \frac{1}{N} \right]^T$$
-2. **Bước lặp:** Tại bước $t + 1$:
-   $$\mathbf{r}^{(t+1)} = M \mathbf{r}^{(t)}$$
-3. **Tiêu chuẩn hội tụ:** Dừng khi chuẩn chênh lệch nhỏ hơn ngưỡng $\epsilon$:
-   $$\|\mathbf{r}^{(t+1)} - \mathbf{r}^{(t)}\|_1 = \sum_{i=1}^N \left| r_i^{(t+1)} - r_i^{(t)} \right| < \epsilon$$
+![Đồ thị bốn trang: A tới B, C, D; B tới A, D; C tới A; D tới B, C](img/lec-03/graph-pages.svg)
 
-Theo định lý Perron-Frobenius, dãy $\{\mathbf{r}^{(t)}\}$ sẽ hội tụ về nghiệm duy nhất nếu ma trận $M$ là ngẫu nhiên, tối giản (irreducible) và phi chu kỳ (aperiodic).
+Bậc ra (số liên kết đi khỏi trang) lần lượt là $d_A=3$, $d_B=2$, $d_C=1$, $d_D=2$. Đồ thị này đủ nhỏ để chạy tay từng bước, và cả bài sẽ quay lại nó ở mô hình, thuật toán, chia khối và chi phí.
 
----
+**Thử nghiệm đầu tiên: đếm liên kết vào.** Trên ví dụ, A, B, C, D đều có đúng 2 liên kết vào, nên chuẩn hóa cho mỗi trang $2/8=1/4$ — bốn trang đồng hạng. Cách đếm này có hai hạn chế rõ: nó coi mọi liên kết ngang giá trị, dù liên kết từ C (chỉ trỏ một nơi) khác liên kết từ A (trỏ ba nơi), và nó không lan truyền tầm quan trọng: một trang được trỏ bởi trang quan trọng đáng lẽ phải quan trọng hơn.
 
-## 4. Các cấu trúc đồ thị đặc biệt: Dead Ends và Spider Traps
+**Từ đếm sang chia điểm.** Bước trực giác then chốt là cho mỗi trang một lượng điểm rồi để trang nguồn *chia đều* điểm của mình cho các đích theo bậc ra, thay vì chỉ đếm cạnh vào. Khởi tạo mỗi trang $1/4$ điểm. A chia cho ba đích: mỗi đích nhận $(1/4)/3=1/12$; B và D chia cho hai đích, mỗi cạnh mang $1/8$; C chuyển cả $1/4$ cho A.
 
-Trên đồ thị thực tế, hai điều kiện tối giản và ngẫu nhiên thường bị vi phạm do hai cấu trúc sau:
+**Cộng tại đích và một vòng hoàn chỉnh.** Mọi trang tính đồng thời từ *điểm cũ*: A chỉ nhận từ B và C, được $1/8+1/4=3/8$; B nhận $1/12$ từ A và $1/8$ từ D, được $5/24$; tương tự C và D đều $5/24$. Tổng $3/8+3\times 5/24 = 1$, không mất không thêm. Sau một vòng, A đứng trước B, C, D đồng hạng — khác kết quả đồng hạng của cách đếm liên kết vào, vì C chuyển toàn bộ điểm cho A.
 
-### 4.1. Đỉnh cụt (Dead Ends)
-Đỉnh cụt là các trang không có liên kết ra ($d_j = 0$). Trong ma trận $M$, cột tương ứng chứa toàn giá trị 0 (ma trận trở thành sub-stochastic).
-
-- **Hệ quả:** Xác suất tại các đỉnh này không được chuyển tiếp sang các đỉnh khác. Sau mỗi vòng lặp, tổng chuẩn $\|\mathbf{r}^{(t)}\|_1$ suy giảm dần về 0.
-- **Xử lý:** Quy ước nếu gặp đỉnh cụt, người dùng chuyển ngẫu nhiên đến một đỉnh bất kỳ trong toàn bộ mạng với xác suất $\frac{1}{N}$.
-
-### 4.2. Bẫy chu trình (Spider Traps)
-Bẫy chu trình là tập hợp các đỉnh chỉ có liên kết nội bộ, không có đường ra tới phần còn lại của đồ thị (ví dụ một trang tự trỏ vào chính nó).
-
-- **Hệ quả:** Xác suất tích tụ dần trong bẫy qua các bước lặp. Tại trạng thái dừng, toàn bộ điểm số của mạng dồn về các đỉnh trong bẫy ($r_i \to 1$), trong khi các đỉnh khác tiệm cận 0.
+Ba điểm phương pháp luận cần giữ:
+1. Mọi đóng góp xác định bởi điểm cũ và bậc ra của nguồn, không phải bậc vào của đích.
+2. Đồng bộ — không dùng điểm mới của trang này khi tính trang khác trong cùng vòng.
+3. Một vòng chưa phải PageRank. Quy tắc hiện tại còn hai lỗ hổng: chưa xử lý trang không có liên kết ra, và chưa bảo đảm việc lặp hội tụ trên mọi đồ thị. Phần 3 xử lý cả hai.
 
 ---
 
-## 5. Mô hình suy giảm và bước nhảy ngẫu nhiên (Random Walk with Teleportation)
+## 3. Mô hình và thuật toán PageRank
 
-Để đảm bảo tính hội tụ đồng thời giải quyết triệt để Dead Ends và Spider Traps, mô hình người lướt ngẫu nhiên được điều chỉnh bổ sung cơ chế **nhảy ngẫu nhiên (teleportation)**:
+### Ma trận liên kết và phép lặp truyền điểm
 
-Tại mỗi bước:
-- Với xác suất $\beta \in (0, 1)$, người dùng di chuyển theo liên kết có sẵn.
-- Với xác suất $1 - \beta$, người dùng nhảy ngẫu nhiên đến một trang bất kỳ trên toàn bộ mạng.
+**Ma trận $M_0$.** Ta hình thức hóa phép chia điểm bằng đại số tuyến tính. Đặt $d_j$ là bậc ra của trang $j$. Ma trận liên kết $M_0$ cỡ $n\times n$ được định nghĩa theo cột: $(M_0)_{ij}=1/d_j$ nếu có cạnh $j\to i$ và $d_j>0$; bằng $0$ nếu không. Quy ước này quan trọng: **cột** $j$ là trang nguồn, **hàng** $i$ là trang đích. Với đồ thị bốn trang (thứ tự hàng/cột A, B, C, D):
 
-Phương trình PageRank hiệu chỉnh:
+$$M_0=\begin{pmatrix} 0 & 1/2 & 1 & 0\\ 1/3 & 0 & 0 & 1/2\\ 1/3 & 0 & 0 & 1/2\\ 1/3 & 1/2 & 0 & 0 \end{pmatrix}$$
 
-$$\mathbf{r} = \beta M \mathbf{r} + \frac{1 - \beta}{N} \mathbf{1}$$
+Cột A là $(0,1/3,1/3,1/3)^T$: A chia cho ba đích và không tự giữ điểm. Cạnh *đi vào* A nằm ở **hàng** A, không nằm ở cột A — đây là chỗ hay nhầm khi lập ma trận từ hình. Trang không có liên kết ra được biểu diễn bằng cột toàn 0; ta chưa thực hiện phép chia cho không, phần 3 sẽ xử lý trường hợp này riêng.
 
-Trong đó:
-- $\beta$ là hệ số suy giảm (damping factor), thực nghiệm thực tế thường đặt $\beta = 0.85$.
-- $\mathbf{1} \in \mathbb{R}^{N \times 1}$ là vector gồm toàn phần tử 1.
-- Ma trận chuyển tiếp hiệu chỉnh tương đương:
-  $$A = \beta M + \frac{1 - \beta}{N} \mathbf{E}$$
-  với $\mathbf{E} = \mathbf{1}\mathbf{1}^T$. Ma trận $A$ là ma trận dương và ngẫu nhiên theo cột, đảm bảo chuỗi Markov có phân phối dừng duy nhất và hội tụ tuyến tính với tốc độ phụ thuộc vào $\beta$.
+**Phép lặp thô.** Điểm là véc tơ cột $r$ với $r_i\ge 0$, $\sum_i r_i=1$. Khởi tạo đều $r^0=(1/n,\dots,1/n)^T$; chỉ số $t$ đếm số bước đã thực hiện. Khi mọi trang đều có liên kết ra, một vòng là:
 
----
+$$r^{t+1}=M_0\,r^t.$$
 
-## 6. Ví dụ tính toán từng bước
+Nhân ma trận–véc tơ thực hiện đồng thời "chia tại nguồn, cộng tại đích": thành phần $i$ của $M_0r$ là $\sum_{j:\,j\to i} r_j/d_j$. Trên ví dụ: $r^1=(9/24,\,5/24,\,5/24,\,5/24)^T$, khớp đúng bảng chia điểm của phần 2.
 
-Xét đồ thị gồm 3 trang $A, B, C$ với tập liên kết: $A \to B, A \to C, B \to C, C \to A$.
+**Điểm ổn định và mối liên hệ với ma trận.** Điểm ổn định là véc tơ không đổi qua cập nhật, $r^*=M_0r^*$ — trong ngôn ngữ đại số tuyến tính, đây là véc tơ riêng ứng với giá trị riêng bằng 1 của ma trận có tổng mỗi cột bằng 1. Giáo trình MMDS trình bày PageRank qua quan điểm này; với mục đích tính toán, ta không cần khử hay tính giá trị riêng, mà lặp nhân ma trận–véc tơ tới khi véc tơ ít thay đổi. Ở quy mô lớn, ta tận dụng các phần tử khác 0 thay vì lưu và xử lý toàn bộ ma trận đặc; phần 4 xây dựng cách tổ chức đó.
 
-Bậc ra: $d_A = 2, d_B = 1, d_C = 1$.
+**Một quan sát trên ví dụ.** Hai hàng B và C của $M_0$ giống hệt nhau nên $r_B=r_C$ ở mọi vòng; lập luận quy nạp đơn giản cho thấy $r_D$ cũng bằng chúng. Giới hạn của ví dụ có nghiệm dạng: $r_A=3/9=1/3$ và $r_B=r_C=r_D=2/9$. Đáng chú ý: **$r_B=r_C=r_D$ là hệ quả của khởi tạo đều và quy tắc cập nhật trên đồ thị này, không phải do ba nút đối xứng về cấu trúc** — C chỉ có 1 liên kết ra trong khi B, D có 2. Điểm số đo tổng khối lượng nhận được, không đo bậc.
 
-Ma trận chuyển tiếp $M$:
-$$M = \begin{bmatrix}
-0 & 0 & 1 \\
-1/2 & 0 & 0 \\
-1/2 & 1 & 0
-\end{bmatrix}$$
+**Giới hạn của phép lặp thô.** Không thể kết luận phép lặp hội tụ trên mọi đồ thị chỉ từ điều kiện tổng cột bằng 1. Chẳng hạn, một đồ thị có thể khiến điểm dao động theo chu kỳ. Web còn có nút cụt và nhóm trang không có liên kết ra ngoài. Ta sẽ bổ sung bước nhảy và xử lý nút cụt, rồi chứng minh hội tụ cho mô hình đầy đủ dưới đây.
 
-Chọn $\beta = 0.85, N = 3$. Thành phần nhảy ngẫu nhiên: $\frac{1 - \beta}{N} = \frac{0.15}{3} = 0.05$.
+### Nút cụt, bước nhảy và phép cập nhật đầy đủ
 
-### Bước 0:
-$$\mathbf{r}^{(0)} = \begin{bmatrix} 1/3 \\ 1/3 \\ 1/3 \end{bmatrix} \approx \begin{bmatrix} 0.3333 \\ 0.3333 \\ 0.3333 \end{bmatrix}$$
+**Nút cụt làm mất điểm.** Xóa cạnh C→A khỏi đồ thị ví dụ: C trở thành nút cụt (không còn liên kết ra, nhưng vẫn nhận cạnh vào). Cột C của $M_0$ toàn 0, nên điểm cũ của C không đóng góp cho đích nào. Từ $r^0$ đều, một vòng lặp thô cho $(3/24,\,5/24,\,5/24,\,5/24)^T$, tổng $18/24=3/4$: mất đúng $1/4$ điểm của C. Lặp tiếp, tổng điểm giảm dần về 0 — tầm quan trọng "rò rỉ" khỏi đồ thị. (Biến thể này là Hình 5.3, biến thể `dead` trong mã thực hành.)
 
-### Bước 1:
-$$M \mathbf{r}^{(0)} = \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix}$$
-$$\mathbf{r}^{(1)} = 0.85 \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1917 \\ 0.4750 \end{bmatrix}$$
+**Bẫy liên kết dồn điểm.** Thay C→A bằng khuyên C→C (Hình 5.6, biến thể `trap`): C có bậc ra 1 nên tổng điểm vẫn được giữ, nhưng người đã đến C không bao giờ rời C nếu chỉ đi theo liên kết. Phép lặp thô trên đồ thị này dồn toàn bộ điểm về C. Một bẫy tổng quát là tập trang có liên kết ra nhưng không có cạnh ra khỏi tập.
 
-### Bước 2:
-$$M \mathbf{r}^{(1)} = \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix}$$
-$$\mathbf{r}^{(2)} = 0.85 \begin{bmatrix} 0.4750 \\ 0.1667 \\ 0.3583 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.4538 \\ 0.1917 \\ 0.3546 \end{bmatrix}$$
+**Bước nhảy và bù nút cụt.** Mô hình đầy đủ sửa cả hai lỗi bằng cách bổ sung hành vi của người lướt ngẫu nhiên. Mỗi bước, với xác suất $\beta$ người lướt đi theo một liên kết ra (chia đều), với xác suất $1-\beta$ nhảy đều tới một trang bất kỳ trong $n$ trang, kể cả trang hiện tại; điều kiện $0<\beta<1$, ví dụ tính tay dùng $\beta=4/5$. Riêng cho nút cụt: trong nhánh theo liên kết, điểm của nút cụt được **phân phối lại đều** cho cả $n$ trang. Đặt $\delta^t=\sum_{j:\,d_j=0}r_j^t$ là tổng điểm các nút cụt và $u=(1/n,\dots,1/n)^T$, quy tắc cập nhật đầy đủ là:
 
-Sau khi lặp đến hội tụ ($\epsilon < 10^{-5}$):
-$$\mathbf{r}^* \approx \begin{bmatrix} 0.3877 \\ 0.2148 \\ 0.3975 \end{bmatrix}$$
+$$r_i^{\,t+1}=\beta\sum_{j:\,j\to i}\frac{r_j^{\,t}}{d_j}+\frac{(1-\beta)+\beta\,\delta^t}{n}.$$
 
-Thứ hạng các trang: $C > A > B$.
+Dạng véc tơ tương đương:
 
----
+$$r^{t+1}=\beta M_0 r^t+\bigl((1-\beta)+\beta\delta^t\bigr)u.$$
 
-## 7. Cài đặt thuật toán trên mô hình phân tán MapReduce
+![Điểm từ nút cụt được phân phối lại đều tới cả bốn trang](img/lec-03/model-dead-redistribute.svg)
 
-Trong điều kiện $N$ rất lớn, việc tính toán $\mathbf{r}^{(t+1)} = \beta M \mathbf{r}^{(t)} + \frac{1 - \beta}{N} \mathbf{1}$ được tổ chức trên kiến trúc phân tán như sau:
+**Phân biệt với công thức taxation trong sách.** Sách MMDS (mục 5.1.5, trang 186–187) viết $v'=\beta Mv+(1-\beta)e/n$ trên ma trận có thể còn cột 0 — dạng này *không* có hạng $\beta\delta$, nên khi có nút cụt tổng điểm có thể nhỏ hơn 1. Quy tắc của bài giảng tương đương với cách diễn giải "chuyển đều ở nút cụt rồi nhảy ở mọi nút", được hỗ trợ bởi các trang chiếu 42 và 52 của MMDS, 45 và 54 của Stanford; điểm trong bài luôn là phân phối xác suất nên phần bù là bắt buộc.
 
-- Biểu diễn đồ thị thưa: Mỗi dòng lưu bản ghi `(u, r_u, [v_1, v_2, ..., v_k])` với $u$ là trang nguồn, $r_u$ là điểm số tại bước hiện tại, và danh sách các đỉnh kề $v_i$.
-- **Giai đoạn Map:**
-  - Nhận đầu vào là bản ghi đỉnh $u$.
-  - Phát cặp khóa-giá trị: `(v_i, r_u / k)` cho từng đỉnh kề $v_i$.
-  - Phát lại cấu trúc đồ thị: `(u, [v_1, ..., v_k])` để duy trì dữ liệu liên kết cho vòng sau.
-- **Giai đoạn Reduce:**
-  - Nhóm theo khóa $v_i$.
-  - Tính tổng các giá trị đóng góp: $S_{v_i} = \sum \text{values}$.
-  - Tính điểm mới: $r_{v_i}^{\text{mới}} = \beta \cdot S_{v_i} + \frac{1 - \beta}{N}$.
-  - Ghi bản ghi cập nhật ra hệ thống lưu trữ phân tán.
+**Vết tính một vòng, $\beta=4/5$, $r^0$ đều.**
+- *Đồ thị gốc* (không nút cụt, $\delta=0$):
+  - A: $\frac45\cdot\frac38+\frac1{20}=\frac7{20}$;
+  - B, C, D: $\frac45\cdot\frac5{24}+\frac1{20}=\frac{13}{60}$.
+  - Tổng bằng 1.
+- *Biến thể nút cụt* ($\delta^0=1/4$): thành phần chung $\frac{(1/5)+(1/5)}{4}=\frac1{10}$;
+  - A: $\frac45\cdot\frac18+\frac1{10}=\frac15$;
+  - B, C, D: $\frac45\cdot\frac5{24}+\frac1{10}=\frac4{15}$.
+  - Tổng lại bằng 1 — điểm của C được hoàn lại đủ qua phần bù.
+- *Biến thể `trap` một vòng*, $z_C$ nhận từ A, C và D: $z_C=\frac1{12}+\frac14+\frac18=\frac{11}{24}$, nên $r_C=\frac45\cdot\frac{11}{24}+\frac1{20}=\frac{5}{12}$; A $3/20$, B, D $13/60$; tổng $\frac{3}{20}+\frac{13}{60}+\frac{5}{12}+\frac{13}{60}=1$.
+
+**Bảo toàn khối lượng.** Nếu $r^t$ không âm, tổng 1 thì $r^{t+1}$ cũng vậy: nguồn không cụt cộng lại góp $\beta(1-\delta)$, phần bù trả lại $\beta\delta$, bước nhảy góp $1-\beta$; tổng ba phần bằng 1 và mọi hệ số không âm. Đây là bất biến dùng để kiểm chương trình ở phần 6.
+
+**Hội tụ.** Đặt $S$ là $M_0$ với mỗi cột nút cụt thay bằng $u$; $S\ge 0$ và mỗi cột tổng 1, và phép cập nhật viết được $F(r)=\beta Sr+(1-\beta)u$. Đo khoảng cách bằng $\|x-y\|_1=\sum_i|x_i-y_i|$. Với mọi véc tơ thực $v$:
+
+$$\|Sv\|_1\;\le\;\sum_i\sum_j S_{ij}|v_j|\;=\;\|v\|_1,$$
+
+vì mỗi cột của $S$ có tổng 1. Suy ra $\|F(x)-F(y)\|_1\le\beta\|x-y\|_1$ (phần bước nhảy triệt tiêu trong hiệu), nên với $\Delta_t=\|r^{t+1}-r^t\|_1$ ta có $\Delta_t\le\beta^t\Delta_0$. Với $q>p$: $\|r^q-r^p\|_1\le\sum_{j=p}^{q-1}\Delta_j\le \beta^p\Delta_0/(1-\beta)\to 0$, tức dãy lặp là dãy Cauchy; giới hạn $r^*$ vẫn không âm và có tổng bằng 1 (các điều kiện này được giữ khi lấy giới hạn), $F$ liên tục nên $r^*=F(r^*)$. Hai điểm bất động bất kỳ phải cách nhau $d$ thỏa $d\le\beta d$, tức $d=0$: nghiệm duy nhất.
+
+::: derivation Khai triển chi tiết: Cận hậu nghiệm (đọc thêm)
+Sai số so với nghiệm bị chặn bởi:
+$$\|r^{t+1}-r^*\|_1\le\sum_{j=t+1}^{\infty}\Delta_j\le\frac{\beta}{1-\beta}\Delta_t.$$
+Lưu ý $\Delta_t=\|r^{t+1}-r^t\|_1$ đo vòng *sau*, còn cận nói về $r^{t+1}$; và trên máy tính số dấu phẩy động, kết luận đúng cho số thực lý tưởng còn phép so sánh cần dung sai.
+:::
+
+**Thuật toán và dừng.** Vào: danh sách kề, $n\ge1$, $0<\beta<1$, ngưỡng $\tau>0$, giới hạn $T_{\max}$ nguyên dương. Mỗi vòng: tính $\delta$ từ véc tơ cũ, đặt phần chung cho mọi trang, cộng đóng góp từng cạnh, tính $\Delta_t=\sum_i|r_i^{t+1}-r_i^t|$, thay $r$. Dừng khi $\Delta_t\le\tau$ (trạng thái *đạt ngưỡng*) hoặc hết $T_{\max}$ (trạng thái *chưa đạt*, kèm véc tơ và $\Delta$ cuối). Lưu ý $\tau$ là ngưỡng độ thay đổi giữa hai vòng, không đồng nhất sai số so với nghiệm; ví dụ với $\Delta_1=2/25=0{,}08$ và $\tau=0{,}1$ thuật toán dừng sau vòng thứ hai; vòng đầu có $\Delta_0=\bigl|\frac7{20}-\frac14\bigr|+3\bigl|\frac{13}{60}-\frac14\bigr|=\frac1{10}+3\cdot\frac1{30}=\frac15>0{,}1$. Mỗi vòng quét $n+m$ phần tử.
 
 ---
 
-## 8. Cài đặt tham khảo bằng Python
+## 4. Tính PageRank trên đồ thị lớn: biểu diễn thưa và MapReduce theo khối
 
-```python
-import numpy as np
+**Vấn đề quy mô.** Quy tắc cập nhật không đổi, nhưng với web thật $n$ rất lớn trong khi số liên kết thường nhỏ hơn nhiều so với số cặp trang có thể có: ma trận đặc cần $n^2$ ô trong khi thông tin thật chỉ là $m$ cạnh. Khi $m\ll n^2$, phần áp đảo của ma trận là 0. Cần hai việc: biểu diễn thưa và chia việc sao cho mỗi tác vụ chỉ giữ phần dữ liệu vừa bộ nhớ chính (RAM).
 
-def pagerank(M, beta=0.85, tol=1e-6, max_iter=100):
-    """
-    Tính vector PageRank bằng phương pháp lặp lũy thừa.
-    
-    Tham số:
-        M: np.ndarray, kích thước (N, N), ma trận chuyển tiếp Markov.
-        beta: float, hệ số suy giảm (mặc định 0.85).
-        tol: float, ngưỡng hội tụ cho chuẩn L1.
-        max_iter: int, số vòng lặp tối đa.
-        
-    Trả về:
-        r: np.ndarray, vector điểm phân phối dừng (N,).
-    """
-    N = M.shape[0]
-    r = np.ones(N) / N
-    teleport = (1.0 - beta) / N
+**Biểu diễn theo nguồn (MMDS 5.2.1).** Vì giá trị khác không của cột $j$ luôn là $1/d_j$, chỉ cần lưu cho mỗi nguồn: mã nguồn, bậc ra toàn cục $d_j$, và danh sách đích. Trên đồ thị ví dụ:
+- A: 3 → B, C, D;
+- B: 2 → A, D;
+- C: 1 → A;
+- D: 2 → B, C.
 
-    for it in range(max_iter):
-        r_next = beta * M.dot(r) + teleport
-        diff = np.linalg.norm(r_next - r, ord=1)
-        r = r_next
-        if diff < tol:
-            break
+Nút cụt vẫn giữ bản ghi với $d_j=0$, danh sách rỗng — cần cho pha tính $\delta$. Bậc ra ở đây là **bậc toàn cục**, không phải số đích trong một khối cụ thể; ghi sai bậc sẽ làm sai mọi đóng góp từ nguồn đó.
 
-    return r
+**Chia khối (MMDS 5.2.3–5.2.4).** Đặt $z=M_0r$; $V_b$ là tập trang nguồn thuộc dải $b$. Chia $r$ và $z$ thành $k$ dải, $M_0$ thành $k^2$ khối: khối $M_{ab}$ chứa cạnh từ nguồn dải $b$ tới đích dải $a$. Nếu chỉ chia theo cột, mỗi tác vụ có thể phải cộng vào toàn bộ véc tơ kết quả; chia thêm theo hàng giới hạn cả miền vào lẫn miền ra. Trên ví dụ với $k=2$ (nguồn A, B | C, D):
+- $M_{11}$ ghi A→B, B→A;
+- $M_{21}$ ghi A→C, A→D, B→D;
+- $M_{12}$ ghi C→A, D→B;
+- $M_{22}$ chỉ ghi D→C (C không trỏ tới C hay D).
 
-if __name__ == '__main__':
-    # Ma trận chuyển tiếp ví dụ mục 6
-    M = np.array([
-        [0.0, 0.0, 1.0],
-        [0.5, 0.0, 0.0],
-        [0.5, 1.0, 0.0]
-    ])
+Bậc toàn cục $d_A=3$ được lặp lại ở cả hai khối có cạnh của A; mỗi cạnh thuộc đúng một khối theo cặp (nguồn, đích).
 
-    scores = pagerank(M)
-    for idx, name in enumerate(['A', 'B', 'C']):
-        print(f"Trang {name}: {scores[idx]:.4f}")
+![Ma trận chia thành bốn khối theo hai dải nguồn và hai dải đích](img/lec-03/rlarge-blocks-grid.svg)
+
+**Map, Combine, Reduce.** Map nhận khối $B_{ab}$ và dải điểm $r_b$:
+
+```text
+Map(B_ab, r_b):
+  với mỗi (j, dj, dests) trong B_ab:
+    với mỗi i trong dests:
+      yield(i, r_b[j] / dj)
+
+Combine(i, values):
+  yield(i, sum(values))
 ```
 
+Khóa là trang đích; Combine cộng các đóng góp cùng khóa ngay tại tác vụ Map, giảm dữ liệu phải chuyển. Reduce hoàn thiện:
+
+```text
+Reduce(i, L_i):
+  z_i = sum(L_i)
+  return(i, beta * z_i + (1 - beta + beta * delta) / n)
+```
+
+**Hai chi tiết quan trọng.**
+1. $\delta$ tính một lần từ phân hoạch nguồn (mỗi nút cụt góp đúng một lần), rồi gửi tới các tác vụ Reduce — không tính lại $\delta$ từ các khối có bản ghi nguồn lặp.
+2. Tạo bản ghi $(i,0)$ cho **mọi** trang từ danh sách trang, để đích không có liên kết vào nào vẫn xuất hiện khi nhóm theo khóa và nhận phần chung.
+
+**Ví dụ gộp tại A.** Đồ thị gốc, $r^0$ đều, $\beta=4/5$, $k=2$: $M_{11}$ sinh $(A, 1/8)$ (cạnh B→A), $M_{12}$ sinh $(A, 1/4)$ (cạnh C→A); $z_A=1/8+1/4=3/8$; $r_A^1=\frac45\cdot\frac38+\frac1{20}=\frac7{20}$ — khớp đúng phép tính một máy của phần 3.
+
+**Tính đúng.** Mọi tác vụ dùng cùng bản chụp cố định của $r$ trong suốt một vòng (véc tơ không đổi khi đang được đọc), nên:
+
+$$\sum_{b=1}^{k}\ \sum_{j\in V_b:\ j\to i}\frac{r_j}{d_j}=\sum_{j:\ j\to i}\frac{r_j}{d_j}.$$
+
+Mỗi cạnh đóng góp đúng một lần vì nó thuộc đúng một khối; Combine và Reduce chỉ tái nhóm các tổng. Trên số thực chính xác kết quả bằng phép cập nhật tuần tự; trên số dấu phẩy động, thứ tự cộng khác nhau gây chênh làm tròn nhỏ — không khẳng định tính kết hợp tuyệt đối của số thực máy.
+
+**Tổ chức một vòng.** Các pha: dùng $r$ cố định → Map song song trên $k^2$ khối (pha $\delta$ có thể chạy song song nhưng phải xong trước Reduce) → Combine tại chỗ → truyền và nhóm theo khóa → Reduce → tổng hợp $\Delta$ để quyết định dừng. Lưu ý $k^2$ là số *tác vụ*, không phải số máy; với $k=2$, bốn tác vụ có thể chạy trên hai máy. Biến thể gộp cả một hàng khối vào một tác vụ (Map đọc cả $v$, Reduce chỉ nối kết quả) nằm ở MMDS 5.2.5 để đọc thêm.
+
 ---
 
-← [Bài 02: Map-Reduce](/giai-thuat-du-lieu/bai-giang/bai-02-mapreduce-va-xu-ly-du-lieu-lon.md) · [Mục lục học phần](/giai-thuat-du-lieu/index.md)
+## 5. Chi phí: lưu trữ, bộ nhớ, dữ liệu và thời gian
+
+Phần này đánh giá cách tổ chức tính theo khối bằng bốn đại lượng riêng biệt, theo mô hình chi phí đầu vào tác vụ của MMDS 2.5.1: $I$ là tổng byte đầu vào các tác vụ Map, $H$ là tổng byte đầu vào các tác vụ Reduce, $C=I+H$ cho một công việc có Combine nằm trong Map. Tất cả số byte dưới đây là mô hình giả định từ định dạng, **không** phải kích thước đối tượng Python hay số đo thực nghiệm. Tham số: $n$ trang, $m$ liên kết, $k$ dải mỗi chiều, $p$ máy.
+
+**Dung lượng lưu đĩa $S$.** Quy ước: giá trị điểm 8 byte (double), mã trang hoặc bậc ra 4 byte (số nguyên 32 bit).
+- Ma trận đặc: $S_{\text{dense}}=8n^2$ byte.
+- Danh sách liên kết (mã nguồn ngầm): $S_{\text{adj}}\approx 4(n+m)$ — $n$ bậc ra cộng $m$ mã đích; mô hình bỏ qua phần phụ trội của định dạng và lưu trữ.
+- Với $n=4$, $m=8$: 128 và 48 byte. Tỷ số xấp xỉ $2n^2/(n+m)$, có lợi khi $m\ll n^2$.
+- Con số 48 byte là của biểu diễn toàn cục; biểu diễn theo khối lặp lại bậc ra và mã nguồn ở nhiều khối, nên không gán nó cho $S_{\text{blocks}}$.
+
+**Bộ nhớ một tác vụ $B$.** Tác vụ khối đọc ma trận tuần tự qua bộ đệm; nó giữ hai dải véc tơ (dải vào $r_b$ và dải tích lũy $z_a$), mỗi dải $n/k$ giá trị 8 byte (giả sử $k$ chia hết $n$):
+
+$$B_{\text{task}}\approx \frac{16n}{k}+B_{\text{buf}}.$$
+
+Với $n=4$, $k=2$: $2\cdot2\cdot8=32$ byte cộng bộ đệm đọc khối $B_{\text{buf}}$. Tăng $k$ giảm bộ nhớ mỗi tác vụ nhưng tăng số lần mỗi dải được đọc (mỗi dải phục vụ $k$ tác vụ) — đánh đổi xuất hiện lại ở phần đầu vào.
+
+**Đầu vào Map $I$.** $I=S_{\text{blocks}}+8kn$: phần ma trận mỗi khối đọc một lần; phần véc tơ, mỗi dải $r_b$ được gửi tới $k$ tác vụ cùng cột nên toàn véc tơ được đọc $k$ lần, mỗi lần $8n$ byte. Với ví dụ $n=4$, $m=8$, $k=2$: bảy bản ghi nguồn (phân bổ 2, 2, 2, 1 trên bốn khối; định dạng nguồn 4 byte + bậc 4 byte + mỗi đích 4 byte) cho $S_{\text{blocks}}=8\cdot7+4\cdot8=88$ byte; véc tơ $8\cdot2\cdot4=64$ byte; $I=152$ byte. $I$ chưa gồm các pha $\delta$, kiểm tra $\Delta$ và điều phối. Đồ thị ví dụ không có nút cụt và mọi đích có liên kết vào, nên không cần bản ghi seed hay $\delta$ trong bài tính cốt này.
+
+**Combine và $H$.** Không Combine: $m=8$ bản ghi (khóa 4 + giá trị 8 = 12 byte) → $H=96$ byte. Có Combine: $q=7$ bản ghi khóa (chỉ khối $M_{21}$ gộp hai đóng góp vào D thành một) → $H=84$ byte. Do đó $C=I+H$ giảm từ $248$ xuống $236$ byte. Giảm 12 byte là 12,5% của $H$ — không phải 12,5% toàn bộ thời gian chạy. Đây chỉ là phép nhân theo khối trong một vòng, chưa phải tổng chi phí cả luồng công việc.
+
+**Phân biệt $C$ với $Q$.** $Q$ là số byte **thực sự đi qua mạng**; nó chỉ bằng $H$ nếu mọi bản ghi ra Map đều qua mạng, không nén, không chạy lại, không phần phụ trội. Dữ liệu khối thường nằm cục bộ, nên $I=Q$ không suy ra được từ dữ kiện. Nếu toàn bộ 7 bản ghi sau Combine qua mạng: $Q=84$ byte và $T_{\text{shuffle}}\ge Q/b_{\text{eff}}$ với $b_{\text{eff}}$ là băng thông hiệu quả tổng hợp (byte/giây).
+
+**Thời gian.** Mô hình: mỗi cạnh tốn $c_e$ giây (giả định), bỏ I/O, truyền và lập lịch trong pha tính. Tổng việc $W=m\cdot c_e=8c_e$ không đổi theo số máy. Thời gian xử lý các khối tương ứng là:
+- $M_{11}$ tốn $2c_e$,
+- $M_{21}$ tốn $3c_e$,
+- $M_{12}$ tốn $2c_e$,
+- $M_{22}$ tốn $1c_e$.
+
+Một máy tuần tự: $8c_e$. Bốn máy, mỗi máy một tác vụ: $T_{\text{map}}=3c_e$ (tác vụ nặng nhất là nút cổ chai), tăng tốc $8/3$ — không phải 4. Gọi $w_{\max}$ là thời gian của tác vụ nặng nhất. Khi tác vụ không bị chia nhỏ thêm: $T_{\text{map}}\ge\max(W/p,\ w_{\max})$.
+
+**Một vòng và cả công việc.** Giả định các pha không chồng nhau:
+
+$$T_{\text{round}}\approx T_\delta+T_{\text{map}}+T_{\text{shuffle}}+T_{\text{reduce}}+T_{\text{sync}}.$$
+
+$T_\delta$ đo pha tính tổng điểm nút cụt; $T_{\text{shuffle}}$ đo pha truyền và nhóm; $T_{\text{reduce}}$ đo pha gộp kết quả; $T_{\text{sync}}$ đo pha kiểm tra dừng và đồng bộ.
+
+Với $L$ vòng: $T_{\text{job}}=T_{\text{setup}}+\sum_{t=1}^{L}T_{\text{round},t}$. Nếu pha $\delta$ chạy đồng thời Map, dùng max của hai thời gian thay vì tổng. $L$ phụ thuộc tiêu chí dừng ($\tau$, $T_{\max}$), không mặc định cố định. Lưu ý phân biệt: quét $n+m$ phần tử *một vòng trên một máy* là mô hình phép toán; $c_e$ giây mỗi cạnh và $W=mc_e$ là mô hình thời gian theo tác vụ — hai cách đếm khác phạm vi và đơn vị, không cộng lẫn.
+
+---
+
+## 6. Thực hành: chạy mã `pagerank.py`
+
+Tệp mã [pagerank.py](/materials/lec-03/code/pagerank.py) (đi kèm [hướng dẫn chạy](/materials/lec-03/code/practice-README.md)) cài đặt đúng mô hình phần 3 bằng Python 3, chỉ dùng thư viện chuẩn (`argparse`, `json`, `math`, `sys`) — không cần pip. Mục đích là **kiểm chứng công thức trên một máy**, không phải đo hiệu năng hay chứng minh tăng tốc; không dùng đồ thị bốn nút để suy kết luận về song song hóa.
+
+**Biểu diễn dữ liệu và giao diện.** Đồ thị là dict từ tên nút sang danh sách đích:
+
+```python
+adj = {
+    "A": ["B", "C", "D"],
+    "B": ["A", "D"],
+    "C": ["A"],
+    "D": ["B", "C"],
+}
+```
+
+Hàm `pagerank(adj, beta=0.8, tol=1e-8, max_iter=100)` trả về dict gồm `rank` (điểm từng nút), `converged` (trạng thái đạt ngưỡng), `iterations` (số vòng), `delta` (độ thay đổi cuối). Điều kiện vào: $n\ge 1$; mọi đích là khóa của dict; cạnh trùng được gộp trong bản sao (hàm không sửa dữ liệu vào); $0<\beta<1$; `tol` dương; `max_iter` nguyên dương. Toàn bộ nút được giữ, kể cả nút không có liên kết vào hay nút cụt — nút cụt phải có mặt để tính phần bù.
+
+**Mã một vòng.** Hàm `step` dịch trực tiếp quy tắc cập nhật:
+
+```python
+def step(adj, r, beta):
+    n = len(adj)
+    delta = sum(r[j] for j in adj if not adj[j])
+    common = (1.0 - beta + beta * delta) / n
+    new = {i: common for i in adj}
+    for j, targets in adj.items():
+        if not targets:
+            continue
+        share = beta * r[j] / len(targets)
+        for i in targets:
+            new[i] += share
+    return new
+```
+
+`delta` ở đây là $\delta^t$ (tổng điểm nút cụt, tính từ véc tơ cũ); `common` là phần chung $((1-\beta)+\beta\delta)/n$, cấp sẵn cho mọi nút nên đích không có liên kết vào vẫn nhận điểm; nút cụt bỏ qua vòng chia vì điểm của nó đã vào phần bù. Vector `r` chỉ được đọc; điểm mới nằm hoàn toàn trong dict trả về. Lưu ý hai đại lượng cùng họ tên trong tệp: `delta` trong `step` là $\delta$, còn `delta` trong vòng lặp là $\Delta=\sum_i|r_i^{t+1}-r_i^t|$ — hai phạm vi khác nhau.
+
+**Vòng lặp và dừng.** Khởi tạo $r^0$ đều $1/n$; mỗi vòng gọi `step`, tính $\Delta$, thay `r`, dừng khi $\Delta\le\tau$. Nếu hết `max_iter` chưa đạt ngưỡng, kết quả kèm trạng thái chưa đạt, số vòng và $\Delta$ cuối.
+
+**Lệnh chạy.** Từ thư mục gốc dự án:
+
+```bash
+python materials/lec-03/code/pagerank.py --variant base --beta 0.8 --tol 1e-8 --max-iter 100
+```
+
+Đổi `--variant` thành `dead` hoặc `trap` cho hai biến thể. Đầu ra là JSON: `rank`, `converged`, `iterations`, `delta`, `rank_sum`.
+
+**Kết quả chạy với các tham số trên.**
+- Với `base`, `beta=0.8`, `tol=1e-8`: đạt ngưỡng sau 20 vòng, $r_A\approx0{,}321429$, $r_B=r_C=r_D\approx0{,}226190$ (nghiệm chính xác lần lượt là $9/28$ và $19/84$), $\Delta$ cuối $\approx 5{,}50\times10^{-9}$, tổng điểm 1.0.
+- Với `dead`: 12 vòng.
+- Với `trap`: 34 vòng, C chiếm $\approx0{,}642$.
+
+Sai khác làm tròn nhỏ có thể xuất hiện giữa môi trường chạy; số vòng không phải hằng số để học thuộc — nó phụ thuộc $\tau$ và $\beta$.
+
+**Ba lớp kiểm chứng.**
+1. **Bất biến:** tổng điểm xấp xỉ 1, mọi giá trị không âm.
+2. **Một bước tính tay:** `base` từ $r^0$ đều, $\beta=0{,}8$ cho $r_A=7/20$, $r_B=r_C=r_D=13/60$; `dead` cho $1/5$ và $4/15$ — khớp bảng phần 3.
+3. **Trường hợp biên trong README:** toàn bộ nút cụt ($\delta=1$, mỗi vòng trả lại phân phối đều, không lỗi chia không) và nút có khuyên lên chính nó. So sánh số thực dùng dung sai `abs(got - want) <= 1e-12`, không dùng `==`.
+
+**Lỗi thường gặp khi tự cài.** Cập nhật trực tiếp `r[i] += ...` khi quét cạnh làm trộn điểm cũ và điểm mới; bỏ nút không có liên kết vào trước khi chạy làm mất nút khỏi kết quả; dùng `==` so sánh float. Ba lỗi này đều trái với bất biến và quy tắc đồng bộ đã nêu.
+
+---
+
+## 7. Bài tập tự luyện
+
+Bốn bài sau giữ nguyên đề và đồ thị của MMDS. Làm trước khi xem gợi ý.
+
+### Bài 1 — MMDS 5.1.1 (trang 187–188, Hình 5.7): PageRank không bước nhảy
+
+::: exercise
+Tính PageRank của từng trang trong Hình 5.7, không có bước nhảy.
+:::
+
+Đồ thị Hình 5.7: $a\to a, b, c$; $b\to a, c$; $c\to b, c$ — bảy cạnh, có khuyên ở $a$ và $c$.
+
+![Hình 5.7: a trỏ tới a, b, c; b trỏ tới a, c; c trỏ tới b, c; bảy cạnh với hai khuyên](img/lec-03/ex-fig-57.svg)
+
+::: hint
+Đặt $a, b, c$ cũng là điểm của ba trang. Viết ma trận theo cột nguồn, lập hệ cân bằng $r=Mr$ kèm điều kiện chuẩn hóa, rồi giải bằng khử tuyến tính.
+:::
+
+::: solution
+Cột nguồn: cột $a$ là $(1/3,1/3,1/3)$, cột $b$ là $(1/2,0,1/2)$, cột $c$ là $(0,1/2,1/2)$. Hệ cân bằng:
+
+$$a=\frac a3+\frac b2,\qquad b=\frac a3+\frac c2,\qquad c=\frac a3+\frac b2+\frac c2,\qquad a+b+c=1.$$
+
+Từ phương trình đầu: $a-\frac b2=\frac a3\Rightarrow b=\frac{4a}3$.
+
+Thế vào phương trình hai: $b=\frac a3+\frac c2\Rightarrow c=2b-\frac{2a}3=\frac{8a}3-\frac{2a}3=2a$.
+
+Tổng: $a+\frac{4a}3+2a=\frac{13a}3=1$, nên:
+
+$$a=\frac3{13},\quad b=\frac4{13},\quad c=\frac6{13}.$$
+
+Kiểm phương trình ba: $\frac1{13}+\frac2{13}+\frac3{13}=\frac6{13}$; hai phương trình đầu thỏa trực tiếp. Tổng ba điểm bằng 1.
+:::
+
+### Bài 2 — MMDS 5.1.2 (trang 188, cùng Hình 5.7): thêm bước nhảy, $\beta=0{,}8$
+
+::: exercise
+Tính PageRank của từng trang trong Hình 5.7 với $\beta=0{,}8$.
+:::
+
+::: hint
+Đồ thị không có nút cụt nên $\delta=0$ và phần chung là $(1-\beta)/3=1/15$. Cần giải $r=\frac45M_0r+\frac1{15}\mathbf 1$ với $a+b+c=1$; thay $c=1-a-b$ để còn hai ẩn.
+:::
+
+::: solution
+Hai phương trình đầu (nhân 15):
+
+$$15a=4a+6b+1\ \Rightarrow\ 11a-6b=1;\qquad 15b=4a+6c+1.$$
+
+Thay $c=1-a-b$: $15b=4a+6-6a-6b+1\Rightarrow 2a+21b=7$. Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
+
+$$a=\frac7{27}=\frac{21}{81}.$$
+
+Tiếp tục: $b=\frac{11a-1}{6}=\frac{231/81-1}{6}=\frac{25}{81}$; $c=1-a-b=\frac{35}{81}$.
+
+Kiểm phương trình của $c$:
+$$\frac45\left(\frac7{81}+\frac{25}{162}+\frac{35}{162}\right)+\frac1{15}=\frac45\cdot\frac{74}{162}+\frac1{15}=\frac{148}{405}+\frac{27}{405}=\frac{35}{81}.$$
+Tổng: $\frac{21+25+35}{81}=1$.
+
+So sánh hai bài: bước nhảy san phẳng điểm, kéo $c$ từ $6/13\approx0{,}462$ xuống $35/81\approx0{,}432$ và nâng $a$ lên.
+:::
+
+### Bài 3 — MMDS 5.2.1 (trang 195): ngưỡng lưu ma trận thưa
+
+::: exercise
+Ma trận Boolean $n\times n$ có thể lưu đặc bằng từng bit, hoặc thưa bằng liệt kê tọa độ các ô 1 — mỗi tọa độ là một cặp số nguyên, mỗi số $\lceil\log_2 n\rceil$ bit. Ma trận phải thưa đến mức nào (tỷ lệ ô 1) để cách liệt kê tiết kiệm chỗ hơn?
+:::
+
+::: hint
+Gọi $m$ là số ô 1. Viết dung lượng hai cách theo bit, lập bất đẳng thức, chú ý điểm bằng nhau chưa phải là tiết kiệm.
+:::
+
+::: solution
+Cách đặc: $n^2$ bit.
+
+Cách thưa: $m$ ô 1, mỗi ô cần hai số nguyên, mỗi số $\lceil\log_2 n\rceil$ bit, tổng $2m\lceil\log_2 n\rceil$ bit.
+
+Điều kiện tiết kiệm:
+
+$$2m\lceil\log_2 n\rceil < n^2\quad\Longleftrightarrow\quad \rho=\frac m{n^2}<\frac{1}{2\lceil\log_2 n\rceil}.$$
+
+Tại điểm bằng nhau hai cách tốn như nhau nên điều kiện phải là bất đẳng thức ngặt. Với $n=1$, $\lceil\log_2 n\rceil=0$ và mô hình tọa độ suy biến; so sánh chỉ có nghĩa từ $n\ge2$. Kết luận là điều kiện theo $n$, không cần dữ liệu cụ thể khác.
+:::
+
+### Bài 4 — MMDS 5.2.2 (trang 195): biểu diễn đồ thị theo mục 5.2.1
+
+::: exercise
+Dùng phương pháp mục 5.2.1, lập bảng nguồn — bậc ra — danh sách đích cho: (a) đồ thị Hình 5.4; (b) đồ thị Hình 5.7.
+:::
+
+![Đồ thị Hình 5.4: A tới B, C, D; B tới A, D; C tới E; D tới B, C; E không có cạnh ra](img/lec-03/ex-fig-54.svg)
+
+Hình 5.7 đã cho ở Bài 1.
+
+::: hint
+Mỗi nguồn ghi bậc ra toàn cục rồi toàn bộ danh sách đích; nguồn không có liên kết ra vẫn được liệt kê với bậc 0. Khuyên cũng là một cạnh và tính vào bậc ra.
+:::
+
+::: solution
+**Hình 5.4** (A→B, C, D; B→A, D; C→E; D→B, C; E không có liên kết ra — tám cạnh):
+
+| Nguồn | Bậc ra | Đích |
+|---|---|---|
+| A | 3 | B, C, D |
+| B | 2 | A, D |
+| C | 1 | E |
+| D | 2 | B, C |
+| E | 0 | (rỗng) |
+
+**Hình 5.7** (a→a, b, c; b→a, c; c→b, c — bảy cạnh gồm hai khuyên):
+
+| Nguồn | Bậc ra | Đích |
+|---|---|---|
+| a | 3 | a, b, c |
+| b | 2 | a, c |
+| c | 2 | b, c |
+
+Bài này chỉ yêu cầu biểu diễn, không yêu cầu tính PageRank. Tổng bậc ra là 8 và 7, khớp số cạnh hai hình. Lưu ý Hình 5.7 có 5 cạnh giữa các nút khác nhau cộng 2 khuyên, tổng 7 cạnh — không đếm khuyên hai lần.
+:::
+
+---
+
+## 8. Hướng dẫn chấm bài tập
+
+| Bài | Tiêu chí đánh giá | Điểm |
+|---|---|---|
+| **Bài 1** | Ma trận liên kết $M$ đúng dạng theo cột nguồn | 3 |
+| | Hệ phương trình cân bằng và điều kiện chuẩn hóa tổng | 3 |
+| | Khử tuyến tính và tính ra các giá trị $a, b, c$ | 2 |
+| | Kiểm nghiệm lại phương trình và điều kiện tổng 1 | 2 |
+| **Bài 2** | Mô hình có bước nhảy và xác định đúng phần bù chung $1/15$ | 3 |
+| | Lập và giải hệ phương trình tuyến tính | 4 |
+| | Kiểm nghiệm và kết luận độ san phẳng điểm số | 3 |
+| **Bài 3** | Viết đúng biểu thức dung lượng cho 2 cách lưu trữ | 4 |
+| | Thiết lập bất đẳng thức và suy ra ngưỡng mật độ $\rho$ | 4 |
+| | Phân tích điều kiện ngặt và trường hợp biên $n \ge 2$ | 2 |
+| **Bài 4** | Lập đúng bảng cho Hình 5.4 (kèm nút cụt $E$) | 4 |
+| | Lập đúng bảng cho Hình 5.7 (đếm đúng 2 khuyên) | 4 |
+| | Ghi rõ nguồn hình và đối chiếu tổng bậc ra | 2 |
+| **Tổng điểm** | | **10** |
+
+---
+
+## 9. Đọc thêm và tài liệu tham khảo
+
+- J. Leskovec, A. Rajaraman, J. D. Ullman, *Mining of Massive Datasets*, 3rd ed., Cambridge University Press — chương 5 (Link Analysis), mục 5.1.2–5.1.7 trang 178–188, mục 5.2 trang 189–195; chương 2, mục 2.5.1 trang 53–54 cho mô hình chi phí. Xem thêm tại [MMDS](http://www.mmds.org).
+- [Slide MMDS](http://www.mmds.org/), tệp `ch05-linkanalysis1.pdf`, trang chiếu 42 và 52; [Stanford CS246](https://web.stanford.edu/class/cs246/), tệp `09-pagerank.pdf`, trang chiếu 45 và 54: phân phối điểm nút cụt, nguồn của phần bù $\beta\delta$.
+- Tệp mã thực hành: [materials/lec-03/code/pagerank.py](/materials/lec-03/code/pagerank.py) và [materials/lec-03/code/practice-README.md](/materials/lec-03/code/practice-README.md).
+
+[Quay về bộ trang chiếu](#slides).
