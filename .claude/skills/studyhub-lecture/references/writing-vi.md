@@ -65,6 +65,8 @@ Chọn theo chức năng:
 
 Một tiêu đề dạng kết luận cần có nội dung bên dưới hỗ trợ. Một câu hỏi cần được bài trả lời, hoặc được ghi rõ là câu hỏi còn mở. Không để câu hỏi làm trang trí.
 
+Đọc liền danh sách tiêu đề của cả bài. Nếu nhiều mục cùng dùng “Từ A đến B”, “Vì sao…?”, “Làm sao…?” hoặc chuỗi ba câu hỏi rút gọn, hãy viết lại phần lớn thành tiêu đề khai báo nội dung. Sự đa dạng không đến từ việc thay vài từ đồng nghĩa; nó đến từ chức năng thật của từng mục: định nghĩa, phép suy ra, ví dụ, điều kiện hay thuật toán.
+
 Câu dẫn nên nối một nhu cầu thật: “Ở ví dụ trước, mỗi giá trị có khả năng xuất hiện như nhau. Nếu các xác suất khác nhau, ta cần đưa chúng vào phép tính trung bình.”
 
 Tránh những cầu nối có thể dán vào mọi bài: “Sau khi có nền tảng vững chắc, hãy cùng đi sâu vào khía cạnh tiếp theo.” Nếu bỏ câu mà mạch không đổi, nó thường không cần.
@@ -76,6 +78,8 @@ Cụm từ tốt cho nhãn: “Nhóm B”, “Chi phí”, “Bước 2”, “�
 Câu đầy đủ cần cho lý do: “Ta giữ lại nhóm B vì điều kiện đã cho loại các trường hợp ngoài B.”
 
 Một danh sách có thể dùng cụm từ khi cùng trả lời một câu dẫn và quan hệ đã rõ. Đừng buộc mọi nhãn thành câu. Đừng dùng mũi tên để giấu những quan hệ chưa được giải thích.
+
+Không “ăn bớt” thành phần câu để tạo vẻ súc tích. “Đọc mục 1–2 rồi làm câu tự kiểm” vừa cụt vừa dùng nhãn không tự nhiên. Có thể viết: “Ở lần đọc đầu, hãy học mục 1–2 và thử giải câu hỏi ở cuối mỗi phần trước khi xem đáp án.” Dùng “câu hỏi ôn lại”, “thử trả lời” hoặc tên nhiệm vụ cụ thể; tránh dùng “câu tự kiểm” như một danh từ mặc định.
 
 ## 7. Từ ngữ cần xem xét, không cấm tuyệt đối
 

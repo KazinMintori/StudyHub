@@ -1,11 +1,11 @@
 ---
-title: "Gradient liên hợp"
+title: "Gradient liên hợp (conjugate gradient)"
 wikiTerm: gradient-lien-hop
 prev: false
 next: false
 ---
 
-# Gradient liên hợp
+# Gradient liên hợp (conjugate gradient)
 
 Gradient liên hợp tuyến tính là thuật toán lặp để giải hệ Hz=b khi H đối xứng dương xác định. Nó tạo các hướng liên hợp theo H và chỉ cần phép nhân H với vector, nên có thể tránh lưu một Hessian dày.
 

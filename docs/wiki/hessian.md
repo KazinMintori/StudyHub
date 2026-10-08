@@ -21,7 +21,9 @@ Ký hiệu $o(\|d\|_2^2)$ là phần dư mà tỉ số với $\|d\|_2^2$ tiến 
 
 ## Ví dụ
 
-f(x,y)=x²+3y² có gradient (2x,6y) và Hessian diag(2,6).
+Với $f(x,y)=x^2+3y^2$, gradient là $(2x,6y)^T$ và
+
+$$\nabla^2f=\begin{bmatrix}2&0\\0&6\end{bmatrix}.$$
 
 ## Khi nào cần dùng?
 
@@ -33,7 +35,11 @@ Hessian của f(x,y)=(x+y)² là gì?
 
 <details><summary>Xem đáp án</summary>
 
-[[2,2],[2,2]]. Có số hạng chéo vì hai biến cùng xuất hiện trong một bình phương.
+Ta có
+
+$$\nabla^2f=\begin{bmatrix}2&2\\2&2\end{bmatrix}.$$
+
+Các phần tử ngoài đường chéo xuất hiện vì $x$ và $y$ cùng nằm trong một bình phương.
 
 </details>
 

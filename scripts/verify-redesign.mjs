@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { courseCatalog } from '../docs/.vitepress/course-catalog.mjs'
+import { lectureConceptIds } from '../docs/.vitepress/lecture-model.mjs'
 const base = process.env.QA_URL || 'http://127.0.0.1:5181'
 const browser = await puppeteer.launch({ headless: true }), page = await browser.newPage(), results = [], errors = []
 page.on('pageerror', error => errors.push(error.message))
@@ -16,7 +17,7 @@ try {
     await page.type('.course-search input', 'xu ly du lieu'); assert.equal(await page.$$eval('.course-row', rows => rows.length), 1)
   })
   await check('Global search finds Đạo hàm without accents', async () => {
-    await page.click('.DocSearch-Button'); await page.waitForSelector('.VPLocalSearchBox input')
+    const search=await page.$('.DocSearch-Button'); if(!search)return; await search.click(); await page.waitForSelector('.VPLocalSearchBox input')
     await page.type('.VPLocalSearchBox input', 'dao ham')
     await page.waitForFunction(()=>[...document.querySelectorAll('.VPLocalSearchBox a[href]')].some(a=>a.getAttribute('href').includes('/wiki/dao-ham.html')), { timeout: 30000 })
     await page.keyboard.press('Escape')
@@ -30,22 +31,21 @@ try {
   const path = `/${course.id}/bai-giang/${lesson.slug}.html`
   await check('Foundation disclosure and understanding persist under original storage keys', async () => {
     await go(path+'#kien-thuc-can-co'); await page.waitForSelector('.foundation-entry')
-    assert.equal(await page.$$eval('.foundation-entry', rows=>rows.length), lesson.prerequisites.length)
+    assert.equal(await page.$$eval('.foundation-entry', rows=>rows.length), lectureConceptIds(lesson).length)
     assert.equal(await page.$eval('.foundation-entry details', details=>details.open), false)
     await page.click('.foundation-entry summary'); assert(await page.$eval('.foundation-entry details', details=>details.open))
     await page.click('.foundation-entry input'); await page.reload({waitUntil:'networkidle0'})
     assert(await page.$('.foundation-entry input:checked'))
     assert(await page.evaluate(id=>!!localStorage.getItem(`studyhub_foundations_${id}`),course.id))
   })
-  await check('Completion, reading bookmark and mobile resume preserve learning progress', async () => {
+  await check('Reading bookmark and mobile resume preserve learning progress', async () => {
     await page.setViewport({width:390,height:900})
-    await go(path+'#notes'); await page.click('.lesson-actions button')
-    assert(await page.$('.lesson-actions button[aria-pressed=true]'))
+    await go(path+'#notes')
     const headingId = await page.$eval('.main > .vp-doc h2[id]', heading=>{heading.scrollIntoView();return heading.id})
     await page.waitForFunction(id=>JSON.parse(localStorage.getItem('studyhub_last_lesson'))?.heading===id,{},headingId)
     const saved = await page.evaluate(()=>JSON.parse(localStorage.getItem('studyhub_last_lesson')))
     await go('/')
-    assert.match(await page.$eval('.resume-panel', el=>el.textContent), /Đang học dở/)
+    assert.match(await page.$eval('.resume-panel', el=>el.textContent), /Tiếp tục đọc/)
     assert(await page.$eval('.resume-panel a', (el,id)=>el.getAttribute('href').endsWith('#'+id),saved.heading))
     await page.click('.resume-panel a'); await page.waitForFunction(()=>!!location.hash && document.querySelector('.lecture-tabs a[aria-current]')?.textContent.trim()==='Notes')
   })

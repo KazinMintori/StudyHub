@@ -1,5 +1,6 @@
 import { findCourse } from './course-catalog.mjs'
 import { concepts } from './concepts.mjs'
+import { resolveConceptForCourse } from './wiki-content.mjs'
 
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 export function termLinks(md) {
@@ -9,9 +10,14 @@ export function termLinks(md) {
     const wikiId=path.startsWith('wiki/')?path.slice(5).replace(/\.md$/,''):null
     if (!wikiId && (!course || (!path.includes('/notes/') && !path.includes('/bai-giang/')) || path.endsWith('/index.md'))) return
     const aliases = new Map()
+    const blockedAliases = new Set((wikiId && concepts[wikiId]?.aliases || []).map(alias => alias.toLocaleLowerCase('vi')))
     for (const [id,term] of Object.entries(concepts)) {
       if(id===wikiId)continue
-      for (const alias of term.aliases) aliases.set(alias.toLocaleLowerCase('vi'), id)
+      for (const alias of term.aliases) {
+        const key = alias.toLocaleLowerCase('vi')
+        if (blockedAliases.has(key)) continue
+        aliases.set(key, [...(aliases.get(key) || []), id])
+      }
     }
     const names = [...aliases.keys()].sort((a, b) => b.length - a.length)
     const pattern = new RegExp(`(?<![\\p{L}\\p{N}_])(?:${names.map(escape).join('|')})(?![\\p{L}\\p{N}_])`, 'giu')
@@ -27,8 +33,8 @@ export function termLinks(md) {
         else {
           let cursor = 0
           for (const match of token.content.matchAll(pattern)) {
-            const id = aliases.get(match[0].toLocaleLowerCase('vi'))
-            if (seen.has(id)) continue
+            const id = resolveConceptForCourse(aliases.get(match[0].toLocaleLowerCase('vi')), course?.id)
+            if (!id || seen.has(id)) continue
             if (match.index > cursor) { const text = new state.Token('text', '', 0); text.content = token.content.slice(cursor, match.index); output.push(text) }
             const open = new state.Token('html_inline', '', 0)
             open.content = `<button type="button" class="study-term" data-term="${id}" data-wiki="/wiki/${id}.html" aria-haspopup="dialog" aria-expanded="false" aria-controls="study-term-preview">`

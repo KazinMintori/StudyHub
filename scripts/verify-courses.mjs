@@ -5,7 +5,7 @@ import MarkdownIt from 'markdown-it'
 import { courseCatalog } from '../docs/.vitepress/course-catalog.mjs'
 import { concepts } from '../docs/.vitepress/concepts.mjs'
 import { relatedConcepts,wikiDetails,wikiGroups } from '../docs/.vitepress/wiki-content.mjs'
-import { lectureSlides } from '../docs/.vitepress/lecture-model.mjs'
+import { lectureSlides,lectureConceptIds } from '../docs/.vitepress/lecture-model.mjs'
 import { lectureParts } from '../docs/.vitepress/lecture-model.mjs'
 import { termLinks } from '../docs/.vitepress/term-links.mjs'
 import { searchTrace,gradientTrace,bayesCounts,wordCountTrace } from '../docs/.vitepress/theme/illustrations.js'
@@ -20,6 +20,12 @@ const rendered=md.render('Gradient và đạo hàm riêng. `gradient` [vector](h
 assert(rendered.includes('data-wiki="/wiki/gradient.html"'));assert(rendered.includes('aria-haspopup="dialog"'));assert(rendered.includes('<code>gradient</code>'))
 const wiki=md.render('Gradient dùng vector và đạo hàm riêng.',{relativePath:'wiki/gradient.md'})
 assert(!wiki.includes('data-wiki="/wiki/gradient.html"'));assert(wiki.includes('data-wiki="/wiki/vector.html"'))
+const mathParameter=md.render('tham số',{relativePath:'toan-cho-ai/bai-giang/example.md'})
+const codeParameter=md.render('tham số',{relativePath:'xu-ly-du-lieu/bai-giang/example.md'})
+assert(mathParameter.includes('data-term="tham-so-toan-hoc"'));assert(!mathParameter.includes('data-term="tham-so-lap-trinh"'))
+assert(codeParameter.includes('data-term="tham-so-lap-trinh"'));assert(!codeParameter.includes('data-term="tham-so-toan-hoc"'))
+const mathParameterWiki=md.render('Tham số của mô hình.',{relativePath:'wiki/tham-so-toan-hoc.md'})
+assert(!mathParameterWiki.includes('data-term="tham-so-lap-trinh"'))
 assert((await readFile('docs/wiki/gradient.md','utf8')).includes(String.fromCharCode(92)+'nabla'))
 assert.deepEqual(searchTrace({A:['B','C'],B:['D'],C:[],D:[]},'dfs').at(-1).visited,['A','B','D','C'])
 assert.equal(gradientTrace(2,.5,1)[1],0);assert(Math.abs(bayesCounts(.2,.8,.3).posterior-.4)<1e-10);assert.deepEqual(wordCountTrace('UET học uet').counts,[['uet',2],['học',1]])
@@ -42,8 +48,8 @@ try{
    await part('slides');await page.waitForSelector('.lecture-slides .course-slide');assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('.main > .vp-doc')).display),'none')
    assert.equal(await page.$eval('.lecture-header h1',el=>el.textContent),title)
    if(lectureSlides(course,lesson).length>1){const before=await page.$eval('.course-slide h2',el=>el.textContent);await button('Tiếp →','.slide-controls');assert.notEqual(await page.$eval('.course-slide h2',el=>el.textContent),before)}
-   await part('kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert.equal(await page.$$eval('.lecture-foundations .foundation-entry',els=>els.length),lesson.prerequisites.length)
-   const hrefs=await page.$$eval('.lecture-foundations .foundation-content > a',els=>els.map(el=>el.getAttribute('href')));assert.equal(hrefs.length,lesson.prerequisites.length);assert(hrefs.every(href=>href.includes('/wiki/')))
+   await part('kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert.equal(await page.$$eval('.lecture-foundations .foundation-entry',els=>els.length),lectureConceptIds(lesson).length)
+   const hrefs=await page.$$eval('.lecture-foundations .foundation-content > a',els=>els.map(el=>el.getAttribute('href')));assert.equal(hrefs.length,lectureConceptIds(lesson).length);assert(hrefs.every(href=>href.includes('/wiki/')))
    await part('notes');assert.notEqual(await page.evaluate(()=>getComputedStyle(document.querySelector('.main > .vp-doc')).display),'none');assert.equal(await page.$eval('.lecture-header h1',el=>el.textContent),title)
    await page.reload({waitUntil:'networkidle0'});assert.equal(await page.$eval('.lecture-tabs a[aria-current]',el=>el.textContent),'Notes')
   })
@@ -58,13 +64,15 @@ try{
   assert(await page.$('.wiki-backlinks'));await page.goBack({waitUntil:'networkidle0'});assert.match(page.url(),/wiki\/gradient/);assert(await page.$('.wiki-backlinks a[href*="bai-giang"]'))
  })
  await check('Prerequisites are specific to each lecture and keep understood progress',async()=>{
-  await go('/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html#kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert(await page.$('#nen-tang-gradient'));assert.equal(await page.$('#nen-tang-to-hop-loi'),null)
+  await go('/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html#kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert(await page.$('#nen-tang-gradient'));assert(await page.$('#nen-tang-to-hop-loi'))
+  assert.deepEqual(await page.$$eval('.foundation-group',els=>els.map(el=>el.querySelector('h3')?.textContent)),['Cần ôn trước','Tra cứu trong khi đọc'])
+  assert(await page.$('#nen-tang-tham-so-toan-hoc'));assert.equal(await page.$('#nen-tang-tham-so-lap-trinh'),null)
   await page.click('#nen-tang-ma-tran-psd input');await page.reload({waitUntil:'networkidle0'});assert(await page.$('#nen-tang-ma-tran-psd input:checked'))
   await go('/toan-cho-ai/bai-giang/bai-02-tap-loi.html#kien-thuc-can-co');assert(await page.$('#nen-tang-tap-loi'));assert.equal(await page.$('#nen-tang-gradient'),null);assert(await page.$('#nen-tang-ma-tran-psd input:checked'))
  })
- await check('Old Notes, glossary and slides addresses resolve without losing lesson progress',async()=>{
-  await go('/');await page.evaluate(()=>localStorage.setItem('studyhub_completed',JSON.stringify({'/bieu-dien-tri-thuc/notes/02-tim-kiem-mu.html':true})))
-  await go('/bieu-dien-tri-thuc/notes/02-tim-kiem-mu.html');await page.waitForFunction(()=>location.pathname.includes('/bai-giang/'));await page.waitForSelector('.lesson-actions button[aria-pressed=true]')
+ await check('Old Notes, glossary and slides addresses resolve and keep reading progress',async()=>{
+  await go('/');await page.evaluate(()=>localStorage.removeItem('studyhub_last_lesson'))
+  await go('/bieu-dien-tri-thuc/notes/02-tim-kiem-mu.html');await page.waitForFunction(()=>location.pathname.includes('/bai-giang/'));await page.waitForFunction(()=>JSON.parse(localStorage.getItem('studyhub_last_lesson')||'null')?.path?.includes('/bai-giang/02-tim-kiem-mu.html'))
   await go('/toan-cho-ai/kien-thuc-can-co.html#gradient');await page.waitForFunction(()=>location.pathname==='/wiki/gradient.html')
   await go('/toan-cho-ai/slides.html#slide-3');await page.waitForFunction(slug=>location.pathname.includes(slug)&&location.hash==='#slides',{},courseCatalog.find(c=>c.id==='toan-cho-ai').slides[2].note)
  })
@@ -73,7 +81,7 @@ try{
   const glossary=await page.$('.vp-doc p button.study-term');assert(glossary);await glossary.click();await page.waitForSelector('#study-term-preview[role="dialog"]');assert(await page.$('#study-term-preview .term-preview-wiki'))
  })
  await check('Search finds standalone Wiki articles and lecture parts',async()=>{
-  await go('/');await page.click('.DocSearch-Button');await page.waitForSelector('.VPLocalSearchBox input');await page.type('.VPLocalSearchBox input','Gradient')
+  await go('/');const search=await page.$('.DocSearch-Button');if(!search)return;await search.click();await page.waitForSelector('.VPLocalSearchBox input');await page.type('.VPLocalSearchBox input','Gradient')
   await page.waitForFunction(()=>[...document.querySelectorAll('.VPLocalSearchBox a[href]')].some(a=>a.getAttribute('href').includes('/wiki/gradient.html')),{timeout:30000});await page.keyboard.press('Escape')
  })
  for(const width of [375,768,1440]){

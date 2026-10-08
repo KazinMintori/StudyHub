@@ -4,6 +4,7 @@ export const lectureParts = [{ id: 'notes', name: 'Notes' }, { id: 'slides', nam
 export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5
 
 export const lecturePath = (courseId, slug, part = '') => `/${courseId}/bai-giang/${slug}${part ? `#${part}` : ''}`
+export const lectureConceptIds = lesson => [...new Set([...(lesson?.prerequisites || []), ...(lesson?.supportingConcepts || [])])]
 export function findLecture(courseId, slug) { return findCourse(courseId)?.lessons.find(lesson => lesson.slug === slug) }
 export function lectureSlides(course, lesson) {
   if (!course || !lesson) return []

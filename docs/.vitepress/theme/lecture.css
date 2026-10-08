@@ -22,6 +22,9 @@
 .foundations-heading h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.3; }
 .foundations-heading span { color: var(--xanh); font-size: var(--fs-small); white-space: nowrap; }
 .lecture-foundations > p { font-size: var(--fs-ui); color: var(--ink-2); margin-bottom: var(--space-5); }
+.foundation-group { margin-top: var(--space-6); }
+.foundation-group > h3 { font-size: var(--fs-h3); font-weight: 600; }
+.foundation-group > p { margin: var(--space-1) 0 var(--space-3); color: var(--ink-2); font-size: var(--fs-ui); }
 .foundation-entry { border-top: 1px solid var(--rule); padding: var(--space-3) 0; }
 .foundation-entry-heading { display: flex; align-items: start; gap: var(--space-3); }
 .foundation-check { display: flex; align-items: center; min-width: 44px; min-height: 44px; justify-content: center; }
@@ -34,6 +37,7 @@
 .foundation-content h4 { font: 600 var(--fs-ui)/1.45 var(--font-ui); }
 .foundation-content details { background: var(--canvas); border: 1px solid var(--rule); padding: var(--space-3); border-radius: var(--radius); }
 .foundation-content details summary { font: var(--fs-ui)/1.45 var(--font-ui); }
+.foundation-notation { overflow-x: auto; margin: var(--space-3) 0; padding: var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--canvas); font: var(--fs-lead)/1.55 var(--font-code); white-space: pre; }
 @media (max-width: 767px) {
   .mobile-lecture-nav { position: relative; display: flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: var(--fs-small); color: var(--ink-3); }
   .mobile-lecture-nav > button { min-height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: start; }

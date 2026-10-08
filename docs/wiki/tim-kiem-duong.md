@@ -41,4 +41,4 @@ Không. Chỉ các bước dương đủ nhỏ mới được bảo đảm cục
 
 - [Gradient](./gradient.md)
 - [Hessian](./hessian.md)
-- [Hàm tự tương hợp](./tu-tuong-hop.md)
+- [Hàm tự tương hợp (self-concordant)](./tu-tuong-hop.md)

@@ -32,6 +32,11 @@
       "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
       "purpose": "Concept reference: sections 4.1, 5.1, 5.5, 9.2-9.3; PDF read in the earlier revision. Fetch unavailable in the terminology pass; Vietnamese phrasings below are separately labeled."
     },
+    "PYTHON-GLOSSARY": {
+      "url": "https://docs.python.org/3/glossary.html",
+      "purpose": "Official Python glossary distinguishes a parameter in a function definition from an argument supplied in a function call.",
+      "checked": "2026-10-08"
+    },
     "BERKELEY-TENSOR": {
       "url": "https://math.berkeley.edu/~ltomczak/notes/Mich2022/DG_Notes.pdf",
       "purpose": "Primary lecture notes, section 2.6: contraction pairs upper and lower indices; not evidence of Vietnamese terminology.",
@@ -39,6 +44,66 @@
     }
   },
   "terms": [
+    {
+      "id": "optimization.parameter",
+      "domain": "optimization",
+      "english": [
+        "parameter",
+        "problem parameter",
+        "model parameter"
+      ],
+      "concept": "A quantity specifying a function, model, or problem instance; depending on the stated optimization problem, it can be fixed data or an unknown to estimate.",
+      "technical_vi": "tham số",
+      "variants": [
+        "tham số mô hình",
+        "dữ liệu của bài toán khi đại lượng được giữ cố định"
+      ],
+      "lecture_vi": "Trong f(x;ρ), x là biến đang được tối ưu còn ρ được giữ cố định trong bài toán này.",
+      "avoid_in_this_sense": [
+        "tham số của hàm Python"
+      ],
+      "protected_meaning": [
+        "Nêu rõ đại lượng nào được tối ưu và đại lượng nào được giữ cố định",
+        "Vai trò có thể đổi khi phát biểu một bài toán khác",
+        "Không dùng định nghĩa parameter/argument của lập trình"
+      ],
+      "evidence": {
+        "vi_usage": "project-choice; concept-source-supported",
+        "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "programming.parameter",
+      "domain": "programming",
+      "english": [
+        "parameter",
+        "function parameter",
+        "argument"
+      ],
+      "concept": "A parameter is a named entity in a function definition; an argument is a value supplied in a function call.",
+      "technical_vi": "tham số trong định nghĩa hàm; đối số trong lời gọi",
+      "variants": [
+        "tham số hàm",
+        "đối số"
+      ],
+      "lecture_vi": "Trong def double(x), x là tham số; trong double(3), 3 là đối số.",
+      "avoid_in_this_sense": [
+        "tham số mô hình toán học"
+      ],
+      "protected_meaning": [
+        "Phân biệt tên trong định nghĩa với giá trị truyền khi gọi",
+        "Giữ ngữ cảnh lập trình",
+        "Không tự suy sang biến quyết định của bài toán tối ưu"
+      ],
+      "evidence": {
+        "vi_usage": "project-editorial-choice; concept-source-supported",
+        "source_ids": [
+          "PYTHON-GLOSSARY"
+        ]
+      }
+    },
     {
       "id": "fixed-point.contraction",
       "domain": "fixed-point",

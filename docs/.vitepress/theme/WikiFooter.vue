@@ -8,6 +8,6 @@ import { lecturePath } from '../lecture-model.mjs'
 import { studyLink } from './links'
 const {frontmatter}=useData(), id=computed(()=>frontmatter.value.wikiTerm)
 const incoming=computed(()=>Object.entries(concepts).filter(([other])=>other!==id.value&&relatedConcepts(other).includes(id.value)))
-const lectures=computed(()=>courseCatalog.flatMap(course=>course.lessons.filter(lesson=>lesson.prerequisites.includes(id.value)).map(lesson=>({course,lesson}))))
+const lectures=computed(()=>courseCatalog.flatMap(course=>course.lessons.filter(lesson=>[...(lesson.prerequisites || []), ...(lesson.supportingConcepts || [])].includes(id.value)).map(lesson=>({course,lesson}))))
 </script>
 <template><aside v-if="id" class="wiki-backlinks"><section><h2>Các thuật ngữ dẫn tới bài này</h2><div class="wiki-backlink-list"><a v-for="[other,term] in incoming" :key="other" class="study-term" :data-term="other" :href="studyLink(`/wiki/${other}`)">{{ term.name }}</a></div><p v-if="!incoming.length" class="small">Các bài Wiki khác có thể liên kết tới khái niệm này khi được bổ sung.</p></section><a class="text-link" :href="studyLink('/wiki/')">← Tất cả thuật ngữ</a></aside></template>

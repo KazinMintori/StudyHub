@@ -5,28 +5,28 @@ section: lecture
 title: "Các phương pháp tối ưu trong huấn luyện mô hình học sâu"
 prerequisites: ["gradient", "quy-tac-chuoi", "ky-vong", "phuong-sai"]
 lessonStatus: ready
-description: "Phân biệt mục tiêu train và đánh giá, truy vết SGD, momentum, Nesterov và khởi tạo Glorot."
+description: "Phân biệt hàm mục tiêu trên tập huấn luyện với đại lượng đánh giá; theo dõi SGD, momentum, Nesterov và khởi tạo Glorot."
 ---
 
-Ở Bài 04, ta giả sử mỗi bước đều tính được gradient chính xác của toàn bộ mục tiêu. Khi mục tiêu là trung bình loss trên nhiều quan sát, phép tính ấy có thể tốn nhiều công. Ta sẽ dùng một lô dữ liệu nhỏ để ước lượng gradient, chấp nhận dao động ở từng bước và theo dõi riêng chất lượng trên dữ liệu đánh giá.
+Ở Bài 04, ta giả sử mỗi bước đều tính được gradient chính xác của toàn bộ hàm mục tiêu. Trong học máy, hàm mục tiêu thường là trung bình của hàm mất mát trên rất nhiều quan sát, nên tính toàn bộ gradient ở mỗi bước có thể quá tốn kém. Một lô dữ liệu nhỏ cho phép ước lượng gradient với chi phí thấp hơn, đổi lại từng bước cập nhật sẽ dao động theo các mẫu được chọn. Vì vậy, quá trình huấn luyện phải được mô tả cùng với quy tắc lấy lô và cách đánh giá trên dữ liệu không dùng để cập nhật tham số.
 
-Sau bài, bạn có thể viết gradient lô nhỏ, giải thích tính không chệch dưới cách lấy mẫu đã nêu, tính hai bước momentum/Nesterov và xác định thang khởi tạo Glorot.
+Sau khi học xong, bạn sẽ viết được gradient của một lô dữ liệu, giải thích được tính không chệch dưới đúng giả thiết lấy mẫu, tính được hai bước đầu của momentum và Nesterov, và xác định được thang khởi tạo Glorot từ số đầu vào và đầu ra của một tầng.
 
-Bạn có thể học bài theo ba chặng: mục 1–3 làm rõ mục tiêu và gradient ngẫu nhiên; mục 4–5 theo dõi trạng thái cập nhật; mục 6 giải thích khởi tạo. Những kiến thức xác suất cần dùng được nhắc lại tại chỗ.
+Mục 1–3 tạo thành phần chính của bài: hàm mục tiêu, gradient lô nhỏ và SGD. Sau khi tự tính được ví dụ một tham số ở mục 2, hãy đọc mục 4–5 để thấy momentum và Nesterov lưu thêm trạng thái như thế nào. Mục 6 về khởi tạo trọng số có thể học riêng. Những kiến thức xác suất cần dùng được nhắc lại tại chỗ và có liên kết sang Wiki.
 
-## 1. Huấn luyện đang cực tiểu đại lượng nào?
+## 1. Hàm mục tiêu dùng trong huấn luyện
 
-Với tập train $D=\{(x_i,y_i)\}_{i=1}^N$, tham số $\theta$, loss từng mẫu $\ell_i(\theta)$, mục tiêu thực nghiệm là
+Với tập huấn luyện $D=\{(x_i,y_i)\}_{i=1}^N$, tham số $\theta$ và hàm mất mát trên mẫu thứ $i$ là $\ell_i(\theta)$, hàm mục tiêu thực nghiệm được viết
 
 $$J(\theta)=\frac1N\sum_{i=1}^N\ell_i(\theta).$$
 
-Nếu có điều chuẩn, cộng thêm $\rho R(\theta)$ và ghi rõ hệ số. Đầu ra mô hình $\widehat y_i=f_\theta(x_i)$ đi vào loss; gradient theo $\theta$ được tính qua quy tắc chuỗi. Lan truyền ngược tổ chức phép tính ấy trên đồ thị, không tạo một loại đạo hàm mới.
+Nếu có điều chuẩn, ta cộng thêm $\rho R(\theta)$ và phải ghi rõ hệ số $\rho$. Đầu ra $\widehat y_i=f_\theta(x_i)$ của mô hình được đưa vào hàm mất mát; gradient theo $\theta$ được tính bằng quy tắc chuỗi. Lan truyền ngược chỉ tổ chức các phép tính đạo hàm trên đồ thị tính toán, chứ không tạo ra một loại đạo hàm mới.
 
-Loss train đo trên dữ liệu đã dùng để cập nhật. Loss validation đo trên tập giữ riêng, phục vụ chọn mô hình và siêu tham số. Test được giữ cho đánh giá cuối theo quy trình đã định. Tối ưu tốt hơn trên train chưa chứng minh dự đoán tốt hơn trên dữ liệu mới.
+Hàm mất mát trên tập huấn luyện được tính từ dữ liệu đã dùng để cập nhật tham số. Hàm mất mát trên **tập xác thực** (validation set) được tính trên một tập dữ liệu giữ riêng và dùng để chọn mô hình hoặc siêu tham số. **Tập kiểm thử** (test set) được giữ lại cho lần đánh giá cuối theo quy trình đã định. Giảm hàm mất mát trên tập huấn luyện chưa chứng minh rằng mô hình sẽ dự đoán tốt hơn trên dữ liệu mới.
 
-Ta cũng phải tách hai khó khăn: **tối ưu** tìm tham số làm $J$ nhỏ; **khái quát hóa** xét hiệu quả trên phân phối dữ liệu cần dùng. Không dùng “đã hội tụ train” như kết luận đã giải quyết cả hai.
+Ta phải phân biệt hai bài toán. **Tối ưu** tìm tham số làm $J$ nhỏ trên dữ liệu huấn luyện; **khái quát hóa** xét chất lượng của mô hình trên phân phối dữ liệu sẽ gặp khi sử dụng. Việc thuật toán đã hội tụ trên tập huấn luyện không có nghĩa bài toán khái quát hóa cũng đã được giải quyết.
 
-## 2. Gradient của lô nhỏ
+## 2. Gradient ước lượng từ một lô dữ liệu
 
 Đạo hàm tổng hữu hạn bằng tổng đạo hàm:
 
@@ -41,31 +41,31 @@ Mỗi gradient mẫu có kỳ vọng bằng gradient toàn bộ dữ liệu, nê
 Với một tọa độ gradient có phương sai $\sigma_g^2$ và các mẫu độc lập, trung bình $B$ mẫu có phương sai $\sigma_g^2/B$. Lấy mẫu không hoàn lại vẫn cho trung bình không chệch nhưng phương sai có hệ số hiệu chỉnh khác. Xáo trộn rồi đi hết một epoch là quy trình khác lấy mẫu độc lập; không bê nguyên giả thiết độc lập sang mọi bước.
 
 ::: example Nhìn thấy nhiễu dù mô hình chỉ có một tham số
-Dữ liệu tự đặt gồm hai đầu ra $b_1=0$, $b_2=2$. Mô hình dự đoán cùng một số $\theta$, loss từng mẫu $\ell_i=\tfrac12(\theta-b_i)^2$.
+Dữ liệu tự đặt gồm hai đầu ra $b_1=0$, $b_2=2$. Mô hình dùng cùng một dự đoán $\theta$ cho cả hai quan sát; hàm mất mát trên mẫu thứ $i$ là $\ell_i=\tfrac12(\theta-b_i)^2$.
 
 $$J(\theta)=\frac14[\theta^2+(\theta-2)^2]
 =\frac12(\theta-1)^2+\frac12.$$
 
 Tại $\theta=0$, hai gradient mẫu là 0 và $-2$, còn gradient đầy đủ là $-1$. Với $\eta=0.1$, một bước toàn bộ đến $0.1$; lấy riêng mẫu 1 thì đứng yên; lấy riêng mẫu 2 thì đến $0.2$. Trung bình hai cập nhật là $0.1$.
 
-Tại nghiệm train $\theta=1$, gradient toàn bộ bằng 0 nhưng hai gradient mẫu vẫn là $1,-1$. Một bước SGD với tốc độ học cố định có thể rời nghiệm.
+Tại nghiệm của hàm mục tiêu trên toàn bộ tập huấn luyện, $\theta=1$, gradient toàn bộ bằng 0 nhưng hai gradient mẫu vẫn lần lượt là $1$ và $-1$. Vì vậy một bước SGD với tốc độ học cố định vẫn có thể rời khỏi điểm này.
 :::
 
-<details><summary>Tự kiểm: ở θ=1, lấy mẫu b=0 và η=0.1, loss đầy đủ đổi thế nào?</summary>
+<details><summary>Thử trả lời: Ở θ=1, nếu lấy mẫu b=0 và η=0.1 thì hàm mục tiêu trên toàn bộ dữ liệu thay đổi thế nào?</summary>
 
-Điểm mới là $0.9$. $J(1)=0.5$, $J(0.9)=0.505$: loss tăng. Không chệch của gradient không đảm bảo giảm loss ở từng lần lấy mẫu.
+Điểm mới là $0.9$. Ta có $J(1)=0.5$ và $J(0.9)=0.505$, nên hàm mục tiêu tăng. Tính không chệch của gradient là một phát biểu về kỳ vọng; nó không bảo đảm hàm mục tiêu giảm sau từng lần lấy mẫu.
 
 </details>
 
-## 3. SGD: thêm cách lấy mẫu vào gradient descent
+## 3. Stochastic gradient descent (SGD)
 
 **Stochastic gradient descent (SGD)** cập nhật
 
 $$\theta_{t+1}=\theta_t-\eta_tg_{B_t}(\theta_t).$$
 
-Đầu vào của thuật toán là mô hình/loss, dữ liệu, điểm đầu, quy tắc lấy lô, lịch tốc độ học và tiêu chí dừng. Trạng thái tối thiểu là $\theta_t$ và vị trí trong quy trình dữ liệu. Một **epoch** là một lượt đi qua tập train trong quy trình chia lô không hoàn lại; số bước trong một epoch phụ thuộc cỡ lô.
+Để mô tả đầy đủ thuật toán, cần nêu mô hình, hàm mất mát, dữ liệu, điểm khởi đầu, quy tắc lấy lô, lịch tốc độ học và tiêu chí dừng. Trạng thái tối thiểu gồm $\theta_t$ và vị trí hiện tại trong quy trình duyệt dữ liệu. Một **epoch** là một lượt đi qua toàn bộ tập huấn luyện khi dữ liệu được chia thành các lô không hoàn lại; số bước trong mỗi epoch phụ thuộc vào kích thước lô.
 
-Không chọn điểm dừng chỉ vì một lô có gradient nhỏ. Có thể theo dõi trung bình loss trên tập train, loss trên tập validation theo một lịch cố định và các phần dư phù hợp với bài toán. Trong mô hình không lồi, gradient nhỏ không tự chứng nhận tối ưu toàn cục.
+Không nên dừng chỉ vì gradient của một lô tình cờ nhỏ. Ta có thể theo dõi trung bình hàm mất mát trên tập huấn luyện, hàm mất mát trên tập xác thực theo một lịch cố định, và những phần dư phù hợp với bài toán. Trong mô hình không lồi, gradient nhỏ cũng không phải là chứng nhận tối ưu toàn cục.
 
 ```python
 def sgd_scalar(theta, targets, rate, draws):
@@ -82,7 +82,7 @@ print(sgd_scalar(0.0, [0.0, 2.0], 0.1, [0, 1, 0, 1]))
 
 Ví dụ cố định chỉ số để nhìn cơ chế; nó không dùng kỳ vọng không chệch như bảo đảm cho một lịch lặp tất định. Khi thí nghiệm ngẫu nhiên, lưu seed và quy tắc lấy mẫu.
 
-## 4. Momentum: gradient mới cùng với vận tốc cũ
+## 4. Momentum và trạng thái vận tốc
 
 Chọn quy ước vận tốc là độ dời, khởi tạo $v_0=0$, $0\le\mu<1$:
 
@@ -100,7 +100,7 @@ Bước 2: $g_1=-0.9$, $v_2=0.9(0.1)-0.1(-0.9)=0.18$, $\theta_2=0.28$.
 Gradient descent thuần đến $0.19$ sau hai bước. So hai điểm cho thấy cơ chế vận tốc, chưa xếp hạng các thuật toán trên mọi bài toán.
 :::
 
-## 5. Nesterov: tính gradient ở điểm nhìn trước
+## 5. Nesterov và điểm nhìn trước
 
 Giữ cùng quy ước $v$, nhưng tính gradient tại $\widetilde\theta_t=\theta_t+\mu v_t$:
 
@@ -125,9 +125,9 @@ point = point.map((x,i) => x+velocity[i]);
 
 Mô phỏng dùng gradient đầy đủ trên hàm toàn phương hai chiều để tách tác động của momentum khỏi nhiễu lấy mẫu. Chọn Momentum và Nesterov, giữ cùng $\eta,\kappa$, rồi xem từng bước. Không suy ra tốc độ hội tụ cho mạng sâu từ mô phỏng lồi này.
 
-## 6. Khởi tạo: phá đối xứng và giữ thang tín hiệu
+## 6. Khởi tạo trọng số
 
-Nếu hai neuron có cùng kiểu kết nối, cùng trọng số và cùng các điều kiện khác, chúng tạo đầu ra giống nhau. Trong tính toán tất định với cùng dữ liệu, gradient giống nhau có thể giữ chúng giống nhau qua cập nhật. Muốn các neuron học đặc trưng khác nhau, cần phá đối xứng đó. Khởi tạo toàn 0 mọi trọng số của tầng ẩn có thể không làm được việc này; bias bằng 0 không có nghĩa mọi trọng số cũng phải bằng 0.
+Nếu hai neuron có cùng kiểu kết nối, cùng trọng số và cùng các điều kiện khác, chúng tạo đầu ra giống nhau. Trong tính toán tất định với cùng dữ liệu, gradient giống nhau có thể giữ chúng giống nhau qua nhiều lần cập nhật. Muốn các neuron học những đặc trưng khác nhau, cần phá vỡ đối xứng này. Khởi tạo toàn bộ trọng số của tầng ẩn bằng 0 thường không đạt mục đích đó; việc hệ số chặn (bias) được đặt bằng 0 không có nghĩa mọi trọng số cũng phải bằng 0.
 
 Để xét thang, dùng mô hình tuyến tính hóa $z=\sum_{i=1}^{n_{\mathrm{in}}}W_ix_i$, các trọng số trung bình 0, độc lập với các đầu vào, và các đóng góp được giả định độc lập. Khi phương sai đầu vào giống nhau,
 
@@ -150,7 +150,7 @@ Tại $\theta=0.5$ trong dữ liệu $(0,2)$, tính hai gradient mẫu và gradi
 Hai gradient là $0.5,-1.5$. Trung bình $-0.5$, bằng $J'(0.5)$. Cộng mà không chia cỡ lô sẽ cho $-1$ và đổi thang bước cập nhật.
 :::
 
-::: exercise 2. Kiểm momentum
+::: exercise 2. Tính tiếp một bước momentum
 Ở cuối bước 2 mục 4, tính bước 3 với gradient đầy đủ.
 :::
 ::: solution

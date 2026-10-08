@@ -95,6 +95,12 @@ Liên kết thuật ngữ dùng hai tầng: bấm vào từ có gạch chấm đ
 
 Một khái niệm khó được dạy ngay trong Notes vẫn có thể có mục Wiki để người học tra nhanh và đào sâu. Việc có mục Wiki **không tự biến nó thành prerequisite**: chỉ thêm vào `lesson.prerequisites` khi bài sử dụng khái niệm mà không dạy lại.
 
+Mỗi khái niệm phải thuộc một lĩnh vực trong `wikiGroups`. Khi hai lĩnh vực dùng cùng một từ, tạo hai ID riêng và cho phép alias trùng; `term-links.mjs` phải chọn theo phạm vi của học phần. Ví dụ `tham-so-toan-hoc` và `tham-so-lap-trinh` cùng có alias “tham số”, nhưng Notes Toán không được liên kết tới trang lập trình. Nếu không đủ ngữ cảnh để phân giải, bỏ liên kết tự động thay vì chọn bừa.
+
+Mỗi lesson có thể có `supportingConcepts` bên cạnh `prerequisites`. `prerequisites` là phần người học cần biết trước và phải khớp frontmatter. `supportingConcepts` là thuật ngữ xuất hiện trong Notes/Slides mà người học có thể tra trong khi đọc; không đưa chúng vào frontmatter. Tab Kiến thức nền hiển thị hai nhóm riêng và không được gọi toàn bộ danh sách hỗ trợ là tiên quyết.
+
+Ghi chú nhanh có thể dùng trường `notation` để trình bày ma trận, vector hoặc hệ phương trình theo bố cục toán học. Không đưa cú pháp list/mảng của ngôn ngữ lập trình như `[[1,2],[0,3]]` vào ví dụ đại số tuyến tính. Ghi chú ghim trên màn hình nhỏ phải có nền che (scrim) và lối đóng rõ; trên màn hình rộng phải nằm ngoài cột bài đọc, không che công thức hay đoạn đang đọc.
+
 Chọn `prerequisites` là các khái niệm **bài này dùng mà không dạy lại**, xếp theo thứ tự nên đọc; không gắn toàn bộ `foundations` của môn. Khái niệm mới mà bài dạy thì nằm trong Notes, không phải ở Kiến thức nền.
 
 ## 6. Lệnh kiểm tra

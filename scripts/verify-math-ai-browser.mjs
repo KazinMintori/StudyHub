@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir,writeFile } from 'node:fs/promises'
 import { mathAiCourse as course } from '../docs/.vitepress/math-ai-course.mjs'
+import { lectureConceptIds } from '../docs/.vitepress/lecture-model.mjs'
 
 const base=process.env.QA_URL||'http://127.0.0.1:5174'
 const browser=await puppeteer.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})})
@@ -36,7 +37,7 @@ try{
       assert.equal(await page.$eval('.main > .vp-doc',el=>getComputedStyle(el).display),'none')
       if(course.slides.filter(s=>s.note===lesson.slug).length>1){const previous=await page.$eval('.course-slide h2',el=>el.textContent);await page.click('.slide-controls button:last-child');await page.waitForFunction(previous=>document.querySelector('.course-slide h2')?.textContent!==previous,{},previous)}
       await page.click('.lecture-tabs a[href$="#kien-thuc-can-co"]');await page.waitForSelector('.lecture-foundations')
-      assert.equal(await page.$$eval('.foundation-entry',els=>els.length),lesson.prerequisites.length)
+      assert.equal(await page.$$eval('.foundation-entry',els=>els.length),lectureConceptIds(lesson).length)
       assert.equal(await page.$$eval('.foundation-entry',els=>els.filter(el=>/\$|\\frac|\\nabla/.test(el.textContent)).length),0)
       if(await page.$('.lecture-tabs a[href$="#bai-tap"]')){
         await page.click('.lecture-tabs a[href$="#bai-tap"]');await page.waitForSelector('.lecture-exercises')
@@ -47,10 +48,9 @@ try{
       assert.notEqual(await page.$eval('.main > .vp-doc',el=>getComputedStyle(el).display),'none')
     })
   }
-  await check('Existing lesson progress and addresses are retained',async()=>{
+  await check('Existing lesson addresses and reading progress are retained',async()=>{
     await go('/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html')
-    await page.evaluate(()=>localStorage.setItem('studyhub_completed',JSON.stringify({'/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html':true})))
-    await page.reload({waitUntil:'networkidle0'});await page.waitForSelector('.lesson-actions button[aria-pressed=true]')
+    await page.waitForFunction(()=>JSON.parse(localStorage.getItem('studyhub_last_lesson')||'null')?.path?.endsWith('/bai-giang/bai-01-nhap-mon-toi-uu.html'))
     await go('/toan-cho-ai/notes/bai-02-tap-loi.html');await page.waitForFunction(()=>location.pathname.endsWith('/bai-giang/bai-02-tap-loi.html'))
   })
   await check('Interactive models recompute and reset state',async()=>{

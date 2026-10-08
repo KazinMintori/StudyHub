@@ -8,13 +8,13 @@ lessonStatus: ready
 description: "Nhận diện các dạng tối ưu lồi, cải dạng tương đương và phân biệt xấp xỉ với nới lỏng."
 ---
 
-Ta đã biết thế nào là tập lồi và hàm lồi. Bây giờ cần trả lời một câu thực tế hơn: nhìn vào một mô hình, làm sao biết đó là bài toán lồi? Bài này tập đọc cấu trúc trước khi chọn thuật toán. Cùng một bài toán có thể khó hoặc dễ nhận ra là lồi tùy cách biểu diễn.
+Ta đã có định nghĩa tập lồi và hàm lồi. Bước tiếp theo là nhận ra cấu trúc ấy trong một bài toán được viết bằng công thức. Cách đặt dấu bất đẳng thức, dạng của hàm mục tiêu và phép đổi biến đều có thể làm tính lồi hiện ra rõ ràng hoặc bị che khuất. Vì vậy, bài này tập trung vào cách đọc và cải dạng mô hình trước khi chọn thuật toán giải.
 
-Sau bài, bạn có thể kiểm dạng chuẩn, nhận diện LP/QP/SOCP/SDP, thêm biến phụ có giải thích, và phân biệt một nghiệm của bài nới lỏng với nghiệm của bài gốc.
+Sau khi học xong, bạn sẽ xác định được một mô hình có ở dạng chuẩn lồi hay không, nhận diện được LP, QP, SOCP và SDP, giải thích được vai trò của biến phụ, và phân biệt nghiệm của bài toán nới lỏng với nghiệm hợp lệ của bài toán ban đầu.
 
-Nếu học lần đầu, hãy đọc mục 1–2 để nhận dạng dạng chuẩn, rồi mục 3 để hiểu cách thêm biến phụ. Mục 4–5 mở rộng sang bài toán nón, xấp xỉ và nới lỏng; bạn có thể đọc sau. Nếu tên các nón còn lạ, chỉ cần đọc định nghĩa ngắn trước khi theo ví dụ. Phần tập lồi được đặt ở [Bài 01](./bai-01-nhap-mon-toi-uu.md), còn phần hình học sâu hơn nằm trong [bài đọc thêm](../doc-them/hinh-hoc-tap-loi.md).
+Ở lần đọc đầu, hãy học mục 1–2 để nắm dạng chuẩn, LP và QP; sau đó đọc mục 3 về biến phụ. Mục 4 giới thiệu các bài toán trên nón và có thể để lại cho lượt đọc sau. Mục 5 cần đọc trước khi dùng một bài toán gần đúng hoặc bài toán nới lỏng để suy luận về bài toán ban đầu. Kiến thức về tập lồi nằm ở [Bài 01](./bai-01-nhap-mon-toi-uu.md); phần hình học sâu hơn được đặt trong [bài đọc thêm](../doc-them/hinh-hoc-tap-loi.md).
 
-## 1. Dạng chuẩn đòi điều gì?
+## 1. Dạng chuẩn của bài toán tối ưu lồi
 
 Theo *Convex Optimization*, dạng chuẩn là
 
@@ -24,21 +24,21 @@ $$\begin{aligned}\text{minimize}\quad &f_0(x)\\
 
 với $f_0,f_i$ lồi, và các đẳng thức affine. Miền chung của các hàm cũng được xét. **Affine** nghĩa là dạng $a^Tx+b$; đẳng thức có thể chuyển hằng số sang vế phải.
 
-Ba bước kiểm: mục tiêu có lồi không; các hàm ở vế trái của dấu $\le0$ có lồi không; đẳng thức có affine không. Miền khả thi lồi là hệ quả: tập mức dưới của hàm lồi là lồi, rồi lấy giao với các tập affine.
+Để nhận diện dạng chuẩn, lần lượt xét ba câu hỏi. Hàm mục tiêu có lồi không? Mỗi hàm ở vế trái của dấu $\le0$ có lồi không? Các ràng buộc đẳng thức có affine không? Khi cả ba điều kiện được thỏa mãn, miền khả thi là giao của các tập mức dưới lồi và các tập affine, nên cũng là một tập lồi.
 
 Đừng chỉ nhìn tên hàm. Ràng buộc $x^2\le1$ mô tả đoạn $[-1,1]$ và đúng dạng lồi. Ràng buộc $x^2\ge1$ đổi thành $1-x^2\le0$: vế trái lõm, miền gồm hai đoạn rời nhau. Ràng buộc $x^2=1$ là đẳng thức phi affine và cho hai điểm rời nhau.
 
-### 1.1 Miền lồi và biểu diễn chuẩn là hai câu hỏi
+### 1.1 Miền lồi chưa đủ để biểu thức ở dạng chuẩn
 
 Ràng buộc $x^3\le0$ tương đương $x\le0$, một miền lồi. Nhưng $x^3$ không lồi trên toàn $\mathbb R$, nên biểu thức ban đầu chưa chứng nhận dạng chuẩn. Cải dạng về $x\le0$ mới làm cấu trúc hiện rõ. Ta không gọi biểu thức ban đầu là chuẩn chỉ vì miền cuối cùng lồi.
 
-<details><summary>Tự kiểm: min −log x với x≥1 có phải bài toán lồi?</summary>
+<details><summary>Thử trả lời: Bài toán min −log x với x≥1 có phải là bài toán lồi không?</summary>
 
 Có. $-\log x$ lồi trên $x>0$, ràng buộc là $1-x\le0$ affine. Tuy nhiên mục tiêu đi tới $-\infty$ khi $x\to\infty$, nên không có nghiệm tối ưu hữu hạn. “Lồi” không bảo đảm bài toán có nghiệm.
 
 </details>
 
-## 2. LP và QP: nhận dạng bằng mục tiêu và miền
+## 2. Quy hoạch tuyến tính và quy hoạch toàn phương
 
 **Quy hoạch tuyến tính (LP)** có mục tiêu và ràng buộc affine:
 
@@ -52,10 +52,10 @@ $$\frac12x^TPx+q^Tx+r,\qquad P=P^T\succeq0,$$
 
 và ràng buộc affine. $P$ PSD là điều kiện cho QP lồi. Nếu ràng buộc bất đẳng thức cũng là các hàm toàn phương lồi, ta có QCQP, không còn là QP theo định nghĩa này.
 
-::: example Cùng loss hồi quy, thêm một giới hạn
+::: example Thêm một giới hạn vào bài toán hồi quy
 Từ Bài 00, $f(w)=7w^2-11w+9/2$, nên trong dạng QP $P=14$, $q=-11$, $r=9/2$. Thêm $w\le1/2$ cho QP lồi.
 
-Nghiệm không ràng buộc $11/14$ vượt giới hạn. Trên $w\le1/2$, đạo hàm $14w-11\le-4<0$, nên tăng $w$ luôn giảm loss cho đến biên. Nghiệm là $w^*=1/2$, $p^*=3/4$.
+Nghiệm không ràng buộc $11/14$ vượt quá giới hạn. Trên miền $w\le1/2$, đạo hàm thỏa $14w-11\le-4<0$, nên hàm mục tiêu giảm khi $w$ tăng cho tới điểm biên. Vì vậy nghiệm là $w^*=1/2$ và $p^*=3/4$.
 
 Đây là nghiệm tại biên với gradient khác 0. Bài 03 sẽ chứng nhận nó bằng nhân tử Lagrange.
 :::
@@ -68,7 +68,7 @@ $$d^T(A^TA+\rho I)d=\|Ad\|_2^2+\rho\|d\|_2^2>0.$$
 
 Trong bài không ràng buộc này, mục tiêu toàn phương PD có nghiệm duy nhất. Lasso dùng chuẩn 1 thay chuẩn 2 bình phương; vẫn lồi nhưng có thể không khả vi. “Không trơn” và “không lồi” là hai thuộc tính khác nhau.
 
-## 3. Thêm biến phụ có thật sự giữ bài toán?
+## 3. Cải dạng bài toán bằng biến phụ
 
 Xét bài $\min_x\max_i f_i(x)$. Thêm biến $t$:
 
@@ -81,14 +81,14 @@ $\min_w\|Aw-b\|_\infty$ tương đương
 
 $$\min_{w,t}t,\qquad -t\mathbf1\preceq Aw-b\preceq t\mathbf1.$$
 
-$\mathbf1$ là vector toàn 1. Hai bất đẳng thức cho mỗi phần dư $r_i$ ép $-t\le r_i\le t$, tức $|r_i|\le t$. Các ràng buộc affine nên đây là LP, dù mục tiêu cũ chứa chuẩn và maximum.
+$\mathbf1$ là vector có mọi thành phần bằng 1. Hai bất đẳng thức áp dụng cho mỗi phần dư $r_i$ cho $-t\le r_i\le t$, tương đương $|r_i|\le t$. Các ràng buộc mới đều affine, nên bài toán sau cải dạng là một LP dù biểu thức ban đầu chứa chuẩn và phép lấy giá trị lớn nhất.
 :::
 
 Với chuẩn 1, thêm $u_i$ sao cho $-u_i\le r_i\le u_i$, rồi cực tiểu $\sum_i u_i$. Tại tối ưu, có thể lấy $u_i=|r_i|$. Không cần thêm $u_i\ge0$: hai bất đẳng thức đã suy ra điều đó.
 
-**Trước khi đọc tiếp:** hãy chỉ ra đủ hai chiều: từ một nghiệm khả thi cũ, tạo biến phụ hợp lệ; từ một nghiệm khả thi mới, thu hồi đối tượng cũ và so giá trị. Bỏ một chiều có thể biến cải dạng thành nới lỏng.
+Để chứng minh hai cách viết tương đương, cần chỉ ra đủ hai chiều: từ một nghiệm khả thi của bài toán cũ, tạo được biến phụ hợp lệ; và từ một nghiệm khả thi của bài toán mới, thu hồi được đối tượng ban đầu với cùng giá trị mục tiêu. Nếu thiếu một chiều, phép biến đổi có thể chỉ là một phép nới lỏng.
 
-## 4. Nón giúp viết những ràng buộc khác
+## 4. Các bài toán tối ưu trên nón
 
 ### 4.1 SOCP: chuẩn ở một vế, affine ở vế còn lại
 
@@ -121,15 +121,15 @@ $$v^T\nabla^2h\,v=\sum_kp_kv_k^2-\left(\sum_kp_kv_k\right)^2
 
 Viết thành tổng bình phương có trọng số chứng nhận PSD. Hợp với biểu thức affine giữ tính lồi theo quy tắc ở Bài 01. Lấy log các vế dương giữ chiều bất đẳng thức và giữ thứ tự mục tiêu. Vì vậy GP được giải bằng một bài lồi trong biến $y$; không khẳng định mọi posynomial lồi trong biến $x$.
 
-<details><summary>Tự kiểm: x·y≤1 với x,y>0 trở thành điều gì?</summary>
+<details><summary>Thử trả lời: Sau phép đổi biến log, ràng buộc x·y≤1 với x,y>0 trở thành gì?</summary>
 
 Đặt $u=\log x$, $v=\log y$, ta được $u+v\le0$. Ví dụ này là ràng buộc monomial; $xy$ không lồi đồng thời theo $x,y$ trên miền dương nhưng cải dạng log là affine.
 
 </details>
 
-## 5. Xấp xỉ, nới lỏng và đánh giá nghiệm
+## 5. Cải dạng tương đương, xấp xỉ và nới lỏng
 
-**Xấp xỉ** thay đối tượng bằng một đối tượng gần hơn để tính: ví dụ tuyến tính hóa hàm. Cần nói gần ở đâu và kiểm sai số bằng gì. Không có cận một phía chỉ từ chữ “xấp xỉ”.
+**Xấp xỉ** thay một đối tượng bằng đối tượng khác dễ tính hơn, chẳng hạn thay một hàm bằng khai triển tuyến tính quanh một điểm. Khi dùng xấp xỉ, phải nói rõ hai đối tượng gần nhau ở đâu và sai số được đo bằng đại lượng nào. Chỉ gọi một biểu thức là “xấp xỉ” chưa đủ để suy ra nó là cận trên hay cận dưới.
 
 **Nới lỏng** mở rộng miền: $C\subseteq\widetilde C$. Giữ cùng mục tiêu trong bài min, ta có
 
@@ -143,7 +143,7 @@ Bài gốc $\min(x-0.4)^2$ với $x\in\{0,1\}$ đạt ở 0, giá trị $0.16$. 
 Làm tròn về 0 cho một ứng viên gốc có giá trị $0.16$. Cận và ứng viên cung cấp khoảng $[0,0.16]$ cho giá trị tối ưu; không được gọi nghiệm nới lỏng là nghiệm gốc.
 :::
 
-Muốn đánh giá một nghiệm, kiểm phần dư đẳng thức, độ vi phạm bất đẳng thức, giá trị mục tiêu và chứng nhận tối ưu riêng. Loss nhỏ mà vi phạm ràng buộc chưa phải một nghiệm tốt theo mô hình đã đặt.
+Muốn đánh giá một nghiệm, cần xem riêng phần dư của các đẳng thức, mức vi phạm của các bất đẳng thức, giá trị hàm mục tiêu và chứng nhận tối ưu. Một điểm cho giá trị hàm mục tiêu nhỏ nhưng vi phạm ràng buộc vẫn không phải nghiệm hợp lệ của mô hình.
 
 ## Bài tập tự luyện
 
@@ -161,7 +161,7 @@ Viết $\min_x |x-1|+2|x+1|$ thành LP và giải bằng cách chia ba miền $x
 Minimize $u+2v$ với $u\ge x-1$, $u\ge1-x$, $v\ge x+1$, $v\ge-x-1$. Trên ba miền, mục tiêu lần lượt là $-3x-1$, $x+3$, $3x+1$. Nó giảm tới $-1$, rồi tăng; nghiệm $x=-1$ cho giá trị 2. Các biến phụ tối ưu là $u=2$, $v=0$.
 :::
 
-::: exercise 3. Kiểm chiều cận
+::: exercise 3. Xác định chiều của cận
 Bỏ ràng buộc $x\le1/2$ khỏi QP ở mục 2. Cận dưới mới và một cận trên khả thi của bài có ràng buộc là bao nhiêu?
 :::
 ::: solution

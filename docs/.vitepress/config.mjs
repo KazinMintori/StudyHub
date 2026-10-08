@@ -25,6 +25,7 @@ export default withMermaid(defineConfig({
     config:md=>{
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = state.src
+          .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
           .replace(/^::: example(?:\s+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
           .replace(/^::: proof(?:\s+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
           .replace(/^::: exercise(?:\s+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)

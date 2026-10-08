@@ -10,6 +10,12 @@
 .wiki-entry-list h3 { font-size: var(--fs-lead); font-weight: 600; line-height: 1.55; }
 .wiki-entry-list p { font-size: var(--fs-ui); color: var(--ink-2); line-height: 1.6; }
 .wiki-entry-list span { font-size: var(--fs-small); color: var(--ink-3); }
+.wiki-context-card { margin: var(--space-4) 0 var(--space-5); padding: var(--space-4); border-left: 3px solid var(--tim); background: var(--tim-soft); font-family: var(--font-ui); font-size: var(--fs-ui); }
+.wiki-context-card p { margin: var(--space-1) 0; }
+.wiki-other-senses { display: grid; gap: var(--space-2); margin-top: var(--space-3); }
+.wiki-other-senses > strong { font-size: var(--fs-small); }
+.wiki-other-senses a { color: var(--tim); }
+.wiki-other-senses a span { color: var(--ink-3); font-size: var(--fs-small); }
 .wiki-backlinks { font-family: var(--font-ui); padding-top: var(--space-5); border-top: 1px solid var(--rule); margin-top: var(--space-6); font-size: var(--fs-ui); }
 .wiki-backlinks h2 { font-size: var(--fs-lead); font-weight: 600; margin-bottom: var(--space-3); }
 .wiki-backlinks section { margin: var(--space-4) 0; }

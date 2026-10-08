@@ -8,15 +8,15 @@ lessonStatus: ready
 description: "Tự tính Lagrangian, hàm đối ngẫu và khoảng cách đối ngẫu; dùng Slater và KKT để chứng nhận nghiệm."
 ---
 
-Tìm được một điểm khả thi có loss nhỏ chưa cho biết có điểm khác tốt hơn hay không. Ta cần một cận dưới cho mọi nghiệm. Nếu cận ấy chạm giá trị của ứng viên, bài toán đã được giải. Đối ngẫu Lagrange xây cận dưới bằng cách đưa ràng buộc vào một hàm mới.
+Tìm được một điểm khả thi có giá trị hàm mục tiêu nhỏ chưa đủ để kết luận điểm đó tối ưu, vì vẫn có thể tồn tại một điểm khả thi khác tốt hơn. Một cách chứng nhận là xây dựng cận dưới đúng cho mọi nghiệm của bài toán cực tiểu. Nếu giá trị của một điểm khả thi bằng cận dưới ấy, không điểm nào có thể tốt hơn. Đối ngẫu Lagrange tạo ra các cận dưới như vậy bằng cách đưa các ràng buộc vào hàm mục tiêu với những hệ số thích hợp.
 
 Ta tiếp tục bài $\min(x-2)^2$ với $x\le1$ từ Bài 01. Ví dụ này tự đặt; lý thuyết dựa vào chương 5 của *Convex Optimization*.
 
-Sau bài, bạn có thể tính hàm đối ngẫu bằng cách tối ưu theo $x$ trước, kiểm đủ các nhóm KKT và dùng khoảng cách đối ngẫu để đánh giá một điểm khả thi.
+Sau khi học xong, bạn sẽ tính được hàm đối ngẫu bằng cách lấy infimum theo biến gốc trước, xác minh được bốn nhóm điều kiện KKT, và dùng khoảng cách đối ngẫu để định lượng mức chưa tối ưu của một điểm khả thi.
 
-Nếu học lần đầu, hãy đọc mục 1–3 để thấy cận dưới được tạo ra thế nào. Mục 4 giải thích khi nào cận ấy chạm giá trị tối ưu; mục 5–6 mới gom các kết quả thành điều kiện KKT. Bạn chưa cần nhớ tên bốn nhóm điều kiện trước khi hiểu vai trò của từng nhóm.
+Lần đọc đầu nên dừng sau mục 3, khi bạn đã tự tính được một hàm đối ngẫu và hiểu vì sao nó cho cận dưới. Mục 4 trình bày điều kiện Slater, còn mục 5–6 tổ chức các kết quả thành bốn nhóm điều kiện KKT. Không cần học thuộc tên các nhóm trước khi hiểu mỗi nhóm loại trừ sai sót nào.
 
-## 1. Dấu của nhân tử đến từ đâu?
+## 1. Lagrangian và dấu của các nhân tử
 
 Với bài min $f_0(x)$, $f_i(x)\le0$, $h_j(x)=0$, đặt **Lagrangian**
 
@@ -40,7 +40,7 @@ $$\boxed{g(\lambda,\nu)\le L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).}$$
 
 Điều này đúng với mọi điểm khả thi, nên $g\le p^*$. Đây là **đối ngẫu yếu**, không cần bài gốc lồi. Nếu L không bị chặn dưới, $g=-\infty$; cận ấy đúng nhưng không hữu ích.
 
-## 2. Một phép tính đối ngẫu đầy đủ
+## 2. Tính hàm đối ngẫu trong một ví dụ
 
 Với ràng buộc $x-1\le0$,
 
@@ -71,9 +71,9 @@ const gap = 1-g(lambda); // x=1 khả thi, f(1)=1
 
 Mô phỏng cơ chế cận dưới ở §5.1.3 và Hình 5.1 của sách bằng bài toán tự đặt. Đổi $\lambda$ để thấy cận có thể còn xa nghiệm. Khi $\lambda=0$, điểm cực tiểu L là 2, không khả thi cho bài gốc; việc cực tiểu L không tự thu hồi nghiệm khả thi.
 
-## 3. Vì sao hàm đối ngẫu lõm?
+## 3. Tính lõm của hàm đối ngẫu
 
-Với một $x$ cố định, $L(x,\lambda,\nu)$ là affine theo các nhân tử. $g$ lấy infimum của cả họ affine ấy. Để kiểm chiều bất đẳng thức, gọi hai bộ nhân tử $u,v$ và $0\le\theta\le1$:
+Với một $x$ cố định, $L(x,\lambda,\nu)$ là affine theo các nhân tử. Hàm $g$ lấy infimum của cả họ hàm affine ấy. Để xác định đúng chiều bất đẳng thức, gọi hai bộ nhân tử là $u,v$ và lấy $0\le\theta\le1$:
 
 $$\begin{aligned}
 g(\theta u+(1-\theta)v)
@@ -83,13 +83,13 @@ g(\theta u+(1-\theta)v)
 
 Mỗi giá trị bên trong infimum không nhỏ hơn vế phải, nên lấy infimum vẫn giữ cận. Đây là bất đẳng thức hàm lõm. Vì vậy bài cực đại $g$ trên miền nhân tử khả thi là bài tối ưu lồi, kể cả khi bài gốc không lồi. Điều này không bảo đảm cận chạm $p^*$.
 
-<details><summary>Tự kiểm: đối ngẫu là cực tiểu hay cực đại? Vì sao?</summary>
+<details><summary>Thử trả lời: Bài toán đối ngẫu cực tiểu hay cực đại hàm g, và vì sao?</summary>
 
 Cực đại: mọi giá trị $g$ hợp lệ đều là cận dưới; ta muốn cận lớn nhất, gần giá trị tối ưu gốc nhất. Cực tiểu g chỉ làm cận yếu đi.
 
 </details>
 
-## 4. Slater: khi nào cận tốt nhất bằng giá trị tối ưu?
+## 4. Điều kiện Slater và đối ngẫu mạnh
 
 Gọi $d^*$ là giá trị tối ưu đối ngẫu. Đối ngẫu yếu cho $d^*\le p^*$. Khi $d^*=p^*$, ta có **đối ngẫu mạnh**. Lồi chưa tự bảo đảm đẳng thức này trong mọi trường hợp.
 
@@ -99,15 +99,15 @@ $$f_i(\bar x)<0\ \forall i,\qquad A\bar x=b.$$
 
 Nội tương đối $\operatorname{relint}D$ là phần trong của miền khi nhìn trong không gian affine nhỏ nhất chứa nó. Một đoạn nằm trên đường trong $\mathbb R^2$ có nội hai chiều rỗng nhưng có nội tương đối là phần giữa hai đầu mút. Cần khái niệm này khi miền sống trong một không gian thấp chiều.
 
-Slater là điều kiện đủ cho đối ngẫu mạnh; với giá trị gốc hữu hạn, nó còn bảo đảm đạt tối ưu đối ngẫu. Với bất đẳng thức affine, sách có dạng Slater yếu hơn cho phép chúng không chặt; ở đây ta dùng dạng đủ dễ kiểm ở trên, không coi nó là điều kiện cần.
+Slater là điều kiện đủ cho đối ngẫu mạnh; khi giá trị tối ưu gốc hữu hạn, điều kiện này còn bảo đảm bài toán đối ngẫu đạt nghiệm. Đối với các bất đẳng thức affine, sách nêu một phiên bản Slater yếu hơn, không bắt buộc mọi bất đẳng thức affine phải thỏa chặt. Trong bài này ta dùng phiên bản đủ ở trên và không coi Slater là điều kiện cần.
 
 Ví dụ mở đầu có $\bar x=0$ thỏa $x-1=-1<0$. Các hàm hữu hạn trên toàn $\mathbb R$, nên nội tương đối không tạo hạn chế thêm. Đối ngẫu mạnh phù hợp với phép tính $p^*=d^*=1$.
 
-## 5. KKT: bốn nhóm điều kiện làm gì?
+## 5. Bốn nhóm điều kiện KKT
 
 Giả sử mục tiêu và các hàm bất đẳng thức khả vi; đẳng thức affine. Các điều kiện **Karush–Kuhn–Tucker (KKT)** gồm:
 
-| Nhóm | Công thức | Việc cần kiểm |
+| Nhóm | Công thức | Điều cần xác minh |
 | --- | --- | --- |
 | Khả thi gốc | $f_i(x)\le0$, $Ax=b$ | $x$ có hợp lệ không? |
 | Khả thi đối ngẫu | $\lambda_i\ge0$ | Có giữ được cận dưới không? |
@@ -118,7 +118,7 @@ Trong **bài lồi**, KKT đủ cho tối ưu. Lý do: $L$ lồi theo $x$ khi c�
 
 Nếu bài lồi khả vi thỏa Slater và có nghiệm gốc đạt, KKT cũng cần: mỗi nghiệm có một bộ nhân tử phù hợp. Với bài không lồi, dừng của L chưa bảo đảm cực tiểu toàn cục, nên không dùng KKT như chứng nhận toàn cục.
 
-::: example Kiểm từng dòng cho ví dụ một chiều
+::: example Đối chiếu bốn điều kiện trong ví dụ một chiều
 Tại $x^*=1$, $\lambda^*=2$:
 
 1. $x^*-1=0\le0$.
@@ -171,7 +171,7 @@ Dùng $1-x\le0$. $L=x^2+\lambda(1-x)$ cực tiểu tại $x=\lambda/2$, nên $g=
 :::
 
 ::: exercise 2. Nhân tử bằng 0 tại biên
-Với $\min x^2$, $x\le0$, kiểm KKT tại $x=0$, $\lambda=0$.
+Với $\min x^2$, $x\le0$, hãy xác minh các điều kiện KKT tại $x=0$, $\lambda=0$.
 :::
 ::: solution
 Khả thi $x=0$; nhân tử không âm; bù trừ $0\cdot0=0$; dừng $2x+\lambda=0$. Ràng buộc chặt dù nhân tử bằng 0. Đây là phản ví dụ cho suy luận “ràng buộc chặt thì nhân tử dương”.

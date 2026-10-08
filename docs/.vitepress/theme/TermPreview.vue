@@ -2,6 +2,7 @@
 import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import { concepts } from '../concepts.mjs'
+import { conceptField } from '../wiki-content.mjs'
 
 const route = useRoute()
 const term = ref(null)
@@ -10,9 +11,11 @@ const position = ref({})
 const popover = ref(null)
 const closeButton = ref(null)
 const pinned = ref(false)
+const field = ref(null)
 
 let anchor
 let timer
+let suppressFocus = false
 
 function clearAnchor(link = anchor) {
   link?.removeAttribute('aria-describedby')
@@ -26,8 +29,13 @@ function close({ restoreFocus = false } = {}) {
   term.value = null
   wikiHref.value = ''
   pinned.value = false
+  field.value = null
   anchor = null
-  if (restoreFocus && previousAnchor?.isConnected) previousAnchor.focus()
+  if (restoreFocus && previousAnchor?.isConnected) {
+    suppressFocus = true
+    previousAnchor.focus()
+    queueMicrotask(() => { suppressFocus = false })
+  }
 }
 
 function updatePosition() {
@@ -71,6 +79,7 @@ async function show(link, { persist = false } = {}) {
   if (anchor !== link) clearAnchor()
   anchor = link
   term.value = nextTerm
+  field.value = conceptField(link.dataset.term)
   wikiHref.value = withBase(link.dataset.wiki)
   pinned.value = persist
   link.setAttribute('aria-expanded', persist ? 'true' : 'false')
@@ -96,7 +105,7 @@ function out(event) {
 }
 
 function focusIn(event) {
-  if (pinned.value) return
+  if (pinned.value || suppressFocus) return
   const link = event.target.closest?.('button.study-term')
   if (link) show(link)
 }
@@ -121,7 +130,11 @@ function click(event) {
 }
 
 function key(event) {
-  if (event.key === 'Escape' && term.value) close({ restoreFocus: pinned.value })
+  if (event.key === 'Escape' && term.value) {
+    event.preventDefault()
+    event.stopPropagation()
+    close({ restoreFocus: pinned.value })
+  }
 }
 
 function keepOpen() {
@@ -146,7 +159,7 @@ onMounted(() => {
   document.addEventListener('focusin', focusIn)
   document.addEventListener('focusout', focusOut)
   window.addEventListener('click', click, true)
-  document.addEventListener('keydown', key)
+  window.addEventListener('keydown', key, true)
   window.addEventListener('scroll', scroll, true)
   window.addEventListener('resize', updatePosition)
 })
@@ -158,7 +171,7 @@ onUnmounted(() => {
   document.removeEventListener('focusin', focusIn)
   document.removeEventListener('focusout', focusOut)
   window.removeEventListener('click', click, true)
-  document.removeEventListener('keydown', key)
+  window.removeEventListener('keydown', key, true)
   window.removeEventListener('scroll', scroll, true)
   window.removeEventListener('resize', updatePosition)
 })
@@ -168,6 +181,7 @@ watch(() => route.path, () => close())
 
 <template>
   <Teleport to="body">
+    <button v-if="term && pinned" type="button" class="term-preview-scrim" aria-label="Đóng ghi chú nhanh" @click="close({ restoreFocus: true })"></button>
     <aside
       v-if="term"
       id="study-term-preview"
@@ -184,6 +198,7 @@ watch(() => route.path, () => close())
         <div>
           <span class="term-preview-kicker">Ghi chú nhanh</span>
           <strong id="study-term-preview-title">{{ term.name }}</strong>
+          <span v-if="field" class="term-preview-field">Lĩnh vực: {{ field.name }}</span>
         </div>
         <button
           v-if="pinned"
@@ -195,7 +210,11 @@ watch(() => route.path, () => close())
         >Đóng</button>
       </div>
       <p>{{ term.definition }}</p>
-      <p class="term-preview-example"><span>Ví dụ:</span> {{ term.example }}</p>
+      <div class="term-preview-example">
+        <span>Ví dụ:</span>
+        <pre v-if="term.notation" class="term-preview-notation">{{ term.notation }}</pre>
+        <p v-else>{{ term.example }}</p>
+      </div>
       <a v-if="pinned" class="term-preview-wiki" :href="wikiHref">Đọc bài Wiki đầy đủ <span aria-hidden="true">→</span></a>
       <span v-else class="term-preview-hint">Nhấp để giữ ghi chú và mở đường dẫn tới Wiki.</span>
     </aside>

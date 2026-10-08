@@ -19,7 +19,11 @@ Ví dụ $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ PSD dù có phần tử âm, v
 
 ## Ví dụ
 
-P=[[1,2],[2,1]] không PSD: với v=(1,−1), vᵀPv=−2. Ma trận AᵀA luôn PSD vì vᵀAᵀAv=‖Av‖².
+Ma trận
+
+$$P=\begin{bmatrix}1&2\\2&1\end{bmatrix}$$
+
+không PSD: với $v=(1,-1)^T$, ta được $v^TPv=-2$. Ngược lại, $A^TA$ luôn PSD vì $v^TA^TAv=\|Av\|_2^2\ge0$.
 
 ## Khi nào cần dùng?
 

@@ -45,6 +45,8 @@ Nếu thiếu tiên quyết lớn đến mức thay đổi môn học, chỉ ra 
 
 Với một bài có mật độ thuật ngữ cao, dùng ba tầng thay vì chen mọi giải thích vào mạch chính: Notes giữ nghĩa cần để theo lập luận; ghi chú nhanh nhắc định nghĩa và một ví dụ ngay tại từ đang đọc; Wiki giải thích kỹ thuật và liên hệ sâu hơn. Tầng phụ không được giấu lý do thiết yếu của bài. Nếu bỏ ghi chú nhanh và Wiki mà mạch Notes không còn hiểu được, Notes vẫn còn thiếu.
 
+Trong tab Kiến thức nền, tách hai nhu cầu. “Cần ôn trước” chỉ chứa kiến thức bài dùng ngay mà không dạy lại. “Tra cứu trong khi đọc” chứa ký hiệu và thuật ngữ xuất hiện trong Notes/Slides nhưng đã được giải thích tại chỗ hoặc không cần học thuộc trước. Sự tách này giúp bổ sung đủ điểm tựa mà không biến mọi khái niệm của bài thành điều kiện đầu vào.
+
 ## 3. Chẩn đoán khoảng trống trong lời giải thích
 
 Với một ý trọng tâm, kiểm tra các câu hỏi sau; chỉ bổ sung câu trả lời còn cần thiết:

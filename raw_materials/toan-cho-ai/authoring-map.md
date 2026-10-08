@@ -1,6 +1,6 @@
 # Sổ nguồn và phạm vi biên soạn môn Cơ sở toán AI
 
-Phiên bản biên soạn ngày 07/10/2026, skill `studyhub-lecture` 7.0.0.
+Phiên bản biên soạn cập nhật ngày 08/10/2026, skill `studyhub-lecture` 7.2.0.
 
 ## Ranh giới nguồn
 
@@ -30,6 +30,14 @@ Phiên bản biên soạn ngày 07/10/2026, skill `studyhub-lecture` 7.0.0.
 | §9.3 + nguồn học sâu bổ sung | SGD, momentum, Nesterov, Glorot | Lecture 05 | Tách nhiễu gradient khỏi động lực vận tốc; nêu giả định lấy mẫu và tuyến tính hóa. |
 | Phụ lục C, §9.5 + nguồn bổ sung | AdaGrad, RMSProp, Adam, CG, BFGS | Lecture 06 | Có trạng thái và hai bước Adam, giả thiết SPD/độ cong BFGS, không xếp hạng mạng sâu từ mô phỏng. |
 | §4.3, §8.7 (tr. 436–438) + Bertsimas §2.2–2.6 | LP/cơ sở và Bellman trên DAG | Lecture 07 | Min tự biên soạn; max tái hiện đệ quy (8.30). Kết nối với LP tiềm năng. |
+
+## Cách dùng văn phong của giáo trình
+
+Đã đọc trực tiếp các chương 2–5 và 8–10 của bản PDF, gồm cả trang mở đầu chương, định nghĩa, ví dụ và phần chuyển sang thuật toán. Notes không sao chép câu tiếng Anh. Chúng giữ nhịp lập luận của sách: khai báo đối tượng và giả thiết; phát biểu định nghĩa hoặc công thức; giải thích ký hiệu ngay sau đó; rồi mới nêu hệ quả, ví dụ hoặc giới hạn.
+
+StudyHub bổ sung các bước mà sách có thể để người đọc tự suy ra: giải thích mục đích của phép biến đổi, chỉ ra giả thiết được dùng ở dòng nào, và cho một bài nhỏ để tự làm. Không biến sự bổ sung này thành chuỗi tiêu đề hỏi tu từ. Tiêu đề mặc định gọi đúng đối tượng hoặc kết quả; câu hỏi chỉ dùng khi phần đó thực sự trả lời một vướng mắc.
+
+Thuật ngữ được chọn theo lĩnh vực. Cùng từ “tham số” có trang riêng cho mô hình toán học và cho định nghĩa hàm trong lập trình; liên kết tự động chọn nghĩa theo học phần. Tên tiếng Anh được giữ khi đó là tên tra cứu chính hoặc bản dịch chưa ổn định, chẳng hạn likelihood, self-concordant, Adam và BFGS.
 
 ## Kiểm kê minh họa sử dụng
 

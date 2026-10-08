@@ -71,6 +71,19 @@ Với một cụm bài, kiểm tra mật độ khuôn như “ta có thể thấ
 
 Khi người học gặp nhiều thuật ngữ mới trong một đoạn, đừng kéo hết định nghĩa dài vào giữa lập luận và cũng đừng để từ lạ tự trôi qua. Giữ trong câu phần nghĩa cần cho bước hiện tại; thêm mục Wiki với định nghĩa ngắn và ví dụ để ghi chú nhanh mở được tại chỗ. Tránh câu meta chỉ có ích cho người soạn như “tuyến nội dung”, “theo yêu cầu của bạn”, “implementation này”; gọi thẳng phần học, nguồn hoặc phần cài đặt mà sinh viên đang đọc.
 
+## Không viết bằng nhãn rút gọn
+
+Một lỗi lặp lại của văn bản do AI soạn là bỏ bớt động từ, quan hệ và đối tượng, rồi ghép vài danh từ thành một nhãn có vẻ gọn: “Chọn gì, chấm gì, giới hạn đâu?”, “Từ dự đoán đến vector”, “Chuẩn dùng để chấm sai số”. Cách viết này buộc người mới tự khôi phục phần bị lược và tạo cảm giác như bản dịch tiêu đề quảng cáo.
+
+- Tiêu đề mặc định gọi đúng nội dung: “Các thành phần của một bài toán tối ưu”, “Viết nhiều dự đoán bằng một phép nhân ma trận”.
+- Chỉ dùng tiêu đề câu hỏi khi đó là câu hỏi người học thật sự cần trả lời và phần ngay sau trả lời nó. Không biến mọi mục thành câu hỏi.
+- Không lặp cùng khuôn “Từ A đến B”, “Vì sao A?”, “A dùng để B” qua nhiều mục. Đọc riêng danh sách tiêu đề để phát hiện nhịp máy móc.
+- Trong văn xuôi, giữ “vì”, “nếu”, “khi”, chủ thể và động từ. Một câu ngắn không được đánh đổi lấy quan hệ logic bị thiếu.
+
+Đừng dùng “kiểm” như bản dịch mặc định của *check*. Chọn động từ theo hành động thật: “xác định kích thước”, “đối chiếu hai vế”, “xác minh điều kiện KKT”, “chứng minh tính lồi”, “thử một trường hợp”. “Kiểm tra” vẫn dùng được khi đúng nghĩa, nhưng “kiểm kích thước”, “kiểm dạng chuẩn” thường là câu cụt và không tự nhiên.
+
+Đoạn hướng dẫn đọc bài phải là văn xuôi hoàn chỉnh. Tránh nhãn “Cách học:” theo sau bởi chuỗi mệnh lệnh rút gọn. Nói rõ phần nào là mạch chính, phần nào có thể để lại và lý do. Sau dấu hai chấm, viết hoa nếu phần sau là một câu độc lập; tốt hơn nữa, tách thành câu mới khi nhãn không cần thiết.
+
 ## Những khuôn đã thấy trong bài trên site
 
 Rà riêng các khuôn sau khi biên tập Notes; chi tiết và cách sửa ở [lecture-blueprint.md](lecture-blueprint.md) mục 4:

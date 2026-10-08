@@ -8,11 +8,11 @@ lessonStatus: ready
 description: "Từ đa diện và nghiệm cơ sở đến Bellman hữu hạn tất định; so hai cách giải một bài đường đi."
 ---
 
-Một bài phân bổ nguồn lực có thể được giải bằng hình học đa diện. Một chuỗi quyết định có thể được giải bằng cách tính phần còn lại từ cuối về đầu. Bài này đặt LP và quy hoạch động cạnh nhau, rồi dùng một bài đường đi để chỉ ra mối liên hệ giữa hai cách giải.
+Quy hoạch tuyến tính mô tả một quyết định bằng hàm mục tiêu tuyến tính và các ràng buộc tuyến tính. Quy hoạch động lại tổ chức một chuỗi quyết định bằng cách lưu kết quả tốt nhất của phần bài toán còn lại. Hai phương pháp có ngôn ngữ khác nhau, nhưng trong một số bài toán, chẳng hạn tìm đường đi trên đồ thị có hướng không chu trình, chúng có thể mô tả và chứng nhận cùng một nghiệm.
 
-Sau bài, bạn có thể đưa LP về dạng chuẩn, kiểm một nghiệm cơ sở khả thi, tính bảng Bellman và thu hồi đường đi. Mục 1–3 là cụm LP; mục 4–6 là cụm quy hoạch động. Các dữ liệu số dưới đây đều tự đặt.
+Sau khi học xong, bạn sẽ đưa được một LP về dạng chuẩn, xác minh được một nghiệm cơ sở có khả thi hay không, tính được các giá trị Bellman theo thứ tự ngược và thu hồi được đường đi tối ưu. Mục 1–3 trình bày quy hoạch tuyến tính; mục 4–6 trình bày quy hoạch động và mối liên hệ với LP. Các dữ liệu số dưới đây đều do người biên soạn tự đặt.
 
-## 1. Một LP hai biến: trượt mục tiêu trên miền khả thi
+## 1. Một ví dụ quy hoạch tuyến tính hai biến
 
 Xét
 
@@ -52,7 +52,7 @@ x+y+s_1=4,\quad x+s_2=2,\quad x,y,s_1,s_2\ge0.$$
 
 Slack đo phần chưa dùng của mỗi giới hạn; nó khác nhân tử Lagrange. Tại $(2,2)$, hai slack đều 0.
 
-## 3. Nghiệm cơ sở: chọn những cột nào để giải?
+## 3. Nghiệm cơ sở trong dạng chuẩn
 
 Giả sử $A$ kích thước $m\times n$ có hạng hàng $m$. Chọn $m$ cột độc lập tạo ma trận vuông $A_B$. Đặt các biến ngoài tập cột $B$ bằng 0 và giải $A_Bx_B=b$. Đây là **nghiệm cơ sở**. Nếu $x_B\ge0$, nó là **nghiệm cơ sở khả thi**.
 
@@ -62,23 +62,23 @@ $$A=\begin{bmatrix}1&1&1&0\\1&0&0&1\end{bmatrix},\quad b=(4,2)^T.$$
 
 Chọn cột $x,y$ làm cơ sở: $A_B=\begin{bmatrix}1&1\\1&0\end{bmatrix}$. Đặt $s_1=s_2=0$, giải được $x=2$, $y=2$, cả hai không âm. Chọn cột $s_1,s_2$ thì $x=y=0$, slack $(4,2)$, cũng khả thi nhưng mục tiêu kém hơn.
 
-Không phải bất kỳ $m$ cột nào cũng tạo cơ sở: cột $y,s_1$ giống nhau, nên không độc lập. Không phải mọi nghiệm cơ sở đều khả thi: sau khi giải vẫn phải kiểm dấu. Một biến cơ sở bằng 0 tạo **nghiệm suy biến**; việc ở trong cơ sở không bảo đảm nó dương.
+Không phải bất kỳ $m$ cột nào cũng tạo được một cơ sở: hai cột ứng với $y$ và $s_1$ giống nhau nên phụ thuộc tuyến tính. Một nghiệm cơ sở cũng chưa chắc khả thi; sau khi giải hệ, vẫn phải xác nhận mọi thành phần đều không âm. Nếu một biến cơ sở bằng 0, ta có **nghiệm cơ sở suy biến**. Vì vậy, việc một biến thuộc cơ sở không có nghĩa giá trị của nó phải dương.
 
-### 3.1 Một chứng nhận bằng giá tài nguyên
+### 3.1 Chứng nhận tối ưu bằng tổ hợp các ràng buộc
 
 Với bài max ở mục 1, chọn nhân tử không âm $(\lambda_1,\lambda_2)=(2,1)$ cho hai giới hạn. Cộng các ràng buộc có trọng số:
 
 $$2(x+y)+x\le2\cdot4+1\cdot2=10.$$
 
-Vế trái đúng $3x+2y$. Mọi điểm khả thi có mục tiêu không vượt 10; $(2,2)$ đạt 10. Đây là chứng nhận đối ngẫu bằng một tổ hợp ràng buộc, nối với Bài 03. Nó kiểm nghiệm mà không cần chạy qua mọi điểm trong đa diện.
+Vế trái đúng bằng $3x+2y$. Do đó mọi điểm khả thi đều có giá trị mục tiêu không vượt quá 10, trong khi điểm $(2,2)$ đạt đúng 10. Đây là một chứng nhận đối ngẫu được tạo từ tổ hợp của các ràng buộc, nối trực tiếp với Bài 03. Chứng nhận này đủ để kết luận tối ưu mà không cần xét từng điểm trong đa diện.
 
-<details><summary>Tự kiểm: biến cơ sở nào cũng phải dương đúng hay sai?</summary>
+<details><summary>Thử trả lời: Mọi biến cơ sở đều phải dương, đúng hay sai?</summary>
 
 Sai. Điều kiện khả thi chỉ đòi không âm. Chẳng hạn hệ $x+s=0$, $x,s\ge0$, chọn cột $x$ cho biến cơ sở $x=0$.
 
 </details>
 
-## 4. Quy hoạch động: giữ thông tin đủ cho phần còn lại
+## 4. Phương trình Bellman và trạng thái
 
 Xét chuỗi hữu hạn $t=0,\ldots,T-1$. Ở bước $t$, trạng thái $s$, chọn hành động $a\in\mathcal A_t(s)$, chịu chi phí $c_t(s,a)$ và chuyển tất định tới $T_t(s,a)$. Cuối chuỗi chịu chi phí $h(s_T)$.
 
@@ -91,7 +91,7 @@ Ta tách hành động đầu khỏi phần còn lại. Nếu phần sau của m
 
 Trong bài này các tập hành động hữu hạn, chuyển trạng thái tất định, thời hạn hữu hạn, nên có thể dùng min và lưu hành động đạt min khi tồn tại hành động khả thi. Trạng thái không có phương án tới đích được gán giá trị $+\infty$. Bài ngẫu nhiên sẽ có kỳ vọng của giá trị tương lai; ta chưa dùng công thức ấy ở đây.
 
-## 5. Tính ngược trên một DAG
+## 5. Tính các giá trị Bellman trên một DAG
 
 Đồ thị có hướng không chu trình (DAG) tự cung cấp thứ tự tính ngược: đích trước, rồi các nút có mọi nút kế tiếp đã được tính. Xét các cạnh:
 
@@ -123,7 +123,7 @@ Theo các lựa chọn đã lưu, đường tối ưu là $S\to A\to B\to T$, ch
 
 Nếu đổi min thành max, ta tính đường dài nhất trên DAG: $V(B)=1$, $V(A)=5$, $V(S)=6$. §8.7 của *Convex Optimization* dùng cơ chế max này để tính trễ đường lớn nhất trong bài bố trí; mô phỏng chọn “max” để tái hiện đệ quy ấy với chi phí cạnh tự đặt. Không dùng đệ quy ngược này trực tiếp trên một đồ thị có chu trình.
 
-## 6. Cùng bài đường đi, một LP khác
+## 6. Biểu diễn bài toán đường đi bằng quy hoạch tuyến tính
 
 Đặt biến tiềm năng $v_u$ cho mỗi nút, $v_T=0$, và ràng buộc
 

@@ -4,7 +4,7 @@ Dùng khi sửa skill, đổi model hoặc kiểm tra một bài giảng mới c
 
 Ba nhóm:
 
-- **S01–S12**: hành vi riêng của StudyHub (trang bài giảng, catalog, Wiki, giọng trên site). Bắt đầu từ đây khi sửa `studyhub-lecture`.
+- **S01–S15**: hành vi riêng của StudyHub (trang bài giảng, catalog, Wiki, giọng trên site). Bắt đầu từ đây khi sửa `studyhub-lecture`.
 - **T01–T27**: thiết kế bài, slide, hình, thuật ngữ (kế thừa textbook-to-course-slides 6.1).
 - **B01–B14**: giảng một đoạn trong chat và phản hồi bài làm (kế thừa textbook-passage-explainer 2.1; dùng cho skill `textbook-passage-explainer`).
 
@@ -27,6 +27,8 @@ Phần kiểm tra tự động của script nằm ở `scripts/tests/test_tools.
 | S11 | Nguồn PDF có trang OCR lỗi ký hiệu (“P(B) ? 0”) | Ghi chỗ mơ hồ, đối chiếu ảnh trang nếu có, không đoán | Giảng như chắc chắn ký tự là “>” |
 | S12 | Một chương dài gấp ba một bài bình thường | Đề xuất tách bài theo điểm kết thúc nhiệm vụ học, nói rõ phần chuyển sang bài sau | Nén bằng cách xóa điều kiện, bước suy luận hoặc ví dụ |
 | S13 | Notes dày thuật ngữ, người học muốn xem nhanh rồi mới quyết định mở Wiki | Thuật ngữ khó có `concepts` ngắn và `wikiDetails` sâu; bấm/tap mở ghi chú nhanh có ví dụ và nút sang Wiki; dùng được bằng bàn phím, Escape đóng, mobile không tràn màn hình | Nhấp thuật ngữ lập tức đẩy người học khỏi Notes; chỉ hoạt động khi hover; nhồi công thức dài vào tooltip; thêm mọi thuật ngữ Wiki vào prerequisites |
+| S14 | Từ “tham số” xuất hiện trong slide Toán và bài Python | Slide Toán mở `tham-so-toan-hoc`; bài Python mở `tham-so-lap-trinh`; hai trang ghi rõ lĩnh vực và liên kết tới nghĩa còn lại | Dùng alias toàn cục nên trang nào được khai báo sau thắng; Notes Toán mở “tham số hàm Python”; Wiki không nói phạm vi nghĩa |
+| S15 | Notes có chuỗi tiêu đề “Từ A đến B”, “Vì sao…?”, “Chọn gì, chấm gì…?” và đoạn “Cách học: đọc…” | Rà cả danh sách tiêu đề; phần lớn tiêu đề gọi thẳng nội dung; hướng dẫn đọc là câu đầy đủ; dùng “thử trả lời/câu hỏi ôn lại”; chọn động từ cụ thể thay `kiểm` | Chỉ sửa đúng câu người dùng nêu; thay bằng một bộ câu hỏi rút gọn khác; tiếp tục dùng nhãn cụt hoặc “câu tự kiểm” |
 
 Bất biến chung cho mọi tình huống S: không bịa nguồn/trích dẫn/số liệu; mọi số đã tính lại; Notes tự học được mà không cần giảng viên; Slides không chứa khẳng định Notes không có.
 

@@ -1,8 +1,8 @@
 ---
 name: studyhub-lecture
-description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm/viết lại bài trong docs/<môn>/bai-giang, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
+description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm hoặc viết lại bài trong thư mục bài giảng của một môn, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
 metadata:
-  version: "7.1.0"
+  version: "7.2.0"
   supersedes: "textbook-to-course-slides 6.1.0"
 ---
 
@@ -83,7 +83,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 8. **Soạn nội dung** theo lecture-blueprint.md: đủ lý do, chưa gọt chữ.
 9. **Tính lại** mọi ví dụ và lời giải bằng Python; sửa Notes theo kết quả. Code trong bài phải chạy được.
-10. **Lượt giọng** theo professor-voice.md và writing-vi.md: sửa câu thiếu đối tượng, thiếu quan hệ, danh từ hóa, khẩu hiệu. Lượt này không đổi toán.
+10. **Lượt giọng** theo professor-voice.md và writing-vi.md: đọc liền danh sách tiêu đề để sửa khuôn hỏi/rút gọn lặp; sửa câu thiếu đối tượng, thiếu quan hệ, danh từ hóa, khẩu hiệu và động từ dịch máy. Lượt này không đổi toán.
 11. **Lượt nghĩa**: đối chiếu lại nguồn từng phát biểu — giả thiết, miền, lượng từ, dấu, số 0, chiều suy ra. Câu trôi chảy không chứng minh đúng nghĩa.
 12. **Tự rà như người mới** (teaching-review.md): chỉ cho phép kiến thức trong prerequisites và phần đã dạy; ở mỗi bước hỏi “thuật ngữ/phép suy ra này lấy từ đâu?”. Rà cả thuật ngữ phụ mình vừa thêm.
 
@@ -91,7 +91,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 13. Ghi file Notes với frontmatter đúng (repo-format.md mục 2). Hình vào `img/<lec>/` cạnh bài.
 14. Catalog: `lessons`, `parts`, `slides` (repo-format.md mục 4). Slides chiếu từ Notes đã khóa.
-15. Kiến thức nền: chọn `prerequisites`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu tự kiểm. Với bài dày thuật ngữ, thêm các khái niệm khó vào Wiki ngay cả khi chúng được dạy trong Notes để liên kết tự động có thể mở ghi chú nhanh; chỉ đưa chúng vào `prerequisites` nếu bài dùng mà không dạy lại.
+15. Kiến thức nền: chọn `prerequisites` và `supportingConcepts`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu hỏi ôn lại. Khái niệm đa nghĩa phải có ID và lĩnh vực riêng để Notes chỉ liên kết tới đúng nghĩa. Với bài dày thuật ngữ, thêm các khái niệm khó vào Wiki ngay cả khi chúng được dạy trong Notes để liên kết tự động có thể mở ghi chú nhanh; chỉ đưa chúng vào `prerequisites` nếu bài dùng mà không dạy lại.
 16. Đặt `lessonStatus: ready` chỉ khi mọi phần đầy đủ.
 
 ### E. Kiểm tra (không bỏ qua)
@@ -123,7 +123,7 @@ Mỗi mục: vị trí (file:dòng), vấn đề, vì sao ảnh hưởng việc 
 
 ## 6. Chế độ wiki-term
 
-Một mục Wiki là bài giảng nhỏ cho một khái niệm nền. Định nghĩa chính xác bằng văn bản thuần trong `concepts.mjs` (một ví dụ cụ thể, khi nào dùng, một câu tự kiểm có đáp án). `wikiDetails` giải thích kỹ thuật: ký hiệu, điều kiện, lỗi dễ nhầm, liên hệ khái niệm khác (Markdown/LaTeX được). Chọn alias theo cách viết thật trong các bài; tránh alias quá chung. Chạy `npm run sync:courses` để sinh file Wiki, rồi sửa file đó cho khớp và giàu hơn nếu cần.
+Một mục Wiki là bài giảng nhỏ cho một khái niệm nền. Định nghĩa chính xác bằng văn bản thuần trong `concepts.mjs` (một ví dụ cụ thể, khi nào dùng, một câu hỏi ôn lại có đáp án). `wikiDetails` giải thích kỹ thuật: ký hiệu, điều kiện, lỗi dễ nhầm, liên hệ khái niệm khác (Markdown/LaTeX được). Mỗi mục thuộc một lĩnh vực; nếu alias đa nghĩa, tạo các ID riêng và cấu hình phạm vi học phần thay vì để thứ tự khai báo quyết định. Chọn alias theo cách viết thật trong các bài; tránh alias quá chung khi không thể phân giải bằng lĩnh vực. Chạy `npm run sync:courses` để sinh file Wiki, rồi sửa file đó cho khớp và giàu hơn nếu cần.
 
 ## 7. Chế độ deck
 

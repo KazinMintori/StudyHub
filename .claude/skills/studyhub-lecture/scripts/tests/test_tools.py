@@ -183,6 +183,15 @@ class Terminology(unittest.TestCase):
             self.assertEqual([t["id"] for t in report["terms"]], [expected])
             self.assertEqual(report["ambiguities"], [])
 
+    def test_parameter_meaning_is_scoped_by_field(self):
+        for domain, expected in (("optimization", "optimization.parameter"), ("programming", "programming.parameter")):
+            report = self.retriever.retrieve("Explain this parameter.", domain, example_limit=0)
+            self.assertEqual([t["id"] for t in report["terms"]], [expected])
+            self.assertEqual(report["ambiguities"], [])
+        ambiguous = self.retriever.retrieve("Explain this parameter.", example_limit=0)
+        self.assertEqual({t["id"] for t in ambiguous["terms"]}, {"optimization.parameter", "programming.parameter"})
+        self.assertTrue(ambiguous["ambiguities"])
+
     def test_missing_domain_keeps_ambiguity(self):
         report = self.retriever.retrieve("Explain contraction.", example_limit=0)
         self.assertEqual({t["id"] for t in report["terms"]}, {"fixed-point.contraction", "tensor.contraction"})

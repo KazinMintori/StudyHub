@@ -19,7 +19,11 @@ Trị riêng có thể là số phức với ma trận thực. Ma trận đối 
 
 ## Ví dụ
 
-A = [[2,0],[0,3]]: (1,0) là vector riêng với λ = 2; (0,1) với λ = 3.
+Với
+
+$$A=\begin{bmatrix}2&0\\0&3\end{bmatrix},$$
+
+vector $(1,0)^T$ có trị riêng 2, còn vector $(0,1)^T$ có trị riêng 3.
 
 ## Khi nào cần dùng?
 

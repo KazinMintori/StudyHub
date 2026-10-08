@@ -1,11 +1,11 @@
 ---
-title: "Hàm tự tương hợp"
+title: "Hàm tự tương hợp (self-concordant)"
 wikiTerm: tu-tuong-hop
 prev: false
 next: false
 ---
 
-# Hàm tự tương hợp
+# Hàm tự tương hợp (self-concordant)
 
 Tự tương hợp là điều kiện khống chế tốc độ thay đổi của đạo hàm bậc hai bằng chính thang độ cong hiện tại. Điều kiện này giúp phân tích bước Newton; nó không phải tên khác của tính lồi.
 

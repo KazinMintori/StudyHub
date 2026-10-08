@@ -29,35 +29,35 @@ export const readingMetadata = {
     "minutes": 5
   },
   "toan-cho-ai/bai-00-on-tap-nen-tang": {
-    "words": 1715,
+    "words": 1980,
     "minutes": 10
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu": {
-    "words": 2347,
-    "minutes": 10
+    "words": 2540,
+    "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 1772,
+    "words": 1938,
     "minutes": 10
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
-    "words": 1669,
+    "words": 1758,
     "minutes": 10
   },
   "toan-cho-ai/bai-04-gradient-newton": {
-    "words": 1294,
+    "words": 1417,
     "minutes": 5
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
-    "words": 1398,
-    "minutes": 5
+    "words": 1654,
+    "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
-    "words": 1117,
+    "words": 1269,
     "minutes": 5
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
-    "words": 1620,
+    "words": 1723,
     "minutes": 10
   },
   "xac-suat-thong-ke/01-xac-suat-va-bayes": {

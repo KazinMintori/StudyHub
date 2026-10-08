@@ -6,7 +6,7 @@ import { courseCatalog } from '../course-catalog.mjs'
 import { studyLink } from './links'
 const query = ref(''), selected = ref('all')
 const normalize = text => text.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd')
-const usage = id => courseCatalog.reduce((n, c) => n + c.lessons.filter(l => l.prerequisites.includes(id)).length, 0)
+const usage = id => courseCatalog.reduce((n, c) => n + c.lessons.filter(l => [...(l.prerequisites || []), ...(l.supportingConcepts || [])].includes(id)).length, 0)
 const groups = computed(() => wikiGroups.filter(g => selected.value === 'all' || g.name === selected.value).map(g => ({ ...g, entries: g.ids.filter(id => normalize(`${concepts[id].name} ${concepts[id].aliases.join(' ')} ${concepts[id].definition}`).includes(normalize(query.value))).map(id => ({ id, ...concepts[id] })) })).filter(g => g.entries.length))
 const count = computed(() => groups.value.reduce((n, g) => n + g.entries.length, 0))
 </script>

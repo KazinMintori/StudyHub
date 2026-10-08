@@ -8,13 +8,13 @@ lessonStatus: ready
 description: "Tính dự đoán bằng ma trận, gradient và độ cong; nối nhiễu Gauss với bình phương tối thiểu."
 ---
 
-Một mô hình dự đoán sai thì ta nên đổi tham số theo hướng nào? Trước khi học thuật toán tối ưu, ta cần đọc được ba thứ: phép nhân tạo dự đoán, đạo hàm đo tác động của thay đổi, và mô hình xác suất giải thích cách chấm sai số. Bài này nối chúng bằng một bộ dữ liệu nhỏ tự đặt.
+Khi một mô hình dự đoán chưa chính xác, ta cần biết tham số nào nên thay đổi và thay đổi theo chiều nào. Bài này ôn lại ba mảnh kiến thức sẽ được dùng xuyên suốt môn học. Phép nhân ma trận giúp viết đồng thời nhiều dự đoán; đạo hàm mô tả sự thay đổi của hàm mục tiêu; mô hình xác suất giải thích vì sao ta chọn một tiêu chuẩn sai số cụ thể. Các phép tính được thực hiện trên một bộ dữ liệu nhỏ tự đặt để bạn có thể theo dõi từng bước.
 
-Sau bài, bạn có thể kiểm kích thước trong phép nhân ma trận, tự tính gradient của loss bình phương và giải thích vì sao giả định nhiễu Gauss dẫn tới bình phương tối thiểu.
+Sau khi học xong, bạn sẽ xác định được kích thước của các đại lượng trong phép nhân ma trận, tự tính gradient của hàm mất mát tổng bình phương, và suy ra tiêu chuẩn bình phương tối thiểu từ giả thiết rằng sai số quan sát tuân theo phân phối Gauss.
 
-**Cách học:** đọc mục 1–2 rồi làm câu tự kiểm; tiếp tục với gradient và Hessian ở mục 3–4; cuối cùng nối xác suất với hồi quy ở mục 5–6. Nếu hàm số hoặc đạo hàm một biến còn chưa chắc, mở tab Kiến thức nền trước. Trong Notes, thuật ngữ có gạch chấm mở một ghi chú ngắn ngay trên trang.
+Ở lần đọc đầu, bạn nên học mục 1–2 để làm quen với ký hiệu ma trận và phần dư, rồi chuyển sang gradient và Hessian ở mục 3–4. Mục 5–6 giải thích mối liên hệ giữa mô hình nhiễu và bài toán bình phương tối thiểu; có thể để lại cho lượt đọc thứ hai nếu phần xác suất còn mới. Nếu hàm số hoặc đạo hàm một biến chưa vững, hãy mở tab Kiến thức nền trước khi bắt đầu. Thuật ngữ có gạch chấm mở một ghi chú ngắn ngay trên trang.
 
-## 1. Từ một dự đoán đến một vector dự đoán
+## 1. Viết nhiều dự đoán bằng một phép nhân ma trận
 
 Giả sử ta thử mô hình một tham số $\widehat b_i=a_iw$. Dữ liệu minh họa là:
 
@@ -38,13 +38,13 @@ $$
 
 Với $m$ quan sát và $n$ đặc trưng, $A\in\mathbb R^{m\times n}$, $w\in\mathbb R^n$, $b,r\in\mathbb R^m$. Ký hiệu $\mathbb R^n$ chỉ các vector gồm $n$ số thực. Một hàng của $A$ dùng các đặc trưng của một quan sát để tính một dự đoán.
 
-<details><summary>Tự kiểm: A có 5 hàng, 2 cột thì w và Aw có bao nhiêu thành phần?</summary>
+<details><summary>Thử trả lời: Nếu A có 5 hàng và 2 cột thì w và Aw có bao nhiêu thành phần?</summary>
 
 $w$ có 2 thành phần để khớp 2 cột. $Aw$ có 5 thành phần, mỗi thành phần đến từ một hàng.
 
 </details>
 
-## 2. Tích vô hướng và chuẩn dùng để chấm sai số
+## 2. Tích vô hướng, chuẩn và độ lớn của phần dư
 
 Với hai vector cùng số chiều,
 
@@ -54,25 +54,25 @@ $$
 
 $T$ là chuyển vị: vector cột thành vector hàng. Ký hiệu $\sum$ yêu cầu cộng các số hạng theo chỉ số. Tích vô hướng $u^Tv$ cho một số, còn $uv^T$ cho một ma trận. Không được hoán đổi hai biểu thức này.
 
-Ta chọn loss
+Ta dùng **hàm mất mát** (loss function)
 
 $$f(w)=\frac12\|Aw-b\|_2^2=\frac12\sum_{i=1}^m r_i^2.$$
 
-Bình phương làm phần dư âm và dương cùng đóng góp không âm. Hệ số $1/2$ chỉ giúp công thức đạo hàm gọn hơn; nó không đổi điểm cực tiểu.
+Bình phương làm cho phần dư âm và phần dư dương đều đóng góp một lượng không âm vào hàm mất mát. Hệ số $1/2$ chỉ làm công thức đạo hàm gọn hơn; nó không làm thay đổi điểm cực tiểu.
 
-::: example Chấm hai lựa chọn
+::: example So sánh hai giá trị của tham số
 Với $w=1$, $r=(0,0,1)^T$, nên $f(1)=1/2$.
 
-Với $w=1/2$, $r=(-1/2,-1,-1/2)^T$, nên $f(1/2)=3/4$. Theo loss đã chọn, $w=1$ tốt hơn $w=1/2$. Điều này chỉ so sánh hai ứng viên, chưa chứng minh $w=1$ tốt nhất.
+Với $w=1/2$, $r=(-1/2,-1,-1/2)^T$, nên $f(1/2)=3/4$. Theo hàm mất mát đã chọn, $w=1$ cho giá trị nhỏ hơn $w=1/2$. Phép so sánh này mới xét hai giá trị của $w$, nên chưa chứng minh $w=1$ là lựa chọn tốt nhất trong mọi trường hợp.
 :::
 
 Hai chuẩn khác cũng gặp trong môn:
 
 $$\|u\|_1=\sum_j|u_j|,\qquad \|u\|_\infty=\max_j|u_j|.$$
 
-Với $u=(3,-4)$, ba chuẩn lần lượt là $7,5,4$. Chúng chấm độ lớn theo ba quy tắc khác nhau. Khi đọc $\|r\|$, cần biết đang dùng chuẩn nào.
+Với $u=(3,-4)$, ba chuẩn lần lượt là $7,5,4$. Mỗi chuẩn đo độ lớn theo một quy tắc khác nhau. Khi đọc $\|r\|$, cần biết đang dùng chuẩn nào.
 
-## 3. Gradient: đổi từng tham số thì loss đổi thế nào?
+## 3. Gradient của hàm mất mát tổng bình phương
 
 Đạo hàm một biến $f'(w)$ cho độ thay đổi bậc nhất: với độ dời nhỏ $d$, $f(w+d)\approx f(w)+f'(w)d$. Với nhiều biến, ta gom các đạo hàm riêng thành gradient:
 
@@ -90,7 +90,7 @@ $$
 
 $$\boxed{\nabla f(w)=A^T(Aw-b).}$$
 
-Kiểm kích thước: $A^T$ có $n$ hàng, $m$ cột; nhân phần dư $m$ chiều cho gradient $n$ chiều. Gradient phải có cùng số thành phần với tham số.
+Đối chiếu kích thước cho thấy $A^T$ có $n$ hàng và $m$ cột; nhân với phần dư $m$ chiều sẽ cho gradient $n$ chiều. Kết quả này phù hợp với yêu cầu rằng gradient phải có cùng số thành phần với vector tham số.
 
 ::: example Giải mô hình một tham số
 Với dữ liệu đang dùng,
@@ -101,22 +101,22 @@ $$f'(w)=14w-11.$$
 
 Đặt $f'(w)=0$ cho $w^*=11/14$. Dự đoán là $(11/14,11/7,33/14)$; phần dư là $(-3/14,-3/7,5/14)$. Ta được $f(w^*)=5/28$, nhỏ hơn $1/2$.
 
-Vì sao điểm dừng này là điểm cực tiểu? Mục kế tiếp kiểm độ cong; chỉ giải đạo hàm bằng 0 chưa đủ cho một hàm bất kỳ.
+Vì sao điểm dừng này là điểm cực tiểu? Mục kế tiếp sẽ xét độ cong; chỉ giải phương trình đạo hàm bằng 0 chưa đủ để kết luận đối với một hàm bất kỳ.
 :::
 
-<details><summary>Tự kiểm: tại w=1, gradient dương hay âm? Muốn giảm loss cục bộ nên tăng hay giảm w?</summary>
+<details><summary>Thử trả lời: Tại w=1, đạo hàm dương hay âm? Muốn làm hàm mất mát giảm trong một lân cận nhỏ thì nên tăng hay giảm w?</summary>
 
 $f'(1)=3>0$. Chọn độ dời âm đủ nhỏ làm $f'(1)d<0$, nên giảm $w$ là hướng giảm cục bộ.
 
 </details>
 
-## 4. Hessian: đạo hàm đang đổi nhanh đến đâu?
+## 4. Hessian và độ cong theo một hướng
 
 **Hessian** $H=\nabla^2 f(w)$ là ma trận đạo hàm bậc hai. Nếu $f$ có đạo hàm bậc hai liên tục, $H$ đối xứng. Xấp xỉ bậc hai là
 
 $$f(w+d)\approx f(w)+\nabla f(w)^Td+\frac12d^THd.$$
 
-$d^THd$ mô tả độ cong theo hướng $d$. Với loss bình phương,
+$d^THd$ mô tả độ cong theo hướng $d$. Với hàm mất mát tổng bình phương,
 
 $$H=A^TA,\qquad d^THd=(Ad)^T(Ad)=\|Ad\|_2^2\ge0.$$
 
@@ -128,11 +128,11 @@ $$f(w)=\frac5{28}+7\left(w-\frac{11}{14}\right)^2.$$
 
 Số hạng cuối không âm và chỉ bằng 0 tại $w^*$; vì vậy nghiệm duy nhất đã được chứng minh.
 
-Dấu từng phần tử ma trận không đủ để kiểm PSD. Ma trận $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ có phần tử dương nhưng với $d=(1,-1)$, $d^THd=-2$. Ngược lại, $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ có phần tử âm nhưng $d^THd=(d_1-d_2)^2\ge0$.
+Dấu của từng phần tử không đủ để xác định một ma trận có PSD hay không. Ma trận $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ có toàn phần tử dương nhưng với $d=(1,-1)$, ta được $d^THd=-2$. Ngược lại, $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ có phần tử âm nhưng $d^THd=(d_1-d_2)^2\ge0$.
 
-**Trước khi đọc tiếp:** hãy tự giải thích vì sao $A^TA$ luôn PSD, và vì sao PSD chưa bảo đảm PD. Nếu $Ad=0$ với một $d\ne0$, độ cong theo hướng đó bằng 0.
+Trước khi đọc tiếp, hãy thử giải thích vì sao $A^TA$ luôn PSD và vì sao PSD chưa bảo đảm PD. Gợi ý: nếu $Ad=0$ với một $d\ne0$, độ cong theo hướng đó bằng 0.
 
-## 5. Xác suất một biến và nhiều biến: đừng nhầm mật độ với xác suất
+## 5. Mật độ xác suất của biến Gauss
 
 Với biến ngẫu nhiên liên tục $Z$ có mật độ $p(z)$, xác suất trên một khoảng là tích phân của mật độ:
 
@@ -154,31 +154,31 @@ Phần tử $\Sigma_{ij}$ đo hiệp phương sai giữa hai thành phần. $\Si
 
 Với $\Sigma=\sigma^2I$, công thức tách thành các mật độ Gauss độc lập cùng phương sai. Công thức mật độ này không áp dụng trực tiếp nếu $\Sigma$ suy biến. Trong lần đọc đầu, bạn chỉ cần hiểu trường hợp $\sigma^2I$ để theo được mục 6; ma trận hiệp phương sai tổng quát phục vụ đọc thêm về nhiễu tương quan.
 
-## 6. Vì sao nhiễu Gauss dẫn tới bình phương tối thiểu?
+## 6. Suy ra bài toán bình phương tối thiểu từ mô hình nhiễu Gauss
 
 Giả sử mô hình
 
 $$b_i=a_i^Tw+\varepsilon_i,\qquad \varepsilon_i\overset{\text{độc lập}}\sim\mathcal N(0,\sigma^2),$$
 
-trong đó $a_i^T$ là hàng thứ $i$ của $A$, và $\sigma^2$ cố định. **Likelihood** coi dữ liệu đã quan sát là cố định, rồi đánh giá mật độ đó theo các giá trị tham số $w$.
+trong đó $a_i^T$ là hàng thứ $i$ của $A$, và $\sigma^2$ được xem là đã biết. Trong phép ước lượng bằng **likelihood**, dữ liệu đã quan sát được giữ cố định, còn biểu thức mật độ được xem như một hàm của tham số $w$. Ta chọn $w$ sao cho dữ liệu đã quan sát có mật độ lớn nhất theo mô hình.
 
 Lấy âm log tích mật độ:
 
 $$-\log p(b\mid w)=\frac m2\log(2\pi\sigma^2)+\frac1{2\sigma^2}\|Aw-b\|_2^2.$$
 
-Số hạng đầu không phụ thuộc $w$. Hệ số $1/(2\sigma^2)$ dương. Vì vậy chọn $w$ để cực đại likelihood tương đương chọn $w$ để cực tiểu tổng bình phương phần dư. Đây là hệ quả của giả định nhiễu; thay mô hình nhiễu có thể dẫn tới loss khác.
+Số hạng đầu không phụ thuộc $w$, còn hệ số $1/(2\sigma^2)$ luôn dương. Do đó, giá trị $w$ làm likelihood lớn nhất cũng chính là giá trị làm tổng bình phương phần dư nhỏ nhất. Kết luận này phụ thuộc vào mô hình nhiễu Gauss độc lập và cùng phương sai; nếu thay mô hình nhiễu, hàm mất mát thích hợp cũng có thể thay đổi.
 
-Với nhiễu có hiệp phương sai cố định $\Sigma\succ0$, ta thu được loss có trọng số $\tfrac12r^T\Sigma^{-1}r$. Không tự dùng loss không trọng số khi các sai số được mô hình hóa với phương sai khác nhau.
+Với nhiễu có ma trận hiệp phương sai cố định $\Sigma\succ0$, ta thu được hàm mất mát có trọng số $\tfrac12r^T\Sigma^{-1}r$. Khi các sai số được mô hình hóa với phương sai khác nhau, không thể tự động thay biểu thức này bằng tổng bình phương không trọng số.
 
 ## Bài tập tự luyện
 
 Các bài dưới đây được tự biên soạn từ những thao tác vừa học.
 
 ::: exercise 1. Đọc phép nhân
-$A=\begin{bmatrix}1&2\\0&1\end{bmatrix}$, $w=(2,-1)^T$, $b=(0,2)^T$. Tính dự đoán, phần dư và loss $\tfrac12\|r\|_2^2$.
+$A=\begin{bmatrix}1&2\\0&1\end{bmatrix}$, $w=(2,-1)^T$, $b=(0,2)^T$. Tính dự đoán, phần dư và giá trị hàm mất mát $\tfrac12\|r\|_2^2$.
 :::
 ::: solution
-$Aw=(0,-1)^T$, $r=(0,-3)^T$, loss $=9/2$. Phần dư có hai thành phần vì có hai quan sát.
+$Aw=(0,-1)^T$, $r=(0,-3)^T$, nên giá trị hàm mất mát bằng $9/2$. Phần dư có hai thành phần vì có hai quan sát.
 :::
 
 ::: exercise 2. Theo một gradient
@@ -189,20 +189,20 @@ $A^T=\begin{bmatrix}1&0\\2&1\end{bmatrix}$, nên $A^Tr=(0,-3)^T$. Hai thành ph�
 :::
 
 ::: exercise 3. Một hệ thiếu hạng
-Mô hình chỉ dự đoán tổng $w_1+w_2$ cho đầu ra 1. Loss là $\tfrac12(w_1+w_2-1)^2$. Có nghiệm duy nhất không?
+Mô hình chỉ dự đoán tổng $w_1+w_2$ cho đầu ra 1. Hàm mất mát là $\tfrac12(w_1+w_2-1)^2$. Bài toán có nghiệm duy nhất không?
 :::
 ::: solution
-Không. Mọi cặp $w_1+w_2=1$ cho loss 0. Hessian $\begin{bmatrix}1&1\\1&1\end{bmatrix}$ PSD nhưng không PD: hướng $(1,-1)$ không đổi dự đoán. Điểm này chuẩn bị cho việc phân biệt lồi và lồi nghiêm ở Bài 01.
+Không. Mọi cặp $w_1+w_2=1$ đều cho giá trị hàm mất mát bằng 0. Hessian $\begin{bmatrix}1&1\\1&1\end{bmatrix}$ PSD nhưng không PD: dịch chuyển theo hướng $(1,-1)$ không làm dự đoán thay đổi. Ví dụ này chuẩn bị cho việc phân biệt lồi và lồi nghiêm ở Bài 01.
 :::
 
 ## Tóm tắt
 
-Ta đã lập dự đoán $Aw$, chấm phần dư bằng chuẩn và mở từng bước của công thức $\nabla f=A^T(Aw-b)$. Hessian $A^TA$ giải thích độ cong. Giả định nhiễu Gauss độc lập cùng phương sai giải thích vì sao loss bình phương phù hợp với likelihood; nó không phải giả định bắt buộc cho mọi dữ liệu.
+Ta đã viết các dự đoán dưới dạng $Aw$, đo độ lớn của phần dư bằng chuẩn và suy ra từng bước công thức $\nabla f=A^T(Aw-b)$. Hessian $A^TA$ mô tả độ cong của hàm mục tiêu. Dưới giả định nhiễu Gauss độc lập và cùng phương sai, cực đại likelihood dẫn đến bài toán cực tiểu tổng bình phương phần dư; giả định này không bắt buộc cho mọi bộ dữ liệu.
 
 ## Nguồn và đọc thêm
 
 - Nguồn chính: Boyd & Vandenberghe, *Convex Optimization*, bản local `toan-cho-ai/docs/Convex_Optimization_Boyd.pdf`: §A.1 (tr. 633–636), §A.4–A.5 (tr. 640–651), §1.2.1 và §7.1 về ước lượng từ phân phối Gauss. Số trang là trang in trong sách; số trang PDF bằng trang in cộng 14.
 - Koller & Friedman, *Probabilistic Graphical Models*, bản local cùng thư mục, là tài liệu tham khảo về phân phối chung và độc lập; không dùng phần scan không đọc chắc để suy ra công thức.
-- Bộ dữ liệu, các phép tính và bài tập ở đây do người biên soạn đặt, đã kiểm lại bằng chương trình.
+- Bộ dữ liệu, các phép tính và bài tập ở đây do người biên soạn đặt và đã được đối chiếu lại bằng chương trình.
 
 Tiếp theo: [Bài 01 — Giới thiệu tối ưu, tập lồi và hàm lồi](./bai-01-nhap-mon-toi-uu.md).

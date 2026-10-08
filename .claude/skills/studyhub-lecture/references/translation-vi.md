@@ -20,6 +20,22 @@ Chỉ lấy các mục phù hợp đoạn đang giảng. `scripts/retrieve_termi
 
 Nếu chưa có tên Việt chắc chắn, dùng tên gốc kèm diễn giải rõ, hoặc hỏi đúng ngữ cảnh bị thiếu khi nó quyết định kết quả. Với từ “contraction” đứng riêng, phân biệt ánh xạ co trong lý thuyết điểm bất động với phép co tensor. Không mở một bản tra thuật ngữ không liên quan để lấp khoảng trống.
 
+### Một từ giống nhau không có nghĩa là cùng một khái niệm
+
+Chọn nghĩa theo **học phần và câu đang dùng**, không theo một bảng alias toàn cục. “Tham số” trong $f(x;\rho)$ là đại lượng xác định một họ hàm hoặc bài toán; “tham số” trong `def f(x)` là tên nhận đối số khi gọi hàm. Hai nghĩa phải có mục Wiki, lĩnh vực và liên kết tự động riêng. Khi ngữ cảnh chưa đủ để chọn duy nhất, không tự gắn liên kết.
+
+Mỗi mục Wiki ghi rõ lĩnh vực. Alias đa nghĩa được phép xuất hiện ở nhiều mục, nhưng bộ liên kết phải lọc theo học phần. Trang tra cứu tổng hợp hiển thị cả các nghĩa để người học tự chọn; trang Notes chỉ mở nghĩa phù hợp với môn đang đọc.
+
+### Khi nên giữ tiếng Anh
+
+Không ép dịch chỉ để mọi nhãn đều là tiếng Việt. Giữ tên tiếng Anh khi một trong các điều sau đúng:
+
+- Tên riêng hoặc tên thuật toán là cách tra cứu chính: Adam, RMSProp, BFGS, Nesterov.
+- Bản dịch Việt chưa ổn định hoặc dễ làm sai nghĩa: likelihood, self-concordant.
+- Tên Việt có ích nhưng người học cần biết tên gốc để đọc tài liệu: “gradient liên hợp (conjugate gradient)”.
+
+Ở lần xuất hiện đầu, dùng một trong hai dạng: “tên Việt (English)” khi tên Việt tự nhiên và khá ổn định; hoặc giữ English rồi giải thích bằng một câu Việt đầy đủ. Không chèn English vào mọi lần xuất hiện và không tạo một từ Hán–Việt mới chỉ để tránh giữ thuật ngữ gốc.
+
 ## Những nghĩa dễ mất khi sửa cho tự nhiên
 
 | Cụm | Cách viết trong lớp | Điều phải giữ |

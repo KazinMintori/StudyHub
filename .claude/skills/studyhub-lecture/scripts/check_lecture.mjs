@@ -127,11 +127,15 @@ async function checkLesson(course, lesson) {
       if (typeof value === 'string' && LATEX.test(value)) add('error', sw, 'SLIDE_LATEX', `${field} chứa LaTeX/$…$; chuỗi slide hiển thị nguyên văn, dùng Unicode.`)
   })
 
-  for (const id of lesson.prerequisites || []) {
-    const pw = `${where} prerequisite "${id}"`
-    if (!concepts[id]) { add('error', pw, 'PREREQ_NOT_IN_CONCEPTS', 'Không có trong concepts.mjs.'); continue }
-    if (!wikiGroups.some(g => g.ids.includes(id))) add('error', pw, 'PREREQ_NOT_IN_GROUP', 'Không thuộc nhóm nào trong wikiGroups.')
-    if (!wikiDetails[id]) add('error', pw, 'PREREQ_NO_DETAILS', 'Thiếu wikiDetails.')
+  const prerequisiteSet = new Set(lesson.prerequisites || [])
+  for (const id of lesson.supportingConcepts || [])
+    if (prerequisiteSet.has(id)) add('warning', `${where} supporting concept "${id}"`, 'CONCEPT_IN_BOTH_LISTS', 'Khái niệm xuất hiện ở cả prerequisites và supportingConcepts; chỉ giữ trong nhóm đúng vai trò.')
+  for (const [kind, ids] of [['prerequisite', lesson.prerequisites || []], ['supporting concept', lesson.supportingConcepts || []]]) for (const id of ids) {
+    const pw = `${where} ${kind} "${id}"`
+    const code = kind === 'prerequisite' ? 'PREREQ' : 'SUPPORT'
+    if (!concepts[id]) { add('error', pw, `${code}_NOT_IN_CONCEPTS`, 'Không có trong concepts.mjs.'); continue }
+    if (!wikiGroups.some(g => g.ids.includes(id))) add('error', pw, `${code}_NOT_IN_GROUP`, 'Không thuộc nhóm nào trong wikiGroups.')
+    if (!wikiDetails[id]) add('error', pw, `${code}_NO_DETAILS`, 'Thiếu wikiDetails.')
     if (!await exists(path.join(root, `docs/wiki/${id}.md`))) add('warning', pw, 'WIKI_FILE_MISSING', 'Chưa có docs/wiki/<id>.md; chạy npm run sync:courses rồi biên tập file.')
     const t = concepts[id]
     for (const field of ['definition', 'example', 'use', 'question', 'answer'])

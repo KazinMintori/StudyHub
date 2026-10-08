@@ -3,17 +3,43 @@ import { concepts } from './concepts.mjs'
 
 import { mathAiWikiDetails } from './math-ai-foundations.mjs'
 export const wikiGroups = [
-  { name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt'] },
-  { name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
-  { name:'Quy hoạch', ids:['nghiem-co-so','quy-hoach-dong'] },
-  { name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','luong-tu','quy-nap','to-hop','quan-he'] },
-  { name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
-  { name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
-  { name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','mau-tong-the'] },
-  { name:'Python & dữ liệu', ids:['bien-kieu','list','dictionary','ham-lap-trinh','vong-lap','chi-muc','vector-hoa','broadcasting','gia-tri-thieu'] },
-  { name:'Điện từ & cơ học', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song'] },
-  { name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
+  { id:'optimization', name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','binh-phuong-toi-thieu','tham-so-toan-hoc','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt'] },
+  { id:'optimization-algorithms', name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
+  { id:'planning', name:'Quy hoạch', ids:['nghiem-co-so','quy-hoach-dong'] },
+  { id:'discrete-math', name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','luong-tu','quy-nap','to-hop','quan-he'] },
+  { id:'algorithms', name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
+  { id:'mathematics', name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
+  { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood','mau-tong-the'] },
+  { id:'programming', name:'Python & dữ liệu', ids:['bien-kieu','list','dictionary','ham-lap-trinh','tham-so-lap-trinh','vong-lap','chi-muc','vector-hoa','broadcasting','gia-tri-thieu'] },
+  { id:'physics', name:'Điện từ & cơ học', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song'] },
+  { id:'distributed', name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
 ]
+
+export const courseWikiScopes = {
+  'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','discrete-math','algorithms'],
+  'xu-ly-du-lieu':['programming','probability','mathematics','discrete-math'],
+  'xac-suat-thong-ke':['probability','mathematics','discrete-math'],
+  'vat-ly-2':['physics','mathematics','probability'],
+  'bieu-dien-tri-thuc':['discrete-math','algorithms','probability','mathematics'],
+  'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','programming'],
+  dsa:['algorithms','discrete-math','programming','mathematics'],
+  'discrete-math':['discrete-math','algorithms','mathematics']
+}
+
+export function conceptField(id) {
+  const group = wikiGroups.find(group => group.ids.includes(id))
+  return group ? { id: group.id, name: group.name } : { id: 'other', name: 'Khái niệm liên ngành' }
+}
+
+export function resolveConceptForCourse(ids, courseId) {
+  const unique = [...new Set(ids)]
+  if (!courseId) return unique.length === 1 ? unique[0] : null
+  const scopes = courseWikiScopes[courseId] || []
+  return unique
+    .map(id => ({ id, rank: scopes.indexOf(conceptField(id).id) }))
+    .filter(item => item.rank >= 0)
+    .sort((a, b) => a.rank - b.rank)[0]?.id || null
+}
 const connections = {
   hessian:['gradient','ma-tran-psd','tri-rieng','ma-tran'],
   'ma-tran-psd':['ma-tran','tri-rieng','hessian'],
@@ -21,6 +47,11 @@ const connections = {
   'tap-loi':['to-hop-loi','ham-loi','tap-hop'],
   'ham-loi':['tap-loi','gradient','hessian'],
   kkt:['gradient','ham-loi','he-phuong-trinh'],
+  'binh-phuong-toi-thieu':['ma-tran','gradient','phan-phoi-gauss','likelihood'],
+  'tham-so-toan-hoc':['ham-so','gradient','mien-kha-thi'],
+  'phan-phoi-gauss':['ky-vong','phuong-sai','ma-tran-hiep-phuong-sai','likelihood'],
+  'ma-tran-hiep-phuong-sai':['phuong-sai','ma-tran-psd','phan-phoi-gauss'],
+  likelihood:['phan-phoi-gauss','binh-phuong-toi-thieu','xac-suat-co-dieu-kien'],
   'mien-kha-thi':['tap-loi','infimum','kkt'],
   infimum:['mien-kha-thi','noi-long-toi-uu','ham-doi-ngau'],
   epigraph:['ham-loi','tap-loi','noi-long-toi-uu'],
@@ -53,6 +84,7 @@ const connections = {
   broadcasting:['mang','vector-hoa','ma-tran','chi-muc'],
   'vector-hoa':['mang','broadcasting','vong-lap','bien-kieu'],
   'dictionary':['bam','khoa-gia-tri','list'],
+  'tham-so-lap-trinh':['ham-lap-trinh','bien-kieu','list'],
   'phan-tan':['khoa-gia-tri','ket-hop','do-phuc-tap','bam'],
   'khoa-gia-tri':['dictionary','bam','phan-tan'],
   'ket-hop':['phan-tan','ham-lap-trinh','ky-vong'],
@@ -89,7 +121,7 @@ export const wikiDetails = {
   'con-tro':'**Sở hữu dữ liệu và vòng đời.** Con trỏ hay tham chiếu có thể cho phép nhiều tên truy cập cùng vùng dữ liệu. Cần biết ai quản lý bộ nhớ và dữ liệu còn hợp lệ bao lâu. Trong ngôn ngữ có quản lý bộ nhớ thủ công, dùng địa chỉ sau khi giải phóng là lỗi.\n\nTrong Python hoặc NumPy, tác động dễ thấy hơn là thay đổi dữ liệu dùng chung: view có thể làm mảng gốc thay đổi, trong khi copy độc lập không làm vậy.',
   'de-quy':'**Hai yêu cầu kết thúc.** Có ít nhất một trường hợp cơ sở, và mọi nhánh lời gọi phải tiến về trường hợp cơ sở. Một hàm có câu lệnh dừng nhưng nhánh khác gọi lại với cùng tham số vẫn có thể không kết thúc.\n\nĐể phân tích, viết quan hệ truy hồi của số bước và độ sâu ngăn xếp. Chứng minh bằng quy nạp thường đi cùng cấu trúc đệ quy.',
   vector:'**Thành phần phụ thuộc cơ sở.** Cùng một vector hình học có thể có bộ tọa độ khác nhau trong hai hệ cơ sở. Việc cộng và nhân vô hướng cần thống nhất cơ sở và số chiều.\n\nVector đơn vị có chuẩn bằng 1; chuẩn hóa v≠0 bằng v/‖v‖. Không thể chuẩn hóa vector không bằng phép chia này. Vector nhiều chiều cũng có thể chỉ biểu diễn đặc trưng dữ liệu, không nhất thiết là một mũi tên trong không gian vật lý.',
-  'ma-tran':'**Điều kiện nhân và thứ tự.** Nếu A có shape m×n và B có shape n×p thì AB có shape m×p, với mỗi phần tử là tích vô hướng của một hàng A và một cột B. Nhìn chung AB khác BA; đôi khi BA còn không xác định.\n\nMa trận chuyển vị Aᵀ đổi hàng thành cột. Ma trận vuông khả nghịch có A⁻¹ sao cho A⁻¹A=AA⁻¹=I. Không phải mọi ma trận vuông đều khả nghịch.',
+  'ma-tran':'**Điều kiện nhân và thứ tự.** Nếu A có kích thước m×n và B có kích thước n×p thì AB có kích thước m×p, với mỗi phần tử là tích vô hướng của một hàng của A và một cột của B. Nhìn chung AB khác BA; đôi khi BA còn không xác định.\n\nMa trận chuyển vị Aᵀ đổi hàng thành cột. Ma trận vuông khả nghịch có A⁻¹ sao cho A⁻¹A=AA⁻¹=I. Không phải mọi ma trận vuông đều khả nghịch.',
   'tich-vo-huong':'**Góc, chiếu và dấu.** Tích vô hướng dương khi góc nhỏ hơn 90°, âm khi góc lớn hơn 90°, bằng 0 khi hai vector khác 0 vuông góc. Hình chiếu vô hướng của u lên hướng đơn vị n là u·n.\n\nĐiều này xuất hiện trong công của lực và thông lượng: chỉ thành phần cùng hướng độ dời hoặc pháp tuyến mới đóng góp. Công thức góc cần hai vector khác 0.',
   chuan:'**Các chuẩn thường gặp.** Với x=(x₁,…,xₙ), ‖x‖₁=Σ|xᵢ|, ‖x‖₂=√Σxᵢ², ‖x‖∞=max|xᵢ|. Mỗi chuẩn tạo một cách đo khoảng cách d(x,y)=‖x−y‖.\n\nChuẩn thỏa bất đẳng thức tam giác và tính đồng nhất ‖αx‖=|α|‖x‖. Đừng nhầm chuẩn vector với chuẩn hóa dữ liệu theo trung bình và độ lệch chuẩn.',
   'gioi-han':'**Một phía và liên tục.** Giới hạn hai phía tại a tồn tại khi giới hạn từ trái và từ phải cùng tồn tại và bằng nhau. Hàm liên tục tại a cần f(a) xác định và bằng giới hạn.\n\nHàm dấu có hai giới hạn khác nhau tại 0 nên không có giới hạn hai phía ở đó. Một hàm liên tục chưa chắc khả vi; f(x)=|x| liên tục nhưng không có đạo hàm tại 0.',
@@ -112,6 +144,7 @@ export const wikiDetails = {
   list:'**Mutable và aliasing.** List có thể thay đổi tại chỗ. Gán b=a cho hai tên dùng cùng đối tượng; b=a.copy() tạo list mới nhưng chỉ sao chép nông, nên các đối tượng lồng bên trong có thể vẫn dùng chung.\n\nSo sánh a is b kiểm tra cùng đối tượng, còn a==b kiểm tra bằng nhau theo giá trị. List khác mảng số NumPy về quy tắc toán học từng phần tử.',
   dictionary:'**Hashable và tra cứu.** Dictionary dùng khóa hashable, nghĩa là phù hợp với yêu cầu băm và so sánh bằng nhau. List thông thường không hashable nên không thể dùng trực tiếp làm khóa.\n\nTra cứu thường có chi phí trung bình gần O(1) trong mô hình phù hợp, nhưng không phải mọi trường hợp đều bảo đảm như vậy. Khóa giống nhau ghi đè giá trị trước thay vì tạo khóa thứ hai.',
   'ham-lap-trinh':'**Tham số có thể dùng chung đối tượng.** Truyền list vào một hàm rồi sửa list tại chỗ có thể làm dữ liệu của bên gọi thay đổi. Gán lại tên tham số bên trong hàm thường không gán lại tên ở bên gọi.\n\nHàm có tác động phụ khác hàm chỉ trả kết quả. Đọc kiểu đầu vào, kết quả trả về và điều gì bị thay đổi để dùng hàm chính xác.',
+  'tham-so-lap-trinh':'**Tên trong định nghĩa, giá trị trong lời gọi.** Với `def f(x, scale=1)`, `x` và `scale` là tham số; trong `f(data, scale=2)`, `data` và `2` là đối số. Tham số mặc định được dùng khi lời gọi không truyền giá trị tương ứng.\n\nKhi gọi hàm, Python dùng cơ chế chia sẻ đối tượng. Nếu đối số là list và hàm sửa list tại chỗ, bên gọi có thể quan sát thay đổi. Đây là cơ chế của lời gọi hàm; nó không liên quan đến “tham số mô hình” trong một bài toán tối ưu.',
   'vong-lap':'**Bất biến và kết thúc.** Bất biến vòng lặp là điều đúng trước và sau mỗi lần lặp, giúp chứng minh kết quả. Cần thêm đại lượng giảm hoặc miền hữu hạn để giải thích tại sao vòng lặp dừng.\n\nDừng đúng không đồng nghĩa kết quả đúng. Với while, kiểm tra cả việc khởi tạo, điều kiện và cập nhật biến; bỏ cập nhật có thể gây vòng lặp vô hạn.',
   'chi-muc':'**Nhãn và vị trí không giống nhau.** pandas loc theo nhãn, iloc theo vị trí; hai giá trị cùng là số nguyên vẫn có thể được hiểu theo hai cách khác nhau. Một lát cắt loc thường gồm nhãn cuối, còn iloc không gồm vị trí cuối.\n\nNumPy basic slicing thường tạo view dùng chung dữ liệu, còn advanced indexing thường tạo copy. Đọc quy tắc của đối tượng cụ thể thay vì suy từ cú pháp dấu ngoặc.',
   'vector-hoa':'**Tốc độ không phải tiêu chí duy nhất.** Phép toán trên mảng có thể chuyển vòng lặp sang mã tối ưu bên dưới, nhưng vẫn phải thực hiện công việc. Các mảng tạm có thể làm tăng bộ nhớ và đọc/ghi.\n\nVector hóa đúng cần giữ ý nghĩa trục, shape và dtype. Kiểm tra đầu ra trên ví dụ nhỏ trước khi thay toàn bộ vòng lặp bằng một biểu thức mảng.',
@@ -133,5 +166,5 @@ export const wikiDetails = {
 const htmlEscape = text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
 export function createWikiArticle(id) {
   const term=concepts[id], related=relatedConcepts(id)
-  return `---\ntitle: ${JSON.stringify(term.name)}\nwikiTerm: ${id}\nprev: false\nnext: false\n---\n\n# ${term.name}\n\n${formatWikiMath(term.definition)}\n\n<WikiUsage />\n\n## Giải thích kỹ thuật\n\n${formatWikiMath(wikiDetails[id])}\n\n## Ví dụ\n\n${formatWikiMath(term.example)}\n\n## Khi nào cần dùng?\n\n${formatWikiMath(term.use)}\n\n## Tự kiểm tra\n\n${formatWikiMath(term.question)}\n\n<details><summary>Xem đáp án</summary>\n\n${formatWikiMath(term.answer)}\n\n</details>\n\n## Thuật ngữ liên quan\n\n${related.map(other=>`- [${htmlEscape(concepts[other].name)}](./${other}.md)`).join('\n')}\n`
+  return `---\ntitle: ${JSON.stringify(term.name)}\nwikiTerm: ${id}\nprev: false\nnext: false\n---\n\n# ${term.name}\n\n${formatWikiMath(term.definition)}\n\n<WikiUsage />\n\n## Giải thích kỹ thuật\n\n${formatWikiMath(wikiDetails[id])}\n\n## Ví dụ\n\n${formatWikiMath(term.example)}\n\n## Khi nào cần dùng?\n\n${formatWikiMath(term.use)}\n\n## Câu hỏi ôn lại\n\n${formatWikiMath(term.question)}\n\n<details><summary>Xem đáp án</summary>\n\n${formatWikiMath(term.answer)}\n\n</details>\n\n## Thuật ngữ liên quan\n\n${related.map(other=>`- [${htmlEscape(concepts[other].name)}](./${other}.md)`).join('\n')}\n`
 }
