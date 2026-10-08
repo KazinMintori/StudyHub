@@ -35,7 +35,11 @@ function onClose() {
   } else {
     const heading = document.querySelector('main h1, .VPContent h1')
     if (heading) {
-      heading.setAttribute('tabindex', '-1')
+      // Keep the reading position accessible without permanently changing tab order.
+      if (!heading.hasAttribute('tabindex')) {
+        heading.setAttribute('tabindex', '-1')
+        heading.addEventListener('blur', () => heading.removeAttribute('tabindex'), { once: true })
+      }
       heading.focus({ preventScroll: true })
     }
   }

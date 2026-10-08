@@ -3,7 +3,12 @@ body { font-family: var(--font-ui); font-size: var(--fs-ui); line-height: 1.6; c
 button, input, select, textarea { font: inherit; }
 button, a, select { -webkit-tap-highlight-color: transparent; }
 button, summary { cursor: pointer; }
-:where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--tim); outline-offset: 2px; }
+/* Pointer focus must not leave the browser's default rectangle around text. */
+:focus:not(:focus-visible) { outline: none; }
+/* Headings and content regions receive focus for reading/navigation, not interaction. */
+[tabindex="-1"]:not(a, button, input, select, textarea, summary, [role], [contenteditable]):focus { outline: none; }
+/* Include VitePress widgets and override its native black button focus ring. */
+:is(a, button, input, select, textarea, summary, [role="button"], [role="link"], [tabindex]:not([tabindex="-1"]), [contenteditable="true"]):focus-visible { outline: 2px solid var(--tim); outline-offset: 2px; }
 h1, h2, h3, h4 { font-family: var(--font-ui); letter-spacing: 0; text-wrap: balance; }
 .vp-doc { font-family: var(--font-read); font-size: var(--fs-read); line-height: 1.6; font-optical-sizing: auto; overflow-wrap: break-word; }
 .vp-doc p, .vp-doc li { line-height: 1.6; }
