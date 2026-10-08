@@ -8,12 +8,14 @@ import LectureHeader from './LectureHeader.vue'
 import LecturePanels from './LecturePanels.vue'
 import WikiFooter from './WikiFooter.vue'
 import BuyMeCoffee from './BuyMeCoffee.vue'
-import { openCoffeeModal } from './coffee-state'
+import WelcomeScreen from './WelcomeScreen.vue'
+import SiteIntroduction from './SiteIntroduction.vue'
 import { useData, useRoute, withBase } from 'vitepress'
-import { onMounted, onUnmounted, watch } from 'vue'
+import { onMounted, onUnmounted, watch, ref } from 'vue'
 import { lecturePart, syncLecturePart } from './lecture-state'
 
 const { Layout } = DefaultTheme
+const welcomeScreen = ref(null)
 const { frontmatter }=useData(), route=useRoute()
 function openSearch() { document.querySelector('.DocSearch-Button')?.click() }
 function syncLink(event) {
@@ -39,8 +41,9 @@ watch(()=>route.path,()=>syncLecturePart())
     <template #layout-bottom>
       <DiagramLightbox />
       <TermPreview />
-      <footer v-if="frontmatter.layout === 'home'" class="site-footer"><button class="coffee-footer-btn" @click="openCoffeeModal"><img :src="withBase('/coffee-logo.svg')" alt="" class="coffee-footer-icon" width="18" height="18" /><span>Buy me a coffee</span></button></footer>
-      <BuyMeCoffee v-if="frontmatter.layout === 'home'" />
+      <SiteIntroduction @show-introduction="welcomeScreen?.show()" />
+      <WelcomeScreen ref="welcomeScreen" />
+      <BuyMeCoffee />
     </template>
   </Layout>
 </template>
