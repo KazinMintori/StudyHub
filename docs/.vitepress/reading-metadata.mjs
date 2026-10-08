@@ -60,6 +60,10 @@ export const readingMetadata = {
     "words": 1724,
     "minutes": 10
   },
+  "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
+    "words": 2475,
+    "minutes": 10
+  },
   "xac-suat-thong-ke/01-xac-suat-va-bayes": {
     "words": 404,
     "minutes": 5

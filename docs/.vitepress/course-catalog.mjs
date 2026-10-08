@@ -49,9 +49,14 @@ export const courseCatalog = [
   mathAiCourse,
   {
     id: 'xac-suat-thong-ke', code: '03', name: 'Xác suất thống kê', short: 'Xác suất thống kê', current: true,
-    description: 'Đi từ biến cố và xác suất có điều kiện đến phân phối, kỳ vọng và biến thiên.',
+    description: 'Phân biệt các phát biểu từ dữ liệu, rồi học xác suất có điều kiện, phân phối, kỳ vọng và biến thiên.',
     foundations: ['tap-hop', 'khong-gian-mau', 'to-hop', 'xac-suat-co-dieu-kien', 'doc-lap', 'bien-ngau-nhien', 'ky-vong', 'phuong-sai', 'tich-phan', 'mau-tong-the'],
     parts: [
+      {
+        title: 'Mở đầu. Câu hỏi và dữ liệu',
+        description: 'Mô tả dữ liệu, suy rộng thống kê, kết luận nhân quả và dự đoán theo Stat 20, UC Berkeley.',
+        lessons: ['00-hieu-the-gioi-bang-du-lieu']
+      },
       {
         title: 'Phần 1. Cơ sở xác suất và định lý Bayes',
         description: 'Không gian mẫu, xác suất có điều kiện, tính độc lập và cập nhật niềm tin Bayes.',
@@ -69,11 +74,18 @@ export const courseCatalog = [
       }
     ],
     lessons: [
+      { ...lesson('00-hieu-the-gioi-bang-du-lieu', 'Hiểu thế giới bằng dữ liệu', []), supportingConcepts: ['thong-ke-mo-ta', 'suy-rong-thong-ke', 'mau-tong-the', 'ket-luan-nhan-qua', 'du-doan-thong-ke'] },
       lesson('01-xac-suat-va-bayes', 'Xác suất có điều kiện & Bayes', ['tap-hop', 'khong-gian-mau', 'xac-suat-co-dieu-kien', 'doc-lap']),
       lesson('02-bien-ngau-nhien', 'Biến ngẫu nhiên & phân phối', ['bien-ngau-nhien', 'to-hop', 'tich-phan']),
       lesson('03-ky-vong-phuong-sai', 'Kỳ vọng, phương sai & mẫu dữ liệu', ['ky-vong', 'phuong-sai', 'mau-tong-the'])
     ],
     slides: [
+      slide('Dữ liệu có thể hỗ trợ bốn loại phát biểu', ['Mô tả nói về dữ liệu đã có.', 'Suy rộng nói về một tập đối tượng lớn hơn tập đã quan sát.', 'Kết luận nhân quả nói về tác động khi thay đổi một biến.', 'Dự đoán nói về giá trị chưa biết dựa trên các biến đã biết.'], '00-hieu-the-gioi-bang-du-lieu'),
+      slide('Mô tả giữ kết luận trong phạm vi quan sát', ['Bản mô tả có thể dùng con số, đồ thị hoặc lời văn.', 'Phải nêu rõ nhóm đối tượng mà dữ liệu mô tả.', 'Ví dụ gốc của Stat 20 nói về những người trả lời khảo sát lớp học.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Trong ví dụ nguồn, 70% người trả lời cho biết chưa từng viết mã máy tính.'),
+      slide('Suy rộng cần căn cứ cho việc mở rộng phạm vi', ['Suy rộng dùng dữ liệu quan sát để phát biểu về một tập đối tượng lớn hơn.', 'Đổi “người trả lời khảo sát” thành “sinh viên Berkeley” làm thay đổi loại phát biểu.', 'Cần xem cách chọn mẫu và ai đã trả lời trước khi đánh giá kết luận.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Cùng con số 70%, nhưng tập đối tượng trong kết luận đã thay đổi.'),
+      slide('Kết luận nhân quả đặt câu hỏi về can thiệp', ['Một biến mô tả một đặc điểm có thể nhận các giá trị khác nhau.', 'Kết luận nhân quả khẳng định rằng thay đổi một biến ảnh hưởng đến biến khác.', 'Chỉ quan sát hai biến cùng thay đổi chưa đủ để kết luận nhân quả.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Ví dụ minh họa của nguồn dùng thí nghiệm ngẫu nhiên có đối chứng về thuốc kháng sinh.'),
+      slide('Dự đoán một giá trị chưa biết', ['Dự đoán dùng các biến đã biết để đoán giá trị của biến chưa biết.', 'Giá trị chưa biết có thể ở tương lai hoặc đã tồn tại nhưng chưa được quan sát.', 'Phân loại một phát biểu chưa chứng minh rằng dự đoán ấy chính xác.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Trong ví dụ nguồn, người dự đoán dùng tin tức và giá cổ phiếu Uber hôm nay để đoán mức tăng 1,2% ngày mai.'),
+      slide('Đối tượng và câu hỏi quyết định loại phát biểu', ['Xác định dữ liệu thực sự được ghi nhận trên những đối tượng nào.', 'So sánh tập đối tượng trong kết luận với tập đã quan sát.', 'Xác định phát biểu nói về tác động của can thiệp hay về một giá trị chưa biết.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Ví dụ bổ sung với dữ liệu giả định: 7 trong 10 người trả lời chiếm 70%, nhưng chưa đủ để kết luận về toàn bộ sinh viên UET.'),
       slide('Xác suất có điều kiện thay đổi miền xét', ['P(A|B) thu hẹp việc xét kết quả về biến cố B.', 'Hai biến cố độc lập không làm thay đổi xác suất của nhau.', 'Độc lập khác với loại trừ nhau.'], '01-xac-suat-va-bayes', "$$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},\\qquad P(B)>0$$"),
       slide('Bayes cập nhật từ quan sát', ['Prior là xác suất trước quan sát.', 'Likelihood là mức phù hợp của quan sát khi giả thuyết đúng.', "Để tính posterior, tức xác suất sau quan sát, cần xét khả năng xuất hiện quan sát dưới các giả thuyết khác nhau."], '01-xac-suat-va-bayes', "$$P(A\\mid B)=\\frac{P(B\\mid A)P(A)}{P(B)}$$"),
       slide('Phân phối mô tả một biến ngẫu nhiên', ['PMF cho xác suất tại từng giá trị của biến rời rạc.', "PDF biểu diễn mật độ, còn xác suất trên một khoảng được tính bằng tích phân mật độ.", "$CDF F(x)=P(X\\le x)$ dùng được cho cả rời rạc và liên tục."], '02-bien-ngau-nhien'),

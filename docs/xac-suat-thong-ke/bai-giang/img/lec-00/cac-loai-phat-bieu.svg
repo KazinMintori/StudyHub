@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" width="100%" role="img" aria-labelledby="title desc">
+  <title id="title">Bốn loại phát biểu từ dữ liệu</title>
+  <desc id="desc">Xây dựng và phản biện phát biểu từ dữ liệu gồm mô tả, suy rộng, kết luận nhân quả và dự đoán. Vẽ lại sơ đồ Types of Claims của Stat 20, UC Berkeley, nhãn tiếng Việt, CC BY 4.0.</desc>
+  <rect width="480" height="460" rx="12" fill="#ffffff"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" fill="#1f1c2b">
+    <rect x="40" y="16" width="400" height="76" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="2"/>
+    <text x="240" y="46" text-anchor="middle" font-size="20" font-weight="600">Xây dựng và phản biện</text>
+    <text x="240" y="74" text-anchor="middle" font-size="19">phát biểu từ dữ liệu</text>
+    <g fill="none" stroke="#8a849f" stroke-width="2">
+      <path d="M240 92V108H124V124M240 108H356V124"/>
+      <path d="M240 108V296H124V314M240 296H356V314"/>
+    </g>
+    <g fill="#f5f4f9" stroke="#dcd8e8" stroke-width="2">
+      <rect x="20" y="124" width="208" height="148" rx="8"/>
+      <rect x="252" y="124" width="208" height="148" rx="8"/>
+      <rect x="20" y="314" width="208" height="126" rx="8"/>
+      <rect x="252" y="314" width="208" height="126" rx="8"/>
+    </g>
+    <g text-anchor="middle" font-size="19" font-weight="600" fill="#5a37a8">
+      <text x="124" y="152">Mô tả dữ liệu</text>
+      <text x="356" y="152">Suy rộng thống kê</text>
+      <text x="124" y="344">Kết luận nhân quả</text>
+      <text x="356" y="344">Dự đoán</text>
+    </g>
+    <g fill="none" stroke="#4f4a62" stroke-width="2">
+      <rect x="40" y="178" width="40" height="54"/>
+      <path d="M50 178V232M60 178V232M70 178V232M40 190H80M40 202H80M40 214H80M40 226H80M92 205H120M113 198L120 205 113 212"/>
+      <path d="M140 225V208H153V225M161 225V193H174V225M182 225V180H195V225M133 225H204"/>
+      <circle cx="294" cy="198" r="14"/>
+      <circle cx="400" cy="201" r="35"/>
+      <path d="M319 198H352M345 191L352 198 345 205"/>
+      <path d="M278 413V365M278 413H435M286 407L303 395 322 402 340 380 359 387 379 374 399 378 425 357M417 358L425 357 424 365"/>
+    </g>
+    <g font-size="15" text-anchor="middle">
+      <text x="124" y="255">Dữ liệu đang có</text>
+      <text x="356" y="255">Nhóm rộng hơn</text>
+      <text x="124" y="424">Tác động của thay đổi</text>
+    </g>
+    <text x="124" y="391" text-anchor="middle" font-size="29" fill="#4f4a62">A → B</text>
+  </g>
+</svg>
