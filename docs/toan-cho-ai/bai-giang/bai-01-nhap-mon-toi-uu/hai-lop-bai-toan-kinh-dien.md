@@ -96,15 +96,15 @@ Nhận xét "nghiệm nằm ở một đỉnh" đúng cho những đa diện có
 
 ### 2.3 Chứng nhận một nghiệm LP mà không cần thử mọi điểm
 
-Xét bài toán cực đại $3x_1 + 2x_2$ với $2x_1 + x_2 \le 10$, $x_1 + 2x_2 \le 8$ và $x_1, x_2 \ge 0$ (bài toán phân bổ thời gian chạy hai tác vụ trong slide Bài 01). Thử các đỉnh, ta thấy điểm $(4, 2)$ cho giá trị 16, lớn nhất trong các đỉnh. Nhưng làm sao **chứng minh** không điểm khả thi nào cho giá trị lớn hơn 16, mà không phải dựa vào nhận xét về đỉnh?
+Xét bài toán cực đại $5x_1 + 4x_2$ với $x_1 + x_2 \le 6$, $2x_1 + x_2 \le 9$ và $x_1, x_2 \ge 0$, dữ liệu tự đặt. Đa giác khả thi có bốn đỉnh $(0, 0)$, $(4.5, 0)$, $(3, 3)$ và $(0, 6)$, cho các giá trị 0, 22.5, 27 và 24, nên điểm $(3, 3)$ cho giá trị lớn nhất trong các đỉnh. Nhưng làm sao **chứng minh** không điểm khả thi nào cho giá trị lớn hơn 27, mà không phải dựa vào nhận xét về đỉnh?
 
-Ý tưởng là cộng các ràng buộc lại với những hệ số không âm. Nhân ràng buộc thứ nhất với $\tfrac43$ và ràng buộc thứ hai với $\tfrac13$ rồi cộng lại:
+Ý tưởng là cộng các ràng buộc lại với những hệ số không âm. Nhân ràng buộc thứ nhất với 3 và ràng buộc thứ hai với 1 rồi cộng lại:
 
 $$
-\tfrac43(2x_1 + x_2) + \tfrac13(x_1 + 2x_2) = 3x_1 + 2x_2 \le \tfrac43 \cdot 10 + \tfrac13 \cdot 8 = 16 .
+3\,(x_1 + x_2) + 1 \cdot (2x_1 + x_2) = 5x_1 + 4x_2 \le 3 \cdot 6 + 1 \cdot 9 = 27 .
 $$
 
-Hệ số được chọn sao cho vế trái đúng bằng hàm mục tiêu. Hai hệ số phải không âm, vì nhân một bất đẳng thức với số âm sẽ đảo chiều nó. Vậy với **mọi** điểm khả thi, giá trị mục tiêu không vượt quá 16, và điểm $(4, 2)$ đạt đúng 16, nên nó tối ưu. Cặp hệ số $(\tfrac43, \tfrac13)$ là một **chứng nhận tối ưu**: ai cũng kiểm tra được nó chỉ bằng vài phép nhân.
+Hệ số được chọn sao cho vế trái đúng bằng hàm mục tiêu. Hai hệ số phải không âm, vì nhân một bất đẳng thức với số âm sẽ đảo chiều nó. Vậy với **mọi** điểm khả thi, giá trị mục tiêu không vượt quá 27, và điểm $(3, 3)$ đạt đúng 27, nên nó tối ưu. Cặp hệ số $(3, 1)$ là một **chứng nhận tối ưu**: ai cũng kiểm tra được nó chỉ bằng vài phép nhân.
 
 Cách tìm cặp hệ số ấy cũng là một LP, được gọi là bài toán đối ngẫu. Đây là hạt mầm của lý thuyết đối ngẫu Lagrange ở Lecture 03, nơi ý tưởng "cộng các ràng buộc với trọng số không âm để được một cận" được mở rộng cho mọi bài toán lồi.
 
@@ -207,7 +207,7 @@ Khớp mô hình hằng số $y = c$ với bốn số liệu $1, 3, 4, 12$ theo 
 :::
 
 ::: solution
-Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4, 12)$. Hệ chuẩn là $A^T A\, c = A^T b$, tức $4c = 20$, nên $c^\star = 5$. Tổng quát, với $k$ số liệu, hệ chuẩn là $k c = \sum_i b_i$, cho $c^\star = 	frac1k \sum_i b_i$: trung bình cộng là hằng số gần dữ liệu nhất theo nghĩa bình phương. Số liệu 12 kéo trung bình lên 5, trong khi ba số còn lại đều nhỏ hơn 5.
+Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4, 12)$. Hệ chuẩn là $A^T A\, c = A^T b$, tức $4c = 20$, nên $c^\star = 5$. Tổng quát, với $k$ số liệu, hệ chuẩn là $k c = \sum_i b_i$, cho $c^\star = \tfrac1k \sum_i b_i$: trung bình cộng là hằng số gần dữ liệu nhất theo nghĩa bình phương. Số liệu 12 kéo trung bình lên 5, trong khi ba số còn lại đều nhỏ hơn 5.
 :::
 
 ::: exercise 2. Cùng dữ liệu, tiêu chí khác
@@ -243,4 +243,4 @@ Tối ưu lồi chứa cả hai lớp đó như trường hợp riêng. Cái kh�
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §1.1.2 (tr. 3–4), §1.2 (tr. 4–7) về bình phương tối thiểu, quy hoạch tuyến tính và xấp xỉ Chebyshev, §1.3 (tr. 7–8) về tối ưu lồi, §1.4 (tr. 9–10) về tối ưu cục bộ và toàn cục.
-- Bài toán phân bổ thời gian chạy hai tác vụ ở mục 2.3 được dùng theo slide Bài 01 của học phần. Dữ liệu ba điểm, số liệu của các bài tập, bài toán pha hạt, mô phỏng so sánh ba tiêu chí và các câu hỏi đào sâu do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình, và ba đường khớp trong mô phỏng được đối chiếu với bộ giải LP `scipy.optimize.linprog`.
+- Bài toán quy hoạch tuyến tính ở mục 2.3, dữ liệu ba điểm, số liệu của các bài tập, bài toán pha hạt, mô phỏng so sánh ba tiêu chí và các câu hỏi đào sâu do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình, và ba đường khớp trong mô phỏng được đối chiếu với bộ giải LP `scipy.optimize.linprog`.

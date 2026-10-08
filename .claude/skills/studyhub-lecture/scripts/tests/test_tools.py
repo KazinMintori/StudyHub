@@ -137,6 +137,8 @@ class LanguageReview(unittest.TestCase):
         formula = "$" + " + ".join(f"x_{i}" for i in range(80)) + "$"
         self.assertNotIn("POSSIBLE_OVERLOAD", self.codes(f"Ta có {formula} với mọi x."))
         self.assertIn("POSSIBLE_OVERLOAD", self.codes(" ".join(["từ"] * 60) + "."))
+        sources = "## Nguồn và đọc thêm\n\n- " + ", ".join(["ví dụ tự đặt"] * 20) + " do người soạn bổ sung."
+        self.assertNotIn("POSSIBLE_OVERLOAD", self.codes(sources))
 
     def test_plain_quote_and_correct_terms_pass(self):
         self.assertEqual(self.codes("> Đoạn nguồn: gradient tại điểm đang xét.\nBản đồ bài học gồm ba phần."), [])
@@ -458,6 +460,9 @@ class LectureIntegration(unittest.TestCase):
             ("LAB_MISSING", lambda f: f.update({top: f[top] + "\n<KhongCoLab />\n"})),
             ("RELATIVE_LINK_BROKEN", lambda f: f.update({top: f[top].replace("../bai-01-thu.md", "../khong-co.md")})),
             ("CONTAINER_UNCLOSED", lambda f: f.update({top: f[top].replace("3.\n:::", "3.")})),
+            # "\tfrac" ghi qua chuỗi Python không raw: TAB + "frac" lọt vào trang.
+            ("CONTROL_CHAR", lambda f: f.update({top: f[top].replace("Tính gradient của 3x.", "Tính gradient của $3x + " + chr(9) + "frac12 x^2$.")})),
+            ("CONTROL_CHAR", lambda f: f.update({top: f[top].replace("Tính gradient của 3x.", "Tính $" + chr(12) + "rac{3x}{2}$.")})),
         ]
         for expected, edit in cases:
             with self.subTest(expected):
@@ -474,6 +479,8 @@ class LectureIntegration(unittest.TestCase):
             ("HUB_NO_TOPIC_MAP", lambda f: f.update({lec: f[lec].replace("<TopicMap />", "")})),
             ("TOPIC_TITLE_MISMATCH", lambda f: f.update({top: f[top].replace('title: "Gradient là gì"', 'title: "Tên khác"')})),
             ("EXTRA_H1", lambda f: f.update({top: f[top].replace("Đoạn mở đầu của chủ đề.", "# Gradient\n\nĐoạn mở đầu của chủ đề.")})),
+            # "\ne" ghi qua chuỗi Python không raw: công thức bị xuống dòng giữa chừng.
+            ("INLINE_MATH_SPLIT", lambda f: f.update({top: f[top].replace("Tính gradient của 3x.", "Tại nghiệm $f'(1) = 2 " + chr(10) + "e 0$.")})),
         ]
         for expected, edit in cases:
             with self.subTest(expected):

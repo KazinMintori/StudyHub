@@ -6,7 +6,7 @@ import { makeView, fmt } from './svg-drag'
 // Kết luận về p*, việc đạt nghiệm và ràng buộc chặt được suy luận theo tính chất giải tích của từng hàm,
 // còn đồ thị chỉ để nhìn. Không kết luận từ một lưới điểm hữu hạn khi có thể lập luận chính xác.
 const fns = {
-  quad: { label: 'f(x) = (x − 2)²', f: x => (x - 2) ** 2, positive: false },
+  quad: { label: 'f(x) = (x − 3)²', f: x => (x - 3) ** 2, positive: false },
   inv: { label: 'f(x) = 1/x, miền x > 0', f: x => 1 / x, positive: true },
   neglog: { label: 'f(x) = −log x, miền x > 0', f: x => -Math.log(x), positive: true },
   xlogx: { label: 'f(x) = x log x, miền x > 0', f: x => x * Math.log(x), positive: true },
@@ -29,7 +29,7 @@ const rootsWell = [-1.47299760111403, 1.3469974085277738] // hai điểm cực t
 const analysis = computed(() => {
   if (infeasible.value) return { status: 'infeasible' }
   const f = fn.value.f, a = lo.value, b = hi.value
-  if (choice.value === 'quad') { const x = clamp(2, a, b); return { status: 'attained', x, value: f(x) } }
+  if (choice.value === 'quad') { const x = clamp(3, a, b); return { status: 'attained', x, value: f(x) } }
   if (choice.value === 'xlogx') { const x = clamp(1 / Math.E, a, b); return { status: 'attained', x, value: f(x) } }
   if (choice.value === 'inv') return Number.isFinite(b) ? { status: 'attained', x: b, value: f(b) } : { status: 'not-attained', value: 0 }
   if (choice.value === 'neglog') return Number.isFinite(b) ? { status: 'attained', x: b, value: f(b) } : { status: 'unbounded' }
@@ -104,7 +104,7 @@ const feasibleSeg = computed(() => infeasible.value ? null : [Math.max(lo.value,
     <details class="lab-tasks">
       <summary>Gợi ý thao tác</summary>
       <ol>
-        <li>Với (x − 2)², đặt u = 1 rồi kéo u lên quá 2. Khi nào ràng buộc x ≤ u thôi chặt?</li>
+        <li>Với (x − 3)², đặt u = 1 rồi kéo u lên quá 3. Khi nào ràng buộc x ≤ u thôi chặt?</li>
         <li>Chọn 1/x và bỏ ràng buộc x ≤ u. Vì sao không có nghiệm dù p* hữu hạn?</li>
         <li>Chọn −log x và bỏ ràng buộc x ≤ u. Điều gì khác với trường hợp 1/x?</li>
         <li>Chọn hàm bậc bốn, đặt l = 0. Nghiệm nhảy sang điểm nào, và vì sao điểm −1.47 không còn được xét?</li>

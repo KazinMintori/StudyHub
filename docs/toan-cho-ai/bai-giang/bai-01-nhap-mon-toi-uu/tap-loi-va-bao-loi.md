@@ -27,7 +27,7 @@ Hãy tự kiểm tra định nghĩa với vài hình trong mô phỏng sau. Kéo
 
 Định nghĩa có chữ "mọi" ở hai chỗ, và điều này tạo ra một sự bất đối xứng mà bạn đã cảm thấy khi dùng mô phỏng. Muốn chứng tỏ một tập không lồi, chỉ cần **một** cặp điểm và một giá trị $\theta$ làm đoạn nối đi ra ngoài. Muốn chứng tỏ một tập lồi, phải lập luận cho **mọi** cặp điểm và mọi $\theta$, và thử bao nhiêu cặp cụ thể cũng không đủ.
 
-**Bác bỏ.** Đường tròn $S = \{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$ không lồi. Lấy $x_1 = (1, 0)$ và $x_2 = (-1, 0)$, cả hai thuộc $S$. Với $\theta = \tfrac12$, ta được trung điểm $(0, 0)$, nhưng $0^2 + 0^2 = 0 \ne 1$, nên trung điểm không thuộc $S$. Một ví dụ khác gần với tối ưu hơn: tập quyết định rời rạc $D = \{(1, 0), (0, 1)\}$, chẳng hạn "chọn đúng một trong hai cấu hình", không lồi vì trung điểm $(\tfrac12, \tfrac12)$ không thuộc $D$. Các bài toán có biến nguyên hay biến nhị phân khó chính vì miền khả thi của chúng không lồi.
+**Bác bỏ.** Đường tròn $S = \{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$ không lồi. Lấy $x_1 = (1, 0)$ và $x_2 = (-1, 0)$, cả hai thuộc $S$. Với $\theta = \tfrac12$, ta được trung điểm $(0, 0)$, nhưng $0^2 + 0^2 = 0 \ne 1$, nên trung điểm không thuộc $S$. Một ví dụ khác gần với tối ưu hơn: tập quyết định nhị phân $D = \{0, 1\}^2$, chẳng hạn "mỗi tính năng của mô hình được bật hoặc tắt", không lồi vì trung điểm $(\tfrac12, \tfrac12)$ của $(0, 0)$ và $(1, 1)$ không thuộc $D$. Các bài toán có biến nguyên hay biến nhị phân khó chính vì miền khả thi của chúng không lồi.
 
 **Chứng minh.** Hình tròn đặc $B = \{x \in \mathbb{R}^2 : \|x\|_2 \le 1\}$ là lồi. Lấy $x_1, x_2 \in B$ bất kỳ và $\theta \in [0, 1]$ bất kỳ. Dùng bất đẳng thức tam giác và tính thuần nhất của chuẩn,
 
@@ -205,5 +205,5 @@ Tổ hợp lồi là trung bình có trọng số với trọng số là một p
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.1.4 (tr. 23–25), Hình 2.2 và 2.3, Bài tập 2.1, 2.3, 2.4 và 2.11.
-- Định lý Carathéodory: R. T. Rockafellar, *Convex Analysis*, Princeton University Press, 1970, §17. Ví dụ tập quyết định rời rạc $\{(1,0),(0,1)\}$ theo slide Bài 02 của học phần.
+- Định lý Carathéodory: R. T. Rockafellar, *Convex Analysis*, Princeton University Press, 1970, §17.
 - Ví dụ căn phòng chữ L, pha cà phê, lấy trung bình trọng số khi huấn luyện, các câu hỏi và bài tập 1, 2 do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

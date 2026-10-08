@@ -153,4 +153,4 @@ Kiểm tra một vector có thuộc bao nón của các vector cho trước là 
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.1.5 (tr. 25–26), Hình 2.4 và 2.5, phần mở đầu §2.2 (tr. 27) về các tập đơn giản, Ví dụ 2.4 về góc phần tư không âm.
 - Nhận xét về các thành phần cục bộ trong phân rã ma trận không âm: D. D. Lee, H. S. Seung, *Learning the parts of objects by non-negative matrix factorization*, Nature 401 (1999), 788–791.
-- Bảng bốn loại tổ hợp theo tinh thần slide Bài 02 của học phần. Phần liên hệ với học máy, ví dụ trong mặt phẳng, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Bảng bốn loại tổ hợp đặt cạnh nhau, phần liên hệ với học máy, ví dụ trong mặt phẳng, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

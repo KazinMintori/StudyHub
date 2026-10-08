@@ -152,6 +152,12 @@ async function checkBody({ source, front, rel, file, where, smallSvgs }) {
       if (!top) add('error', `${rel}:${n}`, 'CONTAINER_UNBALANCED', 'Dòng ::: đóng mà không có container mở.')
       else if (close[1].length === top.marker.length) { stack.pop(); lastClosed = top.name }
     } else if (line) lastClosed = null
+    // Chuỗi Python không raw hoặc heredoc của Git Bash biến \t, \f, \v, \b, \a trong lệnh LaTeX thành ký tự điều khiển
+    // (\tfrac → TAB + "frac"), còn \n thành xuống dòng giữa công thức. Trang vẫn build được nhưng công thức hiển thị sai.
+    const ctrl = raw.match(/[\x00-\x08\x0b-\x1f\x7f]/) || raw.match(/(?<=\S.*)\t/)
+    if (ctrl) add('error', `${rel}:${n}`, 'CONTROL_CHAR', `Ký tự điều khiển U+${ctrl[0].charCodeAt(0).toString(16).padStart(4, '0').toUpperCase()} ở cột ${ctrl.index + 1}, thường là lệnh LaTeX bị hỏng (\\tfrac, \\text, \\to thành TAB, \\frac thành FF, \\varphi thành VT, \\beta thành BS). Sửa bằng công cụ sửa file, không ghi LaTeX qua heredoc hay chuỗi Python không raw.`)
+    const dollars = raw.replace(/`[^`]*`/g, '').replace(/\\\$/g, '').replace(/\$\$/g, '').split('$').length - 1
+    if (dollars % 2) add('warning', `${rel}:${n}`, 'INLINE_MATH_SPLIT', 'Số dấu $ trên dòng là số lẻ: một công thức inline bị cắt sang dòng khác. Nếu dòng sau bắt đầu bằng "e ", "eq", "abla" hay "u", đó là \\ne, \\neq, \\nabla, \\nu đã bị biến thành ký tự xuống dòng.')
     for (const m of raw.matchAll(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)|<img[^>]+src="([^"]+)"/g)) {
       const target = (m[1] || m[2]).split(/[?#]/)[0]
       if (/^(https?:)?\/\//.test(target) || target.startsWith('data:')) continue

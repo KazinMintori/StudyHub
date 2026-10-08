@@ -67,7 +67,7 @@ python3 -I .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --for
 npm run ci:build
 ```
 
-`check_lecture.mjs` kiểm thêm cho lớp chủ đề: file có đủ theo catalog (`TOPIC_MISSING`), frontmatter khớp (`FRONTMATTER_TOPIC`, `TOPIC_TITLE_MISMATCH`), file thừa không có trong catalog (`TOPIC_ORPHAN`), trang chương thiếu `<TopicMap />`, link tương đối hỏng, slug chủ đề trùng, và **công thức inline rộng hơn 38ex** (`INLINE_MATH_WIDE`) vì công thức inline không xuống dòng và sẽ tràn ngang trên điện thoại. Chuyển những công thức đó thành `$$…$$` (có thể `aligned`) hoặc tách nhỏ.
+`check_lecture.mjs` kiểm thêm cho lớp chủ đề: file có đủ theo catalog (`TOPIC_MISSING`), frontmatter khớp (`FRONTMATTER_TOPIC`, `TOPIC_TITLE_MISMATCH`), file thừa không có trong catalog (`TOPIC_ORPHAN`), trang chương thiếu `<TopicMap />`, link tương đối hỏng, slug chủ đề trùng, và **công thức inline rộng hơn 38ex** (`INLINE_MATH_WIDE`) vì công thức inline không xuống dòng và sẽ tràn ngang trên điện thoại. Chuyển những công thức đó thành `$$…$$` (có thể `aligned`) hoặc tách nhỏ. Hai dấu vết của TeX bị hỏng khi ghi bằng script cũng được bắt: ký tự điều khiển giữa dòng (`CONTROL_CHAR`, lỗi) và dòng có số dấu `$` lẻ (`INLINE_MATH_SPLIT`, cảnh báo).
 
 Truyền **cả chương** cho `review_teaching_text.py` một lượt để thấy khuôn lặp giữa các trang (`QUESTION_TEMPLATE`, `REPEATED_OPENER`), ngoài các khuôn trong từng trang.
 
@@ -75,7 +75,9 @@ Cuối cùng mở trang ở bề rộng 375px và trên máy bàn: không cuộn
 
 ## 6. Những lỗi đã gặp khi soạn Lecture 01
 
-- Script Python viết qua heredoc của Git Bash trên Windows làm mất một nửa số dấu `\` trong TeX, sinh ký tự điều khiển và làm build hỏng. Viết script bằng công cụ ghi file rồi chạy, không nhúng TeX vào heredoc.
+- Script Python viết qua heredoc của Git Bash trên Windows làm mất một nửa số dấu `\` trong TeX. Viết script bằng công cụ ghi file rồi chạy, không nhúng TeX vào heredoc.
+- Ngay cả trong file script, chuỗi Python thường (không raw) vẫn đổi `\t`, `\n`, `\f`, `\v`, `\b`, `\a` thành ký tự điều khiển: `\tfrac` thành TAB + `frac`, `\ne` thành xuống dòng + `e`. Build vẫn chạy, MathJax vẫn vẽ, nhưng công thức sai ("400 ext m²", "20 e 0"), và lỗi này đã lên trang thật trước khi được phát hiện. Mọi chuỗi chứa TeX phải là raw string (`r"..."`), hoặc thay nội dung bằng công cụ sửa file. Sau mỗi lượt sửa bằng script, chạy `check_lecture.mjs` để bắt `CONTROL_CHAR` và `INLINE_MATH_SPLIT`.
 - Ví dụ và bài tập vô tình dùng lại dữ liệu bài tập về nhà của học phần. Luôn đối chiếu với file bài tập trong `raw_materials` và đổi dữ liệu.
+- Câu chuyện mở đầu (Dido), bài LP "phân bổ thời gian chạy hai tác vụ" và vài ví dụ nhỏ được lấy từ slide của học phần, kèm dòng ghi công. Ghi công không hợp thức hóa việc dùng một nguồn mà sổ nguồn của môn (`raw_materials/<môn>/authoring-map.md`) đã loại. Đọc mục "Ranh giới nguồn" của sổ trước khi chọn ví dụ xuyên suốt. Khi thay một ví dụ, tìm mọi chỗ nhắc lại nó (mục định nghĩa, câu hỏi, bài tập, tóm tắt, dòng nguồn) và tính lại mọi số liên quan.
 - Lời giải "nghĩ thành tiếng" ("à không, thử lại…") làm người học rối. Lời giải chỉ trình bày lập luận đúng cuối cùng; phản ví dụ được kiểm bằng code trước.
 - Từ đa nghĩa bị liên kết nhầm: "đồ thị" (của hàm số và lý thuyết đồ thị), "phép chiếu" (Euclid, tọa độ, phối cảnh), "đơn hình" (hình học và phương pháp đơn hình). Tạo ID riêng theo lĩnh vực hoặc dùng alias dài hơn; xem repo-format.md mục 5.

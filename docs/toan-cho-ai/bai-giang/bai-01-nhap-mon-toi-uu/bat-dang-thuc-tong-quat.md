@@ -114,7 +114,7 @@ $S_1$ có phần tử nhỏ nhất là $(1, 2)$, vì mọi điểm của $S_1$ c
 
 <details><summary>Xem lời giải thích</summary>
 
-Phần tử tối thiểu không liên quan tới "lân cận" hay khoảng cách. Nó so sánh với **mọi** phần tử của tập, chỉ là theo một thứ tự bộ phận, nên nhiều phần tử có thể cùng không bị ai thắng. Cực tiểu cục bộ thì so sánh giá trị của một hàm với các điểm ở gần. Slide Bài 02 của học phần cũng nhấn mạnh: không dịch "minimal element" thành "cực tiểu địa phương".
+Phần tử tối thiểu không liên quan tới "lân cận" hay khoảng cách. Nó so sánh với **mọi** phần tử của tập, chỉ là theo một thứ tự bộ phận, nên nhiều phần tử có thể cùng không bị ai thắng. Cực tiểu cục bộ thì so sánh giá trị của một hàm với các điểm ở gần. Vì vậy "minimal element" không được dịch thành "cực tiểu địa phương": hai khái niệm thuộc hai thế giới khác nhau.
 
 </details>
 
@@ -165,4 +165,4 @@ Một nón chính quy là nón lồi, đóng, có phần trong khác rỗng và 
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.4 (tr. 43–46), Ví dụ 2.14–2.18, Hình 2.17 và 2.18, Bài tập 2.30.
-- Ví dụ các cấu hình với hai tiêu chí, lưu ý không dịch "minimal element" thành cực tiểu địa phương: theo slide Bài 02 của học phần. Bảng các nón thiếu từng điều kiện, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Ví dụ các cấu hình với hai tiêu chí, bảng các nón thiếu từng điều kiện, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

@@ -17,6 +17,8 @@
 .study-lab .lab-good-fill { fill: var(--xanh-soft); stroke: var(--xanh); stroke-width: 2; }
 .study-lab .lab-bad-fill { fill: var(--do-soft); stroke: var(--do); stroke-width: 2; }
 .study-lab .lab-warn { stroke: var(--vang); fill: none; stroke-width: 2.5; }
+.study-lab .lab-sand { fill: var(--vang-soft); stroke: none; }
+.study-lab .lab-water { fill: var(--xanh-soft); stroke: none; }
 .study-lab .lab-cutout { fill: var(--paper); stroke: var(--tim); stroke-width: 2; stroke-dasharray: 4 4; }
 .study-lab .lab-dot { fill: var(--ink); }
 .study-lab .lab-dot-accent { fill: var(--tim); }

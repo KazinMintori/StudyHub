@@ -115,7 +115,7 @@ Một điểm cần nói rõ: việc đường đồng mức là ellipsoid là m
 
 <details><summary>Xem lời giải thích</summary>
 
-Điều kiện là $2x_1 x_2 \le 1$, tức $x_1 x_2 \le 	frac12$. Tập này chứa cả hai trục tọa độ nên không bị chặn, vì vậy không phải ellipsoid. Nó cũng không lồi: hai điểm $(1, 	frac12)$ và $(	frac12, 1)$ đều cho $x_1 x_2 = 	frac12$, nhưng trung điểm $(	frac34, 	frac34)$ cho $	frac{9}{16} > 	frac12$, nằm ngoài tập. Ma trận $M$ có hai trị riêng $1$ và $-1$, tức là không xác định dương. Điều kiện $P \succ 0$ trong định nghĩa ellipsoid chính là để loại những trường hợp như thế.
+Điều kiện là $2x_1 x_2 \le 1$, tức $x_1 x_2 \le \tfrac12$. Tập này chứa cả hai trục tọa độ nên không bị chặn, vì vậy không phải ellipsoid. Nó cũng không lồi: hai điểm $(1, \tfrac12)$ và $(\tfrac12, 1)$ đều cho $x_1 x_2 = \tfrac12$, nhưng trung điểm $(\tfrac34, \tfrac34)$ cho $\tfrac{9}{16} > \tfrac12$, nằm ngoài tập. Ma trận $M$ có hai trị riêng $1$ và $-1$, tức là không xác định dương. Điều kiện $P \succ 0$ trong định nghĩa ellipsoid chính là để loại những trường hợp như thế.
 
 </details>
 
@@ -186,5 +186,5 @@ Thể tích ellipsoid tỉ lệ với $\sqrt{\det P}$. Đường đồng mức c
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.2 (tr. 29–30), Hình 2.9, các biểu diễn (2.3) và (2.4). Ví dụ 2.12 (tr. 39) về ellipsoid như ảnh và ảnh ngược affine của quả cầu đơn vị. Bài toán ellipsoid thể tích nhỏ nhất ở chương 8.
-- Phân tích phổ của ma trận đối xứng và căn bậc hai đối xứng: phụ lục A.5 của sách. Lưu ý "đừng nhầm $A$ với $P$" theo slide Bài 02 của học phần.
+- Phân tích phổ của ma trận đối xứng và căn bậc hai đối xứng: phụ lục A.5 của sách.
 - Ví dụ ellipse nghiêng, phần liên hệ với phân phối Gauss và khoảng cách Mahalanobis, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

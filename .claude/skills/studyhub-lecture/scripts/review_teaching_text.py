@@ -243,7 +243,8 @@ def review(sections):
                 if len(sentences) >= CONNECTIVE_SENTENCES and not _has_connective(sentences):
                     findings.append({"code": "LOW_CONNECTIVES", "where": where, "text": stripped,
                                      "suggestion": "Đoạn dài mà không có từ nối nào: xác định quan hệ giữa các câu (nguyên nhân, đối lập, ví dụ, hệ quả) rồi viết nó ra."})
-            prose = INLINE_MATH_RE.sub(" X ", raw)
+            # Một dòng nguồn liệt kê nhiều mục là danh mục trích dẫn, độ dài của nó không nói gì về tải nhận thức.
+            prose = "" if in_sources else INLINE_MATH_RE.sub(" X ", raw)
             for sentence in re.split(r"(?<=[.!?])\s+", prose):
                 if len(sentence.split()) > OVERLOAD_WORDS:
                     findings.append({"code": "POSSIBLE_OVERLOAD", "where": where, "text": sentence.strip(),

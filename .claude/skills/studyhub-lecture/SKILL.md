@@ -2,7 +2,7 @@
 name: studyhub-lecture
 description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm hoặc viết lại bài trong thư mục bài giảng của một môn, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
 metadata:
-  version: "7.3.0"
+  version: "7.4.0"
   supersedes: "textbook-to-course-slides 6.1.0"
 ---
 
@@ -60,6 +60,7 @@ Luôn đọc [repo-format.md](references/repo-format.md) trước khi chạm và
 - Dữ kiện, mô hình, kết quả đã chứng minh, quy tắc kinh nghiệm và diễn giải còn tranh luận được gọi đúng tên.
 - Không bịa: trích dẫn, đoạn mở đầu gán cho nhân vật, năm tháng, số liệu thực tế, tên bài báo, “lỗi thường gặp” không có căn cứ. Cần thì tra cứu và dẫn link; không kiểm được thì bỏ.
 - Mọi con số trong ví dụ, bài tập, lời giải được tính lại bằng code trước khi ghi.
+- Ranh giới nguồn của môn (mục "Ranh giới nguồn" trong `raw_materials/<course-id>/authoring-map.md`, nếu có) là ràng buộc cứng. Nguồn bị loại, chẳng hạn slide hay bài tập về nhà của học phần, không cấp ví dụ, số liệu hay câu chuyện mở đầu, kể cả khi có dòng ghi công.
 - Lý do thiết yếu nằm trong mạch chính của Notes, không chỉ trong hộp gập, slide hay lời nói.
 - Mọi đơn vị nguồn có ý nghĩa trong phạm vi được giao có nơi đến (Notes, bài tập, đọc thêm) hoặc lý do loại bỏ.
 - Thuật ngữ và ký hiệu nhất quán trong bài, với bài trước của môn, và với Wiki.
@@ -70,7 +71,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 ### A. Khảo sát nguồn và bối cảnh
 
-1. Đọc yêu cầu, rồi nguồn trong `raw_materials/<course-id>/` (và file người dùng đính kèm). PDF/PPTX/DOCX: chạy `python3 scripts/extract_text.py <file hoặc thư mục>` ở gốc repo; kết quả ghi vào `raw_materials/extracted/<tên>.txt` (cần PyMuPDF hoặc pypdf, python-pptx, python-docx — cài bằng pip nếu thiếu; không commit thư mục `extracted/` nếu người dùng không muốn). Với trang có công thức/hình, xem ảnh trang nếu có công cụ. Ghi trang OCR không đáng tin; không đoán ký tự lỗi.
+1. Đọc yêu cầu, rồi sổ nguồn `raw_materials/<course-id>/authoring-map.md` nếu có (ranh giới nguồn, ví dụ đã bị loại, nơi đến của từng mục sách), rồi nguồn trong `raw_materials/<course-id>/` (và file người dùng đính kèm). PDF/PPTX/DOCX: chạy `python3 scripts/extract_text.py <file hoặc thư mục>` ở gốc repo; kết quả ghi vào `raw_materials/extracted/<tên>.txt` (cần PyMuPDF hoặc pypdf, python-pptx, python-docx — cài bằng pip nếu thiếu; không commit thư mục `extracted/` nếu người dùng không muốn). Với trang có công thức/hình, xem ảnh trang nếu có công cụ. Ghi trang OCR không đáng tin; không đoán ký tự lỗi.
 2. Đọc catalog của môn, Notes của bài trước và sau (thuật ngữ, ký hiệu, ví dụ đã dùng), danh sách `concepts` hiện có.
 3. Lập **sổ nguồn** ngắn (trong suy nghĩ hoặc file nháp ngoài `docs/`): mỗi đơn vị nguồn → vai trò (định nghĩa, định lý, ví dụ, bài tập, hình) → mức quan trọng → nơi đến trong bài.
 
@@ -84,7 +85,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 ### C. Soạn — tách các lượt
 
 8. **Soạn nội dung** theo lecture-blueprint.md: đủ lý do, chưa gọt chữ.
-9. **Tính lại** mọi ví dụ và lời giải bằng Python; sửa Notes theo kết quả. Code trong bài phải chạy được.
+9. **Tính lại** mọi ví dụ và lời giải bằng Python; sửa Notes theo kết quả. Code trong bài phải chạy được. Ghi TeX vào trang bằng công cụ sửa file. Nếu buộc phải sửa hàng loạt bằng script, mọi chuỗi chứa TeX phải là raw string, vì chuỗi thường đổi `\t`, `\n`, `\f`, `\v`, `\b` thành ký tự điều khiển (`\tfrac` thành TAB + `frac`) mà build không báo lỗi.
 10. **Lượt giọng** theo professor-voice.md và writing-vi.md: đọc liền danh sách tiêu đề để sửa khuôn hỏi/rút gọn lặp; sửa câu thiếu đối tượng, thiếu quan hệ, danh từ hóa, khẩu hiệu và động từ dịch máy. Lượt này không đổi toán.
 11. **Lượt nghĩa**: đối chiếu lại nguồn từng phát biểu — giả thiết, miền, lượng từ, dấu, số 0, chiều suy ra. Câu trôi chảy không chứng minh đúng nghĩa.
 12. **Tự rà như người mới** (teaching-review.md): chỉ cho phép kiến thức trong prerequisites và phần đã dạy; ở mỗi bước hỏi “thuật ngữ/phép suy ra này lấy từ đâu?”. Rà cả thuật ngữ phụ mình vừa thêm.
@@ -104,7 +105,7 @@ python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --format
 npm run ci:build
 ```
 
-- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
+- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Ký tự điều khiển giữa dòng và công thức inline bị cắt sang dòng sau, hai dấu vết của TeX ghi qua chuỗi không raw, cũng bị báo. Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
 - `review_teaching_text.py`: chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, từ ngữ kiểu văn máy, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải, chuỗi câu cụt, đoạn dài thiếu từ nối, mũi tên thay câu, khuôn câu hỏi lặp). Truyền cả chương một lượt để thấy khuôn lặp giữa các trang. Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
 - Build phải exit 0. Nếu có trình duyệt, mở trang đã build và xem cả ba tab, công thức, Mermaid, hình ở bề rộng điện thoại. Nếu không xem được, nói rõ “chưa kiểm tra hiển thị”.
 - Bài lớn hoặc quan trọng: nhờ một lượt rà độc lập (agent khác chưa thấy quá trình soạn) đọc Notes như sinh viên và đối chiếu nguồn, nếu người dùng cho phép dùng thêm agent.
@@ -137,7 +138,7 @@ Chạy từ gốc repo (hoặc dùng đường dẫn đầy đủ):
 
 | Script | Làm gì | Không làm gì |
 | --- | --- | --- |
-| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài (kể cả các trang chủ đề) hoặc `--all` với catalog, concepts, Wiki, hình, link, container, mô phỏng; đo bề rộng công thức inline bằng MathJax của site | Không đánh giá nội dung, giọng hay tương tác của mô phỏng |
+| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài (kể cả các trang chủ đề) hoặc `--all` với catalog, concepts, Wiki, hình, link, container, mô phỏng; đo bề rộng công thức inline bằng MathJax của site; bắt ký tự điều khiển và công thức inline bị cắt dòng | Không đánh giá nội dung, giọng hay tương tác của mô phỏng; không đo công thức hiển thị (chúng cuộn ngang trong khung riêng) |
 | `scripts/review_teaching_text.py` | Gợi ý vị trí câu cần xem lại trong một hoặc nhiều file Markdown, hoặc một đặc tả JSON | Không tự sửa, không kiểm toán, không nhận diện AI |
 | `scripts/build_teaching_prompt.py` | Tạo prompt cho một đơn vị nguồn (JSON) kèm hướng dẫn giọng và thuật ngữ tra được | Không gọi model, không hiểu sách |
 | `scripts/retrieve_terminology.py` | Tra thuật ngữ EN–VI và ví dụ tương phản theo lĩnh vực | Không dịch, không chứng nhận nghĩa |

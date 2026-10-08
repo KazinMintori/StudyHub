@@ -94,7 +94,7 @@ Với $K = \mathbb{R}^n_+$, điều kiện $\lambda \succ_{K^*} 0$ nghĩa là m�
 
 Chiều ngược lại thì tinh tế hơn, và có hai cái bẫy mà sách chỉ rõ:
 
-- **Không phải phần tử tối thiểu nào cũng tìm được bằng trọng số dương.** Trong một tập hữu hạn, một điểm có thể tối thiểu mà nằm "lõm vào" so với các điểm tối thiểu khác. Chẳng hạn trong tập gồm $(3, 6)$, $(5, 4)$ và $(4, 5.4)$, điểm $(4, 5.4)$ không bị điểm nào trội, nhưng nó bằng trung điểm của hai điểm kia cộng thêm $(0, 0.4)$. Vì vậy với mọi $\lambda \succ 0$, giá trị $\lambda^T(4, 5.4)$ lớn hơn trung bình của hai giá trị kia, nên lớn hơn giá trị nhỏ nhất. Không trọng số dương nào chọn được nó.
+- **Không phải phần tử tối thiểu nào cũng tìm được bằng trọng số dương.** Trong một tập hữu hạn, một điểm có thể tối thiểu mà nằm "lõm vào" so với các điểm tối thiểu khác. Chẳng hạn trong tập gồm $(2, 7)$, $(6, 3)$ và $(4, 5.4)$, điểm $(4, 5.4)$ không bị điểm nào trội, nhưng nó bằng trung điểm của hai điểm kia cộng thêm $(0, 0.4)$. Vì vậy với mọi $\lambda \succ 0$, giá trị $\lambda^T(4, 5.4)$ lớn hơn trung bình của hai giá trị kia, nên lớn hơn giá trị nhỏ nhất. Không trọng số dương nào chọn được nó.
 - **Khi $S$ lồi, chiều ngược đúng nhưng chỉ với trọng số không âm.** Nếu $S$ lồi và $x$ tối thiểu, thì có $\lambda \succeq_{K^*} 0$, $\lambda \ne 0$, để $x$ cực tiểu $\lambda^T z$ trên $S$. Chứng minh dùng định lý siêu phẳng phân tách cho hai tập lồi $(x - K) \setminus \{x\}$ và $S$. Trọng số tìm được có thể nằm trên **biên** của $K^*$, chẳng hạn có một thành phần bằng 0, và không thể đòi nó dương ngặt. Ngược lại, một điểm cực tiểu $\lambda^T z$ với $\lambda$ trên biên của $K^*$ chưa chắc là tối thiểu (Hình 2.26 trong sách).
 
 Còn **phần tử nhỏ nhất** có một đặc trưng gọn: $x$ là phần tử nhỏ nhất của $S$ khi và chỉ khi với **mọi** $\lambda \succ_{K^*} 0$, $x$ là điểm cực tiểu **duy nhất** của $\lambda^T z$ trên $S$. Một phần tử nhỏ nhất "thắng" theo mọi bảng giá dương.
@@ -152,11 +152,11 @@ Với chuẩn gốc $\|\cdot\|_1$, chuẩn đối ngẫu là $\|u\|_\infty = 3$,
 :::
 
 ::: exercise 3. Vô hướng hóa trên một tập hữu hạn
-Cho các cấu hình $(2, 9)$, $(3, 6)$, $(5, 4)$, $(8, 3)$, $(6, 7)$, $(9, 8)$, hai tiêu chí đều muốn nhỏ. Tìm các phần tử tối thiểu. Với $\lambda = (1, 0.2)$, $(1, 1)$ và $(0.3, 1)$, điểm nào cực tiểu $\lambda^T z$? Kết quả với $\lambda = (1, 1)$ cho thấy điều gì?
+Cho các cấu hình $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$, $(6, 7)$, $(9, 8)$, hai tiêu chí đều muốn nhỏ. Tìm các phần tử tối thiểu. Với $\lambda = (1, 0.2)$, $(1, 1)$ và $(0.3, 1)$, điểm nào cực tiểu $\lambda^T z$? Kết quả với $\lambda = (1, 1)$ cho thấy điều gì?
 :::
 
 ::: solution
-$(6, 7)$ bị $(5, 4)$ trội, $(9, 8)$ bị nhiều điểm trội, nên các phần tử tối thiểu là $(2, 9)$, $(3, 6)$, $(5, 4)$, $(8, 3)$. Với $\lambda = (1, 0.2)$, các giá trị là $3.8, 4.2, 5.8, 8.6, 7.4, 10.6$, nên $(2, 9)$ được chọn. Với $\lambda = (1, 1)$, hai điểm $(3, 6)$ và $(5, 4)$ cùng cho giá trị 9 nhỏ nhất: đường mức $z_1 + z_2 = 9$ chạm cả cạnh nối hai điểm, nên nghiệm vô hướng hóa không duy nhất. Với $\lambda = (0.3, 1)$, các giá trị là $9.6, 6.9, 5.5, 5.4, 8.8, 10.7$, nên $(8, 3)$ được chọn. Mọi điểm được chọn đều là phần tử tối thiểu, đúng như mệnh đề ở mục 5.
+$(6, 7)$ bị $(5.5, 4)$ trội, $(9, 8)$ bị nhiều điểm trội, nên các phần tử tối thiểu là $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$. Với $\lambda = (1, 0.2)$, các giá trị là $3.8, 4.3, 6.3, 8.6, 7.4, 10.6$, nên $(2, 9)$ được chọn. Với $\lambda = (1, 1)$, hai điểm $(3, 6.5)$ và $(5.5, 4)$ cùng cho giá trị 9.5 nhỏ nhất: đường mức $z_1 + z_2 = 9.5$ chạm cả cạnh nối hai điểm, nên nghiệm vô hướng hóa không duy nhất. Với $\lambda = (0.3, 1)$, các giá trị là $9.6, 7.4, 5.65, 5.4, 8.8, 10.7$, nên $(8, 3)$ được chọn. Mọi điểm được chọn đều là phần tử tối thiểu, đúng như mệnh đề ở mục 5.
 :::
 
 ## Tóm tắt
