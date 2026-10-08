@@ -5,15 +5,15 @@ export const readingMetadata = {
     "minutes": 5
   },
   "bieu-dien-tri-thuc/02-tim-kiem-mu": {
-    "words": 1475,
+    "words": 1474,
     "minutes": 5
   },
   "bieu-dien-tri-thuc/03-tim-kiem-kinh-nghiem": {
-    "words": 1038,
+    "words": 1039,
     "minutes": 5
   },
   "bieu-dien-tri-thuc/04-tim-kiem-doi-khang": {
-    "words": 1214,
+    "words": 1211,
     "minutes": 5
   },
   "bieu-dien-tri-thuc/05-csp": {
@@ -21,7 +21,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "bieu-dien-tri-thuc/14-logic-bieu-dien-tri-thuc": {
-    "words": 1628,
+    "words": 1617,
     "minutes": 10
   },
   "bieu-dien-tri-thuc/16-mang-bayes": {
@@ -29,19 +29,19 @@ export const readingMetadata = {
     "minutes": 5
   },
   "toan-cho-ai/bai-00-on-tap-nen-tang": {
-    "words": 1980,
+    "words": 2082,
     "minutes": 10
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu": {
-    "words": 2540,
+    "words": 2609,
     "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 1938,
+    "words": 2078,
     "minutes": 10
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
-    "words": 1758,
+    "words": 1830,
     "minutes": 10
   },
   "toan-cho-ai/bai-04-gradient-newton": {
@@ -49,7 +49,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
-    "words": 1654,
+    "words": 1735,
     "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
@@ -57,43 +57,43 @@ export const readingMetadata = {
     "minutes": 5
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
-    "words": 1723,
+    "words": 1724,
     "minutes": 10
   },
   "xac-suat-thong-ke/01-xac-suat-va-bayes": {
-    "words": 399,
+    "words": 404,
     "minutes": 5
   },
   "xac-suat-thong-ke/02-bien-ngau-nhien": {
-    "words": 306,
+    "words": 307,
     "minutes": 5
   },
   "xac-suat-thong-ke/03-ky-vong-phuong-sai": {
-    "words": 379,
+    "words": 507,
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
-    "words": 2925,
+    "words": 2924,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-02-python-co-ban": {
-    "words": 2844,
+    "words": 2830,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-03-numpy": {
-    "words": 3787,
+    "words": 3909,
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-04-lam-quen-pandas": {
-    "words": 2179,
+    "words": 2180,
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-05-series-dataframe-chuyen-sau": {
-    "words": 2729,
+    "words": 2742,
     "minutes": 15
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 340,
+    "words": 388,
     "minutes": 5
   },
   "vat-ly-2/02-dien-the": {
@@ -105,15 +105,15 @@ export const readingMetadata = {
     "minutes": 5
   },
   "giai-thuat-du-lieu/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan": {
-    "words": 4557,
+    "words": 4676,
     "minutes": 25
   },
   "giai-thuat-du-lieu/bai-02-mapreduce-va-xu-ly-du-lieu-lon": {
-    "words": 6385,
+    "words": 6450,
     "minutes": 30
   },
   "giai-thuat-du-lieu/bai-03-pagerank-mo-hinh-va-tinh-toan": {
-    "words": 4941,
+    "words": 4975,
     "minutes": 25
   },
   "dsa/complexity": {
@@ -121,23 +121,23 @@ export const readingMetadata = {
     "minutes": 5
   },
   "dsa/sorting": {
-    "words": 751,
+    "words": 760,
     "minutes": 5
   },
   "dsa/searching": {
-    "words": 312,
+    "words": 305,
     "minutes": 5
   },
   "dsa/trees": {
-    "words": 535,
+    "words": 539,
     "minutes": 5
   },
   "dsa/graphs": {
-    "words": 468,
+    "words": 457,
     "minutes": 5
   },
   "discrete-math/logic": {
-    "words": 249,
+    "words": 250,
     "minutes": 5
   },
   "discrete-math/relations": {
@@ -145,7 +145,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "discrete-math/graph-theory": {
-    "words": 298,
+    "words": 365,
     "minutes": 5
   }
 }

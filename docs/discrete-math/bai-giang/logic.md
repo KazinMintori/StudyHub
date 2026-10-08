@@ -35,4 +35,4 @@ Nếu tiền đề $p$ đã SAI ($0$), thì dù $q$ là gì, mệnh đề $p \ri
 $$\neg (p \land q) \equiv \neg p \lor \neg q$$
 $$\neg (p \lor q) \equiv \neg p \land \neg q$$
 
-*Quy tắc nhớ:* Phủ định của một tích là tổng các phủ định; Phủ định của một tổng là tích các phủ định.
+*Quy tắc nhớ:* Phủ định của một tích là tổng các phủ định, còn phủ định của một tổng là tích các phủ định.

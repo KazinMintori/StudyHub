@@ -7,19 +7,19 @@ next: false
 
 # Tính kết hợp & giao hoán
 
-Phép toán kết hợp thỏa (a⊙b)⊙c=a⊙(b⊙c), cho phép đổi cách nhóm. Giao hoán thỏa a⊙b=b⊙a, cho phép đổi thứ tự. Hai tính chất khác nhau. Trong số thực tính bằng máy, sai số làm phép cộng không luôn kết hợp chính xác.
+Phép toán kết hợp thỏa $(a\odot b)\odot c=a\odot (b\odot c)$, cho phép đổi cách nhóm. Giao hoán thỏa $a\odot b=b\odot a$, cho phép đổi thứ tự. Hai tính chất khác nhau. Trong số thực tính bằng máy, sai số làm phép cộng không luôn kết hợp chính xác.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Gom cục bộ cần giữ đủ thông tin.** Tính kết hợp cho đổi dấu ngoặc; giao hoán cho đổi thứ tự. Nối chuỗi kết hợp nhưng không giao hoán. Khi tính trên máy, làm tròn số thực có thể phá kết hợp chính xác của phép cộng.
+**Gom cục bộ cần giữ đủ thông tin.** Tính kết hợp cho phép đổi cách nhóm, còn tính giao hoán cho phép đổi thứ tự. Nối chuỗi kết hợp nhưng không giao hoán. Khi tính trên máy, làm tròn số thực có thể phá kết hợp chính xác của phép cộng.
 
 Muốn tính trung bình phân tán, gửi cặp (tổng,số lượng), cộng hai thành phần rồi chia ở cuối. Trung bình các trung bình không giữ đủ thông tin nếu kích thước nhóm khác nhau.
 
 ## Ví dụ
 
-Cộng số nguyên kết hợp và giao hoán; nối chuỗi kết hợp nhưng không giao hoán: "ab" khác "ba".
+Cộng số nguyên kết hợp và giao hoán. Nối chuỗi kết hợp nhưng không giao hoán: "ab" khác "ba".
 
 ## Khi nào cần dùng?
 

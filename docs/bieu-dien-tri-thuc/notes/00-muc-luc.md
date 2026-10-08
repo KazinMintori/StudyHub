@@ -83,5 +83,5 @@ Thứ tự đề xuất cho các chương còn thiếu (theo đúng mạch chư�
 6. **Bổ sung 3** — Prolog
 
 ::: warning Vì sao chia nhỏ thay vì làm một lần?
-Mỗi chương đủ tiêu chuẩn (ẩn dụ + Mermaid + dry-run + code + bẫy thi) tốn dung lượng tương đương một bài giảng ~600–900 dòng. Làm cả 17+4 bài cùng lúc trong một lần trả lời sẽ buộc phải cắt giảm chất lượng từng chương. Nói cho tôi biết bạn muốn ưu tiên nhóm nào trước (ví dụ "làm tiếp MDP + Reinforcement Learning trước vì tuần sau kiểm tra"), tôi sẽ tập trung vào đúng nhóm đó.
+Mỗi chương đủ tiêu chuẩn (ẩn dụ + Mermaid + dry-run + code + bẫy thi) tốn dung lượng tương đương một bài giảng ~600–900 dòng. Làm cả $17+4$ bài cùng lúc trong một lần trả lời sẽ buộc phải cắt giảm chất lượng từng chương. Nói cho tôi biết bạn muốn ưu tiên nhóm nào trước (ví dụ "làm tiếp MDP + Reinforcement Learning trước vì tuần sau kiểm tra"), tôi sẽ tập trung vào đúng nhóm đó.
 :::

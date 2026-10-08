@@ -5,15 +5,36 @@ description: "Tập affine, ellipsoid, nón, phối cảnh, phân tách và th�
 
 # Hình học tập lồi
 
-Trang này giữ các công cụ của chương 2 cần cho mô hình nón và đối ngẫu nhưng chưa cần đọc liền trong lần học đầu. Chọn một mục khi gặp nó trong Notes; không cần học cả trang trước Lecture 02. Nguồn nội dung là *Convex Optimization*, chương 2; các số và ví dụ ở đây tự đặt.
+Trang này giữ các công cụ của chương 2 cần cho mô hình nón và đối ngẫu nhưng chưa cần đọc liền trong lần học đầu. Chọn một mục khi gặp nó trong Notes. Không cần học cả trang trước Lecture 02. Nguồn nội dung là *Convex Optimization*, chương 2. Các số và ví dụ ở đây tự đặt.
 
 ## 1. Bao affine, bao lồi và nội tương đối
 
-**Bao affine** của $C$ gồm mọi tổ hợp hữu hạn $\sum_i\theta_ix_i$ với $x_i\in C$ và $\sum_i\theta_i=1$, cho phép trọng số âm. **Bao lồi** thêm điều kiện $\theta_i\ge0$. Mỗi bao là tập nhỏ nhất cùng loại chứa $C$.
+Trước hết, chọn $k$ điểm $x_1,\ldots,x_k$ trong $C$ và gắn cho mỗi điểm một trọng số $\theta_i$. Tổng có trọng số được viết đầy đủ là
 
-Với ba điểm $(0,0)$, $(1,0)$, $(0,1)$, bao lồi là tam giác đặc, còn bao affine là cả mặt phẳng. **Simplex xác suất** $\{p:p_i\ge0,\sum_i p_i=1\}$ là bao lồi của các vector đơn vị; mỗi $p_i$ là một trọng số.
+$$
+z=\theta_1x_1+\theta_2x_2+\cdots+\theta_kx_k.
+$$
 
-Không gian affine nhỏ nhất chứa tập xác định **chiều affine**. Đoạn nằm trên một đường trong $\mathbb R^2$ có chiều affine 1. Nội tương đối bỏ hai đầu mút khi nhìn trong đường đó; nội hai chiều của đoạn rỗng. Đây là khái niệm dùng trong Slater ở Lecture 03.
+Điều kiện “các trọng số cộng thành 1” nghĩa là
+
+$$
+\theta_1+\theta_2+\cdots+\theta_k=1.
+$$
+
+Viết gọn hai dòng này bằng ký hiệu tổng:
+
+$$
+z=\sum_{i=1}^{k}\theta_i x_i,
+\qquad \sum_{i=1}^{k}\theta_i=1.
+$$
+
+Chỉ số $i$ chạy qua các số nguyên từ 1 đến $k$. $\theta_i x_i$ là số hạng ứng với điểm thứ $i$. Sau khi đã xác định phạm vi đó, có thể viết tắt $\sum_i$. Tổng trọng số bằng 1 không có nghĩa từng trọng số đều bằng 1.
+
+**Bao affine** của $C$ gồm mọi tổ hợp hữu hạn như trên, cho phép trọng số âm. **Bao lồi** thêm điều kiện $\theta_i\ge0$ với mọi $i$. Mỗi bao là tập nhỏ nhất cùng loại chứa $C$.
+
+Với ba điểm $x_1=(0,0)$, $x_2=(1,0)$, $x_3=(0,1)$ và trọng số $\theta_1=\frac12$, $\theta_2=\frac13$, $\theta_3=\frac16$, ta có $\theta_1+\theta_2+\theta_3=1$ và $z=(\frac13,\frac16)$. Bao lồi của ba điểm là tam giác đặc, còn bao affine là cả mặt phẳng. **Simplex xác suất** $\{p\in\mathbb R^k:p_i\ge0,\sum_{i=1}^k p_i=1\}$ là bao lồi của các vector đơn vị. Mỗi $p_i$ là một trọng số. Với ba thành phần, điều kiện chuẩn hóa là $p_1+p_2+p_3=1$.
+
+Không gian affine nhỏ nhất chứa tập xác định **chiều affine**. Đoạn nằm trên một đường trong $\mathbb R^2$ có chiều affine 1. Nội tương đối bỏ hai đầu mút khi nhìn trong đường đó. Nội hai chiều của đoạn rỗng. Đây là khái niệm dùng trong Slater ở Lecture 03.
 
 ## 2. Ellipsoid và các chuẩn
 
@@ -21,11 +42,11 @@ Với $P\succ0$, ellipsoid tâm $c$ là
 
 $$E=\{x:(x-c)^TP^{-1}(x-c)\le1\}.$$
 
-Nếu $P=AA^T$ với $A$ vuông khả nghịch, cũng có thể viết $E=\{c+Au:\|u\|_2\le1\}$. Hai ma trận $A$ và $P$ có vai trò khác nhau. Trị riêng của $P$ cho bình phương độ dài bán trục; vector riêng cho hướng trục.
+Nếu $P=AA^T$ với $A$ vuông khả nghịch, cũng có thể viết $E=\{c+Au:\|u\|_2\le1\}$. Hai ma trận $A$ và $P$ có vai trò khác nhau. Trị riêng của $P$ cho bình phương độ dài bán trục. Vector riêng cho hướng trục.
 
-Ví dụ $P=\operatorname{diag}(4,1)$ cho $x_1^2/4+x_2^2\le1$ với bán trục 2 và 1. Dùng $A=\operatorname{diag}(2,1)$ mới cho cùng miền; dùng $A=P$ sẽ làm bán trục đầu thành 4.
+Ví dụ $P=\operatorname{diag}(4,1)$ cho $\frac{x_1^2}{4}+x_2^2\le1$ với bán trục 2 và 1. Dùng $A=\operatorname{diag}(2,1)$ mới cho cùng miền. Dùng $A=P$ sẽ làm bán trục đầu thành 4.
 
-Trong hai chiều, quả cầu chuẩn 1 là $|x_1|+|x_2|\le1$, chuẩn 2 là $x_1^2+x_2^2\le1$, chuẩn vô cùng là $\max(|x_1|,|x_2|)\le1$. Đọc hình học từ bất đẳng thức; các miền này đều lồi, nhưng biên của chúng nói chung không lồi.
+Trong hai chiều, quả cầu chuẩn 1 là $|x_1|+|x_2|\le1$, chuẩn 2 là $x_1^2+x_2^2\le1$, chuẩn vô cùng là $\max(|x_1|,|x_2|)\le1$. Đọc hình học từ bất đẳng thức. Các miền này đều lồi, nhưng biên của chúng nói chung không lồi.
 
 ## 3. Nón lồi, nón chính quy và PSD
 
@@ -49,13 +70,13 @@ $$P(\theta u+(1-\theta)v)
 =\gamma P(u)+(1-\gamma)P(v),\quad
 \gamma=\frac{\theta t_1}{\theta t_1+(1-\theta)t_2}\in[0,1].$$
 
-Đây là bước chứng minh: trọng số mới vẫn không âm và cộng thành 1. Ví dụ $u=(0,1)$, $v=(4,2)$: phối cảnh của trung điểm là $4/3$, trong khi trung điểm hai ảnh là 1. Chúng khác nhau nhưng cùng ở đoạn ảnh $[0,2]$.
+Đây là bước chứng minh: trọng số mới vẫn không âm và cộng thành 1. Ví dụ $u=(0,1)$, $v=(4,2)$: phối cảnh của trung điểm là $\frac{4}{3}$, trong khi trung điểm hai ảnh là 1. Chúng khác nhau nhưng cùng ở đoạn ảnh $[0,2]$.
 
-Ánh xạ phân tuyến tính $F(x)=(Ax+b)/(c^Tx+d)$ là affine rồi phối cảnh, trên miền $c^Tx+d>0$. Không bỏ điều kiện dấu mẫu; chia qua một mẫu chưa biết dấu sẽ làm sai bất đẳng thức và chứng minh.
+Ánh xạ phân tuyến tính $F(x)=(Ax+b)/(c^Tx+d)$ là affine rồi phối cảnh, trên miền $c^Tx+d>0$. Không bỏ điều kiện dấu mẫu. Chia qua một mẫu chưa biết dấu sẽ làm sai bất đẳng thức và chứng minh.
 
 ## 5. Siêu phẳng phân tách và siêu phẳng tựa
 
-Siêu phẳng $a^Tx=b$, $a\ne0$, chia không gian thành hai nửa. Hai tập lồi khác rỗng, không giao nhau có một siêu phẳng phân tách yếu: $a^Tx\le b$ trên một tập và $a^Ty\ge b$ trên tập kia. “Yếu” cho phép có dấu bằng; không tự suy ra khoảng cách dương giữa các tập.
+Siêu phẳng $a^Tx=b$, $a\ne0$, chia không gian thành hai nửa. Hai tập lồi khác rỗng, không giao nhau có một siêu phẳng phân tách yếu: $a^Tx\le b$ trên một tập và $a^Ty\ge b$ trên tập kia. “Yếu” cho phép có dấu bằng. Không tự suy ra khoảng cách dương giữa các tập.
 
 Một điều kiện đủ đơn giản cho phân tách chặt là hai tập lồi đóng, không giao nhau, và một tập compact. Khi ấy có thể đặt một khoảng dương giữa hai mức chiếu. Thiếu điều kiện này, các tập có thể tiến sát nhau mà không giao.
 
@@ -69,7 +90,7 @@ $$K^*=\{y:y^Tx\ge0\ \forall x\in K\}.$$
 
 Nó gồm những hướng chấm điểm không âm trên mọi hướng của $K$. Với không gian ma trận đối xứng, thay tích vô hướng bằng $\operatorname{tr}(XY)$, trong đó trace là tổng phần tử đường chéo.
 
-$\mathbb R^n_+$ tự đối ngẫu. Nón bậc hai và nón PSD cũng tự đối ngẫu với tích vô hướng tương ứng. Ký hiệu $x\preceq_Ky$ nghĩa là $y-x\in K$; với PSD, nó so ma trận theo dạng toàn phương.
+$\mathbb R^n_+$ tự đối ngẫu. Nón bậc hai và nón PSD cũng tự đối ngẫu với tích vô hướng tương ứng. Ký hiệu $x\preceq_Ky$ nghĩa là $y-x\in K$. Với PSD, nó so ma trận theo dạng toàn phương.
 
 Với $K=\mathbb R^n_+$ và mục tiêu giảm nhiều tọa độ, một điểm **nhỏ nhất** không lớn hơn mọi điểm khác theo từng tọa độ. Một điểm **tối thiểu/Pareto** chỉ đòi không có điểm khác nhỏ hơn hoặc bằng ở mọi tọa độ và nhỏ hơn thật ở ít nhất một tọa độ. Các điểm tối thiểu có thể không so sánh được.
 
@@ -91,8 +112,8 @@ Trong trường hợp nón chính quy tổng quát, dùng $\lambda\in\operatorna
 
 <details><summary>Đáp án</summary>
 
-1. PSD kiểm mọi dạng $v^TXv$; ma trận $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ vi phạm ở $v=(1,-1)$ dù mọi phần tử dương.
-2. Nó đổi trọng số từ $\theta$ thành $\gamma$ tùy hai mẫu số; ví dụ mục 4 tính ra $4/3\ne1$.
+1. PSD kiểm mọi dạng $v^TXv$. Ma trận $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ vi phạm ở $v=(1,-1)$ dù mọi phần tử dương.
+2. Nó đổi trọng số từ $\theta$ thành $\gamma$ tùy hai mẫu số. Ví dụ mục 4 tính ra $\frac{4}{3}\ne1$.
 3. Có. Khi tiêu chí bị bỏ qua, một điểm đạt tối ưu tổng có thể bị trội hơn chỉ ở tiêu chí ấy, nên không đủ kết luận Pareto.
 
 </details>

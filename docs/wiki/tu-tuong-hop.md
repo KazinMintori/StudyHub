@@ -7,7 +7,7 @@ next: false
 
 # Hàm tự tương hợp (self-concordant)
 
-Tự tương hợp là điều kiện khống chế tốc độ thay đổi của đạo hàm bậc hai bằng chính thang độ cong hiện tại. Điều kiện này giúp phân tích bước Newton; nó không phải tên khác của tính lồi.
+Tự tương hợp là điều kiện khống chế tốc độ thay đổi của đạo hàm bậc hai bằng chính thang độ cong hiện tại. Điều kiện này giúp phân tích bước Newton, nhưng không phải tên khác của tính lồi.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Tự tương hợp là điều kiện khống chế tốc độ thay đổi củ
 
 ## Ví dụ
 
-f(x)=−log x trên x>0 thỏa |f‴(x)|=2[f″(x)]³ᐟ²=2/x³.
+$f(x)=-\log x$ trên $x>0$ thỏa $|f'''(x)|=2[f''(x)]^{3/2}=\frac{2}{x^3}$.
 
 ## Khi nào cần dùng?
 

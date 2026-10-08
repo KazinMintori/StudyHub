@@ -41,4 +41,4 @@ flowchart TD
 ##  Nguồn Tham khảo Đánh giá cao
 
 - [Discrete Mathematics by Kenneth H. Rosen](https://www.mheducation.com/) - Cuốn sách giáo khoa tiêu chuẩn vàng toàn cầu cho môn Toán rời rạc.
-- [Kênh YouTube TrevTutor - Discrete Math](https://www.youtube.com/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz) - Chuỗi bài giảng ngắn 5-10 phút giải thích từng khái niệm cực kỳ dễ hiểu.
+- [Kênh YouTube TrevTutor - Discrete Math](https://www.youtube.com/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz) - Chuỗi video giải thích các khái niệm của toán rời rạc.

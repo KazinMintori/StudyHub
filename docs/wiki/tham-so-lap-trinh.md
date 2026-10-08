@@ -7,15 +7,15 @@ next: false
 
 # Tham số trong lập trình
 
-Trong định nghĩa hàm, tham số là tên đại diện cho dữ liệu đầu vào; khi gọi hàm, đối số là giá trị cụ thể được truyền vào. Nghĩa này thuộc lập trình và khác tham số của một mô hình toán học.
+Trong định nghĩa hàm, tham số là tên đại diện cho dữ liệu đầu vào. Khi gọi hàm, đối số là giá trị cụ thể được truyền vào. Nghĩa này thuộc lập trình và khác tham số của một mô hình toán học.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Tên trong định nghĩa, giá trị trong lời gọi.** Với `def f(x, scale=1)`, `x` và `scale` là tham số; trong `f(data, scale=2)`, `data` và `2` là đối số. Tham số mặc định được dùng khi lời gọi không truyền giá trị tương ứng.
+**Tên trong định nghĩa, giá trị trong lời gọi.** Với `def f(x, scale=1)`, `x` và `scale` là tham số. Trong `f(data, scale=2)`, `data` và `2` là đối số. Tham số mặc định được dùng khi lời gọi không truyền giá trị tương ứng.
 
-Khi gọi hàm, Python dùng cơ chế chia sẻ đối tượng. Nếu đối số là list và hàm sửa list tại chỗ, bên gọi có thể quan sát thay đổi. Đây là cơ chế của lời gọi hàm; nó không liên quan đến “tham số mô hình” trong một bài toán tối ưu.
+Khi gọi hàm, Python dùng cơ chế chia sẻ đối tượng. Nếu đối số là list và hàm sửa list tại chỗ, bên gọi có thể quan sát thay đổi. Đây là cơ chế của lời gọi hàm. Nó không liên quan đến “tham số mô hình” trong một bài toán tối ưu.
 
 ## Ví dụ
 
@@ -31,7 +31,7 @@ Trong lời gọi pow(2, 3), 2 và 3 là tham số hay đối số?
 
 <details><summary>Xem đáp án</summary>
 
-Là đối số; tên tham số nằm trong định nghĩa của hàm pow.
+Đó là các đối số, còn tên tham số nằm trong định nghĩa của hàm pow.
 
 </details>
 

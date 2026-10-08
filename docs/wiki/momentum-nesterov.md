@@ -7,7 +7,7 @@ next: false
 
 # Momentum và Nesterov
 
-Momentum cộng gradient mới với một phần vận tốc cũ để tạo độ dời. Nesterov dùng cùng ý tưởng nhưng tính gradient tại điểm nhìn trước θ+μv. Hai công thức chỉ so được khi quy ước dấu và cách định nghĩa vận tốc được giữ nhất quán.
+Momentum cộng gradient mới với một phần vận tốc cũ để tạo độ dời. Nesterov dùng cùng ý tưởng nhưng tính gradient tại điểm nhìn trước $\theta +\mu v$. Hai công thức chỉ so được khi quy ước dấu và cách định nghĩa vận tốc được giữ nhất quán.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Khi tái lập kết quả, cần lưu cả $v$, tham số, bộ đếm và quy 
 
 ## Ví dụ
 
-Nếu θ=0, v=0, gradient −1 và η=0,1 thì bước momentum đầu cho v=0,1 và θ mới bằng 0,1.
+Nếu $\theta =0$, $v=0$, gradient −1 và $\eta =0$,1 thì bước momentum đầu cho $v=0$,1 và $\theta$ mới bằng 0,1.
 
 ## Khi nào cần dùng?
 
@@ -31,7 +31,7 @@ Giảm dao động và tích lũy hướng cập nhật trong huấn luyện.
 
 <details><summary>Xem đáp án</summary>
 
-Nesterov tính gradient tại điểm nhìn trước, không phải tại θ hiện tại.
+Nesterov tính gradient tại điểm nhìn trước, không phải tại $\theta$ hiện tại.
 
 </details>
 

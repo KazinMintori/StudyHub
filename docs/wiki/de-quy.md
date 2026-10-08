@@ -7,7 +7,7 @@ next: false
 
 # Đệ quy
 
-Hàm đệ quy gọi lại chính nó trên bài toán nhỏ hơn. Cần có điều kiện dừng và mỗi lần gọi phải tiến về điều kiện đó. Các lời gọi chưa hoàn thành nằm trên ngăn xếp; đệ quy quá sâu có thể vượt giới hạn ngăn xếp.
+Hàm đệ quy gọi lại chính nó trên bài toán nhỏ hơn. Cần có điều kiện dừng và mỗi lần gọi phải tiến về điều kiện đó. Các lời gọi chưa hoàn thành nằm trên ngăn xếp, vì vậy đệ quy quá sâu có thể vượt giới hạn ngăn xếp.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Hàm đệ quy gọi lại chính nó trên bài toán nhỏ hơn. Cần có đi
 
 ## Ví dụ
 
-factorial(n) = n × factorial(n−1), với factorial(0) = 1. Từ n = 3, ta lần lượt về 2, 1, 0.
+factorial(n) = n × factorial($n-1$), với factorial(0) = 1. Từ $n = 3$, ta lần lượt về 2, 1, 0.
 
 ## Khi nào cần dùng?
 

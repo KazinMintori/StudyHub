@@ -110,14 +110,14 @@ Xét từ khóa $t_1 = \text{"máy"}$ và $t_2 = \text{"thuật toán"}$.
 
 #### Lời giải gợi ý
 1. Độ dài các văn bản: $|D_1| = 3$, $|D_2| = 4$, $|D_3| = 3$.
-   - Tần suất $TF(\text{"máy"}, D_1) = 1/3 \approx 0.333$.
+   - Tần suất $TF(\text{"máy"}, D_1) = \frac{1}{3} \approx 0.333$.
    - Tần suất $TF(\text{"thuật toán"}, D_1) = 0$.
-   - Tần suất $TF(\text{"máy"}, D_3) = 1/3 \approx 0.333$.
-   - Tần suất $TF(\text{"thuật toán"}, D_3) = 1/3 \approx 0.333$.
+   - Tần suất $TF(\text{"máy"}, D_3) = \frac{1}{3} \approx 0.333$.
+   - Tần suất $TF(\text{"thuật toán"}, D_3) = \frac{1}{3} \approx 0.333$.
 
 2. Tính $IDF$:
-   - Từ "máy" xuất hiện trong $D_1$ và $D_3 \implies DF = 2 \implies IDF(\text{"máy"}) = \ln(3/2) \approx 0.4055$.
-   - Từ "thuật toán" xuất hiện trong $D_2$ và $D_3 \implies DF = 2 \implies IDF(\text{"thuật toán"}) = \ln(3/2) \approx 0.4055$.
+   - Từ "máy" xuất hiện trong $D_1$ và $D_3 \implies DF = 2 \implies IDF(\text{"máy"}) = \ln(\frac{3}{2}) \approx 0.4055$.
+   - Từ "thuật toán" xuất hiện trong $D_2$ và $D_3 \implies DF = 2 \implies IDF(\text{"thuật toán"}) = \ln(\frac{3}{2}) \approx 0.4055$.
 
 3. Trọng số $TF\text{-}IDF$:
    $$TF\text{-}IDF(\text{"máy"}, D_1) = \frac{1}{3} \times 0.4055 \approx 0.1352$$

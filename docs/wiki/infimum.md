@@ -19,7 +19,7 @@ Trong tối ưu, $p^\star=\inf_{x\in C}f(x)$ luôn mô tả giá trị tối ưu
 
 ## Ví dụ
 
-Với x>0, inf x=0 nhưng không có x>0 nào bằng 0.
+Với $x>0$, $\inf x=0$ nhưng không có $x>0$ nào bằng 0.
 
 ## Khi nào cần dùng?
 
@@ -27,11 +27,11 @@ Phân biệt giá trị tối ưu với sự tồn tại của nghiệm đạt t
 
 ## Tự kiểm tra
 
-Bài min x với x>0 có nghiệm tối ưu x=0 không?
+Bài min x với $x>0$ có nghiệm tối ưu $x=0$ không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. 0 là infimum nhưng không thuộc miền x>0.
+Không. 0 là infimum nhưng không thuộc miền $x>0$.
 
 </details>
 

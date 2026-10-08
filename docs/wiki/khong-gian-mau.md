@@ -13,13 +13,13 @@ Không gian mẫu Ω chứa mọi kết quả có thể của thí nghiệm ng�
 
 ## Giải thích kỹ thuật
 
-**Đồng khả năng là một giả định.** Chia số kết quả thuận lợi cho tổng số kết quả chỉ đúng khi mọi kết quả cơ bản có cùng xác suất. Với đồng xu lệch, hai kết quả ngửa/sấp không nhất thiết mỗi kết quả xác suất 1/2.
+**Đồng khả năng là một giả định.** Chia số kết quả thuận lợi cho tổng số kết quả chỉ đúng khi mọi kết quả cơ bản có cùng xác suất. Với đồng xu lệch, hai kết quả ngửa/sấp không nhất thiết mỗi kết quả xác suất $\frac{1}{2}$.
 
 Khi tung nhiều lần, chọn kết quả cơ bản đủ chi tiết. Đếm “0,1,2 mặt ngửa” như ba kết quả đồng khả năng là sai: trường hợp một mặt ngửa có hai cách xảy ra.
 
 ## Ví dụ
 
-Tung một xúc xắc cân bằng: Ω = {1,2,3,4,5,6}. Biến cố chẵn = {2,4,6}, xác suất 3/6 = 1/2.
+Tung một xúc xắc cân bằng: Ω = {1,2,3,4,5,6}. Biến cố chẵn = {2,4,6}, xác suất $\frac{3}{6} = \frac{1}{2}$.
 
 ## Khi nào cần dùng?
 

@@ -7,7 +7,7 @@ next: false
 
 # RMSProp
 
-RMSProp theo dõi trung bình mũ của bình phương gradient thay vì cộng dồn từ đầu. Trọng số của quá khứ xa giảm theo lũy thừa của β. Trạng thái này là moment bậc hai không tâm, không phải phương sai đã trừ trung bình.
+RMSProp theo dõi trung bình mũ của bình phương gradient thay vì cộng dồn từ đầu. Trọng số của quá khứ xa giảm theo lũy thừa của $\beta$. Trạng thái này là moment bậc hai không tâm, không phải phương sai đã trừ trung bình.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Công thức RMSProp trong tài liệu và thư viện có thể khác ở vị 
 
 ## Ví dụ
 
-Với v₀=0, g₁=2, β=0,9: v₁=0,9·0+0,1·4=0,4.
+Với $v_0=0$, $g_1=2$, $\beta=0{,}9$, ta được $v_1=0{,}9\cdot0+0{,}1\cdot4=0{,}4$.
 
 ## Khi nào cần dùng?
 
@@ -31,7 +31,7 @@ Nếu gradient hiện tại bằng 0 thì trạng thái v có về 0 ngay không
 
 <details><summary>Xem đáp án</summary>
 
-Không, trừ trường hợp β=0 hoặc trạng thái trước đã bằng 0.
+Không, trừ trường hợp $\beta =0$ hoặc trạng thái trước đã bằng 0.
 
 </details>
 

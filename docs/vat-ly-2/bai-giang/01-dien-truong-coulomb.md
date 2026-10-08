@@ -20,9 +20,9 @@ Trong chân không, mô hình tĩnh điện của nguồn điểm Q:
 
 $$\mathbf E(\mathbf r)=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\hat{\mathbf r},\qquad r>0.$$
 
-$\hat{\mathbf r}$ là vector đơn vị hướng từ nguồn tới điểm đang xét. Với Q dương, trường hướng ra; Q âm, trường hướng vào. Hằng số $k=1/(4\pi\varepsilon_0)\approx9\times10^9\ \mathrm{N\,m^2/C^2}$.
+$\hat{\mathbf r}$ là vector đơn vị hướng từ nguồn tới điểm đang xét. Với Q dương, trường hướng ra. Q âm, trường hướng vào. Hằng số $k=1/(4\pi\varepsilon_0)\approx9\times10^9\ \mathrm{N\,m^2/C^2}$.
 
-Định luật Coulomb cho độ lớn lực giữa hai điện tích điểm: $F=k|Qq|/r^2$. Công thức không dùng tại r=0 và không thay một phân bố mở rộng bằng nguồn điểm khi điều kiện mô hình chưa phù hợp.
+Định luật Coulomb cho độ lớn lực giữa hai điện tích điểm: $F=k|Qq|/r^2$. Công thức không dùng tại $r=0$ và không thay một phân bố mở rộng bằng nguồn điểm khi điều kiện mô hình chưa phù hợp.
 
 ## 3. Ví dụ có dấu và đơn vị
 
@@ -34,9 +34,15 @@ Hướng điện trường ra xa nguồn. Đặt $q=-1\,\mu C$ tại đó: lực
 
 ## 4. Nguyên lý chồng chất
 
-Với nhiều nguồn, cộng từng vector điện trường:
+Với $n$ nguồn, gọi $\mathbf E_i$ là vector điện trường do nguồn thứ $i$ gây ra tại **cùng điểm đang xét**. Cộng từng vector:
 
-$$\mathbf E_{\text{tổng}}=\sum_i\mathbf E_i.$$
+$$
+\mathbf E_{\text{tổng}}
+=\mathbf E_1+\cdots+\mathbf E_n
+=\sum_{i=1}^n\mathbf E_i.
+$$
+
+Chỉ số $i$ chọn nguồn điện tích. Với hai nguồn, $\mathbf E_{\text{tổng}}=\mathbf E_1+\mathbf E_2$. Phải cộng các thành phần theo cùng hệ trục, không cộng độ lớn khi hai hướng khác nhau.
 
 Hai trường bằng độ lớn có thể triệt tiêu nếu ngược chiều hoặc tăng gấp đôi nếu cùng chiều. Hãy vẽ hướng trước khi cộng số.
 

@@ -7,7 +7,7 @@ next: false
 
 # Ngăn xếp
 
-Ngăn xếp lấy phần tử theo thứ tự vào sau, ra trước (LIFO). push đặt phần tử lên đỉnh; pop lấy phần tử trên đỉnh. Ngăn xếp lời gọi lưu những hàm đang chờ kết quả, giúp giải thích hoạt động của đệ quy.
+Ngăn xếp lấy phần tử theo thứ tự vào sau, ra trước (LIFO). Thao tác push đặt phần tử lên đỉnh, còn pop lấy phần tử trên đỉnh ra. Ngăn xếp lời gọi lưu các hàm đang chờ kết quả, nhờ đó giúp ta theo dõi hoạt động của đệ quy.
 
 <WikiUsage />
 

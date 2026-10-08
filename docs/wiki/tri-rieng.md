@@ -7,13 +7,13 @@ next: false
 
 # Trị riêng & vector riêng
 
-Nếu Av = λv với v khác vector không, v là vector riêng của ma trận vuông A và λ là trị riêng tương ứng. Biến đổi A chỉ co giãn hoặc đổi chiều v mà không đưa nó ra khỏi đường thẳng ban đầu.
+Nếu $Av = \lambda v$ với v khác vector không, v là vector riêng của ma trận vuông A và $\lambda$ là trị riêng tương ứng. Biến đổi A chỉ co giãn hoặc đổi chiều v mà không đưa nó ra khỏi đường thẳng ban đầu.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Cách tìm trị riêng.** Từ Av=λv suy ra (A−λI)v=0. Để có nghiệm v≠0 trong hữu hạn chiều, ma trận A−λI phải suy biến; do đó det(A−λI)=0.
+**Cách tìm trị riêng.** Từ $Av=\lambda v$ suy ra $(A-\lambda I)v=0$. Để có nghiệm $v\ne 0$ trong hữu hạn chiều, ma trận $A-\lambda I$ phải suy biến. Do đó $\det(A-\lambda I)=0$.
 
 Trị riêng có thể là số phức với ma trận thực. Ma trận đối xứng thực có trị riêng thực và một cơ sở vector riêng trực chuẩn. Không phải mọi ma trận đều có đủ vector riêng độc lập để chéo hóa.
 

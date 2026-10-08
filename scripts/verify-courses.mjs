@@ -31,6 +31,7 @@ assert.deepEqual(searchTrace({A:['B','C'],B:['D'],C:[],D:[]},'dfs').at(-1).visit
 assert.equal(gradientTrace(2,.5,1)[1],0);assert(Math.abs(bayesCounts(.2,.8,.3).posterior-.4)<1e-10);assert.deepEqual(wordCountTrace('UET học uet').counts,[['uet',2],['học',1]])
 
 const browser=await puppeteer.launch({headless:true}), page=await browser.newPage(), errors=[], results=[]
+await page.evaluateOnNewDocument(() => sessionStorage.setItem('studyhub_welcome_seen', '1'))
 page.on('pageerror',e=>{errors.push(e.message);console.error(e.message)})
 const base=process.env.QA_URL || 'http://127.0.0.1:8080'
 async function go(path){const response=await page.goto(base+path,{waitUntil:'networkidle0',timeout:120000});if(response)assert([200,304].includes(response.status()),path);if(path.includes('/bai-giang/'))await page.waitForFunction(()=>document.querySelector('.lecture-tabs a[aria-current]')?.getAttribute('href').endsWith(location.hash||'#notes'))}
@@ -63,12 +64,12 @@ try{
   await link.click();await page.waitForSelector('#study-term-preview[role="dialog"]');assert.equal(await page.$eval('.vp-doc p button.study-term[data-term="dao-ham-rieng"]',el=>el.getAttribute('aria-expanded')),'true');assert(await page.$('#study-term-preview .term-preview-example'));await page.click('#study-term-preview .term-preview-wiki');await page.waitForFunction(()=>location.pathname.endsWith('/wiki/dao-ham-rieng.html'));assert(await page.$('.vp-doc p button.study-term'))
   assert(await page.$('.wiki-backlinks'));await page.goBack({waitUntil:'networkidle0'});assert.match(page.url(),/wiki\/gradient/);assert(await page.$('.wiki-backlinks a[href*="bai-giang"]'))
  })
- await check('Prerequisites are specific to each lecture and keep understood progress',async()=>{
+ await check('Prerequisites are specific to each lecture and typeset mathematical examples',async()=>{
   await go('/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html#kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert(await page.$('#nen-tang-gradient'));assert(await page.$('#nen-tang-to-hop-loi'))
   assert.deepEqual(await page.$$eval('.foundation-group',els=>els.map(el=>el.querySelector('h3')?.textContent)),['Cần ôn trước','Tra cứu trong khi đọc'])
   assert(await page.$('#nen-tang-tham-so-toan-hoc'));assert.equal(await page.$('#nen-tang-tham-so-lap-trinh'),null)
-  await page.click('#nen-tang-ma-tran-psd input');await page.reload({waitUntil:'networkidle0'});assert(await page.$('#nen-tang-ma-tran-psd input:checked'))
-  await go('/toan-cho-ai/bai-giang/bai-02-tap-loi.html#kien-thuc-can-co');assert(await page.$('#nen-tang-tap-loi'));assert.equal(await page.$('#nen-tang-gradient'),null);assert(await page.$('#nen-tang-ma-tran-psd input:checked'))
+  await page.click('#nen-tang-ma-tran-psd summary');assert(await page.$('#nen-tang-ma-tran-psd .foundation-notation mjx-container svg'))
+  await go('/toan-cho-ai/bai-giang/bai-02-tap-loi.html#kien-thuc-can-co');assert(await page.$('#nen-tang-tap-loi'));assert.equal(await page.$('#nen-tang-gradient'),null)
  })
  await check('Old Notes, glossary and slides addresses resolve and keep reading progress',async()=>{
   await go('/');await page.evaluate(()=>localStorage.removeItem('studyhub_last_lesson'))

@@ -84,7 +84,7 @@ Lỗi sinh viên mắc **nhiều nhất**:
 
 ## 14.4 Ngữ nghĩa: mô hình và diễn giải
 
-Một câu FOL đúng/sai phụ thuộc vào **mô hình** (tập đối tượng + quan hệ) và **diễn giải** (ánh xạ: ký hiệu hằng → đối tượng, ký hiệu vị từ → quan hệ, ký hiệu hàm → hàm). Cùng một câu $\text{Brother}(Richard, John)$ có thể đúng trong mô hình này, sai trong mô hình khác — **luôn có thể tồn tại nhiều mô hình thoả mãn cùng một cơ sở tri thức**, đó là lý do suy luận logic phải đúng trong **mọi** mô hình thoả mãn tiền đề (entailment), không phải chỉ một mô hình cụ thể.
+Một câu FOL đúng hay sai phụ thuộc vào mô hình và cách diễn giải các ký hiệu. Mô hình xác định tập đối tượng cùng các quan hệ, còn cách diễn giải gắn hằng với đối tượng, vị từ với quan hệ và ký hiệu hàm với hàm. Chẳng hạn, câu $\text{Brother}(Richard, John)$ có thể đúng trong một mô hình nhưng sai trong mô hình khác. Vì một cơ sở tri thức có thể có nhiều mô hình thỏa mãn, hệ quả logic (entailment) phải đúng trong mọi mô hình thỏa tiền đề.
 
 ## 14.5 Suy luận: hợp nhất hoá (Unification) & Modus Ponens tổng quát
 
@@ -139,7 +139,7 @@ flowchart TD
     NONLIVING --> LIQUID["Chất lỏng"]
 ```
 
-Mỗi liên kết nghĩa là "chuyên biệt hoá của" (is-a); các nhánh **không nhất thiết tách rời** — ví dụ "Robot hình người" có thể vừa thuộc `PHYS` vừa mang thuộc tính hành vi của `HUMAN`.
+Mỗi liên kết nghĩa là "chuyên biệt hoá của" (is-a). Các nhánh **không nhất thiết tách rời** — ví dụ "Robot hình người" có thể vừa thuộc `PHYS` vừa mang thuộc tính hành vi của `HUMAN`.
 
 ### Mạng ngữ nghĩa (semantic network)
 
@@ -162,7 +162,7 @@ $$
 đọc là: "Sinh viên là một Người-học **và** có học ít nhất một Môn học" — tương đương một câu FOL nhưng thiết kế để suy luận (subsumption, phân loại lớp) trong thời gian đa thức, đánh đổi lại **biểu đạt yếu hơn** FOL đầy đủ.
 
 ::: warning Bẫy thi #4 — "Ontology càng tổng quát càng tốt"
-AIMA chương 10 chỉ rõ: nỗ lực xây một **bản thể luận tổng quát duy nhất cho cả thế giới** cho tới nay **chưa có ứng dụng lớn nào thành công hoàn toàn** — mọi hệ thống AI hàng đầu đều dùng bản thể luận **chuyên biệt cho từng miền** kết hợp học máy, không phải một ontology vạn năng. Đừng trả lời "ontology tổng quát luôn tốt hơn" trong bài tự luận — hãy nêu được sự đánh đổi.
+Một bản thể luận tổng quát hướng đến nhiều miền, còn bản thể luận chuyên biệt tổ chức tri thức trong một phạm vi đã chọn. Khi so sánh hai cách xây dựng, cần xét khả năng biểu đạt, mức chi tiết, chi phí duy trì và nhu cầu sử dụng. Vì vậy, không nên kết luận bản thể luận tổng quát luôn tốt hơn chỉ vì phạm vi của nó rộng hơn.
 :::
 
 ## 14.7 Bảng bẫy thi chương này
@@ -170,7 +170,7 @@ AIMA chương 10 chỉ rõ: nỗ lực xây một **bản thể luận tổng qu
 | # | Bẫy | Ghi nhớ |
 |---|---|---|
 | 1 | Đảo lượng từ $\exists\forall \leftrightarrow \forall\exists$ | Không tương đương — chỉ $\forall\forall$, $\exists\exists$ được đảo tự do |
-| 2 | Sai liên từ chính | $\forall$ đi với $\Rightarrow$; $\exists$ đi với $\land$ |
+| 2 | Sai liên từ chính | $\forall$ đi với $\Rightarrow$, $\exists$ đi với $\land$ |
 | 3 | Mệnh đề hoá vô tội vạ | Sinh câu thừa không liên quan tới truy vấn |
 | 4 | "Ontology càng tổng quát càng tốt" | Đánh đổi biểu đạt ↔ khả năng suy luận |
 

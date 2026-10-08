@@ -3,6 +3,7 @@ import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import { concepts } from '../concepts.mjs'
 import { conceptField } from '../wiki-content.mjs'
+import MathText from './MathText.vue'
 
 const route = useRoute()
 const term = ref(null)
@@ -209,11 +210,11 @@ watch(() => route.path, () => close())
           @click="close({ restoreFocus: true })"
         >Đóng</button>
       </div>
-      <p>{{ term.definition }}</p>
+      <MathText as="p" :text="term.definition" />
       <div class="term-preview-example">
         <span>Ví dụ:</span>
-        <pre v-if="term.notation" class="term-preview-notation">{{ term.notation }}</pre>
-        <p v-else>{{ term.example }}</p>
+        <MathText as="p" :text="term.example" />
+        <MathText v-if="term.notation" as="div" class="term-preview-notation" :text="term.notation" />
       </div>
       <a v-if="pinned" class="term-preview-wiki" :href="wikiHref">Đọc bài Wiki đầy đủ <span aria-hidden="true">→</span></a>
       <span v-else class="term-preview-hint">Nhấp để giữ ghi chú và mở đường dẫn tới Wiki.</span>

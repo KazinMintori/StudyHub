@@ -7,7 +7,7 @@ next: false
 
 # Hàm lồi
 
-Hàm f trên miền lồi là lồi nếu f(θx+(1−θ)y)≤θf(x)+(1−θ)f(y) với mọi x,y trong miền và θ trong [0,1]. Với hàm khả vi trên miền mở lồi, mặt phẳng tiếp tuyến luôn nằm dưới hàm.
+Hàm f trên miền lồi là lồi nếu $f(\theta x+(1-\theta )y)\le \theta f(x)+(1-\theta )f(y)$ với mọi x,y trong miền và $\theta$ trong [0,1]. Với hàm khả vi trên miền mở lồi, mặt phẳng tiếp tuyến luôn nằm dưới hàm.
 
 <WikiUsage />
 
@@ -17,11 +17,11 @@ Trên miền mở lồi, nếu $f$ khả vi thì tính lồi tương đương
 
 $$f(y)\ge f(x)+\nabla f(x)^T(y-x).$$
 
-Với $f$ hai lần khả vi, có thể kiểm $\nabla^2f(x)\succeq0$ ở mọi điểm. Hàm lồi có thể không khả vi, chẳng hạn $|x|$ ở 0. Lồi nghiêm dùng dấu nhỏ hơn với $x\ne y$, $0<\theta<1$; nó không tự bảo đảm đạt nghiệm. Nguồn: Convex Optimization, §3.1.
+Với $f$ hai lần khả vi, có thể kiểm $\nabla^2f(x)\succeq0$ ở mọi điểm. Hàm lồi có thể không khả vi, chẳng hạn $|x|$ ở 0. Lồi nghiêm dùng dấu nhỏ hơn với $x\ne y$, $0<\theta<1$. Nó không tự bảo đảm đạt nghiệm. Nguồn: Convex Optimization, §3.1.
 
 ## Ví dụ
 
-$f(x)=x^2$: tại x=−1, y=2, θ=1/2, giá trị ở trung điểm là 1/4, còn trung bình hai giá trị là 5/2.
+$f(x)=x^2$: tại $x=-1$, $y=2$, $\theta =\frac{1}{2}$, giá trị ở trung điểm là $\frac{1}{4}$, còn trung bình hai giá trị là $\frac{5}{2}$.
 
 ## Khi nào cần dùng?
 

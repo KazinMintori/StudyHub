@@ -10,7 +10,7 @@ description: "Tự tính Lagrangian, hàm đối ngẫu và khoảng cách đố
 
 Tìm được một điểm khả thi có giá trị hàm mục tiêu nhỏ chưa đủ để kết luận điểm đó tối ưu, vì vẫn có thể tồn tại một điểm khả thi khác tốt hơn. Một cách chứng nhận là xây dựng cận dưới đúng cho mọi nghiệm của bài toán cực tiểu. Nếu giá trị của một điểm khả thi bằng cận dưới ấy, không điểm nào có thể tốt hơn. Đối ngẫu Lagrange tạo ra các cận dưới như vậy bằng cách đưa các ràng buộc vào hàm mục tiêu với những hệ số thích hợp.
 
-Ta tiếp tục bài $\min(x-2)^2$ với $x\le1$ từ Bài 01. Ví dụ này tự đặt; lý thuyết dựa vào chương 5 của *Convex Optimization*.
+Ta tiếp tục bài $\min(x-2)^2$ với $x\le1$ từ Bài 01. Ví dụ này tự đặt. Lý thuyết dựa vào chương 5 của *Convex Optimization*.
 
 Sau khi học xong, bạn sẽ tính được hàm đối ngẫu bằng cách lấy infimum theo biến gốc trước, xác minh được bốn nhóm điều kiện KKT, và dùng khoảng cách đối ngẫu để định lượng mức chưa tối ưu của một điểm khả thi.
 
@@ -18,27 +18,39 @@ Lần đọc đầu nên dừng sau mục 3, khi bạn đã tự tính được 
 
 ## 1. Lagrangian và dấu của các nhân tử
 
-Với bài min $f_0(x)$, $f_i(x)\le0$, $h_j(x)=0$, đặt **Lagrangian**
+Giả sử bài cực tiểu $f_0(x)$ có $m$ bất đẳng thức $f_i(x)\le0$ và $p$ đẳng thức $h_j(x)=0$. Ta cộng vào mục tiêu một số hạng cho mỗi ràng buộc. Viết đầy đủ:
 
-$$L(x,\lambda,\nu)=f_0(x)+\sum_i\lambda_i f_i(x)+\sum_j\nu_jh_j(x).$$
+$$
+\begin{aligned}
+L(x,\lambda,\nu)=f_0(x)
+&+\lambda_1f_1(x)+\cdots+\lambda_mf_m(x)\\
+&+\nu_1h_1(x)+\cdots+\nu_ph_p(x).
+\end{aligned}
+$$
 
-$\lambda_i$ là nhân tử cho bất đẳng thức; $\nu_j$ cho đẳng thức. Ta chọn $\lambda_i\ge0$. Tại một điểm khả thi $\widetilde x$, mỗi số $\lambda_i f_i(\widetilde x)\le0$ và mỗi $\nu_j h_j(\widetilde x)=0$. Vì vậy
+Đó là **Lagrangian**, thường viết gọn thành
+
+$$L(x,\lambda,\nu)=f_0(x)+\sum_{i=1}^m\lambda_i f_i(x)+\sum_{j=1}^p\nu_jh_j(x).$$
+
+Chỉ số $i$ chạy qua các bất đẳng thức. $j$ chạy qua các đẳng thức. Mỗi tổng được xem là 0 nếu nhóm ràng buộc tương ứng rỗng. Sau khi phạm vi đã rõ, ta có thể viết $\sum_i$ hoặc $\sum_j$.
+
+$\lambda_i$ là nhân tử cho bất đẳng thức. $\nu_j$ cho đẳng thức. Ta chọn $\lambda_i\ge0$. Tại một điểm khả thi $\widetilde x$, mỗi số $\lambda_i f_i(\widetilde x)\le0$ và mỗi $\nu_j h_j(\widetilde x)=0$. Vì vậy
 
 $$L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).$$
 
-Đẳng thức không đòi $\nu_j\ge0$: nhân với số 0 vẫn bằng 0 khi $\nu_j$ âm, bằng 0 hoặc dương. Dấu của nhân tử gắn với quy ước $f_i\le0$; nếu đổi quy ước phải đổi tương ứng.
+Đẳng thức không đòi $\nu_j\ge0$: nhân với số 0 vẫn bằng 0 khi $\nu_j$ âm, bằng 0 hoặc dương. Dấu của nhân tử gắn với quy ước $f_i\le0$. Nếu đổi quy ước phải đổi tương ứng.
 
 Giữ nhân tử cố định và lấy cận dưới theo $x$ trong miền chung $D$ của các hàm:
 
 $$g(\lambda,\nu)=\inf_{x\in D}L(x,\lambda,\nu).$$
 
-Ta không giữ các ràng buộc tường minh $f_i\le0,h_j=0$ trong phép infimum này; chúng đã nằm trong Lagrangian. Các điều kiện miền xác định, như $x>0$ cho log, vẫn phải giữ.
+Ta không giữ các ràng buộc tường minh $f_i\le0,h_j=0$ trong phép infimum này. Chúng đã nằm trong Lagrangian. Các điều kiện miền xác định, như $x>0$ cho log, vẫn phải giữ.
 
 Vì infimum không lớn hơn giá trị ở $\widetilde x$,
 
 $$\boxed{g(\lambda,\nu)\le L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).}$$
 
-Điều này đúng với mọi điểm khả thi, nên $g\le p^*$. Đây là **đối ngẫu yếu**, không cần bài gốc lồi. Nếu L không bị chặn dưới, $g=-\infty$; cận ấy đúng nhưng không hữu ích.
+Điều này đúng với mọi điểm khả thi, nên $g\le p^*$. Đây là **đối ngẫu yếu**, không cần bài gốc lồi. Nếu L không bị chặn dưới, $g=-\infty$. Cận ấy đúng nhưng không hữu ích.
 
 ## 2. Tính hàm đối ngẫu trong một ví dụ
 
@@ -58,7 +70,7 @@ $$g(\lambda)=\lambda-\frac{\lambda^2}4.$$
 
 $$\max_{\lambda\ge0}g(\lambda).$$
 
-Ta có $g'(\lambda)=1-\lambda/2$, nên $\lambda^*=2$, $g(2)=1$. Nghiệm gốc $x^*=1$ cũng cho $f_0(1)=1$. Cận dưới và ứng viên gặp nhau; cả hai tối ưu.
+Ta có $g'(\lambda)=1-\lambda/2$, nên $\lambda^*=2$, $g(2)=1$. Nghiệm gốc $x^*=1$ cũng cho $f_0(1)=1$. Cận dưới và ứng viên gặp nhau. Cả hai tối ưu.
 
 <MathLab type="dual">
 
@@ -69,7 +81,7 @@ const gap = 1-g(lambda); // x=1 khả thi, f(1)=1
 
 </MathLab>
 
-Mô phỏng cơ chế cận dưới ở §5.1.3 và Hình 5.1 của sách bằng bài toán tự đặt. Đổi $\lambda$ để thấy cận có thể còn xa nghiệm. Khi $\lambda=0$, điểm cực tiểu L là 2, không khả thi cho bài gốc; việc cực tiểu L không tự thu hồi nghiệm khả thi.
+Mô phỏng cơ chế cận dưới ở §5.1.3 và Hình 5.1 của sách bằng bài toán tự đặt. Đổi $\lambda$ để thấy cận có thể còn xa nghiệm. Khi $\lambda=0$, điểm cực tiểu L là 2, không khả thi cho bài gốc. Việc cực tiểu L không tự thu hồi nghiệm khả thi.
 
 ## 3. Tính lõm của hàm đối ngẫu
 
@@ -85,7 +97,7 @@ Mỗi giá trị bên trong infimum không nhỏ hơn vế phải, nên lấy in
 
 <details><summary>Thử trả lời: Bài toán đối ngẫu cực tiểu hay cực đại hàm g, và vì sao?</summary>
 
-Cực đại: mọi giá trị $g$ hợp lệ đều là cận dưới; ta muốn cận lớn nhất, gần giá trị tối ưu gốc nhất. Cực tiểu g chỉ làm cận yếu đi.
+Cực đại: mọi giá trị $g$ hợp lệ đều là cận dưới. Ta muốn cận lớn nhất, gần giá trị tối ưu gốc nhất. Cực tiểu g chỉ làm cận yếu đi.
 
 </details>
 
@@ -99,13 +111,13 @@ $$f_i(\bar x)<0\ \forall i,\qquad A\bar x=b.$$
 
 Nội tương đối $\operatorname{relint}D$ là phần trong của miền khi nhìn trong không gian affine nhỏ nhất chứa nó. Một đoạn nằm trên đường trong $\mathbb R^2$ có nội hai chiều rỗng nhưng có nội tương đối là phần giữa hai đầu mút. Cần khái niệm này khi miền sống trong một không gian thấp chiều.
 
-Slater là điều kiện đủ cho đối ngẫu mạnh; khi giá trị tối ưu gốc hữu hạn, điều kiện này còn bảo đảm bài toán đối ngẫu đạt nghiệm. Đối với các bất đẳng thức affine, sách nêu một phiên bản Slater yếu hơn, không bắt buộc mọi bất đẳng thức affine phải thỏa chặt. Trong bài này ta dùng phiên bản đủ ở trên và không coi Slater là điều kiện cần.
+Slater là điều kiện đủ cho đối ngẫu mạnh. Khi giá trị tối ưu gốc hữu hạn, điều kiện này còn bảo đảm bài toán đối ngẫu đạt nghiệm. Đối với các bất đẳng thức affine, sách nêu một phiên bản Slater yếu hơn, không bắt buộc mọi bất đẳng thức affine phải thỏa chặt. Trong bài này ta dùng phiên bản đủ ở trên và không coi Slater là điều kiện cần.
 
 Ví dụ mở đầu có $\bar x=0$ thỏa $x-1=-1<0$. Các hàm hữu hạn trên toàn $\mathbb R$, nên nội tương đối không tạo hạn chế thêm. Đối ngẫu mạnh phù hợp với phép tính $p^*=d^*=1$.
 
 ## 5. Bốn nhóm điều kiện KKT
 
-Giả sử mục tiêu và các hàm bất đẳng thức khả vi; đẳng thức affine. Các điều kiện **Karush–Kuhn–Tucker (KKT)** gồm:
+Giả sử mục tiêu và các hàm bất đẳng thức khả vi. Đẳng thức affine. Các điều kiện **Karush–Kuhn–Tucker (KKT)** gồm:
 
 | Nhóm | Công thức | Điều cần xác minh |
 | --- | --- | --- |
@@ -114,7 +126,7 @@ Giả sử mục tiêu và các hàm bất đẳng thức khả vi; đẳng th�
 | Bù trừ | $\lambda_i f_i(x)=0$ | Số hạng bất đẳng thức nào còn đóng góp? |
 | Dừng | $\nabla f_0(x)+\sum_i\lambda_i\nabla f_i(x)+A^T\nu=0$ | $x$ có cực tiểu Lagrangian không? |
 
-Trong **bài lồi**, KKT đủ cho tối ưu. Lý do: $L$ lồi theo $x$ khi các nhân tử không âm; dừng cho $x$ cực tiểu L; khả thi và bù trừ cho $L(x)=f_0(x)$. Vậy $g=f_0(x)$ và khoảng cách đối ngẫu bằng 0.
+Trong **bài lồi**, KKT đủ cho tối ưu. Lý do: $L$ lồi theo $x$ khi các nhân tử không âm. Dừng cho $x$ cực tiểu L. Khả thi và bù trừ cho $L(x)=f_0(x)$. Vậy $g=f_0(x)$ và khoảng cách đối ngẫu bằng 0.
 
 Nếu bài lồi khả vi thỏa Slater và có nghiệm gốc đạt, KKT cũng cần: mỗi nghiệm có một bộ nhân tử phù hợp. Với bài không lồi, dừng của L chưa bảo đảm cực tiểu toàn cục, nên không dùng KKT như chứng nhận toàn cục.
 
@@ -126,10 +138,10 @@ Tại $x^*=1$, $\lambda^*=2$:
 3. $2(1-1)=0$.
 4. $2(1-2)+2=0$.
 
-Không có đẳng thức nên không có $\nu$. Ràng buộc chặt vì $f_1(x^*)=0$; nhân tử 2 cân bằng gradient $-2$ của mục tiêu.
+Không có đẳng thức nên không có $\nu$. Ràng buộc chặt vì $f_1(x^*)=0$. Nhân tử 2 cân bằng gradient $-2$ của mục tiêu.
 :::
 
-Bù trừ chỉ cho hai khả năng: ràng buộc không chặt thì nhân tử bằng 0; nhân tử dương thì ràng buộc chặt. Ràng buộc chặt vẫn có thể có nhân tử 0. Không đảo các mệnh đề ấy.
+Bù trừ chỉ cho hai khả năng: ràng buộc không chặt thì nhân tử bằng 0. Nhân tử dương thì ràng buộc chặt. Ràng buộc chặt vẫn có thể có nhân tử 0. Không đảo các mệnh đề ấy.
 
 ## 6. Một ví dụ hai chiều với đẳng thức
 
@@ -139,11 +151,11 @@ $$\min_{x,y}\frac12[(x-2)^2+y^2],\qquad x+y=1.$$
 
 Lagrangian $L=\tfrac12[(x-2)^2+y^2]+\nu(x+y-1)$. Nhân tử $\nu$ không bị giới hạn dấu. Điều kiện dừng cho $x=2-\nu$, $y=-\nu$. Đẳng thức cho $2-2\nu=1$, nên
 
-$$\nu^*=1/2,\quad x^*=3/2,\quad y^*=-1/2,\quad p^*=1/4.$$
+$$\nu^*=\frac{1}{2},\quad x^*=\frac{3}{2},\quad y^*=-\frac{1}{2},\quad p^*=\frac{1}{4}.$$
 
 Nghiệm có $y<0$ vẫn hợp lệ vì bài chưa đặt ràng buộc không âm. Tự thêm $y\ge0$ sẽ đổi bài toán.
 
-Tính đối ngẫu cho $g(\nu)=\nu-\nu^2$. Tại $\nu=1/2$, $g=1/4$ bằng mục tiêu. Bài này là trường hợp cụ thể của QP có đẳng thức ở Ví dụ 5.1; số liệu tự đặt. Dạng hệ tổng quát là
+Tính đối ngẫu cho $g(\nu)=\nu-\nu^2$. Tại $\nu=\frac{1}{2}$, $g=\frac{1}{4}$ bằng mục tiêu. Bài này là trường hợp cụ thể của QP có đẳng thức ở Ví dụ 5.1. Số liệu tự đặt. Dạng hệ tổng quát là
 
 $$\begin{bmatrix}P&A^T\\A&0\end{bmatrix}
 \begin{bmatrix}x^*\\\nu^*\end{bmatrix}
@@ -157,9 +169,9 @@ Với $x$ khả thi gốc và $(\lambda,\nu)$ khả thi đối ngẫu,
 
 $$0\le f_0(x)-p^*\le f_0(x)-g(\lambda,\nu).$$
 
-Vế phải là **khoảng cách đối ngẫu** của cặp đang có; nó cho cận trên của độ thiếu tối ưu mà không cần biết $p^*$. Tại $x=0$, $\lambda=2$ trong ví dụ một chiều, $f_0=4$, $g=1$, nên khoảng cách bằng 3. Điểm ấy đúng là kém tối ưu 3.
+Vế phải là **khoảng cách đối ngẫu** của cặp đang có. Nó cho cận trên của độ thiếu tối ưu mà không cần biết $p^*$. Tại $x=0$, $\lambda=2$ trong ví dụ một chiều, $f_0=4$, $g=1$, nên khoảng cách bằng 3. Điểm ấy đúng là kém tối ưu 3.
 
-Nếu thay ràng buộc bằng $x\le b$, gần $b=1$ và còn $b<2$, nghiệm là $x=b$, giá trị $(b-2)^2$. Đạo hàm theo $b$ tại 1 là $-2=-\lambda^*$. Cho thêm một lượng nhỏ giới hạn làm giá trị tối ưu giảm với tốc độ xấp xỉ 2. Diễn giải độ nhạy cần điều kiện tính khả vi của hàm giá trị; không coi nhân tử là dự báo chính xác cho mọi thay đổi lớn.
+Nếu thay ràng buộc bằng $x\le b$, gần $b=1$ và còn $b<2$, nghiệm là $x=b$, giá trị $(b-2)^2$. Đạo hàm theo $b$ tại 1 là $-2=-\lambda^*$. Cho thêm một lượng nhỏ giới hạn làm giá trị tối ưu giảm với tốc độ xấp xỉ 2. Diễn giải độ nhạy cần điều kiện tính khả vi của hàm giá trị. Không coi nhân tử là dự báo chính xác cho mọi thay đổi lớn.
 
 ## Bài tập tự luyện
 
@@ -167,26 +179,26 @@ Nếu thay ràng buộc bằng $x\le b$, gần $b=1$ và còn $b<2$, nghiệm l�
 Với $\min x^2$, $x\ge1$, viết ràng buộc dạng $\le0$ rồi tính $g(\lambda)$.
 :::
 ::: solution
-Dùng $1-x\le0$. $L=x^2+\lambda(1-x)$ cực tiểu tại $x=\lambda/2$, nên $g=\lambda-\lambda^2/4$, $\lambda\ge0$. Đối ngẫu đạt tại $\lambda=2$, cho $g=1$ và thu hồi $x=1$ khả thi.
+Dùng $1-x\le0$. $L=x^2+\lambda(1-x)$ cực tiểu tại $x=\lambda/2$, nên $g=\lambda-\\frac{lambda^2}{4}$, $\lambda\ge0$. Đối ngẫu đạt tại $\lambda=2$, cho $g=1$ và thu hồi $x=1$ khả thi.
 :::
 
 ::: exercise 2. Nhân tử bằng 0 tại biên
 Với $\min x^2$, $x\le0$, hãy xác minh các điều kiện KKT tại $x=0$, $\lambda=0$.
 :::
 ::: solution
-Khả thi $x=0$; nhân tử không âm; bù trừ $0\cdot0=0$; dừng $2x+\lambda=0$. Ràng buộc chặt dù nhân tử bằng 0. Đây là phản ví dụ cho suy luận “ràng buộc chặt thì nhân tử dương”.
+Khả thi $x=0$. Nhân tử không âm. Bù trừ $0\cdot0=0$. Dừng $2x+\lambda=0$. Ràng buộc chặt dù nhân tử bằng 0. Đây là phản ví dụ cho suy luận “ràng buộc chặt thì nhân tử dương”.
 :::
 
 ::: exercise 3. Chứng nhận QP hồi quy
-Với QP ở Bài 02, $f'(w)=14w-11$, $w\le1/2$. Tìm nhân tử tại $w=1/2$.
+Với QP ở Bài 02, $f'(w)=14w-11$, $w\le1/2$. Tìm nhân tử tại $w=\frac{1}{2}$.
 :::
 ::: solution
-Ràng buộc $w-1/2\le0$, dừng $14(1/2)-11+\lambda=0$ cho $\lambda=4$. Nhân tử dương và ràng buộc chặt nên đủ bốn nhóm KKT. Bài lồi, vậy $w=1/2$ tối ưu. Không cần đoán nghiệm từ thuật toán.
+Ràng buộc $w-\frac{1}{2}\le0$, dừng $14(\frac{1}{2})-11+\lambda=0$ cho $\lambda=4$. Nhân tử dương và ràng buộc chặt nên đủ bốn nhóm KKT. Bài lồi, vậy $w=\frac{1}{2}$ tối ưu. Không cần đoán nghiệm từ thuật toán.
 :::
 
 ## Tóm tắt
 
-Đối ngẫu yếu đến từ dấu của nhân tử và phép infimum. Slater là một điều kiện đủ để cận tốt nhất chạm giá trị gốc. KKT gồm những điều kiện có vai trò riêng; trong bài lồi, chúng nối cực tiểu Lagrangian với nghiệm khả thi. Khoảng cách đối ngẫu cho biết cặp nghiệm hiện tại còn cách tối ưu nhiều nhất bao nhiêu.
+Đối ngẫu yếu đến từ dấu của nhân tử và phép infimum. Slater là một điều kiện đủ để cận tốt nhất chạm giá trị gốc. KKT gồm những điều kiện có vai trò riêng. Trong bài lồi, chúng nối cực tiểu Lagrangian với nghiệm khả thi. Khoảng cách đối ngẫu cho biết cặp nghiệm hiện tại còn cách tối ưu nhiều nhất bao nhiêu.
 
 ## Nguồn và đọc thêm
 

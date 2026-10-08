@@ -7,7 +7,7 @@ next: false
 
 # Độc lập
 
-Hai biến cố A, B độc lập khi P(A∩B)=P(A)P(B). Khi P(B)>0, điều này tương đương P(A|B)=P(A). Độc lập khác loại trừ nhau: hai biến cố không thể cùng xảy ra và đều có xác suất dương sẽ không độc lập.
+Hai biến cố A, B độc lập khi $P(A\cap B)=P(A)P(B)$. Khi $P(B)>0$, điều này tương đương $P(A|B)=P(A)$. Độc lập khác loại trừ nhau: hai biến cố không thể cùng xảy ra và đều có xác suất dương sẽ không độc lập.
 
 <WikiUsage />
 
@@ -15,7 +15,7 @@ Hai biến cố A, B độc lập khi P(A∩B)=P(A)P(B). Khi P(B)>0, điều nà
 
 **Độc lập từng đôi khác độc lập toàn bộ.** Với nhiều biến cố, yêu cầu từng cặp độc lập chưa đủ để kết luận mọi nhóm đều có xác suất giao bằng tích xác suất. Cần kiểm tra định nghĩa phù hợp với số biến cố.
 
-Độc lập cũng không đồng nghĩa không tương quan trong mọi trường hợp. Với biến có phương sai hữu hạn, độc lập kéo theo hiệp phương sai bằng 0; chiều ngược lại nhìn chung không đúng.
+Độc lập cũng không đồng nghĩa không tương quan trong mọi trường hợp. Với biến có phương sai hữu hạn, độc lập kéo theo hiệp phương sai bằng 0. Chiều ngược lại nhìn chung không đúng.
 
 ## Ví dụ
 

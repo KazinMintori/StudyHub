@@ -64,7 +64,7 @@ int binarySearch(const vector<int>& arr, int target) {
 
 ## 2. Kỹ thuật Hai Con Trỏ (Two Pointers)
 
-Kỹ thuật Hai con trỏ là phương pháp cực kỳ lợi hại để giảm độ phức tạp từ $\mathcal{O}(n^2)$ xuống $\mathcal{O}(n)$ trên mảng đã sắp xếp.
+Kỹ thuật hai con trỏ giúp giảm độ phức tạp từ $\mathcal{O}(n^2)$ xuống $\mathcal{O}(n)$ trên mảng đã sắp xếp.
 
 ### Bài toán 2-Sum: tìm hai số có tổng bằng giá trị cho trước
 - Đặt con trỏ `left = 0` (số nhỏ nhất) và `right = n - 1` (số lớn nhất).

@@ -7,15 +7,15 @@ next: false
 
 # Biến ngẫu nhiên
 
-Biến ngẫu nhiên gán một con số cho mỗi kết quả trong không gian mẫu. X là quy tắc gán, còn x là giá trị cụ thể quan sát được. Biến rời rạc có tập giá trị đếm được; biến liên tục thường được mô tả bằng mật độ và xác suất trên khoảng.
+Biến ngẫu nhiên gán một con số cho mỗi kết quả trong không gian mẫu. X là quy tắc gán, còn x là giá trị cụ thể quan sát được. Biến rời rạc có tập giá trị đếm được. Biến liên tục thường được mô tả bằng mật độ và xác suất trên khoảng.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**X là hàm, x là giá trị.** Biến ngẫu nhiên X ánh xạ kết quả ω trong không gian mẫu thành số X(ω). PMF cho P(X=x) với biến rời rạc; mật độ PDF cho phép tính xác suất trên khoảng với biến liên tục.
+**X là hàm, x là giá trị.** Biến ngẫu nhiên X ánh xạ kết quả $\omega$ trong không gian mẫu thành số $X(\omega )$. PMF cho $P(X=x)$ với biến rời rạc. Mật độ PDF cho phép tính xác suất trên khoảng với biến liên tục.
 
-Hàm phân phối tích lũy F(x)=P(X≤x) dùng cho cả hai. Mật độ tại một điểm không phải xác suất tại điểm; với biến liên tục có mật độ, P(X=x)=0.
+Hàm phân phối tích lũy $F(x)=P(X\le x)$ dùng cho cả hai. Mật độ tại một điểm không phải xác suất tại điểm. Với biến liên tục có mật độ, $P(X=x)=0$.
 
 ## Ví dụ
 

@@ -33,8 +33,8 @@ graph TD
     class 8 root;
 ```
 
-::: tip Tính chất Thần thánh của BST
-Khi duyệt cây BST theo thứ tự **Inorder (Trái $\rightarrow$ Gốc $\rightarrow$ Phải)**, bạn luôn thu được một dãy số **tăng dần có thứ tự hoàn hảo**!  
+::: tip Kết quả duyệt giữa trên cây tìm kiếm nhị phân
+Khi duyệt cây BST theo thứ tự **Inorder (Trái $\rightarrow$ Gốc $\rightarrow$ Phải)**, bạn luôn thu được một dãy số **tăng dần khi các khóa phân biệt**!
 *Ví dụ cây trên:* $1 \rightarrow 3 \rightarrow 4 \rightarrow 6 \rightarrow 7 \rightarrow 8 \rightarrow 10 \rightarrow 13 \rightarrow 14$.
 :::
 

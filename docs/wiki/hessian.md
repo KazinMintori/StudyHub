@@ -7,7 +7,7 @@ next: false
 
 # Hessian
 
-Với hàm f có đạo hàm bậc hai liên tục, Hessian H có phần tử Hᵢⱼ=∂²f/∂xᵢ∂xⱼ. H mô tả độ cong theo hướng v qua số vᵀHv. Hessian khác gradient: một bên là ma trận, một bên là vector.
+Với hàm $f$ có đạo hàm bậc hai liên tục, Hessian $H$ có phần tử $H_{ij}=\frac{\partial^2 f}{\partial x_i\,\partial x_j}$. $H$ mô tả độ cong theo hướng $v$ qua số $v^THv$. Hessian khác gradient: một bên là ma trận, một bên là vector.
 
 <WikiUsage />
 
@@ -17,7 +17,7 @@ Với $f:\mathbb R^n\to\mathbb R$ có đạo hàm bậc hai liên tục, $H=\nab
 
 $$f(x+d)=f(x)+\nabla f(x)^Td+\tfrac12d^THd+o(\|d\|_2^2).$$
 
-Ký hiệu $o(\|d\|_2^2)$ là phần dư mà tỉ số với $\|d\|_2^2$ tiến về 0 khi $d$ tiến về 0. Số $d^THd$ đo độ cong theo hướng $d$; nó không phải một tọa độ riêng của Hessian. Trên miền mở lồi, hàm hai lần khả vi là lồi khi và chỉ khi Hessian PSD ở mọi điểm. Kiểm ở một điểm chưa đủ. Nguồn: Convex Optimization, §A.4.2 và §3.1.4.
+Ký hiệu $o(\|d\|_2^2)$ là phần dư mà tỉ số với $\|d\|_2^2$ tiến về 0 khi $d$ tiến về 0. Số $d^THd$ đo độ cong theo hướng $d$. Nó không phải một tọa độ riêng của Hessian. Trên miền mở lồi, hàm hai lần khả vi là lồi khi và chỉ khi Hessian PSD ở mọi điểm. Kiểm ở một điểm chưa đủ. Nguồn: Convex Optimization, §A.4.2 và §3.1.4.
 
 ## Ví dụ
 
@@ -31,7 +31,7 @@ Kiểm tính lồi của hàm hai lần khả vi và lập bước Newton.
 
 ## Tự kiểm tra
 
-Hessian của f(x,y)=(x+y)² là gì?
+Hessian của $f(x,y)=(x+y)^{2}$ là gì?
 
 <details><summary>Xem đáp án</summary>
 

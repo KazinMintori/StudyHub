@@ -28,7 +28,7 @@ Một bộ lọc Bloom (Bloom Filter) sử dụng mảng bit có kích thước 
 2. Một truy vấn phần tử mới nhận kết quả dương tính giả khi tất cả $k$ vị trí băm của nó đều có giá trị $1$:
    $$\epsilon = \left(1 - P(\text{bit} = 0)\right)^k \approx \left(1 - 0.6050\right)^4 = (0.3950)^4 \approx 0.0243 \quad (2.43\%)$$
 
-3. Xét hàm mục tiêu $f(k) = (1 - e^{-kn/m})^k$. Đặt $p = e^{-kn/m}$, ta có $\ln f(k) = k \ln(1 - p) = -\frac{m}{n} \ln(p) \ln(1-p)$. Đạo hàm theo $p$ và giải $p = 1/2$, dẫn đến $e^{-kn/m} = \frac{1}{2} \iff k^* = \frac{m}{n} \ln 2$.
+3. Xét hàm mục tiêu $f(k) = (1 - e^{-kn/m})^k$. Đặt $p = e^{-kn/m}$, ta có $\ln f(k) = k \ln(1 - p) = -\frac{m}{n} \ln(p) \ln(1-p)$. Đạo hàm theo $p$ và giải $p = \frac{1}{2}$, dẫn đến $e^{-kn/m} = \frac{1}{2} \iff k^* = \frac{m}{n} \ln 2$.
 
 ---
 
@@ -40,7 +40,7 @@ Cho một dòng dữ liệu chứa các định danh số nguyên. Ta sử dụn
 3. Nêu nguyên nhân khiến phương sai của ước lượng đơn lẻ rất lớn và cách thức kỹ thuật Stochastic Averaging (chia bucket) khắc phục nhược điểm này.
 
 #### Lời giải gợi ý
-1. Với hàm băm lý tưởng phân phối đều ngẫu nhiên, mỗi bit có xác suất nhận giá trị $0$ hoặc $1$ độc lập bằng $1/2$. Do đó, xác suất chuỗi bit kết thúc bằng $r$ chữ số $0$ và tiếp theo là chữ số $1$ là $(1/2)^r \times (1/2) = (1/2)^{r+1}$.
+1. Với hàm băm lý tưởng phân phối đều ngẫu nhiên, mỗi bit có xác suất nhận giá trị $0$ hoặc $1$ độc lập bằng $\frac{1}{2}$. Do đó, xác suất chuỗi bit kết thúc bằng $r$ chữ số $0$ và tiếp theo là chữ số $1$ là $(\frac{1}{2})^r \times (\frac{1}{2}) = (\frac{1}{2})^{r+1}$.
 2. Ước lượng số phần tử phân biệt:
    $$\hat{F}_0 = \frac{2^R}{\phi} = \frac{2^5}{0.7735} \approx \frac{32}{0.7735} \approx 41.37 \approx 41$$
 3. Ước lượng đơn lẻ có phương sai lớn vì $R$ là một số nguyên rời rạc, làm cho ước lượng $2^R$ biến thiên theo lũy thừa của 2. Kỹ thuật chia bucket (như trong HyperLogLog) dùng $b$ bit đầu tiên của hàm băm để chia dòng dữ liệu thành $m = 2^b$ bucket độc lập, sau đó lấy trung bình điều hòa (harmonic mean) của các ước lượng trong từng bucket để triệt tiêu ảnh hưởng của các giá trị ngoại lai cực đoan.
@@ -106,7 +106,7 @@ Một hệ thống LSH chia ma trận chữ ký MinHash gồm $n = 100$ hàng th
    $$P(0.2) = 1 - (1 - 0.00032)^{20} \approx 1 - (1 - 20 \times 0.00032) = 20 \times 0.00032 = 0.00638 \quad (0.64\%)$$
 
 4. Điểm ngưỡng xấp xỉ:
-   $$s_0 \approx \left(\frac{1}{b}\right)^{1/r} = \left(\frac{1}{20}\right)^{1/5} = (0.05)^{0.2} \approx 0.549$$
+   $$s_0 \approx \left(\frac{1}{b}\right)^{1/r} = \left(\frac{1}{20}\right)^{\frac{1}{5}} = (0.05)^{0.2} \approx 0.549$$
 
 ---
 
@@ -121,15 +121,17 @@ Xét đồ thị web gồm 3 trang $A, B, C$ với các liên kết có hướng
 1. Viết ma trận chuyển đổi ngẫu nhiên $M$ của đồ thị.
 2. Với hệ số suy giảm $d = 0.85$, viết công thức cập nhật PageRank dạng ma trận:
    $$r^{(k+1)} = d M r^{(k)} + \frac{1 - d}{N} \mathbf{1}$$
-3. Khởi tạo $r^{(0)} = [1/3, 1/3, 1/3]^T$. Thực hiện 2 bước lặp lũy thừa (Power Iteration) để tìm $r^{(1)}$ và $r^{(2)}$.
+3. Khởi tạo $r^{(0)} = [\frac{1}{3}, \frac{1}{3}, \frac{1}{3}]^T$. Thực hiện 2 bước lặp lũy thừa (Power Iteration) để tìm $r^{(1)}$ và $r^{(2)}$.
 4. Giải hệ phương trình trạng thái dừng $r^* = d M r^* + \frac{1-d}{N} \mathbf{1}$ cùng điều kiện chuẩn hóa $\sum r_i = 1$ để tìm phân phối PageRank chính xác.
+
+Điều kiện chuẩn hóa viết đầy đủ là $r_1+\cdots+r_N=1$, hay $\sum_{i=1}^N r_i=1$. Chỉ số $i$ chạy qua các trang. Tổng bằng 1 không có nghĩa mọi điểm đều bằng nhau.
 
 #### Lời giải gợi ý
 1. Ma trận chuyển vị $M$ (trong đó phần tử $M_{ij}$ là xác suất nhảy từ trang $j$ sang trang $i$):
-   - Từ $A$: chia đều cho $B$ và $C \implies$ cột 1 là $[0, 1/2, 1/2]^T$.
+   - Từ $A$: chia đều cho $B$ và $C \implies$ cột 1 là $[0, \frac{1}{2}, \frac{1}{2}]^T$.
    - Từ $B$: trỏ đến $C \implies$ cột 2 là $[0, 0, 1]^T$.
    - Từ $C$: trỏ đến $A \implies$ cột 3 là $[1, 0, 0]^T$.
-   $$M = \begin{bmatrix} 0 & 0 & 1 \\ 1/2 & 0 & 0 \\ 1/2 & 1 & 0 \end{bmatrix}$$
+   $$M = \begin{bmatrix} 0 & 0 & 1 \\ \frac{1}{2} & 0 & 0 \\ \frac{1}{2} & 1 & 0 \end{bmatrix}$$
 
 2. Với $N = 3, d = 0.85 \implies \frac{1-d}{3} = \frac{0.15}{3} = 0.05$:
    $$r^{(k+1)} = 0.85 \begin{bmatrix} 0 & 0 & 1 \\ 0.5 & 0 & 0 \\ 0.5 & 1 & 0 \end{bmatrix} r^{(k)} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix}$$

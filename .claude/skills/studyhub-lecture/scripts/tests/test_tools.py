@@ -94,6 +94,11 @@ class LanguageReview(unittest.TestCase):
     def codes(self, text):
         return [f["code"] for f in self.reviewer.review([("t", text)])["findings"]]
 
+    def test_semicolon_review_preserves_technical_punctuation(self):
+        self.assertIn("PROSE_SEMICOLON", self.codes("Ta đọc dữ liệu; sau đó gom theo khóa."))
+        protected = "```python\na=1; b=2\n```\n`a=1; b=2`\n$x;y$\n$$\nx\\;y\n$$\nTên &amp; mã.\n<span style=\"color:red;\">Nhãn</span>"
+        self.assertNotIn("PROSE_SEMICOLON", self.codes(protected))
+
     def test_ignores_fences_and_unattributed_quotes(self):
         text = '> điểm hiện hành\n```\ntạo bước đi\n```\n~~~text\ntiến hành\n~~~\nGradient tại điểm hiện hành.'
         report = self.reviewer.review([("lesson", text)])

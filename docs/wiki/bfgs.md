@@ -7,7 +7,7 @@ next: false
 
 # BFGS
 
-BFGS cập nhật một xấp xỉ Hessian hoặc Hessian nghịch đảo từ độ dời s và thay đổi gradient y. Điều kiện yᵀs>0 giúp giữ tính dương xác định của xấp xỉ nghịch đảo khi trạng thái trước đã dương xác định.
+BFGS cập nhật một xấp xỉ Hessian hoặc Hessian nghịch đảo từ độ dời s và thay đổi gradient y. Điều kiện $y^{T}s>0$ giúp giữ tính dương xác định của xấp xỉ nghịch đảo khi trạng thái trước đã dương xác định.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ L-BFGS không lưu toàn bộ ma trận mà giữ một số cặp $(s,y)$ gần
 
 ## Ví dụ
 
-Nếu s=(1,0), y=(2,0), một xấp xỉ nghịch đảo phù hợp theo hướng này phải gửi y về s.
+Nếu $s=(1,0)$, $y=(2,0)$, một xấp xỉ nghịch đảo phù hợp theo hướng này phải gửi y về s.
 
 ## Khi nào cần dùng?
 
@@ -27,11 +27,11 @@ Tạo hướng gần Newton mà không tính Hessian thật ở mỗi bước.
 
 ## Tự kiểm tra
 
-Khi yᵀs≤0, có nên dùng nguyên công thức chia cho yᵀs không?
+Khi $y^{T}s\le 0$, có nên dùng nguyên công thức chia cho $y^{T}s$ không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Điều kiện độ cong đã hỏng; phần cài đặt phải bỏ hoặc sửa cập nhật.
+Không. Khi điều kiện độ cong không còn được thỏa, phần cài đặt cần bỏ qua hoặc điều chỉnh bước cập nhật.
 
 </details>
 

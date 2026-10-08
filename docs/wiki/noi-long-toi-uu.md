@@ -7,7 +7,7 @@ next: false
 
 # Nới lỏng bài toán
 
-Nới lỏng mở rộng miền khả thi hoặc bỏ bớt điều kiện để tạo một bài dễ hơn. Với bài cực tiểu và cùng mục tiêu, giá trị của bài nới lỏng là cận dưới; nghiệm nới lỏng chưa chắc hợp lệ cho bài gốc.
+Nới lỏng mở rộng miền khả thi hoặc bỏ bớt điều kiện để tạo một bài dễ hơn. Với bài cực tiểu và cùng hàm mục tiêu, giá trị của bài nới lỏng là cận dưới. Tuy nhiên, nghiệm của bài nới lỏng chưa chắc hợp lệ cho bài gốc.
 
 <WikiUsage />
 
@@ -15,11 +15,11 @@ Nới lỏng mở rộng miền khả thi hoặc bỏ bớt điều kiện để
 
 **Chiều của cận phụ thuộc min hay max.** Nếu $C\subseteq\widetilde C$, thì với bài min, $\inf_{x\in\widetilde C}f(x)\le\inf_{x\in C}f(x)$. Với bài max, chiều đảo lại. Đây là quan hệ tập hợp, không cần hai bài đều lồi.
 
-Nới lỏng thường đi cùng một phép thu hồi nghiệm: làm tròn, chiếu hoặc một quy tắc gần đúng khác. Giá trị nới lỏng cho cận; giá trị của ứng viên khả thi cho cận phía còn lại. Chỉ khi hai cận gặp nhau mới có chứng nhận tối ưu. Nguồn: Convex Optimization, §4.1 và các ví dụ về nới lỏng trong §5.1.2.
+Nới lỏng thường đi cùng một phép thu hồi nghiệm: làm tròn, chiếu hoặc một quy tắc gần đúng khác. Giá trị nới lỏng cho cận. Giá trị của ứng viên khả thi cho cận phía còn lại. Chỉ khi hai cận gặp nhau mới có chứng nhận tối ưu. Nguồn: Convex Optimization, §4.1 và các ví dụ về nới lỏng trong §5.1.2.
 
 ## Ví dụ
 
-Thay x∈{0,1} bằng 0≤x≤1 cho phép thêm các giá trị như x=0,4.
+Thay $x\in \{0,1\}$ bằng $0\le x\le 1$ cho phép thêm các giá trị như $x=0$,4.
 
 ## Khi nào cần dùng?
 

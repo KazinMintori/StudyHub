@@ -7,7 +7,7 @@ next: false
 
 # Phân phối Gauss
 
-Phân phối Gauss một biến được xác định bởi kỳ vọng μ và phương sai σ²>0. Mật độ có dạng chuông quanh μ; σ quyết định thang phân tán. Mật độ tại một điểm không phải xác suất của đúng điểm đó.
+Phân phối Gauss một biến được xác định bởi kỳ vọng $\mu$ và phương sai $\sigma ^{2}>0$. Mật độ có dạng chuông quanh $\mu$, còn $\sigma$ quyết định thang phân tán. Mật độ tại một điểm không phải xác suất của đúng điểm đó.
 
 <WikiUsage />
 
@@ -21,7 +21,7 @@ Trong nhiều chiều, vector Gauss dùng kỳ vọng $\mu$ và ma trận hiệp
 
 ## Ví dụ
 
-Z∼N(0,1) có kỳ vọng 0 và phương sai 1; xác suất trên một khoảng được tính bằng tích phân mật độ.
+Z∼N(0,1) có kỳ vọng 0 và phương sai 1. Xác suất trên một khoảng được tính bằng tích phân mật độ.
 
 ## Khi nào cần dùng?
 
@@ -29,11 +29,11 @@ Mô hình hóa nhiễu, khởi tạo trọng số và suy ra loss bình phương
 
 ## Tự kiểm tra
 
-Với biến Gauss liên tục, P(Z=0) có bằng mật độ p(0) không?
+Với biến Gauss liên tục, $P(Z=0)$ có bằng mật độ p(0) không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Xác suất tại một điểm bằng 0; p(0) là giá trị mật độ.
+Không. Xác suất tại một điểm bằng 0, còn p(0) là giá trị mật độ.
 
 </details>
 

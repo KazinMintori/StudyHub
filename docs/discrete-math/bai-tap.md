@@ -108,6 +108,8 @@ với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 #### Lời giải gợi ý
 1. Bổ đề bắt tay: Trong đồ thị vô hướng $G = (V, E)$, tổng bậc của tất cả các đỉnh bằng hai lần số cạnh:
    $$\sum_{v \in V} \deg(v) = 2|E|$$
+
+   Với $V=\{v_1,\ldots,v_n\}$, vế trái là $\deg(v_1)+\cdots+\deg(v_n)$: cộng bậc của từng đỉnh. $|E|$ là số cạnh.
    Vì $2|E|$ luôn là số chẵn, nên tổng bậc của các đỉnh có bậc lẻ phải là một số chẵn. Điều này chỉ xảy ra khi số lượng các đỉnh có bậc lẻ là một số chẵn.
 
 2. Áp dụng công thức Euler cho đồ thị phẳng liên thông:

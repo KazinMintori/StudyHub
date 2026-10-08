@@ -19,7 +19,7 @@ Hàm băm dùng để chia phân vùng không tự đáp ứng yêu cầu bảo 
 
 ## Ví dụ
 
-h(x)=x mod 4: 2 và 6 đều băm thành 2. Không thể suy ra hai đầu vào bằng nhau chỉ vì hash bằng nhau.
+$h(x)=x$ mod 4: 2 và 6 đều băm thành 2. Không thể suy ra hai đầu vào bằng nhau chỉ vì hash bằng nhau.
 
 ## Khi nào cần dùng?
 

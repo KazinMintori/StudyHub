@@ -13,7 +13,7 @@ Cặp (key, value) gắn một định danh hoặc khóa nhóm với dữ liệu
 
 ## Giải thích kỹ thuật
 
-**Gom theo khóa khác ghi đè.** Luồng MapReduce có thể chứa nhiều cặp cùng khóa. Shuffle gom tất cả giá trị cho khóa đó; không chỉ giữ giá trị cuối như khi gán nhiều lần vào cùng khóa dictionary.
+**Gom theo khóa khác ghi đè.** Luồng MapReduce có thể chứa nhiều cặp cùng khóa. Shuffle gom tất cả giá trị cho khóa đó. Không chỉ giữ giá trị cuối như khi gán nhiều lần vào cùng khóa dictionary.
 
 Chọn khóa quyết định cách chia nhóm và lượng dữ liệu trên từng máy. Khóa phổ biến quá mức có thể làm mất cân bằng tải.
 

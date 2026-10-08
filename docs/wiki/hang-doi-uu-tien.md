@@ -13,7 +13,7 @@ Hàng đợi ưu tiên lấy phần tử dựa trên khóa ưu tiên, thay vì t
 
 ## Giải thích kỹ thuật
 
-**Heap không phải danh sách đã sắp xếp hoàn toàn.** Min-heap giữ khóa của nút cha không lớn hơn khóa của các con; do đó phần tử nhỏ nhất ở gốc. Các nút ở những nhánh khác nhau không nhất thiết có thứ tự.
+**Heap không phải danh sách đã sắp xếp hoàn toàn.** Min-heap giữ khóa của nút cha không lớn hơn khóa của các con. Do đó phần tử nhỏ nhất ở gốc. Các nút ở những nhánh khác nhau không nhất thiết có thứ tự.
 
 Lấy phần tử ưu tiên thường tốn O(log n), đọc phần tử nhỏ nhất thường tốn O(1). Khi cùng một trạng thái có chi phí tốt hơn, thuật toán phải cập nhật khóa hoặc xử lý bản ghi cũ phù hợp.
 

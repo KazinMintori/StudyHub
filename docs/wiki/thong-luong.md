@@ -7,13 +7,13 @@ next: false
 
 # Thông lượng
 
-Thông lượng của trường qua mặt là tổng thành phần trường vuông góc với mặt. Với trường đều và mặt phẳng, Φ=E·n A=EA cos θ, θ là góc với pháp tuyến chứ không phải với mặt. Mặt kín quy ước pháp tuyến hướng ra ngoài.
+Thông lượng của trường qua mặt là tổng thành phần trường vuông góc với mặt. Với trường đều và mặt phẳng, $\Phi =E\cdot n A=EA \cos \theta$, $\theta$ là góc với pháp tuyến chứ không phải với mặt. Mặt kín quy ước pháp tuyến hướng ra ngoài.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Hướng của diện tích.** Vector diện tích bằng pháp tuyến đơn vị nhân phần tử diện tích. Mặt kín dùng pháp tuyến hướng ra ngoài; khi đổi hướng pháp tuyến, thông lượng đổi dấu.
+**Hướng của diện tích.** Vector diện tích bằng pháp tuyến đơn vị nhân phần tử diện tích. Mặt kín dùng pháp tuyến hướng ra ngoài, còn khi đổi hướng pháp tuyến thì thông lượng đổi dấu.
 
 Thông lượng tổng bằng 0 không kéo theo trường bằng 0 từng điểm. Với trường đều qua hộp kín, phần đi vào và đi ra có thể bù nhau. Định luật Gauss liên hệ thông lượng kín với điện tích bên trong.
 

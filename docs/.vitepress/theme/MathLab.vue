@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref, watch, useId } from 'vue'
 import { mix, quadratic, dualCertificate, optimizerTrace, solveSmallLP, bellmanTrace, dag } from './math-ai.mjs'
+import MathText from './MathText.vue'
+import { mathLabels } from '../math-labels.mjs'
 const props=defineProps({ type:{type:String,required:true}, initialMethod:{type:String,default:'gd'} })
 const theta=ref(.5), concave=ref(false), lambda=ref(2), method=ref(props.initialMethod), rate=ref(.15), kappa=ref(10), momentum=ref(.8), step=ref(0), c1=ref(3), c2=ref(2), longest=ref(false)
 const names={gd:'Gradient',newton:'Newton',momentum:'Momentum',nesterov:'Nesterov',adagrad:'AdaGrad',rmsprop:'RMSProp',adam:'Adam'}
@@ -61,17 +63,15 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <text x="35" y="20">Nét liền: f · đoạn thẳng: dây cung</text>
         <text :x="cx(-1)-8" y="194">−1</text><text :x="cx(2)-4" y="194">2</text>
       </svg>
-      <p role="status">z = {{ fmt(z) }}; f(z) = {{ fmt(f(z)) }}; giá trị dây cung = {{ fmt(chord) }}. {{ concave?'Đồ thị nằm trên dây cung: ví dụ hàm lõm.':'Đồ thị nằm dưới dây cung: ví dụ hàm lồi.' }}</p>
+      <p role="status">z = {{ fmt(z) }}, f(z) = {{ fmt(f(z)) }}, còn giá trị dây cung = {{ fmt(chord) }}. {{ concave?'Đồ thị nằm trên dây cung: ví dụ hàm lõm.':'Đồ thị nằm dưới dây cung: ví dụ hàm lồi.' }}</p>
     </template>
     <template v-else-if="type==='optimizer'">
       <div class="lab-inputs"><label>Phương pháp<select v-model="method"><option v-for="(name,id) in names" :key="id" :value="id">{{ name }}</option></select></label>
         <label>η = {{ rate.toFixed(2) }}<input v-model.number="rate" type="range" min=".01" max=".4" step=".01" :disabled="method==='newton'"></label>
         <label>κ = {{ kappa }}<input v-model.number="kappa" type="range" min="1" max="20" step="1"></label>
         <label v-if="method==='momentum'||method==='nesterov'">μ = {{ momentum.toFixed(2) }}<input v-model.number="momentum" type="range" min="0" max=".95" step=".05"></label></div>
-      <p v-if="method==='adam'">β₁ = 0.9, β₂ = 0.999; m₀ = v₀ = 0; ε = 10⁻⁸ ở ngoài căn.</p>
-      <p v-else-if="method==='rmsprop'">β = 0.9; v₀ = 0; ε = 10⁻⁸ ở ngoài căn; không hiệu chỉnh bias.</p>
-      <p v-else-if="method==='adagrad'">s₀ = 0; ε = 10⁻⁸ ở ngoài căn.</p>
-      <p>f(x,y) = (x² + κy²)/2; điểm đầu (2,2). Nét đứt là đường đồng mức, nét liền là đường đi.</p>
+      <MathText v-if="mathLabels[method]" as="p" :text="mathLabels[method]" />
+      <MathText as="p" :text="mathLabels.quadratic" />
       <svg viewBox="0 0 380 240" role="img" aria-label="Đường đồng mức của hàm toàn phương và các điểm cập nhật">
         <line x1="20" y1="120" x2="365" y2="120" class="axis"/><line x1="190" y1="15" x2="190" y2="225" class="axis"/>
         <ellipse v-for="c in contours" :key="c" cx="190" cy="120" :rx="Math.sqrt(2*c)*50" :ry="Math.sqrt(2*c/kappa)*35" class="contour"/>
@@ -80,9 +80,9 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <text x="197" y="139">0</text><text x="355" y="139">x</text><text x="198" y="20">y</text>
       </svg>
       <div class="lab-buttons"><button @click="step=0">Đặt lại</button><button :disabled="step===20" @click="step++">Bước tiếp →</button><label>Bước {{ step }} / 20<input v-model.number="step" type="range" min="0" max="20" step="1"></label></div>
-      <p role="status">Bước {{ step }}: ({{ fmt(row.x[0]) }}, {{ fmt(row.x[1]) }}); f = {{ fmt(row.value) }}.</p>
-      <p v-if="trace.slice(0,step+1).some(r=>r.x.some(x=>Math.abs(x)>3))" class="lab-notice">Có điểm vượt vùng vẽ |x|, |y| ≤ 3. Số ở trên vẫn được tính. Chỉ nối hai bước liên tiếp cùng ở trong vùng; các bước ra ngoài làm đường đi ngắt đoạn.</p>
-      <details v-if="method==='adam'||method==='rmsprop'||method==='adagrad'"><summary>Trạng thái thuật toán ở bước này</summary><p>m = {{ row.m.map(fmt).join(', ') }}; v = {{ row.v.map(fmt).join(', ') }}; tổng bình phương = {{ row.sum.map(fmt).join(', ') }}.</p></details>
+      <p role="status">Bước {{ step }}: ({{ fmt(row.x[0]) }}, {{ fmt(row.x[1]) }}) và f = {{ fmt(row.value) }}.</p>
+      <p v-if="trace.slice(0,step+1).some(r=>r.x.some(x=>Math.abs(x)>3))" class="lab-notice">Có điểm vượt vùng vẽ |x|, |y| ≤ 3. Số ở trên vẫn được tính. Chỉ nối hai bước liên tiếp cùng ở trong vùng, còn các bước ra ngoài làm đường đi ngắt đoạn.</p>
+      <details v-if="method==='adam'||method==='rmsprop'||method==='adagrad'"><summary>Trạng thái thuật toán ở bước này</summary><p>m = {{ row.m.map(fmt).join(', ') }}, v = {{ row.v.map(fmt).join(', ') }}, còn tổng bình phương = {{ row.sum.map(fmt).join(', ') }}.</p></details>
     </template>
     <template v-else-if="type==='dual'">
       <label>λ = {{ lambda.toFixed(2) }}<input v-model.number="lambda" type="range" min="0" max="4" step=".1"></label>
@@ -92,7 +92,7 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <circle :cx="35+lambda*315/4" :cy="165-certificate.dual*110" r="6" class="marker"/>
         <text x="38" y="45">f(1) = p* = 1</text><text x="335" y="186">λ</text><text x="31" y="185">0</text><text x="188" y="185">2</text><text x="342" y="185">4</text>
       </svg>
-      <p role="status">g(λ) = {{ fmt(certificate.dual) }}; f(1)−g(λ) = {{ fmt(certificate.gap) }}. Điểm cực tiểu của L theo x là {{ fmt(certificate.minimizer) }}.</p>
+      <p role="status">g(λ) = {{ fmt(certificate.dual) }}, còn f(1)−g(λ) = {{ fmt(certificate.gap) }}. Điểm cực tiểu của L theo x là {{ fmt(certificate.minimizer) }}.</p>
     </template>
     <template v-else-if="type==='lp'">
       <div class="lab-inputs"><label>c₁ = {{ c1 }}<input v-model.number="c1" type="range" min="0" max="5" step="1"></label><label>c₂ = {{ c2 }}<input v-model.number="c2" type="range" min="0" max="5" step="1"></label></div>
@@ -103,7 +103,7 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <circle v-for="p in lp.optimal" :key="p.join(',')" :cx="40+p[0]*65" :cy="220-p[1]*45" r="9" class="hollow"/>
         <text x="341" y="238">x</text><text x="22" y="19">y</text>
       </svg>
-      <p role="status">max {{ c1 }}x + {{ c2 }}y = {{ lp.value }}. Đỉnh đạt tối ưu: {{ lp.optimal.map(p=>`(${p.join(',')})`).join('; ') }}. {{ lp.optimal.length>1?'Toàn bộ đoạn nối giữa các đỉnh tối ưu cũng tối ưu.':'' }}</p>
+      <p role="status">max {{ c1 }}x + {{ c2 }}y = {{ lp.value }}. Đỉnh đạt tối ưu: {{ lp.optimal.map(p=>`(${p.join(',')})`).join(', ') }}. {{ lp.optimal.length>1?'Toàn bộ đoạn nối giữa các đỉnh tối ưu cũng tối ưu.':'' }}</p>
     </template>
     <template v-else-if="type==='bellman'">
       <label>Mục tiêu<select v-model="longest"><option :value="false">Đường ngắn nhất (min)</option><option :value="true">Đường dài nhất (max)</option></select></label>
@@ -116,9 +116,9 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <g v-for="n in nodes" :key="n.id"><circle :cx="n.x" :cy="n.y" r="16" class="node"/><text :x="n.x" :y="n.y+5" text-anchor="middle">{{ n.id }}</text><text :x="n.x" :y="n.y+36" text-anchor="middle">V={{ bellman[bellmanStep].values[n.id]??'?' }}</text></g>
       </svg>
       <div class="lab-buttons"><button @click="bellmanStep=0">Đặt lại</button><button :disabled="bellmanStep===3" @click="bellmanStep++">Tính nút tiếp →</button></div>
-      <p role="status">Vừa tính nút {{ bellman[bellmanStep].node }}. {{ Object.entries(bellman[bellmanStep].values).map(([n,v])=>`V(${n})=${v}`).join('; ') }}.</p>
+      <p role="status">Vừa tính nút {{ bellman[bellmanStep].node }}. {{ Object.entries(bellman[bellmanStep].values).map(([n,v])=>`V(${n})=${v}`).join(', ') }}.</p>
     </template>
-    <details class="lab-code"><summary>Xem code và điều kiện mô phỏng</summary><p>Chương trình dùng dữ liệu nhỏ tự đặt. Các quan hệ toán được ghi ngay trong Notes; mô phỏng hữu hạn không thay chứng minh cho mọi điểm. Code tính toán được chia sẻ giữa component và kiểm tra tại <code>docs/.vitepress/theme/math-ai.mjs</code>.</p><slot /></details>
+    <details class="lab-code"><summary>Xem code và điều kiện mô phỏng</summary><p>Chương trình dùng dữ liệu nhỏ tự đặt. Các quan hệ toán được ghi ngay trong Notes. Mô phỏng hữu hạn không thay chứng minh cho mọi điểm. Code tính toán được chia sẻ giữa component và kiểm tra tại <code>docs/.vitepress/theme/math-ai.mjs</code>.</p><slot /></details>
   </figure>
 </template>
 <style scoped>

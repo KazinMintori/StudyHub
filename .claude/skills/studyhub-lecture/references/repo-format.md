@@ -75,7 +75,7 @@ Thêm bài mới vào **ba** chỗ của đúng môn:
 2. `parts[k].lessons: [ … '<slug>' ]` — sidebar dựng từ `parts`; thiếu ở đây thì bài không hiện trong mục lục.
 3. `slides: [ … slide('<Tiêu đề>', ['ý 1','ý 2','ý 3'], '<slug>', '<công thức>', '<ví dụ>') ]`.
 
-Trường slide là **chuỗi thuần**, không phải Markdown/LaTeX: công thức viết bằng Unicode đọc được (`P(A|B) = P(A∩B) / P(B), P(B)>0`, `x_{k+1} = x_k − η∇f(x_k)`). Giữ điều kiện ngay trong chuỗi công thức hoặc trong bullet cạnh nó. Dấu nháy đơn trong chuỗi JS phải được escape hoặc dùng nháy kép “ ”.
+Trường slide là chuỗi văn bản có công thức TeX tường minh: `$…$` cho công thức trong câu, `$$…$$` cho công thức riêng dòng. `MathText.vue` hiển thị SVG và MathML hỗ trợ đọc màn hình, được biên dịch trước bằng cùng MathJax với Notes. Không dùng Markdown/HTML trong chuỗi slide. Trong chuỗi JavaScript phải viết hai dấu gạch chéo ngược cho mỗi lệnh TeX, ví dụ `"$\\frac{a}{b}$"`. Giữ giả thiết ngay trong công thức hoặc bullet cạnh nó; tiêu đề viết bằng chữ.
 
 Tiêu chuẩn một slide catalog: tiêu đề là một kết luận hoặc câu hỏi có nội dung; 2–4 bullet, mỗi bullet là câu trọn nghĩa; `formula` khi bài có công thức trung tâm; `example` khi một con số cụ thể làm ý rõ hơn. Mỗi bài thường 3–6 slide, theo mạch của Notes. Slide là bản ôn nhanh của Notes, không chứa khẳng định mà Notes không có.
 
@@ -85,13 +85,13 @@ Chạy `node -e "import('./docs/.vitepress/course-catalog.mjs').then(m=>console.
 
 Mỗi `id` trong `prerequisites` phải tồn tại ở **cả ba** chỗ, nếu không `verify-courses.mjs` fail hoặc `relatedConcepts()` ném lỗi:
 
-1. `docs/.vitepress/concepts.mjs`: `'<id>': term('Tên', ['alias 1','alias 2'], 'định nghĩa', 'ví dụ', 'khi nào dùng', 'câu hỏi tự kiểm', 'đáp án')`. Tab Kiến thức nền in thẳng năm chuỗi này bằng `{{ }}` của Vue: **văn bản thuần, không Markdown, không `$…$`**. Viết ký hiệu bằng Unicode (∇f, x ∈ A, P(A|B)). Định nghĩa phải tự đứng được vì người học có thể chỉ đọc tab này.
+1. `docs/.vitepress/concepts.mjs`: `'<id>': term('Tên', ['alias 1','alias 2'], 'định nghĩa', 'ví dụ', 'khi nào dùng', 'câu hỏi tự kiểm', 'đáp án')`. Tab Kiến thức nền, danh mục Wiki và ghi chú nhanh dùng `MathText`: văn bản có `$…$` và `$$…$$`, không dùng Markdown/HTML. Viết công thức bằng TeX, escape dấu gạch chéo ngược trong chuỗi JavaScript. Định nghĩa phải tự đứng được vì người học có thể chỉ đọc tab này.
 2. `docs/.vitepress/wiki-content.mjs`: thêm `id` vào đúng một nhóm trong `wikiGroups`, và thêm `wikiDetails['<id>']` (đoạn “Giải thích kỹ thuật”, Markdown, có thể nhiều đoạn với `\n\n`). Có thể thêm `connections['<id>']` để chỉ định thuật ngữ liên quan; mọi id trong đó phải tồn tại.
 3. `docs/wiki/<id>.md`: `npm run sync:courses` tự sinh từ hai file trên nếu chưa có; sau đó sửa trực tiếp file này (build không ghi đè). File phải chứa `## Giải thích kỹ thuật`.
 
 `aliases` quyết định liên kết tự động: `term-links.mjs` nối **lần xuất hiện đầu tiên trong mỗi đoạn inline** của Notes/Wiki tới `/wiki/<id>.html`, bỏ qua tiêu đề, code, công thức và link có sẵn; so khớp không phân biệt hoa thường và theo ranh giới từ. Chọn alias đúng cách người Việt viết trong bài, kể cả biến thể (“véc-tơ”, “vector”). Tránh alias quá chung (“hàm”, “tập”) vì sẽ gắn link nhầm khắp nơi.
 
-Liên kết thuật ngữ dùng hai tầng: bấm vào từ có gạch chấm để mở **ghi chú nhanh** ngay cạnh văn bản, rồi bấm nút trong thẻ để sang bài Wiki. Ghi chú nhanh lấy `name`, `definition` và `example` trong `concepts.mjs`; vì vậy ba trường này phải ngắn, tự đứng được và không chứa Markdown/LaTeX. `wikiDetails` và `docs/wiki/<id>.md` mới là nơi khai triển ký hiệu, điều kiện, ngộ nhận và liên hệ. Không nhồi toàn bộ bài Wiki vào ghi chú nhanh.
+Liên kết thuật ngữ dùng hai tầng: bấm vào từ có gạch chấm để mở **ghi chú nhanh** ngay cạnh văn bản, rồi bấm nút trong thẻ để sang bài Wiki. Ghi chú nhanh lấy `name`, `definition` và `example` trong `concepts.mjs`; vì vậy ba trường này phải ngắn, tự đứng được; công thức dùng TeX có dấu phân cách, không dùng Markdown/HTML. Tên và aliases vẫn là văn bản thuần để tìm kiếm và liên kết thuật ngữ. `wikiDetails` và `docs/wiki/<id>.md` mới là nơi khai triển ký hiệu, điều kiện, ngộ nhận và liên hệ. Không nhồi toàn bộ bài Wiki vào ghi chú nhanh.
 
 Một khái niệm khó được dạy ngay trong Notes vẫn có thể có mục Wiki để người học tra nhanh và đào sâu. Việc có mục Wiki **không tự biến nó thành prerequisite**: chỉ thêm vào `lesson.prerequisites` khi bài sử dụng khái niệm mà không dạy lại.
 
@@ -99,7 +99,9 @@ Mỗi khái niệm phải thuộc một lĩnh vực trong `wikiGroups`. Khi hai 
 
 Mỗi lesson có thể có `supportingConcepts` bên cạnh `prerequisites`. `prerequisites` là phần người học cần biết trước và phải khớp frontmatter. `supportingConcepts` là thuật ngữ xuất hiện trong Notes/Slides mà người học có thể tra trong khi đọc; không đưa chúng vào frontmatter. Tab Kiến thức nền hiển thị hai nhóm riêng và không được gọi toàn bộ danh sách hỗ trợ là tiên quyết.
 
-Ghi chú nhanh có thể dùng trường `notation` để trình bày ma trận, vector hoặc hệ phương trình theo bố cục toán học. Không đưa cú pháp list/mảng của ngôn ngữ lập trình như `[[1,2],[0,3]]` vào ví dụ đại số tuyến tính. Ghi chú ghim trên màn hình nhỏ phải có nền che (scrim) và lối đóng rõ; trên màn hình rộng phải nằm ngoài cột bài đọc, không che công thức hay đoạn đang đọc.
+Ghi chú nhanh có thể dùng trường `notation` với `$$…$$`, `bmatrix` hoặc `cases` để trình bày ma trận, vector hoặc hệ phương trình. Không ghép ma trận bằng ký tự ngoặc Unicode hay đặt công thức trong `pre`. Không đưa cú pháp list/mảng của ngôn ngữ lập trình như `[[1,2],[0,3]]` vào ví dụ đại số tuyến tính. Ghi chú ghim trên màn hình nhỏ phải có nền che (scrim) và lối đóng rõ; trên màn hình rộng phải nằm ngoài cột bài đọc, không che công thức hay đoạn đang đọc.
+
+Ký pháp và cách gọi phải theo học phần. Trong NumPy, `shape=(3, 2)` là kích thước hai trục, `ndim=2` là số trục; `shape=(2,)` vẫn có `ndim=1`, dù chứa hai phần tử. Trong đại số tuyến tính, viết ma trận $3\times2$ hoặc $A\in\mathbb R^{3\times2}$; vector hai thành phần thuộc $\mathbb R^2$, không gọi theo tuple `shape`. Khi minh họa broadcasting, phần lập trình dùng mảng/code và ghi rõ `shape`, `ndim`; phần toán phải giải thích phép lặp hàng và cộng hai ma trận cùng kích thước. Nhãn, kích thước và công thức có khoảng cách riêng; không ghép nhãn sát ngoặc ma trận.
 
 Chọn `prerequisites` là các khái niệm **bài này dùng mà không dạy lại**, xếp theo thứ tự nên đọc; không gắn toàn bộ `foundations` của môn. Khái niệm mới mà bài dạy thì nằm trong Notes, không phải ở Kiến thức nền.
 
@@ -123,10 +125,10 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Đặt `ready` mà chưa có slide → verify fail.
 - Thêm id vào `prerequisites` nhưng thiếu `wikiGroups`/`wikiDetails` → verify fail, có thể làm `relatedConcepts` ném lỗi khi build.
 - Viết H1 trong Notes → hai tiêu đề.
-- Dùng LaTeX trong chuỗi slide → hiện nguyên ký tự `\frac`.
+- Lệnh TeX trong chuỗi slide thiếu `$…$` hoặc `$$…$$` → hiện nguyên ký tự `\frac`; `check_lecture.mjs` phát hiện lỗi này.
 - Container quên `:::` đóng → nuốt phần còn lại của bài.
 - Đặt hình ở chỗ khác `img/<lec>/` cạnh bài rồi viết đường dẫn tay → dễ gãy khi site chạy dưới `/StudyHub/`. Giữ quy ước đường dẫn tương đối như các bài hiện có và xem trang đã build.
-- Viết `$…$` hoặc `**…**` trong `concepts.mjs` → tab Kiến thức nền hiện nguyên ký tự.
+- Viết `**…**` hoặc HTML trong `concepts.mjs` → hiện nguyên ký tự. Chỉ văn bản và TeX có dấu phân cách được hỗ trợ.
 - Sửa `docs/wiki/<id>.md` nhưng không sửa `concepts.mjs` → định nghĩa trong tab Kiến thức nền (lấy từ concepts) và trang Wiki lệch nhau.
 
 
@@ -136,5 +138,7 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Không chèn mục lục trong Markdown: VitePress có mục lục bên phải và trên điện thoại.
 - Tiêu đề viết bằng chữ; không đặt công thức trong heading vì mục lục làm mất ký hiệu.
 - Công thức trong Notes và Wiki dùng `$…$`; chữ tiếng Việt nằm ngoài công thức.
+- Ký hiệu rút gọn được mở ít nhất một lần khi giới thiệu: tổng viết rõ các số hạng, tích viết rõ các thừa số, phép nhân ma trận viết rõ một hàng. Nêu miền chạy của chỉ số, ý nghĩa số hạng và một ví dụ nhỏ; chỉ dùng `\sum_i` sau khi phạm vi đã rõ. Dùng cả chỉ số dưới và cận trên khi giới thiệu tổng hữu hạn.
+- Dấu cộng, trừ, nhân, chia và bằng thuộc cùng một biểu thức toán với các toán hạng để bộ hiển thị căn theo trục toán và đặt khoảng cách. Không ghép ma trận MathML với dấu phép toán bằng font văn bản; dùng một `mrow` chung. Trong code giữ `+`, `-`, `*`, `/`, `=` theo ngôn ngữ lập trình; trong toán dùng `\cdot`, `\times` hoặc phân số khi phù hợp, không thay mọi dấu bằng một quy tắc chung.
 - Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
 - Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.

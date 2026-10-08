@@ -54,6 +54,17 @@ INLINE_MATH_RE = re.compile(r"\$\$.*?\$\$|\$[^$\n]+\$|`[^`\n]+`")
 BOLD_RE = re.compile(r"\*\*[^*\n]+\*\*")
 OVERLOAD_WORDS = 55
 BOLD_LIMIT = 4
+PROTECTED_PUNCTUATION_RE = re.compile(
+    r"\$\$[\s\S]*?\$\$|\$(?:\\.|[^$\n])+\$|`[^`\n]*`|"
+    r"<!--[\s\S]*?-->|</?[A-Za-z][^>\n]*>|&(?:#\d+|#x[\da-fA-F]+|[A-Za-z]\w*);"
+)
+
+
+def punctuation_prose(text):
+    """Hide technical punctuation while keeping the original line numbering."""
+    return PROTECTED_PUNCTUATION_RE.sub(
+        lambda match: re.sub(r"[^\n]", " ", match.group(0)), text
+    )
 
 
 def strip_frontmatter(text):
@@ -113,6 +124,7 @@ def review(sections):
     findings, opener_locations = [], {phrase: [] for phrase in OPENERS}
     for section, text in sections:
         text = strip_frontmatter(unicodedata.normalize("NFC", text))
+        punctuation_lines = dict(markdown_lines(punctuation_prose(text)))
         for line_number, raw, quote in markdown_lines(text, include_quotes=True):
             where = f"{section}:line {line_number}"
             lower = raw.casefold()
@@ -122,6 +134,9 @@ def review(sections):
                     findings.append({"code": "CHECK_QUOTE_SOURCE", "where": where, "text": raw.strip(),
                                      "suggestion": "Câu trích gán cho một người: giữ chỉ khi dẫn được nguồn kiểm chứng; không thì bỏ hoặc mở bài bằng câu hỏi của bài học."})
                 continue
+            if ";" in punctuation_lines.get(line_number, ""):
+                findings.append({"code": "PROSE_SEMICOLON", "where": where, "text": raw.strip(),
+                                 "suggestion": "Hạn chế dấu chấm phẩy trong lời giảng. Xác định quan hệ giữa các vế rồi dùng từ nối phù hợp hoặc tách thành câu đầy đủ. Xem references/tu-noi-va-dien-dat.md."})
             for phrase, suggestion in PHRASES.items():
                 if phrase in lower:
                     findings.append({"code": "CONTEXTUAL_PHRASE", "where": where, "phrase": phrase, "suggestion": suggestion})

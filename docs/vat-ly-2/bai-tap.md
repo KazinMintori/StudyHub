@@ -97,7 +97,7 @@ $$\vec{E}(z, t) = E_0 \cos(kz - \omega t) \hat{i}$$
 3. Vector Poynting:
    $$\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B}) = \frac{1}{\mu_0} \left[ E_0 \cos(kz - \omega t) \hat{i} \times \frac{E_0}{c} \cos(kz - \omega t) \hat{j} \right]$$
    $$= \frac{E_0^2}{\mu_0 c} \cos^2(kz - \omega t) \hat{k} = c \varepsilon_0 E_0^2 \cos^2(kz - \omega t) \hat{k}$$
-   Cường độ sóng trung bình theo thời gian (với $\langle \cos^2 \theta \rangle = 1/2$):
+   Cường độ sóng trung bình theo thời gian (với $\langle \cos^2 \theta \rangle = \frac{1}{2}$):
    $$I = \langle |\vec{S}| \rangle = \frac{1}{2} c \varepsilon_0 E_0^2$$
 
 ---

@@ -8,7 +8,7 @@ lessonStatus: ready
 ---
 
 
-Đồ thị là cấu trúc dữ liệu mô hình hóa thế giới thực mạnh mẽ nhất: mạng xã hội Facebook (người dùng là đỉnh, quan hệ bạn bè là cạnh), bản đồ Google Maps (ngã tư là đỉnh, đường phố là cạnh có trọng số độ dài), hay mạng Internet.
+Đồ thị giúp mô hình hóa các đối tượng cùng quan hệ giữa chúng, chẳng hạn mạng xã hội Facebook (người dùng là đỉnh, quan hệ bạn bè là cạnh), bản đồ Google Maps (ngã tư là đỉnh, đường phố là cạnh có trọng số độ dài), hay mạng Internet.
 
 ---
 
@@ -23,7 +23,7 @@ Cho đồ thị có $V$ đỉnh và $E$ cạnh:
 | Phương pháp | Bộ nhớ | Kiểm tra 2 đỉnh $(u, v)$ có kề nhau? | Duyệt mọi đỉnh kề của $u$ | Thích hợp khi |
 | :--- | :--- | :--- | :--- | :--- |
 | **Ma trận kề (Adjacency Matrix)** | $\mathcal{O}(V^2)$ | $\mathcal{O}(1)$ (truy cập `matrix[u][v]`) | $\mathcal{O}(V)$ | Đồ thị dày (nhiều cạnh, $E \approx V^2$) |
-| **Danh sách kề (Adjacency List)** | $\mathcal{O}(V + E)$ | $\mathcal{O}(\text{deg}(u))$ | $\mathcal{O}(\text{deg}(u))$ | Đồ thị thưa (ít cạnh, $E \ll V^2$) - Thực tế 95% dùng loại này |
+| **Danh sách kề (Adjacency List)** | $\mathcal{O}(V + E)$ | $\mathcal{O}(\text{deg}(u))$ | $\mathcal{O}(\text{deg}(u))$ | Đồ thị thưa (ít cạnh, $E \ll V^2$) |
 
 ---
 
@@ -74,4 +74,4 @@ Thuật toán Dijkstra **KHÔNG** chạy đúng trên đồ thị có cạnh man
 ##  Nguồn Tham khảo & Trực quan Đồ thị
 
 - [VisuAlgo - Graph Traversal & Dijkstra](https://visualgo.net/en/sssp) - Chạy mô phỏng từng bước thuật toán Dijkstra trực tiếp.
-- [CP-Algorithms - Graph Theory](https://cp-algorithms.com/graph/breadth-first-search.html) - Tài liệu thuật toán thi đấu quốc tế giải thích cực kỳ chuẩn xác và có sẵn code C++ tối ưu.
+- [CP-Algorithms - Graph Theory](https://cp-algorithms.com/graph/breadth-first-search.html) - Tài liệu trình bày thuật toán đồ thị kèm giải thích và code C++ để đối chiếu.

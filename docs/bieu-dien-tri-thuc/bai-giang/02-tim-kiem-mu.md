@@ -8,7 +8,7 @@ lessonStatus: ready
 ---
 
 
-*Bài 2 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "Artificial Intelligence: A Modern Approach", chương 3.3–3.4; Cormen et al., "Introduction to Algorithms", chương 20 (BFS/DFS) & 22 (Dijkstra).*
+*Bài 2 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "Artificial Intelligence: A Modern Approach", chương 3.3–3.4 và Cormen et al., "Introduction to Algorithms", chương 20 (BFS/DFS) & 22 (Dijkstra).*
 
 ← [Chương 1: Giới thiệu & Tác tử](/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
 
@@ -48,7 +48,7 @@ BFS dùng hàng đợi FIFO, mở rộng theo từng lớp (độ sâu) một. T
 |---|---|---|
 | 0 | S | [S] |
 | 1 | A, B (từ S) | [A, B] |
-| 2 | C (từ A; B→C bị bỏ vì C đã khám phá) | [B, C] |
+| 2 | C (từ A, $B\to C$ bị bỏ vì C đã khám phá) | [B, C] |
 | 3 | G (từ C) | [C, G] → **dừng, thấy G** |
 
 Đường tìm được: $S \to A \to C \to G$ (3 bước nhảy) — nhưng **chi phí thật** $= 1+5+3 = \mathbf{9}$, tệ hơn hẳn đáp án tối ưu 7!
@@ -69,7 +69,7 @@ $$
 S \to B \to C \to G
 $$
 
-DFS dừng ngay khi chạm G — chi phí $= 4+1+3 = \mathbf{8}$, cũng không tối ưu, và **kết quả phụ thuộc hoàn toàn vào thứ tự duyệt cạnh** mà ta chọn lúc cài đặt (đổi thứ tự A/B sẽ ra một đường khác).
+DFS dừng ngay khi chạm G — chi phí $= 4+1+3 = \mathbf{8}$, cũng không tối ưu, và **kết quả phụ thuộc hoàn toàn vào thứ tự duyệt cạnh** mà ta chọn lúc cài đặt (đổi thứ tự $A/B$ sẽ ra một đường khác).
 
 ```mermaid
 flowchart TD
@@ -123,7 +123,7 @@ IDS = DFS có giới hạn độ sâu (Depth-Limited Search), tăng dần giới
 | 4 | 3 | Thấy thêm C(qua B), G(qua C, qua A) → **tìm thấy G** |
 
 ::: tip Vì sao không tốn nhiều thời gian hơn BFS bao nhiêu?
-Số nút ở lớp gần đáy cây luôn áp đảo số nút ở các lớp phía trên (tỉ lệ $b^d$ so với $b^{d-1}, b^{d-2},\ldots$), nên việc soi lại các lớp nông nhiều lần chỉ cộng thêm một hằng số nhân, **không đổi bậc độ phức tạp**: IDS vẫn là $O(b^d)$ về thời gian, giống BFS, nhưng chỉ tốn $O(bd)$ bộ nhớ — bằng DFS!
+Khi hệ số nhánh $b>1$, các lớp gần đáy chứa phần lớn số nút: lớp sâu nhất có $b^d$ nút, còn các lớp phía trên có $b^{d-1}, b^{d-2},\ldots$ nút. Vì vậy, việc duyệt lại các lớp nông chỉ thêm một hệ số hằng vào tổng số bước. IDS vẫn có thời gian $O(b^d)$ như BFS và bộ nhớ $O(bd)$ như DFS.
 :::
 
 ## 2.6 Bảng so sánh 4 thuật toán (thuộc lòng trước khi thi)
@@ -131,7 +131,7 @@ Số nút ở lớp gần đáy cây luôn áp đảo số nút ở các lớp p
 | Thuật toán | Đầy đủ? | Tối ưu? | Thời gian | Bộ nhớ |
 |---|---|---|---|---|
 | **BFS** | Có (nếu $b$ hữu hạn) | Chỉ khi chi phí bước đồng nhất | $O(b^d)$ | $O(b^d)$ |
-| **DFS** | Không (đồ thị vô hạn/có chu trình); Có nếu không gian hữu hạn không lặp | Không | $O(b^m)$ | $O(bm)$ |
+| **DFS** | Không (đồ thị vô hạn/có chu trình), Có nếu không gian hữu hạn không lặp | Không | $O(b^m)$ | $O(bm)$ |
 | **UCS** | Có (chi phí bước $\ge \epsilon>0$) | **Có** | $O(b^{1+\lfloor C^*/\epsilon\rfloor})$ | tương tự thời gian |
 | **IDS** | Có | Chỉ khi chi phí bước đồng nhất | $O(b^d)$ | $O(bd)$ |
 

@@ -13,9 +13,9 @@ Broadcasting cho phép NumPy thực hiện phép toán trên các mảng có kí
 
 ## Giải thích kỹ thuật
 
-**Quy tắc tương thích.** So các kích thước từ trục cuối. Hai trục tương thích khi bằng nhau hoặc có một bên bằng 1; trục thiếu được coi như kích thước 1.
+**Quy tắc tương thích.** So các kích thước từ trục cuối. Hai trục tương thích khi bằng nhau hoặc có một bên bằng 1. Trục thiếu được coi như kích thước 1.
 
-(3,2)+(2,) cho (3,2); (3,2)+(3,) không tương thích. Muốn cộng một giá trị riêng cho từng hàng, đổi vector shape (3,) thành (3,1). Việc mở rộng là quy tắc tính toán, không nhất thiết sao chép cả dữ liệu đầu vào.
+(3,2)+(2,) cho (3,2). (3,2)+(3,) không tương thích. Muốn cộng một giá trị riêng cho từng hàng, đổi vector shape (3,) thành (3,1). Việc mở rộng là quy tắc tính toán, không nhất thiết sao chép cả dữ liệu đầu vào.
 
 ## Ví dụ
 

@@ -19,7 +19,7 @@ Miền khả thi rỗng làm bài toán vô nghiệm. Miền khác rỗng nhưng
 
 ## Ví dụ
 
-Trong bài min (x−2)² với x≤1, x=0 và x=1 đều khả thi; x=2 không khả thi dù cho mục tiêu bằng 0.
+Trong bài $\min (x-2)^{2}$ với $x\le 1$, $x=0$ và $x=1$ đều khả thi, nhưng $x=2$ không khả thi dù cho giá trị mục tiêu bằng 0.
 
 ## Khi nào cần dùng?
 

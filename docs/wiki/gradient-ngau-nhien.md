@@ -15,11 +15,11 @@ Gradient lô nhỏ là trung bình gradient trên một mẫu dữ liệu đư�
 
 **Không chệch cần một mô hình lấy mẫu.** Nếu chỉ số $I$ được lấy đều và độc lập trên $\{1,\ldots,N\}$ khi $\theta$ đang cố định, thì $E[\nabla\ell_I(\theta)\mid\theta]=\nabla J(\theta)$. Trung bình $B$ mẫu độc lập giảm phương sai từng tọa độ theo hệ số $1/B$.
 
-Xáo trộn rồi duyệt hết một epoch, lấy mẫu không hoàn lại và lấy mẫu có trọng số là những quy trình khác; công thức kỳ vọng và phương sai phải được viết theo đúng quy tắc đó. Gradient nhỏ của một lô không phải điều kiện dừng đáng tin cậy cho toàn bộ dữ liệu. Nguồn: Deep Learning, §8.1 và §8.3.
+Xáo trộn rồi duyệt hết một epoch, lấy mẫu không hoàn lại và lấy mẫu có trọng số là những quy trình khác. Công thức kỳ vọng và phương sai phải được viết theo đúng quy tắc đó. Gradient nhỏ của một lô không phải điều kiện dừng đáng tin cậy cho toàn bộ dữ liệu. Nguồn: Deep Learning, §8.1 và §8.3.
 
 ## Ví dụ
 
-Hai gradient mẫu 0 và −2 có trung bình −1; lấy riêng một mẫu cho bước cập nhật 0 hoặc −2.
+Hai gradient mẫu 0 và −2 có trung bình −1. Trong khi đó, lấy riêng một mẫu cho gradient 0 hoặc −2.
 
 ## Khi nào cần dùng?
 

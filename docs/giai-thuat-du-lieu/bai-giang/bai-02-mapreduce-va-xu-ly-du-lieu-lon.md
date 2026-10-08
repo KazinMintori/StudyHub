@@ -8,17 +8,17 @@ lessonStatus: ready
 ---
 
 
-> *"Đừng mang núi đến với thợ; hãy đưa thợ đến chân núi — rồi chỉ gửi về những viên đá quý."*
+> *"Đừng mang núi đến với thợ. Hãy đưa thợ đến chân núi — rồi chỉ gửi về những viên đá quý."*
 
 ← [Bài trước](/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md) · [Mục lục](/giai-thuat-du-lieu/index.md) · [Bài tiếp theo →](/giai-thuat-du-lieu/bai-giang/bai-03-pagerank-mo-hinh-va-tinh-toan.md)
 
 ::: info Bài này giải quyết vấn đề gì?
-Năm 2004 Google công bố chỉ mục hơn **8 tỷ trang**; nghiên cứu Sawzall (2005) xử lý mẫu **450 GB nhật ký nén**; lần thu thập năm 1998 có **24 triệu trang với hơn 259 triệu liên kết**. Không máy nào giữ nổi chừng ấy, và dữ liệu vốn đã nằm rải trên nhiều máy.
+Năm 2004 Google công bố chỉ mục hơn **8 tỷ trang**. Nghiên cứu Sawzall (2005) xử lý mẫu **450 GB nhật ký nén**. Lần thu thập năm 1998 có **24 triệu trang với hơn 259 triệu liên kết**. Không máy nào giữ nổi chừng ấy, và dữ liệu vốn đã nằm rải trên nhiều máy.
 
 Map-Reduce là **mô hình lập trình** cho phép bạn chỉ viết hai hàm nhỏ — **Map** và **Reduce** — còn hệ thống lo phần khó: chia dữ liệu, giao việc cho máy, chuyển dữ liệu theo khóa, phát hiện máy hỏng và chạy lại. Trong Khoa học dữ liệu, đây là nền móng cho mọi phép tổng hợp quy mô lớn: đếm từ, xây chỉ mục, nhân ma trận, PageRank (Bài 03), và là tiền thân của Spark.
 :::
 
-**Nguồn đối chiếu:** Slide Bài 02 của học phần; MMDS Chương 2 (mục 2.1.1–2.1.2, 2.2.1–2.2.6, 2.3.1, 2.5.1–2.5.2, bài tập 2.3.1); Dean & Ghemawat, *MapReduce*, OSDI 2004; tài liệu Apache Hadoop 3.4.2.
+**Nguồn đối chiếu:** Slide Bài 02 của học phần, MMDS Chương 2 (mục 2.1.1–2.1.2, 2.2.1–2.2.6, 2.3.1, 2.5.1–2.5.2, bài tập 2.3.1), Dean & Ghemawat, *MapReduce*, OSDI 2004 và tài liệu Apache Hadoop 3.4.2.
 
 **Bố cục bài:** (1) Giới thiệu → (2) Mô hình Map-Reduce → (3) Các ví dụ → (4) Chi phí và lợi ích song song hóa → (5) Hệ thống thực thi *(đọc thêm)* → (6) Thực hành Hadoop → (7) Bài tập MMDS.
 
@@ -37,7 +37,7 @@ Map-Reduce là **mô hình lập trình** cho phép bạn chỉ viết hai hàm 
 | 1 | Dữ liệu nằm trên nhiều máy | Chương trình phải xử lý các phần dữ liệu ở những nơi khác nhau |
 | 2 | Song song hóa | Nhiều máy cùng làm các phần việc độc lập để rút ngắn thời gian |
 | 3 | Đưa tính toán đến gần dữ liệu | Ưu tiên chạy tại máy đang lưu dữ liệu để giảm truyền mạng |
-| 4 | Điều phối và phục hồi "trong suốt" | Lập trình viên mô tả phép tính; hệ thống lo chia việc, lập lịch, chống lỗi |
+| 4 | Điều phối và phục hồi "trong suốt" | Lập trình viên mô tả phép tính, hệ thống lo chia việc, lập lịch, chống lỗi |
 
 "Trong suốt" **không** có nghĩa máy không hỏng, mà là hệ thống phát hiện lỗi và chạy lại tác vụ khi có thể. Song song hóa nhằm giảm thời gian, **không** hứa tăng tốc tuyến tính.
 
@@ -69,10 +69,10 @@ Trên máy tính, phép cộng số `float` **không** kết hợp tuyệt đố
 Hệ thống tệp phân tán Hadoop (HDFS) chia tệp thành **khối** và lưu **nhiều bản sao** của mỗi khối trên các máy khác nhau, thường trải trên nhiều **rack** (tủ máy) nối với nhau qua bộ chuyển mạch.
 
 - **Cục bộ hóa:** bộ lập lịch ưu tiên máy có khối → cùng rack → rack khác.
-- **Chịu lỗi:** mất một máy (hoặc một rack) vẫn còn bản sao ở nơi khác; NameNode chỉ đạo sao chép lại để bù bản sao thiếu.
+- **Chịu lỗi:** mất một máy (hoặc một rack) vẫn còn bản sao ở nơi khác. NameNode chỉ đạo sao chép lại để bù bản sao thiếu.
 
 ::: danger Bản sao không phải dữ liệu mới
-Khối A có 3 bản sao **không** có nghĩa dữ liệu của A được cộng 3 lần. Bản sao thuộc về **lưu trữ** (độ bền, vị trí đọc); tính toán chỉ xử lý mỗi khối logic **đúng một lần**.
+Khối A có 3 bản sao **không** có nghĩa dữ liệu của A được cộng 3 lần. Bản sao thuộc về **lưu trữ** (độ bền, vị trí đọc). Tính toán chỉ xử lý mỗi khối logic **đúng một lần**.
 :::
 
 ---
@@ -86,6 +86,8 @@ Khối A có 3 bản sao **không** có nghĩa dữ liệu của A được cộ
 $$
 c_i(w) = \bigl\lvert \lbrace j \in \lbrace 1, \ldots, m_i \rbrace : w_{ij} = w \rbrace \bigr\rvert, \qquad c(w) = \sum_{i=1}^{n} c_i(w)
 $$
+
+$c_i(w)$ đếm số lần từ $w$ xuất hiện trong văn bản thứ $i$. $c(w)$ cộng kết quả qua mọi văn bản. Viết đầy đủ, $c(w)=c_1(w)+c_2(w)+\cdots+c_n(w)$. Trong $\sum_{i=1}^n$, chỉ số $i$ chạy qua các văn bản, không chạy qua các từ bên trong một văn bản. Còn dấu $|\{\cdots\}|$ đếm số vị trí $j$ thỏa điều kiện. Các lần xuất hiện lặp của một từ đều được đếm.
 
 Đầu ra: mỗi $w \in V$ có **đúng một** cặp $(w, c(w))$.
 
@@ -102,7 +104,7 @@ $$
 ### 2.2. Ba bước: Map, nhóm theo khóa, Reduce
 
 ::: tip Ẩn dụ: Bưu điện phân loại thư
-Mỗi **nhân viên nhận thư** (Map) đọc từng lá thư và dán nhãn mã bưu chính lên đó — họ không cần biết thư sẽ đi đâu tiếp. **Trung tâm phân loại** (hệ thống) gom mọi thư cùng mã bưu chính vào cùng một bao, gửi đến đúng bưu cục. **Bưu cục địa phương** (Reduce) mở bao của mình và xử lý từng mã một. Nhân viên chỉ cần biết "dán nhãn gì" và "xử lý bao thế nào"; mọi khâu vận chuyển đã có hệ thống lo.
+Mỗi **nhân viên nhận thư** (Map) đọc từng lá thư và dán nhãn mã bưu chính lên đó — họ không cần biết thư sẽ đi đâu tiếp. **Trung tâm phân loại** (hệ thống) gom mọi thư cùng mã bưu chính vào cùng một bao, gửi đến đúng bưu cục. **Bưu cục địa phương** (Reduce) mở bao của mình và xử lý từng mã một. Nhân viên chỉ cần biết "dán nhãn gì" và "xử lý bao thế nào". Mọi khâu vận chuyển đã có hệ thống lo.
 :::
 
 ```text
@@ -117,7 +119,7 @@ Reduce(w, L_w):
   phát(w, c)
 ```
 
-- **Khóa** = từ; **giá trị** $1$ = một lần xuất hiện.
+- **Khóa** = từ. **Giá trị** $1$ = một lần xuất hiện.
 - Một từ xuất hiện $m$ lần trong cùng văn bản → Map phát **$m$ cặp** $(w, 1)$, không gộp trước.
 - Hệ thống gom **mọi** giá trị của cùng từ $w$ (từ mọi tác vụ Map) vào danh sách $L_w$.
 - Từ không xuất hiện thì không có nhóm, Reduce **không được gọi** cho từ đó.
@@ -136,7 +138,7 @@ $d_1$ = "mèo chó mèo", $d_2$ = "chó chim".
 | Reduce chim | (chim, [1]) | (chim, 1) |
 | Kiểm tra | 5 lần xuất hiện đầu vào | $2 + 2 + 1 = 5$  |
 
-Phân biệt: "mèo" xuất hiện **2 lần** nhưng chỉ trong **1 văn bản**; "chó" xuất hiện 2 lần trong 2 văn bản.
+Phân biệt: "mèo" xuất hiện **2 lần** nhưng chỉ trong **1 văn bản**. "chó" xuất hiện 2 lần trong 2 văn bản.
 
 ### 2.4. Hình thức hóa
 
@@ -175,11 +177,11 @@ $$
 Ký hiệu $(K_2 \times V_2)^*$ là **dãy**. Nếu dùng tập hợp, hai cặp (mèo,1) giống hệt nhau sẽ bị gộp làm một và số đếm sai.
 :::
 
-**Các quy tắc then chốt:**
+**Các quy tắc cần giữ:**
 
 - **Cùng khóa → cùng tác vụ Reduce.** Khác khóa **có thể** cùng tác vụ, nhưng vẫn là **hai nhóm riêng**, Reduce được gọi riêng cho từng khóa.
 - **Reduce không được phụ thuộc thứ tự** giá trị trong $L_k$, vì hệ thống không cam kết thứ tự.
-- Phân biệt **hàm** với **tác vụ**: một tác vụ Map gọi hàm Map nhiều lần (mỗi văn bản một lần); một tác vụ Reduce thực hiện nhiều "reducer" (mỗi khóa một lần).
+- Phân biệt **hàm** với **tác vụ**: một tác vụ Map gọi hàm Map nhiều lần (mỗi văn bản một lần). Một tác vụ Reduce thực hiện nhiều "reducer" (mỗi khóa một lần).
 
 ### 2.5. Các pha của một công việc
 
@@ -192,7 +194,7 @@ flowchart LR
     R --> Y["Đầu ra Y"]
 ```
 
-Bốn pha này là **pha logic**: trong cài đặt thật, việc chuyển dữ liệu có thể bắt đầu khi một số Map khác còn chạy; Reduce cho mỗi khóa chỉ chốt kết quả khi đã nhận đủ dữ liệu của khóa đó.
+Bốn pha này là **pha logic**: trong cài đặt thật, việc chuyển dữ liệu có thể bắt đầu khi một số Map khác còn chạy. Reduce cho mỗi khóa chỉ chốt kết quả khi đã nhận đủ dữ liệu của khóa đó.
 
 **Giả mã hình thức của một công việc** (theo slide):
 
@@ -209,7 +211,7 @@ song song với t = 0, ..., r−1:
 trả về Y = gom_giữ_lặp(O_0, ..., O_{r−1})
 ```
 
-Trường hợp biên: $X$ rỗng → $I$ rỗng → không có khóa → $Y$ rỗng. Giả thiết: Map và Reduce **xác định** và **kết thúc**; Reduce độc lập với thứ tự giá trị. Mỗi vị trí bản ghi đóng góp đúng một lần — các lần chạy lại hay tác vụ dự phòng **không** được tính thêm.
+Trường hợp biên: $X$ rỗng → $I$ rỗng → không có khóa → $Y$ rỗng. Giả thiết: Map và Reduce **xác định** và **kết thúc**. Reduce độc lập với thứ tự giá trị. Mỗi vị trí bản ghi đóng góp đúng một lần — các lần chạy lại hay tác vụ dự phòng **không** được tính thêm.
 
 ### 2.6. Hàm Combine: gộp cục bộ trước khi gửi
 
@@ -234,13 +236,13 @@ Khi đó kết quả **không đổi** dù hệ thống bỏ qua Combine, gộp 
 |---|---|---|---|
 | Map 1 ($d_1$) | (mèo,1), (chó,1), (mèo,1) | (mèo,2), (chó,1) | 2 |
 | Map 2 ($d_2$) | (chó,1), (chim,1) | (chó,1), (chim,1) | 2 |
-| Tổng | 5 cặp | 4 cặp | 5 → 4 |
-| Reduce | — | chó nhận [1, 1] → (chó, 2) | mèo: [2] → 2; chim: [1] → 1 |
+| Tổng | 5 cặp | 4 cặp | $5 \to  4$ |
+| Reduce | — | chó nhận [1, 1] → (chó, 2) | mèo: $[2] \to  2$, chim: $[1] \to  1$ |
 
 Hai cặp "chó" vẫn phải gặp nhau tại Reduce, vì chúng nằm ở **hai tác vụ Map khác nhau** và chưa được cộng chung.
 
 ::: danger Trung bình KHÔNG dùng được làm Combine trực tiếp
-Trung bình không có tính kết hợp khi các nhóm có kích thước khác nhau. Ví dụ dãy $2, 4, 9$: trung bình của nhóm $[2,4]$ là $3$, của $[9]$ là $9$; trung bình của hai trung bình là $6$, nhưng trung bình đúng của cả dãy là $5$. Cách đúng: giữ trạng thái **(tổng, số lượng)**, chỉ chia ở Reduce cuối (mục 3.3).
+Trung bình không có tính kết hợp khi các nhóm có kích thước khác nhau. Ví dụ dãy $2, 4, 9$: trung bình của nhóm $[2,4]$ là $3$, của $[9]$ là $9$. Trung bình của hai trung bình là $6$, nhưng trung bình đúng của cả dãy là $5$. Cách đúng: giữ trạng thái **(tổng, số lượng)**, chỉ chia ở Reduce cuối (mục 3.3).
 :::
 
 ---
@@ -263,7 +265,7 @@ Dữ liệu logic: $pq$ bản ghi $(i, j, a_{ij})$, **kể cả phần tử 0**.
 Mỗi bản ghi chấm công $(i, j, a_{ij})$ nói "nhân viên thuộc phòng $i$ làm $a_{ij}$ giờ ở loại việc $j$", còn $v_j$ là đơn giá loại việc $j$ (bảng giá dán ở mọi chi nhánh). Mỗi chi nhánh nhân giờ với đơn giá rồi gửi kết quả **theo phòng ban $i$**. Tổng lương của phòng $i$ chính là $y_i$. Khóa phải là **phòng ban**, vì ta muốn tổng theo phòng.
 :::
 
-**Ứng dụng: điểm tương đồng trang web – truy vấn.** Hàng của $A$ là trang web, cột là từ, phần tử là trọng số của từ trong trang; $v$ là trọng số của từ trong truy vấn. Nếu mỗi hàng và $v$ đều được chuẩn hóa về độ dài Euclid 1, thì $y_i$ là **cosine** giữa trang $i$ và truy vấn.
+**Ứng dụng: điểm tương đồng trang web – truy vấn.** Hàng của $A$ là trang web, cột là từ, phần tử là trọng số của từ trong trang. $v$ là trọng số của từ trong truy vấn. Nếu mỗi hàng và $v$ đều được chuẩn hóa về độ dài Euclid 1, thì $y_i$ là **cosine** giữa trang $i$ và truy vấn.
 
 **Các hàm:**
 
@@ -276,7 +278,7 @@ Combine(i, L): yield(i, sum(L))
 Reduce(i, L):  yield(i, sum(L))
 ```
 
-Khóa là hàng $i$; giá trị là tích $a_{ij} v_j$ hoặc tổng bộ phận các tích.
+Khóa là hàng $i$. Giá trị là tích $a_{ij} v_j$ hoặc tổng bộ phận các tích.
 
 **Dry-run 3: ma trận $4 \times 4$ chia thành bốn khối $2 \times 2$**
 
@@ -284,7 +286,7 @@ $$
 A = \left[\begin{array}{cc|cc} 1 & 2 & 0 & 1 \\ 0 & 1 & 2 & 0 \\ \hline 2 & 0 & 1 & 1 \\ 1 & 1 & 0 & 2 \end{array}\right], \qquad v = \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}
 $$
 
-$B_{11}$: hàng 1–2, cột 1–2; $B_{12}$: hàng 1–2, cột 3–4; $B_{21}$: hàng 3–4, cột 1–2; $B_{22}$: hàng 3–4, cột 3–4. Chỉ số $(i,j)$ là **chỉ số toàn cục**.
+$B_{11}$: hàng 1–2, cột 1–2. $B_{12}$: hàng 1–2, cột 3–4. $B_{21}$: hàng 3–4, cột 1–2. $B_{22}$: hàng 3–4, cột 3–4. Chỉ số $(i,j)$ là **chỉ số toàn cục**.
 
 | Khối | Các tích được tính | Map yield | Combine yield |
 |---|---|---|---|
@@ -300,11 +302,11 @@ $B_{11}$: hàng 1–2, cột 1–2; $B_{12}$: hàng 1–2, cột 3–4; $B_{21}$
 | 3 | [2, 7] | (3, 9) | $2 + 0 + 3 + 4 = 9$  |
 | 4 | [3, 8] | (4, 11) | $1 + 2 + 0 + 8 = 11$  |
 
-Kết quả: $y = (9, 8, 9, 11)^T$. Mỗi hàng nhận đóng góp từ **hai** khối; khóa $i$ giúp gom đủ. Lưu ý $A$ ở đây **chưa chuẩn hóa**, nên $9, 8, 9, 11$ không phải điểm cosine.
+Kết quả: $y = (9, 8, 9, 11)^T$. Mỗi hàng nhận đóng góp từ **hai** khối. Khóa $i$ giúp gom đủ. Lưu ý $A$ ở đây **chưa chuẩn hóa**, nên $9, 8, 9, 11$ không phải điểm cosine.
 
 **Tính đúng.** (1) Mỗi tọa độ thuộc đúng một khối logic, Map yield mỗi tích đúng một lần. (2) Khóa $i$ gom đúng $q$ tích của hàng $i$ (giữ cả tích 0). (3) Combine bảo toàn tổng nhờ phép cộng kết hợp, giao hoán. Vậy Reduce trả đúng $y_i$ cho mọi $i$.
 
-**Tại sao khóa là hàng $i$ chứ không phải cột $j$?** Vì $y_i$ là tổng **theo hàng**: các tích cùng hàng phải về chung một khóa để được cộng; cột $j$ không ứng với thành phần nào của kết quả.
+**Tại sao khóa là hàng $i$ chứ không phải cột $j$?** Vì $y_i$ là tổng **theo hàng**: các tích cùng hàng phải về chung một khóa để được cộng. Cột $j$ không ứng với thành phần nào của kết quả.
 
 ### 3.2. Đếm số từ phân biệt (MMDS bài 2.3.1(d), chuyển sang từ)
 
@@ -352,7 +354,7 @@ flowchart LR
 
 Kết luận: $D = 3$ loại từ, trong khi có 5 lần xuất hiện.
 
-**Tính đúng.** Bất biến then chốt: đầu ra Job 1 tương ứng **một – một** với các từ phân biệt (mỗi từ có mặt sinh ít nhất một cặp Map; Reduce thay cả nhóm bằng đúng một cặp; từ vắng mặt không sinh cặp nào). Job 2 đếm số cặp đó nên ra đúng $D$. Lưu ý vai trò Combine khác nhau: Combine 1 **giữ sự hiện diện**, Combine 2 **giữ tổng**.
+**Tính đúng.** Đầu ra Job 1 tương ứng một–một với các từ phân biệt. Cụ thể, mỗi từ có mặt sinh ít nhất một cặp Map, rồi Reduce thay cả nhóm bằng đúng một cặp. Từ vắng mặt không sinh cặp nào. Vì vậy, Job 2 đếm số cặp đó sẽ cho đúng $D$. Combine 1 giữ sự hiện diện của từ, còn Combine 2 giữ tổng số lượng.
 
 ### 3.3. Trung bình cộng (MMDS bài 2.3.1(b))
 
@@ -364,10 +366,10 @@ $$
 
 Hai phần tử bằng nhau vẫn là hai đóng góp. Trung bình của dãy rỗng **không xác định**.
 
-**Ứng dụng:** số từ trung bình mỗi trang. Với "mèo chó mèo" (3 từ) và "chó chim" (2 từ): $\mu = (3+2)/2 = 2{,}5$ từ/trang. Trang rỗng vẫn là một trang và đóng góp $(0, 1)$; bỏ nó sẽ làm sai mẫu số.
+**Ứng dụng:** số từ trung bình mỗi trang. Với "mèo chó mèo" (3 từ) và "chó chim" (2 từ): $\mu = (3+2)/2 = 2{,}5$ từ/trang. Trang rỗng vẫn là một trang và đóng góp $(0, 1)$. Bỏ nó sẽ làm sai mẫu số.
 
 ::: tip Ẩn dụ: Điểm trung bình toàn khối
-Lớp A có 40 học sinh, trung bình 8; lớp B có 10 học sinh, trung bình 6. Trung bình toàn khối **không phải** $(8+6)/2 = 7$, mà là $(40 \cdot 8 + 10 \cdot 6)/50 = 7{,}6$. Mỗi lớp phải báo cáo **tổng điểm và sĩ số**, không chỉ báo điểm trung bình.
+Lớp A có 40 học sinh, trung bình 8. Lớp B có 10 học sinh, trung bình 6. Trung bình toàn khối **không phải** $(8+6)/2 = 7$, mà là $(40 \cdot 8 + 10 \cdot 6)/50 = 7{,}6$. Mỗi lớp phải báo cáo **tổng điểm và sĩ số**, không chỉ báo điểm trung bình.
 :::
 
 **Các hàm** (với $g$ là khóa chung, $L$ là danh sách trạng thái $(s, c)$, $S = \sum s$, $C = \sum c$):
@@ -388,7 +390,7 @@ Lớp A có 40 học sinh, trung bình 8; lớp B có 10 học sinh, trung bình
 | Combine 2 | chỉ một cặp | $(g,(9,1))$ |
 | Reduce | $L = [(6,2),(9,1)]$, $S = 15$, $C = 3$ | phát $(g, 5)$ |
 
-$\mu = 15/3 = 5$. Nếu chia ở Combine, ta được trung bình của $3$ và $9$ là $6$ — **sai**.
+$\mu = \frac{15}{3} = 5$. Nếu chia ở Combine, ta được trung bình của $3$ và $9$ là $6$ — **sai**.
 
 **Tính đúng (quy nạp).** Bất biến: mỗi trạng thái $(s, c)$ là đúng tổng và đúng số phần tử của **một nhóm vị trí rời nhau**. Cơ sở: Map phát $(a_i, 1)$. Bước gộp: gộp hai nhóm rời nhau bằng cộng từng thành phần giữ bất biến. Cuối cùng $S = \sum a_i$, $C = n > 0$, nên $S/C = \mu$.
 
@@ -405,7 +407,7 @@ Ba đại lượng chính, **khác đơn vị**, không cộng với nhau:
 | $V$ | Lượng dữ liệu qua đường truyền đang xét | byte |
 | $C$ | Tổng kích thước đầu vào mọi tác vụ (quy ước MMDS) | byte, MB |
 
-Trong phần này $P$ là **số máy**; đừng nhầm với $p$ là số hàng ma trận.
+Trong phần này $P$ là **số máy**. Đừng nhầm với $p$ là số hàng ma trận.
 
 ### 4.1. Tổng công việc không giảm khi chia máy
 
@@ -415,7 +417,7 @@ $$
 W_P = \underbrace{P\left(\frac{n}{P} - 1\right)}_{\text{cộng cục bộ}} + \underbrace{(P - 1)}_{\text{gộp}} = n - 1
 $$
 
-Với $n = 16$, $P = 4$: $4 \times 3 + 3 = 15$, đúng bằng khi cộng trên một máy. **Song song hóa không giảm tổng việc; nó chia việc ra để giảm thời gian chờ.**
+Với $n = 16$, $P = 4$: $4 \times 3 + 3 = 15$, đúng bằng khi cộng trên một máy. **Song song hóa không giảm tổng việc. Nó chia việc ra để giảm thời gian chờ.**
 
 ### 4.2. Thời gian của một pha = máy chậm nhất
 
@@ -449,11 +451,11 @@ $$
 | 8 | $1\tau$ | $7\tau$ | $8\tau$ | 15 |
 | 16 | $0$ | $15\tau$ | $15\tau$ | 15 |
 
-Thêm máy giảm phần Map nhưng **tăng** phần gộp tuần tự. Từ công thức, $T_P$ nhỏ nhất khi $n/P + P$ nhỏ nhất, tức $P = \sqrt{n}$ (đạo hàm $-n/P^2 + 1 = 0$). Với $n = 16$, tối ưu là $P = 4$. Nhận xét này suy ra từ mô hình gộp tuần tự của slide; gộp theo cây sẽ cho lịch khác.
+Thêm máy giảm phần Map nhưng **tăng** phần gộp tuần tự. Từ công thức, $T_P$ nhỏ nhất khi $n/P + P$ nhỏ nhất, tức $P = \sqrt{n}$ (đạo hàm $-n/P^2 + 1 = 0$). Với $n = 16$, tối ưu là $P = 4$. Nhận xét này suy ra từ mô hình gộp tuần tự của slide. Gộp theo cây sẽ cho lịch khác.
 
 ### 4.4. Chi phí đầu vào và chi phí khởi tạo tác vụ (MMDS 2.5.1)
 
-**Quy ước MMDS:** chi phí một tác vụ là **kích thước đầu vào** của nó; chi phí thuật toán là tổng trên mọi tác vụ.
+**Quy ước MMDS:** chi phí một tác vụ là **kích thước đầu vào** của nó. Chi phí thuật toán là tổng trên mọi tác vụ.
 
 $$
 C = I + H
@@ -467,7 +469,7 @@ $$
 Ví dụ: $I = 100$ MB, $H = 40$ MB → $C = 140$ MB. **Đầu ra cuối không được cộng** vào $C$ theo quy ước này. Combine nằm trong Map nên làm giảm $H$, giữ nguyên $I$.
 
 ::: warning Quy ước khác
-Một số slide (Stanford CS246) đếm tổng đọc/ghi thành $I + 2H + O$. Đó là quy ước khác; trong bài thi theo học phần này dùng $C = I + H$ của MMDS 2.5.1, trừ khi đề nói khác.
+Một số slide (Stanford CS246) đếm tổng đọc/ghi thành $I + 2H + O$. Đó là quy ước khác. Trong bài thi theo học phần này dùng $C = I + H$ của MMDS 2.5.1, trừ khi đề nói khác.
 :::
 
 ### 4.5. Thời gian truyền: mô hình độ trễ – băng thông
@@ -480,7 +482,7 @@ $$
 |---|---|
 | $\lambda$ | Độ trễ khởi đầu (giây), trước khi dữ liệu bắt đầu tới |
 | $V$ | Lượng dữ liệu cần truyền (MB) |
-| $B$ | Băng thông (MB/s); quy ước 1 MB = $10^6$ byte, phân biệt MB và Mb |
+| $B$ | Băng thông (MB/s), quy ước 1 MB = $10^6$ byte, phân biệt MB và Mb |
 
 Ví dụ: $V = 100$ MB, $B = 50$ MB/s, $\lambda = 0{,}02$ s → $T \approx 2{,}02$ s.
 
@@ -515,7 +517,7 @@ $$
 S_P = \frac{T_1}{T_P}
 $$
 
-Ví dụ slide ($P = 4$): $T_P = 1 + 4 + 3 + 2 = 10$ s; $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.
+Ví dụ slide ($P = 4$): $T_P = 1 + 4 + 3 + 2 = 10$ s. $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.
 
 ```mermaid
 flowchart LR
@@ -527,7 +529,7 @@ flowchart LR
 
 ### 4.8. Dry-run 7: câu hỏi kiểm tra của slide
 
-Dữ kiện: $P = 3$; điều phối 1 s; tải Map mỗi máy 2 s / 3 s / 5 s; $V = 120$ MB; $B = 40$ MB/s; Reduce 2 s; $T_1 = 22$ s. Bỏ độ trễ và chi phí nhóm.
+Dữ kiện: $P = 3$. Điều phối 1 s. Tải Map mỗi máy $2 s / 3 s / 5 s$. $V = 120$ MB. $B = 40$ MB/s. Reduce 2 s. $T_1 = 22$ s. Bỏ độ trễ và chi phí nhóm.
 
 | Bước | Tính | Kết quả |
 |---|---|---|
@@ -570,12 +572,12 @@ sequenceDiagram
 
 | Cơ chế | Điểm cần nhớ |
 |---|---|
-| InputSplit | Đơn vị **chia việc** cho Map; khối HDFS là đơn vị **lưu trữ**; hai thứ có thể khác nhau |
-| Cục bộ hóa | Ưu tiên máy có bản sao → cùng rack → rack khác; là ưu tiên, không bảo đảm |
+| InputSplit | Đơn vị **chia việc** cho Map, khối HDFS là đơn vị **lưu trữ**, hai thứ có thể khác nhau |
+| Cục bộ hóa | Ưu tiên máy có bản sao → cùng rack → rack khác, là ưu tiên, không bảo đảm |
 | Phân phối | Mỗi Map chia đầu ra thành $r$ phần theo $p(k)$, lưu trên **đĩa cục bộ** |
 | Shuffle | Mỗi Reduce lấy phần của mình **trực tiếp** từ các máy Map, không qua Master |
-| Sắp và nhóm | Hệ thống sắp, ghép; Reduce đọc lần lượt từng nhóm, không cần giữ cả nhóm trong RAM |
-| Master | Theo dõi trạng thái chờ / đang chạy / hoàn tất; mất liên lạc quá hạn coi là lỗi |
+| Sắp và nhóm | Hệ thống sắp, ghép, Reduce đọc lần lượt từng nhóm, không cần giữ cả nhóm trong RAM |
+| Master | Theo dõi trạng thái chờ / đang chạy / hoàn tất, mất liên lạc quá hạn coi là lỗi |
 
 **Phục hồi lỗi phụ thuộc nơi lưu dữ liệu:**
 
@@ -586,7 +588,7 @@ sequenceDiagram
 | Đầu ra Reduce đã hoàn tất | HDFS | Giữ nguyên, không cần chạy lại |
 
 - Máy chạy **Map** hỏng trước khi Reduce lấy xong dữ liệu → Map đó phải chạy lại trên máy khác, Master báo vị trí mới cho Reduce.
-- Máy chạy **Reduce** hỏng giữa chừng → chỉ chạy lại Reduce đó, lấy lại các phần trung gian; Map không phải chạy lại nếu đầu ra của chúng còn.
+- Máy chạy **Reduce** hỏng giữa chừng → chỉ chạy lại Reduce đó, lấy lại các phần trung gian. Map không phải chạy lại nếu đầu ra của chúng còn.
 - **Master hỏng** (trong mô hình MMDS) → cả công việc phải khởi động lại.
 - Một tác vụ có thể có **nhiều lần thực thi** (chạy lại sau lỗi, hoặc bản dự phòng khi chạy quá chậm). Hệ thống chỉ chấp nhận **một** kết quả cho mỗi tác vụ logic, không cộng hai bản.
 
@@ -594,7 +596,7 @@ sequenceDiagram
 
 ## 6. Thực hành Hadoop với Docker Compose
 
-Cụm 6 container Docker trên một máy: **NameNode**, **2 DataNode** (HDFS, replication 2), **ResourceManager**, **2 NodeManager** (YARN). Container Docker là tiến trình cô lập trên host; container YARN là đơn vị tài nguyên NodeManager cấp cho ApplicationMaster, Map hoặc Reduce.
+Cụm 6 container Docker trên một máy: **NameNode**, **2 DataNode** (HDFS, replication 2), **ResourceManager**, **2 NodeManager** (YARN). Container Docker là tiến trình cô lập trên host. Container YARN là đơn vị tài nguyên NodeManager cấp cho ApplicationMaster, Map hoặc Reduce.
 
 **Khởi động và kiểm tra:**
 
@@ -620,7 +622,7 @@ for line in sys.stdin:
         print(f"{word}\t1")
 ```
 
-**reducer.py** (Hadoop đưa các dòng cùng khóa **liền nhau**; dùng được làm cả combiner):
+**reducer.py** (Hadoop đưa các dòng cùng khóa **liền nhau**. Dùng được làm cả combiner):
 
 ```python
 import sys
@@ -656,7 +658,7 @@ mèo	2
 | Combine output records | 4 | hai cặp "mèo" của $d_1$ đã gộp |
 | Reduce output records | 3 | ba từ phân biệt |
 
-Với 2 Reduce, output có hai tệp `part-*`; lần chạy mẫu có một tệp chứa cả ba khóa và một tệp **rỗng** — hàm băm mặc định không bảo đảm cân bằng tải. Số lần Combine chạy không cố định giữa các lần nộp job. Bộ đếm đo **số cặp**, không đo thời gian.
+Với 2 Reduce, output có hai tệp `part-*`. Lần chạy mẫu có một tệp chứa cả ba khóa và một tệp **rỗng** — hàm băm mặc định không bảo đảm cân bằng tải. Số lần Combine chạy không cố định giữa các lần nộp job. Bộ đếm đo **số cặp**, không đo thời gian.
 
 **Câu hỏi kiểm tra của slide:** (1) Xóa Combiner, kết quả không đổi vì phép cộng kết hợp và giao hoán. (2) Replication 2 không làm tổng thành 10: bản sao là lưu trữ, mỗi từ vẫn chỉ được một Map xử lý một lần. (3) Bằng chứng job đúng: trạng thái `SUCCEEDED` trên YARN, bộ đếm hợp lệ, và `part-*` cho đúng chim 1, chó 2, mèo 2 — `docker compose ps` chỉ cho biết container đang chạy.
 
@@ -672,15 +674,15 @@ Với 2 Reduce, output có hai tệp `part-*`; lần chạy mẫu có một tệ
 | Combine | $(*, L) \to (*, \max L)$ |
 | Reduce | $(*, L) \to \max L$ |
 
-**Tính đúng:** bất biến khi quét — biến đang giữ bằng max của tiền tố đã đọc. Mỗi phần tử thuộc đúng một khối, nên max toàn tệp bằng max của các max khối; $\max$ kết hợp, giao hoán nên Combine an toàn. Chi phí quét $\Theta(n)$; Map phát $m$ cặp. **Biên:** tệp rỗng không có max — báo không có giá trị, **không** trả 0 (dữ liệu có thể toàn số âm).
+**Tính đúng:** bất biến khi quét — biến đang giữ bằng max của tiền tố đã đọc. Mỗi phần tử thuộc đúng một khối, nên max toàn tệp bằng max của các max khối. $\max$ kết hợp, giao hoán nên Combine an toàn. Chi phí quét $\Theta(n)$. Map phát $m$ cặp. **Biên:** tệp rỗng không có max — báo không có giá trị, **không** trả 0 (dữ liệu có thể toàn số âm).
 
 ### 7.2. Trung bình cộng — bài 2.3.1(b)
 
-Map trên $B_j$ phát $(*, (s_j, c_j))$; Combine cộng từng thành phần; Reduce trả $S/C$. Bất biến: mỗi trạng thái là tổng và số phần tử của đúng phần dữ liệu nó đại diện. **Biên:** tệp rỗng → $C = 0$, trung bình không xác định, không chia cho 0.
+Map trên $B_j$ phát $(*, (s_j, c_j))$. Combine cộng từng thành phần. Reduce trả $S/C$. Bất biến: mỗi trạng thái là tổng và số phần tử của đúng phần dữ liệu nó đại diện. **Biên:** tệp rỗng → $C = 0$, trung bình không xác định, không chia cho 0.
 
 ### 7.3. Số giá trị phân biệt — bài 2.3.1(d)
 
-Hai vòng như mục 3.2: Job 1 phát $(x, 1)$, Reduce thay mỗi nhóm bằng một cặp $(x, 1)$; Job 2 đổi thành $(*, 1)$ rồi cộng. Job 1 tạo tối đa $n$ cặp trung gian và $D$ cặp đầu ra; Job 2 tạo tối đa $D$ cặp. Combine **không** bảo đảm chỉ còn $O(D)$ cặp toàn cục, vì cùng giá trị có thể ở nhiều Map. Một Reduce giữ toàn bộ tập giá trị cũng đúng nhưng cần bộ nhớ $\Theta(D)$. **Biên:** đầu vào rỗng → $D = 0$, do chương trình điều phối trả.
+Hai vòng như mục 3.2: Job 1 phát $(x, 1)$, Reduce thay mỗi nhóm bằng một cặp $(x, 1)$. Job 2 đổi thành $(*, 1)$ rồi cộng. Job 1 tạo tối đa $n$ cặp trung gian và $D$ cặp đầu ra. Job 2 tạo tối đa $D$ cặp. Combine **không** bảo đảm chỉ còn $O(D)$ cặp toàn cục, vì cùng giá trị có thể ở nhiều Map. Một Reduce giữ toàn bộ tập giá trị cũng đúng nhưng cần bộ nhớ $\Theta(D)$. **Biên:** đầu vào rỗng → $D = 0$, do chương trình điều phối trả.
 
 ---
 
@@ -884,18 +886,18 @@ Dry-run 7: câu hỏi kiểm tra
 2. **Đếm "tần suất" bằng số văn bản chứa từ:** sai, phải đếm **số lần xuất hiện**.
 3. **Khóa ma trận–véc tơ là cột $j$:** sai, phải là hàng $i$ vì $y_i$ là tổng theo hàng.
 4. **Cộng số từ phân biệt của từng văn bản:** đếm trùng ($2 + 2 = 4$ thay vì $3$). Phải loại trùng toàn cục trước.
-5. **Dùng Reduce của bài trung bình làm Combine:** Reduce phát $S/C$ (một số) nên không gộp tiếp được; Combine phải giữ cặp $(s, c)$.
+5. **Dùng Reduce của bài trung bình làm Combine:** Reduce phát $S/C$ (một số) nên không gộp tiếp được. Combine phải giữ cặp $(s, c)$.
 6. **"Trung bình của trung bình":** chỉ đúng khi các nhóm có cùng kích thước.
-7. **Combine là bắt buộc / luôn chạy đúng một lần:** sai. Hệ thống có thể không chạy hoặc chạy nhiều lần; kết quả phải không đổi trong mọi trường hợp.
-8. **Combine luôn làm chạy nhanh hơn:** chưa chắc. Nó giảm $V$ nhưng tăng việc ở Map; khóa không lặp thì không giảm gì.
+7. **Combine là bắt buộc / luôn chạy đúng một lần:** sai. Hệ thống có thể không chạy hoặc chạy nhiều lần. Kết quả phải không đổi trong mọi trường hợp.
+8. **Combine luôn làm chạy nhanh hơn:** chưa chắc. Nó giảm $V$ nhưng tăng việc ở Map. Khóa không lặp thì không giảm gì.
 9. **$T_{\text{Map}}$ = tổng tải các máy:** sai, là **max** (máy chậm nhất).
 10. **Tăng số máy luôn giảm thời gian:** sai. Phần gộp tuần tự, truyền mạng, điều phối, tải lệch có thể làm $T_P$ tăng (xem bảng $n = 16$).
 11. **Tổng công việc giảm khi song song:** sai, $W_P = n - 1$ không đổi.
 12. **Cộng đầu ra cuối vào $C$:** theo MMDS 2.5.1, $C = I + H$, không tính đầu ra cuối.
 13. **100 MB/s là băng thông mỗi máy:** khi đường nối dùng chung, 4 máy gửi tổng 400 MB cần ít nhất 4 s.
-14. **Replication làm tăng số đếm:** sai. Bản sao là lưu trữ; mỗi khối logic xử lý đúng một lần.
-15. **Reduce đã xong phải chạy lại khi Map hỏng:** không. Map đã xong phải chạy lại nếu đầu ra cục bộ mất **và** còn Reduce chưa lấy; Reduce đã ghi lên HDFS được giữ.
-16. **Trả 0 cho max hoặc trung bình của tệp rỗng:** sai. Max không xác định, trung bình chia cho 0; chỉ "số giá trị phân biệt" mới có $D = 0$.
+14. **Replication làm tăng số đếm:** sai. Bản sao là lưu trữ. Mỗi khối logic xử lý đúng một lần.
+15. **Reduce đã xong phải chạy lại khi Map hỏng:** không. Map đã xong phải chạy lại nếu đầu ra cục bộ mất **và** còn Reduce chưa lấy. Reduce đã ghi lên HDFS được giữ.
+16. **Trả 0 cho max hoặc trung bình của tệp rỗng:** sai. Max không xác định, trung bình chia cho 0. Chỉ "số giá trị phân biệt" mới có $D = 0$.
 17. **Reduce phụ thuộc thứ tự giá trị trong $L_k$:** hệ thống không cam kết thứ tự.
 :::
 
@@ -906,17 +908,17 @@ Dry-run 7: câu hỏi kiểm tra
 | Hàm Map | $K_1 \times V_1 \to (K_2 \times V_2)^*$ |
 | Hàm Reduce | $K_2 \times V_2^* \to (K_3 \times V_3)^*$ |
 | Nhóm theo khóa | $L_k = [\, v \mid (k', v) \in I,\ k' = k \,]$ |
-| Hàm phân phối | $p(k) = h(k) \bmod r$; cùng khóa → cùng Reduce |
-| Đếm từ | $c(w) = \sum_i c_i(w)$; Map phát $(w,1)$, Reduce cộng |
-| Ma trận–véc tơ | $y_i = \sum_j a_{ij} v_j$; khóa $i$, giá trị $a_{ij} v_j$ |
-| Phân biệt | $D = \lvert \bigcup_i W_i \rvert$; hai job: loại trùng rồi đếm |
-| Trung bình | trạng thái $(s, c)$; chia $S/C$ chỉ ở Reduce cuối |
+| Hàm phân phối | $p(k) = h(k) \bmod r$, cùng khóa → cùng Reduce |
+| Đếm từ | $c(w) = \sum_i c_i(w)$, Map phát $(w,1)$, Reduce cộng |
+| Ma trận–véc tơ | $y_i = \sum_j a_{ij} v_j$, khóa $i$, giá trị $a_{ij} v_j$ |
+| Phân biệt | $D = \lvert \bigcup_i W_i \rvert$, hai job: loại trùng rồi đếm |
+| Trung bình | trạng thái $(s, c)$, chia $S/C$ chỉ ở Reduce cuối |
 | Điều kiện Combine | đóng, kết hợp, giao hoán, giữ khóa, tương thích Reduce |
 | Tổng công việc | $W_P = n - 1$ (cộng $n$ số) |
 | Thời gian một pha | $T_{\text{pha}} = \max_m t_m$ |
 | Cộng $n$ số trên $P$ máy | $T_P = (n/P - 1)\tau + (P-1)\tau$, tối ưu gần $P = \sqrt{n}$ |
 | Chi phí MMDS | $C = I + H$ |
-| Thời gian truyền | $T \approx \lambda + V/B$; dùng chung: $T \ge V/B$ |
+| Thời gian truyền | $T \approx \lambda + V/B$, dùng chung: $T \ge V/B$ |
 | Toàn công việc | $T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền}} + T_{\text{Reduce}}$ |
 | Mức tăng tốc | $S_P = T_1 / T_P$ |
 | Từ khóa | khóa–giá trị, shuffle, combiner, InputSplit, cục bộ hóa, replication, Master, chạy lại, bản dự phòng |

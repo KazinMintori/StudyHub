@@ -13,7 +13,7 @@ Tìm kiếm đường chọn độ dài t sau khi đã có hướng d. Backtrack
 
 ## Giải thích kỹ thuật
 
-**Điều kiện Armijo trong backtracking.** Với hướng giảm $d$, chọn $0<\alpha<1/2$, $0<\beta<1$ và giảm $t\leftarrow\beta t$ cho tới khi
+**Điều kiện Armijo trong backtracking.** Với hướng giảm $d$, chọn $0<\alpha<\frac{1}{2}$, $0<\beta<1$ và giảm $t\leftarrow\beta t$ cho tới khi
 
 $$f(x+td)\le f(x)+\alpha t\nabla f(x)^Td.$$
 
@@ -21,7 +21,7 @@ Nếu hàm có miền hạn chế, phải kiểm $x+td\in\operatorname{dom}f$ tr
 
 ## Ví dụ
 
-Với t ban đầu 1 và β=1/2, các bước thử lần lượt là 1, 1/2, 1/4, 1/8,… cho tới khi đạt điều kiện.
+Với t ban đầu 1 và $\beta =\frac{1}{2}$, các bước thử lần lượt là 1, $\frac{1}{2}$, $\frac{1}{4}$, $\frac{1}{8}$,… cho tới khi đạt điều kiện.
 
 ## Khi nào cần dùng?
 

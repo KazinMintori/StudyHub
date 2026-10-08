@@ -5,7 +5,7 @@ description: "Bài tập nhận diện, tính toán và giải thích của tám
 
 # Bài tập Cơ sở toán cho AI
 
-Mỗi Notes có ba bài tự luyện với lời giải gập ngay sau đề. Bắt đầu bằng bài tính trực tiếp, rồi bài giải thích hoặc đổi điều kiện. Chỉ mở lời giải sau khi đã thử; nếu sai, tìm phép suy ra đầu tiên không hợp lệ trước khi so đáp số cuối.
+Mỗi Notes có ba bài tự luyện với lời giải gập ngay sau đề. Bắt đầu bằng bài tính trực tiếp, rồi bài giải thích hoặc đổi điều kiện. Chỉ mở lời giải sau khi đã thử. Nếu sai, tìm phép suy ra đầu tiên không hợp lệ trước khi so đáp số cuối.
 
 | Lecture | Thao tác luyện | Mở bộ bài |
 | --- | --- | --- |
@@ -24,9 +24,9 @@ Mỗi Notes có ba bài tự luyện với lời giải gập ngay sau đề. B�
 Với dữ liệu $A=(1,2,3)^T$, $b=(1,2,2)^T$, giải $\min_w\tfrac12\|Aw-b\|_2^2$ với $w\le1/2$. Hãy lập mô hình, chứng minh lồi, tính nghiệm và nhân tử, rồi giải thích vì sao dừng theo gradient bằng 0 sẽ sai.
 :::
 ::: solution
-Biến là $w$; dữ liệu là $A,b$; ràng buộc $w-1/2\le0$. Mục tiêu $7w^2-11w+9/2$ có Hessian 14 dương, miền là nửa không gian. Nghiệm không ràng buộc $11/14$ không khả thi. Trên miền hợp lệ, đạo hàm âm nên nghiệm tại $1/2$, giá trị $3/4$.
+Biến là $w$. Dữ liệu là $A,b$. Ràng buộc $w-\frac{1}{2}\le0$. Mục tiêu $7w^2-11w+\frac{9}{2}$ có Hessian 14 dương, miền là nửa không gian. Nghiệm không ràng buộc $\frac{11}{14}$ không khả thi. Trên miền hợp lệ, đạo hàm âm nên nghiệm tại $\frac{1}{2}$, giá trị $\frac{3}{4}$.
 
-KKT: khả thi gốc, $\lambda=4\ge0$, bù trừ $4(1/2-1/2)=0$, dừng $14(1/2)-11+4=0$. Đây là chứng nhận toàn cục của bài lồi. Gradient mục tiêu tại nghiệm là $-4$, nên tiêu chí gradient bằng 0 của bài không ràng buộc không phù hợp.
+KKT: khả thi gốc, $\lambda=4\ge0$, bù trừ $4(\frac{1}{2}-\frac{1}{2})=0$, dừng $14(\frac{1}{2})-11+4=0$. Đây là chứng nhận toàn cục của bài lồi. Gradient mục tiêu tại nghiệm là $-4$, nên tiêu chí gradient bằng 0 của bài không ràng buộc không phù hợp.
 :::
 
-Các bài tập đều tự biên soạn dựa trên nguồn được ghi trong từng Notes; không sao chép bộ bài tập của trang chỉ mục môn.
+Các bài tập đều tự biên soạn dựa trên nguồn được ghi trong từng Notes. Không sao chép bộ bài tập của trang chỉ mục môn.

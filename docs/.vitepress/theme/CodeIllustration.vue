@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import FieldSimulation from './FieldSimulation.vue'
+import MathMatrix from './MathMatrix.vue'
 import { searchTrace, gradientTrace, bayesCounts, wordCountTrace } from './illustrations'
 const props = defineProps({ type: { type: String, required: true } })
 const step = ref(0), mode = ref('bfs'), rate = ref(.2), prior = ref(10), sensitivity = ref(80), falsePositive = ref(10), vectorX = ref(10), vectorY = ref(20), text = ref('uet học uet dữ liệu học')
@@ -14,12 +15,14 @@ const curve = Array.from({length:81}, (_,i) => { const p=plot(-2.4+i*.06); retur
 const visibleGradients = computed(() => gradients.value.filter(x => Math.abs(x)<=2.5).map(plot))
 const counts = computed(() => bayesCounts(prior.value/100,sensitivity.value/100,falsePositive.value/100))
 const matrix = [[1,2],[3,4],[5,6]], broadcast = computed(() => matrix.map(row => [row[0]+Number(vectorX.value),row[1]+Number(vectorY.value)]))
+const repeatedRow = computed(() => matrix.map(() => [Number(vectorX.value), Number(vectorY.value)]))
+const arrayLiteral = rows => `[${rows.map(row => `[${row.join(', ')}]`).join(',\n ')}]`
+const broadcastCode = computed(() => `import numpy as np\n\nA = np.array([[1, 2], [3, 4], [5, 6]])\nb = np.array([${Number(vectorX.value)}, ${Number(vectorY.value)}])\nC = A + b\n\nprint(C)\nprint(A.shape, A.ndim)  # (3, 2), 2\nprint(b.shape, b.ndim)  # (2,), 1`)
 const words = computed(() => wordCountTrace(text.value)); watch(text,()=>{step.value=0})
 const codes = {
   search: `const frontier = ['A'];\nwhile (frontier.length) {\n  const node = mode === 'bfs' ? frontier.shift() : frontier.pop();\n  visit(node);\n  // DFS: thêm láng giềng theo thứ tự đảo để thăm nhánh trái trước.\n  frontier.push(...neighbors(node, mode));\n}`,
   gradient: `const points = [2];\nfor (let i = 0; i < 10; i++) {\n  const x = points.at(-1);\n  points.push(x - learningRate * 2 * x); // f(x) = x²\n}`,
   bayes: `const tp = population * prior * sensitivity;\nconst fp = population * (1 - prior) * falsePositive;\nconst posterior = tp / (tp + fp);`,
-  broadcast: `const result = matrix.map(row =>\n  row.map((value, column) => value + vector[column])\n); // minh họa broadcasting (3,2) + (2,)`,
   mapreduce: `const pairs = words.map(word => [word, 1]);\nconst grouped = new Map();\nfor (const [key, value] of pairs) {\n  grouped.set(key, [...(grouped.get(key) || []), value]);\n}\nconst counts = [...grouped].map(([key, values]) =>\n  [key, values.reduce((sum, value) => sum + value, 0)]\n);`
 }
 </script>
@@ -33,22 +36,36 @@ const codes = {
     <div v-else-if="type==='gradient'">
       <label class="illustration-range">Tốc độ học η = {{ Number(rate).toFixed(2) }}<input v-model.number="rate" type="range" min=".05" max="1.2" step=".05"></label>
       <svg viewBox="0 0 740 350" role="img" aria-label="Đồ thị f(x)=x bình phương và các bước Gradient Descent"><line x1="45" y1="310" x2="695" y2="310" class="illustration-edge"/><line x1="370" y1="20" x2="370" y2="330" class="illustration-edge"/><polyline :points="curve" class="illustration-curve"/><polyline :points="visibleGradients.map(p=>`${p.x},${p.y}`).join(' ')" class="illustration-trace"/><circle v-for="(p,i) in visibleGradients" :key="i" :cx="p.x" :cy="p.y" r="5" class="current"/><text x="390" y="40">f(x) = x²</text><text x="375" y="335">0</text></svg>
-      <div class="trace-state" aria-live="polite"><p>Khởi đầu x₀ = 2. Sau 10 bước: x ≈ {{ gradients.at(-1).toFixed(4) }}, f(x) ≈ {{ (gradients.at(-1)**2).toFixed(4) }}.</p><p>{{ rate<1 ? 'Với 0 < η < 1, |x| giảm trong ví dụ này.' : rate===1 ? 'η = 1 làm x đổi dấu và giữ nguyên độ lớn.' : 'η > 1 làm |x| tăng; các điểm lớn ra khỏi vùng vẽ.' }}</p></div>
+      <div class="trace-state" aria-live="polite"><p>Khởi đầu x₀ = 2. Sau 10 bước: x ≈ {{ gradients.at(-1).toFixed(4) }}, f(x) ≈ {{ (gradients.at(-1)**2).toFixed(4) }}.</p><p>{{ rate<1 ? 'Với 0 < η < 1, |x| giảm trong ví dụ này.' : rate===1 ? 'η = 1 làm x đổi dấu và giữ nguyên độ lớn.' : 'η > 1 làm |x| tăng, vì vậy các điểm lớn ra khỏi vùng vẽ.' }}</p></div>
     </div>
     <div v-else-if="type==='bayes'">
       <div class="bayes-inputs"><label class="illustration-range">Tỷ lệ A: {{ prior }}%<input v-model.number="prior" type="range" min="1" max="99"></label><label class="illustration-range">P(B|A): {{ sensitivity }}%<input v-model.number="sensitivity" type="range" min="1" max="100"></label><label class="illustration-range">P(B|không A): {{ falsePositive }}%<input v-model.number="falsePositive" type="range" min="0" max="50"></label></div>
       <div class="bayes-result" aria-live="polite"><strong>P(A|B) ≈ {{ (counts.posterior*100).toFixed(1) }}%</strong><div class="bayes-bar"><span :style="{width:`${counts.posterior*100}%`}"></span></div><p>Trong 1000 trường hợp kỳ vọng: {{ counts.truePositive.toFixed(1) }} vừa thuộc A vừa có B; {{ counts.falseAlarm.toFixed(1) }} không thuộc A nhưng vẫn có B.</p></div><p class="small">Thay đổi tỷ lệ ban đầu để thấy cùng một quan sát có thể dẫn tới xác suất sau quan sát rất khác nhau.</p>
     </div>
     <div v-else-if="type==='broadcast'">
-      <div class="bayes-inputs"><label class="illustration-range">Vector[0] = {{ vectorX }}<input v-model.number="vectorX" type="range" min="-20" max="20"></label><label class="illustration-range">Vector[1] = {{ vectorY }}<input v-model.number="vectorY" type="range" min="-20" max="20"></label></div>
-      <div class="broadcast-display"><div><strong>Ma trận (3,2)</strong><div v-for="(row,i) in matrix" :key="i">{{ row.join(' · ') }}</div></div><span aria-hidden="true">+</span><div><strong>Vector (2,)</strong><div>{{ vectorX }} · {{ vectorY }}</div></div><span aria-hidden="true">=</span><div aria-live="polite"><strong>Kết quả (3,2)</strong><div v-for="(row,i) in broadcast" :key="i">{{ row.join(' · ') }}</div></div></div><p class="small">Cùng một vector được cộng vào từng hàng; chỉ số cột quyết định thành phần cộng vào.</p>
+      <div class="bayes-inputs"><label class="illustration-range"><span><code>b[0]</code> = {{ vectorX }}</span><input v-model.number="vectorX" type="range" min="-20" max="20"></label><label class="illustration-range"><span><code>b[1]</code> = {{ vectorY }}</span><input v-model.number="vectorY" type="range" min="-20" max="20"></label></div>
+      <section class="numpy-broadcast" aria-label="Broadcasting trong NumPy">
+        <h3>Trong NumPy</h3>
+        <p><code>C = A + b</code> cộng mảng một chiều <code>b</code> vào từng hàng của mảng hai chiều <code>A</code>.</p>
+        <div class="numpy-array-cards">
+          <div><strong>Mảng <code>A</code></strong><p><code>shape = (3, 2)</code><br><code>ndim = 2</code> · hai trục</p><pre><code>{{ arrayLiteral(matrix) }}</code></pre></div>
+          <div><strong>Mảng <code>b</code></strong><p><code>shape = (2,)</code><br><code>ndim = 1</code> · một trục, hai phần tử</p><pre><code>[{{ vectorX }}, {{ vectorY }}]</code></pre></div>
+          <div aria-live="polite"><strong>Kết quả <code>C</code></strong><p><code>shape = (3, 2)</code><br><code>ndim = 2</code> · hai trục</p><pre><code>{{ arrayLiteral(broadcast) }}</code></pre></div>
+        </div>
+        <p class="small"><code>ndim</code> đếm số trục của mảng, còn <code>shape</code> ghi số phần tử trên từng trục. Mảng <code>b</code> có hai phần tử nhưng chỉ có một trục.</p>
+      </section>
+      <details class="broadcast-math">
+        <summary>Diễn giải bằng ma trận trong toán học</summary>
+        <p>Phép cộng ma trận thông thường cần hai ma trận cùng kích thước. Quy tắc broadcasting ở trên tương ứng với việc lặp hai phần tử của <code>b</code> trên ba hàng để tạo ma trận B, rồi cộng A với B. Cả A, B và C đều là ma trận 3 × 2.</p>
+        <div class="broadcast-display" aria-live="polite"><MathMatrix :matrices="[matrix, repeatedRow, broadcast]" :operators="['+', '=']" label="Ma trận A cộng ma trận B bằng ma trận C, và cả ba đều có ba hàng, hai cột" /></div>
+      </details>
     </div>
     <div v-else-if="type==='mapreduce'">
       <label class="map-input">Văn bản để đếm từ<input v-model="text" maxlength="200" placeholder="Nhập một câu ngắn…"></label><div class="illustration-toolbar"><span>{{ ['Map: phát cặp (từ, 1)','Shuffle: nhóm theo từ','Reduce: cộng các giá trị'][step] }}</span><div class="button-row"><button class="study-button" @click="step=0">Đặt lại</button><button class="study-button primary" :disabled="step===2" @click="step++">Bước tiếp →</button></div></div>
-      <div class="map-output" aria-live="polite"><span v-for="(pair,i) in (step===0 ? words.pairs : step===1 ? words.groups : words.counts)" :key="i">{{ pair[0] }}: {{ Array.isArray(pair[1]) ? `[${pair[1].join(', ')}]` : pair[1] }}</span><p v-if="!words.pairs.length">Nhập văn bản để bắt đầu.</p></div><p class="small">Mô hình tính toán trên tối đa 30 từ, minh họa ba pha; không mô phỏng thời gian truyền mạng.</p>
+      <div class="map-output" aria-live="polite"><span v-for="(pair,i) in (step===0 ? words.pairs : step===1 ? words.groups : words.counts)" :key="i">{{ pair[0] }}: {{ Array.isArray(pair[1]) ? `[${pair[1].join(', ')}]` : pair[1] }}</span><p v-if="!words.pairs.length">Nhập văn bản để bắt đầu.</p></div><p class="small">Mô hình tính toán trên tối đa 30 từ, minh họa ba pha và không mô phỏng thời gian truyền mạng.</p>
     </div>
     <FieldSimulation v-else-if="type==='field'" />
-    <details v-if="codes[type]" class="illustration-code"><summary>Xem code minh họa</summary><pre><code>{{ codes[type] }}</code></pre></details>
+    <details v-if="type==='broadcast' || codes[type]" class="illustration-code"><summary>Xem code minh họa</summary><pre><code>{{ type==='broadcast' ? broadcastCode : codes[type] }}</code></pre></details>
     <figcaption>Thay đổi đầu vào hoặc chạy từng bước để kiểm tra điều vừa đọc.</figcaption>
   </figure>
 </template>

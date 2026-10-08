@@ -11,7 +11,7 @@ lessonStatus: ready
 ::: tip  Sau bài này bạn phải trả lời được
 1. Vì sao `df.loc[2]` và `df.iloc[2]` có thể trả về **hai dòng hoàn toàn khác nhau** — và vì sao phép toán giữa hai `Series` có thể âm thầm sinh ra `NaN` mà không báo lỗi.
 2. Chọn đúng công cụ biến đổi cột theo thứ tự ưu tiên: **vector hoá → `map` → `apply`** — giải thích được vì sao thứ tự này không phải ngẫu nhiên.
-3. Phân biệt `agg` và `transform`; chọn đúng `how` khi `merge`, và biết kiểm tra kết quả `merge` để phát hiện dòng bị nhân bản hoặc mất khớp.
+3. Phân biệt `agg` và `transform`. Chọn đúng `how` khi `merge`, và biết kiểm tra kết quả `merge` để phát hiện dòng bị nhân bản hoặc mất khớp.
 :::
 
 ## 0. Nhập môn bằng một ẩn dụ: chứng minh nhân dân của một dòng dữ liệu
@@ -21,7 +21,7 @@ lessonStatus: ready
 - `iloc[2]` giống như hỏi: *"người đứng ở vị trí thứ 3 trong hàng là ai?"* (đếm theo chỗ đứng vật lý).
 - `loc[2]` giống như hỏi: *"người mang CMND số 2 là ai?"* (tra theo danh tính) — người này **có thể đang đứng bất kỳ đâu** trong hàng.
 
-Nếu hàng người xếp đúng thứ tự CMND 0, 1, 2, 3, … thì hai câu hỏi tình cờ cho cùng một người. Nhưng ngay khi thứ tự xếp hàng bị xáo trộn (rất phổ biến sau khi lọc, sắp xếp, hoặc `set_index` bằng một cột khác), hai câu hỏi trả về **hai người khác nhau hoàn toàn**.
+Nếu hàng người xếp đúng thứ tự CMND 0, 1, 2, 3, … thì hai câu hỏi tình cờ cho cùng một người. Nhưng ngay khi thứ tự xếp hàng bị xáo trộn (chẳng hạn sau khi lọc, sắp xếp, hoặc `set_index` bằng một cột khác), hai câu hỏi trả về **hai người khác nhau hoàn toàn**.
 
 ## 1. Index là gì?
 
@@ -39,7 +39,7 @@ price            45647.0
 Giờ có thể tìm phòng theo **ID thật** thay vì phải nhớ vị trí dòng — đúng bản chất "tra theo danh tính" chứ không phải "đếm theo vị trí".
 
 ::: info Ghi chú thực tế
-ID Airbnb tạo từ năm 2022 dài 18–19 chữ số — chiếm 82% listing tại Santiago; ID cũ hơn chỉ có 5–8 chữ số. Đây là lý do vì sao ID trong ví dụ trên trông "khổng lồ" so với các số ID quen thuộc.
+ID Airbnb tạo từ năm 2022 dài 18–19 chữ số — chiếm 82% listing tại Santiago. ID cũ hơn chỉ có 5–8 chữ số. Đây là lý do vì sao ID trong ví dụ trên trông "khổng lồ" so với các số ID quen thuộc.
 :::
 
 ###  Dry Run — `loc` theo nhãn vs `iloc` theo vị trí
@@ -170,7 +170,7 @@ def diem_hap_dan(r):
 df["hap_dan"] = df.apply(diem_hap_dan, axis=1)     #  chậm — gọi hàm Python cho TỪNG DÒNG
 ```
 
-::: danger Bẫy AI hay mắc nhất ở Bài 5
+::: danger Kiểm tra quan hệ khóa và kiểu dữ liệu
 Ví dụ trên **có thể viết lại hoàn toàn bằng vector hoá**, nhanh hơn nhiều:
 ```python
 df["hap_dan"] = df["number_of_reviews_ltm"] / df["price"] * 1e4   # 
@@ -271,7 +271,7 @@ Santiago               49352.0       31250.0
 ```
 
 ::: info `pivot_table` thực chất là gì?
-`pivot_table` = `groupby` theo **hai khoá** (`index` + `columns`) rồi **trải một khoá ra thành các cột** thay vì để cả hai khoá xếp chồng trong một `MultiIndex`. Định dạng bảng "quận × loại phòng" này rất phổ biến khi trình bày trong báo cáo — dễ đọc hơn nhiều so với `MultiIndex` phẳng ở mục 3.2.
+`pivot_table` = `groupby` theo **hai khoá** (`index` + `columns`) rồi **trải một khoá ra thành các cột** thay vì để cả hai khoá xếp chồng trong một `MultiIndex`. Định dạng bảng "quận × loại phòng" này giúp đối chiếu từng quận và loại phòng trực tiếp, thay vì đọc `MultiIndex` phẳng ở mục 3.2.
 :::
 
 ::: tip Nhận diện khi nào cần `groupby`
@@ -365,7 +365,7 @@ m = df.merge(vung, on="neighbourhood",
 ```
 
 ::: tip `validate=` — "lưới an toàn" cho merge
-Tham số `validate` (`"1:1"`, `"1:m"`, `"m:1"`, `"m:m"`) buộc pandas **kiểm tra quan hệ khoá** và chủ động báo lỗi (`MergeError`) nếu quan hệ thực tế không đúng như khai báo — thay vì để bạn tự phát hiện qua việc "số dòng tự nhiên tăng lên" một cách khó hiểu.
+Tham số `validate` (`"1:1"`, `"1:m"`, `"m:1"`, `"m:m"`) khai báo quan hệ khóa mà phép ghép được phép sử dụng. Với các yêu cầu về tính duy nhất, pandas kiểm tra khóa và báo `MergeError` nếu dữ liệu không phù hợp. Nhờ đó, ta có thể phát hiện sai quan hệ trước khi phải lần theo nguyên nhân số dòng tăng.
 :::
 
 ##  Cheat Sheet — 7 lệnh pandas chuyên sâu phải nhớ
@@ -383,19 +383,19 @@ Tham số `validate` (`"1:1"`, `"1:m"`, `"m:1"`, `"m:m"`) buộc pandas **kiểm
 ## Tổng kết
 
 - Index là **danh tính** của dòng, không phải vị trí: `loc` tra theo nhãn, `iloc` tra theo số thứ tự — hai giá trị này chỉ tình cờ trùng nhau khi index là dãy 0,1,2,… liên tục.
-- **Alignment** tự động ghép hai `Series`/`DataFrame` theo nhãn — tiện lợi nhưng sinh `NaN` âm thầm khi nhãn không khớp đủ ở cả hai bên; luôn kiểm tra `isna().sum()` sau phép toán.
+- **Alignment** tự động ghép hai `Series`/`DataFrame` theo nhãn — tiện lợi nhưng sinh `NaN` âm thầm khi nhãn không khớp đủ ở cả hai bên. Luôn kiểm tra `isna().sum()` sau phép toán.
 - Thứ tự ưu tiên biến đổi cột: **vector hoá có sẵn → `map` → `apply`** — chỉ "hạ cấp" xuống nấc chậm hơn khi nấc trên thực sự không làm được.
-- `agg` cho một dòng mỗi nhóm; `transform` giữ nguyên độ dài bảng để so sánh từng dòng với "chuẩn" của nhóm nó; `pivot_table` là cách trình bày groupby hai khoá dưới dạng bảng chéo.
+- `agg` cho một dòng mỗi nhóm. `transform` giữ nguyên độ dài bảng để so sánh từng dòng với "chuẩn" của nhóm nó. `pivot_table` là cách trình bày groupby hai khoá dưới dạng bảng chéo.
 - Sau mọi `merge`: kiểm tra số dòng có tăng bất thường không, đếm `NaN` ở cột mới, và cân nhắc dùng `validate=` để pandas tự phát hiện vi phạm quan hệ khoá.
 
 ##  Mẹo thi & bẫy thường gặp
 
 ::: warning Câu hỏi hay đánh lừa trong đề UET
-- **"`df.loc[2]` và `df.iloc[2]` luôn cho cùng một dòng"** → chỉ đúng khi index là 0,1,2,… liên tục; sai ngay sau khi lọc/sắp xếp hoặc `set_index` bằng cột khác — đề hay cho một `DataFrame` đã qua `sort_values` rồi hỏi kết quả `loc`/`iloc`.
+- **"`df.loc[2]` và `df.iloc[2]` luôn cho cùng một dòng"** → chỉ đúng khi index là 0,1,2,… liên tục. Sai ngay sau khi lọc/sắp xếp hoặc `set_index` bằng cột khác — đề hay cho một `DataFrame` đã qua `sort_values` rồi hỏi kết quả `loc`/`iloc`.
 - **"Phép trừ hai `Series` báo lỗi nếu thiếu nhãn ở một bên"** → SAI, kết quả vẫn chạy, chỉ sinh `NaN` cho nhãn không khớp, **không có lỗi hay cảnh báo**.
 - **"`agg` và `transform` chỉ khác nhau ở tên gọi, dùng hàm nào cũng ra kết quả tương tự"** → SAI, khác nhau ở **số dòng kết quả**: `agg` rút gọn về 1 dòng/nhóm, `transform` giữ nguyên độ dài bảng gốc.
-- **"Sau `merge`, số dòng bằng bảng trái nghĩa là merge đúng"** → chưa chắc; vẫn cần đếm `NaN` ở cột mới để biết có bao nhiêu dòng "khớp giả" (không tìm thấy đối tác, bị điền `NaN`).
-- **"`apply(axis=1)` là cách tổng quát nên luôn an toàn để dùng"** → an toàn về mặt kết quả, nhưng **chậm hơn đáng kể** so với vector hoá; đề hay hỏi "viết lại đoạn `apply` sau bằng vector hoá" — luôn kiểm tra khả năng này trước.
+- **"Sau `merge`, số dòng bằng bảng trái nghĩa là merge đúng"** → chưa chắc. Vẫn cần đếm `NaN` ở cột mới để biết có bao nhiêu dòng "khớp giả" (không tìm thấy đối tác, bị điền `NaN`).
+- **"`apply(axis=1)` là cách tổng quát nên luôn an toàn để dùng"** → an toàn về mặt kết quả, nhưng **chậm hơn đáng kể** so với vector hoá. Khi cần cải thiện tốc độ, hãy kiểm tra xem có thể viết lại thao tác `apply` bằng phép tính trên cả mảng hay không.
 :::
 
 ##  Đọc thêm & tài nguyên
@@ -406,7 +406,7 @@ Tham số `validate` (`"1:1"`, `"1:m"`, `"m:1"`, `"m:m"`) buộc pandas **kiểm
 - [pandas User Guide — Reshaping and pivot tables](https://pandas.pydata.org/docs/user_guide/reshaping.html).
 
 ::: info  Làm việc với AI thì sao?
-**AI làm tốt:** viết biểu thức `groupby`/`pivot_table` từ mô tả tiếng Việt; giải thích lỗi liên quan đến `MultiIndex`.
-**AI hay sai:** chọn `how` cho `merge` không dựa trên yêu cầu thực tế (mặc định hay chọn `"inner"` dù cần giữ toàn bộ bảng trái); không chủ động kiểm tra dòng bị loại hoặc bị nhân bản sau `merge`; đề xuất `apply(axis=1)` cho phép tính có thể vector hoá trực tiếp.
-**Kiểm chứng bằng cách nào:** trước và sau mỗi `merge` do AI viết, in `len()` của cả hai bảng và đếm `NaN` ở cột mới; với `groupby` phức tạp, tách riêng **một nhóm nhỏ**, lọc thủ công và tính lại kết quả để đối chiếu.
+**AI làm tốt:** viết biểu thức `groupby`/`pivot_table` từ mô tả tiếng Việt. Giải thích lỗi liên quan đến `MultiIndex`.
+**AI hay sai:** chọn `how` cho `merge` không dựa trên yêu cầu thực tế (mặc định hay chọn `"inner"` dù cần giữ toàn bộ bảng trái). Không chủ động kiểm tra dòng bị loại hoặc bị nhân bản sau `merge`. Đề xuất `apply(axis=1)` cho phép tính có thể vector hoá trực tiếp.
+**Kiểm chứng bằng cách nào:** trước và sau mỗi `merge` do AI viết, in `len()` của cả hai bảng và đếm `NaN` ở cột mới. Với `groupby` phức tạp, tách riêng **một nhóm nhỏ**, lọc thủ công và tính lại kết quả để đối chiếu.
 :::

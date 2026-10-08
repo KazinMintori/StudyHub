@@ -7,19 +7,19 @@ next: false
 
 # List
 
-List Python là dãy có thứ tự, có thể thay đổi và có thể chứa nhiều kiểu đối tượng. Chỉ mục bắt đầu từ 0; chỉ mục âm đếm từ cuối. append thêm ở cuối. List khác mảng NumPy: list * 2 lặp lại dãy, không nhân số trong dãy.
+List Python là dãy có thứ tự, có thể thay đổi và có thể chứa nhiều kiểu đối tượng. Chỉ mục bắt đầu từ 0. Chỉ mục âm đếm từ cuối. append thêm ở cuối. List khác mảng NumPy: list * 2 lặp lại dãy, không nhân số trong dãy.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Mutable và aliasing.** List có thể thay đổi tại chỗ. Gán b=a cho hai tên dùng cùng đối tượng; b=a.copy() tạo list mới nhưng chỉ sao chép nông, nên các đối tượng lồng bên trong có thể vẫn dùng chung.
+**Mutable và aliasing.** List có thể thay đổi tại chỗ. Gán `b = a` khiến hai tên dùng chung đối tượng, còn `b = a.copy()` tạo một list mới. Đây chỉ là sao chép nông, vì vậy các đối tượng lồng bên trong vẫn có thể dùng chung.
 
-So sánh a is b kiểm tra cùng đối tượng, còn a==b kiểm tra bằng nhau theo giá trị. List khác mảng số NumPy về quy tắc toán học từng phần tử.
+So sánh `a is b` kiểm tra hai tên có trỏ đến cùng đối tượng hay không, còn `a == b` so sánh giá trị. List khác mảng NumPy về quy tắc tính toán theo từng phần tử.
 
 ## Ví dụ
 
-a=[1,2]; a*2 cho [1,2,1,2], còn một mảng NumPy [1,2] nhân 2 cho [2,4].
+Với list a = [1, 2], phép a * 2 lặp lại dãy thành [1, 2, 1, 2]. Còn với mảng NumPy chứa [1, 2], nhân 2 theo từng phần tử cho [2, 4].
 
 ## Khi nào cần dùng?
 

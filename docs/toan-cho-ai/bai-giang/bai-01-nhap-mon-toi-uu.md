@@ -10,7 +10,7 @@ description: "Từ lựa chọn khả thi đến tập lồi, hàm lồi và ch�
 
 Ở Bài 00, ta tìm được tham số làm hàm mất mát nhỏ nhất bằng cách khai triển một biểu thức bậc hai. Khi số biến và số ràng buộc tăng lên, cách làm trực tiếp này nhanh chóng trở nên cồng kềnh. Bài này trình bày cấu trúc lồi của miền khả thi và hàm mục tiêu, nhờ đó ta có thể nhận biết một nghiệm tối ưu toàn cục mà không phải so sánh với từng điểm riêng lẻ.
 
-Sau khi học xong, bạn sẽ viết được đầy đủ biến quyết định, hàm mục tiêu và các ràng buộc của một bài toán; phân biệt được tập lồi với hàm lồi; và giải thích được vì sao một điểm dừng của hàm lồi có thể là nghiệm tối ưu toàn cục.
+Sau khi học xong, bạn sẽ viết được đầy đủ biến quyết định, hàm mục tiêu và các ràng buộc của một bài toán. Phân biệt được tập lồi với hàm lồi. Và giải thích được vì sao một điểm dừng của hàm lồi có thể là nghiệm tối ưu toàn cục.
 
 Lần đọc đầu nên tập trung vào mục 1–3: cách viết một bài toán tối ưu, định nghĩa tập lồi và định nghĩa hàm lồi. Mục 4–6 trình bày các điều kiện dùng để chứng nhận nghiệm và có thể đọc sau khi ba khái niệm đầu đã rõ. Nếu các biểu thức $x^Ty$ hoặc $v^THv$ còn lạ, hãy ôn lại Bài 00. Các khái niệm nón, phối cảnh và Pareto được tách sang phần [hình học bổ sung](../doc-them/hinh-hoc-tap-loi.md).
 
@@ -38,7 +38,7 @@ $\inf$ là cận dưới lớn nhất, không nhất thiết có điểm đạt 
 
 Đổi $\max q(x)$ thành $\min[-q(x)]$ giữ nghiệm và đổi dấu giá trị tối ưu. Dữ liệu cố định như 2 và 1 trong ví dụ không trở thành biến quyết định.
 
-<details><summary>Thử trả lời: x=1 có tối ưu chỉ vì nó khả thi không?</summary>
+<details><summary>Thử trả lời: $x=1$ có tối ưu chỉ vì nó khả thi không?</summary>
 
 Không. Còn phải so với mọi $x\le1$. Ở ví dụ này $2-x\ge1$, nên $(x-2)^2\ge1$, với dấu bằng tại $x=1$. Lập luận này mới chứng nhận nghiệm.
 
@@ -48,7 +48,18 @@ Không. Còn phải so với mọi $x\le1$. Ở ví dụ này $2-x\ge1$, nên $(
 
 Với $x,y\in\mathbb R^n$, điểm $z=\theta x+(1-\theta)y$, $0\le\theta\le1$, đi trên đoạn nối. Ta gọi đây là **tổ hợp lồi**. Hai trọng số không âm và cộng thành 1.
 
-Tập $C$ **lồi** nếu với mọi $x,y\in C$ và mọi $\theta\in[0,1]$, $z$ vẫn thuộc $C$. Chữ “mọi” quyết định định nghĩa: một đoạn nối tốt chưa chứng minh cả tập lồi; một đoạn nối xấu đủ bác bỏ.
+Với nhiều điểm $x_1,\ldots,x_k$, cách viết đầy đủ là $z=\theta_1x_1+\cdots+\theta_kx_k$, trong đó $\theta_1+\cdots+\theta_k=1$ và từng $\theta_i\ge0$. Ký hiệu tổng chỉ rút gọn phép cộng này:
+
+$$
+\begin{aligned}
+z&=\sum_{i=1}^k\theta_i x_i,\\
+1&=\sum_{i=1}^k\theta_i.
+\end{aligned}
+$$
+
+Chỉ số $i$ chạy từ 1 đến $k$, tức qua tất cả các điểm đã chọn. Ví dụ ba trọng số $\frac12,\frac13,\frac16$ hợp lệ vì không âm và cộng thành 1. Khi phạm vi $i$ đã rõ, tài liệu có thể viết tắt $\sum_i\theta_i=1$.
+
+Tập $C$ **lồi** nếu với mọi $x,y\in C$ và mọi $\theta\in[0,1]$, $z$ vẫn thuộc $C$. Chữ “mọi” quyết định định nghĩa: một đoạn nối tốt chưa chứng minh cả tập lồi. Một đoạn nối xấu đủ bác bỏ.
 
 <MathLab type="segment">
 
@@ -81,9 +92,9 @@ $$\|\theta x+(1-\theta)y\|\le\theta\|x\|+(1-\theta)\|y\|\le r.$$
 
 Ảnh và ảnh ngược của một tập lồi qua $F(x)=Ax+b$ đều lồi. Với ảnh ngược, nếu $F(x),F(y)\in C$, thì $F(z)=\theta F(x)+(1-\theta)F(y)\in C$. Không cần $A$ khả nghịch. Đây là cách đọc miền $\|Ax-b\|\le r$.
 
-<details><summary>Thử trả lời: Hợp của [−2,−1] và [1,2] có phải là một tập lồi không?</summary>
+<details><summary>Thử trả lời: Hợp của $[-2,-1]$ và [1,2] có phải là một tập lồi không?</summary>
 
-Không. Hai điểm $-1,1$ thuộc hợp nhưng trung điểm 0 không thuộc. Phép giao giữ tính lồi; phép hợp nói chung không giữ.
+Không. Hai điểm $-1,1$ thuộc hợp nhưng trung điểm 0 không thuộc. Phép giao giữ tính lồi. Phép hợp nói chung không giữ.
 
 </details>
 
@@ -93,7 +104,7 @@ Hai thao tác khác nhau là tính $f(\theta x+(1-\theta)y)$ và tính $\theta f
 
 $$\boxed{f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)}$$
 
-với mọi $x,y$ trong miền và $0\le\theta\le1$. Trên hình, đồ thị nằm dưới dây cung nối hai điểm của đồ thị. Hàm **lõm** có bất đẳng thức đảo chiều; tương đương $-f$ lồi.
+với mọi $x,y$ trong miền và $0\le\theta\le1$. Trên hình, đồ thị nằm dưới dây cung nối hai điểm của đồ thị. Hàm **lõm** có bất đẳng thức đảo chiều. Tương đương $-f$ lồi.
 
 <MathLab type="chord">
 
@@ -105,7 +116,7 @@ const onChord = theta*f(a) + (1-theta)*f(b);
 
 </MathLab>
 
-Mô phỏng quan hệ trong Hình 3.1, sách tr. 67, bằng $f(x)=x^2$, $a=-1$, $b=2$. Tại $\theta=1/2$, tổ hợp của hai đầu vào là $z=1/2$, giá trị hàm là $1/4$, còn giá trị trên dây cung là $5/2$. Thử $-x^2$ để thấy chiều bất đẳng thức đổi. Một số điểm thử chỉ có tác dụng minh họa; chúng không thay thế định nghĩa vốn phải đúng với mọi cặp điểm trong miền.
+Mô phỏng quan hệ trong Hình 3.1, sách tr. 67, bằng $f(x)=x^2$, $a=-1$, $b=2$. Tại $\theta=\frac{1}{2}$, tổ hợp của hai đầu vào là $z=\frac{1}{2}$, giá trị hàm là $\frac{1}{4}$, còn giá trị trên dây cung là $\frac{5}{2}$. Thử $-x^2$ để thấy chiều bất đẳng thức đổi. Một số điểm thử chỉ có tác dụng minh họa. Chúng không thay thế định nghĩa vốn phải đúng với mọi cặp điểm trong miền.
 
 Đồ thị của $x^2$ không phải tập lồi: trung điểm hai điểm trên đồ thị có thể nằm phía trên. Tập **epigraph** $\{(x,t):t\ge f(x)\}$ gồm toàn bộ miền phía trên đồ thị mới là tập lồi khi và chỉ khi $f$ lồi.
 
@@ -117,7 +128,7 @@ Giả sử $f$ khả vi trên miền mở lồi. Khi đó $f$ lồi khi và ch�
 
 $$f(y)\ge f(x)+\nabla f(x)^T(y-x)\quad\text{với mọi }x,y\text{ trong miền}.$$
 
-Vế phải là xấp xỉ bậc nhất tại $x$. Với hàm bất kỳ, nó chỉ gần đúng khi $y$ gần $x$; tính lồi làm nó thành cận dưới ở mọi $y$.
+Vế phải là xấp xỉ bậc nhất tại $x$. Với hàm bất kỳ, nó chỉ gần đúng khi $y$ gần $x$. Tính lồi làm nó thành cận dưới ở mọi $y$.
 
 Để thấy bước quyết định, đặt $x_t=x+t(y-x)$, $0<t\le1$. Tính lồi cho $f(x_t)\le(1-t)f(x)+tf(y)$. Chuyển vế và chia cho $t>0$:
 
@@ -139,7 +150,7 @@ Không suy rằng mọi hợp hai hàm lồi đều lồi: $g(u)=(u-1)^2$ và $h
 
 ## 5. Từ cực tiểu cục bộ đến cực tiểu toàn cục
 
-Xét cực tiểu hàm lồi $f$ trên miền lồi $C$. “Cục bộ” nghĩa là không có điểm khả thi tốt hơn trong một lân cận đủ nhỏ; “toàn cục” xét mọi điểm khả thi.
+Xét cực tiểu hàm lồi $f$ trên miền lồi $C$. “Cục bộ” nghĩa là không có điểm khả thi tốt hơn trong một lân cận đủ nhỏ. “toàn cục” xét mọi điểm khả thi.
 
 Giả sử $x^*$ tối ưu cục bộ nhưng tồn tại $y\in C$ sao cho $f(y)<f(x^*)$. Lấy một điểm trên đoạn thẳng từ $x^*$ tới $y$:
 
@@ -147,7 +158,7 @@ $$z=(1-t)x^*+ty\in C,$$
 
 $$f(z)\le(1-t)f(x^*)+tf(y)<f(x^*).$$
 
-Với $t>0$ đủ nhỏ, $z$ ở trong lân cận của $x^*$, trái với tối ưu cục bộ. Tập lồi được dùng để $z$ khả thi; hàm lồi được dùng để $f(z)$ nhỏ hơn. Thiếu một trong hai bước thì chứng minh không còn.
+Với $t>0$ đủ nhỏ, $z$ ở trong lân cận của $x^*$, trái với tối ưu cục bộ. Tập lồi được dùng để $z$ khả thi. Hàm lồi được dùng để $f(z)$ nhỏ hơn. Thiếu một trong hai bước thì chứng minh không còn.
 
 ### 5.1 Điều kiện gradient bằng 0
 
@@ -179,7 +190,7 @@ Giả sử trạng thái hiện tại $s$ đã biết, hành động cần chọ
 
 $$\min_u\frac12\|Fs+Bu-r\|_2^2+\frac\rho2\|u\|_2^2,\qquad\rho\ge0.$$
 
-Các ma trận $F,B$, các vector $s,r$ và $\rho$ là dữ liệu; $u$ mới là biến. Đây là bình phương tối thiểu cộng điều chuẩn, có Hessian $B^TB+\rho I\succeq0$. Giới hạn $-u_{\max}\preceq u\preceq u_{\max}$ với $u_{\max}\succeq0$ là affine, nên giữ bài toán lồi. Nó chưa mô tả một hệ thực nếu mô hình chuyển trạng thái không phù hợp; đây là ví dụ tự biên soạn từ cấu trúc QP của sách.
+Các ma trận $F,B$, các vector $s,r$ và $\rho$ là dữ liệu. $u$ mới là biến. Đây là bình phương tối thiểu cộng điều chuẩn, có Hessian $B^TB+\rho I\succeq0$. Giới hạn $-u_{\max}\preceq u\preceq u_{\max}$ với $u_{\max}\succeq0$ là affine, nên giữ bài toán lồi. Nó chưa mô tả một hệ thực nếu mô hình chuyển trạng thái không phù hợp. Đây là ví dụ tự biên soạn từ cấu trúc QP của sách.
 
 Một chiều, đặt $s=2$, $F=B=1$, $r=0$, $\rho=1$, $|u|\le1$. Mục tiêu $\tfrac12(2+u)^2+\tfrac12u^2$ có đạo hàm $2+2u$, nên $u^*=-1$, $s^+=1$, giá trị 1. Hành động không đạt ngay đích vì có cả chi phí hành động và giới hạn.
 
@@ -193,14 +204,14 @@ Ta giả định các nhãn độc lập có điều kiện khi đầu vào và 
 
 $$\ell_i(w)=\log(1+e^{a_i^Tw})-b_i a_i^Tw.$$
 
-Đạo hàm theo điểm số là $\sigma(z_i)-b_i$; đạo hàm bậc hai là $\sigma(z_i)(1-\sigma(z_i))\ge0$. Dùng quy tắc chuỗi qua điểm số affine:
+Đạo hàm theo điểm số là $\sigma(z_i)-b_i$. Đạo hàm bậc hai là $\sigma(z_i)(1-\sigma(z_i))\ge0$. Dùng quy tắc chuỗi qua điểm số affine:
 
 $$\nabla\ell_i=(p_i-b_i)a_i,\qquad
 \nabla^2\ell_i=p_i(1-p_i)a_ia_i^T\succeq0.$$
 
-Tổng các hàm mất mát lồi vẫn lồi. Việc $\sigma$ phụ thuộc phi tuyến vào điểm số không kéo theo hàm mất mát phi lồi theo $w$. Hệ số chặn (bias) có thể được gộp vào $w$ bằng cách thêm một đặc trưng luôn bằng 1; điểm số vẫn là một hàm affine của vector tham số mới.
+Tổng các hàm mất mát lồi vẫn lồi. Việc $\sigma$ phụ thuộc phi tuyến vào điểm số không kéo theo hàm mất mát phi lồi theo $w$. Hệ số chặn (bias) có thể được gộp vào $w$ bằng cách thêm một đặc trưng luôn bằng 1. Điểm số vẫn là một hàm affine của vector tham số mới.
 
-Xét ví dụ tự đặt có một tham số với $(a,b)=(-1,0),(1,1)$. Tại $w=0$, mỗi xác suất bằng $1/2$, tổng hàm mất mát bằng $2\log2\approx1.38629$, gradient tổng bằng $-1$, và Hessian bằng $1/2$. Khi tăng $w$, hai nhãn được tách rõ hơn. Tuy nhiên, biểu thức $2\log(1+e^{-w})$ chỉ tiến dần về 0 khi $w\to+\infty$ và không đạt giá trị 0 tại một tham số hữu hạn. Đây là một ví dụ cho thấy bài toán lồi vẫn có thể không đạt nghiệm; thêm điều chuẩn dương sẽ làm mô hình có độ cong dương và tạo nghiệm hữu hạn.
+Xét ví dụ tự đặt có một tham số với $(a,b)=(-1,0),(1,1)$. Tại $w=0$, mỗi xác suất bằng $\frac{1}{2}$, tổng hàm mất mát bằng $2\log2\approx1.38629$, gradient tổng bằng $-1$, và Hessian bằng $\frac{1}{2}$. Khi tăng $w$, hai nhãn được tách rõ hơn. Tuy nhiên, biểu thức $2\log(1+e^{-w})$ chỉ tiến dần về 0 khi $w\to+\infty$ và không đạt giá trị 0 tại một tham số hữu hạn. Đây là một ví dụ cho thấy bài toán lồi vẫn có thể không đạt nghiệm. Thêm điều chuẩn dương sẽ làm mô hình có độ cong dương và tạo nghiệm hữu hạn.
 
 ```python
 import math
@@ -230,28 +241,28 @@ Mỗi điều kiện là một nửa không gian: $x+y\le3$, $-x\le0$, $-y\le0$.
 :::
 
 ::: exercise 2. Tách miền khỏi hàm
-$f(x)=x^2$; miền khả thi $C=\{-1,1\}$. Đây có phải cực tiểu một hàm lồi trên miền lồi không?
+$f(x)=x^2$. Miền khả thi $C=\{-1,1\}$. Đây có phải cực tiểu một hàm lồi trên miền lồi không?
 :::
 ::: solution
-Không. Hàm lồi trên $\mathbb R$, nhưng $C$ không lồi vì thiếu trung điểm 0. Hai điểm khả thi đều tối ưu với giá trị 1; không được áp dụng kết quả duy nhất dựa trên miền lồi.
+Không. Hàm lồi trên $\mathbb R$, nhưng $C$ không lồi vì thiếu trung điểm 0. Hai điểm khả thi đều tối ưu với giá trị 1. Không được áp dụng kết quả duy nhất dựa trên miền lồi.
 :::
 
 ::: exercise 3. Chứng nhận tại biên
 Giải $\min(x-3)^2$ với $x\le2$ bằng điều kiện bậc nhất trên miền.
 :::
 ::: solution
-Chọn $x^*=2$, $f'(2)=-2$. Với mọi $y\le2$, $-2(y-2)\ge0$. Hàm lồi và miền lồi nên điều kiện đủ; giá trị tối ưu là 1. Không đặt $f'(x)=0$ rồi chấp nhận $x=3$, vì điểm ấy không khả thi.
+Chọn $x^*=2$, $f'(2)=-2$. Với mọi $y\le2$, $-2(y-2)\ge0$. Hàm lồi và miền lồi nên điều kiện đủ. Giá trị tối ưu là 1. Không đặt $f'(x)=0$ rồi chấp nhận $x=3$, vì điểm ấy không khả thi.
 :::
 
 ## Tóm tắt
 
-Miền lồi bảo đảm toàn bộ đoạn thẳng nối hai điểm khả thi vẫn nằm trong miền; hàm lồi khống chế giá trị hàm trên đoạn thẳng đó. Hai điều kiện kết hợp để biến cực tiểu cục bộ thành cực tiểu toàn cục. Điều kiện gradient bằng 0 chỉ áp dụng trực tiếp cho bài toán không ràng buộc; tại biên của miền, ta phải xét các hướng đi tới những điểm khả thi. Tính duy nhất và sự tồn tại của nghiệm vẫn cần các điều kiện riêng.
+Miền lồi bảo đảm toàn bộ đoạn thẳng nối hai điểm khả thi vẫn nằm trong miền. Hàm lồi khống chế giá trị hàm trên đoạn thẳng đó. Hai điều kiện kết hợp để biến cực tiểu cục bộ thành cực tiểu toàn cục. Điều kiện gradient bằng 0 chỉ áp dụng trực tiếp cho bài toán không ràng buộc. Tại biên của miền, ta phải xét các hướng đi tới những điểm khả thi. Tính duy nhất và sự tồn tại của nghiệm vẫn cần các điều kiện riêng.
 
 ## Nguồn và đọc thêm
 
 - Nguồn chính: *Convex Optimization*, chương 1, §2.1–2.3, §3.1–3.2, §4.2.2–4.2.3 (tr. 138–140), §4.4 về QP và §7.1 về hồi quy logistic (tr. 354–355). Định nghĩa và điều kiện được đối chiếu với bản PDF local.
-- Hình 2.1 (tr. 22) và Hình 3.1 (tr. 67) được mô phỏng bằng code với tọa độ/hàm tự đặt; không sao chép ảnh hay văn bản hình.
+- Hình 2.1 (tr. 22) và Hình 3.1 (tr. 67) được mô phỏng bằng code với tọa độ/hàm tự đặt. Không sao chép ảnh hay văn bản hình.
 - [Hình học tập lồi bổ sung](../doc-them/hinh-hoc-tap-loi.md): ellipsoid, nón, phối cảnh, siêu phẳng và thứ tự Pareto, nguồn chương 2.
-- Các ví dụ số, phản ví dụ hai tầng và bài tập được tự biên soạn. Tên và thứ tự bài giảng theo trang môn; nội dung không lấy từ trang đó.
+- Các ví dụ số, phản ví dụ hai tầng và bài tập được tự biên soạn. Tên và thứ tự bài giảng theo trang môn. Nội dung không lấy từ trang đó.
 
 [Bài 00](./bai-00-on-tap-nen-tang.md) · [Bài 02 — Các bài toán tối ưu lồi](./bai-02-tap-loi.md).

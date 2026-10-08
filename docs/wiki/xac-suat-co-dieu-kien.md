@@ -7,13 +7,13 @@ next: false
 
 # Xác suất có điều kiện
 
-P(A|B) là xác suất A khi biết B đã xảy ra. Với P(B)>0, P(A|B)=P(A∩B)/P(B): thu hẹp miền xét về B rồi tính phần của A trong miền đó. P(A|B) nhìn chung khác P(B|A).
+P(A|B) là xác suất A khi biết B đã xảy ra. Với $P(B)>0$, $P(A|B)=\frac{P(A\cap B)}{P(B)}$: thu hẹp miền xét về B rồi tính phần của A trong miền đó. P(A|B) nhìn chung khác P(B|A).
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Định nghĩa và Bayes.** Với P(B)>0:
+**Định nghĩa và Bayes.** Với $P(B)>0$:
 
 $$P(A\mid B)=\frac{P(A\cap B)}{P(B)},qquad P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}.$$
 
@@ -21,7 +21,7 @@ Mẫu số P(B) bao gồm mọi cách B xảy ra, không chỉ trường hợp A
 
 ## Ví dụ
 
-Trong 100 người có 20 người đeo kính; 8 trong số đó học lớp X. P(lớp X | đeo kính)=8/20=0.4.
+Trong 100 người có 20 người đeo kính, trong đó 8 người học lớp X. P(lớp X | đeo kính)=$\frac{8}{20}=0.4$.
 
 ## Khi nào cần dùng?
 
@@ -29,7 +29,7 @@ Trong 100 người có 20 người đeo kính; 8 trong số đó học lớp X. 
 
 ## Tự kiểm tra
 
-Nếu P(A∩B)=0.1, P(B)=0.5 thì P(A|B) bằng bao nhiêu?
+Nếu $P(A\cap B)=0.1$, $P(B)=0.5$ thì P(A|B) bằng bao nhiêu?
 
 <details><summary>Xem đáp án</summary>
 

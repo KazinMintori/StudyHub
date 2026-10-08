@@ -18,7 +18,7 @@ lessonStatus: ready
 
 Trước khi nói về Python hay pandas, hãy hình dung môn học này qua một ẩn dụ hoàn toàn không-công-nghệ: **một gian bếp nhà hàng**.
 
-- **Nguyên liệu thô** vừa được giao đến — rau còn dính đất, thịt còn nguyên khối, cá chưa làm sạch vảy. Đây chính là *dữ liệu thô*: file CSV tải từ Inside Airbnb, dòng nào cũng có khả năng "bẩn".
+- **Nguyên liệu thô** vừa được giao đến — rau còn dính đất, thịt còn nguyên khối, cá chưa làm sạch vảy. Trong ví dụ này, phần nguyên liệu ấy tương ứng với *dữ liệu thô*: file CSV tải từ Inside Airbnb, dòng nào cũng có khả năng "bẩn".
 - Đầu bếp **không thể nấu** ngay khi nguyên liệu còn bẩn — phải rửa, gọt, lọc xương trước (*làm sạch*).
 - Sau đó mới **thái, ướp, phối trộn** nguyên liệu theo công thức (*biến đổi*: gộp nhóm, nối bảng, tổng hợp).
 - Món ăn được **bày biện đẹp mắt** ra đĩa (*trực quan hoá*: biểu đồ, bản đồ).
@@ -62,7 +62,7 @@ flowchart LR
 - Cột `price` là **chuỗi ký tự** (`"$45,647.00"`) chứ không phải số — không thể cộng trừ trực tiếp.
 - Dòng 2 có ô **trống** ở `price` và `review_scores_rating` — "không có dữ liệu" khác với "giá bằng 0".
 - Dòng 3: giá `$1.00` mà tối thiểu `999` đêm — rất có thể là **giá trị ngoại lai/lỗi nhập liệu**, không phải một căn hộ thật cho thuê 1 đôla/đêm.
-- Việc quyết định "loại bỏ dòng 3" hay "giữ lại vì biết đâu là thật" là một **quyết định phân tích**, không phải một sự thật khách quan — và đây chính là nơi con người (bạn) phải ra quyết định, AI không thể tự quyết thay.
+- Việc quyết định "loại bỏ dòng 3" hay "giữ lại vì biết đâu là thật" là một **quyết định phân tích**, không phải một sự thật khách quan — vì vậy người phân tích cần quyết định và giải thích lựa chọn của mình.
 :::
 
 Nếu tính trung bình giá trên bảng này *mà không xử lý gì*, con số ra sẽ vô nghĩa — vừa vì kiểu dữ liệu sai (chuỗi), vừa vì bị kéo lệch bởi ngoại lai. Đây là lý do vì sao khoá học dành phần lớn thời gian cho **bước chuẩn bị** thay vì bước "phân tích" hào nhoáng.
@@ -80,13 +80,13 @@ Trong nghề dữ liệu thực tế, tỉ lệ thời gian phổ biến là: **
 | **Hiện đại** | 11–14 | LLM cho dữ liệu phi cấu trúc, trực quan hoá cơ bản & nâng cao, kể chuyện bằng dữ liệu |
 | **Đánh giá** | 9, 15 | Thi giữa kỳ · Vấn đáp bài tập lớn |
 
-**Vị trí:** tiên quyết là *Tư duy tính toán* (đã biết Python cơ bản); môn này dạy làm chủ dữ liệu bằng NumPy/pandas/trực quan hoá/LLM; các môn sau (Học máy, Khoa học dữ liệu) sẽ dùng lại toàn bộ kỹ năng này làm nền.
+**Vị trí:** tiên quyết là *Tư duy tính toán* (đã biết Python cơ bản). Môn này dạy làm chủ dữ liệu bằng NumPy/pandas/trực quan hoá/LLM. Các môn sau (Học máy, Khoa học dữ liệu) sẽ dùng lại toàn bộ kỹ năng này làm nền.
 
 ## 3. Công cụ làm việc
 
 ### 3.1 Vì sao là Python?
 
-Ẩn dụ: nếu coi các ngôn ngữ lập trình là "dụng cụ bếp", thì Python giống một **con dao đầu bếp đa năng** — không chuyên biệt nhất cho một việc đơn lẻ, nhưng dùng được xuyên suốt từ thái rau (thử nghiệm nhanh trên notebook) đến chế biến món chính (xây pipeline sản xuất), và là ngôn ngữ chính để "nói chuyện" với các mô hình AI/LLM.
+Nếu coi các ngôn ngữ lập trình là dụng cụ bếp, Python giống một con dao đa năng. Trong học phần này, ta dùng Python để thử nghiệm trên notebook, xây quy trình xử lý dữ liệu và làm việc với các mô hình AI/LLM. Mỗi công việc vẫn cần thư viện và cách kiểm tra phù hợp.
 
 ### 3.2 Hai môi trường làm việc — dùng khi nào?
 
@@ -131,7 +131,7 @@ Một pipeline "chạy được trên máy tôi" nhưng **không tái lập đư
 | `requirements.txt` | Ghi đúng **phiên bản từng thư viện** đã dùng | `pip freeze > requirements.txt` |
 | `README.md` | Ghi **hệ điều hành + các bước**: cài Python → tạo venv → cài thư viện → chạy | Viết tay |
 
-Lưu ý: `.python-version` chỉ là một dòng *ghi lại* phiên bản đã dùng — bản thân nó **không tự cài hay tự chuyển đổi** phiên bản Python; người chạy lại vẫn phải tự chọn đúng bản khi tạo `venv`.
+Lưu ý: `.python-version` chỉ là một dòng *ghi lại* phiên bản đã dùng — bản thân nó **không tự cài hay tự chuyển đổi** phiên bản Python. Người chạy lại vẫn phải tự chọn đúng bản khi tạo `venv`.
 
 ```bash
 # Trong venv của dự án, sau khi cài xong mọi thư viện cần dùng:
@@ -143,7 +143,7 @@ python -m pip install -r requirements.txt
 
 ### 3.5 Git & GitHub
 
-Git ghi lại **lịch sử từng thay đổi** của code theo thời gian — có thể quay lại phiên bản cũ, và biết chính xác ai sửa dòng nào, khi nào. Bài tập lớn nộp bằng repo GitHub **private** của nhóm; lịch sử commit là một phần căn cứ chấm điểm làm việc nhóm (không chỉ sản phẩm cuối).
+Git ghi lại **lịch sử từng thay đổi** của code theo thời gian — có thể quay lại phiên bản cũ, và biết chính xác ai sửa dòng nào, khi nào. Bài tập lớn nộp bằng repo GitHub **private** của nhóm. Lịch sử commit là một phần căn cứ chấm điểm làm việc nhóm (không chỉ sản phẩm cuối).
 
 ## 4. Học và làm việc với AI có trách nhiệm
 
@@ -158,7 +158,7 @@ df = pd.read_csv("listings.csv")
 df.groupby("room_type")["price"].mean()
 ```
 
-Đoạn code này **chạy được** — nhưng "chạy được" và "đúng với ý định phân tích của bạn" là hai chuyện khác nhau. Đây chính là trọng tâm của phần chính sách AI.
+Đoạn code này **chạy được** — nhưng "chạy được" và "đúng với ý định phân tích của bạn" là hai chuyện khác nhau. Phần chính sách AI yêu cầu người học kiểm tra sự khác biệt này.
 
 **Trước → Sau: một quy ước bị AI "âm thầm" chọn hộ bạn**
 
@@ -166,7 +166,7 @@ df.groupby("room_type")["price"].mean()
 |---|---|---|
 | Trước | `prices = [100, 200, None, None, 300]` | 5 quan sát, 2 ô thiếu giá trị |
 | Code | `pd.Series(prices).mean()` | Theo mặc định, `.mean()` dùng `skipna=True` — **bỏ qua** các ô thiếu |
-| Sau | `200.0` | = (100+200+300) ÷ **3**, không phải ÷ 5 |
+| Sau | `200.0` | = $(100+200+300)$ ÷ **3**, không phải ÷ 5 |
 
 Nếu ô trống có nghĩa là "phòng tạm ngừng cho thuê" thì bỏ qua là hợp lý. Nhưng nếu ô trống là "chủ nhà quên khai giá" thì kết quả `200.0` đã **âm thầm sai lệch** — và AI sẽ không tự cảnh báo bạn điều này trừ khi bạn hỏi.
 
@@ -197,8 +197,8 @@ flowchart LR
     style S4 fill:#fff3e0,stroke:#e65100,stroke-width:3px,color:#993d00
 ```
 
-1. **Khai báo** — dùng công cụ AI nào, cho việc gì (bài tập lớn: điền vào `AI_USAGE.md`). Khai báo đầy đủ **không bị trừ điểm**; che giấu mới là vấn đề.
-2. **Hiểu** — phải giải thích được *mọi dòng* mình nộp; buổi vấn đáp sẽ hỏi trực tiếp từng thành viên.
+1. **Khai báo** — dùng công cụ AI nào, cho việc gì (bài tập lớn: điền vào `AI_USAGE.md`). Khai báo đầy đủ **không bị trừ điểm**. Che giấu mới là vấn đề.
+2. **Hiểu** — phải giải thích được *mọi dòng* mình nộp. Buổi vấn đáp sẽ hỏi trực tiếp từng thành viên.
 3. **Kiểm chứng** — tự chịu trách nhiệm đúng/sai của kết quả. "AI bảo thế" **không phải** một câu trả lời chấp nhận được khi vấn đáp.
 
 Bước 4 (kiểm chứng) là bước hay bị bỏ qua nhất trong thực tế — vì nó chậm và có vẻ "thừa" khi code đã chạy không lỗi. Nhưng chạy không lỗi ≠ kết quả đúng.
@@ -238,14 +238,14 @@ Cả lớp dùng chung **một đề bài** (phân tích thị trường Airbnb)
 
 - Xử lý dữ liệu = pipeline 5 bước: **Thu thập → Làm sạch → Biến đổi → Trực quan hoá → Kể chuyện** — sai thứ tự cho ra kết luận sai dù biểu đồ vẫn đẹp.
 - `venv` + `requirements.txt` + `.python-version` cùng nhau đảm bảo pipeline **tái lập được** trên máy khác.
-- AI được phép dùng ở chế độ  mở, đi kèm 3 trách nhiệm bắt buộc: **khai báo — hiểu — kiểm chứng**; các bài đánh giá  đóng (quiz, giữa kỳ, vấn đáp) tuyệt đối không dùng AI.
+- AI được phép dùng ở chế độ  mở, đi kèm 3 trách nhiệm bắt buộc: **khai báo — hiểu — kiểm chứng**. Các bài đánh giá  đóng (quiz, giữa kỳ, vấn đáp) tuyệt đối không dùng AI.
 
 ##  Mẹo thi & bẫy thường gặp
 
 ::: warning Câu hỏi trắc nghiệm hay đánh lừa
 - **"Notebook chạy không lỗi thì báo cáo chắc chắn đúng"** → SAI. Chạy không lỗi chỉ chứng minh cú pháp hợp lệ, không chứng minh giả định phân tích (ví dụ cách xử lý NaN) là đúng với ngữ cảnh dữ liệu.
-- **"Dùng AI viết bài tập về nhà (không ghi nhãn) là được phép vì bài tập về nhà thường ở chế độ mở"** → SAI, cần kiểm tra nhãn trên từng đề cụ thể; không có nhãn thì phải hỏi trước, không tự suy đoán.
-- **"Khai báo dùng AI sẽ bị trừ điểm vì lộ ra là 'không tự làm'"** → SAI, khai báo đầy đủ không bị trừ điểm; **giấu diếm** mới là vấn đề bị xử lý nặng.
+- **"Dùng AI viết bài tập về nhà (không ghi nhãn) là được phép vì bài tập về nhà thường ở chế độ mở"** → SAI, cần kiểm tra nhãn trên từng đề cụ thể. Không có nhãn thì phải hỏi trước, không tự suy đoán.
+- **"Khai báo dùng AI sẽ bị trừ điểm vì lộ ra là 'không tự làm'"** → SAI, khai báo đầy đủ không bị trừ điểm. **Giấu diếm** mới là vấn đề bị xử lý nặng.
 - **".python-version tự động cài đúng bản Python khi người khác chạy lại"** → SAI, tệp này chỉ *ghi lại* thông tin, người chạy vẫn phải tự cài/chọn đúng phiên bản.
 :::
 
@@ -259,6 +259,6 @@ Cả lớp dùng chung **một đề bài** (phân tích thị trường Airbnb)
 
 ::: info  Làm việc với AI thì sao?
 **AI làm tốt:** giải thích khái niệm bạn thấy lạ ("`venv` là gì?"), gợi ý lệnh, viết code nháp cho thao tác chuẩn.
-**AI hay sai:** áp dụng một quy ước ngầm mà không nói rõ (như `mean()` bỏ qua NaN); đề xuất cú pháp không tồn tại ở đúng phiên bản thư viện bạn đang dùng.
-**Kiểm chứng bằng cách nào:** chạy thử code AI đưa trên một mẫu nhỏ **tự tính tay được** trước khi tin; gặp hàm lạ, ưu tiên đọc tài liệu chính thức thay vì chỉ hỏi lại AI.
+**AI hay sai:** áp dụng một quy ước ngầm mà không nói rõ (như `mean()` bỏ qua NaN). Đề xuất cú pháp không tồn tại ở đúng phiên bản thư viện bạn đang dùng.
+**Kiểm chứng bằng cách nào:** chạy thử code AI đưa trên một mẫu nhỏ **tự tính tay được** trước khi tin. Gặp hàm lạ, ưu tiên đọc tài liệu chính thức thay vì chỉ hỏi lại AI.
 :::

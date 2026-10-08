@@ -7,7 +7,7 @@ lessonStatus: "reference"
 
 # Giải Thuật Nền Tảng Cho Khoa Học Dữ Liệu 
 
-Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundations of Data Science / Algorithmic Foundations of Data Science) cung cấp nền tảng toán học và thuật toán hiện đại để giải quyết các bài toán dữ liệu quy mô lớn: mô hình hoá bài toán dữ liệu lớn, tính toán phân tán Map-Reduce, phân tích liên kết (PageRank), tìm kiếm tương đồng (MinHash, LSH), chỉ mục véc-tơ, thuật toán dòng dữ liệu (Streaming), nén dữ liệu và cấu trúc dữ liệu ngoài bộ nhớ chính.
+Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundations of Data Science / Algorithmic Foundations of Data Science) trình bày cách mô hình hóa và giải các bài toán dữ liệu quy mô lớn. Các chủ đề gồm tính toán phân tán Map-Reduce, phân tích liên kết (PageRank), tìm kiếm tương đồng (MinHash, LSH) và chỉ mục véc-tơ. Phần sau xét thuật toán dòng dữ liệu (Streaming), nén dữ liệu và cấu trúc dữ liệu ngoài bộ nhớ chính.
 
 ---
 

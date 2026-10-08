@@ -7,7 +7,7 @@ next: false
 
 # Dictionary
 
-Dictionary ánh xạ khóa tới giá trị. Khóa cần hashable và là duy nhất; gán lại cùng một khóa thay giá trị cũ. Dùng d[key] khi chắc chắn khóa có mặt, hoặc d.get(key, mặc_định) khi khóa có thể thiếu.
+Dictionary ánh xạ khóa tới giá trị. Khóa cần hashable và là duy nhất. Gán lại cùng một khóa thay giá trị cũ. Dùng d[key] khi chắc chắn khóa có mặt, hoặc d.get(key, mặc_định) khi khóa có thể thiếu.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Tra cứu thường có chi phí trung bình gần O(1) trong mô hình phù h�
 
 ## Ví dụ
 
-d={"ten":"An", "diem":8}; d["diem"] cho 8, d.get("tuoi",0) cho 0.
+Với d = {"ten":"An", "diem":8}, d["diem"] cho 8, còn d.get("tuoi", 0) cho 0.
 
 ## Khi nào cần dùng?
 

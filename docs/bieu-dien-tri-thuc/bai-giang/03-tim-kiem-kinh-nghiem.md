@@ -8,7 +8,7 @@ lessonStatus: ready
 ---
 
 
-*Bài 3 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "AIMA" 4th ed., chương 3.5–3.6; Cormen et al., "Introduction to Algorithms", chương 22.3 (Dijkstra).*
+*Bài 3 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "AIMA" 4th ed., chương 3.5–3.6 và Cormen et al., "Introduction to Algorithms", chương 22.3 (Dijkstra).*
 
 ← [Chương 2: Tìm kiếm mù](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 4: Tìm kiếm đối kháng →](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md)
 
@@ -67,7 +67,7 @@ flowchart TD
 Kết quả: đường đi $S \to B \to C \to G$, chi phí $4+1+3 = \mathbf{8}$ — **không tối ưu** (đáp án đúng là 7)! Vì $h(B)=3 < h(A)=4$, Greedy chọn B trước mà không hề biết cạnh $S \to B$ nặng tới 4, trong khi đi qua A chỉ tốn 1.
 
 ::: warning Bẫy thi hay gặp
-Sinh viên hay nhầm "Greedy nhanh nên chắc cũng tối ưu". **Sai.** Greedy chỉ đảm bảo **đầy đủ** (complete) trên không gian hữu hạn, **không đảm bảo tối ưu**, và trường hợp xấu nhất độ phức tạp giống hệt DFS bị dẫn dắt tồi: $O(b^m)$.
+Cần phân biệt hai nhận xét “Greedy tìm được đáp án nhanh” và “Greedy tìm được đáp án tối ưu”. **Sai.** Greedy chỉ đảm bảo **đầy đủ** (complete) trên không gian hữu hạn, **không đảm bảo tối ưu**, và trường hợp xấu nhất độ phức tạp giống hệt DFS bị dẫn dắt tồi: $O(b^m)$.
 :::
 
 ### Code C++
@@ -132,10 +132,10 @@ $$
 
 | Bước | Đỉnh mở rộng | $g$ | $h$ | $f=g+h$ | Open (cập nhật) | Closed |
 |---|---|---|---|---|---|---|
-| 1 | S | 0 | 5 | 5 | A(f=5), B(f=7) | {S} |
-| 2 | A | 1 | 4 | 5 | B(f=**6**, cập nhật vì $1{+}2{+}3=6 < 7$), C(f=8) | {S, A} |
+| 1 | S | 0 | 5 | 5 | $A(f=5)$, $B(f=7)$ | {S} |
+| 2 | A | 1 | 4 | 5 | B(f=**6**, cập nhật vì $1{+}2{+}3=6 < 7$), $C(f=8)$ | {S, A} |
 | 3 | B | 3 | 3 | 6 | C(f=**6**, cập nhật vì $3{+}1{+}2=6 < 8$) | {S, A, B} |
-| 4 | C | 4 | 2 | 6 | G(f=7) | {S, A, B, C} |
+| 4 | C | 4 | 2 | 6 | $G(f=7)$ | {S, A, B, C} |
 | 5 | **G** | 7 | 0 | 7 | ∅ | → **DỪNG, lấy G ra khỏi hàng đợi** |
 
 ```mermaid
@@ -177,7 +177,7 @@ UCS tạo ra các vòng tròn đồng tâm quanh điểm xuất phát (vì $h=0$
 
 ### Mở rộng: A* với heuristic bằng không là Dijkstra
 
-Khi bỏ hẳn heuristic ($h(n) \equiv 0$), A\* suy biến thành UCS — về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein, chương 22.3): thay hàng đợi FIFO của BFS bằng một **hàng đợi ưu tiên tối thiểu** khoá theo $g(n)$, lặp `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
+Khi bỏ heuristic ($h(n) \equiv 0$), A\* trở thành UCS, tương ứng với thuật toán Dijkstra trong cách tìm đường đang xét (Cormen, Leiserson, Rivest, Stein, chương 22.3). Ta thay hàng đợi FIFO của BFS bằng hàng đợi ưu tiên tối thiểu theo khóa $g(n)$. Sau mỗi lần `EXTRACT-MIN`, thuật toán nới lỏng (relax) các cạnh liền kề.
 
 | Cách cài Open | Độ phức tạp Dijkstra / UCS |
 |---|---|
@@ -281,10 +281,10 @@ Chạy A\* trên **đồ thị** (cài đặt "ngây thơ": đỉnh đã đóng 
 
 | Bước | Đỉnh mở rộng | $g$ | $f$ | Ghi chú |
 |---|---|---|---|---|
-| 1 | S | 0 | 5 | sinh A(f=7), B(f=7) |
-| 2 | **B** | 4 | 7 | (tie-break chọn B trước) → sinh C(g=5,f=7); **đóng B** |
+| 1 | S | 0 | 5 | sinh $A(f=7)$, $B(f=7)$ |
+| 2 | **B** | 4 | 7 | (tie-break chọn B trước) → sinh $C(g=5,f=7)$, **đóng B** |
 | 3 | A | 1 | 7 | sinh lại B với $g=1+2=3 < 4$ — **nhưng B đã đóng nên bị loại bỏ!** |
-| 4 | C | 5 | 7 | sinh G(g=8,f=8) |
+| 4 | C | 5 | 7 | sinh $G(g=8,f=8)$ |
 | 5 | G | 8 | 8 | trả về đường $S{-}B{-}C{-}G$, chi phí **8** |
 
 Kết quả: A\* báo cáo chi phí **8**, trong khi tối ưu thật là **7**. Đường rẻ hơn qua A bị bỏ lỡ chỉ vì B đã nằm trong tập đóng.
@@ -298,7 +298,7 @@ Kết quả: A\* báo cáo chi phí **8**, trong khi tối ưu thật là **7**.
 ## 3.4 IDA\* (Iterative-Deepening A\*)
 
 ::: tip Ẩn dụ
-A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định; nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
+A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định. Nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
 :::
 
 Ý tưởng: DFS có giới hạn — nhưng giới hạn là **ngưỡng chi phí $f=g+h$**, không phải độ sâu. Ngưỡng mới mỗi vòng = giá trị $f$ nhỏ nhất từng bị vượt quá ở vòng trước.

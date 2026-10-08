@@ -15,11 +15,11 @@ Ma trận hiệp phương sai của vector ngẫu nhiên ghi phương sai trên 
 
 **Định nghĩa từ độ lệch quanh kỳ vọng.** Với vector ngẫu nhiên $X$, $\Sigma=E[(X-E[X])(X-E[X])^T]$ khi moment bậc hai tồn tại. Vì $v^T\Sigma v=\operatorname{Var}(v^TX)\ge0$, $\Sigma$ luôn PSD.
 
-Phần tử $\Sigma_{ij}=\operatorname{Cov}(X_i,X_j)$ đo biến thiên tuyến tính cùng nhau. Chuẩn hóa cho ma trận tương quan với đường chéo bằng 1 khi các phương sai dương. Hiệp phương sai bằng 0 chỉ nói không tương quan tuyến tính; nhìn chung chưa đủ để kết luận độc lập. Nguồn: Convex Optimization, §A.2 và §7.1.
+Phần tử $\Sigma_{ij}=\operatorname{Cov}(X_i,X_j)$ đo biến thiên tuyến tính cùng nhau. Chuẩn hóa cho ma trận tương quan với đường chéo bằng 1 khi các phương sai dương. Hiệp phương sai bằng 0 chỉ nói không tương quan tuyến tính. Nhìn chung chưa đủ để kết luận độc lập. Nguồn: Convex Optimization, §A.2 và §7.1.
 
 ## Ví dụ
 
-Nếu X=Y nhận −1 hoặc 1 với xác suất bằng nhau thì Var(X)=Var(Y)=Cov(X,Y)=1.
+Nếu $X=Y$ nhận −1 hoặc 1 với xác suất bằng nhau thì $\operatorname{Var}(X)=\operatorname{Var}(Y)=\operatorname{Cov}(X,Y)=1$.
 
 ## Khi nào cần dùng?
 

@@ -34,6 +34,13 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .vp-doc tr { background: var(--paper); border: 0; }
 .vp-doc tr:nth-child(2n) { background: var(--canvas); }
 .vp-doc mjx-container { min-width: 0; color: inherit; }
+.math-text { min-width: 0; overflow-wrap: break-word; }
+.math-text mjx-container { color: inherit; min-width: 0; }
+.math-text mjx-container:not([display=true]) { display: inline-block; margin: 0 .06em; max-width: 100%; vertical-align: baseline; }
+.math-text mjx-container[display=true] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .65em .1em; margin: .6em 0; text-align: center; scrollbar-width: thin; }
+.math-text mjx-container svg { max-width: none; }
+.math-text mjx-container[display=true] svg { display: inline-block; }
+.slide-example .math-text { line-height: 1.9; }
 .vp-doc mjx-container:not([display=true]) {
   display: inline-block;
   max-width: none !important;
@@ -117,7 +124,7 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .term-preview-example { padding-top: var(--space-3); border-top: 1px solid var(--rule); color: var(--ink-2); }
 .term-preview-example span { font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 600; color: var(--ink); }
 .term-preview-example p { margin: var(--space-2) 0 0; }
-.term-preview-notation { overflow-x: auto; margin: var(--space-2) 0 0; padding: var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--canvas); color: var(--ink); font: var(--fs-lead)/1.55 var(--font-code); white-space: pre; }
+.term-preview-notation { min-width: 0; margin: var(--space-2) 0 0; padding: var(--space-2); border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--canvas); color: var(--ink); font-size: var(--fs-read); }
 .term-preview-hint { display: block; font-size: var(--fs-small); line-height: 1.5; color: var(--ink-3); }
 .term-preview-close { min-width: 44px; min-height: 44px; margin: calc(var(--space-2) * -1) calc(var(--space-2) * -1) 0 0; padding: 0 var(--space-2); border: 0; border-radius: var(--radius); background: transparent; color: var(--ink-2); font: 600 var(--fs-small) var(--font-ui); cursor: pointer; }
 .term-preview-close:hover { background: var(--sunken); color: var(--ink); }
@@ -163,8 +170,17 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .bayes-result > strong { font-size: var(--fs-h2); }
 .bayes-bar { background: var(--canvas); border: 1px solid var(--rule); height: 24px; margin: var(--space-4) 0; border-radius: var(--radius-sm); overflow: hidden; }
 .bayes-bar span { display: block; height: 100%; background: var(--tim); }
-.broadcast-display { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; padding: var(--space-5) 0; }
-.broadcast-display div > div { font: var(--fs-ui) var(--font-code); background: var(--canvas); padding: var(--space-2); }
+.broadcast-display { display: block; max-width: 100%; overflow-x: auto; padding: var(--space-4) var(--space-2); text-align: center; scrollbar-width: thin; }
+.broadcast-display math { display: inline math; }
+.numpy-array-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin: var(--space-4) 0; }
+.numpy-array-cards > div { min-width: 0; padding: var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--canvas); }
+.numpy-array-cards p { margin: var(--space-2) 0 var(--space-3); font-size: var(--fs-small); }
+.numpy-array-cards pre { margin: 0; padding: var(--space-2); background: var(--paper); overflow-x: auto; font: var(--fs-ui)/1.65 var(--font-code); }
+.broadcast-math { margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
+.broadcast-math > summary { cursor: pointer; font-weight: 600; min-height: 44px; }
+@media (max-width: 767px) {
+  .numpy-array-cards { grid-template-columns: 1fr; }
+}
 .map-output { display: flex; flex-wrap: wrap; gap: var(--space-2); background: var(--canvas); padding: var(--space-4); margin: var(--space-4) 0; }
 .map-output span { font: var(--fs-small) var(--font-code); background: var(--paper); border: 1px solid var(--rule); padding: var(--space-2); }
 .illustration-code pre { overflow-x: auto; padding: var(--space-4); font-size: var(--fs-small); }

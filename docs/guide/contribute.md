@@ -1,6 +1,6 @@
 # Thêm và cập nhật nội dung môn học
 
-Mỗi môn có nhiều bài giảng; **mỗi bài** gồm Slides, Notes và Kiến thức nền. Ghi chú cá nhân trong Góc học tập là công cụ riêng của người học.
+Mỗi môn có nhiều bài giảng. **Mỗi bài** gồm Slides, Notes và Kiến thức nền. Ghi chú cá nhân trong Góc học tập là công cụ riêng của người học.
 
 ## Notes: nơi viết nội dung chi tiết
 
@@ -16,7 +16,7 @@ lessonStatus: ready
 ---
 ```
 
-Khai báo bài với cùng slug trong `course-catalog.mjs`. Danh sách `prerequisites` của bài trong catalog quyết định những khái niệm nào xuất hiện ở phần Kiến thức nền. Dùng ID từ `concepts.mjs`; tránh gắn toàn bộ nền tảng của môn cho mọi bài.
+Khai báo bài với cùng slug trong `course-catalog.mjs`. Danh sách `prerequisites` của bài trong catalog quyết định những khái niệm nào xuất hiện ở phần Kiến thức nền. Dùng ID từ `concepts.mjs`. Tránh gắn toàn bộ nền tảng của môn cho mọi bài.
 
 Các thuật ngữ đã khai báo được liên kết tự động trong phần văn bản của Notes. Code, công thức, tiêu đề và liên kết đã viết sẵn được giữ nguyên. Khi cần liên kết rõ ràng ở một vị trí khác, dùng Markdown:
 
@@ -36,7 +36,26 @@ Các loại hiện có: `search` (BFS/DFS), `gradient`, `bayes`, `broadcast`, `m
 
 ## Slides: lấy trọng tâm từ Notes
 
-Khai báo Slides trong `course-catalog.mjs`. Thuộc tính `note` là slug bài giảng sở hữu slide. Giao diện chỉ lấy những Slides của bài đang mở; mỗi slide có tiêu đề, vài ý chính và công thức nếu cần. Bài chưa soạn được ghi rõ trạng thái.
+Khai báo Slides trong `course-catalog.mjs`. Thuộc tính `note` là slug bài giảng sở hữu slide. Giao diện chỉ lấy những Slides của bài đang mở. Mỗi slide có tiêu đề, vài ý chính và công thức nếu cần. Bài chưa soạn được ghi rõ trạng thái.
+
+## Trình bày công thức toán
+
+Notes, Wiki, Slides và Kiến thức nền đều dùng `$…$` cho công thức ngắn trong câu và `$$…$$` cho công thức riêng dòng. Ma trận dùng `bmatrix`, hệ phương trình dùng `cases`, đạo hàm và tỉ số dùng `\frac`, căn dùng `\sqrt`. Đặt các phép biến đổi dài trong `aligned` để căn dấu bằng. Giữ chữ tiếng Việt bên ngoài công thức. Kết thúc câu và dẫn vào công thức như một phần của đoạn văn.
+
+```md
+Với $f(x,y)=x^2+3y$, ta có:
+
+$$
+\frac{\partial f}{\partial x}=2x,\qquad
+\frac{\partial f}{\partial y}=3.
+$$
+```
+
+Trong các chuỗi JavaScript của catalog và `concepts.mjs`, escape mỗi dấu gạch chéo ngược: `"$\\frac{a}{b}$"`. Tên, aliases và tiêu đề vẫn viết bằng chữ. Các chuỗi hiển thị qua `MathText` hỗ trợ văn bản và công thức, không hỗ trợ Markdown hay HTML. Công thức dài có vùng cuộn riêng trên điện thoại.
+
+Khi giới thiệu một ký hiệu viết gọn, hãy viết dạng đầy đủ trước ít nhất một lần: $a_1+\cdots+a_n$ rồi mới dùng $\sum_{i=1}^n a_i$. Nêu rõ $i$ chạy từ đâu đến đâu và một số hạng có nghĩa gì trong bài. Với tổng theo tập, như $\sum_{v\in V}$, giải thích tập chỉ số là các đỉnh. Với $\prod$, viết rõ các thừa số trước khi thu gọn. Chỉ bỏ cận để viết $\sum_i$ sau khi đã xác định phạm vi trong chính trang hoặc phần kiến thức đã dẫn.
+
+Tham khảo cách mở ký hiệu và ví dụ: [Khan Academy — Summation notation](https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-3/a/review-summation-notation), [OpenStax — Series and Their Notations](https://openstax.org/books/algebra-and-trigonometry-2e/pages/13-4-series-and-their-notations). Riêng tổ hợp lồi, [MIT OCW — Convex sets, slide 2–4](https://ocw.mit.edu/courses/6-079-introduction-to-convex-optimization-fall-2009/26c4c530c9db63a12b898d720dd89a44_MIT6_079F09_lec02.pdf) viết rõ tổng các điểm có trọng số và tổng trọng số bằng 1. Khi áp dụng vào StudyHub, giữ đúng ký pháp của từng môn: `shape`, chỉ mục mảng trong code và kích thước ma trận trong toán học có vai trò khác nhau.
 
 ## Kiến thức nền: giúp người đọc tự bù nền
 
@@ -54,7 +73,7 @@ Sắp xếp `prerequisites` của bài theo thứ tự cần đọc. Với bài 
 
 Mỗi thuật ngữ có file Markdown riêng tại `docs/wiki/<id>.md`, khai báo `wikiTerm: <id>`. Viết giải thích kỹ thuật, điều kiện áp dụng, ví dụ và lỗi dễ nhầm. Liên kết sang thuật ngữ khác bằng Markdown hoặc dùng tên đã có trong `concepts.mjs` để tạo liên kết tự động. Không tự liên kết thuật ngữ của trang về chính trang đó.
 
-Nội dung khởi tạo và quan hệ giữa thuật ngữ nằm ở `wiki-content.mjs`. Chỉnh bài Wiki trực tiếp sau khi tạo; build không ghi đè bài đã có. Danh sách “Bài giảng cần khái niệm này” lấy từ `prerequisites` trong catalog.
+Nội dung khởi tạo và quan hệ giữa thuật ngữ nằm ở `wiki-content.mjs`. Chỉnh bài Wiki trực tiếp sau khi tạo. Build không ghi đè bài đã có. Danh sách “Bài giảng cần khái niệm này” lấy từ `prerequisites` trong catalog.
 
 ## Đồng bộ và kiểm tra
 

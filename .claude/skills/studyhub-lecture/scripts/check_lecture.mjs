@@ -59,6 +59,17 @@ const report = []
 const add = (level, where, code, message) => report.push({ level, where, code, message })
 const LATEX = /\\[a-zA-Z]+|\$[^$]+\$/
 const MARKUP = /\*\*[^*]+\*\*|\$[^$]+\$|\\[a-zA-Z]+/
+let rendersMathText = false
+try {
+  const panels = await readFile(path.join(root, 'docs/.vitepress/theme/LecturePanels.vue'), 'utf8')
+  rendersMathText = panels.includes('<MathText') && await exists(path.join(root, 'docs/.vitepress/theme/MathText.vue'))
+} catch { /* Older repositories and test fixtures still use plain text. */ }
+const outsideMath = value => value.replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g, '')
+function checkMathText(value, where, field) {
+  const plain = outsideMath(value)
+  if (plain.includes('$')) add('error', where, 'MATH_DELIMITER', `${field} có dấu $ không được ghép cặp.`)
+  if (/\\[a-zA-Z]+/.test(plain)) add('error', where, 'SLIDE_LATEX', `${field} có lệnh TeX ngoài $…$ hoặc $$…$$.`)
+}
 
 function parseFrontmatter(source) {
   const match = source.match(/^﻿?---\r?\n([\s\S]*?)\r?\n---\r?\n/)
@@ -123,8 +134,11 @@ async function checkLesson(course, lesson) {
     const sw = `${where} slide ${i + 1} "${s.title}"`
     if (!Array.isArray(s.bullets) || !s.bullets.length) add('error', sw, 'SLIDE_NO_BULLETS', 'Slide không có bullet.')
     else if (s.bullets.length > 5) add('warning', sw, 'SLIDE_TOO_DENSE', `${s.bullets.length} bullet; slide catalog là bản ôn ngắn (2–4 ý).`)
-    for (const [field, value] of [['title', s.title], ['formula', s.formula], ['example', s.example], ...(s.bullets || []).map((b, k) => [`bullets[${k}]`, b])])
-      if (typeof value === 'string' && LATEX.test(value)) add('error', sw, 'SLIDE_LATEX', `${field} chứa LaTeX/$…$; chuỗi slide hiển thị nguyên văn, dùng Unicode.`)
+    for (const [field, value] of [['title', s.title], ['formula', s.formula], ['example', s.example], ...(s.bullets || []).map((b, k) => [`bullets[${k}]`, b])]) {
+      if (typeof value !== 'string') continue
+      if (rendersMathText) checkMathText(value, sw, field)
+      else if (LATEX.test(value)) add('error', sw, 'SLIDE_LATEX', `${field} chứa LaTeX/$…$; chuỗi slide hiển thị nguyên văn, dùng Unicode.`)
+    }
   })
 
   const prerequisiteSet = new Set(lesson.prerequisites || [])
@@ -138,8 +152,13 @@ async function checkLesson(course, lesson) {
     if (!wikiDetails[id]) add('error', pw, `${code}_NO_DETAILS`, 'Thiếu wikiDetails.')
     if (!await exists(path.join(root, `docs/wiki/${id}.md`))) add('warning', pw, 'WIKI_FILE_MISSING', 'Chưa có docs/wiki/<id>.md; chạy npm run sync:courses rồi biên tập file.')
     const t = concepts[id]
-    for (const field of ['definition', 'example', 'use', 'question', 'answer'])
-      if (typeof t[field] === 'string' && MARKUP.test(t[field])) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown/LaTeX; tab Kiến thức nền hiển thị văn bản thuần.`)
+    for (const field of ['definition', 'example', 'use', 'question', 'answer']) {
+      if (typeof t[field] !== 'string') continue
+      if (rendersMathText) {
+        checkMathText(t[field], pw, `concepts.${field}`)
+        if (/\*\*[^*]+\*\*/.test(outsideMath(t[field]))) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown; MathText chỉ hỗ trợ văn bản và công thức TeX.`)
+      } else if (MARKUP.test(t[field])) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown/LaTeX; tab Kiến thức nền hiển thị văn bản thuần.`)
+    }
   }
 
   // Nội dung Markdown

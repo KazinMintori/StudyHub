@@ -7,7 +7,7 @@ next: false
 
 # Mẫu & tổng thể
 
-Tổng thể là toàn bộ đối tượng nghiên cứu; mẫu là phần được quan sát. Tham số mô tả tổng thể, thống kê mô tả mẫu. Lấy mẫu lệch có thể làm kết luận sai dù mẫu rất lớn. Ước lượng cần gắn với cách lấy mẫu và giả định.
+Tổng thể là toàn bộ đối tượng nghiên cứu. Mẫu là phần được quan sát. Tham số mô tả tổng thể, thống kê mô tả mẫu. Lấy mẫu lệch có thể làm kết luận sai dù mẫu rất lớn. Ước lượng cần gắn với cách lấy mẫu và giả định.
 
 <WikiUsage />
 

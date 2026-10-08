@@ -7,19 +7,25 @@ next: false
 
 # Quy tắc chuỗi
 
-Đạo hàm của hợp hàm nhân tốc độ thay đổi của lớp ngoài với lớp trong: d[g(f(x))]/dx = g′(f(x))$f'(x)$. Với nhiều biến, cộng các đóng góp theo mọi đường phụ thuộc. Đây là nền tảng của lan truyền ngược.
+Đạo hàm của hợp hàm nhân tốc độ thay đổi của lớp ngoài với lớp trong:
+
+$$
+\frac{d}{dx}[g(f(x))]=g'(f(x))f'(x).
+$$
+
+Với nhiều biến, cộng các đóng góp theo mọi đường phụ thuộc. Đây là nền tảng của lan truyền ngược.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Nhiều đường phụ thuộc.** Nếu z=f(x(t),y(t)), dz/dt=(∂f/∂x)(dx/dt)+(∂f/∂y)(dy/dt). Mỗi đường từ t tới z đóng góp một tích các đạo hàm trên đường đó.
+**Nhiều đường phụ thuộc.** Nếu $z=f(x(t),y(t))$, $\frac{dz}{dt}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}$. Mỗi đường từ t tới z đóng góp một tích các đạo hàm trên đường đó.
 
 Trong lan truyền ngược, đồ thị tính toán tổ chức những phép nhân và cộng này. Bỏ sót một nhánh phụ thuộc làm gradient sai dù công thức ở các nhánh khác đúng.
 
 ## Ví dụ
 
-y = (3x+1)²: y′ = 2(3x+1)×3 = 6(3x+1).
+$y = (3x+1)^{2}$: $y' = 2(3x+1)\times 3 = 6(3x+1)$.
 
 ## Khi nào cần dùng?
 

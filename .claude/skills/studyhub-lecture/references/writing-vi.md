@@ -107,7 +107,9 @@ Với nguồn lịch sử, giữ rõ thời điểm và lời khẳng định c�
 
 Cho phép câu có nhịp dài ngắn khác nhau, đối chiếu hoặc một câu dẫn gợi suy nghĩ khi chúng làm sáng nội dung. Không lặp cùng một công thức câu ở mọi trang.
 
-Dấu hai chấm, dấu chấm phẩy, gạch ngang, câu bị động hay câu hỏi không tự chứng minh văn bản do AI viết. Chọn chúng theo ngữ pháp và nhịp đọc. Với slide, tránh dấu câu làm câu thành một chuỗi nhiều vế khó quét mắt.
+Dấu câu được chọn theo ngữ pháp và nhịp đọc. Theo yêu cầu biên tập của StudyHub, hạn chế dấu chấm phẩy trong lời giảng. Hãy dùng từ nối đúng quan hệ hoặc tách thành câu có chủ ngữ rõ ràng. Chẳng hạn, dùng “còn” để đối chiếu, “vì” để nêu lý do và “sau đó” để nối các bước. Không đổi mọi dấu chấm phẩy thành cùng một từ nối. Với slide, tránh chuỗi nhiều vế khó đọc lướt.
+
+Tra [Từ nối và cách diễn đạt tiếng Việt](tu-noi-va-dien-dat.md) để chọn từ theo chức năng, phân biệt sắc thái và xem nguồn từ điển. Làm phong phú vốn từ bằng cách gọi đúng thao tác và quan hệ, không bằng từ hiếm hoặc việc thay thuật ngữ chuyên môn bằng các từ gần nghĩa tùy tiện. Dấu chấm phẩy trong code, ký pháp toán và thực thể HTML phải được giữ nguyên.
 
 Giữ hình ảnh ngôn ngữ khi nó có ánh xạ rõ và vừa với người học. Không biến cả khóa học thành một ẩn dụ sân khấu, hành trình hoặc cánh cửa. Giọng văn có sức dẫn vẫn phải giúp người học gọi đúng khái niệm.
 

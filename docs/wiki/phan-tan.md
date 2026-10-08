@@ -7,7 +7,7 @@ next: false
 
 # Tính toán phân tán
 
-Tính toán phân tán chia công việc và dữ liệu cho nhiều máy liên lạc qua mạng. Tổng thời gian gồm tính toán, truyền dữ liệu và đồng bộ. Một máy chậm hoặc phân vùng dữ liệu không đều có thể quyết định thời gian của cả pha; thêm máy không bảo đảm nhanh hơn tương ứng.
+Tính toán phân tán chia công việc và dữ liệu cho nhiều máy liên lạc qua mạng. Tổng thời gian gồm tính toán, truyền dữ liệu và đồng bộ. Một máy chậm hoặc phân vùng dữ liệu không đều có thể quyết định thời gian của cả pha. Thêm máy không bảo đảm nhanh hơn tương ứng.
 
 <WikiUsage />
 

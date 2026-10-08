@@ -7,7 +7,7 @@ next: false
 
 # Tập hợp
 
-Một tập hợp là một nhóm các phần tử được xác định rõ. x ∈ A nghĩa là x thuộc A. A ∪ B gồm phần tử thuộc ít nhất một tập; A ∩ B gồm phần tử thuộc cả hai; A \ B loại những phần tử của B khỏi A. Tập rỗng không chứa phần tử nào.
+Một tập hợp là một nhóm các phần tử được xác định rõ. $x \in  A$ nghĩa là x thuộc A. $A \cup  B$ gồm phần tử thuộc ít nhất một tập, còn $A \cap  B$ gồm phần tử thuộc cả hai tập. Phép lấy hiệu $A\setminus B$ loại những phần tử của B khỏi A. Tập rỗng không chứa phần tử nào.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Một tập hợp là một nhóm các phần tử được xác định rõ. x 
 
 ## Ví dụ
 
-A = {1, 2}, B = {2, 3}: A ∩ B = {2}, A ∪ B = {1, 2, 3}.
+$A = \{1, 2\}$, $B = \{2, 3\}$: $A \cap  B = \{2\}$, $A \cup  B = \{1, 2, 3\}$.
 
 ## Khi nào cần dùng?
 
@@ -27,7 +27,7 @@ A = {1, 2}, B = {2, 3}: A ∩ B = {2}, A ∪ B = {1, 2, 3}.
 
 ## Tự kiểm tra
 
-Nếu A = {1, 2, 3}, B = {2}, A \ B là gì?
+Nếu $A = \{1, 2, 3\}$, $B = \{2\}$, $A\setminus B$ là gì?
 
 <details><summary>Xem đáp án</summary>
 

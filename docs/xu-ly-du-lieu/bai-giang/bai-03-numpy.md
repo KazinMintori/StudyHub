@@ -23,9 +23,9 @@ lessonStatus: ready
 Hãy tưởng tượng bạn cần phủ socola lên 1 triệu chiếc bánh **giống hệt nhau về kích thước**.
 
 - **Cách 1 — người thợ thủ công (Python `list` + `for`):** mỗi lần lấy một chiếc bánh, thợ phải **nhìn lại** xem đây có đúng là bánh không, kích thước bao nhiêu, rồi mới phủ socola. 1 triệu chiếc = 1 triệu lần "nhìn lại rồi làm" — dù thao tác thực tế rất đơn giản.
-- **Cách 2 — dây chuyền băng tải (NumPy `ndarray`):** vì tất cả bánh **cùng một kích thước, xếp liền kề nhau** trên băng chuyền, nhà máy chỉ cần lắp **một cỗ máy phủ socola cố định** (một *ufunc*) chạy dọc theo băng chuyền — không cần "nhìn lại" từng chiếc, và máy còn có thể phủ **4 chiếc cùng lúc** bằng một cần gạt duy nhất (SIMD).
+- **Cách 2 — dây chuyền băng tải (NumPy `ndarray`):** các phần tử có cùng kiểu dữ liệu và được tổ chức trong một vùng nhớ theo quy tắc xác định. Có thể hình dung một *ufunc* như thao tác áp dụng lặp lại trên cả dãy. SIMD tương ứng với khả năng xử lý nhiều phần tử trong một lệnh, nhưng số phần tử còn phụ thuộc kiểu dữ liệu và phần cứng.
 
-Sự khác biệt cốt lõi không nằm ở "phép tính" (đều là phủ socola / nhân với 2) mà nằm ở **cách tổ chức dữ liệu**: `list` lưu các bánh (đối tượng) rải rác, chỉ có một dãy "địa chỉ" trỏ tới chúng; `ndarray` lưu **chính các giá trị**, liền kề nhau, cùng một kiểu. Đây là lý do vì sao bài học bắt đầu từ *cách lưu dữ liệu* trước khi nói đến tốc độ.
+Sự khác biệt cốt lõi không nằm ở "phép tính" (đều là phủ socola / nhân với 2) mà nằm ở **cách tổ chức dữ liệu**: `list` lưu các bánh (đối tượng) rải rác, chỉ có một dãy "địa chỉ" trỏ tới chúng. `ndarray` lưu **chính các giá trị**, liền kề nhau, cùng một kiểu. Đây là lý do vì sao bài học bắt đầu từ *cách lưu dữ liệu* trước khi nói đến tốc độ.
 
 ```mermaid
 flowchart TB
@@ -128,7 +128,7 @@ So sánh với Python thuần: `127 + 1 = 128` luôn đúng vì `int` của Pyth
 | `float32` | 4 | `0.333333343267` |
 | `float64` | 8 | `0.333333333333` |
 
-Cả hai kiểu đều chỉ lưu **giá trị gần đúng** của $\frac{1}{3}$; `float64` dùng gấp đôi bộ nhớ để đổi lấy độ chính xác cao hơn. Đây chính là đánh đổi (trade-off) cốt lõi giữa bộ nhớ và độ chính xác mà mọi hệ thống số máy tính đều gặp phải.
+Cả hai kiểu đều chỉ lưu **giá trị gần đúng** của $\frac{1}{3}$. `float64` dùng gấp đôi bộ nhớ để đổi lấy độ chính xác cao hơn. Ví dụ này cho thấy sự đánh đổi (trade-off) giữa bộ nhớ và độ chính xác.
 
 ###  Dry Run — Bài tập 1: đổi kiểu lúc nào mới đúng?
 
@@ -256,7 +256,7 @@ Cho `A.shape = (4, 3)`, `A.strides = (24, 8)`.
 |---|---|---|
 | `A[1, 2]` cách đầu vùng dữ liệu bao nhiêu byte? | $1 \times 24 + 2 \times 8$ | **40 byte** |
 | Ô cách đầu vùng dữ liệu 80 byte là ô nào? | $80 = i \times 24 + j \times 8 \Rightarrow i=3, j=1$ | Giá trị **44**, tại `A[3, 1]` |
-| `B = A.astype(np.int32)` (4 byte/số) có `strides` bằng bao nhiêu? | Tỷ lệ 8→4 byte, giữ nguyên `shape` | `(12, 4)` |
+| `B = A.astype(np.int32)` (4 byte/số) có `strides` bằng bao nhiêu? | Tỷ lệ $8\to 4$ byte, giữ nguyên `shape` | `(12, 4)` |
 
 ### 3.2 View và Copy — bẫy quan trọng nhất của cả bài
 
@@ -285,7 +285,7 @@ print(np.shares_memory(B, V))   # True — hai object khác nhau, chung 1 vùng 
 | **Mảng chỉ mục** `A[[0,2], [1,2]]`, mặt nạ bool `A[mask]`, `np.ix_` | **Bản sao (Copy)** | KHÔNG — vùng dữ liệu độc lập |
 | **Gán trực tiếp** `A[mask] = -1`, `A[chon] = -1` (vế trái phép gán) | Sửa tại chỗ | **LUÔN sửa mảng gốc**, bất kể cách chọn ở trên |
 
-Đây chính là "họ hàng" của lỗi *view vs copy* / `SettingWithCopyWarning` sẽ gặp lại trong pandas (Bài 4–5) — gốc rễ là cùng một khái niệm *aliasing* đã học ở Bài 2 (`ban_sao = goc`).
+Quan hệ dùng chung dữ liệu này cũng giúp giải thích lỗi *view vs copy* / `SettingWithCopyWarning` sẽ gặp lại trong pandas (Bài 4–5) — gốc rễ là cùng một khái niệm *aliasing* đã học ở Bài 2 (`ban_sao = goc`).
 :::
 
 Kiểm chứng nhanh bằng `np.shares_memory(a, b)` — trả về `True`/`False` cho biết hai mảng có dùng chung vùng dữ liệu hay không (kể cả khi chuyển vị: `np.shares_memory(A, A.T)` cũng là `True`).
@@ -372,7 +372,7 @@ A.mean(axis=1, keepdims=True)         # giữ lại chiều đã gộp với kí
 ```
 
 ::: tip Mẹo nhớ `axis`
-`axis=k` nghĩa là **"gộp dọc theo trục thứ k"** — trục đó sẽ *biến mất* khỏi kết quả trừ khi dùng `keepdims=True`. `axis=0` → mất chiều hàng, kết quả theo **cột**; `axis=1` → mất chiều cột, kết quả theo **hàng**. Đây cũng chính là quy ước `axis` mà pandas dùng lại nguyên vẹn ở Bài 4–5.
+`axis=k` nghĩa là **"gộp dọc theo trục thứ k"** — trục đó sẽ *biến mất* khỏi kết quả trừ khi dùng `keepdims=True`. `axis=0` → mất chiều hàng, kết quả theo **cột**. `axis=1` → mất chiều cột, kết quả theo **hàng**. Đây cũng chính là quy ước `axis` mà pandas dùng lại nguyên vẹn ở Bài 4–5.
 :::
 
 **Vì sao `keepdims=True` bắt buộc khi định trừ ngược lại `A`:**
@@ -387,10 +387,13 @@ A.mean(axis=1, keepdims=True)         # giữ lại chiều đã gộp với kí
 ### 5.1 Trung bình vs Trung vị — chọn số nào cho báo cáo?
 
 $$
-\text{mean} = \bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-\qquad\qquad
-\text{median} = \text{giá trị ở giữa dãy đã sắp xếp}
+\bar x=\frac{x_1+x_2+\cdots+x_n}{n}
+=\frac1n\sum_{i=1}^n x_i.
 $$
+
+$i$ chạy qua các phần tử của dữ liệu, từ 1 đến $n$ trong công thức toán học. Với dãy năm giá, tử số là $x_1+x_2+x_3+x_4+x_5$. Trong code Python, chỉ mục mảng bắt đầu từ 0. `np.mean(gia)` vẫn cộng tất cả giá rồi chia số phần tử.
+
+**Trung vị** là giá trị ở giữa dãy đã sắp xếp. Nếu số phần tử chẵn, lấy trung bình hai giá trị ở giữa. Trong NumPy, hai thao tác tương ứng là `np.mean` và `np.median`.
 
 **Trước → Sau: một giá trị ngoại lai (outlier) kéo lệch trung bình như thế nào**
 
@@ -405,17 +408,21 @@ np.mean(gia)      # 120.0 — bị kéo lệch mạnh bởi 380
 np.median(gia)    #  60.0 — không đổi, vì chỉ quan tâm vị trí giữa
 ```
 
-::: warning Câu hỏi thi hay gặp: "dùng số nào để mô tả mức giá điển hình?"
-Khi phân phối **lệch** (có giá trị rất lớn/nhỏ bất thường), **trung vị đại diện tốt hơn cho "giá trị điển hình"**; trung bình vẫn hữu ích khi cần liên hệ đến **tổng** (ví dụ tổng doanh thu = mean × số lượng). Không có đáp án đúng tuyệt đối — phải nêu rõ *câu hỏi phân tích đang trả lời là gì*.
+::: warning Chọn số nào để mô tả mức giá điển hình?
+Khi phân phối **lệch** (có giá trị rất lớn/nhỏ bất thường), **trung vị đại diện tốt hơn cho "giá trị điển hình"**. Trung bình vẫn hữu ích khi cần liên hệ đến **tổng** (ví dụ tổng doanh thu = mean × số lượng). Không có đáp án đúng tuyệt đối — phải nêu rõ *câu hỏi phân tích đang trả lời là gì*.
 :::
 
 ### 5.2 Độ lệch chuẩn — đo độ "tản mát" quanh trung bình
 
 $$
-\sigma^2 = \text{Var}(x) = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2
-\qquad\qquad
-\sigma = \sqrt{\sigma^2}
+\begin{aligned}
+\sigma^2&=\frac{(x_1-\bar x)^2+\cdots+(x_n-\bar x)^2}{n}\\
+&=\frac1n\sum_{i=1}^n(x_i-\bar x)^2,\\
+\sigma&=\sqrt{\sigma^2}.
+\end{aligned}
 $$
+
+Mỗi số hạng là bình phương độ lệch của một giá trị so với trung bình. Công thức này mô tả phương sai của chính dãy dữ liệu và khớp `np.var(..., ddof=0)`. `np.std(..., ddof=0)` lấy căn để trả về độ lệch chuẩn.
 
 | Khu vực | Giá (USD/đêm) | Trung bình | Độ lệch chuẩn |
 |---|---|---|---|
@@ -423,7 +430,7 @@ $$
 | Y | `[30, 30, 90, 90]` | 60 | **30** (tản mát nhiều dù trung bình bằng nhau!) |
 
 ::: danger Bẫy: "trung bình bằng nhau ⇒ dữ liệu giống nhau"
-Hai khu vực X và Y có **cùng trung bình (60)** nhưng phân bố giá hoàn toàn khác nhau. Một báo cáo chỉ ghi "giá trung bình 60 USD" mà bỏ qua độ lệch chuẩn sẽ **che giấu mất sự khác biệt quan trọng này**. NumPy mặc định `ddof=0` (chia cho $n$); dùng `ddof=1` (chia cho $n-1$) khi coi dữ liệu là **mẫu** để ước lượng phương sai của **tổng thể**.
+Hai khu vực X và Y có **cùng trung bình (60)** nhưng phân bố giá hoàn toàn khác nhau. Một báo cáo chỉ ghi "giá trung bình 60 USD" mà bỏ qua độ lệch chuẩn sẽ **che giấu mất sự khác biệt quan trọng này**. NumPy mặc định `ddof=0` (chia cho $n$). Dùng `ddof=1` (chia cho $n-1$) khi coi dữ liệu là **mẫu** để ước lượng phương sai của **tổng thể**.
 :::
 
 ### 5.3 Lấy mẫu ngẫu nhiên để kiểm tra — và sai số đi kèm
@@ -441,7 +448,7 @@ print(gia[chi_muc])
 | 3 giá lấy mẫu, `seed=7` | 170,00 |
 
 ::: warning Ghi nhớ cho bài tập lớn
-`seed` giúp **lặp lại được** một phép lấy mẫu (tái lập kết quả), nhưng **không đảm bảo mẫu đại diện** cho toàn bộ dữ liệu. Với bài tập lớn: tính thống kê trên **toàn bộ dữ liệu hợp lệ** khi có thể; chỉ dùng mẫu ngẫu nhiên để **đọc và kiểm tra nhanh** từng dòng, không dùng mẫu nhỏ để suy ra kết luận thống kê cuối cùng.
+`seed` giúp **lặp lại được** một phép lấy mẫu (tái lập kết quả), nhưng **không đảm bảo mẫu đại diện** cho toàn bộ dữ liệu. Với bài tập lớn: tính thống kê trên **toàn bộ dữ liệu hợp lệ** khi có thể. Chỉ dùng mẫu ngẫu nhiên để **đọc và kiểm tra nhanh** từng dòng, không dùng mẫu nhỏ để suy ra kết luận thống kê cuối cùng.
 :::
 
 ##  Cheat Sheet — 7 lệnh NumPy phải nhớ
@@ -450,7 +457,7 @@ print(gia[chi_muc])
 |---|---|---|
 | 1 | `A.shape`, `A.dtype`, `A.ndim` | 3 thuộc tính đầu tiên cần đọc trên mọi mảng |
 | 2 | `A.astype(np.int32)` **trước** phép tính | Đổi kiểu để tránh tràn số / mất độ chính xác |
-| 3 | `A[a:b:step]`, `A[mask]`, `A[[i,j],[k,l]]` | Lát cắt = view; chỉ mục nâng cao/mask = copy |
+| 3 | `A[a:b:step]`, `A[mask]`, `A[[i,j],[k,l]]` | Lát cắt = view, chỉ mục nâng cao/mask = copy |
 | 4 | `np.shares_memory(x, y)` | Kiểm tra hai mảng có dùng chung dữ liệu không |
 | 5 | `d[:, None]` hoặc `d.reshape(-1,1)` | Biến vector `(n,)` thành cột `(n,1)` để broadcasting theo hàng |
 | 6 | `A.mean(axis=1, keepdims=True)` | Tổng hợp theo trục, giữ chiều để broadcast ngược lại |
@@ -482,6 +489,6 @@ print(gia[chi_muc])
 
 ::: info  Làm việc với AI thì sao?
 **AI làm tốt:** gợi ý cách viết biểu thức vector hoá, tìm đúng hàm NumPy cần dùng, tạo ví dụ nhỏ để thử ngay.
-**AI hay sai:** ghép sai hàng/cột khi broadcasting; khẳng định "cách này nhanh hơn" mà chưa hề đo; áp dụng công thức thống kê mà không kiểm tra giả định (ví dụ dùng `mean` cho phân phối lệch mạnh).
-**Kiểm chứng bằng cách nào:** so kết quả AI đưa ra với phép tính tay/vòng `for` trên mảng nhỏ; kiểm tra lại `shape` ở từng bước; nếu AI khẳng định "nhanh hơn", yêu cầu đo bằng `%timeit` thay vì tin theo lời khẳng định suông.
+**AI hay sai:** ghép sai hàng/cột khi broadcasting. Khẳng định "cách này nhanh hơn" mà chưa hề đo. Áp dụng công thức thống kê mà không kiểm tra giả định (ví dụ dùng `mean` cho phân phối lệch mạnh).
+**Kiểm chứng bằng cách nào:** so kết quả AI đưa ra với phép tính tay/vòng `for` trên mảng nhỏ. Kiểm tra lại `shape` ở từng bước. Nếu AI khẳng định "nhanh hơn", yêu cầu đo bằng `%timeit` thay vì tin theo lời khẳng định suông.
 :::

@@ -15,11 +15,11 @@ Likelihood lấy dữ liệu đã quan sát làm cố định và xem mật đ�
 
 **Dữ liệu cố định, tham số thay đổi.** Với mô hình xác suất $p(y\mid\theta)$ và dữ liệu đã thấy $y$, likelihood là $L(\theta;y)=p(y\mid\theta)$ nhìn như một hàm của $\theta$. Nó không phải một phân phối xác suất theo $\theta$ nếu chưa đưa thêm prior và chuẩn hóa.
 
-Dùng log-likelihood biến tích xác suất thành tổng. Vì log tăng nghiêm ngặt, cực đại likelihood tương đương cực đại log-likelihood; thường ta cực tiểu negative log-likelihood. Cần ghi rõ giả định độc lập, phân phối nhiễu và tham số nào được xem là cố định. Nguồn: Convex Optimization, §7.1.
+Dùng log-likelihood biến tích xác suất thành tổng. Vì log tăng nghiêm ngặt, cực đại likelihood tương đương cực đại log-likelihood. Thường ta cực tiểu negative log-likelihood. Cần ghi rõ giả định độc lập, phân phối nhiễu và tham số nào được xem là cố định. Nguồn: Convex Optimization, §7.1.
 
 ## Ví dụ
 
-Tung đồng xu 10 lần được 7 mặt ngửa cho likelihood theo p tỉ lệ với p⁷(1−p)³.
+Tung đồng xu 10 lần được 7 mặt ngửa cho likelihood theo p tỉ lệ với $p^{7}(1-p)^{3}$.
 
 ## Khi nào cần dùng?
 
@@ -31,7 +31,7 @@ Trong likelihood, dữ liệu hay tham số là đối tượng được thay đ
 
 <details><summary>Xem đáp án</summary>
 
-Tham số được thay đổi; dữ liệu đã quan sát được giữ cố định.
+Tham số được thay đổi, còn dữ liệu đã quan sát được giữ cố định.
 
 </details>
 

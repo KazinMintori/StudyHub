@@ -7,7 +7,7 @@ next: false
 
 # Hàm đối ngẫu Lagrange
 
-Hàm đối ngẫu g(λ,ν) là infimum của Lagrangian theo biến gốc, khi giữ các nhân tử cố định. Mỗi bộ nhân tử khả thi cho một cận dưới của bài cực tiểu; bài đối ngẫu chọn cận dưới lớn nhất.
+Hàm đối ngẫu $g(\lambda ,\nu )$ là infimum của Lagrangian theo biến gốc khi giữ các nhân tử cố định. Mỗi bộ nhân tử khả thi cho một cận dưới của bài cực tiểu, vì vậy bài đối ngẫu tìm bộ nhân tử cho cận dưới lớn nhất.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ $g$ luôn lõm theo các nhân tử vì nó là infimum của một họ hàm af
 
 ## Ví dụ
 
-Với L=(x−2)²+λ(x−1), lấy infimum theo x cho g(λ)=λ−λ²/4, λ≥0.
+Với $L=(x-2)^{2}+\lambda (x-1)$, lấy infimum theo x cho $g(\lambda )=\lambda-\frac{\lambda^2}{4}$, $\lambda \ge 0$.
 
 ## Khi nào cần dùng?
 
@@ -31,7 +31,7 @@ Vì sao bài đối ngẫu cực đại g thay vì cực tiểu g?
 
 <details><summary>Xem đáp án</summary>
 
-Vì mọi g là cận dưới; cận lớn hơn gần giá trị tối ưu gốc hơn.
+Vì mọi giá trị g đều là cận dưới, cận lớn hơn sẽ gần giá trị tối ưu của bài gốc hơn.
 
 </details>
 

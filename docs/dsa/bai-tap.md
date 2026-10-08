@@ -59,11 +59,11 @@ $$10, 20, 30, 40, 50, 25$$
      - Con trái của $40$ là $30$, con phải là $50$. Cây cân bằng.
 
 3. Chèn tiếp $25$:
-   - $25 > 20 \implies$ đi sang phải; $25 < 40 \implies$ đi sang trái; $25 < 30 \implies$ làm con trái của $30$.
+   - $25 > 20 \implies$ đi sang phải. $25 < 40 \implies$ đi sang trái. $25 < 30 \implies$ làm con trái của $30$.
    - Kiểm tra hệ số cân bằng từ dưới lên:
      $BF(30) = 1$ (cân bằng).
      $BF(40) = h_{\text{left}}(30) - h_{\text{right}}(50) = 2 - 1 = 1$ (cân bằng).
-     Tại nút gốc $20$: nhánh trái (chứa $10$) có $h = 1$; nhánh phải (chứa $40$) có $h = 3 \implies BF(20) = 1 - 3 = -2$ (mất cân bằng).
+     Tại nút gốc $20$: nhánh trái (chứa $10$) có $h = 1$. Nhánh phải (chứa $40$) có $h = 3 \implies BF(20) = 1 - 3 = -2$ (mất cân bằng).
      Tại nút con phải $40$, $BF(40) = 1 > 0 \implies$ dạng **Right-Left (RL)**.
    - Kích hoạt **Phép quay kép Right-Left**:
      - Bước 1: Quay phải tại $40$. Nút $30$ lên thay $40$, $40$ trở thành con phải của $30$.
@@ -92,8 +92,8 @@ $$12, 26, 19, 33, 40$$
    - Khóa $12$: $12 \pmod 7 = 5 \implies$ ô 5 (trống).
    - Khóa $26$: $26 \pmod 7 = 5 \implies$ xung đột ô 5! Thử $i=1$: $(5+1)\%7 = 6 \implies$ ô 6 (trống). (1 xung đột)
    - Khóa $19$: $19 \pmod 7 = 5 \implies$ xung đột ô 5, thử ô 6 (xung đột), thử ô 0: $(5+2)\%7 = 0 \implies$ ô 0 (trống). (2 xung đột)
-   - Khóa $33$: $33 \pmod 7 = 5 \implies$ xung đột 5, 6, 0; thử ô 1: $(5+3)\%7 = 1 \implies$ ô 1 (trống). (3 xung đột)
-   - Khóa $40$: $40 \pmod 7 = 5 \implies$ xung đột 5, 6, 0, 1; thử ô 2: $(5+4)\%7 = 2 \implies$ ô 2 (trống). (4 xung đột)
+   - Khóa $33$: $33 \pmod 7 = 5 \implies$ xung đột 5, 6, 0. Thử ô 1: $(5+3)\%7 = 1 \implies$ ô 1 (trống). (3 xung đột)
+   - Khóa $40$: $40 \pmod 7 = 5 \implies$ xung đột 5, 6, 0, 1. Thử ô 2: $(5+4)\%7 = 2 \implies$ ô 2 (trống). (4 xung đột)
    - Bảng cuối cùng:
      - Ô 0: 19
      - Ô 1: 33

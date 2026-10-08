@@ -7,7 +7,7 @@ next: false
 
 # Epigraph
 
-Epigraph của f là tập các cặp (x,t) thỏa t≥f(x). Hàm f lồi khi và chỉ khi epigraph của nó là một tập lồi; chính miền phía trên đồ thị được xét, không phải riêng đường đồ thị.
+Epigraph của f là tập các cặp (x,t) thỏa $t\ge f(x)$. Hàm f lồi khi và chỉ khi epigraph của nó là một tập lồi. Nói cách khác, ta xét cả miền phía trên đồ thị thay vì chỉ xét đường đồ thị.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Phép cải dạng epigraph thay $\min_x f(x)$ bằng $\min_{x,t}t$ với $f(x)\
 
 ## Ví dụ
 
-Epigraph của $f(x)=x^2$ là miền t≥x². Điểm (0,1) thuộc epigraph còn (0,−1) thì không.
+Epigraph của $f(x)=x^2$ là miền $t\ge x^{2}$. Điểm (0,1) thuộc epigraph còn $(0,-1)$ thì không.
 
 ## Khi nào cần dùng?
 

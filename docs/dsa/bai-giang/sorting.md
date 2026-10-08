@@ -10,7 +10,7 @@ lessonStatus: ready
 
 Sắp xếp là bài toán kinh điển nhất trong khoa học máy tính: *Cho một danh sách các phần tử, hãy sắp xếp chúng theo thứ tự tăng dần (hoặc giảm dần).*
 
-Trong các đề thi UET, các thuật toán đơn giản $\mathcal{O}(n^2)$ như BubbleSort hay SelectionSort rất hiếm khi hỏi sâu. Trọng tâm 90% sẽ rơi vào hai thuật toán $\mathcal{O}(n \log n)$ mạnh mẽ nhất: **MergeSort** và **QuickSort**.
+Bài này tập trung vào MergeSort và QuickSort, đồng thời đối chiếu chúng với BubbleSort và SelectionSort có độ phức tạp $\mathcal{O}(n^2)$ trong trường hợp xấu nhất. MergeSort có thời gian $\mathcal{O}(n \log n)$, còn QuickSort cần xét cả cách chọn pivot và trường hợp đầu vào.
 
 ---
 

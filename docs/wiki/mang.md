@@ -19,7 +19,7 @@ Mảng nhiều chiều cần shape và strides để biết cách ánh xạ ch�
 
 ## Ví dụ
 
-a = [10, 20, 30], chỉ mục 0 trỏ tới 10; chỉ mục 2 trỏ tới 30.
+Với a = [10, 20, 30], chỉ mục 0 chọn giá trị 10, còn chỉ mục 2 chọn giá trị 30.
 
 ## Khi nào cần dùng?
 

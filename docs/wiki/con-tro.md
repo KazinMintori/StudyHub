@@ -7,7 +7,7 @@ next: false
 
 # Con trỏ & tham chiếu
 
-Con trỏ lưu địa chỉ một vùng dữ liệu; tham chiếu cho phép nhiều tên cùng truy cập một đối tượng. Thay đổi dữ liệu qua một tên có thể được thấy qua tên khác. Sao chép địa chỉ hoặc tham chiếu không đồng nghĩa với sao chép dữ liệu.
+Con trỏ lưu địa chỉ một vùng dữ liệu, còn tham chiếu cho phép nhiều tên cùng truy cập một đối tượng. Vì vậy, thay đổi dữ liệu qua một tên có thể được thấy qua tên khác. Sao chép địa chỉ hoặc tham chiếu không đồng nghĩa với sao chép dữ liệu.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Trong Python hoặc NumPy, tác động dễ thấy hơn là thay đổi dữ li
 
 ## Ví dụ
 
-Trong Python, a = [1]; b = a; b.append(2) làm a trở thành [1, 2].
+Trong Python, a = [1]. B = a. B.append(2) làm a trở thành [1, 2].
 
 ## Khi nào cần dùng?
 

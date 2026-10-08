@@ -7,7 +7,7 @@ next: false
 
 # AdaGrad
 
-AdaGrad cộng dồn bình phương gradient theo từng tọa độ rồi chia bước cập nhật cho căn của tổng đó. Tọa độ đã nhận nhiều gradient lớn sẽ có bước hiệu dụng nhỏ dần; trạng thái không quên các bước cũ.
+AdaGrad cộng dồn bình phương gradient theo từng tọa độ rồi chia bước cập nhật cho căn của tổng đó. Tọa độ đã nhận nhiều gradient lớn sẽ có bước hiệu dụng nhỏ dần vì trạng thái vẫn giữ đóng góp của các bước cũ.
 
 <WikiUsage />
 

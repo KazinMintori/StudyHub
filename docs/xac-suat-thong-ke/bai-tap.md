@@ -52,6 +52,8 @@ Thời gian phản hồi của một máy chủ web là một biến ngẫu nhi�
 2. Tính xác suất để thời gian phản hồi trung bình $\bar{X}$ vượt quá $125$ ms. Cho biết $\Phi(1.67) \approx 0.9525$.
 3. Tính xác suất để tổng thời gian phản hồi của 100 yêu cầu $S_{100} = \sum_{i=1}^{100} X_i$ nằm trong khoảng từ $11400$ ms đến $12600$ ms. Cho biết $\Phi(2.0) \approx 0.9772$.
 
+Ký hiệu tổng ở câu 3 nghĩa là $S_{100}=X_1+X_2+\cdots+X_{100}$. Chỉ số $i$ chọn từng yêu cầu, từ 1 đến 100.
+
 #### Lời giải gợi ý
 1. Theo Định lý giới hạn trung tâm (CLT), với kích thước mẫu lớn $n = 100 \ge 30$, biến ngẫu nhiên trung bình mẫu $\bar{X}$ xấp xỉ phân phối chuẩn:
    $$\bar{X} \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right) = \mathcal{N}\left(120, \frac{30^2}{100}\right) = \mathcal{N}(120, 9)$$
@@ -78,6 +80,8 @@ $$f(x; \lambda) = \lambda e^{-\lambda x}, \quad x \ge 0$$
 
 #### Lời giải gợi ý
 1. Hàm hợp lý (Likelihood Function):
+   Vì các quan sát độc lập, ta nhân mật độ của từng quan sát: $L(\lambda)=f(x_1;\lambda)f(x_2;\lambda)\cdots f(x_n;\lambda)$. Ký hiệu $\prod_{i=1}^n$ viết gọn phép nhân này, với $i$ chạy qua $n$ quan sát. Còn $\sum_{i=1}^n x_i=x_1+\cdots+x_n$ cộng các giá trị quan sát.
+
    $$L(\lambda) = \prod_{i=1}^n f(x_i; \lambda) = \prod_{i=1}^n (\lambda e^{-\lambda x_i}) = \lambda^n e^{-\lambda \sum_{i=1}^n x_i}$$
    Hàm log-hợp lý (Log-Likelihood):
    $$\ell(\lambda) = \ln L(\lambda) = n \ln \lambda - \lambda \sum_{i=1}^n x_i$$

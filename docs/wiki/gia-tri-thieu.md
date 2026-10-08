@@ -7,7 +7,7 @@ next: false
 
 # Giá trị thiếu
 
-Giá trị thiếu biểu thị thông tin chưa được biết hoặc không có; nó khác số 0 hay chuỗi rỗng có ý nghĩa. Trong tính toán số, NaN thường đại diện giá trị không xác định. Không kiểm tra NaN bằng phép so sánh bằng thông thường; dùng isna/isnan thích hợp.
+Giá trị thiếu biểu thị thông tin chưa được biết hoặc không có. Nó khác số 0 hay chuỗi rỗng có ý nghĩa. Trong tính toán số, NaN thường đại diện giá trị không xác định. Thay vì so sánh NaN bằng phép bằng thông thường, hãy dùng isna/isnan phù hợp.
 
 <WikiUsage />
 

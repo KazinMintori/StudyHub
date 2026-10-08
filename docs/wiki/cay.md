@@ -7,7 +7,7 @@ next: false
 
 # Cây
 
-Cây là đồ thị liên thông không có chu trình trong dạng vô hướng. Khi chọn một gốc, mỗi nút khác gốc có một nút cha; nút không có con gọi là lá. Độ sâu là số cạnh từ gốc tới nút. Cây nhị phân có tối đa hai con ở mỗi nút.
+Cây là đồ thị liên thông không có chu trình trong dạng vô hướng. Khi chọn một gốc, mỗi nút khác gốc có một nút cha, còn nút không có con được gọi là lá. Độ sâu là số cạnh từ gốc tới nút. Cây nhị phân có tối đa hai con ở mỗi nút.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Cây nhị phân thông thường không bắt buộc có quy tắc tìm kiếm.
 
 ## Ví dụ
 
-Gốc A có hai con B, C; B có con D. D là lá và có độ sâu 2.
+Gốc A có hai con là B và C. Trong đó, B có thêm con D, nên D là lá ở độ sâu 2.
 
 ## Khi nào cần dùng?
 

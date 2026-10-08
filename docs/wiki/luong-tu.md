@@ -7,19 +7,19 @@ next: false
 
 # Vị từ & lượng từ
 
-Vị từ P(x) là phát biểu có biến; khi gán x ta mới biết đúng hay sai. ∀x P(x) nói rằng P đúng với mọi x trong miền xét. ∃x P(x) nói rằng có ít nhất một x thỏa P. Phủ định đổi ∀ thành ∃ và phủ định mệnh đề bên trong, hoặc ngược lại.
+Vị từ P(x) là phát biểu có biến, vì vậy phải gán giá trị cho x mới xác định được phát biểu đúng hay sai. $\forall x P(x)$ nói rằng P đúng với mọi x trong miền xét, còn $\exists x P(x)$ nói rằng có ít nhất một x thỏa P. Khi phủ định, ta đổi $\forall$ thành $\exists$ và phủ định mệnh đề bên trong, hoặc làm ngược lại.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Thứ tự lượng từ có thể đổi ý nghĩa.** ∀x∃y P(x,y) cho phép chọn y khác nhau theo từng x. ∃y∀x P(x,y) yêu cầu một y duy nhất dùng được cho mọi x.
+**Thứ tự lượng từ có thể đổi ý nghĩa.** $\forall x\exists y P(x,y)$ cho phép chọn y khác nhau theo từng x. $\exists y\forall x P(x,y)$ yêu cầu một y duy nhất dùng được cho mọi x.
 
 Ví dụ “mọi sinh viên có một người hướng dẫn” không đồng nghĩa “có một người hướng dẫn tất cả sinh viên”. Khi phủ định lượng từ, đổi loại lượng từ và phủ định vị từ bên trong.
 
 ## Ví dụ
 
-Trong số nguyên, ∃x: x² = 4 đúng vì x = 2 hoặc −2. ∀x: x² = 4 sai.
+Trong số nguyên, $\exists x$: $x^{2} = 4$ đúng vì $x = 2$ hoặc −2. $\forall x$: $x^{2} = 4$ sai.
 
 ## Khi nào cần dùng?
 

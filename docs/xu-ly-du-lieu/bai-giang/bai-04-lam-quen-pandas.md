@@ -291,10 +291,10 @@ reviews_per_month       3291
 price                    846
 ```
 
-`neighbourhood_group` trống **100%** (`18534/18534`) — cột này **không cung cấp thông tin gì** trong snapshot hiện tại. Các ô `NaN` ở đây chính là những ô trống của NumPy đã gặp ở Bài 3.
+`neighbourhood_group` trống **100%** (`18534/18534`) — cột này **không cung cấp thông tin gì** trong snapshot hiện tại. Các ô `NaN` ở đây biểu diễn những giá trị thiếu của NumPy đã gặp ở Bài 3.
 
 ::: warning Quan trọng: đo ≠ xử lý
-`dropna()` (bỏ dòng thiếu) và `fillna(x)` (điền giá trị thay thế) đều là **quyết định phân tích**, không phải thao tác kỹ thuật đơn thuần: 846 phòng không có giá — bỏ hay giữ tuỳ thuộc *câu hỏi bạn đang trả lời*. Bài này chỉ dừng ở việc **biết đo** mức thiếu; toàn bộ cách xử lý dành cho Bài 10.
+`dropna()` (bỏ dòng thiếu) và `fillna(x)` (điền giá trị thay thế) đều là **quyết định phân tích**, không phải thao tác kỹ thuật đơn thuần: 846 phòng không có giá — bỏ hay giữ tuỳ thuộc *câu hỏi bạn đang trả lời*. Bài này chỉ dừng ở việc **biết đo** mức thiếu. Toàn bộ cách xử lý dành cho Bài 10.
 :::
 
 ### 5.2 Ghi kết quả ra file
@@ -324,7 +324,7 @@ Khi ghi `DataFrame` ra CSV mà index chỉ là số thứ tự mặc định (0,
 
 ## Tổng kết
 
-- `DataFrame` = các `Series` dùng chung một index; phần lớn thao tác NumPy (vector hoá, mặt nạ bool, `axis`) vẫn áp dụng được trực tiếp trên từng cột.
+- `DataFrame` = các `Series` dùng chung một index. Phần lớn thao tác NumPy (vector hoá, mặt nạ bool, `axis`) vẫn áp dụng được trực tiếp trên từng cột.
 - Thói quen 5 bước bắt buộc với dataset lạ: `shape → head → info → describe → value_counts` — làm **trước** khi phân tích, đặc biệt khi dùng code do AI viết.
 - Lọc bằng mặt nạ bool, `loc[hàng, cột]`, và tạo cột mới bằng công thức vector hoá là ba thao tác nền tảng dùng lại liên tục trong suốt môn học.
 - `isna().sum()` giúp **đo** mức thiếu — quyết định **xử lý thế nào** (`dropna`/`fillna`) để dành cho Bài 10.
@@ -332,9 +332,9 @@ Khi ghi `DataFrame` ra CSV mà index chỉ là số thứ tự mặc định (0,
 ##  Mẹo thi & bẫy thường gặp
 
 ::: warning Câu hỏi hay đánh lừa
-- **`df["name", "price"]`** → lỗi `KeyError`, thiếu một lớp ngoặc; phải viết `df[["name", "price"]]`.
+- **`df["name", "price"]`** → lỗi `KeyError`, thiếu một lớp ngoặc. Phải viết `df[["name", "price"]]`.
 - **"`describe()` cho thấy `mean` cao hơn `median` nghĩa là dữ liệu bị lỗi"** → không hẳn: đây là dấu hiệu **phân phối lệch** (có thể do outlier thật hoặc lỗi nhập liệu), cần kiểm tra thêm bằng `nlargest`, chưa thể kết luận ngay là lỗi.
-- **"`loc` và `iloc` luôn cho cùng kết quả"** → chỉ đúng khi index là dãy số 0,1,2,… liên tục; sai ngay khi `set_index()` bằng cột khác (xem Bài 5).
+- **"`loc` và `iloc` luôn cho cùng kết quả"** → chỉ đúng khi index là dãy số 0,1,2,… liên tục. Sai ngay khi `set_index()` bằng cột khác (xem Bài 5).
 - **"Cột thiếu 100% dữ liệu là lỗi khi đọc file"** → không nhất thiết, có thể snapshot đó thực sự không có thông tin (như `neighbourhood_group`) — cần xác nhận bằng nguồn dữ liệu gốc.
 - **Quên `index=False` khi `to_csv`** → sinh ra cột thừa `"Unnamed: 0"` ở lần đọc lại sau.
 :::
@@ -348,6 +348,6 @@ Khi ghi `DataFrame` ra CSV mà index chỉ là số thứ tự mặc định (0,
 
 ::: info  Làm việc với AI thì sao?
 **AI làm tốt:** chuyển câu hỏi tiếng Việt thành chuỗi thao tác pandas hợp lý (ví dụ "median giá theo quận, chỉ nguyên căn").
-**AI hay sai:** bỏ qua 846 ô giá trống mà không nêu rõ; dùng `mean` khi phân phối lệch phù hợp hơn với `median`; dùng tên cột không tồn tại trong **đúng bộ dữ liệu của bạn** (AI có thể nhớ nhầm tên cột từ một bộ Airbnb khác).
-**Kiểm chứng bằng cách nào:** chạy thói quen 5 bước **trước**, để biết chắc cột nào có thật và thiếu bao nhiêu — rồi mới đối chiếu với code AI đưa ra; với một con số AI tính ra, tự tính lại bằng cách khác (lọc trực tiếp + `describe`) để so sánh.
+**AI hay sai:** bỏ qua 846 ô giá trống mà không nêu rõ. Dùng `mean` khi phân phối lệch phù hợp hơn với `median`. Dùng tên cột không tồn tại trong **đúng bộ dữ liệu của bạn** (AI có thể nhớ nhầm tên cột từ một bộ Airbnb khác).
+**Kiểm chứng bằng cách nào:** chạy thói quen 5 bước **trước**, để biết chắc cột nào có thật và thiếu bao nhiêu — rồi mới đối chiếu với code AI đưa ra. Với một con số AI tính ra, tự tính lại bằng cách khác (lọc trực tiếp + `describe`) để so sánh.
 :::

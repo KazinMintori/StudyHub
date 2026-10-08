@@ -16,8 +16,8 @@ python materials/lec-03/code/pagerank.py --variant base --beta 0.8 --tol 1e-8 --
 
 Kết quả kỳ vọng:
 - Đạt hội tụ sau 20 vòng lặp.
-- $r_A \approx 0.32142857$ ($9/28$).
-- $r_B = r_C = r_D \approx 0.22619048$ ($19/84$).
+- $r_A \approx 0.32142857$ ($\frac{9}{28}$).
+- $r_B = r_C = r_D \approx 0.22619048$ ($\frac{19}{84}$).
 - Tổng điểm $\sum r_i = 1.0$.
 
 ### Chạy biến thể Nút cụt (Dead End: xóa cạnh C → A)
@@ -34,4 +34,4 @@ Kết quả: Hội tụ sau 12 vòng, điểm nút cụt C được bù đều l
 python materials/lec-03/code/pagerank.py --variant trap --beta 0.8 --tol 1e-8 --max-iter 100
 ```
 
-Kết quả: Hội tụ sau 34 vòng; nút C hút nhiều điểm nhất ($r_C \approx 0.642$), nhưng nhờ xác suất dịch chuyển tức thời $1-\beta = 0.2$, các nút A, B, D vẫn giữ được điểm khác 0.
+Kết quả: Hội tụ sau 34 vòng. Nút C hút nhiều điểm nhất ($r_C \approx 0.642$), nhưng nhờ xác suất dịch chuyển tức thời $1-\beta = 0.2$, các nút A, B, D vẫn giữ được điểm khác 0.

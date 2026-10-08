@@ -61,7 +61,7 @@ Giá TB: 1,834,568 đ — tỷ lệ phòng trống: 7.3%
 | Sau | `1075000.0` | = (1.200.000 + 950.000) ÷ 2 |
 
 ::: danger Phân biệt bắt buộc: `None` ≠ `0` ≠ `""`
-`None` nghĩa là **"không biết/chưa có giá trị"**; `0` là một số thực; `""` là một chuỗi rỗng — cả ba đều là giá trị hợp lệ nhưng mang ý nghĩa hoàn toàn khác nhau. Nếu bạn code `gia = gia or 0` để "xử lý dữ liệu thiếu", bạn đã **âm thầm biến "không biết" thành "miễn phí"**. Toàn bộ Bài 10 (xử lý giá trị thiếu) sẽ xây dựng trên đúng tính chất này.
+`None` nghĩa là **"không biết/chưa có giá trị"**. `0` là một số thực. `""` là một chuỗi rỗng — cả ba đều là giá trị hợp lệ nhưng mang ý nghĩa hoàn toàn khác nhau. Nếu bạn code `gia = gia or 0` để "xử lý dữ liệu thiếu", bạn đã **âm thầm biến "không biết" thành "miễn phí"**. Toàn bộ Bài 10 (xử lý giá trị thiếu) sẽ xây dựng trên đúng tính chất này.
 :::
 
 ### 1.3 `list`: dãy có thứ tự — slicing (cắt lát)
@@ -105,7 +105,7 @@ phong.get("diem", "chưa có")      # .get() có "phương án B" khi khoá khô
 ```
 
 ::: info Bảng dữ liệu trong Python thuần
-Một bảng có thể biểu diễn bằng **list các dict** — mỗi dict là một dòng. Đây là cách hình dung "tự nhiên" của một `DataFrame` trước khi học pandas ở Bài 4; nhìn theo hướng này giúp việc học `DataFrame` sau này bớt trừu tượng hơn.
+Một bảng có thể biểu diễn bằng **list các dict** — mỗi dict là một dòng. Đây là cách hình dung "tự nhiên" của một `DataFrame` trước khi học pandas ở Bài 4. Nhìn theo hướng này giúp việc học `DataFrame` sau này bớt trừu tượng hơn.
 :::
 
 ### 1.5 `set`: khử trùng lặp và so khớp cực nhanh
@@ -226,7 +226,7 @@ print(goc)              # goc cũng bị đổi theo, dù ta chỉ động vào 
 ### 2.5 Khi nào dừng viết `for`?
 
 ::: warning Tín hiệu cần dừng lại và tự hỏi
-Trong môn học này, cứ thấy mình viết `for` chạy qua **từng dòng dữ liệu số, hàng nghìn dòng trở lên**, hãy dừng lại và hỏi: *"Có công cụ thao tác cả-dãy nào (NumPy/pandas) làm được việc này không?"* Đề thi hay cho một đoạn code dùng `for` để cộng dồn một cột số hàng chục nghìn dòng và hỏi "cách nào tối ưu hơn" — câu trả lời luôn là vector hoá, không phải tối ưu vòng lặp.
+Khi viết `for` để xử lý từng dòng của một cột dữ liệu số, hãy kiểm tra xem NumPy hoặc pandas có thao tác trên cả dãy hay không. Với công việc như cộng một cột, thao tác có sẵn giúp biểu đạt trực tiếp điều cần tính. Tuy nhiên, vẫn phải xét kiểu dữ liệu, bộ nhớ và kết quả thực tế trước khi kết luận cách nào phù hợp hơn.
 :::
 
 ## 3. Hàm — đơn vị nhỏ nhất của một pipeline
@@ -272,7 +272,7 @@ list(map(clean_price, gia_tho))    # map: áp dụng MỘT hàm lên TỪNG ph�
 ### 3.2 Ba tiêu chuẩn của một hàm tốt trong pipeline dữ liệu
 
 1. **Chỉ làm một việc** — thể hiện ngay trong tên hàm (`clean_price`, không đặt tên mơ hồ như `xu_ly`).
-2. **Đoán được (predictable)** — cùng đầu vào luôn cho cùng đầu ra; không âm thầm sửa biến ở ngoài phạm vi hàm.
+2. **Đoán được (predictable)** — cùng đầu vào luôn cho cùng đầu ra. Không âm thầm sửa biến ở ngoài phạm vi hàm.
 3. **Chịu được dữ liệu bẩn** — phải nói rõ đầu vào không hợp lệ sẽ trả về gì: `None`, hay chủ động phát sinh lỗi (`raise`).
 
 Một docstring một dòng cộng với gợi ý kiểu dữ liệu nhẹ nhàng (`def clean_price(s) -> float | None:`) thường là đủ cho quy mô bài tập môn này.
@@ -286,7 +286,7 @@ float("N/A")
 ValueError: could not convert string to float: 'N/A'
 ```
 
-::: danger Bẫy nghiêm trọng nhất trong toàn bộ Bài 2 — cũng là bẫy AI hay mắc nhất
+::: danger Kiểm tra trước khi dùng code xử lý dữ liệu
 ```python
 #  SAI — che giấu MỌI loại lỗi, kể cả lỗi lập trình (gõ sai tên biến, sai kiểu tham số…)
 try:
@@ -303,7 +303,7 @@ Viết `except Exception: pass` khiến chương trình **không bao giờ báo 
 sorted(phong, key=lambda p: p["gia"], reverse=True)[0]   # lambda: hàm ẩn danh, dùng 1 lần
 ```
 
-`lambda` chỉ nên gói gọn trong **một dòng**; logic dài hơn nên viết hàm có tên bằng `def` để dễ đọc, dễ kiểm thử. Mẫu "truyền hàm vào hàm khác" (`map(clean_price, ...)`) sẽ xuất hiện lại nguyên vẹn ở Bài 5 dưới dạng `df["price"].map(clean_price)`.
+`lambda` chỉ nên gói gọn trong **một dòng**. Logic dài hơn nên viết hàm có tên bằng `def` để dễ đọc, dễ kiểm thử. Mẫu "truyền hàm vào hàm khác" (`map(clean_price, ...)`) sẽ xuất hiện lại nguyên vẹn ở Bài 5 dưới dạng `df["price"].map(clean_price)`.
 
 ::: info Vì sao code xử lý dữ liệu có nhiều dấu chấm `.`?
 Mọi giá trị trong Python là một **đối tượng**, luôn mang theo sẵn các phương thức của nó (`"abc".upper()`, `[1,2].append(3)`). Hãy tập đọc `df.groupby("city").mean()` như một **chuỗi lời gọi phương thức nối tiếp nhau**, mỗi dấu chấm là một bước biến đổi — chứ không phải một cú pháp "kỳ lạ" cần học thuộc lòng riêng lẻ.
@@ -335,7 +335,7 @@ rows[0]
 ```
 
 ::: warning Quan sát quan trọng
-**Mọi giá trị đọc từ CSV đều là chuỗi (`str`)** — kể cả `id` (một con số) cũng thành `'52811'`. Định dạng CSV **không lưu kiểu dữ liệu**; chương trình đọc phải tự chuyển kiểu bằng tay. Từ Bài 4, `pandas.read_csv()` sẽ tự động *suy luận* kiểu dữ liệu cho bạn — tiện lợi hơn hẳn, nhưng cũng chính vì suy luận tự động nên đôi khi sẽ **suy luận sai** (ví dụ đọc nhầm mã bưu điện `"07012"` thành số nguyên `7012`, mất số 0 đứng đầu).
+**Mọi giá trị đọc từ CSV đều là chuỗi (`str`)** — kể cả `id` (một con số) cũng thành `'52811'`. Định dạng CSV **không lưu kiểu dữ liệu**. Chương trình đọc phải tự chuyển kiểu bằng tay. Từ Bài 4, `pandas.read_csv()` sẽ tự động *suy luận* kiểu dữ liệu cho bạn — tiện lợi hơn hẳn, nhưng cũng chính vì suy luận tự động nên đôi khi sẽ **suy luận sai** (ví dụ đọc nhầm mã bưu điện `"07012"` thành số nguyên `7012`, mất số 0 đứng đầu).
 :::
 
 ### 4.3 JSON: định dạng trao đổi giữa các chương trình
@@ -388,15 +388,15 @@ Cấu trúc thư mục kiểu `data/raw/<thanh_pho>/` — quy ước này sẽ �
 
 ## Tổng kết
 
-- `None` là dữ liệu **thiếu**, khác `0` và `""`; `list`/`dict`/`set`/`tuple` — mỗi cấu trúc phục vụ một mục đích riêng biệt, chọn đúng ngay từ đầu giúp code ngắn và ít lỗi.
+- `None` là dữ liệu **thiếu**, khác `0` và `""`. `list`/`dict`/`set`/`tuple` — mỗi cấu trúc phục vụ một mục đích riêng biệt, chọn đúng ngay từ đầu giúp code ngắn và ít lỗi.
 - Comprehension = tư duy "biến đổi cả dãy" — chưa nhanh bằng NumPy nhưng là bước đệm tư duy bắt buộc trước khi học vector hoá thật sự ở Bài 3.
 - Một pipeline dữ liệu tốt = chuỗi các **hàm nhỏ, chịu được dữ liệu bẩn**, dùng `try/except` bắt đúng loại lỗi thay vì nuốt mọi lỗi.
-- Đọc/ghi file: luôn `with` + `encoding="utf-8"`; CSV **không** mang theo kiểu dữ liệu (mọi thứ đều là chuỗi), JSON thì tương ứng gần như trực tiếp với `dict`/`list`.
+- Đọc/ghi file: luôn `with` + `encoding="utf-8"`. CSV **không** mang theo kiểu dữ liệu (mọi thứ đều là chuỗi), JSON thì tương ứng gần như trực tiếp với `dict`/`list`.
 
 ##  Mẹo thi & bẫy thường gặp
 
 ::: warning Câu hỏi hay xuất hiện trong đề
-- **"`b = a.copy()` và `b = a` cho kết quả giống nhau nếu sau đó không sửa gì"** → Đúng về mặt giá trị ban đầu, nhưng **SAI về bản chất**: `b = a` khiến `a` và `b` cùng trỏ một vùng nhớ; chỉ cần sửa `b` ở bất kỳ đâu sau đó, `a` cũng đổi theo. Đề thi hay cho code sửa `b` rồi hỏi giá trị của `a`.
+- **"`b = a.copy()` và `b = a` cho kết quả giống nhau nếu sau đó không sửa gì"** → Đúng về mặt giá trị ban đầu, nhưng **SAI về bản chất**: `b = a` khiến `a` và `b` cùng trỏ một vùng nhớ. Chỉ cần sửa `b` ở bất kỳ đâu sau đó, `a` cũng đổi theo. Đề thi hay cho code sửa `b` rồi hỏi giá trị của `a`.
 - **"CSV lưu số thì đọc ra sẽ là số"** → SAI, `csv.DictReader` luôn trả về **chuỗi** cho mọi cột, kể cả cột toàn số.
 - **"`except Exception: pass` là cách an toàn để code không bao giờ crash"** → SAI, đây là bẫy nguy hiểm nhất bài — nó che giấu cả lỗi logic, khiến pipeline âm thầm sai mà không báo động.
 - **Dry-run vòng lặp `for` với điều kiện lồng nhau**: đề hay cho một vòng `for` + `if` + `append` và yêu cầu viết ra list kết quả cuối — cách chắc ăn nhất là kẻ bảng dry-run như mục 2.1 ở trên, đừng tính nhẩm.
@@ -412,6 +412,6 @@ Cấu trúc thư mục kiểu `data/raw/<thanh_pho>/` — quy ước này sẽ �
 
 ::: info  Làm việc với AI thì sao?
 **AI làm tốt:** tạo nhanh các hàm tiện ích cho thao tác chuẩn (như `clean_price`).
-**AI hay sai:** có xu hướng dùng `except Exception: pass` để code "chạy được bằng mọi giá"; hay quên `encoding="utf-8"`; code đúng với đúng ví dụ bạn đưa ra nhưng sai với các ca biên (giá âm, chuỗi rỗng, `None`).
+**AI hay sai:** có xu hướng dùng `except Exception: pass` để code "chạy được bằng mọi giá". Hay quên `encoding="utf-8"`. Code đúng với đúng ví dụ bạn đưa ra nhưng sai với các ca biên (giá âm, chuỗi rỗng, `None`).
 **Kiểm chứng bằng cách nào:** đưa hàm AI viết qua một **bộ ca thử tự nghĩ ra**: giá trị bình thường, rỗng, `None`, âm, sai định dạng — rồi yêu cầu chính AI liệt kê thêm các đầu vào có thể làm hàm sai, và tự tay kiểm tra từng trường hợp đó.
 :::

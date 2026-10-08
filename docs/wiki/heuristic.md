@@ -7,13 +7,13 @@ next: false
 
 # Heuristic
 
-Heuristic h(n) ước lượng chi phí từ trạng thái n đến đích. Nó giúp ưu tiên hướng tìm kiếm có triển vọng. Một ước lượng admissible không vượt chi phí tối ưu thực sự còn lại; consistent còn thỏa h(n) ≤ c(n,n′) + h(n′) trên mỗi cạnh.
+Heuristic h(n) ước lượng chi phí từ trạng thái n đến đích. Nó giúp ưu tiên hướng tìm kiếm có triển vọng. Một ước lượng admissible không vượt chi phí tối ưu thực sự còn lại. Consistent còn thỏa $h(n) \le  c(n,n') + h(n')$ trên mỗi cạnh.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Điều kiện tối ưu của A*.** Với h(goal)=0, admissible yêu cầu h không vượt chi phí tối ưu còn lại. Consistent yêu cầu h(n)≤c(n,n′)+h(n′) cho mỗi cạnh. Consistency giúp f không giảm dọc đường đi và cho phép đóng trạng thái thuận lợi hơn trong graph search.
+**Điều kiện tối ưu của A*.** Với h(goal)=0, admissible yêu cầu h không vượt chi phí tối ưu còn lại. Consistent yêu cầu $h(n)\le c(n,n')+h(n')$ cho mỗi cạnh. Consistency giúp f không giảm dọc đường đi và cho phép đóng trạng thái thuận lợi hơn trong graph search.
 
 Nếu chỉ có admissibility, một số cách cài đặt graph search phải cho phép mở lại trạng thái để giữ bảo đảm tối ưu. Một heuristic nhanh nhưng ước lượng quá cao có thể làm mất bảo đảm đó.
 
@@ -23,7 +23,7 @@ Khoảng cách đường chim bay không vượt độ dài đường bộ nếu
 
 ## Khi nào cần dùng?
 
-Phân biệt tìm kiếm mù với Greedy và A*; đọc điều kiện tối ưu.
+Phân biệt tìm kiếm mù với Greedy và A*. Đọc điều kiện tối ưu.
 
 ## Tự kiểm tra
 

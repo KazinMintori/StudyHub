@@ -45,7 +45,7 @@ Luôn đọc [repo-format.md](references/repo-format.md) trước khi chạm và
 | Lập kế hoạch bài, chia cụm, chọn ví dụ, câu hỏi | [pedagogy.md](references/pedagogy.md) |
 | Dựng khung Notes, chọn container, tránh lỗi đã gặp trên site | [lecture-blueprint.md](references/lecture-blueprint.md) |
 | Soạn từng đơn vị nội dung (định nghĩa, định lý, suy diễn, thuật toán, thực nghiệm, diễn giải, luyện tập) | [content-prompts.md](references/content-prompts.md) |
-| Viết và biên tập tiếng Việt | [professor-voice.md](references/professor-voice.md), [writing-vi.md](references/writing-vi.md) |
+| Viết và biên tập tiếng Việt | [professor-voice.md](references/professor-voice.md), [writing-vi.md](references/writing-vi.md), [tu-noi-va-dien-dat.md](references/tu-noi-va-dien-dat.md) |
 | Nguồn tiếng Anh, chọn thuật ngữ | [translation-vi.md](references/translation-vi.md), tra [terminology-memory.json](references/terminology-memory.json) |
 | Thiết kế hình SVG/Mermaid/minh họa chạy được | [visuals.md](references/visuals.md) |
 | Viết lời giải, phản hồi, tự rà như người mới | [teaching-review.md](references/teaching-review.md) |

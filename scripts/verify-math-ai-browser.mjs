@@ -7,6 +7,7 @@ import { lectureConceptIds } from '../docs/.vitepress/lecture-model.mjs'
 const base=process.env.QA_URL||'http://127.0.0.1:5174'
 const browser=await puppeteer.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})})
 const page=await browser.newPage(),errors=[],results=[],failedResources=[]
+await page.evaluateOnNewDocument(() => sessionStorage.setItem('studyhub_welcome_seen', '1'))
 await page.setCacheEnabled(false)
 page.on('pageerror',e=>errors.push(e.message))
 page.on('response',response=>{if(response.status()>=400&&response.url().startsWith(base)&&/\.(js|css|woff2?)(?:\?|$)/.test(response.url()))failedResources.push({url:response.url(),status:response.status()})})

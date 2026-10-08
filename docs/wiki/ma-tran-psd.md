@@ -7,7 +7,7 @@ next: false
 
 # Ma trận nửa xác định dương
 
-Ma trận đối xứng thực P là nửa xác định dương (PSD), viết P⪰0, nếu vᵀPv≥0 với mọi vector v. P dương xác định (PD) nếu vᵀPv>0 với mọi v khác 0. Dấu từng phần tử không quyết định PSD.
+Ma trận đối xứng thực P là nửa xác định dương (PSD), viết $P\succeq 0$, nếu $v^{T}Pv\ge 0$ với mọi vector v. P dương xác định (PD) nếu $v^{T}Pv>0$ với mọi v khác 0. Dấu từng phần tử không quyết định PSD.
 
 <WikiUsage />
 
@@ -27,7 +27,7 @@ không PSD: với $v=(1,-1)^T$, ta được $v^TPv=-2$. Ngược lại, $A^TA$ l
 
 ## Khi nào cần dùng?
 
-Kiểm Hessian và ràng buộc ma trận; nhận biết khi nào hệ Newton có hướng giảm.
+Kiểm Hessian và ràng buộc ma trận. Nhận biết khi nào hệ Newton có hướng giảm.
 
 ## Tự kiểm tra
 
@@ -35,7 +35,7 @@ Ma trận diag(1,0) là PSD hay PD?
 
 <details><summary>Xem đáp án</summary>
 
-PSD, không PD: với v=(0,1) khác 0, dạng toàn phương bằng 0.
+PSD, không PD: với $v=(0,1)$ khác 0, dạng toàn phương bằng 0.
 
 </details>
 

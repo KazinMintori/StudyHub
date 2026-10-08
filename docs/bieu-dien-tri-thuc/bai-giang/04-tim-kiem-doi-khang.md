@@ -19,7 +19,7 @@ lessonStatus: ready
 ## 4.1 Minimax
 
 ::: tip Ẩn dụ
-Hai người chơi cờ ca-rô: bạn (MAX) luôn muốn điểm số cao nhất có thể; đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
+Hai người chơi cờ ca-rô: bạn (MAX) luôn muốn điểm số cao nhất có thể, còn đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
 :::
 
 $$
@@ -62,8 +62,8 @@ flowchart TD
 ```
 
 **Tính ngược từ đáy lên:**
-- $C_1=\max(3,5)=5$; $\ C_2=\max(6,9)=9$; $\ B_1=\min(5,9)=5$
-- $C_3=\max(1,2)=2$; $\ C_4=\max(0,-1)=0$; $\ B_2=\min(2,0)=0$
+- $C_1=\max(3,5)=5$ và $\ C_2=\max(6,9)=9$. $\ B_1=\min(5,9)=5$
+- $C_3=\max(1,2)=2$ và $\ C_4=\max(0,-1)=0$. $\ B_2=\min(2,0)=0$
 - $\text{Gốc}=\max(B_1,B_2)=\max(5,0)=\mathbf{5}$ → chọn nhánh **B1**
 
 ### Code C++
@@ -93,7 +93,7 @@ int minimax(GameNode* node, bool maximizingPlayer) {
 ```
 
 ::: warning Độ phức tạp
-Giống hệt DFS: thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Đây chính là động lực cho Alpha–Beta và hàm lượng giá cắt sâu.
+Giống hệt DFS: thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Vì vậy, ta cần Alpha–Beta và hàm đánh giá khi giới hạn độ sâu.
 :::
 
 ## 4.2 Cắt tỉa Alpha–Beta (Alpha–Beta Pruning)
@@ -147,20 +147,20 @@ flowchart TD
 |---|---|---|---|---|
 | 1 | Root (MAX) | $(-\infty,+\infty)$ | gọi B1 | mở rộng |
 | 2 | B1 (MIN) | $(-\infty,+\infty)$ | gọi C1 | mở rộng |
-| 3 | C1 (MAX) | $(-\infty,+\infty)$ | lá 3 → $v{=}3$; lá 5 → $v{=}5$ | C1 trả về **5** |
+| 3 | C1 (MAX) | $(-\infty,+\infty)$ | lá 3 → $v{=}3$, lá 5 → $v{=}5$ | C1 trả về **5** |
 | 4 | B1 | — | nhận C1=5 → $\beta \leftarrow \min(\infty,5)=5$ | gọi C2 với $(-\infty, 5)$ |
-| 5 | C2 (MAX) | $(-\infty, 5)$ | lá 6 → $v{=}6 \ge \beta(5)$ | ** CẮT** — bỏ qua lá 9; C2 trả về 6 |
+| 5 | C2 (MAX) | $(-\infty, 5)$ | lá 6 → $v{=}6 \ge \beta(5)$ | ** CẮT** — bỏ qua lá 9, C2 trả về 6 |
 | 6 | B1 | — | nhận C2=6 → $\min(5,6)=5$ | B1 trả về **5** |
 | 7 | Root | — | nhận B1=5 → $\alpha \leftarrow \max(-\infty,5)=5$ | gọi B2 với $(5,+\infty)$ |
 | 8 | B2 (MIN) | $(5,+\infty)$ | gọi C3 | mở rộng |
-| 9 | C3 (MAX) | $(5,+\infty)$ | lá 1 → $v{=}1$; lá 2 → $v{=}2$ (không vượt $\beta$) | C3 trả về **2** |
-| 10 | B2 | — | nhận C3=2 → $v{=}2 \le \alpha(5)$ | ** CẮT** — bỏ qua toàn bộ C4 (2 lá); B2 trả về 2 |
+| 9 | C3 (MAX) | $(5,+\infty)$ | lá 1 → $v{=}1$, lá 2 → $v{=}2$ (không vượt $\beta$) | C3 trả về **2** |
+| 10 | B2 | — | nhận C3=2 → $v{=}2 \le \alpha(5)$ | ** CẮT** — bỏ qua toàn bộ C4 (2 lá), B2 trả về 2 |
 | 11 | Root | — | nhận B2=2 → $\max(5,2)=5$ | **Root = 5, chọn nhánh B1** |
 
-→ Kết quả **giống hệt Minimax đầy đủ (giá trị gốc = 5)**, nhưng chỉ cần thăm **5/8** lá.
+→ Kết quả **giống hệt Minimax đầy đủ (giá trị gốc = 5)**, nhưng chỉ cần thăm **$\frac{5}{8}$** lá.
 
 ::: danger Bẫy thi #1 — "Alpha-Beta cho kết quả khác Minimax"
-**Sai.** Alpha–Beta **không bao giờ** đổi giá trị minimax của gốc — nó chỉ bỏ qua những phần chắc chắn thừa. Nhưng đề hay hỏi xoáy: *giá trị của các nút bị cắt/nút trung gian có thể không chính xác* (chỉ là cận trên/cận dưới, ví dụ C2 chỉ biết "$\ge 6$" chứ không biết chính xác 9), nên **không được dùng giá trị của nút con bị cắt tỉa để so sánh hay suy luận thêm**.
+**Sai.** Alpha–Beta giữ nguyên giá trị minimax của gốc vì chỉ bỏ qua các nhánh không thể thay đổi lựa chọn của tổ tiên. Tuy nhiên, giá trị trả về từ một nút đã bị cắt tỉa có thể chỉ là cận. Chẳng hạn, tại C2 ta biết giá trị $\ge 6$ nhưng chưa biết chính xác là 9. Khi dùng kết quả ở nút trung gian, phải phân biệt cận với giá trị đã tính đủ.
 :::
 
 ### Thứ tự duyệt quyết định hiệu quả cắt tỉa
@@ -174,7 +174,7 @@ $$
 tức hệ số nhánh hiệu dụng chỉ còn $\sqrt{b}$ — với cờ vua $b\approx35$ giảm còn $\approx6$: cùng thời gian, Alpha–Beta với thứ tự duyệt tốt tìm sâu **gấp đôi** Minimax thường.
 
 ::: tip Mẹo thi
-Câu hỏi "cho cây X, hãy chỉ ra các nút bị cắt tỉa" — luôn duyệt **trái sang phải, từ trên xuống** (DFS tiền tự), cập nhật $\alpha$ ở nút MAX, cập nhật $\beta$ ở nút MIN, và chỉ cắt khi giá trị hiện tại của nút **vi phạm** cận đã nhận từ tổ tiên ($v\ge\beta$ ở nút MAX, $v\le\alpha$ ở nút MIN — KHÔNG so $\alpha$ với $\beta$ của cùng một nút cùng lúc).
+Với quy ước duyệt trái sang phải, ta đi theo chiều sâu, cập nhật $\alpha$ ở nút MAX và $\beta$ ở nút MIN. Cắt nhánh khi giá trị hiện tại không thể cải thiện lựa chọn của tổ tiên: $v\ge\beta$ tại nút MAX hoặc $v\le\alpha$ tại nút MIN. Cần theo dõi hai cận $\alpha$ và $\beta$ cùng phạm vi mà chúng được truyền xuống.
 :::
 
 ### Code C++
@@ -222,9 +222,9 @@ Nếu cắt ở độ sâu cố định, chương trình có thể bị đối t
 
 | # | Bẫy | Ghi nhớ |
 |---|---|---|
-| 1 | Alpha-Beta cho kết quả khác Minimax | Giá trị **gốc luôn giống hệt**; chỉ nút bị cắt là cận không chính xác |
+| 1 | Alpha-Beta cho kết quả khác Minimax | Giá trị **gốc luôn giống hệt**, còn giá trị ở nút bị cắt có thể chỉ là một cận |
 | 2 | So $\alpha$ với $\beta$ sai chỗ | Cắt khi **giá trị đang tính** vi phạm cận **nhận từ tổ tiên** |
-| 3 | Nghĩ thứ tự duyệt không ảnh hưởng | Thứ tự tối ưu cho $O(b^{m/2})$; thứ tự tệ = không cắt được gì |
+| 3 | Nghĩ thứ tự duyệt không ảnh hưởng | Thứ tự tối ưu cho $O(b^{m/2})$, thứ tự tệ = không cắt được gì |
 
 ## Tài liệu tham khảo
 

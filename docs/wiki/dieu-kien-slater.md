@@ -19,7 +19,7 @@ Với bài lồi, tồn tại điểm thỏa chặt các bất đẳng thức ph
 
 ## Ví dụ
 
-Với ràng buộc x≤1 trên miền số thực, x=0 là điểm thỏa chặt vì 0<1.
+Với ràng buộc $x\le 1$ trên miền số thực, $x=0$ là điểm thỏa chặt vì $0<1$.
 
 ## Khi nào cần dùng?
 
@@ -31,7 +31,7 @@ Không tìm được điểm Slater có chứng minh đối ngẫu mạnh sai kh
 
 <details><summary>Xem đáp án</summary>
 
-Không. Slater là điều kiện đủ; thất bại khi kiểm Slater chưa bác bỏ đối ngẫu mạnh.
+Không. Slater là điều kiện đủ, nên việc không thỏa Slater chưa bác bỏ đối ngẫu mạnh.
 
 </details>
 

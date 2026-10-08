@@ -7,15 +7,26 @@ next: false
 
 # Ma trận
 
-Ma trận là bảng số có hàng và cột; kích thước m × n nghĩa là m hàng, n cột. Nếu A có n cột và x có n phần tử thì Ax là vector có m phần tử. Mỗi phần tử của Ax là tổng tích giữa một hàng của A với x.
+Ma trận là bảng số có hàng và cột. Kích thước $m \times  n$ nghĩa là m hàng, n cột. Nếu A có n cột và x có n phần tử thì Ax là vector có m phần tử. Mỗi phần tử của Ax là tổng tích giữa một hàng của A với x.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-**Điều kiện nhân và thứ tự.** Nếu A có kích thước m×n và B có kích thước n×p thì AB có kích thước m×p, với mỗi phần tử là tích vô hướng của một hàng của A và một cột của B. Nhìn chung AB khác BA; đôi khi BA còn không xác định.
+Với ma trận $A$ có $m$ hàng, $n$ cột và vector $x$ có $n$ thành phần, phép nhân $y=Ax$ tạo vector $y$ có $m$ thành phần. Hàng thứ $i$ được tính bằng
 
-Ma trận chuyển vị Aᵀ đổi hàng thành cột. Ma trận vuông khả nghịch có A⁻¹ sao cho A⁻¹A=AA⁻¹=I. Không phải mọi ma trận vuông đều khả nghịch.
+$$
+\begin{aligned}
+y_i&=A_{i1}x_1+A_{i2}x_2+\cdots+A_{in}x_n\\
+&=\sum_{j=1}^n A_{ij}x_j.
+\end{aligned}
+$$
+
+$i$ chọn hàng của $A$. $j$ chạy qua các cột, từ 1 đến $n$. Các tích trong một hàng được cộng lại để cho một thành phần của $y$.
+
+**Điều kiện nhân và thứ tự.** Nếu A có kích thước $m\times n$ và B có kích thước $n\times p$ thì AB có kích thước $m\times p$, với mỗi phần tử là tích vô hướng của một hàng của A và một cột của B. Nhìn chung AB khác BA. Đôi khi BA còn không xác định.
+
+Ma trận chuyển vị $A^{T}$ đổi hàng thành cột. Ma trận vuông khả nghịch có A⁻¹ sao cho $A^{-1}A=AA^{-1}=I$. Không phải mọi ma trận vuông đều khả nghịch.
 
 ## Ví dụ
 
@@ -31,7 +42,7 @@ Hiểu biến đổi tuyến tính, mô hình dữ liệu và tính toán phân 
 
 ## Tự kiểm tra
 
-Ma trận 3 × 2 nhân vector 2 chiều cho kết quả mấy chiều?
+Ma trận $3 \times  2$ nhân vector 2 chiều cho kết quả mấy chiều?
 
 <details><summary>Xem đáp án</summary>
 
