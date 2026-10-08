@@ -2,7 +2,7 @@
 name: studyhub-lecture
 description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm hoặc viết lại bài trong thư mục bài giảng của một môn, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
 metadata:
-  version: "7.2.0"
+  version: "7.3.0"
   supersedes: "textbook-to-course-slides 6.1.0"
 ---
 
@@ -30,6 +30,7 @@ Mặc định viết tiếng Việt cho sinh viên UET học nghiêm túc lần 
 | “Soạn bài N môn X”, “làm bài từ raw_materials” | **new-lecture** | Notes + mục catalog (lesson, parts, slides) + prerequisites + Wiki còn thiếu |
 | “Sửa/viết lại/nâng cấp bài …” | **revise** | Sửa đúng phạm vi; giữ slug, ID, tiến độ người học; báo phần đổi |
 | “Rà/đánh giá bài …” | **review** | Báo cáo lỗi theo mức độ (mục 5), có vị trí dòng; không sửa nếu chưa được yêu cầu |
+| “Chia bài thành nhiều lớp/chủ đề”, chương quá dày cho một trang | **topic-layers** | Trang chương thành bản đồ chương + các trang chủ đề trong `bai-giang/<slug>/`, mô phỏng tương tác, theo [topic-layers.md](references/topic-layers.md) |
 | “Thêm thuật ngữ … vào Wiki” | **wiki-term** | concepts + wikiGroups + wikiDetails + `docs/wiki/<id>.md` |
 | “Xuất slide PDF/PPTX cho bài …” | **deck** | Bộ slide từ Notes đã khóa, theo [spec-and-qa.md](references/spec-and-qa.md) và [visuals.md](references/visuals.md) |
 | Dán một đoạn và hỏi “giảng giúp” | Dùng skill `textbook-passage-explainer` | Lời giảng trong chat |
@@ -44,6 +45,7 @@ Luôn đọc [repo-format.md](references/repo-format.md) trước khi chạm và
 | --- | --- |
 | Lập kế hoạch bài, chia cụm, chọn ví dụ, câu hỏi | [pedagogy.md](references/pedagogy.md) |
 | Dựng khung Notes, chọn container, tránh lỗi đã gặp trên site | [lecture-blueprint.md](references/lecture-blueprint.md) |
+| Chia một bài thành trang chương và các trang chủ đề, viết mô phỏng tương tác | [topic-layers.md](references/topic-layers.md) |
 | Soạn từng đơn vị nội dung (định nghĩa, định lý, suy diễn, thuật toán, thực nghiệm, diễn giải, luyện tập) | [content-prompts.md](references/content-prompts.md) |
 | Viết và biên tập tiếng Việt | [professor-voice.md](references/professor-voice.md), [writing-vi.md](references/writing-vi.md), [tu-noi-va-dien-dat.md](references/tu-noi-va-dien-dat.md) |
 | Nguồn tiếng Anh, chọn thuật ngữ | [translation-vi.md](references/translation-vi.md), tra [terminology-memory.json](references/terminology-memory.json) |
@@ -77,7 +79,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 4. **Hồ sơ người học**: đã biết gì (bài trước + prerequisites của môn), phải làm được gì sau bài, dễ vướng ở đâu. Tách điều người dùng nói với điều mình giả định.
 5. **Mục tiêu quan sát được** (2–5): “Lập ma trận liên kết từ đồ thị có hướng và giải thích quy ước cột nguồn”, không “hiểu sâu PageRank”.
 6. **Chia cụm** theo câu hỏi của người học và phụ thuộc giữa các ý, không theo thứ tự trang sách. Chọn **ví dụ xuyên suốt**. Với mỗi cụm, lập kế hoạch giảng (câu hỏi, loại nội dung, bước cần mở, điều phải giữ, ví dụ, câu tự kiểm) theo content-prompts.md.
-7. Nếu nguồn quá dài cho một bài, đề xuất tách bài tại điểm kết thúc một nhiệm vụ học và nói rõ; không nén bằng cách xóa điều kiện hay bước suy luận.
+7. Nếu nguồn quá dài cho một bài, đề xuất tách bài tại điểm kết thúc một nhiệm vụ học, hoặc giữ một bài nhưng chia thành các trang chủ đề theo [topic-layers.md](references/topic-layers.md), và nói rõ lựa chọn; không nén bằng cách xóa điều kiện hay bước suy luận.
 
 ### C. Soạn — tách các lượt
 
@@ -98,12 +100,12 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 ```sh
 node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs <course-id>/<slug>
-python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py docs/<course-id>/bai-giang/<slug>.md
+python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --format text docs/<course-id>/bai-giang/<slug>.md docs/<course-id>/bai-giang/<slug>/*.md
 npm run ci:build
 ```
 
-- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
-- `review_teaching_text.py`: chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải). Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
+- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
+- `review_teaching_text.py`: chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, từ ngữ kiểu văn máy, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải, chuỗi câu cụt, đoạn dài thiếu từ nối, mũi tên thay câu, khuôn câu hỏi lặp). Truyền cả chương một lượt để thấy khuôn lặp giữa các trang. Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
 - Build phải exit 0. Nếu có trình duyệt, mở trang đã build và xem cả ba tab, công thức, Mermaid, hình ở bề rộng điện thoại. Nếu không xem được, nói rõ “chưa kiểm tra hiển thị”.
 - Bài lớn hoặc quan trọng: nhờ một lượt rà độc lập (agent khác chưa thấy quá trình soạn) đọc Notes như sinh viên và đối chiếu nguồn, nếu người dùng cho phép dùng thêm agent.
 
@@ -135,8 +137,8 @@ Chạy từ gốc repo (hoặc dùng đường dẫn đầy đủ):
 
 | Script | Làm gì | Không làm gì |
 | --- | --- | --- |
-| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài hoặc `--all` với catalog, concepts, Wiki, hình, container | Không đánh giá nội dung hay giọng |
-| `scripts/review_teaching_text.py` | Gợi ý vị trí câu cần xem lại trong Markdown hoặc đặc tả JSON | Không tự sửa, không kiểm toán, không nhận diện AI |
+| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài (kể cả các trang chủ đề) hoặc `--all` với catalog, concepts, Wiki, hình, link, container, mô phỏng; đo bề rộng công thức inline bằng MathJax của site | Không đánh giá nội dung, giọng hay tương tác của mô phỏng |
+| `scripts/review_teaching_text.py` | Gợi ý vị trí câu cần xem lại trong một hoặc nhiều file Markdown, hoặc một đặc tả JSON | Không tự sửa, không kiểm toán, không nhận diện AI |
 | `scripts/build_teaching_prompt.py` | Tạo prompt cho một đơn vị nguồn (JSON) kèm hướng dẫn giọng và thuật ngữ tra được | Không gọi model, không hiểu sách |
 | `scripts/retrieve_terminology.py` | Tra thuật ngữ EN–VI và ví dụ tương phản theo lĩnh vực | Không dịch, không chứng nhận nghĩa |
 | `scripts/audit_spec.py` | Kiểm cấu trúc đặc tả deck (nguồn, ID, checkpoint, thời lượng, asset) | Không chứng minh slide đúng hay đẹp |

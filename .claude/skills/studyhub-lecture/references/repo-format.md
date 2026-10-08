@@ -55,6 +55,10 @@ Markdown được hỗ trợ (VitePress + cấu hình trong `config.mjs`):
 
 Mỗi container mở bằng `::: tên` phải đóng bằng `:::` trên dòng riêng. Không lồng container cùng loại. Không đặt đáp án trong cùng hộp với đề.
 
+### Bài nhiều lớp
+
+Một bài có thể có thêm các trang chủ đề `docs/<môn>/bai-giang/<slug>/<topic>.md` (frontmatter `section: topic`, `topic: <slug-chủ-đề>`), khai báo trong `topicGroups` của bài trong catalog. Trang Notes của bài khi đó là bản đồ chương có `<TopicMap />`. Cấu trúc, mô phỏng và kiểm tra: [topic-layers.md](topic-layers.md).
+
 ## 3. Hình và tài nguyên
 
 - Hình riêng của bài: `docs/<môn>/bai-giang/img/<lec-xx>/<ten-hinh>.svg`, chèn bằng đường dẫn tương đối `![mô tả đầy đủ](img/lec-xx/ten-hinh.svg)`. Mô tả alt phải nói hình thể hiện điều gì, không chỉ “hình minh họa”.

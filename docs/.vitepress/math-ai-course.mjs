@@ -1,5 +1,46 @@
 const lesson = (number, slug, title, prerequisites, supportingConcepts = []) => ({ number, slug, title, prerequisites, supportingConcepts, status: 'ready' })
 const slide = (note, title, bullets, formula = '', example = '') => ({ note, title, bullets, formula, example })
+// Một chương dài được chia thành các trang chủ đề, mỗi trang trả lời một câu hỏi.
+// question: câu hỏi mà trang đó giải quyết, hiện trên bản đồ chương. source: mục tương ứng trong Convex Optimization.
+const topic = (slug, title, question, source = '') => ({ slug, title, question, source })
+const group = (title, description, topics) => ({ title, description, topics })
+const topicGroups = {
+  'bai-01-nhap-mon-toi-uu': [
+    group('I. Bài toán tối ưu', 'Viết đúng một bài toán trước khi nghĩ tới chuyện giải nó.', [
+      topic('bai-toan-toi-uu', 'Bài toán tối ưu và những gì cần viết ra', 'Muốn nói một phương án là tốt nhất, ta phải mô tả chính xác những đối tượng nào?', '§1.1, §4.1.1'),
+      topic('hai-lop-bai-toan-kinh-dien', 'Bình phương tối thiểu và quy hoạch tuyến tính', 'Hai lớp bài toán quen thuộc này có điểm chung gì mà người ta giải được chúng một cách đáng tin cậy?', '§1.2–1.3')
+    ]),
+    group('II. Hình học của tập lồi', 'Các khối hình cơ bản, cách lắp ghép chúng và những định lý hình học dùng lại suốt môn học.', [
+      topic('duong-thang-va-tap-affine', 'Đường thẳng, đoạn thẳng và tập affine', 'Điều kiện “các hệ số cộng lại bằng 1” mô tả loại hình học nào?', '§2.1.1–2.1.2'),
+      topic('noi-tuong-doi', 'Chiều affine và nội tương đối', 'Một hình vuông nằm phẳng trong không gian ba chiều có “phần trong” hay không?', '§2.1.3'),
+      topic('tap-loi-va-bao-loi', 'Tập lồi, tổ hợp lồi và bao lồi', 'Khi buộc mọi hệ số phải không âm, đường thẳng qua hai điểm còn lại phần nào?', '§2.1.4'),
+      topic('non-loi', 'Nón và nón lồi', 'Bỏ điều kiện tổng bằng 1 nhưng vẫn giữ hệ số không âm thì ta thu được hình gì?', '§2.1.5'),
+      topic('sieu-phang-va-nua-khong-gian', 'Siêu phẳng và nửa không gian', 'Một phương trình tuyến tính duy nhất chia không gian ra sao?', '§2.2.1'),
+      topic('qua-cau-va-ellipsoid', 'Quả cầu và ellipsoid', 'Một ma trận đối xứng xác định dương vẽ ra hình gì trong không gian?', '§2.2.2'),
+      topic('chuan-va-non-chuan', 'Quả cầu chuẩn và nón chuẩn', 'Vì sao quả cầu đơn vị của mọi chuẩn đều lồi, còn “quả cầu” của ‖x‖ với p = 1/2 thì không?', '§2.2.3'),
+      topic('da-dien-va-don-hinh', 'Đa diện và đơn hình', 'Nên mô tả một đa giác bằng các cạnh hay bằng các đỉnh của nó?', '§2.2.4'),
+      topic('non-psd', 'Nón các ma trận nửa xác định dương', 'Tập hợp các ma trận cũng có một hình dạng mà ta có thể hình dung được không?', '§2.2.5'),
+      topic('phep-toan-giu-tinh-loi', 'Các phép toán giữ tính lồi của tập', 'Làm thế nào chứng minh một tập phức tạp là lồi mà không phải kiểm tra từng đoạn thẳng?', '§2.3.1–2.3.2'),
+      topic('phoi-canh-va-phan-tuyen-tinh', 'Phép phối cảnh và hàm phân tuyến tính', 'Nhìn một vật lồi qua máy ảnh lỗ kim, ảnh thu được có còn lồi?', '§2.3.3'),
+      topic('bat-dang-thuc-tong-quat', 'Nón chính quy và bất đẳng thức tổng quát', 'Khi so sánh hai vector, “nhỏ hơn” nên được hiểu theo nghĩa nào?', '§2.4'),
+      topic('sieu-phang-phan-tach-va-tua', 'Siêu phẳng phân tách và siêu phẳng tựa', 'Hai tập lồi rời nhau có luôn ngăn được bằng một siêu phẳng không?', '§2.5'),
+      topic('non-doi-ngau', 'Nón đối ngẫu và lựa chọn Pareto', 'Những hướng nào nhìn toàn bộ một nón từ cùng một phía, và điều đó giúp gì khi phải cân nhiều tiêu chí?', '§2.6')
+    ]),
+    group('III. Hàm lồi', 'Nối hình học của tập lồi với giải tích: dây cung, tiếp tuyến, độ cong và các quy tắc lắp ghép hàm.', [
+      topic('ham-loi', 'Hàm lồi và bất đẳng thức dây cung', 'Đồ thị nằm dưới mọi dây cung thì nói lên điều gì về một hàm số?', '§3.1.1–3.1.2'),
+      topic('dieu-kien-bac-nhat', 'Điều kiện bậc nhất: tiếp tuyến nằm dưới đồ thị', 'Chỉ biết giá trị và đạo hàm tại một điểm, ta suy ra được gì về toàn bộ hàm?', '§3.1.3'),
+      topic('dieu-kien-bac-hai', 'Điều kiện bậc hai và độ cong', 'Hessian nửa xác định dương mang ý nghĩa hình học gì?', '§3.1.4'),
+      topic('cac-ham-loi-quen-thuoc', 'Những hàm lồi thường gặp', 'Chuẩn, hàm max, log-sum-exp và log det lồi hay lõm, và ta chứng minh điều đó thế nào?', '§3.1.5'),
+      topic('epigraph-tap-muc-duoi-jensen', 'Epigraph, tập mức dưới và bất đẳng thức Jensen', 'Nhìn một hàm lồi như một tập hợp thì ta được thêm những công cụ gì?', '§3.1.6–3.1.9'),
+      topic('phep-toan-giu-tinh-loi-cua-ham', 'Các phép toán giữ tính lồi của hàm', 'Từ vài hàm lồi đã biết, ta lắp ghép được những hàm lồi mới nào và cần cẩn thận ở đâu?', '§3.2')
+    ]),
+    group('IV. Tính lồi trong bài toán tối ưu', 'Ghép miền lồi với hàm mục tiêu lồi để có những bảo đảm mà tối ưu tổng quát không có.', [
+      topic('cuc-bo-va-toan-cuc', 'Cực tiểu cục bộ và cực tiểu toàn cục', 'Trong bài toán lồi, một điểm tốt nhất trong vùng lân cận có chắc là tốt nhất trên toàn miền?', '§4.2.1–4.2.2'),
+      topic('dieu-kien-toi-uu', 'Điều kiện tối ưu bậc nhất trên miền lồi', 'Khi nghiệm nằm trên biên và gradient khác 0, ta kiểm chứng nó tối ưu bằng cách nào?', '§4.2.3'),
+      topic('tinh-loi-trong-mo-hinh-hoc-may', 'Nhận diện tính lồi trong mô hình học máy', 'Hàm mất mát của hồi quy logistic là lồi, vậy còn mạng nơ-ron hai tầng thì sao?', '§4.4, §7.1')
+    ])
+  ]
+}
 const slugs = ['bai-00-on-tap-nen-tang', 'bai-01-nhap-mon-toi-uu', 'bai-02-tap-loi', 'bai-03-doi-ngau-lagrange', 'bai-04-gradient-newton', 'bai-05-toi-uu-huan-luyen', 'bai-06-phuong-phap-thich-nghi', 'bai-07-quy-hoach-tuyen-tinh-va-dong']
 const titles = ['Ôn tập nền tảng toán học cho AI', 'Giới thiệu tối ưu, tập lồi và hàm lồi', 'Các bài toán tối ưu lồi', 'Đối ngẫu Lagrange', 'Tối ưu không ràng buộc và ràng buộc đẳng thức', 'Các phương pháp tối ưu trong huấn luyện mô hình học sâu', 'Các phương pháp tối ưu trong học sâu', 'Quy hoạch tuyến tính và quy hoạch động']
 const prerequisites = [
@@ -38,7 +79,7 @@ export const mathAiCourse = {
   foundations: [...new Set([...prerequisites.flat(), ...supportingConcepts.flat()])],
   structureSource: 'https://courses.iaidev.com/math-4-AI/2627-1/',
   parts: [{ title: 'Bài giảng 00–07', lessons: slugs }],
-  lessons: titles.map((title, i) => ({ ...lesson(i, slugs[i], title, prerequisites[i], supportingConcepts[i]), description: descriptions[i] })),
+  lessons: titles.map((title, i) => ({ ...lesson(i, slugs[i], title, prerequisites[i], supportingConcepts[i]), description: descriptions[i], topicGroups: topicGroups[slugs[i]] || [] })),
   slides: [
     slide(slugs[0], 'Ma trận biến nhiều dự đoán thành một phép nhân', ["Với A kích thước $m\\times n$ và w có n phần tử, Aw có m phần tử.", "Một hàng của A tương ứng một quan sát, còn một cột tương ứng một đặc trưng.", "Phần dư $r=Aw-b$ đo sai lệch của từng dự đoán."], "$$A\\in\\mathbb R^{m\\times n},\\qquad w\\in\\mathbb R^{n\\times1},\\qquad r\\in\\mathbb R^{m\\times1}$$", "Với các dữ liệu:\n\n$$A=\\begin{bmatrix}1\\\\2\\\\3\\end{bmatrix},\\qquad b=\\begin{bmatrix}1\\\\2\\\\2\\end{bmatrix}.$$\n\nNghiệm là $w=\\frac{11}{14}$, cho dự đoán:\n\n$$Aw=\\begin{bmatrix}\\frac{11}{14}\\\\\\frac{11}{7}\\\\\\frac{33}{14}\\end{bmatrix}.$$"),
     slide(slugs[0], 'Gradient mô tả bậc nhất, Hessian mô tả độ cong', ['Gradient của f là vector các đạo hàm riêng tại điểm khả vi.', 'Hessian của f là ma trận đạo hàm bậc hai.', "Ma trận đối xứng PSD thỏa $v^{T}Hv\\ge 0$ với mọi v. Dấu của từng phần tử không đủ để kết luận PSD."], "$$f(w)=\\frac12\\|Aw-b\\|_2^2,\\qquad \\nabla f(w)=A^T(Aw-b),\\qquad H=A^TA$$"),

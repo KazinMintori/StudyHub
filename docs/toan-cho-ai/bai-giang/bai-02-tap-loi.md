@@ -12,7 +12,7 @@ Ta đã có định nghĩa tập lồi và hàm lồi. Bước tiếp theo là n
 
 Sau khi học xong, bạn sẽ xác định được một mô hình có ở dạng chuẩn lồi hay không, nhận diện được LP, QP, SOCP và SDP, giải thích được vai trò của biến phụ, và phân biệt nghiệm của bài toán nới lỏng với nghiệm hợp lệ của bài toán ban đầu.
 
-Ở lần đọc đầu, hãy học mục 1–2 để nắm dạng chuẩn, LP và QP. Sau đó đọc mục 3 về biến phụ. Mục 4 giới thiệu các bài toán trên nón và có thể để lại cho lượt đọc sau. Mục 5 cần đọc trước khi dùng một bài toán gần đúng hoặc bài toán nới lỏng để suy luận về bài toán ban đầu. Kiến thức về tập lồi nằm ở [Bài 01](./bai-01-nhap-mon-toi-uu.md). Phần hình học sâu hơn được đặt trong [bài đọc thêm](../doc-them/hinh-hoc-tap-loi.md).
+Ở lần đọc đầu, hãy học mục 1–2 để nắm dạng chuẩn, LP và QP. Sau đó đọc mục 3 về biến phụ. Mục 4 giới thiệu các bài toán trên nón và có thể để lại cho lượt đọc sau. Mục 5 cần đọc trước khi dùng một bài toán gần đúng hoặc bài toán nới lỏng để suy luận về bài toán ban đầu. Kiến thức về tập lồi và hàm lồi nằm ở [Bài 01](./bai-01-nhap-mon-toi-uu.md), được chia thành 25 chủ đề. Phần hình học sâu hơn, như nón, phối cảnh và siêu phẳng phân tách, là các chủ đề 6–16 của bài đó.
 
 ## 1. Dạng chuẩn của bài toán tối ưu lồi
 
@@ -126,7 +126,7 @@ $$
 
 $\prod$ yêu cầu **nhân**, với $i$ chạy từ 1 đến $n$. Các số mũ $a_i$ là số thực. Với hai biến, tích chỉ là $c\,x_1^{a_1}x_2^{a_2}$. **Posynomial** là tổng hữu hạn các monomial, chẳng hạn $x_1+2x_2^2$. GP dùng posynomial $\le1$, monomial $=1$ và mục tiêu posynomial.
 
-Đặt $y_i=\log x_i$, tức $x_i=e^{y_i}$. Log monomial trở thành $\log c+a_1y_1+\cdots+a_ny_n=\log c+\sum_{i=1}^n a_i y_i$, một hàm affine. Với posynomial gồm $K$ monomial, $\sum_{k=1}^K c_k\prod_{i=1}^n x_i^{a_{ki}}$, chỉ số $k$ chọn monomial và chỉ số $i$ chọn biến. Log của nó trở thành
+Đặt $y_i=\log x_i$, tức $x_i=e^{y_i}$. Log monomial trở thành $\log c+\sum_{i=1}^n a_i y_i$, tức $\log c+a_1y_1+\cdots+a_ny_n$, một hàm affine. Với posynomial gồm $K$ monomial, $\sum_{k=1}^K c_k\prod_{i=1}^n x_i^{a_{ki}}$, chỉ số $k$ chọn monomial và chỉ số $i$ chọn biến. Log của nó trở thành
 
 $$\log\left[\sum_{k=1}^K\exp\left(\log c_k+\sum_{i=1}^n a_{ki}y_i\right)\right].$$
 

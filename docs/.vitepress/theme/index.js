@@ -6,13 +6,18 @@ import OldCourseLink from './OldCourseLink.vue'
 import CodeIllustration from './CodeIllustration.vue'
 import WikiIndex from './WikiIndex.vue'
 import LegacyCourseRoute from './LegacyCourseRoute.vue'
-import MathLab from './MathLab.vue'
 import WikiUsage from './WikiUsage.vue'
+import TopicMap from './TopicMap.vue'
+
+// Mọi mô phỏng tương tác đặt tên dạng <Tên>Lab.vue được đăng ký toàn cục theo đúng tên file,
+// nên Notes có thể viết <AffineLab type="line" /> mà không cần import.
+const labs = import.meta.glob('./*Lab.vue', { eager: true })
 
 export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
-    for (const [name, component] of Object.entries({ CourseOverview, OldCourseLink, CodeIllustration, WikiIndex, LegacyCourseRoute, MathLab, WikiUsage })) app.component(name, component)
+    for (const [name, component] of Object.entries({ CourseOverview, OldCourseLink, CodeIllustration, WikiIndex, LegacyCourseRoute, WikiUsage, TopicMap })) app.component(name, component)
+    for (const [file, module] of Object.entries(labs)) app.component(file.replace(/^\.\/|\.vue$/g, ''), module.default)
   }
 }

@@ -5,264 +5,116 @@ section: lecture
 title: "Giới thiệu tối ưu, tập lồi và hàm lồi"
 prerequisites: ["vector", "tich-vo-huong", "gradient", "hessian", "ma-tran-psd"]
 lessonStatus: ready
-description: "Từ lựa chọn khả thi đến tập lồi, hàm lồi và chứng nhận tối ưu toàn cục; minh họa bằng chương trình."
+description: "Bản đồ của chương: 25 chủ đề về bài toán tối ưu, hình học tập lồi, hàm lồi và tính lồi trong học máy, kèm lộ trình đọc, bức tranh chung và bài tập tổng hợp."
 ---
 
-Ở Bài 00, ta tìm được tham số làm hàm mất mát nhỏ nhất bằng cách khai triển một biểu thức bậc hai. Khi số biến và số ràng buộc tăng lên, cách làm trực tiếp này nhanh chóng trở nên cồng kềnh. Bài này trình bày cấu trúc lồi của miền khả thi và hàm mục tiêu, nhờ đó ta có thể nhận biết một nghiệm tối ưu toàn cục mà không phải so sánh với từng điểm riêng lẻ.
+Ở Bài 00, ta tìm tham số làm hàm mất mát nhỏ nhất bằng cách khai triển một biểu thức bậc hai rồi cho đạo hàm bằng 0. Cách làm ấy chạy tốt khi bài toán nhỏ và không có ràng buộc. Nhưng chỉ cần thêm vài ràng buộc, hay đổi hàm bình phương thành một hàm mất mát khác, ta lập tức gặp những câu hỏi khó hơn nhiều: điểm vừa tìm có thật sự tốt nhất trên toàn miền không, hay chỉ tốt nhất trong vùng lân cận? Nghiệm nằm trên biên thì kiểm chứng thế nào? Có bao nhiêu nghiệm?
 
-Sau khi học xong, bạn sẽ viết được đầy đủ biến quyết định, hàm mục tiêu và các ràng buộc của một bài toán. Phân biệt được tập lồi với hàm lồi. Và giải thích được vì sao một điểm dừng của hàm lồi có thể là nghiệm tối ưu toàn cục.
+Chương này trả lời những câu hỏi ấy cho một lớp bài toán đặc biệt: **bài toán tối ưu lồi**. Với lớp bài toán này, mọi điểm tốt nhất trong một lân cận cũng là điểm tốt nhất trên toàn miền, và ta có những chứng nhận gọn gàng để biết mình đã tới nghiệm. Để đi tới kết quả đó, ta cần hai thứ: hình học của **tập lồi**, nơi các lựa chọn khả thi sống, và giải tích của **hàm lồi**, thứ ta muốn cực tiểu.
 
-Lần đọc đầu nên tập trung vào mục 1–3: cách viết một bài toán tối ưu, định nghĩa tập lồi và định nghĩa hàm lồi. Mục 4–6 trình bày các điều kiện dùng để chứng nhận nghiệm và có thể đọc sau khi ba khái niệm đầu đã rõ. Nếu các biểu thức $x^Ty$ hoặc $v^THv$ còn lạ, hãy ôn lại Bài 00. Các khái niệm nón, phối cảnh và Pareto được tách sang phần [hình học bổ sung](../doc-them/hinh-hoc-tap-loi.md).
+## Cách đọc chương này
 
-## 1. Các thành phần của một bài toán tối ưu
+Nội dung được chia thành 25 chủ đề ngắn, xếp trong bốn phần. Mỗi chủ đề tập trung vào một ý, có mô phỏng tương tác để bạn tự kéo, thả và kiểm chứng, một loạt câu hỏi đào sâu bản chất, và bài tập có lời giải gập. Bạn không cần đọc liền một mạch: thanh tiến độ ở đầu mỗi chủ đề cho biết bạn đang ở đâu, và hai nút ở cuối trang dẫn sang chủ đề trước hoặc sau.
 
-Ta dùng ví dụ một chiều tự đặt: muốn $x$ gần 2, nhưng chỉ được chọn $x\le1$:
+<TopicMap />
 
-$$\begin{aligned}\text{minimize}\quad &(x-2)^2\\\text{subject to}\quad &x\le1.\end{aligned}$$
+## Ba lộ trình đọc
 
-Biến quyết định là $x$, hàm mục tiêu là $f_0(x)=(x-2)^2$, và ràng buộc là $f_1(x)=x-1\le0$. Miền khả thi $C=(-\infty,1]$ chứa tất cả lựa chọn hợp lệ. Điểm $x=2$ làm hàm mục tiêu bằng 0 nhưng không thỏa ràng buộc. Điểm $x=0$ khả thi, nhưng $x=1$ còn cho giá trị hàm mục tiêu nhỏ hơn.
+Hai mươi lăm chủ đề là một khối lượng không nhỏ, và không phải ai cũng cần đọc hết ở lần đầu. Ba lộ trình dưới đây giúp bạn chọn.
 
-Tổng quát, bài toán tối ưu có mục tiêu $f_0$, bất đẳng thức $f_i(x)\le0$ và đẳng thức $h_j(x)=0$. Miền chung còn phải nằm trong miền xác định của các hàm: chẳng hạn $\log x$ yêu cầu $x>0$.
+**Lộ trình cốt lõi**, cho lần đọc đầu tiên. Mười một chủ đề này đủ để hiểu định lý trung tâm của chương và dùng nó:
 
-**Nghiệm tối ưu** $x^*$ phải khả thi và thỏa $f_0(x^*)\le f_0(y)$ với mọi $y$ khả thi. **Giá trị tối ưu** là
+- Chủ đề 1. [Bài toán tối ưu và những gì cần viết ra](./bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md)
+- Chủ đề 2. [Bình phương tối thiểu và quy hoạch tuyến tính](./bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md)
+- Chủ đề 3. [Đường thẳng, đoạn thẳng và tập affine](./bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md)
+- Chủ đề 5. [Tập lồi, tổ hợp lồi và bao lồi](./bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md)
+- Chủ đề 7. [Siêu phẳng và nửa không gian](./bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md)
+- Chủ đề 12. [Các phép toán giữ tính lồi của tập](./bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md)
+- Chủ đề 17. [Hàm lồi và bất đẳng thức dây cung](./bai-01-nhap-mon-toi-uu/ham-loi.md)
+- Chủ đề 18. [Điều kiện bậc nhất](./bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md)
+- Chủ đề 19. [Điều kiện bậc hai và độ cong](./bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md)
+- Chủ đề 23. [Cực tiểu cục bộ và cực tiểu toàn cục](./bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md)
+- Chủ đề 24. [Điều kiện tối ưu bậc nhất trên miền lồi](./bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md)
 
-$$p^*=\inf_{x\in C}f_0(x).$$
+**Lộ trình hình học**, khi bạn muốn hiểu sâu các khối hình mà mọi bài toán lồi được dựng từ đó. Ba chủ đề cuối là nền trực tiếp cho chương đối ngẫu.
 
-$\inf$ là cận dưới lớn nhất, không nhất thiết có điểm đạt được. Ba trường hợp cần nhận ra trước khi giải:
+- Chủ đề 4. [Chiều affine và nội tương đối](./bai-01-nhap-mon-toi-uu/noi-tuong-doi.md)
+- Chủ đề 6. [Nón và nón lồi](./bai-01-nhap-mon-toi-uu/non-loi.md)
+- Chủ đề 8–11. [Quả cầu và ellipsoid](./bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md), [quả cầu chuẩn và nón chuẩn](./bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md), [đa diện và đơn hình](./bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md), [nón PSD](./bai-01-nhap-mon-toi-uu/non-psd.md)
+- Chủ đề 13–14. [Phép phối cảnh](./bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md), [bất đẳng thức tổng quát](./bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md)
+- Chủ đề 15–16. [Siêu phẳng phân tách và siêu phẳng tựa](./bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md), [nón đối ngẫu](./bai-01-nhap-mon-toi-uu/non-doi-ngau.md)
 
-| Bài toán | Điều xảy ra |
-| --- | --- |
-| $\min x^2$, $x\ge2$, $x\le1$ | Miền rỗng: không khả thi. |
-| $\min(-x)$, $x\in\mathbb R$ | Không bị chặn dưới: $p^*=-\infty$. |
-| $\min x$, $x>0$ | $p^*=0$ nhưng không có điểm đạt cận. |
+**Lộ trình học máy**, khi bạn muốn thấy ngay chương này nói gì về các mô hình quen thuộc.
 
-Đổi $\max q(x)$ thành $\min[-q(x)]$ giữ nghiệm và đổi dấu giá trị tối ưu. Dữ liệu cố định như 2 và 1 trong ví dụ không trở thành biến quyết định.
+- [Bình phương tối thiểu và quy hoạch tuyến tính](./bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) và [chuẩn ℓ1 với nghiệm thưa](./bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md)
+- [Độ phân kỳ KL qua điều kiện bậc nhất](./bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md) và [softmax, log-sum-exp](./bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md)
+- [Jensen, phương sai và ELBO](./bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md) và [đọc tính lồi của một hàm mất mát](./bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md)
+- [Nhận diện tính lồi trong mô hình học máy](./bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md)
 
-<details><summary>Thử trả lời: $x=1$ có tối ưu chỉ vì nó khả thi không?</summary>
+## Bức tranh chung
 
-Không. Còn phải so với mọi $x\le1$. Ở ví dụ này $2-x\ge1$, nên $(x-2)^2\ge1$, với dấu bằng tại $x=1$. Lập luận này mới chứng nhận nghiệm.
+Sơ đồ sau cho thấy các phần của chương dựa vào nhau ra sao. Mũi tên đi từ ý được dùng tới ý dùng nó.
 
-</details>
-
-## 2. Tập lồi và đoạn thẳng nối hai điểm
-
-Với $x,y\in\mathbb R^n$, điểm $z=\theta x+(1-\theta)y$, $0\le\theta\le1$, đi trên đoạn nối. Ta gọi đây là **tổ hợp lồi**. Hai trọng số không âm và cộng thành 1.
-
-Với nhiều điểm $x_1,\ldots,x_k$, cách viết đầy đủ là $z=\theta_1x_1+\cdots+\theta_kx_k$, trong đó $\theta_1+\cdots+\theta_k=1$ và từng $\theta_i\ge0$. Ký hiệu tổng chỉ rút gọn phép cộng này:
-
-$$
-\begin{aligned}
-z&=\sum_{i=1}^k\theta_i x_i,\\
-1&=\sum_{i=1}^k\theta_i.
-\end{aligned}
-$$
-
-Chỉ số $i$ chạy từ 1 đến $k$, tức qua tất cả các điểm đã chọn. Ví dụ ba trọng số $\frac12,\frac13,\frac16$ hợp lệ vì không âm và cộng thành 1. Khi phạm vi $i$ đã rõ, tài liệu có thể viết tắt $\sum_i\theta_i=1$.
-
-Tập $C$ **lồi** nếu với mọi $x,y\in C$ và mọi $\theta\in[0,1]$, $z$ vẫn thuộc $C$. Chữ “mọi” quyết định định nghĩa: một đoạn nối tốt chưa chứng minh cả tập lồi. Một đoạn nối xấu đủ bác bỏ.
-
-<MathLab type="segment">
-
-```js
-const z = A.map((a, i) => theta*a + (1-theta)*B[i]);
-// 0 <= theta <= 1: đoạn nối. Ngoài khoảng này: cả đường thẳng.
+```mermaid
+flowchart TD
+    A["Bài toán tối ưu<br/>chủ đề 1–2"] --> B["Tập affine, tập lồi, nón<br/>chủ đề 3–6"]
+    B --> C["Các khối hình cơ bản<br/>chủ đề 7–11"]
+    C --> D["Phép toán giữ tính lồi, phối cảnh,<br/>bất đẳng thức tổng quát, chủ đề 12–14"]
+    D --> E["Siêu phẳng phân tách và nón đối ngẫu<br/>chủ đề 15–16"]
+    B --> F["Hàm lồi<br/>chủ đề 17"]
+    F --> G["Điều kiện bậc nhất và bậc hai<br/>chủ đề 18–19"]
+    E --> G
+    F --> H["Danh mục hàm, epigraph, Jensen, phép toán<br/>chủ đề 20–22"]
+    G --> I["Cục bộ là toàn cục, điều kiện tối ưu<br/>chủ đề 23–24"]
+    H --> J["Tính lồi trong học máy<br/>chủ đề 25"]
+    I --> J
 ```
 
-</MathLab>
+**Phần I** dạy cách viết một bài toán tối ưu cho đúng: biến, dữ liệu, hàm mục tiêu, ràng buộc, giá trị tối ưu, và ba cách một bài toán có thể "hỏng": không khả thi, không bị chặn, hoặc không đạt cận. Hai lớp bài toán kinh điển, bình phương tối thiểu và quy hoạch tuyến tính, được dùng làm ví dụ xuyên suốt chương.
 
-Mô phỏng tái hiện quan hệ của Hình 2.1, *Convex Optimization*, tr. 22, bằng tọa độ tự đặt $A=(-1,1)$, $B=(2,-1)$. Hãy đưa $\theta$ ra ngoài $[0,1]$: điểm vẫn nằm trên đường nhưng rời đoạn. Một **tập affine** phải giữ mọi tổ hợp đó với $\theta\in\mathbb R$, nên đòi hỏi mạnh hơn tập lồi.
+**Phần II** dựng hình học của tập lồi. Đi từ đường thẳng qua hai điểm, ta có tập affine, rồi tập lồi, rồi nón, tương ứng với bốn kiểu tổ hợp tuyến tính. Các khối hình cơ bản gồm siêu phẳng, nửa không gian, quả cầu, ellipsoid, đa diện và nón ma trận nửa xác định dương. Giao, ảnh affine và phép phối cảnh cho phép lắp ghép chúng thành những tập phức tạp hơn mà vẫn giữ tính lồi. Hai định lý hình học quan trọng nhất là siêu phẳng phân tách và siêu phẳng tựa, kèm khái niệm nón đối ngẫu, nền của mọi chứng nhận tối ưu về sau.
 
-### 2.1 Chứng minh một ràng buộc tạo miền lồi
+**Phần III** chuyển từ tập sang hàm. Hàm lồi là hàm có đồ thị nằm dưới mọi dây cung, tương đương với epigraph lồi. Ba công cụ nhận diện là định nghĩa, điều kiện bậc nhất (tiếp tuyến là cận dưới toàn cục) và điều kiện bậc hai (Hessian nửa xác định dương). Một danh mục ngắn các hàm cơ bản cùng bộ quy tắc lắp ghép đủ để nhận diện phần lớn hàm mất mát trong thực tế mà không cần tính đạo hàm.
 
-Với nửa không gian $C=\{x:a^Tx\le b\}$, lấy $x,y\in C$. Khi $0\le\theta\le1$,
+**Phần IV** ráp hai thế giới. Bài toán tối ưu lồi có miền khả thi lồi và hàm mục tiêu lồi, và nhờ đó mọi cực tiểu cục bộ là toàn cục. Điều kiện tối ưu $\nabla f_0(x)^T (y - x) \ge 0$ cho mọi điểm khả thi $y$ chứng nhận nghiệm kể cả khi nó nằm trên biên. Chủ đề cuối áp dụng tất cả vào học máy: vì sao hồi quy logistic lồi theo tham số, vì sao mạng nơ-ron thì không, và vì sao câu hỏi "lồi theo biến nào" quan trọng.
 
-$$a^Tz=\theta a^Tx+(1-\theta)a^Ty\le\theta b+(1-\theta)b=b.$$
+## Bài tập tổng hợp
 
-Ta đã dùng tính tuyến tính để khai triển $a^Tz$, rồi dùng tính không âm của hai trọng số để giữ chiều bất đẳng thức. Tập nghiệm $Ax=b$ là affine: phép tính tương tự giữ dấu bằng ngay cả khi $\theta$ âm.
+Các bài dưới đây cần kiến thức từ nhiều phần của chương. Hãy thử làm sau khi đã đọc ít nhất lộ trình cốt lõi.
 
-Giao các tập lồi là lồi, vì đoạn nối phải thỏa từng điều kiện một. Do đó **đa diện** $\{x:Ax\preceq b\}$, tức một hệ hữu hạn bất đẳng thức theo từng thành phần, là lồi. Ký hiệu $\preceq$ ở đây so từng tọa độ.
-
-### 2.2 Chuẩn và ảnh affine
-
-Quả cầu chuẩn $\{x:\|x\|\le r\}$ với $r\ge0$ là lồi. Bất đẳng thức tam giác và tính thuần nhất của chuẩn cho
-
-$$\|\theta x+(1-\theta)y\|\le\theta\|x\|+(1-\theta)\|y\|\le r.$$
-
-Đường tròn $x_1^2+x_2^2=1$ không lồi: trung điểm $(1,0)$ và $(-1,0)$ là $(0,0)$, không thỏa đẳng thức. Hình tròn đặc thay dấu bằng bằng $\le$ thì lồi. Đổi dấu ràng buộc làm đổi miền.
-
-Ảnh và ảnh ngược của một tập lồi qua $F(x)=Ax+b$ đều lồi. Với ảnh ngược, nếu $F(x),F(y)\in C$, thì $F(z)=\theta F(x)+(1-\theta)F(y)\in C$. Không cần $A$ khả nghịch. Đây là cách đọc miền $\|Ax-b\|\le r$.
-
-<details><summary>Thử trả lời: Hợp của $[-2,-1]$ và [1,2] có phải là một tập lồi không?</summary>
-
-Không. Hai điểm $-1,1$ thuộc hợp nhưng trung điểm 0 không thuộc. Phép giao giữ tính lồi. Phép hợp nói chung không giữ.
-
-</details>
-
-## 3. Hàm lồi và bất đẳng thức dây cung
-
-Hai thao tác khác nhau là tính $f(\theta x+(1-\theta)y)$ và tính $\theta f(x)+(1-\theta)f(y)$. **Hàm lồi** có miền lồi và thỏa
-
-$$\boxed{f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)}$$
-
-với mọi $x,y$ trong miền và $0\le\theta\le1$. Trên hình, đồ thị nằm dưới dây cung nối hai điểm của đồ thị. Hàm **lõm** có bất đẳng thức đảo chiều. Tương đương $-f$ lồi.
-
-<MathLab type="chord">
-
-```js
-const z = theta*a + (1-theta)*b;
-const onCurve = f(z);
-const onChord = theta*f(a) + (1-theta)*f(b);
-```
-
-</MathLab>
-
-Mô phỏng quan hệ trong Hình 3.1, sách tr. 67, bằng $f(x)=x^2$, $a=-1$, $b=2$. Tại $\theta=\frac{1}{2}$, tổ hợp của hai đầu vào là $z=\frac{1}{2}$, giá trị hàm là $\frac{1}{4}$, còn giá trị trên dây cung là $\frac{5}{2}$. Thử $-x^2$ để thấy chiều bất đẳng thức đổi. Một số điểm thử chỉ có tác dụng minh họa. Chúng không thay thế định nghĩa vốn phải đúng với mọi cặp điểm trong miền.
-
-Đồ thị của $x^2$ không phải tập lồi: trung điểm hai điểm trên đồ thị có thể nằm phía trên. Tập **epigraph** $\{(x,t):t\ge f(x)\}$ gồm toàn bộ miền phía trên đồ thị mới là tập lồi khi và chỉ khi $f$ lồi.
-
-## 4. Ba cách xác định tính lồi của một hàm
-
-### 4.1 Gradient tạo một cận dưới toàn cục
-
-Giả sử $f$ khả vi trên miền mở lồi. Khi đó $f$ lồi khi và chỉ khi
-
-$$f(y)\ge f(x)+\nabla f(x)^T(y-x)\quad\text{với mọi }x,y\text{ trong miền}.$$
-
-Vế phải là xấp xỉ bậc nhất tại $x$. Với hàm bất kỳ, nó chỉ gần đúng khi $y$ gần $x$. Tính lồi làm nó thành cận dưới ở mọi $y$.
-
-Để thấy bước quyết định, đặt $x_t=x+t(y-x)$, $0<t\le1$. Tính lồi cho $f(x_t)\le(1-t)f(x)+tf(y)$. Chuyển vế và chia cho $t>0$:
-
-$$f(y)\ge f(x)+\frac{f(x+t(y-x))-f(x)}t.$$
-
-Cho $t\downarrow0$, thương tiến tới đạo hàm theo hướng $y-x$, bằng $\nabla f(x)^T(y-x)$. Đây là chỗ tính lồi nối thông tin cục bộ với kết luận toàn cục.
-
-### 4.2 Hessian không âm theo mọi hướng
-
-Nếu $f$ hai lần khả vi trên miền mở lồi, thì $f$ lồi khi và chỉ khi $\nabla^2f(x)\succeq0$ ở mọi $x$. Miền lồi vẫn là điều kiện riêng: $1/x^2$ trên $\mathbb R\setminus\{0\}$ có đạo hàm bậc hai dương nhưng miền không lồi.
-
-Với $f(x)=\tfrac12x^TPx+q^Tx+r$, $P=P^T$, Hessian bằng $P$. Vì vậy $P\succeq0$ chứng nhận tính lồi. Hàm mất mát hồi quy ở Bài 00 có $P=A^TA$ nên lồi. Hàm $|x|$ cũng lồi nhưng không khả vi tại 0, vì thế không thể áp dụng tiêu chuẩn đạo hàm ngay tại điểm ấy.
-
-### 4.3 Ghép những hàm đã biết
-
-Tổng có trọng số không âm của các hàm lồi vẫn lồi. Hợp với ánh xạ affine $f(Ax+b)$ giữ tính lồi. Giá trị lớn nhất của một số hữu hạn hàm lồi cũng là một hàm lồi. Chẳng hạn, $\|Ax-b\|_\infty$ là giá trị lớn nhất của các biểu thức affine $\pm(a_i^Tx-b_i)$.
-
-Không suy rằng mọi hợp hai hàm lồi đều lồi: $g(u)=(u-1)^2$ và $h(x)=x^2$ đều lồi, nhưng $g(h(x))=(x^2-1)^2$ có đạo hàm bậc hai tại 0 bằng $-4$.
-
-## 5. Từ cực tiểu cục bộ đến cực tiểu toàn cục
-
-Xét cực tiểu hàm lồi $f$ trên miền lồi $C$. “Cục bộ” nghĩa là không có điểm khả thi tốt hơn trong một lân cận đủ nhỏ. “toàn cục” xét mọi điểm khả thi.
-
-Giả sử $x^*$ tối ưu cục bộ nhưng tồn tại $y\in C$ sao cho $f(y)<f(x^*)$. Lấy một điểm trên đoạn thẳng từ $x^*$ tới $y$:
-
-$$z=(1-t)x^*+ty\in C,$$
-
-$$f(z)\le(1-t)f(x^*)+tf(y)<f(x^*).$$
-
-Với $t>0$ đủ nhỏ, $z$ ở trong lân cận của $x^*$, trái với tối ưu cục bộ. Tập lồi được dùng để $z$ khả thi. Hàm lồi được dùng để $f(z)$ nhỏ hơn. Thiếu một trong hai bước thì chứng minh không còn.
-
-### 5.1 Điều kiện gradient bằng 0
-
-Không ràng buộc, với $f$ khả vi lồi trên miền mở lồi, $\nabla f(x^*)=0$ kéo theo
-
-$$f(y)\ge f(x^*)+0=f(x^*)\quad\forall y.$$
-
-Nếu bỏ tính lồi, $f(x)=-x^2$ có đạo hàm 0 tại 0 nhưng đó là cực đại. Nếu có ràng buộc, nghiệm có thể có gradient khác 0: ví dụ mở đầu đạt tại $x^*=1$, nhưng $f'(1)=-2$.
-
-Điều kiện đúng cho miền lồi $C$ và hàm khả vi lồi là $x^*\in C$ cùng với
-
-$$\nabla f(x^*)^T(y-x^*)\ge0\quad\forall y\in C.$$
-
-Trong ví dụ, $-2(y-1)\ge0$ khi $y\le1$. Mọi hướng từ $x^*$ tới một điểm khả thi đều không làm xấp xỉ bậc nhất giảm. Bài 03 sẽ viết điều kiện này dưới dạng các phương trình KKT cụ thể.
-
-## 6. Điều kiện để nghiệm tối ưu là duy nhất
-
-Lồi **nghiêm** dùng dấu $<$ khi $x\ne y$, $0<\theta<1$. Nếu có hai nghiệm khác nhau trên miền khả thi lồi, trung điểm sẽ có giá trị nhỏ hơn giá trị tối ưu, vô lý. Vì vậy nhiều nhất một nghiệm. Nó vẫn không bảo đảm đạt nghiệm: $e^x$ lồi nghiêm trên $\mathbb R$ nhưng cận 0 chỉ đạt khi $x\to-\infty$.
-
-Một mô hình tuyến tính theo tham số với hàm mất mát bình phương là lồi. Mô hình nhiều tầng có thể không còn tính chất ấy. Xét ví dụ tự đặt $f(u,v)=(uv-1)^2$: hai điểm $(1,1)$ và $(-1,-1)$ đều cho giá trị 0, nhưng trung điểm $(0,0)$ cho giá trị 1. Như vậy bất đẳng thức dây cung bị vi phạm. Việc từng tầng riêng lẻ là tuyến tính không đủ để kết luận hàm mất mát lồi đồng thời theo tất cả trọng số.
-
-## 7. Hai mô hình AI có cấu trúc lồi
-
-Hai ví dụ sau kết nối kết quả với mô hình. Có thể đọc chúng ở lượt sau khi đã giải thích được điều kiện bậc nhất ở mục 5.
-
-### 7.1 Điều khiển một bước là QP khi mô hình tuyến tính
-
-Giả sử trạng thái hiện tại $s$ đã biết, hành động cần chọn là $u$, và trạng thái tiếp theo được mô hình hóa bằng $s^+=Fs+Bu$. Muốn gần trạng thái đích $r$ mà không dùng hành động quá lớn, chọn
-
-$$\min_u\frac12\|Fs+Bu-r\|_2^2+\frac\rho2\|u\|_2^2,\qquad\rho\ge0.$$
-
-Các ma trận $F,B$, các vector $s,r$ và $\rho$ là dữ liệu. $u$ mới là biến. Đây là bình phương tối thiểu cộng điều chuẩn, có Hessian $B^TB+\rho I\succeq0$. Giới hạn $-u_{\max}\preceq u\preceq u_{\max}$ với $u_{\max}\succeq0$ là affine, nên giữ bài toán lồi. Nó chưa mô tả một hệ thực nếu mô hình chuyển trạng thái không phù hợp. Đây là ví dụ tự biên soạn từ cấu trúc QP của sách.
-
-Một chiều, đặt $s=2$, $F=B=1$, $r=0$, $\rho=1$, $|u|\le1$. Mục tiêu $\tfrac12(2+u)^2+\tfrac12u^2$ có đạo hàm $2+2u$, nên $u^*=-1$, $s^+=1$, giá trị 1. Hành động không đạt ngay đích vì có cả chi phí hành động và giới hạn.
-
-### 7.2 Hàm mất mát lồi trong hồi quy logistic
-
-Với nhãn $b_i\in\{0,1\}$, đặt điểm số $z_i=a_i^Tw$ và xác suất dự đoán
-
-$$p_i=\sigma(z_i)=\frac1{1+e^{-z_i}}.$$
-
-Ta giả định các nhãn độc lập có điều kiện khi đầu vào và tham số đã được xác định. Likelihood của một nhãn là $p_i^{b_i}(1-p_i)^{1-b_i}$. Lấy âm log và rút gọn, ta thu được hàm mất mát
-
-$$\ell_i(w)=\log(1+e^{a_i^Tw})-b_i a_i^Tw.$$
-
-Đạo hàm theo điểm số là $\sigma(z_i)-b_i$. Đạo hàm bậc hai là $\sigma(z_i)(1-\sigma(z_i))\ge0$. Dùng quy tắc chuỗi qua điểm số affine:
-
-$$\nabla\ell_i=(p_i-b_i)a_i,\qquad
-\nabla^2\ell_i=p_i(1-p_i)a_ia_i^T\succeq0.$$
-
-Tổng các hàm mất mát lồi vẫn lồi. Việc $\sigma$ phụ thuộc phi tuyến vào điểm số không kéo theo hàm mất mát phi lồi theo $w$. Hệ số chặn (bias) có thể được gộp vào $w$ bằng cách thêm một đặc trưng luôn bằng 1. Điểm số vẫn là một hàm affine của vector tham số mới.
-
-Xét ví dụ tự đặt có một tham số với $(a,b)=(-1,0),(1,1)$. Tại $w=0$, mỗi xác suất bằng $\frac{1}{2}$, tổng hàm mất mát bằng $2\log2\approx1.38629$, gradient tổng bằng $-1$, và Hessian bằng $\frac{1}{2}$. Khi tăng $w$, hai nhãn được tách rõ hơn. Tuy nhiên, biểu thức $2\log(1+e^{-w})$ chỉ tiến dần về 0 khi $w\to+\infty$ và không đạt giá trị 0 tại một tham số hữu hạn. Đây là một ví dụ cho thấy bài toán lồi vẫn có thể không đạt nghiệm. Thêm điều chuẩn dương sẽ làm mô hình có độ cong dương và tạo nghiệm hữu hạn.
-
-```python
-import math
-
-def logistic_loss_gradient_hessian(w, data):
-    loss = gradient = hessian = 0.0
-    for a, b in data:
-        z = a*w
-        p = 1/(1+math.exp(-z)) if z >= 0 else math.exp(z)/(1+math.exp(z))
-        # softplus ổn định: tránh tính exp(z) khi z quá lớn
-        loss += max(z, 0)+math.log1p(math.exp(-abs(z)))-b*z
-        gradient += (p-b)*a
-        hessian += p*(1-p)*a*a
-    return loss, gradient, hessian
-
-print(logistic_loss_gradient_hessian(0, [(-1, 0), (1, 1)]))
-# (1.3862943611198906, -1.0, 0.5)
-```
-
-## Bài tập tự luyện
-
-::: exercise 1. Chứng minh một miền
-Chứng minh $C=\{(x,y):x+y\le3,\ x\ge0,\ y\ge0\}$ lồi. Có cần vẽ hình để chứng minh không?
+::: exercise 1. Phân loại bốn bài toán
+Bài toán nào là bài toán lồi, hoặc viết lại được thành bài toán lồi tương đương? (a) Cực tiểu $\|Ax - b\|_1 + \|x\|_2^2$ với $x \succeq 0$. (b) Cực đại $x_1 x_2$ với $x_1 + x_2 = 4$, $x \succeq 0$. (c) Cực tiểu $\max_i |a_i^T x - b_i|$. (d) Cực tiểu $\|x\|_2$ với $\|x\|_2 \ge 1$.
 :::
+
 ::: solution
-Mỗi điều kiện là một nửa không gian: $x+y\le3$, $-x\le0$, $-y\le0$. Giao ba tập lồi là lồi. Hình giúp nhìn miền nhưng không cần cho chứng minh.
+(a) Lồi: chuẩn $\ell_1$ hợp với hàm affine, cộng bình phương chuẩn, đều lồi, và $x \succeq 0$ là các ràng buộc tuyến tính. (b) Ở dạng gốc thì không: $x_1 x_2$ không lõm trên $\mathbb{R}^2_+$, chẳng hạn tại $(1, 1)$ và $(3, 3)$ nó bằng 1 và 9, còn tại trung điểm $(2, 2)$ chỉ bằng 4, nhỏ hơn trung bình 5. Nhưng với $x \succ 0$, cực đại $x_1 x_2$ tương đương cực đại $\log x_1 + \log x_2$, một hàm lõm, nên bài toán viết lại được thành bài toán lồi. Nghiệm là $(2, 2)$, nơi gradient $(1/x_1,\ 1/x_2)$ tỉ lệ với $(1, 1)$. Điểm có một tọa độ bằng 0 cho tích bằng 0, không thể tối ưu. (c) Lồi: max của các trị tuyệt đối của hàm affine, và viết được thành quy hoạch tuyến tính bằng dạng epigraph. (d) Không lồi: miền khả thi là phần bù của quả cầu mở, không lồi. Nghiệm vẫn dễ thấy, mọi điểm trên mặt cầu đơn vị với giá trị 1, nhưng đó là một tập không lồi các nghiệm, điều không thể xảy ra ở bài toán lồi.
 :::
 
-::: exercise 2. Tách miền khỏi hàm
-$f(x)=x^2$. Miền khả thi $C=\{-1,1\}$. Đây có phải cực tiểu một hàm lồi trên miền lồi không?
-:::
-::: solution
-Không. Hàm lồi trên $\mathbb R$, nhưng $C$ không lồi vì thiếu trung điểm 0. Hai điểm khả thi đều tối ưu với giá trị 1. Không được áp dụng kết quả duy nhất dựa trên miền lồi.
+::: exercise 2. Một bài toán điều khiển một bước
+Trạng thái hiện tại là $s = 2$, và sau khi tác động $u$, trạng thái mới là $s + u$. Ta muốn đưa trạng thái về gần 0 nhưng không tốn quá nhiều năng lượng, và độ lớn tác động bị giới hạn: cực tiểu $\tfrac12 (2 + u)^2 + \tfrac12 u^2$ với $|u| \le 0.5$. (a) Chứng minh đây là bài toán lồi. (b) Tìm nghiệm và kiểm chứng bằng điều kiện tối ưu trên miền. (c) Nếu bỏ giới hạn, nghiệm là gì?
 :::
 
-::: exercise 3. Chứng nhận tại biên
-Giải $\min(x-3)^2$ với $x\le2$ bằng điều kiện bậc nhất trên miền.
-:::
 ::: solution
-Chọn $x^*=2$, $f'(2)=-2$. Với mọi $y\le2$, $-2(y-2)\ge0$. Hàm lồi và miền lồi nên điều kiện đủ. Giá trị tối ưu là 1. Không đặt $f'(x)=0$ rồi chấp nhận $x=3$, vì điểm ấy không khả thi.
+(a) Hàm mục tiêu là tổng hai bình phương của hàm affine nên lồi, và $|u| \le 0.5$ là hai ràng buộc tuyến tính. (b) Đạo hàm là $(2 + u) + u = 2 + 2u$, dương trên cả đoạn $[-0.5, 0.5]$, nên hàm tăng trên đoạn và nghiệm là $u^\star = -0.5$, với giá trị $\tfrac12 \cdot 1.5^2 + \tfrac12 \cdot 0.25 = 1.25$. Kiểm chứng: tại $u^\star$, đạo hàm bằng 1, và với mọi $y \in [-0.5, 0.5]$, $1 \cdot (y - (-0.5)) = y + 0.5 \ge 0$. Điều kiện tối ưu thỏa dù đạo hàm khác 0, vì nghiệm nằm trên biên. (c) Không giới hạn, cho đạo hàm bằng 0 được $u = -1$: tác động đưa trạng thái về $1$, chia đều "chi phí" giữa độ lệch trạng thái và năng lượng. Ràng buộc $|u| \le 0.5$ chặt tại nghiệm và thật sự làm thay đổi nghiệm.
+:::
+
+::: exercise 3. Một chuỗi lập luận xuyên chương
+Cho $f(x) = \log(e^{x_1} + e^{x_2}) + \tfrac12\|x\|_2^2$ trên $\mathbb{R}^2$. (a) Chứng minh $f$ lồi mạnh. (b) Dùng tính đối xứng để đoán điểm cực tiểu, rồi kiểm chứng bằng gradient. (c) Giải thích vì sao đó là cực tiểu toàn cục duy nhất, nêu rõ kết quả nào của chương được dùng ở mỗi bước.
+:::
+
+::: solution
+(a) Log-sum-exp lồi với Hessian nửa xác định dương (chủ đề những hàm lồi thường gặp), và $\tfrac12\|x\|_2^2$ có Hessian $I$. Tổng có Hessian $\succeq I$, nên $f$ lồi mạnh với $m = 1$ (chủ đề điều kiện bậc hai). (b) $f$ không đổi khi đổi chỗ $x_1$ và $x_2$, nên thử $x_1 = x_2 = t$: $f = \log 2 + t + t^2$, nhỏ nhất khi $t = -\tfrac12$. Kiểm chứng: $\nabla f(x) = \operatorname{softmax}(x) + x$, tại $(-\tfrac12, -\tfrac12)$ bằng $(\tfrac12, \tfrac12) + (-\tfrac12, -\tfrac12) = 0$. Giá trị nhỏ nhất là $\log 2 - \tfrac14 \approx 0.443$. (c) $f$ lồi và khả vi, nên điểm có gradient bằng 0 là cực tiểu toàn cục (chủ đề điều kiện bậc nhất). $f$ lồi nghiêm ngặt vì Hessian xác định dương, nên có nhiều nhất một cực tiểu (chủ đề cực tiểu cục bộ và toàn cục). Hai điều này cho cực tiểu toàn cục duy nhất. Lập luận đối xứng chỉ dùng để đoán nghiệm, còn việc kiểm chứng dựa hoàn toàn vào gradient.
 :::
 
 ## Tóm tắt
 
-Miền lồi bảo đảm toàn bộ đoạn thẳng nối hai điểm khả thi vẫn nằm trong miền. Hàm lồi khống chế giá trị hàm trên đoạn thẳng đó. Hai điều kiện kết hợp để biến cực tiểu cục bộ thành cực tiểu toàn cục. Điều kiện gradient bằng 0 chỉ áp dụng trực tiếp cho bài toán không ràng buộc. Tại biên của miền, ta phải xét các hướng đi tới những điểm khả thi. Tính duy nhất và sự tồn tại của nghiệm vẫn cần các điều kiện riêng.
+Một bài toán tối ưu lồi có miền khả thi lồi, được mô tả bằng bất đẳng thức của các hàm lồi và đẳng thức affine, cùng một hàm mục tiêu lồi. Hình học của tập lồi cho các khối hình cơ bản, các phép toán lắp ghép, và định lý siêu phẳng phân tách. Giải tích của hàm lồi cho ba công cụ nhận diện, một danh mục hàm cơ bản và các quy tắc lắp ghép. Ghép lại, ta được định lý trung tâm: mọi cực tiểu cục bộ của bài toán lồi là toàn cục, cùng điều kiện tối ưu $\nabla f_0(x)^T (y - x) \ge 0$ để chứng nhận nghiệm cả khi nó nằm trên biên.
+
+Tính lồi luôn phải xét theo biến của bài toán tối ưu. Nhiều mô hình học máy tuyến tính theo tham số là bài toán lồi, còn mạng nơ-ron thì không, và nhận ra sự khác biệt ấy là kỹ năng chính mà chương này muốn để lại.
 
 ## Nguồn và đọc thêm
 
-- Nguồn chính: *Convex Optimization*, chương 1, §2.1–2.3, §3.1–3.2, §4.2.2–4.2.3 (tr. 138–140), §4.4 về QP và §7.1 về hồi quy logistic (tr. 354–355). Định nghĩa và điều kiện được đối chiếu với bản PDF local.
-- Hình 2.1 (tr. 22) và Hình 3.1 (tr. 67) được mô phỏng bằng code với tọa độ/hàm tự đặt. Không sao chép ảnh hay văn bản hình.
-- [Hình học tập lồi bổ sung](../doc-them/hinh-hoc-tap-loi.md): ellipsoid, nón, phối cảnh, siêu phẳng và thứ tự Pareto, nguồn chương 2.
-- Các ví dụ số, phản ví dụ hai tầng và bài tập được tự biên soạn. Tên và thứ tự bài giảng theo trang môn. Nội dung không lấy từ trang đó.
+- S. Boyd, L. Vandenberghe, *Convex Optimization*, Cambridge University Press, 2004: chương 1, chương 2, §3.1–3.2, §4.1–4.2 và §7.1. Mỗi chủ đề ghi rõ mục và trang tương ứng ở phần nguồn của nó.
+- Các mô phỏng, ví dụ số, câu hỏi và bài tập do người soạn bổ sung, và mọi con số đã được tính lại bằng chương trình. Tên và thứ tự bài giảng theo trang môn học.
 
-[Bài 00](./bai-00-on-tap-nen-tang.md) · [Bài 02 — Các bài toán tối ưu lồi](./bai-02-tap-loi.md).
+[Bài 00](./bai-00-on-tap-nen-tang.md) · [Bài 02 — Các bài toán tối ưu lồi](./bai-02-tap-loi.md)

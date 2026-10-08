@@ -47,7 +47,48 @@ FREQUENCY = (
 
 # Labels that promise depth ("Bản chất: …") before a general claim.
 LABEL_RE = re.compile(r"^(?:#{2,6}\s+|:::\s*\w+\s+|\*\*)?(?:bản chất|tinh hoa|trực giác then chốt|chân lý)\b", re.IGNORECASE)
-OPENERS = ("ta có thể thấy rằng", "điều quan trọng ở đây", "điều đáng chú ý là", "trực giác đằng sau")
+OPENERS = (
+    "ta có thể thấy rằng", "điều quan trọng ở đây", "điều đáng chú ý là", "trực giác đằng sau",
+    "điều này cho thấy", "điều này có nghĩa là", "cần lưu ý rằng", "hãy để ý rằng", "nói một cách đơn giản",
+    "như đã đề cập", "như đã nói ở trên", "không chỉ", "một điều thú vị",
+)
+
+# Wording that reads as machine-written in Vietnamese teaching prose: slogans, inflated praise,
+# calques of English filler. Matched on word boundaries; a correct technical use can be kept.
+AI_LEXICON = {
+    "hãy cùng": "Lối mở đầu kiểu quảng cáo; vào thẳng câu hỏi, ví dụ hoặc phép tính.",
+    "hành trình": "Ẩn dụ sáo rỗng trong bài giảng; nói rõ bước học tiếp theo là gì.",
+    "chìa khóa": "Nói cụ thể khái niệm này giúp giải quyết được việc gì.",
+    "mở khóa": "Nói cụ thể khái niệm này giúp giải quyết được việc gì.",
+    "vén màn": "Tránh giọng giật gân; nêu điều được chứng minh.",
+    "bức tranh toàn cảnh": "Thay bằng nội dung cụ thể của phần tổng quan.",
+    "mạnh mẽ": "Nói rõ mạnh ở điểm nào: giải được lớp bài nào, cần giả thiết gì.",
+    "rất mạnh": "Nói rõ mạnh ở điểm nào: giải được lớp bài nào, cần giả thiết gì.",
+    "tuyệt vời": "Đánh giá cảm tính; nói kết quả cụ thể.",
+    "kỳ diệu": "Đánh giá cảm tính; nói kết quả cụ thể.",
+    "thần kỳ": "Đánh giá cảm tính; nói kết quả cụ thể.",
+    "đáng kinh ngạc": "Đánh giá cảm tính; nói kết quả cụ thể.",
+    "không thể phủ nhận": "Khẳng định tuyệt đối thay cho lập luận.",
+    "đóng vai trò quan trọng": "Nêu tác dụng cụ thể thay cho lời đánh giá.",
+    "đóng một vai trò": "Nêu tác dụng cụ thể thay cho lời đánh giá.",
+    "về cơ bản": "Thường là dịch máy của 'basically'; bỏ đi hoặc nói rõ phần nào là cơ bản.",
+    "trong thế giới của": "Lối mở đầu sáo rỗng; vào thẳng đối tượng đang học.",
+    "một cách hiệu quả": "Nói hiệu quả theo nghĩa nào: thời gian, bộ nhớ, số bước lặp.",
+}
+# Logical connectives. A long paragraph without any of them is often a list of claims, not an explanation.
+CONNECTIVES = (
+    "vì", "nên", "do", "nhưng", "mà", "tuy", "song", "nếu", "thì", "khi", "để", "còn", "rồi", "nhờ", "bởi",
+    "tức", "nghĩa là", "chẳng hạn", "ví dụ", "ngược lại", "trong khi", "đồng thời", "hơn nữa", "vậy",
+    "do đó", "vì thế", "vì vậy", "cho nên", "thế nhưng", "tuy nhiên", "mặc dù", "dù", "sau đó", "trước hết",
+    "cuối cùng", "ngoài ra", "từ đó", "như vậy", "hay", "hoặc", "cũng", "lại",
+)
+CHOPPY_WORDS = 5          # câu từ chừng này từ trở xuống được xem là câu cụt
+CHOPPY_RUN = 4            # số câu cụt liên tiếp trong một đoạn thì gợi ý viết lại
+CONNECTIVE_SENTENCES = 5  # đoạn từ chừng này câu trở lên mà không có từ nối nào
+QUESTION_LABEL_RE = re.compile(r"^\*\*Câu \d+\.\*\*\s*(.+)$|^<summary>\s*Thử trả lời:\s*(.+?)</summary>$")
+REFERENCE_RE = re.compile(r"§|\btr\.\s*\d|https?://|Convex Optimization", re.IGNORECASE)
+SUBLABEL_RE = re.compile(r"^\(?[a-h]\)\s")
+ARROW_RE = re.compile(r"→|⇒|=>")
 # A blockquote that attributes words to a named person: “…” — Name / "…" — Name / "... đã nói"
 QUOTE_ATTRIBUTION_RE = re.compile(r"[\"“”«].{8,}[\"“”»].*(?:—|–|-{2})\s*\S|(?:đã nói|từng nói|đã nghĩ|từng viết)", re.IGNORECASE)
 INLINE_MATH_RE = re.compile(r"\$\$.*?\$\$|\$[^$\n]+\$|`[^`\n]+`")
@@ -120,12 +161,31 @@ def _has_word(lower, phrase):
     return re.search(rf"(?<![\w]){re.escape(phrase)}(?![\w])", lower) is not None
 
 
+def _sentences(prose_line):
+    """Split one Markdown prose line into sentences; math becomes a one-word placeholder."""
+    prose = INLINE_MATH_RE.sub(" X ", prose_line)
+    prose = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", prose).replace("**", "")
+    prose = re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", prose)
+    return [part.strip() for part in re.split(r"(?<=[.!?])\s+", prose) if part.strip()]
+
+
+def _has_connective(sentences):
+    lower = " ".join(sentences).casefold()
+    return any(_has_word(lower, word) for word in CONNECTIVES)
+
+
 def review(sections):
     findings, opener_locations = [], {phrase: [] for phrase in OPENERS}
+    question_openings = {}
+    sections = list(sections)
     for section, text in sections:
         text = strip_frontmatter(unicodedata.normalize("NFC", text))
         punctuation_lines = dict(markdown_lines(punctuation_prose(text)))
+        in_sources = False
         for line_number, raw, quote in markdown_lines(text, include_quotes=True):
+            if raw.startswith("## "):
+                # Mục nguồn là danh sách trích dẫn, không phải lời giảng: không đo câu cụt hay từ nối ở đó.
+                in_sources = "nguồn" in raw.casefold()
             where = f"{section}:line {line_number}"
             lower = raw.casefold()
             if quote:
@@ -158,13 +218,51 @@ def review(sections):
             for phrase in OPENERS:
                 if phrase in lower:
                     opener_locations[phrase].append(where)
+            for phrase, suggestion in AI_LEXICON.items():
+                if _has_word(lower, phrase):
+                    findings.append({"code": "AI_LEXICON", "where": where, "phrase": phrase, "suggestion": suggestion})
+            if ARROW_RE.search(punctuation_lines.get(line_number, "")) and not raw.lstrip().startswith(("|", "<")):
+                findings.append({"code": "ARROW_IN_PROSE", "where": where, "text": raw.strip(),
+                                 "suggestion": "Mũi tên là lối ghi chép tắt; viết thành câu có từ nối (nên, khi đó, dẫn tới…)."})
+            question = QUESTION_LABEL_RE.match(raw.strip())
+            if question:
+                words = re.sub(r"[^\w\s]", " ", INLINE_MATH_RE.sub(" X ", question.group(1) or question.group(2)).casefold()).split()
+                if len(words) >= 2:
+                    question_openings.setdefault(" ".join(words[:2]), []).append((section, where))
+            stripped = raw.strip()
+            if not in_sources and not REFERENCE_RE.search(stripped) and not stripped.startswith(("|", "#", ":::", "<")):
+                sentences = _sentences(stripped)
+                run = longest = 0
+                for sentence in sentences:
+                    short = len(sentence.split()) <= CHOPPY_WORDS and not SUBLABEL_RE.match(sentence)
+                    run = run + 1 if short else 0
+                    longest = max(longest, run)
+                if longest >= CHOPPY_RUN:
+                    findings.append({"code": "CHOPPY_RUN", "where": where, "text": stripped,
+                                     "suggestion": "Nhiều câu cụt liền nhau đọc như ghi chép tắt; nối chúng bằng quan hệ thật (vì, nên, khi đó, nhưng) để người học thấy lập luận."})
+                if len(sentences) >= CONNECTIVE_SENTENCES and not _has_connective(sentences):
+                    findings.append({"code": "LOW_CONNECTIVES", "where": where, "text": stripped,
+                                     "suggestion": "Đoạn dài mà không có từ nối nào: xác định quan hệ giữa các câu (nguyên nhân, đối lập, ví dụ, hệ quả) rồi viết nó ra."})
             prose = INLINE_MATH_RE.sub(" X ", raw)
             for sentence in re.split(r"(?<=[.!?])\s+", prose):
                 if len(sentence.split()) > OVERLOAD_WORDS:
                     findings.append({"code": "POSSIBLE_OVERLOAD", "where": where, "text": sentence.strip(),
                                      "suggestion": "Xem câu có đổi nhiệm vụ tư duy không; ngưỡng từ chỉ là heuristic (công thức tính là một từ)."})
+    by_section = {}
+    for opening, places in question_openings.items():
+        for section, where in places:
+            by_section.setdefault((opening, section), []).append(where)
+    total_questions = sum(len(places) for places in question_openings.values())
+    # Một trang: 3 câu cùng khuôn là đủ để đọc thấy lặp. Cả chương: khuôn chiếm từ 10% số câu hỏi trở lên.
+    chapter_limit = max(4, -(-total_questions // 10))
+    for opening, places in question_openings.items():
+        local = max(len(v) for (o, _), v in by_section.items() if o == opening)
+        if local >= 3 or len(places) >= chapter_limit:
+            findings.append({"code": "QUESTION_TEMPLATE", "phrase": opening, "where": [w for _, w in places],
+                             "suggestion": "Nhiều câu hỏi mở đầu cùng một khuôn; đổi cách đặt vấn đề: một phản ví dụ cần tìm, một dự đoán cần kiểm, một tình huống thực tế, một câu hỏi \"điều gì xảy ra nếu\"."})
+    opener_limit = max(3, -(-len(sections) // 4))
     for phrase, locations in opener_locations.items():
-        if len(locations) >= 3:
+        if len(locations) >= opener_limit:
             findings.append({"code": "REPEATED_OPENER", "phrase": phrase, "where": locations,
                              "suggestion": "Xem mật độ lặp và lý do; không thay bằng khuôn sáo mới."})
     return {"status": "review-suggestions-only",
@@ -189,13 +287,15 @@ def as_text(report):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("input", type=Path)
+    parser.add_argument("input", type=Path, nargs="+", help="Một hoặc nhiều file Markdown (rà cả chương để thấy khuôn lặp giữa các trang), hoặc một file JSON spec.")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--format", choices=("json", "text"), default="json")
     args = parser.parse_args()
     try:
-        raw = args.input.read_text(encoding="utf-8-sig")
-        sections = authored_sections(json.loads(raw)) if args.input.suffix.lower() == ".json" else [(args.input.name, raw)]
+        if len(args.input) == 1 and args.input[0].suffix.lower() == ".json":
+            sections = list(authored_sections(json.loads(args.input[0].read_text(encoding="utf-8-sig"))))
+        else:
+            sections = [(path.name, path.read_text(encoding="utf-8-sig")) for path in args.input]
         report = review(sections)
         rendered = as_text(report) if args.format == "text" else json.dumps(report, ensure_ascii=False, indent=2) + "\n"
         if args.output:

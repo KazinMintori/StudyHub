@@ -141,6 +141,42 @@ class LanguageReview(unittest.TestCase):
     def test_plain_quote_and_correct_terms_pass(self):
         self.assertEqual(self.codes("> Đoạn nguồn: gradient tại điểm đang xét.\nBản đồ bài học gồm ba phần."), [])
 
+    def test_machine_style_patterns(self):
+        self.assertIn("AI_LEXICON", self.codes("Hãy cùng bước vào hành trình tìm hiểu tập lồi."))
+        self.assertIn("AI_LEXICON", self.codes("Đây là một công cụ rất mạnh."))
+        self.assertIn("ARROW_IN_PROSE", self.codes("Tăng bước nhảy → hàm tăng lên."))
+        self.assertNotIn("ARROW_IN_PROSE", self.codes("Ta có $x \\to y$ khi $t \\to 0$."))
+        self.assertIn("CHOPPY_RUN", self.codes("Khả thi $x=0$. Nhân tử không âm. Bù trừ đúng. Dừng đúng. Ràng buộc chặt."))
+        source_line = "- S. Boyd, *Convex Optimization*, §3.1 (tr. 67). Hình 3.1. Ví dụ 3.1. Ghi chú 3.1. Bài tập 3.8."
+        self.assertNotIn("CHOPPY_RUN", self.codes(source_line))
+        self.assertNotIn("CHOPPY_RUN", self.codes("Phân loại: (a) $x^2$. (b) $x^3$. (c) $e^x$. (d) $|x|$."))
+
+    def test_connectives_are_expected_in_long_paragraphs(self):
+        flat = "Tập lồi chứa đoạn nối. Hàm lồi nằm dưới dây cung. Epigraph của hàm lồi lồi. Tập mức dưới lồi. Giao giữ tính lồi."
+        self.assertIn("LOW_CONNECTIVES", self.codes(flat))
+        linked = "Tập lồi chứa đoạn nối, nên giao của chúng cũng lồi. Hàm lồi nằm dưới dây cung. Epigraph của hàm lồi lồi. Tập mức dưới lồi. Giao giữ tính lồi."
+        self.assertNotIn("LOW_CONNECTIVES", self.codes(linked))
+
+    def test_question_templates_across_pages(self):
+        page = "**Câu 1.** Một bạn nói A đúng.\n\n**Câu 2.** Một bạn nói B đúng.\n\n**Câu 3.** Một bạn nói C đúng."
+        self.assertIn("QUESTION_TEMPLATE", self.codes(page))
+        two = [("a.md", "**Câu 1.** Một bạn nói A.\n\n**Câu 2.** Vì sao B?"), ("b.md", "**Câu 1.** Một bạn nói C.\n\n**Câu 2.** Một bạn nói D.")]
+        self.assertNotIn("QUESTION_TEMPLATE", [f["code"] for f in self.reviewer.review(two)["findings"]])
+        two.append(("c.md", "**Câu 1.** Một bạn nói E."))
+        self.assertIn("QUESTION_TEMPLATE", [f["code"] for f in self.reviewer.review(two)["findings"]])
+
+    def test_cli_accepts_several_pages(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            files = []
+            for i in range(4):
+                page = Path(tmp) / f"p{i}.md"
+                page.write_text(f"**Câu 1.** Một bạn nói điều {i}.\n", encoding="utf-8")
+                files.append(str(page))
+            done = subprocess.run([sys.executable, "-I", str(SCRIPTS / "review_teaching_text.py"), *files, "--format", "text"],
+                                  capture_output=True, text=True, encoding="utf-8")
+            self.assertEqual(done.returncode, 0, done.stderr)
+            self.assertIn("QUESTION_TEMPLATE", done.stdout)
+
     def test_text_format_cli(self):
         with tempfile.TemporaryDirectory() as tmp:
             note = Path(tmp) / "note.md"
@@ -256,11 +292,11 @@ class SkillPackage(unittest.TestCase):
 
 NODE = shutil.which("node")
 CATALOG = """
-const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
+const lesson = (slug, title, prerequisites, status = 'ready', topicGroups = []) => ({ slug, title, prerequisites, status, topicGroups })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
 export const courseCatalog = [{
   id: 'toan', name: 'Toán', parts: [{ title: 'P1', lessons: ['bai-01-thu'] }],
-  lessons: [lesson('bai-01-thu', 'Bài thử', ['gradient'])],
+  lessons: [lesson('bai-01-thu', 'Bài thử', ['gradient'], 'ready', [{ title: 'I. Phần một', topics: [{ slug: 'gradient-la-gi', title: 'Gradient là gì', question: 'Gradient chỉ hướng nào?' }] }])],
   slides: [slide('Gradient chỉ hướng tăng', ['Gradient gom các đạo hàm riêng.', 'Đi ngược gradient để giảm cục bộ.'], 'bai-01-thu', 'x_{k+1} = x_k − η∇f(x_k), η > 0')]
 }]
 export function findCourse(id) { return courseCatalog.find(c => c.id === id) }
@@ -310,6 +346,29 @@ Tính gradient của x+2y.
 :::
 
 Xem [Gradient](/wiki/gradient.md).
+
+<TopicMap />
+"""
+TOPIC = """---
+course: toan
+lecture: bai-01-thu
+topic: gradient-la-gi
+section: topic
+title: "Gradient là gì"
+description: "Chủ đề thử cho bộ kiểm tra."
+---
+
+Đoạn mở đầu của chủ đề.
+
+::: exercise
+Tính gradient của 3x.
+:::
+
+::: solution
+3.
+:::
+
+Quay lại [trang chương](../bai-01-thu.md).
 """
 SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><text x="10" y="20" font-size="16">∇f</text></svg>'
 
@@ -324,6 +383,7 @@ class LectureIntegration(unittest.TestCase):
             "docs/.vitepress/wiki-content.mjs": WIKI_CONTENT,
             "docs/.vitepress/lecture-model.mjs": LECTURE_MODEL,
             "docs/toan/bai-giang/bai-01-thu.md": LECTURE,
+            "docs/toan/bai-giang/bai-01-thu/gradient-la-gi.md": TOPIC,
             "docs/toan/bai-giang/img/lec-01/grad.svg": SVG,
             "docs/wiki/gradient.md": "# Gradient\n\n## Giải thích kỹ thuật\n",
             "docs/wiki/dao-ham.md": "# Đạo hàm\n\n## Giải thích kỹ thuật\n",
@@ -372,7 +432,7 @@ class LectureIntegration(unittest.TestCase):
             ("NOT_IN_PARTS", lambda f: f.update({cat: f[cat].replace("lessons: ['bai-01-thu'] }", "lessons: [] }")})),
             ("READY_WITHOUT_SLIDES", lambda f: f.update({cat: f[cat].replace("'bai-01-thu', 'x_{k+1}", "'khac', 'x_{k+1}")})),
             ("SLIDE_LATEX", lambda f: f.update({cat: f[cat].replace("x_{k+1} = x_k − η∇f(x_k)", "x_{k+1} = x_k - \\\\eta \\\\nabla f")})),
-            ("PREREQ_NOT_IN_CONCEPTS", lambda f: f.update({cat: f[cat].replace("['gradient'])", "['gradient', 'ham-loi'])")})),
+            ("PREREQ_NOT_IN_CONCEPTS", lambda f: f.update({cat: f[cat].replace("['gradient'], 'ready'", "['gradient', 'ham-loi'], 'ready'")})),
             ("PREREQ_NOT_IN_GROUP", lambda f: f.update({"docs/.vitepress/wiki-content.mjs": f["docs/.vitepress/wiki-content.mjs"].replace("ids: ['gradient', 'dao-ham']", "ids: ['dao-ham']")})),
             ("PREREQ_NO_DETAILS", lambda f: f.update({"docs/.vitepress/wiki-content.mjs": f["docs/.vitepress/wiki-content.mjs"].replace("gradient: 'Chi tiết.', ", "")})),
             ("IMAGE_MISSING", lambda f: f.update({"docs/toan/bai-giang/img/lec-01/grad.svg": None})),
@@ -387,6 +447,37 @@ class LectureIntegration(unittest.TestCase):
                 self.assert_error(expected, edit)
         self.assert_error("LESSON_NOT_IN_CATALOG", None, target="toan/bai-02-chua-co")
         self.assert_error("CONCEPT_NO_GROUP", lambda f: f.update({"docs/.vitepress/wiki-content.mjs": f["docs/.vitepress/wiki-content.mjs"].replace("ids: ['gradient', 'dao-ham']", "ids: ['gradient']")}), target="--all")
+
+    def test_topic_layer_mutations_are_detected(self):
+        top = "docs/toan/bai-giang/bai-01-thu/gradient-la-gi.md"
+        cat = "docs/.vitepress/course-catalog.mjs"
+        cases = [
+            ("TOPIC_MISSING", lambda f: f.update({top: None})),
+            ("FRONTMATTER_TOPIC", lambda f: f.update({top: f[top].replace("topic: gradient-la-gi", "topic: khac")})),
+            ("FRONTMATTER_SECTION", lambda f: f.update({top: f[top].replace("section: topic", "section: lecture")})),
+            ("LAB_MISSING", lambda f: f.update({top: f[top] + "\n<KhongCoLab />\n"})),
+            ("RELATIVE_LINK_BROKEN", lambda f: f.update({top: f[top].replace("../bai-01-thu.md", "../khong-co.md")})),
+            ("CONTAINER_UNCLOSED", lambda f: f.update({top: f[top].replace("3.\n:::", "3.")})),
+        ]
+        for expected, edit in cases:
+            with self.subTest(expected):
+                self.assert_error(expected, edit)
+        one = "topics: [{ slug: 'gradient-la-gi', title: 'Gradient là gì', question: 'Gradient chỉ hướng nào?' }]"
+        two = "topics: [{ slug: 'gradient-la-gi', title: 'Gradient là gì', question: 'Gradient chỉ hướng nào?' }, { slug: 'gradient-la-gi', title: 'Lặp', question: '?' }]"
+        self.assert_error("TOPIC_DUPLICATE", lambda f: f.update({cat: f[cat].replace(one, two)}), target="--all")
+
+    def test_topic_layer_warnings_are_reported(self):
+        lec = "docs/toan/bai-giang/bai-01-thu.md"
+        top = "docs/toan/bai-giang/bai-01-thu/gradient-la-gi.md"
+        cases = [
+            ("TOPIC_ORPHAN", lambda f: f.update({"docs/toan/bai-giang/bai-01-thu/thua.md": TOPIC.replace("gradient-la-gi", "thua")})),
+            ("HUB_NO_TOPIC_MAP", lambda f: f.update({lec: f[lec].replace("<TopicMap />", "")})),
+            ("TOPIC_TITLE_MISMATCH", lambda f: f.update({top: f[top].replace('title: "Gradient là gì"', 'title: "Tên khác"')})),
+            ("EXTRA_H1", lambda f: f.update({top: f[top].replace("Đoạn mở đầu của chủ đề.", "# Gradient\n\nĐoạn mở đầu của chủ đề.")})),
+        ]
+        for expected, edit in cases:
+            with self.subTest(expected):
+                self.assert_warning(expected, edit)
 
     def test_warnings_are_reported(self):
         lec = "docs/toan/bai-giang/bai-01-thu.md"

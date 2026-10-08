@@ -1,0 +1,52 @@
+/* Trang chủ đề: một chương được đọc qua nhiều trang, mỗi trang một chủ đề. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.topic-header .book-breadcrumbs { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); font-size: var(--fs-small); color: var(--ink-3); }
+.topic-header .book-breadcrumbs a { color: var(--tim); }
+.topic-progress { display: flex; gap: 3px; list-style: none; padding: 0; margin: var(--space-4) 0 0; }
+.topic-progress li { flex: 1; margin: 0; padding: 0; }
+.topic-progress a { display: block; height: 6px; border-radius: 3px; background: var(--rule); transition: background var(--motion-fast) var(--ease); }
+.topic-progress li.done a { background: var(--tim-soft); box-shadow: inset 0 0 0 1px var(--tim); }
+.topic-progress li.current a { background: var(--tim); }
+.topic-progress a:hover, .topic-progress a:focus-visible { background: var(--tim-hover); }
+
+.topic-nav { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-family: var(--font-ui); }
+.topic-nav-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.topic-card { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink); text-decoration: none; min-height: 44px; transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.topic-card:hover, .topic-card:focus-visible { border-color: var(--tim); background: var(--canvas); }
+.topic-card.next { text-align: right; grid-column: 2; }
+.topic-card.previous { grid-column: 1; }
+.topic-card-label { font-size: var(--fs-small); color: var(--ink-3); }
+.topic-card-title { font-size: var(--fs-ui); font-weight: 600; color: var(--tim); line-height: 1.45; }
+.topic-card-question { font: var(--fs-small)/1.5 var(--font-read); color: var(--ink-2); }
+.topic-outline { margin-top: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--canvas); padding: var(--space-3) var(--space-4); }
+.topic-outline summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 600; font-size: var(--fs-ui); }
+.topic-outline-group p { margin: var(--space-3) 0 var(--space-1); font-size: var(--fs-small); font-weight: 600; color: var(--ink-2); }
+.topic-outline ol { margin: 0; padding-left: var(--space-6); }
+.topic-outline li { margin: var(--space-1) 0; font-size: var(--fs-ui); line-height: 1.5; }
+.topic-outline li a { color: var(--ink); }
+.topic-outline li a[aria-current=page] { color: var(--tim); font-weight: 600; }
+
+.vp-doc .topic-map { margin: var(--space-6) 0; font-family: var(--font-ui); }
+.vp-doc .topic-map-meta { font-size: var(--fs-small); color: var(--ink-3); margin: 0 0 var(--space-3); }
+.vp-doc .topic-map-group { margin: var(--space-5) 0 var(--space-6); }
+.vp-doc .topic-map-group-title { font-size: var(--fs-h3); font-weight: 600; margin: 0; padding: 0; border: 0; }
+.vp-doc .topic-map-group-description { font: var(--fs-ui)/1.6 var(--font-read); color: var(--ink-2); margin: var(--space-1) 0 var(--space-3); }
+.vp-doc .topic-map ol { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+.vp-doc .topic-map li { margin: 0; border-bottom: 1px solid var(--rule); }
+.vp-doc .topic-map li a { display: flex; gap: var(--space-4); padding: var(--space-3) var(--space-2); color: var(--ink); text-decoration: none; border-radius: var(--radius-sm); }
+.vp-doc .topic-map li a:hover, .vp-doc .topic-map li a:focus-visible { background: var(--canvas); }
+.vp-doc .topic-map-number { flex: 0 0 2.2em; height: 2.2em; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--tim-soft); color: var(--tim); font-weight: 600; font-size: var(--fs-small); font-variant-numeric: tabular-nums; }
+.vp-doc .topic-map-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.vp-doc .topic-map-title { font-weight: 600; font-size: var(--fs-ui); color: var(--tim); line-height: 1.45; }
+.vp-doc .topic-map-question { font: var(--fs-ui)/1.55 var(--font-read); color: var(--ink); }
+.vp-doc .topic-map-source { font-size: var(--fs-meta); color: var(--ink-3); }
+
+@media (max-width: 767px) {
+  .topic-nav-cards { grid-template-columns: 1fr; }
+  .topic-card.next, .topic-card.previous { grid-column: 1; text-align: left; }
+  .topic-progress { margin-top: var(--space-2); }
+}
+
+/* Trong trang chủ đề, khối trích dẫn chỉ dùng cho phát biểu chính thức (định nghĩa, mệnh đề, định lý). */
+.topic-layout .vp-doc blockquote { color: var(--ink); background: var(--tim-soft); border-left: 3px solid var(--tim); border-radius: 0 var(--radius) var(--radius) 0; padding: var(--space-3) var(--space-4); margin: var(--space-5) 0; }
+.topic-layout .vp-doc blockquote p { color: var(--ink); margin: var(--space-2) 0; }

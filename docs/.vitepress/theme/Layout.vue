@@ -6,6 +6,8 @@ import CourseNav from './CourseNav.vue'
 import TermPreview from './TermPreview.vue'
 import LectureHeader from './LectureHeader.vue'
 import LecturePanels from './LecturePanels.vue'
+import TopicHeader from './TopicHeader.vue'
+import TopicNav from './TopicNav.vue'
 import WikiFooter from './WikiFooter.vue'
 import BuyMeCoffee from './BuyMeCoffee.vue'
 import WelcomeScreen from './WelcomeScreen.vue'
@@ -30,14 +32,15 @@ watch(()=>route.path,()=>syncLecturePart())
 </script>
 
 <template>
-  <Layout :class="{ 'lecture-layout': frontmatter.section==='lecture', 'lecture-reading-plain': frontmatter.section==='lecture' && frontmatter.readingStyle==='plain', 'lecture-slides-layout': frontmatter.section==='lecture' && lecturePart==='slides', 'lecture-alt': frontmatter.section==='lecture' && lecturePart!=='notes' }">
+  <Layout :class="{ 'lecture-layout': frontmatter.section==='lecture' || frontmatter.section==='topic', 'topic-layout': frontmatter.section==='topic', 'lecture-reading-plain': frontmatter.section==='lecture' && frontmatter.readingStyle==='plain', 'lecture-slides-layout': frontmatter.section==='lecture' && lecturePart==='slides', 'lecture-alt': frontmatter.section==='lecture' && lecturePart!=='notes' }">
     <template #not-found><main class="course-shell"><h1>Trang này không tồn tại</h1><p>Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
       <LectureHeader v-if="frontmatter.section==='lecture'" />
+      <TopicHeader v-else-if="frontmatter.section==='topic'" />
       <CourseNav v-else />
       <LecturePanels v-if="frontmatter.section==='lecture'" />
     </template>
-    <template #doc-after><LessonActions v-if="frontmatter.section==='lecture'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
+    <template #doc-after><LessonActions v-if="frontmatter.section==='lecture'" /><TopicNav v-if="frontmatter.section==='topic'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
     <template #layout-bottom>
       <DiagramLightbox />
       <TermPreview />

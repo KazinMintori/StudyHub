@@ -95,3 +95,14 @@ Rà riêng các khuôn sau khi biên tập Notes; chi tiết và cách sửa ở
 - In đậm dày đặc. In đậm tên khái niệm khi định nghĩa và điều kiện quyết định; phần còn lại để câu tự mang trọng tâm.
 
 `scripts/review_teaching_text.py` chỉ ra vị trí các khuôn này để xem lại. Giữ nguyên khi đó là trích dẫn có nguồn hoặc khi từ được dùng đúng nghĩa chuyên môn (“bản chất” trong một luận đề triết học đang phân tích).
+
+## Bốn dấu hiệu văn máy mà người học nhận ra
+
+Người dùng của site đã chỉ ra bốn đặc điểm làm lời giảng đọc như văn máy. Mỗi dấu hiệu dưới đây kèm một ví dụ đã gặp khi soạn Lecture 01 của môn Cơ sở toán cho AI và cách sửa.
+
+1. **Từ ngữ không ai dùng trong ngữ cảnh đó.** "Hãy cùng bước vào hành trình…", "một kỹ thuật kiểm tra rất mạnh", "đóng vai trò then chốt". Sửa bằng việc cụ thể mà khái niệm làm được: "kỹ thuật hạn chế lên một đường thẳng biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều".
+2. **Khuôn câu và khuôn câu hỏi lặp lại.** Mười bốn câu hỏi đào sâu trong một chương cùng mở bằng "Một bạn nói: … Bạn ấy đúng không?", trang nào cũng mở bằng "Trang này…", và "Đây chính là…" ở rất nhiều đoạn. Sửa theo nội dung của từng câu: "Khẳng định … nghe hợp lý. Hãy tìm một phản ví dụ.", "Để biết y có thuộc K* không, chỉ thử vài vector có đủ không?", "Điều gì xảy ra nếu bỏ giả thiết…?". Với "Đây chính là…", nói thẳng quan hệ: "Ta vừa tìm lại điều kiện nhân tử Lagrange, lần này chỉ bằng hình học."
+3. **Rút ngắn thay vì giải thích.** "Tập lồi. Hàm lồi. Cực tiểu cục bộ. Toàn cục." là ghi chép của người đã hiểu. Người học cần câu có quan hệ: "Vì miền khả thi lồi và hàm mục tiêu lồi, mọi cực tiểu cục bộ đều là cực tiểu toàn cục." Mũi tên "→" trong lời giảng cũng là một dạng rút gọn như vậy.
+4. **Dấu chấm phẩy thay cho từ nối.** "cho f = 1/4; phân phối thứ hai có…" sửa thành "cho f = 1/4, còn phân phối thứ hai có…". Tiếng Việt có rất nhiều từ nối (vì, nên, nhưng, còn, khi đó, chẳng hạn, ngược lại, nhờ đó). Một đoạn năm câu không có từ nối nào thường là danh sách khẳng định, chưa phải lời giải thích.
+
+`review_teaching_text.py` đánh dấu các vị trí tương ứng bằng `AI_LEXICON`, `EVALUATIVE_PHRASE`, `QUESTION_TEMPLATE`, `REPEATED_OPENER`, `CHOPPY_RUN`, `ARROW_IN_PROSE`, `PROSE_SEMICOLON` và `LOW_CONNECTIVES`. Truyền cả chương một lượt, vì khuôn lặp giữa các trang không thấy được khi rà từng trang. Mục tiêu là lời giải thích tốt hơn, không phải né công cụ: đừng thay một khuôn bằng một khuôn mới, đừng đổi sang từ hiếm hay câu vụn để "giống người".

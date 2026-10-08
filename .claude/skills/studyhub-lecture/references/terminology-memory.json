@@ -41,6 +41,11 @@
       "url": "https://math.berkeley.edu/~ltomczak/notes/Mich2022/DG_Notes.pdf",
       "purpose": "Primary lecture notes, section 2.6: contraction pairs upper and lower indices; not evidence of Vietnamese terminology.",
       "checked": "2026-10-07"
+    },
+    "COURSE-MATHAI-L02-SLIDES": {
+      "url": "raw_materials (bản slide sinh viên, Chương 02: Tập lồi, Cơ sở toán học của AI, UET)",
+      "purpose": "Cách gọi thuật ngữ của chính học phần: tập affine, bao lồi, nón lồi, nón chính quy, bất đẳng thức tổng quát, phần tử nhỏ nhất và phần tử tối thiểu, ảnh và ảnh ngược affine, phép phối cảnh, siêu phẳng phân tách, siêu phẳng tựa, nón đối ngẫu.",
+      "checked": "2026-10-08"
     }
   },
   "terms": [
@@ -505,6 +510,385 @@
       "evidence": {
         "vi_usage": "project-choice; concept-source-supported",
         "source_ids": [
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.affine-set",
+      "domain": "optimization",
+      "english": [
+        "affine set",
+        "affine combination",
+        "affine hull"
+      ],
+      "concept": "A set containing the whole line through any two of its points; equivalently a translated subspace.",
+      "technical_vi": "tập affine",
+      "variants": [
+        "tổ hợp affine",
+        "bao affine"
+      ],
+      "lecture_vi": "Tập affine chứa trọn đường thẳng qua hai điểm bất kỳ của nó, kể cả các điểm ứng với θ âm hoặc lớn hơn 1.",
+      "avoid_in_this_sense": [
+        "không gian con khi tập không chứa gốc",
+        "tập tuyến tính"
+      ],
+      "protected_meaning": [
+        "Hệ số θ chạy trên toàn R, tổng trọng số bằng 1",
+        "Không nhất thiết đi qua gốc",
+        "Mọi tập affine là tập lồi, chiều ngược lại sai"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.relative-interior",
+      "domain": "optimization",
+      "english": [
+        "relative interior",
+        "relative boundary",
+        "relint"
+      ],
+      "concept": "Interior taken relative to the affine hull of the set.",
+      "technical_vi": "nội tương đối",
+      "variants": [
+        "biên tương đối"
+      ],
+      "lecture_vi": "Nội tương đối là phần trong được đo bên trong bao affine của tập, nên vẫn khác rỗng với tập thấp chiều.",
+      "avoid_in_this_sense": [
+        "phần trong",
+        "điểm trong theo nghĩa thông thường khi tập thấp chiều"
+      ],
+      "protected_meaning": [
+        "Quả cầu lân cận được giao với bao affine",
+        "Khác phần trong thông thường khi tập nằm trong một tập affine thấp chiều"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.convex-cone",
+      "domain": "optimization",
+      "english": [
+        "convex cone",
+        "conic combination",
+        "conic hull"
+      ],
+      "concept": "A set closed under nonnegative linear combinations.",
+      "technical_vi": "nón lồi",
+      "variants": [
+        "tổ hợp nón",
+        "bao nón"
+      ],
+      "lecture_vi": "Nón lồi chứa mọi tổ hợp θ₁x₁ + θ₂x₂ với θ₁, θ₂ ≥ 0; hệ số không cần cộng lại bằng 1.",
+      "avoid_in_this_sense": [
+        "nón bất kỳ chưa chắc lồi"
+      ],
+      "protected_meaning": [
+        "Hệ số không âm, không đòi tổng bằng 1",
+        "Một nón có thể không lồi, chẳng hạn hợp hai tia"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.proper-cone",
+      "domain": "optimization",
+      "english": [
+        "proper cone"
+      ],
+      "concept": "A convex cone that is closed, solid (nonempty interior) and pointed (contains no line).",
+      "technical_vi": "nón chính quy",
+      "variants": [
+        "nón thực sự (ít dùng)"
+      ],
+      "lecture_vi": "Nón chính quy là nón lồi, đóng, có phần trong khác rỗng và không chứa trọn đường thẳng nào.",
+      "avoid_in_this_sense": [
+        "nón đúng",
+        "nón riêng"
+      ],
+      "protected_meaning": [
+        "Đủ bốn điều kiện lồi, đóng, đặc, nhọn",
+        "Dùng để định nghĩa bất đẳng thức tổng quát"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.generalized-inequality",
+      "domain": "optimization",
+      "english": [
+        "generalized inequality",
+        "componentwise inequality"
+      ],
+      "concept": "The partial ordering x ⪯_K y defined by y − x ∈ K for a proper cone K.",
+      "technical_vi": "bất đẳng thức tổng quát",
+      "variants": [
+        "thứ tự sinh bởi nón",
+        "bất đẳng thức theo từng thành phần khi K = R^n_+"
+      ],
+      "lecture_vi": "Viết x ⪯_K y khi y − x ∈ K; với K = R^n_+ đó là so sánh từng thành phần.",
+      "avoid_in_this_sense": [
+        "bất đẳng thức suy rộng giữa hai số"
+      ],
+      "protected_meaning": [
+        "Thứ tự thường không toàn phần: có cặp không so sánh được",
+        "Phụ thuộc nón K được chọn"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.minimum-element",
+      "domain": "optimization",
+      "english": [
+        "minimum element",
+        "least element"
+      ],
+      "concept": "An element that precedes every other element of the set in the given ordering.",
+      "technical_vi": "phần tử nhỏ nhất",
+      "variants": [],
+      "lecture_vi": "Phần tử nhỏ nhất so sánh được với mọi phần tử khác và nhỏ hơn hoặc bằng tất cả.",
+      "avoid_in_this_sense": [
+        "phần tử tối thiểu",
+        "điểm cực tiểu"
+      ],
+      "protected_meaning": [
+        "Nếu tồn tại thì duy nhất",
+        "Khác phần tử tối thiểu khi thứ tự không toàn phần"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.minimal-element",
+      "domain": "optimization",
+      "english": [
+        "minimal element",
+        "Pareto optimal",
+        "Pareto efficient"
+      ],
+      "concept": "An element such that no other element of the set precedes it; there can be many.",
+      "technical_vi": "phần tử tối thiểu",
+      "variants": [
+        "phương án tối ưu Pareto",
+        "điểm Pareto"
+      ],
+      "lecture_vi": "Phần tử tối thiểu chỉ cần không bị phần tử nào khác nhỏ hơn; một tập có thể có nhiều phần tử tối thiểu.",
+      "avoid_in_this_sense": [
+        "phần tử nhỏ nhất",
+        "cực tiểu cục bộ"
+      ],
+      "protected_meaning": [
+        "Không đòi so sánh được với mọi phần tử",
+        "Không liên quan tới lân cận hay khoảng cách"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.separating-hyperplane",
+      "domain": "optimization",
+      "english": [
+        "separating hyperplane",
+        "separating hyperplane theorem"
+      ],
+      "concept": "A hyperplane with one set on each side, guaranteed for two disjoint convex sets.",
+      "technical_vi": "siêu phẳng phân tách",
+      "variants": [
+        "định lý siêu phẳng phân tách"
+      ],
+      "lecture_vi": "Hai tập lồi rời nhau luôn có một siêu phẳng phân tách: tập này nằm một phía, tập kia nằm phía còn lại.",
+      "avoid_in_this_sense": [
+        "siêu phẳng chia cắt"
+      ],
+      "protected_meaning": [
+        "Cần tính lồi của cả hai tập",
+        "Phân tách chặt cần thêm giả thiết như đóng và compact"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.supporting-hyperplane",
+      "domain": "optimization",
+      "english": [
+        "supporting hyperplane"
+      ],
+      "concept": "A hyperplane through a boundary point of a set with the whole set on one side.",
+      "technical_vi": "siêu phẳng tựa",
+      "variants": [],
+      "lecture_vi": "Siêu phẳng tựa của C tại điểm biên x₀ đi qua x₀ và để cả C nằm về một phía.",
+      "avoid_in_this_sense": [
+        "siêu phẳng hỗ trợ",
+        "siêu phẳng chống đỡ"
+      ],
+      "protected_meaning": [
+        "Đi qua một điểm biên",
+        "Tập nằm trọn một phía, không cắt qua tập"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.dual-cone",
+      "domain": "optimization",
+      "english": [
+        "dual cone",
+        "self-dual cone"
+      ],
+      "concept": "K* = {y : yᵀx ≥ 0 for all x in K}.",
+      "technical_vi": "nón đối ngẫu",
+      "variants": [
+        "nón tự đối ngẫu"
+      ],
+      "lecture_vi": "Nón đối ngẫu gồm các vector y tạo góc không quá 90 độ với mọi phần tử của K.",
+      "avoid_in_this_sense": [
+        "nón kép",
+        "nón liên hợp"
+      ],
+      "protected_meaning": [
+        "Điều kiện cho mọi x thuộc K, không phải vài x",
+        "Luôn là nón lồi đóng kể cả khi K không lồi"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.positive-semidefinite",
+      "domain": "optimization",
+      "english": [
+        "positive semidefinite",
+        "PSD",
+        "positive definite"
+      ],
+      "concept": "A symmetric matrix X with zᵀXz ≥ 0 for every z (> 0 for z ≠ 0 when definite).",
+      "technical_vi": "nửa xác định dương",
+      "variants": [
+        "xác định dương",
+        "bán xác định dương (cách gọi ở một số tài liệu khác)"
+      ],
+      "lecture_vi": "Ma trận đối xứng X nửa xác định dương khi zᵀXz ≥ 0 với mọi z, tương đương mọi trị riêng không âm.",
+      "avoid_in_this_sense": [
+        "mọi phần tử không âm"
+      ],
+      "protected_meaning": [
+        "Kiểm theo mọi dạng toàn phương, không theo từng phần tử",
+        "Chỉ áp dụng cho ma trận đối xứng"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.sublevel-set",
+      "domain": "optimization",
+      "english": [
+        "sublevel set",
+        "quasiconvex function"
+      ],
+      "concept": "{x : f(x) ≤ α}; convex for every α when f is convex; functions with all sublevel sets convex are quasiconvex.",
+      "technical_vi": "tập mức dưới",
+      "variants": [
+        "hàm tựa lồi"
+      ],
+      "lecture_vi": "Tập mức dưới mức α gồm các x với f(x) ≤ α; hàm lồi có mọi tập mức dưới lồi, nhưng chiều ngược lại sai.",
+      "avoid_in_this_sense": [
+        "đường mức"
+      ],
+      "protected_meaning": [
+        "Tập mức dưới lồi không suy ra hàm lồi",
+        "Khác đường mức f(x) = α"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
+          "BOYD-OPT"
+        ]
+      }
+    },
+    {
+      "id": "optimization.perspective",
+      "domain": "optimization",
+      "english": [
+        "perspective function",
+        "linear-fractional function",
+        "perspective of a function"
+      ],
+      "concept": "P(z, t) = z/t for t > 0; preserves convexity of sets; the perspective of a convex function is convex.",
+      "technical_vi": "phép phối cảnh",
+      "variants": [
+        "hàm phối cảnh",
+        "hàm phân tuyến tính",
+        "phối cảnh của hàm"
+      ],
+      "lecture_vi": "Phép phối cảnh P(z, t) = z/t với t > 0 mang đoạn thẳng thành đoạn thẳng, nên giữ tính lồi.",
+      "avoid_in_this_sense": [
+        "phép chiếu vuông góc"
+      ],
+      "protected_meaning": [
+        "Miền t > 0",
+        "Giữ đoạn thẳng nhưng không giữ tỉ lệ trên đoạn"
+      ],
+      "evidence": {
+        "vi_usage": "course-slides; concept-source-supported",
+        "source_ids": [
+          "COURSE-MATHAI-L02-SLIDES",
           "BOYD-OPT"
         ]
       }

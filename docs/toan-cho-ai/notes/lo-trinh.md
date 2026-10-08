@@ -34,6 +34,6 @@ Tên và thứ tự Lecture 00–07 theo [chỉ mục học phần 2026–2027](
 
 ## Tra cứu bổ sung
 
-- [Hình học tập lồi](../doc-them/hinh-hoc-tap-loi.md) khi cần ellipsoid, nón, phối cảnh hoặc thứ tự Pareto.
+- [Bản đồ chủ đề của Lecture 01](../bai-giang/bai-01-nhap-mon-toi-uu.md) khi cần ellipsoid, nón, phối cảnh, thứ tự Pareto hay một kết quả cụ thể về hàm lồi.
 - [Hessian](/wiki/hessian.md), [PSD](/wiki/ma-tran-psd.md), [KKT](/wiki/kkt.md) để ôn điều kiện ngay trước khi dùng.
 - [Bài tập theo lecture](../bai-tap.md).
