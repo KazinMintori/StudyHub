@@ -15,7 +15,7 @@ Mô tả dữ liệu dùng con số, đồ thị hoặc lời văn để trình 
 
 **Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\%$. Đây là ví dụ giả định. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.
 
-Mô tả không chỉ gồm phép tính: bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu. Nguồn định nghĩa: [Stat 20 — Types of Claims](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), CC BY 4.0. Phần giải thích và ví dụ do StudyHub biên soạn.
+Mô tả không chỉ gồm phép tính: bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.
 
 ## Ví dụ
 
@@ -39,3 +39,7 @@ Không. Câu chỉ mô tả nhóm đã trả lời khảo sát.
 
 - [Mẫu &amp; tổng thể](./mau-tong-the.md)
 - [Suy rộng thống kê](./suy-rong-thong-ke.md)
+
+## Tài liệu tham khảo
+
+- Stat 20, UC Berkeley. [Understanding the World with Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), mục “Types of Claims”. Các định nghĩa chuyển thể được chia sẻ theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

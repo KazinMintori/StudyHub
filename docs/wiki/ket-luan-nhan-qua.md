@@ -15,7 +15,7 @@ Kết luận nhân quả khẳng định rằng thay đổi giá trị của m�
 
 **Phân biệt quan sát với can thiệp.** Nếu người tham gia câu lạc bộ có điểm cao hơn, dữ liệu mô tả khác biệt giữa các nhóm. Để nói việc tham gia làm điểm tăng, cần căn cứ về tác động của thay đổi này, thay vì chỉ dựa vào khác biệt đã thấy. Những người tham gia có thể đã có nhiều kinh nghiệm hơn từ trước.
 
-Thí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu. Nguồn định nghĩa: [Stat 20 — Types of Claims](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), CC BY 4.0. Phần giải thích do StudyHub biên soạn.
+Thí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu.
 
 ## Ví dụ
 
@@ -39,3 +39,7 @@ Chưa. Người tham gia có thể đã có nhiều kinh nghiệm hơn trước 
 
 - [Mô tả dữ liệu](./thong-ke-mo-ta.md)
 - [Dự đoán trong thống kê](./du-doan-thong-ke.md)
+
+## Tài liệu tham khảo
+
+- Stat 20, UC Berkeley. [Understanding the World with Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), mục “Types of Claims”. Các định nghĩa chuyển thể được chia sẻ theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

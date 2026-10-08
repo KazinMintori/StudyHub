@@ -15,7 +15,7 @@ Suy rộng thống kê dùng dữ liệu quan sát để phát biểu về một
 
 **Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.
 
-Một mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai. Nguồn định nghĩa: [Stat 20 — Types of Claims](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), CC BY 4.0. Phần giải thích do StudyHub biên soạn.
+Một mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.
 
 ## Ví dụ
 
@@ -40,3 +40,7 @@ Có. Kết luận đã bao gồm những người chưa được quan sát, nên
 - [Mẫu &amp; tổng thể](./mau-tong-the.md)
 - [Mô tả dữ liệu](./thong-ke-mo-ta.md)
 - [Kết luận nhân quả](./ket-luan-nhan-qua.md)
+
+## Tài liệu tham khảo
+
+- Stat 20, UC Berkeley. [Understanding the World with Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), mục “Types of Claims”. Các định nghĩa chuyển thể được chia sẻ theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

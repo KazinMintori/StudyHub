@@ -6,70 +6,48 @@ title: "Hiểu thế giới bằng dữ liệu"
 prerequisites: []
 lessonStatus: ready
 readingStyle: plain
-description: "Bản dịch đầy đủ bài Understanding the World with Data của Stat 20, UC Berkeley, kèm giải thích và bài tập phân biệt mô tả, suy rộng, nhân quả và dự đoán."
+description: "Phân biệt mô tả dữ liệu, suy rộng thống kê, kết luận nhân quả và dự đoán qua ví dụ khảo sát sinh viên."
 ---
 
-“70% người trả lời khảo sát chưa từng lập trình” và “70% sinh viên của trường chưa từng lập trình” có cùng con số, nhưng nói về hai nhóm khác nhau. Dữ liệu nào cho phép ta đưa ra từng phát biểu? Bài mở đầu này giúp ta phân loại một phát biểu từ dữ liệu và chỉ ra điều cần kiểm tra trước khi tin vào kết luận.
+Một khảo sát giả định về kinh nghiệm lập trình của sinh viên UET nhận được 10 câu trả lời, trong đó 7 người cho biết chưa từng lập trình. Ta có thể nói rằng 70% người trả lời chưa từng lập trình. Nhưng liệu có thể kết luận rằng tỷ lệ này cũng đúng với toàn bộ sinh viên UET?
 
-Đây là bản dịch đầy đủ phần nội dung của [Understanding the World with Data — Stat 20, UC Berkeley, học kỳ xuân 2026](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html). Mục 1–2 giữ lời giới thiệu, các định nghĩa và ví dụ của nguồn. Sơ đồ được vẽ lại với nhãn tiếng Việt. Mục 3–4 là phần giải thích và bài tập do StudyHub bổ sung. Bản gốc được phát hành theo [CC BY 4.0](https://stat20.berkeley.edu/spring-2026/license.html).
+Hai phát biểu có cùng con số, nhưng nói về hai nhóm khác nhau. Để đánh giá một kết luận từ dữ liệu, trước hết ta cần xác định nó đang mô tả những gì đã quan sát, suy rộng sang nhóm khác, khẳng định một tác động hay dự đoán một giá trị chưa biết.
 
-Bài không đòi hỏi kiến thức xác suất trước đó. Sau khi học, ta cần phân biệt được bốn loại phát biểu, xác định đúng nhóm đối tượng mà kết luận nói tới và giải thích vì sao một con số mô tả mẫu chưa tự cho phép kết luận về toàn trường.
+## 1. Các loại phát biểu từ dữ liệu
 
-## 1. Giới thiệu và đề cương khóa học
-
-Chào mừng bạn đến với Stat 20! Chúng tôi rất vui được đón bạn trong học kỳ này. Nội dung hôm nay không có câu hỏi đọc bài. Tuy nhiên, đến cuối buổi học, hãy bảo đảm rằng bạn đã:
-
-- Biết tên giảng viên và các trợ giảng hỗ trợ trong lớp.
-- Đọc [đề cương khóa học](https://stat20.berkeley.edu/spring-2026/syllabus.html) và đăng các câu hỏi về đề cương vào luồng thảo luận [Ed](https://edstem.org/) tương ứng với lớp học của mình.
-- Bắt đầu làm bài thực hành đầu tiên, và có thể đã nộp bài.
-
-Mục tiêu của khóa học là xây dựng và phản biện các phát biểu dựa trên dữ liệu. Điều này đặt ra câu hỏi: ta có thể đưa ra những loại phát biểu nào?
-
-::: info Bối cảnh của bản gốc
-Lời chào, đề cương, Ed và bài thực hành ở trên thuộc khóa Stat 20 tại Berkeley. Chúng được giữ lại để bản dịch có đủ nội dung nguồn.
-:::
-
-## 2. Các loại phát biểu từ dữ liệu
-
-Sơ đồ dưới đây đặt việc xây dựng và phản biện phát biểu từ dữ liệu ở trung tâm, rồi chia thành bốn loại nhiệm vụ. Các hình nhỏ minh họa từng nhiệm vụ, không biểu diễn một bộ số liệu cụ thể.
+Sơ đồ dưới đây phân biệt bốn loại phát biểu. Trong bài này, một **biến** là đặc điểm có thể nhận các giá trị khác nhau giữa các đối tượng, chẳng hạn kinh nghiệm lập trình hoặc điểm bài thực hành.
 
 ![Từ mục tiêu xây dựng và phản biện phát biểu dựa trên dữ liệu, sơ đồ chia thành bốn nhánh: mô tả dữ liệu đang có, suy rộng sang tập đối tượng lớn hơn, kết luận về tác động nhân quả và dự đoán giá trị chưa biết.](img/lec-00/cac-loai-phat-bieu.svg)
 
-*Vẽ lại và dịch nhãn từ sơ đồ “Types of Claims” trong bài Stat 20 được dẫn ở đầu trang, theo CC BY 4.0.*
-
-### 2.1. Mô tả dữ liệu
+### 1.1. Mô tả dữ liệu
 
 **Mô tả dữ liệu (Summary)** là việc mô tả một khía cạnh của dữ liệu đang có bằng con số, đồ thị hoặc lời văn.
 
-**Ví dụ của nguồn:** Dựa trên dữ liệu khảo sát lớp Stat 20, tỷ lệ người trả lời khảo sát cho biết mình chưa có kinh nghiệm viết mã máy tính là 70%.
+**Ví dụ:** Trong khảo sát giả định trên, 70% người trả lời cho biết chưa từng lập trình. Phát biểu này chỉ nói về nhóm đã trả lời khảo sát.
 
-### 2.2. Suy rộng thống kê
+### 1.2. Suy rộng thống kê
 
 **Suy rộng thống kê (Generalization)** là việc mô tả một tập đối tượng rộng hơn tập đã được ghi nhận dữ liệu, bằng con số, đồ thị hoặc lời văn.
 
-**Ví dụ của nguồn:** Dựa trên dữ liệu khảo sát lớp Stat 20, tỷ lệ sinh viên Berkeley chưa có kinh nghiệm viết mã máy tính là 70%.
+**Ví dụ:** Nếu dùng khảo sát trên để kết luận rằng “70% sinh viên UET chưa từng lập trình”, ta đã mở rộng phạm vi từ nhóm trả lời sang toàn trường. Đó là một bước suy rộng cần được đánh giá về căn cứ.
 
-### 2.3. Kết luận nhân quả
+### 1.3. Kết luận nhân quả
 
 **Kết luận nhân quả (Causal Claim)** là một phát biểu khẳng định rằng việc thay đổi giá trị của một biến sẽ ảnh hưởng đến giá trị của một biến khác.
 
-**Ví dụ của nguồn:** Dữ liệu từ một thí nghiệm ngẫu nhiên có đối chứng cho thấy việc dùng một loại kháng sinh mới loại bỏ hơn 99% các ca nhiễm khuẩn.
+**Ví dụ:** “Tham gia câu lạc bộ lập trình làm điểm bài thực hành tăng” là một kết luận nhân quả. Câu này khẳng định tác động của việc tham gia đối với điểm, chứ không chỉ mô tả khác biệt giữa hai nhóm sinh viên.
 
-### 2.4. Dự đoán
+### 1.4. Dự đoán
 
 **Dự đoán (Prediction)** là việc đoán giá trị của một biến chưa biết dựa trên các biến khác đã biết.
 
-**Ví dụ của nguồn:** Dựa trên tin tức đã đọc và giá cổ phiếu Uber hôm nay, tôi dự đoán rằng giá cổ phiếu Uber ngày mai sẽ tăng 1,2%.
+**Ví dụ:** Dùng kinh nghiệm lập trình đã biết để đoán điểm bài thực hành chưa công bố của một sinh viên là dự đoán. Điểm là giá trị chưa biết, còn kinh nghiệm là thông tin đã có.
 
-Trong trang nguồn, mục “Other Links” dẫn tới [Slides của bài](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html). Hai liên kết điều hướng là [Questions and Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html) và bài tiếp theo [The Taxonomy of Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html).
+## 2. Phạm vi và căn cứ của một kết luận
 
-## 3. Giải thích bổ sung: phạm vi của một kết luận
+### 2.1. Mô tả mẫu và suy rộng về tổng thể
 
-Phần này do StudyHub bổ sung. Các con số về khảo sát, kháng sinh và cổ phiếu ở mục 2 được giữ đúng như ví dụ của Stat 20. Trang nguồn không cung cấp bộ dữ liệu khảo sát, tên thuốc, báo cáo thí nghiệm hay thời điểm dự đoán cổ phiếu. Vì vậy, ở đây ta dùng chúng để học cách phân loại phát biểu, không xem chúng là kết quả thực nghiệm đã được xác minh độc lập.
-
-### 3.1. Mô tả mẫu và suy rộng về tổng thể
-
-Xét một **ví dụ giả định**: muốn tìm hiểu kinh nghiệm lập trình của sinh viên UET, ta nhận được 10 câu trả lời khảo sát, trong đó 7 người cho biết chưa từng lập trình. Nhóm đã trả lời là mẫu thống kê, còn toàn bộ sinh viên UET là tổng thể mà ta muốn nghiên cứu.
+Trở lại khảo sát với 10 câu trả lời và 7 người chưa từng lập trình. Nhóm đã trả lời là mẫu thống kê, còn toàn bộ sinh viên UET là tổng thể mà ta muốn nghiên cứu.
 
 ::: example Tính tỷ lệ trong nhóm đã trả lời
 Tỷ lệ người chưa từng lập trình trong nhóm trả lời bằng số người thuộc nhóm này chia cho tổng số người trả lời:
@@ -93,21 +71,19 @@ Có. Phát biểu ban đầu mô tả nhóm đã được quan sát. Phát biể
 
 </details>
 
-### 3.2. Quan sát và can thiệp
+### 2.2. Quan sát và can thiệp
 
-Trong thống kê, một **biến** mô tả một đặc điểm có thể nhận các giá trị khác nhau giữa các đối tượng, chẳng hạn kinh nghiệm lập trình hoặc điểm bài thực hành. **Can thiệp** nghĩa là chủ động thay đổi một yếu tố để xem kết quả chịu tác động thế nào.
+**Can thiệp** nghĩa là chủ động thay đổi một yếu tố để xem kết quả chịu tác động thế nào.
 
 Giả sử ta quan sát thấy sinh viên tham gia câu lạc bộ lập trình có điểm bài thực hành cao hơn. Đây là mô tả một quan hệ trong dữ liệu đã quan sát. Nó chưa đủ để khẳng định rằng tham gia câu lạc bộ làm điểm tăng, vì những người tham gia có thể đã có nhiều kinh nghiệm hơn trước đó.
 
 Phát biểu “việc tham gia câu lạc bộ làm điểm tăng” là kết luận nhân quả: nó nói về tác động của việc thay đổi một yếu tố. Muốn bảo vệ kết luận ấy, ta cần căn cứ để phân biệt tác động của việc tham gia với khác biệt có sẵn giữa các nhóm.
 
-Ví dụ kháng sinh trong bản gốc nhắc đến **thí nghiệm ngẫu nhiên có đối chứng**. Trong một thiết kế như vậy, người tham gia được phân ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc các khác biệt có sẵn quyết định ai nhận can thiệp. Việc đọc kết quả vẫn cần xem thiết kế, cách đo và phạm vi đối tượng nghiên cứu. Bài mở đầu chỉ phân biệt loại câu hỏi, chưa trình bày phương pháp ước lượng tác động.
+Một cách nghiên cứu tác động là dùng **thí nghiệm ngẫu nhiên có đối chứng**: phân người tham gia ngẫu nhiên vào các nhóm, rồi so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc các khác biệt có sẵn quyết định ai nhận can thiệp. Khi đánh giá kết luận, ta vẫn cần xem thiết kế, cách đo và phạm vi đối tượng nghiên cứu.
 
-### 3.3. Giá trị chưa biết trong một bài toán dự đoán
+### 2.3. Giá trị chưa biết trong một bài toán dự đoán
 
-Trong ví dụ Uber, tin tức và giá hôm nay là thông tin đã biết, còn mức thay đổi giá ngày mai là giá trị chưa biết. Cụm “ngày mai” thuộc tình huống minh họa của nguồn, không phải một dự báo tại thời điểm bạn đọc bài.
-
-Một giá trị chưa biết cũng có thể đã tồn tại nhưng chưa được quan sát. Chẳng hạn, dùng thông tin đã biết về một sinh viên để đoán điểm của một bài đã chấm nhưng chưa được công bố vẫn là dự đoán.
+Trong ví dụ dự đoán điểm, kinh nghiệm lập trình là thông tin đã biết, còn điểm bài thực hành là giá trị chưa biết. Ngay cả khi bài đã được chấm, đoán điểm chưa công bố vẫn là dự đoán. Vì vậy, dự đoán không nhất thiết phải nói về tương lai.
 
 Dự đoán không tự giải thích nguyên nhân của kết quả. Một thông tin giúp đoán điểm không nhất thiết là yếu tố mà ta có thể thay đổi để làm điểm tăng. Cũng như với suy rộng, phân loại đúng phát biểu chưa cho biết dự đoán chính xác đến đâu.
 
@@ -118,9 +94,9 @@ Dự đoán không tự giải thích nguyên nhân của kết quả. Một th�
 | Kết luận nhân quả | Thay đổi một biến có ảnh hưởng đến biến khác không? | Quan hệ trong dữ liệu quan sát chưa tự chứng minh tác động. |
 | Dự đoán | Giá trị chưa biết nào được đoán từ thông tin đã biết? | Một dự đoán cần được đánh giá về độ chính xác. |
 
-## 4. Bài tập tự luyện
+## 3. Bài tập tự luyện
 
-Các bài tập dưới đây do StudyHub biên soạn. Mọi số liệu là giả định.
+Số liệu trong các bài tập là giả định.
 
 ### Bài 1. Nhận diện loại phát biểu
 
@@ -172,9 +148,9 @@ Bước thiếu căn cứ nằm ở việc chuyển từ khác biệt giữa hai
 Một cách giải thích khác là những sinh viên đã có nhiều kinh nghiệm lập trình vừa dễ tham gia câu lạc bộ hơn, vừa có thể đạt điểm cao hơn. Khả năng này cho thấy quan sát ban đầu chưa đủ chứng minh nhân quả. Nó cũng không chứng minh rằng việc tham gia hoàn toàn không có tác động.
 :::
 
-## 5. Nguồn và liên kết học tiếp
+[Bài tiếp theo: Xác suất có điều kiện và Bayes](/xac-suat-thong-ke/bai-giang/01-xac-suat-va-bayes.md).
 
-- **Nguồn của bản dịch:** Stat 20, UC Berkeley, *Understanding the World with Data*, học kỳ xuân 2026, hai mục “Intro and Syllabus” và “Types of Claims”. [Mở trang gốc](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html).
-- **Giấy phép:** [Thông báo giấy phép của Stat 20](https://stat20.berkeley.edu/spring-2026/license.html) và [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). Bản dịch và sơ đồ được StudyHub chuyển sang tiếng Việt, có bổ sung giải thích và bài tập. Phần chuyển thể từ Stat 20 trên trang này được chia sẻ theo CC BY 4.0.
-- **Tài liệu đi kèm của nguồn:** [Slides](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html) và [đề cương](https://stat20.berkeley.edu/spring-2026/syllabus.html).
-- **Đọc tiếp trên StudyHub:** [Xác suất có điều kiện và Bayes](/xac-suat-thong-ke/bai-giang/01-xac-suat-va-bayes.md).
+## 4. Tài liệu tham khảo
+
+- Stat 20, UC Berkeley. [Understanding the World with Data](https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html), học kỳ xuân 2026, mục “Types of Claims”.
+- [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Nội dung và sơ đồ chuyển thể từ tài liệu trên được chia sẻ theo giấy phép này. [Thông báo giấy phép](https://stat20.berkeley.edu/spring-2026/license.html).

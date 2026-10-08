@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" width="100%" role="img" aria-labelledby="title desc">
   <title id="title">Bốn loại phát biểu từ dữ liệu</title>
-  <desc id="desc">Xây dựng và phản biện phát biểu từ dữ liệu gồm mô tả, suy rộng, kết luận nhân quả và dự đoán. Vẽ lại sơ đồ Types of Claims của Stat 20, UC Berkeley, nhãn tiếng Việt, CC BY 4.0.</desc>
+  <desc id="desc">Bốn loại phát biểu từ dữ liệu: mô tả dữ liệu đã quan sát, suy rộng sang nhóm rộng hơn, kết luận về tác động của thay đổi và dự đoán một giá trị chưa biết.</desc>
   <rect width="480" height="460" rx="12" fill="#ffffff"/>
   <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" fill="#1f1c2b">
     <rect x="40" y="16" width="400" height="76" rx="8" fill="#eee9fb" stroke="#5a37a8" stroke-width="2"/>
