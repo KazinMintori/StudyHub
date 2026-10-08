@@ -1,6 +1,9 @@
 .home-intro { padding: 0 0 var(--space-6); max-width: 880px; }
 .home-intro h1 { font-size: var(--fs-display); line-height: 1.15; font-weight: 700; margin: 0; }
 .resume-panel { border: 1px solid var(--rule); border-radius: var(--radius); padding: var(--space-5); margin-bottom: var(--space-7); display: block; background: var(--paper); }
+.resume-panel.has-resume { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.resume-copy { min-width: 0; overflow-wrap: anywhere; }
+.resume-panel > .study-button { flex-shrink: 0; }
 .resume-panel h2 { font-size: var(--fs-small); font-weight: 500; color: var(--ink-3); margin-bottom: var(--space-3); }
 .resume-panel h3 { font-size: var(--fs-h2); line-height: 1.3; font-weight: 600; margin: var(--space-2) 0; }
 .resume-panel p { color: var(--ink-2); font-size: var(--fs-ui); }
@@ -24,7 +27,7 @@
 .home-tools a { color: var(--tim); min-height: 44px; display: flex; align-items: center; }
 @media (max-width: 767px) {
   .home-intro { padding-top: 0; padding-bottom: var(--space-5); }
-  .resume-panel { flex-direction: column; align-items: stretch; gap: var(--space-4); margin-bottom: var(--space-6); }
+  .resume-panel, .resume-panel.has-resume { flex-direction: column; align-items: stretch; gap: var(--space-4); margin-bottom: var(--space-6); }
   .starter-list { grid-template-columns: 1fr; gap: var(--space-4); }
   .course-row { align-items: start; flex-direction: column; gap: var(--space-3); }
   .section-heading { align-items: stretch; }

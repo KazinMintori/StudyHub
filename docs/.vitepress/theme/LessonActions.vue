@@ -20,6 +20,8 @@ async function load() {
 }
 function recordHeading() {
   if (part.value !== 'notes' || !trackedPath) return
+  // Navigation can reset scroll before this component finishes unmounting.
+  if (window.location.pathname !== studyLink(trackedPath)) return
   const headings = [...document.querySelectorAll('.main > .vp-doc h2[id]')]
   if (!headings.length) return
   const heading = headings.filter(h => h.getBoundingClientRect().top <= 160).at(-1)
