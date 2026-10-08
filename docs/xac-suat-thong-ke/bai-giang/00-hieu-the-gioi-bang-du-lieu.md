@@ -5,6 +5,7 @@ section: lecture
 title: "Hiểu thế giới bằng dữ liệu"
 prerequisites: []
 lessonStatus: ready
+readingStyle: plain
 description: "Bản dịch đầy đủ bài Understanding the World with Data của Stat 20, UC Berkeley, kèm giải thích và bài tập phân biệt mô tả, suy rộng, nhân quả và dự đoán."
 ---
 

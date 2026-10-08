@@ -27,12 +27,13 @@ export default withMermaid(defineConfig({
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = state.src
           .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
-          .replace(/^::: example(?:\s+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
-          .replace(/^::: proof(?:\s+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
-          .replace(/^::: exercise(?:\s+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
-          .replace(/^::: solution(?:\s+(.*))?$/gm, (_, title) => `::: details Lời giải${title ? `: ${title}` : ''}`)
-          .replace(/^::: derivation(?:\s+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
-          .replace(/^::: hint(?:\s+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`);
+          // A container title ends on the same line; never consume the next paragraph.
+          .replace(/^::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
+          .replace(/^::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
+          .replace(/^::: exercise(?:[\t ]+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
+          .replace(/^::: solution(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Lời giải${title ? `: ${title}` : ''}`)
+          .replace(/^::: derivation(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
+          .replace(/^::: hint(?:[\t ]+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`);
       });
       md.use(termLinks,base)
       // Only standalone images become figures; escape alt text before inserting captions.

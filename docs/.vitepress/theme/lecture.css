@@ -6,6 +6,40 @@
 .lecture-tabs { position: sticky; top: var(--vp-nav-height); z-index: 20; background: var(--paper); margin: 0 0 var(--space-4); }
 .lecture-tabs .tab-count { font-size: var(--fs-small); margin-left: var(--space-2); color: var(--ink-3); }
 .draft-notice { color: var(--vang); font-size: var(--fs-ui); margin: var(--space-3) 0; }
+/* Plain reading keeps examples and exercises aligned with the article text. */
+.lecture-reading-plain .main > .vp-doc .custom-block {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: var(--space-5) 0;
+  font-size: inherit;
+  color: var(--ink);
+}
+.lecture-reading-plain .main > .vp-doc .custom-block .custom-block-title {
+  margin: 0 0 var(--space-2);
+  color: var(--ink-2);
+  font: 600 var(--fs-ui)/1.5 var(--font-ui);
+}
+.lecture-reading-plain .main > .vp-doc .custom-block > :last-child { margin-bottom: 0; }
+.lecture-reading-plain .main > .vp-doc :is(.custom-block.details, details) {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  margin: var(--space-4) 0 var(--space-5);
+}
+.lecture-reading-plain .main > .vp-doc details > summary {
+  min-height: 44px;
+  padding: var(--space-2) 0;
+  color: var(--ink-2);
+  font: 500 var(--fs-ui)/1.6 var(--font-ui);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 4px;
+}
+.lecture-reading-plain .main > .vp-doc details > summary:hover { color: var(--ink); }
 .lesson-actions { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-family: var(--font-ui); }
 .lesson-actions nav { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-5); }
 .lecture-slides > .eyebrow { font-size: 11px; letter-spacing: 1.6px; font-weight: 600; color: var(--ink-2); }

@@ -30,7 +30,7 @@ watch(()=>route.path,()=>syncLecturePart())
 </script>
 
 <template>
-  <Layout :class="{ 'lecture-layout': frontmatter.section==='lecture', 'lecture-slides-layout': frontmatter.section==='lecture' && lecturePart==='slides', 'lecture-alt': frontmatter.section==='lecture' && lecturePart!=='notes' }">
+  <Layout :class="{ 'lecture-layout': frontmatter.section==='lecture', 'lecture-reading-plain': frontmatter.section==='lecture' && frontmatter.readingStyle==='plain', 'lecture-slides-layout': frontmatter.section==='lecture' && lecturePart==='slides', 'lecture-alt': frontmatter.section==='lecture' && lecturePart!=='notes' }">
     <template #not-found><main class="course-shell"><h1>Trang này không tồn tại</h1><p>Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
       <LectureHeader v-if="frontmatter.section==='lecture'" />
