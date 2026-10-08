@@ -31,6 +31,8 @@
 .study-lab .lab-handle-alt { fill: var(--vang); }
 .study-lab .lab-arrow-head { fill: var(--ink-2); }
 .study-lab .lab-arrow-accent { fill: var(--tim); }
+.study-lab .lab-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+@media (max-width: 640px) { .study-lab .lab-pair { grid-template-columns: 1fr; } }
 .study-lab .lab-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-2) var(--space-5); margin: var(--space-4) 0 0; }
 .study-lab label { display: grid; gap: var(--space-1); font-size: var(--fs-ui); }
 .study-lab label.lab-check { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; }

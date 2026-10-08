@@ -89,6 +89,11 @@ QUESTION_LABEL_RE = re.compile(r"^\*\*Câu \d+\.\*\*\s*(.+)$|^<summary>\s*Thử 
 REFERENCE_RE = re.compile(r"§|\btr\.\s*\d|https?://|Convex Optimization", re.IGNORECASE)
 SUBLABEL_RE = re.compile(r"^\(?[a-h]\)\s")
 ARROW_RE = re.compile(r"→|⇒|=>")
+# "Vô cùng" là từ toán học khi chỉ giới hạn hay giá trị ("tiến ra vô cùng", "bằng vô cùng"); chỉ là từ đánh giá khi
+# đứng trước một tính từ ("vô cùng quan trọng"). Bỏ các cách dùng toán học trước khi dò từ đánh giá.
+MATH_INFINITY_RE = re.compile(r"\b(?:ra|tới|đến|về|bằng|là|của|lớn)\s+vô cùng\b|\bvô cùng\s+(?:lớn|bé|nhỏ)\b|\bvô cùng\s*$")
+# Lời giải "nghĩ thành tiếng": dấu ba chấm rồi tự sửa, hay những cụm tự sửa sai đặc trưng của nháp.
+THINKING_ALOUD_RE = re.compile(r"\.\.\.\s*(?:chính xác hơn|nói đúng hơn|thay vào đó|à|khoan|không phải)|\bà không\b|\bkhoan đã\b|\bnhầm rồi\b|\bthử lại nào\b|\bà mà\b|\bý tôi là\b", re.IGNORECASE)
 # A blockquote that attributes words to a named person: “…” — Name / "…" — Name / "... đã nói"
 QUOTE_ATTRIBUTION_RE = re.compile(r"[\"“”«].{8,}[\"“”»].*(?:—|–|-{2})\s*\S|(?:đã nói|từng nói|đã nghĩ|từng viết)", re.IGNORECASE)
 INLINE_MATH_RE = re.compile(r"\$\$.*?\$\$|\$[^$\n]+\$|`[^`\n]+`")
@@ -200,9 +205,13 @@ def review(sections):
             for phrase, suggestion in PHRASES.items():
                 if phrase in lower:
                     findings.append({"code": "CONTEXTUAL_PHRASE", "where": where, "phrase": phrase, "suggestion": suggestion})
+            evaluative_text = MATH_INFINITY_RE.sub(" ", INLINE_MATH_RE.sub(" ", lower))
             for phrase, suggestion in EVALUATIVE.items():
-                if _has_word(lower, phrase):
+                if _has_word(evaluative_text, phrase):
                     findings.append({"code": "EVALUATIVE_PHRASE", "where": where, "phrase": phrase, "suggestion": suggestion})
+            if THINKING_ALOUD_RE.search(INLINE_MATH_RE.sub(" ", raw)):
+                findings.append({"code": "THINKING_ALOUD", "where": where, "text": raw.strip(),
+                                 "suggestion": "Câu tự sửa giữa chừng như trong nháp. Lời giải chỉ trình bày lập luận đúng cuối cùng: tính lại, rồi viết thẳng kết quả và lý do."})
             for phrase in FREQUENCY:
                 if _has_word(lower, phrase):
                     findings.append({"code": "UNSUPPORTED_FREQUENCY", "where": where, "phrase": phrase,

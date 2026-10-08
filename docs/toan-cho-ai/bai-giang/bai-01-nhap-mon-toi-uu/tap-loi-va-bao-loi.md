@@ -40,7 +40,7 @@ Bước đẳng thức ở giữa dùng $\theta \ge 0$ và $1 - \theta \ge 0$, v
 Đường tròn và hình tròn đặc chỉ khác nhau ở dấu "$=$" và "$\le$", nhưng một tập không lồi còn tập kia lồi. Khi đọc một ràng buộc trong bài toán tối ưu, hãy chú ý đến từng dấu như vậy.
 
 ::: warning Một cái bẫy tinh tế: biên chỉ có một phần
-Sách có một ví dụ đáng suy nghĩ (Hình 2.2, bên phải): một hình vuông chứa **một số** điểm biên nhưng không chứa các điểm biên khác thì không lồi. Chẳng hạn lấy hình vuông mở $(0, 1)^2$ rồi thêm vào đúng hai điểm $(0.2, 0)$ và $(0.8, 0)$ trên cạnh dưới. Hai điểm này thuộc tập, nhưng trung điểm $(0.5, 0)$ của chúng nằm trên cạnh dưới mà không được thêm vào, nên không thuộc tập. Tính lồi không chỉ phụ thuộc vào "hình dạng nhìn thấy" mà còn phụ thuộc vào việc biên được giữ lại như thế nào.
+Sách có một ví dụ đáng suy nghĩ (Hình 2.2, bên phải): một hình vuông chứa **một số** điểm biên nhưng không chứa các điểm biên khác thì không lồi. Chẳng hạn lấy hình vuông mở $(0, 1)^2$ rồi thêm vào đúng hai điểm $(0.2, 0)$ và $(0.8, 0)$ trên cạnh dưới. Hai điểm này thuộc tập, nhưng trung điểm $(0.5, 0)$ của chúng nằm trên cạnh dưới mà không được thêm vào, nên không thuộc tập. Ngoài "hình dạng nhìn thấy", tính lồi còn phụ thuộc vào việc biên được giữ lại như thế nào.
 :::
 
 ## 3. Tổ hợp lồi: phép trộn

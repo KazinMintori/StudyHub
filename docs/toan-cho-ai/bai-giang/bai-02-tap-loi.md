@@ -5,194 +5,112 @@ section: lecture
 title: "Các bài toán tối ưu lồi"
 prerequisites: ["tap-loi", "ham-loi", "chuan", "ma-tran-psd"]
 lessonStatus: ready
-description: "Nhận diện các dạng tối ưu lồi, cải dạng tương đương và phân biệt xấp xỉ với nới lỏng."
+description: "Bản đồ của chương: 12 chủ đề về biến đổi bài toán, quy hoạch tuyến tính, quy hoạch toàn phương và nón bậc hai, quy hoạch hình học, SDP và tối ưu vector, kèm lộ trình đọc, bức tranh chung và bài tập tổng hợp."
 ---
 
-Ta đã có định nghĩa tập lồi và hàm lồi. Bước tiếp theo là nhận ra cấu trúc ấy trong một bài toán được viết bằng công thức. Cách đặt dấu bất đẳng thức, dạng của hàm mục tiêu và phép đổi biến đều có thể làm tính lồi hiện ra rõ ràng hoặc bị che khuất. Vì vậy, bài này tập trung vào cách đọc và cải dạng mô hình trước khi chọn thuật toán giải.
+Lecture 01 cho ta định nghĩa tập lồi, hàm lồi, và định lý trung tâm: với bài toán lồi, mọi cực tiểu cục bộ đều là toàn cục. Nhưng một bài toán thực tế không đến với ta dưới dạng "hãy cực tiểu một hàm lồi trên một tập lồi". Nó đến dưới dạng một tỉ số chi phí, một ràng buộc phải đúng với mọi giá trị của một tham số bất định, một ma trận tương quan cần hợp lệ, hay một sự đánh đổi giữa sai số và độ phức tạp. Kỹ năng chính của chương này là **nhận ra** một bài toán thuộc lớp nào, và **viết lại** nó cho tới khi cấu trúc lồi hiện rõ.
 
-Sau khi học xong, bạn sẽ xác định được một mô hình có ở dạng chuẩn lồi hay không, nhận diện được LP, QP, SOCP và SDP, giải thích được vai trò của biến phụ, và phân biệt nghiệm của bài toán nới lỏng với nghiệm hợp lệ của bài toán ban đầu.
+Chương đi qua các lớp bài toán lồi chuẩn mà các bộ giải hiện đại xử lý được: quy hoạch tuyến tính, quy hoạch toàn phương, quy hoạch nón bậc hai, quy hoạch hình học và quy hoạch nửa xác định. Chúng lồng vào nhau như những búp bê, mỗi lớp mô tả được nhiều bài toán hơn lớp trước và đòi hỏi tính toán nhiều hơn. Xen giữa là những phép biến đổi giúp đưa bài toán về các lớp ấy, và hai mở rộng quan trọng: bài toán tựa lồi, giải bằng chia đôi, và bài toán nhiều mục tiêu, giải bằng vô hướng hóa.
 
-Ở lần đọc đầu, hãy học mục 1–2 để nắm dạng chuẩn, LP và QP. Sau đó đọc mục 3 về biến phụ. Mục 4 giới thiệu các bài toán trên nón và có thể để lại cho lượt đọc sau. Mục 5 cần đọc trước khi dùng một bài toán gần đúng hoặc bài toán nới lỏng để suy luận về bài toán ban đầu. Kiến thức về tập lồi và hàm lồi nằm ở [Bài 01](./bai-01-nhap-mon-toi-uu.md), được chia thành 25 chủ đề. Phần hình học sâu hơn, như nón, phối cảnh và siêu phẳng phân tách, là các chủ đề 6–16 của bài đó.
+## Cách đọc chương này
 
-## 1. Dạng chuẩn của bài toán tối ưu lồi
+Nội dung được chia thành 12 chủ đề, xếp trong sáu phần. Mỗi chủ đề trả lời một câu hỏi, có một mô phỏng tương tác để bạn tự thay đổi dữ liệu và quan sát nghiệm, một phần câu hỏi đào sâu có lời giải thích, và bài tập tự luyện có lời giải. Mọi ví dụ số đều được tính lại bằng chương trình. Bản đồ dưới đây cho biết câu hỏi của từng chủ đề và mục tương ứng trong sách *Convex Optimization*.
 
-Theo *Convex Optimization*, dạng chuẩn là
+<TopicMap />
 
-$$\begin{aligned}\text{minimize}\quad &f_0(x)\\
-\text{subject to}\quad &f_i(x)\le0,\quad i=1,\ldots,m,\\&Ax=b,
-\end{aligned}$$
+## Ba lộ trình đọc
 
-với $f_0,f_i$ lồi, và các đẳng thức affine. Miền chung của các hàm cũng được xét. **Affine** nghĩa là dạng $a^Tx+b$. Đẳng thức có thể chuyển hằng số sang vế phải.
+**Lộ trình cốt lõi**, cho lần đọc đầu tiên. Bảy chủ đề này đủ để nhận diện và viết lại các lớp bài toán lồi chính:
 
-Để nhận diện dạng chuẩn, lần lượt xét ba câu hỏi. Hàm mục tiêu có lồi không? Mỗi hàm ở vế trái của dấu $\le0$ có lồi không? Các ràng buộc đẳng thức có affine không? Khi cả ba điều kiện được thỏa mãn, miền khả thi là giao của các tập mức dưới lồi và các tập affine, nên cũng là một tập lồi.
+- Chủ đề 1. [Bài toán tương đương và các phép biến đổi cơ bản](./bai-02-tap-loi/bai-toan-tuong-duong.md)
+- Chủ đề 2. [Khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến](./bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.md)
+- Chủ đề 4. [Quy hoạch tuyến tính: các dạng viết và hình học của nghiệm](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md)
+- Chủ đề 7. [Quy hoạch toàn phương và QCQP](./bai-02-tap-loi/quy-hoach-toan-phuong.md)
+- Chủ đề 8. [Quy hoạch nón bậc hai và LP bền vững](./bai-02-tap-loi/quy-hoach-non-bac-hai.md)
+- Chủ đề 10. [Bài toán dạng nón và quy hoạch nửa xác định](./bai-02-tap-loi/bai-toan-dang-non-va-sdp.md)
+- Chủ đề 12. [Tối ưu vector, điểm Pareto và đường đánh đổi](./bai-02-tap-loi/toi-uu-vector-va-danh-doi.md)
 
-Đừng chỉ nhìn tên hàm. Ràng buộc $x^2\le1$ mô tả đoạn $[-1,1]$ và đúng dạng lồi. Ràng buộc $x^2\ge1$ đổi thành $1-x^2\le0$: vế trái lõm, miền gồm hai đoạn rời nhau. Ràng buộc $x^2=1$ là đẳng thức phi affine và cho hai điểm rời nhau.
+**Lộ trình mô hình hóa**, khi bạn muốn học những "mẹo" biến một bài toán trông không lồi thành bài toán lồi:
 
-### 1.1 Miền lồi chưa đủ để biểu thức ở dạng chuẩn
+- Chủ đề 3. [Hàm tựa lồi và phương pháp chia đôi](./bai-02-tap-loi/toi-uu-tua-loi.md)
+- Chủ đề 5. [Những bài toán trở thành LP](./bai-02-tap-loi/mo-hinh-lp.md)
+- Chủ đề 6. [Quy hoạch phân tuyến tính](./bai-02-tap-loi/quy-hoach-phan-tuyen-tinh.md)
+- Chủ đề 9. [Quy hoạch hình học](./bai-02-tap-loi/quy-hoach-hinh-hoc.md)
+- Chủ đề 11. [Phần bù Schur và các bài toán về trị riêng](./bai-02-tap-loi/phan-bu-schur-va-bai-toan-tri-rieng.md)
 
-Ràng buộc $x^3\le0$ tương đương $x\le0$, một miền lồi. Nhưng $x^3$ không lồi trên toàn $\mathbb R$, nên biểu thức ban đầu chưa chứng nhận dạng chuẩn. Cải dạng về $x\le0$ mới làm cấu trúc hiện rõ. Ta không gọi biểu thức ban đầu là chuẩn chỉ vì miền cuối cùng lồi.
+**Lộ trình học máy**, khi bạn muốn thấy ngay chương này nói gì về các mô hình quen thuộc:
 
-<details><summary>Thử trả lời: Bài toán $\min -\log x$ với $x\ge 1$ có phải là bài toán lồi không?</summary>
+- [Đổi biến qua log σ](./bai-02-tap-loi/bai-toan-tuong-duong.md) và [hệ số chặn như một bài toán tối ưu từng phần](./bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.md)
+- [Phân lớp tuyến tính bằng LP](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md) và [cận chặt cho xác suất khi chỉ biết vài moment](./bai-02-tap-loi/mo-hinh-lp.md)
+- [Hệ số bất định và ràng buộc xác suất](./bai-02-tap-loi/quy-hoach-non-bac-hai.md), [ma trận tương quan hợp lệ](./bai-02-tap-loi/bai-toan-dang-non-va-sdp.md)
+- [Ridge, lasso và đường đánh đổi](./bai-02-tap-loi/toi-uu-vector-va-danh-doi.md), cùng lý do [số đặc trưng khác 0 không phải hàm tựa lồi](./bai-02-tap-loi/toi-uu-tua-loi.md)
 
-Có. $-\log x$ lồi trên $x>0$, ràng buộc là $1-x\le0$ affine. Tuy nhiên mục tiêu đi tới $-\infty$ khi $x\to\infty$, nên không có nghiệm tối ưu hữu hạn. “Lồi” không bảo đảm bài toán có nghiệm.
+## Bức tranh chung
 
-</details>
+Sơ đồ sau cho thấy các lớp bài toán lồng vào nhau ra sao, và mỗi phép biến đổi đưa bài toán nào về lớp nào. Mũi tên liền nối một lớp với lớp tổng quát hơn chứa nó, mũi tên nét đứt là một phép biến đổi.
 
-## 2. Quy hoạch tuyến tính và quy hoạch toàn phương
+```mermaid
+flowchart LR
+    LP["LP<br/>chủ đề 4–5"] --> QP["QP<br/>chủ đề 7"]
+    QP --> QCQP["QCQP<br/>chủ đề 7"]
+    QCQP --> SOCP["SOCP<br/>chủ đề 8"]
+    SOCP --> SDP["SDP<br/>chủ đề 10–11"]
+    LFP["Phân tuyến tính<br/>chủ đề 6"] -.->|"đổi biến"| LP
+    GP["Quy hoạch hình học<br/>chủ đề 9"] -.->|"lấy log"| CVX["Bài toán lồi tổng quát"]
+    QCVX["Bài toán tựa lồi<br/>chủ đề 3"] -.->|"chia đôi"| CVX
+    VEC["Tối ưu vector<br/>chủ đề 12"] -.->|"vô hướng hóa"| CVX
+    SDP --> CVX
+```
 
-**Quy hoạch tuyến tính (LP)** có mục tiêu và ràng buộc affine:
+**Phần I** là bộ công cụ biến đổi. Hai bài toán tương đương khi nghiệm của bài toán này cho ngay nghiệm của bài toán kia. Đổi biến, bọc hàm trong một hàm đơn điệu, thêm biến bù, chuyển sang dạng epigraph, khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến đều giữ nghiệm, nhưng chỉ một số phép giữ được tính lồi. Bài toán tựa lồi, có mọi tập mức dưới lồi, được giải bằng một dãy bài toán khả thi lồi.
 
-$$\min c^Tx+d\quad\text{sao cho }Gx\preceq h,\ Ax=b.$$
+**Phần II** là quy hoạch tuyến tính: các dạng viết, hình học của nghiệm trên đa diện, và những bài toán không trông tuyến tính chút nào nhưng là LP, như tâm Chebyshev, cực tiểu hàm tuyến tính từng khúc, cận cho kỳ vọng và quy hoạch phân tuyến tính.
 
-Hằng số $d$ không đổi nghiệm. Nó vẫn đổi giá trị tối ưu. Ký hiệu vector $\preceq$ ở đây là bất đẳng thức từng thành phần.
+**Phần III** cho phép hàm mục tiêu và ràng buộc cong lên. Quy hoạch toàn phương có nghiệm có thể nằm giữa cạnh hay bên trong đa diện. Quy hoạch nón bậc hai xuất hiện tự nhiên khi dữ liệu bất định, trong LP bền vững và ràng buộc xác suất.
 
-**Quy hoạch toàn phương (QP)** cho mục tiêu
+**Phần IV** là quy hoạch hình học, lồi không phải trong biến gốc mà trong thang logarit.
 
-$$\frac12x^TPx+q^Tx+r,\qquad P=P^T\succeq0,$$
+**Phần V** thay thứ tự từng thành phần bằng thứ tự của ma trận nửa xác định dương, cho quy hoạch nửa xác định, lớp rộng nhất của chương. Phần bù Schur là công cụ viết các ràng buộc phi tuyến thành bất đẳng thức ma trận tuyến tính.
 
-và ràng buộc affine. $P$ PSD là điều kiện cho QP lồi. Nếu ràng buộc bất đẳng thức cũng là các hàm toàn phương lồi, ta có QCQP, không còn là QP theo định nghĩa này.
+**Phần VI** xử lý nhiều mục tiêu cùng lúc. Câu trả lời là cả một đường đánh đổi các điểm Pareto, và vô hướng hóa biến nó thành một họ bài toán thông thường. Ridge, lasso và danh mục Markowitz đều thuộc loại này.
 
-::: example Thêm một giới hạn vào bài toán hồi quy
-Từ Bài 00, $f(w)=7w^2-11w+\frac{9}{2}$, nên trong dạng QP $P=14$, $q=-11$, $r=\frac{9}{2}$. Thêm $w\le1/2$ cho QP lồi.
+## Bài tập tổng hợp
 
-Nghiệm không ràng buộc $\frac{11}{14}$ vượt quá giới hạn. Trên miền $w\le1/2$, đạo hàm thỏa $14w-11\le-4<0$, nên hàm mục tiêu giảm khi $w$ tăng cho tới điểm biên. Vì vậy nghiệm là $w^*=\frac{1}{2}$ và $p^*=\frac{3}{4}$.
+Các bài dưới đây cần kiến thức từ nhiều phần của chương. Hãy thử làm sau khi đã đọc ít nhất lộ trình cốt lõi.
 
-Đây là nghiệm tại biên với gradient khác 0. Bài 03 sẽ chứng nhận nó bằng nhân tử Lagrange.
+::: exercise 1. Bài toán này thuộc lớp nào?
+Với mỗi bài toán, cho biết lớp hẹp nhất chứa nó trong số LP, QP, QCQP, SOCP, GP, SDP, hoặc cho biết nó không lồi ở dạng hiện tại. (a) Cực tiểu $\|Ax - b\|_1 + \|x\|_\infty$. (b) Cực tiểu $\|Ax - b\|_2$ với $x \succeq 0$. (c) Cực đại $x_1x_2x_3$ với $x_1 + 2x_2 + 3x_3 \le 6$ và $x \succ 0$. (d) Cực tiểu $\lambda_{\max}(A_0 + x_1A_1 + x_2A_2)$ với các $A_i$ đối xứng. (e) Cực tiểu $x_1^2 - x_2^2$ trên hình vuông $[-1, 1]^2$.
 :::
 
-### 2.1 Điều chuẩn vẫn có thể giữ tính lồi
-
-Ridge dùng $\tfrac12\|Aw-b\|_2^2+\tfrac\rho2\|w\|_2^2$, $\rho\ge0$. Hessian là $A^TA+\rho I$. Nếu $\rho>0$, với mọi $d\ne0$,
-
-$$d^T(A^TA+\rho I)d=\|Ad\|_2^2+\rho\|d\|_2^2>0.$$
-
-Trong bài không ràng buộc này, mục tiêu toàn phương PD có nghiệm duy nhất. Lasso dùng chuẩn 1 thay chuẩn 2 bình phương. Vẫn lồi nhưng có thể không khả vi. “Không trơn” và “không lồi” là hai thuộc tính khác nhau.
-
-## 3. Cải dạng bài toán bằng biến phụ
-
-Với $m$ hàm $f_1,\ldots,f_m$, mục tiêu lấy giá trị lớn nhất là $\max\{f_1(x),\ldots,f_m(x)\}$, thường viết gọn $\max_{1\le i\le m}f_i(x)$ hoặc $\max_i f_i(x)$ khi phạm vi đã rõ. Xét bài $\min_x\max_i f_i(x)$. Thêm biến $t$:
-
-$$\min_{x,t}t\quad\text{sao cho }f_i(x)\le t\ \forall i.$$
-
-Với một $x$, mọi $t$ khả thi đều không nhỏ hơn $\max_i f_i(x)$, và chọn $t$ đúng bằng giá trị lớn nhất ấy luôn khả thi. Vì vậy tối ưu theo $t$ trả lại đúng mục tiêu cũ. Đây là **cải dạng tương đương**, không chỉ là hai công thức trông gần giống nhau. Nếu các $f_i$ lồi, các hàm $f_i(x)-t$ cũng lồi.
-
-::: example Khớp dữ liệu theo sai số tệ nhất
-$\min_w\|Aw-b\|_\infty$ tương đương
-
-$$\min_{w,t}t,\qquad -t\mathbf1\preceq Aw-b\preceq t\mathbf1.$$
-
-$\mathbf1$ là vector có mọi thành phần bằng 1. Hai bất đẳng thức áp dụng cho mỗi phần dư $r_i$ cho $-t\le r_i\le t$, tương đương $|r_i|\le t$. Các ràng buộc mới đều affine, nên bài toán sau cải dạng là một LP dù biểu thức ban đầu chứa chuẩn và phép lấy giá trị lớn nhất.
-:::
-
-Với $m$ phần dư, chuẩn 1 là $|r_1|+\cdots+|r_m|$. Thêm $u_i$ sao cho $-u_i\le r_i\le u_i$, rồi cực tiểu $u_1+\cdots+u_m=\sum_{i=1}^m u_i$. Chỉ số $i$ chạy qua các phần dư. Tại tối ưu, có thể lấy $u_i=|r_i|$. Không cần thêm $u_i\ge0$: hai bất đẳng thức đã suy ra điều đó.
-
-Để chứng minh hai cách viết tương đương, cần chỉ ra đủ hai chiều: từ một nghiệm khả thi của bài toán cũ, tạo được biến phụ hợp lệ. Và từ một nghiệm khả thi của bài toán mới, thu hồi được đối tượng ban đầu với cùng giá trị mục tiêu. Nếu thiếu một chiều, phép biến đổi có thể chỉ là một phép nới lỏng.
-
-## 4. Các bài toán tối ưu trên nón
-
-### 4.1 SOCP: chuẩn ở một vế, affine ở vế còn lại
-
-**Nón bậc hai** là $K=\{(u,t):\|u\|_2\le t\}$. Quy hoạch nón bậc hai (SOCP) có mục tiêu affine và các ràng buộc
-
-$$\|A_ix+b_i\|_2\le c_i^Tx+d_i,$$
-
-cùng đẳng thức affine. Ràng buộc đã ép vế phải không âm. Không bình phương hai vế tùy ý nếu chưa giữ điều kiện đó: $|x|\le-1$ vô nghiệm nhưng $x^2\le1$ có nghiệm.
-
-Minimize $\|Aw-b\|_2$ có thể viết $\min t$ với $\|Aw-b\|_2\le t$, một SOCP. Minimize bình phương chuẩn cũng có cùng nghiệm, vì bình phương tăng trên $[0,\infty)$, nhưng giá trị tối ưu không giống nhau.
-
-### 4.2 SDP: điểm trong miền là một ma trận
-
-Cho các ma trận đối xứng cùng kích thước $F_0,F_1,\ldots,F_n$ và vector biến $x=(x_1,\ldots,x_n)$. Khi đó
-
-$$
-\begin{aligned}
-F(x)&=F_0+x_1F_1+\cdots+x_nF_n\\
-&=F_0+\sum_{i=1}^n x_iF_i.
-\end{aligned}
-$$
-
-Mỗi số $x_i$ nhân với một ma trận cố định $F_i$. Dấu $+$ cộng các ma trận theo từng phần tử. Điều kiện $F(x)\succeq0$ là một **bất đẳng thức ma trận tuyến tính**. Miền lồi vì nón PSD lồi và $F$ affine. **SDP** cực tiểu mục tiêu affine với các ràng buộc loại này và đẳng thức affine.
-
-Ví dụ tự đặt $\begin{bmatrix}t&x\\x&1\end{bmatrix}\succeq0$ tương đương $t\ge x^2$. Ta thấy một epigraph toàn phương có thể được viết bằng ma trận. Đây là so dạng toàn phương, không phải bắt từng phần tử ma trận không âm.
-
-### 4.3 GP: đổi biến trước khi gọi là lồi
-
-Trong quy hoạch hình học, biến $x_i>0$. Một **monomial** là tích có dạng
-
-$$
-c\,x_1^{a_1}x_2^{a_2}\cdots x_n^{a_n}
-=c\prod_{i=1}^n x_i^{a_i},\qquad c>0.
-$$
-
-$\prod$ yêu cầu **nhân**, với $i$ chạy từ 1 đến $n$. Các số mũ $a_i$ là số thực. Với hai biến, tích chỉ là $c\,x_1^{a_1}x_2^{a_2}$. **Posynomial** là tổng hữu hạn các monomial, chẳng hạn $x_1+2x_2^2$. GP dùng posynomial $\le1$, monomial $=1$ và mục tiêu posynomial.
-
-Đặt $y_i=\log x_i$, tức $x_i=e^{y_i}$. Log monomial trở thành $\log c+\sum_{i=1}^n a_i y_i$, tức $\log c+a_1y_1+\cdots+a_ny_n$, một hàm affine. Với posynomial gồm $K$ monomial, $\sum_{k=1}^K c_k\prod_{i=1}^n x_i^{a_{ki}}$, chỉ số $k$ chọn monomial và chỉ số $i$ chọn biến. Log của nó trở thành
-
-$$\log\left[\sum_{k=1}^K\exp\left(\log c_k+\sum_{i=1}^n a_{ki}y_i\right)\right].$$
-
-Với hai số hạng, hàm nền $h(z)=\log\sum_k e^{z_k}$ nghĩa là $h(z)=\log(e^{z_1}+e^{z_2})$. Trong trường hợp $K$ số hạng, tổng chạy qua $k=1,\ldots,K$.
-
-Đây là **log-sum-exp** của các biểu thức affine. Để thấy vì sao hàm nền $h(z)=\log\sum_k e^{z_k}$ lồi, đặt $p_k=e^{z_k}/\sum_j e^{z_j}$. Các $p_k$ không âm, cộng thành 1. Hessian là $\operatorname{diag}(p)-pp^T$, nên với mọi hướng $v$,
-
-$$v^T\nabla^2h\,v=\sum_kp_kv_k^2-\left(\sum_kp_kv_k\right)^2
-=\sum_kp_k(v_k-\bar v)^2\ge0,\qquad\bar v=\sum_kp_kv_k.$$
-
-Viết thành tổng bình phương có trọng số chứng nhận PSD. Hợp với biểu thức affine giữ tính lồi theo quy tắc ở Bài 01. Lấy log các vế dương giữ chiều bất đẳng thức và giữ thứ tự mục tiêu. Vì vậy GP được giải bằng một bài lồi trong biến $y$. Không khẳng định mọi posynomial lồi trong biến $x$.
-
-<details><summary>Thử trả lời: Sau phép đổi biến log, ràng buộc $x\cdot y\le 1$ với x,$y>0$ trở thành gì?</summary>
-
-Đặt $u=\log x$, $v=\log y$, ta được $u+v\le0$. Ví dụ này là ràng buộc monomial. $xy$ không lồi đồng thời theo $x,y$ trên miền dương nhưng cải dạng log là affine.
-
-</details>
-
-## 5. Cải dạng tương đương, xấp xỉ và nới lỏng
-
-**Xấp xỉ** thay một đối tượng bằng đối tượng khác dễ tính hơn, chẳng hạn thay một hàm bằng khai triển tuyến tính quanh một điểm. Khi dùng xấp xỉ, phải nói rõ hai đối tượng gần nhau ở đâu và sai số được đo bằng đại lượng nào. Chỉ gọi một biểu thức là “xấp xỉ” chưa đủ để suy ra nó là cận trên hay cận dưới.
-
-**Nới lỏng** mở rộng miền: $C\subseteq\widetilde C$. Giữ cùng mục tiêu trong bài min, ta có
-
-$$\inf_{x\in\widetilde C}f(x)\le\inf_{x\in C}f(x).$$
-
-Đây là cận dưới. Nghiệm ở miền rộng có thể không thỏa ràng buộc cũ. Trong bài max, chiều cận đổi.
-
-::: example Biến nhị phân được nới thành một đoạn
-Bài gốc $\min(x-0.4)^2$ với $x\in\{0,1\}$ đạt ở 0, giá trị $0.16$. Nới thành $0\le x\le1$ cho nghiệm $0.4$, giá trị 0. Cận 0 hợp lệ, nhưng $0.4$ không phải quyết định khả thi của bài nhị phân.
-
-Làm tròn về 0 cho một ứng viên gốc có giá trị $0.16$. Cận và ứng viên cung cấp khoảng $[0,0.16]$ cho giá trị tối ưu. Không được gọi nghiệm nới lỏng là nghiệm gốc.
-:::
-
-Muốn đánh giá một nghiệm, cần xem riêng phần dư của các đẳng thức, mức vi phạm của các bất đẳng thức, giá trị hàm mục tiêu và chứng nhận tối ưu. Một điểm cho giá trị hàm mục tiêu nhỏ nhưng vi phạm ràng buộc vẫn không phải nghiệm hợp lệ của mô hình.
-
-## Bài tập tự luyện
-
-::: exercise 1. Nhận dạng
-$\min x^2+y^2$ với $x+y=1$, $x,y\ge0$ là LP, QP hay SOCP trong cách viết hiện tại?
-:::
 ::: solution
-QP: mục tiêu toàn phương với $P=2I\succ0$, ràng buộc affine. Có thể cải dạng khác nhưng cách viết hiện tại không phải LP vì mục tiêu không affine.
+(a) LP, vì dùng biến phụ cho từng trị tuyệt đối của phần dư và một biến $t$ cho chuẩn $\ell_\infty$ thì mọi ràng buộc đều tuyến tính. (b) SOCP, khi viết thành cực tiểu $t$ với $\|Ax - b\|_2 \le t$. Nếu bình phương hàm mục tiêu, ta lại được một QP tương đương có cùng nghiệm. (c) GP: cực đại một monomial tương đương cực tiểu nghịch đảo của nó, và ràng buộc là $\tfrac16(x_1 + 2x_2 + 3x_3) \le 1$, một posynomial. Theo bất đẳng thức AM–GM áp dụng cho $x_1$, $2x_2$, $3x_3$ có tổng 6, nghiệm là $(2, 1, \tfrac23)$ với tích $\tfrac43$. (d) SDP: cực tiểu $t$ với $tI - A_0 - x_1A_1 - x_2A_2 \succeq 0$. (e) Không lồi: Hessian $\operatorname{diag}(2, -2)$ có trị riêng âm, và đây là một QP không lồi.
 :::
 
-::: exercise 2. Cải dạng trị tuyệt đối
-Viết $\min_x |x-1|+2|x+1|$ thành LP và giải bằng cách chia ba miền $x\le-1$, $-1\le x\le1$, $x\ge1$.
-:::
-::: solution
-Minimize $u+2v$ với $u\ge x-1$, $u\ge1-x$, $v\ge x+1$, $v\ge-x-1$. Trên ba miền, mục tiêu lần lượt là $-3x-1$, $x+3$, $3x+1$. Nó giảm tới $-1$, rồi tăng. Nghiệm $x=-1$ cho giá trị 2. Các biến phụ tối ưu là $u=2$, $v=0$.
+::: exercise 2. Trị tuyệt đối thành LP
+Viết bài toán cực tiểu $|x - 1| + 2|x + 1|$ thành LP và giải bằng cách chia ba khoảng $x \le -1$, $-1 \le x \le 1$, $x \ge 1$.
 :::
 
-::: exercise 3. Xác định chiều của cận
-Bỏ ràng buộc $x\le1/2$ khỏi QP ở mục 2. Cận dưới mới và một cận trên khả thi của bài có ràng buộc là bao nhiêu?
-:::
 ::: solution
-Nghiệm không ràng buộc cho cận dưới $\frac{5}{28}$. Chọn $w=\frac{1}{2}$ khả thi cho cận trên $\frac{3}{4}$. Khoảng cách là $\frac{3}{4}-\frac{5}{28}=\frac{4}{7}$. Để chứng nhận cận trên chính là tối ưu, dùng lập luận đơn điệu ở mục 2 hoặc KKT ở bài tiếp theo.
+Đặt $u \ge |x - 1|$ và $v \ge |x + 1|$ bằng bốn ràng buộc tuyến tính $u \ge x - 1$, $u \ge 1 - x$, $v \ge x + 1$, $v \ge -x - 1$, rồi cực tiểu $u + 2v$. Trên ba khoảng, hàm mục tiêu lần lượt là $-3x - 1$, $x + 3$ và $3x + 1$: giảm cho tới $x = -1$ rồi tăng. Nghiệm là $x = -1$ với giá trị 2, và các biến phụ tối ưu là $u = 2$, $v = 0$. Không cần thêm $u \ge 0$: hai bất đẳng thức của $u$ đã kéo theo điều đó.
+:::
+
+::: exercise 3. Kẹp giá trị tối ưu từ hai phía
+Bài 00 dẫn tới hàm mất mát $f(w) = 7w^2 - 11w + \tfrac92$. Thêm ràng buộc $w \le \tfrac12$. (a) Bỏ ràng buộc để có một cận dưới. (b) Dùng một điểm khả thi để có một cận trên. (c) Chứng minh cận trên chính là giá trị tối ưu.
+:::
+
+::: solution
+(a) Không ràng buộc, nghiệm là $w = \tfrac{11}{14}$ với giá trị $\tfrac92 - \tfrac{121}{28} = \tfrac{5}{28}$, một cận dưới vì bài toán không ràng buộc là một nới lỏng. (b) Điểm $w = \tfrac12$ khả thi và cho $f = \tfrac74 - \tfrac{11}{2} + \tfrac92 = \tfrac34$, một cận trên. Khoảng cách giữa hai cận là $\tfrac34 - \tfrac{5}{28} = \tfrac47$. (c) Trên miền $w \le \tfrac12$, đạo hàm $14w - 11 \le -4 < 0$, nên $f$ giảm khi $w$ tăng tới biên, và nghiệm là $w^\star = \tfrac12$ với $p^\star = \tfrac34$. Lecture 03 sẽ chứng nhận cùng kết quả bằng nhân tử Lagrange.
 :::
 
 ## Tóm tắt
 
-Dạng chuẩn lồi đặt điều kiện lên cả biểu thức và dấu ràng buộc. Biến phụ và đổi biến có thể làm cấu trúc hiện rõ. Phải chứng minh quan hệ với bài gốc. Nới lỏng tạo cận, còn nghiệm khả thi tạo ứng viên. Hai kết quả này phục vụ hai nhiệm vụ khác nhau.
+Một bài toán thực tế hiếm khi được phát biểu sẵn dưới dạng chuẩn lồi. Các phép biến đổi tương đương giữ nghiệm nhưng không phải lúc nào cũng giữ tính lồi, và tính lồi là tính chất của cách viết. Các lớp bài toán lồi chuẩn lồng vào nhau: LP, QP, QCQP, SOCP và SDP, cùng với GP lồi trong thang logarit. Bài toán tựa lồi và bài toán phân tuyến tính được đưa về một dãy bài toán khả thi lồi hoặc về đúng một LP. Bài toán nhiều mục tiêu có câu trả lời là một đường đánh đổi các điểm Pareto, tìm được bằng vô hướng hóa.
+
+Sau chương này, bạn nhận ra được lớp của một bài toán, viết nó về dạng mà một bộ giải chấp nhận, và chỉ ra phép biến đổi nào đã giữ hay làm mất tính lồi. Lecture 03 sẽ dùng chính những dạng viết này để xây dựng cận dưới và chứng nhận tối ưu qua đối ngẫu Lagrange.
 
 ## Nguồn và đọc thêm
 
-- *Convex Optimization*, §4.1–4.2 (dạng chuẩn, tương đương), §4.3 (LP, tr. 146 trở đi), §4.4 (QP, SOCP, tr. 152–159), §4.5 (GP, tr. 160–166), §4.6 (SDP, tr. 167–173), §6.3 (điều chuẩn).
-- Ví dụ số, cải dạng trị tuyệt đối và ví dụ nới lỏng nhị phân được tự biên soạn, tính lại bằng code. Những ràng buộc nón là định nghĩa từ sách. Không lấy nội dung bài giảng từ trang chỉ mục môn.
+- S. Boyd, L. Vandenberghe, *Convex Optimization*, Cambridge University Press, 2004: §3.4, §4.1.3, §4.2.4–4.2.5, §4.3–4.7, §6.3 và phụ lục A.5.5. Mỗi chủ đề ghi rõ mục và trang tương ứng ở phần nguồn của nó.
+- Các mô phỏng, ví dụ số, câu hỏi và bài tập do người soạn bổ sung, và mọi con số đã được tính lại bằng chương trình. Tên và thứ tự bài giảng theo trang môn học.
 
-[Bài 01](./bai-01-nhap-mon-toi-uu.md) · [Bài 03 — Đối ngẫu Lagrange](./bai-03-doi-ngau-lagrange.md).
+[Bài 01](./bai-01-nhap-mon-toi-uu.md) · [Bài 03 — Đối ngẫu Lagrange](./bai-03-doi-ngau-lagrange.md)

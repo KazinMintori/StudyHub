@@ -153,6 +153,14 @@ class LanguageReview(unittest.TestCase):
         self.assertNotIn("CHOPPY_RUN", self.codes(source_line))
         self.assertNotIn("CHOPPY_RUN", self.codes("Phân loại: (a) $x^2$. (b) $x^3$. (c) $e^x$. (d) $|x|$."))
 
+    def test_math_infinity_and_thinking_aloud(self):
+        self.assertIn("EVALUATIVE_PHRASE", self.codes("Điều kiện này vô cùng quan trọng."))
+        self.assertNotIn("EVALUATIVE_PHRASE", self.codes("Khi x tiến ra vô cùng, hàm tiến tới 0."))
+        self.assertNotIn("EVALUATIVE_PHRASE", self.codes("Giá trị tối ưu bằng vô cùng khi bài toán bất khả thi."))
+        self.assertIn("THINKING_ALOUD", self.codes("Miền là một tam giác... chính xác hơn, một miền không bị chặn."))
+        self.assertIn("THINKING_ALOUD", self.codes("Cộng ràng buộc thứ nhất với hai lần... thay vào đó, hãy cộng cả ba."))
+        self.assertNotIn("THINKING_ALOUD", self.codes("Các số 1, 2, 3, ... đều dương, nên tổng dương."))
+
     def test_connectives_are_expected_in_long_paragraphs(self):
         flat = "Tập lồi chứa đoạn nối. Hàm lồi nằm dưới dây cung. Epigraph của hàm lồi lồi. Tập mức dưới lồi. Giao giữ tính lồi."
         self.assertIn("LOW_CONNECTIVES", self.codes(flat))
@@ -470,6 +478,22 @@ class LectureIntegration(unittest.TestCase):
         one = "topics: [{ slug: 'gradient-la-gi', title: 'Gradient là gì', question: 'Gradient chỉ hướng nào?' }]"
         two = "topics: [{ slug: 'gradient-la-gi', title: 'Gradient là gì', question: 'Gradient chỉ hướng nào?' }, { slug: 'gradient-la-gi', title: 'Lặp', question: '?' }]"
         self.assert_error("TOPIC_DUPLICATE", lambda f: f.update({cat: f[cat].replace(one, two)}), target="--all")
+
+    def test_concept_unicode_math_in_mathtext_mode(self):
+        def mathtext(f):
+            f["docs/.vitepress/theme/LecturePanels.vue"] = '<template><MathText :text="t" /></template>'
+            f["docs/.vitepress/theme/MathText.vue"] = "<template><span /></template>"
+        # Fixture viết ký hiệu Unicode (∇, ²) ngoài $…$: hợp lệ với văn bản thuần, sai khi trang hiển thị qua MathText.
+        self.assert_error("CONCEPT_UNICODE_MATH", mathtext)
+        self.assert_error("CONCEPT_UNICODE_MATH", mathtext, target="--all")
+        def fixed(f):
+            mathtext(f)
+            f["docs/.vitepress/concepts.mjs"] = (CONCEPTS
+                .replace("Vector các đạo hàm riêng ∇f.", "Vector các đạo hàm riêng $\\\\nabla f$.")
+                .replace("f(x,y)=x²+y² có ∇f=(2x,2y).", "$f(x,y)=x^2+y^2$ có $\\\\nabla f=(2x,2y)$.")
+                .replace("f(x)=x² có f′(x)=2x.", "$f(x)=x^2$ có đạo hàm $2x$."))
+        _, errors, _ = self.run_check(fixed)
+        self.assertNotIn("CONCEPT_UNICODE_MATH", errors)
 
     def test_topic_layer_warnings_are_reported(self):
         lec = "docs/toan/bai-giang/bai-01-thu.md"

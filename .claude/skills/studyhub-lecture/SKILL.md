@@ -2,7 +2,7 @@
 name: studyhub-lecture
 description: Soạn hoặc sửa bài giảng của website StudyHub như một giảng viên đại học — từ raw_materials, giáo trình, slide hay note của môn thành trang bài giảng đủ Notes, Slides, Kiến thức nền và Wiki, kèm ví dụ đã tính lại, bài tập có lời giải và nguồn kiểm chứng được. Dùng khi thêm hoặc viết lại bài trong thư mục bài giảng của một môn, thêm thuật ngữ Wiki, rà chất lượng một bài, hoặc xuất bộ slide PDF/PPTX từ một bài. Use for any StudyHub lecture authoring, revision, or lecture-quality review.
 metadata:
-  version: "7.4.0"
+  version: "7.5.0"
   supersedes: "textbook-to-course-slides 6.1.0"
 ---
 
@@ -59,7 +59,7 @@ Luôn đọc [repo-format.md](references/repo-format.md) trước khi chạm và
 - Định nghĩa, giả thiết, lượng từ, miền, đơn vị, công thức, chiều suy ra và sức mạnh kết luận đúng như nguồn.
 - Dữ kiện, mô hình, kết quả đã chứng minh, quy tắc kinh nghiệm và diễn giải còn tranh luận được gọi đúng tên.
 - Không bịa: trích dẫn, đoạn mở đầu gán cho nhân vật, năm tháng, số liệu thực tế, tên bài báo, “lỗi thường gặp” không có căn cứ. Cần thì tra cứu và dẫn link; không kiểm được thì bỏ.
-- Mọi con số trong ví dụ, bài tập, lời giải được tính lại bằng code trước khi ghi.
+- Mọi con số trong ví dụ, bài tập, lời giải được tính lại bằng code trước khi ghi. Một ví dụ dùng để minh họa một tính chất ("không lồi", "chỉ tựa lồi", "nghiệm nằm giữa cạnh") cũng phải được kiểm bằng code là thật sự có tính chất đó.
 - Ranh giới nguồn của môn (mục "Ranh giới nguồn" trong `raw_materials/<course-id>/authoring-map.md`, nếu có) là ràng buộc cứng. Nguồn bị loại, chẳng hạn slide hay bài tập về nhà của học phần, không cấp ví dụ, số liệu hay câu chuyện mở đầu, kể cả khi có dòng ghi công.
 - Lý do thiết yếu nằm trong mạch chính của Notes, không chỉ trong hộp gập, slide hay lời nói.
 - Mọi đơn vị nguồn có ý nghĩa trong phạm vi được giao có nơi đến (Notes, bài tập, đọc thêm) hoặc lý do loại bỏ.
@@ -105,8 +105,8 @@ python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --format
 npm run ci:build
 ```
 
-- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Ký tự điều khiển giữa dòng và công thức inline bị cắt sang dòng sau, hai dấu vết của TeX ghi qua chuỗi không raw, cũng bị báo. Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
-- `review_teaching_text.py`: chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, từ ngữ kiểu văn máy, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải, chuỗi câu cụt, đoạn dài thiếu từ nối, mũi tên thay câu, khuôn câu hỏi lặp). Truyền cả chương một lượt để thấy khuôn lặp giữa các trang. Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
+- `check_lecture.mjs`: frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Ký tự điều khiển giữa dòng và công thức inline bị cắt sang dòng sau, hai dấu vết của TeX ghi qua chuỗi không raw, cũng bị báo. Với `--all`, mọi thuật ngữ trong concepts đều được kiểm, kể cả thuật ngữ chỉ xuất hiện qua liên kết tự động, và ký hiệu toán Unicode như ℓ₁, Bᵀ, ‖x‖ nằm ngoài $…$ là lỗi `CONCEPT_UNICODE_MATH`. Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
+- `review_teaching_text.py`: chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, từ ngữ kiểu văn máy, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải, chuỗi câu cụt, đoạn dài thiếu từ nối, mũi tên thay câu, khuôn câu hỏi lặp, lời giải "nghĩ thành tiếng" tự sửa giữa chừng). "Vô cùng" theo nghĩa toán học, như "tiến ra vô cùng", không bị tính là từ đánh giá. Truyền cả chương một lượt để thấy khuôn lặp giữa các trang. Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
 - Build phải exit 0. Nếu có trình duyệt, mở trang đã build và xem cả ba tab, công thức, Mermaid, hình ở bề rộng điện thoại. Nếu không xem được, nói rõ “chưa kiểm tra hiển thị”.
 - Bài lớn hoặc quan trọng: nhờ một lượt rà độc lập (agent khác chưa thấy quá trình soạn) đọc Notes như sinh viên và đối chiếu nguồn, nếu người dùng cho phép dùng thêm agent.
 

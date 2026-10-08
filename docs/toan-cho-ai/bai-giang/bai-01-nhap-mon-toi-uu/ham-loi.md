@@ -7,7 +7,7 @@ title: "Hàm lồi và bất đẳng thức dây cung"
 description: "Định nghĩa hàm lồi, lồi nghiêm ngặt, lõm và affine cùng ý nghĩa hình học của dây cung. Vì sao miền xác định phải lồi, cách kiểm tra tính lồi bằng cách hạn chế lên đường thẳng, mở rộng giá trị và hàm chỉ thị của một tập."
 ---
 
-Phần hình học vừa qua nói về **tập lồi**: những miền mà đoạn thẳng nối hai điểm bất kỳ không bao giờ đi ra ngoài. Nhưng một bài toán tối ưu không chỉ có miền khả thi, nó còn có hàm mục tiêu. Câu hỏi tiếp theo vì vậy rất tự nhiên: một **hàm** "lồi" thì nên được hiểu thế nào, để những điều tốt đẹp của tập lồi truyền sang được bài toán tối ưu?
+Phần hình học vừa qua nói về **tập lồi**: những miền mà đoạn thẳng nối hai điểm bất kỳ không bao giờ đi ra ngoài. Nhưng ngoài miền khả thi, một bài toán tối ưu còn có hàm mục tiêu. Câu hỏi tiếp theo vì vậy rất tự nhiên: một **hàm** "lồi" thì nên được hiểu thế nào, để những điều tốt đẹp của tập lồi truyền sang được bài toán tối ưu?
 
 Câu trả lời của sách dùng lại đúng công cụ quen thuộc là đoạn thẳng, nhưng đặt nó lên đồ thị của hàm. Sau định nghĩa và ý nghĩa của từng điều kiện trong đó, ta học kỹ thuật hạn chế hàm lên một đường thẳng, cách biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều. Phần cuối là một mẹo ký hiệu giúp biến ràng buộc thành một phần của hàm mục tiêu.
 

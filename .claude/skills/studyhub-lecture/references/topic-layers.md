@@ -73,11 +73,13 @@ Truyền **cả chương** cho `review_teaching_text.py` một lượt để th�
 
 Cuối cùng mở trang ở bề rộng 375px và trên máy bàn: không cuộn ngang, mô phỏng kéo được, công thức hiển thị, sơ đồ Mermaid hiện.
 
-## 6. Những lỗi đã gặp khi soạn Lecture 01
+## 6. Những lỗi đã gặp khi soạn Lecture 01 và 02
 
 - Script Python viết qua heredoc của Git Bash trên Windows làm mất một nửa số dấu `\` trong TeX. Viết script bằng công cụ ghi file rồi chạy, không nhúng TeX vào heredoc.
 - Ngay cả trong file script, chuỗi Python thường (không raw) vẫn đổi `\t`, `\n`, `\f`, `\v`, `\b`, `\a` thành ký tự điều khiển: `\tfrac` thành TAB + `frac`, `\ne` thành xuống dòng + `e`. Build vẫn chạy, MathJax vẫn vẽ, nhưng công thức sai ("400 ext m²", "20 e 0"), và lỗi này đã lên trang thật trước khi được phát hiện. Mọi chuỗi chứa TeX phải là raw string (`r"..."`), hoặc thay nội dung bằng công cụ sửa file. Sau mỗi lượt sửa bằng script, chạy `check_lecture.mjs` để bắt `CONTROL_CHAR` và `INLINE_MATH_SPLIT`.
 - Ví dụ và bài tập vô tình dùng lại dữ liệu bài tập về nhà của học phần. Luôn đối chiếu với file bài tập trong `raw_materials` và đổi dữ liệu.
 - Câu chuyện mở đầu (Dido), bài LP "phân bổ thời gian chạy hai tác vụ" và vài ví dụ nhỏ được lấy từ slide của học phần, kèm dòng ghi công. Ghi công không hợp thức hóa việc dùng một nguồn mà sổ nguồn của môn (`raw_materials/<môn>/authoring-map.md`) đã loại. Đọc mục "Ranh giới nguồn" của sổ trước khi chọn ví dụ xuyên suốt. Khi thay một ví dụ, tìm mọi chỗ nhắc lại nó (mục định nghĩa, câu hỏi, bài tập, tóm tắt, dòng nguồn) và tính lại mọi số liên quan.
-- Lời giải "nghĩ thành tiếng" ("à không, thử lại…") làm người học rối. Lời giải chỉ trình bày lập luận đúng cuối cùng; phản ví dụ được kiểm bằng code trước.
+- Lời giải "nghĩ thành tiếng" ("à không, thử lại…") làm người học rối. Lời giải chỉ trình bày lập luận đúng cuối cùng; phản ví dụ được kiểm bằng code trước. Ở Lecture 02 lỗi này vẫn lọt hai lần ("... thay vào đó, hãy", "... chính xác hơn"), một lần kèm kết luận sai về miền khả thi, nên `review_teaching_text.py` nay báo `THINKING_ALOUD`.
+- Ví dụ minh họa phải thật sự có tính chất được nói tới. Ví dụ "chi phí trung bình" $(x_1^2 + 2x_2^2 + 1)/(x_1 + x_2)$ được chọn để minh họa hàm chỉ tựa lồi, nhưng kiểm Hessian cho thấy nó lồi (phối cảnh của bình phương chuẩn). Ví dụ được thay bằng tỉ số khoảng cách, và trường hợp cũ thành một câu hỏi đào sâu. Trước khi viết "không lồi", tính Hessian hoặc thử một dây cung bằng code.
+- Thuật ngữ mới chỉ được dùng qua liên kết tự động không nằm trong `prerequisites` của bài nào, nên bản kiểm cũ bỏ qua chúng, và ký hiệu Unicode như ℓ₁, Bᵀ trong định nghĩa chỉ bị test của repo bắt lúc build. `check_lecture.mjs --all` nay kiểm mọi thuật ngữ.
 - Từ đa nghĩa bị liên kết nhầm: "đồ thị" (của hàm số và lý thuyết đồ thị), "phép chiếu" (Euclid, tọa độ, phối cảnh), "đơn hình" (hình học và phương pháp đơn hình). Tạo ID riêng theo lĩnh vực hoặc dùng alias dài hơn; xem repo-format.md mục 5.

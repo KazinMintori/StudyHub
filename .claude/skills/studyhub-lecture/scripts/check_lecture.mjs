@@ -204,6 +204,20 @@ function reportSmallSvgs(where, smallSvgs) {
   add('warning', where, 'SVG_SMALL_TEXT', `${smallSvgs.length} hình SVG có chữ < 12 đơn vị; nhỏ nhất ở ${worst.file}: ${Math.min(...worst.sizes)} → khoảng ${worst.phonePx.toFixed(1)}px trên màn hình 375px. Site có lightbox để phóng to, nhưng nhãn cần đọc để hiểu bài nên đọc được ngay; xem lại ở bề rộng điện thoại. Ví dụ: ${smallSvgs.slice(0, 3).map(x => x.file).join(', ')}${smallSvgs.length > 3 ? ', …' : ''}.`)
 }
 
+// Các trường của một thuật ngữ hiện trong thẻ xem nhanh và tab Kiến thức nền qua MathText.
+function checkConceptFields(t, pw) {
+  for (const field of ['definition', 'example', 'use', 'question', 'answer']) {
+    if (typeof t[field] !== 'string') continue
+    if (rendersMathText) {
+      checkMathText(t[field], pw, `concepts.${field}`)
+      // Cùng luật với scripts/tests/math-text.test.mjs của repo: ký hiệu toán Unicode phải nằm trong $…$.
+      const uni = outsideMath(t[field]).match(/[⎡⎣√∂ᵀ̂₀-₉²³∇Σ∑‖ℓ]/)
+      if (uni) add('error', pw, 'CONCEPT_UNICODE_MATH', `concepts.${field} có ký hiệu toán "${uni[0]}" ngoài $…$; viết bằng TeX, chẳng hạn $\\ell_1$, $B^T$, $\\|x\\|$.`)
+      if (/\*\*[^*]+\*\*/.test(outsideMath(t[field]))) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown; MathText chỉ hỗ trợ văn bản và công thức TeX.`)
+    } else if (MARKUP.test(t[field])) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown/LaTeX; tab Kiến thức nền hiển thị văn bản thuần.`)
+  }
+}
+
 let topicCount = 0
 async function checkLesson(course, lesson) {
   const rel = `docs/${course.id}/bai-giang/${lesson.slug}.md`
@@ -248,14 +262,7 @@ async function checkLesson(course, lesson) {
     if (!wikiGroups.some(g => g.ids.includes(id))) add('error', pw, `${code}_NOT_IN_GROUP`, 'Không thuộc nhóm nào trong wikiGroups.')
     if (!wikiDetails[id]) add('error', pw, `${code}_NO_DETAILS`, 'Thiếu wikiDetails.')
     if (!await exists(path.join(root, `docs/wiki/${id}.md`))) add('warning', pw, 'WIKI_FILE_MISSING', 'Chưa có docs/wiki/<id>.md; chạy npm run sync:courses rồi biên tập file.')
-    const t = concepts[id]
-    for (const field of ['definition', 'example', 'use', 'question', 'answer']) {
-      if (typeof t[field] !== 'string') continue
-      if (rendersMathText) {
-        checkMathText(t[field], pw, `concepts.${field}`)
-        if (/\*\*[^*]+\*\*/.test(outsideMath(t[field]))) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown; MathText chỉ hỗ trợ văn bản và công thức TeX.`)
-      } else if (MARKUP.test(t[field])) add('warning', pw, 'CONCEPT_MARKUP', `concepts.${field} chứa Markdown/LaTeX; tab Kiến thức nền hiển thị văn bản thuần.`)
-    }
+    checkConceptFields(concepts[id], pw)
   }
 
   const smallSvgs = []
@@ -311,7 +318,11 @@ async function checkSite() {
   for (const id of grouped) if (!concepts[id]) add('error', `wikiGroups`, 'GROUP_UNKNOWN_ID', `"${id}" có trong wikiGroups nhưng không có trong concepts.`)
   const seen = new Set()
   for (const id of grouped) { if (seen.has(id)) add('error', 'wikiGroups', 'GROUP_DUPLICATE', `"${id}" xuất hiện ở nhiều nhóm.`); seen.add(id) }
+  // Thuật ngữ chỉ được dùng qua liên kết tự động (không nằm trong prerequisites/supportingConcepts của bài nào)
+  // vẫn hiện trong thẻ xem nhanh, nên các trường của nó cũng phải được kiểm.
+  const listed = new Set(courseCatalog.flatMap(c => c.lessons.flatMap(l => [...(l.prerequisites || []), ...(l.supportingConcepts || [])])))
   for (const id of ids) {
+    if (!listed.has(id)) checkConceptFields(concepts[id], `concepts "${id}"`)
     if (!seen.has(id)) add('error', `concepts "${id}"`, 'CONCEPT_NO_GROUP', 'Không thuộc nhóm nào trong wikiGroups.')
     if (!wikiDetails[id]) add('error', `concepts "${id}"`, 'CONCEPT_NO_DETAILS', 'Thiếu wikiDetails.')
     try { for (const other of relatedConcepts(id)) if (!concepts[other] || other === id) add('error', `concepts "${id}"`, 'BAD_RELATED', `Thuật ngữ liên quan "${other}" không hợp lệ.`) }

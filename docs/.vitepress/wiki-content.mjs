@@ -3,7 +3,7 @@ import { concepts } from './concepts.mjs'
 
 import { mathAiWikiDetails } from './math-ai-foundations.mjs'
 export const wikiGroups = [
-  { id:'optimization', name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','binh-phuong-toi-thieu','tham-so-toan-hoc','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt','tap-affine','noi-tuong-doi','non-loi','sieu-phang','ellipsoid','da-dien','non-doi-ngau','sieu-phang-phan-tach','bat-dang-thuc-tong-quat','tap-muc-duoi','bat-dang-thuc-jensen','log-sum-exp','cuc-tieu-cuc-bo','phep-chieu'] },
+  { id:'optimization', name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','binh-phuong-toi-thieu','tham-so-toan-hoc','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt','tap-affine','noi-tuong-doi','non-loi','sieu-phang','ellipsoid','da-dien','non-doi-ngau','sieu-phang-phan-tach','bat-dang-thuc-tong-quat','tap-muc-duoi','bat-dang-thuc-jensen','log-sum-exp','cuc-tieu-cuc-bo','phep-chieu','bai-toan-tuong-duong','ham-tua-loi','quy-hoach-tuyen-tinh','quy-hoach-toan-phuong','quy-hoach-non-bac-hai','quy-hoach-nua-xac-dinh','quy-hoach-hinh-hoc','phan-bu-schur','toi-uu-pareto','dieu-chuan'] },
   { id:'optimization-algorithms', name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
   { id:'planning', name:'Quy hoạch', ids:['nghiem-co-so','quy-hoach-dong'] },
   { id:'discrete-math', name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','luong-tu','quy-nap','to-hop','quan-he'] },
@@ -59,6 +59,16 @@ const connections = {
   'log-sum-exp':['ham-loi', 'hessian', 'phuong-sai'],
   'cuc-tieu-cuc-bo':['ham-loi', 'mien-kha-thi', 'gradient'],
   'phep-chieu':['tap-loi', 'gradient', 'chuan'],
+  'bai-toan-tuong-duong':['epigraph', 'mien-kha-thi', 'ham-loi'],
+  'ham-tua-loi':['tap-muc-duoi', 'ham-loi', 'quy-hoach-tuyen-tinh'],
+  'quy-hoach-tuyen-tinh':['da-dien', 'nghiem-co-so', 'quy-hoach-toan-phuong'],
+  'quy-hoach-toan-phuong':['quy-hoach-tuyen-tinh', 'ma-tran-psd', 'binh-phuong-toi-thieu'],
+  'quy-hoach-non-bac-hai':['non-loi', 'quy-hoach-toan-phuong', 'quy-hoach-nua-xac-dinh'],
+  'quy-hoach-nua-xac-dinh':['ma-tran-psd', 'phan-bu-schur', 'bat-dang-thuc-tong-quat'],
+  'quy-hoach-hinh-hoc':['log-sum-exp', 'bai-toan-tuong-duong', 'ham-loi'],
+  'phan-bu-schur':['ma-tran-psd', 'quy-hoach-nua-xac-dinh', 'quy-hoach-non-bac-hai'],
+  'toi-uu-pareto':['non-doi-ngau', 'sieu-phang-phan-tach', 'dieu-chuan'],
+  'dieu-chuan':['binh-phuong-toi-thieu', 'toi-uu-pareto', 'quy-hoach-toan-phuong'],
   hessian:['gradient','ma-tran-psd','tri-rieng','ma-tran'],
   'ma-tran-psd':['ma-tran','tri-rieng','hessian'],
   'he-phuong-trinh':['ma-tran','vector','hessian'],

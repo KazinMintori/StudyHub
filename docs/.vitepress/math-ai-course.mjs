@@ -39,6 +39,32 @@ const topicGroups = {
       topic('dieu-kien-toi-uu', 'Điều kiện tối ưu bậc nhất trên miền lồi', 'Khi nghiệm nằm trên biên và gradient khác 0, ta kiểm chứng nó tối ưu bằng cách nào?', '§4.2.3'),
       topic('tinh-loi-trong-mo-hinh-hoc-may', 'Nhận diện tính lồi trong mô hình học máy', 'Hàm mất mát của hồi quy logistic là lồi, vậy còn mạng nơ-ron hai tầng thì sao?', '§4.4, §7.1')
     ])
+  ],
+  'bai-02-tap-loi': [
+    group('I. Biến đổi bài toán', 'Viết lại một bài toán mà không làm sai lời giải, và nhận ra lúc tính lồi bị cách viết che khuất.', [
+      topic('bai-toan-tuong-duong', 'Bài toán tương đương và các phép biến đổi cơ bản', 'Khi nào hai bài toán viết khác nhau lại cho cùng một lời giải, và phép biến đổi nào làm mất điều đó?', '§4.1.3, §4.2.1'),
+      topic('khu-rang-buoc-va-toi-uu-tung-phan', 'Khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến', 'Một ràng buộc đẳng thức tuyến tính có thể biến mất mà không mất thông tin nào không, và cái giá phải trả là gì?', '§4.1.3, §4.2.4'),
+      topic('toi-uu-tua-loi', 'Hàm tựa lồi và phương pháp chia đôi', 'Nếu chỉ biết mọi tập mức dưới đều lồi, ta còn giải bài toán một cách đáng tin cậy được không?', '§3.4, §4.2.5')
+    ]),
+    group('II. Quy hoạch tuyến tính', 'Lớp bài toán đơn giản nhất nhưng mô tả được rất nhiều mô hình, từ hình học tới xác suất.', [
+      topic('quy-hoach-tuyen-tinh', 'Quy hoạch tuyến tính: các dạng viết và hình học của nghiệm', 'Vì sao mọi LP đều đưa được về cùng một dạng chuẩn, và nghiệm của nó nằm ở đâu trên đa diện?', '§4.3'),
+      topic('mo-hinh-lp', 'Những bài toán trở thành LP', 'Tìm hình tròn lớn nhất nằm trong một đa giác nghe chẳng tuyến tính chút nào. Vì sao đó lại là một LP?', '§4.3.1'),
+      topic('quy-hoach-phan-tuyen-tinh', 'Quy hoạch phân tuyến tính', 'Cực tiểu một tỉ số của hai hàm affine có khó hơn LP không?', '§4.3.2')
+    ]),
+    group('III. Quy hoạch toàn phương và nón bậc hai', 'Khi mục tiêu hay ràng buộc cong lên, nghiệm rời khỏi các đỉnh và chuẩn Euclid xuất hiện.', [
+      topic('quy-hoach-toan-phuong', 'Quy hoạch toàn phương và QCQP', 'Khi mục tiêu cong như một cái bát, nghiệm còn nằm ở đỉnh của đa diện nữa không?', '§4.4–4.4.1'),
+      topic('quy-hoach-non-bac-hai', 'Quy hoạch nón bậc hai và LP bền vững', 'Muốn một ràng buộc tuyến tính đúng với mọi tham số trong một vùng bất định, ta phải trả giá bằng hình dạng nào?', '§4.4.2')
+    ]),
+    group('IV. Quy hoạch hình học', 'Những bài toán không lồi trong biến gốc nhưng trở thành lồi sau khi chuyển sang thang logarit.', [
+      topic('quy-hoach-hinh-hoc', 'Quy hoạch hình học', 'Một bài toán không lồi có thể trở thành lồi chỉ nhờ đổi sang thang logarit không?', '§4.5')
+    ]),
+    group('V. Bất đẳng thức suy rộng và SDP', 'Thay thứ tự từng thành phần bằng thứ tự của các ma trận nửa xác định dương.', [
+      topic('bai-toan-dang-non-va-sdp', 'Bài toán dạng nón và quy hoạch nửa xác định', 'Thay "mọi thành phần không âm" bằng "ma trận nửa xác định dương", ta được lớp bài toán nào?', '§4.6.1–4.6.2'),
+      topic('phan-bu-schur-va-bai-toan-tri-rieng', 'Phần bù Schur và các bài toán về trị riêng', 'Làm thế nào viết một ràng buộc phi tuyến như "chuẩn phổ không vượt quá t" thành một bất đẳng thức ma trận tuyến tính?', '§4.6.3, §A.5.5')
+    ]),
+    group('VI. Tối ưu vector', 'Khi phải cân nhiều mục tiêu cùng lúc, câu trả lời là cả một đường đánh đổi chứ không phải một điểm.', [
+      topic('toi-uu-vector-va-danh-doi', 'Tối ưu vector, điểm Pareto và đường đánh đổi', 'Khi sai số nhỏ và tham số nhỏ là hai mục tiêu cùng lúc, thế nào là một lựa chọn tốt?', '§4.7, §6.3')
+    ])
   ]
 }
 const slugs = ['bai-00-on-tap-nen-tang', 'bai-01-nhap-mon-toi-uu', 'bai-02-tap-loi', 'bai-03-doi-ngau-lagrange', 'bai-04-gradient-newton', 'bai-05-toi-uu-huan-luyen', 'bai-06-phuong-phap-thich-nghi', 'bai-07-quy-hoach-tuyen-tinh-va-dong']

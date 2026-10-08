@@ -37,7 +37,7 @@ export const readingMetadata = {
     "minutes": 10
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
-    "words": 4263,
+    "words": 4264,
     "minutes": 28
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
@@ -53,7 +53,7 @@ export const readingMetadata = {
     "minutes": 8
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi": {
-    "words": 3562,
+    "words": 3557,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-loi": {
@@ -101,7 +101,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/ham-loi": {
-    "words": 1885,
+    "words": 1882,
     "minutes": 13
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat": {
@@ -137,8 +137,56 @@ export const readingMetadata = {
     "minutes": 20
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 2100,
+    "words": 1818,
     "minutes": 10
+  },
+  "toan-cho-ai/bai-02-tap-loi/bai-toan-tuong-duong": {
+    "words": 4036,
+    "minutes": 27
+  },
+  "toan-cho-ai/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan": {
+    "words": 3249,
+    "minutes": 22
+  },
+  "toan-cho-ai/bai-02-tap-loi/toi-uu-tua-loi": {
+    "words": 3346,
+    "minutes": 22
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-tuyen-tinh": {
+    "words": 2750,
+    "minutes": 18
+  },
+  "toan-cho-ai/bai-02-tap-loi/mo-hinh-lp": {
+    "words": 2830,
+    "minutes": 19
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-phan-tuyen-tinh": {
+    "words": 2724,
+    "minutes": 18
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-toan-phuong": {
+    "words": 2741,
+    "minutes": 18
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-non-bac-hai": {
+    "words": 2130,
+    "minutes": 14
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-hinh-hoc": {
+    "words": 2467,
+    "minutes": 16
+  },
+  "toan-cho-ai/bai-02-tap-loi/bai-toan-dang-non-va-sdp": {
+    "words": 2332,
+    "minutes": 16
+  },
+  "toan-cho-ai/bai-02-tap-loi/phan-bu-schur-va-bai-toan-tri-rieng": {
+    "words": 2200,
+    "minutes": 15
+  },
+  "toan-cho-ai/bai-02-tap-loi/toi-uu-vector-va-danh-doi": {
+    "words": 2394,
+    "minutes": 16
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
     "words": 1830,
