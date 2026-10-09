@@ -8,201 +8,358 @@ lessonStatus: ready
 description: "Tự tính Lagrangian, hàm đối ngẫu và khoảng cách đối ngẫu; dùng Slater và KKT để chứng nhận nghiệm."
 ---
 
-Tìm được một điểm khả thi có giá trị hàm mục tiêu nhỏ chưa đủ để kết luận điểm đó tối ưu, vì vẫn có thể tồn tại một điểm khả thi khác tốt hơn. Một cách chứng nhận là xây dựng cận dưới đúng cho mọi nghiệm của bài toán cực tiểu. Nếu giá trị của một điểm khả thi bằng cận dưới ấy, không điểm nào có thể tốt hơn. Đối ngẫu Lagrange tạo ra các cận dưới như vậy bằng cách đưa các ràng buộc vào hàm mục tiêu với những hệ số thích hợp.
+Khi tìm kiếm lời giải cho một bài toán tối ưu có ràng buộc, làm thế nào để chúng ta biết chắc chắn rằng mình không thể tìm được một phương án nào tốt hơn nữa? Việc tìm ra một điểm khả thi có chi phí thấp mới chỉ là một nửa câu chuyện; nửa còn lại đòi hỏi một **chứng nhận cận dưới không thể đánh bại**. Nếu ta chứng minh được rằng chi phí thực tế không bao giờ có thể thấp hơn một ngưỡng $d^*$, và đồng thời ta tìm được một phương án đạt đúng ngưỡng $d^*$ đó, thì điểm khả thi ấy chắc chắn là nghiệm tối ưu toàn cục.
 
-Ta tiếp tục bài $\min(x-2)^2$ với $x\le1$ từ Bài 01. Ví dụ này tự đặt. Lý thuyết dựa vào chương 5 của *Convex Optimization*.
+Lý thuyết **Đối ngẫu Lagrange (Lagrangian Duality)** chính là cỗ máy toán học tạo ra những chứng nhận cận dưới như vậy. Bằng cách biến các ràng buộc cứng thành các khoản "chi phí phạt mềm" tích hợp vào hàm mục tiêu, đối ngẫu Lagrange mở ra một bài toán song hành phản chiếu bài toán gốc. Không chỉ cung cấp công cụ chứng minh nghiệm, lý thuyết này còn mang ý nghĩa kinh tế học sâu sắc về "giá bóng" (shadow price) của tài nguyên và khai sinh ra hệ điều kiện Karush–Kuhn–Tucker (KKT) — đỉnh cao của giải tích tối ưu có ràng buộc.
 
-Sau khi học xong, bạn sẽ tính được hàm đối ngẫu bằng cách lấy infimum theo biến gốc trước, xác minh được bốn nhóm điều kiện KKT, và dùng khoảng cách đối ngẫu để định lượng mức chưa tối ưu của một điểm khả thi.
+---
 
-Lần đọc đầu nên dừng sau mục 3, khi bạn đã tự tính được một hàm đối ngẫu và hiểu vì sao nó cho cận dưới. Mục 4 trình bày điều kiện Slater, còn mục 5–6 tổ chức các kết quả thành bốn nhóm điều kiện KKT. Không cần học thuộc tên các nhóm trước khi hiểu mỗi nhóm loại trừ sai sót nào.
+## 1. Hàm Lagrangian và Bản chất dấu của các nhân tử
 
-## 1. Lagrangian và dấu của các nhân tử
-
-Giả sử bài cực tiểu $f_0(x)$ có $m$ bất đẳng thức $f_i(x)\le0$ và $p$ đẳng thức $h_j(x)=0$. Ta cộng vào mục tiêu một số hạng cho mỗi ràng buộc. Viết đầy đủ:
+Xét bài toán tối ưu chuẩn tắc với biến $x \in \mathbb{R}^n$, gồm $m$ ràng buộc bất đẳng thức và $p$ ràng buộc đẳng thức:
 
 $$
 \begin{aligned}
-L(x,\lambda,\nu)=f_0(x)
-&+\lambda_1f_1(x)+\cdots+\lambda_mf_m(x)\\
-&+\nu_1h_1(x)+\cdots+\nu_ph_p(x).
+\min_{x} \quad & f_0(x) \\
+\text{sao cho} \quad & f_i(x) \le 0, \quad i = 1, \ldots, m, \\
+& h_j(x) = 0, \quad j = 1, \ldots, p.
 \end{aligned}
 $$
 
-Đó là **Lagrangian**, thường viết gọn thành
+Ý tưởng cốt lõi của Joseph-Louis Lagrange là nới lỏng các ràng buộc bằng cách đưa chúng trực tiếp vào hàm mục tiêu thông qua phép tổ hợp tuyến tính. Hàm **Lagrangian** $L: \mathbb{R}^n \times \mathbb{R}^m \times \mathbb{R}^p \to \mathbb{R}$ được định nghĩa là:
 
-$$L(x,\lambda,\nu)=f_0(x)+\sum_{i=1}^m\lambda_i f_i(x)+\sum_{j=1}^p\nu_jh_j(x).$$
+$$
+L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x),
+$$
 
-Chỉ số $i$ chạy qua các bất đẳng thức. $j$ chạy qua các đẳng thức. Mỗi tổng được xem là 0 nếu nhóm ràng buộc tương ứng rỗng. Sau khi phạm vi đã rõ, ta có thể viết $\sum_i$ hoặc $\sum_j$.
+trong đó:
+- $\lambda = (\lambda_1, \ldots, \lambda_m)^T \in \mathbb{R}^m$ là vector **nhân tử Lagrange** gắn với các bất đẳng thức.
+- $\nu = (\nu_1, \ldots, \nu_p)^T \in \mathbb{R}^p$ là vector **nhân tử Lagrange** gắn với các đẳng thức.
 
-$\lambda_i$ là nhân tử cho bất đẳng thức. $\nu_j$ cho đẳng thức. Ta chọn $\lambda_i\ge0$. Tại một điểm khả thi $\widetilde x$, mỗi số $\lambda_i f_i(\widetilde x)\le0$ và mỗi $\nu_j h_j(\widetilde x)=0$. Vì vậy
+Tại sao ta bắt buộc phải áp đặt điều kiện không âm $\lambda_i \ge 0$ cho các bất đẳng thức? 
 
-$$L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).$$
+Hãy quan sát: Với một điểm khả thi bất kỳ $\widetilde x$ của bài toán gốc, ta luôn có $f_i(\widetilde x) \le 0$. Nếu chọn $\lambda_i \ge 0$, tích $\lambda_i f_i(\widetilde x)$ luôn không dương. Mặt khác, vì $h_j(\widetilde x) = 0$, số hạng $\nu_j h_j(\widetilde x)$ triệt tiêu hoàn toàn bất kể dấu của $\nu_j$. Do đó, với mọi điểm khả thi $\widetilde x$ và với mọi bộ nhân tử thỏa mãn $\lambda \succeq 0$, ta có bất đẳng thức:
 
-Đẳng thức không đòi $\nu_j\ge0$: nhân với số 0 vẫn bằng 0 khi $\nu_j$ âm, bằng 0 hoặc dương. Dấu của nhân tử gắn với quy ước $f_i\le0$. Nếu đổi quy ước phải đổi tương ứng.
+$$
+L(\widetilde x, \lambda, \nu) = f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0} \le f_0(\widetilde x).
+$$
 
-Giữ nhân tử cố định và lấy cận dưới theo $x$ trong miền chung $D$ của các hàm:
+Nói cách khác, trên miền khả thi gốc, hàm Lagrangian luôn đánh giá thấp hơn hoặc bằng chi phí thực tế. 
 
-$$g(\lambda,\nu)=\inf_{x\in D}L(x,\lambda,\nu).$$
+Từ bất đẳng thức này, ta định nghĩa **hàm đối ngẫu Lagrange** (Lagrange dual function) $g(\lambda, \nu)$ bằng cách lấy cận dưới đúng (infimum) của Lagrangian theo toàn bộ không gian biến $x \in \mathcal{D}$:
 
-Ta không giữ các ràng buộc tường minh $f_i\le0,h_j=0$ trong phép infimum này. Chúng đã nằm trong Lagrangian. Các điều kiện miền xác định, như $x>0$ cho log, vẫn phải giữ.
+$$
+g(\lambda, \nu) = \inf_{x \in \mathcal{D}} L(x, \lambda, \nu) = \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
+$$
 
-Vì infimum không lớn hơn giá trị ở $\widetilde x$,
+Lưu ý rằng phép lấy infimum này là bài toán không ràng buộc theo biến $x$ (chỉ giữ lại miền xác định ngầm $\mathcal{D}$). Vì giá trị nhỏ nhất của một hàm trên toàn không gian luôn nhỏ hơn hoặc bằng giá trị của nó tại một điểm khả thi cụ thể $\widetilde x$, ta thu được chuỗi bất đẳng thức nền tảng:
 
-$$\boxed{g(\lambda,\nu)\le L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).}$$
+$$
+\boxed{g(\lambda, \nu) \le L(\widetilde x, \lambda, \nu) \le f_0(\widetilde x).}
+$$
 
-Điều này đúng với mọi điểm khả thi, nên $g\le p^*$. Đây là **đối ngẫu yếu**, không cần bài gốc lồi. Nếu L không bị chặn dưới, $g=-\infty$. Cận ấy đúng nhưng không hữu ích.
+Vì bất đẳng thức trên nghiệm đúng với **mọi** điểm khả thi $\widetilde x$, ta suy ra $g(\lambda, \nu)$ luôn nhỏ hơn hoặc bằng giá trị tối ưu toàn cục $p^*$ của bài toán gốc:
 
-## 2. Tính hàm đối ngẫu trong một ví dụ
+$$
+g(\lambda, \nu) \le p^* \quad \forall \lambda \succeq 0, \, \forall \nu.
+$$
 
-Với ràng buộc $x-1\le0$,
+Đặc tính này được gọi là **Định lý Đối ngẫu yếu (Weak Duality)**. Điều kỳ diệu là định lý đối ngẫu yếu luôn đúng cho **mọi bài toán tối ưu**, hoàn toàn không đòi hỏi hàm mục tiêu hay các miền ràng buộc phải có tính lồi.
 
-$$L(x,\lambda)=(x-2)^2+\lambda(x-1),\qquad\lambda\ge0.$$
+---
 
-Để tính $g$, coi $\lambda$ là số cố định. Đạo hàm theo $x$:
+## 2. Tính toán hàm đối ngẫu trên một bài toán cụ thể
 
-$$2(x-2)+\lambda=0\quad\Rightarrow\quad x(\lambda)=2-\lambda/2.$$
+Để thấy rõ cơ chế vận hành, ta xét bài toán tối ưu một chiều:
 
-Hessian theo $x$ bằng 2, nên điểm này cực tiểu L trên toàn $\mathbb R$. Thế lại:
+$$
+\min_{x \in \mathbb{R}} \quad f_0(x) = (x - 2)^2 \quad \text{sao cho} \quad x \le 1.
+$$
 
-$$g(\lambda)=\lambda-\frac{\lambda^2}4.$$
+Viết lại ràng buộc dưới dạng chuẩn $f_1(x) = x - 1 \le 0$. Hàm Lagrangian với nhân tử $\lambda \ge 0$ là:
 
-**Bài đối ngẫu** là cực đại cận dưới này:
+$$
+L(x, \lambda) = (x - 2)^2 + \lambda(x - 1).
+$$
 
-$$\max_{\lambda\ge0}g(\lambda).$$
+Để tìm hàm đối ngẫu $g(\lambda)$, ta coi $\lambda$ là hằng số cố định và tìm cực tiểu của $L(x, \lambda)$ theo $x$ trên $\mathbb{R}$. Đạo hàm theo $x$:
 
-Ta có $g'(\lambda)=1-\lambda/2$, nên $\lambda^*=2$, $g(2)=1$. Nghiệm gốc $x^*=1$ cũng cho $f_0(1)=1$. Cận dưới và ứng viên gặp nhau. Cả hai tối ưu.
+$$
+\frac{\partial L}{\partial x} = 2(x - 2) + \lambda = 0 \iff x(\lambda) = 2 - \frac{\lambda}{2}.
+$$
 
-<MathLab type="dual">
+Vì đạo hàm bậc hai $\frac{\partial^2 L}{\partial x^2} = 2 > 0$, hàm số đạt cực tiểu toàn cục duy nhất tại $x(\lambda) = 2 - \lambda/2$. Thay giá trị $x(\lambda)$ này ngược lại vào Lagrangian:
 
-```js
-const g = lambda => lambda-lambda*lambda/4; // lambda >= 0
-const gap = 1-g(lambda); // x=1 khả thi, f(1)=1
-```
+$$
+\begin{aligned}
+g(\lambda) &= \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right) \\
+&= \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right) \\
+&= \lambda - \frac{\lambda^2}{4}.
+\end{aligned}
+$$
 
-</MathLab>
+Hàm đối ngẫu $g(\lambda) = \lambda - \frac{\lambda^2}{4}$ cung cấp một cận dưới cho giá trị tối ưu gốc với mỗi giá trị $\lambda \ge 0$:
+- Thử với $\lambda = 0$: $g(0) = 0 \le p^*$. Điểm cực tiểu tương ứng là $x(0) = 2$ (không khả thi cho bài toán gốc).
+- Thử với $\lambda = 1$: $g(1) = 1 - 0.25 = 0.75 \le p^*$.
+- Thử với $\lambda = 4$: $g(4) = 4 - 4 = 0 \le p^*$.
 
-Mô phỏng cơ chế cận dưới ở §5.1.3 và Hình 5.1 của sách bằng bài toán tự đặt. Đổi $\lambda$ để thấy cận có thể còn xa nghiệm. Khi $\lambda=0$, điểm cực tiểu L là 2, không khả thi cho bài gốc. Việc cực tiểu L không tự thu hồi nghiệm khả thi.
+Rõ ràng, mục tiêu của ta là tìm cận dưới chặt chẽ nhất, tức là giải **bài toán đối ngẫu Lagrange**:
 
-## 3. Tính lõm của hàm đối ngẫu
+$$
+\max_{\lambda \ge 0} \quad g(\lambda) = \lambda - \frac{\lambda^2}{4}.
+$$
 
-Với một $x$ cố định, $L(x,\lambda,\nu)$ là affine theo các nhân tử. Hàm $g$ lấy infimum của cả họ hàm affine ấy. Để xác định đúng chiều bất đẳng thức, gọi hai bộ nhân tử là $u,v$ và lấy $0\le\theta\le1$:
+Đạo hàm của hàm đối ngẫu là $g'(\lambda) = 1 - \frac{\lambda}{2} = 0 \iff \lambda^* = 2 \ge 0$. 
 
-$$\begin{aligned}
-g(\theta u+(1-\theta)v)
-&=\inf_x[\theta L(x,u)+(1-\theta)L(x,v)]\\
-&\ge\theta\inf_xL(x,u)+(1-\theta)\inf_xL(x,v).
-\end{aligned}$$
+Giá trị tối ưu đối ngẫu đạt được là:
+$$
+d^* = g(\lambda^*) = 2 - \frac{2^2}{4} = 1.
+$$
 
-Mỗi giá trị bên trong infimum không nhỏ hơn vế phải, nên lấy infimum vẫn giữ cận. Đây là bất đẳng thức hàm lõm. Vì vậy bài cực đại $g$ trên miền nhân tử khả thi là bài tối ưu lồi, kể cả khi bài gốc không lồi. Điều này không bảo đảm cận chạm $p^*$.
+Quay trở lại bài toán gốc: Nghiệm khả thi rõ ràng là $x^* = 1$, cho giá trị mục tiêu $f_0(x^*) = (1 - 2)^2 = 1$. 
 
-<details><summary>Thử trả lời: Bài toán đối ngẫu cực tiểu hay cực đại hàm g, và vì sao?</summary>
+Như vậy, ta có $p^* = d^* = 1$. Cận dưới đối ngẫu đã chạm đúng giá trị tối ưu gốc, chứng nhận tuyệt đối rằng $x^* = 1$ là nghiệm tối ưu toàn cục.
 
-Cực đại: mọi giá trị $g$ hợp lệ đều là cận dưới. Ta muốn cận lớn nhất, gần giá trị tối ưu gốc nhất. Cực tiểu g chỉ làm cận yếu đi.
+---
+
+## 3. Tính lõm tự nhiên của hàm đối ngẫu
+
+Một trong những tính chất toán học đẹp đẽ nhất của lý thuyết đối ngẫu là: **Hàm đối ngẫu $g(\lambda, \nu)$ luôn là hàm lõm (concave), bất kể bài toán gốc có lồi hay không**.
+
+Để chứng minh điều này, hãy nhìn vào dạng của Lagrangian: với mỗi điểm $x$ cố định, biểu thức
+$$
+(\lambda, \nu) \mapsto L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x)
+$$
+là một hàm affine (tuyến tính cộng hằng số) theo biến $(\lambda, \nu)$. 
+
+Hàm đối ngẫu $g(\lambda, \nu) = \inf_{x \in \mathcal{D}} L(x, \lambda, \nu)$ chính là infimum của một họ các hàm affine. Vì mỗi hàm affine vừa lồi vừa lõm, infimum của một họ các hàm affine luôn là một **hàm lõm**.
+
+Ta kiểm chứng trực tiếp bằng định nghĩa tính lõm: Với hai bộ nhân tử bất kỳ $u = (\lambda_1, \nu_1)$, $v = (\lambda_2, \nu_2)$ và $\theta \in [0, 1]$:
+
+$$
+\begin{aligned}
+g(\theta u + (1 - \theta) v) &= \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v) \\
+&= \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right] \\
+&\ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v) \\
+&= \theta g(u) + (1 - \theta) g(v).
+\end{aligned}
+$$
+
+Bất đẳng thức trên khẳng định $g$ là hàm lõm. Do đó:
+> Bài toán đối ngẫu $\max_{\lambda \succeq 0, \nu} g(\lambda, \nu) \equiv \min_{\lambda \succeq 0, \nu} -g(\lambda, \nu)$ **luôn luôn là một bài toán tối ưu lồi**, ngay cả khi bài toán gốc là một bài toán phi lồi NP-hard vô cùng hiểm hóc!
+
+<details><summary>Câu hỏi đào sâu: Tại sao bài toán đối ngẫu luôn tìm giá trị cực đại của g chứ không phải cực tiểu?</summary>
+
+Bởi vì mỗi giá trị $g(\lambda, \nu)$ đóng vai trò là một cận dưới của giá trị tối ưu gốc $p^*$ ($g \le p^*$). Cận dưới càng lớn thì càng áp sát giá trị thực tế $p^*$, tức là thông tin chứng nhận càng chặt chẽ. Cực tiểu hóa một cận dưới sẽ đẩy nó về $-\infty$, hoàn toàn vô giá trị cho việc ước lượng nghiệm.
 
 </details>
 
-## 4. Điều kiện Slater và đối ngẫu mạnh
+---
 
-Gọi $d^*$ là giá trị tối ưu đối ngẫu. Đối ngẫu yếu cho $d^*\le p^*$. Khi $d^*=p^*$, ta có **đối ngẫu mạnh**. Lồi chưa tự bảo đảm đẳng thức này trong mọi trường hợp.
+## 4. Điều kiện Slater và Đối ngẫu mạnh (Strong Duality)
 
-Với bài lồi dạng chuẩn, **điều kiện Slater** yêu cầu tồn tại $\bar x\in\operatorname{relint}D$ sao cho
+Khoảng chênh lệch giữa giá trị tối ưu gốc và giá trị tối ưu đối ngẫu được gọi là **khoảng cách đối ngẫu (duality gap)**:
 
-$$f_i(\bar x)<0\ \forall i,\qquad A\bar x=b.$$
+$$
+\Delta = p^* - d^* \ge 0.
+$$
 
-Nội tương đối $\operatorname{relint}D$ là phần trong của miền khi nhìn trong không gian affine nhỏ nhất chứa nó. Một đoạn nằm trên đường trong $\mathbb R^2$ có nội hai chiều rỗng nhưng có nội tương đối là phần giữa hai đầu mút. Cần khái niệm này khi miền sống trong một không gian thấp chiều.
+Khi khoảng cách này triệt tiêu, tức $p^* = d^*$, ta nói bài toán thỏa mãn **Đối ngẫu mạnh (Strong Duality)**. 
 
-Slater là điều kiện đủ cho đối ngẫu mạnh. Khi giá trị tối ưu gốc hữu hạn, điều kiện này còn bảo đảm bài toán đối ngẫu đạt nghiệm. Đối với các bất đẳng thức affine, sách nêu một phiên bản Slater yếu hơn, không bắt buộc mọi bất đẳng thức affine phải thỏa chặt. Trong bài này ta dùng phiên bản đủ ở trên và không coi Slater là điều kiện cần.
+Bài toán lồi có tự động bảo đảm đối ngẫu mạnh hay không? Câu trả lời là: Chưa chắc, cần thêm một điều kiện chính quy nhẹ nhàng về miền ràng buộc. Điều kiện phổ biến và quan trọng nhất là **Điều kiện Slater**:
 
-Ví dụ mở đầu có $\bar x=0$ thỏa $x-1=-1<0$. Các hàm hữu hạn trên toàn $\mathbb R$, nên nội tương đối không tạo hạn chế thêm. Đối ngẫu mạnh phù hợp với phép tính $p^*=d^*=1$.
+> **Định lý Slater**: Xét bài toán tối ưu lồi dạng chuẩn (hàm mục tiêu $f_0$ và các ràng buộc bất đẳng thức $f_i$ đều lồi, ràng buộc đẳng thức là affine $Ax = b$). Nếu tồn tại một điểm $\bar x$ thuộc phần trong tương đối của miền xác định ($\bar x \in \operatorname{relint}\mathcal{D}$) thỏa mãn chặt các bất đẳng thức:
+> $$
+> f_i(\bar x) < 0 \quad \forall i = 1, \ldots, m, \qquad A\bar x = b,
+> $$
+> thì bài toán đạt đối ngẫu mạnh ($p^* = d^*$). Hơn nữa, nếu giá trị tối ưu $p^*$ hữu hạn, nghiệm đối ngẫu $(\lambda^*, \nu^*)$ chắc chắn tồn tại và đạt cận.
 
-## 5. Bốn nhóm điều kiện KKT
+Một điểm $\bar x$ thỏa mãn $f_i(\bar x) < 0$ được gọi là một **điểm khả thi ngặt (strictly feasible point)**. Trong ví dụ một chiều ở mục 2, bài toán có $f_1(x) = x - 1 \le 0$. Điểm $\bar x = 0$ cho $f_1(0) = -1 < 0$, do đó điều kiện Slater được thỏa mãn lập tức, giải thích vì sao ta thu được $p^* = d^* = 1$.
 
-Giả sử mục tiêu và các hàm bất đẳng thức khả vi. Đẳng thức affine. Các điều kiện **Karush–Kuhn–Tucker (KKT)** gồm:
+Nếu tất cả các ràng buộc bất đẳng thức đều là hàm affine ($f_i(x) = c_i^T x - d_i$), điều kiện Slater được nới lỏng: ta chỉ cần bài toán khả thi ($f_i(x) \le 0$) mà không cần bất đẳng thức ngặt $< 0$. Đây là lý do vì sao trong Quy hoạch tuyến tính (LP), đối ngẫu mạnh luôn được bảo đảm khi bài toán có miền khả thi khác rỗng và bị chặn.
 
-| Nhóm | Công thức | Điều cần xác minh |
-| --- | --- | --- |
-| Khả thi gốc | $f_i(x)\le0$, $Ax=b$ | $x$ có hợp lệ không? |
-| Khả thi đối ngẫu | $\lambda_i\ge0$ | Có giữ được cận dưới không? |
-| Bù trừ | $\lambda_i f_i(x)=0$ | Số hạng bất đẳng thức nào còn đóng góp? |
-| Dừng | $\nabla f_0(x)+\sum_i\lambda_i\nabla f_i(x)+A^T\nu=0$ | $x$ có cực tiểu Lagrangian không? |
+---
 
-Trong **bài lồi**, KKT đủ cho tối ưu. Lý do: $L$ lồi theo $x$ khi các nhân tử không âm. Dừng cho $x$ cực tiểu L. Khả thi và bù trừ cho $L(x)=f_0(x)$. Vậy $g=f_0(x)$ và khoảng cách đối ngẫu bằng 0.
+## 5. Bốn nhóm điều kiện Karush–Kuhn–Tucker (KKT)
 
-Nếu bài lồi khả vi thỏa Slater và có nghiệm gốc đạt, KKT cũng cần: mỗi nghiệm có một bộ nhân tử phù hợp. Với bài không lồi, dừng của L chưa bảo đảm cực tiểu toàn cục, nên không dùng KKT như chứng nhận toàn cục.
+Giả sử các hàm $f_0, f_1, \ldots, f_m$ và $h_1, \ldots, h_p$ đều khả vi. Hệ điều kiện **Karush–Kuhn–Tucker (KKT)** là tập hợp các phương trình và bất đẳng thức liên kết nghiệm gốc $x^*$ và nghiệm đối ngẫu $(\lambda^*, \nu^*)$:
 
-::: example Đối chiếu bốn điều kiện trong ví dụ một chiều
-Tại $x^*=1$, $\lambda^*=2$:
+| Nhóm điều kiện | Biểu thức toán học | Ý nghĩa hình học & Bản chất |
+| :--- | :--- | :--- |
+| **1. Khả thi gốc** (Primal Feasibility) | $f_i(x^*) \le 0, \; i=1,\ldots,m$<br>$h_j(x^*) = 0, \; j=1,\ldots,p$ | Điểm $x^*$ phải là một phương án hợp lệ, nằm trọn vẹn trong miền ràng buộc. |
+| **2. Khả thi đối ngẫu** (Dual Feasibility) | $\lambda_i^* \ge 0, \; i=1,\ldots,m$ | Nhân tử không âm, bảo đảm hình phạt cho hành vi vi phạm luôn cùng chiều tăng chi phí. |
+| **3. Bù trừ** (Complementary Slackness) | $\lambda_i^* f_i(x^*) = 0, \; i=1,\ldots,m$ | Hoặc ràng buộc không chặt ($f_i < 0 \implies \lambda_i^* = 0$), hoặc ràng buộc chặt ($f_i = 0$). |
+| **4. Triệt tiêu gradient** (Stationarity) | $\nabla_x L(x^*, \lambda^*, \nu^*) = 0$ | Gradient hàm mục tiêu cân bằng với các lực cản pháp tuyến của mặt ràng buộc. |
 
-1. $x^*-1=0\le0$.
-2. $\lambda^*=2\ge0$.
-3. $2(1-1)=0$.
-4. $2(1-2)+2=0$.
+### Ý nghĩa cốt tử của Điều kiện bù trừ (Complementary Slackness)
+Đẳng thức $\lambda_i^* f_i(x^*) = 0$ là trái tim của tối ưu hóa có ràng buộc. Nó dẫn tới hai kịch bản loại trừ lẫn nhau:
+- Nếu $f_i(x^*) < 0$ (ràng buộc không chặt, điểm tối ưu nằm an toàn bên trong miền): nhân tử bắt buộc phải bằng 0 ($\lambda_i^* = 0$). Nghĩa là ràng buộc này không hề cản trở mục tiêu tối ưu, nới lỏng nó thêm cũng không mang lại lợi ích gì.
+- Nếu $\lambda_i^* > 0$ (nhân tử dương ngặt): ràng buộc bắt buộc phải chặt ($f_i(x^*) = 0$). Điểm tối ưu đang bị "ép sát" vào đường biên bởi ràng buộc này.
 
-Không có đẳng thức nên không có $\nu$. Ràng buộc chặt vì $f_1(x^*)=0$. Nhân tử 2 cân bằng gradient $-2$ của mục tiêu.
+> Trong thuật toán máy vector hỗ trợ (Support Vector Machines - SVM) của AI, điều kiện bù trừ giải thích trọn vẹn vì sao mô hình chỉ phụ thuộc vào một số ít điểm dữ liệu nằm sát biên phân chia (các vector hỗ trợ - Support Vectors có $\lambda_i^* > 0$), trong khi hàng triệu điểm dữ liệu nằm sâu bên trong đều có $\lambda_i^* = 0$ và bị triệt tiêu hoàn toàn khỏi mô hình dự đoán!
+
+### Vai trò của KKT trong Bài toán lồi vs Phi lồi
+- **Với bài toán tối ưu lồi khả vi thỏa điều kiện Slater**: Hệ điều kiện KKT là **điều kiện cần và đủ** cho tối ưu toàn cục. Bất kỳ cặp điểm $(x^*, (\lambda^*, \nu^*))$ nào thỏa mãn bốn nhóm KKT đều được chứng nhận chắc chắn là nghiệm tối ưu toàn cục duy nhất.
+- **Với bài toán phi lồi**: KKT chỉ là **điều kiện cần** cho điểm cực trị cục bộ. Một điểm thỏa mãn KKT có thể là cực tiểu cục bộ, cực đại cục bộ, hoặc một điểm yên ngựa.
+
+::: example Kiểm chứng bốn điều kiện KKT trên bài toán một chiều
+Với bài toán $\min (x-2)^2$ thỏa $x \le 1$, ta đã tìm được $x^* = 1$ và $\lambda^* = 2$:
+1. Khả thi gốc: $f_1(x^*) = 1 - 1 = 0 \le 0$ (thỏa mãn).
+2. Khả thi đối ngẫu: $\lambda^* = 2 \ge 0$ (thỏa mãn).
+3. Bù trừ: $\lambda^* f_1(x^*) = 2 \cdot (1 - 1) = 0$ (thỏa mãn).
+4. Triệt tiêu gradient: 
+   $$\nabla L(x^*, \lambda^*) = 2(x^* - 2) + \lambda^* = 2(1 - 2) + 2 = -2 + 2 = 0 \quad \text{(thỏa mãn)}.$$
+Cả bốn điều kiện KKT đều được nghiệm đúng hoàn hảo.
 :::
 
-Bù trừ chỉ cho hai khả năng: ràng buộc không chặt thì nhân tử bằng 0. Nhân tử dương thì ràng buộc chặt. Ràng buộc chặt vẫn có thể có nhân tử 0. Không đảo các mệnh đề ấy.
+---
 
-## 6. Một ví dụ hai chiều với đẳng thức
+## 6. Bài toán hai chiều có ràng buộc đẳng thức
 
-Tự đặt bài
+Xét bài toán tối ưu hình học hai chiều:
 
-$$\min_{x,y}\frac12[(x-2)^2+y^2],\qquad x+y=1.$$
+$$
+\min_{x, y \in \mathbb{R}} \quad \frac{1}{2} \left[ (x - 2)^2 + y^2 \right] \quad \text{sao cho} \quad x + y = 1.
+$$
 
-Lagrangian $L=\tfrac12[(x-2)^2+y^2]+\nu(x+y-1)$. Nhân tử $\nu$ không bị giới hạn dấu. Điều kiện dừng cho $x=2-\nu$, $y=-\nu$. Đẳng thức cho $2-2\nu=1$, nên
+Đây là bài toán tìm khoảng cách ngắn nhất từ điểm $(2, 0)$ tới đường thẳng $x + y = 1$.
 
-$$\nu^*=\frac{1}{2},\quad x^*=\frac{3}{2},\quad y^*=-\frac{1}{2},\quad p^*=\frac{1}{4}.$$
+Hàm Lagrangian với nhân tử tự do $\nu \in \mathbb{R}$:
+$$
+L(x, y, \nu) = \frac{1}{2} (x - 2)^2 + \frac{1}{2} y^2 + \nu (x + y - 1).
+$$
 
-Nghiệm có $y<0$ vẫn hợp lệ vì bài chưa đặt ràng buộc không âm. Tự thêm $y\ge0$ sẽ đổi bài toán.
+Điều kiện dừng (triệt tiêu gradient theo $x$ và $y$):
+$$
+\begin{aligned}
+\frac{\partial L}{\partial x} &= (x - 2) + \nu = 0 \implies x = 2 - \nu, \\
+\frac{\partial L}{\partial y} &= y + \nu = 0 \implies y = -\nu.
+\end{aligned}
+$$
 
-Tính đối ngẫu cho $g(\nu)=\nu-\nu^2$. Tại $\nu=\frac{1}{2}$, $g=\frac{1}{4}$ bằng mục tiêu. Bài này là trường hợp cụ thể của QP có đẳng thức ở Ví dụ 5.1. Số liệu tự đặt. Dạng hệ tổng quát là
+Thay $x$ và $y$ vào phương trình ràng buộc đẳng thức $x + y = 1$:
+$$
+(2 - \nu) + (-\nu) = 1 \iff 2 - 2\nu = 1 \iff \nu^* = \frac{1}{2}.
+$$
 
-$$\begin{bmatrix}P&A^T\\A&0\end{bmatrix}
-\begin{bmatrix}x^*\\\nu^*\end{bmatrix}
-=\begin{bmatrix}-q\\b\end{bmatrix}.$$
+Từ đó thu được tọa độ nghiệm tối ưu:
+$$
+x^* = 2 - \frac{1}{2} = \frac{3}{2}, \qquad y^* = -\frac{1}{2}.
+$$
 
-Bài 04 dùng cùng cấu trúc để tính bước Newton khi mục tiêu không chỉ là một hàm toàn phương cố định.
+Giá trị hàm mục tiêu tối ưu:
+$$
+p^* = \frac{1}{2} \left[ \left(\frac{3}{2} - 2\right)^2 + \left(-\frac{1}{2}\right)^2 \right] = \frac{1}{2} \left( \frac{1}{4} + \frac{1}{4} \right) = \frac{1}{4} = 0.25.
+$$
 
-## 7. Khoảng cách đối ngẫu và độ nhạy
+Hàm đối ngẫu Lagrange tính theo $\nu$:
+$$
+g(\nu) = \inf_{x, y} L(x, y, \nu) = \frac{1}{2}(-\nu)^2 + \frac{1}{2}(-\nu)^2 + \nu(2 - \nu - \nu - 1) = \nu^2 + \nu(1 - 2\nu) = \nu - \nu^2.
+$$
 
-Với $x$ khả thi gốc và $(\lambda,\nu)$ khả thi đối ngẫu,
+Cực đại hóa hàm đối ngẫu: $g'(\nu) = 1 - 2\nu = 0 \iff \nu^* = \frac{1}{2}$, và giá trị tối ưu đối ngẫu là:
+$$
+d^* = g\left(\frac{1}{2}\right) = \frac{1}{2} - \frac{1}{4} = \frac{1}{4} = p^*.
+$$
 
-$$0\le f_0(x)-p^*\le f_0(x)-g(\lambda,\nu).$$
+Đối ngẫu mạnh xảy ra chính xác. Trong dạng ma trận tổng quát của bài toán Quy hoạch toàn phương (QP) với ràng buộc đẳng thức, hệ phương trình KKT quy về hệ tuyến tính khối:
 
-Vế phải là **khoảng cách đối ngẫu** của cặp đang có. Nó cho cận trên của độ thiếu tối ưu mà không cần biết $p^*$. Tại $x=0$, $\lambda=2$ trong ví dụ một chiều, $f_0=4$, $g=1$, nên khoảng cách bằng 3. Điểm ấy đúng là kém tối ưu 3.
+$$
+\begin{bmatrix} P & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} x^* \\ \nu^* \end{bmatrix} = \begin{bmatrix} -q \\ b \end{bmatrix}.
+$$
 
-Nếu thay ràng buộc bằng $x\le b$, gần $b=1$ và còn $b<2$, nghiệm là $x=b$, giá trị $(b-2)^2$. Đạo hàm theo $b$ tại 1 là $-2=-\lambda^*$. Cho thêm một lượng nhỏ giới hạn làm giá trị tối ưu giảm với tốc độ xấp xỉ 2. Diễn giải độ nhạy cần điều kiện tính khả vi của hàm giá trị. Không coi nhân tử là dự báo chính xác cho mọi thay đổi lớn.
+Đây chính là hệ phương trình Newton-KKT mà chúng ta sẽ dùng ở Bài 04 để giải các bài toán tối ưu phi tuyến có ràng buộc đẳng thức.
+
+---
+
+## 7. Khoảng cách đối ngẫu và Độ nhạy nhân tử (Shadow Price)
+
+Với bất kỳ điểm khả thi gốc $x$ và bộ nhân tử khả thi đối ngẫu $(\lambda, \nu)$, ta luôn kẹp được giá trị tối ưu chưa biết $p^*$:
+
+$$
+g(\lambda, \nu) \le p^* \le f_0(x).
+$$
+
+Hiệu số $\eta = f_0(x) - g(\lambda, \nu) \ge 0$ được gọi là **khoảng cách đối ngẫu (duality gap)**. Ý nghĩa thực tiễn to lớn của khoảng cách đối ngẫu: nó cung cấp một **tiêu chuẩn dừng thuật toán** chính xác tuyệt đối. Khi một thuật toán tối ưu tạo ra một cặp nghiệm $(x^{(k)}, (\lambda^{(k)}, \nu^{(k)}))$ thỏa mãn $f_0(x^{(k)}) - g(\lambda^{(k)}, \nu^{(k)}) \le \epsilon$, ta biết chắc chắn rằng nghiệm hiện tại chỉ cách nghiệm tối ưu thực tế không quá $\epsilon$, dù không hề biết trước giá trị $p^*$.
+
+### Ý nghĩa kinh tế: Nhân tử Lagrange là Độ nhạy biên (Shadow Price)
+Xét bài toán khi ta nới lỏng ràng buộc từ $f_i(x) \le 0$ thành $f_i(x) \le u_i$. Gọi $p^*(u)$ là giá trị tối ưu của bài toán bị nhiễu theo vector $u$.
+
+Dưới các điều kiện chính quy, đạo hàm riêng của giá trị tối ưu theo độ lệch ràng buộc thỏa mãn:
+
+$$
+\lambda_i^* = -\frac{\partial p^*(u)}{\partial u_i} \Bigg|_{u = 0}.
+$$
+
+Nhân tử Lagrange $\lambda_i^*$ đo lường tốc độ suy giảm của chi phí tối ưu khi ta nới lỏng thêm một đơn vị tài nguyên ở ràng buộc thứ $i$. Nếu $\lambda_i^* = 100$, điều đó có nghĩa là nếu ta mua thêm 1 đơn vị tài nguyên ở ràng buộc $i$, lợi ích tối ưu thu về sẽ tăng thêm xấp xỉ 100 đơn vị tiền tệ. Đây chính là khái niệm **giá bóng** (shadow price) trong kinh tế học quản trị.
+
+---
 
 ## Bài tập tự luyện
 
-::: exercise 1. Tính trước theo biến gốc
-Với $\min x^2$, $x\ge1$, viết ràng buộc dạng $\le0$ rồi tính $g(\lambda)$.
+::: exercise 1. Tính toán hàm đối ngẫu cho bài toán bình phương đơn giản
+Xét bài toán tối ưu: $\min_x x^2$ với điều kiện $x \ge 1$.
+1. Viết bài toán dưới dạng chuẩn và thiết lập hàm Lagrangian.
+2. Tìm hàm đối ngẫu Lagrange $g(\lambda)$ và giải bài toán đối ngẫu để tìm $\lambda^*$.
 :::
 ::: solution
-Dùng $1-x\le0$. $L=x^2+\lambda(1-x)$ cực tiểu tại $x=\lambda/2$, nên $g=\lambda-\\frac{lambda^2}{4}$, $\lambda\ge0$. Đối ngẫu đạt tại $\lambda=2$, cho $g=1$ và thu hồi $x=1$ khả thi.
+1. Ràng buộc chuẩn: $f_1(x) = 1 - x \le 0$. Hàm Lagrangian với $\lambda \ge 0$:
+   $$L(x, \lambda) = x^2 + \lambda(1 - x).$$
+2. Để tìm $g(\lambda) = \inf_x L(x, \lambda)$, lấy đạo hàm theo $x$:
+   $$\frac{\partial L}{\partial x} = 2x - \lambda = 0 \implies x(\lambda) = \frac{\lambda}{2}.$$
+   Thay vào Lagrangian:
+   $$g(\lambda) = \left(\frac{\lambda}{2}\right)^2 + \lambda\left(1 - \frac{\lambda}{2}\right) = \frac{\lambda^2}{4} + \lambda - \frac{\lambda^2}{2} = \lambda - \frac{\lambda^2}{4}.$$
+   Bài toán đối ngẫu: $\max_{\lambda \ge 0} \left( \lambda - \frac{\lambda^2}{4} \right)$. Đạo hàm $1 - \frac{\lambda}{2} = 0 \iff \lambda^* = 2$. Giá trị đối ngẫu tối ưu là $d^* = g(2) = 2 - 1 = 1$. Nghiệm gốc thu hồi là $x^* = \lambda^*/2 = 1$, cho giá trị tối ưu $p^* = 1^2 = 1 = d^*$.
 :::
 
-::: exercise 2. Nhân tử bằng 0 tại biên
-Với $\min x^2$, $x\le0$, hãy xác minh các điều kiện KKT tại $x=0$, $\lambda=0$.
+::: exercise 2. Trường hợp nhân tử bằng 0 tại biên ràng buộc chặt
+Xét bài toán tối ưu: $\min_x x^2$ với điều kiện $x \le 0$.
+Hãy xác minh hệ điều kiện KKT tại điểm $x = 0$ và $\lambda = 0$. Ràng buộc này có chặt không?
 :::
 ::: solution
-Khả thi $x=0$. Nhân tử không âm. Bù trừ $0\cdot0=0$. Dừng $2x+\lambda=0$. Ràng buộc chặt dù nhân tử bằng 0. Đây là phản ví dụ cho suy luận “ràng buộc chặt thì nhân tử dương”.
+- Khả thi gốc: $x = 0 \le 0$ (thỏa mãn).
+- Khả thi đối ngẫu: $\lambda = 0 \ge 0$ (thỏa mãn).
+- Bù trừ: $\lambda x = 0 \cdot 0 = 0$ (thỏa mãn).
+- Triệt tiêu gradient: $\nabla L(0, 0) = 2x + \lambda = 2(0) + 0 = 0$ (thỏa mãn).
+
+Tại nghiệm $x = 0$, ràng buộc $x \le 0$ là **chặt** vì $f_1(0) = 0$, tuy nhiên nhân tử Lagrange lại bằng 0 ($\lambda = 0$). Đây là một ví dụ điển hình chứng minh rằng chiều suy luận *"ràng buộc chặt thì nhân tử phải dương"* không phải lúc nào cũng đúng. Lý do: điểm cực tiểu không ràng buộc của hàm số vốn đã rơi đúng vào $x = 0$, do đó ràng buộc ở đây không hề tạo ra lực cản nào lên nghiệm.
 :::
 
-::: exercise 3. Chứng nhận QP hồi quy
-Với QP ở Bài 02, $f'(w)=14w-11$, $w\le1/2$. Tìm nhân tử tại $w=\frac{1}{2}$.
+::: exercise 3. Chứng nhận nghiệm KKT cho bài toán hồi quy có ràng buộc
+Xét bài toán hồi quy ở Bài 02: hàm mất mát $f(w) = 7w^2 - 11w + \frac{9}{2}$ với ràng buộc $w \le \frac{1}{2}$.
+Hãy thiết lập điều kiện KKT và tìm nhân tử Lagrange $\lambda^*$ để chứng nhận nghiệm $w^* = \frac{1}{2}$.
 :::
 ::: solution
-Ràng buộc $w-\frac{1}{2}\le0$, dừng $14(\frac{1}{2})-11+\lambda=0$ cho $\lambda=4$. Nhân tử dương và ràng buộc chặt nên đủ bốn nhóm KKT. Bài lồi, vậy $w=\frac{1}{2}$ tối ưu. Không cần đoán nghiệm từ thuật toán.
+Viết lại ràng buộc dưới dạng chuẩn: $f_1(w) = w - \frac{1}{2} \le 0$.
+Hàm Lagrangian: $L(w, \lambda) = 7w^2 - 11w + \frac{9}{2} + \lambda\left(w - \frac{1}{2}\right)$.
+Điều kiện triệt tiêu gradient tại $w^* = \frac{1}{2}$:
+$$
+f'(w^*) + \lambda = 14w^* - 11 + \lambda = 14\left(\frac{1}{2}\right) - 11 + \lambda = 7 - 11 + \lambda = 0 \iff \lambda^* = 4.
+$$
+Kiểm tra bốn nhóm KKT:
+1. Khả thi gốc: $w^* = \frac{1}{2} \le \frac{1}{2}$ (thỏa mãn).
+2. Khả thi đối ngẫu: $\lambda^* = 4 \ge 0$ (thỏa mãn).
+3. Bù trừ: $\lambda^* (w^* - \frac{1}{2}) = 4 \cdot 0 = 0$ (thỏa mãn).
+4. Dừng: $f'(w^*) + \lambda^* = -4 + 4 = 0$ (thỏa mãn).
+
+Vì bài toán gốc là bài toán tối ưu lồi ngặt và thỏa mãn điều kiện Slater, hệ điều kiện KKT chứng nhận tuyệt đối rằng $w^* = \frac{1}{2}$ là nghiệm tối ưu toàn cục duy nhất với chi phí $p^* = \frac{3}{4}$.
 :::
 
-## Tóm tắt
+---
 
-Đối ngẫu yếu đến từ dấu của nhân tử và phép infimum. Slater là một điều kiện đủ để cận tốt nhất chạm giá trị gốc. KKT gồm những điều kiện có vai trò riêng. Trong bài lồi, chúng nối cực tiểu Lagrangian với nghiệm khả thi. Khoảng cách đối ngẫu cho biết cặp nghiệm hiện tại còn cách tối ưu nhiều nhất bao nhiêu.
+## Tóm tắt cốt lõi
 
-## Nguồn và đọc thêm
+1. **Hàm Lagrangian và Đối ngẫu yếu**: Bằng cách ghép các ràng buộc với nhân tử $\lambda \succeq 0$, hàm đối ngẫu $g(\lambda, \nu) = \inf_x L(x, \lambda, \nu)$ luôn tạo ra một cận dưới không thể đánh bại: $g(\lambda, \nu) \le p^*$.
+2. **Tính lõm của bài toán đối ngẫu**: Hàm đối ngẫu luôn luôn là hàm lõm, do đó bài toán cực đại hóa cận dưới luôn là bài toán tối ưu lồi, ngay cả khi bài toán gốc phi lồi.
+3. **Điều kiện Slater và Đối ngẫu mạnh**: Đối với bài toán lồi, sự tồn tại của một điểm khả thi ngặt (Slater point) bảo đảm khoảng cách đối ngẫu triệt tiêu hoàn toàn ($p^* = d^*$).
+4. **Hệ điều kiện KKT**: Bốn nhóm điều kiện (Khả thi gốc, Khả thi đối ngẫu, Bù trừ, Triệt tiêu gradient) tạo thành chiếc chìa khóa vạn năng để nhận diện và chứng nhận nghiệm tối ưu trong không gian có ràng buộc.
 
-- *Convex Optimization*, §5.1 (tr. 215–222), §5.2.1–5.2.3 (tr. 223–228), §5.5.1–5.5.3 (tr. 241–245), Ví dụ 5.1 (tr. 244–245), §5.6 về nhiễu và độ nhạy.
-- Mô phỏng cận dưới dựa vào cơ chế của Hình 5.1, dữ liệu tự đặt. Tất cả ví dụ số và bài tập tự biên soạn đã được tính lại.
+---
 
-[Bài 02](./bai-02-tap-loi.md) · [Bài 04 — Gradient và Newton](./bai-04-gradient-newton.md).
+## Tài liệu tham khảo và Đọc thêm
+
+Dành cho bạn đọc muốn nghiên cứu sâu lý thuyết đối ngẫu và ứng dụng trong khoa học dữ liệu:
+- **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 5 (Đối ngẫu Lagrange, điều kiện Slater, KKT, bài toán đối ngẫu định dạng ma trận, và phân tích độ nhạy).
+- **Dimitri P. Bertsekas**, *Convex Optimization Theory*, Athena Scientific. Tài liệu xuất sắc về giải tích hình học của đối ngẫu, siêu phẳng tựa và các điều kiện chính quy nới lỏng.
+
+Tiếp theo: [Bài 04 — Thuật toán Gradient Descent và Phương pháp Newton](./bai-04-gradient-newton.md).
