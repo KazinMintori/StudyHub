@@ -87,7 +87,7 @@ Hãy phân tích dữ liệu nhóm A gồm năm phần tử: $\{10, 12, 14, 16, 
 - Trung vị ($Q_2$) là 14.
 - Tứ phân vị dưới ($Q_1$) là 12, và tứ phân vị trên ($Q_3$) là 16.
 - Độ trải giữa: $IQR = 16 - 12 = 4$.
-- Hàng rào trên theo quy tắc Tukey: $\text{Hàng rào trên} = Q_3 + 1.5 \times IQR = 16 + 1.5 \times 4 = 22$.
+- Hàng rào trên theo quy tắc Tukey: $Q_3 + 1.5 \times IQR = 16 + 1.5 \times 4 = 22$.
 
 Điểm dữ liệu 100 vượt xa ngưỡng 22, do đó nó bị đánh dấu là một điểm ngoại lai và được vẽ thành một chấm tròn riêng biệt.
 

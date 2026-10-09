@@ -122,7 +122,11 @@ v = np.array([2.0, 4.0, 6.0])
 print(v.var(), v.var(ddof=1))
 ```
 
-Trung bình của dãy là $\bar{x} = (2 + 4 + 6) / 3 = 4$. Tổng bình phương độ lệch là $(2 - 4)^2 + (4 - 4)^2 + (6 - 4)^2 = 4 + 0 + 4 = 8$.
+Trung bình của dãy là $\bar{x} = (2 + 4 + 6) / 3 = 4$. Tổng bình phương độ lệch:
+
+$$
+\sum_{i=1}^3 (x_i - \bar{x})^2 = (2 - 4)^2 + (4 - 4)^2 + (6 - 4)^2 = 8.
+$$
 - **`v.var()` (mặc định `ddof=0`)**: Chia cho $N = 3$, cho phương sai quần thể $\sigma^2 = 8 / 3 \approx 2.67$.
 - **`v.var(ddof=1)`**: Chia cho bậc tự do $N - 1 = 2$, cho phương sai mẫu hiệu chỉnh của Bessel $s^2 = 8 / 2 = 4.0$. Trong nghiên cứu khoa học và thống kê suy luận, khi làm việc với mẫu thu thập được, ta luôn cần thiết lập `ddof=1` để có ước lượng không chệch cho phương sai của quần thể.
 

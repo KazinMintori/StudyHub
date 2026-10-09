@@ -233,8 +233,8 @@ export const readingMetadata = {
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-03-numpy": {
-    "words": 2514,
-    "minutes": 15
+    "words": 2494,
+    "minutes": 10
   },
   "xu-ly-du-lieu/bai-04-lam-quen-pandas": {
     "words": 1986,
@@ -269,7 +269,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-13-truc-quan-hoa-nang-cao": {
-    "words": 2639,
+    "words": 2635,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-14-ke-chuyen-bang-du-lieu": {
