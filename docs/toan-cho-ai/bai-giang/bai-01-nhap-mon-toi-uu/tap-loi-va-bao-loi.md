@@ -51,14 +51,27 @@ Xét một ví dụ điển hình cần lưu tâm: một hình vuông chứa **m
 
 Cũng như với tập affine, ta mở rộng từ hai điểm sang nhiều điểm.
 
-> **Định nghĩa.** Một điểm có dạng $\theta_1 x_1 + \cdots + \theta_k x_k$ với $\theta_1 + \cdots + \theta_k = 1$ và $\theta_i \ge 0$ với mọi $i$ được gọi là một **tổ hợp lồi** của $x_1, \ldots, x_k$.
+> **Định nghĩa.** Một điểm $y$ được gọi là một **tổ hợp lồi** của $k$ điểm $x_1, \ldots, x_k$ nếu nó có dạng:
+> $$
+> y = \sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_k x_k
+> $$
+> trong đó các trọng số thỏa mãn đồng thời hai điều kiện:
+> $$
+> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 \quad \text{và} \quad \theta_i \ge 0, \; \forall i = 1, \dots, k.
+> $$
 
-So với tổ hợp affine, ta thêm đúng một điều kiện: các trọng số không âm. Hai điều kiện "không âm" và "tổng bằng 1" là hai điều kiện của một **phân phối xác suất** trên $k$ điểm, và đó không phải sự trùng hợp. Sách gợi ý một cách hiểu rất đời thường: tổ hợp lồi là một **hỗn hợp**, trong đó $\theta_i$ là tỉ lệ của thành phần $x_i$. Pha 30% cà phê với 70% sữa, mỗi thành phần được mô tả bằng một vector tính chất (độ đắng, độ ngọt, độ béo), thì vector tính chất của ly pha xấp xỉ $0.3\,x_{\text{cà phê}} + 0.7\,x_{\text{sữa}}$, với giả thiết đơn giản hóa rằng các tính chất pha trộn tuyến tính.
+So với tổ hợp affine, ta thêm đúng một điều kiện: các trọng số không được mang giá trị âm. Hai điều kiện "tổng bằng 1" và "không âm" chính là hai điều kiện cấu thành một **phân phối xác suất** trên $k$ điểm. Ở góc độ trực quan vật lý và đời sống, tổ hợp lồi bản chất là một **phép pha trộn tỉ lệ (hỗn hợp)**, trong đó $\theta_i$ là tỉ lệ phần trăm của từng thành phần $x_i$:
 
-Một tập là lồi **khi và chỉ khi** nó chứa mọi tổ hợp lồi của các điểm của nó. Chiều "nếu" hiển nhiên, vì đoạn thẳng chính là tổ hợp lồi của hai điểm. Chiều "chỉ nếu" được chứng minh bằng quy nạp, giống hệt lập luận cho tập affine:
+$$
+\underbrace{\sum_{i=1}^k \theta_i x_i}_{\text{điểm pha trộn}} \quad \text{với} \quad \underbrace{\sum_{i=1}^k \theta_i = 1}_{\text{tổng tỉ lệ bằng } 100\%} \quad \text{và} \quad \underbrace{\theta_i \ge 0}_{\text{không có trọng số âm}}
+$$
 
-::: proof Tập lồi chứa mọi tổ hợp lồi của các điểm của nó (Bài tập 2.1 trong sách)
-Quy nạp theo $k$. Với $k = 1, 2$ khẳng định đúng theo định nghĩa. Giả sử nó đúng với $k - 1$ điểm, và xét $y = \theta_1 x_1 + \cdots + \theta_k x_k$ với $\theta_i \ge 0$, tổng bằng 1. Nếu $\theta_k = 1$ thì mọi $\theta_i$ khác bằng 0 và $y = x_k \in C$. Nếu $\theta_k < 1$, viết
+Chẳng hạn khi pha 30% cà phê với 70% sữa, mỗi thành phần được mô tả bằng một vector đặc trưng (độ đắng, độ ngọt, độ béo), vector đặc trưng của thức uống sau khi pha chính là $0.3\,x_{\text{cà phê}} + 0.7\,x_{\text{sữa}}$ (với giả thiết đơn giản hóa rằng các đặc tính pha trộn tuyến tính).
+
+Một tập là lồi **khi và chỉ khi** nó chứa mọi tổ hợp lồi của các điểm thuộc tập đó. Chiều "nếu" là hiển nhiên vì đoạn thẳng nối hai điểm chính là trường hợp cơ sở $k = 2$. Chiều "chỉ nếu" được chứng minh chặt chẽ bằng phương pháp quy nạp:
+
+::: proof Tập lồi chứa mọi tổ hợp lồi của các điểm thuộc tập
+Quy nạp theo $k$. Với $k = 1, 2$, khẳng định đúng theo định nghĩa. Giả sử khẳng định đúng với $k - 1$ điểm, ta xét $y = \theta_1 x_1 + \cdots + \theta_k x_k$ với $\theta_i \ge 0$ và $\sum_{i=1}^k \theta_i = 1$. Nếu $\theta_k = 1$ thì kéo theo mọi $\theta_i$ còn lại đều bằng 0, dẫn đến $y = x_k \in C$. Nếu $\theta_k < 1$, ta viết lại $y$ dưới dạng:
 
 $$
 y = (1 - \theta_k) \underbrace{\left( \frac{\theta_1}{1 - \theta_k} x_1 + \cdots + \frac{\theta_{k-1}}{1 - \theta_k} x_{k-1} \right)}_{z} + \theta_k x_k .
@@ -72,9 +85,11 @@ So với chứng minh cho tập affine, có thêm một việc phải kiểm tra
 ## 4. Bao lồi
 
 > **Định nghĩa.** **Bao lồi** của tập $C$, ký hiệu $\operatorname{conv} C$, là tập mọi tổ hợp lồi của các điểm thuộc $C$:
-> $$\operatorname{conv} C = \{\theta_1 x_1 + \cdots + \theta_k x_k : x_i \in C,\ \theta_i \ge 0,\ \theta_1 + \cdots + \theta_k = 1\}.$$
+> $$
+> \operatorname{conv} C = \left\{\sum_{i=1}^k \theta_i x_i : x_i \in C, \ \sum_{i=1}^k \theta_i = 1, \ \theta_i \ge 0, \ k \ge 1\right\}.
+> $$
 
-Đúng như tên gọi, bao lồi luôn là một tập lồi, và nó là **tập lồi nhỏ nhất chứa $C$**: nếu $B$ là tập lồi bất kỳ chứa $C$, thì $\operatorname{conv} C \subseteq B$. Lý do là $B$ lồi nên chứa mọi tổ hợp lồi của các điểm của nó, trong đó có các điểm của $C$. Một cách mô tả tương đương (Bài tập 2.4 trong sách) là: bao lồi của $C$ bằng giao của **mọi** tập lồi chứa $C$.
+Đúng như tên gọi, bao lồi luôn là một tập lồi, và nó là **tập lồi nhỏ nhất chứa $C$**: nếu $B$ là tập lồi bất kỳ chứa $C$, thì $\operatorname{conv} C \subseteq B$. Lý do là $B$ lồi nên chứa mọi tổ hợp lồi của các điểm của nó, trong đó có các điểm của $C$. Nói cách khác, bao lồi của $C$ chính bằng giao của **mọi** tập lồi chứa $C$.
 
 Với một tập hữu hạn điểm trong mặt phẳng, bao lồi có một hình ảnh rất cụ thể. Hãy tưởng tượng cắm một chiếc đinh tại mỗi điểm rồi thả một sợi dây chun căng rộng bao quanh tất cả. Khi dây chun co lại, nó ôm lấy một đa giác lồi, và đa giác đó cùng phần bên trong của nó là bao lồi. Những chiếc đinh chạm dây chun là đỉnh của đa giác, còn những chiếc nằm bên trong không ảnh hưởng gì tới hình dạng cuối cùng.
 
@@ -92,15 +107,15 @@ Cần $\theta_A, \theta_B, \theta_C \ge 0$ với tổng bằng 1 và $\theta_A A
 
 </details>
 
-Có một kết quả đẹp về số điểm cần dùng, tuy sách không nêu ở chương này. **Định lý Carathéodory** nói rằng trong $\mathbb{R}^n$, mỗi điểm của $\operatorname{conv} C$ đều là tổ hợp lồi của **không quá $n + 1$** điểm của $C$. Trong mặt phẳng, mỗi điểm thuộc bao lồi của một nghìn điểm nằm trong một tam giác có ba đỉnh lấy từ chính nghìn điểm đó. Con số $n + 1$ không thể giảm: trọng tâm của một tam giác không là tổ hợp lồi của chỉ hai đỉnh nào.
+Một kết quả đẹp và sâu sắc trong hình học lồi là **Định lý Carathéodory**: Trong không gian $\mathbb{R}^n$, mỗi điểm thuộc $\operatorname{conv} C$ đều có thể biểu diễn như một tổ hợp lồi của **không quá $n + 1$** điểm của $C$. Chẳng hạn trong mặt phẳng $\mathbb{R}^2$, mỗi điểm thuộc bao lồi của một nghìn điểm đều nằm trọn trong một tam giác có ba đỉnh lấy từ chính nghìn điểm đó. Con số $n + 1$ là tối ưu và không thể giảm bớt, vì trọng tâm của một tam giác không thể là tổ hợp lồi của chỉ hai đỉnh.
 
 ## 5. Tổ hợp lồi vô hạn và kỳ vọng
 
-Ý tưởng tổ hợp lồi không dừng lại ở hữu hạn điểm. Sách chỉ ra rằng nếu $C$ lồi thì:
+Ý tưởng tổ hợp lồi không dừng lại ở hữu hạn điểm mà mở rộng tự nhiên sang trường hợp liên tục và vô hạn:
 
-- Với các trọng số $\theta_1, \theta_2, \ldots \ge 0$ có tổng $\sum_{i=1}^{\infty} \theta_i = 1$ và các điểm $x_1, x_2, \ldots \in C$, ta có $\sum_{i=1}^{\infty} \theta_i x_i \in C$, miễn là chuỗi hội tụ. (Sách phát biểu cho tập lồi tổng quát. Với tập lồi đóng, kết luận này suy trực tiếp từ trường hợp hữu hạn bằng cách qua giới hạn.)
-- Với một hàm mật độ $p(x) \ge 0$ trên $C$ có $\int_C p(x)\,dx = 1$, ta có $\int_C p(x)\, x\, dx \in C$, nếu tích phân tồn tại.
-- Dạng tổng quát nhất: nếu $x$ là một vector ngẫu nhiên nhận giá trị trong $C$ với xác suất 1, thì **kỳ vọng $\mathbb{E}\,x$ thuộc $C$**.
+- Với chuỗi vô hạn các trọng số $\theta_1, \theta_2, \ldots \ge 0$ có tổng $\sum_{i=1}^{\infty} \theta_i = 1$ và các điểm $x_1, x_2, \ldots \in C$, ta có $\sum_{i=1}^{\infty} \theta_i x_i \in C$, miễn là chuỗi hội tụ.
+- Với một hàm mật độ xác suất $p(x) \ge 0$ trên $C$ thỏa mãn $\int_C p(x)\,dx = 1$, ta có $\int_C p(x)\, x\, dx \in C$, nếu tích phân tồn tại.
+- Dạng tổng quát nhất trong lý thuyết xác suất: nếu $x$ là một vector ngẫu nhiên nhận giá trị trong $C$ với xác suất 1, thì **kỳ vọng $\mathbb{E}[x]$ cũng thuộc $C$**.
 
 Dạng thứ ba bao gồm tất cả các dạng còn lại. Chẳng hạn nếu $x$ chỉ nhận hai giá trị $x_1$ và $x_2$ với xác suất $\theta$ và $1 - \theta$, thì $\mathbb{E}\,x = \theta x_1 + (1 - \theta) x_2$, đúng là định nghĩa ban đầu. Như vậy tập lồi là những tập **khép kín đối với phép lấy trung bình**: lấy trung bình theo bất kỳ cách nào của những điểm trong tập, kết quả vẫn ở trong tập.
 

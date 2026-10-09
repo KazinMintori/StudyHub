@@ -13,8 +13,12 @@ Vui lòng tuân theo hướng dẫn chi tiết tại [AGENTS.md](./AGENTS.md).
 ### Quy tắc định dạng toán học & Chống thanh cuộn (No Math Scrollbars):
 - **Không scrollbar**: Tuyệt đối không để công thức xuất hiện thanh cuộn ngang trên cả desktop và mobile.
 - **Bẻ dòng công thức dài**: Mọi biểu thức hoặc chuỗi biến đổi dài phải bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt tại dấu bằng ($=$), bất đẳng thức ($\le, \ge, \approx, \implies$) hoặc toán tử ($+, -$) bằng `\\` và căn lề bằng `&`.
+- **Khai triển tường minh trước khi viết tắt**: Mọi công thức dùng ký hiệu dồn ($\sum, \prod, \dots$) phải được khai triển tường minh ít nhất một lần (ví dụ $\sum_{i=1}^k \theta_i = \theta_1 + \dots + \theta_k = 1$ với $\theta_i \ge 0$), nêu rõ miền chỉ số, trực giác bản chất và trường hợp cơ sở $k=2$.
 - **Tách văn xuôi khỏi Math**: Không nhét văn xuôi nhận xét vào trong khối toán LaTeX bằng `\text{...}`.
 - **Giới hạn inline**: Công thức nội dòng `$…$` tối đa 38ex. Quá dài phải chuyển sang khối `$$...$$` riêng.
+
+### Chuẩn mực văn phong & Từ nối tiếng Việt:
+- **Hạn chế dấu chấm phẩy (`;`)**: Trong lời giảng văn xuôi, hạn chế tối đa dấu `;`. Thay thế bằng các từ nối tiếng Việt chuẩn xác (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với...*) hoặc tách thành các câu đơn rõ ràng. Tra cứu tại `references/tu-noi-va-dien-dat.md`.
 
 ### Lệnh kiểm thử tiêu chuẩn:
 ```sh

@@ -93,9 +93,13 @@ AI_LEXICON = {
 # Logical connectives. A long paragraph without any of them is often a list of claims, not an explanation.
 CONNECTIVES = (
     "vì", "nên", "do", "nhưng", "mà", "tuy", "song", "nếu", "thì", "khi", "để", "còn", "rồi", "nhờ", "bởi",
-    "tức", "nghĩa là", "chẳng hạn", "ví dụ", "ngược lại", "trong khi", "đồng thời", "hơn nữa", "vậy",
-    "do đó", "vì thế", "vì vậy", "cho nên", "thế nhưng", "tuy nhiên", "mặc dù", "dù", "sau đó", "trước hết",
-    "cuối cùng", "ngoài ra", "từ đó", "như vậy", "hay", "hoặc", "cũng", "lại",
+    "tức", "tức là", "nghĩa là", "chẳng hạn", "ví dụ", "thí dụ", "ngược lại", "trái lại", "trong khi",
+    "đồng thời", "hơn nữa", "vậy", "do đó", "vì thế", "vì vậy", "cho nên", "thế nhưng", "tuy nhiên",
+    "mặc dù", "dù", "dẫu vậy", "tuy vậy", "sau đó", "trước hết", "đầu tiên", "kế đến", "tiếp theo",
+    "cuối cùng", "ngoài ra", "bên cạnh đó", "thêm vào đó", "mặt khác", "từ đó", "từ đây", "như vậy",
+    "hay", "hoặc", "cũng", "lại", "kéo theo", "dẫn đến", "suy ra", "hệ quả là", "bởi vậy", "do vậy",
+    "nhờ đó", "nói cách khác", "đồng nghĩa với", "cụ thể là", "cụ thể", "miễn là", "với điều kiện",
+    "giả sử", "chiếu theo", "dựa vào",
 )
 CHOPPY_WORDS = 5          # câu từ chừng này từ trở xuống được xem là câu cụt
 CHOPPY_RUN = 4            # số câu cụt liên tiếp trong một đoạn thì gợi ý viết lại

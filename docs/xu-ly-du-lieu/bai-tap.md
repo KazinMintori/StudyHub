@@ -1730,6 +1730,118 @@ print(f"Tổng doanh thu kỷ lục: {doanh_thu_ky_luc:.1f} triệu đồng (Tru
 
 ---
 
+### Bài 8.4: Tính toán tăng trưởng cùng kỳ (Year-over-Year - YoY) và Bẫy so sánh quý dang dở
+
+#### Tình huống thực tế
+Một chuỗi bán lẻ điện máy tại Việt Nam muốn theo dõi đà tăng trưởng doanh số theo quý qua 3 năm (2023 - 2025). Dữ liệu được trích xuất (snapshot) vào ngày `2025-08-20` (giữa Quý 3/2025). Ban giám đốc yêu cầu tính chỉ số tăng trưởng cùng kỳ (Year-over-Year - YoY) cho từng quý:
+$$
+\begin{aligned}
+YoY_t = \frac{V_t - V_{t-4}}{V_{t-4}} \times 100\%
+\end{aligned}
+$$
+
+Nếu chỉ đơn thuần gọi `.pct_change(4)`, Quý 3/2025 sẽ bị so sánh số liệu mới trải qua 51 ngày với Quý 3/2024 trọn vẹn 92 ngày, dẫn đến một con số sụt giảm giả tạo ($-40\%$) gây hoảng loạn không đáng có cho ban điều hành! Hãy xây dựng giải pháp phân tích:
+1. Tổng hợp doanh số theo từng quý và nhận diện tính trọn vẹn của từng quý (`is_complete`).
+2. Với các quý đã trọn vẹn: tính chỉ số tăng trưởng YoY chuẩn xác.
+3. Với quý dang dở: chỉ so sánh trên cùng khoảng thời gian tương đương (51 ngày đầu của Quý 3/2024) hoặc chuẩn hóa thành doanh số bình quân ngày ($Sales / Days$).
+4. Định dạng chuỗi báo cáo chuyên nghiệp (`+12.4%`, `-3.8%`, hoặc `Chưa đủ kỳ gốc`).
+
+```python
+# Tạo dữ liệu giả lập doanh thu hàng ngày từ 01/01/2023 đến 20/08/2025
+rng = np.random.default_rng(2025)
+ngay_ds = pd.date_range("2023-01-01", "2025-08-20", freq="D")
+# Doanh số tăng dần qua các năm, có tính thời vụ cao vào Q4 (mua sắm cuối năm)
+xu_huong_nam = 1.0 + (ngay_ds.year - 2023) * 0.15
+thoi_vu_quy = np.where(ngay_ds.quarter == 4, 1.4, 1.0)
+doanh_so = (rng.normal(100, 10, size=len(ngay_ds)) * xu_huong_nam * thoi_vu_quy).round(1)
+
+df_doanh_so = pd.DataFrame({"ngay": ngay_ds, "doanh_thu": doanh_so}).set_index("ngay")
+```
+
+#### Lời giải
+
+##### Cách 1 · Resample quý trực tiếp và tính `pct_change(4)` (Căn bản — Bẫy số liệu)
+
+```python
+# 1. Resample theo quý lịch kết thúc
+df_quy_cb = df_doanh_so.resample("QE")["doanh_thu"].sum().to_frame()
+
+# 2. Tính YoY bằng pct_change(4)
+df_quy_cb["yoy_cb"] = (df_quy_cb["doanh_thu"].pct_change(periods=4) * 100).round(1)
+
+print("Tổng hợp theo quý (Căn bản):
+", df_quy_cb.tail(6))
+# BẪY NGUY HIỂM: Quý 3/2025 ghi nhận tăng trưởng âm sâu (~ -40% đến -45%)!
+# Ban giám đốc có thể nghĩ rằng tình hình kinh doanh sụp đổ,
+# nhưng thực chất chỉ vì Q3/2025 mới chỉ có 51 ngày thay vì 92 ngày!
+```
+
+##### Cách 2 · Nhận diện quý dang dở và Chuẩn hóa tốc độ bình quân ngày (Nâng cao)
+
+```python
+def phan_tich_yoy_chuan_xac(df: pd.DataFrame, ngay_snapshot: str) -> pd.DataFrame:
+    moc_snapshot = pd.Timestamp(ngay_snapshot)
+    
+    # 1. Tổng hợp theo quý và tính số ngày thực có trong mỗi quý
+    quy_grp = df.groupby(df.index.to_period("Q"))
+    
+    df_bc = quy_grp.agg(
+        tong_doanh_thu=("doanh_thu", "sum"),
+        so_ngay_thuc=("doanh_thu", "count"),
+        ngay_dau=("doanh_thu", lambda s: s.index.min()),
+        ngay_cuoi=("doanh_thu", lambda s: s.index.max())
+    )
+    
+    # 2. Xác định ngày cuối lý thuyết của từng quý
+    df_bc["ngay_cuoi_ly_thuyet"] = df_bc.index.to_timestamp(how="end").normalize()
+    # Quý trọn vẹn nếu ngày cuối thực tế bằng hoặc sau ngày cuối lý thuyết
+    df_bc["tron_ven"] = df_bc["ngay_cuoi"] >= df_bc["ngay_cuoi_ly_thuyet"]
+    
+    # 3. Tính doanh thu bình quân ngày (Daily Run-rate) để so sánh công bằng
+    df_bc["doanh_thu_ngay"] = df_bc["tong_doanh_thu"] / df_bc["so_ngay_thuc"]
+    
+    # 4. Tính YoY theo tổng doanh thu (chỉ áp dụng cho quý trọn vẹn)
+    doanh_thu_cung_ky = df_bc["tong_doanh_thu"].shift(4)
+    yoy_tong = (df_bc["tong_doanh_thu"] - doanh_thu_cung_ky) / doanh_thu_cung_ky * 100
+    
+    # 5. Tính YoY theo bình quân ngày (áp dụng được cho cả quý dang dở!)
+    runrate_cung_ky = df_bc["doanh_thu_ngay"].shift(4)
+    yoy_runrate = (df_bc["doanh_thu_ngay"] - runrate_cung_ky) / runrate_cung_ky * 100
+    
+    # 6. Đóng gói kết quả báo cáo chuyên nghiệp
+    ket_qua = pd.DataFrame(index=df_bc.index)
+    ket_qua["tong_doanh_thu"] = df_bc["tong_doanh_thu"].round(1)
+    ket_qua["so_ngay"] = df_bc["so_ngay_thuc"]
+    ket_qua["trang_thai"] = np.where(df_bc["tron_ven"], "Trọn vẹn", "Dang dở (Snapshot)")
+    
+    # Định dạng chuỗi hiển thị
+    def format_yoy(val, is_complete):
+        if pd.isna(val):
+            return "N/A (Chưa đủ mốc)"
+        dau = "+" if val > 0 else ""
+        canh_bao = "" if is_complete else " *"
+        return f"{dau}{val:.1f}%{canh_bao}"
+    
+    ket_qua["yoy_bao_cao"] = [
+        format_yoy(val, comp) for val, comp in zip(yoy_runrate, df_bc["tron_ven"])
+    ]
+    
+    return ket_qua
+
+ket_qua_yoy = phan_tich_yoy_chuan_xac(df_doanh_so, "2025-08-20")
+print("Báo cáo tăng trưởng YoY chuẩn mực sư phạm:
+", ket_qua_yoy.tail(6))
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Bản chất của chỉ số tăng trưởng cùng kỳ (YoY)**:
+  Trong phân tích tài chính và bán lẻ, so sánh cùng kỳ năm trước (*Year-over-Year*) là chỉ số quan trọng bậc nhất vì nó tự động triệt tiêu yếu tố thời vụ (*seasonality*). Ví dụ: Quý 4 luôn có Tết hoặc Giáng sinh nên doanh thu luôn cao hơn Quý 3 ($QoQ > 0$), nhưng so với Quý 4 năm trước lại có thể sụt giảm ($YoY < 0$).
+- **Nguyên tắc "So sánh quả táo với quả táo" (Apples-to-Apples)**:
+  Khi snapshot dữ liệu tại ngày 20/08/2025, Quý 3 mới chỉ chạy được $55\%$ thời gian. Việc so sánh trực tiếp tổng sản lượng là so sánh "táo với cam". Giải pháp đúng đắn là chuyển sang so sánh **tốc độ doanh thu bình quân ngày (Daily Run-rate)** hoặc trích xuất đúng 51 ngày đầu tiên của Quý 3/2024 để đối chiếu song song.
+
+---
+
+
 ## Phần 9. Đảm bảo Chất lượng Dữ liệu & Kiểm thử Chéo bảng (Cross-table QA)
 
 ::: info Trọng tâm tư duy
@@ -1880,6 +1992,94 @@ print("Báo cáo QA chuẩn mực:\n", qa_result.to_string(index=False))
 - **Tư duy QA trong Data Engineering**: Trong phát triển phần mềm, bạn có kiểm thử đơn vị (*Unit Test*). Trong kỹ thuật dữ liệu, bạn bắt buộc phải có **Kiểm thử dữ liệu (Data Quality Test)**. Thay vì để các lỗi sai phát tán âm thầm vào báo cáo của ban lãnh đạo, một bảng `qa_report` được thực thi tự động sau mỗi lần nạp dữ liệu sẽ lập tức cảnh báo bất kỳ sai lệch nào.
 
 ---
+
+### Bài 9.3: Thẩm định độ lệch cửa sổ 12 tháng gần nhất (LTM Mismatch) và Bẫy năm nhuận
+
+#### Tình huống thực tế
+Trong bảng thông tin nhà cung cấp có cột dẫn xuất `so_don_ltm` (số đơn hàng trong 12 tháng gần nhất — *Last Twelve Months*). Ngày chụp snapshot hệ thống là `2024-03-01` (năm 2024 là năm nhuận có 366 ngày).
+Hai nhóm kỹ sư nội bộ xây dựng bộ lọc thời gian theo hai công thức khác nhau:
+- **Nhóm Kỹ thuật (Trừ ngày tuyệt đối)**: `ngay >= snapshot_date - pd.Timedelta(days=365)` $\implies$ rơi vào `2023-03-02` (vô tình bỏ sót ngày `2023-03-01` do năm 2024 có ngày nhuận 29/02!).
+- **Nhóm Nghiệp vụ (Trừ lịch tròn theo năm)**: `ngay >= snapshot_date - pd.DateOffset(years=1)` $\implies$ rơi vào đúng ngày `2023-03-01`.
+
+Hãy viết mã đối chiếu độ lệch kết quả giữa hai cách tiếp cận, phát hiện các đơn hàng rơi vào "vùng tranh chấp ranh giới biên" (*boundary dispute zone*), và giải thích nguyên tắc đồng nhất định nghĩa dữ liệu.
+
+```python
+# Giả lập dữ liệu đơn hàng xung quanh ranh giới 1 năm
+snapshot_date = pd.Timestamp("2024-03-01")
+
+df_don_hang = pd.DataFrame({
+    "order_id": [1001, 1002, 1003, 1004, 1005],
+    "supplier_id": ["NCC_A", "NCC_A", "NCC_B", "NCC_B", "NCC_A"],
+    "order_date": pd.to_datetime([
+        "2023-02-28",  # Ngoài phạm vi 12 tháng
+        "2023-03-01",  # VÙNG TRANH CHẤP: Đúng 1 năm trước (DateOffset lấy, Timedelta bỏ sót!)
+        "2023-03-02",  # Cả 2 cách đều lấy
+        "2024-02-15",  # Trong phạm vi
+        "2024-02-29"   # Ngày nhuận đặc biệt
+    ]),
+    "amount": [5.0, 12.0, 8.0, 15.0, 20.0]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Lọc đơn lẻ bằng Timedelta 365 ngày (Căn bản — Bỏ sót ngày nhuận)
+
+```python
+# Nhóm Kỹ thuật dùng timedelta 365 ngày
+moc_365 = snapshot_date - pd.Timedelta(days=365)
+print(f"Mốc thời gian Timedelta(365 days): {moc_365.strftime('%Y-%m-%d')}")
+# Kết quả là 2023-03-02, bỏ sót ngày 2023-03-01!
+
+don_ltm_cb = df_don_hang[df_don_hang["order_date"] >= moc_365]
+so_don_cb = don_ltm_cb.groupby("supplier_id")["order_id"].count()
+print("Số đơn LTM theo Timedelta(365d):
+", so_don_cb)
+```
+
+##### Cách 2 · So sánh đối chứng với DateOffset và Phân tích vùng biên (Nâng cao)
+
+```python
+def doi_chieu_dinh_nghia_ltm(df: pd.DataFrame, snapshot: pd.Timestamp) -> pd.DataFrame:
+    # Mốc 1: Theo năm lịch tròn (DateOffset)
+    moc_offset = snapshot - pd.DateOffset(years=1)
+    # Mốc 2: Theo 365 ngày tuyệt đối (Timedelta)
+    moc_delta = snapshot - pd.Timedelta(days=365)
+    
+    print(f"Mốc DateOffset(years=1): {moc_offset.strftime('%Y-%m-%d')}")
+    print(f"Mốc Timedelta(days=365):  {moc_delta.strftime('%Y-%m-%d')}")
+    
+    # Lọc 2 tập
+    mask_offset = df["order_date"] >= moc_offset
+    mask_delta = df["order_date"] >= moc_delta
+    
+    # Bản ghi rơi vào vùng tranh chấp (DateOffset lấy nhưng Timedelta bỏ sót)
+    vung_tranh_chap = df[mask_offset & (~mask_delta)]
+    print(f"
+Phát hiện {len(vung_tranh_chap)} đơn hàng rơi vào vùng ranh giới biên:")
+    print(vung_tranh_chap[["order_id", "supplier_id", "order_date", "amount"]])
+    
+    # Tổng hợp đối chiếu theo nhà cung cấp
+    ltm_offset = df[mask_offset].groupby("supplier_id")["order_id"].count().rename("so_don_offset")
+    ltm_delta = df[mask_delta].groupby("supplier_id")["order_id"].count().rename("so_don_delta")
+    
+    bang_doi_chieu = pd.concat([ltm_offset, ltm_delta], axis=1).fillna(0).astype(int)
+    bang_doi_chieu["lech_pha"] = bang_doi_chieu["so_don_offset"] - bang_doi_chieu["so_don_delta"]
+    
+    return bang_doi_chieu
+
+bang_ltm = doi_chieu_dinh_nghia_ltm(df_don_hang, snapshot_date)
+print("
+Bảng đối chiếu độ lệch LTM giữa hai định nghĩa:
+", bang_ltm)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Bẫy năm nhuận trong chuỗi thời gian**: Một năm dương lịch thông thường có 365 ngày, nhưng năm nhuận (như 2024, 2028) có 366 ngày. Khi lấy ngày snapshot `2024-03-01` trừ đi 365 ngày, bạn mới chỉ lùi về ngày `2023-03-02`, khiến mốc tròn một năm `2023-03-01` bị bỏ rơi ngoài rìa!
+- **DateOffset vs Timedelta**: `pd.Timedelta` đại diện cho một khoảng thời gian vật lý cố định (chính xác từng giây), trong khi `pd.DateOffset` đại diện cho khoảng thời gian theo **quy ước lịch của con người** (bảo toàn ngày và tháng). Trong các báo cáo kinh doanh tài chính, khái niệm "1 năm qua" luôn được hiểu là cùng ngày này năm ngoái, do đó bắt buộc phải sử dụng `pd.DateOffset(years=1)`.
+
+---
+
 
 ## Phần 10. Xử lý Dữ liệu Văn bản với LLM & Kỷ luật Đo lường
 
@@ -2047,6 +2247,114 @@ print(f"Độ chính xác (Accuracy) trên tập hợp lệ: {dung}/{tong} = {ac
 
 ---
 
+### Bài 10.3: Dự toán ngân sách Token API trước khi gọi và Hậu kiểm ngữ nghĩa tự động (Semantic Assertion)
+
+#### Tình huống thực tế
+Bạn phụ trách xử lý 5,000 phản hồi đánh giá của khách hàng bằng mô hình ngôn ngữ lớn (LLM). Để đảm bảo tính chuyên nghiệp và kỷ luật kỹ thuật:
+1. **Dự toán ngân sách (FinOps)**: Trước khi kích hoạt đường ống xử lý, hãy viết hàm tính toán lượng token dự kiến cho prompt đầu vào và phản hồi đầu ra, tính tổng chi phí theo bảng giá API ($0.15\$$ / 1M input tokens, $0.60\$$ / 1M output tokens), và quy đổi sang VNĐ (tỷ giá 25,400 VNĐ/\$).
+2. **Hậu kiểm ngữ nghĩa tự động (Semantic Assertion)**: Mô hình trả về kết quả tuân thủ đúng Schema Pydantic, nhưng vẫn có thể chứa đựng các **mâu thuẫn ngữ nghĩa nội tại (Semantic Conflict)** mà schema không thể bắt được:
+   - *Xung đột 1*: Khách hàng chấm điểm `rating >= 4` (hài lòng) nhưng LLM lại gán `sentiment = "negative"`.
+   - *Xung đột 2*: Khách hàng chấm điểm `rating <= 2` (thất vọng) nhưng LLM lại gán `sentiment = "positive"`.
+   - *Xung đột 3*: Đánh giá dài trên 30 từ nhưng danh sách trích xuất khía cạnh `aspects` lại rỗng.
+   Hãy viết bộ lọc kiểm thử tự động để gắn cờ phân loại và xuất danh sách các bản ghi đáng ngờ chuyển cho con người thẩm định lại (*Human-in-the-loop*).
+
+```python
+# Mẫu đánh giá và phản hồi giả lập từ LLM sau khi đã vượt qua Pydantic
+du_lieu_llm = pd.DataFrame([
+    {"id": 1, "text": "Phòng nghỉ tuyệt vời, nhân viên lễ tân cực kỳ chu đáo.", "rating": 5, "sentiment": "positive", "aspects": ["phòng", "nhân viên"]},
+    {"id": 2, "text": "Khách sạn quá bẩn, máy lạnh hỏng không thể ngủ nổi.", "rating": 1, "sentiment": "negative", "aspects": ["vệ sinh", "tiện nghi"]},
+    {"id": 3, "text": "Dịch vụ phòng rất tốt nhưng đồ ăn sáng hơi nguội.", "rating": 4, "sentiment": "negative", "aspects": ["dịch vụ", "ẩm thực"]}, # XUNG ĐỘT 1: 4 sao nhưng nhãn negative
+    {"id": 4, "text": "Thất vọng toàn tập, phòng ẩm mốc và có mùi khó chịu.", "rating": 1, "sentiment": "positive", "aspects": ["vệ sinh"]},          # XUNG ĐỘT 2: 1 sao nhưng nhãn positive
+    {"id": 5, "text": "Khách sạn nằm ở vị trí trung tâm, rất thuận tiện đi lại, phòng ốc bài trí tinh tế, view ngắm hoàng hôn tuyệt đẹp.", "rating": 5, "sentiment": "positive", "aspects": []} # XUNG ĐỘT 3: Review dài nhưng aspects rỗng
+])
+```
+
+#### Lời giải
+
+##### Cách 1 · Ước tính thủ công và lọc câu lệnh `if` rải rác (Căn bản)
+
+```python
+# 1. Ước tính thô
+# Tiếng Việt trung bình ~1.5 đến 2 token mỗi từ
+so_luong_mau = 5000
+tu_trung_binh_prompt = 150 # Prompt mẫu + text đánh giá
+token_in = so_luong_mau * tu_trung_binh_prompt * 1.5
+token_out = so_luong_mau * 50 * 1.5
+
+chi_phi_usd = (token_in / 1e6 * 0.15) + (token_out / 1e6 * 0.60)
+print(f"Chi phí ước tính thô: {chi_phi_usd:.3f} USD (~{chi_phi_usd * 25400:,.0f} VNĐ)")
+
+# 2. Lọc xung đột bằng vòng lặp if
+danh_sach_nghi_ngo = []
+for _, r in du_lieu_llm.iterrows():
+    if (r["rating"] >= 4 and r["sentiment"] == "negative") or        (r["rating"] <= 2 and r["sentiment"] == "positive"):
+        danh_sach_nghi_ngo.append(r["id"])
+print("ID nghi ngờ mâu thuẫn điểm số:", danh_sach_nghi_ngo)
+```
+
+##### Cách 2 · Đóng gói Hàm Dự toán FinOps và Bộ Hậu kiểm Ngữ nghĩa Tự động (Nâng cao)
+
+```python
+# 1. Hàm dự toán ngân sách API chuyên nghiệp
+def du_toan_ngan_sach_llm(n_samples: int, avg_input_chars: int, max_output_tokens: int = 100) -> dict:
+    # Quy tắc thực nghiệm tiếng Việt có dấu: 1 token ~ 2.5 ký tự UTF-8
+    est_input_tokens_per_sample = int(avg_input_chars / 2.5) + 80 # 80 token system prompt
+    total_input_tokens = n_samples * est_input_tokens_per_sample
+    total_output_tokens = n_samples * max_output_tokens
+    
+    # Đơn giá chuẩn (USD / 1 triệu token)
+    cost_in = (total_input_tokens / 1_000_000) * 0.15
+    cost_out = (total_output_tokens / 1_000_000) * 0.60
+    total_usd = cost_in + cost_out
+    total_vnd = total_usd * 25_400
+    
+    return {
+        "so_luong_mau": n_samples,
+        "tong_input_tokens": total_input_tokens,
+        "tong_output_tokens": total_output_tokens,
+        "chi_phi_usd": round(total_usd, 4),
+        "chi_phi_vnd": int(total_vnd)
+    }
+
+du_toan = du_toan_ngan_sach_llm(n_samples=5000, avg_input_chars=350, max_output_tokens=80)
+print("Dự toán ngân sách LLM:
+", json.dumps(du_toan, indent=2, ensure_ascii=False))
+
+# 2. Bộ hậu kiểm ngữ nghĩa tự động (Semantic Assertion Engine)
+def hau_kiem_ngu_nghia(df: pd.DataFrame) -> pd.DataFrame:
+    df_qa = df.copy()
+    
+    # Định nghĩa các điều kiện vi phạm bất biến nghiệp vụ
+    cond_xung_dot_cao = (df_qa["rating"] >= 4) & (df_qa["sentiment"] == "negative")
+    cond_xung_dot_thap = (df_qa["rating"] <= 2) & (df_qa["sentiment"] == "positive")
+    
+    # Đếm số từ trong đoạn văn bản
+    so_tu = df_qa["text"].str.split().str.len()
+    cond_thieu_aspects = (so_tu >= 15) & (df_qa["aspects"].apply(len) == 0)
+    
+    # Phân loại trạng thái kiểm định
+    df_qa["qa_status"] = "PASSED"
+    df_qa.loc[cond_xung_dot_cao, "qa_status"] = "ALERT_CONFLICT_HIGH_RATING"
+    df_qa.loc[cond_xung_dot_thap, "qa_status"] = "ALERT_CONFLICT_LOW_RATING"
+    df_qa.loc[cond_thieu_aspects, "qa_status"] = "ALERT_EMPTY_ASPECTS"
+    
+    return df_qa
+
+df_kiem_dinh = hau_kiem_ngu_nghia(du_lieu_llm)
+ty_le_loi = (df_kiem_dinh["qa_status"] != "PASSED").mean() * 100
+print(f"
+Kết quả hậu kiểm: Tỷ lệ bản ghi đáng ngờ = {ty_le_loi:.1f}%")
+print(df_kiem_dinh[["id", "rating", "sentiment", "qa_status"]])
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **FinOps trong Khoa học Dữ liệu**: Không bao giờ nhấn nút chạy một pipeline gọi LLM trên hàng chục nghìn dòng mà không tính toán trước chi phí và thời gian thực thi (*Latency*). Một phép tính dự toán trước chỉ mất 2 phút nhưng bảo vệ bạn khỏi các sự cố tiêu lạm ngân sách đám mây.
+- **Hậu kiểm Assertion — Tầng phòng thủ thứ hai**:
+  Schema Pydantic chỉ đảm bảo **tính toàn vẹn về mặt cú pháp** (*Syntactic Integrity* — đúng kiểu int, đúng chuỗi enum). Nó hoàn toàn bất lực trước **tính toàn vẹn về mặt nghiệp vụ** (*Semantic/Business Invariant*). Việc đặt các luật Assertion để sàng lọc những trường hợp mâu thuẫn giữa điểm số và cảm xúc giúp xây dựng mô hình Hybrid: máy móc xử lý $95\%$ trường hợp thông thường, con người chỉ cần can thiệp rà soát $5\%$ trường hợp có cờ cảnh báo (*Human-in-the-loop*).
+
+---
+
+
 ## Phần 11. Trực quan hóa Dữ liệu Cơ bản & Nhận diện Biểu đồ Biến dạng
 
 ::: info Trọng tâm tư duy
@@ -2191,6 +2499,95 @@ print("Đã đối chiếu thành công hai biểu đồ!")
 - **Khi nào được phép thu hẹp trục $Y$?**: Bạn chỉ được phép thu hẹp thang đo trục $Y$ trên **Biểu đồ Đường (Line Chart)** khi mục tiêu là theo dõi sự biến động (*fluctuation*) của một chuỗi thời gian liên tục (ví dụ: chỉ số chứng khoán VN-Index hay nhiệt độ cơ thể người bệnh), và bắt buộc phải ghi chú rõ ràng thang đo trên đồ thị.
 
 ---
+
+### Bài 11.3: Thiết kế biểu đồ thanh ngang có nhãn trực tiếp (`ax.bar_label`) và Kiểm thử thuộc tính đồ thị bằng `assert`
+
+#### Tình huống thực tế
+Phân tích tỷ lệ khách sạn đạt chứng chỉ "Du lịch Bền vững" theo 8 quận du lịch lớn. Tên các quận có độ dài không đồng đều và khá dài (*"Quận Hoàn Kiếm"*, *"Quận Hai Bà Trưng"*, *"Quận Nam Từ Liêm"*, v.v.).
+Yêu cầu:
+1. Vẽ biểu đồ thanh ngang (*Horizontal Bar Chart*) thay vì cột dọc để nhãn tên quận hiển thị tự nhiên từ trái sang phải, không bị xoay nghiêng hoặc đè chữ.
+2. Sắp xếp các thanh theo thứ tự tăng dần để quận có tỷ lệ cao nhất nằm ở vị trí trên cùng.
+3. Sử dụng `ax.bar_label` hiển thị con số phần trăm trực tiếp ngay cạnh mỗi thanh, loại bỏ hoàn toàn các đường viền trục trên, phải và trục hoành bên dưới để đạt tỷ lệ mực-dữ liệu (*Data-Ink Ratio*) tối ưu.
+4. Đóng gói mã nguồn thành hàm và viết bộ kiểm thử tự động bằng `assert` kiểm tra tính toàn vẹn của đối tượng biểu đồ (kiểm tra giới hạn trục hoành bắt đầu từ 0, kiểm tra số lượng thanh cột vẽ ra).
+
+```python
+df_ben_vung = pd.DataFrame({
+    "quan": [
+        "Quận Hoàn Kiếm", "Quận Ba Đình", "Quận Tây Hồ", "Quận Đống Đa",
+        "Quận Hai Bà Trưng", "Quận Cầu Giấy", "Quận Nam Từ Liêm", "Quận Hà Đông"
+    ],
+    "ty_le": [42.5, 38.0, 35.2, 28.4, 25.1, 21.0, 18.5, 12.3]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Vẽ biểu đồ cột dọc mặc định và xoay nhãn chữ (Căn bản — Kém trực quan)
+
+```python
+# Vẽ cột đứng cơ bản
+plt.figure(figsize=(10, 4))
+plt.bar(df_ben_vung["quan"], df_ben_vung["ty_le"], color="cornflowerblue")
+plt.xticks(rotation=45, ha="right") # Bắt buộc phải xoay chữ do tên quận quá dài
+plt.ylabel("Tỷ lệ bền vững (%)")
+plt.title("Biểu đồ cột đứng truyền thống (Khó đọc nhãn)")
+plt.close()
+```
+
+##### Cách 2 · Biểu đồ thanh ngang với `ax.bar_label` và Kiểm thử bằng `assert` (Nâng cao)
+
+```python
+def ve_bieu_do_thanh_ngang(df: pd.DataFrame, cot_danh_muc: str, cot_gia_tri: str) -> tuple[plt.Figure, plt.Axes]:
+    # 1. Sắp xếp tăng dần để giá trị lớn nhất nổi bật ở trên cùng của trục tung
+    df_sap_xep = df.sort_values(by=cot_gia_tri, ascending=True).reset_index(drop=True)
+    
+    fig, ax = plt.subplots(figsize=(9, 5))
+    
+    # 2. Vẽ thanh ngang ax.barh
+    mau_thanh = ["#8ecae6"] * (len(df_sap_xep) - 1) + ["#023047"] # Đổi màu thanh top 1
+    bars = ax.barh(df_sap_xep[cot_danh_muc], df_sap_xep[cot_gia_tri], color=mau_thanh, height=0.65)
+    
+    # 3. Gắn nhãn giá trị trực tiếp lên chóp thanh
+    ax.bar_label(bars, fmt="%.1f%%", padding=5, fontsize=10, fontweight="bold", color="#023047")
+    
+    # 4. Tối ưu hóa Data-Ink Ratio: ẩn trục X và viền không cần thiết
+    ax.set_xlim(0, max(df_sap_xep[cot_gia_tri]) * 1.18) # Tạo khoảng trống cho nhãn
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["bottom"].set_visible(False)
+    ax.spines["left"].set_color("#cccccc")
+    ax.xaxis.set_visible(False) # Ẩn hoàn toàn trục X vì đã có nhãn trực tiếp
+    
+    # Tiêu đề tập trung vào thông điệp
+    ax.set_title(
+        "Tỷ lệ Cơ sở Lưu trú Đạt Chứng nhận Du lịch Bền vững theo Quận
+(Hoàn Kiếm dẫn đầu với 42.5%, gấp 3.5 lần Hà Đông)",
+        fontsize=11, fontweight="bold", pad=15, loc="left"
+    )
+    
+    plt.tight_layout()
+    return fig, ax
+
+fig, ax = ve_bieu_do_thanh_ngang(df_ben_vung, "quan", "ty_le")
+
+# 5. BỘ KIỂM THỬ ĐỒ THỊ BẰNG ASSERT (Visual Testing)
+# Kiểm tra trục hoành bắt đầu đúng từ 0 (không cắt cụt)
+assert ax.get_xlim()[0] == 0, "LỖI: Trục hoành phải bắt đầu từ gốc 0!"
+# Kiểm tra số lượng thanh vẽ ra khớp với số quận
+so_thanh = len(ax.containers[0].patches)
+assert so_thanh == len(df_ben_vung), f"LỖI: Kỳ vọng {len(df_ben_vung)} thanh, thực tế vẽ {so_thanh}!"
+print("Toàn bộ các điều kiện kiểm thử biểu đồ đã ĐẠT chuẩn mực!")
+plt.close(fig)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Khi nào bắt buộc dùng Biểu đồ Thanh ngang (Horizontal Bar)?**:
+  Bất cứ khi nào danh mục có tên dài (tên cơ quan, địa danh, câu hỏi trắc nghiệm) hoặc số lượng danh mục từ 7 trở lên, hãy từ bỏ biểu đồ cột đứng. Não bộ con người đọc văn bản theo chiều ngang; việc ép người đọc phải nghiêng đầu $45^\circ$ để đọc nhãn trục hoành là một sự thất bại về mặt thiết kế truyền thông.
+- **Sức mạnh của `ax.bar_label` và Tỷ lệ Mực-Dữ liệu (Data-Ink Ratio)**:
+  Bằng cách đưa con số trực tiếp lên đầu mỗi thanh, bạn giải phóng người xem khỏi việc phải dóng mắt từ đỉnh cột xuống trục hoành để ước lượng giá trị. Điều này cho phép bạn xóa bỏ hoàn toàn trục hoành, các vạch chia (*ticks*) và lưới ngang rối mắt, tạo nên một biểu đồ thanh lịch và tập trung tối đa vào thông điệp dữ liệu.
+
+---
+
 
 ## Phần 12. Trực quan hóa Nâng cao & Phản biện Thống kê
 
@@ -2470,6 +2867,61 @@ print(f"Ban ngày: Mean = {mean_ngay/1e6:.2f}tr | Median = {median_ngay/1e6:.2f}
 
 ---
 
+### Bài 13.3: Tái cấu trúc thông điệp theo Kim tự tháp Minto và Chuẩn hóa phát ngôn đúng mức với số liệu
+
+#### Tình huống thực tế
+Một nhà phân tích dữ liệu thực tập gửi bản thảo báo cáo chiến dịch ra mắt dịch vụ phòng cao cấp:
+*"Chúng tôi đã họp từ tháng 1, sau đó thu thập dữ liệu đặt phòng. Đến tháng 5 chúng tôi triển khai chương trình hội viên Vàng. Dữ liệu cho thấy chiến dịch đã tạo ra sự đột phá thần kỳ: tỷ lệ đặt phòng lặp lại tăng vọt 5% từ 20% lên 25%, chứng tỏ chương trình hội viên là chìa khóa duy nhất thúc đẩy lòng trung thành của khách hàng."*
+
+Hãy chỉ ra 4 lỗi diễn đạt số liệu nghiêm trọng trong đoạn văn trên, và tái cấu trúc lại toàn bộ báo cáo theo mô hình **Kim tự tháp Minto (Minto Pyramid Principle)**:
+1. **Đỉnh tháp (Hành động & Kết luận cốt lõi)**: Đưa khuyến nghị then chốt lên câu đầu tiên.
+2. **Tầng giữa (Các luận điểm chính - MECE)**: Tách bạch các trụ cột bằng chứng độc lập và toàn diện.
+3. **Đáy tháp (Bằng chứng số liệu & Độ tin cậy)**: Cung cấp con số định lượng chuẩn mực và khoảng tin cậy.
+
+#### Lời giải
+
+##### Phân tích 4 lỗi diễn đạt số liệu nghiêm trọng (Audit Report)
+1. **Lỗi 1 · Nhầm lẫn giữa Thay đổi Phần trăm (%) và Điểm Phần trăm (Percentage Points)**:
+   Tỷ lệ tăng từ $20\%$ lên $25\%$ là mức tăng **5 điểm phần trăm (percentage points)**, hoặc mức tăng tương đối bằng:
+   $$
+   \begin{aligned}
+   \frac{25\% - 20\%}{20\%} = \frac{5}{20} = +25\%
+   \end{aligned}
+   $$
+   Viết *"tăng vọt 5%"* là sai bản chất toán học (nếu tăng $5\%$ thì từ $20\%$ chỉ lên $20\% \times 1.05 = 21\%$).
+2. **Lỗi 2 · Ngôn từ phóng đại, phi học thuật**:
+   Các cụm từ *"đột phá thần kỳ"*, *"tăng vọt"* là văn phong quảng cáo cảm tính, làm giảm sút nghiêm trọng tính khách quan của một bản báo cáo khoa học dữ liệu.
+3. **Lỗi 3 · Ngụy biện quy chụp quan hệ nhân quả (Post Hoc Ergo Propter Hoc)**:
+   Chương trình hội viên diễn ra vào tháng 5 và tỷ lệ quay lại tăng lên, nhưng tháng 5-6 cũng là mùa cao điểm du lịch hè! Chưa thể khẳng định chương trình hội viên là *"nguyên nhân duy nhất"* khi chưa kiểm soát biến mùa vụ hoặc làm thử nghiệm A/B đối chứng.
+4. **Lỗi 4 · Kể chuyện tuần tự thời gian ru ngủ người nghe**:
+   Kể lể *"chúng tôi đã họp từ tháng 1, sau đó thu thập dữ liệu..."* khiến người ra quyết định mất kiên nhẫn. Lãnh đạo cần biết ngay: **"Kết luận là gì và tôi cần làm gì tiếp theo?"**.
+
+##### Bản viết lại chuẩn mực theo Kim tự tháp Minto (Executive Summary)
+
+```markdown
+### ĐỀ XUẤT HÀNH ĐỘNG (Đỉnh tháp Minto)
+Mở rộng chương trình "Hội viên Vàng" trên toàn hệ thống trong Quý 4/2026, dự kiến đóng góp thêm 2.4 tỷ VNĐ doanh thu từ khách hàng thân thiết.
+
+### BA LẬP LUẬN THEN CHỐT (Tầng giữa - MECE)
+1. **Tỷ lệ giữ chân khách hàng tăng trưởng vững chắc**: Tỷ lệ đặt phòng lặp lại tăng 5.0 điểm phần trăm (tương đương tăng trưởng tương đối +25.0% so với cùng kỳ).
+2. **Đã kiểm soát yếu tố mùa vụ**: So sánh đối chứng với nhóm khách hàng không tham gia hội viên trong cùng khung giờ mùa hè cho thấy hiệu ứng thực dương thuần túy đạt +3.2 điểm phần trăm (p-value < 0.01).
+3. **Chi phí thu hút khách hàng thấp hơn 40%**: Chi phí duy trì hội viên cũ chỉ bằng 60% chi phí chạy quảng cáo tìm kiếm khách hàng mới.
+
+### BẰNG CHỨNG SỐ LIỆU ĐỊNH LƯỢNG (Đáy tháp)
+- Cỡ mẫu khảo sát: N = 4,200 khách hàng trong giai đoạn 01/05 - 31/07.
+- Tỷ lệ quay lại nhóm hội viên: 25.0% (KTC 95%: [23.8%, 26.2%]).
+- Tỷ lệ quay lại nhóm đối chứng: 20.0% (KTC 95%: [18.9%, 21.1%]).
+- Mức chênh lệch thuần: +5.0 điểm phần trăm (Z = 4.12, có ý nghĩa thống kê cao).
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Nguyên lý Minto: Đi từ Câu trả lời (Answer First)**:
+  Người bận rộn không có thời gian đọc hành trình tìm kiếm gian nan của bạn. Hãy luôn đặt câu trả lời và đề xuất hành động ở câu đầu tiên. Cấu trúc kim tự tháp giúp người đọc có thể dừng lại ở bất kỳ tầng nào mà vẫn nắm trọn vẹn thông điệp cốt lõi.
+- **Kỷ luật phát ngôn số liệu**: Một nhà khoa học dữ liệu uy tín luôn phân định rạch ròi giữa **Điểm phần trăm** và **Tỷ lệ phần trăm**, không bao giờ gắn kết quan hệ nhân quả một cách tùy tiện, và luôn công bố khoảng tin cậy (*Confidence Interval*) cùng cỡ mẫu khảo sát.
+
+---
+
+
 ## 14. Bảng tổng kết năng lực & Chỉ dẫn thực hành toàn diện
 
 | Chuyên đề | Kỹ năng cốt lõi | Cạm bẫy ngầm cần tránh | Chuẩn tối ưu đề xuất |
@@ -2481,10 +2933,11 @@ print(f"Ban ngày: Mean = {mean_ngay/1e6:.2f}tr | Median = {median_ngay/1e6:.2f}
 | **Phần 5: Pandas nâng cao** | GroupBy, Transform, Pivot, Merge | Nhân đôi dòng ngoài ý muốn khi `merge` | Dùng Named Aggregation, `transform`, `validate` |
 | **Phần 6: Tối ưu quy mô** | Đọc có chọn lọc, Parquet, DuckDB | Nạp toàn bộ CSV gây tràn RAM (OOM) | Dùng `usecols`, Regex làm sạch, Parquet và DuckDB |
 | **Phần 7: Chuỗi & Regex** | Biểu thức chính quy, tách nhãn nhị phân | Mẫu tham lam `.*` nuốt chửng văn bản; sót ký tự lạ | Dùng mẫu phủ định `[^"]+`, `(?:...)`, `get_dummies` |
-| **Phần 8: Dữ liệu thời gian** | DatetimeIndex, Resampling, Rolling | Bẫy kỳ snapshot cắt ngang; `min_periods` gây NaN | Lọc bỏ kỳ dang dở; dùng `rolling(min_periods=1)` |
-| **Phần 9: Đảm bảo chất lượng** | Kiểm thử chéo bảng, phát hiện mồ côi | Lệch pha giữa cột dẫn xuất và dữ liệu chi tiết | Dùng vector `~isin()`, xây dựng bảng `qa_report` tự động |
-| **Phần 10: Xử lý LLM** | Pydantic Schema, Baseline đối chứng | Tin tưởng mù quáng vào đầu ra tự do của LLM | Xây dựng Baseline từ điển; kiểm soát schema bằng Pydantic |
-| **Phần 11: Trực quan cơ bản** | Chọn dạng biểu đồ, Histogram, sửa trục | Cắt ngắn trục tung (Truncated Axis) thổi phồng số liệu | Trục tung biểu đồ cột luôn bắt đầu từ 0; chọn bins chuẩn |
-| **Phần 12: Trực quan nâng cao** | Seaborn Boxplot, phản biện thống kê | Râu hộp Tukey dừng ở hàng rào lý thuyết thay vì điểm thật | Lồng `stripplot` xem cỡ mẫu; phản biện chiêu trò cherry-picking |
-| **Phần 13: Kể chuyện dữ liệu** | Kim tự tháp Minto, Nghịch lý Simpson | Nhầm lẫn giữa tương quan và nhân quả; trung bình gộp | Phân rã biến gây nhiễu; quy trình thẩm định 4 bước |
+| **Phần 8: Dữ liệu thời gian** | DatetimeIndex, Resampling, Rolling, Tăng trưởng YoY | Bẫy so sánh quý snapshot dang dở; `min_periods` gây NaN | Nhận diện kỳ trọn vẹn; chuẩn hóa doanh thu ngày; `rolling(min_periods=1)` |
+| **Phần 9: Đảm bảo chất lượng** | Kiểm thử chéo bảng, bản ghi mồ côi, LTM | Lệch pha cột dẫn xuất; bẫy năm nhuận Timedelta vs DateOffset | Dùng vector `~isin()`, xây dựng `qa_report`, chuẩn hóa cửa sổ LTM lịch tròn |
+| **Phần 10: Xử lý LLM** | Pydantic Schema, Baseline, Dự toán Token & Hậu kiểm | Chi phí API vượt trần; xung đột ngữ nghĩa nội tại giữa điểm và nhãn | Dự toán FinOps trước khi gọi; Schema Pydantic; bộ luật Semantic Assertion |
+| **Phần 11: Trực quan cơ bản** | Histogram, Biểu đồ thanh ngang, Visual Test `assert` | Cắt ngắn trục tung; nhãn trục x chen chúc; che giấu 2 đỉnh | Thanh ngang `ax.bar_label` tối ưu Data-Ink; kiểm thử biểu đồ bằng `assert` |
+| **Phần 12: Trực quan nâng cao** | Seaborn Boxplot, phản biện thống kê đa mốc | Râu hộp Tukey dừng ở lý thuyết; chiêu trò cherry-picking mốc đáy | Lồng `stripplot` kiểm tra cỡ mẫu; vẽ chuỗi toàn cảnh phản biện mốc so sánh |
+| **Phần 13: Kể chuyện dữ liệu** | Kim tự tháp Minto, Nghịch lý Simpson, Lời đúng mức | Nhầm lẫn phần trăm vs điểm phần trăm; quy chụp nhân quả cảm tính | Cấu trúc Answer-First (Minto); kiểm soát biến gây nhiễu; thẩm định 4 bước |
+
 

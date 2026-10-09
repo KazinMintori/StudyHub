@@ -72,3 +72,14 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
    - Tuyệt đối không nhét văn xuôi, câu nhận xét dài vào trong TeX bằng `\text{...}`. Văn xuôi phân tích phải viết ở đoạn văn bên ngoài khối toán.
    - Dấu mở `$$` và đóng `$$` phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
    - Công thức inline (`$...$`): Không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.
+9. **Khai triển tường minh trước khi viết tắt (Explicit Unpacking before Abbreviation)**:
+   - Mọi công thức chứa ký hiệu viết tắt dồn ($\sum$, $\prod$, $\arg\min$, $\arg\max$, $\mathbb{E}[\cdot]$, tích Kronecker, ma trận khối...) **bắt buộc phải được khai triển tường minh ít nhất một lần khi giới thiệu**.
+   - Tuyệt đối không viết $\sum_i \theta_i = 1$ lơ lửng, cộc lốc mà phải ghi rõ miền chỉ số và dạng khai triển: $\sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1$ với $\theta_i \ge 0, \forall i = 1, \dots, k$.
+   - Luôn giải thích bản chất bằng ngôn ngữ tự nhiên: Nêu rõ ý nghĩa vật lý/hình học (ví dụ: các trọng số $\theta_i$ là tỷ lệ phần trăm phân bổ 100%, không có trọng số âm, phép bình quân gia quyền không làm biến dạng thang đo).
+   - Xuất phát từ trường hợp nhỏ nhất ($k=2$: đoạn thẳng $\theta_1 x_1 + (1 - \theta_1) x_2$ với $\theta_1 \in [0, 1]$) trước khi tổng quát hóa lên $k$ điểm hay $n$ chiều, giúp sinh viên nắm vững trực giác hình học trước khi dùng đại số trừu tượng.
+   - Khuyến khích sử dụng công thức có chú thích (Annotated Math) bằng `\underbrace{...}_{...}` để chỉ rõ vai trò của từng cụm số hạng.
+10. **Chuẩn mực văn phong tiếng Việt & Hạn chế dấu chấm phẩy (`;`)**:
+   - Trong lời giảng văn xuôi, **hạn chế tối đa việc dùng dấu chấm phẩy (`;`)**. Dấu `;` thường khiến câu văn trở nên khô khan, rời rạc và mang nặng tính liệt kê máy móc.
+   - Thay vào đó, hãy đọc kỹ quan hệ ngữ nghĩa giữa các vế để lựa chọn **từ nối tiếng Việt chuẩn xác** (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với việc, trong khi, song song đó, cụ thể là, chẳng hạn...*) hoặc tách thành hai câu đơn độc lập với chủ ngữ rõ ràng.
+   - Tra cứu chi tiết tại cẩm nang `references/tu-noi-va-dien-dat.md`.
+

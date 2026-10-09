@@ -53,4 +53,6 @@ venv/
 *.pdf
 *.pptx
 output/
+scratch/
+
 

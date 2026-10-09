@@ -9,15 +9,15 @@ Trước khi thay dấu chấm phẩy, hãy đọc đủ hai vế và xác đị
 | Quan hệ | Từ và cụm từ có thể dùng | Cách dùng trong bài giảng |
 | --- | --- | --- |
 | Bổ sung thông tin | và, cũng, còn, thêm vào đó, ngoài ra, bên cạnh đó, hơn nữa, không những… mà còn… | “Ma trận có hàng và cột. Ngoài ra, thứ tự các hàng cũng ảnh hưởng đến phép nhân.” |
-| Đối chiếu hai đối tượng | còn, trong khi, khác với, so với, về phía, đối với, nếu xét riêng | “Gradient là vector, còn Hessian là ma trận.” |
+| Đối chiếu hai đối tượng | còn, trong khi, khác với, so với, về phía, đối với, nếu xét riêng, song song đó | “Gradient là vector, còn Hessian là ma trận.” |
 | Chuyển ý hoặc nêu giới hạn | nhưng, tuy nhiên, tuy vậy, dù vậy, dẫu vậy, song, thế nhưng, mặc dù… nhưng… | “Điểm này khả thi, nhưng chưa chắc tối ưu.” |
-| Đối lập thực sự | ngược lại, trái lại, ở chiều ngược lại | “Dấu dương giữ chiều của lực. Ngược lại, dấu âm làm lực đổi chiều.” |
-| Nêu lý do hoặc cơ sở | vì, do, bởi, bởi vì, do… nên…, vì… nên…, dựa vào, theo giả thiết | “Vì mẫu số dương nên chiều bất đẳng thức được giữ nguyên.” |
-| Nêu kết quả hoặc bước suy ra | nên, vì vậy, do đó, bởi vậy, từ đó, suy ra, nhờ đó, hệ quả là | “Hai tập không giao nhau, vì vậy giao của chúng là tập rỗng.” |
+| Đối lập thực sự | ngược lại, trái lại, ở chiều ngược lại, mặt khác | “Dấu dương giữ chiều của lực. Ngược lại, dấu âm làm lực đổi chiều.” |
+| Nêu lý do hoặc cơ sở | vì, do, bởi, bởi vì, do… nên…, vì… nên…, dựa vào, theo giả thiết, chiếu theo | “Vì mẫu số dương nên chiều bất đẳng thức được giữ nguyên.” |
+| Nêu kết quả hoặc bước suy ra | nên, vì vậy, do đó, bởi vậy, từ đó, suy ra, nhờ đó, hệ quả là, kéo theo, dẫn đến | “Hai tập không giao nhau, vì vậy giao của chúng là tập rỗng.” |
 | Điều kiện và phạm vi | nếu… thì…, khi, trong trường hợp, với điều kiện, miễn là, chỉ khi, trừ khi, giả sử | “Nếu mảng dùng chung bộ nhớ thì sửa view có thể làm mảng gốc thay đổi.” |
 | Mục đích | để, nhằm, với mục đích, muốn… thì cần… | “Ta thêm biến phụ để đưa chuẩn về các ràng buộc tuyến tính.” |
 | Trình tự thao tác | trước hết, đầu tiên, tiếp theo, sau đó, rồi, kế đến, cuối cùng, sau khi, trước khi | “Trước hết tính phần dư. Sau đó nhân với ma trận chuyển vị.” |
-| Giải thích hoặc diễn đạt lại | nghĩa là, tức là, nói cách khác, cụ thể, có thể hiểu là, điều này có nghĩa là | “Chỉ số chạy từ 1 đến n, nghĩa là mỗi thành phần được xét đúng một lần.” |
+| Giải thích hoặc diễn đạt lại | nghĩa là, tức là, nói cách khác, đồng nghĩa với việc, cụ thể, có thể hiểu là, điều này có nghĩa là | “Chỉ số chạy từ 1 đến n, nghĩa là mỗi thành phần được xét đúng một lần.” |
 | Nêu ví dụ | ví dụ, chẳng hạn, thí dụ, xét trường hợp, lấy trường hợp, để thấy rõ | “Chẳng hạn, với hai phần tử, tổng chỉ có hai số hạng.” |
 | Quay lại một đối tượng đã rõ | ở bước này, trong ví dụ đang xét, với dữ liệu trên, theo cách viết vừa dùng, trở lại bài toán | “Trở lại bài toán, ta vẫn phải kiểm tra các ràng buộc ban đầu.” |
 
@@ -95,5 +95,11 @@ Tra cứu ngày 08-10-2026. Các mô tả cách dùng ở trên là diễn giả
 | rồi | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/r%E1%BB%93i) | Nêu việc đã xong hoặc chuyển sang việc sau, tùy cách dùng |
 | cụ thể | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/c%E1%BB%A5_th%E1%BB%83) | Làm rõ bằng thông tin xác định |
 | chẳng hạn | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/ch%E1%BA%B3ng_h%E1%BA%A1n) | Dẫn một trường hợp để minh họa |
+| kéo theo | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/k%C3%A9o_theo) | Đưa ra kết quả hoặc điều tất yếu phải xảy ra từ tiền đề |
+| dẫn đến | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/d%E1%BA%ABn_%C4%91%E1%BA%BFn) | Đưa lại kết quả logic hoặc chuyển sang trạng thái tiếp theo |
+| suy ra | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/suy_ra) | Rút ra kết luận hợp lý từ dữ kiện hay định lý đã biết |
+| hệ quả là | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/h%E1%BB%87_qu%E1%BA%A3) | Kết quả logic tất yếu rút ra từ tiền đề hoặc định lý |
+| đồng nghĩa với | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/%C4%91%E1%BB%93ng_ngh%C4%A9a) | Tương đương về mặt bản chất hoặc giá trị ngữ nghĩa |
+| chiếu theo | [Wiktionary tiếng Việt](https://vi.wiktionary.org/wiki/chi%E1%BA%BFu_theo) | Căn cứ vào, dựa theo quy tắc hoặc giả thiết xác định |
 
 Một số mục từ trên dẫn lại Từ điển Việt–Việt của dự án Hồ Ngọc Đức. Đây là từ điển mở có thể thay đổi. Khi một từ nối ảnh hưởng đến điều kiện cần, điều kiện đủ hoặc quan hệ nhân quả, ưu tiên kiểm tra lập luận của bài thay vì dựa riêng vào mục từ.
