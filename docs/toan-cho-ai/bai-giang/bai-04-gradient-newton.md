@@ -8,26 +8,52 @@ lessonStatus: ready
 description: "Tách hướng khỏi độ dài bước, thực hiện phương pháp gradient và Newton, rồi lập hệ Newton–KKT và đánh giá phần dư."
 ---
 
-Các bài trước cho ta điều kiện để nhận biết nghiệm tối ưu. Bài này chuyển sang câu hỏi tính toán: bắt đầu từ một điểm cho trước, làm thế nào tạo ra một dãy điểm tiến dần tới nghiệm? Mỗi lần cập nhật phải giải quyết ba việc riêng: chọn hướng, chọn độ dài bước và quyết định khi nào dừng. Dù đôi khi được viết trong một dòng mã, ba việc này dựa trên những lập luận khác nhau.
+Các bài học trước đã trang bị cho chúng ta hệ thống điều kiện toán học để nhận diện và chứng nhận một nghiệm tối ưu. Bài học này chuyển giao trọng tâm từ lý thuyết nhận diện sang câu hỏi thuật toán tính toán: Bắt đầu từ một điểm khởi tạo bất kỳ trong không gian, làm thế nào để xây dựng một dãy điểm lặp hội tụ nhanh chóng và vững chắc về nghiệm tối ưu toàn cục?
 
-Ví dụ xuyên suốt tự đặt là $f(x,y)=\tfrac12(x^2+10y^2)$, khởi đầu $(2,2)$. Độ cong theo $y$ gấp 10 lần theo $x$, nên nó giúp nhìn rõ vì sao một tốc độ học chung có thể khó chọn.
+Quá trình tìm đường trong không gian tối ưu hóa đòi hỏi thuật toán phải đưa ra ba quyết định độc lập tại mỗi bước lặp:
+1. **Chọn hướng di chuyển** (Descent Direction): Đi theo vector nào để hàm mục tiêu suy giảm?
+2. **Chọn độ dài bước** (Step Size / Learning Rate): Di chuyển bao xa theo hướng đã chọn để không bị vọt qua đáy thung lũng?
+3. **Tiêu chí dừng** (Stopping Criteria): Khi nào mức độ tiệm cận nghiệm đã đủ tin cậy để dừng tính toán?
 
-Sau khi học xong, bạn sẽ theo dõi được từng bước của phương pháp gradient, tự thực hiện tìm kiếm bước bằng backtracking, tính hướng Newton bằng cách giải hệ tuyến tính, và lập hệ Newton–KKT cho bài toán có ràng buộc đẳng thức. Lần đọc đầu nên dừng sau mục 3. Mục 4 về self-concordance và mục 5–6 về ràng buộc có thể học trong một lượt riêng.
+Để quan sát sâu sắc cơ chế này, chúng ta sẽ khảo sát xuyên suốt hàm mục tiêu toàn phương hai chiều:
+$$
+f(x, y) = \frac{1}{2}(x^2 + 10y^2),
+$$
+với điểm khởi tạo tại $(2, 2)$. Độ cong địa hình theo phương $y$ gấp đúng 10 lần theo phương $x$, tạo nên một "hẻm núi hẹp" (ill-conditioned ravine) điển hình — nơi bộc lộ toàn bộ điểm mạnh và điểm yếu của các thuật toán tối ưu.
 
-## 1. Hướng giảm và độ dài bước
+---
 
-Gọi điểm hiện tại là $z\in\mathbb R^n$, hướng là $d$ và hệ số bước là $t>0$:
+## 1. Hướng giảm và Độ dài bước di chuyển
 
-$$z^+=z+td.$$
+Tại điểm hiện tại $z \in \mathbb{R}^n$, thuật toán cập nhật vị trí mới theo quy tắc:
 
-Đạo hàm theo đường $t\mapsto f(z+td)$ tại 0 là $\nabla f(z)^Td$. Nếu nó âm, $d$ là **hướng giảm**: một bước đủ nhỏ theo hướng ấy làm $f$ giảm. Độ dời thật là $td$. Độ dài Euclid là $t\|d\|_2$, không phải $t$ trừ khi $d$ là vector đơn vị.
+$$
+z^+ = z + t d,
+$$
 
-Gradient descent dùng $d=-\nabla f(z)$. Khi gradient khác 0, tích vô hướng bằng $-\|\nabla f(z)\|_2^2<0$. Tuy nhiên kết luận này chỉ đảm bảo các bước đủ nhỏ.
+trong đó $d \in \mathbb{R}^n$ là vector hướng di chuyển và $t > 0$ là độ dài bước (hệ số bước).
 
-::: example Bước lớn làm hàm tăng
-Tại $(2,2)$, $f=22$, $g=(2,20)$, $d=(-2,-20)$. Chọn $t=1$ đến $(0,-18)$, cho $f=1620$. Hướng giảm nhưng bước quá dài.
+Đạo hàm định hướng của hàm số $f$ dọc theo tia $t \mapsto f(z + td)$ tại $t = 0$ được tính bằng tích vô hướng $\nabla f(z)^T d$. Một vector $d$ được gọi là **hướng giảm** (descent direction) nếu tích vô hướng này âm:
 
-Chọn $t=0.15$ đến $(1.7,-1)$, cho $f=6.445$. Vẫn cùng một hướng, độ dài bước khác cho kết quả khác.
+$$
+\nabla f(z)^T d < 0.
+$$
+
+Khi điều kiện này thỏa mãn, giải tích bảo đảm rằng luôn tồn tại một bước nhảy $t > 0$ đủ nhỏ sao cho $f(z + td) < f(z)$. Cần phân biệt rõ: độ dời thực tế trong không gian là vector $td$, và khoảng cách hình học di chuyển là $t\|d\|_2$.
+
+Thuật toán **Gradient Descent** (Phương pháp dốc đứng) lựa chọn hướng di chuyển trực tiếp ngược chiều gradient: $d = -\nabla f(z)$. Khi gradient khác 0, ta có:
+
+$$
+\nabla f(z)^T d = -\|\nabla f(z)\|_2^2 < 0.
+$$
+
+Do đó, ngược chiều gradient luôn là một hướng giảm hợp lệ. Tuy nhiên, định lý giải tích chỉ bảo đảm hàm số giảm khi bước nhảy $t$ "đủ nhỏ". Nếu bước nhảy quá dài, hàm số hoàn toàn có thể bùng nổ mất kiểm soát.
+
+::: example Bước nhảy quá trớn trong hẻm núi hẹp
+Tại điểm khởi đầu $(2, 2)$, giá trị hàm mục tiêu là $f(2, 2) = \frac{1}{2}(2^2 + 10 \cdot 2^2) = 22$.
+Vector gradient là $\nabla f(2, 2) = (2, 20)^T$, do đó hướng gradient descent là $d = (-2, -20)^T$.
+- Nếu chọn bước nhảy dài $t = 1$: Điểm mới là $z^+ = (2 - 2, 2 - 20) = (0, -18)$. Giá trị mất mát mới vọt lên $f(0, -18) = \frac{1}{2}(0 + 10 \cdot 18^2) = 1620$. Hướng đi hoàn toàn đúng, nhưng bước nhảy quá trớn đã khiến thuật toán rơi vào thảm họa phân kỳ!
+- Nếu chọn bước nhảy cẩn trọng $t = 0.15$: Điểm mới là $z^+ = (2 - 0.3, 2 - 3.0) = (1.7, -1.0)$. Giá trị mất mát giảm xuống còn $f(1.7, -1.0) = \frac{1}{2}(1.7^2 + 10 \cdot (-1)^2) = 6.445 < 22$.
 :::
 
 <MathLab type="optimizer" initial-method="gd">
@@ -39,34 +65,48 @@ const next = point.map((x,i) => x-rate*gradient(point,kappa)[i]);
 
 </MathLab>
 
-Mô phỏng tái hiện cơ chế đường đồng mức và phép cập nhật ở §9.3 bằng một hàm toàn phương tự đặt. Với $\kappa=10$, lần lượt thử $\eta=0.15$, $0.20$ và $0.25$. Hãy quan sát từng tọa độ cùng giá trị hàm mục tiêu. Các điểm vượt ra ngoài vùng vẽ được báo riêng.
+Xét phương trình cập nhật từng tọa độ với tốc độ học cố định $\eta > 0$:
 
-Trong mô hình này,
+$$
+x_{k+1} = (1 - \eta) x_k, \qquad y_{k+1} = (1 - 10\eta) y_k.
+$$
 
-$$x_{k+1}=(1-\eta)x_k,\qquad y_{k+1}=(1-10\eta)y_k.$$
+Để chuỗi điểm lặp hội tụ về gốc tọa độ $(0, 0)$, cả hai hệ số co giãn đều phải có trị tuyệt đối nhỏ hơn 1:
+$$
+|1 - \eta| < 1 \iff 0 < \eta < 2, \qquad |1 - 10\eta| < 1 \iff 0 < \eta < 0.2.
+$$
 
-Để mọi điểm đầu đều hội tụ về 0, cả hai hệ số phải có trị tuyệt đối nhỏ hơn 1: $0<\eta<0.2$. Tại $\eta=0.2$, tọa độ $y$ đổi dấu nhưng giữ độ lớn. Đây là kết luận của ví dụ, không phải tốc độ học dùng chung cho mọi hàm.
+Giao của hai điều kiện đòi hỏi bước nhảy bắt buộc phải thỏa mãn $0 < \eta < 0.2$. Giới hạn này bị quyết định hoàn toàn bởi phương có độ cong lớn nhất ($\lambda_{\max} = 10$). Nếu chọn $\eta = 0.2$, tọa độ $y$ sẽ dao động đổi dấu vĩnh viễn giữa $2$ và $-2$ mà không bao giờ suy giảm.
 
-## 2. Tìm kiếm bước bằng backtracking
+---
 
-Chọn $0<\alpha<\frac{1}{2}$, $0<\beta<1$. Bắt đầu $t=1$, rồi lặp $t\leftarrow\beta t$ cho tới khi điểm mới nằm trong miền và
+## 2. Tìm kiếm bước bằng thuật toán Backtracking
 
-$$f(z+td)\le f(z)+\alpha t\nabla f(z)^Td.$$
+Trong thực tế tính toán, việc dò tìm độ dài bước tối ưu chính xác (exact line search) đòi hỏi giải một bài toán tối ưu phụ một chiều rất tốn kém. Thay vào đó, kỹ thuật **Backtracking Line Search** (dựa trên điều kiện Armijo) tìm kiếm một bước nhảy "đủ tốt" một cách nhanh chóng.
 
-Vế phải yêu cầu bước thử đạt được một phần $\alpha$ của mức giảm do mô hình bậc nhất dự đoán. Vì $\nabla f^Td<0$, vế phải nhỏ hơn giá trị hiện tại. Tính khả vi và điều kiện hướng giảm bảo đảm bất đẳng thức sẽ đúng khi $t$ đủ nhỏ. Nếu hàm chứa log hoặc phép chia, trước hết phải xác nhận điểm thử vẫn nằm trong miền xác định.
+Thuật toán chọn hai tham số: $\alpha \in (0, 0.5)$ (hệ số giảm chấp nhận được) và $\beta \in (0, 1)$ (hệ số thu nhỏ bước). Bắt đầu với bước thử tối đa $t = 1$, ta liên tục co ngắn bước $t \leftarrow \beta t$ cho tới khi điểm thử nằm trong miền xác định và thỏa mãn **điều kiện Armijo**:
 
-::: example Theo dõi quá trình thu nhỏ
-Ở điểm $(2,2)$, lấy $\alpha=0.1$, $\beta=0.5$. Tích $g^Td=-404$.
+$$
+f(z + t d) \le f(z) + \alpha t \nabla f(z)^T d.
+$$
 
-| $t$ | Điểm thử | $f$ mới | Cận cần thỏa $22-40.4t$ | Chấp nhận? |
-| ---: | --- | ---: | ---: | --- |
-| 1 | $(0,-18)$ | 1620 | −18.4 | Không |
-| $\frac{1}{2}$ | $(1,-8)$ | 320.5 | 1.8 | Không |
-| $\frac{1}{4}$ | $(1.5,-3)$ | 46.125 | 11.9 | Không |
-| $\frac{1}{8}$ | $(1.75,-0.5)$ | 2.78125 | 16.95 | Có |
+Ý nghĩa của bất đẳng thức: Vì $\nabla f(z)^T d < 0$, vế phải là đường thẳng xấp xỉ bậc nhất nghiêng xuống nhưng có độ dốc chỉ bằng một phần $\alpha$ so với độ dốc thực tế. Điều kiện yêu cầu hàm mục tiêu phải thực sự giảm ít nhất một tỷ lệ $\alpha$ so với mức giảm kỳ vọng tuyến tính.
 
-Ta thu được $t=\frac{1}{8}$. Bảng tự tính lại theo cùng công thức. Nó mô phỏng điều kiện ở Hình 9.1, tr. 465, không dùng dữ liệu ảnh của sách.
+::: example Quá trình co bước Backtracking từng nấc
+Tại điểm $z = (2, 2)$, chọn $\alpha = 0.1$ và $\beta = 0.5$. Tích vô hướng độ dốc là $g^T d = 2(-2) + 20(-20) = -404$.
+Ngưỡng chấp nhận Armijo là: $f(z) + \alpha t (g^T d) = 22 - 40.4 t$.
+
+| Bước thử $t$ | Điểm thử nghiệm | $f(z + td)$ | Ngưỡng Armijo $22 - 40.4t$ | Quyết định |
+| :---: | :---: | :---: | :---: | :---: |
+| $1$ | $(0, -18)$ | $1620$ | $-18.4$ | Từ chối |
+| $1/2$ | $(1, -8)$ | $320.5$ | $1.8$ | Từ chối |
+| $1/4$ | $(1.5, -3)$ | $46.125$ | $11.9$ | Từ chối |
+| $1/8$ | $(1.75, -0.5)$ | $2.78125$ | $16.95$ | **Chấp nhận** |
+
+Tại $t = 1/8$, giá trị thực tế $2.78125$ thấp hơn hẳn ngưỡng $16.95$, thuật toán dừng tìm kiếm và chọn độ dài bước $t = 1/8$.
 :::
+
+Đoạn mã Python hiện thực hóa giải thuật Backtracking chuẩn xác:
 
 ```python
 def backtrack(f, z, g, d, in_domain=lambda z: True,
@@ -83,119 +123,220 @@ def backtrack(f, z, g, d, in_domain=lambda z: True,
     raise RuntimeError("Không tìm được bước trong giới hạn lặp")
 ```
 
-Backtracking khác tìm kiếm chính xác: nó tìm một bước giảm đủ, không nhất thiết cực tiểu hàm trên đường đã chọn.
+<details><summary>Câu hỏi đào sâu: Nếu hàm mục tiêu chứa logarit (như hàm rào cản nội thất), điều gì xảy ra nếu điểm thử nghiệm rơi ra ngoài miền xác định?</summary>
 
-<details><summary>Thử trả lời: Nếu điểm thử nằm ngoài miền xác định của log, có thể tính giá trị hàm mục tiêu trước không?</summary>
-
-Không. Trước hết phải xét điều kiện miền. Nếu điểm thử không hợp lệ thì thu nhỏ bước, rồi mới tính giá trị hàm mục tiêu. Đoạn mã trên dùng thứ tự đánh giá ngắn mạch để tránh gọi $f$ tại một điểm ngoài miền xác định.
+Nếu điểm thử nghiệm $z + td$ rơi ra ngoài miền xác định ($\operatorname{dom} f$), biểu thức $f(trial)$ sẽ sinh ra lỗi toán học (như $\log(x)$ với $x \le 0$). Do đó, điều kiện kiểm tra miền `in_domain(trial)` bắt buộc phải được đánh giá trước bằng toán tử ngắn mạch (short-circuit evaluation). Nếu điểm thử không thuộc miền xác định, thuật toán phải co ngắn bước $t$ ngay lập tức mà không cố gắng tính toán giá trị hàm mục tiêu.
 
 </details>
 
-## 3. Phương pháp Newton và mô hình bậc hai
+---
 
-Đặt $g=\nabla f(z)$, $H=\nabla^2f(z)$. Mô hình bậc hai theo độ dời $d$ là
+## 3. Phương pháp Newton và Mô hình xấp xỉ bậc hai
 
-$$q(d)=f(z)+g^Td+\frac12d^THd.$$
+Tại sao Gradient Descent thường di chuyển ziczac rất chậm chạp trong các hẻm núi hẹp? Vì Gradient Descent là một phương pháp bậc nhất: nó coi địa hình mọi hướng đều dốc phẳng như nhau và hoàn toàn mù tịt về độ cong.
 
-Nếu $H\succ0$, cực tiểu mô hình có đạo hàm $g+Hd=0$. Ta **giải hệ**
+**Phương pháp Newton** khắc phục triệt để nhược điểm này bằng cách sử dụng thông tin độ cong của ma trận Hessian $H = \nabla^2 f(z)$. Tại điểm hiện tại, phương pháp Newton dựng một mô hình xấp xỉ Taylor bậc hai theo vector độ dời $d$:
 
-$$\boxed{Hd=-g.}$$
+$$
+q(d) = f(z) + g^T d + \frac{1}{2} d^T H d,
+$$
 
-Viết $d=-H^{-1}g$ giúp diễn giải, nhưng khi lập trình nên giải hệ. Vì $H^{-1}\succ0$, $g^Td=-g^TH^{-1}g<0$ khi $g\ne0$, nên đây là hướng giảm. Sau đó vẫn cần tìm kiếm bước nếu hàm gốc khác mô hình toàn phương.
+trong đó $g = \nabla f(z)$ và $H = \nabla^2 f(z) \succ 0$.
 
-::: example Một bước cho hàm toàn phương
-Với $H=\operatorname{diag}(1,10)$, $g=(2,20)$, Newton cho $d=(-2,-2)$. Bước đầy đủ đến $(0,0)$, giá trị 0. Nó chia ảnh hưởng gradient theo độ cong của từng hướng.
+Để tìm cực tiểu của chiếc paraboloid xấp xỉ này, ta lấy đạo hàm theo $d$ và cho triệt tiêu:
 
-Chọn Newton trong mô phỏng để thấy đường đi. Kết quả một bước là do Hessian hằng và mô hình toàn phương chính xác. Không khái quát nó cho mọi hàm.
+$$
+\nabla_d q(d) = g + H d = 0 \iff \boxed{H d = -g.}
+$$
+
+Vector nghiệm $d = -H^{-1} g$ được gọi là **hướng Newton** (Newton step). Trong cài đặt thuật toán số, ta không bao giờ đảo ma trận $H^{-1}$ mà luôn giải hệ phương trình tuyến tính $H d = -g$ bằng các phép phân rã Cholesky hoặc LU để bảo đảm tính ổn định số học.
+
+Vì ma trận Hessian dương xác định ($H \succ 0$), ta có:
+
+$$
+g^T d = -g^T H^{-1} g < 0 \quad (\text{khi } g \ne 0).
+$$
+
+Điều này chứng minh hướng Newton luôn luôn là một hướng giảm hợp lệ!
+
+::: example Sức mạnh vượt trội của bước Newton trên hàm toàn phương
+Với hàm $f(x, y) = \frac{1}{2}(x^2 + 10y^2)$ tại điểm $(2, 2)$:
+Ma trận Hessian là $H = \begin{bmatrix} 1 & 0 \\ 0 & 10 \end{bmatrix}$, vector gradient là $g = \begin{bmatrix} 2 \\ 20 \end{bmatrix}$.
+
+Giải hệ phương trình Newton $Hd = -g$:
+$$
+\begin{bmatrix} 1 & 0 \\ 0 & 10 \end{bmatrix} \begin{bmatrix} d_x \\ d_y \end{bmatrix} = \begin{bmatrix} -2 \\ -20 \end{bmatrix} \implies \begin{bmatrix} d_x \\ d_y \end{bmatrix} = \begin{bmatrix} -2 \\ -2 \end{bmatrix}.
+$$
+
+Thực hiện bước cập nhật đầy đủ ($t = 1$):
+$$
+z^+ = \begin{bmatrix} 2 \\ 2 \end{bmatrix} + \begin{bmatrix} -2 \\ -2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+$$
+
+Chỉ đúng một bước duy nhất, phương pháp Newton đã nhảy thẳng tới nghiệm tối ưu toàn cục $(0, 0)$! Phương pháp Newton đã tự động chia nhỏ bước nhảy theo trục $y$ (chia cho 10) và giữ nguyên bước nhảy theo trục $x$ (chia cho 1), loại bỏ hoàn toàn hiện tượng dao động ziczac.
 :::
 
-Nếu $H$ suy biến, hệ có thể không có nghiệm duy nhất. Nếu $H$ bất định, hướng thu được từ hệ có thể làm hàm tăng. Ngoài bài toán lồi, việc thêm $\rho I$ để hiệu chỉnh độ cong là một lựa chọn của thuật toán. Thao tác này không chứng minh rằng hàm mất mát ban đầu là lồi.
+### 3.1 Tiêu chí dừng và Đại lượng Newton Decrement
+Trong phương pháp Newton, đại lượng **Newton decrement** được định nghĩa là:
 
-### 3.1 Tiêu chí dừng
+$$
+\lambda(z) = \sqrt{g^T H^{-1} g} = \sqrt{d^T H d}.
+$$
 
-Chuẩn gradient nhỏ cho biết phần dư của điều kiện dừng nhỏ. Nó chưa tự cho một khoảng cách nhỏ tới nghiệm. Muốn suy ra cận sai số mục tiêu cần thêm thông tin. **Lồi mạnh** với hằng số $m>0$ nghĩa là, trên miền đang xét,
+Đại lượng này mang những ý nghĩa hình học và tính toán đặc biệt:
+1. Số $\frac{\lambda(z)^2}{2}$ chính là mức độ suy giảm mục tiêu mà mô hình bậc hai dự đoán:
+   $$f(z) - \inf_d q(d) = \frac{1}{2} \lambda(z)^2.$$
+2. $\lambda(z)$ là một đại lượng **bất biến với phép đổi tọa độ affine** ($z = Ay$). Đây là ưu thế tuyệt đối của phương pháp Newton so với Gradient Descent (vốn phụ thuộc nặng nề vào hệ trục tọa độ).
+3. Tiêu chí dừng tự nhiên: Khi $\frac{1}{2}\lambda(z)^2 \le \epsilon$, ta dừng thuật toán với bảo đảm chắc chắn rằng sai số mục tiêu không vượt quá $\epsilon$.
 
-$$f(y)\ge f(z)+\nabla f(z)^T(y-z)+\frac m2\|y-z\|_2^2.$$
+---
 
-Hàm bị ép nằm trên xấp xỉ bậc nhất thêm một bình phương có độ cong tối thiểu $m$. Với bài không ràng buộc có nghiệm, cực tiểu vế phải theo $y$ cho $f(z)-p^*\le\|g\|_2^2/(2m)$. Nếu không biết $m$, không biến chuẩn gradient thành một cận số chắc chắn. Hàm minh họa có Hessian $\operatorname{diag}(1,10)$ nên có thể lấy $m=1$.
+## 4. Hàm tự tương hợp (Self-concordant Functions)
 
-Newton dùng **Newton decrement** $\lambda(z)=\sqrt{g^TH^{-1}g}$ khi $H\succ0$. Số $\\frac{lambda^2}{2}$ là mức giảm của mô hình toàn phương. Nó gần sai số thật khi mô hình tốt. Các bảo đảm toàn cục cần những giả thiết như ở mục tiếp theo.
+Một thách thức kinh điển của giải tích tối ưu truyền thống là tốc độ hội tụ của phương pháp Newton thường phụ thuộc vào các hằng số độ cong không xác định trong từng hệ tọa độ. Yurii Nesterov và Arkadi Nemirovski đã giải quyết triệt để vấn đề này qua lý thuyết **Hàm tự tương hợp (Self-concordant Functions)**.
 
-## 4. Hàm tự tương hợp (self-concordant)
+Một hàm lồi một biến khả vi ba lần được gọi là tự tương hợp nếu nó thỏa mãn bất đẳng thức:
 
-Theo thuật ngữ của sách, hàm lồi một biến ba lần khả vi là **tự tương hợp** (self-concordant) nếu
+$$
+|f'''(x)| \le 2 [f''(x)]^{3/2} \quad \forall x \in \operatorname{dom} f.
+$$
 
-$$|f'''(x)|\le2[f''(x)]^{3/2}\quad\forall x\in\operatorname{dom}f.$$
+Vế trái đo lường tốc độ biến thiên của độ cong (đạo hàm bậc ba), còn vế phải là thang đo độ cong tại chính điểm khảo sát. Bất đẳng thức này phát biểu rằng: **độ cong của hàm số không được phép thay đổi quá đột ngột so với bản thân độ cong tại điểm đó**.
 
-Vế trái đo độ cong thay đổi nhanh đến đâu. Vế phải so nó với thang độ cong tại chính điểm ấy. Trong nhiều chiều, yêu cầu này áp dụng cho hàm $t\mapsto f(z+tv)$ trên mọi đường trong miền.
+Đối với hàm nhiều biến, hàm $f$ được gọi là tự tương hợp nếu hàm một biến thu hẹp $t \mapsto f(z + tv)$ là tự tương hợp trên mọi đường thẳng đi qua miền xác định.
+- Hàm toàn phương lồi là tự tương hợp vì đạo hàm bậc ba triệt tiêu: $f'''(x) = 0$.
+- Hàm rào cản logarit $f(x) = -\log x$ với $x > 0$ là tự tương hợp:
+  $$f''(x) = \frac{1}{x^2}, \quad f'''(x) = -\frac{2}{x^3} \implies |f'''(x)| = \frac{2}{x^3} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 [f''(x)]^{3/2}.$$
 
-Ví dụ $f(x)=-\log x$, $x>0$, có $f''=1/x^2$ và $f'''=-2/x^3$. Hai vế cùng bằng $2/x^3$. Hàm toàn phương lồi cũng thỏa vì đạo hàm bậc ba bằng 0.
+Lý thuyết tự tương hợp bảo đảm rằng phương pháp Newton với backtracking sẽ hội tụ về nghiệm sau một số hữu hạn các bước lặp độc lập với hệ tọa độ, đặt nền móng lý thuyết vững chắc cho các thuật toán điểm trong (interior-point methods) hiện đại.
 
-Điều kiện này phục vụ phân tích Newton mà không dựa vào các hằng số độ cong toàn cục trong hệ tọa độ hiện tại. Nó không nói mọi hàm lồi đều thỏa. Phần này chỉ giữ định nghĩa và một ví dụ. Các cận số vòng lặp chi tiết ở §9.6.3–9.6.4 phù hợp cho lần đọc sau, khi bạn đã tự chạy được thuật toán.
+---
 
-## 5. Hướng Newton khi có ràng buộc đẳng thức
+## 5. Hướng Newton khi có Ràng buộc Đẳng thức
 
-Xét $\min f(z)$ với $Az=b$. Nếu $z$ đang khả thi, muốn $z+d$ khả thi thì $Ad=0$. Ta cực tiểu mô hình $q(d)$ dưới điều kiện này. KKT của bài con cho
+Xét bài toán tối ưu với ràng buộc đẳng thức affine:
 
-$$\begin{bmatrix}H&A^T\\A&0\end{bmatrix}
-\begin{bmatrix}d\\w\end{bmatrix}
-=\begin{bmatrix}-g\\0\end{bmatrix}.$$
+$$
+\min_z \quad f(z) \quad \text{sao cho} \quad A z = b.
+$$
 
-$w$ là nhân tử của bài con. Điều kiện đủ đơn giản để hệ khả nghịch là $H\succ0$ và $A$ đủ hạng hàng. Sách còn cho phép $H$ chỉ dương xác định trên các hướng thuộc không gian $Ad=0$.
+Nếu điểm hiện tại $z$ đã khả thi ($Az = b$), thì để điểm mới $z + d$ tiếp tục khả thi, vector hướng di chuyển $d$ bắt buộc phải thỏa mãn:
 
-::: example Hồi quy có một đẳng thức
-Dùng bài ở Bài 03: $f(x,y)=\tfrac12[(x-2)^2+y^2]$, $x+y=1$. Khởi đầu khả thi $(1,0)$.
+$$
+A(z + d) = b \iff A d = 0.
+$$
 
-$H=I$, $g=(-1,0)$, $A=(1,1)$. Hệ gồm $d_x+w=1$, $d_y+w=0$, $d_x+d_y=0$. Suy ra $w=\frac{1}{2}$, $d=(\frac{1}{2},-\frac{1}{2})$. Cập nhật đến $(\frac{3}{2},-\frac{1}{2})$, đúng nghiệm đã chứng nhận.
+Nghĩa là hướng di chuyển phải nằm trọn trong không gian hạch (null space) của ma trận ràng buộc $A$. Cực tiểu hóa mô hình bậc hai $q(d) = f(z) + g^T d + \frac{1}{2} d^T H d$ dưới điều kiện $Ad = 0$ dẫn đến hệ phương trình KKT:
+
+$$
+\boxed{\begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} d \\ w \end{bmatrix} = \begin{bmatrix} -g \\ 0 \end{bmatrix},}
+$$
+
+trong đó $w$ là vector nhân tử Lagrange gắn với ràng buộc đẳng thức của bài toán con bậc hai.
+
+::: example Tìm bước Newton trên bài toán có ràng buộc đẳng thức
+Xét bài toán: $\min \frac{1}{2}[(x - 2)^2 + y^2]$ với ràng buộc $x + y = 1$.
+Giả sử ta xuất phát từ điểm khả thi $z = (1, 0)^T$ (thỏa mãn $1 + 0 = 1$).
+Ma trận Hessian là $H = I$, gradient tại điểm này là $g = (1 - 2, 0)^T = (-1, 0)^T$, và ma trận ràng buộc $A = \begin{bmatrix} 1 & 1 \end{bmatrix}$.
+
+Hệ phương trình Newton-KKT:
+$$
+\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 0 \end{bmatrix} \begin{bmatrix} d_x \\ d_y \\ w \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}.
+$$
+
+Giải hệ phương trình tuyến tính:
+- $d_x + w = 1 \implies d_x = 1 - w$,
+- $d_y + w = 0 \implies d_y = -w$,
+- $d_x + d_y = 0 \implies (1 - w) - w = 0 \implies w = \frac{1}{2}$.
+
+Suy ra hướng di chuyển: $d_x = \frac{1}{2}$, $d_y = -\frac{1}{2}$.
+Thực hiện bước cập nhật đầy đủ:
+$$
+z^+ = \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \begin{bmatrix} 1/2 \\ -1/2 \end{bmatrix} = \begin{bmatrix} 3/2 \\ -1/2 \end{bmatrix}.
+$$
+
+Điểm mới đạt đúng nghiệm tối ưu toàn cục đã được chứng minh ở Bài 03!
 :::
 
-Hướng gradient thuần ở điểm này là $(1,0)$, không thỏa $Ad=0$. Cập nhật tùy ý theo nó sẽ phá đẳng thức. Ràng buộc phải tham gia cách chọn hướng.
+---
 
-## 6. Bước Newton–KKT từ một điểm chưa khả thi
+## 6. Bước Newton–KKT từ một Điểm Khởi tạo Chưa Khả thi (Infeasible Start)
 
-Đặt $r_{\mathrm{pri}}=Az-b$, $r_{\mathrm{dual}}=\nabla f(z)+A^T\nu$. Muốn cả hai bằng 0, tuyến tính hóa hệ và giải
+Nếu ta không có sẵn một điểm khả thi thỏa mãn $Az = b$ thì sao? Ta có thể bắt đầu thuật toán từ một điểm $z$ bất kỳ và để phương pháp Newton đồng thời giải quyết hai nhiệm vụ: **tiến tới nghiệm tối ưu** và **khắc phục sai số ràng buộc**.
 
-$$\begin{bmatrix}H&A^T\\A&0\end{bmatrix}
-\begin{bmatrix}d\\\Delta\nu\end{bmatrix}
-=-\begin{bmatrix}r_{\mathrm{dual}}\\r_{\mathrm{pri}}\end{bmatrix}.$$
+Định nghĩa hai vector phần dư của hệ KKT:
+- **Phần dư đối ngẫu** (Dual residual): $r_{\mathrm{dual}} = \nabla f(z) + A^T \nu$.
+- **Phần dư gốc** (Primal residual): $r_{\mathrm{pri}} = A z - b$.
 
-Khối dưới khác 0 sửa vi phạm đẳng thức. Sau bước đầy đủ, $A(z+d)-b=0$ vì đẳng thức tuyến tính. Với bước thu nhỏ $t$, phần dư gốc là $(1-t)r_{\mathrm{pri}}$.
+Tuyến tính hóa hệ phương trình KKT quanh điểm hiện tại $(z, \nu)$ dẫn tới hệ phương trình **Newton–KKT khởi tạo không khả thi**:
 
-Ở khởi đầu chưa khả thi, Newton–KKT không nhất thiết giảm mục tiêu. Ví dụ khởi đầu $(2,0)$ có $f=0$ nhưng vi phạm $x+y=1$. Với $\nu=0$, bước $d=(-\frac{1}{2},-\frac{1}{2})$, $\Delta\nu=\frac{1}{2}$ tới nghiệm khả thi có $f=\frac{1}{4}$. Mục tiêu tăng, nhưng chuẩn phần dư KKT giảm từ 1 về 0.
+$$
+\begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} d \\ \Delta\nu \end{bmatrix} = -\begin{bmatrix} r_{\mathrm{dual}} \\ r_{\mathrm{pri}} \end{bmatrix}.
+$$
 
-Vì thế, tìm kiếm bước trong trường hợp này dựa trên chuẩn của toàn bộ vector phần dư và đồng thời giữ điểm trong miền xác định. Không thể áp dụng máy móc yêu cầu “hàm mục tiêu phải giảm” vốn dùng cho phương pháp bắt đầu từ một điểm khả thi.
+Khối phương trình phía dưới $Ad = -r_{\mathrm{pri}} = b - Az$ bảo đảm rằng sau một bước cập nhật đầy đủ ($t = 1$), điểm mới sẽ thỏa mãn ràng buộc đẳng thức một cách hoàn hảo:
+$$
+A(z + d) - b = Az + Ad - b = Az + (b - Az) - b = 0.
+$$
+
+Lưu ý rằng khi xuất phát từ điểm chưa khả thi, hàm mục tiêu $f(z)$ có thể tăng trong một số bước đầu tiên (để đưa nghiệm về vùng hợp lệ). Do đó, tiêu chuẩn tìm kiếm bước Backtracking trong trường hợp này không đo bằng sự suy giảm của riêng hàm mục tiêu $f$, mà đo bằng **sự suy giảm của chuẩn toàn bộ phần dư**: $\|(r_{\mathrm{dual}}, r_{\mathrm{pri}})\|_2$.
+
+---
 
 ## Bài tập tự luyện
 
-::: exercise 1. Khoảng bước
-Với $f(x,y)=\tfrac12(2x^2+8y^2)$, tìm khoảng tốc độ học cố định để gradient hội tụ từ mọi điểm đầu.
+::: exercise 1. Xác định ngưỡng bước nhảy hội tụ
+Cho hàm mục tiêu $f(x, y) = \frac{1}{2}(2x^2 + 8y^2)$.
+Tìm khoảng giá trị của tốc độ học cố định $\eta > 0$ để thuật toán Gradient Descent hội tụ về điểm cực tiểu toàn cục từ mọi điểm xuất phát.
 :::
 ::: solution
-Hai hệ số cập nhật là $1-2\eta$ và $1-8\eta$. Điều kiện trị tuyệt đối nhỏ hơn 1 cho $0<\eta<1$ và $0<\eta<\frac{1}{4}$. Giao là $0<\eta<\frac{1}{4}$.
+Ma trận Hessian của hàm số là $H = \begin{bmatrix} 2 & 0 \\ 0 & 8 \end{bmatrix}$. 
+Phương trình cập nhật Gradient Descent theo từng tọa độ:
+$$x_{k+1} = (1 - 2\eta) x_k, \qquad y_{k+1} = (1 - 8\eta) y_k.$$
+Để dãy hội tụ về 0, điều kiện cần và đủ là các hệ số co giãn có trị tuyệt đối nhỏ hơn 1:
+- $|1 - 2\eta| < 1 \iff 0 < \eta < 1$,
+- $|1 - 8\eta| < 1 \iff 0 < \eta < \frac{1}{4}$.
+Giao của hai điều kiện là: $0 < \eta < \frac{1}{4} = 0.25$.
 :::
 
-::: exercise 2. Newton một chiều
-$f(x)=x^4+x^2$, điểm hiện tại $x=1$. Tính hướng Newton và giá trị sau bước đầy đủ. Có tới ngay nghiệm không?
+::: exercise 2. Thực hiện một bước lặp Newton một chiều
+Xét hàm số $f(x) = x^4 + x^2$ với điểm khởi tạo hiện tại $x = 1$.
+1. Tính hướng di chuyển Newton $d$ và điểm mới $x^+$ sau bước cập nhật đầy đủ.
+2. Điểm mới có đạt đúng nghiệm tối ưu toàn cục không? Giải thích nguyên nhân.
 :::
 ::: solution
-$g=6$, $H=14$, $d=-\frac{3}{7}$, $x^+=\frac{4}{7}$. Giá trị mới $\frac{1040}{2401}\approx0.43315$, nhỏ hơn $f(1)=2$ nhưng chưa bằng 0. Hàm không toàn phương. Không có bảo đảm một bước tới nghiệm.
+1. Đạo hàm bậc nhất: $f'(x) = 4x^3 + 2x \implies g = f'(1) = 4(1)^3 + 2(1) = 6$.
+   Đạo hàm bậc hai: $f''(x) = 12x^2 + 2 \implies H = f''(1) = 12(1)^2 + 2 = 14 > 0$.
+   Hướng Newton: $d = -H^{-1} g = -\frac{6}{14} = -\frac{3}{7}$.
+   Điểm cập nhật mới: $x^+ = x + d = 1 - \frac{3}{7} = \frac{4}{7} \approx 0.5714$.
+2. Giá trị hàm số tại điểm mới là $f(4/7) = (4/7)^4 + (4/7)^2 = \frac{256}{2401} + \frac{16}{49} = \frac{1040}{2401} \approx 0.43315$. Giá trị này giảm đáng kể so với $f(1) = 2$, nhưng chưa triệt tiêu về 0 (nghiệm tối ưu thực tế là $x^* = 0$). 
+   Nguyên nhân: Hàm số chứa số hạng bậc bốn $x^4$ nên không phải là hàm toàn phương thuần túy. Xấp xỉ bậc hai chỉ mang tính cục bộ, do đó thuật toán cần nhiều bước lặp để hội tụ về nghiệm.
 :::
 
-::: exercise 3. Phần dư tại điểm chưa khả thi
-Trong mục 6, vì sao chuẩn gradient ở $(2,0)$ bằng 0 mà vẫn chưa thể dừng?
+::: exercise 3. Đánh giá phần dư tại điểm xuất phát chưa khả thi
+Trong mục 6, giả sử ta xuất phát từ điểm $(2, 0)$ với bài toán $\min \frac{1}{2}[(x - 2)^2 + y^2]$ thỏa $x + y = 1$.
+Tại điểm này, gradient của hàm mục tiêu bằng $(0, 0)^T$. Tại sao thuật toán không thể dừng lại ở đây?
 :::
 ::: solution
-Gradient chỉ phản ánh hàm mục tiêu. Điểm ấy không thỏa đẳng thức vì $r_{\mathrm{pri}}=1$. Do đó phải xét cả phần dư khả thi và phần dư của điều kiện dừng. Đây là lý do bài toán có ràng buộc cần tiêu chí dừng khác bài toán không ràng buộc.
+Mặc dù gradient hàm mục tiêu bằng 0 ($\nabla f(2, 0) = 0$), điểm $(2, 0)$ không thỏa mãn ràng buộc đẳng thức vì $x + y = 2 + 0 = 2 \ne 1$.
+Phần dư gốc là $r_{\mathrm{pri}} = 2 - 1 = 1 \ne 0$. Vì vậy, điểm này không phải là một phương án khả thi. Trong bài toán tối ưu có ràng buộc, tiêu chí dừng bắt buộc phải kiểm tra đồng thời cả phần dư điều kiện dừng và phần dư khả thi của ràng buộc.
 :::
 
-## Tóm tắt
+---
 
-Gradient cung cấp một hướng giảm cục bộ, còn tìm kiếm bước chọn độ dài di chuyển theo hướng đó. Phương pháp Newton dùng thêm mô hình bậc hai để điều chỉnh hướng theo độ cong. Khi có ràng buộc đẳng thức, hướng phải nằm trong không gian thỏa $Ad=0$, từ đó xuất hiện hệ Newton–KKT. Nếu điểm hiện tại chưa khả thi, mức tiến bộ được đo bằng phần dư của cả hệ chứ không chỉ bằng giá trị hàm mục tiêu. Mọi kết luận hội tụ đều phụ thuộc vào các giả thiết cụ thể đã nêu.
+## Tóm tắt cốt lõi
 
-## Nguồn và đọc thêm
+1. **Ba quyết định cốt tử**: Mỗi bước lặp tối ưu phân tách rạch ròi giữa chọn hướng di chuyển (bậc nhất hoặc bậc hai), chọn độ dài bước (Backtracking thỏa điều kiện Armijo), và tiêu chí dừng.
+2. **Gradient Descent vs Newton**: Gradient Descent chỉ khai thác thông tin độ dốc nên di chuyển chậm chạp trên địa hình hẻm núi hẹp; phương pháp Newton tận dụng ma trận Hessian để điều chỉnh bước nhảy theo độ cong, đạt tốc độ hội tụ bậc hai gần nghiệm.
+3. **Newton Decrement**: Đại lượng $\lambda(z) = \sqrt{g^TH^{-1}g}$ cung cấp thước đo bất biến affine cho khoảng cách tới nghiệm và tiêu chuẩn dừng đáng tin cậy.
+4. **Hệ phương trình Newton-KKT**: Cho phép giải quyết bài toán có ràng buộc đẳng thức, đồng thời xử lý được cả trường hợp điểm khởi đầu chưa thỏa mãn ràng buộc (infeasible start).
 
-- *Convex Optimization*, §9.2–9.3 (tr. 463–474), §9.5 (tr. 484–495), §9.6 (tr. 496–507), §10.2–10.3 (tr. 525–541).
-- Mô phỏng dùng hàm toàn phương tự đặt để tái hiện cơ chế hình đường đồng mức trong chương 9. Bảng backtracking tái hiện quy tắc của Hình 9.1. Code không chép hình nguồn.
-- Cận theo lồi mạnh: §9.1.2, biểu thức (9.9). Hệ Newton–KKT đối chiếu biểu thức (10.11) và (10.21).
+---
 
-[Bài 03](./bai-03-doi-ngau-lagrange.md) · [Bài 05 — Tối ưu huấn luyện](./bai-05-toi-uu-huan-luyen.md).
+## Tài liệu tham khảo và Đọc thêm
+
+Dành cho bạn đọc muốn nghiên cứu chuyên sâu về các thuật toán tối ưu hóa số học:
+- **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 9 (Tối ưu hóa không ràng buộc: Gradient descent, tìm kiếm bước, phương pháp Newton, và hàm tự tương hợp) và Chương 10 (Phương pháp Newton với ràng buộc đẳng thức và hệ Newton-KKT).
+- **Jorge Nocedal & Stephen J. Wright**, *Numerical Optimization*, Springer. Giáo trình kinh điển về các thuật toán tối ưu hóa số, phân tích hội tụ của điều kiện Wolfe, Armijo và phương pháp Quasi-Newton.
+
+Tiếp theo: [Bài 05 — Tối ưu hóa trong Huấn luyện Học sâu: Mini-batch SGD và Momentum](./bai-05-toi-uu-huan-luyen.md).
