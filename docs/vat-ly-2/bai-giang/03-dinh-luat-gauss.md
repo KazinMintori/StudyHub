@@ -2,46 +2,33 @@
 course: vat-ly-2
 lecture: 03-dinh-luat-gauss
 section: lecture
-title: "Thông lượng & định luật Gauss"
-prerequisites: ["tich-vo-huong","thong-luong","tich-phan","dien-tich"]
-lessonStatus: ready
+title: "Định luật Gauss"
+prerequisites: ["tich-vo-huong","tich-phan","dien-tich","dien-truong"]
+lessonStatus: draft
+sourceTranslation: full
+description: "Bản dịch chương 22 của Young & Freedman; đang đối chiếu, chưa hoàn tất."
 ---
 
+::: info Tiến độ bản dịch
+Chương này đang được dịch đầy đủ từ nguyên tác. Bản tóm lược cũ và các bài tập tự đặt đã được rút khỏi trang để không bị nhầm với nội dung sách.
+:::
 
-## 1. Đếm phần trường đi qua mặt
+## Phần nguyên tác đang tiếp tục dịch
 
-Thông lượng điện trường qua một mặt S là $\Phi_E=\int_S\mathbf E\cdot d\mathbf A$. Vector diện tích có hướng pháp tuyến của mặt. Với trường đều qua mặt phẳng diện tích A:
+- Lời mở chương và mục tiêu học.
+- 22.1 — Charge and Electric Flux (từ trang 718).
+- 22.2 — Calculating Electric Flux (từ trang 721).
+- 22.3 — Gauss’s Law (từ trang 725).
+- 22.4 — Applications of Gauss’s Law (từ trang 729).
+- 22.5 — Charges on Conductors (từ trang 734).
+- Đối chiếu hoàn tất toàn bộ hình, chữ trong hình và chú thích của chương.
+- Tóm tắt chương của sách.
+- Phần luyện tập có hướng dẫn (Guided Practice).
+- Toàn bộ câu hỏi thảo luận (Discussion Questions).
+- Toàn bộ bài tập cuối chương, bài tổng hợp, bài nâng cao và các phần bài tập khác có trong nguyên tác.
 
-$$\Phi_E=EA\cos\theta.$$
+## Nguồn của bản dịch
 
-Góc $\theta$ là giữa điện trường và pháp tuyến. Trường song song mặt thì thông lượng bằng 0, chứ không phải lớn nhất.
+Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 22, trang in 718–746, tương ứng trang PDF 738–766 của bản được cung cấp. Phạm vi này bao gồm cả phần bài tập cuối chương.
 
-## 2. Mặt kín và điện tích bên trong
-
-Trong chân không, định luật Gauss:
-
-$$\oint_S\mathbf E\cdot d\mathbf A=\frac{Q_{\text{bên trong}}}{\varepsilon_0}.$$
-
-Mặt kín dùng pháp tuyến hướng ra ngoài. $Q_{\text{bên trong}}$ là tổng đại số điện tích nằm trong mặt. Điện tích ngoài mặt có thể tạo trường tại các điểm trên mặt nhưng đóng góp thông lượng tổng qua mặt kín bằng 0.
-
-## 3. Tại sao cần đối xứng?
-
-Gauss luôn liên hệ thông lượng với điện tích, nhưng không tự cho E ở mọi điểm. Muốn kéo E ra ngoài tích phân, cần biết trường có độ lớn không đổi trên phần mặt phù hợp và biết góc với pháp tuyến. Các đối xứng cầu, trụ, phẳng là những trường hợp thường dùng.
-
-Với điện tích điểm Q ở tâm mặt cầu bán kính r, E hướng xuyên tâm và có cùng độ lớn trên mặt:
-
-$$E\,4\pi r^2=\frac{Q}{\varepsilon_0},\qquad E=\frac{Q}{4\pi\varepsilon_0r^2}.$$
-
-Ở đây E là thành phần xuyên tâm có dấu. Với Q âm, vector trường hướng vào tâm. Công thức phù hợp với kết quả Coulomb.
-
-## 4. Ví dụ và kiểm tra bẫy
-
-Nguồn điểm $Q=+1\,\mu C$ đặt ở tâm. Tại $r=0.2 m$, độ lớn trường xấp xỉ $9\times10^9\times10^{-6}/0.2^2=2.25\times10^5\ \mathrm{N/C}$, hướng ra ngoài.
-
-Nếu tổng điện tích bên trong một mặt kín bằng 0, chỉ kết luận **thông lượng tổng bằng 0**. Không kết luận E bằng 0 tại từng điểm: một điện trường đều không bằng 0 qua một hộp kín vẫn có tổng thông lượng bằng 0 vì các mặt có đóng góp bù nhau.
-
-<details><summary>Tự kiểm tra: điện tích ngoài mặt kín có bắt buộc tạo $E=0$ trên mặt không?</summary>
-
-Không. Nó có thể tạo E khác 0 trên mặt, nhưng thông lượng tổng do nó qua toàn mặt kín bằng 0.
-
-</details>
+Bản dịch giữ số mục, số hiệu công thức, ví dụ, bảng và hình để đối chiếu với sách. Các phần chưa dịch không được xem là đã hoàn tất.

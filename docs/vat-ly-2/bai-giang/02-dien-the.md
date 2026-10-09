@@ -2,55 +2,33 @@
 course: vat-ly-2
 lecture: 02-dien-the
 section: lecture
-title: "Điện thế, công & gradient"
-prerequisites: ["cong-nang-luong","dien-the","dao-ham","gradient","tich-phan"]
-lessonStatus: ready
+title: "Điện thế"
+prerequisites: ["dien-truong","cong-nang-luong","tich-phan","gradient"]
+lessonStatus: draft
+sourceTranslation: full
+description: "Bản dịch chương 23 của Young & Freedman; đang đối chiếu, chưa hoàn tất."
 ---
 
+::: info Tiến độ bản dịch
+Chương này đang được dịch đầy đủ từ nguyên tác. Bản tóm lược cũ và các bài tập tự đặt đã được rút khỏi trang để không bị nhầm với nội dung sách.
+:::
 
-## 1. Điện thế là năng lượng trên một đơn vị điện tích
+## Phần nguyên tác đang tiếp tục dịch
 
-Trong tĩnh điện, thế năng U của điện tích thử q liên hệ với điện thế bằng $U=qV$ theo mốc đã chọn. Hiệu điện thế từ A đến B:
+- Lời mở chương và mục tiêu học.
+- 23.1 — Electric Potential Energy (từ trang 747).
+- 23.2 — Electric Potential (từ trang 754).
+- 23.3 — Calculating Electric Potential (từ trang 760).
+- 23.4 — Equipotential Surfaces (từ trang 764).
+- 23.5 — Potential Gradient (từ trang 767).
+- Đối chiếu hoàn tất toàn bộ hình, chữ trong hình và chú thích của chương.
+- Tóm tắt chương của sách.
+- Phần luyện tập có hướng dẫn (Guided Practice).
+- Toàn bộ câu hỏi thảo luận (Discussion Questions).
+- Toàn bộ bài tập cuối chương, bài tổng hợp, bài nâng cao và các phần bài tập khác có trong nguyên tác.
 
-$$V_B-V_A=-\int_A^B\mathbf E\cdot d\mathbf l.$$
+## Nguồn của bản dịch
 
-Với một điện tích q, $\Delta U=q\Delta V$ và công của lực điện $W=-\Delta U$. Hiệu điện thế có đơn vị volt, tương đương $J/C$.
+Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 23, trang in 747–780, tương ứng trang PDF 767–800 của bản được cung cấp. Phạm vi này bao gồm cả phần bài tập cuối chương.
 
-## 2. Vì sao điện trường có dấu trừ?
-
-Gradient của điện thế chỉ hướng V tăng nhanh nhất. Điện trường đi theo hướng V giảm nhanh nhất:
-
-$$\mathbf E=-\nabla V.$$
-
-Theo một trục: $E_x=-dV/dx$. Với nhiều biến: $E_x=-\partial V/\partial x$, tương tự với y và z. Dấu trừ mô tả hướng. Không có nghĩa độ lớn điện trường âm.
-
-## 3. Ví dụ đạo hàm
-
-Cho điện thế dọc trục x là $V(x)=2x^2-3x$ với x đo bằng mét và các hệ số mang đơn vị phù hợp để V tính bằng volt:
-
-$$E_x=-(4x-3).$$
-
-Tại $x=2 m$, $E_x=-5\ \mathrm{V/m}$. Điện trường hướng chiều âm trục x. Một điện tích thử dương chịu lực theo chiều âm. Một điện tích âm chịu lực chiều dương.
-
-## 4. Mặt đẳng thế
-
-Trên mặt đẳng thế, V không đổi. Di chuyển dọc mặt cho $dV=0$ nên $\mathbf E\cdot d\mathbf l=0$. Vì thế điện trường vuông góc mặt đẳng thế ở nơi trường khác 0. Khi điện trường bằng 0, không có hướng trường để nói vuông góc.
-
-Trong lòng vật dẫn ở trạng thái cân bằng tĩnh điện, điện trường bằng 0 và điện thế không đổi trên mỗi phần vật dẫn liên thông. Đây là kết luận về cân bằng tĩnh điện, không áp dụng tùy tiện cho vật dẫn có dòng điện đang chạy.
-
-## 5. Đừng nhầm điện thế với điện trường
-
-| Đại lượng | Loại | Đơn vị | Dùng để |
-|---|---|---|---|
-| V | Vô hướng | V | Tính thay đổi thế năng |
-| E | Vector | $V/m$ hoặc $N/C$ | Tính lực và hướng tương tác |
-
-V có thể bằng 0 tại một điểm theo mốc chọn, nhưng E tại đó chưa chắc bằng 0. E phụ thuộc biến thiên không gian của V, không chỉ giá trị V.
-
-<details><summary>Tự kiểm tra: V không đổi trong một miền thì E trong miền đó là gì?</summary>
-
-$E=0$ vì mọi đạo hàm riêng của V trong miền bằng 0.
-
-</details>
-
-[Tiếp: Thông lượng & Gauss](/vat-ly-2/bai-giang/03-dinh-luat-gauss.md)
+Bản dịch giữ số mục, số hiệu công thức, ví dụ, bảng và hình để đối chiếu với sách. Các phần chưa dịch không được xem là đã hoàn tất.

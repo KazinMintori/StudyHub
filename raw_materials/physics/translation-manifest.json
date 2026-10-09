@@ -1,0 +1,3046 @@
+{
+  "source": "Young & Freedman, University Physics with Modern Physics, 15th edition",
+  "sourceSha256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+  "language": "vi",
+  "policy": "full-source-translation",
+  "onlyPermittedAddition": "experimental-simulation",
+  "chapters": [
+    {
+      "chapter": 1,
+      "course": "vat-ly-1",
+      "printedStart": 1,
+      "printedEnd": 33,
+      "pdfStart": 21,
+      "pdfEnd": 53,
+      "pageCount": 33,
+      "sections": [
+        {
+          "id": "1.1",
+          "title": "The Nature of Physics",
+          "page": 1
+        },
+        {
+          "id": "1.2",
+          "title": "Solving Physics Problems",
+          "page": 2
+        },
+        {
+          "id": "1.3",
+          "title": "Standards and Units",
+          "page": 3
+        },
+        {
+          "id": "1.4",
+          "title": "Using and Converting Units",
+          "page": 6
+        },
+        {
+          "id": "1.5",
+          "title": "Uncertainty and Significant Figures",
+          "page": 8
+        },
+        {
+          "id": "1.6",
+          "title": "Estimates and Orders of Magnitude",
+          "page": 10
+        },
+        {
+          "id": "1.7",
+          "title": "Vectors and Vector Addition",
+          "page": 10
+        },
+        {
+          "id": "1.8",
+          "title": "Components of Vectors",
+          "page": 14
+        },
+        {
+          "id": "1.9",
+          "title": "Unit Vectors",
+          "page": 18
+        },
+        {
+          "id": "1.10",
+          "title": "Products of Vectors",
+          "page": 19
+        }
+      ],
+      "status": "in-progress",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+          "printedPages": [
+            1,
+            1
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.1",
+          "file": "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
+          "printedPages": [
+            1,
+            2
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.2",
+          "file": "raw_materials/physics/translations/chapter-01/02-giai-bai-toan.md",
+          "printedPages": [
+            2,
+            3
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.3",
+          "file": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+          "printedPages": [
+            3,
+            6
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.4",
+          "file": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+          "printedPages": [
+            6,
+            7
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.5",
+          "file": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+          "printedPages": [
+            8,
+            9
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.6",
+          "file": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+          "printedPages": [
+            10,
+            10
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.7",
+          "file": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+          "printedPages": [
+            10,
+            14
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.8",
+          "file": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+          "printedPages": [
+            14,
+            18
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.9",
+          "file": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+          "printedPages": [
+            18,
+            19
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "1.10",
+          "file": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+          "printedPages": [
+            19,
+            24
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+          "printedPages": [
+            25,
+            25
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "guided-practice",
+          "file": "raw_materials/physics/translations/chapter-01/12-luyen-tap-huong-dan.md",
+          "printedPages": [
+            26,
+            26
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "discussion-questions",
+          "file": "raw_materials/physics/translations/chapter-01/13-cau-hoi-thao-luan.md",
+          "printedPages": [
+            27,
+            27
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "exercises-1.1-1.48",
+          "file": "raw_materials/physics/translations/chapter-01/14-bai-tap-01-48.md",
+          "printedPages": [
+            27,
+            29
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "problems-1.49-1.89",
+          "file": "raw_materials/physics/translations/chapter-01/15-bai-tap-49-89.md",
+          "printedPages": [
+            29,
+            32
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "challenge-and-mcat-1.90-1.94",
+          "file": "raw_materials/physics/translations/chapter-01/16-bai-nang-cao-mcat.md",
+          "printedPages": [
+            32,
+            33
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "chapter-answers",
+          "file": "raw_materials/physics/translations/chapter-01/17-dap-an-cua-sach.md",
+          "printedPages": [
+            33,
+            33
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        }
+      ],
+      "pendingSourceUnits": [
+        "all-original-figures-and-captions",
+        "appendix-odd-answers-source-errors"
+      ],
+      "mainChapterTextStatus": "translated-including-all-94-problems",
+      "appendixAnswersStatus": "translated-awaiting-source-error-presentation"
+    },
+    {
+      "chapter": 2,
+      "course": "vat-ly-1",
+      "printedStart": 34,
+      "printedEnd": 65,
+      "pdfStart": 54,
+      "pdfEnd": 85,
+      "pageCount": 32,
+      "sections": [
+        {
+          "id": "2.1",
+          "title": "Displacement, Time, and Average Velocity",
+          "page": 34
+        },
+        {
+          "id": "2.2",
+          "title": "Instantaneous Velocity",
+          "page": 37
+        },
+        {
+          "id": "2.3",
+          "title": "Average and Instantaneous Acceleration",
+          "page": 40
+        },
+        {
+          "id": "2.4",
+          "title": "Motion with Constant Acceleration",
+          "page": 44
+        },
+        {
+          "id": "2.5",
+          "title": "Freely Falling Objects",
+          "page": 50
+        },
+        {
+          "id": "2.6",
+          "title": "Velocity and Position by Integration",
+          "page": 53
+        }
+      ],
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-02/00-mo-dau.md",
+          "printedPages": [
+            34,
+            34
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.1",
+          "file": "raw_materials/physics/translations/chapter-02/01-do-doi-van-toc-trung-binh.md",
+          "printedPages": [
+            34,
+            37
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.2",
+          "file": "raw_materials/physics/translations/chapter-02/02-van-toc-tuc-thoi.md",
+          "printedPages": [
+            37,
+            40
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.3",
+          "file": "raw_materials/physics/translations/chapter-02/03-gia-toc.md",
+          "printedPages": [
+            40,
+            44
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.4",
+          "file": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+          "printedPages": [
+            44,
+            49
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.5",
+          "file": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+          "printedPages": [
+            50,
+            53
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "2.6",
+          "file": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
+          "printedPages": [
+            53,
+            55
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-02/07-tom-tat.md",
+          "printedPages": [
+            56,
+            56
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "guided-practice",
+          "file": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
+          "printedPages": [
+            57,
+            58
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "discussion-questions",
+          "file": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
+          "printedPages": [
+            58,
+            59
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "exercises-2.1-2.26",
+          "file": "raw_materials/physics/translations/chapter-02/10-bai-tap-01-26.md",
+          "printedPages": [
+            59,
+            60
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "exercises-2.27-2.52",
+          "file": "raw_materials/physics/translations/chapter-02/11-bai-tap-27-52.md",
+          "printedPages": [
+            60,
+            62
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "problems-2.53-2.77",
+          "file": "raw_materials/physics/translations/chapter-02/12-bai-tong-hop-53-77.md",
+          "printedPages": [
+            62,
+            63
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "problems-challenge-mcat-2.78-2.92",
+          "file": "raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md",
+          "printedPages": [
+            64,
+            65
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "chapter-answers",
+          "file": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+          "printedPages": [
+            65,
+            65
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        },
+        {
+          "sourceUnit": "appendix-odd-answers",
+          "file": "raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md",
+          "printedPages": [
+            "A-9",
+            "A-9"
+          ],
+          "status": "translated",
+          "semanticReview": "self-reviewed-against-source",
+          "independentReview": "not-performed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "theoryStatus": "translated-2.1-through-2.6",
+      "mainChapterTextStatus": "translated-including-all-92-problems",
+      "appendixAnswersStatus": "translated-with-explicit-source-error-notes",
+      "completionReview": "raw_materials/physics/chapter-02-completion-review.json"
+    },
+    {
+      "chapter": 3,
+      "course": "vat-ly-1",
+      "printedStart": 66,
+      "printedEnd": 99,
+      "pdfStart": 86,
+      "pdfEnd": 119,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "3.1",
+          "title": "Position and Velocity Vectors",
+          "page": 66
+        },
+        {
+          "id": "3.2",
+          "title": "The Acceleration Vector",
+          "page": 69
+        },
+        {
+          "id": "3.3",
+          "title": "Projectile Motion",
+          "page": 74
+        },
+        {
+          "id": "3.4",
+          "title": "Motion in a Circle",
+          "page": 81
+        },
+        {
+          "id": "3.5",
+          "title": "Relative Velocity",
+          "page": 84
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 4,
+      "course": "vat-ly-1",
+      "printedStart": 100,
+      "printedEnd": 128,
+      "pdfStart": 120,
+      "pdfEnd": 148,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "4.1",
+          "title": "Force and Interactions",
+          "page": 100
+        },
+        {
+          "id": "4.2",
+          "title": "Newton’s First Law",
+          "page": 103
+        },
+        {
+          "id": "4.3",
+          "title": "Newton’s Second Law",
+          "page": 107
+        },
+        {
+          "id": "4.4",
+          "title": "Mass and Weight",
+          "page": 113
+        },
+        {
+          "id": "4.5",
+          "title": "Newton’s Third Law",
+          "page": 115
+        },
+        {
+          "id": "4.6",
+          "title": "Free-Body Diagrams",
+          "page": 119
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 5,
+      "course": "vat-ly-1",
+      "printedStart": 129,
+      "printedEnd": 170,
+      "pdfStart": 149,
+      "pdfEnd": 190,
+      "pageCount": 42,
+      "sections": [
+        {
+          "id": "5.1",
+          "title": "Using Newton’s First Law: Particles in Equilibrium",
+          "page": 129
+        },
+        {
+          "id": "5.2",
+          "title": "Using Newton’s Second Law: Dynamics of Particles",
+          "page": 134
+        },
+        {
+          "id": "5.3",
+          "title": "Friction Forces",
+          "page": 141
+        },
+        {
+          "id": "5.4",
+          "title": "Dynamics of Circular Motion",
+          "page": 149
+        },
+        {
+          "id": "5.5",
+          "title": "The Fundamental Forces of Nature",
+          "page": 154
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 6,
+      "course": "vat-ly-1",
+      "printedStart": 171,
+      "printedEnd": 200,
+      "pdfStart": 191,
+      "pdfEnd": 220,
+      "pageCount": 30,
+      "sections": [
+        {
+          "id": "6.1",
+          "title": "Work",
+          "page": 171
+        },
+        {
+          "id": "6.2",
+          "title": "Kinetic Energy and the Work–Energy Theorem",
+          "page": 176
+        },
+        {
+          "id": "6.3",
+          "title": "Work and Energy with Varying Forces",
+          "page": 181
+        },
+        {
+          "id": "6.4",
+          "title": "Power",
+          "page": 187
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 7,
+      "course": "vat-ly-1",
+      "printedStart": 201,
+      "printedEnd": 234,
+      "pdfStart": 221,
+      "pdfEnd": 254,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "7.1",
+          "title": "Gravitational Potential Energy",
+          "page": 201
+        },
+        {
+          "id": "7.2",
+          "title": "Elastic Potential Energy",
+          "page": 210
+        },
+        {
+          "id": "7.3",
+          "title": "Conservative and Nonconservative Forces",
+          "page": 215
+        },
+        {
+          "id": "7.4",
+          "title": "Force and Potential Energy",
+          "page": 219
+        },
+        {
+          "id": "7.5",
+          "title": "Energy Diagrams",
+          "page": 222
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 8,
+      "course": "vat-ly-1",
+      "printedStart": 235,
+      "printedEnd": 271,
+      "pdfStart": 255,
+      "pdfEnd": 291,
+      "pageCount": 37,
+      "sections": [
+        {
+          "id": "8.1",
+          "title": "Momentum and Impulse",
+          "page": 235
+        },
+        {
+          "id": "8.2",
+          "title": "Conservation of Momentum",
+          "page": 241
+        },
+        {
+          "id": "8.3",
+          "title": "Momentum Conservation and Collisions",
+          "page": 245
+        },
+        {
+          "id": "8.4",
+          "title": "Elastic Collisions",
+          "page": 249
+        },
+        {
+          "id": "8.5",
+          "title": "Center of Mass",
+          "page": 253
+        },
+        {
+          "id": "8.6",
+          "title": "Rocket Propulsion",
+          "page": 256
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5",
+        "8.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 9,
+      "course": "vat-ly-1",
+      "printedStart": 272,
+      "printedEnd": 301,
+      "pdfStart": 292,
+      "pdfEnd": 321,
+      "pageCount": 30,
+      "sections": [
+        {
+          "id": "9.1",
+          "title": "Angular Velocity and Acceleration",
+          "page": 272
+        },
+        {
+          "id": "9.2",
+          "title": "Rotation with Constant Angular Acceleration",
+          "page": 277
+        },
+        {
+          "id": "9.3",
+          "title": "Relating Linear and Angular Kinematics",
+          "page": 279
+        },
+        {
+          "id": "9.4",
+          "title": "Energy in Rotational Motion",
+          "page": 282
+        },
+        {
+          "id": "9.5",
+          "title": "Parallel-Axis Theorem",
+          "page": 287
+        },
+        {
+          "id": "9.6",
+          "title": "Moment-of-Inertia Calculations",
+          "page": 289
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "9.1",
+        "9.2",
+        "9.3",
+        "9.4",
+        "9.5",
+        "9.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 10,
+      "course": "vat-ly-1",
+      "printedStart": 302,
+      "printedEnd": 336,
+      "pdfStart": 322,
+      "pdfEnd": 356,
+      "pageCount": 35,
+      "sections": [
+        {
+          "id": "10.1",
+          "title": "Torque",
+          "page": 302
+        },
+        {
+          "id": "10.2",
+          "title": "Torque and Angular Acceleration for a Rigid Body",
+          "page": 305
+        },
+        {
+          "id": "10.3",
+          "title": "Rigid-Body Rotation About a Moving Axis",
+          "page": 308
+        },
+        {
+          "id": "10.4",
+          "title": "Work and Power in Rotational Motion",
+          "page": 314
+        },
+        {
+          "id": "10.5",
+          "title": "Angular Momentum",
+          "page": 316
+        },
+        {
+          "id": "10.6",
+          "title": "Conservation of Angular Momentum",
+          "page": 319
+        },
+        {
+          "id": "10.7",
+          "title": "Gyroscopes and Precession",
+          "page": 322
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "10.5",
+        "10.6",
+        "10.7",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 11,
+      "course": "vat-ly-1",
+      "printedStart": 337,
+      "printedEnd": 365,
+      "pdfStart": 357,
+      "pdfEnd": 385,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "11.1",
+          "title": "Conditions for Equilibrium",
+          "page": 337
+        },
+        {
+          "id": "11.2",
+          "title": "Center of Gravity",
+          "page": 338
+        },
+        {
+          "id": "11.3",
+          "title": "Solving Rigid-Body Equilibrium Problems",
+          "page": 341
+        },
+        {
+          "id": "11.4",
+          "title": "Stress, Strain, and Elastic Moduli",
+          "page": 345
+        },
+        {
+          "id": "11.5",
+          "title": "Elasticity and Plasticity",
+          "page": 351
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "11.1",
+        "11.2",
+        "11.3",
+        "11.4",
+        "11.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 12,
+      "course": "vat-ly-1",
+      "printedStart": 366,
+      "printedEnd": 394,
+      "pdfStart": 386,
+      "pdfEnd": 414,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "12.1",
+          "title": "Gases, Liquids, and Density",
+          "page": 366
+        },
+        {
+          "id": "12.2",
+          "title": "Pressure in a Fluid",
+          "page": 368
+        },
+        {
+          "id": "12.3",
+          "title": "Buoyancy",
+          "page": 373
+        },
+        {
+          "id": "12.4",
+          "title": "Fluid Flow",
+          "page": 376
+        },
+        {
+          "id": "12.5",
+          "title": "Bernoulli’s Equation",
+          "page": 378
+        },
+        {
+          "id": "12.6",
+          "title": "Viscosity and Turbulence",
+          "page": 382
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.4",
+        "12.5",
+        "12.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 13,
+      "course": "vat-ly-1",
+      "printedStart": 395,
+      "printedEnd": 428,
+      "pdfStart": 415,
+      "pdfEnd": 448,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "13.1",
+          "title": "Newton’s Law of Gravitation",
+          "page": 395
+        },
+        {
+          "id": "13.2",
+          "title": "Weight",
+          "page": 399
+        },
+        {
+          "id": "13.3",
+          "title": "Gravitational Potential Energy",
+          "page": 402
+        },
+        {
+          "id": "13.4",
+          "title": "The Motion of Satellites",
+          "page": 404
+        },
+        {
+          "id": "13.5",
+          "title": "Kepler’s Laws and the Motion of Planets",
+          "page": 407
+        },
+        {
+          "id": "13.6",
+          "title": "Spherical Mass Distributions",
+          "page": 411
+        },
+        {
+          "id": "13.7",
+          "title": "Apparent Weight and the Earth’s Rotation",
+          "page": 414
+        },
+        {
+          "id": "13.8",
+          "title": "Black Holes",
+          "page": 415
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "13.1",
+        "13.2",
+        "13.3",
+        "13.4",
+        "13.5",
+        "13.6",
+        "13.7",
+        "13.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 14,
+      "course": "vat-ly-1",
+      "printedStart": 429,
+      "printedEnd": 463,
+      "pdfStart": 449,
+      "pdfEnd": 483,
+      "pageCount": 35,
+      "sections": [
+        {
+          "id": "14.1",
+          "title": "Describing Oscillation",
+          "page": 429
+        },
+        {
+          "id": "14.2",
+          "title": "Simple Harmonic Motion",
+          "page": 431
+        },
+        {
+          "id": "14.3",
+          "title": "Energy in Simple Harmonic Motion",
+          "page": 438
+        },
+        {
+          "id": "14.4",
+          "title": "Applications of Simple Harmonic Motion",
+          "page": 442
+        },
+        {
+          "id": "14.5",
+          "title": "The Simple Pendulum",
+          "page": 446
+        },
+        {
+          "id": "14.6",
+          "title": "The Physical Pendulum",
+          "page": 447
+        },
+        {
+          "id": "14.7",
+          "title": "Damped Oscillations",
+          "page": 449
+        },
+        {
+          "id": "14.8",
+          "title": "Forced Oscillations and Resonance",
+          "page": 451
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "14.1",
+        "14.2",
+        "14.3",
+        "14.4",
+        "14.5",
+        "14.6",
+        "14.7",
+        "14.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 15,
+      "course": "vat-ly-1",
+      "printedStart": 464,
+      "printedEnd": 500,
+      "pdfStart": 484,
+      "pdfEnd": 520,
+      "pageCount": 37,
+      "sections": [
+        {
+          "id": "15.1",
+          "title": "Types of Mechanical Waves",
+          "page": 464
+        },
+        {
+          "id": "15.2",
+          "title": "Periodic Waves",
+          "page": 466
+        },
+        {
+          "id": "15.3",
+          "title": "Mathematical Description of a Wave",
+          "page": 469
+        },
+        {
+          "id": "15.4",
+          "title": "Speed of a Transverse Wave",
+          "page": 474
+        },
+        {
+          "id": "15.5",
+          "title": "Energy in Wave Motion",
+          "page": 478
+        },
+        {
+          "id": "15.6",
+          "title": "Wave Interference, Boundary Conditions, and Superposition",
+          "page": 481
+        },
+        {
+          "id": "15.7",
+          "title": "Standing Waves on a String",
+          "page": 483
+        },
+        {
+          "id": "15.8",
+          "title": "Normal Modes of a String",
+          "page": 486
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "15.1",
+        "15.2",
+        "15.3",
+        "15.4",
+        "15.5",
+        "15.6",
+        "15.7",
+        "15.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 16,
+      "course": "vat-ly-1",
+      "printedStart": 501,
+      "printedEnd": 540,
+      "pdfStart": 521,
+      "pdfEnd": 560,
+      "pageCount": 40,
+      "sections": [
+        {
+          "id": "16.1",
+          "title": "Sound Waves",
+          "page": 501
+        },
+        {
+          "id": "16.2",
+          "title": "Speed of Sound Waves",
+          "page": 506
+        },
+        {
+          "id": "16.3",
+          "title": "Sound Intensity",
+          "page": 510
+        },
+        {
+          "id": "16.4",
+          "title": "Standing Sound Waves and Normal Modes",
+          "page": 514
+        },
+        {
+          "id": "16.5",
+          "title": "Resonance and Sound",
+          "page": 518
+        },
+        {
+          "id": "16.6",
+          "title": "Interference of Waves",
+          "page": 520
+        },
+        {
+          "id": "16.7",
+          "title": "Beats",
+          "page": 522
+        },
+        {
+          "id": "16.8",
+          "title": "The Doppler Effect",
+          "page": 524
+        },
+        {
+          "id": "16.9",
+          "title": "Shock Waves",
+          "page": 529
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "16.1",
+        "16.2",
+        "16.3",
+        "16.4",
+        "16.5",
+        "16.6",
+        "16.7",
+        "16.8",
+        "16.9",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 17,
+      "course": "vat-ly-1",
+      "printedStart": 541,
+      "printedEnd": 578,
+      "pdfStart": 561,
+      "pdfEnd": 598,
+      "pageCount": 38,
+      "sections": [
+        {
+          "id": "17.1",
+          "title": "Temperature and Thermal Equilibrium",
+          "page": 541
+        },
+        {
+          "id": "17.2",
+          "title": "Thermometers and Temperature Scales",
+          "page": 543
+        },
+        {
+          "id": "17.3",
+          "title": "Gas Thermometers and the Kelvin Scale",
+          "page": 545
+        },
+        {
+          "id": "17.4",
+          "title": "Thermal Expansion",
+          "page": 547
+        },
+        {
+          "id": "17.5",
+          "title": "Quantity of Heat",
+          "page": 552
+        },
+        {
+          "id": "17.6",
+          "title": "Calorimetry and Phase Changes",
+          "page": 555
+        },
+        {
+          "id": "17.7",
+          "title": "Mechanisms of Heat Transfer",
+          "page": 561
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "17.1",
+        "17.2",
+        "17.3",
+        "17.4",
+        "17.5",
+        "17.6",
+        "17.7",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 18,
+      "course": "vat-ly-1",
+      "printedStart": 579,
+      "printedEnd": 612,
+      "pdfStart": 599,
+      "pdfEnd": 632,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "18.1",
+          "title": "Equations of State",
+          "page": 579
+        },
+        {
+          "id": "18.2",
+          "title": "Molecular Properties of Matter",
+          "page": 585
+        },
+        {
+          "id": "18.3",
+          "title": "Kinetic-Molecular Model of an Ideal Gas",
+          "page": 588
+        },
+        {
+          "id": "18.4",
+          "title": "Heat Capacities",
+          "page": 594
+        },
+        {
+          "id": "18.5",
+          "title": "Molecular Speeds",
+          "page": 597
+        },
+        {
+          "id": "18.6",
+          "title": "Phases of Matter",
+          "page": 599
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "18.1",
+        "18.2",
+        "18.3",
+        "18.4",
+        "18.5",
+        "18.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 19,
+      "course": "vat-ly-1",
+      "printedStart": 613,
+      "printedEnd": 641,
+      "pdfStart": 633,
+      "pdfEnd": 661,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "19.1",
+          "title": "Thermodynamic Systems",
+          "page": 613
+        },
+        {
+          "id": "19.2",
+          "title": "Work Done During Volume Changes",
+          "page": 615
+        },
+        {
+          "id": "19.3",
+          "title": "Paths Between Thermodynamic States",
+          "page": 617
+        },
+        {
+          "id": "19.4",
+          "title": "Internal Energy and the First Law of Thermodynamics",
+          "page": 618
+        },
+        {
+          "id": "19.5",
+          "title": "Kinds of Thermodynamic Processes",
+          "page": 623
+        },
+        {
+          "id": "19.6",
+          "title": "Internal Energy of an Ideal Gas",
+          "page": 625
+        },
+        {
+          "id": "19.7",
+          "title": "Heat Capacities of an Ideal Gas",
+          "page": 626
+        },
+        {
+          "id": "19.8",
+          "title": "Adiabatic Processes for an Ideal Gas",
+          "page": 629
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "19.1",
+        "19.2",
+        "19.3",
+        "19.4",
+        "19.5",
+        "19.6",
+        "19.7",
+        "19.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 20,
+      "course": "vat-ly-1",
+      "printedStart": 642,
+      "printedEnd": 677,
+      "pdfStart": 662,
+      "pdfEnd": 697,
+      "pageCount": 36,
+      "sections": [
+        {
+          "id": "20.1",
+          "title": "Directions of Thermodynamic Processes",
+          "page": 642
+        },
+        {
+          "id": "20.2",
+          "title": "Heat Engines",
+          "page": 644
+        },
+        {
+          "id": "20.3",
+          "title": "Internal-Combustion Engines",
+          "page": 647
+        },
+        {
+          "id": "20.4",
+          "title": "Refrigerators",
+          "page": 649
+        },
+        {
+          "id": "20.5",
+          "title": "The Second Law of Thermodynamics",
+          "page": 651
+        },
+        {
+          "id": "20.6",
+          "title": "The Carnot Cycle",
+          "page": 653
+        },
+        {
+          "id": "20.7",
+          "title": "Entropy",
+          "page": 659
+        },
+        {
+          "id": "20.8",
+          "title": "Microscopic Interpretation of Entropy",
+          "page": 665
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "20.1",
+        "20.2",
+        "20.3",
+        "20.4",
+        "20.5",
+        "20.6",
+        "20.7",
+        "20.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 21,
+      "course": "vat-ly-2",
+      "printedStart": 678,
+      "printedEnd": 717,
+      "pdfStart": 698,
+      "pdfEnd": 737,
+      "pageCount": 40,
+      "sections": [
+        {
+          "id": "21.1",
+          "title": "Electric Charge",
+          "page": 679
+        },
+        {
+          "id": "21.2",
+          "title": "Conductors, Insulators, and Induced Charges",
+          "page": 682
+        },
+        {
+          "id": "21.3",
+          "title": "Coulomb’s Law",
+          "page": 685
+        },
+        {
+          "id": "21.4",
+          "title": "Electric Field and Electric Forces",
+          "page": 690
+        },
+        {
+          "id": "21.5",
+          "title": "Electric-Field Calculations",
+          "page": 694
+        },
+        {
+          "id": "21.6",
+          "title": "Electric Field Lines",
+          "page": 700
+        },
+        {
+          "id": "21.7",
+          "title": "Electric Dipoles",
+          "page": 701
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "21.1",
+        "21.2",
+        "21.3",
+        "21.4",
+        "21.5",
+        "21.6",
+        "21.7",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 22,
+      "course": "vat-ly-2",
+      "printedStart": 718,
+      "printedEnd": 746,
+      "pdfStart": 738,
+      "pdfEnd": 766,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "22.1",
+          "title": "Charge and Electric Flux",
+          "page": 718
+        },
+        {
+          "id": "22.2",
+          "title": "Calculating Electric Flux",
+          "page": 721
+        },
+        {
+          "id": "22.3",
+          "title": "Gauss’s Law",
+          "page": 725
+        },
+        {
+          "id": "22.4",
+          "title": "Applications of Gauss’s Law",
+          "page": 729
+        },
+        {
+          "id": "22.5",
+          "title": "Charges on Conductors",
+          "page": 734
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "22.1",
+        "22.2",
+        "22.3",
+        "22.4",
+        "22.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 23,
+      "course": "vat-ly-2",
+      "printedStart": 747,
+      "printedEnd": 780,
+      "pdfStart": 767,
+      "pdfEnd": 800,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "23.1",
+          "title": "Electric Potential Energy",
+          "page": 747
+        },
+        {
+          "id": "23.2",
+          "title": "Electric Potential",
+          "page": 754
+        },
+        {
+          "id": "23.3",
+          "title": "Calculating Electric Potential",
+          "page": 760
+        },
+        {
+          "id": "23.4",
+          "title": "Equipotential Surfaces",
+          "page": 764
+        },
+        {
+          "id": "23.5",
+          "title": "Potential Gradient",
+          "page": 767
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "23.1",
+        "23.2",
+        "23.3",
+        "23.4",
+        "23.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 24,
+      "course": "vat-ly-2",
+      "printedStart": 781,
+      "printedEnd": 811,
+      "pdfStart": 801,
+      "pdfEnd": 831,
+      "pageCount": 31,
+      "sections": [
+        {
+          "id": "24.1",
+          "title": "Capacitors and Capacitance",
+          "page": 782
+        },
+        {
+          "id": "24.2",
+          "title": "Capacitors in Series and Parallel",
+          "page": 786
+        },
+        {
+          "id": "24.3",
+          "title": "Energy Storage in Capacitors and Electric-Field Energy",
+          "page": 790
+        },
+        {
+          "id": "24.4",
+          "title": "Dielectrics",
+          "page": 793
+        },
+        {
+          "id": "24.5",
+          "title": "Molecular Model of Induced Charge",
+          "page": 799
+        },
+        {
+          "id": "24.6",
+          "title": "Gauss’s Law in Dielectrics",
+          "page": 801
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "24.1",
+        "24.2",
+        "24.3",
+        "24.4",
+        "24.5",
+        "24.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 25,
+      "course": "vat-ly-2",
+      "printedStart": 812,
+      "printedEnd": 843,
+      "pdfStart": 832,
+      "pdfEnd": 863,
+      "pageCount": 32,
+      "sections": [
+        {
+          "id": "25.1",
+          "title": "Current",
+          "page": 813
+        },
+        {
+          "id": "25.2",
+          "title": "Resistivity",
+          "page": 816
+        },
+        {
+          "id": "25.3",
+          "title": "Resistance",
+          "page": 819
+        },
+        {
+          "id": "25.4",
+          "title": "Electromotive Force and Circuits",
+          "page": 822
+        },
+        {
+          "id": "25.5",
+          "title": "Energy and Power in Electric Circuits",
+          "page": 828
+        },
+        {
+          "id": "25.6",
+          "title": "Theory of Metallic Conduction",
+          "page": 832
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "25.1",
+        "25.2",
+        "25.3",
+        "25.4",
+        "25.5",
+        "25.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 26,
+      "course": "vat-ly-2",
+      "printedStart": 844,
+      "printedEnd": 877,
+      "pdfStart": 864,
+      "pdfEnd": 897,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "26.1",
+          "title": "Resistors in Series and Parallel",
+          "page": 844
+        },
+        {
+          "id": "26.2",
+          "title": "Kirchhoff’s Rules",
+          "page": 849
+        },
+        {
+          "id": "26.3",
+          "title": "Electrical Measuring Instruments",
+          "page": 854
+        },
+        {
+          "id": "26.4",
+          "title": "R-C Circuits",
+          "page": 858
+        },
+        {
+          "id": "26.5",
+          "title": "Power Distribution Systems",
+          "page": 863
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "26.1",
+        "26.2",
+        "26.3",
+        "26.4",
+        "26.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 27,
+      "course": "vat-ly-2",
+      "printedStart": 878,
+      "printedEnd": 917,
+      "pdfStart": 898,
+      "pdfEnd": 937,
+      "pageCount": 40,
+      "sections": [
+        {
+          "id": "27.1",
+          "title": "Magnetism",
+          "page": 878
+        },
+        {
+          "id": "27.2",
+          "title": "Magnetic Field",
+          "page": 880
+        },
+        {
+          "id": "27.3",
+          "title": "Magnetic Field Lines and Magnetic Flux",
+          "page": 884
+        },
+        {
+          "id": "27.4",
+          "title": "Motion of Charged Particles in a Magnetic Field",
+          "page": 888
+        },
+        {
+          "id": "27.5",
+          "title": "Applications of Motion of Charged Particles",
+          "page": 891
+        },
+        {
+          "id": "27.6",
+          "title": "Magnetic Force on a Current-Carrying Conductor",
+          "page": 893
+        },
+        {
+          "id": "27.7",
+          "title": "Force and Torque on a Current Loop",
+          "page": 897
+        },
+        {
+          "id": "27.8",
+          "title": "The Direct-Current Motor",
+          "page": 902
+        },
+        {
+          "id": "27.9",
+          "title": "The Hall Effect",
+          "page": 904
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "27.1",
+        "27.2",
+        "27.3",
+        "27.4",
+        "27.5",
+        "27.6",
+        "27.7",
+        "27.8",
+        "27.9",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 28,
+      "course": "vat-ly-2",
+      "printedStart": 918,
+      "printedEnd": 952,
+      "pdfStart": 938,
+      "pdfEnd": 972,
+      "pageCount": 35,
+      "sections": [
+        {
+          "id": "28.1",
+          "title": "Magnetic Field of a Moving Charge",
+          "page": 918
+        },
+        {
+          "id": "28.2",
+          "title": "Magnetic Field of a Current Element",
+          "page": 921
+        },
+        {
+          "id": "28.3",
+          "title": "Magnetic Field of a Straight Current-Carrying Conductor",
+          "page": 923
+        },
+        {
+          "id": "28.4",
+          "title": "Force Between Parallel Conductors",
+          "page": 926
+        },
+        {
+          "id": "28.5",
+          "title": "Magnetic Field of a Circular Current Loop",
+          "page": 927
+        },
+        {
+          "id": "28.6",
+          "title": "Ampere’s Law",
+          "page": 930
+        },
+        {
+          "id": "28.7",
+          "title": "Applications of Ampere’s Law",
+          "page": 933
+        },
+        {
+          "id": "28.8",
+          "title": "Magnetic Materials",
+          "page": 937
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "28.1",
+        "28.2",
+        "28.3",
+        "28.4",
+        "28.5",
+        "28.6",
+        "28.7",
+        "28.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 29,
+      "course": "vat-ly-2",
+      "printedStart": 953,
+      "printedEnd": 987,
+      "pdfStart": 973,
+      "pdfEnd": 1007,
+      "pageCount": 35,
+      "sections": [
+        {
+          "id": "29.1",
+          "title": "Induction Experiments",
+          "page": 954
+        },
+        {
+          "id": "29.2",
+          "title": "Faraday’s Law",
+          "page": 955
+        },
+        {
+          "id": "29.3",
+          "title": "Lenz’s Law",
+          "page": 962
+        },
+        {
+          "id": "29.4",
+          "title": "Motional emf",
+          "page": 965
+        },
+        {
+          "id": "29.5",
+          "title": "Induced Electric Fields",
+          "page": 967
+        },
+        {
+          "id": "29.6",
+          "title": "Eddy Currents",
+          "page": 969
+        },
+        {
+          "id": "29.7",
+          "title": "Displacement Current and Maxwell’s Equations",
+          "page": 970
+        },
+        {
+          "id": "29.8",
+          "title": "Superconductivity",
+          "page": 975
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "29.1",
+        "29.2",
+        "29.3",
+        "29.4",
+        "29.5",
+        "29.6",
+        "29.7",
+        "29.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 30,
+      "course": "vat-ly-2",
+      "printedStart": 988,
+      "printedEnd": 1017,
+      "pdfStart": 1008,
+      "pdfEnd": 1037,
+      "pageCount": 30,
+      "sections": [
+        {
+          "id": "30.1",
+          "title": "Mutual Inductance",
+          "page": 988
+        },
+        {
+          "id": "30.2",
+          "title": "Self-Inductance and Inductors",
+          "page": 992
+        },
+        {
+          "id": "30.3",
+          "title": "Magnetic-Field Energy",
+          "page": 995
+        },
+        {
+          "id": "30.4",
+          "title": "The R-L Circuit",
+          "page": 998
+        },
+        {
+          "id": "30.5",
+          "title": "The L-C Circuit",
+          "page": 1002
+        },
+        {
+          "id": "30.6",
+          "title": "The L-R-C Series Circuit",
+          "page": 1007
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "30.1",
+        "30.2",
+        "30.3",
+        "30.4",
+        "30.5",
+        "30.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 31,
+      "course": "vat-ly-2",
+      "printedStart": 1018,
+      "printedEnd": 1047,
+      "pdfStart": 1038,
+      "pdfEnd": 1067,
+      "pageCount": 30,
+      "sections": [
+        {
+          "id": "31.1",
+          "title": "Phasors and Alternating Currents",
+          "page": 1018
+        },
+        {
+          "id": "31.2",
+          "title": "Resistance and Reactance",
+          "page": 1022
+        },
+        {
+          "id": "31.3",
+          "title": "The L-R-C Series Circuit",
+          "page": 1027
+        },
+        {
+          "id": "31.4",
+          "title": "Power in Alternating-Current Circuits",
+          "page": 1031
+        },
+        {
+          "id": "31.5",
+          "title": "Resonance in Alternating-Current Circuits",
+          "page": 1034
+        },
+        {
+          "id": "31.6",
+          "title": "Transformers",
+          "page": 1036
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "31.1",
+        "31.2",
+        "31.3",
+        "31.4",
+        "31.5",
+        "31.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 32,
+      "course": "vat-ly-2",
+      "printedStart": 1048,
+      "printedEnd": 1076,
+      "pdfStart": 1068,
+      "pdfEnd": 1096,
+      "pageCount": 29,
+      "sections": [
+        {
+          "id": "32.1",
+          "title": "Maxwell’s Equations and Electromagnetic Waves",
+          "page": 1048
+        },
+        {
+          "id": "32.2",
+          "title": "Plane Electromagnetic Waves and the Speed of Light",
+          "page": 1052
+        },
+        {
+          "id": "32.3",
+          "title": "Sinusoidal Electromagnetic Waves",
+          "page": 1057
+        },
+        {
+          "id": "32.4",
+          "title": "Energy and Momentum in Electromagnetic Waves",
+          "page": 1061
+        },
+        {
+          "id": "32.5",
+          "title": "Standing Electromagnetic Waves",
+          "page": 1066
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "32.1",
+        "32.2",
+        "32.3",
+        "32.4",
+        "32.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 33,
+      "course": "vat-ly-2",
+      "printedStart": 1077,
+      "printedEnd": 1109,
+      "pdfStart": 1097,
+      "pdfEnd": 1129,
+      "pageCount": 33,
+      "sections": [
+        {
+          "id": "33.1",
+          "title": "The Nature of Light",
+          "page": 1077
+        },
+        {
+          "id": "33.2",
+          "title": "Reflection and Refraction",
+          "page": 1079
+        },
+        {
+          "id": "33.3",
+          "title": "Total Internal Reflection",
+          "page": 1085
+        },
+        {
+          "id": "33.4",
+          "title": "Dispersion",
+          "page": 1088
+        },
+        {
+          "id": "33.5",
+          "title": "Polarization",
+          "page": 1090
+        },
+        {
+          "id": "33.6",
+          "title": "Scattering of Light",
+          "page": 1097
+        },
+        {
+          "id": "33.7",
+          "title": "Huygens’s Principle",
+          "page": 1099
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "33.1",
+        "33.2",
+        "33.3",
+        "33.4",
+        "33.5",
+        "33.6",
+        "33.7",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 34,
+      "course": "vat-ly-2",
+      "printedStart": 1110,
+      "printedEnd": 1158,
+      "pdfStart": 1130,
+      "pdfEnd": 1178,
+      "pageCount": 49,
+      "sections": [
+        {
+          "id": "34.1",
+          "title": "Reflection and Refraction at a Plane Surface",
+          "page": 1110
+        },
+        {
+          "id": "34.2",
+          "title": "Reflection at a Spherical Surface",
+          "page": 1114
+        },
+        {
+          "id": "34.3",
+          "title": "Refraction at a Spherical Surface",
+          "page": 1122
+        },
+        {
+          "id": "34.4",
+          "title": "Thin Lenses",
+          "page": 1127
+        },
+        {
+          "id": "34.5",
+          "title": "Cameras",
+          "page": 1135
+        },
+        {
+          "id": "34.6",
+          "title": "The Eye",
+          "page": 1138
+        },
+        {
+          "id": "34.7",
+          "title": "The Magnifier",
+          "page": 1142
+        },
+        {
+          "id": "34.8",
+          "title": "Microscopes and Telescopes",
+          "page": 1143
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "34.1",
+        "34.2",
+        "34.3",
+        "34.4",
+        "34.5",
+        "34.6",
+        "34.7",
+        "34.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 35,
+      "course": "vat-ly-2",
+      "printedStart": 1159,
+      "printedEnd": 1184,
+      "pdfStart": 1179,
+      "pdfEnd": 1204,
+      "pageCount": 26,
+      "sections": [
+        {
+          "id": "35.1",
+          "title": "Interference and Coherent Sources",
+          "page": 1159
+        },
+        {
+          "id": "35.2",
+          "title": "Two-Source Interference of Light",
+          "page": 1163
+        },
+        {
+          "id": "35.3",
+          "title": "Intensity in Interference Patterns",
+          "page": 1166
+        },
+        {
+          "id": "35.4",
+          "title": "Interference in Thin Films",
+          "page": 1170
+        },
+        {
+          "id": "35.5",
+          "title": "The Michelson Interferometer",
+          "page": 1175
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "35.1",
+        "35.2",
+        "35.3",
+        "35.4",
+        "35.5",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 36,
+      "course": "vat-ly-2",
+      "printedStart": 1185,
+      "printedEnd": 1216,
+      "pdfStart": 1205,
+      "pdfEnd": 1236,
+      "pageCount": 32,
+      "sections": [
+        {
+          "id": "36.1",
+          "title": "Fresnel and Fraunhofer Diffraction",
+          "page": 1185
+        },
+        {
+          "id": "36.2",
+          "title": "Diffraction from a Single Slit",
+          "page": 1187
+        },
+        {
+          "id": "36.3",
+          "title": "Intensity in the Single-Slit Pattern",
+          "page": 1190
+        },
+        {
+          "id": "36.4",
+          "title": "Multiple Slits",
+          "page": 1194
+        },
+        {
+          "id": "36.5",
+          "title": "The Diffraction Grating",
+          "page": 1196
+        },
+        {
+          "id": "36.6",
+          "title": "X-Ray Diffraction",
+          "page": 1200
+        },
+        {
+          "id": "36.7",
+          "title": "Circular Apertures and Resolving Power",
+          "page": 1203
+        },
+        {
+          "id": "36.8",
+          "title": "Holography",
+          "page": 1206
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "36.1",
+        "36.2",
+        "36.3",
+        "36.4",
+        "36.5",
+        "36.6",
+        "36.7",
+        "36.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 37,
+      "course": "vat-ly-2",
+      "printedStart": 1217,
+      "printedEnd": 1252,
+      "pdfStart": 1237,
+      "pdfEnd": 1272,
+      "pageCount": 36,
+      "sections": [
+        {
+          "id": "37.1",
+          "title": "Invariance of Physical Laws",
+          "page": 1217
+        },
+        {
+          "id": "37.2",
+          "title": "Relativity of Simultaneity",
+          "page": 1220
+        },
+        {
+          "id": "37.3",
+          "title": "Relativity of Time Intervals",
+          "page": 1222
+        },
+        {
+          "id": "37.4",
+          "title": "Relativity of Length",
+          "page": 1227
+        },
+        {
+          "id": "37.5",
+          "title": "The Lorentz Transformations",
+          "page": 1231
+        },
+        {
+          "id": "37.6",
+          "title": "The Doppler Effect for Electromagnetic Waves",
+          "page": 1235
+        },
+        {
+          "id": "37.7",
+          "title": "Relativistic Momentum",
+          "page": 1237
+        },
+        {
+          "id": "37.8",
+          "title": "Relativistic Work and Energy",
+          "page": 1239
+        },
+        {
+          "id": "37.9",
+          "title": "Newtonian Mechanics and Relativity",
+          "page": 1243
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "37.1",
+        "37.2",
+        "37.3",
+        "37.4",
+        "37.5",
+        "37.6",
+        "37.7",
+        "37.8",
+        "37.9",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 38,
+      "course": "vat-ly-2",
+      "printedStart": 1253,
+      "printedEnd": 1278,
+      "pdfStart": 1273,
+      "pdfEnd": 1298,
+      "pageCount": 26,
+      "sections": [
+        {
+          "id": "38.1",
+          "title": "Light Absorbed as Photons: The Photoelectric Effect",
+          "page": 1253
+        },
+        {
+          "id": "38.2",
+          "title": "Light Emitted as Photons: X-Ray Production",
+          "page": 1259
+        },
+        {
+          "id": "38.3",
+          "title": "Light Scattered as Photons: Compton Scattering and Pair Production",
+          "page": 1262
+        },
+        {
+          "id": "38.4",
+          "title": "Wave–Particle Duality, Probability, and Uncertainty",
+          "page": 1265
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "38.1",
+        "38.2",
+        "38.3",
+        "38.4",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 39,
+      "course": "vat-ly-2",
+      "printedStart": 1279,
+      "printedEnd": 1320,
+      "pdfStart": 1299,
+      "pdfEnd": 1340,
+      "pageCount": 42,
+      "sections": [
+        {
+          "id": "39.1",
+          "title": "Electron Waves",
+          "page": 1279
+        },
+        {
+          "id": "39.2",
+          "title": "The Nuclear Atom and Atomic Spectra",
+          "page": 1285
+        },
+        {
+          "id": "39.3",
+          "title": "Energy Levels and the Bohr Model of the Atom",
+          "page": 1290
+        },
+        {
+          "id": "39.4",
+          "title": "The Laser",
+          "page": 1300
+        },
+        {
+          "id": "39.5",
+          "title": "Continuous Spectra",
+          "page": 1303
+        },
+        {
+          "id": "39.6",
+          "title": "The Uncertainty Principle Revisited",
+          "page": 1308
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "39.1",
+        "39.2",
+        "39.3",
+        "39.4",
+        "39.5",
+        "39.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 40,
+      "course": "vat-ly-2",
+      "printedStart": 1321,
+      "printedEnd": 1359,
+      "pdfStart": 1341,
+      "pdfEnd": 1379,
+      "pageCount": 39,
+      "sections": [
+        {
+          "id": "40.1",
+          "title": "Wave Functions and the One-Dimensional Schrödinger Equation",
+          "page": 1321
+        },
+        {
+          "id": "40.2",
+          "title": "Particle in a Box",
+          "page": 1331
+        },
+        {
+          "id": "40.3",
+          "title": "Potential Wells",
+          "page": 1336
+        },
+        {
+          "id": "40.4",
+          "title": "Potential Barriers and Tunneling",
+          "page": 1340
+        },
+        {
+          "id": "40.5",
+          "title": "The Harmonic Oscillator",
+          "page": 1343
+        },
+        {
+          "id": "40.6",
+          "title": "Measurement in Quantum Mechanics",
+          "page": 1347
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "40.1",
+        "40.2",
+        "40.3",
+        "40.4",
+        "40.5",
+        "40.6",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 41,
+      "course": "vat-ly-2",
+      "printedStart": 1360,
+      "printedEnd": 1407,
+      "pdfStart": 1380,
+      "pdfEnd": 1427,
+      "pageCount": 48,
+      "sections": [
+        {
+          "id": "41.1",
+          "title": "The Schrödinger Equation in Three Dimensions",
+          "page": 1360
+        },
+        {
+          "id": "41.2",
+          "title": "Particle in a Three-Dimensional Box",
+          "page": 1362
+        },
+        {
+          "id": "41.3",
+          "title": "The Hydrogen Atom",
+          "page": 1367
+        },
+        {
+          "id": "41.4",
+          "title": "The Zeeman Effect",
+          "page": 1375
+        },
+        {
+          "id": "41.5",
+          "title": "Electron Spin",
+          "page": 1378
+        },
+        {
+          "id": "41.6",
+          "title": "Many-Electron Atoms and the Exclusion Principle",
+          "page": 1385
+        },
+        {
+          "id": "41.7",
+          "title": "X-Ray Spectra",
+          "page": 1392
+        },
+        {
+          "id": "41.8",
+          "title": "Quantum Entanglement",
+          "page": 1395
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "41.1",
+        "41.2",
+        "41.3",
+        "41.4",
+        "41.5",
+        "41.6",
+        "41.7",
+        "41.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 42,
+      "course": "vat-ly-2",
+      "printedStart": 1408,
+      "printedEnd": 1441,
+      "pdfStart": 1428,
+      "pdfEnd": 1461,
+      "pageCount": 34,
+      "sections": [
+        {
+          "id": "42.1",
+          "title": "Types of Molecular Bonds",
+          "page": 1408
+        },
+        {
+          "id": "42.2",
+          "title": "Molecular Spectra",
+          "page": 1411
+        },
+        {
+          "id": "42.3",
+          "title": "Structure of Solids",
+          "page": 1415
+        },
+        {
+          "id": "42.4",
+          "title": "Energy Bands",
+          "page": 1418
+        },
+        {
+          "id": "42.5",
+          "title": "Free-Electron Model of Metals",
+          "page": 1421
+        },
+        {
+          "id": "42.6",
+          "title": "Semiconductors",
+          "page": 1425
+        },
+        {
+          "id": "42.7",
+          "title": "Semiconductor Devices",
+          "page": 1428
+        },
+        {
+          "id": "42.8",
+          "title": "Superconductivity",
+          "page": 1433
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "42.1",
+        "42.2",
+        "42.3",
+        "42.4",
+        "42.5",
+        "42.6",
+        "42.7",
+        "42.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 43,
+      "course": "vat-ly-2",
+      "printedStart": 1442,
+      "printedEnd": 1482,
+      "pdfStart": 1462,
+      "pdfEnd": 1502,
+      "pageCount": 41,
+      "sections": [
+        {
+          "id": "43.1",
+          "title": "Properties of Nuclei",
+          "page": 1442
+        },
+        {
+          "id": "43.2",
+          "title": "Nuclear Binding and Nuclear Structure",
+          "page": 1447
+        },
+        {
+          "id": "43.3",
+          "title": "Nuclear Stability and Radioactivity",
+          "page": 1452
+        },
+        {
+          "id": "43.4",
+          "title": "Activities and Half-Lives",
+          "page": 1459
+        },
+        {
+          "id": "43.5",
+          "title": "Biological Effects of Radiation",
+          "page": 1463
+        },
+        {
+          "id": "43.6",
+          "title": "Nuclear Reactions",
+          "page": 1465
+        },
+        {
+          "id": "43.7",
+          "title": "Nuclear Fission",
+          "page": 1468
+        },
+        {
+          "id": "43.8",
+          "title": "Nuclear Fusion",
+          "page": 1472
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "43.1",
+        "43.2",
+        "43.3",
+        "43.4",
+        "43.5",
+        "43.6",
+        "43.7",
+        "43.8",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    },
+    {
+      "chapter": 44,
+      "course": "vat-ly-2",
+      "printedStart": 1483,
+      "printedEnd": 1524,
+      "pdfStart": 1503,
+      "pdfEnd": 1544,
+      "pageCount": 42,
+      "sections": [
+        {
+          "id": "44.1",
+          "title": "Fundamental Particles—A History",
+          "page": 1483
+        },
+        {
+          "id": "44.2",
+          "title": "Particle Accelerators and Detectors",
+          "page": 1488
+        },
+        {
+          "id": "44.3",
+          "title": "Particles and Interactions",
+          "page": 1492
+        },
+        {
+          "id": "44.4",
+          "title": "Quarks and Gluons",
+          "page": 1498
+        },
+        {
+          "id": "44.5",
+          "title": "The Standard Model and Beyond",
+          "page": 1502
+        },
+        {
+          "id": "44.6",
+          "title": "The Expanding Universe",
+          "page": 1504
+        },
+        {
+          "id": "44.7",
+          "title": "The Beginning of Time",
+          "page": 1511
+        }
+      ],
+      "status": "pending",
+      "fragments": [],
+      "pendingSourceUnits": [
+        "chapter-opening",
+        "44.1",
+        "44.2",
+        "44.3",
+        "44.4",
+        "44.5",
+        "44.6",
+        "44.7",
+        "all-original-figures-and-captions",
+        "chapter-summary",
+        "guided-practice",
+        "discussion-questions",
+        "all-end-of-chapter-exercises-and-problems"
+      ]
+    }
+  ]
+}

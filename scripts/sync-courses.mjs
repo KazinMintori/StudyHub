@@ -1,3 +1,4 @@
+import { readMarkdownIncludes } from './read-markdown-includes.mjs'
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -53,7 +54,7 @@ console.log(`Synced ${courseCatalog.length} courses with lecture bundles and ${O
 const readingMetadata = {}
 for (const course of courseCatalog) {
   for (const lesson of course.lessons) {
-    const source = await readFile(path.join(docs, course.id, 'bai-giang', `${lesson.slug}.md`), 'utf8')
+    const source = await readMarkdownIncludes(path.join(docs, course.id, 'bai-giang', `${lesson.slug}.md`))
     const text = source.replace(/^---[\s\S]*?---/, '').replace(/```[\s\S]*?```/g, '').replace(/<[^>]*>/g, '').replace(/\$\$[\s\S]*?\$\$/g, '')
     const words = text.split(/\s+/).filter(Boolean).length
     readingMetadata[`${course.id}/${lesson.slug}`] = { words, minutes: Math.max(5, Math.round(words / 200 / 5) * 5) }

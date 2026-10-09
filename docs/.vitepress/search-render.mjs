@@ -1,5 +1,5 @@
 import { findCourse } from './course-catalog.mjs'
-import { findLecture, lectureSlides, lectureConceptIds } from './lecture-model.mjs'
+import { findLecture, lectureSlides, lectureConceptIds, lectureCheatsheet } from './lecture-model.mjs'
 import { concepts } from './concepts.mjs'
 
 export function renderStudySearch(source,env,md) {
@@ -11,5 +11,7 @@ export function renderStudySearch(source,env,md) {
   const heading=(title,id)=>`<h2 id="${id}">${escape(title)} <a class="header-anchor" href="#${id}">Permalink</a></h2>`
   const title=`<h1>${escape(lesson.title)} <a class="header-anchor" href="#notes">Permalink</a></h1>`
   const slides=lectureSlides(course,lesson)
-  return title+html+heading('Slides · '+lesson.title,'slides')+`<p>${escape(slides.map(s=>`${s.title} ${s.bullets.join(' ')} ${s.formula||''}`).join(' '))}</p>`+heading('Kiến thức nền · '+lesson.title,'kien-thuc-can-co')+`<p>${escape(lectureConceptIds(lesson).map(id=>`${concepts[id].name}: ${concepts[id].definition}`).join(' '))}</p>`
+  const cs=lectureCheatsheet(course,lesson)
+  const csText=cs?.sections ? cs.sections.map(s => `${s.title} ${(s.items || []).map(i => `${i.name || ''} ${i.formula || ''} ${i.description || ''} ${i.code || ''} ${(i.bullets || []).join(' ')}`).join(' ')} ${(s.table?.rows || []).flat().join(' ')}`).join(' ') : ''
+  return title+html+heading('Slides · '+lesson.title,'slides')+`<p>${escape(slides.map(s=>`${s.title} ${s.bullets.join(' ')} ${s.formula||''}`).join(' '))}</p>`+heading('Cheatsheet · '+lesson.title,'cheatsheet')+`<p>${escape(csText)}</p>`+heading('Kiến thức nền · '+lesson.title,'kien-thuc-can-co')+`<p>${escape(lectureConceptIds(lesson).map(id=>`${concepts[id].name}: ${concepts[id].definition}`).join(' '))}</p>`
 }

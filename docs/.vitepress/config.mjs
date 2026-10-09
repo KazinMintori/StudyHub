@@ -13,6 +13,7 @@ const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`)
 
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
+  buildConcurrency: 2,
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   ignoreDeadLinks: true, lastUpdated: true,
   head:[
@@ -64,6 +65,8 @@ export default withMermaid(defineConfig({
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
+      {text:'Vật lý 1',link:'/vat-ly-1/',activeMatch:'^/vat-ly-1/'},
+      {text:'Vật lý 2',link:'/vat-ly-2/',activeMatch:'^/vat-ly-2/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],

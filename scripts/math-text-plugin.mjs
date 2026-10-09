@@ -13,7 +13,8 @@ export function mathTextPlugin() {
     resolveId(source) { if (source === 'virtual:study-math-renderer') return id },
     load(source) { if (source === id) return 'export const renderedMath = {}' },
     transform(source, file) {
-      if (!/[/\\](concepts|math-ai-foundations|course-catalog|math-ai-course|math-labels)\.mjs$/.test(file)) return
+      // Course content can live in dedicated modules, including new subjects and cheatsheets.
+      if (!/[/\\](?:concepts|course-catalog|math-labels|cheatsheets|[\w-]+-(?:course|courses|foundations))\.mjs$/.test(file)) return
       const expressions = new Set()
       for (const match of source.matchAll(/(['"])(?:\\.|(?!\1)[^\\])*?\1/g)) {
         const raw = match[0].slice(1, -1)

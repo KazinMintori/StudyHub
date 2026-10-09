@@ -244,16 +244,180 @@ export const readingMetadata = {
     "words": 2742,
     "minutes": 15
   },
-  "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 388,
+  "vat-ly-1/01-don-vi-vector": {
+    "words": 20426,
+    "minutes": 100
+  },
+  "vat-ly-1/02-chuyen-dong-thang": {
+    "words": 21962,
+    "minutes": 110
+  },
+  "vat-ly-1/03-chuyen-dong-khong-gian": {
+    "words": 240,
     "minutes": 5
   },
-  "vat-ly-2/02-dien-the": {
-    "words": 404,
+  "vat-ly-1/04-dinh-luat-newton": {
+    "words": 248,
+    "minutes": 5
+  },
+  "vat-ly-1/05-ung-dung-newton": {
+    "words": 250,
+    "minutes": 5
+  },
+  "vat-ly-1/06-cong-dong-nang": {
+    "words": 233,
+    "minutes": 5
+  },
+  "vat-ly-1/07-the-nang-bao-toan-co-nang": {
+    "words": 241,
+    "minutes": 5
+  },
+  "vat-ly-1/08-dong-luong-va-cham": {
+    "words": 248,
+    "minutes": 5
+  },
+  "vat-ly-1/09-dong-hoc-vat-ran": {
+    "words": 253,
+    "minutes": 5
+  },
+  "vat-ly-1/10-dong-luc-hoc-quay": {
+    "words": 267,
+    "minutes": 5
+  },
+  "vat-ly-1/11-can-bang-dan-hoi": {
+    "words": 243,
+    "minutes": 5
+  },
+  "vat-ly-1/12-co-hoc-chat-luu": {
+    "words": 247,
+    "minutes": 5
+  },
+  "vat-ly-1/13-hap-dan": {
+    "words": 273,
+    "minutes": 5
+  },
+  "vat-ly-1/14-dao-dong": {
+    "words": 270,
+    "minutes": 5
+  },
+  "vat-ly-1/15-song-co": {
+    "words": 279,
+    "minutes": 5
+  },
+  "vat-ly-1/16-am-hoc": {
+    "words": 275,
+    "minutes": 5
+  },
+  "vat-ly-1/17-nhiet-do-nhiet-luong": {
+    "words": 264,
+    "minutes": 5
+  },
+  "vat-ly-1/18-thuyet-dong-hoc-chat-khi": {
+    "words": 251,
+    "minutes": 5
+  },
+  "vat-ly-1/19-nguyen-ly-thu-nhat": {
+    "words": 284,
+    "minutes": 5
+  },
+  "vat-ly-1/20-nguyen-ly-thu-hai-entropy": {
+    "words": 265,
+    "minutes": 5
+  },
+  "vat-ly-2/01-dien-truong-coulomb": {
+    "words": 258,
     "minutes": 5
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 351,
+    "words": 241,
+    "minutes": 5
+  },
+  "vat-ly-2/02-dien-the": {
+    "words": 237,
+    "minutes": 5
+  },
+  "vat-ly-2/04-tu-dien-dien-moi": {
+    "words": 256,
+    "minutes": 5
+  },
+  "vat-ly-2/05-dong-dien-dien-tro": {
+    "words": 248,
+    "minutes": 5
+  },
+  "vat-ly-2/06-mach-dien-mot-chieu": {
+    "words": 240,
+    "minutes": 5
+  },
+  "vat-ly-2/07-tu-truong-luc-tu": {
+    "words": 291,
+    "minutes": 5
+  },
+  "vat-ly-2/08-nguon-tu-truong": {
+    "words": 281,
+    "minutes": 5
+  },
+  "vat-ly-2/09-cam-ung-dien-tu": {
+    "words": 262,
+    "minutes": 5
+  },
+  "vat-ly-2/10-tu-cam": {
+    "words": 248,
+    "minutes": 5
+  },
+  "vat-ly-2/11-dong-dien-xoay-chieu": {
+    "words": 251,
+    "minutes": 5
+  },
+  "vat-ly-2/12-song-dien-tu": {
+    "words": 250,
+    "minutes": 5
+  },
+  "vat-ly-2/13-truyen-anh-sang": {
+    "words": 254,
+    "minutes": 5
+  },
+  "vat-ly-2/14-quang-hinh-hoc": {
+    "words": 270,
+    "minutes": 5
+  },
+  "vat-ly-2/15-giao-thoa": {
+    "words": 244,
+    "minutes": 5
+  },
+  "vat-ly-2/16-nhieu-xa": {
+    "words": 270,
+    "minutes": 5
+  },
+  "vat-ly-2/17-thuyet-tuong-doi": {
+    "words": 282,
+    "minutes": 5
+  },
+  "vat-ly-2/18-photon": {
+    "words": 246,
+    "minutes": 5
+  },
+  "vat-ly-2/19-song-vat-chat": {
+    "words": 256,
+    "minutes": 5
+  },
+  "vat-ly-2/20-ham-song-schrodinger": {
+    "words": 255,
+    "minutes": 5
+  },
+  "vat-ly-2/21-cau-truc-nguyen-tu": {
+    "words": 272,
+    "minutes": 5
+  },
+  "vat-ly-2/22-chat-ran-ban-dan": {
+    "words": 262,
+    "minutes": 5
+  },
+  "vat-ly-2/23-vat-ly-hat-nhan": {
+    "words": 268,
+    "minutes": 5
+  },
+  "vat-ly-2/24-hat-co-ban-vu-tru": {
+    "words": 262,
     "minutes": 5
   },
   "giai-thuat-du-lieu/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan": {

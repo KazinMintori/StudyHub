@@ -1,3 +1,4 @@
+import { physicsConceptIds, physicsWikiDetails, physicsWikiConnections } from './physics-foundations.mjs'
 import { formatWikiMath } from '../../scripts/wiki-math.mjs'
 import { concepts } from './concepts.mjs'
 
@@ -11,11 +12,12 @@ export const wikiGroups = [
   { id:'mathematics', name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','do-thi-ham-so','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
   { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood','mau-tong-the','thong-ke-mo-ta','suy-rong-thong-ke','ket-luan-nhan-qua','du-doan-thong-ke'] },
   { id:'programming', name:'Python & dữ liệu', ids:['bien-kieu','list','dictionary','ham-lap-trinh','tham-so-lap-trinh','vong-lap','chi-muc','vector-hoa','broadcasting','gia-tri-thieu'] },
-  { id:'physics', name:'Điện từ & cơ học', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song'] },
+  { id:'physics', name:'Cơ học, nhiệt, điện từ và lượng tử', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song',...physicsConceptIds] },
   { id:'distributed', name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
 ]
 
 export const courseWikiScopes = {
+  'vat-ly-1':['physics','mathematics','probability'],
   'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','discrete-math','algorithms'],
   'xu-ly-du-lieu':['programming','probability','mathematics','discrete-math'],
   'xac-suat-thong-ke':['probability','mathematics','discrete-math'],
@@ -41,6 +43,7 @@ export function resolveConceptForCourse(ids, courseId) {
     .sort((a, b) => a.rank - b.rank)[0]?.id || null
 }
 const connections = {
+  ...physicsWikiConnections,
   'thong-ke-mo-ta':['mau-tong-the','suy-rong-thong-ke'],
   'suy-rong-thong-ke':['mau-tong-the','thong-ke-mo-ta','ket-luan-nhan-qua'],
   'ket-luan-nhan-qua':['thong-ke-mo-ta','du-doan-thong-ke'],
@@ -132,6 +135,7 @@ export function relatedConcepts(id) {
   return [...new Set([group.ids[(index+1)%group.ids.length],group.ids[(index+group.ids.length-1)%group.ids.length],group.ids[0]])].filter(other=>other!==id)
 }
 export const wikiDetails = {
+  ...physicsWikiDetails,
   ...mathAiWikiDetails,
   'thong-ke-mo-ta':'**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\\%$. Đây là ví dụ giả định. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.\n\nMô tả không chỉ gồm phép tính: bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.',
   'suy-rong-thong-ke':'**Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.\n\nMột mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.',

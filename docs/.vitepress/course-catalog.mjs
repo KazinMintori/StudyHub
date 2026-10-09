@@ -1,3 +1,4 @@
+import { physics1Course, physics2Course } from './physics-courses.mjs'
 import { mathAiCourse } from './math-ai-course.mjs'
 const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
@@ -128,39 +129,8 @@ export const courseCatalog = [
       slide('Đừng để phép tổng hợp che mất dữ liệu', ['groupby tách nhóm rồi áp dụng tổng hợp hoặc biến đổi.', 'Phân biệt số hàng, số giá trị không thiếu và số giá trị duy nhất.', 'Kiểm tra nhãn, kiểu và ý nghĩa của kết quả sau mỗi chuỗi biến đổi.'], 'bai-05-series-dataframe-chuyen-sau')
     ], illustration: 'broadcast'
   },
-  {
-    id: 'vat-ly-2', code: '05', name: 'Vật lý đại cương 2', short: 'Vật lý 2', current: true,
-    description: 'Hiểu điện trường và điện thế từ lực, vector, đạo hàm và tích phân.',
-    foundations: ['vector', 'tich-vo-huong', 'chuan', 'dao-ham', 'dao-ham-rieng', 'gradient', 'tich-phan', 'dien-tich', 'luc', 'cong-nang-luong', 'dien-the', 'thong-luong', 'don-vi', 'song'],
-    parts: [
-      {
-        title: 'Phần 1. Tương tác tĩnh điện và điện trường',
-        description: 'Định luật Coulomb, nguyên lý chồng chất và vector cường độ điện trường.',
-        lessons: ['01-dien-truong-coulomb']
-      },
-      {
-        title: 'Phần 2. Năng lượng tĩnh điện và điện thế',
-        description: 'Công của lực điện trường, điện thế, mặt đẳng thế và gradient.',
-        lessons: ['02-dien-the']
-      },
-      {
-        title: 'Phần 3. Thông lượng và định luật Gauss',
-        description: 'Thông lượng điện trường qua mặt kín và tính điện trường đối xứng.',
-        lessons: ['03-dinh-luat-gauss']
-      }
-    ],
-    lessons: [
-      lesson('01-dien-truong-coulomb', 'Điện trường & định luật Coulomb', ['vector', 'chuan', 'dien-tich', 'luc', 'don-vi']),
-      lesson('02-dien-the', 'Điện thế, công & gradient', ['cong-nang-luong', 'dien-the', 'dao-ham', 'gradient', 'tich-phan']),
-      lesson('03-dinh-luat-gauss', 'Thông lượng & định luật Gauss', ['tich-vo-huong', 'thong-luong', 'tich-phan', 'dien-tich'])
-    ],
-    slides: [
-      slide('Từ lực Coulomb tới điện trường', ['Điện tích cùng dấu đẩy nhau, trái dấu hút nhau.', 'Điện trường là lực trên một đơn vị điện tích thử dương.', "Hãy cộng vector các điện trường thành phần thay vì chỉ cộng độ lớn."], '01-dien-truong-coulomb', "$$\\mathbf E=\\frac{\\mathbf F}{q_{\\text{thử}}},\\qquad \\|\\mathbf E\\|=k\\frac{|Q|}{r^2}$$"),
-      slide('Điện thế giúp tính công', ['Hiệu điện thế bằng độ thay đổi thế năng trên một đơn vị điện tích.', 'Điện trường hướng về phía điện thế giảm nhanh nhất.', 'Mặt đẳng thế vuông góc với điện trường ở nơi điện trường khác 0.'], '02-dien-the', "$E = -\\nabla V$; $\\Delta U = q\\Delta V$"),
-      slide('Gauss liên hệ điện tích với thông lượng', ['Tích phân trên mặt kín dùng pháp tuyến hướng ra ngoài.', 'Điện tích nằm bên trong mặt kín quyết định thông lượng tổng.', 'Muốn suy ra E đơn giản từ Gauss, cần đối xứng phù hợp.'], '03-dinh-luat-gauss', "$$\\oint\\mathbf E\\cdot d\\mathbf A=\\frac{Q_{\\text{bên trong}}}{\\varepsilon_0}$$"),
-      slide('Kiểm tra trước khi kết luận', ['Đổi mọi điện tích và khoảng cách về đơn vị thống nhất.', 'Nêu dấu, hướng và đơn vị của kết quả.', 'Phân biệt mô hình điện tích điểm với phân bố điện tích liên tục.'], '01-dien-truong-coulomb', "$$\\mathrm{N/C}=\\mathrm{V/m}$$")
-    ], illustration: 'field'
-  },
+  physics1Course,
+  physics2Course,
   {
     id: 'giai-thuat-du-lieu', code: '06', name: 'Giải thuật nền tảng của Khoa học dữ liệu', short: 'Giải thuật dữ liệu', current: true,
     description: 'Đặc tả dữ liệu lớn, tính toán phân tán MapReduce, thuật toán PageRank và xử lý đồ thị quy mô lớn.',

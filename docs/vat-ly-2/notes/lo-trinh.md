@@ -1,30 +1,39 @@
 ---
-course: "vat-ly-2"
-section: "notes"
-prerequisites: ["vector","tich-vo-huong","chuan"]
-lessonStatus: "reference"
+course: vat-ly-2
+title: "Lộ trình bản dịch giáo trình"
 ---
 
-# Vật Lý Đại Cương 2 
+# Lộ trình bản dịch giáo trình
 
-Môn học **Vật lý Đại cương 2** trang bị kiến thức nền tảng về Điện từ trường, Sóng ánh sáng và Quang học sóng — cơ sở vật lý cho phần cứng máy tính và truyền thông không dây.
+Bản dịch tiếng Việt theo chương 21–44 của Young & Freedman, từ điện học đến hết vật lý hiện đại. Đang dịch và đối chiếu từng mục, hình, ví dụ và bài tập nguyên tác.
 
----
+Bài học giữ đầy đủ lời dẫn, nội dung, ứng dụng, công thức, lập luận, hình, ví dụ và bài tập của nguyên tác. Chỉ được thêm mô phỏng thí nghiệm có nhãn riêng. Có thể rút gọn diễn đạt nhưng phải giữ ý nghĩa và câu văn đầy đủ theo quy tắc ngôn ngữ của dự án.
 
-##  Lộ trình Ôn tập Trọng tâm
+Mỗi chương chỉ chuyển sang hoàn tất sau khi được dịch và đối chiếu toàn bộ, kể cả bài tập cuối chương. Các thẻ Slides cũ đã được rút vì chứa nội dung tự đặt và không phản ánh đủ nguyên tác.
 
-```mermaid
-flowchart TD
-    A["1. Điện trường Tĩnh & Định luật Gauss"] --> B["2. Điện thế & Năng lượng Điện trường"]
-    B --> C["3. Từ trường & Định luật Ampere"]
-    C --> D["4. Cảm ứng Điện từ & Định luật Faraday-Lenz"]
-    D --> E["5. Hệ phương trình Maxwell & Sóng Điện từ"]
-    E --> F["6. Quang học Sóng: Giao thoa & Nhiễu xạ"]
-```
-
-- **Chương 1:** Định luật Coulomb, Điện trường và Định luật Gauss (mặt Gauss kín)
-- **Chương 2:** Điện thế, Hiệu điện thế, Tụ điện và Năng lượng điện trường
-- **Chương 3:** Từ trường, Lực Lorentz và Định luật Biot-Savart, Định luật Ampere
-- **Chương 4:** Hiện tượng Cảm ứng điện từ, Định luật Faraday, Quy tắc Lenz và Suất điện động tự cảm
-- **Chương 5:** Hệ 4 phương trình Maxwell và Sóng điện từ
-- **Chương 6:** Giao thoa ánh sáng (khe Young, màng mỏng) và Nhiễu xạ ánh sáng
+| Chương | Bài giảng | Trang in, kể cả bài tập | Trạng thái |
+| --- | --- | --- | --- |
+| 21 | [Điện tích và điện trường](/vat-ly-2/bai-giang/01-dien-truong-coulomb.md) | 678–717 | Chưa dịch |
+| 22 | [Định luật Gauss](/vat-ly-2/bai-giang/03-dinh-luat-gauss.md) | 718–746 | Chưa dịch |
+| 23 | [Điện thế](/vat-ly-2/bai-giang/02-dien-the.md) | 747–780 | Chưa dịch |
+| 24 | [Điện dung và điện môi](/vat-ly-2/bai-giang/04-tu-dien-dien-moi.md) | 781–811 | Chưa dịch |
+| 25 | [Dòng điện, điện trở và suất điện động](/vat-ly-2/bai-giang/05-dong-dien-dien-tro.md) | 812–843 | Chưa dịch |
+| 26 | [Mạch điện một chiều](/vat-ly-2/bai-giang/06-mach-dien-mot-chieu.md) | 844–877 | Chưa dịch |
+| 27 | [Từ trường và lực từ](/vat-ly-2/bai-giang/07-tu-truong-luc-tu.md) | 878–917 | Chưa dịch |
+| 28 | [Nguồn của từ trường](/vat-ly-2/bai-giang/08-nguon-tu-truong.md) | 918–952 | Chưa dịch |
+| 29 | [Cảm ứng điện từ](/vat-ly-2/bai-giang/09-cam-ung-dien-tu.md) | 953–987 | Chưa dịch |
+| 30 | [Điện cảm](/vat-ly-2/bai-giang/10-tu-cam.md) | 988–1017 | Chưa dịch |
+| 31 | [Dòng điện xoay chiều](/vat-ly-2/bai-giang/11-dong-dien-xoay-chieu.md) | 1018–1047 | Chưa dịch |
+| 32 | [Sóng điện từ](/vat-ly-2/bai-giang/12-song-dien-tu.md) | 1048–1076 | Chưa dịch |
+| 33 | [Bản chất và sự truyền ánh sáng](/vat-ly-2/bai-giang/13-truyen-anh-sang.md) | 1077–1109 | Chưa dịch |
+| 34 | [Quang hình học](/vat-ly-2/bai-giang/14-quang-hinh-hoc.md) | 1110–1158 | Chưa dịch |
+| 35 | [Giao thoa](/vat-ly-2/bai-giang/15-giao-thoa.md) | 1159–1184 | Chưa dịch |
+| 36 | [Nhiễu xạ](/vat-ly-2/bai-giang/16-nhieu-xa.md) | 1185–1216 | Chưa dịch |
+| 37 | [Thuyết tương đối](/vat-ly-2/bai-giang/17-thuyet-tuong-doi.md) | 1217–1252 | Chưa dịch |
+| 38 | [Photon: tính hạt của sóng ánh sáng](/vat-ly-2/bai-giang/18-photon.md) | 1253–1278 | Chưa dịch |
+| 39 | [Tính sóng của hạt](/vat-ly-2/bai-giang/19-song-vat-chat.md) | 1279–1320 | Chưa dịch |
+| 40 | [Cơ học lượng tử I: Hàm sóng](/vat-ly-2/bai-giang/20-ham-song-schrodinger.md) | 1321–1359 | Chưa dịch |
+| 41 | [Cơ học lượng tử II: Cấu trúc nguyên tử](/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu.md) | 1360–1407 | Chưa dịch |
+| 42 | [Phân tử và vật chất ngưng tụ](/vat-ly-2/bai-giang/22-chat-ran-ban-dan.md) | 1408–1441 | Chưa dịch |
+| 43 | [Vật lý hạt nhân](/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md) | 1442–1482 | Chưa dịch |
+| 44 | [Vật lý hạt và vũ trụ học](/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru.md) | 1483–1524 | Chưa dịch |
