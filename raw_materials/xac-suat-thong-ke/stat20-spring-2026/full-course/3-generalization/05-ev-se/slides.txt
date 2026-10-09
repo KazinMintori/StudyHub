@@ -1,0 +1,106 @@
+Expected Value and Variance
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+−+
+01:00
+
+[MATH] \(T\) is a random variable with the distribution shown below:
+
+[MATH] \[
+T = \begin{cases}
+3, \; \text{ with prob } 1/3\\
+4, \; \text{ with prob } 1/4\\
+5, \; \text{ with prob } 5/12
+\end{cases}
+\]
+
+Consider the box with tickets: 
+[MATH] \(\fbox{3}\, \fbox{3}\, \fbox{3} \,\fbox{4}  \,\fbox{4} \,\fbox{4} \,\fbox{4} \,\fbox{5} \,\fbox{5}\, \fbox{5} \,\fbox{5} \,\fbox{5}\)
+
+Suppose we draw once from this box and let 
+[MATH] \(U\) be the value of the ticket drawn. Which random variable has a higher expected value?
+
+The expected value of 
+[MATH] \(T\) is ____ the expected value of 
+[MATH] \(U\).
+
+This is a reading question. Note that the pmf implied by the box is not the same as the given pmf. In the box, 4 has a higher probability, so the average is higher. They do not need to actually do the computation. At this point, ask them what box would they use so that if 
+[MATH] \(T\) is the value of a randomly selected ticket, the distribution of 
+[MATH] \(T\) is exactly the distribution shown here.
+
+−+
+03:00
+
+A prof notices that Zoom office hours are not too crowded this semester. She observes that a random variable 
+[MATH] \(X\) representing the number of Stat 20 students coming to her Thursday office hours has a Poisson(2) distribution. Furthermore, there is one Data 88 student from a previous semester who is always there (they want a letter of recommendation).
+
+Let 
+[MATH] \(V\) be the total number of students in her Zoom office hours. What is the expected value and variance of 
+[MATH] \(V\)?
+
+This is also a reading question, with < 50% getting it right. Let 
+[MATH] \(X\) be the number of Stat 20 students who go to the office hours. Then 
+[MATH] \(E(X) = 2 = Var(X)\). But the number of students in the office is 
+[MATH] \(X+1\) since that one student is always there. 
+[MATH] \(E(X+1) = 2+1 = 3\) and 
+[MATH] \(Var(X+1) = Var(X) = 2\)
+
+−+
+01:00
+
+Let 
+[MATH] \(X\) be a discrete uniform random variable on the set 
+[MATH] \(\{-1, 0, 1\}\).
+
+If 
+[MATH] \(Y=X^2\), what is 
+[MATH] \(E(Y)\) and 
+[MATH] \(Var(Y)\)?
+
+−+
+01:00
+
+The minimum function 
+[MATH] \(\min(a,b)\) takes in two numbers 
+[MATH] \(a\) and 
+[MATH] \(b\) and outputs the smallest of the two. Let 
+[MATH] \(X\) be a discrete uniform random variable on the set 
+[MATH] \(\{-1, 0, 1\}\).
+
+If 
+[MATH] \(W = \min(X, 0.5)\), what is 
+[MATH] \(E(W)\)?
+
+begin by asking them what is What is 
+[MATH] \(E(X)\)? And pointing out that if we have a symmetric distribution then EX is in the middle. Emphasize the idea of it being a “typical” value and an average or a mean. This is so they practice computing the EV of a function of a rv. Have them make a table (or perhaps you draw a table) of 
+[MATH] \(X\), 
+[MATH] \(Y\), 
+[MATH] \(W\) and 
+[MATH] \(f(x)\)
+
+Problem Set: Expected Value and Variance
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 7: Elections
+
+  
+    −
+    +
+
+ 25:00

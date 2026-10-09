@@ -1,0 +1,518 @@
+Probability Foundations
+
+Definitions, axioms, and examples
+
+    
+
+    
+
+  
+
+In order to be taken seriously, we need to be careful about how we collect data, and then how we generalize our findings. For example, you may have observed that some polling companies are more successful than others in their estimates and predictions, and consequently people pay more attention to them. Below is a snapshot of rankings of polling organizations from the well-known website FiveThirtyEight1, and one can imagine that not many take heed of the polling done by the firms with C or worse grades. According to the website, the rankings are based on the polling organization’s ``historical accuracy and methodology”.
+
+In order to make estimates as these polling organizations are doing, or understand the results of a clinical trial, or other such questions in which we generalize from our data sample to a larger group, we have to understand the variations in data introduced by randomness in our sampling methods. Each time we poll a different group of voters, for example, we will get a different estimate of the proportion of voters that will vote for Joe Biden in the next election. To understand variation, we first have to understand how probability was used to collect the data.
+
+Since classical probability came out of gambling games played with dice and coins, we can begin our study by thinking about those.
+
+De Méré’s Paradox
+
+In 17th century France, gamblers would bet on anything. In particular, they would bet on a fair six-sided die landing 6 at least once in four rolls. Antoine Gombaud, aka the Chevalier de Méré, was a gambler who also considered himself something of a mathematician. He computed the chance of a getting at least one six in four rolls as 2/3 
+[MATH] \((4 \times (1/6) = 4/6)\). He won quite often by betting on this event, and was convinced his computation was correct. Was it?
+
+The next popular dice game was betting on at least one double six in twenty-four rolls of a pair of dice. De Méré knew that there were 36 possible outcomes when rolling a pair of dice, and therefore the chance of a double six was 1/36. Using this he concluded that the chance of at least one double six in 24 rolls was the same as that of at least one six in four rolls, that is, 2/3 (
+[MATH] \(24 \times 1/36\)). He happily bet on this event (at least one double six in 24 rolls) but to his shock, lost more often than he won! What was going on?
+
+We will see later how to compute this probability, but for now we can estimate the value by simulating the game many times (1000 times each) and looking at the proportion of times we see at least one six in 4 rolls of a fair die, and do the same with at least one double six in 24 rolls.
+
+Number of simulations = 1000
+
+  prop_wins_game_1
+1            0.514
+
+  prop_wins_game_2
+1            0.487
+
+You can see here that the poor Chevalier wasn’t as good a mathematician as he imagined himself to be, and didn’t compute the chances correctly. The simulated probabilities are nowhere close to 4/6 and 2/3, the probabilities that he computed for the first and second game, respectively.
+
+By the end of this unit, you’ll be able to conduct simulations like these yourself in R! For today, we are going to begin by introducing the conceptual building blocks behind probability.
+
+Basics
+
+First, let’s establish some terminology:
+
+Experiment
+
+An action, involving chance, that can result in a finite number of possible outcomes (results of the experiment). For example, a coin toss is an experiment, and the possible outcomes are the coin landing heads or tails.
+
+Outcome space
+
+This is just a set. It is the collection of all the possible outcomes of an experiment is called an outcome space or sample space, and we denote it by the upper case Greek letter 
+[MATH] \(\Omega\) (``Omega”). For example, if we toss a coin, then the corresponding outcome space is 
+[MATH] \(\Omega = \{\text{Heads, Tails}\}\). If we roll a die, then the corresponding outcome space 
+[MATH] \(\Omega = \{1, 2, 3, 4, 5, 6\}\). We will denote a set by enclosing the elements of the set in braces: 
+[MATH] \(\{ \}\).
+
+Event
+
+A collection of outcomes as a result of the experiment being performed, perhaps more than once. For example, we could toss a coin twice, and consider the event of both tosses landing heads. We usually denote events by upper case letters from the beginning of the alphabet: 
+[MATH] \(A, B, C, \ldots\). An event is a subset of the outcome space, and we denote this by writing 
+[MATH] \(A \subset \Omega\).
+
+P(A)
+
+For any event 
+[MATH] \(A\), we write the probability of 
+[MATH] \(A\) as 
+[MATH] \(P(A)\).
+
+Equally likely outcomes
+
+When all the possible outcomes in a finite outcome space of size 
+[MATH] \(n\) happen with the same probability, which is 
+[MATH] \(\displaystyle \frac{1}{n}\).
+
+Let’s say that there are 
+[MATH] \(n\) possible outcomes in the outcome space 
+[MATH] \(\Omega\), and an event 
+[MATH] \(A\) has 
+[MATH] \(k\) possible outcomes out of those 
+[MATH] \(n\). If all the outcomes are equally likely to happen (as in a die roll or coin toss), then we say that the probability of 
+[MATH] \(A\) occuring is 
+[MATH] \(\displaystyle \frac{k}{n}\).
+
+[MATH] \[
+P(A) = \frac{k}{n}
+\]
+
+Example: Tossing a fair coin
+
+Suppose we toss a fair coin, and I ask you what is the chance of the coin landing heads. Like most people, you reply 50%. Why? Well… (you reply) there are two possible things that can happen, and if the coin is fair, then they are both equally likely, so the probability of heads is 1/2 or 50%.
+
+Here, we have thought about an event (the coin landing heads), seen that there is one outcome in that event, and two (equally likely) outcomes in the outcome space, so we say the probability of the event, 
+[MATH] \(P(\text{Heads})\), is 1/2.
+
+Example: Tossing a fair six-sided die2
+
+Consider rolling a fair six-sided die: six outcomes are possible so 
+[MATH] \(\Omega = \{1, 2, 3, 4, 5, 6\}\). Since the die is fair, each outcome is equally likely, with probability 
+[MATH] \(= \displaystyle \frac{1}{6}\). We can list the outcomes and their probabilities in a table.
+
+Outcome
+
+[MATH] \(1\)
+
+[MATH] \(2\)
+
+[MATH] \(3\)
+
+[MATH] \(4\)
+
+[MATH] \(5\)
+
+[MATH] \(6\)
+
+Probability
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+[MATH] \(\displaystyle \frac{1}{6}\)
+
+Let 
+[MATH] \(A\) be the event that an even number is rolled. Then the set 
+[MATH] \(A\) can be written 
+[MATH] \(\{2,4,6\}\). Since all of these outcomes are equally likely:
+
+[MATH] \[P(A) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = \frac{3}{6}\]
+
+Axioms of probability
+
+In order to compute the probabilities of events, we need to set some basic mathematical rules called axioms (which are intuitively clear if you think of the probability of an event as the proportion of the outcomes that are in it). There are three basic rules that will help us compute probabilities:
+
+Axiom 1
+
+The chance of any event is at least 
+[MATH] \(0\): 
+[MATH] \(P(A) \ge 0\) for any event 
+[MATH] \(A\). In other words, there are no negative probabilities.
+
+Axiom 2
+
+The chance of an outcome being in 
+[MATH] \(\Omega\) is 
+[MATH] \(1\): 
+[MATH] \(P(\Omega) = 1\). This is true because we can consider that the probability of 
+[MATH] \(\Omega\) is the number of outcomes in 
+[MATH] \(\Omega\) divided by 
+[MATH] \(n\), which is 
+[MATH] \(n/n = 1\).
+
+Before we write the third rule, we need some more definitions and notation:
+
+Impossible event
+
+An event with no outcomes in it. Denoted by either empty braces 
+[MATH] \(\{\}\) or the symbol for the empty set 
+[MATH] \(\emptyset\). The probability of the impossible event is 
+[MATH] \(0\).
+
+For example, if you roll a standard 6-sided die, the event of “rolling an 8” is impossible. There is no 8 anywhere on a standard die, so 8 is not in the outcome space.
+
+Union of events
+
+Given events 
+[MATH] \(A\), 
+[MATH] \(B\), we can define a new event called 
+[MATH] \(A\) or 
+[MATH] \(B\), which consists of all the outcomes that are either in 
+[MATH] \(A\) or in 
+[MATH] \(B\) or in both. This is also written as 
+[MATH] \(A \cup B\), read as ``
+[MATH] \(A\) union 
+[MATH] \(B\)’’.
+
+Example: let’s say you roll a standard 6-sided die, and define these two events:
+
+[MATH] \(A = \{1,2,3\}\) (the roll is 3 or less)
+
+[MATH] \(B = \{1,3,5\}\) (the roll is odd)
+
+Then the event 
+[MATH] \(A \cup B = \{1,2,3,5\}\).
+
+Put differently, in order for a die roll to be 3-or-less, odd, or both, we need to roll a 1, 2, 3, or 5.
+
+Intersection of events
+
+Given events 
+[MATH] \(A\), 
+[MATH] \(B\), we can define a new event called 
+[MATH] \(A\) and 
+[MATH] \(B\), which consists of all the outcomes that are both in 
+[MATH] \(A\) and in 
+[MATH] \(B\). This is also written as 
+[MATH] \(A \cap B\), read as ``
+[MATH] \(A\) intersect 
+[MATH] \(B\)’’.
+
+Same example: let’s say you roll a standard 6-sided die, and define these two events:
+
+[MATH] \(A = \{1,2,3\}\) (the roll is 3 or less)
+
+[MATH] \(B = \{1,3,5\}\) (the roll is odd)
+
+Then the event 
+[MATH] \(A \cap B = \{1,3\}\). These are the only outcomes in both events.
+
+Put differently, in order for a die roll to be both odd and 3-or-less, we need to roll a 1 or a 3.
+
+Now we consider events that don’t intersect or overlap at all, that is, they are disjoint from each other, or mutually exclusive:
+
+Mutually exclusive events
+
+If two events 
+[MATH] \(A\) and 
+[MATH] \(B\) do not overlap–that is, they have no outcomes in common–we say that the events are mutually exclusive.
+
+A die roll cannot be both even and odd at the same time. A single coin flip cannot be both heads and tails. Such events are mutually exclusive.
+
+If 
+[MATH] \(A\) and 
+[MATH] \(B\) are mutually exclusive, then we know that if one of them happens, the other one cannot. If a die roll is even, then it is definitely not odd. We denote this by writing 
+[MATH] \(A \cap B = \emptyset\) and read this as 
+[MATH] \(A\) intersect 
+[MATH] \(B\) is empty. Therefore, we have that
+
+[MATH] \[P(A \cap B) = P(\emptyset) = 0\]
+
+The event that a die roll is even 
+[MATH] \(\{2,4,6\}\) and the event that a die roll is odd 
+[MATH] \(\{1,3,5\}\) are mutually exclusive. They have no outcomes in common, and therefore cannot both happen.
+
+However, the event that a die roll is even 
+[MATH] \(\{2,4,6\}\) and the event that a die roll is a prime number 
+[MATH] \(\{2,3,5\}\) are not mutually exclusive. The number 2 is both even and prime, so both events could happen.
+
+Here’s another example that might interest soccer fans: The event that Manchester City wins the English Premier League (EPL) in 2026, and the event that Liverpool wins the EPL in 2026 are mutually exclusive, but the events that Manchester City are EPL champions in 2026 and Liverpool are EPL champions in 2027 are not mutually exclusive.
+
+Now for the third axiom:
+
+Axiom 3
+
+If 
+[MATH] \(A\) and 
+[MATH] \(B\) are mutually exclusive (
+[MATH] \(A \cap B = \emptyset\)), then
+
+[MATH] \[P(A \cup B) = P(A) + P(B)\]
+
+That is, for two mutually exclusive events, the probability that either of the two events might occur is the sum of their probabilities. This is called the addition rule.
+
+For example, consider rolling a fair six-sided die, and the two events 
+[MATH] \(A\) and 
+[MATH] \(B\), where 
+[MATH] \(A\) is the event of rolling a multiple of 
+[MATH] \(5\), and 
+[MATH] \(B\) is the event that we roll a multiple of 
+[MATH] \(2\).
+
+The only outcome in 
+[MATH] \(A\) is 
+[MATH] \(\{5\}\), while 
+[MATH] \(B\) has 
+[MATH] \(\{2, 4, 6\}\). 
+[MATH] \(P(A) = 1/6\), and 
+[MATH] \(P(B) = 3/6\). Since 
+[MATH] \(A \cap B =\emptyset\), that is, 
+[MATH] \(A\) and 
+[MATH] \(B\) have no outcomes in common, we have that
+
+[MATH] \[P(A \cup B) = P(A) + P(B) = \frac{1}{6} + \frac{3}{6} = \frac{4}{6}\]
+
+You can only add probabilities like this IF the events are mutually exclusive. Why? Consider:
+
+Event A: a die roll is 2 or higher.
+
+That is, 
+[MATH] \(A = \{2,3,4,5,6\}\)
+
+So 
+[MATH] \(P(A) = 5/6\)
+
+Event B: a die roll is 4 or lower.
+
+That is, 
+[MATH] \(B = \{1,2,3,4\}\)
+
+So 
+[MATH] \(P(B) = 4/6\)
+
+These events are NOT mutually exclusive. They can both happen if we roll a 2, 3, or 4.
+
+If you try to compute 
+[MATH] \(P(A \cup B)\) (“A or B”) by adding 
+[MATH] \(P(A) + P(B)\), you get 
+[MATH] \(5/6 + 4/6 = 9/6\) which is 150%. You can’t have a > 100% chance of anything happening! (See Axiom 2).
+
+Why didn’t this work? Well, you’ve double-counted the numbers that satisfy both events (2, 3, and 4). You can only add probabilities directly if you have nothing to double-count, which only happens when the events are mutually exclusive.
+
+The complement rule
+
+Here is an important consequence of axiom 3. Let 
+[MATH] \(A\) be an event in 
+[MATH] \(\Omega\). The complement of 
+[MATH] \(A\), written as 
+[MATH] \(A^C\), consists of all those outcomes in 
+[MATH] \(\Omega\) that are not in 
+[MATH] \(A\). Then we have the following rule:
+
+[MATH] \[P(A) + P(A^C) =  1\]
+
+Any event will either happen (
+[MATH] \(A\)) or it won’t (
+[MATH] \(A^C\)). One of those has to be true. A coin flip has to be either Heads or “not Heads.” This is because 
+[MATH] \(A  \cup A^C = \Omega\), and 
+[MATH] \(A  \cap A^C \emptyset\)).
+
+It may feel silly, but this is a surprisingly useful rule. Sometimes a probability is really hard to calculate, but its complement is easy to calculate. So you calculate the complement instead, and subtract from 1.
+
+An example with the axioms: penguins
+
+Consider the penguins dataset, which has 344 observations, of which 152 are Adelie penguins and 68 are Chinstrap penguins. Suppose we pick a penguin at random, what is the probability that we would pick an Adelie penguin? What about a Gentoo penguin?
+
+Check your answer
+
+Let 
+[MATH] \(A\) be the event of picking an Adelie penguin, 
+[MATH] \(C\) be the event of picking a Chinstrap penguin, and 
+[MATH] \(G\) be the event of picking a Gentoo penguin.
+
+Assuming that all the penguins are equally likely to be picked, we see that then 
+[MATH] \(P(A) = 152/344\), and 
+[MATH] \(P(C) = 68/344\).
+
+Since only one penguin is picked, we see that 
+[MATH] \(A, C\), and 
+[MATH] \(G\) are mutually exclusive. This means that 
+[MATH] \(P(A)+P(C)+P(G) = 1\), since 
+[MATH] \(A, C\), and 
+[MATH] \(G\) together make up all of 
+[MATH] \(\Omega\).
+
+Therefore the complement of 
+[MATH] \(G\), 
+[MATH] \(G^C\), which is a penguin that is not Gentoo, consists of Adelie and Chinstrop penguins, and by the addition rule,
+
+[MATH] \[P(G^C) = P(A \cup C) = P(A) + P(C) = (152+68)/344 = 220/344\]
+
+Finally, the complement rule tells us that
+
+[MATH] \[P(G) = 1 - P(G^C) = 1 - 220/344 = 124/344\].
+
+ImportantWARNING!!
+
+We use 
+[MATH] \(A\) to denote an event or a set, while P(A) is a number - you can think of 
+[MATH] \(P(A)\) as representing the relative size of 
+[MATH] \(A\). This means that the following types of statements don’t make sense as we haven’t defined what it means to add sets or union numbers etc.:
+
+[MATH] \(P(A) \cup P(B)\) or 
+[MATH] \(P(A) \cap P(B)\)
+
+[MATH] \(A + B\), or 
+[MATH] \(A - B\), or 
+[MATH] \(A \times B\) etc
+
+Venn Diagrams
+
+We often represent events using Venn diagrams. The outcome space 
+[MATH] \(\Omega\) is usually represented as a rectangle, and events are represented as circles inside 
+[MATH] \(\Omega\). Remember, 
+[MATH] \(\Omega\) is literally everything that could possibly happen. Here is a Venn diagram showing two events 
+[MATH] \(A\) and 
+[MATH] \(B\), their intersection, and their union:
+
+Here is a Venn diagram showing two mutually exclusive events (no overlap):
+
+Further examples
+
+1. Tossing a fair coin
+
+Suppose we toss a coin twice and record the equally likely outcomes. What is 
+[MATH] \(\Omega\)? What is the chance of at least one head?
+
+Solution: 
+[MATH] \(\Omega = \{HH, HT, TH, TT\}\), where 
+[MATH] \(H\) represents the coin landing heads, and 
+[MATH] \(T\) represents the coin landing tails. Note that since we can get exactly one head and one tail in two ways, we have to write out both ways so that all the outcomes are equally likely.
+
+Now, let 
+[MATH] \(A\) be the event of getting at least one head in two tosses. We can do this by listing the outcomes in 
+[MATH] \(A\): 
+[MATH] \(A = \{HH, HT, TH\}\) and so 
+[MATH] \(P(A) = 3/4\).
+
+Alternatively, we can consider 
+[MATH] \(A^C\) which is the event of no heads, so 
+[MATH] \(A^C = \{TT\}\) and 
+[MATH] \(P(A^C) = 1/4\).
+
+In this case, 
+[MATH] \(P(A) = 1- P(A^C) = 1-1/4 = 3/4\).
+
+Now you try: Let 
+[MATH] \(\Omega\) be the outcome space of tossing a coin three times. What is the probability of at least one head? What about exactly one head?
+
+Check your answer
+
+[MATH] \(\Omega = \{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT \}\).
+
+Let 
+[MATH] \(A\) be the event of at least one head. Then 
+[MATH] \(A^C\) is the event of no heads, so 
+[MATH] \(A^C = \{TTT\}\), and 
+[MATH] \(P(A^C) = 1/8\). Therefore 
+[MATH] \(P(A) = 1-1/8 = 7/8\). Note that this is much quicker than listing and counting the outcomes in 
+[MATH] \(A\).
+
+If 
+[MATH] \(B\) is the event of exactly one head, then 
+[MATH] \(B = \{HTT, THT, TTH\}\) and 
+[MATH] \(P(B) = 3/8\).
+
+2. A box of tickets
+
+Consider the box above which has five almost identical tickets. The only difference is the value written on them. Imagine that we shake the box to mix the tickets up, and then draw one ticket without looking so that all the tickets are equally likely to be drawn3.
+
+What is the chance of drawing an even number?
+
+Check your answer
+
+Solution:
+
+Let 
+[MATH] \(A\) be the event of drawing an even number, then 
+[MATH] \(A = \{2, 2, 4\}\): we list 2 twice because there are two tickets marked 2, making it twice as likely as any other number. 
+[MATH] \(P(A) = 3/5\)
+
+3. Tossing a biased coin
+
+Suppose I have a coin that is twice as likely to land heads as it is to land tails. This means that I cannot represent 
+[MATH] \(\Omega\) as 
+[MATH] \(\{H, T\}\) since heads and tails are not equally likely. How should I write 
+[MATH] \(\Omega\) so that the outcomes are equally likely?
+
+Check your answer
+
+Solution:
+
+In this case, we want to represent equally likely outcomes, and want 
+[MATH] \(H\) to be twice as likely as 
+[MATH] \(T\). We can therefore represent 
+[MATH] \(\Omega\) as 
+[MATH] \(\{H, H, T \}\). Now the chance of the coin landing 
+[MATH] \(H\) can be written as 
+[MATH] \(P(A)\) where 
+[MATH] \(A\) is the event the coin lands 
+[MATH] \(H\) is given by 2/3.
+
+Suppose we toss the coin twice. How would we list the outcomes so that they are equally likely? Now we have to be careful, and think about all the things that can happen on the second toss if we have 
+[MATH] \(H\) on the first toss.
+
+This is much easier to imagine if we imagine drawing twice from a box of tickets, but putting the first ticket back before drawing the second (to represent the fact that the probabilities of landing 
+[MATH] \(H\) or 
+[MATH] \(T\) stay the same on the second toss.)
+
+Now, imagine the box of tickets that represents 
+[MATH] \(\Omega\) to be 
+[MATH] \(\fbox{H, H, T}\). We draw one ticket at first, which could be one of three tickets (there are two tickets that could be 
+[MATH] \(H\), and one 
+[MATH] \(T\)). We can represent it using the following picture:
+
+From this picture, where we use color to distinguish the two different outcomes of heads and one outcome of tails, we can see that there are 9 possible outcomes that are equally likely, and we get the following probabilities (where 
+[MATH] \(HT\), for example, represents the event that the first toss is heads, followed by the second toss being tails.)
+
+[MATH] \(P(HH) = 4/9,\; P(HT) = P(TH) = 2/9, P(TT) = 1/9\) (Check that the probabilities sum to 1!)
+
+WarningAsk yourself
+
+What box would we use if the coin is not a fair coin, but lands heads 
+[MATH] \(5\) out of 
+[MATH] \(6\) times?
+
+4. Betting on red in roulette
+
+An American roulette wheel has 38 pockets4, of which 18 are red, 18 black, and 2 are green. The wheel is spun, and a small ball is thrown on the wheel so that it is equally likely to land in any of the 38 pockets. Players bet on which colored or numbered pocket the ball will come to rest in. If you bet one dollar that the ball will land on red, and it does, you get your dollar back, and you win one more dollar, so your net gain is $1. If it doesn’t, and lands on a black or green number, you lose your dollar, and your net “gain” is -$1.
+
+What is the chance that we will win one dollar on a single spin of the wheel?
+
+Hint Write out the chance of the ball landing in a red pocket, and not landing in a red pocket.
+
+Summary
+
+In this lecture, we introduced equally likely outcomes,and defined the outcome space of an experiment.
+
+Then, using equally likely outcomes, we defined the probability of an event as the ratio of the number of outcomes in the event to the number of total outcomes in the outcome space.
+
+We wrote down the axioms (fundamental rules) of probability, after defining unions, intersections, and mutually exclusive events and Venn diagrams.
+
+Continue on to the tutorial portion of the notes 
+
+Footnotes
+
+This website was begun as poll aggregation site, by the statistician Nate Silver.↩︎
+
+The singular is die and the plural is dice. If we use the word “die” without any qualifiers, we will mean a fair, six-sided die.↩︎
+
+We call the tickets equally likely when each ticket has the same chance of being drawn. That is, if there are 
+[MATH] \(n\) tickets in the box, each has a chance of 
+[MATH] \(1/n\) to be drawn. We also refer to this as drawing a ticket uniformly at random, because the chance of drawing the tickets are the same, or uniform.↩︎
+
+Photo via unsplash.com↩︎

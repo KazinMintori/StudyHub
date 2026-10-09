@@ -1,4 +1,5 @@
 import { physics1Course, physics2Course } from './physics-courses.mjs'
+import { dataProcessingCourse } from './data-processing-course.mjs'
 import { mathAiCourse } from './math-ai-course.mjs'
 const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
@@ -86,49 +87,14 @@ export const courseCatalog = [
       slide('Suy rộng cần căn cứ cho việc mở rộng phạm vi', ['Suy rộng dùng dữ liệu quan sát để phát biểu về một tập đối tượng lớn hơn.', 'Đổi “người trả lời khảo sát” thành “sinh viên toàn trường” làm thay đổi phạm vi kết luận.', 'Cần xem cách chọn mẫu và ai đã trả lời trước khi đánh giá kết luận.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Dùng khảo sát một lớp học để phát biểu rằng 70% sinh viên toàn trường chưa có kinh nghiệm viết mã máy tính là suy rộng.'),
       slide('Kết luận nhân quả đặt câu hỏi về can thiệp', ['Một biến mô tả một đặc điểm có thể nhận các giá trị khác nhau.', 'Kết luận nhân quả khẳng định rằng thay đổi một biến ảnh hưởng đến biến khác.', 'Chỉ quan sát hai biến cùng thay đổi chưa đủ để kết luận nhân quả.'], '00-hieu-the-gioi-bang-du-lieu', '', '“Dữ liệu từ thí nghiệm ngẫu nhiên có đối chứng cho thấy dùng một loại kháng sinh mới loại bỏ hơn 99% các ca nhiễm khuẩn” là phát biểu nhân quả.'),
       slide('Dự đoán một giá trị chưa biết', ['Dự đoán dùng các biến đã biết để đoán giá trị của biến chưa biết.', 'Giá trị chưa biết có thể ở tương lai hoặc đã tồn tại nhưng chưa được quan sát.', 'Phân loại một phát biểu chưa chứng minh rằng dự đoán ấy chính xác.'], '00-hieu-the-gioi-bang-du-lieu', '', '“Dựa trên tin tức và giá cổ phiếu Uber hôm nay, tôi dự đoán giá ngày mai tăng 1,2%” là dự đoán.'),
-      slide('Đối tượng và câu hỏi quyết định loại phát biểu', ['Xác định dữ liệu thực sự được ghi nhận trên những đối tượng nào.', 'So sánh tập đối tượng trong kết luận với tập đã quan sát.', 'Xác định phát biểu nói về tác động của can thiệp hay về một giá trị chưa biết.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Trong khảo sát giả định, 7 trong 10 người trả lời chiếm 70%. Phạm vi kết luận quyết định đây là mô tả mẫu hay suy rộng về toàn trường.'),
+      slide('Đối tượng và câu hỏi quyết định loại phát biểu', ['Xác định dữ liệu thực sự được ghi nhận trên những đối tượng nào.', 'So sánh tập đối tượng trong kết luận với tập đã quan sát.', 'Xác định phát biểu nói về tác động của can thiệp hay về một giá trị chưa biết.'], '00-hieu-the-gioi-bang-du-lieu', '', 'Trong một khảo sát, 7 trong 10 người trả lời chiếm 70%. Phạm vi kết luận quyết định đây là mô tả mẫu hay suy rộng về toàn trường.'),
       slide('Xác suất có điều kiện thay đổi miền xét', ['P(A|B) thu hẹp việc xét kết quả về biến cố B.', 'Hai biến cố độc lập không làm thay đổi xác suất của nhau.', 'Độc lập khác với loại trừ nhau.'], '01-xac-suat-va-bayes', "$$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},\\qquad P(B)>0$$"),
       slide('Bayes cập nhật từ quan sát', ['Prior là xác suất trước quan sát.', 'Likelihood là mức phù hợp của quan sát khi giả thuyết đúng.', "Để tính posterior, tức xác suất sau quan sát, cần xét khả năng xuất hiện quan sát dưới các giả thuyết khác nhau."], '01-xac-suat-va-bayes', "$$P(A\\mid B)=\\frac{P(B\\mid A)P(A)}{P(B)}$$"),
       slide('Phân phối mô tả một biến ngẫu nhiên', ['PMF cho xác suất tại từng giá trị của biến rời rạc.', "PDF biểu diễn mật độ, còn xác suất trên một khoảng được tính bằng tích phân mật độ.", "$CDF F(x)=P(X\\le x)$ dùng được cho cả rời rạc và liên tục."], '02-bien-ngau-nhien'),
       slide('Trung tâm, độ phân tán và mẫu', ['Kỳ vọng là trung bình theo xác suất, có thể không là giá trị quan sát được.', "Phương sai đo mức phân tán bằng bình phương độ lệch, còn độ lệch chuẩn có cùng đơn vị với dữ liệu.", 'Thống kê mẫu ước lượng tham số tổng thể và phụ thuộc cách lấy mẫu.'], '03-ky-vong-phuong-sai', "$$\\operatorname{Var}(X) = \\mathbb E[X^{2}] - \\mathbb E[X]^{2}$$")
     ], illustration: 'bayes'
   },
-  {
-    id: 'xu-ly-du-lieu', code: '04', name: 'Lập trình xử lý dữ liệu', short: 'Xử lý dữ liệu', current: true,
-    description: 'Đọc và biến đổi dữ liệu bằng Python, NumPy và pandas một cách có kiểm chứng.',
-    foundations: ['bien-kieu', 'list', 'dictionary', 'ham-lap-trinh', 'vong-lap', 'mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'],
-    parts: [
-      {
-        title: 'Phần 1. Môi trường và ngôn ngữ Python',
-        description: 'Thiết lập quy trình phân tích dữ liệu, kiểu dữ liệu cốt lõi, hàm và cấu trúc điều khiển.',
-        lessons: ['bai-01-tong-quan-cong-cu-chinh-sach-ai', 'bai-02-python-co-ban']
-      },
-      {
-        title: 'Phần 2. Tính toán vector với NumPy',
-        description: 'Mảng nhiều chiều ndarray, bộ nhớ liên tục, ufunc và cơ chế broadcasting.',
-        lessons: ['bai-03-numpy']
-      },
-      {
-        title: 'Phần 3. Thao tác và phân tích dữ liệu với pandas',
-        description: 'Cấu trúc Series, DataFrame, lọc theo nhãn/vị trí, xử lý giá trị thiếu và gom nhóm GroupBy.',
-        lessons: ['bai-04-lam-quen-pandas', 'bai-05-series-dataframe-chuyen-sau']
-      }
-    ],
-    lessons: [
-      lesson('bai-01-tong-quan-cong-cu-chinh-sach-ai', 'Tổng quan, công cụ & quy trình học', ['bien-kieu', 'ham-lap-trinh']),
-      lesson('bai-02-python-co-ban', 'Python cơ bản cho xử lý dữ liệu', ['bien-kieu', 'list', 'dictionary', 'vong-lap', 'ham-lap-trinh']),
-      lesson('bai-03-numpy', 'NumPy & tư duy vector hóa', ['mang', 'chi-muc', 'con-tro', 'vector-hoa', 'broadcasting']),
-      lesson('bai-04-lam-quen-pandas', 'Làm quen với pandas', ['chi-muc', 'dictionary', 'gia-tri-thieu']),
-      lesson('bai-05-series-dataframe-chuyen-sau', 'Series & DataFrame chuyên sâu', ['chi-muc', 'gia-tri-thieu', 'ky-vong', 'phuong-sai'])
-    ],
-    slides: [
-      slide('Một quy trình phân tích có thể kiểm tra', ['Xác định câu hỏi trước khi chọn công cụ.', 'Giữ nguồn dữ liệu, môi trường và các bước biến đổi để tái lập kết quả.', "Người dùng cần đọc và kiểm tra code sinh ra vì vẫn chịu trách nhiệm về kết luận."], 'bai-01-tong-quan-cong-cu-chinh-sach-ai'),
-      slide('Python: kiểu, dãy và hàm', ['Phân biệt số, chuỗi, Boolean và container.', "Chỉ mục bắt đầu từ 0 và lát cắt theo vị trí không lấy phần tử ở điểm stop.", 'return cho kết quả để dùng tiếp, khác với print.'], 'bai-02-python-co-ban'),
-      slide('NumPy: đọc shape trước khi tính', ["dtype quy định kiểu lưu và độ chính xác, vì vậy cần xét cả nguy cơ tràn số.", 'Vector hóa thao tác trên mảng, tránh nhiều vòng lặp Python.', "Broadcasting so kích thước các trục từ cuối. Còn khi làm việc với view, cần nhớ rằng dữ liệu có thể dùng chung với mảng gốc."], 'bai-03-numpy'),
-      slide('pandas: nhãn khác vị trí', ["Series là cấu trúc một chiều có nhãn, còn DataFrame là bảng hai chiều.", 'loc theo nhãn, iloc theo vị trí số nguyên.', 'Đọc kiểu cột và giá trị thiếu trước khi lọc hoặc tổng hợp.'], 'bai-04-lam-quen-pandas'),
-      slide('Đừng để phép tổng hợp che mất dữ liệu', ['groupby tách nhóm rồi áp dụng tổng hợp hoặc biến đổi.', 'Phân biệt số hàng, số giá trị không thiếu và số giá trị duy nhất.', 'Kiểm tra nhãn, kiểu và ý nghĩa của kết quả sau mỗi chuỗi biến đổi.'], 'bai-05-series-dataframe-chuyen-sau')
-    ], illustration: 'broadcast'
-  },
+  dataProcessingCourse,
   physics1Course,
   physics2Course,
   {
@@ -205,7 +171,8 @@ export const courseCatalog = [
       slide('Đánh giá chi phí trước khi tối ưu code', ['Xác định kích thước đầu vào n.', 'Đếm thao tác chủ đạo và bộ nhớ phụ.', 'Nêu trường hợp đang xét và đừng coi Big-O là số giây thực tế.'], 'complexity'),
       slide('Sắp xếp: chọn theo bối cảnh', ['Insertion Sort phù hợp dữ liệu nhỏ hoặc gần có thứ tự.', 'Merge Sort có O(n log n) nhưng cần bộ nhớ phụ tùy cách cài đặt.', "Quick Sort trung bình nhanh. Lựa chọn pivot ảnh hưởng trường hợp xấu."], 'sorting'),
       slide('Tìm kiếm nhị phân cần thứ tự', ['Duy trì miền còn có thể chứa đáp án.', 'Mỗi bước bỏ khoảng một nửa miền tìm kiếm.', "Kiểm tra biên và điều kiện dừng. Dữ liệu chưa sắp xếp cần cách khác."], 'searching', 'Số bước: O(log n)'),
-      slide('Cây và đồ thị lưu quan hệ', ["Cây có cấu trúc cha–con, trong khi đồ thị nói chung có thể có chu trình.", "BFS dùng hàng đợi, còn DFS dùng ngăn xếp hoặc đệ quy.", 'Đánh dấu đã thăm để tránh lặp vô hạn trên đồ thị.'], 'graphs')
+      slide('Cây nhị phân và quan hệ phân cấp', ['Cây có cấu trúc cha–con, không có chu trình trong mô hình đồ thị.', 'Cây tìm kiếm nhị phân duy trì thứ tự: cây con trái nhỏ hơn gốc, cây con phải lớn hơn gốc.', 'Duyệt tiền thứ tự, trung thứ tự và hậu thứ tự bằng đệ quy hoặc ngăn xếp.'], 'trees'),
+      slide('Đồ thị và thuật toán duyệt', ['Phân biệt đồ thị có hướng với vô hướng.', 'BFS dùng hàng đợi tìm đường ít cạnh nhất, DFS dùng ngăn xếp.', 'Đánh dấu đỉnh đã thăm để tránh lặp vô hạn trên đồ thị.'], 'graphs')
     ], illustration: 'search'
   },
   {

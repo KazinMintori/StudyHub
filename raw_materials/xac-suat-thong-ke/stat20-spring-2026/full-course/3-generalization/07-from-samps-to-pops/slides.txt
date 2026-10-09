@@ -1,0 +1,69 @@
+From Samples to Populations
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+The top plots are population distributions; the bottom two are sampling distributions of the means from many samples of size 200. Match numbers to letters.
+
+Correct answer: It depends on the sampling process.
+
+These sampling distributions were actually made from taking samples of size 200 with replacement from populations of size 100. Most students will assume this when they first answer and choose 1-B, 2-A. This is a good opportunity to cue them to think very carefully about exactly how it is worded, then give them time to discuss and revote.
+
+  
+    −
+    +
+
+ 01:00
+
+Scenario 1: Calling on the front row
+
+This is the example from the notes, where the prof just takes a sample of size n = 18 from the first row. 1st year students are 10 times more likely to be drawn than 4th year students. The result is that most of the sample means are below the true population parameter (the blue vertical line).
+
+How would the sampling distribution change if instead of calling on the front row, the Prof. put all 527 names on tickets in a box, mixed them up, then drew 18 names without replacement? Select the most dramatic change.
+
+This describes a simple random sample, the sampling distribution will move up to be centered around the parameter.
+
+Takehome: sampling variability for an average increases or decreases with changing sample size according to 1/sqrt(n).
+
+Takehome: if there is little / no variability in the sampling process, there really isn’t much of a sampling distribution. It’s more like a constant and your only concern is bias.
+
+  
+    −
+    +
+
+ 01:00
+
+Scenario 2: Drawing names from a box
+
+How would the sampling distribution change if, instead of drawing 18 names without replacement after mixing them up, the Prof. drew only 8 names without replacement after mixing them up?
+
+The sampling distribution will still be centered about the parameter, but the standard deviation would decrease.
+
+A follow up question if you’d like:
+
+Returning to the “calling on the front row” sampling method and plot: what would happen if, by the end of the semester, 90% of students sit in the same seat every class period? Answer: in that case there would be very little variability from one day / sample to the next and the SD of the sampling distribution would decrease dramatically.
+
+Problem Set: From Samples to Populations
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 8: People’s Park
+
+  
+    −
+    +
+
+ 25:00

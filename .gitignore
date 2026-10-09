@@ -23,6 +23,7 @@ qa/
 /guide/
 /toan-cho-ai/
 /vat-ly-2/
+/vat-ly-1/
 /wiki/
 /xac-suat-thong-ke/
 /xu-ly-du-lieu/
@@ -48,6 +49,7 @@ env/
 venv/
 
 # Binary / documents
+/raw_materials/extracted/
 *.pdf
 *.pptx
 output/

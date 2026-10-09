@@ -1,0 +1,111 @@
+Overfitting
+
+Training sets and testing sets
+
+    
+
+    
+
+  
+
+Below is data we collected about the association between number of hours studied and students’ test scores in a math class. Our goal is to predict the exam score from number of hours studied. Both plots below show the same data, but show the predictions from two different predictive models.
+
+Which model looks more appropriate: the blue, or the red? More specifically,
+
+Does it make sense that there should be a big difference between studying 6.7 hours vs studying 6.8 hours?
+
+Should studying a little more make your score go down?
+
+The blue model seems more reasonable: studying more should steadily increase your score. The predictive model on the right seems like it took the particular data points “too seriously!” This will be an issue if a new set of students from the same class comes along and we want to predict what their exam scores will be based on the amount of hours studied. Let’s use the blue and red models to predict scores from more students from this same class.
+
+We see that the blue line is prepared to predict the exam scores well enough for these students–even though the model was not fit using them! The red model, however, does poorly. It is so beholden to the first group of students that it doesn’t know how to manage when the students are even slightly different. In statistics, we say that the red model was overfit.
+
+Overfitting
+
+The practice of using a predictive model which is very effective at explaining the data used to fit it, but is poor at making predictions on new data.
+
+Overfitting with polynomials
+
+Usually, overfitting occurs as a result of applying a model that is too complex, like the red one we saw for the math class data above. We created that overfitted predictive model on the right by fitting a polynomial with a high degree. Polynomials are quite powerful models and are capable of creating very complex predictive functions. The higher the polynomial degree, the more complex function it can create.
+
+Let’s illustrate by fitting polynomial models with progressively higher degrees to the data set above.
+
+The higher the polynomial degree, the closer the prediction function comes to perfectly fitting the data1. Therefore, when it comes to evaluating which model is the best for prediction, we would say the degree seven polynomial is best. Indeed, based on our knowledge so far, it would have the highest 
+[MATH] \(R^2\). The true test is yet to come, though. Let’s measure these three models on how well they predict to the second group of students that weren’t used to fit the model.
+
+As we increase the degree, the polynomial begins to perform worse on this new data as it bends to conform to the original data. For example, we see that for the student having studied around five and a half hours, the fifth degree polynomial does well, but the seven degree polynomial does horribly! To put a cherry on top, the red model we showed you in the beginnng of these notes was a twenty degree polynomial!
+
+What we see is that the higher the degree, the more risk we run of using a model that overfits.
+
+Training and testing sets: a workflow to curb overfitting
+
+What you should have taken away so far is the following: we should not fit the model (set the 
+[MATH] \(b_0, b_1\) coefficients) and evaluate the model (judge its predictive power) with the same data set!
+
+We can further back up this idea quantitatively. The plot below shows the 
+[MATH] \(R^2\) value for math class models fit with different polynomial degrees.
+
+The 
+[MATH] \(R^2\) value goes steadily upwards as the polynomial degree goes up. In fact this is mathematically guaranteed to happen: for a fixed data set the 
+[MATH] \(R^2\) value for a polynomial model with higher degree will always be higher than a polynomial model with lower degree.
+
+This should be disconcerting, especially since we earlier saw that the model with the highest 
+[MATH] \(R^2\) did the worst on our unseen data. What you might also notice is that the 
+[MATH] \(R^2\) isn’t increasing by that much between degrees as the degree gets higher. This suggests that adding that additional degree isn’t improving our general predictive power much; it’s just helping the model tailor itself to the specific data we have.
+
+Does that mean 
+[MATH] \(R^2\) is not a good metric to evaluate our model? Not necessarily. We can just change our workflow slightly. Instead of thinking in terms of a single data set, we can partition, or split the observations of the data set into two separate sets. We can use one of these data sets to fit the model, and the other to evaluate it.
+
+Training Set
+
+The set of observations used to fit a predictive model; i.e. estimate the model coefficients.
+
+Testing Set
+
+The set of observations used to assess the accuracy of a predictive model. This set is disjoint from the training set.
+
+The partition of a data frame into training and testing sets is illustrated by the diagram below.
+
+y
+x1
+x2
+x3
+
+The original data frame consists of 10 observations. For each observation we have recorded a response variable, 
+[MATH] \(y\), and three predictors, 
+[MATH] \(x_1, x_2\), and 
+[MATH] \(x_3\). If we do an 80-20 split, then 8 of the rows will randomly be assigned to the training set (in blue). The 2 remaining rows (rows 2 and 6) are assigned to the testing set (in gold).
+
+So to recap, our new workflow for predictive modeling involves:
+
+Splitting the data into a training and a testing set
+
+Fitting the model to the training set
+
+Evaluating the model using the testing set
+
+More on splitting the data
+
+As in the diagram above, a standard partition is to dedicate 80% of the observations to the training set and the remainder to the testing set (a 80-20 split), though this is not a rule which is set in stone. The other question is how best to assign the observations to the two sets. In general, it is best to do this randomly to avoid one set that is categorically different than the other.
+
+Mean square error: another metric for evaluation
+
+While 
+[MATH] \(R^2\) is the most immediate metric to evaluate the predictive quality of a linear regression, it is quite specific to linear modeling. Therefore, data scientists have come up with another, more general metric called mean square error (MSE). Let 
+[MATH] \(y_i\) be observations of the response variable in the testing set, and 
+[MATH] \(\hat{y}_i\) be your model’s predictions for those observations. Then 
+[MATH] \(\text{MSE}\) is given by
+
+[MATH] \[ \text{MSE} =  \frac{1}{n}\sum_{i=1}^n(y_i-\hat{y_i})^2\] You may notice that for a linear regression model, 
+[MATH] \(\text{MSE} = \displaystyle \frac{1}{n}\text{RSS}\).
+
+A common offshoot is root mean square error (
+[MATH] \(\text{RMSE}\)), which you can obtain by taking the square root of 
+[MATH] \(\text{MSE}\). Much like what standard deviation does for variance, 
+[MATH] \(\text{RMSE}\) allows you to think above the average error on a regular scale rather than on a squared scale.
+
+Continue on to the tutorial portion of the notes 
+
+Footnotes
+
+We say a function that perfectly predicts each data point interpolates the data. See the first red curve for the math class exams.↩︎

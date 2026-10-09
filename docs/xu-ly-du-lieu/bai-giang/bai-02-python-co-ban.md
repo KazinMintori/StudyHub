@@ -5,413 +5,208 @@ section: lecture
 title: "Python cơ bản cho xử lý dữ liệu"
 prerequisites: ["bien-kieu","list","dictionary","vong-lap","ham-lap-trinh"]
 lessonStatus: ready
+description: "Chọn cấu trúc dữ liệu, viết hàm chuyển đổi và đọc tệp với cách xử lý lỗi rõ ràng."
 ---
 
+Trước khi bắt tay vào các thư viện chuyên sâu như NumPy hay pandas, người kỹ sư dữ liệu cần làm chủ các công cụ sẵn có của Python. Bản thân Python cung cấp một hệ thống cấu trúc dữ liệu bản địa rất mạnh mẽ. Tuy nhiên, nếu không hiểu rõ cơ chế vận hành bên dưới của chúng trong bộ nhớ, ta rất dễ tạo ra những chương trình chạy chậm chạp, ngốn tài nguyên, hoặc nguy hiểm hơn là làm biến dạng dữ liệu một cách âm thầm.
 
-::: tip  Sau bài này bạn phải trả lời được
-1. Cho một bài toán dữ liệu cụ thể, chọn đúng cấu trúc trong 4 loại `list / dict / set / tuple` — và giải thích **vì sao** cấu trúc khác lại không phù hợp.
-2. Viết lại một vòng lặp `for` thành *comprehension*, và giải thích comprehension là "bước đệm tư duy" sang NumPy như thế nào.
-3. Chỉ ra lỗi trong đoạn code dùng `except Exception: pass`, và trong đoạn code gán `b = a` rồi sửa `b` khiến `a` đổi theo.
-:::
+Bài học này làm rõ những nền tảng cốt yếu nhất của Python dưới lăng kính kỹ thuật xử lý dữ liệu: cách chọn cấu trúc dữ liệu tối ưu, phân biệt rạch ròi giữa biến đổi và sàng lọc, cơ chế tham chiếu vùng nhớ và kỹ thuật đọc tệp phòng thủ.
 
-## 0. Nhập môn bằng một ẩn dụ: cái kho hàng
+## 1. Cấu trúc dữ liệu quyết định cơ chế tra cứu
 
-Nếu dữ liệu là hàng hoá, thì mỗi **cấu trúc dữ liệu** trong Python là một loại kệ chứa khác nhau trong kho — chọn sai loại kệ thì tìm đồ vừa chậm vừa dễ lẫn:
+Mỗi cấu trúc dữ liệu trong Python được thiết kế với sự đánh đổi riêng về bộ nhớ và tốc độ truy xuất. Chọn sai cấu trúc dữ liệu cho một thao tác thường xuyên có thể biến một chương trình xử lý mất 1 giây thành một chương trình chạy mất nhiều giờ đồng hồ.
 
-| Loại kệ trong kho | Cấu trúc Python | Đặc điểm |
-|---|---|---|
-| Kệ hàng đánh số thứ tự, lấy theo vị trí | `list` | Có thứ tự, truy cập bằng chỉ số, cắt lát được |
-| Tủ có ngăn kéo dán nhãn | `dict` | Tra cứu theo **tên/khoá**, không quan tâm thứ tự lưu |
-| Bao tải đổ chung, không đếm trùng | `set` | Tự động khử trùng lặp, so sánh thành viên rất nhanh |
-| Hộp niêm phong không mở lại | `tuple` | Không đổi được sau khi tạo — dùng cho dữ liệu "cố định" |
+| Cấu trúc | Bản chất bộ nhớ & Cơ chế tra cứu | Thao tác đặc trưng trong xử lý dữ liệu |
+| :--- | :--- | :--- |
+| **`list`** | Mảng động chứa các con trỏ, có thứ tự, truy cập theo chỉ số vị trí $O(1)$. Tìm kiếm giá trị bên trong đòi hỏi quét tuần tự $O(n)$. | Lưu giữ danh sách quan sát theo trình tự thời gian hoặc thứ tự dòng của tệp. |
+| **`dict`** | Bảng băm (hash table) ánh xạ khóa sang giá trị. Tra cứu theo khóa có độ phức tạp trung bình $O(1)$. | Đại diện cho một bản ghi với các trường thông tin (khóa là tên cột, giá trị là ô dữ liệu). |
+| **`set`** | Tập hợp các phần tử băm duy nhất, không có thứ tự và không cho phép trùng lặp. Phép kiểm tra phần tử `x in s` đạt $O(1)$. | Lọc trùng, kiểm tra mã danh mục hợp lệ và tính toán phép bù, phép giao giữa hai tập bản ghi. |
+| **`tuple`** | Dãy phần tử bất biến (immutable). Khi đã khởi tạo, các con trỏ bên trong không thể thay đổi. | Đóng vai trò khóa phức hợp nhiều trường (composite key) hoặc đại diện cho tọa độ cố định. |
 
-Việc đầu tiên khi viết code xử lý dữ liệu không phải là "viết vòng lặp nào" mà là **"chọn đúng cái kệ"** — 80% code xử lý dữ liệu ngắn gọn tự nhiên đến từ việc chọn đúng cấu trúc ngay từ đầu.
-
-## 1. Kiểu dữ liệu trong xử lý dữ liệu
-
-### 1.1 Số và chuỗi: định dạng cho người đọc
-
-Máy tính không quan tâm `1834567.891` có dễ đọc hay không, nhưng người đọc báo cáo thì có. F-string với đuôi định dạng là công cụ chuẩn:
+Hãy xem xét một ví dụ thực tế về danh sách hàng hóa:
 
 ```python
-gia_tb = 1834567.891
-ty_le_trong = 0.0734
-
-# :,.0f  → phân cách hàng nghìn bằng dấu phẩy, 0 chữ số thập phân
-# :.1%   → nhân 100, thêm dấu %, 1 chữ số thập phân
-bao_cao = f"Giá TB: {gia_tb:,.0f} đ — tỷ lệ phòng trống: {ty_le_trong:.1%}"
-print(bao_cao)
+hang = [
+    {"ma": "001", "gia": "24"},
+    {"ma": "002", "gia": ""},
+    {"ma": "003", "gia": "36"},
+]
+print(hang[0]["ma"])             # 001
+print(hang[1:3])                 # hai dòng ở vị trí 1 và 2
+print(hang[0].get("nhom", "chua_ro"))
+truoc = {"001", "002", "003"}
+sau = {"001", "003", "004"}
+print(sorted(truoc - sau))       # ['002']
+print(sorted(sau - truoc))       # ['004']
 ```
-```text
-Giá TB: 1,834,568 đ — tỷ lệ phòng trống: 7.3%
-```
 
-::: tip Hai đuôi định dạng phải nhớ nằm lòng
-`:,.0f` (số nguyên có phân cách nghìn) và `:.1%` (phần trăm 1 chữ số thập phân) — xuất hiện lại liên tục từ bài 4 trở đi khi in kết quả `groupby`, KPI, báo cáo.
-:::
+Đoạn mã trên minh họa ba quy tắc quan trọng:
 
-### 1.2 `None` là một giá trị — không phải "không có gì"
+1. **Mã số không phải là con số**: Mã hàng `"001"`, số căn cước công dân hay mã bưu chính dù chứa các chữ số nhưng bản chất ngữ nghĩa là **chuỗi định danh**. Nếu vội vã chuyển `"001"` thành số nguyên bằng `int()`, bạn sẽ nhận được số `1` và vĩnh viễn đánh mất hai số 0 ở đầu. Khi xử lý dữ liệu, nguyên tắc vàng là: *chỉ chuyển thành kiểu số những dữ liệu nào mà ta có nhu cầu thực hiện các phép toán cộng, trừ, nhân, chia trên đó*.
+2. **Quy ước chỉ mục nửa mở**: Lát cắt `hang[1:3]` lấy phần tử ở chỉ số 1 và 2, nhưng dừng trước chỉ số 3. Quy ước khoảng nửa mở $[start, stop)$ này xuyên suốt toàn bộ hệ sinh thái Python, giúp việc tính độ dài lát cắt rất thuận tiện: $3 - 1 = 2$ phần tử.
+3. **Tra cứu an toàn với `get()`**: Thay vì truy cập trực tiếp `hang[0]["nhom"]` vốn sẽ gây lỗi sập chương trình (`KeyError`) nếu trường `nhom` chưa tồn tại, phương thức `.get("nhom", "chua_ro")` cho phép ta định nghĩa một giá trị mặc định rõ ràng khi thiếu trường dữ liệu.
 
-**Trước → Sau: tính trung bình khi có dữ liệu thiếu**
+Khi cần đối chiếu hai danh sách mã sản phẩm để tìm xem mã nào đã bị xóa hoặc mã nào mới xuất hiện, việc ép kiểu danh sách sang `set` rồi sử dụng phép trừ tập hợp (`truoc - sau`) là cách làm chuẩn mực của các chuyên gia. Thao tác này vừa ngắn gọn, vừa đạt hiệu năng $O(n)$ thay vì mất $O(n^2)$ nếu dùng hai vòng lặp lồng nhau trên kiểu danh sách.
 
-| Bước | Trạng thái | Diễn giải |
-|---|---|---|
-| Trước | `gia = [1200000, None, 950000]` | Phòng thứ 2 không khai giá |
-| Code | `sum(x for x in gia if x is not None) / 2` | Lọc bỏ `None` **trước** khi tính tổng, chia cho **số phần tử hợp lệ** (2), không phải độ dài gốc (3) |
-| Sau | `1075000.0` | = (1.200.000 + 950.000) ÷ 2 |
+## 2. Phân định rạch ròi giữa biến đổi và sàng lọc
 
-::: danger Phân biệt bắt buộc: `None` ≠ `0` ≠ `""`
-`None` nghĩa là **"không biết/chưa có giá trị"**. `0` là một số thực. `""` là một chuỗi rỗng — cả ba đều là giá trị hợp lệ nhưng mang ý nghĩa hoàn toàn khác nhau. Nếu bạn code `gia = gia or 0` để "xử lý dữ liệu thiếu", bạn đã **âm thầm biến "không biết" thành "miễn phí"**. Toàn bộ Bài 10 (xử lý giá trị thiếu) sẽ xây dựng trên đúng tính chất này.
-:::
+Khi nhận dữ liệu từ các biểu mẫu nhập liệu hoặc tệp văn bản, trường giá thường tồn tại dưới dạng chuỗi hỗn tạp: có khoảng trắng thừa, có ô để trống, có chuỗi `"N/A"`, và đôi khi có cả giá trị âm phi lý.
 
-### 1.3 `list`: dãy có thứ tự — slicing (cắt lát)
+Một thói quen lập trình xấu là viết các đoạn mã gộp chung cả việc đọc dữ liệu, kiểm tra lỗi và tính toán thống kê vào cùng một vòng lặp. Cách tiếp cận của một kỹ sư chuyên nghiệp là tách bạch thành hai thao tác toán học riêng biệt: **Biến đổi** (Mapping/Transformation) và **Sàng lọc** (Filtering).
+
+Ta đóng gói toàn bộ quy tắc nghiệp vụ của một trường dữ liệu vào một hàm chuyển đổi phòng thủ:
 
 ```python
-doanh_thu = [5, 8, 6, 9, 12, 11, 7]   # doanh thu 7 ngày liên tiếp (triệu đồng)
-
-doanh_thu[0], doanh_thu[-1]           # phần tử đầu, phần tử cuối (chỉ số âm = đếm từ cuối)
-```
-```text
-(5, 7)
-```
-
-```python
-doanh_thu[1:4]     # slicing [bắt_đầu:kết_thúc) — lấy chỉ số 1, 2, 3 (KHÔNG lấy chỉ số 4)
-```
-```text
-[8, 6, 9]
-```
-
-::: tip Vì sao học slicing kỹ ngay từ bây giờ?
-Cú pháp `[bắt_đầu:kết_thúc:bước]` **giữ nguyên gần như 100%** khi sang NumPy array (Bài 3) và pandas `.iloc[]` (Bài 4–5). Hiểu chắc quy tắc "kết thúc không bao gồm" ở đây sẽ giúp không bị nhầm off-by-one (lệch 1) sau này.
-:::
-
-### 1.4 `dict`: một "dòng dữ liệu"
-
-```python
-phong = {"id": 52811, "gia": 1200000, "loai": "Entire home"}
-
-phong["gia"]                      # tra theo khoá — lỗi KeyError nếu khoá không tồn tại
-```
-```text
-1200000
-```
-
-```python
-phong.get("diem", "chưa có")      # .get() có "phương án B" khi khoá không tồn tại — không bao giờ crash
-```
-```text
-'chưa có'
-```
-
-::: info Bảng dữ liệu trong Python thuần
-Một bảng có thể biểu diễn bằng **list các dict** — mỗi dict là một dòng. Đây là cách hình dung "tự nhiên" của một `DataFrame` trước khi học pandas ở Bài 4. Nhìn theo hướng này giúp việc học `DataFrame` sau này bớt trừu tượng hơn.
-:::
-
-### 1.5 `set`: khử trùng lặp và so khớp cực nhanh
-
-Bài toán: có hai snapshot ID phòng chụp ở hai thời điểm, phòng nào đã biến mất?
-
-```python
-thang_9  = {52811, 78230, 99182, 10021}
-thang_12 = {52811, 99182, 33307}
-
-thang_9 - thang_12       # phép trừ tập hợp: có ở T9 nhưng KHÔNG có ở T12
-```
-```text
-{10021, 78230}
-```
-
-| Phép toán | Ký hiệu Python | Ý nghĩa dữ liệu |
-|---|---|---|
-| Hiệu | `a - b` | Có ở `a`, mất ở `b` (phòng "biến mất") |
-| Giao | `a & b` | Có ở cả hai (phòng "còn tồn tại") |
-| Hợp | `a \| b` | Toàn bộ ID xuất hiện ở ít nhất một trong hai |
-
-### 1.6 Bảng quyết định: chọn cấu trúc nào?
-
-| Bạn cần… | Dùng | Ví dụ trong môn |
-|---|---|---|
-| Dãy có thứ tự, cắt lát được | **list** | giá 7 ngày liên tiếp |
-| Tra cứu theo tên/khoá | **dict** | một dòng dữ liệu, cấu hình pipeline |
-| Khử trùng lặp, so thành viên | **set** | so ID phòng giữa hai snapshot |
-| Bộ giá trị cố định, không đổi | **tuple** | toạ độ `(lat, lon)` |
-
-## 2. Vòng lặp & Comprehension — bước đệm sang tư duy vector hoá
-
-### 2.1 Cách viết "thủ công": `for` + `if`
-
-```python
-gia_tho = [1200000, -5, 950000, 0, 2400000]
-
-gia_sach = []
-for g in gia_tho:
-    if g > 0:                 # quy tắc QA (quality assurance) đầu tiên: giá phải dương
-        gia_sach.append(g)
-
-print(gia_sach)
-```
-```text
-[1200000, 950000, 2400000]
-```
-
-**Dry Run — chạy từng bước vòng lặp trên để thấy rõ trạng thái thay đổi:**
-
-| Vòng lặp | `g` | Điều kiện `g > 0` | `gia_sach` sau bước này |
-|---|---|---|---|
-| khởi tạo | — | — | `[]` |
-| 1 | `1200000` | True | `[1200000]` |
-| 2 | `-5` | **False** | `[1200000]` (không đổi) |
-| 3 | `950000` | True | `[1200000, 950000]` |
-| 4 | `0` | **False** | `[1200000, 950000]` (không đổi) |
-| 5 | `2400000` | True | `[1200000, 950000, 2400000]` |
-
-### 2.2 Cách viết "cả dãy": Comprehension
-
-```python
-gia_sach = [g for g in gia_tho if g > 0]      # lọc
-
-gia_trieu = [g / 1e6 for g in gia_sach]       # biến đổi CẢ DÃY cùng lúc, không lặp thủ công
-print(gia_trieu)
-```
-```text
-[1.2, 0.95, 2.4]
-```
-
-Cách đọc thành tiếng: *"lấy `g`, cho mỗi `g` trong dãy, với điều kiện…"*. Cùng kết quả với vòng lặp `for`, nhưng ngắn hơn, ít chỗ để gõ nhầm hơn (không quên `.append()`, không quên khởi tạo list rỗng).
-
-::: tip  Trực giác quan trọng nhất của Bài 2
-Comprehension **chưa phải** vectorization thật sự (bên dưới Python vẫn lặp từng phần tử) — nhưng nó tập cho bạn **thói quen tư duy đúng**: nghĩ về việc "biến đổi cả dãy" thay vì "xử lý từng phần tử". Bài 3 (NumPy) sẽ thay bước lặp ngầm này bằng phép toán mảng thật sự, nhanh hơn hàng chục lần vì được tính bằng code C đã biên dịch sẵn, không phải bytecode Python.
-:::
-
-**So sánh trực tiếp — vì sao đây là bước đệm quan trọng:**
-
-| | `for` truyền thống | List comprehension | NumPy vector hoá (Bài 3) |
-|---|---|---|---|
-| Số dòng code | 3–4 dòng | 1 dòng | 1 dòng |
-| Tốc độ trên 1 triệu phần tử | Chậm nhất | Nhanh hơn `for` một chút | **Nhanh hơn hàng chục lần** |
-| Nguyên lý | Lặp + gọi `.append()` mỗi bước | Lặp ngầm, tối ưu hơn ở tầng interpreter | Không lặp ở tầng Python — thực thi bằng mảng C liên tục trong bộ nhớ |
-
-### 2.3 `dict` comprehension & `zip`
-
-```python
-ten = ["Adelie", "Gentoo", "Chinstrap"]
-so_luong = [152, 124, 68]
-
-{t: n for t, n in zip(ten, so_luong)}   # zip ghép 2 dãy song song thành từng cặp (tên, số lượng)
-```
-```text
-{'Adelie': 152, 'Gentoo': 124, 'Chinstrap': 68}
-```
-
-`zip` là công cụ thường dùng khi cần **ghép hai cột dữ liệu song song** — ý tưởng này lặp lại khi nối (`merge`) hai bảng ở Bài 5.
-
-### 2.4 Cạm bẫy kinh điển: gán không phải là sao chép
-
-```python
-goc = [1, 2, 3]
-ban_sao = goc          #  KHÔNG copy — chỉ tạo thêm một cái TÊN trỏ vào CÙNG một list
-ban_sao.append(99)
-
-print(goc)              # goc cũng bị đổi theo, dù ta chỉ động vào ban_sao!
-```
-```text
-[1, 2, 3, 99]
-```
-
-::: danger Vì sao lỗi này nguy hiểm hơn vẻ ngoài của nó
-`list`, `dict`, `set` trong Python là kiểu **mutable** (thay đổi được tại chỗ) và biến chỉ là một "tên" trỏ tới vùng nhớ, không phải bản thân dữ liệu. Muốn có bản sao thật sự độc lập, dùng `ban_sao = goc.copy()`. Đây **chính là gốc rễ** của lỗi "SettingWithCopyWarning" khét tiếng trong pandas (vấn đề *view vs copy*) mà bạn sẽ gặp lại ở Bài 4–5 — hiểu đúng ở đây sẽ tiết kiệm rất nhiều thời gian debug sau này.
-:::
-
-### 2.5 Khi nào dừng viết `for`?
-
-::: warning Tín hiệu cần dừng lại và tự hỏi
-Khi viết `for` để xử lý từng dòng của một cột dữ liệu số, hãy kiểm tra xem NumPy hoặc pandas có thao tác trên cả dãy hay không. Với công việc như cộng một cột, thao tác có sẵn giúp biểu đạt trực tiếp điều cần tính. Tuy nhiên, vẫn phải xét kiểu dữ liệu, bộ nhớ và kết quả thực tế trước khi kết luận cách nào phù hợp hơn.
-:::
-
-## 3. Hàm — đơn vị nhỏ nhất của một pipeline
-
-### 3.1 Đóng gói một bước làm sạch thành hàm
-
-Nhớ lại cột `price = "$45,647.00"` từ Bài 1 — đây là cách biến chuỗi đó thành số:
-
-```python
-def clean_price(s):
-    """Đổi chuỗi giá kiểu '$45,647.00' thành float; đầu vào hỏng thì trả None."""
-    try:
-        # Bỏ ký tự '$' và dấu phân cách ',' rồi mới ép kiểu sang số thực
-        return float(s.replace("$", "").replace(",", ""))
-    except (ValueError, AttributeError):
-        # ValueError: chuỗi còn lại không phải số hợp lệ (vd: "N/A")
-        # AttributeError: đầu vào không phải chuỗi, ví dụ đã là None
+def doc_gia(text):
+    if text is None:
         return None
+    if not isinstance(text, str):
+        raise TypeError("Gia dau vao phai la chuoi hoac None")
+    text = text.strip()
+    if text == "":
+        return None
+    try:
+        value = float(text)
+    except ValueError:
+        return None
+    if not 0 <= value < float("inf"):
+        return None
+    return value
 
-clean_price("$45,647.00"), clean_price(None)
+gia_da_doc = [doc_gia(row["gia"]) for row in hang]
+gia_hop_le = [x for x in gia_da_doc if x is not None]
+print(gia_da_doc)                # [24.0, None, 36.0]
+print(sum(gia_hop_le) / len(gia_hop_le))  # 30.0
 ```
-```text
-(45647.0, None)
-```
 
-**Trước → Sau khi áp dụng `clean_price` lên cả một danh sách:**
+Hàm `doc_gia` trên thể hiện một triết lý xử lý ngoại lệ rất sâu sắc:
 
-| Trước (`str` hoặc `None`) | Sau (`float` hoặc `None`) |
-|---|---|
-| `"$1,200.00"` | `1200.0` |
-| `"N/A"` | `None` |
-| `"$950.00"` | `950.0` |
+- **Phân biệt dữ liệu không hợp lệ với lỗi lập trình**: Khi dữ liệu đầu vào chứa chuỗi rỗng `""` hoặc `"N/A"`, đây là hiện tượng bình thường của dữ liệu thực tế, hàm nhẹ nhàng trả về `None` để ghi nhận sự khuyết thiếu. Ngược lại, nếu một đoạn mã khác truyền nhầm một số nguyên `18` vào hàm này, hàm lập tức ném ra ngoại lệ `TypeError`. Không bao giờ được dùng khối lệnh `except Exception: pass` một cách vô tội vạ, bởi nó sẽ nuốt chửng các lỗi sai kiểu dữ liệu và làm việc dò lỗi trở thành ác mộng.
+- **Sàng lọc với `is not None`**: Trong bước lọc giá hợp lệ, ta viết tường minh `[x for x in gia_da_doc if x is not None]`. Nếu viết tắt thành `[x for x in gia_da_doc if x]`, chương trình sẽ vô tình loại bỏ cả giá trị `0.0`, bởi trong Python số 0 được đánh giá là `False`. Một món hàng có giá khuyến mãi 0 đồng là hoàn toàn hợp lệ và khác hẳn với một món hàng không rõ giá.
+
+## 3. Hàm số, biểu thức ngắn và tính tái lập
+
+Khi xử lý các tập dữ liệu lớn, việc trừu tượng hóa các phép tính thành hàm không chỉ giúp mã nguồn gọn gàng mà còn bảo đảm cùng một logic được áp dụng nhất quán trên mọi tệp.
 
 ```python
-gia_tho = ["$1,200.00", "N/A", "$950.00"]
+def gia_trung_binh(values):
+    valid = [x for x in values if x is not None]
+    return sum(valid) / len(valid) if valid else None
 
-list(map(clean_price, gia_tho))    # map: áp dụng MỘT hàm lên TỪNG phần tử của dãy
+print(gia_trung_binh(gia_da_doc))
+print(f"Gia trung binh: {gia_trung_binh(gia_da_doc):.1f} nghin dong")
+cap = list(zip(["A", "B"], [24, 36], strict=True))
+print(cap)                      # [('A', 24), ('B', 36)]
 ```
-```text
-[1200.0, None, 950.0]
-```
 
-### 3.2 Ba tiêu chuẩn của một hàm tốt trong pipeline dữ liệu
+Hai kỹ thuật đáng lưu ý trong thực tế:
 
-1. **Chỉ làm một việc** — thể hiện ngay trong tên hàm (`clean_price`, không đặt tên mơ hồ như `xu_ly`).
-2. **Đoán được (predictable)** — cùng đầu vào luôn cho cùng đầu ra. Không âm thầm sửa biến ở ngoài phạm vi hàm.
-3. **Chịu được dữ liệu bẩn** — phải nói rõ đầu vào không hợp lệ sẽ trả về gì: `None`, hay chủ động phát sinh lỗi (`raise`).
+1. **Hàm `zip` với cờ `strict=True`**: Trong các phiên bản Python hiện đại (từ 3.10), hàm `zip` cung cấp tùy chọn `strict=True`. Bình thường, nếu bạn ghép hai danh sách có độ dài lệch nhau (ví dụ danh sách tên có 10 phần tử nhưng danh sách giá chỉ có 9 phần tử), `zip` mặc định sẽ âm thầm bỏ rơi phần tử cuối cùng của danh sách dài hơn. Cờ `strict=True` buộc chương trình phải dừng lại và báo lỗi `ValueError` ngay khi phát hiện độ dài hai mảng không khớp, ngăn chặn triệt để nguy cơ thất thoát dữ liệu ngầm.
+2. **Khuôn mẫu định dạng chuỗi f-string**: Cú pháp `{gia_trung_binh(gia_da_doc):.1f}` cho phép ta làm tròn hiển thị số thực đến 1 chữ số thập phân một cách thanh lịch mà không làm thay đổi giá trị gốc được lưu trong bộ nhớ máy tính.
 
-Một docstring một dòng cộng với gợi ý kiểu dữ liệu nhẹ nhàng (`def clean_price(s) -> float | None:`) thường là đủ cho quy mô bài tập môn này.
+## 4. Cơ chế gắn nhãn đối tượng và cạm bẫy sao chép nông
 
-### 3.3 `try/except`: bắt đúng loại lỗi, không bắt "tất cả"
+Một trong những nguồn cơn gây ra nhiều lỗi kỳ quái nhất cho người học Python chính là sự ngộ nhận về toán tử gán `=`.
+
+Trong Python, **biến không phải là một chiếc hộp chứa giá trị**. Biến thực chất chỉ là một **chiếc thẻ bài (name tag)** được dán lên một đối tượng đang nằm trong bộ nhớ.
 
 ```python
-float("N/A")
-```
-```text
-ValueError: could not convert string to float: 'N/A'
+a = [24, 36]
+b = a
+b.append(60)
+print(a)                        # [24, 36, 60]
+c = a.copy()
+c[0] = 99
+print(a[0], c[0])               # 24 99
 ```
 
-::: danger Kiểm tra trước khi dùng code xử lý dữ liệu
+Khi ta thực hiện lệnh `b = a`, Python không tạo ra một bản sao danh sách nào cả. Hệ thống chỉ đơn thuần dán thêm chiếc nhãn `b` vào cùng một đối tượng danh sách mà `a` đang trỏ tới. Do đó, việc bạn thêm phần tử qua nhãn `b` sẽ hiển thị ngay lập tức khi bạn gọi nhãn `a`.
+
+Phương thức `a.copy()` tạo ra một bản sao danh sách mới. Nhưng hãy hết sức cảnh giác: đây chỉ là **sao chép nông** (shallow copy). Phương thức này chỉ sao chép lớp danh sách bên ngoài. Các phần tử con bên trong nếu là kiểu dữ liệu khả biến (như từ điển `dict` hoặc danh sách khác) thì vẫn được trỏ chung.
+
+Hãy quan sát tình huống sau:
 ```python
-#  SAI — che giấu MỌI loại lỗi, kể cả lỗi lập trình (gõ sai tên biến, sai kiểu tham số…)
-try:
-    ket_qua = clean_price(gia)
-except Exception:
-    pass    # pipeline "chạy được" nhưng âm thầm bỏ qua cả lỗi logic nghiêm trọng
-```
-Viết `except Exception: pass` khiến chương trình **không bao giờ báo lỗi** — kể cả khi bug nằm ở chính logic của bạn chứ không phải ở dữ liệu đầu vào. Hậu quả: pipeline "chạy xong, không lỗi" nhưng trả về kết quả sai mà không ai phát hiện ra cho đến khi quá muộn. Luôn bắt **đúng loại lỗi cụ thể** (`except ValueError`, `except (ValueError, AttributeError)`).
-:::
-
-### 3.4 Hàm là một giá trị — truyền được như mọi dữ liệu khác
-
-```python
-sorted(phong, key=lambda p: p["gia"], reverse=True)[0]   # lambda: hàm ẩn danh, dùng 1 lần
+goc = [{"gia": 24}]
+sao = goc.copy()
+sao[0]["gia"] = 99
+print(goc[0]["gia"])  # 99!
 ```
 
-`lambda` chỉ nên gói gọn trong **một dòng**. Logic dài hơn nên viết hàm có tên bằng `def` để dễ đọc, dễ kiểm thử. Mẫu "truyền hàm vào hàm khác" (`map(clean_price, ...)`) sẽ xuất hiện lại nguyên vẹn ở Bài 5 dưới dạng `df["price"].map(clean_price)`.
+Dù `goc` và `sao` là hai danh sách khác nhau ở lớp ngoài, phần tử đầu tiên của cả hai lại cùng trỏ về một cuốn từ điển duy nhất. Khi cần sao chép độc lập toàn diện cả những cấu trúc lồng nhau phức tạp, ta phải sử dụng hàm `copy.deepcopy()` từ thư viện chuẩn `copy`.
 
-::: info Vì sao code xử lý dữ liệu có nhiều dấu chấm `.`?
-Mọi giá trị trong Python là một **đối tượng**, luôn mang theo sẵn các phương thức của nó (`"abc".upper()`, `[1,2].append(3)`). Hãy tập đọc `df.groupby("city").mean()` như một **chuỗi lời gọi phương thức nối tiếp nhau**, mỗi dấu chấm là một bước biến đổi — chứ không phải một cú pháp "kỳ lạ" cần học thuộc lòng riêng lẻ.
-:::
+## 5. Đọc và ghi tệp dữ liệu có cấu trúc
 
-## 4. Đọc & ghi file
-
-### 4.1 `with open`: đọc/ghi văn bản an toàn
-
-```python
-with open("ghi_chu.txt", encoding="utf-8") as f:
-    noi_dung = f.read()
-```
-
-`with` tự động đóng file kể cả khi có lỗi phát sinh giữa chừng khi đang đọc/ghi. Tham số `encoding="utf-8"` phải **luôn được ghi rõ tường minh** — phần lớn lỗi "tiếng Việt vỡ chữ" (mojibake, ví dụ `Tiáº¿ng Viá»‡t`) đến từ việc quên tham số này và để hệ điều hành tự đoán bảng mã.
-
-### 4.2 CSV thủ công — vì sao pandas ra đời
+Khi làm việc với các tệp dữ liệu văn bản như CSV hay JSON, hai yêu cầu tối thượng là: bảo đảm tài nguyên hệ thống được giải phóng và kiểm soát chặt chẽ bảng mã ký tự.
 
 ```python
 import csv
-
-with open("phong.csv", encoding="utf-8") as f:
-    rows = list(csv.DictReader(f))
-
-rows[0]
-```
-```text
-{'id': '52811', 'gia': '$1,200.00', 'loai': 'Entire home'}
-```
-
-::: warning Quan sát quan trọng
-**Mọi giá trị đọc từ CSV đều là chuỗi (`str`)** — kể cả `id` (một con số) cũng thành `'52811'`. Định dạng CSV **không lưu kiểu dữ liệu**. Chương trình đọc phải tự chuyển kiểu bằng tay. Từ Bài 4, `pandas.read_csv()` sẽ tự động *suy luận* kiểu dữ liệu cho bạn — tiện lợi hơn hẳn, nhưng cũng chính vì suy luận tự động nên đôi khi sẽ **suy luận sai** (ví dụ đọc nhầm mã bưu điện `"07012"` thành số nguyên `7012`, mất số 0 đứng đầu).
-:::
-
-### 4.3 JSON: định dạng trao đổi giữa các chương trình
-
-```python
 import json
+from io import StringIO
 
-ket_qua = {"thanh_pho": "Santiago", "gia_tb": 45647.0}
-
-with open("kq.json", "w", encoding="utf-8") as f:
-    # ensure_ascii=False  → giữ nguyên tiếng Việt có dấu thay vì mã hoá \uXXXX
-    # indent=2            → định dạng đẹp, dễ đọc bằng mắt thường
-    json.dump(ket_qua, f, ensure_ascii=False, indent=2)
-
-json.loads('{"gia_tb": 45647.0}')["gia_tb"]
-```
-```text
-45647.0
+csv_text = "ma,gia\n001,24\n002,\n003,36\n"
+rows = list(csv.DictReader(StringIO(csv_text)))
+print(rows[0]["gia"], type(rows[0]["gia"]).__name__)  # 24 str
+json_text = json.dumps(rows, ensure_ascii=False)
+assert json.loads(json_text) == rows
 ```
 
-Cấu trúc JSON tương ứng gần như trực tiếp với `dict`/`list` trong Python. Đây là định dạng phổ biến khi gọi API (Bài 6) và khi lưu tạm dữ liệu do LLM sinh ra (Bài 11).
+Khi làm việc với các tệp thật trên ổ cứng, hãy luôn tuân thủ các quy tắc sau:
 
-### 4.4 `pathlib`: đường dẫn không phụ thuộc hệ điều hành
+1. **Quản lý ngữ cảnh với `with open()`**: Luôn mở tệp thông qua khối lệnh `with open(...) as f:`. Cấu trúc này bảo đảm tệp luôn được đóng đúng quy trình ngay khi khối lệnh kết thúc, kể cả khi xuất hiện ngoại lệ ở giữa chừng.
+2. **Khai báo tường minh `encoding="utf-8"`**: Đặc biệt trên hệ điều hành Windows, nếu không chỉ định `encoding="utf-8"`, Python sẽ sử dụng bảng mã mặc định của hệ thống (như CP1252 hoặc CP1258). Điều này sẽ dẫn đến lỗi vỡ font chữ tiếng Việt hoặc ném ra ngoại lệ `UnicodeDecodeError` khi đọc các ký tự có dấu.
+3. **Tham số `newline=""` cho tệp CSV**: Theo tài liệu chính thức của Python, khi làm việc với module `csv`, luôn truyền `newline=""` vào hàm `open()` để bộ đọc và bộ ghi của `csv` tự xử lý ký tự xuống dòng (`\n` hoặc `\r\n`) trên các nền tảng khác nhau một cách chuẩn xác.
+4. **Tham số `ensure_ascii=False` cho JSON**: Khi xuất dữ liệu tiếng Việt sang JSON, tùy chọn này giúp các ký tự có dấu được lưu giữ tự nhiên dưới dạng văn bản đọc được thay vì bị biến thành các chuỗi thoát mã ASCII khó hiểu như `\u00e0`, `\u1ed9`.
 
+## 6. Bài tập tự luyện
+
+::: exercise Phân biệt lọc chân lý và lọc không rỗng
+Giả sử danh sách giá chứa các phần tử `[0, None, 12]`. Hãy cho biết kết quả trả về của hai cách viết sau:
+1. `[x for x in values if x]`
+2. `[x for x in values if x is not None]`
+
+Trong ngữ cảnh một chương trình bán hàng có mặt hàng tặng kèm miễn phí, cách viết nào là chính xác?
+:::
+
+::: solution
+- Cách 1 (`if x`) chỉ giữ lại `[12]`, vì trong Python cả `None` lẫn số `0` đều có giá trị chân lý là `False`.
+- Cách 2 (`if x is not None`) giữ lại cả `[0, 12]`.
+
+Trong bài toán bán hàng có sản phẩm miễn phí (giá 0 đồng), cách thứ hai là cách viết chính xác. Số 0 là một giá trị định lượng có ý nghĩa thực tế, hoàn toàn khác biệt với sự thiếu thông tin (`None`).
+:::
+
+::: exercise Hệ quả của sao chép nông trên cấu trúc lồng nhau
+Thực hiện đoạn mã sau:
 ```python
-from pathlib import Path
-
-DATA = Path("data") / "raw" / "santiago"     # nối đường dẫn bằng '/' — hoạt động cả Windows lẫn macOS/Linux
-DATA.mkdir(parents=True, exist_ok=True)      # parents=True: tự tạo cả thư mục cha nếu chưa có
-                                              # exist_ok=True: không báo lỗi nếu thư mục đã tồn tại
-sorted(DATA.parent.glob("*"))
+a = [{"gia": 24}]
+b = a.copy()
+b[0]["gia"] = 99
 ```
-```text
-[PosixPath('data/raw/santiago')]
-```
-
-Cấu trúc thư mục kiểu `data/raw/<thanh_pho>/` — quy ước này sẽ được dùng lại xuyên suốt bài tập lớn Inside Airbnb.
-
-##  Cheat Sheet — 7 điều phải nhớ của Bài 2
-
-| # | Cú pháp / khái niệm | Ghi nhớ nhanh |
-|---|---|---|
-| 1 | `f"{x:,.0f}"` / `f"{x:.1%}"` | Định dạng số nghìn / phần trăm cho báo cáo |
-| 2 | `lst[a:b]` | Cắt lát, lấy chỉ số `a` đến `b-1` (không bao gồm `b`) |
-| 3 | `d.get(key, default)` | Tra `dict` an toàn, không lo `KeyError` |
-| 4 | `a - b`, `a & b`, `a \| b` | Hiệu / giao / hợp giữa hai `set` |
-| 5 | `[expr for x in seq if cond]` | Comprehension = lọc + biến đổi cả dãy trong 1 dòng |
-| 6 | `x.copy()` | Bắt buộc khi cần bản sao độc lập của list/dict (tránh alias) |
-| 7 | `except ValueError:` (không dùng `except Exception: pass`) | Chỉ bắt đúng loại lỗi đã lường trước |
-
-## Tổng kết
-
-- `None` là dữ liệu **thiếu**, khác `0` và `""`. `list`/`dict`/`set`/`tuple` — mỗi cấu trúc phục vụ một mục đích riêng biệt, chọn đúng ngay từ đầu giúp code ngắn và ít lỗi.
-- Comprehension = tư duy "biến đổi cả dãy" — chưa nhanh bằng NumPy nhưng là bước đệm tư duy bắt buộc trước khi học vector hoá thật sự ở Bài 3.
-- Một pipeline dữ liệu tốt = chuỗi các **hàm nhỏ, chịu được dữ liệu bẩn**, dùng `try/except` bắt đúng loại lỗi thay vì nuốt mọi lỗi.
-- Đọc/ghi file: luôn `with` + `encoding="utf-8"`. CSV **không** mang theo kiểu dữ liệu (mọi thứ đều là chuỗi), JSON thì tương ứng gần như trực tiếp với `dict`/`list`.
-
-##  Mẹo thi & bẫy thường gặp
-
-::: warning Câu hỏi hay xuất hiện trong đề
-- **"`b = a.copy()` và `b = a` cho kết quả giống nhau nếu sau đó không sửa gì"** → Đúng về mặt giá trị ban đầu, nhưng **SAI về bản chất**: `b = a` khiến `a` và `b` cùng trỏ một vùng nhớ. Chỉ cần sửa `b` ở bất kỳ đâu sau đó, `a` cũng đổi theo. Đề thi hay cho code sửa `b` rồi hỏi giá trị của `a`.
-- **"CSV lưu số thì đọc ra sẽ là số"** → SAI, `csv.DictReader` luôn trả về **chuỗi** cho mọi cột, kể cả cột toàn số.
-- **"`except Exception: pass` là cách an toàn để code không bao giờ crash"** → SAI, đây là bẫy nguy hiểm nhất bài — nó che giấu cả lỗi logic, khiến pipeline âm thầm sai mà không báo động.
-- **Dry-run vòng lặp `for` với điều kiện lồng nhau**: đề hay cho một vòng `for` + `if` + `append` và yêu cầu viết ra list kết quả cuối — cách chắc ăn nhất là kẻ bảng dry-run như mục 2.1 ở trên, đừng tính nhẩm.
+Giá trị của `a[0]["gia"]` lúc này là bao nhiêu? Giải thích cơ chế vùng nhớ bên dưới.
 :::
 
-##  Đọc thêm & tài nguyên
+::: solution
+Giá trị `a[0]["gia"]` lúc này là **99**.
 
-- McKinney, *Python for Data Analysis*, 3rd ed. — chương 2–3 (ôn Python built-ins, miễn phí tại [wesmckinney.com/book](https://wesmckinney.com/book/)).
-- [Python Official Tutorial — Data Structures](https://docs.python.org/3/tutorial/datastructures.html) — list/dict/set/tuple, comprehension.
-- [Python Official Tutorial — Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html) — cách bắt đúng loại lỗi.
-- [Real Python — Python's `with` Statement](https://realpython.com/python-with-statement/) — hiểu sâu vì sao `with` an toàn hơn `open()`/`close()` thủ công.
--  Tự học OOP (chưa cần gấp): *Official Python Tutorial*, mục [Classes](https://docs.python.org/3/tutorial/classes.html) — cần khi đọc code nguồn thư viện, chưa cần để dùng pandas ở mức cơ bản.
-
-::: info  Làm việc với AI thì sao?
-**AI làm tốt:** tạo nhanh các hàm tiện ích cho thao tác chuẩn (như `clean_price`).
-**AI hay sai:** có xu hướng dùng `except Exception: pass` để code "chạy được bằng mọi giá". Hay quên `encoding="utf-8"`. Code đúng với đúng ví dụ bạn đưa ra nhưng sai với các ca biên (giá âm, chuỗi rỗng, `None`).
-**Kiểm chứng bằng cách nào:** đưa hàm AI viết qua một **bộ ca thử tự nghĩ ra**: giá trị bình thường, rỗng, `None`, âm, sai định dạng — rồi yêu cầu chính AI liệt kê thêm các đầu vào có thể làm hàm sai, và tự tay kiểm tra từng trường hợp đó.
+Lý do: Phương thức `a.copy()` thực hiện sao chép nông (shallow copy). Nó tạo ra một vùng nhớ danh sách mới cho `b`, nhưng các con trỏ phần tử bên trong danh sách `b` vẫn trỏ tới cùng đối tượng từ điển `{"gia": 24}` mà danh sách `a` đang trỏ. Khi ta sửa đổi trường `gia` thông qua `b[0]`, ta đang sửa trực tiếp nội dung của đối tượng từ điển dùng chung đó.
 :::
+
+::: exercise Kiểm tra phản xạ phòng thủ của hàm
+Cho hàm `doc_gia` đã xây dựng ở mục 2. Hãy dự đoán kết quả trả về khi truyền lần lượt các đối số sau vào hàm:
+`" 18.5 "`, `"N/A"`, `"-2"`, `"NaN"`, `None`, và số nguyên `18`.
+:::
+
+::: solution
+Kết quả lần lượt là:
+- `" 18.5 "` -> `18.5` (sau khi cắt khoảng trắng và ép kiểu sang float).
+- `"N/A"` -> `None` (ném lỗi ValueError khi ép kiểu float và được khối except bắt lại để trả về None).
+- `"-2"` -> `None` (ép kiểu thành -2.0 nhưng vi phạm điều kiện miền $0 \le value < \infty$).
+- `"NaN"` -> `None` (float("NaN") không thỏa mãn điều kiện $0 \le value < \infty$ do NaN không thể so sánh thứ tự).
+- `None` -> `None` (thỏa mãn điều kiện kiểm tra rỗng đầu tiên).
+- Số nguyên `18` -> Ném ra ngoại lệ `TypeError: Gia dau vao phai la chuoi hoac None`. Đây là chủ đích thiết kế nhằm bắt lỗi lập trình khi truyền sai kiểu dữ liệu ngay từ đầu.
+:::
+
+## 7. Nguồn và đọc thêm
+
+- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 2, mục 2.3: Python Language Basics](https://wesmckinney.com/book/python-basics) và [Chương 3, mục 3.1–3.3: Built-in Data Structures, Functions, and Files](https://wesmckinney.com/book/python-builtin).
+- Tài liệu chính thức của Python: [The Python Tutorial — Data Structures](https://docs.python.org/3/tutorial/datastructures.html).
+- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-02-python-co-ban.html).

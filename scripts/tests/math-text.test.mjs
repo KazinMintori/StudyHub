@@ -11,6 +11,7 @@ import { concepts } from '../../docs/.vitepress/concepts.mjs'
 import { courseCatalog } from '../../docs/.vitepress/course-catalog.mjs'
 import { wikiDetails } from '../../docs/.vitepress/wiki-content.mjs'
 import { mathLabels } from '../../docs/.vitepress/math-labels.mjs'
+import { cheatsheets } from '../../docs/.vitepress/cheatsheets.mjs'
 import { mathSegments, renderMathText } from '../../docs/.vitepress/math-text.mjs'
 import { mathTextPlugin } from '../math-text-plugin.mjs'
 
@@ -42,6 +43,16 @@ for (const [id, term] of Object.entries(concepts)) for (const field of ['definit
 for (const course of courseCatalog) for (const slide of course.slides) for (const value of [slide.formula, slide.example, ...slide.bullets]) check(value, `${course.id}/${slide.note}`)
 for (const [id, source] of Object.entries(wikiDetails)) check(source, `wikiDetails.${id}`)
 for (const source of Object.values(mathLabels)) check(source, 'interactive label')
+for (const [key, cs] of Object.entries(cheatsheets)) {
+  for (const sec of cs.sections || []) {
+    for (const item of sec.items || []) {
+      for (const val of [item.formula, item.description, item.warning, item.correct, ...(item.bullets || [])]) if (val) check(val, `cheatsheet.${key}.${sec.id}`)
+    }
+    if (sec.table) {
+      for (const row of sec.table.rows || []) for (const cell of row) check(cell, `cheatsheet.${key}.${sec.id}.table`)
+    }
+  }
+}
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (entry.name.startsWith('.')) continue

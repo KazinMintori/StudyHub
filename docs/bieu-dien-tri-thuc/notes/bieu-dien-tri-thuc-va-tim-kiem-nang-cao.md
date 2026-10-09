@@ -5,15 +5,18 @@ prerequisites: ["tap-hop","menh-de","luong-tu"]
 lessonStatus: "reference"
 ---
 
-# Chuyên đề: Biểu diễn Tri thức & Tìm kiếm Nâng cao
+# Chuyên đề: Biểu diễn Tri thức & Tìm kiếm
 
-::: info Nội dung đã được chia nhỏ theo từng chương
-Toàn bộ nội dung chuyên đề này đã được tách thành các chương độc lập, chi tiết và có mục lục rõ ràng:
+::: info Hệ thống bài giảng hoàn chỉnh
+Nội dung của học phần đã được hoàn thiện thành các bài giảng chuyên sâu:
 
-1. [**Chương 2: Tìm kiếm mù** (BFS, DFS, UCS, IDS)](./02-tim-kiem-mu.md)
-2. [**Chương 3: Tìm kiếm dựa trên kinh nghiệm** (Greedy, A*, Admissible/Consistent, IDA*)](./03-tim-kiem-kinh-nghiem.md)
-3. [**Chương 4: Tìm kiếm có đối thủ** (Minimax, Cắt tỉa Alpha–Beta)](./04-tim-kiem-doi-khang.md)
-4. [**Chương 14: Logic & Biểu diễn tri thức** (FOL, Suy luận, Ontology)](./14-logic-bieu-dien-tri-thuc.md)
+1. [**Bài 1: Giới thiệu & Tác tử thông minh**](/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md)
+2. [**Bài 2: Tìm kiếm mù** (BFS, DFS, UCS, IDS)](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md)
+3. [**Bài 3: Tìm kiếm kinh nghiệm** (Greedy, A\*, Admissible/Consistent, IDA\*)](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
+4. [**Bài 4: Tìm kiếm đối kháng** (Minimax, Cắt tỉa Alpha–Beta)](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md)
+5. [**Bài 5: Bài toán thỏa mãn ràng buộc** (CSP, AC-3, Backtracking)](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
+6. [**Bài 14: Logic & Biểu diễn tri thức** (FOL, Suy luận, Ontology)](/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md)
+7. [**Bài 16: Mạng Bayes & Suy luận** (DAG, D-separation, Variable Elimination)](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)
 
- Xem toàn bộ lộ trình tại [**Mục lục môn học**](./index.md).
+Xem toàn bộ lộ trình tại [**Mục lục môn học**](/bieu-dien-tri-thuc/notes/00-muc-luc.md).
 :::

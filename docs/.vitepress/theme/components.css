@@ -160,6 +160,15 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .code-illustration svg:not(.field-canvas) circle.visited { fill: var(--tim-soft); stroke: var(--tim); }
 .code-illustration svg:not(.field-canvas) circle.current { fill: var(--tim); stroke: var(--tim); }
 .code-illustration svg:not(.field-canvas) .current + text { fill: var(--paper); }
+.code-illustration svg:not(.field-canvas) circle.frontier { stroke: var(--tim); stroke-dasharray: 4 4; }
+.code-illustration svg:not(.field-canvas) circle { transition: fill var(--motion-slide), stroke var(--motion-slide); }
+.code-illustration svg .gradient-marker { transition: cx var(--motion-slide) var(--ease), cy var(--motion-slide) var(--ease); }
+.simulation-legend { display: flex; flex-wrap: wrap; gap: var(--space-3); font-size: var(--fs-small); color: var(--ink-2); }
+.code-illustration .gradient-notice { border-left: 3px solid var(--do); padding-left: var(--space-3); }
+.map-phase-enter-active { transition: opacity var(--motion-slide), transform var(--motion-slide); }
+.map-phase-enter-from { opacity: 0; transform: translateY(6px); }
+.map-phase-leave-active { display: none; }
+@media (prefers-reduced-motion: reduce) { .code-illustration svg circle, .code-illustration svg .gradient-marker, .map-phase-enter-active { transition: none; } }
 .illustration-edge { stroke: var(--control); stroke-width: 2; }
 .illustration-curve { fill: none; stroke: var(--tim); stroke-width: 2; }
 .illustration-trace { fill: none; stroke: var(--do); stroke-width: 2; stroke-dasharray: 5 5; }

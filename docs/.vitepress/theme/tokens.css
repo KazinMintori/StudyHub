@@ -27,6 +27,7 @@
   --vp-c-danger-1: var(--do); --vp-c-danger-soft: var(--do-soft);
   --vp-code-block-bg: var(--canvas); --vp-code-bg: var(--sunken); --vp-code-color: var(--ink);
   --vp-nav-height: 56px; --vp-sidebar-width: 272px; --vp-layout-max-width: 1440px;
+  --vp-header-anchor-symbol: '';
 }
 .dark {
   color-scheme: dark;

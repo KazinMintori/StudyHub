@@ -30,6 +30,21 @@ PHRASES = {
     "một cách tự nhiên": "Kiểm tra bước suy ra có đang bị giấu không.",
 }
 
+# Passive citation or subordinate translation mindset: StudyHub lectures are independent, authoritative teaching material.
+PASSIVE_CITATION = {
+    "ảnh lấy từ sách": "Chủ quyền bài giảng: Bài giảng của bạn là độc lập, không phải nơi trích dẫn sách thụ động. Dùng 'Hình 1.1: ...' hoặc chú thích trực tiếp.",
+    "ảnh nguyên gốc sách": "Chủ quyền bài giảng: Xóa bỏ cụm từ này; tư liệu và hình ảnh phải là một phần tự nhiên của bài giảng.",
+    "hình trong sách": "Chủ quyền bài giảng: Dùng 'Quan sát hình...', 'Sơ đồ sau...' hoặc 'Hình 1.x: ...'.",
+    "hình lấy từ sách": "Chủ quyền bài giảng: Dùng chú thích hình chuẩn mực sư phạm.",
+    "dữ liệu này từ": "Chủ quyền bài giảng: Dữ liệu và ví dụ phải là một phần tự nhiên của bài giảng.",
+    "theo sách": "Chủ quyền bài giảng: Không tự hạ thấp thành bản tóm tắt sách; diễn đạt trực tiếp kiến thức như một giáo sư.",
+    "sách dùng": "Chủ quyền bài giảng: Trình bày quy ước trực tiếp, ví dụ 'Ta quy ước...', 'Trong khuôn khổ môn học, ta xét...'.",
+    "nguyên tác": "Chủ quyền bài giảng: Xóa bỏ tâm thế dịch sách.",
+    "bản dịch của": "Chủ quyền bài giảng: Đây là bài giảng độc lập, không phải bản dịch.",
+    "tiến độ bản dịch": "Chủ quyền bài giảng: Đây là bài giảng độc lập, không phải bản dịch.",
+    "mẹo thú vị:": "Không đóng khung máy móc thành nhãn 'Mẹo thú vị:'; hãy diễn đạt tự nhiên như 'Một cách người ta hay dùng trong thực tế là...', 'Để không bao giờ nhầm lẫn ở bước này...'.",
+}
+
 # Evaluation used instead of explanation (seen on StudyHub pages). Word-boundary matched.
 EVALUATIVE = {
     "cực kỳ": "Đánh giá thay giải thích: nói tác dụng hoặc lý do cụ thể.",
@@ -205,6 +220,9 @@ def review(sections):
             for phrase, suggestion in PHRASES.items():
                 if phrase in lower:
                     findings.append({"code": "CONTEXTUAL_PHRASE", "where": where, "phrase": phrase, "suggestion": suggestion})
+            for phrase, suggestion in PASSIVE_CITATION.items():
+                if phrase in lower:
+                    findings.append({"code": "PASSIVE_CITATION", "where": where, "phrase": phrase, "suggestion": suggestion})
             evaluative_text = MATH_INFINITY_RE.sub(" ", INLINE_MATH_RE.sub(" ", lower))
             for phrase, suggestion in EVALUATIVE.items():
                 if _has_word(evaluative_text, phrase):

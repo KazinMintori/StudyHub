@@ -1,0 +1,55 @@
+Evaluating and Improving Predictions
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Which three models will exhibit the highest 
+[MATH] \(R^2\)?
+
+−+
+01:00
+
+This is a repeat of a previous CQ, but now with a linear model and a different characteristic of interest: R^2. The two highest R^2 values should be clearly obtained by the models fit with B and E. The data in C has a positive enough trend that it should be identified as the third choice.
+
+This is a good time to mention that for a least squares linear models, R^2 is indeed just the square of the correlation coefficient. This isn’t true of non-linear models.
+
+# A tibble: 4 × 5
+  name    hours cuteness food_eaten is_indoor_cat
+  <chr>   <dbl>    <dbl>      <dbl> <lgl>        
+1 castiel    12      9          175 TRUE         
+2 frank      18     10          200 TRUE         
+3 luna       19      9.5        215 FALSE        
+4 luca       10      8          218 FALSE        
+
+m1 <- lm(formula = hours ~ cuteness + food_eaten + is_indoor_cat, 
+         data = cats)
+
+      (Intercept)          cuteness        food_eaten is_indoor_catTRUE 
+    -3.800000e+01      6.000000e+00      2.455729e-16     -4.000000e+00 
+
+How many hours does the model predict Frank will sleep each day? Write out the linear equation of the model from the model output to help you. Hint: as an example, you can read 5e+01 as 
+[MATH] \(5* 10^1\).
+
+−+
+03:00
+
+Using “time being pet”, which lm formula is most appropriate to predict hunger, based on the below visualization?
+
+−+
+01:00
+
+Break
+
+−+
+05:00
+
+Problem Set: Evaluating and Improving Predictions
+
+−+
+40:00
+
+Lab
+
+−+
+45:00

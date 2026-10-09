@@ -1,0 +1,251 @@
+Defining Causality
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Suppose that a prisoner is about to be executed by a firing squad. A certain chain of events must occur for this to happen. First, the judge orders the execution. The order goes to a captain, who signals the two soldiers of the firing squad (soldier 1 and soldier 2) to fire. They are obedient and expert marksmen, so they only fire on command, and if either one of them shoots, the prisoner dies.
+
+Using the conditional counterfactual definition, who caused the death of the prisoner?
+
+A. The judge
+B. The captain
+C. Soldier 1
+D. Soldier 2
+
+−+
+02:00
+
+The goal of this example is to reinforce the definition of cause and effect by applying it to a fairly complicated causal graph. The correct answers are A and B, because had the judge not ordered, or had the captain not signaled, the prisoner would not have died. Each of the soldiers individually fail this definition because if one of them doesn’t fire (and they’re acting independently), the prisoner will still die.
+
+You can debrief this one by drawing a causal diagram with judge -> captain -> -> two arrows to separate solider 1 and soldier 2 -> -> two arrows back to prisoner. You can start at the top, drawing 2 by 3 data frames of first the judge, then captain, then soldiers, showing one world in the first row and the other world in the second row and showing that the potential outcomes would differ based on the action of the first two.
+
+You can also use the graph method of: if you break the causal chain after a given node, is there still a connected path to the prisoner? The answer is no for judge and captain but yes for each solider.
+
+Students may bring up good points about ambiguity in the wording of the problem or a different interpretation of the “rules of the game” around how the causal structure works. That’s good! If students suggest different interpretations, you could draw that graph or draw that data frame, and analyze that one to identify causes.
+
+As a postscript, this is likely one reason why firing squads are have multiple shooters. Each one has plausible deniability that “the prisoner would have died anyways”, so they didn’t cause the death. Apparently, it’s common for marksmen to occasionally neglect to fire, so this also has redundancy. The judge and captain, though they might be insolated from guilt because they are higher up the causal chain, they are still a cause of the death by this definition.
+
+All of the four people in the table below need to travel from Berkeley to San Francisco today, and are trying to decide whether to take BART or to drive. The table below shows travel times for each individual (assume these are the true, known numbers, not just predictions).
+
+Name
+Travel time by car (min)
+Travel time by BART (min)
+
+Maria
+35
+28
+
+Fan
+30
+32
+
+Alice
+40
+55
+
+Muhammad
+30
+40
+
+Pick the correct way to fill in the following sentence: “Taking BART instead of driving will cause ___ to arrive more than ___ minutes later.”
+
+This is the first of two questions that deal with a hypothetical world: what if we could see both potential outcomes of each unit? This question is distinctive in that it has us thinking about unit-level causation, so the options all refer to one of the four people and then their causal effect - just the difference in travel times.
+
+This one should be quick - only 30 seconds or so.
+
+  
+    −
+    +
+
+ 01:00
+
+All of the four people in the table below need to travel from Berkeley to San Francisco today, and are trying to decide whether to take BART or to drive. The table below shows travel times for each individual (assume these are the true, known numbers, not just predictions).
+
+Name
+Travel time by car (min)
+Travel time by BART (min)
+
+Maria
+35
+28
+
+Fan
+30
+32
+
+Alice
+40
+55
+
+Muhammad
+30
+40
+
+What is the average treatment effect of taking BART on travel time for these four subjects?
+
+Note that we’re still in a hypothetical world where we’re able to see both potential outcomes.
+
+This question shifts the focus from individual causal effects to group causal effects - the average treatment effect. The answer here the difference in average travel times of each travel type:
+
+mean(bart times) - mean(car times) = 38.75 - 33.75 = +5
+
+  
+    −
+    +
+
+ 01:00
+
+All of the four people in the table below need to travel from Berkeley to San Francisco today. The table below shows the actual travel times for each individual using the method they chose to use.
+
+Name
+Travel time by car (min)
+Travel time by BART (min)
+
+Maria
+?
+28
+
+Fan
+?
+32
+
+Alice
+40
+?
+
+Muhammad
+30
+?
+
+What is a natural estimate of the average effect of taking BART (rather than driving) if we only observed this data?
+
+We’ve now left the hypothetical world and entered the real world scenario where on every unit we only get to observe one of the potential outcomes.
+
+The answer is still a difference in average travel times, but the particular times that are now observed cause the average treatment effect to flip it’s sign from +5 to -5.
+
+mean(bart times) - mean(car times) = 30 - 35 = -5
+
+  
+    −
+    +
+
+ 01:00
+
+All of the four people in the table below need to travel from Berkeley to San Francisco today. The table below shows the actual travel times for each individual using the method they chose to use.
+
+Name
+Travel time by car (min)
+Travel time by BART (min)
+
+Maria
+?
+28
+
+Fan
+?
+32
+
+Alice
+40
+?
+
+Muhammad
+30
+?
+
+Why might this estimate of the average treatment effect not be reliable?
+
+  
+    −
+    +
+
+ 03:00
+
+This last question is designed to be a “pair and share” exercise and does not have an associated PollEV item. After they discuss you can ask a couple of them to share. Common answers include:
+
+Maria and Fan live closer to Bart stations than Alice and Muhammad
+
+Alice and Muhammad migth travel to SF during rush hour, lengthening car travel times, while Maria and Fan do not.
+
+This is a good chance to talk about why it’s hard to measure causal effects. Asking “How would you try to collect data about this causal claim differently to get a better measure of the causal effect?” provides a nice lead-in to the lab.
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab (Taste Test) - Part I
+
+Finding a group
+
+Get into groups of 3 or 4! This will be your group for this week’s assignment.
+
+If someone you plan to have in your group is missing today, you must account for that in your total group size.
+
+The main reason for the roles here is to dedicate just one person to handling the materials for health safety.
+
+A Matter of Taste
+
+Your challenge: Determine whether you can affect one your teammates’ perceptions of bubble water by manipulating their experience of tasting.
+
+Each team will have access to
+
+50 minutes (half of next class)
+
+2 cans of soda water, each one from a different flavor
+
+small paper cups
+
+saltine crackers
+
+other materials welcome
+
+Designating roles within your group
+
+Taster/Subject: Undergoes the experiment, tastes soda water, provides data.
+
+Materials: Handles the materials (water et. al) for the experiment
+
+Facilitator(s): Carries out the experiment, keeps track of time, records data.
+
+If you have a group of 4, two people should be chosen to be the facilitators.
+
+Question
+
+Prompt them to think carefully about their wording here in the question. How ambitious and general do they want to be?
+
+It is also very common for people to suggest non-causal questions. It will help to underline the idea of intervention on this slide.
+
+Hypotheses
+
+Protocol
+
+Here they must be very precise. We’re spoken about reproducible science in class, so use that language to encourage careful work. They must be able to pass this protocol off to another group, and they should be able to carry out the intended experiment with no ambiguity.
+
+Data
+
+This is intended to be a blank table with n rows and at least 1 column. They may plan to record either several extraneous variables or not enough to draw the conclusions they intend. As before, don’t correct them. They may discover mid-experiment that they did this part wrong, and that’s great.
+
+Graphics
+
+Encourage them to check that their viz is possible given their data frame and their data frame is possible give their protocol, and that their viz bears directly on their hypotheses.
+
+Things to remember
+
+Be precise in your protocol.
+
+Be sure your claim corresponds to your protocol corresponds to your data corresponds to your plots.
+
+Important: Your worksheet must be fully completed and shown to your instructor before you begin the experiment next class!
+
+Lab (Taste Test) - Part I
+
+  
+    −
+    +
+
+ 40:00

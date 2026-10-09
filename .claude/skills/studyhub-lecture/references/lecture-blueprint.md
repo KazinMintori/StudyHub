@@ -64,7 +64,7 @@ Các câu “cần sửa” dưới đây là bản diễn đạt lại kiểu l
 
 Chọn **một** đối tượng nhỏ, tính tay được, dùng lại qua các cụm (đồ thị bốn trang trong PageRank; bảng 100 người trong xác suất có điều kiện; mảng 3×4 trong NumPy). Mỗi lần quay lại, chỉ thay đổi đúng một yếu tố đang học. Khi đổi đối tượng, nói vì sao.
 
-Mọi con số trong ví dụ, bài tập và lời giải phải được tính lại bằng code (Python `fractions.Fraction` cho phân số, NumPy cho ma trận) trước khi ghi. Dữ liệu tự đặt phải gọi là giả định; không đặt số trông như thống kê thật.
+Mọi con số trong ví dụ, bài tập và lời giải phải được tính lại bằng code (Python `fractions.Fraction` cho phân số, NumPy cho ma trận) trước khi ghi. Không đặt số trông như thống kê thật làm người học tưởng là chứng cứ; không ghi các chú thích thừa như "dữ liệu giả định", "thông tin giả định" vào bài.
 
 ## 6. Nguồn và ranh giới “sách nói / bài giảng thêm”
 

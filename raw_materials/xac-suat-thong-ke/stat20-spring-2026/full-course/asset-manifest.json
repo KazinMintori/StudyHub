@@ -1,0 +1,1465 @@
+[
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/causal.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/causal.png",
+    "bytes": 54785,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/claims.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/claims.png",
+    "bytes": 187496,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/generalization.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/generalization.png",
+    "bytes": 82456,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/prediction.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/prediction.png",
+    "bytes": 72250,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/shoebill-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/shoebill-1.png",
+    "bytes": 2226875,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/shoebill-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/shoebill-2.png",
+    "bytes": 1869463,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/shoebill-3.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/shoebill-3.png",
+    "bytes": 1848401,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-01.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-01.jpg",
+    "bytes": 225950,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-02.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-02.jpg",
+    "bytes": 311291,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-03.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-03.jpg",
+    "bytes": 383157,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-04.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-04.jpg",
+    "bytes": 435861,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-05.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-05.jpg",
+    "bytes": 499835,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-17.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-17.jpg",
+    "bytes": 339135,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-18.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-18.jpg",
+    "bytes": 389111,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-19.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-19.jpg",
+    "bytes": 271090,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-20.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-20.jpg",
+    "bytes": 403338,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-21.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-21.jpg",
+    "bytes": 489921,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-22.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-22.jpg",
+    "bytes": 590887,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-23.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-23.jpg",
+    "bytes": 614184,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-24.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/stat20-sketch-24.jpg",
+    "bytes": 536491,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/images/summary.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/01-understanding-the-world/images/summary.png",
+    "bytes": 88076,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/alien-contingency-table.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/alien-contingency-table.png",
+    "bytes": 8213,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/culmen-depth.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/culmen-depth.png",
+    "bytes": 334033,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/kristen-gorman.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/kristen-gorman.png",
+    "bytes": 1121963,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/lter_penguins.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/lter_penguins.png",
+    "bytes": 1253379,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/palmer-station.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/palmer-station.jpeg",
+    "bytes": 195259,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/rgb.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/rgb.png",
+    "bytes": 36451,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1-gray8.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1-gray8.png",
+    "bytes": 24330,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1-grayscale.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1-grayscale.png",
+    "bytes": 631549,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-1.png",
+    "bytes": 2226875,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-2-gray8.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-2-gray8.png",
+    "bytes": 21960,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-2.png",
+    "bytes": 1869463,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-3-gray8.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-3-gray8.png",
+    "bytes": 21157,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/shoebill-3.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/shoebill-3.png",
+    "bytes": 1848401,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/stat20-sketch-18.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/stat20-sketch-18.png",
+    "bytes": 521022,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/taxonomy-of-data.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/1-questions-and-data/02-taxonomy-of-data/images/taxonomy-of-data.png",
+    "bytes": 322185,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/images/2x2-table.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/images/2x2-table.png",
+    "bytes": 476039,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/images/two-var.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/images/two-var.png",
+    "bytes": 664883,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/images/world-energy-supply.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/images/world-energy-supply.jpeg",
+    "bytes": 180715,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 31747,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-3-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-3-2.png",
+    "bytes": 32767,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "bytes": 31463,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 32430,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 36207,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-7-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/notes_files/figure-html/unnamed-chunk-7-2.png",
+    "bytes": 36088,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/01-summarizing-categorical-data/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 49601,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/images/culmen-depth.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/images/culmen-depth.png",
+    "bytes": 334033,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/images/function-machine.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/images/function-machine.png",
+    "bytes": 78088,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/images/income-dist.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/images/income-dist.png",
+    "bytes": 348299,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/images/modality.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/images/modality.png",
+    "bytes": 96599,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/images/skew.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/images/skew.png",
+    "bytes": 82161,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "bytes": 57932,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 14594,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 14499,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "bytes": 89058,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 36110,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 145931,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "bytes": 51018,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "bytes": 22576,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 49708,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/02-summarizing-numerical-data/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "bytes": 51077,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/bubble-chart.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/images/bubble-chart.png",
+    "bytes": 387492,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/grammar-of-graphics.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/images/grammar-of-graphics.png",
+    "bytes": 378143,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/income-dist.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/images/income-dist.png",
+    "bytes": 348299,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/mapping.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/images/mapping.png",
+    "bytes": 1868272,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/plot-collage.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/images/plot-collage.png",
+    "bytes": 1013991,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 92154,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 70296,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "bytes": 61516,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 40145,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "bytes": 39255,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "bytes": 46415,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 42638,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/03-a-grammar-of-graphics/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 53621,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/images/group-by.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/04-conditioning/images/group-by.png",
+    "bytes": 38909,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/images/pipeline-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/04-conditioning/images/pipeline-2.png",
+    "bytes": 630223,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 69357,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-27-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-27-1.png",
+    "bytes": 63424,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/04-conditioning/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "bytes": 118867,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/images/handdrawn-line.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/images/handdrawn-line.png",
+    "bytes": 138285,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/images/vid-thumbnail.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/images/vid-thumbnail.png",
+    "bytes": 705070,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "bytes": 66182,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "bytes": 55320,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 85027,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 41286,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 48851,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-11-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-11-1.png",
+    "bytes": 134118,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-14-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-14-1.png",
+    "bytes": 47335,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-15-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-15-1.png",
+    "bytes": 34169,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-16-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-16-1.png",
+    "bytes": 126864,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-17-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-17-1.png",
+    "bytes": 131902,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-18-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-18-1.png",
+    "bytes": 126428,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-19-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-19-1.png",
+    "bytes": 131611,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 159647,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-8-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/05-summarizing-associations/slides_files/figure-revealjs/unnamed-chunk-8-1.png",
+    "bytes": 100439,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/images/zagat-handdrawn.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/06-multiple-linear-regression/images/zagat-handdrawn.png",
+    "bytes": 526290,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/images/zagat.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/06-multiple-linear-regression/images/zagat.png",
+    "bytes": 70402,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "bytes": 84093,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 75557,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/06-multiple-linear-regression/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 81837,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/images/claims-only.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/images/claims-only.png",
+    "bytes": 138159,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/images/nyt-inflation.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/2-summarizing-data/images/nyt-inflation.png",
+    "bytes": 859704,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/538-pollster-ranking-snippet.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/538-pollster-ranking-snippet.png",
+    "bytes": 71315,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/biased-coin.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/biased-coin.png",
+    "bytes": 172654,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/box-1.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/box-1.jpeg",
+    "bytes": 46373,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/dice-players-painting.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/dice-players-painting.jpeg",
+    "bytes": 54930,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/roulette-us.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/roulette-us.jpg",
+    "bytes": 84011,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/slides-cq-venn-feb-22-2023.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/slides-cq-venn-feb-22-2023.png",
+    "bytes": 63788,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/us-quarter.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/us-quarter.png",
+    "bytes": 337963,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/venn-diagram-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/venn-diagram-1.png",
+    "bytes": 114491,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/images/venn-disjoint.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/01-prob-foundations/images/venn-disjoint.png",
+    "bytes": 84724,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/box-2-number-cond.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/box-2-number-cond.jpeg",
+    "bytes": 185929,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/box-2-number.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/box-2-number.jpeg",
+    "bytes": 112746,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/box-red-blue.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/box-red-blue.jpeg",
+    "bytes": 53556,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/committee.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/committee.jpeg",
+    "bytes": 362737,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/incl-excl.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/incl-excl.png",
+    "bytes": 67963,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/indep-box.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/indep-box.jpeg",
+    "bytes": 147957,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/pab_pba.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/pab_pba.png",
+    "bytes": 193734,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/rb-box-3-draws-no-repl.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/rb-box-3-draws-no-repl.jpeg",
+    "bytes": 250778,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/rb-box-3-draws.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/rb-box-3-draws.jpeg",
+    "bytes": 299160,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/sally-clark.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/sally-clark.png",
+    "bytes": 624044,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/venn-diagram-intersection.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/venn-diagram-intersection.png",
+    "bytes": 42557,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/without-repl-1.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/without-repl-1.jpeg",
+    "bytes": 608366,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/ws2025.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/02-computing-probs/images/ws2025.png",
+    "bytes": 10185,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/biased-coin-3-tosses.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/biased-coin-3-tosses.png",
+    "bytes": 154074,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/box-slides-cq-feb-22-2023.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/box-slides-cq-feb-22-2023.png",
+    "bytes": 26063,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/box.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/box.jpeg",
+    "bytes": 38140,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/geni-clothes.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/geni-clothes.png",
+    "bytes": 197776,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/prob-hist-3-tosses.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/prob-hist-3-tosses.png",
+    "bytes": 56941,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/prob-hist-coin-toss.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/prob-hist-coin-toss.png",
+    "bytes": 79898,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/prob-hist-sum-dice.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/images/prob-hist-sum-dice.png",
+    "bytes": 156557,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 36254,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 27460,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/03-probability-dsns/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "bytes": 70991,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/bernoulli.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/bernoulli.png",
+    "bytes": 90237,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/cdf-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/cdf-2.png",
+    "bytes": 79075,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/cdf-bernoulli.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/cdf-bernoulli.png",
+    "bytes": 35466,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/cdf.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/cdf.png",
+    "bytes": 124439,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/roulette-us.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/roulette-us.jpg",
+    "bytes": 84011,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/rq-rv-cdf.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/rq-rv-cdf.png",
+    "bytes": 25793,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/images/rv-picture.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/images/rv-picture.png",
+    "bytes": 121734,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 41561,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides_files/figure-revealjs/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/04-random-variables/slides_files/figure-revealjs/unnamed-chunk-6-1.png",
+    "bytes": 66251,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/images/bernoulli-ev.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/05-ev-se/images/bernoulli-ev.png",
+    "bytes": 228113,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/images/disc-unif-ev.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/05-ev-se/images/disc-unif-ev.png",
+    "bytes": 70819,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/images/weighted-die-ev.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/05-ev-se/images/weighted-die-ev.png",
+    "bytes": 141140,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/box-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/box-1.png",
+    "bytes": 50898,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/die.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/die.jpeg",
+    "bytes": 35751,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/drunkard-walk-drawing.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/drunkard-walk-drawing.png",
+    "bytes": 116935,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/roulette-bet.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/roulette-bet.jpeg",
+    "bytes": 146756,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/roulette-us.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/roulette-us.jpg",
+    "bytes": 84011,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/unif-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/images/unif-1.png",
+    "bytes": 97295,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "bytes": 19172,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 96328,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 46638,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-8-1.png",
+    "bytes": 57141,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-8-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/notes_files/figure-html/unnamed-chunk-8-2.png",
+    "bytes": 51362,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/06-normal-approx/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 69736,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/images/bullseye.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/images/bullseye.png",
+    "bytes": 357616,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/images/generalization.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/images/generalization.png",
+    "bytes": 102799,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/images/pimentel-sm.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/images/pimentel-sm.jpeg",
+    "bytes": 55878,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "bytes": 12594,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 21069,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 59260,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 83055,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 62889,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "bytes": 27007,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "bytes": 68594,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/07-from-samps-to-pops/slides_files/figure-revealjs/unnamed-chunk-5-1.png",
+    "bytes": 26464,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/images/triptych-sample-only.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/images/triptych-sample-only.jpg",
+    "bytes": 243707,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/images/triptych-subs.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/images/triptych-subs.jpg",
+    "bytes": 356641,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 20064,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 31708,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 29220,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "bytes": 35772,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 85744,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 38969,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "bytes": 60908,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 97618,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/08-confidence-intervals/slides_files/figure-revealjs/unnamed-chunk-3-1.png",
+    "bytes": 97618,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/images/boot-penguins.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/images/boot-penguins.png",
+    "bytes": 288412,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/images/triptych-bootstrap.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/images/triptych-bootstrap.jpg",
+    "bytes": 389025,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 28983,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 35264,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 69611,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/09-bootstrapping/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 32146,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/images/northampton-va.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/10-hypothesis-tests/images/northampton-va.jpg",
+    "bytes": 189970,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/images/shift-deaths.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/10-hypothesis-tests/images/shift-deaths.jpeg",
+    "bytes": 261977,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/10-hypothesis-tests/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 24621,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/10-hypothesis-tests/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 24779,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/images/4-candidates.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/images/4-candidates.png",
+    "bytes": 689033,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/images/bouba-kiki.svg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/images/bouba-kiki.svg",
+    "bytes": 2757,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "bytes": 43761,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 47868,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 26852,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 47172,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-2-1.png",
+    "bytes": 28695,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/11-hypothesis-tests-2/slides_files/figure-revealjs/unnamed-chunk-4-1.png",
+    "bytes": 27442,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes_files/figure-html/CPR-study-p-value-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/12-wrong-by-design/notes_files/figure-html/CPR-study-p-value-1.png",
+    "bytes": 24861,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes_files/figure-html/CPR-study-right-tail-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/12-wrong-by-design/notes_files/figure-html/CPR-study-right-tail-1.png",
+    "bytes": 24829,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes_files/figure-html/type1ErrorDoublingExampleFigure-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/12-wrong-by-design/notes_files/figure-html/type1ErrorDoublingExampleFigure-1.png",
+    "bytes": 28853,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides_files/figure-revealjs/unnamed-chunk-9-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/12-wrong-by-design/slides_files/figure-revealjs/unnamed-chunk-9-1.png",
+    "bytes": 52333,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/3-generalization/images/andrew-gen-focus.jpeg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/3-generalization/images/andrew-gen-focus.jpeg",
+    "bytes": 241391,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/data.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/data.png",
+    "bytes": 57710,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/eda.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/eda.png",
+    "bytes": 81203,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/frost.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/frost.png",
+    "bytes": 5569957,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/hypothesis.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/hypothesis.png",
+    "bytes": 84472,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/la-croix.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/la-croix.png",
+    "bytes": 3688661,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/protocol.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/protocol.png",
+    "bytes": 52012,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/question.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/question.png",
+    "bytes": 68755,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/images/the-route-not-taken.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/01-defining-causality/images/the-route-not-taken.png",
+    "bytes": 2305081,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/images/la-croix.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/02-experiments/images/la-croix.png",
+    "bytes": 3688661,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/02-experiments/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 37882,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/02-experiments/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 29934,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/images/nba_foul.jpg",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/03-matching/images/nba_foul.jpg",
+    "bytes": 66067,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/03-matching/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 98703,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/03-matching/notes_files/figure-html/unnamed-chunk-7-1.png",
+    "bytes": 46301,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/images/claims-only.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/4-causation/images/claims-only.png",
+    "bytes": 138159,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/4-causation/images/nyt-inflation.png",
+    "status": "error",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/images/claims-only.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/01-method-of-least-squares/images/claims-only.png",
+    "bytes": 646050,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/images/method-of-least-squares-thumbnail.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/01-method-of-least-squares/images/method-of-least-squares-thumbnail.png",
+    "bytes": 621883,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/images/nyt-inflation.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/01-method-of-least-squares/images/nyt-inflation.png",
+    "bytes": 859704,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/images/r-squared.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/images/r-squared.png",
+    "bytes": 297374,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/images/r2-thumbnail.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/images/r2-thumbnail.png",
+    "bytes": 436730,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "bytes": 52571,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-10-1.png",
+    "bytes": 136191,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-11-1.png",
+    "bytes": 39910,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-6-1.png",
+    "bytes": 235551,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/notes_files/figure-html/unnamed-chunk-9-1.png",
+    "bytes": 221563,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/slides_files/figure-revealjs/unnamed-chunk-1-1.png",
+    "bytes": 168969,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides_files/figure-revealjs/unnamed-chunk-7-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/02-improving-predictions/slides_files/figure-revealjs/unnamed-chunk-7-1.png",
+    "bytes": 38113,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-1-1.png",
+    "bytes": 69564,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 69189,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 111052,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 111434,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/notes_files/figure-html/unnamed-chunk-5-1.png",
+    "bytes": 30054,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides_files/figure-revealjs/unnamed-chunk-5-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/03-overfitting/slides_files/figure-revealjs/unnamed-chunk-5-1.png",
+    "bytes": 117472,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/images/log-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/05-logistic-regression/images/log-1.png",
+    "bytes": 135891,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/images/log-2.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/05-logistic-regression/images/log-2.png",
+    "bytes": 127633,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-2-1.png",
+    "bytes": 24614,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-3-1.png",
+    "bytes": 74299,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/5-prediction/05-logistic-regression/notes_files/figure-html/unnamed-chunk-4-1.png",
+    "bytes": 86439,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-bg.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-bg.png",
+    "bytes": 102573,
+    "status": "downloaded"
+  },
+  {
+    "url": "https://stat20.berkeley.edu/spring-2026/site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png",
+    "path": "raw_materials/xac-suat-thong-ke/stat20-spring-2026/full-course/site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png",
+    "bytes": 13259,
+    "status": "downloaded"
+  }
+]

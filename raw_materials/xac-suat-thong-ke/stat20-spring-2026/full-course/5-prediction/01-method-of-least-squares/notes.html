@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Method of Least Squares – Stat 20</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../5-prediction/02-improving-predictions/notes.html" rel="next">
+<link href="../../4-causation/03-matching/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="The Method of Least Squares – Stat 20">
+<meta property="og:description" content="Fitting a regression model by minimizing RSS">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/images/prediction.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="422">
+<meta property="og:image:width" content="626">
+<meta name="twitter:title" content="The Method of Least Squares – Stat 20">
+<meta name="twitter:description" content="Fitting a regression model by minimizing RSS">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/images/prediction.png">
+<meta name="twitter:image-height" content="422">
+<meta name="twitter:image-width" content="626">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../office-hours.html"> 
+<span class="menu-text">Office Hours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../notes.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://edstem.org/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Ed Discussion Forum" target="_blank"><i class="bi bi-chat-fill"></i></a>
+    <a href="https://www.gradescope.com/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Gradescope" target="_blank"><i class="bi bi-bar-chart-fill"></i></a>
+    <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=sp26" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="RStudio" target="_blank"><i class="bi bi-r-circle-fill"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs">The Method of Least Squares</h1>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Questions and Data</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Questions and Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/01-understanding-the-world/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding the World with Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/02-taxonomy-of-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Taxonomy of Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Summarization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/01-summarizing-categorical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Categorical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/02-summarizing-numerical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/03-a-grammar-of-graphics/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Grammar of Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/04-conditioning/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditioning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/05-summarizing-associations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/06-multiple-linear-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Linear Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Generalization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/01-prob-foundations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/02-computing-probs/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Computing Probabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/03-probability-dsns/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Distributions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/04-random-variables/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/05-ev-se/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expected Value and Variance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/06-normal-approx/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous Distributions and Normal Approximations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/07-from-samps-to-pops/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Samples to Populations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/08-confidence-intervals/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/09-bootstrapping/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootstrapping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/10-hypothesis-tests/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/11-hypothesis-tests-2/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Tests II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/12-wrong-by-design/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrong by Design</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Causation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/01-defining-causality/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Defining Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/02-experiments/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Randomized Experiments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Prediction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causal Effects in Observational Studies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/01-method-of-least-squares/notes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">The Method of Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/02-improving-predictions/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluating and Improving Predictions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/03-overfitting/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overfitting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/05-logistic-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logistic Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-unit-iv-prediction" id="toc-welcome-to-unit-iv-prediction" class="nav-link active" data-scroll-target="#welcome-to-unit-iv-prediction">Welcome to Unit IV: Prediction</a></li>
+  <li><a href="#key-concepts-in-prediction" id="toc-key-concepts-in-prediction" class="nav-link" data-scroll-target="#key-concepts-in-prediction">Key Concepts in Prediction</a></li>
+  <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link" data-scroll-target="#linear-regression">Linear Regression</a>
+  <ul class="collapse">
+  <li><a href="#the-method-of-least-squares" id="toc-the-method-of-least-squares" class="nav-link" data-scroll-target="#the-method-of-least-squares">The Method of Least Squares</a></li>
+  <li><a href="#algorithmic-methods" id="toc-algorithmic-methods" class="nav-link" data-scroll-target="#algorithmic-methods">Algorithmic Methods</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">The Method of Least Squares</h1>
+<p class="subtitle lead">Fitting a regression model by minimizing RSS</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="welcome-to-unit-iv-prediction" class="level2" style="text-align: center">
+<h2 class="anchored" data-anchor-id="welcome-to-unit-iv-prediction">Welcome to Unit IV: Prediction</h2>
+</section>
+<p><span class="dropcap">A</span>s we near the end of the semester, we revisit one last time the four different claims that might be made based on the line plot found in the news story<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-inflation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/nyt-inflation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Inflation in the news.
+</figcaption>
+</figure>
+</div>
+</div></div><ol type="1">
+<li>The Consumer Price Index rose 8.3% in April.</li>
+<li>The global consumer price index rose in April.</li>
+<li>The Consumer Price Index rose 8.3% because of the war in Ukraine.</li>
+<li>The Consumer Price Index will likely rise throughout the summer.</li>
+</ol>
+<p>In this unit use, we aim to make claims like the final one, “The Consumer Price Index will likely rise throughout the summer”. This is a <em>prediction</em>, a claim that uses the structure of the data at hand to predict the value of observations about which we have only partial information. In midsummer, we know the date will be July 15th, that’s the x-coordinate. But what will the y-coordinate be, the Consumer Price Index?</p>
+<p>The realm of prediction is the subject of intense research activity and commercial investment at the moment. Falling under the terms “machine learning” and “AI”, models for prediction have become very powerful in recent years; they can diagnose diseases, help drive autonomous vehicles, and compose text with eerily human sensibilities. At the core of these complicated models, though, are a few simple ideas that make it all possible.</p>
+<div style="text-align:center;">
+<div id="fig-claims" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-claims-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/claims-only.png" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-claims-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Four types of claims made with data covered in this class.
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="key-concepts-in-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-in-prediction">Key Concepts in Prediction</h2>
+<p>In making predictions, the most important question is “what do you want to predict?” The answer to that question is called the <em>response variable</em>.</p>
+<dl>
+<dt><strong>Response Variable</strong></dt>
+<dd>
+The variable that is being predicted. Also called the dependent or outcome variable. Indicated by <span class="math inline">\(y\)</span> or <span class="math inline">\(Y\)</span> when treated as a random variable.
+</dd>
+</dl>
+<p>The related question to ask is is, “what data will you use to predict your response?” The answer to that question is…</p>
+<dl>
+<dt><strong>Predictor Variable(s)</strong></dt>
+<dd>
+The variable or variables that used to predict the response. Also called the independent variables or the features. Indicated by <span class="math inline">\(x_1, x_2, \ldots\)</span> etc.
+</dd>
+</dl>
+<p>An analyst working at the Federal Reserve to predict the Consumer Price Index in midsummer would use the CPI as their response variable. Their predictor could be time (the x-coordinate in the plot from the newspaper article) but could also include the federal interest rate and the unemployment rate.</p>
+<p>A second analyst working in another office at the Federal Reserve is tasked with predicting whether or not the economy will be recession within six months; that event (recession or no recession) would be the response variable. To predict this outcome, they might use those same predictors - the interest rate and the unemployment rate - but also predictors like the real GDP, industrial production, and retail sales.</p>
+<p>The prediction problems being tackled by these two analysts diverge in an important way: the first is trying to predict a numerical variable and the second a categorical variable. This distinction in the Taxonomy of Data defines the two primary classes of models used for prediction.</p>
+<dl>
+<dt><strong>Regression Model</strong></dt>
+<dd>
+A statistical model used to predict a numerical response variable.
+</dd>
+<dt><strong>Classification Model</strong></dt>
+<dd>
+A statistical model used to predict a categorical response variable.
+</dd>
+</dl>
+<p>The past two decades have been a golden age for predictive models, with hundreds of new model types being invented that can address regression tasks or classifications tasks or often both. To take a deep dive into this diverse landscape, take a course in statistical or machine learning. For the purpose of this course, we’ll just take a dip and focus on two models: Least Squares Linear Model for Regression and a Logistic Regression Model for Classification.</p>
+<!-- Add tree diagram that mimics taxonomy of data but then shows the different model classes. -->
+<!-- Add tradeoff between interpretability and accuracy diagram inspired by ISLR ch1. -->
+</section>
+<section id="linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regression">Linear Regression</h2>
+<p>We first introduced linear regression as a method of explaining a continuous numerical <span class="math inline">\(y\)</span> variable in terms of a linear function of <span class="math inline">\(p\)</span> explanatory terms, <span class="math inline">\(x_i\)</span>. <span class="math display">\[ \hat{y} = b_0 + b_1x_1 + b_2x_2 + \ldots +b_px_p \]</span></p>
+<p>Each of the <span class="math inline">\(b_i\)</span> are called <strong>coefficients</strong>.</p>
+<p>Before, we saw linear regression in a very particular context: we used it for its ability to help us describe the structure of the data set at hand. It calculates not just one but two or more summary statistics - the regression coefficients, that tell us about the linear relationships between the variables.</p>
+<p>We’re now going to revisit to this model for its ability to also make predictions on unseen data. Before we do so, though, you should be sure you’re familiar with these concepts: correlation coefficient, slope, intercept, fitted values, and residuals. Take a moment to skim those notes:</p>
+<ul>
+<li><a href="../../2-summarizing-data/05-summarizing-associations/notes.html">Summarizing Numerical Associations</a></li>
+<li><a href="../../2-summarizing-data/06-multiple-linear-regression/notes.html">Multiple Linear Regression</a></li>
+</ul>
+<section id="the-method-of-least-squares" class="level3">
+<h3 class="anchored" data-anchor-id="the-method-of-least-squares">The Method of Least Squares</h3>
+<p>When we presented the equations to calculate the slope and intercept of a least squares linear model in Unit 1, we did so without any explanation of where those equations came from. The remainder of these notes will cast some light on this mystery.</p>
+<p>The least squares linear model is so-called because it defines a line that has a particular mathematical property: it is the line that has the lowest residual sum of squares of all possible lines.</p>
+<dl>
+<dt><strong>Residual Sum of Squares (RSS)</strong></dt>
+<dd>
+For observations of an explanatory variable <span class="math inline">\(x_i\)</span>, a response variable <span class="math inline">\(y_i\)</span>, predictions of its value (fitted values) <span class="math inline">\(\hat{y}_i\)</span>, and a data set with <span class="math inline">\(n\)</span> observations, the RSS is <span class="math display">\[ RSS = \sum_{i = 1}^n \left(y_i - \hat{y}_i \right)^2\]</span> where <span class="math display">\[ \hat{y_i} = b_{0} + b_1x_{1,i} + b_2x_{2,i} + \ldots +b_px_{p,i} \]</span>
+</dd>
+</dl>
+<p>Plugging this expression into the first equation gives us</p>
+<p><span class="math display">\[ RSS = \sum_{i = 1}^n \left(y_i - (b_{0} + b_1x_{1,i} + b_2x_{2,i} + \ldots +b_px_{p,i}  )\right)^2\]</span></p>
+<p>So how can we use this definition to decide precisely which intercept <span class="math inline">\(b_0\)</span> and slope <span class="math inline">\(b_1\)</span> to use? Please watch the following 19 minute video, “The Method of Least Squares”, to find out. The video is available in the media gallery on bcourses.</p>
+<p><a href="https://bcourses.berkeley.edu/courses/1551619/external_tools/90481"><img src="images/method-of-least-squares-thumbnail.png" class="img-fluid" width="400"></a></p>
+</section>
+<section id="algorithmic-methods" class="level3">
+<h3 class="anchored" data-anchor-id="algorithmic-methods">Algorithmic Methods</h3>
+<p>As we saw in the video, the problem of least squares can be defined as one of <strong>optimization.</strong> We would like to make <span class="math inline">\(RSS\)</span> as small as possible. The values of the coefficients that do this are said to <em>optimize</em> the <span class="math inline">\(RSS\)</span> equation. Although a direct way to find these values involves taking the partial derivatives of the third equation with respect to each coefficient <span class="math inline">\(b_0\)</span>, <span class="math inline">\(b_1\)</span>, …, <span class="math inline">\(b_p\)</span>, setting the resulting equation equal to 0, and solving for the coefficient, you could think about using a different, perhaps more intuitive method.</p>
+<p>Consider picking a starting value for each of <span class="math inline">\(b_0\)</span> through <span class="math inline">\(b_p\)</span>, plugging these into the third equation, and seeing what comes out. Then, try to pick another set of numbers that makes the result of the <span class="math inline">\(RSS\)</span> equation smaller. Provided that you have a concerted method to pick the next set of numbers, you can repeat this process over and over until you find the set of numbers which yields the smallest value for <span class="math inline">\(RSS\)</span>. This process can be described as an <em>algorithmic</em> method to find the values of the coefficients <span class="math inline">\(b_0\)</span> through <span class="math inline">\(b_p\)</span>.</p>
+<p>There are many iterative algorithms that accomplish the same task, some better than others. Two examples:</p>
+<ul>
+<li><strong>Nelder-Mead</strong>: an older and more general (and generally not as reliable!) algorithm. This is the one we showed you in the video.</li>
+<li><strong>Gradient Descent</strong>: the most-used algorithm currently. Used to fit deep learning models.</li>
+</ul>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Prediction is the task of predicting the value of a response variable for an unseen observation using its values of other variables that are known, the predictors. The nature of the response variable determines the nature of the task (and corresponding model): regression concerns the prediction of numerical response variables, classification concerns the prediction of categorical response variables. One such regression model is the least squares linear model, which uses the line that minimizes the residual sum of squares. Finding the value of the coefficients is a task that can be solved directly using calculus (in simple settings like this one) and also with optimization algorithms (in more general settings). We gave an example of using such an algorithm, demonstrating how to write a function in R in the process.</p>
+<p><a href="../../5-prediction/01-method-of-least-squares/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Smialek, Jeanna (2022, May 11). Consumer Prices are Still Climbing Rapidly. <em>The New York Times</em>. <a href="https://www.nytimes.com/2022/05/11/business/economy/april-2022-cpi.html" class="uri">https://www.nytimes.com/2022/05/11/business/economy/april-2022-cpi.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../4-causation/03-matching/notes.html" class="pagination-link" aria-label="Causal Effects in Observational Studies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Causal Effects in Observational Studies</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../5-prediction/02-improving-predictions/notes.html" class="pagination-link" aria-label="Evaluating and Improving Predictions">
+        <span class="nav-page-text">Evaluating and Improving Predictions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

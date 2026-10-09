@@ -68,6 +68,8 @@ export default withMermaid(defineConfig({
       {text:'Vật lý 1',link:'/vat-ly-1/',activeMatch:'^/vat-ly-1/'},
       {text:'Vật lý 2',link:'/vat-ly-2/',activeMatch:'^/vat-ly-2/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
+      {text:'Vật lý 1',link:'/vat-ly-1/',activeMatch:'^/vat-ly-1/'},
+      {text:'Vật lý 2',link:'/vat-ly-2/',activeMatch:'^/vat-ly-2/'},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
     sidebar:{

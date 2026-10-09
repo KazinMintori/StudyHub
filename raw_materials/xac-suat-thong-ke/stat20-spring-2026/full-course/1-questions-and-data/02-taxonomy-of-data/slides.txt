@@ -1,0 +1,210 @@
+Taxonomy of Data
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+A note on variables
+
+There are three things that “variable” could be referring to:
+
+a phenomenon
+
+how the phenomenon is being recorded or measured into data
+
+what values can it take? (this is often an intent- or value-laden exercise!)
+
+for numerical units, what unit should we express it in?
+
+How the recorded data is being analyzed
+
+might you bin/discretizing income data? what are the consequences of this?
+
+For the following question, you may work under the second definition.
+
+What type of variable is age?
+
+Match each of the scenarios where age could be a variable, on the next three slides, to the most appropriate taxonomy according to the Taxonomy of Data.
+
+What type of variable is age? (Part 1)
+
+Age ranges of television audiences/demographics
+
+Answer at pollev.com.
+
+  
+    −
+    +
+
+ 00:30
+
+This one is categorical ordinal (25-34 etc)
+
+What type of variable is age? (Part 2)
+
+Ages of UC Berkeley students
+
+Answer at pollev.com.
+
+  
+    −
+    +
+
+ 00:30
+
+This one is numerical discrete
+
+What type of variable is age? (Part 3)
+
+The age of a lightbulb (time until it stops working)
+
+Answer at pollev.com.
+
+  
+    −
+    +
+
+ 00:30
+
+This one is numerical continuous since we are often interested in the exact time until failure. The important point in these three slides is that the type depends on how we engage with the data. Age is numerical discrete for college students because that is how we use it, etc.
+
+Educated Guesses
+
+In the following few concept questions, you’ll see a line of R code and have to think about what will happen when it runs!
+
+Educated Guess 1
+
+What will happen here?
+
+Answer at pollev.com/<name>
+
+1 + "one"
+
+  
+    −
+    +
+
+ 01:00
+
+“one” is a string with no link at all to the number 1
+
+without that link, without two objects that are recognized for their numerical value, + doesn’t work.
+
+Educated Guess 2
+
+What will happen here?
+
+Answer at pollev.com/<name>
+
+a <- c(1, 2, 3, 4)
+sqrt(log(a))
+
+  
+    −
+    +
+
+ 01:00
+
+Talking points - a is a vector of length four - log and sqrt are functions that will return vectors of length four - they’re nested and will be evaluated from the inside out
+
+Educated Guess 3
+
+What will happen here?
+
+Answer at pollev.com/<name>
+
+a <- 1 + 2
+a + 1
+
+  
+    −
+    +
+
+ 01:00
+
+a is a not a string, it’s the name of an object that’s a number
+
+to overwrite a with a + 1 requires re-assigning it to a: a <- a + 1 (in some languages, a + 1 would change the value of a)
+
+a <- a + 1 is a good time to mention that while a = a + 1 works in R and they might see it online, its convention to use <- for many reasons including that mathematically the statement with = is confusing.
+
+Educated Guess 4
+
+What will happen here?
+
+Answer at pollev.com/<name>
+
+a <- c(1, 3.14, "seven")
+class(a)
+
+  
+    −
+    +
+
+ 01:00
+
+the definition of a vector requires every element to be of the same type
+
+based on their reading, there are three classes that they’re familiar with: numeric, factor, and character
+
+there’s no way to translate “seven” into 7, so instead 1 and 3.14 must be translated into strings
+
+they will likely encounter this when looking at a data set in R (or other languages) and finding that vectors with what looked like numbers are stored as strings. This usually happens because there’s a single errant character that the language doesn’t know how to parse as a number.
+
+Images as data
+
+Images are composed of pixels (this image is 1520 by 1012)
+
+The color in each pixel is in RGB
+
+Each band takes a value from 0-255
+
+This image is data with 1520 x 1012 x 3 values.
+
+At this point, it might help them to draw a rectangle with cells, or an array and put three numbers in a few cells, to indicate what we are talking about. Later, when you talk about grayscale, you could erase the three numbers and put just 1 number. Numbers you could use (starting at top left corner and moving across top row) for rgb: (153, 159, 155), (170, 176, 173), (182, 189, 185), and a grass green from the bottom row could be (82, 99, 28). In the grayscale picture, these 4 transform to 156, 174, 187, 59, In the first 8x8 picture, the values are 112, 162, 196 for first three pixels.
+
+Grayscale
+
+Grayscale images have only one band
+
+0 is black, 255 is white
+
+This image is data with 1520 x 1012 x 1 values.
+
+Grayscale
+
+To simplify, assume our photos are 8 x 8 grayscale images.
+
+Images in a Data Frame
+
+Consider the following images which are our data:
+
+Let’s simplify them to 8 x 8 grayscale images
+
+Images in a Data Frame
+
+If you were to put the data from these (8 x 8 grayscale) images into a data frame, what would the dimensions of that data frame be in rows x columns? Answer at pollev.com.
+
+Here, the 3 images are our observations, and each pixel value is a variable, so the data frame will be 3 x 64.
+
+  
+    −
+    +
+
+ 01:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Problem Set: Taxonomy of Data
+
+  
+    −
+    +
+
+ 20:00

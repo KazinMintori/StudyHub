@@ -5,408 +5,188 @@ section: lecture
 title: "Series & DataFrame chuyên sâu"
 prerequisites: ["chi-muc","gia-tri-thieu","ky-vong","phuong-sai"]
 lessonStatus: ready
+description: "Phân biệt nhãn và vị trí, căn chỉnh Series, tổng hợp nhóm, nối bảng và chuyển dạng dữ liệu."
 ---
 
+Khi đã nắm vững các thao tác tạo lập bảng căn bản, người lập trình dữ liệu bắt đầu bước vào những bài toán phức tạp hơn: làm sao để tổng hợp số liệu theo từng phân khúc khách hàng, làm sao để hợp nhất nhiều bảng từ cơ sở dữ liệu quan hệ mà không làm nhân bản dữ liệu, và làm sao để chuyển đổi linh hoạt giữa bảng dạng rộng cho con người đọc và bảng dạng dài cho máy tính xử lý?
 
-::: tip  Sau bài này bạn phải trả lời được
-1. Vì sao `df.loc[2]` và `df.iloc[2]` có thể trả về **hai dòng hoàn toàn khác nhau** — và vì sao phép toán giữa hai `Series` có thể âm thầm sinh ra `NaN` mà không báo lỗi.
-2. Chọn đúng công cụ biến đổi cột theo thứ tự ưu tiên: **vector hoá → `map` → `apply`** — giải thích được vì sao thứ tự này không phải ngẫu nhiên.
-3. Phân biệt `agg` và `transform`. Chọn đúng `how` khi `merge`, và biết kiểm tra kết quả `merge` để phát hiện dòng bị nhân bản hoặc mất khớp.
-:::
+Những thao tác này tưởng chừng chỉ là việc gọi hàm, nhưng bên dưới nắp ca-pô là cả một hệ thống quy tắc toán học khắt khe về đại số quan hệ và căn chỉnh chỉ mục. Nếu không thấu suốt các quy tắc này, bạn sẽ rất dễ tạo ra những lỗi ngầm tai hại: doanh thu bị đội lên gấp đôi sau khi nối bảng, hoặc phép trừ giữa hai cột cho ra toàn giá trị rỗng chỉ vì thứ tự nhãn bị lệch nhau.
 
-## 0. Nhập môn bằng một ẩn dụ: chứng minh nhân dân của một dòng dữ liệu
+## 1. Bản chất của Index: Nhãn ngữ nghĩa khác với Vị trí bộ nhớ
 
-**Index** không phải "số thứ tự xếp hàng" — nó là **chứng minh nhân dân (CMND)** của mỗi dòng dữ liệu, dùng để *nhận diện*, không phải để *đếm vị trí*.
+Tính năng độc đáo nhất và cũng là nguồn cơn gây nhiều bối rối nhất của pandas chính là **Cơ chế căn chỉnh tự động theo nhãn** (Automatic Label Alignment).
 
-- `iloc[2]` giống như hỏi: *"người đứng ở vị trí thứ 3 trong hàng là ai?"* (đếm theo chỗ đứng vật lý).
-- `loc[2]` giống như hỏi: *"người mang CMND số 2 là ai?"* (tra theo danh tính) — người này **có thể đang đứng bất kỳ đâu** trong hàng.
-
-Nếu hàng người xếp đúng thứ tự CMND 0, 1, 2, 3, … thì hai câu hỏi tình cờ cho cùng một người. Nhưng ngay khi thứ tự xếp hàng bị xáo trộn (chẳng hạn sau khi lọc, sắp xếp, hoặc `set_index` bằng một cột khác), hai câu hỏi trả về **hai người khác nhau hoàn toàn**.
-
-## 1. Index là gì?
-
-### 1.1 `set_index`: biến một cột thành "CMND" tra cứu
+Trong danh sách Python hay mảng NumPy, hai phần tử được cộng với nhau vì chúng đứng ở cùng một vị trí chỉ số $0, 1, 2$. Nhưng trong pandas, hai phần tử được ghép nối với nhau vì chúng **có cùng nhãn định danh**, bất kể chúng đang nằm ở dòng thứ mấy trong bảng.
 
 ```python
-d = df.set_index("id")
-d.loc[978070332077815549, ["neighbourhood", "price"]]
-```
-```text
-neighbourhood      Ñuñoa
-price            45647.0
-```
+import pandas as pd
 
-Giờ có thể tìm phòng theo **ID thật** thay vì phải nhớ vị trí dòng — đúng bản chất "tra theo danh tính" chứ không phải "đếm theo vị trí".
-
-::: info Ghi chú thực tế
-ID Airbnb tạo từ năm 2022 dài 18–19 chữ số — chiếm 82% listing tại Santiago. ID cũ hơn chỉ có 5–8 chữ số. Đây là lý do vì sao ID trong ví dụ trên trông "khổng lồ" so với các số ID quen thuộc.
-:::
-
-###  Dry Run — `loc` theo nhãn vs `iloc` theo vị trí
-
-```python
 s = pd.Series([10, 20, 30], index=[2, 0, 1])
+print(s.loc[2], s.iloc[2])       # 10 30
+a = pd.Series([10, 20], index=["A", "B"])
+b = pd.Series([1, 2], index=["B", "C"])
+print((a + b).to_dict())         # A: nan, B: 21.0, C: nan
+print(a.add(b, fill_value=0).to_dict())  # A: 10.0, B: 21.0, C: 2.0
 ```
 
-| Vị trí vật lý (0,1,2,…) | 0 | 1 | 2 |
-|---|---|---|---|
-| Nhãn (index) | 2 | 0 | 1 |
-| Giá trị | 10 | 20 | 30 |
+Hãy giải phẫu hai hiện tượng sâu sắc trong đoạn mã trên:
 
-| Truy vấn | Cách đọc | Kết quả |
-|---|---|---|
-| `s.loc[2]` | "giá trị mang **nhãn** 2" | `10` (nhãn 2 nằm ở vị trí đầu tiên!) |
-| `s.iloc[2]` | "giá trị ở **vị trí thứ 3**" | `30` |
+1. **Sự phân kỳ giữa `.loc` và `.iloc`**: 
+   Khi Index của Series là các số nguyên bị xáo trộn `[2, 0, 1]`:
+   - `s.loc[2]` đi tìm phần tử có **nhãn mang tên 2**, nằm ngay ở vị trí đầu tiên và trả về giá trị `10`.
+   - `s.iloc[2]` đếm theo **vị trí vật lý** (0, 1, 2), lấy phần tử thứ ba và trả về giá trị `30`.
+   Nếu bạn viết `s[2]`, các phiên bản pandas cũ sẽ cố gắng đoán xem bạn muốn tìm nhãn hay tìm vị trí. Để viết mã nguồn an toàn tuyệt đối trong sản xuất, luôn luôn sử dụng tường minh `.loc` khi muốn tìm theo nhãn và `.iloc` khi muốn tìm theo vị trí.
+2. **Căn chỉnh nhãn khi làm toán**:
+   Trong phép cộng `a + b`, pandas nhận thấy chỉ có nhãn `"B"` xuất hiện ở cả hai Series, nên nó lấy $20 + 1 = 21.0$. Nhãn `"A"` chỉ có ở `a`, nhãn `"C"` chỉ có ở `b`, do thiếu đối tác để ghép cặp nên kết quả ở cả hai nhãn này đều trở thành `NaN`.
+   Phương thức `a.add(b, fill_value=0)` thể hiện một quy ước nghiệp vụ: nếu một bên bị khuyết thiếu nhãn thì tạm thời coi giá trị của bên đó là $0$ để tiếp tục phép cộng. Chỉ sử dụng quy ước này khi bạn chắc chắn rằng sự thiếu vắng dữ liệu đồng nghĩa với lượng giao dịch bằng 0.
+
+Lưu ý rằng Index trong pandas không tự động bảo đảm tính duy nhất. Khi một cột cần đóng vai trò là khóa chính duy nhất của bảng, hãy chủ động kiểm tra bằng `df["id"].is_unique` hoặc thiết lập chỉ mục với cơ chế bảo vệ toàn vẹn: `df.set_index("id", verify_integrity=True)`.
+
+## 2. Biến đổi cột an toàn và kỷ nguyên Copy-on-Write
+
+Khi tạo mới hoặc cập nhật dữ liệu của một cột, pandas cung cấp nhiều công cụ khác nhau tùy thuộc vào mức độ phức tạp của bài toán.
 
 ```python
-s.loc[2], s.iloc[2]     # (10, 30) — hai kết quả khác hẳn nhau
-```
-
-::: danger Bẫy nghiêm trọng nhất của mục này
-Khi index là **số nhưng không phải dãy 0,1,2,… liên tục** (rất thường gặp sau khi lọc hoặc sắp xếp `DataFrame`), `loc[2]` và `iloc[2]` gần như chắc chắn **không trỏ tới cùng một dòng**. Đề thi hay cho một `DataFrame` đã qua lọc/sắp xếp rồi hỏi kết quả của `loc` so với `iloc` tại cùng một số — luôn phải kẻ bảng "nhãn ↔ vị trí" như trên trước khi trả lời.
-:::
-
-### 1.2 Alignment: phép toán tự động khớp theo nhãn (index)
-
-**Trước → Sau: hai Series không cùng thứ tự, không cùng đầy đủ nhãn**
-
-```python
-t9  = pd.Series({"Centro": 50, "Ñuñoa": 40, "Vitacura": 120})
-t12 = pd.Series({"Ñuñoa": 44, "Centro": 55, "La Reina": 35})
-
-((t12 - t9) / t9 * 100).round(1)
-```
-
-| Nhãn | Có ở `t9`? | Có ở `t12`? | Kết quả `(t12-t9)/t9*100` |
-|---|---|---|---|
-| Centro |  50 |  55 | `10.0` |
-| Ñuñoa |  40 |  44 | `10.0` |
-| Vitacura |  120 |  | **`NaN`** |
-| La Reina |  |  35 | **`NaN`** |
-
-pandas ghép **"Centro" với "Centro", "Ñuñoa" với "Ñuñoa"** theo *nhãn* — hoàn toàn không quan tâm thứ tự lưu trữ trong mỗi `Series`.
-
-::: danger Alignment vừa là lợi thế, vừa là cái bẫy lớn nhất của pandas
-**Lợi:** không cần tự sắp xếp lại hai bảng trước khi tính toán — pandas tự ghép đúng theo nhãn dù thứ tự khác nhau.
-**Bẫy:** một nhãn chỉ xuất hiện ở **một trong hai** `Series` sẽ cho kết quả `NaN` — **không hề có lỗi hay cảnh báo nào được in ra**. Rất dễ vô tình "mất" dữ liệu của `Vitacura`/`La Reina` mà không nhận ra.
-
-**Quy tắc bắt buộc:** sau *mọi* phép toán giữa hai `Series`/`DataFrame`, đếm ngay `isna().sum()` — nếu số `NaN` mới xuất hiện > 0, đó chính là dấu hiệu có nhãn không khớp giữa hai bên.
-:::
-
-### 1.3 `reset_index`: trả nhãn về làm cột thường
-
-```python
-gia_quan = df.groupby("neighbourhood")["price"].median()   # kết quả: khoá nằm Ở INDEX
-gia_quan.reset_index().head(2)
-```
-```text
-  neighbourhood    price
-0     Cerrillos  45500.0
-1   Cerro Navia  36992.0
-```
-
-`groupby` luôn trả kết quả với khoá nhóm nằm ở `index`. Dùng `reset_index()` khi cần đưa khoá đó về lại thành **cột thông thường** — thường là bước bắt buộc trước khi `merge`, vẽ biểu đồ, hoặc ghi ra file phẳng.
-
-## 2. Biến đổi giá trị: vector hoá → `map` → `apply`
-
-### 2.1 Ba nấc thang tốc độ — đúng tinh thần "tư duy vector hoá" của Bài 3
-
-| Nấc | Cú pháp | Tốc độ | Khi nào dùng |
-|---|---|---|---|
-| **1. Vector hoá có sẵn** | `df["price"] * 28`, `.str.lower()` |  nhanh nhất | Luôn ưu tiên đầu tiên — phép toán/toán tử pandas viết sẵn |
-| **2. `map`** | `s.map(clean_price)`, `s.map(dict_tra_cuu)` |  trung bình | Cần áp một hàm/dict lên **từng giá trị** của một cột, không có sẵn vector hoá tương ứng |
-| **3. `apply(axis=1)`** | `df.apply(f, axis=1)` |  chậm nhất | Logic cần **nhiều cột trong cùng một dòng** cùng lúc, không thể vector hoá |
-
-::: tip Nguyên tắc quyết định — hỏi theo đúng thứ tự này
-1. *"Có toán tử/phương thức pandas có sẵn làm được việc này không?"* → dùng nó.
-2. *"Có phải áp một hàm/dict lên từng giá trị của MỘT cột không?"* → `map`.
-3. *"Có bắt buộc phải nhìn NHIỀU cột trong cùng một dòng cùng lúc không?"* → mới cần `apply(axis=1)`, và **luôn kiểm tra lại** xem có cách viết vector hoá thay thế được không trước khi chấp nhận dùng `apply`.
-:::
-
-### 2.2 `map` với `dict`: đổi tên hàng loạt
-
-**Trước → Sau: chuẩn hoá nhãn tiếng Anh sang tiếng Việt**
-
-| Trước (`room_type`) | Code | Sau (`loai`) |
-|---|---|---|
-| `"Entire home/apt"` | | `"Nguyên căn"` |
-| `"Private room"` | `df["room_type"].map(viet_hoa)` | `"Phòng riêng"` |
-
-```python
-viet_hoa = {"Entire home/apt": "Nguyên căn",
-            "Private room": "Phòng riêng",
-            "Shared room": "Phòng chung",
-            "Hotel room": "Khách sạn"}
-df["loai"] = df["room_type"].map(viet_hoa)
-```
-
-::: warning Bẫy: giá trị ngoài `dict` biến thành `NaN` âm thầm
-Nếu `room_type` có một giá trị không nằm trong `viet_hoa` (ví dụ do dữ liệu mới phát sinh thêm loại phòng), `map` sẽ trả về `NaN` cho dòng đó — **không báo lỗi**. Luôn `isna().sum()` cột kết quả sau khi `map` bằng `dict` để chắc chắn không "làm rơi" giá trị nào.
-:::
-
-### 2.3 `map` với hàm — dùng lại `clean_price` từ Bài 2
-
-```python
-gia_chuoi = pd.Series(["$45,647.00", "N/A", "$19,856.00"])
-gia_chuoi.map(clean_price)          # hàm viết ở Bài 2, giờ chạy trên CẢ CỘT
-```
-```text
-0    45647.0
-1        NaN
-2    19856.0
-dtype: float64
-```
-
-Chính hàm `clean_price` viết bằng `def`/`try-except` ở Bài 2 — không cần viết lại — chỉ cần `map` để áp dụng lên toàn bộ cột thay vì gọi từng giá trị bằng tay.
-
-### 2.4 `apply(axis=1)` — chỉ dùng khi thực sự cần nhiều cột
-
-```python
-def diem_hap_dan(r):
-    if pd.isna(r["price"]) or r["price"] == 0:
-        return None
-    return r["number_of_reviews_ltm"] / r["price"] * 10_000
-
-df["hap_dan"] = df.apply(diem_hap_dan, axis=1)     #  chậm — gọi hàm Python cho TỪNG DÒNG
-```
-
-::: danger Kiểm tra quan hệ khóa và kiểu dữ liệu
-Ví dụ trên **có thể viết lại hoàn toàn bằng vector hoá**, nhanh hơn nhiều:
-```python
-df["hap_dan"] = df["number_of_reviews_ltm"] / df["price"] * 1e4   # 
-```
-`apply(axis=1)` gọi một hàm Python thuần cho **từng dòng riêng lẻ**, mất đi toàn bộ lợi thế vector hoá đã học ở Bài 3. AI rất hay đề xuất `apply(axis=1)` như phản xạ đầu tiên vì cú pháp "trông tổng quát" — luôn tự hỏi lại: *"phép tính này có viết được bằng các cột trực tiếp không?"* trước khi chấp nhận.
-:::
-
-## 3. `groupby` — chia để trị
-
-### 3.1 Cơ chế split–apply–combine
-
-```mermaid
-flowchart LR
-    D[" DataFrame gốc<br/>18.534 dòng"] -->|"split theo khoá<br/>groupby('room_type')"| G1["Nhóm: Entire home/apt<br/>15.004 dòng"]
-    D -->|split| G2["Nhóm: Private room<br/>3.413 dòng"]
-    D -->|split| G3["Nhóm: Shared room<br/>61 dòng"]
-    G1 -->|"apply<br/>.median()"| R1["64.900"]
-    G2 -->|apply| R2["34.235"]
-    G3 -->|apply| R3["20.541"]
-    R1 --> C[" combine<br/>ghép lại thành 1 Series/DataFrame"]
-    R2 --> C
-    R3 --> C
-    style D fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
-    style C fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
-```
-
-`groupby` **chia** bảng theo khoá, **áp** phép tính cho từng nhóm riêng biệt, rồi **ghép** kết quả lại — toàn bộ ba bước này được biểu diễn trong **một câu lệnh** duy nhất.
-
-### 3.2 Nhóm lồng nhau (nhiều khoá) → `MultiIndex`
-
-```python
-df.groupby(["neighbourhood", "room_type"])["price"].median().head(4)
-```
-```text
-neighbourhood  room_type
-Cerrillos      Entire home/apt    52116.0
-               Private room       29100.0
-               Shared room        40169.0
-Cerro Navia    Entire home/apt    51261.0
-```
-
-Kết quả mang **`MultiIndex`** (nhãn hai tầng: quận + loại phòng). Dùng `reset_index()` khi cần thao tác với các khoá này như cột thông thường.
-
-### 3.3 `agg` đặt tên — thống kê đi kèm cỡ nhóm
-
-**Trước → Sau: từ cột giá thô đến bảng xếp hạng đã lọc theo độ tin cậy**
-
-```python
-tk = df.groupby("neighbourhood")["price"].agg(
-    trung_vi="median", so_phong="size")
-
-tk[tk["so_phong"] >= 500].nlargest(3, "trung_vi")
-```
-```text
-               trung_vi  so_phong
-neighbourhood
-Lo Barnechea   426230.0       824
-Las Condes      97460.0      2862
-Providencia     72845.0      2997
-```
-
-::: warning Bài học từ Bài 4, áp dụng lại ở đây
-Lọc **cỡ nhóm ≥ 500** *trước khi* xếp hạng bằng `nlargest` — tránh kết luận dựa trên một nhóm chỉ có vài phòng (như trường hợp `La Granja` đáng ngờ đã thấy ở Bài 4).
-:::
-
-### 3.4 `transform`: đưa kết quả nhóm quay lại từng dòng
-
-**So sánh trực tiếp `agg` và `transform` — điểm khác biệt hay bị nhầm nhất**
-
-| | `agg` | `transform` |
-|---|---|---|
-| Số dòng kết quả | **Một dòng mỗi nhóm** | **Đúng bằng độ dài bảng gốc** |
-| Dùng để | Tạo bảng tổng hợp riêng | So **từng dòng gốc** với "chuẩn" của nhóm nó |
-
-```python
-trung_vi_quan = df.groupby("neighbourhood")["price"].transform("median")
-df["he_so_gia"] = df["price"] / trung_vi_quan
-
-df[df["he_so_gia"] > 20].shape[0]    # 23 — phòng đắt gấp hơn 20 lần trung vị QUẬN MÌNH
-```
-
-23 phòng có `he_so_gia > 20` là các **ứng viên ngoại lai** cần kiểm tra thêm — phát hiện được chính nhờ `transform` giữ nguyên độ dài bảng để so sánh **theo từng dòng**, điều mà `agg` không làm được.
-
-### 3.5 `pivot_table`: bảng chéo hai chiều
-
-**Trước → Sau: từ groupby hai khoá đến bảng "quận × loại phòng"**
-
-```python
-df.pivot_table(values="price", index="neighbourhood",
-               columns="room_type", aggfunc="median")
-```
-```text
-room_type      Entire home/apt  Private room
-neighbourhood
-Las Condes            106129.0       40366.0
-Providencia            81709.0       38400.0
-Santiago               49352.0       31250.0
-```
-
-::: info `pivot_table` thực chất là gì?
-`pivot_table` = `groupby` theo **hai khoá** (`index` + `columns`) rồi **trải một khoá ra thành các cột** thay vì để cả hai khoá xếp chồng trong một `MultiIndex`. Định dạng bảng "quận × loại phòng" này giúp đối chiếu từng quận và loại phòng trực tiếp, thay vì đọc `MultiIndex` phẳng ở mục 3.2.
-:::
-
-::: tip Nhận diện khi nào cần `groupby`
-Bất cứ khi nào câu hỏi có dạng *"…theo từng quận / mỗi loại phòng / hàng tháng…"*, hãy nghĩ ngay đến khuôn mẫu: `groupby(khoá)[cột].phép_tính()`.
-:::
-
-## 4. Ghép bảng: `concat` và `merge`
-
-### 4.1 `concat`: ghép DỌC theo snapshot (cùng cấu trúc cột)
-
-```python
-t9["snapshot"] = "2025-09"        # gắn nguồn gốc TRƯỚC khi concat
-t6["snapshot"] = "2026-06"
-
-ca_hai = pd.concat([t9, t6], ignore_index=True)
-ca_hai.groupby("snapshot").size()
-```
-```text
-snapshot
-2025-09    16772
-2026-06    18534
-```
-
-::: tip Mẹo quan trọng
-Luôn thêm một cột đánh dấu **nguồn gốc** (ví dụ `snapshot`) *trước khi* `concat` — nếu không, sau khi ghép sẽ **không còn cách nào phân biệt** dòng nào đến từ bảng nào.
-:::
-
-### 4.2 `merge`: ghép NGANG theo khoá chung
-
-```mermaid
-flowchart LR
-    subgraph inner["how='inner'"]
-        direction LR
-        L1["Bảng trái<br/>(chỉ dòng KHỚP)"] -.->|giao nhau| R1["Bảng phải<br/>(chỉ dòng KHỚP)"]
-    end
-    subgraph left["how='left'"]
-        direction LR
-        L2["Bảng trái<br/>GIỮ TOÀN BỘ"] -.->|khớp được thì nối,<br/>không khớp → NaN| R2["Bảng phải"]
-    end
-    style inner fill:#fff3e0,stroke:#e65100,color:#b43e00
-    style left fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
-```
-
-| `how=` | Giữ lại | Dùng khi nào |
-|---|---|---|
-| `"inner"` | Chỉ dòng **khớp ở cả hai bảng** | Chỉ quan tâm dữ liệu đầy đủ cả hai phía |
-| `"left"` | **Toàn bộ** bảng trái, điền `NaN` nếu không khớp | Muốn giữ nguyên bảng chính, chỉ *bổ sung thêm* thông tin nếu có |
-
-**Trước → Sau: bổ sung cột `vung` (vùng) vào bảng listings gốc**
-
-```python
-vung = pd.DataFrame({
-    "neighbourhood": ["Santiago", "Providencia", "Las Condes", "Ñuñoa"],
-    "vung": ["Trung tâm", "Đông", "Đông", "Đông"],
+df = pd.DataFrame({
+    "id": ["001", "002", "003"],
+    "nhom": ["A", "A", "B"],
+    "gia": [20, 40, 90],
 })
-m = df.merge(vung, on="neighbourhood", how="left")
-
-m.groupby("vung")["price"].median()
-```
-```text
-vung
-Trung tâm    47755.0
-Đông         76628.5
+df["gia_moi"] = df["gia"] * 1.1
+df["ten_nhom"] = df["nhom"].map({"A": "Sach", "B": "Vo"})
+df.loc[df["nhom"] == "A", "gia_moi"] = 25
+print(df["gia_moi"].tolist())    # [25.0, 25.0, 99.00000000000001]
 ```
 
-| Trước (`df`) | Sau (`m`) |
-|---|---|
-| 19 cột, không có thông tin vùng | 20 cột, thêm `vung` (hoặc `NaN` nếu quận chưa có trong bảng tra cứu) |
+Ba bài học quan trọng về hiệu năng và an toàn dữ liệu:
 
-Nhờ `merge`, có thể phân tích giá theo vùng dù dữ liệu gốc **chưa hề có cột này**.
+1. **Ưu tiên phép toán vector hóa trực tiếp**: Phép tính `df["gia"] * 1.1` chạy hoàn toàn bằng mã C ở tầng dưới. Khi cần ánh xạ giá trị rời rạc, hãy dùng phương thức **`.map()`** truyền vào một cuốn từ điển. Hạn chế lạm dụng phương thức `.apply(..., axis=1)` vì nó sẽ duyệt từng dòng một thông qua vòng lặp Python thuần, làm tốc độ xử lý sụt giảm nghiêm trọng trên các tập dữ liệu lớn.
+2. **Bản chất của số thực dấu phẩy động**: Giá trị $90 \times 1.1$ in ra là `99.00000000000001`. Đây không phải lỗi của pandas hay Python, mà là giới hạn tự nhiên của chuẩn biểu diễn số thực nhị phân IEEE 754 trên phần cứng máy tính (con số $1.1$ không thể biểu diễn hữu hạn dưới dạng nhị phân, tương tự như $1/3$ trong hệ thập phân). Khi làm việc với tiền tệ hay số liệu kế toán, ta cần làm tròn hiển thị hoặc sử dụng kiểu dữ liệu số nguyên cho đơn vị nhỏ nhất (ví dụ tính bằng xu thay vì đồng).
+3. **Chấm dứt cạm bẫy Chained Assignment**: Trong các phiên bản pandas trước đây, người học rất hay viết: `df[df["nhom"] == "A"]["gia_moi"] = 25`. Cách viết chọn chuỗi này sẽ kích hoạt cảnh báo nguy hiểm `SettingWithCopyWarning`, vì pandas không thể xác định bạn đang gán giá trị vào bảng gốc hay vào một bản sao tạm thời. Từ pandas 3.0 với cơ chế **Copy-on-Write (CoW)**, việc gán giá trị có điều kiện bắt buộc phải viết trực tiếp qua `.loc`:
+   ```python
+   df.loc[df["nhom"] == "A", "gia_moi"] = 25
+   ```
 
-### 4.3 Kiểm tra bắt buộc sau mọi `merge`
+## 3. Triết lý Split-Apply-Combine: Phân định rạch ròi giữa `agg` và `transform`
+
+Xử lý dữ liệu theo nhóm là trái tim của mọi phân tích kinh doanh. pandas hiện thực hóa mô hình kinh điển **Split - Apply - Combine** (Chia tách -> Áp dụng -> Kết hợp) của nhà khoa học thống kê Hadley Wickham thông qua phương thức `groupby()`.
+
+Tuy nhiên, có một ranh giới then chốt giữa hai phương thức áp dụng mà nhiều người thường nhầm lẫn:
 
 ```python
-len(df), len(m), m["vung"].isna().sum()
-```
-```text
-(18534, 18534, 3680)
+bang_nhom = df.groupby("nhom").agg(
+    so_dong=("id", "size"),
+    so_gia=("gia", "count"),
+    gia_tb=("gia", "mean"),
+)
+print(bang_nhom)
+df["gia_tb_nhom"] = df.groupby("nhom")["gia"].transform("mean")
+print(df["gia_tb_nhom"].tolist())  # [30.0, 30.0, 90.0]
 ```
 
-::: danger Merge có thể âm thầm cho kết quả sai — không có gì báo lỗi
-- Nếu **số dòng tăng** sau `merge` (`len(m) > len(df)`) → khoá bên phải khả năng cao **bị trùng lặp**, khiến mỗi dòng bên trái bị nhân bản.
-- Có 3.680 giá trị `vung = NaN` ở ví dụ trên → 3.680 quận **chưa có mặt** trong bảng tra cứu `vung` — không phải lỗi hệ thống, nhưng là điều **bắt buộc phải biết** trước khi phân tích tiếp theo cột này.
-:::
+Hãy nhìn vào sự khác biệt về hình dạng không gian của kết quả:
+
+- **Phương thức `.agg()` (Aggregation - Thu gọn)**: Rút gọn số lượng dòng. Bảng gốc có 3 dòng thuộc 2 nhóm, bảng kết quả sau khi `agg` chỉ còn đúng 2 dòng đại diện cho 2 nhóm `"A"` và `"B"`. Cú pháp truyền tham số đặt tên như `so_dong=("id", "size")` cho phép ta vừa chỉ định cột tính toán, vừa chọn hàm thống kê và vừa đặt tên cột kết quả một cách mạch lạc. Lưu ý: `size` đếm toàn bộ số dòng kể cả ô trống, còn `count` chỉ đếm các ô có dữ liệu hợp lệ.
+- **Phương thức `.transform()` (Biến đổi bảo toàn cấu trúc)**: Tính toán số liệu thống kê của từng nhóm, nhưng **phát ngược kết quả trở lại từng dòng ban đầu**, giữ nguyên vẹn kích thước và chỉ mục của bảng gốc!
+  Ở nhóm `"A"`, hai mặt hàng có giá 20 và 40 nên giá trung bình nhóm là 30. Phương thức `transform` điền số 30 vào cả hai dòng thuộc nhóm `"A"`. Nhóm `"B"` nhận giá trị 90.
+
+Nhờ việc bảo toàn số dòng, ta có thể dễ dàng so sánh từng cá thể với mức bình quân của phân khúc mà nó thuộc về:
 
 ```python
-m = df.merge(vung, on="neighbourhood",
-             how="left", validate="m:1")
-# nghĩa là: nhiều listing (m) khớp với ĐÚNG 1 dòng vùng (1)
-# nếu vi phạm quan hệ này -> pandas tự phát sinh MergeError
+chenh_lech = df["gia"] - df["gia_tb_nhom"]
+# Kết quả: [-10.0, 10.0, 0.0] -> Mặt hàng 1 rẻ hơn trung bình nhóm 10 nghìn, mặt hàng 2 đắt hơn 10 nghìn
 ```
 
-::: tip `validate=` — "lưới an toàn" cho merge
-Tham số `validate` (`"1:1"`, `"1:m"`, `"m:1"`, `"m:m"`) khai báo quan hệ khóa mà phép ghép được phép sử dụng. Với các yêu cầu về tính duy nhất, pandas kiểm tra khóa và báo `MergeError` nếu dữ liệu không phù hợp. Nhờ đó, ta có thể phát hiện sai quan hệ trước khi phải lần theo nguyên nhân số dòng tăng.
+Nếu không dùng `transform`, bạn sẽ phải tự viết một phép tính nhóm bằng `agg`, sau đó thực hiện lệnh ghép bảng phức tạp để nối ngược số liệu về bảng cũ.
+
+## 4. Đại số quan hệ và cạm bẫy bùng nổ tổ hợp Cartesian khi ghép bảng
+
+Khi làm việc với các hệ thống dữ liệu doanh nghiệp, thông tin thường bị phân mảnh ở nhiều bảng khác nhau. Để có một bức tranh toàn cảnh, ta sử dụng hàm **`pd.merge()`** để thực hiện các phép nối quan hệ (JOIN).
+
+```python
+danh_muc = pd.DataFrame({"nhom": ["A", "B"], "mo_ta": ["Sach", "Vo"]})
+ket_qua = df.merge(
+    danh_muc, on="nhom", how="left", validate="many_to_one", indicator=True
+)
+print(len(df), len(ket_qua))     # 3 3
+print(ket_qua["_merge"].value_counts().to_dict())
+```
+
+Bốn kiểu nối dữ liệu kinh điển:
+- **`how="left"`**: Giữ lại toàn bộ các dòng của bảng bên trái. Nếu bảng bên phải không có khóa khớp, các cột mới sẽ nhận giá trị `NaN`.
+- **`how="inner"`**: Chỉ giữ lại các dòng mà khóa xuất hiện ở cả hai bảng.
+- **`how="outer"`**: Giữ lại toàn bộ khóa của cả hai bên (hợp của hai tập hợp).
+- **`how="right"`**: Giữ lại toàn bộ các dòng của bảng bên phải.
+
+Một cạm bẫy nguy hiểm bậc nhất trong thực tế là **Hiện tượng nhân bản dòng ngoài ý muốn (Cartesian Explosion)**. Giả sử bảng danh mục hàng hóa bên phải bị lỗi hệ thống và vô tình chứa 2 dòng trùng lặp cho mã nhóm `"A"`. Khi bạn thực hiện phép nối, 2 dòng nhóm `"A"` của bảng bên trái khi gặp 2 dòng nhóm `"A"` của bảng bên phải sẽ tạo ra $2 \times 2 = 4$ dòng kết quả! Bảng dữ liệu bán hàng của bạn bỗng dưng bị nhân đôi doanh thu một cách bí ẩn.
+
+Để bảo vệ hệ thống trước thảm họa này, các chuyên gia luôn bổ sung tham số **`validate="many_to_one"`** khi nối với bảng danh mục. Tham số này ra lệnh cho pandas kiểm tra nghiêm ngặt: khóa ở bảng bên phải bắt buộc phải là duy nhất. Nếu bảng bên phải có dòng trùng khóa, chương trình sẽ lập tức ném ra ngoại lệ `pd.errors.MergeError` và dừng lại để ta xử lý, thay vì âm thầm nhân bản dữ liệu.
+
+Tham số **`indicator=True`** sinh thêm một cột đặc biệt mang tên `_merge`, ghi nhận rõ dòng dữ liệu này đến từ cả hai bảng (`both`), chỉ đến từ bên trái (`left_only`) hay chỉ đến từ bên phải (`right_only`). Đây là công cụ đắc lực để kiểm toán xem có bao nhiêu khách hàng chưa từng phát sinh đơn hàng nào.
+
+## 5. Tái cấu trúc không gian bảng: Bảng rộng (Wide) và Bảng dài (Long)
+
+Dữ liệu thường tồn tại dưới hai hình thái cấu trúc:
+- **Dạng rộng (Wide format)**: Mỗi biến hoặc mỗi thời điểm chiếm một cột riêng biệt. Dạng này rất thân thiện với mắt người đọc báo cáo trên bảng tính Excel.
+- **Dạng dài (Long / Tidy format)**: Mỗi hàng là một quan sát đơn lẻ, các biến được gom chung vào một cột định danh và một cột giá trị. Dạng này là chuẩn mực bắt buộc cho máy tính xử lý, vẽ biểu đồ nâng cao và đưa vào thuật toán phân tích.
+
+```python
+rong = pd.DataFrame({"quay": ["Q1", "Q2"], "sach": [2, 4], "vo": [3, 5]})
+dai = rong.melt(id_vars="quay", var_name="mat_hang", value_name="so_luong")
+print(dai)
+lai = dai.pivot(index="quay", columns="mat_hang", values="so_luong")
+assert lai.loc["Q1", "sach"] == 2
+```
+
+Hai thao tác chuyển đổi qua lại:
+- **`df.melt(...)`**: "Làm tan chảy" bảng rộng thành bảng dài. Tham số `id_vars` chỉ định các cột định danh cần giữ nguyên vị trí, còn toàn bộ các cột còn lại được duỗi thẳng thành các cặp thuộc tính - giá trị.
+- **`df.pivot(...)`**: "Cuộn" bảng dài trở lại thành bảng rộng. Phương thức `pivot()` đòi hỏi mỗi cặp chỉ số hàng và cột phải xác định duy nhất một giá trị. Nếu dữ liệu có sự trùng lặp (ví dụ quầy Q1 bán sách nhiều lần trong ngày), ta phải sử dụng hàm **`df.pivot_table()`** đi kèm một hàm tổng hợp như `aggfunc="sum"`.
+
+## 6. Bài tập tự luyện
+
+::: exercise Thẩm định cơ chế căn chỉnh nhãn
+Cho hai Series:
+```python
+a = pd.Series([10, 20], index=["A", "B"])
+b = pd.Series([1, 2], index=["B", "C"])
+```
+Hãy giải thích vì sao phép tính `(a + b)["B"]` cho kết quả là `21.0` thay vì `12.0` (tổng của hai phần tử đầu tiên).
 :::
 
-##  Cheat Sheet — 7 lệnh pandas chuyên sâu phải nhớ
+::: solution
+Vì pandas hoạt động theo nguyên tắc căn chỉnh tự động theo nhãn (label alignment), hoàn toàn không phụ thuộc vào vị trí vật lý của phần tử trong mảng.
 
-| # | Cú pháp | Công dụng |
-|---|---|---|
-| 1 | `df.set_index("col")` / `.reset_index()` | Đổi cột ↔ index |
-| 2 | `s.loc[nhãn]` vs `s.iloc[vị_trí]` | Tra theo danh tính vs theo chỗ đứng |
-| 3 | `isna().sum()` sau mọi phép toán giữa 2 Series | Phát hiện NaN do alignment lệch nhãn |
-| 4 | vector hoá → `s.map(f)` → `df.apply(f, axis=1)` | Thứ tự ưu tiên tốc độ khi biến đổi cột |
-| 5 | `df.groupby(k)[c].agg(ten="hàm")` vs `.transform("hàm")` | 1 dòng/nhóm vs giữ nguyên độ dài bảng |
-| 6 | `df.pivot_table(values=, index=, columns=, aggfunc=)` | Bảng chéo hai chiều cho báo cáo |
-| 7 | `a.merge(b, on=, how=, validate=)` | Ghép ngang có kiểm tra quan hệ khoá |
-
-## Tổng kết
-
-- Index là **danh tính** của dòng, không phải vị trí: `loc` tra theo nhãn, `iloc` tra theo số thứ tự — hai giá trị này chỉ tình cờ trùng nhau khi index là dãy 0,1,2,… liên tục.
-- **Alignment** tự động ghép hai `Series`/`DataFrame` theo nhãn — tiện lợi nhưng sinh `NaN` âm thầm khi nhãn không khớp đủ ở cả hai bên. Luôn kiểm tra `isna().sum()` sau phép toán.
-- Thứ tự ưu tiên biến đổi cột: **vector hoá có sẵn → `map` → `apply`** — chỉ "hạ cấp" xuống nấc chậm hơn khi nấc trên thực sự không làm được.
-- `agg` cho một dòng mỗi nhóm. `transform` giữ nguyên độ dài bảng để so sánh từng dòng với "chuẩn" của nhóm nó. `pivot_table` là cách trình bày groupby hai khoá dưới dạng bảng chéo.
-- Sau mọi `merge`: kiểm tra số dòng có tăng bất thường không, đếm `NaN` ở cột mới, và cân nhắc dùng `validate=` để pandas tự phát hiện vi phạm quan hệ khoá.
-
-##  Mẹo thi & bẫy thường gặp
-
-::: warning Câu hỏi hay đánh lừa trong đề UET
-- **"`df.loc[2]` và `df.iloc[2]` luôn cho cùng một dòng"** → chỉ đúng khi index là 0,1,2,… liên tục. Sai ngay sau khi lọc/sắp xếp hoặc `set_index` bằng cột khác — đề hay cho một `DataFrame` đã qua `sort_values` rồi hỏi kết quả `loc`/`iloc`.
-- **"Phép trừ hai `Series` báo lỗi nếu thiếu nhãn ở một bên"** → SAI, kết quả vẫn chạy, chỉ sinh `NaN` cho nhãn không khớp, **không có lỗi hay cảnh báo**.
-- **"`agg` và `transform` chỉ khác nhau ở tên gọi, dùng hàm nào cũng ra kết quả tương tự"** → SAI, khác nhau ở **số dòng kết quả**: `agg` rút gọn về 1 dòng/nhóm, `transform` giữ nguyên độ dài bảng gốc.
-- **"Sau `merge`, số dòng bằng bảng trái nghĩa là merge đúng"** → chưa chắc. Vẫn cần đếm `NaN` ở cột mới để biết có bao nhiêu dòng "khớp giả" (không tìm thấy đối tác, bị điền `NaN`).
-- **"`apply(axis=1)` là cách tổng quát nên luôn an toàn để dùng"** → an toàn về mặt kết quả, nhưng **chậm hơn đáng kể** so với vector hoá. Khi cần cải thiện tốc độ, hãy kiểm tra xem có thể viết lại thao tác `apply` bằng phép tính trên cả mảng hay không.
+Khi thực hiện phép cộng `a + b`, pandas tìm phần tử có nhãn `"B"` trong `a` (giá trị là 20) và phần tử có nhãn `"B"` trong `b` (giá trị là 1) rồi cộng lại: $20 + 1 = 21.0$. Phép tính này không lấy phần tử đầu tiên của `a` (giá trị 10) cộng với phần tử đầu tiên của `b` (giá trị 1).
 :::
 
-##  Đọc thêm & tài nguyên
-
-- McKinney, *Python for Data Analysis*, 3rd ed. — [chương 8: Data Wrangling: Join, Combine, and Reshape](https://wesmckinney.com/book/data-wrangling) · [chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation).
-- [pandas User Guide — Group by: split-apply-combine](https://pandas.pydata.org/docs/user_guide/groupby.html) (tài liệu chính thức).
-- [pandas User Guide — Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html) (tài liệu chính thức, có giải thích chi tiết `validate=`).
-- [pandas User Guide — Reshaping and pivot tables](https://pandas.pydata.org/docs/user_guide/reshaping.html).
-
-::: info  Làm việc với AI thì sao?
-**AI làm tốt:** viết biểu thức `groupby`/`pivot_table` từ mô tả tiếng Việt. Giải thích lỗi liên quan đến `MultiIndex`.
-**AI hay sai:** chọn `how` cho `merge` không dựa trên yêu cầu thực tế (mặc định hay chọn `"inner"` dù cần giữ toàn bộ bảng trái). Không chủ động kiểm tra dòng bị loại hoặc bị nhân bản sau `merge`. Đề xuất `apply(axis=1)` cho phép tính có thể vector hoá trực tiếp.
-**Kiểm chứng bằng cách nào:** trước và sau mỗi `merge` do AI viết, in `len()` của cả hai bảng và đếm `NaN` ở cột mới. Với `groupby` phức tạp, tách riêng **một nhóm nhỏ**, lọc thủ công và tính lại kết quả để đối chiếu.
+::: exercise Kiểm soát sự bùng nổ dòng khi ghép bảng
+Bảng `left` có 3 dòng đều mang khóa `"A"`. Bảng `right` có 2 dòng đều mang khóa `"A"`. 
+1. Sau khi thực hiện `left.merge(right, on="k")`, bảng kết quả có bao nhiêu dòng?
+2. Nếu bảng `right` đáng lẽ là bảng danh mục thông tin định danh của nhóm, ta cần truyền tham số gì vào `merge()` để phát hiện lỗi trùng khóa này?
 :::
+
+::: solution
+1. Số dòng kết quả là $3 \times 2 = 6$ dòng. Mỗi dòng mang khóa `"A"` bên trái sẽ kết hợp với cả hai dòng mang khóa `"A"` bên phải theo quy tắc tích Descartes (Cartesian product).
+2. Để ngăn chặn việc nhân bản dòng ngoài ý muốn, ta truyền tham số `validate="many_to_one"`. Khi phát hiện bảng bên phải có nhiều hơn một dòng cho cùng một khóa `"A"`, pandas sẽ lập tức ném ra ngoại lệ `MergeError` để cảnh báo lập trình viên kiểm tra lại tính duy nhất của dữ liệu nguồn.
+:::
+
+::: exercise Phân biệt trường hợp sử dụng agg và transform
+Một kỹ sư muốn tạo thêm một cột mới trong bảng dữ liệu bán hàng để lưu trữ chênh lệch giữa giá bán của từng sản phẩm so với giá bán trung bình của phân khúc tương ứng. Hãy cho biết kỹ sư đó nên dùng `groupby().agg()` hay `groupby().transform()`, và viết câu lệnh thực hiện.
+:::
+
+::: solution
+Kỹ sư đó bắt buộc phải sử dụng **`groupby().transform()`**.
+
+Lý do: Phép tính so sánh cá thể đòi hỏi giữ nguyên toàn bộ số dòng của bảng ban đầu. Phương thức `agg()` sẽ thu gọn bảng thành số dòng bằng số nhóm, khiến ta không thể trừ trực tiếp với cột giá gốc.
+
+Câu lệnh chuẩn xác là:
+```python
+df["chenh_lech"] = df["gia"] - df.groupby("nhom")["gia"].transform("mean")
+```
+:::
+
+## 7. Nguồn và đọc thêm
+
+- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 5, mục 5.2: Essential Functionality](https://wesmckinney.com/book/pandas-basics), [Chương 8: Data Wrangling: Join, Combine, and Reshape](https://wesmckinney.com/book/data-wrangling), và [Chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation).
+- Hướng dẫn chính thức: [pandas User Guide — Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html).
+- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-05-series-dataframe-chuyen-sau.html).

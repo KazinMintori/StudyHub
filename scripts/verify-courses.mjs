@@ -49,6 +49,7 @@ try{
    await part('slides');await page.waitForSelector('.lecture-slides .course-slide');assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('.main > .vp-doc')).display),'none')
    assert.equal(await page.$eval('.lecture-header h1',el=>el.textContent),title)
    if(lectureSlides(course,lesson).length>1){const before=await page.$eval('.course-slide h2',el=>el.textContent);await button('Tiếp →','.slide-controls');assert.notEqual(await page.$eval('.course-slide h2',el=>el.textContent),before)}
+   await part('cheatsheet');await page.waitForSelector('.lecture-cheatsheet');assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('.main > .vp-doc')).display),'none')
    await part('kien-thuc-can-co');await page.waitForSelector('.lecture-foundations');assert.equal(await page.$$eval('.lecture-foundations .foundation-entry',els=>els.length),lectureConceptIds(lesson).length)
    const hrefs=await page.$$eval('.lecture-foundations .foundation-content > a',els=>els.map(el=>el.getAttribute('href')));assert.equal(hrefs.length,lectureConceptIds(lesson).length);assert(hrefs.every(href=>href.includes('/wiki/')))
    await part('notes');assert.notEqual(await page.evaluate(()=>getComputedStyle(document.querySelector('.main > .vp-doc')).display),'none');assert.equal(await page.$eval('.lecture-header h1',el=>el.textContent),title)
@@ -93,7 +94,7 @@ try{
   await go('/toan-cho-ai/');await page.screenshot({path:`qa/lecture-list-${width}.png`,fullPage:true})
  }
  await page.setViewport({width:1440,height:1000})
- for(const [partId,name]of [['slides','lecture-slides'],['notes','lecture-notes'],['kien-thuc-can-co','lecture-prerequisites']]){await go(`/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html#${partId}`);await page.screenshot({path:`qa/${name}.png`,fullPage:false})}
+ for(const [partId,name]of [['slides','lecture-slides'],['notes','lecture-notes'],['cheatsheet','lecture-cheatsheet'],['kien-thuc-can-co','lecture-prerequisites']]){await go(`/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html#${partId}`);await page.screenshot({path:`qa/${name}.png`,fullPage:false})}
  await go('/wiki/gradient.html');await page.screenshot({path:'qa/wiki-gradient.png',fullPage:true})
  assert.deepEqual(errors,[]);await writeFile('qa/course-results.json',JSON.stringify({results,errors,courses:courseCatalog.length,lectures:courseCatalog.reduce((n,c)=>n+c.lessons.length,0),wikiArticles:ids.length},null,2));console.log(`${results.length} browser checks and content/model checks passed.`)
 }finally{await browser.close()}

@@ -64,6 +64,9 @@ Luôn đọc [repo-format.md](references/repo-format.md) trước khi chạm và
 - Lý do thiết yếu nằm trong mạch chính của Notes, không chỉ trong hộp gập, slide hay lời nói.
 - Mọi đơn vị nguồn có ý nghĩa trong phạm vi được giao có nơi đến (Notes, bài tập, đọc thêm) hoặc lý do loại bỏ.
 - Thuật ngữ và ký hiệu nhất quán trong bài, với bài trước của môn, và với Wiki.
+- **Chủ quyền bài giảng (Chính danh, không làm nơi trích dẫn hay dịch sách cơ học)**: Biến kiến thức thành bài giảng hoàn chỉnh, độc lập của chính StudyHub và người giảng dạy. Tuyệt đối không để bài viết có bóng dáng bản dịch thô hay sổ ghi chú đối chiếu sách. Cấm triệt để các cụm từ: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“câu hỏi mở chương của sách”*, *“đề bài trong sách”*, *“đáp án của sách”*, *“sách dùng”*, *“theo sách”*, *“nguyên tác”*, *“tiến độ bản dịch”*, *“bản dịch của…”*, *“nguồn của bản dịch”*. Chú thích hình và đầu mục phải chuẩn mực sư phạm: *“Hình 1.1: …”*, *“Bài toán mở đầu: …”*, *“Bài tập rèn luyện: …”*.
+- **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Chuẩn xác học thuật, sáng rõ, uyên bác và giàu chất sư phạm; tuyệt đối không “giả trân”, không dùng từ ngữ sáo rỗng hay văn phong dịch máy AI. Lồng ghép tự nhiên các mẹo tư duy và kinh nghiệm tính toán thực tế (dùng lối nói mượt mà như *“Một cách người ta hay dùng để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”*, không đóng khung máy móc thành nhãn *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết với ứng dụng đời sống sinh động và câu hỏi đào sâu bản chất.
+
 
 ## 4. Quy trình new-lecture / revise
 

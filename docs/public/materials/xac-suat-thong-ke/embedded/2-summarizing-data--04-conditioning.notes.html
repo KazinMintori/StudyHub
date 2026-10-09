@@ -1,0 +1,1088 @@
+<!DOCTYPE html><html lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html">
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Conditioning – this course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../2-summarizing-data/05-summarizing-associations/notes.html" rel="next">
+<link href="../../2-summarizing-data/03-a-grammar-of-graphics/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="Conditioning – Stat 20">
+<meta property="og:description" content="Filtering, groupwise operations, and data pipelines.">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/images/mammals.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="628">
+<meta property="og:image:width" content="756">
+<meta name="twitter:title" content="Conditioning – Stat 20">
+<meta name="twitter:description" content="Filtering, groupwise operations, and data pipelines.">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/images/mammals.png">
+<meta name="twitter:image-height" content="628">
+<meta name="twitter:image-width" content="756">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html { color-scheme: light; scroll-behavior: auto; }
+body { margin: 0; background: white; color: #202124; }
+#quarto-content, #quarto-document-content { display: block !important; width: auto !important; max-width: 900px !important; margin: 0 auto !important; padding: 20px 24px !important; }
+#quarto-document-content > * { grid-column: auto !important; }
+.column-margin, .margin-caption { position: static !important; width: auto !important; max-width: 100% !important; }
+.quarto-title .title { display: block !important; }
+img, svg { max-width: 100%; }
+pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflow-x: auto; }
+.studyhub-source-reference { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 16px; font-size: 14px; }
+@media(max-width:600px) { #quarto-document-content { padding: 16px !important; } body { font-size: 16px; } }
+</style></head><body><main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Conditioning</h1>
+<p class="subtitle lead">Filtering, groupwise operations, and data pipelines.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="dropcap">I</span>n the world of data, bigger is not always better. Sometimes there are real benefits to working with a subset of your observations that meet some particular condition. One use of conditioning is to add specificity to a claim. Another use of conditioning is to illuminate the relationship between variables.</p>
+<p>To gain practice with conditioning, let’s turn to a data set that begins with a very general focus. In 2007, Savage and West published <em>A qualitative, theoretical framework for understanding mammalian sleep</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, wherein they “develop a general, quantitative theory for mammalian sleep that relates many of its fundamental parameters to metabolic rate and body size”. Characterizing the sleep patterns of <em>all</em> mammals is a broad task and their data set is corresponding diverse. Take a look at the first ten rows of their data below.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 83 × 5
+   name                       sleep_total log_bodywt vore  conservation
+   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+ 1 Cheetah                           12.1      10.8  carni lc          
+ 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;        
+ 3 Mountain beaver                   14.4       7.21 herbi nt          
+ 4 Greater short-tailed shrew        14.9       2.94 omni  lc          
+ 5 Cow                                4        13.3  herbi domesticated
+ 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;        
+ 7 Northern fur seal                  8.7       9.93 carni vu          
+ 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;        
+ 9 Dog                               10.1       9.55 carni domesticated
+10 Roe deer                           3         9.60 herbi lc          
+# ℹ 73 more rows</code></pre>
+</div>
+</div>
+<p>In this data set, the unit of observation is a single species and the variables observed on each are its name, the average length of sleep each day, the natural log of the average weight, its dietary pattern, and its conservation status. We can visualize the relationship between sleep and body size in all 83 species using a scatter plot.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The mammals vary from the wee brown bat, slumbering for nearly 20 hours a day, to the massive African elephant, nodding off for less than five. That is quite a range! Lets drill down to smaller subsets of this data frame to gain a more nuanced sense of what is going on.</p>
+<section id="filtering" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="filtering">Filtering</h2>
+<p>If you think about the shape of a data frame, there are two basic ways you might go about slicing and dicing it into smaller subsets.</p>
+<p>One way is to go at it is column-by-column. The act of selecting a subset of the columns of a data frame is called, well, <em>selecting</em>. When you select a column, you can do so either by its name or by its column number (or index). Selecting columns by name is more useful because their order tends to be arbitrary and might change over the course of an analysis.</p>
+<p>The other way to go at it is row-by-row. The act of subsetting the rows of the data frame based on their row number is called <em>slicing</em>. As with columns, the order of the rows is also often arbitrary, so this is of limited use. Much more useful is <em>filtering</em>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>In the tidyverse, these functions are named <code>select()</code>, <code>slice()</code>, and <code>filter()</code>.</p>
+</div></div><dl>
+<dt><strong>Filtering</strong></dt>
+<dd>
+<p>The act of subsetting the rows of a data frame based on the values of one or more variables to extract the observations of interest.</p>
+</dd>
+</dl>
+<p>Filters are powerful because they comb through the values of the data frame, which is where most of the information is. The key part of any filter is the condition that you assert for the rows that are retained in your data frame. Let’s set up a filter to return only the little brown bat.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, name <span class="sc">==</span> <span class="st">"Little brown bat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+  name             sleep_total log_bodywt vore    conservation
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
+1 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>Here <code>name == "Little brown bat"</code> is the condition that must be met by any row in the data set to be retained. The syntax used to set up the condition is a comparison between a column in the data frame on the left and a possible value of that column on the right.</p>
+<section id="comparison-operators" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-operators">Comparison Operators</h3>
+<p>The filter above uses the most direct condition: it retains the rows that have a value in the <code>name</code> variable that is precisely <code>"Little brown bat"</code>. In this case, there is only one such row. There are a range of different comparisons that can be made, though, and each has its own operator.</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:60%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>equal to</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>not equal to</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;</code></td>
+<td>less than</td>
+</tr>
+<tr class="even">
+<td><code>&gt;</code></td>
+<td>greater than</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;=</code></td>
+<td>less than or equal to</td>
+</tr>
+<tr class="even">
+<td><code>&gt;=</code></td>
+<td>greater than or equal to</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:20%;">
+
+</div>
+</div>
+<p>At first, the <code>==</code> operator looks like a typo. Why doesn’t we use <code>=</code>? The reason is that a single equals sign is already busy at work in R: it sets the values of arguments inside a function. Instead of assignment, we want to determine whether the thing on the left holds the same value as the thing on the right, so we use <code>==</code>. It might help you keep things straight if you read it in your head as “is exactly equal to”.</p>
+<p>Let’s return only the rows with large animals, defined as those with a log body weight greater than 12.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 5
+  name                 sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 Cow                          4         13.3 herbi domesticated
+2 Asian elephant               3.9       14.8 herbi en          
+3 Horse                        2.9       13.2 herbi domesticated
+4 Donkey                       3.1       12.1 herbi domesticated
+5 Giraffe                      1.9       13.7 herbi cd          
+6 Pilot whale                  2.7       13.6 carni cd          
+7 African elephant             3.3       15.7 herbi vu          
+8 Brazilian tapir              4.4       12.2 herbi vu          
+9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>There were 9 such animals and you can see all of them are large.</p>
+</section>
+<section id="logical-operators" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators">Logical Operators</h3>
+<p>What if you want both the little brown bat and the African elephant? What if you want both the large creatures as well as those that sleep only briefly? These are tasks that call for multiple comparisons composed together with the logical operators <code>&amp;</code>, <code>|</code>, and <code>%in%</code>.</p>
+<p>This filter returns the creatures who are large and who sleep little.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span> <span class="sc">&amp;</span> sleep_total <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 5
+  name             sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 Cow                      4         13.3 herbi domesticated
+2 Asian elephant           3.9       14.8 herbi en          
+3 Horse                    2.9       13.2 herbi domesticated
+4 Donkey                   3.1       12.1 herbi domesticated
+5 Giraffe                  1.9       13.7 herbi cd          
+6 Pilot whale              2.7       13.6 carni cd          
+7 African elephant         3.3       15.7 herbi vu          
+8 Brazilian tapir          4.4       12.2 herbi vu          </code></pre>
+</div>
+</div>
+<p>This can be read as “filter the <code>msleep</code> data frame to return the rows where both the log body weight is greater than 12 and the sleep total is less than 5”. We see that there are 8 such creatures, one fewer than the data frame with only the body weight filter (bottle-nosed dolphins sleep, on average, 5.2 hrs).</p>
+<p>Using <code>&amp;</code> to represent “and” is common across most computer languages but you can alternatively use the somewhat more compact syntax of simply adding the second filter after a comma.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span>, sleep_total <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 5
+  name             sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 Cow                      4         13.3 herbi domesticated
+2 Asian elephant           3.9       14.8 herbi en          
+3 Horse                    2.9       13.2 herbi domesticated
+4 Donkey                   3.1       12.1 herbi domesticated
+5 Giraffe                  1.9       13.7 herbi cd          
+6 Pilot whale              2.7       13.6 carni cd          
+7 African elephant         3.3       15.7 herbi vu          
+8 Brazilian tapir          4.4       12.2 herbi vu          </code></pre>
+</div>
+</div>
+<p>These two methods are equivalent.</p>
+<p>To return all rows that either have a high body weight or low sleep time or both, use the <code>|</code> operator (sometimes called “vertical bar”).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span> <span class="sc">|</span> sleep_total <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 5
+   name                 sleep_total log_bodywt vore  conservation
+   &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+ 1 Cow                          4        13.3  herbi domesticated
+ 2 Roe deer                     3         9.60 herbi lc          
+ 3 Asian elephant               3.9      14.8  herbi en          
+ 4 Horse                        2.9      13.2  herbi domesticated
+ 5 Donkey                       3.1      12.1  herbi domesticated
+ 6 Giraffe                      1.9      13.7  herbi cd          
+ 7 Pilot whale                  2.7      13.6  carni cd          
+ 8 African elephant             3.3      15.7  herbi vu          
+ 9 Sheep                        3.8      10.9  herbi domesticated
+10 Caspian seal                 3.5      11.4  carni vu          
+11 Brazilian tapir              4.4      12.2  herbi vu          
+12 Bottle-nosed dolphin         5.2      12.1  carni &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>Be cautious in deciding whether you want to use <code>&amp;</code> or <code>|</code>. While <code>|</code> is generally read as “or”, we could also describe the above filter as one that returns the rows that have a high body weight and the rows that have low sleep times.</p>
+<p>One way to keep them straight is to keep an eye on the number of observations that are returned. The intersection of multiple conditions (using <code>&amp;</code>) should result in the same or fewer rows (the orange area) than the union of multiple conditions (using <code>|</code>) (the blue area).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>When working with nominal categorical variables, the only operator that you’ll be using is <code>==</code>. You can return a union like normal using <code>|</code>,</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, name <span class="sc">==</span> <span class="st">"Little brown bat"</span> <span class="sc">|</span> name <span class="sc">==</span> <span class="st">"African elephant"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  name             sleep_total log_bodywt vore    conservation
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
+1 African elephant         3.3      15.7  herbi   vu          
+2 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>Or you can save some typing (and craft more readable code) by using <code>%in%</code> instead:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Little brown bat"</span>, <span class="st">"African elephant"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  name             sleep_total log_bodywt vore    conservation
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
+1 African elephant         3.3      15.7  herbi   vu          
+2 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
+</div>
+</div>
+</section>
+<section id="taxonomy-of-data-logicals" class="level3">
+<h3 class="anchored" data-anchor-id="taxonomy-of-data-logicals">Taxonomy of Data: Logicals</h3>
+<p>It is useful to pause here to look under the hood of this code. Once you get accustomed to the comparison operators and the syntax, the R code reads very similarly to the equivalent English command. But how are those comparisons being represented in terms of data?</p>
+<p>To answer this question, consider a simple numeric vector of four integers.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>We can apply a comparison operator to this vector using the same syntax as above. Let’s compare each value in this vector to see if its less than 5.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE  TRUE FALSE FALSE</code></pre>
+</div>
+</div>
+<p>The result is a vector of the same length as <code>a</code> where each value indicates whether the comparison to each element was true or false.</p>
+<p>Now, let’s consider an examples of comparison operators being used on <em>character</em> vectors. Hopefully these ones don’t make you too hungry!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"fruit"</span>, <span class="st">"fruit"</span>, <span class="st">"vegetable"</span>) <span class="sc">==</span> <span class="st">"fruit"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"fruit"</span>, <span class="st">"fruit"</span>, <span class="st">"vegetable"</span>) <span class="sc">!=</span> <span class="st">"fruit"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"fruit"</span>, <span class="st">"vegetable"</span>, <span class="st">"boba"</span>) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"fruit"</span>, <span class="st">"vegetable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+<p>While in both examples, the resulting vectors look like a factor or a character vector, just having the options <code>TRUE</code> and <code>FALSE</code>, they are actually examples of our newest entry into the Taxonomy of Data: the <strong>logical vector</strong>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(a <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "logical"</code></pre>
+</div>
+</div>
+<p>A logical vector can only take two values, <code>TRUE</code> and <code>FALSE</code> (R also recognizes <code>T</code> and <code>F</code> but not <code>True</code> or <code>true</code>). While it might seem like a categorical variable with only two levels, a logical vector has an important property that makes it behave like a numerical variable. Can you figure it out by looking at the next few cells?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(a <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">+</span> <span class="cn">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">*</span> <span class="cn">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">*</span> <span class="cn">FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<p>In a logical vector, a value of true is represented both by <code>TRUE</code> and by the number 1 and false by <code>FALSE</code> and the number 0. This integer representation is why <code>TRUE + TRUE</code> will work (it’s 2!) but <code>"TRUE" + "TRUE"</code> will not.</p>
+<p>This dual representation is very useful because it allows us to compute a proportion using, paradoxically, the <code>mean()</code> function.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a <span class="sc">&lt;</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+</div>
+<p><code>a &lt; 5</code> results in a vector with two 1s and two 0s. When you take the mean like this, you’re really finding the proportion of the elements that meet the condition that you laid out in your comparison. This is a very handy trick. We’ll use it more in a moment.</p>
+<!-- ## Missing Data -->
+<!-- ```{r} -->
+<!-- #| code-fold: false -->
+<!-- filter(msleep, log_bodywt > 6) -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- #| code-fold: false -->
+<!-- filter(msleep, !is.na(log_bodywt), -->
+<!--        log_bodywt > 6) -->
+<!-- ``` -->
+</section>
+</section>
+<section id="data-pipelines" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="data-pipelines">Data Pipelines</h2>
+<p>At this stage in the course, the number of functions that you are familiar with has grown dramatically. To do truly powerful things with data, you need to not just call one of these functions, but string together many of them in a thoughtful and organized manner.</p>
+<p>An an example, to create a sorted data frame containing just the large animals, we need to take the original data frame and</p>
+<ol type="1">
+<li><code>filter()</code> such that <code>log_bodywt &gt; 12</code> and then</li>
+<li><code>arrange()</code> in descending order of weight (<code>desc(log_bodywt)</code>).</li>
+</ol>
+<p>A conventional approach breaks this process into two distinct lines of code and saves the output mid-way through.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>msleep_large <span class="ot">&lt;-</span> <span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(msleep_large, <span class="fu">desc</span>(log_bodywt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 5
+  name                 sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 African elephant             3.3       15.7 herbi vu          
+2 Asian elephant               3.9       14.8 herbi en          
+3 Giraffe                      1.9       13.7 herbi cd          
+4 Pilot whale                  2.7       13.6 carni cd          
+5 Cow                          4         13.3 herbi domesticated
+6 Horse                        2.9       13.2 herbi domesticated
+7 Brazilian tapir              4.4       12.2 herbi vu          
+8 Donkey                       3.1       12.1 herbi domesticated
+9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>An approach that is more concise, easier to read, and generally faster to run is to compose these functions together with “the pipe”, written <code>|&gt;</code>. If you have two functions, <code>f1</code> and <code>f2</code>, both of which take a data frame as the first argument, you can pipe the output of <code>f1</code> directly into <code>f2</code> using.</p>
+<div style="font-size: 1.5em; text-align: center">
+<pre><code>f1(DF) |&gt; f2()</code></pre>
+</div>
+<p>Let’s use the pipe to rewrite the code shown above.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span>) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(log_bodywt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 5
+  name                 sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 African elephant             3.3       15.7 herbi vu          
+2 Asian elephant               3.9       14.8 herbi en          
+3 Giraffe                      1.9       13.7 herbi cd          
+4 Pilot whale                  2.7       13.6 carni cd          
+5 Cow                          4         13.3 herbi domesticated
+6 Horse                        2.9       13.2 herbi domesticated
+7 Brazilian tapir              4.4       12.2 herbi vu          
+8 Donkey                       3.1       12.1 herbi domesticated
+9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>What has changed? Most immediately, we have reduced two lines of code to one. The first function, <code>filter()</code>, is unchanged. However the second function, <code>arrange()</code>, is now missing its usual first argument: the data frame! That’s ok; <em>it is being piped directly in</em> from the output of the first function.</p>
+<p>While this is a fine way to use the pipe, your code is made much more readable if you format it like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">|&gt;</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(log_bodywt <span class="sc">&gt;</span> <span class="dv">12</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(log_bodywt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 5
+  name                 sleep_total log_bodywt vore  conservation
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 African elephant             3.3       15.7 herbi vu          
+2 Asian elephant               3.9       14.8 herbi en          
+3 Giraffe                      1.9       13.7 herbi cd          
+4 Pilot whale                  2.7       13.6 carni cd          
+5 Cow                          4         13.3 herbi domesticated
+6 Horse                        2.9       13.2 herbi domesticated
+7 Brazilian tapir              4.4       12.2 herbi vu          
+8 Donkey                       3.1       12.1 herbi domesticated
+9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
+</div>
+</div>
+<p>This code results in the same output as the first version, but it now reads a bit like a poem: “Take the <code>msleep</code> data frame then filter it such that the log body weight is greater than twelve then arrange it in descending order by log body weight”.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>This poem is admittedly not particularly poetic.</p>
+</div></div><p>Let’s look at an example to understand the power of such a simple piece of syntax.</p>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
+<p><em>What proportion of carnivores sleep more than 8 hours per night?</em></p>
+<p>Answering this requires two steps: <code>filter()</code>ing to focus on carnivores and <code>summarize()</code>ing with a proportion that meet a condition (recall that a comparison results in a logical vector of 0s and 1s). It is often a good idea to record the number of observations that go into a summary statistic, which we do here with <code>n()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(vore <span class="sc">==</span> <span class="st">"carni"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">p_gt_8hrs =</span> <span class="fu">mean</span>(sleep_total <span class="sc">&gt;</span> <span class="dv">8</span>),</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">n =</span> <span class="fu">n</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  p_gt_8hrs     n
+      &lt;dbl&gt; &lt;int&gt;
+1     0.684    19</code></pre>
+</div>
+</div>
+<p><em>What year had the greatest total number of christenings?</em></p>
+<p>The original <code>arbuthnot</code> data frame, which captures birth records in 17<sup>th</sup> century London, in fact records the numbers of boys and girls names that appear in church christening records. To find the year with the greatest total number of christenings requires first the creation of a new column with <code>mutate()</code>, then <code>arrange()</code>ing the rows of that data frame, then <code>select()</code>ing just the rows of interst. As one pipeline, that is:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stat20data)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>arbuthnot <span class="sc">|&gt;</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">total =</span> boys <span class="sc">+</span> girls) <span class="sc">|&gt;</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">|&gt;</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(year, total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 82 × 2
+    year total
+   &lt;int&gt; &lt;int&gt;
+ 1  1705 16145
+ 2  1707 16066
+ 3  1698 16052
+ 4  1708 15862
+ 5  1697 15829
+ 6  1702 15687
+ 7  1701 15616
+ 8  1703 15448
+ 9  1706 15369
+10  1699 15363
+# ℹ 72 more rows</code></pre>
+</div>
+</div>
+<p><em>What is the trend in the total number of christenings over time?</em></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>arbuthnot <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">total =</span> boys <span class="sc">+</span> girls) <span class="sc">|&gt;</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> total)) <span class="sc">+</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This demonstrates that you can pipe a data frame directly into a ggplot - the first argument is a data frame after all! The main thing to note is that when moving into a ggplot, the layers are added with the <code>+</code> operator instead of the pipe, <code>|&gt;</code>.</p>
+</section>
+</section>
+<section id="groupwise-operations-revisited" class="level2">
+<h2 class="anchored" data-anchor-id="groupwise-operations-revisited">Groupwise Operations Revisited…</h2>
+<p>The last example above demonstrates a very common scenario: you want to perform some calculations on one particular group of observations in your data set. But what if you want to do that same calculation for every group?</p>
+<p>The <code>vore</code> variable has four levels: <code>carni</code>, <code>herbi</code>, <code>insecti</code>, and <code>omni</code>. It would not be too difficult to copy and paste the above pipeline four times and modify each filter function to focus on a different group. But what if there were a dozen different levels?</p>
+<p>This task - performing an operation on all groups of a data set one-by-one - is such a common data science task that nearly every software tool has a good solution. In the tidyverse, the solution is the <code>group_by()</code> function. Let’s see it in action.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">|&gt;</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(vore) <span class="sc">|&gt;</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">p_gt_8hrs =</span> <span class="fu">mean</span>(sleep_total <span class="sc">&gt;</span> <span class="dv">8</span>),</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">n =</span> <span class="fu">n</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  vore    p_gt_8hrs     n
+  &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;
+1 carni       0.684    19
+2 herbi       0.594    32
+3 insecti     1         5
+4 omni        0.95     20
+5 &lt;NA&gt;        0.714     7</code></pre>
+</div>
+</div>
+<p>Like most tidyverse functions, the first argument to <code>group_by()</code> is a data frame, so it can be slotted directly into the pipeline. The second argument, the one that shows up in the code above, is the name of the variable that you want to use to delineate the groups. This is generally a factor, character, or logical vector.</p>
+<p><code>group_by()</code> is an incredibly powerful function because it changes the behavior of downstream functions. Lets break our pipeline and inspect the data frame that comes out of it.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">|&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(vore)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 83 × 5
+# Groups:   vore [5]
+   name                       sleep_total log_bodywt vore  conservation
+   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+ 1 Cheetah                           12.1      10.8  carni lc          
+ 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;        
+ 3 Mountain beaver                   14.4       7.21 herbi nt          
+ 4 Greater short-tailed shrew        14.9       2.94 omni  lc          
+ 5 Cow                                4        13.3  herbi domesticated
+ 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;        
+ 7 Northern fur seal                  8.7       9.93 carni vu          
+ 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;        
+ 9 Dog                               10.1       9.55 carni domesticated
+10 Roe deer                           3         9.60 herbi lc          
+# ℹ 73 more rows</code></pre>
+</div>
+</div>
+<p>This looks . . . exactly like the original data frame.</p>
+<p>Well, not <em>exactly</em> like it: there is now a note at the top that the data frame now has the notion of groups based on <code>vore</code>. In effect, <code>group_by()</code> has taken the generic data frame and turned it into the one in the middle below: the same data frame but with rows now flagged as belonging to one group or another. When we pipe this grouped data frame into <code>summarize()</code>, <code>summarize()</code> collapses that data frame down into a single row for each group and creates a new column for each new summary statistic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/group-by.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>There are several ways to subset a data frame but the most important for data analysis is filtering: subsetting the rows according to a condition. In R, that condition is framed in terms of a comparison between a variable and a value (or set of values). Comparisons take many forms and can be combined using logical operators. The result is a logical vector that can be used for filtering or computing summary statistics. You can perform simultaneous analyses on multiple subsets by doing groupwise operations with <code>group_by()</code>.</p>
+<p>As we begin to do analyses that require multiple operations, the pipe operator, <code>|&gt;</code>, can be used to stitch the functions together into a single pipeline.</p>
+<p>If you’re thinking, <span class="emoji" data-emoji="grimacing">😬</span> , yikes there was a <em>lot</em> of coding in these notes, you’re right. Keep reading, you’ll have an opportunity for some practice in the tutorial.</p>
+<p><a href="../../2-summarizing-data/04-conditioning/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>V. M. Savage and G. B. West. <a href="https://www.pnas.org/doi/10.1073/pnas.0610080104">A quantitative, theoretical framework for understanding mammalian sleep</a>. Proceedings of the National Academy of Sciences, 104 (3):1051-1056, 2007.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></main><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><script>
+(() => {
+  const entries = {"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html":{"id":"1-questions-and-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html":{"id":"2-summarizing-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html":{"id":"2-summarizing-data--04-conditioning","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html":{"id":"2-summarizing-data--04-conditioning","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html":{"id":"3-generalization","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html":{"id":"3-generalization--01-prob-foundations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html":{"id":"3-generalization--01-prob-foundations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html":{"id":"3-generalization--02-computing-probs","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html":{"id":"3-generalization--02-computing-probs","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html":{"id":"3-generalization--03-probability-dsns","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html":{"id":"3-generalization--03-probability-dsns","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html":{"id":"3-generalization--04-random-variables","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html":{"id":"3-generalization--04-random-variables","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html":{"id":"3-generalization--05-ev-se","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html":{"id":"3-generalization--05-ev-se","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html":{"id":"3-generalization--06-normal-approx","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html":{"id":"3-generalization--06-normal-approx","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html":{"id":"3-generalization--08-confidence-intervals","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html":{"id":"3-generalization--08-confidence-intervals","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html":{"id":"3-generalization--09-bootstrapping","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html":{"id":"3-generalization--09-bootstrapping","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html":{"id":"3-generalization--10-hypothesis-tests","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html":{"id":"3-generalization--10-hypothesis-tests","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html":{"id":"3-generalization--12-wrong-by-design","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html":{"id":"3-generalization--12-wrong-by-design","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/notes.html":{"id":"4-causation","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html":{"id":"4-causation--01-defining-causality","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html":{"id":"4-causation--01-defining-causality","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html":{"id":"4-causation--02-experiments","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html":{"id":"4-causation--02-experiments","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html":{"id":"4-causation--03-matching","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html":{"id":"4-causation--03-matching","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html":{"id":"5-prediction--01-method-of-least-squares","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html":{"id":"5-prediction--01-method-of-least-squares","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html":{"id":"5-prediction--02-improving-predictions","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html":{"id":"5-prediction--02-improving-predictions","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html":{"id":"5-prediction--03-overfitting","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html":{"id":"5-prediction--03-overfitting","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html":{"id":"5-prediction--05-logistic-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html":{"id":"5-prediction--05-logistic-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html":{"id":"quiz","kind":"slides"}};
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) return;
+    const raw = anchor.getAttribute('href');
+    if (raw.startsWith('#')) {
+      const target = document.getElementById(decodeURIComponent(raw.slice(1)));
+      if (target) { event.preventDefault(); target.scrollIntoView(); }
+      return;
+    }
+    const url = new URL(anchor.href, document.baseURI);
+    const key = url.origin + url.pathname;
+    if (entries[key]) { event.preventDefault(); parent.postMessage({type:'studyhub-source-navigation', ...entries[key]}, '*'); }
+    else { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+  }, true);
+})();</script></body></html>

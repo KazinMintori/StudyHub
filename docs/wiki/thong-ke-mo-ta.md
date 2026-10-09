@@ -13,13 +13,13 @@ Mô tả dữ liệu dùng con số, đồ thị hoặc lời văn để trình 
 
 ## Giải thích kỹ thuật
 
-**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\%$. Đây là ví dụ giả định. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.
+**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\%$. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.
 
 Mô tả không chỉ gồm phép tính: bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.
 
 ## Ví dụ
 
-Ví dụ giả định: 7 trong 10 người trả lời khảo sát chưa từng lập trình, tức 70% trong nhóm trả lời.
+Ví dụ: 7 trong 10 người trả lời khảo sát chưa từng lập trình, tức 70% trong nhóm trả lời.
 
 ## Khi nào cần dùng?
 

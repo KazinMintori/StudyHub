@@ -1,0 +1,993 @@
+<!DOCTYPE html><html lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html">
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Continuous Distributions and Normal Approximations – this course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../3-generalization/07-from-samps-to-pops/notes.html" rel="next">
+<link href="../../3-generalization/05-ev-se/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="Continuous Distributions and Normal Approximations – Stat 20">
+<meta property="og:description" content="Connections to boxes, continuous distributions, and a fundamental result">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/front-image.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="652">
+<meta property="og:image:width" content="812">
+<meta name="twitter:title" content="Continuous Distributions and Normal Approximations – Stat 20">
+<meta name="twitter:description" content="Connections to boxes, continuous distributions, and a fundamental result">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/images/front-image.png">
+<meta name="twitter:image-height" content="652">
+<meta name="twitter:image-width" content="812">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html { color-scheme: light; scroll-behavior: auto; }
+body { margin: 0; background: white; color: #202124; }
+#quarto-content, #quarto-document-content { display: block !important; width: auto !important; max-width: 900px !important; margin: 0 auto !important; padding: 20px 24px !important; }
+#quarto-document-content > * { grid-column: auto !important; }
+.column-margin, .margin-caption { position: static !important; width: auto !important; max-width: 100% !important; }
+.quarto-title .title { display: block !important; }
+img, svg { max-width: 100%; }
+pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflow-x: auto; }
+.studyhub-source-reference { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 16px; font-size: 14px; }
+@media(max-width:600px) { #quarto-document-content { padding: 16px !important; } body { font-size: 16px; } }
+</style></head><body><main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Continuous Distributions and Normal Approximations</h1>
+<p class="subtitle lead">Connections to boxes, continuous distributions, and a fundamental result</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="dropcap">I</span>magine that a regular patron of a bar has hit the bottle rather hard one evening. When the bar closes for the night, they come out to weave their way home. Home is very near, in fact, just straight down the road. If our inebriate walks straight in the direction of their home, they can be there very soon. The only problem is - they can’t walk straight. Every minute, they move in a random direction: backwards or forwards with equal probability. Where will they be after <span class="math inline">\(n\)</span> minutes? This is the famous “drunkard’s walk” problem<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p><img src="images/drunkard-walk-drawing.png" class="img-fluid" data-fig-aligned="center" width="500"></p>
+<p>Each time step (say, each minute), they go backwards or forwards with equal probability, so it is as if they are walking on the real line, and each minute they go either forward <span class="math inline">\((+1)\)</span> or backwards <span class="math inline">\((+1)\)</span>, each with probability <span class="math inline">\(\displaystyle \frac{1}{2}\)</span>. Where will our tipsy traveler be after <span class="math inline">\(n\)</span> steps?</p>
+<p>Here is a plot of a simulation of our itinerant inebriate’s path for <span class="math inline">\(n = 30\)</span>:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note that the graph is spread out to show the number of steps taken, but the walker is just walking up and down the <span class="math inline">\(y\)</span>-axis, since they can only go backwards and forwards. This kind of walk is called a <em>simple random walk</em>. Random walks have applications in many fields including physics and finance.They are used to model photons escaping from the center of the sun (though photons can scatter in <em>any</em> direction), a molecule in a liquid, the price of a stock etc.</p>
+<p>What we have shown here is one possible path our random walker might take and where they might land up after <span class="math inline">\(n = 30\)</span> minutes. We have plotted this by defining a modified Bernoulli random variable <span class="math inline">\(X\)</span> that takes the values <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> with an equal probability of <span class="math inline">\(\displaystyle \frac{1}{2}\)</span>. Then we sample <span class="math inline">\(30\)</span> times from this vector with replacement. Notice here that we use an argument in <code>sample()</code> that we haven’t used before, <code>prob</code>. This defines the <em>weights</em> used for sampling. In this case they are the same, but they might be different. We will discuss this further in the “Ideas in Code” section. Note that the expected value of our Bernoulli random variable <span class="math inline">\(X\)</span> is <span class="math inline">\(0\)</span>. What is its variance and SD?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<span class="math display">\[
+X = \begin{cases}
+    -1, \; \text{ with prob } 0.5\\
+    1, \; \text{ with prob } 0.5\\
+\end{cases}
+\]</span> <span class="math display">\[
+E(X) = (-1) \times 0.5 + 1 \times 0.5 = 0.
+\]</span> <span class="math display">\[
+Var(X) = E(X^2) - E(X)^2 = 1 - 0 = 1 = SD(X).
+\]</span>
+</details>
+<p>In the code below we are defining a vector with the values taken by <span class="math inline">\(X\)</span>, a vector of probabilities for these values, and the distance traveled by the walker in <span class="math inline">\(n\)</span> steps:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>) <span class="co"># defining the values taken by X</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>px <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>,<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="co"># defining the probabilities of these values</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">30</span>, <span class="at">prob =</span> px, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example,in the path shown in the figure above, the first <span class="math inline">\(5\)</span> steps taken (<span class="math inline">\(-1\)</span> represents backwards and <span class="math inline">\(+1\)</span> forward): <span class="math inline">\(1, -1, -1, 1, -1, -1\)</span>. The position at each step is the sum of all the steps thus far, so this sequence becomes <span class="math inline">\(1, 0, -1, 0, -1, -2\)</span>. Notice that the end position after <span class="math inline">\(30\)</span> steps is <span class="math inline">\(4\)</span>. One might ask - what is the <em>probability</em> that the position is <span class="math inline">\(4\)</span> after <span class="math inline">\(30\)</span> steps? How would we compute this probability? This seems very difficult, so let’s look at the empirical distribution of the position after <span class="math inline">\(n = 30\)</span> steps (we simulate many many such paths and look at the value of sum of the <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span> steps at the end).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Well, that’s a nice shape! This is an example of the fundamental result mentioned in the subtitle of this chapter. Now, before we can compute the expected value of the walker’s position after <span class="math inline">\(n\)</span> steps or the associated probabilities, we need to learn about very special sets of random variables.</p>
+<section id="independent-and-identically-distributed-random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="independent-and-identically-distributed-random-variables">Independent and identically distributed random variables</h2>
+<div class="def">
+<dl>
+<dt><strong>IID random variables</strong></dt>
+<dd>
+If we have <span class="math inline">\(n\)</span> independent random variables <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> such that they all have the same pmf <span class="math inline">\(f(x)\)</span> and the same cdf <span class="math inline">\(F(x)\)</span>, we call the random variables <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> independent and identically distributed random variables. We usually use the abbreviation i.i.d or iid for ``independent and identically distributed’’.
+</dd>
+</dl>
+</div>
+<p>This is a very important concept that we have already used to compute the expected value and variance of a binomial random variable by writing it as a sum of iid Bernoulli random variables.</p>
+<p>A common example is when we toss a coin <span class="math inline">\(n\)</span> times and count the number of heads - each coin toss can be considered a Bernoulli random variable, and the total number of heads is a sum of <span class="math inline">\(n\)</span> iid Bernoulli random variables.</p>
+<section id="example-drawing-tickets-with-replacement" class="level3">
+<h3 class="anchored" data-anchor-id="example-drawing-tickets-with-replacement">Example: Drawing tickets with replacement</h3>
+<p>Consider the box shown below:</p>
+<p><img src="images/box-1.png" class="img-fluid" data-fig-aligned="center" width="400"></p>
+<p>Say I draw <span class="math inline">\(25\)</span> tickets with replacement from this box, and let <span class="math inline">\(X_k\)</span> be the value of the <span class="math inline">\(k\)</span>th ticket. Then each of the <span class="math inline">\(X_k\)</span> has the same distribution, and they are independent since we draw the tickets with replacement. Therefore <span class="math inline">\(X_1, X_2, \ldots, X_{25}\)</span> are iid random variables, and they <em>each</em> have a distribution defined by the following pmf: <span class="math display">\[
+f(x) = \begin{cases}
+      0.2, \; x = 0, 3, 4 \\
+      0.1, \; x = 2 \\
+      0.3, \; x = 1
+      \end{cases}
+\]</span></p>
+<p><br>
+</p>
+</section>
+</section>
+<section id="the-box-modelfppbox" class="level2">
+<h2 class="anchored" data-anchor-id="the-box-modelfppbox">The Box Model<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<p>We have seen that we can always represent a discrete random variable using tickets in a box. We define the tickets so that a ticket drawn at random from the box will have the same probability distribution as the random variable. Then it becomes very easy to define <span class="math inline">\(n\)</span> random variables that are independent, and identically distributed (as in the example above), where each random variable is a draw with replacement from the same box. Representing the random variable using a box of tickets also makes it easy to set up a simulation, since we can just define a vector representing the box, and use the function <code>sample()</code> setting the argument <code>replace = TRUE</code>. In this way, we can represent a chance <em>process</em> in which some action that defines a random variable is repeated over and over again, as a box of tickets from which we draw tickets with replacement over and over again.</p>
+<p>We could do this for any of the examples that we have seen - die rolls, coin tosses, spins of a roulette wheel etc. Once we represent the random variable using a box of tickets, then it is easy to compute the expected value of the random variable - it is just the average of the tickets in the box, and the variance of the random variable is the variance of the tickets in the box. Note that we compute the <em>population</em> variance, so we divide by <span class="math inline">\(n\)</span> not <span class="math inline">\(n-1\)</span>, since the box represents the population, from which we draw a sample. Let’s revisit some examples:</p>
+<section id="rolling-a-pair-of-dice-and-summing-the-spots" class="level3">
+<h3 class="anchored" data-anchor-id="rolling-a-pair-of-dice-and-summing-the-spots">Rolling a pair of dice and summing the spots</h3>
+<p>Suppose we want to represent the rolling of a pair of dice and summing the spots using a box with appropriately marked tickets. Our box could be:</p>
+<p><img src="images/die.jpeg" class="img-fluid" data-fig-aligned="center" width="200"></p>
+<p>Let <span class="math inline">\(X_1\)</span> represent drawing a ticket at random from this box. Then <span class="math inline">\(X_1\)</span> has the discrete uniform distribution. To represent the sum of spots of a pair of dice, we would draw <em>twice</em> with replacement from this box, calling the result of the first draw <span class="math inline">\(X_1\)</span> and the second <span class="math inline">\(X_2\)</span>. Notice that <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent, since we drew with replacement, and have the same probability distribution, so are <em>identically distributed</em>. That is, <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are i.i.d. random variables, and we want to know about the sum of these. We can define <span class="math inline">\(S = X_1+X_2\)</span> and use the box to simulate the distribution of <span class="math inline">\(S\)</span>.</p>
+</section>
+<section id="spinning-a-vegas-roulette-wheel-and-betting-on-red" class="level3">
+<h3 class="anchored" data-anchor-id="spinning-a-vegas-roulette-wheel-and-betting-on-red">Spinning a Vegas roulette wheel and betting on red</h3>
+<p><img src="images/roulette-us.jpg" class="img-fluid" data-fig-aligned="center" width="200"></p>
+<p>We know that an American roulette wheel has <span class="math inline">\(18\)</span> red pockets, <span class="math inline">\(18\)</span> black pockets and <span class="math inline">\(2\)</span> green pockets. So if we spin it, the chance of winning if we bet on red is <span class="math inline">\(18/38\)</span>. Suppose we bet a dollar on red, then if the ball lands in a red pocket, we get our dollar back and another dollar. If it lands on black, we lose the dollar we bet. We are usually interested in our “net gain” if we play over and over again, that is, our total winnings (or losses) after <span class="math inline">\(n\)</span> spins. We can use a box of tickets to model the net gain in <span class="math inline">\(n\)</span> spins by letting the box represent the possible result of <em>one</em> spin, and then drawing <span class="math inline">\(n\)</span> times at random from this box. What would the box to represent the result of one spin of a roulette wheel look like?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>The box would have <span class="math inline">\(38\)</span> tickets. <span class="math inline">\(18\)</span> tickets would be marked with <span class="math inline">\(+1\)</span> and <span class="math inline">\(20\)</span> tickets would be marked with <span class="math inline">\(-1\)</span>. This would represent the result of one spin. Suppose we want to see what the net gain would be from playing <span class="math inline">\(100\)</span> times, we would draw <span class="math inline">\(100\)</span> times with replacement from this box, and sum the draws.</p>
+<p><img src="images/roulette-bet.jpeg" class="img-fluid" data-fig-aligned="center" width="300"></p>
+<p>How would you simulate this process (of spinning the wheel <span class="math inline">\(n\)</span> times) in R?</p>
+</details>
+<p>We can generalize the ideas in the roulette example to any set up where we have iid discrete random variables. We need to think about <em>three</em> things:</p>
+<ol type="1">
+<li><p>What are the values of the tickets in the box?</p></li>
+<li><p>How many tickets of each value?</p></li>
+<li><p>How many times do we need to draw?</p></li>
+</ol>
+<p>We are usually interested in the <strong>sum</strong> or the <strong>average</strong> of <span class="math inline">\(n\)</span> iid random variables, that is, the sum or average of <span class="math inline">\(n\)</span> draws, and the probability distribution of this sum (or average).</p>
+</section>
+</section>
+<section id="sums-and-averages-of-random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="sums-and-averages-of-random-variables">Sums and averages of random variables</h2>
+<section id="sums" class="level3">
+<h3 class="anchored" data-anchor-id="sums">Sums</h3>
+<p>Suppose we make <span class="math inline">\(n\)</span> draws at random with replacement from the box in the example, reproduced here:</p>
+<p><img src="images/box-1.png" class="img-fluid" data-fig-aligned="center" width="300"></p>
+<p>Suppose we sum the drawn tickets. We denote the <em>sum</em> of <span class="math inline">\(n\)</span> random variables by <span class="math inline">\(S_n\)</span>. Note that <span class="math inline">\(S_n = X_1 + X_2 + \ldots + X_{n}\)</span> is also a random variable.</p>
+<p>Let’s simulate this by letting <span class="math inline">\(n=25\)</span> and sampling <span class="math inline">\(25\)</span> tickets with replacement, summing them, and then repeating this process. Note that the smallest sum we can get is <span class="math inline">\(S_n = 0\)</span> and the largest is <span class="math inline">\(100\)</span>. (Why?)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The sum of 25 draws is 56"</code></pre>
+</div>
+</div>
+<p>Now we will repeat this process (of drawing <span class="math inline">\(25\)</span> tickets with replacement and summing the draws) <span class="math inline">\(10\)</span> times (note how <code>replicate()</code> is used) :</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">4</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or you could use box &lt;- c(rep(0, 2), rep(1, 3), 2, rep(3,2), rep(4, 2))</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">expr =</span> <span class="fu">sum</span>(<span class="fu">sample</span>(<span class="at">x =</span> box, <span class="at">size =</span> <span class="dv">25</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 56 50 64 51 49 41 64 44 45 51</code></pre>
+</div>
+</div>
+<p>You can see that the sum <span class="math inline">\(S_n\)</span> is random and keeps changing with each iteration of the process (because the <span class="math inline">\(X_k\)</span> are random numbers).</p>
+<p>Since we know the distribution of the <span class="math inline">\(X_k\)</span> (which is the probability distribution of a <em>single</em> draw from the box), we can compute <span class="math inline">\(E(X_k)\)</span> and <span class="math inline">\(Var(X_k)\)</span>. Note that since the <span class="math inline">\(X_1, X_2, \ldots, X_{n}\)</span> are iid, all the <span class="math inline">\(X_k\)</span> have the <em>same</em> mean and variance. What about their sum <span class="math inline">\(S_n\)</span>?</p>
+<p>What are <span class="math inline">\(E(S_n)\)</span> and <span class="math inline">\(Var(S_n)\)</span>, when <span class="math inline">\(n = 25\)</span>?</p>
+<p><span class="math inline">\(E(X_k) = 0.2\times 0 + 0.3 \times 1 + 0.1 \times 2 + 0.2 \times 3 + 0.2 \times 4 = 1.9\)</span>.</p>
+<p>(Note that you could also have just computed the average of the tickets in the box.)</p>
+<p><span class="math inline">\(Var(X_k) = \sum_x (x-1.9)^2 \cdot P(X=x) = 2.09\)</span></p>
+<p><span class="math inline">\(E(S_{25}) = E(X_1 + X_2 + \ldots +X_{25}) = 25 \times E(X_1) = 25 \times 1.9\)</span>.</p>
+<p>(We just use <span class="math inline">\(X_1\)</span> since all the <span class="math inline">\(X_k\)</span> have the same distribution. We are using the <em>additivity</em> of expectation here.)</p>
+<p>Since the <span class="math inline">\(X_k\)</span> are independent, we can use the addivity of variance to get that</p>
+<p><span class="math display">\[
+\begin{aligned}
+Var(S_{25}) &amp;= Var(X_1 + X_2 + \ldots +X_{25})\\
+&amp;= Var(X_1) + Var(X_2) + \ldots +Var(X_{25})\\
+&amp;= 25 \times 2.09
+\end{aligned}
+\]</span></p>
+<p>We can see that the expectation and variance of the sum <em>scale</em> with <span class="math inline">\(n\)</span>, so that if <span class="math inline">\(S_n\)</span> is the sum of <span class="math inline">\(n\)</span> iid random variables <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span>, then:</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(S_n) &amp;= n \times E(X_1) \\
+Var(S_n) &amp;= n \times Var(X_1)\\
+\end{aligned}
+\]</span> This does not hold for <span class="math inline">\(SD(S_n)\)</span>, though. For the SD, we have the following ``law’’ for the standard deviation of the sum.</p>
+<div class="def">
+<dl>
+<dt><strong>Square root law for sums of iid random variables</strong></dt>
+<dd>
+The standard deviation of the sum of <span class="math inline">\(n\)</span> iid random variables is given by: <span class="math display">\[
+SD(S_n) = \sqrt{n} \times SD(X_1)
+\]</span>
+</dd>
+</dl>
+</div>
+<p>Since all the <span class="math inline">\(X_k\)</span> have the same distribution, we can use <span class="math inline">\(X_1\)</span> to compute the mean and SD of the sum. This law says that if the sample size increases as <span class="math inline">\(n\)</span>, the expected value scales as the <em>number</em> of random variables, but the standard deviation of the sum increases more slowly, scaling as <span class="math inline">\(\sqrt{n}\)</span>. In other words, if you increase the number of random variables you are summing, the spread of your sum about its expected value increases, but not as fast as the expectation of the sum.</p>
+</section>
+<section id="example-the-drunkards-walk" class="level3">
+<h3 class="anchored" data-anchor-id="example-the-drunkards-walk">Example: The drunkard’s walk</h3>
+<p>Back to our inebriated random walker who is trying to walk home. Recall that at each time step, the walker moves forward or backward with equal probability. After <span class="math inline">\(n\)</span> steps, their position can be written as <span class="math display">\[
+S_n = X_1 + X_2 + \ldots X_n
+\]</span> where <span class="math inline">\(X_k = +1\)</span> or <span class="math inline">\(-1\)</span> with probability <span class="math inline">\(0.5\)</span> each. <span class="math inline">\(E(X_k) = 0\)</span> and <span class="math inline">\(Var(X_k) = 1\)</span>, so we get that: <span class="math display">\[
+E(S_n) = 0, \; Var(S_n) = n, \text{ and } SD(n) = \sqrt{n}.
+\]</span></p>
+</section>
+<section id="averages" class="level3">
+<h3 class="anchored" data-anchor-id="averages">Averages</h3>
+<p>We denote the average of the random variables <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> by <span class="math inline">\(\displaystyle \overline{X} =\frac{S_n}{n}\)</span>.</p>
+<p><span class="math inline">\(\displaystyle \overline{X}\)</span> is called the <em>sample mean</em> (where the “sample” consists of <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span>).</p>
+<p><span class="math display">\[
+E(\overline{X}) = E\left(\frac{S_n}{n}\right) = \frac{1}{n} E(S_n) = E(X_1)
+\]</span></p>
+<p>This means that the expected value of an average does <strong><em>not</em></strong> scale as <span class="math inline">\(n\)</span> (as the sum did), but <span class="math inline">\(E(\overline{X})\)</span> is the <em>same</em> as the expected value of a single random variable. Let’s check the variance now:</p>
+<p><span class="math display">\[
+Var(\overline{X}) = Var\left(\frac{S_n}{n}\right) = \frac{1}{n^2} Var(S_n) =  \frac{n}{n^2} Var(X_1)
+\]</span></p>
+<p>Therefore <span class="math inline">\(Var(\overline{X}) =  \displaystyle \frac{1}{n} Var(X_1)\)</span></p>
+<p>Note that, just like the sample sum <span class="math inline">\(S_n\)</span>, the sample mean <span class="math inline">\(\displaystyle \overline{X}\)</span> is a random variable, and its variance scales as <span class="math inline">\(\displaystyle \frac{1}{n}\)</span>, which implies that <span class="math inline">\(SD(\overline{X})\)</span> will scale as <span class="math inline">\(\displaystyle \frac{1}{\sqrt{n}}\)</span>. Let’s write that formally:</p>
+<div class="def">
+<dl>
+<dt><strong>Square root law for averages of iid random variables</strong></dt>
+<dd>
+The standard deviation of the average of <span class="math inline">\(n\)</span> iid random variables is given by: <span class="math display">\[
+SD(\overline{X}) = \frac{1}{\sqrt{n}}SD(X_1)
+\]</span>
+</dd>
+</dl>
+</div>
+<div class="def">
+<dl>
+<dt><strong>Standard error</strong></dt>
+<dd>
+Since <span class="math inline">\(S_n\)</span> and <span class="math inline">\(\overline{X}\)</span> are numbers computed from the sample <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span>, they are called <em>statistics</em>. We use the term <em>standard error</em> to denote the standard deviation of a <em>statistic</em>: <span class="math inline">\(SE(S_n)\)</span> and <span class="math inline">\(SE(\overline{X})\)</span> to distinguish it from the standard deviations of random variables that do not arise as statistics that are computed from <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span>. We will see more about these statistics later in the course.
+</dd>
+</dl>
+</div>
+</section>
+<section id="example-probability-distributions-for-sums-and-averages" class="level3">
+<h3 class="anchored" data-anchor-id="example-probability-distributions-for-sums-and-averages">Example: Probability distributions for sums and averages</h3>
+<p>Let’s go back to the box of colored tickets, draw from this box <span class="math inline">\(n\)</span> times, and then compute the sum and average of the draws. We will simulate the distribution of the sum and the average of 25 draws to see what the distribution of the statistics looks like. Note that when <span class="math inline">\(n=25\)</span>, <span class="math inline">\(E(S_n) = 25\times 1.9 = 47.5\)</span> and <span class="math inline">\(SE(S_n) = \sqrt{n} \times SD(X_1) = 5 \times 1.45 = 7.25\)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<!--:::{.content-visible when-format="pdf"}
+
+::: {.cell}
+::: {.cell-output-display}
+![](notes_files/figure-html/unnamed-chunk-9-1.png){width=960}
+:::
+:::
+
+:::
+-->
+<p>What do we notice in these figures? First, we see the bell-shape again! Note that the black line is the expected value. We see that the center of the distribution for the sample sum grows as the sample size increases (look at the x-axis), but this does not happen for the distribution of the sample mean. You can also see that the spread of the data for the sample sum is much greater when n = 100, but this does not happen for the distribution of the sample mean. Now, the <span class="math inline">\(y\)</span> axis has neither counts nor proportion, but it has <em>density</em>. This makes the histogram have a total area of one, similar to a probability histogram. Now we can think of this histogram, called a <em>density</em> histogram as an <em>approximation</em> of the probability histogram.</p>
+<div class="def">
+<dl>
+<dt><strong>Density histograms</strong></dt>
+<dd>
+These are histograms for which the total area of all the bars add up to <span class="math inline">\(1\)</span>. The vertical axis is called <em>density</em> and the units are such that the height of each bar times its width gives the <em>proportion</em> of the values that fall in the corresponding interval of the histogram.
+</dd>
+</dl>
+</div>
+<p>We see that we have moved from bar graphs to histograms, which is what we need when we consider random variables that are not restricted to taking particular values. These are called <em>continuous</em> random variables.</p>
+</section>
+</section>
+<section id="continuous-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-distributions">Continuous distributions</h2>
+<p>So far, we have talked about discrete distributions, and the probability mass functions for such distributions. Consider a random variable that takes <em>any</em> value in a given interval. Recall that we call such random variables <em>continuous</em>. In this situation, we cannot think about discrete bits of probability mass which are non-zero for certain numbers, but rather we imagine that our total probability mass of <span class="math inline">\(1\)</span> is <em>smeared</em> over the interval, giving us a smooth curve, called a <em>density</em>, rather than a histogram. To define the probabilities associated with a continuous random variable, we define a probability <em>density</em> function (pdf) rather than a probability mass function.</p>
+<section id="probability-density-function-of-a-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="probability-density-function-of-a-distribution">Probability <em>density</em> function of a distribution</h3>
+<div class="def">
+<dl>
+<dt><strong>Probability density function</strong></dt>
+<dd>
+This is a function <span class="math inline">\(f(x)\)</span> that satisfies two conditions:
+</dd>
+</dl>
+<ul>
+<li><ol type="1">
+<li>it is non-negative (<span class="math inline">\(f(x) \ge 0\)</span>) and</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>the total area under the curve <span class="math inline">\(y = f(x)\)</span> is 1. That is, <span class="math display">\[ \int_{-\infty}^\infty f(x) dx = 1 \]</span></li>
+</ol></li>
+</ul>
+</div>
+<p>If <span class="math inline">\(X\)</span> is a continuous random variable, we don’t talk about <span class="math inline">\(P(X = x\)</span>), that is, the probability that <span class="math inline">\(X\)</span> takes a particular value. Rather, we ask what is the probability that <span class="math inline">\(X\)</span> lies in an interval around <span class="math inline">\(x\)</span>. Since there are infinitely many outcomes in any interval on the real line, no single outcome can have positive probability, so <span class="math inline">\(P(X=x) =0\)</span> for any particular <span class="math inline">\(x\)</span> in the interval where <span class="math inline">\(X\)</span> is defined. To find the probability that <span class="math inline">\(X\)</span> lies in an interval <span class="math inline">\((a,b)\)</span>, we integrate <span class="math inline">\(f(x)\)</span> over the interval <span class="math inline">\((a,b)\)</span>. That is, we find the area under the curve <span class="math inline">\(f(x)\)</span> over the interval <span class="math inline">\((a, b)\)</span>.</p>
+<div class="def">
+<dl>
+<dt><strong>The probability that a continuous random variable lies in an interval</strong></dt>
+<dd>
+The probability that <span class="math inline">\(X\)</span> is in the interval <span class="math inline">\((a,b)\)</span> is given by <span class="math display">\[
+P(a &lt; X &lt; b) = P(X \text{ is in the interval }(a,b)) =  \int_{a}^b f(x) dx
+\]</span>
+</dd>
+</dl>
+</div>
+<p>Note that because a single point will not add any area, we have that: <span class="math display">\[
+P(a &lt; X &lt; b) = P(a \le X &lt; b) = P(a &lt; X \le b) = P(a \le X \le b)
+\]</span></p>
+<p>Just as we did for discrete random variables, we define the <em>cumulative</em> distribution function for a continuous distribution.</p>
+</section>
+<section id="cumulative-distribution-function-fx" class="level3">
+<h3 class="anchored" data-anchor-id="cumulative-distribution-function-fx">Cumulative distribution function <span class="math inline">\(F(x)\)</span></h3>
+<div class="def">
+<dl>
+<dt><strong>Cumulative distribution function (cdf)</strong></dt>
+<dd>
+The cdf is defined the <em>same</em> way as for discrete random variables, except that we now have an integral instead of a sum. <span class="math display">\[
+F(x) = P(X \le x) = \int_{-\infty}^x f(t) dt
+\]</span>
+</dd>
+</dl>
+</div>
+<p>The difference is in how we compute <span class="math inline">\(P(X \le x)\)</span>. There are no discrete bits of probability mass for <span class="math inline">\(F(x)\)</span> to collect. Instead we have that <span class="math inline">\(F(x)\)</span> is the area under the curve <span class="math inline">\(y = f(x)\)</span> all the way up to the point <span class="math inline">\(x\)</span>.</p>
+</section>
+<section id="special-continuous-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="special-continuous-distributions">Special continuous distributions</h3>
+<p>Just as in the case of discrete distributions, we have many special named continuous distributions. We are going to mention two of them here. The first is the a very easy distribution to think about with a rectangulare geometry that is easy to think about: the uniform distribution. The second distribution we mention here has a shape that has already shown up in examples in these note - its probability density function has a bell-shape. This is the Normal distribution and it is the most ubiquitous distribution in statistics and its bell shaped density curve is used in <em>many</em> disciplines.</p>
+<p>Let’s consider the uniform distribution first.</p>
+<section id="the-uniform01-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="the-uniform01-distribution">The Uniform(0,1) distribution</h4>
+<p>Let <span class="math inline">\(X\)</span> be a random variable that takes values in the interval <span class="math inline">\((0,1)\)</span> with probability density function <span class="math inline">\(f(x) = 1\)</span> for <span class="math inline">\(x\)</span> in <span class="math inline">\((0,1)\)</span> and <span class="math inline">\(f(x) = 0\)</span> outside of this interval.</p>
+<p>Because <span class="math inline">\(f(x)\)</span> is flat, all intervals of the same length will have the <em>same area</em>, so the distribution defined by <span class="math inline">\(f\)</span> is called the <em>Uniform</em><span class="math inline">\((0,1)\)</span> distribution. If a random variable <span class="math inline">\(X\)</span> has this distribution, we denote this by <span class="math inline">\(X \sim U(0,1)\)</span>. The probability that <span class="math inline">\(X\)</span> is in any interval <span class="math inline">\((a, b)\)</span> which is a sub-interval of <span class="math inline">\((0,1)\)</span> is given by the area of the rectangle formed by the interval and <span class="math inline">\(y=f(x)\)</span>, and so is just the width of the interval.</p>
+<p><img src="images/unif-1.png" class="img-fluid" data-fig-aligned="center" width="600"></p>
+<p>If you know that <span class="math inline">\(X\)</span> has a <span class="math inline">\(Unif(a, b)\)</span> distribution, you should try to use geometry to figure out probabilities as this is usually easier than integrating.</p>
+<section id="example-cdf-for-the-uniform-01-distribution" class="level5">
+<h5 class="anchored" data-anchor-id="example-cdf-for-the-uniform-01-distribution">Example: cdf for the Uniform (0,1) distribution</h5>
+<p>Let <span class="math inline">\(X \sim U(0,1)\)</span>. What is <span class="math inline">\(F(0.3)\)</span>?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p><span class="math display">\[
+F(0.3) = P(X \le 0.3) = \int_{-\infty}^{0.3} f(t) dt =  \int_0^{0.3} 1 dt = 0.3
+\]</span> In general, for the <span class="math inline">\(U(0,1)\)</span> distribution, <span class="math inline">\(F(x) = x\)</span>.</p>
+</details>
+</section>
+</section>
+<section id="the-normal-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="the-normal-distribution">The Normal distribution</h4>
+<p>The Normal distribution, which is also called the <em>Gaussian</em> distribution (after the great 19th century German mathematician Carl Friedrich Gauss<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) describes a continuous random variable that has a density function with a familiar bell shape<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If a random variable <span class="math inline">\(X\)</span> follows a normal distribution, we write</p>
+<p><span class="math display">\[
+X \sim \textrm{N}(\mu, \sigma^2)
+\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean of the distribution and <span class="math inline">\(\sigma\)</span> is its standard deviation. (The particular normal distribution shown above is the <em>standard normal distribution</em>, where <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1)\)</span>. The curve is completely defined by these two numbers and they are called the <em>parameters</em> of the distribution. Every normal curve can be matched up to the standard normal by transforming the <span class="math inline">\(x\)</span> to <em>standard units</em> which means shifting the curve so it is centered at <span class="math inline">\(0\)</span> (subtracting <span class="math inline">\(\mu\)</span>) and scaling the curve so the standard deviation is <span class="math inline">\(1\)</span> (dividing by <span class="math inline">\(\sigma\)</span>).</p>
+<p>We can calculate the probability of any event related to <span class="math inline">\(X\)</span> by finding the area under the curve corresponding to that event. That includes the probability that <span class="math inline">\(X\)</span> falls within a particular interval. In the table below, we record the probabilities of three such intervals.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th>Area under the normal curve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Between -1 and 1</td>
+<td>0.68</td>
+</tr>
+<tr class="even">
+<td>Between -2 and 2</td>
+<td>0.95</td>
+</tr>
+<tr class="odd">
+<td>Between -3 and 3</td>
+<td>0.997</td>
+</tr>
+</tbody>
+</table>
+<p>So <em>if</em> we know a particular distribution is similar in shape to the normal distribution, we’re able to calculate the probabilities that the random variable falls within a particular interval.</p>
+</section>
+</section>
+</section>
+<section id="the-central-limit-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="the-central-limit-theorem">The Central Limit Theorem</h2>
+<p>The normal curve is enormously useful because many data distributions are similar to the normal curve, so we can use the areas under the normal curve to approximate the areas of the data distributions to figure out proportions. The reason so many data distributions approximately follow a normal distribution is because of one of the most fundamental results in statistics called the Central Limit Theorem. This astounding result says that <strong>sums (and averages) of independent and identically distributed random variables will follow an approximately normal distribution (after transforming them to standard units) as the sample size grows large</strong>. If we restate this in terms of our box model, this theorem says that, for large enough <span class="math inline">\(n\)</span>, if we draw <span class="math inline">\(n\)</span> times from a box of tickets with replacement, then the probability distribution of the sum and the average of the draws (standardized) will be approximately normal, <em>regardless</em> of the distribution of the tickets in the box. This means that the tickets in the box can be anything, but as long as we draw enough times, the sum will have an approximately bell-shaped distribution.</p>
+<p>Since many useful statistics can be written as the sum or mean of iid random variables, this is a very important and useful theorem, and we will use it extensively for inference in the next unit.</p>
+<p>Recall our hammered homeseeker from the beginning of this chapter, and the bell-shaped distribution of their position after half an hour. Since their position can be written as a sum of all their steps (which were <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>), the Central Limit Theorem applies to the probability distribution of the sum, and that is why the distribution is bell-shaped. Using the normal approximation and the empirical rule, we can say that with probability about <span class="math inline">\(32\%\)</span>, our tipsy friend will be <em>farther</em> than one standard deviation from the starting point, which was the bar. Recall that one standard deviation for <span class="math inline">\(n=30\)</span> is <span class="math inline">\(\sqrt{n} \approx 5.5\)</span> steps. So he may be close to his home (with about <span class="math inline">\(16\%\)</span> probability) or totally in the other direction (also with about <span class="math inline">\(16\%\)</span> probability).</p>
+<p><a href="../../3-generalization/06-normal-approx/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Random_walk" class="uri">https://en.wikipedia.org/wiki/Random_walk</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The box model was introduced by Freedman, Pisani, and Purves in their textbook <a href="https://wwnorton.com/books/9780393929720"><em>Statistics</em></a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Another instance where Abraham De Moivre was the first person to discover a distribution, but it was named after someone else. You can read about De Moivre at <a href="https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/" class="uri">https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>For a normally distributed random variable, <span class="math inline">\(f(x) = \frac{1}{\sigma \sqrt{2 \pi}} e^{\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}\)</span>. Read more on Wikipedia: <a href="https://en.wikipedia.org/wiki/Normal_distribution" class="uri">https://en.wikipedia.org/wiki/Normal_distribution</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></main><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><script>
+(() => {
+  const entries = {"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html":{"id":"1-questions-and-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html":{"id":"2-summarizing-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html":{"id":"2-summarizing-data--04-conditioning","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html":{"id":"2-summarizing-data--04-conditioning","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html":{"id":"3-generalization","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html":{"id":"3-generalization--01-prob-foundations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html":{"id":"3-generalization--01-prob-foundations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html":{"id":"3-generalization--02-computing-probs","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html":{"id":"3-generalization--02-computing-probs","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html":{"id":"3-generalization--03-probability-dsns","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html":{"id":"3-generalization--03-probability-dsns","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html":{"id":"3-generalization--04-random-variables","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html":{"id":"3-generalization--04-random-variables","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html":{"id":"3-generalization--05-ev-se","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html":{"id":"3-generalization--05-ev-se","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html":{"id":"3-generalization--06-normal-approx","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html":{"id":"3-generalization--06-normal-approx","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html":{"id":"3-generalization--08-confidence-intervals","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html":{"id":"3-generalization--08-confidence-intervals","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html":{"id":"3-generalization--09-bootstrapping","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html":{"id":"3-generalization--09-bootstrapping","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html":{"id":"3-generalization--10-hypothesis-tests","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html":{"id":"3-generalization--10-hypothesis-tests","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html":{"id":"3-generalization--12-wrong-by-design","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html":{"id":"3-generalization--12-wrong-by-design","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/notes.html":{"id":"4-causation","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html":{"id":"4-causation--01-defining-causality","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html":{"id":"4-causation--01-defining-causality","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html":{"id":"4-causation--02-experiments","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html":{"id":"4-causation--02-experiments","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html":{"id":"4-causation--03-matching","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html":{"id":"4-causation--03-matching","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html":{"id":"5-prediction--01-method-of-least-squares","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html":{"id":"5-prediction--01-method-of-least-squares","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html":{"id":"5-prediction--02-improving-predictions","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html":{"id":"5-prediction--02-improving-predictions","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html":{"id":"5-prediction--03-overfitting","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html":{"id":"5-prediction--03-overfitting","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html":{"id":"5-prediction--05-logistic-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html":{"id":"5-prediction--05-logistic-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html":{"id":"quiz","kind":"slides"}};
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) return;
+    const raw = anchor.getAttribute('href');
+    if (raw.startsWith('#')) {
+      const target = document.getElementById(decodeURIComponent(raw.slice(1)));
+      if (target) { event.preventDefault(); target.scrollIntoView(); }
+      return;
+    }
+    const url = new URL(anchor.href, document.baseURI);
+    const key = url.origin + url.pathname;
+    if (entries[key]) { event.preventDefault(); parent.postMessage({type:'studyhub-source-navigation', ...entries[key]}, '*'); }
+    else { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+  }, true);
+})();</script></body></html>

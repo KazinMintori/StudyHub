@@ -5,180 +5,253 @@ section: lecture
 title: "Logic & biểu diễn tri thức"
 prerequisites: ["menh-de","luong-tu","tap-hop"]
 lessonStatus: ready
+description: "Cơ sở hình thức của biểu diễn tri thức, logic vị từ bậc nhất (FOL), lượng từ, cơ chế hợp nhất hóa, suy luận và bản thể luận Ontology."
 ---
 
+*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
 
-*Bài 14 (Logic) + Bài bổ sung 1–2 (Propositional/Predicate Logic) · AIT2004 — Nguồn: Russell & Norvig, "AIMA" 4th ed., chương 7 (Logical Agents), 8 (First-Order Logic), 10 (Knowledge Representation).*
+← [Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 16: Mạng Bayes & suy luận →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)
 
-← [Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 16: Mạng Bayes I →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)
+::: info Trọng tâm bài giảng
+Trí tuệ nhân tạo không chỉ dừng lại ở các thuật toán thám hiểm không gian trạng thái hay các phép toán số học thuần túy. Để một cỗ máy có thể hành xử thông minh thực sự, nó cần phải sở hữu **tri thức (knowledge)** và khả năng **suy luận (reasoning)** từ tri thức đó để rút ra những kết luận mới chưa từng được nạp sẵn.
 
-::: info Bài này ôn tập gì?
-1. Vì sao **logic mệnh đề** không đủ mạnh → cần **logic vị từ bậc nhất (FOL)**.
-2. Cú pháp, ngữ nghĩa, và **suy luận** trong FOL (hợp nhất hoá, Modus Ponens tổng quát).
-3. **Ontology (bản thể luận)** và mạng ngữ nghĩa — cách tổ chức tri thức về cả thế giới.
+Đây là cái nôi của trường phái AI biểu tượng (Symbolic AI). Bài giảng này dẫn dắt chúng ta qua các trụ cột hình thức:
+1. **Từ Logic Mệnh đề đến Logic Vị từ Bậc nhất (FOL):** Vì sao ta phải mở rộng chiếc hộp đen mệnh đề để nhìn vào cấu trúc của thế giới?
+2. **Cú pháp, Ngữ nghĩa và Các Lượng từ ($\forall, \exists$):** Nghệ thuật chuyển dịch ngôn ngữ tự nhiên sang biểu thức toán học chuẩn xác, tránh các cạm bẫy đảo chiều logic.
+3. **Cơ chế Suy luận Hình thức:** Thuật toán hợp nhất hóa (Unification), quy tắc Modus Ponens tổng quát và hợp giải phản chứng (Resolution).
+4. **Bản thể luận (Ontology) & Mạng ngữ nghĩa:** Cách tổ chức tri thức của toàn bộ thế giới thực thành các đồ thị tri thức (Knowledge Graphs).
 :::
 
-## 14.1 Vì sao logic mệnh đề chưa đủ?
+---
 
-::: tip Ẩn dụ
-Logic mệnh đề giống một cuốn **sổ tay liệt kê từng sự thật rời rạc**: "Bình là sinh viên", "An là sinh viên", "Long là sinh viên"... Muốn nói "mọi sinh viên đều phải học Cơ sở Trí tuệ nhân tạo", ta phải chép lại quy tắc cho *từng người một* — không có cách nói "chung". Logic vị từ bậc nhất (FOL) giống việc được cấp thêm **đại từ và lượng từ** ("mọi", "có một") để nói một câu áp dụng cho *cả một lớp đối tượng*.
-:::
+## 14.1 Vì sao Logic Mệnh đề không đủ sức biểu đạt thế giới?
 
-Hạn chế cụ thể của mệnh đề (theo đúng ví dụ trong bài giảng gốc):
-- Không tham số hoá được: "Mọi sinh viên đều biết logic" phải viết riêng cho từng người (`BietLogic_Binh`, `BietLogic_An`, ...) — không có biến.
-- Không mô tả được **quan hệ** giữa các đối tượng, chỉ mô tả sự kiện đóng gói sẵn.
-- Muốn nói "ô kề bên hố có gió" trong Wumpus World, phải viết lặp lại một luật cho **từng ô** ($B_{1,1} \Leftrightarrow P_{1,2}\lor P_{2,1}$, rồi lại một câu tương tự cho $B_{1,2}$, v.v.) thay vì nói một câu tổng quát duy nhất.
-
-## 14.2 Ba viên gạch của FOL
-
-| Thành tố | Vai trò | Ví dụ |
-|---|---|---|
-| **Đối tượng** (constant) | Một thực thể cụ thể | `Long`, `UET`, `MonAIT2004` |
-| **Vị từ** (predicate) | Trả về true/false, mô tả thuộc tính/quan hệ | `SinhVien(x)`, `Hoc(x, y)` |
-| **Hàm** (function) | Trả về một *đối tượng* liên quan tới đối tượng khác | `GiaoVienHuongDan(x)` |
-| **Lượng từ** | $\forall$ (với mọi), $\exists$ (tồn tại) | $\forall x\, \text{SinhVien}(x) \Rightarrow \ldots$ |
-
-**Câu nguyên tố:** `predicate(term1, ..., termn)` hoặc `term1 = term2`. **Câu phức:** ghép bằng $\neg, \land, \lor, \Rightarrow, \Leftrightarrow$ như logic mệnh đề, cộng thêm $\forall, \exists$.
-
-## 14.3 Chuyển câu tiếng Việt sang FOL — ví dụ miền đại học
-
-> "Mọi sinh viên đều phải học ít nhất một môn cơ sở ngành."
-
+Trong Logic mệnh đề (Propositional Logic), đơn vị cơ bản nhất là một **mệnh đề nguyên tử** — một phát biểu chỉ có thể nhận giá trị Đúng ($\text{True}$) hoặc Sai ($\text{False}$), ví dụ:
 $$
-\forall x \; \big(\text{SinhVien}(x) \Rightarrow \exists y\, (\text{MonCoSo}(y) \land \text{Hoc}(x,y))\big)
+P: \text{“Trời đang mưa”}, \quad Q: \text{“Đường trơn”}
 $$
 
-> "Có một giảng viên dạy tất cả các môn của Khoa CNTT."
+Logic mệnh đề rất thanh thoát khi kiểm tra các suy luận đơn giản thông qua bảng chân trị. Tuy nhiên, khi áp dụng vào trí tuệ nhân tạo, nó bộc lộ một **khiếm khuyết chí mạng**: **Logic mệnh đề coi mỗi sự thật như một chiếc "hộp đen" nguyên tử.** Nó không có cách nào nhìn vào cấu trúc bên trong chiếc hộp để biết sự thật đó đang nói về đối tượng nào, mang thuộc tính gì, hay có mối quan hệ ra sao với các thực thể khác.
 
+Hãy xem xét phát biểu tưởng chừng rất tự nhiên sau:
+> “Mọi sinh viên đều phải tích lũy đủ tín chỉ tốt nghiệp.”
+
+Nếu chỉ dùng logic mệnh đề, chúng ta bất lực trong việc viết ra một quy tắc khái quát! Vì không có khái niệm biến số hay đối tượng, chúng ta buộc phải tạo ra vô số mệnh đề độc lập cho từng người:
 $$
-\exists x \; \big(\text{GiangVien}(x) \land \forall y\, (\text{MonCuaKhoa}(y,\text{CNTT}) \Rightarrow \text{Day}(x,y))\big)
+\text{SinhVien\_An} \implies \text{DuTinChi\_An}
 $$
-
-So sánh với câu **nghĩa khác hẳn**:
-
 $$
-\forall y \; \exists x \; \big(\text{MonCuaKhoa}(y,\text{CNTT}) \Rightarrow \text{Day}(x,y)\big)
+\text{SinhVien\_Binh} \implies \text{DuTinChi\_Binh}
 $$
-
-câu sau chỉ nói "**mỗi** môn đều có (**có thể là**) một giảng viên khác nhau dạy" — yếu hơn hẳn câu $\exists x \forall y$ (một giảng viên dạy *tất cả*).
-
-::: danger Bẫy thi #1 — Đảo thứ tự lượng từ
-$\exists x \,\forall y\, P(x,y)$ **KHÔNG tương đương** $\forall y\, \exists x\, P(x,y)$.
-
-- $\exists x \forall y\, \text{Yeu}(x,y)$: "có một người yêu **tất cả mọi người**".
-- $\forall y \exists x\, \text{Yeu}(x,y)$: "**mỗi người** đều được ai đó yêu" (có thể mỗi người một người yêu khác nhau — yếu hơn nhiều).
-
-Chiều ngược lại ($\forall\forall$ hay $\exists\exists$) thì **được phép đảo tự do**: $\forall x\forall y \equiv \forall y \forall x$, và $\exists x \exists y \equiv \exists y \exists x$.
-:::
-
-::: danger Bẫy thi #2 — Sai liên từ chính đi kèm lượng từ
-Lỗi sinh viên mắc **nhiều nhất**:
-
-- Với $\forall$: liên từ chính phải là $\Rightarrow$.
-  -  $\forall x\,(\text{SinhVien}(x) \Rightarrow \text{ChamChi}(x))$ — "mọi sinh viên đều chăm chỉ".
-  -  $\forall x\, \text{SinhVien}(x) \land \text{ChamChi}(x)$ — nói "**mọi thứ trên đời** vừa là sinh viên vừa chăm chỉ" (vô lý).
-- Với $\exists$: liên từ chính phải là $\land$.
-  -  $\exists x\,(\text{SinhVien}(x) \land \text{DiemA}(x))$ — "có sinh viên đạt điểm A".
-  -  $\exists x\, (\text{SinhVien}(x) \Rightarrow \text{DiemA}(x))$ — câu này **luôn đúng một cách tầm thường** (chỉ cần tồn tại một vật bất kỳ không phải sinh viên) — không diễn tả đúng ý!
-:::
-
-## 14.4 Ngữ nghĩa: mô hình và diễn giải
-
-Một câu FOL đúng hay sai phụ thuộc vào mô hình và cách diễn giải các ký hiệu. Mô hình xác định tập đối tượng cùng các quan hệ, còn cách diễn giải gắn hằng với đối tượng, vị từ với quan hệ và ký hiệu hàm với hàm. Chẳng hạn, câu $\text{Brother}(Richard, John)$ có thể đúng trong một mô hình nhưng sai trong mô hình khác. Vì một cơ sở tri thức có thể có nhiều mô hình thỏa mãn, hệ quả logic (entailment) phải đúng trong mọi mô hình thỏa tiền đề.
-
-## 14.5 Suy luận: hợp nhất hoá (Unification) & Modus Ponens tổng quát
-
-Để áp dụng luật suy diễn, cần tìm phép thế $\theta$ khiến hai biểu thức "khớp" nhau:
-
 $$
-\text{Unify}(\alpha, \beta) = \theta \quad \text{sao cho } \alpha\theta = \beta\theta
+\text{SinhVien\_Cuong} \implies \text{DuTinChi\_Cuong}
 $$
 
-Ví dụ: $\text{Unify}(\text{Hoc}(x,\text{AIT2004}),\ \text{Hoc}(\text{Long}, y)) = \{x/\text{Long},\ y/\text{AIT2004}\}$.
+Nếu trường học có 10.000 sinh viên, cơ sở tri thức phải lưu 10.000 câu riêng rẽ. Nếu có một sinh viên mới nhập học, hệ thống hoàn toàn không biết sinh viên đó có cần đủ tín chỉ hay không cho đến khi ta tự tay chép thêm một câu mới vào bộ nhớ!
 
-**Modus Ponens tổng quát:** với tri thức $p_1', p_2', \ldots, p_n'$ và luật $p_1 \land \cdots \land p_n \Rightarrow q$, nếu tồn tại $\theta$ hợp nhất được $p_i'$ với $p_i$ cho mọi $i$, ta suy ra $q\theta$.
+Rõ ràng, ta cần một ngôn ngữ hình thức biểu đạt mạnh mẽ hơn: một ngôn ngữ cho phép phân rã thế giới thành **đối tượng**, **thuộc tính** và **quan hệ**, đồng thời cho phép nói những câu tổng quát áp dụng cho cả một tập hợp. Ngôn ngữ đó chính là **Logic Vị từ Bậc nhất (First-Order Logic - FOL)**.
 
-**Hai hướng đưa FOL về mệnh đề để suy luận (theo bài giảng gốc):**
-1. **Mệnh đề hoá (propositionalize):** thay biến bằng mọi hằng có trong mô hình (xoá $\forall$), thay biến tồn tại bằng hằng Skolem mới (xoá $\exists$) — rồi suy luận như logic mệnh đề thường.
-2. **Suy luận trực tiếp trên vị từ:** hợp nhất hoá + suy luận tiến (forward chaining, chỉ áp dụng được cho câu Horn) hoặc **hợp giải phản chứng (resolution-refutation)** sau khi đưa mọi câu về dạng chuẩn CNF.
+---
 
-::: warning Bẫy thi #3 — Mệnh đề hoá sinh câu thừa
-Mệnh đề hoá một cách "ngây thơ" (thay mọi biến bằng mọi hằng) sẽ sinh ra **rất nhiều câu không liên quan** tới truy vấn đang cần (ví dụ nếu có $k$ vị từ, $n$ hằng số, số mệnh đề sinh ra tăng theo cấp số nhân với số biến trong mỗi vị từ). Đây là lý do các hệ suy luận thực tế ưu tiên hợp nhất hoá trực tiếp thay vì mệnh đề hoá toàn bộ.
-:::
+## 14.2 Bốn viên gạch nền tảng của Logic Vị từ Bậc nhất
 
-::: tip Mẹo thi
-Khi đề cho cơ sở tri thức và hỏi "suy ra được gì", hãy tìm phép thế $\theta$ hợp nhất trước — đừng đoán bằng trực giác. Một biến trùng tên ở hai luật khác nhau *phải* được đổi tên (standardize apart) trước khi hợp nhất, nếu không dễ tính sai.
-:::
+Thế giới trong góc nhìn của FOL được kiến tạo từ 4 thành tố cơ bản:
 
-## 14.6 Ontology (Bản thể luận) & Mạng ngữ nghĩa
+| Thành tố | Bản chất hình thức | Ví dụ minh họa |
+|:---|:---|:---|
+| **Hằng số (Constants)** | Định danh một thực thể cụ thể duy nhất trong thế giới bài toán | $\text{Nam}, \text{UET}, \text{AIT2004}, 2$ |
+| **Biến số (Variables)** | Ký hiệu đại diện cho một đối tượng trừu tượng bất kỳ trong miền xác định | $x, y, z$ |
+| **Hàm số (Functions)** | Ánh xạ từ một hoặc nhiều đối tượng sang **một đối tượng khác** có liên hệ mật thiết | $\text{MeCua}(x), \text{LopTruong}(y), \text{GiaTriTuyetDoi}(z)$ |
+| **Vị từ (Predicates)** | Ánh xạ từ một hoặc nhiều đối tượng sang **chân trị $\{\text{True}, \text{False}\}$**, biểu thị thuộc tính hoặc quan hệ | $\text{LaSinhVien}(x), \text{HocMon}(x, y), \text{LonHon}(a, b)$ |
 
-::: tip Ẩn dụ
-Nếu FOL là **từ vựng và ngữ pháp**, thì ontology là **cách sắp xếp cả một thư viện**: quyết định "ngăn nào chứa cái gì" trước khi bắt đầu viết câu. Một bản thể luận bậc trên (upper ontology) giống khung tủ hồ sơ gốc — chưa biết chi tiết bên trong từng ngăn, nhưng đã có sẵn chỗ để nhét kiến thức mới vào mà không phải đập lại cả tủ.
-:::
+Một phát biểu hoàn chỉnh trong FOL được xây dựng từ:
+- **Hạng từ (Term):** Một biểu thức logic trỏ tới một đối tượng (có thể là hằng số, biến số, hoặc hàm số lồng nhau như $\text{MeCua}(\text{Nam})$).
+- **Câu nguyên tố (Atomic Sentence):** Tạo thành khi một vị từ nhận các hạng từ làm tham số, ví dụ $\text{HocMon}(\text{Nam}, \text{AIT2004})$, hoặc biểu thức so sánh bằng giữa hai hạng từ ($t_1 = t_2$).
+- **Câu phức hợp (Complex Sentence):** Kết hợp các câu nguyên tố bằng các liên từ logic quen thuộc: $\neg$ (phủ định), $\land$ (hội), $\lor$ (tuyển), $\implies$ (kéo theo), $\iff$ (tương đương).
 
-### Một bản thể luận bậc trên tự thiết kế
+---
+
+## 14.3 Lượng từ: Bí quyết diễn đạt sự khái quát
+
+Sức mạnh kỳ diệu nhất của FOL nằm ở hai lượng từ toán học:
+
+### 1. Lượng từ với mọi ($\forall$ — Universal Quantifier)
+Phát biểu $\forall x \; P(x)$ khẳng định rằng tính chất $P$ đúng với **mọi đối tượng $x$** nằm trong không gian đang xét.
+
+> **Quy tắc vàng:** Lượng từ $\forall$ hầu như luôn đi kèm với phép kéo theo ($\implies$).
+
+Hãy quan sát sự khác biệt tinh tế nhưng mang tính quyết định:
+- **Cách viết chuẩn mực:**
+  $$
+  \forall x \; \big(\text{SinhVien}(x) \implies \text{ChamChi}(x)\big)
+  $$
+  Ý nghĩa: "Với mọi vật $x$ trong vũ trụ, nếu $x$ là sinh viên thì $x$ chăm chỉ." Nếu $x$ là một chiếc bàn (không phải sinh viên), tiền đề $\text{SinhVien}(x)$ nhận giá trị $\text{False}$, và phép kéo theo $\text{False} \implies \dots$ tự động nhận giá trị $\text{True}$. Câu phát biểu hoàn toàn hợp lý!
+- **Cạm bẫy chết người khi dùng $\land$ với $\forall$:**
+  $$
+  \forall x \; \big(\text{SinhVien}(x) \land \text{ChamChi}(x)\big)
+  $$
+  Câu này có nghĩa là: "Mọi thực thể trên cõi đời này (từ cốc nước, quyển sách đến Mặt Trời) vừa là sinh viên, vừa chăm chỉ!" Đây là một phát biểu hoàn toàn phi lý.
+
+---
+
+### 2. Lượng từ tồn tại ($\exists$ — Existential Quantifier)
+Phát biểu $\exists x \; P(x)$ khẳng định rằng có **ít nhất một đối tượng $x$** thỏa mãn tính chất $P$.
+
+> **Quy tắc vàng:** Lượng từ $\exists$ hầu như luôn đi kèm với phép hội ($\land$).
+
+- **Cách viết chuẩn mực:**
+  $$
+  \exists x \; \big(\text{SinhVien}(x) \land \text{DiemA}(x)\big)
+  $$
+  Ý nghĩa: "Tồn tại một thực thể $x$ sao cho $x$ vừa là sinh viên, vừa đạt điểm A."
+- **Cạm bẫy chết người khi dùng $\implies$ với $\exists$:**
+  $$
+  \exists x \; \big(\text{SinhVien}(x) \implies \text{DiemA}(x)\big)
+  $$
+  Một cách người ta hay dùng để nhận diện câu sai này là: Hãy chọn một vật bất kỳ không phải là sinh viên (ví dụ một quả táo). Vì quả táo không phải là sinh viên, tiền đề $\text{SinhVien}(\text{QuaTao})$ bằng $\text{False}$. Phép kéo theo lập tức nhận giá trị $\text{True}$! Do đó câu khẳng định trên trở thành đúng một cách vô nghĩa trong một thế giới mà không có bất kỳ sinh viên nào đạt điểm A, thậm chí không có bất kỳ sinh viên nào tồn tại!
+
+---
+
+### 3. Trật tự lượng từ: Đảo trật tự, đảo ngược thế giới
+
+Một lỗi tư duy kinh điển là ngộ nhận rằng các lượng từ có thể hoán đổi vị trí tùy tiện.
+
+Xét hai câu logic có vẻ tương đồng:
+1. **Câu A:** $\forall x \; \exists y \; \text{Loves}(x, y)$
+   *Giải nghĩa:* "Với mỗi người $x$, đều tồn tại một người $y$ mà $x$ yêu thương."
+   Nghĩa là: Ai trên đời cũng có một người để yêu thương (mỗi người có thể yêu một đối tượng hoàn toàn khác nhau).
+2. **Câu B:** $\exists y \; \forall x \; \text{Loves}(x, y)$
+   *Giải nghĩa:* "Tồn tại một người $y$ duy nhất sao cho tất cả mọi người $x$ đều yêu thương $y$."
+   Nghĩa là: Có một nhân vật đặc biệt (một vị thánh hoặc thần tượng) được toàn thể nhân loại tôn sùng!
+
+Rõ ràng Câu B đưa ra một đòi hỏi mạnh mẽ hơn Câu A rất nhiều: $\exists y \forall x \implies \forall x \exists y$, nhưng chiều ngược lại hoàn toàn không đúng.
+
+Tuy nhiên, nếu hai lượng từ cùng loại đi liền nhau, ta hoàn toàn có quyền đảo thứ tự tự do:
+$$
+\forall x \forall y \; P(x, y) \iff \forall y \forall x \; P(x, y)
+$$
+$$
+\exists x \exists y \; P(x, y) \iff \exists y \exists x \; P(x, y)
+$$
+
+---
+
+## 14.4 Suy luận trong FOL: Thuật toán Hợp nhất hóa (Unification)
+
+Để rút ra tri thức mới từ các quy tắc đã có, máy tính cần đối khớp các biểu thức logic.
+Ví dụ ta có quy tắc:
+$$
+\forall x \; \big(\text{BietLapTrinh}(x) \implies \text{HocDuocAI}(x)\big)
+$$
+Và ta có sự thật: $\text{BietLapTrinh}(\text{Binh})$.
+Làm thế nào để máy tính tự động suy ra $\text{HocDuocAI}(\text{Binh})$? Nó phải tìm ra một phép thế biến $x$ thành $\text{Binh}$.
+
+### Định nghĩa toán học
+**Phép thế (Substitution $\theta$):** Là một tập hữu hạn các cặp gán biến với hạng từ:
+$$
+\theta = \{v_1 / t_1, v_2 / t_2, \ldots, v_k / t_k\}
+$$
+Ký hiệu $\alpha\theta$ là biểu thức thu được sau khi thay thế đồng thời mọi biến $v_i$ trong $\alpha$ bằng $t_i$.
+
+Thuật toán **Hợp nhất hóa (Unification)** nhận vào hai biểu thức logic $\alpha, \beta$ và tìm ra một phép thế $\theta$ sao cho:
+$$
+\text{Unify}(\alpha, \beta) = \theta \quad \text{thỏa mãn } \alpha\theta = \beta\theta
+$$
+
+### Ví dụ hợp nhất hóa
+Tìm $\text{Unify}\big(\text{DayHoc}(x, \text{UET}), \; \text{DayHoc}(\text{ThayLong}, y)\big)$:
+Phép thế hợp nhất là:
+$$
+\theta = \{x / \text{ThayLong}, \; y / \text{UET}\}
+$$
+Khi áp dụng $\theta$ vào cả hai vế, ta thu được cùng một câu nguyên tố: $\text{DayHoc}(\text{ThayLong}, \text{UET})$.
+
+### Quy tắc chuẩn hóa tên biến (Standardizing Apart)
+Một lưu ý thực hành rất quan trọng: Trước khi hợp nhất hai câu khác nhau, ta bắt buộc phải đổi tên các biến bị trùng lặp.
+Ví dụ: Câu 1 có biến $x$, Câu 2 cũng dùng biến $x$ nhưng trong một phạm vi lượng từ độc lập. Nếu không đổi tên biến $x$ của Câu 2 thành $x_2$, thuật toán có thể rơi vào tình trạng bế tắc khi cố ép $x$ phải nhận hai giá trị mâu thuẫn cùng lúc.
+
+---
+
+## 14.5 Quy tắc Modus Ponens tổng quát (Generalized Modus Ponens - GMP)
+
+Với kỹ thuật hợp nhất hóa, ta nâng cấp luật Modus Ponens cổ điển thành phiên bản tổng quát dành cho các mệnh đề dạng Horn (các câu có dạng $p_1 \land p_2 \land \cdots \land p_n \implies q$):
+
+$$
+\frac{p_1', \; p_2', \; \ldots, \; p_n', \qquad (p_1 \land p_2 \land \cdots \land p_n \implies q)}{q\theta}
+$$
+với điều kiện tồn tại phép thế $\theta$ sao cho $p_i'\theta = p_i\theta$ với mọi $i = 1, \ldots, n$.
+
+GMP là trái tim vận hành của hai cơ chế suy luận nền tảng:
+- **Suy luận tiến (Forward Chaining):** Bắt đầu từ tập các sự thật đã biết trong cơ sở tri thức, kích hoạt các luật có tiền đề thỏa mãn để sinh thêm sự thật mới, lặp lại cho đến khi trả lời được câu hỏi truy vấn. (Thường dùng trong các hệ thống giám sát và suy luận thời gian thực).
+- **Suy luận lùi (Backward Chaining):** Bắt đầu từ câu hỏi truy vấn cần chứng minh, tìm ngược lại các luật có phần kết luận khớp với truy vấn, rồi đệ quy chứng minh các tiền đề của luật đó. Đây chính là cơ chế suy diễn cốt lõi của ngôn ngữ lập trình trí tuệ nhân tạo **Prolog**.
+
+---
+
+## 14.6 Bản thể luận (Ontology) & Đồ thị Tri thức (Knowledge Graphs)
+
+### Bản thể luận là gì?
+
+Nếu Logic vị từ cung cấp cho chúng ta **cú pháp và luật suy luận** (giống như bảng chữ cái và ngữ pháp), thì câu hỏi tiếp theo là: **Làm thế nào để phân loại và tổ chức toàn bộ khái niệm của thế giới thực một cách có hệ thống?**
+
+Khoa học giải quyết bài toán này gọi là **Bản thể luận (Ontology)**.
+Một Ontology định nghĩa:
+- Các lớp khái niệm (Classes/Concepts).
+- Hệ thống phân cấp kế thừa (Taxonomy: quan hệ $\text{is-a}$).
+- Các thuộc tính và quan hệ giữa các lớp.
+- Các ràng buộc tiên đề (Axioms).
 
 ```mermaid
 flowchart TD
-    ANY["Mọi thực thể"]
-    ANY --> ABS["Đối tượng trừu tượng"]
-    ANY --> EVT["Sự kiện"]
-    ANY --> PHYS["Đối tượng vật lý"]
+    Entity["Thực thể vũ trụ (Entity)"]
+    Entity --> Abstract["Khái niệm trừu tượng"]
+    Entity --> Physical["Thực thể vật lý"]
 
-    ABS --> NUM["Con số"]
-    ABS --> SET["Tập hợp"]
+    Abstract --> Number["Con số"]
+    Abstract --> Relation["Quan hệ toán học"]
 
-    PHYS --> LIVING["Vật thể sống"]
-    PHYS --> NONLIVING["Vật thể không sống"]
+    Physical --> Living["Sinh vật sống"]
+    Physical --> NonLiving["Vật thể vô tri"]
 
-    LIVING --> HUMAN["Con người"]
-    LIVING --> ANIMAL["Động vật"]
-    LIVING --> PLANT["Thực vật"]
+    Living --> Human["Con người"]
+    Living --> MachineAI["Tác tử Robot AI"]
 
-    NONLIVING --> SOLID["Chất rắn"]
-    NONLIVING --> LIQUID["Chất lỏng"]
+    Human --> Student["Sinh viên"]
+    Human --> Lecturer["Giảng viên"]
+
+    classDef root fill:#f1f5f9,stroke:#475569,stroke-width:2px;
+    class Entity root;
 ```
 
-Mỗi liên kết nghĩa là "chuyên biệt hoá của" (is-a). Các nhánh **không nhất thiết tách rời** — ví dụ "Robot hình người" có thể vừa thuộc `PHYS` vừa mang thuộc tính hành vi của `HUMAN`.
+### Mạng ngữ nghĩa (Semantic Networks) và Đồ thị tri thức
 
-### Mạng ngữ nghĩa (semantic network)
+Khi các khái niệm và quan hệ được biểu diễn dưới dạng đồ thị có hướng gắn nhãn (Labeled Directed Graph), ta có một **Mạng ngữ nghĩa**:
+- Nút biểu diễn đối tượng hoặc khái niệm.
+- Cạnh có hướng biểu diễn quan hệ (ví dụ: `là_một`, `thuộc_về`, `sáng_lập_bởi`).
 
 ```mermaid
 flowchart LR
-    Long["Long"] -->|là_một| NCS["Nghiên cứu sinh"]
-    NCS -->|là_một| SinhVien["Sinh viên"]
-    Long -->|học_tại| UET["Trường Đại học Công nghệ"]
-    Long -->|nghiên_cứu| CRS["Hệ gợi ý hội thoại (CRS)"]
+    Long["Hoàng Long"] -->|là_một| Researcher["Nghiên cứu sinh"]
+    Researcher -->|kế_thừa| Student["Sinh viên"]
+    Long -->|học_tập_tại| UET["Đại học Công nghệ (UET)"]
+    UET -->|trực_thuộc| VNU["ĐHQGHN"]
+    Long -->|nghiên_cứu| AI["Trí tuệ Nhân tạo"]
 ```
 
-Ưu điểm: trực quan, suy luận kế thừa thuộc tính theo liên kết `là_một` rất nhanh. Nhược điểm hay bị hỏi thi: mạng ngữ nghĩa **không có ngữ nghĩa hình thức chuẩn** cho tới khi được ánh xạ tương đương sang FOL.
+Sức mạnh lớn nhất của mạng ngữ nghĩa là cơ chế **Kế thừa thuộc tính (Property Inheritance)**: Vì `Hoàng Long` là một `Nghiên cứu sinh`, mà `Nghiên cứu sinh` là một `Sinh viên`, nên bất kỳ quy định nào áp dụng cho `Sinh viên` (như có thẻ thư viện, phải đóng học phí) đều tự động áp dụng cho `Hoàng Long` mà không cần phải gán thủ công!
 
-### Logic mô tả (Description Logic)
-
-$$
-\text{SinhVien} \sqsubseteq \text{NguoiHoc} \sqcap \exists\text{hoc}.\text{MonHoc}
-$$
-
-đọc là: "Sinh viên là một Người-học **và** có học ít nhất một Môn học" — tương đương một câu FOL nhưng thiết kế để suy luận (subsumption, phân loại lớp) trong thời gian đa thức, đánh đổi lại **biểu đạt yếu hơn** FOL đầy đủ.
-
-::: warning Bẫy thi #4 — "Ontology càng tổng quát càng tốt"
-Một bản thể luận tổng quát hướng đến nhiều miền, còn bản thể luận chuyên biệt tổ chức tri thức trong một phạm vi đã chọn. Khi so sánh hai cách xây dựng, cần xét khả năng biểu đạt, mức chi tiết, chi phí duy trì và nhu cầu sử dụng. Vì vậy, không nên kết luận bản thể luận tổng quát luôn tốt hơn chỉ vì phạm vi của nó rộng hơn.
-:::
-
-## 14.7 Bảng bẫy thi chương này
-
-| # | Bẫy | Ghi nhớ |
-|---|---|---|
-| 1 | Đảo lượng từ $\exists\forall \leftrightarrow \forall\exists$ | Không tương đương — chỉ $\forall\forall$, $\exists\exists$ được đảo tự do |
-| 2 | Sai liên từ chính | $\forall$ đi với $\Rightarrow$, $\exists$ đi với $\land$ |
-| 3 | Mệnh đề hoá vô tội vạ | Sinh câu thừa không liên quan tới truy vấn |
-| 4 | "Ontology càng tổng quát càng tốt" | Đánh đổi biểu đạt ↔ khả năng suy luận |
-
-## Tài liệu tham khảo
-
-- Russell & Norvig, *AIMA* 4th ed., chương 8 (First-Order Logic) & 10 (Knowledge Representation).
-- Bài giảng gốc AIT2004 — [Bài 14: Logic](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-14-suy-luan-logic-todo.html), [Bổ sung 1: Khái niệm về logic](https://courses.iaidev.com/ai-foundations/2627-1/lecture-extra-01-propositional-logic.html), [Bổ sung 2: Logic vị từ](https://courses.iaidev.com/ai-foundations/2627-1/lecture-extra-02-predicate-logic.html).
-- Stanford CS221 — ghi chú về Logic (Percy Liang), tham khảo thêm cách trình bày song song với FOL.
+### Logic mô tả (Description Logic - DL) và Chuẩn Web Ngữ nghĩa (OWL)
+Trong các hệ thống hiện đại của World Wide Web Consortium (W3C), tri thức được biểu diễn bằng **Logic mô tả (Description Logic)** thông qua chuẩn OWL (Web Ontology Language).
+DL lược bỏ bớt một số tính năng tự do của FOL đầy đủ để giữ cho thời gian suy luận (phân loại lớp, kiểm tra tính tương thích) luôn nằm trong giới hạn đa thức, cho phép xây dựng các đồ thị tri thức quy mô khổng lồ như **Google Knowledge Graph** hay **Wikidata** với hàng tỷ thực thể và hàng chục tỷ mối quan hệ.
 
 ---
-← [Chương 4](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 16 →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)
+
+## 14.7 Ứng dụng thực tế của Biểu diễn Tri thức và Logic
+
+- **Hệ chuyên gia Y tế (Clinical Decision Support):** Chuẩn đoán bệnh và tương tác thuốc dựa trên hàng chục nghìn luật suy luận lâm sàng chuẩn y khoa.
+- **Đồ thị tri thức công cụ tìm kiếm (Google Knowledge Graph):** Khi bạn tìm kiếm một danh nhân hay bộ phim, chiếc hộp thông tin xuất hiện bên phải màn hình chính là kết quả của việc liên kết các thực thể trong Ontology.
+- **Kiểm chứng hình thức phần cứng và phần mềm (Formal Verification):** Chứng minh toán học rằng một con chip xử lý hoặc một đoạn mã hợp đồng thông minh (Smart Contract) không có lỗi bảo mật trước khi sản xuất hàng loạt.
+- **Hệ thống tư vấn pháp luật tự động:** Mô hình hóa các điều luật, quy định hành chính thành các luật vị từ để tự động kiểm tra tính hợp pháp của các hồ sơ kinh doanh.
+
+---
+
+[← Quay lại Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 16: Mạng Bayes & suy luận →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)

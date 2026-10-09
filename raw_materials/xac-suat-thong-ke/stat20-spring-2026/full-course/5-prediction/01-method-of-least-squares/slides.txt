@@ -1,0 +1,55 @@
+Method of Least Squares
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Concept Activity - Linear Models Review
+
+Head to pollev.com!
+
+Which of the following tasks are regression tasks?
+
+A. Amazon sets a price for its books which is dependent on the books’ weight and whether the books are hardback or paperback.
+
+B. A Waymo engineer is working on a model to determine whether a self-driving car is seeing a real car or a reflection of a car.
+
+C. The Weather Channel predicts tomorrow’s temperature based on historical data, tomorrow’s expected weather conditions and yesterday’s temperature.
+
+D. The UCB Admissions office has to predict whether a student will accept its admission offer or not based on the student’s high school and her intended major.
+
+  
+    −
+    +
+
+ 01:00
+
+Concept Question 3
+
+Here is a function f.
+
+f <- function(x, y) {
+  y*(x + 3) 
+}
+
+What will the following line of code return?
+
+f(3,5)
+
+This question reminds students that if function arguments are unnamed, they are assumed to have been input in the order they were originally specified as in the function definition. x will be assigned 3, and y will be assigned 5, so the correct answer is 30.
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+PS: Method of Least Squares
+
+  
+    −
+    +
+
+ 40:00

@@ -1,5 +1,5 @@
-import { readMarkdownIncludes } from './read-markdown-includes.mjs'
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises'
+import { readMarkdownIncludes } from './read-markdown-includes.mjs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { courseCatalog } from '../docs/.vitepress/course-catalog.mjs'

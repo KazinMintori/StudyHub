@@ -1,0 +1,748 @@
+<!DOCTYPE html><html lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html">
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>A Grammar of Graphics – this course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../2-summarizing-data/04-conditioning/notes.html" rel="next">
+<link href="../../2-summarizing-data/02-summarizing-numerical-data/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="A Grammar of Graphics – Stat 20">
+<meta property="og:description" content="A unified framework for constructing statistical graphics.">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/penguin-plot.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="826">
+<meta property="og:image:width" content="1144">
+<meta name="twitter:title" content="A Grammar of Graphics – Stat 20">
+<meta name="twitter:description" content="A unified framework for constructing statistical graphics.">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/images/penguin-plot.png">
+<meta name="twitter:image-height" content="826">
+<meta name="twitter:image-width" content="1144">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html { color-scheme: light; scroll-behavior: auto; }
+body { margin: 0; background: white; color: #202124; }
+#quarto-content, #quarto-document-content { display: block !important; width: auto !important; max-width: 900px !important; margin: 0 auto !important; padding: 20px 24px !important; }
+#quarto-document-content > * { grid-column: auto !important; }
+.column-margin, .margin-caption { position: static !important; width: auto !important; max-width: 100% !important; }
+.quarto-title .title { display: block !important; }
+img, svg { max-width: 100%; }
+pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflow-x: auto; }
+.studyhub-source-reference { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 16px; font-size: 14px; }
+@media(max-width:600px) { #quarto-document-content { padding: 16px !important; } body { font-size: 16px; } }
+</style></head><body><main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">A Grammar of Graphics</h1>
+<p class="subtitle lead">A unified framework for constructing statistical graphics.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="dropcap">I</span>n the last set of notes, we saw that there is a side to the discipline of Statistics that looks like engineering. Summary statistics - medians, standard deviations, etc. - are carefully crafted tools that capture different characteristics of a data set for use in very specific situations. There is another practice in statistics that looks more like a science; that is, a field that seeks to take many different phenomena and explain them using a systematic overarching theory. That practice is data visualization.</p>
+<p>At this point in the course, you’ve seen several several examples of data visualizations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/plot-collage.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>The diversity of shapes and structures used in these plots suggest that each one is a thing-unto-itself, specially devised to provide one particular style of visualization. But what elements do they share?</p>
+<p>Focus on the nature of the data being used. Exactly half of the plots above are illustrating the distribution of a single variable; the other half illustrate the relation between two variables. Can you tell which is which?</p>
+<p>Consider the manner in which variability in the data is being conveyed used different visual cues. How many of the plots above utilize an x-axis? A y-axis? Color?</p>
+<p>Finally, how are the observations finding their way onto the plot? Three of the plots above share the same data variable, utilize the same visual cues, and differ only in the shape used to encode the observations.</p>
+<p>By asking these questions, we begin to find recurring structures in a wide range of plot types. These recurring structures have been compiled into a widely-used framework called the Grammar of Graphics.</p>
+<section id="the-grammar-of-graphics" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-grammar-of-graphics">The Grammar of Graphics</h2>
+<p>In 1999, a statistician named Leland Wilkinson published the first edition of what has been the most influential work in data visualization, <em>The Grammar of Graphics</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The title is fitting. In the same way that a grammar defines the regular structures and composition of a language, his book outlines a framework to structure statistical graphics.</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><img src="images/grammar-of-graphics.png" class="img-fluid"></div></div>
+<p>Nearly every current software tool used to build plots has been informed by this book<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Its influence can be found in Tableau, Plotly, and the Python libraries bokeh, altair, seaborn, and plotnine. The most complete implementation of the grammar is found in an R package called ggplot2 by Hadley Wickham<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>In Wickham’s adaptation of the grammar of graphics, a plot can be decomposed into three primary elements:</p>
+<ol type="1">
+<li>the <strong>data</strong>,</li>
+<li>the <strong>aesthetic mapping</strong> of the variables in the data to visual cues, and</li>
+<li>the <strong>geometry</strong> used to encode the observations on the plot.</li>
+</ol>
+<p>Let’s go through each of these components one-by-one to understand the role that they play in a plot like this, which we’ll refer to as the “penguin plot”.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="499"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The above plot is an example new type of plot which involves <em>two</em> numerical variables: a scatter plot. The points may also be colored by a third variable, generally a categorical one.</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>What variables are needed to construct the penguin plot above?</p>
+<p>We see <code>bill_length_mm</code> and <code>bill_depth_mm</code>; those are labeled clearly on the x and y axes. We must also know the <code>species</code> of each of these penguins in order to know which color to label each point. In other words, there are three columns of a data frame that we need to have on hand.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 333 × 3
+   bill_length_mm bill_depth_mm species
+            &lt;dbl&gt;         &lt;dbl&gt; &lt;fct&gt;  
+ 1           39.1          18.7 Adelie 
+ 2           39.5          17.4 Adelie 
+ 3           40.3          18   Adelie 
+ 4           36.7          19.3 Adelie 
+ 5           39.3          20.6 Adelie 
+ 6           38.9          17.8 Adelie 
+ 7           39.2          19.6 Adelie 
+ 8           41.1          17.6 Adelie 
+ 9           38.6          21.2 Adelie 
+10           34.6          21.1 Adelie 
+# ℹ 323 more rows</code></pre>
+</div>
+</div>
+<p>Through working on your assignments, you may have also seen the following plot, which is a variant of the “penguin plot”:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="499"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In this course we’ve talked plenty about the structure of a data frame, so this part of the grammar of graphics is straight-forward. Be sure that every variable that you wish to include in your plot is present in the same data frame.</p>
+<!-- But maintain some skepticism about the data that you intend to use. In the data frame above, we see that some of the values are listed as `NA`, meaning that they're missing ("NA" stands for "not applicable" or "no answer"). Why are they missing? How will this affect your plot? Real data is often riddled with errors, typos, or other unexpected features, so be sure to check your data[^datacheck]. -->
+<p>More fundamentally, be sure the data you’re using is well-suited to the message you aim to convey with your plot. Many plots go wrong right here at the outset, so be sure you’re on firm footing.</p>
+</section>
+<section id="aesthetics" class="level3">
+<h3 class="anchored" data-anchor-id="aesthetics">Aesthetics</h3>
+<p>The most impactful decision that you’ll make when constructing a plot using the grammar of graphics is deciding how to encode variables in a data frame into visual variation in your plot.</p>
+<p>The penguin plot relies upon three forms of visual variation. The first is the location along the x-axis. Penguins with longer bills are placed on the right side of the plot and those with shorter bills are placed on the left. Variation in bill depth is captured by variation in the location along the y-axis, which is the second form. The third form is color: each of the three species is designated by one of three colors.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mapping.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>We can summarize this encoding, or “aesthetic mapping”, as:</p>
+<ul>
+<li><code>bill_length_mm</code> is mapped to the x-axis</li>
+<li><code>bill_depth_mm</code> is mapped to the y-axis</li>
+<li><code>species</code> is mapped to color</li>
+</ul>
+<p>These are three of many different techniques for visually encoding variability. Here is a list of the aesthetic attributes that are most commonly used:</p>
+<ul>
+<li><code>x</code>: location along the x-axis</li>
+<li><code>y</code>: location along the y-axis</li>
+<li><code>color</code>: hue of the mark that represents the observation</li>
+<li><code>alpha</code>: the level of transparency of the color</li>
+<li><code>size</code>: the size of the mark representing the observation</li>
+<li><code>shape</code>: the shape of the mark representing the observation</li>
+<li><code>fill</code>: the color of the inside of the representation of an observation</li>
+</ul>
+</section>
+<section id="geometries" class="level3">
+<h3 class="anchored" data-anchor-id="geometries">Geometries</h3>
+<p>With the data set in place and the aesthetic mappings selected, the final choice in making our plot is to decide how to graphically express the observations themselves. For the penguin plot above, each observation in represented by a point, so it is said to use a “point” geometry. That is just one of many options. Other options are listed below.</p>
+<ul>
+<li><code>point</code></li>
+<li><code>bar</code></li>
+<li><code>line</code></li>
+<li><code>histogram</code></li>
+<li><code>density</code></li>
+<li><code>violin</code></li>
+<li><code>dotplot</code></li>
+<li><code>boxplot</code></li>
+</ul>
+<p>When we speak about whether a plot is a scatter plot, a bar chart, a histogram, etc, we are discussing the geometry of a plot. The impact of this choice can be seen in the following two plots.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Both plots share the same data (<code>penguins</code>) and the same aesthetic mappings(<code>bill_length</code> to the x-axis and <code>species</code> to the y-axis). Where they differ is the geometry: the plot on the left uses the violin while the one on the right uses the boxplot.</p>
+</section>
+<section id="example-births-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="example-births-over-time">Example: Births over Time</h3>
+<p>The following plot displays the total number of births over time recorded in London, England during the 17<sup>th</sup> century.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It was constructed from a data frame with 82 rows, the first six of which are shown below.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   year total
+  &lt;int&gt; &lt;int&gt;
+1  1629  9901
+2  1630  9315
+3  1631  8524
+4  1632  9584
+5  1633  9997
+6  1634  9855</code></pre>
+</div>
+</div>
+<p>We can decompose this graphic using the grammar of graphics.</p>
+<ul>
+<li><em>data</em>: the data frame displayed above</li>
+<li><em>aesthetic mappings</em>: year is mapped to the x-axis, total is mapped to the y-axis</li>
+<li><em>geometry</em>: the observations are expressed as a line</li>
+</ul>
+<p>This process makes clear what decisions were made in constructing the plot and suggests ways in which we might consider changing the graphic. What if we changed the geometry so that the observations are expressed as points?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Is this a better graphic? That depends on the message you aim to convey. The line geometry emphasizes the general trend over time. The point geometry makes clearer the total births in each particular year.</p>
+<p>What if you wanted to convey both of those messages? If two geometries are compatible, they can be combined.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Is this a better graphic? Again, that depends. It makes it possible to see both the trend over time and the individual observations. But this plot is more complicated and therefore articulates each of those individual messages less clearly. Sometimes simplicity and a single message is best.</p>
+<p>Here’s another example of a plot that combines two geometries:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/income-dist.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<p>Here, a density geometry is overlaid on top of a histogram geometry. It is unclear whether this was a good design decision. What do you think? What is the advantage of a stair-step histogram versus the smooth line of a density curve?</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>The Grammar of Graphics is a framework to express a great variety of statistical graphics in terms of their shared elements. In this framework, the core features of the plot are the data, the aesthetic mapping between aesthetic attributions and variables in the data frame, and the geometry that is used to express the observation. There are a wide range of geometries and aesthetic attributes that can be drawn from and recombined in powerful ways. What we have done so far is cover just the fundamentals of the framework, so if you are unsatisfied with the resulting plots, that’s good. Now, we will polish up these plots to make thoughtful graphics that focus on effectively conveying a single message.</p>
+<p><a href="../../2-summarizing-data/03-a-grammar-of-graphics/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Wilkinson, Leland. <em>The grammar of graphics</em>. Springer Science &amp; Business Media, 2005.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For more context around The Grammar of Graphics and the development of modern visualization tools, read the brief <em>Three Waves of Data Visualization</em> by Elijah Meeks, Senior Data Visualization Engineer at Netflix: <a href="https://www.tableau.com/about/blog/2019/2/three-waves-data-visualization-brief-history-and-predictions-future-100830" class="uri">https://www.tableau.com/about/blog/2019/2/three-waves-data-visualization-brief-history-and-predictions-future-100830</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The <code>ggplot2</code> package is described in the manuscript, <a href="https://vita.had.co.nz/papers/layered-grammar.pdf"><em>A layered grammar of graphics</em></a>, by Hadley Wickham in the Journal of Computational and Graphical Statistics in 2010.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></main><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><script>
+(() => {
+  const entries = {"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html":{"id":"1-questions-and-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html":{"id":"2-summarizing-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html":{"id":"2-summarizing-data--04-conditioning","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html":{"id":"2-summarizing-data--04-conditioning","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html":{"id":"3-generalization","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html":{"id":"3-generalization--01-prob-foundations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html":{"id":"3-generalization--01-prob-foundations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html":{"id":"3-generalization--02-computing-probs","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html":{"id":"3-generalization--02-computing-probs","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html":{"id":"3-generalization--03-probability-dsns","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html":{"id":"3-generalization--03-probability-dsns","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html":{"id":"3-generalization--04-random-variables","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html":{"id":"3-generalization--04-random-variables","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html":{"id":"3-generalization--05-ev-se","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html":{"id":"3-generalization--05-ev-se","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html":{"id":"3-generalization--06-normal-approx","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html":{"id":"3-generalization--06-normal-approx","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html":{"id":"3-generalization--08-confidence-intervals","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html":{"id":"3-generalization--08-confidence-intervals","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html":{"id":"3-generalization--09-bootstrapping","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html":{"id":"3-generalization--09-bootstrapping","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html":{"id":"3-generalization--10-hypothesis-tests","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html":{"id":"3-generalization--10-hypothesis-tests","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html":{"id":"3-generalization--12-wrong-by-design","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html":{"id":"3-generalization--12-wrong-by-design","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/notes.html":{"id":"4-causation","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html":{"id":"4-causation--01-defining-causality","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html":{"id":"4-causation--01-defining-causality","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html":{"id":"4-causation--02-experiments","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html":{"id":"4-causation--02-experiments","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html":{"id":"4-causation--03-matching","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html":{"id":"4-causation--03-matching","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html":{"id":"5-prediction--01-method-of-least-squares","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html":{"id":"5-prediction--01-method-of-least-squares","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html":{"id":"5-prediction--02-improving-predictions","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html":{"id":"5-prediction--02-improving-predictions","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html":{"id":"5-prediction--03-overfitting","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html":{"id":"5-prediction--03-overfitting","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html":{"id":"5-prediction--05-logistic-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html":{"id":"5-prediction--05-logistic-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html":{"id":"quiz","kind":"slides"}};
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) return;
+    const raw = anchor.getAttribute('href');
+    if (raw.startsWith('#')) {
+      const target = document.getElementById(decodeURIComponent(raw.slice(1)));
+      if (target) { event.preventDefault(); target.scrollIntoView(); }
+      return;
+    }
+    const url = new URL(anchor.href, document.baseURI);
+    const key = url.origin + url.pathname;
+    if (entries[key]) { event.preventDefault(); parent.postMessage({type:'studyhub-source-navigation', ...entries[key]}, '*'); }
+    else { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+  }, true);
+})();</script></body></html>

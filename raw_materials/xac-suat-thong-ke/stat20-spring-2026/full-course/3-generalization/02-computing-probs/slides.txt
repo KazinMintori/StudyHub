@@ -1,0 +1,79 @@
+Computing Probabilities
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Suppose we draw 2 tickets at random without replacement from a box with tickets marked {1, 2, 3, . . . , 9}. Let 
+[MATH] \(A\) be the event that at least one of the tickets drawn is labeled with an even number, let 
+[MATH] \(B\) be the event that at least one of the tickets drawn is labeled with a prime number (recall that the number 1 is not regarded as a prime number). Suppose the numbers on the tickets drawn are 3 and 9.
+
+Which of the following events occur?
+
+[MATH] \(A\)
+
+[MATH] \(B\)
+
+[MATH] \(A\) and 
+[MATH] \(B\) (
+[MATH] \(= A \cap B\))
+
+[MATH] \(A\) and 
+[MATH] \(B^c\) (
+[MATH] \(= A \cap B^c\))
+
+[MATH] \(A^c\) and 
+[MATH] \(B\) (
+[MATH] \(= A^c \cap B\))
+
+ii and v, I told them they can immediately see that A^C is true since no even number, so definitely (v) and then we do have a prime number and both are odd so (ii) is true.
+
+You could give other events for practice such as 2 and 9, or 4 and 9 etc.
+
+−+
+04:00
+
+−+
+01:00
+
+The 2025 World Series was the championship series was a best-of-seven playoff between the Los Angeles Dodgers and the Toronto Blue Jays. The winners in the World Series have to win a majority of 7 games, so the first team to win 4 games wins the series. Before the series began, the estimated probability that the Dodgers would have beaten the Blue Jays in any single game was 
+[MATH] \(\frac{2}{3\), independently of all the other games.
+
+What was the probability that the Dodgers would have won in a clean sweep?
+
+It was the Dodgers’ first World Series appearance and win since 2020, and the Yankees’ first World Series appearance since 2009. Straightforward application of multiplication rule for independent events. probability is 0.56^4 = 0.098. You could even ask more or less than 10%?
+
+You may have to explain Clean sweep means that they won in the first 4 games - which didn’t happen, they won in 5 games.
+
+Follow up comment/question: if the teams were more evenly matched, say probability of either team winning is 50%, the probability of going to 7 games and probability of winning in 6 games is equal given 5 games are played.
+
+Concept Question 3
+
+−+
+01:00
+
+Flip 3 coins, one at a time. Define the following events:
+
+[MATH] \(A\) is the event that the first coin flipped shows a head
+
+[MATH] \(B\) is the event that the first two coins flipped both show heads
+
+Are the events 
+[MATH] \(A\) and 
+[MATH] \(B\) independent, mutually exclusive or neither?
+
+After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A and B
+
+A and B are neither independent nor mutually exclusive.
+
+Break
+
+−+
+03:00
+
+Problem Set: Computing Probabilities
+
+−+
+25:00
+
+Then review the PS

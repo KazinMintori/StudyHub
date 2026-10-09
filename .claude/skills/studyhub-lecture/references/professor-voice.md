@@ -106,3 +106,17 @@ Người dùng của site đã chỉ ra bốn đặc điểm làm lời giảng 
 4. **Dấu chấm phẩy thay cho từ nối.** "cho f = 1/4; phân phối thứ hai có…" sửa thành "cho f = 1/4, còn phân phối thứ hai có…". Tiếng Việt có rất nhiều từ nối (vì, nên, nhưng, còn, khi đó, chẳng hạn, ngược lại, nhờ đó). Một đoạn năm câu không có từ nối nào thường là danh sách khẳng định, chưa phải lời giải thích.
 
 `review_teaching_text.py` đánh dấu các vị trí tương ứng bằng `AI_LEXICON`, `EVALUATIVE_PHRASE`, `QUESTION_TEMPLATE`, `REPEATED_OPENER`, `CHOPPY_RUN`, `ARROW_IN_PROSE`, `PROSE_SEMICOLON` và `LOW_CONNECTIVES`. Truyền cả chương một lượt, vì khuôn lặp giữa các trang không thấy được khi rà từng trang. Mục tiêu là lời giải thích tốt hơn, không phải né công cụ: đừng thay một khuôn bằng một khuôn mới, đừng đổi sang từ hiếm hay câu vụn để "giống người".
+
+## Chủ quyền bài giảng: Bài giảng của bạn, không phải bản dịch sách
+
+Một bài giảng đại học xuất sắc phải có tư cách độc lập và chính danh của người giảng dạy. Sinh viên đến để nghe bạn giảng giải và khai sáng tư duy, không phải để đọc một cuốn sổ ghi chép hay một bản dịch đối chiếu cơ học.
+
+1. **Tuyệt đối không biến bài giảng thành nơi trích dẫn hay dịch sách thụ động:**
+   - Xóa bỏ hoàn toàn và cấm các lối diễn đạt: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“câu hỏi mở chương của sách”*, *“đề bài trong sách”*, *“đáp án của sách”*, *“sách dùng…”*, *“theo sách…”*, *“nguyên tác…”*, *“tiến độ bản dịch”*, *“bản dịch của…”*, *“nguồn của bản dịch”*.
+   - Mọi tư liệu, hình ảnh, bài tập, ví dụ phải trở thành một phần máu thịt của bài giảng: *“Quan sát Hình 1.1, ta thấy…”*, *“Xét bài toán thực tế sau:…”*, *“Một thí nghiệm kinh điển giúp ta kiểm chứng điều này là…”*.
+
+2. **Văn phong của một giáo sư và nhà ngôn ngữ tiếng Việt đại tài:**
+   - **Chuẩn xác và giàu hình tượng**: Dùng từ ngữ tiếng Việt giàu sức biểu đạt học thuật, gãy gọn, trong sáng. Không “giả trân”, không dùng văn phong AI hoa mỹ sáo rỗng.
+   - **Lồng ghép mẹo tư duy tự nhiên**: Đừng đóng khung máy móc thành nhãn *“Mẹo thú vị:”*. Hãy dẫn dắt mượt mà như lời tâm đắc của một bậc thầy: *“Một cách người ta hay dùng để kiểm tra nhanh kết quả này là…”*, *“Kinh nghiệm cho thấy, để không bao giờ nhầm lẫn ở bước này…”*, *“Một mẹo trực quan giúp ta hình dung ngay…”*.
+   - **Gắn liền với đời sống thực tế**: Lý thuyết không nằm im trên trang giấy hay những dòng code trừu tượng. Luôn liên hệ công thức và giải thuật với các ứng dụng thực tế sinh động trong đời sống (trong Trí tuệ Nhân tạo: từ xe tự hành, thuật toán dẫn đường bản đồ Google Maps, công cụ tìm kiếm web, hệ thống gợi ý thương mại điện tử, engine chơi cờ đến chẩn đoán y khoa và suy luận tự động; trong Khoa học Tự nhiên: từ cảm biến điện thoại, công nghệ GPS, hệ thống phanh xe đến các hiện tượng vật lý).
+   - **Đào sâu bản chất và mở bước khó**: Trả lời thấu đáo câu hỏi *“Tại sao thuật toán/công thức này lại ra đời?”*, *“Nếu bỏ điều kiện này thì điều gì sẽ sụp đổ?”*, giải thích cặn kẽ những bước chuyển biến tư duy hay tính toán mà người mới nhập môn thường lúng túng.

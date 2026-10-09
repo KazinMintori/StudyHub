@@ -24,6 +24,33 @@
 .field-canvas .charge-positive { fill: var(--tim); }
 .field-canvas .charge-negative { fill: var(--ink-2); }
 .field-canvas text { fill: var(--paper); font-family: var(--font-ui); }
+.field-preset, .charge-editor label { display: grid; gap: var(--space-2); font-size: var(--fs-small); }
+.field-display-options { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); font-size: var(--fs-small); }
+.field-display-options label { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; cursor: pointer; }
+.field-display-options input { width: 20px; height: 20px; accent-color: var(--tim); }
+.field-simulation select { min-height: 44px; max-width: 100%; border: 1px solid var(--control); border-radius: var(--radius); padding: var(--space-2); color: var(--ink); background: var(--paper); }
+.field-lines { fill: none; stroke: var(--tim); stroke-width: 1.2; pointer-events: none; }
+.field-lines > path:not(.field-flow) { opacity: .35; }
+.field-lines .field-flow { stroke-width: 2.5; stroke-dasharray: 4 24; animation: field-direction 1.4s linear infinite; }
+@keyframes field-direction { to { stroke-dashoffset: -28; } }
+.field-charge { cursor: grab; touch-action: none; user-select: none; }
+.field-charge:active { cursor: grabbing; }
+.field-canvas .charge-hit { fill: transparent; }
+.field-canvas .charge-selection { fill: none; stroke: var(--tim); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.field-canvas .field-empty { fill: var(--ink-2); font-size: 24px; }
+.charge-editor { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: var(--space-4); align-items: end; margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
+.charge-editor input { width: 100%; min-height: 44px; accent-color: var(--tim); }
+.field-simulation :is(button, select, input):focus-visible { outline: 3px solid var(--tim); outline-offset: 3px; }
+@media (max-width: 767px) {
+  .charge-editor { grid-template-columns: 1fr; }
+  .field-preset { width: 100%; }
+  .field-arrows > g:nth-child(even) { display: none; }
+  .field-canvas :is(.charge-positive, .charge-negative) { r: 24px; }
+  .field-canvas .charge-selection { r: 29px; }
+  .field-canvas .charge-hit { r: 49px; }
+  .field-charge text { font-size: 34px; transform: translateY(3px); }
+}
+@media (prefers-reduced-motion: reduce) { .field-lines .field-flow { animation: none; } }
 .charge-list { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
 .simulation-caption { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--rule); }
 .simulation-caption h3 { font-size: var(--fs-h3); font-weight: 600; }

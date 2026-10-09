@@ -1,242 +1,221 @@
-<!-- Nguồn: mục 2.3, trang in 40–44, trang PDF 60–64; công thức 2.4–2.6, Ví dụ 2.2–2.3, Hình 2.10–2.14, Bảng 2.3–2.4, câu hỏi và đáp án. -->
-
 ## 2.3. Gia tốc trung bình và gia tốc tức thời
 
-Vận tốc mô tả vị trí thay đổi theo thời gian, còn **gia tốc** mô tả vận tốc thay đổi theo thời gian. Gia tốc cũng là vector. Trong chuyển động thẳng, thành phần khác không của nó chỉ theo đường ấy. Trong đời thường, “có gia tốc” thường được hiểu là nhanh dần. Trong vật lý, nó bao gồm mọi biến thiên vận tốc: vật nhanh dần hoặc chậm dần đều có gia tốc.
+Nếu vận tốc mô tả tốc độ thay đổi của tọa độ vị trí theo thời gian, thì **gia tốc** (*acceleration*) mô tả tốc độ thay đổi của chính vận tốc theo thời gian.
 
-### Gia tốc trung bình
+Trong ngôn ngữ giao tiếp hằng ngày, người ta thường dùng từ "gia tốc" hay "tăng tốc" với hàm ý chuyển động nhanh dần lên, còn khi xe hãm phanh thì gọi là "giảm tốc". Nhưng trong cơ học vật lý chuẩn tắc, khái niệm **gia tốc** bao trùm mọi sự biến thiên của vector vận tốc: dù vật chạy nhanh lên, chạy chậm lại, hay đổi hướng chuyển động, vật thể đó đều đang có gia tốc!
 
-Xét chất điểm trên trục $x$. Tại $t_1$, nó ở $P_1$ và có thành phần vận tốc tức thời $v_{1x}$. Tại $t_2$ muộn hơn, nó ở $P_2$ và có $v_{2x}$. Độ biến thiên vận tốc là $\Delta v_x=v_{2x}-v_{1x}$ trong khoảng $\Delta t=t_2-t_1$.
+---
 
-**Gia tốc trung bình** là vector có thành phần $x$, ký hiệu $a_{\mathrm{av}-x}$, bằng độ biến thiên vận tốc chia thời gian:
+### Gia tốc trung bình (Average Acceleration)
 
-$$a_{\mathrm{av}-x}=\frac{\Delta v_x}{\Delta t}
-=\frac{v_{2x}-v_{1x}}{t_2-t_1}.\tag{2.4}$$
+Xét một chất điểm chuyển động dọc theo trục $Ox$. Tại thời điểm $t_1$, chất điểm có vận tốc tức thời $v_{1x}$; tại thời điểm $t_2$, vận tốc biến thiên thành $v_{2x}$. Độ biến thiên vận tốc là $\Delta v_x = v_{2x} - v_{1x}$ trong khoảng thời gian $\Delta t = t_2 - t_1$.
 
-Trong chuyển động thẳng theo $x$, thường gọi ngắn đây là gia tốc trung bình. Chương 3 sẽ xét các thành phần khác. Nếu vận tốc bằng mét trên giây và thời gian bằng giây, gia tốc có đơn vị mét trên giây mỗi giây, viết $\mathrm{m/s^2}$ và đọc là mét trên giây bình phương.
+Thành phần **gia tốc trung bình** trên đoạn thời gian đó được định nghĩa là:
 
-::: warning Không lẫn vận tốc với gia tốc
-Vận tốc mô tả vị trí biến thiên, cho biết nhanh chậm và hướng chuyển động. Gia tốc mô tả vận tốc biến thiên, cho biết tốc độ và hướng thay đổi thế nào. Một điểm khác là ta có thể cảm nhận gia tốc nhưng không trực tiếp cảm nhận vận tốc không đổi. Ngồi trong xe gia tốc về trước và nhanh dần, bạn cảm thấy bị đẩy ra sau ghế. Khi xe có gia tốc về sau và chậm dần, bạn cảm thấy bị đẩy về trước. Nếu vận tốc giữ nguyên, không có gia tốc, bạn không có các cảm giác ấy. Chương 4 sẽ giải thích.
+$$a_{\mathrm{av}-x} = \frac{\Delta v_x}{\Delta t} = \frac{v_{2x} - v_{1x}}{t_2 - t_1}.\tag{2.4}$$
+
+Nếu vận tốc tính bằng mét trên giây ($\mathrm{m/s}$) và thời gian tính bằng giây ($\mathrm s$), đơn vị của gia tốc là mét trên giây chia cho giây, tức **mét trên giây bình phương** ($\mathrm{m/s^2}$). Ý nghĩa vật lý của đơn vị này rất trực quan: một gia tốc $2\,\mathrm{m/s^2}$ nghĩa là cứ sau mỗi giây trôi qua, vận tốc của vật lại tăng thêm $2\,\mathrm{m/s}$.
+
+::: warning Cảm nhận sinh lý học về gia tốc và vận tốc
+Hệ tiền đình của cơ thể con người không thể trực tiếp cảm nhận vận tốc không đổi, nhưng lại cực kỳ nhạy cảm với gia tốc! Khi bạn ngồi trên một chiếc máy bay phản lực đang bay bằng đều đặn ở tốc độ $900\,\mathrm{km/h}$, bạn cảm thấy êm ái y như đang ngồi trong phòng khách. Nhưng khi máy bay bắt đầu gầm rú lấy đà cất cánh trên đường băng (gia tốc hướng về phía trước), lưng bạn bị ép chặt vào thành ghế; và khi máy bay phanh gấp lúc hạ cánh, dây an toàn ghì chặt ngực bạn về phía trước. Gia tốc chính là đại lượng gắn liền trực tiếp với lực quán tính tác dụng lên cơ thể.
 :::
+
+---
 
 ### Ví dụ 2.2 — Gia tốc trung bình
 
-::: exercise Đề bài trong sách
-Một phi hành gia rời tàu trên quỹ đạo để thử thiết bị cơ động cá nhân mới. Người ấy chuyển động trên đường thẳng; đồng đội trên tàu đo vận tốc mỗi $2.0\,\mathrm s$, bắt đầu ở $t=1.0\,\mathrm s$:
+::: exercise Bài toán
+Một phi hành gia rời khoang tàu con thoi để thử nghiệm thiết bị đẩy cơ động cá nhân (MMU) trong không gian. Người ấy di chuyển trên một đường thẳng; hệ thống radar trên tàu mẹ đo thành phần vận tốc $v_x$ của phi hành gia sau mỗi $2.0\,\mathrm s$:
 
-| Thời gian, s | Vận tốc x, m/s | Thời gian, s | Vận tốc x, m/s |
-| --- | --- | --- | --- |
-| $1.0$ | $0.8$ | $9.0$ | $-0.4$ |
-| $3.0$ | $1.2$ | $11.0$ | $-1.0$ |
-| $5.0$ | $1.6$ | $13.0$ | $-1.6$ |
-| $7.0$ | $1.2$ | $15.0$ | $-0.8$ |
+| Thời điểm $t$ ($\mathrm s$) | Vận tốc $v_x$ ($\mathrm{m/s}$) | Thời điểm $t$ ($\mathrm s$) | Vận tốc $v_x$ ($\mathrm{m/s}$) |
+| :--- | :--- | :--- | :--- |
+| $1.0$ | $+0.8$ | $9.0$ | $-0.4$ |
+| $3.0$ | $+1.2$ | $11.0$ | $-1.0$ |
+| $5.0$ | $+1.6$ | $13.0$ | $-1.6$ |
+| $7.0$ | $+1.2$ | $15.0$ | $-0.8$ |
 
-Tìm gia tốc trung bình và cho biết tốc độ tăng hay giảm trên các khoảng: **(a)** $1.0$–$3.0\,\mathrm s$; **(b)** $5.0$–$7.0\,\mathrm s$; **(c)** $9.0$–$11.0\,\mathrm s$; **(d)** $13.0$–$15.0\,\mathrm s$.
+Hãy xác định gia tốc trung bình và cho biết tốc độ của phi hành gia đang tăng hay giảm trên từng khoảng thời gian sau:  
+**(a)** Từ $1.0\,\mathrm s$ đến $3.0\,\mathrm s$;  
+**(b)** Từ $5.0\,\mathrm s$ đến $7.0\,\mathrm s$;  
+**(c)** Từ $9.0\,\mathrm s$ đến $11.0\,\mathrm s$;  
+**(d)** Từ $13.0\,\mathrm s$ đến $15.0\,\mathrm s$.
 :::
 
-![Hình 2.10 nguyên tác: đồ thị vận tốc theo thời gian và các giá trị gia tốc trung bình của phi hành gia](img/young-02/hinh-2-10.png)
+![Hình 2.10: Đồ thị vận tốc theo thời gian và các giá trị gia tốc trung bình tương ứng](img/young-02/hinh-2-10.png)
 
-**Hình 2.10:** Phần trên là đồ thị $v_x$–$t$, phần dưới biểu diễn gia tốc trung bình trong bốn khoảng. Độ dốc đoạn nối hai đầu mỗi khoảng bằng gia tốc trung bình trong khoảng ấy. Các khoảng (a), (b), (c), (d) được đánh dấu tương ứng.
+::: solution Hướng dẫn giải
+**Nhận diện và thiết lập:** 
+Áp dụng công thức (2.4) để tính $a_{\mathrm{av}-x} = \frac{\Delta v_x}{\Delta t}$.
+Để biết phi hành gia chuyển động nhanh dần hay chậm dần, ta so sánh độ lớn của vận tốc tức thời (tốc độ $v = |v_x|$).
 
-::: solution Lời giải của sách
-**Xác định và thiết lập.** Dùng (2.4) tính gia tốc từ độ biến thiên vận tốc. Tốc độ là độ lớn vận tốc tức thời, nên xét giá trị tuyệt đối vận tốc để biết nhanh hay chậm.
+**Thực thi:**
+**(a)** Trong khoảng $1.0\,\mathrm s \to 3.0\,\mathrm s$ ($\Delta t = 2.0\,\mathrm s$):
+$$a_{\mathrm{av}-x} = \frac{1.2 - 0.8}{3.0 - 1.0} = \frac{+0.4\,\mathrm{m/s}}{2.0\,\mathrm s} = +0.2\,\mathrm{m/s^2}.$$
+Tốc độ tăng từ $0.8\,\mathrm{m/s}$ lên $1.2\,\mathrm{m/s}$ $\implies$ **nhanh dần** theo chiều dương.
 
-Trên phần trên Hình 2.10, độ dốc đoạn nối hai đầu mỗi khoảng bằng $\Delta v_x/\Delta t$. Từ trái sang phải, bốn độ dốc có dấu dương, âm, âm, dương. Hai độ dốc sau lớn hơn về giá trị tuyệt đối so với hai độ dốc đầu.
+**(b)** Trong khoảng $5.0\,\mathrm s \to 7.0\,\mathrm s$:
+$$a_{\mathrm{av}-x} = \frac{1.2 - 1.6}{7.0 - 5.0} = \frac{-0.4\,\mathrm{m/s}}{2.0\,\mathrm s} = -0.2\,\mathrm{m/s^2}.$$
+Tốc độ giảm từ $1.6\,\mathrm{m/s}$ xuống $1.2\,\mathrm{m/s}$ $\implies$ **chậm dần** theo chiều dương.
 
-**Thực hiện.**
+**(c)** Trong khoảng $9.0\,\mathrm s \to 11.0\,\mathrm s$:
+$$a_{\mathrm{av}-x} = \frac{-1.0 - (-0.4)}{11.0 - 9.0} = \frac{-0.6\,\mathrm{m/s}}{2.0\,\mathrm s} = -0.3\,\mathrm{m/s^2}.$$
+Tốc độ tăng từ $0.4\,\mathrm{m/s}$ lên $1.0\,\mathrm{m/s}$ ($|-1.0| > |-0.4|$) $\implies$ **nhanh dần theo chiều âm**!
 
-**(a)**
-$$a_{\mathrm{av}-x}=\frac{1.2-0.8}{3.0-1.0}\,\mathrm{m/s^2}=0.2\,\mathrm{m/s^2}.$$
-Tốc độ tăng từ $0.8$ lên $1.2\,\mathrm{m/s}$.
+**(d)** Trong khoảng $13.0\,\mathrm s \to 15.0\,\mathrm s$:
+$$a_{\mathrm{av}-x} = \frac{-0.8 - (-1.6)}{15.0 - 13.0} = \frac{+0.8\,\mathrm{m/s}}{2.0\,\mathrm s} = +0.4\,\mathrm{m/s^2}.$$
+Tốc độ giảm từ $1.6\,\mathrm{m/s}$ xuống $0.8\,\mathrm{m/s}$ ($|-0.8| < |-1.6|$) $\implies$ **chậm dần theo chiều âm**.
 
-**(b)**
-$$a_{\mathrm{av}-x}=\frac{1.2-1.6}{7.0-5.0}\,\mathrm{m/s^2}=-0.2\,\mathrm{m/s^2}.$$
-Tốc độ giảm từ $1.6$ xuống $1.2\,\mathrm{m/s}$.
-
-**(c)**
-$$a_{\mathrm{av}-x}=\frac{-1.0-(-0.4)}{11.0-9.0}\,\mathrm{m/s^2}=-0.3\,\mathrm{m/s^2}.$$
-Tốc độ tăng từ $0.4$ lên $1.0\,\mathrm{m/s}$.
-
-**(d)**
-$$a_{\mathrm{av}-x}=\frac{-0.8-(-1.6)}{15.0-13.0}\,\mathrm{m/s^2}=0.4\,\mathrm{m/s^2}.$$
-Tốc độ giảm từ $1.6$ xuống $0.8\,\mathrm{m/s}$. Phần dưới Hình 2.10 vẽ các kết quả gia tốc.
-
-**Đánh giá.** Dấu và độ lớn tương đối phù hợp dự đoán từ đồ thị. Ở các khoảng (a), (c), gia tốc trung bình cùng dấu vận tốc đầu nên phi hành gia nhanh lên. Ở (b), (d), hai dấu ngược nhau nên chậm lại. Gia tốc dương làm nhanh dần khi vận tốc dương, nhưng làm chậm dần khi vận tốc âm. Gia tốc âm làm nhanh dần khi vận tốc âm, nhưng làm chậm dần khi vận tốc dương.
-
-**Ý chính của ví dụ:** Tính gia tốc trung bình bằng vận tốc cuối trừ đầu, rồi chia khoảng thời gian.
+**Đánh giá:** Lưu ý sâu sắc ở câu (c): Gia tốc mang dấu âm ($-0.3\,\mathrm{m/s^2}$) nhưng chuyển động lại là **nhanh dần**! Điều này khẳng định quy tắc vàng: khi gia tốc và vận tốc cùng dấu, vật luôn chuyển động nhanh dần.
 :::
 
-### Gia tốc tức thời
+---
 
-Ta định nghĩa gia tốc tức thời bằng cách tương tự vận tốc tức thời. Với xe đua Grand Prix đi trên đường thẳng ở Hình 2.11, muốn xác định gia tốc tại $P_1$, đưa $P_2$ càng gần $P_1$ để tính gia tốc trung bình trên khoảng thời gian càng ngắn. Giới hạn là:
+### Gia tốc tức thời và Đạo hàm cấp hai của vị trí
 
-$$a_x=\lim_{\Delta t\to0}\frac{\Delta v_x}{\Delta t}
-=\frac{dv_x}{dt}.\tag{2.5}$$
+Bằng cách cho khoảng thời gian $\Delta t$ tiến dần về $0$, tỷ số $\frac{\Delta v_x}{\Delta t}$ tiệm cận tới đạo hàm của vận tốc theo thời gian. Ta định nghĩa **thành phần gia tốc tức thời**:
 
-Đây là thành phần $x$ của gia tốc, hay gia tốc tức thời theo $x$, bằng tốc độ biến thiên tức thời của vận tốc. Trong chuyển động thẳng, các thành phần khác bằng không. Từ đây, từ “gia tốc” không kèm “trung bình” được hiểu là tức thời.
+$$a_x = \lim_{\Delta t \to 0} \frac{\Delta v_x}{\Delta t} = \frac{dv_x}{dt}.\tag{2.5}$$
 
-![Hình 2.11 nguyên tác: xe Grand Prix ở hai vị trí trên đường thẳng](img/young-02/hinh-2-11.png)
+Vì vận tốc vốn là đạo hàm bậc nhất của tọa độ vị trí ($v_x = \frac{dx}{dt}$), gia tốc chính là **đạo hàm bậc hai của tọa độ vị trí theo thời gian**:
 
-**Hình 2.11:** Xe tại $P_1$, $P_2$ có tốc độ $v_1$, $v_2$ và các thành phần vận tốc $v_{1x}$, $v_{2x}$. Gốc O và trục x được đánh dấu.
+$$a_x = \frac{d}{dt}\left(\frac{dx}{dt}\right) = \frac{d^2x}{dt^2}.\tag{2.6}$$
+
+![Hình 2.11: Xe đua Grand Prix chuyển động với gia tốc biến thiên trên đường thẳng](img/young-02/hinh-2-11.png)
+
+---
 
 ### Ví dụ 2.3 — Gia tốc trung bình và tức thời
 
-::: exercise Đề bài trong sách
-Vận tốc $x$ của xe ở Hình 2.11 được cho bởi:
+::: exercise Bài toán
+Vận tốc dọc theo trục $x$ của chiếc xe đua ở Hình 2.11 biến thiên theo thời gian theo phương trình:
 
-$$v_x=60\,\mathrm{m/s}+(0.50\,\mathrm{m/s^3})t^2.$$
+$$v_x(t) = 60.0\,\mathrm{m/s} + (0.50\,\mathrm{m/s^3})t^2.$$
 
-**(a)** Tìm độ biến thiên vận tốc từ $t_1=1.0\,\mathrm s$ tới $t_2=3.0\,\mathrm s$.
-
-**(b)** Tìm gia tốc trung bình trên khoảng ấy.
-
-**(c)** Tìm gia tốc tức thời tại $t_1=1.0\,\mathrm s$ bằng cách lần lượt lấy $\Delta t=0.1$, $0.01$, $0.001\,\mathrm s$.
-
-**(d)** Lập biểu thức gia tốc tức thời theo thời gian, rồi tìm $a_x$ tại $t=1.0$ và $3.0\,\mathrm s$.
+**(a)** Tính độ biến thiên vận tốc trong khoảng thời gian từ $t_1 = 1.0\,\mathrm s$ đến $t_2 = 3.0\,\mathrm s$.  
+**(b)** Tính gia tốc trung bình của xe trong khoảng thời gian đó.  
+**(c)** Tìm gia tốc tức thời tại $t_1 = 1.0\,\mathrm s$ bằng cách khảo sát giới hạn trên các khoảng thời gian $\Delta t$ nhỏ dần ($0.1\,\mathrm s$, $0.01\,\mathrm s$, $0.001\,\mathrm s$).  
+**(d)** Thiết lập biểu thức giải tích của gia tốc tức thời bằng đạo hàm, từ đó tính $a_x$ tại $t = 1.0\,\mathrm s$ và $t = 3.0\,\mathrm s$.
 :::
 
-::: solution Lời giải của sách
-**Xác định và thiết lập.** Ví dụ tương tự Ví dụ 2.1: ở đó lấy độ biến thiên vị trí chia thời gian để tìm vận tốc trung bình, rồi đạo hàm vị trí để tìm vận tốc tức thời. Ở đây dùng (2.4) cho độ biến thiên vận tốc chia thời gian và (2.5) cho đạo hàm vận tốc.
+::: solution Hướng dẫn giải
+**Nhận diện và thiết lập:**
+Dùng công thức gia tốc trung bình (2.4) và đạo hàm gia tốc tức thời (2.5).
 
-**Thực hiện (a).** Trước khi dùng (2.4), tính vận tốc ở hai thời điểm:
+**Thực thi:**
+**(a)** Vận tốc tại hai thời điểm:
+$$v_{1x} = 60.0 + 0.50(1.0)^2 = 60.5\,\mathrm{m/s},$$
+$$v_{2x} = 60.0 + 0.50(3.0)^2 = 60.0 + 0.50(9.0) = 64.5\,\mathrm{m/s}.$$
+Độ biến thiên vận tốc:
+$$\Delta v_x = v_{2x} - v_{1x} = 64.5\,\mathrm{m/s} - 60.5\,\mathrm{m/s} = +4.0\,\mathrm{m/s}.$$
 
-$$
-\begin{aligned}
-v_{1x}&=60\,\mathrm{m/s}+(0.50\,\mathrm{m/s^3})(1.0\,\mathrm s)^2=60.5\,\mathrm{m/s},\\
-v_{2x}&=60\,\mathrm{m/s}+(0.50\,\mathrm{m/s^3})(3.0\,\mathrm s)^2=64.5\,\mathrm{m/s}.
-\end{aligned}
-$$
+**(b)** Gia tốc trung bình trong khoảng thời gian $\Delta t = 3.0 - 1.0 = 2.0\,\mathrm s$:
+$$a_{\mathrm{av}-x} = \frac{\Delta v_x}{\Delta t} = \frac{4.0\,\mathrm{m/s}}{2.0\,\mathrm s} = +2.0\,\mathrm{m/s^2}.$$
 
-Do đó $\Delta v_x=64.5-60.5=4.0\,\mathrm{m/s}$.
+**(c)** Khảo sát tiệm cận khi $\Delta t \to 0$ quanh thời điểm $t_1 = 1.0\,\mathrm s$:
+- Với $\Delta t = 0.1\,\mathrm s \implies t_2 = 1.1\,\mathrm s$:
+  $$v_{2x} = 60 + 0.50(1.1)^2 = 60.605\,\mathrm{m/s} \implies a_{\mathrm{av}-x} = \frac{60.605 - 60.5}{0.1} = 1.05\,\mathrm{m/s^2}.$$
+- Với $\Delta t = 0.01\,\mathrm s \implies t_2 = 1.01\,\mathrm s$:
+  $$v_{2x} = 60 + 0.50(1.01)^2 = 60.51005\,\mathrm{m/s} \implies a_{\mathrm{av}-x} = \frac{60.51005 - 60.5}{0.01} = 1.005\,\mathrm{m/s^2}.$$
+- Với $\Delta t = 0.001\,\mathrm s \implies t_2 = 1.001\,\mathrm s$:
+  $$a_{\mathrm{av}-x} = \frac{\Delta v_x}{0.001} = 1.0005\,\mathrm{m/s^2}.$$
 
-**(b)** Khoảng thời gian $2.0\,\mathrm s$ cho:
+Khi $\Delta t \to 0$, gia tốc trung bình tiệm cận tới giá trị tức thời chính xác là **$1.0\,\mathrm{m/s^2}$**.
 
-$$a_{\mathrm{av}-x}=\frac{4.0\,\mathrm{m/s}}{2.0\,\mathrm s}
-=2.0\,\mathrm{m/s^2}.$$
+**(d)** Lấy đạo hàm trực tiếp của hàm vận tốc:
+$$a_x(t) = \frac{dv_x}{dt} = \frac{d}{dt}\left[60.0 + 0.50t^2\right] = 0 + (0.50)(2t) = (1.0\,\mathrm{m/s^3})t.$$
 
-Vận tốc và gia tốc trung bình đều dương, nên xe nhanh dần trong khoảng này.
+Thay số:
+- Tại $t = 1.0\,\mathrm s$: $a_x(1.0) = 1.0 \times 1.0 = +1.0\,\mathrm{m/s^2}$ (trùng khớp câu c).
+- Tại $t = 3.0\,\mathrm s$: $a_x(3.0) = 1.0 \times 3.0 = +3.0\,\mathrm{m/s^2}$.
 
-**(c)** Với $\Delta t=0.1\,\mathrm s$, thời điểm cuối mới $t_2=1.1\,\mathrm s$:
-
-$$v_{2x}=60\,\mathrm{m/s}+(0.50\,\mathrm{m/s^3})(1.1\,\mathrm s)^2
-=60.605\,\mathrm{m/s}.$$
-
-Vì $\Delta v_x=0.105\,\mathrm{m/s}$, ta có:
-
-$$a_{\mathrm{av}-x}=\frac{0.105\,\mathrm{m/s}}{0.1\,\mathrm s}
-=1.05\,\mathrm{m/s^2}.$$
-
-Làm tương tự với $0.01$ và $0.001\,\mathrm s$, kết quả lần lượt $1.005$ và $1.0005\,\mathrm{m/s^2}$. Chúng tiến tới $1.0\,\mathrm{m/s^2}$ khi khoảng thời gian giảm, nên đó là gia tốc tức thời tại $1.0\,\mathrm s$.
-
-**(d)**
-
-$$
-\begin{aligned}
-a_x&=\frac{dv_x}{dt}
-=\frac{d}{dt}[60\,\mathrm{m/s}+(0.50\,\mathrm{m/s^3})t^2]\\
-&=(0.50\,\mathrm{m/s^3})(2t)
-=(1.0\,\mathrm{m/s^3})t.
-\end{aligned}
-$$
-
-Ở $1.0\,\mathrm s$, $a_x=1.0\,\mathrm{m/s^2}$; ở $3.0\,\mathrm s$, $a_x=3.0\,\mathrm{m/s^2}$.
-
-**Đánh giá.** Không giá trị nào ở (d) bằng gia tốc trung bình của (b), vì gia tốc tức thời thay đổi theo thời gian. Tốc độ biến thiên gia tốc theo thời gian đôi khi được gọi là *jerk*.
-
-**Ý chính của ví dụ:** Gia tốc tức thời, giới hạn gia tốc trung bình trên khoảng thời gian vô cùng ngắn, bằng đạo hàm vận tốc theo thời gian.
+**Đánh giá:** Gia tốc của chiếc xe tăng tuyến tính theo thời gian (từ $1.0\,\mathrm{m/s^2}$ lên $3.0\,\mathrm{m/s^2}$). Giá trị gia tốc trung bình ($2.0\,\mathrm{m/s^2}$) nằm chính xác tại điểm giữa của khoảng thời gian khảo sát. Đạo hàm của gia tốc theo thời gian ($da/dt$) trong kỹ thuật cơ khí được gọi là *jerk* (độ giật), đại lượng quyết định độ êm ái khi xe tăng tốc.
 :::
 
-### Gia tốc trên đồ thị vận tốc–thời gian
+---
 
-Tương tự cách đọc vận tốc ở mục 2.2, đồ thị vận tốc tức thời $v_x$ theo $t$ cho thông tin gia tốc, như Hình 2.12. Điểm $p_1$, $p_2$ tương ứng $P_1$, $P_2$ của Hình 2.11. Gia tốc trung bình $\Delta v_x/\Delta t$ bằng độ dốc dây cung $p_1p_2$.
+### Ý nghĩa hình học: Gia tốc trên đồ thị vận tốc – thời gian ($v-t$)
 
-Khi $P_2$ tiến về $P_1$, dây cung trên đồ thị tiến tới tiếp tuyến tại $p_1$. Vì vậy gia tốc tức thời bằng độ dốc tiếp tuyến trên đồ thị $v_x$–$t$. Các tiếp tuyến ở những điểm khác nhau trong Hình 2.12 có độ dốc khác nhau, nên gia tốc biến thiên theo thời gian.
+Tương tự như mối liên hệ giữa tọa độ và vận tốc:
+1. **Gia tốc trung bình** trong khoảng $\Delta t$ là **hệ số góc (độ dốc) của đường cát tuyến** nối hai điểm tương ứng trên đồ thị $v_x - t$ (Hình 2.12).
+2. **Gia tốc tức thời** tại thời điểm $t$ là **độ dốc của đường tiếp tuyến** với đồ thị $v_x - t$ tại thời điểm đó:
+   $$a_x = \text{Độ dốc tiếp tuyến của đồ thị } v_x - t.$$
 
-![Hình 2.12 nguyên tác: độ dốc dây cung và tiếp tuyến trên đồ thị vận tốc](img/young-02/hinh-2-12.png)
+![Hình 2.12: Gia tốc tức thời là độ dốc của tiếp tuyến trên đồ thị vận tốc - thời gian](img/young-02/hinh-2-12.png)
 
-**Hình 2.12:** Trục đứng là $v_x$, trục ngang là $t$. Độ tăng đứng $\Delta v_x=v_{2x}-v_{1x}$ và độ tăng ngang $\Delta t=t_2-t_1$ xác định gia tốc trung bình. Độ dốc tiếp tuyến tại một điểm xác định gia tốc tức thời ở điểm ấy.
+---
 
-::: warning Dấu gia tốc và dấu vận tốc
-Chỉ dấu gia tốc chưa cho biết nhanh dần hay chậm dần. Phải so với dấu vận tốc: cùng dấu thì tốc độ tăng, trái dấu thì tốc độ giảm. Bảng 2.3 và Hình 2.13 minh họa quy tắc này.
+### Quy tắc vàng xóa tan ngộ nhận: Dấu của tích số $v_x \cdot a_x$
+
+::: warning Xóa tan ngộ nhận: Gia tốc âm KHÔNG ĐỒNG NGHĨA với chuyển động chậm dần!
+Hàng triệu học sinh thường mang ngộ nhận: *"cứ gia tốc âm là xe đang phanh chậm dần"*. Đây là một sai lầm bản chất!
+Dấu của gia tốc $a_x$ chỉ đơn thuần cho biết vector gia tốc đang hướng theo chiều dương hay chiều âm của trục tọa độ đã chọn.
+
+Quy luật vật lý duy nhất quyết định một vật chuyển động nhanh dần hay chậm dần là **mối tương quan dấu giữa vận tốc $v_x$ và gia tốc $a_x$** (tức dấu của tích số $v_x \cdot a_x$):
+
+1. **Khi $v_x$ và $a_x$ CÙNG DẤU ($v_x \cdot a_x > 0$): Chuyển động NHANH DẦN!**
+   - $v_x > 0$ và $a_x > 0$: Vật đang tiến theo chiều dương và tăng tốc nhanh dần (Hình 2.13, điểm E).
+   - $v_x < 0$ và $a_x < 0$: Vật đang chạy lùi theo chiều âm và gia tốc cũng hướng theo chiều âm; vận tốc ngày càng âm hơn $\implies$ tốc độ $|v_x|$ tăng lên $\implies$ **vật đang chạy lùi nhanh dần**!
+
+2. **Khi $v_x$ và $a_x$ TRÁI DẤU ($v_x \cdot a_x < 0$): Chuyển động CHẬM DẦN!**
+   - $v_x > 0$ và $a_x < 0$: Vật tiến theo chiều dương nhưng bị gia tốc hãm lại $\implies$ chậm dần (sắp dừng lại đổi chiều).
+   - $v_x < 0$ và $a_x > 0$: Vật chạy lùi theo chiều âm nhưng gia tốc hướng theo chiều dương $\implies$ vận tốc bớt âm dần $\implies$ tốc độ $|v_x|$ giảm $\implies$ **vật đang chạy lùi chậm dần** (Hình 2.13, điểm A).
 :::
 
-Từ “deceleration” đôi khi được dùng cho sự giảm tốc độ. Vì nó có thể ứng với gia tốc dương hoặc âm tùy vận tốc, sách tránh sử dụng từ này như một dấu xác định của gia tốc.
+### Bảng 2.3 — Tổng hợp tương quan dấu giữa vận tốc và gia tốc
 
-### Bảng 2.3 — Quy tắc dấu của gia tốc theo trục x
+| Trạng thái vận tốc $v_x$ | Dấu gia tốc $a_x$ | Tích $v_x \cdot a_x$ | Diễn biến chuyển động của chất điểm |
+| :--- | :--- | :--- | :--- |
+| Dương ($v_x > 0$) | Dương ($a_x > 0$) | $> 0$ | Tiến theo chiều dương, **nhanh dần**. |
+| Dương ($v_x > 0$) | Âm ($a_x < 0$) | $< 0$ | Tiến theo chiều dương, **chậm dần**. |
+| Âm ($v_x < 0$) | Dương ($a_x > 0$) | $< 0$ | Tiến theo chiều âm, **chậm dần**. |
+| Âm ($v_x < 0$) | Âm ($a_x < 0$) | $> 0$ | Tiến theo chiều âm, **nhanh dần**. |
 
-| Vận tốc x | Gia tốc x và diễn biến |
-| --- | --- |
-| Dương và tăng | Gia tốc dương; đi theo $+x$, nhanh dần. |
-| Dương và giảm | Gia tốc âm; đi theo $+x$, chậm dần. |
-| Âm và tăng, bớt âm | Gia tốc dương; đi theo $-x$, chậm dần. |
-| Âm và giảm, càng âm | Gia tốc âm; đi theo $-x$, nhanh dần. |
+![Hình 2.13: Tương quan giữa đồ thị vận tốc v-t và trạng thái chuyển động tại các điểm A-E](img/young-02/hinh-2-13.png)
 
-Quy tắc dùng cho cả gia tốc trung bình và tức thời trong những khoảng và thời điểm tương ứng.
+*Ứng dụng công nghệ — Cảm biến gia tốc MEMS trong đời sống:*
+- **Điện thoại thông minh:** Bên trong mỗi smartphone đều có một chip cảm biến gia tốc vi cơ điện tử (MEMS) siêu nhỏ (cỡ micromét). Khi bạn xoay ngang điện thoại hay lắc cổ tay, gia tốc trọng trường tác động làm lệch các vi phiến silicon, thay đổi điện dung vi sai và ra lệnh cho hệ điều hành xoay hướng màn hình hoặc đếm từng bước chân bạn đi.
+- **Túi khí ô tô an toàn:** Khi xảy ra va chạm trực diện, xe hơi giảm tốc đột ngột với gia tốc hãm cực lớn (thường vượt quá $-20g$ đến $-50g$, với $g \approx 9.8\,\mathrm{m/s^2}$). Cảm biến gia tốc MEMS phát hiện mức gia tốc âm dị thường này trong vòng chưa đầy $15\,\mathrm{ms}$ và kích hoạt ngòi nổ hóa học tạo khí nitrogen bơm phồng túi khí trước khi người lái kịp lao về phía trước!
 
-![Hình 2.13 nguyên tác: đồ thị vận tốc và sơ đồ vị trí, vận tốc, gia tốc tại các điểm A–E](img/young-02/hinh-2-13.png)
+---
 
-**Hình 2.13:** Trên đồ thị $v_x$–$t$, độ dốc bằng gia tốc. Độ dốc càng lớn về giá trị tuyệt đối, gia tốc theo chiều dương hoặc âm càng lớn. Sơ đồ chuyển động ở (b) ứng với một chất điểm khác chất điểm Hình 2.8:
+### Gia tốc và độ cong của đồ thị vị trí – thời gian ($x-t$)
 
-- A: $v_x<0$, $a_x>0$, vật đi theo $-x$ và chậm dần.
-- B: $v_x=0$, $a_x>0$, vật đứng yên tức thời và sắp đi theo $+x$.
-- C: $v_x>0$, $a_x=0$, tốc độ tức thời không đổi.
-- D: $v_x=0$, $a_x<0$, vật đứng yên tức thời và sắp đi theo $-x$.
-- E: $v_x<0$, $a_x<0$, vật đi theo $-x$ và nhanh dần.
+Vì gia tốc là đạo hàm bậc hai $a_x = \frac{d^2x}{dt^2}$, trong giải tích toán học, đạo hàm bậc hai phản ánh **chiều lõm (độ cong)** của đường cong đồ thị $x-t$ (Hình 2.14):
+- **Đồ thị cong lõm lên trên (hình chiếc bát hứng nước):** $\frac{d^2x}{dt^2} > 0 \implies a_x > 0$ (gia tốc dương, độ dốc tiếp tuyến tăng dần từ trái sang phải).
+- **Đồ thị cong lồi xuống dưới (hình chiếc bát úp ngược):** $\frac{d^2x}{dt^2} < 0 \implies a_x < 0$ (gia tốc âm, độ dốc tiếp tuyến giảm dần từ trái sang phải).
+- **Điểm uốn (nơi đồ thị đổi chiều cong, tiếp tuyến đổi phía):** $a_x = 0$ (gia tốc tức thời triệt tiêu).
 
-### Gia tốc trên đồ thị vị trí–thời gian
+![Hình 2.14: Chiều cong của đồ thị x-t phản ánh trực tiếp dấu của gia tốc](img/young-02/hinh-2-14.png)
 
-Vì $v_x=dx/dt$ và $a_x=dv_x/dt$, ta có:
+### Bảng 2.4 — Thông điệp vật lý từ hai loại đồ thị động học
 
-$$a_x=\frac{dv_x}{dt}
-=\frac{d}{dt}\left(\frac{dx}{dt}\right)
-=\frac{d^2x}{dt^2}.\tag{2.6}$$
+| Đại lượng cần khảo sát | Đọc trên đồ thị $x-t$ | Đọc trên đồ thị $v_x-t$ |
+| :--- | :--- | :--- |
+| **Tọa độ vị trí ($x$)** | Giá trị của tung độ trên đồ thị. | Không đọc được trực tiếp (cần dùng tích phân diện tích). |
+| **Vận tốc ($v_x$)** | **Độ dốc (hệ số góc)** của tiếp tuyến. | Giá trị của tung độ trên đồ thị. |
+| **Gia tốc ($a_x$)** | **Chiều cong / độ lõm** của đồ thị ($d^2x/dt^2$). | **Độ dốc (hệ số góc)** của tiếp tuyến ($dv_x/dt$). |
 
-Gia tốc là đạo hàm bậc hai của vị trí theo thời gian. Đạo hàm bậc hai liên hệ với chiều cong của đồ thị. Nơi đồ thị $x$–$t$ cong lên, như A và E của Hình 2.14a, gia tốc dương và vận tốc tăng. Nơi cong xuống, như C, gia tốc âm và vận tốc giảm. Ở các điểm uốn B, D, nơi độ cong bằng không, gia tốc bằng không và vận tốc không thay đổi tức thời.
+---
 
-Quan sát chiều cong là cách thuận tiện để xác định dấu gia tốc. Nó kém thuận tiện hơn khi cần giá trị bằng số vì khó đo độ cong chính xác.
+### Câu hỏi kiểm tra hiểu biết mục 2.3
 
-![Hình 2.14 nguyên tác: đồ thị vị trí của Hình 2.8 cùng sơ đồ vận tốc và gia tốc](img/young-02/hinh-2-14.png)
+::: exercise Câu hỏi kiểm tra
+Quan sát lại đồ thị $x-t$ ở Hình 2.9 (gồm bốn điểm P, Q, R, S):
 
-**Hình 2.14:** (a) Cùng đồ thị $x$–$t$ với Hình 2.8a. (b) Vị trí, vận tốc và gia tốc tại các thời điểm đánh dấu:
-
-- A: $x<0$, $v_x>0$, $a_x>0$; đi theo $+x$ và nhanh dần.
-- B: $x=0$, $v_x>0$, $a_x=0$; tốc độ tức thời không thay đổi.
-- C: $x>0$, $v_x=0$, $a_x<0$; đứng yên tức thời, sắp đi theo $-x$.
-- D: $x>0$, $v_x<0$, $a_x=0$; tốc độ tức thời không thay đổi.
-- E: $x>0$, $v_x<0$, $a_x>0$; đi theo $-x$ và chậm dần.
-
-Nhãn trong hình nhắc rằng chiều cong của đồ thị vị trí cho dấu gia tốc; độ cong càng lớn về mức dương hoặc âm thì gia tốc tương ứng càng lớn.
-
-### Bảng 2.4 — Thông tin từ hai loại đồ thị
-
-| Thông tin xét tại một thời điểm | Đồ thị x–t | Đồ thị vₓ–t |
-| --- | --- | --- |
-| Giá trị của đường đồ thị | Tọa độ $x$. | Vận tốc $v_x$. |
-| Độ dốc | Vận tốc $v_x$. | Gia tốc $a_x$. |
-| Chiều cong hoặc độ cong | Gia tốc $a_x$. | Cho biết gia tốc có đang thay đổi hay không. |
-
-Bảng tập hợp những điều có thể đọc từ đồ thị của chất điểm chuyển động thẳng.
-
-### Câu hỏi kiểm tra hiểu mục 2.3
-
-::: exercise Câu hỏi trong sách
-Xem lại đồ thị $x$–$t$ ở Hình 2.9.
-
-**(a)** Điểm P, Q, R, S nào có $a_x>0$?
-
-**(b)** Điểm nào có $a_x<0$?
-
-**(c)** Điểm nào có vẻ có $a_x=0$?
-
-**(d)** Ở mỗi điểm, vận tốc tăng, giảm hay không thay đổi?
+**(a)** Điểm nào có gia tốc dương ($a_x > 0$)?  
+**(b)** Điểm nào có gia tốc âm ($a_x < 0$)?  
+**(c)** Những điểm nào có gia tốc xấp xỉ bằng không ($a_x \approx 0$)?  
+**(d)** Tại mỗi điểm P, Q, R, S, vận tốc đang tăng, giảm hay tạm thời không đổi?
 :::
 
-::: solution Đáp án của sách
-**(a)** S, vì đồ thị cong lên.
-
-**(b)** Q, vì đồ thị cong xuống.
-
-**(c)** P và R, vì đồ thị không cong lên hoặc xuống ở đó.
-
-**(d)** P: $a_x=0$, vận tốc không thay đổi tức thời. Q: $a_x<0$, vận tốc giảm từ dương tới không rồi âm. R: $a_x=0$, vận tốc không thay đổi tức thời. S: $a_x>0$, vận tốc tăng từ âm tới không rồi dương.
+::: solution Lời giải
+Dựa vào chiều cong của đồ thị $x-t$:
+- **(a) Điểm S có $a_x > 0$:** Tại lân cận điểm S, đồ thị có đáy cong hướng lõm lên trên (dạng parabol ngửa) $\implies$ đạo hàm bậc hai dương $\implies a_x > 0$.
+- **(b) Điểm Q có $a_x < 0$:** Tại đỉnh Q, đồ thị cong úp xuống dưới (dạng parabol úp) $\implies$ đạo hàm bậc hai âm $\implies a_x < 0$.
+- **(c) Điểm P và điểm R có $a_x \approx 0$:** Đây là các đoạn đồ thị tương đối thẳng hoặc là điểm uốn chuyển tiếp chiều cong, độ cong triệt tiêu $\implies a_x \approx 0$.
+- **(d) Diễn biến vận tốc:**
+  - Tại P: $a_x \approx 0 \implies$ vận tốc tức thời không đổi.
+  - Tại Q: $a_x < 0 \implies$ vận tốc đang giảm liên tục (chuyển từ dương sang 0 rồi sang âm).
+  - Tại R: $a_x \approx 0 \implies$ vận tốc tức thời không đổi.
+  - Tại S: $a_x > 0 \implies$ vận tốc đang tăng liên tục (chuyển từ âm sang 0 rồi sang dương).
 :::

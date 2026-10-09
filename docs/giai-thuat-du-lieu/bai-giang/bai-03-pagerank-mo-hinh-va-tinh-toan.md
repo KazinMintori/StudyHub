@@ -176,7 +176,7 @@ Mỗi cạnh đóng góp đúng một lần vì nó thuộc đúng một khối.
 
 ## 5. Chi phí: lưu trữ, bộ nhớ, dữ liệu và thời gian
 
-Phần này đánh giá cách tổ chức tính theo khối bằng các đại lượng riêng biệt của mô hình chi phí đầu vào tác vụ trong MMDS 2.5.1. Trong đó, $I$ là tổng byte đầu vào các tác vụ Map, $H$ là tổng byte đầu vào các tác vụ Reduce và $C=I+H$ cho một công việc có Combine nằm trong Map. Các số byte dưới đây được tính theo định dạng giả định, không phải kích thước đối tượng Python hay số đo thực nghiệm. Tham số gồm $n$ trang, $m$ liên kết, $k$ dải mỗi chiều và $p$ máy.
+Phần này đánh giá cách tổ chức tính theo khối bằng các đại lượng riêng biệt của mô hình chi phí đầu vào tác vụ trong MMDS 2.5.1. Trong đó, $I$ là tổng byte đầu vào các tác vụ Map, $H$ là tổng byte đầu vào các tác vụ Reduce và $C=I+H$ cho một công việc có Combine nằm trong Map. Các số byte dưới đây được tính theo quy ước định dạng của mô hình, không phải kích thước đối tượng Python hay số đo thực nghiệm. Tham số gồm $n$ trang, $m$ liên kết, $k$ dải mỗi chiều và $p$ máy.
 
 **Dung lượng lưu đĩa $S$.** Quy ước: giá trị điểm 8 byte (double), mã trang hoặc bậc ra 4 byte (số nguyên 32 bit).
 - Ma trận đặc: $S_{\text{dense}}=8n^2$ byte.
@@ -196,7 +196,7 @@ Với $n=4$, $k=2$: $2\cdot2\cdot8=32$ byte cộng bộ đệm đọc khối $B_
 
 **Phân biệt $C$ với $Q$.** $Q$ là số byte **thực sự đi qua mạng**. Nó chỉ bằng $H$ nếu mọi bản ghi ra Map đều qua mạng, không nén, không chạy lại, không phần phụ trội. Dữ liệu khối thường nằm cục bộ, nên $I=Q$ không suy ra được từ dữ kiện. Nếu toàn bộ 7 bản ghi sau Combine qua mạng: $Q=84$ byte và $T_{\text{shuffle}}\ge Q/b_{\text{eff}}$ với $b_{\text{eff}}$ là băng thông hiệu quả tổng hợp (byte/giây).
 
-**Thời gian.** Mô hình: mỗi cạnh tốn $c_e$ giây (giả định), bỏ I/O, truyền và lập lịch trong pha tính. Tổng việc $W=m\cdot c_e=8c_e$ không đổi theo số máy. Thời gian xử lý các khối tương ứng là:
+**Thời gian.** Mô hình: mỗi cạnh tốn $c_e$ giây, bỏ I/O, truyền và lập lịch trong pha tính. Tổng việc $W=m\cdot c_e=8c_e$ không đổi theo số máy. Thời gian xử lý các khối tương ứng là:
 - $M_{11}$ tốn $2c_e$,
 - $M_{21}$ tốn $3c_e$,
 - $M_{12}$ tốn $2c_e$,

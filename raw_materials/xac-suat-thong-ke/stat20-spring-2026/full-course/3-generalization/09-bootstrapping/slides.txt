@@ -1,0 +1,201 @@
+Bootstrapping
+
+STAT 20: Introduction to Probability and Statistics 
+
+While you’re waiting
+
+If you’ve been given an index card, please write on it:
+
+Your first name
+
+Your year at Cal (1 is first year, 2 is second year, etc)
+
+Whether or not you are interested in majoring in a business- or econ-related field. 1 = yes, 0 = no
+
+As students arrive, randomly give ~8 of them an index card.
+
+Concept Questions
+
+Which of these is a valid bootstrap sample?
+
+  
+    −
+    +
+
+ 01:00
+
+  
+
+Original Sample
+
+name
+species
+length
+
+Gus
+Chinstrap
+50.7
+
+Luz
+Gentoo
+48.5
+
+Ida
+Chinstrap
+52.8
+
+Ola
+Gentoo
+44.5
+
+Abe
+Adelie
+42.0
+
+BS A
+
+name
+species
+length
+
+Ida
+Chinstrap
+52.8
+
+Luz
+Gentoo
+48.5
+
+Abe
+Adelie
+42.0
+
+Ola
+Gentoo
+44.5
+
+Ida
+Chinstrap
+52.8
+
+BS B
+
+name
+species
+length
+
+Ola
+Gentoo
+44.5
+
+Gus
+Chinstrap
+50.7
+
+Ida
+Chinstrap
+52.8
+
+Luz
+Gentoo
+48.5
+
+Gus
+Chinstrap
+50.7
+
+Gus
+Chinstrap
+50.7
+
+BS C
+
+name
+species
+length
+
+Gus
+Chinstrap
+50.7
+
+Ola
+Gentoo
+48.5
+
+Ola
+Chinstrap
+52.8
+
+Ida
+Gentoo
+44.5
+
+Ida
+Adelie
+42.0
+
+BS D
+
+name
+species
+length
+
+Gus
+Chinstrap
+50.7
+
+Abe
+Adelie
+42.0
+
+Gus
+Chinstrap
+50.7
+
+Gus
+Chinstrap
+50.7
+
+Gus
+Chinstrap
+50.7
+
+Concept Activity
+
+If you were given an index card, please come to the front of the room and bring the card with you!
+
+Concept Activity
+
+Today’s population: All students in the classroom
+
+Parameters of interest:
+
+median seniority (freshman/sophomore, etc.)
+
+the proportion of students majoring in a business or econ-related field.
+
+Goal: create a 90 percent bootstrap confidence interval for these parameters!
+
+Problem Set: Bootstrapping
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 9: People’s Park II
+
+  
+    −
+    +
+
+ 25:00

@@ -1,0 +1,96 @@
+Probability Distributions
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+−+
+02:00
+
+Consider the follwing box of tickets. Match each plot to its accurate description as given on PollEv.
+
+Binomial, hypergeometric, or neither?
+
+For the following set of questions, you’ll be presented with a scenario and then asked to identify whether it follows one of the three probability distribution options above.
+
+−+
+01:00
+
+Does the quantity described below have a probability distribution that is binomial (if so, what are 
+[MATH] \(n\) and 
+[MATH] \(p\)?), hypergeometric (if so , what are 
+[MATH] \(N\), 
+[MATH] \(G\), and 
+[MATH] \(n\)?), or neither (why)?
+
+Roll a fair ten-sided die 20 times. We count the number of times we roll a multiple of 3.
+
+Binomial, hypergeometric, or neither?
+
+Binomial(20, 3/10). The pollev will have 4 choices, and then figuring out the parameters can be a classroom discussion. The fourth choice is “Need more info”
+
+−+
+01:00
+
+Does the quantity described below have a probability distribution that is binomial (if so, what are 
+[MATH] \(n\) and 
+[MATH] \(p\)?), hypergeometric (if so , what are 
+[MATH] \(N\), 
+[MATH] \(G\), and 
+[MATH] \(n\)?), or neither (why)?
+
+YouGov surveyed 1,500 adult US citizens last December and counted the number of respondents who had read at least one book in 2023. The population of the US is about 335 million.
+
+Binomial, hypergeometric, or neither?
+
+Hypergeometric(
+[MATH] \(N = 335\) mill, 
+[MATH] \(n = 1500\), G), where G is not known, being the number of people who have read at least one book . Can remark that we could use the binomial to model this rather than HG, and that we will discuss sample surveys in this unit. Disturbingly, only 54% of respondents had read at least one book. Here is the link: https://today.yougov.com/entertainment/articles/48239-54-percent-of-americans-read-a-book-this-year
+
+−+
+01:00
+
+Are we describing a probability distribution below that is binomial? Or is it hypergeometric? Or do neither apply?
+
+A six-sided die is tossed twice, and we check if the sum of the spots is 8 or not.
+
+Binomial, hypergeometric, or neither?
+
+Binomial, with 
+[MATH] \(n = 1, p = 5/36\) or Bernoulli with 
+[MATH] \(p = 5/36\).
+
+−+
+01:00
+
+Are we describing a probability distribution below that is binomial? Or is it hypergeometric? Or do neither apply?
+
+A bag that has 6 pieces of fruit: 2 mangoes, 3 apples, and 1 orange. I reach into the bag and draw out one fruit at a time, selecting each fruit at random (so all the fruit left in the bag are equally likely on each draw). I put the fruit away after I take it out (and don’t put it back into the bag). I count the number of draws until and including the first time I draw a apple.
+
+Binomial, hypergeometric, or neither?
+
+Neither. It would be useful at this point to write out what is going on, and point out that they are using the multiplication rule and a conditional probability.
+
+Problem Set: Probability Distributions
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 6
+
+  
+    −
+    +
+
+ 25:00

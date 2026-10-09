@@ -5,24 +5,60 @@ section: lecture
 title: "Tìm kiếm mù: BFS, DFS, UCS & IDS"
 prerequisites: ["do-thi","trang-thai","hang-doi","ngan-xep","hang-doi-uu-tien","do-phuc-tap"]
 lessonStatus: ready
+description: "Bản chất không gian trạng thái, cơ chế hoạt động và phân tích chi phí sâu sắc của bốn chiến lược tìm kiếm không thông tin: BFS, DFS, UCS và IDS."
 ---
 
+*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
 
-*Bài 2 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "Artificial Intelligence: A Modern Approach", chương 3.3–3.4 và Cormen et al., "Introduction to Algorithms", chương 20 (BFS/DFS) & 22 (Dijkstra).*
+[Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
 
-← [Chương 1: Giới thiệu & Tác tử](/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
+::: info Trọng tâm bài giảng
+Khi giải một bài toán mà máy tính hoàn toàn không có bất kỳ manh mối hay ước lượng nào về vị trí của đích đến — tựa như việc bước vào một mê cung tối đen mà không có la bàn — nó buộc phải dựa vào cấu trúc liên kết thuần túy của các trạng thái. Đó chính là bản chất của **tìm kiếm không có thông tin (Uninformed Search)**, hay thường gọi dân dã là **tìm kiếm mù**.
 
-::: info Bài này ôn tập gì?
-Bốn thuật toán "mù" (không biết đích ở đâu, chỉ biết cấu trúc đồ thị): **BFS, DFS, UCS (Uniform-Cost Search), IDS (Iterative Deepening Search)**. Đây là nền để hiểu vì sao Chương 3 cần "kinh nghiệm" ($h(n)$) — tìm kiếm mù không nhìn được tương lai, nên phải nở ra *mọi hướng* một cách máy móc.
+Bài giảng này phân tích bản chất cơ chế, tính tối ưu, chi phí tài nguyên và các tình huống ứng dụng thực tế của bốn giải thuật kinh điển:
+1. **BFS (Breadth-First Search)** — Tìm kiếm theo chiều rộng: Lan tỏa theo từng lớp đồng mức.
+2. **DFS (Depth-First Search)** — Tìm kiếm theo chiều sâu: Thám hiểm kiên định tới tận cùng nhánh.
+3. **UCS (Uniform-Cost Search)** — Tìm kiếm chi phí đồng nhất: Dẫn đường bằng chi phí tích lũy thực tế.
+4. **IDS (Iterative Deepening Search)** — Tìm kiếm sâu dần: Sự kết hợp tinh tế giữa tiết kiệm bộ nhớ và bảo toàn tính tối ưu.
 :::
 
 ## Minh họa tương tác
 
 <CodeIllustration type="search" />
 
-## 2.1 Đồ thị mẫu dùng xuyên suốt chương
+---
 
-Để tiện so sánh, ta dùng lại đúng đồ thị sẽ xuất hiện ở các chương sau (Chương 3, 4):
+## 2.1 Từ bài toán thực tế đến không gian trạng thái
+
+Trước khi giải thuật đầu tiên có thể vận hành, người kỹ sư AI phải trả lời được câu hỏi cốt lõi: **Làm thế nào để mô hình hóa bài toán thành ngôn ngữ mà máy tính có thể tìm kiếm?**
+
+Một bài toán tìm kiếm chuẩn mực luôn được xác định bởi 5 thành phần hình thức:
+1. **Trạng thái ban đầu (Initial State $s_0$):** Điểm xuất phát của tác tử.
+2. **Tập hành động hợp lệ ($\text{Actions}(s)$):** Những việc tác tử có thể làm khi đang ở trạng thái $s$.
+3. **Mô hình chuyển trạng thái ($\text{Result}(s, a)$):** Trạng thái mới đạt được sau khi thực hiện hành động $a$ tại $s$.
+4. **Kiểm tra đích ($\text{GoalTest}(s)$):** Hàm xác định xem $s$ đã là trạng thái mục tiêu cần đến hay chưa.
+5. **Chi phí bước đi ($c(s, a, s')$):** Lượng tài nguyên tiêu hao (thời gian, khoảng cách, xăng dầu) khi chuyển từ $s$ sang $s'$.
+
+```mermaid
+flowchart LR
+    subgraph ProblemSpace ["Không gian trạng thái"]
+        s0((s0)) -->|a1, chi phí c1| s1((s1))
+        s1 -->|a2, chi phí c2| s2((s2))
+        s2 -->|a3, chi phí c3| sg(((Goal)))
+    end
+```
+
+### Đồ thị trạng thái khác cây tìm kiếm như thế nào?
+
+Đây là một điểm phân biệt rất quan trọng mà người học cần làm rõ:
+- **Đồ thị trạng thái (State Space Graph):** Là bản đồ trừu tượng mô tả toàn bộ cấu trúc bài toán. Mỗi trạng thái vật lý xuất hiện duy nhất một lần. Nếu bài toán có các hành động thuận nghịch (như bước tới rồi bước lùi), đồ thị trạng thái sẽ chứa chu trình.
+- **Cây tìm kiếm (Search Tree):** Là cây các đường đi được thuật toán sinh ra trong quá trình thám hiểm. Gốc của cây là trạng thái ban đầu, và mỗi nút trên cây biểu diễn cho **một đường đi cụ thể** từ gốc đến trạng thái đó. Vì vậy, cùng một trạng thái vật lý có thể xuất hiện tại nhiều nút khác nhau trên cây tìm kiếm nếu có nhiều đường đi dẫn tới nó.
+
+---
+
+## 2.2 Đồ thị mẫu dùng xuyên suốt bài học
+
+Để so sánh công bằng và trực quan sức mạnh của từng giải thuật, chúng ta sử dụng một đồ thị trạng thái mẫu có trọng số cố định: trạng thái ban đầu là $S$, đích cần đến là $G$.
 
 ```mermaid
 flowchart LR
@@ -34,197 +70,399 @@ flowchart LR
     C -->|3| G((G))
 ```
 
-Chi phí tối ưu thật sự (đã tính ở Chương 3) là $S \to A \to B \to C \to G$ với tổng $= 7$. Ta sẽ xem BFS/DFS/UCS "mù" tới đâu so với con số 7 này.
+Bằng quan sát giải tích, ta dễ dàng tính trước được:
+- Đường đi ngắn nhất về **số bước nhảy (cạnh)** là: $S \to A \to C \to G$ hoặc $S \to B \to C \to G$ (cùng tốn 3 bước).
+- Đường đi có **tổng chi phí nhỏ nhất (tối ưu thực tế)** là: $S \to A \to B \to C \to G$ với tổng chi phí:
+  $$
+  c^* = 1 + 2 + 1 + 3 = 7
+  $$
 
-## 2.2 Breadth-First Search (BFS) — lan toả theo từng lớp
+Con số $7$ này chính là "thước đo chân lý". Chúng ta hãy xem từng thuật toán mù phản ứng ra sao trước đồ thị này.
 
-::: tip Ẩn dụ
-Thả một giọt mực vào ly nước: vết mực lan ra thành **từng vòng tròn đồng tâm cách đều nhau theo thời gian** — không quan tâm vòng nào "đặc" hay "loãng" (chi phí cạnh), chỉ quan tâm **số bước nhảy**.
-:::
+---
 
-BFS dùng hàng đợi FIFO, mở rộng theo từng lớp (độ sâu) một. Trên đồ thị mẫu, giả sử tại mỗi đỉnh ta luôn duyệt cạnh theo thứ tự bảng trên (A trước B):
+## 2.3 Breadth-First Search (BFS) — Lan tỏa theo từng lớp đồng mức
 
-| Lớp | Đỉnh được khám phá | Hàng đợi FIFO |
-|---|---|---|
-| 0 | S | [S] |
-| 1 | A, B (từ S) | [A, B] |
-| 2 | C (từ A, $B\to C$ bị bỏ vì C đã khám phá) | [B, C] |
-| 3 | G (từ C) | [C, G] → **dừng, thấy G** |
+### Trực giác cơ chế
 
-Đường tìm được: $S \to A \to C \to G$ (3 bước nhảy) — nhưng **chi phí thật** $= 1+5+3 = \mathbf{9}$, tệ hơn hẳn đáp án tối ưu 7!
+Hãy hình dung bạn thả một giọt mực vào ly nước tĩnh lặng: vết mực lan dần thành từng vòng tròn đồng tâm cách đều nhau theo thời gian. BFS hoạt động theo đúng cơ chế đó: nó quét sạch tất cả các nút ở độ sâu $d$ trước khi chạm vào bất kỳ nút nào ở độ sâu $d+1$.
 
-::: danger Bẫy thi #1 — "BFS luôn tối ưu"
-**Chỉ đúng khi mọi hành động có chi phí bằng nhau** (ví dụ đếm số bước trong mê cung lưới ô vuông). Khi trọng số cạnh khác nhau, BFS chỉ tối ưu về **số cạnh (hops)**, không tối ưu về **tổng chi phí**. Đây là lỗi sai phổ biến nhất khi sinh viên nhầm BFS với UCS.
-:::
-
-## 2.3 Depth-First Search (DFS) — lao thẳng tới cùng rồi mới lùi
-
-::: tip Ẩn dụ
-Đi trong mê cung bằng cách **luôn rẽ trái tới khi đâm tường**, hết đường thì lùi lại ngã rẽ gần nhất và thử hướng khác. Không hề "ngó" xem hướng kia có thơm hơn hay gần đích hơn.
-:::
-
-Giả sử tại S ta ưu tiên thử cạnh **B trước A**:
-
-$$
-S \to B \to C \to G
-$$
-
-DFS dừng ngay khi chạm G — chi phí $= 4+1+3 = \mathbf{8}$, cũng không tối ưu, và **kết quả phụ thuộc hoàn toàn vào thứ tự duyệt cạnh** mà ta chọn lúc cài đặt (đổi thứ tự $A/B$ sẽ ra một đường khác).
+Để hiện thực hóa trật tự này, BFS sử dụng một hàng đợi vào-trước-ra-trước (**FIFO Queue**). Mỗi khi một nút được lấy ra khỏi đầu hàng đợi, tất cả các nút lân cận chưa từng được khám phá của nó sẽ được đưa vào cuối hàng đợi.
 
 ```mermaid
 flowchart TD
-    S1["S"] --> B1["B (thử trước)"]
-    B1 --> C1["C"]
-    C1 --> G1["G — dừng ngay khi chạm, chi phí = 8"]
-    S1 -.->|"không xét vì đã tìm thấy lời giải"| A1["A"]
-    classDef skip fill:#f3f4f6,stroke:#9ca3af,stroke-dasharray:4 4,color:#6b7280;
-    class A1 skip;
+    subgraph Level0 ["Tầng 0 (Độ sâu 0)"]
+        S["S"]
+    end
+    subgraph Level1 ["Tầng 1 (Độ sâu 1)"]
+        A["A"]
+        B["B"]
+    end
+    subgraph Level2 ["Tầng 2 (Độ sâu 2)"]
+        C["C"]
+    end
+    subgraph Level3 ["Tầng 3 (Độ sâu 3)"]
+        G["G (Đích)"]
+    end
+
+    S --> A
+    S --> B
+    A --> C
+    B -.-> C
+    C --> G
+
+    classDef goal fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+    class G goal;
 ```
 
-::: warning Bẫy thi #2 — DFS trong không gian có chu trình/vô hạn
-DFS **không đầy đủ (incomplete)** nếu không gian trạng thái có chu trình mà không lưu tập đã thăm, hoặc có nhánh sâu vô hạn — nó có thể "lạc" mãi trong một nhánh không dẫn tới đích. Phải luôn giữ tập `visited`/`closed` khi cài đặt trên đồ thị (khác cây).
-:::
+### Quá trình duyệt từng bước trên đồ thị mẫu
 
-## 2.4 Uniform-Cost Search (UCS) — "BFS nhưng theo thời gian thật"
+Quy ước thứ tự duyệt khi có nhiều lựa chọn: ưu tiên đỉnh theo thứ tự chữ cái ($A$ trước $B$).
 
-::: tip Ẩn dụ
-Vẫn là giọt mực lan trong nước, nhưng bây giờ mỗi hướng lan với **tốc độ khác nhau** (ứng với trọng số cạnh) — vết mực vẫn lan thành các "đường đồng mức" tròn đều, chỉ có điều đo bằng *thời gian trôi qua thật sự*, không phải số vòng.
-:::
+| Lượt | Đỉnh lấy ra | Tập đỉnh kề sinh ra | Hàng đợi FIFO sau lượt | Ghi chú |
+|:---:|:---:|:---|:---|:---|
+| 1 | **S** | $A, B$ | $[A, B]$ | Đưa $S$ vào tập đã thăm |
+| 2 | **A** | $B$ (đã có trong hàng đợi), $C$ | $[B, C]$ | Thêm $C$ vào hàng đợi |
+| 3 | **B** | $C$ (đã có trong hàng đợi) | $[C]$ | Không sinh thêm đỉnh mới |
+| 4 | **C** | $G$ | $[G]$ | **Phát hiện nút đích $G$** |
+| 5 | **G** | — | $\emptyset$ | Lấy $G$ ra, kết thúc tìm kiếm |
 
-UCS chính là hàm $f(n) = g(n)$ (không có $h$) — về bản chất là **thuật toán Dijkstra** (xem Chương 3, mục 2.3, và CLRS chương 22.3). Chạy trên đồ thị mẫu:
+Đường đi tìm được qua BFS: $S \to A \to C \to G$ (độ dài 3 bước nhảy).
+Tổng chi phí thực tế:
+$$
+\text{Chi phí} = 1 + 5 + 3 = 9 > 7
+$$
 
-| Bước | Đỉnh mở rộng | $g$ | Open (theo $g$) |
-|---|---|---|---|
-| 1 | S | 0 | A(1), B(4) |
-| 2 | A | 1 | B(3, cập nhật), C(6) |
-| 3 | B | 3 | C(4, cập nhật) |
-| 4 | C | 4 | G(7) |
-| 5 | **G** | 7 | ∅ → dừng khi **lấy G ra khỏi hàng đợi** |
+### Đào sâu bản chất: Tại sao BFS tìm ra đường đi đắt hơn?
 
-Kết quả: $S \to A \to B \to C \to G$, chi phí $= \mathbf{7}$ — **tối ưu**, đúng như UCS được chứng minh là luôn tối ưu (miễn chi phí bước $\ge \epsilon > 0$).
+BFS được thiết kế để tối ưu **số bước chuyển trạng thái (hop count)**, chứ không phải **tổng chi phí tích lũy**. Đối với BFS, một cạnh có trọng số $1$ cũng hoàn toàn bình đẳng với một cạnh có trọng số $1000$.
 
-::: danger Bẫy thi #3 — Điều kiện dừng của UCS/A*
-Giống hệt bẫy ở A\* (Chương 3): UCS chỉ được dừng khi **lấy đích ra khỏi hàng đợi ưu tiên**, không phải khi đích *xuất hiện* trong hàng đợi lần đầu.
-:::
+Một cách người ta hay dùng trong thực tế để kiểm tra nhanh xem có nên dùng BFS hay không:
+- Nếu bài toán có chi phí bước đi **đồng nhất** (mọi hành động tiêu tốn chi phí như nhau, ví dụ đếm số bước đi trên bàn cờ ca-rô, lưới ô vuông không chướng ngại vật): BFS **chắc chắn tối ưu**.
+- Nếu bài toán có chi phí bước đi **khác nhau** (như độ dài đoạn đường, lượng tiêu thụ nhiên liệu): BFS sẽ tìm ra đường ít bước nhất nhưng có thể rất đắt đỏ.
 
-## 2.5 Iterative Deepening Search (IDS) — "DFS lặp lại nhiều lần, sâu dần"
+### Ứng dụng thực tế của BFS
+- **Độ tách biệt trong mạng xã hội:** Tìm đường ngắn nhất về số mối quan hệ bạn bè giữa hai người bất kỳ (Degrees of Separation trên LinkedIn/Facebook).
+- **Bộ thu thập dữ liệu web (Web Crawler):** Bắt đầu từ trang chủ, tải toàn bộ các liên kết ở độ sâu 1, rồi mới đào sâu tiếp sang các liên kết cấp 2.
+- **Phân tích mạng máy tính:** Định tuyến gói tin theo số lượng trạm trung chuyển (hop count) nhỏ nhất.
 
-::: tip Ẩn dụ
-Giống việc bạn dò tìm chìa khoá bị rơi trong sân tối bằng đèn pin có tầm chiếu **tăng dần từng mét một**: mỗi lượt soi tới đúng bán kính giới hạn rồi tắt đèn, bật lại với bán kính xa hơn. Có vẻ lãng phí (soi lại vùng gần nhiều lần), nhưng tổng công sức vẫn cùng cấp độ lớn với soi một lần bán kính xa nhất.
-:::
+---
 
-IDS = DFS có giới hạn độ sâu (Depth-Limited Search), tăng dần giới hạn $\ell = 0, 1, 2, \ldots$ cho tới khi tìm thấy đích.
+## 2.4 Depth-First Search (DFS) — Thám hiểm kiên định tới tận cùng
 
-| Vòng lặp | Giới hạn độ sâu $\ell$ | Kết quả |
-|---|---|---|
-| 1 | 0 | Chỉ thấy S, chưa phải đích → thất bại |
-| 2 | 1 | Thấy A, B (con của S) → chưa phải đích → thất bại |
-| 3 | 2 | Thấy thêm B(qua A), C(qua A) → nếu đích ở đây thì dừng, nhưng G chưa xuất hiện → thất bại |
-| 4 | 3 | Thấy thêm C(qua B), G(qua C, qua A) → **tìm thấy G** |
+### Trực giác cơ chế
 
-::: tip Vì sao không tốn nhiều thời gian hơn BFS bao nhiêu?
-Khi hệ số nhánh $b>1$, các lớp gần đáy chứa phần lớn số nút: lớp sâu nhất có $b^d$ nút, còn các lớp phía trên có $b^{d-1}, b^{d-2},\ldots$ nút. Vì vậy, việc duyệt lại các lớp nông chỉ thêm một hệ số hằng vào tổng số bước. IDS vẫn có thời gian $O(b^d)$ như BFS và bộ nhớ $O(bd)$ như DFS.
-:::
+Nếu BFS là giọt mực lan đều, thì DFS giống như một người thám hiểm đi trong mê cung theo nguyên tắc: **luôn rẽ trái ở mọi ngã rẽ cho đến khi đụng ngõ cụt**, chỉ khi không còn đường đi tiếp mới chịu quay lui (backtracking) lại ngã ba gần nhất để thử hướng rẽ khác.
 
-## 2.6 Bảng so sánh 4 thuật toán (thuộc lòng trước khi thi)
+DFS sử dụng ngăn xếp vào-sau-ra-trước (**LIFO Stack**), thường được cài đặt trực tiếp thông qua kỹ thuật **đệ quy**.
 
-| Thuật toán | Đầy đủ? | Tối ưu? | Thời gian | Bộ nhớ |
-|---|---|---|---|---|
-| **BFS** | Có (nếu $b$ hữu hạn) | Chỉ khi chi phí bước đồng nhất | $O(b^d)$ | $O(b^d)$ |
-| **DFS** | Không (đồ thị vô hạn/có chu trình), Có nếu không gian hữu hạn không lặp | Không | $O(b^m)$ | $O(bm)$ |
-| **UCS** | Có (chi phí bước $\ge \epsilon>0$) | **Có** | $O(b^{1+\lfloor C^*/\epsilon\rfloor})$ | tương tự thời gian |
-| **IDS** | Có | Chỉ khi chi phí bước đồng nhất | $O(b^d)$ | $O(bd)$ |
+```mermaid
+flowchart TD
+    S["S"] --> B["B (chọn đi sâu trước)"]
+    B --> C["C"]
+    C --> G["G (Chạm đích!)"]
+    S -.-> A["A (chưa kịp xét)"]
 
-($b$ = hệ số nhánh, $d$ = độ sâu lời giải nông nhất, $m$ = độ sâu tối đa không gian trạng thái, $C^*$ = chi phí lời giải tối ưu.)
+    classDef goal fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+    classDef unvisited fill:#f3f4f6,stroke:#9ca3af,stroke-dasharray: 4 4,color:#6b7280;
+    class G goal;
+    class A unvisited;
+```
 
-## 2.7 Code C++ tổng hợp
+Giả sử tại đỉnh $S$, ta thử nhánh $B$ trước $A$:
+DFS sẽ lao thẳng: $S \to B \to C \to G$. Ngay khi chạm đích $G$, thuật toán công bố kết quả:
+$$
+\text{Chi phí} = 4 + 1 + 3 = 8
+$$
+Kết quả này phụ thuộc hoàn toàn vào thứ tự nhánh được chọn khi cài đặt. Nếu ta thử $A$ trước, DFS lại có thể đi theo $S \to A \to C \to G$ ($=9$) hoặc $S \to A \to B \to C \to G$ ($=7$).
+
+### Điểm mạnh tối thượng và tử huyệt của DFS
+
+Hãy so sánh lượng bộ nhớ mà hai giải thuật phải gánh chịu:
+- Gọi $b$ là hệ số rẽ nhánh (branching factor - trung bình mỗi đỉnh có $b$ con).
+- Gọi $d$ là độ sâu của lời giải nông nhất.
+- Gọi $m$ là độ sâu tối đa của không gian trạng thái.
+
+| Tiêu chí | BFS | DFS |
+|:---|:---:|:---:|
+| **Độ phức tạp thời gian** | $O(b^d)$ | $O(b^m)$ |
+| **Độ phức tạp không gian (Bộ nhớ)** | $O(b^d)$ | $O(b \cdot m)$ |
+
+Hãy chú ý thật kỹ sự khác biệt ở hàng **bộ nhớ**:
+Trong khi BFS đòi hỏi bộ nhớ bùng nổ theo hàm mũ $O(b^d)$ (buộc phải nhớ toàn bộ biên giới của tầng hiện tại), thì DFS chỉ cần lưu trữ các nút dọc theo đường đi hiện tại từ gốc cộng với các nhánh anh em chưa xét, tức chỉ tốn **bộ nhớ tuyến tính** $O(b \cdot m)$!
+
+Ví dụ sinh động: Giả sử $b = 10$, độ sâu $d = 10$:
+- BFS cần lưu trữ khoảng $10^{10}$ nút trong RAM — tương đương hàng chục Gigabyte, máy tính cá nhân lập tức cạn bộ nhớ và dừng chương trình (Out of Memory).
+- DFS chỉ cần lưu khoảng $10 \times 10 = 100$ nút trong Call Stack — chỉ vỏn vẹn vài Kilobyte!
+
+Tuy nhiên, **tử huyệt** của DFS là: Nếu không gian trạng thái có chu trình hoặc sâu vô hạn, DFS có thể lao đầu mãi mãi xuống một nhánh cụt mà không bao giờ quay lại, dẫn đến mất tính đầy đủ (Incompleteness).
+
+### Ứng dụng thực tế của DFS
+- **Sắp xếp tô-pô (Topological Sorting):** Giải quyết bài toán phụ thuộc gói tin trong quản lý thư viện phần mềm (npm, Maven, apt).
+- **Phát hiện chu trình:** Kiểm tra khóa chết (Deadlock) trong hệ điều hành và cơ sở dữ liệu.
+- **Trò chơi giải câu đố:** Giải Sudoku, tìm đường đi trong mê cung kín có giới hạn kích thước.
+
+---
+
+## 2.5 Uniform-Cost Search (UCS) — Dẫn đường bằng chi phí thực tế
+
+### Trực giác cơ chế
+
+Làm thế nào để vừa không mù quáng trước số bước nhảy như BFS, vừa không liều lĩnh như DFS? Câu trả lời là: **Hãy luôn mở rộng trạng thái có tổng chi phí tích lũy từ gốc $g(n)$ nhỏ nhất!**
+
+UCS thay thế hàng đợi FIFO đơn thuần bằng một **hàng đợi ưu tiên (Priority Queue)** với khóa sắp xếp là $g(n)$. Về mặt bản chất toán học, UCS chính là thuật toán **Dijkstra** lừng danh được áp dụng trên không gian trạng thái.
+
+```mermaid
+flowchart LR
+    S((S<br/>g=0)) -->|1| A((A<br/>g=1))
+    S -->|4| B((B<br/>g=4))
+    A -->|2| B
+    A -->|5| C((C<br/>g=6))
+    B -->|1| C
+    C -->|3| G(((G<br/>g=7)))
+
+    classDef goal fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+    class G goal;
+```
+
+### Diễn biến từng bước trên đồ thị mẫu
+
+| Bước | Đỉnh lấy ra khỏi hàng đợi | Chi phí $g(u)$ | Hàng đợi ưu tiên (sắp theo $g$) | Tập đóng (Closed) |
+|:---:|:---:|:---:|:---|:---|
+| Khởi tạo | — | — | $[(S, 0)]$ | $\emptyset$ |
+| 1 | **S** | $0$ | $[(A, 1), (B, 4)]$ | $\{S\}$ |
+| 2 | **A** | $1$ | Thử đến $B$ qua $A$ tốn $1+2=3 < 4$ (cập nhật $B$ thành 3). Thêm $C$ với $g=1+5=6$.<br/>Hàng đợi: $[(B, 3), (C, 6)]$ | $\{S, A\}$ |
+| 3 | **B** | $3$ | Thử đến $C$ qua $B$ tốn $3+1=4 < 6$ (cập nhật $C$ thành 4).<br/>Hàng đợi: $[(C, 4)]$ | $\{S, A, B\}$ |
+| 4 | **C** | $4$ | Đến $G$ qua $C$ tốn $4+3=7$.<br/>Hàng đợi: $[(G, 7)]$ | $\{S, A, B, C\}$ |
+| 5 | **G** | $7$ | Lấy $G$ ra khỏi hàng đợi $\to$ **DỪNG** | $\{S, A, B, C, G\}$ |
+
+Kết quả đường đi:
+$$
+S \to A \to B \to C \to G, \quad \text{Tổng chi phí} = 7 \quad (\text{Tối ưu tuyệt đối!})
+$$
+
+### Quy tắc vàng khi cài đặt UCS: Điều kiện dừng chuẩn xác
+
+Một câu hỏi bản chất mà người mới học thường băn khoăn là: **Tại sao ta không được dừng ngay khi vừa nhìn thấy nút đích được sinh ra (được đẩy vào hàng đợi)?**
+
+Hãy suy ngẫm trường hợp sau: Giả sử tại Bước 2, từ đỉnh $A$ ta có một cạnh nối trực tiếp đến $G$ với chi phí $10$. Lúc đó, cặp $(G, 11)$ sẽ được đẩy vào hàng đợi ưu tiên.
+Nếu dừng ngay lúc thấy $G$, thuật toán sẽ trả về đường đi qua cạnh đó với chi phí $11$. Nhưng trong hàng đợi lúc đó vẫn còn đỉnh $B$ với chi phí chỉ là $3$. Từ $B$, ta hoàn toàn có thể đi tiếp tới $G$ với tổng chi phí chỉ là $7$.
+
+> **Quy tắc bất biến:** UCS (và cả A* sau này) **chỉ được phép công bố lời giải khi nút đích được lấy ra (pop) khỏi hàng đợi ưu tiên**, tuyệt đối không dừng khi nút đích vừa được sinh ra (push).
+
+### Điều kiện đảm bảo tính tối ưu của UCS
+Để UCS đảm bảo tìm ra lời giải tối ưu và dừng lại được, mọi chi phí bước đi phải bị chặn dưới bởi một số thực dương nhỏ $\epsilon > 0$:
+$$
+c(s, a, s') \ge \epsilon > 0
+$$
+Nếu tồn tại cạnh có chi phí bằng $0$ hoặc âm, thuật toán có thể lặp vô tận trên các chu trình không tốn phí mà không bao giờ tiến đến đích.
+
+---
+
+## 2.6 Iterative Deepening Search (IDS) — Đỉnh cao dung hòa
+
+Chúng ta đứng trước một nghịch lý lớn:
+- **BFS:** Tìm được đường tối ưu về số bước, nhưng **bộ nhớ RAM bùng nổ theo hàm mũ**, nhanh chóng làm tràn máy.
+- **DFS:** Bộ nhớ tuyến tính cực kỳ thanh thoát, nhưng **không tối ưu** và có thể **lạc vô tận** trong nhánh sâu.
+
+Liệu có giải pháp nào mang trọn vẹn ưu điểm của cả hai: vừa tốn ít bộ nhớ như DFS, lại vừa đảm bảo tìm được lời giải nông nhất như BFS?
+Nhà khoa học máy tính Richard Korf đã đưa ra câu trả lời xuất sắc: **Tìm kiếm sâu dần (Iterative Deepening Search - IDS)**.
+
+```mermaid
+flowchart TD
+    subgraph I0 ["Lần lặp 0: Giới hạn độ sâu L = 0"]
+        S0["Chỉ xét S"]
+    end
+    subgraph I1 ["Lần lặp 1: Giới hạn độ sâu L = 1"]
+        S1["S"] --> A1["A"]
+        S1 --> B1["B"]
+    end
+    subgraph I2 ["Lần lặp 2: Giới hạn độ sâu L = 2"]
+        S2["S"] --> A2["A"] --> C2["C"]
+        S2 --> B2["B"] --> C2b["C"]
+    end
+    subgraph I3 ["Lần lặp 3: Giới hạn độ sâu L = 3"]
+        S3["S"] --> A3["A"] --> C3["C"] --> G3["G (Chạm đích!)"]
+    end
+
+    I0 --> I1 --> I2 --> I3
+    classDef goal fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+    class G3 goal;
+```
+
+### Cơ chế hoạt động
+IDS chạy thuật toán DFS lặp đi lặp lại nhiều lần với giới hạn độ sâu $\ell$ tăng dần từng bước: $\ell = 0, 1, 2, 3, \ldots$
+- Tại mỗi vòng lặp, DFS bị chặn đứng nếu chạm tới độ sâu $\ell$.
+- Nếu không tìm thấy đích trong ngưỡng $\ell$, toàn bộ cây tìm kiếm được giải phóng khỏi bộ nhớ, và vòng lặp tiếp theo bắt đầu lại từ đầu với ngưỡng $\ell + 1$.
+
+### Giải đáp nghi vấn: "Lặp lại từ đầu có gây lãng phí khủng khiếp không?"
+
+Một phản xạ rất tự nhiên của người học là: "Mỗi lần tăng giới hạn, ta lại phải duyệt lại tất cả các nút ở tầng trên từ đầu. Làm như vậy chẳng phải quá lãng phí tài nguyên tính toán hay sao?"
+
+Để hiểu thấu đáo câu trả lời, hãy nhìn vào bản chất của **cấp số nhân**:
+Trong một cây tìm kiếm với hệ số rẽ nhánh $b$:
+- Tầng sâu nhất $d$ có $b^d$ nút.
+- Tầng $d-1$ có $b^{d-1}$ nút.
+- Tổng số nút ở tất cả các tầng phía trên gộp lại chỉ xấp xỉ $\frac{b^d}{b-1}$.
+
+Số lần một nút ở độ sâu $i$ được duyệt trong IDS là $(d - i + 1)$. Tổng số lần duyệt nút trên toàn cây là:
+$$
+N_{\text{IDS}} = (d+1) \cdot 1 + d \cdot b + (d-1) \cdot b^2 + \cdots + 1 \cdot b^d
+$$
+
+Khi $b > 1$ (ví dụ thực tế $b = 10$ và $d = 5$):
+- Nút ở tầng đáy ($d=5$) có $100.000$ nút, chỉ bị duyệt đúng **1 lần**.
+- Nút ở tầng $4$ có $10.000$ nút, bị duyệt $2$ lần.
+- Nút ở tầng gốc chỉ có $1$ nút, bị duyệt $6$ lần.
+
+Tổng số thao tác của IDS chỉ tăng thêm khoảng $\frac{b}{b-1}$ lần so với BFS (khi $b=10$, chi phí chỉ tăng thêm chừng $11\%$).
+Đánh đổi một lượng tính toán phụ cực nhỏ để đổi lấy **sự an toàn tuyệt đối về bộ nhớ** (chỉ tốn $O(b \cdot d)$ thay vì $O(b^d)$) là một sự đánh đổi quá hời! Đó là lý do IDS được xem là giải thuật tìm kiếm mù tiêu chuẩn khi không gian tìm kiếm lớn và độ sâu của đích chưa biết trước.
+
+---
+
+## 2.7 Bảng đối chiếu tổng kết bốn thuật toán
+
+Dưới đây là bức tranh toàn cảnh để định hình tư duy giải thuật:
+
+| Tiêu chuẩn đánh giá | BFS | DFS | UCS | IDS |
+|:---|:---:|:---:|:---:|:---:|
+| **Tính đầy đủ (Complete)?** | Có (nếu $b$ hữu hạn) | Không (vô hạn/chu trình) | Có (nếu $c \ge \epsilon > 0$) | Có (nếu $b$ hữu hạn) |
+| **Tính tối ưu (Optimal)?** | Chỉ khi chi phí bước đều | Không | **Có (theo chi phí)** | Chỉ khi chi phí bước đều |
+| **Thời gian** | $O(b^d)$ | $O(b^m)$ | $O\left(b^{1 + \lfloor C^* / \epsilon \rfloor}\right)$ | $O(b^d)$ |
+| **Bộ nhớ (Không gian)** | $O(b^d)$ *(nút thắt)* | $O(b \cdot m)$ *(rất nhỏ)* | $O\left(b^{1 + \lfloor C^* / \epsilon \rfloor}\right)$ | $O(b \cdot d)$ *(tối ưu nhất)* |
+
+*Ký hiệu: $b$ là hệ số nhánh, $d$ là độ sâu lời giải nông nhất, $m$ là độ sâu lớn nhất của không gian trạng thái, $C^*$ là chi phí của lời giải tối ưu.*
+
+---
+
+## 2.8 Cài đặt mẫu bằng C++ chuẩn mực
+
+Mã nguồn dưới đây minh họa sự khác biệt căn bản trong việc tổ chức cấu trúc dữ liệu giữa ba chiến lược cốt lõi: BFS, DFS và IDS.
 
 ```cpp
+#include <iostream>
 #include <vector>
 #include <queue>
 #include <stack>
-#include <unordered_set>
+#include <algorithm>
+
 using namespace std;
 
-struct Edge { int to; int cost; };
+struct Edge {
+    int to;
+    int cost;
+};
+
 using Graph = vector<vector<Edge>>;
 
-// ---------- BFS: chỉ đếm số cạnh, KHÔNG quan tâm trọng số ----------
-vector<int> bfs(int start, int goal, const Graph& g) {
-    queue<int> q;
-    vector<int> parent(g.size(), -1);
-    vector<bool> visited(g.size(), false);
-    q.push(start); visited[start] = true;
+// ============================================================================
+// 1. BREADTH-FIRST SEARCH (BFS)
+// Dùng hàng đợi FIFO; tối ưu về số bước chuyển trạng thái (hops)
+// ============================================================================
+vector<int> breadthFirstSearch(int start, int goal, const Graph& graph) {
+    int n = graph.size();
+    queue<int> frontier;
+    vector<bool> visited(n, false);
+    vector<int> parent(n, -1);
 
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        if (u == goal) break;                 // BFS: đủ điều kiện dừng ngay khi PHÁT HIỆN đích
-        for (const Edge& e : g[u]) {
-            if (!visited[e.to]) {
-                visited[e.to] = true;          // đánh dấu ngay khi đưa vào hàng đợi, tránh trùng lặp
-                parent[e.to] = u;
-                q.push(e.to);
+    frontier.push(start);
+    visited[start] = true;
+
+    while (!frontier.empty()) {
+        int u = frontier.front();
+        frontier.pop();
+
+        if (u == goal) break; // Phát hiện đích
+
+        for (const auto& edge : graph[u]) {
+            int v = edge.to;
+            if (!visited[v]) {
+                visited[v] = true;
+                parent[v] = u;
+                frontier.push(v);
             }
         }
     }
+
+    // Tái dựng lại lộ trình từ đỉnh đích về nguồn
     vector<int> path;
-    for (int v = goal; v != -1; v = parent[v]) path.push_back(v);
+    for (int curr = goal; curr != -1; curr = parent[curr]) {
+        path.push_back(curr);
+    }
     reverse(path.begin(), path.end());
-    return path;
+    return (path.front() == start) ? path : vector<int>{};
 }
 
-// ---------- DFS đệ quy: chú ý stack overflow nếu đồ thị quá sâu ----------
-bool dfs(int u, int goal, const Graph& g, vector<bool>& visited, vector<int>& path) {
-    visited[u] = true;
+// ============================================================================
+// 2. DEPTH-FIRST SEARCH (DFS)
+// Dùng đệ quy (ngăn xếp hệ thống); tiết kiệm tối đa bộ nhớ làm việc
+// ============================================================================
+bool depthFirstSearchRecursive(int u, int goal, const Graph& graph,
+                               vector<bool>& inPath, vector<int>& path) {
     path.push_back(u);
+    inPath[u] = true;
+
     if (u == goal) return true;
-    for (const Edge& e : g[u]) {
-        if (!visited[e.to] && dfs(e.to, goal, g, visited, path)) return true;
+
+    for (const auto& edge : graph[u]) {
+        int v = edge.to;
+        if (!inPath[v]) {
+            if (depthFirstSearchRecursive(v, goal, graph, inPath, path)) {
+                return true;
+            }
+        }
     }
-    path.pop_back();                           // quay lui khi nhánh này không dẫn tới đích
+
+    // Quay lui (Backtracking)
+    path.pop_back();
+    inPath[u] = false;
     return false;
 }
 
-// ---------- UCS: giống hệt Dijkstra, xem chi tiết ở Chương 3 (A*, h=0) ----------
-// (dùng lại aStarSearch(start, goal, adj, /*h=*/vector<int>(n, 0)) từ Chương 3)
-
-// ---------- IDS: lặp lại Depth-Limited DFS với giới hạn tăng dần ----------
-bool depthLimitedDFS(int u, int goal, int limit, const Graph& g, vector<int>& path) {
+// ============================================================================
+// 3. ITERATIVE DEEPENING SEARCH (IDS)
+// DFS có kiểm soát giới hạn độ sâu, lặp tăng dần từ 0 tới maxDepth
+// ============================================================================
+bool depthLimitedSearch(int u, int goal, int limit, const Graph& graph, vector<int>& path) {
     path.push_back(u);
     if (u == goal) return true;
-    if (limit == 0) { path.pop_back(); return false; }   // hết ngân sách độ sâu -> cắt
-    for (const Edge& e : g[u]) {
-        // Không cần bảng visited toàn cục vì giới hạn độ sâu đã tự chặn chu trình vô hạn
-        if (depthLimitedDFS(e.to, goal, limit - 1, g, path)) return true;
+    if (limit <= 0) {
+        path.pop_back();
+        return false; // Chạm ngưỡng độ sâu, cắt nhánh
     }
+
+    for (const auto& edge : graph[u]) {
+        if (depthLimitedSearch(edge.to, goal, limit - 1, graph, path)) {
+            return true;
+        }
+    }
+
     path.pop_back();
     return false;
 }
 
-vector<int> iterativeDeepeningSearch(int start, int goal, const Graph& g, int maxDepth) {
-    for (int limit = 0; limit <= maxDepth; ++limit) {
+vector<int> iterativeDeepeningSearch(int start, int goal, const Graph& graph, int maxDepth) {
+    for (int depth = 0; depth <= maxDepth; ++depth) {
         vector<int> path;
-        if (depthLimitedDFS(start, goal, limit, g, path)) return path;
+        if (depthLimitedSearch(start, goal, depth, graph, path)) {
+            return path; // Tìm thấy lời giải ở độ sâu nhỏ nhất
+        }
     }
-    return {}; // không tìm thấy trong giới hạn cho phép
+    return {};
 }
 ```
 
-## 2.8 Bảng bẫy thi chương này
+---
 
-| # | Bẫy | Ghi nhớ |
-|---|---|---|
-| 1 | BFS luôn tối ưu | Chỉ đúng khi chi phí mỗi bước bằng nhau |
-| 2 | DFS luôn đầy đủ | Sai trên không gian vô hạn/có chu trình nếu không lưu `visited` |
-| 3 | UCS dừng khi thấy đích trong Open | Phải dừng khi **lấy đích ra khỏi** hàng đợi |
-| 4 | IDS lãng phí vì soi lại nhiều lần | Vẫn cùng bậc $O(b^d)$ với BFS, nhưng bộ nhớ chỉ $O(bd)$ |
+## 2.9 Những cạm bẫy tư duy thường gặp
 
-## Tài liệu tham khảo
-
-- Russell & Norvig, *AIMA* 4th ed., mục 3.4 (Uninformed Search Strategies).
-- Cormen et al., *Introduction to Algorithms* 4th ed., chương 20 (BFS/DFS) và 22.3 (Dijkstra ≈ UCS).
-- Bài giảng gốc AIT2004 — [Bài 2: Tìm kiếm mù](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-02-tim-kiem-mu.html).
-- VisuAlgo — [visualgo.net/en/dfsbfs](https://visualgo.net/en/dfsbfs): minh hoạ trực quan BFS/DFS trên đồ thị.
+1. **Đồng nhất hóa tính tối ưu của BFS với mọi bài toán:**
+   *Hiểu đúng:* BFS chỉ tối ưu khi mọi hành động có chi phí bằng nhau. Khi cạnh có trọng số khác nhau, BFS chỉ tối ưu về số cạnh đã đi, không tối ưu về tổng chi phí.
+2. **Dừng tìm kiếm quá sớm trong UCS:**
+   *Hiểu đúng:* Không bao giờ được dừng khi vừa nhìn thấy đích được đẩy vào hàng đợi ưu tiên. Phải đợi cho tới khi đích được rút ra khỏi đầu hàng đợi, bởi vì có thể tồn tại một đường đi vòng khác qua các nút trung gian chưa mở rộng nhưng có tổng chi phí rẻ hơn.
+3. **Ngộ nhận rằng IDS lãng phí vì duyệt lại:**
+   *Hiểu đúng:* Nhờ sự bùng nổ cấp số nhân ở tầng đáy, chi phí duyệt lặp ở các tầng nông chỉ chiếm một tỉ lệ không đáng kể (chừng 10–15% tổng thời gian). Sự đánh đổi này mang lại lợi ích vô giá: bộ nhớ chỉ tốn $O(b \cdot d)$.
 
 ---
-← [Chương 1](/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 3 →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
+
+[← Quay lại Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)

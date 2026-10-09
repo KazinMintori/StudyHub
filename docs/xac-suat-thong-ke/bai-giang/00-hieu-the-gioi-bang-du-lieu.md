@@ -98,8 +98,6 @@ Dự đoán không tự giải thích nguyên nhân của kết quả. Một th�
 
 ## 3. Bài tập tự luyện
 
-Số liệu trong các bài tập là giả định.
-
 ### Bài 1. Nhận diện loại phát biểu
 
 ::: exercise
@@ -123,7 +121,7 @@ Với mỗi câu sau, hãy xác định loại phát biểu và nêu đặc đi�
 ### Bài 2. Tính đúng tỷ lệ và giữ đúng phạm vi
 
 ::: exercise
-Một khảo sát giả định nhận 20 câu trả lời, trong đó 14 người cho biết chưa từng lập trình. Hãy tính tỷ lệ, viết một câu mô tả đúng dữ liệu và giải thích vì sao chưa thể thay nhóm trả lời bằng toàn bộ sinh viên của trường.
+Một khảo sát nhận 20 câu trả lời, trong đó 14 người cho biết chưa từng lập trình. Hãy tính tỷ lệ, viết một câu mô tả đúng dữ liệu và giải thích vì sao chưa thể thay nhóm trả lời bằng toàn bộ sinh viên của trường.
 :::
 
 ::: hint

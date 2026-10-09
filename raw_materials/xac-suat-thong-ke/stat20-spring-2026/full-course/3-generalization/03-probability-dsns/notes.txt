@@ -1,0 +1,535 @@
+Probability Distributions
+
+Some special distributions and visualizing probabilities
+
+    
+
+    
+
+  
+
+So far we have seen examples of outcome spaces, and descriptions of how we might compute probabilities, along with tabular representations of the probabilities. In this set of notes, we are going to talk about how to visualize probabilities using tables and histograms, as well as how to visualize simulations of outcomes from actions such as tossing coins or rolling dice.
+
+Probability distributions and histograms
+
+Probability distributions
+
+Recall the example in which we drew a ticket from a box with 5 tickets in it:
+
+If we draw one ticket at random from this box, we know that the probabilities of the four distinct outcomes can be listed in a table as:
+
+Outcome
+
+[MATH] \(1\)
+
+[MATH] \(2\)
+
+[MATH] \(3\)
+
+[MATH] \(4\)
+
+Probability
+
+[MATH] \(\displaystyle \frac{1}{5}\)
+
+[MATH] \(\displaystyle \frac{2}{5}\)
+
+[MATH] \(\displaystyle \frac{1}{5}\)
+
+[MATH] \(\displaystyle \frac{1}{5}\)
+
+What we have described in the table above is a probability distribution. We have shown how the total probability of one or 100% is distributed among all the possible outcomes. Since the ticket 
+[MATH] \(\fbox{2}\) is twice as likely as any of the other outcomes, it gets twice as much of the probability.
+
+Probability histograms
+
+A table is nice, but a visual representation would be even better.
+
+We have represented the distribution in the form of a histogram, with the areas of the bars representing probabilities. Notice that this histogram is different from the ones we have seen before, since we didn’t collect any data. We just defined the probabilities based on the outcomes, and then drew bars with the heights being the probabilities. This type of theoretical histogram is called a probability histogram.
+
+Empirical histograms
+
+What about if we don’t know the probability distribution of the outcomes of an experiment? For example, what if we didn’t know how to compute the probability distribution above? What could we do to get an idea of what the probabilities might be? Well, we could keep drawing tickets over and over again from the box, with replacement (that is, we put the selected tickets back before choosing again), keep track of the tickets we draw, and make a histogram of our results. This kind of histogram, which is the kind we have seen before, is a visual representation of data, and is called an empirical histogram.
+
+On the x-axis of this histogram, we have the ticket values; on the y-axis, we have the proportion of times that this ticket was selected out of the 50 with-replacement draws we took.We can see that the sample proportions looks similar to the values given by the probability distribution, but there are some differences. For example, we appear to have drawn more 
+[MATH] \(3\)s and less 
+[MATH] \(4\)s than what was to be expected. It turns out that the counts and proportions of the drawn tickets are:
+
+Ticket
+Number of times drawn
+Proportion of times drawn
+
+[MATH] \(\fbox{1}\)
+10
+0.2
+
+[MATH] \(\fbox{2}\)
+24
+0.48
+
+[MATH] \(\fbox{3}\)
+10
+0.2
+
+[MATH] \(\fbox{4}\)
+6
+0.12
+
+What we have seen here is how when we draw at random, we get a sample that resembles the population, that is, a representative sample, but it isn’t exactly the true probabilities. If we increase our sample, however, say to 500, we will get something that more closely aligns with the truth.
+
+Examples
+
+Rolling a pair of dice and summing the spots
+
+The outcomes are already numbers, so we don’t need to represent them differently. We know that there are 
+[MATH] \(36\) total possible equally likely outcomes when we roll a pair of dice, but when we add the spots, we have only 11 possible outcomes, which are not equally likely (the chance of seeing a 
+[MATH] \(2\) is 
+[MATH] \(1/36\), but 
+[MATH] \(P(6)=5/36\)).
+
+The probability histogram will have the possible outcomes listed on the x-axis, and bars of width 
+[MATH] \(1\) over each possible outcome. The height of these bars will be the probability, so that the areas of the bars represent the probability of the value under the bar. The height, which is the probability, is written on the top of each bar.
+
+What about the probability distribution? Make a table showing the probability distribution for rolling a pair of dice and summing the spots.
+
+Check your answer
+
+Outcome
+
+[MATH] \(2\)
+
+[MATH] \(3\)
+
+[MATH] \(4\)
+
+[MATH] \(5\)
+
+[MATH] \(6\)
+
+[MATH] \(7\)
+
+[MATH] \(8\)
+
+[MATH] \(9\)
+
+[MATH] \(10\)
+
+[MATH] \(11\)
+
+[MATH] \(12\)
+
+Probability
+
+[MATH] \(\displaystyle \frac{1}{36}\)
+
+[MATH] \(\displaystyle \frac{2}{36}\)
+
+[MATH] \(\displaystyle \frac{3}{36}\)
+
+[MATH] \(\displaystyle \frac{4}{36}\)
+
+[MATH] \(\displaystyle \frac{5}{36}\)
+
+[MATH] \(\displaystyle \frac{6}{36}\)
+
+[MATH] \(\displaystyle\frac{5}{36}\)
+
+[MATH] \(\displaystyle \frac{4}{36}\)
+
+[MATH] \(\displaystyle \frac{3}{36}\)
+
+[MATH] \(\displaystyle \frac{2}{36}\)
+
+[MATH] \(\displaystyle \frac{1}{36}\)
+
+Tossing a fair coin 3 times and counting the number of heads
+
+We have seen that there are 8 equally likely outcomes from tossing a fair coin three times: 
+[MATH] \(\{HHH, HHT, HTH, THH, TTH, THT, HTT, TTT\}\). If we count the number of 
+[MATH] \(H\) in each outcome, and write down the probability distribution of the number of heads, we get:
+
+Outcome
+
+[MATH] \(0\)
+
+[MATH] \(1\)
+
+[MATH] \(2\)
+
+[MATH] \(3\)
+
+Probability
+
+[MATH] \(\displaystyle \frac{1}{8}\)
+
+[MATH] \(\displaystyle \frac{3}{8}\)
+
+[MATH] \(\displaystyle \frac{3}{8}\)
+
+[MATH] \(\displaystyle \frac{1}{8}\)
+
+What would the probability histogram look like?
+
+Check your answer
+
+We are going to introduce some special distributions. We have seen most of these distributions, but will introduce some names and definitions. Before we do this, let’s recall how to count the number of outcomes for various experiments such as tossing coins or drawing tickets from a box (both with and without replacement).
+
+Basic rule of counting
+
+Recall that if we have multiple steps (say 
+[MATH] \(n\)) of some action, such that the 
+[MATH] \(j^{\text{th}}\) step has 
+[MATH] \(k_j\) outcomes; then the total number of outcomes is 
+[MATH] \(k_1 \times k_2 \times \ldots k_n\) and is obtained by multiplying the number of outcomes at each step. This principle is illustrated in the picture below: Geni the Gentoo penguin1 is trying to count how many outfits they have, if each outfit consists of a t-shirt and a pair of pants. The tree diagram below shows the number of possible outfits Geni can wear. In this example, 
+[MATH] \(n=2\), 
+[MATH] \(k_1 = 3\), and 
+[MATH] \(k_2 = 2\), since Geni has three t-shirts to choose from, and for each t-shirt, they have two pairs of pants, leading to a total of 
+[MATH] \(3 \times 2 = 6\) outfits.
+
+This example seems trivial, but it illustrates the basic principle of counting: we get the total number of possible outcomes of an action that has multiple steps, by multiplying together the number of outcomes for each step. All the counting that follows in our notes applies this rule. For example, let’s suppose we are drawing tickets from a box which has tickets marked with the letters 
+[MATH] \(\fbox{C}\), 
+[MATH] \(\fbox{R}\), 
+[MATH] \(\fbox{A}\), 
+[MATH] \(\fbox{T}\), 
+[MATH] \(\fbox{E}\), and say we draw three letters with replacement (that means that we put each drawn ticket back, so the box is the same for each draw). How many possible sequences of three letters can we get? Using the counting rule,since we have 
+[MATH] \(5\) choices for the first letter, 
+[MATH] \(5\) for the second, and 
+[MATH] \(5\) for the third, we will have a total of 
+[MATH] \(5\times 5 \times 5 = 125\) possible words, allowing for repeated letters (that means that 
+[MATH] \(CCC\) is a possible outcome).
+
+How many possible words are there if we draw without replacement? That is, we don’t put the drawn ticket back?
+
+Check your answer
+
+We have 
+[MATH] \(5\) choices for the first letter, 
+[MATH] \(4\) for the second, and 
+[MATH] \(3\) for the third, leading to 
+[MATH] \(5 \times 4 \times 3 = 60\) possible outcomes or words. Note that here we count the word 
+[MATH] \(CRA\) as different from the word 
+[MATH] \(CAR\). That is, the order in which we draw the letters matters.
+
+We usually write the quantity 
+[MATH] \(5 \times 4 \times 3\) as 
+[MATH] \(\displaystyle \frac{5!}{2!}\) where 
+[MATH] \(n! = n\times(n-1)\times(n-2)\times \ldots \times 3 \times 2 \times 1\)
+
+Counting the number of ways to select a subset
+
+What if, in this example of selecting 
+[MATH] \(3\) letters without replacement from 
+[MATH] \(\fbox{C}\), 
+[MATH] \(\fbox{R}\), 
+[MATH] \(\fbox{A}\), 
+[MATH] \(\fbox{T}\), 
+[MATH] \(\fbox{E}\), the order does not matter - we don’t count the order in which the letters , just which letters were selected, that is, only the letters themselves matter. For example, the words 
+[MATH] \(CRA,\,CAR,\,ARC,\,ACR,\,RAC,\,RCA\) all count as the same word, so we will count all 
+[MATH] \(6\) words as the same subset of letters. We have to take the number that we got from earlier and divide it by the number of words that can be made from 
+[MATH] \(3\) letters (number of rearrangements), which is 
+[MATH] \(3 \times 2\times 1\). This gives us the number of ways that we can choose 
+[MATH] \(3\) letters out of 
+[MATH] \(5\), which is 
+[MATH] \[
+\frac{\left(5!/2!\right)}{3!} = \frac{5!}{2!\; 3!},
+\]
+
+and is called the number of combinations of 
+[MATH] \(5\) things taken 
+[MATH] \(3\) at a time.
+
+To recap: when we draw 
+[MATH] \(k\) items from 
+[MATH] \(n\) items without replacement, we have two cases: either we care in what order we draw the 
+[MATH] \(k\) items and the different arrangements of the same set of 
+[MATH] \(k\) items have to be counted separately. The number of such arrangements is called the permutations of 
+[MATH] \(n\) things taken 
+[MATH] \(k\) at a time. In the example above, we have 
+[MATH] \(5 \times 4\times 3 = 60\) ways of choosing 
+[MATH] \(3\) things out of 
+[MATH] \(5\) when we count every sequence as different.
+
+Permutations
+
+The number of possible arrangements or sequences of 
+[MATH] \(n\) things taken 
+[MATH] \(k\) at a time which is given by (the ordering matters): 
+[MATH] \[
+\frac{n!}{(n-k)!}
+\]
+
+Combinations
+
+Number of ways to choose a subset of 
+[MATH] \(k\) things out of 
+[MATH] \(n\) possible things which is given by 
+[MATH] \[
+\frac{n!}{k!\; (n-k)!}
+\] This number is just the number of distinct arrangements or permutations of 
+[MATH] \(n\) things taken 
+[MATH] \(k\) at a time divided by the number of arrangements of 
+[MATH] \(k\) things. It is denoted by 
+[MATH] \(\displaystyle \binom{n}{k}\), which is read as “n choose k”.
+
+Example How many ways can I deal 
+[MATH] \(5\) cards from a standard deck of 52 cards?
+
+Check your answer
+
+When we deal cards, order does not matter, so this number is 
+[MATH] \(\displaystyle \binom{52}{5} = \frac{52!}{(52-5)!5!} = 2,598,960\).
+
+Special distributions
+
+There are some important special distributions that every student of probability must know. Here are a few, and we will learn some more later in the course. We have already seen most of these distributions. All we are doing now is identifying their names. First, we need a vocabulary term:
+
+Parameter of a probability distribution
+
+A constant(s) number associated with the distribution. If you know the parameters of a probability distribution, then you can compute the probabilities of all the possible outcomes.
+
+Each of the distributions we will cover below has a parameter(s) associated with it.
+
+Discrete uniform distribution
+
+This is the probability distribution over the numbers 
+[MATH] \(1, 2, 3 \ldots, n\). We have seen it for dice above. This probability distribution is called the discrete uniform probability distribution, since each possible outcome has the same probability, that is, 
+[MATH] \(1/n\). We call 
+[MATH] \(n\) the parameter of the discrete uniform distribution.
+
+Bernoulli distribution
+
+This is a probability distribution describing the probabilities associated with binary outcomes that result from one action, such as one coin toss that can either land Heads or Tails. We can represent the action as drawing one ticket from a box with tickets marked 
+[MATH] \(\fbox{1}\) or 
+[MATH] \(\fbox{0}\), where the probability of 
+[MATH] \(\fbox{1}\) is 
+[MATH] \(p\), and therefore, the probability of 
+[MATH] \(\fbox{0}\) is 
+[MATH] \((1-p)\). We have already seen some examples of probability histograms for this distribution. We usually think of the possible outcomes of a Bernoulli distribution as success and failure, and represent a success by 
+[MATH] \(\fbox{1}\) and a failure by 
+[MATH] \(\fbox{0}\).
+
+For the Bernoulli distribution, our parameter is 
+[MATH] \(p = P\left(\fbox{1}\right)\). If we know 
+[MATH] \(p\), we also know the probability of drawing a ticket marked 
+[MATH] \(\fbox{0}\).
+
+In the figure above, the first histogram is for a Bernoulli distribution with parameter 
+[MATH] \(p = 1/2\), the second 
+[MATH] \(p=3/4\), and the third has 
+[MATH] \(p = 2/3\).
+
+Binomial Distribution
+
+The binomial distribution, which describes the total number of successes in a sequence of 
+[MATH] \(n\) independent Bernoulli trials, is one of the most important probability distributions. For example, consider the outcomes from tossing a coin 
+[MATH] \(n\) times and counting the total number of heads across all 
+[MATH] \(n\) tosses, where the probability of heads on each toss is 
+[MATH] \(p\). Each toss is one Bernoulli trial, where a success would be the coin landing heads. The binomial distribution describes the probabilities of the total number of heads in three tosses. We saw what this distribution looks like in the case where 
+[MATH] \(n = 3\) for three tosses of a fair coin.
+
+What would the probability distribution and histogram for the number of heads in three tosses of a biased coin like, where 
+[MATH] \(P(H) = 2/3\)? Make sure you know how the probabilities are computed. For example, 
+[MATH] \(P(HHH) = (2/3)^3 = 8/27\).
+
+Check your answer
+
+Note that the outcomes 
+[MATH] \(HHT, HTH, THH\) all have the same probability, as do the outcomes 
+[MATH] \(TTH, THT, HTT\), since the probability only depends on how many heads and how many tails we see in three tosses, not the order in which we see them. We get the probability of 2 heads in 3 tosses by adding the probabilities of all three outcomes 
+[MATH] \(HHT, HTH, THH\), since they are mutually exclusive. (In three tosses, we can see exactly one of the possible 8 sequences listed above.)
+
+More generally, suppose that we have 
+[MATH] \(n\) independent trials, where each trial can either result in a “success” (like drawing a ticket marked 
+[MATH] \(\fbox{1}\)) with probability 
+[MATH] \(p\); or a “failure” (like drawing 
+[MATH] \(\fbox{0}\)) with probability 
+[MATH] \(1-p\). In the case of the Bernoulli distribution, 
+[MATH] \(n = 1\).
+
+The multiplication rule for independent events tells us how to compute the probability of a sequence that consisted of the first 
+[MATH] \(k\) trials being successes and the rest of the 
+[MATH] \(n-k\) trials being failures. The probability of this particular sequence of 
+[MATH] \(k\) successes followed by 
+[MATH] \(n-k\) failures is (by multiplying their probabilities) given by: 
+[MATH] \[
+p^k \times (1-p)^{n-k}
+\] Now this is the probability of one particular sequence: 
+[MATH] \(SSS\ldots SSFF \ldots FFF\), but as we saw in the example above, only the number of successes and failures matter, not the particular order. So every sequence of 
+[MATH] \(n\) trials in which we have 
+[MATH] \(k\) successes and 
+[MATH] \(n-k\) failures has the same probability.
+
+How many such sequences are there? We can count them using our rules above. We have 
+[MATH] \(n\) spots in the sequence, of which 
+[MATH] \(k\) have to be successes. The number of such sequences of length 
+[MATH] \(n\) consisting of 
+[MATH] \(k\) 
+[MATH] \(S\)’s and 
+[MATH] \(n-k\) 
+[MATH] \(F\)’s) is given by 
+[MATH] \(\displaystyle \binom{n}{k}\). Each such sequence has probability 
+[MATH] \(\displaystyle p^k \times (1-p)^{n-k}\). Adding up all these 
+[MATH] \(\displaystyle \binom{n}{k}\) probabilities (of each such sequence) gives us the formula for the probability of 
+[MATH] \(k\) successes in 
+[MATH] \(n\) trials: 
+[MATH] \[
+\binom{n}{k} \times p^k \times (1-p)^{n-k}
+\]
+
+The probability distribution described by the above formula is called the binomial distribution. It is named after 
+[MATH] \(\displaystyle \binom{n}{k}\), which is called the binomial coefficient. The binomial distribution has two parameters: the number of trials 
+[MATH] \(n\) and the probability of success on each trial, 
+[MATH] \(p\).
+
+Example
+
+Toss a weighted coin, where 
+[MATH] \(P(\text{heads}) = .7\) five times. What is the probability that you see exactly four heads across these five tosses?
+
+Check your answer
+
+Across five trials, we need to see four heads and one tails. Since each toss is independent, one possible way to obtain what we are looking for is 
+[MATH] \(HHHHT\). This is given by
+
+[MATH] \[
+(.7)^4 \times (.3)^1
+\]
+
+However, we need to consider all the possible orderings of tosses that involve four heads and one tail. This is given by the binomial coefficient 
+[MATH] \(\binom{5}{4}\). Our final probability is therefore:
+
+[MATH] \[
+\binom{5}{4} (.7)^4 \times (.3)^1 \approx 0.36
+\]
+
+Hypergeometric distribution
+
+In the binomial scenario described above, we had 
+[MATH] \(n\) independent trials, where each trial resulted in a success or a failure. This is like sampling with replacement from a box of 
+[MATH] \(0\)’s and 
+[MATH] \(1\)’s. Now consider the situation when we have a box with 
+[MATH] \(N\) tickets marked with either 
+[MATH] \(\fbox{0}\) or 
+[MATH] \(\fbox{1}\).
+
+As usual, the ticket marked 
+[MATH] \(\fbox{1}\) represents a success. Say the box has 
+[MATH] \(G\) tickets marked 
+[MATH] \(\fbox{1}\) (and therefore 
+[MATH] \(N-G\) tickets marked 
+[MATH] \(\fbox{0}\) representing failures). Suppose we draw a simple random sample of size 
+[MATH] \(n\) from this box. A simple random sample is a sample drawn without replacement, and on each draw, every ticket is equally likely to be selected from among the remaining tickets. Then, the probability of drawing a ticket marked 
+[MATH] \(\fbox{1}\) changes from draw to draw.
+
+What is the probability that we will have exactly 
+[MATH] \(k\) successes among these 
+[MATH] \(n\) draws? The probability distribution that gives us this answer is given by
+
+[MATH] \[
+\frac{\binom{G}{k}\times \binom{N-G}{n-k}}{\binom{N}{n}}
+\]
+
+and is called the hypergeometric distribution. It has three parameters, 
+[MATH] \(n\), 
+[MATH] \(N\) and 
+[MATH] \(G\). This is a wacky formula, so let’s explain it piece by piece, starting with the numerator and then moving to the denominator!
+
+Numerator
+
+We count the number of samples drawn without replacement that have 
+[MATH] \(k\) tickets marked 
+[MATH] \(\fbox{1}\). Since there are 
+[MATH] \(G\) tickets marked 
+[MATH] \(\fbox{1}\) in the box, and 
+[MATH] \(\displaystyle \binom{G}{k}\) ways to choose exactly 
+[MATH] \(k\) of them. Similarly, there are 
+[MATH] \(N-G\) tickets marked 
+[MATH] \(\fbox{0}\) in the box, and 
+[MATH] \(\displaystyle \binom{N-G}{n-k}\) ways to choose exactly 
+[MATH] \(n-k\) of them. The total number of ways to have 
+[MATH] \(k\) 
+[MATH] \(\fbox{1}\)s and 
+[MATH] \(n-k\) 
+[MATH] \(\fbox{0}\)s is therefore (by multiplication):
+
+[MATH] \[
+\binom{G}{k}\times \binom{N-G}{n-k}
+\]
+
+Denominator
+
+We count the total number of simple random samples of size 
+[MATH] \(n\) that can be drawn from a pool of 
+[MATH] \(N\) observations. This is given by 
+[MATH] \(\displaystyle \binom{N}{n}\).
+
+Example
+
+Say we have a box of 
+[MATH] \(10\) tickets consisting of 
+[MATH] \(4\) tickets marked 
+[MATH] \(\fbox{0}\) and 
+[MATH] \(6\) tickets marked 
+[MATH] \(\fbox{1}\), and draw a simple random sample of size 
+[MATH] \(3\) from this box.
+
+What is the probability that two of the tickets drawn are marked 
+[MATH] \(\fbox{1}\)?
+
+Check your answer
+
+We draw 
+[MATH] \(3\) tickets without replacement. We need two of these tickets to be marked 
+[MATH] \(\fbox{1}\) and there are six in total to choose from; we need one of them to be marked 
+[MATH] \(\fbox{0}\) and there are four in total to choose from. Therefore, there are
+
+[MATH] \[
+\binom{6}{2}\times \binom{4}{1} = 60
+\] different ways to pick three tickets in this manner.
+
+How many total ways are there to draw 
+[MATH] \(n=3\) tickets from a box of 
+[MATH] \(N=10\)? This is given by 
+[MATH] \(\binom{10}{3} = 120\).
+
+Therefore, our final answer is given by
+
+[MATH] \[
+\frac{\binom{6}{2}\times \binom{4}{1}}{\binom{10}{3}} = \frac{60}{120} =  \frac{1}{2}
+\]
+
+Binomial vs Hypergeometric distributions
+
+Both these distributions deal with:
+
+a fixed number of trials, or instances of the random experiment;
+
+outcomes that are deemed either successes or failures.
+
+The difference is that for a binomial random variable, the probability of a success stays the same for each trial, and for a hypergeometric random variable, the probability changes with each trial.
+
+Continue on to the tutorial portion of the notes 
+
+Summary
+
+Defined probability distributions
+
+Stated the basic counting principle and introduced permutations and combinations
+
+Defined some famous named distributions (Bernoulli, discrete uniform, binomial, hypergeometric)
+
+Visualized probability distributions using probability histograms
+
+Looked at the relationship between empirical histograms and probability histograms.
+
+In the tutorial we will:
+
+Introduce functions rep(), replicate(), geom_col()
+
+Simulate random experiments such as die rolls and coin tosses to visualize the distributions.
+
+Continue on to the tutorial portion of the notes 
+
+Footnotes
+
+Penguin taken from art by @allison_horst↩︎

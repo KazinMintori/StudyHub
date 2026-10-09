@@ -5,61 +5,45 @@ prerequisites: ["tap-hop","menh-de","luong-tu"]
 lessonStatus: "reference"
 ---
 
-<!-- File: docs/ait2004-co-so-tri-tue-nhan-tao/00-muc-luc.md -->
+# Lộ trình & Mục lục — AIT2004 Cơ sở Trí tuệ Nhân tạo
 
-# Mục lục ôn tập — AIT2004 Cơ sở Trí tuệ nhân tạo
+Học phần **AIT2004 Cơ sở Trí tuệ Nhân tạo** là trụ cột nền tảng của khối ngành Công nghệ Thông tin và Trí tuệ Nhân tạo. Bộ bài giảng được thiết kế với tư duy sư phạm chuẩn mực, phân tích sâu sắc từ trực giác toán học, cơ chế thuật toán, phân tích độ phức tạp đến các ứng dụng công nghệ trong đời sống thực tế.
 
-Bộ tài liệu ôn tập chia theo từng chương, bám sát khung chương trình AIT2004 (17 bài chính + 4 bài bổ sung). Mỗi chương là một file `.md` độc lập, có thể đọc rời hoặc lắp trực tiếp vào cấu trúc `docs/` của VitePress.
-
-::: tip Cách dùng
-Những chương đã có link bên dưới là **đã hoàn thành đầy đủ** (ẩn dụ Feynman + sơ đồ Mermaid + bảng chạy từng bước + code C++ + bẫy thi). Chương chưa có link là **chưa biên soạn** — nói ở cuối trang xem chương nào sẽ làm tiếp theo.
-:::
-
-## Phần I — Giải quyết vấn đề bằng tìm kiếm
-
-| Bài | Chủ đề | Trạng thái |
-|---|---|---|
-| 1 | Giới thiệu & Tác tử thông minh |  chưa làm |
-| 2 | [Tìm kiếm mù](./02-tim-kiem-mu.md) (BFS, DFS, UCS, IDS) |  xong |
-| 3 | [Tìm kiếm dựa trên kinh nghiệm](./03-tim-kiem-kinh-nghiem.md) (Greedy, A\*, Admissible/Consistent, IDA\*) |  xong |
-| 4 | [Tìm kiếm có đối thủ](./04-tim-kiem-doi-khang.md) (Minimax, Alpha–Beta) |  xong |
-| Bổ sung 5 | Bài toán thoả mãn ràng buộc (CSP) |  chưa làm |
-
-## Phần II — Ra quyết định dưới sự không chắc chắn
-
-| Bài | Chủ đề | Trạng thái |
-|---|---|---|
-| 5 | Tính không chắc chắn và lợi ích (Utility Theory) |  chưa làm |
-| 6 | Quá trình quyết định Markov I (MDP — Value/Policy Iteration) |  chưa làm |
-| 7 | Quá trình quyết định Markov II |  chưa làm |
-| 8 | Học tăng cường I (Reinforcement Learning) |  chưa làm |
-| 9 | Học tăng cường II |  chưa làm |
-
-## Phần III — Học máy
-
-| Bài | Chủ đề | Trạng thái |
-|---|---|---|
-| 10 | Học máy — Naive Bayes |  chưa làm |
-| 11 | Học máy — Perceptron & Hồi quy Logistic |  chưa làm |
-| 12 | Mạng nơ-ron I |  chưa làm |
-| 13 | Mạng nơ-ron II |  chưa làm |
-
-## Phần IV — Logic, tri thức và suy luận xác suất
-
-| Bài | Chủ đề | Trạng thái |
-|---|---|---|
-| Bổ sung 1 | Khái niệm về logic mệnh đề |  gộp trong Chương 14 |
-| Bổ sung 2 | Logic vị từ |  gộp trong Chương 14 |
-| 14 | [Logic & Biểu diễn tri thức](./14-logic-bieu-dien-tri-thuc.md) (FOL, Suy luận, Ontology) |  xong |
-| Bổ sung 3 | Giới thiệu Prolog |  chưa làm |
-| 16 | Mạng Bayes I |  chưa làm |
-| 17 | Suy luận bằng mạng Bayes II |  chưa làm |
+Mỗi bài giảng là một chuyên đề độc lập, có cấu trúc chặt chẽ từ bài toán mở đầu, mô hình hóa hình thức, bảng chạy từng bước, mã nguồn C++ chuẩn mực và các đúc kết cạm bẫy tư duy.
 
 ---
 
-## Đồ thị mẫu dùng xuyên suốt các chương tìm kiếm
+## Phần 1. Tác tử thông minh & Không gian trạng thái
 
-Để việc so sánh giữa các chương nhất quán, Chương 2–4 đều dùng lại **cùng một đồ thị trạng thái** ($S,A,B,C,G$) với đáp án tối ưu đã biết trước ($=7$) — giúp thấy rõ BFS/DFS/Greedy sai ở đâu, còn UCS/A\* đúng như thế nào.
+| Bài giảng | Chủ đề trọng tâm | Trạng thái |
+|:---|:---|:---:|
+| [Bài 1: Giới thiệu & Tác tử thông minh](/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md) | Bốn trường phái AI, Tác tử hợp lý, đặc tả PEAS và phân loại môi trường |  Sẵn sàng |
+| [Bài 2: Tìm kiếm mù](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md) | Bản chất không gian trạng thái, BFS, DFS, UCS (Dijkstra) và giải thuật IDS |  Sẵn sàng |
+
+---
+
+## Phần 2. Tìm kiếm kinh nghiệm & Tối ưu hóa
+
+| Bài giảng | Chủ đề trọng tâm | Trạng thái |
+|:---|:---|:---:|
+| [Bài 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) | Hàm Heuristic, Greedy Best-First, A\*, tính Admissible/Consistent và IDA\* |  Sẵn sàng |
+| [Bài 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) | Lý thuyết trò chơi tổng bằng không, Minimax, cắt tỉa Alpha–Beta, hiệu ứng đường chân trời |  Sẵn sàng |
+| [Bài 5: Bài toán thỏa mãn ràng buộc (CSP)](/bieu-dien-tri-thuc/bai-giang/05-csp.md) | Bộ ba $(X, D, C)$, lan truyền AC-3, quay lui Backtracking với MRV, Degree, LCV |  Sẵn sàng |
+
+---
+
+## Phần 3. Biểu diễn tri thức & Suy luận hình thức
+
+| Bài giảng | Chủ đề trọng tâm | Trạng thái |
+|:---|:---|:---:|
+| [Bài 14: Logic & Biểu diễn tri thức](/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md) | Logic vị từ bậc nhất (FOL), lượng từ, hợp nhất hóa Unification, GMP và Ontology |  Sẵn sàng |
+| [Bài 16: Mạng Bayes & Suy luận](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md) | Mô hình đồ thị xác suất DAG, độc lập có điều kiện, D-separation và thuật toán khử biến |  Sẵn sàng |
+
+---
+
+## Đồ thị mẫu dùng đối chiếu xuyên suốt các bài giảng tìm kiếm
+
+Để thấy rõ sự khác biệt bản chất giữa các chiến lược tìm kiếm, các bài giảng tìm kiếm (Chương 2, 3, 4) đều sử dụng một đồ thị trạng thái mẫu chung ($S \to G$) với chi phí tối ưu thực tế đã biết trước ($C^* = 7$):
 
 ```mermaid
 flowchart LR
@@ -71,17 +55,7 @@ flowchart LR
     C -->|3| G((G))
 ```
 
-## Kế hoạch biên soạn tiếp theo
-
-Thứ tự đề xuất cho các chương còn thiếu (theo đúng mạch chương trình):
-
-1. **Chương 1** — Giới thiệu & Tác tử thông minh *(ngắn, làm nhanh để không đứt mạch đầu môn)*
-2. **Chương 5 (CSP)** — nối liền mạch tìm kiếm trước khi rẽ sang xác suất
-3. **Chương 5–9** — Utility Theory, MDP I–II, Reinforcement Learning I–II
-4. **Chương 10–13** — Naive Bayes, Logistic Regression, Neural Networks I–II
-5. **Chương 16–17** — Mạng Bayes I–II
-6. **Bổ sung 3** — Prolog
-
-::: warning Vì sao chia nhỏ thay vì làm một lần?
-Mỗi chương đủ tiêu chuẩn (ẩn dụ + Mermaid + dry-run + code + bẫy thi) tốn dung lượng tương đương một bài giảng ~600–900 dòng. Làm cả $17+4$ bài cùng lúc trong một lần trả lời sẽ buộc phải cắt giảm chất lượng từng chương. Nói cho tôi biết bạn muốn ưu tiên nhóm nào trước (ví dụ "làm tiếp MDP + Reinforcement Learning trước vì tuần sau kiểm tra"), tôi sẽ tập trung vào đúng nhóm đó.
-:::
+- **BFS:** Tìm ra $S \to A \to C \to G$ với chi phí $9$ (tối ưu số bước, nhưng tốn phí).
+- **DFS:** Phụ thuộc may rủi thứ tự nhánh, có thể ra $8$ hoặc $9$.
+- **UCS:** Quét đều sóng chi phí, tìm đúng $S \to A \to B \to C \to G$ ($=7$) nhưng mở rộng nhiều đỉnh thừa.
+- **A\*:** Kết hợp với la bàn heuristic, đi thẳng tới nghiệm tối ưu $7$ mà không lãng phí tài nguyên.

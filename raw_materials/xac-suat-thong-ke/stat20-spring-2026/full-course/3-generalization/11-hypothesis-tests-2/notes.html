@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Hypothesis Tests II – Stat 20</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../3-generalization/12-wrong-by-design/notes.html" rel="next">
+<link href="../../3-generalization/10-hypothesis-tests/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="Hypothesis Tests II – Stat 20">
+<meta property="og:description" content="Simulating the null by taking draws">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/images/gof.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="468">
+<meta property="og:image:width" content="1198">
+<meta name="twitter:title" content="Hypothesis Tests II – Stat 20">
+<meta name="twitter:description" content="Simulating the null by taking draws">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/images/gof.png">
+<meta name="twitter:image-height" content="468">
+<meta name="twitter:image-width" content="1198">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../office-hours.html"> 
+<span class="menu-text">Office Hours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../notes.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://edstem.org/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Ed Discussion Forum" target="_blank"><i class="bi bi-chat-fill"></i></a>
+    <a href="https://www.gradescope.com/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Gradescope" target="_blank"><i class="bi bi-bar-chart-fill"></i></a>
+    <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=sp26" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="RStudio" target="_blank"><i class="bi bi-r-circle-fill"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Hypothesis Tests II</h1>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Questions and Data</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Questions and Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/01-understanding-the-world/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding the World with Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/02-taxonomy-of-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Taxonomy of Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Summarization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/01-summarizing-categorical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Categorical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/02-summarizing-numerical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/03-a-grammar-of-graphics/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Grammar of Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/04-conditioning/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditioning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/05-summarizing-associations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/06-multiple-linear-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Linear Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Generalization</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/01-prob-foundations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/02-computing-probs/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Computing Probabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/03-probability-dsns/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Distributions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/04-random-variables/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/05-ev-se/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expected Value and Variance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/06-normal-approx/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous Distributions and Normal Approximations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/07-from-samps-to-pops/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Samples to Populations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/08-confidence-intervals/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/09-bootstrapping/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootstrapping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/10-hypothesis-tests/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/11-hypothesis-tests-2/notes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hypothesis Tests II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/12-wrong-by-design/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrong by Design</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Causation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/01-defining-causality/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Defining Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/02-experiments/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Randomized Experiments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Prediction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causal Effects in Observational Studies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/01-method-of-least-squares/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Method of Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/02-improving-predictions/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluating and Improving Predictions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/03-overfitting/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overfitting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/05-logistic-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logistic Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#test-of-many-proportions" id="toc-test-of-many-proportions" class="nav-link active" data-scroll-target="#test-of-many-proportions">Test of Many Proportions</a>
+  <ul class="collapse">
+  <li><a href="#benfords-law" id="toc-benfords-law" class="nav-link" data-scroll-target="#benfords-law">Benford’s Law</a></li>
+  <li><a href="#taking-draws-from-the-null" id="toc-taking-draws-from-the-null" class="nav-link" data-scroll-target="#taking-draws-from-the-null">Taking Draws from the Null</a></li>
+  <li><a href="#a-distance-statistic-chi2" id="toc-a-distance-statistic-chi2" class="nav-link" data-scroll-target="#a-distance-statistic-chi2">A Distance Statistic: <span class="math inline">\(\chi^2\)</span></a></li>
+  <li><a href="#approximating-the-null-distribution" id="toc-approximating-the-null-distribution" class="nav-link" data-scroll-target="#approximating-the-null-distribution">Approximating the null distribution</a></li>
+  <li><a href="#evidence-of-what" id="toc-evidence-of-what" class="nav-link" data-scroll-target="#evidence-of-what">Evidence of what?</a></li>
+  </ul></li>
+  <li><a href="#one-tail-or-two" id="toc-one-tail-or-two" class="nav-link" data-scroll-target="#one-tail-or-two">One Tail or Two?</a></li>
+  <li><a href="#the-significance-level" id="toc-the-significance-level" class="nav-link" data-scroll-target="#the-significance-level">The Significance Level</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Hypothesis Tests II</h1>
+<p class="subtitle lead">Simulating the null by taking draws</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="dropcap">H</span>ypothesis tests are a tool for assessing the consistency between data and a proposed model for how the data was generated. There are myriad hypothesis tests, but they all follow the same basic structure.</p>
+<ol type="1">
+<li>Assert a model for how the data was generated (the null hypothesis)</li>
+<li>Select a test statistic that bears on that null hypothesis (a mean, a proportion, a difference in means, a difference in proportions, etc).</li>
+<li>Approximate the sampling distribution of that statistic under the null hypothesis (aka the null distribution)</li>
+<li>Assess the degree of consistency between that distribution and the test statistic that was actually observed (either visually or by calculating a p-value)</li>
+</ol>
+<p>In the last set of notes, we learned about one tool for step 3: shuffling. When the null hypothesis asserts that two variables have nothing to do with one another, then we can simulate other possible data sets by shuffling one of the columns. This approach, called a permutation test, is useful when one of the variables defines two groups. In the case of Kristen Gilbert, shuffling allowed us to simulate worlds where deaths in the ward were just as likely as not to fall into the group of shifts when Gilbert was working.</p>
+<p>In these notes, you’ll learn a method for simulating data that corresponds to a different class of null hypotheses. The method will look familiar: it can be thought of as another version of the box model we used for random variables. Also familiar is our first example: Benford’s Law and voting data from Iran.</p>
+<section id="test-of-many-proportions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="test-of-many-proportions">Test of Many Proportions</h2>
+<section id="presidential-election-in-iran" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="presidential-election-in-iran">2009 Presidential Election in Iran</h4>
+<p>In 2009, Iran held a presidential election where the incumbent, Mahmoud Ahmadinejad, faced three challengers, Mohsen Rezai and two allied members of the reformist opposition, Mehdi Karroubi and Mir-Hussein Mousavi<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Leading up to the elections, polling for Mousavi and Karroubi was strong; they were considered to present the first serious challenge to Ahmadinejad’s governance. When the results of the election came in, any hopes for an upset were dashed by an decisive victory for the incumbent: Ahmadinejad received 62.6% of votes cast, Mousavi 33.75%, and Karroubi a bit above 1%.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/4-candidates.png" class="img-fluid figure-img" width="320"></p>
+<figcaption>From left to right: Rezai, Ahmadinejad, Karroubi, and Mousavi.</figcaption>
+</figure>
+</div>
+</div></div><p>Protests broke out among the supporters of Mousavi and Karroubi, alleging that the results were fraudulent and manipulated by the incumbent to remain in power. The protests grew into the largest ever seen in the Republic of Iran and drew the attention of governments, journalists, and election watchers from across the world. One of these watchers, working from Poland, conducted an analysis that purported to find irregularities in the voting data<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. They applied to the data a controversial analytical approach: Benford’s Law.</p>
+</section>
+<section id="benfords-law" class="level3">
+<h3 class="anchored" data-anchor-id="benfords-law">Benford’s Law</h3>
+<p>Benford’s Law is a mathematical law that describes a particular distribution of the digits 1 through 9. It is often a good approximation for the distribution of the first digits in sets of naturally occurring numbers that span many orders of magnitude, for example in the population counts of cities. According to Benford’s Law, the most common first digit should be a 1, at a frequency of 0.3, followed by 2 at 0.18, and decreasing until 9 at 0.05.</p>
+<p>This pattern has been thought to apply to the first digit counts of voting data as well. The theory is that if the voting process is fair, then the distribution of the first digit of vote counts across different municipalities should follow Benford’s Law. Fraudulent activity such as ballot-stuffing, would materialize as deviations from Benford’s Law.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The election watchers studying the voting data from Iran noticed an anomaly in the distribution of first digits of vote counts for Karroubi (above right). The digit 7 was unexpectedly common, far more common than would be expected based on Benford’s Law. Is this evidence of voter fraud? Could this anomaly be just be due to chance?</p>
+</section>
+<section id="taking-draws-from-the-null" class="level3">
+<h3 class="anchored" data-anchor-id="taking-draws-from-the-null">Taking Draws from the Null</h3>
+<p>One way to frame this analysis is as a hypothesis test. Under the null hypothesis, the first digit distribution of Karroubi’s vote counts was generated according to Benford’s Law. We can state this in the language of parameters, where <span class="math inline">\(p_i\)</span> is the probability that a vote count has <span class="math inline">\(i\)</span> as the first digit.</p>
+<p><span class="math display">\[H_0: p_1 = .301, p_2 = .176, p_3 = .125, p_4 = .097, p_5 = .079, p_6 = .067, p_7 = .058, p_8 = .051, p_9 = .046\]</span></p>
+<p>The alternative hypothesis is that the first digits were drawn according to a different distribution (at least one of the <span class="math inline">\(p_1\)</span> is different).</p>
+<p>This null hypothesis describes everything we need to simulate the sort of data that we would observe in a world where first digits are drawn accordng to Benford’s Law. For this simulation, we can use the metaphor of a box with tickets. In our box we place 1000 tickets. 301 of them have the number 1 on them, 176 of them have the number 2, and so on until the 46 tickets that have the number 9. We can simulate one first digit from the vote count of one municipality by drawing a single ticket with replacement. To simulate a process akin to the voting data from Iran, we would draw 366 tickets with replacement, one for each municipality.</p>
+<p>While we could indeed do this process by hand (sacrificing both index cards and time), we will opt instead to use a computer. Below are nine different first digit distributions that we might see in a world where the first digits follow Benford’s Law.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can see that there is some natural variation in the distribution just due to chance. While the first sample of 366 digits follows the decaying shape of Benford’s Law quite closely, the sixth has an unusually large number of 3s. The fifth sample, like the observed sample of Karroubi’s, has an unusually large number of 7s.</p>
+<p>At this point, we could conduct a very informal version of a hypothesis test. Does the empirical distribution of Karroubi’s first digits look like one of these nine distributions generated according to Benford’s Law? It’s hard to say; the observed distribution <em>is</em> different from Benford’s Law. But how different is different enough?</p>
+</section>
+<section id="a-distance-statistic-chi2" class="level3">
+<h3 class="anchored" data-anchor-id="a-distance-statistic-chi2">A Distance Statistic: <span class="math inline">\(\chi^2\)</span></h3>
+<p>When we discern a particular structure in a plot, we can quantify it precisely by calculating an appropriate summary statistic. If we’re looking at two box plots that are shifted from one another, we can calculate a difference in medians. If we’re looking at a scatter plot with a linear association, we can calculate a correlation coefficient.</p>
+<p>Here, the structure that we’re considering is the difference between two bar charts: the distribution according to Benford’s Law (above left) and the empirical distribution of Karroubi’s first digts (above right). There are several different statistics that could collapse this visual information into a single number. The most commonly used is the chi-squared statistic.</p>
+<dl>
+<dt><strong>Chi-squared Statistic</strong></dt>
+<dd>
+A statistic used to measure the distance between two categorical distributions, one observed and one expected. For a distribution with <span class="math inline">\(k\)</span> categories, <span class="math inline">\(O_i\)</span> observed counts in each category, and <span class="math inline">\(E_i\)</span> expected counts, <span class="math display">\[\chi^2 = \sum_{i=1}^k \frac{\left(O_i - E_i \right)^2}{E_i}\]</span>
+</dd>
+</dl>
+<p>In our setting, index <span class="math inline">\(i\)</span> refers to each of the 9 digits. We could find the first term in the sum by taking the difference between the observed count of 1s, <span class="math inline">\(O_1 = 125\)</span>, and the count we would expect if those 366 digits followed Benford’s Law, <span class="math inline">\(E_1 = 366 \times .301 = 110.166\)</span>. That difference <span class="math inline">\(O_1 - E_1 = 125 - 110.166 = 14.834\)</span> captures the difference in the heights of the bars corresponding to 1 in the two bar charts. To complete that first term in the sum, we square it (to treat negative differences the same as positive differences) and then we divide that by <span class="math inline">\(E_1\)</span> (so that the squared differences are relative to the height of that particular bar).</p>
+<p>This process is repeated for each of the 9 digits, then the result added up to a single statistic. We’ll save the tedious arithmetic and let R calculate the chi-squared statistic that corresponds to Karroubi’s first digit distribution.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28.0832</code></pre>
+</div>
+</div>
+<p>28! That tells us that the distance from Karroubi’s distribution to Benford’s Law was 28! But . . . is 28 a lot? Or or a little? We don’t have any natural scale on which to make meaning out of this statistic.</p>
+<p>We can however, compare this statistic to the statistics we would see in a world where the null hypothesis is true. Here are the chi-squared statistics for each of the 9 distributions above. Look through them one-by-one: what sort of chi-squared statistic do you get for distributions that are very similar to Benford’s? What about for ones that look different?</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">replicate</th>
+<th style="text-align: left;">stat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">9.517228</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">8.122086</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">3.235929</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">3.647709</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">10.673920</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">17.632670</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">9.761574</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">6.901445</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">8.396731</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>This mode of thinking allows us to put our observed statistic of 28.1 into context. It is quite a bit larger than any of the nine statistics that we generated in a world where the first digits followed Benford’s Law. To be more thorough in our reasoning, though, we need to look at more than just nine statistics. We need to look at a full distribution of them.</p>
+</section>
+<section id="approximating-the-null-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="approximating-the-null-distribution">Approximating the null distribution</h3>
+<p>We can repeat the simulation process used above 5000 times and, for each of the 5000 simulated data sets, calculate a chi-squared statistic. Those 5000 statistics form a null distribution.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We see that, in a world where first digits follow Benford’s Law, while we would expect statistics around 8 or 9, it is possible to observe very small chi-squared statistics near zero and ones as high as about 20. The statistic that we actually observed was 28.1, indicated by the red line. On the scale of the null distribution, this is off the charts.</p>
+<p>We can quantify the consistency between the observed statistic and the null hypothesis by calculating a p-value. Formally, it is estimated as the proportion of simulated null statistics that are as extreme or more so than the one that you observed. In this case, there are <em>no</em> statistics that matched or exceeded 28.1, so the p-value is essentially zero.</p>
+</section>
+<section id="evidence-of-what" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-of-what">Evidence of what?</h3>
+<p>A low p-value indicates that our data - Karroubi’s official vote data out of Iran - is inconsistent with our null hypothesis - that Karroubi’s first digit counts follow Benford’s Law. But what does that say about election fraud?</p>
+<p>The controversy around the application of Benford’s Law in situations like this centers on whether or not a fair election would actually be expected to generate first digits that look like Benford’s Law. Benford’s Law is a simple mathematical abstraction and elections are very particular things, with each one unfolding according to different policies and procedure, and each one aggregated at different levels (precincts, cities, counties, etc.).</p>
+<!-- In your lab, some of you found first digit distributions from the US that seemed to follow Benford's Law very well. Others found deviations even more extreme than seen in Karroubi's data.  -->
+<p>If you repeat this analysis on first digit distributions from US elections, you’d find that some of them follow Benford’s Law very well. Others found deviations even more extreme than seen in Karroubi’s data. US election, for the most part are free of the sort of fraud that would show up in these analyses, so the appropriate conclusion is not that we detected evidence of fraud but rather that Benford’s Law simply isn’t a good fit for many of the processes that generate vote counts in elections.</p>
+<p>This is an important lesson moving beyond descriptive statistics and into generalizations. When you lay out the null hypothesis, you are describing a complicated real world process with a simplified explanation. The success of that generalization depends in large part on the degree to which this simplification preserves the most important features of reality<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+</section>
+</section>
+<section id="one-tail-or-two" class="level2">
+<h2 class="anchored" data-anchor-id="one-tail-or-two">One Tail or Two?</h2>
+<p>In the United States vs.&nbsp;Kristen Gilbert, the null hypothesis that the statisticians operated under was that Gilbert was innocent. More specifically, it asserted that the occurrence of a death on a shift at the hospital was independent of whether or not Gilbert was working. This hypothesis can be stated in terms of parameters; that the probability of a death on a shift with Gilbert present is equal to the probability of a death on a shift without her present.</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(p_{gilbert} - p_{no\,gilbert} = 0\)</span></li>
+</ul>
+<p>There are actually three different ways that the statisticians could have set up their alternative hypotheses.</p>
+<ol type="1">
+<li><span class="math inline">\(H_A\)</span>: <span class="math inline">\(p_{gilbert} - p_{no\,gilbert} &lt; 0\)</span></li>
+<li><span class="math inline">\(H_A\)</span>: <span class="math inline">\(p_{gilbert} - p_{no\,gilbert} \ne 0\)</span></li>
+<li><span class="math inline">\(H_A\)</span>: <span class="math inline">\(p_{gilbert} - p_{no\,gilbert} &gt; 0\)</span></li>
+</ol>
+<p>The first version seems surprising: we’re entertaining an alternate explanation where in fact <em>fewer</em> deaths would have occurred on Gilbert’s shifts. The second version is the one that we used in the previous notes: that it’s possible either more or fewer deaths occurred on Gilbert’s shifts.</p>
+<p>The third version is very tempting. It disregards the extra alternative (that Gilbert could be associated with <em>fewer</em> deaths) and that seems natural since the data pointed in the opposite direction. However, there are two dangers if we ignore possibilities that disagree with our data or that conflict with our world view:</p>
+<ul>
+<li><p>Framing an alternative hypothesis simply to match the direction that the data point will inflate the type I error rate. After all the work we have done (and will continue to do) to rigorously control the error rates in hypothesis tests, careless construction of the alternative hypotheses can disrupt that hard work.</p></li>
+<li><p>If we only use alternative hypotheses that agree with our worldview, then we are going to be subjecting ourselves to confirmation bias, which means we are looking for data that supports our ideas. That’s not very scientific, and we can do better!</p></li>
+</ul>
+<p>The alternative hypotheses found in 1) and 3) define what are called <strong>one-sided hypothesis tests</strong> (also called “one-tailed”) because they only explore one direction of possibilities. Such hypotheses are appropriate when we are exclusively interested in the single direction, but usually we want to consider all possibilities. A better approach is to use <strong>two-sided hypothesis tests</strong> (also called “two-tailed”), defined by hypotheses in the form of 2).</p>
+<p>The chi-squared test used for the Iran elections is an unusual case where the one-sided test is appropriate. The left tail of that distribution contains statistics that indicate strong consistency with the null hypothesis, so only the right tail is used to calculate the p-value.</p>
+</section>
+<section id="the-significance-level" class="level2">
+<h2 class="anchored" data-anchor-id="the-significance-level">The Significance Level</h2>
+<p>If it is necessary to make a binary decision based on a p-value, it must be decided beforehand what level of evidence is needed before you would rule out the null hypothesis.</p>
+<dl>
+<dt><strong>Significance level, <span class="math inline">\(\alpha\)</span></strong></dt>
+<dd>
+A number between 0 and 1 that serves as the threshold for the p-value. The null hypothesis is rejected when the p-value <span class="math inline">\(&lt; \alpha\)</span>, and the finding is found “statistically significant”.
+</dd>
+</dl>
+<p>By convention, <span class="math inline">\(\alpha = 0.05\)</span>, however you should adjust the significance level based on the application. Certain scientific fields might tend to use a slightly higher or lower threshold for what constitutes statistical significance. In a setting where the decisions have very different real-world consequences, those, too, can factor into the choice of <span class="math inline">\(\alpha\)</span>.</p>
+<!-- #### One-tailed or Two? -->
+<!-- This hypothesis test is one of the rare examples when the calculation of the p-value should be one-tailed. That is: you only count the right tail area into the p-value -->
+<!-- ## Test of One Proportion -->
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In these notes you learned about a second form of null hypothesis, one where you explicitly define the proportions of a categorical variable. This type of null hypothesis allows you to generate data through simulating the process of drawing tickets from a box that is designed to match your null hypothesis. The most common test statistic used in this scenario is the chi-squared statistic, which measures the distance between two categorical distributions. Just as in the permutation tests from last time, you can assess the consistency between the null hypothesis and your data by calculating a p-value: the probability of drawing a statistic as or more extreme than the one that you observed in a world where the null hypothesis is true.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Image from Pyvand Iran News archives <a href="http://www.payvand.com/news/09/jun/1085.html" class="uri">http://www.payvand.com/news/09/jun/1085.html</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Roukema, Boudewijn F. (2014). <a href="https://arxiv.org/pdf/0906.2789.pdf">“A first-digit anomaly in the 2009 Iranian presidential election”</a>. Journal of Applied Statistics. 41: 164–199.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>For more conversation around the application of Benford’s Law to the election in Iran (and elections in general), see a blog post by Andrew Gelman, a professor of statistics at Columbia University: <a href="https://statmodeling.stat.columbia.edu/2009/06/17/unconvincing_to/">Unconvincing (to me) use of Benford’s law to demonstrate election fraud in Iran</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../3-generalization/10-hypothesis-tests/notes.html" class="pagination-link" aria-label="Hypothesis Testing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hypothesis Testing</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../3-generalization/12-wrong-by-design/notes.html" class="pagination-link" aria-label="Wrong by Design">
+        <span class="nav-page-text">Wrong by Design</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

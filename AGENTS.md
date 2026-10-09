@@ -8,10 +8,11 @@ Tài liệu này là quy ước tiêu chuẩn (Agent Instruction Standard) dành
 
 - **Bản chất**: Website tài liệu và bài giảng ôn tập dựa trên VitePress dành cho sinh viên trường Đại học Công nghệ (UET) - ĐHQGHN.
 - **Ngôn ngữ**: Toàn bộ nội dung bài học bằng tiếng Việt chuẩn mực học thuật, tự nhiên, không khẩu hiệu.
-- **Cấu trúc 1 bài giảng trên site** gồm 3 thành phần liên kết:
+- **Cấu trúc 1 bài giảng trên site** gồm 4 thành phần liên kết:
   1. **Notes**: Giáo trình chi tiết (`docs/<môn>/bai-giang/<slug>.md`).
   2. **Slides**: Bộ thẻ ôn tập nhanh trên web (`docs/.vitepress/course-catalog.mjs`).
-  3. **Kiến thức nền (Prerequisites & Wiki)**: Liên kết khái niệm (`prerequisites` trong bài) → danh mục (`docs/.vitepress/concepts.mjs`) → trang Wiki chi tiết (`docs/wiki/<id>.md`).
+  3. **Cheatsheet**: Tờ tra cứu nhanh công thức, quy tắc, cú pháp và bẫy thi (`docs/.vitepress/cheatsheets.mjs`).
+  4. **Kiến thức nền (Prerequisites & Wiki)**: Liên kết khái niệm (`prerequisites` trong bài) → danh mục (`docs/.vitepress/concepts.mjs`) → trang Wiki chi tiết (`docs/wiki/<id>.md`).
 - **Tài liệu nguồn gốc**: Lưu tại `raw_materials/<môn>/`.
 
 ---
@@ -62,3 +63,5 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 3. **Mở bước khó**: Làm rõ những bước biến đổi mà người mới hay vấp ngã.
 4. **Không bịa đặt**: Tuyệt đối không bịa trích dẫn, tác giả, số liệu thống kê hoặc năm tháng lịch sử.
 5. **Tiếng Việt tự nhiên**: Hành văn sáng sủa, thuần Việt, tránh câu cú dịch máy thô cứng.
+6. **Chủ quyền bài giảng (Chính danh, biến tri thức thành bài giảng độc lập)**: Bài giảng của StudyHub là giáo trình giảng dạy độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các cụm từ: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“theo sách…”*, *“sách dùng…”*, *“nguyên tác…”*, *“bản dịch của…”*, *“tiến độ bản dịch…”*. Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (*“Hình 1.1: …”*, *“Xét bài toán thực tế sau:…”*, *“Quan sát đồ thị chuyển trạng thái…”*).
+7. **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Dùng từ ngữ tiếng Việt chuẩn xác, giàu tính sư phạm, uyên bác và dễ hiểu, không “giả trân”, không sáo rỗng kiểu AI. Các mẹo tư duy, trực giác thuật toán được lồng ghép tự nhiên (*“Một cách người ta hay dùng trong thực tế để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”* thay vì đóng khung máy móc *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết trừu tượng với các ứng dụng thực tế sinh động trong đời sống và đặt câu hỏi đào sâu bản chất vấn đề.

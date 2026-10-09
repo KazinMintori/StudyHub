@@ -15,7 +15,7 @@ next: false
 
 **Quan hệ cục bộ với trường.** Trong tĩnh điện:
 
-$$V_B-V_A=-\int_A^B\mathbf E\cdot d\mathbf l,qquad\mathbf E=-\nabla V.$$
+$$V_B-V_A=-\int_A^B\mathbf E\cdot d\mathbf l,\qquad\mathbf E=-\nabla V.$$
 
 V là vô hướng, E là vector. $V=0$ tại một điểm không kéo theo $E=0$ vì gradient đo biến thiên không gian của V. Trong vật dẫn liên thông ở cân bằng tĩnh điện, $E=0$ trong lòng và V không đổi. Với trường biến thiên theo thời gian, cần mô hình rộng hơn để mô tả đầy đủ điện trường.
 

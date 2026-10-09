@@ -2,14 +2,15 @@
 
 Đọc trước khi tạo hoặc sửa bất kỳ file nào của website. Mọi mục dưới đây được rút từ mã nguồn hiện tại của repo (`docs/.vitepress/*.mjs`, `scripts/sync-courses.mjs`, `scripts/verify-courses.mjs`). Nếu mã đổi, mã thắng tài liệu này; sửa lại tài liệu.
 
-## 1. Một bài giảng = ba phần trên cùng một trang
+## 1. Một bài giảng = bốn phần trên cùng một trang
 
-Trang `/<môn>/bai-giang/<slug>.html` có ba tab, địa chỉ `#slides`, `#notes`, `#kien-thuc-can-co`:
+Trang `/<môn>/bai-giang/<slug>.html` có bốn tab, địa chỉ `#notes`, `#slides`, `#cheatsheet`, `#kien-thuc-can-co`:
 
 | Tab | Dữ liệu lấy từ | Ai viết |
 | --- | --- | --- |
-| Slides | `course.slides` trong `docs/.vitepress/course-catalog.mjs`, lọc theo `note === slug` | Skill viết sau khi Notes đã khóa |
 | Notes | `docs/<môn>/bai-giang/<slug>.md` | Phần chính của skill |
+| Slides | `course.slides` trong `docs/.vitepress/course-catalog.mjs`, lọc theo `note === slug` | Skill viết sau khi Notes đã khóa |
+| Cheatsheet | `cheatsheets` trong `docs/.vitepress/cheatsheets.mjs` hoặc sinh từ slide/công thức cốt lõi | Tờ tra cứu nhanh công thức, quy tắc, cú pháp và bẫy thi |
 | Kiến thức nền | `lesson.prerequisites` trong catalog → các mục trong `concepts.mjs` → trang `docs/wiki/<id>.md` | Skill chọn và bổ sung khi thiếu |
 
 Tiêu đề H1 của trang do `LectureHeader.vue` dựng từ `lesson.title` trong catalog. **Không viết thêm `# Tiêu đề` trong file Notes**; nó tạo hai H1. Bắt đầu nội dung bằng đoạn mở đầu hoặc `## 1. …`.

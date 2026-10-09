@@ -1,0 +1,120 @@
+Hypothesis Testing
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Pick a Card Activity
+
+Goals: 1. Identify a situation where people naturally reason like a hypothesis test 2. Map the parts of that situation to the formalism of a hypothesis test 3. Provide some intuition about why .05 is used as the standard threshold
+
+Take two decks of cards and mix them so that you have a single deck that is all of one color, say: black. Bring a prize to class and ham it up that the winner of this simple game will win the prize. All they have to do is pick a red card.
+
+Shuffle the deck, say that’s its fair, then select a random student to be the first contestant. Fan the cards out for them and have them pick a card. When the lose, fein disappointment / surprise, replace the card and move on to the next student. Do this several times. You’ll start hearing groans that the game is rigged. At the point where the groans become clearly articulated (usually around 4 or 5 draws), stop the game, admit to the scam, then go to the board.
+
+Walk through how students started with a previous notion that the deck was fair (null hypothesis: p(red) = .5). As they observed data, they assessed the degree of consistency with that notion by computing the probability of the data. Calculate a table of the binomial probabilities of one black, two blacks, three blacks, on the board. With 4 blacks, the probability is 1/2^4 = .0625 and with 5 blacks its 1/2^5 = .03125. Draw a line between these two probability and identify it as the alpha = .05 threshold that is generally used for “calling bullshit on the null”.
+
+Which of the following statements below represents claims that correspond to a null hypothesis (as opposed to an alternative hypothesis)?
+
+Hint: try to write them using parameters (statements about means / proportions / etc)
+
+A. King cheetahs on average run the same speed as standard spotted cheetahs.
+
+B. The mean length of African elephant tusks has changed over the last 100 years.
+
+C. The risk of facial clefts is equal for babies born to mothers who take folic acid supplements compared with those from mothers who do not.
+
+D. Mean birth weight of newborns is dependent on caffeine intake during pregnancy.
+
+E. The probability of getting in a car accident is the same if using a cell phone than if not using a cell phone.
+
+  
+    −
+    +
+
+ 01:00
+
+Correct answers: A, C, E.
+
+Most of these they haven’t seen examples of, so it will be worth laying out the null hypotheses.
+
+A pharmaceutical company developed a new treatment for eczema and performed a hypothesis test to see if it worked better than the company’s old treatment. The P-value for the test was 
+[MATH] \(10\%\). Which one of the following statements are true?
+
+A. The probability that the null hypothesis is false is 
+[MATH] \(10\%\).
+
+B. The P-value of about 
+[MATH] \(10\%\) was computed assuming that the null hypothesis was true.
+
+C. The new drug is significantly better than the old.
+
+D. The alternative hypothesis is 10 times more likely the null.
+
+  
+    −
+    +
+
+ 01:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Problem Set: Hypothesis Tests
+
+Today’s Problem Set is all about answering one question:
+
+Is yawning contagious?
+
+What do you think?
+
+Answer at pollev.com.
+
+PS: Hypothesis Tests
+
+Now, we will watch a short excerpt from a Mythbusters episode in which the Mythbusters crew sets up, performs and analyzes the results of an experiment designed to test whether yawning is contagious.
+
+https://youtu.be/cscvxfTyxNM?si=2FJwL-fOndqIxa7a&t=237
+
+What do you think about the experiment in the video?
+
+Discuss with your group.
+
+  
+    −
+    +
+
+ 01:00
+
+PS: Page 1
+
+  
+    −
+    +
+
+ 20:00
+
+PS: Page 2
+
+  
+    −
+    +
+
+ 20:00
+
+Do you still think yawning is contagious?
+
+Answer at pollev.com.
+
+Lab 9: People’s Park II
+
+  
+    −
+    +
+
+ 25:00

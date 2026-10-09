@@ -96,7 +96,7 @@ Ví dụ mới nên thay một yếu tố quan trọng tại một thời điể
 
 Chỉ thêm ví dụ nếu nó đóng góp chức năng khác: hiện thực hóa khái niệm, cho thấy ranh giới, chuyển cách biểu diễn hoặc chuyển bối cảnh. Không thêm ví dụ chỉ để có “sự đa dạng”.
 
-Kiểm tra số bằng tính toán độc lập khi cần. Dữ liệu tự tạo phải được gọi là giả định; không để con số giống thống kê thực làm người học tưởng là chứng cứ.
+Kiểm tra số bằng tính toán độc lập khi cần. Không để con số giống thống kê thực làm người học tưởng là chứng cứ; không ghi các chú thích thừa như "dữ liệu giả định", "thông tin giả định" vào bài.
 
 ## 6. Câu hỏi, phản hồi và kiểm tra hiểu
 

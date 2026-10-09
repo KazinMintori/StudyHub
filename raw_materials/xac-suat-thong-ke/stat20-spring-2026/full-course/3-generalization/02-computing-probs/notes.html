@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Computing Probabilities – Stat 20</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../3-generalization/03-probability-dsns/notes.html" rel="next">
+<link href="../../3-generalization/01-prob-foundations/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="Computing Probabilities – Stat 20">
+<meta property="og:description" content="Conditional probabability, the multiplication rule and independence">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/sally-clark-headline.jpeg">
+<meta property="og:site_name" content="Stat 20">
+<meta name="twitter:title" content="Computing Probabilities – Stat 20">
+<meta name="twitter:description" content="Conditional probabability, the multiplication rule and independence">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/images/sally-clark-headline.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../office-hours.html"> 
+<span class="menu-text">Office Hours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../notes.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://edstem.org/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Ed Discussion Forum" target="_blank"><i class="bi bi-chat-fill"></i></a>
+    <a href="https://www.gradescope.com/" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="Gradescope" target="_blank"><i class="bi bi-bar-chart-fill"></i></a>
+    <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=sp26" rel="noopener" title="" class="quarto-navigation-tool px-1" aria-label="RStudio" target="_blank"><i class="bi bi-r-circle-fill"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Computing Probabilities</h1>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Questions and Data</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Questions and Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/01-understanding-the-world/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding the World with Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-questions-and-data/02-taxonomy-of-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Taxonomy of Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Summarization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/01-summarizing-categorical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Categorical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/02-summarizing-numerical-data/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/03-a-grammar-of-graphics/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Grammar of Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/04-conditioning/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditioning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/05-summarizing-associations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Numerical Associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../2-summarizing-data/06-multiple-linear-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Linear Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Generalization</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/01-prob-foundations/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/02-computing-probs/notes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Computing Probabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/03-probability-dsns/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability Distributions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/04-random-variables/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/05-ev-se/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expected Value and Variance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/06-normal-approx/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous Distributions and Normal Approximations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/07-from-samps-to-pops/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Samples to Populations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/08-confidence-intervals/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/09-bootstrapping/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bootstrapping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/10-hypothesis-tests/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/11-hypothesis-tests-2/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Tests II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../3-generalization/12-wrong-by-design/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrong by Design</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Causation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/01-defining-causality/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Defining Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/02-experiments/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Randomized Experiments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Prediction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causal Effects in Observational Studies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/01-method-of-least-squares/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Method of Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/02-improving-predictions/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluating and Improving Predictions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/03-overfitting/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overfitting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/05-logistic-regression/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logistic Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sally-clark-a-tragic-victim-of-statistical-illiteracy" id="toc-sally-clark-a-tragic-victim-of-statistical-illiteracy" class="nav-link active" data-scroll-target="#sally-clark-a-tragic-victim-of-statistical-illiteracy">Sally Clark: a tragic victim of statistical illiteracy</a></li>
+  <li><a href="#simulating-de-mérés-dice-games." id="toc-simulating-de-mérés-dice-games." class="nav-link" data-scroll-target="#simulating-de-mérés-dice-games.">Simulating De Méré’s dice games.</a>
+  <ul class="collapse">
+  <li><a href="#example-drawing-red-and-blue-tickets-from-a-box" id="toc-example-drawing-red-and-blue-tickets-from-a-box" class="nav-link" data-scroll-target="#example-drawing-red-and-blue-tickets-from-a-box">Example: Drawing red and blue tickets from a box</a></li>
+  <li><a href="#rules-of-probability-recap" id="toc-rules-of-probability-recap" class="nav-link" data-scroll-target="#rules-of-probability-recap">Rules of probability (recap)</a></li>
+  </ul></li>
+  <li><a href="#conditional-probabilities" id="toc-conditional-probabilities" class="nav-link" data-scroll-target="#conditional-probabilities">Conditional probabilities</a></li>
+  <li><a href="#the-multiplication-rule-computing-the-probability-of-an-intersection" id="toc-the-multiplication-rule-computing-the-probability-of-an-intersection" class="nav-link" data-scroll-target="#the-multiplication-rule-computing-the-probability-of-an-intersection">The Multiplication Rule: computing the probability of an intersection</a></li>
+  <li><a href="#independence" id="toc-independence" class="nav-link" data-scroll-target="#independence">Independence</a>
+  <ul class="collapse">
+  <li><a href="#example-selecting-2-people-out-of-a-group-of-5" id="toc-example-selecting-2-people-out-of-a-group-of-5" class="nav-link" data-scroll-target="#example-selecting-2-people-out-of-a-group-of-5">Example: Selecting 2 people out of a group of 5</a></li>
+  <li><a href="#example-colored-and-numbered-tickets" id="toc-example-colored-and-numbered-tickets" class="nav-link" data-scroll-target="#example-colored-and-numbered-tickets">Example: Colored and numbered tickets</a></li>
+  <li><a href="#example-tickets-with-more-than-one-number-on-them" id="toc-example-tickets-with-more-than-one-number-on-them" class="nav-link" data-scroll-target="#example-tickets-with-more-than-one-number-on-them">Example: Tickets with more than one number on them</a></li>
+  </ul></li>
+  <li><a href="#back-to-sally-clark" id="toc-back-to-sally-clark" class="nav-link" data-scroll-target="#back-to-sally-clark">Back to Sally Clark</a></li>
+  <li><a href="#de-mérés-paradox" id="toc-de-mérés-paradox" class="nav-link" data-scroll-target="#de-mérés-paradox">De Méré’s paradox</a></li>
+  <li><a href="#mutually-exclusive-vs-independent-events" id="toc-mutually-exclusive-vs-independent-events" class="nav-link" data-scroll-target="#mutually-exclusive-vs-independent-events">Mutually exclusive vs independent events</a></li>
+  <li><a href="#inclusion-exclusion-generalized-addition-rule" id="toc-inclusion-exclusion-generalized-addition-rule" class="nav-link" data-scroll-target="#inclusion-exclusion-generalized-addition-rule">Inclusion-exclusion (generalized addition rule)</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Computing Probabilities</h1>
+<p class="subtitle lead">Conditional probabability, the multiplication rule and independence</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sally-clark-a-tragic-victim-of-statistical-illiteracy" class="level2">
+<h2 class="anchored" data-anchor-id="sally-clark-a-tragic-victim-of-statistical-illiteracy">Sally Clark: a tragic victim of statistical illiteracy</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sally-clark.png" class="img-fluid figure-img" width="250"></p>
+<figcaption>Sally Clark after her successful appeal</figcaption>
+</figure>
+</div>
+<p><span class="dropcap">I</span>n November 1999, Sally Clark, an English solicitor, was convicted of murdering her infant sons<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The first, Christopher, had been 11 weeks old when he died, in 1996, and the second, Harry, 8 weeks old, in January 1998, when he was found dead. Christopher was believed to have been a victim of “cot death”, called SIDS (Sudden Infant Death Syndrome) in the US. After her second baby, Harry, also died in his crib, Sally Clark was arrested for murder. The star witness for the prosecution was a well known pediatrician and professor, Sir Roy Meadow, who authored the infamous Meadow’s Law :“One sudden infant death is a tragedy, two is suspicious and three is murder until proved otherwise”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Unfortunately it was easier to comprehend this “crude aphorism” than make the effort to understand the subtleties of conditional probability. The Royal Statistical Society protested the misuse of statistics in courts, but not early enough to prevent Sally Clark’s conviction. She was eventually acquitted and released, only to die at the age of 42 through alcohol poisoning<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The math presented by Meadow, in brief: Based on various studies, there is a probability of 1 in 8,543 of a baby dying of SIDS in a family such as the Clarks. As the Clarks suffered <em>two</em> deaths, Meadow multiplied 8,543 by 8,543 to arrive at 73 million. He told the jury that the chance or probability that the event of two “cot deaths” was 1 in 73 million. The defense did not employ a statistician to refute her claim, a choice that may have been disastrous for Sally Clark.</p>
+<p>We will revisit this case at the end of these notes. In order to think about the probabilities involved, we need some more concepts. Let’s go back to one of the examples with die rolls that we have seen, the outcomes that puzzled the seventeenth century gambler, the Chevalier De Méré.</p>
+</section>
+<section id="simulating-de-mérés-dice-games." class="level2">
+<h2 class="anchored" data-anchor-id="simulating-de-mérés-dice-games.">Simulating De Méré’s dice games.</h2>
+<p>Recall that De Méré wanted to bet on at least one six in four rolls of a fair die, and also at least one double six in twenty-four rolls of a pair of dice.</p>
+<p>In earlier notes, you have seen the result of simulating these two games to estimate the probability of De Méré winning his bet. The simulation used the idea of thinking of the probability of an event as the <strong>long-run relative frequency</strong>, or the proportion of times we observe that particular event (or the outcomes in the event) if we repeat the action that can result in the event over and over again. Let’s do that again - that is, we estimate the probabilities using the long-run proportions. We will simulate playing the game over and over again and count the number of times we see at least one six in four rolls, and similarly for the second game. (De Méré did this by betting many times, and noticed that the number of times he won wasn’t matching the probability he had computed. Long-run relative frequency in real life!)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of simulations for game 1 with 4 rolls of a die = 1000</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The chance of at least one six in 4 rolls of a die is about 0.514</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of simulations for game 2 with 24 rolls of a pair of dice = 1000</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The chance of at least one double six in 24 rolls of a pair of dice is about 0.487</code></pre>
+</div>
+</div>
+<p>Now the question is how do we figure out this probability without simulations?</p>
+<p>We know that if two events are mutually exclusive, we can compute the probability of <em>at least one</em> of the events occurring (<span class="math inline">\(A\cup B\)</span> aka <span class="math inline">\(A \text{ or } B\)</span>) using the addition rule <span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span>. We <em>cannot</em> use the addition rule to compute the probabilities that we have simulated above, since rolling a six on the first roll and rolling a six on the second roll (for example) are <em>not</em> mutually exclusive. So how do we compute them? Read on…</p>
+<section id="example-drawing-red-and-blue-tickets-from-a-box" class="level3">
+<h3 class="anchored" data-anchor-id="example-drawing-red-and-blue-tickets-from-a-box">Example: Drawing red and blue tickets from a box</h3>
+<p>Consider a box with four tickets in it, two colored red and two blue. Except for their color, they are identical: <img src="images/box-red-blue.jpeg" class="img-fluid" width="100">. Suppose we draw three times at random from this box, <strong><em>with</em></strong> replacement, that is, every time we draw a ticket from the box, we put it back before drawing the next ticket. List all the possible outcomes. What is the probability of seeing <em>exactly</em> 2 red cards among our draws?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>Note that since each of the cards is equally likely to be drawn, therefore all the sequences of three cards are equally likely. We can count the number of possible outcomes that contain exactly 2 red cards, and divide that number by the number of total possible outcomes to get the probability of drawing exactly 2 red cards:</p>
+<p><img src="images/rb-box-3-draws.jpeg" class="img-fluid quarto-figure quarto-figure-center" width="600"> There are three outcomes that have exactly two cards, out of a total of 8 possible outcomes, so the probability of exactly two red cards in three draws at random with replacement is 3/8.</p>
+</details>
+<p>Now suppose we repeat the procedure, but draw <strong><em>without</em></strong> replacement (we don’t put any tickets back). What is the probability of exactly 2 red cards in 3 draws?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rb-box-3-draws-no-repl.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="550"></p>
+</figure>
+</div>
+<p>Notice that we have fewer possible outcomes (6 instead of 8, why?), though they are still equally likely. Again, there are 3 outcomes that have exactly 2 red cards, and so the probability of 2 red cards in three draws is now 3/6.</p>
+</details>
+<p>What about the probabilities for the number of red cards in three draws? Write down all the possible values for the number of red cards in three draws from a box with 2 red cards and 2 blue cards, while drawing <strong><em>with</em></strong> replacement, and their corresponding probabilities. Repeat this exercise for the same quantity (number of red cards in three draws from a box with 2 red cards and 2 blue cards), when you draw the tickets <strong><em>without</em></strong> replacement:</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<center>
+<!-- <div style="width:300px"> -->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 38%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number of reds in 3 draws</th>
+<th style="text-align: center;">probability, with replacement</th>
+<th style="text-align: center;">probability, without replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0 red tickets</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{1}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1 red ticket</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{3}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{3}{6}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2 red tickets</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{3}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{3}{6}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3 red tickets</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \frac{1}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- </div> -->
+</center>
+<p>Why are the numbers different? What is going on?</p>
+</details>
+<p>Below you see an illustration of what happens to the box when we draw <em>without</em> replacement, with the box at each stage being shown with one less ticket.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/without-repl-1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>We see that the box reduces after each draw. After two draws, if the first 2 draws are red (as on the left most sequence) you can’t get another red ticket, whereas if you are drawing <em>with</em> replacement, you can keep on drawing red tickets. (Note that the outcomes in the bottom row are not equally likely, since on the left branch of the tree, blue is twice as likely as red to be the second card, so the outcome <strong>RB</strong> is twice as likely as <strong>RR</strong>, and the outcome <strong>BR</strong> on the right branch of the tree is twice as likely as BB.) Before going further, let’s recall what we know about the probabilities of events.</p>
+</section>
+<section id="rules-of-probability-recap" class="level3">
+<h3 class="anchored" data-anchor-id="rules-of-probability-recap">Rules of probability (recap)</h3>
+<ol type="1">
+<li><p><span class="math inline">\(\Omega\)</span> is the set of all possible outcomes.</p>
+<details>
+<summary>
+<p>What is the probability of <span class="math inline">\(\Omega\)</span>?</p>
+</summary>
+<p>The probability of <span class="math inline">\(\Omega\)</span> is 1. It is called the <em>certain</em> event.</p>
+</details></li>
+<li><p>When an event has <strong>no</strong> outcomes in it, it is called the <em>impossible</em> event, and denoted by <span class="math inline">\(\emptyset\)</span> or <span class="math inline">\(\{\}\)</span>.</p>
+<details>
+<summary>
+<p>What is the probability of the impossible event?</p>
+</summary>
+<p>The probability of the impossible event is 0.</p>
+</details></li>
+<li><p>Let <span class="math inline">\(A\)</span> be a collection of outcomes (for example, from the example above, <span class="math inline">\(A\)</span> could be the event of two red tickets in 3 draws with replacement).</p>
+<details>
+<summary>
+<p>Then the probability of <span class="math inline">\(A\)</span> has to be ______ (fill in the blank with a suitable phrase)</p>
+</summary>
+<p>between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (inclusive of <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>).</p>
+</details></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two events with no outcomes in common,</p>
+<details>
+<summary>
+<p>then they are called ______. (fill in the blanks with suitable phrases)</p>
+</summary>
+<p>mutually exclusive</p>
+</details></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no outcomes in common, that is, <span class="math inline">\(A \cap B =  \{\}\)</span>, then <span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span>.</p></li>
+<li><p>Consider an event <span class="math inline">\(A\)</span>. The <em>complement</em> of <span class="math inline">\(A\)</span> is <em>not</em> <span class="math inline">\(A\)</span>, and denoted by <span class="math inline">\(A^C\)</span>. The complement of <span class="math inline">\(A\)</span> consists of all outcomes in <span class="math inline">\(\Omega\)</span> that are not in <span class="math inline">\(A\)</span> and <span class="math inline">\(P(A^C) = 1-P(A)\)</span>. (Why?)</p></li>
+</ol>
+</section>
+</section>
+<section id="conditional-probabilities" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-probabilities">Conditional probabilities</h2>
+<p>In the first example above, we saw that the probability of a red ticket on a draw changes if we sample without replacement. If we get a blue ticket on the first draw, the probability of a red ticket on the second draw is 2/3 (since there are 3 tickets left, of which 2 are blue). If we get a red ticket on the first draw, the probability of a red ticket on the second draw is 1/3. These probabilities, that <em>depend</em> on what has happened on the first draw, are called <strong><em>conditional</em></strong> probabilities. If <span class="math inline">\(A\)</span> is the event of a blue ticket on the first draw, and <span class="math inline">\(B\)</span> is the event of a red ticket on the second draw, we say that the probability of <span class="math inline">\(B\)</span> <em>given</em> <span class="math inline">\(A\)</span> is 2/3, which is a conditional probability, because we put a <em>condition</em> on the first card, that it had to be blue.</p>
+What about if we don’t put a condition on the first card? What is the probability that the second card is red?
+<details>
+<summary>
+Check your answer
+</summary>
+The probability that the second card drawn is red is 1/2, if we don’t have any information about the first card drawn. To see this, it is easier to imagine that we can shuffle all the cards in the box and they are put in some random order in which each of the 4 positions is equally likely. There are 2 red cards, so the probability that a red card will occupy any of the 4 positions, including the second, is 2/4.
+</details>
+<p>This kind of probability, where we put no condition on the first card, is called an <strong><em>unconditional</em></strong> probability - we don’t have any information about the first card.</p>
+</section>
+<section id="the-multiplication-rule-computing-the-probability-of-an-intersection" class="level2">
+<h2 class="anchored" data-anchor-id="the-multiplication-rule-computing-the-probability-of-an-intersection">The Multiplication Rule: computing the probability of an intersection</h2>
+<p>We often want to know the probability that two (or more) events will <em>both</em> happen: What is the probability if we roll a pair of dice, that both will show six spots; or if we deal two cards from a standard 52 card deck, that both would be kings, or in a family with two babies, both would suffer SIDS. What do we know? We can draw a Venn diagram to represent intersecting events:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/venn-diagram-intersection.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+</figure>
+</div>
+<p>This picture tells us that <span class="math inline">\(A\cap B\)</span> (the purple shaded part) is inside both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, so its probability should be less than each of <span class="math inline">\(P(A)\)</span> and <span class="math inline">\(P(B)\)</span>: <span class="math inline">\(P(A\cap B) \le P(A), P(B)\)</span>. In fact, we write the probability of the intersection as:</p>
+<p><span class="math display">\[P(A \cap B) = P(A) \times P(B|A)\]</span> We read the second probability on the right-hand side of the equation as the <em>conditional</em> probability of <span class="math inline">\(B\)</span> <em>given</em> <span class="math inline">\(A\)</span>. Note that <span class="math inline">\(B\vert A\)</span> is <em>not</em> an event, but we use <span class="math inline">\(P(B\vert A)\)</span> as a shorthand for the conditional probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span>.</p>
+<p>For example, in the example with the box with two red and two blue cards, let <span class="math inline">\(A\)</span> is the event of drawing a red card on the first draw, and <span class="math inline">\(B\)</span> is the event of drawing a blue card on the second draw. If we draw two cards <em>without</em> replacement, then we have that <span class="math inline">\(P(A) = \displaystyle \frac{2}{4}\)</span>, <span class="math inline">\(P(B | A) =  \displaystyle \frac{2}{3}\)</span> (the denominator reduces by one, since there are only 3 cards left in the box, of which 2 are blue). Therefore:</p>
+<p><span class="math display">\[P(A \cap B) = P(A) \times P(B|A) = \frac{2}{4} \times \frac{2}{3} = \frac{1}{3}\]</span> This becomes more clear if we think about the long run frequencies. We draw a red card first about half the time in the long run (if we think about drawing a card over and over again). Of those times, we would <em>also</em> draw a blue card second about two-thirds of the time, since a drawing a blue card would be twice as likely as drawing a red card. Therefore drawing a red card first and then a blue card would happen two thirds of one half of the time, which is about a third of the time.</p>
+<p>Note that the roles of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> could be reversed in the expression above:</p>
+<p><span class="math display">\[ P(A \cap B) = P(A) \times P(B | A) = P(B) \times P(A | B)\]</span> This gives us a way to define the conditional probability, as long as we are not dividing by <span class="math inline">\(0\)</span>:</p>
+<div class="def">
+<dl>
+<dt><strong>Conditional probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span></strong></dt>
+<dd>
+This is defined to be the probability of the intersection of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, normalized by dividing by <span class="math inline">\(P(A)\)</span>:
+</dd>
+</dl>
+<p><span class="math display">\[  P(B | A) = \frac{ P(A \cap B)}{P(A)} \]</span></p>
+</div>
+<p>The idea here is that we <em>know</em> that <span class="math inline">\(A\)</span> happened, therefore the only outcomes we are concerned about are the ones in <span class="math inline">\(A\)</span> - this is our new outcome space. We compute the relative size of the part of <span class="math inline">\(B\)</span> that happen (<span class="math inline">\(A\cap B\)</span>) to the size of the new outcome space.</p>
+<p><strong>Important: <span class="math inline">\(P(A | B)\)</span> and <span class="math inline">\(P(B | A)\)</span> can be very different!</strong></p>
+<p>Consider this scenario:</p>
+<p><img src="images/pab_pba.png" class="img-fluid" width="300"></p>
+<p>Note that B is <em>almost</em> entirely inside A.</p>
+<p>Now <strong>what is <span class="math inline">\(P(A|B)\)</span></strong>? That is, given that B happened (we’re somewhere in the small circle), what’s the chance that A happened (we’re also in the big circle)?</p>
+<p>Our formula says: <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span></p>
+<p>But look at the Venn diagram. Almost all of event B event is also part of event A. If B happens, then A <em>almost surely</em> also happens. In other words, <span class="math inline">\(P(A \cap B) \approx P(B)\)</span>. Which means…</p>
+<p><span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)} \approx \frac{P(B)}{P(B)} = 1\)</span></p>
+<p>The opposite is <em>not</em> true, though.</p>
+<p><span class="math inline">\(P(B|A) = ?\)</span></p>
+<p>Given that A happened (we’re somewhere in the big circle), what’s the chance that B happened (we’re also in the small circle)? Well, being in the big circle still doesn’t make B super likely, so <span class="math inline">\(P(B|A)\)</span> is clearly much less than 100%.</p>
+<p><span class="math inline">\(P(B|A) = \frac{P(B \cap A)}{P(A)} \approx \frac{P(B)}{P(A)}\)</span></p>
+<p>Which is much smaller than 1, because B is a lot smaller than A.</p>
+</section>
+<section id="independence" class="level2">
+<h2 class="anchored" data-anchor-id="independence">Independence</h2>
+<div class="def">
+<dl>
+<dt><strong>Independent events</strong></dt>
+<dd>
+We say that two events are <em>independent</em> if the probabilities for the second event remain the <em>same</em> even if you know that the first event has happened, no matter how the first event turns out. Otherwise, the events are said to be <em>dependent</em>.
+</dd>
+</dl>
+</div>
+<p><strong>Example of independent events</strong></p>
+<p>Getting heads on one coin flip doesn’t change the chance of getting heads on a second coin flip. The flips are <em>independent</em>. Let’s name the events:</p>
+<ul>
+<li>Event <span class="math inline">\(A\)</span> is “First coin flip is Heads.” <span class="math inline">\(P(A) = 0.5\)</span></li>
+<li>Event <span class="math inline">\(B\)</span> is “Second coin flip is Heads.” <span class="math inline">\(P(B) = 0.5\)</span></li>
+</ul>
+<p>If <span class="math inline">\(A\)</span> happens (first flip is Heads), it doesn’t change <span class="math inline">\(P(B)\)</span> (chance the second flip will be Heads). In other words:</p>
+<p><span class="math inline">\(P(B | A) = P(B) = 0.5\)</span></p>
+<p>And if <span class="math inline">\(A\)</span> <em>doesn’t</em> happen (<span class="math inline">\(A^C\)</span>, the first flip is Tails), this still doesn’t change <span class="math inline">\(P(B)\)</span> (chance the second flip will be Heads).</p>
+<p><span class="math inline">\(P(B | A^C) = P(B) = 0.5\)</span></p>
+<p>In other words, whatever happens with <span class="math inline">\(A\)</span>, the chance of <span class="math inline">\(B\)</span> will not change. And vice versa.</p>
+<p><strong>Example of <em>dependent</em> events</strong></p>
+<p>Consider “sleeping through your alarm” to be an event, <span class="math inline">\(A\)</span>. Maybe you rarely do this, so <span class="math inline">\(P(A) = 0.02\)</span>. Now consider “being late to class” to be an event, <span class="math inline">\(B\)</span>. Maybe this is also uncommon for you, so <span class="math inline">\(P(B) = 0.10\)</span>. However, IF you missed your alarm, THEN you’re much more likely to be late for class! That is, <em>given</em> that you missed your alarm, you’re suddenly (say) 60% likely to be late. In other words,</p>
+<ul>
+<li>Event <span class="math inline">\(A\)</span> is “Sleeping through your alarm.” <span class="math inline">\(P(A) = 0.02\)</span></li>
+<li>Event <span class="math inline">\(B\)</span> is “Being late to class.” <span class="math inline">\(P(B) = 0.10\)</span></li>
+<li><span class="math inline">\(P(B | A) = 0.60\)</span> which is <span class="math inline">\(&gt; P(B)\)</span></li>
+</ul>
+<p>The events are <em>dependent</em>.</p>
+<p><strong>How to check for independence:</strong></p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, <span class="math inline">\(P(B|A) = P(B)\)</span>. (And <span class="math inline">\(P(A|B) = P(A)\)</span>)</p>
+<p>Consequently, the multiplication rule reduces to:</p>
+<p><span class="math display">\[ P(A \cap B) = P(A) \times P(B | A) = P(A) \times P(B) \]</span></p>
+<p>Usually the fastest and most convenient way to check if two events are independent is to see if the product of their probabilities is the same as the probability of their intersection:</p>
+<div class="def">
+<p><strong>Computational check for independence</strong></p>
+<p>Check if: <span class="math inline">\(P(A \cap B) = P(A)\times P(B)\)</span></p>
+</div>
+<p>As another example, consider our box of 2 red and 2 blue tickets. <img src="images/box-red-blue.jpeg" class="img-fluid" width="100"></p>
+<p>We’re going to draw twice from the box.</p>
+<p>When we draw <em>with</em> replacement, the box resets to the same place between draws. If we get red ticket on the first draw, <em>then put it back</em>, the box is back to its original form: 2 red, 2 blue. This means the second draw faces the same probabilities as the first: the chance of the second ticket being red is <em>still</em> 1/2. Hence, the draws are <em>independent</em>.</p>
+<p>However, if we draw the tickets <em>without</em> replacement, <em>the box changes</em> between draws, and so will the probabilities. If a red ticket comes out first, the box has only 1 red and 2 blue tickets left, so the probability of a red ticket on the second draw is now only 1/3. The draws are <em>dependent</em>.</p>
+<p>The lesson here is that when we draw tickets <em>with</em> replacement, the draws are <strong>independent</strong> - the outcome of the first draw does not affect the second. If we draw tickets <em>without</em> replacement, the draws are <strong>dependent</strong>. The outcome of the first draw changes the probabilities of the tickets for the second draw.</p>
+<section id="example-selecting-2-people-out-of-a-group-of-5" class="level3">
+<h3 class="anchored" data-anchor-id="example-selecting-2-people-out-of-a-group-of-5">Example: Selecting 2 people out of a group of 5</h3>
+<section id="drawing-without-replacement" class="level5">
+<h5 class="anchored" data-anchor-id="drawing-without-replacement">(drawing <em>without</em> replacement)</h5>
+<p>We have a group of 5 people: Alex, Emi, Fred, Max, and Nan. Two of the five are to be selected at random to form a two person committee. Represent this situation using draws from a box of tickets.</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>We only care about <em>who</em> is picked, not the order in which they are picked. For instance, picking Alex first and then Emi results in the same committee as picking first Emi and then Alex.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/committee.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+All the ten pairs are equally likely. On the first draw, there are 5 tickets to choose from, and on the second there are 4, making <span class="math inline">\(5 \times 4 = 20\)</span> possible draws of two tickets, drawn from this box, one at a time, without replacement. We have only 10 pairs here because of those 20 pairs, there are only 10 distinct ones. When we count 20 pairs, we are counting Alex <span class="math inline">\(+\)</span> Emi as one pair, and Emi <span class="math inline">\(+\)</span> Alex as another pair.
+</details>
+<p>What is the probability that Alex and Emi will be selected? Guess! (Hint: you have seen all the possible pairs above, and they are equally likely. What will be the probability of any one of them?)</p>
+<p>We could use the multiplication rule to compute this probability, which is <em>much</em> simpler than writing out all the possible outcomes. The committee can consist of Alex and Emi either if Alex is drawn first <strong>and</strong> Emi second, <strong>or</strong> Emi is drawn first <strong>and</strong> Alex second. The probability that Alex will be drawn first is <span class="math inline">\(1/5\)</span>. The conditional probability that Emi will be drawn second <em>given</em> that Alex was drawn is <span class="math inline">\(1/4\)</span> since there are only 4 tickets left in the box. Using the multiplication rule, the probability that Alex will be drawn first and Emi second is <span class="math inline">\((1/4) \times (1/5) = 1/20\)</span>. Similarly, the probability that Emi will be drawn first and Alex second is <span class="math inline">\(1/20\)</span>. This means that the probability that Alex and Emi will be selected for the committee is <span class="math inline">\(1/20 + 1/20 = 1/10\)</span>.</p>
+</section>
+</section>
+<section id="example-colored-and-numbered-tickets" class="level3">
+<h3 class="anchored" data-anchor-id="example-colored-and-numbered-tickets">Example: Colored and numbered tickets</h3>
+<p>I have two boxes that with numbered tickets colored red or blue as shown below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/indep-box.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+</figure>
+</div>
+<p>Are color and number independent or dependent for box 1? What about box 2?</p>
+<p>For example, is the probability of a ticket marked 1 the same whether the ticket is red or blue?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>For box 1, color and number are dependent, since the probability of 3 given that the ticket is red is 1/3, but the probability of 3 given that the ticket is blue is 0 (and similarly for the probability of 4).</p>
+<p>Even though the probability for 1 or 2 given the ticket is red is the same as the probability for 1 or 2 given the ticket is blue, we say that color and number are <em>dependent</em> because of the tickets marked 3 or 4.</p>
+<p>Now you work it out for box 2.</p>
+</details>
+</section>
+<section id="example-tickets-with-more-than-one-number-on-them" class="level3">
+<h3 class="anchored" data-anchor-id="example-tickets-with-more-than-one-number-on-them">Example: Tickets with more than one number on them</h3>
+<p>Now I have two boxes that with numbered tickets, where each ticket has two numbers on them, as shown. For each box, are the two numbers independent or dependent? For example, if I know that the first number is 1 does it change the probability of the second number being 6 (or the other way around: if I know the second number is 6, does it change the probability of the first number being 1)?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/box-2-number.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>For box 1, the first number and second number are independent, as shown below, using 1 and 6 as examples. If we know that the first number is 1, the box reduces as shown. The probability of the second number being 6 does not change for box 1. The probability <em>does</em> change for box 2, increasing from 1/2 to 2/3, since the second number is more likely to be 6 if the first number is 1.</p>
+<img src="images/box-2-number-cond.jpeg" class="img-fluid quarto-figure quarto-figure-center" width="700">
+</details>
+</section>
+</section>
+<section id="back-to-sally-clark" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-sally-clark">Back to Sally Clark</h2>
+<p>Professor Roy Meadow claimed that the probability of two of Sally Clark’s sons dying of SIDS was 1 in 73 million. He obtained this number by multiplying 8543 by 8543, using the multiplication rule, treating the two events as <em>independent</em>. The question is, are they really independent? Was a crime really committed? Unfortunately for Sally Clark, two catastrophic errors were committed in her case by the prosecution, and not caught by the defense. (She appealed the decision, and was acquitted and released, but after spending 4 years in prison after being accused of murdering her babies. You can imagine how she was treated.)</p>
+<p>The first error was in treating the deaths as independent, and the second was in looking at the wrong probability. Let’s look at the first mistake. It turns out that the probability of a second child dying of “cot death” or SIDS is 1/60 <em>given</em> that the first child died of SIDS. This was a massive error, and it turned out that the prosecution suppressed the pathology reports for the second baby, who had a very bad infection and might have died of that. It is also believed that male infants are more likely to suffer cot death.</p>
+<p>The second error is an example of what is called the Prosecutor’s Fallacy. What is needed is <span class="math inline">\(P(\text{innocence }\vert \text{ evidence})\)</span>, but it is often confused with (the <em>much</em> smaller) <span class="math inline">\(P(\text{evidence }\vert \text{ innocence})\)</span>. They should have actually compared the probability of innocence given the evidence with the probability of murder given the evidence. These multiple errors ruined many lives. Though Sally Clark was eventually acquitted, helped by the Royal Statistical Society’s evidence, her life was shattered, and she died soon after being released. The moral of this story is to be very careful while multiplying probabilities. You must check to see if the events are actually independent.</p>
+</section>
+<section id="de-mérés-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="de-mérés-paradox">De Méré’s paradox</h2>
+<p>Let’s finally compute the probability of rolling at least one six in 4 rolls of a fair six-sided die. This is much easier to compute if we use the complement rule. The complement of at least one six is <em>no</em> sixes in 4 rolls. Each roll is independent of the other rolls because what you roll does not affect the values of future rolls. This means that we can use the multiplication rule to figure out the chance of no sixes in any of the rolls. The chance of no six in any particular roll is <span class="math inline">\(5/6\)</span> (there are five outcomes that are not six).</p>
+<p>The chance of no sixes in any of the 4 rolls is therefore <span class="math inline">\(\displaystyle \left( \frac{5}{6}\right)^4\)</span> (because the rolls are independent). Using the complement rule, we get that: <span class="math display">\[ P(\text{at least one six in 4 rolls}) = 1 - P(\text{no sixes in any of the 4 rolls}) = 1 - \left( \frac{5}{6}\right)^4 \approx 0.518\]</span></p>
+<p>Similarly, the probability of at least 1 double six in 24 rolls of a pair of dice is given by <span class="math display">\[ 1- P(\text{no double sixes in any of the 24 rolls}) = 1 - \left( \frac{35}{36}\right)^{24} \approx 0.491\]</span></p>
+<p>By the way, notice that the simulation was pretty accurate!</p>
+<p>Before we wrap up these notes, let’s review two important things. The first has to do with a very common misconception, confusing mutually exclusive and independent events.</p>
+</section>
+<section id="mutually-exclusive-vs-independent-events" class="level2">
+<h2 class="anchored" data-anchor-id="mutually-exclusive-vs-independent-events">Mutually exclusive vs independent events</h2>
+<p>Note that if two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, both with <ins>positive</ins> probability, are mutually exclusive, they <strong>cannot</strong> be independent. If <span class="math inline">\(P(A \cap B) = 0\)</span>, but neither <span class="math inline">\(P(A) =0\)</span> nor <span class="math inline">\(P(B) = 0\)</span>, then <span class="math inline">\(P(A \cap B) = 0 \ne P(A)\times P(B)\)</span>. However, if two events are not independent, that does not mean they are mutually exclusive.</p>
+<p>The second item generalizes the multiplication rule that we have already seen, by extending it to events that are not mutually exclusive. It is called the “inclusion-exclusion formula”.</p>
+</section>
+<section id="inclusion-exclusion-generalized-addition-rule" class="level2">
+<h2 class="anchored" data-anchor-id="inclusion-exclusion-generalized-addition-rule">Inclusion-exclusion (generalized addition rule)</h2>
+<p>Now that we know how to compute the probability of the intersection of two events, we can compute the probability of the union of two events:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/incl-excl.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B) \]</span></p>
+<p>You can see that if we just add the probabilities of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we double count the overlap. By subtracting it once, we can get the correct probability, and we know how to compute the probability of <span class="math inline">\(A\cap B\)</span>. This is known as the inclusion-exclusion principle.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this lecture, we do a deep dive into computing probabilities. It is well known that people are just not good at estimating probabilities of events, and we saw the tragic example of Sally Clark (who, even more sadly, is not a unique case)<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>We defined conditional probability and independence, and the multiplication rule, considering draws at random with and without replacement. We finally computed the probabilities in the dice games from 17th century France by combining the multiplication rule and the complement rule.</p>
+<p>We noted that independent events are very different from mutually exclusive events, and finally we learned how to compute probabilities of unions of events that may not be mutually exclusive with the inclusion-exclusion or generalized addition rule.</p>
+<!--In the code section, we learned about a new file type, and explored a useful function for simulations.-->
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>(https://www.theguardian.com/uk-news/2021/nov/20/sally-clark-cot-death-mothers-wrongly-jailed)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>From the archives of The Guardian newspaper <a href="https://www.theguardian.com/uk/2001/jul/15/johnsweeney.theobserver" class="uri">https://www.theguardian.com/uk/2001/jul/15/johnsweeney.theobserver</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The thumbnail image of the headline from the Manchester Evening News and some details of the case are from <a href="http://www.inference.org.uk/sallyclark" class="uri">http://www.inference.org.uk/sallyclark</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://www.theguardian.com/uk-news/2021/nov/20/sally-clark-cot-death-mothers-wrongly-jailed" class="uri">https://www.theguardian.com/uk-news/2021/nov/20/sally-clark-cot-death-mothers-wrongly-jailed</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../3-generalization/01-prob-foundations/notes.html" class="pagination-link" aria-label="Probability Foundations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Probability Foundations</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../3-generalization/03-probability-dsns/notes.html" class="pagination-link" aria-label="Probability Distributions">
+        <span class="nav-page-text">Probability Distributions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

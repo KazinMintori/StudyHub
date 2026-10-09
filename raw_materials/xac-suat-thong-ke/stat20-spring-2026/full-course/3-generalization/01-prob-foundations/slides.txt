@@ -1,0 +1,80 @@
+Probability Foundations
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Concept Question 1
+
+  
+    −
+    +
+
+ 01:00
+
+Consider the Venn diagram below, which has 20 possible outcomes in 
+[MATH] \(\Omega\), depicted by the purple dots. Suppose the dots represent equally likely outcomes. What is the probability of 
+[MATH] \(A\) or 
+[MATH] \(B\) or 
+[MATH] \(C\)? That is, what is 
+[MATH] \(P(A \cup B \cup C)\)?
+
+Ask them what is the quickest way to do this. Maybe even give them only 15 or 30 seconds.
+
+Concept Question 2
+
+The Linda Problem
+
+  
+    −
+    +
+
+ 01:00
+
+The Linda problem is from a very famous experiment conducted by Daniel Kahneman and Amos Tversky in 1983 (The version below is from the book Thinking, Fast and Slow by Kahneman, page 156):
+
+Linda is thirty-one years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in antinuclear demonstrations.
+
+Which alternative is more probable?
+
+Linda is a bank teller.
+
+Linda is a bank teller and is active in the feminist movement.
+
+Correct answer: (a) Depending on the response, you can discuss how even though (b) is clearly contained in (a) and therefore has lower probability, an overwhelming majority of their respondents ranked (b) as more likely. “About 85% to 90% of undergraduates at several major universities chose the second option, contrary to logic”, and talk about why this is so. Probability can be tricky and counter-intuitive. If they do well, congratulate them and say that they are among the rare people who understand that 
+[MATH] \(P(A \textbf{ and } B)\) must be lower than 
+[MATH] \(P(A)\).
+
+Kahneman, Daniel. Thinking, Fast and Slow (p. 158). Farrar, Straus and Giroux.
+
+Concept Question 3
+
+  
+    −
+    +
+
+ 01:00
+
+Suppose Ali and Bettina are playing a game, in which Ali tosses a fair coin 
+[MATH] \(n\) times, and Bettina wins one dollar from Ali if the proportion of heads is less than 0.4. Ali lets Bettina decide if 
+[MATH] \(n\) is 10 or 100.
+
+Which 
+[MATH] \(n\) should Bettina choose?
+
+This ties into the plot of proportions of heads as the number of coin tosses increases. Hopefully Bettina realizes she has a better chance of getting the number of heads far away from 0.5 with fewer tosses.
+
+Problem Set: Probability Foundations
+
+−+
+25:00
+
+Break
+
+−+
+05:00
+
+Lab 5: Probability
+
+−+
+20:00

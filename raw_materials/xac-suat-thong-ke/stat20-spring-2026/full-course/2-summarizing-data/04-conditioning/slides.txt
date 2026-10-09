@@ -1,0 +1,282 @@
+Conditioning
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+This is a code heavy day, so it can be helpful to write up the names of the key dplyr verbs - mutate, arrange, select, filter, summarize, group_by - on side boards at the beginning when write short definitions as they come up. They can serve as references for the rest of the class period.
+
+It can also be helpful to have RStudio open so that you can copy and paste from these cells into RStudio and run them.
+
+c("fruit", "fruit", "vegetable") == "fruit"
+
+What will this line of code return?
+
+  
+    −
+    +
+
+ 01:00
+
+Question 2
+
+class_survey |>
+  filter(coding_exp_scale < 3,
+         olympics %in% c("Ice skating", "Speed skating"),
+         is_entrepreneur == TRUE)
+
+Which observations will be included in the data frame produced by this code (or equivalently, which observations will not be included)?
+
+  
+    −
+    +
+
+ 01:00
+
+Question 3
+
+Which data frame will have fewer rows?
+
+# A
+filter(class_survey, time_at_cal == "This is my first semester!")
+
+# B
+class_survey |>
+  mutate(first_sem = (time_at_cal == "This is my first semester!")) |>
+  filter(first_sem)
+
+  
+    −
+    +
+
+ 01:00
+
+Building data pipelines
+
+Consider the subset of students here:
+
+class_survey |>
+  filter(coding_exp_scale < 3,
+         olympics %in% c("Ice skating", "Speed skating"),
+         is_entrepreneur == TRUE)
+
+How do we extract the average of these students’ chance that class will be disrupted by a new COVID variant?
+
+Let’s look at three different ways to answer this question
+
+Nesting
+
+filter(class_survey, 
+       coding_exp_scale < 3,
+       olympics %in% c("Ice skating", "Speed skating"),
+       is_entrepreneur == TRUE)
+
+This set of slides walks through the three different approaches to stringing together functions in R, identifies the pros and cons of each, and encourages students to use the pipe.
+
+Nesting
+
+select(filter(class_survey, 
+       coding_exp_scale < 3,
+       olympics %in% c("Ice skating", "Speed skating"),
+       is_entrepreneur == TRUE),
+       coding_exp_xcale,
+       olympics,
+       is_entrepreneur,
+       covid)
+
+Nesting
+
+summarize(select(filter(class_survey, 
+       coding_exp_scale < 3,
+       olympics %in% c("Ice skating", "Speed skating"),
+       is_entrepreneur == TRUE),
+       coding_exp_scale,
+       olympics,
+       is_entrepreneur,
+       covid),
+       covid_avg = mean(covid))
+
+Nesting
+
+summarize(select(filter(class_survey, 
+       coding_exp_scale < 3,
+       olympics %in% c("Ice skating", "Speed skating"),
+       is_entrepreneur == TRUE),
+       coding_exp_scale,
+       olympics,
+       is_entrepreneur,
+       covid),
+       covid_avg = mean(covid))
+
+# A tibble: 1 × 1
+  covid_avg
+      <dbl>
+1     0.428
+
+Nesting
+
+summarize(select(filter(class_survey, 
+       coding_exp_scale < 3,
+       olympics %in% c("Ice skating", "Speed skating"),
+       is_entrepreneur == TRUE),
+       coding_exp_scale,
+       olympics,
+       is_entrepreneur,
+       covid),
+       covid_avg = mean(covid))
+
+Cons
+
+Must be read from inside out
+
+Hard to keep track of arguments
+
+Pros
+
+All in one line of code
+
+Only refer to one data frame
+
+Step-by-step
+
+df1 <- filter(class_survey, 
+              coding_exp_scale < 3,
+              olympics %in% c("Ice skating", "Speed skating"),
+              is_entrepreneur == TRUE)
+df2 <- select(df1, 
+              coding_exp_scale,
+              olympics,
+              is_entrepreneur,
+              covid)
+summarize(df2,
+          covid_avg = mean(covid))
+
+Cons
+
+Have to repeat data frame names
+
+Creates unnecessary objects
+
+Pros
+
+Stores intermediate objects
+
+Can be read top to bottom
+
+Using the pipe operator
+
+class_survey |>
+  filter(coding_exp_scale < 3,
+         olympics %in% c("Ice skating", "Speed skating"),
+         is_entrepreneur == TRUE) |>
+  select(coding_exp_scale,
+         olympics,
+         is_entrepreneur,
+         covid) |>
+  summarize(covid_avg = mean(covid))
+
+Cons
+
+Not too many!
+
+Pros
+
+Can be read like an english paragraph
+
+Only type the data once
+
+No leftovers objects
+
+Understanding your pipeline
+
+It’s good practice to understand the output of each line of code by breaking the pipe. In this example, we can deduce that line 3 must be the culprit.
+
+class_survey |>
+  select(covid) |>
+  filter(time_at_cal == "It's my first time_at_cal.")
+
+Error in `filter()`:
+ℹ In argument: `time_at_cal == "It's my first time_at_cal."`.
+Caused by error:
+! object 'time_at_cal' not found
+
+class_survey |>
+  select(covid)
+
+# A tibble: 816 × 1
+   covid
+   <dbl>
+ 1  0   
+ 2  0.5 
+ 3  0.6 
+ 4  0.7 
+ 5 NA   
+ 6  0.15
+ 7  0.7 
+ 8  0   
+ 9  0.8 
+10 NA   
+# ℹ 806 more rows
+
+Concept Question
+
+class_survey |> # A #<<
+  filter(coding_exp_scale < 3,
+         olympics %in% c("Ice skating", 
+                         "Speed skating"),
+         is_entrepreneur == TRUE) |> # B #<<
+  select(coding_exp_scale,
+         olympics,
+         is_entrepreneur,
+         covid) |> # C #<<
+  summarize(covid_avg = mean(covid)) # D #<<
+
+# note
+dim(class_survey)
+
+[1] 816  30
+
+What are the dimensions (rows x columns) of the data frames output at each stage of this pipe?
+
+  
+    −
+    +
+
+ 01:00
+
+summarize(class_survey,
+          mean(time_at_cal == "I'm in my first year.", na.rm = TRUE))
+
+What is will this line of code return?
+
+  
+    −
+    +
+
+ 01:00
+
+This will return the proportion of students who answered “I’m in my first year”. This is surprising to students because it’s not immediately clear that a mean of a logical vector is the same as the proportion of cases that are true.
+
+Problem Set: Conditioning
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab Part I: Flights
+
+  
+    −
+    +
+
+ 25:00

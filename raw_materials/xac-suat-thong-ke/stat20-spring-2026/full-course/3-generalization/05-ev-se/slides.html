@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
+<link href="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
+
+  <meta name="author" content="STAT 20: Introduction to Probability and Statistics">
+  <title>Stat 20 – Expected Value and Variance</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1f58c03bc26265810021d8ae65932dae.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+  </script>
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
+<meta property="og:title" content="Expected Value and Variance – Stat 20">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/assets/stat20-hex.png">
+<meta property="og:site_name" content="Stat 20">
+<meta name="twitter:title" content="Expected Value and Variance – Stat 20">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/assets/stat20-hex.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="../../site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-bg.png" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title">Expected Value and Variance</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+STAT 20: Introduction to Probability and Statistics 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+
+<!--
+
+## Some thoughts on expected values...
+
+![](images/dilbert-ev.png){fig-aligned="center" width="500"}
+
+-->
+<!--
+
+# Concept Review
+
+##
+
+Let $X$ be a random variable such that 
+$$
+X = \begin{cases}
+            -1, & \text{ with probability } 1/3\\
+            0, &  \text{ with probability } 1/6\\
+            1, &  \text{ with probability } 4/15 \\
+            2, & \text{ with probability } 7/30 \\
+         \end{cases}
+$$
+
+(a) Draw the graph of the cdf of $X$ 
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_f0be671e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+```
+
+:::
+:::
+
+
+\
+
+(b) Compute the expected value and variance of $X$
+
+:::{.notes}
+write down pmf with denominator 30, and draw cdf on the board. 
+P(X = -1)= 5/30, P(X = 0)= 10/30,  P(X = 1)= 8/30, P(X = 2)= 7/30
+E(X) = (-1)(5/30) + 0(10/30) + 1(8/30) + 2(7/30)
+(-10 + 0 + 8 + 14)/30 = 12/30 = 2/5
+Var(X) = E(X^2) - 4/25 = (10 + 0 + 8 +28)/30 -4/25 = 23/15- 4/25 ~~ 1.37333
+Graph the pmf and mark the expectation
+The numbers are not pretty but the point is to show them the computation and graph
+The rest of the ideas can be recapped as you go over the concept questions
+You may want to review linearity of expectation here, or save it for when going over the PS
+:::
+
+-->
+</section>
+<section>
+<section id="concept-questions" class="title-slide slide level1 center">
+<h1>Concept Questions</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_d3e1ba82" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(T\)</span> is a random variable with the distribution shown below:</p>
+<p><span class="math display">\[
+T = \begin{cases}
+3, \; \text{ with prob } 1/3\\
+4, \; \text{ with prob } 1/4\\
+5, \; \text{ with prob } 5/12
+\end{cases}
+\]</span></p>
+<p>Consider the box with tickets: <span class="math inline">\(\fbox{3}\, \fbox{3}\, \fbox{3} \,\fbox{4}  \,\fbox{4} \,\fbox{4} \,\fbox{4} \,\fbox{5} \,\fbox{5}\, \fbox{5} \,\fbox{5} \,\fbox{5}\)</span></p>
+<p>Suppose we draw once from this box and let <span class="math inline">\(U\)</span> be the value of the ticket drawn. Which random variable has a higher expected value?</p>
+<div class="poll">
+<p>The expected value of <span class="math inline">\(T\)</span> is ____ the expected value of <span class="math inline">\(U\)</span>.</p>
+</div>
+<aside class="notes">
+<p>This is a reading question. Note that the pmf implied by the box is not the same as the given pmf. In the box, 4 has a higher probability, so the average is higher. They do not need to actually do the computation. At this point, ask them what box would they use so that if <span class="math inline">\(T\)</span> is the value of a randomly selected ticket, the distribution of <span class="math inline">\(T\)</span> is exactly the distribution shown here.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_922aea4e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<p>A prof notices that Zoom office hours are not too crowded this semester. She observes that a random variable <span class="math inline">\(X\)</span> representing the number of <em>Stat 20</em> students coming to her Thursday office hours has a Poisson(2) distribution. Furthermore, there is one Data 88 student from a previous semester who is <em>always</em> there (they want a letter of recommendation).</p>
+<div class="poll">
+<p>Let <span class="math inline">\(V\)</span> be the <em>total</em> number of students in her Zoom office hours. What is the expected value and variance of <span class="math inline">\(V\)</span>?</p>
+</div>
+<aside class="notes">
+<p>This is also a reading question, with &lt; 50% getting it right. Let <span class="math inline">\(X\)</span> be the number of Stat 20 students who go to the office hours. Then <span class="math inline">\(E(X) = 2 = Var(X)\)</span>. But the number of students in the office is <span class="math inline">\(X+1\)</span> since that one student is always there. <span class="math inline">\(E(X+1) = 2+1 = 3\)</span> and <span class="math inline">\(Var(X+1) = Var(X) = 2\)</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_670e1f7d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<p>Let <span class="math inline">\(X\)</span> be a discrete uniform random variable on the set <span class="math inline">\(\{-1, 0, 1\}\)</span>.</p>
+<div class="poll">
+<p>If <span class="math inline">\(Y=X^2\)</span>, what is <span class="math inline">\(E(Y)\)</span> and <span class="math inline">\(Var(Y)\)</span>?</p>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_1ce6f2d2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<p>The <em>minimum</em> function <span class="math inline">\(\min(a,b)\)</span> takes in two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and outputs the smallest of the two. Let <span class="math inline">\(X\)</span> be a discrete uniform random variable on the set <span class="math inline">\(\{-1, 0, 1\}\)</span>.</p>
+<div class="poll">
+<p>If <span class="math inline">\(W = \min(X, 0.5)\)</span>, what is <span class="math inline">\(E(W)\)</span>?</p>
+</div>
+<aside class="notes">
+<p>begin by asking them what is What is <span class="math inline">\(E(X)\)</span>? And pointing out that if we have a symmetric distribution then EX is in the middle. Emphasize the idea of it being a “typical” value and an average or a mean. This is so they practice computing the EV of a function of a rv. Have them make a table (or perhaps you draw a table) of <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(W\)</span> and <span class="math inline">\(f(x)\)</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!--##
+
+Evgeni bakes a cake and invites two friends to join him in eating it. The cake will be evenly split between whoever shows up and Evgeni. His friends know that Evgeni is an erratic baker at best, and independently each toss a coin to decide whether they will go or not. Let $X$ be the **fraction** of the cake that Evgeni gets to eat. For example if 1 friend shows up, Evgeni gets half the cake, if 2 show up, he gets one-third of the cake. What is $E(X)$?
+
+
+
+##
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_8b83c29d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+```
+
+:::
+:::
+
+
+A die will be rolled $n$ times and the object is to guess the total number of spots in $n$ rolls, and you choose $n$ to be either 50 or 100. There is a one-dollar penalty for each spot that the guess is off. For instance, if you guess 200, and the total is 215, then you lose 15 dollars. Which do you prefer? 50 throws, or 100?*
+
+:::{.poll}
+Which do you prefer? $n = 50$ rolls, or $n = 100$ rolls?
+:::
+
+<font size="5"> * From the text *Statistics* by Freedman, Pisani, and Purves </font>
+
+:::{.notes}
+Prefer 50 because the square root law tells us the the spread of the distribution will be smaller for fewer rolls. If we were computing the *average* number of spots, then we would pick larger $n$ since $\sqrt{n}$ goes in the denominator of SE.
+:::
+
+
+## 
+
+
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_278c97c0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+```
+
+:::
+:::
+
+
+One hundred draws will be made with replacement from a box with tickets $\fbox{0}\, \fbox{2}\, \fbox{3} \,\fbox{4}  \,\fbox{6}$. Which of the following statements are true? *
+
+:::{.poll}
+- The expected value of the sum of the one hundred draws is 300, give or take 20 or so. 
+- The expected value of the sum of the one hundred is 300.
+- The sum of the one hundred draws is 300, give or take 20 or so. 
+- The sum of the one hundred draws is 300.
+:::
+
+<font size="5"> * From the text *Statistics* by Freedman, Pisani, and Purves </font>
+
+
+
+:::{.notes}
+The EV is a constant, and note that the box average is (0+2+3+4+6)/5 = 3, so the EV of a single draw is 3, and the EV of the sum of 100 draws is $100\times 4 = 300$. The give or take number given here is the box SD $\times 10 = 2\times 10 = 20$. You can let $X$ be a random variable that is the value of **one** ticket drawn at random from this box, and then we want $S_{100}$. This can be boardwork.
+:::
+
+
+
+## {.smaller}
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_662e3c88" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+```
+
+:::
+:::
+
+
+We have two random variables: $X \sim$ Binomial($10, 0.2$) and  $Y$ is the random variable that is the value of one ticket drawn at random from a box with tickets $\fbox{0}\, \fbox{2}\, \fbox{3} \,\fbox{4}  \,\fbox{6}$. 
+
+We take the sum of 100 iid random variables for each of $X$ and $Y$, called $SX_{100}$ and $SY_{100}$. The empirical distributions of  $SX_{100}$ and $SY_{100}$  are plotted below.
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](slides_files/figure-revealjs/unnamed-chunk-9-1.png){fig-align='center' width=1920}
+:::
+:::
+
+
+:::{.poll}
+Which distribution belongs to which random variable?
+:::
+
+:::{.notes}
+They need to remember that the expected value of S_x will be 200, and for S_y 300.
+:::
+
+-->
+<!--
+# Visualizing probability distributions
+
+## 
+
+Recall `geom_bar()`. What does it do? What aesthetics do we need to define?
+
+```r
+ggplot(penguins, aes(x = species)) + 
+geom_bar(fill = "steelblue4") + theme_minimal() 
+```
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](slides_files/figure-revealjs/unnamed-chunk-10-1.png){fig-align='center' width=480}
+:::
+:::
+
+## 
+
+What about if we don't want to count instances but want to *plot* probabilities? 
+
+Let $X$ be the number of heads when we toss a fair coin three times. We know that:
+
+$$
+X = \begin{cases}
+            0, & \text{ with probability } 1/8\\
+            1, &  \text{ with probability } 3/8\\
+            2, &  \text{ with probability } 3/8 \\
+            3, & \text{ with probability } 1/8 \\
+         \end{cases}
+$$
+To plot this, we use a special kind of bar chart, plotted using `geom_col()`, in which the bar heights represent *values* supplied by the data. We have to specify a `y` aesthetic, a column from the data. The values from this column will be the heights of the bars.
+
+##
+
+```r
+x <- c(0, 1, 2, 3)
+fx <- c(1/8, 3/8, 3/8, 1/8)
+coin3_df <- data.frame(x, fx)
+coin3_df %>% ggplot(aes(x = factor(x), y = fx)) +
+geom_col(fill = "goldenrod2") + ???
+```
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](slides_files/figure-revealjs/unnamed-chunk-11-1.png){fig-align='center' width=480}
+:::
+:::
+
+
+-->
+</section></section>
+<section id="problem-set-expected-value-and-variance" class="title-slide slide level1 center">
+<h1>Problem Set: Expected Value and Variance</h1>
+<div id="timer_b87873d94d4d58821b5d0d67c384525a7e9a00fe" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="break" class="title-slide slide level1 center">
+<h1>Break</h1>
+<div id="timer_b87873d94d4d58821b5d0d67c384525a7e9a00fe" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="lab-7-elections" class="title-slide slide level1 center">
+<h1>Lab 7: Elections</h1>
+<div id="timer_b87873d94d4d58821b5d0d67c384525a7e9a00fe" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: 'c',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+        var logo = document.querySelector('.slide-logo');
+        logo.addEventListener('click', function() {
+          // Get the referrer URL
+          var referrer = document.referrer;
+
+          // Check if the referrer is from the same origin for security purposes
+          if (referrer && new URL(referrer).origin === window.location.origin) {
+          // Redirect to the referrer URL
+          window.location.href = referrer;
+          } else {
+            // Fallback action if there's no referrer or it's from a different origin
+            // For example, redirect to a home page or show a message
+            window.location.href = '/'; // Redirecting to the home page
+          }
+        });
+      });
+      Reveal.addEventListener('slidechanged', (event) => {
+        if (event.indexh === 0) {
+          Reveal.configure({ slideNumber: null });
+        }
+        if (event.indexh === 1) { 
+          Reveal.configure({ slideNumber: 'c' });
+        }
+      });
+    </script>
+    
+
+</body></html>

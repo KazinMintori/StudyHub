@@ -1,0 +1,134 @@
+Multiple Linear Regression
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+Today’s questions are centered around a few different linear models made using the data in the penguins data frame.
+
+m1 <- lm(flipper_length_mm ~ bill_length_mm, data = penguins)
+
+m2 <- lm(flipper_length_mm ~ bill_length_mm + species, 
+         data = penguins)
+
+m3 <- lm(flipper_length_mm ~ bill_length_mm + bill_depth_mm, 
+         data = penguins)
+
+m4 <- lm(flipper_length_mm ~ bill_length_mm + 
+  bill_depth_mm + species, 
+         data = penguins)
+
+Question 1
+
+−+
+01:00
+
+m1
+
+Call:
+lm(formula = flipper_length_mm ~ bill_length_mm, data = penguins)
+
+Coefficients:
+   (Intercept)  bill_length_mm  
+       127.330           1.674  
+
+Which is the correct interpretation of the coefficient in front of bill length?
+
+This assesses students’ ability to interpret a slope coefficient in simple linear regression based on how their values impact the estimated y variable.
+
+Question 2
+
+−+
+01:00
+
+m2
+
+Call:
+lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
+
+Coefficients:
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+         147.563             1.096            -5.247            17.552  
+
+Which is the correct interpretation of the coefficient in front of bill length?
+
+This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…), in the case where the other variable is categorical.
+
+Question 3
+
+−+
+01:00
+
+m2
+
+Call:
+lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
+
+Coefficients:
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+         147.563             1.096            -5.247            17.552  
+
+Which is the correct interpretation of the coefficient in front of Gentoo? Select all that apply.
+
+This one assesses their ability to interpret an indicator varaible coefficient.
+
+The most common interpretation should involve a comparison to the reference level (Adelie) and will mention that we need to fix the value of the other, numerical variable in the model.
+
+Question 4
+
+−+
+01:00
+
+m3
+
+Call:
+lm(formula = flipper_length_mm ~ bill_length_mm + bill_depth_mm, 
+    data = penguins)
+
+Coefficients:
+   (Intercept)  bill_length_mm   bill_depth_mm  
+       194.218           1.409          -3.218  
+
+Which is the correct interpretation of the coefficient in front of bill length?
+
+This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…), when the other variable is numerical.
+
+Question 5
+
+−+
+01:00
+
+m1 <- lm(flipper_length_mm ~ bill_length_mm , 
+         data = penguins)
+
+m4 <- lm(flipper_length_mm ~ bill_length_mm + 
+  bill_depth_mm + species, 
+         data = penguins)
+
+How many more coefficients does the model m4 have than m1?
+
+m4 has one more numerical variable than m1, and one more categorical variable as well. This adds 1 more coefficient and 2 more coefficients (there are three penguin species, so 3-1), respectively. The correct answer should be three more coefficients.
+
+Problem Set: Multiple Linear Regression
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab: Flights II
+
+  
+    −
+    +
+
+ 25:00

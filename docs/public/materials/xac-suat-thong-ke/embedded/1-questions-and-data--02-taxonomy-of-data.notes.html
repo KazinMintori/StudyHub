@@ -1,0 +1,821 @@
+<!DOCTYPE html><html lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html">
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Taxonomy of Data – this course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../2-summarizing-data/notes.html" rel="next">
+<link href="../../1-questions-and-data/01-understanding-the-world/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="../../site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="../../site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="The Taxonomy of Data – Stat 20">
+<meta property="og:description" content="Types of variables and the data frame">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/taxonomy-small.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="296">
+<meta property="og:image:width" content="838">
+<meta name="twitter:title" content="The Taxonomy of Data – Stat 20">
+<meta name="twitter:description" content="Types of variables and the data frame">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/images/taxonomy-small.png">
+<meta name="twitter:image-height" content="296">
+<meta name="twitter:image-width" content="838">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html { color-scheme: light; scroll-behavior: auto; }
+body { margin: 0; background: white; color: #202124; }
+#quarto-content, #quarto-document-content { display: block !important; width: auto !important; max-width: 900px !important; margin: 0 auto !important; padding: 20px 24px !important; }
+#quarto-document-content > * { grid-column: auto !important; }
+.column-margin, .margin-caption { position: static !important; width: auto !important; max-width: 100% !important; }
+.quarto-title .title { display: block !important; }
+img, svg { max-width: 100%; }
+pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflow-x: auto; }
+.studyhub-source-reference { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 16px; font-size: 14px; }
+@media(max-width:600px) { #quarto-document-content { padding: 16px !important; } body { font-size: 16px; } }
+</style></head><body><main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">The Taxonomy of Data</h1>
+<p class="subtitle lead">Types of variables and the data frame</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span style="font-family: Cinzel, serif; font-size: 1.2em">In the beginning was data</span>, and from that data was built an understanding of the world.</p>
+<div style="text-align: center">
+<p>…or…</p>
+</div>
+<p><span style="font-family: Cinzel, serif; font-size: 1.2em">In the beginning was understanding</span>, and from that understanding sprung questions that sought to be answered with data.</p>
+<p>So, which is it?</p>
+<p>This is a philosophical question and it is up for debate. What is clearer is that in the process of engaging in data science, you will inevitably find yourself at one of these beginnings, puzzling over how to make your way to the other one.</p>
+<div id="fig-ds-lifecycle" class="quarto-float quarto-figure quarto-figure-center anchored" alt="diagram showing the data science lifestyle moving between understanding the world and data.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ds-lifecycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/stat20-sketch-18.png" class="img-fluid figure-img" alt="diagram showing the data science lifestyle moving between understanding the world and data.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ds-lifecycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A big-picture view of what the Data Science Lifecycle.
+</figcaption>
+</figure>
+</div>
+<!-- - Add Shoebill tryptich -->
+<!-- - Add COVID example -->
+<p>The defining element of data science is the centrality of data as the means of advancing our understanding of the world. The word “data” is used in many different ways, so let’s write down a definition to get everyone on the same page.</p>
+<div class="def">
+<dl>
+<dt><strong>Data</strong></dt>
+<dd>
+An item of (chiefly numerical) information, especially one obtained by scientific work, a number of which are typically collected together for reference, analysis, or calculation. From Latin <em>datum</em>: that which is given. Facts.
+</dd>
+</dl>
+</div>
+<p>This broad definition permits a staggering diversity in the forms that data can take. When you conducted a chemistry experiment in high school and recorded your measurements in a table in a lab notebook, that was data. When you registered for this class and your name showed on CalCentral, that was data. When the James Webb Space Telescope took a photo of the distant reaches of our solar system, recording levels of light pixel-by-pixel, that was data.</p>
+<!-- - be clearer about what the registrars data is -->
+<!-- - choose non-image data set in place of JWST -->
+<p>Such diversity in data is more precisely described as diversity in the types of <em>variables</em> that are being measured in a data set.</p>
+<div class="def">
+<dl>
+<dt><strong>Variable</strong></dt>
+<dd>
+A characteristic of an object or observational unit that can be measured and recorded.
+</dd>
+</dl>
+</div>
+<p>In your chemistry notebook you may have recorded the <em>temperature</em> and <em>pressure</em> of a unit of gas, two variables that are of scientific interest. In the CalCentral data set, <em>name</em> is the variable that was recorded (on you!) but you can imagine other variables that the registrars office might have recorded: your year at Cal, your major, etc. Each of these are called <em>variables</em> because the value that is measured generally varies as you move from one object to the next. While your value of the <em>name</em> variable might be Penelope, if we record the same variable on another student we’ll likely come up with different value.</p>
+<!-- There are three things a variable could be referring to -->
+<!-- 1. a phenomenon -->
+<!-- 2. how the phenomenon is being recorded or measured into data -->
+<!--    - what values can it take? (this is often an intent- or value-laden exercise!) -->
+<!--    - for numerical units, what unit should we express it in? -->
+<!-- 3. How the recorded data is being analyzed -->
+<!--    - binning/discretizing income data -->
+<!--    - if a barchart has too many bars, using a histogram. -->
+<section id="a-taxonomy-of-data" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="a-taxonomy-of-data">A Taxonomy of Data</h2>
+<p>While the range of variables that we can conceive of is innumerable, there are recurring patterns in those variables that allow us to group them into persistent types that have shared properties. Such a practice of classification results in a taxonomy, which has been applied most notably in evolutionary biology to classify <a href="https://tree.opentreeoflife.org/opentree/argus/opentree13.4@ott93302">all forms of life</a>.</p>
+<p>Within the realm of data, an analogous taxonomy has emerged.</p>
+<div id="fig-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Taxonomy of Data, showing the two main branches of numerical categorical variables. Numerical varibles can be split into continuous and discrete variables. Categorical variables can be split into ordinal and nominal variables.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/taxonomy-of-data.png" class="img-fluid figure-img" alt="The Taxonomy of Data, showing the two main branches of numerical categorical variables. Numerical varibles can be split into continuous and discrete variables. Categorical variables can be split into ordinal and nominal variables.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: the Taxonomy of Data.
+</figcaption>
+</figure>
+</div>
+<section id="types-of-variables" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-variables">Types of Variables</h3>
+<p>The principle quality of a variable is whether it is <em>numerical</em> or <em>categorical</em>.</p>
+<div class="def">
+<dl>
+<dt><strong>Numerical Variable</strong></dt>
+<dd>
+A variable that take numbers as values and where the magnitude of the number has a quantitative meaning.
+</dd>
+</dl>
+</div>
+<div class="def">
+<dl>
+<dt><strong>Categorical Variable</strong></dt>
+<dd>
+A variable that take categories as values. Each unique category is called a <em>level</em>.
+</dd>
+</dl>
+</div>
+<p>When most people think “data” they tend to think about numerical variables (like the <em>temperature</em> and <em>pressure</em> recorded in your lab notebook) but categorical variables (like the <em>name</em> recorded on CalCentral) are very common.</p>
+<p>All numerical variables can be classified as either <em>continuous</em> or <em>discrete</em>.</p>
+<div class="def">
+<dl>
+<dt><strong>Continuous Numerical Variable</strong></dt>
+<dd>
+A numerical variable that takes values on an interval of the real number line.
+</dd>
+</dl>
+</div>
+<div class="def">
+<dl>
+<dt><strong>Discrete Numerical Variable</strong></dt>
+<dd>
+A numerical variable that takes values that have jumps between them.
+</dd>
+</dl>
+</div>
+<p>A good example of a continuous numerical variable is <em>temperature</em>. If we are measuring outside air temperature on Earth in Fahrenheit, it is possible that we would record values anywhere from around <a href="https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth">-125 degrees F</a> and <a href="https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth">+135 degrees F</a>. While we might end up rounding our measurement to the nearest integer degree, we can imagine that the phenomenon of temperature itself varies smoothly and continuously across this range.</p>
+<p>A good example of a discrete numerical variable is <em>household size</em>. When the US Census goes door-to-door every year collecting data on every household, they record the number of people living in that household. A household can have 1 person, or 2 people, or 3 people, or 4 people, and so on, but it cannot have 2.83944 people. This makes it discrete.</p>
+<p>What unites both types of numerical variables is that the magnitude of the numbers have meaning and you can perform mathematical operations on them and the result also has meaning. It is possible and meaningful to talk about the average air temperature across three locations. It is also possible and meaningful to talk about the sum total number of people across ten households.</p>
+<p>The ability to perform mathematical operations drops away when we move to ordinal variables. All categorical variables can be classified as either <em>ordinal</em> or <em>nominal</em>.</p>
+<div class="def">
+<dl>
+<dt><strong>Ordinal Categorical Variable</strong></dt>
+<dd>
+A categorical variable with levels that have a natural ordering.
+</dd>
+</dl>
+</div>
+<div class="def">
+<dl>
+<dt><strong>Nominal Categorical Variable</strong></dt>
+<dd>
+A categorical variable with levels with no ordering.
+</dd>
+</dl>
+</div>
+<p>You have likely come across ordinal categorical variables if you have taken an opinion survey. Consider the question:“Do you strongly agree, agree, feel neutral about, disagree, or strongly disagree with the following statement: Dogs are better than cats?” When you record answers to this question, you’re recording measurements on a categorical variable that takes values “strongly agree”, “agree”, “neutral”, “disagree”, “strongly disagree”. Those are the <em>levels</em> of the categorical variable and they have a natural ordering: “strongly agree” is closer to “agree” than it is to “strongly disagree”.</p>
+<p>You can contrast this with a nominal categorical variable. Consider a second question that asks (as the registrar does): “What is your name?” There are many more possible levels in this case - “Penelope”, “David”, “Shobhana”, etc. - but those levels have no natural ordering. In fact this is very appropriate example of a nominal variable because the word itself derives from the Latin <em>nomen</em>, or “name”.</p>
+<p>Let’s take a look at a real data set to see if we can identify the variables and their types.</p>
+</section>
+<section id="example-palmer-penguins" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="example-palmer-penguins">Example: Palmer Penguins</h3>
+<p>Dr.&nbsp;Kristen Gorman is a fisheries and wildlife ecologist at the University of Alaska, Fairbanks whose work brought her to Palmer Station, a scientific research station run by the National Science Foundation in Antarctica. At Palmer Station, she took part in a long-term study to build an understanding of the breeding ecology and population structure of penguins.</p>
+<!-- - add framing in terms of questions and data -->
+<div id="fig-palmer" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-palmer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/kristen-gorman.png" class="img-fluid figure-img" alt="Dr. Gorman recording data in notebook surrounded by penguins."></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/palmer-station.jpeg" class="img-fluid figure-img" alt="An aerial view of Palmer Station in Antarctica."></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-palmer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Dr.&nbsp;Gorman recording measurements on penguins and Palmer Station, a research station in Antarctica.
+</figcaption>
+</figure>
+</div>
+<p>In order to build her understanding of this community of penguins, she and fellow scientists spent time in the field recording measurements on a range of variables that capture important physical characteristics.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="images/culmen-depth.png" class="img-fluid" alt="Sketch showing the beak of a penguin."></p>
+</div></div><p>Two of the variables that were recorded were <em>bill length</em> and <em>bill depth</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Each of these capture a dimension of the bill of a penguin recorded in millimeters These are identifiable as <em>continuous numerical variables</em>. They’re numerical because the values have quantitative meaning and they’re continuous because bill sizes don’t come in fixed, standard increments. They vary continuously.</p>
+<p>Another variable that was recorded was the <em>species</em> of the penguin, either “Adelie”, “Gentoo”, or “Chinstrap”. Because these values are categories, this is a <em>categorical</em> variable. More specifically, it’s a <em>nominal categorical</em> because there is no obvious natural ordering between these three species.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="images/lter_penguins.png" class="img-fluid" alt="Sketch showing the three species of penguins."></p>
+</div></div><p>These are just three of many variables that recorded in the penguins data set and published along their scientific findings in the paper, <em>Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis)</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. We will return throughout this course to this data set and this study. It is a prime example of how careful data collection and careful scientific reasoning can expand our understanding of a corner of our world about which we know very little.</p>
+</section>
+<section id="why-types-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-types-matter">Why Types Matter</h3>
+<p>The Taxonomy of Data is a useful tool of statistics and data science because it helps guide the manner in which data is recorded, visualized, and analyzed. Many confusing plots have been made by not thinking carefully about whether a categorical variable is ordinal or not or by mistaking a continuous numerical variable for a categorical variable. You will get plenty of practice using this taxonomy to guide your data visualization in the next unit.</p>
+<p>Like many tools built by scientists, though, this taxonomy isn’t perfect. There are many variables that don’t quite seem to fit into the taxonomy or that you can argue should fit into multiple types. That’s usually a sign that something interesting is afoot and is all the more reason to think carefully about the nature of the variables and the values it might take before diving into your analysis.</p>
+</section>
+</section>
+<section id="a-structure-for-data-the-data-frame" class="level2">
+<h2 class="anchored" data-anchor-id="a-structure-for-data-the-data-frame">A Structure for Data: The Data Frame</h2>
+<p>When we seek to grow our understanding of a phenomenon, sometimes we select a single variable that we go out and collect data on. More often, we’re dealing with more complex phenomenon that are characterized by a few, or a few dozen, or hundreds (or even millions!) of variables. CalCentral has far more than just your name on file. To capture all of the complexity of class registration at Cal, it is necessary to record dozens of variables.</p>
+<p>To keep all of this data organized, we need a structure. While there are several different ways to structure a given data set, the format that has become most central to data science is the data frame.</p>
+<div class="def">
+<dl>
+<dt><strong>Data Frame</strong></dt>
+<dd>
+An array that associates the observations (downs the rows) with the variables measured on each observation (across the columns). Each cell stores a value observed for a variable on an observation.
+</dd>
+</dl>
+</div>
+<p>While this definition might seem opaque, you are already familiar with a data frame. You are you just more accustomed to seeing it laid out this like this:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-hover table-striped caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">bill_length_mm</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">bill_depth_mm</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">43.5</td>
+<td style="text-align: right;">18.1</td>
+<td style="text-align: left;">Chinstrap</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">48.1</td>
+<td style="text-align: right;">15.1</td>
+<td style="text-align: left;">Gentoo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">49.0</td>
+<td style="text-align: right;">19.5</td>
+<td style="text-align: left;">Chinstrap</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: left;">Chinstrap</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">34.6</td>
+<td style="text-align: right;">21.1</td>
+<td style="text-align: left;">Adelie</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">49.8</td>
+<td style="text-align: right;">17.3</td>
+<td style="text-align: left;">Chinstrap</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">40.9</td>
+<td style="text-align: right;">18.9</td>
+<td style="text-align: left;">Adelie</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">13.7</td>
+<td style="text-align: left;">Gentoo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>You might be accustomed to calling this a “spreadsheet” or a “table”, but the organizational norm of putting the variables down the columns and the observations across the rows make this a more specific structure.</p>
+<p>One of the first questions that you should address when you first come across a data frame is to determine what the unit of observation is.</p>
+<div class="def">
+<dl>
+<dt><strong>Unit of Observation</strong></dt>
+<dd>
+The class of object on which the variables are observed.
+</dd>
+</dl>
+</div>
+<p>In the case of data frame above, the unit of observation is a single penguin near Palmer Station. The first row captures the measurements on the first penguin, the second row captures the measurements of the second penguin, and so on. If I log into CalCentral to see the data frame that records information on the students enrolled in this class, the unit of observation is a single student enrolled in this class.</p>
+<section id="not-a-data-frame" class="level3">
+<h3 class="anchored" data-anchor-id="not-a-data-frame">Not a Data Frame</h3>
+<p>Before you leave thinking that “data frame” = “spreadsheet”, consider this data set:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images//alien-contingency-table.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Contingency table showing the counts of alien color by time of day they were sighted." width="400"></p>
+</figure>
+</div>
+<p>For it to be a data frame, we would have to read across the columns and see the names of the variables. You can imagine recording whether or not an alien is green or blue, but those variables would take the values “yes” and “no”, not the counts that we see here. Furthermore, total is not a variable that we’ve recorded a single unit; this column captures aggregate properties of the whole data set.</p>
+<p>While this structure might well be called a “table” or possibly a “spreadsheet”, it doesn’t meet our definition for a data frame.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this lecture note we have focused on the nature of the data that will serve as the currency from which we’ll construct an improved understanding of the world. A first step is to identify the characteristics of the <em>variables</em> that are being measured and determine their <em>type</em> within the <em>Taxonomy of Data</em>. A second step is to organize them into a <em>data frame</em> to clearly associate the value that is measured for a variable with a particular observational unit.</p>
+<p>With these ideas in hand, we learned how to bring data onto our computer, so that in our next class, we can begin the process of identifying its structure and communicating that structure numerically and visually.</p>
+<p><a href="../../1-questions-and-data/02-taxonomy-of-data/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Penguin artwork by @allison_horst.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Gorman KB, Williams TD, Fraser WR (2014). <em>Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis)</em>. PLoS ONE 9(3):e90081. <a href="https://doi.org/10.1371/journal.pone.0090081" class="uri">https://doi.org/10.1371/journal.pone.0090081</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></main><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><script>
+(() => {
+  const entries = {"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html":{"id":"1-questions-and-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html":{"id":"2-summarizing-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html":{"id":"2-summarizing-data--04-conditioning","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html":{"id":"2-summarizing-data--04-conditioning","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html":{"id":"3-generalization","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html":{"id":"3-generalization--01-prob-foundations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html":{"id":"3-generalization--01-prob-foundations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html":{"id":"3-generalization--02-computing-probs","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html":{"id":"3-generalization--02-computing-probs","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html":{"id":"3-generalization--03-probability-dsns","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html":{"id":"3-generalization--03-probability-dsns","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html":{"id":"3-generalization--04-random-variables","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html":{"id":"3-generalization--04-random-variables","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html":{"id":"3-generalization--05-ev-se","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html":{"id":"3-generalization--05-ev-se","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html":{"id":"3-generalization--06-normal-approx","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html":{"id":"3-generalization--06-normal-approx","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html":{"id":"3-generalization--08-confidence-intervals","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html":{"id":"3-generalization--08-confidence-intervals","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html":{"id":"3-generalization--09-bootstrapping","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html":{"id":"3-generalization--09-bootstrapping","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html":{"id":"3-generalization--10-hypothesis-tests","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html":{"id":"3-generalization--10-hypothesis-tests","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html":{"id":"3-generalization--12-wrong-by-design","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html":{"id":"3-generalization--12-wrong-by-design","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/notes.html":{"id":"4-causation","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html":{"id":"4-causation--01-defining-causality","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html":{"id":"4-causation--01-defining-causality","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html":{"id":"4-causation--02-experiments","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html":{"id":"4-causation--02-experiments","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html":{"id":"4-causation--03-matching","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html":{"id":"4-causation--03-matching","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html":{"id":"5-prediction--01-method-of-least-squares","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html":{"id":"5-prediction--01-method-of-least-squares","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html":{"id":"5-prediction--02-improving-predictions","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html":{"id":"5-prediction--02-improving-predictions","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html":{"id":"5-prediction--03-overfitting","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html":{"id":"5-prediction--03-overfitting","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html":{"id":"5-prediction--05-logistic-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html":{"id":"5-prediction--05-logistic-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html":{"id":"quiz","kind":"slides"}};
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) return;
+    const raw = anchor.getAttribute('href');
+    if (raw.startsWith('#')) {
+      const target = document.getElementById(decodeURIComponent(raw.slice(1)));
+      if (target) { event.preventDefault(); target.scrollIntoView(); }
+      return;
+    }
+    const url = new URL(anchor.href, document.baseURI);
+    const key = url.origin + url.pathname;
+    if (entries[key]) { event.preventDefault(); parent.postMessage({type:'studyhub-source-navigation', ...entries[key]}, '*'); }
+    else { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+  }, true);
+})();</script></body></html>

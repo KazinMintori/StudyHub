@@ -1,0 +1,25 @@
+Generalization
+
+    
+
+    
+
+  
+
+In an enormously entertaining paper written about a decade ago, the economist Peter Backus estimated his chance of finding a girlfriend on any given night in London at about 1 in 285,000 or 0.0000034%. As he writes, this is either depressing or cheering news for a person, depending on what you had estimated your chance to be before reading the paper and doing a similar computation for yourself.1 The interesting point in the paper was using a probabilistic argument (originally developed by the astronomer and astrophysicist Frank Drake to estimate the probability of extra-terrestrial civilizations) to think about his dating problems. Anyone can follow the arguments put forward by Backus, including his statements that use probability.
+
+We all have some notion of chance or probability, and can ask questions like: - What is the chance you will get an A in Stat 20? (About 32%, based on last fall.)2 - What is the chance the 49ers will win the Super Bowl this year? (They are the favorites, with an implied probability of about 54.5%, .)3 - What is the chance you will roll a double on your next turn to get out of jail while playing Monopoly? (One in six.) - What is the chance that Donald Trump will win the Presidential election? (About 47%.) 4
+
+The second of our four types of claim we will investigate is a generalization.
+
+So far, we have examined data sets and summarized them, both numerically and visually. We have looked at data distributions, and associations between variables. Can we extend the conclusions that we make about the data sets to larger populations? If we notice that bill length and flipper length have a strong linear relationship for the penguins in our data, can we say this is true about all penguins? How do we draw valid conclusions about the population our data was drawn from? These are the kinds of questions we we will study using tools from probability theory.
+
+Footnotes
+
+Paper is at https://www.astro.sunysb.edu/fwalter/AST248/why_i_dont_have_a_girlfriend.pdf and a talk by Backus at https://www.youtube.com/watch?v=ClPPSry8bBw↩︎
+
+https://berkeleytime.com/grades/0-7077-all-all&1-7077-fall-2022-all↩︎
+
+https://www.freep.com/betting/sports/nfl-49ers-vs-chiefs-odds-moneylines-spreads-totals-best-nfl-odds-this-week↩︎
+
+https://www.thelines.com/odds/election/↩︎

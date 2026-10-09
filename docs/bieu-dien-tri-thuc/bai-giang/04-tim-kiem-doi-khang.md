@@ -5,33 +5,70 @@ section: lecture
 title: "Tìm kiếm đối kháng: Minimax & Alpha–Beta"
 prerequisites: ["cay","ngan-xep","do-phuc-tap"]
 lessonStatus: ready
+description: "Lý thuyết trò chơi tất định, thuật toán Minimax, kỹ thuật cắt tỉa Alpha-Beta và hàm lượng giá heuristic trong môi trường đối kháng."
 ---
 
+*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
 
-*Bài 4 · AIT2004 Cơ sở Trí tuệ nhân tạo — Nguồn: Russell & Norvig, "AIMA" 4th ed., chương 5.2–5.3.*
+← [Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 5: Bài toán ràng buộc CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
 
-← [Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 5: CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
+::: info Trọng tâm bài giảng
+Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung quanh tác tử là một môi trường thụ động: các vật cản đứng yên và không ai cố tình ngăn cản tác tử đến đích. Nhưng trong thế giới thực, trí tuệ nhân tạo thường xuyên phải đối đầu với những thực thể có trí tuệ khác — những đối thủ có lợi ích đối nghịch trực tiếp.
 
-::: info Bài này ôn tập gì?
-**Minimax** (chơi tối ưu chống một đối thủ luôn chơi tối ưu) và **cắt tỉa Alpha–Beta** (tăng tốc Minimax mà không đổi kết quả). Đây là nền tảng của mọi engine cờ vua/cờ vây kinh điển trước thời AlphaGo.
+Đó là bối cảnh của **Tìm kiếm đối kháng (Adversarial Search)**, nhánh giao thoa rực rỡ giữa Khoa học Máy tính và Lý thuyết Trò chơi (Game Theory). Bài giảng này làm sáng tỏ:
+1. **Mô hình Trò chơi Tổng bằng Không (Zero-Sum Games):** Định nghĩa toán học và nguyên lý Maximin của John von Neumann.
+2. **Thuật toán Minimax:** Cách một cỗ máy suy nghĩ ngược từ tương lai để đưa ra quyết định tối ưu trước một đối thủ không bao giờ mắc sai lầm.
+3. **Kỹ thuật Cắt tỉa Alpha–Beta:** Nghệ thuật bỏ qua những nhánh tính toán vô nghĩa để tăng gấp đôi tầm nhìn mà không làm sai lệch kết quả.
+4. **Hàm lượng giá heuristic và Hiệu ứng đường chân trời:** Ranh giới thực tế khi đối mặt với không gian trạng thái vượt tầm vũ trụ.
 :::
 
-## 4.1 Minimax
+## Minh họa tương tác
 
-::: tip Ẩn dụ
-Hai người chơi cờ ca-rô: bạn (MAX) luôn muốn điểm số cao nhất có thể, còn đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
-:::
+<CodeIllustration type="search" />
+
+---
+
+## 4.1 Mô hình hóa trò chơi đối kháng hình thức
+
+Chúng ta tập trung vào lớp trò chơi kinh điển có đặc tính: **Hai người chơi, theo lượt, tất định (không có yếu tố may rủi xúc xắc), thông tin hoàn hảo (hai bên đều quan sát được toàn bộ bàn cờ) và có tổng bằng không (Zero-Sum)** — ví dụ tiêu biểu là cờ vua, cờ tướng, cờ ca-rô, cờ vây.
+
+"Tổng bằng không" nghĩa là lợi ích của người này chính là thiệt hại của người kia:
+$$
+\text{Lợi ích}(\text{MAX}) + \text{Lợi ích}(\text{MIN}) = 0
+$$
+
+Một trò chơi hình thức gồm 6 thành phần:
+1. **Trạng thái ban đầu ($s_0$):** Cấu hình bàn cờ lúc bắt đầu.
+2. **Hàm xác định lượt đi ($\text{Player}(s)$):** Cho biết đến lượt ai đi (người chơi MAX muốn tối đa hóa điểm số, hoặc người chơi MIN muốn tối thiểu hóa điểm số).
+3. **Tập hành động hợp lệ ($\text{Actions}(s)$):** Các nước đi đúng luật từ trạng thái $s$.
+4. **Mô hình kết quả ($\text{Result}(s, a)$):** Trạng thái bàn cờ mới sau khi thực hiện nước đi $a$.
+5. **Kiểm tra kết thúc ($\text{TerminalTest}(s)$):** Trò chơi đã ngã ngũ hay chưa (thắng, thua, hòa).
+6. **Hàm lợi ích ($\text{Utility}(s, p)$):** Điểm số số học tại trạng thái kết thúc đối với người chơi $p$ (ví dụ: $+1$ cho thắng, $-1$ cho thua, $0$ cho hòa).
+
+---
+
+## 4.2 Thuật toán Minimax: Tư duy tối ưu trong nghịch cảnh
+
+### Nguyên lý Maximin của John von Neumann
+
+Giả sử bạn là người chơi **MAX**. Bạn muốn chọn nước đi dẫn tới điểm số cao nhất có thể. Nhưng bạn không được phép mơ mộng rằng đối thủ sẽ đi một nước ngớ ngẩn để dâng chiến thắng cho bạn. Đối thủ **MIN** là một kỳ thủ hoàn hảo, luôn tính toán nước đi khiến bạn chịu kết quả tồi tệ nhất.
+
+Do đó, triết lý sinh tồn của Minimax là: **Hãy tìm nước đi tốt nhất trong số những kịch bản xấu nhất mà đối thủ có thể gây ra cho bạn.**
+
+Công thức đệ quy Minimax được định nghĩa:
 
 $$
 \text{Minimax}(s) =
 \begin{cases}
-\text{Utility}(s) & \text{nếu } s \text{ là trạng thái kết thúc} \\
-\max_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MAX} \\
-\min_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MIN}
+\text{Utility}(s) & \text{nếu } \text{TerminalTest}(s) = \text{true} \\
+\max_{a \in \text{Actions}(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu } \text{Player}(s) = \text{MAX} \\
+\min_{a \in \text{Actions}(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu } \text{Player}(s) = \text{MIN}
 \end{cases}
 $$
 
-### Cây trò chơi mẫu (dùng lại cho cả Alpha–Beta bên dưới)
+### Quá trình tính toán trên cây trò chơi mẫu
+
+Xét cây trò chơi 3 tầng dưới đây: MAX ở gốc, kế tiếp là MIN, rồi đến MAX, và cuối cùng là các trạng thái kết thúc (lá) kèm điểm số lợi ích đã biết.
 
 ```mermaid
 flowchart TD
@@ -61,73 +98,82 @@ flowchart TD
     C4 --> L8
 ```
 
-**Tính ngược từ đáy lên:**
-- $C_1=\max(3,5)=5$ và $\ C_2=\max(6,9)=9$. $\ B_1=\min(5,9)=5$
-- $C_3=\max(1,2)=2$ và $\ C_4=\max(0,-1)=0$. $\ B_2=\min(2,0)=0$
-- $\text{Gốc}=\max(B_1,B_2)=\max(5,0)=\mathbf{5}$ → chọn nhánh **B1**
+Để tìm nước đi tại gốc, Minimax duyệt cây theo chiều sâu (DFS) xuống tận các nút lá, rồi truyền ngược giá trị lên từ dưới lên trên (Bottom-Up):
 
-### Code C++
+1. **Tại tầng MAX ($C_1, C_2, C_3, C_4$):** Chọn giá trị lớn nhất của các lá con:
+   - $C_1 = \max(3, 5) = 5$
+   - $C_2 = \max(6, 9) = 9$
+   - $C_3 = \max(1, 2) = 2$
+   - $C_4 = \max(0, -1) = 0$
+2. **Tại tầng MIN ($B_1, B_2$):** Đối thủ MIN sẽ chọn giá trị nhỏ nhất từ các lựa chọn của MAX:
+   - $B_1 = \min(C_1, C_2) = \min(5, 9) = 5$
+   - $B_2 = \min(C_3, C_4) = \min(2, 0) = 0$
+3. **Tại gốc (MAX):** Ta chọn nước đi mang lại điểm số cao nhất:
+   - $\text{Root} = \max(B_1, B_2) = \max(5, 0) = \mathbf{5}$
 
-```cpp
-struct GameNode {
-    bool isTerminal;
-    int value;                 // chỉ có ý nghĩa nếu isTerminal = true
-    vector<GameNode*> children;
-};
+Quyết định tối ưu của MAX tại gốc là: **Đi vào nhánh $B_1$**, đảm bảo chắc chắn thu về ít nhất $5$ điểm bất kể đối thủ chống cự thế nào.
 
-int minimax(GameNode* node, bool maximizingPlayer) {
-    if (node->isTerminal) return node->value;
+### Nút thắt thế kỷ: Sự bùng nổ tổ hợp của cây trò chơi
 
-    if (maximizingPlayer) {
-        int v = INT_MIN;
-        for (auto* child : node->children)
-            v = max(v, minimax(child, false));   // lượt tiếp theo là MIN
-        return v;
-    } else {
-        int v = INT_MAX;
-        for (auto* child : node->children)
-            v = min(v, minimax(child, true));    // lượt tiếp theo là MAX
-        return v;
-    }
-}
+Mặc dù Minimax cho lời giải hoàn hảo về mặt lý thuyết, việc duyệt cạn kiệt toàn bộ cây trò chơi là điều bất khả thi trong thực tế:
+- Với cờ vua: Hệ số nhánh trung bình $b \approx 35$, độ dài ván cờ trung bình $m \approx 80$. Tổng số trạng thái trên cây trò chơi là $35^{80} \approx 10^{123}$.
+- Để hình dung con số này: Tổng số nguyên tử trong toàn bộ vũ trụ quan sát được chỉ vào khoảng $10^{80}$. Một siêu máy tính tính được 1 tỷ trạng thái mỗi giây cũng cần hàng tỷ tỷ năm để duyệt hết cây cờ vua.
+
+Vì vậy, chúng ta bắt buộc phải có hai vũ khí chiến lược: **Cắt tỉa nhánh thừa (Alpha-Beta)** và **Giới hạn độ sâu kèm hàm lượng giá**.
+
+---
+
+## 4.3 Cắt tỉa Alpha–Beta (Alpha–Beta Pruning)
+
+### Trực giác bản chất
+
+Hãy tưởng tượng bạn đang chọn mua máy tính giữa hai cửa hàng A và B.
+- Tại cửa hàng A, bạn đã tìm thấy một chiếc máy rất ưng ý với giá 20 triệu đồng.
+- Sang cửa hàng B, vừa bước vào cửa, người bán hàng giới thiệu chiếc máy đầu tiên với giá 25 triệu đồng. Người bán hàng cũng nói thêm rằng các máy phía trong còn đắt tiền hơn nữa.
+- Bạn có cần đi sâu vào bên trong cửa hàng B để xem hết từng chiếc máy còn lại không? **Hoàn toàn không!** Vì cửa hàng B chắc chắn không thể cho bạn mức giá rẻ hơn 20 triệu của cửa hàng A.
+
+Đó chính là nguyên lý của **Cắt tỉa Alpha–Beta**: **Dừng việc mở rộng một nhánh ngay khi có đủ bằng chứng toán học chứng minh nhánh đó không thể thay đổi quyết định ở gốc.**
+
+### Hai tham số $\alpha$ và $\beta$
+
+Trong suốt quá trình duyệt DFS trên cây, ta duy trì hai ngưỡng giá trị:
+- $\alpha$: **Giá trị tốt nhất (lớn nhất)** mà người chơi **MAX** chắc chắn đã đạt được trên đường đi từ gốc tới hiện tại. Đây là cận dưới của điểm số mà MAX chấp nhận. (Khởi tạo $\alpha = -\infty$).
+- $\beta$: **Giá trị tốt nhất (nhỏ nhất)** mà người chơi **MIN** chắc chắn đã đạt được trên đường đi từ gốc tới hiện tại. Đây là cận trên của điểm số mà MIN chấp nhận. (Khởi tạo $\beta = +\infty$).
+
+```mermaid
+flowchart TD
+    subgraph RuleMax ["Điều kiện cắt tại nút MAX"]
+        M1["Nút MAX tính được giá trị v"] -->|v >= beta| Cut1["CẮT NHÁNH! (MIN ở trên sẽ không bao giờ chọn đường này)"]
+    end
+    subgraph RuleMin ["Điều kiện cắt tại nút MIN"]
+        M2["Nút MIN tính được giá trị v"] -->|v <= alpha| Cut2["CẮT NHÁNH! (MAX ở trên sẽ không bao giờ chọn đường này)"]
+    end
 ```
 
-::: warning Độ phức tạp
-Giống hệt DFS: thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Vì vậy, ta cần Alpha–Beta và hàm đánh giá khi giới hạn độ sâu.
-:::
+### Diễn biến cắt tỉa từng bước trên cây mẫu
 
-## 4.2 Cắt tỉa Alpha–Beta (Alpha–Beta Pruning)
-
-::: tip Ẩn dụ
-Bạn đang nếm một nồi canh chung để so xem canh nào mặn hơn. Vừa nếm muỗng đầu bạn đã thấy nồi B mặn hơn nồi A rồi — bạn **không cần nếm hết nồi B** để kết luận "sẽ chọn A". Alpha–Beta chính là việc dừng "nếm" (mở rộng) sớm ngay khi biết chắc nhánh đó **không thể** thay đổi quyết định cuối cùng.
-:::
-
-- $\alpha$ = giá trị tốt nhất mà **MAX** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận dưới).
-- $\beta$ = giá trị tốt nhất mà **MIN** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận trên).
-- **Cắt tỉa** khi $\alpha \ge \beta$: nhánh còn lại chắc chắn không ảnh hưởng tới quyết định ở gốc.
-
-### Áp dụng lên chính cây ở mục 4.1
+Chúng ta áp dụng Alpha–Beta lên đúng cây trò chơi ở mục 4.2 theo thứ tự duyệt từ trái sang phải:
 
 ```mermaid
 flowchart TD
     Root["Gốc (MAX) = 5"]
     B1["B1 (MIN) = 5"]
-    B2["B2 (MIN) ≤ 2 — chỉ cần biết vậy"]
+    B2["B2 (MIN) <= 2 (Cắt sớm)"]
     C1["C1 (MAX) = 5"]
-    C2["C2 (MAX) ≥ 6 (dừng sớm)"]
+    C2["C2 (MAX) >= 6 (Cắt lá 9)"]
     C3["C3 (MAX) = 2"]
-    C4[" C4 — KHÔNG XÉT"]
+    C4["C4 (Bị cắt toàn bộ)"]
     L1(["3"]); L2(["5"]); L3(["6"])
-    L4[" 9 — không xét"]
+    L4["9 (Bỏ qua)"]
     L5(["1"]); L6(["2"])
-    L7[" 0 — không xét"]; L8[" -1 — không xét"]
+    L7["0 (Bỏ qua)"]; L8["-1 (Bỏ qua)"]
 
     Root --> B1
     Root --> B2
     B1 --> C1
     B1 --> C2
     B2 --> C3
-    B2 --> C4
+    B2 -.-> C4
     C1 --> L1
     C1 --> L2
     C2 --> L3
@@ -137,101 +183,136 @@ flowchart TD
     C4 -.-> L7
     C4 -.-> L8
 
-    classDef pruned fill:#fee2e2,stroke:#dc2626,stroke-dasharray: 5 5,color:#991b1b;
+    classDef pruned fill:#fee2e2,stroke:#dc2626,stroke-dasharray: 4 4,color:#991b1b;
     class L4,C4,L7,L8 pruned;
 ```
 
-**Bảng theo dõi $\alpha,\beta$ theo đúng thứ tự duyệt trái→phải (DFS):**
+1. **Nhánh $C_1$:** Duyệt lá 3 và 5 $\to C_1 = 5$. Truyền lên $B_1$, $B_1$ cập nhật $\beta = \min(+\infty, 5) = 5$.
+2. **Nhánh $C_2$ (tại $B_1$ với $\alpha=-\infty, \beta=5$):**
+   - Duyệt lá đầu tiên: giá trị là **6**.
+   - Tại nút MAX $C_2$, giá trị hiện thời $v = 6 \ge \beta = 5$.
+   - **CẮT TỈA NGAY LẬP TỨC!** Không cần duyệt lá 9, vì $C_2$ chắc chắn có giá trị $\ge 6$. Đối thủ $B_1$ (đang có lựa chọn $5$) sẽ không bao giờ chọn nhánh $C_2$.
+3. **Truyền giá trị lên Gốc:** $B_1$ chốt giá trị 5. Gốc (MAX) cập nhật $\alpha = \max(-\infty, 5) = 5$.
+4. **Nhánh $B_2$ (với $\alpha = 5, \beta = +\infty$):**
+   - Xuống $C_3$: duyệt lá 1 và 2 $\to C_3 = 2$.
+   - Truyền lên $B_2$: $B_2$ cập nhật giá trị hiện thời $v = 2$.
+   - Nhưng tại nút MIN $B_2$, giá trị $v = 2 \le \alpha = 5$.
+   - **CẮT TỈA TOÀN BỘ NHÁNH $C_4$!** Người chơi MAX ở gốc đã nắm chắc trong tay 5 điểm ở nhánh $B_1$, nên sẽ không bao giờ rẽ sang $B_2$ (nơi điểm số chỉ tối đa là 2).
 
-| # | Nút đang xét | $(\alpha,\beta)$ nhận vào | Diễn biến | Hành động |
-|---|---|---|---|---|
-| 1 | Root (MAX) | $(-\infty,+\infty)$ | gọi B1 | mở rộng |
-| 2 | B1 (MIN) | $(-\infty,+\infty)$ | gọi C1 | mở rộng |
-| 3 | C1 (MAX) | $(-\infty,+\infty)$ | lá 3 → $v{=}3$, lá 5 → $v{=}5$ | C1 trả về **5** |
-| 4 | B1 | — | nhận C1=5 → $\beta \leftarrow \min(\infty,5)=5$ | gọi C2 với $(-\infty, 5)$ |
-| 5 | C2 (MAX) | $(-\infty, 5)$ | lá 6 → $v{=}6 \ge \beta(5)$ | ** CẮT** — bỏ qua lá 9, C2 trả về 6 |
-| 6 | B1 | — | nhận C2=6 → $\min(5,6)=5$ | B1 trả về **5** |
-| 7 | Root | — | nhận B1=5 → $\alpha \leftarrow \max(-\infty,5)=5$ | gọi B2 với $(5,+\infty)$ |
-| 8 | B2 (MIN) | $(5,+\infty)$ | gọi C3 | mở rộng |
-| 9 | C3 (MAX) | $(5,+\infty)$ | lá 1 → $v{=}1$, lá 2 → $v{=}2$ (không vượt $\beta$) | C3 trả về **2** |
-| 10 | B2 | — | nhận C3=2 → $v{=}2 \le \alpha(5)$ | ** CẮT** — bỏ qua toàn bộ C4 (2 lá), B2 trả về 2 |
-| 11 | Root | — | nhận B2=2 → $\max(5,2)=5$ | **Root = 5, chọn nhánh B1** |
+Kết quả: Giá trị tại gốc vẫn là **5**, nước đi chọn vẫn là **$B_1$**, nhưng ta chỉ cần duyệt **$5$ trong tổng số $8$ nút lá**.
 
-→ Kết quả **giống hệt Minimax đầy đủ (giá trị gốc = 5)**, nhưng chỉ cần thăm **$\frac{5}{8}$** lá.
+---
 
-::: danger Bẫy thi #1 — "Alpha-Beta cho kết quả khác Minimax"
-**Sai.** Alpha–Beta giữ nguyên giá trị minimax của gốc vì chỉ bỏ qua các nhánh không thể thay đổi lựa chọn của tổ tiên. Tuy nhiên, giá trị trả về từ một nút đã bị cắt tỉa có thể chỉ là cận. Chẳng hạn, tại C2 ta biết giá trị $\ge 6$ nhưng chưa biết chính xác là 9. Khi dùng kết quả ở nút trung gian, phải phân biệt cận với giá trị đã tính đủ.
-:::
+## 4.4 Sức mạnh của thứ tự duyệt nước đi (Move Ordering)
 
-### Thứ tự duyệt quyết định hiệu quả cắt tỉa
+Một câu hỏi quyết định chất lượng của một engine AI: **Cắt tỉa Alpha–Beta có thể giúp ta đi sâu tới mức nào?**
 
-Nếu đổi thứ tự lá của $C_2$ thành $(9,6)$ thay vì $(6,9)$: gặp lá 9 trước ($v{=}9\ge\beta(5)$) → cắt ngay từ lá đầu, tiết kiệm hơn nữa. Ngược lại nếu con **tệ nhất** (theo MIN) được xét trước thì **không cắt được gì cả**. Với thứ tự duyệt tối ưu, độ phức tạp giảm từ $O(b^m)$ xuống:
+Hiệu quả của Alpha–Beta phụ thuộc hoàn toàn vào **thứ tự duyệt các nước đi**:
+- **Trường hợp lý tưởng (Best Case):** Nếu tại mỗi nút, nước đi tốt nhất luôn được duyệt đầu tiên:
+  Độ phức tạp thời gian giảm từ $O(b^m)$ xuống còn:
+  $$
+  O\left(b^{m/2}\right) = O\left((\sqrt{b})^m\right)
+  $$
+  Điều này có nghĩa là hệ số nhánh hiệu dụng giảm từ $b$ xuống $\sqrt{b}$. Trong cờ vua, $b = 35$ giảm xuống chỉ còn $\approx \sqrt{35} \approx 6$.
+  Với cùng một ngân sách thời gian, **Alpha–Beta có thể tìm kiếm sâu gấp đôi Minimax thuần túy!**
+- **Trường hợp xấu nhất (Worst Case):** Nếu nước đi tồi tệ nhất luôn bị duyệt trước, không có nhánh nào bị cắt, độ phức tạp vẫn là $O(b^m)$.
 
-$$
-O\!\left(b^{m/2}\right)
-$$
+Trong thực tế, các engine cờ vua hàng đầu như Stockfish dành rất nhiều công sức cho các thuật toán sắp xếp nước đi trước khi gọi Alpha-Beta (ưu tiên các nước ăn quân lớn, các nước chiếu vua, hoặc các nước đã chứng minh hiệu quả ở các vòng lặp trước thông qua Bảng chuyển vị trí - Transposition Table).
 
-tức hệ số nhánh hiệu dụng chỉ còn $\sqrt{b}$ — với cờ vua $b\approx35$ giảm còn $\approx6$: cùng thời gian, Alpha–Beta với thứ tự duyệt tốt tìm sâu **gấp đôi** Minimax thường.
+---
 
-::: tip Mẹo thi
-Với quy ước duyệt trái sang phải, ta đi theo chiều sâu, cập nhật $\alpha$ ở nút MAX và $\beta$ ở nút MIN. Cắt nhánh khi giá trị hiện tại không thể cải thiện lựa chọn của tổ tiên: $v\ge\beta$ tại nút MAX hoặc $v\le\alpha$ tại nút MIN. Cần theo dõi hai cận $\alpha$ và $\beta$ cùng phạm vi mà chúng được truyền xuống.
-:::
+## 4.5 Cài đặt C++ chuẩn mực cho Minimax và Alpha–Beta
 
-### Code C++
+Dưới đây là cấu trúc mã nguồn C++ thanh thoát, phân tách rành mạch giữa hai vai trò MAX và MIN:
 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <climits>
+
+using namespace std;
+
+struct GameNode {
+    bool isTerminal;
+    int utility; // Chỉ có ý nghĩa khi isTerminal == true
+    vector<GameNode*> children;
+};
+
+// ============================================================================
+// CẮT TỈA ALPHA-BETA
+// alpha: Giá trị tốt nhất mà MAX đảm bảo có được (cận dưới)
+// beta:  Giá trị tốt nhất mà MIN đảm bảo có được (cận trên)
+// ============================================================================
+
+int alphaBetaMin(GameNode* node, int alpha, int beta);
+
 int alphaBetaMax(GameNode* node, int alpha, int beta) {
-    if (node->isTerminal) return node->value;
+    if (node->isTerminal) return node->utility;
+
     int v = INT_MIN;
     for (auto* child : node->children) {
         v = max(v, alphaBetaMin(child, alpha, beta));
-        if (v >= beta) return v;      // MIN ở trên sẽ không bao giờ chọn đường này -> cắt
-        alpha = max(alpha, v);        // cập nhật cận dưới tốt nhất MAX đang có
+
+        // Điều kiện cắt nhánh của MAX: đối thủ MIN ở tầng trên sẽ không chọn đường này
+        if (v >= beta) return v;
+
+        alpha = max(alpha, v); // Cập nhật cận dưới của MAX
     }
     return v;
 }
 
 int alphaBetaMin(GameNode* node, int alpha, int beta) {
-    if (node->isTerminal) return node->value;
+    if (node->isTerminal) return node->utility;
+
     int v = INT_MAX;
     for (auto* child : node->children) {
         v = min(v, alphaBetaMax(child, alpha, beta));
-        if (v <= alpha) return v;     // MAX ở trên sẽ không bao giờ chọn đường này -> cắt
-        beta = min(beta, v);          // cập nhật cận trên tốt nhất MIN đang có
+
+        // Điều kiện cắt nhánh của MIN: người chơi MAX ở tầng trên sẽ không chọn đường này
+        if (v <= alpha) return v;
+
+        beta = min(beta, v); // Cập nhật cận trên của MIN
     }
     return v;
 }
-// Gọi: alphaBetaMax(root, INT_MIN, INT_MAX);
+
+// Lời gọi từ gốc (lượt của MAX):
+// int bestScore = alphaBetaMax(root, INT_MIN, INT_MAX);
 ```
 
-### Khi cây quá sâu: hàm lượng giá & cắt độ sâu
+---
 
-Với trò chơi thật (cờ vua, cờ vây), ta không thể duyệt tới tận lá. Thay `Utility` bằng hàm lượng giá $\text{Eval}(s)$ áp dụng ở một độ sâu cắt (cutoff):
+## 4.6 Giới hạn độ sâu và Hàm lượng giá Heuristic
 
+Trong các trò chơi thực tế, ngay cả với Alpha–Beta, ta cũng không thể đi tới tận cùng ván cờ. Giải pháp là **áp dụng ngưỡng cắt độ sâu (Cutoff)** và thay thế hàm `Utility` bằng **Hàm lượng giá heuristic $\text{Eval}(s)$**.
+
+Một hàm lượng giá tiêu chuẩn thường là tổ hợp tuyến tính của các đặc trưng vị trí:
 $$
-\text{Eval}(s) = w_1 f_1(s) + w_2 f_2(s) + \dots + w_n f_n(s)
+\text{Eval}(s) = w_1 f_1(s) + w_2 f_2(s) + \cdots + w_n f_n(s)
 $$
 
-(ví dụ cờ vua: $f_1$ = số Hậu trắng trừ Hậu đen, v.v.)
+Ví dụ trong cờ vua:
+- $f_1$: Chênh lệch giá trị quân cờ (Tốt = 1, Mã = 3, Tượng = 3, Xe = 5, Hậu = 9).
+- $f_2$: Khả năng kiểm soát 4 ô trung tâm bàn cờ.
+- $f_3$: Chỉ số an toàn của Vua (số quân che chắn trước mặt vua).
+- $f_4$: Độ cơ động (số nước đi hợp lệ có thể thực hiện).
 
-::: warning Hiệu ứng đường chân trời (horizon effect)
-Nếu cắt ở độ sâu cố định, chương trình có thể bị đối thủ "câu giờ" bằng vài nước hy sinh vô nghĩa để đẩy một thất bại chắc chắn ra ngoài tầm nhìn. Khắc phục bằng **quiescence search** (chỉ dừng ở vị trí "yên tĩnh") hoặc **singular extension**.
-:::
+### Cạm bẫy thực tế: Hiệu ứng đường chân trời (Horizon Effect)
 
-## 4.3 Bảng bẫy thi chương này
+Khi cắt độ sâu cứng ở tầng $d$, một hiện tượng nguy hiểm thường xảy ra: Đối thủ có một nước đi tất sát (như bắt Hậu) ở độ sâu $d+1$. Máy tính nhìn thấy điều này và cố tình thực hiện các nước đi chiếu vô nghĩa hoặc thí Tốt nhằm đẩy biến cố mất Hậu ra ngoài phạm vi quan sát của độ sâu $d$.
 
-| # | Bẫy | Ghi nhớ |
-|---|---|---|
-| 1 | Alpha-Beta cho kết quả khác Minimax | Giá trị **gốc luôn giống hệt**, còn giá trị ở nút bị cắt có thể chỉ là một cận |
-| 2 | So $\alpha$ với $\beta$ sai chỗ | Cắt khi **giá trị đang tính** vi phạm cận **nhận từ tổ tiên** |
-| 3 | Nghĩ thứ tự duyệt không ảnh hưởng | Thứ tự tối ưu cho $O(b^{m/2})$, thứ tự tệ = không cắt được gì |
-
-## Tài liệu tham khảo
-
-- Russell & Norvig, *AIMA* 4th ed., mục 5.2 (Minimax) & 5.3 (Alpha-Beta Tree Search).
-- Bài giảng gốc AIT2004 — [Bài 4: Tìm kiếm có đối thủ](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-04-tim-kiem-co-doi-thu.html).
-- GeeksforGeeks — [Minimax & Alpha-Beta Pruning](https://www.geeksforgeeks.org/artificial-intelligence/alpha-beta-pruning-in-adversarial-search-algorithms/).
-- MIT OCW — [6.034 Artificial Intelligence, Fall 2010](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/) (bài giảng video Adversarial Search).
+Để khắc phục hiện tượng này, các kỳ thủ nhân tạo sử dụng kỹ thuật **Tìm kiếm tĩnh lặng (Quiescence Search)**: Khi chạm ngưỡng độ sâu cắt, máy tính không dừng lại ngay nếu bàn cờ đang ở trạng thái "bão táp" (vừa có quân bị ăn hoặc đang bị chiếu). Thuật toán sẽ tiếp tục tìm kiếm thêm vài nước chỉ dành riêng cho các nước ăn quân cho tới khi bàn cờ trở về trạng thái yên ả thì mới gọi hàm $\text{Eval}$.
 
 ---
-← [Chương 3](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 5: CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
+
+## 4.7 Ứng dụng thực tế ngoài các trò chơi cờ
+
+Các nguyên lý của Minimax và Alpha–Beta không chỉ giới hạn trong trò chơi cờ bàn, mà là nền tảng của việc ra quyết định đối kháng:
+- **An ninh mạng (Cybersecurity):** Mô hình hóa cuộc chiến giữa Đội tấn công (Red Team - tìm mọi lỗ hổng) và Đội phòng thủ (Blue Team - vá các lỗ hổng trọng yếu nhất).
+- **Hệ thống đấu giá tự động:** Các bot giao dịch cạnh tranh giá thầu trên thị trường chứng khoán tần suất cao (High-Frequency Trading).
+- **Quy hoạch chiến lược và đàm phán:** Mô phỏng các phản ứng của đối thủ cạnh tranh khi tung ra sản phẩm mới trong kinh tế học.
+
+---
+
+[← Quay lại Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 5: Bài toán ràng buộc CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)

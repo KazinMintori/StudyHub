@@ -1,145 +1,188 @@
-<!-- Nguồn: mục 2.6, trang in 53–55, trang PDF 73–75; đầy đủ cách suy ra tích phân, công thức 2.15–2.18, Hình 2.26–2.29, Ví dụ 2.9 và câu hỏi. -->
+<!-- Chuyên đề: Chuyển động thẳng — Tích phân trong Động học -->
 
-## 2.6. Tìm vận tốc và vị trí bằng tích phân
+## 2.6. Xác định vận tốc và vị trí bằng phương pháp tích phân
 
-Mục này dành cho người đã biết một ít tích phân. Mục 2.4 xét trường hợp gia tốc không đổi. Khi gia tốc thay đổi, như thường gặp, các công thức của mục ấy không còn dùng được. Tuy vậy, nếu biết vị trí theo thời gian, vẫn đạo hàm $v_x=dx/dt$ để tìm vận tốc. Nếu biết vận tốc theo thời gian, vẫn dùng $a_x=dv_x/dt$ để tìm gia tốc.
+Trong mục 2.4, chúng ta đã xây dựng bộ công thức động học cho trường hợp gia tốc không đổi. Tuy nhiên, trong thế giới thực, gia tốc cố định chỉ là trường hợp lý tưởng hóa đặc biệt. Phần lớn các chuyển động trong kỹ thuật và tự nhiên đều có gia tốc biến thiên liên tục theo thời gian:
+- Khi một người lái xe đạp lút ga từ trạng thái đứng yên, lực cản của không khí và ma sát lăn tăng dần theo tốc độ khiến gia tốc của xe giảm dần (Hình 2.26). Một chiếc xe thông thường có thể chỉ mất $4\,\mathrm s$ để tăng tốc từ $0$ lên $50\,\mathrm{km/h}$, nhưng phải mất tới $8\,\mathrm s$ hoặc hơn để tăng tiếp từ $50$ lên $100\,\mathrm{km/h}$.
+- Khi một tên lửa rời bệ phóng, khối lượng của nó giảm liên tục do tiêu thụ hàng tấn nhiên liệu mỗi giây, đồng thời lực cản khí quyển giảm dần khi lên cao, khiến gia tốc của tên lửa tăng vọt theo thời gian.
 
-![Hình 2.26 nguyên tác: người lái đạp hết bàn đạp ga của ô tô](img/young-02/hinh-2-26.png)
+Trong những tình huống như vậy, toàn bộ các phương trình đại số của chuyển động biến đổi đều hoàn toàn mất hiệu lực. Lúc này, công cụ vi tích phân của Newton và Leibniz chính là chìa khóa duy nhất để giải mã quy luật chuyển động.
 
-**Hình 2.26:** Đạp hết bàn đạp ga không tạo gia tốc cố định: tốc độ càng cao, xe càng chậm tăng thêm tốc độ. Theo ví dụ điển hình trong sách, xe thường cần thời gian gấp đôi để tăng từ $50$ lên $100\,\mathrm{km/h}$ so với từ $0$ lên $50\,\mathrm{km/h}$.
+![Hình 2.26: Sự phụ thuộc của gia tốc vào tốc độ khi tăng ga ô tô](img/young-02/hinh-2-26.png)
 
-Nhiều tình huống chưa biết vị trí và vận tốc theo thời gian, nhưng biết gia tốc. Cần tìm vị trí, vận tốc từ hàm $a_x(t)$ như thế nào?
+**Hình 2.26:** Đạp hết bàn đạp ga không hề tạo ra một gia tốc không đổi. Tốc độ càng cao, lực cản không khí càng lớn và hiệu suất truyền lực của động cơ thay đổi, khiến gia tốc của xe suy giảm dần theo thời gian.
 
-![Hình 2.27 nguyên tác: máy bay chở khách có hệ thống dẫn đường quán tính](img/young-02/hinh-2-27.png)
+Nếu như phép tính đạo hàm cho phép ta đi từ vị trí sang vận tốc ($v_x = dx/dt$) và từ vận tốc sang gia tốc ($a_x = dv_x/dt$), thì phép tính tích phân chính là quá trình đảo ngược: giúp ta khôi phục lại quy luật vận tốc và vị trí khi đã biết hàm số của gia tốc theo thời gian $a_x(t)$.
 
-**Hình 2.27:** Hệ thống dẫn đường quán tính, INS, trên máy bay đường dài theo dõi gia tốc. Biết vị trí và vận tốc đầu trước khi cất cánh, INS dùng số liệu gia tốc để tính vị trí và vận tốc trong suốt chuyến bay.
+---
+
+### Một đỉnh cao công nghệ: Hệ thống dẫn đường quán tính (INS)
+
+Một trong những ứng dụng kỳ diệu nhất của tích phân động học trong thế giới hiện đại là **Hệ thống dẫn đường quán tính** (Inertial Navigation System — INS) trang bị trên máy bay thương mại đường dài (Hình 2.27), tàu ngầm hạt nhân lặn sâu dưới đáy đại dương và tên lửa hành trình. 
+
+![Hình 2.27: Hệ thống dẫn đường quán tính (INS) trên máy bay đường dài](img/young-02/hinh-2-27.png)
+
+**Hình 2.27:** Máy bay thương mại xuyên lục địa sử dụng hệ thống dẫn đường quán tính (INS). Dựa vào các cảm biến gia tốc kế (accelerometer) siêu nhạy, máy tính trên khoang thực hiện tích phân liên tục theo thời gian để xác định chính xác vận tốc và tọa độ của máy bay mà không phụ thuộc vào tín hiệu GPS bên ngoài.
+
+Tàu ngầm quân sự khi lặn sâu hàng trăm mét dưới lớp băng Bắc Cực hoàn toàn bị cô lập khỏi sóng vô tuyến và tín hiệu vệ tinh GPS. Làm sao thủy thủ đoàn biết được vị trí của con tàu với sai số chỉ vài mét sau hàng ngàn hải lý hành trình? Câu trả lời là: Trước khi lặn, người ta nạp tọa độ xuất phát ($x_0$) và vận tốc ban đầu ($v_0$) vào máy tính. Trong suốt hải trình, các cảm biến gia tốc kế cực nhạy liên tục đo gia tốc $a(t)$. Máy tính thực hiện **tích phân lần thứ nhất** để tìm vận tốc $v(t)$, rồi thực hiện tiếp **tích phân lần thứ hai** để tìm vị trí $x(t)$ theo thời gian thực!
+
+---
 
 ### Độ biến thiên vận tốc là tích phân của gia tốc
 
-Hình 2.28 là đồ thị gia tốc không cố định. Chia khoảng từ $t_1$ tới $t_2$ thành nhiều khoảng nhỏ, mỗi khoảng điển hình dài $\Delta t$, gia tốc trung bình trong đó là $a_{\mathrm{av}-x}$. Theo (2.4):
+Xét một chuyển động có gia tốc $a_x(t)$ biến thiên liên tục theo thời gian như đồ thị ở Hình 2.28. Ta chia khoảng thời gian khảo sát từ $t_1$ đến $t_2$ thành vô số khoảng thời gian vi phân rất nhỏ $dt$. 
 
-$$\Delta v_x=a_{\mathrm{av}-x}\Delta t.$$
+![Hình 2.28: Biểu diễn hình học của độ biến thiên vận tốc dưới dạng diện tích tích phân](img/young-02/hinh-2-28.png)
 
-Về hình học, đó là diện tích dải tô cao $a_{\mathrm{av}-x}$, rộng $\Delta t$, tức diện tích dưới đường cong trong khoảng nhỏ. Tổng độ biến thiên vận tốc bằng tổng những độ biến thiên nhỏ, nên được biểu diễn bằng toàn bộ diện tích dưới đồ thị gia tốc từ $t_1$ tới $t_2$. Mục 2.4 đã cho kết quả này khi gia tốc cố định.
+**Hình 2.28:** Đồ thị gia tốc theo thời gian $a_x - t$. Mỗi dải chữ nhật hẹp có bề rộng $dt$ và chiều cao $a_x$ có diện tích bằng $a_x dt = dv_x$, biểu diễn độ biến thiên vi phân của vận tốc. Tổng diện tích của tất cả các dải từ $t_1$ đến $t_2$ chính là tích phân xác định, đại diện cho độ biến thiên tổng cộng của vận tốc $\Delta v_x$.
 
-Khi mọi khoảng nhỏ tiến tới không và số khoảng tăng lên, gia tốc trung bình trên khoảng từ $t$ tới $t+\Delta t$ tiến tới gia tốc tức thời $a_x(t)$. Tổng diện tích trở thành tích phân. Nếu $v_{1x}$, $v_{2x}$ là vận tốc tại hai đầu:
+Trong mỗi khoảng vi phân $dt$, gia tốc xem như không đổi, độ biến thiên vận tốc tương ứng là:
 
-$$\begin{aligned}
-v_{2x}-v_{1x}&=\int_{v_{1x}}^{v_{2x}}dv_x\\
-&=\int_{t_1}^{t_2}a_x\,dt.
-\end{aligned}\tag{2.15}$$
+$$dv_x = a_x\, dt.$$
 
-Độ biến thiên vận tốc là tích phân theo thời gian của gia tốc.
+Lấy tích phân hai vế từ thời điểm $t_1$ (ứng với vận tốc $v_{1x}$) đến thời điểm $t_2$ (ứng với vận tốc $v_{2x}$):
 
-![Hình 2.28 nguyên tác: dải diện tích trên đồ thị gia tốc biến thiên](img/young-02/hinh-2-28.png)
+$$
+\begin{aligned}
+v_{2x} - v_{1x} &= \int_{v_{1x}}^{v_{2x}} dv_x \\
+&= \int_{t_1}^{t_2} a_x\, dt.
+\end{aligned}
+\tag{2.15}
+$$
 
-**Hình 2.28:** Đồ thị có trục đứng $a_x$, trục ngang $t$. Dải tô cao $a_{\mathrm{av}-x}$, rộng $\Delta t$, diện tích bằng $\Delta v_x$. Toàn bộ diện tích từ $t_1$ tới $t_2$ cho độ biến thiên vận tốc ròng.
+Ý nghĩa hình học trực quan của công thức (2.15) là: **Độ biến thiên vận tốc $\Delta v_x = v_{2x} - v_{1x}$ giữa hai thời điểm đúng bằng diện tích hình thang cong giới hạn bởi đường cong $a_x(t)$ và trục hoành thời gian từ $t_1$ đến $t_2$** (với phần diện tích nằm phía trên trục hoành mang dấu dương, phần nằm phía dưới mang dấu âm).
 
-Hai câu trong hình được dịch đầy đủ là: “Diện tích dải này bằng $\Delta v_x$, tức độ biến thiên vận tốc theo trục $x$ trong khoảng $\Delta t$” và “Tổng diện tích dưới đồ thị từ $t_1$ đến $t_2$ bằng độ biến thiên ròng của vận tốc theo trục $x$ giữa hai thời điểm ấy”. Nguyên tác in nhầm “đồ thị $x$–$t$” trong câu thứ hai; đúng theo trục của hình phải là đồ thị $a_x$–$t$.
+---
 
 ### Độ dời là tích phân của vận tốc
 
-Làm tương tự với đồ thị vận tốc. Nếu vị trí tại $t_1,t_2$ là $x_1,x_2$, trong khoảng nhỏ $\Delta t$, theo (2.2), độ dời $\Delta x=v_{\mathrm{av}-x}\Delta t$. Cộng các khoảng nhỏ và lấy giới hạn:
+Hoàn toàn tương tự, xuất phát từ định nghĩa vận tốc tức thời $v_x = dx/dt$, ta có vi phân của độ dời trong khoảng thời gian $dt$ là $dx = v_x\, dt$. 
 
-$$\begin{aligned}
-x_2-x_1&=\int_{x_1}^{x_2}dx\\
-&=\int_{t_1}^{t_2}v_x\,dt.
-\end{aligned}\tag{2.16}$$
-
-Độ dời là tích phân vận tốc theo thời gian, hay diện tích dưới đồ thị vận tốc giữa hai thời điểm. Kết quả khớp trường hợp đặc biệt ở mục 2.4 khi vận tốc theo (2.8).
-
-Lấy $t_1=0$, $t_2=t$, vị trí và vận tốc đầu là $x_0,v_{0x}$, có thể viết:
-
-$$v_x=v_{0x}+\int_0^t a_x\,dt,\tag{2.17}$$
-
-$$x=x_0+\int_0^t v_x\,dt.\tag{2.18}$$
-
-Biết hàm gia tốc và vận tốc đầu, dùng (2.17) tìm vận tốc tại mọi thời điểm. Sau đó, biết vị trí đầu, dùng (2.18) tìm vị trí.
-
-### Ví dụ 2.9 — Chuyển động với gia tốc biến thiên
-
-::: exercise Đề bài trong sách
-Sally lái xe trên đường cao tốc thẳng. Tại $t=0$, cô đi theo $+x$ với $10\,\mathrm{m/s}$ và qua biển ở $x=50\,\mathrm m$. Gia tốc theo thời gian là:
-
-$$a_x=2.0\,\mathrm{m/s^2}-(0.10\,\mathrm{m/s^3})t.$$
-
-**(a)** Tìm vận tốc và vị trí theo thời gian.
-
-**(b)** Khi nào vận tốc $x$ lớn nhất?
-
-**(c)** Giá trị lớn nhất đó bằng bao nhiêu?
-
-**(d)** Xe ở đâu khi đạt vận tốc ấy?
-:::
-
-::: solution Lời giải của sách
-**Xác định và thiết lập.** Gia tốc biến thiên nên không dùng công thức cố định ở mục 2.4. Dùng (2.17) tìm hàm vận tốc, rồi (2.18) tìm hàm vị trí. Các hàm cho phép trả lời nhiều câu hỏi về chuyển động.
-
-**Thực hiện (a).** $x_0=50\,\mathrm m$, $v_{0x}=10\,\mathrm{m/s}$. Với $n\ne-1$, nguyên hàm của $t^n$ là $t^{n+1}/(n+1)$. Vì vậy:
+Tích phân hai vế từ thời điểm $t_1$ (tọa độ $x_1$) đến thời điểm $t_2$ (tọa độ $x_2$):
 
 $$
 \begin{aligned}
-v_x&=10\,\mathrm{m/s}
-+\int_0^t[2.0\,\mathrm{m/s^2}-(0.10\,\mathrm{m/s^3})t]dt\\
-&=10\,\mathrm{m/s}+(2.0\,\mathrm{m/s^2})t
--\frac12(0.10\,\mathrm{m/s^3})t^2.
+x_2 - x_1 &= \int_{x_1}^{x_2} dx \\
+&= \int_{t_1}^{t_2} v_x\, dt.
 \end{aligned}
+\tag{2.16}
 $$
 
-Tiếp theo:
+**Độ dời $\Delta x = x_2 - x_1$ của chất điểm chính là diện tích hình thang cong giới hạn bởi đồ thị vận tốc $v_x(t)$ và trục hoành thời gian từ $t_1$ đến $t_2$**.
+
+Nếu ta chọn thời điểm ban đầu là $t_1 = 0$ với các điều kiện ban đầu $x(0) = x_0$ và $v_x(0) = v_{0x}$, và xét thời điểm tổng quát $t_2 = t$, các công thức (2.15) và (2.16) trở thành dạng tường minh:
+
+$$v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\tag{2.17}$$
+
+$$x(t) = x_0 + \int_0^t v_x(t')\, dt'.\tag{2.18}$$
+
+*(Ở đây ta dùng biến tích phân hình thức $t'$ để phân biệt với cận trên $t$).*
+
+::: tip Nhận xét về tính nhất quán của toán học
+Nếu gia tốc là hằng số ($a_x = \text{const}$), từ (2.17) ta có ngay:
+$$v_x(t) = v_{0x} + a_x \int_0^t dt' = v_{0x} + a_x t \quad \text{(khôi phục chính xác phương trình 2.8)}.$$
+Thế kết quả này vào (2.18):
+$$x(t) = x_0 + \int_0^t (v_{0x} + a_x t')\, dt' = x_0 + v_{0x}t + \frac{1}{2}a_x t^2 \quad \text{(khôi phục chính xác phương trình 2.12)}.$$
+Điều này cho thấy các công thức biến đổi đều ở mục 2.4 chỉ là trường hợp riêng đơn giản nhất của bài toán tích phân tổng quát.
+:::
+
+---
+
+### Ví dụ 2.9 — Chuyển động với gia tốc biến thiên tuyến tính
+
+::: exercise Bài toán
+Sally lái ô tô dọc theo một tuyến đường cao tốc thẳng tắp. Tại thời điểm ban đầu $t = 0$, xe chạy theo chiều dương của trục $x$ với vận tốc $10.0\,\mathrm{m/s}$ và vừa đi ngang qua cột mốc tọa độ $x = 50.0\,\mathrm m$. Do lực cản không khí tăng dần, gia tốc của ô tô suy giảm tuyến tính theo thời gian theo quy luật:
+
+$$a_x(t) = 2.0\,\mathrm{m/s^2} - (0.10\,\mathrm{m/s^3})t.$$
+
+**(a)** Hãy thiết lập phương trình vận tốc và vị trí của ô tô theo thời gian.
+**(b)** Xác định thời điểm mà vận tốc của xe đạt giá trị cực đại.
+**(c)** Vận tốc cực đại đó bằng bao nhiêu?
+**(d)** Ô tô đang ở tọa độ nào tại thời điểm đạt vận tốc cực đại?
+:::
+
+::: solution Lời giải
+**Nhận diện và Thiết lập:**
+Gia tốc phụ thuộc vào thời gian nên đây là chuyển động biến đổi không đều. Ta phải sử dụng công thức tích phân (2.17) và (2.18).
+Các điều kiện ban đầu đã cho:
+- Tại $t = 0$: $x_0 = 50.0\,\mathrm m$, $v_{0x} = 10.0\,\mathrm{m/s}$.
+- Biểu thức gia tốc: $a_x(t) = 2.0 - 0.10t$ (đơn vị SI).
+
+**Triển khai tính toán:**
+
+**(a) Tìm hàm vận tốc và vị trí:**
+Áp dụng công thức tích phân (2.17):
 
 $$
 \begin{aligned}
-x&=50\,\mathrm m+\int_0^t[10\,\mathrm{m/s}+(2.0\,\mathrm{m/s^2})t\\
-&\qquad-\tfrac12(0.10\,\mathrm{m/s^3})t^2]dt\\
-&=50\,\mathrm m+(10\,\mathrm{m/s})t
-+\frac12(2.0\,\mathrm{m/s^2})t^2\\
-&\qquad-\frac16(0.10\,\mathrm{m/s^3})t^3.
+v_x(t) &= v_{0x} + \int_0^t a_x(t')\, dt' \\
+&= 10.0\,\mathrm{m/s} + \int_0^t \left( 2.0\,\mathrm{m/s^2} - 0.10\,\mathrm{m/s^3}\, t' \right) dt' \\
+&= 10.0\,\mathrm{m/s} + (2.0\,\mathrm{m/s^2})t - \frac{1}{2}(0.10\,\mathrm{m/s^3})t^2 \\
+&= 10.0 + 2.0t - 0.050t^2 \quad (\text{m/s}).
 \end{aligned}
 $$
 
-Hình 2.29 vẽ các hàm gia tốc, vận tốc, vị trí. Tại mỗi thời điểm, độ dốc đồ thị vận tốc bằng gia tốc, độ dốc đồ thị vị trí bằng vận tốc.
-
-**(b)** Vận tốc lớn nhất khi ngừng tăng và bắt đầu giảm, tức $dv_x/dt=a_x=0$:
-
-$$0=2.0\,\mathrm{m/s^2}-(0.10\,\mathrm{m/s^3})t,$$
-
-$$t=\frac{2.0\,\mathrm{m/s^2}}{0.10\,\mathrm{m/s^3}}=20\,\mathrm s.$$
-
-**(c)** Thay vào hàm vận tốc:
-
-$$v_{\max-x}=10\,\mathrm{m/s}+(2.0\,\mathrm{m/s^2})(20\,\mathrm s)
--\frac12(0.10\,\mathrm{m/s^3})(20\,\mathrm s)^2
-=30\,\mathrm{m/s}.$$
-
-**(d)** Thay vào hàm vị trí:
+Tiếp tục lấy tích phân hàm vận tốc theo công thức (2.18) để tìm vị trí $x(t)$:
 
 $$
 \begin{aligned}
-x&=50\,\mathrm m+(10\,\mathrm{m/s})(20\,\mathrm s)
-+\frac12(2.0\,\mathrm{m/s^2})(20\,\mathrm s)^2\\
-&\quad-\frac16(0.10\,\mathrm{m/s^3})(20\,\mathrm s)^3
-\approx517\,\mathrm m.
+x(t) &= x_0 + \int_0^t v_x(t')\, dt' \\
+&= 50.0\,\mathrm m + \int_0^t \left( 10.0 + 2.0t' - 0.050{t'}^2 \right) dt' \\
+&= 50.0 + 10.0t + \frac{1}{2}(2.0)t^2 - \frac{1}{3}(0.050)t^3 \\
+&= 50.0 + 10.0t + 1.0t^2 - \frac{1}{60}t^3 \quad (\text{m}).
 \end{aligned}
 $$
 
-**Đánh giá.** Gia tốc dương từ $0$ tới $20\,\mathrm s$, âm sau đó, bằng không lúc vận tốc đạt đỉnh. Xe nhanh dần trước thời điểm ấy vì vận tốc và gia tốc cùng dấu, rồi chậm dần sau đó khi chúng trái dấu, trong khoảng đồ thị đang xét.
+**(b) Thời điểm vận tốc đạt cực đại:**
+Một hàm số đạt cực trị khi đạo hàm của nó triệt tiêu. Vì $dv_x/dt = a_x$, nên vận tốc đạt cực đại đúng vào thời điểm gia tốc bằng 0:
 
-Vì vận tốc cực đại ở $20\,\mathrm s$, đồ thị vị trí có độ dốc dương lớn nhất tại đó. Đường vị trí cong lên trước $20\,\mathrm s$ vì gia tốc dương, cong xuống sau đó vì gia tốc âm.
+$$a_x(t) = 2.0\,\mathrm{m/s^2} - (0.10\,\mathrm{m/s^3})t = 0 \implies t = \frac{2.0\,\mathrm{m/s^2}}{0.10\,\mathrm{m/s^3}} = 20.0\,\mathrm s.$$
 
-**Ý chính của ví dụ:** Biết gia tốc theo thời gian dù không cố định, có thể tích phân để tìm vận tốc và vị trí theo thời gian.
+*Ý nghĩa vật lý:* Trong $20\,\mathrm s$ đầu tiên, $a_x > 0$ và cùng dấu với $v_x$, nên ô tô chuyển động nhanh dần và vận tốc liên tục tăng. Sau thời điểm $t = 20\,\mathrm s$, gia tốc đổi dấu sang âm ($a_x < 0$), trở thành gia tốc hãm khiến vận tốc bắt đầu giảm. Do đó $t = 20.0\,\mathrm s$ chính là mốc vận tốc đạt đỉnh cao nhất.
+
+**(c) Giá trị vận tốc cực đại:**
+Thay $t = 20.0\,\mathrm s$ vào biểu thức vận tốc $v_x(t)$:
+
+$$v_{\max-x} = 10.0 + 2.0(20.0) - 0.050(20.0)^2 = 10.0 + 40.0 - 20.0 = 30.0\,\mathrm{m/s} \quad (= 108\,\mathrm{km/h}).$$
+
+**(d) Tọa độ của xe khi đạt vận tốc cực đại:**
+Thay $t = 20.0\,\mathrm s$ vào biểu thức vị trí $x(t)$:
+
+$$
+\begin{aligned}
+x(20.0\,\mathrm s) &= 50.0 + 10.0(20.0) + 1.0(20.0)^2 - \frac{1}{60}(20.0)^3 \\
+&= 50.0 + 200.0 + 400.0 - \frac{8000}{60} \\
+&= 650.0 - 133.3 \approx 517\,\mathrm m.
+\end{aligned}
+$$
+
+Xe cách mốc ban đầu hơn nửa cây số.
 :::
 
-![Hình 2.29 nguyên tác: ba đồ thị gia tốc, vận tốc và vị trí của xe Sally](img/young-02/hinh-2-29.png)
+![Hình 2.29: Bộ ba đồ thị gia tốc, vận tốc và vị trí theo thời gian của ô tô](img/young-02/hinh-2-29.png)
 
-**Hình 2.29:** Từ trái sang phải là $a_x(t)$, $v_x(t)$, $x(t)$. Gia tốc dương trước $20\,\mathrm s$, âm sau; vận tốc tăng rồi giảm; vị trí cong lên rồi cong xuống. Trục thời gian ghi giây, các trục đứng lần lượt ghi $\mathrm{m/s^2}$, $\mathrm{m/s}$, $\mathrm m$. Câu hỏi kèm hình của sách: Nếu chuyển động tiếp tục theo các hàm này, bạn có thể chỉ ra xe dừng tại $t=44.5\,\mathrm s$ không?
+**Hình 2.29:** Phân tích mối quan hệ giữa ba đồ thị $a_x(t)$, $v_x(t)$ và $x(t)$:
+- Đồ thị gia tốc $a_x(t)$ là đường thẳng dốc xuống, cắt trục hoành tại $t = 20\,\mathrm s$.
+- Đồ thị vận tốc $v_x(t)$ là parabol có bề lõm quay xuống, đạt đỉnh cực đại tại $t = 20\,\mathrm s$ với tiếp tuyến nằm ngang ($a_x = 0$).
+- Đồ thị tọa độ $x(t)$ là đường cong bậc ba có độ dốc tăng dần từ $0$ đến $20\,\mathrm s$ (đoạn uốn lõm lên), đạt độ dốc lớn nhất tại $t = 20\,\mathrm s$, sau đó độ dốc giảm dần (đoạn uốn cong xuống). Điểm $t = 20\,\mathrm s$ chính là **điểm uốn** của đồ thị vị trí $x(t)$!
 
-### Câu hỏi kiểm tra hiểu mục 2.6
+*Một câu hỏi tư duy thú vị:* Nếu chiếc xe tiếp tục chuyển động theo các quy luật trên thì sau bao lâu xe sẽ dừng hẳn tức thời? 
+Xe dừng lại khi $v_x = 0$, tức là $10.0 + 2.0t - 0.050t^2 = 0 \iff t^2 - 40t - 200 = 0$. Phương trình cho nghiệm dương $t = 20 + \sqrt{600} \approx 44.5\,\mathrm s$. Vậy tại thời điểm $44.5\,\mathrm s$, chiếc xe sẽ tạm dừng lại trước khi bắt đầu lùi về sau!
 
-::: exercise Câu hỏi trong sách
-Nếu gia tốc $a_x$ của vật chuyển động thẳng tăng theo thời gian, đồ thị $v_x$–$t$ là: **(i)** đường thẳng; **(ii)** cong lên; hay **(iii)** cong xuống?
+---
+
+### Câu hỏi kiểm tra hiểu bài
+
+::: exercise Câu hỏi kiểm tra
+Nếu gia tốc $a_x$ của một chất điểm chuyển động dọc theo trục $x$ luôn dương và tăng dần theo thời gian, thì hình dạng của đồ thị vận tốc $v_x$ theo thời gian sẽ là:
+**(i)** Một đường thẳng dốc lên.
+**(ii)** Một đường cong uốn lõm lên trên (độ dốc tăng dần).
+**(iii)** Một đường cong uốn vồng xuống dưới (độ dốc giảm dần).
 :::
 
-::: solution Đáp án của sách
-Chọn **(ii)**. Gia tốc bằng độ dốc đồ thị vận tốc. Nếu gia tốc tăng, độ dốc tăng, nên đường cong hướng lên.
+::: solution Lời giải & Phân tích
+**Chọn (ii): Đường cong uốn lõm lên trên.**
+Hệ số góc (độ dốc) của tiếp tuyến tại mỗi điểm trên đồ thị vận tốc $v_x(t)$ chính là gia tốc tức thời $a_x = dv_x/dt$.
+Nếu gia tốc $a_x > 0$ và liên tục tăng theo thời gian, điều đó có nghĩa là độ dốc của đồ thị vận tốc phải ngày càng dốc đứng hơn khi thời gian trôi đi. Hình dạng hình học của một đường có độ dốc tăng dần chính là đường cong uốn lõm lên trên. 
+(Nếu gia tốc không đổi, đồ thị mới là đường thẳng dốc lên ứng với đáp án (i); nếu gia tốc giảm dần về 0, đồ thị mới là đường cong vồng xuống ứng với đáp án (iii)).
 :::

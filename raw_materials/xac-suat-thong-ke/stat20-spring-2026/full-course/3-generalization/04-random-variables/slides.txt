@@ -1,0 +1,100 @@
+Random Variables
+
+STAT 20: Introduction to Probability and Statistics 
+
+suggested times:
+
+last PS: time to work on it and then review (25 minutes)
+
+Brief lecture on random variables (20 minutes)
+
+Break (5 mins)
+
+Concept Questions (20 minutes)
+
+next PS (40 minutes)
+
+Concept Questions
+
+−+
+01:00
+
+Roll a pair of fair six-sided dice and let 
+[MATH] \(X = 1\) if the dice land showing the same number of spots, and 
+[MATH] \(0\) otherwise. For example, if both dice land 
+[MATH] \(2\), then 
+[MATH] \(X = 1\), but if one lands 
+[MATH] \(2\) and the other lands 
+[MATH] \(3\), then 
+[MATH] \(X = 0\).
+
+What is 
+[MATH] \(P(X=1)\)?
+
+The chance that 
+[MATH] \(X = 1\) can be broken up into six mutually exclusive situations, that the dice both show one spot, or both show two spots, etc. Each of these has probability 
+[MATH] \(1/36\) so the total probability by the addition rule is 
+[MATH] \(6/36 = 1/6\)
+
+−+
+01:00
+
+The graph of the cdf of a random variable 
+[MATH] \(X\) is shown below. What is 
+[MATH] \(F(2)\)? What about 
+[MATH] \(f(2)\)?
+
+[MATH] \(F(2) = 2/3, f(2) = 0\)
+
+−+
+01:00
+
+You have 
+[MATH] \(10\) people with a cold and you have a remedy with a 
+[MATH] \(20\%\) chance of success. What is the chance that your remedy will cure at least one sufferer? (Let 
+[MATH] \(X\) be the number of people cured among the 10. We are looking for the probability that 
+[MATH] \(X \ge 1\))
+
+What is the chance that at least one person is cured?
+
+[MATH] \(P(X \ge 1) = 1 - P(X < 1) = 1 - P(X = 0) = 1 - (1-p)^{10}\), where 
+[MATH] \(p = 0.2\), because 
+[MATH] \(X \sim Bin(10, p)\). 
+[MATH] \(1-p = 0.8 \: \& \: 1-0.8^{10} = 0.8926\)
+
+−+
+01:00
+
+There are 4 histograms of different Poisson distributions below. Match each distribution to its parameter 
+[MATH] \(\lambda\). Recall that 
+[MATH] \(\lambda\) is how many occurrences we think will happen in a given period of time.
+
+[MATH] \[
+(1)\: \lambda = 0.5 \hspace{2cm} (2)\: \lambda = 1 \hspace{2cm} (3) \: \lambda = 2 \hspace{2cm} (4) \: \lambda = 4\hspace{2cm}
+\]
+
+explain the smaller the rate, the lower the probability of higher values. A-4, B-1, C-3, D-2
+
+Problem Set: Random Variables
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 6
+
+  
+    −
+    +
+
+ 25:00

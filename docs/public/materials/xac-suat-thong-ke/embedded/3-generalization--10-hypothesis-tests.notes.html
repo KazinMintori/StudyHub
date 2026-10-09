@@ -1,0 +1,745 @@
+<!DOCTYPE html><html lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html">
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Hypothesis Testing – this course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../3-generalization/11-hypothesis-tests-2/notes.html" rel="next">
+<link href="../../3-generalization/09-bootstrapping/notes.html" rel="prev">
+<link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
+<meta property="og:title" content="Hypothesis Testing – Stat 20">
+<meta property="og:description" content="Measuring the consistency between a model and data">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/assets/stat20-hex.png">
+<meta property="og:site_name" content="Stat 20">
+<meta name="twitter:title" content="Hypothesis Testing – Stat 20">
+<meta name="twitter:description" content="Measuring the consistency between a model and data">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/images/northampton-va.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html { color-scheme: light; scroll-behavior: auto; }
+body { margin: 0; background: white; color: #202124; }
+#quarto-content, #quarto-document-content { display: block !important; width: auto !important; max-width: 900px !important; margin: 0 auto !important; padding: 20px 24px !important; }
+#quarto-document-content > * { grid-column: auto !important; }
+.column-margin, .margin-caption { position: static !important; width: auto !important; max-width: 100% !important; }
+.quarto-title .title { display: block !important; }
+img, svg { max-width: 100%; }
+pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflow-x: auto; }
+.studyhub-source-reference { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 16px; font-size: 14px; }
+@media(max-width:600px) { #quarto-document-content { padding: 16px !important; } body { font-size: 16px; } }
+</style></head><body><main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Hypothesis Testing</h1>
+<p class="subtitle lead">Measuring the consistency between a model and data</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="dropcap">C</span>lassical statistics features two primary methods for using a sample of data to make an inference about a more general process. The first is the confidence interval, which expresses the uncertainty in an estimate of a population parameter. The second classical method of generalization is the hypothesis test.</p>
+<p>The hypothesis test takes a more active approach to reasoning: it posits a specific explanation for how the data could be generated, then evaluates whether or not the observed data is consistent with that model. The hypothesis test is one of the most common statistical tools in the social and natural sciences, but the reasoning involved can be counter-intuitive. Let’s introduce the logic of a hypothesis test by looking at another criminal case that drew statisticians into the mix.</p>
+<section id="example-the-united-states-vs-kristen-gilbert" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="example-the-united-states-vs-kristen-gilbert">Example: The United States vs Kristen Gilbert</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/northampton-va.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<p>In 1989, fresh out of nursing school, Kristen Gilbert got a job at the VA Medical Center in Northampton, Massachusetts, not far from where she grew up<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Within a few years, she became admired for her skill and competence.</p>
+<p>Gilbert’s skill was on display whenever a “code blue” alarm was sounded. This alarm indicates that a patient has gone into cardiac arrest and must be addressed quickly by administering a shot of epinephrine to restart the heart. Gilbert developed for a reputation for her steady hand in these crises.</p>
+<p>By the mid-1990s, however, the other nurses started to grow suspicious. There seemed to be a few too many code blues, and a few too many deaths, during Gilbert’s shifts. The staff brought their concerns to the VA administration, who brought in a statistician to evaluate the data.</p>
+<section id="the-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-data">The Data</h3>
+<p>The data that the VA provided to the statistician contained the number of deaths at the medical center over the previous 10 years, broken out by the three shifts of the days: night, daytime, and evening. As part of the process of exploratory data analysis, the statistician constructed a plot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/shift-deaths.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="550"></p>
+</figure>
+</div>
+<p>This visualization reveals several striking trends. Between 1990 and 1995, there were dramatically more deaths than the years before and after that interval. Within that time span, it was the evening shift that had most of the deaths. The exception is 1990, when the night and daytime shifts had the most deaths.</p>
+<p>So when was Gilbert working? She began working in this part of the hospital in March 1990 and stopped working in February 1996. Her shifts throughout that time span? The evening shifts. The one exception was 1990, when she was assigned to work the night shift.</p>
+<p>This evidence is compelling in establishing an association between Gilbert and the increase in deaths. When the district attorney brought a case against Gilbert in court, this was the first line of evidence they provided. In a trial, however, there is a high burden of proof.</p>
+<p>Could there be an alternative explanation for the trend found in this data?</p>
+</section>
+<section id="the-role-of-random-chance" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-role-of-random-chance">The role of random chance</h3>
+<p>Suppose for a moment that the occurrence of deaths at the hospital had nothing to do with Gilbert being on shift. In that case we would expect that the proportion of shifts with a death would be fairly similar when comparing shifts where Gilbert was working and shifts where she was not. But we wouldn’t expect those proportions to be <em>exactly</em> equal. It’s reasonable to think that a slightly higher proportion of Gilbert’s shifts could have had a death just due to random chance, not due to anything malicious on her part.</p>
+<p>So just how different were these proportions in the data? The plot above shows data from 1,641 individual shifts, on which three different variables were recorded: the shift number, whether or not there was a death on the shift, and whether or not Gilbert was working that shift.</p>
+<p>Here are the first 10 observations.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,641 × 3
+   shift death staff     
+   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     
+ 1   626 no    no_gilbert
+ 2   590 no    no_gilbert
+ 3  1209 no    no_gilbert
+ 4  1122 no    no_gilbert
+ 5   622 no    no_gilbert
+ 6  1536 no    no_gilbert
+ 7  1472 no    no_gilbert
+ 8   214 no    gilbert   
+ 9   277 yes   no_gilbert
+10  1332 no    no_gilbert
+# ℹ 1,631 more rows</code></pre>
+</div>
+</div>
+<p>Using this data frame, we can calculate the sample proportion of shifts where Gilbert was working (257) that had a death (40) and compare them to the sample proportion of shifts where Gilbert was <em>not</em> working (1384) that had a death (34).</p>
+<p><span class="math display">\[
+\hat{p}_{gilbert} - \hat{p}_{no\_gilbert} = \frac{40}{257} - \frac{34}{1384} = .155 - .024 = .131
+\]</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>A note on notation: it’s common to use <span class="math inline">\(\hat{p}\)</span> (“p hat”) to indicate that a proportion has been computed from a sample of data.</p>
+</div></div><p>A difference of .131 seems dramatic, but is that within the bounds of what we might expect just due to chance? One way to address this question is to phrase it as: if in fact the probability of a death on a given shift is independent of whether or not Gilbert is on the shift, what values would we expect for the difference in observed proportions?</p>
+<p>We can answer this question by using simulation. To a simulate a world in which deaths are independent of Gilbert, we can</p>
+<ol type="1">
+<li>Shuffle (or permute) the values in the <code>death</code> variable in the data frame to break the link between that variable and the <code>staff</code> variable.</li>
+<li>Calculate the resulting difference in proportion of deaths in each group.</li>
+</ol>
+<p>The rationale for shuffling values in one of the columns is that if in fact those two columns are independent of one another, then it was just random chance that led to a value of one variable landing in the same row as the value of the other variable. It could just as well have been a different pairing. Shuffling captures another example of the arbitrary pairings that we could have observed if the two variables were independent of one another<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>By repeating steps 1 and 2 many many times, we can build up the full distribution of the values that this difference in proportions could take.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="notes_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As expected, in a world where these two variables are independent of one another, we would expect a difference in proportions around zero. Sometimes, however, that statistic might reach values of +/- .01 or .02 or rarely .03. In the 500 simulated statistics shown above, however, none of them reached beyond +/- .06.</p>
+<p>So if that’s the range of statistics we would expect in a world where random chance is the only mechanism driving the difference in proportions, how does it compare to the world that we actually observed? The statistic that we observed in the data was .131, more than <em>twice</em> the value of the most extreme statistic observed above.</p>
+<p>To put that into perspective, we can plot the observed statistic as a vertical line on the same plot.</p>
+<div class="cell page-columns page-full" data-layout-align="center">
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="notes_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img column-body-outset" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The method used above shows that the chance of observing a difference of .131 is incredibly unlikely if in fact deaths were independent of Gilbert being on shift. On this point, the statisticians on the case agreed that they could rule out random chance as an explanation for this difference. Something else must have been happening.</p>
+</section>
+</section>
+<section id="elements-of-a-hypothesis-test" class="level2">
+<h2 class="anchored" data-anchor-id="elements-of-a-hypothesis-test">Elements of a Hypothesis Test</h2>
+<p>The logic used by the statisticians in the Gilbert case is an example of a hypothesis test. There are a few key components common to every hypothesis test, so we’ll lay them out one-by-one.</p>
+<p>A hypothesis test begins with the assertion of a null hypothesis.</p>
+<dl>
+<dt>Null Hypothesis</dt>
+<dd>
+A description of the chance process for generating data. Sometimes referred to as <span class="math inline">\(H_0\)</span> (“H naught”).
+</dd>
+</dl>
+<p>It is common for the null hypothesis to be that nothing interesting is happening or that it is business as usual, a hypothesis that statisticians try to refute with data. In Gilbert case, this could be described as “The occurrence of a death is independent of the presence of Gilbert” or “The probability of death is the same whether or not Gilbert is on shift” or “The difference in the probability of death is zero, when comparing shifts where Gilbert is present to shifts where Gilbert is not present”. Importantly, the null model describes a possible state of the world, therefore the latter two versions are framed in terms of <em>parameters</em> (<span class="math inline">\(p\)</span> for proportions) instead of observed <em>statistics</em> (<span class="math inline">\(\hat{p}\)</span>).</p>
+<p>The hypothesis that something indeed is going on is usually framed as the alternative hypothesis.</p>
+<dl>
+<dt>Alternative Hypothesis</dt>
+<dd>
+The assertion that a mechanism other than the null hypothesis generated the data. Sometimes referred to as <span class="math inline">\(H_A\)</span> (“H A).
+</dd>
+</dl>
+<p>In the Gilbert case, the corresponding alternative hypothesis is that there is “The occurrence of a death is <em>dependent</em> on the presence of Gilbert” or “The probability of death is <em>different</em> whether or not Gilbert is on shift” or “The difference in the probability of death is <em>non-zero</em>, when comparing shifts where Gilbert is present to shifts where Gilbert is not present”</p>
+<p>In order to determine whether the observed data is consistent with the null hypothesis, it is necessary to compress the data down into a single statistic.</p>
+<dl>
+<dt>Test Statistic</dt>
+<dd>
+A numerical summary of the observed data that bears on the null hypothesis. Under the null hypothesis it has a sampling distribution (also called a “Null Distribution”).
+</dd>
+</dl>
+<p>In Gilbert’s case, a difference in two proportions, <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> is a natural test statistic and the observed test statistic was .131.</p>
+<p>It’s not enough, though, to just compute the observed statistic. We need to know how likely this statistic would be in a world where the null hypothesis is true. This probability is captured in the notion of a p-value.</p>
+<dl>
+<dt>p-value</dt>
+<dd>
+The probability of a test statistic as rare or even more rare than the one observed under the assumptions of the null hypothesis.
+</dd>
+</dl>
+<p>If the p-value is high, then the data is consistent with the null hypothesis. If the p-value is very low, however, there the statistic that was observed would be very unlikely in a world where the null hypothesis was true. As a consequence, the null hypothesis can be rejected as reasonable model for the data.</p>
+<p>The p-value can be estimated using the proportion of statistics from the simulated null distribution that are as or more extreme than the observed statistic. In the simulation for the Gilbert case, there were 0 statistics greater than .131, so the estimated p-value is zero.</p>
+<!-- Add a second example with a high p-value -->
+</section>
+<section id="what-a-p-value-is-not" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-p-value-is-not">What a p-value is not</h2>
+<p>The p-value has been called the most used as well as the most abused tool in statistics. Here are three common misinterpretations to be wary of.</p>
+<ol type="1">
+<li><p>The p-value is the probability that the null hypothesis is true (FALSE!)</p>
+<p>This is one of the most common confusions about p-values. Graphically, a p-value corresponds to the area in the tail of the null distribution that is more extreme than the observed test statistic. That null distribution can only be created if you assume that the null hypothesis is true. The p-value is fundamentally a conditional probability of observing the statistic (or more extreme) <em>given</em> the null hypothesis is true. It is flawed reasoning to start with an assumption that the null hypothesis is true and arrive at a probability of that same assumption.</p></li>
+<li><p>A very high p-value suggests that the null hypothesis is true (FALSE!)</p>
+<p>This interpretation is related to the first one but can lead to particularly wrongheaded decisions. One way to keep your interpretation of a p-value straight is to recall the distinction made in the US court system. A trial proceeds under the assumption that the defendant is innocent. The prosecution presents evidence of guilt. If the evidence is convincing the jury will render a verdict of “guilty”. If the evidence is not-convincing (that is, the p-value is high) then the jury will render a verdict of “not guilty” - not a verdict of “innocent”.</p>
+<p>Imagine a setting where the prosecution has presented no evidence at all. That by no means indicates that the defendant is innocent, just that there was insufficient evidence to establish guilt.</p></li>
+<li><p>The p-value is the probability of the data (FALSE!)</p>
+<p>This statement has a semblance of truth to it but is missing an important qualifier. The probability is calculated based on the null distribution, which requires the assumption that the null hypothesis is true. It’s also not quite specific enough. Most often p-values are calculated as probabilities of test statistics, not probabilities of the full data sets.</p></li>
+</ol>
+<p>Another more basic check on your understanding of a p-value: a p-value is a (conditional) probability, therefore it must between a number between 0 and 1. If you ever find yourself computing a p-value of -6 or 3.2, be sure to pause and revisit your calculations!</p>
+</section>
+<section id="one-test-many-variations" class="level2">
+<h2 class="anchored" data-anchor-id="one-test-many-variations">One test, many variations</h2>
+<p>The hypothesis testing framework laid out above is far more general than just this particular example from the case of Kristen Gilbert where we computed a difference in proportions and used shuffling (aka permutation) to build the null distribution. Below are just a few different research questions that could be addressed using a hypothesis test.</p>
+<ul>
+<li><p>Pollsters have surveyed a sample of 200 voters ahead of an election to assess their relative support for the Republican and Democratic candidate. The observed difference in those proportions is .02. Is this consistent with the notion of evenly split support for the two candidates, or is one decidedly in the lead?</p></li>
+<li><p>Brewers have tapped 7 barrels of beer and measured the average level of a compound related to the acidity of the beer as 610 parts per million. The acceptable level for this compound is 500 parts per million. Is this average of 610 consistent with the notion that the average of the whole batch of beer (many hundreds of barrels) is at the acceptable level of this compound?</p></li>
+<li><p>A random sample of 40 users of a food delivery app were randomly assigned two different versions of a menu where they entered the amount of their tip: one with the tip amount in ascending order, the other in descending order. The average tip amount of those with the menu in ascending order was found to be $3.87 while the average tip of the users in the descending order group was $3.96. Could this difference in averages be explained by chance?</p></li>
+</ul>
+<p>Although the contexts of these problems are very different, as are the types of statistics they’ve calculated, they can still be characterized as a hypothesis test by asking the following questions:</p>
+<ol type="1">
+<li><p>What is the null hypothesis used by the researchers?</p></li>
+<li><p>What is the value of the observed test statistic?</p></li>
+<li><p>How did researchers approximate the null distribution?</p></li>
+<li><p>What was the p-value, what does it tell us and what does it <em>not</em> tell us?</p></li>
+</ol>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In classical statistics there are two primary tools for assessing the role that random variability plays in the data that you have observed. The first is the confidence interval, which quantifies the amount of uncertainty in a point estimate due to the variability inherent in drawing a small random sample from a population. The second is the hypothesis test, which postings a specific model by which the data could be generated, then assesses the degree to which the observed data is consistent with that model.</p>
+<p>The hypothesis test begins with the assertion of a null hypothesis that describes a chance mechanism for generating data. A test statistic is then selected that corresponds to that null hypothesis. From there, the sampling distribution of that statistic under the null hypothesis is approximated through a computational method (such as using permutation, as shown here) or one rooted in probability theory (such as the Central Limit Theorem). The final result of the hypothesis test procedure is the p-value, which is approximated as the proportion of the null distribution that is as or more extreme than the observed test statistic. The p-value measures the consistency between the null hypothesis and the observed test statistic and should be interpreted carefully.</p>
+<p>A postscript on the case of Kristen Gilbert. Although the hypothesis test ruled out random chance as the reason for the spike in deaths under her watch, it didn’t rule out other potential causes for that spike. It’s possible, after all, that the nightshifts that Gilbert was working happen to be the time of day when cardiac arrests are more common. For this reason, the statistical evidence was never presented to the jury, but the jury nonetheless found her guilty based on other evidence presented in the trial.</p>
+<p><a href="../../3-generalization/10-hypothesis-tests/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This case study appears in <em>Statistics in the Courtroom: United States v. Kristen Gilbert</em> by Cobb and Gelbach, published in <em>Statistics: A Guide to the Unknown</em> by Peck et. al.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The technical notion that motivates the use of shuffling is a slightly more general notion than independence called exchangability. The distinction between these two related concepts is a topic in a course in probability.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></main><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><script>
+(() => {
+  const entries = {"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html":{"id":"1-questions-and-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html":{"id":"1-questions-and-data--01-understanding-the-world","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html":{"id":"1-questions-and-data--02-taxonomy-of-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html":{"id":"2-summarizing-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html":{"id":"2-summarizing-data--01-summarizing-categorical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html":{"id":"2-summarizing-data--02-summarizing-numerical-data","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html":{"id":"2-summarizing-data--03-a-grammar-of-graphics","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html":{"id":"2-summarizing-data--04-conditioning","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html":{"id":"2-summarizing-data--04-conditioning","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html":{"id":"2-summarizing-data--05-summarizing-associations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html":{"id":"2-summarizing-data--06-multiple-linear-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html":{"id":"3-generalization","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html":{"id":"3-generalization--01-prob-foundations","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html":{"id":"3-generalization--01-prob-foundations","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html":{"id":"3-generalization--02-computing-probs","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html":{"id":"3-generalization--02-computing-probs","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html":{"id":"3-generalization--03-probability-dsns","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html":{"id":"3-generalization--03-probability-dsns","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html":{"id":"3-generalization--04-random-variables","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html":{"id":"3-generalization--04-random-variables","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html":{"id":"3-generalization--05-ev-se","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html":{"id":"3-generalization--05-ev-se","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html":{"id":"3-generalization--06-normal-approx","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html":{"id":"3-generalization--06-normal-approx","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html":{"id":"3-generalization--07-from-samps-to-pops","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html":{"id":"3-generalization--08-confidence-intervals","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html":{"id":"3-generalization--08-confidence-intervals","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html":{"id":"3-generalization--09-bootstrapping","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html":{"id":"3-generalization--09-bootstrapping","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html":{"id":"3-generalization--10-hypothesis-tests","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html":{"id":"3-generalization--10-hypothesis-tests","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html":{"id":"3-generalization--11-hypothesis-tests-2","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html":{"id":"3-generalization--12-wrong-by-design","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html":{"id":"3-generalization--12-wrong-by-design","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/notes.html":{"id":"4-causation","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html":{"id":"4-causation--01-defining-causality","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html":{"id":"4-causation--01-defining-causality","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html":{"id":"4-causation--02-experiments","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html":{"id":"4-causation--02-experiments","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html":{"id":"4-causation--03-matching","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html":{"id":"4-causation--03-matching","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html":{"id":"5-prediction--01-method-of-least-squares","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html":{"id":"5-prediction--01-method-of-least-squares","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html":{"id":"5-prediction--02-improving-predictions","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html":{"id":"5-prediction--02-improving-predictions","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html":{"id":"5-prediction--03-overfitting","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html":{"id":"5-prediction--03-overfitting","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html":{"id":"5-prediction--05-logistic-regression","kind":"notes"},"https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html":{"id":"5-prediction--05-logistic-regression","kind":"slides"},"https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html":{"id":"quiz","kind":"slides"}};
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) return;
+    const raw = anchor.getAttribute('href');
+    if (raw.startsWith('#')) {
+      const target = document.getElementById(decodeURIComponent(raw.slice(1)));
+      if (target) { event.preventDefault(); target.scrollIntoView(); }
+      return;
+    }
+    const url = new URL(anchor.href, document.baseURI);
+    const key = url.origin + url.pathname;
+    if (entries[key]) { event.preventDefault(); parent.postMessage({type:'studyhub-source-navigation', ...entries[key]}, '*'); }
+    else { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+  }, true);
+})();</script></body></html>

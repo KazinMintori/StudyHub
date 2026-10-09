@@ -44,7 +44,7 @@ Dữ liệu cá nhân được lưu cục bộ bằng localStorage; chưa đồn
 
 ## Cấu trúc môn học
 
-Mỗi môn liệt kê các bài giảng. Mỗi bài có **Slides / Notes / Kiến thức nền** trên cùng một trang, với các địa chỉ `#slides`, `#notes`, `#kien-thuc-can-co`. Nội dung chi tiết nằm trong `docs/<môn>/bai-giang/<bài>.md`. `docs/.vitepress/course-catalog.mjs` quản lý môn, bài học, danh sách nền tảng của từng bài và Slides có thuộc tính `note` chỉ bài tương ứng.
+Mỗi môn liệt kê các bài giảng. Mỗi bài có **Notes / Slides / Cheatsheet / Kiến thức nền** trên cùng một trang, với các địa chỉ `#notes`, `#slides`, `#cheatsheet`, `#kien-thuc-can-co`. Nội dung chi tiết nằm trong `docs/<môn>/bai-giang/<bài>.md`. `docs/.vitepress/course-catalog.mjs` quản lý môn, bài học, danh sách nền tảng của từng bài; `docs/.vitepress/cheatsheets.mjs` quản lý bảng tra cứu và công thức; Slides có thuộc tính `note` chỉ bài tương ứng.
 
 Các đường dẫn Notes cũ chuyển tiếp tới bài giảng; tiến độ cũ được giữ lại. Snapshot trước lần tổ chức theo bài nằm ở `backups/before-lecture-wiki/`. Phần ghi chú cá nhân trong Góc học tập vẫn là một công cụ riêng, khác Notes bài giảng.
 

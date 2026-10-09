@@ -1,0 +1,474 @@
+[
+  {
+    "id": "1-questions-and-data",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/notes.html",
+    "file": "1-questions-and-data.notes.html",
+    "paragraphs": 0,
+    "slideSections": 0
+  },
+  {
+    "id": "1-questions-and-data--01-understanding-the-world",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html",
+    "file": "1-questions-and-data--01-understanding-the-world.notes.html",
+    "paragraphs": 7,
+    "slideSections": 2
+  },
+  {
+    "id": "1-questions-and-data--01-understanding-the-world",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/slides.html",
+    "file": "1-questions-and-data--01-understanding-the-world.slides.html",
+    "paragraphs": 0,
+    "slideSections": 50
+  },
+  {
+    "id": "1-questions-and-data--02-taxonomy-of-data",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/notes.html",
+    "file": "1-questions-and-data--02-taxonomy-of-data.notes.html",
+    "paragraphs": 48,
+    "slideSections": 8
+  },
+  {
+    "id": "1-questions-and-data--02-taxonomy-of-data",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/02-taxonomy-of-data/slides.html",
+    "file": "1-questions-and-data--02-taxonomy-of-data.slides.html",
+    "paragraphs": 0,
+    "slideSections": 21
+  },
+  {
+    "id": "2-summarizing-data",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/notes.html",
+    "file": "2-summarizing-data.notes.html",
+    "paragraphs": 8,
+    "slideSections": 1
+  },
+  {
+    "id": "2-summarizing-data--01-summarizing-categorical-data",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html",
+    "file": "2-summarizing-data--01-summarizing-categorical-data.notes.html",
+    "paragraphs": 36,
+    "slideSections": 4
+  },
+  {
+    "id": "2-summarizing-data--01-summarizing-categorical-data",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html",
+    "file": "2-summarizing-data--01-summarizing-categorical-data.slides.html",
+    "paragraphs": 0,
+    "slideSections": 16
+  },
+  {
+    "id": "2-summarizing-data--02-summarizing-numerical-data",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html",
+    "file": "2-summarizing-data--02-summarizing-numerical-data.notes.html",
+    "paragraphs": 123,
+    "slideSections": 15
+  },
+  {
+    "id": "2-summarizing-data--02-summarizing-numerical-data",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html",
+    "file": "2-summarizing-data--02-summarizing-numerical-data.slides.html",
+    "paragraphs": 0,
+    "slideSections": 15
+  },
+  {
+    "id": "2-summarizing-data--03-a-grammar-of-graphics",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html",
+    "file": "2-summarizing-data--03-a-grammar-of-graphics.notes.html",
+    "paragraphs": 49,
+    "slideSections": 7
+  },
+  {
+    "id": "2-summarizing-data--03-a-grammar-of-graphics",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html",
+    "file": "2-summarizing-data--03-a-grammar-of-graphics.slides.html",
+    "paragraphs": 0,
+    "slideSections": 17
+  },
+  {
+    "id": "2-summarizing-data--04-conditioning",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html",
+    "file": "2-summarizing-data--04-conditioning.notes.html",
+    "paragraphs": 68,
+    "slideSections": 9
+  },
+  {
+    "id": "2-summarizing-data--04-conditioning",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/slides.html",
+    "file": "2-summarizing-data--04-conditioning.slides.html",
+    "paragraphs": 0,
+    "slideSections": 21
+  },
+  {
+    "id": "2-summarizing-data--05-summarizing-associations",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/notes.html",
+    "file": "2-summarizing-data--05-summarizing-associations.notes.html",
+    "paragraphs": 52,
+    "slideSections": 6
+  },
+  {
+    "id": "2-summarizing-data--05-summarizing-associations",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/05-summarizing-associations/slides.html",
+    "file": "2-summarizing-data--05-summarizing-associations.slides.html",
+    "paragraphs": 0,
+    "slideSections": 22
+  },
+  {
+    "id": "2-summarizing-data--06-multiple-linear-regression",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html",
+    "file": "2-summarizing-data--06-multiple-linear-regression.notes.html",
+    "paragraphs": 72,
+    "slideSections": 10
+  },
+  {
+    "id": "2-summarizing-data--06-multiple-linear-regression",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html",
+    "file": "2-summarizing-data--06-multiple-linear-regression.slides.html",
+    "paragraphs": 0,
+    "slideSections": 10
+  },
+  {
+    "id": "3-generalization",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/notes.html",
+    "file": "3-generalization.notes.html",
+    "paragraphs": 9,
+    "slideSections": 1
+  },
+  {
+    "id": "3-generalization--01-prob-foundations",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html",
+    "file": "3-generalization--01-prob-foundations.notes.html",
+    "paragraphs": 96,
+    "slideSections": 14
+  },
+  {
+    "id": "3-generalization--01-prob-foundations",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html",
+    "file": "3-generalization--01-prob-foundations.slides.html",
+    "paragraphs": 0,
+    "slideSections": 14
+  },
+  {
+    "id": "3-generalization--02-computing-probs",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/notes.html",
+    "file": "3-generalization--02-computing-probs.notes.html",
+    "paragraphs": 116,
+    "slideSections": 17
+  },
+  {
+    "id": "3-generalization--02-computing-probs",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html",
+    "file": "3-generalization--02-computing-probs.slides.html",
+    "paragraphs": 0,
+    "slideSections": 9
+  },
+  {
+    "id": "3-generalization--03-probability-dsns",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/notes.html",
+    "file": "3-generalization--03-probability-dsns.notes.html",
+    "paragraphs": 73,
+    "slideSections": 21
+  },
+  {
+    "id": "3-generalization--03-probability-dsns",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/slides.html",
+    "file": "3-generalization--03-probability-dsns.slides.html",
+    "paragraphs": 0,
+    "slideSections": 13
+  },
+  {
+    "id": "3-generalization--04-random-variables",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html",
+    "file": "3-generalization--04-random-variables.notes.html",
+    "paragraphs": 70,
+    "slideSections": 23
+  },
+  {
+    "id": "3-generalization--04-random-variables",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/slides.html",
+    "file": "3-generalization--04-random-variables.slides.html",
+    "paragraphs": 0,
+    "slideSections": 11
+  },
+  {
+    "id": "3-generalization--05-ev-se",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html",
+    "file": "3-generalization--05-ev-se.notes.html",
+    "paragraphs": 84,
+    "slideSections": 21
+  },
+  {
+    "id": "3-generalization--05-ev-se",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/slides.html",
+    "file": "3-generalization--05-ev-se.slides.html",
+    "paragraphs": 0,
+    "slideSections": 11
+  },
+  {
+    "id": "3-generalization--06-normal-approx",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/notes.html",
+    "file": "3-generalization--06-normal-approx.notes.html",
+    "paragraphs": 92,
+    "slideSections": 19
+  },
+  {
+    "id": "3-generalization--06-normal-approx",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/06-normal-approx/slides.html",
+    "file": "3-generalization--06-normal-approx.slides.html",
+    "paragraphs": 0,
+    "slideSections": 9
+  },
+  {
+    "id": "3-generalization--07-from-samps-to-pops",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/notes.html",
+    "file": "3-generalization--07-from-samps-to-pops.notes.html",
+    "paragraphs": 47,
+    "slideSections": 12
+  },
+  {
+    "id": "3-generalization--07-from-samps-to-pops",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/07-from-samps-to-pops/slides.html",
+    "file": "3-generalization--07-from-samps-to-pops.slides.html",
+    "paragraphs": 0,
+    "slideSections": 10
+  },
+  {
+    "id": "3-generalization--08-confidence-intervals",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/notes.html",
+    "file": "3-generalization--08-confidence-intervals.notes.html",
+    "paragraphs": 89,
+    "slideSections": 14
+  },
+  {
+    "id": "3-generalization--08-confidence-intervals",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/08-confidence-intervals/slides.html",
+    "file": "3-generalization--08-confidence-intervals.slides.html",
+    "paragraphs": 0,
+    "slideSections": 12
+  },
+  {
+    "id": "3-generalization--09-bootstrapping",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/notes.html",
+    "file": "3-generalization--09-bootstrapping.notes.html",
+    "paragraphs": 50,
+    "slideSections": 5
+  },
+  {
+    "id": "3-generalization--09-bootstrapping",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/slides.html",
+    "file": "3-generalization--09-bootstrapping.slides.html",
+    "paragraphs": 0,
+    "slideSections": 11
+  },
+  {
+    "id": "3-generalization--10-hypothesis-tests",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/notes.html",
+    "file": "3-generalization--10-hypothesis-tests.notes.html",
+    "paragraphs": 63,
+    "slideSections": 8
+  },
+  {
+    "id": "3-generalization--10-hypothesis-tests",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/10-hypothesis-tests/slides.html",
+    "file": "3-generalization--10-hypothesis-tests.slides.html",
+    "paragraphs": 0,
+    "slideSections": 17
+  },
+  {
+    "id": "3-generalization--11-hypothesis-tests-2",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/notes.html",
+    "file": "3-generalization--11-hypothesis-tests-2.notes.html",
+    "paragraphs": 48,
+    "slideSections": 11
+  },
+  {
+    "id": "3-generalization--11-hypothesis-tests-2",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/11-hypothesis-tests-2/slides.html",
+    "file": "3-generalization--11-hypothesis-tests-2.slides.html",
+    "paragraphs": 0,
+    "slideSections": 17
+  },
+  {
+    "id": "3-generalization--12-wrong-by-design",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/notes.html",
+    "file": "3-generalization--12-wrong-by-design.notes.html",
+    "paragraphs": 62,
+    "slideSections": 13
+  },
+  {
+    "id": "3-generalization--12-wrong-by-design",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/3-generalization/12-wrong-by-design/slides.html",
+    "file": "3-generalization--12-wrong-by-design.slides.html",
+    "paragraphs": 0,
+    "slideSections": 14
+  },
+  {
+    "id": "4-causation",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/notes.html",
+    "file": "4-causation.notes.html",
+    "paragraphs": 9,
+    "slideSections": 1
+  },
+  {
+    "id": "4-causation--01-defining-causality",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/notes.html",
+    "file": "4-causation--01-defining-causality.notes.html",
+    "paragraphs": 51,
+    "slideSections": 5
+  },
+  {
+    "id": "4-causation--01-defining-causality",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/01-defining-causality/slides.html",
+    "file": "4-causation--01-defining-causality.slides.html",
+    "paragraphs": 0,
+    "slideSections": 21
+  },
+  {
+    "id": "4-causation--02-experiments",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html",
+    "file": "4-causation--02-experiments.notes.html",
+    "paragraphs": 40,
+    "slideSections": 10
+  },
+  {
+    "id": "4-causation--02-experiments",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/slides.html",
+    "file": "4-causation--02-experiments.slides.html",
+    "paragraphs": 0,
+    "slideSections": 11
+  },
+  {
+    "id": "4-causation--03-matching",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html",
+    "file": "4-causation--03-matching.notes.html",
+    "paragraphs": 44,
+    "slideSections": 7
+  },
+  {
+    "id": "4-causation--03-matching",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/slides.html",
+    "file": "4-causation--03-matching.slides.html",
+    "paragraphs": 0,
+    "slideSections": 11
+  },
+  {
+    "id": "5-prediction--01-method-of-least-squares",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/notes.html",
+    "file": "5-prediction--01-method-of-least-squares.notes.html",
+    "paragraphs": 26,
+    "slideSections": 7
+  },
+  {
+    "id": "5-prediction--01-method-of-least-squares",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/01-method-of-least-squares/slides.html",
+    "file": "5-prediction--01-method-of-least-squares.slides.html",
+    "paragraphs": 0,
+    "slideSections": 8
+  },
+  {
+    "id": "5-prediction--02-improving-predictions",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/notes.html",
+    "file": "5-prediction--02-improving-predictions.notes.html",
+    "paragraphs": 54,
+    "slideSections": 9
+  },
+  {
+    "id": "5-prediction--02-improving-predictions",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/02-improving-predictions/slides.html",
+    "file": "5-prediction--02-improving-predictions.slides.html",
+    "paragraphs": 0,
+    "slideSections": 9
+  },
+  {
+    "id": "5-prediction--03-overfitting",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html",
+    "file": "5-prediction--03-overfitting.notes.html",
+    "paragraphs": 31,
+    "slideSections": 5
+  },
+  {
+    "id": "5-prediction--03-overfitting",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/slides.html",
+    "file": "5-prediction--03-overfitting.slides.html",
+    "paragraphs": 0,
+    "slideSections": 8
+  },
+  {
+    "id": "5-prediction--05-logistic-regression",
+    "kind": "notes",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/notes.html",
+    "file": "5-prediction--05-logistic-regression.notes.html",
+    "paragraphs": 47,
+    "slideSections": 7
+  },
+  {
+    "id": "5-prediction--05-logistic-regression",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html",
+    "file": "5-prediction--05-logistic-regression.slides.html",
+    "paragraphs": 0,
+    "slideSections": 10
+  },
+  {
+    "id": "quiz",
+    "kind": "slides",
+    "source": "https://stat20.berkeley.edu/spring-2026/assets/quiz-slides.html",
+    "file": "quiz.slides.html",
+    "paragraphs": 0,
+    "slideSections": 4
+  }
+]

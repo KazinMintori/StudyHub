@@ -1,7 +1,8 @@
 <script setup>
 import { computed, ref, watch, useId } from 'vue'
-import { mix, quadratic, dualCertificate, optimizerTrace, solveSmallLP, bellmanTrace, dag } from './math-ai.mjs'
+import { mix, dualCertificate, optimizerTrace, solveSmallLP, bellmanTrace, dag } from './math-ai.mjs'
 import MathText from './MathText.vue'
+import SimulationControls from './SimulationControls.vue'
 import { mathLabels } from '../math-labels.mjs'
 const props=defineProps({ type:{type:String,required:true}, initialMethod:{type:String,default:'gd'} })
 const theta=ref(.5), concave=ref(false), lambda=ref(2), method=ref(props.initialMethod), rate=ref(.15), kappa=ref(10), momentum=ref(.8), step=ref(0), c1=ref(3), c2=ref(2), longest=ref(false)
@@ -46,7 +47,7 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <line x1="100" y1="35" x2="280" y2="155" class="main-line"/>
         <circle cx="100" cy="35" r="5"/><circle cx="280" cy="155" r="5"/>
         <text x="55" y="26">A = (−1,1)</text><text x="225" y="178">B = (2,−1)</text>
-        <circle :cx="100+(1-theta)*180" :cy="35+(1-theta)*120" r="7" class="marker"/>
+        <circle :cx="100+(1-theta)*180" :cy="35+(1-theta)*120" r="7" class="marker active-marker"/>
       </svg>
       <p role="status">z = θA + (1−θ)B = ({{ fmt(point[0]) }}, {{ fmt(point[1]) }}). {{ theta>=0&&theta<=1?'z nằm trên đoạn AB.':'z nằm trên đường AB nhưng ngoài đoạn nối.' }}</p>
     </template>
@@ -58,7 +59,7 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <polyline :points="curve" class="main-line"/>
         <line :x1="cx(-1)" :y1="cy(f(-1))" :x2="cx(2)" :y2="cy(f(2))" class="secondary-line"/>
         <line :x1="cx(z)" :y1="cy(f(z))" :x2="cx(z)" :y2="cy(chord)" class="dashed"/>
-        <circle :cx="cx(z)" :cy="cy(f(z))" r="6" class="marker"/>
+        <circle :cx="cx(z)" :cy="cy(f(z))" r="6" class="marker active-marker"/>
         <circle :cx="cx(z)" :cy="cy(chord)" r="5" class="hollow"/>
         <text x="35" y="20">Nét liền: f · đoạn thẳng: dây cung</text>
         <text :x="cx(-1)-8" y="194">−1</text><text :x="cx(2)-4" y="194">2</text>
@@ -76,10 +77,11 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
         <line x1="20" y1="120" x2="365" y2="120" class="axis"/><line x1="190" y1="15" x2="190" y2="225" class="axis"/>
         <ellipse v-for="c in contours" :key="c" cx="190" cy="120" :rx="Math.sqrt(2*c)*50" :ry="Math.sqrt(2*c/kappa)*35" class="contour"/>
         <line v-for="segment in visibleSegments" :key="segment.iteration" :x1="px(segment.from[0])" :y1="py(segment.from[1])" :x2="px(segment.to[0])" :y2="py(segment.to[1])" class="main-line"/>
-        <circle v-for="r in visible" :key="r.iteration" :cx="px(r.x[0])" :cy="py(r.x[1])" r="4"/>
+        <circle v-for="r in visible" :key="r.iteration" :cx="px(r.x[0])" :cy="py(r.x[1])" r="3" class="history-point"/>
+        <circle v-if="row.x.every(x=>Number.isFinite(x)&&Math.abs(x)<=3)" :cx="px(row.x[0])" :cy="py(row.x[1])" r="7" class="marker active-marker"/>
         <text x="197" y="139">0</text><text x="355" y="139">x</text><text x="198" y="20">y</text>
       </svg>
-      <div class="lab-buttons"><button @click="step=0">Đặt lại</button><button :disabled="step===20" @click="step++">Bước tiếp →</button><label>Bước {{ step }} / 20<input v-model.number="step" type="range" min="0" max="20" step="1"></label></div>
+      <SimulationControls v-model="step" :max="trace.length-1" :reset-key="trace" />
       <p role="status">Bước {{ step }}: ({{ fmt(row.x[0]) }}, {{ fmt(row.x[1]) }}) và f = {{ fmt(row.value) }}.</p>
       <p v-if="trace.slice(0,step+1).some(r=>r.x.some(x=>Math.abs(x)>3))" class="lab-notice">Có điểm vượt vùng vẽ |x|, |y| ≤ 3. Số ở trên vẫn được tính. Chỉ nối hai bước liên tiếp cùng ở trong vùng, còn các bước ra ngoài làm đường đi ngắt đoạn.</p>
       <details v-if="method==='adam'||method==='rmsprop'||method==='adagrad'"><summary>Trạng thái thuật toán ở bước này</summary><p>m = {{ row.m.map(fmt).join(', ') }}, v = {{ row.v.map(fmt).join(', ') }}, còn tổng bình phương = {{ row.sum.map(fmt).join(', ') }}.</p></details>
@@ -89,7 +91,7 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
       <svg viewBox="0 0 380 200" role="img" aria-label="Cận dưới g(lambda) và giá trị khả thi bằng 1">
         <line x1="35" y1="165" x2="350" y2="165" class="axis"/><line x1="35" y1="55" x2="350" y2="55" class="secondary-line"/>
         <polyline :points="Array.from({length:81},(_,i)=>`${35+i*315/80},${165-(i/20-(i/20)**2/4)*110}`).join(' ')" class="main-line"/>
-        <circle :cx="35+lambda*315/4" :cy="165-certificate.dual*110" r="6" class="marker"/>
+        <circle :cx="35+lambda*315/4" :cy="165-certificate.dual*110" r="6" class="marker active-marker"/>
         <text x="38" y="45">f(1) = p* = 1</text><text x="335" y="186">λ</text><text x="31" y="185">0</text><text x="188" y="185">2</text><text x="342" y="185">4</text>
       </svg>
       <p role="status">g(λ) = {{ fmt(certificate.dual) }}, còn f(1)−g(λ) = {{ fmt(certificate.gap) }}. Điểm cực tiểu của L theo x là {{ fmt(certificate.minimizer) }}.</p>
@@ -113,9 +115,9 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
           <line :x1="edge.x1" :y1="edge.y1" :x2="edge.x2" :y2="edge.y2" :marker-end="`url(#${arrowId})`" :class="bellman[bellmanStep].actions[edge.from]===edge.to?'main-line':'axis'"/>
           <text :x="edge.label[0]" :y="edge.label[1]" text-anchor="middle">{{ edge.cost }}</text>
         </g>
-        <g v-for="n in nodes" :key="n.id"><circle :cx="n.x" :cy="n.y" r="16" class="node"/><text :x="n.x" :y="n.y+5" text-anchor="middle">{{ n.id }}</text><text :x="n.x" :y="n.y+36" text-anchor="middle">V={{ bellman[bellmanStep].values[n.id]??'?' }}</text></g>
+        <g v-for="n in nodes" :key="n.id"><circle :cx="n.x" :cy="n.y" r="16" class="node" :class="{ computed: bellman[bellmanStep].values[n.id] !== undefined, active: bellman[bellmanStep].node === n.id }"/><text :x="n.x" :y="n.y+5" text-anchor="middle" :class="{ 'active-label': bellman[bellmanStep].node === n.id }">{{ n.id }}</text><text :x="n.x" :y="n.y+36" text-anchor="middle">V={{ bellman[bellmanStep].values[n.id]??'?' }}</text></g>
       </svg>
-      <div class="lab-buttons"><button @click="bellmanStep=0">Đặt lại</button><button :disabled="bellmanStep===3" @click="bellmanStep++">Tính nút tiếp →</button></div>
+      <SimulationControls v-model="bellmanStep" :max="bellman.length-1" :reset-key="bellman" label="Lượt tính" />
       <p role="status">Vừa tính nút {{ bellman[bellmanStep].node }}. {{ Object.entries(bellman[bellmanStep].values).map(([n,v])=>`V(${n})=${v}`).join(', ') }}.</p>
     </template>
     <details class="lab-code"><summary>Xem code và điều kiện mô phỏng</summary><p>Chương trình dùng dữ liệu nhỏ tự đặt. Các quan hệ toán được ghi ngay trong Notes. Mô phỏng hữu hạn không thay chứng minh cho mọi điểm. Code tính toán được chia sẻ giữa component và kiểm tra tại <code>docs/.vitepress/theme/math-ai.mjs</code>.</p><slot /></details>
@@ -138,12 +140,16 @@ const labTitles={segment:'Từ tổ hợp affine đến đoạn nối',chord:'So
 .math-lab svg .marker { fill: var(--vp-c-brand-1); }
 .math-lab svg .hollow { fill: var(--vp-c-bg-soft); stroke: var(--vp-c-text-1); stroke-width: 2; }
 .math-lab svg .node { fill: var(--vp-c-bg-soft); stroke: var(--vp-c-text-1); stroke-width: 1.5; }
+.math-lab svg .history-point { fill: var(--ink-3); }
+.math-lab svg .active-marker { stroke: var(--paper); stroke-width: 2; }
+.math-lab svg .node.computed { fill: var(--tim-soft); stroke: var(--tim); }
+.math-lab svg .node.active { fill: var(--tim); stroke: var(--tim); stroke-width: 3; }
+.math-lab svg .active-label { fill: var(--paper); }
+.math-lab svg .node { transition: fill var(--motion-slide), stroke var(--motion-slide); }
+.math-lab svg .active-marker { transition: cx var(--motion-slide) var(--ease), cy var(--motion-slide) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .math-lab svg :is(.node, .active-marker) { transition: none; } }
 .region { fill: var(--vp-c-brand-soft); stroke: var(--vp-c-brand-1); stroke-width: 2; }
 .lab-inputs { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 16px; }
-.lab-buttons { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.lab-buttons button { min-height: 44px; padding: 8px 16px; border: 1px solid var(--vp-c-border); border-radius: var(--radius); background: var(--vp-c-bg); color: var(--vp-c-text-1); }
-.lab-buttons button:disabled { cursor: default; }
-.lab-buttons label { flex: 1 1 140px; margin: 0; }
 .lab-code { border-top: 1px solid var(--vp-c-divider); padding-top: 12px; }
 .math-lab summary { min-height: 44px; cursor: pointer; padding: 8px 0; }
 .math-lab p { font-size: var(--fs-ui); overflow-wrap: anywhere; }

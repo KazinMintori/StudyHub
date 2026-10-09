@@ -1,0 +1,86 @@
+Experiments
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+We run an experiment to see if informative phone calls encourage people to vote. We obtain phone numbers for 1000 registered voters and randomly assign half of them to receive calls from volunteers. The volunteers tell them the location of their polling place and the date of the election. Our outcome is whether or not the subjects vote in the next election.
+
+Which of the following are possible covariates for our study?
+
+The party affiliation of the voter (Republican or Democrat).
+
+Whether the voter voted in the last election.
+
+Whether the voter votes primarily for Republicans or Democrats in the next election.
+
+Whether the treated voters hung up on the volunteer.
+
+The point of this question is to get the students thinking about whether variables are measured before or after treatment assignment.A and B are correct answers, C and D are not (although D is measured before the primary outcome, it is still after treatment).
+
+−+
+01:00
+
+Which of the following claims about covariate balance are true?
+
+Randomized treatment assignment tends to produce covariate balance.
+
+A standardized mean difference that is not equal to zero indicates that randomization was not conducted correctly.
+
+The Love plot shows the (standardized) difference in means or proportions for each covariate across treatment groups.
+
+In a hypothesis test for balance, the null hypothesis is that the treatment assignment and the covariate are independent.
+
+All true except B
+
+−+
+01:00
+
+Break
+
+−+
+05:00
+
+Lab (Taste Test) - Part II
+
+The Essential Question of Our Time
+
+Which is the best flavor?
+
+This purely for fun. Some people have strong opinions about this.
+
+Lab (Taste Test) - Part II
+
+You will now:
+
+Conduct your experiment
+
+Record your data
+
+Complete and submit part II as an individual. The questions will be available on the course website!
+
+If you don’t finish in the allotted time, you can do so after class.
+
+  
+    −
+    +
+
+ 60:00
+
+Could your taster distinguish between flavors?
+
+Yes, and it was statistically significant (p < .05).
+
+Yes, but it was not statistically significant (p > .05).
+
+Yes, but we haven’t conducted the test yet.
+
+No.
+
+Not sure, we haven’t computed the difference in proportions yet.
+
+We tested a different claim.
+
+The goal of this question is to allow all groups to concisely share their results with the class. It also opens up the conversation about how there were many different ways to carry out this experiment. Two groups might have come to different conclusions because their tasters really had different abilities, or because their claims and experiments were slightly different, or just due to random chance.
+
+You may want to project 1 or 2 protocols and ask the groups to talk through how they uses the principles of experimental design.

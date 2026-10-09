@@ -1,0 +1,92 @@
+Normal Approximation
+
+STAT 20: Introduction to Probability and Statistics 
+
+Concept Questions
+
+−+
+01:00
+
+We have two random variables: 
+[MATH] \(X \sim\) Binomial(
+[MATH] \(10, 0.2\)) and 
+[MATH] \(Y\) is the random variable that is the value of one ticket drawn at random from a box with tickets 
+[MATH] \(\fbox{0}\, \fbox{2}\, \fbox{3} \,\fbox{4}  \,\fbox{6}\).
+
+We take the sum of 100 iid random variables for each of 
+[MATH] \(X\) and 
+[MATH] \(Y\), called 
+[MATH] \(SX_{100}\) and 
+[MATH] \(SY_{100}\). The empirical distributions of 
+[MATH] \(SX_{100}\) and 
+[MATH] \(SY_{100}\) are plotted below.
+
+Which distribution belongs to which random variable?
+
+They need to remember that the expected value of S_x will be 200, and for S_y 300.
+
+−+
+02:00
+
+One hundred draws will be made with replacement from a box with tickets 
+[MATH] \(\fbox{-10}\, \fbox{0}\, \fbox{5} \,\fbox{10}  \,\fbox{20}\). Find the expected value of the sum (
+[MATH] \(S_n\)) of the one hundred draws and the average of the one hundred draws (
+[MATH] \(\bar{X}_n\)).*
+
+[MATH] \(\mathbb{E}(S_n)\) = 500, 
+[MATH] \(\mathbb{E}(\bar{X}_n)\) = 5
+
+[MATH] \(\mathbb{E}(S_n)\) = 5, 
+[MATH] \(\mathbb{E}(\bar{X}_n)\) = 500
+
+We cannot treat the one hundred draws as i.i.d. random variables, as done in the answers above, because the draws are being made with replacement.
+
+ * Inspired by the text Statistics by Freedman, Pisani, and Purves 
+
+The EV is a constant, and note that the box average is (0+2+3+4+6)/5 = 3, so the EV of a single draw is 3, and the EV of the sum of 100 draws is 
+[MATH] \(100\times 3 = 300\). The give or take number given here is the box SD 
+[MATH] \(\times 10 = 2\times 10 = 20\). You can let 
+[MATH] \(X\) be a random variable that is the value of one ticket drawn at random from this box, and then we want 
+[MATH] \(S_{100}\). This can be boardwork.
+
+−+
+01:00
+
+A die will be rolled 
+[MATH] \(n\) times and the object is to guess the total number of spots in 
+[MATH] \(n\) rolls, and you choose 
+[MATH] \(n\) to be either 50 or 100. There is a one-dollar penalty for each spot that the guess is off. For instance, if you guess 200, and the total is 215, then you lose 15 dollars. Which do you prefer? 50 throws, or 100?*
+
+Which do you prefer? 
+[MATH] \(n = 50\) rolls, or 
+[MATH] \(n = 100\) rolls?
+
+ * From the text Statistics by Freedman, Pisani, and Purves 
+
+Prefer 50 because the square root law tells us the the spread of the distribution will be smaller for fewer rolls. If we were computing the average number of spots, then we would pick larger 
+[MATH] \(n\) since 
+[MATH] \(\sqrt{n}\) goes in the denominator of SE.
+
+Problem Set: Normal Approximation
+
+  
+    −
+    +
+
+ 20:00
+
+Break
+
+  
+    −
+    +
+
+ 05:00
+
+Lab 7: Elections
+
+  
+    −
+    +
+
+ 25:00
