@@ -209,19 +209,19 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
-    "words": 2053,
-    "minutes": 10
+    "words": 2549,
+    "minutes": 15
   },
   "xac-suat-thong-ke/01-xac-suat-va-bayes": {
-    "words": 404,
-    "minutes": 5
+    "words": 2645,
+    "minutes": 15
   },
   "xac-suat-thong-ke/02-bien-ngau-nhien": {
-    "words": 307,
-    "minutes": 5
+    "words": 1656,
+    "minutes": 10
   },
   "xac-suat-thong-ke/03-ky-vong-phuong-sai": {
-    "words": 507,
+    "words": 569,
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
