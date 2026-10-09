@@ -776,7 +776,7 @@ Tuy nhiên, xác suất có điều kiện một cặp là khủng bố sau khi 
 MMDS mục 1.1 phân biệt mô hình thống kê với bản tóm tắt phục vụ truy vấn. BHK Chương 1–2 trình bày nền tảng về dữ liệu cao chiều.
 
 - **Đề cương học phần:** nguồn xác định mã UET.DSE2053, chuẩn đầu ra, tiên quyết và thứ tự 15 bài. Xem [chỉ mục học phần](/giai-thuat-du-lieu/).
-- **Mining of Massive Datasets, ấn bản 3:** Chương 1 cho chi phí và hai bài tập. Chương 2, 5, 3, 4 cho phân tán, xếp hạng, tương đồng và dòng. Nội dung và các sơ đồ tương ứng được biên soạn lại theo sách cùng slide chính thức. Ghi công tác giả tại [MMDS](http://www.mmds.org).
+- **Mining of Massive Datasets, ấn bản 3:** Chương 1 cho chi phí và bài tập. Chương 2, 5, 3, 4 cho phân tán, xếp hạng, tương đồng và dòng. Nội dung và các sơ đồ tương ứng được StudyHub hệ thống hóa và biên soạn độc lập. Tham khảo tác giả tại [MMDS](http://www.mmds.org).
 - **Stanford CS246:** bài mở đầu trang chiếu 62 cho tổng kích thước. 03-lsh trang 14 cho quy mô so cặp.
 - **Blum–Hopcroft–Kannan, Foundations of Data Science:** Chương 1–2, đặc biệt trang PDF 9–12, cho giới hạn mô hình bộ nhớ và định hướng đọc thêm.
 - **BIODS 271 và Princeton COS 597A:** các trang đã dẫn trong ứng dụng véc-tơ. Tài liệu và bài báo HNSW/PQ theo Bài 07 dùng để học cơ chế chi tiết.

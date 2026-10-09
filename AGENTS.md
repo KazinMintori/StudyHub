@@ -82,4 +82,7 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
    - Trong lời giảng văn xuôi, **hạn chế tối đa việc dùng dấu chấm phẩy (`;`)**. Dấu `;` thường khiến câu văn trở nên khô khan, rời rạc và mang nặng tính liệt kê máy móc.
    - Thay vào đó, hãy đọc kỹ quan hệ ngữ nghĩa giữa các vế để lựa chọn **từ nối tiếng Việt chuẩn xác** (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với việc, trong khi, song song đó, cụ thể là, chẳng hạn...*) hoặc tách thành hai câu đơn độc lập với chủ ngữ rõ ràng.
    - Tra cứu chi tiết tại cẩm nang `references/tu-noi-va-dien-dat.md`.
+11. **Thoát khỏi tư duy dịch máy (Calque & Translationese) — Tránh dùng từ máy móc kiểu "hợp đồng", lạm dụng "lớp"**:
+   - **Không dịch bám từ `contract` thành "hợp đồng"** trong kỹ thuật và lập trình: Tránh dùng *"hợp đồng file"*, *"hợp đồng dữ liệu"*, *"hợp đồng nội dung"*. Hãy thay bằng các từ ngữ tiếng Việt tự nhiên và chuẩn mực: *quy chuẩn cấu trúc file*, *chuẩn giao tiếp dữ liệu (schema)*, *yêu cầu nội dung*, *ràng buộc định dạng*. Tuyệt đối không dịch *contraction mapping* thành *"ánh xạ hợp đồng"* (bắt buộc dùng *ánh xạ co*).
+   - **Tránh lạm dụng từ "lớp"**: Thay vì dịch máy móc mọi từ `class` hay `layer` thành "lớp", hãy sử dụng vốn từ tiếng Việt linh hoạt: dùng *họ bài toán*, *dạng bài toán*, *nhóm bài toán* (thay vì lặp từ "lớp bài toán"); dùng *họ hàm* (thay vì "lớp hàm"); dùng *tầng kiến trúc*, *tầng mạng* (thay vì "lớp").
 

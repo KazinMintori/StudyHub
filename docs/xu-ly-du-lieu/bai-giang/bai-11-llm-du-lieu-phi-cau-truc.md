@@ -12,13 +12,13 @@ Trong thực tế doanh nghiệp, phần lớn dữ liệu quan trọng không n
 
 Các công cụ khớp mẫu truyền thống như biểu thức chính quy (regular expressions) hoạt động rất nhanh và hoàn toàn tất định. Tuy nhiên, chúng trở nên bất lực trước những câu chữ giàu ngữ cảnh, các cách diễn đạt hoán dụ hoặc văn phong khẩu ngữ đa dạng. Mô hình ngôn ngữ lớn (LLM) giải quyết được rào cản ngữ nghĩa này nhờ khả năng hiểu ngôn ngữ linh hoạt. Đổi lại, bản chất xác suất của mô hình đặt ra một thách thức kỹ thuật lớn: làm thế nào để tích hợp một cấu phần bất định, có khả năng ảo giác, vào một hệ thống xử lý dữ liệu đòi hỏi tính tin cậy tuyệt đối?
 
-Bài học này xây dựng phương pháp luận kỹ thuật để thuần hóa đầu ra của mô hình ngôn ngữ: thiết kế hợp đồng dữ liệu với lược đồ cấu trúc (schema), xây dựng hàm kiểm định hai tầng để bảo đảm tính xác thực của bằng chứng trích dẫn, và áp dụng các chỉ số ma trận nhầm lẫn để đánh giá chất lượng trích xuất trên tập dữ liệu chuẩn.
+Bài học này xây dựng phương pháp luận kỹ thuật để thuần hóa đầu ra của mô hình ngôn ngữ: thiết kế chuẩn giao tiếp dữ liệu với lược đồ cấu trúc (schema), xây dựng hàm kiểm định hai tầng để bảo đảm tính xác thực của bằng chứng trích dẫn, và áp dụng các chỉ số ma trận nhầm lẫn để đánh giá chất lượng trích xuất trên tập dữ liệu chuẩn.
 
 ## 1. Định nghĩa nhiệm vụ và thiết kế lược đồ dữ liệu
 
-Khi giao việc cho một mô hình ngôn ngữ trong đường ống dữ liệu, sai lầm phổ biến nhất là đưa ra yêu cầu chung chung như "Hãy tóm tắt cảm xúc của khách hàng". Đầu ra dạng văn tự do sẽ làm gãy các bước xử lý tự động phía sau. Ngược lại, kỹ sư dữ liệu tiếp cận bài toán bằng cách thiết kế một **hợp đồng giao tiếp dữ liệu (data contract)** chặt chẽ.
+Khi giao việc cho một mô hình ngôn ngữ trong đường ống dữ liệu, sai lầm phổ biến nhất là đưa ra yêu cầu chung chung như "Hãy tóm tắt cảm xúc của khách hàng". Đầu ra dạng văn tự do sẽ làm gãy các bước xử lý tự động phía sau. Ngược lại, kỹ sư dữ liệu tiếp cận bài toán bằng cách thiết kế một **chuẩn giao tiếp dữ liệu (data contract)** chặt chẽ.
 
-Hợp đồng này quy định ba yếu tố bất di bất dịch:
+Quy chuẩn này quy định ba yếu tố bất di bất dịch:
 1. **Định dạng trao đổi**: Bắt buộc là JSON hợp lệ để máy tính có thể phân tích cú pháp (parse) ngay lập tức.
 2. **Lược đồ trường (Schema)**: Tên trường, kiểu dữ liệu và tập giá trị cho phép của từng trường. Ví dụ: trường `id` định danh bản ghi, trường `nhan` mang nhãn cảm xúc, và trường `bang_chung` chứa căn cứ trích xuất.
 3. **Không gian nhãn đóng (Closed label set)**: Giới hạn nghiêm ngặt các nhãn được phép gán, chẳng hạn `{"tich_cuc", "tieu_cuc", "khong_ro"}`. Khái niệm `khong_ro` giữ vai trò quan trọng: khi thông tin không đủ căn cứ, mô hình phải trả về trạng thái bất định thay vì tự suy diễn hoặc đoán mò.

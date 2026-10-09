@@ -125,7 +125,7 @@ Giao diện lập trình ứng dụng (API) là cánh cửa để thu thập d�
 Khi làm việc với API, có ba nguyên tắc đạo đức và kỹ thuật cần tuân thủ:
 
 1. **Nhận thức về phân trang (Pagination)**: Một API chuyên nghiệp không bao giờ trả về hàng triệu bản ghi trong một phản hồi duy nhất vì nguy cơ làm nghẽn máy chủ. Dữ liệu luôn được chia thành từng trang thông qua tham số số trang hoặc con trỏ (cursor). Ta phải viết vòng lặp kiểm tra trường `next` cho đến khi hết dữ liệu mới được coi là thu thập trọn vẹn.
-2. **Kiểm tra hợp đồng dữ liệu phòng thủ**: Mỗi phản hồi nhận về từ mạng phải được kiểm tra cấu trúc nghiêm ngặt trước khi đưa vào bảng phân tích:
+2. **Kiểm tra quy chuẩn cấu trúc dữ liệu phòng thủ**: Mỗi phản hồi nhận về từ mạng phải được kiểm tra cấu trúc nghiêm ngặt trước khi đưa vào bảng phân tích:
 
 ```python
 pages = [

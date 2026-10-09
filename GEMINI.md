@@ -19,6 +19,7 @@ Vui lòng tuân theo hướng dẫn chi tiết tại [AGENTS.md](./AGENTS.md).
 
 ### Chuẩn mực văn phong & Từ nối tiếng Việt:
 - **Hạn chế dấu chấm phẩy (`;`)**: Trong lời giảng văn xuôi, hạn chế tối đa dấu `;`. Thay thế bằng các từ nối tiếng Việt chuẩn xác (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với...*) hoặc tách thành các câu đơn rõ ràng. Tra cứu tại `references/tu-noi-va-dien-dat.md`.
+- **Tránh dịch máy (`contract` -> "hợp đồng", lạm dụng "lớp")**: Dùng *quy chuẩn cấu trúc file*, *chuẩn giao tiếp dữ liệu (schema)* thay vì "hợp đồng file/dữ liệu"; dùng *ánh xạ co* (không dùng "ánh xạ hợp đồng"); linh hoạt dùng *họ bài toán*, *dạng bài toán*, *họ hàm*, *tầng mạng* thay vì lạm dụng từ "lớp".
 
 ### Lệnh kiểm thử tiêu chuẩn:
 ```sh

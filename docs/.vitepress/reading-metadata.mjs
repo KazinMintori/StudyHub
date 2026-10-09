@@ -53,7 +53,7 @@ export const readingMetadata = {
     "minutes": 8
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi": {
-    "words": 3554,
+    "words": 3565,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-loi": {
@@ -149,11 +149,11 @@ export const readingMetadata = {
     "minutes": 22
   },
   "toan-cho-ai/bai-02-tap-loi/toi-uu-tua-loi": {
-    "words": 3346,
+    "words": 3350,
     "minutes": 22
   },
   "toan-cho-ai/bai-02-tap-loi/quy-hoach-tuyen-tinh": {
-    "words": 2750,
+    "words": 2758,
     "minutes": 18
   },
   "toan-cho-ai/bai-02-tap-loi/mo-hinh-lp": {
@@ -185,7 +185,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi/toi-uu-vector-va-danh-doi": {
-    "words": 2394,
+    "words": 2409,
     "minutes": 16
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
@@ -245,7 +245,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-06-ket-noi-truy-xuat-du-lieu": {
-    "words": 2714,
+    "words": 2716,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-07-xu-ly-chuoi": {
@@ -453,7 +453,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "giai-thuat-du-lieu/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan": {
-    "words": 4676,
+    "words": 4675,
     "minutes": 25
   },
   "giai-thuat-du-lieu/bai-02-mapreduce-va-xu-ly-du-lieu-lon": {

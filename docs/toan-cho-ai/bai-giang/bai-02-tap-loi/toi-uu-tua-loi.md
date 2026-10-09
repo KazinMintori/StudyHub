@@ -90,13 +90,13 @@ $$
 \text{find}\ x \qquad \text{subject to}\quad \phi_t(x) \le 0,\quad x \in X .
 $$
 
-Đây là một bài toán khả thi lồi. Nếu nó có nghiệm thì $p^\star \le t$, và nghiệm ấy là một phương án có giá trị không quá $t$. Nếu nó vô nghiệm thì mọi phương án đều có giá trị lớn hơn $t$, nên $p^\star \ge t$. Mỗi câu hỏi "có hay không" vì thế cắt đôi phần trục số còn nghi ngờ, và Thuật toán 4.1 của sách khai thác đúng điều đó.
+Đây là một bài toán khả thi lồi. Nếu nó có nghiệm thì $p^\star \le t$, và nghiệm ấy là một phương án có giá trị không quá $t$. Nếu nó vô nghiệm thì mọi phương án đều có giá trị lớn hơn $t$, nên $p^\star \ge t$. Mỗi câu hỏi "có hay không" vì thế cắt đôi phần trục số còn nghi ngờ, và thuật toán chia đôi (Bisection) khai thác triệt để tính chất này.
 
 > **Thuật toán chia đôi.** Cho $l \le p^\star \le u$ và sai số $\varepsilon > 0$. Lặp lại: đặt $t = (l + u)/2$, giải bài toán khả thi tại mức $t$. Nếu khả thi, đặt $u = t$, nếu không, đặt $l = t$. Dừng khi $u - l \le \varepsilon$.
 
 Khoảng $[l, u]$ luôn chứa $p^\star$, và độ dài của nó giảm một nửa sau mỗi lần lặp. Sau $k$ lần lặp, độ dài là $2^{-k}(u - l)$, nên thuật toán dừng sau đúng $\lceil \log_2((u - l)/\varepsilon) \rceil$ lần.
 
-Hãy áp dụng cho một ví dụ tự đặt. Cần đặt một bộ phát tín hiệu trong vùng $X = [-1, 1.5] \times [1, 3]$ sao cho nó gần người dùng ở $a = (0, 0)$ và xa nguồn nhiễu ở $b = (4, 0)$, theo nghĩa tỉ số $\|x - a\|/\|x - b\|$ nhỏ nhất. Cả vùng $X$ nằm trong nửa mặt phẳng $x_1 \le 2$, nơi hàm tỉ số tựa lồi. Trên $X$ tỉ số luôn nhỏ hơn 1, nên ta xuất phát từ $[l, u] = [0, 1]$. Với $\varepsilon = 0.01$, cần $\lceil \log_2 100 \rceil = 7$ lần. Lần đầu thử $t = 0.5$: hình tròn khá lớn và chạm $X$, nên $p^\star \le 0.5$. Lần hai thử $t = 0.25$, vẫn chạm. Lần ba thử $t = 0.125$, hình tròn quá nhỏ, nên $p^\star \ge 0.125$. Sau bảy lần, $p^\star$ bị kẹp trong $[0.2344, 0.2422]$.
+Hãy áp dụng cho một ví dụ cụ thể: Cần đặt một bộ phát tín hiệu trong vùng $X = [-1, 1.5] \times [1, 3]$ sao cho nó gần người dùng ở $a = (0, 0)$ và xa nguồn nhiễu ở $b = (4, 0)$, theo nghĩa tỉ số $\|x - a\|/\|x - b\|$ nhỏ nhất. Cả vùng $X$ nằm trong nửa mặt phẳng $x_1 \le 2$, nơi hàm tỉ số tựa lồi. Trên $X$ tỉ số luôn nhỏ hơn 1, nên ta xuất phát từ $[l, u] = [0, 1]$. Với $\varepsilon = 0.01$, cần $\lceil \log_2 100 \rceil = 7$ lần. Lần đầu thử $t = 0.5$: hình tròn khá lớn và chạm $X$, nên $p^\star \le 0.5$. Lần hai thử $t = 0.25$, vẫn chạm. Lần ba thử $t = 0.125$, hình tròn quá nhỏ, nên $p^\star \ge 0.125$. Sau bảy lần, $p^\star$ bị kẹp trong $[0.2344, 0.2422]$.
 
 Giá trị đúng là $p^\star = \sqrt5 - 2 \approx 0.2361$, đạt tại $x^\star = (2 - \sqrt5,\ 1) \approx (-0.236,\ 1)$ trên cạnh dưới của $X$. Ở đúng mức này, hình tròn Apollonius có tâm $(-0.236, 0)$ và bán kính bằng 1, nên nó tiếp xúc với cạnh $x_2 = 1$ tại đúng điểm $x^\star$.
 
@@ -106,7 +106,7 @@ Giá trị đúng là $p^\star = \sqrt5 - 2 \approx 0.2361$, đạt tại $x^\st
 
 ## 5. Điều kiện tối ưu bậc nhất cho bài toán tựa lồi
 
-Với hàm mục tiêu tựa lồi khả vi trên miền khả thi lồi $X$, sách đưa ra một điều kiện đủ: nếu $x \in X$ và
+Với hàm mục tiêu tựa lồi khả vi trên miền khả thi lồi $X$, ta có điều kiện đủ sau: nếu $x \in X$ và
 
 $$
 \nabla f_0(x)^T(y - x) > 0 \quad \text{với mọi } y \in X \setminus \{x\},
@@ -120,7 +120,7 @@ thì $x$ tối ưu. So với [điều kiện tối ưu của bài toán lồi](.
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Với $n = 2$, tập mức dưới $\{x : \operatorname{card}(x) \le 1\}$ là hợp của hai trục tọa độ. Hai điểm $(1, 0)$ và $(0, 1)$ thuộc tập, nhưng trung điểm $(\tfrac12, \tfrac12)$ có hai thành phần khác 0, nên tập không lồi. Vì vậy ràng buộc "dùng nhiều nhất $k$ đặc trưng" không đưa được về một bài toán tựa lồi, và bài toán chọn tập đặc trưng tốt nhất nói chung là bài toán tổ hợp khó. Đây là lý do người ta thay số đặc trưng bằng chuẩn $\ell_1$, một hàm lồi, như chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ bàn. Thú vị là sách chỉ ra rằng $\operatorname{card}$ tựa lõm trên $\mathbb{R}^n_+$, nhưng tính chất ấy không giúp gì cho bài toán cực tiểu.
+Không. Với $n = 2$, tập mức dưới $\{x : \operatorname{card}(x) \le 1\}$ là hợp của hai trục tọa độ. Hai điểm $(1, 0)$ và $(0, 1)$ thuộc tập, nhưng trung điểm $(\tfrac12, \tfrac12)$ có hai thành phần khác 0, nên tập không lồi. Vì vậy ràng buộc "dùng nhiều nhất $k$ đặc trưng" không đưa được về một bài toán tựa lồi, và bài toán chọn tập đặc trưng tốt nhất nói chung là bài toán tổ hợp khó. Đây là lý do người ta thay số đặc trưng bằng chuẩn $\ell_1$, một hàm lồi, như chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ bàn. Một chi tiết thú vị là hàm $\operatorname{card}$ có tính chất tựa lõm trên $\mathbb{R}^n_+$, nhưng điều này không hỗ trợ giải quyết bài toán cực tiểu.
 
 </details>
 

@@ -23,7 +23,7 @@ $$
 
 với $G \in \mathbb{R}^{m \times n}$ và $A \in \mathbb{R}^{p \times n}$. Ký hiệu $\preceq$ là bất đẳng thức theo từng thành phần. LP hiển nhiên là bài toán lồi.
 
-Hằng số $d$ không làm thay đổi nghiệm, nên người ta thường bỏ nó đi, nhưng nhớ rằng nó vẫn làm thay đổi giá trị tối ưu. Bài toán cực đại một hàm affine trên cùng loại ràng buộc cũng được gọi là LP, vì cực đại $c^Tx + d$ tương đương cực tiểu $-c^Tx - d$. Sách cũng chấp nhận một cách nói không thật chặt chẽ: một bài toán có thể đưa về LP bằng các phép biến đổi tương đương cũng được gọi là LP, dù nó không được viết ở dạng trên. Bài toán khớp dữ liệu theo sai số tệ nhất ở Lecture 01 là một ví dụ như vậy.
+Hằng số $d$ không làm thay đổi nghiệm, nên người ta thường bỏ nó đi, nhưng nhớ rằng nó vẫn làm thay đổi giá trị tối ưu. Bài toán cực đại một hàm affine trên cùng loại ràng buộc cũng được gọi là LP, vì cực đại $c^Tx + d$ tương đương cực tiểu $-c^Tx - d$. Trong thực tế tối ưu hóa, ta cũng thường mở rộng định nghĩa: một bài toán có thể đưa về LP bằng các phép biến đổi tương đương cũng được xem là LP, dù ban đầu nó chưa xuất hiện ở dạng chuẩn tắc. Bài toán khớp dữ liệu theo sai số tệ nhất ở Lecture 01 là một ví dụ như vậy.
 
 ## 2. Hình học của nghiệm
 
@@ -90,7 +90,7 @@ Phép tách $x = x^+ - x^-$ có một điểm đáng chú ý: nó không duy nh�
 
 ## 5. Ví dụ: bài toán khẩu phần
 
-Sách mở đầu phần ví dụ về LP bằng **bài toán khẩu phần**. Có $n$ loại thực phẩm, mỗi đơn vị thực phẩm $j$ có giá $c_j$ và chứa lượng $a_{ij}$ của chất dinh dưỡng $i$. Một khẩu phần lành mạnh cần ít nhất $b_i$ đơn vị chất $i$, với $m$ chất. Gọi $x_j \ge 0$ là lượng thực phẩm $j$ được dùng, khẩu phần rẻ nhất là nghiệm của
+Một ví dụ kinh điển mở đầu cho LP là **bài toán khẩu phần (Diet Problem)**. Có $n$ loại thực phẩm, mỗi đơn vị thực phẩm $j$ có giá $c_j$ và chứa lượng $a_{ij}$ của chất dinh dưỡng $i$. Một khẩu phần lành mạnh cần ít nhất $b_i$ đơn vị chất $i$, với $m$ chất. Gọi $x_j \ge 0$ là lượng thực phẩm $j$ được dùng, khẩu phần rẻ nhất là nghiệm của
 
 $$
 \text{minimize}\quad c^Tx \qquad \text{subject to}\quad Ax \succeq b,\quad x \succeq 0 .

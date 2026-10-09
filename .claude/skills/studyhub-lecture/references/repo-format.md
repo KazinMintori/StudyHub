@@ -1,4 +1,4 @@
-# Hợp đồng file của StudyHub
+# Quy chuẩn cấu trúc file của StudyHub
 
 Đọc trước khi tạo hoặc sửa bất kỳ file nào của website. Mọi mục dưới đây được rút từ mã nguồn hiện tại của repo (`docs/.vitepress/*.mjs`, `scripts/sync-courses.mjs`, `scripts/verify-courses.mjs`). Nếu mã đổi, mã thắng tài liệu này; sửa lại tài liệu.
 
