@@ -93,7 +93,8 @@ Gradient toàn phần là $\nabla J(\theta) = \theta - 1$. Nghiệm tối ưu th
 
 <details><summary>Câu hỏi đào sâu: Tại điểm cực tiểu toàn cục $\theta = 1$, nếu bước cập nhật bốc phải mẫu $b = 0$ với $\eta = 0.1$, hàm mất mát toàn phần sẽ biến thiên ra sao?</summary>
 
-Tại $\theta = 1$, giá trị mất mát toàn phần là $J(1) = 0.5$. Nếu gặp mẫu $b = 0$, gradient là $1 - 0 = 1$, điểm mới trở thành $\theta^+ = 1 - 0.1(1) = 0.9$. Giá trị mất mát mới là $J(0.9) = \frac{1}{2}(0.9 - 1)^2 + 0.5 = 0.505 > 0.5$. 
+Tại $\theta = 1$, giá trị mất mát toàn phần là $J(1) = 0.5$. Nếu gặp mẫu $b = 0$, gradient là $1 - 0 = 1$, điểm mới trở thành $\theta^+ = 1 - 0.1(1) = 0.9$. Giá trị mất mát mới là:
+$$J(0.9) = \frac{1}{2}(0.9 - 1)^2 + 0.5 = 0.505 > 0.5.$$ 
 
 Mất mát đã **tăng lên**! Điều này cho thấy tính không chệch của gradient chỉ là một bảo đảm về mặt kỳ vọng thống kê; nó tuyệt đối không bảo đảm rằng hàm mục tiêu sẽ giảm sau từng bước cập nhật ngẫu nhiên đơn lẻ.
 
@@ -167,7 +168,8 @@ Khởi tạo $\theta_0 = 0$, $v_0 = 0$, tốc độ học $\eta = 0.1$, hệ s�
   - Cập nhật vị trí: $\theta_1 = 0 + 0.1 = 0.1$.
 - **Bước 2**:
   - Gradient: $g_1 = 0.1 - 1 = -0.9$.
-  - Vận tốc mới: $v_2 = 0.9(0.1) - 0.1(-0.9) = 0.09 + 0.09 = 0.18$.
+  - Vận tốc mới:
+    $$v_2 = 0.9(0.1) - 0.1(-0.9) = 0.09 + 0.09 = 0.18.$$
   - Cập nhật vị trí: $\theta_2 = 0.1 + 0.18 = 0.28$.
 
 Để so sánh: Gradient Descent thuần túy ở bước 2 chỉ đạt tới $\theta_2 = 0.19$. Nhờ tích lũy quán tính từ bước 1 ($0.09$), Momentum đã đẩy vị trí tiến xa hơn đáng kể hướng về phía nghiệm $\theta^* = 1$.
@@ -197,7 +199,8 @@ Với bài toán $J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}$, khởi t
 - Bước 2:
   - Điểm nhìn trước: $\widetilde\theta_1 = \theta_1 + \mu v_1 = 0.1 + 0.9(0.1) = 0.19$.
   - Gradient tại điểm nhìn trước: $g_1 = \nabla J(0.19) = 0.19 - 1 = -0.81$.
-  - Vận tốc mới: $v_2 = 0.9(0.1) - 0.1(-0.81) = 0.09 + 0.081 = 0.171$.
+  - Vận tốc mới:
+    $$v_2 = 0.9(0.1) - 0.1(-0.81) = 0.09 + 0.081 = 0.171.$$
   - Cập nhật vị trí: $\theta_2 = 0.1 + 0.171 = 0.271$.
 
 Ta thấy vận tốc Nesterov ($0.171$) nhỏ hơn một chút so với Momentum thông thường ($0.18$) vì nó đã phát hiện ra rằng quán tính đang đưa điểm tới gần đáy hơn, từ đó tự động hiệu chỉnh bước đi chính xác và mượt mà hơn.
@@ -282,7 +285,8 @@ Tại điểm $\theta = 0.5$:
    - Mẫu 2: $\nabla\ell_2(0.5) = 0.5 - 2 = -1.5$.
 2. Gradient của lô hai mẫu:
    $$g_B(0.5) = \frac{0.5 + (-1.5)}{2} = \frac{-1.0}{2} = -0.5.$$
-   Đạo hàm toàn phần: $J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2} \implies J'(0.5) = 0.5 - 1 = -0.5$.
+   Đạo hàm toàn phần:
+   $$J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2} \implies J'(0.5) = 0.5 - 1 = -0.5.$$
    Hai kết quả trùng khớp hoàn hảo. Chú ý: nếu cộng các gradient mà quên chia cho kích thước lô $B = 2$, ta sẽ thu được $-1.0$, làm sai lệch thang đo của bước cập nhật.
 :::
 

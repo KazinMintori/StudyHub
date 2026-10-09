@@ -21,7 +21,7 @@ export const readingMetadata = {
     "minutes": 10
   },
   "bieu-dien-tri-thuc/14-logic-bieu-dien-tri-thuc": {
-    "words": 2426,
+    "words": 2432,
     "minutes": 10
   },
   "bieu-dien-tri-thuc/16-mang-bayes": {
@@ -37,11 +37,11 @@ export const readingMetadata = {
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
-    "words": 4264,
+    "words": 4268,
     "minutes": 28
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
-    "words": 4529,
+    "words": 4554,
     "minutes": 30
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine": {
@@ -73,7 +73,7 @@ export const readingMetadata = {
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh": {
-    "words": 3007,
+    "words": 3008,
     "minutes": 20
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-psd": {
@@ -113,15 +113,15 @@ export const readingMetadata = {
     "minutes": 25
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc": {
-    "words": 2091,
+    "words": 2092,
     "minutes": 14
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen": {
-    "words": 3486,
+    "words": 3495,
     "minutes": 23
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham": {
-    "words": 3593,
+    "words": 3594,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc": {
@@ -137,11 +137,11 @@ export const readingMetadata = {
     "minutes": 20
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 1818,
+    "words": 2462,
     "minutes": 10
   },
   "toan-cho-ai/bai-02-tap-loi/bai-toan-tuong-duong": {
-    "words": 4036,
+    "words": 4039,
     "minutes": 27
   },
   "toan-cho-ai/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan": {
@@ -189,24 +189,24 @@ export const readingMetadata = {
     "minutes": 16
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
-    "words": 1830,
-    "minutes": 10
+    "words": 3147,
+    "minutes": 15
   },
   "toan-cho-ai/bai-04-gradient-newton": {
-    "words": 1417,
+    "words": 1352,
     "minutes": 5
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
-    "words": 1735,
+    "words": 1871,
     "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
-    "words": 1269,
-    "minutes": 5
+    "words": 2697,
+    "minutes": 15
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
-    "words": 1724,
-    "minutes": 10
+    "words": 3663,
+    "minutes": 20
   },
   "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
     "words": 2053,

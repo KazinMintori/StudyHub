@@ -1,39 +1,58 @@
 ---
-title: "Lộ trình Cơ sở toán cho AI"
-description: "Tám lecture, điểm dừng tự kiểm và nguồn sách của từng phần."
+title: "Lộ trình học tập Cơ sở toán học cho Trí tuệ Nhân tạo"
+description: "Khung chương trình tám bài giảng, mục tiêu cần đạt, phương pháp tiếp cận và tài liệu tham khảo chuyên sâu."
 ---
 
-# Lộ trình Cơ sở toán cho AI
+# Lộ trình học tập Cơ sở toán học cho Trí tuệ Nhân tạo
 
-Mỗi lecture có Notes để học mới, Slides để nhớ lại và Kiến thức nền để ôn công cụ cần dùng. Đọc Notes theo từng cụm, trả lời câu tự kiểm trước khi mở đáp án. Nếu mắc ở một phép tính, quay sang nền của phép tính ấy rồi trở lại đúng ví dụ. Không cần đọc hết Wiki trước khi bắt đầu.
+Khóa học được thiết kế theo cấu trúc module hóa 4 thành phần liên kết chặt chẽ:
+1. **Bài giảng chi tiết (Lecture Notes)**: Nơi đào sâu bản chất toán học, trực giác hình học và các chứng minh giải tích chuẩn mực.
+2. **Thẻ trực quan (Interactive Slides)**: Hệ thống tóm lược trực quan và tương tác tham số giúp củng cố phản xạ tư duy nhanh.
+3. **Kiến thức nền (Wiki Concepts)**: Mạng lưới tra cứu nhanh các công cụ giải tích ma trận, xác suất và đại số tuyến tính hỗ trợ.
+4. **Bài tập tự luyện (Exercises)**: Rèn luyện kỹ năng giải tích số và tư duy thuật toán với lời giải chi tiết từng bước.
 
-| Lecture | Bắt đầu từ câu hỏi | Điều nên tự làm được trước khi đi tiếp |
-| --- | --- | --- |
-| [00. Nền tảng](../bai-giang/bai-00-on-tap-nen-tang.md) | Đổi tham số thì dự đoán và loss đổi thế nào? | Tính $Aw$, phần dư, gradient, giải thích giả định Gauss. |
-| [01. Tối ưu, tập lồi, hàm lồi](../bai-giang/bai-01-nhap-mon-toi-uu.md) | Vì sao một ứng viên có thể được chứng nhận toàn cục? | Dùng đoạn nối, dây cung và điều kiện bậc nhất có đúng giả thiết. |
-| [02. Bài toán lồi](../bai-giang/bai-02-tap-loi.md) | Biểu diễn nào làm cấu trúc lồi hiện rõ? | Kiểm dấu, đẳng thức, PSD, chứng minh hai chiều cải dạng. |
-| [03. Đối ngẫu](../bai-giang/bai-03-doi-ngau-lagrange.md) | Cận dưới tốt nhất đang cách ứng viên bao xa? | Tính $g$, kiểm Slater và đủ các nhóm KKT. |
-| [04. Gradient và Newton](../bai-giang/bai-04-gradient-newton.md) | Đi theo hướng nào, với bước bao lớn? | Thu nhỏ bước, giải hệ Newton, kiểm phần dư đẳng thức. |
-| [05. Huấn luyện](../bai-giang/bai-05-toi-uu-huan-luyen.md) | Có thể dùng ít dữ liệu hơn ở mỗi bước không? | Tính gradient lô nhỏ, vận tốc và điểm nhìn trước. |
-| [06. Phương pháp thích nghi](../bai-giang/bai-06-phuong-phap-thich-nghi.md) | Mỗi tọa độ có nên dùng cùng một thang cập nhật? | Tính moment, hiệu chỉnh bước và phân biệt với Hessian. |
-| [07. LP và quy hoạch động](../bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md) | Hình học hay phần còn lại giúp tránh liệt kê nghiệm? | Tìm cơ sở khả thi và tính Bellman từ cuối về đầu. |
+---
 
-## Chia một lecture thành các lượt đọc
+## 1. Khung chương trình 8 bài giảng cốt lõi
 
-Với Lecture 01, có thể dừng sau mô hình. Lượt tiếp theo chỉ đọc tập và hàm lồi. Lượt cuối mới chứng nhận tối ưu. Với Lecture 04, chạy gradient/backtracking trước, rồi mới đọc Newton và đẳng thức. Với Lecture 06, tính đủ một tọa độ Adam trước khi đi sang CG/BFGS. Những điểm dừng này dựa vào nhiệm vụ đã hoàn thành, không đặt thời lượng chung cho mọi người.
+| Bài giảng | Câu hỏi gợi mở trung tâm | Năng lực cốt lõi cần làm chủ |
+| :--- | :--- | :--- |
+| [00. Ôn tập nền tảng](../bai-giang/bai-00-on-tap-nen-tang.md) | Khi thay đổi tham số mô hình, hàm mất mát và dự đoán dịch chuyển ra sao? | Làm chủ quy tắc khớp chiều ma trận, vi phân ma trận, xấp xỉ Taylor bậc hai và ý nghĩa xác suất của hàm mất mát. |
+| [01. Nhập môn tối ưu hóa và Tính lồi](../bai-giang/bai-01-nhap-mon-toi-uu.md) | Tại sao tính lồi lại là ranh giới giữa bài toán giải được và bài toán bất khả thi? | Nhận diện tập lồi, hàm lồi qua điều kiện bậc một/bậc hai, chứng minh nghiệm cực tiểu cục bộ là cực tiểu toàn cục. |
+| [02. Các bài toán tối ưu lồi](../bai-giang/bai-02-tap-loi.md) | Làm thế nào để nhận diện và quy đổi một bài toán thực tế về dạng tối ưu lồi chuẩn? | Phân loại và thành thạo phả hệ tối ưu: LP $\subset$ QP $\subset$ QCQP $\subset$ SOCP $\subset$ SDP; làm chủ phép biến đổi bảo toàn tính lồi. |
+| [03. Đối ngẫu Lagrange](../bai-giang/bai-03-doi-ngau-lagrange.md) | Làm thế nào để tìm ra cận dưới tốt nhất và chứng nhận tính tối ưu toàn cục? | Thiết lập hàm đối ngẫu Lagrange $g(\lambda, \nu)$, kiểm tra điều kiện Slater, vận dụng hệ điều kiện Karush-Kuhn-Tucker (KKT). |
+| [04. Phương pháp Gradient và Newton](../bai-giang/bai-04-gradient-newton.md) | Nên di chuyển theo hướng nào và bước nhảy bao xa để đảm bảo hội tụ an toàn? | Cài đặt Gradient Descent với quy tắc dò bước Armijo, phân tích tốc độ hội tụ bậc hai của phương pháp Newton và Newton suy giảm. |
+| [05. Tối ưu hóa trong huấn luyện học máy](../bai-giang/bai-05-toi-uu-huan-luyen.md) | Làm sao cân bằng giữa tốc độ tính toán trên dữ liệu lớn và độ chính xác của gradient? | Làm chủ Stochastic Gradient Descent (SGD) với mini-batch, phân tích động lượng Momentum và Nesterov accelerated gradient, khởi tạo trọng số Glorot. |
+| [06. Các phương pháp tối ưu trong học sâu](../bai-giang/bai-06-phuong-phap-thich-nghi.md) | Tại sao các tham số khác nhau lại đòi hỏi tốc độ cập nhật riêng biệt? | Khám phá cơ chế điều chỉnh tốc độ học thích nghi của AdaGrad, RMSProp và Adam; xấp xỉ bậc hai với Conjugate Gradient và L-BFGS. |
+| [07. Quy hoạch tuyến tính và quy hoạch động](../bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md) | Làm thế nào để phân rã bài toán chuỗi quyết định quy mô lớn mà không bị bùng nổ tổ hợp? | Đưa bài toán LP về dạng chuẩn, tìm nghiệm cơ sở khả thi (BFS); vận dụng nguyên lý tối ưu Bellman và khám phá cầu nối giữa đối ngẫu LP và DP. |
 
-Trước mỗi lượt, thử nhớ lại một kết quả cần dùng từ bài trước. Sau lượt, giải ít nhất một bài mà chưa xem lời giải. Slides phục vụ ôn lại kết quả đã được giải thích trong Notes. Chúng không thay những bước chứng minh.
+---
 
-## Nguồn nội dung và cấu trúc
+## 2. Phương pháp tiếp cận bài giảng hiệu quả
 
-Nguồn chính là bản local *Convex Optimization* của Boyd & Vandenberghe trong `toan-cho-ai/docs`. Chương 1–5 cung cấp lý thuyết. Chương 9–10 cung cấp thuật toán. Phụ lục A cung cấp nền. *Introduction to Linear Optimization* là reference cho hình học LP. *Probabilistic Graphical Models* là reference cho xác suất. Bản scan không đọc chắc không được dùng để suy đoán nội dung.
+Để đạt được hiệu quả sư phạm cao nhất, bạn nên chia mỗi bài giảng thành các chặng học tập có chủ đích:
 
-Lecture 05–06 bổ sung nguồn chính thức *Deep Learning* chương 8, bài báo AdaGrad, Adam và Glorot. Mỗi Notes ghi mục nguồn cụ thể. Các ví dụ số tự đặt và chương trình minh họa được tách rõ khỏi ví dụ hoặc hình nguyên bản của tác giả.
+- **Chặng 1: Trực giác và Đặt vấn đề**: Đọc phần dẫn nhập và các ví dụ thực tế trong công nghệ AI (nhận diện hình ảnh, mô hình ngôn ngữ lớn, hệ thống gợi ý). Hiểu rõ bài toán sinh ra để giải quyết bế tắc gì của đời sống.
+- **Chặng 2: Công cụ giải tích và Khảo sát toán học**: Theo dõi các bước biến đổi công thức. Đừng chỉ đọc lướt qua — hãy tự tay đặt bút viết lại các bước khai triển Taylor, nhân ma trận hoặc giải hệ phương trình đạo hàm.
+- **Chặng 3: Thử nghiệm tương tác**: Khảo sát các thành phần mô phỏng trực quan trên trang (như đồ thị đường mức, tương tác điểm cực LP, dò đường Bellman) để khắc sâu mối liên hệ giữa đại số và hình học.
+- **Chặng 4: Tự giải bài tập trước khi mở đáp án**: Mỗi bài giảng đều có 3 bài tập tự luyện kèm lời giải chi tiết. Hãy chủ động giải độc lập, sau đó mới đối chiếu tư duy với phần phân tích của giảng viên.
 
-Tên và thứ tự Lecture 00–07 theo [chỉ mục học phần 2026–2027](https://courses.iaidev.com/math-4-AI/2627-1/). Chỉ mục này chỉ dùng cho cấu trúc thanh lecture. Không dùng Notes, Slides hay bài tập của trang làm nguồn nội dung.
+---
 
-## Tra cứu bổ sung
+## 3. Tài liệu tham khảo và Đọc thêm chuyên sâu
 
-- [Bản đồ chủ đề của Lecture 01](../bai-giang/bai-01-nhap-mon-toi-uu.md) khi cần ellipsoid, nón, phối cảnh, thứ tự Pareto hay một kết quả cụ thể về hàm lồi.
-- [Hessian](/wiki/hessian.md), [PSD](/wiki/ma-tran-psd.md), [KKT](/wiki/kkt.md) để ôn điều kiện ngay trước khi dùng.
-- [Bài tập theo lecture](../bai-tap.md).
+Khóa học được xây dựng dựa trên các chuẩn mực học thuật quốc tế cao nhất, kết nối chặt chẽ giữa lý thuyết tối ưu hóa cổ điển và các tiến bộ đột phá trong học sâu hiện đại:
+
+1. **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Giáo trình nền tảng về giải tích lồi, đối ngẫu Lagrange và các phương pháp điểm trong.
+2. **Dimitris Bertsimas & John N. Tsitsiklis**, *Introduction to Linear Optimization*, Athena Scientific. Tài liệu chuẩn mực về hình học đa diện, thuật toán Simplex và lý thuyết mạng luồng.
+3. **Ian Goodfellow, Yoshua Bengio, & Aaron Courville**, *Deep Learning*, MIT Press (đặc biệt Chương 8: Optimization for Training Deep Models).
+4. **Richard S. Sutton & Andrew G. Barto**, *Reinforcement Learning: An Introduction*, MIT Press. Tài liệu toàn diện về phương trình Bellman và quá trình ra quyết định Markov.
+5. **Richard Bellman**, *Dynamic Programming*, Princeton University Press.
+
+---
+
+## 4. Tra cứu nhanh công cụ bổ trợ
+
+- [Hình học tập lồi — Đọc thêm](../doc-them/hinh-hoc-tap-loi.md): Hệ thống hóa các công cụ hình học không gian nâng cao.
+- [Tổng hợp bài tập theo chủ đề](../bai-tap.md): Bộ bài tập rèn luyện tư duy toán học toàn diện của cả 8 bài giảng.
+- Các mục Wiki cốt lõi: [Gradient](/wiki/gradient.md) · [Hessian](/wiki/hessian.md) · [Ma trận nửa xác định dương (PSD)](/wiki/ma-tran-psd.md) · [Điều kiện KKT](/wiki/kkt.md).

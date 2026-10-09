@@ -306,11 +306,15 @@ Xét hàm số $f(x) = x^4 + x^2$ với điểm khởi tạo hiện tại $x = 1
 2. Điểm mới có đạt đúng nghiệm tối ưu toàn cục không? Giải thích nguyên nhân.
 :::
 ::: solution
-1. Đạo hàm bậc nhất: $f'(x) = 4x^3 + 2x \implies g = f'(1) = 4(1)^3 + 2(1) = 6$.
-   Đạo hàm bậc hai: $f''(x) = 12x^2 + 2 \implies H = f''(1) = 12(1)^2 + 2 = 14 > 0$.
+1. Đạo hàm bậc nhất: $f'(x) = 4x^3 + 2x$, suy ra $g = f'(1) = 6$.
+   Đạo hàm bậc hai: $f''(x) = 12x^2 + 2$, suy ra $H = f''(1) = 14 > 0$.
    Hướng Newton: $d = -H^{-1} g = -\frac{6}{14} = -\frac{3}{7}$.
    Điểm cập nhật mới: $x^+ = x + d = 1 - \frac{3}{7} = \frac{4}{7} \approx 0.5714$.
-2. Giá trị hàm số tại điểm mới là $f(4/7) = (4/7)^4 + (4/7)^2 = \frac{256}{2401} + \frac{16}{49} = \frac{1040}{2401} \approx 0.43315$. Giá trị này giảm đáng kể so với $f(1) = 2$, nhưng chưa triệt tiêu về 0 (nghiệm tối ưu thực tế là $x^* = 0$). 
+2. Giá trị hàm số tại điểm mới:
+   $$
+   f(4/7) = (4/7)^4 + (4/7)^2 = \frac{256}{2401} + \frac{16}{49} = \frac{1040}{2401} \approx 0.43315.
+   $$
+   Giá trị này giảm đáng kể so với $f(1) = 2$, nhưng chưa triệt tiêu về 0 (nghiệm tối ưu thực tế là $x^* = 0$). 
    Nguyên nhân: Hàm số chứa số hạng bậc bốn $x^4$ nên không phải là hàm toàn phương thuần túy. Xấp xỉ bậc hai chỉ mang tính cục bộ, do đó thuật toán cần nhiều bước lặp để hội tụ về nghiệm.
 :::
 
