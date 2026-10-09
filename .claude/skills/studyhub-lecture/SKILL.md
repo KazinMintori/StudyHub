@@ -90,7 +90,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 ### C. Soạn — tách các lượt
 
 8. **Soạn nội dung** theo lecture-blueprint.md: đủ lý do, chưa gọt chữ.
-9. **Tính lại** mọi ví dụ và lời giải bằng Python; sửa Notes theo kết quả. Code trong bài phải chạy được. Ghi TeX vào trang bằng công cụ sửa file. Nếu buộc phải sửa hàng loạt bằng script, mọi chuỗi chứa TeX phải là raw string, vì chuỗi thường đổi `\t`, `\n`, `\f`, `\v`, `\b` thành ký tự điều khiển (`\tfrac` thành TAB + `frac`) mà build không báo lỗi.
+9. **Tính lại** mọi ví dụ và lời giải bằng Python; sửa Notes theo kết quả. Code trong bài phải chạy được. Ghi TeX vào trang bằng công cụ sửa file. Nếu buộc phải sửa hàng loạt bằng script, mọi chuỗi chứa TeX phải là raw string, vì chuỗi thường đổi `\t`, `\n`, `\f`, `\v`, `\b` thành ký tự điều khiển (`\tfrac` thành TAB + `frac`) mà build không báo lỗi. **Format toán học & Chống tràn (No Scrollbars)**: Mọi biểu thức hoặc chuỗi biến đổi dài phải chủ động bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt dòng bằng `\\` tại dấu bằng ($=$), bất đẳng thức ($\le, \ge, \approx, \implies$) hoặc phép toán ($+, -$) và căn lề bằng `&`. Tuyệt đối không để phát sinh thanh cuộn ngang (scrollbar) trên bất kỳ kích cỡ màn hình nào; tách văn xuôi nhận xét ra ngoài TeX; công thức inline (`$...$`) không vượt quá 38ex.
 10. **Lượt giọng** theo professor-voice.md và writing-vi.md: đọc liền danh sách tiêu đề để sửa khuôn hỏi/rút gọn lặp; sửa câu thiếu đối tượng, thiếu quan hệ, danh từ hóa, khẩu hiệu và động từ dịch máy. Lượt này không đổi toán.
 11. **Lượt nghĩa**: đối chiếu lại nguồn từng phát biểu — giả thiết, miền, lượng từ, dấu, số 0, chiều suy ra. Câu trôi chảy không chứng minh đúng nghĩa.
 12. **Tự rà như người mới** (teaching-review.md): chỉ cho phép kiến thức trong prerequisites và phần đã dạy; ở mỗi bước hỏi “thuật ngữ/phép suy ra này lấy từ đâu?”. Rà cả thuật ngữ phụ mình vừa thêm.
@@ -143,7 +143,7 @@ Chạy từ gốc repo (hoặc dùng đường dẫn đầy đủ):
 
 | Script | Làm gì | Không làm gì |
 | --- | --- | --- |
-| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài (kể cả các trang chủ đề) hoặc `--all` với catalog, concepts, Wiki, hình, link, container, mô phỏng; đo bề rộng công thức inline bằng MathJax của site; bắt ký tự điều khiển và công thức inline bị cắt dòng | Không đánh giá nội dung, giọng hay tương tác của mô phỏng; không đo công thức hiển thị (chúng cuộn ngang trong khung riêng) |
+| `scripts/check_lecture.mjs` | Kiểm tích hợp một bài (kể cả các trang chủ đề) hoặc `--all` với catalog, concepts, Wiki, hình, link, container, mô phỏng; đo bề rộng công thức inline bằng MathJax của site; bắt ký tự điều khiển và công thức inline bị cắt dòng | Không đánh giá nội dung hay tương tác của mô phỏng; công thức hiển thị cần bẻ dòng `\begin{aligned}` để không phát sinh cuộn ngang |
 | `scripts/review_teaching_text.py` | Gợi ý vị trí câu cần xem lại trong một hoặc nhiều file Markdown, hoặc một đặc tả JSON | Không tự sửa, không kiểm toán, không nhận diện AI |
 | `scripts/build_teaching_prompt.py` | Tạo prompt cho một đơn vị nguồn (JSON) kèm hướng dẫn giọng và thuật ngữ tra được | Không gọi model, không hiểu sách |
 | `scripts/retrieve_terminology.py` | Tra thuật ngữ EN–VI và ví dụ tương phản theo lĩnh vực | Không dịch, không chứng nhận nghĩa |

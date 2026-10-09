@@ -78,7 +78,10 @@ Xét tập dữ liệu cực nhỏ gồm hai mẫu có nhãn $b_1 = 0$ và $b_2 
 Mô hình đưa ra dự đoán đơn tham số $\theta$ với hàm mất mát bình phương $\ell_i(\theta) = \frac{1}{2}(\theta - b_i)^2$.
 Hàm mục tiêu trên toàn bộ tập dữ liệu là:
 $$
-J(\theta) = \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right] = \frac{1}{4}(\theta^2 + \theta^2 - 4\theta + 4) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
+\begin{aligned}
+J(\theta) &= \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right] \\
+&= \frac{1}{4}(2\theta^2 - 4\theta + 4) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
+\end{aligned}
 $$
 
 Gradient toàn phần là $\nabla J(\theta) = \theta - 1$. Nghiệm tối ưu thực sự là $\theta^* = 1$.

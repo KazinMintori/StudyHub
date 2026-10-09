@@ -157,9 +157,11 @@ Tỷ lệ khách hàng rời bỏ dịch vụ của một công ty viễn thông
 
 ::: solution
 1. Theo điểm phần trăm (chênh lệch tuyệt đối):
-   $$\text{Chênh lệch} = 4\% - 5\% = -1\% \implies \text{Giảm 1 điểm phần trăm}$$
+   $$\text{Chênh lệch} = 4\% - 5\% = -1\%$$
+   Tức là giảm 1 điểm phần trăm.
 2. Theo tỷ lệ phần trăm tương đối:
-   $$\text{Tỷ lệ thay đổi} = \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\% \implies \text{Giảm 20\% so với mức ban đầu}$$
+   $$\text{Tỷ lệ thay đổi} = \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\%$$
+   Tức là giảm 20% so với mức ban đầu.
 3. Không được viết "giảm 1%" vì câu văn này tạo ra sự nhập nhằng nguy hiểm: người đọc có thể hiểu là tỷ lệ giảm đi $1\%$ của mức $5\%$ ban đầu, tức là còn $5\% \times (1 - 0.01) = 4.95\%$. Cách diễn đạt chuẩn mực trong báo cáo chuyên nghiệp bắt buộc phải ghi rõ là "giảm 1 điểm phần trăm" hoặc "giảm 20% so với kỳ trước".
 :::
 

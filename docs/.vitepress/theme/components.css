@@ -39,7 +39,8 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .math-text { min-width: 0; overflow-wrap: break-word; }
 .math-text mjx-container { color: inherit; min-width: 0; }
 .math-text mjx-container:not([display=true]) { display: inline-block; margin: 0 .06em; max-width: 100%; vertical-align: baseline; }
-.math-text mjx-container[display=true] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .65em .1em; margin: .6em 0; text-align: center; scrollbar-width: thin; }
+.math-text mjx-container[display=true] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .65em .1em; margin: .6em 0; text-align: center; scrollbar-width: none; -ms-overflow-style: none; }
+.math-text mjx-container[display=true]::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
 .math-text mjx-container svg { max-width: none; }
 .math-text mjx-container[display=true] svg { display: inline-block; }
 .slide-example .math-text { line-height: 1.9; }
@@ -53,6 +54,7 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
   margin: 0;
   vertical-align: -0.05em;
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .vp-doc mjx-container:not([display=true])::-webkit-scrollbar {
   display: none !important;
@@ -68,21 +70,13 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
   margin: var(--space-5) 0;
   text-align: center;
   font-size: 1.05em;
-  scrollbar-width: thin;
-  scrollbar-color: var(--rule) transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .vp-doc mjx-container[display=true]::-webkit-scrollbar {
-  height: 4px;
-}
-.vp-doc mjx-container[display=true]::-webkit-scrollbar-track {
-  background: transparent;
-}
-.vp-doc mjx-container[display=true]::-webkit-scrollbar-thumb {
-  background: var(--rule);
-  border-radius: 4px;
-}
-.vp-doc mjx-container[display=true]::-webkit-scrollbar-thumb:hover {
-  background: var(--ink-3);
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .slide-formula mjx-container[display=true] {
   display: block;
@@ -92,7 +86,13 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
   padding: var(--space-2) 0;
   margin: 12px 0;
   text-align: center;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slide-formula mjx-container[display=true]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .vp-doc mjx-box {
   padding: 4px 10px;

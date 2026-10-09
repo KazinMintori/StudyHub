@@ -30,6 +30,7 @@ Tất cả các kỹ năng (Skills) đã được chuẩn hóa theo định dạ
 > [!IMPORTANT]
 > - Luôn đọc tài liệu `references/repo-format.md` bên trong `studyhub-lecture` trước khi chỉnh sửa bất kỳ tệp Markdown hay catalog nào của trang web.
 > - Khi soạn bài hoặc giải thích có chứa phép tính số học/toán học: **bắt buộc chạy code Python tính lại**, không được đoán hoặc dựa vào trực giác.
+> - **Tuyệt đối không để xuất hiện thanh cuộn (scrollbar) trên công thức toán**: Công thức hiển thị dài phải bẻ dòng bằng `\begin{aligned}` với `\\` và `&`; công thức inline không quá 38ex.
 
 ---
 
@@ -65,3 +66,9 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 5. **Tiếng Việt tự nhiên**: Hành văn sáng sủa, thuần Việt, tránh câu cú dịch máy thô cứng.
 6. **Chủ quyền bài giảng (Chính danh, biến tri thức thành bài giảng độc lập)**: Bài giảng của StudyHub là giáo trình giảng dạy độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các cụm từ: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“theo sách…”*, *“sách dùng…”*, *“nguyên tác…”*, *“bản dịch của…”*, *“tiến độ bản dịch…”*. Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (*“Hình 1.1: …”*, *“Xét bài toán thực tế sau:…”*, *“Quan sát đồ thị chuyển trạng thái…”*).
 7. **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Dùng từ ngữ tiếng Việt chuẩn xác, giàu tính sư phạm, uyên bác và dễ hiểu, không “giả trân”, không sáo rỗng kiểu AI. Các mẹo tư duy, trực giác thuật toán được lồng ghép tự nhiên (*“Một cách người ta hay dùng trong thực tế để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”* thay vì đóng khung máy móc *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết trừu tượng với các ứng dụng thực tế sinh động trong đời sống và đặt câu hỏi đào sâu bản chất vấn đề.
+8. **Chuẩn mực toán học & Chống tràn / Tuyệt đối không xuất hiện thanh cuộn (No Math Scrollbars)**:
+   - Mọi công thức, phương trình, hàm số toán học hiển thị (`$$...$$`) và nội dòng (`$...$`) phải được format chính xác, thẩm mỹ, tuyệt đối không xuất hiện thanh cuộn ngang (scrollbar) trên bất kỳ kích cỡ màn hình nào (kể cả di động ~360px–375px hay trong các hộp `::: info`, `::: details`).
+   - Với công thức hiển thị: Chủ động bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt dòng bằng `\\` tại dấu bằng, dấu bất đẳng thức ($=$, $\le$, $\ge$, $\approx$, $\implies$) hoặc phép toán ($+$, $-$) và căn lề bằng `&`. Không viết chuỗi đẳng thức trải dài trên một dòng đơn.
+   - Tuyệt đối không nhét văn xuôi, câu nhận xét dài vào trong TeX bằng `\text{...}`. Văn xuôi phân tích phải viết ở đoạn văn bên ngoài khối toán.
+   - Dấu mở `$$` và đóng `$$` phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
+   - Công thức inline (`$...$`): Không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.

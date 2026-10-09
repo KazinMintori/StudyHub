@@ -32,7 +32,11 @@ Hãy tự kiểm tra định nghĩa với vài hình trong mô phỏng sau. Kéo
 **Chứng minh.** Hình tròn đặc $B = \{x \in \mathbb{R}^2 : \|x\|_2 \le 1\}$ là lồi. Lấy $x_1, x_2 \in B$ bất kỳ và $\theta \in [0, 1]$ bất kỳ. Dùng bất đẳng thức tam giác và tính thuần nhất của chuẩn,
 
 $$
-\|\theta x_1 + (1-\theta) x_2\|_2 \le \|\theta x_1\|_2 + \|(1-\theta)x_2\|_2 = \theta \|x_1\|_2 + (1 - \theta)\|x_2\|_2 \le \theta + (1 - \theta) = 1 .
+\begin{aligned}
+\|\theta x_1 + (1-\theta) x_2\|_2 &\le \|\theta x_1\|_2 + \|(1-\theta)x_2\|_2 \\
+&= \theta \|x_1\|_2 + (1 - \theta)\|x_2\|_2 \\
+&\le \theta + (1 - \theta) = 1.
+\end{aligned}
 $$
 
 Bước đẳng thức ở giữa dùng $\theta \ge 0$ và $1 - \theta \ge 0$, vì $\|\alpha x\| = |\alpha|\,\|x\|$ và ta cần $|\theta| = \theta$. Nếu cho phép $\theta$ âm, chứng minh gãy ngay ở bước này, và điều đó khớp với thực tế: hình tròn không chứa cả đường thẳng qua hai điểm của nó.
@@ -40,7 +44,7 @@ Bước đẳng thức ở giữa dùng $\theta \ge 0$ và $1 - \theta \ge 0$, v
 Đường tròn và hình tròn đặc chỉ khác nhau ở dấu "$=$" và "$\le$", nhưng một tập không lồi còn tập kia lồi. Khi đọc một ràng buộc trong bài toán tối ưu, hãy chú ý đến từng dấu như vậy.
 
 ::: warning Một cái bẫy tinh tế: biên chỉ có một phần
-Sách có một ví dụ đáng suy nghĩ (Hình 2.2, bên phải): một hình vuông chứa **một số** điểm biên nhưng không chứa các điểm biên khác thì không lồi. Chẳng hạn lấy hình vuông mở $(0, 1)^2$ rồi thêm vào đúng hai điểm $(0.2, 0)$ và $(0.8, 0)$ trên cạnh dưới. Hai điểm này thuộc tập, nhưng trung điểm $(0.5, 0)$ của chúng nằm trên cạnh dưới mà không được thêm vào, nên không thuộc tập. Ngoài "hình dạng nhìn thấy", tính lồi còn phụ thuộc vào việc biên được giữ lại như thế nào.
+Xét một ví dụ điển hình cần lưu tâm: một hình vuông chứa **một số** điểm biên nhưng không chứa các điểm biên khác thì không lồi. Chẳng hạn lấy hình vuông mở $(0, 1)^2$ rồi thêm vào đúng hai điểm $(0.2, 0)$ và $(0.8, 0)$ trên cạnh dưới. Hai điểm này thuộc tập, nhưng trung điểm $(0.5, 0)$ của chúng nằm trên cạnh dưới mà không được thêm vào, nên không thuộc tập. Ngoài "hình dạng nhìn thấy", tính lồi còn phụ thuộc vào việc biên được giữ lại như thế nào.
 :::
 
 ## 3. Tổ hợp lồi: phép trộn

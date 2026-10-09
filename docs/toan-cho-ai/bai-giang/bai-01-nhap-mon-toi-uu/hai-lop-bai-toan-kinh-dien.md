@@ -231,7 +231,9 @@ Bài toán là cực tiểu $4x_1 + 3x_2$ với $3x_1 + x_2 \ge 6$, $x_1 + 2x_2 
 
 $$
 4x_1 + 3x_2 = (3x_1 + x_2) + (x_1 + 2x_2) \ge 6 + 7 = 13.
-$$ Vì $(1, 3)$ đạt đúng 13, nó là nghiệm tối ưu. Lần này các ràng buộc có dạng $\ge$ và ta cực tiểu, nên tổ hợp không âm cho một cận dưới thay vì cận trên.
+$$
+
+Vì $(1, 3)$ đạt đúng 13, nó là nghiệm tối ưu. Lần này các ràng buộc có dạng $\ge$ và ta cực tiểu, nên tổ hợp không âm cho một cận dưới thay vì cận trên.
 :::
 
 ## Tóm tắt

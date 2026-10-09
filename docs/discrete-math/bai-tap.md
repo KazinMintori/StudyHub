@@ -26,17 +26,33 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
      Giả sử mệnh đề đúng với số nguyên dương $k \ge 1$, tức là:
      $$1^2 + 2^2 + \dots + k^2 = \frac{k(k+1)(2k+1)}{6}$$
      Ta cần chứng minh mệnh đề đúng với $n = k + 1$, tức là:
-     $$1^2 + 2^2 + \dots + k^2 + (k+1)^2 = \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}$$
+     $$
+     \begin{aligned}
+     1^2 + 2^2 + \dots + k^2 + (k+1)^2 &= \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6} \\
+     &= \frac{(k+1)(k+2)(2k+3)}{6}.
+     \end{aligned}
+     $$
      Thật vậy:
-     $$\text{VT} = \frac{k(k+1)(2k+1)}{6} + (k+1)^2 = (k+1) \left[ \frac{k(2k+1) + 6(k+1)}{6} \right]$$
-     $$= (k+1) \left[ \frac{2k^2 + 7k + 6}{6} \right] = \frac{(k+1)(k+2)(2k+3)}{6} = \text{VP}$$
+     $$
+     \begin{aligned}
+     \text{VT} &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
+     &= (k+1) \left[ \frac{k(2k+1) + 6(k+1)}{6} \right] \\
+     &= (k+1) \left[ \frac{2k^2 + 7k + 6}{6} \right] \\
+     &= \frac{(k+1)(k+2)(2k+3)}{6} = \text{VP}.
+     \end{aligned}
+     $$
      Theo nguyên lý quy nạp toán học, đẳng thức đúng với mọi $n \ge 1$.
 
 2. Chứng minh $4^n - 1$ chia hết cho 3:
    - Với $n = 1$: $4^1 - 1 = 3$ chia hết cho 3.
    - Giả sử đúng với $n = k$: $4^k - 1 = 3m$ ($m \in \mathbb{Z}$).
    - Với $n = k + 1$:
-     $$4^{k+1} - 1 = 4 \cdot 4^k - 1 = 4(3m + 1) - 1 = 12m + 4 - 1 = 12m + 3 = 3(4m + 1)$$
+     $$
+     \begin{aligned}
+     4^{k+1} - 1 &= 4 \cdot 4^k - 1 = 4(3m + 1) - 1 \\
+     &= 12m + 4 - 1 = 12m + 3 = 3(4m + 1),
+     \end{aligned}
+     $$
      chia hết cho 3. Điều phải chứng minh.
 
 ---

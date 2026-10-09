@@ -84,10 +84,13 @@ Hệ quả quan trọng nhất là khái niệm "giá trị nhỏ nhất" tách 
 
 Phần tử nhỏ nhất phải "thắng" **mọi** phần tử khác. Phần tử tối thiểu chỉ cần **không bị** phần tử nào khác "thắng". Phần tử nhỏ nhất, nếu có, là duy nhất (nhờ tính phản đối xứng), còn phần tử tối thiểu thì có thể có rất nhiều.
 
-Sách mô tả hai khái niệm bằng hình học rất gọn:
+Hai khái niệm này có biểu diễn hình học rất cô đọng:
 
 $$
-x \text{ là phần tử nhỏ nhất} \iff S \subseteq x + K, \qquad x \text{ là phần tử tối thiểu} \iff (x - K) \cap S = \{x\}.
+\begin{aligned}
+x \text{ là phần tử nhỏ nhất} &\iff S \subseteq x + K, \\
+x \text{ là phần tử tối thiểu} &\iff (x - K) \cap S = \{x\}.
+\end{aligned}
 $$
 
 Tập $x + K$ gồm mọi điểm lớn hơn hoặc bằng $x$, nên điều kiện thứ nhất nói "cả tập $S$ nằm ở phía trên $x$". Tập $x - K$ gồm mọi điểm nhỏ hơn hoặc bằng $x$, nên điều kiện thứ hai nói "phía dưới $x$ không có điểm nào khác của $S$". Với $K = \mathbb{R}_+$ trên trục số, hai khái niệm trùng nhau và trùng với giá trị nhỏ nhất quen thuộc.

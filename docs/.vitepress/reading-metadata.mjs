@@ -53,7 +53,7 @@ export const readingMetadata = {
     "minutes": 8
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi": {
-    "words": 3557,
+    "words": 3554,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-loi": {
@@ -65,7 +65,7 @@ export const readingMetadata = {
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid": {
-    "words": 2910,
+    "words": 2916,
     "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan": {
@@ -89,7 +89,7 @@ export const readingMetadata = {
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat": {
-    "words": 2267,
+    "words": 2268,
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua": {
@@ -193,7 +193,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "toan-cho-ai/bai-04-gradient-newton": {
-    "words": 1352,
+    "words": 1354,
     "minutes": 5
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
@@ -201,7 +201,7 @@ export const readingMetadata = {
     "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
-    "words": 2697,
+    "words": 2734,
     "minutes": 15
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
@@ -273,7 +273,7 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-14-ke-chuyen-bang-du-lieu": {
-    "words": 2928,
+    "words": 2944,
     "minutes": 15
   },
   "vat-ly-1/01-don-vi-vector": {

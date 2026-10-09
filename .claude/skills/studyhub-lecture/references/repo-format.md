@@ -147,3 +147,10 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Dấu cộng, trừ, nhân, chia và bằng thuộc cùng một biểu thức toán với các toán hạng để bộ hiển thị căn theo trục toán và đặt khoảng cách. Không ghép ma trận MathML với dấu phép toán bằng font văn bản; dùng một `mrow` chung. Trong code giữ `+`, `-`, `*`, `/`, `=` theo ngôn ngữ lập trình; trong toán dùng `\cdot`, `\times` hoặc phân số khi phù hợp, không thay mọi dấu bằng một quy tắc chung.
 - Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
 - Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.
+- **Chuẩn mực toán học & Chống tràn (No Scrollbars)**:
+  - Tuyệt đối không để phát sinh thanh cuộn ngang (scrollbar) trên bất kỳ công thức nào, ở mọi kích thước màn hình và trong mọi khung hộp (`::: info`, `::: details`).
+  - Mọi công thức hiển thị (`$$...$$`) dài hoặc nhiều bước biến đổi phải chủ động bẻ dòng bằng môi trường `\begin{aligned}...\end{aligned}`. Ngắt dòng bằng `\\` tại các dấu quan hệ ($=$, $\le$, $\ge$, $\approx$, $\implies$) hoặc phép toán ($+$, $-$) và căn lề bằng `&`. Không viết chuỗi đẳng thức trải dài trên một dòng đơn.
+  - Tách hoàn toàn văn xuôi, nhận xét ra ngoài khối TeX. Không nhét văn xuôi dài vào `\text{...}` bên trong công thức.
+  - Cặp dấu `$$` mở và đóng phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
+  - Công thức inline (`$...$`): Giới hạn chiều rộng không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.
+

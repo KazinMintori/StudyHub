@@ -44,7 +44,13 @@ Nhưng hãy nhìn sang hình bên phải. Bằng cách thiết lập `ylim(97, 1
 - Chiều cao hiển thị của cột B là $100 - 97 = 3$ đơn vị.
 
 Tỷ lệ chiều cao thị giác lúc này biến thành $3 / 1 = 300\%$ (cột B cao gấp 3 lần cột A). Edward Tufte đã đề xuất chỉ số **Hệ số dối trá (Lie Factor)** để lượng hóa mức độ thao túng này:
-$$\text{Lie Factor} = \frac{\text{Tỷ lệ thay đổi thể hiện trên hình}}{\text{Tỷ lệ thay đổi thực tế trong dữ liệu}} = \frac{(3 - 1) / 1}{(100 - 98) / 98} = \frac{200\%}{2.04\%} \approx 98$$
+
+$$
+\begin{aligned}
+\text{Lie Factor} &= \frac{\text{Tỷ lệ thay đổi thể hiện trên hình}}{\text{Tỷ lệ thay đổi thực tế trong dữ liệu}} \\
+&= \frac{(3 - 1) / 1}{(100 - 98) / 98} = \frac{200\%}{2.04\%} \approx 98.
+\end{aligned}
+$$
 
 Một biểu đồ có hệ số dối trá lên tới gần 100 lần đã biến một biến động nhỏ nhặt thành một bước nhảy vọt giả tạo. Đây là lý do vì sao với biểu đồ cột, việc giữ trục tung bắt đầu từ 0 là nguyên tắc bất di bất dịch.
 

@@ -103,13 +103,17 @@ Khởi tạo $m_0 = 0$, $v_0 = 0$, tại mỗi bước $t = 1, 2, \ldots$:
 
 $$
 \begin{aligned}
-m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t \quad &&\text{(Trung bình mũ gradient)}, \\
-v_t &= \beta_2 v_{t-1} + (1 - \beta_2) g_t \odot g_t \quad &&\text{(Trung bình mũ bình phương gradient)}, \\
-\widehat m_t &= \frac{m_t}{1 - \beta_1^t} \quad &&\text{(Hiệu chỉnh chệch moment bậc nhất)}, \\
-\widehat v_t &= \frac{v_t}{1 - \beta_2^t} \quad &&\text{(Hiệu chỉnh chệch moment bậc hai)}, \\
-\theta_{t+1} &= \theta_t - \eta \frac{\widehat m_t}{\sqrt{\widehat v_t} + \varepsilon} \quad &&\text{(Cập nhật tham số)}.
+m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t, \\
+v_t &= \beta_2 v_{t-1} + (1 - \beta_2) g_t \odot g_t, \\
+\widehat m_t &= \frac{m_t}{1 - \beta_1^t}, \qquad \widehat v_t = \frac{v_t}{1 - \beta_2^t}, \\
+\theta_{t+1} &= \theta_t - \eta \frac{\widehat m_t}{\sqrt{\widehat v_t} + \varepsilon}.
 \end{aligned}
 $$
+
+Trong đó:
+- $m_t$: Ước lượng moment bậc nhất (quán tính gradient).
+- $v_t$: Ước lượng moment bậc hai (thang đo bình phương gradient).
+- $\widehat m_t, \widehat v_t$: Các moment đã được hiệu chỉnh chệch (bias-corrected).
 
 Các siêu tham số tiêu chuẩn: $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\varepsilon = 10^{-8}$.
 

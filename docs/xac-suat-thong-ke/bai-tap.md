@@ -23,7 +23,12 @@ $$f(x) = \begin{cases} c(4 - x^2) & \text{với } 0 \le x \le 2 \\ 0 & \text{v�
 
 #### Lời giải gợi ý
 1. Điều kiện chuẩn hóa: $\int_{-\infty}^{+\infty} f(x) \, dx = 1$:
-   $$\int_0^2 c(4 - x^2) \, dx = c \left[ 4x - \frac{x^3}{3} \right]_0^2 = c \left( 8 - \frac{8}{3} \right) = c \cdot \frac{16}{3} = 1 \implies c = \frac{3}{16}$$
+   $$
+   \begin{aligned}
+   \int_0^2 c(4 - x^2) \, dx &= c \left[ 4x - \frac{x^3}{3} \right]_0^2 = c \left( 8 - \frac{8}{3} \right) \\
+   &= c \cdot \frac{16}{3} = 1 \implies c = \frac{3}{16}.
+   \end{aligned}
+   $$
 
 2. Hàm phân phối tích lũy với $0 \le x \le 2$:
    $$F(x) = \int_0^x \frac{3}{16}(4 - t^2) \, dt = \frac{3}{16} \left( 4x - \frac{x^3}{3} \right) = \frac{3}{4}x - \frac{x^3}{16}$$
@@ -31,15 +36,36 @@ $$f(x) = \begin{cases} c(4 - x^2) & \text{với } 0 \le x \le 2 \\ 0 & \text{v�
    - Với $x > 2$: $F(x) = 1$.
 
 3. Tính kỳ vọng:
-   $$E[X] = \int_0^2 x f(x) \, dx = \frac{3}{16} \int_0^2 (4x - x^3) \, dx = \frac{3}{16} \left[ 2x^2 - \frac{x^4}{4} \right]_0^2 = \frac{3}{16} (8 - 4) = \frac{3}{16} \times 4 = \frac{3}{4} = 0.75$$
-   $$E[X^2] = \int_0^2 x^2 f(x) \, dx = \frac{3}{16} \int_0^2 (4x^2 - x^4) \, dx = \frac{3}{16} \left[ \frac{4x^3}{3} - \frac{x^5}{5} \right]_0^2 = \frac{3}{16} \left( \frac{32}{3} - \frac{32}{5} \right) = \frac{3}{16} \times \frac{64}{15} = \frac{4}{5} = 0.8$$
+   $$
+   \begin{aligned}
+   E[X] &= \int_0^2 x f(x) \, dx = \frac{3}{16} \int_0^2 (4x - x^3) \, dx \\
+   &= \frac{3}{16} \left[ 2x^2 - \frac{x^4}{4} \right]_0^2 = \frac{3}{16} (8 - 4) = \frac{3}{4} = 0.75.
+   \end{aligned}
+   $$
+   $$
+   \begin{aligned}
+   E[X^2] &= \int_0^2 x^2 f(x) \, dx = \frac{3}{16} \int_0^2 (4x^2 - x^4) \, dx \\
+   &= \frac{3}{16} \left[ \frac{4x^3}{3} - \frac{x^5}{5} \right]_0^2 = \frac{3}{16} \left( \frac{32}{3} - \frac{32}{5} \right) \\
+   &= \frac{3}{16} \times \frac{64}{15} = \frac{4}{5} = 0.8.
+   \end{aligned}
+   $$
 
 4. Tính phương sai:
-   $$\text{Var}(X) = E[X^2] - (E[X])^2 = 0.8 - (0.75)^2 = 0.8 - 0.5625 = 0.2375 = \frac{19}{80}$$
+   $$
+   \begin{aligned}
+   \text{Var}(X) &= E[X^2] - (E[X])^2 = 0.8 - (0.75)^2 \\
+   &= 0.8 - 0.5625 = 0.2375 = \frac{19}{80}.
+   \end{aligned}
+   $$
    $$\sigma_X = \sqrt{0.2375} \approx 0.4873$$
 
 5. Tính xác suất:
-   $$P(1 \le X \le 2) = F(2) - F(1) = 1 - \left( \frac{3}{4}(1) - \frac{1}{16} \right) = 1 - \frac{11}{16} = \frac{5}{16} = 0.3125$$
+   $$
+   \begin{aligned}
+   P(1 \le X \le 2) &= F(2) - F(1) = 1 - \left( \frac{3}{4}(1) - \frac{1}{16} \right) \\
+   &= 1 - \frac{11}{16} = \frac{5}{16} = 0.3125.
+   \end{aligned}
+   $$
 
 ---
 
@@ -60,11 +86,22 @@ Ký hiệu tổng ở câu 3 nghĩa là $S_{100}=X_1+X_2+\cdots+X_{100}$. Chỉ 
    Sai số chuẩn của trung bình mẫu: $SE = \frac{\sigma}{\sqrt{n}} = \frac{30}{10} = 3$ ms.
 
 2. Chuẩn hóa biến $\bar{X}$ về biến chuẩn tắc $Z \sim \mathcal{N}(0, 1)$:
-   $$P(\bar{X} > 125) = P\left(Z > \frac{125 - 120}{3}\right) = P\left(Z > \frac{5}{3}\right) \approx P(Z > 1.67) = 1 - \Phi(1.67) \approx 1 - 0.9525 = 0.0475 \quad (4.75\%)$$
+   $$
+   \begin{aligned}
+   P(\bar{X} > 125) &= P\left(Z > \frac{125 - 120}{3}\right) = P\left(Z > \frac{5}{3}\right) \\
+   &\approx P(Z > 1.67) = 1 - \Phi(1.67) \\
+   &\approx 1 - 0.9525 = 0.0475 \quad (4.75\%).
+   \end{aligned}
+   $$
 
 3. Tổng thời gian $S_{100}$ xấp xỉ phân phối chuẩn với kỳ vọng $E[S_{100}] = n\mu = 100 \times 120 = 12000$ và độ lệch chuẩn $\sigma_S = \sigma \sqrt{n} = 30 \times 10 = 300$:
-   $$P(11400 \le S_{100} \le 12600) = P\left(\frac{11400 - 12000}{300} \le Z \le \frac{12600 - 12000}{300}\right) = P(-2 \le Z \le 2)$$
-   $$= 2\Phi(2) - 1 = 2(0.9772) - 1 = 1.9544 - 1 = 0.9544 \quad (95.44\%)$$
+   $$
+   \begin{aligned}
+   P(11400 \le S_{100} \le 12600) &= P\left(\frac{11400 - 12000}{300} \le Z \le \frac{12600 - 12000}{300}\right) \\
+   &= P(-2 \le Z \le 2) = 2\Phi(2) - 1 \\
+   &= 2(0.9772) - 1 = 0.9544 \quad (95.44\%).
+   \end{aligned}
+   $$
 
 ---
 

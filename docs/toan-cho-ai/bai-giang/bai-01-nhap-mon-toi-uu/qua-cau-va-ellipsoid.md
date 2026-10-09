@@ -82,24 +82,32 @@ với $A$ là ma trận vuông khả nghịch. Nó nói rằng ellipsoid là ả
 Hai cách biểu diễn khớp nhau khi $P = AA^T$. Thật vậy, với $x = x_c + Au$,
 
 $$
-(x - x_c)^T P^{-1}(x - x_c) = u^T A^T (A A^T)^{-1} A u = u^T A^T (A^T)^{-1} A^{-1} A u = u^T u = \|u\|_2^2 ,
+\begin{aligned}
+(x - x_c)^T P^{-1}(x - x_c) &= u^T A^T (A A^T)^{-1} A u \\
+&= u^T A^T (A^T)^{-1} A^{-1} A u \\
+&= u^T u = \|u\|_2^2,
+\end{aligned}
 $$
 
-nên điều kiện $\|u\|_2 \le 1$ đúng là điều kiện $(x - x_c)^T P^{-1}(x - x_c) \le 1$. Một lỗi dễ mắc là đồng nhất $A$ với $P$. Quan hệ đúng là $P = AA^T$, tức là $A$ đóng vai trò "căn bậc hai" của $P$. Sách chọn $A = P^{1/2}$, căn bậc hai đối xứng xác định dương của $P$, và nói rằng có thể giả sử $A$ đối xứng xác định dương mà không mất tính tổng quát. Lý do là nhiều ma trận $A$ khác nhau cho cùng một ellipsoid: thay $A$ bằng $AQ$ với $Q$ trực giao bất kỳ, quả cầu đơn vị $\{Qu\}$ vẫn là chính nó, và $(AQ)(AQ)^T = AA^T$ vẫn bằng $P$.
+nên điều kiện $\|u\|_2 \le 1$ đúng là điều kiện $(x - x_c)^T P^{-1}(x - x_c) \le 1$. Một lỗi dễ mắc là đồng nhất $A$ với $P$. Quan hệ đúng là $P = AA^T$, tức là $A$ đóng vai trò "căn bậc hai" của $P$. Ta có thể chọn $A = P^{1/2}$, căn bậc hai đối xứng xác định dương của $P$, và hoàn toàn có thể giả sử $A$ đối xứng xác định dương mà không mất tính tổng quát. Lý do là nhiều ma trận $A$ khác nhau cho cùng một ellipsoid: thay $A$ bằng $AQ$ với $Q$ trực giao bất kỳ, quả cầu đơn vị $\{Qu\}$ vẫn là chính nó, và $(AQ)(AQ)^T = AA^T$ vẫn bằng $P$.
 
 Trong mô phỏng, điểm vàng là $Au$ với $u$ chạy trên đường tròn đơn vị nét đứt. Khi $u$ đi một vòng, $Au$ đi đúng một vòng quanh biên ellipse. Đó là cách nhìn "sinh ra", trong khi định nghĩa ở mục 2 là cách nhìn "kiểm tra".
 
-Biểu diễn thứ hai cho ta thêm một điều mà biểu diễn thứ nhất không cho. Nếu $A$ nửa xác định dương nhưng **suy biến**, tập $\{x_c + Au : \|u\|_2 \le 1\}$ vẫn được định nghĩa, chỉ là bị "ép dẹt" theo những hướng $A$ triệt tiêu. Sách gọi đó là **ellipsoid suy biến**, có chiều affine bằng hạng của $A$. Trong mặt phẳng, một ellipsoid suy biến với $A$ hạng 1 là một đoạn thẳng. Ellipsoid suy biến vẫn là tập lồi, nhưng không viết được dưới dạng thứ nhất, vì $P = AA^T$ không khả nghịch. Bạn có thể kéo $\lambda_2$ về 0 trong mô phỏng để thấy điều đó.
+Biểu diễn thứ hai cho ta thêm một điều mà biểu diễn thứ nhất không cho. Nếu $A$ nửa xác định dương nhưng **suy biến**, tập $\{x_c + Au : \|u\|_2 \le 1\}$ vẫn được định nghĩa, chỉ là bị "ép dẹt" theo những hướng $A$ triệt tiêu. Khái niệm này được gọi là **ellipsoid suy biến**, có chiều affine bằng hạng của $A$. Trong mặt phẳng, một ellipsoid suy biến với $A$ hạng 1 là một đoạn thẳng. Ellipsoid suy biến vẫn là tập lồi, nhưng không viết được dưới dạng thứ nhất, vì $P = AA^T$ không khả nghịch. Bạn có thể kéo $\lambda_2$ về 0 trong mô phỏng để thấy điều đó.
 
 ## 4. Thể tích và định thức
 
 Biểu diễn $\mathcal{E} = x_c + A\,B(0, 1)$ cho một hệ quả đẹp về kích thước. Một ánh xạ tuyến tính $A$ nhân thể tích của mọi tập với $|\det A|$. Vì vậy
 
 $$
-\operatorname{vol}(\mathcal{E}) = |\det A| \cdot \operatorname{vol}(B(0,1)) = \sqrt{\det P}\, \cdot \operatorname{vol}(B(0,1)) = \sqrt{\lambda_1 \lambda_2 \cdots \lambda_n}\, \cdot \operatorname{vol}(B(0,1)).
+\begin{aligned}
+\operatorname{vol}(\mathcal{E}) &= |\det A| \cdot \operatorname{vol}(B(0,1)) \\
+&= \sqrt{\det P}\, \cdot \operatorname{vol}(B(0,1)) \\
+&= \sqrt{\lambda_1 \lambda_2 \cdots \lambda_n}\, \cdot \operatorname{vol}(B(0,1)).
+\end{aligned}
 $$
 
-Trong mặt phẳng, diện tích ellipse là $\pi \sqrt{\lambda_1 \lambda_2}$. Với ví dụ ở mục 2, diện tích là $\pi\sqrt{8 \cdot 2} = 4\pi$. Định thức của $P$ đo "độ lớn" của ellipsoid, và đó là lý do $\log\det$ xuất hiện trong các bài toán tìm ellipsoid nhỏ nhất bao một tập điểm, sẽ gặp ở chương 8 của sách. Hàm $\log\det$ cũng là một ví dụ quan trọng ở chủ đề về các hàm lồi thường gặp.
+Trong mặt phẳng, diện tích ellipse là $\pi \sqrt{\lambda_1 \lambda_2}$. Với ví dụ ở mục 2, diện tích là $\pi\sqrt{8 \cdot 2} = 4\pi$. Định thức của $P$ đo "độ lớn" của ellipsoid, và đó là lý do $\log\det$ xuất hiện trong các bài toán tìm ellipsoid nhỏ nhất bao một tập điểm khi giải các bài toán tối ưu hình học. Hàm $\log\det$ cũng là một ví dụ quan trọng ở chủ đề về các hàm lồi thường gặp.
 
 ## 5. Ellipsoid trong thống kê và học máy
 

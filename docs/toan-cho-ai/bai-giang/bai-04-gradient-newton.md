@@ -207,7 +207,12 @@ Vế trái đo lường tốc độ biến thiên của độ cong (đạo hàm 
 Đối với hàm nhiều biến, hàm $f$ được gọi là tự tương hợp nếu hàm một biến thu hẹp $t \mapsto f(z + tv)$ là tự tương hợp trên mọi đường thẳng đi qua miền xác định.
 - Hàm toàn phương lồi là tự tương hợp vì đạo hàm bậc ba triệt tiêu: $f'''(x) = 0$.
 - Hàm rào cản logarit $f(x) = -\log x$ với $x > 0$ là tự tương hợp:
-  $$f''(x) = \frac{1}{x^2}, \quad f'''(x) = -\frac{2}{x^3} \implies |f'''(x)| = \frac{2}{x^3} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 [f''(x)]^{3/2}.$$
+  $$
+  \begin{aligned}
+  f''(x) &= \frac{1}{x^2}, \qquad f'''(x) = -\frac{2}{x^3}, \\
+  |f'''(x)| &= \frac{2}{x^3} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 [f''(x)]^{3/2}.
+  \end{aligned}
+  $$
 
 Lý thuyết tự tương hợp bảo đảm rằng phương pháp Newton với backtracking sẽ hội tụ về nghiệm sau một số hữu hạn các bước lặp độc lập với hệ tọa độ, đặt nền móng lý thuyết vững chắc cho các thuật toán điểm trong (interior-point methods) hiện đại.
 

@@ -208,7 +208,7 @@ Với bài toán $\min (x-2)^2$ thỏa $x \le 1$, ta đã tìm được $x^* = 1
 2. Khả thi đối ngẫu: $\lambda^* = 2 \ge 0$ (thỏa mãn).
 3. Bù trừ: $\lambda^* f_1(x^*) = 2 \cdot (1 - 1) = 0$ (thỏa mãn).
 4. Triệt tiêu gradient: 
-   $$\nabla L(x^*, \lambda^*) = 2(x^* - 2) + \lambda^* = 2(1 - 2) + 2 = -2 + 2 = 0 \quad \text{(thỏa mãn)}.$$
+   $$\nabla L(x^*, \lambda^*) = 2(x^* - 2) + \lambda^* = 2(1 - 2) + 2 = 0 \quad (\text{thỏa mãn}).$$
 Cả bốn điều kiện KKT đều được nghiệm đúng hoàn hảo.
 :::
 
@@ -249,12 +249,19 @@ $$
 
 Giá trị hàm mục tiêu tối ưu:
 $$
-p^* = \frac{1}{2} \left[ \left(\frac{3}{2} - 2\right)^2 + \left(-\frac{1}{2}\right)^2 \right] = \frac{1}{2} \left( \frac{1}{4} + \frac{1}{4} \right) = \frac{1}{4} = 0.25.
+\begin{aligned}
+p^* &= \frac{1}{2} \left[ \left(\frac{3}{2} - 2\right)^2 + \left(-\frac{1}{2}\right)^2 \right] \\
+&= \frac{1}{2} \left( \frac{1}{4} + \frac{1}{4} \right) = \frac{1}{4} = 0.25.
+\end{aligned}
 $$
 
 Hàm đối ngẫu Lagrange tính theo $\nu$:
 $$
-g(\nu) = \inf_{x, y} L(x, y, \nu) = \frac{1}{2}(-\nu)^2 + \frac{1}{2}(-\nu)^2 + \nu(2 - \nu - \nu - 1) = \nu^2 + \nu(1 - 2\nu) = \nu - \nu^2.
+\begin{aligned}
+g(\nu) &= \inf_{x, y} L(x, y, \nu) \\
+&= \frac{1}{2}(-\nu)^2 + \frac{1}{2}(-\nu)^2 + \nu(2 - \nu - \nu - 1) \\
+&= \nu^2 + \nu(1 - 2\nu) = \nu - \nu^2.
+\end{aligned}
 $$
 
 Cực đại hóa hàm đối ngẫu: $g'(\nu) = 1 - 2\nu = 0 \iff \nu^* = \frac{1}{2}$, và giá trị tối ưu đối ngẫu là:
@@ -334,7 +341,10 @@ Viết lại ràng buộc dưới dạng chuẩn: $f_1(w) = w - \frac{1}{2} \le 
 Hàm Lagrangian: $L(w, \lambda) = 7w^2 - 11w + \frac{9}{2} + \lambda\left(w - \frac{1}{2}\right)$.
 Điều kiện triệt tiêu gradient tại $w^* = \frac{1}{2}$:
 $$
-f'(w^*) + \lambda = 14w^* - 11 + \lambda = 14\left(\frac{1}{2}\right) - 11 + \lambda = 7 - 11 + \lambda = 0 \iff \lambda^* = 4.
+\begin{aligned}
+f'(w^*) + \lambda &= 14w^* - 11 + \lambda \\
+&= 14\left(\frac{1}{2}\right) - 11 + \lambda = -4 + \lambda = 0 \iff \lambda^* = 4.
+\end{aligned}
 $$
 Kiểm tra bốn nhóm KKT:
 1. Khả thi gốc: $w^* = \frac{1}{2} \le \frac{1}{2}$ (thỏa mãn).

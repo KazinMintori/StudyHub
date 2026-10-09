@@ -111,9 +111,18 @@ Ba thành phần cốt lõi của công thức Bayes:
 Một người được chọn ngẫu nhiên đi xét nghiệm và nhận kết quả dương tính (+). Xác suất người này thực sự mang bệnh $P(B \mid +)$ là bao nhiêu?
 
 Áp dụng định lý Bayes:
-$$P(+) = P(+ \mid B)P(B) + P(+ \mid \neg B)P(\neg B) = 0{,}99 \times 0{,}001 + 0{,}05 \times 0{,}999 = 0{,}00099 + 0{,}04995 = 0{,}05094.$$
 
-$$P(B \mid +) = \frac{P(+ \mid B)P(B)}{P(+)} = \frac{0{,}00099}{0{,}05094} \approx 0{,}0194 = 1{,}94\%!$$
+$$
+\begin{aligned}
+P(+) &= P(+ \mid B)P(B) + P(+ \mid \neg B)P(\neg B) \\
+&= 0{,}99 \times 0{,}001 + 0{,}05 \times 0{,}999 \\
+&= 0{,}00099 + 0{,}04995 = 0{,}05094.
+\end{aligned}
+$$
+
+$$
+P(B \mid +) = \frac{P(+ \mid B)P(B)}{P(+)} = \frac{0{,}00099}{0{,}05094} \approx 0{,}0194 = 1{,}94\%!
+$$
 
 Một kết quả gây sửng sốt: dù xét nghiệm có độ nhạy 99%, một người nhận kết quả dương tính vẫn có tới hơn $98\%$ khả năng là hoàn toàn khỏe mạnh!
 
@@ -202,7 +211,14 @@ Ta có các thông số ban đầu:
 - $P(K \mid S) = 0{,}70$; $P(K \mid H) = 0{,}05$.
 
 Bước 1: Tính xác suất xuất hiện từ "khuyến mãi" trong một bức thư bất kỳ theo công thức xác suất toàn phần:
-$$P(K) = P(K \mid S)P(S) + P(K \mid H)P(H) = 0{,}70 \times 0{,}20 + 0{,}05 \times 0{,}80 = 0{,}14 + 0{,}04 = 0{,}18.$$
+
+$$
+\begin{aligned}
+P(K) &= P(K \mid S)P(S) + P(K \mid H)P(H) \\
+&= 0{,}70 \times 0{,}20 + 0{,}05 \times 0{,}80 \\
+&= 0{,}14 + 0{,}04 = 0{,}18.
+\end{aligned}
+$$
 
 Bước 2: Áp dụng định lý Bayes để tính xác suất thư là spam khi đã thấy từ "khuyến mãi":
 $$P(S \mid K) = \frac{P(K \mid S)P(S)}{P(K)} = \frac{0{,}14}{0{,}18} = \frac{7}{9} \approx 77{,}78\%.$$

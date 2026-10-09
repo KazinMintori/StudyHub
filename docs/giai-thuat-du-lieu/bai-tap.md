@@ -99,11 +99,21 @@ Một hệ thống LSH chia ma trận chữ ký MinHash gồm $n = 100$ hàng th
 
 2. Với $s = 0.8, b = 20, r = 5$:
    $$s^r = (0.8)^5 = 0.32768$$
-   $$P(0.8) = 1 - (1 - 0.32768)^{20} = 1 - (0.67232)^{20} \approx 1 - 0.00035 = 0.99965 \quad (99.965\%)$$
+   $$
+   \begin{aligned}
+   P(0.8) &= 1 - (1 - 0.32768)^{20} \\
+   &= 1 - (0.67232)^{20} \approx 1 - 0.00035 = 0.99965 \quad (99.965\%).
+   \end{aligned}
+   $$
 
 3. Với $s = 0.2, b = 20, r = 5$:
    $$s^r = (0.2)^5 = 0.00032$$
-   $$P(0.2) = 1 - (1 - 0.00032)^{20} \approx 1 - (1 - 20 \times 0.00032) = 20 \times 0.00032 = 0.00638 \quad (0.64\%)$$
+   $$
+   \begin{aligned}
+   P(0.2) &= 1 - (1 - 0.00032)^{20} \\
+   &\approx 1 - (1 - 20 \times 0.00032) = 20 \times 0.00032 = 0.00638 \quad (0.64\%).
+   \end{aligned}
+   $$
 
 4. Điểm ngưỡng xấp xỉ:
    $$s_0 \approx \left(\frac{1}{b}\right)^{1/r} = \left(\frac{1}{20}\right)^{\frac{1}{5}} = (0.05)^{0.2} \approx 0.549$$
@@ -137,7 +147,12 @@ Xét đồ thị web gồm 3 trang $A, B, C$ với các liên kết có hướng
    $$r^{(k+1)} = 0.85 \begin{bmatrix} 0 & 0 & 1 \\ 0.5 & 0 & 0 \\ 0.5 & 1 & 0 \end{bmatrix} r^{(k)} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix}$$
 
 3. Khởi tạo $r^{(0)} = [0.3333, 0.3333, 0.3333]^T$:
-   $$r^{(1)} = 0.85 \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} = \begin{bmatrix} 0.2833 + 0.05 \\ 0.1417 + 0.05 \\ 0.4250 + 0.05 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1917 \\ 0.4750 \end{bmatrix}$$
+   $$
+   \begin{aligned}
+   r^{(1)} &= 0.85 \begin{bmatrix} 0.3333 \\ 0.1667 \\ 0.5000 \end{bmatrix} + \begin{bmatrix} 0.05 \\ 0.05 \\ 0.05 \end{bmatrix} \\
+   &= \begin{bmatrix} 0.2833 + 0.05 \\ 0.1417 + 0.05 \\ 0.4250 + 0.05 \end{bmatrix} = \begin{bmatrix} 0.3333 \\ 0.1917 \\ 0.4750 \end{bmatrix}.
+   \end{aligned}
+   $$
    Tiếp tục thay $r^{(1)}$ vào để tính $r^{(2)}$.
 
 ---
@@ -157,7 +172,13 @@ $$A = \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix}$$
 1. Tính $A^T A$:
    $$A^T A = \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix} \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix} = \begin{bmatrix} 13 & 12 \\ 12 & 13 \end{bmatrix}$$
    Phương trình đặc trưng:
-   $$\det(A^T A - \lambda I) = (13 - \lambda)^2 - 12^2 = (13 - \lambda - 12)(13 - \lambda + 12) = (1 - \lambda)(25 - \lambda) = 0$$
+   $$
+   \begin{aligned}
+   \det(A^T A - \lambda I) &= (13 - \lambda)^2 - 12^2 \\
+   &= (13 - \lambda - 12)(13 - \lambda + 12) \\
+   &= (1 - \lambda)(25 - \lambda) = 0.
+   \end{aligned}
+   $$
    Suy ra $\lambda_1 = 25, \lambda_2 = 1$.
    Vector riêng trực chuẩn:
    - Với $\lambda_1 = 25$: $v_1 = \frac{1}{\sqrt{2}} [1, 1]^T$.

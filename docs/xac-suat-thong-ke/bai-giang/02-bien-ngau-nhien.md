@@ -138,7 +138,12 @@ Bốn tính chất nền tảng của CDF:
 
 ::: tip Lưu ý về dấu bằng ở biên
 - Đối với **biến ngẫu nhiên liên tục**: Vì xác suất tại từng điểm bằng 0 ($P(X = a) = P(X = b) = 0$), nên việc lấy dấu bằng hay không ở biên không làm thay đổi kết quả:
-  $$P(a \le X \le b) = P(a < X \le b) = P(a \le X < b) = P(a < X < b) = F(b) - F(a).$$
+  $$
+  \begin{aligned}
+  P(a \le X \le b) &= P(a < X \le b) = P(a \le X < b) \\
+  &= P(a < X < b) = F(b) - F(a).
+  \end{aligned}
+  $$
 - Đối với **biến ngẫu nhiên rời rạc**: Dấu bằng ở biên có ý nghĩa quyết định! Đồ thị CDF của biến rời rạc có dạng bậc thang gián đoạn tại các điểm có xác suất dương:
   $$P(a \le X \le b) = F(b) - F(a^-) = F(b) - F(a) + P(X = a).$$
 :::

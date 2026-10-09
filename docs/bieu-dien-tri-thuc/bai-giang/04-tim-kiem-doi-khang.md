@@ -60,9 +60,9 @@ Công thức đệ quy Minimax được định nghĩa:
 $$
 \text{Minimax}(s) =
 \begin{cases}
-\text{Utility}(s) & \text{nếu } \text{TerminalTest}(s) = \text{true} \\
-\max_{a \in \text{Actions}(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu } \text{Player}(s) = \text{MAX} \\
-\min_{a \in \text{Actions}(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu } \text{Player}(s) = \text{MIN}
+\text{Utility}(s), & s \in \text{Terminal}, \\
+\displaystyle\max_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Lượt của MAX}, \\
+\displaystyle\min_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Lượt của MIN}.
 \end{cases}
 $$
 

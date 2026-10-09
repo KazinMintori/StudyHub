@@ -91,7 +91,12 @@ Xét tập dữ liệu 3 điểm ở mục 1:
 - Thử với $w = 1$: Vector phần dư là $r = (0, 0, 1)^T$. Mất mát tương ứng:
   $$f(1) = \frac{1}{2}(0^2 + 0^2 + 1^2) = \frac{1}{2} = 0.5.$$
 - Thử với $w = \frac{1}{2}$: Vector phần dư là $r = (-\frac{1}{2}, -1, -\frac{1}{2})^T$. Mất mát tương ứng:
-  $$f\left(\frac{1}{2}\right) = \frac{1}{2}\left[\left(-\frac{1}{2}\right)^2 + (-1)^2 + \left(-\frac{1}{2}\right)^2\right] = \frac{1}{2}\left(\frac{1}{4} + 1 + \frac{1}{4}\right) = \frac{3}{4} = 0.75.$$
+  $$
+  \begin{aligned}
+  f\left(\frac{1}{2}\right) &= \frac{1}{2}\left[\left(-\frac{1}{2}\right)^2 + (-1)^2 + \left(-\frac{1}{2}\right)^2\right] \\
+  &= \frac{1}{2}\left(\frac{1}{4} + 1 + \frac{1}{4}\right) = \frac{3}{4} = 0.75.
+  \end{aligned}
+  $$
 
 Rõ ràng $f(1) < f(\frac{1}{2})$, nghĩa là $w = 1$ khớp dữ liệu tốt hơn $w = \frac{1}{2}$. Tuy nhiên, việc thử từng giá trị rời rạc như vậy không thể khẳng định $w = 1$ đã là nghiệm tối ưu toàn cục. Muốn tìm nghiệm tối ưu giữa vô hạn số thực, ta phải viện đến giải tích: đi tìm nơi mà đạo hàm triệt tiêu.
 :::
@@ -100,8 +105,8 @@ Ngoài chuẩn $L_2$, trong học máy chúng ta còn thường xuyên bắt g�
 
 $$
 \begin{aligned}
-\|u\|_1 &= |u_1| + \cdots + |u_n| = \sum_{j=1}^n |u_j| \quad &&\text{(Chuẩn } L_1 \text{ hay khoảng cách Manhattan)}, \\
-\|u\|_\infty &= \max\{|u_1|, \ldots, |u_n|\} \quad &&\text{(Chuẩn } L_\infty \text{ hay khoảng cách Chebyshev)}.
+\|u\|_1 &= \sum_{j=1}^n |u_j| = |u_1| + \cdots + |u_n|, \\
+\|u\|_\infty &= \max_{1 \le j \le n} |u_j|.
 \end{aligned}
 $$
 
@@ -152,7 +157,11 @@ Kiểm tra tính tương thích về chiều ma trận: $A^T$ có kích thước
 ::: example Tìm tham số tối ưu cho mô hình một chiều
 Áp dụng công thức trên vào dữ liệu cụ thể ở đầu bài:
 $$
-f(w) = \frac{1}{2} \left[ (w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] = \frac{1}{2} \left( 14w^2 - 22w + 9 \right) = 7w^2 - 11w + \frac{9}{2}.
+\begin{aligned}
+f(w) &= \frac{1}{2} \left[ (w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] \\
+&= \frac{1}{2} \left( 14w^2 - 22w + 9 \right) \\
+&= 7w^2 - 11w + \frac{9}{2}.
+\end{aligned}
 $$
 
 Đạo hàm bậc nhất:
@@ -170,7 +179,12 @@ Tại điểm dừng $w^* = \frac{11}{14}$:
 - Vector phần dư:
   $$r = \widehat b - b = \left(-\frac{3}{14}, -\frac{6}{14}, \frac{5}{14}\right)^T = \left(-\frac{3}{14}, -\frac{3}{7}, \frac{5}{14}\right)^T.$$
 - Giá trị mất mát tối ưu:
-  $$f(w^*) = \frac{1}{2} \left[ \left(-\frac{3}{14}\right)^2 + \left(-\frac{6}{14}\right)^2 + \left(\frac{5}{14}\right)^2 \right] = \frac{1}{2} \cdot \frac{9 + 36 + 25}{196} = \frac{1}{2} \cdot \frac{70}{196} = \frac{5}{28} \approx 0.1786.$$
+  $$
+  \begin{aligned}
+  f(w^*) &= \frac{1}{2} \left[ \left(-\frac{3}{14}\right)^2 + \left(-\frac{6}{14}\right)^2 + \left(\frac{5}{14}\right)^2 \right] \\
+  &= \frac{1}{2} \cdot \frac{9 + 36 + 25}{196} = \frac{1}{2} \cdot \frac{70}{196} = \frac{5}{28} \approx 0.1786.
+  \end{aligned}
+  $$
 
 Giá trị này nhỏ hơn mức $f(1) = 0.5$ và $f(0.5) = 0.75$ mà ta đã tính thử trước đó. Nhưng liệu điểm dừng $w^* = 11/14$ có chắc chắn là điểm cực tiểu toàn cục, hay chỉ là điểm dừng cục bộ? Để trả lời điều đó, ta cần kiểm tra độ cong địa hình thông qua đạo hàm bậc hai.
 :::
@@ -289,7 +303,10 @@ $$
 Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood** — hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \ldots, b_m)^T$ bằng tích các mật độ thành phần:
 
 $$
-L(w) = p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) = \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
+\begin{aligned}
+L(w) &= p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) \\
+&= \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
+\end{aligned}
 $$
 
 Triết lý ước lượng hợp lý cực đại (**Maximum Likelihood Estimation - MLE**): Ta muốn tìm bộ tham số $w$ sao cho khả năng quan sát được tập dữ liệu hiện có trong thực tế là lớn nhất. 

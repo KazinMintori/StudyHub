@@ -81,7 +81,10 @@ Mô hình hóa CSP:
 
 Một lời giải hợp lệ:
 $$
-\{\text{WA}=\text{red}, \text{NT}=\text{green}, \text{SA}=\text{blue}, \text{Q}=\text{red}, \text{NSW}=\text{green}, \text{V}=\text{red}, \text{T}=\text{red}\}
+\begin{aligned}
+\{ &\text{WA}=\text{red},\; \text{NT}=\text{green},\; \text{SA}=\text{blue},\; \text{Q}=\text{red}, \\
+   &\text{NSW}=\text{green},\; \text{V}=\text{red},\; \text{T}=\text{red} \}
+\end{aligned}
 $$
 
 Lưu ý rằng Tasmania ($\text{T}$) là một hòn đảo độc lập không tiếp giáp với vùng nào, do đó nó có thể nhận bất kỳ màu nào mà không ảnh hưởng tới phần còn lại của lục địa.
