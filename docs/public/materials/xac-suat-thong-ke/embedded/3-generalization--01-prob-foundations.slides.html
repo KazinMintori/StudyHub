@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html">
+<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
@@ -27,14 +27,14 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
       vertical-align: middle;
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1f58c03bc26265810021d8ae65932dae.css">
-  
 
-  
+
+
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -64,12 +64,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none; 
+      list-style-type: none;
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". "; 
+      content: counter(ol) ". ";
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -111,23 +111,23 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0; 
+      margin-right: 0;
     }
   </style>
   <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
+
 <meta property="og:title" content="Probability Foundations – Stat 20">
 <meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
@@ -144,7 +144,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-this course: Introduction to Probability and Statistics 
+this course: Introduction to Probability and Statistics
 </div>
 </div>
 </div>
@@ -208,21 +208,21 @@ Maybe a bit of discussion here about situations in which two things can happen, 
 
 Let $\Omega$ be the outcome space, and let $P(A)$ denote the probability of the event $A$. Then we have:
 
-. . . 
+. . .
 
 1. $P(A) \ge 0$
 
-. . . 
+. . .
 
 2. $P(\Omega) = 1$
 
-. . . 
+. . .
 
 3. If $A$ and $B$ are mutually exclusive ($A \cap B = \{\}$), then $P(A \cup B) = P(A) + P(B)$
 
 :::{.notes}
 Concepts to review: (KEEP THIS BRIEF, OR INCORPORATE INTO CQ's)
-- The first two rules of probability 
+- The first two rules of probability
 - unions and intersections
 - mutually exclusive events and the addition rule
 - good idea to draw Venn diagrams here
@@ -279,11 +279,11 @@ Give them five minutes, can use kahoot music
 <p>Kahneman, Daniel. Thinking, Fast and Slow (p.&nbsp;158). Farrar, Straus and Giroux.</p>
 <!--# Concept review: Simulation, empirical distributions
 
-## Rolling a die 
+## Rolling a die
 
 Recall the following picture from the notes:
 
-![](images/die-emp-prob-dsn.png){fig-align=center} 
+![](images/die-emp-prob-dsn.png){fig-align=center}
 
 :::{.notes}
 Show the picture, and then explain the what the golden and blue distributions are, and the difference. Show them, as you repeat an action over and over again, and take the proportion of the outcomes, these proportions settle down, in the "long run", to the probabilities of the outcomes.
@@ -308,7 +308,7 @@ set.seed(12345)
 coin <- c("Heads", "Tails")
 tosses <- sample(coin, 10, replace = TRUE)
 data.frame(tosses) |>
-  group_by(tosses) |> 
+  group_by(tosses) |>
   summarise(n = n())
 ```
 
@@ -341,7 +341,7 @@ set.seed(12345)
 
 tosses <- sample(coin, 50, replace = TRUE)
 data.frame(tosses) |>
-  group_by(tosses) |> 
+  group_by(tosses) |>
   summarise(n = n())
 ```
 
@@ -374,7 +374,7 @@ set.seed(12345)
 
 tosses <- sample(coin, 500, replace = TRUE)
 data.frame(tosses) |>
-  group_by(tosses) |> 
+  group_by(tosses) |>
   summarise(n = n())
 ```
 
@@ -395,9 +395,9 @@ data.frame(tosses) |>
 
 We see that as the number of tosses increases, the split of heads and tails begins to look closer to 50-50.
 
-## Looking at proportions: 
+## Looking at proportions:
 
-Here is a plot of the *proportion* of tosses that land heads when we toss a coin $n$ times, where $n$ varies from $1$ to $1000$. 
+Here is a plot of the *proportion* of tosses that land heads when we toss a coin $n$ times, where $n$ varies from $1$ to $1000$.
 
 :::{.notes}
 Be sure to explain what they are looking at. We see that at the beginning, for a small number of tosses, the proportion of times that the coin lands heads is all over the place, but it eventually settles down to be around 0.5. This verifies our intuition that if we toss a fair coin, the proportion of times that the coin lands heads should be about 0.5. This idea of the probability of a particular outcome as a long run proportion of times that we see that outcome is called the *frequentist theory of probability*, and we will be using this theory in our class. (A different theory of probability uses a *subjective* notion of probability, but we won’t get into that at this time.) We will think about the probability of heads as the long-run relative frequency, or the proportion of times the coin will land heads if we toss it many, many times. This fits with our intuition that if we have a *fair* coin, that means that each of the two possible outcomes will occur roughly the same number of times when we toss it over and over again. This is the justification for calling the two outcomes *equally likely* and allowing us to define the probability of heads to be 1/2.
@@ -445,7 +445,7 @@ Be sure to explain what they are looking at. We see that at the beginning, for a
           display:block!important;
       }</style></aside>
 <!--
-## {.scrollable} 
+## {.scrollable}
 
 
 ::: {.cell}
@@ -462,16 +462,16 @@ Be sure to explain what they are looking at. We see that at the beginning, for a
 :::
 
 
- Consider the box of tickets shown below. 
- 
-![](images/box-slides-cq-feb-22-2023.png){fig-align=center width="500"} 
- 
+ Consider the box of tickets shown below.
+
+![](images/box-slides-cq-feb-22-2023.png){fig-align=center width="500"}
+
  The plots below show:
- 
+
 1. The probability histogram for the value of a ticket drawn at random from the box
-2. An empirical histogram for which the data were generated by drawing **10** tickets from the box with replacement 
+2. An empirical histogram for which the data were generated by drawing **10** tickets from the box with replacement
 3. An empirical histogram for which the data were generated by drawing **100** tickets from the box with replacement
-4. An empirical histogram generated by **20** draws from a different box. 
+4. An empirical histogram generated by **20** draws from a different box.
 
 
 
@@ -500,7 +500,7 @@ Scroll to see graphs
 # Concept Question 4 -->
 <!--
 
-## 
+##
 
 Part 1: Suppose we roll a die 4 times. The chance that we see six (the face with six spots) at least once is given by $\displaystyle \frac{1}{6} +  \frac{1}{6} + \frac{1}{6} + \frac{1}{6} =  \frac{4}{6} = \frac{2}{3}$
 
@@ -520,12 +520,12 @@ True or false?
 
 
 :::{.notes}
-Both parts are false since we are using the addition rule on events that are not mutually exclusive. It is important that you do NOT talk about what the actual probability is since that uses the multiplication rule and we have not discussed that in the notes. This is more an exercise in when *not* to use the addition rule. 
+Both parts are false since we are using the addition rule on events that are not mutually exclusive. It is important that you do NOT talk about what the actual probability is since that uses the multiplication rule and we have not discussed that in the notes. This is more an exercise in when *not* to use the addition rule.
 :::
 
 -->
 <!--
-# Activity: Coin tossing 
+# Activity: Coin tossing
 
 
 
@@ -547,16 +547,16 @@ The demonstration to be done in class is as follows: -
 
 -   Now you go in and identify the real vs fake flips for each group by looking for the sequence that have long streaks of one number.
 
--   Once you are done, and hopefully you have impressed them with your ability to spot the fake, you can show them, to some extent, what's going on. Have each group go to their sequence and count two quantities: the length of the longest run in the sequence, and the number of switches from 0 to 1 or the other way (number of runs = number of switches + 1). 
+-   Once you are done, and hopefully you have impressed them with your ability to spot the fake, you can show them, to some extent, what's going on. Have each group go to their sequence and count two quantities: the length of the longest run in the sequence, and the number of switches from 0 to 1 or the other way (number of runs = number of switches + 1).
 
--   Then you can hand out copies of the plot I showed you yesterday of the simulated flips showing the distribution of these pairs of numbers, or display it. Get each group to come and tell you their values of the quantity (number of runs, longest run ). 
--   It should not take too long to annotate with the at most 20 points. 
+-   Then you can hand out copies of the plot I showed you yesterday of the simulated flips showing the distribution of these pairs of numbers, or display it. Get each group to come and tell you their values of the quantity (number of runs, longest run ).
+-   It should not take too long to annotate with the at most 20 points.
 
 
 Good luck! I am worried that we will have too many groups and make mistakes, which will reduce the dramatic impact.
 :::
 
-## 
+##
 
 
 ::: {.cell}
@@ -636,7 +636,7 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
+
 
   <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
   <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
@@ -658,7 +658,7 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
- 
+
         // Display controls in the bottom right corner
         controls: false,
 
@@ -836,7 +836,7 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
         ]
       });
     </script>
-    
+
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -882,7 +882,7 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
         });
         const isCodeAnnotation = (el) => {
           for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
+            if (clz.startsWith('code-annotation-')) {
               return true;
             }
           }
@@ -902,11 +902,11 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
             button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
+            tooltip = new bootstrap.Tooltip(button,
+              { trigger: "manual",
                 customClass: "code-copy-button-tooltip",
                 offset: [0, -8]});
-            tooltip.show();    
+            tooltip.show();
           }
           setTimeout(function() {
             if (tooltip) {
@@ -985,7 +985,7 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
           }
             config['offset'] = [0,0];
             config['maxWidth'] = 700;
-          window.tippy(el, config); 
+          window.tippy(el, config);
         }
         const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
         for (var i=0; i<noterefs.length; i++) {
@@ -1064,12 +1064,12 @@ Good luck! I am worried that we will have too many groups and make mistakes, whi
         if (event.indexh === 0) {
           Reveal.configure({ slideNumber: null });
         }
-        if (event.indexh === 1) { 
+        if (event.indexh === 1) {
           Reveal.configure({ slideNumber: 'c' });
         }
       });
     </script>
-    
+
 
 <details style="position:fixed;bottom:8px;left:8px;z-index:100;font-size:12px;background:white;color:black;padding:4px"><summary>Tài liệu tham khảo</summary><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/slides.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></details><script>
 (() => {

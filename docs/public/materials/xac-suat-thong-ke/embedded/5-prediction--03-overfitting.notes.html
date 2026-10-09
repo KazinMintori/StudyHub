@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/5-prediction/03-overfitting/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -142,11 +142,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -194,14 +194,14 @@ The practice of using a predictive model which is very effective at explaining t
 ## Defining overfitting
 
 Learning through examples is one of the most important ways we acquire knowledge.
-Almost all predictive modeling -- from linear regression to artificial intelligence based on deep learning -- is accomplished though learning by example. 
+Almost all predictive modeling -- from linear regression to artificial intelligence based on deep learning -- is accomplished though learning by example.
 
 In simple linear regression we show our model a bunch of pairs of examples $(x_1, y_1), \dots, (x_n, y_n)$ and ask the linear model to best approximate $y$ through the linear function $\widehat{y} = b_0 + b_1 \cdot x$. The "lesson" that the model learns are the values of $b_0$ and $b_1$ that define the relationship between the variables $x$ and $y$ (and those coefficient values are composed of nothing more than the original observations[^slr]).
 
 [^trees]: Definition (Merriam-Webster): to not understand or appreciate a larger situation, problem, etc., because one is considering only a few parts of it.
 
 
-https://www.merriam-webster.com/dictionary/miss%20the%20forest%20for%20the%20trees#:~:text=Definition%20of%20miss%20the%20forest,a%20few%20parts%20of%20it 
+https://www.merriam-webster.com/dictionary/miss%20the%20forest%20for%20the%20trees#:~:text=Definition%20of%20miss%20the%20forest,a%20few%20parts%20of%20it
 
 
 [^slr]: Recall $b_1 = r \frac{s_y}{s_x}$ and each of the statistics involved are functions of $x_i, y_i$ and $n$).
@@ -210,7 +210,7 @@ Have you ever given someone an example to illustrate a concept, but that person 
 Missing the forest for the trees turns out to be one of the most important concepts predictive modeling. In statistics, we call it *overfitting*.
 
 **Overfitting**
-:    The practice of using a predictive model which is very effective at explaining the data used to fit it, but is poor at making predictions on *new* data. 
+:    The practice of using a predictive model which is very effective at explaining the data used to fit it, but is poor at making predictions on *new* data.
 -->
 <section id="overfitting-with-polynomials" class="level2">
 <h2 class="anchored" data-anchor-id="overfitting-with-polynomials">Overfitting with polynomials</h2>
@@ -832,7 +832,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -852,11 +852,11 @@ The set of observations used to assess the accuracy of a predictive model. This 
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -933,7 +933,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -1008,7 +1008,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -1036,7 +1036,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -1060,7 +1060,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -1100,7 +1100,7 @@ The set of observations used to assess the accuracy of a predictive model. This 
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

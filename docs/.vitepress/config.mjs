@@ -73,7 +73,8 @@ export default withMermaid(defineConfig({
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
         {text: course.name, items:[
           {text:'Tổng quan môn học',link:`/${course.id}/`},
-          {text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}
+          {text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`},
+          ...(course.id === 'xac-suat-thong-ke' ? [{text:'Toàn bộ Notes và Slides',link:'/xac-suat-thong-ke/tai-lieu-day-du'}] : [])
         ]},
         ...(course.parts ? course.parts.map(part=>({
           text: part.title,

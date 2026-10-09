@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/04-random-variables/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -173,11 +173,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -370,7 +370,7 @@ Check your answer
 P(X &gt; 2) &amp;= 1 - \left(\binom{10}{0}(0.25)^0 (0.75)^{10} + \binom{10}{1}(0.25)^1 (0.75)^9 + \binom{10}{2}(0.25)^2 (0.75)^8 \right)\\
 &amp; \approx 0.474\\
 \end{aligned}
-\]</span> (The symbol <span class="math inline">\(\approx\)</span> denotes <em>approximately equal</em>.) <!--In this chapter, we will have two "Ideas in Code" sections, with the first one introducing the functions in R that we can use for computing the probabilities associated with special distributions. Before we talk about those, we will consider two more special distributions. 
+\]</span> (The symbol <span class="math inline">\(\approx\)</span> denotes <em>approximately equal</em>.) <!--In this chapter, we will have two "Ideas in Code" sections, with the first one introducing the functions in R that we can use for computing the probabilities associated with special distributions. Before we talk about those, we will consider two more special distributions.
 
 In `R` we can use a special function to compute the binomial probabilities $f(k) = P(X=k)$. It is called `dbinom(x, size, prob)` and takes as input the $k$ that we want (`x`), the number of trials $n$ (`size`), and $p$ (`prob`). In this example, `x` are the values of interest, or 0, 1, 2; `size` is the parameter $n$, which is 10, and `prob` is the probability of a success.
 
@@ -378,8 +378,8 @@ In `R` we can use a special function to compute the binomial probabilities $f(k)
 ::: {.cell}
 
 ```{.r .cell-code  code-fold="false"}
-1 - dbinom(0, size = 10, prob = 0.35) - 
-  dbinom(1, size = 10, prob = 0.35) - 
+1 - dbinom(0, size = 10, prob = 0.35) -
+  dbinom(1, size = 10, prob = 0.35) -
   dbinom(2, size = 10, prob = 0.35)
 ```
 
@@ -427,7 +427,7 @@ dbinom(x = 5, size = 10, prob = 0.4)
 
 ```{.r .cell-code  code-fold="false"}
 # P(X <= 5)
-dbinom(x = 0, size = 10, prob = 0.4) + dbinom(x = 1, size = 10, prob = 0.4) + 
+dbinom(x = 0, size = 10, prob = 0.4) + dbinom(x = 1, size = 10, prob = 0.4) +
   dbinom(x = 2, size = 10, prob = 0.4) + dbinom(x = 3, size = 10, prob = 0.4) +
   dbinom(x = 4, size = 10, prob = 0.4) + dbinom(x = 5, size = 10, prob = 0.4)
 ```
@@ -443,7 +443,7 @@ dbinom(x = 0, size = 10, prob = 0.4) + dbinom(x = 1, size = 10, prob = 0.4) +
 
 ```{.r .cell-code  code-fold="false"}
 # P(3 <= X <= 8)
-dbinom(x = 3, size = 10, prob = 0.4) + dbinom(x = 4, size = 10, prob = 0.4) + 
+dbinom(x = 3, size = 10, prob = 0.4) + dbinom(x = 4, size = 10, prob = 0.4) +
   dbinom(x = 5, size = 10, prob = 0.4) + dbinom(x = 6, size = 10, prob = 0.4) +
   dbinom(x = 7, size = 10, prob = 0.4) + dbinom(x = 8, size = 10, prob = 0.4)
 ```
@@ -681,7 +681,7 @@ Check your answer
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -701,11 +701,11 @@ Check your answer
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -782,7 +782,7 @@ Check your answer
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -857,7 +857,7 @@ Check your answer
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -885,7 +885,7 @@ Check your answer
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -909,7 +909,7 @@ Check your answer
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -949,7 +949,7 @@ Check your answer
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

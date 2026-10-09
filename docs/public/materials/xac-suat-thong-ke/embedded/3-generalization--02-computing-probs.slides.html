@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html">
+<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
@@ -25,14 +25,14 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
       vertical-align: middle;
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1f58c03bc26265810021d8ae65932dae.css">
-  
 
-  
+
+
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -62,12 +62,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none; 
+      list-style-type: none;
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". "; 
+      content: counter(ol) ". ";
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -109,19 +109,19 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0; 
+      margin-right: 0;
     }
   </style>
   <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
@@ -142,7 +142,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-this course: Introduction to Probability and Statistics 
+this course: Introduction to Probability and Statistics
 </div>
 </div>
 </div>
@@ -178,7 +178,7 @@ For conditional probability, one good example to share is election polling. Trum
 <h1>Concept Questions</h1>
 <!--
 
-## Rules 
+## Rules
 
 - Conditional Probabilty
 
@@ -201,7 +201,7 @@ $P(A^C) = 1 - P(A)$
 - Concept questions
 - Break ~3 mins
 
-You can tell them here that $A^C$ is "not A", and then maybe use dice or coin toss examples. Review mutually exclusive vs independent events, emphasizing that these are very different ideas, though both apply to pairs of events. 
+You can tell them here that $A^C$ is "not A", and then maybe use dice or coin toss examples. Review mutually exclusive vs independent events, emphasizing that these are very different ideas, though both apply to pairs of events.
 
 - Mutually exclusive events means that the occurrence of one event prevents the occurrence of the other. (that is, it reduces the chance of the other occurring to 0.)
 
@@ -277,7 +277,7 @@ Independent events means that the occurrence of one event does not change the ch
           display:block!important;
       }</style></aside>
 <!--
-## 
+##
 
 
 
@@ -302,7 +302,7 @@ Suppose we assume, instead, that the probability that the Dodgers would have bea
 :::
 
 :::{.notes}
-if 5 games are played it means one of the teams is leading 3-2. Therefore there are two scenarios: the team that is ahead wins game 6 and the series, or the team that is behind wins game 6 and they go to 7 games. Both are equally likely. 
+if 5 games are played it means one of the teams is leading 3-2. Therefore there are two scenarios: the team that is ahead wins game 6 and the series, or the team that is behind wins game 6 and they go to 7 games. Both are equally likely.
 :::
 -->
 </section>
@@ -340,7 +340,7 @@ $C$ is the event that the last two coins flipped both show tails
           display:block!important;
       }</style></aside>
 <!---
-## 
+##
 
 
 ::: {.cell}
@@ -360,10 +360,10 @@ $C$ is the event that the last two coins flipped both show tails
 Let's play a game where I first roll a fair six-sided die, and then toss a coin as many times as the number of spots I rolled. I win the game if I get all heads.
 
 :::{.poll}
-Given I roll a k what is the probability that I flip all heads? 
+Given I roll a k what is the probability that I flip all heads?
 :::
 
-## 
+##
 
 
 ::: {.cell}
@@ -393,7 +393,7 @@ P(win) = P(roll 1 and all H) + P(roll 2 and all H) + ... = P(all H | roll = 1)*P
 
 
 
-## 
+##
 
 
 ::: {.cell}
@@ -411,7 +411,7 @@ P(win) = P(roll 1 and all H) + P(roll 2 and all H) + ... = P(all H | roll = 1)*P
 
 
 
-A rare condition affects **0.2%** of the population. A test for this condition is 99% accurate: this means that the probability that a person *with* the condition tests positive is 99% and the probability that a person *without* the condition tests negative is 99%. What is the probability that a person who tests positive has the condition? 
+A rare condition affects **0.2%** of the population. A test for this condition is 99% accurate: this means that the probability that a person *with* the condition tests positive is 99% and the probability that a person *without* the condition tests negative is 99%. What is the probability that a person who tests positive has the condition?
 
 
 :::{.notes}
@@ -426,7 +426,7 @@ Let $A$ and $B$ be events with positive probability. Then:
 
 (i) $B$ can be written as $B = (B\cap A) \cup (B \cap A^C)$
 
-(ii)$$ \begin{align} 
+(ii)$$ \begin{align}
     P(A|B) &= \displaystyle \frac{P(A \cap B)}{P(B)}  \\
           &=  \frac{P(A \cap B)}{P(B\cap A) + P(B \cap A^C)} \\
           &= \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^C)P(A^C)}
@@ -493,7 +493,7 @@ Draw a picture here to show how we can write B like this. Now can go over proble
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
+
 
   <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
   <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
@@ -515,7 +515,7 @@ Draw a picture here to show how we can write B like this. Now can go over proble
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
- 
+
         // Display controls in the bottom right corner
         controls: false,
 
@@ -693,7 +693,7 @@ Draw a picture here to show how we can write B like this. Now can go over proble
         ]
       });
     </script>
-    
+
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -739,7 +739,7 @@ Draw a picture here to show how we can write B like this. Now can go over proble
         });
         const isCodeAnnotation = (el) => {
           for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
+            if (clz.startsWith('code-annotation-')) {
               return true;
             }
           }
@@ -759,11 +759,11 @@ Draw a picture here to show how we can write B like this. Now can go over proble
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
             button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
+            tooltip = new bootstrap.Tooltip(button,
+              { trigger: "manual",
                 customClass: "code-copy-button-tooltip",
                 offset: [0, -8]});
-            tooltip.show();    
+            tooltip.show();
           }
           setTimeout(function() {
             if (tooltip) {
@@ -842,7 +842,7 @@ Draw a picture here to show how we can write B like this. Now can go over proble
           }
             config['offset'] = [0,0];
             config['maxWidth'] = 700;
-          window.tippy(el, config); 
+          window.tippy(el, config);
         }
         const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
         for (var i=0; i<noterefs.length; i++) {
@@ -921,12 +921,12 @@ Draw a picture here to show how we can write B like this. Now can go over proble
         if (event.indexh === 0) {
           Reveal.configure({ slideNumber: null });
         }
-        if (event.indexh === 1) { 
+        if (event.indexh === 1) {
           Reveal.configure({ slideNumber: 'c' });
         }
       });
     </script>
-    
+
 
 <details style="position:fixed;bottom:8px;left:8px;z-index:100;font-size:12px;background:white;color:black;padding:4px"><summary>Tài liệu tham khảo</summary><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/3-generalization/02-computing-probs/slides.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></details><script>
 (() => {

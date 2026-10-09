@@ -72,8 +72,9 @@ function removeBranding(text) {
   })
 }
 function removeNonContentScripts(html) {
-  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, script => /googletagmanager|gtag\(|dataLayer|site_libs\/kePrint-/i.test(script) ? '' : script)
+  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, script => /googletagmanager|gtag\(|dataLayer|site_libs\/kePrint-|stat20notes-[^/]+\/stat20notes\.js/i.test(script) ? '' : script)
 }
+const storageShim = `<script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script>`
 const notesStyle = `
 html { color-scheme: light; scroll-behavior: auto; }
 body { margin: 0; background: white; color: #202124; }
@@ -133,9 +134,16 @@ for (const entry of entries) {
       assert.equal((body.match(/<section\b/gi) || []).length + 1, (content.match(/<section\b/gi) || []).length, `${entry.id}: preserve every slide section`)
     }
     const slidesStyle = 'html,body{width:100%;height:100%;margin:0}.reveal{width:100%;height:100%}.quarto-title-author,.quarto-title-affiliation,.slide-logo{display:none!important}'
-    const html = `<!DOCTYPE html><html lang="en"${htmlAttrs}><head><base href="${record.url}">${removeBranding(head)}<style>${kind === 'notes' ? notesStyle : slidesStyle}</style></head><body${bodyAttrs}>${removeNonContentScripts(content)}<script>${frameScript}</script></body></html>`
+    let html = `<!DOCTYPE html><html lang="en"${htmlAttrs}><head><base href="${record.url}">${storageShim}<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>${removeBranding(head)}<style>${kind === 'notes' ? notesStyle : slidesStyle}</style></head><body${bodyAttrs}>${removeNonContentScripts(content)}<script>${frameScript}</script></body></html>`
+    const scriptsSeen = new Set()
+    html = html.replace(/<script\b[^>]*\bsrc="([^"]+)"[^>]*>[\s\S]*?<\/script>/gi, (script, src) => {
+      const key = /countdown[^/]*\/countdown\.js/.test(src) ? 'countdown-runtime' : src
+      if (scriptsSeen.has(key)) return ''
+      scriptsSeen.add(key)
+      return script
+    })
     const name = `${entry.id}.${kind}.html`
-    await writeFile(path.join(publicDir, name), html)
+    await writeFile(path.join(publicDir, name), html.replace(/[\t ]+(?=\r?$)/gm, ''))
     audit.push({ id: entry.id, kind, source: record.url, file: name, paragraphs: (main?.match(/<p\b/gi) || []).length, slideSections: (body.match(/<section\b/gi) || []).length })
   }
 }

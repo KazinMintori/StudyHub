@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html">
+<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
@@ -27,7 +27,7 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
@@ -98,9 +98,9 @@
     code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1f58c03bc26265810021d8ae65932dae.css">
-  
 
-  
+
+
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -130,12 +130,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none; 
+      list-style-type: none;
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". "; 
+      content: counter(ol) ". ";
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -177,23 +177,23 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0; 
+      margin-right: 0;
     }
   </style>
   <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
+
 <meta property="og:title" content="Multiple Linear Regression – Stat 20">
 <meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
@@ -210,7 +210,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-this course: Introduction to Probability and Statistics 
+this course: Introduction to Probability and Statistics
 </div>
 </div>
 </div>
@@ -262,7 +262,7 @@ Call:
 lm(formula = flipper_length_mm ~ bill_length_mm, data = penguins)
 
 Coefficients:
-   (Intercept)  bill_length_mm  
+   (Intercept)  bill_length_mm
        127.330           1.674  </code></pre>
 </div>
 </div>
@@ -303,7 +303,7 @@ Call:
 lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo
          147.563             1.096            -5.247            17.552  </code></pre>
 </div>
 </div>
@@ -344,7 +344,7 @@ Call:
 lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo
          147.563             1.096            -5.247            17.552  </code></pre>
 </div>
 </div>
@@ -383,11 +383,11 @@ Coefficients:
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = flipper_length_mm ~ bill_length_mm + bill_depth_mm, 
+lm(formula = flipper_length_mm ~ bill_length_mm + bill_depth_mm,
     data = penguins)
 
 Coefficients:
-   (Intercept)  bill_length_mm   bill_depth_mm  
+   (Intercept)  bill_length_mm   bill_depth_mm
        194.218           1.409          -3.218  </code></pre>
 </div>
 </div>
@@ -457,13 +457,13 @@ m1 <- lm(flipper_length_mm ~ bill_length_mm, data = penguins)
 :::
 
 
-. . . 
+. . .
 
 
 ::: {.cell}
 
 ```{.r .cell-code}
-m2 <- lm(flipper_length_mm ~ bill_length_mm + body_mass_g + species, 
+m2 <- lm(flipper_length_mm ~ bill_length_mm + body_mass_g + species,
          data = penguins)
 ```
 :::
@@ -472,7 +472,7 @@ m2 <- lm(flipper_length_mm ~ bill_length_mm + body_mass_g + species,
 
 
 :::notes
-Remind students that they need to remember whether `species` and `body_mass_g` are numerical or categorical. Students should know how many species there are (three). 
+Remind students that they need to remember whether `species` and `body_mass_g` are numerical or categorical. Students should know how many species there are (three).
 
 One addl. coefficient for body mass; two addl. for species (one less than the number of species, which is three). This gives a total of three more coefficients.
 
@@ -501,7 +501,7 @@ Consider the following linear regression output where the variable `school` is c
 What are the dimensions of `GPA_summary`?
 :::
 
-. . . 
+. . .
 
 
 ::: {.cell}
@@ -518,7 +518,7 @@ What are the dimensions of `GPA_summary`?
 :::
 
 
-. . . 
+. . .
 
 :::notes
 The correct answer in the poll should be 3x4. The three rows are for the three levels in the school category (there *is* an additional level beyond `"Cal"` and `"Stanford"`, regardless if it is not stated).  One column is for the school name, the other three are for each of the statistics calculated; the three rows are for the three levels in the school category.
@@ -576,7 +576,7 @@ This one warms students up to the idea of working between the formula, the equat
 :::
 
 
-## 
+##
 
 
 ::: {.cell}
@@ -593,8 +593,8 @@ Call:
 lm(formula = bill_depth_mm ~ bill_length_mm, data = penguins)
 
 Coefficients:
-   (Intercept)  bill_length_mm  
-      20.78665        -0.08233  
+   (Intercept)  bill_length_mm
+      20.78665        -0.08233
 ```
 
 
@@ -655,7 +655,7 @@ After the first question, some should get the second one correct, but the fact t
 You may want to follow this question up by drawing on a board a data frame with `bill_length_mm` and `species` and show how you need to mutate two new dummy variables. You can also mention that by default, R leaves as the references level the one which comes first alphabetically.
 :::
 
-## 
+##
 
 
 ::: {.cell layout-align="center"}
@@ -682,8 +682,8 @@ Call:
 lm(formula = bill_depth_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
-         10.5653            0.2004           -1.9331           -5.1033  
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo
+         10.5653            0.2004           -1.9331           -5.1033
 ```
 
 
@@ -732,8 +732,8 @@ Call:
 lm(formula = bill_depth_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
-         10.5653            0.2004           -1.9331           -5.1033  
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo
+         10.5653            0.2004           -1.9331           -5.1033
 ```
 
 
@@ -891,7 +891,7 @@ This one assess their ability to use a conditional interpretation of a regressio
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
+
 
   <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
   <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
@@ -913,7 +913,7 @@ This one assess their ability to use a conditional interpretation of a regressio
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
- 
+
         // Display controls in the bottom right corner
         controls: false,
 
@@ -1091,7 +1091,7 @@ This one assess their ability to use a conditional interpretation of a regressio
         ]
       });
     </script>
-    
+
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -1137,7 +1137,7 @@ This one assess their ability to use a conditional interpretation of a regressio
         });
         const isCodeAnnotation = (el) => {
           for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
+            if (clz.startsWith('code-annotation-')) {
               return true;
             }
           }
@@ -1157,11 +1157,11 @@ This one assess their ability to use a conditional interpretation of a regressio
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
             button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
+            tooltip = new bootstrap.Tooltip(button,
+              { trigger: "manual",
                 customClass: "code-copy-button-tooltip",
                 offset: [0, -8]});
-            tooltip.show();    
+            tooltip.show();
           }
           setTimeout(function() {
             if (tooltip) {
@@ -1240,7 +1240,7 @@ This one assess their ability to use a conditional interpretation of a regressio
           }
             config['offset'] = [0,0];
             config['maxWidth'] = 700;
-          window.tippy(el, config); 
+          window.tippy(el, config);
         }
         const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
         for (var i=0; i<noterefs.length; i++) {
@@ -1319,12 +1319,12 @@ This one assess their ability to use a conditional interpretation of a regressio
         if (event.indexh === 0) {
           Reveal.configure({ slideNumber: null });
         }
-        if (event.indexh === 1) { 
+        if (event.indexh === 1) {
           Reveal.configure({ slideNumber: 'c' });
         }
       });
     </script>
-    
+
 
 <details style="position:fixed;bottom:8px;left:8px;z-index:100;font-size:12px;background:white;color:black;padding:4px"><summary>Tài liệu tham khảo</summary><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/slides.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></details><script>
 (() => {

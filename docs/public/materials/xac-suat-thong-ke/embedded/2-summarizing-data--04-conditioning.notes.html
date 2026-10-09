@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/04-conditioning/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -148,11 +148,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -164,17 +164,17 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 83 × 5
    name                       sleep_total log_bodywt vore  conservation
-   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
- 1 Cheetah                           12.1      10.8  carni lc          
- 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;        
- 3 Mountain beaver                   14.4       7.21 herbi nt          
- 4 Greater short-tailed shrew        14.9       2.94 omni  lc          
+   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 Cheetah                           12.1      10.8  carni lc
+ 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;
+ 3 Mountain beaver                   14.4       7.21 herbi nt
+ 4 Greater short-tailed shrew        14.9       2.94 omni  lc
  5 Cow                                4        13.3  herbi domesticated
- 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;        
- 7 Northern fur seal                  8.7       9.93 carni vu          
- 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;        
+ 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;
+ 7 Northern fur seal                  8.7       9.93 carni vu
+ 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;
  9 Dog                               10.1       9.55 carni domesticated
-10 Roe deer                           3         9.60 herbi lc          
+10 Roe deer                           3         9.60 herbi lc
 # ℹ 73 more rows</code></pre>
 </div>
 </div>
@@ -209,7 +209,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
   name             sleep_total log_bodywt vore    conservation
-  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
 1 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
 </div>
 </div>
@@ -266,15 +266,15 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 5
   name                 sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
 1 Cow                          4         13.3 herbi domesticated
-2 Asian elephant               3.9       14.8 herbi en          
+2 Asian elephant               3.9       14.8 herbi en
 3 Horse                        2.9       13.2 herbi domesticated
 4 Donkey                       3.1       12.1 herbi domesticated
-5 Giraffe                      1.9       13.7 herbi cd          
-6 Pilot whale                  2.7       13.6 carni cd          
-7 African elephant             3.3       15.7 herbi vu          
-8 Brazilian tapir              4.4       12.2 herbi vu          
+5 Giraffe                      1.9       13.7 herbi cd
+6 Pilot whale                  2.7       13.6 carni cd
+7 African elephant             3.3       15.7 herbi vu
+8 Brazilian tapir              4.4       12.2 herbi vu
 9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
 </div>
 </div>
@@ -289,14 +289,14 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 5
   name             sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
 1 Cow                      4         13.3 herbi domesticated
-2 Asian elephant           3.9       14.8 herbi en          
+2 Asian elephant           3.9       14.8 herbi en
 3 Horse                    2.9       13.2 herbi domesticated
 4 Donkey                   3.1       12.1 herbi domesticated
-5 Giraffe                  1.9       13.7 herbi cd          
-6 Pilot whale              2.7       13.6 carni cd          
-7 African elephant         3.3       15.7 herbi vu          
+5 Giraffe                  1.9       13.7 herbi cd
+6 Pilot whale              2.7       13.6 carni cd
+7 African elephant         3.3       15.7 herbi vu
 8 Brazilian tapir          4.4       12.2 herbi vu          </code></pre>
 </div>
 </div>
@@ -307,14 +307,14 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 5
   name             sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
 1 Cow                      4         13.3 herbi domesticated
-2 Asian elephant           3.9       14.8 herbi en          
+2 Asian elephant           3.9       14.8 herbi en
 3 Horse                    2.9       13.2 herbi domesticated
 4 Donkey                   3.1       12.1 herbi domesticated
-5 Giraffe                  1.9       13.7 herbi cd          
-6 Pilot whale              2.7       13.6 carni cd          
-7 African elephant         3.3       15.7 herbi vu          
+5 Giraffe                  1.9       13.7 herbi cd
+6 Pilot whale              2.7       13.6 carni cd
+7 African elephant         3.3       15.7 herbi vu
 8 Brazilian tapir          4.4       12.2 herbi vu          </code></pre>
 </div>
 </div>
@@ -325,18 +325,18 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    name                 sleep_total log_bodywt vore  conservation
-   &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+   &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
  1 Cow                          4        13.3  herbi domesticated
- 2 Roe deer                     3         9.60 herbi lc          
- 3 Asian elephant               3.9      14.8  herbi en          
+ 2 Roe deer                     3         9.60 herbi lc
+ 3 Asian elephant               3.9      14.8  herbi en
  4 Horse                        2.9      13.2  herbi domesticated
  5 Donkey                       3.1      12.1  herbi domesticated
- 6 Giraffe                      1.9      13.7  herbi cd          
- 7 Pilot whale                  2.7      13.6  carni cd          
- 8 African elephant             3.3      15.7  herbi vu          
+ 6 Giraffe                      1.9      13.7  herbi cd
+ 7 Pilot whale                  2.7      13.6  carni cd
+ 8 African elephant             3.3      15.7  herbi vu
  9 Sheep                        3.8      10.9  herbi domesticated
-10 Caspian seal                 3.5      11.4  carni vu          
-11 Brazilian tapir              4.4      12.2  herbi vu          
+10 Caspian seal                 3.5      11.4  carni vu
+11 Brazilian tapir              4.4      12.2  herbi vu
 12 Bottle-nosed dolphin         5.2      12.1  carni &lt;NA&gt;        </code></pre>
 </div>
 </div>
@@ -357,8 +357,8 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   name             sleep_total log_bodywt vore    conservation
-  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
-1 African elephant         3.3      15.7  herbi   vu          
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1 African elephant         3.3      15.7  herbi   vu
 2 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
 </div>
 </div>
@@ -368,8 +368,8 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   name             sleep_total log_bodywt vore    conservation
-  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       
-1 African elephant         3.3      15.7  herbi   vu          
+  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1 African elephant         3.3      15.7  herbi   vu
 2 Little brown bat        19.9       2.30 insecti &lt;NA&gt;        </code></pre>
 </div>
 </div>
@@ -476,14 +476,14 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 5
   name                 sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
-1 African elephant             3.3       15.7 herbi vu          
-2 Asian elephant               3.9       14.8 herbi en          
-3 Giraffe                      1.9       13.7 herbi cd          
-4 Pilot whale                  2.7       13.6 carni cd          
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1 African elephant             3.3       15.7 herbi vu
+2 Asian elephant               3.9       14.8 herbi en
+3 Giraffe                      1.9       13.7 herbi cd
+4 Pilot whale                  2.7       13.6 carni cd
 5 Cow                          4         13.3 herbi domesticated
 6 Horse                        2.9       13.2 herbi domesticated
-7 Brazilian tapir              4.4       12.2 herbi vu          
+7 Brazilian tapir              4.4       12.2 herbi vu
 8 Donkey                       3.1       12.1 herbi domesticated
 9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
 </div>
@@ -498,14 +498,14 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 5
   name                 sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
-1 African elephant             3.3       15.7 herbi vu          
-2 Asian elephant               3.9       14.8 herbi en          
-3 Giraffe                      1.9       13.7 herbi cd          
-4 Pilot whale                  2.7       13.6 carni cd          
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1 African elephant             3.3       15.7 herbi vu
+2 Asian elephant               3.9       14.8 herbi en
+3 Giraffe                      1.9       13.7 herbi cd
+4 Pilot whale                  2.7       13.6 carni cd
 5 Cow                          4         13.3 herbi domesticated
 6 Horse                        2.9       13.2 herbi domesticated
-7 Brazilian tapir              4.4       12.2 herbi vu          
+7 Brazilian tapir              4.4       12.2 herbi vu
 8 Donkey                       3.1       12.1 herbi domesticated
 9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
 </div>
@@ -519,14 +519,14 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 5
   name                 sleep_total log_bodywt vore  conservation
-  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
-1 African elephant             3.3       15.7 herbi vu          
-2 Asian elephant               3.9       14.8 herbi en          
-3 Giraffe                      1.9       13.7 herbi cd          
-4 Pilot whale                  2.7       13.6 carni cd          
+  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1 African elephant             3.3       15.7 herbi vu
+2 Asian elephant               3.9       14.8 herbi en
+3 Giraffe                      1.9       13.7 herbi cd
+4 Pilot whale                  2.7       13.6 carni cd
 5 Cow                          4         13.3 herbi domesticated
 6 Horse                        2.9       13.2 herbi domesticated
-7 Brazilian tapir              4.4       12.2 herbi vu          
+7 Brazilian tapir              4.4       12.2 herbi vu
 8 Donkey                       3.1       12.1 herbi domesticated
 9 Bottle-nosed dolphin         5.2       12.1 carni &lt;NA&gt;        </code></pre>
 </div>
@@ -625,17 +625,17 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <pre><code># A tibble: 83 × 5
 # Groups:   vore [5]
    name                       sleep_total log_bodywt vore  conservation
-   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
- 1 Cheetah                           12.1      10.8  carni lc          
- 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;        
- 3 Mountain beaver                   14.4       7.21 herbi nt          
- 4 Greater short-tailed shrew        14.9       2.94 omni  lc          
+   &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 Cheetah                           12.1      10.8  carni lc
+ 2 Owl monkey                        17         6.17 omni  &lt;NA&gt;
+ 3 Mountain beaver                   14.4       7.21 herbi nt
+ 4 Greater short-tailed shrew        14.9       2.94 omni  lc
  5 Cow                                4        13.3  herbi domesticated
- 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;        
- 7 Northern fur seal                  8.7       9.93 carni vu          
- 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;        
+ 6 Three-toed sloth                  14.4       8.26 herbi &lt;NA&gt;
+ 7 Northern fur seal                  8.7       9.93 carni vu
+ 8 Vesper mouse                       7         3.81 &lt;NA&gt;  &lt;NA&gt;
  9 Dog                               10.1       9.55 carni domesticated
-10 Roe deer                           3         9.60 herbi lc          
+10 Roe deer                           3         9.60 herbi lc
 # ℹ 73 more rows</code></pre>
 </div>
 </div>
@@ -674,7 +674,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -694,11 +694,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -775,7 +775,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -850,7 +850,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -878,7 +878,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -902,7 +902,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -942,7 +942,7 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

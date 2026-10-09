@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/4-causation/02-experiments/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -140,11 +140,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -154,9 +154,9 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 <p><span class="dropcap">C</span>ausation has a tricky relationship with data. We can’t observe the precise counterfactual that would allow us to identify an individual cause. Instead, statisticians use a host of methods to find a good approximation of the counterfactual, usually by focusing on a group-level quantity called an average treatment effect.</p>
 <p>We now introduce the most important tool for approximating group-level counterfactuals, the randomized experiment.<br>
 <!--In the last set of notes, randomized experimentation was presented as a method
-for approximating group-level counterfactuals.  Randomized experimentation is a 
+for approximating group-level counterfactuals.  Randomized experimentation is a
 powerful idea but doesn't always work perfectly in practice.  In this set of notes, we will explore a tool called covariate balance which allows us to check how well
-randomized assignment is working.  It will also help us evaluate causal claims 
+randomized assignment is working.  It will also help us evaluate causal claims
 in cases where researchers were not able to perform an experiment.--></p>
 <section id="principles-of-experimental-design" class="level2">
 <h2 class="anchored" data-anchor-id="principles-of-experimental-design">Principles of Experimental Design</h2>
@@ -696,7 +696,7 @@ null <- format_data |>
 null |>
   visualize() +
   shade_p_value(obs_stat, direction = 'both')
-  
+
 null |> get_p_value(obs_stat, direction = 'both')
 
 ```-->
@@ -747,7 +747,7 @@ Unemployment is a complex social problem.  It is not always easy for unemployed 
 to ``just get a job."  For example, employers may be wary of hiring someone without
 a recent work history, and job-seekers without advanced training may be offered
 only such low-paid, high-effort work that they prefer to
-sit out the labor market entirely.  
+sit out the labor market entirely.
 
 One strategy governments and nonprofit organization have contemplated for getting
 people into the labor market is job training programs.  The idea is to give public
@@ -757,12 +757,12 @@ in short-term work experiences that also give them employable skills (e.g. const
 office work, or healthcare aides), boosting their incentive and ability to seek out
 work on their own at the end of the program.  The causal claim associated with this strategy is that
 participation in a job-training program causes increased wages and labor force
-participation after the program's end.  
+participation after the program's end.
 
 In the 1970s the US government decided to find out if this strategy actually works as intended, and they
 commissioned a large randomized experiment called the National Supported Work Demonstration.  ALmost 10,000
-individuals --- primarily women who had previously been on government welfare, 
-individuals recovering from drug addiction, individuals with criminal records, and 
+individuals --- primarily women who had previously been on government welfare,
+individuals recovering from drug addiction, individuals with criminal records, and
 young people without professional credentials --- were enrolled, and half(?) of them
 were randomized to receive a job training opportunity, while the others did not.
 -->
@@ -1300,10 +1300,10 @@ A variable collected in a randomized experiment that was measured or determined 
 </dd>
 </dl>
 <p>Notice that covariates cannot be affected by the treatment since they were measured first. Variables measured after treatment, including the outcome variable, may be affected by the treatment. <!--f these v were collected
-before or after treatment assignment was determined.  Variables measured or 
+before or after treatment assignment was determined.  Variables measured or
 determined in value before treatment assignment --- --> In our example, it’s reasonable to imagine that major, GPA, and native speaker status could all have been measured prior to the assignment, so they are covariates.</p>
-<!--It 
-is natural to ask why the government bothered collecting this data.  From the last 
+<!--It
+is natural to ask why the government bothered collecting this data.  From the last
 set of notes, we already know how to estimate the ATE using the  treatment and the outcome
 alone.-->
 </section>
@@ -1351,23 +1351,23 @@ SMD(x) = \frac{\overline{x}_{treatment} - \overline{x}_{control}}{\sqrt{\frac{1}
 </div>
 </div>
 <p>The p-value is 0.396. Clearly the difference in means we observed for GPA is not unexpected under random treatment assignment given our small sample size. Note that although our ultimate project here is investigating a causal claim, this particular step is an example of generalization: based on the particular set of treatment assignments we see in this dataset (the sample), we are making a claim about the broader process that generated the treatment assignments.</p>
-<!--Our null hypothesis is that treatment is independent of every one of the 
+<!--Our null hypothesis is that treatment is independent of every one of the
 covariates.  If we were focusing on a single covariate, the SMD would be a good
 test statistic, but it would be nice to bring together all the information across
-our covariates.  To do so, we'll apply some of our tools for prediction.  If 
+our covariates.  To do so, we'll apply some of our tools for prediction.  If
 covariates look systematically different across the groups, it should be possible
 to guess with high accuracy which group a subject is in based on their covariate
 values. So we will fit an ordinary regression model to predict treatment status
 using all our covariates.  Letting $z_i$ represent treatment status for subject
-$i$ and $\widehat{z}_i$ represent our predicted value for subject $i$'s treatment 
-status based on $k$ covariates, we will compute the following test 
+$i$ and $\widehat{z}_i$ represent our predicted value for subject $i$'s treatment
+status based on $k$ covariates, we will compute the following test
 statistic:-->
 <!--This is known as an F-statistic and is used more generally to compare how
 much better a regression models predicts than using the sample mean (relative to the
 amount of noise).  [^Fstat]. It will tend to be close to 1 when the covariates are not
 helpful for predicting treatment status and much larger when they are useful.-->
 <!--[^Fstat] The formula for the F-statistic may not seem very intuitive.  -->
-<!--We can use the following \texttt{infer} pipeline to conduct the test in the 
+<!--We can use the following \texttt{infer} pipeline to conduct the test in the
 pdf vs. website problem:
 
 
@@ -1382,8 +1382,8 @@ and that we conduct a one-tailed test (since our test statistic takes on large
 values when the null hypothesis is false).-->
 <!--### What if large imbalances are present?-->
 <p>One of the most important reasons to check covariate balance is to catch problems with how the experiment was run. Suppose that we’d intended to sort a spreadsheet in a random order and assign the top half of the subjects to pdf, but that by accident we sorted on GPA instead of randomly. In this case our covariate balance test would likely have rejected the null hypothesis that treatment was randomly assigned, allowing us to catch the issue. For this reason it is often a good idea to check balance before actually running the experiment!</p>
-<!-- In our example, there is no particular evidence of improper randomization.  
- However, it may still bother us that the pdf group has a mean GPA of 3.55 
+<!-- In our example, there is no particular evidence of improper randomization.
+ However, it may still bother us that the pdf group has a mean GPA of 3.55
  while the website group has a mean GPA of 3.28.  Even if this imbalance is
  the result of bad luck rather than systematic bad randomization it may still
  undermine our claims.  For this reason, instead of using a simple difference
@@ -1409,24 +1409,24 @@ visualize(null_reg) +
 get_p_value(null_reg, obs_reg, direction = 'both')
 
 ```-->
-<!--Although this pipeline gives us coefficients and estimates for the GPA 
+<!--Although this pipeline gives us coefficients and estimates for the GPA
 coefficient and the intercept we only care about the coefficient of the treatment
 our study set out to measure, in this case ``groupwebsite."  From the plot we
 can see that the ATE estimate using regression is slightly larger in magnitude
 than the ATE estimate using the difference in proportions, but neither estimate
 looks significantly different from zero.-->
 <!--[^linkfun]: It may seem odd to fit a multiple least-squares regression to a binary
-outcome like whether understanding is deep rather than a logistic regression as 
+outcome like whether understanding is deep rather than a logistic regression as
 we might have in the prediction unit.  The reason we do it is because we care
-about extracting and interpreting the model's coefficients rather than its predictions.  
+about extracting and interpreting the model's coefficients rather than its predictions.
 Logistic regression coefficients have a complex nonlinear relationship with the
 outcome variable and don't provide good estimates for the ATE in general.
 <!--is good for prediction, but its coefficients are harder to interpret and do not
 correspond-->
 <!--MOVE THIS PARAGRAPH TO FOOTNOTE? Of course, a better way to deal with the issue of GPA balance is to run your
 experiment on students who all have near-identical GPAs, or divide your students
-into several subgroups each with near-identical GPAS and assign equal numbers of 
-treatment and control subjects in each group.  This is known as blocking and 
+into several subgroups each with near-identical GPAS and assign equal numbers of
+treatment and control subjects in each group.  This is known as blocking and
 ensures good balance, although it can be complicated to do in practice and cannot
 be done for many variables at once.-->
 </section>
@@ -1455,7 +1455,7 @@ be done for many variables at once.-->
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -1475,11 +1475,11 @@ be done for many variables at once.-->
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -1556,7 +1556,7 @@ be done for many variables at once.-->
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -1631,7 +1631,7 @@ be done for many variables at once.-->
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -1659,7 +1659,7 @@ be done for many variables at once.-->
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -1683,7 +1683,7 @@ be done for many variables at once.-->
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -1723,7 +1723,7 @@ be done for many variables at once.-->
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

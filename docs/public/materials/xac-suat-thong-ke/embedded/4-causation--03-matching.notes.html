@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/4-causation/03-matching/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -142,11 +142,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -264,7 +264,7 @@ similar attributes.-->
 #| warning: false
 
 
-tab <- tibble(`Student` = c("Evelyn Fix", "Eleanor Fix", 
+tab <- tibble(`Student` = c("Evelyn Fix", "Eleanor Fix",
                             "Jerzy Neyman", "Jenny Neyman",
                             "David Blackwell", "Derek Blackwell",
                             "Betty Scott", "Brandon Scott"),
@@ -276,14 +276,14 @@ tab <- tibble(`Student` = c("Evelyn Fix", "Eleanor Fix",
               `Good Job` = c("yes", "no","yes","no", "yes","yes","no","no"))
 ```-->
 <!--When we conduct covariate balance checks comparing the treatment (graduated from
-Cal) group and the control group, we see that these groups look very similar.  
-If we had been able to randomly assign graduation status, it would not be 
+Cal) group and the control group, we see that these groups look very similar.
+If we had been able to randomly assign graduation status, it would not be
 surprising to see a pattern of covariate balance measures like this one.-->
 <!--```{r}
 #| echo: false
 library(cobalt)
 sibs <- tab |>
-    mutate(cal_grad = `Cal Grad`== 'yes') 
+    mutate(cal_grad = `Cal Grad`== 'yes')
 bal.tab(cal_grad ~ GPA + `Years exp` + Rec, data = sibs,
         s.d.denom = 'pooled', binary = 'std') |>
   plot()
@@ -294,7 +294,7 @@ bal.tab(cal_grad ~ GPA + `Years exp` + Rec, data = sibs,
 #| echo: false
 library(infer)
 pvalue_summary <- data.frame('covariate' = c(), 'pvalue' = c())
-sibs_rec <- sibs |> 
+sibs_rec <- sibs |>
   mutate(strong_Rec = as.numeric('Rec' == 'strong'))
 set.seed(2024-3-26)
 for(cov_name in c('GPA','Years exp', 'strong_Rec')){
@@ -302,16 +302,16 @@ for(cov_name in c('GPA','Years exp', 'strong_Rec')){
    specify( response = !!sym(cov_name),
            explanatory = `Cal Grad`) |>
     calculate(stat = 'diff in means', order = c('yes','no'))
-   
+
    null <- sibs_rec |>
    specify( response = !!sym(cov_name),
            explanatory = `Cal Grad`) |>
      hypothesize(null = 'independence') |>
      generate(reps = 500, type = 'permute') |>
     calculate(stat = 'diff in means', order = c('yes','no'))
-   
+
    pval <- get_p_value(null, obs_stat, direction = 'both')
-   pvalue_summary <- bind_rows(data.frame('covariate' = cov_name, 
+   pvalue_summary <- bind_rows(data.frame('covariate' = cov_name,
                                           'pvalue' = pval), pvalue_summary)
 }
 pvalue_summary
@@ -400,7 +400,7 @@ null <- grad_matched |>
 null |>
   visualize() +
   shade_p_value(obs_stat, direction = 'both')
-  
+
 null |> get_p_value(obs_stat, direction = 'both')
 
 
@@ -453,7 +453,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -473,11 +473,11 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -554,7 +554,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -629,7 +629,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -657,7 +657,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -681,7 +681,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -721,7 +721,7 @@ that unobserved variables are not present.  MENTION SENSITIVITY ANALYSIS HERE OR
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

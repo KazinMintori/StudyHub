@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/06-multiple-linear-regression/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -149,11 +149,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -198,18 +198,18 @@ A method of explaining a continuous numerical <span class="math inline">\(y\)</s
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 168 × 6
-   restaurant          price  food decor service geo  
+   restaurant          price  food decor service geo
    &lt;chr&gt;               &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;
- 1 Daniella Ristorante    43    22    18      20 west 
- 2 Tello's Ristorante     32    20    19      19 west 
- 3 Biricchino             34    21    13      18 west 
- 4 Bottino                41    20    20      17 west 
- 5 Da Umberto             54    24    19      21 west 
- 6 Le Madri               52    22    22      21 west 
- 7 Le Zie                 34    22    16      21 west 
- 8 Pasticcio              34    20    18      21 east 
- 9 Belluno                39    22    19      22 east 
-10 Cinque Terre           44    21    17      19 east 
+ 1 Daniella Ristorante    43    22    18      20 west
+ 2 Tello's Ristorante     32    20    19      19 west
+ 3 Biricchino             34    21    13      18 west
+ 4 Bottino                41    20    20      17 west
+ 5 Da Umberto             54    24    19      21 west
+ 6 Le Madri               52    22    22      21 west
+ 7 Le Zie                 34    22    16      21 west
+ 8 Pasticcio              34    20    18      21 east
+ 9 Belluno                39    22    19      22 east
+10 Cinque Terre           44    21    17      19 east
 # ℹ 158 more rows</code></pre>
 </div>
 </div>
@@ -238,7 +238,7 @@ Call:
 lm(formula = price ~ food + geo, data = zagat)
 
 Coefficients:
-(Intercept)         food      geowest  
+(Intercept)         food      geowest
     -15.970        2.875       -1.459  </code></pre>
 </div>
 </div>
@@ -259,17 +259,17 @@ A variable that is 1 if an observation takes a particular level of a categorical
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 168 × 4
     food price geo   geowest
-   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt;  
- 1    22    43 west  TRUE   
- 2    20    32 west  TRUE   
- 3    21    34 west  TRUE   
- 4    20    41 west  TRUE   
- 5    24    54 west  TRUE   
- 6    22    52 west  TRUE   
- 7    22    34 west  TRUE   
- 8    20    34 east  FALSE  
- 9    22    39 east  FALSE  
-10    21    44 east  FALSE  
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt;
+ 1    22    43 west  TRUE
+ 2    20    32 west  TRUE
+ 3    21    34 west  TRUE
+ 4    20    41 west  TRUE
+ 5    24    54 west  TRUE
+ 6    22    52 west  TRUE
+ 7    22    34 west  TRUE
+ 8    20    34 east  FALSE
+ 9    22    39 east  FALSE
+10    21    44 east  FALSE
 # ℹ 158 more rows</code></pre>
 </div>
 </div>
@@ -313,11 +313,11 @@ A variable that is 1 if an observation takes a particular level of a categorical
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = price ~ food + geo, data = mutate(zagat, geo = factor(geo, 
+lm(formula = price ~ food + geo, data = mutate(zagat, geo = factor(geo,
     levels = c("west", "east"))))
 
 Coefficients:
-(Intercept)         food      geoeast  
+(Intercept)         food      geoeast
     -17.430        2.875        1.459  </code></pre>
 </div>
 </div>
@@ -344,7 +344,7 @@ Call:
 lm(formula = price ~ food + decor, data = zagat)
 
 Coefficients:
-(Intercept)         food        decor  
+(Intercept)         food        decor
     -24.500        1.646        1.882  </code></pre>
 </div>
 </div>
@@ -426,7 +426,7 @@ Coefficients:
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -446,11 +446,11 @@ Coefficients:
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -527,7 +527,7 @@ Coefficients:
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -602,7 +602,7 @@ Coefficients:
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -630,7 +630,7 @@ Coefficients:
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -654,7 +654,7 @@ Coefficients:
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -694,7 +694,7 @@ Coefficients:
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

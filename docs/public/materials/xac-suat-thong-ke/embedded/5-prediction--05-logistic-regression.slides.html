@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html">
+<!DOCTYPE html><html lang="en" ><head><base href="https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
@@ -25,7 +25,7 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
@@ -96,9 +96,9 @@
     code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1f58c03bc26265810021d8ae65932dae.css">
-  
 
-  
+
+
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -128,12 +128,12 @@
     }
     .reveal .footnotes ol {
       counter-reset: ol;
-      list-style-type: none; 
+      list-style-type: none;
       margin-left: 0;
     }
     .reveal .footnotes ol li:before {
       counter-increment: ol;
-      content: counter(ol) ". "; 
+      content: counter(ol) ". ";
     }
     .reveal .footnotes ol li > p:first-child {
       display: inline-block;
@@ -175,19 +175,19 @@
     .reveal .slide > img.r-stretch.quarto-figure-center {
       display: block;
       margin-left: auto;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-left,
     .reveal .slide > img.r-stretch.quarto-figure-left  {
       display: block;
       margin-left: 0;
-      margin-right: auto; 
+      margin-right: auto;
     }
     .reveal .slide > img.stretch.quarto-figure-right,
     .reveal .slide > img.r-stretch.quarto-figure-right  {
       display: block;
       margin-left: auto;
-      margin-right: 0; 
+      margin-right: 0;
     }
   </style>
   <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
@@ -208,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-this course: Introduction to Probability and Statistics 
+this course: Introduction to Probability and Statistics
 </div>
 </div>
 </div>
@@ -249,9 +249,9 @@ The last one is trying to estimate a population parameter (the mode).
 --->
 <!--
 
-## 
+##
 
-A logistic regression model was fit in an attempt to predict the sex of a penguin `"male"` or `"female"` based on its body mass (grams). 
+A logistic regression model was fit in an attempt to predict the sex of a penguin `"male"` or `"female"` based on its body mass (grams).
 
 :::poll
 Assuming that no change to the `penguins` dataset was made, will the model be predicting the probability of the penguin being male or the probability of the penguin being female?
@@ -281,7 +281,7 @@ Assuming that no change to the `penguins` dataset was made, will the model be pr
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code> (Intercept)  body_mass_g 
+<pre><code> (Intercept)  body_mass_g
 -5.162541644  0.001239819 </code></pre>
 </div>
 </div>
@@ -362,7 +362,7 @@ Assuming that no change to the `penguins` dataset was made, will the model be pr
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>   (Intercept)    body_mass_g bill_length_mm 
+<pre><code>   (Intercept)    body_mass_g bill_length_mm
    -6.91208086     0.00101530     0.06112808 </code></pre>
 </div>
 </div>
@@ -428,7 +428,7 @@ Often when someone is suspected to have cancer (e.g. a bump is found) a fine nee
 :::
 
 
-<!-- https://www.medicinenet.com/fine-needle_aspiration_biopsy_of_the_thyroid/article.htm 
+<!-- https://www.medicinenet.com/fine-needle_aspiration_biopsy_of_the_thyroid/article.htm
 
 
 ## Artificial intelligence in medicine
@@ -448,7 +448,7 @@ https://www.linkedin.com/pulse/how-ai-can-help-address-global-shortage-pathologi
 ## Lab 6: breast cancer diagnosis  {.scrollable}
 
 - Samples are 568 biopsies
-    - Each biopsy has 30 features 
+    - Each biopsy has 30 features
 - Goal: classify biopsy as **benign** or **malignant**
 
 
@@ -491,7 +491,7 @@ Most of the visible objects in these images are cell nuclei, not the full cell; 
 :::{.notes}
 We compute 10 morphological features for each cell nucleus in the biopsy image.
 
-It may be helpful to first draw one unit (one glass slide, that you would see under the microscope). Then in this slide, you make a data frame with cells, and then group by-summarise. Then the resulting calculations become one row in the final dataset. 
+It may be helpful to first draw one unit (one glass slide, that you would see under the microscope). Then in this slide, you make a data frame with cells, and then group by-summarise. Then the resulting calculations become one row in the final dataset.
 :::
 
 
@@ -552,7 +552,7 @@ Often when someone is suspected to have cancer (e.g. a bump is found) a fine nee
 :::
 
 
-<!-- https://www.medicinenet.com/fine-needle_aspiration_biopsy_of_the_thyroid/article.htm 
+<!-- https://www.medicinenet.com/fine-needle_aspiration_biopsy_of_the_thyroid/article.htm
 
 
 ## Artificial intelligence in medicine
@@ -572,7 +572,7 @@ https://www.linkedin.com/pulse/how-ai-can-help-address-global-shortage-pathologi
 ## Lab 6: breast cancer diagnosis  {.scrollable}
 
 - Samples are 568 biopsies
-    - Each biopsy has 30 features 
+    - Each biopsy has 30 features
 - Goal: classify biopsy as **benign** or **malignant**
 
 
@@ -615,7 +615,7 @@ Most of the visible objects in these images are cell nuclei, not the full cell; 
 :::{.notes}
 We compute 10 morphological features for each cell nucleus in the biopsy image.
 
-It may be helpful to first draw one unit (one glass slide, that you would see under the microscope). Then in this slide, you make a data frame with cells, and then group by-summarise. Then the resulting calculations become one row in the final dataset. 
+It may be helpful to first draw one unit (one glass slide, that you would see under the microscope). Then in this slide, you make a data frame with cells, and then group by-summarise. Then the resulting calculations become one row in the final dataset.
 :::
 
 
@@ -710,9 +710,9 @@ Each biopsy has 30 features; these come from computing 3 summary statistics (mea
 set.seed(132)
 
 # randomly sample train/test set split
-set_type <- sample(x = c('train', 'test'), 
-                   size = nrow(penguins), 
-                   replace = TRUE, 
+set_type <- sample(x = c('train', 'test'),
+                   size = nrow(penguins),
+                   replace = TRUE,
                    prob = c(0.8, 0.2))
 ```
 :::
@@ -727,9 +727,9 @@ set_type <- sample(x = c('train', 'test'),
 set.seed(132)
 
 # randomly sample train/test set split
-set_type <- sample(x = c('train', 'test'), 
-                   size = nrow(penguins), 
-                   replace = TRUE, 
+set_type <- sample(x = c('train', 'test'),
+                   size = nrow(penguins),
+                   replace = TRUE,
                    prob = c(0.8, 0.2))
 
 train <- penguins |>
@@ -773,18 +773,18 @@ test |>
 
 ```
 # A tibble: 70 × 1
-   sex   
-   <fct> 
+   sex
+   <fct>
  1 female
- 2 male  
+ 2 male
  3 female
- 4 male  
- 5 male  
+ 4 male
+ 5 male
  6 female
- 7 male  
+ 7 male
  8 female
- 9 male  
-10 male  
+ 9 male
+10 male
 # ℹ 60 more rows
 ```
 
@@ -852,17 +852,17 @@ test |>
 
 ```
 # A tibble: 70 × 3
-   sex    p_hat y_hat 
-   <fct>  <dbl> <chr> 
+   sex    p_hat y_hat
+   <fct>  <dbl> <chr>
  1 female 0.345 female
- 2 male   0.566 male  
+ 2 male   0.566 male
  3 female 0.259 female
  4 male   0.280 female
  5 male   0.365 female
  6 female 0.196 female
  7 male   0.428 female
  8 female 0.220 female
- 9 male   0.559 male  
+ 9 male   0.559 male
 10 male   0.279 female
 # ℹ 60 more rows
 ```
@@ -891,18 +891,18 @@ test |>
 
 ```
 # A tibble: 70 × 5
-   sex    p_hat y_hat  FP    FN   
+   sex    p_hat y_hat  FP    FN
    <fct>  <dbl> <chr>  <lgl> <lgl>
  1 female 0.345 female FALSE FALSE
  2 male   0.566 male   FALSE FALSE
  3 female 0.259 female FALSE FALSE
- 4 male   0.280 female FALSE TRUE 
- 5 male   0.365 female FALSE TRUE 
+ 4 male   0.280 female FALSE TRUE
+ 5 male   0.365 female FALSE TRUE
  6 female 0.196 female FALSE FALSE
- 7 male   0.428 female FALSE TRUE 
+ 7 male   0.428 female FALSE TRUE
  8 female 0.220 female FALSE FALSE
  9 male   0.559 male   FALSE FALSE
-10 male   0.279 female FALSE TRUE 
+10 male   0.279 female FALSE TRUE
 # ℹ 60 more rows
 ```
 
@@ -958,7 +958,7 @@ test |>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
+
 
   <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
   <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
@@ -980,7 +980,7 @@ test |>
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
- 
+
         // Display controls in the bottom right corner
         controls: false,
 
@@ -1158,7 +1158,7 @@ test |>
         ]
       });
     </script>
-    
+
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
@@ -1204,7 +1204,7 @@ test |>
         });
         const isCodeAnnotation = (el) => {
           for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
+            if (clz.startsWith('code-annotation-')) {
               return true;
             }
           }
@@ -1224,11 +1224,11 @@ test |>
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
             button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
+            tooltip = new bootstrap.Tooltip(button,
+              { trigger: "manual",
                 customClass: "code-copy-button-tooltip",
                 offset: [0, -8]});
-            tooltip.show();    
+            tooltip.show();
           }
           setTimeout(function() {
             if (tooltip) {
@@ -1307,7 +1307,7 @@ test |>
           }
             config['offset'] = [0,0];
             config['maxWidth'] = 700;
-          window.tippy(el, config); 
+          window.tippy(el, config);
         }
         const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
         for (var i=0; i<noterefs.length; i++) {
@@ -1386,12 +1386,12 @@ test |>
         if (event.indexh === 0) {
           Reveal.configure({ slideNumber: null });
         }
-        if (event.indexh === 1) { 
+        if (event.indexh === 1) {
           Reveal.configure({ slideNumber: 'c' });
         }
       });
     </script>
-    
+
 
 <details style="position:fixed;bottom:8px;left:8px;z-index:100;font-size:12px;background:white;color:black;padding:4px"><summary>Tài liệu tham khảo</summary><section class="studyhub-source-reference"><h2>Tài liệu tham khảo</h2><p>Stat 20, UC Berkeley — <a href="https://stat20.berkeley.edu/spring-2026/5-prediction/05-logistic-regression/slides.html" target="_blank" rel="noopener noreferrer">Tài liệu gốc</a>. Chia sẻ theo <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Nhúng toàn bộ nội dung; điều chỉnh điều hướng và tên hiển thị cho StudyHub.</p></section></details><script>
 (() => {

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/05-ev-se/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -140,11 +140,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -705,7 +705,7 @@ Var(x) &amp;= E\left[ ( X - \mu)^2 \right] \\
   &amp;=  \left( \frac{8}{30}\times (1-0.567)^2  + \frac{7}{30} \times (2-0.567)^2 \right. \\
   &amp;+ \left. \frac{10}{30} \times (0-0.567)^2 + \frac{5}{30} \times (-1 - 0.567)^2 \right) \\
   &amp;\approx 1.045\\
-\end{aligned}  
+\end{aligned}
 \]</span> The sample variance of the tickets in the box is a bit more than 1.045. This is because we use <span class="math inline">\(n-1\)</span> in the denominator of sample variance and sample sd, rather than <span class="math inline">\(n\)</span>.</p>
 <p>The standard deviation <span class="math inline">\(SD(X) = \sqrt{Var(X)} =\)</span> 1.023.</p>
 </section>
@@ -729,11 +729,11 @@ Var(X) = \lambda.
 :::{.def}
 **IID random variables**
  ~ If we have $n$ independent random variables $X_1, X_2, \ldots, X_n$ such that they all have the same pmf $f(x)$ and the same cdf $F(x)$, we call the random variables $X_1, X_2, \ldots, X_n$ independent and identically distributed random variables. We usually use the abbreviation i.i.d or iid for ``independent and identically distributed''.
-::: 
- 
+:::
+
 This is a very important concept that we have already used to compute the expected value and variance of a binomial random variable by writing it as a sum of iid Bernoulli random variables.
 
-A common example is when we toss a coin $n$ times and count the number of heads - each coin toss can be considered a Bernoulli random variable, and the total number of heads is a sum of $n$ iid Bernoulli random variables. 
+A common example is when we toss a coin $n$ times and count the number of heads - each coin toss can be considered a Bernoulli random variable, and the total number of heads is a sum of $n$ iid Bernoulli random variables.
 
 
 ### Example: Drawing tickets with replacement
@@ -749,7 +749,7 @@ f(x) = \begin{cases}
       0.1, \; x = 2 \\
       0.3, \; x = 1
       \end{cases}
-$$      
+$$
 
 \
 
@@ -834,10 +834,10 @@ $E(S_{25}) = E(X_1 + X_2 + \ldots +X_{25}) = 25 \times E(X_1) = 25 \times 1.9$.
 
 (We just use $X_1$ since all the $X_k$ have the same distribution.)
 
-Since the $X_k$ are independent, we can write that 
+Since the $X_k$ are independent, we can write that
 
 $$
-\begin{aligned} 
+\begin{aligned}
 Var(S_{25}) &= Var(X_1 + X_2 + \ldots +X_{25})\\
 &= Var(X_1) + Var(X_2) + \ldots +Var(X_{25})\\
 &= 25 \times 2.09
@@ -873,7 +873,7 @@ $$ E(\bar{X}) = E(\frac{S_n}{n}) = \frac{1}{n} E(S_n) = E(X_1) $$
 
 This means that the expected value of an average does *not* scale as $n$, but $E(\bar{X})$ is the *same* as the expected value of a single random variable. Let's check the variance now:
 
-$$ 
+$$
 Var(\bar{X}) = Var(\frac{S_n}{n}) = \frac{1}{n^2} Var(S_n) =  \frac{n}{n^2} Var(X_1)
 $$
 
@@ -891,7 +891,7 @@ $$
 :::{.def}
 **Standard error**
  ~ Since $S_n$ and $\bar{X}$ are numbers computed from the sample $X_1, X_2, \ldots, X_n$, they are called *statistics*. We use the term *standard error* to denote the standard deviation of a *statistic*: $SE(S_n)$ and $SE(\bar{X})$ to distinguish it from the standard deviations of random variables that do not arise as statistics that are computed from $X_1, X_2, \ldots, X_n$.
-::: 
+:::
 
 #### Example: Probability distributions for sums and averages
 
@@ -922,7 +922,7 @@ What do we notice in these figures? The black line is the expected value. We see
 
 ## Continuous distributions
 
-So far, we have talked about discrete distributions, and the probability mass functions for such distributions. Consider a random variable that takes *any* value in a given interval. Recall that  we call such random variables *continuous*. In this situation, we cannot think about discrete bits of probability mass which are non-zero for certain numbers, but rather we imagine that our total probability mass of $1$ is *smeared* over the interval, giving us a smooth density curve, rather than a histogram. To define the probabilities associated with a continuous random variable, we define a probability *density* function (pdf) rather than a probability mass function. 
+So far, we have talked about discrete distributions, and the probability mass functions for such distributions. Consider a random variable that takes *any* value in a given interval. Recall that  we call such random variables *continuous*. In this situation, we cannot think about discrete bits of probability mass which are non-zero for certain numbers, but rather we imagine that our total probability mass of $1$ is *smeared* over the interval, giving us a smooth density curve, rather than a histogram. To define the probabilities associated with a continuous random variable, we define a probability *density* function (pdf) rather than a probability mass function.
 
 ### Probability density function of a distribution
 
@@ -930,8 +930,8 @@ So far, we have talked about discrete distributions, and the probability mass fu
 **Probability density function**
  ~ This is a function $f(x)$ that satisfies two conditions:
 
-- (1) it is non-negative ($f(x) \ge 0$) and 
-- (2) the total area under the curve $y = f(x)$ is 1. That is, 
+- (1) it is non-negative ($f(x) \ge 0$) and
+- (2) the total area under the curve $y = f(x)$ is 1. That is,
 $$ \int_{-\infty}^\infty f(x) dx = 1 $$
 :::
 
@@ -950,7 +950,7 @@ $$
 
 #### Example: Uniform(0,1) distribution
 
-Let $X$ be a random variable that takes values in the interval $(0,1)$ with probability density function $f(x) = 1$ for $x$ in $(0,1)$ and $f(x) = 0$ outside of this interval. 
+Let $X$ be a random variable that takes values in the interval $(0,1)$ with probability density function $f(x) = 1$ for $x$ in $(0,1)$ and $f(x) = 0$ outside of this interval.
 
 Because $f(x)$ is flat, all intervals of the same length will have the *same area*, so the distribution defined by $f$ is called the *Uniform*$(0,1)$ distribution. If a random variable $X$ has this distribution, we denote this by $X \sim U(0,1)$. The probability that $X$ is in any interval $(a, b)$ which is a subinterval of $(0,1)$ is given by the area of the rectangle formed by the interval and $y=f(x)$, and so is just the width of the interval.
 
@@ -966,7 +966,7 @@ F(x) = P(X \le x) = \int_{-\infty}^x f(t) dt
 $$
 :::
 
-The difference is in how we compute $P(X \le x)$. There are no discrete bits of probability mass for $F(x)$ to collect. Instead we have that $F(x)$ is the area under the curve $y = f(x)$ all the way up to the point $x$. 
+The difference is in how we compute $P(X \le x)$. There are no discrete bits of probability mass for $F(x)$ to collect. Instead we have that $F(x)$ is the area under the curve $y = f(x)$ all the way up to the point $x$.
 
 
 #### Example: cdf for the Uniform (0,1) distribution
@@ -975,7 +975,7 @@ Let $X \sim U(0,1)$. What is $F(0.3)$?
 
 <details> <summary> Check your answer </summary>
 
-$$ 
+$$
 F(0.3) = P(X \le 0.3) = \int_{-\infty}^0.3 f(t) dt =  \int_0^0.3 1 dt = 0.3
 $$
 In general, for the $U(0,1)$ distribution, $F(x) = x$.
@@ -992,11 +992,11 @@ In general, for the $U(0,1)$ distribution, $F(x) = x$.
 <li><p>We defined the variance and standard deviation of a random variable. Both expectation and variance (and therefore standard deviation) are constants associated to the distribution of the random variable. The variance is more convenient than the sd for computation because it doesn’t have square roots. However, the units are squared, so you have to be careful while interpreting the variance. We discussed the properties of variance and standard deviation.</p></li>
 <li><p>We wrote down the expected values and variance for various special random variables.</p></li>
 </ul>
-<!-- We defined the expectation and variance of sums and averages of an iid sample of random variables, and introduced the term *standard error*. We recognized how the mean and variance scale with $n$ and defined the square root law for the standard error of the sum or mean of an iid sample. 
+<!-- We defined the expectation and variance of sums and averages of an iid sample of random variables, and introduced the term *standard error*. We recognized how the mean and variance scale with $n$ and defined the square root law for the standard error of the sum or mean of an iid sample.
 
-We considered the probability distributions of sums and averages. 
+We considered the probability distributions of sums and averages.
 
-Finally, we introduced continuous distributions. In subsequent notes, we will introduce the most celebrated continuous distribution, the normal distribution. 
+Finally, we introduced continuous distributions. In subsequent notes, we will introduce the most celebrated continuous distribution, the normal distribution.
 -->
 
 
@@ -1013,7 +1013,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -1033,11 +1033,11 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -1114,7 +1114,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -1189,7 +1189,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -1217,7 +1217,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -1241,7 +1241,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -1281,7 +1281,7 @@ Finally, we introduced continuous distributions. In subsequent notes, we will in
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

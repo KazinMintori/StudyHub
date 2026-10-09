@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html">
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en"><head><base href="https://stat20.berkeley.edu/spring-2026/3-generalization/01-prob-foundations/notes.html"><script>(()=>{for(const name of ['localStorage','sessionStorage']){try{window[name].getItem('studyhub-check')}catch{const data=new Map();Object.defineProperty(window,name,{configurable:true,value:{get length(){return data.size},key:i=>[...data.keys()][i]??null,getItem:key=>data.get(String(key))??null,setItem:(key,value)=>data.set(String(key),String(value)),removeItem:key=>data.delete(String(key)),clear:()=>data.clear()}})}}})();</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -16,7 +16,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-7fa3f98338d58d67ae0d504060b55713.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -138,11 +138,11 @@ pre, .cell-output, table, mjx-container[display=true] { max-width: 100%; overflo
 
 <div class="quarto-title-meta">
 
-    
-  
-    
+
+
+
   </div>
-  
+
 
 
 </header>
@@ -471,7 +471,7 @@ Check your answer
 
 The plots of distributions that we have seen so far have been visualizations of data, and so are called *empirical* distributions. We can represent the *theoretical* probabilities visually with bars, and we call this a *probability distribution*. Note that we do not need to collect data for this type of graph.
 
-Here is a plot of the probability distribution of the value of the drawn ticket. It is a visual representation of the table we drew earlier, and you can see that the bar over 2 is twice as tall. This is because there are twice as many tickets marked 2 as any other numbers. 
+Here is a plot of the probability distribution of the value of the drawn ticket. It is a visual representation of the table we drew earlier, and you can see that the bar over 2 is twice as tall. This is because there are twice as many tickets marked 2 as any other numbers.
 
 :::{.content-visible when-format="html"}
 
@@ -594,9 +594,9 @@ As you read through these notes, keep RStudio open in another window to code alo
 
 
 
-Let's simulate rolling a die and counting how many times we see each face. 
+Let's simulate rolling a die and counting how many times we see each face.
 
-If we roll it 6 times, we don't really expect to see each face exactly once, and as you can see below, in this particular instance of rolling the die six times, we didn't see the face with one spot, but saw two spots twice. 
+If we roll it 6 times, we don't really expect to see each face exactly once, and as you can see below, in this particular instance of rolling the die six times, we didn't see the face with one spot, but saw two spots twice.
 
 
 
@@ -689,7 +689,7 @@ It might be better to visualize it. We will draw the *probability distribution* 
 
 :::
 
-The important takeaway here is that we have a *theoretical* probability distribution of the outcomes, and we have what actually happens when we perform the experiment over and over. Eventually, the empirical distribution begins to look like the theoretical distribution. 
+The important takeaway here is that we have a *theoretical* probability distribution of the outcomes, and we have what actually happens when we perform the experiment over and over. Eventually, the empirical distribution begins to look like the theoretical distribution.
 
 
 
@@ -707,7 +707,7 @@ The important takeaway here is that we have a *theoretical* probability distribu
 
 We can use `sample()` to *estimate* the chance of a particular outcome  when we aren't sure of what that chance might be. We would do this by repeatedly sampling from the "box" with replacement (many times), then computing the proportion of times we drew each ticket. For example, say we consider our first example (the simple box), and want to estimate the chance of each ticket.
 
-In the code below, another new function is introduced: `replicate()`. The function `replicate(reps, expr)` is a very useful function that takes as input an expression `expr` and evaluates it `reps` times, returning a vector. 
+In the code below, another new function is introduced: `replicate()`. The function `replicate(reps, expr)` is a very useful function that takes as input an expression `expr` and evaluates it `reps` times, returning a vector.
 
 
 ::: {.cell layout-align="center"}
@@ -717,7 +717,7 @@ In the code below, another new function is introduced: `replicate()`. The functi
 :::
 
 
-We see that the *estimated* chance of drawing a $\fbox{2}$ is about 0.4, and this is about twice the estimated chance of drawing any other ticket. Of course, we knew this already, without needing to code it in R. Let's think of a more complicated situation: 
+We see that the *estimated* chance of drawing a $\fbox{2}$ is about 0.4, and this is about twice the estimated chance of drawing any other ticket. Of course, we knew this already, without needing to code it in R. Let's think of a more complicated situation:
 
 What if we wanted to wanted to draw _five_ tickets with replacement from this box, and sum the draws? What would be the possible values that we would get? What could their chances be? We can visualize this in R:
 
@@ -747,7 +747,7 @@ We can see that there is a lot more variation in the values taken by the sum of 
 
 #### Tossing a fair coin
 
-We can estimate the chances of various outcomes related to coin tossing, using sampling from a box. 
+We can estimate the chances of various outcomes related to coin tossing, using sampling from a box.
 
 Suppose, for example, that we would like to figure out the chance of exactly 2 heads if we toss a coin 4 times. Think about how you would use the functions `sample()` and `replicate()` to model this, using the 0-1 box we defined earlier, for tossing a coin.
 
@@ -818,7 +818,7 @@ We know all the possible outcomes of summing a pair of dice (between $2$ and $12
 
 You can run the simulations yourself using the code below. Copy and paste it into RStudio and play around with it.
 
-First, lets define two vectors called **die** and **pair_of_dice** that represent the outcome spaces of rolling a die once and rolling a pair of dice once, respectively. 
+First, lets define two vectors called **die** and **pair_of_dice** that represent the outcome spaces of rolling a die once and rolling a pair of dice once, respectively.
 
 
 ::: {.cell}
@@ -877,7 +877,7 @@ simulation 6      1      2      3      6
 :::
 
 
-Let's repeat the simulation for the second game, in which we roll a pair of dice 24 times and record a win if at least one double six is rolled. 
+Let's repeat the simulation for the second game, in which we roll a pair of dice 24 times and record a win if at least one double six is rolled.
 
 Note that the number of simulations is defined above.
 
@@ -929,7 +929,7 @@ Note that the number of simulations is defined above.
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -949,11 +949,11 @@ Note that the number of simulations is defined above.
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -1030,7 +1030,7 @@ Note that the number of simulations is defined above.
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -1105,7 +1105,7 @@ Note that the number of simulations is defined above.
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -1133,7 +1133,7 @@ Note that the number of simulations is defined above.
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -1157,7 +1157,7 @@ Note that the number of simulations is defined above.
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -1197,7 +1197,7 @@ Note that the number of simulations is defined above.
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
