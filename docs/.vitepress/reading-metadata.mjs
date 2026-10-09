@@ -225,31 +225,31 @@ export const readingMetadata = {
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
-    "words": 3650,
-    "minutes": 20
+    "words": 3466,
+    "minutes": 15
   },
   "xu-ly-du-lieu/bai-02-python-co-ban": {
-    "words": 4962,
+    "words": 4778,
     "minutes": 25
   },
   "xu-ly-du-lieu/bai-03-numpy": {
-    "words": 4615,
-    "minutes": 25
+    "words": 4424,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-04-lam-quen-pandas": {
-    "words": 2691,
-    "minutes": 15
+    "words": 2491,
+    "minutes": 10
   },
   "xu-ly-du-lieu/bai-05-series-dataframe-chuyen-sau": {
-    "words": 2047,
+    "words": 1840,
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-06-ket-noi-truy-xuat-du-lieu": {
-    "words": 3143,
+    "words": 2933,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-07-xu-ly-chuoi": {
-    "words": 2395,
+    "words": 2177,
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-08-du-lieu-thoi-gian": {

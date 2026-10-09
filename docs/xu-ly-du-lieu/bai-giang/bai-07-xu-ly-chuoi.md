@@ -8,17 +8,6 @@ lessonStatus: ready
 description: "Chuẩn hóa chuỗi, phân biệt chuỗi ký tự nguyên bản với mẫu regex, trích xuất thực thể bằng str.extract và làm sạch văn bản quy mô lớn."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt kiến trúc bộ định tuyến `.str` trong pandas: cơ chế vector hóa xử lý chuỗi trên toàn mảng dữ liệu, tính năng bảo tồn giá trị khuyết thiếu `NaN` và kỹ thuật chuẩn hóa Unicode dựng sẵn NFC tiếng Việt.
-- Phân định rạch ròi giữa chuỗi ký tự nguyên bản (*Literal*) và mẫu biểu thức chính quy (*Regex*), kiểm soát bẫy ký tự neo `$` và dấu chấm `.` bằng tham số `regex=False`.
-- Nắm vững cơ chế đánh giá chân trị của `str.contains()` khi gặp dữ liệu khuyết thiếu, áp dụng tham số `na=False` để tạo mảng Boolean an toàn cho các phép lọc điều kiện.
-- Khảo sát và sàng lọc dữ liệu văn bản tự do quy mô lớn ($> 690,000$ dòng đánh giá): đo lường phân phối độ dài, nhận diện các đoạn văn bản rác vô nghĩa và làm sạch các thẻ HTML `<br/>`.
-- Xây dựng quy tắc trích xuất thực thể bằng `str.extract()` với nhóm bắt (*Capturing Groups*), phát hiện và xử lý triệt để hiện tượng khớp nhầm (*False Positives*) bằng danh sách từ dừng.
-- Hoàn thành trọn vẹn 100% bài tập thực hành Lab 7 trên tập dữ liệu đánh giá thực tế của Inside Airbnb.
-:::
-
----
-
 ## 1. Kiến trúc Bộ định tuyến `.str` và Chuẩn hóa Chuỗi Đa tầng
 
 Trong thế giới thực, dữ liệu văn bản tự do luôn là vùng đất hỗn loạn và nhiều cạm bẫy nhất. Người dùng nhập liệu với muôn vàn thói quen dị biệt: lúc viết hoa, lúc viết thường, gõ thừa khoảng trắng, sử dụng lẫn lộn tiếng lóng, và đặc biệt là hệ thống dấu thanh phức tạp của các ngôn ngữ quốc tế.

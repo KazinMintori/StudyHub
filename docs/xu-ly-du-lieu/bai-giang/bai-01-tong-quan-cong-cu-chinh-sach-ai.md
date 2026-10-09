@@ -8,16 +8,6 @@ lessonStatus: ready
 description: "Vị trí của xử lý dữ liệu trong chuỗi giá trị, ngăn xếp Scientific Python, kiến trúc IPython Kernel và kỷ luật làm việc với AI."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt chuỗi giá trị dữ liệu từ thu thập thô đến ra quyết định kinh doanh, và lý giải vì sao kỹ thuật xử lý dữ liệu chiếm tới $80\%$ thời gian của một dự án phân tích.
-- Hiểu rõ vị thế của Python như một ngôn ngữ keo (*glue language*) kết nối tầng cú pháp bậc cao với các hạt nhân tính toán C/C++ hiệu năng cao.
-- Nắm vững kiến trúc Client-Server của Jupyter Notebook, cơ chế quản lý trạng thái của IPython Kernel và làm chủ quy trình làm việc chuẩn mực với môi trường ảo `venv` và Git.
-- Xây dựng phản xạ kiểm chứng khi đồng hành cùng trợ lý AI, nhận diện các quy ước ngầm mà mô hình ngôn ngữ lựa chọn thay thế cho lập trình viên.
-- Giải quyết trọn vẹn bộ bài tập thực hành Lab 1 với lời giải hai tầng (căn bản và nâng cao), phân tích bản chất cơ chế bộ nhớ và đóng gói hàm phân tích độc lập.
-:::
-
----
-
 ## 1. Vị thế của Môn học trong Chuỗi giá trị Dữ liệu
 
 ### 1.1. Hiện thực dữ liệu trong môi trường sản xuất

@@ -8,16 +8,6 @@ lessonStatus: ready
 description: "Dựng Series và DataFrame, thói quen 5 bước khám phá dữ liệu, lọc chọn chuẩn mực bằng .loc, bẫy gán hai lần ngoặc và lập hồ sơ phân tích thị trường."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt hai cấu trúc nền tảng của pandas: `Series` và `DataFrame`, phân biệt rạch ròi giữa trích xuất cột một chiều `df["col"]` và trích xuất bảng con hai chiều `df[["col"]]`.
-- Thành thạo "Thói quen 5 bước" khám phá dữ liệu ban đầu (`shape`, `sample`, `info`, `describe`, `value_counts`), rèn luyện phản xạ đọc và diễn giải các số liệu thực tế thay vì chỉ thực thi lệnh máy móc.
-- Làm chủ kỹ thuật lọc chọn dữ liệu bằng mặt nạ Boolean nhiều điều kiện (`&`, `|`, `~`), tra cứu cực trị bằng `nsmallest` và phân biệt rạch ròi giữa `df[mask]` với `df.loc[mask, "col"]`.
-- Nhận diện bản chất cơ chế Copy-on-Write (CoW) trong pandas 3, loại bỏ hoàn toàn bẫy gán hai lần ngoặc (*Chained Indexing*) và nắm vững nguyên lý: cột trong DataFrame lưu trữ giá trị đã tính, không tự động cập nhật như công thức bảng tính Excel.
-- Phân tích tác động của giá trị khuyết thiếu `NaN` lên mẫu số khi tính tỷ lệ, hoàn thành trọn vẹn 100% bài tập thực hành Lab 4 lập hồ sơ phân tích thị trường một quận.
-:::
-
----
-
 ## 1. Bản chất Cấu trúc: Series, DataFrame và Hệ thống Nhãn (Index)
 
 Khi làm việc với các bài toán thực tế, dữ liệu hiếm khi chỉ tồn tại dưới dạng những con số vô danh. Dữ liệu thực luôn đi kèm ngữ nghĩa phong phú: cột nào là định danh khách hàng, cột nào là giá niêm yết, hàng nào thuộc về quận nào, và làm sao để xử lý những quan sát bị bỏ trống mà không làm gãy vỡ cấu trúc tính toán?

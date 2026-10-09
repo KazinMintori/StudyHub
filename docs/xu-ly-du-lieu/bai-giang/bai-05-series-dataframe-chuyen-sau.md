@@ -8,17 +8,6 @@ lessonStatus: ready
 description: "Cơ chế căn chỉnh Index, Split-Apply-Combine với groupby/agg/transform, bảng chéo pivot_table và ghép bảng an toàn với merge validate."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt cơ chế căn chỉnh nhãn tự động (*Automatic Data Alignment*) của pandas, phân biệt rạch ròi giữa tra cứu theo nhãn `.loc` và tra cứu theo vị trí số nguyên `.iloc`.
-- Thành thạo phương pháp sinh cột phân loại bằng `map()` với hàm nghiệp vụ, kết hợp kiểm soát an toàn giá trị khuyết thiếu `pd.isna()`.
-- Làm chủ mô hình Chia để trị (*Split-Apply-Combine*): sử dụng `groupby` kết hợp cú pháp đặt tên cột tổng hợp (*Named Aggregation*), và phân định rạch ròi sự khác biệt cốt lõi giữa `agg` (thu gọn nhóm) và `transform` (giữ nguyên kích thước bảng).
-- Xây dựng và diễn giải bảng chéo hai chiều `pivot_table` để nhận diện tương tác đa biến và phát hiện các biến ẩn ngoại sinh (*Confounding Variables*) trong kinh tế học dữ liệu.
-- Vận hành phép nối bảng `merge` chuẩn mực đại số quan hệ, sử dụng vũ khí kiểm định ràng buộc `validate="m:1"` để ngăn chặn triệt để thảm họa nhân bản số dòng (*Row Explosion*).
-- Hoàn thành trọn vẹn 100% bài tập thực hành Lab 5 phân tích phân khúc thị trường và mô hình chủ nhà chuyên nghiệp.
-:::
-
----
-
 ## 1. Cơ chế Căn chỉnh Index và Phân kỳ giữa `.loc` và `.iloc`
 
 ### 1.1. Bản chất của Index: Nhãn Ngữ nghĩa khác với Vị trí Bộ nhớ

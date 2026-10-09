@@ -8,17 +8,6 @@ lessonStatus: ready
 description: "Đọc chọn lọc tệp lớn với usecols, làm sạch giá chuỗi, định dạng Parquet định hướng cột, tiêu thụ API và truy vấn SQL tại chỗ bằng DuckDB."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt kỹ thuật nạp dữ liệu chọn lọc trên các tệp bảng biểu lớn bằng `usecols` và `parse_dates`, tối ưu hóa băng thông I/O và giải phóng bộ nhớ RAM.
-- Làm chủ kỹ thuật xử lý chuỗi tiền tệ phức tạp bằng `str.replace(..., regex=False)`, nhận diện và kiểm soát bẫy ký tự neo trong biểu thức chính quy (*Regular Expression*).
-- So sánh toàn diện giữa định dạng văn bản CSV và định dạng lưu trữ hướng cột Apache Parquet: cơ chế nén, bảo toàn kiểu dữ liệu kỹ thuật (*Type Preservation*) và tốc độ truy xuất.
-- Xây dựng quy trình tiêu thụ Web API chuẩn mực: lưu trữ nguyên vẹn phản hồi thô (*Raw Response Persistence*) để bảo đảm khả năng tái lập và giảm thiểu chi phí mạng.
-- Vận hành động cơ phân tích dữ liệu nhúng DuckDB để thực thi các truy vấn SQL trực tiếp trên tệp đĩa, kết hợp phép nối bảng `JOIN` và đối chiếu chéo kết quả với đường ống Python thuần.
-- Hoàn thành trọn vẹn 100% bài tập thực hành Lab 6 trên tập dữ liệu đánh giá và chuỗi thời tiết lịch sử của thủ đô Santiago.
-:::
-
----
-
 ## 1. Kỹ thuật Nạp Tệp CSV An toàn Chống lỗi và Xác thực Cấu trúc Dữ liệu
 
 Trong môi trường phân tích dữ liệu thực tế, các tệp dữ liệu thường có dung lượng rất lớn với hàng chục, thậm chí hàng trăm cột thông tin. Chẳng hạn, tệp `listings_full.csv.gz` của Inside Airbnb chứa tới $90$ cột thuộc tính khác nhau.

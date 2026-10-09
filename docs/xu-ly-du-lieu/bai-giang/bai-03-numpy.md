@@ -8,16 +8,6 @@ lessonStatus: ready
 description: "Cấu trúc bộ nhớ ndarray, strides, cơ chế view vs copy, broadcasting, ufunc và đo lường hiệu năng tính toán ma trận."
 ---
 
-::: info Mục tiêu bài học
-- Giải phẫu cấu trúc bộ nhớ nội tại của mảng đa chiều `ndarray`: phân biệt vùng đệm dữ liệu liên tục (*Data Buffer*) với khối siêu dữ liệu (*Metadata*), tính toán chính xác bước nhảy ô nhớ (*strides*) và khoảng cách byte (*byte offset*).
-- Thấu suốt cơ chế lát cắt tạo khung nhìn (*View*) và chỉ mục mảng tạo bản sao (*Copy*), kiểm soát rủi ro đột biến dữ liệu ngầm bằng `np.shares_memory()`.
-- Làm chủ quy tắc duỗi mảng (*Broadcasting*) đa chiều từ phải sang trái, khắc phục triệt để các lỗi sai lệch kích thước và kiểm soát các trục tính toán (*axis*) bằng tham số `keepdims=True`.
-- Lý giải bản chất cơ chế gia tốc phần cứng của NumPy: bộ nhớ đệm CPU (*Cache Locality*), tập lệnh tính toán song song SIMD và loại bỏ chi phí chuyển dịch kiểu dữ liệu (*Unboxing Overhead*) của Python.
-- Hoàn thành trọn vẹn 100% bộ bài tập thực hành Lab 3 bằng NumPy với hai tầng lời giải: Căn bản & Trực quan đối chiếu Nâng cao & Tối ưu.
-:::
-
----
-
 ## 1. Giải phẫu Bộ nhớ Nội tại của Mảng Đa chiều (`ndarray`)
 
 Nếu Python thuần túy là một người điều phối linh hoạt, thì NumPy chính là cỗ máy tính toán hạng nặng của toàn bộ hệ sinh thái Khoa học Dữ liệu và Trí tuệ Nhân tạo. Mọi cấu trúc bảng của pandas hay tensor của PyTorch, TensorFlow đều lấy cảm hứng trực tiếp từ kiến trúc của **`np.ndarray`**.

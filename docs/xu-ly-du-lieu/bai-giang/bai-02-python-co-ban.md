@@ -8,16 +8,6 @@ lessonStatus: ready
 description: "Chọn cấu trúc dữ liệu, cơ chế tham chiếu bộ nhớ, phân biệt biến đổi với sàng lọc và đọc tệp chuẩn mực bằng Python thuần."
 ---
 
-::: info Mục tiêu bài học
-- Thấu suốt bản chất bộ nhớ và cơ chế tra cứu của các cấu trúc dữ liệu bản địa Python (`list`, `dict`, `set`, `tuple`), từ đó lựa chọn đúng cấu trúc đạt độ phức tạp thời gian tối ưu $O(1)$ thay vì $O(n)$.
-- Hiểu rõ cơ chế quản lý định danh và phép gán trong bộ nhớ Python, phân biệt rạch ròi giữa gán tham chiếu, sao chép nông (*shallow copy*) và sao chép sâu (*deep copy*).
-- Nắm vững nguyên tắc phân định giữa phép biến đổi (*Transformation*) và phép sàng lọc (*Filtering*), kiểm soát bẫy chân trị (*Truthy/Falsy*) khi xử lý giá trị $0$ và giá trị thiếu.
-- Thực hành kỹ thuật đọc, ghi tệp CSV và JSON phòng thủ, quản lý ngữ cảnh tài nguyên bằng `with` và bảo toàn mã hóa ký tự UTF-8.
-- Hoàn thành trọn vẹn bộ bài tập thực hành Lab 2 bằng thư viện chuẩn Python thuần qua hai tầng lời giải: Căn bản & Trực quan đối chiếu Nâng cao & Tối ưu.
-:::
-
----
-
 ## 1. Cấu trúc Dữ liệu Quyết định Cơ chế Tra cứu và Hiệu năng Bộ nhớ
 
 Trước khi vận hành các thư viện chuyên dụng như NumPy hay pandas, người kỹ sư dữ liệu bắt buộc phải làm chủ các cấu trúc dữ liệu bản địa của Python. Bản thân Python cung cấp một ngăn xếp cấu trúc dữ liệu rất linh hoạt, tuy nhiên mỗi cấu trúc lại mang một thiết kế bộ nhớ và chi phí tính toán hoàn toàn khác biệt. Nếu chọn sai cấu trúc cho một thao tác lặp lại thường xuyên trong đường ống xử lý hàng triệu bản ghi, thời gian thực thi có thể tăng từ vài giây lên tới nhiều giờ đồng hồ.
