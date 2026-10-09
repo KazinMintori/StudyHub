@@ -31,7 +31,7 @@ $$
 
 ## 2. Ba tập ma trận và ký hiệu
 
-Sách dùng ba ký hiệu song song với các tập số $\mathbb{R}$, $\mathbb{R}_+$ (số không âm) và $\mathbb{R}_{++}$ (số dương):
+Ta dùng ba ký hiệu song song với các tập số $\mathbb{R}$, $\mathbb{R}_+$ (số không âm) và $\mathbb{R}_{++}$ (số dương):
 
 - $\mathbb{S}^n$: mọi ma trận đối xứng.
 - $\mathbb{S}^n_+ = \{X \in \mathbb{S}^n : X \succeq 0\}$: các ma trận **nửa xác định dương** (PSD), tức $z^T X z \ge 0$ với mọi $z \in \mathbb{R}^n$.

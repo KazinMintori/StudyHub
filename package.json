@@ -8,12 +8,12 @@
     "audit:ui": "node scripts/audit-ui.mjs",
     "verify:redesign": "node scripts/verify-redesign.mjs",
     "sync:courses": "node scripts/sync-courses.mjs",
-    "ci:build": "node scripts/sync-courses.mjs && vitepress build docs",
+    "ci:build": "node scripts/sync-courses.mjs && node --max-old-space-size=8192 ./node_modules/vitepress/bin/vitepress.js build docs",
     "dev": "vitepress dev docs",
-    "build": "node scripts/sync-courses.mjs && vitepress build docs && node scripts/export-static.mjs",
+    "build": "node scripts/sync-courses.mjs && node --max-old-space-size=8192 ./node_modules/vitepress/bin/vitepress.js build docs && node scripts/export-static.mjs",
     "preview": "vitepress preview docs",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "node scripts/sync-courses.mjs && vitepress build docs && node scripts/export-static.mjs",
+    "docs:build": "node scripts/sync-courses.mjs && node --max-old-space-size=8192 ./node_modules/vitepress/bin/vitepress.js build docs && node scripts/export-static.mjs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [

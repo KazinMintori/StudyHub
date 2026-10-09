@@ -6,11 +6,11 @@ title: "Chuyển động trên đường thẳng"
 prerequisites: ["do-doi","thanh-phan-vector"]
 lessonStatus: ready
 sourceTranslation: full
-description: "Bản dịch đầy đủ chương 2 của Young & Freedman, gồm lý thuyết, ví dụ và toàn bộ bài tập nguyên tác."
+description: "Chuyên đề động học chuyển động thẳng một chiều: vận tốc tức thời, gia tốc, chuyển động biến đổi đều, rơi tự do và ứng dụng vi tích phân trong cơ học."
 ---
 
-::: info Tiến độ bản dịch
-Đã dịch toàn bộ chương, gồm lời mở, mục 2.1–2.6, tóm tắt, luyện tập có hướng dẫn, bài tổng hợp, câu hỏi thảo luận, 92 bài tập và đáp án có trong sách. Đáp số bài lẻ trong phụ lục được đặt ở cuối trang; những lỗi nhận diện trong nguyên tác có ghi chú đối chiếu riêng. Hình gốc được giữ cùng bản dịch chú giải và nhãn ngay bên dưới.
+::: info Cấu trúc bài giảng
+Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), sơ đồ tóm tắt kiến thức, hệ thống bài tập rèn luyện kỹ năng, bài toán tổng hợp, câu hỏi thảo luận đào sâu bản chất, 92 bài tập tự luyện và bảng đáp số tham khảo đối chiếu.
 :::
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/00-mo-dau.md-->
@@ -46,8 +46,7 @@ description: "Bản dịch đầy đủ chương 2 của Young & Freedman, gồm
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md-->
 
 
-## Nguồn của bản dịch
+## Tài liệu tham khảo học thuật
 
-Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 2, trang in 34–65, tương ứng trang PDF 54–85 của bản được cung cấp. Phạm vi này bao gồm cả phần bài tập cuối chương. Đáp số bài lẻ: phụ lục trang A-9, trang PDF 1554.
-
-Bản dịch giữ số mục, số hiệu công thức, ví dụ, bảng và hình để đối chiếu với sách. Các phần chưa dịch không được xem là đã hoàn tất.
+- Hugh D. Young & Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition (Pearson).
+- Halliday, Resnick & Walker, *Fundamentals of Physics*, 11th Edition (Wiley).

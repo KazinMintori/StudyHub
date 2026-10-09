@@ -18,7 +18,7 @@ Trang này cũng giới thiệu **đơn hình**, loại đa diện đơn giản 
 
 Nói cách khác, đa diện là giao của hữu hạn nửa không gian và siêu phẳng. Vì mỗi nửa không gian và mỗi siêu phẳng đều lồi, và giao của các tập lồi là lồi, nên **mọi đa diện đều lồi**. Hình 2.11 trong sách vẽ một đa diện là giao của năm nửa mặt phẳng, mỗi nửa mặt phẳng có một pháp tuyến hướng ra ngoài $a_j$.
 
-Sách dùng một cách viết gọn rất tiện:
+Ta dùng một cách viết ma trận cô đọng:
 
 $$
 \mathcal{P} = \{x : Ax \preceq b,\ Cx = d\},

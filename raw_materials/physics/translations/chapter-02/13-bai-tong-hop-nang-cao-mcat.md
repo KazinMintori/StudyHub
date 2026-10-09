@@ -1,102 +1,139 @@
-<!-- Nguồn: Problems, Challenge Problems và MCAT-Style Passage Problems 2.78–2.92, trang in 64–65, trang PDF 84–85. -->
+<!-- Chuyên đề: Chuyển động thẳng — Bài tập tổng hợp, Thử thách cực hạn & MCAT 2.78 đến 2.92 -->
 
-### Bài tập tổng hợp tiếp theo
+### Bài tập tổng hợp chuyên sâu
 
-::: exercise 2.78 •••
-Trong đợt thực tập hè tại công ty hàng không vũ trụ, bạn được giao thiết kế một tên lửa nghiên cứu nhỏ. Tên lửa xuất phát từ nghỉ ở bề mặt Trái Đất và phải lên đến độ cao cực đại $960\,\mathrm m$. Động cơ tạo gia tốc hướng lên $16.0\,\mathrm{m/s^2}$ trong thời gian hoạt động $T$. Sau khi động cơ tắt, tên lửa rơi tự do. Bỏ qua lực cản không khí. $T$ phải bằng bao nhiêu để tên lửa đạt độ cao yêu cầu?
+::: exercise 2.78 ••• — Thiết kế thông số động cơ tên lửa nghiên cứu
+Trong một dự án nghiên cứu hàng không vũ trụ, bạn được giao nhiệm vụ thiết kế một tên lửa khí tượng tầng cao mini. Tên lửa xuất phát từ trạng thái nghỉ trên mặt đất và được yêu cầu phải đạt tới độ cao cực đại là $960\,\mathrm m$. Động cơ nhiên liệu rắn tạo ra gia tốc hướng lên không đổi $16.0\,\mathrm{m/s^2}$ trong suốt thời gian động cơ hoạt động $T$. Khi cạn nhiên liệu, động cơ tắt và tên lửa tiếp tục bay lên theo quán tính (rơi tự do). Bỏ qua sức cản của khí quyển. Thời gian hoạt động $T$ của động cơ phải được thiết kế bằng bao nhiêu để tên lửa đạt đúng độ cao đỉnh theo yêu cầu?
 :::
 
 ::: exercise 2.79 •••
-Một trực thăng chở Dr. Evil cất cánh với gia tốc hướng lên không đổi $5.0\,\mathrm{m/s^2}$. Mật vụ Austin Powers nhảy lên đúng lúc trực thăng rời đất. Sau khi hai người vật lộn $10.0\,\mathrm s$, Powers tắt động cơ và bước ra khỏi trực thăng. Giả sử trực thăng rơi tự do sau khi động cơ tắt, và bỏ qua lực cản không khí. **(a)** Độ cao cực đại của trực thăng so với đất bằng bao nhiêu? **(b)** Powers kích hoạt thiết bị phản lực đeo lưng sau $7.0\,\mathrm s$ kể từ khi rời trực thăng, rồi có gia tốc hướng xuống không đổi, độ lớn $2.0\,\mathrm{m/s^2}$. Khi trực thăng đâm xuống đất, Powers ở độ cao bao nhiêu?
+Một chiếc trực thăng quân sự cất cánh thẳng đứng từ mặt đất với gia tốc hướng lên không đổi $5.0\,\mathrm{m/s^2}$. Đúng lúc trực thăng rời mặt đất, mật vụ Powers nhảy bám vào càng trực thăng. Sau $10.0\,\mathrm s$ vật lộn trên không, Powers ngắt động cơ trực thăng và nhảy ra ngoài. Kể từ thời điểm đó, chiếc trực thăng rơi tự do hoàn toàn xuống đất (bỏ qua sức cản không khí).
+**(a)** Chiếc trực thăng đạt độ cao cực đại cách mặt đất bao nhiêu mét trước khi rơi xuống?
+**(b)** Powers rơi tự do trong $7.0\,\mathrm s$ sau khi rời máy bay rồi mới kích hoạt bộ phản lực cá nhân mini, tạo ra một gia tốc hãm hướng lên không đổi giúp anh giảm tốc với gia tốc hướng xuống là $2.0\,\mathrm{m/s^2}$. Đúng vào thời điểm chiếc trực thăng đâm xuống đất nổ tung, Powers đang ở độ cao bao nhiêu so với mặt đất?
 :::
 
-::: exercise 2.80 •• — Chiều cao vách đá
-Bạn đang leo núi ở High Sierra thì bất ngờ đến mép một vách đá phủ sương. Để tìm chiều cao, bạn thả một viên đá từ đỉnh và sau $8.00\,\mathrm s$ nghe tiếng va chạm ở chân vách. **(a)** Bỏ qua lực cản không khí, vách cao bao nhiêu nếu tốc độ âm là $330\,\mathrm{m/s}$? **(b)** Nếu bỏ qua thời gian âm truyền đến tai, bạn sẽ ước lượng chiều cao lớn hơn hay nhỏ hơn thực tế? Giải thích.
+::: exercise 2.80 •• — Đo độ sâu vực thẳm bằng tiếng vọng âm thanh
+Trong chuyến thám hiểm dãy núi High Sierra mù sương, bạn bất ngờ đứng trước mép một vách đá thẳng đứng thăm thẳm. Không thể nhìn thấy đáy vực, bạn nhặt một hòn sỏi thả rơi tự do từ mép vực và dùng đồng hồ bấm giờ đo được đúng $8.00\,\mathrm s$ sau thì nghe thấy tiếng sỏi đập vào đáy vực vọng lên tai.
+**(a)** Bỏ qua sức cản không khí, vách đá cao bao nhiêu mét? Biết tốc độ truyền âm thanh trong không khí là $330\,\mathrm{m/s}$.
+**(b)** Nếu người đo bỏ qua thời gian truyền âm thanh và ngây thơ coi toàn bộ $8.00\,\mathrm s$ là thời gian sỏi rơi tự do ($h = \frac{1}{2}gt^2$), thì kết quả ước lượng sẽ lớn hơn hay nhỏ hơn chiều cao thực tế? Giải thích bản chất sai số này.
 :::
 
 ::: exercise 2.81 •• CALC
-Một vật chuyển động dọc trục $x$. Tại $t=0$, vận tốc là $v_{0x}=20.0\,\mathrm{m/s}$. Từ thời điểm đó, gia tốc là $a_x=-Ct$, trong đó $C$ có đơn vị $\mathrm{m/s^3}$. **(a)** $C$ bằng bao nhiêu nếu vật dừng sau $8.00\,\mathrm s$? **(b)** Với $C$ ấy, vật đi được bao xa trong $8.00\,\mathrm s$?
+Một chất điểm chuyển động thẳng dọc theo trục $x$. Tại thời điểm ban đầu $t = 0$, chất điểm có vận tốc $v_{0x} = 20.0\,\mathrm{m/s}$. Kể từ đó, lực cản môi trường tạo ra gia tốc hãm biến thiên theo thời gian: $a_x(t) = -Ct$ (trong đó $C$ là một hằng số dương tính bằng $\mathrm{m/s^3}$).
+**(a)** Hằng số $C$ bằng bao nhiêu nếu chất điểm dừng lại hoàn toàn sau $8.00\,\mathrm s$?
+**(b)** Với giá trị $C$ tìm được, chất điểm đi được quãng đường bao xa trong $8.00\,\mathrm s$ hãm phanh đó?
 :::
 
 ::: exercise 2.82 ••
-Một quả bóng được ném thẳng lên từ đất với tốc độ $v_0$. Cùng lúc, một quả bóng thứ hai được thả từ nghỉ ở độ cao $H$, ngay phía trên điểm ném. Không có lực cản không khí. **(a)** Tìm thời điểm hai bóng va chạm. **(b)** Tìm $H$ theo $v_0$ và $g$ để lúc va chạm, bóng thứ nhất ở điểm cao nhất của chuyển động.
+Một quả bóng thứ nhất được ném thẳng đứng lên cao từ mặt đất với tốc độ ban đầu $v_0$. Đúng vào thời điểm đó, một quả bóng thứ hai được thả rơi tự do từ trạng thái nghỉ ở độ cao $H$ trên cùng một đường thẳng đứng. Bỏ qua sức cản không khí.
+**(a)** Xác định thời điểm $t$ mà hai quả bóng va chạm nhau trên không trung.
+**(b)** Hãy tìm biểu thức của $H$ theo $v_0$ và $g$ để tại thời điểm va chạm, quả bóng thứ nhất đang ở đúng đỉnh cao nhất của quỹ đạo nó.
 :::
 
 ::: exercise 2.83 • CALC
-Hai ô tô A và B đi trên đường thẳng. Khoảng cách của A đến điểm đầu là $x_A(t)=\alpha t+\beta t^2$, với $\alpha=2.60\,\mathrm{m/s}$ và $\beta=1.20\,\mathrm{m/s^2}$. Khoảng cách của B đến điểm đầu là $x_B(t)=\gamma t^2-\delta t^3$, với $\gamma=2.80\,\mathrm{m/s^2}$ và $\delta=0.20\,\mathrm{m/s^3}$. **(a)** Xe nào ở trước ngay sau khi hai xe rời điểm đầu? **(b)** Khi nào hai xe ở cùng một vị trí? **(c)** Khi nào khoảng cách từ A đến B không tăng cũng không giảm? **(d)** Khi nào hai xe có cùng gia tốc?
+Hai chiếc ô tô thử nghiệm A và B cùng chuyển động trên đường thẳng xuất phát từ cùng một gốc tọa độ tại $t = 0$. Tọa độ của xe A là $x_A(t) = \alpha t + \beta t^2$ với $\alpha = 2.60\,\mathrm{m/s}$ và $\beta = 1.20\,\mathrm{m/s^2}$. Tọa độ của xe B là $x_B(t) = \gamma t^2 - \delta t^3$ với $\gamma = 2.80\,\mathrm{m/s^2}$ và $\delta = 0.20\,\mathrm{m/s^3}$.
+**(a)** Xe nào vượt lên dẫn đầu ngay sau khi xuất phát?
+**(b)** Hai xe gặp nhau tại những thời điểm nào sau $t = 0$?
+**(c)** Tại thời điểm nào thì khoảng cách giữa hai xe đạt cực trị (không tăng cũng không giảm)?
+**(d)** Tại thời điểm nào thì hai xe có cùng gia tốc?
 :::
 
-::: exercise 2.84 •• DATA
-Trong phòng thí nghiệm vật lý, bạn thả một con trượt từ nghỉ tại nhiều vị trí trên đường đệm khí dài, không ma sát, nghiêng góc $\theta$ so với phương ngang. Dùng cổng quang điện tử, bạn đo thời gian $t$ để con trượt đi quãng đường $x$ từ điểm thả đến chân đường. Hình P2.84 cho số đo và đường khớp đa thức bậc hai. Bạn cần tìm gia tốc, giả sử không đổi. Vì mỗi phép đo có sai số, thay vì dùng một cặp $x,t$, phương pháp đồ thị có thể cho kết quả chính xác hơn. **(a)** Vẽ lại dữ liệu như thế nào để các điểm gần nằm trên một đường thẳng? Gợi ý: có thể vẽ $x$, $t$ hoặc cả hai sau khi nâng lên một lũy thừa. **(b)** Dựng đồ thị ấy và tìm phương trình đường thẳng khớp tốt nhất với dữ liệu. **(c)** Dùng đường khớp ở (b) để tính gia tốc. **(d)** Thả con trượt ở cách chân đường $x=1.35\,\mathrm m$. Dùng gia tốc ở (c) để tính tốc độ khi đến chân đường.
+::: exercise 2.84 •• DATA — Kỹ thuật tuyến tính hóa dữ liệu thực nghiệm
+Trong bài thực hành động học trên đệm khí không ma sát nghiêng góc $\theta$, sinh viên thả một con trượt từ trạng thái nghỉ tại nhiều vị trí khác nhau. Một hệ thống cổng quang điện tử đo thời gian $t$ để con trượt đi hết quãng đường $x$ từ điểm thả tới chân dốc. Hình P2.84 thể hiện các điểm dữ liệu đo và đường cong khớp thực nghiệm. Vì các phép đo luôn có sai số ngẫu nhiên, thay vì chỉ tính gia tốc từ một lần đo đơn lẻ, phương pháp tuyến tính hóa đồ thị sẽ cho kết quả trung bình với độ tin cậy cao nhất.
+**(a)** Cần biến đổi hệ trục tọa độ như thế nào để các điểm thực nghiệm chuyển từ đường cong parabol về phân bố xung quanh một đường thẳng? *(Gợi ý: Dựa vào hệ thức $x = \frac{1}{2}at^2$, hãy xem xét vẽ $x$ theo $t^2$ hoặc $t$ theo $\sqrt{x}$).*
+**(b)** Thiết lập phương trình đường hồi quy tuyến tính phù hợp nhất với dữ liệu.
+**(c)** Dựa vào hệ số góc của đường thẳng hồi quy, hãy xác định gia tốc chuyển động $a$ của con trượt.
+**(d)** Nếu thả con trượt từ vị trí cách chân dốc $x = 1.35\,\mathrm m$, tốc độ của nó khi tới chân dốc là bao nhiêu?
 :::
 
-![Hình P2.84: số đo quãng đường và thời gian của con trượt, cùng đường khớp bậc hai](img/young-02/hinh-p2-84.png)
+![Hình P2.84: Dữ liệu thực nghiệm quãng đường và thời gian của con trượt đệm khí](img/young-02/hinh-p2-84.png)
 
-**Hình P2.84:** Trục đứng $t$ ghi giây, trục ngang $x$ ghi mét; các chấm là dữ liệu đo. Giữ đúng thứ tự trục được in trong hình khi vẽ lại dữ liệu theo yêu cầu của bài.
+**Hình P2.84:** Trục tung $t$ ghi bằng giây, trục hoành $x$ ghi bằng mét. Các điểm chấm rời rạc là dữ liệu đo thực nghiệm từ cổng quang điện tử.
 
-::: exercise 2.85 •• DATA
-Trong thí nghiệm, bạn thả một viên bi thép nhỏ từ nhiều độ cao và đo tốc độ ngay trước khi chạm đất. Bạn vẽ độ cao thả, tính bằng mét, trên trục đứng và bình phương tốc độ cuối, tính bằng $\mathrm{m^2/s^2}$, trên trục ngang. Các điểm dữ liệu gần nằm trên đường thẳng. **(a)** Với $g=9.80\,\mathrm{m/s^2}$ và bỏ qua lực cản không khí, độ dốc đường thẳng bằng bao nhiêu? Ghi đúng đơn vị. Lực cản làm giảm độ lớn gia tốc hướng xuống, và tác dụng tăng khi tốc độ tăng. Bạn lặp lại thí nghiệm bằng bóng tennis, khi đó lực cản ảnh hưởng rõ đến số liệu. **(b)** Ở cùng độ cao thả, tốc độ cuối lớn hơn, nhỏ hơn hay bằng trường hợp bỏ qua lực cản? **(c)** Đồ thị độ cao thả theo bình phương tốc độ cuối còn là đường thẳng không? Phác dạng định tính khi có lực cản.
+::: exercise 2.85 •• DATA — Khảo sát ảnh hưởng của lực cản khí động học
+Trong một thí nghiệm vật lý, sinh viên thả một viên bi thép đặc từ nhiều độ cao khác nhau và dùng cảm biến tốc độ đo tốc độ va chạm chạm đất $v$. Đồ thị thực nghiệm biểu diễn độ cao thả $h$ (trên trục tung, mét) theo bình phương tốc độ chạm đất $v^2$ (trên trục hoành, $\mathrm{m^2/s^2}$) là một đường thẳng tắp.
+**(a)** Khi bỏ qua sức cản không khí với $g = 9.80\,\mathrm{m/s^2}$, hệ số góc của đường thẳng lý thuyết này bằng bao nhiêu? Ghi rõ đơn vị đo.
+**(b)** Khi lặp lại thí nghiệm với một quả bóng tennis nhẹ và xốp hơn (lực cản không khí tác dụng rõ rệt và tăng theo bình phương vận tốc), ở cùng một độ cao thả, tốc độ chạm đất của bóng tennis sẽ lớn hơn, nhỏ hơn hay bằng tốc độ của bi thép?
+**(c)** Đồ thị độ cao thả theo bình phương tốc độ cuối của bóng tennis có còn là một đường thẳng hay không? Hãy phác họa dạng đường cong định tính khi có lực cản không khí.
 :::
 
-::: exercise 2.86 ••• DATA
-Một ô tô mô hình xuất phát từ nghỉ và đi trên đường thẳng. Điện thoại thông minh gắn trên xe có ứng dụng truyền độ lớn gia tốc đo bằng gia tốc kế mỗi giây. Kết quả là:
+::: exercise 2.86 ••• DATA — Xử lý dữ liệu cảm biến gia tốc kế MEMS
+Một mô hình ô tô tự hành xuất phát từ trạng thái nghỉ trên đường thử thẳng. Một chiếc điện thoại thông minh gắn chặt trên thân xe sử dụng cảm biến gia tốc kế vi cơ điện tử (MEMS) để ghi lại độ lớn gia tốc sau mỗi khoảng thời gian $1.00\,\mathrm s$. Bảng số liệu thu được như sau:
 
-| Thời gian ($\mathrm s$) | Gia tốc ($\mathrm{m/s^2}$) |
-| --- | --- |
-| $0$ | $5.95$ |
+| Thời gian $t$ ($\mathrm s$) | Gia tốc $a$ ($\mathrm{m/s^2}$) |
+| :---: | :---: |
+| $0.00$ | $5.95$ |
 | $1.00$ | $5.52$ |
 | $2.00$ | $5.08$ |
 | $3.00$ | $4.55$ |
 | $4.00$ | $3.96$ |
 | $5.00$ | $3.40$ |
 
-Mỗi số đo có sai số thực nghiệm. **(a)** Vẽ gia tốc theo thời gian và tìm phương trình đường thẳng khớp tốt nhất. **(b)** Dùng hàm $a(t)$ ở (a) để tính tốc độ $v(t)$. Phác đồ thị $v$ theo $t$; đồ thị có là đường thẳng không? **(c)** Dùng kết quả (b) tính tốc độ tại $t=5.00\,\mathrm s$. **(d)** Tính quãng đường xe đi từ $t=0$ đến $5.00\,\mathrm s$.
+**(a)** Vẽ đồ thị các điểm gia tốc theo thời gian và tìm phương trình đường thẳng khớp tuyến tính $a(t) = a_0 - k t$ tốt nhất với dữ liệu thực nghiệm.
+**(b)** Dùng phép tính tích phân hàm $a(t)$ vừa tìm được để thiết lập hàm vận tốc $v(t)$. Phác họa đồ thị $v(t)$; đồ thị này có phải là một đường thẳng hay không?
+**(c)** Tính tốc độ của chiếc xe mô hình tại thời điểm $t = 5.00\,\mathrm s$.
+**(d)** Tính tổng quãng đường xe đã đi được từ $t = 0$ đến $t = 5.00\,\mathrm s$.
 :::
 
-## Bài tập nâng cao
+---
 
-::: exercise 2.87 •••
-Trong động tác bật nhảy thẳng đứng, vận động viên bắt đầu ở tư thế khuỵu và nhảy lên cao nhất có thể. Ngay cả vận động viên giỏi nhất cũng chỉ ở trên không lâu hơn $1.00\,\mathrm s$ một chút, gọi là thời gian “treo trên không”. Xem vận động viên như chất điểm, và gọi $y_{\max}$ là độ cao cực đại so với sàn. Để giải thích vì sao người ấy trông như treo trong không khí, tính tỷ số giữa thời gian ở trên độ cao $y_{\max}/2$ và thời gian đi từ sàn lên đến độ cao ấy. Bỏ qua lực cản không khí.
+## Bài tập thử thách cực hạn
+
+::: exercise 2.87 ••• — Giải mã ảo giác "treo trên không" (*Hang Time*) trong bóng rổ
+Trong một cú úp rổ ngoạn mục, các siêu sao bóng rổ NBA dường như "treo lơ lửng" trên không trung ở đỉnh cú nhảy trước khi úp bóng, tạo nên ảo giác thị giác kỳ thú cho hàng vạn khán giả. Ngay cả những vận động viên bật nhảy xuất sắc nhất lịch sử cũng chỉ có tổng thời gian bay trên không (*hang time*) quanh mức $1.0\,\mathrm s$. Xem vận động viên như một chất điểm và gọi $y_{\max}$ là độ cao cực đại mà trọng tâm cơ thể đạt được so với mặt sàn.
+Để giải mã nghịch lý cơ học này, hãy tính **tỉ số giữa thời gian vận động viên ở nửa trên của độ cao nhảy (từ $y_{\max}/2$ đến $y_{\max}$) so với thời gian vận động viên ở nửa dưới (từ mặt sàn $0$ lên đến $y_{\max}/2$)**. Kết quả này giải thích thế nào về cảm giác người xem thấy vận động viên "dừng lại trên không"? Bỏ qua lực cản không khí.
 :::
 
-::: exercise 2.88 ••• — Đuổi xe buýt
-Một nữ sinh chạy với tốc độ tối đa $5.0\,\mathrm{m/s}$ để bắt xe buýt đang dừng ở trạm. Khi cô còn cách xe $40.0\,\mathrm m$, xe bắt đầu đi với gia tốc không đổi $0.170\,\mathrm{m/s^2}$. **(a)** Cô phải chạy với $5.0\,\mathrm{m/s}$ trong bao lâu và bao xa để vượt đến vị trí xe? **(b)** Khi cô đến xe, tốc độ xe bằng bao nhiêu? **(c)** Phác đồ thị $x$–$t$ cho cả hai, chọn $x=0$ tại vị trí đầu của nữ sinh. **(d)** Các phương trình ở (a) có nghiệm thứ hai, ứng với thời điểm muộn hơn mà xe và nữ sinh lại ở cùng chỗ nếu tiếp tục chuyển động như đã mô tả. Giải thích ý nghĩa nghiệm này. Tốc độ xe tại đó bằng bao nhiêu? **(e)** Nếu tốc độ tối đa của cô là $3.5\,\mathrm{m/s}$, cô có bắt kịp xe không? **(f)** Tốc độ tối thiểu để vừa bắt kịp xe bằng bao nhiêu? Khi đó cô phải chạy trong bao lâu và bao xa?
+::: exercise 2.88 ••• — Động học của hành khách đuổi theo xe buýt
+Một nữ sinh hớt hải chạy với tốc độ tối đa không đổi $5.0\,\mathrm{m/s}$ để đuổi theo một chiếc xe buýt đang đỗ ở trạm. Đúng khi cô còn cách đuôi xe buýt $40.0\,\mathrm m$, chiếc xe buýt bắt đầu lăn bánh rời trạm với gia tốc không đổi $0.170\,\mathrm{m/s^2}$.
+**(a)** Cô gái phải chạy trong bao lâu và trên quãng đường bao xa thì vừa chạm được vào đuôi xe buýt?
+**(b)** Khi cô chạm tới đuôi xe, tốc độ tức thời của xe buýt là bao nhiêu?
+**(c)** Phác họa đồ thị vị trí $x(t)$ của cô gái và xe buýt trên cùng một hệ trục (chọn $x = 0$ tại vị trí ban đầu của cô gái).
+**(d)** Phương trình tọa độ ở câu (a) có một nghiệm toán học thứ hai lớn hơn. Hãy giải thích ý nghĩa vật lý của nghiệm thứ hai này nếu như cả hai tiếp tục duy trì chuyển động không đổi. Tốc độ của xe buýt khi đó là bao nhiêu?
+**(e)** Nếu thể lực của cô gái chỉ cho phép chạy với tốc độ tối đa $3.5\,\mathrm{m/s}$, liệu cô có thể bắt kịp xe buýt được không?
+**(f)** Tốc độ chạy tối thiểu mà cô gái cần phải có để vừa vặn chạm được vào xe buýt là bao nhiêu? Trong tình huống đó, cô phải chạy trong bao lâu và bao xa?
 :::
 
-::: exercise 2.89 •••
-Một quả bóng được ném thẳng lên từ mép mái nhà. Quả thứ hai được thả từ mái sau đó $1.00\,\mathrm s$. Bỏ qua lực cản không khí. **(a)** Nếu tòa nhà cao $20.0\,\mathrm m$, tốc độ đầu của bóng thứ nhất phải bằng bao nhiêu để hai bóng chạm đất cùng lúc? Trên cùng đồ thị, phác vị trí hai bóng theo thời gian tính từ khi bóng thứ nhất được ném. Sau đó xét cùng tình huống nhưng cho trước tốc độ đầu $v_0$ của bóng thứ nhất và coi chiều cao $h$ là ẩn. **(b)** Tòa nhà phải cao bao nhiêu nếu **(i)** $v_0=6.0\,\mathrm{m/s}$ và **(ii)** $v_0=9.5\,\mathrm{m/s}$? **(c)** Nếu $v_0$ lớn hơn một giá trị $v_{\max}$, không có $h$ nào để hai bóng chạm đất cùng lúc. Tìm $v_{\max}$ và giải thích ý nghĩa vật lý đơn giản của nó. **(d)** Nếu $v_0$ nhỏ hơn một giá trị $v_{\min}$, cũng không có $h$ nào thỏa mãn. Tìm $v_{\min}$ và giải thích ý nghĩa vật lý của nó.
+::: exercise 2.89 ••• — Bài toán hai quả bóng thả lệch pha
+Từ mép sân thượng của một tòa nhà cao tầng, quả bóng thứ nhất được ném thẳng đứng lên cao với tốc độ đầu $v_0$. Đúng $1.00\,\mathrm s$ sau, quả bóng thứ hai được buông rơi tự do từ trạng thái nghỉ từ cùng mép sân thượng đó. Bỏ qua sức cản không khí.
+**(a)** Nếu tòa nhà cao $h = 20.0\,\mathrm m$, tốc độ ném ban đầu $v_0$ của quả bóng thứ nhất phải bằng bao nhiêu để cả hai quả bóng chạm mặt đất hoàn toàn đồng thời? Phác họa đồ thị tọa độ $y(t)$ của cả hai bóng trên cùng một hệ trục.
+**(b)** Chiều cao tòa nhà $h$ phải bằng bao nhiêu để hai bóng chạm đất cùng lúc nếu: (i) $v_0 = 6.0\,\mathrm{m/s}$; (ii) $v_0 = 9.5\,\mathrm{m/s}$?
+**(c)** Nếu tốc độ ném $v_0$ vượt quá một ngưỡng cực đại $v_{\max}$, sẽ không tồn tại bất kỳ chiều cao tòa nhà $h$ nào thỏa mãn điều kiện chạm đất đồng thời. Hãy tìm giá trị $v_{\max}$ này và giải thích ý nghĩa vật lý trực giác của nó.
+**(d)** Tương tự, nếu $v_0$ nhỏ hơn một ngưỡng cực tiểu $v_{\min}$, bài toán cũng vô nghiệm. Hãy tìm giá trị $v_{\min}$ và giải thích ý nghĩa vật lý của nó.
 :::
 
-## Bài tập đọc hiểu theo dạng MCAT
+---
 
-### BIO — Dòng máu trong tim
+## Bài tập đọc hiểu & Tư duy tích hợp theo chuẩn MCAT
 
-Hệ tuần hoàn của người là hệ kín: máu được tâm thất trái bơm vào động mạch, bị giới hạn trong một hệ mạch liên tục, phân nhánh, đi qua mao mạch rồi vào tĩnh mạch để trở về tim. Máu trong mỗi buồng của bốn buồng tim tạm thời đứng yên trước khi được cơ tim co bóp đẩy ra.
+### Chuyên đề Sinh cơ học: Động học dòng máu trong hệ tuần hoàn
+
+Hệ tuần hoàn của con người là một mạng lưới thủy lực kín hoàn chỉnh: máu giàu oxy được tâm thất trái co bóp tống vào động mạch chủ, luân chuyển qua mạng lưới mạch máu phân nhánh liên tục tới các mao mạch nuôi mô, rồi thu gom qua hệ tĩnh mạch đổ về tim. Máu trong các buồng tim tạm thời đứng yên tương đối trước mỗi kỳ tâm thu co bóp của cơ tim.
 
 ::: exercise 2.90
-Nếu sự co bóp tâm thất trái kéo dài $250\,\mathrm{ms}$ và tốc độ dòng máu trong động mạch chủ, động mạch lớn rời tim, là $0.80\,\mathrm{m/s}$ ở cuối lần co bóp, gia tốc trung bình của một hồng cầu khi rời tim bằng bao nhiêu?
-
-**(a)** $310\,\mathrm{m/s^2}$; **(b)** $31\,\mathrm{m/s^2}$; **(c)** $3.2\,\mathrm{m/s^2}$; **(d)** $0.32\,\mathrm{m/s^2}$.
+Thời kỳ tâm thu co bóp của tâm thất trái diễn ra trong khoảng thời gian $\Delta t = 250\,\mathrm{ms}$, và tốc độ của dòng máu trong động mạch chủ đạt tới $0.80\,\mathrm{m/s}$ ở thời điểm cuối của nhịp co bóp. Độ lớn gia tốc trung bình của một tế bào hồng cầu khi vừa được tống ra khỏi tim là bao nhiêu?
+**(a)** $310\,\mathrm{m/s^2}$
+**(b)** $31\,\mathrm{m/s^2}$
+**(c)** $3.2\,\mathrm{m/s^2}$
+**(d)** $0.32\,\mathrm{m/s^2}$
 :::
 
 ::: exercise 2.91
-Động mạch chủ có đường kính $d_a$ phân thành hai động mạch bằng nhau với tổng tiết diện bằng tiết diện động mạch chủ. Đường kính một nhánh bằng bao nhiêu?
-
-**(a)** $\sqrt{d_a}$; **(b)** $d_a/\sqrt2$; **(c)** $2d_a$; **(d)** $d_a/2$.
+Động mạch chủ có đường kính trong là $d_a$ phân nhánh thành hai động mạch chậu có kích thước giống hệt nhau, sao cho tổng diện tích tiết diện của hai nhánh động mạch mới đúng bằng diện tích tiết diện của động mạch chủ ban đầu (đảm bảo lưu lượng máu liên tục). Đường kính của mỗi nhánh động mạch con bằng bao nhiêu?
+**(a)** $\sqrt{d_a}$
+**(b)** $d_a / \sqrt{2}$
+**(c)** $2d_a$
+**(d)** $d_a / 2$
 :::
 
 ::: exercise 2.92
-Có thể đo trực tiếp vận tốc máu trong động mạch chủ bằng kỹ thuật siêu âm. Hình P2.92 cho đồ thị điển hình trong một nhịp tim. Phát biểu nào diễn giải đồ thị tốt nhất?
-
-**(a)** Dòng máu đổi chiều khoảng $0.25\,\mathrm s$.
-
-**(b)** Tốc độ dòng máu bắt đầu giảm khoảng $0.10\,\mathrm s$.
-
-**(c)** Gia tốc máu có độ lớn lớn nhất khoảng $0.25\,\mathrm s$.
-
-**(d)** Gia tốc máu có độ lớn lớn nhất khoảng $0.10\,\mathrm s$.
+Trong chẩn đoán y khoa hiện đại, vận tốc tức thời của dòng máu chảy qua van động mạch chủ có thể được đo đạc liên tục bằng kỹ thuật siêu âm Doppler tim. Hình P2.92 thể hiện dạng đồ thị vận tốc dòng máu điển hình trong một chu kỳ nhịp tim. Nhận định nào dưới đây giải thích chính xác nhất đồ thị thực nghiệm này?
+**(a)** Dòng máu bắt đầu đổi chiều chảy ngược lại vào khoảng thời điểm $0.25\,\mathrm s$.
+**(b)** Tốc độ của dòng máu bắt đầu giảm dần vào khoảng thời điểm $0.10\,\mathrm s$.
+**(c)** Độ lớn gia tốc của dòng máu đạt giá trị lớn nhất vào khoảng thời điểm $0.25\,\mathrm s$.
+**(d)** Độ lớn gia tốc của dòng máu đạt giá trị lớn nhất vào khoảng thời điểm $0.10\,\mathrm s$.
 :::
 
-![Hình P2.92: đồ thị vận tốc dòng máu trong động mạch chủ theo thời gian của một nhịp tim](img/young-02/hinh-p2-92.png)
+![Hình P2.92: Đồ thị vận tốc dòng máu trong động mạch chủ theo thời gian trong một chu kỳ tim](img/young-02/hinh-p2-92.png)
 
-**Hình P2.92:** Trục đứng “Vận tốc máu” ghi $\mathrm{m/s}$, trục ngang “Thời gian” ghi giây. Đồ thị tăng nhanh, đạt cực đại rồi giảm dần về không.
+**Hình P2.92:** Trục tung biểu thị vận tốc tức thời của dòng máu ($\mathrm{m/s}$), trục hoành biểu thị thời gian ($s$). Vận tốc tăng vọt ở đầu kỳ tâm thu đạt cực đại rồi giảm dần về 0.

@@ -59,7 +59,7 @@ $$
 
 Đây đúng là định nghĩa của một **siêu phẳng tựa** của tập lồi $\operatorname{epi} f$ tại điểm biên $(x, f(x))$, với pháp tuyến $(\nabla f(x), -1)$ (Hình 3.6). Tiếp tuyến của hàm lồi chỉ là siêu phẳng tựa của epigraph, và điều kiện bậc nhất là định lý siêu phẳng tựa ở chủ đề trước, áp dụng cho một tập lồi đặc biệt.
 
-**Dùng epigraph để chứng minh tính lồi.** Ví dụ 3.4 của sách dùng epigraph cho hàm $x^2/y$ và tổng quát của nó. Với $y > 0$, theo phần bù Schur,
+**Dùng epigraph để chứng minh tính lồi.** Ta xét ứng dụng epigraph chứng minh tính lồi cho hàm $x^2/y$ và trường hợp tổng quát của nó. Với $y > 0$, theo phần bù Schur,
 
 $$
 \frac{x^2}{y} \le t \iff \begin{bmatrix} y & x \\ x & t \end{bmatrix} \succeq 0 .
@@ -67,7 +67,7 @@ $$
 
 Ma trận bên phải phụ thuộc affine vào $(x, y, t)$, và điều kiện nửa xác định dương nghĩa là ma trận nằm trong nón PSD, một tập lồi. Vậy epigraph là ảnh ngược của một tập lồi qua một ánh xạ affine, nên lồi, và hàm lồi. So với việc tính Hessian ở chủ đề điều kiện bậc hai, lời chứng minh này không cần đạo hàm nào. Thử bằng số: với $(x, y) = (1, 2)$, ta có $x^2/y = 0.5$. Ma trận $\begin{bmatrix} 2 & 1 \\ 1 & 0.5 \end{bmatrix}$ nửa xác định dương, còn $\begin{bmatrix} 2 & 1 \\ 1 & 0.4 \end{bmatrix}$ thì không, đúng như $0.5 \le 0.5$ còn $0.5 > 0.4$.
 
-**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Bạn đã thấy mẹo này ở chủ đề về hai lớp bài toán kinh điển: cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Sách gọi đây là dạng epigraph của bài toán (§4.1.3).
+**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Bạn đã thấy mẹo này ở chủ đề về hai lớp bài toán kinh điển: cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Kỹ thuật này được gọi là dạng epigraph chuẩn tắc của bài toán tối ưu.
 
 ## 3. Bất đẳng thức Jensen
 

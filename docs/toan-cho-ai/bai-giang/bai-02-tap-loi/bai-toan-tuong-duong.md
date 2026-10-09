@@ -13,7 +13,7 @@ Mỗi phép biến đổi như thế đi kèm hai câu hỏi. Thứ nhất, lờ
 
 ## 1. Hai bài toán tương đương
 
-Sách dùng khái niệm tương đương một cách không hình thức. Hai bài toán được gọi là **tương đương** nếu từ một nghiệm của bài toán này, ta dễ dàng tìm được một nghiệm của bài toán kia, và ngược lại. Sách cũng nói rõ rằng có thể đưa ra một định nghĩa hình thức, nhưng định nghĩa ấy phức tạp mà không giúp hiểu thêm điều gì.
+Ta tiếp cận khái niệm tương đương một cách trực quan và thực chất: Hai bài toán được gọi là **tương đương** nếu từ một nghiệm của bài toán này, ta dễ dàng tìm được một nghiệm của bài toán kia, và ngược lại. Thay vì sa đà vào các định nghĩa hình thức rườm rà, nhãn quan tương đương này giúp ta nhìn thấu bản chất biến đổi mô hình.
 
 Ví dụ đơn giản nhất là phép co giãn. Nhân hàm mục tiêu và các hàm ràng buộc bất đẳng thức với những hằng số dương $\alpha_i > 0$, nhân các hàm ràng buộc đẳng thức với những hằng số khác không $\beta_i \ne 0$, ta được
 

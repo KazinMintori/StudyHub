@@ -29,12 +29,12 @@ export const readingMetadata = {
     "minutes": 10
   },
   "toan-cho-ai/bai-00-on-tap-nen-tang": {
-    "words": 2082,
-    "minutes": 10
+    "words": 3522,
+    "minutes": 20
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu": {
-    "words": 2081,
-    "minutes": 10
+    "words": 2719,
+    "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
     "words": 4264,
@@ -281,8 +281,8 @@ export const readingMetadata = {
     "minutes": 100
   },
   "vat-ly-1/02-chuyen-dong-thang": {
-    "words": 19258,
-    "minutes": 95
+    "words": 24772,
+    "minutes": 125
   },
   "vat-ly-1/03-chuyen-dong-khong-gian": {
     "words": 240,

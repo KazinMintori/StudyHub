@@ -9,7 +9,7 @@ description: "Định nghĩa hàm lồi, lồi nghiêm ngặt, lõm và affine c
 
 Phần hình học vừa qua nói về **tập lồi**: những miền mà đoạn thẳng nối hai điểm bất kỳ không bao giờ đi ra ngoài. Nhưng ngoài miền khả thi, một bài toán tối ưu còn có hàm mục tiêu. Câu hỏi tiếp theo vì vậy rất tự nhiên: một **hàm** "lồi" thì nên được hiểu thế nào, để những điều tốt đẹp của tập lồi truyền sang được bài toán tối ưu?
 
-Câu trả lời của sách dùng lại đúng công cụ quen thuộc là đoạn thẳng, nhưng đặt nó lên đồ thị của hàm. Sau định nghĩa và ý nghĩa của từng điều kiện trong đó, ta học kỹ thuật hạn chế hàm lên một đường thẳng, cách biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều. Phần cuối là một mẹo ký hiệu giúp biến ràng buộc thành một phần của hàm mục tiêu.
+Câu trả lời nằm ở công cụ hình học quen thuộc là đoạn thẳng, nhưng đặt nó lên đồ thị của hàm. Sau định nghĩa và ý nghĩa của từng điều kiện trong đó, ta học kỹ thuật hạn chế hàm lên một đường thẳng, cách biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều. Phần cuối là một mẹo ký hiệu giúp biến ràng buộc thành một phần của hàm mục tiêu.
 
 ## 1. Định nghĩa
 
@@ -69,7 +69,7 @@ Với $x_1^2 - x_2^2$, hàm hạn chế cong lên khi đường thẳng gần tr
 
 ## 4. Mở rộng giá trị và hàm chỉ thị
 
-Viết đi viết lại "với mọi $x \in \operatorname{dom} f$" khá phiền. Sách dùng một quy ước giúp gọn ký hiệu: **mở rộng giá trị** của hàm lồi $f$ là hàm $\tilde f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}$ cho bởi
+Viết đi viết lại "với mọi $x \in \operatorname{dom} f$" khá phiền. Ta dùng một quy ước giúp làm gọn ký hiệu: **mở rộng giá trị** của hàm lồi $f$ là hàm $\tilde f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}$ cho bởi
 
 $$
 \tilde f(x) = \begin{cases} f(x) & x \in \operatorname{dom} f,\\ +\infty & x \notin \operatorname{dom} f. \end{cases}

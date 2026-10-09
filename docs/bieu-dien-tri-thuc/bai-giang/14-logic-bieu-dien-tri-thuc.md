@@ -61,8 +61,8 @@ Thế giới trong góc nhìn của FOL được kiến tạo từ 4 thành tố
 |:---|:---|:---|
 | **Hằng số (Constants)** | Định danh một thực thể cụ thể duy nhất trong thế giới bài toán | $\text{Nam}, \text{UET}, \text{AIT2004}, 2$ |
 | **Biến số (Variables)** | Ký hiệu đại diện cho một đối tượng trừu tượng bất kỳ trong miền xác định | $x, y, z$ |
-| **Hàm số (Functions)** | Ánh xạ từ một hoặc nhiều đối tượng sang **một đối tượng khác** có liên hệ mật thiết | $\text{MeCua}(x), \text{LopTruong}(y), \text{GiaTriTuyetDoi}(z)$ |
-| **Vị từ (Predicates)** | Ánh xạ từ một hoặc nhiều đối tượng sang **chân trị $\{\text{True}, \text{False}\}$**, biểu thị thuộc tính hoặc quan hệ | $\text{LaSinhVien}(x), \text{HocMon}(x, y), \text{LonHon}(a, b)$ |
+| **Hàm số (Functions)** | Ánh xạ từ một hoặc nhiều đối tượng sang **một đối tượng khác** có liên hệ mật thiết | $\text{MeCua}(x)$, $\text{LopTruong}(y)$, $\text{Abs}(z)$ |
+| **Vị từ (Predicates)** | Ánh xạ từ một hoặc nhiều đối tượng sang **chân trị $\{\text{True}, \text{False}\}$**, biểu thị thuộc tính hoặc quan hệ | $\text{LaSinhVien}(x)$, $\text{HocMon}(x, y)$ |
 
 Một phát biểu hoàn chỉnh trong FOL được xây dựng từ:
 - **Hạng từ (Term):** Một biểu thức logic trỏ tới một đối tượng (có thể là hằng số, biến số, hoặc hàm số lồng nhau như $\text{MeCua}(\text{Nam})$).
@@ -159,8 +159,11 @@ $$
 $$
 
 ### Ví dụ hợp nhất hóa
-Tìm $\text{Unify}\big(\text{DayHoc}(x, \text{UET}), \; \text{DayHoc}(\text{ThayLong}, y)\big)$:
-Phép thế hợp nhất là:
+Xét bài toán tìm phép thế hợp nhất giữa hai biểu thức:
+$$
+\text{Unify}\Big(\text{DayHoc}(x, \text{UET}), \; \text{DayHoc}(\text{ThayLong}, y)\Big)
+$$
+Phép thế hợp nhất cần tìm là:
 $$
 \theta = \{x / \text{ThayLong}, \; y / \text{UET}\}
 $$

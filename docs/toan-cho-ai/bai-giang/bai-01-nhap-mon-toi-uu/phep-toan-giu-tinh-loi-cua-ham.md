@@ -101,7 +101,7 @@ $$
 
 ## 5. Phối cảnh của hàm
 
-Với $f : \mathbb{R}^n \to \mathbb{R}$, **phối cảnh** của $f$ là hàm $g(x, t) = t\, f(x/t)$ với $t > 0$. Nếu $f$ lồi thì $g$ lồi (§3.2.6). Lời chứng minh của sách dùng epigraph và phép phối cảnh của tập ở chủ đề phối cảnh: $(x, t, s) \in \operatorname{epi} g$ khi và chỉ khi $(x/t, s/t) \in \operatorname{epi} f$, nên epigraph của $g$ là ảnh ngược của một tập lồi qua phép phối cảnh.
+Với $f : \mathbb{R}^n \to \mathbb{R}$, **phối cảnh** của $f$ là hàm $g(x, t) = t\, f(x/t)$ với $t > 0$. Nếu $f$ lồi thì $g$ lồi (§3.2.6). Để chứng minh điều này, ta dùng epigraph và phép phối cảnh của tập ở chủ đề phối cảnh: $(x, t, s) \in \operatorname{epi} g$ khi và chỉ khi $(x/t, s/t) \in \operatorname{epi} f$, nên epigraph của $g$ là ảnh ngược của một tập lồi qua phép phối cảnh.
 
 Hai ví dụ của sách cho thấy quy tắc này mạnh đến đâu. Phối cảnh của $x^T x$ là $x^T x / t$, tổng quát hóa của hàm $x^2/y$ (Ví dụ 3.18). Phối cảnh của $-\log x$ là $t\log(t/x)$, gọi là **entropy tương đối**, lồi đồng thời theo $(x, t)$ (Ví dụ 3.19). Cộng theo các thành phần, độ phân kỳ $D_{\mathrm{kl}}(p, q) = \sum_i p_i \log(p_i / q_i)$ lồi **đồng thời** theo cặp $(p, q)$. Với $p_1 = (0.7, 0.3)$, $q_1 = (0.4, 0.6)$, $p_2 = (0.2, 0.8)$, $q_2 = (0.5, 0.5)$, trung bình hai giá trị KL xấp xỉ $0.188$, còn cặp trung bình $(\bar p, \bar q)$ có $\bar p = \bar q = (0.45, 0.55)$ nên KL bằng 0, đúng chiều của tính lồi.
 

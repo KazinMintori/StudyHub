@@ -51,7 +51,7 @@ Bài học đầu tiên của môn học nằm gọn trong câu chuyện này. T
 
 ## 2. Dạng tổng quát của một bài toán tối ưu
 
-Sách dùng một cách viết chung cho mọi bài toán tối ưu:
+Trong lý thuyết tối ưu hóa, một bài toán tối ưu chuẩn tắc được biểu diễn như sau:
 
 $$
 \begin{aligned}
@@ -225,7 +225,7 @@ Bài toán $\min\ 0$ với $-1 \le x \le 1$ có mọi điểm khả thi đều t
 
 <details><summary>Xem lời giải thích</summary>
 
-Cùng tập nghiệm, vì hàm $u \mapsto e^u$ tăng ngặt nên thứ tự giữa các giá trị được giữ nguyên: $f_0(x) \le f_0(y)$ khi và chỉ khi $e^{f_0(x)} \le e^{f_0(y)}$. Giá trị tối ưu thì khác nhau, liên hệ bởi $p^\star_2 = e^{p^\star_1}$ khi $p^\star_1$ hữu hạn. Đây là ví dụ về hai bài toán **tương đương** nhưng không **giống nhau**. Sách dùng phép biến đổi kiểu này rất thường xuyên, chẳng hạn thay việc cực tiểu $\|Ax - b\|_2$ bằng cực tiểu $\|Ax - b\|_2^2$ để có hàm khả vi.
+Cùng tập nghiệm, vì hàm $u \mapsto e^u$ tăng ngặt nên thứ tự giữa các giá trị được giữ nguyên: $f_0(x) \le f_0(y)$ khi và chỉ khi $e^{f_0(x)} \le e^{f_0(y)}$. Giá trị tối ưu thì khác nhau, liên hệ bởi $p^\star_2 = e^{p^\star_1}$ khi $p^\star_1$ hữu hạn. Đây là ví dụ về hai bài toán **tương đương** nhưng không **giống nhau**. Trong thực tế ta dùng phép biến đổi tương đương này rất thường xuyên, chẳng hạn thay việc cực tiểu $\|Ax - b\|_2$ bằng cực tiểu $\|Ax - b\|_2^2$ để có hàm khả vi.
 
 </details>
 

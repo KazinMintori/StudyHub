@@ -101,7 +101,7 @@ Bất đẳng thức quen thuộc giữa trung bình cộng và trung bình nhâ
 
 ## 5. Log det: khi biến là một ma trận
 
-Hàm $f(X) = \log\det X$ trên tập ma trận đối xứng xác định dương $\mathbb{S}^n_{++}$ là hàm lõm. Viết Hessian của một hàm theo biến ma trận rất cồng kềnh, nên sách dùng công cụ thứ ba: hạn chế lên một đường thẳng $X = Z + tV$ với $Z \succ 0$ và $V$ đối xứng. Đặt $g(t) = \log\det(Z + tV)$ và tách $Z = Z^{1/2} Z^{1/2}$:
+Hàm $f(X) = \log\det X$ trên tập ma trận đối xứng xác định dương $\mathbb{S}^n_{++}$ là hàm lõm. Viết Hessian của một hàm theo biến ma trận rất cồng kềnh, nên ta dùng công cụ thứ ba: hạn chế hàm lên một đường thẳng $X = Z + tV$ với $Z \succ 0$ và $V$ đối xứng. Đặt $g(t) = \log\det(Z + tV)$ và tách $Z = Z^{1/2} Z^{1/2}$:
 
 $$
 g(t) = \log\det\Big(Z^{1/2}\big(I + t\, Z^{-1/2} V Z^{-1/2}\big) Z^{1/2}\Big) = \log\det Z + \sum_{i=1}^n \log(1 + t\lambda_i),
