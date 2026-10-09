@@ -55,10 +55,18 @@ flowchart TD
 
 ---
 
-##  Các nguồn tham khảo quốc tế tốt nhất
+## 📖 Giáo trình & Nguồn Tham khảo Chuẩn Quốc tế
 
-Trong quá trình học các bài viết dưới đây, bạn có thể tham khảo thêm các công cụ trực quan hàng đầu thế giới:
-- [VisuAlgo.net](https://visualgo.net/en) - Trang web trực quan hóa trực tiếp mọi thuật toán bằng hoạt họa.
-- [NeetCode.io](https://neetcode.io/) - Lộ trình thực hành thuật toán từ cơ bản đến nâng cao.
-- [GeeksforGeeks - DSA](https://www.geeksforgeeks.org/data-structures/) - Bách khoa toàn thư ví dụ mã nguồn C++/Java/Python.
-- [MIT OpenCourseWare 6.006](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) - Giáo trình nhập môn giải thuật kinh điển của MIT.
+### 1. Giáo trình Chuẩn mực Toàn cầu
+
+1. **Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, & Clifford Stein (CLRS)**, [*Introduction to Algorithms (4th Edition)*](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/), MIT Press. Giáo trình "kinh thánh" của ngành Khoa học Máy tính: phân tích tiệm cận (Big-O, Master Theorem), thuật toán chia để trị, sắp xếp (MergeSort, QuickSort, HeapSort), cây nhị phân tìm kiếm, cây đỏ-đen, quy hoạch động và các thuật toán đồ thị cơ bản.
+2. **Robert Sedgewick & Kevin Wayne**, [*Algorithms (4th Edition)*](https://algs4.cs.princeton.edu/home/), Addison-Wesley. Trang tài nguyên khóa học trực tuyến chính thức của Đại học Princeton: [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/). Hệ thống bài giảng và mã nguồn cài đặt mẫu mực, trực quan.
+3. **Steven S. Skiena**, [*The Algorithm Design Manual (3rd Edition)*](https://www.algorist.com/), Springer. Trang tài nguyên: [algorist.com](https://www.algorist.com/). Cẩm nang tra cứu và thiết kế thuật toán giải quyết các bài toán thực tế.
+4. **Giáo trình Cấu trúc dữ liệu và Giải thuật**, Khoa Công nghệ Thông tin, Trường Đại học Công nghệ (ĐHQGHN).
+
+### 2. Công cụ Trực quan hóa & Luyện tập Trực tuyến
+
+- [VisuAlgo.net](https://visualgo.net/en) — Công cụ trực quan hóa hoạt họa từng bước của TS. Steven Halim (Đại học Quốc gia Singapore - NUS).
+- [MIT OpenCourseWare 6.006: Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) — Khóa học nhập môn giải thuật kinh điển của MIT.
+- [NeetCode.io](https://neetcode.io/) — Lộ trình luyện tập thuật toán và cấu trúc dữ liệu theo chủ đề.
+- [GeeksforGeeks - Data Structures](https://www.geeksforgeeks.org/data-structures/) — Bách khoa tra cứu nhanh ví dụ mã nguồn C++/Java/Python.

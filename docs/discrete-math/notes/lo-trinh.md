@@ -38,7 +38,9 @@ flowchart TD
 
 ---
 
-##  Nguồn Tham khảo Đánh giá cao
+## 📖 Giáo trình & Nguồn Tham khảo Chuẩn Quốc tế
 
-- [Discrete Mathematics by Kenneth H. Rosen](https://www.mheducation.com/) - Cuốn sách giáo khoa tiêu chuẩn vàng toàn cầu cho môn Toán rời rạc.
-- [Kênh YouTube TrevTutor - Discrete Math](https://www.youtube.com/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz) - Chuỗi video giải thích các khái niệm của toán rời rạc.
+1. **Kenneth H. Rosen**, [*Discrete Mathematics and Its Applications (8th Edition)*](https://www.mheducation.com/highered/product/discrete-mathematics-its-applications-rosen/M9781259676512.html), McGraw-Hill. Giáo trình tiêu chuẩn vàng toàn cầu cho môn Toán rời rạc ngành Khoa học Máy tính: Logic mệnh đề & vị từ, quan hệ, hàm số, phương pháp quy nạp toán học, đại số Boole và lý thuyết đồ thị cơ bản.
+2. **Eric Lehman, F. Thomson Leighton, & Albert R. Meyer**, [*Mathematics for Computer Science*](https://courses.csail.mit.edu/6.042/spring18/mcs.pdf), MIT OpenCourseWare (6.042J). Bản sách PDF mở chính thức từ MIT CSAIL: [MIT MCS Book (PDF)](https://courses.csail.mit.edu/6.042/spring18/mcs.pdf). Khóa học trực tuyến đi kèm: [MIT OCW 6.042J: Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/).
+3. **Nguyễn Đức Nghĩa & Nguyễn Tô Thành**, *Toán rời rạc*, NXB Đại học Quốc gia Hà Nội. Giáo trình giảng dạy tiêu chuẩn của Trường Đại học Công nghệ (ĐHQGHN).
+4. **TrevTutor — Discrete Mathematics Series**: [YouTube Playlist](https://www.youtube.com/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz). Chuỗi video sư phạm trực quan phân tích logic, quan hệ tương đương, quan hệ thứ tự và đồ thị.

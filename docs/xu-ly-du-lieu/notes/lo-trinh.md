@@ -4,11 +4,11 @@ section: notes
 title: Lộ trình học xử lý dữ liệu
 ---
 
-# Lộ trình học xử lý dữ liệu
+# Lộ trình học Lập trình Xử lý Dữ liệu
 
-Nguồn chính của bộ bài là Wes McKinney, [Python for Data Analysis, ấn bản 3](https://wesmckinney.com/book/). Học từ Python và NumPy sang pandas, nạp và làm sạch dữ liệu, rồi biểu đồ và kết luận. iaidev chỉ bổ sung một số chủ đề; bài LLM được ghi rõ là phần ngoài sách.
+Khóa học trang bị phương pháp luận và kỹ năng thực hành phân tích dữ liệu trên hệ sinh thái mã nguồn mở Python. Lộ trình đi từ lập trình căn bản, tư duy vector hóa với NumPy, thao tác dữ liệu bảng nhiều chiều cùng pandas, đến kỹ thuật làm sạch, xử lý chuỗi thời gian, trích xuất dữ liệu bán cấu trúc bằng LLM và trực quan hóa chuyên sâu.
 
-Ví dụ và bài tập có lời giải nằm trong hộp gập ở cuối mỗi bài. Mỗi bài có ba tab Notes, Slides và Kiến thức nền.
+Ví dụ và bài tập thực hành kèm lời giải chi tiết được tích hợp ở cuối mỗi bài giảng để củng cố phản xạ phân tích.
 
 ## Các bài học
 
@@ -26,4 +26,12 @@ Ví dụ và bài tập có lời giải nằm trong hộp gập ở cuối mỗ
 - [Trực quan hóa nâng cao & đọc biểu đồ](/xu-ly-du-lieu/bai-giang/bai-13-truc-quan-hoa-nang-cao.md)
 - [Trình bày & thẩm định một phân tích dữ liệu](/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md)
 
-Số bài giữ theo lộ trình tham khảo, nên chuyển từ bài 8 sang bài 10.
+---
+
+## 📖 Giáo trình & Tài liệu Tham khảo Chuẩn mực
+
+1. **Wes McKinney**, [*Python for Data Analysis (3rd Edition)*](https://wesmckinney.com/book/), O'Reilly Media. Bản sách trực tuyến mở hoàn chỉnh tại [wesmckinney.com/book](https://wesmckinney.com/book/). Tác giả thư viện pandas hướng dẫn trực tiếp về cấu trúc dữ liệu Series, DataFrame, xử lý chuỗi thời gian và công cụ tính toán số học.
+2. **Jake VanderPlas**, [*Python Data Science Handbook (2nd Edition)*](https://jakevdp.github.io/PythonDataScienceHandbook/), O'Reilly Media. Bản trực tuyến mở tại [jakevdp.github.io](https://jakevdp.github.io/PythonDataScienceHandbook/). Cẩm nang toàn diện về NumPy, Pandas, Matplotlib và Scikit-Learn.
+3. **Tài liệu chính thức Pandas (Pandas Documentation)**: [pandas.pydata.org/docs](https://pandas.pydata.org/docs/). Tra cứu chuẩn mực về API, tối ưu hóa hiệu năng và các hàm biến đổi dữ liệu.
+4. **Tài liệu chính thức NumPy (NumPy Documentation)**: [numpy.org/doc/stable](https://numpy.org/doc/stable/). Nền tảng về mảng nhiều chiều ndarray, tư duy vector hóa và cơ chế broadcasting.
+5. **Hadley Wickham & Garrett Grolemund**, [*R for Data Science (2nd Edition)*](https://r4ds.hadley.nz/), O'Reilly Media. Tài liệu kinh điển về tư duy quy chuẩn dữ liệu gọn gàng (Tidy Data) và chu trình khám phá dữ liệu (EDA).

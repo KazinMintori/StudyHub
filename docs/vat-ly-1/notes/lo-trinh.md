@@ -1,15 +1,17 @@
 ---
 course: vat-ly-1
-title: "Lộ trình bản dịch giáo trình"
+title: "Lộ trình học tập & Tài liệu tham khảo — Vật lý 1"
 ---
 
-# Lộ trình bản dịch giáo trình
+# Lộ trình học tập & Tài liệu tham khảo — Vật lý 1
 
-Bản dịch tiếng Việt theo chương 1–20 của Young & Freedman, từ cơ học đến hết nhiệt học. Đang dịch và đối chiếu từng mục, hình, ví dụ và bài tập nguyên tác.
+Chương trình **Vật lý đại cương 1** trang bị nền tảng giải tích vật lý từ cơ học cổ điển, chuyển động cơ học chất điểm và vật rắn, các định luật bảo toàn, cơ học chất lưu, dao động, sóng cơ cho đến nhiệt động lực học.
 
-Bài học giữ đầy đủ lời dẫn, nội dung, ứng dụng, công thức, lập luận, hình, ví dụ và bài tập của nguyên tác. Chỉ được thêm mô phỏng thí nghiệm có nhãn riêng. Có thể rút gọn diễn đạt nhưng phải giữ ý nghĩa và câu văn đầy đủ theo quy tắc ngôn ngữ của dự án.
+Mỗi chuyên đề kết hợp chặt chẽ giữa hiện tượng tự nhiên, suy luận toán học giải tích vi tích phân, và hệ thống bài tập rèn luyện tư duy thực tế.
 
-Mỗi chương chỉ chuyển sang hoàn tất sau khi được dịch và đối chiếu toàn bộ, kể cả bài tập cuối chương. Các thẻ Slides cũ đã được rút vì chứa nội dung tự đặt và không phản ánh đủ nguyên tác.
+---
+
+## 1. Khung chương trình 20 chuyên đề cốt lõi
 
 | Chương | Bài giảng | Trang in, kể cả bài tập | Trạng thái |
 | --- | --- | --- | --- |
@@ -33,3 +35,12 @@ Mỗi chương chỉ chuyển sang hoàn tất sau khi được dịch và đố
 | 18 | [Tính chất nhiệt của vật chất](/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi.md) | 579–612 | Chưa dịch |
 | 19 | [Nguyên lý thứ nhất của nhiệt động lực học](/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat.md) | 613–641 | Chưa dịch |
 | 20 | [Nguyên lý thứ hai của nhiệt động lực học](/vat-ly-1/bai-giang/20-nguyen-ly-thu-hai-entropy.md) | 642–677 | Chưa dịch |
+
+---
+
+## 2. Giáo trình & Tài liệu Tham khảo Chuẩn mực
+
+1. **Hugh D. Young & Roger A. Freedman**, [*Sears and Zemansky's University Physics with Modern Physics (15th Edition)*](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000006848), Pearson. Giáo trình đại học chuẩn mực quốc tế về Cơ học, Sóng cơ và Nhiệt học với các phân tích hiện tượng và bài toán thực tế phong phú.
+2. **David Halliday, Robert Resnick, & Jearl Walker**, [*Fundamentals of Physics (11th/12th Edition)*](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+12th+Edition-p-9781119773474), Wiley. Bộ sách vật lý đại cương kinh điển toàn cầu về phương pháp luận và tư duy giải tích vật lý.
+3. **MIT OpenCourseWare 8.01SC: Classical Mechanics** — [ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/). Hệ thống bài giảng video, ghi chú bài giảng (lecture notes) và đề thi kèm lời giải chi tiết môn Cơ học cổ điển của MIT.
+4. **Lương Duyên Bình (Chủ biên)**, *Vật lý đại cương - Tập 1: Cơ học và Nhiệt học*, NXB Giáo dục Việt Nam. Giáo trình vật lý đại cương tiêu chuẩn của các trường đại học kỹ thuật tại Việt Nam.

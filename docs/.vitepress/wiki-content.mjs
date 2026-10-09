@@ -20,13 +20,13 @@ export const wikiGroups = [
 export const courseWikiScopes = {
   'vat-ly-1':['physics','mathematics','probability'],
   'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','discrete-math','algorithms'],
-  'xu-ly-du-lieu':['programming','probability','mathematics','discrete-math'],
+  'xu-ly-du-lieu':['programming','probability','algorithms'],
   'xac-suat-thong-ke':['probability','mathematics','discrete-math'],
-  'vat-ly-2':['physics','mathematics','probability'],
-  'bieu-dien-tri-thuc':['discrete-math','algorithms','probability','mathematics'],
+  'vat-ly-2':['physics','mathematics'],
+  'bieu-dien-tri-thuc':['discrete-math','algorithms','probability'],
   'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','programming'],
-  dsa:['algorithms','discrete-math','programming','mathematics'],
-  'discrete-math':['discrete-math','algorithms','mathematics']
+  dsa:['algorithms','discrete-math','programming'],
+  'discrete-math':['discrete-math','algorithms']
 }
 
 export function conceptField(id) {

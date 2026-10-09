@@ -1,25 +1,46 @@
 import { findCourse } from './course-catalog.mjs'
 import { concepts } from './concepts.mjs'
 import { resolveConceptForCourse } from './wiki-content.mjs'
+import { lectureConceptIds, findLecture } from './lecture-model.mjs'
 
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 export function termLinks(md) {
   md.core.ruler.after('inline', 'study_term_links', state => {
     const path = (state.env.relativePath || '').replaceAll('\\', '/')
     const course = findCourse(path.split('/')[0])
-    const wikiId=path.startsWith('wiki/')?path.slice(5).replace(/\.md$/,''):null
+    const wikiId = path.startsWith('wiki/') ? path.slice(5).replace(/\.md$/, '') : null
     if (!wikiId && (!course || (!path.includes('/notes/') && !path.includes('/bai-giang/')) || path.endsWith('/index.md'))) return
+
+    let allowedConceptIds = null
+    if (course) {
+      const parts = path.split('/')
+      let lesson = null
+      if (parts.length >= 4) {
+        lesson = findLecture(course.id, parts[2])
+      } else if (parts.length === 3) {
+        lesson = findLecture(course.id, parts[2].replace(/\.md$/, ''))
+      }
+      if (lesson) {
+        allowedConceptIds = new Set(lectureConceptIds(lesson))
+      } else {
+        allowedConceptIds = new Set(course.foundations || [])
+      }
+    }
+
     const aliases = new Map()
     const blockedAliases = new Set((wikiId && concepts[wikiId]?.aliases || []).map(alias => alias.toLocaleLowerCase('vi')))
-    for (const [id,term] of Object.entries(concepts)) {
-      if(id===wikiId)continue
+    for (const [id, term] of Object.entries(concepts)) {
+      if (id === wikiId) continue
+      if (allowedConceptIds && !allowedConceptIds.has(id)) continue
       for (const alias of term.aliases) {
         const key = alias.toLocaleLowerCase('vi')
         if (blockedAliases.has(key)) continue
         aliases.set(key, [...(aliases.get(key) || []), id])
       }
     }
+    if (!aliases.size) return
     const names = [...aliases.keys()].sort((a, b) => b.length - a.length)
+    if (!names.length) return
     const pattern = new RegExp(`(?<![\\p{L}\\p{N}_])(?:${names.map(escape).join('|')})(?![\\p{L}\\p{N}_])`, 'giu')
     for (let i = 0; i < state.tokens.length; i++) {
       const inline = state.tokens[i]

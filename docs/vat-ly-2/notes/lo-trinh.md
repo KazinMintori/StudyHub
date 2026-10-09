@@ -1,15 +1,17 @@
 ---
 course: vat-ly-2
-title: "Lộ trình bản dịch giáo trình"
+title: "Lộ trình học tập & Tài liệu tham khảo — Vật lý 2"
 ---
 
-# Lộ trình bản dịch giáo trình
+# Lộ trình học tập & Tài liệu tham khảo — Vật lý 2
 
-Bản dịch tiếng Việt theo chương 21–44 của Young & Freedman, từ điện học đến hết vật lý hiện đại. Đang dịch và đối chiếu từng mục, hình, ví dụ và bài tập nguyên tác.
+Chương trình **Vật lý đại cương 2** đưa người học tiếp cận thế giới trường điện từ, sóng điện từ, quang học giải tích và các nền tảng đột phá của vật lý hiện đại (thuyết tương đối, cơ học lượng tử, vật lý chất rắn bán dẫn và vật lý hạt nhân).
 
-Bài học giữ đầy đủ lời dẫn, nội dung, ứng dụng, công thức, lập luận, hình, ví dụ và bài tập của nguyên tác. Chỉ được thêm mô phỏng thí nghiệm có nhãn riêng. Có thể rút gọn diễn đạt nhưng phải giữ ý nghĩa và câu văn đầy đủ theo quy tắc ngôn ngữ của dự án.
+Mỗi bài học được thiết kế độc lập, kết nối giữa bản chất định luật vật lý và ứng dụng kỹ thuật trong công nghệ hiện đại.
 
-Mỗi chương chỉ chuyển sang hoàn tất sau khi được dịch và đối chiếu toàn bộ, kể cả bài tập cuối chương. Các thẻ Slides cũ đã được rút vì chứa nội dung tự đặt và không phản ánh đủ nguyên tác.
+---
+
+## 1. Khung chương trình 24 chuyên đề cốt lõi
 
 | Chương | Bài giảng | Trang in, kể cả bài tập | Trạng thái |
 | --- | --- | --- | --- |
@@ -37,3 +39,12 @@ Mỗi chương chỉ chuyển sang hoàn tất sau khi được dịch và đố
 | 42 | [Phân tử và vật chất ngưng tụ](/vat-ly-2/bai-giang/22-chat-ran-ban-dan.md) | 1408–1441 | Chưa dịch |
 | 43 | [Vật lý hạt nhân](/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md) | 1442–1482 | Chưa dịch |
 | 44 | [Vật lý hạt và vũ trụ học](/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru.md) | 1483–1524 | Chưa dịch |
+
+---
+
+## 2. Giáo trình & Tài liệu Tham khảo Chuẩn mực
+
+1. **Hugh D. Young & Roger A. Freedman**, [*Sears and Zemansky's University Physics with Modern Physics (15th Edition)*](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000006848), Pearson. Giáo trình đại học chuẩn mực quốc tế về Điện - Từ trường, Sóng ánh sáng, Thuyết tương đối, Cơ học lượng tử, Cấu trúc nguyên tử và Hạt nhân.
+2. **David Halliday, Robert Resnick, & Jearl Walker**, [*Fundamentals of Physics - Extended (11th/12th Edition)*](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+Extended%2C+12th+Edition-p-9781119773511), Wiley. Bộ sách vật lý kinh điển toàn diện bao gồm trọn vẹn phần Điện từ học và Vật lý hiện đại.
+3. **MIT OpenCourseWare 8.02: Electricity and Magnetism** — [ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/). Khóa học trực tuyến danh tiếng của MIT về lý thuyết trường điện từ, định luật Gauss, Ampère, Faraday và phương trình Maxwell.
+4. **Lương Duyên Bình (Chủ biên)**, *Vật lý đại cương - Tập 2: Điện - Từ - Dao động và Sóng*, NXB Giáo dục Việt Nam. Giáo trình chuẩn của các trường đại học kỹ thuật tại Việt Nam.
