@@ -59,7 +59,7 @@ Một **tác tử (agent)** là bất cứ thực thể nào có khả năng nh�
 ## 1.2 Cấu trúc Tác tử và Khái niệm Tính hợp lý
 
 ```mermaid
-flowchart LR
+flowchart TD
     Env["MÔI TRƯỜNG"] -->|Tri giác (Percepts)| Sensors["Cảm biến (Sensors)"]
     subgraph Agent ["TÁC TỬ (AGENT)"]
         Sensors --> Decision["Chương trình tác tử<br/>f: P* → A"]

@@ -33,7 +33,7 @@ Làm thế nào để cỗ máy biết "nhìn về phía trước" và dồn to�
 Để đối chiếu trực tiếp với kết quả của Chương 2, ta giữ nguyên đồ thị trạng thái mẫu ($S \to G$), bổ sung thêm giá trị hàm lượng giá heuristic $h(n)$ tại từng đỉnh (ước lượng khoảng cách từ đỉnh đó về đích $G$):
 
 ```mermaid
-flowchart LR
+flowchart TD
     S["S<br/>h = 5"] -->|1| A["A<br/>h = 4"]
     S -->|4| B["B<br/>h = 3"]
     A -->|2| B
@@ -130,7 +130,7 @@ Trong đó:
 Một cách người ta hay dùng để hình dung ý nghĩa của $f(n)$ trong đời sống: Khi lập kế hoạch tài chính cho một dự án, bạn không thể chỉ nhìn số tiền đã tiêu ($g$), cũng không thể chỉ nhìn số tiền dự trù còn thiếu ($h$). Tổng ngân sách dự kiến của cả dự án bắt buộc phải là tổng của hai con số đó: $f = g + h$.
 
 ```mermaid
-flowchart LR
+flowchart TD
     Start((Start)) -->|g(n): chi phí đã đi thật sự| N((Nút n))
     N -.->|h(n): khoảng cách ước tính| Goal(((Goal)))
 ```
@@ -213,7 +213,7 @@ h(n) \le c(n, a, n') + h(n')
 $$
 
 ```mermaid
-flowchart LR
+flowchart TD
     N["Nút n<br/>h(n)"] -->|c(n, a, n')| Np["Nút n'<br/>h(n')"]
     N -.->|Đường trực tiếp h(n)| Goal(((Goal)))
     Np -.->|h(n')| Goal

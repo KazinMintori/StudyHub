@@ -23,7 +23,7 @@ Môn DSA không nhằm mục đích bắt bạn "học thuộc lòng" từng dò
 Dưới đây là các chuyên đề cốt lõi được chia nhỏ theo từng học phần:
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["1. Phân tích Độ phức tạp<br/>(Big O, Time, Space)"] --> B["2. Thuật toán Sắp xếp<br/>(QuickSort, MergeSort)"]
     B --> C["3. Tìm kiếm & Kỹ thuật mảng<br/>(Binary Search, Two Pointers)"]
     C --> D["4. Cấu trúc Dữ liệu Cây<br/>(Binary Tree, BST, Heap)"]

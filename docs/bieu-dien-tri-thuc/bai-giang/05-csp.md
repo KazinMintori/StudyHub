@@ -99,7 +99,7 @@ Một cung có hướng $(X_i, X_j)$ được gọi là **nhất quán cung (arc
 Nếu tồn tại một giá trị $x \in D_i$ mà không có bất kỳ giá trị nào trong $D_j$ tương thích với nó, ta có thể **loại bỏ vĩnh viễn $x$ khỏi miền giá trị $D_i$**.
 
 ```mermaid
-flowchart LR
+flowchart TD
     Xi["Xi: {red, green}"] -->|Cung (Xi, Xj): Xi != Xj| Xj["Xj: {red}"]
     note["Loại bỏ 'red' khỏi Xi<br/>-> Xi chỉ còn {green}"]
 ```

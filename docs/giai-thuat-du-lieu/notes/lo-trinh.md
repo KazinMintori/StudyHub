@@ -14,7 +14,7 @@ Môn học **Giải thuật nền tảng cho Khoa học dữ liệu** (Foundatio
 ##  Lộ trình Môn học Trọng tâm
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["1. Mô hình Thuật toán<br/>(Đặc tả, Giới hạn, Bonferroni)"] --> B["2. Phân tán Map-Reduce<br/>(Map, Shuffle, Reduce, Hadoop)"]
     B --> C["3. Phân tích Đồ thị<br/>(PageRank, Random Walk, Spam)"]
     C --> D["4. Tìm kiếm Tương đồng<br/>(Jaccard, MinHash, LSH)"]

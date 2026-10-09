@@ -71,6 +71,9 @@ function removeBranding(text) {
     return content.replace(/\bSTAT\s*20\b/gi, 'this course').replace(/\b(?:UC\s+)?Berkeley\b/gi, 'the university')
   })
 }
+function removeNonContentScripts(html) {
+  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, script => /googletagmanager|gtag\(|dataLayer|site_libs\/kePrint-/i.test(script) ? '' : script)
+}
 const notesStyle = `
 html { color-scheme: light; scroll-behavior: auto; }
 body { margin: 0; background: white; color: #202124; }
@@ -110,8 +113,10 @@ for (const entry of entries) {
     assert(record, entry[kind])
     const relative = record.url.slice(base.length)
     const original = await readFile(path.join(sourceRoot, relative), 'utf8')
-    const head = original.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1]
+    const head = removeNonContentScripts(original.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] || '')
     const body = original.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1]
+    const bodyAttrs = original.match(/<body\b([^>]*)>/i)?.[1] || ''
+    const htmlAttrs = (original.match(/<html\b([^>]*)>/i)?.[1] || '').replace(/\blang="[^"]*"/i, '')
     assert(head && body, relative)
     const main = kind === 'notes' ? body.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0] : null
     assert(kind === 'slides' || main, relative)
@@ -127,7 +132,8 @@ for (const entry of entries) {
       content += `<details style="position:fixed;bottom:8px;left:8px;z-index:100;font-size:12px;background:white;color:black;padding:4px"><summary>Tài liệu tham khảo</summary>${references}</details>`
       assert.equal((body.match(/<section\b/gi) || []).length + 1, (content.match(/<section\b/gi) || []).length, `${entry.id}: preserve every slide section`)
     }
-    const html = `<!DOCTYPE html><html lang="en"><head><base href="${record.url}">${removeBranding(head)}<style>${kind === 'notes' ? notesStyle : '.quarto-title-author,.quarto-title-affiliation{display:none!important}'}</style></head><body>${content}<script>${frameScript}</script></body></html>`
+    const slidesStyle = 'html,body{width:100%;height:100%;margin:0}.reveal{width:100%;height:100%}.quarto-title-author,.quarto-title-affiliation,.slide-logo{display:none!important}'
+    const html = `<!DOCTYPE html><html lang="en"${htmlAttrs}><head><base href="${record.url}">${removeBranding(head)}<style>${kind === 'notes' ? notesStyle : slidesStyle}</style></head><body${bodyAttrs}>${removeNonContentScripts(content)}<script>${frameScript}</script></body></html>`
     const name = `${entry.id}.${kind}.html`
     await writeFile(path.join(publicDir, name), html)
     audit.push({ id: entry.id, kind, source: record.url, file: name, paragraphs: (main?.match(/<p\b/gi) || []).length, slideSections: (body.match(/<section\b/gi) || []).length })

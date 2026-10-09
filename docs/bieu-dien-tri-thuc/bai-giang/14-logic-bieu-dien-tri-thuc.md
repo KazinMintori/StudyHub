@@ -232,7 +232,7 @@ Khi các khái niệm và quan hệ được biểu diễn dưới dạng đồ 
 - Cạnh có hướng biểu diễn quan hệ (ví dụ: `là_một`, `thuộc_về`, `sáng_lập_bởi`).
 
 ```mermaid
-flowchart LR
+flowchart TD
     Long["Hoàng Long"] -->|là_một| Researcher["Nghiên cứu sinh"]
     Researcher -->|kế_thừa| Student["Sinh viên"]
     Long -->|học_tập_tại| UET["Đại học Công nghệ (UET)"]

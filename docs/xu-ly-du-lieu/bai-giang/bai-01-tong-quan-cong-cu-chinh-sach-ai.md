@@ -47,7 +47,7 @@ Khi đối mặt với các danh sách dữ liệu trong thực tế, các kỹ 
 Một dự án phân tích dữ liệu không phải là một chuỗi hành động ngẫu hứng, mà là một **quy trình có cấu trúc** (Data Pipeline). Quy trình này dẫn dắt dữ liệu đi qua từng trạm biến đổi với đầu vào và đầu ra được định nghĩa minh bạch.
 
 ```mermaid
-flowchart LR
+flowchart TD
     Q["1. Câu hỏi phân tích"] --> R["2. Dữ liệu thô (Raw Data)"]
     R --> C["3. Kiểm tra & Làm sạch"]
     C --> A["4. Biến đổi & Tổng hợp"]

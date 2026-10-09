@@ -40,7 +40,7 @@ Một bài toán tìm kiếm chuẩn mực luôn được xác định bởi 5 t
 5. **Chi phí bước đi ($c(s, a, s')$):** Lượng tài nguyên tiêu hao (thời gian, khoảng cách, xăng dầu) khi chuyển từ $s$ sang $s'$.
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph ProblemSpace ["Không gian trạng thái"]
         s0((s0)) -->|a1, chi phí c1| s1((s1))
         s1 -->|a2, chi phí c2| s2((s2))
@@ -61,7 +61,7 @@ flowchart LR
 Để so sánh công bằng và trực quan sức mạnh của từng giải thuật, chúng ta sử dụng một đồ thị trạng thái mẫu có trọng số cố định: trạng thái ban đầu là $S$, đích cần đến là $G$.
 
 ```mermaid
-flowchart LR
+flowchart TD
     S((S)) -->|1| A((A))
     S -->|4| B((B))
     A -->|2| B
@@ -213,7 +213,7 @@ Làm thế nào để vừa không mù quáng trước số bước nhảy như 
 UCS thay thế hàng đợi FIFO đơn thuần bằng một **hàng đợi ưu tiên (Priority Queue)** với khóa sắp xếp là $g(n)$. Về mặt bản chất toán học, UCS chính là thuật toán **Dijkstra** lừng danh được áp dụng trên không gian trạng thái.
 
 ```mermaid
-flowchart LR
+flowchart TD
     S((S<br/>g=0)) -->|1| A((A<br/>g=1))
     S -->|4| B((B<br/>g=4))
     A -->|2| B

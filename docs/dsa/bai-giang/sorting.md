@@ -75,7 +75,7 @@ Thay vì chia đôi cố định ở giữa như MergeSort, QuickSort chọn m�
 - Tiếp tục đệ quy phân hoạch nửa bên trái và nửa bên phải của Pivot.
 
 ```mermaid
-flowchart LR
+flowchart TD
     P["Chọn Chốt (Pivot)"] --> S["Phân Hoạch (Partition)"]
     S --> L["Các phần tử ≤ Pivot (Trái)"]
     S --> PV["[Pivot] Đúng vị trí tuyệt đối"]

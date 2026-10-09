@@ -30,7 +30,7 @@ Cho đồ thị có $V$ đỉnh và $E$ cạnh:
 ## 2. So sánh Trực quan: BFS vs DFS
 
 ```mermaid
-graph LR
+flowchart TD
     subgraph "BFS (Duyệt theo chiều rộng)"
         direction TB
         B1["Hàng đợi (Queue) - FIFO"]

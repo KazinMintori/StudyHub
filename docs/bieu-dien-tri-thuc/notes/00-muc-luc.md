@@ -46,7 +46,7 @@ Mỗi bài giảng là một chuyên đề độc lập, có cấu trúc chặt 
 Để thấy rõ sự khác biệt bản chất giữa các chiến lược tìm kiếm, các bài giảng tìm kiếm (Chương 2, 3, 4) đều sử dụng một đồ thị trạng thái mẫu chung ($S \to G$) với chi phí tối ưu thực tế đã biết trước ($C^* = 7$):
 
 ```mermaid
-flowchart LR
+flowchart TD
     S((S)) -->|1| A((A))
     S -->|4| B((B))
     A -->|2| B

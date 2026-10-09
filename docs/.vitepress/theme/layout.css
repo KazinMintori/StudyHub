@@ -14,7 +14,23 @@
 .Layout .VPDoc.has-aside .content-container { max-width: 620px; }
 .Layout .VPLocalNav button, .VPDocFooter .pager-link .desc { font-size: var(--fs-small); }
 .VPDoc .aside { width: 220px; padding-left: var(--space-6); }
-.VPDoc .aside-container { width: 188px; }
+.VPDoc .aside-container {
+  position: sticky !important;
+  top: calc(var(--vp-nav-height) + 24px) !important;
+  width: 188px !important;
+  height: auto !important;
+  max-height: calc(100vh - var(--vp-nav-height) - 48px) !important;
+  overflow-y: auto !important;
+  padding-top: 0 !important;
+  scrollbar-width: thin;
+}
+.VPDoc .aside-content {
+  min-height: 0 !important;
+  padding-bottom: 0 !important;
+}
+.VPDoc .aside-curtain {
+  display: none !important;
+}
 .VPDocAsideOutline .outline-link { font-size: var(--fs-small); white-space: normal; text-overflow: clip; line-height: 1.45; padding: var(--space-1) 0; color: var(--ink-3); }
 .VPDocAsideOutline .outline-title { font-size: var(--fs-small); }
 .VPDoc .outline-link.active { color: var(--tim); }

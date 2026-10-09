@@ -106,11 +106,12 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .lecture-figure img { display: block; margin: 0 auto; }
 .lecture-figure figcaption { font-family: var(--font-ui); font-size: var(--fs-small); line-height: 1.45; color: var(--ink-3); margin-top: var(--space-3); }
 .dark .vp-doc img[src$='.svg'] { background: var(--printed-paper); padding: var(--space-3); }
-.mermaid { position: relative; max-width: 100%; overflow-x: auto; margin: var(--space-6) 0; padding: var(--space-5) var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
-.mermaid svg { max-width: 100%; height: auto; margin: auto; }
+.mermaid { position: relative; max-width: 100%; overflow-x: auto; margin: var(--space-6) 0; padding: var(--space-6) var(--space-4) var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
+.mermaid svg { display: block; max-width: 100%; height: auto; margin: auto; }
 .mermaid svg foreignObject { overflow: visible; }
 .mermaid svg foreignObject :is(div, span, p) { font-family: var(--font-ui); font-size: var(--fs-ui); line-height: 1.45; margin: 0; }
-.mermaid-zoom-btn { position: absolute; top: var(--space-1); right: var(--space-1); min-height: 44px; min-width: 44px; font-size: var(--fs-small); background: var(--paper); color: var(--tim); border: 1px solid var(--control); border-radius: var(--radius); }
+.mermaid-zoom-btn { position: absolute; top: var(--space-2); right: var(--space-2); min-height: 36px; min-width: 44px; padding: 4px 10px; font-size: var(--fs-small); background: var(--paper); color: var(--tim); border: 1px solid var(--control); border-radius: var(--radius); cursor: pointer; z-index: 2; opacity: 0.85; transition: opacity var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.mermaid-zoom-btn:hover { opacity: 1; background: var(--canvas); }
 .vp-doc button.study-term { display: inline; margin: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; line-height: inherit; text-align: inherit; text-decoration: underline dotted var(--tim); text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: help; }
 .vp-doc button.study-term:hover { color: var(--tim-hover); text-decoration-style: solid; }
 .vp-doc button.study-term:focus-visible { border-radius: 2px; outline: 2px solid var(--tim); outline-offset: 3px; }

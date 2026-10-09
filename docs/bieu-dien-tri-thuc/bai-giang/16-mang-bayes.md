@@ -113,7 +113,7 @@ Làm thế nào để nhìn vào hình dáng đồ thị mà biết chắc chắ
 Judea Pearl đã phát minh ra khái niệm **D-separation (Phân tách có hướng)** dựa trên việc phân tích ba cấu trúc hình học cơ bản:
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph C1 ["1. Chuỗi (Causal Chain)"]
         X1["X"] --> Y1["Y"] --> Z1["Z"]
     end

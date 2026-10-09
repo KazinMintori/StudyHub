@@ -70,7 +70,7 @@ Khám phá sự xuất hiện tự nhiên của các lớp bài toán lồi tron
 Sơ đồ sau mô tả phả hệ bao hàm giữa các lớp bài toán và những phép biến đổi tương đương:
 
 ```mermaid
-flowchart LR
+flowchart TD
     LP["Quy hoạch tuyến tính (LP)<br/>Chủ đề 4–5"] --> QP["Quy hoạch toàn phương (QP)<br/>Chủ đề 7"]
     QP --> QCQP["QCQP<br/>Chủ đề 7"]
     QCQP --> SOCP["Nón bậc hai (SOCP)<br/>Chủ đề 8"]

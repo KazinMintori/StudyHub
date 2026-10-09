@@ -39,7 +39,7 @@ defineEmits(['show-introduction'])
 </template>
 
 <style scoped>
-.site-introduction { display: block; width: 100%; max-width: none; margin: var(--space-6) 0 0; padding: 0; border-top: 1px solid var(--rule); background: var(--canvas); }
+.site-introduction { display: block; width: 100%; max-width: none; margin: var(--space-6) 0 0; padding: 0; border-top: 1px solid var(--rule); background: var(--canvas); position: relative; z-index: 10; }
 .site-introduction-inner { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-5); }
 .site-introduction-columns { display: grid; grid-template-columns: 1.25fr .85fr 1fr 1fr; gap: var(--space-7); }
 .site-introduction-logo { display: block; width: 100%; max-width: 300px; height: auto; margin-bottom: var(--space-5); }
@@ -55,7 +55,10 @@ defineEmits(['show-introduction'])
   :global(.VPContent.has-sidebar ~ .site-introduction .site-introduction-columns) { gap: var(--space-5); }
 }
 @media (min-width: 1440px) {
-  :global(.VPContent.has-sidebar ~ .site-introduction) { margin-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)); }
+  :global(.VPContent.has-sidebar ~ .site-introduction) {
+    margin-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+    margin-right: calc((100vw - var(--vp-layout-max-width)) / 2);
+  }
 }
 @media (max-width: 1199px) {
   .site-introduction-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }

@@ -186,7 +186,7 @@ Ký hiệu $(K_2 \times V_2)^*$ là **dãy**. Nếu dùng tập hợp, hai cặp
 ### 2.5. Các pha của một công việc
 
 ```mermaid
-flowchart LR
+flowchart TD
     X["Đầu vào X"] --> S["1. Chia đầu vào<br/>B1 đến Bm<br/>hệ thống"]
     S --> M["2. Map<br/>sinh các cặp I<br/>người lập trình"]
     M --> P["3. Phân phối và nhóm<br/>theo p của k<br/>hệ thống"]
@@ -335,7 +335,7 @@ $$
 $g$ là **nhãn cố định** (khóa chung) để gom toàn bộ số đếm về một chỗ, không phải một từ. Nếu Công việc 1 không có đầu ra, chương trình điều phối trả $D = 0$ (không gọi Reduce với nhóm rỗng).
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["Văn bản d1, d2"] --> B["Job 1 Map<br/>phát w, 1"]
     B --> C["Job 1 Reduce<br/>mỗi từ một cặp w, 1"]
     C --> D["Job 2 Map<br/>phát g, 1"]
@@ -520,7 +520,7 @@ $$
 Ví dụ slide ($P = 4$): $T_P = 1 + 4 + 3 + 2 = 10$ s. $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["Điều phối<br/>0 đến 1 s"] --> B["Map<br/>1 đến 5 s<br/>máy chậm nhất"]
     B --> C["Truyền và nhóm<br/>5 đến 8 s"]
     C --> D["Reduce<br/>8 đến 10 s"]

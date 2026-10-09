@@ -4,7 +4,8 @@ import { courseCatalog } from './course-catalog.mjs'
 import { wikiGroups } from './wiki-content.mjs'
 import { concepts } from './concepts.mjs'
 import { termLinks } from './term-links.mjs'
-import { readFileSync } from 'node:fs'
+import { readFileSync, mkdirSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
 
@@ -60,16 +61,12 @@ export default withMermaid(defineConfig({
   },
   mermaid:{theme:'base',themeVariables:{fontSize:'15px',fontFamily:'Be Vietnam Pro, sans-serif',primaryColor:colorToken('tim-soft'),primaryBorderColor:colorToken('tim'),primaryTextColor:colorToken('ink')},flowchart:{htmlLabels:true,padding:18,curve:'basis'}},
   appearance:true,
-  vite:{plugins:[mathTextPlugin()],resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('./theme/StudyMermaid.vue',import.meta.url))}},optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
+  vite:{plugins:[mathTextPlugin(),{name:'ensure-dist-chunks-dir',apply:'build',generateBundle(outputOptions){if(outputOptions.dir){mkdirSync(resolve(outputOptions.dir,'assets/chunks'),{recursive:true})}}}],resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('./theme/StudyMermaid.vue',import.meta.url))}},optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}},
   themeConfig:{
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
-      {text:'Vật lý 1',link:'/vat-ly-1/',activeMatch:'^/vat-ly-1/'},
-      {text:'Vật lý 2',link:'/vat-ly-2/',activeMatch:'^/vat-ly-2/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
-      {text:'Vật lý 1',link:'/vat-ly-1/',activeMatch:'^/vat-ly-1/'},
-      {text:'Vật lý 2',link:'/vat-ly-2/',activeMatch:'^/vat-ly-2/'},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
     sidebar:{
