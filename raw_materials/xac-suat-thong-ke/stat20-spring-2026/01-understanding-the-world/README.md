@@ -14,7 +14,7 @@ Nguồn: UC Berkeley, Stat 20, học kỳ xuân 2026. Tải ngày 08-10-2026.
 | Tiêu đề Understanding the World with Data | Tiêu đề bài trong frontmatter và catalog |
 | Intro and Syllabus, lời chào, câu hỏi đọc bài | Bỏ phần tổ chức khóa học bên ngoài theo yêu cầu người dùng |
 | Tên giảng viên/trợ giảng, đề cương/Ed, bài thực hành đầu tiên | Bỏ phần tổ chức khóa học bên ngoài |
-| Mục tiêu xây dựng và phản biện phát biểu từ dữ liệu | Đoạn mở và sơ đồ trong mục 1 |
+| Mục tiêu xây dựng và phản biện phát biểu từ dữ liệu, câu hỏi về các loại phát biểu | Đoạn mở và sơ đồ trong mục 1 |
 | Sơ đồ Types of Claims | SVG nhãn Việt trong mục 1; ghi nguồn tại mục 4 |
 | Summary: định nghĩa và ví dụ | Mục 1.1, giữ khảo sát lớp học và tỷ lệ 70% người trả lời chưa có kinh nghiệm viết mã |
 | Generalization: định nghĩa và ví dụ | Mục 1.2, giữ bước suy rộng từ khảo sát lớp sang sinh viên toàn trường và tỷ lệ 70% |
@@ -23,5 +23,7 @@ Nguồn: UC Berkeley, Stat 20, học kỳ xuân 2026. Tải ngày 08-10-2026.
 | Other Links / Slides, điều hướng trước và sau | Bỏ các liên kết điều hướng sang khóa học bên ngoài |
 
 Các định nghĩa, thứ tự bốn loại phát biểu và ví dụ chính ở mục 1 bám theo Berkeley. Tên lớp được viết là “một lớp học”, nhóm sinh viên của trường được viết là “sinh viên toàn trường” để bỏ nhận diện khóa học mà giữ phạm vi suy luận. Các phát biểu về thuốc và cổ phiếu là ví dụ để phân loại, không phải kết quả y khoa hay dự báo hiện tại do StudyHub xác minh. Mục 2–3 mở thêm bước giải thích và luyện tập; dữ liệu 7/10 và 14/20 là giả định. Slides giữ ví dụ chính của Notes. Nguồn và giấy phép chỉ nằm trong phần Tài liệu tham khảo.
+
+Phạm vi người dùng chốt ngày 09-10-2026: toàn bộ nội dung Notes của đúng URL đã gửi; không nhập bộ Slides, Lab hoặc toàn khóa. Giữ mọi nội dung học thuật, chỉ bổ sung giải thích. Ngoại lệ người dùng yêu cầu loại bỏ: tên khóa học, tên trường và thông tin tổ chức gắn với bên nguồn (lời chào, giảng viên, đề cương, diễn đàn, bài nộp và điều hướng). Nguồn và giấy phép chỉ đặt ở Tài liệu tham khảo theo yêu cầu trước đó. Kiểm kê `notes-coverage.json` ghi từng đơn vị học thuật và nơi xuất hiện.
 
 Chạy `python -I raw_materials/xac-suat-thong-ke/stat20-spring-2026/01-understanding-the-world/verify_numbers.py` để kiểm tra các phép tính và vị trí phần tham khảo.

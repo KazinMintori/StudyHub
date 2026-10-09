@@ -1,0 +1,19 @@
+{
+  "scope": "Only the supplied notes.html. Preserve all academic content, add explanations only, and remove source course/institution branding and organisation as explicitly requested.",
+  "source": "https://stat20.berkeley.edu/spring-2026/1-questions-and-data/01-understanding-the-world/notes.html",
+  "academicUnits": [
+    {"id": "goal", "content": "Construct and critique claims made using data; ask what kinds of claims can be made.", "destination": "Opening paragraphs"},
+    {"id": "diagram", "content": "Summary, generalization, causal claims and prediction connected to constructing and critiquing claims.", "destination": "Section 1 diagram"},
+    {"id": "summary-definition", "content": "Numerical, graphical or verbal description of an aspect of data on hand.", "destination": "Section 1.1"},
+    {"id": "summary-example", "content": "Class survey; 70% of respondents have no coding experience.", "destination": "Section 1.1", "adaptation": "Only course name replaced by generic class."},
+    {"id": "generalization-definition", "content": "Numerical, graphical or verbal description of a broader set of units than those recorded.", "destination": "Section 1.2"},
+    {"id": "generalization-example", "content": "Class survey used to claim 70% of students at the whole university have no coding experience.", "destination": "Section 1.2", "adaptation": "Only institution name replaced by whole university; class-to-university inference retained."},
+    {"id": "causal-definition", "content": "Changing one variable influences another.", "destination": "Section 1.3"},
+    {"id": "causal-example", "content": "Randomized controlled experiment; new antibiotic eliminates more than 99% of bacterial infections.", "destination": "Section 1.3"},
+    {"id": "prediction-definition", "content": "Guess an unknown variable based on other known variables.", "destination": "Section 1.4"},
+    {"id": "prediction-example", "content": "News and Uber stock price today used to predict 1.2% increase tomorrow.", "destination": "Section 1.4", "adaptation": "Decimal punctuation localized to 1,2%."}
+  ],
+  "requestedExclusions": ["Source course and institution branding outside references", "Welcome and course administration", "Instructor and tutor names", "Syllabus and forum instructions", "First lab submission instructions", "External course navigation"],
+  "additions": ["Section 2 explanations", "Section 3 practice"],
+  "attributionLocation": "References only"
+}

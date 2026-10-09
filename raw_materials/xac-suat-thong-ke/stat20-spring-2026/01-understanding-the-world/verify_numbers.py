@@ -27,4 +27,8 @@ assert 'hơn 99%' in examples and 'Uber' in examples and '1,2%' in examples
 assert 'sinh viên UET' not in examples
 assert Fraction('1.2') / 100 == Fraction(3, 250)
 print('Ví dụ chính giữ tỷ lệ 70%, hơn 99% và Uber tăng 1,2%; ví dụ tính tỷ lệ là giả định riêng.')
+assert 'xây dựng và phản biện các phát biểu dựa trên dữ liệu' in body
+assert 'có thể đưa ra những loại phát biểu nào' in body
+for phrase in ['bằng con số, đồ thị hoặc lời văn', 'thí nghiệm ngẫu nhiên có đối chứng', 'một loại kháng sinh mới', 'tin tức đã đọc', 'ngày mai']:
+    assert phrase in body, phrase
 print('Các tỷ lệ đúng; nguồn và giấy phép chỉ xuất hiện trong phần tham khảo.')

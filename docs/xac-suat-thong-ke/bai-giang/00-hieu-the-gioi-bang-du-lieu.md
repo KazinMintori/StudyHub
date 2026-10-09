@@ -13,6 +13,8 @@ description: "Phân biệt mô tả dữ liệu, suy rộng thống kê, kết l
 
 Hai phát biểu có cùng con số, nhưng nói về hai nhóm khác nhau. Để đánh giá một kết luận từ dữ liệu, trước hết ta cần xác định nó đang mô tả những gì đã quan sát, suy rộng sang nhóm khác, khẳng định một tác động hay dự đoán một giá trị chưa biết.
 
+Mục tiêu của môn học là xây dựng và phản biện các phát biểu dựa trên dữ liệu. Trước hết, ta cần trả lời câu hỏi: có thể đưa ra những loại phát biểu nào?
+
 ## 1. Các loại phát biểu từ dữ liệu
 
 Sơ đồ dưới đây phân biệt bốn loại phát biểu. Trong bài này, một **biến** là đặc điểm có thể nhận các giá trị khác nhau giữa các đối tượng, chẳng hạn kinh nghiệm lập trình hoặc điểm bài thực hành.
