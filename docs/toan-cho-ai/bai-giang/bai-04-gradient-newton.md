@@ -53,7 +53,8 @@ Do đó, ngược chiều gradient luôn là một hướng giảm hợp lệ. T
 Tại điểm khởi đầu $(2, 2)$, giá trị hàm mục tiêu là $f(2, 2) = \frac{1}{2}(2^2 + 10 \cdot 2^2) = 22$.
 Vector gradient là $\nabla f(2, 2) = (2, 20)^T$, do đó hướng gradient descent là $d = (-2, -20)^T$.
 - Nếu chọn bước nhảy dài $t = 1$: Điểm mới là $z^+ = (2 - 2, 2 - 20) = (0, -18)$. Giá trị mất mát mới vọt lên $f(0, -18) = \frac{1}{2}(0 + 10 \cdot 18^2) = 1620$. Hướng đi hoàn toàn đúng, nhưng bước nhảy quá trớn đã khiến thuật toán rơi vào thảm họa phân kỳ!
-- Nếu chọn bước nhảy cẩn trọng $t = 0.15$: Điểm mới là $z^+ = (2 - 0.3, 2 - 3.0) = (1.7, -1.0)$. Giá trị mất mát giảm xuống còn $f(1.7, -1.0) = \frac{1}{2}(1.7^2 + 10 \cdot (-1)^2) = 6.445 < 22$.
+- Nếu chọn bước nhảy cẩn trọng $t = 0.15$: Điểm mới là $z^+ = (2 - 0.3, 2 - 3.0) = (1.7, -1.0)$. Giá trị mất mát giảm xuống:
+  $$f(1.7, -1.0) = \frac{1}{2}(1.7^2 + 10 \cdot (-1)^2) = 6.445 < 22.$$
 :::
 
 <MathLab type="optimizer" initial-method="gd">
@@ -247,7 +248,7 @@ $$
 Giải hệ phương trình tuyến tính:
 - $d_x + w = 1 \implies d_x = 1 - w$,
 - $d_y + w = 0 \implies d_y = -w$,
-- $d_x + d_y = 0 \implies (1 - w) - w = 0 \implies w = \frac{1}{2}$.
+- $d_x + d_y = 0 \implies (1 - w) - w = 0$, suy ra $w = \frac{1}{2}$.
 
 Suy ra hướng di chuyển: $d_x = \frac{1}{2}$, $d_y = -\frac{1}{2}$.
 Thực hiện bước cập nhật đầy đủ:
