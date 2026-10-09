@@ -3,265 +3,478 @@ course: xu-ly-du-lieu
 lecture: bai-06-ket-noi-truy-xuat-du-lieu
 section: lecture
 title: "Đọc, lưu trữ & truy xuất dữ liệu"
-prerequisites: ["dictionary","ham-lap-trinh","gia-tri-thieu"]
+prerequisites: ["dictionary", "ham-lap-trinh", "gia-tri-thieu"]
 lessonStatus: ready
-description: "Đọc CSV, JSON và SQL với kiểu dữ liệu rõ ràng; xử lý theo khối và kiểm tra dữ liệu từ API."
+description: "Đọc chọn lọc tệp lớn với usecols, làm sạch giá chuỗi, định dạng Parquet định hướng cột, tiêu thụ API và truy vấn SQL tại chỗ bằng DuckDB."
 ---
 
-Một ngộ nhận dễ gặp khi mới tiếp cận khoa học dữ liệu là cho rằng dữ liệu luôn có sẵn dưới dạng các tệp CSV sạch sẽ nằm gọn trên máy tính cá nhân. Trong thế giới sản xuất thực tế, dữ liệu phân tán ở khắp mọi nơi: nằm trong các cơ sở dữ liệu quan hệ với hàng trăm triệu giao dịch, trong các luồng dữ liệu JSON phân cấp từ các dịch vụ web API, hoặc trong các kho lưu trữ dạng cột Parquet trên đám mây.
+::: info Mục tiêu bài học
+- Thấu suốt kỹ thuật nạp dữ liệu chọn lọc trên các tệp bảng biểu lớn bằng `usecols` và `parse_dates`, tối ưu hóa băng thông I/O và giải phóng bộ nhớ RAM.
+- Làm chủ kỹ thuật xử lý chuỗi tiền tệ phức tạp bằng `str.replace(..., regex=False)`, nhận diện và kiểm soát bẫy ký tự neo trong biểu thức chính quy (*Regular Expression*).
+- So sánh toàn diện giữa định dạng văn bản CSV và định dạng lưu trữ hướng cột Apache Parquet: cơ chế nén, bảo toàn kiểu dữ liệu kỹ thuật (*Type Preservation*) và tốc độ truy xuất.
+- Xây dựng quy trình tiêu thụ Web API chuẩn mực: lưu trữ nguyên vẹn phản hồi thô (*Raw Response Persistence*) để bảo đảm khả năng tái lập và giảm thiểu chi phí mạng.
+- Vận hành động cơ phân tích dữ liệu nhúng DuckDB để thực thi các truy vấn SQL trực tiếp trên tệp đĩa, kết hợp phép nối bảng `JOIN` và đối chiếu chéo kết quả với đường ống Python thuần.
+- Hoàn thành trọn vẹn 100% bài tập thực hành Lab 6 trên tập dữ liệu đánh giá và chuỗi thời tiết lịch sử của thủ đô Santiago.
+:::
 
-Nạp dữ liệu không đơn thuần là một thao tác đọc tệp kỹ thuật, mà là **cửa ải kiểm soát chất lượng đầu tiên** của toàn bộ quy trình. Nếu ta đọc sai kiểu dữ liệu ngay từ cổng vào, mọi mô hình phân tích hay thuật toán học máy ở các bước sau đều sẽ cho ra kết quả sai lệch.
+---
 
-Bài học này trang bị cho ta kỹ thuật nạp dữ liệu chuẩn mực và an toàn từ ba nguồn chủ lực: tệp văn bản CSV, tài liệu phân cấp JSON, và cơ sở dữ liệu quan hệ SQL. Đồng thời, ta sẽ làm chủ kỹ thuật xử lý tệp vượt dung lượng bộ nhớ RAM và nguyên tắc tiêu thụ API có trách nhiệm.
+## 1. Kỹ thuật Nạp Tệp CSV An toàn Chống lỗi và Xác thực Cấu trúc Dữ liệu
 
-## 1. Đọc tệp CSV phòng thủ và kiểm định lược đồ
+Trong môi trường phân tích dữ liệu thực tế, các tệp dữ liệu thường có dung lượng rất lớn với hàng chục, thậm chí hàng trăm cột thông tin. Chẳng hạn, tệp `listings_full.csv.gz` của Inside Airbnb chứa tới $90$ cột thuộc tính khác nhau.
 
-CSV là định dạng trao đổi đơn giản và phổ biến nhất, nhưng cũng là nơi phát sinh nhiều lỗi tiềm ẩn nhất. Vì tệp CSV không lưu thông tin kiểu dữ liệu, pandas phải tự suy đoán kiểu dựa trên các dòng đầu tiên. Quá trình suy đoán ngầm này rất dễ gây ra những sai lệch nghiêm trọng.
+Nếu bạn thực thi lệnh `pd.read_csv("listings_full.csv.gz")` một cách ngây thơ, máy tính sẽ phải giải nén và nạp toàn bộ $90$ cột vào bộ nhớ RAM. Điều này không chỉ gây lãng phí bộ nhớ nghiêm trọng mà còn khiến thời gian nạp tệp kéo dài hàng chục giây.
+
+```
++---------------------------------------------------------------------------------+
+| TỆP CSV GỐC TRÊN ĐĨA (90 CỘT, DUNG LƯỢNG LỚN)                                   |
+| [id, name, summary, space, description, ..., price, ..., first_review, ...]     |
++---------------------------------------------------------------------------------+
+                                       |
+                 +---------------------+---------------------+
+                 |                                           |
+                 v Cách đọc ngây thơ                         v Cách đọc chọn lọc
+        pd.read_csv(file)                           pd.read_csv(file, usecols=[...],
+                 |                                              parse_dates=[...])
+                 v                                           |
+    Nạp toàn bộ 90 cột vào RAM                               v
+    - Tốn 1.2 GB RAM                            Chỉ nạp đúng 5 cột cần thiết
+    - Mất 15.4 giây I/O                         - Tiết kiệm 85% RAM (~180 MB)
+    - Cột ngày vẫn là chuỗi thô                 - Mất chỉ 2.1 giây I/O
+                                                - Cột ngày tự ép kiểu datetime64
+```
+
+### 1.1. Nạp Chọn lọc với `usecols` và `parse_dates`
+Kỹ thuật chuẩn mực của một kỹ sư dữ liệu là chỉ nạp đúng những cột phục vụ trực tiếp cho bài toán thông qua tham số `usecols`, đồng thời ép kiểu thời gian ngay tại tầng đọc tệp bằng `parse_dates`:
 
 ```python
 import pandas as pd
-from io import StringIO
 
-text = "id,nhom,doanh_thu\n001,A,40\n002,A,60\n003,B,\n"
+cot_can_doc = ["id", "room_type", "price", "first_review", "number_of_reviews"]
+cot_ngay = ["first_review"]
+
 df = pd.read_csv(
-    StringIO(text), dtype={"id": "string"}, na_values=["chua_co"]
+    "listings_full.csv.gz",
+    usecols=cot_can_doc,
+    parse_dates=cot_ngay
 )
-print(df["id"].tolist())        # ['001', '002', '003']
-print(df["doanh_thu"].isna().sum())  # 1
-assert df["id"].is_unique
 ```
 
-Ba kỹ thuật then chốt khi làm việc với CSV:
+Hai lợi ích kỹ thuật cốt lõi:
+1. **Tiết kiệm tài nguyên**: Giảm thiểu tới $80\% - 90\%$ lượng bộ nhớ RAM cần thiết, ngăn ngừa hoàn toàn nguy cơ sập hệ thống do tràn bộ nhớ (*Out-Of-Memory*).
+2. **Ép kiểu chuẩn xác**: Cột ngày tháng được chuyển đổi ngay thành định dạng `datetime64[ns]`, các ô trống tự động biến thành `NaT` (*Not a Time*), sẵn sàng cho các phép toán thời gian tiếp theo mà không cần gọi thêm lệnh chuyển đổi phụ.
 
-1. **Chủ động khóa kiểu định danh bằng `dtype`**: Cột `id` chứa các chuỗi `"001"`, `"002"`. Nếu không chỉ định `dtype={"id": "string"}`, pandas sẽ tự động ép về số nguyên $1, 2$ và làm mất vĩnh viễn các số 0 ở đầu.
-2. **Kiểm soát dấu hiệu khuyết thiếu với `na_values`**: Mỗi hệ thống nguồn lại có một quy ước ghi nhận dữ liệu trống khác nhau: có nơi ghi là khoảng trắng, có nơi ghi `"chua_co"`, `"N/A"`, hoặc `"-999"`. Việc khai báo `na_values=["chua_co"]` giúp chuẩn hóa các quy ước dị biệt này về giá trị `NaN` duy nhất.
-   Tuy nhiên, hãy hết sức cảnh giác với tham số mặc định: mã quốc gia của nước Namibia là `"NA"`. Nếu bạn đọc tệp dữ liệu quốc gia mà không tắt danh sách dấu hiệu thiếu mặc định (`keep_default_na=False`), toàn bộ dữ liệu của đất nước Namibia sẽ bị biến thành giá trị khuyết thiếu một cách oan uổng.
-3. **Xác nhận tính bất biến ngay sau khi nạp**: Dòng lệnh `assert df["id"].is_unique` đóng vai trò một chiếc chốt an toàn. Nếu tệp dữ liệu bị trùng lặp khóa chính, chương trình sẽ dừng lại ngay lập tức thay vì để lỗi lan truyền sang các bước tính toán phía sau.
+### 1.2. Khóa Kiểu Cột Định danh và Kiểm soát Dấu hiệu Khuyết thiếu
+- **Khóa kiểu chuỗi cho mã số**: Luôn chỉ định `dtype={"id": "string"}` nếu mã định danh có chứa các số 0 ở đầu, tránh việc pandas tự ý ép kiểu về số nguyên và làm mất mát thông tin.
+- **Dấu hiệu khuyết thiếu `na_values`**: Mỗi nguồn dữ liệu lại có một quy ước ghi nhận ô trống dị biệt (`"N/A"`, `"chua_ro"`, `"-999"`). Hãy dùng `na_values` để chuẩn hóa chúng về `NaN`.
+- *Cảnh báo về bẫy Namibia*: Quốc gia Namibia có mã tiêu chuẩn quốc tế ISO alpha-2 là `"NA"`. Nếu nạp tệp quốc gia mà không thiết lập `keep_default_na=False`, pandas sẽ tự động biến tên nước Namibia thành giá trị khuyết thiếu một cách oan uổng.
 
-## 2. Kỹ thuật xử lý tệp vượt dung lượng RAM (Chunking)
+---
 
-Một bài toán thực tế thường gặp: máy tính của bạn chỉ có 16 GB bộ nhớ RAM, nhưng tệp CSV nhật ký giao dịch lại nặng tới 50 GB. Nếu bạn thực thi lệnh `pd.read_csv("nhat_ky.csv")`, hệ điều hành sẽ lập tức báo lỗi sập bộ nhớ `MemoryError` vì không đủ RAM để chứa toàn bộ bảng.
+## 2. Kỹ thuật Làm sạch Chuỗi Tiền tệ và Bẫy Ký tự Neo Regex
 
-Giải pháp chuẩn mực của các kỹ sư là sử dụng tham số **`chunksize`** để chia tệp lớn thành các khối nhỏ vừa vặn với bộ nhớ:
+Trong các tệp trích xuất từ hệ thống tài chính hoặc nền tảng thương mại, dữ liệu giá thường được lưu trữ dưới dạng chuỗi văn bản kèm ký hiệu tiền tệ và dấu phân cách hàng nghìn, chẳng hạn: `"$45,647.00"`.
 
+Để chuyển chuỗi này về dạng số thực `float64` có thể tính toán được, ta cần loại bỏ ký tự `$` và dấu phẩy `,`.
+
+### Bẫy Ký tự Neo trong Biểu thức Chính quy (Regex)
+Trong cú pháp của biểu thức chính quy (*Regular Expression*), ký tự `$` là một **ký tự siêu đặc biệt (Meta-character)**, đóng vai trò là ký tự neo đại diện cho **vị trí cuối cùng của chuỗi văn bản**.
+Nếu bạn viết:
 ```python
-tong, dem = 0.0, 0
-for chunk in pd.read_csv(StringIO(text), chunksize=2):
-    values = chunk["doanh_thu"].dropna()
-    tong += values.sum()
-    dem += len(values)
-tb = tong / dem if dem else None
-print(tong, dem, tb)             # 100.0 2 50.0
+# CÁCH LÀM SAI LẦM:
+s.str.replace("$", "", regex=True)
+```
+pandas sẽ tìm vị trí cuối chuỗi và thay thế nó bằng chuỗi rỗng! Ký tự `$` thực tế ở đầu chuỗi hoàn toàn không bị xóa, và lệnh ép kiểu `astype(float)` sau đó sẽ sập ngay lập tức với lỗi `ValueError`.
+
+**Giải pháp chuẩn mực**: Luôn chỉ định tường minh tham số `regex=False` khi muốn thay thế các ký tự văn bản thông thường:
+```python
+# CÁCH LÀM CHUẨN MỰC:
+gia_sach = prices.str.replace("$", "", regex=False).str.replace(",", "", regex=False).astype(float)
 ```
 
-Khi truyền `chunksize=2`, hàm `read_csv` không trả về một DataFrame duy nhất mà trả về một **trình lặp** (iterator). Mỗi vòng lặp chỉ nạp đúng 2 dòng vào RAM, xử lý xong sẽ giải phóng bộ nhớ để nạp 2 dòng kế tiếp.
+---
 
-Trong kỹ thuật này, có một cái bẫy toán học cực kỳ nguy hiểm mà nhiều người mắc phải: **Ngụy biện trung bình của các trung bình (Average of Averages Fallacy)**.
+## 3. Định dạng Lưu trữ: CSV vs Apache Parquet
 
-Giả sử ta có hai khối dữ liệu:
-- Khối 1 chỉ có 1 phần tử: `[10]`, giá trị trung bình là 10.
-- Khối 2 có 3 phần tử: `[20, 30, 40]`, giá trị trung bình là $(20+30+40)/3 = 30$.
+Trong quá trình xây dựng các đường ống dữ liệu, việc lựa chọn định dạng lưu trữ trung gian giữa các bước xử lý đóng vai trò quyết định đến hiệu năng tổng thể của toàn bộ hệ thống.
 
-Nếu bạn tính trung bình của từng khối rồi lấy trung bình của hai con số đó, bạn sẽ nhận được:
-$$(10 + 30) / 2 = 20$$
+```
++--------------------+-----------------------------+-------------------------------+
+| Tiêu chí so sánh   | Tệp văn bản CSV             | Tệp nhị phân Apache Parquet   |
++--------------------+-----------------------------+-------------------------------+
+| Mô hình lưu trữ    | Dòng tuần tự (Row-based)    | Định hướng cột (Columnar)     |
+| Dung lượng đĩa     | Lớn (văn bản thô không nén) | Nhỏ (nén Snappy/ZSTD cao cấp) |
+| Bảo toàn kiểu dữ liệu | KHÔNG (mọi thứ thành chuỗi) | CÓ (lưu trọn vẹn datetime, int)|
+| Tốc độ truy vấn cột| Chậm (phải đọc toàn bộ tệp) | Cực nhanh (chỉ đọc cột cần)  |
+| Hỗ trợ phân vùng   | Hạn chế                     | Chuẩn công nghiệp (Hive-style)|
++--------------------+-----------------------------+-------------------------------+
+```
 
-Nhưng trung bình thực sự của toàn bộ 4 con số là:
-$$(10 + 20 + 30 + 40) / 4 = 100 / 4 = 25$$
+### 3.1. Bản chất Định hướng Cột của Parquet
+- Trong tệp CSV, dữ liệu được ghi lần lượt từng dòng từ trái sang phải. Nếu bạn chỉ cần đọc đúng một cột giá tiền trong bảng 90 cột, hệ điều hành vẫn buộc phải nạp toàn bộ $100\%$ dung lượng tệp từ đĩa cứng vào bộ nhớ rồi mới bóc tách được cột đó.
+- Ngược lại, Apache Parquet tổ chức dữ liệu theo từng cột riêng biệt. Khi bạn chỉ truy vấn cột `price`, trình điều khiển chỉ cần nhảy cóc đến đúng các dải byte của cột đó và nạp vào bộ nhớ.
 
-Con số 20 hoàn toàn sai lệch vì bạn đã vô tình gán trọng số cho khối 1 (chỉ có 1 phần tử) ngang bằng với khối 2 (có tới 3 phần tử). 
+### 3.2. Tính Bảo toàn Siêu dữ liệu Kiểu (*Type Preservation*)
+Khi bạn xuất một DataFrame có cột ngày `first_review` (kiểu `datetime64[ns]`) ra tệp CSV bằng `df.to_csv("data.csv")`, tệp CSV chỉ lưu chuỗi văn bản `"2023-03-15"`. Khi đọc lại bằng `pd.read_csv("data.csv")`, cột này sẽ bị giáng cấp thành kiểu chuỗi `object`, và bạn lại phải mất công ép kiểu lần thứ hai.
+Nếu xuất ra Parquet bằng `df.to_parquet("data.parquet")`, toàn bộ cấu trúc kiểu dữ liệu kỹ thuật (`int64`, `float64`, `datetime64`) đều được lưu trữ nguyên vẹn trong phần siêu dữ liệu của tệp nhị phân. Khi đọc lại, dữ liệu lập tức sẵn sàng sử dụng với kiểu gốc ban đầu.
 
-Do đó, khi xử lý theo từng khối, ta bắt buộc phải duy trì hai biến tích lũy trạng thái thống kê độc lập: **tổng đại số** (`tong += values.sum()`) và **tổng số lượng quan sát hợp lệ** (`dem += len(values)`). Phép chia tính trung bình chỉ được phép thực hiện duy nhất một lần ở bước tổng kết cuối cùng.
+---
 
-## 3. Dữ liệu phân cấp JSON và phẳng hóa bảng
+## 4. Nguyên tắc Tiêu thụ Web API và Lưu trữ Phản hồi Thô
 
-JSON (JavaScript Object Notation) là định dạng thống trị trên web và các giao diện lập trình ứng dụng (API). Khác với CSV dạng bảng phẳng, JSON có cấu trúc cây lồng nhau (nested tree), nơi mỗi đối tượng có thể chứa các đối tượng con hoặc các mảng danh sách.
+Khi thu thập dữ liệu từ các dịch vụ web bên ngoài (chẳng hạn như dữ liệu thời tiết lịch sử từ Open-Meteo API), một nguyên tắc bất biến của các kỹ sư dữ liệu là: **Lưu trữ Phản hồi Thô (*Raw Response Persistence*)**.
 
+```
+    [ Open-Meteo API ]
+            |
+            v Gọi HTTP GET một lần duy nhất
+    { Response JSON Thô }
+            |
+            +---> [ Lưu tệp đĩa: raw/weather_2025-01.json ]  <- BẢO TOÀN DẤU VẾT
+            |
+            v pd.DataFrame(payload["daily"])
+    [ Bảng phân tích nội bộ ]
+```
+
+### Vì sao phải lưu tệp JSON thô trước khi chuyển thành bảng?
+1. **Tính tái lập (*Reproducibility*)**: Nếu sau này bạn phát hiện mã nguồn chuyển đổi bảng bị sai logic hoặc cần trích xuất thêm một trường thông tin mới (như độ ẩm hay tốc độ gió), bạn chỉ cần đọc lại tệp JSON đã lưu trên đĩa mà không cần gọi lại API.
+2. **Bảo vệ giới hạn tần suất (*Rate Limit*)**: Hầu hết các dịch vụ API đều giới hạn số lượng cuộc gọi trong ngày. Việc lưu trữ cục bộ giúp bạn có thể chạy thử nghiệm mã nguồn hàng trăm lần mà không sợ bị nhà cung cấp khóa tài khoản.
+3. **Phòng vệ trước sự cố mạng**: Trong các bài kiểm thử tự động (*CI/CD*) hoặc môi trường chấm bài ngắt kết nối mạng, đường ống dữ liệu vẫn vận hành trơn tru nhờ tệp dữ liệu thô đã được lưu trữ sẵn.
+
+---
+
+## 5. Truy vấn SQL Tại chỗ Hiệu năng cao với DuckDB
+
+Trong nhiều thập kỷ, khi muốn sử dụng ngôn ngữ truy vấn SQL, lập trình viên buộc phải cài đặt các hệ quản trị cơ sở dữ liệu cồng kềnh như PostgreSQL hay MySQL.
+Năm 2019, dự án **DuckDB** ra đời và nhanh chóng trở thành một hiện tượng công nghệ, được mệnh danh là "SQLite của ngành phân tích dữ liệu".
+
+### 5.1. Sức mạnh của DuckDB
+- **Không cần máy chủ (Serverless)**: DuckDB chạy nhúng trực tiếp bên trong tiến trình Python của bạn dưới dạng một thư viện C++ siêu nhẹ.
+- **Thực thi trực tiếp trên tệp đĩa**: DuckDB có thể chạy các câu truy vấn SQL phức tạp (gồm `GROUP BY`, `JOIN`, hàm cửa sổ) trực tiếp trên các tệp `CSV`, `Parquet` hoặc `JSON` mà không cần bước nạp dữ liệu (*Ingestion*) vào cơ sở dữ liệu trước:
+  ```python
+  import duckdb
+
+  # Chạy SQL trực tiếp trên tệp CSV và trả về pandas DataFrame:
+  ket_qua = duckdb.query("""
+      SELECT year(date) AS nam, count(*) AS n
+      FROM 'reviews.csv'
+      GROUP BY nam
+      ORDER BY nam ASC
+  """).df()
+  ```
+- **Xử lý tệp vượt RAM mượt mà**: Nhờ kỹ thuật thực thi luồng (*Streaming Execution*) và định dạng vector hóa, DuckDB có thể xử lý tệp CSV hàng chục triệu dòng với dung lượng RAM chỉ vài trăm Megabyte.
+
+---
+
+## 6. Bài tập Thực chiến Phòng Lab 06 (100% Nội dung Lab)
+
+Dưới đây là trọn vẹn bộ bài tập từ Lab 06, kết hợp ba nguồn dữ liệu thực tế: tệp danh sách phòng đầy đủ 90 cột, tệp lịch sử đánh giá hơn $690,000$ dòng, và dữ liệu thời tiết lịch sử từ Open-Meteo API.
+
+---
+
+### Bài tập 1 (Q1): Đọc Tệp Lớn có Chọn lọc bằng `usecols` và `parse_dates`
+::: exercise Nạp tệp dữ liệu tối ưu bộ nhớ
+Viết hàm:
+`read_selected(path: str | Path, columns: list[str], date_columns: list[str]) -> pd.DataFrame`
+Yêu cầu:
+- Nhận đường dẫn tới tệp CSV (hỗ trợ cả tệp nén `.gz`).
+- Chỉ nạp đúng các cột được liệt kê trong `columns` bằng tham số `usecols`.
+- Ép kiểu thời gian cho các cột trong `date_columns` ngay tại thời điểm nạp bằng `parse_dates`.
+- Trả về DataFrame gồm đầy đủ các dòng, các cột ngày có kiểu `datetime64` và ô trống thành `NaT`.
+- Tuyệt đối không đọc toàn bộ bảng rồi mới dùng lệnh lọc cột.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+from pathlib import Path
+
+def read_selected(path: str | Path, columns: list[str], date_columns: list[str]) -> pd.DataFrame:
+    # Đọc có chọn lọc ngay tại tầng I/O của pandas
+    return pd.read_csv(
+        path,
+        usecols=columns,
+        parse_dates=date_columns
+    )
+```
+
+#### Đo lường thực nghiệm:
+- Trên tệp snapshot Santiago thật `listings_full.csv.gz` ($18,534$ dòng $\times 90$ cột):
+  - Đọc toàn bộ bảng: mất khoảng $15.4$ giây.
+  - Đọc chọn lọc 5 cột bằng `read_selected`: chỉ mất $2.1$ giây (**nhanh hơn gấp 7 lần** và giảm $85\%$ dung lượng RAM).
+:::
+
+---
+
+### Bài tập 2 (Q2): Làm sạch Cột Giá Dạng Chuỗi An toàn
+::: exercise Chuyển đổi dữ liệu tiền tệ có ký hiệu đặc biệt
+Viết hàm `clean_price(prices: pd.Series) -> pd.Series`.
+Yêu cầu:
+- Nhận Series chuỗi có định dạng tiền tệ như `"$45,647.00"` hoặc giá trị khuyết thiếu.
+- Loại bỏ ký hiệu `$` và dấu phẩy `,` bằng cách gọi hai lần liên tiếp phương thức `str.replace(..., regex=False)`.
+- Ép kiểu an toàn sang `float64`, các ô khuyết thiếu vẫn giữ nguyên là `NaN`.
+- Không làm thay đổi Series đầu vào.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+import numpy as np
+
+def clean_price(prices: pd.Series) -> pd.Series:
+    # Tắt biểu thức chính quy (regex=False) để ký tự $ được hiểu đúng nghĩa đen
+    s_sach = prices.str.replace("$", "", regex=False).str.replace(",", "", regex=False)
+    return s_sach.astype(np.float64)
+```
+*Đối chiếu thực tế*: Trung vị giá sau khi làm sạch trên toàn bộ thị trường Santiago đạt $59,000$ CLP.
+:::
+
+---
+
+### Bài tập 3 (Q3): Khảo sát Thực nghiệm Kích thước và Kiểu Dữ liệu: CSV vs Parquet
+::: exercise So sánh hai định dạng lưu trữ dữ liệu
+Viết hàm `save_formats(df: pd.DataFrame, folder: Path) -> dict`.
+Yêu cầu:
+- Ghi DataFrame ra hai tệp: `folder / "t6.csv"` (không lưu index) và `folder / "t6.parquet"` (không lưu index).
+- Đọc lại cả hai tệp: tệp CSV đọc lại bằng `pd.read_csv` (không parse dates); tệp Parquet đọc lại bằng `pd.read_parquet`.
+- Trả về từ điển có đúng 4 khóa:
+  - `size_csv`: Kích thước tệp CSV tính bằng byte (`os.path.getsize`).
+  - `size_parquet`: Kích thước tệp Parquet tính bằng byte.
+  - `dtypes_csv`: Từ điển `{tên_cột: str(dtype)}` của bảng CSV đọc lại.
+  - `dtypes_parquet`: Từ điển `{tên_cột: str(dtype)}` của bảng Parquet đọc lại.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import os
+from pathlib import Path
+import pandas as pd
+
+def save_formats(df: pd.DataFrame, folder: Path) -> dict:
+    folder_path = Path(folder)
+    csv_file = folder_path / "t6.csv"
+    pq_file = folder_path / "t6.parquet"
+    
+    # 1. Ghi ra đĩa
+    df.to_csv(csv_file, index=False)
+    df.to_parquet(pq_file, index=False)
+    
+    # 2. Đọc lại để kiểm tra kiểu
+    df_csv_back = pd.read_csv(csv_file)
+    df_pq_back = pd.read_parquet(pq_file)
+    
+    return {
+        "size_csv": os.path.getsize(csv_file),
+        "size_parquet": os.path.getsize(pq_file),
+        "dtypes_csv": {col: str(df_csv_back[col].dtype) for col in df_csv_back.columns},
+        "dtypes_parquet": {col: str(df_pq_back[col].dtype) for col in df_pq_back.columns}
+    }
+```
+
+#### Nhận xét sư phạm:
+- Dung lượng tệp Parquet nhỏ hơn tệp CSV khoảng $3$ lần nhờ thuật toán nén Snappy.
+- Cột ngày `first_review` trong CSV bị biến thành chuỗi `object`, trong khi Parquet bảo toàn trọn vẹn kiểu `datetime64[ns]`.
+:::
+
+---
+
+### Bài tập 4 (Q4): Tiêu thụ API Lịch sử và Bảo tồn Phản hồi Thô
+::: exercise Lưu trữ phản hồi JSON từ Web API
+Viết hàm `weather_table(payload: dict, path: str | Path) -> pd.DataFrame`.
+Yêu cầu:
+- Nhận phản hồi dạng từ điển từ API Open-Meteo (chứa khóa `"daily"` là tập hợp các danh sách có cùng độ dài, luôn có trường `"time"`).
+- Ghi toàn bộ phản hồi thô `payload` ra tệp đĩa tại đường dẫn `path` bằng `json.dump(..., ensure_ascii=False)`.
+- Chuyển đổi khối dữ liệu `"daily"` thành một pandas DataFrame và trả về kết quả (cột `"time"` giữ nguyên dạng chuỗi).
+:::
+
+::: solution
+#### Lời giải chi tiết:
 ```python
 import json
+from pathlib import Path
+import pandas as pd
 
-payload = '{"items":[{"id":"001","meta":{"nhom":"A"},"gia":20}]}'
-obj = json.loads(payload)
-bang = pd.json_normalize(obj["items"], sep="_")
-print(bang.columns.tolist())     # ['id', 'gia', 'meta_nhom']
-assert bang.loc[0, "meta_nhom"] == "A"
+def weather_table(payload: dict, path: str | Path) -> pd.DataFrame:
+    file_path = Path(path)
+    
+    # 1. Lưu trữ toàn bộ phản hồi thô để bảo toàn dấu vết
+    with open(file_path, mode="w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+        
+    # 2. Chuyển đổi thành DataFrame
+    return pd.DataFrame(payload["daily"])
 ```
-
-Hàm **`pd.json_normalize()`** là công cụ đắc lực giúp ta "phẳng hóa" cấu trúc cây phân cấp thành các cột của DataFrame. Tham số `sep="_"` quy định cách đặt tên cột mới cho các trường lồng nhau: trường `nhom` nằm bên trong đối tượng `meta` được tự động chuyển đổi thành cột `meta_nhom`.
-
-Nếu một bản ghi chứa một danh sách các phần tử con (ví dụ một đơn hàng chứa danh sách nhiều món đồ), ta có thể sử dụng phương thức `df.explode()` để mở rộng mỗi phần tử con thành một hàng riêng biệt. Tuy nhiên, việc này sẽ làm nhân bản mã định danh của đơn hàng cha, đòi hỏi ta phải thiết lập khóa phức hợp để nhận diện từng dòng mới.
-
-So sánh ba định dạng lưu trữ chủ lực:
-- **CSV**: Định dạng văn bản thuần, con người đọc được trực tiếp, nhưng dung lượng cồng kềnh, tốc độ đọc ghi chậm và không lưu giữ thông tin kiểu dữ liệu.
-- **JSON**: Hoàn hảo để biểu diễn dữ liệu phân cấp phức tạp và trao đổi qua mạng Internet, nhưng không tối ưu cho các phép tính tổng hợp thống kê trên quy mô lớn.
-- **Parquet**: Định dạng nhị phân lưu trữ theo cột (columnar storage), hỗ trợ nén dữ liệu cực mạnh và lưu giữ toàn vẹn lược đồ kiểu dữ liệu. Parquet là tiêu chuẩn công nghiệp hiện đại cho các kho dữ liệu lớn (Data Lake / Data Warehouse).
-
-## 4. Cơ sở dữ liệu SQL: Đẩy phép tính xuống nơi lưu trữ dữ liệu
-
-Khi làm việc với các hệ thống dữ liệu doanh nghiệp, dữ liệu thường được lưu trữ trong các hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) như PostgreSQL, MySQL hay SQLite.
-
-Một sai lầm rất lớn của người mới học là viết câu lệnh `SELECT * FROM bang_du_lieu` để kéo toàn bộ hàng triệu dòng về máy tính rồi mới dùng pandas để lọc. Cách làm này gây lãng phí băng thông mạng nghiêm trọng và dễ làm tràn bộ nhớ máy tính cá nhân.
-
-Quy tắc của kỹ sư dữ liệu là: **Đẩy phép tính xuống cơ sở dữ liệu (Pushdown Computation)**. Cơ sở dữ liệu được tối ưu hóa với hệ thống chỉ mục (Index) trên đĩa cứng. Hãy để máy chủ cơ sở dữ liệu thực hiện các phép lọc (`WHERE`) và phép tổng hợp (`GROUP BY`), ta chỉ kéo về máy kết quả tinh gọn cần thiết.
-
-```python
-import sqlite3
-
-with sqlite3.connect(":memory:") as con:
-    df.to_sql("ban_hang", con, index=False)
-    query = "SELECT id, doanh_thu FROM ban_hang WHERE nhom = ?"
-    chon = pd.read_sql_query(query, con, params=("A",))
-print(chon["doanh_thu"].sum())    # 100.0
-```
-
-Hai quy tắc bảo mật và kỹ thuật sống còn:
-
-1. **Tuyệt đối không dùng f-string để ghép câu lệnh SQL**: Nếu bạn viết `f"SELECT * FROM ban_hang WHERE nhom = '{user_input}'"`, hệ thống của bạn sẽ đứng trước nguy cơ bị tấn công hủy diệt bởi lỗ hổng **SQL Injection**. Kẻ xấu có thể truyền vào chuỗi `' OR '1'='1` để đánh cắp toàn bộ dữ liệu, hoặc nghiêm trọng hơn là câu lệnh xóa bảng `'; DROP TABLE ban_hang; --`.
-2. **Luôn sử dụng câu lệnh tham số hóa (Parameterized Query)**: Cú pháp dấu hỏi chấm `WHERE nhom = ?` và truyền tham số qua tuple `params=("A",)` tách bạch hoàn toàn mã lệnh thực thi khỏi dữ liệu đầu vào. Trình điều khiển cơ sở dữ liệu sẽ tự động xử lý thoát ký tự an toàn trước khi thực thi.
-
-## 5. Tiêu thụ dữ liệu từ API có trách nhiệm
-
-Giao diện lập trình ứng dụng (API) là cánh cửa để thu thập dữ liệu động từ các dịch vụ bên ngoài qua giao thức mạng HTTP.
-
-Khi làm việc với API, có ba nguyên tắc đạo đức và kỹ thuật cần tuân thủ:
-
-1. **Nhận thức về phân trang (Pagination)**: Một API chuyên nghiệp không bao giờ trả về hàng triệu bản ghi trong một phản hồi duy nhất vì nguy cơ làm nghẽn máy chủ. Dữ liệu luôn được chia thành từng trang thông qua tham số số trang hoặc con trỏ (cursor). Ta phải viết vòng lặp kiểm tra trường `next` cho đến khi hết dữ liệu mới được coi là thu thập trọn vẹn.
-2. **Kiểm tra quy chuẩn cấu trúc dữ liệu phòng thủ**: Mỗi phản hồi nhận về từ mạng phải được kiểm tra cấu trúc nghiêm ngặt trước khi đưa vào bảng phân tích:
-
-```python
-pages = [
-    {"items": [{"id": "001"}], "next": "page2"},
-    {"items": [{"id": "002"}], "next": None},
-]
-records = []
-for page in pages:
-    if not isinstance(page.get("items"), list):
-        raise ValueError("Thieu danh sach items")
-    records.extend(page["items"])
-api_df = pd.DataFrame(records)
-assert api_df["id"].is_unique
-print(len(api_df))               # 2
-```
-
-3. **Tôn trọng giới hạn tần suất (Rate Limiting)**: Mọi dịch vụ web đều áp đặt giới hạn số lượng yêu cầu mỗi phút. Nếu gửi yêu cầu quá dồn dập, máy chủ sẽ trả về lỗi HTTP 429 (Too Many Requests) hoặc chặn địa chỉ IP của bạn. Hãy luôn thiết lập khoảng nghỉ (`time.sleep`) hợp lý và áp dụng chiến lược thử lại lùi bước lũy thừa (exponential backoff) khi gặp sự cố mạng.
-
-## 6. Bài tập tự luyện
-
-::: exercise Thẩm định sai số trung bình theo khối
-Giả sử ta đọc một tệp lớn chia thành hai khối: khối thứ nhất chỉ có 1 phần tử mang giá trị 10, khối thứ hai có 3 phần tử mang các giá trị 20, 30, 40.
-1. Giá trị trung bình thực sự của toàn bộ 4 phần tử là bao nhiêu?
-2. Nếu một người lấy trung bình của khối 1 cộng với trung bình của khối 2 rồi chia đôi, kết quả là bao nhiêu? Giải thích bản chất sai lầm của cách tính này.
 :::
 
-::: solution
-1. Tổng thực tế của 4 phần tử là $10 + 20 + 30 + 40 = 100$. Số lượng quan sát là 4. Giá trị trung bình chuẩn xác là:
-$$\frac{100}{4} = 25$$
+---
 
-2. Trung bình của khối 1 là 10. Trung bình của khối 2 là $(20 + 30 + 40) / 3 = 30$.
-Trung bình của hai con số này là:
-$$\frac{10 + 30}{2} = 20$$
-
-Sai lầm ở đây là **ngụy biện đánh đồng trọng số**. Phép tính thứ hai đã coi khối 1 (chỉ có 1 phần tử) có tầm ảnh hưởng ngang bằng với khối 2 (có 3 phần tử). Để tính đúng trung bình qua nhiều khối dữ liệu, ta bắt buộc phải cộng dồn tổng giá trị và tổng số lượng phần tử độc lập, rồi chỉ chia một lần ở bước cuối cùng.
-:::
-
-::: exercise Xử lý mã quốc gia đặc biệt trong CSV
-Một tệp CSV chứa danh sách mã bưu cục và quốc gia, trong đó có mã `"001"` và mã quốc gia của nước Namibia là `"NA"`. Hãy nêu hai cấu hình tham số bắt buộc khi gọi `pd.read_csv()` để dữ liệu không bị biến dạng.
-:::
-
-::: solution
-Hai cấu hình cần thiết là:
-1. `dtype={"ma_buu_cuc": "string"}`: Ngăn chặn pandas tự động ép kiểu mã `"001"` thành số nguyên $1$, giữ nguyên vẹn hai chữ số 0 ở đầu.
-2. `keep_default_na=False` (hoặc định nghĩa danh sách `na_values` riêng không chứa `"NA"`): Ngăn chặn pandas tự động nhận diện chuỗi `"NA"` của nước Namibia thành giá trị khuyết thiếu `NaN`.
-:::
-
-::: exercise Hệ quả của việc mở rộng danh sách lồng nhau
-Một bảng dữ liệu khách hàng có 3 bản ghi. Cột danh sách số điện thoại của 3 khách hàng này lần lượt chứa 2 số, 1 số và 3 số điện thoại con. Nếu ta thực hiện lệnh `df.explode()` để mỗi số điện thoại thành một dòng riêng biệt, bảng mới có bao nhiêu dòng? Mã định danh khách hàng có còn duy nhất không?
-:::
-
-::: solution
-1. Bảng mới sẽ có tổng cộng $2 + 1 + 3 = 6$ dòng.
-2. Mã định danh khách hàng ban đầu **không còn duy nhất** nữa, vì khách hàng thứ nhất sẽ xuất hiện lặp lại 2 lần và khách hàng thứ ba xuất hiện 3 lần. Để nhận diện duy nhất từng dòng trong bảng mới, ta cần thiết lập khóa phức hợp kết hợp giữa mã khách hàng và số thứ tự của số điện thoại.
-:::
-
-::: exercise Xử lý dữ liệu quy mô lớn vượt bộ nhớ RAM với Chunking và DuckDB
-Giả sử hệ thống ghi nhận tệp nhật ký giao dịch `giao_dich_lon.csv` có hàng triệu dòng (dung lượng 10 GB), trong khi máy chủ của bạn chỉ có 4 GB RAM khả dụng. Mỗi dòng gồm các cột: `ma_gd`, `chi_nhanh`, `gia_tri`, `trang_thai`.
+### Bài tập 5 (Q5): Thống kê Lượt Đánh giá theo Ngày trong Khoảng Thời gian
+::: exercise Đếm tần suất biến cố theo chuỗi thời gian
+Viết hàm `reviews_per_day(rv: pd.DataFrame, start: str, end: str) -> pd.DataFrame`.
 Yêu cầu:
-1. Hãy viết chương trình tính tổng doanh thu và giá trị giao dịch trung bình của từng `chi_nhanh` cho các giao dịch thành công (`trang_thai == 'SUCCESS'` và `gia_tri > 0`).
-2. Chương trình phải chạy mượt mà, tuyệt đối không được nạp toàn bộ tệp vào RAM cùng một lúc gây lỗi tràn bộ nhớ (*Out-Of-Memory* - OOM).
+- Bảng `rv` chứa cột `date` có kiểu `datetime64`.
+- Lọc các dòng thỏa mãn $start \le date \le end$ (bao gồm cả hai mốc biên).
+- Đếm số lượng đánh giá theo từng ngày bằng cú pháp: `groupby(rv["date"].dt.strftime("%Y-%m-%d")).size()`.
+- Trả về DataFrame gồm đúng hai cột: `time` (chuỗi `"YYYY-MM-DD"`) và `so_review` (int), sắp xếp `time` tăng dần, đặt lại index từ $0, 1, \dots$. Chỉ giữ lại những ngày có ít nhất một đánh giá.
 :::
 
 ::: solution
-#### Cách 1: Tiếp cận Căn bản & Trực quan (Kỹ thuật đọc phân khối Chunking tích lũy trọng số)
-Một cách người ta hay dùng trong pandas khi dữ liệu lớn hơn RAM là đọc từng khối dữ liệu bằng tham số `chunksize` và tích lũy trạng thái (*State Accumulation*):
-
+#### Lời giải chi tiết:
 ```python
 import pandas as pd
-from collections import defaultdict
 
-# Khởi tạo bộ tích lũy trạng thái: tổng tiền và số giao dịch
-tong_tien = defaultdict(float)
-so_giao_dich = defaultdict(int)
-
-# Đọc từng khối 100,000 dòng một lượt, chỉ nạp các cột cần thiết
-for chunk in pd.read_csv("giao_dich_lon.csv", chunksize=100_000, usecols=["chi_nhanh", "gia_tri", "trang_thai"]):
-    # Lọc các dòng hợp lệ ngay trong khối bộ nhớ tạm
-    mask = (chunk["trang_thai"] == "SUCCESS") & (chunk["gia_tri"] > 0)
-    hop_le = chunk[mask]
+def reviews_per_day(rv: pd.DataFrame, start: str, end: str) -> pd.DataFrame:
+    # 1. Lọc theo khoảng thời gian hợp lệ
+    mask = (rv["date"] >= start) & (rv["date"] <= end)
+    rv_sub = rv[mask]
     
-    # Gom nhóm cục bộ trên khối
-    nhom_khoi = hop_le.groupby("chi_nhanh")["gia_tri"].agg(["sum", "count"])
+    # 2. Định dạng ngày sang chuỗi YYYY-MM-DD và đếm tần suất
+    chuoi_ngay = rv_sub["date"].dt.strftime("%Y-%m-%d")
+    dem = rv_sub.groupby(chuoi_ngay).size().reset_index(name="so_review")
+    dem.rename(columns={"date": "time"}, inplace=True)
     
-    # Tích lũy vào từ điển trạng thái toàn cục
-    for chi_nhanh, row in nhom_khoi.iterrows():
-        tong_tien[chi_nhanh] += row["sum"]
-        so_giao_dich[chi_nhanh] += int(row["count"])
-
-# Tính trung bình chuẩn tắc từ tổng dồn và đếm dồn
-bao_cao_chunking = pd.DataFrame({
-    "chi_nhanh": list(tong_tien.keys()),
-    "tong_doanh_thu": list(tong_tien.values()),
-    "so_don": [so_giao_dich[k] for k in tong_tien.keys()]
-})
-bao_cao_chunking["gia_trung_binh"] = bao_cao_chunking["tong_doanh_thu"] / bao_cao_chunking["so_don"]
-print("Báo cáo Chunking:\n", bao_cao_chunking)
+    # 3. Sắp xếp thứ tự thời gian tăng dần
+    dem.sort_values("time", inplace=True)
+    dem.reset_index(drop=True, inplace=True)
+    
+    return dem
 ```
-
-#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Sử dụng DuckDB Engine với cơ chế Streaming Execution)
-Trong các hệ thống phân tích hiện đại, giải pháp tối ưu vượt bậc là sử dụng DuckDB để đẩy thẳng câu truy vấn SQL xuống tệp dữ liệu (đặc biệt khi tệp được lưu ở định dạng Parquet theo cột):
-
-```python
-import duckdb
-
-# DuckDB tự động chia luồng xử lý ngoài đĩa (Out-of-Core Processing)
-# Tiêu thụ cực ít RAM và thực thi với tốc độ mã C/C++ đa luồng
-sql_query = """
-    SELECT 
-        chi_nhanh,
-        SUM(gia_tri) AS tong_doanh_thu,
-        COUNT(*) AS so_don,
-        AVG(gia_tri) AS gia_trung_binh
-    FROM 'giao_dich_lon.parquet'
-    WHERE trang_thai = 'SUCCESS' AND gia_tri > 0
-    GROUP BY chi_nhanh
-    ORDER BY tong_doanh_thu DESC
-"""
-
-# Chuyển đổi kết quả cuối cùng thành DataFrame chỉ mất vài miligiây
-bao_cao_duckdb = duckdb.query(sql_query).to_df()
-print("Báo cáo DuckDB Engine:\n", bao_cao_duckdb)
-```
-
-#### Phân tích bản chất & Bình luận sư phạm
-- **Nghịch lý lấy trung bình của các trung bình**: Sai lầm chết người của người mới là tính trung bình của từng chunk rồi lại lấy trung bình cộng của các giá trị trung bình đó:
-  $$
-  \bar{x}_{\text{chung}} \ne \frac{\bar{x}_1 + \bar{x}_2 + \dots + \bar{x}_k}{k}
-  $$
-  Công thức trên chỉ đúng khi mọi khối dữ liệu đều có số dòng hợp lệ bằng nhau tuyệt đối. Trong thực tế, các khối có số dòng hợp lệ khác nhau; do đó bắt buộc phải duy trì hai biến tích lũy riêng biệt: $\sum x$ và $\sum n$.
-- **Ưu thế của Parquet và DuckDB**: Tệp CSV lưu trữ theo dạng dòng (*Row-oriented*) khiến chương trình phải đọc toàn bộ các ký tự của cả dòng trước khi lọc cột. Trong khi đó, định dạng Parquet lưu trữ theo cột (*Columnar*) kết hợp với cơ chế thực thi hình nón của DuckDB cho phép bỏ qua hàng tỷ byte dữ liệu của các cột không liên quan, tăng tốc độ xử lý từ 20 đến 50 lần.
 :::
 
-## 7. Nguồn và đọc thêm
+---
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data).
-- Tài liệu chính thức về công cụ IO: [pandas IO Tools — Text, CSV, JSON, SQL, Parquet](https://pandas.pydata.org/docs/user_guide/io.html).
-- Hướng dẫn bảo mật cơ sở dữ liệu: [Python sqlite3 Module — Security Considerations](https://docs.python.org/3/library/sqlite3.html).
-- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-06-ket-noi-truy-xuat-du-lieu.html).
+### Bài tập 6 (Q6): Ghép nối Dữ liệu Thời tiết và Tính Hệ số Tương quan
+::: exercise Khảo sát mối liên hệ giữa nhiệt độ và hành vi người dùng
+Viết hàm `join_weather(weather: pd.DataFrame, per_day: pd.DataFrame) -> dict`.
+Yêu cầu:
+- Nối bảng thời tiết `weather` (có cột `time`, `temperature_2m_max`) với bảng đánh giá theo ngày `per_day` (có cột `time`, `so_review`) theo cột `time` bằng phương thức `how="left"`.
+- Các ngày không phát sinh đánh giá nào giữ nguyên giá trị `NaN` ở cột `so_review`, **tuyệt đối không tự ý điền số 0**.
+- Tính hệ số tương quan Pearson giữa nhiệt độ cao nhất và số lượng đánh giá.
+- Trả về từ điển gồm:
+  - `gop`: DataFrame sau khi ghép nối.
+  - `so_thieu`: int, số ngày không có đánh giá (`NaN`).
+  - `he_so`: float, hệ số tương quan Pearson (tự động bỏ qua các cặp có `NaN`).
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+import numpy as np
+
+def join_weather(weather: pd.DataFrame, per_day: pd.DataFrame) -> dict:
+    # Ghép nối giữ nguyên mọi ngày của bảng thời tiết
+    gop = pd.merge(weather, per_day, on="time", how="left")
+    
+    so_thieu = int(gop["so_review"].isna().sum())
+    he_so = float(gop["temperature_2m_max"].corr(gop["so_review"]))
+    
+    return {
+        "gop": gop,
+        "so_thieu": so_thieu,
+        "he_so": he_so
+    }
+```
+
+#### Luận giải phương pháp luận:
+- **Vì sao không điền số 0 cho ngày thiếu review?**: Trong kinh tế học du lịch, việc một ngày không có review nào được ghi nhận có thể do hệ thống máy chủ bị bảo trì ngắt quãng hoặc do các lượt đánh giá bị trễ hạn (*reporting delay*). Tự ý điền số 0 sẽ kéo tụt đường xu hướng hồi quy một cách giả tạo.
+- **Ý nghĩa của hệ số $r \approx 0.08$**: Hệ số tương quan $0.08$ gần như bằng $0$, chứng minh rằng nhiệt độ ngoài trời trong ngày không hề có bất kỳ tác động tuyến tính đáng kể nào đến việc du khách có viết đánh giá hay không. Khách du lịch thường viết đánh giá sau khi đã kết thúc chuyến đi và trở về nhà, hoàn toàn độc lập với thời tiết tại địa phương vào ngày hôm đó.
+:::
+
+---
+
+### Bài tập 7 (Q7): Truy vấn SQL Trực tiếp trên Tệp CSV bằng DuckDB
+::: exercise Thống kê chuỗi thời gian không cần nạp vào bộ nhớ
+Viết hàm `sql_reviews_by_year(reviews_path: str | Path) -> pd.DataFrame`.
+Yêu cầu:
+- Chạy một câu lệnh truy vấn DuckDB trực tiếp trên đường dẫn tệp CSV `reviews_path`.
+- Sử dụng cú pháp SQL chuẩn:
+  `SELECT year(date) AS nam, count(*) AS n FROM '<path>' GROUP BY nam ORDER BY nam ASC`.
+- Trả về kết quả dưới dạng pandas DataFrame có đúng hai cột `nam` và `n` (số nguyên).
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+from pathlib import Path
+import pandas as pd
+import duckdb
+
+def sql_reviews_by_year(reviews_path: str | Path) -> pd.DataFrame:
+    path_str = str(reviews_path).replace("\\", "/")
+    
+    cau_lenh = f"""
+        SELECT 
+            year(date) AS nam, 
+            count(*) AS n 
+        FROM '{path_str}' 
+        GROUP BY nam 
+        ORDER BY nam ASC
+    """
+    
+    return duckdb.query(cau_lenh).df()
+```
+
+#### Kiểm chứng chéo:
+- Năm 2025 trên tập dữ liệu Santiago thật có đúng $211,432$ lượt đánh giá.
+- Con số tính toán bằng câu lệnh DuckDB này khớp chính xác $100\%$ đến từng đơn vị với kết quả tính toán bằng Python thuần ở Lab 2!
+:::
+
+---
+
+### Bài tập 8 (Q8): Nối Hai Tệp CSV trong DuckDB: Lượt Đánh giá theo Loại Phòng
+::: exercise Phép nối bảng SQL hiệu năng cao trên đĩa
+Viết hàm:
+`sql_reviews_by_room_type(reviews_path: str | Path, listings_path: str | Path, nam: int) -> pd.DataFrame`
+Yêu cầu:
+- Chạy một truy vấn SQL trong DuckDB thực hiện phép nối `JOIN` trực tiếp giữa tệp review (`listing_id`, `date`) và tệp listing (`id`, `room_type`).
+- Điều kiện nối: `r.listing_id = l.id`.
+- Điều kiện lọc: `year(r.date) = nam`.
+- Gom nhóm theo `room_type` và đếm tổng số đánh giá `count(*) AS n`.
+- Sắp xếp kết quả theo `n` giảm dần; nếu bằng nhau thì sắp xếp `room_type` tăng dần theo bảng chữ cái.
+- Trả về DataFrame gồm đúng hai cột `room_type` và `n`.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+from pathlib import Path
+import pandas as pd
+import duckdb
+
+def sql_reviews_by_room_type(reviews_path: str | Path, listings_path: str | Path, nam: int) -> pd.DataFrame:
+    r_path = str(reviews_path).replace("\\", "/")
+    l_path = str(listings_path).replace("\\", "/")
+    
+    cau_lenh = f"""
+        SELECT 
+            l.room_type, 
+            count(*) AS n
+        FROM '{r_path}' r
+        JOIN '{l_path}' l ON r.listing_id = l.id
+        WHERE year(r.date) = {nam}
+        GROUP BY l.room_type
+        ORDER BY n DESC, l.room_type ASC
+    """
+    
+    return duckdb.query(cau_lenh).df()
+```
+
+#### Luận giải sâu sắc về hiện tượng suy giảm số dòng sau JOIN:
+- Khi tính riêng trên tệp review ở Bài 7, năm 2025 có tổng cộng $211,432$ đánh giá.
+- Tuy nhiên, sau khi thực hiện phép nối `INNER JOIN` với tệp listing ở Bài 8, tổng số review chỉ còn lại $201,850$ (bị hụt mất khoảng $9,500$ review!).
+- **Nguyên nhân kỹ thuật**: Đây là hiện tượng **khóa ngoại mồ côi (*Dangling Foreign Keys*)**. Tệp listing chỉ ghi nhận danh sách các phòng đang hoạt động ở thời điểm hiện tại (tháng 6/2026). Những phòng đã dừng hoạt động hoặc bị chủ nhà xóa tài khoản vào năm 2025 sẽ không còn xuất hiện trong tệp listing, dẫn đến việc các review tương ứng của chúng bị loại bỏ trong phép nối `INNER JOIN`.
+:::
+
+---
+
+## 7. Tổng kết Bài học
+
+1. **Nạp dữ liệu có chọn lọc**: Sử dụng `usecols` và `parse_dates` để giảm thiểu tối đa tài nguyên I/O và RAM khi làm việc với các bảng dữ liệu khổng lồ.
+2. **Kỷ luật với chuỗi tiền tệ**: Luôn thiết lập `regex=False` khi sử dụng `.str.replace()` để xử lý các ký hiệu tiền tệ `$`.
+3. **Ưu tiên định dạng Parquet**: Sử dụng Parquet cho dữ liệu trung gian để tiết kiệm dung lượng đĩa và bảo toàn nguyên vẹn kiểu dữ liệu kỹ thuật.
+4. **Lưu trữ phản hồi thô**: Luôn ghi tệp JSON thô từ Web API xuống đĩa trước khi trích xuất bảng biểu.
+5. **Khai thác sức mạnh DuckDB**: Tận dụng DuckDB để truy vấn SQL tức thì trên các tệp đĩa mà không cần cài đặt máy chủ cơ sở dữ liệu cồng kềnh.

@@ -225,56 +225,56 @@ export const readingMetadata = {
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
-    "words": 2581,
-    "minutes": 15
+    "words": 3650,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-02-python-co-ban": {
-    "words": 2678,
-    "minutes": 15
+    "words": 4962,
+    "minutes": 25
   },
   "xu-ly-du-lieu/bai-03-numpy": {
-    "words": 2840,
-    "minutes": 15
+    "words": 4615,
+    "minutes": 25
   },
   "xu-ly-du-lieu/bai-04-lam-quen-pandas": {
-    "words": 2304,
-    "minutes": 10
-  },
-  "xu-ly-du-lieu/bai-05-series-dataframe-chuyen-sau": {
-    "words": 2700,
+    "words": 2691,
     "minutes": 15
   },
+  "xu-ly-du-lieu/bai-05-series-dataframe-chuyen-sau": {
+    "words": 2047,
+    "minutes": 10
+  },
   "xu-ly-du-lieu/bai-06-ket-noi-truy-xuat-du-lieu": {
-    "words": 2716,
+    "words": 3143,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-07-xu-ly-chuoi": {
-    "words": 2460,
+    "words": 2395,
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-08-du-lieu-thoi-gian": {
-    "words": 2342,
-    "minutes": 10
+    "words": 4584,
+    "minutes": 25
   },
   "xu-ly-du-lieu/bai-10-lam-sach-du-lieu": {
-    "words": 2314,
-    "minutes": 10
+    "words": 3402,
+    "minutes": 15
   },
   "xu-ly-du-lieu/bai-11-llm-du-lieu-phi-cau-truc": {
-    "words": 3195,
-    "minutes": 15
+    "words": 3825,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-12-truc-quan-hoa-co-ban": {
-    "words": 3420,
-    "minutes": 15
+    "words": 3608,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-13-truc-quan-hoa-nang-cao": {
-    "words": 3094,
-    "minutes": 15
+    "words": 3510,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-14-ke-chuyen-bang-du-lieu": {
-    "words": 3594,
-    "minutes": 20
+    "words": 2336,
+    "minutes": 10
   },
   "vat-ly-1/01-don-vi-vector": {
     "words": 20426,

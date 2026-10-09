@@ -3,241 +3,442 @@ course: xu-ly-du-lieu
 lecture: bai-07-xu-ly-chuoi
 section: lecture
 title: "Xử lý dữ liệu chuỗi"
-prerequisites: ["bien-kieu","gia-tri-thieu","vector-hoa"]
+prerequisites: ["bien-kieu", "gia-tri-thieu", "vector-hoa"]
 lessonStatus: ready
-description: "Chuẩn hóa chuỗi, phân biệt văn bản literal và regex, trích xuất trường và giữ dữ liệu thiếu."
+description: "Chuẩn hóa chuỗi, phân biệt chuỗi ký tự nguyên bản với mẫu regex, trích xuất thực thể bằng str.extract và làm sạch văn bản quy mô lớn."
 ---
 
-Trong mọi nguồn dữ liệu thực tế, dữ liệu chuỗi ký tự (văn bản) luôn là vùng đất hỗn loạn và nhiều cạm bẫy nhất. Con người gõ phím với muôn vàn thói quen dị biệt: lúc viết hoa, lúc viết thường, gõ thừa dấu cách, chèn nhầm khoảng trắng không ngắt, và đặc biệt là hệ thống dấu thanh phức tạp của tiếng Việt.
+::: info Mục tiêu bài học
+- Thấu suốt kiến trúc bộ định tuyến `.str` trong pandas: cơ chế vector hóa xử lý chuỗi trên toàn mảng dữ liệu, tính năng bảo tồn giá trị khuyết thiếu `NaN` và kỹ thuật chuẩn hóa Unicode dựng sẵn NFC tiếng Việt.
+- Phân định rạch ròi giữa chuỗi ký tự nguyên bản (*Literal*) và mẫu biểu thức chính quy (*Regex*), kiểm soát bẫy ký tự neo `$` và dấu chấm `.` bằng tham số `regex=False`.
+- Nắm vững cơ chế đánh giá chân trị của `str.contains()` khi gặp dữ liệu khuyết thiếu, áp dụng tham số `na=False` để tạo mảng Boolean an toàn cho các phép lọc điều kiện.
+- Khảo sát và sàng lọc dữ liệu văn bản tự do quy mô lớn ($> 690,000$ dòng đánh giá): đo lường phân phối độ dài, nhận diện các đoạn văn bản rác vô nghĩa và làm sạch các thẻ HTML `<br/>`.
+- Xây dựng quy tắc trích xuất thực thể bằng `str.extract()` với nhóm bắt (*Capturing Groups*), phát hiện và xử lý triệt để hiện tượng khớp nhầm (*False Positives*) bằng danh sách từ dừng.
+- Hoàn thành trọn vẹn 100% bài tập thực hành Lab 7 trên tập dữ liệu đánh giá thực tế của Inside Airbnb.
+:::
 
-Nếu chỉ nhìn bằng mắt thường trên màn hình, hai chuỗi văn bản có thể trông giống hệt nhau từng nét chữ. Nhưng dưới đáy bộ nhớ máy tính, chúng có thể mang các mã nhị phân hoàn toàn khác biệt. Nếu đưa thẳng dữ liệu thô này vào các phép toán tổng hợp, hệ thống sẽ coi chúng là những thực thể riêng biệt, dẫn đến sự phân mảnh số liệu nghiêm trọng.
+---
 
-Bài học này cung cấp phương pháp tiếp cận khoa học và chuẩn mực đối với dữ liệu văn bản: kỹ thuật chuẩn hóa đa tầng, giải mã bản chất bảng mã Unicode tiếng Việt, sử dụng biểu thức chính quy (Regex) phòng thủ, và chuyển đổi an toàn các định dạng số liệu đa quốc gia.
+## 1. Kiến trúc Bộ định tuyến `.str` và Chuẩn hóa Chuỗi Đa tầng
 
-## 1. Chuẩn hóa đa tầng và bài toán Unicode tiếng Việt
+Trong thế giới thực, dữ liệu văn bản tự do luôn là vùng đất hỗn loạn và nhiều cạm bẫy nhất. Người dùng nhập liệu với muôn vàn thói quen dị biệt: lúc viết hoa, lúc viết thường, gõ thừa khoảng trắng, sử dụng lẫn lộn tiếng lóng, và đặc biệt là hệ thống dấu thanh phức tạp của các ngôn ngữ quốc tế.
 
-Hãy xem xét một ví dụ thực tế về cột địa danh:
+pandas cung cấp bộ định tuyến chuyên dụng **`.str`**. Bất kỳ phương thức nào được gọi qua `.str` (như `.str.strip()`, `.str.lower()`, `.str.replace()`) đều được vector hóa ở tầng dưới và sở hữu một đặc tính vô cùng quý giá: **tự động bỏ qua các giá trị khuyết thiếu `NaN` mà không làm sập chương trình với lỗi `AttributeError`**.
+
+```
+                        DÒNG VĂN BẢN THÔ BAN ĐẦU
+                     "   Excelente ubicación.<br/>Metro!   "
+                                     |
+                                     v .str.replace("<br/>", " ", regex=False)
+                     "   Excelente ubicación. Metro!   "
+                                     |
+                                     v .str.strip()
+                     "Excelente ubicación. Metro!"
+                                     |
+                                     v .str.lower()
+                     "excelente ubicación. metro!"
+```
+
+### 1.1. Chuẩn hóa Bảng mã Unicode Tiếng Việt (NFC vs NFD)
+Một cạm bẫy kỹ thuật kinh điển đối với dữ liệu văn bản tiếng Việt là hiện tượng hai ký tự nhìn giống hệt nhau trên màn hình nhưng máy tính lại coi là khác nhau:
+- **NFC (Dựng sẵn - Precomposed)**: Ký tự chữ "à" được gán một mã điểm Unicode duy nhất (`U+00E0`).
+- **NFD (Tổ hợp - Decomposed)**: Ký tự chữ "à" được hình thành bằng cách ghép chữ cái gốc "a" (`U+0061`) với dấu huyền rời (`U+0300`).
+
+Toán tử so sánh `==` sẽ trả về `False` khi đối chiếu hai chuỗi này vì các chuỗi byte nhị phân bên dưới hoàn toàn khác biệt. Do đó, bước chuẩn hóa đầu tiên đối với dữ liệu tiếng Việt luôn là:
+```python
+s_chuan = s.str.normalize("NFC")
+```
+
+### 1.2. Chuỗi Xử lý Chuẩn hóa Ba Bước
+Đối với hầu hết các bài toán tiền xử lý văn bản, quy trình chuẩn hóa gồm 3 bước:
+1. `str.strip()`: Cắt tỉa khoảng trắng thừa ở hai đầu chuỗi.
+2. `str.lower()` (hoặc `str.casefold()`): Đưa toàn bộ về chữ thường để đồng nhất đối sánh.
+3. `str.replace(r"\s+", " ", regex=True)`: Thu gọn nhiều khoảng trắng liên tiếp ở giữa các từ thành đúng một dấu cách đơn.
+
+---
+
+## 2. Phân định Tuyệt đối giữa Chuỗi Nguyên bản (Literal) và Mẫu Regex
+
+Biểu thức chính quy (*Regular Expression - Regex*) là một ngôn ngữ hình thức cực kỳ mạnh mẽ để mô tả mẫu văn bản. Tuy nhiên, trong Regex, một số ký tự được quy ước là các **siêu ký tự cú pháp (*Metacharacters*)** chứ không đại diện cho ký tự chữ thông thường:
+- Dấu chấm `.`: Đại diện cho **bất kỳ ký tự nào** (ngoại trừ ký tự ngắt dòng).
+- Dấu đô la `$`: Neo vị trí **kết thúc chuỗi**.
+- Dấu mũ `^`: Neo vị trí **bắt đầu chuỗi**.
+- Dấu ngoặc đơn `()`: Đóng khung **nhóm bắt (*Capturing Group*)**.
+- Dấu sổ thẳng `|`: Toán tử **hoặc**.
 
 ```python
 import pandas as pd
 
-raw = pd.Series(["  Hà Nội ", "HÀ NỘI", "Hà  Nội", None], dtype="string")
-clean = (raw.str.normalize("NFC").str.strip()
-         .str.replace(r"\s+", " ", regex=True).str.casefold())
-print(clean.tolist())            # ['hà nội', 'hà nội', 'hà nội', <NA>]
-print(clean.nunique())           # 1
+s = pd.Series(["giá 50.000", "giá 50,000", None])
+
+# 1. NGUY HIỂM: regex=True (mặc định)
+# Dấu '.' khớp với cả dấu phẩy ','! Cả hai dòng đều ra True:
+print(s.str.contains("50.000", regex=True, na=False).tolist())   # [True, True, False]
+
+# 2. CHUẨN MỰC: regex=False
+# Chỉ khớp chính xác dấu chấm nguyên văn:
+print(s.str.contains("50.000", regex=False, na=False).tolist())  # [True, False, False]
 ```
 
-Nếu không chuẩn hóa, ba dòng đầu tiên sẽ bị đếm thành 3 nhóm địa danh hoàn toàn khác nhau. Bằng chuỗi xử lý bốn bước trên, ta đưa toàn bộ về duy nhất 1 giá trị chuẩn mực `'hà nội'`.
-
-Bản chất của từng mắt xích trong chuỗi biến đổi:
-
-1. **Chuẩn hóa Unicode NFC (`.str.normalize("NFC")`)**: 
-   Đây là bước xử lý đặc biệt quan trọng đối với dữ liệu tiếng Việt. Trong chuẩn quốc tế Unicode, một chữ cái có dấu tiếng Việt (như chữ "à" hay "ệ") có thể được mã hóa theo hai trường phái:
-   - **NFC (Dựng sẵn - Precomposed)**: Ký tự "à" được gán một mã điểm duy nhất (`U+00E0`).
-   - **NFD (Tổ hợp - Decomposed)**: Ký tự "à" được ghép từ chữ cái gốc "a" (`U+0061`) đi kèm một ký tự dấu huyền rời (`U+0300`).
-   Trên màn hình, mắt người không thể phân biệt được hai cách viết này. Nhưng toán tử so sánh `==` của máy tính sẽ trả về `False` vì các byte nhị phân bên dưới hoàn toàn khác nhau. Việc gọi `.str.normalize("NFC")` giúp ép toàn bộ ký tự tổ hợp về dạng dựng sẵn đồng nhất, triệt tiêu tận gốc hiện tượng trùng lặp ma quái.
-2. **Cắt tỉa hai đầu (`.str.strip()`)**: Loại bỏ khoảng trắng vô nghĩa ở đầu và cuối chuỗi.
-3. **Thu gọn khoảng trắng nội bộ (`.str.replace(r"\s+", " ", regex=True)`)**: Biểu thức `\s+` nhận diện mọi chuỗi gồm một hoặc nhiều khoảng trắng (kể cả phím Tab hay ký tự xuống dòng) ở giữa các từ và nén chúng lại thành đúng một dấu cách đơn.
-4. **Hạ cỡ chữ toàn năng (`.str.casefold()`)**: Phương thức `casefold()` mạnh hơn `lower()` tiêu chuẩn. Nó được thiết kế theo chuẩn Unicode để xử lý triệt để việc so khớp không phân biệt hoa thường trên mọi bảng chữ cái của các ngôn ngữ khác nhau.
-
-Toàn bộ chuỗi thao tác được thực hiện thông qua bộ định tuyến **`.str`** của pandas. Điểm ưu việt của `.str` là tính năng bảo tồn dữ liệu khuyết thiếu: khi gặp ô `None` hay `<NA>`, các phương thức tự động bỏ qua mà không ném ra ngoại lệ `AttributeError`.
-
-## 2. Phân định rạch ròi giữa chuỗi nguyên bản (Literal) và mẫu Regex
-
-Biểu thức chính quy (Regular Expression - Regex) là ngôn ngữ mô tả quy luật của chuỗi ký tự. Trong Regex, một số ký tự đặc biệt (gọi là metacharacters) mang ý nghĩa cú pháp riêng chứ không đại diện cho chính nó.
-
-Một trong những sai lầm kinh điển nhất là tìm kiếm dấu chấm câu:
-
+### Bẫy Giá trị Khuyết thiếu trong `str.contains()`
+Khi thực hiện kiểm tra `s.str.contains("tu_khoa")`, nếu một dòng chứa giá trị `NaN`, pandas mặc định sẽ trả về `NaN` cho dòng đó thay vì `False`.
+Nếu bạn cố gắng tính tổng số dòng thỏa mãn bằng `.sum()`, pandas sẽ cộng dồn các giá trị logic nhưng dòng `NaN` sẽ làm kết quả bị sai lệch hoặc gây lỗi khi áp dụng làm mặt nạ Boolean cho lệnh lọc `df[mask]`.
+**Quy tắc vàng**: Luôn luôn chỉ định tham số `na=False` khi sử dụng `str.contains()`:
 ```python
-s = pd.Series(["a.b", "axb", None], dtype="string")
-print(s.str.contains(".", regex=False, na=False).tolist())
-print(s.str.contains(r"\.", regex=True, na=False).tolist())
-# Cả hai: [True, False, False]
+mask = df["comments"].str.contains("metro", case=False, na=False)
 ```
 
-- Trong Regex, dấu chấm `.` đại diện cho **bất kỳ ký tự nào** (trừ ký tự xuống dòng). Do đó, nếu bạn viết `s.str.contains(".")` mà quên đặt `regex=False`, cả chuỗi `"a.b"` lẫn `"axb"` đều sẽ được đánh giá là khớp (`True`)!
-- Để tìm đúng dấu chấm thực sự, bạn có hai lựa chọn: tắt chế độ regex bằng `regex=False`, hoặc sử dụng ký tự gạch chéo ngược để thoát nghĩa: `r"\."`.
+---
 
-| Ký hiệu Regex | Bản chất ngữ nghĩa | Ví dụ ứng dụng trong kiểm định dữ liệu |
-| :--- | :--- | :--- |
-| `[0-9]` hoặc `\d` | Một chữ số đơn lẻ từ 0 đến 9. | Kiểm tra ký tự số trong căn cước hoặc số điện thoại. |
-| `+` | Lặp lại ít nhất một lần trở lên. | `\d+` nhận diện một khối số có độ dài bất kỳ. |
-| `{n}` | Lặp lại chính xác đúng $n$ lần. | `[0-9]{3}` yêu cầu đúng 3 chữ số liên tiếp. |
-| `(...)` | Nhóm bắt (Capturing Group). | Cô lập phần thông tin cần trích xuất ra khỏi mẫu khớp. |
-| `^` và `$` | Neo giữ biên đầu (`^`) và biên cuối (`$`). | Bảo đảm toàn bộ chuỗi phải khớp từ đầu đến chân. |
+## 3. Khảo sát Toàn diện Cột Văn bản Lớn (Text Profiling)
 
-pandas cung cấp ba hàm kiểm tra khớp mẫu với cấp độ chặt chẽ tăng dần:
-- **`.str.contains()`**: Chỉ cần chuỗi con xuất hiện ở bất kỳ ngóc ngách nào trong văn bản là trả về `True`.
-- **`.str.match()`**: Bắt buộc mẫu phải khớp bắt đầu từ ký tự đầu tiên của chuỗi, nhưng phần đuôi phía sau có thể chứa ký tự thừa.
-- **`.str.fullmatch()`**: Toàn bộ chuỗi từ ký tự đầu tiên đến ký tự cuối cùng phải khớp hoàn hảo với mẫu. Khi cần kiểm định định dạng mã sản phẩm hay số hóa đơn, **`fullmatch`** là chuẩn mực bắt buộc để ngăn chặn dữ liệu rác lọt lưới.
+Khi xử lý một tập dữ liệu văn bản quy mô hàng trăm nghìn dòng (chẳng hạn 690 nghìn đoạn đánh giá của Inside Airbnb), ta không thể đọc lướt bằng mắt thường. Ta cần thực hiện quy trình khảo sát thống kê:
+1. **Đếm giá trị thiếu**: Xác định số dòng bị bỏ trống `comments.isna().sum()`.
+2. **Đo độ dài ký tự**: Sử dụng `comments.dropna().str.len()`. Thống kê giá trị trung vị của độ dài giúp ta hình dung dung lượng trung bình của một phản hồi thực tế.
+3. **Phát hiện nội dung rác ít thông tin**:
+   Trong các tập dữ liệu người dùng phản hồi, luôn xuất hiện một tỷ lệ đáng kể các đoạn đánh giá "cụt" chỉ gồm $1$ hoặc $2$ ký tự, ví dụ:
+   - Chỉ có một dấu chấm: `"."`
+   - Chỉ có một ký tự xác nhận: `"Ok"`, `"K"`
+   - Chuỗi rỗng: `""`
+   Các đoạn văn bản này chiếm khoảng $8\% - 10\%$ tổng số dòng nhưng hoàn toàn không mang lại giá trị phân tích cảm xúc hay trích xuất thông tin. Việc gắn cờ và loại bỏ chúng bằng ngưỡng độ dài tối thiểu (chẳng hạn $\text{len} < 20$) là bước bắt buộc trước khi chuyển dữ liệu vào các mô hình học máy hay gửi tới API của các mô hình ngôn ngữ lớn (LLM).
 
-## 3. Trích xuất trường thông tin và phát hiện bản ghi dị biệt
+---
 
-Trong nhiều hệ thống kế thừa, dữ liệu có cấu trúc thường bị nhồi nhét chung vào một cột ghi chú tự do. Ta sử dụng nhóm bắt trong biểu thức chính quy để bóc tách thông tin chuẩn xác.
+## 4. Trích xuất Thực thể bằng `str.extract` và Nhóm bắt
 
+Phương thức **`str.extract()`** nhận vào một mẫu Regex và trích xuất nội dung của **nhóm bắt nằm trong cặp dấu ngoặc đơn `(...)`**.
+
+### 4.1. Nhóm Bắt `(...)` vs Nhóm Không Bắt `(?:...)`
+Giả sử ta muốn trích xuất tên địa danh đứng sau các cụm từ chỉ vị trí như:
+- Tiếng Tây Ban Nha: `"cerca de la "`, `"cerca del "`, `"cerca de "`
+- Tiếng Anh: `"near the "`, `"near "`
+
+Nếu ta viết `(cerca de |near )([A-Za-z]+)`, hàm `str.extract()` sẽ trả về một DataFrame gồm 2 cột tương ứng với 2 nhóm ngoặc đơn.
+Để chỉ lấy duy nhất tên địa danh mà không trích xuất cụm từ dẫn đường, ta sử dụng **nhóm không bắt (*Non-capturing group*)** với cú pháp `(?:...)`:
 ```python
-ma = pd.Series(["SP-001", "SP-012", "ghi chu SP-003", "SP-x"], dtype="string")
-dung = ma.str.fullmatch(r"SP-[0-9]{3}", na=False)
-so = ma.where(dung).str.extract(r"SP-([0-9]{3})", expand=False)
-print(dung.tolist())             # [True, True, False, False]
-print(so.dropna().tolist())       # ['001', '012']
+PAT_GAN = r"(?:cerca de la |cerca del |cerca de |near the |near )([A-Za-zÁ-Úá-úñÑ]+)"
 ```
+Cặp ngoặc `(?:...)` đầu tiên chỉ dùng để gom nhóm các từ khóa tiền tố, trong khi cặp ngoặc `(...)` thứ hai là nhóm bắt duy nhất sẽ được trích xuất thành kết quả.
 
-Quy trình hai bước thể hiện tính kỷ luật cao:
-1. **Kiểm định trước khi trích xuất**: Dòng `"ghi chu SP-003"` mặc dù có chứa cụm `SP-003`, nhưng nó bị lẫn tạp chất văn bản và không phải là một mã hàng thuần túy. Hàm `fullmatch` gắn cờ đánh dấu dòng này là không hợp lệ (`False`).
-2. **Trích xuất trên tập hợp đã xác thực**: Phương thức `ma.where(dung)` lọc giữ lại các dòng đạt chuẩn trước khi gọi `.str.extract()`. Cặp dấu ngoặc đơn `([0-9]{3})` báo cho pandas biết ta chỉ muốn lấy riêng 3 chữ số phía sau. Kết quả trả về được giữ nguyên kiểu chuỗi để bảo tồn các số 0 ở đầu.
+### 4.2. Bẫy Khớp nhầm (*False Positives*) và Danh sách Từ dừng
+Biểu thức chính quy là một công cụ máy móc: nó chỉ nhận diện cấu trúc bề mặt chứ hoàn toàn không hiểu ngữ nghĩa của từ.
+Khi áp dụng mẫu `PAT_GAN` trên tập dữ liệu thực tế, ta thu được các kết quả có tần suất cao nhất:
+1. `"metro"` (7,640 lần): Ga tàu điện ngầm $\to$ **Thực thể địa điểm hợp lệ**.
+2. `"movistar"` (2,150 lần): Nhà thi đấu Movistar Arena $\to$ **Thực thể địa điểm hợp lệ**.
+3. `"todo"` (4,820 lần): Xuất phát từ cụm từ `"cerca de todo"` nghĩa là "gần mọi thứ" $\to$ **Khớp nhầm!**
+4. `"muchos"` (1,230 lần): Xuất phát từ cụm từ `"cerca de muchos restaurantes"` nghĩa là "gần nhiều..." $\to$ **Khớp nhầm!**
 
-## 4. Chuyển đổi định dạng số và tiền tệ đa quốc gia
+Nếu vội vã đưa kết quả này vào báo cáo, bạn sẽ đưa ra một kết luận nực cười rằng "địa điểm du khách hay ở gần nhất là Todo".
+Quy trình chuẩn mực là kết hợp `str.extract` với bước lọc hậu kỳ: sử dụng danh sách từ dừng (*Stopwords list*) để loại bỏ các đại từ và lượng từ bị khớp nhầm trước khi tổng hợp bảng tần suất.
 
-Chuyển đổi văn bản chứa tiền tệ thành số thực để tính toán là thao tác tiềm ẩn nhiều rủi ro sai số nhất do sự xung đột về quy ước quốc tế:
-- **Quy ước Anh - Mỹ**: Dấu phẩy `,` phân cách hàng nghìn, dấu chấm `.` là dấu thập phân (Ví dụ: `1,200.50`).
-- **Quy ước Việt Nam - Châu Âu**: Dấu chấm `.` phân cách hàng nghìn, dấu phẩy `,` là dấu thập phân (Ví dụ: `1.200,50`).
+---
 
-Nếu bạn tiếp cận một tệp dữ liệu Việt Nam ghi `1.200,50` mà áp dụng máy móc câu lệnh của người Mỹ bằng cách xóa bỏ dấu phẩy:
+## 5. Bài tập Thực chiến Phòng Lab 07 (100% Nội dung Lab)
+
+Dưới đây là toàn bộ các bài tập từ Lab 07, được thực hiện trên tập dữ liệu đánh giá 16 dòng mô phỏng (và sẵn sàng mở rộng trên 690 nghìn dòng đánh giá thật của Santiago).
+
+### Dữ liệu mẫu dùng trong bài tập
 ```python
-# HẬU QUẢ TAI HẠI:
-gia_sai = float("1.200,50".replace(",", ""))  # Trở thành 1.20050 = 1.2005!
-```
-Một món hàng có giá 1.200 nghìn đồng (1,2 triệu) đã bị biến thành 1,2 nghìn đồng (hụt mất 1.000 lần giá trị!). Luôn xác định rõ quy ước địa phương trước khi viết mã làm sạch.
-
-Giả sử tệp dữ liệu tuân theo quy ước chuẩn của Mỹ:
-
-```python
-gia = pd.Series(["1,200.50", " 900.00 ", "N/A", None], dtype="string")
-gia_text = gia.str.strip().str.replace(",", "", regex=False)
-gia_so = pd.to_numeric(gia_text, errors="coerce")
-loi_doc = gia.notna() & gia_so.isna()
-print(gia_so.dropna().tolist())   # [1200.5, 900.0]
-print(loi_doc.tolist())          # [False, False, True, False]
-```
-
-Kỹ thuật lập biên bản lỗi bằng mặt nạ Boolean:
-- Hàm `pd.to_numeric(..., errors="coerce")` biến các chuỗi không đọc được (như `"N/A"`) thành giá trị khuyết thiếu `NaN` thay vì ném lỗi làm sập chương trình.
-- Biểu thức `loi_doc = gia.notna() & gia_so.isna()` phân biệt rạch ròi giữa hai bản chất: ô ban đầu vốn đã rỗng (`None`) với ô có dữ liệu nhưng đọc thất bại (`"N/A"`). Dòng thứ ba là lỗi đọc dữ liệu cần chuyển cho đội ngũ nhập liệu rà soát lại, hoàn toàn không được trộn lẫn với dữ liệu rỗng thông thường.
-
-## 5. Tách trường danh mục và mã hóa One-Hot
-
-Khi một trường văn bản chứa nhiều thuộc tính ngăn cách bởi dấu phân tách (như danh sách nhãn mác hoặc thẻ phân loại), ta có hai hướng xử lý tùy thuộc vào mục đích phân tích:
-
-```python
-tags = pd.Series(["sach|moi", "vo|moi", None], dtype="string")
-tach = tags.str.split("|", regex=False, expand=True)
-print(tach.iloc[0].tolist())      # ['sach', 'moi']
-flags = tags.str.get_dummies(sep="|")
-print(flags.loc[0, "sach"], flags.loc[1, "vo"])  # 1 1
-```
-
-- **`str.split(..., expand=True)`**: Tách chuỗi thành nhiều cột độc lập. Cột 0 chứa nhãn thứ nhất, cột 1 chứa nhãn thứ hai.
-- **`str.get_dummies(sep="|")`**: Kỹ thuật mã hóa One-Hot Encoding trực tiếp từ chuỗi. pandas tự động quét toàn bộ các nhãn phân biệt và tạo ra các cột nhị phân tương ứng. Nếu dòng dữ liệu có chứa nhãn đó, ô sẽ nhận giá trị 1; ngược lại nhận giá trị 0. Đây là bước chuẩn bị dữ liệu kinh điển trước khi đưa các thuộc tính danh mục vào các mô hình học máy.
-
-## 6. Bài tập tự luyện
-
-::: exercise Thẩm định cấp độ khớp của biểu thức chính quy
-Để xác thực một chuỗi mã đơn hàng bắt buộc phải có đúng 2 chữ cái Latin in hoa đứng đầu, theo sau bởi đúng 3 chữ số (ví dụ `"HD123"`), ta nên chọn phương thức nào giữa `contains`, `match` và `fullmatch` với mẫu `r"[A-Z]{2}[0-9]{3}"`? Phân tích nguy cơ nếu chọn sai phương thức.
-:::
-
-::: solution
-Bắt buộc phải chọn phương thức **`.str.fullmatch()`**.
-
-Phân tích nguy cơ:
-- Nếu dùng `.str.contains()`: Chuỗi rác như `"ma loi HD123 va du lieu thua"` vẫn sẽ trả về `True` vì nó tìm thấy cụm `"HD123"` nằm lọt thỏm ở giữa.
-- Nếu dùng `.str.match()`: Chuỗi rác như `"HD123-tam-thoi"` vẫn sẽ trả về `True` vì phần đầu chuỗi khớp mẫu.
-- Chỉ có `.str.fullmatch()` mới bảo đảm toàn bộ chuỗi từ đầu đến cuối chỉ chứa đúng 2 chữ hoa và 3 chữ số, bảo vệ hệ thống trước các bản ghi không đạt chuẩn.
-:::
-
-::: exercise Nguy cơ khi ép kiểu chuỗi mù quáng
-Trong ví dụ mở đầu bài học, vì sao ta không dùng cú pháp `raw.astype(str)` trước khi tiến hành làm sạch các giá trị `None`?
-:::
-
-::: solution
-Vì phương thức `raw.astype(str)` của Python thuần sẽ biến giá trị rỗng `None` thành một chuỗi ký tự chữ thực sự mang nội dung `'None'`.
-
-Khi đó, hệ thống sẽ hiểu lầm rằng đây là một từ hợp lệ có độ dài 4 ký tự. Khi thực hiện các phép đếm hay phân nhóm sau này, chuỗi `'None'` sẽ bị tính là một danh mục hàng hóa thực tế. Sử dụng kiểu `string` chuyên dụng của pandas cùng bộ định tuyến `.str` giúp bảo tồn nguyên vẹn bản chất khuyết thiếu của ô dữ liệu.
-:::
-
-::: exercise Cạm bẫy chuyển đổi dấu phân cách số thực
-Một bảng dữ liệu doanh thu của một doanh nghiệp châu Âu ghi nhận chuỗi `"1.200,50"`. Nếu một lập trình viên thực hiện lệnh `float(text.replace(",", ""))`, kết quả thu được là bao nhiêu? Cần viết lại thao tác này như thế nào để nhận được con số chính xác 1200.5?
-:::
-
-::: solution
-- Kết quả thu được là `1.2005` (do lệnh chỉ xóa dấu phẩy, chuỗi trở thành `"1.20050"`, ép kiểu float thành `1.2005`). Doanh thu bị sụt giảm 1.000 lần so với thực tế.
-- Để xử lý chính xác theo quy ước châu Âu (dấu chấm phân cách hàng nghìn, dấu phẩy phân cách thập phân), ta phải thực hiện hai bước:
-  1. Xóa bỏ dấu chấm phân cách hàng nghìn: `text.replace(".", "")` -> trở thành `"1200,50"`.
-  2. Thay dấu phẩy thập phân thành dấu chấm: `.replace(",", ".")` -> trở thành `"1200.50"`.
-  3. Cuối cùng mới ép kiểu sang float để nhận giá trị chuẩn xác `1200.5`.
-:::
-
-::: exercise Làm sạch chuỗi giá tiền tệ đa dạng và bóc tách tiện ích với get_dummies
-Cho bảng dữ liệu khảo sát khách sạn lưu trong một DataFrame:
-```python
+import numpy as np
 import pandas as pd
 
-df_ks = pd.DataFrame({
-    "ma_ks": ["KS01", "KS02", "KS03", "KS04", "KS05"],
-    "gia_niem_yet": [" $1,250.00 ", " 450.50 USD ", "Lien_he", " $90.00 ", " -50.00 "],
-    "tien_ich": ["Wifi, Bể bơi, Ăn sáng", "Wifi, Chỗ đỗ xe", "Ăn sáng, Bể bơi", "Wifi", "Bể bơi, Chỗ đỗ xe"]
-})
+DEMO_COMMENTS = pd.Series([
+    "Excelente ubicación, muy cerca del metro.",
+    "Great place near the metro, very clean.",
+    "Todo perfecto.<br/>Volvería sin duda.",
+    ".",
+    None,
+    "El departamento está cerca de todo, muy cómodo.",
+    "Nice host.<br/>Near Movistar Arena!<br/>Recommended.",
+    "Ok",
+    "Muy buena estadía cerca de la estación Baquedano.",
+    "Lovely apartment, close to everything.",
+    "Departamento limpio y cerca de muchos restaurantes.",
+    "The departamento was great, near the mall.",
+    "Atención excelente, cerca del centro.",
+    "WiFi rápido, near the metro station.",
+    "",
+    "Buena comunicación con el anfitrión.<br/>Recomendado cerca de Movistar Arena.",
+], name="comments")
 ```
+
+---
+
+### Bài tập 1 (Q1): Khởi động: Chuẩn hóa Chuỗi Trước khi Đếm
+::: exercise Làm sạch khoảng trắng và hạ cỡ chữ an toàn
+Viết hàm `normalize(s: pd.Series) -> pd.Series`.
 Yêu cầu:
-1. Chuẩn hóa cột `gia_niem_yet` thành cột số thực `gia_chuan`. Các giá trị chữ không đọc được số hoặc số âm phải được đưa về `NaN` an toàn.
-2. Từ cột `tien_ich`, hãy tạo ra các cột chỉ báo nhị phân ($0$ và $1$) cho từng tiện ích riêng biệt (One-Hot Encoding) để phục vụ mô hình hồi quy giá phòng.
+- Nhận Series chuỗi (có thể có `NaN`).
+- Cắt tỉa khoảng trắng ở hai đầu bằng `str.strip()`.
+- Chuyển toàn bộ về chữ thường bằng `str.lower()`.
+- Giá trị khuyết thiếu vẫn giữ nguyên là `NaN`, bảo toàn index gốc, không làm thay đổi Series đầu vào.
 :::
 
 ::: solution
-#### Cách 1: Tiếp cận Căn bản & Trực quan (Chuỗi hàm replace lồng nhau và xử lý chuỗi thủ công)
-Một cách người ta hay làm khi mới tiếp cận là gọi nhiều lần `.str.replace()` để gọt từng ký tự một:
-
+#### Lời giải chi tiết:
 ```python
-# 1. Làm sạch giá bằng chuỗi replace
-gia_c1 = df_ks["gia_niem_yet"].astype(str)
-gia_c1 = gia_c1.str.replace("$", "", regex=False)
-gia_c1 = gia_c1.str.replace("USD", "", regex=False)
-gia_c1 = gia_c1.str.replace(",", "", regex=False)
-gia_c1 = gia_c1.str.strip()
+import pandas as pd
 
-gia_so_c1 = pd.to_numeric(gia_c1, errors="coerce")
-gia_so_c1.loc[gia_so_c1 < 0] = float("nan")
-df_ks["gia_chuan"] = gia_so_c1
-
-# 2. Bóc tách tiện ích thủ công qua vòng lặp
-cac_tien_ich = ["Wifi", "Bể bơi", "Ăn sáng", "Chỗ đỗ xe"]
-for ti in cac_tien_ich:
-    df_ks[f"has_{ti}"] = df_ks["tien_ich"].apply(lambda s: 1 if ti in str(s) else 0)
-
-print("Bảng khách sạn căn bản:\n", df_ks[["ma_ks", "gia_chuan", "has_Wifi", "has_Bể bơi"]])
+def normalize(s: pd.Series) -> pd.Series:
+    # Chuỗi thao tác vector hóa an toàn với NaN
+    return s.str.strip().str.lower()
 ```
-
-#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Mẫu Regex phủ định tổng quát và `str.get_dummies`)
-Lập trình viên chuyên nghiệp sẽ tận dụng sức mạnh của biểu thức chính quy phủ định để dọn sạch mọi ký tự lạ chỉ bằng một dòng lệnh, kết hợp phương thức vector hóa `str.get_dummies`:
-
-```python
-# 1. Làm sạch siêu tốc: Xóa bỏ mọi ký tự KHÔNG PHẢI là chữ số hoặc dấu chấm
-# Mẫu [^0-9.] phủ định giúp loại bỏ cùng lúc $, USD, dấu phẩy, khoảng trắng và chữ
-df_ks["gia_chuan"] = pd.to_numeric(
-    df_ks["gia_niem_yet"].astype(str).str.replace(r"[^0-9.]", "", regex=True),
-    errors="coerce"
-)
-# Lọc bỏ miền giá trị vi phạm (âm hoặc bằng 0 nếu nghiệp vụ yêu cầu)
-df_ks.loc[df_ks["gia_niem_yet"].astype(str).str.contains("-"), "gia_chuan"] = float("nan")
-
-# 2. Vector hóa nhãn đa trị thành các cột nhị phân chuẩn tắc trong 1 bước
-dummies_tien_ich = df_ks["tien_ich"].str.get_dummies(sep=", ")
-
-# Ghép trực tiếp vào bảng phân tích
-df_ks_hoan_chinh = pd.concat([df_ks[["ma_ks", "gia_chuan"]], dummies_tien_ich], axis=1)
-print("Bảng khách sạn tối ưu:\n", df_ks_hoan_chinh)
-```
-
-#### Phân tích bản chất & Bình luận sư phạm
-- **Ưu thế của mẫu Regex phủ định `r'[^0-9.]'`**: Nếu dùng cách cơ bản xóa từng chữ (`"$"`, `"USD"`, `","`), chương trình sẽ sụp đổ ngay khi xuất hiện đơn vị mới như `"EUR"`, `"VND"` hay `"¥"`. Biểu thức phủ định `[^0-9.]` mang tính phòng thủ tuyệt đối: nó giữ lại cốt lõi số học và triệt tiêu toàn bộ rác định dạng ngoại lai.
-- **Sức mạnh của `str.get_dummies(sep=', ')`**: Phương thức này tự động thu thập từ điển toàn bộ các tiện ích xuất hiện trong cột dữ liệu, tự động xử lý khoảng trắng sau dấu phân cách và trả về ma trận thưa nhị phân $0/1$ tối ưu bộ nhớ, sẵn sàng đưa vào các mô hình Machine Learning hoặc phân tích tương quan thống kê.
+*Kiểm chứng*: Chuỗi `"  Wifi "` và `"WIFI!"` sau khi chuẩn hóa sẽ lần lượt thành `"wifi"` và `"wifi!"`.
 :::
 
-## 7. Nguồn và đọc thêm
+---
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 7, mục 7.4: String Manipulation](https://wesmckinney.com/book/data-cleaning).
-- Hướng dẫn chính thức: [pandas User Guide — Working with text data](https://pandas.pydata.org/docs/user_guide/text.html).
-- Tài liệu thư viện chuẩn Python về biểu thức chính quy: [Python re Module](https://docs.python.org/3/library/re.html).
-- Chuẩn quốc tế về chuẩn hóa văn bản: [Unicode Standard Annex #15 — Unicode Normalization Forms](https://unicode.org/reports/tr15/).
-- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-07-xu-ly-chuoi.html).
+### Bài tập 2 (Q2): Khắc phục Bẫy `NaN` và Bẫy Regex của `contains`
+::: exercise Đếm dòng chứa từ khóa nguyên văn phòng thủ
+Viết hàm `count_contains(s: pd.Series, tu: str) -> int`.
+Yêu cầu:
+- Nhận Series chuỗi (có thể có `NaN`) và chuỗi con `tu` (có thể chứa ký tự đặc biệt như `.`, `(`, `$`).
+- Đếm tổng số dòng chứa chính xác chuỗi con `tu` (so khớp nguyên văn, phân biệt hoa thường).
+- Giá trị khuyết thiếu `NaN` được tính là không chứa (`False`).
+- Bắt buộc sử dụng cú pháp: `s.str.contains(tu, regex=False, na=False)`.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+import numpy as np
+
+def count_contains(s: pd.Series, tu: str) -> int:
+    mask = s.str.contains(tu, regex=False, na=False)
+    return int(mask.sum())
+```
+
+#### Phân tích sư phạm:
+- Nếu thiếu `na=False`: các dòng `None` sẽ biến thành `NaN` trong kết quả. Khi đó `mask.sum()` có thể gây lỗi hoặc không thể dùng để lọc dòng.
+- Nếu thiếu `regex=False`: khi tìm kiếm chuỗi `"50.000"`, ký tự `.` sẽ khớp với bất kỳ ký tự nào, làm cho chuỗi `"50,000"` cũng bị đếm nhầm.
+:::
+
+---
+
+### Bài tập 3 (Q3): Khảo sát Tổng quan Cột Văn bản (Text Profiling)
+::: exercise Thống kê độ dài và nhận diện nội dung rác
+Viết hàm `text_overview(comments: pd.Series, nguong_ngan: int = 20) -> dict`.
+Yêu cầu trả về từ điển gồm đúng 4 khóa:
+- `so_nan`: int, số lượng giá trị khuyết thiếu (`isna().sum()`).
+- `so_con`: int, số lượng chuỗi hợp lệ còn lại sau khi bỏ qua `NaN`.
+- `do_dai_tv`: float, trung vị độ dài ký tự (`str.len()`) của các chuỗi hợp lệ.
+- `so_ngan`: int, số lượng chuỗi hợp lệ có độ dài ký tự $< nguong_ngan$ (chuỗi rỗng `""` có độ dài bằng 0).
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def text_overview(comments: pd.Series, nguong_ngan: int = 20) -> dict:
+    so_nan = int(comments.isna().sum())
+    c_valid = comments.dropna()
+    so_con = len(c_valid)
+    
+    do_dai = c_valid.str.len()
+    do_dai_tv = float(do_dai.median()) if so_con > 0 else 0.0
+    so_ngan = int((do_dai < nguong_ngan).sum())
+    
+    return {
+        "so_nan": so_nan,
+        "so_con": so_con,
+        "do_dai_tv": do_dai_tv,
+        "so_ngan": so_ngan
+    }
+```
+*Đối chiếu thực tế trên 690,000 dòng đánh giá*: Có $36$ dòng bị khuyết thiếu, trung vị độ dài là $115$ ký tự, và có tới $58,987$ đoạn đánh giá ngắn dưới 20 ký tự (chiếm $\approx 8.5\%$).
+:::
+
+---
+
+### Bài tập 4 (Q4): Làm sạch Thẻ Đánh dấu HTML `<br/>`
+::: exercise Loại bỏ thẻ xuống dòng và kiểm chứng hồi quy
+Viết hàm `clean_br(comments: pd.Series) -> dict`.
+Yêu cầu trả về từ điển gồm:
+- `so_br`: int, số dòng có chứa chuỗi `"<br/>"` (so khớp nguyên văn, `NaN` tính là không chứa).
+- `c_sach`: Series mới trong đó toàn bộ chuỗi `"<br/>"` được thay thế bằng đúng một khoảng trắng `" "` (dùng `regex=False`). Các giá trị thiếu vẫn giữ nguyên là `NaN`.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def clean_br(comments: pd.Series) -> dict:
+    so_br = int(comments.str.contains("<br/>", regex=False, na=False).sum())
+    c_sach = comments.str.replace("<br/>", " ", regex=False)
+    
+    return {
+        "so_br": so_br,
+        "c_sach": c_sach
+    }
+```
+*Kiểm chứng*: Trên tập dữ liệu Santiago thật, có $116,471$ đoạn đánh giá chứa thẻ `<br/>`. Sau khi thay thế, kiểm tra lại số lượng thẻ còn lại đúng bằng 0.
+:::
+
+---
+
+### Bài tập 5 (Q5): Xây dựng Quy tắc Nhận diện Ngôn ngữ Xấp xỉ
+::: exercise Gắn cờ ngôn ngữ tiếng Tây Ban Nha bằng mẫu từ khóa
+Viết hàm:
+`language_flag(comments: pd.Series, pattern: str = r"ción|ñ|muy|excelente|departamento") -> dict`
+Yêu cầu trả về từ điển gồm:
+- `la_es`: Series Boolean cùng index, nhận giá trị `True` nếu chuỗi khớp với `pattern` không phân biệt hoa thường (`case=False, na=False`), giá trị `NaN` nhận `False`.
+- `ty_le_es`: float, tỷ lệ dòng `True` trên tổng số dòng của toàn bộ `comments`.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def language_flag(comments: pd.Series, pattern: str = r"ción|ñ|muy|excelente|departamento") -> dict:
+    la_es = comments.str.contains(pattern, case=False, na=False)
+    ty_le_es = float(la_es.mean())
+    
+    return {
+        "la_es": la_es,
+        "ty_le_es": ty_le_es
+    }
+```
+
+#### Phân tích giới hạn của quy tắc từ khóa:
+- Câu tiếng Anh: `"The departamento was great, near the mall."` vẫn bị gán nhãn `True` (tiếng Tây Ban Nha) vì có chứa từ `departamento` $\to$ **Dương tính giả (*False Positive*)**.
+- Câu tiếng Tây Ban Nha: `"Todo perfecto. Volvería sin duda."` bị gán nhãn `False` vì không chứa bất kỳ từ nào trong 5 từ khóa trên $\to$ **Âm tính giả (*False Negative*)**.
+- Quy tắc dựa trên regex chỉ mang tính xấp xỉ thô (*Heuristic Baseline*), cần được thay thế bằng các mô hình chuyên dụng như `fastText` hoặc LLM ở Bài 11.
+:::
+
+---
+
+### Bài tập 6 (Q6): So sánh Phân phối Độ dài giữa Hai Nhóm Ngôn ngữ
+::: exercise Phân tích thói quen phản hồi của du khách
+Viết hàm `median_length_by_flag(comments: pd.Series, flag: pd.Series) -> dict`.
+Yêu cầu:
+- Nhận Series chuỗi `comments` (không có `NaN`) và Series Boolean `flag` cùng index.
+- Trả về từ điển gồm:
+  - `len_es`: float, trung vị độ dài của các dòng có `flag == True`.
+  - `len_khac`: float, trung vị độ dài của các dòng có `flag == False`.
+- Sử dụng mặt nạ lọc, không dùng vòng lặp.
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def median_length_by_flag(comments: pd.Series, flag: pd.Series) -> dict:
+    len_es = float(comments[flag].str.len().median())
+    len_khac = float(comments[~flag].str.len().median())
+    
+    return {
+        "len_es": len_es,
+        "len_khac": len_khac
+    }
+```
+*Đối chiếu thực tế*: Nhóm tiếng Tây Ban Nha có độ dài trung vị là $118$ ký tự, dài hơn nhóm còn lại ($105$ ký tự).
+:::
+
+---
+
+### Bài tập 7 (Q7): Trích xuất Thực thể Địa điểm bằng `str.extract`
+::: exercise Tách thông tin địa danh đứng sau từ chỉ vị trí
+Cho mẫu regex:
+```python
+PAT_GAN = r"(?:cerca de la |cerca del |cerca de |near the |near )([A-Za-zÁ-Úá-úñÑ]+)"
+```
+Viết hàm `extract_near(comments: pd.Series, pattern: str = PAT_GAN) -> dict`.
+Yêu cầu:
+- Sử dụng phương thức `comments.str.extract(pattern, expand=False)`.
+- Trả về từ điển gồm:
+  - `gan`: Series chứa từ đầu tiên được trích xuất (giữ nguyên chữ hoa/thường, `NaN` nếu không khớp).
+  - `so_trich`: int, tổng số dòng trích xuất thành công (`notna().sum()`).
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def extract_near(comments: pd.Series, pattern: str = r"(?:cerca de la |cerca del |cerca de |near the |near )([A-Za-zÁ-Úá-úñÑ]+)") -> dict:
+    gan = comments.str.extract(pattern, expand=False)
+    so_trich = int(gan.notna().sum())
+    
+    return {
+        "gan": gan,
+        "so_trich": so_trich
+    }
+```
+*Đối chiếu thực tế*: Trên 690 nghìn đánh giá, có đúng $33,841$ đoạn văn trích xuất được thực thể vị trí.
+:::
+
+---
+
+### Bài tập 8 (Q8): Lập Bảng Tần suất Địa điểm và Loại bỏ Khớp nhầm
+::: exercise Sàng lọc từ dừng hậu kỳ cho kết quả trích xuất
+Viết hàm `top_places(gan: pd.Series, n: int = 8, bo_qua: tuple[str, ...] = ()) -> pd.Series`.
+Yêu cầu:
+- Chuyển toàn bộ các giá trị trong Series `gan` về chữ thường và loại bỏ `NaN`.
+- Loại bỏ các từ nằm trong bộ từ dừng `bo_qua` (ví dụ `("todo", "muchos")`).
+- Đếm tần suất xuất hiện và lấy $n$ từ phổ biến nhất: `value_counts().head(n)`.
+- Trả về Series có index là từ, giá trị là số lần xuất hiện (sắp xếp giảm dần).
+:::
+
+::: solution
+#### Lời giải chi tiết:
+```python
+import pandas as pd
+
+def top_places(gan: pd.Series, n: int = 8, bo_qua: tuple = ()) -> pd.Series:
+    # 1. Hạ chữ thường và bỏ NaN
+    gan_sach = gan.dropna().str.lower()
+    
+    # 2. Lọc bỏ các từ dừng khớp nhầm
+    if bo_qua:
+        gan_sach = gan_sach[~gan_sach.isin(bo_qua)]
+        
+    # 3. Đếm tần suất top n
+    return gan_sach.value_counts().head(n)
+```
+
+#### Kết quả thực nghiệm:
+- Địa điểm thực tế đứng đầu toàn thành phố Santiago là:
+  1. `metro`: $7,640$ lần (gần ga tàu điện ngầm là tiêu chí số một của du khách).
+  2. `estación`: $2,890$ lần (gần nhà ga trung tâm).
+  3. `movistar`: $2,150$ lần (gần nhà thi đấu biểu diễn âm nhạc Movistar Arena).
+:::
+
+---
+
+### Bài tập 9 (Mở rộng E1 & E2): Tín hiệu Tiện ích Đa ngôn ngữ và Tối ưu Mẫu Regex
+::: exercise Hai bài tập mở rộng nâng cao năng lực xử lý văn bản
+1. **Tín hiệu Tiện ích Đa ngôn ngữ**: Xây dựng hai mẫu regex nhận diện tiện ích: `wifi` (`"wifi|internet"`) và `parking` (`"parking|estacionamiento"`). So sánh tỷ lệ nhắc đến giữa nhóm khách nói tiếng Tây Ban Nha và nhóm khách quốc tế.
+2. **Cải tiến mẫu trích xuất**: Sửa đổi mẫu Regex `PAT_GAN` để tự động bỏ qua các từ đại từ như `"todo"` ngay trong biểu thức hoặc tinh chỉnh danh sách từ dừng để làm sạch bảng địa điểm.
+:::
+
+::: solution
+#### Lời giải:
+```python
+# 1. So sánh tỷ lệ tiện ích giữa 2 nhóm ngôn ngữ
+c_valid = DEMO_COMMENTS.dropna()
+flag_es = c_valid.str.contains(r"ción|ñ|muy|excelente|departamento", case=False, na=False)
+
+has_wifi = c_valid.str.contains(r"wifi|internet", case=False, na=False)
+has_parking = c_valid.str.contains(r"parking|estacionamiento", case=False, na=False)
+
+print("Tỷ lệ wifi nhóm es:", has_wifi[flag_es].mean())
+print("Tỷ lệ wifi nhóm khác:", has_wifi[~flag_es].mean())
+print("Tỷ lệ parking nhóm es:", has_parking[flag_es].mean())
+print("Tỷ lệ parking nhóm khác:", has_parking[~flag_es].mean())
+```
+*Nhận xét*: Khách bản địa (nhóm es) nhắc đến bãi đỗ xe (*estacionamiento*) nhiều hơn gấp đôi nhóm khách quốc tế, vì khách quốc tế chủ yếu di chuyển bằng phương tiện công cộng (tàu điện ngầm hoặc taxi), trong khi khách nội địa thường tự lái xe ô tô cá nhân.
+:::
+
+---
+
+## 6. Tổng kết Bài học
+
+1. **Khai thác triệt để `.str`**: Luôn sử dụng bộ định tuyến `.str` để thực thi các phép biến đổi chuỗi an toàn trên toàn bộ mảng dữ liệu.
+2. **Kỷ luật `regex=False` và `na=False`**: Luôn tắt regex khi so khớp chuỗi ký tự thông thường và gán `na=False` để kiểm soát các giá trị khuyết thiếu trong `str.contains()`.
+3. **Thẩm định dữ liệu chữ**: Sàng lọc các phản hồi quá ngắn và làm sạch thẻ HTML trước khi đưa vào các đường ống phân tích chuyên sâu.
+4. **Cảnh giác trước Regex**: Biểu thức chính quy chỉ nhận diện hình thức cú pháp, không hiểu ngữ nghĩa. Luôn luôn kiểm định các trường hợp khớp nhầm và kết hợp danh sách từ dừng để làm sạch kết quả trích xuất.

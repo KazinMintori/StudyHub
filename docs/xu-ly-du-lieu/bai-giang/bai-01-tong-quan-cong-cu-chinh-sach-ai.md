@@ -3,248 +3,450 @@ course: xu-ly-du-lieu
 lecture: bai-01-tong-quan-cong-cu-chinh-sach-ai
 section: lecture
 title: "Tổng quan xử lý dữ liệu & công cụ"
-prerequisites: ["bien-kieu","list","dictionary"]
+prerequisites: ["bien-kieu", "list", "dictionary"]
 lessonStatus: ready
-description: "Đặt câu hỏi phân tích, tổ chức môi trường Python và kiểm tra một quy trình dữ liệu có thể chạy lại."
+description: "Vị trí của xử lý dữ liệu trong chuỗi giá trị, ngăn xếp Scientific Python, kiến trúc IPython Kernel và kỷ luật làm việc với AI."
 ---
 
-Trong thực tế, dữ liệu hiếm khi xuất hiện dưới dạng một bảng tính tinh tươm, hoàn chỉnh và sẵn sàng để đưa vào thuật toán. Phần lớn thời gian của một kỹ sư hay nhà phân tích dữ liệu không dành cho việc bấm nút huấn luyện mô hình, mà là vật lộn với những dòng dữ liệu chắp vá, những ô bị bỏ trống không rõ lý do, và những con số thiếu ngữ cảnh. Nếu tiếp cận dữ liệu chỉ bằng các thao tác bấm máy tính cơ học, ta rất dễ đưa ra những kết luận sai lệch nghiêm trọng mà bản thân không hề hay biết.
+::: info Mục tiêu bài học
+- Thấu suốt chuỗi giá trị dữ liệu từ thu thập thô đến ra quyết định kinh doanh, và lý giải vì sao kỹ thuật xử lý dữ liệu chiếm tới $80\%$ thời gian của một dự án phân tích.
+- Hiểu rõ vị thế của Python như một ngôn ngữ keo (*glue language*) kết nối tầng cú pháp bậc cao với các hạt nhân tính toán C/C++ hiệu năng cao.
+- Nắm vững kiến trúc Client-Server của Jupyter Notebook, cơ chế quản lý trạng thái của IPython Kernel và làm chủ quy trình làm việc chuẩn mực với môi trường ảo `venv` và Git.
+- Xây dựng phản xạ kiểm chứng khi đồng hành cùng trợ lý AI, nhận diện các quy ước ngầm mà mô hình ngôn ngữ lựa chọn thay thế cho lập trình viên.
+- Giải quyết trọn vẹn bộ bài tập thực hành Lab 1 với lời giải hai tầng (căn bản và nâng cao), phân tích bản chất cơ chế bộ nhớ và đóng gói hàm phân tích độc lập.
+:::
 
-Bài học mở đầu này không chỉ hướng dẫn thiết lập công cụ, mà quan trọng hơn, giúp ta định hình nhãn quan của một người làm khoa học dữ liệu: luôn đặt câu hỏi phân tích trước khi viết câu lệnh, xây dựng quy trình có khả năng kiểm chứng, và tổ chức môi trường làm việc chuẩn mực để bất kỳ ai cũng có thể tái lập kết quả của mình.
+---
 
-## 1. Câu hỏi phân tích đi trước phép tính số học
+## 1. Vị thế của Môn học trong Chuỗi giá trị Dữ liệu
 
-Hãy bắt đầu bằng một bài toán giản dị. Một cửa hàng thống kê giá bán của bốn mặt hàng, nhưng trong sổ ghi chép có một mặt hàng chưa cập nhật giá: `gia = [24, 36, None, 60]` (đơn vị: nghìn đồng).
+### 1.1. Hiện thực dữ liệu trong môi trường sản xuất
+Trong các bài giảng lý thuyết nhập môn hoặc trên các diễn đàn công nghệ, người ta thường ca ngợi sức mạnh của các thuật toán Học máy (*Machine Learning*), Trí tuệ Nhân tạo (*AI*) hay những mô hình dự báo phức tạp. Tuy nhiên, một ngộ nhận kinh điển của người mới bắt đầu là tưởng tượng rằng dữ liệu luôn có sẵn dưới dạng các bảng tính tinh tươm, các cột số học ngay ngắn và các nhãn phân loại chuẩn mực.
 
-Câu hỏi đặt ra: **Giá trung bình là bao nhiêu?**
+Thực tế ngành công nghiệp dữ liệu khắc nghiệt hơn rất nhiều. Dữ liệu thô (*raw data*) trong thế giới thực luôn mang trong mình những đặc tính:
+- **Phân mảnh và bất đồng bộ**: Một phần nằm trong tệp nhật ký máy chủ (server logs), một phần nằm ở cơ sở dữ liệu quan hệ SQL của bộ phận vận hành, một phần khác lại được gửi về dưới dạng chuỗi JSON lồng nhau từ các cổng thanh toán của đối tác.
+- **Nhiễu loạn và suy hao**: Các trường tiền tệ bị lẫn ký tự đơn vị đo lường (như `$`, `VNĐ`, dấu phẩy ngăn phần nghìn), các trường ngày tháng bị đảo lộn giữa định dạng Anh (`DD/MM/YYYY`) và định dạng Mỹ (`MM/DD/YYYY`), các bản ghi bị nhân đôi do mạng chập chờn khi người dùng bấm gửi nhiều lần.
+- **Xung đột ngữ nghĩa**: Cùng một trạng thái khách hàng rời bỏ dịch vụ, phòng kinh doanh định nghĩa là "sau 30 ngày không phát sinh đơn hàng", nhưng phòng tài chính lại quy ước là "đã gửi yêu cầu đóng tài khoản".
 
-Máy tính có thể tính ra hai con số hoàn toàn khác nhau tùy vào cách ta lập trình:
-- Nếu chia tổng cho 4, ta được $(24 + 36 + 0 + 60) / 4 = 30$ nghìn đồng.
-- Nếu chỉ tính trên những mặt hàng đã biết giá, ta chia cho 3: $(24 + 36 + 60) / 3 = 40$ nghìn đồng.
+### 1.2. Quy tắc $80/20$ của ngành Khoa học Dữ liệu
+Các cuộc khảo sát thực tế trên toàn cầu đối với các kỹ sư dữ liệu và nhà khoa học dữ liệu đều chỉ ra một tỷ lệ thực tế:
 
-Cả hai phép chia đều đúng về mặt số học thuần túy. Nhưng con số nào có nghĩa trong phân tích kinh doanh? 
-
-Điều đó hoàn toàn phụ thuộc vào bản chất của ô trống kia. Nếu mặt hàng thứ ba là quà tặng kèm miễn phí có giá 0 đồng, phép chia cho 4 là chính xác. Ngược lại, nếu mặt hàng đó chỉ đơn thuần là chưa kịp nhập giá vào hệ thống, việc tự tiện gán giá 0 đồng đã kéo tụt giá trung bình của toàn bộ cửa hàng xuống một cách giả tạo. Trong lập trình xử lý dữ liệu, giá trị khuyết thiếu (`None`) đại diện cho **sự thiếu hiểu biết về dữ liệu**, chứ không bao giờ đồng nghĩa với **số không**.
-
-```python
-gia = [24, 36, None, 60]
-da_co_gia = [x for x in gia if x is not None]
-tong = sum(da_co_gia)
-so_mat_hang = len(da_co_gia)
-trung_binh = tong / so_mat_hang if so_mat_hang else None
-so_thieu = len(gia) - so_mat_hang
-print(trung_binh, so_thieu)  # 40.0 1
+```
++-------------------------------------------------------------+---------+
+| Thu thập, Khám phá, Làm sạch, Biến đổi & Thẩm định Dữ liệu  | Mô hình |
+|                         (~80% thời gian)                     | (~20%)  |
++-------------------------------------------------------------+---------+
 ```
 
-Tổng các giá trị đã quan sát được là $24 + 36 + 60 = 120$ nghìn đồng. Vì chỉ có 3 mặt hàng có giá xác định, giá trung bình của nhóm đã biết là $120 / 3 = 40$ nghìn đồng. Đồng thời, chương trình báo cáo rõ có 1 mặt hàng thiếu thông tin.
+Khoảng $80\%$ tổng thời lượng và công sức của một dự án được dành cho việc chuyển hóa dữ liệu từ dạng hỗn loạn ban đầu thành một cấu trúc đáng tin cậy. Chỉ có khoảng $20\%$ thời gian còn lại được dùng để áp dụng thuật toán mô hình hóa hoặc vẽ biểu đồ báo cáo. Nếu tầng xử lý dữ liệu nền tảng làm sai lệch giá trị, toàn bộ các mô hình học máy tinh vi nhất đặt ở tầng trên đều trở thành vô nghĩa theo nguyên lý bất biến: **Rác vào thì Rác ra (*Garbage In, Garbage Out*)**.
 
-Một người làm dữ liệu cẩn trọng sẽ không bao giờ phát biểu: *"Giá trung bình của hàng hóa là 40 nghìn đồng"*. Câu phát biểu chính xác về mặt học thuật phải là: *"Giá trung bình của 3 mặt hàng đã xác định giá là 40 nghìn đồng, với 1 mặt hàng chưa rõ thông tin"*. Sự chặt chẽ trong ngôn từ phản ánh trực tiếp sự trung thực trong phân tích.
+Môn học **Lập trình xử lý dữ liệu** được thiết kế nhằm xây dựng cho sinh viên năng lực thực chiến cốt lõi này: biến những luồng dữ liệu bẩn, phân tán thành những tài sản thông tin sạch sẽ, chuẩn mực và có thể kiểm chứng được bằng mã nguồn.
 
-Khi đối mặt với các danh sách dữ liệu trong thực tế, các kỹ sư thường viết hàm tính toán đi kèm điều kiện bảo vệ `if so_mat_hang else None`. Điều này giúp hệ thống không bao giờ bị dừng đột ngột bởi lỗi chia cho 0 (`ZeroDivisionError`) khi nhận phải một danh sách chỉ toàn giá trị rỗng như `[None, None]`.
+---
 
-## 2. Quy trình xử lý dữ liệu có khả năng kiểm chứng
+## 2. Ngăn xếp Tính toán Khoa học Python (Scientific Python Stack)
 
-Một dự án phân tích dữ liệu không phải là một chuỗi hành động ngẫu hứng, mà là một **quy trình có cấu trúc** (Data Pipeline). Quy trình này dẫn dắt dữ liệu đi qua từng trạm biến đổi với đầu vào và đầu ra được định nghĩa minh bạch.
+### 2.1. Python — Ngôn ngữ "keo dán" của Khoa học Máy tính
+Tại sao Python, một ngôn ngữ thông dịch (*interpreted language*) với tốc độ thực thi các vòng lặp thuần túy chậm hơn hàng chục lần so với C hay C++, lại trở thành ngôn ngữ thống trị tuyệt đối trong lĩnh vực dữ liệu và AI?
 
-```mermaid
-flowchart TD
-    Q["1. Câu hỏi phân tích"] --> R["2. Dữ liệu thô (Raw Data)"]
-    R --> C["3. Kiểm tra & Làm sạch"]
-    C --> A["4. Biến đổi & Tổng hợp"]
-    A --> V["5. Trực quan hóa"]
-    V --> K["6. Kết luận & Giới hạn"]
+Câu trả lời nằm ở vai trò **ngôn ngữ keo (*glue language*)**. Các nhà thiết kế hệ thống tính toán đã khéo léo kết hợp hai thế giới:
+1. **Tầng người dùng (Cú pháp bậc cao)**: Python cung cấp cú pháp sáng rõ, gần gũi với ngôn ngữ tự nhiên, cho phép nhà nghiên cứu và kỹ sư thử nghiệm ý tưởng nhanh chóng mà không phải bận tâm về việc quản lý con trỏ, cấp phát bộ nhớ thủ công hay biên dịch mã nguồn phức tạp.
+2. **Tầng tính toán hạt nhân (Hiệu năng C/Fortran/Rust)**: Bên dưới mui xe (*under the hood*), toàn bộ các thao tác tính toán nặng nề trên ma trận số học đều được giao phó cho các thư viện gốc viết bằng C, C++ hoặc Fortran (như BLAS, LAPACK, OpenBLAS).
+
+Khi ta thực hiện một phép nhân hai mảng trong Python, trình thông dịch Python chỉ đóng vai trò người điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, lập trình viên tận hưởng trọn vẹn cả hai ưu điểm: sự linh hoạt trong phát triển mã nguồn và tốc độ tính toán xấp xỉ mã C gốc.
+
+### 2.2. Các trụ cột của Hệ sinh thái Dữ liệu Python
+
+Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa trên ngăn xếp phân tầng chặt chẽ:
+
+```
++-----------------------------------------------------------------------+
+|  Ứng dụng Chuyên sâu: Học máy (Scikit-learn), Deep Learning (PyTorch)  |
++-----------------------------------------------------------------------+
+|  Trực quan hóa Dữ liệu: Matplotlib, Seaborn                            |
++-----------------------------------------------------------------------+
+|  Xử lý Dữ liệu Bảng (Tabular Data): Pandas                             |
++-----------------------------------------------------------------------+
+|  Mảng Đa chiều & Đại số Tuyến tính: NumPy                              |
++-----------------------------------------------------------------------+
+|  Ngôn ngữ Nền tảng: Python Core & CPython Runtime                      |
++-----------------------------------------------------------------------+
 ```
 
-Quy trình này vận hành dựa trên ba nguyên tắc:
+- **NumPy (*Numerical Python*)**: Cung cấp cấu trúc mảng nhiều chiều đồng nhất `ndarray` và các hàm toán học vector hóa (*ufuncs*), là nền móng bộ nhớ của mọi thư viện khoa học trong Python.
+- **Pandas**: Xây dựng dựa trên NumPy, bổ sung cấu trúc dữ liệu bảng có nhãn hai chiều `DataFrame` và một chiều `Series`, cung cấp các công cụ đọc tệp, ghép bảng, xử lý giá trị khuyết thiếu và tổng hợp dữ liệu nâng cao.
+- **Matplotlib & Seaborn**: Cung cấp công cụ trực quan hóa trực giao, từ việc kiểm soát từng thành phần đồ họa theo hướng đối tượng đến các biểu đồ phân tích thống kê đa chiều.
 
-1. **Bất biến của dữ liệu gốc (Raw Data Immutability)**: Không bao giờ được phép chỉnh sửa trực tiếp trên tệp dữ liệu gốc. Mọi thao tác làm sạch, sửa lỗi chính tả hay điền khuyết phải được thực hiện bằng mã nguồn và lưu sang vùng dữ liệu mới. Nhờ đó, nếu một quy tắc làm sạch sau này bị phát hiện là sai sót, ta luôn có thể chạy lại quy trình từ đầu mà không làm biến dạng dữ liệu ban đầu.
-2. **Khả năng truy xuất nguồn gốc (Data Provenance)**: Mỗi con số trên báo cáo cuối cùng đều phải giải trình được đường đi nước bước. Nó được trích xuất từ bảng nào, trải qua những bộ lọc điều kiện nào, bao nhiêu bản ghi dị biệt đã bị loại bỏ và vì lý do gì.
-3. **Minh bạch về mẫu số**: Bất kỳ chỉ số nào xuất hiện cũng phải đi kèm kích thước mẫu. Báo cáo tỷ lệ hài lòng 100% nhưng chỉ khảo sát trên 2 khách hàng sẽ mang một ý nghĩa hoàn toàn khác so với khảo sát trên 2.000 khách hàng.
+---
 
-## 3. Hệ sinh thái công cụ: Chọn công cụ theo đúng bản chất thao tác
+## 3. Kiến trúc Môi trường Tính toán & IPython Kernel
 
-Trong hệ sinh thái Python dành cho dữ liệu, mỗi thư viện được thiết kế để giải quyết tối ưu một mắt xích chuyên biệt. Hiểu rõ thế mạnh của từng công cụ giúp ta tránh được việc "dùng dao mổ trâu để cắt trứng":
+### 3.1. Phân định rõ Client và Kernel trong Jupyter Notebook
+Nhiều sinh viên thường nhầm lẫn giao diện trang web của Jupyter Notebook hay Google Colab với chính tiến trình đang chạy Python. Trên thực tế, đây là hai thành phần hoàn toàn độc lập giao tiếp với nhau qua kiến trúc Client-Server:
 
-| Công cụ | Bản chất & Vai trò cốt lõi |
-| :--- | :--- |
-| **Python thuần** | Ngôn ngữ đóng vai trò nhạc trưởng: điều phối luồng thực thi, quản lý logic điều kiện, xử lý ngoại lệ và kết nối các hệ thống tệp. |
-| **NumPy** | Xử lý các phép toán đại số tuyến tính trên mảng đa chiều liên tục trong bộ nhớ máy tính. NumPy là nền móng tính toán hiệu năng cao bằng mã nguồn C/Fortran nằm dưới hầu hết các thư viện khoa học dữ liệu. |
-| **pandas** | Cung cấp cấu trúc bảng dữ liệu hai chiều có nhãn hàng và nhãn cột (DataFrame). pandas sinh ra để giải quyết các bài toán dữ liệu thực tế: hợp nhất bảng, xử lý giá trị khuyết thiếu, chuyển đổi cấu trúc và nhóm dữ liệu. |
-| **Matplotlib & seaborn** | Trực quan hóa dữ liệu. Matplotlib cung cấp quyền kiểm soát chi tiết từng tọa độ, trong khi seaborn trừu tượng hóa các biểu đồ thống kê phức tạp bằng giao diện trang nhã. |
-| **Jupyter Notebook** | Môi trường lập trình tương tác dạng sổ tay (computational notebook), cho phép tích hợp mã nguồn, biểu đồ hiển thị và lời giải thích học thuật trong cùng một giao diện. |
+```
+[Giao diện Trình duyệt (Client)]
+        │   ▲
+  JSON  │   │  ZeroMQ Messages
+  gửi đi│   │  trả về kết quả
+        ▼   │
+[Máy chủ Notebook (Server)] ─── IPC ───► [IPython Kernel (Tiến trình Python trong RAM)]
+```
 
-Một cái bẫy tinh vi mà người mới dùng Jupyter Notebook rất hay vấp ngã là **trạng thái ẩn** (hidden state). Trong một notebook, thứ tự các ô mã trên màn hình không quyết định thứ tự thực thi. Nếu bạn chạy một ô mã ở cuối để gán lại giá trị cho biến `x`, sau đó quay ngược lên chạy một ô mã ở đầu trang, ô mã ở đầu sẽ nhận giá trị mới của `x` thay vì giá trị ban đầu. 
+1. **Giao diện người dùng (Front-end Client)**: Là trang web hiển thị các ô nhập mã nguồn (cell), văn bản giải thích Markdown và kết quả đồ họa. Nó đóng gói toàn bộ nội dung của phiên làm việc thành một tệp văn bản có định dạng JSON mang phần mở rộng `.ipynb`.
+2. **Hạt nhân tính toán (IPython Kernel)**: Là một tiến trình Python độc lập chạy nền trên hệ điều hành. Khi bạn nhấn tổ hợp phím `Shift + Enter` tại một ô mã, nội dung mã nguồn được gửi qua giao thức tin nhắn ZeroMQ tới Kernel. Kernel thực thi đoạn mã trong bộ nhớ RAM và gửi kết quả trả ngược về để trình duyệt hiển thị.
 
-Một kinh nghiệm thực tiễn đáng chú ý: trước khi đóng gói mã nguồn hoặc chia sẻ báo cáo cho người khác, hãy luôn bấm **Kernel -> Restart & Run All** (Khởi động lại nhân và chạy toàn bộ từ đầu đến cuối). Nếu tài liệu chạy trơn tru từ dòng đầu tiên đến dòng cuối cùng mà không nảy sinh lỗi, bạn mới có thể tin tưởng vào tính tái lập của kết quả.
+### 3.2. Bẫy Không gian tên Toàn cục (Global Namespace Trap)
+Điều quan trọng cần ghi nhớ: **Hạt nhân IPython duy trì một không gian tên toàn cục duy nhất xuyên suốt phiên làm việc**. 
 
-## 4. Thiết lập môi trường làm việc chuẩn mực
+Trạng thái của các biến số trong RAM được quyết định bởi **trật tự bấm chạy thực tế của bạn**, hoàn toàn không phụ thuộc vào vị trí hiển thị từ trên xuống dưới của các ô cell trên màn hình:
+- Nếu bạn khai báo `x = 10` ở ô cell số 1, sau đó chạy ô cell số 3 có lệnh `x = x + 5` hai lần liên tiếp, giá trị của `x` trong bộ nhớ RAM lúc này là $20$.
+- Nếu một người đồng nghiệp mở cuốn notebook đó ra và bấm chạy tuần tự từ trên xuống dưới, họ sẽ nhận được kết quả `x = 15`. Đây chính là nguyên nhân hàng đầu gây ra hiện tượng **mã chạy được trên máy tôi nhưng lỗi trên máy bạn**.
 
-Một bài toán kinh điển trong giới lập trình là: *"Mã nguồn chạy hoàn hảo trên máy của tôi, nhưng đem sang máy đồng nghiệp thì báo lỗi"*. Nguyên nhân chủ yếu xuất phát từ sự xung đột phiên bản giữa các thư viện cài đặt trên hệ điều hành.
+> [!IMPORTANT] Quy tắc vàng về Tính tái lập (Reproducibility)
+> Trước khi nộp bài hoặc bàn giao sản phẩm phân tích dữ liệu, bạn bắt buộc phải thực hiện thao tác: **Restart Kernel and Run All Cells** (Khởi động lại Hạt nhân và Chạy toàn bộ các ô từ đầu đến cuối). Nếu cuốn notebook không thể chạy trơn tru từ dòng 1 đến dòng cuối cùng trên một hạt nhân sạch, mã nguồn đó được coi là chưa hoàn thiện.
 
-Để giải quyết triệt để vấn đề này, chuẩn mực nghề nghiệp đòi hỏi mỗi dự án dữ liệu phải sống trong một **môi trường ảo** (virtual environment) độc lập.
+---
 
-Trong môi trường Windows PowerShell, ta tạo và kích hoạt môi trường ảo như sau:
+## 4. Quản trị Dự án Chuẩn mực: Venv, Phụ thuộc & Git
 
-```powershell
-# 1. Khởi tạo môi trường ảo cục bộ trong thư mục .venv
+Một kỹ sư dữ liệu chuyên nghiệp không bao giờ cài đặt tất cả các thư viện vào môi trường Python gốc của hệ điều hành. Mỗi dự án phải là một thực thể độc lập và tự khép kín.
+
+### 4.1. Môi trường ảo (`venv`)
+Môi trường ảo tạo ra một thư mục biệt lập chứa bản sao nhị phân của Python và khu vực cài đặt các gói thư viện (`site-packages`) riêng biệt cho từng dự án. Điều này giúp ngăn chặn triệt để xung đột phiên bản:
+
+```bash
+# Khởi tạo môi trường ảo có tên .venv trong thư mục dự án
 python -m venv .venv
 
-# 2. Cài đặt các thư viện trụ cột thông qua trình thông dịch của môi trường ảo
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install numpy pandas matplotlib seaborn jupyter
-
-# 3. Khởi chạy máy chủ sổ tay Jupyter Notebook
-.\.venv\Scripts\python.exe -m jupyter notebook
+# Kích hoạt môi trường ảo
+# Trên macOS / Linux:
+source .venv/bin/activate
+# Trên Windows PowerShell:
+.venv\Scripts\Activate.ps1
 ```
 
-Sau khi cài đặt và kiểm tra các gói hoạt động tương thích, việc kế tiếp là chụp lại "bản kê khai sinh mệnh" của môi trường bằng lệnh đóng băng phụ thuộc:
+### 4.2. Khóa phiên bản thư viện (`requirements.txt`)
+Để bảo đảm bất kỳ ai tải dự án về cũng tái lập được chính xác môi trường làm việc, danh sách các thư viện cùng phiên bản cụ thể cần được xuất ra tệp cấu hình:
 
-```powershell
-.\.venv\Scripts\python.exe -m pip freeze > requirements.txt
+```bash
+# Xuất danh sách thư viện hiện hành
+pip freeze > requirements.txt
+
+# Cài đặt chính xác các thư viện trên một máy mới
+pip install -r requirements.txt
 ```
 
-Tệp `requirements.txt` này đóng vai trò như một bản hướng dẫn kỹ thuật chuẩn xác. Khi một thành viên khác trong nhóm tiếp nhận dự án trên một máy tính mới, họ chỉ cần tạo môi trường ảo sạch và thực thi một dòng lệnh duy nhất:
+Bên cạnh đó, tệp `.python-version` ghi rõ phiên bản Python chuẩn (ví dụ `3.12.8`) để các công cụ quản lý như `pyenv` hay `uv` tự động đồng bộ môi trường giữa các thành viên trong nhóm nghiên cứu.
 
-```powershell
-python -m pip install -r requirements.txt
-```
+---
 
-Về mặt tổ chức thư mục trên đĩa cứng, một cấu trúc dự án khoa học và trong sáng thường được bố trí như sau:
-- `data/raw/`: Nơi lưu trữ dữ liệu thô nguyên bản nhận từ nguồn. Thư mục này chỉ đọc và tuyệt đối không chỉnh sửa trực tiếp.
-- `data/clean/`: Lưu dữ liệu đã trải qua các bước chuẩn hóa, làm sạch và xác thực.
-- `notebooks/`: Chứa các sổ tay Jupyter dùng để thăm dò ý tưởng ban đầu, vẽ biểu đồ nháp.
-- `src/`: Chứa các module Python (`.py`) đóng gói các hàm nghiệp vụ có thể tái sử dụng lâu dài.
-- `README.md`: Bản mô tả mục tiêu đề tài, hướng dẫn cài đặt và câu lệnh tái hiện kết quả.
+## 5. Phương pháp luận Làm việc với Trí tuệ Nhân tạo (AI)
 
-## 5. Bài tập tự luyện
+Trong kỷ nguyên của các mô hình ngôn ngữ lớn (LLM), việc cấm đoán sử dụng AI là điều phi thực tế và đi ngược lại xu thế công nghệ. Tuy nhiên, ranh giới giữa một **kỹ sư làm chủ công cụ** và một **người phụ thuộc thụ động** nằm ở nhận thức về các quy ước ngầm.
 
-::: exercise Thẩm định phạm vi kết luận
-Xem lại danh sách giá `gia = [24, 36, None, 60]`. Giả sử trưởng phòng kinh doanh đọc báo cáo và ghi vào phần tóm tắt điều hành: *"Mặt hàng của chúng ta có giá bình quân là 40 nghìn đồng"*. Phát biểu này đúng hay sai? Cần bổ sung mệnh đề nào để kết luận trở nên trung thực về mặt thống kê?
-:::
-
-::: solution
-Phát biểu trên là **chưa chính xác** và phóng đại phạm vi kết luận. Con số 40 nghìn đồng chỉ là giá trị trung bình trên 3 mặt hàng đã được xác định giá, hoàn toàn bỏ qua mặt hàng thứ tư. 
-
-Để phát biểu trung thực, ta cần nói rõ: *"Dựa trên 3 mặt hàng đã có dữ liệu giá, mức bình quân hiện thời là 40 nghìn đồng. Danh mục còn 1 mặt hàng chưa thể định giá nên chưa thể suy rộng cho toàn bộ kho hàng"*.
-:::
-
-::: exercise Xử lý danh sách hoàn toàn khuyết thiếu
-Nếu dữ liệu đầu vào là danh sách `[None, None]`, đoạn mã ở mục 1 sẽ trả về những giá trị nào cho các biến `tong`, `so_mat_hang`, `trung_binh` và `so_thieu`? Vai trò của biểu thức kiểm tra `if so_mat_hang else None` là gì?
-:::
-
-::: solution
-Khi toàn bộ dữ liệu đều khuyết thiếu:
-- Danh sách hợp lệ `da_co_gia` là danh sách rỗng `[]`.
-- `tong` bằng $0$, `so_mat_hang` bằng $0$.
-- Do `so_mat_hang` mang giá trị 0 (tương đương `False` trong điều kiện logic), biểu thức `if so_mat_hang else None` sẽ gán `trung_binh = None`.
-- `so_thieu` bằng $2 - 0 = 2$.
-
-Biểu thức điều kiện này giữ vai trò sống còn: ngăn chặn lỗi `ZeroDivisionError` (chia cho 0), đồng thời biểu đạt chuẩn xác trạng thái học thuật rằng giá trị trung bình lúc này là "chưa thể xác định" thay vì trả về một con số vô nghĩa.
-:::
-
-::: exercise Khắc phục lỗi trạng thái ẩn trong sổ tay
-Một đồng nghiệp gửi cho bạn một tệp notebook có thể xuất ra biểu đồ rất đẹp khi chạy lần đầu. Nhưng khi bạn khởi động lại kernel và chạy lại từ trên xuống dưới, chương trình lập tức ném ra lỗi `NameError: name 'cleaned_data' is not defined`. Hãy giải thích cơ chế sinh ra lỗi này và cách xử lý.
-:::
-
-::: solution
-Đây là hiện tượng lỗi do **trạng thái ẩn** (hidden state). Tác giả đã chạy một ô mã tạo ra biến `cleaned_data` ở phía dưới, sau đó di chuyển ô mã hoặc xóa nó đi, nhưng vùng nhớ kernel cũ vẫn còn giữ biến đó. Khi người khác mở tệp và chạy tuần tự từ đầu trên một kernel mới, biến đó chưa từng được khởi tạo nên chương trình ném ra lỗi `NameError`.
-
-Cách khắc phục: Rà soát lại toàn bộ quy trình, đưa dòng mã khởi tạo biến `cleaned_data` vào đúng vị trí trước khi biến này được gọi. Sau đó, luôn chạy lại toàn bộ sổ tay bằng **Restart & Run All** để xác minh tính toàn vẹn của mã.
-:::
-
-::: exercise Thiết kế pipeline kiểm toán chất lượng dữ liệu với nhật ký vết (Data Lineage & Audit Log)
-Trong một hệ thống tiếp nhận đơn hàng trực tuyến, bạn nhận được danh sách các bản ghi giao dịch thô:
+### 5.1. Nhận diện các lựa chọn quy ước ngầm của AI
+Khi bạn đưa cho AI một yêu cầu giản đơn: *"Hãy tính giá phòng trung bình của tập dữ liệu này"*, mô hình ngôn ngữ sẽ lập tức sinh ra một dòng mã như:
 ```python
-giao_dich_tho = [
-    {"ma_don": "DH01", "so_tien": "250000"},
-    {"ma_don": "DH02", "so_tien": "chua_thanh_toan"},
-    {"ma_don": "DH03", "so_tien": "-50000"},
-    {"ma_don": "DH04", "so_tien": "1200000"},
-    {"ma_don": "DH05", "so_tien": None},
-    {"ma_don": "DH06", "so_tien": "0"}
-]
+avg_price = df["price"].mean()
 ```
-Hãy viết chương trình xử lý tập dữ liệu trên để:
-1. Tính tổng doanh thu và giá trị trung bình của các đơn hàng hợp lệ (số tiền phải là số thực không âm $\ge 0$).
-2. Xuất ra một bảng nhật ký kiểm toán (*Audit Log*) ghi nhận chính xác: tổng số bản ghi nhận vào, số bản ghi hợp lệ, số bản ghi bị loại và lý do chi tiết cho từng trường hợp bị loại.
-:::
+Dòng mã này trông có vẻ hoàn hảo, nhưng thực chất AI vừa âm thầm chọn thay bạn hàng loạt quy ước nghiệp vụ quan trọng mà bạn không hề hay biết:
+1. **Xử lý giá trị khuyết thiếu**: Hàm `.mean()` của pandas mặc định bỏ qua các giá trị `NaN` (`skipna=True`). Nếu cột có tới $40\%$ dữ liệu bị thiếu và các ô bị thiếu đó đều thuộc về các căn hộ giá rẻ, kết quả trung bình thu được sẽ bị kéo lệch lên cao một cách sai lầm.
+2. **Hiện diện của ngoại lai**: Giá trị trung bình cộng (*Mean*) cực kỳ nhạy cảm với các điểm ngoại lai. Nếu có một căn biệt thự giá 500 triệu đồng/đêm, con số trung bình không còn đại diện cho mức giá phổ biến của thị trường (vốn phải dùng Trung vị - *Median*).
+3. **Mẫu số bằng không**: Nếu tập dữ liệu lọc ra bị rỗng, phép tính sẽ trả về `NaN` và có thể làm sập các khối tính toán tài chính phía sau.
 
-::: solution
-#### Cách 1: Tiếp cận Căn bản & Trực quan (Vòng lặp tuần tự và tích lũy trạng thái)
-Một cách người ta hay dùng khi mới bắt đầu là sử dụng vòng lặp `for` tuần tự để kiểm tra từng phần tử, bọc khối chuyển đổi trong `try-except` và ghi nhận vào các danh sách riêng biệt:
+### 5.2. Nguyên tắc "Tự phác thảo trước khi hỏi" (Think First, Prompt Later)
+Quy trình làm việc chuẩn mực của một nhà phân tích khi cộng tác với trợ lý AI bao gồm 3 bước:
+1. **Tự phác thảo logic nghiệp vụ**: Xác định rõ ràng miền giá trị hợp lệ, cách ứng xử với giá trị rỗng, cấu trúc dữ liệu đầu vào và định dạng đầu ra kỳ vọng.
+2. **Chỉ định ngữ cảnh và ràng buộc cho AI**: Yêu cầu AI viết mã kèm theo các điều kiện biên tường minh.
+3. **Thẩm định và giải thích từng dòng**: Tuyệt đối không bao giờ tích hợp một đoạn mã vào hệ thống nếu bản thân bạn chưa thể giải thích cặn kẽ từng câu lệnh và các tác dụng phụ (*side effects*) của nó.
+
+---
+
+## 6. Hệ thống Bài tập Thực chiến Lab 1
+
+Hệ thống bài tập dưới đây chuyển hóa toàn bộ nội dung thực hành từ `lab-01.ipynb` sang chuẩn mực phân tích dữ liệu độc lập. Mỗi bài tập đều đi kèm tình huống thực tế, các câu hỏi phỏng đoán kiểm chứng cơ chế hạt nhân, và lời giải hai tầng (căn bản và nâng cao).
+
+::: exercise Bài 1.1: Quản lý biến trạng thái và Bẫy thực thi ngoài trật tự (Notebook State)
+Trong một cuốn sổ tay phân tích, một sinh viên tạo 3 ô mã liên tiếp như sau:
 
 ```python
-don_hop_le = []
-nhat_ky_loai = []
+# Ô mã A:
+x = 10
 
-for gd in giao_dich_tho:
-    ma = gd.get("ma_don")
-    raw_val = gd.get("so_tien")
+# Ô mã B:
+x = x + 5
+
+# Ô mã C:
+print(f"Giá trị hiện tại của x là: {x}")
+```
+
+**Nhiệm vụ phỏng đoán và giải thích:**
+1. **Kịch bản 1**: Giả sử sinh viên bấm chạy ô A một lần, sau đó bấm chạy ô B hai lần liên tiếp, rồi mới bấm chạy ô C. Dự đoán giá trị được in ra ở màn hình console và giải thích cơ chế bộ nhớ bên dưới của IPython Kernel.
+2. **Kịch bản 2**: Sinh viên khởi động lại hạt nhân (Restart Kernel) và ngay lập tức bấm chạy ô C trước tiên. Điều gì sẽ xảy ra? Trình thông dịch Python báo lỗi gì?
+3. **Đề xuất giải pháp**: Viết lại logic tăng giá trị trên dưới dạng một hàm thuần khiết (*pure function*) để loại bỏ hoàn toàn sự phụ thuộc vào biến trạng thái toàn cục.
+:::
+
+::: solution
+#### 1. Phân tích Dự đoán & Cơ chế Hạt nhân
+- **Kết quả Kịch bản 1**: Giá trị in ra là **`20`**.
+  * **Giải thích**: Khi chạy ô A, biến `x` được tạo trong không gian tên toàn cục với giá trị 10. Khi chạy ô B lần thứ nhất, `x` nhận giá trị $10 + 5 = 15$. Khi chạy ô B lần thứ hai, giá trị hiện thời trong RAM là 15 được cộng thêm 5 thành 20. Ô C chỉ đơn thuần đọc giá trị đang lưu trong RAM tại thời điểm nó được kích hoạt.
+- **Kết quả Kịch bản 2**: Trình thông dịch sẽ ném ra ngoại lệ:
+  `NameError: name 'x' is not defined`
+  * **Giải thích**: Khi khởi động lại Kernel, toàn bộ không gian tên bộ nhớ RAM bị xóa sạch. Biến `x` chưa từng được cấp phát và gán giá trị, do đó lệnh truy xuất `x` ở ô C sẽ lập tức thất bại.
+
+#### 2. Lời giải Kỹ thuật Hai tầng
+
+##### Cách 1: Tiếp cận Căn bản & Trực quan (Biến cục bộ tuần tự)
+Một cách người ta hay dùng để tránh nhầm lẫn là đặt tên biến phản ánh rõ từng bước biến đổi, không ghi đè biến cũ:
+
+```python
+x_goc = 10
+x_buoc_1 = x_goc + 5
+x_buoc_2 = x_buoc_1 + 5
+print(f"Giá trị sau hai bước tăng: {x_buoc_2}")  # 20
+```
+
+##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói Hàm thuần khiết - Pure Function)
+Kỹ sư chuyên nghiệp sẽ đóng gói logic thành hàm độc lập, không làm biến đổi bất kỳ trạng thái toàn cục nào bên ngoài:
+
+```python
+def tang_gia_tri(gia_tri_ban_dau: int, so_buoc: int = 1, buoc_nhay: int = 5) -> int:
+    """Tính toán giá trị sau một số bước tăng nhất định.
     
-    if raw_val is None:
-        nhat_ky_loai.append({"ma_don": ma, "ly_do": "Khuyết thiếu dữ liệu (None)"})
-        continue
-        
-    try:
-        val = float(raw_val)
-        if val < 0:
-            nhat_ky_loai.append({"ma_don": ma, "ly_do": f"Giá trị âm ({val}) không hợp lệ"})
-        else:
-            don_hop_le.append({"ma_don": ma, "so_tien": val})
-    except ValueError:
-        nhat_ky_loai.append({"ma_don": ma, "ly_do": f"Không thể ép kiểu số thực: '{raw_val}'"})
+    Hàm thuần khiết (Pure function): Cùng đầu vào luôn cho cùng đầu ra,
+    hoàn toàn không làm biến đổi bộ nhớ toàn cục.
+    """
+    assert so_buoc >= 0, "Số bước lặp không được âm!"
+    return gia_tri_ban_dau + so_buoc * buoc_nhay
 
-tong_tien = sum(d["so_tien"] for d in don_hop_le)
-so_hop_le = len(don_hop_le)
-trung_binh = (tong_tien / so_hop_le) if so_hop_le > 0 else None
-
-print(f"Tổng hợp lệ: {so_hop_le}/{len(giao_dich_tho)} đơn | Tổng tiền: {tong_tien:,.0f} đ | Trung bình: {trung_binh:,.0f} đ")
-print("Nhật ký loại trừ:", nhat_ky_loai)
-```
-
-#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói hàm bất biến trả về cấu trúc phân tách)
-Trong môi trường sản xuất, ta đóng gói quy trình thành một hàm thuần khiết (*Pure Function*), phân tách dữ liệu thành hai nhánh rõ ràng mà không làm biến đổi dữ liệu đầu vào:
-
-```python
-from typing import NamedTuple, Any
-
-class KetQuaKiemToan(NamedTuple):
-    hop_le: list[dict[str, Any]]
-    bi_loai: list[dict[str, Any]]
-    tong_doanh_thu: float
-    trung_binh: float | None
-
-def kiem_toan_giao_dich(ds_giao_dich: list[dict[str, Any]]) -> KetQuaKiemToan:
-    hop_le, bi_loai = [], []
-    for r in ds_giao_dich:
-        ma, raw = r.get("ma_don"), r.get("so_tien")
-        if raw is None:
-            bi_loai.append({"ma_don": ma, "ly_do": "GIA_TRI_THIEU"})
-            continue
-        try:
-            val = float(raw)
-            if val < 0:
-                bi_loai.append({"ma_don": ma, "ly_do": "GIA_TRI_AM"})
-            else:
-                hop_le.append({"ma_don": ma, "so_tien": val})
-        except (ValueError, TypeError):
-            bi_loai.append({"ma_don": ma, "ly_do": "SAI_DINH_DANG"})
-            
-    tong = sum(x["so_tien"] for x in hop_le)
-    tb = (tong / len(hop_le)) if hop_le else None
-    return KetQuaKiemToan(hop_le=hop_le, bi_loai=bi_loai, tong_doanh_thu=tong, trung_binh=tb)
-
-ket_qua = kiem_toan_giao_dich(giao_dich_tho)
-assert len(giao_dich_tho) == len(ket_qua.hop_le) + len(ket_qua.bi_loai)
+# Chạy thử nghiệm có kiểm chứng
+ket_qua = tang_gia_tri(10, so_buoc=2, buoc_nhay=5)
+assert ket_qua == 20
+print(f"Giá trị tính toán an toàn: {ket_qua}")
 ```
 
 #### Phân tích bản chất & Bình luận sư phạm
-- **Kỷ luật bảo toàn dữ liệu**: Đơn hàng miễn phí (`"0"`) vẫn là một đơn hợp lệ ($0 \ge 0$), trong khi đơn âm (`"-50000"`) và đơn lỗi định dạng (`"chua_thanh_toan"`) bị loại ra nhánh kiểm toán.
-- **Phương trình bất biến**: Biểu thức kiểm chứng `len(giao_dich_tho) == len(hop_le) + len(bi_loai)` là bảo chứng vàng cho thấy không có bất kỳ dòng dữ liệu nào bị hệ thống "nuốt chửng" mà không rõ lý do.
+- Việc dùng biến toàn cục lỏng lẻo trong Notebook giống như việc xây nhà trên cát. Chỉ cần vô tình bấm chạy lại một ô cell ở giữa trang, toàn bộ số liệu của các ô bên dưới sẽ bị sai lệch mà không hề phát sinh thông báo lỗi (*Silent Data Corruption*).
+- Đóng gói logic vào hàm thuần khiết giúp mã nguồn có thể kiểm thử đơn vị (*Unit Test*), tái sử dụng trong các pipeline lớn và hoàn toàn miễn nhiễm với trật tự bấm phím của người dùng.
 :::
 
-## 6. Nguồn và đọc thêm
+---
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics](https://wesmckinney.com/book/python-basics).
-- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html).
-- Toàn bộ ví dụ, phân tích logic và bài tập trong bài viết này do StudyHub biên soạn độc lập nhằm phục vụ sinh viên chuyên ngành.
+::: exercise Bài 1.2: Đọc bảng dữ liệu thực tế và Thẩm định cấu trúc (Shape & Dtypes)
+Cho một bảng dữ liệu khảo sát thị trường lưu trú được lưu dưới định dạng bảng. Bạn cần tải dữ liệu và thực hiện các bước thẩm định cấu trúc ban đầu:
+1. Đọc dữ liệu thành DataFrame.
+2. Kiểm tra kích thước hình học của bảng: có bao nhiêu dòng quan sát và bao nhiêu cột đặc trưng?
+3. Trích xuất danh sách tên các cột và phân loại kiểu dữ liệu (`dtypes`).
+4. Viết các câu lệnh kiểm tra tự động (`assert`) để đảm bảo bảng không bị rỗng và chứa đúng các cột bắt buộc phục vụ phân tích.
+:::
+
+::: solution
+#### Lời giải Kỹ thuật Hai tầng
+
+```python
+import pandas as pd
+import numpy as np
+from io import StringIO
+
+# Giả lập dữ liệu chỗ ở thực tế
+csv_data = """id,ten_cho_o,quan,loai_phong,gia_dem,so_danh_gia
+101,Homestay Phố Cổ,Hoàn Kiếm,Entire home/apt,850000,45
+102,Phòng Riêng View Hồ,Tây Hồ,Private room,450000,12
+103,Studio Cầu Giấy,Cầu Giấy,Entire home/apt,600000,28
+104,Căn hộ Vinhomes,Nam Từ Liêm,Entire home/apt,1200000,60
+105,Nhà tập thể xưa,Đống Đa,Private room,350000,5
+"""
+```
+
+##### Cách 1: Tiếp cận Căn bản & Trực quan (Truy xuất thuộc tính cơ bản)
+
+```python
+df_cho_o = pd.read_csv(StringIO(csv_data))
+
+# 1. Kiểm tra kích thước
+so_dong = len(df_cho_o)
+so_cot = len(df_cho_o.columns)
+print(f"Bảng có {so_dong} dòng và {so_cot} cột.")
+
+# 2. Xem tên cột và kiểu dữ liệu
+print("Danh sách cột:", list(df_cho_o.columns))
+print("Kiểu dữ liệu từng cột:\n", df_cho_o.dtypes)
+```
+
+##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói Hàm Thẩm định Cấu trúc với Assertions)
+
+```python
+def tham_dinh_cau_truc_bang(df: pd.DataFrame, cot_bat_buoc: list[str]) -> dict:
+    """Thẩm định cấu trúc và tính toàn vẹn ban đầu của bảng dữ liệu."""
+    # 1. Chốt chặn an toàn: Bảng không được phép rỗng
+    assert not df.empty, "LỖI DỮ LIỆU: Bảng nạp vào bị rỗng hoàn toàn!"
+    
+    # 2. Chốt chặn an toàn: Phải chứa đầy đủ các cột bắt buộc
+    tap_cot_thieu = set(cot_bat_buoc) - set(df.columns)
+    assert len(tap_cot_thieu) == 0, f"LỖI CẤU TRÚC: Thiếu các cột bắt buộc: {tap_cot_thieu}"
+    
+    # 3. Tổng hợp báo cáo kiểm định
+    n_rows, n_cols = df.shape
+    phan_loai_kieu = df.dtypes.value_counts().to_dict()
+    
+    return {
+        "so_dong": n_rows,
+        "so_cot": n_cols,
+        "danh_sach_cot": df.columns.tolist(),
+        "phan_bo_kieu_du_lieu": {str(k): v for k, v in phan_loai_kieu.items()},
+        "kich_thuoc_bo_nho_kb": round(df.memory_usage(deep=True).sum() / 1024, 2)
+    }
+
+cot_can_kiem_tra = ["id", "loai_phong", "gia_dem"]
+bao_cao = tham_dinh_cau_truc_bang(df_cho_o, cot_can_kiem_tra)
+print("Báo cáo thẩm định cấu trúc:\n", pd.Series(bao_cao))
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- Thuộc tính `.shape` trả về một tuple `(n_rows, n_cols)` được tính toán trực tiếp từ cấu trúc khối nhớ bên dưới của mảng hai chiều, nhanh hơn nhiều so với việc gọi `len(df)` kết hợp `len(df.columns)`.
+- Việc kiểm tra kích thước bộ nhớ với `memory_usage(deep=True)` là phản xạ cần thiết khi chuyển sang xử lý tệp dữ liệu lớn, giúp nhận biết các cột kiểu chuỗi (`object`) đang tiêu tốn bộ nhớ RAM gấp nhiều lần so với các kiểu số học.
+:::
+
+---
+
+::: exercise Bài 1.3: Tính tỷ lệ phân bố có kiểm chứng và Bẫy mẫu số rỗng
+Từ bảng dữ liệu chỗ ở trên, ban quản lý muốn xác định tỷ trọng chỗ ở thuộc loại "Căn hộ nguyên căn" (`Entire home/apt`) trên toàn thị trường để đánh giá mức độ chuyên nghiệp hóa của các chủ nhà:
+
+$$
+\text{Tỷ lệ} = \frac{\text{Số chỗ ở loại Entire home/apt}}{\text{Tổng số chỗ ở hợp lệ}}
+$$
+
+**Yêu cầu kỹ thuật:**
+1. Tính toán tỷ lệ trên bằng code Python.
+2. Xử lý an toàn trường hợp tập dữ liệu bị rỗng (mẫu số bằng 0) để hàm không ném ra ngoại lệ `ZeroDivisionError` mà trả về kết quả hợp lý.
+3. Diễn giải ý nghĩa kinh tế/nghiệp vụ của con số thu được.
+:::
+
+::: solution
+#### Lời giải Kỹ thuật Hai tầng
+
+##### Cách 1: Tiếp cận Căn bản & Trực quan (Đếm tuần tự với vòng lặp Python)
+
+```python
+danh_sach_phong = df_cho_o["loai_phong"].tolist()
+so_luong_nguyen_can = 0
+tong_so = len(danh_sach_phong)
+
+for lp in danh_sach_phong:
+    if lp == "Entire home/apt":
+        so_luong_nguyen_can += 1
+
+if tong_so > 0:
+    ty_le_cb = so_luong_nguyen_can / tong_so
+else:
+    ty_le_cb = 0.0
+
+print(f"Số lượng nguyên căn: {so_luong_nguyen_can}/{tong_so}")
+print(f"Tỷ lệ (Căn bản): {ty_le_cb:.1%}")
+```
+
+##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa với Pandas và Kiểm soát Mẫu số)
+
+```python
+def tinh_ty_le_loai_phong(df: pd.DataFrame, loai_phong_muc_tieu: str = "Entire home/apt") -> float:
+    """Tính tỷ lệ chỗ ở thuộc loại chỉ định với cơ chế bảo vệ mẫu số rỗng."""
+    if df.empty or "loai_phong" not in df.columns:
+        return 0.0
+    
+    # 1. Tạo mặt nạ Boolean ở tầng C (nhanh gấp hàng chục lần vòng for)
+    mat_na_dung = (df["loai_phong"] == loai_phong_muc_tieu)
+    
+    # 2. Lấy trung bình của mảng Boolean chính là tỷ lệ phần trăm (True = 1, False = 0)
+    # Pandas .mean() tự động xử lý mẫu số an toàn
+    ty_le = mat_na_dung.mean()
+    
+    return float(ty_le)
+
+ty_le_nc = tinh_ty_le_loai_phong(df_cho_o, "Entire home/apt")
+print(f"Tỷ lệ nguyên căn (Nâng cao): {ty_le_nc:.2%}")
+assert np.isclose(ty_le_nc, 3 / 5)
+```
+
+#### Diễn giải Ý nghĩa Nghiệp vụ & Bình luận sư phạm
+- **Mẹo toán học vector hóa**: Trong khoa học dữ liệu, một cách người ta hay dùng để tính tỷ lệ của một điều kiện là **lấy trung bình cộng của mặt nạ Boolean** (`mask.mean()`). Vì kiểu Boolean quy ước `True == 1` và `False == 0`, trung bình cộng của dãy số 0 và 1 chính là tổng số lần xuất hiện chia cho kích thước mẫu. Phép tính này thực thi hoàn toàn trong hạt nhân C của NumPy mà không tốn chi phí duyệt từng phần tử.
+- **Ý nghĩa thị trường**: Tỷ lệ $60\%$ chỗ ở là căn hộ nguyên căn cho thấy thị trường lưu trú này mang tính chuyên nghiệp và thương mại hóa cao (các nhà đầu tư sở hữu trọn vẹn bất động sản để cho thuê), thay vì mô hình chia sẻ phòng ở truyền thống mang tính gia đình (`Private room` chỉ chiếm $40\%$).
+:::
+
+---
+
+::: exercise Bài 1.4: Đóng gói Báo cáo Thị trường Độc lập (Tự làm mở — E1)
+Hãy thiết kế một hàm độc lập mang tên `dong_goi_bao_cao_thi_truong(data: pd.DataFrame) -> dict` nhận vào một DataFrame chỗ ở bất kỳ và trả về một từ điển tổng hợp các chỉ số quan trọng phục vụ ban giám đốc:
+- `tong_so_cho_o`: Số lượng chỗ ở hợp lệ.
+- `gia_trung_binh`: Giá thuê trung bình mỗi đêm (làm tròn đến hàng đơn vị).
+- `gia_trung_vi`: Mức giá trung vị (đại diện cho phân khúc phổ thông).
+- `ty_le_nguyen_can`: Tỷ lệ phần trăm chỗ ở loại nguyên căn.
+- `thong_diep_chinh`: Chuỗi nhận định ngắn gọn về đặc điểm thị trường dựa trên mức chênh lệch giữa giá trung bình và giá trung vị.
+:::
+
+::: solution
+#### Lời giải Kỹ thuật Chuẩn mực
+
+```python
+def dong_goi_bao_cao_thi_truong(data: pd.DataFrame) -> dict:
+    """Đóng gói báo cáo phân tích thị trường chỗ ở tự động và toàn diện."""
+    if data.empty:
+        return {
+            "trang_thai": "DU_LIEU_RONG",
+            "tong_so_cho_o": 0,
+            "gia_trung_binh": 0.0,
+            "gia_trung_vi": 0.0,
+            "ty_le_nguyen_can": 0.0,
+            "thong_diep_chinh": "Không có dữ liệu để phân tích."
+        }
+    
+    n_total = len(data)
+    
+    # 1. Tính toán các chỉ số thống kê tiền tệ
+    gia_mean = data["gia_dem"].mean()
+    gia_median = data["gia_dem"].median()
+    
+    # 2. Tính tỷ lệ loại phòng
+    ty_le_nc = (data["loai_phong"] == "Entire home/apt").mean()
+    
+    # 3. Phân tích độ lệch phân phối (Skewness Insight)
+    # Nếu giá trung bình cao hơn trung vị đáng kể (> 15%), thị trường có phân khúc siêu sang kéo lệch
+    do_lech_gia = (gia_mean - gia_median) / gia_median if gia_median > 0 else 0
+    if do_lech_gia > 0.15:
+        thong_diep = (
+            f"Giá trung bình ({gia_mean:,.0f} đ) cao hơn trung vị ({gia_median:,.0f} đ) "
+            f"{do_lech_gia:.1%}, cho thấy sự hiện diện của phân khúc căn hộ cao cấp kéo lệch thị trường."
+        )
+    else:
+        thong_diep = (
+            f"Giá trung bình ({gia_mean:,.0f} đ) bám sát trung vị ({gia_median:,.0f} đ), "
+            "thị trường có phân bố giá tương đối đồng đều."
+        )
+        
+    return {
+        "tong_so_cho_o": n_total,
+        "gia_trung_binh": round(gia_mean, 0),
+        "gia_trung_vi": round(gia_median, 0),
+        "ty_le_nguyen_can": round(ty_le_nc * 100, 2),
+        "thong_diep_chinh": thong_diep
+    }
+
+# Chạy thử nghiệm và hiển thị kết quả
+bao_cao_kinh_doanh = dong_goi_bao_cao_thi_truong(df_cho_o)
+print("BÁO CÁO PHÂN TÍCH THỊ TRƯỜNG TỰ ĐỘNG:")
+for k, v in bao_cao_kinh_doanh.items():
+    print(f"- {k}: {v}")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- Báo cáo này áp dụng nguyên tắc **phản biện thống kê giữa Trung bình cộng và Trung vị**. Trong phân tích kinh doanh, không bao giờ báo cáo đơn độc giá trung bình mà phải đặt cạnh trung vị. Việc nhận diện giá trung bình ($690,000$ đ) cao hơn trung vị ($600,000$ đ) tới $15\%$ giúp ban lãnh đạo lập tức nhận ra tác động của căn hộ cao cấp 1.2 triệu đồng ở Nam Từ Liêm kéo lệch chỉ số chung.
+:::
+
+---
+
+## 7. Nguồn Tham khảo & Đọc thêm
+
+- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics).
+- Tài liệu chính thức về Hạt nhân tương tác: [IPython Architecture and Messaging Protocol](https://ipython.readthedocs.io/en/stable/development/messaging.html).
+- Hướng dẫn chuẩn hóa môi trường: [Python Virtual Environments — Real Python](https://realpython.com/python-virtual-environments-a-primer/).
+- [Bài giảng tham khảo môn Xử lý dữ liệu (IAI UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html).

@@ -5,253 +5,437 @@ section: lecture
 title: "Trình bày & thẩm định một phân tích dữ liệu"
 prerequisites: ["ky-vong","gia-tri-thieu","thong-ke-mo-ta","ket-luan-nhan-qua"]
 lessonStatus: ready
-description: "Nối câu hỏi với mẫu số, kiểm tra thay đổi cơ cấu nhóm và trình bày kết luận có bằng chứng, phạm vi và giới hạn."
+description: "Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm: cấu trúc Kim tự tháp Minto, bóc trần nghịch lý Simpson, chuẩn hóa ngôn ngữ đo lường và quy trình thẩm định 4 bước."
 ---
 
-Chúng ta bước vào bài học tổng kết của toàn bộ học trình. Đến thời điểm này, bạn đã làm chủ các kỹ thuật từ nền tảng đến chuyên sâu: hiểu rõ cơ chế mảng bộ nhớ đệm trong NumPy, thuần thục phép lập chỉ mục và cơ chế sao chép khi ghi trong Pandas, biết xử lý dữ liệu chuỗi, chuỗi thời gian, làm sạch dữ liệu bẩn và kiểm soát đầu ra của mô hình ngôn ngữ lớn. Tuy nhiên, mọi kỹ năng lập trình tinh vi đó sẽ trở nên vô nghĩa nếu khâu cuối cùng bị gãy đổ: khâu phiên dịch các con số tính toán thành kết luận khoa học và truyền tải chúng tới người ra quyết định.
+Chúng ta bước vào bài giảng tổng kết của toàn bộ môn học. Đến thời điểm này, bạn đã làm chủ một chuỗi kỹ năng kỹ nghệ dữ liệu toàn diện: từ việc hiểu sâu cấu trúc bộ nhớ của NumPy, thao tác với DataFrame và cơ chế Copy-on-Write của pandas, xử lý chuỗi và dữ liệu thời gian, làm sạch dữ liệu quan hệ chéo bảng, đến việc kiểm soát chất lượng đầu ra của mô hình ngôn ngữ lớn và xây dựng các biểu đồ chuẩn mực. Tuy nhiên, toàn bộ khối lượng công việc kỹ thuật đồ sộ đó sẽ trở nên vô nghĩa nếu khâu cuối cùng bị gãy đổ: **khâu phiên dịch kết quả tính toán thành kết luận khoa học và truyền tải chúng tới những người ra quyết định**.
 
-Trong thực tế, một bản báo cáo có thể chứa những con số hoàn toàn chính xác về mặt số học nhưng lại dẫn dắt người nghe đến những hành động sai lầm nghiêm trọng. Điều này thường xuất phát từ việc người phân tích không bóc tách sự thay đổi trong cơ cấu nhóm, đánh tráo khái niệm giữa số lượng và tỷ lệ, hoặc vội vã quy kết tương quan thành quan hệ nhân quả.
+Trong thực tế, một bản báo cáo có thể chứa những con số hoàn toàn chính xác về mặt số học nhưng lại dẫn dắt người đọc tới những hành động sai lầm nghiêm trọng. Điều này thường xuất phát từ việc người phân tích không bóc tách sự biến động trong cơ cấu nhóm, sử dụng từ ngữ giật gân vượt quá bằng chứng, đánh tráo giữa số lượng và tỷ lệ, hoặc vội vã quy kết một mối tương quan thuần túy thành quan hệ nhân quả.
 
-Bài học kết khóa này tích hợp toàn bộ kiến thức đã học thành một khung phương pháp luận hoàn chỉnh: giải mã hiện tượng nghịch lý Simpson khi cơ cấu nhóm biến động, chuẩn hóa ngôn ngữ đo lường giữa phần trăm và điểm phần trăm, thiết lập quy trình thẩm định năm bước từ bảng thô tới kết luận, và rèn luyện đạo đức trình bày dữ liệu với các giới hạn minh bạch.
+Bài học kết khóa này tích hợp toàn bộ kiến thức của chương trình thành một khung phương pháp luận hoàn chỉnh: cấu trúc lập luận Kim tự tháp Minto, bản chất toán học của Nghịch lý Simpson, chuẩn mực diễn đạt đúng mức giữa phần trăm và điểm phần trăm, và quy trình thẩm định 4 bước để thẩm định độc lập bất kỳ báo cáo dữ liệu nào, đặc biệt là các báo cáo do trí tuệ nhân tạo sinh ra.
 
-## 1. Cơ cấu nhóm và sự đảo chiều của trung bình chung
+---
 
-Hãy quan sát một hiện tượng số học thoạt nhìn có vẻ phi lý: giá bán trung bình của từng nhóm mặt hàng riêng lẻ đều giảm xuống, nhưng giá bán trung bình chung của toàn bộ doanh nghiệp lại tăng lên rõ rệt.
+## 1. Cấu trúc giao tiếp dữ liệu: Nguyên lý Kim tự tháp Minto
 
-Đoạn mã dưới đây mô phỏng dữ liệu kinh doanh của hai nhóm mặt hàng A và B qua hai kỳ khảo sát:
+Khi trình bày một phân tích kỹ thuật phức tạp cho ban lãnh đạo hay các đối tác nghiệp vụ, một sai lầm kinh điển của các kỹ sư là trình bày theo trình tự thời gian mà họ đã làm: bắt đầu từ việc tải dữ liệu ra sao, làm sạch thế nào, gặp bao nhiêu lỗi kỹ thuật, rồi mới đưa ra kết luận ở trang cuối cùng. Cách tiếp cận này khiến người nghe kiệt sức trước khi nắm bắt được thông điệp chính.
+
+Phương pháp luận **Kim tự tháp Minto (The Minto Pyramid Principle)** của Barbara Minto đảo ngược hoàn toàn quy trình này theo cấu trúc từ trên xuống (Top-Down):
+
+```
+       [1. KẾT LUẬN ĐIỀU HÀNH]  <--- Thông điệp quan trọng nhất (Takeaway)
+                 │
+       [2. BẰNG CHỨNG ĐỊNH LƯỢNG]  <--- Số liệu, so sánh và đồ thị minh chứng
+                 │
+       [3. PHẠM VI & GIỚI HẠN]  <--- Điều kiện áp dụng, ngoại lệ, cảnh báo
+                 │
+    [4. CHI TIẾT PHƯƠNG PHÁP]  <--- Cỡ mẫu, mã nguồn, phụ lục kỹ thuật
+```
+
+1. **Đỉnh kim tự tháp (Kết luận điều hành)**: Đưa ra ngay thông điệp cốt lõi và câu trả lời trực tiếp cho câu hỏi của bên đặt hàng (ví dụ: *"Giá thuê điển hình ở Santiago là 59.000 CLP/đêm, thấp hơn đáng kể so với mức bình quân 118.000 CLP"*).
+2. **Tầng thứ hai (Bằng chứng định lượng)**: Cung cấp các số liệu thống kê chủ chốt và biểu đồ trực quan hỗ trợ trực tiếp cho kết luận (ví dụ: *"Phân phối giá bị lệch phải bởi 177 giá trị cực đoan; trung vị phản ánh đúng phong độ thị trường vì gần như không bị ảnh hưởng bởi ngoại lai"*).
+3. **Tầng thứ ba (Phạm vi và Giới hạn)**: Nêu rõ ranh giới của kết luận để người ra quyết định không hiểu sai (ví dụ: *"Kết luận chỉ áp dụng cho giá niêm yết một đêm, chưa bao gồm phí dọn dẹp và phí dịch vụ"*).
+4. **Đáy kim tự tháp (Chi tiết phương pháp và Phụ lục)**: Ghi lại các thông số kỹ thuật phục vụ việc kiểm toán độc lập (ví dụ: *"Phân tích dựa trên 17.688 căn hộ hợp lệ ở mốc chụp 29/06/2026 sau khi loại bỏ 846 căn hộ khuyết thiếu giá trong báo cáo qa_report"*).
+
+Cấu trúc này giúp người quản lý bận rộn nắm bắt ngay hành động cần làm trong 30 giây đầu tiên, trong khi các chuyên gia kiểm toán vẫn có đầy đủ căn cứ kỹ thuật ở các tầng dưới để thẩm định độ tin cậy.
+
+---
+
+## 2. Chuẩn mực ngôn từ: Lời đúng mức (Calibrated Language) vs Phóng đại (Hyperbole)
+
+Khoa học dữ liệu là một bộ môn thực nghiệm đòi hỏi sự khiêm nhường trước sự thật khách quan. Một nhà khoa học dữ liệu xuất sắc phải biết kìm chế cám dỗ sử dụng những tính từ khoa trương để làm cho kết quả của mình trông có vẻ "ấn tượng".
+
+### Đối chiếu các cặp diễn đạt: Đúng mức và Quá mức
+
+| Số liệu quan sát được | Diễn đạt quá mức (Thiên lệch / Giật gân) | Diễn đạt đúng mức (Khoa học / Chuẩn mực) | Lý do hiệu chỉnh |
+| :--- | :--- | :--- | :--- |
+| **+53.7% YoY** (T5/2026 so với T5/2025) | *"Thị trường bùng nổ thần kỳ, vượt mọi kỷ lục lịch sử"* | *"Thị trường ghi nhận mức tăng trưởng mạnh mẽ 53.7% so với cùng kỳ năm trước"* | Mức tăng 53.7% là mạnh mẽ, nhưng việc dùng từ "thần kỳ" hay "vượt mọi kỷ lục" là võ đoán khi chưa có dữ liệu 10 năm. |
+| **+3.0% MoM** (T5/2026 so với T4/2026) | *"Bứt phá thần tốc trong tháng 5"* | *"Lượng đánh giá tháng 5 tăng nhẹ 3.0% so với tháng liền trước"* | Mức tăng 3.0% giữa hai tháng liên tiếp là một biến động bình thường, tuyệt đối không thể gọi là "bứt phá thần tốc". |
+| **Hệ số tương quan $r = 0.081$** giữa nhiệt độ và số đánh giá | *"Nhiệt độ thời tiết quyết định rõ rệt tới lượng khách đặt phòng"* | *"Tương quan tuyến tính giữa nhiệt độ và lượng đánh giá là rất yếu ($r = 0.081$), không có ý nghĩa thực tiễn"* | Hệ số $r < 0.1$ biểu thị mối liên hệ hầu như bằng không; quy kết "quyết định rõ rệt" là hoàn toàn sai bản chất toán học. |
+| **Đúng 1 chỗ ở** đòi hỏi ở tối thiểu 730 đêm | *"Nhiều chủ nhà đang áp đặt các quy định cho thuê kỳ quặc"* | *"Ghi nhận một trường hợp cá biệt đòi hỏi thời gian lưu trú tối thiểu 730 đêm cần được gắn cờ xem xét"* | Một trường hợp đơn lẻ không đại diện cho "nhiều chủ nhà". |
+| **Nhóm tiếng Tây Ban Nha chiếm 65.4%** (dùng quy tắc từ khóa thô) | *"Chắc chắn 2/3 lượng du khách đến từ các nước nói tiếng Tây Ban Nha"* | *"Khoảng 65.4% nhận xét được viết bằng tiếng Tây Ban Nha theo bộ lọc từ khóa ban đầu, cần kiểm chứng thêm trên mẫu chuẩn"* | Quy tắc từ khóa thô chưa được kiểm định độ chính xác; ngôn ngữ đánh giá chưa đồng nhất tuyệt đối với quốc tịch du khách. |
+
+### Phân biệt rạch ròi: Phần trăm (%) và Điểm phần trăm (pp)
+
+Một sự nhầm lẫn tai hại trong báo cáo kinh tế là việc đánh đồng giữa **thay đổi tương đối (%)** và **chênh lệch tuyệt đối (điểm phần trăm - percentage points)**:
+
+Giả sử tỷ lệ căn hộ bị hủy phòng giảm từ $5\%$ ở Quý 1 xuống còn $4\%$ ở Quý 2:
+- **Chênh lệch tuyệt đối**:
+  $$
+  4\% - 5\% = -1\% \implies \text{Giảm 1 điểm phần trăm}
+  $$
+- **Thay đổi tương đối**:
+  $$
+  \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\% \implies \text{Giảm 20\% so với mức ban đầu}
+  $$
+
+Nếu người viết viết ẩu: *"Tỷ lệ hủy phòng giảm 1%"*, người đọc trong ngành kiểm toán sẽ hiểu là giảm $1\%$ của mức $5\%$ ban đầu, tức là còn $5\% \times (1 - 0.01) = 4.95\%$. Sai lệch này có thể làm méo mó các mô hình dự báo tài chính hàng tỷ đồng. Hãy luôn viết rõ cụm từ **điểm phần trăm** khi trừ hai giá trị tỷ lệ cho nhau.
+
+---
+
+## 3. Nghịch lý Simpson: Sự đảo chiều của trung bình gộp do biến động cơ cấu
+
+Hiện tượng kỳ thú và nguy hiểm nhất trong phân tích dữ liệu tổng hợp là **Nghịch lý Simpson (Simpson's Paradox)**: Một quy luật hay xu hướng xuất hiện đồng nhất trong từng nhóm thành phần riêng rẽ có thể bị **đảo ngược hoàn toàn** khi dữ liệu được gộp chung lại.
+
+### Mô hình toán học về sự dịch chuyển trọng số
+
+Xét giá trung bình của một thị trường gồm hai phân khúc (phân khúc cao cấp và phân khúc giá rẻ) qua hai kỳ khảo sát:
+
+$$
+\text{Giá trung bình gộp: } \bar{X}_{\text{gộp}} = \frac{\sum (n_i \times \bar{X}_i)}{\sum n_i} = \sum w_i \bar{X}_i \quad \text{với} \quad w_i = \frac{n_i}{N}
+$$
+
+Hãy quan sát bảng số liệu thực nghiệm sau:
+
+| Kỳ khảo sát | Phân khúc | Số chỗ ở ($n$) | Tỷ trọng cơ cấu ($w$) | Giá trung bình ($\bar{X}$) | Tổng giá trị ($n \times \bar{X}$) | Giá trung bình gộp ($\bar{X}_{\text{gộp}}$) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **Kỳ 1 (Tháng 9)** | Cao cấp | 100 | $50.0\%$ | 60.0 nghìn | 6.000 | \multirow{2}{*}{\textbf{45.0 nghìn}} |
+| | Giá rẻ | 100 | $50.0\%$ | 30.0 nghìn | 3.000 | |
+| **Kỳ 2 (Tháng 6)** | Cao cấp | 80 | $26.7\%$ | **66.0 nghìn** ($+10\%$) | 5.280 | \multirow{2}{*}{\textbf{41.8 nghìn} (GIẢM!)} |
+| | Giá rẻ | 220 | $73.3\%$ | **33.0 nghìn** ($+10\%$) | 7.260 | |
+
+```
+Từng phân khúc riêng lẻ:
+- Phân khúc cao cấp: Tăng từ 60 lên 66 nghìn (+10%)
+- Phân khúc giá rẻ:  Tăng từ 30 lên 33 nghìn (+10%)
+
+Trung bình gộp toàn thị trường:
+- Kỳ 1 (Tháng 9): (100*60 + 100*30) / 200 = 45.0 nghìn
+- Kỳ 2 (Tháng 6): (80*66 + 220*33) / 300  = 41.8 nghìn  <--- GIẢM 7.1%!
+```
+
+### Bản chất của Nghịch lý
+Tất cả các chủ nhà ở mọi phân khúc đều đồng loạt tăng giá $10\%$. Không có bất kỳ ai giảm giá. Thế nhưng giá trung bình gộp của toàn thành phố lại ghi nhận mức giảm từ $45.0$ xuống $41.8$ nghìn!
+
+Nguyên nhân xuất phát hoàn toàn từ **sự thay đổi cơ cấu mẫu**:
+- Ở Kỳ 1, tỷ lệ căn hộ giá rẻ chỉ chiếm $50\%$ nguồn cung.
+- Ở Kỳ 2, tỷ lệ căn hộ giá rẻ đã tăng vọt lên chiếm $73.3\%$ nguồn cung.
+
+Sự bùng nổ số lượng của phân khúc giá rẻ đã kéo trọng số $w_{\text{rẻ}}$ tăng vọt, đè bẹp mức tăng giá $10\%$ của từng nhóm và kéo tụt con số bình quân chung.
+
+**Bài học sư phạm sống còn**: Khi so sánh hai mốc chụp (snapshot) hoặc hai giai đoạn lịch sử trong bài tập lớn hay dự án thực tế, nếu thấy một chỉ số tổng hợp biến thiên bất thường, điều đầu tiên phải làm là **kiểm tra cơ cấu tỷ trọng của các nhóm thành phần**. Nếu cơ cấu bị dịch chuyển, việc chỉ nhìn vào con số trung bình gộp sẽ dẫn tới những quyết định kinh doanh hoàn toàn sai lầm.
+
+---
+
+## 4. Quy trình thẩm định phân tích dữ liệu 4 bước (Data Audit Framework)
+
+Khi đối diện với một báo cáo phân tích, đặc biệt là các báo cáo do mô hình trí tuệ nhân tạo (AI) tạo ra tự động, kỹ sư dữ liệu phải thực hiện quy trình kiểm toán 4 bước nghiêm ngặt:
+
+```
+[Bước 1: TRUY SỐ]       ---> Tính lại con số từ dữ liệu gốc, đối soát từng phép đếm.
+        │
+[Bước 2: PHƯƠNG PHÁP]   ---> Kiểm tra mẫu số, cơ cấu trọng số, biến gây nhiễu.
+        │
+[Bước 3: DIỄN GIẢI]     ---> Soát xét tính đúng mức của từ ngữ; phân biệt tương quan vs nhân quả.
+        │
+[Bước 4: PHÁN QUYẾT]    ---> Bác bỏ, sửa đổi, hoặc bổ sung phân tích phân tầng.
+```
+
+1. **Bước 1 · Truy số (Check the Numbers)**: Chạy lại mã nguồn từ bảng thô để xem con số được trích dẫn có thực sự tồn tại hay không. Nếu số liệu bịa đặt, bác bỏ ngay lập tức.
+2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**: Đánh giá xem đại lượng đo lường có đại diện đúng cho khái niệm cần chứng minh không. Chẳng hạn: số lượng đánh giá (`number_of_reviews_ltm`) chỉ là biến đại diện cho *lượng khách lưu trú*, hoàn toàn không phản ánh mức độ *khách yêu thích* (muốn đo mức độ yêu thích phải dùng điểm số đánh giá `review_scores_rating`).
+3. **Bước 3 · Đánh giá diễn giải (Interpretive Scrutiny)**: Kiểm tra xem lời kết luận có vượt quá phạm vi bằng chứng không. Có đang dùng từ ngữ giật gân, võ đoán hay không.
+4. **Bước 4 · Phán quyết & Viết lại đúng mức (Verdict & Revision)**: Đưa ra phán quyết chính thức (Giữ nguyên / Sửa cách diễn đạt / Bác bỏ hoàn toàn), sau đó soạn thảo lại câu kết luận theo cấu trúc Kim tự tháp Minto.
+
+---
+
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 14)
+
+Hệ thống bài tập dưới đây rèn luyện kỹ năng thực hành kể chuyện dữ liệu, tính toán nghịch lý Simpson và triển khai quy trình thẩm định báo cáo độc lập.
+
+### Thiết lập môi trường và Dữ liệu thử nghiệm
 
 ```python
+import numpy as np
 import pandas as pd
 
-summary = pd.DataFrame({
-    "ky": ["Truoc", "Truoc", "Sau", "Sau"],
-    "nhom": ["A", "B", "A", "B"],
-    "so_mat_hang": [2, 8, 8, 2],
-    "gia_tb": [8.0, 4.0, 7.0, 3.0],
+# Bảng dữ liệu mô phỏng nghịch lý Simpson
+BANG_SIMPSON = pd.DataFrame({
+    "ky": ["T9", "T9", "T6", "T6"],
+    "phan_khuc": ["cao", "re", "cao", "re"],
+    "n": [100, 100, 80, 220],
+    "gia_tb": [60.0, 30.0, 66.0, 33.0], # Mỗi phân khúc đều tăng giá 10%
 })
-summary["tong_gia"] = summary["so_mat_hang"] * summary["gia_tb"]
-overall = summary.groupby("ky").agg(
-    tong=("tong_gia", "sum"), n=("so_mat_hang", "sum")
+
+# Dữ liệu chỗ ở mẫu dùng cho bài toán thẩm định
+DEMO_DS = pd.DataFrame({
+    "id": range(301, 313),
+    "calculated_host_listings_count": [1, 7, 2, 12, 5, 1, 3, 9, 1, 6, 2, 4],
+    "number_of_reviews_ltm": [8, 20, 14, 31, 9, 0, 22, 16, 5, 12, 18, 10],
+    "review_scores_rating": [4.9, 4.6, 4.95, 4.7, 4.5, None, 4.85, 4.6, 4.9, 4.55, 4.8, 4.75],
+})
+```
+
+---
+
+### Bài 1: Sắp xếp đoạn văn báo cáo theo Cấu trúc Kim tự tháp Minto
+
+::: exercise Yêu cầu nghiệp vụ
+Cho 4 câu văn rời rạc thuộc một mục báo cáo về giá thuê tại Santiago:
+- **Câu A**: *"Con số dựa trên 17.688 chỗ ở có giá hợp lệ ở mốc chụp 29/06/2026; 846 chỗ ở không có giá đã được loại và ghi trong qa_report."*
+- **Câu B**: *"Giá thuê điển hình ở Santiago là 59.000 CLP/đêm (khoảng 1,65 triệu đồng), thấp hơn mức trung bình 118.000 CLP."*
+- **Câu C**: *"Trung vị ít bị ảnh hưởng bởi giá ngoại lai: 177 giá trị cực đoan đã gắn cờ làm trung bình cao hơn 44% nhưng gần như không làm thay đổi trung vị."*
+- **Câu D**: *"Kết luận chỉ áp dụng cho giá niêm yết một đêm, chưa gồm phí vệ sinh/dịch vụ; giá thực tế khách trả có thể cao hơn."*
+
+Hãy sắp xếp lại 4 câu này thành một danh sách biến `thu_tu` theo đúng cấu trúc Kim tự tháp Minto: (1) Kết luận chính $\to$ (2) Bằng chứng định lượng $\to$ (3) Phạm vi và giới hạn $\to$ (4) Chi tiết phương pháp.
+:::
+
+::: solution
+#### Lời giải chuẩn xác
+
+```python
+# Sắp xếp theo Kim tự tháp: B (Kết luận) -> C (Bằng chứng) -> D (Giới hạn) -> A (Phương pháp)
+thu_tu = ["B", "C", "D", "A"]
+```
+
+#### Phân tích sư phạm chuyên sâu
+- **B (Đỉnh kim tự tháp)**: Đưa ra ngay thông điệp chủ đạo: con số giá thuê điển hình (trung vị) là 59.000 CLP.
+- **C (Tầng bằng chứng)**: Giải thích vì sao chọn con số trung vị thay vì trung bình (bằng chứng về 177 giá trị cực đoan).
+- **D (Tầng giới hạn)**: Nêu ranh giới của nhận định: giá chưa gồm phí phụ thu.
+- **A (Tầng phương pháp)**: Cung cấp chi tiết cỡ mẫu 17.688 căn hộ phục vụ kiểm toán ở cuối mục hoặc trong phụ lục.
+:::
+
+---
+
+### Bài 2: Đánh giá tính đúng mức của ngôn từ trong các cặp câu kết luận
+
+::: exercise Yêu cầu nghiệp vụ
+Với mỗi cặp số liệu và lời văn dưới đây, hãy gán nhãn `"vua"` (diễn đạt đúng mức) hoặc `"qua"` (diễn đạt quá mức, phóng đại) vào từ điển `nhan`:
+1. `+53.7% YoY`: *"Thị trường tăng trưởng mạnh so với cùng kỳ"*
+2. `+3.0% MoM`: *"Bứt phá thần tốc trong tháng 5"*
+3. `Hệ số tương quan r = 0.081`: *"Nhiệt độ ngày ảnh hưởng rõ rệt tới lượng đánh giá"*
+4. `Đúng 1 chỗ ở đòi ở tối thiểu 730 đêm`: *"Một vài ca cực đoan cần gắn cờ"*
+5. `Nhóm es chiếm 65.4% (quy tắc từ khóa thô)`: *"Chắc chắn 2/3 khách nói tiếng Tây Ban Nha"*
+:::
+
+::: solution
+#### Lời giải chuẩn xác
+
+```python
+nhan = {
+    1: "vua", # +53.7% so cùng kỳ là tăng trưởng mạnh
+    2: "qua", # +3.0% giữa hai tháng chỉ là tăng nhẹ, không thể gọi là bứt phá thần tốc
+    3: "qua", # r = 0.081 là tương quan hầu như không có, không thể nói là ảnh hưởng rõ rệt
+    4: "vua", # Gắn cờ ca cực đoan là hành vi thận trọng đúng mức
+    5: "qua"  # Dùng từ "chắc chắn" khi quy tắc từ khóa chưa được kiểm định là võ đoán
+}
+```
+
+#### Phân tích sư phạm chuyên sâu
+Việc nhận diện các từ ngữ "quá mức" giúp sinh viên rèn luyện tác phong khoa học: từ chối các mỹ từ tiếp thị và trung thành với mức độ tin cậy mà dữ liệu thực tế cho phép.
+:::
+
+---
+
+### Bài 3: Tính toán giá trung bình gộp (Có trọng số)
+
+::: exercise Yêu cầu nghiệp vụ
+Hãy viết hàm `pooled_means(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series` nhận vào bảng dữ liệu phân khúc qua các kỳ.
+
+Hàm tính toán và trả về một Series:
+- Chỉ mục là các kỳ (`ky`).
+- Giá trị là **giá trung bình gộp có trọng số** của kỳ đó theo công thức:
+  $$
+  \bar{X}_{\text{gộp}} = \frac{\sum (n \times \text{gia})}{\sum n}
+  $$
+Tuyệt đối không lấy trung bình cộng giản đơn các dòng và không làm thay đổi bảng dữ liệu đầu vào.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan
+
+```python
+def pooled_means_co_ban(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series:
+    # 1. Tính tổng giá trị của từng dòng
+    tong_tien_dong = bang[n] * bang[gia]
+    
+    # 2. Gom nhóm tính tổng tiền và tổng số lượng theo kỳ
+    tong_tien_ky = tong_tien_dong.groupby(bang[ky]).sum()
+    tong_n_ky = bang[n].groupby(bang[ky]).sum()
+    
+    # 3. Chia lấy trung bình có trọng số
+    gia_gop = tong_tien_ky / tong_n_ky
+    return gia_gop
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa một dòng)
+
+```python
+def pooled_means(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series:
+    return (bang[n] * bang[gia]).groupby(bang[ky]).sum() / bang.groupby(ky)[n].sum()
+```
+
+#### Phân tích so sánh & Trực giác bản chất
+- Đoạn mã trên phản ánh đúng định nghĩa toán học của kỳ vọng phân phối có trọng số. Nếu người dùng gọi `bang.groupby(ky)[gia].mean()`, pandas sẽ tính trung bình cộng giản đơn ($(66 + 33)/2 = 49.5$), hoàn toàn bỏ qua việc phân khúc rẻ có tới 220 căn hộ trong khi phân khúc đắt chỉ có 80 căn hộ.
+:::
+
+---
+
+### Bài 4: Tính toán tỷ trọng cơ cấu của một phân khúc
+
+::: exercise Yêu cầu nghiệp vụ
+Hãy viết hàm `segment_share(bang: pd.DataFrame, phan_khuc: str, ky: str = "ky", nhom: str = "phan_khuc", n: str = "n") -> pd.Series` nhận vào bảng dữ liệu và tên của một phân khúc cụ thể (ví dụ `"re"`).
+
+Hàm tính toán và trả về Series:
+- Chỉ mục là các kỳ.
+- Giá trị là **tỷ trọng số chỗ ở** của phân khúc đó trong từng kỳ (tổng $n$ của phân khúc chia cho tổng $n$ của kỳ đó, thang đo từ 0 đến 1). Kỳ nào không có phân khúc đó thì tỷ trọng bằng 0.
+:::
+
+::: solution
+#### Mã nguồn cài đặt chuẩn
+
+```python
+def segment_share(bang: pd.DataFrame, phan_khuc: str, ky: str = "ky", nhom: str = "phan_khuc", n: str = "n") -> pd.Series:
+    # Tổng số lượng toàn kỳ
+    tong_n_ky = bang.groupby(ky)[n].sum()
+    
+    # Lọc lấy số lượng của phân khúc cần tính
+    bang_pk = bang.loc[bang[nhom] == phan_khuc]
+    n_pk_ky = bang_pk.groupby(ky)[n].sum()
+    
+    # Khớp vào toàn bộ các kỳ (điền 0 nếu kỳ đó vắng bóng phân khúc)
+    ty_trong = (n_pk_ky.reindex(tong_n_ky.index, fill_value=0) / tong_n_ky)
+    return ty_trong
+```
+
+#### Phân tích sư phạm chuyên sâu
+Khi chạy trên bảng `BANG_SIMPSON` với phân khúc `"re"`, kết quả cho thấy tỷ trọng căn hộ giá rẻ đã tăng từ $50.0\%$ (Kỳ T9) lên $73.3\%$ (Kỳ T6). Đây chính là bằng chứng định lượng bóc trần nguyên nhân vì sao giá trung bình gộp lại giảm dù từng nhóm đều tăng giá.
+:::
+
+---
+
+### Bài 5: Thẩm định kết luận — Bước 1: Truy số từ dữ liệu thô
+
+::: exercise Yêu cầu nghiệp vụ
+Một báo cáo do AI sinh ra đưa ra kết luận: *"Chủ nhà chuyên nghiệp được khách yêu thích hơn so với chủ nhà cá nhân — 15,5 so với 12,7 đánh giá/năm."*
+Để thẩm định bước 1 (Truy số), hãy viết hàm `reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series` nhận vào bảng chỗ ở `ds` có cột `calculated_host_listings_count` và `number_of_reviews_ltm`.
+
+Hàm thực hiện:
+- Gom nhóm theo điều kiện boolean: `calculated_host_listings_count >= nguong` (tuyệt đối không thêm cột vào `ds`).
+- Tính giá trị trung bình của cột `number_of_reviews_ltm` cho từng nhóm.
+- Trả về Series có chỉ mục là các giá trị boolean `False` và `True`.
+:::
+
+::: solution
+#### Mã nguồn cài đặt chuẩn
+
+```python
+def reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series:
+    la_chuyen_nghiep = ds["calculated_host_listings_count"].ge(nguong)
+    return ds.groupby(la_chuyen_nghiep)["number_of_reviews_ltm"].mean()
+```
+
+#### Phân tích so sánh & Trực giác bản chất
+- Kết quả chạy trên snapshot thật tại Santiago cho ra đúng con số: nhóm chuyên nghiệp đạt 15.5 và nhóm cá nhân đạt 12.7 đánh giá/năm. Như vậy, bước 1 (Truy số) xác nhận rằng các con số toán học là có thật, không phải ảo giác bịa số.
+:::
+
+---
+
+### Bài 6: Thẩm định kết luận — Bước 2 & Bước 3: Phán quyết chuyên gia
+
+::: exercise Yêu cầu nghiệp vụ
+Dựa trên kết quả ở Bài 5, hãy chọn **một** phán quyết chuẩn xác nhất về mặt khoa học dữ liệu cho kết luận trên:
+- **A.** "Giữ nguyên — số đúng thì kết luận đúng."
+- **B.** "Sửa cách diễn đạt: số đo là LƯỢNG ĐÁNH GIÁ (biến đại diện cho lượng đặt phòng), không đo 'yêu thích'; muốn nói yêu thích phải dùng điểm đánh giá — viết lại thành 'có nhiều đánh giá hơn' và kiểm thêm theo từng nhóm."
+- **C.** "Bác bỏ — số liệu sai."
+
+Gán lựa chọn của bạn vào biến `phan_quyet` (chuỗi `"A"`, `"B"` hoặc `"C"`).
+:::
+
+::: solution
+#### Phán quyết chuẩn xác
+
+```python
+phan_quyet = "B"
+```
+
+#### Phân tích sư phạm chuyên sâu: Lý do phán quyết và Bước 4
+- **Tại sao không chọn A?**
+  Số liệu 15.5 và 12.7 là đúng, nhưng con số này đo lường **số lượng đánh giá trong năm** (`number_of_reviews_ltm`). Lượng đánh giá cao chỉ chứng minh căn hộ đó có nhiều lượt khách ra vào (lượng đặt phòng cao), hoàn toàn không chứng minh khách hàng "yêu thích" căn hộ đó hơn. Một căn hộ giá rẻ ở bến xe có thể có 50 lượt khách/năm nhưng điểm đánh giá chỉ 3.5 sao, trong khi một biệt thự nghỉ dưỡng chỉ đón 5 đoàn khách/năm nhưng đạt tuyệt đối 5.0 sao. Đánh đồng số lượt đánh giá với sự "yêu thích" là lỗi ngụy biện đánh tráo khái niệm.
+- **Tại sao không chọn C?**
+  Số liệu không hề sai, ta không thể bác bỏ sạch trơn công sức tính toán.
+- **Kết luận viết lại đúng mức (Bước 4)**:
+  > *"Tại Santiago, các chỗ ở thuộc sở hữu của chủ nhà chuyên nghiệp ghi nhận lượng đánh giá bình quân cao hơn nhóm cá nhân (15.5 so với 12.7 lượt/năm), phản ánh tần suất đón khách cao hơn. Tuy nhiên, về mức độ hài lòng (điểm số đánh giá), hai nhóm không có sự khác biệt đáng kể (đều đạt trung vị 4.8 sao)."*
+:::
+
+---
+
+### Bài tự làm mở rộng: Quy trình thẩm định báo cáo AI toàn diện
+
+::: exercise Đề bài mở rộng
+Hãy đóng vai một chuyên gia thẩm định dữ liệu độc lập, thiết lập danh mục kiểm toán 4 bước dưới dạng một danh sách kiểm tra (Audit Checklist) có thể thực thi tự động bằng Python để rà soát toàn bộ các câu kết luận trong một báo cáo phân tích kinh doanh.
+:::
+
+::: solution
+#### Mã nguồn khung thẩm định tự động
+
+```python
+class KiemToanBaoCaoAI:
+    def __init__(self, df_goc: pd.DataFrame):
+        self.df = df_goc
+        self.nhat_ky = []
+        
+    def kiem_toan_tuyen_bo(self, id_tuyen_bo: str, noi_dung: str, ham_truy_so, dieu_kien_phuong_phap, tu_khoa_cam: list):
+        ho_so = {"id": id_tuyen_bo, "tuyen_bo": noi_dung, "trang_thai": "DAT", "ghi_chu": []}
+        
+        # 1. Bước 1: Truy số
+        try:
+            so_lieu = ham_truy_so(self.df)
+            ho_so["so_thuc_te"] = so_lieu
+        except Exception as e:
+            ho_so["trang_thai"] = "BAC_BO"
+            ho_so["ghi_chu"].append(f"Lỗi truy số: Không thể tái lập số liệu ({e})")
+            self.nhat_ky.append(ho_so)
+            return
+            
+        # 2. Bước 2: Kiểm tra phương pháp
+        if not dieu_kien_phuong_phap(self.df):
+            ho_so["trang_thai"] = "CAN_SUA"
+            ho_so["ghi_chu"].append("Phương pháp có tì vết: Mất cân bằng cơ cấu hoặc chọn mốc thiên lệch")
+            
+        # 3. Bước 3: Rà soát ngôn từ phóng đại
+        for tu in tu_khoa_cam:
+            if tu.lower() in noi_dung.lower():
+                ho_so["trang_thai"] = "CAN_SUA"
+                ho_so["ghi_chu"].append(f"Ngôn từ quá mức: Chứa từ khóa phóng đại '{tu}'")
+                
+        self.nhat_ky.append(ho_so)
+        
+    def xuat_bao_cao(self):
+        return pd.DataFrame(self.nhat_ky)
+
+# Thử nghiệm thẩm định trên tuyên bố của Bài 5
+kiem_toan = KiemToanBaoCaoAI(DEMO_DS)
+kiem_toan.kiem_toan_tuyen_bo(
+    id_tuyen_bo="TB_01",
+    noi_dung="Chủ nhà chuyên nghiệp được khách yêu thích hơn hẳn, bùng nổ 15.5 đánh giá",
+    ham_truy_so=lambda df: reviews_by_host_type(df).to_dict(),
+    dieu_kien_phuong_phap=lambda df: "review_scores_rating" in df.columns, # Kiểm tra xem có dùng đúng cột đo sự yêu thích
+    tu_khoa_cam=["hơn hẳn", "bùng nổ", "thần kỳ", "chắc chắn"]
 )
-overall["gia_tb"] = overall["tong"] / overall["n"]
-print(overall["gia_tb"].to_dict())  # Sau: 6.2, Truoc: 4.8
+
+print("KẾT QUẢ KIỂM TOÁN ĐỘC LẬP:")
+print(kiem_toan.xuat_bao_cao().to_string(index=False))
 ```
 
-### Vì sao trung bình chung đảo chiều khi từng nhóm đều giảm giá?
+#### Bình luận chuyên môn
+Khung kiểm toán trên biến việc đọc báo cáo thành một quy trình kỹ nghệ có cấu trúc. Khi làm việc với các hệ thống AI sinh báo cáo tự động, một lớp kiểm toán độc lập bằng quy tắc là chốt chặn an toàn bắt buộc để bảo vệ doanh nghiệp trước các quyết định đầu tư sai lầm.
+:::
 
-Hãy phân tích phép tính đằng sau hai con số tổng hợp:
-- **Kỳ trước**:
-  - Nhóm A có 2 mặt hàng với giá trung bình 8.0 nghìn đồng. Tổng giá trị nhóm A là $2 \times 8.0 = 16.0$.
-  - Nhóm B có 8 mặt hàng với giá trung bình 4.0 nghìn đồng. Tổng giá trị nhóm B là $8 \times 4.0 = 32.0$.
-  - Tổng giá trị của cả 10 mặt hàng là $16.0 + 32.0 = 48.0$.
-  - Giá trung bình chung kỳ trước là:
-    $$\bar{X}_{\text{Trước}} = \frac{48.0}{10} = 4.8 \text{ (nghìn đồng)}$$
+---
 
-- **Kỳ sau**:
-  - Nhóm A hạ giá xuống còn 7.0 nghìn đồng (giảm 1.0 nghìn đồng). Nhóm này mở rộng quy mô lên 8 mặt hàng. Tổng giá trị là $8 \times 7.0 = 56.0$.
-  - Nhóm B hạ giá xuống còn 3.0 nghìn đồng (giảm 1.0 nghìn đồng). Nhóm này thu hẹp còn 2 mặt hàng. Tổng giá trị là $2 \times 3.0 = 6.0$.
-  - Tổng giá trị của cả 10 mặt hàng là $56.0 + 6.0 = 62.0$.
-  - Giá trung bình chung kỳ sau là:
-    $$\bar{X}_{\text{Sau}} = \frac{62.0}{10} = 6.2 \text{ (nghìn đồng)}$$
+## 6. Tổng kết và Đọc thêm
 
-Giá trung bình chung tăng vọt từ 4.8 lên 6.2 nghìn đồng (tăng $29.2\%$), dù không có bất kỳ mặt hàng nào tăng giá.
-
-Nguyên nhân cốt lõi nằm ở **sự dịch chuyển trọng số cơ cấu**. Giá trung bình của toàn thể không phải là trung bình cộng giản đơn của hai con số nhóm, mà là trung bình có trọng số theo quy mô:
-$$\bar{X} = \sum w_i \bar{X}_i \quad \text{với} \quad w_i = \frac{n_i}{N}$$
-
-Ở kỳ trước, nhóm B (nhóm giá rẻ) chiếm tới $80\%$ cơ cấu ($w_B = 0.8$), kéo giá trung bình chung xuống thấp. Ở kỳ sau, cơ cấu đảo ngược hoàn toàn: nhóm A (nhóm giá đắt) chiếm tới $80\%$ cơ cấu ($w_A = 0.8$), kéo giá trung bình chung tăng mạnh.
-
-![Biểu đồ minh họa: giá nhóm A giảm từ 8 xuống 7, nhóm B từ 4 xuống 3, còn trung bình chung tăng từ 4.8 lên 6.2 do cơ cấu nhóm thay đổi](img/lec-14/co-cau-nhom.svg)
-
-Nếu một nhà phân tích chỉ nhìn vào con số tổng thể và báo cáo rằng "giá cả đang leo thang", họ đã đưa ra một nhận định sai lệch về hành vi định giá sản phẩm. Ngược lại, nếu chỉ nói "giá từng nhóm đều giảm", họ lại bỏ qua sự thật rằng khách hàng trên thực tế đang phải chi trả nhiều tiền hơn do mua nhiều sản phẩm nhóm đắt tiền hơn. Một báo cáo trung thực bắt buộc phải trình bày cả hai tầng thông tin: xu hướng cục bộ trong từng nhóm và sự thay đổi trong cơ cấu danh mục.
-
-## 2. Mẫu số là linh hồn của chỉ số: Phân biệt Phần trăm và Điểm phần trăm
-
-Một cái bẫy kinh điển khác trong phân tích dữ liệu là việc đưa ra các con số đếm tuyệt đối mà tước bỏ đi mẫu số quy chiếu, hoặc sử dụng nhập nhằng giữa hai khái niệm: thay đổi tương đối và chênh lệch tuyệt đối.
-
-Hãy xem xét bài toán kiểm soát chất lượng qua hai chu kỳ sản xuất:
-
-```python
-before_rate = 5 / 100
-after_rate = 8 / 200
-count_growth = (8 - 5) / 5
-rate_change = (after_rate - before_rate) / before_rate
-print(before_rate, after_rate, count_growth, rate_change)
-# 0.05, 0.04, 0.6, xấp xỉ -0.2
-```
-
-Đoạn mã trên phơi bày hai khía cạnh đối lập:
-1. **Số lượng lỗi tuyệt đối**: Tăng từ 5 sản phẩm lên 8 sản phẩm. Mức tăng trưởng số lượng lỗi là:
-   $$\text{Tăng trưởng số lượng} = \frac{8 - 5}{5} = 0.6 = 60\%$$
-2. **Tỷ lệ lỗi trên quy mô sản xuất**: Kỳ trước có 5 lỗi trên 100 sản phẩm ($5\%$). Kỳ sau có 8 lỗi trên 200 sản phẩm ($4\%$).
-
-Nếu một bài báo giật tít: "Số lượng sản phẩm lỗi tăng vọt 60%", thông tin đó hoàn toàn đúng về mặt số đếm nhưng lại tạo ra ấn tượng sai lầm rằng dây chuyền đang hoạt động tồi đi. Thực tế, quy mô sản xuất đã tăng gấp đôi, và tỷ lệ lỗi trên mỗi đơn vị thành phẩm đã được cải thiện rõ rệt.
-
-### Quy chuẩn ngôn ngữ: Điểm phần trăm (pp) so với Phần trăm (%)
-
-Khi mô tả sự thay đổi của một đại lượng vốn dĩ đã là tỷ lệ phần trăm (như tỷ lệ lỗi từ $5\%$ xuống $4\%$), tiếng Việt học thuật phân biệt rạch ròi hai cách diễn đạt:
-
-- **Chênh lệch tuyệt đối (Điểm phần trăm - Percentage Points)**:
-  $$4\% - 5\% = -1\% \implies \text{Giảm 1 điểm phần trăm}$$
-- **Thay đổi tương đối (Phần trăm - Percent)**:
-  $$\frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\% \implies \text{Giảm 20\% so với tỷ lệ ban đầu}$$
-
-Nếu bạn viết câu văn mập mờ: "Tỷ lệ lỗi giảm 1%", người nghe trong ngành tài chính hoặc kiểm toán sẽ hiểu rằng tỷ lệ giảm từ $5\%$ xuống còn $5\% \times (1 - 0.01) = 4.95\%$. Sự nhầm lẫn giữa 1 điểm phần trăm và 1 phần trăm có thể gây ra sai số hàng triệu đơn vị trong các dự báo kinh tế. Mọi chỉ số tỷ lệ bắt buộc phải công khai rõ ràng: tử số đại diện cho cái gì, mẫu số đại diện cho quần thể nào, và đơn vị đo lường cụ thể là gì.
-
-## 3. Quy trình thẩm định dữ liệu năm bước
-
-Trước khi đóng dấu phê duyệt một kết quả phân tích hoặc ký tên vào một báo cáo kỹ thuật, người làm dữ liệu chuyên nghiệp phải thực hiện quy trình kiểm toán ngược từ câu kết luận quay về nguồn gốc bảng thô:
-
-| Tầng thẩm định | Câu hỏi kiểm toán cốt lõi | Bằng chứng cần kiểm tra |
+| Trụ cột kể chuyện | Khái niệm phương pháp luận | Bài học sư phạm & Đạo đức |
 | :--- | :--- | :--- |
-| **1. Khung câu hỏi** | Nghiên cứu muốn trả lời điều gì? Quần thể quan sát là ai? | Phạm vi thời gian, không gian và các giả định loại trừ. |
-| **2. Làm sạch & Định kiểu** | Dữ liệu đầu vào có bị biến dạng không? | Kiểu dữ liệu từng cột, các giá trị bị khuyết, khóa chính và biên bản loại trừ dữ liệu lỗi. |
-| **3. Ghép nối & Tổng hợp** | Phép kết nối có sinh ra trùng lặp ngoài ý muốn? | Số lượng dòng trước và sau khi ghép, việc tính đúng trọng số khi nhóm, và quy ước xử lý mẫu số bằng không. |
-| **4. Trực quan hóa** | Biểu đồ có truyền tải trung thực số liệu không? | Điểm gốc trục tọa độ, tính nhất quán của thang đo, và nhãn đơn vị đo lường trên các trục. |
-| **5. Kết luận & Khuyến nghị** | Câu văn có nói vượt quá phạm vi bằng chứng không? | Phân định rạch ròi giữa quan sát tương quan và quy luật nhân quả. |
+| **Kim tự tháp Minto** | Kết luận $\to$ Bằng chứng $\to$ Giới hạn $\to$ Phương pháp | Tôn trọng thời gian của người nghe; đưa thông điệp cốt lõi lên hàng đầu. |
+| **Nghịch lý Simpson** | $\bar{X} = \sum w_i \bar{X}_i$; cơ cấu $w_i$ dịch chuyển | Không bao giờ tin vào con số trung bình gộp khi cơ cấu tỷ trọng giữa hai kỳ thay đổi. |
+| **Ngôn ngữ đúng mức** | Phân biệt $\%$ và điểm phần trăm; tương quan vs nhân quả | Khiêm nhường trước số liệu; từ chối các tính từ giật gân, phóng đại. |
+| **Quy trình thẩm định 4 bước** | Truy số $\to$ Phương pháp $\to$ Diễn giải $\to$ Phán quyết | Trách nhiệm học thuật thuộc về con người; luôn kiểm toán độc lập các báo cáo do AI tạo. |
 
-### Phương pháp kiểm thử cục bộ bằng tay
+### Tài liệu tham khảo học thuật
 
-Đây là một cách người ta hay dùng để kiểm chứng các đường ống tổng hợp phức tạp: trích xuất một mẫu nhỏ gồm 10 đến 20 dòng từ bảng dữ liệu gốc, dùng giấy bút hoặc bảng tính để tính tay từng phép cộng, phép nhân trọng số, rồi đối chiếu từng bước với kết quả do hàm `groupby` hay `agg` tạo ra. Phép kiểm thử vi mô này giúp phát hiện ngay lập tức các lỗi tiềm ẩn như nhân đôi bản ghi khi nối bảng (fan-out bug) hay tính sai trung bình của trung bình.
-
-Dù mã nguồn được viết bởi chuyên gia lâu năm hay được tạo ra tự động bởi các trợ lý trí tuệ nhân tạo, quy trình thẩm định nội dung trên vẫn không thay đổi. Trách nhiệm học thuật và đạo đức nghề nghiệp luôn thuộc về con người ký tên dưới bản phân tích.
-
-## 4. Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm
-
-Một câu chuyện dữ liệu xuất sắc không phải là một bài văn hoa mỹ với những tính từ cảm thán sáo rỗng. Nó là một cấu trúc lập luận logic, minh bạch và khiêm nhường trước sự thật khách quan.
-
-Hãy quan sát cách xây dựng một đoạn kết luận mẫu mực cho tình huống thay đổi cơ cấu ở Mục 1:
-
-> "Trong tập dữ liệu khảo sát gồm 10 mặt hàng ở mỗi chu kỳ, giá bán trung bình chung toàn doanh nghiệp ghi nhận mức tăng từ 4.8 lên 6.2 nghìn đồng (tăng 29.2%). Tuy nhiên, khi bóc tách theo từng phân khúc, giá bán trung bình của cả nhóm A và nhóm B đều ghi nhận mức giảm 1.0 nghìn đồng. Sự gia tăng của trung bình chung hoàn toàn xuất phát từ sự dịch chuyển cơ cấu danh mục: tỷ trọng mặt hàng nhóm A (phân khúc giá cao) đã tăng mạnh từ 20% lên 80%. Dữ liệu quan sát hiện tại chỉ phản ánh sự dịch chuyển về mặt cơ cấu hàng hóa, chưa đủ căn cứ để kết luận nguyên nhân xuất phát từ sự thay đổi trong sở thích của người tiêu dùng hay do chiến lược cung ứng của doanh nghiệp."
-
-Đoạn văn trên đáp ứng toàn diện các tiêu chuẩn học thuật:
-- **Nêu rõ hiện tượng định lượng**: Có số liệu cụ thể kèm đơn vị tính rõ ràng.
-- **Mở bước phân tích tầng sâu**: Giải thích cơ chế toán học phía sau hiện tượng thay vì chấp nhận kết luận bề mặt.
-- **Giữ vững giới hạn suy diễn**: Không vội vã khẳng định một mối quan hệ nhân quả khi thiết kế nghiên cứu chưa cho phép.
-
-Nếu bạn muốn khẳng định "công cụ X giúp nâng cao năng suất", bạn không thể chỉ dựa vào một biểu đồ cho thấy những người dùng công cụ X có điểm số cao hơn. Nhóm người chủ động dùng công cụ X có thể vốn dĩ đã có nền tảng năng lực, sự chăm chỉ hoặc điều kiện làm việc vượt trội hơn. Để chứng minh tác động nhân quả, bạn bắt buộc phải thực hiện các thử nghiệm ngẫu nhiên có kiểm soát (A/B testing) hoặc áp dụng các kỹ thuật kinh tế lượng phức tạp để loại bỏ các biến gây nhiễu.
-
-## 5. Bài tập tự luyện
-
-::: exercise So sánh trung bình số học giản đơn và trung bình có trọng số
-Từ dữ liệu ở Mục 1, giả sử một nhân viên lấy trung bình cộng giản đơn của hai mức giá trung bình nhóm cho từng kỳ:
-- Kỳ trước: $(8.0 + 4.0) / 2 = 6.0$
-- Kỳ sau: $(7.0 + 3.0) / 2 = 5.0$
-
-Nhân viên đó kết luận rằng giá trung bình chung đã giảm từ 6.0 xuống 5.0 nghìn đồng.
-1. Phép tính của nhân viên đó sai ở điểm nào?
-2. Vì sao kết quả đó lại mâu thuẫn hoàn toàn với kết quả 4.8 và 6.2 nghìn đồng tính được từ hàm `groupby`?
-:::
-
-::: solution
-1. Phép tính của nhân viên sai lầm vì đã gán **trọng số bằng nhau ($50\% - 50\%$)** cho hai nhóm mặt hàng ở cả hai kỳ. Phép tính này bỏ qua hoàn toàn số lượng mặt hàng thực tế của từng nhóm.
-2. Kết quả tính bằng `groupby` phản ánh giá trung bình tính trên từng mặt hàng đơn lẻ. Vì số lượng mặt hàng ở mỗi nhóm là khác nhau (kỳ trước nhóm B chiếm 8/10, kỳ sau nhóm A chiếm 8/10), ta bắt buộc phải nhân giá của từng nhóm với tỷ trọng số lượng tương ứng. Khi tính đúng trọng số thực tế, trung bình chung kỳ trước là 4.8 và kỳ sau là 6.2 nghìn đồng. Việc bỏ qua trọng số đã làm đảo ngược hoàn toàn chiều hướng biến thiên của đại lượng.
-:::
-
-::: exercise Phân biệt thay đổi phần trăm và điểm phần trăm
-Tỷ lệ khách hàng rời bỏ dịch vụ của một công ty viễn thông giảm từ $5\%$ ở quý 1 xuống còn $4\%$ ở quý 2.
-1. Hãy diễn đạt mức độ cải thiện này theo khái niệm điểm phần trăm.
-2. Hãy diễn đạt mức độ cải thiện này theo khái niệm tỷ lệ phần trăm thay đổi tương đối.
-3. Vì sao không được viết một cách vắn tắt là "tỷ lệ rời bỏ giảm 1%"?
-:::
-
-::: solution
-1. Theo điểm phần trăm (chênh lệch tuyệt đối):
-   $$\text{Chênh lệch} = 4\% - 5\% = -1\%$$
-   Tức là giảm 1 điểm phần trăm.
-2. Theo tỷ lệ phần trăm tương đối:
-   $$\text{Tỷ lệ thay đổi} = \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\%$$
-   Tức là giảm 20% so với mức ban đầu.
-3. Không được viết "giảm 1%" vì câu văn này tạo ra sự nhập nhằng nguy hiểm: người đọc có thể hiểu là tỷ lệ giảm đi $1\%$ của mức $5\%$ ban đầu, tức là còn $5\% \times (1 - 0.01) = 4.95\%$. Cách diễn đạt chuẩn mực trong báo cáo chuyên nghiệp bắt buộc phải ghi rõ là "giảm 1 điểm phần trăm" hoặc "giảm 20% so với kỳ trước".
-:::
-
-::: exercise Phân định giữa tương quan quan sát và quy luật nhân quả
-Một nghiên cứu nội bộ tại một trường đại học ghi nhận rằng: sinh viên tham gia đầy đủ các buổi phụ đạo có điểm thi trung bình cuối kỳ là 8.5, trong khi sinh viên không tham gia chỉ đạt điểm trung bình là 6.0.
-Một cán bộ quản lý đào tạo kết luận: "Chương trình phụ đạo đã giúp nâng điểm thi của sinh viên thêm 2.5 điểm".
-Kết luận trên có chuẩn xác về mặt khoa học dữ liệu không? Những yếu tố gây nhiễu tiềm ẩn nào có thể giải thích cho chênh lệch này?
-:::
-
-::: solution
-Kết luận trên **hoàn toàn chưa có đủ cơ sở khoa học**. Cán bộ quản lý đã đánh đồng mối liên hệ tương quan quan sát được trong dữ liệu thực nghiệm thành một khẳng định tác động nhân quả.
-
-Chênh lệch 2.5 điểm có thể bị chi phối bởi các yếu tố gây nhiễu (confounding variables) mang tính hệ thống:
-- **Động lực và sự tự giác**: Những sinh viên chủ động đăng ký tham gia lớp phụ đạo thường vốn dĩ là những người có ý thức học tập cao hơn, chăm chỉ hơn và dành nhiều thời gian tự học hơn. Chính động lực nội tại này mới là nguyên nhân chính giúp họ đạt điểm cao, chứ chưa chắc hoàn toàn do nội dung bài giảng phụ đạo.
-- **Nền tảng kiến thức ban đầu**: Có thể nhóm tham gia phụ đạo có điều kiện học tập hoặc sự chuẩn bị tốt hơn từ trước.
-
-Để khẳng định lớp phụ đạo thực sự làm tăng điểm số thêm bao nhiêu, nhà nghiên cứu cần thiết kế một thử nghiệm ngẫu nhiên (chẳng hạn bốc thăm ngẫu nhiên sinh viên vào nhóm phụ đạo và nhóm đối chứng) hoặc sử dụng các kỹ thuật thống kê nâng cao (như phương pháp bắt cặp điểm xu hướng - Propensity Score Matching) để kiểm soát các yếu tố gây nhiễu.
-:::
-
-::: exercise Bóc trần Nghịch lý Simpson trong thử nghiệm A/B và quy trình thẩm định 4 bước
-Một doanh nghiệp thương mại điện tử triển khai thử nghiệm A/B giữa Giao diện A (cũ) và Giao diện B (mới). Dữ liệu thu thập trên 2.000 người dùng phân bổ theo thiết bị truy cập như sau:
-- **Trên Thiết bị Di động (Mobile)**:
-  - Giao diện A: 100 lượt truy cập, 10 lượt mua hàng (tỷ lệ $10.0\%$).
-  - Giao diện B: 900 lượt truy cập, 120 lượt mua hàng (tỷ lệ $13.3\%$).
-- **Trên Máy tính để bàn (Desktop)**:
-  - Giao diện A: 900 lượt truy cập, 810 lượt mua hàng (tỷ lệ $90.0\%$).
-  - Giao diện B: 100 lượt truy cập, 95 lượt mua hàng (tỷ lệ $95.0\%$).
-
-Trưởng phòng kinh doanh đọc số liệu tổng gộp và kết luận:
-*"Giao diện A có tỷ lệ chuyển đổi trung bình là 82.0%, vượt trội hoàn toàn so với Giao diện B chỉ đạt 21.5%. Do đó, giao diện mới B là một thảm họa thất bại và cần bị hủy bỏ ngay lập tức!"*
-
-Yêu cầu:
-1. Hãy viết mã Python chứng minh cơ chế hình thành của Nghịch lý Simpson trong tình huống trên.
-2. Đóng vai một chuyên gia thẩm định dữ liệu, triển khai quy trình thẩm định 4 bước để vạch trần sai lầm phương pháp và viết lại kết luận khoa học trung thực.
-:::
-
-::: solution
-#### Cách 1: Tiếp cận Căn bản & Trực quan (Tính toán trung bình gộp - Mắc bẫy nghịch lý Simpson)
-Một cách người ta hay lầm tưởng khi mới phân tích là cộng dồn toàn bộ số chuyển đổi và chia cho tổng số lượt truy cập:
-
-```python
-import pandas as pd
-
-# Tạo bảng dữ liệu thử nghiệm
-data = pd.DataFrame([
-    {"giao_dien": "A", "thiet_bi": "Mobile", "truy_cap": 100, "chuyen_doi": 10},
-    {"giao_dien": "A", "thiet_bi": "Desktop", "truy_cap": 900, "chuyen_doi": 810},
-    {"giao_dien": "B", "thiet_bi": "Mobile", "truy_cap": 900, "chuyen_doi": 120},
-    {"giao_dien": "B", "thiet_bi": "Desktop", "truy_cap": 100, "chuyen_doi": 95},
-])
-
-# 1. Tính toán trung bình gộp theo giao diện
-tong_gop = data.groupby("giao_dien")[["truy_cap", "chuyen_doi"]].sum()
-tong_gop["ty_le_gop"] = (tong_gop["chuyen_doi"] / tong_gop["truy_cap"]) * 100
-print("Báo cáo gộp gây hiểu lầm:\n", tong_gop)
-# Kết quả gộp: Giao diện A đạt 82.0%, Giao diện B chỉ đạt 21.5%!
-```
-
-#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Phân rã kiểm soát biến gây nhiễu và chuẩn hóa cơ cấu trọng số)
-Nhà khoa học dữ liệu chuyên nghiệp sẽ phân tầng (*Stratification*) theo thiết bị để nhận diện bản chất thật:
-
-```python
-# 2. Phân rã theo từng loại thiết bị
-data["ty_le_nhom"] = (data["chuyen_doi"] / data["truy_cap"]) * 100
-bang_phan_tang = data.pivot(index="thiet_bi", columns="giao_dien", values="ty_le_nhom")
-print("\nBáo cáo phân tầng chuẩn mực (% chuyển đổi):\n", bang_phan_tang)
-
-# Kết quả phân tầng chứng minh:
-# - Trên Mobile: Giao diện B đạt 13.3% > Giao diện A (10.0%)
-# - Trên Desktop: Giao diện B đạt 95.0% > Giao diện A (90.0%)
-# -> GIAO DIỆN B VƯỢT TRỘI TRÊN TOÀN BỘ CÁC PHÂN KHÚC!
-```
-
-#### Quy trình Thẩm định 4 Bước của Chuyên gia Dữ liệu
-1. **Bước 1 · Truy số (Check the Numbers)**:
-   - Con số $82.0\%$ của A và $21.5\%$ của B là hoàn toàn có thật về mặt số học. Tuy nhiên, cơ cấu mẫu cực kỳ mất cân bằng: $90\%$ lưu lượng của Giao diện A đến từ Desktop (nơi người dùng vốn dĩ dễ chuyển đổi), trong khi $90\%$ lưu lượng của Giao diện B lại bị đẩy sang Mobile (nơi chuyển đổi khó khăn hơn rất nhiều).
-2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**:
-   - Việc so sánh trung bình gộp khi cơ cấu tỷ trọng giữa các nhánh thử nghiệm bị lệch pha nghiêm trọng là một sai lầm chết người về thiết kế thử nghiệm A/B (lỗi chia lưu lượng không ngẫu nhiên đồng đều).
-3. **Bước 3 · Đánh giá diễn giải (Interpretive Scrutiny)**:
-   - Kết luận "Giao diện B là một thảm họa" là một kết luận đảo ngược hoàn toàn sự thật. Giao diện B thực chất ưu việt hơn Giao diện A trên từng thiết bị đơn lẻ.
-4. **Bước 4 · Phán quyết & Viết lại đúng mức (Verdict & Revision)**:
-   - **Phán quyết**: Bác bỏ đề xuất hủy bỏ Giao diện B.
-   - **Kết luận viết lại theo cấu trúc Kim tự tháp Minto**:
-     > *"Giao diện mới B nâng cao hiệu quả chuyển đổi trên mọi loại thiết bị: tăng từ 10.0% lên 13.3% trên Mobile (tăng 33% tương đối) và tăng từ 90.0% lên 95.0% trên Desktop. Con số trung bình gộp thấp của B hoàn toàn xuất phát từ việc hệ thống phân bổ sai lệch 90% lưu lượng của B vào kênh Mobile. Đề xuất: Giữ nguyên Giao diện B và sửa đổi thuật toán chia tải ngẫu nhiên 50/50 trên từng thiết bị."*
-:::
-
-## 6. Nguồn và đọc thêm
-
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation) và [Chương 13: Data Analysis Examples](https://wesmckinney.com/book/data-analysis-examples).
-- Hiện tượng nghịch lý Simpson trong thống kê: Simpson, E. H. (1951), *The Interpretation of Interaction in Contingency Tables*, Journal of the Royal Statistical Society.
-- Phương pháp luận phân tích nhân quả: Pearl, J., & Mackenzie, D., *The Book of Why: The New Science of Cause and Effect*, Basic Books.
-- Khung lý thuyết thống kê trên StudyHub: [Hiểu thế giới bằng dữ liệu](/xac-suat-thong-ke/bai-giang/00-hieu-the-gioi-bang-du-lieu.md).
-- [Bài giảng tham khảo môn Xử lý dữ liệu (iaidev)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-14-ke-chuyen-bang-du-lieu.html).
+- Barbara Minto, *The Pyramid Principle: Logic in Writing and Thinking*, Financial Times / Prentice Hall.
+- Edward H. Simpson, *The Interpretation of Interaction in Contingency Tables*, Journal of the Royal Statistical Society, 1951.
+- Judea Pearl & Dana Mackenzie, *The Book of Why: The New Science of Cause and Effect*, Basic Books, 2018.
+- Darrell Huff, *How to Lie with Statistics*, W. W. Norton & Company.
+- Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).
