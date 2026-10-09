@@ -499,8 +499,8 @@ print("Đã tạo tệp bản đồ tương tác HTML độc lập tại figures
 
 ### Tài liệu tham khảo học thuật
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization).
 - Edward R. Tufte, *The Visual Display of Quantitative Information*, Graphics Press, 2001 (Chương 2: *Graphical Integrity* và *Lie Factor*).
-- Thư viện Seaborn: [Official Tutorial — Categorical Plots](https://seaborn.pydata.org/tutorial/categorical.html).
-- Thư viện GeoPandas: [GeoPandas Official Documentation — Mapping and Plotting Tools](https://geopandas.org/en/stable/docs/user_guide/mapping.html).
+- Thư viện Seaborn: [Official Tutorial: Categorical Plots](https://seaborn.pydata.org/tutorial/categorical.html).
+- Thư viện GeoPandas: [GeoPandas Official Documentation: Mapping and Plotting Tools](https://geopandas.org/en/stable/docs/user_guide/mapping.html).
 - Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).

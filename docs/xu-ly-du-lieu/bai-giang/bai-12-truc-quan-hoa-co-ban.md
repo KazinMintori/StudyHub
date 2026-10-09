@@ -523,8 +523,8 @@ Việc biến các quy tắc trực quan hóa thành các câu lệnh `assert` k
 
 ### Tài liệu tham khảo học thuật
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization).
-- Matplotlib Official Documentation — [Object-Oriented API Guide](https://matplotlib.org/stable/users/explain/quick_start.html).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization).
+- Tài liệu chính thức Matplotlib: [Object-Oriented API Guide](https://matplotlib.org/stable/users/explain/quick_start.html).
 - Edward R. Tufte, *The Visual Display of Quantitative Information*, Graphics Press, 2001.
 - William S. Cleveland & Robert McGill, *Graphical Perception: Theory, Experimentation, and Application*, JASA, 1984.
 - Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).

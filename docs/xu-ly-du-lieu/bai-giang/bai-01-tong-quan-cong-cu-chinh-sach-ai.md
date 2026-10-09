@@ -36,7 +36,7 @@ Môn học **Lập trình xử lý dữ liệu** được thiết kế nhằm x�
 
 ## 2. Ngăn xếp Tính toán Khoa học Python (Scientific Python Stack)
 
-### 2.1. Python — Ngôn ngữ "keo dán" của Khoa học Máy tính
+### 2.1. Python: Ngôn ngữ "keo dán" của Khoa học Máy tính
 Tại sao Python, một ngôn ngữ thông dịch (*interpreted language*) với tốc độ thực thi các vòng lặp thuần túy chậm hơn hàng chục lần so với C hay C++, lại trở thành ngôn ngữ thống trị tuyệt đối trong lĩnh vực dữ liệu và AI?
 
 Câu trả lời nằm ở vai trò **ngôn ngữ keo (*glue language*)**. Các nhà thiết kế hệ thống tính toán đã khéo léo kết hợp hai thế giới:
@@ -365,7 +365,7 @@ assert np.isclose(ty_le_nc, 3 / 5)
 
 ---
 
-::: exercise Bài 1.4: Đóng gói Báo cáo Thị trường Độc lập (Tự làm mở — E1)
+::: exercise Bài 1.4: Đóng gói Báo cáo Thị trường Độc lập (Bài tập mở rộng E1)
 Hãy thiết kế một hàm độc lập mang tên `dong_goi_bao_cao_thi_truong(data: pd.DataFrame) -> dict` nhận vào một DataFrame chỗ ở bất kỳ và trả về một từ điển tổng hợp các chỉ số quan trọng phục vụ ban giám đốc:
 - `tong_so_cho_o`: Số lượng chỗ ở hợp lệ.
 - `gia_trung_binh`: Giá thuê trung bình mỗi đêm (làm tròn đến hàng đơn vị).
@@ -436,7 +436,7 @@ for k, v in bao_cao_kinh_doanh.items():
 
 ## 7. Nguồn Tham khảo & Đọc thêm
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics).
 - Tài liệu chính thức về Hạt nhân tương tác: [IPython Architecture and Messaging Protocol](https://ipython.readthedocs.io/en/stable/development/messaging.html).
-- Hướng dẫn chuẩn hóa môi trường: [Python Virtual Environments — Real Python](https://realpython.com/python-virtual-environments-a-primer/).
+- Hướng dẫn chuẩn hóa môi trường: [Python Virtual Environments (Real Python)](https://realpython.com/python-virtual-environments-a-primer/).
 - [Bài giảng tham khảo môn Xử lý dữ liệu (IAI UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html).

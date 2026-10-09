@@ -540,8 +540,8 @@ Khung quy tắc 4 thành phần (Tên – Điều kiện – Lý do – Hành đ
 
 ### Tài liệu tham khảo học thuật
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 7: Data Cleaning and Preparation](https://wesmckinney.com/book/data-cleaning).
-- pandas Official Documentation — [Working with missing data](https://pandas.pydata.org/docs/user_guide/missing_data.html).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 7: Data Cleaning and Preparation](https://wesmckinney.com/book/data-cleaning).
+- Tài liệu chính thức pandas: [Working with missing data](https://pandas.pydata.org/docs/user_guide/missing_data.html).
 - Donald B. Rubin, *Inference and Missing Data*, Biometrika, 1976.
 - John W. Tukey, *Exploratory Data Analysis*, Addison-Wesley, 1977.
 - Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).

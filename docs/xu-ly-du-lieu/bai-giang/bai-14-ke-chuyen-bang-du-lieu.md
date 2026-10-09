@@ -303,10 +303,10 @@ Khi chạy trên bảng `BANG_SIMPSON` với phân khúc `"re"`, kết quả cho
 
 ---
 
-### Bài 5: Thẩm định kết luận — Bước 1: Truy số từ dữ liệu thô
+### Bài 5: Thẩm định kết luận (Bước 1: Truy số từ dữ liệu thô)
 
 ::: exercise Yêu cầu nghiệp vụ
-Một báo cáo do AI sinh ra đưa ra kết luận: *"Chủ nhà chuyên nghiệp được khách yêu thích hơn so với chủ nhà cá nhân — 15,5 so với 12,7 đánh giá/năm."*
+Một báo cáo do AI sinh ra đưa ra kết luận: *"Chủ nhà chuyên nghiệp được khách yêu thích hơn so với chủ nhà cá nhân, với 15,5 so với 12,7 đánh giá/năm."*
 Để thẩm định bước 1 (Truy số), hãy viết hàm `reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series` nhận vào bảng chỗ ở `ds` có cột `calculated_host_listings_count` và `number_of_reviews_ltm`.
 
 Hàm thực hiện:
@@ -330,13 +330,13 @@ def reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series:
 
 ---
 
-### Bài 6: Thẩm định kết luận — Bước 2 & Bước 3: Phán quyết chuyên gia
+### Bài 6: Thẩm định kết luận (Bước 2 và Bước 3: Phán quyết chuyên gia)
 
 ::: exercise Yêu cầu nghiệp vụ
 Dựa trên kết quả ở Bài 5, hãy chọn **một** phán quyết chuẩn xác nhất về mặt khoa học dữ liệu cho kết luận trên:
-- **A.** "Giữ nguyên — số đúng thì kết luận đúng."
-- **B.** "Sửa cách diễn đạt: số đo là LƯỢNG ĐÁNH GIÁ (biến đại diện cho lượng đặt phòng), không đo 'yêu thích'; muốn nói yêu thích phải dùng điểm đánh giá — viết lại thành 'có nhiều đánh giá hơn' và kiểm thêm theo từng nhóm."
-- **C.** "Bác bỏ — số liệu sai."
+- **A.** "Giữ nguyên vì số đúng thì kết luận đúng."
+- **B.** "Sửa cách diễn đạt: số đo là LƯỢNG ĐÁNH GIÁ (biến đại diện cho lượng đặt phòng), không đo 'yêu thích'; muốn nói yêu thích phải dùng điểm đánh giá, vì vậy viết lại thành 'có nhiều đánh giá hơn' và kiểm thêm theo từng nhóm."
+- **C.** "Bác bỏ do số liệu sai."
 
 Gán lựa chọn của bạn vào biến `phan_quyet` (chuỗi `"A"`, `"B"` hoặc `"C"`).
 :::

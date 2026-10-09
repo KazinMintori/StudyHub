@@ -732,7 +732,7 @@ Việc một chỗ ở không có đánh giá mới trong suốt hơn 365 ngày 
 
 ### Tài liệu tham khảo học thuật
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 11: Time Series](https://wesmckinney.com/book/time-series).
-- pandas Official Documentation — [Time series / date functionality Guide](https://pandas.pydata.org/docs/user_guide/timeseries.html).
-- IANA Time Zone Database — [Cơ sở dữ liệu múi giờ quốc tế](https://www.iana.org/time-zones).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 11: Time Series](https://wesmckinney.com/book/time-series).
+- Tài liệu chính thức pandas: [Time series / date functionality Guide](https://pandas.pydata.org/docs/user_guide/timeseries.html).
+- IANA Time Zone Database: [Cơ sở dữ liệu múi giờ quốc tế](https://www.iana.org/time-zones).
 - Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).

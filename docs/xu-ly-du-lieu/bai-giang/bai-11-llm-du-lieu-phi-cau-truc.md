@@ -606,8 +606,8 @@ Quy trình trên thiết lập một chuẩn mực công nghiệp cho việc tí
 
 ### Tài liệu tham khảo học thuật
 
-- Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data).
-- Tài liệu kỹ thuật: [Google Gemini API — Structured Outputs with JSON Schemas](https://ai.google.dev/gemini-api/docs/structured-output).
+- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data).
+- Tài liệu kỹ thuật: [Google Gemini API: Structured Outputs with JSON Schemas](https://ai.google.dev/gemini-api/docs/structured-output).
 - Thư viện Pydantic: [Pydantic Official Documentation (v2)](https://docs.pydantic.dev/).
 - Tom Fawcett, *An Introduction to ROC Analysis*, Pattern Recognition Letters, 2006.
 - Hệ thống bài giảng thực hành: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).

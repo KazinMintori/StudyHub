@@ -29,7 +29,7 @@ Trong ngôn ngữ C thực thi CPython, `list` thực chất là một mảng đ
 - Ngược lại, khi bạn thực hiện kiểm tra `if x in ds:`, CPython buộc phải duyệt tuần tự từ đầu đến cuối danh sách và so sánh từng con trỏ đối tượng. Nếu danh sách có $n$ bản ghi, thao tác này tiêu tốn thời gian $O(n)$. Nếu đặt phép kiểm tra này bên trong một vòng lặp duyệt $n$ phần tử khác, thuật toán sẽ bùng nổ độ phức tạp lên bậc hai $O(n^2)$.
 - `tuple` có cơ chế bộ nhớ tương tự `list` nhưng sở hữu tính bất biến (*immutable*). Khi đã được khởi tạo, danh sách con trỏ bên trong `tuple` không thể thêm bớt hay tráo đổi. Đặc tính bất biến này cho phép CPython tối ưu hóa cấp phát bộ nhớ và cho phép `tuple` sinh mã băm (*hashable*), biến nó thành cấu trúc lý tưởng để làm khóa phức hợp nhiều trường (*composite key*) trong các bài toán gom nhóm dữ liệu.
 
-### 1.2. Bảng băm (`dict` và `set`) — Vũ khí gia tốc tra cứu
+### 1.2. Bảng băm (`dict` và `set`): Vũ khí gia tốc tra cứu
 `dict` và `set` được cài đặt dựa trên cấu trúc bảng băm (*hash table*) cực kỳ tinh vi của CPython.
 - Để một đối tượng có thể đưa vào `set` hoặc làm khóa của `dict`, đối tượng đó bắt buộc phải bất biến (như chuỗi, số thực, số nguyên, hoặc tuple chứa các phần tử bất biến) để giá trị băm `hash(obj)` không đổi theo thời gian.
 - Khi kiểm tra `if khoa in tu_dien:` hoặc `if phan_tu in tap_hop:`, Python tính toán mã băm của đối tượng, ánh xạ trực tiếp tới vị trí ô nhớ trong bảng băm. Độ phức tạp trung bình của phép tra cứu này là $O(1)$, hoàn toàn độc lập với kích thước dữ liệu.
@@ -592,7 +592,7 @@ def save_report(report: dict, path: str | Path) -> dict:
 
 1. **Về sự chênh lệch giữa Mean và Median**:
    - Trong dữ liệu thực tế (chẳng hạn tại thủ đô Santiago hoặc Hà Nội), đa số các phòng trọ bình dân có mức giá dao động tập trung trong khoảng từ $300,000$ đến $800,000$ VNĐ/đêm. Tuy nhiên, thị trường luôn tồn tại một số ít các biệt thự, penthouse nghỉ dưỡng cao cấp có giá lên tới $20,000,000$ hoặc $50,000,000$ VNĐ/đêm.
-   - Các căn hộ siêu đắt này đóng vai trò là các **ngoại lai cực trị ở phía đuôi dài (*extreme outliers*)**. Khi tính trung bình cộng, tử số $\sum x_i$ bị kéo vọt lên, khiến giá trung bình bị thổi phồng lên mức $1,500,000$ VNĐ/đêm — một con số không đại diện cho số đông.
+   - Các căn hộ siêu đắt này đóng vai trò là các **ngoại lai cực trị ở phía đuôi dài (*extreme outliers*)**. Khi tính trung bình cộng, tử số $\sum x_i$ bị kéo vọt lên, khiến giá trung bình bị thổi phồng lên mức $1,500,000$ VNĐ/đêm, vốn là một con số hoàn toàn không đại diện cho số đông.
    - Trong khi đó, trung vị chỉ quan tâm đến thứ tự sắp xếp: dù căn penthouse có tăng giá gấp mười lần thì điểm chính giữa phân phối vẫn đứng yên quanh mức $500,000$ VNĐ/đêm. Vì vậy, trung vị phản ánh chính xác nhất mức giá thông thường mà một du khách phổ thông phải chi trả.
 
 2. **Về hiểm họa của điều kiện `if price:`**:
