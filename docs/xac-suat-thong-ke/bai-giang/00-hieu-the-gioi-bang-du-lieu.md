@@ -9,7 +9,7 @@ readingStyle: plain
 description: "Phân biệt mô tả dữ liệu, suy rộng thống kê, kết luận nhân quả và dự đoán qua ví dụ khảo sát sinh viên."
 ---
 
-Một khảo sát giả định về kinh nghiệm lập trình của sinh viên UET nhận được 10 câu trả lời, trong đó 7 người cho biết chưa từng lập trình. Ta có thể nói rằng 70% người trả lời chưa từng lập trình. Nhưng liệu có thể kết luận rằng tỷ lệ này cũng đúng với toàn bộ sinh viên UET?
+“70% người trả lời khảo sát chưa có kinh nghiệm viết mã máy tính” và “70% sinh viên toàn trường chưa có kinh nghiệm viết mã máy tính” có cùng con số. Nhưng câu thứ nhất chỉ nói về người đã trả lời, còn câu thứ hai nói cả về những người chưa được khảo sát. Dữ liệu nào cho phép ta đưa ra từng kết luận?
 
 Hai phát biểu có cùng con số, nhưng nói về hai nhóm khác nhau. Để đánh giá một kết luận từ dữ liệu, trước hết ta cần xác định nó đang mô tả những gì đã quan sát, suy rộng sang nhóm khác, khẳng định một tác động hay dự đoán một giá trị chưa biết.
 
@@ -23,31 +23,31 @@ Sơ đồ dưới đây phân biệt bốn loại phát biểu. Trong bài này,
 
 **Mô tả dữ liệu (Summary)** là việc mô tả một khía cạnh của dữ liệu đang có bằng con số, đồ thị hoặc lời văn.
 
-**Ví dụ:** Trong khảo sát giả định trên, 70% người trả lời cho biết chưa từng lập trình. Phát biểu này chỉ nói về nhóm đã trả lời khảo sát.
+**Ví dụ:** “Dựa trên dữ liệu khảo sát một lớp học, tỷ lệ người trả lời khảo sát cho biết mình chưa có kinh nghiệm viết mã máy tính là 70%.” Phát biểu này chỉ nói về nhóm đã trả lời khảo sát.
 
 ### 1.2. Suy rộng thống kê
 
 **Suy rộng thống kê (Generalization)** là việc mô tả một tập đối tượng rộng hơn tập đã được ghi nhận dữ liệu, bằng con số, đồ thị hoặc lời văn.
 
-**Ví dụ:** Nếu dùng khảo sát trên để kết luận rằng “70% sinh viên UET chưa từng lập trình”, ta đã mở rộng phạm vi từ nhóm trả lời sang toàn trường. Đó là một bước suy rộng cần được đánh giá về căn cứ.
+**Ví dụ:** “Dựa trên dữ liệu khảo sát một lớp học, tỷ lệ sinh viên toàn trường chưa có kinh nghiệm viết mã máy tính là 70%.” Ta đã mở rộng phạm vi từ nhóm trả lời sang toàn trường. Đó là một bước suy rộng cần được đánh giá về căn cứ.
 
 ### 1.3. Kết luận nhân quả
 
 **Kết luận nhân quả (Causal Claim)** là một phát biểu khẳng định rằng việc thay đổi giá trị của một biến sẽ ảnh hưởng đến giá trị của một biến khác.
 
-**Ví dụ:** “Tham gia câu lạc bộ lập trình làm điểm bài thực hành tăng” là một kết luận nhân quả. Câu này khẳng định tác động của việc tham gia đối với điểm, chứ không chỉ mô tả khác biệt giữa hai nhóm sinh viên.
+**Ví dụ:** “Dữ liệu từ một thí nghiệm ngẫu nhiên có đối chứng cho thấy việc dùng một loại kháng sinh mới loại bỏ hơn 99% các ca nhiễm khuẩn.” Phát biểu này nói về tác động của việc dùng thuốc đối với tình trạng nhiễm khuẩn.
 
 ### 1.4. Dự đoán
 
 **Dự đoán (Prediction)** là việc đoán giá trị của một biến chưa biết dựa trên các biến khác đã biết.
 
-**Ví dụ:** Dùng kinh nghiệm lập trình đã biết để đoán điểm bài thực hành chưa công bố của một sinh viên là dự đoán. Điểm là giá trị chưa biết, còn kinh nghiệm là thông tin đã có.
+**Ví dụ:** “Dựa trên tin tức đã đọc và giá cổ phiếu Uber hôm nay, tôi dự đoán rằng giá cổ phiếu Uber ngày mai sẽ tăng 1,2%.” Tin tức và giá hôm nay là thông tin đã biết, còn mức thay đổi giá ngày mai là giá trị chưa biết.
 
 ## 2. Phạm vi và căn cứ của một kết luận
 
 ### 2.1. Mô tả mẫu và suy rộng về tổng thể
 
-Trở lại khảo sát với 10 câu trả lời và 7 người chưa từng lập trình. Nhóm đã trả lời là mẫu thống kê, còn toàn bộ sinh viên UET là tổng thể mà ta muốn nghiên cứu.
+Để tính tỷ lệ trong một trường hợp cụ thể, giả sử khảo sát nhận được 10 câu trả lời, trong đó 7 người chưa từng lập trình. Nhóm đã trả lời là mẫu thống kê, còn toàn bộ sinh viên của trường là tổng thể mà ta muốn nghiên cứu.
 
 ::: example Tính tỷ lệ trong nhóm đã trả lời
 Tỷ lệ người chưa từng lập trình trong nhóm trả lời bằng số người thuộc nhóm này chia cho tổng số người trả lời:
@@ -57,17 +57,17 @@ $$\frac{7}{10}\times 100\%=70\%.$$
 Ta có thể mô tả: “Trong 10 người trả lời khảo sát, 70% cho biết chưa từng lập trình.” Mẫu số là 10 vì phát biểu nói về nhóm đã trả lời.
 :::
 
-Nếu viết “70% sinh viên UET chưa từng lập trình”, ta đã mở rộng phạm vi kết luận từ mẫu sang tổng thể. Phép chia vẫn đúng với dữ liệu mẫu, nhưng không chứng minh rằng tỷ lệ của toàn trường cũng bằng 70%.
+Nếu viết “70% sinh viên toàn trường chưa từng lập trình”, ta đã mở rộng phạm vi kết luận từ mẫu sang tổng thể. Phép chia vẫn đúng với dữ liệu mẫu, nhưng không chứng minh rằng tỷ lệ của toàn trường cũng bằng 70%.
 
 Để đánh giá bước suy rộng, ta cần biết những người trả lời được chọn như thế nào, có nhóm sinh viên nào ít có cơ hội tham gia hay không và có ai được mời nhưng không trả lời. Chẳng hạn, nếu chỉ hỏi trong một câu lạc bộ lập trình, nhóm trả lời có thể khác toàn trường về chính đặc điểm đang nghiên cứu. Việc gọi một phát biểu là suy rộng chỉ xác định loại phát biểu, chưa chứng minh rằng nó có căn cứ.
 
 ::: tip Thử phân loại trước khi đọc đáp án
-Chỉ thay cụm “10 người trả lời khảo sát” bằng “sinh viên UET” có làm thay đổi loại phát biểu không? Vì sao?
+Chỉ thay cụm “10 người trả lời khảo sát” bằng “sinh viên toàn trường” có làm thay đổi loại phát biểu không? Vì sao?
 :::
 
 <details><summary>Đáp án và lý do</summary>
 
-Có. Phát biểu ban đầu mô tả nhóm đã được quan sát. Phát biểu sau nói về toàn bộ sinh viên UET, bao gồm những người chưa được quan sát, nên là suy rộng thống kê. Điều thay đổi là phạm vi đối tượng, không phải con số 70%.
+Có. Phát biểu ban đầu mô tả nhóm đã được quan sát. Phát biểu sau nói về toàn bộ sinh viên của trường, bao gồm những người chưa được quan sát, nên là suy rộng thống kê. Điều thay đổi là phạm vi đối tượng, không phải con số 70%.
 
 </details>
 
@@ -83,7 +83,7 @@ Một cách nghiên cứu tác động là dùng **thí nghiệm ngẫu nhiên c
 
 ### 2.3. Giá trị chưa biết trong một bài toán dự đoán
 
-Trong ví dụ dự đoán điểm, kinh nghiệm lập trình là thông tin đã biết, còn điểm bài thực hành là giá trị chưa biết. Ngay cả khi bài đã được chấm, đoán điểm chưa công bố vẫn là dự đoán. Vì vậy, dự đoán không nhất thiết phải nói về tương lai.
+Trong ví dụ cổ phiếu, giá ngày mai là giá trị chưa biết. Dự đoán cũng có thể nói về một giá trị đã tồn tại nhưng chưa được quan sát. Chẳng hạn, dùng kinh nghiệm lập trình để đoán điểm bài thực hành đã chấm nhưng chưa công bố vẫn là dự đoán. Vì vậy, dự đoán không nhất thiết phải nói về tương lai.
 
 Dự đoán không tự giải thích nguyên nhân của kết quả. Một thông tin giúp đoán điểm không nhất thiết là yếu tố mà ta có thể thay đổi để làm điểm tăng. Cũng như với suy rộng, phân loại đúng phát biểu chưa cho biết dự đoán chính xác đến đâu.
 
