@@ -205,6 +205,90 @@ Kết quả lần lượt là:
 - Số nguyên `18` -> Ném ra ngoại lệ `TypeError: Gia dau vao phai la chuoi hoac None`. Đây là chủ đích thiết kế nhằm bắt lỗi lập trình khi truyền sai kiểu dữ liệu ngay từ đầu.
 :::
 
+::: exercise Tổng hợp doanh thu giỏ hàng bằng thư viện chuẩn Python thuần (Pure Python Aggregation)
+Cho danh sách các đơn hàng thu thập từ hệ thống phân phối bán lẻ dạng bảng từ điển thô, trong đó cột giá tiền chứa các chuỗi rác ký tự tiền tệ và khoảng trắng:
+```python
+don_hang = [
+    {"danh_muc": "VanPhong", "gia": " $1,250.00 ", "so_luong": 2},
+    {"danh_muc": "GiaoDuc", "gia": "450.50", "so_luong": 5},
+    {"danh_muc": "VanPhong", "gia": "Chua_co_gia", "so_luong": 1},
+    {"danh_muc": "GiaoDuc", "gia": " $120.00 ", "so_luong": 10},
+    {"danh_muc": "VanPhong", "gia": " -50.00 ", "so_luong": 3},
+    {"danh_muc": "DienTu", "gia": " $2,500.00 ", "so_luong": 1}
+]
+```
+Yêu cầu: Không sử dụng pandas hay bất kỳ thư viện bên thứ ba nào, hãy viết chương trình Python thuần để:
+1. Làm sạch cột giá: loại bỏ ký hiệu tiền tệ `$`, dấu phẩy ngăn cách hàng nghìn `,` và khoảng trắng thừa, ép kiểu sang `float`.
+2. Lọc bỏ các bản ghi không hợp lệ (giá âm hoặc không đọc được số).
+3. Tính tổng doanh thu ($doanh\_thu = gia \times so\_luong$) theo từng danh mục hàng hóa.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Xử lý chuỗi tuần tự và từ điển thường)
+Một cách người ta hay dùng khi mới lập trình là kết hợp các phương thức chuỗi `strip()`, `replace()` với khối `try-except` và duyệt từ điển thủ công:
+
+```python
+doanh_thu_nhom = {}
+
+for don in don_hang:
+    danh_muc = don["danh_muc"]
+    raw_gia = don["gia"]
+    sl = don["so_luong"]
+    
+    # 1. Làm sạch chuỗi thủ công
+    s_sach = raw_gia.strip().replace("$", "").replace(",", "")
+    
+    try:
+        gia = float(s_sach)
+        if gia < 0:
+            continue # Bỏ qua giá âm
+    except ValueError:
+        continue # Bỏ qua chuỗi không đọc được
+        
+    thanh_tien = gia * sl
+    
+    # 2. Gom nhóm với dict thông thường
+    if danh_muc in doanh_thu_nhom:
+        doanh_thu_nhom[danh_muc] += thanh_tien
+    else:
+        doanh_thu_nhom[danh_muc] = thanh_tien
+
+print("Doanh thu căn bản:", doanh_thu_nhom)
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Dùng bảng dịch `str.translate` và `collections.defaultdict`)
+Trong các ứng dụng hiệu năng cao xử lý hàng triệu dòng văn bản, lập trình viên chuyên nghiệp sẽ tận dụng bảng dịch ký tự ở tầng C thông qua `str.maketrans()` và cấu trúc `defaultdict(float)`:
+
+```python
+from collections import defaultdict
+
+# Tạo bảng dịch ký tự 1 lần duy nhất ở tầng C (xóa bỏ $, , và khoảng trắng)
+BANG_XOA = str.maketrans("", "", "$, ")
+
+def tinh_doanh_thu_nhom(ds: list[dict]) -> dict[str, float]:
+    ket_qua = defaultdict(float)
+    
+    for item in ds:
+        # Làm sạch siêu tốc một bước qua translate
+        chuoi_sach = item["gia"].translate(BANG_XOA)
+        try:
+            gia = float(chuoi_sach)
+            if gia >= 0:
+                ket_qua[item["danh_muc"]] += gia * item["so_luong"]
+        except ValueError:
+            pass # Ghi nhận lỗi hoặc bỏ qua có chủ đích
+            
+    return dict(ket_qua)
+
+doanh_thu_chuan = tinh_doanh_thu_nhom(don_hang)
+print("Doanh thu nâng cao:", doanh_thu_chuan)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Hiệu năng xử lý chuỗi**: Phương thức `.replace()` chuỗi lồng nhau tạo ra nhiều chuỗi trung gian trong bộ nhớ. Trong khi đó, `str.translate()` duyệt qua mảng ký tự một lượt duy nhất trong mã máy C, nhanh hơn từ 3 đến 5 lần trên các chuỗi văn bản lớn.
+- **Tối ưu hóa gom nhóm**: `defaultdict(float)` tự động khởi tạo giá trị `0.0` khi gặp khóa mới, triệt tiêu hoàn toàn câu lệnh rẽ nhánh `if key in dict: ... else: ...`, giúp giảm thiểu việc tra cứu bảng băm lặp lại 2 lần trên cùng một phần tử.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 2, mục 2.3: Python Language Basics](https://wesmckinney.com/book/python-basics) và [Chương 3, mục 3.1–3.3: Built-in Data Structures, Functions, and Files](https://wesmckinney.com/book/python-builtin).

@@ -168,6 +168,72 @@ Một bảng dữ liệu doanh thu của một doanh nghiệp châu Âu ghi nh�
   3. Cuối cùng mới ép kiểu sang float để nhận giá trị chuẩn xác `1200.5`.
 :::
 
+::: exercise Làm sạch chuỗi giá tiền tệ đa dạng và bóc tách tiện ích với get_dummies
+Cho bảng dữ liệu khảo sát khách sạn lưu trong một DataFrame:
+```python
+import pandas as pd
+
+df_ks = pd.DataFrame({
+    "ma_ks": ["KS01", "KS02", "KS03", "KS04", "KS05"],
+    "gia_niem_yet": [" $1,250.00 ", " 450.50 USD ", "Lien_he", " $90.00 ", " -50.00 "],
+    "tien_ich": ["Wifi, Bể bơi, Ăn sáng", "Wifi, Chỗ đỗ xe", "Ăn sáng, Bể bơi", "Wifi", "Bể bơi, Chỗ đỗ xe"]
+})
+```
+Yêu cầu:
+1. Chuẩn hóa cột `gia_niem_yet` thành cột số thực `gia_chuan`. Các giá trị chữ không đọc được số hoặc số âm phải được đưa về `NaN` an toàn.
+2. Từ cột `tien_ich`, hãy tạo ra các cột chỉ báo nhị phân ($0$ và $1$) cho từng tiện ích riêng biệt (One-Hot Encoding) để phục vụ mô hình hồi quy giá phòng.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Chuỗi hàm replace lồng nhau và xử lý chuỗi thủ công)
+Một cách người ta hay làm khi mới tiếp cận là gọi nhiều lần `.str.replace()` để gọt từng ký tự một:
+
+```python
+# 1. Làm sạch giá bằng chuỗi replace
+gia_c1 = df_ks["gia_niem_yet"].astype(str)
+gia_c1 = gia_c1.str.replace("$", "", regex=False)
+gia_c1 = gia_c1.str.replace("USD", "", regex=False)
+gia_c1 = gia_c1.str.replace(",", "", regex=False)
+gia_c1 = gia_c1.str.strip()
+
+gia_so_c1 = pd.to_numeric(gia_c1, errors="coerce")
+gia_so_c1.loc[gia_so_c1 < 0] = float("nan")
+df_ks["gia_chuan"] = gia_so_c1
+
+# 2. Bóc tách tiện ích thủ công qua vòng lặp
+cac_tien_ich = ["Wifi", "Bể bơi", "Ăn sáng", "Chỗ đỗ xe"]
+for ti in cac_tien_ich:
+    df_ks[f"has_{ti}"] = df_ks["tien_ich"].apply(lambda s: 1 if ti in str(s) else 0)
+
+print("Bảng khách sạn căn bản:\n", df_ks[["ma_ks", "gia_chuan", "has_Wifi", "has_Bể bơi"]])
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Mẫu Regex phủ định tổng quát và `str.get_dummies`)
+Lập trình viên chuyên nghiệp sẽ tận dụng sức mạnh của biểu thức chính quy phủ định để dọn sạch mọi ký tự lạ chỉ bằng một dòng lệnh, kết hợp phương thức vector hóa `str.get_dummies`:
+
+```python
+# 1. Làm sạch siêu tốc: Xóa bỏ mọi ký tự KHÔNG PHẢI là chữ số hoặc dấu chấm
+# Mẫu [^0-9.] phủ định giúp loại bỏ cùng lúc $, USD, dấu phẩy, khoảng trắng và chữ
+df_ks["gia_chuan"] = pd.to_numeric(
+    df_ks["gia_niem_yet"].astype(str).str.replace(r"[^0-9.]", "", regex=True),
+    errors="coerce"
+)
+# Lọc bỏ miền giá trị vi phạm (âm hoặc bằng 0 nếu nghiệp vụ yêu cầu)
+df_ks.loc[df_ks["gia_niem_yet"].astype(str).str.contains("-"), "gia_chuan"] = float("nan")
+
+# 2. Vector hóa nhãn đa trị thành các cột nhị phân chuẩn tắc trong 1 bước
+dummies_tien_ich = df_ks["tien_ich"].str.get_dummies(sep=", ")
+
+# Ghép trực tiếp vào bảng phân tích
+df_ks_hoan_chinh = pd.concat([df_ks[["ma_ks", "gia_chuan"]], dummies_tien_ich], axis=1)
+print("Bảng khách sạn tối ưu:\n", df_ks_hoan_chinh)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Ưu thế của mẫu Regex phủ định `r'[^0-9.]'`**: Nếu dùng cách cơ bản xóa từng chữ (`"$"`, `"USD"`, `","`), chương trình sẽ sụp đổ ngay khi xuất hiện đơn vị mới như `"EUR"`, `"VND"` hay `"¥"`. Biểu thức phủ định `[^0-9.]` mang tính phòng thủ tuyệt đối: nó giữ lại cốt lõi số học và triệt tiêu toàn bộ rác định dạng ngoại lai.
+- **Sức mạnh của `str.get_dummies(sep=', ')`**: Phương thức này tự động thu thập từ điển toàn bộ các tiện ích xuất hiện trong cột dữ liệu, tự động xử lý khoảng trắng sau dấu phân cách và trả về ma trận thưa nhị phân $0/1$ tối ưu bộ nhớ, sẵn sàng đưa vào các mô hình Machine Learning hoặc phân tích tương quan thống kê.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 7, mục 7.4: String Manipulation](https://wesmckinney.com/book/data-cleaning).

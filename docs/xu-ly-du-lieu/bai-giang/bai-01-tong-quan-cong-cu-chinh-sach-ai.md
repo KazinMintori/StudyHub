@@ -152,6 +152,97 @@ Một đồng nghiệp gửi cho bạn một tệp notebook có thể xuất ra 
 Cách khắc phục: Rà soát lại toàn bộ quy trình, đưa dòng mã khởi tạo biến `cleaned_data` vào đúng vị trí trước khi biến này được gọi. Sau đó, luôn chạy lại toàn bộ sổ tay bằng **Restart & Run All** để xác minh tính toàn vẹn của mã.
 :::
 
+::: exercise Thiết kế pipeline kiểm toán chất lượng dữ liệu với nhật ký vết (Data Lineage & Audit Log)
+Trong một hệ thống tiếp nhận đơn hàng trực tuyến, bạn nhận được danh sách các bản ghi giao dịch thô:
+```python
+giao_dich_tho = [
+    {"ma_don": "DH01", "so_tien": "250000"},
+    {"ma_don": "DH02", "so_tien": "chua_thanh_toan"},
+    {"ma_don": "DH03", "so_tien": "-50000"},
+    {"ma_don": "DH04", "so_tien": "1200000"},
+    {"ma_don": "DH05", "so_tien": None},
+    {"ma_don": "DH06", "so_tien": "0"}
+]
+```
+Hãy viết chương trình xử lý tập dữ liệu trên để:
+1. Tính tổng doanh thu và giá trị trung bình của các đơn hàng hợp lệ (số tiền phải là số thực không âm $\ge 0$).
+2. Xuất ra một bảng nhật ký kiểm toán (*Audit Log*) ghi nhận chính xác: tổng số bản ghi nhận vào, số bản ghi hợp lệ, số bản ghi bị loại và lý do chi tiết cho từng trường hợp bị loại.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Vòng lặp tuần tự và tích lũy trạng thái)
+Một cách người ta hay dùng khi mới bắt đầu là sử dụng vòng lặp `for` tuần tự để kiểm tra từng phần tử, bọc khối chuyển đổi trong `try-except` và ghi nhận vào các danh sách riêng biệt:
+
+```python
+don_hop_le = []
+nhat_ky_loai = []
+
+for gd in giao_dich_tho:
+    ma = gd.get("ma_don")
+    raw_val = gd.get("so_tien")
+    
+    if raw_val is None:
+        nhat_ky_loai.append({"ma_don": ma, "ly_do": "Khuyết thiếu dữ liệu (None)"})
+        continue
+        
+    try:
+        val = float(raw_val)
+        if val < 0:
+            nhat_ky_loai.append({"ma_don": ma, "ly_do": f"Giá trị âm ({val}) không hợp lệ"})
+        else:
+            don_hop_le.append({"ma_don": ma, "so_tien": val})
+    except ValueError:
+        nhat_ky_loai.append({"ma_don": ma, "ly_do": f"Không thể ép kiểu số thực: '{raw_val}'"})
+
+tong_tien = sum(d["so_tien"] for d in don_hop_le)
+so_hop_le = len(don_hop_le)
+trung_binh = (tong_tien / so_hop_le) if so_hop_le > 0 else None
+
+print(f"Tổng hợp lệ: {so_hop_le}/{len(giao_dich_tho)} đơn | Tổng tiền: {tong_tien:,.0f} đ | Trung bình: {trung_binh:,.0f} đ")
+print("Nhật ký loại trừ:", nhat_ky_loai)
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói hàm bất biến trả về cấu trúc phân tách)
+Trong môi trường sản xuất, ta đóng gói quy trình thành một hàm thuần khiết (*Pure Function*), phân tách dữ liệu thành hai nhánh rõ ràng mà không làm biến đổi dữ liệu đầu vào:
+
+```python
+from typing import NamedTuple, Any
+
+class KetQuaKiemToan(NamedTuple):
+    hop_le: list[dict[str, Any]]
+    bi_loai: list[dict[str, Any]]
+    tong_doanh_thu: float
+    trung_binh: float | None
+
+def kiem_toan_giao_dich(ds_giao_dich: list[dict[str, Any]]) -> KetQuaKiemToan:
+    hop_le, bi_loai = [], []
+    for r in ds_giao_dich:
+        ma, raw = r.get("ma_don"), r.get("so_tien")
+        if raw is None:
+            bi_loai.append({"ma_don": ma, "ly_do": "GIA_TRI_THIEU"})
+            continue
+        try:
+            val = float(raw)
+            if val < 0:
+                bi_loai.append({"ma_don": ma, "ly_do": "GIA_TRI_AM"})
+            else:
+                hop_le.append({"ma_don": ma, "so_tien": val})
+        except (ValueError, TypeError):
+            bi_loai.append({"ma_don": ma, "ly_do": "SAI_DINH_DANG"})
+            
+    tong = sum(x["so_tien"] for x in hop_le)
+    tb = (tong / len(hop_le)) if hop_le else None
+    return KetQuaKiemToan(hop_le=hop_le, bi_loai=bi_loai, tong_doanh_thu=tong, trung_binh=tb)
+
+ket_qua = kiem_toan_giao_dich(giao_dich_tho)
+assert len(giao_dich_tho) == len(ket_qua.hop_le) + len(ket_qua.bi_loai)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Kỷ luật bảo toàn dữ liệu**: Đơn hàng miễn phí (`"0"`) vẫn là một đơn hợp lệ ($0 \ge 0$), trong khi đơn âm (`"-50000"`) và đơn lỗi định dạng (`"chua_thanh_toan"`) bị loại ra nhánh kiểm toán.
+- **Phương trình bất biến**: Biểu thức kiểm chứng `len(giao_dich_tho) == len(hop_le) + len(bi_loai)` là bảo chứng vàng cho thấy không có bất kỳ dòng dữ liệu nào bị hệ thống "nuốt chửng" mà không rõ lý do.
+:::
+
 ## 6. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics](https://wesmckinney.com/book/python-basics).

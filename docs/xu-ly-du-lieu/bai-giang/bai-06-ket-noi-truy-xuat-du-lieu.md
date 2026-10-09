@@ -182,6 +182,83 @@ Một bảng dữ liệu khách hàng có 3 bản ghi. Cột danh sách số đi
 2. Mã định danh khách hàng ban đầu **không còn duy nhất** nữa, vì khách hàng thứ nhất sẽ xuất hiện lặp lại 2 lần và khách hàng thứ ba xuất hiện 3 lần. Để nhận diện duy nhất từng dòng trong bảng mới, ta cần thiết lập khóa phức hợp kết hợp giữa mã khách hàng và số thứ tự của số điện thoại.
 :::
 
+::: exercise Xử lý dữ liệu quy mô lớn vượt bộ nhớ RAM với Chunking và DuckDB
+Giả sử hệ thống ghi nhận tệp nhật ký giao dịch `giao_dich_lon.csv` có hàng triệu dòng (dung lượng 10 GB), trong khi máy chủ của bạn chỉ có 4 GB RAM khả dụng. Mỗi dòng gồm các cột: `ma_gd`, `chi_nhanh`, `gia_tri`, `trang_thai`.
+Yêu cầu:
+1. Hãy viết chương trình tính tổng doanh thu và giá trị giao dịch trung bình của từng `chi_nhanh` cho các giao dịch thành công (`trang_thai == 'SUCCESS'` và `gia_tri > 0`).
+2. Chương trình phải chạy mượt mà, tuyệt đối không được nạp toàn bộ tệp vào RAM cùng một lúc gây lỗi tràn bộ nhớ (*Out-Of-Memory* - OOM).
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Kỹ thuật đọc phân khối Chunking tích lũy trọng số)
+Một cách người ta hay dùng trong pandas khi dữ liệu lớn hơn RAM là đọc từng khối dữ liệu bằng tham số `chunksize` và tích lũy trạng thái (*State Accumulation*):
+
+```python
+import pandas as pd
+from collections import defaultdict
+
+# Khởi tạo bộ tích lũy trạng thái: tổng tiền và số giao dịch
+tong_tien = defaultdict(float)
+so_giao_dich = defaultdict(int)
+
+# Đọc từng khối 100,000 dòng một lượt, chỉ nạp các cột cần thiết
+for chunk in pd.read_csv("giao_dich_lon.csv", chunksize=100_000, usecols=["chi_nhanh", "gia_tri", "trang_thai"]):
+    # Lọc các dòng hợp lệ ngay trong khối bộ nhớ tạm
+    mask = (chunk["trang_thai"] == "SUCCESS") & (chunk["gia_tri"] > 0)
+    hop_le = chunk[mask]
+    
+    # Gom nhóm cục bộ trên khối
+    nhom_khoi = hop_le.groupby("chi_nhanh")["gia_tri"].agg(["sum", "count"])
+    
+    # Tích lũy vào từ điển trạng thái toàn cục
+    for chi_nhanh, row in nhom_khoi.iterrows():
+        tong_tien[chi_nhanh] += row["sum"]
+        so_giao_dich[chi_nhanh] += int(row["count"])
+
+# Tính trung bình chuẩn tắc từ tổng dồn và đếm dồn
+bao_cao_chunking = pd.DataFrame({
+    "chi_nhanh": list(tong_tien.keys()),
+    "tong_doanh_thu": list(tong_tien.values()),
+    "so_don": [so_giao_dich[k] for k in tong_tien.keys()]
+})
+bao_cao_chunking["gia_trung_binh"] = bao_cao_chunking["tong_doanh_thu"] / bao_cao_chunking["so_don"]
+print("Báo cáo Chunking:\n", bao_cao_chunking)
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Sử dụng DuckDB Engine với cơ chế Streaming Execution)
+Trong các hệ thống phân tích hiện đại, giải pháp tối ưu vượt bậc là sử dụng DuckDB để đẩy thẳng câu truy vấn SQL xuống tệp dữ liệu (đặc biệt khi tệp được lưu ở định dạng Parquet theo cột):
+
+```python
+import duckdb
+
+# DuckDB tự động chia luồng xử lý ngoài đĩa (Out-of-Core Processing)
+# Tiêu thụ cực ít RAM và thực thi với tốc độ mã C/C++ đa luồng
+sql_query = """
+    SELECT 
+        chi_nhanh,
+        SUM(gia_tri) AS tong_doanh_thu,
+        COUNT(*) AS so_don,
+        AVG(gia_tri) AS gia_trung_binh
+    FROM 'giao_dich_lon.parquet'
+    WHERE trang_thai = 'SUCCESS' AND gia_tri > 0
+    GROUP BY chi_nhanh
+    ORDER BY tong_doanh_thu DESC
+"""
+
+# Chuyển đổi kết quả cuối cùng thành DataFrame chỉ mất vài miligiây
+bao_cao_duckdb = duckdb.query(sql_query).to_df()
+print("Báo cáo DuckDB Engine:\n", bao_cao_duckdb)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Nghịch lý lấy trung bình của các trung bình**: Sai lầm chết người của người mới là tính trung bình của từng chunk rồi lại lấy trung bình cộng của các giá trị trung bình đó:
+  $$
+  \bar{x}_{\text{chung}} \ne \frac{\bar{x}_1 + \bar{x}_2 + \dots + \bar{x}_k}{k}
+  $$
+  Công thức trên chỉ đúng khi mọi khối dữ liệu đều có số dòng hợp lệ bằng nhau tuyệt đối. Trong thực tế, các khối có số dòng hợp lệ khác nhau; do đó bắt buộc phải duy trì hai biến tích lũy riêng biệt: $\sum x$ và $\sum n$.
+- **Ưu thế của Parquet và DuckDB**: Tệp CSV lưu trữ theo dạng dòng (*Row-oriented*) khiến chương trình phải đọc toàn bộ các ký tự của cả dòng trước khi lọc cột. Trong khi đó, định dạng Parquet lưu trữ theo cột (*Columnar*) kết hợp với cơ chế thực thi hình nón của DuckDB cho phép bỏ qua hàng tỷ byte dữ liệu của các cột không liên quan, tăng tốc độ xử lý từ 20 đến 50 lần.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data).

@@ -181,6 +181,73 @@ Chênh lệch 2.5 điểm có thể bị chi phối bởi các yếu tố gây n
 Để khẳng định lớp phụ đạo thực sự làm tăng điểm số thêm bao nhiêu, nhà nghiên cứu cần thiết kế một thử nghiệm ngẫu nhiên (chẳng hạn bốc thăm ngẫu nhiên sinh viên vào nhóm phụ đạo và nhóm đối chứng) hoặc sử dụng các kỹ thuật thống kê nâng cao (như phương pháp bắt cặp điểm xu hướng - Propensity Score Matching) để kiểm soát các yếu tố gây nhiễu.
 :::
 
+::: exercise Bóc trần Nghịch lý Simpson trong thử nghiệm A/B và quy trình thẩm định 4 bước
+Một doanh nghiệp thương mại điện tử triển khai thử nghiệm A/B giữa Giao diện A (cũ) và Giao diện B (mới). Dữ liệu thu thập trên 2.000 người dùng phân bổ theo thiết bị truy cập như sau:
+- **Trên Thiết bị Di động (Mobile)**:
+  - Giao diện A: 100 lượt truy cập, 10 lượt mua hàng (tỷ lệ $10.0\%$).
+  - Giao diện B: 900 lượt truy cập, 120 lượt mua hàng (tỷ lệ $13.3\%$).
+- **Trên Máy tính để bàn (Desktop)**:
+  - Giao diện A: 900 lượt truy cập, 810 lượt mua hàng (tỷ lệ $90.0\%$).
+  - Giao diện B: 100 lượt truy cập, 95 lượt mua hàng (tỷ lệ $95.0\%$).
+
+Trưởng phòng kinh doanh đọc số liệu tổng gộp và kết luận:
+*"Giao diện A có tỷ lệ chuyển đổi trung bình là 82.0%, vượt trội hoàn toàn so với Giao diện B chỉ đạt 21.5%. Do đó, giao diện mới B là một thảm họa thất bại và cần bị hủy bỏ ngay lập tức!"*
+
+Yêu cầu:
+1. Hãy viết mã Python chứng minh cơ chế hình thành của Nghịch lý Simpson trong tình huống trên.
+2. Đóng vai một chuyên gia thẩm định dữ liệu, triển khai quy trình thẩm định 4 bước để vạch trần sai lầm phương pháp và viết lại kết luận khoa học trung thực.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Tính toán trung bình gộp - Mắc bẫy nghịch lý Simpson)
+Một cách người ta hay lầm tưởng khi mới phân tích là cộng dồn toàn bộ số chuyển đổi và chia cho tổng số lượt truy cập:
+
+```python
+import pandas as pd
+
+# Tạo bảng dữ liệu thử nghiệm
+data = pd.DataFrame([
+    {"giao_dien": "A", "thiet_bi": "Mobile", "truy_cap": 100, "chuyen_doi": 10},
+    {"giao_dien": "A", "thiet_bi": "Desktop", "truy_cap": 900, "chuyen_doi": 810},
+    {"giao_dien": "B", "thiet_bi": "Mobile", "truy_cap": 900, "chuyen_doi": 120},
+    {"giao_dien": "B", "thiet_bi": "Desktop", "truy_cap": 100, "chuyen_doi": 95},
+])
+
+# 1. Tính toán trung bình gộp theo giao diện
+tong_gop = data.groupby("giao_dien")[["truy_cap", "chuyen_doi"]].sum()
+tong_gop["ty_le_gop"] = (tong_gop["chuyen_doi"] / tong_gop["truy_cap"]) * 100
+print("Báo cáo gộp gây hiểu lầm:\n", tong_gop)
+# Kết quả gộp: Giao diện A đạt 82.0%, Giao diện B chỉ đạt 21.5%!
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Phân rã kiểm soát biến gây nhiễu và chuẩn hóa cơ cấu trọng số)
+Nhà khoa học dữ liệu chuyên nghiệp sẽ phân tầng (*Stratification*) theo thiết bị để nhận diện bản chất thật:
+
+```python
+# 2. Phân rã theo từng loại thiết bị
+data["ty_le_nhom"] = (data["chuyen_doi"] / data["truy_cap"]) * 100
+bang_phan_tang = data.pivot(index="thiet_bi", columns="giao_dien", values="ty_le_nhom")
+print("\nBáo cáo phân tầng chuẩn mực (% chuyển đổi):\n", bang_phan_tang)
+
+# Kết quả phân tầng chứng minh:
+# - Trên Mobile: Giao diện B đạt 13.3% > Giao diện A (10.0%)
+# - Trên Desktop: Giao diện B đạt 95.0% > Giao diện A (90.0%)
+# -> GIAO DIỆN B VƯỢT TRỘI TRÊN TOÀN BỘ CÁC PHÂN KHÚC!
+```
+
+#### Quy trình Thẩm định 4 Bước của Chuyên gia Dữ liệu
+1. **Bước 1 · Truy số (Check the Numbers)**:
+   - Con số $82.0\%$ của A và $21.5\%$ của B là hoàn toàn có thật về mặt số học. Tuy nhiên, cơ cấu mẫu cực kỳ mất cân bằng: $90\%$ lưu lượng của Giao diện A đến từ Desktop (nơi người dùng vốn dĩ dễ chuyển đổi), trong khi $90\%$ lưu lượng của Giao diện B lại bị đẩy sang Mobile (nơi chuyển đổi khó khăn hơn rất nhiều).
+2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**:
+   - Việc so sánh trung bình gộp khi cơ cấu tỷ trọng giữa các nhánh thử nghiệm bị lệch pha nghiêm trọng là một sai lầm chết người về thiết kế thử nghiệm A/B (lỗi chia lưu lượng không ngẫu nhiên đồng đều).
+3. **Bước 3 · Đánh giá diễn giải (Interpretive Scrutiny)**:
+   - Kết luận "Giao diện B là một thảm họa" là một kết luận đảo ngược hoàn toàn sự thật. Giao diện B thực chất ưu việt hơn Giao diện A trên từng thiết bị đơn lẻ.
+4. **Bước 4 · Phán quyết & Viết lại đúng mức (Verdict & Revision)**:
+   - **Phán quyết**: Bác bỏ đề xuất hủy bỏ Giao diện B.
+   - **Kết luận viết lại theo cấu trúc Kim tự tháp Minto**:
+     > *"Giao diện mới B nâng cao hiệu quả chuyển đổi trên mọi loại thiết bị: tăng từ 10.0% lên 13.3% trên Mobile (tăng 33% tương đối) và tăng từ 90.0% lên 95.0% trên Desktop. Con số trung bình gộp thấp của B hoàn toàn xuất phát từ việc hệ thống phân bổ sai lệch 90% lưu lượng của B vào kênh Mobile. Đề xuất: Giữ nguyên Giao diện B và sửa đổi thuật toán chia tải ngẫu nhiên 50/50 trên từng thiết bị."*
+:::
+
 ## 6. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation) và [Chương 13: Data Analysis Examples](https://wesmckinney.com/book/data-analysis-examples).

@@ -191,6 +191,96 @@ Cách trình bày chỉ dựa vào giá trị trung bình che giấu hai thông 
 - Nếu thể hiện khoảng bất định, phải bổ sung thanh sai số (khoảng tin cậy) và chú thích rõ ràng phương pháp tính toán.
 :::
 
+::: exercise Trực quan hóa phân phối đa nhóm bằng Boxplot lồng Strip Plot và thẩm định Heatmap
+Trong một cuộc khảo sát mức lương khởi điểm (đơn vị: triệu đồng/tháng) của sinh viên mới tốt nghiệp theo 3 chuyên ngành:
+- Trí tuệ nhân tạo (AI): Cỡ mẫu nhỏ $n = 12$
+- Kỹ thuật dữ liệu (Data Eng): Cỡ mẫu vừa $n = 45$
+- Phát triển phần mềm (Software): Cỡ mẫu lớn $n = 250$
+
+Yêu cầu:
+1. Viết mã Seaborn vẽ biểu đồ hộp (Boxplot) đơn thuần và phân tích "điểm mù thống kê" mà biểu đồ này che giấu.
+2. Viết mã nâng cao lồng ghép dải điểm thực tế (*Strip Plot*) lên trên nền Boxplot, kèm số lượng quan sát $N$ được tự động tính toán và gắn vào từng nhãn trục hoành.
+3. Vẽ biểu đồ nhiệt (*Heatmap*) ma trận tương quan giữa 3 biến: Lương, Kinh nghiệm (tháng) và Điểm GPA với bảng màu phân kỳ chuẩn mực.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Vẽ Boxplot độc lập - Che giấu độ tin cậy cỡ mẫu)
+Một cách người ta hay làm là gọi trực tiếp hàm vẽ biểu đồ hộp của Seaborn:
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+# Giả lập dữ liệu
+np.random.seed(42)
+df_khao_sat = pd.DataFrame({
+    "chuyen_nganh": ["AI"] * 12 + ["Data Eng"] * 45 + ["Software"] * 250,
+    "luong": np.concatenate([
+        np.random.normal(22, 4, 12),
+        np.random.normal(18, 3, 45),
+        np.random.normal(16, 2.5, 250)
+    ])
+})
+
+plt.figure(figsize=(7, 4.5))
+sns.boxplot(data=df_khao_sat, x="chuyen_nganh", y="luong", palette="Set2")
+plt.title("Biểu đồ hộp cơ bản (Che giấu cỡ mẫu)")
+plt.show()
+# ĐIỂM MÙ NGUY HIỂM: Hộp của ngành AI trông hoàn chỉnh và bệ vệ hệt như hộp của
+# ngành Software, khiến người xem tin rằng độ tin cậy thống kê của 2 nhóm là ngang nhau!
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Lồng ghép Strip Plot, chú thích cỡ mẫu N động và Heatmap phân kỳ)
+Chuyên gia trực quan hóa sẽ phơi bày toàn bộ các điểm dữ liệu thật của nhóm nhỏ và kiểm soát bảng màu khoa học:
+
+```python
+# 1. Tính toán cỡ mẫu N động cho từng chuyên ngành
+dem_mau = df_khao_sat["chuyen_nganh"].value_counts()
+nhan_truc_x = [f"{nganh}\n(N={dem_mau[nganh]})" for nganh in ["AI", "Data Eng", "Software"]]
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5), dpi=100)
+
+# Vẽ Boxplot với độ mờ nhẹ làm nền
+sns.boxplot(
+    data=df_khao_sat, x="chuyen_nganh", y="luong",
+    ax=ax1, color="#f1f5f9", showmeans=True,
+    meanprops={"marker": "o", "markerfacecolor": "red", "markeredgecolor": "red"}
+)
+# Lồng dải điểm thực tế Strip Plot với jitter chống đè điểm
+sns.stripplot(
+    data=df_khao_sat, x="chuyen_nganh", y="luong",
+    ax=ax1, size=6, alpha=0.6, jitter=0.2, palette="tab10"
+)
+ax1.set_xticklabels(nhan_truc_x, fontweight="bold")
+ax1.set_title("Phân phối Lương kèm Cỡ mẫu Thực tế (Đầy đủ Bằng chứng)")
+ax1.set_ylabel("Mức lương (triệu VNĐ/tháng)")
+
+# 2. Tạo ma trận tương quan và vẽ Heatmap phân kỳ
+df_corr_data = pd.DataFrame({
+    "Luong": df_khao_sat["luong"],
+    "Kinh_nghiem": np.random.uniform(0, 24, len(df_khao_sat)),
+    "GPA": np.random.uniform(2.5, 4.0, len(df_khao_sat))
+})
+ma_tran_corr = df_corr_data.corr()
+
+sns.heatmap(
+    ma_tran_corr, ax=ax2, annot=True, fmt=".2f",
+    cmap="coolwarm", vmin=-1.0, vmax=1.0, center=0.0,
+    square=True, linewidths=1.0, cbar_kws={"shrink": 0.8}
+)
+ax2.set_title("Ma trận Tương quan (Bảng màu Phân kỳ Chuẩn mực)")
+
+plt.tight_layout()
+plt.show()
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Vì sao Boxplot che giấu cỡ mẫu?**: Biểu đồ hộp được tính toán hoàn toàn dựa trên 5 con số tóm tắt (Min, $Q_1$, Median, $Q_3$, Max). Dù bạn có 10 quan sát hay 100.000 quan sát, hình hộp chữ nhật vẽ ra vẫn y hệt nhau. Khi kích thước mẫu quá bé ($N = 12$), các tứ phân vị có phương sai mẫu rất lớn và cực kỳ bất định. Việc lồng `stripplot` giúp người đọc nhìn thấy rõ: hộp AI chỉ lưa thưa vài chấm điểm, từ đó không vội vã đưa ra quyết định đầu tư mạo hiểm.
+- **Quy tắc bảng màu phân kỳ (Diverging Colormap)**: Hệ số tương quan Pearson $r$ có miền giá trị đối xứng $[-1, 1]$ với điểm $0$ là mốc độc lập hoàn toàn. Bắt buộc phải dùng bảng màu phân kỳ (như `coolwarm`, `RdBu`) với giá trị trung tâm `center=0.0`. Nếu dùng bảng màu tuần tự đơn sắc (Sequential colormap như `Blues`), mức tương quan âm mạnh ($r = -0.9$) sẽ bị tô màu nhạt nhòa hệt như mức tương quan bằng 0, làm sai lệch nhận thức người xem.
+:::
+
 ## 6. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization).

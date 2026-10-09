@@ -184,6 +184,73 @@ Một cửa hàng văn phòng phẩm thống kê số lượng hàng bán trong 
 2. Mẫu số $25$ ở đây đại diện cho **tổng số lượng sản phẩm vật lý** bán ra của đúng ba nhóm hàng được khảo sát. Mẫu số này hoàn toàn không phải là tổng số đơn hàng (vì một đơn hàng có thể chứa nhiều sản phẩm), cũng không đại diện cho tổng doanh thu tiền tệ. Việc minh định rõ mẫu số giúp người đọc không bị ngộ nhận giữa quy mô sản phẩm và quy mô giao dịch.
 :::
 
+::: exercise Vạch trần thủ thuật cắt cụt trục tung và chuẩn hóa biểu đồ cột theo chuẩn mực OOP
+Một nhóm tiếp thị gửi bản báo cáo khảo sát tỷ lệ hài lòng của khách hàng trên 3 phiên bản phần mềm:
+- Phiên bản A: $93.5\%$
+- Phiên bản B: $94.8\%$
+- Phiên bản C: $97.2\%$
+
+Trong slide báo cáo, nhóm tiếp thị vẽ biểu đồ cột với trục tung bắt đầu từ $92.0\%$ đến $98.0\%$. Thủ thuật này khiến cột của Phiên bản C trông cao gấp 3.5 lần so với Phiên bản A, tạo cảm giác về một bước nhảy vọt thần kỳ.
+Yêu cầu:
+1. Viết mã Matplotlib tái hiện biểu đồ thiên lệch (biến dạng thị giác) của nhóm tiếp thị.
+2. Viết mã chuẩn mực theo kiến trúc hướng đối tượng (OOP) của Matplotlib với trục tung bắt đầu từ $0\%$, hiển thị nhãn giá trị chính xác trên đầu mỗi cột để cung cấp cái nhìn trung thực về mặt thống kê.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Tái hiện bẫy cắt cụt trục tung Truncated Y-Axis)
+Một cách người ta hay lạm dụng trong truyền thông là dùng hàm tĩnh của Matplotlib để ép trục tung:
+
+```python
+import matplotlib.pyplot as plt
+
+phien_ban = ["Bản A", "Bản B", "Bản C"]
+ty_le = [93.5, 94.8, 97.2]
+
+# BẪY THỊ GIÁC: Cắt cụt trục tung từ 92%
+plt.figure(figsize=(6, 4))
+plt.bar(phien_ban, ty_le, color=["#cbd5e1", "#cbd5e1", "#3b82f6"])
+plt.ylim(92, 98) # Trục tung không bắt đầu từ 0
+plt.title("Biểu đồ biến dạng thị giác (Thổi phồng mức chênh lệch)")
+plt.ylabel("Tỷ lệ hài lòng (%)")
+plt.show()
+# Quan sát: Phần cột hiện ra của Bản C cao 5.2 đơn vị (97.2 - 92),
+# trong khi Bản A chỉ cao 1.5 đơn vị (93.5 - 92). Mắt nhìn thấy gấp 3.5 lần,
+# trong khi thực tế Bản C chỉ nhỉnh hơn Bản A vỏn vẹn 3.7 điểm phần trăm!
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Chuẩn hóa hướng đối tượng OOP với tỷ lệ trung thực và nhãn bar_label)
+Chuyên gia khoa học dữ liệu luôn tuân thủ nguyên tắc tôn trọng chiều dài cột, lập trình qua bộ đôi `Figure` và `Axes`:
+
+```python
+# Thiết lập chuẩn mực hướng đối tượng
+fig, ax = plt.subplots(figsize=(7, 4.5), dpi=100)
+
+cac_cot = ax.bar(phien_ban, ty_le, color=["#94a3b8", "#94a3b8", "#0284c7"], width=0.55)
+
+# BẮT BUỘC: Khóa trục tung bắt đầu từ mốc 0% tuyệt đối
+ax.set_ylim(0, 105)
+
+# Định dạng nhãn và tiêu đề học thuật
+ax.set_title("Tỷ lệ Hài lòng Khách hàng theo Phiên bản (Chuẩn mực Trung thực)", fontsize=12, fontweight="bold", pad=12)
+ax.set_ylabel("Tỷ lệ phần trăm (%)", fontsize=10)
+ax.grid(axis="y", linestyle="--", alpha=0.5)
+
+# Hiển thị nhãn số liệu trực tiếp trên đỉnh mỗi cột
+ax.bar_label(cac_cot, fmt="%.1f%%", padding=3, fontsize=10, fontweight="semibold")
+
+# Tinh chỉnh giao diện: Bỏ khung viền thừa ở trên và bên phải
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Bản chất tâm lý học thị giác của Biểu đồ cột**: Não bộ con người mã hóa giá trị của biểu đồ cột thông qua **chiều dài hình học** của cột đó tính từ đường cơ sở (*Baseline*). Khi bạn cắt cụt trục tung (ví dụ từ $92\%$), bạn đã thay đổi điểm tựa cơ sở, biến một mức chênh lệch nhỏ $3.7$ điểm phần trăm thành một ảo ảnh quang học gấp $350\%$. Trong giới khoa học dữ liệu, hành vi cắt cụt trục tung của biểu đồ cột được xếp vào loại ngụy tạo thị giác thiếu trung thực (*Visual Deception*).
+- **Khi nào được phép thu hẹp trục tung?**: Quy tắc bắt đầu từ $0$ áp dụng nghiêm ngặt cho **Biểu đồ cột (Bar chart)** vì mắt đọc chiều dài. Ngược lại, với **Biểu đồ đường (Line chart)** theo dõi sự biến thiên theo thời gian của một chỉ số sinh học hay tài chính (như thân nhiệt bệnh nhân $36.5^\circ\text{C} - 40^\circ\text{C}$, hay tỷ giá hối đoái), việc phóng to trục tung là hoàn toàn hợp lệ vì mắt đọc *vị trí của điểm* và *độ dốc của đường*, miễn là biểu đồ phải ghi chú rõ thang đo.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 9: Plotting and Visualization](https://wesmckinney.com/book/plotting-and-visualization) (mục 9.1 và 9.2).

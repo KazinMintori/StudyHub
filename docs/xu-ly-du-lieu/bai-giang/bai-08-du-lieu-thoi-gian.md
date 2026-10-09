@@ -147,6 +147,62 @@ Cho chuỗi doanh thu 3 ngày liên tiếp: `[10.0, 20.0, 30.0]`. Hãy tính gi�
 Kết quả chuỗi là `[NaN, 15.0, 25.0]`.
 :::
 
+::: exercise Nhận diện bẫy kỳ snapshot dang dở và tính trung bình trượt trên cửa sổ thời gian thực
+Một trạm quan trắc IoT ghi nhận sản lượng điện tiêu thụ hàng ngày. Dữ liệu được trích xuất snapshot vào giữa trưa ngày 18/03/2026:
+```python
+import pandas as pd
+import numpy as np
+
+# Giả lập dữ liệu chuỗi thời gian không liên tục (thiếu ngày cuối tuần)
+ngay = pd.date_range("2026-01-01", "2026-03-18", freq="B") # Chỉ lấy ngày làm việc
+san_luong = np.random.uniform(80, 120, size=len(ngay))
+df_dien = pd.DataFrame({"san_luong": san_luong}, index=ngay)
+```
+Yêu cầu:
+1. Tính tổng sản lượng điện theo từng tháng. Chỉ ra cạm bẫy trực giác khi so sánh sản lượng tháng 3 với tháng 1 và tháng 2, và đề xuất giải pháp xử lý.
+2. Tính đường trung bình trượt 7 ngày để làm mượt dao động ngắn hạn trong bối cảnh dữ liệu bị khuyết thiếu các ngày nghỉ cuối tuần.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Resample trực tiếp và Rolling theo số lượng dòng)
+Người mới thường áp dụng trực tiếp các hàm `resample` và `rolling` mặc định:
+
+```python
+# 1. Resample hàng tháng trực tiếp
+thang_c1 = df_dien.resample("ME")["san_luong"].sum()
+print("Tổng theo tháng (Căn bản):\n", thang_c1)
+# BẪY TAI HẠI: Tháng 3 trông như tụt dốc thảm hại (chỉ bằng một nửa tháng 1 và 2),
+# nhưng thực chất chỉ vì tháng 3 mới trải qua 18 ngày snapshot!
+
+# 2. Rolling theo số hàng quan sát window=7
+df_dien["ma_7_c1"] = df_dien["san_luong"].rolling(window=7).mean()
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Lọc biên kỳ snapshot và Rolling theo cửa sổ thời gian thực `'7D'`)
+Chuyên gia phân tích chuỗi thời gian sẽ nhận diện ngay kỳ dang dở để loại bỏ hoặc chuẩn hóa theo ngày, đồng thời dùng cửa sổ thời gian offset `'7D'`:
+
+```python
+# 1. Khắc phục bẫy snapshot:
+# Cách A: Chỉ so sánh các tháng đã trọn vẹn (lọc bỏ kỳ dang dở)
+thang_tron_ven = df_dien[df_dien.index < "2026-03-01"].resample("ME")["san_luong"].sum()
+
+# Cách B: Hoặc tính sản lượng TRUNG BÌNH HÀNG NGÀY thay vì tổng gộp
+san_luong_tb_ngay = df_dien.resample("ME")["san_luong"].mean()
+print("Sản lượng trung bình ngày từng tháng:\n", san_luong_tb_ngay)
+
+# 2. Rolling theo cửa sổ thời gian thực '7D' (7 Days thực tế, bất kể có ngày nghỉ)
+# min_periods=1 giúp tính toán ngay từ ngày đầu tiên mà không tạo ra NaN thừa
+df_dien["ma_7_chuan"] = df_dien["san_luong"].rolling("7D", min_periods=1).mean()
+print("\nBảng sau khi làm mượt (5 dòng đầu):\n", df_dien.head())
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Cạm bẫy kỳ dang dở (Incomplete Period Trap)**: Khi lấy dữ liệu snapshot vào giữa tháng, tổng doanh số của kỳ đó chắc chắn sẽ thấp hơn các kỳ trọn vẹn trước đó. Nếu đưa con số này vào biểu đồ đường mà không chú thích rõ ràng, ban lãnh đạo sẽ hoảng loạn vì nghĩ rằng doanh nghiệp đang suy thoái nghiêm trọng. Giải pháp: Lọc bỏ kỳ chưa hoàn tất hoặc chuyển sang so sánh cường độ trung bình ngày.
+- **Phân biệt `rolling(7)` và `rolling('7D')`**:
+  - `rolling(window=7)`: gom **7 dòng quan sát gần nhất**. Nếu có 2 ngày nghỉ cuối tuần xen vào, 7 dòng này thực chất trải dài qua $9$ hoặc $10$ ngày thực tế.
+  - `rolling(window='7D')`: gom **chính xác các quan sát rơi vào khoảng thời gian 7 ngày trước đó** tính từ mốc thời gian của dòng hiện tại, bảo đảm tính nhất quán vật lý của hiện tượng theo thời gian.
+:::
+
 ## 6. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 11: Time Series](https://wesmckinney.com/book/time-series).

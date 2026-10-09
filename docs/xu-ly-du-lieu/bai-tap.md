@@ -1282,13 +1282,1209 @@ os.remove("temp_listings.csv")
 
 ---
 
-## 7. Bảng tổng kết năng lực & Chỉ dẫn thực hành
+## Phần 7. Xử lý Dữ liệu Chuỗi & Biểu thức Chính quy (Regex)
+
+::: info Trọng tâm tư duy
+Dữ liệu văn bản trong thực tế luôn chứa đầy rác: khoảng trắng thừa, thẻ HTML, ký tự đặc biệt, định dạng số điện thoại hay email hỗn tạp. Việc thành thạo **Biểu thức chính quy (Regex)** kết hợp các phương thức chuỗi vector hóa của Pandas (`.str`) là chìa khóa để trích xuất tri thức chuẩn xác từ dữ liệu phi cấu trúc.
+:::
+
+### Bài 7.1: Làm sạch văn bản HTML và chuẩn hóa khoảng trắng
+
+#### Tình huống thực tế
+Một trang tin bất động sản thu thập dữ liệu mô tả căn hộ từ web scraping. Cột `mo_ta` bị lẫn các thẻ HTML (`<p>`, `<b>`, `<br/>`), các ký tự thực thể HTML (`&amp;`, `&quot;`), và khoảng trắng ngắt quãng hỗn độn (`\n`, `\t`, nhiều dấu cách liên tiếp). Cần làm sạch cột này thành văn bản thuần sạch sẽ.
+
+```python
+import pandas as pd
+
+df_bds = pd.DataFrame({
+    "ma_tin": ["BDS01", "BDS02", "BDS03"],
+    "mo_ta": [
+        "<p>Căn hộ <b>2 phòng ngủ</b> view hồ Tây.<br/>Giá &amp; chính sách cực tốt!   </p>",
+        "<div>Nhà phố &quot;mặt tiền&quot;\n\tkinh doanh sầm uất.   Liên hệ ngay!</div>",
+        "   Chính chủ   cần bán gấp trong tuần...   "
+    ]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Chuỗi hàm thay thế ký tự thủ công (Căn bản)
+
+```python
+mo_ta_sach = []
+for van_ban in df_bds["mo_ta"]:
+    # Thay thế từng thẻ HTML đã biết
+    s = van_ban.replace("<p>", "").replace("</p>", "").replace("<b>", "").replace("</b>", "")
+    s = s.replace("<br/>", " ").replace("<div>", "").replace("</div>", "")
+    s = s.replace("&amp;", "&").replace("&quot;", '"')
+    # Gom khoảng trắng bằng cách split rồi join lại
+    s = " ".join(s.split())
+    mo_ta_sach.append(s)
+
+df_bds["mo_ta_sach_cb"] = mo_ta_sach
+print("Cách làm thủ công:\n", df_bds[["ma_tin", "mo_ta_sach_cb"]])
+```
+
+##### Cách 2 · Biểu thức chính quy kết hợp `html.unescape` vector hóa (Nâng cao)
+
+```python
+import re
+import html
+
+def lam_sach_van_ban(s: str) -> str:
+    if not isinstance(s, str):
+        return ""
+    # Bước 1: Giải mã toàn bộ HTML entities (&amp; -> &, &quot; -> ", v.v.)
+    van_ban = html.unescape(s)
+    # Bước 2: Xóa sạch mọi thẻ HTML bằng mẫu <[^>]+>
+    van_ban = re.sub(r"<[^>]+>", " ", van_ban)
+    # Bước 3: Thu gọn mọi chuỗi ký tự trắng liên tiếp (\n, \t, space) thành 1 dấu cách duy nhất
+    van_ban = re.sub(r"\s+", " ", van_ban).strip()
+    return van_ban
+
+# Vector hóa qua .apply() hoặc .str.replace()
+df_bds["mo_ta_chuan"] = df_bds["mo_ta"].apply(lam_sach_van_ban)
+print("Cách nâng cao với Regex & html.unescape:\n", df_bds[["ma_tin", "mo_ta_chuan"]])
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Mẫu `<[^>]+>` hoạt động ra sao?**:
+  Một sai lầm kinh điển của người mới học Regex là viết `<.*>` để tìm thẻ HTML. Do tính chất tham lam (*greedy*), `<.*>` sẽ nuốt chửng toàn bộ từ dấu `<` đầu tiên của `<p>` cho đến dấu `>` cuối cùng của `</p>`, xóa sạch cả nội dung văn bản bên trong! Mẫu `<[^>]+>` sử dụng lớp ký tự phủ định: bắt đầu bằng `<`, theo sau bởi một hoặc nhiều ký tự **không phải là `>`**, rồi kết thúc bằng `>`. Nó khớp chính xác từng thẻ HTML đơn lẻ một cách an toàn tuyệt đối.
+- **Thư viện chuẩn `html.unescape`**: Tuyệt đối không tự viết hàng chục lệnh `.replace("&amp;", "&")`. Thư viện `html` có sẵn của Python nắm giữ bảng tra cứu toàn bộ hàng nghìn mã HTML entities chuẩn W3C, xử lý triệt để cả các mã dạng số như `&#39;`.
+
+---
+
+### Bài 7.2: Trích xuất thông tin liên hệ đa trường bằng Capturing Groups
+
+#### Tình huống thực tế
+Cho đoạn văn bản rao vặt chứa số điện thoại liên hệ và địa chỉ email của người bán. Cần trích xuất số điện thoại (chấp nhận các định dạng phổ biến tại Việt Nam: `0912.345.678`, `0988 123 456`, `+84 901 234 567`) và địa chỉ email.
+
+```python
+tin_rao = pd.Series([
+    "Căn hộ Ecohome, liên hệ chính chủ: 0912.345.678 hoặc email: contact@ecohome.vn để xem nhà.",
+    "Bán gấp đất nền, hotline: +84 988 123 456 (gặp Tuấn), hòm thư: tuan.bds_hn@land-group.com.vn",
+    "Cho thuê văn phòng trọn gói, liên lạc số 0901234567, không tiếp trung gian."
+])
+```
+
+#### Lời giải
+
+##### Cách 1 · Tìm kiếm tuần tự từng trường bằng biểu thức đơn giản (Căn bản)
+
+```python
+import re
+
+danh_sach_sdt = []
+danh_sach_email = []
+
+for tin in tin_rao:
+    # Tìm số điện thoại
+    khop_sdt = re.search(r"(?:\+84|0)\d{2,3}[.\s]?\d{3}[.\s]?\d{3,4}", tin)
+    sdt = khop_sdt.group(0) if khop_sdt else None
+    
+    # Tìm email
+    khop_email = re.search(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", tin)
+    email = khop_email.group(0) if khop_email else None
+    
+    danh_sach_sdt.append(sdt)
+    danh_sach_email.append(email)
+
+df_lien_he = pd.DataFrame({"sdt": danh_sach_sdt, "email": danh_sach_email})
+print("Kết quả trích xuất tuần tự:\n", df_lien_he)
+```
+
+##### Cách 2 · Trích xuất bảng trực tiếp bằng Named Capturing Groups và `.str.extract` (Nâng cao)
+
+```python
+# Thiết lập các nhóm bắt có tên (Named Capturing Groups)
+mau_sdt = r"(?P<sdt>(?:\+84\s?|0)\d{2,3}[.\s]?\d{3}[.\s]?\d{3,4})"
+mau_email = r"(?P<email>[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)"
+
+# Kết hợp trích xuất trực tiếp ra DataFrame bằng Pandas
+df_kq = pd.DataFrame({
+    "sdt": tin_rao.str.extract(mau_sdt, expand=True)["sdt"],
+    "email": tin_rao.str.extract(mau_email, expand=True)["email"]
+})
+
+# Chuẩn hóa số điện thoại: bỏ toàn bộ dấu chấm, dấu cách và đổi +84 thành 0
+df_kq["sdt_chuan"] = df_kq["sdt"].str.replace(r"[.\s]", "", regex=True).str.replace(r"^\+84", "0", regex=True)
+
+print("Kết quả trích xuất vector hóa và chuẩn hóa:\n", df_kq)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Non-capturing group `(?:...)`**: Khi bạn cần nhóm các ký tự lại để áp dụng toán tử hoặc (ví dụ `(?:\+84\s?|0)`), hãy dùng cú pháp `(?:...)` thay vì `(...)`. Cú pháp này báo cho động cơ Regex biết chỉ gom nhóm logic mà không lưu trữ vào bộ nhớ bắt giữ (*capturing buffer*), giúp tăng tốc độ tìm kiếm và tránh làm xáo trộn thứ tự các cột khi gọi `.str.extract()`.
+- **Ranh giới từ `\b`**: Trong thực tế, hãy luôn cân nhắc thêm ranh giới từ `\b` vào đầu mẫu số điện thoại để tránh trường hợp số điện thoại bị khớp nhầm vào phần đuôi của một mã số tài khoản ngân hàng hay mã căn hộ kéo dài.
+
+---
+
+### Bài 7.3: Bẫy khớp tham lam (Greedy) vs Lười biếng (Lazy)
+
+#### Tình huống thực tế
+Cho chuỗi trích xuất bình luận của khách hàng chứa nhiều đoạn trích dẫn nằm trong dấu ngoặc kép:
+`text = 'Khách nhận xét: "Phòng rất rộng" nhưng "vệ sinh quá bẩn" và "nhân viên thô lỗ".'`
+Hãy trích xuất danh sách tất cả các cụm nhận xét độc lập nằm giữa các cặp dấu ngoặc kép.
+
+#### Lời giải
+
+##### Cách 1 · Lỗi kinh điển khi dùng toán tử tham lam `.*` (Căn bản — Kết quả sai)
+
+```python
+import re
+
+text = 'Khách nhận xét: "Phòng rất rộng" nhưng "vệ sinh quá bẩn" và "nhân viên thô lỗ".'
+
+# Dùng toán tử tham lam .* thông thường
+sai = re.findall(r'"(.*)"', text)
+print("Kết quả tham lam (SAI):\n", sai)
+# Kết quả chỉ có đúng 1 phần tử duy nhất nuốt chửng cả câu:
+# ['Phòng rất rộng" nhưng "vệ sinh quá bẩn" và "nhân viên thô lỗ']
+```
+
+##### Cách 2 · Sử dụng Regex lười biếng `.*?` hoặc lớp ký tự phủ định `"[^"]+"` (Nâng cao)
+
+```python
+# Cách 2a: Thêm dấu hỏi ? để biến thành khớp lười biếng (Lazy / Non-greedy)
+dung_lazy = re.findall(r'"(.*?)"', text)
+print("Cách 2a (Lazy .*?):\n", dung_lazy)
+
+# Cách 2b: Dùng tập phủ định "[^"]+" (Tối ưu hiệu năng, không quay lui)
+dung_negated = re.findall(r'"([^"]+)"', text)
+print("Cách 2b (Phủ định [^\"]+):\n", dung_negated)
+
+assert dung_lazy == dung_negated == ['Phòng rất rộng', 'vệ sinh quá bẩn', 'nhân viên thô lỗ']
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Cơ chế tham lam (Greedy Matching)**: Trong các biểu thức chính quy, các lượng từ `*`, `+` mặc định hoạt động theo cơ chế tham lam: chúng cố gắng "nuốt" càng nhiều ký tự càng tốt cho đến tận cuối chuỗi, sau đó mới quay lui (*backtrack*) dần dần để tìm ký tự đóng `"`. Điều này giải thích tại sao `r'"(.*)"'` nuốt chửng từ dấu ngoặc kép đầu tiên đến dấu ngoặc kép cuối cùng.
+- **Vì sao Cách 2b (`"[^"]+"`) tối ưu hơn Cách 2a (`".*?"`)?**:
+  Khớp lười biếng `.*?` phải liên tục kiểm tra điều kiện dừng sau từng ký tự một, gây ra chi phí kiểm tra lặp lại rất lớn. Ngược lại, mẫu phủ định `[^"]+` thông báo dứt khoát cho máy trạng thái hữu hạn (NFA): *"Cứ đọc thẳng liên tục mọi ký tự cho đến khi chạm đúng dấu ngoặc kép tiếp theo thì dừng ngay"*. Nó không bao giờ phải quay lui (*zero backtracking*), tốc độ thực thi nhanh hơn từ 3 đến 10 lần trên các đoạn văn bản dài.
+
+---
+
+### Bài 7.4: Tách chuỗi và mã hóa tiện nghi đa giá trị (Multi-label One-Hot Encoding)
+
+#### Tình huống thực tế
+Cho bảng dữ liệu khách sạn, trong đó cột `amenities` chứa danh sách các tiện ích phòng dưới dạng chuỗi ngăn cách bởi dấu chấm phẩy. Cần chuyển đổi cột này thành ma trận nhị phân 0/1 (*One-Hot Encoding*) cho từng loại tiện ích để chuẩn bị dữ liệu đầu vào cho mô hình máy học.
+
+```python
+df_ks = pd.DataFrame({
+    "hotel_id": ["H01", "H02", "H03"],
+    "amenities": [
+        "Wifi; Máy lạnh; Bể bơi; Ban công",
+        "Wifi; Bãi đỗ xe",
+        "Máy lạnh; Bể bơi; Bãi đỗ xe"
+    ]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Lặp thủ công và tạo từng cột bằng vòng lặp Python (Căn bản)
+
+```python
+# Bước 1: Tìm tất cả các loại tiện nghi phân biệt
+tap_tien_nghi = set()
+ds_tach = []
+for chuoi in df_ks["amenities"]:
+    cac_muc = [muc.strip() for muc in chuoi.split(";")]
+    ds_tach.append(cac_muc)
+    tap_tien_nghi.update(cac_muc)
+
+# Bước 2: Tạo ma trận nhị phân thủ công
+danh_sach_cot = sorted(tap_tien_nghi)
+ma_tran = []
+for cac_muc in ds_tach:
+    dong = [1 if tn in cac_muc else 0 for tn in danh_sach_cot]
+    ma_tran.append(dong)
+
+df_encoded_cb = pd.concat([df_ks[["hotel_id"]], pd.DataFrame(ma_tran, columns=danh_sach_cot)], axis=1)
+print("Cách mã hóa thủ công:\n", df_encoded_cb)
+```
+
+##### Cách 2 · Sử dụng `.str.get_dummies()` vector hóa trong một dòng lệnh (Nâng cao)
+
+```python
+# Tách và tạo ma trận One-Hot tự động ngay ở tầng C của Pandas
+df_dummies = df_ks["amenities"].str.get_dummies(sep="; ")
+
+# Ghép với cột ID ban đầu
+df_encoded_adv = pd.concat([df_ks[["hotel_id"]], df_dummies], axis=1)
+
+print("Cách get_dummies vector hóa chuyên nghiệp:\n", df_encoded_adv)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Sức mạnh của `.str.get_dummies()`**:
+  Thay vì phải viết hai vòng lặp lồng nhau phức tạp để thu thập tập hợp duy nhất và gán giá trị, phương thức `.str.get_dummies(sep=...)` của Pandas thực hiện toàn bộ quy trình: băm từ khóa, loại bỏ khoảng trắng theo dấu phân cách, và sinh ra một DataFrame nhị phân thưa tối ưu chỉ trong một thao tác duy nhất.
+- **Lưu ý dấu phân cách**: Hãy chú ý dấu cách sau dấu chấm phẩy (`sep="; "`). Nếu chỉ viết `sep=";"`, các mục đứng sau sẽ bị dính khoảng trắng ở đầu (`" Máy lạnh"` thay vì `"Máy lạnh"`), dẫn đến việc sinh ra các cột bị trùng lặp giả tạo.
+
+---
+
+## Phần 8. Xử lý Dữ liệu Thời gian & Chuỗi Thời gian (Time Series)
+
+::: info Trọng tâm tư duy
+Thời gian là một chiều dữ liệu đặc thù: nó vừa mang tính liên tục, vừa tuân theo các chu kỳ lịch không đều (tháng 28 đến 31 ngày, năm nhuận, chu kỳ tuần). Việc làm chủ `DatetimeIndex`, `resample()`, `rolling()` và phép dịch chuyển `shift()` là nền tảng để phân tích tăng trưởng và dự báo chuỗi thời gian.
+:::
+
+### Bài 8.1: Đổi kiểu ngày giờ an toàn và phân biệt `NaT` lỗi đọc với thiếu từ nguồn
+
+#### Tình huống thực tế
+Cho bảng ghi nhận thông tin đặt phòng gồm ngày nhận phòng (`check_in`) và ngày trả phòng (`check_out`). Cần:
+1. Chuyển đổi hai cột sang kiểu `datetime64[ns]`.
+2. Phân biệt rõ: ô nào vốn bị để trống từ nguồn, và ô nào bị lỗi do người dùng nhập chuỗi sai định dạng (ví dụ `"2025/15/01"`).
+3. Tính số đêm lưu trú hợp lệ (`so_dem = check_out - check_in`) và phát hiện các đơn hàng có logic phi lý (ngày trả phòng xảy ra trước ngày nhận phòng).
+
+```python
+df_booking = pd.DataFrame({
+    "booking_id": ["B01", "B02", "B03", "B04", "B05"],
+    "check_in": ["2025-01-10", "2025-01-15", "sai_dinh_dang", None, "2025-02-01"],
+    "check_out": ["2025-01-14", "2025-01-12", "2025-01-20", "2025-01-25", "2025-02-05"]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Lặp từng dòng với `datetime.strptime` và bắt lỗi `ValueError` (Căn bản)
+
+```python
+from datetime import datetime
+
+so_dem_cb = []
+trang_thai_cb = []
+
+for _, row in df_booking.iterrows():
+    cin_raw, cout_raw = row["check_in"], row["check_out"]
+    if cin_raw is None or cout_raw is None:
+        trang_thai_cb.append("Thiếu dữ liệu gốc")
+        so_dem_cb.append(None)
+        continue
+    try:
+        d_in = datetime.strptime(cin_raw, "%Y-%m-%d")
+        d_out = datetime.strptime(cout_raw, "%Y-%m-%d")
+        delta = (d_out - d_in).days
+        if delta <= 0:
+            trang_thai_cb.append("Phi lý (ngày về trước ngày đến)")
+            so_dem_cb.append(delta)
+        else:
+            trang_thai_cb.append("Hợp lệ")
+            so_dem_cb.append(delta)
+    except ValueError:
+        trang_thai_cb.append("Lỗi định dạng ngày")
+        so_dem_cb.append(None)
+
+df_booking["so_dem_cb"] = so_dem_cb
+df_booking["trang_thai_cb"] = trang_thai_cb
+print("Xử lý tuần tự thủ công:\n", df_booking)
+```
+
+##### Cách 2 · Vector hóa với `pd.to_datetime` kết hợp phân loại lỗi chuẩn mực (Nâng cao)
+
+```python
+# 1. Đánh dấu các ô vốn đã rỗng từ đầu nguồn
+goc_cin_thieu = df_booking["check_in"].isna()
+
+# 2. Ép kiểu an toàn với errors='coerce' (lỗi biến thành NaT)
+df_booking["cin_dt"] = pd.to_datetime(df_booking["check_in"], format="%Y-%m-%d", errors="coerce")
+df_booking["cout_dt"] = pd.to_datetime(df_booking["check_out"], format="%Y-%m-%d", errors="coerce")
+
+# 3. Phân biệt chính xác: NaT mới sinh ra do lỗi format
+df_booking["loi_dinh_dang_cin"] = df_booking["cin_dt"].isna() & ~goc_cin_thieu
+
+# 4. Tính số đêm bằng phép trừ vector và trích xuất .dt.days
+df_booking["so_dem"] = (df_booking["cout_dt"] - df_booking["cin_dt"]).dt.days
+
+# 5. Kiểm tra tính bất biến nghiệp vụ: số đêm phải dương
+df_booking["hop_le"] = df_booking["so_dem"] > 0
+
+print("Xử lý vector hóa chuẩn kỹ sư dữ liệu:\n", df_booking[[
+    "booking_id", "so_dem", "loi_dinh_dang_cin", "hop_le"
+]])
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **`NaT` (Not a Time) là gì?**: Trong Pandas, `NaT` là giá trị đặc biệt đại diện cho thời điểm khuyết thiếu (tương đương với `NaN` của kiểu số thực). `NaT` có thể tham gia vào các phép trừ vector: kết quả trừ giữa một mốc ngày với `NaT` sẽ trả về `NaT` mà không làm sập chương trình.
+- **Bẫy gom chung lỗi**: Người làm dữ liệu thiếu kinh nghiệm thường chỉ gọi `pd.to_datetime(errors='coerce')` rồi kết luận rằng mọi giá trị `NaT` đều là "khách hàng không nhập ngày". Hãy luôn ghi nhận số ô bị rỗng từ trước (`isna()`) để tách bạch rành mạch giữa *dữ liệu thiếu tự nhiên* và *dữ liệu bị lỗi trong quá trình thu thập/chuyển đổi*.
+
+---
+
+### Bài 8.2: Tổng hợp dữ liệu theo chu kỳ lịch (Resampling) và bẫy kỳ chụp ảnh cắt ngang
+
+#### Tình huống thực tế
+Cho bảng ghi nhận số lượt đánh giá của khách hàng từ đầu năm 2024 đến ngày 20/06/2025 (thời điểm trích xuất dữ liệu snapshot). Cần:
+1. Tổng hợp số lượt đánh giá theo từng quý (`QE`).
+2. Nhận diện và loại bỏ bẫy sai lệch do quý cuối cùng chưa kết thúc trọn vẹn (*Snapshot Truncation Bias*).
+
+```python
+# Tạo chuỗi thời gian mẫu với 500 đánh giá ngẫu nhiên
+rng = np.random.default_rng(42)
+ngay_ngau_nhien = pd.to_datetime("2024-01-01") + pd.to_timedelta(
+    rng.integers(0, 536, size=500), unit="D"
+)
+df_rv = pd.DataFrame({"review_id": range(1, 501), "ngay": ngay_ngau_nhien}).sort_values("ngay")
+```
+
+#### Lời giải
+
+##### Cách 1 · Trích xuất năm quý rồi GroupBy (Căn bản)
+
+```python
+df_cb = df_rv.copy()
+df_cb["nam"] = df_cb["ngay"].dt.year
+df_cb["quy"] = df_cb["ngay"].dt.quarter
+
+tk_quy_cb = df_cb.groupby(["nam", "quy"]).size().reset_index(name="so_review")
+print("Tổng hợp theo quý cơ bản:\n", tk_quy_cb)
+```
+
+##### Cách 2 · Vận dụng `resample('QE')` trên DatetimeIndex và lọc kỳ trọn vẹn (Nâng cao)
+
+```python
+# Thiết lập DatetimeIndex
+df_ts = df_rv.set_index("ngay")
+
+# Resample theo quý kết thúc (Quarter End)
+tk_resample = df_ts.resample("QE").size().rename("so_review").to_frame()
+
+# Xác định mốc snapshot trích xuất dữ liệu
+moc_snapshot = df_rv["ngay"].max()
+print(f"Mốc snapshot dữ liệu: {moc_snapshot.strftime('%Y-%m-%d')}")
+
+# Kiểm tra xem quý cuối cùng đã kết thúc chưa
+# Một quý kết thúc tại ngày cuối cùng của quý đó
+ngay_cuoi_quy_hien_tai = tk_resample.index[-1]
+quy_da_ket_thuc = moc_snapshot >= ngay_cuoi_quy_hien_tai
+
+if not quy_da_ket_thuc:
+    print(f"Cảnh báo: Quý {tk_resample.index[-1].strftime('%Y-Q%q')} chưa kết thúc trọn vẹn! Đang loại bỏ để tránh thiên lệch.")
+    tk_quy_chuan = tk_resample.iloc[:-1]
+else:
+    tk_quy_chuan = tk_resample
+
+print("Báo cáo theo quý chuẩn mực phân tích:\n", tk_quy_chuan)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Hiểm họa của kỳ cắt ngang (Truncation Bias)**:
+  Nếu bạn giữ nguyên quý 2 năm 2025 (mới chỉ chạy được đến ngày 20/06, thiếu mất 10 ngày cuối cùng), con số tổng của quý đó sẽ thấp hơn bình thường. Khi vẽ đồ thị đường, đường biểu diễn sẽ lao dốc ở điểm cuối cùng, dễ khiến ban giám đốc hiểu lầm rằng chất lượng dịch vụ hoặc lượng khách hàng đang bị sụt giảm nghiêm trọng.
+- **`resample()` vs `groupby()`**:
+  `resample()` làm việc trực tiếp trên cấu trúc thời gian của `DatetimeIndex`. Điểm ưu việt tuyệt đối của nó so với `groupby()` là nếu trong một quý nào đó **hoàn toàn không có đánh giá nào phát sinh**, `resample()` vẫn tự động tạo ra dòng cho quý đó với giá trị `0`, giúp bảo toàn tính liên tục của trục thời gian.
+
+---
+
+### Bài 8.3: Cửa sổ trượt (Rolling Window) — Làm mịn dao động tuần
+
+#### Tình huống thực tế
+Doanh số bán lẻ của một siêu thị biến động mạnh theo ngày trong tuần: thứ Bảy và Chủ Nhật luôn cao gấp 3 lần ngày thường. Hãy tính đường trung bình trượt 7 ngày (*7-day rolling average*) để triệt tiêu hiệu ứng ngày trong tuần, và xác định cửa sổ 7 ngày liên tiếp nào có tổng doanh số cao kỷ lục.
+
+```python
+# Tạo dữ liệu doanh thu 30 ngày (đơn vị: triệu đồng)
+rng = np.random.default_rng(123)
+ngay_30 = pd.date_range("2025-03-01", periods=30, freq="D")
+# Ngày cuối tuần (thứ 7, CN có index 5, 6) được nhân thêm hệ số 2.5
+he_so_tuan = np.where(ngay_30.dayofweek >= 5, 2.5, 1.0)
+doanh_so_goc = (rng.normal(50, 5, size=30) * he_so_tuan).round(1)
+
+df_sales = pd.DataFrame({"ngay": ngay_30, "doanh_thu": doanh_so_goc}).set_index("ngay")
+```
+
+#### Lời giải
+
+##### Cách 1 · Lặp thủ công qua từng lát cắt 7 ngày (Căn bản)
+
+```python
+tb_truot_cb = [None] * len(df_sales)
+values = df_sales["doanh_thu"].tolist()
+
+for i in range(6, len(values)):
+    lat_cat = values[i - 6 : i + 1]
+    tb_truot_cb[i] = round(sum(lat_cat) / 7.0, 2)
+
+df_sales["tb_truot_cb"] = tb_truot_cb
+print("5 dòng đầu cách thủ công:\n", df_sales.head(10))
+```
+
+##### Cách 2 · Sử dụng `.rolling(7, min_periods=1)` và tìm đỉnh cao nhất (Nâng cao)
+
+```python
+# 1. Tính trung bình trượt 7 ngày
+# min_periods=1 giúp tính toán ngay từ ngày đầu tiên (không bị NaN ở 6 ngày đầu)
+df_sales["tb_truot_7d"] = df_sales["doanh_thu"].rolling(window=7, min_periods=1).mean().round(2)
+
+# 2. Tính tổng doanh thu trượt 7 ngày trọn vẹn (window=7 chuẩn)
+tong_truot_7d = df_sales["doanh_thu"].rolling(window=7).sum()
+
+# 3. Tìm thời điểm kết thúc của cửa sổ có tổng doanh thu kỷ lục
+ngay_dinh = tong_truot_7d.idxmax()
+doanh_thu_ky_luc = tong_truot_7d.loc[ngay_dinh]
+ngay_bat_dau = ngay_dinh - pd.Timedelta(days=6)
+
+print(f"Cửa sổ 7 ngày đạt đỉnh cao nhất: từ {ngay_bat_dau.strftime('%d/%m')} đến {ngay_dinh.strftime('%d/%m')}")
+print(f"Tổng doanh thu kỷ lục: {doanh_thu_ky_luc:.1f} triệu đồng (Trung bình: {doanh_thu_ky_luc/7:.1f} tr/ngày)")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Vai trò làm mịn của Rolling Window**: Dao động chu kỳ tuần (*weekly seasonality*) là một dạng nhiễu tần số cao. Việc lấy trung bình trên đúng một chu kỳ trọn vẹn (7 ngày) triệt tiêu hoàn toàn hiệu ứng cuối tuần, làm lộ rõ xu hướng tăng trưởng nền tảng (*underlying trend*) của doanh nghiệp.
+- **Ý nghĩa của `min_periods`**:
+  Nếu không khai báo `min_periods`, 6 ngày đầu tiên của bảng sẽ mang giá trị `NaN` vì hệ thống chưa tích lũy đủ 7 quan sát. Bằng cách đặt `min_periods=1`, Pandas sẽ tính trung bình trên số ngày thực có (ngày 1 lấy chính nó, ngày 2 lấy trung bình 2 ngày), giúp dữ liệu sẵn sàng hiển thị trọn vẹn ngay từ điểm bắt đầu.
+
+---
+
+## Phần 9. Đảm bảo Chất lượng Dữ liệu & Kiểm thử Chéo bảng (Cross-table QA)
+
+::: info Trọng tâm tư duy
+Một bảng dữ liệu đơn lẻ trông có thể rất sạch, nhưng khi ghép nối vào toàn bộ hệ thống cơ sở dữ liệu, các lỗi nghiêm trọng mới bắt đầu lộ diện: **bản ghi con mồ côi (orphaned records)**, **khóa tự nhiên bị trùng lặp**, và **con số tổng hợp dẫn xuất bị lệch pha**. Một kỹ sư dữ liệu chuyên nghiệp luôn xây dựng bộ kiểm thử chất lượng (QA report) tự động trước khi nạp dữ liệu vào kho.
+:::
+
+### Bài 9.1: Kiểm tra toàn vẹn khóa ngoại và phát hiện bản ghi mồ côi
+
+#### Tình huống thực tế
+Cho bảng thông tin phòng nghỉ `df_listings` và bảng lịch sử đánh giá `df_reviews`. Cần kiểm tra xem có đánh giá nào mang `listing_id` không hề tồn tại trong bảng phòng không (bản ghi mồ côi do phòng đã bị xóa nhưng đánh giá chưa được dọn sạch).
+
+```python
+df_listings = pd.DataFrame({
+    "id": [101, 102, 103],
+    "name": ["Phòng view hồ", "Studio phố cổ", "Căn hộ cao cấp"]
+})
+
+df_reviews = pd.DataFrame({
+    "review_id": [1, 2, 3, 4, 5],
+    "listing_id": [101, 102, 999, 101, 888],  # 999 và 888 không tồn tại trong listings
+    "rating": [5, 4, 1, 5, 2]
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Ghép bảng `merge` với cờ `indicator=True` (Căn bản)
+
+```python
+# Ghép left join với indicator
+df_kiem_tra = pd.merge(
+    df_reviews,
+    df_listings[["id"]],
+    left_on="listing_id",
+    right_on="id",
+    how="left",
+    indicator=True
+)
+
+# Các dòng có _merge == 'left_only' là bản ghi mồ côi
+cac_dong_mo_coi_cb = df_kiem_tra[df_kiem_tra["_merge"] == "left_only"]
+print(f"Số lượng đánh giá mồ côi (Cách 1): {len(cac_dong_mo_coi_cb)}")
+print(cac_dong_mo_coi_cb[["review_id", "listing_id"]])
+```
+
+##### Cách 2 · Vector hóa với toán tử phủ định `~` và `isin()` (Nâng cao)
+
+```python
+# Kiểm tra sự tồn tại trong tập khóa chính bằng Hash Table tầng C
+tap_khoa_hop_le = set(df_listings["id"])
+mat_na_mo_coi = ~df_reviews["listing_id"].isin(tap_khoa_hop_le)
+
+so_luong_loi = mat_na_mo_coi.sum()
+cac_id_sai = df_reviews.loc[mat_na_mo_coi, "listing_id"].unique().tolist()
+
+print(f"Báo cáo QA: Phát hiện {so_luong_loi} dòng không khớp khóa ngoại!")
+print(f"Danh sách mã phòng mồ côi vi phạm: {cac_id_sai}")
+assert so_luong_loi == 2 and set(cac_id_sai) == {999, 888}
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Hiệu năng của `isin()` so với `merge()`**:
+  Phép nối bảng `merge()` phải tạo ra một DataFrame trung gian, cấp phát bộ nhớ cho các cột mới và sắp xếp lại chỉ mục. Khi bảng đánh giá có hàng chục triệu dòng, `merge` sẽ rất tốn RAM và thời gian CPU. Ngược lại, `isin(set)` chuyển tập khóa chính thành một bảng băm (*Hash Set*) và thực hiện tra cứu $O(1)$ cho mỗi dòng của bảng review, nhanh hơn gấp nhiều lần và tiết kiệm tối đa bộ nhớ.
+- **Tính toàn vẹn tham chiếu (Referential Integrity)**: Trong kiến trúc kho dữ liệu, các bản ghi mồ côi sẽ làm sai lệch nghiêm trọng các phép nối `INNER JOIN` (làm mất dữ liệu) hoặc phép tính tổng doanh thu/đánh giá.
+
+---
+
+### Bài 9.2: Đóng gói báo cáo kiểm tra chất lượng dữ liệu (QA Report)
+
+#### Tình huống thực tế
+Cho bảng thông tin chỗ ở `df_listings` có cột ghi sẵn `number_of_reviews` (tổng số đánh giá) và bảng chi tiết `df_reviews`. Hãy xây dựng một quy trình kiểm thử 3 bước và đóng gói thành một bảng `qa_report` gồm 3 cột: `quy_tac`, `so_dong_loi`, `danh_gia`:
+1. **Kiểm tra miền thời gian**: Không có đánh giá nào xảy ra trong tương lai (sau ngày `2025-06-30`).
+2. **Kiểm tra khóa tự nhiên**: Cặp `(listing_id, date, reviewer_id)` không được phép trùng lặp.
+3. **Đối chiếu số liệu dẫn xuất**: Cột `number_of_reviews` trong bảng phòng phải khớp đúng số dòng thực đếm từ bảng đánh giá.
+
+```python
+df_listings = pd.DataFrame({
+    "id": [101, 102, 103],
+    "number_of_reviews": [3, 1, 5]  # Phòng 103 ghi 5 nhưng thực tế chỉ có 1 review
+})
+
+df_reviews = pd.DataFrame({
+    "listing_id": [101, 101, 101, 102, 103, 101],
+    "date": pd.to_datetime(["2025-01-01", "2025-02-01", "2025-03-01", "2025-01-10", "2026-12-31", "2025-01-01"]),
+    "reviewer_id": [1, 2, 3, 4, 5, 1]  # Dòng 0 và dòng 5 bị trùng hoàn toàn
+})
+```
+
+#### Lời giải
+
+##### Cách 1 · Kiểm tra rời rạc từng điều kiện bằng câu lệnh `assert` (Căn bản)
+
+```python
+# 1. Kiểm tra ngày tương lai
+loi_ngay = (df_reviews["date"] > "2025-06-30").sum()
+
+# 2. Kiểm tra trùng lặp
+loi_trung = df_reviews.duplicated(subset=["listing_id", "date", "reviewer_id"]).sum()
+
+# 3. Kiểm tra khớp số đếm
+dem_thuc = df_reviews.groupby("listing_id").size()
+# So sánh thủ công
+print(f"Lỗi ngày tương lai: {loi_ngay}, Lỗi trùng: {loi_trung}")
+```
+
+##### Cách 2 · Đóng gói tự động thành Bảng Kiểm chuẩn Chất lượng `qa_report` (Nâng cao)
+
+```python
+def tao_bao_cao_qa(listings: pd.DataFrame, reviews: pd.DataFrame, moc_ngay: str) -> pd.DataFrame:
+    danh_sach_kiem_tra = []
+
+    # Quy tắc 1: Miền thời gian hợp lệ
+    n_tuong_lai = (reviews["date"] > moc_ngay).sum()
+    danh_sach_kiem_tra.append({
+        "quy_tac": "Ngày review không vượt quá mốc snapshot",
+        "so_dong_loi": int(n_tuong_lai),
+        "danh_gia": "ĐẠT" if n_tuong_lai == 0 else "CẢNH BÁO (có ngày tương lai)"
+    })
+
+    # Quy tắc 2: Khóa tự nhiên không trùng lặp
+    n_trung_lap = reviews.duplicated(subset=["listing_id", "date", "reviewer_id"]).sum()
+    danh_sach_kiem_tra.append({
+        "quy_tac": "Khóa tự nhiên (listing_id, date, reviewer_id) duy nhất",
+        "so_dong_loi": int(n_trung_lap),
+        "danh_gia": "ĐẠT" if n_trung_lap == 0 else "LỖI (trùng bản ghi)"
+    })
+
+    # Quy tắc 3: Đối chiếu số lượng dẫn xuất với số đếm thực tế
+    dem_thuc_te = reviews.groupby("listing_id").size().rename("so_dem_thuc")
+    doi_chieu = listings[["id", "number_of_reviews"]].merge(
+        dem_thuc_te, left_on="id", right_index=True, how="left"
+    ).fillna({"so_dem_thuc": 0})
+    
+    n_lech_so = (doi_chieu["number_of_reviews"] != doi_chieu["so_dem_thuc"]).sum()
+    danh_sach_kiem_tra.append({
+        "quy_tac": "Khớp số lượng review ghi sẵn với số dòng thực tế",
+        "so_dong_loi": int(n_lech_so),
+        "danh_gia": "ĐẠT" if n_lech_so == 0 else "LỆCH SỐ LIỆU (cần tính lại)"
+    })
+
+    return pd.DataFrame(danh_sach_kiem_tra)
+
+qa_result = tao_bao_cao_qa(df_listings, df_reviews, "2025-06-30")
+print("Báo cáo QA chuẩn mực:\n", qa_result.to_string(index=False))
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Tư duy QA trong Data Engineering**: Trong phát triển phần mềm, bạn có kiểm thử đơn vị (*Unit Test*). Trong kỹ thuật dữ liệu, bạn bắt buộc phải có **Kiểm thử dữ liệu (Data Quality Test)**. Thay vì để các lỗi sai phát tán âm thầm vào báo cáo của ban lãnh đạo, một bảng `qa_report` được thực thi tự động sau mỗi lần nạp dữ liệu sẽ lập tức cảnh báo bất kỳ sai lệch nào.
+
+---
+
+## Phần 10. Xử lý Dữ liệu Văn bản với LLM & Kỷ luật Đo lường
+
+::: info Trọng tâm tư duy
+Ứng dụng Mô hình Ngôn ngữ Lớn (LLM) vào xử lý dữ liệu phi cấu trúc không phải là "gọi prompt và tin tưởng mù quáng". Để đưa LLM vào sản xuất, bạn bắt buộc phải xây dựng **phương pháp đối chứng (Baseline)**, **ràng buộc cấu trúc dữ liệu đầu ra bằng Schema (Pydantic)**, và **đo lường độ chính xác trên tập nhãn chuẩn vàng (Gold Standard)**.
+:::
+
+### Bài 10.1: Xây dựng phương pháp đối chứng (Baseline) không dùng LLM
+
+#### Tình huống thực tế
+Cho danh sách các đoạn bình luận của khách hàng về dịch vụ phòng khách sạn. Cần phân loại cảm xúc thành 3 nhãn: `"positive"`, `"negative"`, hoặc `"neutral"`. Trước khi chi ngân sách gọi API LLM, hãy xây dựng một mô hình đối chứng dựa trên tập từ khóa (*Rule-based Baseline*) với chi phí 0 đồng.
+
+```python
+danh_gia_mau = [
+    {"id": 1, "text": "Phòng rất sạch sẽ, chủ nhà thân thiện và nhiệt tình."},
+    {"id": 2, "text": "Vị trí gần biển, phòng tạm ổn."},
+    {"id": 3, "text": "Quá thất vọng, phòng đầy mùi ẩm mốc và máy lạnh hỏng."},
+    {"id": 4, "text": "Không gian yên tĩnh, giá cả hợp lý."},
+    {"id": 5, "text": "Dịch vụ cực kỳ tệ, không bao giờ quay lại!"}
+]
+```
+
+#### Lời giải
+
+##### Cách 1 · Duyệt vòng lặp với kiểm tra chuỗi con cơ bản (Căn bản)
+
+```python
+tu_tich_cuc = ["sạch sẽ", "thân thiện", "nhiệt tình", "hợp lý", "tuyệt vời"]
+tu_tieu_cuc = ["thất vọng", "ẩm mốc", "hỏng", "tệ", "kinh khủng"]
+
+nhan_baseline_cb = []
+for item in danh_gia_mau:
+    t = item["text"].lower()
+    score = 0
+    for w in tu_tich_cuc:
+        if w in t:
+            score += 1
+    for w in tu_tieu_cuc:
+        if w in t:
+            score -= 1
+            
+    if score > 0:
+        nhan_baseline_cb.append("positive")
+    elif score < 0:
+        nhan_baseline_cb.append("negative")
+    else:
+        nhan_baseline_cb.append("neutral")
+
+print("Gán nhãn baseline cơ bản:", nhan_baseline_cb)
+```
+
+##### Cách 2 · Vector hóa từ khóa với Regex và xây dựng hàm phân loại chuẩn hóa (Nâng cao)
+
+```python
+import re
+
+PAT_POS = re.compile(r"\b(sạch sẽ|thân thiện|nhiệt tình|hợp lý|tuyệt vời|tốt|đẹp)\b", re.IGNORECASE)
+PAT_NEG = re.compile(r"\b(thất vọng|ẩm mốc|hỏng|tệ|kinh khủng|bẩn|kém)\b", re.IGNORECASE)
+
+def phan_loai_baseline(text: str) -> str:
+    n_pos = len(PAT_POS.findall(text))
+    n_neg = len(PAT_NEG.findall(text))
+    chênh_lệch = n_pos - n_neg
+    if chênh_lệch > 0:
+        return "positive"
+    elif chênh_lệch < 0:
+        return "negative"
+    return "neutral"
+
+ket_qua_baseline = [
+    {**d, "sentiment_baseline": phan_loai_baseline(d["text"])}
+    for d in danh_gia_mau
+]
+print("Baseline nâng cao chuẩn hóa:\n", json.dumps(ket_qua_baseline, ensure_ascii=False, indent=2))
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Vì sao bắt buộc phải có Baseline trước khi dùng LLM?**:
+  Trong một bài toán thực tế, giải pháp Rule-based bằng từ khóa thường đã có thể giải quyết tốt $70\% - 80\%$ trường hợp thông thường với tốc độ xử lý hàng trăm nghìn dòng mỗi giây và chi phí bằng 0. Khi áp dụng LLM, mục tiêu của bạn là đo lường xem LLM có thể xử lý tốt hơn ở $20\%$ trường hợp phức tạp (như có từ phủ định *"phòng không sạch chút nào"*, mỉa mai, nói giảm nói tránh) hay không. Nếu không có mốc đối chứng, bạn không thể chứng minh được hiệu quả đầu tư (*ROI*) của dự án AI.
+
+---
+
+### Bài 10.2: Ràng buộc Schema với Pydantic và Đo lường chất lượng nhãn
+
+#### Tình huống thực tế
+Giả sử bạn gọi LLM để trích xuất thông tin có cấu trúc từ đánh giá. Kết quả trả về từ mô hình ngôn ngữ cần được kiểm duyệt chặt chẽ bằng Pydantic `BaseModel`. Sau đó, đối chiếu nhãn dự đoán với tập nhãn chuẩn vàng (*Gold Standard*) để tính toán độ chính xác tổng thể (*Accuracy*).
+
+```python
+# Phản hồi giả lập từ LLM (chứa 1 kết quả vi phạm schema và 1 kết quả đoán sai nhãn)
+raw_llm_responses = [
+    {"id": 1, "sentiment": "positive", "rating": 5, "aspects": ["vệ sinh", "chủ nhà"]},
+    {"id": 2, "sentiment": "neutral", "rating": 4, "aspects": ["vị trí"]},
+    {"id": 3, "sentiment": "negative", "rating": 1, "aspects": ["vệ sinh", "tiện nghi"]},
+    {"id": 4, "sentiment": "sieu_tot", "rating": 5, "aspects": []},  # LỖI: nhãn sai enum
+    {"id": 5, "sentiment": "positive", "rating": 1, "aspects": ["dịch vụ"]}   # ĐOÁN SAI so với Gold
+]
+
+# Tập nhãn chuẩn vàng do chuyên gia gán nhãn thủ công (Gold Standard)
+GOLD_LABELS = {
+    1: "positive",
+    2: "neutral",
+    3: "negative",
+    4: "positive",
+    5: "negative"
+}
+```
+
+#### Lời giải
+
+##### Cách 1 · Tự viết hàm kiểm tra kiểu bằng các câu lệnh `if` lồng nhau (Căn bản)
+
+```python
+nhan_hop_le = {"positive", "negative", "neutral"}
+hop_le_cb = []
+loi_cb = []
+
+for item in raw_llm_responses:
+    s = item.get("sentiment")
+    r = item.get("rating")
+    if s in nhan_hop_le and isinstance(r, int) and 1 <= r <= 5:
+        hop_le_cb.append(item)
+    else:
+        loi_cb.append(item)
+
+print(f"Số lượng hợp lệ: {len(hop_le_cb)}, Số lượng lỗi: {len(loi_cb)}")
+```
+
+##### Cách 2 · Kiểm chuẩn bằng Pydantic `BaseModel` và Đo độ chính xác (Nâng cao)
+
+```python
+from pydantic import BaseModel, Field, ValidationError
+from typing import Literal
+
+# Định nghĩa Schema nghiêm ngặt
+class ReviewExtraction(BaseModel):
+    id: int
+    sentiment: Literal["positive", "negative", "neutral"]
+    rating: int = Field(ge=1, le=5)
+    aspects: list[str]
+
+danh_sach_hop_le = []
+danh_sach_loi_schema = []
+
+for resp in raw_llm_responses:
+    try:
+        obj = ReviewExtraction(**resp)
+        danh_sach_hop_le.append(obj)
+    except ValidationError as e:
+        danh_sach_loi_schema.append({"id": resp.get("id"), "error": str(e.errors()[0]["msg"])})
+
+print(f"Chặn thành công {len(danh_sach_loi_schema)} phản hồi vi phạm Schema:")
+print(danh_sach_loi_schema)
+
+# Đo lường Accuracy trên các đầu ra hợp lệ
+dung = sum(1 for obj in danh_sach_hop_le if obj.sentiment == GOLD_LABELS.get(obj.id))
+tong = len(danh_sach_hop_le)
+accuracy = dung / tong if tong > 0 else 0.0
+
+print(f"Độ chính xác (Accuracy) trên tập hợp lệ: {dung}/{tong} = {accuracy:.2%}")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Schema là tầng phòng thủ đầu tiên**: Khi làm việc với LLM, đầu ra là chuỗi văn bản không xác định. Việc dùng Pydantic với kiểu `Literal["positive", "negative", "neutral"]` giúp loại bỏ ngay lập tức các kết quả bị "ảo giác" (*hallucination*) sinh ra nhãn lạ như `"sieu_tot"` trước khi chúng xâm nhập vào cơ sở dữ liệu.
+- **Kỷ luật đo lường (Measurement Discipline)**: Không bao giờ đánh giá mô hình bằng trực giác *"tôi thấy nó chạy khá tốt"*. Hãy luôn có một tập nhãn chuẩn vàng nhỏ (khoảng 100 đến 300 mẫu) được kiểm duyệt bằng tay, tính toán tường minh Accuracy, Precision và Recall để đưa ra con số định lượng thuyết phục.
+
+---
+
+## Phần 11. Trực quan hóa Dữ liệu Cơ bản & Nhận diện Biểu đồ Biến dạng
+
+::: info Trọng tâm tư duy
+Mục đích tối thượng của biểu đồ là trả lời một câu hỏi phân tích cụ thể, không phải để "trang trí". Một biểu đồ tốt giúp người xem nắm bắt ngay quy luật dữ liệu; ngược lại, một biểu đồ bị thiết kế sai (cắt ngắn trục tung, chọn sai số bins) sẽ bóp méo sự thật và dẫn dắt người xem đến các quyết định sai lầm.
+:::
+
+### Bài 11.1: Histogram và lựa chọn số khoảng chia (Bins) — Vạch trần phân phối hai đỉnh
+
+#### Tình huống thực tế
+Cho dữ liệu khảo sát số ngày mở bán trong năm (`availability_365`) của 1,000 chỗ ở. Dữ liệu thực tế có phân phối hai cực: một nhóm lớn chỉ mở cửa bán dưới 15 ngày (hoặc đóng cửa hoàn toàn), và một nhóm khác mở bán chuyên nghiệp gần như quanh năm (trên 340 ngày), ở khoảng giữa rất ít phòng.
+Hãy so sánh:
+1. Khi vẽ histogram với `bins=5` (quá ít).
+2. Khi vẽ histogram với `bins=40` (chuẩn xác).
+
+```python
+# Tạo dữ liệu giả lập phân phối hai cực (bimodal)
+rng = np.random.default_rng(42)
+nhom_it = rng.integers(0, 20, size=400)
+nhom_nhieu = rng.integers(330, 366, size=500)
+nhom_giua = rng.integers(20, 330, size=100)
+availability = np.concatenate([nhom_it, nhom_nhieu, nhom_giua])
+```
+
+#### Lời giải
+
+##### Cách 1 · Vẽ histogram mặc định với số bins tùy tiện (Căn bản — Che giấu bản chất)
+
+```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 4))
+# Bins=5 làm phẳng hoàn toàn phân phối hai đỉnh
+plt.hist(availability, bins=5, color="skyblue", edgecolor="black")
+plt.title("Biểu đồ với bins=5 (Che giấu cấu trúc hai cực)")
+plt.xlabel("Số ngày mở bán trong năm")
+plt.ylabel("Số lượng phòng")
+plt.close() # Không hiển thị ở môi trường script
+```
+
+##### Cách 2 · Thiết lập `bins=40` phơi bày phân phối hai cực và gắn thông điệp cụ thể (Nâng cao)
+
+```python
+fig, ax = plt.subplots(figsize=(9, 5))
+
+# Sử dụng bins=40 tương ứng với các khoảng ~9 ngày
+n, bins, patches = ax.hist(
+    availability,
+    bins=40,
+    color="#2b5c8f",
+    edgecolor="white",
+    linewidth=0.8,
+    alpha=0.85
+)
+
+# Đặt tiêu đề truyền tải thông điệp phân tích thay vì mô tả kỹ thuật
+ax.set_title(
+    "Phân phối số ngày mở bán: Thị trường phân cực rõ rệt\n(Chủ yếu mở quanh năm hoặc gần như đóng cửa)",
+    fontsize=12,
+    fontweight="bold",
+    pad=15
+)
+ax.set_xlabel("Số ngày mở bán trong năm (ngày)", fontsize=10)
+ax.set_ylabel("Số lượng chỗ ở", fontsize=10)
+ax.grid(axis="y", linestyle="--", alpha=0.5)
+
+# Đánh dấu 2 đỉnh phân cực
+ax.annotate("Đỉnh đóng cửa\n(0-20 ngày)", xy=(10, 250), xytext=(60, 260),
+            arrowprops=dict(facecolor="red", arrowstyle="->"))
+ax.annotate("Đỉnh mở quanh năm\n(340-365 ngày)", xy=(350, 300), xytext=(220, 310),
+            arrowprops=dict(facecolor="green", arrowstyle="->"))
+
+plt.tight_layout()
+plt.close()
+print("Đã thiết lập biểu đồ phân phối hai đỉnh chuẩn mực!")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Hiệu ứng nén của số lượng Bins**: Khi bạn chọn số `bins` quá ít (ví dụ `bins=5`), các khoảng chia quá rộng (mỗi khoảng hơn 70 ngày) đã nuốt chửng hai đỉnh nhọn ở hai đầu biên, biến biểu đồ thành một hình chữ U nông hoặc một đường cong thoai thoải giả tạo. Ngược lại, nếu chọn `bins` quá lớn (ví dụ `bins=200`), biểu đồ sẽ bị nhiễu răng cưa do cỡ mẫu mỗi cột quá nhỏ.
+- **Tiêu đề biểu đồ phải có linh hồn**: Một kỹ sư dữ liệu giỏi không bao giờ đặt tiêu đề chung chung kiểu *"Biểu đồ histogram của availability_365"*. Hãy đặt tiêu đề trả lời cho câu hỏi: *"Người xem cần nhận ra điều gì từ biểu đồ này?"*.
+
+---
+
+### Bài 11.2: Phát hiện và sửa chữa biểu đồ cột bị cắt ngắn trục tung (Truncated Axis)
+
+#### Tình huống thực tế
+Một bản báo cáo kinh doanh nội bộ so sánh tỷ lệ hoàn thành đơn hàng đúng hạn của hai đội giao vận:
+- Đội Alpha: Đạt $96.0\%$.
+- Đội Beta: Đạt $98.5\%$.
+Người thiết kế biểu đồ đặt trục $Y$ bắt đầu từ $95.0\%$, khiến cột của đội Beta trông cao gấp gần $2.5$ lần so với đội Alpha, tạo cảm giác chênh lệch một trời một vực. Hãy phân tích sai lệch và viết mã dựng lại biểu đồ trung thực.
+
+#### Lời giải
+
+##### Cách 1 · Nhận diện sai lệch bằng công thức tỷ lệ trực quan (Căn bản)
+
+```python
+val_alpha = 96.0
+val_beta = 98.5
+
+# 1. Chênh lệch số học thực tế
+chenh_lech_thuc = (val_beta - val_alpha) / val_alpha * 100
+print(f"Mức tăng trưởng số học thực tế: {chenh_lech_thuc:.2f}%")
+
+# 2. Chênh lệch nhìn thấy khi trục Y bắt đầu từ 95.0
+chieu_cao_nhin_alpha = val_alpha - 95.0  # = 1.0 đơn vị
+chieu_cao_nhin_beta = val_beta - 95.0    # = 3.5 đơn vị
+ty_le_nhin_thay = chieu_cao_nhin_beta / chieu_cao_nhin_alpha
+print(f"Mức chênh lệch thị giác bị phóng đại: Gấp {ty_le_nhin_thay:.1f} lần!")
+```
+
+##### Cách 2 · Tái lập biểu đồ trung thực với trục tung bắt đầu từ 0 (Nâng cao)
+
+```python
+fig, (ax_sai, ax_dung) = plt.subplots(1, 2, figsize=(12, 5))
+
+doi = ["Đội Alpha", "Đội Beta"]
+ty_le = [96.0, 98.5]
+
+# Biểu đồ sai: Trục tung bị cắt ngắn (Truncated Axis)
+ax_sai.bar(doi, ty_le, color=["#d9534f", "#5cb85c"], width=0.5)
+ax_sai.set_ylim(95.0, 100.0)
+ax_sai.set_title("GÂY HIỂU SAI: Trục Y từ 95%\n(Phóng đại chênh lệch gấp 3.5 lần)", color="red")
+ax_sai.set_ylabel("Tỷ lệ hoàn thành (%)")
+
+# Biểu đồ đúng: Trục tung bắt đầu từ 0 chuẩn mực
+ax_dung.bar(doi, ty_le, color=["#4a90e2", "#50e3c2"], width=0.5)
+ax_dung.set_ylim(0, 110.0)
+ax_dung.set_title("TRUNG THỰC: Trục Y bắt đầu từ 0%\n(Chênh lệch thực tế khiêm tốn: 2.5 điểm %)", color="green")
+ax_dung.set_ylabel("Tỷ lệ hoàn thành (%)")
+
+# Ghi chú con số trực tiếp lên đầu cột
+for ax in (ax_sai, ax_dung):
+    for i, v in enumerate(ty_le):
+        ax.text(i, v + 0.3, f"{v:.1f}%", ha="center", fontweight="bold")
+
+plt.tight_layout()
+plt.close()
+print("Đã đối chiếu thành công hai biểu đồ!")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Nguyên tắc bất biến của Biểu đồ Cột (Bar Chart)**: Biểu đồ cột mã hóa dữ liệu bằng **chiều dài của thanh cột**. Não bộ con người tự động so sánh tỷ lệ giữa chiều dài của hai thanh để suy ra tỷ lệ chênh lệch giá trị. Khi bạn cắt ngắn trục tung, tỷ lệ chiều dài thị giác không còn tương ứng với tỷ lệ số học, biến biểu đồ thành một công cụ ngụy tạo số liệu.
+- **Khi nào được phép thu hẹp trục $Y$?**: Bạn chỉ được phép thu hẹp thang đo trục $Y$ trên **Biểu đồ Đường (Line Chart)** khi mục tiêu là theo dõi sự biến động (*fluctuation*) của một chuỗi thời gian liên tục (ví dụ: chỉ số chứng khoán VN-Index hay nhiệt độ cơ thể người bệnh), và bắt buộc phải ghi chú rõ ràng thang đo trên đồ thị.
+
+---
+
+## Phần 12. Trực quan hóa Nâng cao & Phản biện Thống kê
+
+::: info Trọng tâm tư duy
+Phân tích nâng cao đòi hỏi bạn phải nhìn sâu vào các tầng lớp dữ liệu: dùng Boxplot phân rã phân phối theo biến phân loại đa tầng (`hue`), và luôn cảnh giác cao độ trước các thủ thuật thống kê tinh vi như **chọn kỳ gốc có lợi (cherry-picking)**.
+:::
+
+### Bài 12.1: Seaborn Boxplot kết hợp Hue và giải mã râu hộp Tukey
+
+#### Tình huống thực tế
+Cho bảng dữ liệu giá phòng khách sạn phân theo hai tiêu chí: Loại phòng (`room_type`: Căn hộ nguyên căn vs Phòng riêng) và Kiểu chủ nhà (`kieu_host`: Chuyên nghiệp vs Nghiệp dư).
+Hãy vẽ biểu đồ hộp phân rã hai chiều bằng Seaborn và giải thích chính xác cơ chế xác định ranh giới râu hộp (*whiskers*).
+
+```python
+import seaborn as sns
+
+# Tạo dữ liệu giả lập có chủ đích
+rng = np.random.default_rng(99)
+n_samples = 200
+
+df_hotel = pd.DataFrame({
+    "room_type": rng.choice(["Nguyên căn", "Phòng riêng"], size=n_samples),
+    "kieu_host": rng.choice(["Chuyên nghiệp", "Nghiệp dư"], size=n_samples),
+    "price": rng.lognormal(mean=5.0, sigma=0.5, size=n_samples).round(1)
+})
+# Thêm một vài điểm ngoại lai cực lớn
+df_hotel.loc[0, "price"] = 800.0
+df_hotel.loc[1, "price"] = 950.0
+```
+
+#### Lời giải
+
+##### Cách 1 · Tính toán các tứ phân vị và ranh giới râu hộp thủ công (Căn bản)
+
+```python
+# Khảo sát nhóm 'Nguyên căn' của host 'Chuyên nghiệp'
+nhom = df_hotel.query("room_type == 'Nguyên căn' and kieu_host == 'Chuyên nghiệp'")["price"]
+
+q1 = nhom.quantile(0.25)
+q2 = nhom.quantile(0.50)  # Median
+q3 = nhom.quantile(0.75)
+iqr = q3 - q1
+
+hang_rao_duoi = q1 - 1.5 * iqr
+hang_rao_tren = q3 + 1.5 * iqr
+
+# Tìm điểm dừng thực tế của râu hộp (quan sát thực xa nhất bên trong hàng rào)
+rau_duoi = nhom[nhom >= hang_rao_duoi].min()
+rau_tren = nhom[nhom <= hang_rao_tren].max()
+diem_ngoai_lai = nhom[(nhom < hang_rao_duoi) | (nhom > hang_rao_tren)].tolist()
+
+print(f"Q1 = {q1:.1f}, Q2 (Median) = {q2:.1f}, Q3 = {q3:.1f}, IQR = {iqr:.1f}")
+print(f"Hàng rào lý thuyết: [{hang_rao_duoi:.1f}, {hang_rao_tren:.1f}]")
+print(f"Đầu râu thực tế dừng tại: [{rau_duoi:.1f}, {rau_tren:.1f}]")
+print(f"Các điểm ngoại lai ngoài râu: {diem_ngoai_lai}")
+```
+
+##### Cách 2 · Biểu đồ Boxplot kết hợp Stripplot phơi bày mật độ thực tế (Nâng cao)
+
+```python
+plt.figure(figsize=(10, 6))
+
+# Lớp 1: Boxplot thể hiện tóm tắt 5 con số thống kê
+ax = sns.boxplot(
+    data=df_hotel,
+    x="price",
+    y="room_type",
+    hue="kieu_host",
+    palette="Set2",
+    showmeans=True,  # Hiển thị thêm điểm Mean để so sánh với Median
+    meanprops={"marker": "o", "markerfacecolor": "red", "markeredgecolor": "red", "markersize": "6"}
+)
+
+# Lớp 2: Stripplot bán trong suốt chồng lên trên để phơi bày cỡ mẫu và mật độ điểm thật
+sns.stripplot(
+    data=df_hotel,
+    x="price",
+    y="room_type",
+    hue="kieu_host",
+    dodge=True,
+    alpha=0.35,
+    color="black",
+    jitter=0.2
+)
+
+ax.set_title("Phân phối giá theo loại phòng và phân khúc chủ nhà\n(Điểm đỏ: Mean | Đường giữa hộp: Median)", fontsize=12, fontweight="bold")
+ax.set_xlabel("Giá phòng (USD/đêm)")
+ax.set_ylabel("Loại phòng")
+
+plt.tight_layout()
+plt.close()
+print("Đã vẽ biểu đồ hộp phân rã hai chiều chuẩn mực!")
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Quy tắc vàng của râu hộp Tukey**:
+  Nhiều người lầm tưởng rằng hai đầu râu của boxplot luôn kéo dài tới đúng vị trí của hàng rào Tukey ($Q_1 - 1.5 \times IQR$ và $Q_3 + 1.5 \times IQR$). Đây là một hiểu lầm phổ biến. Râu chỉ dừng tại **quan sát thực tế xa nhất vẫn nằm bên trong hàng rào**, chứ không bao giờ dừng lại ở một con số hư cấu giữa khoảng trống dữ liệu.
+- **Sức mạnh của việc chồng lớp `stripplot`**: Boxplot che giấu hoàn toàn cỡ mẫu. Một chiếc hộp vẽ từ 5 quan sát trông có thể y hệt một chiếc hộp vẽ từ 50,000 quan sát. Việc chồng thêm lớp điểm thực giúp người thẩm định nhìn thấy ngay cỡ mẫu thực và mật độ phân bố dày mỏng phía sau chiếc hộp.
+
+---
+
+### Bài 12.2: Phản biện chiêu trò chọn kỳ gốc có lợi (Cherry-picking Baseline)
+
+#### Tình huống thực tế
+Một bản báo cáo kinh doanh công bố: *"Số lượng giao dịch trong tháng 06/2025 tăng trưởng phi mã tới $120\%$ so với cùng kỳ năm trước!"*.
+Khi truy xuất chuỗi dữ liệu 3 năm, bạn phát hiện:
+- Tháng 06/2023: Đạt 1,000 giao dịch (hoạt động bình thường).
+- Tháng 06/2024: Đạt 450 giao dịch (tháng xảy ra sự cố sập máy chủ toàn hệ thống).
+- Tháng 06/2025: Đạt 990 giao dịch.
+Hãy viết đoạn mã tính toán và phân tích xem mức tăng trưởng $120\%$ có phản ánh đúng thực chất năng lực kinh doanh hay không.
+
+#### Lời giải
+
+##### Cách 1 · Tính toán tốc độ tăng trưởng cơ bản theo công thức công bố (Căn bản)
+
+```python
+gd_2023 = 1000
+gd_2024 = 450
+gd_2025 = 990
+
+# Công thức tăng trưởng YoY được báo cáo đưa ra
+tang_truong_yoy = (gd_2025 - gd_2024) / gd_2024 * 100
+print(f"Tăng trưởng công bố (so với đáy 2024): +{tang_truong_yoy:.1f}%")
+```
+
+##### Cách 2 · Phân tích độ nhạy đa mốc tham chiếu và vẽ chuỗi thời gian bối cảnh (Nâng cao)
+
+```python
+# Xây dựng bảng đánh giá đa chiều với các kỳ gốc khác nhau
+bang_phan_bien = pd.DataFrame([
+    {
+        "ky_goc_so_sanh": "So với tháng 06/2024 (Đáy khủng hoảng)",
+        "gia_tri_goc": gd_2024,
+        "tang_truong_%": round((gd_2025 - gd_2024) / gd_2024 * 100, 2),
+        "y_nghia_thuc_chat": "Tăng trưởng phục hồi kỹ thuật từ đáy suy thoái"
+    },
+    {
+        "ky_goc_so_sanh": "So với tháng 06/2023 (Kỳ hoạt động bình thường)",
+        "gia_tri_goc": gd_2023,
+        "tang_truong_%": round((gd_2025 - gd_2023) / gd_2023 * 100, 2),
+        "y_nghia_thuc_chat": "Suy giảm nhẹ (-1.0%), doanh nghiệp chưa lấy lại mức đỉnh cũ"
+    },
+    {
+        "ky_goc_so_sanh": "So với mức trung bình 2 năm trước (725 giao dịch)",
+        "gia_tri_goc": 725,
+        "tang_truong_%": round((gd_2025 - 725) / 725 * 100, 2),
+        "y_nghia_thuc_chat": "Tăng trưởng thực chất ở mức vừa phải (+36.6%)"
+    }
+])
+
+print("Bảng thẩm định phản biện kỳ gốc:\n", bang_phan_bien.to_string(index=False))
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Bản chất của thủ thuật Cherry-picking**:
+  Bằng cách cố tình chọn một kỳ gốc có mẫu số cực kỳ thấp (thời điểm đáy dịch bệnh, khủng hoảng, hoặc sự cố kỹ thuật), bất kỳ sự phục hồi tự nhiên nào cũng bị thổi phồng thành "tăng trưởng thần kỳ".
+- **Văn phong phản biện của giáo sư**:
+  Trong vai trò người thẩm định, không vội vàng phủ nhận con số tính toán học thuật ($990$ so với $450$ đúng là tăng $120\%$), nhưng bạn phải chỉ rõ bối cảnh: *"Mức tăng $120\%$ này chỉ là sự phục hồi kỹ thuật từ đáy sự cố năm 2024. Khi so sánh với mốc vận hành chuẩn năm 2023 (1,000 đơn), hoạt động của doanh nghiệp thực chất đang đi ngang hoặc giảm nhẹ $1.0\%$."*
+
+---
+
+## Phần 13. Kể chuyện bằng Dữ liệu & Thẩm định Phân tích
+
+::: info Trọng tâm tư duy
+Một bản phân tích xuất sắc không kết thúc ở các dòng code hay đồ thị, mà kết thúc ở **thông điệp ra quyết định**. Kỹ năng kể chuyện bằng dữ liệu (*Data Storytelling*) đòi hỏi bạn phải cấu trúc thông điệp theo mô hình Kim tự tháp, dùng từ ngữ chuẩn xác, và có năng lực vạch trần các nghịch lý toán học phức tạp như **Nghịch lý Simpson**.
+:::
+
+### Bài 13.1: Xây dựng và giải mã Nghịch lý Simpson (Simpson's Paradox)
+
+#### Tình huống thực tế
+Một sàn thương mại điện tử thử nghiệm giao diện thanh toán mới (B) so với giao diện cũ (A). Thử nghiệm chạy trên hai nhóm thiết bị: Điện thoại di động (*Mobile*) và Máy tính (*Desktop*).
+Dữ liệu ghi nhận:
+- **Nhóm Mobile**:
+  - Giao diện A: 10 đơn thành công trên 100 lượt truy cập ($10.0\%$).
+  - Giao diện B: 20 đơn thành công trên 150 lượt truy cập ($13.3\%$). (B thắng A!)
+- **Nhóm Desktop**:
+  - Giao diện A: 180 đơn thành công trên 200 lượt truy cập ($90.0\%$).
+  - Giao diện B: 95 đơn thành công trên 100 lượt truy cập ($95.0\%$). (B thắng A!)
+Hãy tính tỷ lệ chuyển đổi **gộp toàn bộ** của giao diện A và giao diện B, giải thích nghịch lý tại sao B thắng trên từng phân khúc nhưng lại thua khi tính tổng thể.
+
+#### Lời giải
+
+##### Cách 1 · Tính toán gộp đơn giản dẫn đến quyết định sai lầm (Căn bản)
+
+```python
+# Tính tổng số đơn thành công và tổng lượt truy cập
+thanh_cong_A = 10 + 180
+tong_truy_cap_A = 100 + 200
+ty_le_gop_A = thanh_cong_A / tong_truy_cap_A
+
+thanh_cong_B = 20 + 95
+tong_truy_cap_B = 150 + 100
+ty_le_gop_B = thanh_cong_B / tong_truy_cap_B
+
+print(f"Giao diện A gộp: {thanh_cong_A}/{tong_truy_cap_A} = {ty_le_gop_A:.2%}")
+print(f"Giao diện B gộp: {thanh_cong_B}/{tong_truy_cap_B} = {ty_le_gop_B:.2%}")
+
+# Kết quả gộp: A (63.33%) cao hơn hẳn B (46.00%)!
+# Nếu nhìn vào con số gộp, ban giám đốc sẽ quyết định KHAI TỬ giao diện B!
+```
+
+##### Cách 2 · Phân rã cấu trúc trọng số và phơi bày biến gây nhiễu (Nâng cao)
+
+```python
+import pandas as pd
+
+# Mô hình hóa dữ liệu dạng bảng quan hệ
+df_simpson = pd.DataFrame([
+    {"giao_dien": "A", "thiet_bi": "Mobile", "thanh_cong": 10, "tong": 100},
+    {"giao_dien": "A", "thiet_bi": "Desktop", "thanh_cong": 180, "tong": 200},
+    {"giao_dien": "B", "thiet_bi": "Mobile", "thanh_cong": 20, "tong": 150},
+    {"giao_dien": "B", "thiet_bi": "Desktop", "thanh_cong": 95, "tong": 100},
+])
+
+df_simpson["ty_le"] = (df_simpson["thanh_cong"] / df_simpson["tong"] * 100).round(2)
+
+# Tính tỷ trọng phân bổ mẫu trên từng thiết bị
+df_simpson["ty_trong_nhom_%"] = (
+    df_simpson["tong"] / df_simpson.groupby("giao_dien")["tong"].transform("sum") * 100
+).round(2)
+
+print("Phân rã cơ cấu nghịch lý Simpson:\n", df_simpson)
+
+# Giải mã nguyên nhân:
+# - Desktop có tỷ lệ chuyển đổi nền rất cao (90-95%)
+# - Mobile có tỷ lệ chuyển đổi nền rất thấp (10-13%)
+# - Giao diện A được phân bổ tới 66.7% lưu lượng vào Desktop (hưởng lợi từ phân khúc dễ ăn)
+# - Giao diện B bị phân bổ tới 60.0% lưu lượng vào Mobile (gánh nặng từ phân khúc khó nhằn)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Cơ chế của Nghịch lý Simpson**:
+  Nghịch lý Simpson xuất hiện khi ta tính trung bình gộp mà bỏ qua một **biến gây nhiễu (Confounding Variable)** quan trọng — ở đây là *Loại thiết bị*. Do tỷ lệ chia lưu lượng không đồng đều giữa hai nhánh thử nghiệm, giao diện A được hưởng lợi thế cơ cấu khi có phần lớn người dùng đến từ Desktop.
+- **Bài học ra quyết định**:
+  Trong thực tế, **giao diện B mới là giao diện tối ưu vượt trội** vì trên bất kỳ thiết bị nào nó cũng đem lại tỷ lệ chuyển đổi cao hơn ($13.3\% > 10.0\%$ trên Mobile, và $95.0\% > 90.0\%$ trên Desktop). Bài học đắt giá cho mọi nhà khoa học dữ liệu: **Tuyệt đối không bao giờ đưa ra kết luận chỉ dựa trên con số trung bình gộp khi cơ cấu tỷ trọng giữa các nhóm có sự mất cân bằng nghiêm trọng**.
+
+---
+
+### Bài 13.2: Quy trình thẩm định 4 bước một kết luận phân tích số liệu
+
+#### Tình huống thực tế
+Một đối tác gửi tới bản báo cáo có kết luận đinh ninh:
+*"Người dùng mua hàng vào ban đêm chi tiêu trung bình $1.5$ triệu đồng/đơn, cao hơn $50\%$ so với người mua ban ngày ($1.0$ triệu đồng). Vì vậy, chương trình khuyến mãi ban đêm đã kích thích người tiêu dùng mua sắm phóng tay hơn."*
+Hãy đóng vai một chuyên gia thẩm định dữ liệu, triển khai quy trình thẩm định 4 bước chuẩn mực để chỉ ra các lỗ hổng phương pháp và viết lại kết luận đúng mức.
+
+#### Lời giải
+
+##### Phân tích theo Quy trình Thẩm định 4 Bước của Giáo sư
+
+```python
+# Dữ liệu mô phỏng tình huống
+don_hang_dem = [1_000_000, 800_000, 1_200_000, 15_000_000] # 1 đơn cực lớn 15 triệu (outlier)
+don_hang_ngay = [950_000, 1_050_000, 1_000_000, 1_000_000]
+
+mean_dem = np.mean(don_hang_dem)       # 4.5 triệu (hoặc ví dụ 1.5 triệu)
+median_dem = np.median(don_hang_dem)   # 1.1 triệu
+
+mean_ngay = np.mean(don_hang_ngay)     # 1.0 triệu
+median_ngay = np.median(don_hang_ngay) # 1.0 triệu
+
+print(f"Ban đêm: Mean = {mean_dem/1e6:.2f}tr | Median = {median_dem/1e6:.2f}tr")
+print(f"Ban ngày: Mean = {mean_ngay/1e6:.2f}tr | Median = {median_ngay/1e6:.2f}tr")
+```
+
+1. **Bước 1 · Truy số (Check the Numbers)**:
+   - Truy ngược lại cơ sở dữ liệu thô: Cỡ mẫu ban đêm là bao nhiêu đơn? Cỡ mẫu ban ngày là bao nhiêu đơn?
+   - Con số $1.5$ triệu đồng ban đêm là trung bình cộng (*Mean*) hay trung vị (*Median*)? Nếu cỡ mẫu ban đêm chỉ có một vài đơn ngoại lai giá trị cực lớn (như đồ điện tử, laptop), trung bình cộng sẽ bị kéo lệch nghiêm trọng.
+2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**:
+   - So sánh trung vị: Trung vị ban đêm ($1.1$ triệu) chỉ nhỉnh hơn ban ngày ($1.0$ triệu) đúng $10\%$, hoàn toàn không có mức chênh lệch khủng khiếp $50\%$ như báo cáo rêu rao.
+   - Kiểm tra cơ cấu mặt hàng: Khách hàng mua đêm có phải chủ yếu mua các sản phẩm giá trị cao (đồ công nghệ) hay không?
+3. **Bước 3 · Đánh giá diễn giải (Interpretive Scrutiny)**:
+   - **Lỗi ngụy biện nhân quả (Causality Fallacy)**: Kết luận khẳng định *"khuyến mãi ban đêm đã kích thích người tiêu dùng mua sắm phóng tay hơn"* là một phát biểu võ đoán. Dữ liệu quan sát chỉ cho thấy mối liên hệ đồng thời giữa *thời điểm mua* và *giá trị giỏ hàng*, không hề chứng minh chương trình khuyến mãi là *nguyên nhân* trực tiếp gây ra hành vi chi tiêu nhiều hơn (nguyên nhân có thể do người có thu nhập cao thường chỉ có thời gian rảnh lướt web vào đêm muộn).
+4. **Bước 4 · Phán quyết & Viết lại đúng mức (Verdict & Revision)**:
+   - **Phán quyết**: Bác bỏ kết luận nhân quả; yêu cầu báo cáo lại bằng đại lượng trung vị và kiểm soát theo cơ cấu danh mục hàng hóa.
+   - **Câu viết lại đúng mức sư phạm**:
+     > *"Trong tập dữ liệu khảo sát, các đơn hàng phát sinh vào khung giờ đêm ghi nhận giá trị trung vị cao hơn khoảng 10% so với ban ngày. Cần thực hiện thử nghiệm A/B ngẫu nhiên có đối chứng trước khi khẳng định chương trình khuyến mãi ban đêm có tác động thúc đẩy giá trị giỏ hàng."*
+
+---
+
+## 14. Bảng tổng kết năng lực & Chỉ dẫn thực hành toàn diện
 
 | Chuyên đề | Kỹ năng cốt lõi | Cạm bẫy ngầm cần tránh | Chuẩn tối ưu đề xuất |
 | :--- | :--- | :--- | :--- |
 | **Phần 1: Notebook & AI** | Quản lý trạng thái, hàm thuần khiết | Chạy cell ngoài trật tự, sửa biến toàn cục | Đóng gói hàm bất biến; Restart Kernel & Run All |
 | **Phần 2: Python thuần** | Xử lý dữ liệu không phụ thuộc thư viện | `list.sort()` làm hỏng mảng gốc; tràn bộ nhớ `dict` | Dùng `str.translate`, `statistics.fmean`, `defaultdict` |
 | **Phần 3: NumPy** | Bố cục bộ nhớ, Strides, Broadcasting | Nhầm lẫn giữa View và Copy; quên `keepdims=True` | Khai thác `np.ix_`, kiểm tra `shares_memory` |
-| **Phần 4: Pandas** | Lọc dữ liệu, xử lý `NaN`, lập hồ sơ | Gặp `SettingWithCopyWarning`; `fillna(0)` làm méo thống kê | Truy xuất một bước bằng `.loc`, phân tích độ nhạy `NaN` |
-| **Phần 5: Nâng cao** | GroupBy, Transform, Pivot, Merge | Nhân đôi dòng ngoài ý muốn khi `merge` | Dùng Named Aggregation, `transform`, `validate` |
+| **Phần 4: Pandas cơ bản** | Lọc dữ liệu, xử lý `NaN`, lập hồ sơ | Gặp `SettingWithCopyWarning`; `fillna(0)` làm méo thống kê | Truy xuất một bước bằng `.loc`, phân tích độ nhạy `NaN` |
+| **Phần 5: Pandas nâng cao** | GroupBy, Transform, Pivot, Merge | Nhân đôi dòng ngoài ý muốn khi `merge` | Dùng Named Aggregation, `transform`, `validate` |
 | **Phần 6: Tối ưu quy mô** | Đọc có chọn lọc, Parquet, DuckDB | Nạp toàn bộ CSV gây tràn RAM (OOM) | Dùng `usecols`, Regex làm sạch, Parquet và DuckDB |
+| **Phần 7: Chuỗi & Regex** | Biểu thức chính quy, tách nhãn nhị phân | Mẫu tham lam `.*` nuốt chửng văn bản; sót ký tự lạ | Dùng mẫu phủ định `[^"]+`, `(?:...)`, `get_dummies` |
+| **Phần 8: Dữ liệu thời gian** | DatetimeIndex, Resampling, Rolling | Bẫy kỳ snapshot cắt ngang; `min_periods` gây NaN | Lọc bỏ kỳ dang dở; dùng `rolling(min_periods=1)` |
+| **Phần 9: Đảm bảo chất lượng** | Kiểm thử chéo bảng, phát hiện mồ côi | Lệch pha giữa cột dẫn xuất và dữ liệu chi tiết | Dùng vector `~isin()`, xây dựng bảng `qa_report` tự động |
+| **Phần 10: Xử lý LLM** | Pydantic Schema, Baseline đối chứng | Tin tưởng mù quáng vào đầu ra tự do của LLM | Xây dựng Baseline từ điển; kiểm soát schema bằng Pydantic |
+| **Phần 11: Trực quan cơ bản** | Chọn dạng biểu đồ, Histogram, sửa trục | Cắt ngắn trục tung (Truncated Axis) thổi phồng số liệu | Trục tung biểu đồ cột luôn bắt đầu từ 0; chọn bins chuẩn |
+| **Phần 12: Trực quan nâng cao** | Seaborn Boxplot, phản biện thống kê | Râu hộp Tukey dừng ở hàng rào lý thuyết thay vì điểm thật | Lồng `stripplot` xem cỡ mẫu; phản biện chiêu trò cherry-picking |
+| **Phần 13: Kể chuyện dữ liệu** | Kim tự tháp Minto, Nghịch lý Simpson | Nhầm lẫn giữa tương quan và nhân quả; trung bình gộp | Phân rã biến gây nhiễu; quy trình thẩm định 4 bước |
+

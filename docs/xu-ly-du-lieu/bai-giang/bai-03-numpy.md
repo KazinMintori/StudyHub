@@ -201,6 +201,75 @@ Cần sử dụng phương thức sao chép tường minh:
 Lát cắt `[0:7]` ban đầu chỉ tạo ra một khung nhìn (View) dùng chung vùng nhớ với `doanh_thu`. Việc thêm `.copy()` buộc NumPy phải cấp phát một vùng đệm bộ nhớ mới hoàn toàn cho `tuan_mot`, cắt đứt mọi liên kết chia sẻ bộ nhớ với mảng gốc.
 :::
 
+::: exercise Chuẩn hóa ma trận đặc trưng đa chiều với cơ chế Broadcasting
+Trong bài toán phân tích hành vi khách hàng, ta có ma trận đặc trưng $X$ kích thước $(N, M)$ đại diện cho $N$ khách hàng và $M$ chỉ số (ví dụ: tuổi, thu nhập triệu đồng, số lượt mua hàng):
+```python
+import numpy as np
+
+# Giả lập ma trận 5 khách hàng x 3 đặc trưng
+X = np.array([
+    [25.0, 15.0, 2.0],
+    [30.0, 45.0, 10.0],
+    [45.0, 80.0, 25.0],
+    [22.0, 12.0, 1.0],
+    [38.0, 60.0, 15.0]
+])
+```
+Hãy viết mã thực hiện chuẩn hóa Min-Max để đưa toàn bộ giá trị của mỗi đặc trưng về đoạn $[0, 1]$ theo công thức:
+$$
+x_{\text{norm}} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
+$$
+Yêu cầu:
+1. Chuẩn hóa từng cột độc lập với nhau.
+2. Tuyệt đối không dùng vòng lặp `for` duyệt qua từng phần tử.
+3. Đảm bảo an toàn số học nếu một cột có tất cả giá trị bằng nhau ($x_{\max} = x_{\min}$).
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Vòng lặp cột truyền thống)
+Một cách người ta hay làm khi chưa quen tư duy mảng nhiều chiều là duyệt qua từng cột bằng vòng lặp `for`, tính min/max của từng cột rồi chuẩn hóa:
+
+```python
+N, M = X.shape
+X_norm_c1 = np.empty_like(X)
+
+for j in range(M):
+    col = X[:, j]
+    col_min = col.min()
+    col_max = col.max()
+    khoang_bien_thien = col_max - col_min
+    if khoang_bien_thien > 0:
+        X_norm_c1[:, j] = (col - col_min) / khoang_bien_thien
+    else:
+        X_norm_c1[:, j] = 0.0
+
+print("Chuẩn hóa cơ bản (3 dòng đầu):\n", X_norm_c1[:3])
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa toàn phần với Broadcasting và `keepdims=True`)
+Nhà khoa học dữ liệu chuyên nghiệp sẽ không dùng bất kỳ vòng lặp Python nào mà tận dụng triệt để cơ chế Broadcasting ở tầng C:
+
+```python
+# Tính min và max dọc theo trục hàng (axis=0), giữ nguyên số chiều 2D (1, M)
+x_min = X.min(axis=0, keepdims=True)
+x_max = X.max(axis=0, keepdims=True)
+
+# Phòng thủ mẫu số bằng epsilon cực nhỏ chống chia cho 0
+eps = 1e-8
+khoang_bien_thien = np.maximum(x_max - x_min, eps)
+
+# Broadcasting tự động căn chỉnh (N, M) với (1, M) tức thì
+X_norm_c2 = (X - x_min) / khoang_bien_thien
+
+print("Chuẩn hóa nâng cao (3 dòng đầu):\n", X_norm_c2[:3])
+assert np.allclose(X_norm_c1, X_norm_c2)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Sức mạnh của `keepdims=True`**: Khi gọi `X.min(axis=0)`, kết quả là mảng 1D có `shape = (3,)`. Nếu dùng `keepdims=True`, kết quả giữ nguyên dạng ma trận hàng `shape = (1, 3)`. Điều này giúp phép toán $X - x_{\min}$ giữa ma trận `(5, 3)` và `(1, 3)` được thực hiện tường minh và tự nhiên tuyệt đối theo quy tắc Broadcasting.
+- **Tốc độ mã C và SIMD**: Cách 2 giải phóng hoàn toàn trình thông dịch Python khỏi việc lặp, đẩy toàn bộ phép tính xuống hạt nhân NumPy viết bằng C tối ưu lệnh SIMD (*Single Instruction, Multiple Data*). Trên ma trận một triệu dòng, cách 2 nhanh hơn cách 1 hàng chục lần.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 4: NumPy Basics](https://wesmckinney.com/book/numpy-basics) và [Phụ lục A: Advanced NumPy](https://wesmckinney.com/book/advanced-numpy).

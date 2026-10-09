@@ -177,6 +177,99 @@ Một nhóm phát triển lưu đệm (cache) kết quả trích xuất của LL
 Bài học kiến trúc: Bộ nhớ đệm không được phép chỉ định danh theo dữ liệu đầu vào. Nó phải định danh theo toàn bộ **ngữ cảnh sinh dữ liệu**, bao gồm băm nội dung văn bản, băm câu chỉ dẫn, băm cấu trúc lược đồ và phiên bản mô hình. Khi bất kỳ thành phần nào trong bộ tham số sinh này thay đổi, khóa cache cũ phải tự động bị vô hiệu hóa.
 :::
 
+::: exercise Trích xuất thông tin có cấu trúc với Pydantic, kiểm chứng trích dẫn và đối chứng Baseline
+Trong một dự án phân tích thị trường bất động sản cho thuê, bạn tiếp nhận hàng nghìn đoạn tin đăng phi cấu trúc từ mạng xã hội:
+```python
+tin_dang_tho = [
+    "Căn hộ 2PN khép kín, giá thuê 15.5 triệu/tháng, cọc 30 triệu, hợp đồng tối thiểu 12 tháng. ĐT: 0912345678.",
+    "Phòng trọ sinh viên giá rẻ 3.2 triệu, cọc 1 tháng, thanh toán linh hoạt từng tháng.",
+    "Mặt bằng kinh doanh trung tâm, giá thương lượng trực tiếp, không qua trung gian."
+]
+```
+Yêu cầu:
+1. Xây dựng một Baseline đối chứng đơn giản bằng Regex để trích xuất giá thuê (số thực) và thời hạn hợp đồng (số nguyên tháng).
+2. Xây dựng lược đồ dữ liệu chuẩn hóa bằng thư viện Pydantic gồm các trường: `gia_thue` (float), `tien_coc` (float hoặc None), `thoi_han_thang` (int hoặc None) và `trich_dan` (chuỗi bằng chứng).
+3. Thiết kế hàm kiểm chứng thực tế (*Citation Verification / Grounding*): Xác minh đoạn `trich_dan` có nằm nguyên văn trong văn bản gốc hay không để ngăn chặn ảo giác LLM (*Hallucination*).
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Xây dựng Baseline đối chứng bằng biểu thức chính quy Regex)
+Một nguyên tắc kinh điển của kỹ nghệ dữ liệu là: **Trước khi dùng đến LLM đắt đỏ và bất định, luôn dựng một Baseline đơn giản bằng luật hoặc Regex** để làm thước đo tham chiếu:
+
+```python
+import re
+
+def baseline_trich_xuat(text: str) -> dict:
+    ket_qua = {"gia_thue": None, "thoi_han_thang": None}
+    
+    # Tìm mẫu giá: ví dụ "15.5 triệu" hoặc "3.2 triệu"
+    match_gia = re.search(r"(\d+(?:\.\d+)?)\s*triệu", text, re.IGNORECASE)
+    if match_gia:
+        ket_qua["gia_thue"] = float(match_gia.group(1)) * 1e6
+        
+    # Tìm mẫu thời hạn: ví dụ "12 tháng"
+    match_han = re.search(r"(\d+)\s*tháng", text, re.IGNORECASE)
+    if match_han:
+        ket_qua["thoi_han_thang"] = int(match_han.group(1))
+        
+    return ket_qua
+
+print("Kết quả Baseline Regex:")
+for tin in tin_dang_tho:
+    print(baseline_trich_xuat(tin))
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Pydantic Schema chặt chẽ kết hợp cơ chế kiểm chứng trích dẫn Citation Verification)
+Khi triển khai trích xuất bằng LLM vào hệ thống sản xuất, ta bắt buộc phải khóa khuôn bằng Pydantic và gắn chốt chặn kiểm chứng trích dẫn nguồn:
+
+```python
+from pydantic import BaseModel, Field, field_validator
+import hashlib
+
+class ThongTinThuePhong(BaseModel):
+    gia_thue: float | None = Field(default=None, description="Giá thuê hàng tháng tính bằng triệu đồng")
+    tien_coc: float | None = Field(default=None, description="Tiền cọc tính bằng triệu đồng")
+    thoi_han_thang: int | None = Field(default=None, description="Thời hạn thuê tối thiểu tính theo tháng")
+    trich_dan: str | None = Field(default=None, description="Đoạn văn bản trích nguyên văn chứng minh cho giá thuê")
+
+    @field_validator("gia_thue")
+    def kiem_tra_gia_duong(cls, v):
+        if v is not None and v <= 0:
+            raise ValueError("Giá thuê phải là số dương lớn hơn 0")
+        return v
+
+def xac_minh_va_ghi_nhan(ban_ghi: ThongTinThuePhong, van_ban_goc: str) -> dict:
+    data = ban_ghi.model_dump()
+    
+    # Cơ chế Grounding: Kiểm tra mỏ neo bằng chứng
+    if ban_ghi.trich_dan:
+        if ban_ghi.trich_dan.strip() not in van_ban_goc:
+            data["canh_bao_ao_giac"] = True
+            data["ghi_chu"] = "Trích dẫn bằng chứng không tồn tại trong văn bản gốc!"
+        else:
+            data["canh_bao_ao_giac"] = False
+    else:
+        data["canh_bao_ao_giac"] = ban_ghi.gia_thue is not None # Có giá nhưng không có bằng chứng
+        
+    return data
+
+# Giả lập kết quả trả về từ LLM Structured Output
+ket_qua_mo_hinh = ThongTinThuePhong(
+    gia_thue=15.5,
+    tien_coc=30.0,
+    thoi_han_thang=12,
+    trich_dan="giá thuê 15.5 triệu/tháng"
+)
+
+kiem_dinh = xac_minh_va_ghi_nhan(ket_qua_mo_hinh, tin_dang_tho[0])
+print("\nKết quả kiểm định LLM chuyên nghiệp:\n", kiem_dinh)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Vai trò của Baseline đối chứng**: Nếu một biểu thức chính quy viết trong 10 dòng mã đã đạt độ chính xác $85\%$ với chi phí $0$ đồng và thời gian thực thi dưới $1$ miligiây, bạn chỉ nên gọi LLM cho $15\%$ các câu văn phức tạp còn lại. Đo lường Baseline là kỷ luật sống còn để tối ưu hóa chi phí vận hành đám mây.
+- **Kỹ thuật mỏ neo bằng chứng (Evidence Anchor)**: Đúng cú pháp Pydantic không có nghĩa là đúng sự thật. Một mô hình ngôn ngữ có thể trả về một tệp JSON hợp lệ hoàn hảo nhưng con số giá tiền lại bị "bịa đặt" (ảo giác). Bằng cách bắt buộc LLM phải trả về trường `trich_dan` nguyên văn và chạy kiểm thử `assert trich_dan in raw_text`, ta biến một quá trình suy luận hộp đen thành một hệ thống có thể kiểm toán và chứng minh được.
+:::
+
 ## 6. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data) (nền tảng về xử lý JSON) và [Chương 7: Data Cleaning and Preparation](https://wesmckinney.com/book/data-cleaning) (làm sạch chuỗi).

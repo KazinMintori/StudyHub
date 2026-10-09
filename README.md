@@ -1,83 +1,116 @@
-# UETệ
+# StudyHub — Nền Tảng Bài Giảng & Ôn Tập UET
 
-Website: [kazinmintori.github.io/StudyHub](https://kazinmintori.github.io/StudyHub/).
+**StudyHub** là website tài liệu học tập, giáo trình chuyên sâu và bài giảng ôn tập chất lượng cao dành cho sinh viên trường Đại học Công nghệ (UET) - Đại học Quốc gia Hà Nội. Trang web được xây dựng nhằm mang đến trải nghiệm học tập tập trung, khoa học và trực quan trên nền tảng VitePress.
 
-Repository: [KazinMintori/StudyHub](https://github.com/KazinMintori/StudyHub). Mỗi lần push vào `main`, GitHub Actions sẽ build và cập nhật website trên GitHub Pages.
+- **Website trực tuyến**: [kazinmintori.github.io/StudyHub](https://kazinmintori.github.io/StudyHub/)
+- **Mã nguồn**: [KazinMintori/StudyHub](https://github.com/KazinMintori/StudyHub)
 
-Website bài giảng và ôn tập dùng [quancn12/Study_UET](https://github.com/quancn12/Study_UET) làm nền tảng VitePress. Giữ lại các học phần, bài giảng Markdown, tìm kiếm, công thức MathJax và sơ đồ Mermaid của source gốc.
+---
 
-Trang chủ được thiết kế lại theo hướng tối giản, bỏ emoji trang trí. Tích hợp các chức năng từ `index.html` cũ: Pomodoro, flashcard, ghi chú Markdown và mô phỏng điện trường. Bản gốc nằm ở `backups/index-original.html`.
+## 1. Điểm Nổi Bật
 
-## Chạy dự án
+### Mô hình bài giảng 4-trong-1
+Mỗi bài học trên StudyHub là một thực thể hoàn chỉnh, tích hợp 4 góc độ tiếp cận trên cùng một giao diện:
+- **Notes (Giáo trình chi tiết)**: Lập luận chặt chẽ, mở các bước biến đổi toán học/thuật toán phức tạp, gắn liền bản chất lý thuyết với bài toán thực tiễn.
+- **Slides (Thẻ ôn tập nhanh)**: Dàn ý chắt lọc, công thức trọng tâm và ví dụ then chốt, giúp sinh viên nắm bắt nhanh cấu trúc bài học và ôn tập trước kỳ thi.
+- **Cheatsheet (Bảng tra cứu)**: Tổng hợp nhanh công thức cốt lõi, bảng tra cứu, quy tắc tính và các "bẫy thi" thường gặp.
+- **Kiến thức nền & Wiki Thuật ngữ**: Liên kết đa chiều giữa bài giảng và hệ thống Bách khoa khái niệm (`docs/wiki/`). Tự động nhận diện thuật ngữ, cung cấp định nghĩa, trực giác, ví dụ và câu hỏi tự kiểm tra.
+
+### Chuẩn mực hiển thị toán học & Đồ họa
+- **Công thức TeX/KaTeX chuẩn mực**: Hiển thị sắc nét, tối ưu hóa giao diện chống tràn (tuyệt đối không xuất hiện thanh cuộn ngang) trên mọi kích thước màn hình, bao gồm cả thiết bị di động.
+- **Sơ đồ Mermaid & Mô phỏng tương tác**: Trực quan hóa các khái niệm trừu tượng thông qua component `<CodeIllustration />` (Tìm kiếm không gian trạng thái, Gradient Descent, Định lý Bayes, Mô phỏng điện trường, MapReduce,...).
+
+### Góc học tập cá nhân hóa
+- **Đồng hồ Pomodoro**: Chế độ tập trung 25/50 phút, tự động duy trì thời gian khi chuyển trang hoặc tải lại.
+- **Bộ Flashcards**: Hệ thống thẻ phản xạ kiến thức theo từng học phần, lưu trữ tiến độ ghi nhớ.
+- **Sổ tay Markdown**: Ghi chú cá nhân riêng cho từng môn học, tự động lưu cục bộ (Local Storage), xem trước an toàn và hỗ trợ xuất file `.md`.
+- **Theo dõi tiến độ**: Đánh dấu bài đã học, tự động ghi nhớ và gợi ý tiếp tục bài học gần nhất từ trang chủ.
+
+---
+
+## 2. Cấu Trúc Dự Án
+
+```text
+StudyHub/
+├── docs/                      # Nội dung bài giảng và tài liệu VitePress
+│   ├── .vitepress/            # Cấu hình VitePress, theme và dữ liệu catalog
+│   │   ├── course-catalog.mjs # Quản lý danh mục môn học, bài giảng và Slides
+│   │   ├── cheatsheets.mjs    # Dữ liệu bảng tra cứu và công thức Cheatsheet
+│   │   ├── concepts.mjs       # Danh mục các khái niệm nền tảng
+│   │   └── theme/             # Giao diện người dùng (Vue 3 components, CSS tokens)
+│   ├── wiki/                  # Hệ thống bách khoa thuật ngữ độc lập
+│   └── <môn-học>/             # Các môn học trong chương trình
+│       └── bai-giang/         # Các bài giảng chi tiết dạng Markdown
+├── scripts/                   # Bộ script kiểm tra, kiểm định chất lượng và đồng bộ
+└── .agents/skills/            # Kỹ năng và công cụ hỗ trợ biên soạn bài giảng
+```
+
+---
+
+## 3. Cài Đặt & Chạy Cục Bộ
+
+### Yêu cầu môi trường
+- **Node.js**: Phiên bản 20 hoặc 22 trở lên.
+- **npm**: Đi kèm với Node.js.
+
+### Khởi chạy môi trường phát triển
 
 ```sh
+# 1. Cài đặt các gói phụ thuộc
 npm ci
+
+# 2. Khởi chạy máy chủ phát triển cục bộ
 npm run dev
 ```
 
-Mở `http://localhost:5173`. Sửa nội dung trong `docs/`; các component giao diện nằm trong `docs/.vitepress/theme/`.
+Sau khi chạy lệnh, truy cập `http://localhost:5173` trên trình duyệt. Khi chỉnh sửa nội dung trong `docs/`, trang web sẽ tự động cập nhật (Hot Module Replacement).
+
+### Đóng gói & Xem trước bản tĩnh
 
 ```sh
+# Đồng bộ dữ liệu môn học và đóng gói website tĩnh vào dist/
 npm run build
+
+# Xem trước bản đóng gói
 npm run preview
 ```
 
-Build tạo website tĩnh trong `dist/`, đồng thời xuất `index.html`, các trang và assets ra thư mục gốc để tương thích với cách phục vụ web cũ. `index.html` là file sinh tự động; chỉnh trang chủ tại `docs/index.md` và `StudyHome.vue`.
-
-Để chạy bản tĩnh bằng một server đơn giản:
+Để chạy thử bản tĩnh bằng máy chủ HTTP đơn giản:
 
 ```sh
 python -m http.server 8080 --directory dist
 ```
 
-GitHub Actions sử dụng Node.js 22, chạy `npm run ci:build` và xuất bản thư mục `docs/.vitepress/dist`. `BASE_PATH` được đặt theo tên repository để hỗ trợ đường dẫn con `/StudyHub/`. `npm run build` vẫn tạo bản preview tĩnh cục bộ như trước.
+Mỗi khi có commit được đẩy lên nhánh `main`, quy trình GitHub Actions sẽ tự động kiểm tra, chạy `npm run ci:build` và xuất bản website lên GitHub Pages.
 
-## Công cụ học
+---
 
-- Pomodoro 25/50 phút, nghỉ 5 phút; giữ thời gian qua chuyển trang và tải lại.
-- 15 flashcard thuộc 5 học phần, đáp án và tiến độ đã nhớ.
-- Sổ Markdown riêng từng học phần, tự lưu, xem trước an toàn và xuất `.md`. Ghi chú cũ cùng origin được giữ lại trong sổ chung.
-- Mô phỏng điện trường: thêm điện tích bằng chuột/chạm hoặc nút, xóa từng điện tích, xem trường tổng hợp.
-- Đánh dấu bài đã học và tiếp tục bài gần nhất từ trang chủ.
+## 4. Kiểm Thử & Đảm Bảo Chất Lượng
 
-Dữ liệu cá nhân được lưu cục bộ bằng localStorage; chưa đồng bộ giữa thiết bị. Các bài đang biên soạn được ghi rõ, và Slides chỉ tóm tắt Notes đã có nội dung.
-
-## Cấu trúc môn học
-
-Mỗi môn liệt kê các bài giảng. Mỗi bài có **Notes / Slides / Cheatsheet / Kiến thức nền** trên cùng một trang, với các địa chỉ `#notes`, `#slides`, `#cheatsheet`, `#kien-thuc-can-co`. Nội dung chi tiết nằm trong `docs/<môn>/bai-giang/<bài>.md`. `docs/.vitepress/course-catalog.mjs` quản lý môn, bài học, danh sách nền tảng của từng bài; `docs/.vitepress/cheatsheets.mjs` quản lý bảng tra cứu và công thức; Slides có thuộc tính `note` chỉ bài tương ứng.
-
-Các đường dẫn Notes cũ chuyển tiếp tới bài giảng; tiến độ cũ được giữ lại. Snapshot trước lần tổ chức theo bài nằm ở `backups/before-lecture-wiki/`. Phần ghi chú cá nhân trong Góc học tập vẫn là một công cụ riêng, khác Notes bài giảng.
-
-Wiki nằm trong `docs/wiki/`, mỗi thuật ngữ là một file Markdown độc lập có giải thích kỹ thuật, ví dụ, câu hỏi tự kiểm tra và liên kết tới bài khác. Plugin `term-links.mjs` liên kết thuật ngữ trong Notes và Wiki, tránh tự liên kết bài Wiki với chính nó hoặc chèn vào code, công thức, tiêu đề và link sẵn có. Xem trước hỗ trợ chuột và bàn phím. Wiki có liên kết ngược và danh sách bài giảng dùng khái niệm đó. `wiki-content.mjs` cung cấp nội dung khởi tạo và quan hệ giữa khái niệm; các bài Wiki đã có không bị ghi đè khi build.
-
-Nhúng minh họa trong Markdown bằng `<CodeIllustration type="search" />`. Các loại: `search`, `gradient`, `bayes`, `broadcast`, `mapreduce`, `field`. Mô hình tính toán nằm trong `theme/illustrations.js` và được kiểm tra bằng test. Component được đăng ký toàn cục nên bài học không cần tự import.
-
-`npm run sync:courses` đồng bộ danh sách môn và đường dẫn chuyển tiếp; không ghi đè bài giảng hoặc Wiki đã có. Build tự chạy bước này. Khi thêm bài, tạo file trong `bai-giang/`, khai báo `course`, `lecture`, `section: lecture`, `lessonStatus`, rồi thêm tên bài, nền tảng cần có và Slides vào catalog.
-
-`node scripts/verify-courses.mjs` kiểm tra cả 8 môn, ba phần theo từng bài, Wiki, liên kết qua lại, tiến độ, đường dẫn cũ, minh họa và bố cục. Dùng `QA_URL` để chọn server cần kiểm tra; mặc định là `http://127.0.0.1:8080`.
-
-## Soạn bài bằng AI
-
-Hai skill trong `.claude/skills/` giúp trợ lý AI giảng bài như một giảng viên: đúng giả thiết, mở bước khó, ví dụ được tính lại, bài tập có lời giải gập và nguồn kiểm chứng được.
-
-- `studyhub-lecture`: biến tài liệu trong `raw_materials/<môn>/` thành bài giảng đủ Notes, Slides, Kiến thức nền và Wiki; sửa hoặc rà một bài; xuất slide PDF/PPTX. Ví dụ yêu cầu: “Soạn bài 3 môn Cơ sở toán cho AI từ raw_materials”.
-- `textbook-passage-explainer`: giảng lại một đoạn giáo trình trong chat, viết note tự học, sửa bài làm theo bước sai đầu tiên.
-
-Kiểm tra một bài sau khi soạn:
+Dự án áp dụng quy trình kiểm định nghiêm ngặt để đảm bảo chất lượng bài giảng và tính toàn vẹn của hệ thống:
 
 ```sh
-node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs toan-cho-ai/bai-02-tap-loi
-python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py docs/toan-cho-ai/bai-giang/bai-02-tap-loi.md --format text
-```
+# 1. Kiểm tra quá trình build VitePress
+npm run ci:build
 
-`check_lecture.mjs` kiểm frontmatter, catalog, Kiến thức nền, Wiki, hình và container; `review_teaching_text.py` chỉ ra câu nên đọc lại. Cả hai chỉ hỗ trợ, không thay việc đọc nội dung và xem trang.
+# 2. Kiểm tra liên kết catalog, Wiki, hình ảnh và cấu trúc bài giảng
+node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
 
-## Kiểm tra giao diện
+# 3. Chạy bộ bài kiểm thử tự động của skill biên soạn
+python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 
-`scripts/verify-ui.mjs` kiểm tra chức năng và bố cục tại 375, 768, 1024, 1440 px, tạo ảnh kiểm tra trong `qa/`. Chạy server trước, rồi:
+# 4. Kiểm tra toàn diện môn học, liên kết và mô phỏng
+node scripts/verify-courses.mjs
 
-```sh
+# 5. Kiểm tra tính tương thích giao diện trên nhiều kích thước màn hình
 node scripts/verify-ui.mjs
 ```
 
-Có thể đặt `QA_URL` để kiểm tra bản preview và `PUPPETEER_EXECUTABLE_PATH` để dùng Chrome đã cài. Nếu chưa có Chrome cho Puppeteer, chạy `npx puppeteer browsers install chrome`.
+---
+
+## 5. Tiêu Chuẩn Sư Phạm & Biên Soạn
+
+Mọi bài giảng trên StudyHub tuân theo chuẩn mực:
+- **Chủ quyền bài giảng**: Là tài liệu giảng dạy độc lập, hoàn chỉnh, dẫn dắt trực quan từ bản chất vấn đề đến mô hình toán học và thuật toán.
+- **Chính xác tuyệt đối**: Giữ đúng giả thiết, miền xác định, các bước suy luận và số liệu tính toán.
+- **Không thanh cuộn trên công thức**: Mọi công thức toán học dài đều được bẻ dòng bằng `\begin{aligned}` với `\\` và `&`, đảm bảo giao diện đọc thoáng đãng trên cả máy tính lẫn điện thoại di động.

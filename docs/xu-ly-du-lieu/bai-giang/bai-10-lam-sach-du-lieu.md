@@ -172,6 +172,78 @@ Với mảng biên phân nhóm `bins = [0, 15, 50]` và tùy chọn `right=False
 2. Giá trị 50 **không rơi vào khoảng nào cả** và sẽ bị biến thành `NaN`, vì khoảng thứ hai loại trừ biên phải 50. Để không bỏ sót điểm này, ta phải mở rộng mốc biên trên thành vô cực `[0, 15, 50, float("inf")]` hoặc sử dụng tùy chọn mặc định `right=True` với biên mở phù hợp.
 :::
 
+::: exercise Xây dựng pipeline lọc ngoại lai theo hàng rào Tukey và kiểm thử bất biến toàn vẹn
+Cho bảng dữ liệu giá bán căn hộ chung cư (đơn vị: triệu đồng):
+```python
+import pandas as pd
+import numpy as np
+
+du_lieu_tho = pd.DataFrame({
+    "ma_can": ["CH01", "CH02", "CH03", "CH04", "CH05", "CH06", "CH07"],
+    "dien_tich": [50, 65, 70, 85, 120, -10, 80],
+    "gia_ban": [1800.0, 2400.0, 2600.0, 3200.0, 25000.0, 3000.0, 0.0]
+})
+```
+Yêu cầu:
+1. Xác định và phân tách các bản ghi vi phạm tính hợp lệ nghiệp vụ ($dien\_tich \le 0$ hoặc $gia\_ban \le 0$).
+2. Trên tập dữ liệu hợp lệ, áp dụng phương pháp hàng rào Tukey ($IQR = Q_3 - Q_1$) để gắn cờ `la_ngoai_lai` cho các căn hộ có giá bán vượt ngưỡng $Q_3 + 1.5 \times IQR$.
+3. Xác minh tính toàn vẹn hệ thống bằng mệnh đề `assert` bảo toàn số lượng bản ghi: số dòng sạch cộng số dòng bị loại phải bằng đúng số dòng ban đầu.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Lọc mảng tuần tự và tính toán phân vị)
+Người mới thường tính từng tứ phân vị rồi lọc từng bước:
+
+```python
+# 1. Lọc vi phạm miền xác định
+hop_le = du_lieu_tho[(du_lieu_tho["dien_tich"] > 0) & (du_lieu_tho["gia_ban"] > 0)].copy()
+bi_loai = du_lieu_tho[(du_lieu_tho["dien_tich"] <= 0) | (du_lieu_tho["gia_ban"] <= 0)].copy()
+
+# 2. Tính IQR thủ công trên tập hợp lệ
+q1 = hop_le["gia_ban"].quantile(0.25)
+q3 = hop_le["gia_ban"].quantile(0.75)
+iqr = q3 - q1
+hang_rao_tren = q3 + 1.5 * iqr
+
+# 3. Gắn nhãn ngoại lai
+hop_le["la_ngoai_lai"] = hop_le["gia_ban"] > hang_rao_tren
+print(f"Hàng rào trên: {hang_rao_tren:,.1f} triệu")
+print("Bảng hợp lệ:\n", hop_le[["ma_can", "gia_ban", "la_ngoai_lai"]])
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói hàm kiểm toán Pipeline và xác minh bất biến)
+Trong các kiến trúc xử lý dữ liệu chuyên nghiệp, toàn bộ quy trình làm sạch được đóng gói thành một bộ xử lý kiểm toán độc lập:
+
+```python
+def lam_sach_va_kiem_toan(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    # 1. Tách nhánh vi phạm nghiệp vụ (Invalid records)
+    mask_hop_le = (df["dien_tich"] > 0) & (df["gia_ban"] > 0)
+    df_clean = df[mask_hop_le].copy()
+    df_rejected = df[~mask_hop_le].copy()
+    df_rejected["ly_do_loai"] = "VI_PHAM_MIEN_GIA_TRI"
+    
+    # 2. Gắn nhãn ngoại lai bằng Tukey Fences (không xóa dòng)
+    q25, q75 = df_clean["gia_ban"].quantile([0.25, 0.75])
+    iqr = q75 - q25
+    upper_fence = q75 + 1.5 * iqr
+    df_clean["la_ngoai_lai"] = df_clean["gia_ban"] > upper_fence
+    
+    # 3. Kiểm thử bất biến bảo toàn số lượng
+    assert len(df) == len(df_clean) + len(df_rejected), "LỖI HỆ THỐNG: Mất mát dữ liệu ngoài ý muốn!"
+    assert df_clean["ma_can"].is_unique, "CẢNH BÁO: Trùng lặp khóa chính!"
+    
+    return df_clean, df_rejected
+
+sach, loai = lam_sach_va_kiem_toan(du_lieu_tho)
+print(f"Bản ghi sạch: {len(sach)} | Bản ghi loại: {len(loai)}")
+print("Danh sách căn hộ ngoại lai (Penhouse/Biệt thự):\n", sach[sach["la_ngoai_lai"]])
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Ngoại lai không đồng nghĩa với lỗi**: Căn hộ `CH05` có giá 25 tỷ là một căn penthouse siêu sang ngoài thực tế. Nếu lập trình viên xóa bỏ dòng này khỏi cơ sở dữ liệu, toàn bộ phân tích doanh thu của phân khúc cao cấp sẽ bị biến mất. Do đó, **nguyên tắc vàng là chỉ gắn cờ `la_ngoai_lai` để tách nhánh phân tích riêng, tuyệt đối không tự tiện xóa bỏ dữ liệu thật**.
+- **Bảo toàn số lượng bản ghi**: Lệnh `assert len(df) == len(df_clean) + len(df_rejected)` là chốt chặn an toàn sống còn ngăn chặn lỗi logic lập trình âm thầm nuốt chửng dữ liệu (ví dụ: lỗi do điều kiện `NaN` khiến cả hai nhánh điều kiện đều trả về `False`).
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 7: Data Cleaning and Preparation](https://wesmckinney.com/book/data-cleaning).

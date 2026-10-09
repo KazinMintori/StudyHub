@@ -176,6 +176,66 @@ Cho một Series rỗng: `s = pd.Series([None, None], dtype="float64")`. So sán
 Nếu ta đang tính tổng doanh thu của một chi nhánh mới mở chưa kịp gửi báo cáo dữ liệu về trụ sở, hàm `s.sum()` mặc định sẽ thông báo doanh thu của chi nhánh bằng $0$ đồng. Điều này khiến ban giám đốc hiểu lầm rằng chi nhánh kinh doanh ế ẩm và không bán được gì, trong khi sự thật là số liệu kinh doanh chưa từng được ghi nhận. Sử dụng `min_count=1` giúp bảo vệ hệ thống trước sự nhầm lẫn tai hại này.
 :::
 
+::: exercise Lọc đa điều kiện và gán nhãn phân khúc phòng tránh SettingWithCopyWarning
+Cho bảng dữ liệu khách hàng lưu trong một DataFrame:
+```python
+import pandas as pd
+import numpy as np
+
+data = {
+    "ma_khach": ["KH01", "KH02", "KH03", "KH04", "KH05"],
+    "chi_tieu": [" $1,200.50 ", " 450.00 ", "Chua_co", " $780.00 ", " -100.00 "],
+    "so_don": [8, 3, 1, 6, 2],
+    "phan_khuc": ["Thuong", "Thuong", "Thuong", "Thuong", "Thuong"]
+}
+df = pd.DataFrame(data)
+```
+Yêu cầu:
+1. Chuyển đổi cột `chi_tieu` thành số thực hợp lệ. Các chuỗi không đọc được hoặc giá âm phải được coi là khuyết thiếu (`NaN`).
+2. Xác định các khách hàng thỏa mãn tiêu chuẩn VIP: `chi_tieu >= 500` và `so_don >= 5`.
+3. Cập nhật nhãn `"VIP"` vào cột `phan_khuc` của các khách hàng này trên chính bảng gốc `df` mà tuyệt đối không để phát sinh cảnh báo `SettingWithCopyWarning`.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Chained Assignment - Tiềm ẩn cạm bẫy)
+Người mới học thường thực hiện việc lọc trước để tạo bảng con rồi gán nhãn:
+
+```python
+# Làm sạch cột chi tiêu
+df["chi_tieu_so"] = df["chi_tieu"].astype(str).str.replace("$", "", regex=False).str.replace(",", "", regex=False).str.strip()
+df["chi_tieu_so"] = pd.to_numeric(df["chi_tieu_so"], errors="coerce")
+df.loc[df["chi_tieu_so"] < 0, "chi_tieu_so"] = np.nan
+
+# Cạm bẫy thường gặp: Chained Indexing
+# Lọc bảng con rồi gán nhãn trực tiếp -> pandas ném cảnh báo SettingWithCopyWarning
+bang_vip = df[(df["chi_tieu_so"] >= 500) & (df["so_don"] >= 5)]
+# bang_vip["phan_khuc"] = "VIP"  <-- NGUY HIỂM: Sửa trên bản sao ngầm, không tác động bảng gốc df!
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa Regex một bước và gán trực tiếp qua `.loc`)
+Một cách người ta hay dùng trong thực tế sản xuất là chuẩn hóa số học bằng Regex gọn gàng và gán thẳng vào vị trí nhãn thông qua `.loc`:
+
+```python
+# 1. Làm sạch siêu tốc một bước bằng Regex loại bỏ mọi ký tự không phải số hoặc dấu chấm
+df["chi_tieu_so"] = pd.to_numeric(
+    df["chi_tieu"].astype(str).str.replace(r"[^0-9.]", "", regex=True),
+    errors="coerce"
+)
+
+# 2. Xây dựng mặt nạ boolean kết hợp điều kiện có đóng mở ngoặc đơn tường minh
+mask_vip = (df["chi_tieu_so"] >= 500.0) & (df["so_don"] >= 5)
+
+# 3. Gán nhãn trực tiếp một bước duy nhất qua .loc trên bảng gốc
+df.loc[mask_vip, "phan_khuc"] = "VIP"
+
+print(df[["ma_khach", "chi_tieu_so", "so_don", "phan_khuc"]])
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Nguồn gốc cảnh báo `SettingWithCopyWarning`**: Khi ta viết `df[dieu_kien]['cot'] = gia_tri`, pandas phải thực hiện 2 thao tác riêng biệt: `__getitem__` (lọc) rồi `__setitem__` (gán). pandas không thể biết kết quả của bước lọc là một khung nhìn (*View*) hay một bản sao (*Copy*). Do đó, phép gán có thể bị nuốt chửng trên một đối tượng tạm thời mà không hề làm thay đổi bảng gốc `df`.
+- **Nguyên tắc bất di bất dịch của `.loc`**: Cú pháp `df.loc[hang, cot] = gia_tri` thực hiện phép gán trong **một bước duy nhất**, chỉ thị trực tiếp vị trí ô nhớ cần biến đổi trên DataFrame cha, bảo đảm tính xác định $100\%$ và an toàn tuyệt đối dưới cơ chế Copy-on-Write (CoW).
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 5: Getting Started with pandas](https://wesmckinney.com/book/pandas-basics) và [Chương 6: Data Loading, Storage, and File Formats](https://wesmckinney.com/book/accessing-data).

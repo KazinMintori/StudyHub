@@ -185,6 +185,89 @@ df["chenh_lech"] = df["gia"] - df.groupby("nhom")["gia"].transform("mean")
 ```
 :::
 
+::: exercise Tổng hợp đa chỉ số với Named Aggregation và kiểm toán quan hệ bảng
+Cho hai bảng dữ liệu giao dịch thương mại điện tử:
+```python
+import pandas as pd
+
+don_hang = pd.DataFrame({
+    "ma_don": ["DH1", "DH2", "DH3", "DH4", "DH5"],
+    "ma_khach": ["K1", "K2", "K1", "K3", "K1"],
+    "khu_vuc": ["MienBac", "MienNam", "MienBac", "MienTrung", "MienBac"],
+    "thanh_toan": ["COD", "The", "The", "COD", "The"],
+    "gia_tri": [150.0, 320.0, 210.0, 90.0, 450.0]
+})
+
+khach_hang = pd.DataFrame({
+    "ma_khach": ["K1", "K2", "K3", "K4"],
+    "ten_khach": ["An", "Bình", "Cường", "Dũng"]
+})
+```
+Yêu cầu:
+1. Tính đồng thời 3 chỉ số theo từng `khu_vuc`: tổng giá trị (`tong_tien`), số đơn hàng (`so_don`), và giá trị đơn trung bình (`gia_trung_binh`). Kết quả trả về phải có tên cột phẳng, không mang cấu trúc phân cấp đa tầng (*MultiIndex*).
+2. Tạo bảng chéo tổng hợp tổng doanh thu theo `khu_vuc` (hàng) và phương thức `thanh_toan` (cột). Những ô không phát sinh giao dịch phải được điền bằng `0.0`.
+3. Ghép hai bảng để tìm ra khách hàng nào trong hệ thống chưa từng phát sinh bất kỳ đơn hàng nào.
+:::
+
+::: solution
+#### Cách 1: Tiếp cận Căn bản & Trực quan (Tính toán phân mảnh và Merge thông thường)
+Người mới thường gọi `.agg(['sum', 'count', 'mean'])` rồi tự đổi tên cột, sau đó dùng `merge` để kiểm tra thủ công:
+
+```python
+# 1. Aggregation cơ bản sinh ra MultiIndex ở cột
+nhom_c1 = don_hang.groupby("khu_vuc")["gia_tri"].agg(["sum", "count", "mean"])
+# Phải gán lại tên cột thủ công
+nhom_c1.columns = ["tong_tien", "so_don", "gia_trung_binh"]
+
+# 2. Pivot table cơ bản
+pivot_c1 = don_hang.pivot_table(index="khu_vuc", columns="thanh_toan", values="gia_tri", aggfunc="sum").fillna(0)
+
+# 3. Tìm khách chưa mua: Left join rồi lọc dòng có ma_don bị NaN
+hop_nhat_c1 = pd.merge(khach_hang, don_hang, on="ma_khach", how="left")
+khach_chua_mua_c1 = hop_nhat_c1.loc[hop_nhat_c1["ma_don"].isna(), "ten_khach"].tolist()
+print("Khách chưa mua hàng (cơ bản):", khach_chua_mua_c1)
+```
+
+#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Named Aggregation và Merge Indicator chuyên nghiệp)
+Một cách người ta hay dùng trong các pipeline dữ liệu quy chuẩn là dùng cú pháp Named Aggregation chỉ định rõ tên cột ngay từ đầu, kết hợp tham số `indicator=True`:
+
+```python
+# 1. Named Aggregation: sạch sẽ, một bước, không tạo MultiIndex
+bao_cao_khu_vuc = don_hang.groupby("khu_vuc").agg(
+    tong_tien=("gia_tri", "sum"),
+    so_don=("gia_tri", "count"),
+    gia_trung_binh=("gia_tri", "mean")
+).reset_index()
+
+# 2. Pivot Table tối ưu với tham số fill_value trực tiếp
+bang_cheo = don_hang.pivot_table(
+    index="khu_vuc",
+    columns="thanh_toan",
+    values="gia_tri",
+    aggfunc="sum",
+    fill_value=0.0
+)
+
+# 3. Kiểm toán ghép nối với indicator=True
+kiem_toan_khach = pd.merge(
+    khach_hang,
+    don_hang,
+    on="ma_khach",
+    how="left",
+    indicator=True
+)
+khach_mo_coi = kiem_toan_khach.loc[kiem_toan_khach["_merge"] == "left_only", ["ma_khach", "ten_khach"]]
+
+print("Báo cáo khu vực:\n", bao_cao_khu_vuc)
+print("\nBảng chéo doanh thu:\n", bang_cheo)
+print("\nKhách hàng mồ côi (chưa có đơn hàng):\n", khach_mo_coi)
+```
+
+#### Phân tích bản chất & Bình luận sư phạm
+- **Ưu thế của Named Aggregation**: Cho phép áp dụng các hàm khác nhau lên cùng một cột hoặc nhiều cột khác nhau và định danh tên cột kết quả ngay tại thời điểm tính toán (ví dụ: `tong_tien=('gia_tri', 'sum')`). Nhờ đó, bảng kết quả luôn có cấu trúc cột đơn phẳng (*Flat Columns*), sẵn sàng xuất ra định dạng CSV/Parquet mà không gặp lỗi phân cấp chỉ mục.
+- **Giá trị của `indicator=True`**: Cột `_merge` nhận 3 giá trị chuẩn tắc: `'left_only'`, `'right_only'`, và `'both'`. Trong bài toán đối soát tài chính, việc lọc `_merge == 'left_only'` là chuẩn mực vàng để phát hiện tức thì các tài khoản rác, khách hàng thụ động hoặc bản ghi mồ côi mà không sợ bị nhầm lẫn với các dòng dữ liệu bị thiếu do bản thân cột nghiệp vụ mang giá trị `NaN`.
+:::
+
 ## 7. Nguồn và đọc thêm
 
 - Wes McKinney, *Python for Data Analysis*, 3rd Edition — [Chương 5, mục 5.2: Essential Functionality](https://wesmckinney.com/book/pandas-basics), [Chương 8: Data Wrangling: Join, Combine, and Reshape](https://wesmckinney.com/book/data-wrangling), và [Chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation).
