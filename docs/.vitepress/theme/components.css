@@ -48,16 +48,27 @@ mjx-container::-webkit-scrollbar {
 }
 
 /* Ẩn hoàn toàn MathML phụ trợ của MathJax trên toàn bộ dự án, triệt tiêu lỗi hiện icon mũi tên cuộn Windows */
+mjx-assistive-mml,
+mjx-assistive-mml *,
 mjx-container mjx-assistive-mml,
 .vp-doc mjx-container mjx-assistive-mml,
-.math-text mjx-container mjx-assistive-mml {
+.math-text mjx-container mjx-assistive-mml,
+.term-preview mjx-assistive-mml,
+.term-preview mjx-assistive-mml * {
   display: none !important;
+  visibility: hidden !important;
   width: 0 !important;
   height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
+  pointer-events: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
 }
 
 .math-text { min-width: 0; overflow-wrap: break-word; }
@@ -146,6 +157,8 @@ mjx-container[display=true]::-webkit-scrollbar,
 .term-preview-example span { font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 600; color: var(--ink); }
 .term-preview-example p { margin: var(--space-2) 0 0; }
 .term-preview-notation { min-width: 0; margin: var(--space-2) 0 0; padding: var(--space-2); border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--canvas); color: var(--ink); font-size: var(--fs-read); }
+.term-preview mjx-container { overflow: visible !important; scrollbar-width: none !important; -ms-overflow-style: none !important; }
+.term-preview mjx-container::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
 .term-preview-hint { display: block; font-size: var(--fs-small); line-height: 1.5; color: var(--ink-3); }
 .term-preview-close { min-width: 44px; min-height: 44px; margin: calc(var(--space-2) * -1) calc(var(--space-2) * -1) 0 0; padding: 0 var(--space-2); border: 0; border-radius: var(--radius); background: transparent; color: var(--ink-2); font: 600 var(--fs-small) var(--font-ui); cursor: pointer; }
 .term-preview-close:hover { background: var(--sunken); color: var(--ink); }

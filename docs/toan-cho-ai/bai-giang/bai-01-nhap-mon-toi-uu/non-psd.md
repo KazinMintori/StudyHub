@@ -51,7 +51,7 @@ $$
 
 vì cả hai số hạng là tích của một số không âm với một số không âm. Mọi việc nằm ở đẳng thức đầu: Biểu thức $z^T X z$ **tuyến tính theo $X$** khi $z$ cố định. Ta không cần biết trị riêng của $\theta_1 A + \theta_2 B$, một thứ khó tính hơn nhiều.
 
-Cùng nhận xét ấy cho một cách nhìn thứ hai (Ví dụ 2.7 trong sách). Với mỗi $z \ne 0$ cố định, tập $\{X \in \mathbb{S}^n : z^T X z \ge 0\}$ là một **nửa không gian** trong $\mathbb{S}^n$, vì vế trái là một hàm tuyến tính khác 0 của $X$. Thật vậy, $z^T X z = \operatorname{tr}(X z z^T) = \sum_{i,j} X_{ij} z_i z_j$. Do đó
+Cùng nhận xét ấy đem lại cách nhìn thứ hai: Với mỗi $z \ne 0$ cố định, tập $\{X \in \mathbb{S}^n : z^T X z \ge 0\}$ là một **nửa không gian** trong $\mathbb{S}^n$, vì vế trái là một hàm tuyến tính khác 0 của $X$. Thật vậy, $z^T X z = \operatorname{tr}(X z z^T) = \sum_{i,j} X_{ij} z_i z_j$. Do đó
 
 $$
 \mathbb{S}^n_+ = \bigcap_{z \ne 0} \{X \in \mathbb{S}^n : Z^T X z \ge 0\}
@@ -61,7 +61,7 @@ là giao của **vô số** nửa không gian, nên lồi. Khác với đa diệ
 
 ## 4. Nhìn tận mắt nón PSD trong $\mathbb{S}^2$
 
-Với ma trận $2 \times 2$, điều kiện PSD có dạng rất cụ thể (Ví dụ 2.6 trong sách):
+Với ma trận $2 \times 2$, điều kiện PSD có dạng tường minh như sau:
 
 $$
 \begin{bmatrix} x & y \\ y & z \end{bmatrix} \succeq 0 \iff x \ge 0,\quad z \ge 0,\quad xz \ge y^2 .
@@ -69,7 +69,7 @@ $$
 
 Vì sao đúng ba điều kiện này? Ma trận có hai trị riêng $\lambda_1, \lambda_2$ với $\lambda_1 + \lambda_2 = x + z$ (vết) và $\lambda_1 \lambda_2 = xz - y^2$ (định thức). Hai số thực đều không âm khi và chỉ khi tích của chúng không âm và tổng của chúng không âm. Điều kiện tích là $xz \ge y^2$. Khi đó $xz \ge 0$, nên $x$ và $z$ cùng dấu (hoặc một số bằng 0), và điều kiện tổng $x + z \ge 0$ buộc cả hai không âm. Ngược lại, $x, z \ge 0$ và $xz \ge y^2$ hiển nhiên cho tổng và tích không âm.
 
-Biên của nón là mặt $xz = y^2$ với $x, z \ge 0$. Đổi sang các trục $u = \tfrac{x + z}{\sqrt2}$, $w = \tfrac{x - z}{\sqrt2}$ (một phép xoay 45° trong mặt phẳng $(x, z)$), điều kiện $xz \ge y^2$ trở thành $\tfrac{u^2 - w^2}{2} \ge y^2$, tức $\sqrt{w^2 + 2y^2} \le u$. Như vậy nón PSD trong $\mathbb{S}^2$ là một nón "kem" có trục là đường chéo $x = z$, với lát cắt ngang là những hình ellipse. Mô phỏng dưới đây vẽ nó theo hệ trục đã xoay, giống Hình 2.12 trong sách.
+Biên của nón là mặt $xz = y^2$ với $x, z \ge 0$. Đổi sang các trục $u = \tfrac{x + z}{\sqrt2}$, $w = \tfrac{x - z}{\sqrt2}$ (một phép xoay 45° trong mặt phẳng $(x, z)$), điều kiện $xz \ge y^2$ trở thành $\tfrac{u^2 - w^2}{2} \ge y^2$, tức $\sqrt{w^2 + 2y^2} \le u$. Như vậy nón PSD trong $\mathbb{S}^2$ là một nón "kem" có trục là đường chéo $x = z$, với lát cắt ngang là những hình ellipse. Mô phỏng 3D dưới đây biểu diễn trực quan nón PSD theo hệ trục đã xoay.
 
 <Cone3DLab type="psd" />
 
@@ -97,7 +97,7 @@ Ba ví dụ dưới đây giải thích vì sao trong học máy, ma trận PSD 
 - **Ma trận Gram** $K_{ij} = \phi(x_i)^T \phi(x_j)$, nền tảng của các phương pháp kernel, luôn PSD vì $v^T K v = \left\|\sum_i v_i \phi(x_i)\right\|_2^2 \ge 0$.
 - **Hessian của hàm lồi** là PSD tại mọi điểm. Đó là nội dung của điều kiện bậc hai ở chủ đề về độ cong. Hàm mất mát bình phương tối thiểu có Hessian $2A^T A$, một ma trận Gram.
 
-Vì $\mathbb{S}^n_+$ là nón lồi, ta có thể so sánh hai ma trận bằng cách xét hiệu của chúng: $X \preceq Y$ nghĩa là $Y - X \succeq 0$. Chẳng hạn $\Sigma_1 \preceq \Sigma_2$ nghĩa là theo **mọi** hướng, dữ liệu thứ nhất biến thiên không nhiều hơn dữ liệu thứ hai. Đây là một "bất đẳng thức giữa các ma trận", và chủ đề về bất đẳng thức tổng quát sẽ xây dựng nó một cách chặt chẽ.
+Vì $\mathbb{S}^n_+$ là nón lồi, ta có thể so sánh hai ma trận bằng cách xét hiệu của chúng: Ký hiệu $X \preceq Y$ nghĩa là $Y - X \succeq 0$. Chẳng hạn $\Sigma_1 \preceq \Sigma_2$ nghĩa là theo **mọi** hướng, dữ liệu thứ nhất biến thiên không nhiều hơn dữ liệu thứ hai. Đây là một "bất đẳng thức giữa các ma trận", và chủ đề về bất đẳng thức tổng quát sẽ xây dựng nó một cách chặt chẽ.
 
 ## 7. Những câu hỏi để đào sâu
 
@@ -140,7 +140,7 @@ Ma trận nào dưới đây thuộc $\mathbb{S}^2_+$, ma trận nào thuộc $\
 :::
 
 ::: solution
-$A$: $4 \ge 0$, $1 \ge 0$, $4 \cdot 1 - 4 = 0$, nên PSD nhưng không PD. Vector $z = (1, -2)$ cho $z^T A z = 4 - 8 + 4 = 0$. $B$: $3 > 0$ và $6 - 1 = 5 > 0$, nên PD. $C$: $4 - 9 = -5 < 0$, nên không PSD. Chọn $z = (3, -1)$: $z^T C z = 9 - 18 + 4 = -5 < 0$.
+Xét ma trận $A$: Ta có $4 \ge 0$, $1 \ge 0$, $4 \cdot 1 - 4 = 0$, nên $A$ thuộc $\mathbb{S}^2_+$ (PSD) nhưng không thuộc $\mathbb{S}^2_{++}$ (không PD). Vector $z = (1, -2)$ cho $z^T A z = 4 - 8 + 4 = 0$. Với ma trận $B$: Ta có $3 > 0$ và $6 - 1 = 5 > 0$, nên $B \in \mathbb{S}^2_{++}$ (PD). Với ma trận $C$: Ta có $4 - 9 = -5 < 0$, nên $C$ không PSD. Chọn vector $z = (3, -1)$: Giá trị dạng toàn phương là $z^T C z = 9 - 18 + 4 = -5 < 0$.
 :::
 
 ::: exercise 2. Tổ hợp nón cụ thể
@@ -148,7 +148,7 @@ Cho $A = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ và $B = \begin{bmatrix} 
 :::
 
 ::: solution
-$A$: $1 \cdot 1 - 1 = 0$, PSD. $B$: $1 \cdot 1 - 1 = 0$, PSD. $A + B = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$ và $2A + 3B = \begin{bmatrix} 5 & -1 \\ -1 & 5 \end{bmatrix}$. Cả hai là tổ hợp nón của hai ma trận PSD, nên PSD theo mệnh đề ở mục 3. Thú vị là $A$ và $B$ đều nằm trên biên của nón, nhưng $A + B$ lại nằm bên trong, vì $A$ "thiếu" theo hướng $(1, -1)$ còn $B$ "thiếu" theo hướng $(1, 1)$, và tổng của chúng bù cho nhau.
+Với ma trận $A$: Ta có $1 \cdot 1 - 1 = 0$, nên $A \in \mathbb{S}^2_+$. Tương tự với $B$: Ta có $1 \cdot 1 - 1 = 0$, nên $B \in \mathbb{S}^2_+$. Ta tính được $A + B = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$ và $2A + 3B = \begin{bmatrix} 5 & -1 \\ -1 & 5 \end{bmatrix}$. Cả hai ma trận này đều là tổ hợp nón của hai ma trận PSD, do đó chúng thuộc $\mathbb{S}^2_+$ theo mệnh đề ở mục 3. Điểm đáng chú ý là cả $A$ và $B$ đều nằm trên biên của nón, nhưng tổng $A + B$ lại nằm sâu bên trong phần trong của nón, bởi vì $A$ bị triệt tiêu theo hướng $(1, -1)$ còn $B$ bị triệt tiêu theo hướng $(1, 1)$, và phép cộng đã bù trừ trọn vẹn cho nhau.
 :::
 
 ::: exercise 3. Số chiều của Sⁿ
@@ -165,7 +165,6 @@ Ma trận đối xứng cỡ $n \times n$ tạo thành không gian vector $\math
 
 PSD là điều kiện trên dạng toàn phương, không phải trên từng phần tử. Ma trận hiệp phương sai, ma trận Gram và Hessian của hàm lồi đều PSD vì những lý do có thể giải thích bằng một dòng. Sau trang này, bạn có thể kiểm tra một ma trận có PSD không, chỉ ra một hướng bác bỏ khi nó không PSD, và giải thích vì sao tập các tham số làm một ma trận affine trở nên PSD là một tập lồi.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.5 (tr. 34–35), Ví dụ 2.6 và Hình 2.12. Ví dụ 2.7 (tr. 36) về giao vô hạn nửa không gian. Phân tích phổ, tiêu chuẩn PSD và phần bù Schur ở phụ lục A.5.
-- Các ví dụ về cái bẫy, ma trận $3 \times 3$, liên hệ với hiệp phương sai, ma trận Gram, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-14-ke-chuyen-bang-du-lieu
 section: lecture
 title: "Kể chuyện bằng dữ liệu & thẩm định phân tích AI"
-prerequisites: ["ky-vong","gia-tri-thieu","thong-ke-mo-ta","ket-luan-nhan-qua"]
+prerequisites: ["gia-tri-thieu", "thong-ke-mo-ta", "ket-luan-nhan-qua", "suy-rong-thong-ke"]
 lessonStatus: ready
 description: "Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm: Cấu trúc Kim tự tháp Minto, bóc trần nghịch lý Simpson, chuẩn hóa ngôn ngữ đo lường và quy trình thẩm định 4 bước đối với báo cáo do trí tuệ nhân tạo tạo ra."
 ---

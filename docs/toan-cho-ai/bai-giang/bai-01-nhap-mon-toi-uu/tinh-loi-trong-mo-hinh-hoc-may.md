@@ -13,9 +13,15 @@ Chủ đề cuối của chương trả lời câu hỏi mà một người họ
 
 ## 1. Huấn luyện là ước lượng hợp lý cực đại
 
-Rất nhiều hàm mất mát trong học máy không được chọn tùy tiện, mà sinh ra từ một mô hình xác suất. Giả sử dữ liệu tuân theo một phân phối $p_\theta$ phụ thuộc tham số $\theta$. **Ước lượng hợp lý cực đại** chọn $\theta$ làm cực đại log-likelihood $l(\theta) = \log p_\theta(\text{dữ liệu})$. Sách nhận xét (§7.1.1): Bài toán này là bài toán lồi khi $l$ lõm theo $\theta$ và các ràng buộc lên $\theta$ là ràng buộc lồi.
+Rất nhiều hàm mất mát trong học máy không được chọn tùy tiện, mà sinh ra từ một mô hình xác suất. Giả sử dữ liệu tuân theo một phân phối $p_\theta$ phụ thuộc tham số $\theta$. **Ước lượng hợp lý cực đại** (Maximum Likelihood Estimation - MLE) chọn $\theta$ làm cực đại log-likelihood $l(\theta) = \log p_\theta(\text{dữ liệu})$. Theo nguyên lý tối ưu, bài toán ước lượng này là bài toán lồi khi log-likelihood $l(\theta)$ là một hàm lõm theo tham số $\theta$ và tập các ràng buộc đặt lên $\theta$ là tập lồi.
 
-Xét mô hình đo tuyến tính $y_i = a_i^T x + v_i$, trong đó $x$ là tham số cần ước lượng và các nhiễu $v_i$ độc lập, cùng mật độ $p$. Log-likelihood là $\sum_i \log p(y_i - a_i^T x)$. Nếu $\log p$ lõm, tức $p$ là một mật độ **log-lõm**, thì mỗi số hạng là hàm lõm hợp với một hàm affine của $x$, và bài toán lồi. Hàm mất mát tương ứng là $-\log p$ áp lên từng phần dư. Ví dụ 7.1 của sách cho ba trường hợp quen thuộc:
+Xét mô hình đo tuyến tính với $m$ quan sát: Phương trình $y_i = a_i^T x + v_i$ với $i = 1, \dots, m$, trong đó $x \in \mathbb{R}^n$ là vector tham số cần ước lượng và các thành phần nhiễu $v_i$ độc lập, cùng phân phối với hàm mật độ xác suất $p(v)$. Do tính độc lập, hàm hợp lý chung là tích các mật độ $\prod_{i=1}^m p(y_i - a_i^T x)$, dẫn đến log-likelihood có dạng tổng tường minh:
+
+$$
+l(x) = \sum_{i=1}^m \log p(y_i - a_i^T x) = \log p(y_1 - a_1^T x) + \log p(y_2 - a_2^T x) + \dots + \log p(y_m - a_m^T x).
+$$
+
+Nếu $\log p$ là một hàm lõm (tức mật độ $p$ là **log-lõm**), thì mỗi số hạng $\log p(y_i - a_i^T x)$ là phép hợp của hàm lõm với hàm affine theo $x$, do đó tổng $l(x)$ là hàm lõm và bài toán ước lượng trở thành bài toán lồi. Bài toán cực tiểu hàm mất mát tương đương là cực tiểu $-\log p$ áp lên từng phần dư $r_i = y_i - a_i^T x$. Xét ba trường hợp phân phối nhiễu kinh điển sau:
 
 | Mô hình nhiễu | Mật độ $p(z)$ tỉ lệ với | Bài toán ước lượng tương đương |
 | --- | --- | --- |
@@ -33,7 +39,7 @@ $$
 l(a, b) = \sum_{i:\, y_i = 1} \log \sigma(z_i) + \sum_{i:\, y_i = 0} \log\big(1 - \sigma(z_i)\big).
 $$
 
-Vì $\log\sigma(z) = -\log(1 + e^{-z})$ và $\log(1 - \sigma(z)) = -\log(1 + e^{z})$, mỗi số hạng là âm của hàm softplus, một hàm lõm, hợp với hàm affine $z_i$ của tham số. Vậy $l$ lõm, và cực đại nó là một bài toán lồi (§7.1.1). Viết với nhãn $s_i = \pm 1$, ta cực tiểu hàm lồi
+Vì $\log\sigma(z) = -\log(1 + e^{-z})$ và $\log(1 - \sigma(z)) = -\log(1 + e^{z})$, mỗi số hạng là âm của hàm softplus, một hàm lõm, hợp với hàm affine $z_i$ của tham số. Do đó $l(a, b)$ là hàm lõm, và bài toán cực đại hóa nó (hoặc cực tiểu hóa âm log-likelihood) chính là một bài toán tối ưu lồi. Viết với nhãn $s_i = \pm 1$, ta cực tiểu hàm lồi
 
 $$
 L(a, b) = \frac1m \sum_{i=1}^m \log\big(1 + e^{-s_i (a^T u_i + b)}\big).
@@ -131,11 +137,11 @@ Hàm $L(a, b) + \tfrac{\lambda}{2}\|(a, b)\|_2^2$ có Hessian $\succeq \lambda I
 ## 7. Bài tập tự luyện
 
 ::: exercise 1. Hồi quy Poisson
-Số sự kiện $y_i \in \{0, 1, 2, \dots\}$ được mô hình hóa bằng phân phối Poisson với trung bình $\mu_i = e^{a^T u_i + b}$. (a) Viết log-likelihood theo $(a, b)$, bỏ các hằng số không phụ thuộc tham số. (b) Chứng minh nó lõm. (c) Nếu dùng trung bình affine $\mu_i = a^T u_i + b$ như trong sách, log-likelihood có còn lõm không, và cần thêm điều kiện gì?
+Số sự kiện $y_i \in \{0, 1, 2, \dots\}$ được mô hình hóa bằng phân phối Poisson với trung bình $\mu_i = e^{a^T u_i + b}$. (a) Viết log-likelihood theo $(a, b)$, bỏ các hằng số không phụ thuộc tham số. (b) Chứng minh nó lõm. (c) Nếu thay vì hàm liên kết mũ, ta dùng trực tiếp trung bình affine $\mu_i = a^T u_i + b$, log-likelihood có còn lõm không, và cần thêm điều kiện gì về miền xác định?
 :::
 
 ::: solution
-(a) Xác suất của $y_i$ là $e^{-\mu_i}\mu_i^{y_i}/y_i!$, nên log-likelihood là $\sum_i \big(y_i \log\mu_i - \mu_i\big)$ cộng hằng số. Với $\mu_i = e^{z_i}$ và $z_i = a^T u_i + b$, nó trở thành $\sum_i \big(y_i z_i - e^{z_i}\big)$. (b) $y_i z_i$ là hàm affine của tham số, còn $-e^{z_i}$ là âm của một hàm lồi hợp với hàm affine, nên lõm. Tổng là hàm lõm. (c) Với $\mu_i = a^T u_i + b$, log-likelihood là $\sum_i \big(y_i \log(a^T u_i + b) - (a^T u_i + b)\big)$. Số hạng $y_i\log(\cdot)$ là hàm lõm hợp với hàm affine nhân hệ số $y_i \ge 0$, nên vẫn lõm, đúng như §7.1.1 của sách. Điều kiện thêm là miền xác định: Cần $a^T u_i + b > 0$ với mọi $i$ có $y_i > 0$, một tập lồi vì là giao của các nửa không gian mở.
+(a) Xác suất của $y_i$ là $e^{-\mu_i}\mu_i^{y_i}/y_i!$, nên log-likelihood là $\sum_i \big(y_i \log\mu_i - \mu_i\big)$ cộng hằng số. Với $\mu_i = e^{z_i}$ và $z_i = a^T u_i + b$, nó trở thành $\sum_i \big(y_i z_i - e^{z_i}\big)$. (b) $y_i z_i$ là hàm affine của tham số, còn $-e^{z_i}$ là âm của một hàm lồi hợp với hàm affine, nên lõm. Tổng là hàm lõm. (c) Với $\mu_i = a^T u_i + b$, log-likelihood trở thành $\sum_{i=1}^m \big(y_i \log(a^T u_i + b) - (a^T u_i + b)\big)$. Vì $y_i \ge 0$, mỗi số hạng $y_i\log(\cdot)$ là phép hợp giữa hàm lõm $\log$ với hàm affine nhân hệ số không âm, còn $-(a^T u_i + b)$ là hàm affine, do đó từng số hạng đều lõm và tổng vẫn là một hàm lõm. Điều kiện bổ sung nằm ở miền xác định: Ta cần $a^T u_i + b > 0$ với mọi mẫu $i$ có $y_i > 0$. Miền xác định này là một tập lồi vì nó là giao của các nửa không gian mở.
 :::
 
 ::: exercise 2. Đối xứng hoán vị bằng số
@@ -166,7 +172,6 @@ Khi huấn luyện, tham số là biến và dữ liệu là hằng số, nên t
 
 Mạng nơ-ron không lồi vì tham số các tầng nhân với nhau, và đối xứng hoán vị cho một phản ví dụ chỉ bằng vài phép tính. Cố định một tầng thì phần còn lại có thể lồi, và một phép đổi biến phi tuyến có thể tạo ra hoặc phá đi tính lồi. Quy trình nhận diện đi từ việc xác định biến, xem đầu ra phụ thuộc tham số ra sao, kiểm tra hàm mất mát, điều chuẩn và ràng buộc, tới câu hỏi tồn tại và duy nhất nghiệm.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §7.1.1 (tr. 351–356): Ước lượng hợp lý cực đại, Ví dụ 7.1, cách đọc hàm phạt như hợp lý cực đại, hồi quy Poisson, hồi quy logistic và Hình 7.1. Bình phương tối thiểu như một bài toán bậc hai ở §4.4.
-- Mô phỏng hàm mất mát logistic, ví dụ dữ liệu tách được, ví dụ mạng ReLU hai nơ-ron và đối xứng hoán vị, ví dụ đổi biến $c = e^\theta$, bảng các mô hình, quy trình nhận diện, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

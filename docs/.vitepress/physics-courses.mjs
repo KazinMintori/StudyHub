@@ -388,7 +388,7 @@ export const physics1Course = {
         "Trên đồ thị vị trí theo thời gian, vận tốc trung bình là độ dốc dây cung."
       ],
       "formula": "$$\\Delta x=x_2-x_1,\\qquad v_{\\mathrm{av}-x}=\\frac{x_2-x_1}{t_2-t_1},\\quad t_2>t_1$$",
-      "example": "Hình 2.1: từ 19 m lúc 1,0 s đến 277 m lúc 4,0 s cho độ dời 258 m và vận tốc trung bình 86 m/s."
+      "example": "Hình 2.1: Từ 19 m lúc 1,0 s đến 277 m lúc 4,0 s cho độ dời 258 m và vận tốc trung bình 86 m/s."
     },
     {
       "note": "02-chuyen-dong-thang",
@@ -399,7 +399,7 @@ export const physics1Course = {
         "Đi rồi trở về điểm đầu có thể có vận tốc trung bình bằng không dù tốc độ trung bình dương."
       ],
       "formula": "$$v_x=\\frac{dx}{dt},\\qquad v=|v_x|$$",
-      "example": "Ví dụ 2.1: báo có vận tốc trung bình 15 m/s từ 1,0 s đến 2,0 s; vận tốc tức thời tại 1,0 s là 10 m/s."
+      "example": "Ví dụ 2.1: Báo có vận tốc trung bình 15 m/s từ 1,0 s đến 2,0 s; vận tốc tức thời tại 1,0 s là 10 m/s."
     },
     {
       "note": "02-chuyen-dong-thang",
@@ -410,7 +410,7 @@ export const physics1Course = {
         "Trong chuyển động thẳng, cùng dấu vận tốc và gia tốc thì nhanh dần; trái dấu thì chậm dần."
       ],
       "formula": "$$a_{\\mathrm{av}-x}=\\frac{v_{2x}-v_{1x}}{t_2-t_1},\\qquad a_x=\\frac{dv_x}{dt}=\\frac{d^2x}{dt^2}$$",
-      "example": "Ví dụ 2.2(c): vận tốc giảm từ −0,4 đến −1,0 m/s trong 2,0 s; gia tốc trung bình âm nhưng tốc độ tăng."
+      "example": "Ví dụ 2.2(c): Vận tốc giảm từ −0,4 đến −1,0 m/s trong 2,0 s; gia tốc trung bình âm nhưng tốc độ tăng."
     },
     {
       "note": "02-chuyen-dong-thang",
@@ -421,7 +421,7 @@ export const physics1Course = {
         "Vận tốc trung bình bằng nửa tổng vận tốc đầu và cuối trong trường hợp gia tốc không đổi."
       ],
       "formula": "$$\\begin{aligned}v_x&=v_{0x}+a_xt\\\\x&=x_0+v_{0x}t+\\tfrac12a_xt^2\\\\v_x^2&=v_{0x}^2+2a_x(x-x_0)\\\\x-x_0&=\\tfrac12(v_{0x}+v_x)t\\end{aligned}$$",
-      "example": "Ví dụ 2.4: x₀ = 5,0 m, v₀ₓ = 15 m/s, aₓ = 4,0 m/s² cho x = 43 m và vₓ = 23 m/s tại t = 2,0 s."
+      "example": "Ví dụ 2.4: Với x₀ = 5,0 m, v₀ₓ = 15 m/s, aₓ = 4,0 m/s² cho x = 43 m và vₓ = 23 m/s tại t = 2,0 s."
     },
     {
       "note": "02-chuyen-dong-thang",
@@ -432,7 +432,7 @@ export const physics1Course = {
         "Ở điểm cao nhất, vận tốc bằng không nhưng gia tốc vẫn hướng xuống."
       ],
       "formula": "$$a_y=-g,\\qquad y=y_0+v_{0y}t-\\tfrac12gt^2,\\qquad v_y=v_{0y}-gt$$",
-      "example": "Ví dụ 2.7: bóng rời tay với 15,0 m/s hướng lên đạt độ cao cực đại khoảng 11,5 m so với tay."
+      "example": "Ví dụ 2.7: Bóng rời tay với 15,0 m/s hướng lên đạt độ cao cực đại khoảng 11,5 m so với tay."
     },
     {
       "note": "02-chuyen-dong-thang",
@@ -443,7 +443,7 @@ export const physics1Course = {
         "Diện tích có dấu dưới đồ thị gia tốc cho biến thiên vận tốc; dưới đồ thị vận tốc cho độ dời."
       ],
       "formula": "$$v_x=v_{0x}+\\int_0^t a_x\\,dt,\\qquad x=x_0+\\int_0^t v_x\\,dt$$",
-      "example": "Ví dụ 2.9: aₓ = 2,0 m/s² − (0,10 m/s³)t cho vận tốc lớn nhất 30 m/s tại t = 20 s, khi x ≈ 517 m."
+      "example": "Ví dụ 2.9: Hàm gia tốc aₓ = 2,0 m/s² − (0,10 m/s³)t cho vận tốc lớn nhất 30 m/s tại t = 20 s, khi x ≈ 517 m."
     }
   ],
   "contentPolicy": "full-source-translation"

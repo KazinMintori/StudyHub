@@ -7,22 +7,22 @@ title: "Điều kiện bậc nhất: Tiếp tuyến nằm dưới đồ thị"
 description: "Điều kiện bậc nhất của hàm lồi khả vi và ý nghĩa của tiếp tuyến như một cận dưới toàn cục: Điểm dừng là cực tiểu toàn cục, cận dưới cho giá trị tối ưu, các bất đẳng thức cổ điển và độ phân kỳ KL, gradient loại bỏ nửa không gian, gradient đơn điệu, lồi nghiêm ngặt và dưới đạo hàm."
 ---
 
-Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: Độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm, ta dựng được một mặt phẳng mà cả cái bát nằm phía trên nó.
+Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: Độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói lên điều gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát khổng lồ, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm duy nhất, ta dựng được một mặt phẳng mà toàn bộ cái bát đều nằm phía trên mặt phẳng đó.
 
-Đó là nội dung của điều kiện bậc nhất, và sách gọi đây có lẽ là tính chất quan trọng nhất của hàm lồi. Lý do nằm ở chỗ một thuật toán tối ưu chỉ đo được thông tin cục bộ, như giá trị và gradient tại điểm đang đứng. Với hàm lồi, thông tin cục bộ ấy lại cho kết luận về toàn bộ hàm. Trang này phát biểu điều kiện, rút ra những hệ quả quan trọng nhất của nó, đọc chậm lời chứng minh, và kết thúc ở trường hợp hàm có điểm gãy, nơi khái niệm gradient phải được mở rộng.
+Đó là nội dung cốt lõi của điều kiện bậc nhất — một trong những tính chất nền tảng nhất của hàm lồi trong tối ưu hóa. Bản chất nằm ở chỗ: Một thuật toán tối ưu thông thường chỉ đo đạc được thông tin cục bộ, bao gồm giá trị hàm và gradient tại điểm hiện hành. Đối với hàm lồi, thông tin cục bộ đó lại cho phép ta rút ra kết luận chắc chắn trên toàn bộ miền xác định. Bài giảng này phát biểu điều kiện, làm sáng tỏ các hệ quả thực tiễn, phân tích từng bước chứng minh chặt chẽ, và mở rộng sang trường hợp hàm không khả vi tại các điểm gãy thông qua khái niệm dưới đạo hàm.
 
 ## 1. Phát biểu
 
 > **Định lý.** Giả sử $f$ khả vi, nghĩa là $\operatorname{dom} f$ là tập mở và gradient $\nabla f$ tồn tại tại mọi điểm của nó. Khi đó $f$ lồi khi và chỉ khi $\operatorname{dom} f$ lồi và
 > $$f(y) \ge f(x) + \nabla f(x)^T (y - x) \quad \text{với mọi } x, y \in \operatorname{dom} f.$$
 
-Cố định $x$ và xem vế phải như một hàm của $y$. Đó là một hàm affine, và cũng chính là xấp xỉ Taylor bậc nhất của $f$ quanh $x$: Nó khớp với $f$ cả về giá trị lẫn về đạo hàm tại $x$. Khi $n = 1$, đồ thị của nó là tiếp tuyến tại $(x, f(x))$. Khi $n \ge 2$, đó là siêu phẳng tiếp xúc với đồ thị. Bất đẳng thức nói rằng xấp xỉ bậc nhất của một hàm lồi **không bao giờ đánh giá quá cao**: Tiếp tuyến tại bất kỳ điểm nào cũng nằm dưới toàn bộ đồ thị (Hình 3.2 trong sách).
+Cố định $x$ và xem vế phải như một hàm của $y$. Đó là một hàm affine, đồng thời chính là xấp xỉ Taylor bậc nhất của $f$ quanh $x$: Biểu thức này khớp với $f$ cả về giá trị lẫn về đạo hàm tại $x$. Khi $n = 1$, đồ thị của nó là tiếp tuyến tại $(x, f(x))$. Khi $n \ge 2$, đó là siêu phẳng tiếp xúc với đồ thị. Bất đẳng thức khẳng định rằng xấp xỉ bậc nhất của một hàm lồi **không bao giờ đánh giá vượt mức**: Tiếp tuyến tại bất kỳ điểm nào cũng luôn nằm dưới toàn bộ đồ thị.
 
-Chữ "toàn bộ" là chỗ tạo nên khác biệt. Với mọi hàm khả vi, xấp xỉ bậc nhất đều tốt khi $y$ đủ gần $x$. Nhưng chỉ với hàm lồi, xấp xỉ đó mới là một **cận dưới toàn cục**, đúng với mọi $y$ trong miền xác định dù $y$ ở xa $x$ đến đâu.
+Chữ "toàn bộ" là điểm mấu chốt tạo nên khác biệt. Với mọi hàm khả vi, xấp xỉ bậc nhất đều tốt khi $y$ đủ gần $x$. Nhưng chỉ với hàm lồi, xấp xỉ đó mới là một **cận dưới toàn cục**, đúng với mọi $y$ trong miền xác định dù $y$ ở xa $x$ đến đâu.
 
 <FunctionLab type="tangent" />
 
-Trong mô phỏng, với $x^2$, $e^x$, $-\log x$ hay $x \log x$, bạn trượt $x_0$ đi đâu thì tiếp tuyến cũng nằm dưới đồ thị. Với $x^3$, chỉ cần đặt $x_0 < 0$ là tiếp tuyến cắt lên trên đồ thị ở phía bên phải. Hàm $1/x^2$ đáng xem kỹ hơn. Trên nửa trục chứa $x_0$, tiếp tuyến vẫn nằm dưới đồ thị, nhưng ở nửa trục bên kia nó vượt lên trên đồ thị trên cả một khoảng. Miền xác định không lồi, nên điều kiện bậc nhất không còn đúng, đúng như Ghi chú 3.1 của sách đã cảnh báo.
+Trong mô phỏng, với $x^2$, $e^x$, $-\log x$ hay $x \log x$, bạn trượt $x_0$ đi đâu thì tiếp tuyến cũng nằm dưới đồ thị. Với $x^3$, chỉ cần đặt $x_0 < 0$ là tiếp tuyến cắt lên trên đồ thị ở phía bên phải. Hàm $1/x^2$ đáng xem kỹ hơn: Trên nửa trục chứa $x_0$, tiếp tuyến vẫn nằm dưới đồ thị, nhưng ở nửa trục bên kia nó vượt lên trên đồ thị trên cả một khoảng. Miền xác định không lồi, nên điều kiện bậc nhất không còn được bảo toàn. Cần lưu ý rằng giả thiết về tính lồi của miền xác định là điều kiện tiên quyết không thể bỏ qua.
 
 ## 2. Thông tin cục bộ cho kết luận toàn cục
 
@@ -64,41 +64,44 @@ Viết điều kiện bậc nhất cho vài hàm một biến quen thuộc tại
 
 Mỗi dòng chỉ là câu "tiếp tuyến nằm dưới (hoặc trên) đồ thị" được viết ra cho một hàm cụ thể. Dấu bằng xảy ra tại tiếp điểm, và với những hàm lồi nghiêm ngặt như $e^x$ thì chỉ tại tiếp điểm.
 
-Cách nhìn này cho một ứng dụng đẹp trong học máy. Gọi $f(v) = \sum_i v_i \log v_i$ là entropy âm, một hàm lồi trên $\mathbb{R}^n_{++}$ với $\nabla f(v)_i = \log v_i + 1$. Khoảng cách theo phương thẳng đứng giữa đồ thị của $f$ tại $u$ và siêu phẳng tiếp xúc tại $v$ bằng
+Cách nhìn này mang lại một ứng dụng rất đẹp trong học máy. Xét hàm entropy âm $f(v) = \sum_{i=1}^n v_i \log v_i$, đây là một hàm lồi trên $\mathbb{R}^n_{++}$ với gradient từng thành phần $\nabla f(v)_i = \log v_i + 1$. Khoảng cách theo phương thẳng đứng giữa đồ thị của $f$ tại $u$ và siêu phẳng tiếp xúc tại $v$ được xác định bởi:
 
 $$
-f(u) - f(v) - \nabla f(v)^T (u - v) = \sum_{i} \Big( u_i \log \frac{u_i}{v_i} - u_i + v_i \Big).
+\begin{aligned}
+f(u) - f(v) - \nabla f(v)^T (u - v) &= \sum_{i=1}^n \left( u_i \log \frac{u_i}{v_i} - u_i + v_i \right) \\
+&= \left(u_1 \log \frac{u_1}{v_1} - u_1 + v_1\right) + \dots + \left(u_n \log \frac{u_n}{v_n} - u_n + v_n\right).
+\end{aligned}
 $$
 
-Vế phải chính là **độ phân kỳ Kullback–Leibler** $D_{\mathrm{kl}}(u, v)$ theo định nghĩa (3.17) của sách. Điều kiện bậc nhất cho ngay $D_{\mathrm{kl}}(u, v) \ge 0$, và vì entropy âm lồi nghiêm ngặt, dấu bằng chỉ xảy ra khi $u = v$. Đây là bất đẳng thức thông tin, nội dung Bài tập 3.13 của sách, và lời gợi ý của sách chính là cách nhìn vừa trình bày.
+Vế phải chính là **độ phân kỳ Kullback–Leibler** $D_{\mathrm{kl}}(u, v)$ tổng quát. Áp dụng điều kiện bậc nhất, ta kết luận ngay $D_{\mathrm{kl}}(u, v) \ge 0$, và vì entropy âm là hàm lồi nghiêm ngặt, dấu bằng chỉ xảy ra khi và chỉ khi $u = v$. Đây chính là bất đẳng thức thông tin kinh điển trong lý thuyết thông tin, và hình học của tiếp tuyến mang lại một minh chứng trực quan sinh động.
 
-Khi $u = p$ và $v = q$ là hai phân phối xác suất, hai số hạng $-u_i + v_i$ cộng lại bằng 0, nên $D_{\mathrm{kl}}(p, q) = \sum_i p_i \log (p_i / q_i)$. Viết lại theo entropy chéo:
+Khi $u = p$ và $v = q$ là hai phân phối xác suất rời rạc, tức $\sum_{i=1}^n p_i = \sum_{i=1}^n q_i = 1$, các số hạng $-p_i + q_i$ triệt tiêu lẫn nhau khi lấy tổng, dẫn tới công thức quen thuộc $D_{\mathrm{kl}}(p, q) = \sum_{i=1}^n p_i \log (p_i / q_i)$. Biểu diễn lại theo entropy chéo:
 
 $$
-\underbrace{-\sum_i p_i \log q_i}_{\text{entropy chéo}} = \underbrace{-\sum_i p_i \log p_i}_{\text{entropy}} + D_{\mathrm{kl}}(p, q).
+\underbrace{-\sum_{i=1}^n p_i \log q_i}_{\text{entropy chéo}} = \underbrace{-\sum_{i=1}^n p_i \log p_i}_{\text{entropy}} + D_{\mathrm{kl}}(p, q).
 $$
 
-Vậy với dữ liệu có phân phối $p$ cố định, entropy chéo luôn lớn hơn hoặc bằng entropy, và chỉ đạt nhỏ nhất khi $q = p$. Đó là lý do hàm mất mát entropy chéo kéo phân phối dự đoán của mô hình về phía phân phối của dữ liệu. Với $p = (0.5, 0.3, 0.2)$ và $q = (0.4, 0.4, 0.2)$, entropy chéo xấp xỉ $1.0549$, entropy xấp xỉ $1.0297$, và hiệu của chúng đúng bằng $D_{\mathrm{kl}}(p, q) \approx 0.0253$.
+Như vậy, với dữ liệu có phân phối thực tế $p$ cố định, entropy chéo luôn lớn hơn hoặc bằng entropy của chính phân phối đó, và đạt cực tiểu khi và chỉ khi $q = p$. Đó là lý do hàm mất mát entropy chéo có xu hướng kéo phân phối dự đoán của mô hình tiệm cận về phân phối thực nghiệm của dữ liệu. Với hai phân phối $p = (0.5, 0.3, 0.2)$ và $q = (0.4, 0.4, 0.2)$, entropy chéo xấp xỉ $1.0549$, entropy xấp xỉ $1.0297$, và hiệu số giữa chúng bằng đúng $D_{\mathrm{kl}}(p, q) \approx 0.0253$.
 
-## 4. Đọc chậm lời chứng minh
+## 4. Phân tích các bước chứng minh
 
-Lời chứng minh trong sách đi qua trường hợp một biến trước, rồi dùng kỹ thuật hạn chế lên đường thẳng từ chủ đề trước để lên nhiều chiều. Mỗi bước đều có một hình ảnh đi kèm.
+Lời chứng minh được xây dựng bằng cách khảo sát trường hợp một biến trước, sau đó vận dụng kỹ thuật hạn chế lên đường thẳng từ chủ đề trước để tổng quát hóa lên không gian nhiều chiều. Mỗi bước biến đổi đều gắn liền với một ý nghĩa hình học rõ ràng.
 
-**Lồi suy ra tiếp tuyến nằm dưới.** Lấy $x, y$ trong miền và $0 < t \le 1$. Điểm $x + t(y - x)$ nằm trên đoạn từ $x$ tới $y$, nên tính lồi cho
+**Lồi suy ra tiếp tuyến nằm dưới.** Lấy $x, y$ trong miền xác định và $0 < t \le 1$. Điểm $x + t(y - x)$ nằm trên đoạn thẳng nối từ $x$ tới $y$, do đó tính lồi của hàm số cho:
 
 $$
 f(x + t(y - x)) \le (1 - t) f(x) + t f(y).
 $$
 
-Trừ $f(x)$ ở hai vế rồi chia cho $t > 0$:
+Trừ $f(x)$ ở cả hai vế rồi chia cho $t > 0$:
 
 $$
 \frac{f(x + t(y - x)) - f(x)}{t} \le f(y) - f(x).
 $$
 
-Cho $t \to 0$, vế trái tiến tới $f'(x)(y - x)$, và ta được $f(y) \ge f(x) + f'(x)(y - x)$. Về hình học, vế trái là độ dốc của một dây cung rất ngắn xuất phát từ $x$, nhân với $y - x$. Tính lồi bảo rằng dây cung ngắn có độ dốc không lớn hơn dây cung dài cùng xuất phát từ $x$ về cùng một phía. Tiếp tuyến là giới hạn của những dây cung ngắn dần, nên nó nằm dưới mọi dây cung, và do đó dưới đồ thị.
+Cho $t \to 0$, vế trái tiến tới đạo hàm theo hướng $f'(x)(y - x)$, và ta thu được bất đẳng thức $f(y) \ge f(x) + f'(x)(y - x)$. Về mặt hình học, vế trái là độ dốc của một dây cung rất ngắn xuất phát từ $x$, nhân với khoảng dịch chuyển $y - x$. Tính lồi bảo đảm rằng dây cung ngắn có độ dốc không vượt quá dây cung dài hơn cùng xuất phát từ $x$ về cùng một phía. Tiếp tuyến là giới hạn của những dây cung ngắn dần, do đó nó nằm dưới mọi dây cung, và hệ quả là nằm dưới toàn bộ đồ thị.
 
-Hiện tượng "độ dốc dây cung tăng dần" đáng được nhìn bằng số. Với $f(x) = e^x$ và ba điểm $0 < 1 < 2$, dây cung từ 0 tới 1 có độ dốc $e - 1 \approx 1.718$, dây cung từ 0 tới 2 có độ dốc $(e^2 - 1)/2 \approx 3.195$, còn dây cung từ 1 tới 2 có độ dốc $e^2 - e \approx 4.671$. Cả ba nằm giữa $f'(0) = 1$ và $f'(2) \approx 7.389$, theo đúng thứ tự từ trái sang phải. Bài tập 3.1 của sách phát biểu điều này cho mọi hàm lồi một biến.
+Hiện tượng "độ dốc dây cung tăng dần" trở nên rất sáng rõ khi kiểm tra bằng số cụ thể: Với $f(x) = e^x$ và ba điểm $0 < 1 < 2$, dây cung nối từ 0 tới 1 có độ dốc $e - 1 \approx 1.718$, dây cung từ 0 tới 2 có độ dốc $(e^2 - 1)/2 \approx 3.195$, còn dây cung từ 1 tới 2 có độ dốc $e^2 - e \approx 4.671$. Cả ba giá trị này đều nằm giữa $f'(0) = 1$ và $f'(2) \approx 7.389$, xếp theo đúng thứ tự tăng dần từ trái sang phải. Tính chất đơn điệu của độ dốc dây cung là đặc trưng phổ quát cho mọi hàm lồi một biến.
 
 **Tiếp tuyến nằm dưới suy ra lồi.** Lấy $z = \theta x + (1 - \theta) y$ và áp dụng giả thiết tại $z$ hai lần:
 
@@ -125,7 +128,7 @@ Hai hệ quả của hình ảnh này sẽ theo bạn suốt môn học.
 - **Hướng giảm.** Đi từ $x$ theo hướng $\Delta x$ chỉ có thể làm $f$ giảm nếu $\nabla f(x)^T \Delta x < 0$, tức $\Delta x$ tạo góc nhọn với $-\nabla f(x)$. Lập luận này là nền tảng để định nghĩa hướng giảm của các phương pháp tối ưu không ràng buộc. Phương pháp gradient chọn chính $\Delta x = -\nabla f(x)$, hướng mà theo xấp xỉ bậc nhất làm $f$ giảm nhanh nhất trong các hướng có cùng độ dài.
 - **Thu hẹp vùng chứa nghiệm.** Nếu nghiệm nằm trong một vùng đã biết, mỗi gradient cắt vùng đó làm đôi và giữ lại một nửa. Lặp lại, vùng chứa nghiệm co dần. Đây là ý tưởng của các phương pháp mặt phẳng cắt.
 
-Trong mô phỏng, hàm $-\exp(-x_1^2 - 2x_2^2)$ không lồi, vậy mà phép loại bỏ vẫn luôn đúng với nó. Điều phép loại bỏ thật sự cần chỉ là mọi tập mức dưới đều lồi. Những hàm như vậy gọi là **tựa lồi**, và §3.4.3 của sách chứng minh rằng một hàm khả vi tựa lồi khi và chỉ khi từ $f(y) \le f(x)$ suy ra $\nabla f(x)^T (y - x) \le 0$. Điều kiện bậc nhất của hàm lồi mạnh hơn hẳn: Nó không chỉ cho biết điểm tốt hơn nằm ở phía nào, mà còn cho biết $f(y)$ lớn hơn $f(x)$ ít nhất bao nhiêu. Cũng vì yếu hơn nên với hàm tựa lồi, gradient bằng 0 không còn bảo đảm cực tiểu toàn cục. Hàm $x^3$ là một ví dụ, vì nó đơn điệu nên tựa lồi, nhưng đạo hàm của nó bằng 0 tại gốc.
+Trong mô phỏng, hàm $-\exp(-x_1^2 - 2x_2^2)$ không phải hàm lồi, vậy mà phép loại bỏ nửa không gian vẫn luôn nghiệm đúng. Điều mà phép loại bỏ thật sự đòi hỏi chỉ là tính lồi của mọi tập mức dưới. Những hàm số có tính chất này được gọi là hàm **tựa lồi**. Có thể chứng minh được rằng một hàm khả vi là tựa lồi khi và chỉ khi hệ thức $f(y) \le f(x)$ kéo theo $\nabla f(x)^T (y - x) \le 0$. Điều kiện bậc nhất của hàm lồi mạnh hơn hẳn: Biểu thức không chỉ cho biết điểm tốt hơn nằm ở phía nào, mà còn định lượng được $f(y)$ lớn hơn $f(x)$ ít nhất bao nhiêu. Cũng vì yếu hơn nên với hàm tựa lồi, gradient triệt tiêu không còn bảo đảm là điểm cực tiểu toàn cục. Chẳng hạn hàm $x^3$ là hàm đơn điệu nên tựa lồi trên $\mathbb{R}$, nhưng đạo hàm triệt tiêu tại gốc không tạo nên cực tiểu.
 
 ## 6. Gradient của hàm lồi là đơn điệu
 
@@ -141,7 +144,7 @@ $$
 \big(\nabla f(y) - \nabla f(x)\big)^T (y - x) \ge 0 .
 $$
 
-Khi $n = 1$, bất đẳng thức này nói $f'$ là hàm không giảm, điều quen thuộc với hàm lồi một biến. Khi $n \ge 2$, nó nói rằng khi di chuyển từ $x$ tới $y$, thành phần của gradient theo hướng di chuyển không giảm. Bất đẳng thức này phát biểu lại hình ảnh "đi dọc một đường thẳng, độ dốc tăng dần" của hàm hạn chế $g(t)$, mà không cần nhắc tới đường thẳng nào. Một ánh xạ $\psi$ thỏa $(\psi(y) - \psi(x))^T (y - x) \ge 0$ với mọi $x, y$ được gọi là **đơn điệu** (Bài tập 3.11).
+Khi $n = 1$, bất đẳng thức này nói $f'$ là hàm không giảm, điều quen thuộc với hàm lồi một biến. Khi $n \ge 2$, nó nói rằng khi di chuyển từ $x$ tới $y$, thành phần của gradient theo hướng di chuyển không giảm. Bất đẳng thức này phát biểu lại hình ảnh "đi dọc một đường thẳng, độ dốc tăng dần" của hàm hạn chế $g(t)$, mà không cần nhắc tới đường thẳng nào. Một ánh xạ $\psi$ thỏa mãn $(\psi(y) - \psi(x))^T (y - x) \ge 0$ với mọi $x, y$ được gọi là ánh xạ **đơn điệu** trong giải tích phi tuyến.
 
 Chiều ngược lại không đúng khi $n \ge 2$: Không phải ánh xạ đơn điệu nào cũng là gradient của một hàm. Phép quay $\psi(x) = (-x_2, x_1)$ thỏa $(\psi(y) - \psi(x))^T (y - x) = 0$ với mọi $x, y$, nên đơn điệu. Nhưng nếu $\psi = \nabla f$ thì ma trận Jacobian của $\psi$ phải là Hessian của $f$, tức đối xứng, trong khi Jacobian của phép quay là $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$.
 
@@ -149,7 +152,7 @@ Chiều ngược lại không đúng khi $n \ge 2$: Không phải ánh xạ đơ
 
 **Lồi nghiêm ngặt.** Hàm khả vi $f$ lồi nghiêm ngặt khi và chỉ khi $\operatorname{dom} f$ lồi và $f(y) > f(x) + \nabla f(x)^T (y - x)$ với mọi $x \ne y$. Tiếp tuyến khi đó chỉ chạm đồ thị tại đúng một điểm. Hệ quả: Một hàm lồi nghiêm ngặt có **nhiều nhất một** điểm cực tiểu, vì tại điểm cực tiểu $x^\star$ gradient bằng 0, và bất đẳng thức chặt cho $f(y) > f(x^\star)$ với mọi $y \ne x^\star$. Nhưng "nhiều nhất một" khác với "có đúng một". Hàm $e^x$ lồi nghiêm ngặt, có cận dưới đúng là 0, vậy mà không đạt được cận đó ở đâu cả, vì đạo hàm $e^x$ luôn dương.
 
-**Hàm lõm.** Mọi thứ đảo chiều: $f$ lõm khi và chỉ khi $f(y) \le f(x) + \nabla f(x)^T (y - x)$, tức tiếp tuyến nằm trên đồ thị. Bất đẳng thức $\log y \le y - 1$ ở mục 3 là một ví dụ.
+**Hàm lõm.** Mọi chiều bất đẳng thức đều đảo ngược: Hàm số $f$ lõm khi và chỉ khi $f(y) \le f(x) + \nabla f(x)^T (y - x)$, tức tiếp tuyến nằm trên toàn bộ đồ thị. Bất đẳng thức $\log y \le y - 1$ ở mục 3 là một ví dụ tiêu biểu.
 
 **Khi không có đạo hàm.** Hàm $|x|$ lồi nhưng không khả vi tại 0, nên ở đó không có tiếp tuyến. Thay vào đó, mọi đường thẳng qua gốc với độ dốc $g \in [-1, 1]$ đều nằm dưới đồ thị, vì $|y| \ge g y$ với mọi $y$. Một số $g$ như vậy gọi là một **dưới đạo hàm** (subgradient) của $f$ tại 0. Tổng quát, $g$ là dưới đạo hàm của $f$ tại $x$ nếu
 
@@ -157,7 +160,7 @@ $$
 f(y) \ge f(x) + g^T (y - x) \quad \text{với mọi } y,
 $$
 
-tức là điều kiện bậc nhất với $g$ thay cho gradient. Tại điểm khả vi, dưới đạo hàm duy nhất là gradient. Tại điểm gãy, có cả một tập dưới đạo hàm. Trong mô phỏng ở mục 1, chọn hàm $|x|$ và đặt $x_0 = 0$ để kéo thanh trượt độ dốc và thấy điều này. Khái niệm này không nằm trong §3.1.3 của sách, nhưng bạn sẽ cần nó cho những hàm quen thuộc trong học máy như ReLU $\max\{0, x\}$, hàm mất mát hinge $\max\{0, 1 - z\}$ và chuẩn $\ell_1$ trong hồi quy Lasso. Điều kiện "gradient bằng 0" khi đó được thay bằng "0 là một dưới đạo hàm". Với $|x|$, điều kiện này đúng tại gốc vì $0 \in [-1, 1]$, và gốc đúng là điểm cực tiểu.
+tức là điều kiện bậc nhất với $g$ thay cho gradient. Tại điểm khả vi, dưới đạo hàm duy nhất là gradient. Tại điểm gãy, có cả một tập dưới đạo hàm. Trong mô phỏng ở mục 1, chọn hàm $|x|$ và đặt $x_0 = 0$ để kéo thanh trượt độ dốc và thấy điều này. Khái niệm mở rộng này đặc biệt cần thiết cho những hàm số xuất hiện thường xuyên trong học máy như hàm kích hoạt ReLU $\max\{0, x\}$, hàm mất mát hinge $\max\{0, 1 - z\}$ trong máy vector hỗ trợ (SVM) và chuẩn $\ell_1$ trong hồi quy Lasso. Điều kiện tối ưu "gradient triệt tiêu" $\nabla f(x) = 0$ khi đó được thay thế bằng "vector không là một dưới đạo hàm", tức $0 \in \partial f(x)$. Với hàm $|x|$, điều kiện này nghiệm đúng tại gốc vì $0 \in [-1, 1]$, và gốc tọa độ chính là điểm cực tiểu toàn cục.
 
 ## 8. Những câu hỏi để đào sâu
 
@@ -187,7 +190,7 @@ Bài toán không có nghiệm, theo nghĩa cực tiểu không đạt được 
 | 0.75 | −0.5 | 0.25 | −2 |
 | 1.2 | −1.4 | 1.96 | −3.8 |
 
-Lần nào mô hình tuyến tính cũng hứa nhiều hơn những gì thật sự xảy ra, và điều này không phải ngẫu nhiên. Điều kiện bậc nhất nói đúng rằng $f(y) \ge f(x) + \nabla f(x)^T (y - x)$, tức với hàm lồi, mức giảm thật không bao giờ vượt mức giảm mà xấp xỉ bậc nhất dự đoán. Với bước quá dài như $\eta = 1.2$, hàm còn tăng từ 1 lên 1.96. Vì thế các thuật toán thực tế phải kiểm soát độ dài bước. Phép tìm kiếm quay lui ở §9.2 của sách chỉ chấp nhận bước $t$ khi mức giảm thật đạt ít nhất một tỉ lệ $\alpha < 0.5$ của mức giảm dự đoán, tức $f(x + t\Delta x) \le f(x) + \alpha t \nabla f(x)^T \Delta x$.
+Lần nào mô hình tuyến tính cũng hứa nhiều hơn những gì thật sự xảy ra, và điều này không phải ngẫu nhiên. Điều kiện bậc nhất nói đúng rằng $f(y) \ge f(x) + \nabla f(x)^T (y - x)$, tức với hàm lồi, mức giảm thật không bao giờ vượt mức giảm mà xấp xỉ bậc nhất dự đoán. Với bước quá dài như $\eta = 1.2$, hàm còn tăng từ 1 lên 1.96. Vì thế các thuật toán thực tế phải kiểm soát độ dài bước. Phép tìm kiếm bước quay lui (backtracking line search) trong các thuật toán tối ưu thực tế chỉ chấp nhận độ dài bước $t$ khi mức giảm thực tế đạt ít nhất một tỷ lệ $\alpha \in (0, 0.5)$ của mức giảm dự đoán theo xấp xỉ tuyến tính, cụ thể là $f(x + t\Delta x) \le f(x) + \alpha t \nabla f(x)^T \Delta x$.
 
 </details>
 
@@ -202,7 +205,7 @@ Có thể, khi hàm affine trên một đoạn chứa $x$. Với $f(x) = |x|$ v�
 ## 9. Bài tập tự luyện
 
 ::: exercise 1. Bất đẳng thức từ tiếp tuyến
-Dùng điều kiện bậc nhất cho một hàm thích hợp tại một điểm thích hợp để chứng minh: (A) $e^y \ge e\,y$ với mọi $y \in \mathbb{R}$, và (b) $y \log y \ge y - 1$ với mọi $y > 0$. Dấu bằng xảy ra khi nào?
+Dùng điều kiện bậc nhất cho một hàm thích hợp tại một điểm thích hợp để chứng minh: (a) $e^y \ge e\,y$ với mọi $y \in \mathbb{R}$, và (b) $y \log y \ge y - 1$ với mọi $y > 0$. Dấu bằng xảy ra khi nào?
 :::
 
 ::: solution
@@ -243,7 +246,6 @@ Với hàm khả vi, $f$ lồi khi và chỉ khi miền xác định lồi và m
 
 Nhiều bất đẳng thức cổ điển chỉ là tiếp tuyến của một hàm lồi hay lõm, và độ phân kỳ KL chính là khoảng cách từ entropy âm tới siêu phẳng tiếp xúc của nó. Gradient của hàm lồi là ánh xạ đơn điệu. Lồi nghiêm ngặt cho bất đẳng thức chặt và nhiều nhất một điểm cực tiểu. Tại điểm gãy, dưới đạo hàm thay vai trò của gradient.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §3.1.3 (tr. 69–70) và Hình 3.2. Ghi chú 3.1 ở §3.1.4 (tr. 71). Định nghĩa (3.17) của độ phân kỳ KL ở §3.2.6 (tr. 90). Điều kiện bậc nhất của hàm tựa lồi ở §3.4.3 (tr. 99–100), hướng giảm và phép tìm kiếm quay lui ở §9.2 (tr. 463–465). Bài tập 3.1, 3.11 và 3.13.
-- Ví dụ cận dưới trên hình vuông, các ví dụ $x^2 - x^4/4$, giếng đôi, phép quay, hàm mất mát $\varepsilon$-insensitive, bảng bước gradient, mô phỏng nhát cắt gradient, phần dưới đạo hàm, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

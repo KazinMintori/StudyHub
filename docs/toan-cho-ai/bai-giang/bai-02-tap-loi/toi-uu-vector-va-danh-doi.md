@@ -33,7 +33,7 @@ $$
 
 ## 2. Điểm tối ưu và điểm Pareto
 
-Nếu $\mathcal{O}$ có một [phần tử nhỏ nhất](../bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md), tức một giá trị $f_0(x^\star)$ tốt bằng hoặc tốt hơn mọi giá trị đạt được, thì $x^\star$ là **tối ưu**. Về hình học, điều đó có nghĩa là $\mathcal{O} \subseteq f_0(x^\star) + K$: Mọi giá trị đạt được đều nằm trong vùng "kém hơn hoặc bằng" của $f_0(x^\star)$. Trường hợp này hiếm, nhưng có một ví dụ nổi tiếng trong lý thuyết ước lượng thống kê. Trong mô hình đo $y = Ax + v$ với nhiễu có trung bình 0 và hiệp phương sai $I$, mọi bộ ước lượng tuyến tính không chệch $\hat x = Fy$ với $FA = I$ có ma trận hiệp phương sai sai số $FF^T$. So sánh các ma trận này theo nón PSD, bộ ước lượng bình phương tối thiểu $F^\star = (A^TA)^{-1}A^T$ là tối ưu: $FF^T \succeq F^\star F^{\star T}$ với mọi $F$ khả thi. Đó là định lý Gauss–Markov.
+Nếu $\mathcal{O}$ có một [phần tử nhỏ nhất](../bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md), tức một giá trị $f_0(x^\star)$ tốt bằng hoặc tốt hơn mọi giá trị đạt được, thì $x^\star$ là **tối ưu**. Về hình học, điều đó có nghĩa là $\mathcal{O} \subseteq f_0(x^\star) + K$: Mọi giá trị đạt được đều nằm trong vùng "kém hơn hoặc bằng" của $f_0(x^\star)$. Trường hợp này hiếm, nhưng có một ví dụ nổi tiếng trong lý thuyết ước lượng thống kê. Trong mô hình đo $y = Ax + v$ với nhiễu có trung bình 0 và hiệp phương sai $I$, mọi bộ ước lượng tuyến tính không chệch $\hat x = Fy$ với $FA = I$ có ma trận hiệp phương sai sai số $FF^T$. So sánh các ma trận này theo nón PSD, bộ ước lượng bình phương tối thiểu $F^\star = (A^TA)^{-1}A^T$ là tối ưu: Bất đẳng thức ma trận $FF^T \succeq F^\star F^{\star T}$ thỏa mãn với mọi $F$ khả thi. Đó là định lý Gauss–Markov.
 
 Thường thì $\mathcal{O}$ không có phần tử nhỏ nhất, và ta dùng khái niệm yếu hơn. Một điểm khả thi $x$ là **tối ưu Pareto** nếu $f_0(x)$ là một phần tử tối thiểu của $\mathcal{O}$: Mọi điểm khả thi $y$ tốt bằng hoặc tốt hơn $x$ đều có cùng giá trị mục tiêu với $x$. Nói cách khác, không thể cải thiện một mặt mà không làm xấu đi một mặt khác. Tập các giá trị Pareto nằm trên biên của $\mathcal{O}$, ở phía "tốt" của nó.
 
@@ -55,7 +55,13 @@ Khi $K = \mathbb{R}^q_+$, ta có bài toán **đa mục tiêu**, với $q$ mục
 
 Cách đọc một đường cong đánh đổi hai mục tiêu (đường biên Pareto): Hai đầu mút cho giá trị nhỏ nhất có thể của từng mục tiêu khi bỏ qua mục tiêu kia. Giao với một đường thẳng đứng $F_1 = \alpha$ cho biết $F_2$ phải lớn đến đâu để đạt $F_1 \le \alpha$. Độ dốc tại một điểm cho tỉ lệ đánh đổi cục bộ. Một điểm có độ cong lớn, nơi muốn giảm thêm một chút ở mục tiêu này phải tăng rất nhiều ở mục tiêu kia, là **khuỷu** của đường cong, và trong nhiều ứng dụng đó là một thỏa hiệp tốt.
 
-Khi vô hướng hóa bằng tổng có trọng số $\sum_i \lambda_iF_i$, tỉ số $\lambda_i/\lambda_j$ đóng vai một **tỉ giá** giữa hai mục tiêu: Giảm $F_i$ một lượng $\alpha$ được xem ngang bằng tăng $F_j$ một lượng $(\lambda_i/\lambda_j)\alpha$. Tăng trọng số của một mục tiêu sẽ cho một điểm Pareto mới tốt hơn về mục tiêu đó. Tại những chỗ đường đánh đổi trơn, $\lambda$ chính là pháp tuyến hướng vào trong của nó. Ý tưởng cực tiểu tổng có trọng số rồi điều chỉnh các trọng số chính là hạt nhân cốt lõi dẫn vào lý thuyết đối ngẫu (Duality), đề tài trọng tâm của Lecture 03.
+Khi vô hướng hóa bằng tổng có trọng số:
+
+$$
+\sum_{i=1}^q \lambda_i F_i(x) = \lambda_1 F_1(x) + \cdots + \lambda_q F_q(x) \quad (\lambda_i \ge 0),
+$$
+
+tỉ số $\lambda_i/\lambda_j$ đóng vai một **tỉ giá** giữa hai mục tiêu: Giảm $F_i$ một lượng $\alpha$ được xem ngang bằng tăng $F_j$ một lượng $(\lambda_i/\lambda_j)\alpha$. Tăng trọng số của một mục tiêu sẽ cho một điểm Pareto mới tốt hơn về mục tiêu đó. Tại những chỗ đường đánh đổi trơn, $\lambda$ chính là pháp tuyến hướng vào trong của nó. Ý tưởng cực tiểu tổng có trọng số rồi điều chỉnh các trọng số chính là hạt nhân cốt lõi dẫn vào lý thuyết đối ngẫu (Duality), đề tài trọng tâm của Lecture 03.
 
 ## 5. Bình phương tối thiểu có điều chuẩn
 
@@ -65,9 +71,9 @@ $$
 x(\mu) = (A^TA + \mu I)^{-1}A^Tb .
 $$
 
-Đây là **điều chuẩn Tikhonov**, mà học máy gọi là **ridge regression**. Ma trận $A^TA + \mu I$ dương xác định với mọi $\mu > 0$, nên nghiệm luôn tồn tại và duy nhất, kể cả khi $A$ có các cột phụ thuộc. Khi $\mu$ chạy từ 0 tới $\infty$, $x(\mu)$ vạch ra toàn bộ đường đánh đổi, trừ hai đầu mút: $\mu \to 0$ cho nghiệm bình phương tối thiểu chuẩn nhỏ nhất $A^\dagger b$, còn $\mu \to \infty$ cho $x = 0$.
+Đây là **điều chuẩn Tikhonov**, mà học máy gọi là **ridge regression**. Ma trận $A^TA + \mu I$ dương xác định với mọi $\mu > 0$, nên nghiệm luôn tồn tại và duy nhất, kể cả khi $A$ có các cột phụ thuộc. Khi $\mu$ chạy từ 0 tới $\infty$, $x(\mu)$ vạch ra toàn bộ đường đánh đổi, trừ hai đầu mút: Giới hạn $\mu \to 0$ cho nghiệm bình phương tối thiểu chuẩn nhỏ nhất $A^\dagger b$, còn $\mu \to \infty$ cho $x = 0$.
 
-Ví dụ tự đặt với $A$ có các hàng $(1, 2)$, $(2, 1)$, $(1, 1)$, $(3, 1)$ và $b = (3, 1, 2, 4)$. Nghiệm bình phương tối thiểu là $x \approx (0.707,\ 1.049)$ với $F_1 \approx 2.93$ và $F_2 \approx 1.60$. Với $\mu = 1$, nghiệm là $(0.75,\ 0.875)$: $F_1$ tăng nhẹ lên khoảng 3.05, đổi lại $F_2$ giảm còn khoảng 1.33. Với $\mu = 10$, nghiệm $(0.607,\ 0.479)$ có $F_2 \approx 0.60$ nhưng $F_1 \approx 6.27$. Đoạn đầu của đường đánh đổi khá phẳng: Giảm $F_2$ từ 1.60 xuống 1.33 chỉ tốn khoảng 0.12 đơn vị $F_1$. Càng về sau, mỗi đơn vị $F_2$ giảm thêm càng đắt.
+Xét ví dụ với $A$ có các hàng $(1, 2)$, $(2, 1)$, $(1, 1)$, $(3, 1)$ và $b = (3, 1, 2, 4)$. Nghiệm bình phương tối thiểu là $x \approx (0.707,\ 1.049)$ với $F_1 \approx 2.93$ và $F_2 \approx 1.60$. Với $\mu = 1$, nghiệm là $(0.75,\ 0.875)$: Sai số $F_1$ tăng nhẹ lên khoảng 3.05, đổi lại $F_2$ giảm còn khoảng 1.33. Với $\mu = 10$, nghiệm $(0.607,\ 0.479)$ có $F_2 \approx 0.60$ nhưng $F_1 \approx 6.27$. Đoạn đầu của đường đánh đổi khá phẳng: Giảm $F_2$ từ 1.60 xuống 1.33 chỉ tốn khoảng 0.12 đơn vị $F_1$. Càng về sau, mỗi đơn vị $F_2$ giảm thêm càng đắt.
 
 Thay $\|x\|_2^2$ bằng chuẩn $\ell_1$, ta có **lasso**, cực tiểu $\|Ax - b\|_2^2 + \mu\|x\|_1$. Chuẩn $\ell_1$ được sử dụng rộng rãi như một kỹ thuật đắc lực để tìm nghiệm thưa (sparse solution), vì số thành phần khác 0 của $x$ không lồi, như chủ đề [hàm tựa lồi](./toi-uu-tua-loi.md) đã chỉ ra, còn $\|x\|_1$ là xấp xỉ lồi hợp lý của nó. Với dữ liệu trên, lasso cho $x_2$ bằng **đúng 0** khi $\mu$ từ $\tfrac{86}{7} \approx 12.29$ trở lên, và cả $x$ bằng 0 khi $\mu \ge 38$. Ridge thì làm các thành phần co dần nhưng không bao giờ bằng đúng 0. Điều đáng chú ý là trên đoạn đầu của đường lasso, $x_1$ còn tăng lên trong khi $x_2$ giảm: Khi một đặc trưng bị phạt và co lại, đặc trưng tương quan với nó gánh thêm phần việc.
 
@@ -159,7 +165,6 @@ Tối ưu vector so sánh các giá trị mục tiêu theo một nón, và vì v
 
 Vô hướng hóa với trọng số dương ngặt theo nón đối ngẫu luôn cho điểm Pareto, và về hình học tương ứng với một siêu phẳng tựa của tập giá trị đạt được. Với bài toán lồi, quét các trọng số cho hầu hết, theo nghĩa chính xác ở mục 3, mọi điểm Pareto. Bình phương tối thiểu có điều chuẩn là ví dụ trung tâm: Ridge cho đường đánh đổi với nghiệm co dần về 0, lasso cho nghiệm có thành phần bằng đúng 0. Danh mục đầu tư Markowitz là một bài toán hai mục tiêu giữa lợi suất và rủi ro, với mức ngại rủi ro đóng vai trọng số.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.7 (tr. 174–187) về tối ưu vector, điểm tối ưu, Ví dụ 4.9 về ước lượng không chệch tốt nhất, điểm Pareto, vô hướng hóa, Ví dụ 4.10, bài toán đa mục tiêu, phân tích đánh đổi, bình phương tối thiểu có điều chuẩn và đường đánh đổi lợi suất và rủi ro. §6.3 (tr. 305–310) về điều chuẩn Tikhonov và điều chuẩn chuẩn $\ell_1$.
-- Dữ liệu ridge và lasso, mô phỏng, ví dụ hai tài sản, ví dụ một biến, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình, đường lasso được đối chiếu với một phương pháp tối ưu trực tiếp.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

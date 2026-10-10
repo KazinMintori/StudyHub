@@ -30,7 +30,7 @@ $$
 
 theo biến $z$, không còn ràng buộc đẳng thức nào và ít hơn $\operatorname{rank} A$ biến. Từ nghiệm $z^\star$ ta lấy lại $x^\star = Fz^\star + x_0$. Ngược lại, mọi nghiệm $x^\star$ của bài toán gốc đều khả thi, nên viết được thành $Fz + x_0$ với một $z$ nào đó, và $z$ ấy là nghiệm của bài toán mới.
 
-Tính lồi được giữ nguyên, vì hợp của một hàm lồi với một ánh xạ affine là hàm lồi. Đây là lý do sách nói rằng về nguyên tắc, ta có thể chỉ cần nghiên cứu những bài toán lồi không có ràng buộc đẳng thức.
+Tính lồi được giữ nguyên, vì hợp của một hàm lồi với một ánh xạ affine là hàm lồi. Về nguyên tắc lý thuyết, ta hoàn toàn có thể quy việc nghiên cứu các bài toán lồi có ràng buộc đẳng thức về bài toán không có ràng buộc đẳng thức.
 
 ## 2. Ví dụ: Kết hợp ba phép đo
 
@@ -62,7 +62,7 @@ Mô phỏng còn cho thấy một điều sẽ trở thành trung tâm của Lec
 
 ## 3. Khi nào không nên khử
 
-Nếu khử ràng buộc luôn được, vì sao người ta vẫn giữ chúng? Sách trả lời: Phép khử có thể làm bài toán khó hiểu hơn và phá hỏng cấu trúc mà thuật toán cần, đặc biệt là tính thưa khi số biến rất lớn.
+Nếu khử ràng buộc luôn khả thi về mặt lý thuyết, vì sao trong thực hành người ta vẫn giữ chúng? Câu trả lời nằm ở cấu trúc tính toán: Phép khử có thể làm bài toán mất đi trực giác vật lý ban đầu và phá hỏng cấu trúc đặc thù mà thuật toán cần, đặc biệt là tính thưa khi số biến rất lớn.
 
 Ví dụ trên cho thấy điều đó ở quy mô nhỏ. Hessian của hàm mục tiêu gốc theo $x$ là ma trận đường chéo $\operatorname{diag}(2, 4, 6)$, nhưng Hessian của $g$ theo $z$ là
 
@@ -84,7 +84,7 @@ $$
 \end{aligned}
 $$
 
-Bài toán có thêm biến và thêm ràng buộc, nhưng hàm mục tiêu và các ràng buộc bất đẳng thức giờ đây độc lập với nhau, vì chúng phụ thuộc vào những biến khác nhau. Các ràng buộc mới tuyến tính, nên tính lồi được giữ nguyên. Chẳng hạn bài toán cực tiểu $\|Ax - b\|_1$ có thể viết thành cực tiểu $\|y\|_1$ với $y = Ax - b$: Phần không trơn của bài toán, chuẩn $\ell_1$, giờ chỉ tác động lên một biến riêng, còn dữ liệu $A, b$ nằm hết trong một ràng buộc tuyến tính. Mục 5.7.1 của sách cho thấy cách viết này có thể làm hàm đối ngẫu, đối tượng chính của Lecture 03, dễ tính hơn hẳn.
+Bài toán có thêm biến và thêm ràng buộc, nhưng hàm mục tiêu và các ràng buộc bất đẳng thức giờ đây độc lập với nhau, vì chúng phụ thuộc vào những biến khác nhau. Các ràng buộc mới tuyến tính, nên tính lồi được giữ nguyên. Chẳng hạn bài toán cực tiểu $\|Ax - b\|_1$ có thể viết thành cực tiểu $\|y\|_1$ với $y = Ax - b$: Phần không trơn của bài toán, chuẩn $\ell_1$, giờ chỉ tác động lên một biến riêng, còn dữ liệu $A, b$ nằm hết trong một ràng buộc tuyến tính. Cách viết này giúp việc thiết lập và tính toán hàm đối ngẫu Lagrange (nội dung trọng tâm của Lecture 03) trở nên thuận tiện và trực tiếp hơn hẳn.
 
 ## 5. Tối ưu theo từng nhóm biến
 
@@ -96,7 +96,7 @@ $$
 
 Nói cách khác, có thể cực tiểu trước theo một nhóm biến, được một hàm của nhóm còn lại, rồi mới cực tiểu hàm đó. Khi các ràng buộc tách riêng theo từng nhóm, phép biến đổi này cho một bài toán tương đương ít biến hơn. Nó đặc biệt có giá trị khi bước cực tiểu theo $y$ có công thức đóng.
 
-**Hàm toàn phương và phần bù Schur.** Ví dụ 4.4 của sách xét một hàm toàn phương lồi chặt, với ràng buộc chỉ đặt lên $x_1$. Lấy một ví dụ số nhỏ:
+**Hàm toàn phương và phần bù Schur.** Xét một hàm toàn phương lồi chặt, với ràng buộc chỉ đặt lên $x_1$. Lấy một ví dụ số cụ thể:
 
 $$
 f(x_1, x_2) = 3x_1^2 + 2x_1x_2 + 2x_2^2 .
@@ -112,11 +112,11 @@ $$
 
 tức bài toán hồi quy **không có hệ số chặn** trên dữ liệu đã trừ trung bình. Với dữ liệu tự đặt $u = (1, 2, 4, 7)$ và $y = (3, 4, 9, 14)$, ta có $\bar u = 3.5$, $\bar y = 7.5$, và $w^\star = \tfrac{40}{21} \approx 1.905$, rồi $c^\star = 7.5 - w^\star \cdot 3.5 = \tfrac56$. Lời giải trực tiếp bằng bình phương tối thiểu hai biến cho đúng kết quả ấy. Đây là lý do việc chuẩn hóa dữ liệu về trung bình 0 trước khi huấn luyện không làm mất gì: Hệ số chặn đã được tối ưu sẵn.
 
-Về tính lồi, sách khẳng định: Cực tiểu một hàm lồi đồng thời theo $(x, y)$ trên một nhóm biến cho một hàm lồi theo nhóm còn lại. Đó là phép toán [cực tiểu hóa theo một phần biến](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) ở Lecture 01, nay được dùng như một phép biến đổi bài toán.
+Về tính lồi, ta có định lý cơ bản: Cực tiểu một hàm lồi đồng thời theo $(x, y)$ trên một nhóm biến cho một hàm lồi theo nhóm còn lại. Đó chính là phép toán [cực tiểu hóa theo một phần biến](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) ở Lecture 01, nay được dùng như một phép biến đổi bài toán.
 
 ## 6. Phép biến đổi nào giữ tính lồi
 
-Mục 4.2.4 của sách điểm lại các phép biến đổi của chủ đề trước và chủ đề này, và xét xem phép nào giữ được dạng chuẩn lồi.
+Bây giờ, ta hãy tổng hợp lại các phép biến đổi của chủ đề trước và chủ đề này, đồng thời phân tích xem phép biến đổi nào giữ được dạng chuẩn lồi.
 
 | Phép biến đổi | Giữ tính lồi khi nào | Lý do |
 | --- | --- | --- |
@@ -207,7 +207,6 @@ Ràng buộc $Ax = b$ có thể khử bằng cách viết mọi nghiệm thành 
 
 Cực tiểu theo từng nhóm biến cho một bài toán tương đương ít biến hơn, và giữ tính lồi khi hàm mục tiêu lồi đồng thời. Với hàm toàn phương, bước cực tiểu cho phần bù Schur. Với hồi quy tuyến tính, nó cho thấy hệ số chặn tối ưu chính là phép trừ trung bình của dữ liệu.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.1.3 (tr. 132–134) về khử và thêm ràng buộc đẳng thức, tối ưu theo một phần biến, Ví dụ 4.4. §4.2.4 (tr. 142–144) về những phép biến đổi giữ tính lồi. Phần bù Schur ở §A.5.5.
-- Ví dụ ba cảm biến, mô phỏng, ví dụ về Hessian dày sau khi khử, ví dụ hệ số chặn và dữ liệu, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

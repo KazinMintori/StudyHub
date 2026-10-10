@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-08-du-lieu-thoi-gian
 section: lecture
 title: "Xử lý dữ liệu thời gian"
-prerequisites: ["chi-muc","gia-tri-thieu","ky-vong"]
+prerequisites: ["chi-muc", "gia-tri-thieu"]
 lessonStatus: ready
 description: "Làm chủ chuỗi thời gian trong pandas: DatetimeIndex, cắt lát chuỗi, lấy mẫu lại resample, cửa sổ trượt rolling và so sánh cùng kỳ YoY vs MoM."
 ---

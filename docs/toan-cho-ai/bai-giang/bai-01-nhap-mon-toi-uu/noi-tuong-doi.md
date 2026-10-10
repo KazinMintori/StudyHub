@@ -21,7 +21,7 @@ Bạn cần nắm bao affine từ chủ đề trước và biết khái niệm q
 
 Một đoạn thẳng trong $\mathbb{R}^3$ có chiều affine 1, vì bao affine của nó là một đường thẳng. Một tam giác đặc trong $\mathbb{R}^3$ có chiều affine 2. Tập các phân phối xác suất trên ba kết quả, tức các vector $p \in \mathbb{R}^3$ với $p_i \ge 0$ và $p_1 + p_2 + p_3 = 1$, có chiều affine 2, vì nó nằm trọn trong mặt phẳng $p_1 + p_2 + p_3 = 1$ và không nằm trong đường thẳng nào.
 
-Chiều affine không phải lúc nào cũng khớp với các khái niệm số chiều khác. Sách lấy ví dụ đường tròn đơn vị $\{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$. Theo hầu hết các định nghĩa, đường tròn là đối tượng một chiều: Muốn chỉ ra một điểm trên nó, chỉ cần một con số là góc. Nhưng bao affine của đường tròn là cả mặt phẳng $\mathbb{R}^2$, nên chiều affine của nó bằng 2. Sự lệch nhau này có lý do. Chiều affine đo xem tập "phẳng" đến mức nào, tức là nó cần bao nhiêu chiều không gian phẳng để chứa được, chứ không đo độ "dày" hay số tham số cần để mô tả tập. Đường tròn cong, nên không có đường thẳng nào chứa nổi nó.
+Chiều affine không phải lúc nào cũng trùng khớp với các khái niệm số chiều topo thông thường. Ta xét ví dụ đường tròn đơn vị $\{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$. Theo trực giác vi phân và topo, đường tròn là đối tượng một chiều: Muốn chỉ ra một điểm trên nó, chỉ cần một tham số góc $\varphi$. Nhưng bao affine của đường tròn là cả mặt phẳng $\mathbb{R}^2$, nên chiều affine của nó bằng 2. Sự khác biệt này hoàn toàn có lý: Chiều affine đo xem tập hợp cần một không gian phẳng bao nhiêu chiều để chứa trọn nó, chứ không đo số bậc tự do cục bộ. Đường tròn bị cong, nên không có đường thẳng một chiều nào chứa nổi nó.
 
 ## 2. Điểm trong và vấn đề của những tập mỏng
 
@@ -42,11 +42,11 @@ Mô phỏng dưới đây cho thấy đúng hiện tượng ấy. Hình tròn qu
 
 So sánh với định nghĩa điểm trong, chỉ có một chỗ khác: Quả cầu $B(x, r)$ được thay bằng phần giao $B(x, r) \cap \operatorname{aff} C$. Với tờ giấy trong $\mathbb{R}^3$, phần giao này là một hình tròn nằm phẳng trên mặt giấy, và câu hỏi trở thành "có hình tròn phẳng nhỏ nào quanh $x$ nằm trọn trên tờ giấy không?". Câu hỏi này có câu trả lời khớp với trực giác.
 
-Sách lưu ý thêm rằng chuẩn dùng để định nghĩa quả cầu không quan trọng: Dùng chuẩn nào cũng cho cùng một nội tương đối. Điều này đúng vì trong $\mathbb{R}^n$ mọi chuẩn đều tương đương, nghĩa là quả cầu của chuẩn này luôn chứa một quả cầu nhỏ hơn của chuẩn kia cùng tâm.
+Ta cần lưu ý một tính chất giải tích quan trọng: Chuẩn dùng để định nghĩa quả cầu hoàn toàn không ảnh hưởng đến kết quả: Dùng bất kỳ chuẩn nào trên $\mathbb{R}^n$ cũng đều dẫn tới cùng một nội tương đối. Điều này xuất phát từ định lý tương đương chuẩn trong không gian hữu hạn chiều $\mathbb{R}^n$: Quả cầu theo chuẩn này luôn chứa một quả cầu nhỏ hơn theo chuẩn kia có cùng tâm.
 
 Từ nội tương đối ta định nghĩa **biên tương đối** là $\operatorname{cl} C \setminus \operatorname{relint} C$, trong đó $\operatorname{cl} C$ là bao đóng của $C$. Biên tương đối là "mép" của tập khi nhìn từ bên trong bao affine của nó.
 
-::: example Hình vuông trong mặt phẳng tọa độ của R³ (Ví dụ 2.2 trong sách)
+::: example Hình vuông trong mặt phẳng tọa độ của R³
 Xét hình vuông nằm phẳng trên mặt $x_3 = 0$ của không gian ba chiều,
 
 $$
@@ -91,7 +91,7 @@ Thoạt nhìn, nội tương đối giống một khái niệm kỹ thuật dàn
 
 Chỗ quan trọng nhất là **điều kiện Slater** ở Lecture 03, điều kiện bảo đảm đối ngẫu mạnh cho bài toán lồi. Điều kiện này yêu cầu có một điểm thỏa mọi đẳng thức và thỏa **chặt** mọi bất đẳng thức, đồng thời nằm trong **nội tương đối** của miền xác định chung. Nếu ta đòi điểm đó nằm trong phần trong thông thường, thì mọi bài toán có miền xác định nằm trong một tập affine thấp chiều sẽ bị loại oan, dù chúng hoàn toàn bình thường.
 
-Chỗ thứ hai là tính liên tục của hàm lồi. Sách nêu một kết quả: Hàm lồi liên tục trên nội tương đối của miền xác định, và chỉ có thể gián đoạn trên biên tương đối. Chẳng hạn hàm nhận giá trị 0 trên khoảng mở $(0, 1)$ và giá trị 1 tại hai đầu mút của đoạn $[0, 1]$ là một hàm lồi trên $[0, 1]$, gián đoạn đúng ở hai đầu mút, tức ở biên tương đối.
+Ý nghĩa quan trọng thứ hai là tính liên tục của hàm lồi. Một kết quả kinh điển của giải tích lồi khẳng định: Mọi hàm lồi luôn liên tục trên nội tương đối của miền xác định, và chỉ có thể xảy ra hiện tượng gián đoạn tại biên tương đối. Chẳng hạn, xét hàm số nhận giá trị 0 trên khoảng mở $(0, 1)$ và nhận giá trị 1 tại hai đầu mút của đoạn $[0, 1]$. Đây là một hàm lồi trên $[0, 1]$, nhưng bị gián đoạn đúng tại hai đầu mút, tức ngay trên biên tương đối.
 
 Chỗ thứ ba là chứng minh định lý siêu phẳng tựa ở một chủ đề sau. Lập luận chia làm hai trường hợp: Tập có phần trong khác rỗng, hoặc tập nằm trọn trong một tập affine thấp chiều. Trường hợp thứ hai chính là tình huống mà phần trong thông thường không còn hữu ích.
 
@@ -134,7 +134,7 @@ Không, nếu $\operatorname{aff} C$ không đi qua gốc. Chẳng hạn với $
 ## 7. Bài tập tự luyện
 
 ::: exercise 1. Xác định nội tương đối
-Tìm chiều affine, phần trong và nội tương đối của các tập sau: (A) $\{(x_1, x_2, x_3) : x_1^2 + x_2^2 \le 1,\ x_3 = 2\}$ trong $\mathbb{R}^3$, (b) $\{x \in \mathbb{R}^3 : x \succeq 0,\ x_1 + x_2 + x_3 = 1\}$, (c) đoạn nối $(1, 1)$ và $(3, 2)$ trong $\mathbb{R}^2$.
+Tìm chiều affine, phần trong và nội tương đối của các tập sau: (a) $\{(x_1, x_2, x_3) : x_1^2 + x_2^2 \le 1,\ x_3 = 2\}$ trong $\mathbb{R}^3$, (b) $\{x \in \mathbb{R}^3 : x \succeq 0,\ x_1 + x_2 + x_3 = 1\}$, (c) đoạn nối $(1, 1)$ và $(3, 2)$ trong $\mathbb{R}^2$.
 :::
 
 ::: solution
@@ -165,8 +165,7 @@ Chiều affine của một tập là số chiều của bao affine của nó, t�
 
 Mọi tập lồi khác rỗng đều có nội tương đối khác rỗng. Nội tương đối là khái niệm được dùng trong điều kiện Slater, trong kết quả về tính liên tục của hàm lồi và trong chứng minh định lý siêu phẳng tựa. Bạn có thể xác định nội tương đối của các tập quen thuộc và giải thích vì sao một điểm của miền khả thi có ràng buộc đẳng thức không bao giờ là điểm trong theo nghĩa thông thường.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.1.3 (tr. 23), Ví dụ 2.2. Nhận xét về tính liên tục của hàm lồi trên nội tương đối ở §3.1.1 (tr. 68). Điều kiện Slater ở §5.2.3.
-- Khẳng định "mọi tập lồi khác rỗng có nội tương đối khác rỗng" là một định lý chuẩn của giải tích lồi, được phát biểu mà không chứng minh. Có thể xem R. T. Rockafellar, *Convex Analysis*, Princeton University Press, 1970, phần I.
-- Bảng so sánh, liên hệ với softmax, các câu hỏi và bài tập do người soạn bổ sung.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- R. Tyrrell Rockafellar, *Convex Analysis*, Princeton University Press.

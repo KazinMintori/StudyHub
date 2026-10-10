@@ -7,13 +7,13 @@ title: "Bài toán dạng nón và quy hoạch nửa xác định"
 description: "Bài toán lồi với bất đẳng thức suy rộng, bài toán dạng nón như một mở rộng của LP, quy hoạch nửa xác định với bất đẳng thức ma trận tuyến tính, dạng chuẩn và dạng bất đẳng thức của SDP, ghép nhiều LMI thành một khối chéo, hình học của miền khả thi qua ví dụ ma trận tương quan, và quan hệ LP ⊂ SOCP ⊂ SDP."
 ---
 
-Quy hoạch tuyến tính dùng thứ tự của từng thành phần: $Gx \preceq h$ nghĩa là mọi thành phần của $h - Gx$ không âm. [Lecture 01](../bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md) đã cho thấy thứ tự này chỉ là một trường hợp của bất đẳng thức suy rộng, sinh bởi nón không âm. Thay nón không âm bằng một nón chính quy khác, ta được những lớp bài toán mới có cùng cấu trúc với LP. Quan trọng nhất trong số đó là **quy hoạch nửa xác định** (semidefinite program, SDP), dùng nón các ma trận nửa xác định dương.
+Quy hoạch tuyến tính dùng thứ tự của từng thành phần: Điều kiện $Gx \preceq h$ nghĩa là mọi thành phần của $h - Gx$ không âm. [Lecture 01](../bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md) đã cho thấy thứ tự này chỉ là một trường hợp của bất đẳng thức suy rộng, sinh bởi nón không âm. Thay nón không âm bằng một nón chính quy khác, ta được những họ bài toán mới có cùng cấu trúc với LP. Quan trọng nhất trong số đó là **quy hoạch nửa xác định** (semidefinite program, SDP), dùng nón các ma trận nửa xác định dương.
 
 Trang này định nghĩa bài toán dạng nón và SDP, rồi nhìn miền khả thi của SDP qua một câu hỏi rất cụ thể của thống kê: Ba biến ngẫu nhiên có thể có những bộ hệ số tương quan nào?
 
 ## 1. Ràng buộc bất đẳng thức suy rộng
 
-Sách mở rộng bài toán lồi dạng chuẩn bằng cách cho phép hàm ràng buộc nhận giá trị vector và dùng bất đẳng thức suy rộng:
+Ta mở rộng bài toán lồi dạng chuẩn bằng cách cho phép hàm ràng buộc nhận giá trị vector và dùng bất đẳng thức suy rộng:
 
 $$
 \begin{aligned}
@@ -33,7 +33,7 @@ $$
 \text{minimize}\quad c^Tx \qquad \text{subject to}\quad Fx + g \preceq_K 0,\quad Ax = b .
 $$
 
-Đây là **bài toán dạng nón**. Khi $K$ là nón không âm, nó chính là LP, nên có thể xem bài toán dạng nón như một LP mà thứ tự từng thành phần được thay bằng một thứ tự tổng quát hơn. Tiếp tục sự tương tự với LP, sách gọi bài toán cực tiểu $c^Tx$ với $x \succeq_K 0$, $Ax = b$ là dạng chuẩn, và bài toán không có ràng buộc đẳng thức là dạng bất đẳng thức. [Chủ đề trước](./quy-hoach-non-bac-hai.md) đã gặp một trường hợp riêng: SOCP là bài toán dạng nón với $K$ là tích của các nón bậc hai.
+Đây là **bài toán dạng nón**. Khi $K$ là nón không âm, nó chính là LP, nên có thể xem bài toán dạng nón như một LP mà thứ tự từng thành phần được thay bằng một thứ tự tổng quát hơn. Tương tự như với LP, ta gọi bài toán cực tiểu $c^Tx$ với $x \succeq_K 0$, $Ax = b$ là dạng chuẩn, và bài toán không có ràng buộc đẳng thức là dạng bất đẳng thức. [Chủ đề trước](./quy-hoach-non-bac-hai.md) đã gặp một trường hợp riêng: SOCP là bài toán dạng nón với $K$ là tích của các nón bậc hai.
 
 ## 3. Quy hoạch nửa xác định
 
@@ -47,7 +47,7 @@ $$
 \end{aligned}
 $$
 
-với $G, F_1, \ldots, F_n \in \mathbb{S}^k$. Ràng buộc thứ nhất là một **bất đẳng thức ma trận tuyến tính** (linear matrix inequality, LMI). Nó nói rằng ma trận $-(x_1F_1 + \cdots + x_nF_n + G)$, phụ thuộc affine vào $x$, phải nửa xác định dương. Đó không phải điều kiện về từng phần tử, mà về mọi dạng toàn phương: $v^T(\cdots)v \le 0$ với mọi vector $v$. Vì vậy một LMI tương đương với vô hạn bất đẳng thức tuyến tính theo $x$, mỗi bất đẳng thức ứng với một $v$, và miền khả thi là giao của vô hạn nửa không gian.
+với $G, F_1, \ldots, F_n \in \mathbb{S}^k$. Ràng buộc thứ nhất là một **bất đẳng thức ma trận tuyến tính** (linear matrix inequality, LMI). Nó nói rằng ma trận $-(x_1F_1 + \cdots + x_nF_n + G)$, phụ thuộc affine vào $x$, phải nửa xác định dương. Đó không phải điều kiện về từng phần tử, mà về mọi dạng toàn phương: Biểu thức $v^T(\cdots)v \le 0$ phải thỏa mãn với mọi vector $v$. Vì vậy một LMI tương đương với vô hạn bất đẳng thức tuyến tính theo $x$, mỗi bất đẳng thức ứng với một $v$, và miền khả thi là giao của vô hạn nửa không gian.
 
 Nếu mọi ma trận $G, F_1, \ldots, F_n$ đều chéo, LMI tách thành $k$ bất đẳng thức tuyến tính, một cho mỗi phần tử đường chéo, và SDP trở thành LP. Dạng chuẩn của SDP, tương tự dạng chuẩn của LP, dùng biến ma trận $X \in \mathbb{S}^n$:
 
@@ -55,7 +55,7 @@ $$
 \text{minimize}\quad \operatorname{tr}(CX) \qquad \text{subject to}\quad \operatorname{tr}(A_iX) = b_i,\ i = 1, \ldots, p,\qquad X \succeq 0 .
 $$
 
-Ở đây $\operatorname{tr}(CX) = \sum_{i,j} C_{ij}X_{ij}$ là dạng tổng quát của một hàm tuyến tính trên các ma trận đối xứng. So với LP dạng chuẩn, vector không âm $x \succeq 0$ được thay bằng ma trận nửa xác định dương $X \succeq 0$, và tích vô hướng $c^Tx$ được thay bằng $\operatorname{tr}(CX)$.
+Ở đây tích trong Frobenius $\operatorname{tr}(CX) = \sum_{i=1}^n \sum_{j=1}^n C_{ij}X_{ij}$ là dạng tổng quát của một hàm tuyến tính trên không gian các ma trận đối xứng. So với LP dạng chuẩn, vector không âm $x \succeq 0$ được thay bằng ma trận nửa xác định dương $X \succeq 0$, và tích vô hướng $c^Tx$ được thay bằng $\operatorname{tr}(CX)$.
 
 Một bài toán có nhiều LMI và cả bất đẳng thức tuyến tính vẫn được gọi là SDP, vì có thể gộp chúng lại. Một ma trận khối chéo nửa xác định dương khi và chỉ khi từng khối nửa xác định dương, nên các ràng buộc $F^{(1)}(x) \preceq 0, \ldots, F^{(K)}(x) \preceq 0$ và $Gx \preceq h$ tương đương với một LMI duy nhất:
 
@@ -99,7 +99,7 @@ $$
 \begin{bmatrix} tI & u \\ u^T & t \end{bmatrix} \succeq 0,
 $$
 
-một hệ quả của phần bù Schur mà [chủ đề tiếp theo](./phan-bu-schur-va-bai-toan-tri-rieng.md) sẽ chứng minh. Vì vậy mọi SOCP đều là một SDP. Cái giá của sự tổng quát là chi phí tính toán: Một LMI cỡ $k \times k$ nặng hơn nhiều so với $k$ bất đẳng thức tuyến tính, nên trong thực hành người ta luôn dùng lớp hẹp nhất đủ để mô tả bài toán.
+một hệ quả của phần bù Schur mà [chủ đề tiếp theo](./phan-bu-schur-va-bai-toan-tri-rieng.md) sẽ chứng minh. Vì vậy mọi SOCP đều là một SDP. Cái giá của sự tổng quát là chi phí tính toán: Một LMI cỡ $k \times k$ nặng hơn nhiều so với $k$ bất đẳng thức tuyến tính, nên trong thực hành người ta luôn dùng dạng bài toán hẹp nhất đủ để mô tả bài toán.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -167,7 +167,6 @@ Thay thứ tự từng thành phần bằng thứ tự theo một nón chính qu
 
 Miền khả thi của một LMI là một tập lồi có thể có biên cong và góc. Ví dụ ma trận tương quan cho thấy nó mang ý nghĩa rất cụ thể: Không phải bộ hệ số tương quan nào trong $[-1, 1]$ cũng hợp lệ, và khoảng giá trị của một hệ số khi biết các hệ số còn lại là nghiệm của hai SDP.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.6 (tr. 167–169) về bất đẳng thức suy rộng, bài toán dạng nón, SDP dạng chuẩn và dạng bất đẳng thức, nhiều LMI. §4.6.3 (tr. 169–174) có thêm ví dụ về bài toán moment, rủi ro danh mục với hiệp phương sai không đầy đủ và chuỗi Markov trộn nhanh nhất.
-- Ví dụ ma trận tương quan, công thức khoảng của $\rho_{13}$, mô phỏng, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

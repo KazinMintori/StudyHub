@@ -27,7 +27,7 @@ $$
 
 Phần trong ngoặc là một tổ hợp lồi nên thuộc $C$, rồi nhân với số không âm $\theta_1 + \theta_2$ vẫn thuộc $C$ vì $C$ là nón. Trường hợp $\theta_1 = \theta_2 = 0$ cho gốc tọa độ, cũng thuộc $C$.
 
-Sách mô tả hình dạng của các tổ hợp $\theta_1 x_1 + \theta_2 x_2$ là một **lát bánh** (pie slice) có đỉnh tại gốc, hai mép đi qua $x_1$ và $x_2$. Mép thứ nhất ứng với $\theta_2 = 0$, mép thứ hai ứng với $\theta_1 = 0$. Khác với đoạn thẳng của tổ hợp lồi, lát bánh này kéo dài ra vô hạn, vì không có gì ngăn các hệ số lớn lên.
+Về mặt hình học, hình dạng của các tổ hợp $\theta_1 x_1 + \theta_2 x_2$ là một **hình quạt vô hạn** hay **lát bánh** (pie slice) có đỉnh tại gốc tọa độ, hai cạnh biên đi qua $x_1$ và $x_2$. Mép thứ nhất ứng với $\theta_2 = 0$, mép thứ hai ứng với $\theta_1 = 0$. Khác với đoạn thẳng giới hạn của tổ hợp lồi, hình quạt này kéo dài ra vô hạn, bởi vì không có ràng buộc nào chặn cận trên của các hệ số.
 
 <ConeLab type="conic" />
 
@@ -36,7 +36,7 @@ Sách mô tả hình dạng của các tổ hợp $\theta_1 x_1 + \theta_2 x_2$ 
 > **Định nghĩa.** Một điểm có dạng $\theta_1 x_1 + \cdots + \theta_k x_k$ với mọi $\theta_i \ge 0$ được gọi là một **tổ hợp nón** (hay tổ hợp tuyến tính không âm) của $x_1, \ldots, x_k$. **Bao nón** của tập $C$ là tập mọi tổ hợp nón của các điểm thuộc $C$:
 > $$\{\theta_1 x_1 + \cdots + \theta_k x_k : x_i \in C,\ \theta_i \ge 0\}.$$
 
-Một tập là nón lồi khi và chỉ khi nó chứa mọi tổ hợp nón của các điểm của nó, và bao nón là nón lồi nhỏ nhất chứa $C$. Các lập luận giống hệt trường hợp tập lồi và tập affine, chỉ thay điều kiện trên hệ số. Hình 2.5 trong sách vẽ bao nón của một tập điểm và của hình quả thận: Trong mặt phẳng, bao nón là hình quạt nhỏ nhất có đỉnh ở gốc chứa tập đó, hoặc là cả mặt phẳng nếu tập "bao quanh" gốc.
+Một tập là nón lồi khi và chỉ khi nó chứa mọi tổ hợp nón của các điểm của nó, và bao nón là nón lồi nhỏ nhất chứa $C$. Các lập luận giống hệt trường hợp tập lồi và tập affine, chỉ thay điều kiện trên hệ số. Về mặt trực quan: Trong mặt phẳng, bao nón của một tập điểm là hình quạt nhỏ nhất có đỉnh ở gốc tọa độ chứa trọn tập đó, hoặc mở rộng thành toàn bộ mặt phẳng nếu tập điểm bao quanh gốc tọa độ.
 
 Mô phỏng ở trên có một ô để thêm vector thứ ba. Khi ba vector được đặt sao cho gốc tọa độ nằm bên trong tam giác tạo bởi ba đầu mút, bao nón của chúng là **toàn bộ mặt phẳng**. Chẳng hạn với $v_1 = (1, 0)$, $v_2 = (-1, 1)$ và $v_3 = (-1, -1)$, vector bất kỳ $(a, b)$ viết được thành tổ hợp nón của ba vector này. Hiện tượng ấy không có ở tổ hợp lồi: Bao lồi của ba điểm chỉ là một tam giác.
 
@@ -57,7 +57,7 @@ Trước mỗi lập luận trong chương, chỉ cần tự hỏi hai câu: Cá
 
 ## 4. Những tập cơ bản: Affine, lồi hay nón?
 
-Đầu mục 2.2, sách liệt kê vài tập đơn giản. Hãy đọc lại chúng với bảng ở mục 3:
+Ta rà soát lại một số tập hình học kinh điển dựa trên bảng phân loại ở mục 3:
 
 - Tập rỗng, một điểm $\{x_0\}$ và toàn không gian $\mathbb{R}^n$ là tập affine, do đó lồi.
 - Mọi đường thẳng đều là tập affine. Nếu nó đi qua gốc thì nó là không gian con, do đó cũng là nón lồi.
@@ -93,11 +93,11 @@ Tổ hợp nón xuất hiện mỗi khi một đại lượng được ghép t�
 
 ## 7. Những câu hỏi để đào sâu
 
-**Câu 1.** Một nón có nhất thiết phải chứa gốc tọa độ không? Tập $\{x \in \mathbb{R}^2 : x_1 > 0,\ x_2 > 0\}$ có phải nón theo định nghĩa của sách không?
+**Câu 1.** Một nón có nhất thiết phải chứa gốc tọa độ không? Tập $\{x \in \mathbb{R}^2 : x_1 > 0,\ x_2 > 0\}$ có phải là một nón theo định nghĩa chuẩn tắc không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Theo định nghĩa với $\theta \ge 0$, một nón khác rỗng chứa $0 \cdot x = 0$. Tập $\{x_1 > 0, x_2 > 0\}$ không chứa gốc, nên với định nghĩa này nó không phải nón: Lấy $x = (1, 1)$ và $\theta = 0$ thì $\theta x = (0, 0)$ nằm ngoài tập. Một số tài liệu khác định nghĩa nón với $\theta > 0$, khi đó tập này lại là nón. Khi đọc tài liệu khác, hãy kiểm tra quy ước này trước. Trong môn học, ta theo quy ước của sách.
+Theo định nghĩa chuẩn với $\theta \ge 0$, một nón khác rỗng luôn phải chứa gốc tọa độ $0 \cdot x = 0$. Tập $\{x_1 > 0, x_2 > 0\}$ không chứa gốc, nên với định nghĩa này nó không phải là một nón: Lấy $x = (1, 1)$ và $\theta = 0$ thì $\theta x = (0, 0)$ nằm ngoài tập. Cần lưu ý rằng một số tài liệu giải tích khác định nghĩa nón với điều kiện mở $\theta > 0$, khi đó tập này lại được coi là nón. Trong toàn bộ chương trình môn học này, ta tuân thủ quy ước chuẩn tắc $\theta \ge 0$.
 
 </details>
 
@@ -128,11 +128,11 @@ Sai. Nửa mặt phẳng đóng $\{x \in \mathbb{R}^2 : x_2 \ge 0\}$ là nón l�
 ## 8. Bài tập tự luyện
 
 ::: exercise 1. Nón hay không
-Tập nào sau đây là nón, tập nào là nón lồi: (A) $\{x \in \mathbb{R}^2 : x_1 \ge |x_2|\}$, (b) $\{x \in \mathbb{R}^2 : x_1 x_2 \ge 0\}$, (c) $\{x \in \mathbb{R}^2 : x_1 + x_2 \le 1\}$, (d) $\{x \in \mathbb{R}^3 : x_1^2 + x_2^2 \le x_3^2,\ x_3 \ge 0\}$.
+Tập nào sau đây là nón, tập nào là nón lồi: (a) $\{x \in \mathbb{R}^2 : x_1 \ge |x_2|\}$, (b) $\{x \in \mathbb{R}^2 : x_1 x_2 \ge 0\}$, (c) $\{x \in \mathbb{R}^2 : x_1 + x_2 \le 1\}$, (d) $\{x \in \mathbb{R}^3 : x_1^2 + x_2^2 \le x_3^2,\ x_3 \ge 0\}$.
 :::
 
 ::: solution
-(a) Nón lồi. Nếu $x_1 \ge |x_2|$ và $\theta \ge 0$ thì $\theta x_1 \ge |\theta x_2|$, nên đây là nón. Tập là giao của hai nửa mặt phẳng $x_1 - x_2 \ge 0$ và $x_1 + x_2 \ge 0$ qua gốc, nên lồi. (b) Nón nhưng không lồi: Nó là hợp của góc phần tư thứ nhất và thứ ba. Hai điểm $(1, 0)$ và $(0, -1)$ thuộc tập, nhưng trung điểm $(\tfrac12, -\tfrac12)$ có tích hai tọa độ âm. (c) Không phải nón: $(1, 0)$ thuộc tập nhưng $2 \cdot (1, 0) = (2, 0)$ thì không. Tập này lồi vì là nửa mặt phẳng. (d) Nón lồi. Điều kiện tương đương $\sqrt{x_1^2 + x_2^2} \le x_3$, tức $\|(x_1, x_2)\|_2 \le x_3$, chính là nón bậc hai mà chủ đề về chuẩn sẽ chứng minh là lồi. Nếu bỏ điều kiện $x_3 \ge 0$ thì tập gồm cả nón ngược phía dưới, vẫn là nón nhưng không còn lồi.
+(a) Nón lồi. Nếu $x_1 \ge |x_2|$ và $\theta \ge 0$ thì $\theta x_1 \ge |\theta x_2|$, nên đây là nón. Tập là giao của hai nửa mặt phẳng $x_1 - x_2 \ge 0$ và $x_1 + x_2 \ge 0$ qua gốc, nên lồi. (b) Nón nhưng không lồi: Tập hợp này là hợp của góc phần tư thứ nhất và thứ ba. Hai điểm $(1, 0)$ và $(0, -1)$ thuộc tập, nhưng trung điểm $(\tfrac12, -\tfrac12)$ có tích hai tọa độ âm. (c) Không phải nón: Điểm $(1, 0)$ thuộc tập nhưng $2 \cdot (1, 0) = (2, 0)$ thì không. Tập này lồi vì là nửa mặt phẳng. (d) Nón lồi. Điều kiện tương đương $\sqrt{x_1^2 + x_2^2} \le x_3$, tức $\|(x_1, x_2)\|_2 \le x_3$, chính là nón bậc hai mà chủ đề về chuẩn sẽ chứng minh là lồi. Nếu bỏ điều kiện $x_3 \ge 0$ thì tập gồm cả nón ngược phía dưới, vẫn là nón nhưng không còn lồi.
 :::
 
 ::: exercise 2. Biểu diễn trong một nón
@@ -149,8 +149,7 @@ Nón là tập khép kín với phép nhân với số không âm, và nón lồ
 
 Kiểm tra một vector có thuộc bao nón của các vector cho trước là một bài toán khả thi của quy hoạch tuyến tính. Chứng minh nó không thuộc nón dẫn tới siêu phẳng phân tách và các định lý lựa chọn, sẽ gặp ở những chủ đề sau.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.1.5 (tr. 25–26), Hình 2.4 và 2.5, phần mở đầu §2.2 (tr. 27) về các tập đơn giản, Ví dụ 2.4 về góc phần tư không âm.
-- Nhận xét về các thành phần cục bộ trong phân rã ma trận không âm: D. D. Lee, H. S. Seung, *Learning the parts of objects by non-negative matrix factorization*, Nature 401 (1999), 788–791.
-- Bảng bốn loại tổ hợp đặt cạnh nhau, phần liên hệ với học máy, ví dụ trong mặt phẳng, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- D. D. Lee, H. S. Seung, *Learning the parts of objects by non-negative matrix factorization*, Nature 401 (1999), 788–791.

@@ -9,7 +9,7 @@ description: "Phần bù Schur của một ma trận khối, cách hiểu qua b�
 
 [Chủ đề trước](./bai-toan-dang-non-va-sdp.md) định nghĩa SDP nhưng để lại một câu hỏi thực tế: Những ràng buộc nào viết được thành bất đẳng thức ma trận tuyến tính? Một ràng buộc như $\|A(x)\|_2 \le t$, chuẩn phổ của một ma trận phụ thuộc vào $x$, trông hoàn toàn phi tuyến. Công cụ biến những ràng buộc như vậy thành LMI là **phần bù Schur**, một kết quả nhỏ của đại số tuyến tính nhưng được dùng ở khắp nơi trong tối ưu lồi.
 
-Trang này trình bày phần bù Schur theo cách của phụ lục A.5.5 trong sách, tức như nghiệm của một bài toán cực tiểu, rồi dùng nó cho ba loại ràng buộc và cho bài toán cực tiểu trị riêng lớn nhất.
+Bài giảng này tiếp cận phần bù Schur dưới góc nhìn tối ưu hóa, tức nghiệm của một bài toán cực tiểu dạng toàn phương, rồi vận dụng công cụ này để chuyển hóa ba dạng ràng buộc phi tuyến phổ biến thành LMI và giải bài toán cực tiểu trị riêng lớn nhất.
 
 ## 1. Phần bù Schur
 
@@ -40,7 +40,7 @@ Từ cách hiểu này suy ra ngay tiêu chuẩn nửa xác định dương củ
 - $X \succ 0$ khi và chỉ khi $A \succ 0$ và $S \succ 0$.
 - Nếu $A \succ 0$, thì $X \succeq 0$ khi và chỉ khi $S \succeq 0$.
 
-Lý do cho ý thứ hai: $X \succeq 0$ nghĩa là dạng toàn phương không âm tại mọi $(u, v)$, tức là giá trị nhỏ nhất theo $u$, chính là $v^TSv$, không âm với mọi $v$. Ví dụ nhỏ: Với $X = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$, ta có $S = 1 - \tfrac12 = \tfrac12 > 0$, nên $X \succ 0$, khớp với hai trị riêng khoảng $0.382$ và $2.618$. Một ví dụ khối: Ma trận $3 \times 3$ với khối $A = 2I_2$, cột $B = (1, 1)$ và góc $C = c$ có phần bù Schur $S = c - \tfrac{1 + 1}{2} = c - 1$, nên nó nửa xác định dương đúng khi $c \ge 1$. Tại $c = 1$, trị riêng nhỏ nhất của nó đúng bằng 0.
+Lý do cho ý thứ hai: Điều kiện $X \succeq 0$ nghĩa là dạng toàn phương không âm tại mọi $(u, v)$, tức là giá trị nhỏ nhất theo $u$, chính là $v^TSv$, không âm với mọi $v$. Ví dụ nhỏ: Với $X = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$, ta có $S = 1 - \tfrac12 = \tfrac12 > 0$, nên $X \succ 0$, khớp với hai trị riêng khoảng $0.382$ và $2.618$. Một ví dụ khối: Ma trận $3 \times 3$ với khối $A = 2I_2$, cột $B = (1, 1)$ và góc $C = c$ có phần bù Schur $S = c - \tfrac{1 + 1}{2} = c - 1$, nên nó nửa xác định dương đúng khi $c \ge 1$. Tại $c = 1$, trị riêng nhỏ nhất của nó đúng bằng 0.
 
 ## 2. Biến ràng buộc phi tuyến thành LMI
 
@@ -88,7 +88,7 @@ Bài toán này có một đặc điểm quan trọng: Nó thường **không tr
 
 <EigenLab />
 
-Sách đưa thêm một số ứng dụng của cùng ý tưởng. Tốc độ trộn của một chuỗi Markov đối xứng là chuẩn phổ của ma trận chuyển trạng thái trừ đi ma trận chiếu lên phân phối đều, nên chọn xác suất chuyển trên một đồ thị cho trước để chuỗi trộn nhanh nhất là một SDP. Rủi ro lớn nhất của một danh mục đầu tư khi ma trận hiệp phương sai chỉ được biết một phần, chẳng hạn chỉ biết cận trên và cận dưới của từng phần tử, cũng là một SDP với biến là chính ma trận hiệp phương sai.
+Ý tưởng trên mở ra nhiều ứng dụng thực tiễn quan trọng: Tốc độ trộn của một chuỗi Markov đối xứng được đo bằng chuẩn phổ của ma trận chuyển trạng thái trừ đi ma trận chiếu lên phân phối đều, do đó bài toán tối ưu xác suất chuyển trên đồ thị để chuỗi trộn nhanh nhất chính là một SDP. Tương tự, bài toán ước lượng rủi ro xấu nhất của danh mục đầu tư khi ma trận hiệp phương sai chỉ được biết một phần (chẳng hạn chỉ biết chặn trên và chặn dưới của từng phần tử) cũng quy về một SDP với biến tối ưu là ma trận hiệp phương sai.
 
 ## 4. Những câu hỏi để đào sâu
 
@@ -96,7 +96,7 @@ Sách đưa thêm một số ứng dụng của cùng ý tưởng. Tốc độ t
 
 <details><summary>Xem lời giải thích</summary>
 
-Lấy $X = \begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}$, với $A = 0$ không khả nghịch, nên phần bù Schur không định nghĩa được. Ma trận này có định thức $-1 < 0$, nên không nửa xác định dương, dù khối $C = 1 > 0$. Về mặt cực tiểu, với $A = 0$ dạng toàn phương là $2uv + v^2$, tuyến tính theo $u$, nên giá trị nhỏ nhất theo $u$ là $-\infty$ khi $v \ne 0$. Sách có một phiên bản tổng quát cho $A$ suy biến dùng giả nghịch đảo, với thêm điều kiện cột của $B$ nằm trong không gian ảnh của $A$.
+Lấy $X = \begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}$, với $A = 0$ không khả nghịch, nên phần bù Schur không xác định được. Ma trận này có định thức $-1 < 0$, nên không nửa xác định dương, dù khối $C = 1 > 0$. Về mặt cực tiểu, với $A = 0$ dạng toàn phương là $2uv + v^2$, tuyến tính theo $u$, nên giá trị nhỏ nhất theo $u$ là $-\infty$ khi $v \ne 0$. Trong trường hợp $A$ suy biến tổng quát, ta có thể mở rộng bổ đề Schur bằng giả nghịch đảo Moore–Penrose $A^\dagger$, kèm theo điều kiện các cột của $B$ phải thuộc không gian ảnh của $A$.
 
 </details>
 
@@ -162,7 +162,6 @@ Phần bù Schur $S = C - B^TA^{-1}B$ của khối $A$ trong một ma trận đ�
 
 Trị riêng lớn nhất của một ma trận đối xứng phụ thuộc affine vào $x$ là hàm lồi, trị riêng nhỏ nhất là hàm lõm, và cực tiểu trị riêng lớn nhất là một SDP. Tại nghiệm, các trị riêng lớn nhất thường bằng nhau và hàm không khả vi, nên cách viết SDP đáng tin cậy hơn các phương pháp gradient thông thường.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §A.5.5 (tr. 650–651) về phần bù Schur, bài toán (A.13)–(A.14) và tiêu chuẩn nửa xác định dương. §4.6.3 (tr. 169–174) về SOCP như một bài toán dạng nón, cực tiểu chuẩn ma trận, rủi ro danh mục với hiệp phương sai không đầy đủ và chuỗi Markov trộn nhanh nhất.
-- Ví dụ khối, mô phỏng trị riêng với phần tử ngoài đường chéo, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

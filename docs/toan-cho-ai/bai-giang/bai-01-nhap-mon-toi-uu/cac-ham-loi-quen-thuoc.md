@@ -90,7 +90,7 @@ v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n p_i v_i^2 - \Big(\sum_{i=1}^n p_i v_i\Big)
 \end{aligned}
 $$
 
-Vế phải chính là **phương sai** của một biến ngẫu nhiên rời rạc nhận giá trị $v_i$ với xác suất tương ứng $p_i$. Vì phương sai không bao giờ âm, ma trận Hessian luôn nửa xác định dương và $f$ là hàm lồi. Lập luận này tương đương với bất đẳng thức Cauchy–Schwarz $(\sum_i p_i v_i)^2 \le (\sum_i p_i)(\sum_i p_i v_i^2) = \sum_i p_i v_i^2$ (do $\sum_i p_i = 1$). Cách nhìn qua phương sai còn cho thấy điều kiện để độ cong triệt tiêu: Phương sai bằng 0 khi và chỉ khi biến ngẫu nhiên là hằng số, tức mọi $v_i$ bằng nhau hay $v = c(1, \dots, 1)$. Đây là lý do dọc theo hướng đường chéo $(1, \dots, 1)$, hàm log-sum-exp tăng tuyến tính và có độ cong bằng 0.
+Vế phải chính là **phương sai** của một biến ngẫu nhiên rời rạc nhận giá trị $v_i$ với xác suất tương ứng $p_i$. Vì phương sai không bao giờ âm, ma trận Hessian luôn nửa xác định dương và $f$ là hàm lồi. Lập luận này tương đương với bất đẳng thức Cauchy–Schwarz $(\sum_i p_i v_i)^2 \le \sum_i p_i v_i^2$ (do $\sum_i p_i = 1$). Cách nhìn qua phương sai còn cho thấy điều kiện để độ cong triệt tiêu: Phương sai bằng 0 khi và chỉ khi biến ngẫu nhiên là hằng số, tức mọi $v_i$ bằng nhau hay $v = c(1, \dots, 1)$. Đây là lý do dọc theo hướng đường chéo $(1, \dots, 1)$, hàm log-sum-exp tăng tuyến tính và có độ cong bằng 0.
 
 **Liên hệ với hàm mất mát entropy chéo.** Một mô hình phân loại $n$ lớp xuất ra vector logit $z$. Với mẫu có nhãn đúng là lớp $y$, hàm mất mát entropy chéo (cross-entropy loss) được định nghĩa:
 

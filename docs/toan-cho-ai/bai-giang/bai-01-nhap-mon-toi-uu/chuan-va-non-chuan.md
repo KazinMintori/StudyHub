@@ -13,12 +13,12 @@ Có hai câu hỏi dẫn đường cho phần này. Thứ nhất, vì sao quả 
 
 ## 1. Chuẩn là gì
 
-Một **chuẩn** trên $\mathbb{R}^n$ là một hàm $\|\cdot\| : \mathbb{R}^n \to \mathbb{R}$ thỏa bốn tính chất (phụ lục A.1.2 của sách):
+Một **chuẩn** (norm) trên $\mathbb{R}^n$ là một hàm số $\|\cdot\| : \mathbb{R}^n \to \mathbb{R}$ thỏa mãn trọn vẹn bốn tiên đề toán học sau:
 
-1. Không âm: $\|x\| \ge 0$ với mọi $x$.
-2. Xác định: $\|x\| = 0$ khi và chỉ khi $x = 0$.
-3. Thuần nhất: $\|\alpha x\| = |\alpha|\, \|x\|$ với mọi số thực $\alpha$.
-4. Bất đẳng thức tam giác: $\|x + y\| \le \|x\| + \|y\|$.
+1. Tính không âm: Ta luôn có $\|x\| \ge 0$ với mọi vector $x$.
+2. Tính xác định: Ta có $\|x\| = 0$ khi và chỉ khi $x = 0$.
+3. Tính thuần nhất tuyệt đối: Ta có $\|\alpha x\| = |\alpha|\, \|x\|$ với mọi số thực $\alpha$ và vector $x$.
+4. Bất đẳng thức tam giác: Ta có $\|x + y\| \le \|x\| + \|y\|$ với mọi vector $x, y$.
 
 Ba tính chất đầu nói rằng chuẩn hành xử như một "độ dài": Chỉ vector 0 có độ dài 0, và kéo dài vector gấp đôi thì độ dài gấp đôi. Tính chất thứ tư nói rằng đi đường vòng qua một điểm trung gian không bao giờ ngắn hơn đi thẳng. Như ta sẽ thấy ở mục 3, tính chất thứ tư mới là tính chất có nội dung hình học sâu nhất.
 
@@ -32,7 +32,7 @@ trong đó ba trường hợp đặc biệt có tên riêng: $\|x\|_1 = \sum_i |
 
 Còn một họ chuẩn nữa cần nhớ: **Chuẩn bậc hai** $\|x\|_P = \sqrt{x^T P x}$ với $P \succ 0$. Quả cầu đơn vị của nó là $\{x : x^T P x \le 1\}$, chính là ellipsoid với ma trận $P^{-1}$ ở chủ đề trước. Nói cách khác, mỗi ellipsoid có tâm ở gốc là quả cầu đơn vị của một chuẩn.
 
-Lưu ý ký hiệu: Trong sách và trong môn học, $\|\cdot\|$ không kèm chỉ số nghĩa là **một chuẩn bất kỳ**, không mặc định là chuẩn Euclid. Những kết luận viết với $\|\cdot\|$ đúng cho mọi chuẩn.
+Lưu ý về quy ước ký hiệu: Trong bài giảng này và toàn bộ môn học, ký hiệu $\|\cdot\|$ khi không kèm chỉ số dưới được hiểu là **một chuẩn bất kỳ**, không mặc định thu hẹp ở chuẩn Euclid. Mọi kết luận viết với $\|\cdot\|$ đều có giá trị tổng quát cho mọi chuẩn hợp lệ.
 
 ## 2. Quả cầu chuẩn luôn lồi
 
@@ -44,7 +44,7 @@ $$
 \|\theta x_1 + (1-\theta)x_2 - x_c\| \le \theta\|x_1 - x_c\| + (1-\theta)\|x_2 - x_c\| \le r .
 $$
 
-Trong mặt phẳng, ba quả cầu đơn vị quen thuộc có ba hình dạng: $\{|x_1| + |x_2| \le 1\}$ là một hình thoi với bốn đỉnh trên hai trục, $\{x_1^2 + x_2^2 \le 1\}$ là hình tròn, và $\{\max(|x_1|, |x_2|) \le 1\}$ là hình vuông. Mô phỏng sau cho bạn trượt $p$ liên tục và thấy hình thoi phình dần thành hình tròn rồi thành hình vuông.
+Trong mặt phẳng, ba quả cầu đơn vị quen thuộc có ba hình dạng đặc trưng: Tập $\{|x_1| + |x_2| \le 1\}$ là một hình thoi với bốn đỉnh trên hai trục tọa độ, tập $\{x_1^2 + x_2^2 \le 1\}$ là hình tròn, và tập $\{\max(|x_1|, |x_2|) \le 1\}$ là hình vuông. Mô phỏng sau cho bạn trượt $p$ liên tục và thấy hình thoi phình dần thành hình tròn rồi thành hình vuông.
 
 <NormBallLab />
 
@@ -93,7 +93,7 @@ $$
 \mathcal{Q} = \{(x, t) \in \mathbb{R}^{n+1} : \|x\|_2 \le t\}.
 $$
 
-Điểm $(3, 4, 5)$ nằm đúng trên biên của $\mathcal{Q} \subseteq \mathbb{R}^3$ vì $\sqrt{9 + 16} = 5$. Sách cũng viết nón bậc hai bằng một bất đẳng thức bậc hai, $x^T x - t^2 \le 0$ cùng với $t \ge 0$, và giải thích vì sao nó còn được gọi là nón bậc hai. Điều kiện $t \ge 0$ là cần thiết: Thiếu nó, tập $\{x^T x \le t^2\}$ gồm cả nón ngược phía dưới và không lồi.
+Điểm $(3, 4, 5)$ nằm đúng trên biên của $\mathcal{Q} \subseteq \mathbb{R}^3$ vì $\sqrt{9 + 16} = 5$. Ta cũng có thể biểu diễn nón bậc hai bằng bất đẳng thức bậc hai $x^T x - t^2 \le 0$ kết hợp với điều kiện không âm $t \ge 0$. Tên gọi "nón bậc hai" bắt nguồn từ chính dạng toàn phương này. Điều kiện $t \ge 0$ mang tính quyết định: Thiếu nó, tập nghiệm $\{x^T x \le t^2\}$ sẽ bao gồm cả phần nón đối xứng ngược phía dưới và đánh mất hoàn toàn tính lồi.
 
 <Cone3DLab type="soc" />
 
@@ -167,7 +167,6 @@ Một chuẩn thỏa bốn tính chất, và quả cầu của mọi chuẩn đ�
 
 Nón chuẩn $\{(x, t) : \|x\| \le t\}$ là nón lồi, có các lát cắt ngang là quả cầu chuẩn. Với chuẩn Euclid ta được nón bậc hai, và mọi ràng buộc dạng $\|Ax + b\|_2 \le c^T x + d$ là ảnh ngược affine của nó.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.3 (tr. 30–31), Ví dụ 2.3, Hình 2.10. Định nghĩa chuẩn và các chuẩn thường gặp ở phụ lục A.1.2. Hàm Minkowski xuất hiện trong Bài tập 3.34 của sách.
-- Phần chứng minh "quả cầu lồi suy ra bất đẳng thức tam giác", ví dụ chiếu lên quả cầu $\ell_1$ và $\ell_2$, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

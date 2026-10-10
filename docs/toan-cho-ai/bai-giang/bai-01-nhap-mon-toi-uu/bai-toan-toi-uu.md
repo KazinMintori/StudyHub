@@ -475,7 +475,7 @@ Xét bài toán $\min f_0(x) = \max\{0, |x| - 1\}$ trên $\mathbb{R}$. Hàm số
 <details><summary>Xem phân tích chi tiết</summary>
 
 - **Cùng tập nghiệm tối ưu**: Vì hàm số $g(u) = e^u$ là hàm đồng biến ngặt trên $\mathbb{R}$, thứ tự giữa các giá trị được bảo toàn tuyệt đối: $f_0(x) \le f_0(y) \iff e^{f_0(x)} \le e^{f_0(y)}$. Do đó mọi điểm cực tiểu của bài toán này cũng là điểm cực tiểu của bài toán kia.
-- **Giá trị tối ưu khác nhau**: Chúng liên hệ qua công thức $p^\star_2 = e^{p^\star_1}$ (nếu $p^\star_1$ hữu hạn). Đây là minh chứng mẫu mực cho khái niệm **hai bài toán tương đương (equivalent problems)**: khác nhau về giá trị nhưng bảo toàn trọn vẹn nghiệm tối ưu.
+- **Giá trị tối ưu khác nhau**: Chúng liên hệ qua công thức $p^\star_2 = e^{p^\star_1}$ (nếu $p^\star_1$ hữu hạn). Đây là minh chứng mẫu mực cho khái niệm **hai bài toán tương đương (equivalent problems)**: Khác nhau về giá trị nhưng bảo toàn trọn vẹn nghiệm tối ưu.
 </details>
 
 **Câu 6.** Cận dưới $28\text{ s}$ ở Mục 4 khá lỏng. Hãy áp dụng bất đẳng thức Cauchy–Schwarz $\sqrt{p^2 + q^2} \ge p\cos\varphi + q\sin\varphi$ (đúng với mọi góc $\varphi$) để tìm cận dưới chặt nhất cho hàm thời gian $T(x)$.

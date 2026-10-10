@@ -15,7 +15,7 @@ Câu trả lời là khái niệm trung tâm của cả môn học. Một **tậ
 
 > **Định nghĩa.** Tập $C \subseteq \mathbb{R}^n$ là **lồi** nếu với mọi $x_1, x_2 \in C$ và mọi $\theta$ thỏa $0 \le \theta \le 1$, ta có $\theta x_1 + (1 - \theta) x_2 \in C$.
 
-Sách đưa ra một cách hình dung rất dễ nhớ: Một tập là lồi nếu **mọi điểm trong tập đều nhìn thấy mọi điểm khác** theo một đường thẳng không bị che khuất, trong đó "không bị che khuất" nghĩa là đường nhìn nằm trọn trong tập. Một căn phòng hình chữ nhật là lồi: Đứng ở góc nào cũng nhìn thấy mọi góc khác. Một căn phòng hình chữ L thì không: Đứng ở cuối một nhánh, bạn không nhìn thấy cuối nhánh kia vì bức tường ở góc trong che mất.
+Ta có một cách hình dung trực quan rất dễ nhớ: Một tập là lồi nếu **mọi điểm trong tập đều nhìn thấy mọi điểm khác** theo một đường thẳng không bị che khuất, trong đó "không bị che khuất" nghĩa là toàn bộ đường nhìn thẳng nối hai điểm phải nằm trọn trong tập. Chẳng hạn, một căn phòng hình chữ nhật là lồi: Đứng ở bất kỳ góc nào ta cũng nhìn thấy mọi góc khác. Trái lại, một căn phòng hình chữ L thì không: Đứng ở cuối một nhánh, bạn không thể nhìn thấy điểm ở cuối nhánh kia vì bức tường góc vuông đã che khuất đường nhìn.
 
 So sánh với tập affine, chỉ có miền của $\theta$ thay đổi: Tập affine đòi mọi $\theta \in \mathbb{R}$, còn tập lồi chỉ đòi $\theta \in [0, 1]$. Đòi ít hơn thì dễ thỏa hơn, nên **mọi tập affine đều lồi**, còn chiều ngược lại sai. Một đoạn thẳng, một hình tròn đặc hay một tam giác đặc là lồi nhưng không affine.
 
@@ -129,7 +129,7 @@ Cách nhìn này có những hệ quả rất thực tế:
 
 Một tập $C$ được gọi là **lồi theo trung điểm** nếu nó chứa trung điểm $\tfrac12(a + b)$ của hai điểm bất kỳ $a, b \in C$. Tập lồi hiển nhiên lồi theo trung điểm. Chiều ngược lại thì sao?
 
-Không đúng trong trường hợp tổng quát. Tập $\mathbb{Q}^2$ các điểm có tọa độ hữu tỉ chứa trung điểm của hai điểm bất kỳ của nó, nhưng không lồi: Đoạn nối $(0, 0)$ và $(1, 0)$ đi qua $(\tfrac{1}{\sqrt 2}, 0)$, một điểm không có tọa độ hữu tỉ. Tuy nhiên sách chỉ ra (Bài tập 2.3) rằng **nếu $C$ đóng và lồi theo trung điểm thì $C$ lồi**. Ý tưởng chứng minh như sau. Lặp lại phép lấy trung điểm nhiều lần cho ta mọi tổ hợp $\theta a + (1-\theta) b$ với $\theta$ có dạng $\tfrac{m}{2^k}$. Các số như vậy nằm dày đặc trong $[0, 1]$, nên mọi $\theta \in [0, 1]$ là giới hạn của một dãy $\tfrac{m_j}{2^{k_j}}$. Tập đóng chứa giới hạn của mọi dãy hội tụ gồm các điểm của nó, nên chứa cả $\theta a + (1-\theta) b$.
+Không đúng trong trường hợp tổng quát. Tập $\mathbb{Q}^2$ các điểm có tọa độ hữu tỉ chứa trung điểm của hai điểm bất kỳ của nó, nhưng không lồi: Đoạn nối $(0, 0)$ và $(1, 0)$ đi qua $(\tfrac{1}{\sqrt 2}, 0)$, một điểm không có tọa độ hữu tỉ. Tuy nhiên, ta có một định lý quan trọng: **Nếu $C$ là tập đóng và lồi theo trung điểm thì $C$ là tập lồi**. Ý tưởng chứng minh như sau: Lặp lại phép lấy trung điểm nhiều lần cho ta mọi tổ hợp $\theta a + (1-\theta) b$ với $\theta$ có dạng phân số nhị phân $\tfrac{m}{2^k}$. Các số hữu tỉ dạng này trù mật (nằm dày đặc) trong $[0, 1]$, nên mọi $\theta \in [0, 1]$ đều là giới hạn của một dãy $\tfrac{m_j}{2^{k_j}}$. Vì $C$ là tập đóng nên nó chứa giới hạn của mọi dãy hội tụ gồm các điểm của nó, kéo theo $C$ chứa cả $\theta a + (1-\theta) b$.
 
 Kết quả này có ích trong thực hành: Nhiều khi kiểm tra trung điểm dễ hơn nhiều so với kiểm tra mọi $\theta$, chẳng hạn khi định nghĩa tập bằng một bất đẳng thức đóng.
 
@@ -147,7 +147,7 @@ Giao luôn lồi. Nếu $x_1, x_2$ thuộc cả hai tập, thì đoạn nối ch
 
 <details><summary>Xem lời giải thích</summary>
 
-Sai, vì tập này gồm hai nhánh: Nhánh với $x_1, x_2 > 0$ và nhánh với $x_1, x_2 < 0$. Điểm $(1, 1)$ và $(-1, -1)$ đều thuộc tập, nhưng trung điểm $(0, 0)$ cho $0 \cdot 0 = 0 < 1$. Nếu chỉ lấy nhánh dương, $\{x \in \mathbb{R}^2_+ : x_1 x_2 \ge 1\}$, thì tập lồi (Bài tập 2.11 trong sách). Đây là lời nhắc rằng cảm giác "nhìn hình" phải đi kèm với việc xác định chính xác tập đang xét, kể cả những phần nằm ngoài khung hình bạn vẽ.
+Sai, vì tập này gồm hai nhánh: Nhánh với $x_1, x_2 > 0$ và nhánh với $x_1, x_2 < 0$. Điểm $(1, 1)$ và $(-1, -1)$ đều thuộc tập, nhưng trung điểm $(0, 0)$ cho $0 \cdot 0 = 0 < 1$. Nếu chỉ lấy nhánh dương, $\{x \in \mathbb{R}^2_+ : x_1 x_2 \ge 1\}$, thì tập lại lồi. Đây là lời nhắc rằng cảm giác "nhìn hình" phải đi kèm với việc xác định chính xác tập đang xét, kể cả những phần nằm ngoài khung hình bạn vẽ.
 
 </details>
 
@@ -155,7 +155,7 @@ Sai, vì tập này gồm hai nhánh: Nhánh với $x_1, x_2 > 0$ và nhánh v�
 
 <details><summary>Xem lời giải thích</summary>
 
-$\operatorname{conv}(\operatorname{conv} C) = \operatorname{conv} C$, vì $\operatorname{conv} C$ đã lồi, và bao lồi của một tập lồi là chính nó. Phép lấy bao lồi cũng bảo toàn quan hệ chứa: Nếu $A \subseteq B$ thì mọi tổ hợp lồi của các điểm thuộc $A$ cũng là tổ hợp lồi của các điểm thuộc $B$. Hai tính chất này, cùng với $C \subseteq \operatorname{conv} C$, cho thấy phép lấy bao lồi hành xử giống phép lấy bao đóng trong tô-pô. Sách cũng nhận xét một sự tương tự với bao affine, bao tuyến tính và bao nón.
+$\operatorname{conv}(\operatorname{conv} C) = \operatorname{conv} C$, vì $\operatorname{conv} C$ đã lồi, và bao lồi của một tập lồi là chính nó. Phép lấy bao lồi cũng bảo toàn quan hệ chứa: Nếu $A \subseteq B$ thì mọi tổ hợp lồi của các điểm thuộc $A$ cũng là tổ hợp lồi của các điểm thuộc $B$. Hai tính chất này, cùng với $C \subseteq \operatorname{conv} C$, cho thấy phép lấy bao lồi hành xử hoàn toàn tương tự như phép lấy bao đóng trong topo, cũng như cấu trúc tương đương của bao affine, bao tuyến tính và bao nón.
 
 </details>
 
@@ -207,7 +207,7 @@ $$
 các thành phần không âm và cộng lại bằng 1. Với câu hỏi thứ hai, giải hệ $0.5\alpha + 0.1\beta + 0.2\gamma = \tfrac13$, $0.3\alpha + 0.1\beta + 0.6\gamma = \tfrac13$ cùng $\alpha + \beta + \gamma = 1$. Trừ phương trình thứ nhất cho phương trình thứ hai được $0.2\alpha - 0.4\gamma = 0$, tức $\alpha = 2\gamma$. Thay vào phương trình thứ nhất với $\beta = 1 - 3\gamma$: $\gamma + 0.1 - 0.3\gamma + 0.2\gamma = \tfrac13$, nên $0.9\gamma = \tfrac{7}{30}$ và $\gamma = \tfrac{7}{27}$. Khi đó $\alpha = \tfrac{14}{27}$ và $\beta = \tfrac{6}{27}$, cả ba đều dương. Vậy phân phối đều nằm trong tam giác có ba đỉnh $p, q, r$.
 :::
 
-::: exercise 3. Bao lồi bằng giao (Bài tập 2.4 trong sách)
+::: exercise 3. Bao lồi bằng giao của mọi tập lồi chứa tập đã cho
 Chứng minh rằng bao lồi của tập $S$ bằng giao của mọi tập lồi chứa $S$.
 :::
 
@@ -221,8 +221,7 @@ Một tập lồi chứa trọn đoạn thẳng nối hai điểm bất kỳ c�
 
 Tổ hợp lồi là trung bình có trọng số với trọng số là một phân phối xác suất, và tập lồi chứa mọi tổ hợp như vậy, kể cả dạng vô hạn và kỳ vọng. Bao lồi là tập lồi nhỏ nhất chứa một tập cho trước, và với một tập hữu hạn điểm trong mặt phẳng, nó là đa giác mà sợi dây chun ôm lấy.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.1.4 (tr. 23–25), Hình 2.2 và 2.3, Bài tập 2.1, 2.3, 2.4 và 2.11.
-- Định lý Carathéodory: R. T. Rockafellar, *Convex Analysis*, Princeton University Press, 1970, §17.
-- Ví dụ căn phòng chữ L, pha cà phê, lấy trung bình trọng số khi huấn luyện, các câu hỏi và bài tập 1, 2 do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- R. Tyrrell Rockafellar, *Convex Analysis*, Princeton University Press.

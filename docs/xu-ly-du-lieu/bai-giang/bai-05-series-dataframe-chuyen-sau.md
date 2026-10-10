@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-05-series-dataframe-chuyen-sau
 section: lecture
 title: "Series & DataFrame chuyên sâu"
-prerequisites: ["chi-muc", "gia-tri-thieu", "ky-vong", "phuong-sai"]
+prerequisites: ["chi-muc", "gia-tri-thieu", "vector-hoa"]
 lessonStatus: ready
 description: "Cơ chế căn chỉnh Index, Split-Apply-Combine với groupby/agg/transform, bảng chéo pivot_table và ghép bảng an toàn với merge validate."
 ---

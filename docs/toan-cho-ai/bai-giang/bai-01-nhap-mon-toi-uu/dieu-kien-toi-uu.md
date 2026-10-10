@@ -18,7 +18,7 @@ Với bài toán lồi khả vi, câu trả lời là một bất đẳng thức
 
 Đọc từng phần của bất đẳng thức. Vector $y - x$ là hướng đi từ $x$ tới một điểm khả thi $y$. Đại lượng $\nabla f_0(x)^T (y - x)$ là đạo hàm theo hướng của $f_0$ khi bắt đầu đi theo hướng đó. Tiêu chuẩn nói: Tại nghiệm, **không có hướng khả thi nào làm $f_0$ giảm ngay từ bước đầu tiên**. Mọi hướng đi vào miền khả thi đều làm $f_0$ tăng, hoặc ít nhất là không giảm, theo xấp xỉ bậc nhất.
 
-Về hình học, nếu $\nabla f_0(x) \ne 0$, tiêu chuẩn nói rằng toàn bộ $X$ nằm trong nửa không gian $\{y : \nabla f_0(x)^T (y - x) \ge 0\}$. Siêu phẳng đi qua $x$ với pháp tuyến $\nabla f_0(x)$ là một **siêu phẳng tựa** của $X$ tại $x$, và $-\nabla f_0(x)$, hướng mà $f_0$ giảm nhanh nhất, chỉ thẳng ra ngoài miền khả thi (Hình 4.2 trong sách). Đồng thời, siêu phẳng ấy cũng tựa vào tập mức dưới $\{y : f_0(y) \le f_0(x)\}$, như ở chủ đề điều kiện bậc nhất. Vậy tại nghiệm, miền khả thi và tập mức dưới chạm nhau tại $x$, và một siêu phẳng tách chúng.
+Về hình học, nếu $\nabla f_0(x) \ne 0$, tiêu chuẩn khẳng định toàn bộ tập khả thi $X$ nằm trọn trong nửa không gian $\{y : \nabla f_0(x)^T (y - x) \ge 0\}$. Siêu phẳng đi qua $x$ với pháp tuyến $\nabla f_0(x)$ chính là một **siêu phẳng tựa** của $X$ tại $x$, trong khi $-\nabla f_0(x)$ (hướng suy giảm nhanh nhất của $f_0$) chỉ thẳng ra bên ngoài miền khả thi. Đồng thời, siêu phẳng ấy cũng tựa vào tập mức dưới $\{y : f_0(y) \le f_0(x)\}$, tương tự như phân tích ở chủ đề điều kiện bậc nhất. Do đó tại điểm nghiệm tối ưu, miền khả thi và tập mức dưới tiếp xúc nhau tại đúng điểm $x$, và tồn tại một siêu phẳng phân tách chúng.
 
 <OptimalityLab />
 
@@ -42,7 +42,7 @@ Vậy $x$ tối ưu. Chiều này chỉ dùng tính lồi của $f_0$.
 
 Khi $X = \operatorname{dom} f_0$ là tập mở, mọi điểm đủ gần $x$ đều khả thi. Lấy $y = x - t\nabla f_0(x)$ với $t > 0$ nhỏ, tiêu chuẩn cho $-t\|\nabla f_0(x)\|_2^2 \ge 0$, nên $\nabla f_0(x) = 0$. Ta trở lại điều kiện quen thuộc, giờ là cả điều kiện cần lẫn đủ.
 
-Ví dụ 4.5 của sách phân tích hàm bậc hai lồi $f_0(x) = \tfrac12 x^T P x + q^T x + r$ với $P \succeq 0$. Điều kiện $Px + q = 0$ là một hệ phương trình tuyến tính, và ba khả năng tương ứng với ba hình dạng đã gặp ở chủ đề điều kiện bậc hai:
+Xét hàm bậc hai lồi dạng toàn phương $f_0(x) = \tfrac12 x^T P x + q^T x + r$ với $P \succeq 0$. Điều kiện dừng $\nabla f_0(x) = Px + q = 0$ là một hệ phương trình tuyến tính, dẫn đến ba trường hợp cấu trúc hình học tương ứng:
 
 - $P \succ 0$, cái bát: Nghiệm duy nhất $x^\star = -P^{-1} q$.
 - $P$ suy biến và $q$ thuộc không gian cột của $P$, cái máng có đáy nằm ngang: Vô số nghiệm, tạo thành một tập affine.
@@ -52,13 +52,13 @@ Ví dụ với $P = \operatorname{diag}(2, 0)$. Với $q = (-2, 0)$, $f_0 = x_1^
 
 ### Chỉ có ràng buộc đẳng thức
 
-Xét bài toán cực tiểu $f_0(x)$ với $Ax = b$. Mọi điểm khả thi có dạng $y = x + v$ với $v$ thuộc không gian không $\mathcal{N}(A)$. Tiêu chuẩn trở thành $\nabla f_0(x)^T v \ge 0$ với mọi $v \in \mathcal{N}(A)$. Nhưng nếu $v$ thuộc không gian con này thì $-v$ cũng vậy, nên bất đẳng thức đúng cho cả $v$ lẫn $-v$, nghĩa là $\nabla f_0(x)^T v = 0$. Gradient phải **vuông góc** với $\mathcal{N}(A)$, tức thuộc không gian hàng $\mathcal{R}(A^T)$. Viết thành công thức:
+Xét bài toán cực tiểu $f_0(x)$ với $Ax = b$ trong đó $A \in \mathbb{R}^{p \times n}$ và $b \in \mathbb{R}^p$. Mọi điểm khả thi có dạng $y = x + v$ với $v$ thuộc không gian không $\mathcal{N}(A)$. Tiêu chuẩn trở thành $\nabla f_0(x)^T v \ge 0$ với mọi $v \in \mathcal{N}(A)$. Nhưng nếu $v$ thuộc không gian con này thì $-v$ cũng vậy, nên bất đẳng thức đúng cho cả $v$ lẫn $-v$, nghĩa là $\nabla f_0(x)^T v = 0$. Gradient phải **vuông góc** với $\mathcal{N}(A)$, tức thuộc không gian hàng $\mathcal{R}(A^T)$. Viết thành công thức:
 
 $$
-Ax = b, \qquad \nabla f_0(x) + A^T \nu = 0 \ \text{ với một vector } \nu .
+Ax = b, \qquad \nabla f_0(x) + A^T \nu = 0 \iff \nabla f_0(x) + \sum_{i=1}^p \nu_i a_i = 0 \ \text{ với một vector } \nu \in \mathbb{R}^p,
 $$
 
-Ta vừa tìm lại điều kiện **nhân tử Lagrange** cổ điển, lần này chỉ bằng lập luận hình học. Vector $\nu$ là nhân tử Lagrange, và chương đối ngẫu sẽ cho nó một ý nghĩa sâu hơn.
+với $a_i^T$ là hàng thứ $i$ của ma trận $A$. Ta vừa tìm lại điều kiện **nhân tử Lagrange** cổ điển, lần này chỉ bằng lập luận hình học. Vector $\nu$ là nhân tử Lagrange, và chương đối ngẫu sẽ cho nó một ý nghĩa sâu hơn.
 
 ::: example Phân bổ một đơn vị với chi phí bình phương
 Cực tiểu $x_1^2 + 2x_2^2 + 3x_3^2$ với $x_1 + x_2 + x_3 = 1$. Ở đây $A = (1, 1, 1)$, nên điều kiện là $(2x_1,\ 4x_2,\ 6x_3) + \nu(1, 1, 1) = 0$, tức $2x_1 = 4x_2 = 6x_3 = -\nu$. Vậy $x$ tỉ lệ với $(\tfrac12, \tfrac14, \tfrac16)$, và chuẩn hóa cho tổng bằng 1 được $x^\star = (\tfrac{6}{11}, \tfrac{3}{11}, \tfrac{2}{11})$ với $\nu = -\tfrac{12}{11}$ và giá trị tối ưu $\tfrac{6}{11}$. Thành phần càng "đắt" thì nhận càng ít, và tại nghiệm, **chi phí biên** $\partial f_0 / \partial x_i$ của mọi thành phần bằng nhau, cùng bằng $\tfrac{12}{11}$. Nếu chi phí biên còn chênh lệch, chuyển một chút từ thành phần đắt sang thành phần rẻ sẽ giảm tổng chi phí mà vẫn giữ tổng bằng 1.
@@ -66,13 +66,19 @@ Cực tiểu $x_1^2 + 2x_2^2 + 3x_3^2$ với $x_1 + x_2 + x_3 = 1$. Ở đây $A
 
 ### Ràng buộc không âm
 
-Xét bài toán cực tiểu $f_0(x)$ với $x \succeq 0$. Tiêu chuẩn đòi $\nabla f_0(x)^T (y - x) \ge 0$ với mọi $y \succeq 0$. Hàm tuyến tính $\nabla f_0(x)^T y$ phải bị chặn dưới trên nón $y \succeq 0$, nên $\nabla f_0(x) \succeq 0$. Lấy $y = 0$ được $\nabla f_0(x)^T x \le 0$, trong khi đây là tổng các tích của hai số không âm, nên mỗi tích bằng 0. Sách tóm lại thành:
+Xét bài toán cực tiểu $f_0(x)$ với ràng buộc không âm $x \succeq 0$ (tức $x_i \ge 0$ với mọi $i = 1, \dots, n$). Tiêu chuẩn tối ưu đòi hỏi $\nabla f_0(x)^T (y - x) \ge 0$ với mọi $y \succeq 0$. Do hàm tuyến tính theo $y$ là $\nabla f_0(x)^T y = \sum_{i=1}^n \big(\nabla f_0(x)\big)_i y_i$ phải bị chặn dưới trên toàn bộ nón không âm $\{y \in \mathbb{R}^n : y_i \ge 0\}$, ta suy ra $\nabla f_0(x) \succeq 0$. Chọn thử điểm $y = 0 \in X$, ta thu được $-\nabla f_0(x)^T x \ge 0$, tương đương $\nabla f_0(x)^T x \le 0$. Khai triển tích vô hướng này:
 
 $$
-x \succeq 0, \qquad \nabla f_0(x) \succeq 0, \qquad x_i \,\big(\nabla f_0(x)\big)_i = 0 \ \text{ với mọi } i .
+\nabla f_0(x)^T x = \sum_{i=1}^n x_i \big(\nabla f_0(x)\big)_i \le 0.
 $$
 
-Điều kiện cuối gọi là **điều kiện bù**: Với mỗi $i$, hoặc $x_i = 0$, hoặc đạo hàm riêng theo $x_i$ bằng 0. Đọc theo từng tọa độ: Nếu biến $x_i$ nằm hẳn trong miền ($x_i > 0$), nó được tự do dịch chuyển cả hai phía, nên đạo hàm theo nó phải bằng 0 như bài toán không ràng buộc. Nếu $x_i$ bị chặn ở biên 0, đạo hàm theo nó chỉ cần không âm: Hàm muốn $x_i$ giảm tiếp xuống dưới 0, nhưng ràng buộc không cho.
+Vì cả $x_i \ge 0$ lẫn $\big(\nabla f_0(x)\big)_i \ge 0$ với mọi $i = 1, \dots, n$, mỗi số hạng $x_i \big(\nabla f_0(x)\big)_i$ đều không âm. Để tổng của chúng không dương ($\le 0$), bắt buộc từng số hạng riêng lẻ phải triệt tiêu về 0. Ta đúc kết toàn bộ điều kiện thành hệ thức:
+
+$$
+x \succeq 0, \qquad \nabla f_0(x) \succeq 0, \qquad x_i \,\big(\nabla f_0(x)\big)_i = 0 \quad \text{với mọi } i = 1, \dots, n.
+$$
+
+Điều kiện cuối gọi là **điều kiện bù**: Với mỗi $i = 1, \dots, n$, hoặc $x_i = 0$, hoặc đạo hàm riêng theo $x_i$ bằng 0. Đọc theo từng tọa độ: Nếu biến $x_i$ nằm hẳn trong miền ($x_i > 0$), nó được tự do dịch chuyển cả hai phía, nên đạo hàm theo nó phải bằng 0 như bài toán không ràng buộc. Nếu $x_i$ bị chặn ở biên 0, đạo hàm theo nó chỉ cần không âm: Hàm muốn $x_i$ giảm tiếp xuống dưới 0, nhưng ràng buộc không cho.
 
 Ví dụ: Cực tiểu $(x_1 - 1)^2 + (x_2 + 2)^2$ với $x \succeq 0$. Không ràng buộc, nghiệm sẽ là $(1, -2)$, nhưng $x_2 = -2$ vi phạm ràng buộc. Ứng viên $x = (1, 0)$ có $\nabla f_0(x) = (0,\ 4)$. Kiểm tra: $x \succeq 0$, gradient $\succeq 0$, và $x_1 \cdot 0 = 0$, $x_2 \cdot 4 = 0$. Cả ba điều kiện thỏa, nên $(1, 0)$ tối ưu.
 
@@ -159,7 +165,7 @@ Cực tiểu $f_0(x) = x_1^2 + x_2^2 - 2x_1 + 6x_2$ với $x \succeq 0$. Tìm ng
 :::
 
 ::: solution
-$\nabla f_0(x) = (2x_1 - 2,\ 2x_2 + 6)$. Thành phần thứ hai luôn dương khi $x_2 \ge 0$, nên điều kiện bù $x_2 (2x_2 + 6) = 0$ buộc $x_2 = 0$. Với tọa độ thứ nhất, thử $x_1 > 0$ thì cần $2x_1 - 2 = 0$, tức $x_1 = 1$. Ứng viên $x = (1, 0)$ có $\nabla f_0(x) = (0,\ 6) \succeq 0$, $x_1 \cdot 0 = 0$, $x_2 \cdot 6 = 0$, nên tối ưu, với giá trị $1 - 2 = -1$. Đọc theo từng tọa độ: $x_1$ nằm trong miền nên đạo hàm theo nó bằng 0, còn $x_2$ bị chặn ở 0 và đạo hàm theo nó dương, nghĩa là hàm còn muốn giảm $x_2$ xuống âm nhưng ràng buộc không cho.
+$\nabla f_0(x) = (2x_1 - 2,\ 2x_2 + 6)$. Thành phần thứ hai luôn dương khi $x_2 \ge 0$, nên điều kiện bù $x_2 (2x_2 + 6) = 0$ buộc $x_2 = 0$. Với tọa độ thứ nhất, thử $x_1 > 0$ thì cần $2x_1 - 2 = 0$, tức $x_1 = 1$. Ứng viên $x = (1, 0)$ có $\nabla f_0(x) = (0,\ 6) \succeq 0$, $x_1 \cdot 0 = 0$, $x_2 \cdot 6 = 0$, nên tối ưu, với giá trị $1 - 2 = -1$. Đọc theo từng tọa độ: Tọa độ $x_1$ nằm trong miền nên đạo hàm theo nó bằng 0, còn tọa độ $x_2$ bị chặn ở 0 và đạo hàm theo nó dương, nghĩa là hàm còn muốn giảm $x_2$ xuống âm nhưng ràng buộc không cho.
 :::
 
 ## Tóm tắt
@@ -168,7 +174,6 @@ Với bài toán lồi có hàm mục tiêu khả vi, $x$ tối ưu khi và ch�
 
 Khi không có ràng buộc, tiêu chuẩn là $\nabla f_0(x) = 0$. Với ràng buộc $Ax = b$, nó là điều kiện nhân tử Lagrange $\nabla f_0(x) + A^T\nu = 0$. Với ràng buộc $x \succeq 0$, nó là gradient không âm cùng điều kiện bù. Cuối cùng, nghiệm chính là điểm bất động của phép đi một bước gradient rồi chiếu về miền, và đó là nền của phương pháp gradient có chiếu.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.2.3 (tr. 138–142), tiêu chuẩn (4.21), Hình 4.2, Ví dụ 4.5 và các trường hợp ràng buộc đẳng thức, ràng buộc không âm.
-- Mô phỏng điều kiện tối ưu trên đa giác, ví dụ phân bổ với chi phí biên, phần phép chiếu và phương pháp gradient có chiếu, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

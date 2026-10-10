@@ -55,13 +55,13 @@ Chiều ngược lại cũng xảy ra. Một phép đổi biến không affine c
 
 Thay vì đổi biến, ta có thể bọc từng hàm trong một hàm một biến. Giả sử $\psi_0$ tăng ngặt, mỗi $\psi_i$ với $i = 1, \ldots, m$ thỏa $\psi_i(u) \le 0$ khi và chỉ khi $u \le 0$, và mỗi $\psi_{m+i}$ thỏa $\psi_{m+i}(u) = 0$ khi và chỉ khi $u = 0$. Thay $f_i$ bằng $\psi_i \circ f_i$ và $h_i$ bằng $\psi_{m+i} \circ h_i$, ta được một bài toán có cùng miền khả thi và cùng tập nghiệm với bài toán gốc. Phép co giãn ở mục 1 chỉ là trường hợp riêng khi mọi $\psi_i$ tuyến tính.
 
-Ví dụ 4.3 của sách so sánh hai bài toán: Cực tiểu $\|Ax - b\|_2$ và cực tiểu $\|Ax - b\|_2^2$. Hàm $u \mapsto u^2$ tăng ngặt trên $[0, \infty)$, tập giá trị của chuẩn, nên hai bài toán có cùng nghiệm, còn giá trị tối ưu liên hệ bởi $p^\star_2 = (p^\star_1)^2$. Hai bài toán vẫn không giống nhau: Hàm thứ nhất không khả vi tại những điểm có $Ax = b$, còn hàm thứ hai là một hàm toàn phương khả vi ở mọi nơi. Phép biến đổi quen thuộc nhất trong học máy cũng thuộc loại này: Thay vì cực đại hóa hàm hợp lý của dữ liệu, ta cực tiểu hóa âm logarit của nó. Logarit tăng ngặt nên tập nghiệm không đổi, và tích của các mật độ biến thành một tổng, dễ lấy đạo hàm hơn nhiều.
+Xét bài toán so sánh kinh điển: Cực tiểu $\|Ax - b\|_2$ và cực tiểu $\|Ax - b\|_2^2$. Hàm $u \mapsto u^2$ tăng ngặt trên $[0, \infty)$, tập giá trị của chuẩn, nên hai bài toán có cùng nghiệm, còn giá trị tối ưu liên hệ bởi $p^\star_2 = (p^\star_1)^2$. Hai bài toán vẫn không giống nhau: Hàm thứ nhất không khả vi tại những điểm có $Ax = b$, còn hàm thứ hai là một hàm toàn phương khả vi ở mọi nơi. Phép biến đổi quen thuộc nhất trong học máy cũng thuộc loại này: Thay vì cực đại hóa hàm hợp lý của dữ liệu, ta cực tiểu hóa âm logarit của nó. Logarit tăng ngặt nên tập nghiệm không đổi, và tích của các mật độ biến thành một tổng, dễ lấy đạo hàm hơn nhiều.
 
 Với ràng buộc, điều kiện đặt lên $\psi_i$ yếu hơn: Nó chỉ cần giữ đúng dấu, không cần đơn điệu. Ràng buộc $x^3 \le 0$ chẳng hạn tương đương $x \le 0$, vì hàm căn bậc ba giữ dấu. Hàm $x^3$ không lồi trên $\mathbb{R}$, nên cách viết thứ nhất không phải dạng chuẩn lồi, còn cách viết thứ hai thì có. Ràng buộc $\|x\|_2 \le 1$ cũng có thể viết thành $\|x\|_2^2 \le 1$, và cách viết sau khả vi ở mọi nơi.
 
 ## 4. Biến bù
 
-Một bất đẳng thức có thể được thay bằng một đẳng thức cộng thêm một điều kiện không âm: $f_i(x) \le 0$ khi và chỉ khi tồn tại $s_i \ge 0$ với $f_i(x) + s_i = 0$. Áp dụng cho mọi ràng buộc bất đẳng thức, ta được bài toán
+Một bất đẳng thức có thể được thay bằng một đẳng thức cộng thêm một điều kiện không âm: Ta có $f_i(x) \le 0$ khi và chỉ khi tồn tại $s_i \ge 0$ với $f_i(x) + s_i = 0$. Áp dụng cho mọi ràng buộc bất đẳng thức, ta được bài toán
 
 $$
 \begin{aligned}
@@ -99,11 +99,11 @@ Phép biến đổi này đặc biệt hữu ích khi hàm mục tiêu là một
 
 Có một mẹo ký hiệu cho phép giấu mọi ràng buộc vào hàm mục tiêu. Định nghĩa $F(x) = f_0(x)$ khi $x$ khả thi và $F(x) = \infty$ trong trường hợp còn lại. Bài toán cực tiểu $F$ trông như không có ràng buộc, nhưng tất nhiên nó không dễ hơn chút nào. Thậm chí nó còn khó phân tích hơn: Nếu $f_0$ khả vi với miền mở, thì $F$ thường không khả vi, vì miền của nó, tức miền khả thi, hiếm khi là tập mở.
 
-Chiều ngược lại hữu ích hơn. Nhiều bài toán chứa những **ràng buộc ẩn** nằm trong miền xác định của hàm. Hàm $-\sum_i \log x_i$ ngầm đòi hỏi $x_i > 0$ với mọi $i$, và hàm mất mát entropy chéo ngầm đòi hỏi các xác suất dự đoán dương. Sách đưa ra một ví dụ khác: Hàm bằng $x^Tx$ khi $Ax = b$ và bằng $\infty$ khi ngược lại. Bài toán cực tiểu hàm này không có ràng buộc, nhưng hàm mục tiêu không khả vi. Viết ràng buộc ra ngoài, ta được bài toán cực tiểu $x^Tx$ với $Ax = b$: Có thêm một ràng buộc đẳng thức, nhưng mọi hàm đều khả vi. Nhận ra ràng buộc ẩn quan trọng cả khi chạy thuật toán: Một bước lặp đi ra ngoài miền xác định sẽ cho giá trị vô nghĩa, và kỹ thuật tìm kiếm đường ở Lecture 04 phải kiểm tra điều đó trước tiên.
+Chiều ngược lại hữu ích hơn. Nhiều bài toán chứa những **ràng buộc ẩn** nằm trong miền xác định của hàm. Hàm $-\sum_i \log x_i$ ngầm đòi hỏi $x_i > 0$ với mọi $i$, và hàm mất mát entropy chéo ngầm đòi hỏi các xác suất dự đoán dương. Xét ví dụ khác: Hàm mục tiêu bằng $x^Tx$ khi $Ax = b$ và bằng $\infty$ khi ngược lại. Bài toán cực tiểu hàm này không có ràng buộc, nhưng hàm mục tiêu không khả vi. Viết ràng buộc ra ngoài, ta được bài toán cực tiểu $x^Tx$ với $Ax = b$: Có thêm một ràng buộc đẳng thức, nhưng mọi hàm đều khả vi. Nhận ra ràng buộc ẩn quan trọng cả khi chạy thuật toán: Một bước lặp đi ra ngoài miền xác định sẽ cho giá trị vô nghĩa, và kỹ thuật tìm kiếm đường ở Lecture 04 phải kiểm tra điều đó trước tiên.
 
 ## 7. Viết lại để tính lồi hiện ra
 
-Sách định nghĩa bài toán lồi một cách chặt: Không chỉ cực tiểu một hàm lồi trên một tập lồi, mà miền khả thi phải được mô tả bằng các bất đẳng thức của hàm lồi và các đẳng thức affine. Chủ đề [cực tiểu cục bộ và toàn cục](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) của Lecture 01 đã đưa ra ví dụ của sách, với ràng buộc $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$: Miền khả thi lồi, nhưng cách viết thì không. Các phép biến đổi ở trên chính là công cụ để sửa cách viết. Nhân ràng buộc thứ nhất với $1 + x_2^2 > 0$ cho $x_1 \le 0$, một phép co giãn bằng một hàm dương. Lấy căn bậc hai ở ràng buộc thứ hai cho $x_1 + x_2 = 0$, một phép biến đổi giữ nghiệm của phương trình.
+Tối ưu hóa lồi đòi hỏi một định nghĩa chặt chẽ về mặt hình thức: Không chỉ là việc cực tiểu một hàm lồi trên một tập lồi, mà miền khả thi bắt buộc phải được mô tả tường minh bằng các bất đẳng thức của hàm lồi và các đẳng thức affine. Chủ đề [cực tiểu cục bộ và toàn cục](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) của Lecture 01 đã phân tích ví dụ tiêu biểu với ràng buộc $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$: Miền khả thi hình học vốn là tập lồi, nhưng cách viết biểu thức ban đầu thì không lồi. Các phép biến đổi ở trên chính là công cụ để sửa cách viết. Nhân ràng buộc thứ nhất với $1 + x_2^2 > 0$ cho $x_1 \le 0$, một phép co giãn bằng một hàm dương. Lấy căn bậc hai ở ràng buộc thứ hai cho $x_1 + x_2 = 0$, một phép biến đổi giữ nghiệm của phương trình.
 
 Có hai giới hạn cần nhớ. Thứ nhất, khi chính miền khả thi không lồi, không cách viết nào giữ nguyên biến làm nó lồi được. Ràng buộc $x^2 \ge 1$ mô tả hai nửa đường thẳng rời nhau, và đó là một sự thật về tập hợp, không phải về cách viết. Thứ hai, lồi không có nghĩa là giải được: Bài toán cực tiểu $-\log x$ với $x \ge 1$ là bài toán lồi ở dạng chuẩn, nhưng hàm mục tiêu giảm về $-\infty$ khi $x \to \infty$, nên bài toán không có nghiệm.
 
@@ -143,7 +143,7 @@ Về nghiệm thì không sai: Ánh xạ $z \mapsto z^2$ phủ kín $[0, \infty)
 
 <details><summary>Xem lời giải thích</summary>
 
-Theo định nghĩa của sách, đó là tính chất của cách viết. Hai bài toán tương đương có cùng nghiệm, nhưng một cách viết có thể đáp ứng các điều kiện của dạng chuẩn lồi trong khi cách kia không. Điều này nghe như một chi tiết hình thức, nhưng nó phản ánh một sự thật thực tế. Các thuật toán và các định lý đều làm việc với một cách viết cụ thể, chẳng hạn định lý cực tiểu cục bộ là toàn cục cần hàm mục tiêu lồi theo đúng biến đang được tối ưu. Vì vậy nghệ thuật của mô hình hóa là tìm một cách viết tương đương mà tính lồi hiện rõ, chứ không chỉ tin rằng bài toán "về bản chất" là lồi.
+Đó là tính chất gắn liền với cách viết toán học cụ thể. Hai bài toán tương đương có cùng nghiệm, nhưng một cách viết có thể đáp ứng các điều kiện của dạng chuẩn lồi trong khi cách kia không. Điều này nghe như một chi tiết hình thức, nhưng nó phản ánh một sự thật thực tế. Các thuật toán và các định lý đều làm việc với một cách viết cụ thể, chẳng hạn định lý cực tiểu cục bộ là toàn cục cần hàm mục tiêu lồi theo đúng biến đang được tối ưu. Vì vậy nghệ thuật của mô hình hóa là tìm một cách viết tương đương mà tính lồi hiện rõ, chứ không chỉ tin rằng bài toán "về bản chất" là lồi.
 
 </details>
 
@@ -190,7 +190,7 @@ Xét tập các điểm $x \in \mathbb{R}^2$ thỏa $x_1 + 2x_2 \le 4$ và $-x_1
 :::
 
 ::: solution
-Tập mới gồm các $(x, s)$ với $x_1 + 2x_2 + s_1 = 4$, $-x_1 + x_2 + s_2 = 1$, $s_1 \ge 0$, $s_2 \ge 0$, còn $x$ tự do. Tại $x = (1, 1)$: $s_1 = 4 - 3 = 1$ và $s_2 = 1 - 0 = 1$, không ràng buộc nào chặt. Tại $x = (0, 1)$: $s_1 = 4 - 2 = 2$ và $s_2 = 1 - 1 = 0$, nên ràng buộc thứ hai chặt. Biến bù bằng $0$ đúng khi ràng buộc tương ứng chặt.
+Tập mới gồm các $(x, s)$ với $x_1 + 2x_2 + s_1 = 4$, $-x_1 + x_2 + s_2 = 1$, $s_1 \ge 0$, $s_2 \ge 0$, còn $x$ tự do. Tại điểm $x = (1, 1)$: Biến bù $s_1 = 4 - 3 = 1$ và biến bù $s_2 = 1 - 0 = 1$, không ràng buộc nào chặt. Tại điểm $x = (0, 1)$: Biến bù $s_1 = 4 - 2 = 2$ và biến bù $s_2 = 1 - 1 = 0$, nên ràng buộc thứ hai chặt. Biến bù bằng $0$ đúng khi ràng buộc tương ứng chặt.
 :::
 
 ## Tóm tắt
@@ -199,7 +199,6 @@ Hai bài toán tương đương nếu nghiệm của bài toán này cho ngay ng
 
 Tính lồi là tính chất của cách viết. Đổi biến qua hàm mũ có thể làm một bài toán không lồi trở thành lồi, còn đổi biến không affine hay thêm biến bù cho ràng buộc phi tuyến có thể làm mất tính lồi. Dạng epigraph thì luôn giữ tính lồi và cho thấy mọi bài toán lồi đều viết được với hàm mục tiêu tuyến tính. Cuối cùng, nới lỏng chỉ cho một cận, còn xấp xỉ chỉ có ích khi đo được sai số, nên cả hai đều không phải phép biến đổi tương đương.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.1.3 (tr. 130–135) về bài toán tương đương, đổi biến, biến bù, dạng epigraph và ràng buộc ẩn, Ví dụ 4.3. §4.2.1 (tr. 136–138) về bài toán lồi trừu tượng, §4.2.4 (tr. 142–144) về những phép biến đổi giữ tính lồi.
-- Ví dụ đổi biến $\sigma = e^s$ cho âm log-likelihood Gauss, mô phỏng, ví dụ đổi biến $x = z^2$, ví dụ nới lỏng nhị phân, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

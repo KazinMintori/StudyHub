@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-10-lam-sach-du-lieu
 section: lecture
 title: "Làm sạch dữ liệu có cấu trúc"
-prerequisites: ["gia-tri-thieu","dictionary","ky-vong"]
+prerequisites: ["gia-tri-thieu", "dictionary"]
 lessonStatus: ready
 description: "Làm sạch dữ liệu chuyên nghiệp: Toàn vẹn khóa ngoại, xung đột khóa tự nhiên, đối soát cột dẫn xuất, xử lý ngoại lai Tukey và đóng gói báo cáo QA chéo bảng."
 ---

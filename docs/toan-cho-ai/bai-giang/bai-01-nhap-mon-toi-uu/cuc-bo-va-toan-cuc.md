@@ -13,7 +13,7 @@ Câu trả lời ngắn gọn nằm ở một định lý chỉ dài vài dòng:
 
 ## 1. Bài toán tối ưu lồi ở dạng chuẩn
 
-Sách định nghĩa một **bài toán tối ưu lồi** là bài toán có dạng
+Ta định nghĩa một **bài toán tối ưu lồi ở dạng chuẩn** là bài toán có dạng
 
 $$
 \begin{aligned}
@@ -23,13 +23,13 @@ $$
 \end{aligned}
 $$
 
-trong đó $f_0, f_1, \dots, f_m$ là các hàm lồi. So với một bài toán tối ưu tổng quát, có ba yêu cầu thêm: Hàm mục tiêu lồi, các hàm ràng buộc bất đẳng thức lồi, và các ràng buộc đẳng thức **affine**.
+trong đó $f_0, f_1, \dots, f_m$ là các hàm lồi, và các ràng buộc đẳng thức là các hàm affine với $a_i^T x = a_{i1} x_1 + a_{i2} x_2 + \dots + a_{in} x_n = b_i$. So với một bài toán tối ưu tổng quát, có ba yêu cầu cốt lõi: Hàm mục tiêu lồi, các hàm ràng buộc bất đẳng thức lồi, và các ràng buộc đẳng thức bắt buộc phải là **affine**.
 
-Ba yêu cầu này bảo đảm miền khả thi là một tập lồi. Miền khả thi là giao của miền xác định chung, các tập mức dưới $\{x : f_i(x) \le 0\}$ của những hàm lồi, và các siêu phẳng $\{x : a_i^T x = b_i\}$. Mỗi tập đều lồi theo những gì đã học, và giao của các tập lồi là tập lồi. Vậy bài toán tối ưu lồi là bài toán **cực tiểu một hàm lồi trên một tập lồi**, với tập lồi đó được mô tả theo một cách cụ thể.
+Ba yêu cầu này bảo đảm miền khả thi là một tập lồi. Miền khả thi là giao của miền xác định chung, các tập mức dưới $\{x : f_i(x) \le 0\}$ của những hàm lồi, và các siêu phẳng $\{x : a_i^T x = b_i\}$. Mỗi tập đều lồi theo các tính chất hình học cơ bản, và giao của các tập lồi luôn là một tập lồi. Như vậy, bài toán tối ưu lồi chính là bài toán **cực tiểu một hàm lồi trên một tập lồi**, với tập lồi đó được mô tả một cách tường minh qua các ràng buộc.
 
-**Vì sao đẳng thức phải affine.** Một ràng buộc đẳng thức $h(x) = 0$ tương đương với hai bất đẳng thức $h(x) \le 0$ và $-h(x) \le 0$. Muốn cả hai đều là ràng buộc lồi, ta cần $h$ vừa lồi vừa lõm, tức $h$ affine. Một đẳng thức phi tuyến thường cho tập không lồi. Ràng buộc $x_1^2 + x_2^2 = 1$ cho đường tròn, không chứa trung điểm $(0, 0)$ của hai điểm $(1, 0)$ và $(-1, 0)$. Thay nó bằng $x_1^2 + x_2^2 \le 1$ thì được cả hình tròn, lồi.
+**Vì sao đẳng thức phải affine.** Một ràng buộc đẳng thức $h(x) = 0$ tương đương với hai bất đẳng thức đồng thời $h(x) \le 0$ và $-h(x) \le 0$. Muốn cả hai đều là ràng buộc lồi, ta cần $h$ vừa lồi vừa lõm, kéo theo $h$ bắt buộc phải là hàm affine. Một đẳng thức phi tuyến nói chung sẽ tạo ra miền khả thi không lồi. Xét ràng buộc $x_1^2 + x_2^2 = 1$, tập nghiệm là đường tròn đơn vị, hoàn toàn không chứa trung điểm $(0, 0)$ của hai điểm đối xứng $(1, 0)$ và $(-1, 0)$. Khi thay thế bằng bất đẳng thức $x_1^2 + x_2^2 \le 1$, ta thu được hình tròn đặc, vốn là một tập lồi.
 
-**Một chi tiết về cách mô tả.** Sách cẩn thận phân biệt giữa "cực tiểu hàm lồi trên tập lồi" và "bài toán lồi ở dạng chuẩn". Ví dụ của sách: Cực tiểu $x_1^2 + x_2^2$ với $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$. Miền khả thi $\{x : x_1 \le 0,\ x_1 + x_2 = 0\}$ là tập lồi, nhưng bài toán không ở dạng chuẩn, vì hàm ràng buộc thứ nhất không lồi và hàm đẳng thức không affine. Viết lại thành $x_1 \le 0$ và $x_1 + x_2 = 0$, ta được một bài toán lồi ở dạng chuẩn, tương đương với bài toán ban đầu. Trong thực hành, việc tìm một mô tả đúng dạng như vậy thường không khó, nhưng nó là việc phải làm: Các bộ giải chỉ nhận bài toán ở dạng chuẩn.
+**Phân biệt bài toán lồi tổng quát và bài toán lồi dạng chuẩn.** Ta cần lưu ý sự khác biệt giữa khái niệm bài toán "cực tiểu hàm lồi trên tập lồi" và "bài toán tối ưu lồi ở dạng chuẩn". Xét ví dụ: Cực tiểu $x_1^2 + x_2^2$ với các ràng buộc $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$. Miền khả thi $\{x : x_1 \le 0,\ x_1 + x_2 = 0\}$ thực chất là một tập lồi, nhưng cách biểu diễn ban đầu chưa ở dạng chuẩn vì hàm ràng buộc thứ nhất không lồi và hàm đẳng thức không affine. Khi viết lại thành $x_1 \le 0$ và $x_1 + x_2 = 0$, ta thu được một bài toán tối ưu lồi ở dạng chuẩn hoàn toàn tương đương với bài toán ban đầu. Trong thực tế tính toán, việc đưa bài toán về đúng dạng chuẩn là bước tiên quyết, bởi các thuật toán tối ưu và bộ giải số học (solver) chỉ chấp nhận dữ liệu đầu vào ở dạng chuẩn.
 
 **Cực đại hàm lõm.** Bài toán cực đại một hàm lõm $f_0$ với cùng loại ràng buộc cũng được gọi là bài toán lồi, vì nó tương đương với cực tiểu hàm lồi $-f_0$.
 
@@ -76,7 +76,7 @@ Mọi phương pháp tối ưu lặp, từ phương pháp gradient tới phươn
 
 Đây là lý do một bài toán đã được nhận ra là lồi được xem gần như "đã giải xong": Việc còn lại là chọn một bộ giải đủ tốt. Còn với mạng nơ-ron, hàm mất mát không lồi, và câu hỏi "vì sao phương pháp gradient vẫn tìm được nghiệm tốt" là một hướng nghiên cứu còn mở, không có lời đáp gọn như định lý trên.
 
-**Tựa lồi chưa đủ.** Với bài toán tựa lồi, tức hàm mục tiêu chỉ có các tập mức dưới lồi, định lý không còn đúng (§4.2.5). Hàm $f(x) = \min\{\max\{x, 0\},\ 1\}$ bằng 0 khi $x \le 0$, tăng tuyến tính trên $[0, 1]$, và bằng 1 khi $x \ge 1$. Nó đơn điệu nên tựa lồi. Điểm $x = 2$ nằm trên đoạn phẳng ở độ cao 1, nên là cực tiểu cục bộ với mọi $R < 1$, trong khi giá trị nhỏ nhất là 0. Lời chứng minh ở mục 3 hỏng vì tựa lồi không cho bất đẳng thức dây cung, chỉ cho $f(z) \le \max\{f(x), f(y)\}$, mà như vậy thì không đủ để $f(z) < f(x)$.
+**Tính tựa lồi chưa đủ để bảo toàn tính chất.** Với bài toán tựa lồi (quasiconvex optimization), tức hàm mục tiêu chỉ thỏa mãn điều kiện các tập mức dưới lồi, định lý này không còn đúng nữa. Hàm $f(x) = \min\{\max\{x, 0\},\ 1\}$ bằng 0 khi $x \le 0$, tăng tuyến tính trên $[0, 1]$, và bằng 1 khi $x \ge 1$. Hàm này đơn điệu nên tựa lồi. Điểm $x = 2$ nằm trên đoạn phẳng ở độ cao 1, do đó là một cực tiểu cục bộ với mọi $R < 1$, trong khi giá trị nhỏ nhất toàn cục của hàm lại là 0. Lời chứng minh ở Mục 3 không còn áp dụng được vì tính tựa lồi không cho bất đẳng thức dây cung, mà chỉ cho $f(z) \le \max\{f(x), f(y)\}$, điều kiện này không đủ mạnh để suy ra $f(z) < f(x)$.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -84,7 +84,7 @@ Mọi phương pháp tối ưu lặp, từ phương pháp gradient tới phươn
 
 <details><summary>Xem lời giải thích</summary>
 
-Chọn khoảng cách đúng $R$ vẫn được, vì định nghĩa cực tiểu cục bộ ở đây dùng điều kiện $\|z - x\|_2 \le R$, có cả biên. Sách chọn $R/2$ cho an toàn, để $z$ nằm hẳn trong lân cận dù định nghĩa dùng bất đẳng thức chặt hay không. Còn chọn $z = y$ thì vô dụng: $y$ ở ngoài lân cận, nên $f_0(y) < f_0(x)$ không mâu thuẫn gì với tính tối ưu cục bộ. Toàn bộ sức mạnh của lời chứng minh nằm ở chỗ tính lồi **kéo thông tin từ $y$ ở xa về một điểm $z$ ở gần**.
+Chọn khoảng cách đúng $R$ vẫn hoàn toàn hợp lệ, vì định nghĩa cực tiểu cục bộ ở đây sử dụng điều kiện $\|z - x\|_2 \le R$ (bao gồm cả biên). Việc chọn $R/2$ là một kỹ thuật chặt chẽ nhằm bảo đảm $z$ nằm hẳn bên trong hình cầu mở của lân cận, tránh phụ thuộc vào việc định nghĩa dùng bất đẳng thức ngặt hay không. Trái lại, việc chọn ngay $z = y$ sẽ không mang lại kết quả: Điểm $y$ nằm ngoài lân cận bán kính $R$, do đó $f_0(y) < f_0(x)$ không hề mâu thuẫn với tính tối ưu cục bộ tại $x$. Toàn bộ vẻ đẹp và sức mạnh của phép chứng minh nằm ở chỗ: Tính lồi **kéo thông tin từ điểm $y$ ở rất xa về một điểm $z$ nằm ngay sát trong lân cận**.
 
 </details>
 
@@ -119,7 +119,7 @@ Với mỗi bài toán, cho biết nó có phải bài toán lồi ở dạng ch
 :::
 
 ::: solution
-(a) Có, sau khi viết ràng buộc thành $1 - x_1 - x_2 \le 0$, một hàm affine. Hàm mục tiêu lồi. (b) Không, vì ràng buộc đẳng thức không affine và miền khả thi là đường tròn, không lồi. Bài toán gốc không có dạng lồi tương đương theo nghĩa của sách, nhưng như Câu 3 cho thấy, nó có cùng nghiệm với bài toán nới lỏng lồi khi thay "=" bằng "≤". (c) Có, đây là bài toán cực đại một hàm lõm với ràng buộc affine, nên là bài toán lồi. Nghiệm là $x = (2, 1)$ với giá trị $\log 2$: Tại đó $\nabla(\log x_1 + \log x_2) = (1/2,\ 1)$ tỉ lệ với $(1, 2)$, pháp tuyến của ràng buộc. (d) Không, vì $x_1 x_2$ không lồi: Hessian $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ có một trị riêng âm. Miền khả thi lồi, nhưng chừng đó không đủ.
+(a) Có, sau khi viết ràng buộc thành $1 - x_1 - x_2 \le 0$, một hàm affine. Hàm mục tiêu lồi. (b) Không, vì ràng buộc đẳng thức không affine và miền khả thi là đường tròn (tập không lồi). Bài toán gốc không thể biến đổi đại số tương đương về dạng chuẩn, tuy nhiên như Câu 3 đã phân tích, nó có cùng nghiệm với bài toán nới lỏng lồi khi thay dấu đẳng thức "=" bằng bất đẳng thức "≤". (c) Có, đây là bài toán cực đại một hàm lõm với ràng buộc affine, nên là bài toán lồi. Nghiệm là $x = (2, 1)$ với giá trị $\log 2$: Tại đó $\nabla(\log x_1 + \log x_2) = (1/2,\ 1)$ tỉ lệ với $(1, 2)$, pháp tuyến của ràng buộc. (d) Không, vì $x_1 x_2$ không lồi: Hessian $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ có một trị riêng âm. Miền khả thi lồi, nhưng chừng đó không đủ.
 :::
 
 ::: exercise 2. Tập nghiệm lồi
@@ -144,7 +144,6 @@ Bài toán tối ưu lồi ở dạng chuẩn có hàm mục tiêu lồi, các r
 
 Định lý trung tâm: Mọi cực tiểu cục bộ của bài toán lồi là cực tiểu toàn cục. Lời chứng minh dùng tính lồi của miền để giữ một điểm trung gian khả thi, và tính lồi của hàm để điểm đó tốt hơn. Thiếu một trong hai, định lý có thể sai, và với bài toán tựa lồi nó cũng sai. Vì vậy với bài toán lồi, một thuật toán chỉ nhìn cục bộ vẫn tìm được nghiệm toàn cục.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.2.1–4.2.2 (tr. 136–138), các bài toán (4.15)–(4.18). Bài toán tựa lồi ở §4.2.5.
-- Mô phỏng lời chứng minh, ví dụ hàm hai giếng, ví dụ miền khả thi gồm hai đoạn, ví dụ hàm tựa lồi có đoạn phẳng, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

@@ -52,7 +52,13 @@ Trước khi định nghĩa đơn hình, ta cần một khái niệm độc lậ
 Hai họ đơn hình giữ vai trò nền tảng đặc biệt:
 
 - **Đơn hình đơn vị** (Unit simplex): Được xác định bởi gốc tọa độ cùng các vector cơ sở chính tắc $\{0, e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp $\{x \in \mathbb{R}^n : x \succeq 0,\ \mathbf{1}^T x \le 1\}$. Đơn hình này có số chiều bằng $n$.
-- **Đơn hình xác suất** (Probability simplex): Được xác định bởi các vector cơ sở chính tắc $\{e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp $\Delta^n = \{x \in \mathbb{R}^n : x \succeq 0,\ \mathbf{1}^T x = \sum_{i=1}^n x_i = 1\}$. Đơn hình này có số chiều affine bằng $n - 1$, và mỗi điểm $x \in \Delta^n$ tương ứng với một phân phối xác suất rời rạc trên $n$ biến cố, với $x_i là xác suất của biến cố thứ $i$.
+- **Đơn hình xác suất** (Probability simplex): Được xác định bởi các vector cơ sở chính tắc $\{e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp:
+
+$$
+\Delta^n = \left\{x \in \mathbb{R}^n : x \succeq 0,\ \mathbf{1}^T x = \sum_{i=1}^n x_i = 1\right\}.
+$$
+
+Đơn hình này có số chiều affine bằng $n - 1$, và mỗi điểm $x \in \Delta^n$ tương ứng với một phân phối xác suất rời rạc trên $n$ biến cố, với $x_i$ là xác suất của biến cố thứ $i$.
 
 Đơn hình xác suất là cấu trúc hình học trung tâm trong học máy: Đầu ra xác suất của hàm Softmax trong mạng nơ-ron phân loại đa lớp là một điểm nằm trong phần trong tương đối của đơn hình xác suất. Trọng số phân bổ của mô hình hỗn hợp Gaussian (GMM), hay các trọng số Attention trong kiến trúc Transformer, đều là các phần tử của đơn hình xác suất. Mỗi đỉnh $e_i$ biểu thị một quyết định tuyệt đối (xác suất 100% cho lớp $i$), trong khi trọng tâm $\tfrac{1}{n} \mathbf{1}$ biểu thị trạng thái hoàn toàn ngẫu nhiên và bất định (phân phối đều với entropy cực đại).
 
@@ -68,7 +74,7 @@ $$
 
 với ma trận $B = \begin{bmatrix} v_1 - v_0 & \cdots & v_k - v_0 \end{bmatrix} \in \mathbb{R}^{n \times k}$. Điều kiện đối với vector $\theta$ quy về $y \succeq 0$ và $\mathbf{1}^T y \le 1$ (do $\theta_0 = 1 - \mathbf{1}^T y \ge 0$). Do các điểm độc lập affine, ma trận $B$ có các cột độc lập tuyến tính, tức hạng $\operatorname{rank}(B) = k$. Khi đó tồn tại một ma trận không suy biến $A = \begin{bmatrix} A_1 \\ A_2 \end{bmatrix} \in \mathbb{R}^{n \times n}$ sao cho $AB = \begin{bmatrix} I_k \\ 0 \end{bmatrix}$.
 
-Nhân cả hai vế của $x = v_0 + By$ với $A$ từ bên trái, ta phân rã thành hai hệ phương trình: $A_1 x = A_1 v_0 + y$ và $A_2 x = A_2 v_0$. Từ phương trình thứ nhất ta rút ra $y = A_1 (x - v_0)$. Thay biểu thức này vào các điều kiện của $y$, ta nhận được hệ điều kiện cần và đủ để $x$ thuộc đơn hình như sau:
+Nhân cả hai vế của $x = v_0 + By$ với $A$ từ bên trái, ta phân rã thành hai hệ phương trình: Cụ thể là $A_1 x = A_1 v_0 + y$ và $A_2 x = A_2 v_0$. Từ phương trình thứ nhất ta rút ra $y = A_1 (x - v_0)$. Thay biểu thức này vào các điều kiện của $y$, ta nhận được hệ điều kiện cần và đủ để $x$ thuộc đơn hình như sau:
 
 $$
 A_2 x = A_2 v_0, \qquad A_1 x \succeq A_1 v_0, \qquad \mathbf{1}^T A_1 x \le 1 + \mathbf{1}^T A_1 v_0 .

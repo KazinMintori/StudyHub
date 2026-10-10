@@ -9,182 +9,214 @@ description: "Định lý siêu phẳng phân tách và chứng minh bằng cặ
 
 Hãy đặt hai hòn đá lồi, chẳng hạn hai viên sỏi tròn, lên mặt bàn sao cho chúng không chạm nhau. Bạn luôn có thể luồn một tờ giấy phẳng vào giữa để ngăn chúng ra. Nhưng nếu một hòn đá có hình lưỡi liềm ôm lấy hòn kia, thì không tờ giấy phẳng nào làm được việc đó, dù hai hòn đá vẫn không chạm nhau. Điều khác biệt giữa hai tình huống chính là tính lồi.
 
-Định lý siêu phẳng phân tách biến trực giác ấy thành một mệnh đề chính xác, và nó là một trong những kết quả quan trọng nhất của toàn bộ chương. Lý thuyết đối ngẫu ở Lecture 03, điều kiện tối ưu KKT, bổ đề Farkas, các định lý lựa chọn, và cả câu hỏi "khi nào dữ liệu phân loại được bằng một đường thẳng" đều là hệ quả của nó, theo cách này hay cách khác. Ta phát biểu định lý, chứng minh nó trong trường hợp dễ hình dung nhất, rồi rút ra những hệ quả quan trọng.
+Định lý siêu phẳng phân tách biến trực giác ấy thành một mệnh đề toán học chính xác, và là một trong những cột trụ giải tích của toàn bộ lý thuyết tối ưu hóa. Lý thuyết đối ngẫu Lagrange, hệ điều kiện tối ưu Karush-Kuhn-Tucker (KKT), bổ đề Farkas, các định lý về giải pháp thay thế, và bài toán phân loại tuyến tính trong học máy đều bắt nguồn trực tiếp từ định lý này. Ta sẽ phát biểu định lý, chứng minh trong trường hợp hình học mẫu mực nhất, rồi mở rộng sang các hệ quả nền tảng.
 
 ## 1. Định lý siêu phẳng phân tách
 
-> **Định lý.** Cho $C$ và $D$ là hai tập lồi khác rỗng, rời nhau ($C \cap D = \varnothing$). Khi đó tồn tại $a \ne 0$ và $b$ sao cho
+> **Định lý.** Cho $C$ và $D$ là hai tập hợp lồi khác rỗng, rời nhau trong $\mathbb{R}^n$ ($C \cap D = \varnothing$). Khi đó tồn tại vector pháp tuyến $a \ne 0$ và số thực $b$ sao cho:
 > $$a^T x \le b \ \text{ với mọi } x \in C, \qquad a^T x \ge b \ \text{ với mọi } x \in D.$$
 
-Nói cách khác, hàm affine $a^T x - b$ không dương trên $C$ và không âm trên $D$. Siêu phẳng $\{x : a^T x = b\}$ được gọi là **siêu phẳng phân tách** của $C$ và $D$: Hai tập nằm ở hai phía của nó, có thể chạm vào nó nhưng không vượt qua.
+Nói cách khác, dạng affine $a^T x - b$ không dương trên toàn bộ tập $C$ và không âm trên toàn bộ tập $D$. Siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n : a^T x = b\}$ được gọi là **siêu phẳng phân tách** (separating hyperplane) của $C$ và $D$: Hai tập hợp nằm về hai phía đối diện của siêu phẳng, có thể tiếp xúc với siêu phẳng nhưng không bao giờ cắt xuyên qua.
 
-Đọc kỹ phát biểu, có ba điều đáng để ý. Thứ nhất, cả hai tập đều phải lồi: Hình lưỡi liềm ở đầu trang cho thấy thiếu tính lồi thì định lý sai. Thứ hai, kết luận dùng dấu $\le$ và $\ge$ chứ không phải dấu chặt, nên hai tập có thể cùng chạm siêu phẳng. Thứ ba, định lý chỉ khẳng định **tồn tại**, không nói siêu phẳng là duy nhất hay cách tìm nó. Tuy vậy, chứng minh dưới đây lại cho một cách dựng rất cụ thể.
+Ba lưu ý sư phạm cần khắc sâu khi phân tích định lý:
+1. Tính lồi là điều kiện bắt buộc: Ví dụ hai tập hợp dạng lưỡi liềm lồng vào nhau cho thấy nếu thiếu tính lồi, định lý phân tách sẽ sụp đổ hoàn toàn dù hai tập không giao nhau.
+2. Dấu bất đẳng thức trong kết luận là không ngặt ($\le$ và $\ge$): Hai tập hợp vẫn có thể cùng chạm vào siêu phẳng phân tách tại các điểm biên.
+3. Định lý mang tính tồn tại: Tuy nhiên, trong nhiều trường hợp giải tích cụ thể, chứng minh dưới đây cho ta một thuật toán hình học tường minh để dựng siêu phẳng phân cách.
 
 <SeparationLab type="sets" />
 
-## 2. Chứng minh khi có cặp điểm gần nhất
+## 2. Chứng minh trong trường hợp tồn tại cặp điểm gần nhất
 
-Sách chứng minh định lý trong một trường hợp đặc biệt, rồi để phần tổng quát làm bài tập. Giả sử khoảng cách Euclid giữa hai tập,
+Ta bắt đầu bằng việc chứng minh định lý trong trường hợp trực quan nhất: Khi hai tập hợp sở hữu một cặp điểm gần nhau nhất. Giả sử khoảng cách Euclid giữa hai tập lồi:
 
 $$
-\operatorname{dist}(C, D) = \inf\{\|u - v\|_2 : U \in C,\ v \in D\},
+\operatorname{dist}(C, D) = \inf\{\|u - v\|_2 : u \in C,\ v \in D\}
 $$
 
-là dương, và có hai điểm $c \in C$, $d \in D$ đạt khoảng cách đó: $\|c - d\|_2 = \operatorname{dist}(C, D)$. Điều kiện này đúng chẳng hạn khi $C$ và $D$ đóng và một trong hai tập bị chặn.
+là một số dương ngặt, và tồn tại hai điểm $c \in C$, $d \in D$ đạt đúng khoảng cách cực tiểu này: $\|c - d\|_2 = \operatorname{dist}(C, D) > 0$. Giả thiết này luôn được thỏa mãn khi $C$ và $D$ là hai tập đóng và ít nhất một trong hai tập bị chặn (tập compact).
 
-**Dựng siêu phẳng.** Đặt $a = d - c$ và $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2}$. Hàm affine tương ứng là
+**Dựng siêu phẳng phân tách.** Chọn vector pháp tuyến $a = d - c$ và hệ số tự do $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2}$. Hàm affine tương ứng nhận biểu diễn:
 
 $$
 f(x) = a^T x - b = (d - c)^T \left(x - \tfrac12(d + c)\right).
 $$
 
-Siêu phẳng $f(x) = 0$ vuông góc với đoạn $[c, d]$ và đi qua trung điểm của nó, tức là **đường trung trực** của đoạn nối hai điểm gần nhất. Trong mô phỏng, đó là đường màu tím.
+Về hình học, siêu phẳng $f(x) = 0$ vuông góc với đoạn thẳng $[c, d]$ và đi qua chính xác trung điểm $\tfrac{1}{2}(c + d)$, tức là **siêu phẳng trung trực** của đoạn thẳng nối hai điểm gần nhất.
 
-**Chứng minh $f \ge 0$ trên $D$.** Giả sử ngược lại, có $u \in D$ với $f(u) < 0$. Viết lại
+**Chứng minh $f(u) \ge 0$ với mọi $u \in D$.** Giả sử phản chứng tồn tại điểm $u \in D$ sao cho $f(u) < 0$. Khai triển hàm affine tại $u$:
 
 $$
 f(u) = (d - c)^T(u - d) + \tfrac12 \|d - c\|_2^2 ,
 $$
 
-nên $f(u) < 0$ kéo theo $(d - c)^T(u - d) < 0$. Bây giờ xét điểm $d + t(u - d)$ trên đoạn nối $d$ với $u$. Đạo hàm của bình phương khoảng cách từ điểm đó tới $c$ tại $t = 0$ là
+do đó điều kiện $f(u) < 0$ kéo theo bất đẳng thức góc tù: $(d - c)^T(u - d) < 0$. Xét điểm biến thiên $d(t) = d + t(u - d)$ nằm trên đoạn thẳng nối $d$ và $u$ với $t \in [0, 1]$. Tính đạo hàm của bình phương khoảng cách từ $d(t)$ tới điểm $c$ tại $t = 0$:
 
 $$
-\frac{d}{dt}\, \|d + t(u - d) - c\|_2^2 \Big|_{t=0} = 2(d - c)^T(u - d) < 0 .
+\left.\frac{d}{dt} \|d + t(u - d) - c\|_2^2 \right|_{t=0} = 2(d - c)^T(u - d) < 0 .
 $$
 
-Đạo hàm âm nghĩa là khi đi một chút từ $d$ về phía $u$, ta tiến gần $c$ hơn. Với $t > 0$ đủ nhỏ (và $t \le 1$), điểm $d + t(u - d)$ gần $c$ hơn $d$. Nhưng $D$ lồi và chứa $d$, $u$, nên điểm đó thuộc $D$. Điều này mâu thuẫn với việc $d$ là điểm của $D$ gần $C$ nhất. Phần $f \le 0$ trên $C$ chứng minh tương tự, bằng cách đổi vai trò $C$ và $D$.
+Đạo hàm nhận giá trị âm chứng tỏ khi dịch chuyển một đoạn nhỏ từ $d$ về phía $u$, khoảng cách tới $c$ sẽ giảm nghiêm ngặt. Với tham số $t > 0$ đủ nhỏ, điểm $d(t)$ nằm gần $c$ hơn so với điểm $d$. Vì tập $D$ lồi và chứa cả $d, u$ nên điểm $d(t)$ bắt buộc phải thuộc $D$. Điều này mâu thuẫn trực tiếp với giả thiết $d$ là điểm của $D$ gần tập $C$ nhất.
 
-Hãy để ý chính xác chỗ dùng tính lồi: Điểm $d + t(u - d)$ phải thuộc $D$. Nếu $D$ không lồi, có thể có một điểm $u \in D$ nằm "vòng ra phía trước" siêu phẳng mà đoạn nối $d$ với $u$ lại rời khỏi $D$. Đó đúng là tình huống hình lưỡi liềm. Chứng minh tổng quát, khi cặp điểm gần nhất không tồn tại, dùng một mẹo khác: Tập $C - D = \{x - y : x \in C,\ y \in D\}$ lồi và không chứa 0, nên chỉ cần tách 0 khỏi một tập lồi (Bài tập 2.22 trong sách).
+Lập luận tương tự cho phép khẳng định $f(x) \le 0$ với mọi $x \in C$.
 
-## 3. Khi nào tách được một cách nghiêm ngặt
+Điểm mấu chốt sử dụng tính lồi nằm ở chỗ: Đoạn thẳng nối $d$ và $u$ phải nằm trọn trong $D$. Khi không tồn tại cặp điểm đạt khoảng cách cực tiểu (chẳng hạn hai tập mở hoặc không bị chặn), người ta sử dụng kỹ thuật tịnh tiến bằng cách xét tập hiệu Minkowski $C - D = \{x - y : x \in C,\ y \in D\}$. Tập $C - D$ là một tập lồi không chứa gốc tọa độ, quy bài toán về việc phân tách gốc tọa độ $0$ khỏi một tập lồi.
 
-Siêu phẳng dựng ở mục 2 thật ra thỏa điều kiện mạnh hơn: $a^T x < b$ trên $C$ và $a^T x > b$ trên $D$. Ta gọi đó là **phân tách nghiêm ngặt**. Nhưng không phải cặp tập lồi rời nhau nào cũng tách nghiêm ngặt được, kể cả khi cả hai đều đóng (Bài tập 2.23 trong sách). Chẳng hạn trong $\mathbb{R}^2$, lấy
+## 3. Điều kiện phân tách nghiêm ngặt
+
+Siêu phẳng trung trực dựng ở mục trên thỏa mãn điều kiện ngặt mạnh hơn: Cụ thể là $a^T x < b$ với mọi $x \in C$ và $a^T x > b$ với mọi $x \in D$. Trạng thái này được gọi là **phân tách nghiêm ngặt** (strict separation). Tuy nhiên, không phải mọi cặp tập lồi đóng rời nhau đều có thể phân tách nghiêm ngặt, ngay cả khi hai tập đều đóng nhưng không bị chặn.
+
+Chẳng hạn trong $\mathbb{R}^2$, xét hai tập hợp:
 
 $$
-C = \{(x_1, x_2) : X_2 \le 0\}, \qquad D = \{(x_1, x_2) : X_1 > 0,\ x_1 x_2 \ge 1\}.
+C = \{(x_1, x_2) : x_2 \le 0\}, \qquad D = \{(x_1, x_2) : x_1 > 0,\ x_1 x_2 \ge 1\}.
 $$
 
-Cả hai tập đều lồi, đóng và rời nhau. Nhưng khi $x_1 \to \infty$, các điểm $(x_1, 1/x_1)$ của $D$ tiến sát trục hoành tùy ý, nên khoảng cách giữa hai tập bằng 0. Đường thẳng duy nhất tách chúng là trục hoành, và nó chạm $C$, nên không tách nghiêm ngặt. Ở đây cặp điểm gần nhất không tồn tại, nên chứng minh ở mục 2 không áp dụng được.
+Cả hai tập đều lồi, đóng và không giao nhau. Tuy nhiên khi hoành độ $x_1 \to \infty$, tung độ $1/x_1 \to 0$, khoảng cách giữa hai tập tiệm cận về 0. Siêu phẳng duy nhất có thể phân tách chúng là trục hoành $x_2 = 0$. Đường thẳng này tiếp xúc trực tiếp với biên của $C$, do đó không thể phân tách nghiêm ngặt.
 
-Trường hợp quan trọng nhất có phân tách nghiêm ngặt là **một điểm và một tập lồi đóng** (Ví dụ 2.20). Nếu $C$ lồi, đóng và $x_0 \notin C$, thì có một hình cầu nhỏ $B(x_0, \varepsilon)$ không giao $C$, và tách hình cầu đó khỏi $C$ cho ta một siêu phẳng tách nghiêm ngặt $x_0$ khỏi $C$.
+Trường hợp nền tảng luôn bảo đảm phân tách nghiêm ngặt là: **Một điểm nằm ngoài một tập lồi đóng**. Nếu $C$ là tập lồi đóng và $x_0 \notin C$, thì luôn tồn tại một hình cầu mở $B(x_0, \varepsilon)$ không giao với $C$. Khi đó siêu phẳng phân tách hình cầu mở này và tập $C$ sẽ phân tách nghiêm ngặt điểm $x_0$ khỏi $C$.
 
-Từ đó suy ra một kết quả mà ta đã hứa từ chủ đề về các phép toán giữ tính lồi: **Mọi tập lồi đóng $C$ đều là giao của tất cả các nửa không gian chứa nó**. Thật vậy, gọi $S$ là giao đó. Hiển nhiên $C \subseteq S$. Nếu có $x \in S$ mà $x \notin C$, thì có một nửa không gian chứa $C$ nhưng không chứa $x$, nên $x \notin S$, mâu thuẫn. Kết quả này là cơ sở của một ý tưởng xuyên suốt môn học: Một tập lồi đóng được mô tả hoàn toàn bởi các bất đẳng thức tuyến tính mà nó thỏa. Lý thuyết đối ngẫu, về bản chất, là việc khai thác cách mô tả "từ bên ngoài" này.
+Hệ quả hình học: **Mọi tập lồi đóng $C \subseteq \mathbb{R}^n$ đều bằng giao của tất cả các nửa không gian đóng chứa nó**. Thật vậy, giả sử tồn tại điểm $x_0$ thuộc phần giao của mọi nửa không gian nhưng $x_0 \notin C$. Áp dụng định lý phân tách nghiêm ngặt, tồn tại một nửa không gian đóng chứa trọn $C$ nhưng không chứa $x_0$, mâu thuẫn với giả thiết $x_0$ thuộc phần giao. Kết quả khẳng định: Cấu trúc bên trong của một tập lồi đóng được xác định hoàn toàn bởi các mặt phẳng bao bọc bên ngoài.
 
-## 4. Chiều ngược lại và một định lý lựa chọn
+## 4. Chiều ngược lại và định lý về giải pháp thay thế
 
-Chiều ngược của định lý phân tách, "có siêu phẳng phân tách thì hai tập rời nhau", sai nếu không thêm điều kiện. Hai tập $C = D = \{0\}$ trong $\mathbb{R}$ được tách bởi siêu phẳng $x = 0$ (cả hai đều nằm trên nó), nhưng chúng trùng nhau. Tuy nhiên, nếu một trong hai tập là **mở**, chiều ngược đúng. Lý do: Một hàm affine không dương trên tập mở $C$ phải âm trên $C$, vì nếu nó bằng 0 tại một điểm của $C$ thì nó dương tại những điểm lân cận theo hướng $a$. Ghép lại, sách có kết quả: Hai tập lồi, ít nhất một tập mở, rời nhau **khi và chỉ khi** có siêu phẳng phân tách.
+Chiều ngược của định lý phân tách ("tồn tại siêu phẳng phân tách thì hai tập phải rời nhau") nói chung không đúng nếu không bổ sung điều kiện tô-pô. Chẳng hạn hai tập suy biến $C = D = \{0\}$ trong $\mathbb{R}$ cùng nằm trên siêu phẳng $x = 0$, thỏa mãn điều kiện phân tách nhưng chúng trùng nhau. Tuy nhiên, nếu ít nhất một trong hai tập là **tập mở**, chiều ngược lại hoàn toàn chính xác.
 
-Kết quả này cho một ứng dụng đẹp (Ví dụ 2.21). Hệ bất đẳng thức tuyến tính chặt $Ax \prec b$, với $A \in \mathbb{R}^{m \times n}$, vô nghiệm khi và chỉ khi tập affine $\{b - Ax : x \in \mathbb{R}^n\}$ không giao với tập mở $\mathbb{R}^m_{++}$. Áp dụng kết quả vừa nêu rồi rút gọn, sách thu được: **$Ax \prec b$ vô nghiệm khi và chỉ khi tồn tại $\lambda \in \mathbb{R}^m$ với**
+Tổng hợp lại, ta có định lý tương đương: Hai tập lồi, trong đó ít nhất một tập là tập mở, rời nhau **khi và chỉ khi** tồn tại một siêu phẳng phân tách chúng.
+
+Ta có ứng dụng trực tiếp vào giải quyết hệ bất đẳng thức tuyến tính: Hệ bất đẳng thức ngặt $Ax \prec b$ (với ma trận $A \in \mathbb{R}^{m \times n}$) vô nghiệm khi và chỉ khi tập affine $\{b - Ax : x \in \mathbb{R}^n\}$ không giao với nón mở các số dương $\mathbb{R}^m_{++}$. Áp dụng định lý phân tách cho hai tập lồi này, ta thu được kết quả: **Hệ $Ax \prec b$ vô nghiệm khi và chỉ khi tồn tại vector $\lambda \in \mathbb{R}^m$ thỏa mãn đồng thời:**
 
 $$
 \lambda \ne 0, \qquad \lambda \succeq 0, \qquad A^T \lambda = 0, \qquad \lambda^T b \le 0 .
 $$
 
-Hai hệ này được gọi là một **cặp lựa chọn** (alternatives): Với mọi dữ liệu $A, b$, đúng một trong hai hệ có nghiệm. Ý nghĩa thực tế rất lớn. Muốn chứng minh một hệ bất đẳng thức **vô nghiệm**, ta không cần thử mọi $x$. Chỉ cần đưa ra một vector $\lambda$ thỏa hệ lựa chọn, một "giấy chứng nhận" mà ai cũng kiểm tra được bằng vài phép nhân.
+Hai hệ trên tạo thành một **cặp giải pháp thay thế** (theorem of alternatives): Với bất kỳ bộ dữ liệu $A, b$ nào, đúng một và chỉ một trong hai hệ có nghiệm khả thi. Ý nghĩa thực tiễn là: Để chứng minh một bài toán tối ưu hoặc một hệ ràng buộc vô nghiệm, ta không cần phải duyệt qua không gian nghiệm vô hạn, mà chỉ cần cung cấp một vector chứng chỉ $\lambda$ (certificate of infeasibility).
 
-::: example Một chứng nhận vô nghiệm nhỏ
-Hệ $x < 1$ và $-x < -1$ (tức $x > 1$) rõ ràng vô nghiệm. Viết dưới dạng $Ax \prec b$ với $A = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ và $b = (1, -1)$. Vector $\lambda = (1, 1)$ thỏa $\lambda \ne 0$, $\lambda \succeq 0$, $A^T \lambda = 1 - 1 = 0$ và $\lambda^T b = 1 - 1 = 0 \le 0$. Cách đọc chứng nhận: Cộng hai bất đẳng thức với trọng số $\lambda$ được $\lambda^T A x < \lambda^T b$, tức $0 < 0$, một mâu thuẫn. Mọi chứng nhận vô nghiệm theo kiểu này đều làm đúng một việc: Tìm một tổ hợp không âm của các bất đẳng thức để vế trái triệt tiêu còn vế phải không dương.
+::: example Chứng chỉ vô nghiệm cho hệ một biến
+Xét hệ bất đẳng thức $x < 1$ và $-x < -1$ (tức $x > 1$). Viết dưới dạng chuẩn $Ax \prec b$ với ma trận $A = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ và vector $b = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$. Chọn vector $\lambda = (1, 1)^T$, ta dễ dàng kiểm tra: $\lambda \ne 0$, $\lambda \succeq 0$, $A^T \lambda = 1 - 1 = 0$ và $\lambda^T b = 1 - 1 = 0 \le 0$.
+
+Cơ chế hoạt động của chứng chỉ: Lấy tổ hợp tuyến tính các bất đẳng thức với trọng số $\lambda$ dẫn tới $\lambda^T A x < \lambda^T b \iff 0 < 0$, tạo ra một mâu thuẫn số học tuyệt đối.
 :::
 
 ## 5. Siêu phẳng tựa
 
-Định lý phân tách có một "người anh em" dành cho một tập và một điểm trên biên của nó.
+Định lý phân tách có một phiên bản giới hạn khi tập thứ hai thu về một điểm biên duy nhất:
 
-> **Định nghĩa.** Cho $C \subseteq \mathbb{R}^n$ và $x_0$ thuộc biên của $C$. Nếu có $a \ne 0$ sao cho $a^T x \le a^T x_0$ với mọi $x \in C$, thì siêu phẳng $\{x : a^T x = a^T x_0\}$ được gọi là **siêu phẳng tựa** của $C$ tại $x_0$.
+> **Định nghĩa.** Cho tập hợp $C \subseteq \mathbb{R}^n$ và điểm $x_0$ thuộc biên của $C$. Nếu tồn tại vector $a \ne 0$ sao cho $a^T x \le a^T x_0$ với mọi $x \in C$, thì siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n : a^T x = a^T x_0\}$ được gọi là một **siêu phẳng tựa** (supporting hyperplane) của $C$ tại điểm $x_0$.
 
-Về hình học, siêu phẳng tựa đi qua $x_0$ và để cả tập $C$ ở một phía, giống như một tấm thước kê sát mép một vật mà không cắt vào nó. Khi biên trơn tại $x_0$, siêu phẳng tựa chính là tiếp tuyến. Khi $x_0$ là một góc nhọn, có cả một chùm siêu phẳng tựa.
+Về mặt trực giác, siêu phẳng tựa tiếp xúc với tập $C$ tại điểm biên $x_0$ và giữ toàn bộ tập $C$ nằm trọn vẹn ở một phía của nó. Khi biên trơn khả vi tại $x_0$, siêu phẳng tựa trùng khớp với mặt phẳng tiếp diện. Khi $x_0$ là một điểm góc nhọn hoặc điểm kỳ dị, tồn tại một hình nón gồm vô số siêu phẳng tựa tựa vào điểm đó.
 
-> **Định lý siêu phẳng tựa.** Nếu $C$ lồi và khác rỗng, thì tại mọi điểm $x_0$ trên biên của $C$ đều có ít nhất một siêu phẳng tựa.
+> **Định lý siêu phẳng tựa.** Nếu $C$ là một tập lồi khác rỗng thì tại mọi điểm $x_0$ nằm trên biên của $C$ luôn tồn tại ít nhất một siêu phẳng tựa.
 
-Chứng minh suy ra từ định lý phân tách, theo hai trường hợp. Nếu phần trong của $C$ khác rỗng, tách tập lồi $\{x_0\}$ khỏi tập lồi $\operatorname{int} C$ (chúng rời nhau vì $x_0$ nằm trên biên). Nếu phần trong rỗng, $C$ nằm trong một tập affine có số chiều nhỏ hơn $n$, như ta đã thấy ở chủ đề về nội tương đối, và mọi siêu phẳng chứa tập affine đó là một siêu phẳng tựa "tầm thường". Chiều ngược một phần cũng đúng: Một tập đóng, có phần trong khác rỗng và có siêu phẳng tựa tại mọi điểm biên thì lồi (Bài tập 2.27).
+Chứng minh dựa vào việc áp dụng định lý phân tách giữa điểm biên $\{x_0\}$ và phần trong tương đối $\operatorname{relint} C$. Chiều ngược lại cũng đúng dưới giả thiết tô-pô: Một tập đóng có phần trong khác rỗng là tập lồi khi và chỉ khi nó có siêu phẳng tựa tại mọi điểm biên.
 
 <SeparationLab type="support" />
 
-Siêu phẳng tựa cho một cách giải bài toán tối ưu tuyến tính trên tập lồi. Cực đại $a^T x$ trên $C$ tương đương tìm siêu phẳng tựa với pháp tuyến $a$: Giá trị lớn nhất là $a^T x_0$, đạt tại điểm tựa $x_0$. Chẳng hạn, trên quả cầu Euclid đơn vị, cực đại $x_1 + 2x_2$ đạt tại $x_0 = \tfrac{1}{\sqrt5}(1, 2)$ với giá trị $\sqrt5$. Trên quả cầu $\ell_1$ đơn vị, cực đại $2x_1 + x_2$ đạt tại đỉnh $(1, 0)$ với giá trị $2$. Tại đỉnh ấy, mọi pháp tuyến nằm giữa $(1, 1)$ và $(1, -1)$ đều cho một siêu phẳng tựa, và $(2, 1)$ là một trong số đó. Nhận xét "nghiệm của bài toán tuyến tính nằm ở chỗ siêu phẳng tựa chạm tập" là nền tảng hình học của quy hoạch tuyến tính, và cũng là lý do quả cầu $\ell_1$ cho nghiệm thưa.
+Siêu phẳng tựa là chìa khóa hình học giải bài toán tối ưu tuyến tính trên tập lồi: Bài toán tìm cực đại của dạng tuyến tính $a^T x$ trên tập $C$ tương đương với việc tịnh tiến siêu phẳng có pháp tuyến $a$ theo hướng đó cho đến khi nó trở thành siêu phẳng tựa tiếp xúc với tập $C$ tại điểm $x_0$. Điểm tiếp xúc $x_0$ chính là nghiệm tối ưu toàn cục. Đây cũng là lý do vì sao trong hồi quy Lasso (chuẩn $\ell_1$), siêu phẳng mức tiếp xúc với quả cầu $\ell_1$ tại các đỉnh trên trục tọa độ, tạo ra các nghiệm thưa (sparse solutions).
 
-## 6. Phân loại tuyến tính nhìn từ định lý phân tách
+## 6. Phân loại tuyến tính và máy vector hỗ trợ (SVM)
 
-Cho hai lớp dữ liệu $\{x_1, \ldots, x_N\}$ và $\{y_1, \ldots, y_M\}$. Ta muốn tìm một hàm affine $f(x) = a^T x - b$ dương trên lớp thứ nhất và âm trên lớp thứ hai, tức là một bộ phân loại tuyến tính. Khi nào điều đó làm được? Sách trả lời ở §8.6.1 bằng đúng định lý ta vừa học: **Hai lớp điểm phân biệt được bằng một hàm affine khi và chỉ khi bao lồi của chúng không giao nhau**.
+Xét bài toán học máy phân loại nhị phân với hai tập điểm dữ liệu $\{x_1, \ldots, x_N\}$ (nhãn dương) và $\{y_1, \ldots, y_M\}$ (nhãn âm). Ta tìm kiếm một siêu phẳng phân lớp $f(x) = a^T x - b = 0$ sao cho $f(x_i) > 0$ và $f(y_j) < 0$. Câu trả lời giải tích bắt nguồn trực tiếp từ định lý phân tách: **Hai tập dữ liệu phân tách được bằng một siêu phẳng tuyến tính khi và chỉ khi hai bao lồi của chúng không giao nhau**, tức là:
 
-Ví dụ kinh điển cho chiều "không" là bài toán XOR: Lớp thứ nhất gồm $(0, 0)$ và $(1, 1)$, lớp thứ hai gồm $(1, 0)$ và $(0, 1)$. Hai bao lồi là hai đường chéo của hình vuông, cắt nhau tại $(\tfrac12, \tfrac12)$. Điểm chung đó là trung bình của mỗi lớp, và một hàm affine dương trên cả lớp thứ nhất thì cũng dương tại trung bình của chúng, đồng thời âm tại trung bình của lớp thứ hai, mâu thuẫn. Đây là lý do một mô hình tuyến tính không học được XOR, và cần thêm đặc trưng phi tuyến hoặc thêm tầng ẩn.
+$$
+\operatorname{conv}\{x_1, \ldots, x_N\} \cap \operatorname{conv}\{y_1, \ldots, y_M\} = \varnothing .
+$$
 
-Khi hai lớp tách được, có vô số đường tách. Sách đề xuất chọn đường có **lề lớn nhất**, tức là dải phân cách dày nhất, và chỉ ra rằng bề rộng tối ưu của dải bằng đúng **khoảng cách giữa hai bao lồi**. Đường tách tốt nhất là đường trung trực của đoạn nối hai điểm gần nhất của hai bao lồi, đúng như cách dựng trong chứng minh ở mục 2. Đó là ý tưởng hình học đằng sau máy vector hỗ trợ (SVM) với lề cứng. Mô phỏng dưới đây cho bạn kéo các điểm dữ liệu và xem đường tách lề lớn nhất thay đổi thế nào.
+Trường hợp kinh điển minh họa cho sự vi phạm điều kiện này là bài toán logic XOR: Lớp thứ nhất gồm hai điểm $(0, 0)$ và $(1, 1)$, lớp thứ hai gồm hai điểm $(1, 0)$ và $(0, 1)$. Hai bao lồi tương ứng chính là hai đường chéo của hình vuông đơn vị, và chúng giao nhau tại tâm $(\tfrac12, \tfrac12)$. Do đó không tồn tại bất kỳ hàm tuyến tính nào có thể phân tách hai lớp điểm này, đặt ra yêu cầu phải sử dụng các đặc trưng phi tuyến hoặc kiến trúc mạng nơ-ron nhiều tầng.
+
+Khi hai lớp dữ liệu phân tách tuyến tính được, một hướng tiếp cận tự nhiên là tìm siêu phẳng phân cách đạt **độ mở lề lớn nhất** (maximum margin), tức khoảng cách từ siêu phẳng tới các điểm dữ liệu gần nhất ở cả hai phía đạt cực đại. Bề rộng của lề tối ưu bằng đúng **khoảng cách Euclid giữa hai bao lồi**. Siêu phẳng phân cách tối ưu chính là mặt phẳng trung trực của đoạn thẳng nối hai điểm gần nhất giữa hai bao lồi, hoàn toàn trùng khớp với cách dựng trong chứng minh ở mục 2. Đây chính là bản chất toán học của thuật toán Support Vector Machine (SVM) lề cứng.
 
 <SeparationLab type="data" />
 
-Chỉ vài điểm gần ranh giới quyết định vị trí đường tách. Kéo một điểm ở xa ranh giới, đường tách không đổi, chừng nào điểm đó không trở thành một đỉnh của bao lồi nằm gần lớp kia nhất. Những điểm quyết định ấy chính là các "vector hỗ trợ" trong tên gọi của SVM.
+Trong mô hình SVM, chỉ những điểm dữ liệu nằm trên biên của lề (các điểm cực biên của bao lồi quyết định khoảng cách giữa hai tập) mới có trọng số Lagrange khác không. Chúng được gọi là các **vector hỗ trợ** (support vectors), trong khi các điểm dữ liệu nằm sâu bên trong cụm hoàn toàn không ảnh hưởng tới vị trí của ranh giới phân lớp.
 
 ## 7. Những câu hỏi để đào sâu
 
-**Câu 1.** Định lý phân tách có đúng nếu chỉ một trong hai tập lồi không? Hãy dựng một phản ví dụ với $C$ lồi và $D$ không lồi.
+**Câu 1.** Định lý phân tách có còn đúng không nếu chỉ một trong hai tập hợp là tập lồi? Hãy nêu một ví dụ phản chứng cụ thể.
 
 <details><summary>Xem lời giải thích</summary>
 
-Không đúng. Lấy $C$ là hình tròn đơn vị và $D$ là vành khăn $\{x : 2 \le \|x\|_2 \le 3\}$. Hai tập rời nhau, $C$ lồi còn $D$ thì không. Mọi đường thẳng đi qua hình tròn $C$ hoặc để $C$ ở một phía đều có phần của vành khăn ở cả hai phía, vì vành khăn bao quanh $C$ theo mọi hướng. Vậy không có siêu phẳng phân tách. Định lý cần **cả hai** tập lồi.
+Định lý sẽ không còn đúng. Xét trong $\mathbb{R}^2$, chọn tập lồi $C$ là hình tròn đơn vị đóng $\{x : \|x\|_2 \le 1\}$ và tập không lồi $D$ là hình vành khăn $\{x : 2 \le \|x\|_2 \le 3\}$. Rõ ràng hai tập hợp này không giao nhau. Tuy nhiên, vì vành khăn $D$ bao bọc hoàn toàn hình tròn $C$ theo mọi hướng không gian, bất kỳ đường thẳng nào để $C$ nằm trọn về một phía đều cắt qua vành khăn $D$. Do đó không tồn tại bất kỳ siêu phẳng phân tách nào. Định lý bắt buộc **cả hai** tập hợp đều phải là tập lồi.
 
 </details>
 
-**Câu 2.** Trong chứng minh ở mục 2, nếu thay $a = d - c$ bằng $a = c - d$ thì siêu phẳng có còn tách hai tập không? Vai trò của $C$ và $D$ thay đổi thế nào?
+**Câu 2.** Trong chứng minh ở mục 2, nếu ta đổi dấu vector pháp tuyến thành $a = c - d$, siêu phẳng phân tách thay đổi như thế nào?
 
 <details><summary>Xem lời giải thích</summary>
 
-Đổi dấu $a$ (và $b$) không đổi siêu phẳng, chỉ đổi chiều của hàm affine: Khi đó $a^T x - b \ge 0$ trên $C$ và $\le 0$ trên $D$. Siêu phẳng vẫn tách, chỉ là "phía dương" đổi sang tập kia. Đây là lý do định lý thường được phát biểu "tồn tại $a \ne 0$" mà không nói $a$ chỉ về phía nào: Hai lựa chọn dấu cho cùng một siêu phẳng.
+Việc đổi dấu vector pháp tuyến và hệ số tự do chỉ làm đảo ngược dấu của hàm affine mà không làm thay đổi vị trí hình học của siêu phẳng phân tách: Khi đó ta có $a^T x \ge b$ trên $C$ và $a^T x \le b$ trên $D$. Siêu phẳng vẫn phân tách trọn vẹn hai tập hợp. Điều này giải thích vì sao định lý chỉ khẳng định sự tồn tại của vector $a \ne 0$ mà không quy định chiều định hướng.
 
 </details>
 
-**Câu 3.** Có thể có hai tập lồi đóng rời nhau, cả hai đều không bị chặn, mà vẫn tách nghiêm ngặt được không? Ví dụ ở mục 3 cho thấy điều gì là thiếu?
+**Câu 3.** Liệu có thể phân tách nghiêm ngặt hai tập lồi đóng, rời nhau mà cả hai đều không bị chặn hay không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Có. Hai nửa mặt phẳng $\{x_2 \le 0\}$ và $\{x_2 \ge 1\}$ đều đóng, không bị chặn, và được tách nghiêm ngặt bởi đường $x_2 = \tfrac12$. Điều thiếu trong ví dụ ở mục 3 không phải tính bị chặn, mà là **khoảng cách dương**: Các điểm của nhánh hyperbol tiến sát trục hoành tùy ý. Khi khoảng cách giữa hai tập dương và có cặp điểm đạt khoảng cách, chứng minh ở mục 2 cho ngay phân tách nghiêm ngặt. Điều kiện "một tập bị chặn" chỉ là một cách thuận tiện để bảo đảm có cặp điểm như vậy.
+Hoàn toàn có thể. Xét hai nửa mặt phẳng đóng $C = \{x \in \mathbb{R}^2 : x_2 \le 0\}$ và $D = \{x \in \mathbb{R}^2 : x_2 \ge 1\}$. Cả hai tập đều đóng, không bị chặn và rời nhau. Đường thẳng $x_2 = \tfrac{1}{2}$ phân tách nghiêm ngặt hai tập hợp này. Yếu tố cốt lõi để bảo đảm phân tách nghiêm ngặt không phải là tính bị chặn, mà là khoảng cách Euclid giữa hai tập phải dương ngặt $\operatorname{dist}(C, D) > 0$.
 
 </details>
 
-**Câu 4.** Trong bài toán XOR, nếu thêm đặc trưng thứ ba $x_3 = x_1 x_2$, hai lớp có tách được bằng một siêu phẳng trong $\mathbb{R}^3$ không? Hãy tìm một siêu phẳng cụ thể.
+**Câu 4.** Trong bài toán XOR, nếu ta đưa thêm một đặc trưng phi tuyến bậc hai $x_3 = x_1 x_2$, dữ liệu có phân tách được bằng một siêu phẳng tuyến tính trong $\mathbb{R}^3$ không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Bốn điểm trở thành $(0, 0, 0)$ và $(1, 1, 1)$ cho lớp thứ nhất, $(1, 0, 0)$ và $(0, 1, 0)$ cho lớp thứ hai. Hàm $f(x) = x_1 + x_2 - 2x_3 - \tfrac12$ cho giá trị $-\tfrac12$ và $-\tfrac12$ trên lớp thứ nhất, $\tfrac12$ và $\tfrac12$ trên lớp thứ hai. Vậy siêu phẳng $x_1 + x_2 - 2x_3 = \tfrac12$ tách hai lớp. Trong không gian đặc trưng mới, hai bao lồi không còn giao nhau. Đây là ý tưởng cơ bản của việc ánh xạ dữ liệu sang không gian đặc trưng lớn hơn trước khi dùng một bộ phân loại tuyến tính.
+Hoàn toàn phân tách được. Sau khi chiếu vào $\mathbb{R}^3$, bốn điểm dữ liệu trở thành: Cụ thể gồm $(0, 0, 0)^T$ và $(1, 1, 1)^T$ cho lớp thứ nhất, $(1, 0, 0)^T$ và $(0, 1, 0)^T$ cho lớp thứ hai. Chọn hàm affine $f(x) = x_1 + x_2 - 2x_3 - \tfrac{1}{2}$, ta nhận thấy $f(x) = -\tfrac{1}{2} < 0$ trên toàn bộ lớp thứ nhất và $f(x) = \tfrac{1}{2} > 0$ trên toàn bộ lớp thứ hai. Siêu phẳng $x_1 + x_2 - 2x_3 = \tfrac{1}{2}$ phân tách hoàn hảo hai lớp dữ liệu. Đây chính là nguyên lý cốt lõi của phương pháp Kernel trong học máy.
 
 </details>
 
 ## 8. Bài tập tự luyện
 
-::: exercise 1. Dựng siêu phẳng phân tách
-Cho hai hình tròn $C = \{x : \|x - (0, 0)\|_2 \le 1\}$ và $D = \{x : \|x - (4, 3)\|_2 \le 2\}$. Tìm cặp điểm gần nhất, rồi viết siêu phẳng phân tách theo cách dựng ở mục 2.
-:::
-
-::: hint
-Cặp điểm gần nhất nằm trên đoạn nối hai tâm.
+::: exercise 1. Dựng siêu phẳng phân tách giữa hai hình tròn
+Cho hai hình tròn đóng trong mặt phẳng: Cụ thể là $C = \{x \in \mathbb{R}^2 : \|x\|_2 \le 1\}$ và $D = \{x \in \mathbb{R}^2 : \|x - (4, 3)^T\|_2 \le 2\}$. Hãy xác định cặp điểm gần nhất giữa hai tập và phương trình siêu phẳng phân tách tương ứng.
 :::
 
 ::: solution
-Hai tâm cách nhau $\sqrt{16 + 9} = 5$, lớn hơn tổng bán kính $3$, nên hai hình tròn rời nhau. Vector đơn vị từ tâm $C$ tới tâm $D$ là $u = (0.8, 0.6)$. Cặp điểm gần nhất là $c = 1 \cdot u = (0.8, 0.6)$ và $d = (4, 3) - 2u = (2.4, 1.8)$, cách nhau 2. Khi đó $a = d - c = (1.6, 1.2)$ và $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2} = \tfrac{9 - 1}{2} = 4$. Siêu phẳng phân tách là $1.6x_1 + 1.2x_2 = 4$, hay $4x_1 + 3x_2 = 10$. Kiểm tra: Tâm $(0, 0)$ cho $0 < 10$ và tâm $(4, 3)$ cho $25 > 10$.
+Khoảng cách giữa hai tâm là $\sqrt{4^2 + 3^2} = 5$, lớn hơn tổng hai bán kính $1 + 2 = 3$, do đó hai hình tròn rời nhau. Vector đơn vị hướng từ tâm của $C$ sang tâm của $D$ là $u = (0.8, 0.6)^T$.
+
+Cặp điểm đạt khoảng cách cực tiểu giữa hai tập là:
+- $c = 1 \cdot u = (0.8, 0.6)^T \in C$,
+- $d = (4, 3)^T - 2u = (2.4, 1.8)^T \in D$.
+
+Vector pháp tuyến là $a = d - c = (1.6, 1.2)^T$, và hệ số tự do là $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2} = \tfrac{9 - 1}{2} = 4$. Phương trình siêu phẳng phân tách là $1.6x_1 + 1.2x_2 = 4$, tương đương với $4x_1 + 3x_2 = 10$.
 :::
 
-::: exercise 2. Chứng nhận vô nghiệm
-Chứng minh hệ $x_1 + x_2 < 1$, $x_1 > 1$, $x_2 > 0$ vô nghiệm bằng cách tìm một vector $\lambda$ thỏa hệ lựa chọn ở mục 4.
+::: exercise 2. Chứng chỉ vô nghiệm
+Hãy chứng minh hệ bất đẳng thức $x_1 + x_2 < 1$, $x_1 > 1$, $x_2 > 0$ vô nghiệm bằng cách thiết lập một vector nhân tử Lagrange $\lambda$ theo định lý về giải pháp thay thế.
 :::
 
 ::: solution
-Viết hệ dưới dạng $Ax \prec b$: $x_1 + x_2 < 1$, $-x_1 < -1$, $-x_2 < 0$, tức $A = \begin{bmatrix} 1 & 1 \\ -1 & 0 \\ 0 & -1 \end{bmatrix}$ và $b = (1, -1, 0)$. Chọn $\lambda = (1, 1, 1)$: $A^T \lambda = (1 - 1 + 0,\ 1 + 0 - 1) = (0, 0)$ và $\lambda^T b = 1 - 1 + 0 = 0 \le 0$, cùng $\lambda \succeq 0$, $\lambda \ne 0$. Cộng ba bất đẳng thức được $0 < 0$, mâu thuẫn, nên hệ vô nghiệm.
+Viết lại hệ dưới dạng chuẩn $Ax \prec b$:
+- $x_1 + x_2 < 1$,
+- $-x_1 < -1$,
+- $-x_2 < 0$.
+
+Ma trận hệ số và vector vế phải là:
+$$
+A = \begin{bmatrix} 1 & 1 \\ -1 & 0 \\ 0 & -1 \end{bmatrix}, \qquad b = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}.
+$$
+
+Chọn vector nhân tử $\lambda = (1, 1, 1)^T \ge 0$. Ta kiểm tra:
+$$
+A^T \lambda = \begin{bmatrix} 1 - 1 + 0 \\ 1 + 0 - 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \qquad \lambda^T b = 1 - 1 + 0 = 0 \le 0.
+$$
+Nhân các bất đẳng thức với trọng số $\lambda$ và cộng lại, ta thu được bất đẳng thức mâu thuẫn $0 < 0$. Vậy hệ ràng buộc vô nghiệm.
 :::
 
-::: exercise 3. Siêu phẳng tựa của quả cầu ℓ∞
-Tìm mọi siêu phẳng tựa của hình vuông $\{x \in \mathbb{R}^2 : \|x\|_\infty \le 1\}$ tại điểm $(1, 0.5)$ và tại đỉnh $(1, 1)$ (theo Bài tập 2.24 trong sách).
+::: exercise 3. Siêu phẳng tựa của hình vuông chuẩn ℓ∞
+Xác định toàn bộ các siêu phẳng tựa của hình vuông đơn vị $\{x \in \mathbb{R}^2 : \|x\|_\infty \le 1\}$ tại điểm biên $x_0 = (1, 0.5)^T$ và tại đỉnh cực biên $x_1 = (1, 1)^T$.
 :::
 
 ::: solution
-Điểm $(1, 0.5)$ nằm trong phần giữa cạnh phải $x_1 = 1$, nên siêu phẳng tựa duy nhất là $x_1 = 1$, với pháp tuyến $a = (1, 0)$ (sai khác một hệ số dương). Tại đỉnh $(1, 1)$, mọi $a = (\alpha, \beta)$ với $\alpha, \beta \ge 0$ không đồng thời bằng 0 đều cho siêu phẳng tựa $\alpha x_1 + \beta x_2 = \alpha + \beta$, vì trên hình vuông $\alpha x_1 + \beta x_2 \le \alpha + \beta$. Hai trường hợp biên của chùm này là hai cạnh $x_1 = 1$ và $x_2 = 1$.
+Tại điểm $x_0 = (1, 0.5)^T$ nằm trên cạnh phải $x_1 = 1$, siêu phẳng tựa là duy nhất và có phương trình $x_1 = 1$ (với vector pháp tuyến tỷ lệ với $(1, 0)^T$).
+
+Tại đỉnh $x_1 = (1, 1)^T$, mọi vector pháp tuyến dạng $a = (\alpha, \beta)^T$ với $\alpha \ge 0, \beta \ge 0$ không đồng thời bằng 0 đều sinh ra một siêu phẳng tựa có phương trình $\alpha x_1 + \beta x_2 = \alpha + \beta$, vì trên toàn bộ hình vuông ta luôn có $\alpha x_1 + \beta x_2 \le \alpha + \beta$. Chùm siêu phẳng tựa này lấp đầy góc phần tư thứ nhất của không gian đối ngẫu.
 :::
 
 ## Tóm tắt
 
-Hai tập lồi khác rỗng rời nhau luôn được tách bởi một siêu phẳng, và khi có cặp điểm gần nhất, siêu phẳng đó là đường trung trực của đoạn nối hai điểm ấy. Tính lồi được dùng đúng ở bước kéo một điểm của tập về phía cặp điểm gần nhất. Phân tách nghiêm ngặt không phải lúc nào cũng có, nhưng luôn có giữa một điểm và một tập lồi đóng không chứa nó. Hệ quả là mọi tập lồi đóng bằng giao của các nửa không gian chứa nó.
+Hai tập lồi khác rỗng rời nhau luôn tồn tại ít nhất một siêu phẳng phân tách chúng. Khi khoảng cách giữa hai tập đạt cực tiểu tại một cặp điểm, siêu phẳng phân tách chính là mặt phẳng trung trực của đoạn thẳng nối hai điểm đó. Mọi tập lồi đóng đều bằng giao của toàn bộ các nửa không gian đóng chứa nó, tạo nên nền tảng cho lý thuyết đối ngẫu.
 
-Khi một tập là mở, có siêu phẳng phân tách tương đương với rời nhau, và điều đó cho các định lý lựa chọn: Một hệ bất đẳng thức chặt vô nghiệm khi và chỉ khi có một tổ hợp không âm của các bất đẳng thức dẫn tới mâu thuẫn. Tại mọi điểm biên của tập lồi có một siêu phẳng tựa, và đó là bức tranh hình học của tối ưu hàm tuyến tính trên tập lồi. Với dữ liệu, hai lớp tách được bằng một hàm affine khi và chỉ khi bao lồi của chúng không giao nhau, và đường tách có lề lớn nhất cách đều hai bao lồi.
+Định lý về giải pháp thay thế cung cấp chứng chỉ đại số hữu hạn để xác minh tính vô nghiệm của hệ bất đẳng thức. Tại mọi điểm biên của một tập lồi luôn tồn tại siêu phẳng tựa, liên kết trực tiếp với nghiệm của bài toán quy hoạch tuyến tính. Trong học máy, hai tập dữ liệu phân tách tuyến tính được khi và chỉ khi hai bao lồi của chúng không giao nhau, và siêu phẳng lề cực đại của máy vector hỗ trợ (SVM) chính là siêu phẳng trung trực nối hai bao lồi.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.5 (tr. 46–51), Hình 2.19–2.21, Ví dụ 2.19–2.21, Bài tập 2.22–2.24 và 2.27. Phân loại tuyến tính và lề lớn nhất ở §8.6.1 (tr. 423–425).
-- Ví dụ hai tập đóng không tách nghiêm ngặt được, ví dụ XOR với đặc trưng $x_1 x_2$, ví dụ siêu phẳng tựa trên quả cầu $\ell_1$ và $\ell_2$, các câu hỏi và bài tập 1, 2 do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-12-truc-quan-hoa-co-ban
 section: lecture
 title: "Trực quan hóa cơ bản"
-prerequisites: ["gia-tri-thieu","ky-vong"]
+prerequisites: ["gia-tri-thieu", "thong-ke-mo-ta"]
 lessonStatus: ready
 description: "Trực quan hóa khoa học với Matplotlib: Kiến trúc Figure và Axes, bốn dạng biểu đồ nền tảng, cơ chế chia khoảng histogram và nguyên tắc trung thực thị giác."
 ---

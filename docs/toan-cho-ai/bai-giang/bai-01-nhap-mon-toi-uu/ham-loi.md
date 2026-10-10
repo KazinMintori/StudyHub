@@ -7,157 +7,182 @@ title: "Hàm lồi và bất đẳng thức dây cung"
 description: "Định nghĩa hàm lồi, lồi nghiêm ngặt, lõm và affine cùng ý nghĩa hình học của dây cung. Vì sao miền xác định phải lồi, cách kiểm tra tính lồi bằng cách hạn chế lên đường thẳng, mở rộng giá trị và hàm chỉ thị của một tập."
 ---
 
-Phần hình học vừa qua nói về **tập lồi**: Những miền mà đoạn thẳng nối hai điểm bất kỳ không bao giờ đi ra ngoài. Nhưng ngoài miền khả thi, một bài toán tối ưu còn có hàm mục tiêu. Câu hỏi tiếp theo vì vậy rất tự nhiên: Một **hàm** "lồi" thì nên được hiểu thế nào, để những điều tốt đẹp của tập lồi truyền sang được bài toán tối ưu?
+Các bài học trước đã trang bị cho ta bức tranh hình học toàn cảnh về **tập lồi**: Miền không gian mà đoạn thẳng nối hai điểm bất kỳ không bao giờ chệch ra ngoài. Tuy nhiên, một bài toán tối ưu hoàn chỉnh luôn bao gồm miền khả thi và hàm mục tiêu. Câu hỏi tiếp theo mang tính quyết định: Một **hàm số lồi** (convex function) cần được định nghĩa như thế nào để toàn bộ những tính chất tối ưu hoàn mỹ của tập lồi được kế thừa trọn vẹn?
 
-Câu trả lời nằm ở công cụ hình học quen thuộc là đoạn thẳng, nhưng đặt nó lên đồ thị của hàm. Sau định nghĩa và ý nghĩa của từng điều kiện trong đó, ta học kỹ thuật hạn chế hàm lên một đường thẳng, cách biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều. Phần cuối là một mẹo ký hiệu giúp biến ràng buộc thành một phần của hàm mục tiêu.
+Trọng tâm câu trả lời nằm ở công cụ hình học trực quan: Khảo sát vị trí tương đối giữa đồ thị hàm số và đoạn thẳng dây cung nối hai điểm bất kỳ. Sau khi phân tích định nghĩa và bản chất giải tích của từng giả thiết, ta sẽ tiếp cận kỹ thuật hạn chế hàm số lên một đường thẳng, chuyển hóa bài toán tối ưu đa chiều về các bài toán một chiều đơn giản. Cuối bài là kỹ thuật mở rộng miền giá trị và hàm chỉ thị, công cụ đại số giúp tích hợp trọn vẹn miền ràng buộc vào bên trong hàm mục tiêu.
 
 ## 1. Định nghĩa
 
-> **Định nghĩa.** Hàm $f : \mathbb{R}^n \to \mathbb{R}$ là **lồi** nếu miền xác định $\operatorname{dom} f$ là một tập lồi, và với mọi $x, y \in \operatorname{dom} f$ cùng mọi $\theta$ thỏa $0 \le \theta \le 1$,
+> **Định nghĩa.** Hàm số $f : \mathbb{R}^n \to \mathbb{R}$ được gọi là **hàm lồi** (convex function) nếu miền xác định $\operatorname{dom} f$ là một tập lồi trong $\mathbb{R}^n$, và với mọi cặp điểm $x, y \in \operatorname{dom} f$ cùng mọi hệ số $\theta \in [0, 1]$, ta luôn có bất đẳng thức dây cung:
 > $$f(\theta x + (1 - \theta) y) \le \theta f(x) + (1 - \theta) f(y).$$
 
-Hai vế của bất đẳng thức làm hai việc khác nhau, và nhầm lẫn giữa chúng là lỗi hay gặp khi mới học. Vế trái **trộn các đầu vào trước** rồi mới tính hàm: Lấy điểm $z = \theta x + (1-\theta)y$ trên đoạn nối $x$ với $y$, rồi tính $f(z)$. Vế phải **tính hàm trước** rồi mới trộn các giá trị: Tính $f(x)$ và $f(y)$, rồi lấy trung bình có trọng số của hai con số đó. Hàm lồi là hàm mà "trộn trước rồi tính" không bao giờ cho kết quả lớn hơn "tính trước rồi trộn".
+Hai vế của bất đẳng thức mô tả hai quá trình tính toán hoàn toàn khác nhau:
+- Vế trái thực hiện **tổ hợp các đầu vào trước rồi mới tính giá trị hàm**: Lấy điểm trung gian $z = \theta x + (1-\theta)y$ trên đoạn nối $x$ và $y$, sau đó tính $f(z)$.
+- Vế phải thực hiện **tính giá trị hàm tại hai đầu mút trước rồi mới lấy tổ hợp giá trị**: Lấy trung bình gia quyền của hai số thực $f(x)$ và $f(y)$.
 
-Về hình học, đặt hai điểm $(x, f(x))$ và $(y, f(y))$ trên đồ thị. Đoạn thẳng nối chúng, gọi là **dây cung**, đi qua điểm $(z,\ \theta f(x) + (1-\theta) f(y))$ phía trên $z$. Bất đẳng thức nói rằng tại mọi $z$ giữa $x$ và $y$, đồ thị nằm **dưới hoặc chạm** dây cung (Hình 3.1 trong sách). Một cái bát úp ngửa có hình dạng đó: Căng một sợi chỉ giữa hai điểm trên thành bát, sợi chỉ luôn nằm phía trên lòng bát.
+Hàm lồi là hàm số mà giá trị tính sau khi trộn đầu vào không bao giờ vượt quá giá trị trộn sau khi tính hàm.
+
+Về mặt hình học, xét hai điểm $A(x, f(x))$ và $B(y, f(y))$ trên đồ thị của $f$. Đoạn thẳng nối $A$ và $B$ được gọi là **dây cung** (chord). Dây cung đi qua điểm $(z,\ \theta f(x) + (1-\theta) f(y))$ nằm ngay phía trên điểm tọa độ $z$. Bất đẳng thức dây cung khẳng định: Tại mọi điểm $z$ nằm giữa $x$ và $y$, đồ thị hàm số luôn nằm **phía dưới hoặc tiếp xúc** với dây cung. Trực giác trực quan giống như một lòng chảo ngửa: Căng một sợi chỉ nối hai điểm bất kỳ trên vành chảo, sợi chỉ luôn lơ lửng phía trên lòng chảo.
 
 <FunctionLab type="chord" />
 
-Mô phỏng cho bạn chọn hàm, chọn hai điểm $a, b$ và trượt $\theta$. Với các hàm $x^2$, $|x|$, $e^x$, $-\log x$, đoạn thẳng nhỏ nối đồ thị với dây cung luôn màu xanh. Với $x^3$ hay $0.3x^2 + \sin(1.5x)$, bạn sẽ tìm được những cặp $a, b$ làm đồ thị vượt lên trên dây cung. Hãy nhớ sự bất đối xứng quen thuộc từ tập lồi: Một vi phạm là đủ để bác bỏ, còn để chứng minh thì phải lập luận cho mọi cặp điểm và mọi $\theta$.
+Trong mô phỏng tương tác trên, đối với các hàm lồi như $x^2$, $|x|$, $e^x$, $-\ln x$, đoạn thẳng nối từ đồ thị lên dây cung luôn mang màu xanh dương (đồ thị nằm dưới dây cung). Ngược lại, với các hàm không lồi như $x^3$ hay $0.3x^2 + \sin(1.5x)$, ta dễ dàng tìm được những cặp điểm $a, b$ làm đồ thị võng ngược lên phía trên dây cung. Để bác bỏ tính lồi, chỉ cần chỉ ra duy nhất một cặp điểm vi phạm; nhưng để khẳng định tính lồi, ta phải chứng minh bất đẳng thức đúng với mọi cặp điểm và mọi hệ số $\theta \in [0, 1]$.
 
-::: example Chứng minh tính lồi của x² bằng định nghĩa
-Với $f(x) = x^2$, hiệu giữa vế phải và vế trái là
+::: example Chứng minh tính lồi của hàm bậc hai f(x) = x² bằng định nghĩa
+Với hàm $f(x) = x^2$ trên $\mathbb{R}$, ta xét hiệu số giữa vế phải và vế trái:
 
 $$
 \theta x^2 + (1 - \theta) y^2 - \big(\theta x + (1-\theta) y\big)^2 = \theta(1 - \theta)(x - y)^2 .
 $$
 
-Đẳng thức này kiểm tra được bằng khai triển. Dùng $\theta - \theta^2 = \theta(1-\theta)$ và $(1-\theta) - (1-\theta)^2 = \theta(1-\theta)$, vế trái bằng
+Đẳng thức trên được kiểm chứng dễ dàng bằng khai triển đại số: Sử dụng các biến đổi $\theta - \theta^2 = \theta(1-\theta)$ và $(1-\theta) - (1-\theta)^2 = \theta(1-\theta)$, vế trái được viết lại thành:
 
 $$
 \begin{aligned}
 &\theta x^2 + (1-\theta)y^2 - \theta^2 x^2 - 2\theta(1-\theta)xy - (1-\theta)^2 y^2 \\
-&\quad = \theta(1-\theta)\,\big(x^2 - 2xy + y^2\big).
+&\quad = \theta(1-\theta)\,\big(x^2 - 2xy + y^2\big) = \theta(1-\theta)(x - y)^2.
 \end{aligned}
 $$
 
-Vì $\theta \in [0, 1]$ nên $\theta(1-\theta) \ge 0$, và hiệu không âm. Đẳng thức còn cho biết nhiều hơn: Khoảng cách giữa dây cung và đồ thị tại $z$ bằng đúng $\theta(1-\theta)(x-y)^2$. Chẳng hạn với $x = -2$, $y = 1$, $\theta = \tfrac13$, ta có $z = 0$, $f(z) = 0$, giá trị trên dây cung là $\tfrac13 \cdot 4 + \tfrac23 \cdot 1 = 2$, và quả thật $\tfrac13 \cdot \tfrac23 \cdot 9 = 2$.
+Vì $\theta \in [0, 1]$ nên $\theta(1-\theta) \ge 0$, và bình phương $(x - y)^2 \ge 0$, do đó hiệu số luôn không âm. Biểu thức này còn cho ta biết chính xác khoảng cách độ cao từ đồ thị tới dây cung tại điểm $z$ đúng bằng $\theta(1-\theta)(x-y)^2$.
 :::
 
-## 2. Những điều kiện nhỏ có hệ quả lớn
+## 2. Những điều kiện giải tích cốt lõi
 
-**Miền xác định phải lồi.** Điều kiện này không phải hình thức. Nếu $\operatorname{dom} f$ không lồi, điểm $z = \theta x + (1-\theta) y$ có thể nằm ngoài miền, và vế trái của bất đẳng thức không có nghĩa. Hàm $f(x) = 1/x^2$ trên miền $x \ne 0$ là ví dụ của sách (Ghi chú 3.1): Trên mỗi nửa trục, nó cong lên, đạo hàm bậc hai luôn dương, nhưng nó **không** phải hàm lồi vì miền xác định gồm hai mảnh rời nhau. Trong mô phỏng ở trên, chọn hàm $1/x^2$ với $a < 0 < b$ để thấy đoạn $[a, b]$ đi qua điểm 0, nơi hàm không xác định.
+- **Miền xác định bắt buộc phải là tập lồi**: Đây là điều kiện tiên quyết mang tính sống còn. Nếu $\operatorname{dom} f$ không lồi, tồn tại cặp điểm $x, y \in \operatorname{dom} f$ sao cho điểm trung gian $z = \theta x + (1-\theta) y$ rơi ra ngoài miền xác định, khiến vế trái $f(z)$ không xác định. Xét hàm số $f(x) = 1/x^2$ trên miền $\mathbb{R} \setminus \{0\}$: Mặc dù đạo hàm cấp hai $f''(x) = 6/x^4 > 0$ tại mọi $x \ne 0$, hàm số này **không phải là hàm lồi** vì miền xác định của nó bị đứt gãy tại gốc tọa độ. Khi chọn $a < 0 < b$, đoạn thẳng $[a, b]$ đi qua điểm gián đoạn $0$.
+- **Hàm lồi nghiêm ngặt (Strictly convex)**: Hàm $f$ được gọi là lồi nghiêm ngặt nếu bất đẳng thức dây cung trở thành bất đẳng thức ngặt ($<$) với mọi $x \ne y$ và $\theta \in (0, 1)$. Về hình học, đồ thị nằm hoàn toàn phía dưới dây cung, chỉ chạm dây cung tại đúng hai đầu mút. Hàm $x^2$ là hàm lồi nghiêm ngặt vì tích $\theta(1-\theta)(x-y)^2 > 0$ khi $x \ne y$ và $\theta \in (0, 1)$. Ngược lại, hàm giá trị tuyệt đối $|x|$ hay hàm kích hoạt ReLU $\max\{0, x\}$ là các hàm lồi nhưng không lồi nghiêm ngặt, vì trên các miền đơn điệu chúng suy biến thành đường thẳng, nơi dây cung trùng khít với đồ thị.
+- **Hàm lõm và hàm affine**: Hàm số $f$ được gọi là **hàm lõm** (concave function) nếu $-f$ là hàm lồi, tương đương với việc đồ thị luôn nằm phía trên mọi dây cung (như một lòng chảo úp). Đối với hàm affine $f(x) = a^T x + b$, bất đẳng thức dây cung luôn trở thành đẳng thức với mọi $\theta$. Do đó mọi hàm affine vừa là hàm lồi vừa là hàm lõm. Đặc biệt, ta có khẳng định giải tích đảo: Một hàm số vừa lồi vừa lõm khi và chỉ khi nó là một hàm affine.
+- **Tính liên tục tự nhiên**: Một định lý giải tích cơ bản khẳng định rằng: Mọi hàm lồi đều liên tục trên phần trong tương đối của miền xác định, và chỉ có thể gián đoạn tại biên tương đối. Một hàm lồi không thể xuất hiện các bước nhảy gián đoạn ở giữa miền xác định, bởi bất kỳ bước nhảy nào cũng sẽ làm đồ thị vượt lên trên dây cung nối hai điểm lân cận.
 
-**Lồi nghiêm ngặt.** Hàm $f$ là **lồi nghiêm ngặt** nếu bất đẳng thức là chặt ($<$) mỗi khi $x \ne y$ và $0 < \theta < 1$. Về hình học, đồ thị nằm **hẳn** dưới mọi dây cung, chỉ chạm ở hai đầu mút. Hàm $x^2$ lồi nghiêm ngặt, vì hiệu $\theta(1-\theta)(x-y)^2$ dương khi $x \ne y$ và $0 < \theta < 1$. Hàm $|x|$ thì lồi nhưng không nghiêm ngặt: Trên nửa trục dương nó là một đường thẳng, nên dây cung trùng với đồ thị.
+## 3. Tiêu chuẩn kiểm tra tính lồi trên từng đường thẳng
 
-**Lõm và affine.** Hàm $f$ là **lõm** nếu $-f$ lồi, tức đồ thị nằm trên mọi dây cung, như cái bát úp sấp. Với hàm affine $f(x) = a^T x + b$, bất đẳng thức trở thành đẳng thức với mọi $\theta$, vì hàm affine giữ nguyên tổ hợp affine. Vì vậy mọi hàm affine vừa lồi vừa lõm. Sách nêu thêm chiều ngược lại: Hàm nào vừa lồi vừa lõm thì phải là affine. Không có hàm "cong" nào thỏa cả hai chiều bất đẳng thức.
+Định nghĩa hàm lồi chỉ dựa vào đoạn thẳng nối hai điểm bất kỳ. Do đó, toàn bộ thông tin về tính lồi của hàm đa biến $f : \mathbb{R}^n \to \mathbb{R}$ đều được phản ánh trọn vẹn trên các đường thẳng 1 chiều cắt qua miền xác định. Ta hệ thống hóa nguyên lý này thành tiêu chuẩn hạn chế trên đường thẳng:
 
-**Tính liên tục.** Sách nhắc một kết quả mà ta không chứng minh: Hàm lồi luôn liên tục trên nội tương đối của miền xác định, và chỉ có thể gián đoạn trên biên tương đối. Hàm bằng 0 trên khoảng mở $(0, 1)$ và bằng 1 tại hai đầu mút $0$, $1$ là một hàm lồi trên $[0, 1]$, gián đoạn đúng tại hai đầu mút. Hàm lồi không thể có "bước nhảy" ở giữa miền, vì một bước nhảy sẽ làm đồ thị vượt lên trên một dây cung nào đó.
+> **Mệnh đề (Tiêu chuẩn hạn chế trên đường thẳng).** Hàm số $f$ là hàm lồi khi và chỉ khi với mọi điểm $x \in \operatorname{dom} f$ và mọi hướng vector $v \in \mathbb{R}^n$, hàm số một biến
+> $$g(t) = f(x + tv)$$
+> là hàm lồi trên miền xác định $\{t \in \mathbb{R} : x + tv \in \operatorname{dom} f\}$.
 
-## 3. Kiểm tra tính lồi trên từng đường thẳng
+Chứng minh:
+- Chiều thuận: Đoạn thẳng trên trục $t$ tương ứng trực tiếp với đoạn thẳng của $f$ trên đường thẳng $x + tv$. Miền của $g$ là giao của một đường thẳng với tập lồi $\operatorname{dom} f$ nên là một khoảng lồi trong $\mathbb{R}$.
+- Chiều nghịch: Mọi cặp điểm $x, y \in \operatorname{dom} f$ đều nằm trên đường thẳng đi qua $x$ với hướng $v = y - x$. Bất đẳng thức dây cung của $f$ cho cặp điểm $x, y$ chính là bất đẳng thức dây cung của hàm một biến $g(t)$ tại hai điểm $t = 0$ và $t = 1$.
 
-Định nghĩa hàm lồi chỉ dùng đến hai điểm và đoạn nối chúng. Do đó mọi thông tin về tính lồi của $f$ đều nằm trên các đường thẳng đi qua miền xác định. Sách phát biểu điều này thành một tiêu chuẩn:
-
-> **Mệnh đề.** $f$ lồi khi và chỉ khi với mọi $x \in \operatorname{dom} f$ và mọi hướng $v$, hàm một biến $g(t) = f(x + tv)$ lồi trên miền $\{t : x + tv \in \operatorname{dom} f\}$.
-
-Chiều "chỉ khi" đúng vì đoạn thẳng của $g$ trên trục $t$ là đoạn thẳng của $f$ trên đường $x + tv$, và miền của $g$ là giao của một đường thẳng với tập lồi $\operatorname{dom} f$, nên là một khoảng. Chiều "khi" đúng vì mọi cặp điểm $x, y$ của miền nằm trên đường thẳng qua $x$ theo hướng $v = y - x$, và bất đẳng thức của $f$ cho cặp đó chính là bất đẳng thức của $g$ cho cặp $t = 0$, $t = 1$.
-
-Tiêu chuẩn này biến một câu hỏi nhiều chiều thành vô số câu hỏi một chiều, mà hàm một biến thì ta biết nhiều cách kiểm tra, chẳng hạn bằng đạo hàm bậc hai. Sách sẽ dùng kỹ thuật này để chứng minh $\log\det X$ lõm ở chủ đề về các hàm thường gặp. Mô phỏng sau cho bạn chọn một hàm hai biến, kéo một đường thẳng qua miền, và xem đồ thị của hàm hạn chế $g(t)$ ở bên phải.
+Tiêu chuẩn này có giá trị ứng dụng thực tiễn to lớn: Nó chuyển hóa việc kiểm tra tính lồi của hàm đa biến phức tạp về việc khảo sát đạo hàm cấp hai của hàm một biến theo tham số $t$. Kỹ thuật này sẽ được dùng để chứng minh tính lõm của hàm $\log\det X$ trên nón ma trận đối xứng xác định dương.
 
 <Restrict2DLab />
 
-Với $x_1^2 - x_2^2$, hàm hạn chế cong lên khi đường thẳng gần trục hoành và cong xuống khi gần trục tung. Chỉ cần một đường thẳng cho $g$ cong xuống là đủ kết luận $f$ không lồi. Với $\log(e^{x_1} + e^{x_2})$, hướng $(1, 1)$ cho một hàm hạn chế **tuyến tính**: Dọc hướng đó hàm tăng đều mà không cong chút nào. Hàm vẫn lồi, vì lồi chỉ đòi "không cong xuống", không đòi "cong lên ngặt".
+Trong mô phỏng 2D trên: Với hàm yên ngựa $f(x_1, x_2) = x_1^2 - x_2^2$, hàm hạn chế $g(t)$ cong lên khi đường thẳng nghiêng về trục hoành nhưng cong xuống khi nghiêng về trục tung. Chỉ cần tồn tại duy nhất một hướng đường thẳng làm $g(t)$ cong xuống là đủ để bác bỏ tính lồi của $f$.
 
-## 4. Mở rộng giá trị và hàm chỉ thị
+## 4. Mở rộng giá trị và hàm chỉ thị của tập lồi
 
-Viết đi viết lại "với mọi $x \in \operatorname{dom} f$" khá phiền. Ta dùng một quy ước giúp làm gọn ký hiệu: **Mở rộng giá trị** của hàm lồi $f$ là hàm $\tilde f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}$ cho bởi
-
-$$
-\tilde f(x) = \begin{cases} f(x) & x \in \operatorname{dom} f,\\ +\infty & x \notin \operatorname{dom} f. \end{cases}
-$$
-
-Ta lấy lại miền xác định bằng $\operatorname{dom} f = \{x : \tilde f(x) < \infty\}$. Với quy ước số học "$\infty$ cộng gì cũng là $\infty$", bất đẳng thức định nghĩa trở thành $\tilde f(\theta x + (1-\theta)y) \le \theta \tilde f(x) + (1-\theta) \tilde f(y)$ với mọi $x, y$ và $0 < \theta < 1$: Nếu một trong hai điểm nằm ngoài miền thì vế phải bằng $\infty$ và bất đẳng thức hiển nhiên đúng. Quy ước này cũng tự động xử lý miền xác định của tổng: $\tilde f_1 + \tilde f_2$ bằng $\infty$ ở mọi điểm nằm ngoài một trong hai miền, nên miền của tổng là giao của hai miền. Từ đây trở đi, sách và môn học ngầm hiểu mọi hàm lồi đều được mở rộng như vậy.
-
-Một ví dụ đặc biệt quan trọng là **hàm chỉ thị** của một tập lồi $C$ (Ví dụ 3.1):
+Để tránh việc lặp lại điều kiện ràng buộc "với mọi $x \in \operatorname{dom} f$", giải tích lồi sử dụng quy ước mở rộng miền giá trị: **Hàm mở rộng** $\tilde f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}$ của hàm lồi $f$ được định nghĩa bởi:
 
 $$
-\tilde I_C(x) = \begin{cases} 0 & x \in C,\\ +\infty & x \notin C. \end{cases}
+\tilde f(x) = \begin{cases} f(x), & \text{nếu } x \in \operatorname{dom} f, \\ +\infty, & \text{nếu } x \notin \operatorname{dom} f. \end{cases}
 $$
 
-Hàm này lồi vì $C$ lồi. Nó cho phép viết một bài toán có ràng buộc thành bài toán không ràng buộc: Cực tiểu $f$ trên $C$ **chính là** cực tiểu $f + \tilde I_C$ trên toàn không gian, vì mọi điểm ngoài $C$ có giá trị $+\infty$ và không bao giờ được chọn. Ràng buộc trở thành một phần của hàm mục tiêu, với "giá phạt" bằng $+\infty$ cho việc vi phạm. Ý tưởng này có họ hàng gần trong học máy: Thay giá phạt $+\infty$ bằng một giá phạt hữu hạn, chẳng hạn $\rho \|x\|_2^2$, ta được điều chuẩn, một "ràng buộc mềm".
+Miền xác định gốc được khôi phục dễ dàng qua tập mức: $\operatorname{dom} f = \{x \in \mathbb{R}^n : \tilde f(x) < +\infty\}$. Với quy ước số học mở rộng ($a + \infty = +\infty$ và $0 \cdot \infty = 0$), bất đẳng thức dây cung áp dụng tự nhiên cho mọi $x, y \in \mathbb{R}^n$: Nếu một trong hai điểm nằm ngoài $\operatorname{dom} f$, vế phải bằng $+\infty$ và bất đẳng thức hiển nhiên nghiệm đúng. Trong toàn bộ môn học, ta mặc định mọi hàm lồi đều được mở rộng tự nhiên như vậy.
+
+Một ứng dụng nền tảng của kỹ thuật này là **hàm chỉ thị** (indicator function) của một tập hợp $C \subseteq \mathbb{R}^n$:
+
+$$
+I_C(x) = \begin{cases} 0, & \text{nếu } x \in C, \\ +\infty, & \text{nếu } x \notin C. \end{cases}
+$$
+
+Hàm chỉ thị $I_C$ là hàm lồi khi và chỉ khi tập hợp $C$ là tập lồi. Hàm chỉ thị cho phép chuyển đổi một bài toán tối ưu có ràng buộc thành bài toán tối ưu không ràng buộc tương đương: Bài toán cực tiểu hóa hàm mục tiêu $f(x)$ trên tập khả thi $C$ hoàn toàn đồng nhất với bài toán cực tiểu hóa không ràng buộc của hàm mục tiêu tổng hợp $f(x) + I_C(x)$ trên toàn bộ không gian $\mathbb{R}^n$.
+
+Bất kỳ nghiệm thử nào vi phạm ràng buộc ($x \notin C$) đều bị phạt với chi phí vô hạn $+\infty$. Trong học máy, khi thay thế hình phạt vô hạn tuyệt đối này bằng một hàm phạt hữu hạn liên tục (như $\tfrac{\rho}{2}\|x\|_2^2$ hay $\rho\|x\|_1$), ta thu được các bài toán điều chuẩn (regularization) kinh điển như Ridge Regression hay Lasso.
 
 ## 5. Những câu hỏi để đào sâu
 
-**Câu 1.** Một bạn khẳng định: "Hàm $f(x) = x^3$ lồi, vì đồ thị của nó cong lên ở bên phải gốc." Bạn ấy đúng một phần ở chỗ nào, và sai ở chỗ nào?
+**Câu 1.** Một sinh viên lập luận: "Hàm $f(x) = x^3$ là hàm lồi, bởi vì nhánh đồ thị bên phải của nó cong lên phía trên." Lập luận này đúng ở điểm nào và sai lầm bản chất ở điểm nào?
 
 <details><summary>Xem lời giải thích</summary>
 
-Đúng một phần: Trên miền $x \ge 0$, $f''(x) = 6x \ge 0$ và hàm $x^3$ với miền $\mathbb{R}_+$ là lồi. Sai ở chỗ coi nó lồi trên $\mathbb{R}$. Lấy $x = -2$, $y = 0$, $\theta = \tfrac12$: $f(-1) = -1$, trong khi dây cung cho $\tfrac12(-8) + \tfrac12 \cdot 0 = -4$, và $-1 > -4$. Tính lồi là tính chất của **cặp** hàm và miền xác định. Cùng một công thức có thể lồi trên miền này mà không lồi trên miền khác.
+Lập luận trên đúng một phần: Khi thu hẹp trên nửa trục không âm $\mathbb{R}_+ = [0, +\infty)$, đạo hàm cấp hai $f''(x) = 6x \ge 0$, do đó $f(x) = x^3$ là một hàm lồi trên miền $[0, +\infty)$.
+
+Sai lầm bản chất là việc kết luận nó lồi trên toàn bộ trục số $\mathbb{R}$. Chọn hai điểm $x = -2$, $y = 0$ và $\theta = \tfrac{1}{2}$: Điểm giữa là $z = -1$ có giá trị hàm $f(-1) = -1$. Trong khi đó giá trị trên dây cung là $\tfrac{1}{2}(-8) + \tfrac{1}{2}(0) = -4$. Ta nhận thấy $f(z) = -1 > -4$, vi phạm hoàn toàn bất đẳng thức dây cung. Tính lồi là thuộc tính của một **cặp đôi** gồm hàm số và miền xác định cụ thể của nó.
 
 </details>
 
-**Câu 2.** Nếu $f$ lồi và $c > 0$ là một hằng số, hàm $f(cx)$ có lồi không? Hàm $f(x) + c$, $f(x + c)$ thì sao? Còn $c \cdot f(x)$ với $c < 0$?
+**Câu 2.** Nếu $f$ là hàm lồi và hằng số $c > 0$, hàm số $f(cx)$ có lồi không? Các hàm $f(x) + c$, $f(x + c)$ thì sao? Trường hợp $c \cdot f(x)$ với $c < 0$ thì sao?
 
 <details><summary>Xem lời giải thích</summary>
 
-Ba hàm $f(cx)$, $f(x) + c$ và $f(x + c)$ đều lồi. Hàm $f(cx)$ và $f(x + c)$ là hợp của $f$ với một phép biến đổi affine của $x$, mà phép biến đổi affine mang đoạn thẳng thành đoạn thẳng nên dây cung vẫn nằm trên đồ thị. Hàm $f(x) + c$ chỉ cộng cùng một hằng số vào hai vế của bất đẳng thức, vì $\theta c + (1-\theta) c = c$. Còn $c f(x)$ với $c < 0$ là một hàm **lõm**: Nhân hai vế của bất đẳng thức với số âm làm đảo chiều. Chủ đề về các phép toán giữ tính lồi của hàm sẽ hệ thống hóa những quy tắc này.
+Cả ba hàm $f(cx)$, $f(x) + c$ và $f(x + c)$ đều là các hàm lồi:
+- Hàm $f(cx)$ và $f(x + c)$ là phép hợp của hàm lồi $f$ với một ánh xạ affine của biến $x$. Vì ánh xạ affine bảo toàn tổ hợp lồi của các điểm, tính lồi được giữ nguyên.
+- Hàm $f(x) + c$ chỉ đơn thuần cộng cùng một hằng số $c$ vào cả hai vế của bất đẳng thức dây cung ($\theta c + (1-\theta)c = c$).
+
+Trái lại, khi $c < 0$, hàm số $c f(x)$ trở thành một **hàm lõm**, bởi vì việc nhân cả hai vế của bất đẳng thức với một số âm sẽ làm đảo chiều hoàn toàn bất đẳng thức.
 
 </details>
 
-**Câu 3.** Hàm $f(x) = \min\{x^2, 1\}$ có lồi không? Hãy trả lời bằng cách tìm một dây cung, rồi giải thích bằng hình dạng của đồ thị.
+**Câu 3.** Hàm số $f(x) = \min\{x^2, 1\}$ có phải là hàm lồi trên $\mathbb{R}$ không? Hãy kiểm tra bằng một dây cung cụ thể.
 
 <details><summary>Xem lời giải thích</summary>
 
-Không lồi. Với $x = 0$ và $y = 2$, $\theta = \tfrac12$: $f(1) = 1$, còn dây cung cho $\tfrac12 \cdot 0 + \tfrac12 \cdot 1 = \tfrac12 < 1$. Đồ thị là parabol bị "cắt ngọn" ở độ cao 1, tạo ra hai chỗ gãy lõm vào tại $x = \pm 1$. Hàm chặn trên một hàm lồi bằng một hằng số thường phá tính lồi, vì lấy **min** của hai hàm lồi không giữ tính lồi. Ngược lại, lấy **max** của hai hàm lồi thì giữ.
+Hàm số này không phải là hàm lồi. Chọn hai điểm $x = 0$ và $y = 2$ cùng hệ số $\theta = \tfrac{1}{2}$: Điểm giữa $z = 1$ có giá trị hàm $f(1) = \min\{1^2, 1\} = 1$. Giá trị trên dây cung tương ứng là $\tfrac{1}{2}f(0) + \tfrac{1}{2}f(2) = \tfrac{1}{2}(0) + \tfrac{1}{2}(1) = 0.5$. Ta có $f(1) = 1 > 0.5$, vi phạm bất đẳng thức dây cung.
+
+Về hình học, đồ thị là một đường parabol bị cắt cụt ở ngưỡng trần 1, tạo ra hai góc uốn lõm tại $x = \pm 1$. Phép lấy giá trị nhỏ nhất ($\min$) của hai hàm lồi nói chung phá hủy tính lồi, trong khi phép lấy giá trị lớn nhất ($\max$) luôn bảo toàn tính lồi.
 
 </details>
 
-**Câu 4.** Dùng hàm chỉ thị, viết bài toán "cực tiểu $\|x\|_2^2$ với điều kiện $Ax = b$" thành một bài toán không ràng buộc. Hàm mục tiêu mới có lồi không, và nó có khả vi không?
+**Câu 4.** Sử dụng hàm chỉ thị, hãy viết bài toán tối ưu có ràng buộc $\min \|x\|_2^2$ với điều kiện $Ax = b$ thành bài toán không ràng buộc. Hàm mục tiêu mới có tính chất gì?
 
 <details><summary>Xem lời giải thích</summary>
 
-Bài toán tương đương là cực tiểu $\|x\|_2^2 + \tilde I_C(x)$ trên $\mathbb{R}^n$, với $C = \{x : Ax = b\}$. Hàm mới lồi vì là tổng của hai hàm lồi ($C$ là tập affine, nên lồi). Nhưng nó không khả vi, thậm chí không hữu hạn ở ngoài $C$. Cách viết này hữu ích cho lý thuyết, còn khi tính toán, người ta thường giữ ràng buộc ở dạng tường minh hoặc thay hàm chỉ thị bằng một hàm phạt trơn.
+Bài toán được viết lại thành: $\min_{x \in \mathbb{R}^n} \left(\|x\|_2^2 + I_C(x)\right)$, trong đó tập khả thi $C = \{x \in \mathbb{R}^n : Ax = b\}$.
+
+Hàm mục tiêu mới là tổng của hai hàm lồi (hàm bình phương chuẩn $\|x\|_2^2$ lồi ngặt và hàm chỉ thị $I_C$ lồi do tập affine $C$ lồi), do đó nó là một hàm lồi mở rộng. Tuy nhiên, hàm số này không khả vi trên toàn không gian và nhận giá trị $+\infty$ tại mọi điểm nằm ngoài $C$.
 
 </details>
 
 ## 6. Bài tập tự luyện
 
-::: exercise 1. Chứng minh bằng định nghĩa
-Chứng minh $f(x) = |x|$ lồi trên $\mathbb{R}$ bằng định nghĩa. Nó có lồi nghiêm ngặt không?
+::: exercise 1. Chứng minh tính lồi của hàm giá trị tuyệt đối bằng định nghĩa
+Chứng minh rằng hàm số $f(x) = |x|$ là hàm lồi trên $\mathbb{R}$ trực tiếp từ định nghĩa. Hàm số này có lồi nghiêm ngặt hay không?
 :::
 
 ::: solution
-Với mọi $x, y$ và $\theta \in [0, 1]$,
+Với mọi $x, y \in \mathbb{R}$ và mọi hệ số $\theta \in [0, 1]$, áp dụng bất đẳng thức tam giác của giá trị tuyệt đối ta có:
 
 $$
 |\theta x + (1-\theta)y| \le |\theta x| + |(1-\theta)y| = \theta|x| + (1-\theta)|y|,
 $$
 
-trong đó bước đầu là bất đẳng thức tam giác và bước sau dùng $\theta \ge 0$, $1-\theta \ge 0$. Hàm không lồi nghiêm ngặt: Với $x = 1$, $y = 2$ và $\theta = \tfrac12$, hai vế đều bằng $1.5$, dù $x \ne y$ và $0 < \theta < 1$.
+trong đó đẳng thức thứ hai đúng vì $\theta \ge 0$ và $1-\theta \ge 0$. Do đó $f(x) = |x|$ là một hàm lồi.
+
+Hàm số này không lồi nghiêm ngặt: Chọn $x = 1, y = 2$ và $\theta = \tfrac{1}{2}$, ta tính được $f(1.5) = 1.5$ và $\tfrac{1}{2}f(1) + \tfrac{1}{2}f(2) = 1.5$. Hai vế bằng nhau dù hai điểm phân biệt và $\theta \in (0, 1)$.
 :::
 
-::: exercise 2. Tìm một dây cung vi phạm
-Chứng minh $f(x) = \sin x$ trên $[0, 2\pi]$ không lồi và không lõm, bằng cách chỉ ra hai dây cung thích hợp.
-:::
-
-::: solution
-Không lồi: Với $x = 0$, $y = \pi$, $\theta = \tfrac12$, ta có $f(\tfrac\pi2) = 1$, còn dây cung cho $\tfrac12(0 + 0) = 0 < 1$. Không lõm: Với $x = \pi$, $y = 2\pi$, $\theta = \tfrac12$, ta có $f(\tfrac{3\pi}{2}) = -1$, còn dây cung cho $0 > -1$, nên đồ thị nằm dưới dây cung, trái với tính lõm. Trên $[0, \pi]$ thì $\sin x$ lõm, và trên $[\pi, 2\pi]$ thì lồi.
-:::
-
-::: exercise 3. Hạn chế lên đường thẳng
-Cho $f(x_1, x_2) = x_1 x_2$ trên $\mathbb{R}^2$. Tính $g(t) = f(x + tv)$ với $x = (0, 0)$ và $v = (1, -1)$, rồi kết luận về tính lồi của $f$. Với $v = (1, 1)$ thì sao?
+::: exercise 2. Xác định dây cung vi phạm tính lồi và tính lõm
+Chứng minh hàm số $f(x) = \sin x$ trên đoạn $[0, 2\pi]$ không phải là hàm lồi và cũng không phải là hàm lõm bằng cách chỉ ra các dây cung vi phạm tương ứng.
 :::
 
 ::: solution
-Với $v = (1, -1)$: $g(t) = (t)(-t) = -t^2$, một hàm lõm nghiêm ngặt, nên $f$ không lồi. Với $v = (1, 1)$: $g(t) = t^2$, lồi. Hàm $x_1 x_2$ có Hessian $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ với trị riêng $\pm 1$: Theo hướng của vector riêng ứng với $+1$ thì cong lên, theo hướng ứng với $-1$ thì cong xuống. Đó là hình dạng của một cái yên ngựa.
+- Bác bỏ tính lồi: Chọn $x = 0, y = \pi$ và $\theta = \tfrac{1}{2}$. Ta có điểm giữa $z = \pi/2$ với $f(\pi/2) = \sin(\pi/2) = 1$. Giá trị dây cung là $\tfrac{1}{2}\sin(0) + \tfrac{1}{2}\sin(\pi) = 0$. Vì $1 > 0$ nên đồ thị nằm phía trên dây cung, vi phạm tính lồi.
+- Bác bỏ tính lõm: Chọn $x = \pi, y = 2\pi$ và $\theta = \tfrac{1}{2}$. Ta có điểm giữa $z = 3\pi/2$ với $f(3\pi/2) = -1$. Giá trị dây cung là $\tfrac{1}{2}\sin(\pi) + \tfrac{1}{2}\sin(2\pi) = 0$. Vì $-1 < 0$ nên đồ thị nằm phía dưới dây cung, vi phạm tính lõm.
+:::
+
+::: exercise 3. Khảo sát tính lồi qua hạn chế trên đường thẳng
+Cho hàm số hai biến $f(x_1, x_2) = x_1 x_2$ trên $\mathbb{R}^2$. Hãy tính hàm một biến $g(t) = f(x + tv)$ với điểm mốc $x = (0, 0)^T$ và hướng $v = (1, -1)^T$. Rút ra kết luận về tính lồi của $f$.
+:::
+
+::: solution
+Với $x = (0, 0)^T$ và $v = (1, -1)^T$, điểm trên đường thẳng có tọa độ $x + tv = (t, -t)^T$. Hàm hạn chế nhận dạng:
+
+$$
+g(t) = f(t, -t) = (t)(-t) = -t^2 .
+$$
+
+Hàm số $g(t) = -t^2$ có đạo hàm cấp hai $g''(t) = -2 < 0$, do đó nó là một hàm lõm nghiêm ngặt trên $\mathbb{R}$. Theo tiêu chuẩn hạn chế trên đường thẳng, sự xuất hiện của một hướng làm hàm số lõm ngặt chứng minh rằng $f(x_1, x_2) = x_1 x_2$ không phải là hàm lồi trên $\mathbb{R}^2$. Ma trận Hessian của hàm số là $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, có hai giá trị riêng là $+1$ và $-1$, sinh ra bề mặt yên ngựa kinh điển.
 :::
 
 ## Tóm tắt
 
-Hàm $f$ lồi khi miền xác định lồi và đồ thị nằm dưới mọi dây cung: Trộn đầu vào trước rồi tính hàm không bao giờ lớn hơn tính hàm trước rồi trộn giá trị. Lồi nghiêm ngặt đòi bất đẳng thức chặt, lõm nghĩa là $-f$ lồi, và chỉ hàm affine vừa lồi vừa lõm. Miền xác định lồi là điều kiện thật sự cần, như ví dụ $1/x^2$ cho thấy.
+Một hàm số là hàm lồi khi miền xác định của nó là một tập lồi và đồ thị hàm số nằm phía dưới hoặc tiếp xúc với mọi dây cung nối hai điểm bất kỳ. Hàm lồi nghiêm ngặt loại trừ các đoạn thẳng phẳng trên đồ thị. Hàm lõm là hàm có số đối là hàm lồi, và lớp hàm duy nhất vừa lồi vừa lõm chính là các hàm affine.
 
-Một hàm lồi khi và chỉ khi nó lồi trên mọi đường thẳng cắt miền xác định, nên câu hỏi nhiều chiều quy được về câu hỏi một chiều. Quy ước mở rộng giá trị cho hàm bằng $+\infty$ ngoài miền xác định, và hàm chỉ thị của một tập lồi biến ràng buộc thành một phần của hàm mục tiêu.
+Tính lồi của một hàm đa biến tương đương với tính lồi của hàm một biến thu được khi hạn chế hàm số lên mọi đường thẳng cắt qua miền xác định. Kỹ thuật mở rộng giá trị với $+\infty$ và hàm chỉ thị của tập lồi cho phép quy đổi các bài toán tối ưu có ràng buộc về bài toán tối ưu không ràng buộc tương đương, đặt nền móng cho các thuật toán tối ưu hóa hiện đại.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §3.1.1–3.1.2 (tr. 67–69), Hình 3.1 và Ví dụ 3.1. Ví dụ hàm $1/x^2$ là Ghi chú 3.1 ở §3.1.4 (tr. 71).
-- Ví dụ hàm cắt ngọn $\min\{x^2, 1\}$, các mô phỏng, câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

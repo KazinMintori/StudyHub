@@ -97,7 +97,7 @@ export default withMermaid(defineConfig({
             return {
               text: (course.id==='toan-cho-ai'?`Lecture ${String(lesson.number).padStart(2,'0')}. `:'') + lesson.title + (lesson.status==='draft'?' (đang biên soạn)':''),
               link: `/${course.id}/bai-giang/${lesson.slug}`,
-              // Chương có trang chủ đề: liệt kê các chủ đề theo thứ tự đọc, thu gọn khi không ở trong chương.
+              // Chương có trang chủ đề: Liệt kê các chủ đề theo thứ tự đọc, thu gọn khi không ở trong chương.
               ...(topics.length ? { collapsed: true, items: topics.map((topic, i) => ({ text: `${i + 1}. ${topic.title}`, link: `/${course.id}/bai-giang/${lesson.slug}/${topic.slug}` })) } : {})
             }
           }).filter(Boolean)

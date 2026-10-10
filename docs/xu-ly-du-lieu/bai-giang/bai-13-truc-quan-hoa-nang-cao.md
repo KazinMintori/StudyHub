@@ -3,7 +3,7 @@ course: xu-ly-du-lieu
 lecture: bai-13-truc-quan-hoa-nang-cao
 section: lecture
 title: "Trực quan hóa nâng cao & đọc biểu đồ"
-prerequisites: ["ky-vong","phuong-sai","gia-tri-thieu"]
+prerequisites: ["thong-ke-mo-ta", "gia-tri-thieu"]
 lessonStatus: ready
 description: "Trực quan hóa nâng cao với seaborn và bản đồ địa lý; giải phẫu boxplot đa chiều trên thang log, bóc trần bẫy chọn mốc so sánh và lập hồ sơ phản biện biểu đồ."
 ---
