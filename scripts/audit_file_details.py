@@ -41,7 +41,7 @@ for i, line in enumerate(lines):
     if in_code or in_math:
         continue
 
-    clean_line = re.sub(r'ngân sách', '', raw, flags=re.IGNORECASE)
+    clean_line = re.sub(r'(ngân sách|danh sách)', '', raw, flags=re.IGNORECASE)
     if clean_line.startswith('- **Stephen Boyd') or clean_line.startswith('- S. Boyd') or clean_line.startswith('- Stephen Boyd'):
         continue
 

@@ -5,17 +5,19 @@ section: lecture
 title: "Ôn tập nền tảng toán học cho AI"
 prerequisites: ["ham-so", "dao-ham", "tap-hop"]
 lessonStatus: ready
-description: "Tính dự đoán bằng ma trận, gradient và độ cong; nối nhiễu Gauss với bình phương tối thiểu."
+description: "Ôn tập toàn diện nền tảng toán học và tính toán số cho Trí tuệ Nhân tạo: Đại số ma trận, chuẩn, giải tích ma trận, phần bù Schur, SVD, đại số tuyến tính số (Cholesky, flops) và cội nguồn xác suất của bình phương tối thiểu."
 ---
 
-Mọi mô hình trí tuệ nhân tạo, từ hồi quy tuyến tính cổ điển đến các mạng nơ-ron sâu, đều vận hành quanh một cơ chế cốt lõi: Ánh xạ dữ liệu thành dự đoán, đo sai số bằng hàm mất mát, và lần theo đạo hàm để tinh chỉnh tham số. Khi mô hình dự đoán chệch hướng, ta cần biết chính xác tham số nào phải thay đổi, thay đổi bao nhiêu và theo chiều nào.
+Mọi mô hình trí tuệ nhân tạo, từ hồi quy tuyến tính cổ điển đến các mạng nơ-ron sâu với hàng trăm tỷ tham số, đều vận hành quanh một cơ chế cốt lõi: Ánh xạ dữ liệu đầu vào thành dự đoán, đo lường sai số bằng hàm mất mát, và lần theo đạo hàm để tinh chỉnh tham số. Khi mô hình dự đoán chệch hướng, ta cần biết chính xác tham số nào phải thay đổi, thay đổi bao nhiêu và theo chiều nào.
 
-Bài học mở đầu này ôn lại ba trụ cột toán học nền tảng sẽ đồng hành cùng chúng ta xuyên suốt môn học:
-1. **Đại số ma trận**: Công cụ biểu diễn đồng thời nhiều dự đoán một cách cô đọng và tận dụng năng lực tính toán song song.
-2. **Giải tích đa biến (Gradient & Hessian)**: Chiếc la bàn chỉ hướng dốc nhất để hạ thấp hàm mất mát và tấm gương phản chiếu độ cong địa hình tối ưu.
-3. **Mô hình xác suất**: Cội nguồn lý thuyết giải thích vì sao tiêu chuẩn sai số bình phương tối thiểu xuất hiện tự nhiên từ giả thiết nhiễu Gauss.
+Bài giảng mở đầu này hệ thống hóa các trụ cột toán học và tính toán số nền tảng sẽ đồng hành cùng chúng ta xuyên suốt toàn bộ chương trình:
+1. **Đại số ma trận và Chuẩn**: Công cụ biểu diễn đồng thời hàng triệu quan sát, đo lường khoảng cách và tận dụng năng lực tính toán song song trên GPU.
+2. **Giải tích ma trận và Đạo hàm đa biến (Gradient & Hessian)**: Chiếc la bàn chỉ hướng dốc nhất để hạ thấp hàm mất mát và tấm gương phản chiếu độ cong địa hình tối ưu.
+3. **Phần bù Schur và Phân tích giá trị kỳ dị (SVD)**: Các công cụ đại số cao cấp phân tích tính xác định dương của ma trận khối và bản chất hình học của không gian dữ liệu.
+4. **Đại số tuyến tính số (Numerical Linear Algebra)**: Cấu trúc tính toán thực tế, phân tích Cholesky, khai thác ma trận thưa và ngân sách độ phức tạp tính toán (flops).
+5. **Mô hình xác suất và Ước lượng hợp lý cực đại (MLE)**: Cội nguồn lý thuyết giải thích vì sao tiêu chuẩn sai số bình phương tối thiểu xuất hiện tự nhiên từ giả thiết nhiễu Gauss.
 
-Toàn bộ công thức và biến đổi giải tích sẽ được hiện thực hóa trên một tập dữ liệu nhỏ gọn, giúp bạn tự tay kiểm chứng từng bước biến đổi đại số mà không bị phân tâm bởi quy mô dữ liệu.
+Toàn bộ công thức và biến đổi giải tích sẽ được gắn kết chặt chẽ với các ví dụ số học tường minh, giúp bạn tự tay kiểm chứng từng bước biến đổi đại số mà không bị phân tâm bởi quy mô dữ liệu.
 
 ---
 
@@ -50,219 +52,279 @@ Trong bài toán tổng quát với $m$ quan sát và $n$ đặc trưng, ma tr�
 
 Một cách người ta hay dùng trong thực tế để không bao giờ nhầm lẫn chiều khi nhân ma trận là quy tắc **"khớp ở giữa, nở hai đầu"**: Khi nhân ma trận kích thước $(m \times k)$ với ma trận kích thước $(k \times n)$, hai chỉ số ở giữa bắt buộc phải trùng nhau để các phép nhân tích vô hướng thực hiện được, và kết quả thu được sẽ có kích thước chính là hai đầu ngoài cùng $(m \times n)$. Trong kỹ nghệ học sâu, tư duy ma trận hóa này (vectorization) giúp thuật toán chạy nhanh hơn hàng trăm lần trên phần cứng GPU/TPU so với các vòng lặp tuần tự.
 
-<details><summary>Câu hỏi đào sâu: Nếu ma trận dữ liệu A có 5 hàng và 2 cột thì w và Aw có bao nhiêu thành phần?</summary>
+---
 
-Theo quy tắc phối hợp kích thước, $w$ bắt buộc phải là vector cột có 2 thành phần ($w \in \mathbb{R}^{2 \times 1}$) để khớp với 2 cột đặc trưng của $A$. Khi đó, tích $Aw$ sẽ là vector có kích thước $(5 \times 2) \times (2 \times 1) = (5 \times 1)$, tức gồm 5 thành phần, tương ứng với 5 giá trị dự đoán cho 5 quan sát.
+## 2. Chuẩn vector và Chuẩn ma trận
 
-</details>
+Làm thế nào để đo lường độ lớn của một vector hoặc kích thước của một ma trận toán tử? Để làm được điều này, ta cần đến khái niệm **Chuẩn (Norm)**.
+
+### 2.1. Chuẩn vector
+Với hai vector $u, v \in \mathbb{R}^n$, **tích vô hướng** (inner product) được định nghĩa là:
+
+$$
+u^T v = \sum_{j=1}^n u_j v_j = u_1 v_1 + u_2 v_2 + \dots + u_n v_n.
+$$
+
+Cần phân biệt rõ: Đại lượng $u^T v$ là một số thực vô hướng (scalar), trong khi tích ngoài $u v^T$ lại tạo ra một ma trận kích thước $n \times n$. Hai cấu trúc này hoàn toàn khác biệt và không được hoán đổi cho nhau.
+
+Các chuẩn vector thông dụng nhất trong học máy bao gồm:
+1. **Chuẩn Euclid ($L_2$)**: Đo khoảng cách hình học thẳng hàng từ gốc tọa độ:
+   $$
+   \|u\|_2 = \sqrt{u^T u} = \sqrt{\sum_{j=1}^n u_j^2}.
+   $$
+2. **Chuẩn $L_1$ (Manhattan)**: Tổng giá trị tuyệt đối các tọa độ:
+   $$
+   \|u\|_1 = \sum_{j=1}^n |u_j| = |u_1| + |u_2| + \dots + |u_n|.
+   $$
+   Chuẩn $L_1$ đóng vai trò cốt tử trong hồi quy Lasso và nén tín hiệu nhờ đặc tính thúc đẩy nghiệm thưa (sparse solution).
+3. **Chuẩn cực đại ($L_\infty$)**: Độ lệch lớn nhất trong các thành phần:
+   $$
+   \|u\|_\infty = \max_{1 \le j \le n} |u_j|.
+   $$
+4. **Chuẩn bậc $p$ tổng quát ($L_p$)**: Với $p \ge 1$:
+   $$
+   \|u\|_p = \left( \sum_{j=1}^n |u_j|^p \right)^{1/p}.
+   $$
+
+### 2.2. Chuẩn ma trận
+Với ma trận $A \in \mathbb{R}^{m \times n}$, hai chuẩn quan trọng nhất là:
+1. **Chuẩn Frobenius**: Tương đương với chuẩn Euclid coi ma trận như một vector kéo dài:
+   $$
+   \|A\|_F = \sqrt{\operatorname{tr}(A^T A)} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n A_{ij}^2}.
+   $$
+2. **Chuẩn phổ (Spectral Norm / Chuẩn cảm sinh $L_2$)**: Đo độ khuếch đại lớn nhất mà ma trận $A$ có thể tác động lên một vector đơn vị:
+   $$
+   \|A\|_2 = \sup_{x \ne 0} \frac{\|A x\|_2}{\|x\|_2} = \sigma_{\max}(A),
+   $$
+   trong đó $\sigma_{\max}(A)$ là giá trị kỳ dị lớn nhất của ma trận $A$.
 
 ---
 
-## 2. Tích vô hướng, chuẩn vector và độ lớn của phần dư
+## 3. Giải tích ma trận và Đạo hàm nhiều biến
 
-Làm thế nào để đo lường mức độ "chệch" tổng thể của toàn bộ vector phần dư $r$? Để làm được điều này, ta cần đến các khái niệm độ dài và chuẩn trong không gian vector.
+Khi tối ưu hóa các hàm số nhận đầu vào là vector hoặc ma trận, việc thành thạo các quy tắc đạo hàm ma trận là điều kiện bắt buộc để tính toán gradient nhanh chóng và chính xác.
 
-Với hai vector bất kỳ $u = (u_1, \ldots, u_n)^T$ và $v = (v_1, \ldots, v_n)^T$, **tích vô hướng** (inner product) được định nghĩa bằng tổng các tích của từng cặp thành phần tương ứng:
-
-$$
-u^T v = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n = \sum_{j=1}^n u_j v_j.
-$$
-
-Ký hiệu $T$ biểu thị phép chuyển vị, biến một vector cột thành vector hàng. Cần phân biệt rõ: $u^T v$ là một đại lượng vô hướng (scalar, số thực), trong khi $u v^T$ lại tạo ra một ma trận kích thước $n \times n$ (outer product). Hai cấu trúc này hoàn toàn khác biệt và không được hoán đổi cho nhau.
-
-**Chuẩn Euclid** (chuẩn $L_2$) đo khoảng cách hình học thẳng hàng từ gốc tọa độ tới điểm $u$:
-
-$$
-\|u\|_2 = \sqrt{u_1^2 + \cdots + u_n^2} = \sqrt{u^T u}.
-$$
-
-Từ chuẩn Euclid, ta xây dựng **hàm mất mát bình phương tối thiểu** (least squares loss function) cho mô hình:
-
-$$
-f(w) = \frac{1}{2} \|Aw - b\|_2^2 = \frac{1}{2} \sum_{i=1}^m r_i^2.
-$$
-
-Bình phương mỗi phần dư $r_i^2$ đảm bảo rằng mọi sai lệch — dù âm hay dương — đều đóng góp một lượng không âm vào tổng mất mát. Sai số càng lớn thì hình phạt tăng càng nhanh.
-
-Hệ số $\frac{1}{2}$ phía trước đóng vai trò làm gọn biểu thức giải tích: Khi lấy đạo hàm theo $w$, số mũ 2 hạ xuống triệt tiêu với phân số $\frac{1}{2}$, giúp công thức đạo hàm không còn thừa hệ số 2. Vì $\frac{1}{2} > 0$, phép nhân với hằng số dương này không làm thay đổi vị trí của điểm cực tiểu $w^*$.
-
-::: example So sánh định lượng giữa hai giá trị tham số
-Xét tập dữ liệu 3 điểm ở mục 1:
-- Thử với $w = 1$: Vector phần dư là $r = (0, 0, 1)^T$. Mất mát tương ứng:
-  $$f(1) = \frac{1}{2}(0^2 + 0^2 + 1^2) = \frac{1}{2} = 0.5.$$
-- Thử với $w = \frac{1}{2}$: Vector phần dư là $r = (-\frac{1}{2}, -1, -\frac{1}{2})^T$. Mất mát tương ứng:
-  $$
-  \begin{aligned}
-  f\left(\frac{1}{2}\right) &= \frac{1}{2}\left[\left(-\frac{1}{2}\right)^2 + (-1)^2 + \left(-\frac{1}{2}\right)^2\right] \\
-  &= \frac{1}{2}\left(\frac{1}{4} + 1 + \frac{1}{4}\right) = \frac{3}{4} = 0.75.
-  \end{aligned}
-  $$
-
-Rõ ràng $f(1) < f(\frac{1}{2})$, nghĩa là $w = 1$ khớp dữ liệu tốt hơn $w = \frac{1}{2}$. Tuy nhiên, việc thử từng giá trị rời rạc như vậy không thể khẳng định $w = 1$ đã là nghiệm tối ưu toàn cục. Muốn tìm nghiệm tối ưu giữa vô hạn số thực, ta phải viện đến giải tích: Đi tìm nơi mà đạo hàm triệt tiêu.
-:::
-
-Ngoài chuẩn $L_2$, trong học máy chúng ta còn thường xuyên bắt gặp hai chuẩn quan trọng khác:
-
-$$
-\begin{aligned}
-\|u\|_1 &= \sum_{j=1}^n |u_j| = |u_1| + \cdots + |u_n|, \\
-\|u\|_\infty &= \max_{1 \le j \le n} |u_j|.
-\end{aligned}
-$$
-
-Chẳng hạn với vector $u = (3, -4)^T$, ta có $\|u\|_1 = |3| + |-4| = 7$, $\|u\|_2 = \sqrt{3^2 + (-4)^2} = 5$, và $\|u\|_\infty = \max(3, 4) = 4$. Mỗi chuẩn phản ánh một mục tiêu phạt sai số khác nhau: Chuẩn $L_1$ thúc đẩy nghiệm thưa (như trong hồi quy Lasso), chuẩn $L_2$ phạt nặng các sai số lớn và khả vi trơn tru khắp nơi, còn chuẩn $L_\infty$ kiểm soát kịch bản sai lệch lớn nhất.
-
----
-
-## 3. Gradient: La bàn chỉ hướng trong không gian tham số
-
-Với hàm một biến, đạo hàm $f'(w)$ cho biết độ biến thiên xấp xỉ bậc nhất: Khi dịch chuyển một bước vi phân $d$, hàm số thay đổi xấp xỉ $f(w+d) \approx f(w) + f'(w)d$. 
-
-Khi mô hình có nhiều tham số ($w \in \mathbb{R}^n$), ta gom toàn bộ các đạo hàm riêng theo từng biến thành vector **gradient**:
+### 3.1. Gradient và Vi phân toàn phần
+Cho hàm mục tiêu khả vi $f: \mathbb{R}^n \to \mathbb{R}$. Vector **gradient** là vector cột chứa toàn bộ các đạo hàm riêng bậc nhất:
 
 $$
 \nabla f(w) = \begin{bmatrix} \frac{\partial f}{\partial w_1} \\ \vdots \\ \frac{\partial f}{\partial w_n} \end{bmatrix} \in \mathbb{R}^n.
 $$
 
-Đạo hàm riêng $\frac{\partial f}{\partial w_j}$ đo lường mức độ biến thiên của mất mát khi chỉ riêng trọng số $w_j$ nhích nhẹ, còn tất cả các trọng số khác được giữ cố định nguyên vẹn.
-
-Ta suy diễn từng bước công thức gradient cho hàm mất mát tổng bình phương $f(w) = \frac{1}{2} \sum_{i=1}^m r_i^2$. Thành phần phần dư thứ $i$ được viết cụ thể là:
+Mối liên hệ giữa gradient và vi phân toàn phần cấp một $df$:
 
 $$
-r_i = \sum_{k=1}^n A_{ik} w_k - b_i.
+df = \sum_{j=1}^n \frac{\partial f}{\partial w_j} dw_j = (\nabla f(w))^T dw.
 $$
 
-Lấy đạo hàm riêng của phần dư $r_i$ theo tham số $w_j$, chỉ có số hạng chứa $w_j$ (với hệ số $A_{ij}$) là biến đổi, do đó:
+Quy tắc vi phân này là bí quyết giúp ta tìm gradient của các biểu thức ma trận phức tạp mà không cần tách rời từng tọa độ.
+
+### 3.2. Một số công thức đạo hàm ma trận cốt lõi
+1. **Hàm tuyến tính**: Xét $f(w) = a^T w$. Vi phân $df = a^T dw$, suy ra:
+   $$
+   \nabla_w (a^T w) = a.
+   $$
+2. **Hàm toàn phương**: Xét $f(w) = \frac{1}{2} w^T P w$ với ma trận đối xứng $P = P^T$. Vi phân:
+   $$
+   df = \frac{1}{2} (dw^T P w + w^T P dw) = w^T P dw = (P w)^T dw \implies \nabla_w \left(\frac{1}{2} w^T P w\right) = P w.
+   $$
+3. **Đạo hàm theo vết ma trận (Trace)**:
+   $$
+   \nabla_X \operatorname{tr}(A X) = A^T, \qquad \nabla_X \operatorname{tr}(X^T A X) = (A + A^T) X.
+   $$
+4. **Đạo hàm của Logarit Định thức**: Cho ma trận đối xứng dương xác định $X \succ 0$:
+   $$
+   \nabla_X \log\det(X) = X^{-1}.
+   $$
+
+### 3.3. Gradient của Hàm mất mát Bình phương tối thiểu
+Xét hàm mất mát:
 
 $$
-\frac{\partial r_i}{\partial w_j} = A_{ij}.
+f(w) = \frac{1}{2} \|A w - b\|_2^2 = \frac{1}{2} (A w - b)^T (A w - b).
 $$
 
-Áp dụng quy tắc chuỗi giải tích cho hàm mất mát $f(w)$:
+Khai triển hàm mất mát:
 
 $$
-\frac{\partial f}{\partial w_j} = \sum_{i=1}^m r_i \frac{\partial r_i}{\partial w_j} = \sum_{i=1}^m A_{ij} r_i.
+f(w) = \frac{1}{2} w^T A^T A w - b^T A w + \frac{1}{2} b^T b.
 $$
 
-Biểu thức vế phải chính là tích vô hướng giữa cột thứ $j$ của ma trận $A$ (hay hàng thứ $j$ của ma trận chuyển vị $A^T$) với vector phần dư $r$. Khi ghép toàn bộ $n$ đạo hàm riêng lại với nhau, ta thu được kết quả cô đọng:
+Lấy vi phân theo biến $w$:
 
 $$
-\boxed{\nabla f(w) = A^T r = A^T (Aw - b).}
+df = w^T A^T A dw - b^T A dw = (A^T A w - A^T b)^T dw = [A^T (A w - b)]^T dw.
 $$
 
-Kiểm tra tính tương thích về chiều ma trận: $A^T$ có kích thước $n \times m$, nhân với vector phần dư $r$ có kích thước $m \times 1$. Theo quy tắc khớp chiều, tích này cho ra đúng một vector kích thước $n \times 1$ — hoàn toàn tương thích với số chiều của vector tham số $w$.
+Từ đó, ta thu được công thức gradient chuẩn mực:
 
-Ý nghĩa hình học của gradient: **Vector gradient $\nabla f(w)$ luôn chỉ về hướng hàm số tăng nhanh nhất (dốc nhất)**. Do đó, khi mục tiêu là hạ thấp sai số, hướng di chuyển tự nhiên là ngược chiều gradient: Hướng $- \nabla f(w)$. Đây là nguyên lý khai sinh thuật toán **Gradient Descent** trong huấn luyện mô hình học máy.
-
-::: example Tìm tham số tối ưu cho mô hình một chiều
-Áp dụng công thức trên vào dữ liệu cụ thể ở đầu bài:
 $$
-\begin{aligned}
-f(w) &= \frac{1}{2} \left[ (w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] \\
-&= \frac{1}{2} \left( 14w^2 - 22w + 9 \right) \\
-&= 7w^2 - 11w + \frac{9}{2}.
-\end{aligned}
+\boxed{\nabla f(w) = A^T r = A^T (A w - b).}
 $$
 
-Đạo hàm bậc nhất:
-$$
-f'(w) = 14w - 11.
-$$
-
-Để tìm điểm dừng (stationary point), ta giải phương trình đạo hàm triệt tiêu $f'(w) = 0$:
-$$
-14w - 11 = 0 \iff w^* = \frac{11}{14}.
-$$
-
-Tại điểm dừng $w^* = \frac{11}{14}$:
-- Vector dự đoán: $\widehat b = \left(\frac{11}{14}, \frac{22}{14}, \frac{33}{14}\right)^T = \left(\frac{11}{14}, \frac{11}{7}, \frac{33}{14}\right)^T$.
-- Vector phần dư:
-  $$r = \widehat b - b = \left(-\frac{3}{14}, -\frac{6}{14}, \frac{5}{14}\right)^T = \left(-\frac{3}{14}, -\frac{3}{7}, \frac{5}{14}\right)^T.$$
-- Giá trị mất mát tối ưu:
-  $$
-  \begin{aligned}
-  f(w^*) &= \frac{1}{2} \left[ \left(-\frac{3}{14}\right)^2 + \left(-\frac{6}{14}\right)^2 + \left(\frac{5}{14}\right)^2 \right] \\
-  &= \frac{1}{2} \cdot \frac{9 + 36 + 25}{196} = \frac{1}{2} \cdot \frac{70}{196} = \frac{5}{28} \approx 0.1786.
-  \end{aligned}
-  $$
-
-Giá trị này nhỏ hơn mức $f(1) = 0.5$ và $f(0.5) = 0.75$ mà ta đã tính thử trước đó. Nhưng liệu điểm dừng $w^* = 11/14$ có chắc chắn là điểm cực tiểu toàn cục, hay chỉ là điểm dừng cục bộ? Để trả lời điều đó, ta cần kiểm tra độ cong địa hình thông qua đạo hàm bậc hai.
-:::
-
-<details><summary>Câu hỏi đào sâu: Tại w = 1, đạo hàm nhận giá trị âm hay dương? Muốn giảm hàm mất mát thì nên tăng hay giảm w?</summary>
-
-Ta có $f'(1) = 14(1) - 11 = 3 > 0$. Vì đạo hàm dương, hàm số đang có xu hướng tăng khi $w$ tăng. Do đó, muốn giảm mất mát, ta phải đi ngược chiều đạo hàm, tức là cần **giảm** $w$. Kết quả này hoàn toàn khớp với việc nghiệm tối ưu $w^* = 11/14 \approx 0.786 < 1$.
-
-</details>
+Ý nghĩa hình học của gradient: **Vector gradient $\nabla f(w)$ luôn chỉ về hướng hàm số tăng nhanh nhất (dốc nhất)**. Do đó, hướng di chuyển tự nhiên để hạ thấp sai số là hướng ngược chiều gradient: Hướng $- \nabla f(w)$. Đây chính là nguyên lý của phương pháp **Gradient Descent**.
 
 ---
 
-## 4. Ma trận Hessian và độ cong theo các hướng
+## 4. Ma trận Hessian, Tính xác định dương và Phần bù Schur
 
-Nếu gradient cung cấp thông tin xấp xỉ bậc nhất (độ dốc của mặt phẳng tiếp diện), thì ma trận **Hessian** $H = \nabla^2 f(w)$ cung cấp thông tin xấp xỉ bậc hai — phản ánh độ cong địa hình của hàm mục tiêu:
+### 4.1. Ma trận Hessian và Khai triển Taylor bậc hai
+Ma trận **Hessian** $H = \nabla^2 f(w) \in \mathbb{R}^{n \times n}$ tập hợp toàn bộ các đạo hàm riêng bậc hai:
+
+$$
+H_{ij} = \frac{\partial^2 f}{\partial w_i \partial w_j}.
+$$
+
+Hessian phản ánh độ cong địa hình của hàm mục tiêu qua khai triển Taylor bậc hai quanh điểm $w$:
 
 $$
 f(w + d) \approx f(w) + \nabla f(w)^T d + \frac{1}{2} d^T H d.
 $$
 
-Số hạng toàn phương $d^T H d$ thể hiện độ cong của hàm số khi ta dịch chuyển theo hướng vector $d$.
-- Nếu $d^T H d > 0$: Địa hình uốn cong lên trên theo hướng $d$ (giống đáy thung lũng hay chiếc bát ngửa).
-- Nếu $d^T H d < 0$: Địa hình uốn cong xuống dưới (giống đỉnh đồi).
-- Nếu $d^T H d = 0$: Địa hình phẳng theo hướng $d$.
+Độ cong của hàm số theo hướng dịch chuyển $d \in \mathbb{R}^n$ được định đoạt bởi dạng toàn phương $d^T H d$:
+- Nếu $d^T H d > 0$: Địa hình uốn cong lên trên theo hướng $d$ (đáy thung lũng).
+- Nếu $d^T H d < 0$: Địa hình uốn cong xuống dưới theo hướng $d$ (đỉnh đồi).
+- Nếu $d^T H d = 0$: Địa hình phẳng tuyến tính theo hướng $d$.
 
-Với hàm mất mát bình phương $f(w) = \frac{1}{2}\|Aw - b\|_2^2$, lấy đạo hàm bậc hai của biểu thức gradient $\nabla f(w) = A^TAw - A^Tb$, ta thu được ma trận Hessian hằng số:
+Với hàm mất mát bình phương tối thiểu $f(w) = \frac{1}{2}\|Aw - b\|_2^2$, đạo hàm của gradient $\nabla f(w) = A^TAw - A^Tb$ cho ra ma trận Hessian hằng số:
 
 $$
 H = \nabla^2 f(w) = A^T A.
 $$
 
-Để hiểu ý nghĩa hình học của ma trận này, ta kiểm tra dạng toàn phương với một hướng dịch chuyển $d \in \mathbb{R}^n$ bất kỳ:
+Dạng toàn phương của ma trận này với mọi vector $d \in \mathbb{R}^n$:
 
 $$
 d^T H d = d^T (A^T A) d = (A d)^T (A d) = \|A d\|_2^2 \ge 0.
 $$
 
-Vì chuẩn Euclid của một vector luôn không âm ($\|Ad\|_2^2 \ge 0$), dạng toàn phương $d^THd$ **không bao giờ âm với mọi vector $d$**.
+Vì chuẩn Euclid của một vector luôn không âm, ta có $d^T H d \ge 0$ với mọi hướng $d$. Một ma trận đối xứng thỏa mãn điều kiện này được gọi là **ma trận nửa xác định dương** (Positive Semidefinite, ký hiệu $H \succeq 0$). Điều này chứng minh rằng mặt mất mát của bài toán bình phương tối thiểu luôn là một mặt lồi paraboloid hướng lên trên.
 
-Một ma trận đối xứng thỏa mãn $d^T H d \ge 0$ với mọi $d$ được gọi là ma trận **nửa xác định dương** (Positive Semidefinite, ký hiệu $H \succeq 0$). Nếu dạng toàn phương nghiêm ngặt dương ($d^T H d > 0$) với mọi $d \ne 0$, ma trận được gọi là **dương xác định** (Positive Definite, ký hiệu $H \succ 0$).
+Để Hessian là **dương xác định ngặt** (Positive Definite, ký hiệu $H \succ 0$, tức $d^T H d > 0$ với mọi $d \ne 0$), điều kiện cần và đủ là các cột của ma trận dữ liệu $A$ phải độc lập tuyến tính (ma trận $A$ đủ hạng cột: $\operatorname{rank}(A) = n$). Khi đó, nghiệm cực tiểu toàn cục được bảo đảm là duy nhất.
 
-Ma trận Hessian $H = A^TA$ luôn ít nhất là nửa xác định dương ($H \succeq 0$). Điều này chứng minh rằng bề mặt mất mát của bài toán bình phương tối thiểu luôn là một mặt lồi paraboloid hướng lên trên, không bao giờ có độ cong âm ở bất kỳ điểm nào.
-
-Trong ví dụ một tham số ở trên, $H = A^T A = 1^2 + 2^2 + 3^2 = 14 > 0$. Khai triển Taylor bậc hai quanh điểm dừng $w^* = \frac{11}{14}$ trở thành một đẳng thức:
+### 4.2. Phần bù Schur (Schur Complement)
+Xét một ma trận khối đối xứng kích thước $(p + q) \times (p + q)$:
 
 $$
-f(w) = \frac{5}{28} + 7 \left( w - \frac{11}{14} \right)^2.
+M = \begin{bmatrix} A & B \\ B^T & C \end{bmatrix},
 $$
 
-Vì số hạng bình phương $7(w - 11/14)^2 \ge 0$ và chỉ triệt tiêu khi $w = w^*$, ta có chứng nhận toán học rằng $w^* = 11/14$ là điểm cực tiểu toàn cục duy nhất của bài toán.
+trong đó $A \in \mathbb{S}^p$, $C \in \mathbb{S}^q$, và $B \in \mathbb{R}^{p \times q}$. Giả sử ma trận khối con $A$ khả nghịch ($A \succ 0$).
 
-Một nhầm lẫn thường gặp khi mới học là nhìn vào dấu của từng phần tử để đoán tính xác định dương của ma trận:
-- Ma trận $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ có toàn bộ các phần tử đều dương, nhưng với hướng lệch $d = (1, -1)^T$, ta có $d^T H d = \begin{bmatrix}1 & -1\end{bmatrix} \begin{bmatrix}-1 \\ 1\end{bmatrix} = -2 < 0$. Ma trận này không nửa xác định dương.
-- Ngược lại, ma trận $\begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$ chứa các phần tử âm, nhưng dạng toàn phương của nó là:
-  $$d^T H d = d_1^2 - 2d_1d_2 + d_2^2 = (d_1 - d_2)^2 \ge 0 \quad \forall d,$$
-  do đó nó là ma trận nửa xác định dương (PSD).
+Ma trận **phần bù Schur** của $A$ trong $M$ được định nghĩa là:
 
-<details><summary>Câu hỏi đào sâu: Vì sao ma trận $A^TA$ luôn là PSD nhưng chưa chắc đã là PD? Điều kiện nào của dữ liệu A sẽ bảo đảm tính PD?</summary>
+$$
+S = C - B^T A^{-1} B.
+$$
 
-$A^TA$ luôn PSD vì $d^T(A^TA)d = \|Ad\|_2^2 \ge 0$. Tuy nhiên, để là PD ($H \succ 0$), ta cần $\|Ad\|_2^2 > 0$ với mọi $d \ne 0$. Nếu tồn tại một hướng $d \ne 0$ sao cho $Ad = 0$ (nghĩa là các cột của ma trận $A$ phụ thuộc tuyến tính, hay ma trận bị thiếu hạng cột - rank-deficient), thì độ cong theo hướng đó bằng 0. Khi đó bài toán có vô số nghiệm tối ưu (mặt đáy hình máng phẳng). 
+> **Bổ đề Phần bù Schur**:
+> 1. Ma trận khối $M$ dương xác định ($M \succ 0$) khi và chỉ khi:
+>    $$
+>    A \succ 0 \quad \text{và} \quad C - B^T A^{-1} B \succ 0.
+>    $$
+> 2. Nếu $A \succ 0$, ma trận khối $M$ nửa xác định dương ($M \succeq 0$) khi và chỉ khi:
+>    $$
+>    C - B^T A^{-1} B \succeq 0.
+>    $$
 
-Để $A^TA$ dương xác định ($H \succ 0$), điều kiện cần và đủ là các cột của ma trận đặc trưng $A$ phải độc lập tuyến tính, tức $A$ đủ hạng cột ($\text{rank}(A) = n$). Khi đó nghiệm cực tiểu toàn cục được bảo đảm là duy nhất.
-
-</details>
+**Ý nghĩa và Ứng dụng trong AI**:
+- **Khử biến toàn phương**: Cực tiểu hóa dạng toàn phương theo biến $x$ trong biểu thức $\begin{bmatrix} x \\ y \end{bmatrix}^T \begin{bmatrix} A & B \\ B^T & C \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}$ cho ra đúng dạng toàn phương thu gọn theo biến $y$: $y^T (C - B^T A^{-1} B) y$.
+- **Phân phối chuẩn có điều kiện**: Nếu vector ghép $(X, Y)$ tuân theo phân phối Gauss với ma trận hiệp phương sai khối, ma trận hiệp phương sai của phân phối có điều kiện $Y \mid X$ chính là phần bù Schur của khối $X$.
+- **Chuyển đổi bất đẳng thức ma trận tuyến tính (LMI)**: Phần bù Schur cho phép biến đổi các ràng buộc phi tuyến lồi (như $x^T P x \le t$) thành bất đẳng thức ma trận tuyến tính chuẩn tắc trong Quy hoạch nửa xác định (SDP).
 
 ---
 
-## 5. Mật độ xác suất và Phân phối chuẩn Gauss
+## 5. Phân tích giá trị kỳ dị (SVD) và Ý nghĩa hình học
 
-Tại sao trong thực tế người ta lại chọn chuẩn bình phương $\|Aw - b\|_2^2$ để tối ưu mà không phải chuẩn mũ 3 hay mũ 4? Để trả lời thấu đáo câu hỏi này, ta cần xem xét bài toán qua lăng kính của lý thuyết xác suất và thống kê.
+Mọi ma trận thực $A \in \mathbb{R}^{m \times n}$ đều có thể phân tích thành tích của ba ma trận:
 
-Với một biến ngẫu nhiên liên tục $Z$ có hàm mật độ xác suất $p(z)$, xác suất để $Z$ rơi vào một khoảng $[a, b]$ được tính bằng tích phân của mật độ:
+$$
+A = U \Sigma V^T,
+$$
+
+trong đó:
+- $U \in \mathbb{R}^{m \times m}$ là ma trận trực giao ($U^T U = I_m$), các cột của $U$ là các vector kỳ dị trái (left singular vectors).
+- $V \in \mathbb{R}^{n \times n}$ là ma trận trực giao ($V^T V = I_n$), các cột của $V$ là các vector kỳ dị phải (right singular vectors).
+- $\Sigma \in \mathbb{R}^{m \times n}$ là ma trận đường chéo chữ nhật chứa các **giá trị kỳ dị** được xếp theo thứ tự giảm dần:
+  $$
+  \sigma_1 \ge \sigma_2 \ge \dots \ge \sigma_r > 0 = \sigma_{r+1} = \dots = 0,
+  $$
+  với $r = \operatorname{rank}(A)$ là hạng của ma trận.
+
+### 5.1. Ý nghĩa hình học của SVD
+Phép nhân ma trận $x \mapsto A x$ có thể phân rã thành ba bước hình học cơ bản:
+1. **Phép quay/phản xạ trong không gian gốc $\mathbb{R}^n$**: Nhân với ma trận trực giao $V^T$, chuyển hệ tọa độ sang các trục trực chuẩn $v_i$.
+2. **Phép co giãn dọc theo các trục tọa độ**: Nhân với ma trận đường chéo $\Sigma$, kéo dãn vector theo từng trục với hệ số co giãn đúng bằng các giá trị kỳ dị $\sigma_i$.
+3. **Phép quay/phản xạ trong không gian đích $\mathbb{R}^m$**: Nhân với ma trận trực giao $U$, đưa các trục đã co giãn về hướng của các vector trực chuẩn $u_i$.
+
+Hệ quả hình học: Ma trận $A$ biến đổi quả cầu đơn vị $\|x\|_2 \le 1$ trong $\mathbb{R}^n$ thành một **khối ellipsoid** trong $\mathbb{R}^m$, với độ dài các bán trục chính đúng bằng các giá trị kỳ dị $\sigma_i$ và các trục đối xứng có phương trùng với các vector $u_i$.
+
+### 5.2. Số điều kiện của ma trận (Condition Number)
+Số điều kiện của ma trận khả nghịch $A \in \mathbb{R}^{n \times n}$ được định nghĩa là tỷ số giữa giá trị kỳ dị lớn nhất và nhỏ nhất:
+
+$$
+\kappa(A) = \frac{\sigma_{\max}(A)}{\sigma_{\min}(A)} = \frac{\sigma_1}{\sigma_n} \ge 1.
+$$
+
+Ý nghĩa thực tiễn:
+- Nếu $\kappa(A) \approx 1$: Ma trận có điều hòa tốt (well-conditioned). Địa hình hàm mất mát gần như hình tròn đồng mức, thuật toán gradient descent hội tụ rất nhanh.
+- Nếu $\kappa(A) \gg 1$: Ma trận có điều hòa xấu (ill-conditioned). Địa hình mất mát là một thung lũng hẹp và dài (khe núi sâu), gradient descent sẽ dao động zig-zag dữ dội và hội tụ rất chậm.
+
+---
+
+## 6. Đại số tuyến tính số trong Tối ưu hóa (Numerical Linear Algebra)
+
+Khi triển khai các thuật toán tối ưu hóa trong thực tế, việc hiểu rõ chi phí tính toán và tính ổn định số học của các thuật toán đại số tuyến tính là kỹ năng phân biệt giữa một người làm lý thuyết thuần túy và một kỹ sư tính toán thực thụ.
+
+### 6.1. Đơn vị đo độ phức tạp: Flop
+Một **flop** (floating-point operation) là một phép tính số thực dấu phẩy động cơ bản (một phép cộng, trừ, nhân, hoặc chia).
+
+Chi phí tính toán của các thao tác đại số cơ bản trên vector và ma trận:
+- Tích vô hướng của hai vector $x, y \in \mathbb{R}^n$: Tiêu tốn $2n$ flops ($n$ phép nhân và $n-1$ phép cộng).
+- Nhân ma trận với vector $A x$ với $A \in \mathbb{R}^{m \times n}$: Tiêu tốn $2mn$ flops.
+- Nhân hai ma trận $A B$ với $A \in \mathbb{R}^{m \times p}$ và $B \in \mathbb{R}^{p \times n}$: Tiêu tốn $2mpn$ flops.
+
+### 6.2. Phân tích Cholesky: Cỗ máy giải hệ phương trình xác định dương
+Để giải hệ phương trình tuyến tính đối xứng xác định dương $H x = b$ (xuất hiện trong mọi bước lặp của phương pháp Newton và bài toán bình phương tối thiểu), ta không bao giờ tính ma trận nghịch đảo $H^{-1}$ một cách trực tiếp vì thao tác này vừa chậm vừa dễ tích lũy sai số số học.
+
+Thay vào đó, ta sử dụng **Phân tích Cholesky**: Mọi ma trận đối xứng dương xác định $H \in \mathbb{S}_{++}^n$ đều có thể phân tích duy nhất thành dạng:
+
+$$
+H = L L^T,
+$$
+
+trong đó $L$ là ma trận tam giác dưới với các phần tử trên đường chéo chính dương ngặt ($L_{ii} > 0$).
+
+Quy trình giải hệ $H x = b$ qua phân tích Cholesky:
+1. **Phân tích Cholesky**: Tìm ma trận tam giác dưới $L$ thỏa mãn $H = L L^T$. Chi phí tính toán là:
+   $$
+   \frac{1}{3} n^3 \text{ flops}.
+   $$
+2. **Thế tiến (Forward substitution)**: Giải hệ tam giác dưới $L y = b$. Chi phí là $n^2$ flops.
+3. **Thế lùi (Back substitution)**: Giải hệ tam giác trên $L^T x = y$. Chi phí là $n^2$ flops.
+
+Tổng chi phí để giải hệ là $\frac{1}{3} n^3 + 2n^2 \approx \frac{1}{3} n^3$ flops. Phân tích Cholesky nhanh gấp đôi phân tích LU tổng quát ($\frac{2}{3} n^3$ flops), tiết kiệm một nửa bộ nhớ và có độ ổn định số học vượt trội (không cần hoán vị hàng pivoting).
+
+### 6.3. Khai thác Cấu trúc Ma trận Thưa (Sparsity)
+Trong các bài toán học máy quy mô lớn (như đồ thị, bài toán quy hoạch mạng lưới, hay mô hình chuỗi thời gian), ma trận dữ liệu và ma trận Hessian thường chứa phần lớn phần tử bằng 0 (**ma trận thưa - sparse matrix**).
+
+Nếu ma trận $H \in \mathbb{R}^{n \times n}$ là ma trận dạng băng (banded matrix) với độ rộng băng $k \ll n$ (chỉ có các phần tử cách đường chéo chính không quá $k$ vị trí là khác 0):
+- Chi phí phân tích Cholesky giảm từ $O(n^3)$ xuống chỉ còn $O(n k^2)$ flops.
+- Khi $k$ cố định, độ phức tạp là **tuyến tính $O(n)$** theo số chiều biến! Việc nhận diện và khai thác cấu trúc thưa giúp giảm thời gian giải bài toán từ nhiều ngày xuống vài giây.
+
+---
+
+## 7. Mật độ xác suất và Phân phối chuẩn Gauss
+
+Tại sao trong thực tế người ta lại chọn chuẩn bình phương $\|Aw - b\|_2^2$ để tối ưu mà không phải chuẩn bậc 3 hay bậc 4? Để trả lời thấu đáo câu hỏi này, ta cần xem xét bài toán qua lăng kính của lý thuyết xác suất và thống kê.
+
+Với một biến ngẫu nhiên liên tục $Z$ có hàm mật độ xác suất $p(z)$, xác suất để $Z$ rơi vào một khoảng $[a, b]$ được tính bằng tích phân của hàm mật độ:
 
 $$
 P(a \le Z \le b) = \int_a^b p(z) \, dz.
 $$
 
-Lưu ý rằng giá trị hàm mật độ $p(z)$ tại một điểm không phải là xác suất sinh ra đúng điểm đó (đối với biến liên tục, xác suất tại một điểm đơn lẻ luôn bằng 0). Hai đặc trưng quan trọng của phân phối là **kỳ vọng** $\mathbb{E}[Z] = \int z p(z) dz$ (trọng tâm phân phối) và **phương sai** $\text{Var}(Z) = \mathbb{E}[(Z - \mathbb{E}[Z])^2]$ (mức độ phân tán quanh trọng tâm).
+Lưu ý rằng giá trị hàm mật độ $p(z)$ tại một điểm không phải là xác suất sinh ra đúng điểm đó (đối với biến liên tục, xác suất tại một điểm đơn lẻ luôn bằng 0). Hai đặc trưng quan trọng của phân phối là **kỳ vọng** $\mathbb{E}[Z] = \int z p(z) dz$ (trọng tâm phân phối) và **phương sai** $\operatorname{Var}(Z) = \mathbb{E}[(Z - \mathbb{E}[Z])^2]$ (mức độ phân tán quanh trọng tâm).
 
 **Phân phối chuẩn (Gauss)** một biến với kỳ vọng $\mu$ và phương sai $\sigma^2 > 0$ có hàm mật độ hình chuông:
 
@@ -270,29 +332,29 @@ $$
 p(z) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left[ -\frac{(z - \mu)^2}{2\sigma^2} \right].
 $$
 
-Khi mở rộng sang vector ngẫu nhiên $Z \in \mathbb{R}^m$ với vector kỳ vọng $\mu \in \mathbb{R}^m$ và ma trận hiệp phương sai $\Sigma \in \mathbb{R}^{m \times m}$ đối xứng dương xác định ($\Sigma \succ 0$), hàm mật độ Gauss đa biến có dạng:
+Khi mở rộng sang vector ngẫu nhiên $Z \in \mathbb{R}^m$ với vector kỳ vọng $\mu \in \mathbb{R}^m$ và ma trận hiệp phương sai đối xứng dương xác định $\Sigma \succ 0$, hàm mật độ Gauss đa biến có dạng:
 
 $$
 p(z) = \frac{1}{(2\pi)^{m/2} \sqrt{\det\Sigma}} \exp\left[ -\frac{1}{2} (z - \mu)^T \Sigma^{-1} (z - \mu) \right].
 $$
 
-- Ma trận hiệp phương sai $\Sigma$ lưu giữ phương sai của từng thành phần trên đường chéo chính ($\Sigma_{ii} = \sigma_i^2$) và mức độ tương quan tuyến tính giữa các cặp thành phần ở các vị trí ngoài đường chéo ($\Sigma_{ij} = \text{Cov}(Z_i, Z_j)$).
+- Ma trận hiệp phương sai $\Sigma$ lưu giữ phương sai của từng thành phần trên đường chéo chính ($\Sigma_{ii} = \sigma_i^2$) và mức độ tương quan tuyến tính giữa các cặp thành phần ở các vị trí ngoài đường chéo ($\Sigma_{ij} = \operatorname{Cov}(Z_i, Z_j)$).
 - Định thức $\det\Sigma$ phản ánh thể tích của ellipsoid phân tán dữ liệu, đóng vai trò chuẩn hóa diện tích tích phân của hàm mật độ về đúng bằng 1.
-- Trường hợp đặc biệt quan trọng: Khi các thành phần sai số độc lập thống kê và có cùng phương sai $\sigma^2$, ma trận hiệp phương sai trở thành ma trận đường chéo $\Sigma = \sigma^2 I$. Lúc này, mật độ đa biến phân rã thành tích của $m$ mật độ Gauss độc lập: $p(z) = \prod_{i=1}^m p(z_i)$.
+- Khi các thành phần sai số độc lập thống kê và có cùng phương sai $\sigma^2$, ma trận hiệp phương sai trở thành ma trận đường chéo $\Sigma = \sigma^2 I_m$. Lúc này, mật độ đa biến phân rã thành tích của $m$ mật độ Gauss độc lập: $p(z) = \prod_{i=1}^m p(z_i)$.
 
 ---
 
-## 6. Nguồn gốc xác suất của Bài toán Bình phương tối thiểu
+## 8. Cội nguồn xác suất của Bài toán Bình phương tối thiểu
 
 Giờ đây ta có thể nhìn thấy mối liên hệ trực tiếp giữa học máy và xác suất thống kê.
 
 Giả sử trong thực tế, quá trình sinh dữ liệu tuân theo mô hình tuyến tính bị làm nhiễu:
 
 $$
-b_i = a_i^T w + \varepsilon_i, \qquad \varepsilon_i \overset{\text{độc lập, cùng phân phối}}{\sim} \mathcal{N}(0, \sigma^2).
+b_i = a_i^T w + \varepsilon_i, \qquad \varepsilon_i \overset{\text{i.i.d.}}{\sim} \mathcal{N}(0, \sigma^2).
 $$
 
-Nghĩa là nhãn thực tế $b_i$ là một biến ngẫu nhiên có kỳ vọng đúng bằng giá trị mô hình dự đoán $\mathbb{E}[b_i] = a_i^T w$, và bị sai lệch bởi một nhiễu ngẫu nhiên Gauss $\varepsilon_i$ không thiên vị (kỳ vọng bằng 0) với phương sai $\sigma^2$.
+Nghĩa là nhãn thực tế $b_i$ là một biến ngẫu nhiên có kỳ vọng đúng bằng giá trị mô hình dự đoán $\mathbb{E}[b_i] = a_i^T w$, và bị sai lệch bởi một nhiễu ngẫu nhiên Gauss $\varepsilon_i$ không thiên vị với phương sai $\sigma^2$.
 
 Theo mô hình này, mật độ xác suất có điều kiện của nhãn $b_i$ khi biết tham số $w$ là:
 
@@ -300,7 +362,7 @@ $$
 p(b_i \mid w) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left[ -\frac{(b_i - a_i^T w)^2}{2\sigma^2} \right].
 $$
 
-Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood** — hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \ldots, b_m)^T$ bằng tích các mật độ thành phần:
+Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood** — hàm hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \dots, b_m)^T$ bằng tích các mật độ thành phần:
 
 $$
 \begin{aligned}
@@ -309,7 +371,7 @@ L(w) &= p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) \\
 \end{aligned}
 $$
 
-Triết lý ước lượng hợp lý cực đại (**Maximum Likelihood Estimation - MLE**): Ta muốn tìm bộ tham số $w$ sao cho khả năng quan sát được tập dữ liệu hiện có trong thực tế là lớn nhất. 
+Triết lý ước lượng hợp lý cực đại (**Maximum Likelihood Estimation - MLE**): Ta muốn tìm bộ tham số $w$ sao cho khả năng quan sát được tập dữ liệu hiện có trong thực tế là lớn nhất.
 
 Để cực đại hóa một tích các hàm mũ, trong toán tối ưu người ta dùng phép biến đổi lấy **âm logarit tự nhiên** (Negative Log-Likelihood - NLL). Do hàm logarit đơn điệu tăng ngặt, việc cực đại hóa $L(w)$ hoàn toàn tương đương với việc cực tiểu hóa $-\log L(w)$:
 
@@ -318,10 +380,10 @@ $$
 $$
 
 Quan sát biểu thức trên:
-- Số hạng đầu tiên $\frac{m}{2}\log(2\pi\sigma^2)$ là một hằng số không phụ thuộc vào tham số $w$.
+- Số hạng đầu tiên $\frac{m}{2}\log(2\pi\sigma^2)$ là một hằng số độc lập với tham số $w$.
 - Hệ số $\frac{1}{2\sigma^2}$ là một số dương cố định.
 
-Do đó, bài toán tìm $w$ để cực đại hóa hàm hợp lý Likelihood quy về chính xác:
+Do đó, bài toán tìm tham số $w$ để cực đại hóa hàm hợp lý Likelihood quy về chính xác:
 
 $$
 \arg\min_w \left[ -\log p(b \mid w) \right] \equiv \arg\min_w \frac{1}{2} \|Aw - b\|_2^2.
@@ -329,92 +391,138 @@ $$
 
 Tiêu chuẩn bình phương tối thiểu không phải là một công thức cảm tính được chọn ngẫu nhiên. Nó là hệ quả toán học trực tiếp của nguyên lý cực đại hóa hàm hợp lý dưới giả thiết sai số quan sát tuân theo phân phối chuẩn Gauss độc lập.
 
-Nếu các sai số quan sát không có cùng phương sai hoặc có tương quan lẫn nhau (ma trận hiệp phương sai tổng quát $\Sigma \succ 0$), biểu thức NLL sẽ dẫn tới hàm mất mát bình phương có trọng số:
+Nếu các sai số quan sát có tương quan lẫn nhau với ma trận hiệp phương sai tổng quát $\Sigma \succ 0$, biểu thức NLL sẽ dẫn tới hàm mất mát bình phương có trọng số:
 
 $$
 f(w) = \frac{1}{2} (Aw - b)^T \Sigma^{-1} (Aw - b).
 $$
 
-Mỗi quan sát có độ không đảm bảo cao (phương sai lớn) sẽ tự động bị ma trận $\Sigma^{-1}$ giảm trọng số ảnh hưởng trong hàm mất mát.
-
-<details><summary>Câu hỏi đào sâu: Nếu dữ liệu có nhiều điểm ngoại lai (outliers) cực đoan, điều gì sẽ xảy ra với hàm mất mát bình phương? Ta nên đổi sang mô hình xác suất nào?</summary>
-
-Vì hàm mất mát $L_2$ phạt bình phương sai số ($r_i^2$), một điểm ngoại lai lệch gấp 10 lần sẽ bị phạt gấp $10^2 = 100$ lần. Mô hình sẽ bị kéo lệch đáng kể chỉ để thỏa hiệp với điểm nhiễu này. 
-
-Để khắc phục, trong thực tế người ta thay giả thiết nhiễu Gauss bằng giả thiết nhiễu có đuôi nặng hơn, chẳng hạn như **phân phối Laplace** ($p(\varepsilon) \propto \exp(-|\varepsilon|/\beta)$). Khi lấy âm log của phân phối Laplace, số mũ rơi xuống thành trị tuyệt đối, dẫn tới hàm mất mát chuẩn $L_1$: $\sum |a_i^Tw - b_i|$. Hàm mất mát $L_1$ chỉ phạt tuyến tính theo sai số, mang lại khả năng chống chịu ngoại lai (robustness) bền bỉ hơn cho mô hình.
-
-</details>
+Mỗi quan sát có phương sai lớn sẽ tự động bị ma trận $\Sigma^{-1}$ giảm trọng số ảnh hưởng trong hàm mất mát.
 
 ---
 
-## Bài tập tự luyện
+## 9. Hệ thống Bài tập Tự luyện Chuyên sâu
 
-::: exercise 1. Rèn luyện phép nhân ma trận và kiểm tra kích thước
-Cho ma trận dữ liệu $A = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}$, vector trọng số $w = \begin{bmatrix} 2 \\ -1 \end{bmatrix}$, và vector nhãn $b = \begin{bmatrix} 0 \\ 2 \end{bmatrix}$. 
-Hãy tính vector dự đoán $\widehat b$, vector phần dư $r$, và giá trị hàm mất mát bình phương $f(w) = \frac{1}{2}\|r\|_2^2$.
+::: exercise 1. Kiểm tra tính xác định dương và Phần bù Schur cho ma trận khối
+Xét ma trận khối đối xứng:
+$$
+M = \begin{bmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & c \end{bmatrix},
+$$
+trong đó $c \in \mathbb{R}$ là tham số thực.
+1. Hãy phân rã ma trận $M$ thành cấu trúc khối $\begin{bmatrix} A & B \\ B^T & C \end{bmatrix}$ với khối con $A$ kích thước $2 \times 2$.
+2. Tính phần bù Schur $S = C - B^T A^{-1} B$.
+3. Sử dụng Bổ đề phần bù Schur để tìm điều kiện cần và đủ của $c$ để ma trận $M$ dương xác định ($M \succ 0$).
 :::
 ::: solution
-- Vector dự đoán:
-  $$
-  \widehat b = Aw = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix} = \begin{bmatrix} 1(2) + 2(-1) \\ 0(2) + 1(-1) \end{bmatrix} = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.
-  $$
-- Vector phần dư:
-  $$
-  r = \widehat b - b = \begin{bmatrix} 0 \\ -1 \end{bmatrix} - \begin{bmatrix} 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\ -3 \end{bmatrix}.
-  $$
-- Giá trị hàm mất mát:
-  $$
-  f(w) = \frac{1}{2} \|r\|_2^2 = \frac{1}{2} (0^2 + (-3)^2) = \frac{9}{2} = 4.5.
-  $$
-Vector phần dư có đúng 2 thành phần vì tập dữ liệu có $m = 2$ quan sát.
+**Lời giải**:
+1. Phân rã ma trận thành cấu trúc khối:
+   $$
+   A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad C = [c].
+   $$
+   Khối con $A$ đối xứng, có định thức $\det(A) = 2(2) - 1(1) = 3 > 0$ và phần tử góc $A_{11} = 2 > 0$, do đó $A \succ 0$.
+
+2. Tính ma trận nghịch đảo của $A$:
+   $$
+   A^{-1} = \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}.
+   $$
+   Tính tích $B^T A^{-1} B$:
+   $$
+   B^T A^{-1} B = \begin{bmatrix} 0 & 1 \end{bmatrix} \left( \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \right) \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{1}{3} \begin{bmatrix} -1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{2}{3}.
+   $$
+   Phần bù Schur là:
+   $$
+   S = C - B^T A^{-1} B = c - \frac{2}{3}.
+   $$
+
+3. Theo Bổ đề phần bù Schur, vì $A \succ 0$, ma trận khối $M \succ 0$ khi và chỉ khi $S > 0$:
+   $$
+   c - \frac{2}{3} > 0 \iff c > \frac{2}{3}.
+   $$
+   Như vậy, điều kiện cần và đủ để ma trận $M$ dương xác định là $c > \frac{2}{3}$.
 :::
 
-::: exercise 2. Lần theo dấu vết Gradient
-Với ma trận $A$, trọng số $w$ và nhãn $b$ ở Bài tập 1, hãy tính vector gradient $\nabla f(w) = A^T r$. Giải thích vì sao kết quả nhận được có 2 thành phần.
+::: exercise 2. Thực hiện phân tích Cholesky và Giải hệ phương trình chuẩn tắc
+Cho ma trận đối xứng dương xác định:
+$$
+H = \begin{bmatrix} 4 & 2 \\ 2 & 10 \end{bmatrix}, \qquad b = \begin{bmatrix} 8 \\ 16 \end{bmatrix}.
+$$
+1. Hãy tìm ma trận tam giác dưới $L = \begin{bmatrix} l_{11} & 0 \\ l_{21} & l_{22} \end{bmatrix}$ trong phân tích Cholesky $H = L L^T$.
+2. Áp dụng phương pháp thế tiến và thế lùi để giải hệ phương trình $H x = b$.
 :::
 ::: solution
-Chuyển vị của ma trận $A$ là $A^T = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$.
+**Lời giải**:
+1. Khai triển tích $L L^T$:
+   $$
+   L L^T = \begin{bmatrix} l_{11} & 0 \\ l_{21} & l_{22} \end{bmatrix} \begin{bmatrix} l_{11} & l_{21} \\ 0 & l_{22} \end{bmatrix} = \begin{bmatrix} l_{11}^2 & l_{11} l_{21} \\ l_{11} l_{21} & l_{21}^2 + l_{22}^2 \end{bmatrix}.
+   $$
+   Đồng nhất các phần tử với ma trận $H$:
+   - $l_{11}^2 = 4 \implies l_{11} = 2$ (chọn phần tử đường chéo dương).
+   - $l_{11} l_{21} = 2 \implies 2 l_{21} = 2 \implies l_{21} = 1$.
+   - $l_{21}^2 + l_{22}^2 = 10 \implies l_{22}^2 = 9$, suy ra $l_{22} = 3$.
+   Do đó, ma trận Cholesky là:
+   $$
+   L = \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix}.
+   $$
 
-Vector gradient là:
-$$
-\nabla f(w) = A^T r = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 0 \\ -3 \end{bmatrix} = \begin{bmatrix} 1(0) + 0(-3) \\ 2(0) + 1(-3) \end{bmatrix} = \begin{bmatrix} 0 \\ -3 \end{bmatrix}.
-$$
-
-Kết quả gradient có đúng 2 thành phần vì không gian tham số có $n = 2$ chiều ($w \in \mathbb{R}^2$). Mỗi thành phần của gradient cho biết tốc độ thay đổi của hàm mất mát theo từng tham số tương ứng ($\frac{\partial f}{\partial w_1} = 0$, $\frac{\partial f}{\partial w_2} = -3$). Nếu muốn giảm mất mát, ta cần tăng $w_2$ vì đạo hàm riêng của nó đang mang dấu âm.
+2. Giải hệ phương trình $H x = b$ qua hai bước:
+   - **Bước 1 (Thế tiến $L y = b$)**:
+     $$
+     \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = \begin{bmatrix} 8 \\ 16 \end{bmatrix} \implies \begin{cases} 2 y_1 = 8 \implies y_1 = 4, \\ 1(4) + 3 y_2 = 16 \implies 3 y_2 = 12 \implies y_2 = 4. \end{cases}
+     $$
+     Suy ra $y = \begin{bmatrix} 4 \\ 4 \end{bmatrix}$.
+   - **Bước 2 (Thế lùi $L^T x = y$)**:
+     $$
+     \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 4 \\ 4 \end{bmatrix} \implies \begin{cases} 3 x_2 = 4 \implies x_2 = \frac{4}{3}, \\ 2 x_1 + \frac{4}{3} = 4 \implies 2 x_1 = \frac{8}{3} \implies x_1 = \frac{4}{3}. \end{cases}
+     $$
+     Nghiệm duy nhất của hệ là $x = \begin{bmatrix} 4/3 \\ 4/3 \end{bmatrix}$.
 :::
 
-::: exercise 3. Khảo sát một hệ suy biến thiếu hạng (Rank-deficient)
-Xét mô hình chỉ dự đoán tổng hai tham số $w_1 + w_2$ cho một quan sát duy nhất có nhãn $b = 1$. Hàm mất mát là $f(w) = \frac{1}{2}(w_1 + w_2 - 1)^2$.
-Hỏi bài toán này có nghiệm tối ưu duy nhất hay không? Hãy phân tích tính chất ma trận Hessian để trả lời.
+::: exercise 3. Phân tích SVD và Độ co giãn của ma trận dữ liệu
+Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
+1. Hãy xác định các giá trị kỳ dị $\sigma_1, \sigma_2$ và số điều kiện $\kappa(A)$.
+2. Mô tả hình học ảnh của quả cầu đơn vị $\|x\|_2 \le 1$ qua ánh xạ $A$.
 :::
 ::: solution
-Ở bài toán này, ma trận dữ liệu chỉ gồm một hàng $A = \begin{bmatrix} 1 & 1 \end{bmatrix}$. 
+**Lời giải**:
+1. Xét ma trận $A^T A = \begin{bmatrix} 9 & 0 \\ 0 & 4 \end{bmatrix}$.
+   Các giá trị riêng của $A^T A$ là $\lambda_1 = 9$ và $\lambda_2 = 4$.
+   Các giá trị kỳ dị của $A$ là căn bậc hai của các giá trị riêng này:
+   $$
+   \sigma_1 = \sqrt{9} = 3, \qquad \sigma_2 = \sqrt{4} = 2.
+   $$
+   Số điều kiện của ma trận là:
+   $$
+   \kappa(A) = \frac{\sigma_1}{\sigma_2} = \frac{3}{2} = 1.5.
+   $$
 
-Ma trận Hessian là:
-$$
-H = A^T A = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}.
-$$
-
-Dạng toàn phương của Hessian là $d^T H d = (d_1 + d_2)^2 \ge 0$, do đó $H$ nửa xác định dương ($H \succeq 0$). Tuy nhiên, nếu ta chọn hướng dịch chuyển $d = (1, -1)^T \ne 0$, thì $d^T H d = (1 - 1)^2 = 0$. Điều này cho thấy Hessian không dương xác định ($H \not\succ 0$).
-
-Hàm mất mát đạt giá trị nhỏ nhất bằng 0 tại mọi điểm nằm trên đường thẳng $w_1 + w_2 = 1$. Do đó bài toán có vô số nghiệm tối ưu, tạo thành một đáy thung lũng phẳng lỳ. Ví dụ này giúp chúng ta phân biệt rõ ràng giữa tính lồi (convex) và tính lồi ngặt (strictly convex) — nền tảng sẽ được phát triển toàn diện trong Bài 01.
+2. Xét điểm $x = (x_1, x_2)^T$ nằm trên biên của quả cầu đơn vị: $x_1^2 + x_2^2 = 1$.
+   Ảnh của $x$ qua ánh xạ $A$ là $y = A x = (3 x_1, -2 x_2)^T$.
+   Đặt $y_1 = 3 x_1 \implies x_1 = y_1/3$ và $y_2 = -2 x_2 \implies x_2 = -y_2/2$.
+   Thay vào phương trình quả cầu đơn vị:
+   $$
+   \left(\frac{y_1}{3}\right)^2 + \left(-\frac{y_2}{2}\right)^2 = 1 \iff \frac{y_1^2}{3^2} + \frac{y_2^2}{2^2} = 1.
+   $$
+   Đây chính là phương trình của một hình ellipse trong mặt phẳng với bán trục lớn bằng $\sigma_1 = 3$ dọc theo trục hoành và bán trục nhỏ bằng $\sigma_2 = 2$ dọc theo trục tung. Ánh xạ ma trận $A$ đã kéo giãn quả cầu tròn thành một khối ellipse có kích thước đúng bằng các giá trị kỳ dị.
 :::
 
 ---
 
 ## Tóm tắt cốt lõi
 
-1. **Biểu diễn ma trận**: Gom dữ liệu thành ma trận $A \in \mathbb{R}^{m \times n}$ giúp tính toán đồng thời mọi dự đoán $Aw$ và phần dư $r = Aw - b$, khai phóng sức mạnh xử lý song song của phần cứng AI.
-2. **Gradient và Hướng giảm**: Gradient của hàm mất mát tổng bình phương là $\nabla f(w) = A^T(Aw - b)$. Di chuyển ngược chiều gradient là kim chỉ nam để tối ưu hóa tham số.
-3. **Hessian và Độ cong**: Ma trận đạo hàm bậc hai $H = A^TA$ luôn nửa xác định dương ($H \succeq 0$), bảo đảm địa hình tối ưu luôn là một mặt paraboloid lồi hướng lên trên. Khi $A$ đủ hạng cột, nghiệm cực tiểu là duy nhất.
-4. **Cội nguồn xác suất**: Tiêu chuẩn bình phương tối thiểu chính là hệ quả toán học trực tiếp của nguyên lý Cực đại hóa hợp lý (MLE) khi sai số tuân theo phân phối chuẩn Gauss.
+1. **Biểu diễn ma trận**: Gom dữ liệu thành ma trận $A \in \mathbb{R}^{m \times n}$ giúp tính toán đồng thời mọi dự đoán $A w$ và phần dư $r = A w - b$, khai phóng sức mạnh xử lý song song của GPU.
+2. **Gradient và Hướng dốc nhất**: Gradient của hàm mất mát tổng bình phương là $\nabla f(w) = A^T(A w - b)$. Hướng $- \nabla f(w)$ là kim chỉ nam hạ thấp mất mát trong thuật toán Gradient Descent.
+3. **Hessian và Độ cong địa hình**: Ma trận đạo hàm bậc hai $H = A^T A$ luôn nửa xác định dương ($H \succeq 0$), bảo đảm địa hình tối ưu luôn là một mặt lồi paraboloid. Khi $A$ đủ hạng cột, nghiệm cực tiểu là duy nhất.
+4. **Phần bù Schur**: Công cụ mạnh mẽ kiểm tra tính xác định dương của ma trận khối, khử biến trong dạng toàn phương và liên kết với phân phối chuẩn có điều kiện.
+5. **Phân tích SVD và Số điều kiện**: SVD giải mã cấu trúc hình học của ma trận qua tích phân rã $U \Sigma V^T$. Tỷ số $\kappa(A) = \sigma_{\max}/\sigma_{\min}$ đo lường độ méo mó của địa hình tối ưu.
+6. **Đại số tuyến tính số**: Phân tích Cholesky ($H = L L^T$) là tiêu chuẩn vàng để giải hệ phương trình Newton với chi phí $\frac{1}{3} n^3$ flops. Việc nhận diện cấu trúc ma trận thưa đưa độ phức tạp về tuyến tính $O(n)$.
+7. **Cội nguồn xác suất**: Tiêu chuẩn bình phương tối thiểu là hệ quả toán học trực tiếp của nguyên lý Cực đại hóa hợp lý (MLE) khi sai số tuân theo phân phối chuẩn Gauss độc lập.
 
 ---
 
-## Tài liệu tham khảo và Đọc thêm
+## Tài liệu tham khảo
 
-Dành cho bạn đọc muốn đào sâu nền tảng toán học đằng sau các thuật toán học máy:
-- **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Phụ lục A về đại số tuyến tính, hình học giải tích và vi phân ma trận, cùng Chương 1.2 về mô hình hóa bài toán bình phương tối thiểu.
-- **Daphne Koller & Nir Friedman**, *Probabilistic Graphical Models: Principles and Techniques*, MIT Press. Tham khảo về phân phối xác suất đa biến, tính độc lập thống kê và nguyên lý ước lượng hợp lý cực đại.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press. Đọc kỹ Phụ lục A (Đại số tuyến tính, hình học giải tích và vi phân ma trận) và Phụ lục C (Đại số tuyến tính số, phân tích Cholesky, cấu trúc ma trận thưa).
+- Gene H. Golub, Charles F. Van Loan, *Matrix Computations*, Johns Hopkins University Press.
+- Gilbert Strang, *Linear Algebra and Learning from Data*, Wellesley-Cambridge Press.
 
 Tiếp theo: [Bài 01 — Nhập môn tối ưu hóa, Tập lồi và Hàm lồi](./bai-01-nhap-mon-toi-uu.md).

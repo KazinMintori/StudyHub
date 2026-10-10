@@ -38,8 +38,8 @@ $$
 \eta_{\mathrm{eff}, i} = \frac{\eta}{\sqrt{s_{t, i}} + \varepsilon}.
 $$
 
-- Tham số nào có gradient dồn dập: $s_{t, i}$ tăng vọt, $\eta_{\mathrm{eff}, i}$ tự động co nhỏ lại.
-- Tham số nào có gradient thưa thớt: $s_{t, i}$ tăng chậm, $\eta_{\mathrm{eff}, i}$ giữ ở mức cao, giúp tham số đón nhận các bước cập nhật lớn mỗi khi có tín hiệu.
+- Tham số nào có gradient dồn dập: Đại lượng $s_{t, i}$ tăng vọt, $\eta_{\mathrm{eff}, i}$ tự động co nhỏ lại.
+- Tham số nào có gradient thưa thớt: Đại lượng $s_{t, i}$ tăng chậm, $\eta_{\mathrm{eff}, i}$ giữ ở mức cao, giúp tham số đón nhận các bước cập nhật lớn mỗi khi có tín hiệu.
 
 ::: example Theo dõi bước nhảy trên một tọa độ đơn lẻ
 Xét một tham số nhận chuỗi gradient thử nghiệm $g_1 = 2$, $g_2 = 2$ với tốc độ học $\eta = 0.1$ (tạm bỏ qua $\varepsilon$):
@@ -182,7 +182,7 @@ p_{k+1} &= r_{k+1} + \gamma_k p_k.
 \end{aligned}
 $$
 
-Tính chất kỳ diệu của CG: Các hướng tìm kiếm $p_0, p_1, \ldots$ trực giao với nhau qua ma trận $H$ ($p_i^T H p_j = 0$ với mọi $i \ne j$). Trong số học chính xác, thuật toán CG giải đúng nghiệm của hệ $n$ chiều trong **tối đa không quá $n$ bước lặp**.
+Đặc tính toán học nổi bật của CG: Các hướng tìm kiếm $p_0, p_1, \ldots$ trực giao với nhau qua ma trận $H$ ($p_i^T H p_j = 0$ với mọi $i \ne j$). Trong số học chính xác, thuật toán CG giải đúng nghiệm của hệ $n$ chiều trong **tối đa không quá $n$ bước lặp**.
 
 ::: example Minh họa CG giải hệ tuyến tính hai chiều
 Cho $H = \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ và $b = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$. Khởi tạo $z_0 = (0, 0)^T$.

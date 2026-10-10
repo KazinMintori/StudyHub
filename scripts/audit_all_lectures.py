@@ -8,12 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 book_kw = re.compile(r'\b(sách|nguyên tác|bản dịch|theo Boyd|Boyd & Vandenberghe|trong sách)\b', re.IGNORECASE)
 ai_kw = re.compile(r'\b(kỳ diệu|vô cùng|cực kỳ|ma thuật|vi diệu)\b', re.IGNORECASE)
 
-files = []
-files.append("docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md")
-files.append("docs/toan-cho-ai/bai-giang/bai-02-tap-loi.md")
-files.extend(glob.glob("docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/*.md"))
-files.extend(glob.glob("docs/toan-cho-ai/bai-giang/bai-02-tap-loi/*.md"))
-
+files = glob.glob("docs/toan-cho-ai/bai-giang/**/*.md", recursive=True)
 files = sorted(list(set(files)))
 
 print(f"{'File':<60} | {'Sách':<6} | {'AI':<6} | {'Colon Lower':<12}")
@@ -55,7 +50,7 @@ for filepath in files:
         if in_code or in_math:
             continue
 
-        clean_line = re.sub(r'ngân sách', '', raw, flags=re.IGNORECASE)
+        clean_line = re.sub(r'(ngân sách|danh sách)', '', raw, flags=re.IGNORECASE)
         if clean_line.startswith('- **Stephen Boyd') or clean_line.startswith('- S. Boyd') or clean_line.startswith('- Stephen Boyd'):
             continue
 
@@ -65,11 +60,12 @@ for filepath in files:
         if ai_kw.search(raw):
             ai_cnt += 1
 
-        no_math = re.sub(r'\$[^\$]+\$', '', raw)
-        no_math = re.sub(r'&[a-zA-Z0-9_]+;', '', no_math)
-        m_colon = re.search(r':\s+([a-zàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ])', no_math)
-        if m_colon and not raw.startswith(':::') and not re.search(r'(https?|file|C):', raw):
-            colon_cnt += 1
+        if not (raw.startswith('<') or 'style=' in raw or 'viewBox=' in raw):
+            no_math = re.sub(r'\$[^\$]+\$', '', raw)
+            no_math = re.sub(r'&[a-zA-Z0-9_]+;', '', no_math)
+            m_colon = re.search(r':\s+([a-zàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ])', no_math)
+            if m_colon and not raw.startswith(':::') and not re.search(r'(https?|file|C):', raw):
+                colon_cnt += 1
 
     fname = os.path.basename(filepath)
     prefix = filepath.split('/')[-2] if '/' in filepath else filepath.split('\\')[-2]
