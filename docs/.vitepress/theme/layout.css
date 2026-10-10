@@ -10,8 +10,8 @@
 .coffee-footer-btn { gap: var(--space-2); }
 .coffee-footer-icon { width: 18px; height: 18px; flex-shrink: 0; display: block; }
 .VPSidebar .VPSidebarItem .text { font-size: var(--fs-ui); line-height: 1.45; }
-.Layout .VPDoc .content-container { max-width: 620px; }
-.Layout .VPDoc.has-aside .content-container { max-width: 620px; }
+.Layout .VPDoc .content-container { max-width: 780px; }
+.Layout .VPDoc.has-aside .content-container { max-width: 780px; }
 .Layout .VPLocalNav button, .VPDocFooter .pager-link .desc { font-size: var(--fs-small); }
 .VPDoc .aside { width: 220px; padding-left: var(--space-6); }
 .VPDoc .aside-container {
@@ -44,9 +44,9 @@
 .lecture-layout .VPDocFooter .last-updated { display: none; }
 .lecture-layout .VPDoc.has-sidebar .content { padding-left: var(--space-5); padding-right: var(--space-5); }
 @media (min-width: 1440px) {
-  .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 760px; }
-  .lecture-layout .VPDoc .content { max-width: 808px; }
-  .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 620px; }
+  .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 840px; }
+  .lecture-layout .VPDoc .content { max-width: 888px; }
+  .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 100%; }
   .Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content { max-width: 100%; }
   .lecture-alt:not(.lecture-slides-layout) .VPDoc .content-container { max-width: 960px; }
 }

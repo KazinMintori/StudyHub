@@ -76,20 +76,28 @@ mjx-container mjx-assistive-mml,
 .math-text mjx-container[display=true] svg { display: inline-block; }
 .slide-example .math-text { line-height: 1.9; }
 
-/* Công thức inline ($...$): luôn hiển thị tự nhiên, không bao giờ xuất hiện thanh cuộn hay mũi tên */
+/* Công thức inline ($...$): luôn hiển thị tự nhiên, chuẩn baseline typographic, không bao giờ xuất hiện thanh cuộn hay mũi tên */
 mjx-container:not([display=true]),
 .vp-doc mjx-container:not([display=true]),
 .math-text mjx-container:not([display=true]) {
-  display: inline-block !important;
+  display: inline !important;
   max-width: none !important;
   overflow: visible !important;
   overflow-x: visible !important;
   overflow-y: visible !important;
-  padding: 0 0.1em;
-  margin: 0;
-  vertical-align: -0.05em;
+  padding: 0 !important;
+  margin: 0 !important;
+  vertical-align: baseline !important;
+  line-height: 0 !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+}
+mjx-container:not([display=true]) > svg,
+.vp-doc mjx-container:not([display=true]) > svg,
+.math-text mjx-container:not([display=true]) > svg {
+  display: inline !important;
+  margin: 0 !important;
+  max-width: none !important;
 }
 mjx-container:not([display=true])::-webkit-scrollbar,
 .vp-doc mjx-container:not([display=true])::-webkit-scrollbar,
