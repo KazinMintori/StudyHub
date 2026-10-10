@@ -15,7 +15,7 @@ Mệnh đề là phát biểu có giá trị đúng hoặc sai. $\neg p$ phủ �
 
 **Bảng chân trị.** Có thể liệt kê mọi tổ hợp đúng/sai của các mệnh đề thành phần để kiểm tra một biểu thức. Với n biến Boolean, bảng có $2^n$ dòng. Hai biểu thức tương đương khi có cùng giá trị ở mọi dòng.
 
-Luật De Morgan: $\neg (p\land q)$ tương đương $\neg p\lor \neg q$. $\neg (p\lor q)$ tương đương $\neg p\land \neg q$. Phép kéo theo $p\to q$ tương đương $\neg p\lor q$, không tương đương $q\to p$.
+Theo luật De Morgan, mệnh đề $\neg (p\land q)$ tương đương $\neg p\lor \neg q$, trong khi $\neg (p\lor q)$ tương đương $\neg p\land \neg q$. Phép kéo theo $p\to q$ tương đương $\neg p\lor q$, hoàn toàn không tương đương $q\to p$.
 
 ## Ví dụ
 

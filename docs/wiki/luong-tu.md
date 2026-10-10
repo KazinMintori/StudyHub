@@ -19,7 +19,7 @@ Ví dụ “mọi sinh viên có một người hướng dẫn” không đồng
 
 ## Ví dụ
 
-Trong số nguyên, $\exists x$: $x^{2} = 4$ đúng vì $x = 2$ hoặc −2. $\forall x$: $x^{2} = 4$ sai.
+Trong tập số nguyên, mệnh đề $\exists x$ sao cho $x^{2} = 4$ là đúng vì $x = 2$ hoặc $-2$. Trái lại, mệnh đề $\forall x, x^{2} = 4$ là sai.
 
 ## Khi nào cần dùng?
 

@@ -15,7 +15,7 @@ Monomial là hàm $c\,x_1^{a_1}\cdots x_n^{a_n}$ với $c > 0$ và số mũ th�
 
 **Dạng lồi.** Với $y = \log x$, một monomial thành $e^{a^Ty + b}$ và một posynomial thành $\sum_k e^{a_k^Ty + b_k}$. Lấy logarit, ràng buộc posynomial thành $\log\sum_k e^{a_k^Ty + b_k} \le 0$, lồi, và ràng buộc monomial thành một phương trình affine. Tính lồi trong biến $\log x$ nghĩa là tập khả thi chứa trung bình nhân của hai điểm bất kỳ của nó.
 
-**Ví dụ của sách.** Cân bằng ma trận theo chuẩn Frobenius, $\min_d \sum_{i,j} M_{ij}^2 d_i^2/d_j^2$, thiết kế dầm công-xôn và cực tiểu bán kính phổ Perron–Frobenius của ma trận có phần tử posynomial. Nguồn: Convex Optimization, §4.5.
+**Các bài toán thực tế tiêu biểu.** Cân bằng ma trận theo chuẩn Frobenius, $\min_d \sum_{i,j} M_{ij}^2 d_i^2/d_j^2$, thiết kế dầm công-xôn chịu lực và cực tiểu bán kính phổ Perron–Frobenius của ma trận có các phần tử posynomial. Nguồn: Convex Optimization, §4.5.
 
 ## Ví dụ
 

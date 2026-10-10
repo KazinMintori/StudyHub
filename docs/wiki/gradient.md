@@ -19,7 +19,7 @@ $$\nabla f(x)=\left(\frac{\partial f}{\partial x_1},\ldots,\frac{\partial f}{\pa
 
 Với độ dời nhỏ $\Delta x$, ta có $f(x+\Delta x)\approx f(x)+\nabla f(x)\cdot\Delta x$. Đạo hàm theo hướng đơn vị u bằng $\nabla f(x)\cdot u$, lớn nhất khi u cùng hướng gradient nếu gradient khác 0. Khi gradient bằng 0, không có một hướng tăng nhanh nhất được xác định từ công thức này.
 
-**Gradient Descent** cập nhật $x_{k+1}=x_k-\eta\nabla f(x_k)$. Hướng giảm là thông tin cục bộ. Bước $\eta$ quá dài vẫn có thể làm f tăng. Với $f(x)=x^2$, $x_{k+1}=(1-2\eta)x_k$: $0<\eta<1$ làm |x| giảm, $\eta=1$ làm đổi dấu giữ độ lớn, $\eta>1$ có thể gây phân kỳ.
+**Gradient Descent** cập nhật $x_{k+1}=x_k-\eta\nabla f(x_k)$. Hướng giảm là thông tin cục bộ. Bước $\eta$ quá dài vẫn có thể làm f tăng. Với hàm $f(x)=x^2$, hệ thức lặp là $x_{k+1}=(1-2\eta)x_k$, trong đó khoảng $0<\eta<1$ làm $|x|$ giảm, $\eta=1$ làm đổi dấu nhưng giữ nguyên độ lớn, còn $\eta>1$ có thể gây phân kỳ.
 
 ## Ví dụ
 

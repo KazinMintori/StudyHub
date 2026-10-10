@@ -7,7 +7,7 @@ next: false
 
 # Hàm số
 
-Hàm f gán mỗi đầu vào hợp lệ đúng một đầu ra. Miền xác định gồm các đầu vào được phép, còn tập giá trị gồm những đầu ra thực sự nhận được. Ký hiệu f: $A \to  B$ cho biết đầu vào thuộc A và đầu ra thuộc B. Với hợp hàm g∘f, ta tính f trước rồi đưa kết quả vào g.
+Hàm f gán mỗi đầu vào hợp lệ đúng một đầu ra. Miền xác định gồm các đầu vào được phép, còn tập giá trị gồm những đầu ra thực sự nhận được. Ký hiệu ánh xạ $f: A \to B$ cho biết đầu vào thuộc A và đầu ra thuộc B. Với hợp hàm g∘f, ta tính f trước rồi đưa kết quả vào g.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Ví dụ $f(x)=x^2$ trên số thực không đơn ánh vì $f(2)=f(-2)$. Thu h�
 
 ## Ví dụ
 
-$f(x)=x^2$, $g(x) = x + 1$: $g(f(2)) = 5$, nhưng $f(g(2)) = 9$.
+Xét $f(x)=x^2$ và $g(x) = x + 1$, khi đó $g(f(2)) = 5$, nhưng $f(g(2)) = 9$.
 
 ## Khi nào cần dùng?
 

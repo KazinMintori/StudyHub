@@ -31,7 +31,7 @@ Ghi chú được lưu cục bộ trên trình duyệt hiện tại, chưa đồ
 
 ## 3 Bước Ôn Tập Khuyên Dùng
 
-### Bước 1: Nắm Bức tranh Toàn cảnh (Top-down)
+### Bước 1: Nắm Tổng Quan Toàn Diện (Top-down)
 - Trước khi lao vào làm bài tập khó, hãy đọc trang **Tổng quan môn học** để hiểu cấu trúc các chương và mối liên hệ giữa các thuật toán/định lý.
 - Chú ý các sơ đồ dòng chảy (Flowcharts) để thấy thứ tự phát triển của kiến thức.
 

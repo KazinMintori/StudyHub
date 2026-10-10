@@ -15,7 +15,7 @@ QP cực tiểu một hàm toàn phương $\tfrac12 x^TPx + q^Tx + r$ với $P \
 
 **Lồng nhau.** LP là QP với $P = 0$, QP là QCQP khi mọi ràng buộc toàn phương suy biến thành tuyến tính. Khi $P \succ 0$, nghiệm nếu có là duy nhất.
 
-**Ví dụ của sách.** Bình phương tối thiểu có cận cho từng biến, khoảng cách giữa hai đa diện, phương sai lớn nhất của một biến ngẫu nhiên khi chỉ biết một phần phân phối, LP có chi phí ngẫu nhiên với chi phí tính đến rủi ro $\bar c^Tx + \gamma x^T\Sigma x$, và danh mục Markowitz cực tiểu $x^T\Sigma x$ với lợi suất tối thiểu. Nguồn: Convex Optimization, §4.4 và §4.4.1.
+**Các bài toán thực tế tiêu biểu.** Bình phương tối thiểu có cận cho từng biến, khoảng cách giữa hai đa diện, phương sai lớn nhất của một biến ngẫu nhiên khi chỉ biết một phần phân phối, bài toán quy hoạch tuyến tính có chi phí ngẫu nhiên với hàm chi phí tính đến rủi ro $\bar c^Tx + \gamma x^T\Sigma x$, và danh mục đầu tư Markowitz cực tiểu rủi ro $x^T\Sigma x$ với lợi suất kỳ vọng tối thiểu. Nguồn: Convex Optimization, §4.4 và §4.4.1.
 
 ## Ví dụ
 

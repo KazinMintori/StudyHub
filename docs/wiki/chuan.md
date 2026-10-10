@@ -21,7 +21,7 @@ Chuẩn Euclid cộng các bình phương trước khi lấy căn:
 
 $$\|x\|_2=\sqrt{x_1^2+\cdots+x_n^2}=\sqrt{\sum_{i=1}^n x_i^2}.$$
 
-Chỉ số $i$ chạy từ 1 đến $n$, qua tất cả thành phần của vector. Chuẩn vô cùng lấy độ lớn lớn nhất: $\|x\|_\infty=\max\{|x_1|,\ldots,|x_n|\}$. Mỗi chuẩn tạo một cách đo khoảng cách $d(x,y)=\|x-y\|$.
+Chỉ số $i$ chạy từ 1 đến $n$, qua tất cả thành phần của vector. Chuẩn cực đại (hay chuẩn Chebyshev) lấy độ lớn lớn nhất: $\|x\|_\infty=\max\{|x_1|,\ldots,|x_n|\}$. Mỗi chuẩn tạo một cách đo khoảng cách $d(x,y)=\|x-y\|$.
 
 Chuẩn thỏa bất đẳng thức tam giác và tính đồng nhất $\|\alpha x\|=|\alpha|\|x\|$. Đừng nhầm chuẩn vector với chuẩn hóa dữ liệu theo trung bình và độ lệch chuẩn.
 

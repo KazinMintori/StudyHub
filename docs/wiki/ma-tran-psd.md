@@ -15,7 +15,7 @@ Ma trận đối xứng thực P là nửa xác định dương (PSD), viết $P
 
 Với $P=P^T$, điều kiện $P\succeq0$ tương đương mọi trị riêng của $P$ không âm. Điều kiện $P\succ0$ tương đương mọi trị riêng dương. Ký hiệu $P\succeq Q$ nghĩa là $P-Q$ PSD, khác so sánh từng phần tử.
 
-Ví dụ $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ PSD dù có phần tử âm, vì dạng toàn phương là $(v_1-v_2)^2$. Với $A^TA$, tính PD đòi hỏi các cột A độc lập: $Av=0$ chỉ có $v=0$. Nguồn: Convex Optimization, §A.5.2 và §2.2.5.
+Ví dụ ma trận $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ là PSD dù có phần tử âm, vì dạng toàn phương là $(v_1-v_2)^2 \ge 0$. Với tích $A^TA$, tính PD đòi hỏi các cột của $A$ độc lập tuyến tính, tức phương trình $Av=0$ chỉ có nghiệm duy nhất $v=0$. Nguồn: Convex Optimization, §A.5.2 và §2.2.5.
 
 ## Ví dụ
 

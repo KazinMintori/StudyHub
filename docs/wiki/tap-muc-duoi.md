@@ -15,7 +15,7 @@ Tập mức dưới mức $\alpha$ của hàm f là $\{x \in \operatorname{dom} 
 
 **Chiều thuận và chiều ngược.** Nếu $f(x) \le \alpha$ và $f(y) \le \alpha$ thì tính lồi cho $f(\theta x + (1-\theta)y) \le \alpha$, nên tập mức dưới lồi. Chiều ngược sai, và các hàm có mọi tập mức dưới lồi tạo thành lớp hàm tựa lồi.
 
-**Hàm tựa lồi khác hàm lồi ở đâu.** Với hàm tựa lồi khả vi, $f(y) \le f(x)$ suy ra $\nabla f(x)^T (y - x) \le 0$, nên gradient vẫn loại được nửa không gian. Nhưng gradient bằng 0 không còn bảo đảm cực tiểu toàn cục, và cực tiểu cục bộ có thể không toàn cục: $x^3$ có đạo hàm bằng 0 tại gốc. Nguồn: Convex Optimization, §3.1.6 và §3.4.
+**Hàm tựa lồi khác hàm lồi ở đâu.** Với hàm tựa lồi khả vi, bất đẳng thức $f(y) \le f(x)$ suy ra $\nabla f(x)^T (y - x) \le 0$, nên gradient vẫn loại được nửa không gian. Nhưng gradient bằng 0 không còn bảo đảm cực tiểu toàn cục, và cực tiểu cục bộ có thể không toàn cục, chẳng hạn hàm số $x^3$ có đạo hàm bằng 0 tại gốc tọa độ. Nguồn: Convex Optimization, §3.1.6 và §3.4.
 
 ## Ví dụ
 

@@ -15,11 +15,11 @@ next: false
 
 `melt` đưa các tên cột thành giá trị của một cột mới. `pivot` đổi ngược lại khi mỗi cặp khóa có tối đa một giá trị. `pivot_table` bổ sung phép tổng hợp khi khóa lặp. Số dòng có thể đổi dù lượng thông tin không đổi, nên kiểm lại khóa sau chuyển dạng.
 
-Nguồn đọc chính: Wes McKinney, *Python for Data Analysis*, [Chương 8, mục 8.3](https://wesmckinney.com/book/data-wrangling). Ví dụ trong mục này do StudyHub tự tạo.
+Nguồn đọc chính: Wes McKinney, *Python for Data Analysis*, [Chương 8, mục 8.3](https://wesmckinney.com/book/data-wrangling).
 
 ## Ví dụ
 
-Bảng có cột sách và vở được melt thành các cột quầy, mặt hàng và số lượng.
+Bảng có cột bút viết và tập vở được chuyển đổi (melt) thành các cột quầy, mặt hàng và số lượng.
 
 ## Khi nào cần dùng?
 

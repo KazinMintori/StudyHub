@@ -7,7 +7,7 @@ next: false
 
 # Định luật Snell
 
-Định luật Snell mô tả sự đổi hướng của tia sóng khi truyền qua mặt phân cách phẳng giữa hai môi trường có vận tốc truyền sóng khác nhau: $\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}$ hoặc $n_1\sin\theta_1 = n_2\sin\theta_2$.
+Định luật Snell mô tả sự đổi hướng của tia sóng khi truyền qua mặt phân cách phẳng giữa hai môi trường có vận tốc truyền sóng khác nhau, biểu diễn bởi hệ thức $\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}$ hoặc $n_1\sin\theta_1 = n_2\sin\theta_2$.
 
 <WikiUsage />
 

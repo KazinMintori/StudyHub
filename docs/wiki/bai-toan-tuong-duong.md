@@ -13,7 +13,7 @@ Hai bài toán tối ưu tương đương nếu từ một nghiệm của bài t
 
 ## Giải thích kỹ thuật
 
-**Định nghĩa không hình thức.** Sách gọi hai bài toán là tương đương khi nghiệm của bài toán này cho ngay nghiệm của bài toán kia, và nói rõ một định nghĩa hình thức tuy có thể đưa ra nhưng không giúp hiểu thêm. Phép co giãn hàm mục tiêu và ràng buộc bởi hằng số dương là ví dụ đơn giản nhất.
+**Định nghĩa thực hành.** Hai bài toán được xem là tương đương khi nghiệm của bài toán này cho ngay nghiệm của bài toán kia một cách trực tiếp. Phép co giãn hàm mục tiêu và ràng buộc bởi hằng số dương là ví dụ minh họa cơ bản nhất.
 
 **Giữ nghiệm khác giữ tính lồi.** Khử ràng buộc đẳng thức tuyến tính, thêm biến cùng ràng buộc đẳng thức tuyến tính, dạng epigraph và cực tiểu theo một nhóm biến đều giữ tính lồi. Biến bù chỉ giữ tính lồi với bất đẳng thức affine. Đổi biến không affine có thể tạo ra hoặc làm mất tính lồi, chẳng hạn đặt $\sigma = e^s$ làm âm log-likelihood Gauss trở nên lồi, còn đặt $x = z^2$ có thể sinh ra điểm dừng giả. Nguồn: Convex Optimization, §4.1.3 và §4.2.4.
 

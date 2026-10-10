@@ -37,14 +37,14 @@ Mỗi bài học được thiết kế độc lập, kết nối giữa bản ch
 | 40 | [Cơ học lượng tử I: Hàm sóng](/vat-ly-2/bai-giang/20-ham-song-schrodinger.md) | 1321–1359 | Chưa dịch |
 | 41 | [Cơ học lượng tử II: Cấu trúc nguyên tử](/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu.md) | 1360–1407 | Chưa dịch |
 | 42 | [Phân tử và vật chất ngưng tụ](/vat-ly-2/bai-giang/22-chat-ran-ban-dan.md) | 1408–1441 | Chưa dịch |
-| 43 | [Vật lý hạt nhân](/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md) | 1442–1482 | Chưa dịch |
-| 44 | [Vật lý hạt và vũ trụ học](/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru.md) | 1483–1524 | Chưa dịch |
+| 43 | [Vật lý hạt nhân](/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md) | 1442–1482 | Đang biên soạn |
+| 44 | [Vật lý hạt và vũ trụ học](/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru.md) | 1483–1524 | Đang biên soạn |
 
 ---
 
 ## 2. Giáo trình & Tài liệu Tham khảo Chuẩn mực
 
 1. **Hugh D. Young & Roger A. Freedman**, [*Sears and Zemansky's University Physics with Modern Physics (15th Edition)*](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000006848), Pearson. Giáo trình đại học chuẩn mực quốc tế về Điện - Từ trường, Sóng ánh sáng, Thuyết tương đối, Cơ học lượng tử, Cấu trúc nguyên tử và Hạt nhân.
-2. **David Halliday, Robert Resnick, & Jearl Walker**, [*Fundamentals of Physics - Extended (11th/12th Edition)*](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+Extended%2C+12th+Edition-p-9781119773511), Wiley. Bộ sách vật lý kinh điển toàn diện bao gồm trọn vẹn phần Điện từ học và Vật lý hiện đại.
+2. **David Halliday, Robert Resnick, & Jearl Walker**, [*Fundamentals of Physics - Extended (11th/12th Edition)*](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+Extended%2C+12th+Edition-p-9781119773511), Wiley. Bộ giáo trình vật lý kinh điển toàn diện bao gồm trọn vẹn phần Điện từ học và Vật lý hiện đại.
 3. **MIT OpenCourseWare 8.02: Electricity and Magnetism** — [ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/). Khóa học trực tuyến danh tiếng của MIT về lý thuyết trường điện từ, định luật Gauss, Ampère, Faraday và phương trình Maxwell.
 4. **Lương Duyên Bình (Chủ biên)**, *Vật lý đại cương - Tập 2: Điện - Từ - Dao động và Sóng*, NXB Giáo dục Việt Nam. Giáo trình chuẩn của các trường đại học kỹ thuật tại Việt Nam.

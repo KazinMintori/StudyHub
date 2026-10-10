@@ -17,7 +17,7 @@ next: false
 
 $$f\prime(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.$$
 
-Đạo hàm tại x tồn tại khi giới hạn hữu hạn này tồn tại. Với $f(x)=|x|$ tại $x=0$, hệ số góc từ trái là −1, từ phải là 1 nên đạo hàm không tồn tại. Một điểm có đạo hàm bằng 0 chưa chắc là cực tiểu: $f(x)=x^3$ tại 0 là ví dụ.
+Đạo hàm tại x tồn tại khi giới hạn hữu hạn này tồn tại. Với $f(x)=|x|$ tại $x=0$, hệ số góc từ trái là −1, từ phải là 1 nên đạo hàm không tồn tại. Một điểm có đạo hàm bằng 0 chưa chắc là điểm cực tiểu, chẳng hạn $f(x)=x^3$ tại gốc $0$.
 
 ## Ví dụ
 

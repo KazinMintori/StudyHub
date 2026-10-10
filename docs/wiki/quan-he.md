@@ -31,7 +31,7 @@ Quan hệ “bằng nhau” có đối xứng không?
 
 <details><summary>Xem đáp án</summary>
 
-Có: $x=y$ thì $y=x$.
+Có: Nếu $x=y$ thì $y=x$.
 
 </details>
 

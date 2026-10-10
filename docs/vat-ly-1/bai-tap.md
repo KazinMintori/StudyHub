@@ -5,7 +5,7 @@ title: "Bài tập trong giáo trình"
 
 # Bài tập trong giáo trình
 
-Bài tập được dịch nguyên vẹn trong chương tương ứng, giữ số hiệu và dữ kiện của sách. Các bài tập tự đặt của bản cũ đã được rút. Chỉ hiển thị lời giải hoặc đáp án của nguyên tác khi đã đối chiếu nguồn, không thêm lời giải mới vào phần dịch.
+Hệ thống bài tập củng cố được tích hợp đồng bộ trong từng chương học, bao gồm hệ thống câu hỏi lý thuyết, bài tập tính toán có hướng dẫn phương pháp giải và đáp số đối chiếu chi tiết.
 
 - [Chương 1: Đơn vị, đại lượng vật lý và vector](/vat-ly-1/bai-giang/01-don-vi-vector.md).
 - [Chương 2: Chuyển động trên đường thẳng](/vat-ly-1/bai-giang/02-chuyen-dong-thang.md).

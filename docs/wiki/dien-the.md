@@ -7,7 +7,7 @@ next: false
 
 # Điện thế
 
-Điện thế V là thế năng điện trên một đơn vị điện tích thử: $V=\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt $(V)=J/C$. Trong trường tĩnh điện, $\Delta V=-\int\mathbf E\cdot d\mathbf l$.
+Điện thế $V$ là thế năng điện trên một đơn vị điện tích thử, xác định bởi biểu thức $V=\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt $(V)=J/C$. Trong trường tĩnh điện, $\Delta V=-\int\mathbf E\cdot d\mathbf l$.
 
 <WikiUsage />
 

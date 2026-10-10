@@ -13,7 +13,7 @@ Pha là đối số của hàm điều hòa, chẳng hạn $kx-\omega t+\varphi$
 
 ## Giải thích kỹ thuật
 
-Trong sóng điều hòa, $k=2\pi/\lambda$ và $\omega=2\pi f$. Theo dõi một pha cố định giúp xác định hướng truyền: $kx-\omega t$ truyền theo chiều x dương khi các tham số dương.
+Trong sóng điều hòa, $k=2\pi/\lambda$ và $\omega=2\pi f$. Theo dõi một pha cố định giúp xác định hướng truyền, chẳng hạn biểu thức $kx-\omega t$ biểu diễn sóng truyền theo chiều x dương khi các tham số đều dương.
 
 Các pha bằng nhau sai khác số nguyên lần một vòng là tương đương. Khi truyền trong nhiều môi trường, cần đường quang hoặc thời gian truyền, không chỉ chiều dài hình học.
 

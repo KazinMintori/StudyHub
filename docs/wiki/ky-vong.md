@@ -7,7 +7,7 @@ next: false
 
 # Kỳ vọng
 
-Kỳ vọng là trung bình có trọng số theo xác suất. Nếu $X$ nhận hữu hạn giá trị $x_1,\ldots,x_k$ với xác suất $p_i=P(X=x_i)$, thì $\mathbb E[X]=x_1p_1+\cdots+x_kp_k$. Viết gọn, $\mathbb E[X]=\sum_{i=1}^k x_i p_i$: $i$ chạy qua các giá trị có thể nhận. Với vô hạn đếm được, cần kiểm tra điều kiện tồn tại kỳ vọng. Đây là trung bình dài hạn khi điều kiện hội tụ phù hợp. Nó không nhất thiết là kết quả của một lần thử. Kỳ vọng của tổng bằng tổng kỳ vọng nếu các kỳ vọng tồn tại.
+Kỳ vọng là trung bình có trọng số theo xác suất. Nếu $X$ nhận hữu hạn giá trị $x_1,\ldots,x_k$ với xác suất $p_i=P(X=x_i)$, thì $\mathbb E[X]=x_1p_1+\cdots+x_kp_k$. Viết gọn, $\mathbb E[X]=\sum_{i=1}^k x_i p_i$, trong đó chỉ số $i$ chạy qua các giá trị có thể nhận. Với vô hạn đếm được, cần kiểm tra điều kiện tồn tại kỳ vọng. Đây là trung bình dài hạn khi điều kiện hội tụ phù hợp. Nó không nhất thiết là kết quả của một lần thử. Kỳ vọng của tổng bằng tổng kỳ vọng nếu các kỳ vọng tồn tại.
 
 <WikiUsage />
 

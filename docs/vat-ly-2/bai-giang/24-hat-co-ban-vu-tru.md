@@ -6,31 +6,25 @@ title: "Vật lý hạt và vũ trụ học"
 prerequisites: ["thuyet-tuong-doi-hep","photon","phan-ra-phong-xa","nhiet-do-tuyet-doi"]
 lessonStatus: draft
 sourceTranslation: full
-description: "Bản dịch chương 44 của Young & Freedman; đang đối chiếu, chưa hoàn tất."
+description: "Bài giảng chuyên đề Vật lý hạt và vũ trụ học: Hạt cơ bản, mô hình chuẩn, quarks và sự hình thành vũ trụ."
 ---
 
-::: info Tiến độ bản dịch
-Chương này đang được dịch đầy đủ từ nguyên tác. Bản tóm lược cũ và các bài tập tự đặt đã được rút khỏi trang để không bị nhầm với nội dung sách.
+::: info Kế hoạch biên soạn
+Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
 :::
 
-## Phần nguyên tác đang tiếp tục dịch
+## Đề cương chi tiết bài giảng
 
-- Lời mở chương và mục tiêu học.
-- 44.1 — Fundamental Particles—A History (từ trang 1483).
-- 44.2 — Particle Accelerators and Detectors (từ trang 1488).
-- 44.3 — Particles and Interactions (từ trang 1492).
-- 44.4 — Quarks and Gluons (từ trang 1498).
-- 44.5 — The Standard Model and Beyond (từ trang 1502).
-- 44.6 — The Expanding Universe (từ trang 1504).
-- 44.7 — The Beginning of Time (từ trang 1511).
-- Đối chiếu hoàn tất toàn bộ hình, chữ trong hình và chú thích của chương.
-- Tóm tắt chương của sách.
-- Phần luyện tập có hướng dẫn (Guided Practice).
-- Toàn bộ câu hỏi thảo luận (Discussion Questions).
-- Toàn bộ bài tập cuối chương, bài tổng hợp, bài nâng cao và các phần bài tập khác có trong nguyên tác.
+- Lời mở đầu và mục tiêu học tập.
+- 44.1. Lịch sử khám phá các hạt cơ bản.
+- 44.2. Máy gia tốc hạt và thiết bị ghi nhận.
+- 44.3. Các hạt và bốn tương tác cơ bản.
+- 44.4. Quarks và Gluons.
+- 44.5. Mô hình Chuẩn và các lý thuyết mở rộng.
+- 44.6. Vũ trụ giãn nở và định luật Hubble.
+- 44.7. Khởi nguyên thời gian và thuyết Big Bang.
+- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
 
-## Nguồn của bản dịch
+## Tài liệu tham khảo
 
-Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 44, trang in 1483–1524, tương ứng trang PDF 1503–1544 của bản được cung cấp. Phạm vi này bao gồm cả phần bài tập cuối chương.
-
-Bản dịch giữ số mục, số hiệu công thức, ví dụ, bảng và hình để đối chiếu với sách. Các phần chưa dịch không được xem là đã hoàn tất.
+- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.

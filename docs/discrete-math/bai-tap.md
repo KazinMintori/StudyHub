@@ -44,8 +44,8 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
      Theo nguyên lý quy nạp toán học, đẳng thức đúng với mọi $n \ge 1$.
 
 2. Chứng minh $4^n - 1$ chia hết cho 3:
-   - Với $n = 1$: $4^1 - 1 = 3$ chia hết cho 3.
-   - Giả sử đúng với $n = k$: $4^k - 1 = 3m$ ($m \in \mathbb{Z}$).
+   - Với $n = 1$, ta có $4^1 - 1 = 3$ chia hết cho 3.
+   - Giả sử khẳng định đúng với $n = k$, tức là $4^k - 1 = 3m$ ($m \in \mathbb{Z}$).
    - Với $n = k + 1$:
      $$
      \begin{aligned}

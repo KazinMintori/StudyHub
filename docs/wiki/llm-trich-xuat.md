@@ -13,13 +13,13 @@ Trích xuất bằng LLM dùng mô hình ngôn ngữ để chuyển văn bản t
 
 ## Giải thích kỹ thuật
 
-Định nghĩa nhiệm vụ, schema và cách biểu diễn trường hợp không đủ căn cứ. Kiểm phản hồi từng dòng, đối chiếu bằng chứng với nguồn và đo chất lượng trên mẫu gán nhãn. Giữ lỗi riêng với kết quả đã xác nhận. Đây là nội dung bổ sung ngoài sách của học phần.
+Định nghĩa nhiệm vụ, schema và cách biểu diễn trường hợp không đủ căn cứ. Kiểm phản hồi từng dòng, đối chiếu bằng chứng với nguồn và đo chất lượng trên mẫu gán nhãn. Giữ lỗi riêng với kết quả đã xác nhận. Đây là kỹ năng thực hành hiện đại hỗ trợ quy trình xử lý dữ liệu.
 
 Nguồn kỹ thuật: [Gemini API Structured outputs](https://ai.google.dev/gemini-api/docs/structured-output).
 
 ## Ví dụ
 
-Một nhận xét được chuyển thành id, nhãn cảm xúc và đoạn bằng chứng; đoạn trích phải được đối chiếu với văn bản.
+Một nhận xét được chuyển thành mã định danh, nhãn cảm xúc và đoạn bằng chứng, trong đó đoạn trích phải được đối chiếu trực tiếp với văn bản gốc.
 
 ## Khi nào cần dùng?
 

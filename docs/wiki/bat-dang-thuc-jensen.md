@@ -21,7 +21,7 @@ Với f lồi và biến ngẫu nhiên X nhận giá trị trong miền xác đ�
 
 ## Ví dụ
 
-Với $f(x) = x^2$ và X phân phối đều trên $\{1, 2, 3, 4\}$: $\mathbf E X^2 = 7.5$ lớn hơn $(\mathbf E X)^2 = 6.25$, và hiệu $1.25$ chính là phương sai.
+Với $f(x) = x^2$ và biến ngẫu nhiên $X$ phân phối đều trên $\{1, 2, 3, 4\}$, giá trị kỳ vọng $\mathbf E X^2 = 7.5$ lớn hơn $(\mathbf E X)^2 = 6.25$, và hiệu $1.25$ chính là phương sai.
 
 ## Khi nào cần dùng?
 

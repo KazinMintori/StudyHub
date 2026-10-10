@@ -21,7 +21,7 @@ Nón đối ngẫu của tập K là $K^* = \{y : y^T x \ge 0 \text{ với mọi
 
 ## Ví dụ
 
-Nón $\mathbb R^2_+$ tự đối ngẫu: $y^T x \ge 0$ với mọi $x \succeq 0$ khi và chỉ khi $y \succeq 0$.
+Nón $\mathbb R^2_+$ là nón tự đối ngẫu, bởi vì $y^T x \ge 0$ với mọi $x \succeq 0$ khi và chỉ khi $y \succeq 0$.
 
 ## Khi nào cần dùng?
 
