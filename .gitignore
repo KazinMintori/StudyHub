@@ -54,5 +54,5 @@ venv/
 *.pptx
 output/
 scratch/
-
-
+# Logs
+*.log

@@ -372,7 +372,7 @@ watch(() => lesson.value?.slug, load)
 .task-badge {
   font-size: var(--fs-small);
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   background: var(--tim);
   padding: 2px 8px;
   border-radius: 4px;
@@ -400,7 +400,7 @@ watch(() => lesson.value?.slug, load)
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  color: #b45309;
+  color: var(--vang);
   font-size: var(--fs-small);
   margin-bottom: var(--space-1);
 }
@@ -445,12 +445,12 @@ watch(() => lesson.value?.slug, load)
 .solution-code-block pre {
   margin: 0;
   padding: var(--space-4);
-  background: #1e1e2e;
-  color: #cdd6f4;
+  background: var(--sunken);
+  color: var(--ink);
   overflow-x: auto;
   font-size: 13.5px;
   line-height: 1.6;
-  font-family: var(--font-mono, monospace);
+  font-family: var(--font-code);
 }
 .task-explanation {
   background: var(--xanh-soft);
@@ -479,13 +479,13 @@ watch(() => lesson.value?.slug, load)
 .task-verification pre {
   margin: 0;
   padding: var(--space-3);
-  background: #24273a;
-  color: #a6da95;
+  background: var(--sunken);
+  color: var(--xanh);
   border-radius: 4px;
   overflow-x: auto;
   font-size: 13px;
   line-height: 1.5;
-  font-family: var(--font-mono, monospace);
+  font-family: var(--font-code);
 }
 @media (max-width: 767px) {
   .dataset-header {
