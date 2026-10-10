@@ -32,7 +32,7 @@ export const dataProcessingCourse = {
     lesson(ids.llm, 'Trích xuất dữ liệu văn bản bằng LLM', ['dictionary', 'ham-lap-trinh', 'gia-tri-thieu'], ['schema-du-lieu', 'json-du-lieu', 'llm-trich-xuat']),
     lesson(ids.plot, 'Trực quan hóa cơ bản', ['gia-tri-thieu', 'ky-vong'], ['histogram']),
     lesson(ids.advanced, 'Trực quan hóa nâng cao & đọc biểu đồ', ['ky-vong', 'phuong-sai', 'gia-tri-thieu'], ['histogram', 'ngoai-lai', 'khoang-tu-phan-vi']),
-    lesson(ids.report, 'Trình bày & thẩm định một phân tích dữ liệu', ['ky-vong', 'gia-tri-thieu', 'thong-ke-mo-ta', 'ket-luan-nhan-qua'], ['groupby'])
+    lesson(ids.report, 'Kể chuyện bằng dữ liệu & thẩm định phân tích AI', ['ky-vong', 'gia-tri-thieu', 'thong-ke-mo-ta', 'ket-luan-nhan-qua'], ['groupby'])
   ],
   slides: [
     slide('Câu hỏi quyết định mẫu số', ['Xác định đối tượng và đại lượng trước khi tính.', 'Giá thiếu chưa phải giá bằng không.', 'Báo số quan sát hợp lệ cùng kết quả.'], ids.intro, 'Cơ bản: sum(v)/len(v) (dễ lỗi chia 0 hoặc sai mẫu số); Nâng cao: v_hop_le = [x for x in v if x is not None]; mean = sum(v_hop_le)/len(v_hop_le) if v_hop_le else None.'),

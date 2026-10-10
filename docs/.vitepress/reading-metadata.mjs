@@ -273,8 +273,8 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-14-ke-chuyen-bang-du-lieu": {
-    "words": 2335,
-    "minutes": 10
+    "words": 6617,
+    "minutes": 35
   },
   "vat-ly-1/01-don-vi-vector": {
     "words": 20426,

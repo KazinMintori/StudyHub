@@ -1,4 +1,4 @@
-# Sổ nguồn: Trình bày & thẩm định một phân tích dữ liệu
+# Sổ nguồn: Kể chuyện bằng dữ liệu & thẩm định phân tích AI
 
 Đích biên soạn: [Notes](../../docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md).
 

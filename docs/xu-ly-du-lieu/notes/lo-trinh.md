@@ -24,7 +24,7 @@ Ví dụ và bài tập thực hành kèm lời giải chi tiết được tích
 - [Trích xuất dữ liệu văn bản bằng LLM](/xu-ly-du-lieu/bai-giang/bai-11-llm-du-lieu-phi-cau-truc.md)
 - [Trực quan hóa cơ bản](/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md)
 - [Trực quan hóa nâng cao & đọc biểu đồ](/xu-ly-du-lieu/bai-giang/bai-13-truc-quan-hoa-nang-cao.md)
-- [Trình bày & thẩm định một phân tích dữ liệu](/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md)
+- [Kể chuyện bằng dữ liệu & thẩm định phân tích AI](/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md)
 
 ---
 
