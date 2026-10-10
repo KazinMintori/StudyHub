@@ -249,9 +249,11 @@ Xét bài toán cực tiểu $f_0(x)=x^2$ trên miền khả thi $\mathcal{X}=[1
 
 ![Đồ thị hàm mục tiêu với năm điểm A, S, B, D, C. Hai đường mức 1 và 4 giới hạn dải gần tối ưu, còn vạch xiên đánh dấu phần không khả thi.](../img/lec-01/epsilon-gan-toi-uu.svg)
 
-**Cách đọc hình:** Trục ngang biểu diễn vị trí $x$, còn trục đứng biểu diễn giá trị $f_0(x)$. Mỗi điểm được đặt tại tọa độ $(x,f_0(x))$. Vùng vạch xiên ở bên trái ứng với $x<1$, nên các điểm trong vùng đó bị loại trước khi xét sai số. Đoạn cong màu xanh là phần vừa khả thi vừa gần tối ưu. Đoạn cong màu nâu vẫn khả thi nhưng vượt ngưỡng đã chọn.
+::: info Cách đọc hình
+Trục ngang biểu diễn vị trí $x$, còn trục đứng biểu diễn giá trị $f_0(x)$. Mỗi điểm được đặt tại tọa độ $(x,f_0(x))$. Vùng vạch xiên ở bên trái ứng với $x<1$, nên các điểm trong vùng đó bị loại trước khi xét sai số. Đoạn cong màu xanh là phần vừa khả thi vừa gần tối ưu. Đoạn cong màu nâu vẫn khả thi nhưng vượt ngưỡng đã chọn.
 
 Hai đường ngang đánh dấu $p^\star=1$ và $p^\star+\varepsilon=4$. **Khoảng cách theo trục đứng** giữa chúng là $\varepsilon=3$. Dải xanh nhạt biểu diễn các giá trị mục tiêu từ $1$ đến $4$, nhưng một điểm nằm trong dải này vẫn phải thỏa ràng buộc mới được chấp nhận. Sai số $\varepsilon$ đo độ chênh lệch của giá trị mục tiêu, không phải khoảng cách giữa hai vị trí trên trục $x$.
+:::
 
 **Xét từng điểm trên đồ thị:**
 
