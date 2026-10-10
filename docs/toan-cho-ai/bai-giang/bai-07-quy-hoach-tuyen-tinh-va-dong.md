@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Khảo sát toàn diện Quy hoạch tuyến tính (LP), Quy hoạch động Bellman (DP) và các dạng bài toán tối ưu hình học kinh điển: Xấp xỉ chuẩn, tâm Chebyshev, phân loại SVM, thiết kế thí nghiệm và sự thống nhất giữa thế năng đối ngẫu với hàm giá trị."
 ---
 
-Trong bức tranh toàn cảnh của toán học tối ưu hóa dành cho Trí tuệ Nhân tạo, có hai trường phái tư duy kinh điển, đại diện cho hai góc nhìn bổ trợ nhau về bài toán ra quyết định quy mô lớn:
+Trong hệ thống các phương pháp tối ưu hóa dành cho Trí tuệ Nhân tạo, có hai trường phái tư duy kinh điển, đại diện cho hai góc nhìn bổ trợ nhau về bài toán ra quyết định quy mô lớn:
 
 1. **Quy hoạch tuyến tính (Linear Programming - LP)**: Tiếp cận bài toán dưới **góc nhìn hình học không gian tĩnh**. Mọi giới hạn tài nguyên đan xen tạo thành một khối đa diện lồi nhiều chiều (polyhedron), và mục tiêu là tìm kiếm một "đỉnh cực" (extreme point) tối ưu trên khối đa diện đó. LP là xương sống của các hệ thống phân bổ tài nguyên, điều độ luồng mạng, và lập lịch tính toán trên các cụm máy chủ huấn luyện mô hình ngôn ngữ lớn (LLM).
 2. **Quy hoạch động (Dynamic Programming - DP)**: Tiếp cận bài toán dưới **góc nhìn chuỗi quyết định động theo thời gian**. Nhà toán học Richard Bellman đã đúc kết một nguyên lý sâu sắc: Một quyết định dài hạn tối ưu luôn có thể phân rã thành một bước hành động tức thời cộng với giá trị tối ưu của phần bài toán còn lại. DP là linh hồn của các thuật toán tìm đường, giải mã chuỗi (Viterbi decoding, Beam Search) và là nền tảng toán học trực tiếp của Học tăng cường (Reinforcement Learning - RL).

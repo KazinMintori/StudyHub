@@ -99,7 +99,7 @@ Gradient toàn phần là $\nabla J(\theta) = \theta - 1$. Nghiệm tối ưu th
 Tại $\theta = 1$, giá trị mất mát toàn phần là $J(1) = 0.5$. Nếu gặp mẫu $b = 0$, gradient là $1 - 0 = 1$, điểm mới trở thành $\theta^+ = 1 - 0.1(1) = 0.9$. Giá trị mất mát mới là:
 $$J(0.9) = \frac{1}{2}(0.9 - 1)^2 + 0.5 = 0.505 > 0.5.$$ 
 
-Mất mát đã **tăng lên**! Điều này cho thấy tính không chệch của gradient chỉ là một bảo đảm về mặt kỳ vọng thống kê; nó tuyệt đối không bảo đảm rằng hàm mục tiêu sẽ giảm sau từng bước cập nhật ngẫu nhiên đơn lẻ.
+Mất mát đã **tăng lên**! Điều này cho thấy tính không chệch của gradient chỉ là một bảo đảm về mặt kỳ vọng thống kê. Hệ quả là, nó tuyệt đối không bảo đảm rằng hàm mục tiêu sẽ giảm sau từng bước cập nhật ngẫu nhiên đơn lẻ.
 
 </details>
 
@@ -123,7 +123,7 @@ $$
 \sum_{t=1}^\infty \eta_t = \infty \quad \text{và} \quad \sum_{t=1}^\infty \eta_t^2 < \infty.
 $$
 
-Điều kiện thứ nhất bảo đảm bước đi đủ dài để đi tới nghiệm dù xuất phát từ bất kỳ đâu; điều kiện thứ hai bảo đảm phương sai tích lũy của nhiễu bị triệt tiêu dần khi tiệm cận nghiệm.
+Điều kiện thứ nhất bảo đảm bước đi đủ dài để đi tới nghiệm dù xuất phát từ bất kỳ đâu, trong khi điều kiện thứ hai bảo đảm phương sai tích lũy của nhiễu bị triệt tiêu dần khi tiệm cận nghiệm.
 
 Đoạn mã Python mô phỏng chính xác thuật toán SGD trên mô hình đơn tham số:
 
@@ -604,9 +604,9 @@ Khi huấn luyện mô hình phân loại trên tập dữ liệu kích thước
 
 ## Tóm tắt cốt lõi
 
-1. **Tối ưu hóa vs Khái quát hóa**: Cực tiểu hóa mất mát thực nghiệm trên tập huấn luyện là phương tiện; mục tiêu tối thượng của học máy là khả năng khái quát hóa trên dữ liệu thực tế chưa biết.
+1. **Tối ưu hóa vs Khái quát hóa**: Cực tiểu hóa mất mát thực nghiệm trên tập huấn luyện là phương tiện, trong khi mục tiêu tối thượng của học máy là khả năng khái quát hóa trên dữ liệu thực tế chưa biết.
 2. **Bản chất của Mini-batch SGD**: Gradient lô nhỏ là ước lượng không chệch với phương sai tỉ lệ nghịch với kích thước lô ($1/B$). Nhiễu ngẫu nhiên vừa là thách thức vừa là công cụ điều chuẩn hữu hiệu.
-3. **Momentum và Nesterov**: Tích lũy quán tính giúp triệt tiêu dao động ziczac trong hẻm núi hẹp; Nesterov cải tiến vượt bậc bằng cách lấy gradient tại vị trí nhìn trước để chủ động hãm đà khi tới gần đáy.
+3. **Momentum và Nesterov**: Tích lũy quán tính giúp triệt tiêu dao động ziczac trong hẻm núi hẹp. Nesterov cải tiến vượt bậc bằng cách lấy gradient tại vị trí nhìn trước để chủ động hãm đà khi tới gần đáy.
 4. **Khởi tạo Glorot**: Bảo toàn phương sai của dòng chảy tín hiệu lan truyền xuôi và gradient lan truyền ngược, ngăn chặn triệt để thảm họa bùng nổ hay triệt tiêu gradient.
 
 ---

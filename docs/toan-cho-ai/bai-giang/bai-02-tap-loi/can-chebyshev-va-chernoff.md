@@ -7,7 +7,7 @@ title: "Cận xác suất Chebyshev, Chernoff và tối ưu hóa ma trận"
 description: "Thiết lập các cận xác suất đuôi tồi tệ nhất khi chỉ biết kỳ vọng và hiệp phương sai, chuyển bài toán Chebyshev nhiều chiều thành quy hoạch nửa xác định SDP, cận Chernoff qua hàm liên hợp lồi và ứng dụng quản lý rủi ro."
 ---
 
-Trong các hệ thống học máy an toàn, tài chính định lượng và mạng viễn thông, việc ước tính xác suất xảy ra biến cố cực đoan—chẳng hạn như xác suất lỗi hệ thống vượt ngưỡng hay tổn thất danh mục đầu tư chạm đáy rủi ro—là bài toán sinh tử. Tuy nhiên, trong thực tế ta hiếm khi nắm được toàn bộ hàm phân phối xác suất mà thường chỉ ước lượng được các đặc trưng số cơ bản: Vector kỳ vọng $\mu = \mathbb{E}[X]$ và ma trận hiệp phương sai $\Sigma = \operatorname{Cov}(X)$.
+Trong các hệ thống học máy an toàn, tài chính định lượng và mạng viễn thông, việc ước tính xác suất xảy ra biến cố cực đoan (chẳng hạn như xác suất lỗi hệ thống vượt ngưỡng hay tổn thất danh mục đầu tư chạm đáy rủi ro) là bài toán sinh tử. Tuy nhiên, trong thực tế ta hiếm khi nắm được toàn bộ hàm phân phối xác suất mà thường chỉ ước lượng được các đặc trưng số cơ bản: Vector kỳ vọng $\mu = \mathbb{E}[X]$ và ma trận hiệp phương sai $\Sigma = \operatorname{Cov}(X)$.
 
 Câu hỏi đặt ra là: Trong số mọi phân phối xác suất khả dĩ có cùng kỳ vọng $\mu$ và hiệp phương sai $\Sigma$, xác suất lớn nhất để $X$ rơi vào vùng nguy hiểm là bao nhiêu? Tối ưu hóa lồi cung cấp một lời giải hoàn chỉnh thông qua sự kết hợp giữa lý thuyết đối ngẫu và Quy hoạch nửa xác định (SDP).
 

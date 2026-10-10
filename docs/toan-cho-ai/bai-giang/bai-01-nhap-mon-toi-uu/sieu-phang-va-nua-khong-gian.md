@@ -19,7 +19,7 @@ Về mặt giải tích, siêu phẳng là tập nghiệm của một phương t
 
 Về mặt hình học, ta có cách diễn giải trực quan thứ nhất: Siêu phẳng là **tập các điểm có cùng tích vô hướng $b$ với vector $a$**. Để thấy cách diễn giải này nói lên điều gì, hãy nhớ rằng $\tfrac{a^T x}{\|a\|_2}$ là độ dài có dấu của hình chiếu của $x$ lên đường thẳng theo hướng $a$. Vì thế phương trình $a^T x = b$ có nghĩa là "hình chiếu của $x$ lên trục theo hướng $a$ luôn ở cùng một vị trí $\tfrac{b}{\|a\|_2}$". Tất cả những điểm có cùng hình chiếu như vậy tạo thành một siêu phẳng **vuông góc với $a$**, đi qua điểm nằm trên trục đó cách gốc một khoảng có dấu bằng $\tfrac{b}{\|a\|_2}$.
 
-Vector $a$ được gọi là **vector pháp tuyến** của siêu phẳng, còn hằng số $b$ quyết định độ lệch của siêu phẳng so với gốc. Hai cách biến đổi phương trình mang lại hai hiệu ứng hình học khác biệt cần được phân biệt rạch ròi: Nhân cả $a$ và $b$ với cùng một số khác 0 thì siêu phẳng **không đổi** do phương trình mới tương đương; còn nếu chỉ thay đổi $b$ và giữ nguyên $a$, siêu phẳng sẽ **tịnh tiến song song** theo hướng pháp tuyến $a$.
+Vector $a$ được gọi là **vector pháp tuyến** của siêu phẳng, còn hằng số $b$ quyết định độ lệch của siêu phẳng so với gốc. Hai cách biến đổi phương trình mang lại hai hiệu ứng hình học khác biệt cần được phân biệt rạch ròi: Nhân cả $a$ và $b$ với cùng một số khác 0 thì siêu phẳng **không đổi** do phương trình mới tương đương. Trái lại, nếu chỉ thay đổi $b$ và giữ nguyên $a$, siêu phẳng sẽ **tịnh tiến song song** theo hướng pháp tuyến $a$.
 
 ::: example Đọc một siêu phẳng trong mặt phẳng
 Xét $3x_1 + 4x_2 = 10$, tức $a = (3, 4)$ và $b = 10$. Vì $\|a\|_2 = 5$, đường thẳng vuông góc với $(3, 4)$ và cách gốc $\tfrac{10}{5} = 2$. Điểm của đường thẳng gần gốc nhất là

@@ -7,9 +7,9 @@ title: "Phương pháp Pha I và tìm điểm khả thi khởi đầu"
 description: "Kỹ thuật biến bù tìm điểm khả thi ngặt, phương pháp cực tiểu tổng độ vi phạm sum of infeasibilities, tiêu chí dừng sớm và ứng dụng trong các bài toán tối ưu thực tế."
 ---
 
-Các thuật toán tối ưu hóa có ràng buộc kinh điển—đặc biệt là phương pháp hàm chắn logarit (Barrier method) và phương pháp Newton khả thi—đều hoạt động dựa trên một giả định cốt tử: Ta đã có sẵn một điểm xuất phát $x^{(0)}$ khả thi ngặt, tức thỏa mãn $f_i(x^{(0)}) < 0$ với mọi $i = 1, \dots, m$ và $A x^{(0)} = b$. 
+Các thuật toán tối ưu hóa có ràng buộc kinh điển (đặc biệt là phương pháp hàm chắn logarit và phương pháp Newton khả thi) đều hoạt động dựa trên một giả định cốt tử: Ta đã có sẵn một điểm xuất phát $x^{(0)}$ khả thi ngặt, tức thỏa mãn $f_i(x^{(0)}) < 0$ với mọi $i = 1, \dots, m$ và $A x^{(0)} = b$. 
 
-Thế nhưng trong các ứng dụng thực tế với hàng nghìn ràng buộc phức tạp, việc chỉ ra một điểm thỏa mãn tất cả các điều kiện này bằng mắt thường là điều bất khả thi; thậm chí ta còn chưa biết liệu bài toán có nghiệm khả thi nào hay không. Để giải quyết nút thắt này, lý thuyết tối ưu hóa phân chia quá trình giải thành hai giai đoạn rõ rệt:
+Thế nhưng trong các ứng dụng thực tế với hàng nghìn ràng buộc phức tạp, việc chỉ ra một điểm thỏa mãn tất cả các điều kiện này bằng mắt thường là điều bất khả thi, thậm chí ta còn chưa biết liệu bài toán có nghiệm khả thi nào hay không. Để giải quyết nút thắt này, lý thuyết tối ưu hóa phân chia quá trình giải thành hai giai đoạn rõ rệt:
 - **Pha I (Phase I)**: Tìm một điểm khả thi ngặt hoặc chứng nhận bài toán gốc vô nghiệm.
 - **Pha II (Phase II)**: Xuất phát từ điểm khả thi tìm được ở Pha I để tối ưu hóa hàm mục tiêu gốc $f_0(x)$.
 

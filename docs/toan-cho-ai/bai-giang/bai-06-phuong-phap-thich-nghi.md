@@ -18,7 +18,7 @@ Song song với đó, các phương pháp xấp xỉ bậc hai như **Gradient l
 
 ## 1. AdaGrad: Thích nghi hóa theo Tổng bình phương Gradient
 
-Thuật toán **AdaGrad** (Duchi et al., 2011) khởi xướng ý tưởng: Các tọa độ nào nhận gradient lớn trong quá khứ cần giảm tốc độ học lại để tránh dao động; ngược lại, các tọa độ nào ít nhận gradient cần được tăng bước nhảy để nhanh chóng bắt kịp.
+Thuật toán **AdaGrad** (Duchi et al., 2011) khởi xướng ý tưởng: Các tọa độ nào nhận gradient lớn trong quá khứ cần giảm tốc độ học lại để tránh dao động. Ngược lại, các tọa độ nào ít nhận gradient cần được tăng bước nhảy để nhanh chóng bắt kịp.
 
 Khởi tạo bộ tích lũy $s_0 = 0$, tại mỗi bước $t$, AdaGrad cập nhật:
 
@@ -611,7 +611,7 @@ $$
 
 1. **AdaGrad**: Khởi xướng cơ chế chia nhỏ tốc độ học theo tổng bình phương gradient dồn tích, phù hợp với dữ liệu thưa nhưng dễ bị tắt dần bước nhảy.
 2. **RMSProp**: Thay thế tổng dồn tích bằng trung bình trượt hàm mũ (EMA), tạo ra cửa sổ bộ nhớ hữu hạn giúp duy trì khả năng học lâu dài.
-3. **Adam**: Kết hợp tinh hoa của Momentum (hướng đi) và RMSProp (độ dài bước), tích hợp cơ chế hiệu chỉnh chệch khởi tạo chuẩn xác.
+3. **Adam**: Kết hợp cơ chế định hướng của Momentum và điều chỉnh bước nhảy thích nghi của RMSProp, tích hợp bộ hiệu chỉnh chệch khởi tạo chuẩn xác.
 4. **Conjugate Gradient & BFGS**: Cung cấp công cụ xấp xỉ bậc hai siêu việt, giải phóng thuật toán khỏi gánh nặng tính toán và lưu trữ ma trận Hessian khổng lồ.
 
 ---

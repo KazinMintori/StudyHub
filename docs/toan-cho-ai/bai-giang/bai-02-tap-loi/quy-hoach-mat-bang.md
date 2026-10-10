@@ -74,7 +74,7 @@ $$
 \end{aligned}
 $$
 
-Trong cấu trúc slicing tree, chiều rộng và chiều cao của khung bao có thể được biểu diễn như các posynomial của các biến kích thước khối. Cụ thể, nếu hai khối $i$ và $j$ ghép dọc thì chiều rộng tổng là $w_i + w_j$; nếu ghép ngang thì chiều rộng tổng là $\max(w_i, w_j)$.
+Trong cấu trúc slicing tree, chiều rộng và chiều cao của khung bao có thể được biểu diễn như các posynomial của các biến kích thước khối. Cụ thể, nếu hai khối $i$ và $j$ ghép dọc thì chiều rộng tổng là $w_i + w_j$, trong khi nếu ghép ngang thì chiều rộng tổng là $\max(w_i, w_j)$.
 
 Ràng buộc diện tích viết lại thành: Biểu thức $S_i w_i^{-1} h_i^{-1} \le 1$ (một ràng buộc posynomial). Ràng buộc tỷ lệ khung hình viết lại thành: Biểu thức $\alpha_i w_i h_i^{-1} \le 1$ và $\beta_i^{-1} h_i w_i^{-1} \le 1$ (các ràng buộc posynomial).
 

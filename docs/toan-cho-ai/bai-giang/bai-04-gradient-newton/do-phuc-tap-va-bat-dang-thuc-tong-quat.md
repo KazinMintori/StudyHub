@@ -7,7 +7,7 @@ title: "Độ phức tạp và điểm trong trên nón chính quy"
 description: "Phân tích độ phức tạp hội tụ của phương pháp hàm chắn logarit, vai trò của tham số tự tương hợp nu, mở rộng hàm chắn cho nón Lorentz SOCP và nón ma trận nửa xác định dương SDP."
 ---
 
-Một trong những thành tựu rực rỡ nhất của giải tích tối ưu hiện đại vào cuối thế kỷ 20 là chứng minh rằng các bài toán quy hoạch lồi tổng quát—bao gồm Quy hoạch nón bậc hai (SOCP) và Quy hoạch nửa xác định (SDP)—đều có thể giải được trong thời gian đa thức (polynomial time). Chìa khóa mở ra bước đột phá này là lý thuyết hàm tự tương hợp (Self-Concordant Functions) của Yurii Nesterov và Arkadi Nemirovski, cho phép định lượng chính xác số bước lặp Newton cần thiết để hội tụ về nghiệm tối ưu với độ chính xác tùy ý.
+Một trong những thành tựu rực rỡ nhất của giải tích tối ưu hiện đại vào cuối thế kỷ 20 là chứng minh rằng các bài toán quy hoạch lồi tổng quát (bao gồm Quy hoạch nón bậc hai SOCP và Quy hoạch nửa xác định SDP) đều có thể giải được trong thời gian đa thức (polynomial time). Chìa khóa mở ra bước đột phá này là lý thuyết hàm tự tương hợp (Self-Concordant Functions) của Yurii Nesterov và Arkadi Nemirovski, cho phép định lượng chính xác số bước lặp Newton cần thiết để hội tụ về nghiệm tối ưu với độ chính xác tùy ý.
 
 Chủ đề này phân tích độ phức tạp tính toán của phương pháp hàm chắn logarit, mối quan hệ đánh đổi khi lựa chọn hệ số tăng tham số $\mu$, và cách mở rộng hàm chắn lên các nón chính quy tổng quát như nón Lorentz và nón ma trận nửa xác định dương (PSD).
 

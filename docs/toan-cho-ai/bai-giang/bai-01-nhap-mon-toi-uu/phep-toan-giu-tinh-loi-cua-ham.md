@@ -71,7 +71,7 @@ Số hạng đầu tiên luôn không âm khi $h$ lồi (do $g'(x)^2 \ge 0$). S�
 | lõm | không giảm | lõm | lõm |
 | lõm | không tăng | lồi | lõm |
 
-Dòng đầu tiên là quy tắc được sử dụng thường xuyên nhất trong thực tế. Nó cho thấy ngay $e^{g(x)}$ lồi khi $g$ lồi, và $g(x)^p$ lồi khi $g$ lồi, không âm và $p \ge 1$. Dòng thứ hai giải thích vì sao $1/g(x)$ lồi và $-\log g(x)$ lồi khi $g$ lõm và nhận giá trị dương; nhờ đó hàm rào chắn logarit $-\sum_i \log(b_i - a_i^T x)$ lồi trên miền khả thi $a_i^T x < b_i$. Dòng thứ ba cho thấy $\log g(x)$ là hàm lõm khi $g$ lõm và nhận giá trị dương.
+Dòng đầu tiên là quy tắc được sử dụng thường xuyên nhất trong thực tế. Nó cho thấy ngay $e^{g(x)}$ lồi khi $g$ lồi, và $g(x)^p$ lồi khi $g$ lồi, không âm và $p \ge 1$. Dòng thứ hai giải thích vì sao $1/g(x)$ lồi và $-\log g(x)$ lồi khi $g$ lõm và nhận giá trị dương. Nhờ đó, hàm rào chắn logarit $-\sum_i \log(b_i - a_i^T x)$ lồi trên miền khả thi $a_i^T x < b_i$. Dòng thứ ba cho thấy $\log g(x)$ là hàm lõm khi $g$ lõm và nhận giá trị dương.
 
 **Vì sao không thể bỏ điều kiện đơn điệu**: Xét hàm $h(u) = u^2$, đây là hàm lồi nhưng không đơn điệu trên $\mathbb{R}$, và hàm $g(x) = x^2 - 1$ lồi. Khi đó hàm hợp $(x^2 - 1)^2$ là hàm giếng đôi với $f''(0) = -4 < 0$, hoàn toàn không lồi. Tương tự, nếu lấy $h(u) = e^u$ lồi và tăng, nhưng chọn $g(x) = -x^2$ là hàm lõm, thì hàm hợp $e^{-x^2}$ là đường cong hình chuông Gauss, có độ cong úp xuống ở vùng đỉnh.
 
