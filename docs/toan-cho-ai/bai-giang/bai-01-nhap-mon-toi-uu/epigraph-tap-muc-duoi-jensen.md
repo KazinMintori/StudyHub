@@ -73,7 +73,7 @@ $$
 
 Ma trận bên phải phụ thuộc affine vào $(x, y, t)$, và điều kiện nửa xác định dương nghĩa là ma trận nằm trong nón PSD, một tập lồi. Vậy epigraph là ảnh ngược của một tập lồi qua một ánh xạ affine, nên lồi, và hàm lồi. So với việc tính Hessian ở chủ đề điều kiện bậc hai, lời chứng minh này không cần đạo hàm nào. Thử bằng số: Với $(x, y) = (1, 2)$, ta có $x^2/y = 0.5$. Ma trận $\begin{bmatrix} 2 & 1 \\ 1 & 0.5 \end{bmatrix}$ nửa xác định dương, còn $\begin{bmatrix} 2 & 1 \\ 1 & 0.4 \end{bmatrix}$ thì không, đúng như $0.5 \le 0.5$ còn $0.5 > 0.4$.
 
-**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: Cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Bạn đã thấy kỹ thuật này ở chủ đề về hai nhóm bài toán kinh điển: Cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Kỹ thuật này được gọi là dạng epigraph chuẩn tắc của bài toán tối ưu.
+**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: Cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Kỹ thuật này đã xuất hiện trực quan ở chủ đề về hai dạng bài toán kinh điển: Cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Kỹ thuật này được gọi là dạng epigraph chuẩn tắc của bài toán tối ưu.
 
 ## 3. Bất đẳng thức Jensen
 
@@ -95,7 +95,7 @@ $$
 f(\mathbf{E}\,X) \le \mathbf{E}\, f(X)
 $$
 
-với mọi biến ngẫu nhiên $X$ nhận giá trị trong miền xác định của hàm lồi $f$, với giả thiết các kỳ vọng đều tồn tại hữu hạn. Nói một cách trực quan: Giá trị của hàm lồi tại điểm trung bình không bao giờ vượt quá kỳ vọng của hàm số đó. Bất đẳng thức này mang tính chất **đặc trưng** cho tính lồi: Nếu $f$ không lồi, ta luôn tìm được một biến ngẫu nhiên rời rạc hai giá trị làm bất đẳng thức bị vi phạm.
+với mọi biến ngẫu nhiên $X$ nhận giá trị trong miền xác định của hàm lồi $f$, với giả thiết các kỳ vọng đều tồn tại hữu hạn. Nói một cách trực quan: Giá trị của hàm lồi tại điểm trung bình không bao giờ vượt quá kỳ vọng của hàm số đó. Bất đẳng thức này **đóng vai trò là điều kiện đặc trưng cốt lõi** của tính lồi: Nếu $f$ không lồi, ta luôn tìm được một biến ngẫu nhiên rời rạc hai giá trị làm bất đẳng thức bị vi phạm.
 
 <FunctionLab type="jensen" />
 
@@ -127,7 +127,7 @@ $$
 \mathbf{E}\, f(x + z) \ge f(x).
 $$
 
-Nguyên nhân: Do kỳ vọng $\mathbf{E}\,(x + z) = x$, áp dụng bất đẳng thức Jensen ta có $f(x) = f(\mathbf{E}(x + z)) \le \mathbf{E}\, f(x + z)$. Thêm nhiễu cân bằng vào đầu vào của một hàm lồi không bao giờ làm nó giảm đi **tính trung bình**. Với $f(x) = x^2$ và nhiễu $\pm 1$ đồng khả năng, $\mathbf{E}(1.5 + z)^2 = 3.25 = 1.5^2 + 1$, lớn hơn đúng bằng phương sai của nhiễu. Nếu bạn đang ở điểm cực tiểu của một hàm lồi, rung lắc ngẫu nhiên chỉ có thể làm giá trị trung bình xấu đi.
+Nguyên nhân: Do kỳ vọng $\mathbf{E}\,(x + z) = x$, áp dụng bất đẳng thức Jensen ta có $f(x) = f(\mathbf{E}(x + z)) \le \mathbf{E}\, f(x + z)$. Thêm nhiễu cân bằng vào đầu vào của một hàm lồi không bao giờ làm nó giảm đi **tính trung bình**. Với $f(x) = x^2$ và nhiễu $\pm 1$ đồng khả năng, $\mathbf{E}(1.5 + z)^2 = 3.25 = 1.5^2 + 1$, lớn hơn đúng bằng phương sai của nhiễu. Khi đang đứng tại điểm cực tiểu của hàm lồi, mọi nhiễu động ngẫu nhiên trong lân cận chỉ khiến giá trị trung bình kỳ vọng xấu đi.
 
 ### Cận dưới ELBO trong học máy
 
@@ -180,7 +180,7 @@ Bất đẳng thức Hölder là lý do chuẩn $\ell_p$ và chuẩn $\ell_q$ đ
 
 ## 5. Những câu hỏi để đào sâu
 
-**Câu 1.** Một bạn lập luận: "Hàm $f$ có mọi tập mức dưới lồi, và $f$ khả vi, nên điểm có $\nabla f(x) = 0$ là cực tiểu toàn cục." Lập luận này sai ở đâu?
+**Câu 1.** Xét lập luận sau: "Một hàm số $f$ khả vi có mọi tập mức dưới đều là tập lồi, do đó điểm dừng thỏa mãn $\nabla f(x) = 0$ ắt hẳn là cực tiểu toàn cục." Lập luận này sai lầm ở điểm nào?
 
 <details><summary>Xem lời giải thích</summary>
 

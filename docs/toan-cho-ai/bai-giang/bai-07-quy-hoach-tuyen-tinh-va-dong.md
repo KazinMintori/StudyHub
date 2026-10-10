@@ -5,7 +5,7 @@ section: lecture
 title: "Quy hoạch tuyến tính và quy hoạch động"
 prerequisites: ["ma-tran", "he-phuong-trinh", "tap-loi", "do-thi"]
 lessonStatus: ready
-description: "Khảo sát toàn diện Quy hoạch tuyến tính (LP), Quy hoạch động Bellman (DP) và các lớp bài toán tối ưu hình học kinh điển: Xấp xỉ chuẩn, tâm Chebyshev, phân loại SVM, thiết kế thí nghiệm và sự thống nhất giữa thế năng đối ngẫu với hàm giá trị."
+description: "Khảo sát toàn diện Quy hoạch tuyến tính (LP), Quy hoạch động Bellman (DP) và các dạng bài toán tối ưu hình học kinh điển: Xấp xỉ chuẩn, tâm Chebyshev, phân loại SVM, thiết kế thí nghiệm và sự thống nhất giữa thế năng đối ngẫu với hàm giá trị."
 ---
 
 Trong bức tranh toàn cảnh của toán học tối ưu hóa dành cho Trí tuệ Nhân tạo, có hai trường phái tư duy kinh điển, đại diện cho hai góc nhìn bổ trợ nhau về bài toán ra quyết định quy mô lớn:
@@ -13,7 +13,7 @@ Trong bức tranh toàn cảnh của toán học tối ưu hóa dành cho Trí t
 1. **Quy hoạch tuyến tính (Linear Programming - LP)**: Tiếp cận bài toán dưới **góc nhìn hình học không gian tĩnh**. Mọi giới hạn tài nguyên đan xen tạo thành một khối đa diện lồi nhiều chiều (polyhedron), và mục tiêu là tìm kiếm một "đỉnh cực" (extreme point) tối ưu trên khối đa diện đó. LP là xương sống của các hệ thống phân bổ tài nguyên, điều độ luồng mạng, và lập lịch tính toán trên các cụm máy chủ huấn luyện mô hình ngôn ngữ lớn (LLM).
 2. **Quy hoạch động (Dynamic Programming - DP)**: Tiếp cận bài toán dưới **góc nhìn chuỗi quyết định động theo thời gian**. Nhà toán học Richard Bellman đã đúc kết một nguyên lý sâu sắc: Một quyết định dài hạn tối ưu luôn có thể phân rã thành một bước hành động tức thời cộng với giá trị tối ưu của phần bài toán còn lại. DP là linh hồn của các thuật toán tìm đường, giải mã chuỗi (Viterbi decoding, Beam Search) và là nền tảng toán học trực tiếp của Học tăng cường (Reinforcement Learning - RL).
 
-Mối liên hệ sâu sắc nhất mà chúng ta khám phá trong bài giảng này: **Hai trường phái tưởng chừng tách biệt ấy thực chất lại là hai mặt của cùng một đồng xu**. Biến tiềm năng (thế năng) trong bài toán đối ngẫu tuyến tính của đường đi ngắn nhất chính là hàm giá trị tối ưu của phương trình Bellman. Hơn thế nữa, bài giảng sẽ mở rộng sang các lớp bài toán ứng dụng hình học và thống kê đỉnh cao: Xấp xỉ theo chuẩn, định tâm Chebyshev, ellipsoid thể tích cực trị, thiết kế thí nghiệm tối ưu và phân loại dữ liệu.
+Mối liên hệ sâu sắc nhất mà chúng ta khám phá trong bài giảng này: **Hai trường phái tưởng chừng tách biệt ấy thực chất lại là hai mặt của cùng một đồng xu**. Biến tiềm năng (thế năng) trong bài toán đối ngẫu tuyến tính của đường đi ngắn nhất chính là hàm giá trị tối ưu của phương trình Bellman. Hơn thế nữa, bài giảng sẽ mở rộng sang các họ bài toán ứng dụng hình học và thống kê thực tế: Xấp xỉ theo chuẩn, định tâm Chebyshev, ellipsoid thể tích cực trị, thiết kế thí nghiệm tối ưu và phân loại dữ liệu.
 
 ---
 

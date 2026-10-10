@@ -79,7 +79,7 @@ Sức mạnh thực sự của phép lấy ảnh ngược là biến đổi các
   $$
   A(x) = x_1 A_1 + \cdots + x_n A_n \preceq B, \qquad A_i, B \in \mathbb{S}^m,
   $$
-  được gọi là một bất đẳng thức ma trận tuyến tính (Linear Matrix Inequality - LMI). Ký hiệu ma trận $A(x) \preceq B$ tương đương với $B - A(x) \succeq 0$. Tập nghiệm của LMI chính là ảnh ngược của nón nửa xác định dương $\mathbb{S}^m_+$ qua ánh xạ affine $x \mapsto B - A(x)$, do đó luôn luôn là một tập lồi. Đây là dạng ràng buộc tổng quát bao trùm toàn bộ lớp bài toán quy hoạch nửa xác định (SDP).
+  được gọi là một bất đẳng thức ma trận tuyến tính (Linear Matrix Inequality - LMI). Ký hiệu ma trận $A(x) \preceq B$ tương đương với $B - A(x) \succeq 0$. Tập nghiệm của LMI chính là ảnh ngược của nón nửa xác định dương $\mathbb{S}^m_+$ qua ánh xạ affine $x \mapsto B - A(x)$, do đó luôn luôn là một tập lồi. Đây là dạng ràng buộc tổng quát bao trùm toàn bộ họ bài toán quy hoạch nửa xác định (SDP).
 
 ::: example Biểu diễn hình tròn bằng một ràng buộc ma trận tuyến tính LMI
 Xét bất đẳng thức ma trận: $\begin{bmatrix} 1 + x_1 & x_2 \\ x_2 & 1 - x_1 \end{bmatrix} \succeq 0$. Đây là một LMI cấp 2 theo hai biến số $(x_1, x_2)$. Theo tiêu chuẩn Sylvester cho ma trận cấp 2, điều kiện nửa xác định dương tương đương với: $1 + x_1 \ge 0$, $1 - x_1 \ge 0$ và định thức không âm $(1 + x_1)(1 - x_1) - x_2^2 \ge 0$, tức $x_1^2 + x_2^2 \le 1$.

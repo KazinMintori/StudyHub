@@ -36,7 +36,7 @@ Hình ảnh này cho thấy ngay bốn khả năng có thể xảy ra.
 - **Không bị chặn dưới.** Nếu đa diện kéo dài vô hạn theo một hướng $r$ với $c^Tr < 0$, thì đi theo hướng $r$ làm giá trị giảm mãi, và $p^\star = -\infty$.
 - **Bất khả thi.** Đa diện rỗng, và $p^\star = +\infty$.
 
-Mô phỏng dưới đây cho bạn tự xoay $c$ và quan sát cả bốn khả năng, trừ khả năng cuối cùng.
+Mô phỏng dưới đây cho phép người học tùy ý xoay vector $c$ và quan sát trực quan các trạng thái khả thi của bài toán.
 
 <LPDirectionLab />
 

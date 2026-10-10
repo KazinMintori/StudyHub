@@ -21,7 +21,7 @@ Khi học giải tích, ta không tính lại mọi thứ từ định nghĩa gi
 - **Logarit**: Hàm số $\log x$ lõm trên $\mathbb{R}_{++}$, bởi vì $f''(x) = -1/x^2 < 0$.
 - **Entropy âm**: Hàm số $x \log x$ lồi trên $\mathbb{R}_{++}$, và vẫn duy trì tính lồi trên $\mathbb{R}_+$ khi gán giá trị liên tục tại 0 là $0 \log 0 = 0$. Tại đây $f'(x) = \log x + 1$ và $f''(x) = 1/x > 0$.
 
-Dòng về lũy thừa chứa nhiều thông tin nhất, và mô phỏng sau cho bạn đi qua cả họ hàm bằng một thanh trượt.
+Dòng về lũy thừa chứa nhiều thông tin nhất, và mô phỏng sau cho phép người học khảo sát toàn bộ họ hàm qua thanh trượt tương tác.
 
 <PowerLab />
 

@@ -80,7 +80,7 @@ $$
 \tilde f(x) = \begin{cases} f(x), & \text{nếu } x \in \operatorname{dom} f, \\ +\infty, & \text{nếu } x \notin \operatorname{dom} f. \end{cases}
 $$
 
-Miền xác định gốc được khôi phục dễ dàng qua tập mức: $\operatorname{dom} f = \{x \in \mathbb{R}^n : \tilde f(x) < +\infty\}$. Với quy ước số học mở rộng ($a + \infty = +\infty$ và $0 \cdot \infty = 0$), bất đẳng thức dây cung áp dụng tự nhiên cho mọi $x, y \in \mathbb{R}^n$: Nếu một trong hai điểm nằm ngoài $\operatorname{dom} f$, vế phải bằng $+\infty$ và bất đẳng thức hiển nhiên nghiệm đúng. Trong toàn bộ môn học, ta mặc định mọi hàm lồi đều được mở rộng tự nhiên như vậy.
+Miền xác định gốc được tái lập trực tiếp thông qua tập mức: $\operatorname{dom} f = \{x \in \mathbb{R}^n : \tilde f(x) < +\infty\}$. Với quy ước số học mở rộng ($a + \infty = +\infty$ và $0 \cdot \infty = 0$), bất đẳng thức dây cung áp dụng tự nhiên cho mọi $x, y \in \mathbb{R}^n$: Nếu một trong hai điểm nằm ngoài $\operatorname{dom} f$, vế phải bằng $+\infty$ và bất đẳng thức hiển nhiên nghiệm đúng. Trong toàn bộ môn học, ta mặc định mọi hàm lồi đều được mở rộng tự nhiên như vậy.
 
 Một ứng dụng nền tảng của kỹ thuật này là **hàm chỉ thị** (indicator function) của một tập hợp $C \subseteq \mathbb{R}^n$:
 
@@ -179,7 +179,7 @@ Hàm số $g(t) = -t^2$ có đạo hàm cấp hai $g''(t) = -2 < 0$, do đó nó
 
 ## Tóm tắt
 
-Một hàm số là hàm lồi khi miền xác định của nó là một tập lồi và đồ thị hàm số nằm phía dưới hoặc tiếp xúc với mọi dây cung nối hai điểm bất kỳ. Hàm lồi nghiêm ngặt loại trừ các đoạn thẳng phẳng trên đồ thị. Hàm lõm là hàm có số đối là hàm lồi, và lớp hàm duy nhất vừa lồi vừa lõm chính là các hàm affine.
+Một hàm số là hàm lồi khi miền xác định của nó là một tập lồi và đồ thị hàm số nằm phía dưới hoặc tiếp xúc với mọi dây cung nối hai điểm bất kỳ. Hàm lồi nghiêm ngặt loại trừ các đoạn thẳng phẳng trên đồ thị. Hàm lõm là hàm có số đối là hàm lồi, và họ hàm duy nhất vừa lồi vừa lõm chính là các hàm affine.
 
 Tính lồi của một hàm đa biến tương đương với tính lồi của hàm một biến thu được khi hạn chế hàm số lên mọi đường thẳng cắt qua miền xác định. Kỹ thuật mở rộng giá trị với $+\infty$ và hàm chỉ thị của tập lồi cho phép quy đổi các bài toán tối ưu có ràng buộc về bài toán tối ưu không ràng buộc tương đương, đặt nền móng cho các thuật toán tối ưu hóa hiện đại.
 

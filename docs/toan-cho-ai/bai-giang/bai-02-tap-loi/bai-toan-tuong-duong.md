@@ -9,7 +9,7 @@ description: "Khái niệm hai bài toán tương đương, phép co giãn, đ�
 
 Cùng một bài toán có thể được viết theo nhiều cách. Người này đo sai số bằng chuẩn Euclid, người kia đo bằng bình phương của nó. Người này tham số hóa độ lệch chuẩn bằng $\sigma$, người kia bằng $\log\sigma$. Trong khi đó, phần mềm giải tối ưu chỉ nhận một vài dạng nhất định, nên một phần lớn công việc của người lập mô hình là biến bài toán mình đang có thành bài toán mà công cụ giải được.
 
-Mỗi phép biến đổi như thế đi kèm hai câu hỏi. Thứ nhất, lời giải có được bảo toàn không, nghĩa là từ nghiệm của bài toán mới có lấy lại được nghiệm của bài toán cũ không? Thứ hai, tính lồi có được bảo toàn không? Trang này cho thấy hai câu hỏi ấy độc lập với nhau: Có những phép biến đổi giữ nguyên nghiệm nhưng phá hỏng tính lồi, và ngược lại, có những phép biến đổi làm tính lồi hiện ra từ một bài toán trông không lồi chút nào. Bạn cần nắm [dạng chuẩn của bài toán tối ưu](../bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md) và [bài toán lồi ở dạng chuẩn](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) từ Lecture 01.
+Mỗi phép biến đổi như thế đi kèm hai câu hỏi. Thứ nhất, lời giải có được bảo toàn không, nghĩa là từ nghiệm của bài toán mới có lấy lại được nghiệm của bài toán cũ không? Thứ hai, tính lồi có được bảo toàn không? Trang này cho thấy hai câu hỏi ấy độc lập với nhau: Có những phép biến đổi giữ nguyên nghiệm nhưng phá hỏng tính lồi, và ngược lại, có những phép biến đổi làm tính lồi hiện ra từ một bài toán trông không lồi chút nào. Kiến thức tiên quyết cần nắm vững gồm [dạng chuẩn của bài toán tối ưu](../bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md) và [bài toán lồi ở dạng chuẩn](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) từ Lecture 01.
 
 ## 1. Hai bài toán tương đương
 
@@ -131,7 +131,7 @@ Còn tùy giá trị tối ưu $p^\star$ của bài toán gốc. Nếu $p^\star 
 
 </details>
 
-**Câu 2.** Để bỏ ràng buộc $x \ge 0$ trong bài toán cực tiểu $(x - 1)^2$, một bạn đặt $x = z^2$ rồi cực tiểu $(z^2 - 1)^2$ trên toàn trục số. Cách làm này có đúng không, và nếu có vấn đề thì vấn đề nằm ở đâu?
+**Câu 2.** Nhằm khử ràng buộc $x \ge 0$ trong bài toán cực tiểu hóa $(x - 1)^2$, một sinh viên đề xuất đổi biến $x = z^2$ rồi cực tiểu $(z^2 - 1)^2$ trên toàn trục số. Cách tiếp cận này có chuẩn xác không, và bản chất vấn đề nằm ở đâu?
 
 <details><summary>Xem lời giải thích</summary>
 

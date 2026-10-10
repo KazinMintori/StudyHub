@@ -85,7 +85,7 @@ $$
 \rho_{13} \in \left[\rho_{12}\rho_{23} - \sqrt{(1 - \rho_{12}^2)(1 - \rho_{23}^2)},\ \ \rho_{12}\rho_{23} + \sqrt{(1 - \rho_{12}^2)(1 - \rho_{23}^2)}\right].
 $$
 
-Giữ $\rho_{23} = c$ cố định, miền các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\,\rho_{12}\rho_{13} \le 1 - c^2$, nằm gọn trong hình vuông $[-1, 1]^2$. Diện tích của nó là $\pi\sqrt{1 - c^2}$: Khoảng 78.5% hình vuông khi $c = 0$, nhưng chỉ còn khoảng 47% khi $c = 0.8$. Miền khả thi của một LMI là một tập lồi có thể có biên cong, và người ta gọi nó là một **spectrahedron**. Trong không gian ba chiều, tập các ma trận tương quan $3 \times 3$ có hình dạng giống một chiếc gối phồng, với bốn đỉnh nhọn ứng với những ma trận chỉ gồm các phần tử $\pm 1$.
+Giữ $\rho_{23} = c$ cố định, miền các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\,\rho_{12}\rho_{13} \le 1 - c^2$, nằm trọn vẹn bên trong hình vuông $[-1, 1]^2$. Diện tích của nó là $\pi\sqrt{1 - c^2}$: Khoảng 78.5% hình vuông khi $c = 0$, nhưng chỉ còn khoảng 47% khi $c = 0.8$. Miền khả thi của một LMI là một tập lồi có thể có biên cong, và người ta gọi nó là một **spectrahedron**. Trong không gian ba chiều, tập các ma trận tương quan $3 \times 3$ có hình dạng giống một chiếc gối phồng, với bốn đỉnh nhọn ứng với những ma trận chỉ gồm các phần tử $\pm 1$.
 
 <CorrelationLab />
 

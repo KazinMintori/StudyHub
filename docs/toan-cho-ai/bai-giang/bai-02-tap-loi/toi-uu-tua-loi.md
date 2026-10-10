@@ -102,7 +102,7 @@ Giá trị đúng là $p^\star = \sqrt5 - 2 \approx 0.2361$, đạt tại $x^\st
 
 <BisectionLab />
 
-Điều đáng chú ý là thuật toán không bao giờ tính giá trị hay đạo hàm của $f$. Nó chỉ cần một công cụ trả lời được câu hỏi khả thi của một bài toán lồi, và công cụ ấy có sẵn cho mọi lớp bài toán lồi ở các chủ đề sau. Cái giá phải trả là ta giải nhiều bài toán thay vì một, nhưng số lần chỉ tăng theo logarit của độ chính xác: Muốn sai số $10^{-6}$ trên một khoảng dài 10 thì cũng chỉ cần 24 lần.
+Điều đáng chú ý là thuật toán không bao giờ tính giá trị hay đạo hàm của $f$. Nó chỉ cần một công cụ trả lời được câu hỏi khả thi của một bài toán lồi, và công cụ ấy có sẵn cho mọi dạng bài toán lồi ở các chủ đề sau. Cái giá phải trả là ta giải nhiều bài toán thay vì một, nhưng số lần chỉ tăng theo logarit của độ chính xác: Muốn sai số $10^{-6}$ trên một khoảng dài 10 thì cũng chỉ cần 24 lần.
 
 ## 5. Điều kiện tối ưu bậc nhất cho bài toán tựa lồi
 
@@ -148,7 +148,7 @@ Có. Cực đại $f$ tương đương cực tiểu $-f$, và $-f$ cũng là m�
 
 </details>
 
-**Câu 5.** Với $f = p/q$, một bạn đề xuất cực tiểu $p(x) - t\,q(x)$ với một $t$ cố định thay cho $f$. Đề xuất này đúng ở chỗ nào và thiếu ở chỗ nào?
+**Câu 5.** Xét hàm mục tiêu phân tuyến tính $f = p/q$. Một hướng tiếp cận đề xuất cực tiểu hóa biểu thức $p(x) - t\,q(x)$ với tham số $t$ cố định thay cho $f$. Đề xuất này chuẩn xác ở khía cạnh nào và còn thiếu sót ở điểm nào?
 
 <details><summary>Xem lời giải thích</summary>
 

@@ -117,7 +117,7 @@ Bài toán có điều chuẩn tương đương với cực tiểu $\|Ax - b\|_2
 
 </details>
 
-**Câu 4.** Một bạn chọn trọng số $\mu$ bằng cách lấy giá trị cho sai số trên dữ liệu huấn luyện nhỏ nhất. Cách chọn ấy sẽ dẫn tới đâu?
+**Câu 4.** Nếu lựa chọn trọng số điều chuẩn $\mu$ bằng cách tìm giá trị cực tiểu hóa sai số trực tiếp trên tập dữ liệu huấn luyện, hệ quả thực nghiệm sẽ dẫn tới hiện tượng gì?
 
 <details><summary>Xem lời giải thích</summary>
 

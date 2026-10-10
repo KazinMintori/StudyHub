@@ -7,7 +7,7 @@ title: "Điều kiện bậc nhất: Tiếp tuyến nằm dưới đồ thị"
 description: "Điều kiện bậc nhất của hàm lồi khả vi và ý nghĩa của tiếp tuyến như một cận dưới toàn cục: Điểm dừng là cực tiểu toàn cục, cận dưới cho giá trị tối ưu, các bất đẳng thức cổ điển và độ phân kỳ KL, gradient loại bỏ nửa không gian, gradient đơn điệu, lồi nghiêm ngặt và dưới đạo hàm."
 ---
 
-Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: Độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói lên điều gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát khổng lồ, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm duy nhất, ta dựng được một mặt phẳng mà toàn bộ cái bát đều nằm phía trên mặt phẳng đó.
+Xét một hình ảnh trực giác: Một người leo núi đứng trên sườn đồi giữa màn sương dày, chỉ đo đạc được hai thông số cục bộ: Độ cao của vị trí hiện tại và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói lên điều gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát khổng lồ, câu chuyện thay đổi hoàn toàn: Từ độ cao và độ dốc tại đúng một điểm duy nhất, ta dựng được một mặt phẳng mà toàn bộ cái bát đều nằm phía trên mặt phẳng đó.
 
 Đó là nội dung cốt lõi của điều kiện bậc nhất, một trong những tính chất nền tảng nhất của hàm lồi trong tối ưu hóa. Bản chất nằm ở chỗ: Một thuật toán tối ưu thông thường chỉ đo đạc được thông tin cục bộ, bao gồm giá trị hàm và gradient tại điểm hiện hành. Đối với hàm lồi, thông tin cục bộ đó lại cho phép ta rút ra kết luận chắc chắn trên toàn bộ miền xác định. Bài giảng này phát biểu điều kiện, làm sáng tỏ các hệ quả thực tiễn, phân tích từng bước chứng minh chặt chẽ, và mở rộng sang trường hợp hàm không khả vi tại các điểm gãy thông qua khái niệm dưới đạo hàm.
 
@@ -22,7 +22,7 @@ Chữ "toàn bộ" là điểm mấu chốt tạo nên khác biệt. Với mọi
 
 <FunctionLab type="tangent" />
 
-Trong mô phỏng, với $x^2$, $e^x$, $-\log x$ hay $x \log x$, bạn trượt $x_0$ đi đâu thì tiếp tuyến cũng nằm dưới đồ thị. Với $x^3$, chỉ cần đặt $x_0 < 0$ là tiếp tuyến cắt lên trên đồ thị ở phía bên phải. Hàm $1/x^2$ đáng xem kỹ hơn: Trên nửa trục chứa $x_0$, tiếp tuyến vẫn nằm dưới đồ thị, nhưng ở nửa trục bên kia nó vượt lên trên đồ thị trên cả một khoảng. Miền xác định không lồi, nên điều kiện bậc nhất không còn được bảo toàn. Cần lưu ý rằng giả thiết về tính lồi của miền xác định là điều kiện tiên quyết không thể bỏ qua.
+Trong mô phỏng, với $x^2$, $e^x$, $-\log x$ hay $x \log x$, khi trượt điểm tiếp xúc $x_0$ đến bất kỳ vị trí nào, tiếp tuyến cũng luôn nằm dưới đồ thị. Với $x^3$, chỉ cần đặt $x_0 < 0$ là tiếp tuyến cắt lên trên đồ thị ở phía bên phải. Hàm $1/x^2$ đáng xem kỹ hơn: Trên nửa trục chứa $x_0$, tiếp tuyến vẫn nằm dưới đồ thị, nhưng ở nửa trục bên kia nó vượt lên trên đồ thị trên cả một khoảng. Miền xác định không lồi, nên điều kiện bậc nhất không còn được bảo toàn. Cần lưu ý rằng giả thiết về tính lồi của miền xác định là điều kiện tiên quyết không thể bỏ qua.
 
 ## 2. Thông tin cục bộ cho kết luận toàn cục
 
@@ -52,7 +52,7 @@ $$
 Ta chưa biết $p^\star$, nhưng đã biết điểm hiện tại kém tối ưu không quá $0.56$. Để đối chiếu, nghiệm thật là $y^\star = (1, 0)$ với $p^\star = 2 \cdot 0.5^2 = 0.5$, nằm đúng trong khoảng vừa tìm. Nếu đứng ở một điểm xa nghiệm như $(2, 2)$ thì cận dưới thu được là $-10.5$, vẫn đúng nhưng rất lỏng. Điểm hiện tại càng gần nghiệm thì cận càng chặt.
 :::
 
-Một cận dưới kiểm chứng được cho $p^\star$ là thứ cho phép thuật toán tự biết khi nào nên dừng. Ở phần đối ngẫu của môn học, bạn sẽ gặp lại đúng tinh thần này dưới một hình thức tổng quát hơn nhiều.
+Một cận dưới kiểm chứng được cho $p^\star$ là thứ cho phép thuật toán tự biết khi nào nên dừng. Ở phần lý thuyết đối ngẫu, người học sẽ gặp lại đúng tinh thần này dưới một cấu trúc tổng quát hơn nhiều.
 
 ## 3. Nhiều bất đẳng thức quen thuộc chỉ là một tiếp tuyến
 
@@ -123,7 +123,7 @@ Chỉ một lần tính gradient, ta loại được cả nửa không gian còn
 
 <GradientCutLab />
 
-Hai hệ quả của hình ảnh này sẽ theo bạn suốt môn học.
+Hai hệ quả hình học này đóng vai trò then chốt xuyên suốt toàn bộ môn học:
 
 - **Hướng giảm.** Đi từ $x$ theo hướng $\Delta x$ chỉ có thể làm $f$ giảm nếu $\nabla f(x)^T \Delta x < 0$, tức $\Delta x$ tạo góc nhọn với $-\nabla f(x)$. Lập luận này là nền tảng để định nghĩa hướng giảm của các phương pháp tối ưu không ràng buộc. Phương pháp gradient chọn chính $\Delta x = -\nabla f(x)$, hướng mà theo xấp xỉ bậc nhất làm $f$ giảm nhanh nhất trong các hướng có cùng độ dài.
 - **Thu hẹp vùng chứa nghiệm.** Nếu nghiệm nằm trong một vùng đã biết, mỗi gradient cắt vùng đó làm đôi và giữ lại một nửa. Lặp lại, vùng chứa nghiệm co dần. Đây là ý tưởng của các phương pháp mặt phẳng cắt.
@@ -172,7 +172,7 @@ Chưa đủ. Định lý đòi bất đẳng thức đúng tại **mọi** $x$, 
 
 </details>
 
-**Câu 2.** Một hàm lồi khả vi trên $\mathbb{R}^n$ có gradient khác 0 tại mọi điểm. Bạn kết luận được gì về bài toán cực tiểu hóa nó?
+**Câu 2.** Xét hàm lồi khả vi trên $\mathbb{R}^n$ có gradient khác vector 0 tại mọi điểm. Ta có thể kết luận gì về nghiệm của bài toán cực tiểu hóa hàm số này?
 
 <details><summary>Xem lời giải thích</summary>
 

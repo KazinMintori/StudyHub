@@ -301,7 +301,7 @@ Cho hàm số có ma trận Hessian đầy đủ chứa tương quan chéo: $H =
 
 ## Tài liệu tham khảo và Đọc thêm
 
-Dành cho bạn đọc muốn nghiên cứu chuyên sâu về các thuật toán tối ưu thích nghi:
+Dành cho người học muốn nghiên cứu chuyên sâu về các thuật toán tối ưu thích nghi:
 - **Diederik P. Kingma & Jimmy Ba** (2014), *Adam: A Method for Stochastic Optimization*, ICLR. Bài báo kinh điển đặt nền móng cho thuật toán Adam và cơ chế hiệu chỉnh chệch.
 - **John Duchi, Elad Hazan & Yoram Singer** (2011), *Adaptive Subgradient Methods for Online Learning and Stochastic Optimization*, JMLR. Nguồn gốc của thuật toán AdaGrad và giải tích subgradient thích nghi.
 - **Jonathan Richard Shewchuk**, *An Introduction to the Conjugate Gradient Method Without the Agonizing Pain*, Carnegie Mellon University. Tài liệu nhập môn trực quan và sâu sắc nhất về phương pháp Gradient liên hợp.

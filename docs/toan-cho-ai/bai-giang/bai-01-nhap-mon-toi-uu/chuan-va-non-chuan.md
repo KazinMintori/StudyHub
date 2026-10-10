@@ -44,7 +44,7 @@ $$
 \|\theta x_1 + (1-\theta)x_2 - x_c\| \le \theta\|x_1 - x_c\| + (1-\theta)\|x_2 - x_c\| \le r .
 $$
 
-Trong mặt phẳng, ba quả cầu đơn vị quen thuộc có ba hình dạng đặc trưng: Tập $\{|x_1| + |x_2| \le 1\}$ là một hình thoi với bốn đỉnh trên hai trục tọa độ, tập $\{x_1^2 + x_2^2 \le 1\}$ là hình tròn, và tập $\{\max(|x_1|, |x_2|) \le 1\}$ là hình vuông. Mô phỏng sau cho bạn trượt $p$ liên tục và thấy hình thoi phình dần thành hình tròn rồi thành hình vuông.
+Trong mặt phẳng, ba quả cầu đơn vị quen thuộc có ba hình dạng đặc trưng: Tập $\{|x_1| + |x_2| \le 1\}$ là một hình thoi với bốn đỉnh trên hai trục tọa độ, tập $\{x_1^2 + x_2^2 \le 1\}$ là hình tròn, và tập $\{\max(|x_1|, |x_2|) \le 1\}$ là hình vuông. Mô phỏng trực quan cho phép trượt giá trị $p$ liên tục và quan sát hình thoi phình dần thành hình tròn rồi tiến tới hình vuông.
 
 <NormBallLab />
 
@@ -52,9 +52,9 @@ Hình cũng cho thấy một chuỗi bất đẳng thức đáng nhớ. Quả c�
 
 ## 3. Vì sao $p < 1$ không cho một chuẩn
 
-Công thức $\left(\sum_i |x_i|^p\right)^{1/p}$ vẫn tính được với $0 < p < 1$. Vậy tại sao người ta chỉ gọi nó là chuẩn khi $p \ge 1$? Trượt $p$ xuống dưới 1 trong mô phỏng, bạn sẽ thấy câu trả lời bằng mắt: "Quả cầu" bị lõm vào giữa bốn đỉnh và **không còn lồi**. Với $p = \tfrac12$, hai điểm $(1, 0)$ và $(0, 1)$ có "độ dài" bằng 1, nhưng trung điểm $(\tfrac12, \tfrac12)$ có giá trị $(\sqrt{0.5} + \sqrt{0.5})^2 = 2 > 1$.
+Biểu thức $\left(\sum_{i=1}^n |x_i|^p\right)^{1/p}$ vẫn hoàn toàn xác định với $0 < p < 1$. Vậy vì sao trong toán học người ta chỉ công nhận nó là chuẩn khi $p \ge 1$? Khi trượt $p$ xuống dưới 1 trong mô phỏng, trực giác hình học hiện lên rõ ràng: "Quả cầu" bị lõm vào giữa bốn đỉnh và **không còn lồi**. Với $p = \tfrac12$, hai điểm $(1, 0)$ và $(0, 1)$ có "độ dài" bằng 1, nhưng trung điểm $(\tfrac12, \tfrac12)$ có giá trị $(\sqrt{0.5} + \sqrt{0.5})^2 = 2 > 1$.
 
-Không lồi và vi phạm bất đẳng thức tam giác là hai mặt của cùng một hiện tượng. Thật vậy, $\|(1, 0) + (0, 1)\|_{1/2} = (1 + 1)^2 = 4$, lớn hơn tổng $\|(1, 0)\|_{1/2} + \|(0, 1)\|_{1/2} = 2$. Tổng quát hơn, có một mối liên hệ hai chiều đẹp đẽ:
+Không lồi và vi phạm bất đẳng thức tam giác là hai mặt của cùng một hiện tượng. Cụ thể, xét phản ví dụ số học: $\|(1, 0) + (0, 1)\|_{1/2} = (1 + 1)^2 = 4$, lớn hơn tổng $\|(1, 0)\|_{1/2} + \|(0, 1)\|_{1/2} = 2$. Tổng quát hơn, có một mối liên hệ hai chiều đẹp đẽ:
 
 - Nếu hàm $\|\cdot\|$ thỏa ba tính chất đầu, thì bất đẳng thức tam giác đúng **khi và chỉ khi** quả cầu đơn vị $\{x : \|x\| \le 1\}$ lồi.
 - Ngược lại, mỗi tập lồi, đóng, bị chặn, đối xứng qua gốc và chứa gốc ở phần trong là quả cầu đơn vị của đúng một chuẩn, cho bởi $\|x\| = \inf\{t > 0 : x/t \in B\}$.
@@ -97,7 +97,7 @@ $$
 
 <Cone3DLab type="soc" />
 
-Vì sao nâng chiều lại có ích? Một ràng buộc như $\|Ax + b\|_2 \le c^T x + d$, trong đó vế phải là một hàm affine của biến, trông không giống quả cầu nào cả, vì "bán kính" thay đổi theo $x$. Nhưng nó nói đúng một điều: Điểm $(Ax + b,\ c^T x + d)$ thuộc nón bậc hai. Tập các $x$ thỏa điều kiện là ảnh ngược của nón bậc hai qua một ánh xạ affine, và như chủ đề về các phép toán giữ tính lồi sẽ cho thấy, ảnh ngược affine của một tập lồi là lồi. Những bài toán có ràng buộc loại này được gọi là quy hoạch nón bậc hai (SOCP), một lớp bài toán lồi giải được hiệu quả mà Lecture 02 sẽ giới thiệu.
+Vì sao nâng chiều lại có ích? Một ràng buộc như $\|Ax + b\|_2 \le c^T x + d$, trong đó vế phải là một hàm affine của biến, trông không giống quả cầu nào cả, vì "bán kính" thay đổi theo $x$. Nhưng nó nói đúng một điều: Điểm $(Ax + b,\ c^T x + d)$ thuộc nón bậc hai. Tập các $x$ thỏa điều kiện là ảnh ngược của nón bậc hai qua một ánh xạ affine, và như chủ đề về các phép toán giữ tính lồi sẽ cho thấy, ảnh ngược affine của một tập lồi là lồi. Những bài toán có ràng buộc loại này được gọi là quy hoạch nón bậc hai (SOCP), một họ bài toán lồi giải được hiệu quả mà Lecture 02 sẽ giới thiệu.
 
 Nón chuẩn của $\ell_1$ và $\ell_\infty$ là những đa diện, vì các quả cầu $\ell_1$, $\ell_\infty$ có hữu hạn mặt phẳng. Nón bậc hai thì không: Biên tròn của nó cần vô số siêu phẳng tựa. Đó là lý do SOCP thật sự rộng hơn quy hoạch tuyến tính.
 

@@ -13,9 +13,9 @@ Nhà toán học lỗi lạc R. Tyrrell Rockafellar từng đưa ra một đúc 
 Ở Bài 00, ta đã giải một bài toán bình phương tối thiểu đơn giản bằng cách tính đạo hàm rồi cho triệt tiêu về 0. Cách tiếp cận giải tích cổ điển đó vận hành trơn tru khi bài toán không có bất kỳ ràng buộc nào. Thế nhưng trong thế giới thực, các bài toán luôn bị bủa vây bởi các giới hạn: Năng lượng pin có hạn, ngân sách đầu tư cố định, độ trễ mạng viễn thông, hay xác suất dự đoán phải nằm trong đoạn $[0, 1]$. Khi đưa các ràng buộc vào mô hình, hàng loạt câu hỏi hóc búa lập tức xuất hiện:
 - Điểm dừng vừa tìm được có thực sự là nghiệm tốt nhất trên toàn bộ miền khảo sát hay chỉ là một cực tiểu cục bộ trong một thung lũng hẹp?
 - Nếu nghiệm tối ưu bị đẩy ra tận đường biên của miền khả thi thì làm sao kiểm chứng khi gradient không còn bằng 0?
-- Làm thế nào để thuật toán không bị mắc kẹt vô vọng ở những điểm yên ngựa hay cực tiểu địa phương nghèo nàn?
+- Làm thế nào để thuật toán tránh rơi vào trạng thái dừng cục bộ tại các điểm yên ngựa hoặc cực tiểu địa phương kém chất lượng?
 
-Chương này mở rộng phân tích sang một lớp bài toán có cấu trúc toán học đặc biệt: **Bài toán tối ưu lồi (Convex Optimization)**. Với bài toán tối ưu lồi, ta có một bảo đảm toán học vững chắc: **Mọi cực tiểu cục bộ đều là cực tiểu toàn cục**. Để làm chủ công cụ này, chúng ta sẽ khảo sát hai trụ cột gắn kết hữu cơ:
+Chương này mở rộng phân tích sang một họ bài toán có cấu trúc toán học đặc biệt: **Bài toán tối ưu lồi (Convex Optimization)**. Với bài toán tối ưu lồi, ta có một bảo đảm toán học vững chắc: **Mọi cực tiểu cục bộ đều là cực tiểu toàn cục**. Để làm chủ công cụ này, chúng ta sẽ khảo sát hai trụ cột gắn kết hữu cơ:
 1. **Hình học của tập lồi (Convex Sets)**: Không gian dung chứa các quyết định và phương án khả thi.
 2. **Giải tích của hàm lồi (Convex Functions)**: Thước đo đánh giá mục tiêu mất mát hoặc chi phí cần tối thiểu hóa.
 
@@ -24,7 +24,7 @@ Chương này mở rộng phân tích sang một lớp bài toán có cấu trú
 ## 1. Cấu trúc chương học và Hướng dẫn tiếp cận
 
 Nội dung chương được cấu trúc thành 25 chủ đề chuyên sâu, phân bổ mạch lạc trong bốn phần:
-- **Phần I (Chủ đề 1–2)**: Ngôn ngữ chuẩn tắc của bài toán tối ưu hóa và hai lớp bài toán nền tảng.
+- **Phần I (Chủ đề 1–2)**: Ngôn ngữ chuẩn tắc của bài toán tối ưu hóa và hai dạng bài toán nền tảng.
 - **Phần II (Chủ đề 3–16)**: Hình học không gian tập lồi, các khối hình cơ bản, phép toán bảo toàn tính lồi và định lý siêu phẳng phân tách.
 - **Phần III (Chủ đề 17–22)**: Giải tích hàm lồi, bất đẳng thức Jensen, điều kiện vi phân bậc nhất, bậc hai và bộ quy tắc nhận diện hàm lồi.
 - **Phần IV (Chủ đề 23–25)**: Nguyên lý cực tiểu toàn cục, điều kiện tối ưu trên miền ràng buộc và ứng dụng trực tiếp trong các mô hình học máy.
@@ -37,7 +37,7 @@ Mỗi chủ đề đều trang bị phần giải thích bản chất trực qua
 
 ## 2. Ba lộ trình học tập tùy biến
 
-Tùy theo mục tiêu nghiên cứu và nền tảng cá nhân, bạn có thể lựa chọn một trong ba lộ trình tiếp cận sau:
+Tùy theo mục tiêu nghiên cứu và nền tảng cá nhân, người học có thể lựa chọn một trong ba lộ trình tiếp cận sau:
 
 ### Lộ trình 1: Khung xương cốt lõi (Core Track)
 Dành cho lần đọc đầu tiên để nắm bắt nhanh định lý trung tâm và các công cụ thực chiến:
@@ -176,7 +176,7 @@ Xét hàm số $f(x) = \log(e^{x_1} + e^{x_2}) + \frac{1}{2}\|x\|_2^2$ xác đ�
 
 ## Tài liệu tham khảo và Đọc thêm
 
-Dành cho bạn đọc muốn nghiên cứu chuyên sâu về lý thuyết và hình học tối ưu lồi:
+Dành cho người học muốn nghiên cứu chuyên sâu về lý thuyết và hình học tối ưu lồi:
 - **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 1 (Tổng quan), Chương 2 (Tập lồi và nón lồi), Chương 3 (Hàm lồi, phép toán bảo toàn tính lồi, bất đẳng thức Jensen), Chương 4 (Bài toán tối ưu lồi và phân loại) và Chương 7 (Mô hình hóa hình học trong thống kê).
 - **R. Tyrrell Rockafellar**, *Convex Analysis*, Princeton University Press. Tác phẩm kinh điển đặt nền móng giải tích hiện đại cho tập lồi, hàm lồi và vi phân dưới (subgradient).
 

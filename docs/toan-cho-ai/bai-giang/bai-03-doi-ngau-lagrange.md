@@ -138,7 +138,7 @@ $$
 d^* = g(\lambda^*) = 2 - \frac{2^2}{4} = 1.
 $$
 
-Đối chiếu lại với bài toán gốc: Nghiệm tối ưu khả thi rõ ràng là $x^* = 1$, cho giá trị mục tiêu $f_0(x^*) = (1 - 2)^2 = 1$.
+Đối chiếu lại với bài toán gốc: Nghiệm tối ưu khả thi là $x^* = 1$, cho giá trị mục tiêu $f_0(x^*) = (1 - 2)^2 = 1$.
 
 Như vậy, $p^* = d^* = 1$. Khoảng cách đối ngẫu bằng 0, và cận dưới đối ngẫu đã chạm đúng giá trị tối ưu gốc.
 

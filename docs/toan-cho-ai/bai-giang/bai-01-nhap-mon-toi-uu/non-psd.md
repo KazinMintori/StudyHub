@@ -11,7 +11,7 @@ Cho tới giờ, các "điểm" của ta luôn là vector. Trang này đi thêm 
 
 Vì sao phải quan tâm tới hình học của một tập ma trận? Vì trong tối ưu và học máy, rất nhiều đối tượng cần tìm chính là ma trận: Ma trận hiệp phương sai trong thống kê, ma trận kernel trong các phương pháp kernel, ma trận khoảng cách trong học metric. Ràng buộc "ma trận này phải nửa xác định dương" xuất hiện ở khắp nơi, và việc tập nghiệm của nó là một nón lồi là lý do những bài toán đó vẫn giải được. Lecture 02 sẽ gọi chúng là quy hoạch nửa xác định.
 
-Bạn cần nhớ định nghĩa ma trận nửa xác định dương, trị riêng của ma trận đối xứng, và nón lồi từ các chủ đề trước.
+Kiến thức tiên quyết bao gồm định nghĩa ma trận nửa xác định dương, trị riêng của ma trận đối xứng và nón lồi từ các chủ đề trước.
 
 ## 1. Ma trận như một điểm
 
@@ -163,7 +163,7 @@ $\mathbb{S}^{10}$ có số chiều $\tfrac{10 \cdot 11}{2} = 55$, nên có 55 s�
 
 Ma trận đối xứng cỡ $n \times n$ tạo thành không gian vector $\mathbb{S}^n$ có số chiều $\tfrac{n(n+1)}{2}$, và $\mathbb{S}^2$ đồng nhất với $\mathbb{R}^3$. Tập các ma trận PSD là một nón lồi, vì $z^T X z$ tuyến tính theo $X$. Nó cũng là giao của vô số nửa không gian, mỗi hướng $z$ một cái, nên biên của nó cong. Trong $\mathbb{S}^2$, điều kiện PSD là $x \ge 0$, $z \ge 0$, $xz \ge y^2$, và nón có dạng một nón kem với trục là đường chéo $x = z$.
 
-PSD là điều kiện trên dạng toàn phương, không phải trên từng phần tử. Ma trận hiệp phương sai, ma trận Gram và Hessian của hàm lồi đều PSD vì những lý do có thể giải thích bằng một dòng. Sau trang này, bạn có thể kiểm tra một ma trận có PSD không, chỉ ra một hướng bác bỏ khi nó không PSD, và giải thích vì sao tập các tham số làm một ma trận affine trở nên PSD là một tập lồi.
+PSD là điều kiện trên dạng toàn phương, không phải trên từng phần tử. Ma trận hiệp phương sai, ma trận Gram và Hessian của hàm lồi đều PSD vì những lý do có thể giải thích bằng một dòng. Sau bài học này, người học có thể kiểm chứng tính PSD của một ma trận, chỉ ra hướng bác bỏ khi ma trận không PSD, và chứng minh vì sao tập tham số làm ma trận affine trở nên PSD luôn là một tập lồi.
 
 ## Tài liệu tham khảo
 

@@ -29,7 +29,7 @@ Khi đối diện với bài toán này, trực giác thường đưa ra hai ph�
 1. **Phương án đường thẳng ngắn nhất**: Chạy và bơi thẳng một mạch từ vị trí đứng đến chỗ người bị nạn ($AB$). Quãng đường này ngắn nhất về mặt hình học ($\sqrt{60^2 + 70^2} \approx 92.2\text{ m}$), nhưng người cứu hộ phải bơi tới gần $39.5\text{ m}$ dưới nước. Vì tốc độ bơi rất chậm ($1.5\text{ m/s}$), riêng quãng bơi đã tốn tới $26.3\text{ s}$, đưa tổng thời gian lên khoảng $36.88\text{ s}$.
 2. **Phương án giảm thiểu quãng bơi**: Chạy dọc bờ cát đến đúng vị trí đối diện người bị nạn rồi mới bơi vuông góc ra khơi để quãng đường bơi ngắn nhất có thể ($30\text{ m}$). Lộ trình này tốn khoảng $34.42\text{ s}$, nhanh hơn đường thẳng, nhưng vẫn chưa phải là lộ trình nhanh nhất.
 
-Phương án tối ưu thực sự nằm ở một điểm cân bằng tinh tế giữa hai thái cực trên. Để tìm ra nó, ta cần chuyển hóa bài toán thực tế thành ngôn ngữ toán học.
+Phương án tối ưu thực sự đạt được tại điểm cân bằng hài hòa giữa hai xu hướng hình học trên. Để tìm ra nó, ta cần chuyển hóa bài toán thực tế thành ngôn ngữ toán học.
 
 ### Thiết lập mô hình toán học
 Chọn hệ trục tọa độ với trục hoành $Ox$ trùng với đường bờ biển (ranh giới giữa cát và nước), chiều dương hướng từ trái sang phải, đơn vị đo là mét.
@@ -345,7 +345,7 @@ Trong toàn bộ môn học này, khi dùng từ "nghiệm tối ưu" mà không
   <text x="460" y="165" font-size="12" font-weight="700" fill="#d97706">Cực tiểu cục bộ (Bẫy)</text>
 </svg>
 <div style="font-size: 13px; color: var(--vp-c-text-2, #64748b); margin-top: 6px;">
-  <strong>Hình 1.2:</strong> Đồ thị hàm không lồi với hai lòng máng cực tiểu. Thuật toán leo đồi hoặc hạ gradient cục bộ có thể bị mắc kẹt tại cực tiểu cục bộ bên phải.
+  <strong>Hình 1.2:</strong> Đồ thị hàm không lồi với hai lòng máng cực tiểu. Thuật toán leo đồi hoặc hạ gradient cục bộ có thể bị giữ chân và hội tụ nhầm tại cực tiểu cục bộ bên phải.
 </div>
 </div>
 
@@ -420,7 +420,7 @@ Phép lấy logarit biến tích thành tổng và bảo toàn nguyên vẹn v�
 
 ---
 
-## 8. Ba lớp bài toán thực tế điển hình
+## 8. Ba dạng bài toán thực tế điển hình
 
 Bảng dưới đây minh họa cách mô hình hóa ba bài toán kỹ nghệ điển hình dưới cùng một khuôn dạng toán học:
 
@@ -570,7 +570,7 @@ Bài toán có 4 ràng buộc bất đẳng thức và 0 ràng buộc đẳng th
 
 ## Tài liệu đọc thêm và Nghiên cứu chuyên sâu
 
-Dành cho bạn đọc muốn nghiên cứu chuyên sâu về nền tảng giải tích của bài toán tối ưu hóa:
+Dành cho người học muốn nghiên cứu chuyên sâu về nền tảng giải tích của bài toán tối ưu hóa:
 
 - **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press, Chương 1 (Introduction) và Chương 4 (§4.1: Optimization problem formulation).
 - **Jorge Nocedal & Stephen J. Wright**, *Numerical Optimization*, Springer, Chương 1 và 2 về các nguyên lý cơ bản của tối ưu hóa liên tục.

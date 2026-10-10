@@ -9,13 +9,13 @@ description: "Định nghĩa tập lồi qua đoạn thẳng, cách chứng minh
 
 Ở chủ đề về tập affine, ta đã thấy công thức $\theta x_1 + (1 - \theta) x_2$ cho ra cả một đường thẳng khi $\theta$ chạy trên $\mathbb{R}$, và chỉ cho ra đoạn thẳng nối $x_1$, $x_2$ khi $\theta$ bị giới hạn trong $[0, 1]$. Tập affine được định nghĩa bằng đường thẳng. Câu hỏi tự nhiên tiếp theo là: Nếu định nghĩa một loại tập bằng **đoạn thẳng** thì sao?
 
-Câu trả lời là khái niệm trung tâm của cả môn học. Một **tập lồi** là tập chứa trọn đoạn thẳng nối hai điểm bất kỳ của nó. Điều kiện nghe rất hiền lành, nhưng hầu hết mọi điều tốt đẹp của tối ưu lồi, từ chuyện cực tiểu cục bộ là toàn cục cho tới lý thuyết đối ngẫu, đều bắt nguồn từ nó. Trang này giúp bạn cảm được định nghĩa bằng mắt, chứng minh và bác bỏ tính lồi bằng lập luận, rồi mở rộng sang tổ hợp lồi và bao lồi.
+Câu trả lời là khái niệm trung tâm của cả môn học. Một **tập lồi** là tập chứa trọn đoạn thẳng nối hai điểm bất kỳ của nó. Điều kiện nghe rất hiền lành, nhưng hầu hết mọi điều tốt đẹp của tối ưu lồi, từ chuyện cực tiểu cục bộ là toàn cục cho tới lý thuyết đối ngẫu, đều bắt nguồn từ nó. Nội dung này xây dựng trực giác hình học trực quan cho định nghĩa, rèn luyện phương pháp chứng minh và bác bỏ tính lồi, rồi mở rộng sang tổ hợp lồi và bao lồi.
 
 ## 1. Định nghĩa và một cách hình dung
 
 > **Định nghĩa.** Tập $C \subseteq \mathbb{R}^n$ là **lồi** nếu với mọi $x_1, x_2 \in C$ và mọi $\theta$ thỏa $0 \le \theta \le 1$, ta có $\theta x_1 + (1 - \theta) x_2 \in C$.
 
-Ta có một cách hình dung trực quan rất dễ nhớ: Một tập là lồi nếu **mọi điểm trong tập đều nhìn thấy mọi điểm khác** theo một đường thẳng không bị che khuất, trong đó "không bị che khuất" nghĩa là toàn bộ đường nhìn thẳng nối hai điểm phải nằm trọn trong tập. Chẳng hạn, một căn phòng hình chữ nhật là lồi: Đứng ở bất kỳ góc nào ta cũng nhìn thấy mọi góc khác. Trái lại, một căn phòng hình chữ L thì không: Đứng ở cuối một nhánh, bạn không thể nhìn thấy điểm ở cuối nhánh kia vì bức tường góc vuông đã che khuất đường nhìn.
+Ta có một cách hình dung trực quan rất dễ nhớ: Một tập là lồi nếu **mọi điểm trong tập đều nhìn thấy mọi điểm khác** theo một đường thẳng không bị che khuất, trong đó "không bị che khuất" nghĩa là toàn bộ đường nhìn thẳng nối hai điểm phải nằm trọn trong tập. Chẳng hạn, một căn phòng hình chữ nhật là lồi: Đứng ở bất kỳ góc nào ta cũng nhìn thấy mọi góc khác. Trái lại, một căn phòng hình chữ L thì không: Đứng ở cuối một nhánh, người quan sát không thể nhìn thấy điểm ở cuối nhánh còn lại do góc tường vuông đã che khuất tầm nhìn.
 
 So sánh với tập affine, chỉ có miền của $\theta$ thay đổi: Tập affine đòi mọi $\theta \in \mathbb{R}$, còn tập lồi chỉ đòi $\theta \in [0, 1]$. Đòi ít hơn thì dễ thỏa hơn, nên **mọi tập affine đều lồi**, còn chiều ngược lại sai. Một đoạn thẳng, một hình tròn đặc hay một tam giác đặc là lồi nhưng không affine.
 
@@ -25,7 +25,7 @@ Hãy tự kiểm tra định nghĩa với vài hình trong mô phỏng sau. Kéo
 
 ## 2. Bác bỏ thì dễ, chứng minh thì cần lập luận
 
-Định nghĩa có chữ "mọi" ở hai chỗ, và điều này tạo ra một sự bất đối xứng mà bạn đã cảm thấy khi dùng mô phỏng. Muốn chứng tỏ một tập không lồi, chỉ cần **một** cặp điểm và một giá trị $\theta$ làm đoạn nối đi ra ngoài. Muốn chứng tỏ một tập lồi, phải lập luận cho **mọi** cặp điểm và mọi $\theta$, và thử bao nhiêu cặp cụ thể cũng không đủ.
+Định nghĩa chứa lượng từ "với mọi" ở hai vị trí, tạo nên tính bất đối xứng nền tảng: Để bác bỏ tính lồi, ta chỉ cần chỉ ra **duy nhất một** cặp điểm cùng giá trị $\theta \in [0, 1]$ khiến đoạn thẳng nối vượt ra ngoài tập hợp. Ngược lại, để chứng minh tính lồi, bắt buộc phải lập luận tổng quát cho **mọi** cặp điểm và mọi hệ số $\theta$.
 
 **Bác bỏ.** Đường tròn $S = \{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$ không lồi. Lấy $x_1 = (1, 0)$ và $x_2 = (-1, 0)$, cả hai thuộc $S$. Với $\theta = \tfrac12$, ta được trung điểm $(0, 0)$, nhưng $0^2 + 0^2 = 0 \ne 1$, nên trung điểm không thuộc $S$. Một ví dụ khác gần với tối ưu hơn: Tập quyết định nhị phân $D = \{0, 1\}^2$, chẳng hạn "mỗi tính năng của mô hình được bật hoặc tắt", không lồi vì trung điểm $(\tfrac12, \tfrac12)$ của $(0, 0)$ và $(1, 1)$ không thuộc $D$. Các bài toán có biến nguyên hay biến nhị phân khó chính vì miền khả thi của chúng không lồi.
 
@@ -43,7 +43,7 @@ Bước đẳng thức ở giữa dùng $\theta \ge 0$ và $1 - \theta \ge 0$, v
 
 Đường tròn và hình tròn đặc chỉ khác nhau ở dấu "$=$" và "$\le$", nhưng một tập không lồi còn tập kia lồi. Khi đọc một ràng buộc trong bài toán tối ưu, hãy chú ý đến từng dấu như vậy.
 
-::: warning Một cái bẫy tinh tế: Biên chỉ có một phần
+::: warning Lưu ý: Cạm bẫy khi biên chỉ thuộc tập hợp một phần
 Xét một ví dụ điển hình cần lưu tâm: Một hình vuông chứa **một số** điểm biên nhưng không chứa các điểm biên khác thì không lồi. Chẳng hạn lấy hình vuông mở $(0, 1)^2$ rồi thêm vào đúng hai điểm $(0.2, 0)$ và $(0.8, 0)$ trên cạnh dưới. Hai điểm này thuộc tập, nhưng trung điểm $(0.5, 0)$ của chúng nằm trên cạnh dưới mà không được thêm vào, nên không thuộc tập. Ngoài "hình dạng nhìn thấy", tính lồi còn phụ thuộc vào việc biên được giữ lại như thế nào.
 :::
 
@@ -68,7 +68,7 @@ $$
 
 Chẳng hạn khi pha 30% cà phê với 70% sữa, mỗi thành phần được mô tả bằng một vector đặc trưng (độ đắng, độ ngọt, độ béo), vector đặc trưng của thức uống sau khi pha chính là $0.3\,x_{\text{cà phê}} + 0.7\,x_{\text{sữa}}$ (với giả thiết đơn giản hóa rằng các đặc tính pha trộn tuyến tính).
 
-Một tập là lồi **khi và chỉ khi** nó chứa mọi tổ hợp lồi của các điểm thuộc tập đó. Chiều "nếu" là hiển nhiên vì đoạn thẳng nối hai điểm chính là trường hợp cơ sở $k = 2$. Chiều "chỉ nếu" được chứng minh chặt chẽ bằng phương pháp quy nạp:
+Một tập là lồi **khi và chỉ khi** nó chứa mọi tổ hợp lồi của các điểm thuộc tập đó. Chiều suy diễn thuận suy ra trực tiếp từ định nghĩa do đoạn thẳng nối hai điểm chính là trường hợp cơ sở $k = 2$. Chiều đảo được chứng minh chặt chẽ bằng phương pháp quy nạp toán học:
 
 ::: proof Tập lồi chứa mọi tổ hợp lồi của các điểm thuộc tập
 Quy nạp theo $k$. Với $k = 1, 2$, khẳng định đúng theo định nghĩa. Giả sử khẳng định đúng với $k - 1$ điểm, ta xét $y = \theta_1 x_1 + \cdots + \theta_k x_k$ với $\theta_i \ge 0$ và $\sum_{i=1}^k \theta_i = 1$. Nếu $\theta_k = 1$ thì kéo theo mọi $\theta_i$ còn lại đều bằng 0, dẫn đến $y = x_k \in C$. Nếu $\theta_k < 1$, ta viết lại $y$ dưới dạng:
@@ -127,7 +127,7 @@ Cách nhìn này có những hệ quả rất thực tế:
 
 ## 6. Lồi theo trung điểm có đủ không?
 
-Một tập $C$ được gọi là **lồi theo trung điểm** nếu nó chứa trung điểm $\tfrac12(a + b)$ của hai điểm bất kỳ $a, b \in C$. Tập lồi hiển nhiên lồi theo trung điểm. Chiều ngược lại thì sao?
+Một tập $C$ được gọi là **lồi theo trung điểm** nếu nó chứa trung điểm $\tfrac12(a + b)$ của hai điểm bất kỳ $a, b \in C$. Theo định nghĩa, mọi tập lồi đều lồi theo trung điểm. Vậy chiều ngược lại có luôn đúng không?
 
 Không đúng trong trường hợp tổng quát. Tập $\mathbb{Q}^2$ các điểm có tọa độ hữu tỉ chứa trung điểm của hai điểm bất kỳ của nó, nhưng không lồi: Đoạn nối $(0, 0)$ và $(1, 0)$ đi qua $(\tfrac{1}{\sqrt 2}, 0)$, một điểm không có tọa độ hữu tỉ. Tuy nhiên, ta có một định lý quan trọng: **Nếu $C$ là tập đóng và lồi theo trung điểm thì $C$ là tập lồi**. Ý tưởng chứng minh như sau: Lặp lại phép lấy trung điểm nhiều lần cho ta mọi tổ hợp $\theta a + (1-\theta) b$ với $\theta$ có dạng phân số nhị phân $\tfrac{m}{2^k}$. Các số hữu tỉ dạng này trù mật (nằm dày đặc) trong $[0, 1]$, nên mọi $\theta \in [0, 1]$ đều là giới hạn của một dãy $\tfrac{m_j}{2^{k_j}}$. Vì $C$ là tập đóng nên nó chứa giới hạn của mọi dãy hội tụ gồm các điểm của nó, kéo theo $C$ chứa cả $\theta a + (1-\theta) b$.
 
@@ -143,11 +143,11 @@ Giao luôn lồi. Nếu $x_1, x_2$ thuộc cả hai tập, thì đoạn nối ch
 
 </details>
 
-**Câu 2.** Một bạn khẳng định: "Tập $\{x \in \mathbb{R}^2 : x_1 x_2 \ge 1\}$ là lồi, vì nhìn hình thấy nó giống một miền cong lên." Bạn ấy đúng hay sai?
+**Câu 2.** Xét nhận định sau: "Tập $\{x \in \mathbb{R}^2 : x_1 x_2 \ge 1\}$ là lồi, vì biểu diễn hình học cho thấy đây là một miền cong hướng lên." Nhận định này đúng hay sai?
 
 <details><summary>Xem lời giải thích</summary>
 
-Sai, vì tập này gồm hai nhánh: Nhánh với $x_1, x_2 > 0$ và nhánh với $x_1, x_2 < 0$. Điểm $(1, 1)$ và $(-1, -1)$ đều thuộc tập, nhưng trung điểm $(0, 0)$ cho $0 \cdot 0 = 0 < 1$. Nếu chỉ lấy nhánh dương, $\{x \in \mathbb{R}^2_+ : x_1 x_2 \ge 1\}$, thì tập lại lồi. Đây là lời nhắc rằng cảm giác "nhìn hình" phải đi kèm với việc xác định chính xác tập đang xét, kể cả những phần nằm ngoài khung hình bạn vẽ.
+Sai, vì tập này gồm hai nhánh: Nhánh với $x_1, x_2 > 0$ và nhánh với $x_1, x_2 < 0$. Điểm $(1, 1)$ và $(-1, -1)$ đều thuộc tập, nhưng trung điểm $(0, 0)$ cho $0 \cdot 0 = 0 < 1$. Nếu chỉ lấy nhánh dương, $\{x \in \mathbb{R}^2_+ : x_1 x_2 \ge 1\}$, thì tập lại lồi. Đây là bài học sư phạm then chốt: Cảm nhận trực quan qua đồ thị luôn phải đi kèm với việc xác định chính xác miền tọa độ của tập hợp, bao gồm cả những nhánh nằm ngoài khung quan sát.
 
 </details>
 
@@ -159,7 +159,7 @@ $\operatorname{conv}(\operatorname{conv} C) = \operatorname{conv} C$, vì $\oper
 
 </details>
 
-**Câu 4.** Giả sử $x$ là biến ngẫu nhiên nhận giá trị trong đoạn $[0, 1]$. Không cần biết phân phối, bạn nói được gì về $\mathbb{E}\,x$? Còn nếu $x$ nhận giá trị trong tập $\{0, 1\}$ thì $\mathbb{E}\,x$ có nhất thiết thuộc $\{0, 1\}$ không?
+**Câu 4.** Giả sử biến ngẫu nhiên $X$ nhận giá trị trong đoạn $[0, 1]$. Không cần biết dạng phân phối xác suất, ta có thể kết luận gì về kỳ vọng $\mathbb{E}[X]$? Mặt khác, nếu $X$ chỉ nhận giá trị trong tập rời rạc $\{0, 1\}$, kỳ vọng $\mathbb{E}[X]$ có nhất thiết thuộc $\{0, 1\}$ không?
 
 <details><summary>Xem lời giải thích</summary>
 

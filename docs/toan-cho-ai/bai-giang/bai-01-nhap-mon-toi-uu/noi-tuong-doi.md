@@ -11,7 +11,7 @@ Hãy cầm một tờ giấy phẳng và hỏi: Tờ giấy có "phần bên tro
 
 Mâu thuẫn giữa trực giác và định nghĩa ấy không phải chuyện bắt bẻ chữ nghĩa. Trong tối ưu, miền khả thi rất thường "mỏng" như tờ giấy, chẳng hạn khi có ràng buộc đẳng thức $x_1 + x_2 + x_3 = 1$. Nếu chỉ dùng khái niệm điểm trong thông thường, những miền đó không có điểm trong, và mọi định lý nào đòi hỏi "một điểm nằm hẳn bên trong miền" đều không dùng được. Khái niệm thay thế là **nội tương đối**, tức phần trong được đo bên trong bao affine của tập. Ta cũng làm rõ một khái niệm đi kèm là **chiều affine**.
 
-Bạn cần nắm bao affine từ chủ đề trước và biết khái niệm quả cầu $B(x, r) = \{y : \|y - x\| \le r\}$.
+Kiến thức nền tảng bao gồm bao affine và khái niệm quả cầu $B(x, r) = \{y : \|y - x\| \le r\}$.
 
 ## 1. Chiều affine
 
@@ -62,7 +62,7 @@ $$
 và biên tương đối là khung viền $\{x \in \mathbb{R}^3 : \max\{|x_1|, |x_2|\} = 1,\ x_3 = 0\}$. Nói cách khác, nội tương đối là hình vuông bỏ đi bốn cạnh, đúng như cảm nhận ban đầu về "phần bên trong của tờ giấy".
 :::
 
-Bạn có thể kiểm tra từng điểm trong mô phỏng sau. Hình được vẽ bằng phép chiếu xiên nên chỉ mang tính sơ đồ: Đường tròn nét đứt tượng trưng cho quả cầu quanh điểm đang xét, còn hình tròn tô màu là phần giao của quả cầu với mặt phẳng $x_3 = 0$.
+Người học có thể trực tiếp kiểm chứng từng điểm trong mô phỏng dưới đây. Hình vẽ sử dụng phép chiếu xiên để mô tả trực quan: Đường tròn nét đứt tượng trưng cho quả cầu quanh điểm đang xét, còn hình tròn tô màu là phần giao của quả cầu với mặt phẳng $x_3 = 0$.
 
 <RelintLab type="square" />
 
@@ -163,7 +163,7 @@ nên $x$ cũng thỏa với chuẩn Euclid. Ngược lại, nếu $x$ thỏa v�
 
 Chiều affine của một tập là số chiều của bao affine của nó, tức số chiều không gian phẳng cần để chứa tập. Phần trong thông thường phụ thuộc vào không gian bao quanh, nên những tập "mỏng" như tờ giấy trong $\mathbb{R}^3$ có phần trong rỗng dù trực giác thấy chúng có phần bên trong. Nội tương đối sửa điều đó bằng cách chỉ xét các điểm lân cận nằm trong bao affine. Hai khái niệm trùng nhau khi tập có chiều affine bằng số chiều của không gian.
 
-Mọi tập lồi khác rỗng đều có nội tương đối khác rỗng. Nội tương đối là khái niệm được dùng trong điều kiện Slater, trong kết quả về tính liên tục của hàm lồi và trong chứng minh định lý siêu phẳng tựa. Bạn có thể xác định nội tương đối của các tập quen thuộc và giải thích vì sao một điểm của miền khả thi có ràng buộc đẳng thức không bao giờ là điểm trong theo nghĩa thông thường.
+Mọi tập lồi khác rỗng đều có nội tương đối khác rỗng. Nội tương đối là khái niệm được dùng trong điều kiện Slater, trong kết quả về tính liên tục của hàm lồi và trong chứng minh định lý siêu phẳng tựa. Người học có thể xác định nội tương đối của các tập hình học quen thuộc và giải thích tường minh vì sao một điểm khả thi có ràng buộc đẳng thức không bao giờ là điểm trong theo nghĩa thông thường.
 
 ## Tài liệu tham khảo
 

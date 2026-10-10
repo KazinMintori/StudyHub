@@ -7,9 +7,9 @@ title: "Quả cầu và ellipsoid"
 description: "Quả cầu Euclid với hai cách biểu diễn và chứng minh tính lồi. Ellipsoid từ ma trận xác định dương, bán trục theo vector riêng, dạng ảnh affine của quả cầu đơn vị, ellipsoid suy biến, thể tích và liên hệ với phân phối Gauss."
 ---
 
-Quả cầu là tập lồi mà ai cũng hình dung được: Mọi điểm cách tâm không quá một khoảng $r$. Ellipsoid là quả cầu bị kéo dãn theo một số hướng và nén theo những hướng khác. Hai hình này xuất hiện trong tối ưu thường xuyên hơn bạn nghĩ. Ràng buộc "tham số không được lệch quá xa giá trị ban đầu" theo chuẩn Euclid là một quả cầu. Vùng tin cậy của một ước lượng thống kê, đường đồng mức của một hàm bậc hai lồi, và vùng mà phương pháp Newton tin rằng xấp xỉ bậc hai còn đúng thì đều là ellipsoid.
+Quả cầu Euclidean là tập lồi trực quan nhất: Tập hợp mọi điểm cách tâm không vượt quá bán kính $r$. Ellipsoid là hình ảnh biến dạng của quả cầu khi bị kéo dãn hoặc nén theo các phương trực giao. Hai hình học này xuất hiện với tần suất dày đặc trong tối ưu hóa và học máy. Ràng buộc "tham số không được lệch quá xa giá trị ban đầu" theo chuẩn Euclid là một quả cầu. Vùng tin cậy của một ước lượng thống kê, đường đồng mức của một hàm bậc hai lồi, và vùng mà phương pháp Newton tin rằng xấp xỉ bậc hai còn đúng thì đều là ellipsoid.
 
-Ngoài định nghĩa, ellipsoid còn đáng học vì một lý do khác: Đây là nơi đầu tiên ta thấy một **ma trận** mang một **hình dạng hình học** rõ ràng: Các trị riêng của ma trận là bình phương độ dài các bán trục, còn các vector riêng chỉ hướng của chúng. Hiểu được mối liên hệ này, bạn sẽ "nhìn thấy" được ma trận hiệp phương sai, Hessian và ma trận xác định dương ở mọi chương sau. Bạn cần biết trị riêng và vector riêng của ma trận đối xứng, và khái niệm ma trận xác định dương.
+Ngoài định nghĩa, ellipsoid còn đáng học vì một lý do khác: Đây là nơi đầu tiên ta thấy một **ma trận** mang một **hình dạng hình học** rõ ràng: Các trị riêng của ma trận là bình phương độ dài các bán trục, còn các vector riêng chỉ hướng của chúng. Nắm vững mối liên hệ này giúp người học trực quan hóa được bản chất của ma trận hiệp phương sai, ma trận Hessian và ma trận xác định dương trong các chủ đề nâng cao. Kiến thức tiên quyết bao gồm phổ trị riêng - vector riêng của ma trận đối xứng và khái niệm ma trận xác định dương.
 
 ## 1. Quả cầu Euclid
 
@@ -22,7 +22,7 @@ $$
 B(x_c, r) = \{x_c + r u : \|u\|_2 \le 1\}.
 $$
 
-Cách viết này nói rằng muốn tới một điểm của quả cầu, ta xuất phát từ tâm và đi theo một vector $ru$ có độ dài không quá $r$. Hai cách viết mô tả cùng một tập nhưng phục vụ hai việc khác nhau. Cách thứ nhất là một **ràng buộc**: Cho một điểm $x$, nó cho biết cách kiểm tra $x$ có thuộc quả cầu không. Cách thứ hai là một **tham số hóa**: Nó cho biết cách sinh ra mọi điểm của quả cầu từ quả cầu đơn vị. Bạn sẽ gặp lại sự đối ngẫu "kiểm tra hay sinh ra" này với đa diện ở một chủ đề sau.
+Biểu diễn này chỉ ra rằng để chạm tới một điểm bất kỳ của quả cầu, ta xuất phát từ tâm và dịch chuyển theo vector $ru$ có độ dài không vượt quá $r$. Hai cách viết mô tả cùng một tập nhưng phục vụ hai việc khác nhau. Cách thứ nhất là một **ràng buộc**: Cho một điểm $x$, nó cho biết cách kiểm tra $x$ có thuộc quả cầu không. Cách thứ hai là một **tham số hóa**: Nó cho biết cách sinh ra mọi điểm của quả cầu từ quả cầu đơn vị. Sự đối ngẫu giữa hai góc nhìn "kiểm tra ràng buộc hay tham số hóa sinh điểm" sẽ xuất hiện lại trong lý thuyết đa diện ở các chủ đề tiếp theo.
 
 Quả cầu Euclid là tập lồi. Lấy $x_1, x_2 \in B(x_c, r)$ và $0 \le \theta \le 1$. Viết $x_c = \theta x_c + (1 - \theta)x_c$ để tách đúng hai phần:
 
@@ -49,7 +49,7 @@ $$
 y^T \Lambda^{-1} y = \frac{y_1^2}{\lambda_1} + \frac{y_2^2}{\lambda_2} + \cdots + \frac{y_n^2}{\lambda_n} \le 1 .
 $$
 
-Đây là phương trình của một ellipsoid có các trục song song với hệ trục mới, mà bạn đã gặp ở phổ thông dưới dạng $\tfrac{x^2}{a^2} + \tfrac{y^2}{b^2} \le 1$. Đọc ra ngay: **Bán trục thứ $i$ nằm dọc vector riêng $q_i$ và dài $\sqrt{\lambda_i}$**. Trị riêng lớn cho trục dài, trị riêng nhỏ cho trục ngắn. Phép đổi biến $y = Q^T(x - x_c)$ chỉ dời tâm về gốc rồi xoay hệ trục, nên không làm méo hình.
+Đây là phương trình của một ellipsoid có các trục song song với hệ trục mới, đã quen thuộc trong hình học giải tích dưới dạng chuẩn tắc $\tfrac{x^2}{a^2} + \tfrac{y^2}{b^2} \le 1$. Đọc ra ngay: **Bán trục thứ $i$ nằm dọc vector riêng $q_i$ và dài $\sqrt{\lambda_i}$**. Trị riêng lớn cho trục dài, trị riêng nhỏ cho trục ngắn. Phép đổi biến $y = Q^T(x - x_c)$ chỉ dời tâm về gốc rồi xoay hệ trục, nên không làm méo hình.
 
 Hãy dừng lại ở kết luận này một chút, vì nó biến một ma trận thành một hình dạng. Các phần tử của $P$, chẳng hạn $P_{12}$, không có ý nghĩa hình học riêng lẻ nào rõ ràng: Đổi hệ trục là chúng thay đổi hết. Còn các trị riêng và vector riêng thì gắn với chính hình ellipsoid, không phụ thuộc cách ta đặt trục tọa độ.
 
@@ -65,7 +65,7 @@ $$
 nên điểm này nằm đúng trên biên. Điểm $(2, 0)$ cho $x - x_c = (1, 1)$ và giá trị $\tfrac{1}{4} < 1$, nằm bên trong.
 :::
 
-Trong mô phỏng dưới đây, bạn chỉnh trực tiếp hai trị riêng và góc của trục thứ nhất. Các phần tử của $P$ (hiện trong khung kết quả) thay đổi liên tục khi xoay, trong khi hình dạng và độ dài bán trục thì không.
+Trong mô phỏng dưới đây, người học có thể điều chỉnh trực tiếp hai trị riêng và góc quay của trục chính. Các phần tử của ma trận $P$ thay đổi liên tục khi xoay, trong khi hình dạng và độ dài các bán trục được bảo toàn.
 
 <EllipsoidLab />
 
@@ -79,7 +79,7 @@ $$
 
 với $A$ là ma trận vuông khả nghịch. Nó nói rằng ellipsoid là ảnh của quả cầu đơn vị qua ánh xạ affine $u \mapsto x_c + Au$: Lấy quả cầu tròn, biến dạng tuyến tính bằng $A$, rồi dời tâm tới $x_c$.
 
-Hai cách biểu diễn khớp nhau khi $P = AA^T$. Thật vậy, với $x = x_c + Au$,
+Hai cách biểu diễn hoàn toàn tương đương khi $P = AA^T$. Cụ thể, với $x = x_c + Au$,
 
 $$
 \begin{aligned}
@@ -93,7 +93,7 @@ nên điều kiện $\|u\|_2 \le 1$ đúng là điều kiện $(x - x_c)^T P^{-1
 
 Trong mô phỏng, điểm vàng là $Au$ với $u$ chạy trên đường tròn đơn vị nét đứt. Khi $u$ đi một vòng, $Au$ đi đúng một vòng quanh biên ellipse. Đó là cách nhìn "sinh ra", trong khi định nghĩa ở mục 2 là cách nhìn "kiểm tra".
 
-Biểu diễn thứ hai cho ta thêm một điều mà biểu diễn thứ nhất không cho. Nếu $A$ nửa xác định dương nhưng **suy biến**, tập $\{x_c + Au : \|u\|_2 \le 1\}$ vẫn được định nghĩa, chỉ là bị "ép dẹt" theo những hướng $A$ triệt tiêu. Khái niệm này được gọi là **ellipsoid suy biến**, có chiều affine bằng hạng của $A$. Trong mặt phẳng, một ellipsoid suy biến với $A$ hạng 1 là một đoạn thẳng. Ellipsoid suy biến vẫn là tập lồi, nhưng không viết được dưới dạng thứ nhất, vì $P = AA^T$ không khả nghịch. Bạn có thể kéo $\lambda_2$ về 0 trong mô phỏng để thấy điều đó.
+Biểu diễn thứ hai cho ta thêm một điều mà biểu diễn thứ nhất không cho. Nếu $A$ nửa xác định dương nhưng **suy biến**, tập $\{x_c + Au : \|u\|_2 \le 1\}$ vẫn được định nghĩa, chỉ là bị "ép dẹt" theo những hướng $A$ triệt tiêu. Khái niệm này được gọi là **ellipsoid suy biến**, có chiều affine bằng hạng của $A$. Trong mặt phẳng, một ellipsoid suy biến với $A$ hạng 1 là một đoạn thẳng. Ellipsoid suy biến vẫn là một tập lồi, nhưng không thể biểu diễn dưới dạng thứ nhất do ma trận $P = AA^T$ không khả nghịch. Hiện tượng suy biến này có thể quan sát trực tiếp trong mô phỏng khi kéo $\lambda_2$ về 0.
 
 ## 4. Thể tích và định thức
 

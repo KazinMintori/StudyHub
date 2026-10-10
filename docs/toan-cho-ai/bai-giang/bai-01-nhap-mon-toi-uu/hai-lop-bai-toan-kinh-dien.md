@@ -4,7 +4,7 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: hai-lop-bai-toan-kinh-dien
 section: topic
 title: "Bình phương tối thiểu và quy hoạch tuyến tính"
-description: "Hai lớp bài toán giải được một cách đáng tin cậy: Bình phương tối thiểu với hệ phương trình chuẩn và hình học phép chiếu, quy hoạch tuyến tính với hình học đa diện, chứng nhận tối ưu và biến phụ, rồi tối ưu lồi như sự tổng quát hóa của cả hai."
+description: "Hai họ bài toán giải được một cách hoàn toàn tin cậy: Bình phương tối thiểu với hệ phương trình chuẩn và hình học phép chiếu, quy hoạch tuyến tính với hình học đa diện, chứng nhận tối ưu và biến phụ, rồi tối ưu lồi như sự tổng quát hóa của cả hai."
 ---
 
 Ở chủ đề trước, ta đã nắm vững cách thiết lập mô hình bài toán tối ưu. Câu hỏi tiếp theo là: Thiết lập xong rồi thì giải bằng cách nào? Câu trả lời từ thực tiễn tính toán: Bài toán tối ưu tổng quát **khó giải một cách đáng ngạc nhiên**, kể cả khi mọi hàm số mục tiêu và ràng buộc đều trơn như đa thức. Những phương pháp giải tổng quát luôn phải đối mặt với sự đánh đổi: Hoặc thời gian chạy quá lâu, hoặc không thể bảo đảm tìm ra nghiệm tối ưu.
@@ -39,7 +39,7 @@ Công thức $A^T A x = A^T b$ có một ý nghĩa hình học rất đẹp, và
 
 Cực tiểu $\|Ax - b\|_2$ nghĩa là tìm điểm của không gian cột **gần $b$ nhất** theo khoảng cách Euclid. Hình học phổ thông cho ta câu trả lời: Hạ đường vuông góc. Điểm gần nhất là hình chiếu vuông góc của $b$, và phần dư $Ax^\star - b$ vuông góc với cả không gian cột, tức vuông góc với từng cột của $A$. Viết điều kiện vuông góc ấy cho từng cột, ta được đúng $A^T(Ax^\star - b) = 0$. Như vậy hệ phương trình chuẩn không phải một mẹo đại số, nó là điều kiện "phần dư vuông góc với mọi hướng mà mô hình có thể đi".
 
-Từ góc nhìn này còn rút ra một điều tinh tế. Vector dự đoán tốt nhất $Ax^\star$, là hình chiếu của $b$, luôn duy nhất. Nhưng bộ tham số $x^\star$ tạo ra nó chỉ duy nhất khi các cột của $A$ độc lập tuyến tính. Nếu có hai đặc trưng trùng nhau, chẳng hạn nhiệt độ đo bằng độ C và cùng nhiệt độ đó đổi sang độ F, thì có vô số cách chia trọng số giữa chúng mà vẫn cho cùng một dự đoán. Tập các nghiệm khi đó là một tập affine, đúng như chủ đề "Đường thẳng, đoạn thẳng và tập affine" đã mô tả.
+Từ góc nhìn hình học này, ta nhận thấy một đặc trưng bản chất quan trọng: Vector dự đoán tối ưu $Ax^\star$, tức hình chiếu của $b$, luôn duy nhất. Nhưng bộ tham số $x^\star$ tạo ra nó chỉ duy nhất khi các cột của $A$ độc lập tuyến tính. Nếu có hai đặc trưng trùng nhau, chẳng hạn nhiệt độ đo bằng độ C và cùng nhiệt độ đó đổi sang độ F, thì có vô số cách chia trọng số giữa chúng mà vẫn cho cùng một dự đoán. Tập các nghiệm khi đó là một tập affine, đúng như chủ đề "Đường thẳng, đoạn thẳng và tập affine" đã mô tả.
 
 ::: example Khớp một đường thẳng qua ba điểm
 Dữ liệu tự đặt gồm ba cặp $(t_i, y_i) = (0, 1), (1, 2), (2, 4)$. Mô hình $y = at + c$ có hai tham số $x = (a, c)$, nên
@@ -85,7 +85,7 @@ Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b
 
 Mỗi ràng buộc $a_i^T x \le b_i$ cắt không gian làm đôi và giữ lại một nửa. Miền khả thi là giao của các nửa đó, một **đa diện**, trong mặt phẳng là một đa giác lồi. Hàm mục tiêu $c^T x$ có các đường mức $c^T x = \text{hằng số}$ là những đường thẳng song song. Giải LP trong mặt phẳng giống như đẩy một chiếc thước kẻ theo hướng làm giá trị tốt lên, cho tới khi thước chỉ còn chạm đa giác ở mép. Chỗ chạm cuối cùng thường là một đỉnh, và cũng có thể là cả một cạnh nếu thước song song với cạnh ấy.
 
-Mô phỏng dưới đây cho bạn đổi hệ số của mục tiêu $\max\ c_1 x + c_2 y$ trên đa giác $\{x + y \le 4,\ x \le 2,\ x \ge 0,\ y \ge 0\}$. Hãy tìm một cặp hệ số khiến nghiệm không duy nhất.
+Mô phỏng dưới đây cho phép người học thay đổi hệ số của hàm mục tiêu $\max\ c_1 x + c_2 y$ trên đa giác $\{x + y \le 4,\ x \le 2,\ x \ge 0,\ y \ge 0\}$. Hãy xác định một cặp hệ số khiến nghiệm tối ưu không duy nhất.
 
 <MathLab type="lp" />
 
@@ -132,7 +132,7 @@ Thử kéo một điểm thật xa khỏi các điểm còn lại. Đường bì
 
 ## 3. Tối ưu lồi: Điểm chung của hai lớp bài toán
 
-Bây giờ ta có thể nêu lớp bài toán là chủ đề của cả môn học. Một **bài toán tối ưu lồi** có dạng
+Bây giờ ta có thể phát biểu họ bài toán là chủ đề trọng tâm của toàn bộ môn học. Một **bài toán tối ưu lồi** có dạng
 
 $$
 \begin{aligned}
@@ -151,13 +151,13 @@ Hãy so sánh với điều kiện tuyến tính $f_i(\alpha x + \beta y) = \alp
 
 Tối ưu lồi nói chung không có công thức nghiệm đóng, nhưng có những phương pháp rất hiệu quả. Trong thực tế tính toán, các phương pháp điểm trong thường giải xong trong khoảng 10 đến 100 bước lặp, mỗi bước tốn cỡ $\max\{n^3, n^2 m, F\}$ phép tính, với $F$ là chi phí tính đạo hàm bậc nhất và bậc hai của các hàm. Ngày nay, tối ưu lồi tổng quát đã phát triển vượt bậc và trở thành công nghệ cốt lõi trong kỹ nghệ tính toán khoa học hiện đại.
 
-Một triết lý sâu sắc trong tối ưu hiện đại: Nếu bạn đưa được một bài toán thực tế về dạng bài toán tối ưu lồi, thì gần như bạn đã giải quyết xong nó. Cái khó của tối ưu lồi vì vậy không nằm ở khâu giải, mà nằm ở khâu **nhận ra** và **biến đổi** bài toán về dạng lồi. Nhận ra một bài toán bình phương tối thiểu thì dễ, nhận ra một hàm lồi thì khó hơn nhiều, và số mẹo biến đổi cũng nhiều hơn LP. Phần lớn chương này được dành để luyện đúng kỹ năng nhận diện ấy.
+Một triết lý sâu sắc trong tối ưu hiện đại: Khi đưa được một bài toán thực tế về dạng bài toán tối ưu lồi, bài toán đó về cơ bản coi như đã giải quyết xong. Cái khó của tối ưu lồi vì vậy không nằm ở khâu giải, mà nằm ở khâu **nhận ra** và **biến đổi** bài toán về dạng lồi. Nhận ra một bài toán bình phương tối thiểu thì dễ, nhận ra một hàm lồi thì khó hơn nhiều, và số mẹo biến đổi cũng nhiều hơn LP. Phần lớn chương này được dành để luyện đúng kỹ năng nhận diện ấy.
 
 ## 4. Khi bài toán không lồi
 
 Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính mà cũng không biết có lồi hay không được gọi chung là **tối ưu phi tuyến**. Với lớp tổng quát này, khoa học tính toán hiện nay chưa có một phương pháp vạn năng nào giải tối ưu trong thời gian đa thức. Người ta đi theo hai hướng, mỗi hướng một sự đánh đổi.
 
-**Tối ưu cục bộ** từ bỏ mục tiêu tìm nghiệm toàn cục và chỉ tìm một điểm tối ưu cục bộ. Các phương pháp này nhanh, áp dụng được cho bài toán rất lớn và chỉ cần các hàm khả vi. Đổi lại, chúng cần một điểm xuất phát, kết quả có thể phụ thuộc mạnh vào điểm xuất phát đó, chúng không cho biết điểm tìm được còn cách nghiệm toàn cục bao xa, và thường nhạy với các tham số của thuật toán. Người ta thường ví tối ưu cục bộ là sự kết hợp tinh tế giữa nghệ thuật mò mẫm và kỹ thuật tính toán. Huấn luyện mạng nơ-ron sâu thuộc đúng loại này: Hàm mất mát thường không lồi theo các trọng số, và người ta chạy các biến thể của phương pháp gradient từ một điểm khởi tạo ngẫu nhiên.
+**Tối ưu cục bộ** từ bỏ mục tiêu tìm nghiệm toàn cục và chỉ tìm một điểm tối ưu cục bộ. Các phương pháp này nhanh, áp dụng được cho bài toán rất lớn và chỉ cần các hàm khả vi. Đổi lại, chúng cần một điểm xuất phát, kết quả có thể phụ thuộc mạnh vào điểm xuất phát đó, chúng không cho biết điểm tìm được còn cách nghiệm toàn cục bao xa, và thường nhạy với các tham số của thuật toán. Trong thực tiễn kỹ thuật, các phương pháp tối ưu cục bộ thường kết hợp chặt chẽ giữa kinh nghiệm khởi tạo tham số và hiệu năng tính toán gradient. Huấn luyện mạng nơ-ron sâu thuộc đúng dạng bài toán này: Hàm mất mát thường không lồi theo không gian trọng số, và thuật toán vận hành các biến thể của phương pháp hạ gradient từ một điểm khởi tạo ngẫu nhiên.
 
 **Tối ưu toàn cục** tìm nghiệm toàn cục thật sự, nhưng đánh đổi bằng thời gian: Trong trường hợp xấu nhất, chi phí tăng theo hàm mũ của số biến và số ràng buộc. Nó được dùng khi số biến nhỏ và việc chắc chắn có nghiệm tốt nhất đáng giá, chẳng hạn khi cần chứng nhận một hệ thống quan trọng an toàn trong trường hợp xấu nhất.
 
@@ -235,7 +235,7 @@ Vì $(1, 3)$ đạt đúng 13, nó là nghiệm tối ưu. Lần này các ràng
 
 ## Tóm tắt
 
-Bình phương tối thiểu và quy hoạch tuyến tính là hai lớp bài toán giải được một cách đáng tin cậy ngay cả khi rất lớn. Bình phương tối thiểu có công thức nghiệm qua hệ phương trình chuẩn, và hệ đó chính là điều kiện phần dư vuông góc với không gian cột. LP không có công thức nhưng có thuật toán hiệu quả, có bức tranh hình học là đẩy đường mức qua một đa diện, và có những chứng nhận tối ưu kiểm tra được bằng một tổ hợp không âm của các ràng buộc. Nhiều bài toán không trơn như xấp xỉ Chebyshev được đưa về LP nhờ biến phụ.
+Bình phương tối thiểu và quy hoạch tuyến tính là hai họ bài toán giải được một cách hoàn toàn tin cậy ngay cả khi số chiều dữ liệu rất lớn. Bình phương tối thiểu có công thức nghiệm qua hệ phương trình chuẩn, và hệ đó chính là điều kiện phần dư vuông góc với không gian cột. LP không có công thức nhưng có thuật toán hiệu quả, có bức tranh hình học là đẩy đường mức qua một đa diện, và có những chứng nhận tối ưu kiểm tra được bằng một tổ hợp không âm của các ràng buộc. Nhiều bài toán không trơn như xấp xỉ Chebyshev được đưa về LP nhờ biến phụ.
 
 Tối ưu lồi chứa cả hai lớp đó như trường hợp riêng. Cái khó của nó nằm ở khâu nhận diện và biến đổi bài toán, chứ không ở khâu giải. Khi bài toán không lồi, ta phải chọn giữa tối ưu cục bộ nhanh nhưng không có bảo đảm và tối ưu toàn cục có bảo đảm nhưng rất tốn kém.
 

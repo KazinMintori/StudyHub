@@ -10,7 +10,7 @@ description: "Phân biệt hàm mục tiêu thực nghiệm với khả năng kh
 
 Ở Bài 04, chúng ta giả định rằng tại mỗi bước lặp, thuật toán luôn tính toán được gradient chính xác tuyệt đối của toàn bộ hàm mục tiêu. Thế nhưng khi bước vào thế giới học sâu hiện đại, giả định đó lập tức vấp phải bức tường thực tế: Các tập dữ liệu huấn luyện (từ thị giác máy tính đến các mô hình ngôn ngữ lớn) thường chứa hàng triệu, thậm chí hàng nghìn tỷ mẫu dữ liệu. Việc duyệt qua toàn bộ dữ liệu chỉ để thực hiện một bước cập nhật tham số duy nhất là điều hoàn toàn bất khả thi về mặt tài nguyên và thời gian.
 
-Để vượt qua giới hạn này, kỹ nghệ học sâu vận hành dựa trên một triết lý tối ưu hóa xác suất tinh tế: Thay vì tính toán gradient chính xác trên toàn bộ tập dữ liệu (Full-batch), ta ước lượng gradient thông qua một **lô dữ liệu nhỏ (mini-batch)** được lấy mẫu ngẫu nhiên. Bước chuyển dịch này kéo theo hàng loạt câu hỏi cốt lõi:
+Để vượt qua giới hạn này, kỹ nghệ học sâu vận hành dựa trên nguyên lý tối ưu hóa ngẫu nhiên (stochastic optimization) then chốt: Thay vì tính toán gradient chính xác trên toàn bộ tập dữ liệu (Full-batch), ta ước lượng gradient thông qua một **lô dữ liệu nhỏ (mini-batch)** được lấy mẫu ngẫu nhiên. Bước chuyển dịch này kéo theo hàng loạt câu hỏi cốt lõi:
 - Làm sao bảo đảm gradient trên lô nhỏ phản ánh đúng xu hướng suy giảm chung của toàn bộ dữ liệu?
 - Làm thế nào để kiểm soát và chế ngự phương sai nhiễu ngẫu nhiên sinh ra từ việc lấy mẫu?
 - Cơ chế quán tính (Momentum) và kỹ thuật nhìn trước (Nesterov) giúp thuật toán vượt qua các thung lũng hẹp và điểm yên ngựa ra sao?
@@ -333,7 +333,7 @@ Trọng số của tầng này cần được lấy mẫu ngẫu nhiên từ ph�
 
 ## Tài liệu tham khảo và Đọc thêm
 
-Dành cho bạn đọc muốn nghiên cứu chuyên sâu về tối ưu hóa trong học sâu:
+Dành cho người học muốn nghiên cứu chuyên sâu về tối ưu hóa trong học sâu:
 - **Ian Goodfellow, Yoshua Bengio & Aaron Courville**, *Deep Learning*, MIT Press. Đọc kỹ Chương 8 (Tối ưu hóa trong huấn luyện mô hình học sâu: Các thách thức giải tích, thuật toán cơ bản, thuật toán với momentum, và chiến lược khởi tạo).
 - **Xavier Glorot & Yoshua Bengio** (2010), *Understanding the difficulty of training deep feedforward neural networks*, AISTATS. Công trình nền tảng khai sinh phương pháp khởi tạo chuẩn hóa (Glorot / Xavier initialization).
 

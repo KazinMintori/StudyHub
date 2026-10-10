@@ -9,7 +9,7 @@ description: "Huấn luyện như ước lượng hợp lý cực đại và ba 
 
 Chủ đề cuối của chương trả lời câu hỏi mà một người học AI quan tâm nhất: Những bài toán huấn luyện nào là bài toán lồi, và vì sao? Tất cả công cụ đã có sẵn. Ta biết các hàm lồi cơ bản, biết các quy tắc lắp ghép, biết rằng với bài toán lồi, mọi cực tiểu cục bộ là toàn cục. Việc còn lại là học cách **nhìn** một mô hình học máy bằng con mắt của tối ưu lồi.
 
-Điểm mấu chốt nằm ở một câu hỏi tưởng như hiển nhiên: Lồi theo biến nào? Khi huấn luyện, dữ liệu là hằng số, còn tham số mới là biến. Một hàm mất mát có thể lồi theo tham số dù nó phi tuyến đến đâu theo dữ liệu, và ngược lại, một đổi biến khéo có thể biến bài toán không lồi thành lồi. Ta sẽ đi từ các mô hình tuyến tính, qua hồi quy logistic và mạng nơ-ron hai tầng, tới một quy trình nhận diện dùng được hằng ngày.
+Điểm mấu chốt nằm ở một câu hỏi tưởng chừng đơn giản: Lồi theo biến nào? Trong pha huấn luyện, dữ liệu đóng vai trò tham số hằng số, còn trọng số mô hình mới chính là biến quyết định. Một hàm mất mát có thể lồi theo tham số dù nó phi tuyến đến đâu theo dữ liệu, và ngược lại, một đổi biến khéo có thể biến bài toán không lồi thành lồi. Ta sẽ đi từ các mô hình tuyến tính, qua hồi quy logistic và mạng nơ-ron hai tầng, tới một quy trình nhận diện dùng được hằng ngày.
 
 ## 1. Huấn luyện là ước lượng hợp lý cực đại
 
@@ -29,7 +29,7 @@ Nếu $\log p$ là một hàm lõm (tức mật độ $p$ là **log-lõm**), th�
 | Laplace | $e^{-\lvert z\rvert/a}$ | cực tiểu $\|Ax - y\|_1$ |
 | Đều trên $[-a, a]$ | hằng số trên đoạn | tìm $x$ với $\|Ax - y\|_\infty \le a$ |
 
-Ba cách khớp đường thẳng ở chủ đề về hai lớp bài toán kinh điển hóa ra là ba giả thiết khác nhau về nhiễu. Bảng này cũng giải thích vì sao chuẩn $\ell_1$ bền vững với điểm ngoại lai: Mật độ Laplace có đuôi dày hơn mật độ Gauss, tức coi phần dư lớn là chuyện có thể xảy ra, nên ước lượng tương ứng không cố bẻ cong nghiệm để giảm một phần dư lớn. Ngược lại, mọi hàm phạt lồi $\phi$ áp lên phần dư đều có thể đọc như ước lượng hợp lý cực đại với mật độ nhiễu tỉ lệ với $e^{-\phi(z)}$.
+Ba cách khớp đường thẳng ở chủ đề về hai dạng bài toán kinh điển tương ứng với ba giả thiết phân phối khác nhau về nhiễu. Bảng này cũng giải thích vì sao chuẩn $\ell_1$ bền vững với điểm ngoại lai: Mật độ Laplace có đuôi dày hơn mật độ Gauss, tức coi phần dư lớn là chuyện có thể xảy ra, nên ước lượng tương ứng không cố bẻ cong nghiệm để giảm một phần dư lớn. Ngược lại, mọi hàm phạt lồi $\phi$ áp lên phần dư đều có thể đọc như ước lượng hợp lý cực đại với mật độ nhiễu tỉ lệ với $e^{-\phi(z)}$.
 
 ## 2. Hồi quy logistic: Phi tuyến theo dữ liệu, lồi theo tham số
 
@@ -81,7 +81,7 @@ Lập luận này không phụ thuộc vào ví dụ cụ thể. Trong mọi m�
 
 ## 5. Quy trình nhận diện tính lồi
 
-Gom lại, khi gặp một bài toán huấn luyện, bạn có thể đi qua các bước sau.
+Tóm lược lại, quy trình chuẩn mực phân tích tính lồi của một mô hình học máy bao gồm các bước sau:
 
 1. **Xác định biến.** Viết rõ đâu là tham số, đâu là dữ liệu và siêu tham số cố định.
 2. **Xem đầu ra của mô hình phụ thuộc tham số thế nào.** Nếu nó là hàm affine của tham số, như hồi quy tuyến tính, logistic, softmax, máy vector hỗ trợ tuyến tính, thì bài toán có cơ hội lồi. Nếu tham số nhân với nhau, như các tầng của mạng nơ-ron hay hai nhân tử của một phân tích ma trận, hãy chuẩn bị cho một bài toán không lồi và tìm đối xứng để chứng minh nhanh.
@@ -110,11 +110,11 @@ Nói chung là không, nhưng điều đó không quan trọng. Khi huấn luy�
 
 </details>
 
-**Câu 2.** Bỏ hàm ReLU đi, mạng hai tầng chỉ còn là một hàm tuyến tính $f(x) = W_2 W_1 x$, cùng lớp hàm với hồi quy tuyến tính. Hàm mất mát bình phương có lồi theo cặp tham số $(W_1, W_2)$ không?
+**Câu 2.** Khi lược bỏ hàm kích hoạt phi tuyến ReLU, mạng nơ-ron hai tầng trở thành một hàm tuyến tính $f(x) = W_2 W_1 x$, cùng họ hàm biểu diễn với hồi quy tuyến tính. Hàm mất mát bình phương khi đó có lồi theo cặp tham số $(W_1, W_2)$ không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Không, và lập luận hoán vị vẫn dùng được. Lấy đầu vào hai chiều, hai nơ-ron ẩn, và dữ liệu gồm hai điểm $e_1 = (1, 0)$ với nhãn 1, $e_2 = (0, 1)$ với nhãn 2, tức hàm cần học là $x_1 + 2x_2$. Tham số $W_1 = I$, $W_2 = (1, 2)$ cho tích $W_2 W_1 = (1, 2)$, khớp hoàn hảo. Đổi chỗ hai nơ-ron ẩn được $W_1' = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, $W_2' = (2, 1)$, có cùng tích $(1, 2)$, nên cũng khớp hoàn hảo. Trung điểm có $W_1$ với mọi phần tử bằng $0.5$ và $W_2 = (1.5, 1.5)$, cho tích $(1.5, 1.5)$, dự đoán $1.5$ ở cả hai điểm, và mất mát trung bình $0.25 > 0$. Điều thú vị là nếu lấy biến là tích $W = W_2 W_1$, bài toán là bình phương tối thiểu theo $W$, hoàn toàn lồi. Tính không lồi ở đây không đến từ lớp hàm, mà đến từ **cách đặt tham số**, đúng tinh thần của câu hỏi "lồi theo biến nào" ở mục 4.
+Không, và lập luận hoán vị vẫn dùng được. Lấy đầu vào hai chiều, hai nơ-ron ẩn, và dữ liệu gồm hai điểm $e_1 = (1, 0)$ với nhãn 1, $e_2 = (0, 1)$ với nhãn 2, tức hàm cần học là $x_1 + 2x_2$. Tham số $W_1 = I$, $W_2 = (1, 2)$ cho tích $W_2 W_1 = (1, 2)$, khớp hoàn hảo. Đổi chỗ hai nơ-ron ẩn được $W_1' = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, $W_2' = (2, 1)$, có cùng tích $(1, 2)$, nên cũng khớp hoàn hảo. Trung điểm có $W_1$ với mọi phần tử bằng $0.5$ và $W_2 = (1.5, 1.5)$, cho tích $(1.5, 1.5)$, dự đoán $1.5$ ở cả hai điểm, và mất mát trung bình $0.25 > 0$. Điều thú vị là nếu lấy biến là tích $W = W_2 W_1$, bài toán là bình phương tối thiểu theo $W$, hoàn toàn lồi. Tính không lồi ở đây không xuất phát từ họ hàm biểu diễn, mà phát sinh trực tiếp từ **cách đặt tham số hóa**, phản ánh đúng bản chất của câu hỏi "lồi theo biến nào" ở Mục 4.
 
 </details>
 

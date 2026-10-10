@@ -17,7 +17,7 @@ Bài giảng mở đầu này hệ thống hóa các trụ cột toán học và
 4. **Đại số tuyến tính số (Numerical Linear Algebra)**: Cấu trúc tính toán thực tế, phân tích Cholesky, khai thác ma trận thưa và ngân sách độ phức tạp tính toán (flops).
 5. **Mô hình xác suất và Ước lượng hợp lý cực đại (MLE)**: Cội nguồn lý thuyết giải thích vì sao tiêu chuẩn sai số bình phương tối thiểu xuất hiện tự nhiên từ giả thiết nhiễu Gauss.
 
-Toàn bộ công thức và biến đổi giải tích sẽ được gắn kết chặt chẽ với các ví dụ số học tường minh, giúp bạn tự tay kiểm chứng từng bước biến đổi đại số mà không bị phân tâm bởi quy mô dữ liệu.
+Toàn bộ công thức và biến đổi giải tích sẽ được gắn kết chặt chẽ với các ví dụ số học tường minh, giúp người học tự tay kiểm chứng từng bước biến đổi đại số mà không bị phân tâm bởi quy mô dữ liệu.
 
 ---
 

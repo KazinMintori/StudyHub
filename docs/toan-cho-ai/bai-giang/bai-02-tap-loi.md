@@ -18,7 +18,7 @@ $$
 \text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}.
 $$
 
-Mỗi lớp bài toán kế thừa và mở rộng năng lực biểu diễn hình học của lớp bài toán trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
+Mỗi dạng bài toán kế thừa và mở rộng năng lực biểu diễn hình học của dạng bài toán đứng trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
 
 ---
 
@@ -39,7 +39,7 @@ Chương học gồm 12 chủ đề chuyên sâu, phân chia theo sáu nhóm nă
 ## 2. Ba lộ trình học tập tùy biến
 
 ### Lộ trình 1: Khung xương cốt lõi (Core Track)
-Dành cho lần đọc đầu tiên để nắm vững các lớp bài toán lồi chuẩn tắc:
+Lộ trình cơ bản nhằm nắm vững các dạng bài toán lồi chuẩn tắc:
 - Chủ đề 1. [Bài toán tương đương và các phép biến đổi cơ bản](./bai-02-tap-loi/bai-toan-tuong-duong.md)
 - Chủ đề 2. [Khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến](./bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.md)
 - Chủ đề 4. [Quy hoạch tuyến tính: Các dạng viết và hình học của nghiệm](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md)
@@ -57,7 +57,7 @@ Dành cho người muốn làm chủ các kỹ thuật đưa bài toán phức t
 - Chủ đề 11. [Phần bù Schur và các bài toán về trị riêng ma trận](./bai-02-tap-loi/phan-bu-schur-va-bai-toan-tri-rieng.md)
 
 ### Lộ trình 3: Trọng tâm Ứng dụng Trí tuệ nhân tạo (Machine Learning Track)
-Khám phá sự xuất hiện tự nhiên của các lớp bài toán lồi trong các mô hình AI:
+Khám phá sự xuất hiện tự nhiên của các họ bài toán lồi trong các mô hình AI:
 - [Đổi biến qua hàm sigmoid](./bai-02-tap-loi/bai-toan-tuong-duong.md) cùng [Hệ số chặn (bias) như bài toán tối ưu từng phần](./bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.md)
 - [Phân lớp tuyến tính bằng LP](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md) cùng [Cận xác định cho phân phối xác suất qua moment](./bai-02-tap-loi/mo-hinh-lp.md)
 - [Học máy bền vững trước nhiễu dữ liệu qua SOCP](./bai-02-tap-loi/quy-hoach-non-bac-hai.md) cùng [Ước lượng ma trận tương quan qua SDP](./bai-02-tap-loi/bai-toan-dang-non-va-sdp.md)
@@ -67,7 +67,7 @@ Khám phá sự xuất hiện tự nhiên của các lớp bài toán lồi tron
 
 ## 3. Bức tranh tổng thể
 
-Sơ đồ sau mô tả phả hệ bao hàm giữa các lớp bài toán và những phép biến đổi tương đương:
+Sơ đồ sau mô tả phả hệ bao hàm giữa các họ bài toán tối ưu và những phép biến đổi tương đương:
 
 ```mermaid
 flowchart TD
@@ -94,7 +94,7 @@ flowchart TD
 ## 4. Bài tập tổng hợp
 
 ::: exercise 1. Nhận diện vị trí bài toán trong phả hệ tối ưu
-Với mỗi bài toán sau, hãy xác định lớp bài toán hẹp nhất chứa nó (trong số LP, QP, QCQP, SOCP, GP, SDP), hoặc chỉ ra bài toán phi lồi ở dạng hiện tại:
+Với mỗi bài toán sau, hãy xác định dạng bài toán hẹp nhất chứa nó (trong số LP, QP, QCQP, SOCP, GP, SDP), hoặc chỉ ra bài toán phi lồi ở dạng hiện tại:
 1. $\min_x \|Ax - b\|_1 + \|x\|_\infty$.
 2. $\min_x \|Ax - b\|_2$ với điều kiện $x \succeq 0$.
 3. $\max_x x_1 x_2 x_3$ với điều kiện $x_1 + 2x_2 + 3x_3 \le 6$ và $x \succ 0$.
@@ -159,7 +159,7 @@ Xét hàm mất mát ở Bài 00: $f(w) = 7w^2 - 11w + \frac{9}{2}$. Giả sử 
 
 ## Tóm tắt cốt lõi
 
-1. **Phả hệ bài toán lồi**: Các lớp bài toán $\text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}$ tạo nên bậc thang biểu diễn hình học từ đa diện phẳng đến nón ma trận nửa xác định dương.
+1. **Phả hệ bài toán lồi**: Các họ bài toán $\text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}$ tạo nên bậc thang biểu diễn hình học từ đa diện phẳng đến nón ma trận nửa xác định dương.
 2. **Nghệ thuật cải dạng**: Kỹ thuật biến phụ epigraph, đổi biến Charnes-Cooper cho hàm phân tuyến tính, và phép biến đổi logarit cho quy hoạch hình học giúp chuyển hóa nhiều bài toán tưởng như phi lồi về dạng lồi chuẩn tắc.
 3. **Phần bù Schur**: Cầu nối toán học biến các ràng buộc ma trận phi tuyến thành bất đẳng thức ma trận tuyến tính (LMI) trong SDP.
 4. **Tối ưu đa mục tiêu**: Khi các tiêu chí tối ưu xung đột, nghiệm tối ưu là tập hợp các điểm cân bằng Pareto. Phương pháp vô hướng hóa giúp quét toàn bộ đường biên Pareto bằng cách giải một họ bài toán lồi đơn mục tiêu.
@@ -168,7 +168,7 @@ Xét hàm mất mát ở Bài 00: $f(w) = 7w^2 - 11w + \frac{9}{2}$. Giả sử 
 
 ## Tài liệu tham khảo và Đọc thêm
 
-Dành cho bạn đọc muốn nghiên cứu chuyên sâu về các lớp bài toán tối ưu lồi:
+Dành cho người học muốn nghiên cứu chuyên sâu về các dạng bài toán tối ưu lồi:
 - **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 4 (Các bài toán tối ưu lồi chuyên biệt: LP, QP, QCQP, SOCP, SDP, GP) và Phụ lục A.5.5 về Phần bù Schur.
 - **Dimitris Bertsimas & John N. Tsitsiklis**, *Introduction to Linear Optimization*, Athena Scientific. Tài liệu kinh điển về hình học đa diện và thuật toán Simplex cho quy hoạch tuyến tính.
 

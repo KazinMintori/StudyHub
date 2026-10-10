@@ -153,7 +153,7 @@ Không. Phần tử dương không có nghĩa là ma trận nửa xác định d
 
 </details>
 
-**Câu 2.** Một bạn kiểm tra ma trận $2 \times 2$ đối xứng $\begin{bmatrix} a & b \\ b & c \end{bmatrix}$ bằng hai điều kiện $a \ge 0$ và $ac - b^2 \ge 0$, rồi kết luận nửa xác định dương. Cách kiểm tra này có lỗ hổng ở đâu?
+**Câu 2.** Xét quy trình kiểm tra ma trận đối xứng $2 \times 2$ dạng $\begin{bmatrix} a & b \\ b & c \end{bmatrix}$ bằng hai điều kiện $a \ge 0$ và $ac - b^2 \ge 0$, rồi kết luận ma trận nửa xác định dương. Cách kiểm tra này tồn tại lỗ hổng nào?
 
 <details><summary>Xem lời giải thích</summary>
 

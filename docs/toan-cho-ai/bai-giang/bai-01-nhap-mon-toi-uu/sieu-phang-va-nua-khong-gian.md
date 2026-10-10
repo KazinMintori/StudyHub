@@ -9,7 +9,7 @@ description: "Siêu phẳng như tập nghiệm của một phương trình tuy�
 
 Một phương trình tuyến tính duy nhất, chẳng hạn $3x_1 + 4x_2 = 10$, có thể được đọc theo hai cách. Người làm đại số thấy một ràng buộc giữa hai ẩn và đi tìm nghiệm. Người làm hình học thấy một đường thẳng trong mặt phẳng. Trong $\mathbb{R}^3$, phương trình $3x_1 + 4x_2 + x_3 = 10$ là một mặt phẳng, và trong $\mathbb{R}^n$ nó là một **siêu phẳng**: Một "mặt phẳng" có số chiều $n - 1$, mỏng hơn không gian chứa nó đúng một chiều.
 
-Siêu phẳng và nửa không gian là những viên gạch nhỏ nhất của hình học lồi. Đa diện được ghép từ nửa không gian, tập lồi đóng bất kỳ là giao của các nửa không gian chứa nó, và định lý siêu phẳng phân tách ở cuối phần hình học nói rằng hai tập lồi rời nhau luôn ngăn được bằng một siêu phẳng. Trang này giúp bạn đọc được một siêu phẳng chỉ bằng cách nhìn vào phương trình của nó: Biết nó vuông góc với hướng nào, nằm cách gốc bao xa, và một điểm cho trước ở phía nào.
+Siêu phẳng và nửa không gian là những viên gạch nhỏ nhất của hình học lồi. Đa diện được ghép từ nửa không gian, tập lồi đóng bất kỳ là giao của các nửa không gian chứa nó, và định lý siêu phẳng phân tách ở cuối phần hình học nói rằng hai tập lồi rời nhau luôn ngăn được bằng một siêu phẳng. Nội dung này giúp người học giải mã toàn diện các đặc trưng hình học của một siêu phẳng trực tiếp từ phương trình đại số: Xác định hướng vuông góc, khoảng cách tới gốc tọa độ và vị trí tương đối của một điểm bất kỳ.
 
 ## 1. Định nghĩa và cách đọc thứ nhất
 
@@ -19,7 +19,7 @@ Về mặt giải tích, siêu phẳng là tập nghiệm của một phương t
 
 Về mặt hình học, ta có cách diễn giải trực quan thứ nhất: Siêu phẳng là **tập các điểm có cùng tích vô hướng $b$ với vector $a$**. Để thấy cách diễn giải này nói lên điều gì, hãy nhớ rằng $\tfrac{a^T x}{\|a\|_2}$ là độ dài có dấu của hình chiếu của $x$ lên đường thẳng theo hướng $a$. Vì thế phương trình $a^T x = b$ có nghĩa là "hình chiếu của $x$ lên trục theo hướng $a$ luôn ở cùng một vị trí $\tfrac{b}{\|a\|_2}$". Tất cả những điểm có cùng hình chiếu như vậy tạo thành một siêu phẳng **vuông góc với $a$**, đi qua điểm nằm trên trục đó cách gốc một khoảng có dấu bằng $\tfrac{b}{\|a\|_2}$.
 
-Vector $a$ được gọi là **vector pháp tuyến** của siêu phẳng, còn hằng số $b$ quyết định độ lệch của siêu phẳng so với gốc. Hai cách thay đổi phương trình cho hai hiệu ứng khác nhau mà bạn nên phân biệt. Nhân cả $a$ và $b$ với cùng một số khác 0 thì siêu phẳng **không đổi**, vì phương trình mới tương đương phương trình cũ. Còn nếu chỉ thay $b$ mà giữ $a$, siêu phẳng **tịnh tiến song song** theo hướng $a$.
+Vector $a$ được gọi là **vector pháp tuyến** của siêu phẳng, còn hằng số $b$ quyết định độ lệch của siêu phẳng so với gốc. Hai cách biến đổi phương trình mang lại hai hiệu ứng hình học khác biệt cần được phân biệt rạch ròi: Nhân cả $a$ và $b$ với cùng một số khác 0 thì siêu phẳng **không đổi** do phương trình mới tương đương; còn nếu chỉ thay đổi $b$ và giữ nguyên $a$, siêu phẳng sẽ **tịnh tiến song song** theo hướng pháp tuyến $a$.
 
 ::: example Đọc một siêu phẳng trong mặt phẳng
 Xét $3x_1 + 4x_2 = 10$, tức $a = (3, 4)$ và $b = 10$. Vì $\|a\|_2 = 5$, đường thẳng vuông góc với $(3, 4)$ và cách gốc $\tfrac{10}{5} = 2$. Điểm của đường thẳng gần gốc nhất là
@@ -95,7 +95,7 @@ Chiều "nếu" là một phép nhân. Nếu $a^T x \le b$ thì $\tilde a^T x = 
 
 Chiều "chỉ nếu" thú vị hơn, vì nó cho thấy khi nào một bất đẳng thức tuyến tính là hệ quả của một bất đẳng thức khác. Giả sử có quan hệ chứa. Nếu $\tilde a$ không cùng phương với $a$, ta tìm được một hướng $d$ với $a^T d = 0$ nhưng $\tilde a^T d \ne 0$ (chẳng hạn hình chiếu của $\tilde a$ lên $a^{\perp}$, vốn khác 0). Đi từ một điểm của nửa không gian thứ nhất theo hướng $\pm d$, ta ở lại nửa không gian đó mãi mãi vì $a^T x$ không đổi, trong khi $\tilde a^T x$ tăng không giới hạn theo một trong hai chiều. Như vậy có điểm thuộc nửa không gian thứ nhất mà không thuộc nửa không gian thứ hai, mâu thuẫn. Do đó $\tilde a = \lambda a$. Nếu $\lambda < 0$, đi theo hướng $-a$ thì $a^T x$ giảm nên ta ở lại nửa không gian thứ nhất, nhưng $\tilde a^T x = \lambda a^T x$ tăng vô hạn, lại mâu thuẫn. Vậy $\lambda > 0$. Cuối cùng, giá trị lớn nhất của $\tilde a^T x = \lambda a^T x$ trên nửa không gian thứ nhất là $\lambda b$, đạt trên biên, nên quan hệ chứa buộc $\lambda b \le \tilde b$.
 
-Kết luận đáng nhớ là: Một bất đẳng thức tuyến tính chỉ suy ra được một bất đẳng thức tuyến tính khác khi bất đẳng thức sau là **bội dương** của bất đẳng thức trước, có thể nới thêm vế phải. Ở chủ đề về hai lớp bài toán kinh điển, ta đã chứng nhận nghiệm một LP bằng tổ hợp không âm của nhiều ràng buộc. Mệnh đề này là trường hợp một ràng buộc của cùng ý tưởng, và bổ đề Farkas ở chủ đề về siêu phẳng phân tách sẽ là trường hợp nhiều ràng buộc tổng quát.
+Kết luận đáng nhớ là: Một bất đẳng thức tuyến tính chỉ suy ra được một bất đẳng thức tuyến tính khác khi bất đẳng thức sau là **bội dương** của bất đẳng thức trước, có thể nới thêm vế phải. Ở chủ đề về hai dạng bài toán kinh điển, ta đã chứng nhận nghiệm một LP bằng tổ hợp không âm của nhiều ràng buộc. Mệnh đề này là trường hợp một ràng buộc của cùng ý tưởng, và bổ đề Farkas ở chủ đề về siêu phẳng phân tách sẽ là trường hợp nhiều ràng buộc tổng quát.
 
 ## 6. Nửa không gian Voronoi
 
@@ -124,7 +124,7 @@ Siêu phẳng cũng xuất hiện ngoài không gian các vector tọa độ. B�
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Bất đẳng thức thứ hai là bất đẳng thức thứ nhất nhân với $-2$, và nhân với số âm làm đảo chiều. Thật vậy, $-4x_1 + 2x_2 \le -6$ tương đương $2x_1 - x_2 \ge 3$. Hai nửa mặt phẳng nằm về hai phía của cùng một đường biên, và giao của chúng chính là đường thẳng. Câu hỏi minh họa mệnh đề ở mục 5: Nửa không gian chỉ không đổi khi nhân với hệ số **dương**.
+Không. Bất đẳng thức thứ hai thu được bằng cách nhân bất đẳng thức thứ nhất với hệ số âm $-2$, do đó chiều bất đẳng thức bị đảo ngược: Biến đổi tương đương chỉ ra $-4x_1 + 2x_2 \le -6 \iff 2x_1 - x_2 \ge 3$. Hai nửa mặt phẳng nằm về hai phía của cùng một đường biên, và giao của chúng chính là đường thẳng. Câu hỏi minh họa mệnh đề ở mục 5: Nửa không gian chỉ không đổi khi nhân với hệ số **dương**.
 
 </details>
 

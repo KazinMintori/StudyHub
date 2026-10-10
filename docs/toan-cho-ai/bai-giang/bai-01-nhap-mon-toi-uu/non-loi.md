@@ -15,7 +15,7 @@ Hai chủ đề trước đã cho ta hai cách thu hẹp tổ hợp tuyến tín
 
 Nói bằng hình học, cứ có một điểm $x$ thuộc nón thì cả tia xuất phát từ gốc tọa độ đi qua $x$ cũng thuộc nón. Một nón khác rỗng luôn chứa gốc tọa độ, vì có thể chọn $\theta = 0$. Hình ảnh quen thuộc nhất là chùm sáng phát ra từ một ngọn đèn đặt tại gốc: Mỗi tia sáng là một tia của nón, và vùng được chiếu sáng là toàn bộ nón.
 
-Định nghĩa nón không nhắc gì đến tính lồi, và thật vậy, có những nón không lồi. Hợp của hai trục tọa độ trong $\mathbb{R}^2$ là một nón, vì phóng to một điểm trên trục vẫn được một điểm trên trục, nhưng nó không lồi. Vì vậy ta cần một tên riêng cho những nón vừa là nón vừa lồi.
+Định nghĩa nón không đòi hỏi tính lồi, và trong thực tế tồn tại nhiều nón không lồi. Hợp của hai trục tọa độ trong $\mathbb{R}^2$ là một nón, vì phóng to một điểm trên trục vẫn được một điểm trên trục, nhưng nó không lồi. Vì vậy ta cần một tên riêng cho những nón vừa là nón vừa lồi.
 
 > **Định nghĩa.** Tập $C$ là **nón lồi** nếu nó vừa lồi vừa là nón. Điều này tương đương với: Với mọi $x_1, x_2 \in C$ và mọi $\theta_1, \theta_2 \ge 0$, ta có $\theta_1 x_1 + \theta_2 x_2 \in C$.
 
@@ -53,7 +53,7 @@ Mô phỏng ở trên có một ô để thêm vector thứ ba. Khi ba vector đ
 
 Mỗi dòng dưới chứa nhiều ràng buộc hơn dòng trên, ngoại trừ hai dòng giữa không so sánh được với nhau. Từ bảng này đọc ra các quan hệ bao hàm giữa các loại tập: Mọi không gian con vừa là tập affine vừa là nón lồi, mọi tập affine là tập lồi, mọi nón lồi là tập lồi. Chiều ngược lại đều sai: Một đoạn thẳng là tập lồi nhưng không affine và không là nón, một tia xuất phát từ gốc là nón lồi nhưng không affine.
 
-Trước mỗi lập luận trong chương, chỉ cần tự hỏi hai câu: Các hệ số có được âm không, và tổng của chúng có bắt buộc bằng 1 không. Hai câu trả lời đó cho biết bạn đang ở dòng nào của bảng.
+Trước mỗi lập luận trong chương, chỉ cần tự hỏi hai câu: Các hệ số có được âm không, và tổng của chúng có bắt buộc bằng 1 không. Hai câu trả lời đó xác định chính xác cấu trúc hình học tương ứng trong bảng.
 
 ## 4. Những tập cơ bản: Affine, lồi hay nón?
 

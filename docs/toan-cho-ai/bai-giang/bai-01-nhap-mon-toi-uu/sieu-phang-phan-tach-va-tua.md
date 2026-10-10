@@ -7,7 +7,7 @@ title: "Siêu phẳng phân tách và siêu phẳng tựa"
 description: "Định lý siêu phẳng phân tách và chứng minh bằng cặp điểm gần nhất, phân tách nghiêm ngặt, tập lồi đóng là giao các nửa không gian chứa nó, định lý lựa chọn cho hệ bất đẳng thức chặt, siêu phẳng tựa, và ý nghĩa với phân loại tuyến tính."
 ---
 
-Hãy đặt hai hòn đá lồi, chẳng hạn hai viên sỏi tròn, lên mặt bàn sao cho chúng không chạm nhau. Bạn luôn có thể luồn một tờ giấy phẳng vào giữa để ngăn chúng ra. Nhưng nếu một hòn đá có hình lưỡi liềm ôm lấy hòn kia, thì không tờ giấy phẳng nào làm được việc đó, dù hai hòn đá vẫn không chạm nhau. Điều khác biệt giữa hai tình huống chính là tính lồi.
+Xét trực giác hình học: Khi đặt hai vật thể lồi không giao nhau trên một mặt phẳng, ta luôn có thể luồn một tấm phẳng vào giữa để ngăn cách tuyệt đối hai vật thể. Trái lại, nếu một vật thể có hình lưỡi liềm khuyết lõm ôm lấy vật thể kia, thì không một mặt phẳng nào có thể phân tách chúng dù hai vật thể không chạm nhau. Điểm mấu chốt tạo nên sự khác biệt này chính là tính lồi.
 
 Định lý siêu phẳng phân tách biến trực giác ấy thành một mệnh đề toán học chính xác, và là một trong những cột trụ giải tích của toàn bộ lý thuyết tối ưu hóa. Lý thuyết đối ngẫu Lagrange, hệ điều kiện tối ưu Karush-Kuhn-Tucker (KKT), bổ đề Farkas, các định lý về giải pháp thay thế, và bài toán phân loại tuyến tính trong học máy đều bắt nguồn trực tiếp từ định lý này. Ta sẽ phát biểu định lý, chứng minh trong trường hợp hình học mẫu mực nhất, rồi mở rộng sang các hệ quả nền tảng.
 

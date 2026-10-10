@@ -7,9 +7,9 @@ title: "Cực tiểu cục bộ và cực tiểu toàn cục"
 description: "Định nghĩa bài toán tối ưu lồi ở dạng chuẩn và vì sao ràng buộc đẳng thức phải affine, tập nghiệm và tập ε-tối ưu lồi, định lý cực tiểu cục bộ là cực tiểu toàn cục cùng lời chứng minh hình học, vai trò riêng của tính lồi của hàm và của miền, bài toán tựa lồi và ý nghĩa đối với thuật toán."
 ---
 
-Đến đây, mọi mảnh ghép đã đủ: Tập lồi ở phần II, hàm lồi ở phần III. Phần cuối của chương ráp chúng lại thành **bài toán tối ưu lồi**, và trả lời câu hỏi đã đặt ra ngay từ chủ đề đầu tiên: Vì sao người ta dành cả một môn học cho lớp bài toán này?
+Đến đây, mọi mảnh ghép đã đủ: Tập lồi ở phần II, hàm lồi ở phần III. Phần cuối của chương ráp chúng lại thành **bài toán tối ưu lồi**, và trả lời câu hỏi đã đặt ra ngay từ chủ đề đầu tiên: Vì sao người ta dành trọn vẹn một môn học cho họ bài toán tối ưu này?
 
-Câu trả lời ngắn gọn nằm ở một định lý chỉ dài vài dòng: Trong một bài toán tối ưu lồi, mọi điểm cực tiểu cục bộ đều là cực tiểu toàn cục. Một thuật toán chỉ nhìn được xung quanh điểm đang đứng, và với bài toán lồi, chừng ấy là đủ. Ta sẽ phát biểu chính xác bài toán tối ưu lồi, chứng minh định lý, rồi xem từng giả thiết của nó đóng vai trò gì.
+Câu trả lời ngắn gọn nằm ở một định lý chỉ dài vài dòng: Trong một bài toán tối ưu lồi, mọi điểm cực tiểu cục bộ đều là cực tiểu toàn cục. Một thuật toán gradient hay tìm kiếm cục bộ chỉ khai thác thông tin vi phân trong một lân cận hẹp của điểm hiện tại; và đối với bài toán tối ưu lồi, thông tin cục bộ ấy là hoàn toàn đủ để dẫn hướng tới nghiệm tối ưu toàn cục. Ta sẽ phát biểu chính xác bài toán tối ưu lồi, chứng minh định lý, rồi xem từng giả thiết của nó đóng vai trò gì.
 
 ## 1. Bài toán tối ưu lồi ở dạng chuẩn
 
@@ -37,7 +37,7 @@ Ba yêu cầu này bảo đảm miền khả thi là một tập lồi. Miền k
 
 Gọi $p^\star$ là giá trị tối ưu. Tập nghiệm tối ưu là $\{x \text{ khả thi} : f_0(x) \le p^\star\}$, giao của miền khả thi với một tập mức dưới của $f_0$. Cả hai đều lồi, nên **tập nghiệm tối ưu của một bài toán lồi là tập lồi**. Lập luận y hệt cho tập các điểm $\varepsilon$-tối ưu $\{x \text{ khả thi} : f_0(x) \le p^\star + \varepsilon\}$.
 
-Hệ quả cụ thể: Một bài toán lồi có thể không có nghiệm, có đúng một nghiệm, hoặc có vô số nghiệm, nhưng **không bao giờ có đúng hai nghiệm**, hay bất kỳ số hữu hạn nào lớn hơn 1. Nếu có hai nghiệm thì cả đoạn thẳng nối chúng đều là nghiệm. Bạn đã gặp điều này hai lần. Ở chủ đề về hai lớp bài toán kinh điển, quy hoạch tuyến tính có thể đạt tối ưu trên cả một cạnh của đa giác khả thi. Ở chủ đề điều kiện bậc hai, bình phương tối thiểu với hai đặc trưng cộng tuyến có cả một đường thẳng nghiệm. Nếu hàm mục tiêu lồi nghiêm ngặt, tập nghiệm có nhiều nhất một điểm.
+Hệ quả cụ thể: Một bài toán lồi có thể không có nghiệm, có đúng một nghiệm, hoặc có vô số nghiệm, nhưng **không bao giờ có đúng hai nghiệm**, hay bất kỳ số hữu hạn nào lớn hơn 1. Nếu có hai nghiệm thì cả đoạn thẳng nối chúng đều là nghiệm. Hiện tượng này đã xuất hiện hai lần trong các bài trước: Ở chủ đề về hai dạng bài toán kinh điển, quy hoạch tuyến tính có thể đạt tối ưu trên cả một cạnh của đa giác khả thi. Ở chủ đề điều kiện bậc hai, bình phương tối thiểu với hai đặc trưng cộng tuyến có cả một đường thẳng nghiệm. Nếu hàm mục tiêu lồi nghiêm ngặt, tập nghiệm có nhiều nhất một điểm.
 
 Ngược lại, hàm $0.25x^4 - x^2 + 0.3x$ có hai điểm cực tiểu cục bộ tách rời, tại $x \approx -1.484$ và $x \approx 1.332$. Một hàm lồi không thể có hình dạng như vậy.
 
@@ -64,14 +64,14 @@ Về hình ảnh, nếu ở rất xa có một điểm tốt hơn, thì dây cun
 
 <LocalGlobalLab />
 
-Mô phỏng cho bạn xem từng giả thiết hỏng ra sao. Với hàm hai giếng $0.25x^4 - x^2 + 0.3x$ và $x$ ở đáy giếng phải gần $1.332$, điểm $z$ của lời chứng minh vẫn khả thi, nhưng đồ thị tại $z$ nằm **trên** dây cung, nên bước 2 sụp đổ. Với hàm lồi $\tfrac12 (x - 1)^2$ nhưng miền khả thi gồm hai đoạn rời nhau, điểm $x = -1.2$ ở mép đoạn trái là cực tiểu cục bộ không toàn cục. Lần này điểm $z$ rơi vào khoảng trống giữa hai đoạn, nên bước 1 sụp đổ. Định lý cần **cả hai** loại tính lồi, của hàm và của miền.
+Mô phỏng trực quan minh họa cơ chế vi phạm khi từng giả thiết bị phá vỡ. Với hàm hai giếng $0.25x^4 - x^2 + 0.3x$ và $x$ ở đáy giếng phải gần $1.332$, điểm $z$ của lời chứng minh vẫn khả thi, nhưng đồ thị tại $z$ nằm **trên** dây cung, nên bước 2 sụp đổ. Với hàm lồi $\tfrac12 (x - 1)^2$ nhưng miền khả thi gồm hai đoạn rời nhau, điểm $x = -1.2$ ở mép đoạn trái là cực tiểu cục bộ không toàn cục. Lần này điểm $z$ rơi vào khoảng trống giữa hai đoạn, nên bước 1 sụp đổ. Định lý cần **cả hai** loại tính lồi, của hàm và của miền.
 
 ## 4. Ý nghĩa đối với thuật toán
 
 Mọi phương pháp tối ưu lặp, từ phương pháp gradient tới phương pháp Newton, đều chỉ dùng thông tin trong một lân cận nhỏ của điểm đang đứng: Giá trị, gradient, có khi thêm Hessian. Với bài toán không lồi, một phương pháp như vậy có thể dừng ở một cực tiểu cục bộ tồi, ở một điểm yên ngựa, và kết quả phụ thuộc vào điểm xuất phát. Với bài toán lồi, ba nỗi lo đó biến mất cùng lúc:
 
 - Mọi cực tiểu cục bộ là toàn cục, nên không có cực tiểu cục bộ "tồi".
-- Với hàm khả vi, điểm dừng là cực tiểu toàn cục (chủ đề điều kiện bậc nhất), nên không có điểm yên ngựa nào để mắc kẹt.
+- Với hàm khả vi, mọi điểm dừng đều là cực tiểu toàn cục (chủ đề điều kiện bậc nhất), do đó hoàn toàn không xuất hiện điểm yên ngựa làm chệch hướng thuật toán.
 - Tập nghiệm lồi, nên các điểm xuất phát khác nhau có thể dẫn tới các nghiệm khác nhau, nhưng tất cả đều tối ưu như nhau.
 
 Đây là lý do một bài toán đã được nhận ra là lồi được xem gần như "đã giải xong": Việc còn lại là chọn một bộ giải đủ tốt. Còn với mạng nơ-ron, hàm mất mát không lồi, và câu hỏi "vì sao phương pháp gradient vẫn tìm được nghiệm tốt" là một hướng nghiên cứu còn mở, không có lời đáp gọn như định lý trên.
