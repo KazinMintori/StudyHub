@@ -136,7 +136,7 @@ Một câu trả lời sai đẩy khoảng $[l, u]$ sang nhầm nửa, và từ 
 
 <details><summary>Xem lời giải thích</summary>
 
-Viết tử số thành bình phương chuẩn của một vector phụ thuộc affine vào $x$: $x_1^2 + 2x_2^2 + 1 = \|u\|_2^2$ với $u = (x_1,\ \sqrt2\,x_2,\ 1)$. Mẫu số $s = x_1 + x_2$ cũng affine. Hàm $(u, s) \mapsto \|u\|_2^2 / s$ trên $s > 0$ là phép [phối cảnh](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) của hàm lồi $\|u\|_2^2$, nên lồi đồng thời theo $(u, s)$. Hợp với một ánh xạ affine giữ tính lồi, nên $f$ lồi. Một kiểm tra bằng số cũng xác nhận Hessian của $f$ nửa xác định dương ở mọi điểm thử trên miền đó. Bài học là trước khi dùng công cụ cho hàm tựa lồi, hãy thử xem tỉ số có phải một hàm lồi trá hình không, vì bài toán lồi có nhiều công cụ hơn hẳn.
+Ta biểu diễn tử số thành bình phương chuẩn của một vector phụ thuộc affine vào $x$: Đặt $x_1^2 + 2x_2^2 + 1 = \|u\|_2^2$ với $u = (x_1,\ \sqrt2\,x_2,\ 1)$. Mẫu số $s = x_1 + x_2$ cũng affine. Hàm $(u, s) \mapsto \|u\|_2^2 / s$ trên $s > 0$ là phép [phối cảnh](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) của hàm lồi $\|u\|_2^2$, nên lồi đồng thời theo $(u, s)$. Hợp với một ánh xạ affine giữ tính lồi, nên $f$ lồi. Một kiểm tra bằng số cũng xác nhận Hessian của $f$ nửa xác định dương ở mọi điểm thử trên miền đó. Bài học là trước khi dùng công cụ cho hàm tựa lồi, hãy thử xem tỉ số có phải một hàm lồi trá hình không, vì bài toán lồi có nhiều công cụ hơn hẳn.
 
 </details>
 
@@ -159,7 +159,7 @@ Có. Cực đại $f$ tương đương cực tiểu $-f$, và $-f$ cũng là m�
 ## 7. Bài tập tự luyện
 
 ::: exercise 1. Nhận diện hàm tựa lồi
-Với mỗi hàm sau, hãy cho biết nó có tựa lồi trên miền đã cho không, và nếu có thì vì sao: (A) $f(x) = \dfrac{x^2 + 4}{x}$ trên $x > 0$. (b) $f(x) = e^{-x^2}$ trên $\mathbb{R}$. (c) $f(x) = -e^{-x^2}$ trên $\mathbb{R}$. (d) $f(x_1, x_2) = \max\{x_1 / x_2,\ x_2 / x_1\}$ trên $\mathbb{R}^2_{++}$.
+Với mỗi hàm sau, hãy cho biết nó có tựa lồi trên miền đã cho không, và nếu có thì vì sao: (a) $f(x) = \dfrac{x^2 + 4}{x}$ trên $x > 0$. (b) $f(x) = e^{-x^2}$ trên $\mathbb{R}$. (c) $f(x) = -e^{-x^2}$ trên $\mathbb{R}$. (d) $f(x_1, x_2) = \max\{x_1 / x_2,\ x_2 / x_1\}$ trên $\mathbb{R}^2_{++}$.
 :::
 
 ::: solution
@@ -192,7 +192,6 @@ Hàm tựa lồi là hàm có mọi tập mức dưới lồi. Họ hàm này r�
 
 Bài toán tựa lồi vẫn giải được một cách đáng tin cậy. Mô tả tập mức dưới bằng một họ hàm lồi $\phi_t$, ta biến câu hỏi "$p^\star \le t$ hay không" thành một bài toán khả thi lồi. Phương pháp chia đôi hỏi câu đó tại trung điểm của khoảng nghi ngờ, và sau $\lceil \log_2((u - l)/\varepsilon) \rceil$ lần thì xác định được $p^\star$ với sai số $\varepsilon$.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §3.4 (tr. 95–104) về hàm tựa lồi, các Ví dụ 3.29, 3.31, 3.32, 3.33, 3.35 và 3.38. §4.2.5 (tr. 144–146) về bài toán tựa lồi, điều kiện tối ưu (4.25) và Thuật toán 4.1.
-- Ví dụ đặt bộ phát với tỉ số khoảng cách, mô phỏng, ví dụ $x^3 - 3x$, ví dụ chi phí trung bình lồi, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
