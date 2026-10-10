@@ -152,7 +152,7 @@ Các quy tắc hậu kiểm này không đòi hỏi nhãn tay của con người
 
 ---
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 11)
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 11) {#bai-tap}
 
 Hệ thống bài tập dưới đây xây dựng toàn bộ quy trình kiểm soát chất lượng đầu ra của mô hình ngôn ngữ lớn trên bài toán phân tích nhận xét của khách du lịch tại Santiago. Bộ bài tập bao gồm từ việc chọn mẫu dữ liệu đại diện, ước lượng chi phí token, thiết kế schema Pydantic, kiểm tra lỗi hàng loạt, tính toán độ chính xác trên nhãn chuẩn, đến việc cài đặt bộ quy tắc hậu kiểm tự động phát hiện mâu thuẫn logic.
 

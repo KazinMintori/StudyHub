@@ -129,7 +129,7 @@ Quy trình làm việc chuẩn mực của một nhà phân tích khi cộng tá
 
 ---
 
-## 6. Hệ thống Bài tập Thực chiến Lab 1
+## 6. Hệ thống Bài tập Thực chiến Lab 1 {#bai-tap}
 
 Hệ thống bài tập dưới đây chuyển hóa toàn bộ nội dung thực hành từ `lab-01.ipynb` sang chuẩn mực phân tích dữ liệu độc lập. Mỗi bài tập đều đi kèm tình huống thực tế, các câu hỏi phỏng đoán kiểm chứng cơ chế hạt nhân, và lời giải hai tầng (căn bản và nâng cao).
 

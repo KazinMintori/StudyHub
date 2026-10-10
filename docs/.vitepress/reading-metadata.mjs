@@ -225,15 +225,15 @@ export const readingMetadata = {
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
-    "words": 3465,
+    "words": 3466,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-02-python-co-ban": {
-    "words": 4780,
+    "words": 4781,
     "minutes": 25
   },
   "xu-ly-du-lieu/bai-03-numpy": {
-    "words": 4424,
+    "words": 4425,
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-04-lam-quen-pandas": {
@@ -245,7 +245,7 @@ export const readingMetadata = {
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-06-ket-noi-truy-xuat-du-lieu": {
-    "words": 2933,
+    "words": 2934,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-07-xu-ly-chuoi": {
@@ -253,19 +253,19 @@ export const readingMetadata = {
     "minutes": 10
   },
   "xu-ly-du-lieu/bai-08-du-lieu-thoi-gian": {
-    "words": 4585,
+    "words": 4586,
     "minutes": 25
   },
   "xu-ly-du-lieu/bai-10-lam-sach-du-lieu": {
-    "words": 3404,
+    "words": 3405,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-11-llm-du-lieu-phi-cau-truc": {
-    "words": 3825,
+    "words": 3826,
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-12-truc-quan-hoa-co-ban": {
-    "words": 3610,
+    "words": 3611,
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-13-truc-quan-hoa-nang-cao": {
@@ -273,7 +273,7 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xu-ly-du-lieu/bai-14-ke-chuyen-bang-du-lieu": {
-    "words": 6617,
+    "words": 6618,
     "minutes": 35
   },
   "vat-ly-1/01-don-vi-vector": {

@@ -115,7 +115,7 @@ m = pd.merge(df, phi, on="phan_khuc", how="left", validate="m:1")
 
 ---
 
-## 5. Bài tập Thực chiến Phòng Lab 05 (100% Nội dung Lab)
+## 5. Bài tập Thực chiến Phòng Lab 05 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là trọn vẹn các bài tập từ Lab 05, đi sâu vào cấu trúc thị trường phòng trọ Santiago theo hai trục phân tích: **Phân khúc giá** và **Kiểu chủ nhà (Cá nhân vs Chuyên nghiệp)**.
 

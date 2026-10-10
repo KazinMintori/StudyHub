@@ -167,7 +167,7 @@ Vì $N_{\text{toàn bộ}} \ge N_{\text{hợp lệ}}$, tỷ lệ thô luôn nh�
 
 ---
 
-## 6. Bài tập Thực chiến Phòng Lab 04 (100% Nội dung Lab)
+## 6. Bài tập Thực chiến Phòng Lab 04 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là trọn vẹn các bài tập từ Lab 04, giải quyết bài toán thực tế: Lập hồ sơ phân tích thị trường cho quận **Ñuñoa** (thủ đô Santiago) và đối sánh với toàn thành phố.
 

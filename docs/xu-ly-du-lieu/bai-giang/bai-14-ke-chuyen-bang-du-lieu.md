@@ -253,7 +253,7 @@ Hãy áp dụng **quy trình thẩm định 4 bước** cho mọi đoạn văn b
 
 ---
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 14)
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 14) {#bai-tap}
 
 Hệ thống bài tập dưới đây rèn luyện kỹ năng thực hành kể chuyện dữ liệu, tính toán nghịch lý Simpson và triển khai quy trình thẩm định báo cáo độc lập.
 

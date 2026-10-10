@@ -118,7 +118,7 @@ Năm 2019, dự án **DuckDB** ra đời và nhanh chóng trở thành một hi�
 
 ---
 
-## 6. Bài tập Thực chiến Phòng Lab 06 (100% Nội dung Lab)
+## 6. Bài tập Thực chiến Phòng Lab 06 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là trọn vẹn bộ bài tập từ Lab 06, kết hợp ba nguồn dữ liệu thực tế: tệp danh sách phòng đầy đủ 90 cột, tệp lịch sử đánh giá hơn $690,000$ dòng, và dữ liệu thời tiết lịch sử từ Open-Meteo API.
 

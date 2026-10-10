@@ -130,7 +130,7 @@ Con số trung bình 180 ngày là một **con số ảo tưởng hoàn toàn v�
 
 ---
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 12)
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 12) {#bai-tap}
 
 Hệ thống bài tập dưới đây mô phỏng bài toán trực quan hóa dữ liệu phục vụ báo cáo quản trị của Inside Airbnb tại Santiago. Để bảo đảm tính độc lập và khả năng tự kiểm thử, ta tạo bộ dữ liệu giả lập mô phỏng đầy đủ chuỗi thời gian, tỷ lệ nguyên căn giữa các quận và phân phối mở lịch hai đỉnh.
 

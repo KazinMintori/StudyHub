@@ -132,7 +132,7 @@ Kết quả đo đạc thực nghiệm trên phần cứng máy tính hiện đ�
 
 ---
 
-## 5. Bài tập Thực chiến Phòng Lab 03 (100% Nội dung Lab)
+## 5. Bài tập Thực chiến Phòng Lab 03 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là toàn bộ các bài tập thực hành từ Lab 03, với đầy đủ yêu cầu, hợp đồng hàm, kiểm chứng dữ liệu và lời giải hai tầng chi tiết.
 

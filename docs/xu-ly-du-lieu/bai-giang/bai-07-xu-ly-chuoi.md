@@ -110,7 +110,7 @@ Quy trình chuẩn mực là kết hợp `str.extract` với bước lọc hậu
 
 ---
 
-## 5. Bài tập Thực chiến Phòng Lab 07 (100% Nội dung Lab)
+## 5. Bài tập Thực chiến Phòng Lab 07 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là toàn bộ các bài tập từ Lab 07, được thực hiện trên tập dữ liệu đánh giá 16 dòng mô phỏng (và sẵn sàng mở rộng trên 690 nghìn dòng đánh giá thật của Santiago).
 

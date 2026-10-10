@@ -237,7 +237,7 @@ Cần ghi nhớ:
 
 ---
 
-## 6. Bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 08)
+## 6. Bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 08) {#bai-tap}
 
 Toàn bộ hệ thống bài tập thực hành dưới đây được xây dựng trên bài toán phân tích chuỗi thời gian lượt đánh giá của khách hàng tại thành phố Santiago (Chile). Để đảm bảo tính độc lập và khả năng chạy mã kiểm thử ở mọi môi trường, ta khởi tạo một bộ dữ liệu giả lập mô phỏng chân thực quy luật mùa vụ Nam bán cầu, chu kỳ trả phòng thứ Hai, đợt phong tỏa đại dịch năm 2020 và ngày sự kiện âm nhạc kỷ lục.
 

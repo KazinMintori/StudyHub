@@ -159,7 +159,7 @@ Khi đọc bất kỳ biểu đồ số liệu nào trong báo cáo kinh doanh h
 
 ---
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 13)
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 13) {#bai-tap}
 
 Hệ thống bài tập dưới đây mô phỏng bài toán trực quan hóa nâng cao trên dữ liệu lưu trú tại Santiago: từ việc so sánh phân phối giá bằng boxplot seaborn trên thang log, ghép nối ranh giới địa lý tạo bản đồ số chỗ ở, đến việc bóc trần và sửa chữa một biểu đồ chọn mốc thời gian thiên lệch.
 

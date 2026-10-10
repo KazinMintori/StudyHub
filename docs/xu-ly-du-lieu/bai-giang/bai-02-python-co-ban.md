@@ -181,7 +181,7 @@ Trong kinh tế học và phân tích dữ liệu thị trường thực tế (n
 
 ---
 
-## 6. Bài tập Thực chiến Phòng Lab 02 (100% Nội dung Lab)
+## 6. Bài tập Thực chiến Phòng Lab 02 (100% Nội dung Lab) {#bai-tap}
 
 Dưới đây là toàn bộ bài tập thực hành từ Lab 02, được thiết kế lại độc lập và sư phạm với đầy đủ hai tầng lời giải: **Cách 1: Căn bản & Trực quan** và **Cách 2: Nâng cao & Tối ưu**.
 

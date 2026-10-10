@@ -130,7 +130,7 @@ Bảng cha thường lưu trữ sẵn các cột thống kê tổng hợp (như 
 
 ---
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 10)
+## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 10) {#bai-tap}
 
 Hệ thống bài tập dưới đây mô phỏng bài toán đảm bảo chất lượng dữ liệu chéo bảng giữa hai bảng `listings` (thông tin chỗ ở) và `reviews` (nhật ký đánh giá) của nền tảng Inside Airbnb tại Santiago. Để bảo đảm tính độc lập và khả năng tự kiểm thử, ta xây dựng bộ dữ liệu mô phỏng chứa đầy đủ các hiện tượng thực tế: bản ghi sau mốc chụp, dòng lặp cặp cột nghiệp vụ, và độ lệch định nghĩa cửa sổ thời gian 12 tháng gần nhất (LTM).
 
