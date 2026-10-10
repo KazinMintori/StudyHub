@@ -912,6 +912,267 @@ với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác đ�
    Độ dài các bán trục của ellipsoid $\mathcal{E}$ tỷ lệ nghịch với căn bậc hai của các giá trị riêng của ma trận định hình ($r_i = 1/\sqrt{\lambda_i(A)}$). Điều kiện $A_1 \succeq A_2$ đồng nghĩa với việc mọi giá trị riêng của $A_1$ đều lớn hơn hoặc bằng giá trị riêng tương ứng của $A_2$ ($\lambda_i(A_1) \ge \lambda_i(A_2)$), kéo theo mọi bán trục của $\mathcal{E}_1$ đều ngắn hơn hoặc bằng bán trục của $\mathcal{E}_2$ trên mọi phương hướng không gian.
 :::
 
+::: exercise 6. Kiểm tra điều kiện Slater khi có ràng buộc đẳng thức và giải hệ KKT
+Xét bài toán tối ưu lồi với hai biến quyết định $x = (x_1, x_2)^T \in \mathbb{R}^2$:
+$$
+\begin{aligned}
+\min_{x} \quad & x_1^2 + x_2^2 \\
+\text{sao cho} \quad & x_1 + x_2 = 1, \\
+& x_1 \ge 0, \quad x_2 \ge 0.
+\end{aligned}
+$$
+1. Đưa bài toán về dạng chuẩn tắc. Tìm một điểm thỏa mãn điều kiện Slater ngặt khi có sự hiện diện của ràng buộc đẳng thức affine.
+2. Kiểm tra tính hữu hạn của giá trị tối ưu gốc $p^*$ và phát biểu kết luận của Định lý Slater về đối ngẫu mạnh và sự tồn tại nghiệm đối ngẫu.
+3. Thiết lập hàm Lagrangian và hệ điều kiện Karush-Kuhn-Tucker (KKT). Tìm nghiệm tối ưu gốc $x^*$ và bộ nhân tử đối ngẫu tối ưu $(\lambda^*, \nu^*)$.
+:::
+
+::: solution
+1. **Dạng chuẩn tắc và điểm Slater**:
+   Viết các ràng buộc dưới dạng bất đẳng thức chuẩn tắc $f_i(x) \le 0$:
+   $$
+   f_1(x) = -x_1 \le 0, \qquad f_2(x) = -x_2 \le 0,
+   $$
+   cùng ràng buộc đẳng thức affine $h_1(x) = x_1 + x_2 - 1 = 0$.
+   
+   Để thỏa mãn điều kiện Slater tổng quát khi có ràng buộc đẳng thức $Ax = b$, ta cần tìm một điểm $\bar{x}$ nằm trong phần trong tương đối (relative interior), tức thỏa mãn bất đẳng thức ngặt $f_i(\bar{x}) < 0$ và đồng thời nghiệm đúng ràng buộc đẳng thức.
+   
+   Chọn điểm $\bar{x} = (0{,}5; 0{,}5)$:
+   - Ràng buộc bất đẳng thức: Thỏa mãn ngặt $-0{,}5 < 0$ và $-0{,}5 < 0$.
+   - Ràng buộc đẳng thức: $0{,}5 + 0{,}5 = 1$ (thỏa mãn chính xác).
+   
+   Do đó, điểm $\bar{x} = (0{,}5; 0{,}5)$ là điểm Slater hợp lệ của bài toán.
+
+2. **Tính hữu hạn và kết luận của Định lý Slater**:
+   Hàm mục tiêu $x_1^2 + x_2^2 \ge 0$ bị chặn dưới bởi 0. Điểm $\bar{x} = (0{,}5; 0{,}5)$ khả thi và có giá trị mục tiêu $0{,}5^2 + 0{,}5^2 = 0{,}5$, suy ra $0 \le p^* \le 0{,}5$.
+   
+   Hàm mục tiêu và các hàm ràng buộc bất đẳng thức đều lồi, ràng buộc đẳng thức là affine. Vì điều kiện Slater được thỏa mãn và $p^*$ hữu hạn, Định lý Slater bảo đảm:
+   - Đối ngẫu mạnh xảy ra: $p^* = d^*$.
+   - Nghiệm của bài toán đối ngẫu $(\lambda^*, \nu^*)$ chắc chắn tồn tại và đạt được giá trị cực đại hữu hạn.
+
+3. **Thiết lập Lagrangian và giải hệ KKT**:
+   Hàm Lagrangian với $\lambda_1, \lambda_2 \ge 0$ và $\nu \in \mathbb{R}$:
+   $$
+   L(x, \lambda, \nu) = x_1^2 + x_2^2 - \lambda_1 x_1 - \lambda_2 x_2 + \nu(x_1 + x_2 - 1).
+   $$
+   Hệ điều kiện KKT gồm:
+   - Khả thi gốc: $x_1 + x_2 = 1$, $x_1 \ge 0$, $x_2 \ge 0$.
+   - Khả thi đối ngẫu: $\lambda_1 \ge 0$, $\lambda_2 \ge 0$.
+   - Bù trừ (Complementary slackness): $\lambda_1 x_1 = 0$, $\lambda_2 x_2 = 0$.
+   - Triệt tiêu đạo hàm:
+     $$
+     \begin{aligned}
+     \frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
+     \frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
+     \end{aligned}
+     $$
+   
+   Xét ứng viên đối xứng $x_1^* = 0{,}5 > 0$ và $x_2^* = 0{,}5 > 0$.
+   Theo điều kiện bù trừ, vì $x_1^* > 0$ và $x_2^* > 0$, bắt buộc:
+   $$
+   \lambda_1^* = 0, \qquad \lambda_2^* = 0.
+   $$
+   Thay vào phương trình đạo hàm:
+   $$
+   2(0{,}5) - 0 + \nu = 0 \implies 1 + \nu = 0 \implies \nu^* = -1.
+   $$
+   Lưu ý: Nhân tử Lagrange của ràng buộc đẳng thức $\nu$ được phép nhận giá trị âm tùy ý.
+   
+   Bộ nghiệm $(x^*, \lambda^*, \nu^*) = ((0{,}5; 0{,}5), (0, 0), -1)$ thỏa mãn trọn vẹn cả bốn nhóm điều kiện KKT. Do tính lồi của bài toán, bộ này chứng nhận nghiệm tối ưu toàn cục duy nhất với giá trị tối ưu $p^* = d^* = 0{,}5$.
+:::
+
+::: exercise 7. Giới hạn của định lý đối ngẫu và sự không đạt nghiệm đối ngẫu khi vi phạm Slater
+Xét bài toán tối ưu một biến sau:
+$$
+\min_{x \in \mathbb{R}} x \quad \text{sao cho} \quad x^2 \le 0.
+$$
+1. Xác định tập khả thi, nghiệm tối ưu gốc $x^*$ và giá trị tối ưu $p^*$. Kiểm tra xem bài toán có thỏa mãn điều kiện Slater không.
+2. Thiết lập hàm Lagrangian và tính hàm đối ngẫu Lagrange $g(\lambda)$ trong hai trường hợp $\lambda = 0$ và $\lambda > 0$.
+3. Tìm giá trị tối ưu đối ngẫu $d^* = \sup_{\lambda \ge 0} g(\lambda)$. Đối ngẫu mạnh có xảy ra không? Nghiệm tối ưu đối ngẫu có tồn tại không?
+4. Kiểm tra xem hệ điều kiện dừng KKT có nghiệm hay không và rút ra kết luận sâu sắc về vai trò của điều kiện chính quy (qualification conditions).
+:::
+
+::: solution
+1. **Khảo sát bài toán gốc và kiểm tra Slater**:
+   Tập khả thi chỉ gồm một điểm duy nhất $\{x \in \mathbb{R} \mid x^2 \le 0\} = \{0\}$.
+   Do đó nghiệm tối ưu gốc là $x^* = 0$, với giá trị tối ưu $p^* = 0$.
+   
+   Điều kiện Slater đòi hỏi tồn tại điểm $\bar{x}$ thỏa mãn bất đẳng thức ngặt $\bar{x}^2 < 0$. Vì bình phương của số thực luôn không âm, không tồn tại điểm nào thỏa mãn. Do đó điều kiện Slater bị vi phạm hoàn toàn.
+
+2. **Hàm Lagrangian và hàm đối ngẫu**:
+   Hàm Lagrangian với $\lambda \ge 0$:
+   $$
+   L(x, \lambda) = x + \lambda x^2.
+   $$
+   - Khi $\lambda = 0$: $L(x, 0) = x$. Cực tiểu của hàm tuyến tính trên $\mathbb{R}$ là:
+     $$
+     g(0) = \inf_{x \in \mathbb{R}} x = -\infty.
+     $$
+   - Khi $\lambda > 0$: Biểu thức $L(x, \lambda) = \lambda x^2 + x$ là tam thức bậc hai có bề lõm hướng lên. Hoàn thành bình phương:
+     $$
+     L(x, \lambda) = \lambda\left(x + \frac{1}{2\lambda}\right)^2 - \frac{1}{4\lambda}.
+     $$
+     Do đó cực tiểu đạt tại $x = -\frac{1}{2\lambda}$, cho giá trị hàm đối ngẫu:
+     $$
+     g(\lambda) = -\frac{1}{4\lambda}.
+     $$
+
+3. **Khoảng cách đối ngẫu và sự đạt nghiệm**:
+   Hàm đối ngẫu là $g(\lambda) = -\frac{1}{4\lambda} < 0$ với mọi $\lambda > 0$.
+   Khi $\lambda \to +\infty$, ta có $-\frac{1}{4\lambda} \to 0$. Do đó:
+   $$
+   d^* = \sup_{\lambda > 0} \left(-\frac{1}{4\lambda}\right) = 0.
+   $$
+   So sánh hai giá trị: Ta có $p^* = 0$ và $d^* = 0$.
+   Như vậy, đối ngẫu mạnh vẫn xảy ra ($p^* = d^* = 0$, khoảng cách đối ngẫu bằng 0).
+   
+   Tuy nhiên, không tồn tại bất kỳ giá trị hữu hạn nào của $\lambda \ge 0$ để đạt được $g(\lambda) = 0$, vì với mọi $\lambda < +\infty$ hữu hạn thì $-\frac{1}{4\lambda} < 0$. Ta kết luận: Bài toán đạt đối ngẫu mạnh nhưng **không đạt nghiệm đối ngẫu** (the dual supremum is not attained).
+
+4. **Kiểm tra điều kiện dừng KKT**:
+   Điều kiện triệt tiêu đạo hàm KKT tại điểm tối ưu gốc $x^* = 0$:
+   $$
+   \nabla_x L(0, \lambda) = 1 + 2\lambda(0) = 1 = 0.
+   $$
+   Phương trình $1 = 0$ là vô nghiệm đối với mọi $\lambda \in \mathbb{R}$.
+   
+   **Nhận xét sâu sắc**: Điểm $x^* = 0$ là nghiệm tối ưu toàn cục duy nhất của một bài toán lồi trơn, nhưng không tồn tại bất kỳ nhân tử Lagrange KKT nào đi kèm. Điều này chứng minh rằng điều kiện cần KKT chỉ có hiệu lực khi bài toán thỏa mãn một điều kiện chính quy (chẳng hạn như điều kiện Slater). Khi vi phạm Slater, siêu phẳng tựa của tập giá trị trở thành siêu phẳng thẳng đứng, khiến nhân tử đối ngẫu bị đẩy ra vô hạn.
+:::
+
+::: exercise 8. Ứng dụng KKT và phân tích độ nhạy trong hồi quy tham số
+Xét bài toán ước lượng một tham số trọng số $w \in \mathbb{R}$ với ngân sách chặn độ lớn $\tau > 0$:
+$$
+\min_{w \in \mathbb{R}} \frac{1}{2}(w - 3)^2 \quad \text{sao cho} \quad w^2 \le \tau.
+$$
+1. Khi $\tau = 1$, thiết lập hệ điều kiện KKT. Giải tất cả các nhánh suy ra từ điều kiện bù trừ và loại bỏ các nghiệm ngoại lai để tìm $(w^*, \lambda^*)$.
+2. Tổng quát hóa cho tham số $\tau > 0$ tùy ý: Tìm nghiệm tối ưu $w^*(\tau)$, nhân tử đối ngẫu $\lambda^*(\tau)$, và hàm giá trị tối ưu $p^*(\tau)$ theo hai trường hợp $0 < \tau < 9$ và $\tau \ge 9$.
+3. Kiểm chứng công thức độ nhạy vi phân (phân tích giá bóng):
+   $$
+   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} = -\lambda^*(\tau).
+   $$
+4. Tại điểm ngưỡng $\tau = 9$, ràng buộc có hoạt động không, và nhân tử Lagrange nhận giá trị gì?
+:::
+
+::: solution
+1. **Giải KKT khi $\tau = 1$**:
+   Hàm Lagrangian:
+   $$
+   L(w, \lambda) = \frac{1}{2}(w - 3)^2 + \lambda(w^2 - 1).
+   $$
+   Hệ điều kiện KKT:
+   - Khả thi gốc: $w^2 \le 1 \iff -1 \le w \le 1$.
+   - Khả thi đối ngẫu: $\lambda \ge 0$.
+   - Bù trừ: $\lambda(w^2 - 1) = 0$.
+   - Triệt tiêu đạo hàm: $(w - 3) + 2\lambda w = 0$.
+   
+   Khảo sát hai nhánh từ điều kiện bù trừ:
+   - **Nhánh 1: $\lambda = 0$**.
+     Thay vào điều kiện dừng: $w - 3 = 0 \implies w = 3$. Điểm này có $w^2 = 9 > 1$, vi phạm tính khả thi gốc. Nhánh này bị loại.
+   - **Nhánh 2**: Trường hợp $w^2 = 1 \implies w = 1$ hoặc $w = -1$.
+     - Nếu $w = -1$: Đạo hàm $(-1 - 3) + 2\lambda(-1) = 0$ dẫn đến $\lambda = -2 < 0$. Vi phạm tính khả thi đối ngẫu $\lambda \ge 0$. Loại.
+     - Nếu $w = 1$: Đạo hàm $(1 - 3) + 2\lambda(1) = 0$ dẫn đến $\lambda = 1 \ge 0$. Thỏa mãn trọn vẹn.
+   
+   Vậy nghiệm tối ưu duy nhất khi $\tau = 1$ là $w^* = 1$, nhân tử đối ngẫu $\lambda^* = 1$, giá trị mất mát tối ưu $p^*(1) = \frac{1}{2}(1 - 3)^2 = 2$.
+
+2. **Tổng quát hóa theo tham số $\tau > 0$**:
+   Hàm mục tiêu có cực tiểu tự do tại $w = 3$.
+   - **Trường hợp $0 < \tau < 9$**:
+     Miền khả thi là $[-\sqrt{\tau}, \sqrt{\tau}]$. Vì $3 > \sqrt{\tau}$, điểm khả thi gần $3$ nhất chính là đầu mút phải $w^*(\tau) = \sqrt{\tau}$.
+     Thay vào phương trình đạo hàm $(w - 3) + 2\lambda w = 0$:
+     $$
+     (\sqrt{\tau} - 3) + 2\lambda \sqrt{\tau} = 0 \implies \lambda^*(\tau) = \frac{3 - \sqrt{\tau}}{2\sqrt{\tau}} > 0.
+     $$
+     Giá trị mất mát tối ưu là:
+     $$
+     p^*(\tau) = \frac{1}{2}(\sqrt{\tau} - 3)^2 = \frac{1}{2}(\tau - 6\sqrt{\tau} + 9).
+     $$
+   - **Trường hợp $\tau \ge 9$**:
+     Điểm tự do $w = 3$ thỏa mãn $3^2 = 9 \le \tau$ nên khả thi.
+     Do đó $w^*(\tau) = 3$, nhân tử $\lambda^*(\tau) = 0$, và giá trị mất mát $p^*(\tau) = 0$.
+
+3. **Kiểm chứng định lý độ nhạy vi phân**:
+   Với $0 < \tau < 9$, lấy đạo hàm của hàm giá trị tối ưu theo tham số ràng buộc $\tau$:
+   $$
+   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} = \frac{\mathrm{d}}{\mathrm{d} \tau}\left[\frac{1}{2}(\tau - 6\tau^{1/2} + 9)\right] = \frac{1}{2}\left(1 - 3\tau^{-1/2}\right) = \frac{1}{2} - \frac{3}{2\sqrt{\tau}} = -\frac{3 - \sqrt{\tau}}{2\sqrt{\tau}}.
+   $$
+   Đối chiếu với nhân tử đối ngẫu $\lambda^*(\tau)$:
+   $$
+   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} = -\lambda^*(\tau).
+   $$
+   Công thức hoàn toàn khớp khít. Ý nghĩa kinh tế và kỹ thuật: Nhân tử Lagrange chính là "giá bóng" (shadow price), đo lường tốc độ suy giảm của hàm mục tiêu khi ta nới lỏng ngân sách tài nguyên thêm một lượng vi phân.
+
+4. **Tại điểm ngưỡng $\tau = 9$**:
+   Tại $\tau = 9$, ta có $w^* = 3$ và $(w^*)^2 = 9 = \tau$. Ràng buộc đạt dấu bằng nên là ràng buộc hoạt động (active constraint). Tuy nhiên nhân tử đối ngẫu $\lambda^*(9) = \frac{3 - \sqrt{9}}{2\sqrt{9}} = 0$.
+   
+   **Kết luận**: Ràng buộc hoạt động không nhất thiết phải có nhân tử Lagrange dương ngặt. Khi nghiệm không ràng buộc tình cờ nằm ngay trên biên của miền khả thi, ràng buộc hoạt động nhưng nhân tử Lagrange bằng đúng 0.
+:::
+
+::: exercise 9. Giải tích đối ngẫu hai chiều và chứng nhận khoảng cách đối ngẫu bằng 0
+Xét bài toán tìm vector có bình phương độ dài nhỏ nhất thỏa mãn tổng các tọa độ đạt yêu cầu:
+$$
+\min_{x \in \mathbb{R}^2} (x_1^2 + x_2^2) \quad \text{sao cho} \quad x_1 + x_2 \ge 1.
+$$
+1. Kiểm tra tính lồi, điều kiện Slater và tính hữu hạn của giá trị tối ưu gốc $p^*$.
+2. Thiết lập hàm Lagrangian và tính tường minh hàm đối ngẫu Lagrange $g(\lambda)$ trên miền $\lambda \ge 0$.
+3. Giải bài toán đối ngẫu để tìm $\lambda^*$ và giá trị tối ưu đối ngẫu $d^*$.
+4. Dùng đẳng thức hoàn thành bình phương của Lagrangian tại $\lambda^*$ để viết một chứng nhận đại số không thể bác bỏ rằng khoảng cách đối ngẫu bằng 0.
+:::
+
+::: solution
+1. **Kiểm tra tính lồi và điều kiện Slater**:
+   Hàm mục tiêu $f_0(x) = x_1^2 + x_2^2$ có Hessian $2I \succ 0$ nên lồi chặt.
+   Ràng buộc viết lại thành $f_1(x) = 1 - x_1 - x_2 \le 0$ là hàm affine.
+   Điểm $\bar{x} = (1, 1)$ có $1 - 1 - 1 = -1 < 0$, thỏa mãn điều kiện Slater ngặt.
+   Vì $x_1^2 + x_2^2 \ge 0$ và có điểm khả thi hữu hạn (chẳng hạn $(1, 0)$ có chi phí 1), giá trị tối ưu $p^*$ là hữu hạn và thỏa mãn $0 \le p^* \le 1$.
+
+2. **Hàm Lagrangian và hàm đối ngẫu**:
+   Hàm Lagrangian với $\lambda \ge 0$:
+   $$
+   \begin{aligned}
+   L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
+   &= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
+   &= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
+   \end{aligned}
+   $$
+   Cực tiểu theo $x$ đạt được tại $x_1(\lambda) = x_2(\lambda) = \frac{\lambda}{2}$.
+   Hàm đối ngẫu Lagrange:
+   $$
+   g(\lambda) = \inf_{x \in \mathbb{R}^2} L(x, \lambda) = \lambda - \frac{\lambda^2}{2}.
+   $$
+
+3. **Giải bài toán đối ngẫu**:
+   Bài toán đối ngẫu Lagrange:
+   $$
+   \max_{\lambda \ge 0} \quad g(\lambda) = \lambda - \frac{\lambda^2}{2}.
+   $$
+   Đạo hàm: $g'(\lambda) = 1 - \lambda = 0 \implies \lambda^* = 1 \ge 0$.
+   Đạo hàm bậc hai $g''(\lambda) = -1 < 0$, hàm số lõm ngặt và đạt cực đại tại $\lambda^* = 1$.
+   Giá trị tối ưu đối ngẫu là:
+   $$
+   d^* = g(1) = 1 - \frac{1^2}{2} = \frac{1}{2}.
+   $$
+
+4. **Chứng nhận khoảng cách đối ngẫu bằng 0**:
+   Tại nhân tử đối ngẫu tối ưu $\lambda^* = 1$, Lagrangian trở thành:
+   $$
+   L(x, 1) = \left(x_1 - \frac{1}{2}\right)^2 + \left(x_2 - \frac{1}{2}\right)^2 + \frac{1}{2}.
+   $$
+   Vì tổng hai bình phương luôn không âm với mọi $x \in \mathbb{R}^2$, ta có:
+   $$
+   L(x, 1) \ge \frac{1}{2} \quad \forall x \in \mathbb{R}^2.
+   $$
+   Mặt khác, với mọi điểm $x$ khả thi bất kỳ của bài toán gốc ($x_1 + x_2 \ge 1$), ta có:
+   $$
+   f_0(x) \ge f_0(x) + 1 \cdot (1 - x_1 - x_2) = L(x, 1) \ge \frac{1}{2}.
+   $$
+   Bất đẳng thức này chứng minh rằng *mọi điểm khả thi đều có chi phí không nhỏ hơn $\frac{1}{2}$*.
+   
+   Xét điểm $x^* = (0{,}5; 0{,}5)$: Điểm này khả thi vì $0{,}5 + 0{,}5 = 1 \ge 1$, và có chi phí đúng bằng:
+   $$
+   f_0(x^*) = 0{,}5^2 + 0{,}5^2 = 0{,}25 + 0{,}25 = 0{,}5.
+   $$
+   Điểm khả thi $x^*$ đạt đúng cận dưới đối ngẫu $d^* = 0{,}5$, chứng minh $p^* = d^* = 0{,}5$ và khoảng cách đối ngẫu bằng 0. Nghiệm tối ưu toàn cục duy nhất là $x^* = (0{,}5; 0{,}5)$.
+:::
+
+
 ---
 
 ## Tóm tắt cốt lõi

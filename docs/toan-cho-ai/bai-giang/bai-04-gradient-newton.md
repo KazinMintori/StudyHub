@@ -434,6 +434,335 @@ $$
 Như vậy, chỉ sau đúng **9 bước lặp ngoài**, thuật toán hàm chắn đã đưa sai số mục tiêu từ ngưỡng 1000 ban đầu xuống dưới $10^{-6}$.
 :::
 
+::: exercise 4. Thuật toán tìm kiếm đường thẳng quay lui Armijo trên hàm bậc hai lệch tỉ lệ
+Xét hàm mục tiêu toàn phương có tỉ số điều kiện xấu:
+$$
+f(x) = \frac{1}{2}(3x_1^2 + 7x_2^2).
+$$
+Khởi tạo từ điểm $x^0 = (2, 4)^T$.
+1. Tính gradient $g = \nabla f(x^0)$ và giá trị hàm số $f(x^0)$. Xét mô hình xấp xỉ tuyến tính có phạt chuẩn $Q_I(d) = f(x^0) + g^T d + \frac{1}{2}\|d\|_2^2$. Chứng minh hướng giảm dốc nhất chuẩn hóa chính là hướng gradient ngược $d_G = -g$.
+2. Với các tham số quay lui Armijo $\alpha = 0{,}1$ và hệ số co bước $\beta = 0{,}5$, ngưỡng chấp nhận bước $t$ là:
+   $$
+   f(x^0 + t d_G) \le f(x^0) + \alpha t g^T d_G = 62 - 82t.
+   $$
+   Kiểm tra tuần tự các bước thử $t = 1$, $t = 0{,}5$, $t = 0{,}25$: Tính tọa độ điểm thử, giá trị hàm số thực tế, so sánh với ngưỡng Armijo và chỉ ra bước nhảy đầu tiên được chấp nhận.
+3. Giải thích tại sao bước dài $t = 1$ làm hàm số tăng vọt (hiện tượng vọt lố qua hẻm núi), và nêu trực giác tại sao điều kiện Armijo kết thúc sau hữu hạn bước co.
+:::
+
+::: solution
+1. **Gradient và hướng dốc nhất**:
+   Gradient của hàm số tại điểm bất kỳ là $\nabla f(x) = (3x_1, 7x_2)^T$.
+   Tại điểm khởi đầu $x^0 = (2, 4)^T$:
+   $$
+   g = \nabla f(x^0) = (3 \times 2, 7 \times 4)^T = (6, 28)^T.
+   $$
+   Giá trị hàm số:
+   $$
+   f(x^0) = \frac{1}{2}(3 \times 2^2 + 7 \times 4^2) = 62.
+   $$
+   Bình phương độ dài gradient: $\|g\|_2^2 = 6^2 + 28^2 = 36 + 784 = 820$.
+   
+   Mô hình cục bộ $Q_I(d)$:
+   $$
+   Q_I(d) = f(x^0) + g^T d + \frac{1}{2}\|d\|_2^2.
+   $$
+   Lấy đạo hàm theo $d$ và giải điều kiện triệt tiêu gradient:
+   $$
+   \nabla_d Q_I(d) = g + d = 0 \implies d_G = -g = (-6, -28)^T.
+   $$
+   Vì ma trận đơn vị $I \succ 0$, điểm này là cực tiểu toàn cục duy nhất của mô hình. Tích vô hướng với gradient: $g^T d_G = -\|g\|_2^2 = -820 < 0$, khẳng định $d_G$ là một hướng giảm hợp lệ.
+
+2. **Kiểm tra quy tắc quay lui Armijo**:
+   Ngưỡng chấp nhận Armijo:
+   $$
+   62 + \alpha t (-820) = 62 - 0{,}1 \times 820 t = 62 - 82t.
+   $$
+   - **Thử $t = 1$**:
+     Điểm thử là $x = x^0 + d_G = (-4, -24)^T$.
+     Giá trị hàm số:
+     $$
+     f(-4, -24) = \frac{1}{2}(3 \times 16 + 7 \times 576) = \frac{1}{2}(48 + 4032) = 2040.
+     $$
+     Ngưỡng yêu cầu: $62 - 82(1) = -20$.
+     Vì $2040 > -20$, bước $t = 1$ bị từ chối thẳng thừng do vọt lố nghiêm trọng.
+   - **Thử $t = 0{,}5$**:
+     Điểm thử là $x = x^0 + 0{,}5 d_G = (-1, -10)^T$.
+     Giá trị hàm số:
+     $$
+     f(-1, -10) = \frac{1}{2}(3 \times 1 + 7 \times 100) = \frac{703}{2} = 351{,}5.
+     $$
+     Ngưỡng yêu cầu: $62 - 82(0{,}5) = 62 - 41 = 21$.
+     Vì $351{,}5 > 21$, bước $t = 0{,}5$ tiếp tục bị loại.
+   - **Thử $t = 0{,}25$**:
+     Điểm thử là $x = x^0 + 0{,}25 d_G = (0{,}5; -3)^T$.
+     Giá trị hàm số:
+     $$
+     f(0{,}5; -3) = \frac{1}{2}(3 \times 0{,}25 + 7 \times 9) = \frac{1}{2}(0{,}75 + 63) = \frac{63{,}75}{2} = 31{,}875.
+     $$
+     Ngưỡng yêu cầu: $62 - 82(0{,}25) = 62 - 20{,}5 = 41{,}5$.
+     Vì $31{,}875 \le 41{,}5$, điều kiện Armijo được thỏa mãn.
+   
+   Thuật toán quay lui dừng lại và chấp nhận bước nhảy $t^* = 0{,}25$.
+
+3. **Bản chất hình học của hiện tượng vọt lố**:
+   Độ cong của hàm số theo phương $x_2$ lớn hơn đáng kể so với phương $x_1$ ($7 > 3$). Khi bước nhảy theo gradient quá dài ($t = 1$), bước nhảy vượt qua đáy thung lũng parabol và leo thẳng lên vách đối diện, khiến hàm số tăng từ $62$ lên $2040$.
+   
+   Quy tắc Armijo bảo đảm dừng sau hữu hạn lần co nhờ khai triển Taylor bậc nhất:
+   $$
+   f(x^0 + t d) = f(x^0) + t g^T d + o(t).
+   $$
+   Khi $t \to 0$, số hạng $o(t)$ trở nên không đáng kể so với $(1 - \alpha)t g^T d < 0$, bảo đảm bất đẳng thức Armijo luôn nghiệm đúng với mọi $t$ đủ nhỏ.
+:::
+
+::: exercise 5. Hướng giảm dốc nhất theo chuẩn metric Hessian và nguồn gốc phương pháp Newton
+Xét bài toán tìm hướng giảm dốc nhất dưới ràng buộc chuẩn ellipsoid do ma trận xác định dương $W \succ 0$ quy định:
+$$
+\min_{v \in \mathbb{R}^n} \quad g^T v \quad \text{sao cho} \quad v^T W v \le 1,
+$$
+với vector gradient $g \ne 0$.
+1. Thiết lập hàm Lagrangian và hệ điều kiện KKT cho bài toán con trên. Chứng minh nhân tử Lagrange $\zeta > 0$, suy ra ràng buộc đạt dấu bằng trên biên ellipsoid.
+2. Tìm nghiệm tối ưu $v^*$ và giá trị nhỏ nhất của $g^T v^*$. Định nghĩa chuẩn đối ngẫu $\|g\|_* = \sqrt{g^T W^{-1} g}$.
+3. Khi đổi độ dài thành $d = \|g\|_* v^*$, chứng minh $d = -W^{-1} g$. Rút ra kết luận: Phương pháp Newton chính là phương pháp giảm dốc nhất khi chuẩn không gian được đo bằng ma trận Hessian cục bộ $W = \nabla^2 f(x)$.
+:::
+
+::: solution
+1. **Thiết lập KKT cho bài toán con**:
+   Hàm Lagrangian với nhân tử $\zeta \ge 0$:
+   $$
+   L(v, \zeta) = g^T v + \zeta(v^T W v - 1).
+   $$
+   Hệ điều kiện KKT:
+   - Triệt tiêu gradient: $g + 2\zeta W v = 0$.
+   - Khả thi gốc: $v^T W v \le 1$.
+   - Khả thi đối ngẫu: $\zeta \ge 0$.
+   - Bù trừ: $\zeta(v^T W v - 1) = 0$.
+   
+   Nếu $\zeta = 0$: Phương trình đạo hàm cho $g = 0$, mâu thuẫn với giả thiết $g \ne 0$.
+   Do đó bắt buộc $\zeta > 0$.
+   Theo điều kiện bù trừ, vì $\zeta > 0$, ràng buộc bắt buộc đạt dấu bằng:
+   $$
+   v^T W v = 1.
+   $$
+
+2. **Nghiệm tối ưu và chuẩn đối ngẫu**:
+   Từ phương trình đạo hàm:
+   $$
+   2\zeta W v = -g \implies v = -\frac{1}{2\zeta} W^{-1} g.
+   $$
+   Thay vào ràng buộc $v^T W v = 1$:
+   $$
+   \left(-\frac{1}{2\zeta} W^{-1} g\right)^T W \left(-\frac{1}{2\zeta} W^{-1} g\right) = \frac{1}{4\zeta^2} g^T W^{-1} g = 1.
+   $$
+   Suy ra nhân tử Lagrange tối ưu:
+   $$
+   \zeta^* = \frac{1}{2}\sqrt{g^T W^{-1} g}.
+   $$
+   Đặt chuẩn đối ngẫu $\|g\|_* = \sqrt{g^T W^{-1} g}$, ta tìm được hướng giảm dốc nhất chuẩn hóa:
+   $$
+   v^* = -\frac{W^{-1} g}{\sqrt{g^T W^{-1} g}} = -\frac{W^{-1} g}{\|g\|_*}.
+   $$
+   Giá trị hàm mục tiêu tại nghiệm là:
+   $$
+   g^T v^* = -\frac{g^T W^{-1} g}{\|g\|_*} = -\frac{\|g\|_*^2}{\|g\|_*} = -\|g\|_* = -\sqrt{g^T W^{-1} g}.
+   $$
+
+3. **Mối liên hệ với phương pháp Newton**:
+   Khi loại bỏ việc chuẩn hóa độ dài đơn vị và co dãn theo độ lớn gradient chuẩn đối ngẫu:
+   $$
+   d = \|g\|_* v^* = \|g\|_* \left(-\frac{W^{-1} g}{\|g\|_*}\right) = -W^{-1} g.
+   $$
+   Vector $d$ nghiệm đúng phương trình ma trận $W d = -g$.
+   
+   Khi chọn $W = \nabla^2 f(x) \succ 0$ là ma trận Hessian tại điểm hiện tại, phương trình trở thành:
+   $$
+   \nabla^2 f(x) d = -\nabla f(x) \implies d_N = -\big[\nabla^2 f(x)\big]^{-1} \nabla f(x).
+   $$
+   Đây chính là bước lặp Newton kinh điển.
+   
+   **Kết luận sâu sắc**: Phương pháp Newton không phải là một thuật toán xa lạ tách rời, mà chính là phương pháp hạ dốc nhất (steepest descent) tự nhiên nhất của bài toán khi ta trang bị cho không gian vector một metric Riemann cục bộ định hình bởi ma trận độ cong Hessian.
+:::
+
+::: exercise 6. Bước lặp Newton, đại lượng Newton Decrement và mức giảm mô hình xấp xỉ
+Cho hàm số lồi trơn trên miền dương:
+$$
+\varphi(s) = s - \log s, \qquad s > 0.
+$$
+Xét điểm khởi tạo $s^0 = 0{,}25$.
+1. Tính đạo hàm bậc một $\varphi'(s)$, đạo hàm bậc hai $\varphi''(s)$ và xác định gradient $g$, Hessian $H$ tại $s^0 = 0{,}25$.
+2. Lập mô hình xấp xỉ Taylor bậc hai $Q_H(d)$ quanh điểm $s^0$. Giải phương trình dừng $Q_H'(d) = 0$ để tìm bước lặp Newton $d_N$ và điểm mới $s^1$.
+3. Tính đại lượng giảm lượng Newton (Newton decrement) $\lambda(s^0)$, bình phương $\lambda(s^0)^2$ và mức giảm dự đoán của mô hình $\frac{1}{2}\lambda(s^0)^2$.
+4. Tính mức giảm thực tế $\varphi(s^0) - \varphi(s^1)$ và sai số tối ưu thực tế $\varphi(s^0) - \varphi(s^*)$. Phân biệt rõ sự khác nhau giữa ba đại lượng này.
+:::
+
+::: solution
+1. **Đạo hàm và ma trận Hessian**:
+   Đạo hàm bậc một và bậc hai:
+   $$
+   \varphi'(s) = 1 - \frac{1}{s}, \qquad \varphi''(s) = \frac{1}{s^2}.
+   $$
+   Tại điểm $s^0 = 0{,}25 = \frac{1}{4}$:
+   $$
+   g = \varphi'(1/4) = 1 - 4 = -3, \qquad H = \varphi''(1/4) = \frac{1}{(1/4)^2} = 16.
+   $$
+   Vì $H = 16 > 0$, hàm số lồi chặt tại lân cận điểm đang xét.
+
+2. **Mô hình bậc hai và bước lặp Newton**:
+   Mô hình xấp xỉ Taylor bậc hai theo độ dời $d$:
+   $$
+   Q_H(d) = \varphi(1/4) + g d + \frac{1}{2} H d^2 = \varphi(1/4) - 3d + 8d^2.
+   $$
+   Đạo hàm theo $d$ và giải điều kiện triệt tiêu:
+   $$
+   Q_H'(d) = -3 + 16d = 0 \implies d_N = \frac{3}{16} = 0{,}1875.
+   $$
+   Điểm cập nhật mới sau một bước Newton thuần túy ($t = 1$):
+   $$
+   s^1 = s^0 + d_N = \frac{1}{4} + \frac{3}{16} = \frac{7}{16} = 0{,}4375.
+   $$
+   Kiểm tra đạo hàm tại điểm mới: $\varphi'(7/16) = 1 - \frac{16}{7} = -\frac{9}{7} \ne 0$, chứng tỏ điểm $s^1$ tiến gần hơn về nghiệm nhưng chưa phải nghiệm tối ưu.
+
+3. **Newton decrement và mức giảm mô hình**:
+   Đại lượng giảm lượng Newton được định nghĩa:
+   $$
+   \lambda(s^0) = \sqrt{g^T H^{-1} g} = \sqrt{(-3) \times \frac{1}{16} \times (-3)} = \sqrt{\frac{9}{16}} = \frac{3}{4} = 0{,}75.
+   $$
+   Bình phương của nó: $\lambda(s^0)^2 = \frac{9}{16} = 0{,}5625$.
+   Mức giảm giá trị được dự đoán bởi mô hình bậc hai:
+   $$
+   Q_H(0) - Q_H(d_N) = -g d_N - \frac{1}{2} H d_N^2 = -(-3)\left(\frac{3}{16}\right) - 8\left(\frac{3}{16}\right)^2 = \frac{9}{16} - \frac{9}{32} = \frac{9}{32} = \frac{1}{2}\lambda(s^0)^2.
+   $$
+   Giá trị mức giảm dự đoán là $\frac{9}{32} = 0{,}28125$.
+
+4. **So sánh mức giảm thực tế và sai số tối ưu**:
+   - Nghiệm tối ưu toàn cục giải tích của $\varphi(s)$ là $s^* = 1$ với giá trị tối ưu $\varphi(1) = 1 - \log 1 = 1$.
+   - Sai số tối ưu thực tế tại điểm khởi đầu:
+     $$
+     \varphi(s^0) - \varphi(s^*) = \left(\frac{1}{4} - \log\frac{1}{4}\right) - 1 = -\frac{3}{4} + \log 4 \approx -0{,}75 + 1{,}3863 = 0{,}6363.
+     $$
+   - Mức giảm thực tế sau một bước lặp:
+     $$
+     \begin{aligned}
+     \varphi(s^0) - \varphi(s^1) &= \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right) \\
+     &= -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
+     \end{aligned}
+     $$
+   
+   **Phân biệt ba đại lượng**:
+   - Mức giảm dự đoán $\frac{1}{2}\lambda^2 = 0{,}28125$: Dựa trên mô hình parabol thuần túy.
+   - Mức giảm thực tế $\approx 0{,}2933$: Mức hạ thấp thực của hàm phi tuyến sau một bước cập nhật.
+   - Sai số tối ưu thực tế $\approx 0{,}6363$: Khoảng cách giá trị còn lại đến cực tiểu toàn cục.
+   
+   Cả ba đại lượng có cùng bậc độ lớn nhưng không bao giờ trùng nhau đối với hàm phi toàn phương.
+:::
+
+::: exercise 7. Phương pháp Newton khả thi và khử ràng buộc đẳng thức affine
+Xét bài toán tối ưu có ràng buộc đẳng thức:
+$$
+\begin{aligned}
+\min_{x \in \mathbb{R}^3} \quad & f(x) = \frac{1}{2}(x_1^2 + 2x_2^2 + 3x_3^2) \\
+\text{sao cho} \quad & x_1 + x_2 + x_3 = 1.
+\end{aligned}
+$$
+1. Phương pháp Newton-KKT: Thiết lập hệ phương trình KKT bậc nhất cho bước lặp Newton $\Delta x$ và nhân tử đối ngẫu $w$. Giải hệ phương trình trực tiếp để tìm nghiệm tối ưu $x^*$ từ điểm xuất phát khả thi $x^0 = (1, 0, 0)^T$.
+2. Phương pháp khử biến: Dùng ràng buộc $x_1 = 1 - x_2 - x_3$ để khử biến $x_1$, đưa bài toán về bài toán tối ưu không ràng buộc theo hai biến $(x_2, x_3)$. Tìm ma trận Hessian của bài toán rút gọn và kiểm chứng rằng bước lặp Newton trên không gian rút gọn cho cùng kết quả.
+:::
+
+::: solution
+1. **Phương pháp Newton-KKT**:
+   Gradient và Hessian của hàm mục tiêu:
+   $$
+   \nabla f(x) = \begin{bmatrix} x_1 \\ 2x_2 \\ 3x_3 \end{bmatrix}, \qquad H = \nabla^2 f(x) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}.
+   $$
+   Ma trận ràng buộc đẳng thức: $A = \begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$, $b = 1$.
+   
+   Tại điểm khả thi $x^0 = (1, 0, 0)^T$, gradient là $\nabla f(x^0) = (1, 0, 0)^T$. Hệ phương trình Newton-KKT xác định hướng $\Delta x$ và nhân tử $w$:
+   $$
+   \begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} \Delta x \\ w \end{bmatrix} = \begin{bmatrix} -\nabla f(x^0) \\ 0 \end{bmatrix}.
+   $$
+   Khai triển hệ phương trình:
+   $$
+   \begin{aligned}
+   \Delta x_1 + w &= -1 \implies \Delta x_1 = -1 - w, \\
+   2\Delta x_2 + w &= 0 \implies \Delta x_2 = -\frac{w}{2}, \\
+   3\Delta x_3 + w &= 0 \implies \Delta x_3 = -\frac{w}{3}.
+   \end{aligned}
+   $$
+   Thay vào ràng buộc bảo toàn tính khả thi $A \Delta x = \Delta x_1 + \Delta x_2 + \Delta x_3 = 0$:
+   $$
+   (-1 - w) - \frac{w}{2} - \frac{w}{3} = 0 \iff -1 - w\left(1 + \frac{1}{2} + \frac{1}{3}\right) = 0 \iff w\left(\frac{11}{6}\right) = -1 \implies w = -\frac{6}{11}.
+   $$
+   Tính các thành phần của hướng cập nhật:
+   $$
+   \Delta x_1 = -1 - \left(-\frac{6}{11}\right) = -\frac{5}{11}, \quad \Delta x_2 = -\frac{-6/11}{2} = \frac{3}{11}, \quad \Delta x_3 = -\frac{-6/11}{3} = \frac{2}{11}.
+   $$
+   Cập nhật nghiệm mới:
+   $$
+   x^* = x^0 + \Delta x = \begin{bmatrix} 1 - 5/11 \\ 0 + 3/11 \\ 0 + 2/11 \end{bmatrix} = \begin{bmatrix} 6/11 \\ 3/11 \\ 2/11 \end{bmatrix}.
+   $$
+   Vì hàm mục tiêu là hàm toàn phương, phương pháp Newton tìm ra nghiệm tối ưu toàn cục chỉ sau đúng một bước lặp.
+
+2. **Phương pháp khử biến (Elimination)**:
+   Thay $x_1 = 1 - x_2 - x_3$ vào hàm mục tiêu:
+   $$
+   \begin{aligned}
+   \tilde{f}(x_2, x_3) &= \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2 \\
+   &= \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2 \\
+   &= \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
+   \end{aligned}
+   $$
+   Gradient và Hessian rút gọn:
+   $$
+   \nabla \tilde{f} = \begin{bmatrix} 3x_2 + x_3 - 1 \\ x_2 + 4x_3 - 1 \end{bmatrix}, \qquad \tilde{H} = \begin{bmatrix} 3 & 1 \\ 1 & 4 \end{bmatrix}.
+   $$
+   Giải phương trình dừng $\nabla \tilde{f} = 0$:
+   $$
+   \begin{cases} 3x_2 + x_3 = 1 \\ x_2 + 4x_3 = 1 \end{cases} \implies \begin{bmatrix} x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 3 & 1 \\ 1 & 4 \end{bmatrix}^{-1} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \frac{1}{11}\begin{bmatrix} 4 & -1 \\ -1 & 3 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3/11 \\ 2/11 \end{bmatrix}.
+   $$
+   Khôi phục lại $x_1$: $x_1 = 1 - \frac{3}{11} - \frac{2}{11} = \frac{6}{11}$.
+   
+   Kết quả hoàn toàn trùng khớp với phương pháp Newton-KKT. Khử biến giảm số chiều bài toán nhưng phá vỡ cấu trúc thưa thớt của ma trận Hessian, trong khi Newton-KKT bảo toàn cấu trúc thưa thớt ở không gian biến mở rộng.
+:::
+
+::: exercise 8. Tính tự điều chỉnh (Self-concordance) và cận sai số tối ưu độc lập hệ tọa độ
+1. Một hàm số lồi $f: \mathbb{R} \to \mathbb{R}$ được gọi là hàm tự điều chỉnh (self-concordant) chuẩn hóa nếu thỏa mãn bất đẳng thức:
+   $$
+   |f'''(x)| \le 2 f''(x)^{3/2} \quad \forall x \in \operatorname{dom} f.
+   $$
+   Chứng minh rằng hàm chắn logarit tự nhiên $f(x) = -\log x$ trên miền $x > 0$ là một hàm tự điều chỉnh chuẩn hóa.
+2. Với hàm tự điều chỉnh đa chiều, đại lượng giảm lượng Newton $\lambda(x) = \sqrt{\nabla f(x)^T [\nabla^2 f(x)]^{-1} \nabla f(x)}$ là một đại lượng bất biến affine (affine invariant). Khi $\lambda(x) < 0{,}68$, ta có cận sai số tối ưu giải tích:
+   $$
+   f(x) - p^* \le \lambda(x)^2.
+   $$
+   Giải thích tại sao tính chất này giúp lý thuyết tối ưu hóa giải phóng khỏi sự phụ thuộc vào các hằng số nhạy cảm hệ tọa độ như hằng số Lipschitz của gradient $L$ hay độ lồi mạnh $m$.
+:::
+
+::: solution
+1. **Chứng minh tính tự điều chỉnh của hàm logarit**:
+   Tính các cấp đạo hàm của $f(x) = -\log x$:
+   $$
+   f'(x) = -\frac{1}{x}, \qquad f''(x) = \frac{1}{x^2}, \qquad f'''(x) = -\frac{2}{x^3}.
+   $$
+   Lấy giá trị tuyệt đối của đạo hàm bậc ba:
+   $$
+   |f'''(x)| = \left|-\frac{2}{x^3}\right| = \frac{2}{x^3}.
+   $$
+   Biểu thức vế phải của định nghĩa:
+   $$
+   2 \big(f''(x)\big)^{3/2} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 \left(\frac{1}{x^3}\right) = \frac{2}{x^3}.
+   $$
+   Ta thấy $|f'''(x)| = 2 \big(f''(x)\big)^{3/2}$ đạt dấu bằng với mọi $x > 0$.
+   Do đó $f(x) = -\log x$ thỏa mãn định nghĩa hàm tự điều chỉnh chuẩn hóa với hằng số $2$.
+
+2. **Ý nghĩa lý thuyết của tính tự điều chỉnh**:
+   - **Tính bất biến Affine**: Dưới phép đổi biến tuyến tính khả nghịch $x = T y$, các đại lượng giải tích bậc nhất truyền thống như chuẩn gradient $\|\nabla f(x)\|_2$ bị biến dạng hoàn toàn phụ thuộc vào ma trận chuyển cơ sở $T$. Trái lại, đại lượng Newton decrement $\lambda(x)$ giữ nguyên giá trị chính xác trên mọi hệ tọa độ:
+     $$
+     \lambda_{\tilde{f}}(y) = \lambda_f(x).
+     $$
+   - **Thoát khỏi hằng số điều kiện**: Trong phân tích hội tụ gradient descent truyền thống, tốc độ hội tụ phụ thuộc nặng nề vào số điều kiện $\kappa = L/m$. Một phép đổi đơn vị đo lường đơn giản có thể làm $\kappa$ tăng vọt từ $10$ lên $10^6$, khiến các cận hội tụ lý thuyết trở nên vô nghĩa.
+   - **Cận hội tụ phổ quát**: Lý thuyết tự điều chỉnh của Nesterov và Nemirovski chứng minh rằng khi $\lambda(x) \le 0{,}68$, thuật toán Newton bước vào pha hội tụ bậc hai (quadratic convergence) thuần túy. Số bước lặp cần thiết để đạt độ chính xác $\epsilon$ bị chặn trên bởi một hàm chỉ phụ thuộc vào sai số ban đầu và tham số tự điều chỉnh, hoàn toàn độc lập với ma trận điều kiện và số chiều không gian.
+:::
+
+
 ---
 
 ## Tóm tắt cốt lõi

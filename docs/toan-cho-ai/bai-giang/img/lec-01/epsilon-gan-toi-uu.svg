@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" width="100%" role="img" aria-labelledby="title desc">
+  <title id="title">Khoảng giá trị mục tiêu gần tối ưu</title>
+  <desc id="desc">Với p sao bằng 1 và epsilon bằng 3, đoạn từ 1 đến 4 được chấp nhận cho điểm khả thi. A có giá trị 0.25 nhưng không khả thi, B có giá trị 2.25 và đạt yêu cầu, C có giá trị 6.25 và vượt ngưỡng.</desc>
+  <rect width="420" height="236" rx="8" fill="#ffffff"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#1f1c2b">
+    <text x="24" y="28" font-weight="600">Giá trị hàm mục tiêu</text>
+    <!-- Thang tuyến tính: Tọa độ ngang = 24 + 52 × giá trị mục tiêu. -->
+    <rect x="24" y="82" width="52" height="36" fill="#fdecea"/>
+    <rect x="76" y="82" width="156" height="36" fill="#e6f4ec"/>
+    <rect x="232" y="82" width="156" height="36" fill="#fbf1df"/>
+    <path d="M24 100H395l-8-5m8 5-8 5" fill="none" stroke="#4f4a62" stroke-width="2"/>
+    <path d="M76 100H232" stroke="#1d6b45" stroke-width="5"/>
+    <path d="M76 82V127M232 82V127" stroke="#1d6b45" stroke-width="2"/>
+    <circle cx="76" cy="100" r="4" fill="#1d6b45"/>
+    <circle cx="232" cy="100" r="4" fill="#1d6b45"/>
+    <path d="M37 62V100M141 62V100M349 62V100" stroke="#6b6580" stroke-dasharray="3 3"/>
+    <path d="M32 95l10 10m0-10-10 10" stroke="#b42318" stroke-width="3"/>
+    <circle cx="141" cy="100" r="6" fill="#1d6b45"/>
+    <circle cx="349" cy="100" r="6" fill="#8a5100"/>
+    <g text-anchor="middle" font-weight="600">
+      <text x="37" y="56" fill="#b42318">A</text>
+      <text x="141" y="56" fill="#1d6b45">B</text>
+      <text x="349" y="56" fill="#8a5100">C</text>
+    </g>
+    <g text-anchor="middle">
+      <text x="37" y="78">0.25</text>
+      <text x="141" y="78">2.25</text>
+      <text x="349" y="78">6.25</text>
+      <text x="76" y="150">p* = 1</text>
+      <text x="232" y="150">p* + ε = 4</text>
+      <text x="45" y="188" fill="#b42318">Không</text>
+      <text x="45" y="208" fill="#b42318">khả thi</text>
+      <text x="154" y="188" fill="#1d6b45">Gần tối ưu</text>
+      <text x="154" y="208" fill="#1d6b45">nếu khả thi</text>
+      <text x="327" y="188" fill="#8a5100">Vượt ngưỡng</text>
+      <text x="327" y="208" fill="#8a5100">sai số</text>
+    </g>
+  </g>
+</svg>

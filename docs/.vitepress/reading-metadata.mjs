@@ -29,47 +29,47 @@ export const readingMetadata = {
     "minutes": 10
   },
   "toan-cho-ai/bai-00-on-tap-nen-tang": {
-    "words": 3522,
-    "minutes": 20
+    "words": 6045,
+    "minutes": 30
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu": {
-    "words": 2724,
+    "words": 3186,
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
-    "words": 5829,
-    "minutes": 39
+    "words": 6048,
+    "minutes": 40
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
-    "words": 4685,
+    "words": 4719,
     "minutes": 31
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine": {
-    "words": 6804,
-    "minutes": 45
+    "words": 6849,
+    "minutes": 46
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/noi-tuong-doi": {
-    "words": 1208,
+    "words": 1209,
     "minutes": 8
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi": {
-    "words": 3553,
+    "words": 3588,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-loi": {
-    "words": 2719,
+    "words": 2723,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian": {
-    "words": 3548,
+    "words": 3573,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid": {
-    "words": 2841,
+    "words": 2893,
     "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan": {
-    "words": 2717,
+    "words": 2728,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh": {
@@ -77,7 +77,7 @@ export const readingMetadata = {
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-psd": {
-    "words": 2353,
+    "words": 2357,
     "minutes": 16
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi": {
@@ -93,7 +93,7 @@ export const readingMetadata = {
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua": {
-    "words": 3167,
+    "words": 3173,
     "minutes": 21
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-doi-ngau": {
@@ -101,23 +101,23 @@ export const readingMetadata = {
     "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/ham-loi": {
-    "words": 2727,
+    "words": 2728,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat": {
-    "words": 2722,
+    "words": 2748,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai": {
-    "words": 3898,
+    "words": 3902,
     "minutes": 26
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc": {
-    "words": 2214,
+    "words": 2218,
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen": {
-    "words": 3564,
+    "words": 3584,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham": {
@@ -125,23 +125,23 @@ export const readingMetadata = {
     "minutes": 20
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc": {
-    "words": 2735,
-    "minutes": 18
+    "words": 2787,
+    "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu": {
     "words": 2749,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may": {
-    "words": 3057,
-    "minutes": 20
+    "words": 3087,
+    "minutes": 21
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 2466,
-    "minutes": 10
+    "words": 3384,
+    "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi/bai-toan-tuong-duong": {
-    "words": 3984,
+    "words": 3993,
     "minutes": 27
   },
   "toan-cho-ai/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan": {
@@ -149,7 +149,7 @@ export const readingMetadata = {
     "minutes": 21
   },
   "toan-cho-ai/bai-02-tap-loi/toi-uu-tua-loi": {
-    "words": 3297,
+    "words": 3313,
     "minutes": 22
   },
   "toan-cho-ai/bai-02-tap-loi/quy-hoach-tuyen-tinh": {
@@ -177,7 +177,7 @@ export const readingMetadata = {
     "minutes": 16
   },
   "toan-cho-ai/bai-02-tap-loi/bai-toan-dang-non-va-sdp": {
-    "words": 2262,
+    "words": 2264,
     "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi/phan-bu-schur-va-bai-toan-tri-rieng": {
@@ -185,28 +185,28 @@ export const readingMetadata = {
     "minutes": 14
   },
   "toan-cho-ai/bai-02-tap-loi/toi-uu-vector-va-danh-doi": {
-    "words": 2306,
+    "words": 2314,
     "minutes": 15
   },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
-    "words": 3147,
-    "minutes": 15
+    "words": 4503,
+    "minutes": 25
   },
   "toan-cho-ai/bai-04-gradient-newton": {
-    "words": 1354,
-    "minutes": 5
+    "words": 1504,
+    "minutes": 10
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
-    "words": 1871,
+    "words": 1870,
     "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
-    "words": 2734,
+    "words": 2737,
     "minutes": 15
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
-    "words": 3663,
-    "minutes": 20
+    "words": 3469,
+    "minutes": 15
   },
   "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
     "words": 2549,

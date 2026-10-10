@@ -300,11 +300,40 @@ $$
 f_0(x) \le p^\star + \varepsilon \qquad (\varepsilon > 0).
 $$
 
+Vì đây là bài toán cực tiểu, mọi điểm khả thi đều có giá trị mục tiêu không nhỏ hơn $p^\star$. Khi $p^\star$ hữu hạn, điều kiện gần tối ưu vì thế có thể viết thành:
+
+$$
+\begin{aligned}
+p^\star &\le f_0(x), \\
+f_0(x) &\le p^\star + \varepsilon.
+\end{aligned}
+$$
+
+Trên trục giá trị mục tiêu, ta cần tìm một điểm khả thi có giá trị nằm trong đoạn từ $p^\star$ đến $p^\star+\varepsilon$, kể cả hai đầu mút. Điều kiện $f_0(x)\ge p^\star$ riêng lẻ chưa cho biết điểm đó đã đủ gần tối ưu hay chưa.
+
+::: example Phân biệt điểm đạt yêu cầu, vượt ngưỡng và không khả thi
+Xét bài toán cực tiểu $f_0(x)=x^2$ trên miền khả thi $\mathcal{X}=[1,3]$. Vì $x^2\ge 1$ trên miền này và dấu bằng đạt tại $x=1$, ta có $p^\star=1$. Chọn $\varepsilon=3$, khi đó ngưỡng chấp nhận là $p^\star+\varepsilon=4$.
+
+![Đoạn xanh từ 1 đến 4 chứa các giá trị gần tối ưu của điểm khả thi. Điểm B đạt yêu cầu, C vượt ngưỡng, còn A không khả thi.](../img/lec-01/epsilon-gan-toi-uu.svg)
+
+| Điểm $x$ | Giá trị $f_0(x)$ | Kết luận với $\varepsilon=3$ |
+| :---: | :---: | :--- |
+| $0.5$ (A) | $0.25$ | Không khả thi vì $x<1$, dù giá trị mục tiêu thấp hơn $p^\star$. |
+| $1$ | $1$ | Tối ưu, nên cũng gần tối ưu với sai số đã chọn. |
+| $1.5$ (B) | $2.25$ | Khả thi và gần tối ưu vì $2.25-1=1.25\le 3$. |
+| $2$ | $4$ | Khả thi và nằm đúng ngưỡng vì $4-1=3$. Dấu $\le$ cho phép trường hợp bằng. |
+| $2.5$ (C) | $6.25$ | Khả thi nhưng không gần tối ưu với sai số đã chọn vì $6.25-1=5.25>3$. |
+
+Với một điểm khả thi, trường hợp $f_0(x)<p^\star$ không thể xảy ra. Điểm A cho thấy vì sao ta phải kiểm tra ràng buộc trước khi so sánh giá trị mục tiêu với ngưỡng gần tối ưu.
+:::
+
 Khái niệm này đóng vai trò quyết định trong việc thiết lập **tiêu chí dừng (stopping criteria)** của các thuật toán: Nếu ta tìm được một chặn dưới lý thuyết $\ell \le p^\star$ (thường xuất phát từ bài toán đối ngẫu Lagrange) và một điểm khả thi $x$ thỏa mãn:
 $$
 f_0(x) - \ell \le \varepsilon,
 $$
 thì ta có thể khẳng định chắc chắn $100\%$ rằng điểm $x$ đang xét là $\varepsilon$-gần tối ưu, ngay cả khi ta chưa hề biết giá trị chính xác của $p^\star$!
+
+Trong ví dụ trên, $\ell=0$ là một chặn dưới hợp lệ. Tại điểm B, ta có $f_0(1.5)-\ell=2.25\le 3$, nên tiêu chí dừng chứng nhận được điểm này. Tại $x=2$, khoảng cách đến chặn dưới là $4>3$, dù điểm đó vẫn gần tối ưu với sai số đã chọn. Như vậy, tiêu chí dùng chặn dưới là điều kiện đủ. Nếu tiêu chí chưa thỏa, ta chưa thể kết luận điểm đang xét không gần tối ưu.
 
 Quay lại bài toán người cứu hộ: Vì $\sqrt{40^2 + x^2} \ge 40$ và $\sqrt{30^2 + (60 - x)^2} \ge 30$, nên mọi phương án di chuyển đều tốn ít nhất:
 $$

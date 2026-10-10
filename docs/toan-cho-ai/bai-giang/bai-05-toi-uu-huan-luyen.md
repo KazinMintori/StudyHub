@@ -320,6 +320,286 @@ Một tầng ẩn trong mạng nơ-ron sâu nhận 8 đầu vào ($n_{\mathrm{in
 Trọng số của tầng này cần được lấy mẫu ngẫu nhiên từ phân phối $U[-0.7071, 0.7071]$.
 :::
 
+::: exercise 4. Phân tích thống kê: Kỳ vọng, hiệp phương sai và nhiễu của gradient mini-batch
+Cho tập dữ liệu huấn luyện gồm $N$ mẫu quan sát $\{z_1, \dots, z_N\}$. Hàm mất mát thực nghiệm trên toàn bộ tập dữ liệu là:
+$$
+f(\theta) = \frac{1}{N} \sum_{i=1}^N \ell(\theta, z_i).
+$$
+Tại mỗi bước lặp, thuật toán Mini-batch SGD chọn ngẫu nhiên đồng đều không hoàn lại một tập chỉ số $B \subset \{1, \dots, N\}$ gồm $|B| = m$ mẫu ($1 \le m \le N$), và tính gradient xấp xỉ:
+$$
+g_B(\theta) = \frac{1}{m} \sum_{i \in B} \nabla_\theta \ell(\theta, z_i).
+$$
+1. Chứng minh rằng $g_B(\theta)$ là một ước lượng không chệch của gradient toàn thể $\nabla f(\theta)$: $\mathbb{E}[g_B(\theta)] = \nabla f(\theta)$.
+2. Giả sử gradient của từng mẫu đơn lẻ có ma trận hiệp phương sai bị chặn: $\operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big) \preceq \sigma^2 I$. Trong trường hợp lấy mẫu độc lập có hoàn lại, hãy tính ma trận hiệp phương sai của $g_B(\theta)$ theo kích thước lô $m$.
+3. Nêu ý nghĩa của tỉ số tín hiệu trên nhiễu (SNR) của gradient: Tại sao khi tăng kích thước lô $m$ lên 4 lần thì độ lệch chuẩn của nhiễu chỉ giảm đi 2 lần?
+:::
+
+::: solution
+1. **Tính không chệch của gradient mini-batch**:
+   Đặt biến ngẫu nhiên chỉ thị $I_i = \mathbb{I}(i \in B)$.
+   Xác suất để một mẫu thứ $i$ bất kỳ lọt vào lô kích thước $m$ là:
+   $$
+   \mathbb{P}(i \in B) = \frac{m}{N} \implies \mathbb{E}[I_i] = \frac{m}{N}.
+   $$
+   Gradient mini-batch được viết lại dưới dạng:
+   $$
+   g_B(\theta) = \frac{1}{m} \sum_{i=1}^N I_i \nabla \ell(\theta, z_i).
+   $$
+   Lấy kỳ vọng toán học theo phân phối chọn mẫu:
+   $$
+   \begin{aligned}
+   \mathbb{E}[g_B(\theta)] &= \frac{1}{m} \sum_{i=1}^N \mathbb{E}[I_i] \nabla \ell(\theta, z_i) \\
+   &= \frac{1}{m} \sum_{i=1}^N \left(\frac{m}{N}\right) \nabla \ell(\theta, z_i) \\
+   &= \frac{1}{N} \sum_{i=1}^N \nabla \ell(\theta, z_i) = \nabla f(\theta).
+   \end{aligned}
+   $$
+   Đẳng thức này khẳng định $g_B(\theta)$ là một ước lượng không chệch của gradient chân thực.
+
+2. **Ma trận hiệp phương sai của gradient**:
+   Khi các mẫu trong lô được rút độc lập có hoàn lại (i.i.d.), các biến ngẫu nhiên $\nabla \ell(\theta, z_i)$ là độc lập cùng phân phối.
+   Hiệp phương sai của tổng các biến độc lập bằng tổng các hiệp phương sai:
+   $$
+   \begin{aligned}
+   \operatorname{Cov}\big(g_B(\theta)\big) &= \operatorname{Cov}\left(\frac{1}{m} \sum_{i \in B} \nabla \ell(\theta, z_i)\right) \\
+   &= \frac{1}{m^2} \sum_{i \in B} \operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big) \\
+   &\preceq \frac{1}{m^2} \big(m \sigma^2 I\big) = \frac{\sigma^2}{m} I.
+   \end{aligned}
+   $$
+   Phương sai của vector gradient tỷ lệ nghịch chính xác với kích thước lô $m$.
+
+3. **Ý nghĩa của tỉ số tín hiệu trên nhiễu (SNR)**:
+   Tín hiệu định hướng của gradient là vector kỳ vọng $\|\nabla f(\theta)\|_2$, trong khi độ lớn của nhiễu ngẫu nhiên được đo bằng độ lệch chuẩn:
+   $$
+   \text{Độ lệch chuẩn nhiễu} = \sqrt{\operatorname{Tr}(\operatorname{Cov})} \propto \frac{\sigma}{\sqrt{m}}.
+   $$
+   Tỉ số tín hiệu trên nhiễu tăng theo quy luật căn bậc hai $\sqrt{m}$:
+   $$
+   \text{SNR} = \frac{\|\nabla f(\theta)\|_2}{\sigma / \sqrt{m}} \propto \sqrt{m}.
+   $$
+   Do đó, muốn giảm một nửa biên độ dao động ngẫu nhiên của bước nhảy gradient, ta bắt buộc phải tăng gấp bốn lần chi phí tính toán của mỗi lô ($m \to 4m$). Đây chính là nguyên nhân kinh tế và tính toán khiến các kích thước lô vừa phải ($m \in [32, 256]$) trở thành tiêu chuẩn vàng trong huấn luyện học sâu thực tế.
+:::
+
+::: exercise 5. Bất đẳng thức bước giảm (Descent Lemma) và tốc độ hội tụ của SGD
+Cho hàm mục tiêu $f: \mathbb{R}^d \to \mathbb{R}$ khả vi và có gradient thỏa mãn điều kiện Lipschitz với hằng số $L > 0$:
+$$
+\|\nabla f(x) - \nabla f(y)\|_2 \le L \|x - y\|_2 \quad \forall x, y \in \mathbb{R}^d.
+$$
+1. Bổ đề giảm bước (Descent Lemma): Chứng minh rằng với mọi $x, y \in \mathbb{R}^d$, ta luôn có bất đẳng thức bậc hai chặn trên:
+   $$
+   f(y) \le f(x) + \nabla f(x)^T (y - x) + \frac{L}{2}\|y - x\|_2^2.
+   $$
+2. Xét bước cập nhật hạ gradient ngẫu nhiên: $\theta_{t+1} = \theta_t - \eta g_t$, với $\mathbb{E}[g_t \mid \theta_t] = \nabla f(\theta_t)$ và $\mathbb{E}[\|g_t\|_2^2 \mid \theta_t] \le G^2$. Chứng minh rằng:
+   $$
+   \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] \le f(\theta_t) - \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L G^2}{2}.
+   $$
+3. Nếu chọn tốc độ học cố định $\eta < \frac{2}{L}$, hãy giải thích tại sao SGD không hội tụ về điểm dừng chính xác $\nabla f(\theta) = 0$ mà chỉ dao động quanh một quả cầu sai số phụ thuộc vào phương sai nhiễu $G^2$.
+:::
+
+::: solution
+1. **Chứng minh Descent Lemma**:
+   Theo định lý cơ bản của giải tích vi tích phân:
+   $$
+   f(y) - f(x) = \int_0^1 \nabla f\big(x + \tau (y - x)\big)^T (y - x) \, \mathrm{d}\tau.
+   $$
+   Cộng và trừ số hạng $\nabla f(x)^T (y - x)$:
+   $$
+   f(y) - f(x) - \nabla f(x)^T (y - x) = \int_0^1 \Big[\nabla f\big(x + \tau (y - x)\big) - \nabla f(x)\Big]^T (y - x) \, \mathrm{d}\tau.
+   $$
+   Áp dụng bất đẳng thức Cauchy-Schwarz và tính chất Lipschitz của gradient:
+   $$
+   \begin{aligned}
+   \left|f(y) - f(x) - \nabla f(x)^T (y - x)\right| &\le \int_0^1 \left\|\nabla f\big(x + \tau(y - x)\big) - \nabla f(x)\right\|_2 \|y - x\|_2 \, \mathrm{d}\tau \\
+   &\le \int_0^1 L \tau \|y - x\|_2^2 \, \mathrm{d}\tau = L \|y - x\|_2^2 \left[\frac{\tau^2}{2}\right]_0^1 = \frac{L}{2}\|y - x\|_2^2.
+   \end{aligned}
+   $$
+   Bỏ dấu giá trị tuyệt đối ta thu được bất đẳng thức bước giảm cần chứng minh.
+
+2. **Kỳ vọng bước giảm của SGD**:
+   Thay $x = \theta_t$ và $y = \theta_{t+1} = \theta_t - \eta g_t$ vào Descent Lemma:
+   $$
+   f(\theta_{t+1}) \le f(\theta_t) - \eta \nabla f(\theta_t)^T g_t + \frac{\eta^2 L}{2}\|g_t\|_2^2.
+   $$
+   Lấy kỳ vọng có điều kiện theo trạng thái hiện tại $\theta_t$:
+   $$
+   \begin{aligned}
+   \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] &\le f(\theta_t) - \eta \nabla f(\theta_t)^T \mathbb{E}[g_t \mid \theta_t] + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t] \\
+   &= f(\theta_t) - \eta \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t].
+   \end{aligned}
+   $$
+   Tách $\mathbb{E}[\|g_t\|_2^2] = \|\nabla f(\theta_t)\|_2^2 + \sigma^2 \le G^2$:
+   $$
+   \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] \le f(\theta_t) - \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L G^2}{2}.
+   $$
+
+3. **Phân tích quả cầu sai số của SGD**:
+   Khi chọn tốc độ học cố định $\eta < 2/L$, hệ số giảm $c = \eta(1 - \eta L/2) > 0$.
+   Tuy nhiên, luôn tồn tại số hạng nhiễu dương $\frac{\eta^2 L G^2}{2} > 0$.
+   Hàm mục tiêu chỉ được bảo đảm giảm khi:
+   $$
+   \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 > \frac{\eta^2 L G^2}{2} \iff \|\nabla f(\theta_t)\|_2^2 > \frac{\eta L G^2}{2 - \eta L}.
+   $$
+   Khi mô hình tiến gần tới cực tiểu và gradient triệt tiêu dần, lực giảm của gradient bị áp đảo hoàn toàn bởi nhiễu ngẫu nhiên. Thuật toán không thể đứng yên mà sẽ dao động vĩnh viễn trong một lân cận bán kính $O(\sqrt{\eta G^2})$. Để hội tụ về đúng điểm dừng, ta bắt buộc phải giảm dần tốc độ học theo thời gian (learning rate decay, ví dụ $\eta_t = O(1/\sqrt{t})$).
+:::
+
+::: exercise 6. Cơ chế nhìn trước (Look-ahead) của Nesterov Accelerated Gradient (NAG)
+Xét hàm toàn phương một chiều:
+$$
+f(\theta) = \frac{1}{2}\theta^2.
+$$
+Giả sử tại bước lặp hiện tại, vị trí là $\theta = 1$ và vận tốc quán tính tích lũy là $v = 1$. Tốc độ học là $\eta = 0{,}1$ và hệ số quán tính là $\mu = 0{,}9$.
+1. Tính bước cập nhật theo thuật toán Polyak Heavy-Ball Momentum:
+   - Tính gradient tại điểm hiện tại $g = f'(\theta)$.
+   - Cập nhật vận tốc mới $v_{\text{Polyak}} = \mu v - \eta g$ và vị trí mới $\theta_{\text{Polyak}} = \theta + v_{\text{Polyak}}$.
+2. Tính bước cập nhật theo thuật toán Nesterov Accelerated Gradient (NAG):
+   - Tính vị trí nhìn trước $\theta_{\text{look}} = \theta + \mu v$.
+   - Tính gradient tại vị trí nhìn trước $g_{\text{look}} = f'(\theta_{\text{look}})$.
+   - Cập nhật vận tốc mới $v_{\text{NAG}} = \mu v - \eta g_{\text{look}}$ và vị trí mới $\theta_{\text{NAG}} = \theta + v_{\text{NAG}}$.
+3. So sánh hai kết quả và giải thích cơ chế "hãm đà thông minh" của Nesterov giúp ngăn chặn hiện tượng trượt quá đà (overshooting).
+:::
+
+::: solution
+1. **Thuật toán Polyak Momentum**:
+   - Vị trí hiện tại: $\theta = 1$, vận tốc cũ $v = 1$.
+   - Gradient tại vị trí hiện tại:
+     $$
+     g = f'(1) = 1.
+     $$
+   - Cập nhật vận tốc mới:
+     $$
+     v_{\text{Polyak}} = \mu v - \eta g = 0{,}9(1) - 0{,}1(1) = 0{,}9 - 0{,}1 = 0{,}8.
+     $$
+   - Cập nhật vị trí mới:
+     $$
+     \theta_{\text{Polyak}} = \theta + v_{\text{Polyak}} = 1 + 0{,}8 = 1{,}8.
+     $$
+   Nhận xét: Vị trí mới $\theta = 1{,}8$ bị đẩy ra xa cực tiểu $\theta^* = 0$ hơn so với vị trí ban đầu $\theta = 1$ do quán tính quá lớn.
+
+2. **Thuật toán Nesterov (NAG)**:
+   - Điểm nhìn trước (Look-ahead point):
+     $$
+     \theta_{\text{look}} = \theta + \mu v = 1 + 0{,}9(1) = 1{,}9.
+     $$
+   - Gradient tại điểm nhìn trước:
+     $$
+     g_{\text{look}} = f'(1{,}9) = 1{,}9.
+     $$
+   - Cập nhật vận tốc mới:
+     $$
+     v_{\text{NAG}} = \mu v - \eta g_{\text{look}} = 0{,}9(1) - 0{,}1(1{,}9) = 0{,}9 - 0{,}19 = 0{,}71.
+     $$
+   - Cập nhật vị trí mới:
+     $$
+     \theta_{\text{NAG}} = \theta + v_{\text{NAG}} = 1 + 0{,}71 = 1{,}71.
+     $$
+
+3. **Bản chất cơ chế hãm đà của Nesterov**:
+   - Polyak tính gradient tại điểm cũ ($\theta = 1$) nên chỉ nhận được lực kéo về là $0{,}1$, khiến vận tốc sau khi trừ vẫn còn rất lớn ($0{,}8$).
+   - Nesterov chủ động phóng tầm mắt tới vị trí mà quán tính sẽ đưa hạt vật chất tới ($\theta_{\text{look}} = 1{,}9$). Tại đó, độ dốc vách núi dốc hơn nhiều ($g_{\text{look}} = 1{,}9$), sinh ra một lực phanh ngược chiều mạnh hơn ($0{,}19$).
+   - Nhờ lực phanh này, vận tốc của Nesterov bị triệt tiêu bớt ($0{,}71 < 0{,}8$), giúp hạt vật chất dừng lại sớm hơn và giảm thiểu chấn động dao động quanh điểm cực tiểu.
+:::
+
+::: exercise 7. Khởi tạo He (Kaiming) cho hàm kích hoạt ReLU và sự bảo toàn phương sai
+Xét một tầng tuyến tính trong mạng nơ-ron: $y = W x$, trong đó $x \in \mathbb{R}^{n_{\text{in}}}$ là đầu vào, $W \in \mathbb{R}^{n_{\text{out}} \times n_{\text{in}}}$ là ma trận trọng số, và các phần tử $W_{ij}$ độc lập cùng phân phối với kỳ vọng bằng $0$ và phương sai $\operatorname{Var}(W)$. Ngay sau đó là hàm kích hoạt phi tuyến ReLU: $z = \operatorname{ReLU}(y) = \max(0, y)$.
+1. Giả sử biến ngẫu nhiên đối xứng $y_i$ có phân phối chuẩn $\mathcal{N}(0, \sigma_y^2)$. Chứng minh rằng:
+   $$
+   \mathbb{E}[z_i^2] = \frac{1}{2}\sigma_y^2.
+   $$
+2. Để bảo toàn phương sai của tín hiệu qua các tầng mạng sâu ($\operatorname{Var}(z_i) = \operatorname{Var}(x_j)$), hãy chứng minh công thức khởi tạo He (Kaiming):
+   $$
+   \operatorname{Var}(W) = \frac{2}{n_{\text{in}}}.
+   $$
+3. Giải thích tại sao nếu dùng công thức Glorot $\operatorname{Var}(W) = \frac{2}{n_{\text{in}} + n_{\text{out}}}$ cho mạng sâu dùng ReLU, phương sai tín hiệu sẽ bị triệt tiêu theo cấp số nhân qua từng tầng.
+:::
+
+::: solution
+1. **Kỳ vọng bình phương qua hàm kích hoạt ReLU**:
+   Biến ngẫu nhiên $y_i \sim \mathcal{N}(0, \sigma_y^2)$ có hàm mật độ xác suất đối xứng quanh $0$: $p(y) = p(-y)$.
+   Biến đổi qua ReLU: $z_i = \max(0, y_i)$.
+   Kỳ vọng bình phương được tính bằng tích phân:
+   $$
+   \mathbb{E}[z_i^2] = \int_{-\infty}^{+\infty} \max(0, y)^2 p(y) \, \mathrm{d}y = \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y.
+   $$
+   Do tính đối xứng của hàm mật độ chuẩn:
+   $$
+   \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y = \frac{1}{2} \int_{-\infty}^{+\infty} y^2 p(y) \, \mathrm{d}y = \frac{1}{2}\mathbb{E}[y_i^2] = \frac{1}{2}\sigma_y^2.
+   $$
+   Hàm kích hoạt ReLU triệt tiêu đúng một nửa năng lượng tín hiệu ở phần âm.
+
+2. **Thiết lập công thức khởi tạo He (Kaiming)**:
+   Xét thành phần thứ $i$ của đầu ra tuyến tính $y_i = \sum_{j=1}^{n_{\text{in}}} W_{ij} x_j$.
+   Vì $W_{ij}$ và $x_j$ độc lập, kỳ vọng $\mathbb{E}[W_{ij}] = 0$:
+   $$
+   \operatorname{Var}(y_i) = \sum_{j=1}^{n_{\text{in}}} \operatorname{Var}(W_{ij} x_j) = n_{\text{in}} \operatorname{Var}(W) \mathbb{E}[x_j^2].
+   $$
+   Kế tiếp, qua tầng ReLU, theo kết quả câu 1:
+   $$
+   \mathbb{E}[z_i^2] = \frac{1}{2}\operatorname{Var}(y_i) = \frac{1}{2} n_{\text{in}} \operatorname{Var}(W) \mathbb{E}[x_j^2].
+   $$
+   Để năng lượng tín hiệu không bị co cụm hay bùng nổ qua từng tầng ($\mathbb{E}[z_i^2] = \mathbb{E}[x_j^2]$), ta cần hệ số nhân bằng đúng 1:
+   $$
+   \frac{1}{2} n_{\text{in}} \operatorname{Var}(W) = 1 \implies \operatorname{Var}(W) = \frac{2}{n_{\text{in}}}.
+   $$
+   Đây chính là công thức khởi tạo He (Kaiming Initialization) nổi tiếng.
+
+3. **Hậu quả khi dùng nhầm khởi tạo Glorot cho ReLU**:
+   Khởi tạo Glorot được thiết kế cho các hàm kích hoạt tuyến tính hoặc sigmoid/tanh đối xứng quanh gốc tọa độ, với giả định tín hiệu không bị mất năng lượng qua hàm kích hoạt ($\mathbb{E}[z^2] \approx \mathbb{E}[y^2]$), dẫn tới hệ số $\operatorname{Var}(W) \approx \frac{1}{n_{\text{in}}}$.
+   Nếu áp dụng công thức này cho mạng ReLU:
+   $$
+   \mathbb{E}[z^2] = \frac{1}{2} n_{\text{in}} \left(\frac{1}{n_{\text{in}}}\right) \mathbb{E}[x^2] = \frac{1}{2}\mathbb{E}[x^2].
+   $$
+   Qua mỗi tầng mạng, phương sai của tín hiệu bị giảm đi một nửa. Qua $L = 50$ tầng tích chập hoặc tầng ẩn, năng lượng tín hiệu bị suy giảm theo tỉ lệ:
+   $$
+   \left(\frac{1}{2}\right)^{50} \approx 8{,}88 \times 10^{-16}.
+   $$
+   Tín hiệu lan truyền xuôi và gradient lan truyền ngược bị triệt tiêu hoàn toàn về 0, khiến mạng sâu không thể học được bất cứ điều gì.
+:::
+
+::: exercise 8. Bất đẳng thức tập trung Chebyshev và Hoeffding trong kiểm soát sai số mini-batch
+Khi huấn luyện mô hình phân loại trên tập dữ liệu kích thước lớn, ta dùng gradient lô nhỏ $g_m = \frac{1}{m}\sum_{i=1}^m X_i$ để xấp xỉ gradient toàn thể $\mu = \mathbb{E}[X_i]$. Giả sử mỗi thành phần của gradient đơn lẻ bị chặn trong đoạn $[-1, 1]$, và phương sai thành phần là $\sigma^2 = 0{,}25$.
+1. Áp dụng Bất đẳng thức Chebyshev: Cần kích thước lô $m$ tối thiểu là bao nhiêu để xác suất sai số $|g_m - \mu| \ge 0{,}1$ không vượt quá $5\%$ ($\delta = 0{,}05$)?
+2. Áp dụng Bất đẳng thức Hoeffding: Với cùng sai số $\epsilon = 0{,}1$ và độ tin cậy $95\%$ ($\delta = 0{,}05$), hãy tính kích thước lô $m$ theo cận hàm mũ.
+3. So sánh hai kết quả và giải thích tại sao bất đẳng thức Hoeffding mang lại cận kích thước mẫu vượt trội hơn khi yêu cầu độ tin cậy cực cao ($\delta \to 0$).
+:::
+
+::: solution
+1. **Áp dụng Bất đẳng thức Chebyshev**:
+   Kỳ vọng của trung bình mẫu là $\mathbb{E}[g_m] = \mu$, và phương sai là $\operatorname{Var}(g_m) = \frac{\sigma^2}{m} = \frac{0{,}25}{m}$.
+   Bất đẳng thức Chebyshev phát biểu rằng với mọi $\epsilon > 0$:
+   $$
+   \mathbb{P}(|g_m - \mu| \ge \epsilon) \le \frac{\operatorname{Var}(g_m)}{\epsilon^2} = \frac{\sigma^2}{m \epsilon^2}.
+   $$
+   Yêu cầu xác suất vi phạm không vượt quá $\delta = 0{,}05$:
+   $$
+   \frac{0{,}25}{m (0{,}1)^2} \le 0{,}05 \iff \frac{0{,}25}{0{,}01 m} \le 0{,}05 \iff \frac{25}{m} \le 0{,}05 \implies m \ge \frac{25}{0{,}05} = 500.
+   $$
+   Theo Chebyshev, cần kích thước lô ít nhất $m = 500$ mẫu.
+
+2. **Áp dụng Bất đẳng thức Hoeffding**:
+   Vì mỗi biến ngẫu nhiên $X_i$ bị chặn trong đoạn $[a_i, b_i] = [-1, 1]$, độ dài khoảng chặn là $b_i - a_i = 1 - (-1) = 2$.
+   Bất đẳng thức Hoeffding cho biến ngẫu nhiên độc lập bị chặn:
+   $$
+   \mathbb{P}(|g_m - \mu| \ge \epsilon) \le 2 \exp\left(-\frac{2 m^2 \epsilon^2}{\sum_{i=1}^m (b_i - a_i)^2}\right) = 2 \exp\left(-\frac{2 m^2 \epsilon^2}{m \times 2^2}\right) = 2 \exp\left(-\frac{m \epsilon^2}{2}\right).
+   $$
+   Yêu cầu cận trên không vượt quá $\delta = 0{,}05$:
+   $$
+   2 \exp\left(-\frac{m (0{,}1)^2}{2}\right) \le 0{,}05 \iff \exp(-0{,}005 m) \le 0{,}025.
+   $$
+   Lấy logarit tự nhiên hai vế:
+   $$
+   -0{,}005 m \le \log(0{,}025) \approx -3{,}6889 \implies m \ge \frac{3{,}6889}{0{,}005} \approx 737{,}8.
+   $$
+   Làm tròn lên, ta cần $m \ge 738$ mẫu.
+
+3. **So sánh bản chất của hai bất đẳng thức**:
+   - Khi độ tin cậy ở mức thông thường ($\delta = 0{,}05$), Chebyshev có thể cho cận số học nhỏ hơn nếu phương sai thực tế $\sigma^2 = 0{,}25$ nhỏ hơn nhiều so với độ rộng khoảng chặn ($[-1, 1]$ có biên độ tối đa cho phép phương sai lên tới $1$).
+   - Tuy nhiên, sự khác biệt then chốt nằm ở tốc độ suy giảm theo xác suất lỗi $\delta$:
+     - Cận kích thước mẫu của Chebyshev tỷ lệ với $\frac{1}{\delta}$ (suy giảm dạng đa thức chậm). Nếu đòi hỏi $\delta = 10^{-6}$, Chebyshev đòi hỏi $m \ge \frac{25}{10^{-6}} = 25.000.000$ mẫu.
+     - Cận kích thước mẫu của Hoeffding tỷ lệ với $\log(1/\delta)$ (suy giảm dạng hàm mũ). Với $\delta = 10^{-6}$, Hoeffding chỉ đòi hỏi $m \ge \frac{2 \log(2 \times 10^6)}{0{,}01} \approx \frac{2 \times 14{,}5}{0{,}01} = 2900$ mẫu.
+   
+   Bất đẳng thức Hoeffding khai thác triệt để phân phối đuôi mỏng hàm mũ (sub-Gaussian tails), tạo nền tảng vững chắc cho lý thuyết học thống kê (PAC learning) và cận khái quát hóa trong trí tuệ nhân tạo.
+:::
+
+
 ---
 
 ## Tóm tắt cốt lõi
