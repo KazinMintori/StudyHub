@@ -5,6 +5,11 @@ const slide = (note, title, bullets, formula = '', example = '') => ({ note, tit
 const topic = (slug, title, question, source = '') => ({ slug, title, question, source })
 const group = (title, description, topics) => ({ title, description, topics })
 const topicGroups = {
+  'bai-00-on-tap-nen-tang': [
+    group('I. Hệ phương trình và giải tích ma trận', 'Giải hệ thiếu xác định, bổ đề Woodbury và vi phân hàm ma trận trong học máy.', [
+      topic('he-thieu-xac-dinh-va-giai-tich-ma-tran', 'Hệ Tuyến Tính Thiếu Xác Định và Giải Tích Ma Trận', 'Trong vô số nghiệm của hệ thiếu xác định, nghiệm nào có chuẩn nhỏ nhất và tính thưa cao nhất?', '§C.5, §A.5')
+    ])
+  ],
   'bai-01-nhap-mon-toi-uu': [
     group('I. Bài toán tối ưu', 'Viết đúng một bài toán trước khi nghĩ tới chuyện giải nó.', [
       topic('bai-toan-toi-uu', 'Bài toán tối ưu và những gì cần viết ra', 'Muốn nói một phương án là tốt nhất, ta phải mô tả chính xác những đối tượng nào?', '§1.1, §4.1.1'),
@@ -64,9 +69,25 @@ const topicGroups = {
     ]),
     group('VI. Tối ưu vector', 'Khi phải cân nhiều mục tiêu cùng lúc, câu trả lời là cả một đường đánh đổi chứ không phải một điểm.', [
       topic('toi-uu-vector-va-danh-doi', 'Tối ưu vector, điểm Pareto và đường đánh đổi', 'Khi sai số nhỏ và tham số nhỏ là hai mục tiêu cùng lúc, thế nào là một lựa chọn tốt?', '§4.7, §6.3')
+    ]),
+    group('VII. Xấp xỉ, khớp hàm và ước lượng thống kê', 'Tìm hàm xấp xỉ tối ưu, thiết kế bộ phát hiện và chặn xác suất rủi ro bằng tối ưu lồi.', [
+      topic('khop-ham-va-noi-suy', 'Khớp hàm, làm mượt spline và nội suy lồi', 'Làm thế nào tìm một hàm lồi khớp mượt mà với dữ liệu quan sát mà không làm mất tính lồi?', '§6.5'),
+      topic('uoc-luong-phi-tham-so-va-kiem-dinh', 'Ước lượng phi tham số và thiết kế bộ phát hiện', 'Khi không biết dạng phân phối xác suất, làm sao thiết kế bộ phát hiện tối ưu qua LP?', '§7.2–7.3'),
+      topic('can-chebyshev-va-chernoff', 'Cận xác suất Chebyshev, Chernoff và tối ưu hóa ma trận', 'Làm thế nào chặn trên xác suất đuôi và ngoại lai qua bài toán SDP và biến đổi Legendre?', '§7.4')
+    ]),
+    group('VIII. Quy hoạch mặt bằng', 'Bài toán bố trí không gian hình học và tối ưu hóa diện tích qua quy hoạch hình học.', [
+      topic('quy-hoach-mat-bang', 'Quy hoạch mặt bằng và phân bổ không gian tối ưu', 'Làm thế nào tối ưu kích thước linh kiện và dây nối mà vẫn bảo toàn tỷ lệ khung hình?', '§8.8')
+    ])
+  ],
+  'bai-04-gradient-newton': [
+    group('I. Phương pháp điểm trong nâng cao', 'Khởi tạo khả thi qua Pha I, độ phức tạp trên nón chính quy và thuật toán Primal-Dual.', [
+      topic('phuong-phap-pha-1-va-khoi-tao', 'Phương pháp Pha I và tìm điểm khả thi khởi đầu', 'Khi không có sẵn điểm xuất phát khả thi nghiêm ngặt, làm sao bắt đầu phương pháp điểm trong?', '§11.4'),
+      topic('do-phuc-tap-va-bat-dang-thuc-tong-quat', 'Độ phức tạp và điểm trong trên nón chính quy', 'Phương pháp điểm trong cần chính xác bao nhiêu bước lặp Newton và mở rộng cho nón Lorentz/PSD thế nào?', '§11.5–11.6'),
+      topic('phuong-phap-primal-dual', 'Phương pháp Điểm trong Primal-Dual', 'Vì sao cập nhật đồng thời biến nguyên thủy và đối ngẫu lại vượt trội hơn phương pháp hàm chắn truyền thống?', '§11.7–11.8')
     ])
   ]
 }
+
 const slugs = ['bai-00-on-tap-nen-tang', 'bai-01-nhap-mon-toi-uu', 'bai-02-tap-loi', 'bai-03-doi-ngau-lagrange', 'bai-04-gradient-newton', 'bai-05-toi-uu-huan-luyen', 'bai-06-phuong-phap-thich-nghi', 'bai-07-quy-hoach-tuyen-tinh-va-dong']
 const titles = ['Ôn tập nền tảng toán học cho AI', 'Giới thiệu tối ưu, tập lồi và hàm lồi', 'Các bài toán tối ưu lồi', 'Đối ngẫu Lagrange', 'Tối ưu không ràng buộc và ràng buộc đẳng thức', 'Các phương pháp tối ưu trong huấn luyện mô hình học sâu', 'Các phương pháp tối ưu trong học sâu', 'Quy hoạch tuyến tính và quy hoạch động']
 const prerequisites = [

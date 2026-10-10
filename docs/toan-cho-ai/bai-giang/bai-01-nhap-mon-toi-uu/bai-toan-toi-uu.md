@@ -37,80 +37,13 @@ Chọn hệ trục tọa độ với trục hoành $Ox$ trùng với đường b
 - Vị trí người bị nạn: Điểm $B(60, -30)$ dưới nước ($y < 0$).
 - Vị trí tiếp nước: Điểm rẽ $P(x, 0)$ trên đường bờ biển với hoành độ $0 \le x \le 60$.
 
-<div class="studyhub-figure" style="margin: 24px 0; text-align: center;">
-<svg viewBox="0 0 760 380" width="100%" height="auto" style="max-width: 760px; background: var(--vp-c-bg-soft, #f8fafc); border-radius: 8px; border: 1px solid var(--vp-c-divider, #e2e8f0); font-family: inherit;">
-  <!-- Vùng bãi cát -->
-  <rect x="0" y="0" width="760" height="190" fill="#fef3c7" fill-opacity="0.5" />
-  <text x="30" y="40" font-size="14" font-weight="600" fill="#92400e">BÃI CÁT (Môi trường 1: Chạy nhanh, v₁ = 5 m/s)</text>
-  
-  <!-- Vùng nước biển -->
-  <rect x="0" y="190" width="760" height="190" fill="#e0f2fe" fill-opacity="0.6" />
-  <text x="30" y="350" font-size="14" font-weight="600" fill="#0369a1">MẶT NƯỚC (Môi trường 2: Bơi chậm, v₂ = 1.5 m/s)</text>
-  
-  <!-- Đường bờ biển -->
-  <line x1="20" y1="190" x2="740" y2="190" stroke="#0284c7" stroke-width="2.5" />
-  <text x="680" y="180" font-size="13" font-weight="600" fill="#0284c7">Bờ biển (Ox)</text>
-  
-  <!-- Điểm gốc O và đường nét đứt AO -->
-  <line x1="120" y1="70" x2="120" y2="190" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,4" />
-  <circle cx="120" cy="190" r="3.5" fill="#64748b" />
-  <text x="105" y="210" font-size="13" font-weight="600" fill="#64748b">O(0, 0)</text>
-  <text x="80" y="135" font-size="13" font-weight="500" fill="#475569">40 m</text>
-  
-  <!-- Điểm A -->
-  <circle cx="120" cy="70" r="5.5" fill="#dc2626" />
-  <text x="40" y="65" font-size="14" font-weight="700" fill="#b91c1c">A(0, 40) Người cứu hộ</text>
-  
-  <!-- Hình chiếu HB và đường nét đứt B-HB -->
-  <line x1="640" y1="190" x2="640" y2="295" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,4" />
-  <circle cx="640" cy="190" r="3.5" fill="#64748b" />
-  <text x="645" y="210" font-size="13" font-weight="600" fill="#64748b">(60, 0)</text>
-  <text x="650" y="250" font-size="13" font-weight="500" fill="#475569">30 m</text>
-  
-  <!-- Điểm B -->
-  <circle cx="640" cy="295" r="5.5" fill="#0284c7" />
-  <text x="500" y="325" font-size="14" font-weight="700" fill="#0369a1">B(60, -30) Người gặp nạn</text>
-  
-  <!-- Đường thẳng ngắn nhất AB (nét đứt mờ) -->
-  <line x1="120" y1="70" x2="640" y2="295" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4" />
-  <text x="350" y="160" font-size="12" fill="#64748b" transform="rotate(23, 350, 160)">Đường thẳng AB (~36.88 s)</text>
-  
-  <!-- Điểm rẽ tiếp nước P(x, 0) -->
-  <!-- Tỉ lệ: 120 -> 640 là 520px cho 60m => 8.667 px/m. x ≈ 52.6m => 120 + 456 ≈ 576 -->
-  <circle cx="576" cy="190" r="5.5" fill="#d97706" />
-  <text x="545" y="175" font-size="14" font-weight="700" fill="#b45309">P(x, 0)</text>
-  
-  <!-- Lộ trình AP (Chạy) -->
-  <line x1="120" y1="70" x2="576" y2="190" stroke="#ea580c" stroke-width="3" />
-  <text x="310" y="115" font-size="13" font-weight="600" fill="#ea580c">Chạy trên cát: |AP| (v₁ = 5 m/s)</text>
-  
-  <!-- Lộ trình PB (Bơi) -->
-  <line x1="576" y1="190" x2="640" y2="295" stroke="#2563eb" stroke-width="3" />
-  <text x="615" y="270" font-size="13" font-weight="600" fill="#2563eb">Bơi: |PB| (v₂ = 1.5 m/s)</text>
-  
-  <!-- Đường pháp tuyến tại P -->
-  <line x1="576" y1="120" x2="576" y2="260" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" />
-  
-  <!-- Ký hiệu các góc theta 1 và theta 2 -->
-  <path d="M 576 150 A 40 40 0 0 0 545 156" fill="none" stroke="#ea580c" stroke-width="1.5" />
-  <text x="550" y="145" font-size="12" font-weight="600" fill="#ea580c">θ₁</text>
-  <path d="M 576 230 A 40 40 0 0 0 595 224" fill="none" stroke="#2563eb" stroke-width="1.5" />
-  <text x="585" y="245" font-size="12" font-weight="600" fill="#2563eb">θ₂</text>
-  
-  <!-- Kích thước x và 60 - x -->
-  <line x1="120" y1="215" x2="576" y2="215" stroke="#b45309" stroke-width="1.5" marker-start="none" />
-  <line x1="120" y1="210" x2="120" y2="220" stroke="#b45309" stroke-width="1.5" />
-  <line x1="576" y1="210" x2="576" y2="220" stroke="#b45309" stroke-width="1.5" />
-  <text x="330" y="232" font-size="13" font-weight="600" fill="#b45309">Khoảng cách x</text>
-  
-  <line x1="576" y1="215" x2="640" y2="215" stroke="#475569" stroke-width="1.5" />
-  <line x1="640" y1="210" x2="640" y2="220" stroke="#475569" stroke-width="1.5" />
-  <text x="590" y="232" font-size="12" font-weight="500" fill="#475569">60 - x</text>
-</svg>
-<div style="font-size: 13px; color: var(--vp-c-text-2, #64748b); margin-top: 6px;">
-  <strong>Hình 1.1:</strong> Sơ đồ hình học bài toán Người cứu hộ. Lộ trình tối ưu $A \to P \to B$ tạo thành các góc $\theta_1, \theta_2$ so với pháp tuyến tại vị trí tiếp nước $P(x, 0)$.
+<div class="studyhub-figure" style="max-width: 520px; margin: 24px auto 16px;">
+  <img src="../img/lec-01/nguoi-cuu-ho.svg" alt="Người cứu hộ chạy từ A tới điểm tiếp nước P rồi bơi tới B. Hai góc tại P được đo với pháp tuyến của bờ biển." width="420" height="500" style="display: block; width: 100%; height: auto;" />
 </div>
-</div>
+
+**Hình 1.1: Lộ trình của người cứu hộ.** Đoạn $AP$ là quãng đường chạy trên cát, còn đoạn $PB$ là quãng đường bơi dưới nước. Các góc $\theta_1$ và $\theta_2$ được đo với **pháp tuyến**, tức đường thẳng vuông góc với bờ biển tại điểm tiếp nước.
+
+Điểm $P$ trong hình minh họa một vị trí tiếp nước khả thi. Để tìm lộ trình nhanh nhất, ta sẽ chọn vị trí này sao cho tổng thời gian chạy và bơi nhỏ nhất.
 
 Giả sử trong mỗi môi trường, người cứu hộ chuyển động theo đường thẳng với vận tốc không đổi. Khi đó, toàn bộ lộ trình được xác định duy nhất bởi hoành độ $x$ của vị trí tiếp nước $P(x, 0)$. 
 
@@ -314,17 +247,27 @@ Trên trục giá trị mục tiêu, ta cần tìm một điểm khả thi có g
 ::: example Phân biệt điểm đạt yêu cầu, vượt ngưỡng và không khả thi
 Xét bài toán cực tiểu $f_0(x)=x^2$ trên miền khả thi $\mathcal{X}=[1,3]$. Vì $x^2\ge 1$ trên miền này và dấu bằng đạt tại $x=1$, ta có $p^\star=1$. Chọn $\varepsilon=3$, khi đó ngưỡng chấp nhận là $p^\star+\varepsilon=4$.
 
-![Đoạn xanh từ 1 đến 4 chứa các giá trị gần tối ưu của điểm khả thi. Điểm B đạt yêu cầu, C vượt ngưỡng, còn A không khả thi.](../img/lec-01/epsilon-gan-toi-uu.svg)
+![Đồ thị hàm mục tiêu với năm điểm A, S, B, D, C. Hai đường mức 1 và 4 giới hạn dải gần tối ưu, còn vạch xiên đánh dấu phần không khả thi.](../img/lec-01/epsilon-gan-toi-uu.svg)
 
-| Điểm $x$ | Giá trị $f_0(x)$ | Kết luận với $\varepsilon=3$ |
-| :---: | :---: | :--- |
-| $0.5$ (A) | $0.25$ | Không khả thi vì $x<1$, dù giá trị mục tiêu thấp hơn $p^\star$. |
-| $1$ | $1$ | Tối ưu, nên cũng gần tối ưu với sai số đã chọn. |
-| $1.5$ (B) | $2.25$ | Khả thi và gần tối ưu vì $2.25-1=1.25\le 3$. |
-| $2$ | $4$ | Khả thi và nằm đúng ngưỡng vì $4-1=3$. Dấu $\le$ cho phép trường hợp bằng. |
-| $2.5$ (C) | $6.25$ | Khả thi nhưng không gần tối ưu với sai số đã chọn vì $6.25-1=5.25>3$. |
+**Cách đọc hình:** Trục ngang biểu diễn vị trí $x$, còn trục đứng biểu diễn giá trị $f_0(x)$. Mỗi điểm được đặt tại tọa độ $(x,f_0(x))$. Vùng vạch xiên ở bên trái ứng với $x<1$, nên các điểm trong vùng đó bị loại trước khi xét sai số. Đoạn cong màu xanh là phần vừa khả thi vừa gần tối ưu. Đoạn cong màu nâu vẫn khả thi nhưng vượt ngưỡng đã chọn.
 
-Với một điểm khả thi, trường hợp $f_0(x)<p^\star$ không thể xảy ra. Điểm A cho thấy vì sao ta phải kiểm tra ràng buộc trước khi so sánh giá trị mục tiêu với ngưỡng gần tối ưu.
+Hai đường ngang đánh dấu $p^\star=1$ và $p^\star+\varepsilon=4$. **Khoảng cách theo trục đứng** giữa chúng là $\varepsilon=3$. Dải xanh nhạt biểu diễn các giá trị mục tiêu từ $1$ đến $4$, nhưng một điểm nằm trong dải này vẫn phải thỏa ràng buộc mới được chấp nhận. Sai số $\varepsilon$ đo độ chênh lệch của giá trị mục tiêu, không phải khoảng cách giữa hai vị trí trên trục $x$.
+
+**Xét từng điểm trên đồ thị:**
+
+- **Điểm A: Không khả thi.** Tại $x=0.5$, ta có $f_0(x)=0.25$. Giá trị này thấp hơn $p^\star$, nhưng $0.5\notin[1,3]$. Vì vậy, A không được gọi là điểm tối ưu hay gần tối ưu của bài toán, dù nó nằm dưới cả hai đường mức.
+- **Điểm S: Tối ưu.** Tại $x=1$, ta có $f_0(x)=1=p^\star$. Điểm này khả thi và độ chênh lệch so với giá trị tối ưu bằng $0$, nên cũng thỏa điều kiện gần tối ưu.
+- **Điểm B: Gần tối ưu.** Tại $x=1.5$, ta có $f_0(x)=2.25$. Điểm này khả thi và nằm giữa hai đường mức. Độ chênh lệch là $2.25-1=1.25$, nhỏ hơn $\varepsilon=3$.
+- **Điểm D: Đúng ngưỡng, vẫn được chấp nhận.** Tại $x=2$, ta có $f_0(x)=4$. Điểm này khả thi và nằm trên đường mức trên. Độ chênh lệch là $4-1=3=\varepsilon$. Vì định nghĩa dùng dấu $\le$, D vẫn là điểm gần tối ưu.
+- **Điểm C: Khả thi nhưng không gần tối ưu.** Tại $x=2.5$, ta có $f_0(x)=6.25$. Điểm này thuộc miền khả thi, nhưng nằm phía trên đường mức trên. Độ chênh lệch là $6.25-1=5.25$, lớn hơn $\varepsilon=3$. Điều kiện $f_0(x)\ge p^\star$ đúng nhưng chưa đủ để chấp nhận C.
+
+**Các khoảng trên trục ngang:** Vì $x$ dương trên miền khả thi, điều kiện $x^2\le 4$ tương đương với $x\le 2$. Do đó:
+
+- **Đoạn $[1,2]$: Khả thi và gần tối ưu.** Cả hai đầu mút đều được tính vào. Đầu trái là điểm tối ưu S, còn đầu phải là điểm D có sai số đúng bằng $\varepsilon$.
+- **Khoảng $(2,3]$: Khả thi nhưng vượt ngưỡng.** Đầu trái $2$ không thuộc khoảng này vì D vẫn đạt yêu cầu. Đầu phải $3$ thuộc miền khả thi, nhưng có giá trị mục tiêu $9>4$.
+- **Ngoài đoạn $[1,3]$: Không khả thi.** Hình chỉ hiển thị phần $0\le x\le 3$, nên vùng vạch xiên minh họa phần bị loại ở bên trái. Các giá trị $x<0$ hoặc $x>3$ cũng không thuộc miền khả thi của bài toán.
+
+Với một điểm khả thi, trường hợp $f_0(x)<p^\star$ không thể xảy ra. Nếu thêm điều kiện $f_0(x)\le p^\star$, ta buộc phải có $f_0(x)=p^\star$, tức là điểm tối ưu. Điểm A cho thấy vì sao ta phải kiểm tra ràng buộc trước khi so sánh giá trị mục tiêu với bất kỳ ngưỡng nào.
 :::
 
 Khái niệm này đóng vai trò quyết định trong việc thiết lập **tiêu chí dừng (stopping criteria)** của các thuật toán: Nếu ta tìm được một chặn dưới lý thuyết $\ell \le p^\star$ (thường xuất phát từ bài toán đối ngẫu Lagrange) và một điểm khả thi $x$ thỏa mãn:

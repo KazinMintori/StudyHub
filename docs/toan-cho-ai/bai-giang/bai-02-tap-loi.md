@@ -5,7 +5,7 @@ section: lecture
 title: "Các bài toán tối ưu lồi"
 prerequisites: ["tap-loi", "ham-loi", "chuan", "ma-tran-psd"]
 lessonStatus: ready
-description: "Bản đồ toàn cảnh: 12 chủ đề về phân loại bài toán tối ưu lồi, quy hoạch tuyến tính, quy hoạch toàn phương, nón bậc hai, quy hoạch hình học, SDP và tối ưu đa mục tiêu Pareto."
+description: "Bản đồ toàn cảnh: 16 chủ đề về phân loại bài toán tối ưu lồi, quy hoạch tuyến tính, quy hoạch toàn phương, nón bậc hai, quy hoạch hình học, SDP, tối ưu đa mục tiêu Pareto, khớp hàm và quy hoạch mặt bằng."
 ---
 
 Ở Bài 01, chúng ta đã nắm giữ định lý nền tảng: Với bài toán tối ưu lồi, mọi cực tiểu cục bộ đều tự động là cực tiểu toàn cục. Tuy nhiên, trong thực tế kỹ nghệ và nghiên cứu AI, bài toán hiếm khi xuất hiện dưới dạng "nguyên mẫu lồi" hiển nhiên. Bài toán thường ẩn mình dưới dạng một tỉ số chi phí trên lợi nhuận, một hệ thống điều khiển tự hành chịu nhiễu bất định, một bài toán ước lượng ma trận hiệp phương sai của danh mục đầu tư, hay sự đánh đổi giữa độ chính xác và độ thưa thớt của mô hình.
@@ -18,19 +18,21 @@ $$
 \text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}.
 $$
 
-Mỗi dạng bài toán kế thừa và mở rộng năng lực biểu diễn hình học của dạng bài toán đứng trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
+Mỗi dạng bài toán kế thừa và mở rộng năng lực biểu diễn hình học của dạng bài toán đứng trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy, cùng các ứng dụng khớp hàm và quy hoạch mặt bằng vi mạch.
 
 ---
 
 ## 1. Cấu trúc chương học và Bản đồ chủ đề
 
-Chương học gồm 12 chủ đề chuyên sâu, phân chia theo sáu nhóm năng lực:
+Chương học gồm 16 chủ đề chuyên sâu, phân chia theo tám nhóm năng lực:
 - **Phần I (Chủ đề 1–3)**: Kỹ thuật biến đổi bài toán tương đương, khử biến, tối ưu từng phần và phương pháp chia đôi cho bài toán tựa lồi.
 - **Phần II (Chủ đề 4–6)**: Quy hoạch tuyến tính (LP), hình học của nghiệm đa diện và quy hoạch phân tuyến tính.
 - **Phần III (Chủ đề 7–8)**: Quy hoạch toàn phương (QP, QCQP) và Quy hoạch nón bậc hai (SOCP) trong điều kiện bất định.
 - **Phần IV (Chủ đề 9)**: Quy hoạch hình học (GP) và nghệ thuật đổi thang đo logarit.
 - **Phần V (Chủ đề 10–11)**: Quy hoạch nửa xác định (SDP), phần bù Schur và bài toán tối ưu hóa trị riêng ma trận.
 - **Phần VI (Chủ đề 12)**: Tối ưu hóa vector và đường cong đánh đổi Pareto trong học máy.
+- **Phần VII (Chủ đề 13–15)**: Khớp hàm làm mượt spline, ước lượng mật độ phi tham số và cận xác suất Chebyshev - Chernoff nhiều chiều qua SDP.
+- **Phần VIII (Chủ đề 16)**: Quy hoạch mặt bằng (Floor planning) và phân bổ không gian tối ưu qua quy hoạch hình học.
 
 <TopicMap />
 

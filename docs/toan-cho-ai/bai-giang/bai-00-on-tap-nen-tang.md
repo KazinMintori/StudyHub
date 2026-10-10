@@ -638,6 +638,14 @@ trong đó $H \in \mathbb{S}_{++}^n$ đối xứng xác định dương và $A \
 
 ---
 
+## 7. Các chủ đề chuyên khảo về Giải tích Ma trận và Hệ thiếu xác định
+
+Để nghiên cứu sâu hơn về không gian nghiệm của các hệ phương trình thiếu xác định ($m < n$), nghiệm chuẩn nhỏ nhất và các bổ đề giải tích vi phân ma trận nâng cao trong học máy, người học có thể đào sâu qua chuyên đề độc lập dưới đây:
+
+<TopicMap />
+
+---
+
 ## Tóm tắt cốt lõi
 
 1. **Biểu diễn ma trận**: Gom dữ liệu thành ma trận $A \in \mathbb{R}^{m \times n}$ giúp tính toán đồng thời mọi dự đoán $A w$ và phần dư $r = A w - b$, khai phóng sức mạnh xử lý song song của GPU.

@@ -765,11 +765,19 @@ $$
 
 ---
 
+## 8. Các chủ đề chuyên khảo về Phương pháp Điểm trong Nâng cao
+
+Để làm chủ trọn vẹn họ phương pháp điểm trong từ lý thuyết đến triển khai thuật toán chuẩn công nghiệp, người học có thể đào sâu qua các chuyên đề nghiên cứu độc lập dưới đây:
+
+<TopicMap />
+
+---
+
 ## Tóm tắt cốt lõi
 
 1. **Phương pháp dốc nhất theo các chuẩn**: Chuẩn Euclid sinh ra Gradient Descent, chuẩn toàn phương ma trận sinh ra phương pháp Newton, và chuẩn $L_1$ sinh ra phương pháp hạ dốc theo tọa độ.
 2. **Backtracking Line Search**: Điều kiện Armijo bảo đảm mức giảm thực tế tương xứng với xấp xỉ tuyến tính, ngăn chặn hiện tượng bước nhảy quá trớn trong các hẻm núi hẹp.
-3. **Phương pháp Newton và Newton Decrement**: Mô hình xấp xỉ bậc hai đạt tốc độ hội tụ bậc hai kỳ vĩ gần nghiệm. Đại lượng $\lambda(x)$ cung cấp tiêu chuẩn dừng bất biến affine chuẩn mực.
+3. **Phương pháp Newton và Newton Decrement**: Mô hình xấp xỉ bậc hai đạt tốc độ hội tụ bậc hai ở lân cận nghiệm. Đại lượng $\lambda(x)$ cung cấp tiêu chuẩn dừng bất biến affine chuẩn mực.
 4. **Hàm tự tương hợp**: Đặt cơ sở lý thuyết chứng minh số bước lặp Newton bị chặn trên độc lập với hệ tọa độ và số chiều biến.
 5. **Hệ phương trình Newton–KKT**: Công cụ thống nhất giải quyết các bài toán có ràng buộc đẳng thức từ điểm khởi tạo khả thi hoặc không khả thi.
 6. **Phương pháp Điểm trong và Đường trung tâm**: Hàm chắn logarit $-\sum \log(-f_i(x))$ biến bài toán có ràng buộc thành chuỗi bài toán không ràng buộc trơn. Khoảng cách đối ngẫu tại mỗi điểm trên đường trung tâm được kiểm soát chính xác bằng $m/t$.

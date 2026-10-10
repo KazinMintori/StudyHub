@@ -1,39 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" width="100%" role="img" aria-labelledby="title desc">
-  <title id="title">Khoảng giá trị mục tiêu gần tối ưu</title>
-  <desc id="desc">Với p sao bằng 1 và epsilon bằng 3, đoạn từ 1 đến 4 được chấp nhận cho điểm khả thi. A có giá trị 0.25 nhưng không khả thi, B có giá trị 2.25 và đạt yêu cầu, C có giá trị 6.25 và vượt ngưỡng.</desc>
-  <rect width="420" height="236" rx="8" fill="#ffffff"/>
-  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#1f1c2b">
-    <text x="24" y="28" font-weight="600">Giá trị hàm mục tiêu</text>
-    <!-- Thang tuyến tính: Tọa độ ngang = 24 + 52 × giá trị mục tiêu. -->
-    <rect x="24" y="82" width="52" height="36" fill="#fdecea"/>
-    <rect x="76" y="82" width="156" height="36" fill="#e6f4ec"/>
-    <rect x="232" y="82" width="156" height="36" fill="#fbf1df"/>
-    <path d="M24 100H395l-8-5m8 5-8 5" fill="none" stroke="#4f4a62" stroke-width="2"/>
-    <path d="M76 100H232" stroke="#1d6b45" stroke-width="5"/>
-    <path d="M76 82V127M232 82V127" stroke="#1d6b45" stroke-width="2"/>
-    <circle cx="76" cy="100" r="4" fill="#1d6b45"/>
-    <circle cx="232" cy="100" r="4" fill="#1d6b45"/>
-    <path d="M37 62V100M141 62V100M349 62V100" stroke="#6b6580" stroke-dasharray="3 3"/>
-    <path d="M32 95l10 10m0-10-10 10" stroke="#b42318" stroke-width="3"/>
-    <circle cx="141" cy="100" r="6" fill="#1d6b45"/>
-    <circle cx="349" cy="100" r="6" fill="#8a5100"/>
-    <g text-anchor="middle" font-weight="600">
-      <text x="37" y="56" fill="#b42318">A</text>
-      <text x="141" y="56" fill="#1d6b45">B</text>
-      <text x="349" y="56" fill="#8a5100">C</text>
-    </g>
-    <g text-anchor="middle">
-      <text x="37" y="78">0.25</text>
-      <text x="141" y="78">2.25</text>
-      <text x="349" y="78">6.25</text>
-      <text x="76" y="150">p* = 1</text>
-      <text x="232" y="150">p* + ε = 4</text>
-      <text x="45" y="188" fill="#b42318">Không</text>
-      <text x="45" y="208" fill="#b42318">khả thi</text>
-      <text x="154" y="188" fill="#1d6b45">Gần tối ưu</text>
-      <text x="154" y="208" fill="#1d6b45">nếu khả thi</text>
-      <text x="327" y="188" fill="#8a5100">Vượt ngưỡng</text>
-      <text x="327" y="208" fill="#8a5100">sai số</text>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 502" width="100%" role="img" aria-labelledby="title desc">
+<title id="title">Phân biệt tính khả thi và mức sai số gần tối ưu</title>
+<desc id="desc">Đồ thị x bình phương trên miền khả thi từ 1 đến 3. Giá trị tối ưu là 1, ngưỡng gần tối ưu là 4. A tại x bằng 0.5 không khả thi. S tại x bằng 1 tối ưu. B tại x bằng 1.5 gần tối ưu. D tại x bằng 2 nằm đúng ngưỡng. C tại x bằng 2.5 khả thi nhưng vượt sai số cho phép. Khoảng gần tối ưu trên trục x là đoạn đóng từ 1 đến 2.</desc>
+<defs><pattern id="infeasible" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#f1eff5"/><path d="M0 10L10 0" stroke="#dcd8e8" stroke-width="1"/></pattern></defs>
+<rect x="1" y="1" width="438" height="500" rx="10" fill="#fff" stroke="#dcd8e8"/>
+<g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#1f1c2b">
+<text x="24" y="30" font-size="20" font-weight="600">Điểm nào gần tối ưu?</text>
+<text x="24" y="56">Hàm mục tiêu: f₀(x) = x²</text>
+<!-- Vạch xiên biểu diễn phần x nhỏ hơn 1, nằm ngoài miền khả thi. -->
+<rect x="54" y="90" width="88" height="252" fill="url(#infeasible)"/>
+<rect x="142" y="230" width="176" height="84" fill="#e6f4ec"/>
+<path d="M142 90V342M230 230V342M318 90V342" stroke="#8a849f" stroke-width="1" stroke-dasharray="3 5"/>
+<path d="M54 314H355M54 230H355" stroke="#1d6b45" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M54 167H274" stroke="#8a5100" stroke-width="1" stroke-dasharray="3 5"/>
+<path d="M54 279H186" stroke="#1d6b45" stroke-width="1" stroke-dasharray="3 5"/>
+<path d="M54 90V349M48 342H330" stroke="#4f4a62" stroke-width="1.8" fill="none"/>
+<g text-anchor="end" fill="#4f4a62" font-size="16">
+<text x="46" y="348">0</text><text x="46" y="320">1</text><text x="46" y="285">2.25</text><text x="46" y="236">4</text><text x="46" y="173">6.25</text><text x="46" y="96">9</text>
+</g>
+<text x="57" y="82" font-style="italic">f₀(x)</text>
+<path d="M54.000 342.000 L55.100 341.996 L56.200 341.983 L57.300 341.961 L58.400 341.930 L59.500 341.891 L60.600 341.842 L61.700 341.786 L62.800 341.720 L63.900 341.646 L65.000 341.563 L66.100 341.471 L67.200 341.370 L68.300 341.261 L69.400 341.142 L70.500 341.016 L71.600 340.880 L72.700 340.736 L73.800 340.582 L74.900 340.421 L76.000 340.250 L77.100 340.071 L78.200 339.882 L79.300 339.686 L80.400 339.480 L81.500 339.266 L82.600 339.043 L83.700 338.811 L84.800 338.570 L85.900 338.321 L87.000 338.063 L88.100 337.796 L89.200 337.520 L90.300 337.236 L91.400 336.942 L92.500 336.641 L93.600 336.330 L94.700 336.011 L95.800 335.683 L96.900 335.346 L98.000 335.000 L99.100 334.646 L100.200 334.283 L101.300 333.911 L102.400 333.530 L103.500 333.141 L104.600 332.743 L105.700 332.336 L106.800 331.920 L107.900 331.496 L109.000 331.063 L110.100 330.621 L111.200 330.170 L112.300 329.711 L113.400 329.243 L114.500 328.766 L115.600 328.280 L116.700 327.786 L117.800 327.283 L118.900 326.771 L120.000 326.250 L121.100 325.721 L122.200 325.183 L123.300 324.636 L124.400 324.080 L125.500 323.516 L126.600 322.942 L127.700 322.361 L128.800 321.770 L129.900 321.171 L131.000 320.563 L132.100 319.946 L133.200 319.320 L134.300 318.686 L135.400 318.043 L136.500 317.391 L137.600 316.730 L138.700 316.061 L139.800 315.382 L140.900 314.696 L142.000 314.000" fill="none" stroke="#6b6580" stroke-width="3" stroke-dasharray="5 4"/>
+<path d="M142.000 314.000 L143.100 313.296 L144.200 312.582 L145.300 311.861 L146.400 311.130 L147.500 310.391 L148.600 309.642 L149.700 308.886 L150.800 308.120 L151.900 307.346 L153.000 306.563 L154.100 305.771 L155.200 304.970 L156.300 304.161 L157.400 303.342 L158.500 302.516 L159.600 301.680 L160.700 300.836 L161.800 299.982 L162.900 299.121 L164.000 298.250 L165.100 297.371 L166.200 296.483 L167.300 295.586 L168.400 294.680 L169.500 293.766 L170.600 292.842 L171.700 291.911 L172.800 290.970 L173.900 290.021 L175.000 289.063 L176.100 288.096 L177.200 287.120 L178.300 286.136 L179.400 285.142 L180.500 284.141 L181.600 283.130 L182.700 282.111 L183.800 281.082 L184.900 280.046 L186.000 279.000 L187.100 277.946 L188.200 276.882 L189.300 275.811 L190.400 274.730 L191.500 273.641 L192.600 272.543 L193.700 271.436 L194.800 270.320 L195.900 269.196 L197.000 268.063 L198.100 266.921 L199.200 265.770 L200.300 264.611 L201.400 263.442 L202.500 262.266 L203.600 261.080 L204.700 259.886 L205.800 258.683 L206.900 257.471 L208.000 256.250 L209.100 255.021 L210.200 253.782 L211.300 252.536 L212.400 251.280 L213.500 250.016 L214.600 248.743 L215.700 247.461 L216.800 246.170 L217.900 244.871 L219.000 243.563 L220.100 242.246 L221.200 240.920 L222.300 239.586 L223.400 238.243 L224.500 236.891 L225.600 235.530 L226.700 234.161 L227.800 232.782 L228.900 231.396 L230.000 230.000" fill="none" stroke="#1d6b45" stroke-width="4"/>
+<path d="M230.000 230.000 L231.100 228.596 L232.200 227.183 L233.300 225.761 L234.400 224.330 L235.500 222.891 L236.600 221.442 L237.700 219.986 L238.800 218.520 L239.900 217.046 L241.000 215.563 L242.100 214.071 L243.200 212.570 L244.300 211.061 L245.400 209.543 L246.500 208.016 L247.600 206.480 L248.700 204.936 L249.800 203.382 L250.900 201.821 L252.000 200.250 L253.100 198.671 L254.200 197.083 L255.300 195.486 L256.400 193.880 L257.500 192.266 L258.600 190.642 L259.700 189.011 L260.800 187.370 L261.900 185.721 L263.000 184.063 L264.100 182.396 L265.200 180.720 L266.300 179.036 L267.400 177.343 L268.500 175.641 L269.600 173.930 L270.700 172.211 L271.800 170.482 L272.900 168.746 L274.000 167.000 L275.100 165.246 L276.200 163.483 L277.300 161.711 L278.400 159.930 L279.500 158.141 L280.600 156.342 L281.700 154.536 L282.800 152.720 L283.900 150.896 L285.000 149.063 L286.100 147.221 L287.200 145.370 L288.300 143.511 L289.400 141.643 L290.500 139.766 L291.600 137.880 L292.700 135.986 L293.800 134.082 L294.900 132.171 L296.000 130.250 L297.100 128.321 L298.200 126.383 L299.300 124.436 L300.400 122.480 L301.500 120.516 L302.600 118.542 L303.700 116.561 L304.800 114.570 L305.900 112.571 L307.000 110.563 L308.100 108.546 L309.200 106.520 L310.300 104.486 L311.400 102.443 L312.500 100.391 L313.600 98.330 L314.700 96.261 L315.800 94.182 L316.900 92.096 L318.000 90.000" fill="none" stroke="#8a5100" stroke-width="4"/>
+<!-- A có giá trị nhỏ nhưng bị loại vì vi phạm ràng buộc. -->
+<path d="M93 330L103 340M103 330L93 340" stroke="#6b6580" stroke-width="3"/>
+<text x="76" y="327" font-size="20" font-weight="700" fill="#6b6580">A</text>
+<circle cx="142" cy="314" r="5.5" fill="#1d6b45" stroke="#fff" stroke-width="2"/><text x="153" y="335" font-size="20" font-weight="700" fill="#1d6b45">S</text>
+<circle cx="186" cy="279" r="5.5" fill="#1d6b45" stroke="#fff" stroke-width="2"/><text x="164" y="271" font-size="20" font-weight="700" fill="#1d6b45">B</text>
+<circle cx="230" cy="230" r="5.5" fill="#1d6b45" stroke="#fff" stroke-width="2"/><text x="211" y="217" font-size="20" font-weight="700" fill="#1d6b45">D</text>
+<circle cx="274" cy="167" r="5.5" fill="#8a5100" stroke="#fff" stroke-width="2"/><text x="292" y="182" font-size="20" font-weight="700" fill="#8a5100">C</text>
+<text x="265" y="210" font-weight="600" fill="#1d6b45">p* + ε = 4</text>
+<text x="293" y="335" font-weight="600" fill="#1d6b45">p* = 1</text>
+<!-- Epsilon là khoảng cách theo trục giá trị mục tiêu giữa hai đường mức. -->
+<path d="M363 230H373M368 230V314M363 314H373" stroke="#5a37a8" stroke-width="2" fill="none"/>
+<text x="380" y="278" font-weight="600" fill="#5a37a8">ε = 3</text>
+<g text-anchor="middle" font-size="16" fill="#4f4a62">
+<path d="M54 342v5" stroke="#4f4a62"/><text x="54" y="366">0</text>
+<path d="M98 342v5" stroke="#4f4a62"/><text x="98" y="366">0.5</text>
+<path d="M142 342v5" stroke="#4f4a62"/><text x="142" y="366">1</text>
+<path d="M186 342v5" stroke="#4f4a62"/><text x="186" y="366">1.5</text>
+<path d="M230 342v5" stroke="#4f4a62"/><text x="230" y="366">2</text>
+<path d="M274 342v5" stroke="#4f4a62"/><text x="274" y="366">2.5</text>
+<path d="M318 342v5" stroke="#4f4a62"/><text x="318" y="366">3</text>
+</g>
+<text x="333" y="366" font-style="italic">x</text>
+<!-- Các khoảng của biến x được tách riêng khỏi các mức của hàm mục tiêu. -->
+<path d="M54 396H142" stroke="#6b6580" stroke-width="5" stroke-dasharray="4 3"/>
+<path d="M142 396H230" stroke="#1d6b45" stroke-width="6"/>
+<path d="M230 396H318" stroke="#8a5100" stroke-width="5"/>
+<circle cx="142" cy="396" r="5" fill="#1d6b45"/><circle cx="230" cy="396" r="5" fill="#1d6b45"/><circle cx="318" cy="396" r="5" fill="#8a5100"/>
+<g text-anchor="middle" font-size="16">
+<text x="98" y="426" fill="#6b6580">Không</text><text x="98" y="450" fill="#6b6580">khả thi</text><text x="98" y="476" fill="#6b6580">0 ≤ x &lt; 1</text>
+<text x="186" y="426" fill="#1d6b45">Gần tối ưu</text><text x="186" y="450" fill="#1d6b45">Kể cả biên</text><text x="186" y="476" fill="#1d6b45">1 ≤ x ≤ 2</text>
+<text x="286" y="426" fill="#8a5100">Khả thi,</text><text x="286" y="450" fill="#8a5100">vượt ngưỡng</text><text x="286" y="476" fill="#8a5100">2 &lt; x ≤ 3</text>
+</g>
+</g></svg>

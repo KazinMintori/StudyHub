@@ -29,15 +29,19 @@ export const readingMetadata = {
     "minutes": 10
   },
   "toan-cho-ai/bai-00-on-tap-nen-tang": {
-    "words": 6045,
+    "words": 6081,
     "minutes": 30
   },
+  "toan-cho-ai/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran": {
+    "words": 1084,
+    "minutes": 7
+  },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu": {
-    "words": 3186,
+    "words": 3156,
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
-    "words": 6048,
+    "words": 6007,
     "minutes": 40
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
@@ -137,7 +141,7 @@ export const readingMetadata = {
     "minutes": 21
   },
   "toan-cho-ai/bai-02-tap-loi": {
-    "words": 3384,
+    "words": 3449,
     "minutes": 15
   },
   "toan-cho-ai/bai-02-tap-loi/bai-toan-tuong-duong": {
@@ -188,21 +192,49 @@ export const readingMetadata = {
     "words": 2314,
     "minutes": 15
   },
+  "toan-cho-ai/bai-02-tap-loi/khop-ham-va-noi-suy": {
+    "words": 2120,
+    "minutes": 14
+  },
+  "toan-cho-ai/bai-02-tap-loi/uoc-luong-phi-tham-so-va-kiem-dinh": {
+    "words": 2196,
+    "minutes": 15
+  },
+  "toan-cho-ai/bai-02-tap-loi/can-chebyshev-va-chernoff": {
+    "words": 1763,
+    "minutes": 12
+  },
+  "toan-cho-ai/bai-02-tap-loi/quy-hoach-mat-bang": {
+    "words": 771,
+    "minutes": 5
+  },
   "toan-cho-ai/bai-03-doi-ngau-lagrange": {
-    "words": 4503,
-    "minutes": 25
+    "words": 5531,
+    "minutes": 30
   },
   "toan-cho-ai/bai-04-gradient-newton": {
-    "words": 1504,
+    "words": 3547,
+    "minutes": 20
+  },
+  "toan-cho-ai/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao": {
+    "words": 380,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat": {
+    "words": 1845,
+    "minutes": 12
+  },
+  "toan-cho-ai/bai-04-gradient-newton/phuong-phap-primal-dual": {
+    "words": 1541,
     "minutes": 10
   },
   "toan-cho-ai/bai-05-toi-uu-huan-luyen": {
-    "words": 1870,
+    "words": 2381,
     "minutes": 10
   },
   "toan-cho-ai/bai-06-phuong-phap-thich-nghi": {
-    "words": 2737,
-    "minutes": 15
+    "words": 4659,
+    "minutes": 25
   },
   "toan-cho-ai/bai-07-quy-hoach-tuyen-tinh-va-dong": {
     "words": 3469,
