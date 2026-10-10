@@ -57,8 +57,8 @@ f(w) &= \frac{1}{2} \left[ (1w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] \\
 \end{aligned}
 $$
 
-- Đạo hàm bậc nhất: $f'(w) = 14w - 11$.
-- Đạo hàm bậc hai (Hessian): $f''(w) = 14 > 0$ với mọi $w \in \mathbb{R}$.
+- Đạo hàm bậc nhất: Biểu thức $f'(w) = 14w - 11$.
+- Đạo hàm bậc hai (Hessian): Giá trị $f''(w) = 14 > 0$ với mọi $w \in \mathbb{R}$.
 
 Vì đạo hàm bậc hai luôn dương nên hàm mục tiêu $f(w)$ là hàm lồi ngặt (strictly convex). Miền khả thi $\mathcal{C} = \{w \in \mathbb{R} \mid w \le 1/2\}$ là một nửa đường thẳng (nửa không gian đóng một chiều), do đó là một tập lồi. Bài toán là một bài toán tối ưu lồi ngặt, bảo đảm rằng nếu nghiệm tối ưu tồn tại thì nó là duy nhất trên toàn cục.
 

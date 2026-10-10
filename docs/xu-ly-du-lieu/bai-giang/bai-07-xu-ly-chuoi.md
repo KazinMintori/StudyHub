@@ -12,7 +12,7 @@ description: "Chuẩn hóa chuỗi, phân biệt chuỗi ký tự nguyên bản 
 
 Trong thế giới thực, dữ liệu văn bản tự do luôn là vùng đất hỗn loạn và nhiều cạm bẫy nhất. Người dùng nhập liệu với muôn vàn thói quen dị biệt: Lúc viết hoa, lúc viết thường, gõ thừa khoảng trắng, sử dụng lẫn lộn tiếng lóng, và đặc biệt là hệ thống dấu thanh phức tạp của các ngôn ngữ quốc tế.
 
-pandas cung cấp bộ định tuyến chuyên dụng **`.str`**. Bất kỳ phương thức nào được gọi qua `.str` (như `.str.strip()`, `.str.lower()`, `.str.replace()`) đều được vector hóa ở tầng dưới và sở hữu một đặc tính vô cùng quý giá: **Tự động bỏ qua các giá trị khuyết thiếu `NaN` mà không làm sập chương trình với lỗi `AttributeError`**.
+pandas cung cấp bộ định tuyến chuyên dụng **`.str`**. Bất kỳ phương thức nào được gọi qua `.str` (như `.str.strip()`, `.str.lower()`, `.str.replace()`) đều được vector hóa ở tầng dưới và sở hữu một đặc tính rất quan trọng: **Tự động bỏ qua các giá trị khuyết thiếu `NaN` mà không làm sập chương trình với lỗi `AttributeError`**.
 
 <DataDiagram name="string-cleaning" />
 
@@ -36,7 +36,7 @@ s_chuan = s.str.normalize("NFC")
 
 ## 2. Phân định Tuyệt đối giữa Chuỗi Nguyên bản (Literal) và Mẫu Regex
 
-Biểu thức chính quy (*Regular Expression - Regex*) là một ngôn ngữ hình thức cực kỳ mạnh mẽ để mô tả mẫu văn bản. Tuy nhiên, trong Regex, một số ký tự được quy ước là các **siêu ký tự cú pháp (*Metacharacters*)** chứ không đại diện cho ký tự chữ thông thường:
+Biểu thức chính quy (*Regular Expression - Regex*) là một ngôn ngữ hình thức rất mạnh mẽ để mô tả mẫu văn bản. Tuy nhiên, trong Regex, một số ký tự được quy ước là các **siêu ký tự cú pháp (*Metacharacters*)** chứ không đại diện cho ký tự chữ thông thường:
 - Dấu chấm `.`: Đại diện cho **bất kỳ ký tự nào** (ngoại trừ ký tự ngắt dòng).
 - Dấu đô la `$`: Neo vị trí **kết thúc chuỗi**.
 - Dấu mũ `^`: Neo vị trí **bắt đầu chuỗi**.

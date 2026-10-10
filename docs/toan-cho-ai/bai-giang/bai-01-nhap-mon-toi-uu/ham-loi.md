@@ -26,7 +26,7 @@ Về mặt hình học, xét hai điểm $A(x, f(x))$ và $B(y, f(y))$ trên đ�
 
 <FunctionLab type="chord" />
 
-Trong mô phỏng tương tác trên, đối với các hàm lồi như $x^2$, $|x|$, $e^x$, $-\ln x$, đoạn thẳng nối từ đồ thị lên dây cung luôn mang màu xanh dương (đồ thị nằm dưới dây cung). Ngược lại, với các hàm không lồi như $x^3$ hay $0.3x^2 + \sin(1.5x)$, ta dễ dàng tìm được những cặp điểm $a, b$ làm đồ thị võng ngược lên phía trên dây cung. Để bác bỏ tính lồi, chỉ cần chỉ ra duy nhất một cặp điểm vi phạm; nhưng để khẳng định tính lồi, ta phải chứng minh bất đẳng thức đúng với mọi cặp điểm và mọi hệ số $\theta \in [0, 1]$.
+Trong mô phỏng tương tác trên, đối với các hàm lồi như $x^2$, $|x|$, $e^x$, $-\ln x$, đoạn thẳng nối từ đồ thị lên dây cung luôn mang màu xanh dương (đồ thị nằm dưới dây cung). Ngược lại, với các hàm không lồi như $x^3$ hay $0.3x^2 + \sin(1.5x)$, ta dễ dàng tìm được những cặp điểm $a, b$ làm đồ thị võng ngược lên phía trên dây cung. Để bác bỏ tính lồi, chỉ cần chỉ ra duy nhất một cặp điểm vi phạm, nhưng để khẳng định tính lồi, ta phải chứng minh bất đẳng thức đúng với mọi cặp điểm và mọi hệ số $\theta \in [0, 1]$.
 
 ::: example Chứng minh tính lồi của hàm bậc hai f(x) = x² bằng định nghĩa
 Với hàm $f(x) = x^2$ trên $\mathbb{R}$, ta xét hiệu số giữa vế phải và vế trái:

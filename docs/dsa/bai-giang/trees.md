@@ -65,7 +65,7 @@ Xóa một nút trên cây BST chia làm 3 trường hợp:
 
 ## 4. Hiện tượng Suy biến & Cây Cân bằng (AVL Tree)
 
-Nếu bạn chèn một dãy số đã sắp xếp sẵn: `1, 2, 3, 4, 5` vào BST thông thường:
+Nếu bạn chèn một dãy số đã sắp xếp sẵn gồm `1, 2, 3, 4, 5` vào BST thông thường:
 - Cây sẽ biến thành một danh sách liên kết thẳng đứng (chiều cao $h = n$).
 - Tốc độ tìm kiếm bị tụt từ $\mathcal{O}(\log n)$ xuống $\mathcal{O}(n)$.
 

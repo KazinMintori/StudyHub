@@ -15,7 +15,7 @@ Mục tiêu của học phần là giúp người học biết cách **xây dự
 
 ## 1. Các loại phát biểu từ dữ liệu
 
-Trong phân tích thống kê, một **biến** (variable) là một đặc tính hoặc đại lượng có thể nhận các giá trị khác nhau giữa các đối tượng quan sát — chẳng hạn như kinh nghiệm viết mã, số giờ tự học trong tuần hay điểm bài thực hành. 
+Trong phân tích thống kê, một **biến** (variable) là một đặc tính hoặc đại lượng có thể nhận các giá trị khác nhau giữa các đối tượng quan sát, chẳng hạn như kinh nghiệm viết mã, số giờ tự học trong tuần hay điểm bài thực hành. 
 
 Dựa trên mục tiêu và phạm vi kết luận đối với các biến này, ta phân biệt bốn loại phát biểu cơ bản:
 

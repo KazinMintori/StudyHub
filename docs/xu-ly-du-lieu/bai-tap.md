@@ -398,7 +398,7 @@ print("Mảng int32:", kq_int32)
 ```
 
 #### Phân tích bản chất & Bình luận sư phạm
-- **Strides là gì?**: `strides` là một tuple quy định số byte mà CPU cần nhảy qua trong bộ nhớ để bước sang hàng tiếp theo hoặc cột tiếp theo. Với `int64` (8 bytes/ô):
+- **Strides là gì?**: Khái niệm `strides` là một tuple quy định số byte mà CPU cần nhảy qua trong bộ nhớ để bước sang hàng tiếp theo hoặc cột tiếp theo. Với `int64` (8 bytes/ô):
   - Bước sang cột kế bên tốn $8$ byte.
   - Bước sang hàng kế bên (gồm 3 cột) tốn $3 \times 8 = 24$ byte. Do đó, `strides = (24, 8)`.
 - **Khoảng cách byte offset**:
@@ -409,7 +409,7 @@ print("Mảng int32:", kq_int32)
 
 ---
 
-### Bài 3.2: Lát cắt (View) vs Bản sao (Copy) — Bẫy biến đổi dữ liệu ngầm
+### Bài 3.2: Lát cắt (View) vs Bản sao (Copy): Bẫy biến đổi dữ liệu ngầm
 
 #### Tình huống thực tế
 Một lập trình viên muốn lấy các hàng chẵn và cột chẵn của ma trận `A` để trừ đi giá trị nhỏ nhất nhằm chuẩn hóa sơ bộ. Tuy nhiên, sau khi thực hiện, ma trận gốc `A` ban đầu cũng bị biến dạng ngoài ý muốn.
@@ -577,8 +577,8 @@ assert np.allclose(gia_chuan_hoa.sum(axis=1), 0.0)
   - Hai trục tương thích nếu: Kích thước của chúng bằng nhau, hoặc một trong hai kích thước bằng 1.
 - **Tầm quan trọng sống còn của `keepdims=True`**:
   - Nếu bạn chỉ gọi `gia_phong.mean(axis=1)`, kết quả trả về có shape là `(3,)` (mảng 1 chiều).
-  - Khi lấy `(3, 4) - (3,)`, NumPy sẽ căn lề trục cuối cùng: $4$ so với $3$ $\implies$ **Báo lỗi `ValueError: operands could not be broadcast together`**!
-  - Khi có `keepdims=True`, shape là `(3, 1)`. NumPy so khớp: Trục 1 có $1$ tự nhân bản thành $4$; trục 0 có $3$ khớp với $3$. Phép toán diễn ra hoàn hảo ở tốc độ C tối đa.
+  - Khi lấy `(3, 4) - (3,)`, NumPy sẽ căn lề trục cuối cùng: Trục $4$ so với $3$ $\implies$ **Báo lỗi `ValueError: operands could not be broadcast together`**!
+  - Khi có `keepdims=True`, shape là `(3, 1)`. NumPy so khớp: Trục 1 có $1$ tự nhân bản thành $4$, đồng thời trục 0 có $3$ khớp với $3$. Phép toán diễn ra hoàn hảo ở tốc độ C tối đa.
 
 ---
 
@@ -641,8 +641,8 @@ assert ket_qua_loc_loc.equals(ket_qua_query[["ma_kh", "chi_tieu", "is_vip"]])
 - **Vì sao bắt buộc phải dùng ngoặc đơn `()` và toán tử bitwise `&`, `|`?**:
   Trong Python, toán tử so sánh (`>`, `==`) có độ ưu tiên thấp hơn các toán tử logic bitwise (`&`, `|`). Nếu bạn viết `df["a"] == 1 & df["b"] == 2`, Python sẽ diễn giải thành `df["a"] == (1 & df["b"]) == 2`, dẫn đến lỗi cú pháp hoặc kết quả sai hoàn toàn. Hãy luôn bọc từng mệnh đề điều kiện trong cặp ngoặc đơn `(...)`.
 - **`.loc` vs `.iloc`**:
-  - `.loc` làm việc dựa trên **Nhãn (Labels)**: `df.loc['a':'c']` sẽ lấy bao gồm cả điểm cuối `'c'`.
-  - `.iloc` làm việc dựa trên **Vị trí chỉ số nguyên (Integer positions)**: `df.iloc[0:2]` chỉ lấy chỉ số 0 và 1 (loại trừ biên phải, giống quy tắc slice chuẩn của Python).
+  - `.loc` làm việc dựa trên **Nhãn (Labels)**: Cú pháp `df.loc['a':'c']` sẽ lấy bao gồm cả điểm cuối `'c'`.
+  - `.iloc` làm việc dựa trên **Vị trí chỉ số nguyên (Integer positions)**: Cú pháp `df.iloc[0:2]` chỉ lấy chỉ số 0 và 1 (loại trừ biên phải, giống quy tắc slice chuẩn của Python).
 
 ---
 
@@ -756,7 +756,7 @@ print("Thống kê trên quan sát hợp lệ (bỏ qua NaN):\n", stats)
 - **Hiểm họa khi điền số 0 bừa bãi**: Hãy quan sát cột `sales`: `[100, None, 250, 0, 150]`.
   - Nếu bỏ qua `None`, trung bình các sản phẩm đã biết là: $(100 + 250 + 0 + 150) / 4 = 125.0$.
   - Nếu tự tiện điền `fillna(0)` vào vị trí thiếu, trung bình sụt xuống thành: $(100 + 0 + 250 + 0 + 150) / 5 = 100.0$. Mức trung bình bị giảm nhân tạo tới 20%!
-- **Quy tắc ứng xử với `NaN`**: Trong thực tế, chỉ điền số 0 khi giá trị thiếu mang bản chất là "không phát sinh sự kiện" (ví dụ: Số lần vi phạm luật, số đánh giá khiếu nại). Với các đại lượng đo lường vật lý, giá tiền, hay mức độ hài lòng, giá trị thiếu mang ý nghĩa là "chưa thu thập được thông tin" — khi đó, giữ nguyên `NaN` hoặc phân tích độ nhạy (*sensitivity analysis*) là hướng đi chuẩn mực nhất.
+- **Quy tắc ứng xử với `NaN`**: Trong thực tế, chỉ điền số 0 khi giá trị thiếu mang bản chất là "không phát sinh sự kiện" (ví dụ: Số lần vi phạm luật, số đánh giá khiếu nại). Với các đại lượng đo lường vật lý, giá tiền, hay mức độ hài lòng, giá trị thiếu mang ý nghĩa là "chưa thu thập được thông tin", khi đó, giữ nguyên `NaN` hoặc phân tích độ nhạy (*sensitivity analysis*) là hướng đi chuẩn mực nhất.
 
 ---
 
@@ -881,7 +881,7 @@ print("Báo cáo phân khúc chuẩn mực:\n", tk_chuyen_nghiep)
 
 ---
 
-### Bài 5.3: Phép biến đổi `transform()` — Giữ nguyên cấu trúc dòng của bảng gốc
+### Bài 5.3: Phép biến đổi `transform()`: Giữ nguyên cấu trúc dòng của bảng gốc
 
 #### Tình huống thực tế
 Cho bảng dữ liệu nhân viên của các phòng ban. Cần tính xem mức lương của mỗi nhân viên chênh lệch bao nhiêu phần trăm so với mức lương trung bình của chính phòng ban mà người đó đang công tác.
@@ -1018,7 +1018,7 @@ Một tệp nhật ký hệ thống `server_logs.csv` chứa 80 cột và 10 tri
 
 #### Lời giải
 
-##### Cách 1 · Nạp toàn bộ tệp rồi lọc cột (Căn bản — Nguy cơ tràn RAM)
+##### Cách 1 · Nạp toàn bộ tệp rồi lọc cột (Căn bản: Nguy cơ tràn RAM)
 
 ```python
 # Cách làm ngốn RAM, có thể gây sập máy (OOM - Out of Memory)
@@ -1057,8 +1057,8 @@ print(df_toi_uu.info())
 #### Phân tích bản chất & Bình luận sư phạm
 - **Khai báo `usecols`**: Engine C của Pandas sẽ chỉ cấp phát bộ nhớ cho đúng 4 cột được chỉ định, bỏ qua hoàn toàn 76 cột còn lại ngay trong quá trình đọc luồng tệp đĩa.
 - **Tiết kiệm tới 75% bộ nhớ nhờ ép kiểu (`downcasting`)**:
-  - `int64` tốn 8 bytes cho mỗi ô nhớ; `int16` chỉ tốn 2 bytes.
-  - `float64` tốn 8 bytes; `float32` tốn 4 bytes.
+  - `int64` tốn 8 bytes cho mỗi ô nhớ, trong khi `int16` chỉ tốn 2 bytes.
+  - `float64` tốn 8 bytes, trong khi `float32` chỉ tốn 4 bytes.
   Trên tập dữ liệu 10 triệu dòng, việc chọn kiểu chính xác có thể giảm dung lượng RAM tiêu thụ từ $6.4\text{ GB}$ xuống chỉ còn dưới $1.5\text{ GB}$, giúp máy tính xách tay bình thường cũng có thể chạy mượt mà.
 
 ---
@@ -1123,7 +1123,7 @@ print("Cách nâng cao:\n", prices_adv)
 
 ---
 
-### Bài 6.3: CSV vs Parquet — So sánh dung lượng và bảo toàn kiểu dữ liệu
+### Bài 6.3: CSV vs Parquet: So sánh dung lượng và bảo toàn kiểu dữ liệu
 
 #### Tình huống thực tế
 Cho bảng dữ liệu gồm mã giao dịch, thời điểm thanh toán `datetime64`, và mã số thuế khách hàng (chuỗi có số 0 ở đầu, ví dụ `"010203405"`).
@@ -1427,7 +1427,7 @@ Hãy trích xuất danh sách tất cả các cụm nhận xét độc lập n�
 
 #### Lời giải
 
-##### Cách 1 · Lỗi kinh điển khi dùng toán tử tham lam `.*` (Căn bản — Kết quả sai)
+##### Cách 1 · Lỗi kinh điển khi dùng toán tử tham lam `.*` (Căn bản: Kết quả sai)
 
 ```python
 import re
@@ -1672,7 +1672,7 @@ print("Báo cáo theo quý chuẩn mực phân tích:\n", tk_quy_chuan)
 
 ---
 
-### Bài 8.3: Cửa sổ trượt (Rolling Window) — Làm mịn dao động tuần
+### Bài 8.3: Cửa sổ trượt (Rolling Window): Làm mịn dao động tuần
 
 #### Tình huống thực tế
 Doanh số bán lẻ của một siêu thị biến động mạnh theo ngày trong tuần: Thứ Bảy và Chủ Nhật luôn cao gấp 3 lần ngày thường. Hãy tính đường trung bình trượt 7 ngày (*7-day rolling average*) để triệt tiêu hiệu ứng ngày trong tuần, và xác định cửa sổ 7 ngày liên tiếp nào có tổng doanh số cao kỷ lục.
@@ -1760,7 +1760,7 @@ df_doanh_so = pd.DataFrame({"ngay": ngay_ds, "doanh_thu": doanh_so}).set_index("
 
 #### Lời giải
 
-##### Cách 1 · Resample quý trực tiếp và tính `pct_change(4)` (Căn bản — Bẫy số liệu)
+##### Cách 1 · Resample quý trực tiếp và tính `pct_change(4)` (Căn bản: Bẫy số liệu)
 
 ```python
 # 1. Resample theo quý lịch kết thúc
@@ -1996,10 +1996,10 @@ print("Báo cáo QA chuẩn mực:\n", qa_result.to_string(index=False))
 ### Bài 9.3: Thẩm định độ lệch cửa sổ 12 tháng gần nhất (LTM Mismatch) và Bẫy năm nhuận
 
 #### Tình huống thực tế
-Trong bảng thông tin nhà cung cấp có cột dẫn xuất `so_don_ltm` (số đơn hàng trong 12 tháng gần nhất — *Last Twelve Months*). Ngày chụp snapshot hệ thống là `2024-03-01` (năm 2024 là năm nhuận có 366 ngày).
+Trong bảng thông tin nhà cung cấp có cột dẫn xuất `so_don_ltm` (số đơn hàng trong 12 tháng gần nhất, tức *Last Twelve Months*). Ngày chụp snapshot hệ thống là `2024-03-01` (năm 2024 là năm nhuận có 366 ngày).
 Hai nhóm kỹ sư nội bộ xây dựng bộ lọc thời gian theo hai công thức khác nhau:
-- **Nhóm Kỹ thuật (Trừ ngày tuyệt đối)**: `ngay >= snapshot_date - pd.Timedelta(days=365)` $\implies$ rơi vào `2023-03-02` (vô tình bỏ sót ngày `2023-03-01` do năm 2024 có ngày nhuận 29/02!).
-- **Nhóm Nghiệp vụ (Trừ lịch tròn theo năm)**: `ngay >= snapshot_date - pd.DateOffset(years=1)` $\implies$ rơi vào đúng ngày `2023-03-01`.
+- **Nhóm Kỹ thuật (Trừ ngày tuyệt đối)**: Điều kiện `ngay >= snapshot_date - pd.Timedelta(days=365)` $\implies$ rơi vào `2023-03-02` (vô tình bỏ sót ngày `2023-03-01` do năm 2024 có ngày nhuận 29/02!).
+- **Nhóm Nghiệp vụ (Trừ lịch tròn theo năm)**: Điều kiện `ngay >= snapshot_date - pd.DateOffset(years=1)` $\implies$ rơi vào đúng ngày `2023-03-01`.
 
 Hãy viết mã đối chiếu độ lệch kết quả giữa hai cách tiếp cận, phát hiện các đơn hàng rơi vào "vùng tranh chấp ranh giới biên" (*boundary dispute zone*), và giải thích nguyên tắc đồng nhất định nghĩa dữ liệu.
 
@@ -2023,7 +2023,7 @@ df_don_hang = pd.DataFrame({
 
 #### Lời giải
 
-##### Cách 1 · Lọc đơn lẻ bằng Timedelta 365 ngày (Căn bản — Bỏ sót ngày nhuận)
+##### Cách 1 · Lọc đơn lẻ bằng Timedelta 365 ngày (Căn bản: Bỏ sót ngày nhuận)
 
 ```python
 # Nhóm Kỹ thuật dùng timedelta 365 ngày
@@ -2076,7 +2076,7 @@ Bảng đối chiếu độ lệch LTM giữa hai định nghĩa:
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Bẫy năm nhuận trong chuỗi thời gian**: Một năm dương lịch thông thường có 365 ngày, nhưng năm nhuận (như 2024, 2028) có 366 ngày. Khi lấy ngày snapshot `2024-03-01` trừ đi 365 ngày, bạn mới chỉ lùi về ngày `2023-03-02`, khiến mốc tròn một năm `2023-03-01` bị bỏ rơi ngoài rìa!
-- **DateOffset vs Timedelta**: `pd.Timedelta` đại diện cho một khoảng thời gian vật lý cố định (chính xác từng giây), trong khi `pd.DateOffset` đại diện cho khoảng thời gian theo **quy ước lịch của con người** (bảo toàn ngày và tháng). Trong các báo cáo kinh doanh tài chính, khái niệm "1 năm qua" luôn được hiểu là cùng ngày này năm ngoái, do đó bắt buộc phải sử dụng `pd.DateOffset(years=1)`.
+- **DateOffset vs Timedelta**: Lớp `pd.Timedelta` đại diện cho một khoảng thời gian vật lý cố định (chính xác từng giây), trong khi `pd.DateOffset` đại diện cho khoảng thời gian theo **quy ước lịch của con người** (bảo toàn ngày và tháng). Trong các báo cáo kinh doanh tài chính, khái niệm "1 năm qua" luôn được hiểu là cùng ngày này năm ngoái, do đó bắt buộc phải sử dụng `pd.DateOffset(years=1)`.
 
 ---
 
@@ -2349,8 +2349,8 @@ print(df_kiem_dinh[["id", "rating", "sentiment", "qa_status"]])
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **FinOps trong Khoa học Dữ liệu**: Không bao giờ nhấn nút chạy một pipeline gọi LLM trên hàng chục nghìn dòng mà không tính toán trước chi phí và thời gian thực thi (*Latency*). Một phép tính dự toán trước chỉ mất 2 phút nhưng bảo vệ bạn khỏi các sự cố tiêu lạm ngân sách đám mây.
-- **Hậu kiểm Assertion — Tầng phòng thủ thứ hai**:
-  Schema Pydantic chỉ đảm bảo **tính toàn vẹn về mặt cú pháp** (*Syntactic Integrity* — đúng kiểu int, đúng chuỗi enum). Nó hoàn toàn bất lực trước **tính toàn vẹn về mặt nghiệp vụ** (*Semantic/Business Invariant*). Việc đặt các luật Assertion để sàng lọc những trường hợp mâu thuẫn giữa điểm số và cảm xúc giúp xây dựng mô hình Hybrid: Máy móc xử lý $95\%$ trường hợp thông thường, con người chỉ cần can thiệp rà soát $5\%$ trường hợp có cờ cảnh báo (*Human-in-the-loop*).
+- **Hậu kiểm Assertion: Tầng phòng thủ thứ hai**:
+  Schema Pydantic chỉ đảm bảo **tính toàn vẹn về mặt cú pháp** (*Syntactic Integrity*, tức đúng kiểu int, đúng chuỗi enum). Nó hoàn toàn bất lực trước **tính toàn vẹn về mặt nghiệp vụ** (*Semantic/Business Invariant*). Việc đặt các luật Assertion để sàng lọc những trường hợp mâu thuẫn giữa điểm số và cảm xúc giúp xây dựng mô hình Hybrid: Máy móc xử lý $95\%$ trường hợp thông thường, con người chỉ cần can thiệp rà soát $5\%$ trường hợp có cờ cảnh báo (*Human-in-the-loop*).
 
 ---
 
@@ -2358,10 +2358,10 @@ print(df_kiem_dinh[["id", "rating", "sentiment", "qa_status"]])
 ## Phần 11. Trực quan hóa Dữ liệu Cơ bản & Nhận diện Biểu đồ Biến dạng
 
 ::: info Trọng tâm tư duy
-Mục đích tối thượng của biểu đồ là trả lời một câu hỏi phân tích cụ thể, không phải để "trang trí". Một biểu đồ tốt giúp người xem nắm bắt ngay quy luật dữ liệu; ngược lại, một biểu đồ bị thiết kế sai (cắt ngắn trục tung, chọn sai số bins) sẽ bóp méo sự thật và dẫn dắt người xem đến các quyết định sai lầm.
+Mục đích tối thượng của biểu đồ là trả lời một câu hỏi phân tích cụ thể, không phải để "trang trí". Một biểu đồ tốt giúp người xem nắm bắt ngay quy luật dữ liệu. Ngược lại, một biểu đồ bị thiết kế sai (cắt ngắn trục tung, chọn sai số bins) sẽ bóp méo sự thật và dẫn dắt người xem đến các quyết định sai lầm.
 :::
 
-### Bài 11.1: Histogram và lựa chọn số khoảng chia (Bins) — Vạch trần phân phối hai đỉnh
+### Bài 11.1: Histogram và lựa chọn số khoảng chia (Bins): Vạch trần phân phối hai đỉnh
 
 #### Tình huống thực tế
 Cho dữ liệu khảo sát số ngày mở bán trong năm (`availability_365`) của 1,000 chỗ ở. Dữ liệu thực tế có phân phối hai cực: Một nhóm lớn chỉ mở cửa bán dưới 15 ngày (hoặc đóng cửa hoàn toàn), và một nhóm khác mở bán chuyên nghiệp gần như quanh năm (trên 340 ngày), ở khoảng giữa rất ít phòng.
@@ -2380,7 +2380,7 @@ availability = np.concatenate([nhom_it, nhom_nhieu, nhom_giua])
 
 #### Lời giải
 
-##### Cách 1 · Vẽ histogram mặc định với số bins tùy tiện (Căn bản — Che giấu bản chất)
+##### Cách 1 · Vẽ histogram mặc định với số bins tùy tiện (Căn bản: Che giấu bản chất)
 
 ```python
 import matplotlib.pyplot as plt
@@ -2522,7 +2522,7 @@ df_ben_vung = pd.DataFrame({
 
 #### Lời giải
 
-##### Cách 1 · Vẽ biểu đồ cột dọc mặc định và xoay nhãn chữ (Căn bản — Kém trực quan)
+##### Cách 1 · Vẽ biểu đồ cột dọc mặc định và xoay nhãn chữ (Căn bản: Kém trực quan)
 
 ```python
 # Vẽ cột đứng cơ bản
@@ -2560,8 +2560,7 @@ def ve_bieu_do_thanh_ngang(df: pd.DataFrame, cot_danh_muc: str, cot_gia_tri: str
     
     # Tiêu đề tập trung vào thông điệp
     ax.set_title(
-        "Tỷ lệ Cơ sở Lưu trú Đạt Chứng nhận Du lịch Bền vững theo Quận
-(Hoàn Kiếm dẫn đầu với 42.5%, gấp 3.5 lần Hà Đông)",
+        "Tỷ lệ Cơ sở Lưu trú Đạt Chứng nhận Du lịch Bền vững theo Quận\n(Hoàn Kiếm dẫn đầu với 42.5%, gấp 3.5 lần Hà Đông)",
         fontsize=11, fontweight="bold", pad=15, loc="left"
     )
     
@@ -2582,7 +2581,7 @@ plt.close(fig)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Khi nào bắt buộc dùng Biểu đồ Thanh ngang (Horizontal Bar)?**:
-  Bất cứ khi nào danh mục có tên dài (tên cơ quan, địa danh, câu hỏi trắc nghiệm) hoặc số lượng danh mục từ 7 trở lên, hãy từ bỏ biểu đồ cột đứng. Não bộ con người đọc văn bản theo chiều ngang; việc ép người đọc phải nghiêng đầu $45^\circ$ để đọc nhãn trục hoành là một sự thất bại về mặt thiết kế truyền thông.
+  Bất cứ khi nào danh mục có tên dài (tên cơ quan, địa danh, câu hỏi trắc nghiệm) hoặc số lượng danh mục từ 7 trở lên, hãy từ bỏ biểu đồ cột đứng. Não bộ con người đọc văn bản theo chiều ngang. Việc ép người đọc phải nghiêng đầu $45^\circ$ để đọc nhãn trục hoành là một sự thất bại về mặt thiết kế truyền thông.
 - **Sức mạnh của `ax.bar_label` và Tỷ lệ Mực-Dữ liệu (Data-Ink Ratio)**:
   Bằng cách đưa con số trực tiếp lên đầu mỗi thanh, bạn giải phóng người xem khỏi việc phải dóng mắt từ đỉnh cột xuống trục hoành để ước lượng giá trị. Điều này cho phép bạn xóa bỏ hoàn toàn trục hoành, các vạch chia (*ticks*) và lưới ngang rối mắt, tạo nên một biểu đồ thanh lịch và tập trung tối đa vào thông điệp dữ liệu.
 
@@ -2743,7 +2742,7 @@ print("Bảng thẩm định phản biện kỳ gốc:\n", bang_phan_bien.to_str
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Bản chất của thủ thuật Cherry-picking**:
-  Bằng cách cố tình chọn một kỳ gốc có mẫu số cực kỳ thấp (thời điểm đáy dịch bệnh, khủng hoảng, hoặc sự cố kỹ thuật), bất kỳ sự phục hồi tự nhiên nào cũng bị thổi phồng thành "tăng trưởng thần kỳ".
+  Bằng cách cố tình chọn một kỳ gốc có mẫu số rất thấp (thời điểm đáy dịch bệnh, khủng hoảng, hoặc sự cố kỹ thuật), bất kỳ sự phục hồi tự nhiên nào cũng bị thổi phồng thành "tăng trưởng thần kỳ".
 - **Văn phong phản biện của giáo sư**:
   Trong vai trò người thẩm định, không vội vàng phủ nhận con số tính toán học thuật ($990$ so với $450$ đúng là tăng $120\%$), nhưng bạn phải chỉ rõ bối cảnh: *"Mức tăng $120\%$ này chỉ là sự phục hồi kỹ thuật từ đáy sự cố năm 2024. Khi so sánh với mốc vận hành chuẩn năm 2023 (1,000 đơn), hoạt động của doanh nghiệp thực chất đang đi ngang hoặc giảm nhẹ $1.0\%$."*
 
@@ -2820,7 +2819,7 @@ print("Phân rã cơ cấu nghịch lý Simpson:\n", df_simpson)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Cơ chế của Nghịch lý Simpson**:
-  Nghịch lý Simpson xuất hiện khi ta tính trung bình gộp mà bỏ qua một **biến gây nhiễu (Confounding Variable)** quan trọng — ở đây là *Loại thiết bị*. Do tỷ lệ chia lưu lượng không đồng đều giữa hai nhánh thử nghiệm, giao diện A được hưởng lợi thế cơ cấu khi có phần lớn người dùng đến từ Desktop.
+  Nghịch lý Simpson xuất hiện khi ta tính trung bình gộp mà bỏ qua một **biến gây nhiễu (Confounding Variable)** quan trọng (ở đây là *Loại thiết bị*). Do tỷ lệ chia lưu lượng không đồng đều giữa hai nhánh thử nghiệm, giao diện A được hưởng lợi thế cơ cấu khi có phần lớn người dùng đến từ Desktop.
 - **Bài học ra quyết định**:
   Trong thực tế, **giao diện B mới là giao diện tối ưu vượt trội** vì trên bất kỳ thiết bị nào nó cũng đem lại tỷ lệ chuyển đổi cao hơn ($13.3\% > 10.0\%$ trên Mobile, và $95.0\% > 90.0\%$ trên Desktop). Bài học đắt giá cho mọi nhà khoa học dữ liệu: **Tuyệt đối không bao giờ đưa ra kết luận chỉ dựa trên con số trung bình gộp khi cơ cấu tỷ trọng giữa các nhóm có sự mất cân bằng nghiêm trọng**.
 
@@ -2861,7 +2860,7 @@ print(f"Ban ngày: Mean = {mean_ngay/1e6:.2f}tr | Median = {median_ngay/1e6:.2f}
 3. **Bước 3 · Đánh giá diễn giải (Interpretive Scrutiny)**:
    - **Lỗi ngụy biện nhân quả (Causality Fallacy)**: Kết luận khẳng định *"khuyến mãi ban đêm đã kích thích người tiêu dùng mua sắm phóng tay hơn"* là một phát biểu võ đoán. Dữ liệu quan sát chỉ cho thấy mối liên hệ đồng thời giữa *thời điểm mua* và *giá trị giỏ hàng*, không hề chứng minh chương trình khuyến mãi là *nguyên nhân* trực tiếp gây ra hành vi chi tiêu nhiều hơn (nguyên nhân có thể do người có thu nhập cao thường chỉ có thời gian rảnh lướt web vào đêm muộn).
 4. **Bước 4 · Phán quyết & Viết lại đúng mức (Verdict & Revision)**:
-   - **Phán quyết**: Bác bỏ kết luận nhân quả; yêu cầu báo cáo lại bằng đại lượng trung vị và kiểm soát theo cơ cấu danh mục hàng hóa.
+   - **Phán quyết**: Bác bỏ kết luận nhân quả, đồng thời yêu cầu báo cáo lại bằng đại lượng trung vị và kiểm soát theo cơ cấu danh mục hàng hóa.
    - **Câu viết lại đúng mức sư phạm**:
      > *"Trong tập dữ liệu khảo sát, các đơn hàng phát sinh vào khung giờ đêm ghi nhận giá trị trung vị cao hơn khoảng 10% so với ban ngày. Cần thực hiện thử nghiệm A/B ngẫu nhiên có đối chứng trước khi khẳng định chương trình khuyến mãi ban đêm có tác động thúc đẩy giá trị giỏ hàng."*
 

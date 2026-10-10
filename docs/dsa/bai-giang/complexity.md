@@ -71,7 +71,7 @@ flowchart TD
 
 ### Quy tắc 1: Bỏ qua Hằng số & Phần tử bậc thấp
 - Thuật toán chạy $f(n) = 5n^2 + 100n + 9999$ phép tính.
-- Khi $n$ tiến ra vô cùng (ví dụ $n = 1.000.000$), $n^2$ sẽ áp đảo hoàn toàn $100n$ và $9999$.
+- Khi $n$ tiến ra vô hạn (ví dụ $n = 1.000.000$), $n^2$ sẽ áp đảo hoàn toàn $100n$ và $9999$.
 - $\Rightarrow$ Độ phức tạp đơn giản là **$\mathcal{O}(n^2)$**.
 
 ### Quy tắc 2: Vòng lặp đơn và Vòng lặp lồng nhau

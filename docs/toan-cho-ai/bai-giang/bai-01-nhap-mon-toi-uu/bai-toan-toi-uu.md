@@ -486,7 +486,7 @@ Trở lại bài toán người cứu hộ ở Mục 1, nhưng giả sử đoạ
    $$
    (Ràng buộc cũ $x \le 60$ trở thành ràng buộc thừa vì đã có $x \le 45$).
 2. Nghiệm tối ưu không ràng buộc $x \approx 52.6\text{ m}$ bị vi phạm vì nằm ngoài miền khả thi mới $[0, 45]$.
-   Tính đạo hàm tại biên: $T'(45) \approx -0.149 < 0$. Vì đạo hàm cấp hai $T''(x) > 0$ trên toàn miền, $T'(x)$ là hàm tăng ngặt. Do đó $T'(x) < 0$ với mọi $x \in [0, 45]$. Hàm thời gian $T(x)$ nghịch biến trên toàn bộ miền khả thi $[0, 45]$.
+   Tính đạo hàm tại biên: Giá trị $T'(45) \approx -0.149 < 0$. Vì đạo hàm cấp hai $T''(x) > 0$ trên toàn miền, $T'(x)$ là hàm tăng ngặt. Do đó $T'(x) < 0$ với mọi $x \in [0, 45]$. Hàm thời gian $T(x)$ nghịch biến trên toàn bộ miền khả thi $[0, 45]$.
    Nghiệm tối ưu mới bắt buộc nằm tại mút biên phải:
    $$
    x^\star = 45\text{ m}, \qquad T(45) \approx 34.40\text{ s}.

@@ -8,9 +8,9 @@ lessonStatus: ready
 description: "Kỷ luật trích xuất dữ liệu từ văn bản bằng mô hình ngôn ngữ lớn: Thiết kế schema Pydantic, kiểm chứng mỏ neo bằng chứng, đo lường trên bộ nhãn chuẩn và quy tắc hậu kiểm tự động."
 ---
 
-Trong các tổ chức và doanh nghiệp hiện đại, phần lớn tri thức và giá trị kinh doanh không nằm sẵn trong các bảng cơ sở dữ liệu quan hệ ngăn nắp. Chúng ẩn chứa trong khối lượng khổng lồ các văn bản tự nhiên phi cấu trúc: Ý kiến phản hồi của khách hàng, ghi chú của nhân viên chăm sóc khách hàng, hợp đồng thỏa thuận, tin nhắn trao đổi hay các báo cáo hiện trường. Để đưa nguồn tài nguyên này vào các đường ống tính toán định lượng và xây dựng báo cáo điều hành, ta bắt buộc phải chuyển đổi chúng thành các trường dữ liệu có cấu trúc với định dạng chuẩn mực.
+Trong các tổ chức và doanh nghiệp hiện đại, phần lớn tri thức và giá trị kinh doanh không nằm sẵn trong các bảng cơ sở dữ liệu quan hệ ngăn nắp. Chúng ẩn chứa trong khối lượng khổng lồ các văn bản tự nhiên phi cấu trúc: Ý kiến phản hồi của khách hàng, ghi chú của nhân viên chăm sóc khách hàng, văn bản thỏa thuận, tin nhắn trao đổi hay các báo cáo hiện trường. Để đưa nguồn tài nguyên này vào các đường ống tính toán định lượng và xây dựng báo cáo điều hành, ta bắt buộc phải chuyển đổi chúng thành các trường dữ liệu có cấu trúc với định dạng chuẩn mực.
 
-Các công cụ so khớp mẫu truyền thống như biểu thức chính quy (regular expressions) hoạt động cực kỳ nhanh chóng và mang tính tất định tuyệt đối. Tuy nhiên, chúng hoàn toàn bất lực trước những câu văn đa nghĩa, các cấu trúc đảo ngữ, cách diễn đạt mỉa mai châm biếm hay ngữ cảnh khẩu ngữ phong phú. Sự xuất hiện của các mô hình ngôn ngữ lớn (Large Language Models - LLM) mang lại năng lực thấu cảm ngữ nghĩa vượt trội. Đổi lại, bản chất xác suất ngẫu nhiên của mô hình đặt ra một thách thức kỹ nghệ nghiêm trọng: Làm thế nào để tích hợp một thành phần bất định, có khả năng bịa đặt thông tin (ảo giác - hallucination), vào một hệ thống xử lý dữ liệu đòi hỏi tính chính xác và độ tin cậy tuyệt đối?
+Các công cụ so khớp mẫu truyền thống như biểu thức chính quy (regular expressions) hoạt động rất nhanh chóng và mang tính tất định tuyệt đối. Tuy nhiên, chúng hoàn toàn bất lực trước những câu văn đa nghĩa, các cấu trúc đảo ngữ, cách diễn đạt mỉa mai châm biếm hay ngữ cảnh khẩu ngữ phong phú. Sự xuất hiện của các mô hình ngôn ngữ lớn (Large Language Models - LLM) mang lại năng lực thấu cảm ngữ nghĩa vượt trội. Đổi lại, bản chất xác suất ngẫu nhiên của mô hình đặt ra một thách thức kỹ nghệ nghiêm trọng: Làm thế nào để tích hợp một thành phần bất định, có khả năng bịa đặt thông tin (ảo giác - hallucination), vào một hệ thống xử lý dữ liệu đòi hỏi tính chính xác và độ tin cậy tuyệt đối?
 
 Bài học này xây dựng kỷ luật kỹ nghệ và phương pháp luận đo lường khoa học khi ứng dụng LLM trong xử lý dữ liệu: Từ khâu lấy mẫu tái lập được và ước tính chi phí token, thiết kế chuẩn giao tiếp dữ liệu bằng Pydantic Schema có ràng buộc enum, đến quy trình đo lường sai số trên bộ dữ liệu nhãn chuẩn (Gold Standard) và thiết lập các bộ quy tắc hậu kiểm tự động để ngăn ngừa dữ liệu lỗi thẩm thấu vào kho dữ liệu.
 
@@ -71,7 +71,7 @@ Khi sử dụng các giao diện lập trình ứng dụng (API) của các mô 
 ## 2. Kiểm định hai tầng: Cấu trúc cú pháp và Mỏ neo sự thật (Grounding)
 
 Cần khắc sâu một nguyên lý cốt tử: **Đúng cú pháp chưa bao giờ đồng nghĩa với đúng sự thật**.
-Một mô hình ngôn ngữ hoàn toàn có thể trả về một chuỗi JSON hợp lệ 100% theo chuẩn Pydantic, gán nhãn căn hộ là "cực kỳ sạch sẽ", nhưng trong văn bản gốc của khách hàng lại viết "phòng đầy gián và bụi bặm". 
+Một mô hình ngôn ngữ hoàn toàn có thể trả về một chuỗi JSON hợp lệ 100% theo chuẩn Pydantic, gán nhãn căn hộ là "rất sạch sẽ", nhưng trong văn bản gốc của khách hàng lại viết "phòng đầy gián và bụi bặm". 
 
 Do đó, một đường ống xử lý dữ liệu nghiêm cẩn phải xây dựng cơ chế kiểm định hai tầng:
 

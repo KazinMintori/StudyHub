@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Cơ sở hình thức của biểu diễn tri thức, logic vị từ bậc nhất (FOL), lượng từ, cơ chế hợp nhất hóa, suy luận và bản thể luận Ontology."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 ← [Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 16: Mạng Bayes & suy luận →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)
 
@@ -26,7 +26,7 @@ Trí tuệ nhân tạo không chỉ dừng lại ở các thuật toán thám hi
 
 ## 14.1 Vì sao Logic Mệnh đề không đủ sức biểu đạt thế giới?
 
-Trong Logic mệnh đề (Propositional Logic), đơn vị cơ bản nhất là một **mệnh đề nguyên tử** — một phát biểu chỉ có thể nhận giá trị Đúng ($\text{True}$) hoặc Sai ($\text{False}$), ví dụ:
+Trong Logic mệnh đề (Propositional Logic), đơn vị cơ bản nhất là một **mệnh đề nguyên tử**, tức một phát biểu chỉ có thể nhận giá trị Đúng ($\text{True}$) hoặc Sai ($\text{False}$), ví dụ:
 $$
 P: \text{“Trời đang mưa”}, \quad Q: \text{“Đường trơn”}
 $$
@@ -73,9 +73,9 @@ Một phát biểu hoàn chỉnh trong FOL được xây dựng từ:
 
 ## 14.3 Lượng từ: Bí quyết diễn đạt sự khái quát
 
-Sức mạnh kỳ diệu nhất của FOL nằm ở hai lượng từ toán học:
+Ưu thế vượt trội của FOL nằm ở hai lượng từ toán học:
 
-### 1. Lượng từ với mọi ($\forall$ — Universal Quantifier)
+### 1. Lượng từ với mọi: $\forall$ (Universal Quantifier)
 Phát biểu $\forall x \; P(x)$ khẳng định rằng tính chất $P$ đúng với **mọi đối tượng $x$** nằm trong không gian đang xét.
 
 > **Quy tắc vàng:** Lượng từ $\forall$ hầu như luôn đi kèm với phép kéo theo ($\implies$).
@@ -90,11 +90,11 @@ Hãy quan sát sự khác biệt tinh tế nhưng mang tính quyết định:
   $$
   \forall x \; \big(\text{SinhVien}(x) \land \text{ChamChi}(x)\big)
   $$
-  Câu này có nghĩa là: "Mọi thực thể trên cõi đời này (từ cốc nước, quyển sách đến Mặt Trời) vừa là sinh viên, vừa chăm chỉ!" Đây là một phát biểu hoàn toàn phi lý.
+  Câu này có nghĩa là: "Mọi thực thể trên cõi đời này (từ cốc nước, cái bàn đến Mặt Trời) vừa là sinh viên, vừa chăm chỉ!" Đây là một phát biểu hoàn toàn phi lý.
 
 ---
 
-### 2. Lượng từ tồn tại ($\exists$ — Existential Quantifier)
+### 2. Lượng từ tồn tại: $\exists$ (Existential Quantifier)
 Phát biểu $\exists x \; P(x)$ khẳng định rằng có **ít nhất một đối tượng $x$** thỏa mãn tính chất $P$.
 
 > **Quy tắc vàng:** Lượng từ $\exists$ hầu như luôn đi kèm với phép hội ($\land$).

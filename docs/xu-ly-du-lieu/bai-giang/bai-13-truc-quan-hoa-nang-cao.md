@@ -115,7 +115,7 @@ Hãy xem xét diễn biến số lượng đánh giá của một thị trườn
 - Năm 2020: 90 lượt (đáy sâu phong tỏa do đại dịch COVID-19)
 - Năm 2025: 700 lượt
 
-Nếu người vẽ biểu đồ muốn tạo cảm giác về một sự bùng nổ kỳ diệu, họ sẽ cắt gọt trục thời gian chỉ lấy từ năm 2020 đến 2025:
+Nếu người vẽ biểu đồ muốn tạo cảm giác về một sự bùng nổ đột biến, họ sẽ cắt gọt trục thời gian chỉ lấy từ năm 2020 đến 2025:
 $$
 \text{Tốc độ tăng trưởng hiển thị} = \frac{700}{90} \approx 7.78 \text{ lần (tăng gần 800\%)}
 $$
@@ -172,7 +172,7 @@ Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đ�
 | Kỹ thuật trực quan hóa | Bản chất toán học & Kỹ nghệ | Trực giác phản biện |
 | :--- | :--- | :--- |
 | **Boxplot đa chiều trên thang Log** | Tóm tắt 5 số; râu dừng ở quan sát thực tế; thang log kéo dãn đuôi lệch | Tránh bị nén hộp; so sánh công bằng giữa các nhóm có quy mô giá cách biệt. |
-| **Cặp bản đồ Choropleth** | Ghép nối ranh giới GeoPandas; điền `n.fillna(0)` cho vùng trắng | Chống bẫy diện tích địa lý; đặt bản đồ giá cạnh bản đồ nguồn cung để thấy bức tranh toàn cảnh. |
+| **Cặp bản đồ Choropleth** | Ghép nối ranh giới GeoPandas; điền `n.fillna(0)` cho vùng trắng | Chống bẫy diện tích địa lý; đặt bản đồ giá cạnh bản đồ nguồn cung để thấy được cái nhìn toàn diện. |
 | **Phản biện mốc so sánh** | Đổi mốc cơ sở $\{Y_t / Y_{t_0}\}$; bóc trần Lie Factor | Cảnh giác với việc so sánh với đáy khủng hoảng; luôn kéo dài chuỗi qua cả thời kỳ bình thường. |
 | **Năm câu hỏi phản biện** | Kiểm tra trục, cỡ mẫu $N$, thanh sai số, mốc so sánh và tính nhân quả | Bảo vệ uy tín khoa học; từ chối các kết luận giật gân xây dựng trên ngụy tạo thị giác. |
 

@@ -64,7 +64,7 @@ Lệnh `.describe()` tóm tắt các thông số thống kê cốt lõi: Số l�
 
 ---
 
-## 3. Lọc và Chọn Dữ liệu Chuẩn mực: `df[mask]` vs `df.loc[mask, col]`
+## 3. Lọc và Chọn Dữ liệu Chuẩn mực: Đối chiếu `df[mask]` và `df.loc[mask, col]`
 
 ### 3.1. Phân biệt `df[mask]` và `df.loc[mask, col]`
 - **`df[mask]`**: Sử dụng khi mục tiêu là **lọc các hàng** thỏa mãn điều kiện và giữ lại **toàn bộ các cột** của bảng.
@@ -94,7 +94,7 @@ mask = (df["room_type"] == "Entire home/apt") & (df["price"] <= 60000)
 Tuyệt đối không dùng các từ khóa `and`, `or`, `not` của Python thuần vì chúng chỉ đánh giá tính chân trị của một giá trị đơn lẻ, không thể áp dụng cho toàn bộ mảng Boolean.
 
 ### 3.3. Tra cứu Cực trị Hiệu năng cao với `nsmallest`
-Khi cần tìm $n$ căn phòng có giá thấp nhất, thay vì sắp xếp toàn bộ bảng bằng `.sort_values()` với độ phức tạp $O(N \log N)$, ta nên sử dụng phương thức `nsmallest(n, "price")`. Phương thức này sử dụng thuật toán hàng đợi ưu tiên (*Priority Queue / Heap*) với chi phí chỉ $O(N \log n)$, cực kỳ tối ưu khi tập dữ liệu có hàng triệu dòng:
+Khi cần tìm $n$ căn phòng có giá thấp nhất, thay vì sắp xếp toàn bộ bảng bằng `.sort_values()` với độ phức tạp $O(N \log N)$, ta nên sử dụng phương thức `nsmallest(n, "price")`. Phương thức này sử dụng thuật toán hàng đợi ưu tiên (*Priority Queue / Heap*) với chi phí chỉ $O(N \log n)$, đạt hiệu năng vượt trội khi tập dữ liệu có hàng triệu dòng:
 ```python
 top_re = df.nsmallest(5, "price")[["name", "price"]]
 ```

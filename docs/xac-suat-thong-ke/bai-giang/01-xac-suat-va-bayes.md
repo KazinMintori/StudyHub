@@ -12,7 +12,7 @@ Giả sử một xét nghiệm y tế chẩn đoán một căn bệnh hiếm có
 
 Câu trả lời gây kinh ngạc của lý thuyết xác suất là: **Hoàn toàn không**, xác suất thực tế người này mắc bệnh có thể chưa đầy 2%! 
 
-Trực giác thông thường của con người thường thất bại trước các con số tỷ lệ vì ta hay đánh đồng điều kiện suy luận: Ta nhầm lẫn giữa "xác suất dương tính khi đã có bệnh" với "xác suất có bệnh khi đã nhận kết quả dương tính". Bài học này sẽ trang bị công cụ toán học nền tảng để giải mã nghịch lý đó: **Xác suất có điều kiện** và **định lý Bayes** — trái tim của suy luận thống kê và các mô hình học máy hiện đại.
+Trực giác thông thường của con người thường thất bại trước các con số tỷ lệ vì ta hay đánh đồng điều kiện suy luận: Ta nhầm lẫn giữa "xác suất dương tính khi đã có bệnh" với "xác suất có bệnh khi đã nhận kết quả dương tính". Bài học này sẽ trang bị công cụ toán học nền tảng để giải mã nghịch lý đó: **Xác suất có điều kiện** và **định lý Bayes**, vốn là trái tim của suy luận thống kê và các mô hình học máy hiện đại.
 
 ## 1. Không gian mẫu và quy tắc cộng xác suất
 
@@ -104,7 +104,7 @@ Ba thành phần cốt lõi của công thức Bayes:
 ### 5.1. Giải mã nghịch lý xét nghiệm y tế bằng số đếm tự nhiên
 
 Để thấy sức mạnh của định lý Bayes và giải thích trọn vẹn câu hỏi mở đầu bài giảng, hãy xem xét một ví dụ y khoa cụ thể:
-- Trong một cộng đồng, tỷ lệ mắc căn bệnh hiếm $B$ là $0{,}1\%$ (nghĩa là $P(B) = 0{,}001$; tỷ lệ người khỏe mạnh $P(\neg B) = 0{,}999$).
+- Trong một cộng đồng, tỷ lệ mắc căn bệnh hiếm $B$ là $0{,}1\%$ (nghĩa là $P(B) = 0{,}001$, còn tỷ lệ người khỏe mạnh là $P(\neg B) = 0{,}999$).
 - Xét nghiệm có độ nhạy $99\%$: Nếu có bệnh, xác suất nhận kết quả dương tính là $P(+ \mid B) = 0{,}99$.
 - Xét nghiệm có tỷ lệ dương tính giả $5\%$: Người hoàn toàn khỏe mạnh vẫn có xác suất bị báo nhầm dương tính là $P(+ \mid \neg B) = 0{,}05$.
 
@@ -207,8 +207,8 @@ Một bức thư mới gửi đến có chứa từ khóa "khuyến mãi" (biế
 
 ::: solution
 Ta có các thông số ban đầu:
-- $P(S) = 0{,}20$; $P(H) = 0{,}80$.
-- $P(K \mid S) = 0{,}70$; $P(K \mid H) = 0{,}05$.
+- $P(S) = 0{,}20$, $P(H) = 0{,}80$.
+- $P(K \mid S) = 0{,}70$, $P(K \mid H) = 0{,}05$.
 
 Bước 1: Tính xác suất xuất hiện từ "khuyến mãi" trong một bức thư bất kỳ theo công thức xác suất toàn phần:
 

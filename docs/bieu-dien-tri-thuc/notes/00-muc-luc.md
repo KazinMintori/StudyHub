@@ -5,7 +5,7 @@ prerequisites: ["tap-hop","menh-de","luong-tu"]
 lessonStatus: "reference"
 ---
 
-# Lộ trình & Mục lục — AIT2004 Cơ sở Trí tuệ Nhân tạo
+# Lộ trình & Mục lục · AIT2004 Cơ sở Trí tuệ Nhân tạo
 
 Học phần **AIT2004 Cơ sở Trí tuệ Nhân tạo** là trụ cột nền tảng của khối ngành Công nghệ Thông tin và Trí tuệ Nhân tạo. Bộ bài giảng được thiết kế với tư duy sư phạm chuẩn mực, phân tích sâu sắc từ trực giác toán học, cơ chế thuật toán, phân tích độ phức tạp đến các ứng dụng công nghệ trong đời sống thực tế.
 

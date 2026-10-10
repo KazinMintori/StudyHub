@@ -8,12 +8,12 @@ lessonStatus: ready
 description: "Lý thuyết trò chơi tất định, thuật toán Minimax, kỹ thuật cắt tỉa Alpha-Beta và hàm lượng giá heuristic trong môi trường đối kháng."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 ← [Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 5: Bài toán ràng buộc CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
 
 ::: info Trọng tâm bài giảng
-Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung quanh tác tử là một môi trường thụ động: Các vật cản đứng yên và không ai cố tình ngăn cản tác tử đến đích. Nhưng trong thế giới thực, trí tuệ nhân tạo thường xuyên phải đối đầu với những thực thể có trí tuệ khác — những đối thủ có lợi ích đối nghịch trực tiếp.
+Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung quanh tác tử là một môi trường thụ động: Các vật cản đứng yên và không ai cố tình ngăn cản tác tử đến đích. Nhưng trong thế giới thực, trí tuệ nhân tạo thường xuyên phải đối đầu với những thực thể có trí tuệ khác, tức những đối thủ có lợi ích đối nghịch trực tiếp.
 
 Đó là bối cảnh của **Tìm kiếm đối kháng (Adversarial Search)**, nhánh giao thoa rực rỡ giữa Khoa học Máy tính và Lý thuyết Trò chơi (Game Theory). Bài giảng này làm sáng tỏ:
 1. **Mô hình Trò chơi Tổng bằng Không (Zero-Sum Games):** Định nghĩa toán học và nguyên lý Maximin của John von Neumann.
@@ -30,7 +30,7 @@ Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung qua
 
 ## 4.1 Mô hình hóa trò chơi đối kháng hình thức
 
-Chúng ta tập trung vào lớp trò chơi kinh điển có đặc tính: **Hai người chơi, theo lượt, tất định (không có yếu tố may rủi xúc xắc), thông tin hoàn hảo (hai bên đều quan sát được toàn bộ bàn cờ) và có tổng bằng không (Zero-Sum)** — ví dụ tiêu biểu là cờ vua, cờ tướng, cờ ca-rô, cờ vây.
+Chúng ta tập trung vào lớp trò chơi kinh điển có đặc tính: **Hai người chơi, theo lượt, tất định (không có yếu tố may rủi xúc xắc), thông tin hoàn hảo (hai bên đều quan sát được toàn bộ bàn cờ) và có tổng bằng không (Zero-Sum)** (chẳng hạn như cờ vua, cờ tướng, cờ ca-rô, cờ vây).
 
 "Tổng bằng không" nghĩa là lợi ích của người này chính là thiệt hại của người kia:
 $$
@@ -43,7 +43,7 @@ Một trò chơi hình thức gồm 6 thành phần:
 3. **Tập hành động hợp lệ ($\text{Actions}(s)$):** Các nước đi đúng luật từ trạng thái $s$.
 4. **Mô hình kết quả ($\text{Result}(s, a)$):** Trạng thái bàn cờ mới sau khi thực hiện nước đi $a$.
 5. **Kiểm tra kết thúc ($\text{TerminalTest}(s)$):** Trò chơi đã ngã ngũ hay chưa (thắng, thua, hòa).
-6. **Hàm lợi ích ($\text{Utility}(s, p)$):** Điểm số số học tại trạng thái kết thúc đối với người chơi $p$ (ví dụ: $+1$ cho thắng, $-1$ cho thua, $0$ cho hòa).
+6. **Hàm lợi ích ($\text{Utility}(s, p)$):** Điểm số số học tại trạng thái kết thúc đối với người chơi $p$ (ví dụ: Điểm $+1$ cho thắng, $-1$ cho thua, $0$ cho hòa).
 
 ---
 
@@ -195,7 +195,7 @@ flowchart TD
 3. **Truyền giá trị lên Gốc:** $B_1$ chốt giá trị 5. Gốc (MAX) cập nhật $\alpha = \max(-\infty, 5) = 5$.
 4. **Nhánh $B_2$ (với $\alpha = 5, \beta = +\infty$):**
    - Xuống $C_3$: Duyệt lá 1 và 2 $\to C_3 = 2$.
-   - Truyền lên $B_2$: $B_2$ cập nhật giá trị hiện thời $v = 2$.
+   - Truyền lên $B_2$: Nút $B_2$ cập nhật giá trị hiện thời $v = 2$.
    - Nhưng tại nút MIN $B_2$, giá trị $v = 2 \le \alpha = 5$.
    - **CẮT TỈA TOÀN BỘ NHÁNH $C_4$!** Người chơi MAX ở gốc đã nắm chắc trong tay 5 điểm ở nhánh $B_1$, nên sẽ không bao giờ rẽ sang $B_2$ (nơi điểm số chỉ tối đa là 2).
 

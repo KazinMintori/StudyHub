@@ -7,7 +7,7 @@ lessonStatus: "reference"
 
 # Cấu trúc Dữ liệu & Giải thuật (DSA) 
 
-Chào mừng bạn đến với chuyên đề **Cấu trúc dữ liệu và Giải thuật** — một trong những môn học nền tảng quan trọng nhất của sinh viên Công nghệ Thông tin UET.
+Chào mừng bạn đến với chuyên đề **Cấu trúc dữ liệu và Giải thuật**, một trong những môn học nền tảng quan trọng nhất của sinh viên Công nghệ Thông tin UET.
 
 ::: tip Triết lý học tại Hub
 Môn DSA không nhằm mục đích bắt bạn "học thuộc lòng" từng dòng code C/C++. Mục tiêu tối thượng là **hiểu bản chất tư duy giải quyết vấn đề**:
@@ -66,7 +66,7 @@ flowchart TD
 
 ### 2. Công cụ Trực quan hóa & Luyện tập Trực tuyến
 
-- [VisuAlgo.net](https://visualgo.net/en) — Công cụ trực quan hóa hoạt họa từng bước của TS. Steven Halim (Đại học Quốc gia Singapore - NUS).
-- [MIT OpenCourseWare 6.006: Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) — Khóa học nhập môn giải thuật kinh điển của MIT.
-- [NeetCode.io](https://neetcode.io/) — Lộ trình luyện tập thuật toán và cấu trúc dữ liệu theo chủ đề.
-- [GeeksforGeeks - Data Structures](https://www.geeksforgeeks.org/data-structures/) — Bách khoa tra cứu nhanh ví dụ mã nguồn C++/Java/Python.
+- [VisuAlgo.net](https://visualgo.net/en): Công cụ trực quan hóa hoạt họa từng bước của TS. Steven Halim (Đại học Quốc gia Singapore - NUS).
+- [MIT OpenCourseWare 6.006: Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/): Khóa học nhập môn giải thuật kinh điển của MIT.
+- [NeetCode.io](https://neetcode.io/): Lộ trình luyện tập thuật toán và cấu trúc dữ liệu theo chủ đề.
+- [GeeksforGeeks - Data Structures](https://www.geeksforgeeks.org/data-structures/): Bách khoa tra cứu nhanh ví dụ mã nguồn C++/Java/Python.

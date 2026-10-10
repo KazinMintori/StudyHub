@@ -5,7 +5,7 @@ prerequisites: ["tap-hop","menh-de","luong-tu"]
 lessonStatus: "reference"
 ---
 
-# Lộ trình học tập — AIT2004 Cơ sở Trí tuệ Nhân tạo
+# Lộ trình học tập · AIT2004 Cơ sở Trí tuệ Nhân tạo
 
 Môn học **Cơ sở Trí tuệ Nhân tạo** (AIT2004) trang bị tư duy giải quyết vấn đề bằng mô hình hóa không gian trạng thái, các chiến lược tìm kiếm từ cơ bản đến nâng cao, lý thuyết trò chơi đối kháng, và các phương pháp biểu diễn tri thức phục vụ suy luận tự động.
 
@@ -46,6 +46,6 @@ Khóa học được xây dựng theo chuẩn mực học thuật quốc tế c�
 
 1. **Stuart Russell & Peter Norvig**, [*Artificial Intelligence: A Modern Approach (4th Edition - AIMA)*](https://aima.cs.berkeley.edu/), Pearson. Giáo trình chuẩn mực toàn cầu về tác tử thông minh, tìm kiếm không gian trạng thái, A\*, Minimax, CSP và suy luận logic. Mã nguồn giải thuật mẫu: [aimacode/aima-python](https://github.com/aimacode/aima-python).
 2. **Daphne Koller & Nir Friedman**, [*Probabilistic Graphical Models: Principles and Techniques*](https://pgm.stanford.edu/), MIT Press. Tài liệu toàn diện hàng đầu về mạng Bayes, đồ thị vô hướng Markov, suy luận chính xác và xấp xỉ trên mô hình đồ thị xác suất.
-3. **UC Berkeley CS188: Introduction to Artificial Intelligence** (Dan Klein & Pieter Abbeel) — [inst.eecs.berkeley.edu/~cs188](https://inst.eecs.berkeley.edu/~cs188/). Hệ thống slide bài giảng, video và đồ án thực hành Pacman kinh điển về Search, CSP, Games và Bayes.
-4. **Stanford CS221: Artificial Intelligence: Principles and Techniques** (Percy Liang) — [stanford-cs221.github.io](https://stanford-cs221.github.io/). Khóa học AI của Đại học Stanford về mô hình trạng thái, biến ngẫu nhiên và logic.
-5. **Đề cương bài giảng AIT2004 — Cơ sở Trí tuệ Nhân tạo**, Khoa Công nghệ Thông tin, Trường Đại học Công nghệ (ĐHQGHN).
+3. **UC Berkeley CS188: Introduction to Artificial Intelligence** (Dan Klein & Pieter Abbeel), tài liệu tại [inst.eecs.berkeley.edu/~cs188](https://inst.eecs.berkeley.edu/~cs188/). Hệ thống slide bài giảng, video và đồ án thực hành Pacman kinh điển về Search, CSP, Games và Bayes.
+4. **Stanford CS221: Artificial Intelligence: Principles and Techniques** (Percy Liang), tài liệu tại [stanford-cs221.github.io](https://stanford-cs221.github.io/). Khóa học AI của Đại học Stanford về mô hình trạng thái, biến ngẫu nhiên và logic.
+5. **Đề cương bài giảng AIT2004 · Cơ sở Trí tuệ Nhân tạo**, Khoa Công nghệ Thông tin, Trường Đại học Công nghệ (ĐHQGHN).

@@ -198,17 +198,17 @@ Hãy áp dụng quy trình 4 bước để mổ xẻ ba kết luận then chốt
 #### Thẩm định KL2: "Giá trung bình 118.200 CLP/đêm"
 - **Truy số**: Tính toán `df['price'].mean()` cho ra kết quả đúng là 118.200 CLP. Bước 1 đạt.
 - **Kiểm phương pháp**: Phân phối giá thuê bị lệch phải nghiêm trọng bởi 177 giá trị ngoại lai cực lớn (Bài 10). Giá trị trung bình bị kéo vọt lên cao hơn 44% so với thực tế của đại đa số người dân, trong khi một nửa số chỗ ở trên thị trường có mức giá dưới 59.000 CLP. Việc khuyên du khách chuẩn bị ngân sách 118.200 CLP là hoàn toàn sai lệch thực tế.
-- **Phán quyết**: **Cần sửa đổi**. Số liệu đúng nhưng phương pháp chọn thước đo bị sai mục đích; bắt buộc phải sử dụng giá trung vị (59.000 CLP) để đại diện cho mức giá điển hình.
+- **Phán quyết**: **Cần sửa đổi**. Số liệu đúng nhưng phương pháp chọn thước đo bị sai mục đích, do đó bắt buộc phải sử dụng giá trung vị (59.000 CLP) để đại diện cho mức giá điển hình.
 
 #### Thẩm định KL3: "Đánh giá tháng 6 giảm 28%, thị trường hạ nhiệt"
 - **Truy số**: Lượng đánh giá tháng 6/2026 giảm 28% so với tháng 5/2026 là đúng. Nhưng nếu so với cùng kỳ tháng 6/2025, lượng đánh giá thực tế vẫn tăng 6%. Bước 1 đạt.
 - **Kiểm phương pháp**: Mốc chụp dữ liệu được thực hiện vào ngày 29/06/2026, đồng nghĩa với việc tháng 6 chưa trọn vẹn. Người làm đã so sánh một tháng chưa đủ ngày với một tháng trọn vẹn (tháng 5). Hơn nữa, việc viết đánh giá thường có độ trễ lớn (thực tế dữ liệu cho thấy tháng 9/2025 đã nhận thêm 21% số lượt đánh giá sau 9 tháng bổ sung).
-- **Phán quyết**: **Chưa thể kiểm chứng**. Không thể kết luận thị trường hạ nhiệt chỉ dựa trên một mốc chụp có tháng chưa trọn vẹn; cần chờ mốc chụp tiếp theo để có dữ liệu đầy đủ.
+- **Phán quyết**: **Chưa thể kiểm chứng**. Không thể kết luận thị trường hạ nhiệt chỉ dựa trên một mốc chụp có tháng chưa trọn vẹn, vì vậy cần chờ mốc chụp tiếp theo để có dữ liệu đầy đủ.
 
 #### Thẩm định KL4: "Gần metro làm giảm giá cho thuê"
 - **Truy số**: Mức chênh lệch quan sát được giữa hai nhóm đúng là 10.8%. Sau khi kiểm soát biến loại phòng, mức chênh lệch ở hai phân khúc phổ biến dao động khoảng 17% đến 18%. Bước 1 đạt.
 - **Kiểm diễn giải**: Tiêu đề có chứa từ khóa "metro" chỉ là tín hiệu tự khai do chủ nhà chủ động viết, không phải là thước đo khoảng cách vật lý chuẩn xác từ căn nhà đến ga tàu. Việc tuyên bố "vị trí gần metro làm giảm giá" là lỗi ngụy biện nhân quả nghiêm trọng.
-- **Phán quyết**: **Cần sửa đổi**. Chỉ được phép kết luận hai yếu tố có mối liên hệ đi kèm trong dữ liệu quan sát; nếu muốn khẳng định về khoảng cách địa lý, bắt buộc phải sử dụng tọa độ GIS để đo khoảng cách thực tế.
+- **Phán quyết**: **Cần sửa đổi**. Chỉ được phép kết luận hai yếu tố có mối liên hệ đi kèm trong dữ liệu quan sát. Nếu muốn khẳng định về khoảng cách địa lý, bắt buộc phải sử dụng tọa độ GIS để đo khoảng cách thực tế.
 
 #### Thẩm định KL1 và KL5:
 - Đối với **KL1** (tổng số chỗ ở và tỷ lệ căn hộ nguyên căn) và **KL5** (quận Lo Barnechea có giá niêm yết cao nhất): Cả hai kết luận đều vượt qua trọn vẹn cả 4 bước thẩm định. Phán quyết là **Giữ nguyên**.
@@ -225,7 +225,7 @@ Hãy áp dụng quy trình 4 bước để mổ xẻ ba kết luận then chốt
 
 ### Triết lý sư phạm: "Số đúng chưa đủ"
 
-Bài học quan trọng nhất rút ra từ quá trình thẩm định trên: **Trong cả ba trường hợp có tì vết, các con số tính toán đều hoàn toàn chính xác; lỗi sai nằm ở phương pháp chọn thước đo và cách diễn giải bằng lời**.
+Bài học quan trọng nhất rút ra từ quá trình thẩm định trên: **Trong cả ba trường hợp có tì vết, các con số tính toán đều hoàn toàn chính xác, trong khi lỗi sai thực sự nằm ở phương pháp chọn thước đo và cách diễn giải bằng lời**.
 
 Vì vậy, việc thẩm định một báo cáo dữ liệu không thể dừng lại ở việc kiểm tra các phép cộng trừ nhân chia, mà phải kiểm tra xem lập luận có vững chắc và có đạo đức khoa học hay không. Việc xác nhận KL1 và KL5 đúng cũng là một kết quả thẩm định có giá trị khoa học cao.
 

@@ -142,7 +142,7 @@ Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đ�
 
 ## 6. Tổng kết Bài học
 
-1. **Hiểu rõ bộ nhớ**: `ndarray` là một khối đệm liên tục được điều khiển bởi siêu dữ liệu `shape`, `dtype` và `strides`. Mọi phép tính toán địa chỉ đều quy về bước nhảy byte tuyến tính.
+1. **Hiểu rõ bộ nhớ**: Kiểu mảng `ndarray` là một khối đệm liên tục được điều khiển bởi siêu dữ liệu `shape`, `dtype` và `strides`. Mọi phép tính toán địa chỉ đều quy về bước nhảy byte tuyến tính.
 2. **Cảnh giác trước View**: Slicing luôn tạo khung nhìn chia sẻ bộ nhớ. Bất kỳ phép gán nào trên View cũng sẽ làm biến dạng mảng gốc. Khi cần độc lập, hãy gọi `.copy()` hoặc dùng Fancy Indexing.
 3. **Thành thạo Broadcasting**: Luôn so sánh kích thước từ phải sang trái. Sử dụng `keepdims=True` hoặc thêm trục bằng `[:, np.newaxis]` để kiểm soát chính xác chiều tính toán.
 4. **Tuyệt đối không dùng vòng `for` trên mảng**: Hãy tận dụng các hàm phổ quát `ufunc` và toán tử vector hóa để kích hoạt sức mạnh tính toán song song SIMD ở tầng mã máy C.

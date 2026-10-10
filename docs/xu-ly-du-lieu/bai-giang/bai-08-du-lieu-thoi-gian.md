@@ -117,7 +117,7 @@ khoang_thoi_gian = ts.loc["2025-06-15":"2025-07-15"]
 print("Khoảng từ 15/06 đến 15/07:", len(khoang_thoi_gian))
 ```
 
-Cơ chế này hoạt động cực kỳ hiệu quả nhờ thuật toán tìm kiếm nhị phân trên chỉ mục đơn điệu tăng dần (`is_monotonic_increasing`). Nếu chỉ mục chưa được sắp xếp, thao tác cắt lát chuỗi có thể trả về kết quả sai hoặc ném ra cảnh báo nghiêm trọng.
+Cơ chế này hoạt động đạt hiệu năng cao nhờ thuật toán tìm kiếm nhị phân trên chỉ mục đơn điệu tăng dần (`is_monotonic_increasing`). Nếu chỉ mục chưa được sắp xếp, thao tác cắt lát chuỗi có thể trả về kết quả sai hoặc ném ra cảnh báo nghiêm trọng.
 
 ---
 

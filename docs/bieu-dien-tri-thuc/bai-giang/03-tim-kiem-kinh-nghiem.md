@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Nguyên lý tìm kiếm có thông tin, bản chất hàm heuristic, cơ chế và chứng minh tính tối ưu của Greedy Best-First, A* và IDA*."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 ← [Chương 2: Tìm kiếm mù](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 4: Tìm kiếm đối kháng →](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md)
 
@@ -112,7 +112,7 @@ Nguyên nhân cốt lõi là tính **thiển cận (myopic)** của giải thu�
 
 ---
 
-## 3.2 Thuật toán A\* — Đỉnh cao kết hợp giữa quá khứ và tương lai
+## 3.2 Thuật toán A*: Sự kết hợp giữa quá khứ và tương lai
 
 ### Trực giác toán học của A\*
 
@@ -170,7 +170,7 @@ Kết quả: A\* tìm ra lộ trình hoàn hảo $S \to A \to B \to C \to G$ v�
 
 A\* có luôn tìm ra lời giải tối ưu không? Câu trả lời là: **Phụ thuộc hoàn toàn vào phẩm chất của hàm Heuristic $h(n)$**.
 
-### 1. Tính chấp nhận được (Admissibility) — Áp dụng cho tìm kiếm trên cây
+### 1. Tính chấp nhận được (Admissibility): Áp dụng cho tìm kiếm trên cây
 
 Một hàm Heuristic $h(n)$ được gọi là **chấp nhận được (admissible)** nếu nó **không bao giờ ước lượng cao hơn chi phí thực tế**:
 $$
@@ -203,7 +203,7 @@ Giả sử phản chứng rằng A\* lấy $G_2$ ra khỏi hàng đợi trước
 
 ---
 
-### 2. Tính nhất quán (Consistency / Monotonicity) — Áp dụng cho tìm kiếm trên đồ thị
+### 2. Tính nhất quán (Consistency / Monotonicity): Áp dụng cho tìm kiếm trên đồ thị
 
 Khi tìm kiếm trên **đồ thị** (nơi có nhiều đường dẫn tới cùng một trạng thái và ta duy trì một tập đóng Closed để không duyệt lại các đỉnh đã xử lý), tính chất chấp nhận được là **chưa đủ**. Ta cần một điều kiện mạnh hơn: **Tính nhất quán (Consistency)**.
 

@@ -8,14 +8,14 @@ lessonStatus: ready
 ---
 
 
-> *"Đừng mang núi đến với thợ. Hãy đưa thợ đến chân núi — rồi chỉ gửi về những viên đá quý."*
+> *"Đừng mang núi đến với thợ. Hãy đưa thợ đến chân núi, rồi chỉ gửi về những viên đá quý."*
 
 ← [Bài trước](/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md) · [Mục lục](/giai-thuat-du-lieu/index.md) · [Bài tiếp theo →](/giai-thuat-du-lieu/bai-giang/bai-03-pagerank-mo-hinh-va-tinh-toan.md)
 
 ::: info Bài này giải quyết vấn đề gì?
 Năm 2004 Google công bố chỉ mục hơn **8 tỷ trang**. Nghiên cứu Sawzall (2005) xử lý mẫu **450 GB nhật ký nén**. Lần thu thập năm 1998 có **24 triệu trang với hơn 259 triệu liên kết**. Không máy nào giữ nổi chừng ấy, và dữ liệu vốn đã nằm rải trên nhiều máy.
 
-Map-Reduce là **mô hình lập trình** cho phép bạn chỉ viết hai hàm nhỏ — **Map** và **Reduce** — còn hệ thống lo phần khó: Chia dữ liệu, giao việc cho máy, chuyển dữ liệu theo khóa, phát hiện máy hỏng và chạy lại. Trong Khoa học dữ liệu, đây là nền móng cho mọi phép tổng hợp quy mô lớn: Đếm từ, xây chỉ mục, nhân ma trận, PageRank (Bài 03), và là tiền thân của Spark.
+Map-Reduce là **mô hình lập trình** cho phép bạn chỉ viết hai hàm nhỏ, gồm **Map** và **Reduce**, trong khi hệ thống đảm nhiệm phần phức tạp: Chia dữ liệu, giao việc cho máy, chuyển dữ liệu theo khóa, phát hiện máy hỏng và chạy lại. Trong Khoa học dữ liệu, đây là nền móng cho mọi phép tổng hợp quy mô lớn: Đếm từ, xây chỉ mục, nhân ma trận, PageRank (Bài 03), và là tiền thân của Spark.
 :::
 
 **Nguồn đối chiếu:** Slide Bài 02 của học phần, MMDS Chương 2 (mục 2.1.1–2.1.2, 2.2.1–2.2.6, 2.3.1, 2.5.1–2.5.2, bài tập 2.3.1), Dean & Ghemawat, *MapReduce*, OSDI 2004 và tài liệu Apache Hadoop 3.4.2.
@@ -104,7 +104,7 @@ $c_i(w)$ đếm số lần từ $w$ xuất hiện trong văn bản thứ $i$. $c
 ### 2.2. Ba bước: Map, nhóm theo khóa, Reduce
 
 ::: tip Ẩn dụ: Bưu điện phân loại thư
-Mỗi **nhân viên nhận thư** (Map) đọc từng lá thư và dán nhãn mã bưu chính lên đó — họ không cần biết thư sẽ đi đâu tiếp. **Trung tâm phân loại** (hệ thống) gom mọi thư cùng mã bưu chính vào cùng một bao, gửi đến đúng bưu cục. **Bưu cục địa phương** (Reduce) mở bao của mình và xử lý từng mã một. Nhân viên chỉ cần biết "dán nhãn gì" và "xử lý bao thế nào". Mọi khâu vận chuyển đã có hệ thống lo.
+Mỗi **nhân viên nhận thư** (Map) đọc từng lá thư và dán nhãn mã bưu chính lên đó, họ không cần biết thư sẽ đi đâu tiếp. **Trung tâm phân loại** (hệ thống) gom mọi thư cùng mã bưu chính vào cùng một bao, gửi đến đúng bưu cục. **Bưu cục địa phương** (Reduce) mở bao của mình và xử lý từng mã một. Nhân viên chỉ cần biết "dán nhãn gì" và "xử lý bao thế nào". Mọi khâu vận chuyển đã có hệ thống lo.
 :::
 
 ```text
@@ -211,12 +211,12 @@ song song với t = 0, ..., r−1:
 trả về Y = gom_giữ_lặp(O_0, ..., O_{r−1})
 ```
 
-Trường hợp biên: $X$ rỗng → $I$ rỗng → không có khóa → $Y$ rỗng. Giả thiết: Map và Reduce **xác định** và **kết thúc**. Reduce độc lập với thứ tự giá trị. Mỗi vị trí bản ghi đóng góp đúng một lần — các lần chạy lại hay tác vụ dự phòng **không** được tính thêm.
+Trường hợp biên: Tập $X$ rỗng → $I$ rỗng → không có khóa → $Y$ rỗng. Giả thiết: Map và Reduce **xác định** và **kết thúc**. Reduce độc lập với thứ tự giá trị. Mỗi vị trí bản ghi đóng góp đúng một lần, tức các lần chạy lại hay tác vụ dự phòng **không** được tính thêm.
 
 ### 2.6. Hàm Combine: Gộp cục bộ trước khi gửi
 
 ::: tip Ẩn dụ: Đóng gói trước khi gửi bưu điện
-Thay vì gửi 100 phong bì, mỗi phong bì ghi "mèo: 1", nhân viên gộp thành **một** phong bì ghi "mèo: 100". Bưu cục cuối vẫn cộng ra đúng tổng — nhưng xe tải chở ít hơn hẳn.
+Thay vì gửi 100 phong bì, mỗi phong bì ghi "mèo: 1", nhân viên gộp thành **một** phong bì ghi "mèo: 100". Bưu cục cuối vẫn cộng ra đúng tổng, nhưng khối lượng vận chuyển trên đường truyền giảm đi đáng kể.
 :::
 
 **Combine** chạy ở phía Map, gộp các giá trị **cùng khóa trong dữ liệu cục bộ** của một tác vụ Map, trước khi truyền qua mạng.
@@ -259,7 +259,7 @@ $$
 y_i = \sum_{j=1}^{q} a_{ij} v_j, \qquad 1 \le i \le p
 $$
 
-Dữ liệu logic: $pq$ bản ghi $(i, j, a_{ij})$, **kể cả phần tử 0**. Giả thiết: $v$ **vừa bộ nhớ** mỗi tác vụ Map (trường hợp không vừa là mục 2.3.2 MMDS, ngoài phạm vi bài này).
+Dữ liệu logic: Gồm $pq$ bản ghi $(i, j, a_{ij})$, **kể cả phần tử 0**. Giả thiết: Vector $v$ **vừa bộ nhớ** mỗi tác vụ Map (trường hợp không vừa là mục 2.3.2 MMDS, ngoài phạm vi bài này).
 
 ::: tip Ẩn dụ: Tính lương theo phòng ban
 Mỗi bản ghi chấm công $(i, j, a_{ij})$ nói "nhân viên thuộc phòng $i$ làm $a_{ij}$ giờ ở loại việc $j$", còn $v_j$ là đơn giá loại việc $j$ (bảng giá dán ở mọi chi nhánh). Mỗi chi nhánh nhân giờ với đơn giá rồi gửi kết quả **theo phòng ban $i$**. Tổng lương của phòng $i$ chính là $y_i$. Khóa phải là **phòng ban**, vì ta muốn tổng theo phòng.
@@ -322,7 +322,7 @@ $$
 Để đếm **số học sinh khác nhau** đã đến thư viện trong tuần, bạn không cộng số lượt mỗi ngày (một bạn đến 5 ngày sẽ bị đếm 5 lần). Bước 1: Lập danh sách tên, mỗi tên ghi **một lần**. Bước 2: Đếm số dòng của danh sách.
 :::
 
-**Vì sao khó?** Cộng số từ phân biệt của từng văn bản sẽ **đếm trùng**: $d_1$ có 2 loại (mèo, chó), $d_2$ có 2 loại (chó, chim), cộng ra $4$, nhưng đúng là $3$ — "chó" bị đếm hai lần.
+**Vì sao khó?** Cộng số từ phân biệt của từng văn bản sẽ **đếm trùng**: Văn bản $d_1$ có 2 loại (mèo, chó), $d_2$ có 2 loại (chó, chim), cộng ra $4$, nhưng giá trị chính xác là $3$, vì "chó" bị đếm hai lần.
 
 **Phương án hai công việc:**
 
@@ -352,7 +352,7 @@ flowchart TD
 | Job 2 – Map | (g,1), (g,1), (g,1) |
 | Job 2 – Reduce | g [1,1,1] → (g, 3) |
 
-Kết luận: $D = 3$ loại từ, trong khi có 5 lần xuất hiện.
+Kết luận: Có $D = 3$ loại từ, trong khi có 5 lần xuất hiện.
 
 **Tính đúng.** Đầu ra Job 1 tương ứng một–một với các từ phân biệt. Cụ thể, mỗi từ có mặt sinh ít nhất một cặp Map, rồi Reduce thay cả nhóm bằng đúng một cặp. Từ vắng mặt không sinh cặp nào. Vì vậy, Job 2 đếm số cặp đó sẽ cho đúng $D$. Combine 1 giữ sự hiện diện của từ, còn Combine 2 giữ tổng số lượng.
 
@@ -366,7 +366,7 @@ $$
 
 Hai phần tử bằng nhau vẫn là hai đóng góp. Trung bình của dãy rỗng **không xác định**.
 
-**Ứng dụng:** số từ trung bình mỗi trang. Với "mèo chó mèo" (3 từ) và "chó chim" (2 từ): $\mu = (3+2)/2 = 2{,}5$ từ/trang. Trang rỗng vẫn là một trang và đóng góp $(0, 1)$. Bỏ nó sẽ làm sai mẫu số.
+**Ứng dụng:** Tính số từ trung bình mỗi trang. Với "mèo chó mèo" (3 từ) và "chó chim" (2 từ), ta có $\mu = (3+2)/2 = 2{,}5$ từ/trang. Trang rỗng vẫn là một trang và đóng góp $(0, 1)$. Bỏ nó sẽ làm sai mẫu số.
 
 ::: tip Ẩn dụ: Điểm trung bình toàn khối
 Lớp A có 40 học sinh, trung bình 8. Lớp B có 10 học sinh, trung bình 6. Trung bình toàn khối **không phải** $(8+6)/2 = 7$, mà là $(40 \cdot 8 + 10 \cdot 6)/50 = 7{,}6$. Mỗi lớp phải báo cáo **tổng điểm và sĩ số**, không chỉ báo điểm trung bình.
@@ -390,7 +390,7 @@ Lớp A có 40 học sinh, trung bình 8. Lớp B có 10 học sinh, trung bình
 | Combine 2 | chỉ một cặp | $(g,(9,1))$ |
 | Reduce | $L = [(6,2),(9,1)]$, $S = 15$, $C = 3$ | phát $(g, 5)$ |
 
-$\mu = \frac{15}{3} = 5$. Nếu chia ở Combine, ta được trung bình của $3$ và $9$ là $6$ — **sai**.
+$\mu = \frac{15}{3} = 5$. Nếu chia ở Combine, ta được trung bình của $3$ và $9$ là $6$, kết quả này là **sai**.
 
 **Tính đúng (quy nạp).** Bất biến: Mỗi trạng thái $(s, c)$ là đúng tổng và đúng số phần tử của **một nhóm vị trí rời nhau**. Cơ sở: Map phát $(a_i, 1)$. Bước gộp: Gộp hai nhóm rời nhau bằng cộng từng thành phần giữ bất biến. Cuối cùng $S = \sum a_i$, $C = n > 0$, nên $S/C = \mu$.
 
@@ -517,7 +517,7 @@ $$
 S_P = \frac{T_1}{T_P}
 $$
 
-Ví dụ slide ($P = 4$): $T_P = 1 + 4 + 3 + 2 = 10$ s. $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.
+Ví dụ slide ($P = 4$): Thời gian $T_P = 1 + 4 + 3 + 2 = 10$ s. $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.
 
 ```mermaid
 flowchart TD
@@ -658,15 +658,15 @@ mèo	2
 | Combine output records | 4 | hai cặp "mèo" của $d_1$ đã gộp |
 | Reduce output records | 3 | ba từ phân biệt |
 
-Với 2 Reduce, output có hai tệp `part-*`. Lần chạy mẫu có một tệp chứa cả ba khóa và một tệp **rỗng** — hàm băm mặc định không bảo đảm cân bằng tải. Số lần Combine chạy không cố định giữa các lần nộp job. Bộ đếm đo **số cặp**, không đo thời gian.
+Với 2 Reduce, output có hai tệp `part-*`. Lần chạy mẫu có một tệp chứa cả ba khóa và một tệp **rỗng**, nguyên nhân là hàm băm mặc định không bảo đảm cân bằng tải. Số lần Combine chạy không cố định giữa các lần nộp job. Bộ đếm đo **số cặp**, không đo thời gian.
 
-**Câu hỏi kiểm tra của slide:** (1) Xóa Combiner, kết quả không đổi vì phép cộng kết hợp và giao hoán. (2) Replication 2 không làm tổng thành 10: Bản sao là lưu trữ, mỗi từ vẫn chỉ được một Map xử lý một lần. (3) Bằng chứng job đúng: Trạng thái `SUCCEEDED` trên YARN, bộ đếm hợp lệ, và `part-*` cho đúng chim 1, chó 2, mèo 2 — `docker compose ps` chỉ cho biết container đang chạy.
+**Câu hỏi kiểm tra của slide:** (1) Xóa Combiner, kết quả không đổi vì phép cộng kết hợp và giao hoán. (2) Replication 2 không làm tổng thành 10: Bản sao là lưu trữ, mỗi từ vẫn chỉ được một Map xử lý một lần. (3) Bằng chứng job đúng: Trạng thái `SUCCEEDED` trên YARN, bộ đếm hợp lệ, và `part-*` cho đúng chim 1, chó 2, mèo 2, trong khi `docker compose ps` chỉ cho biết container đang chạy.
 
 ---
 
 ## 7. Bài tập MMDS 2.3.1 có lời giải
 
-### 7.1. Số nguyên lớn nhất — bài 2.3.1(a)
+### 7.1. Số nguyên lớn nhất (Bài 2.3.1a)
 
 | Hàm | Đặc tả |
 |---|---|
@@ -674,21 +674,21 @@ Với 2 Reduce, output có hai tệp `part-*`. Lần chạy mẫu có một tệ
 | Combine | $(*, L) \to (*, \max L)$ |
 | Reduce | $(*, L) \to \max L$ |
 
-**Tính đúng:** bất biến khi quét — biến đang giữ bằng max của tiền tố đã đọc. Mỗi phần tử thuộc đúng một khối, nên max toàn tệp bằng max của các max khối. $\max$ kết hợp, giao hoán nên Combine an toàn. Chi phí quét $\Theta(n)$. Map phát $m$ cặp. **Biên:** tệp rỗng không có max — báo không có giá trị, **không** trả 0 (dữ liệu có thể toàn số âm).
+**Tính đúng:** Bất biến khi quét, biến đang giữ bằng max của tiền tố đã đọc. Mỗi phần tử thuộc đúng một khối, nên max toàn tệp bằng max của các max khối. Phép toán $\max$ kết hợp và giao hoán nên Combine an toàn. Chi phí quét $\Theta(n)$. Map phát $m$ cặp. **Biên:** Tệp rỗng không có max, cần báo không có giá trị và **không** trả về 0 (bởi dữ liệu có thể toàn số âm).
 
-### 7.2. Trung bình cộng — bài 2.3.1(b)
+### 7.2. Trung bình cộng (Bài 2.3.1b)
 
-Map trên $B_j$ phát $(*, (s_j, c_j))$. Combine cộng từng thành phần. Reduce trả $S/C$. Bất biến: Mỗi trạng thái là tổng và số phần tử của đúng phần dữ liệu nó đại diện. **Biên:** tệp rỗng → $C = 0$, trung bình không xác định, không chia cho 0.
+Map trên $B_j$ phát $(*, (s_j, c_j))$. Combine cộng từng thành phần. Reduce trả $S/C$. Bất biến: Mỗi trạng thái là tổng và số phần tử của đúng phần dữ liệu nó đại diện. **Biên:** Tệp rỗng → $C = 0$, trung bình không xác định, không chia cho 0.
 
-### 7.3. Số giá trị phân biệt — bài 2.3.1(d)
+### 7.3. Số giá trị phân biệt (Bài 2.3.1d)
 
-Hai vòng như mục 3.2: Job 1 phát $(x, 1)$, Reduce thay mỗi nhóm bằng một cặp $(x, 1)$. Job 2 đổi thành $(*, 1)$ rồi cộng. Job 1 tạo tối đa $n$ cặp trung gian và $D$ cặp đầu ra. Job 2 tạo tối đa $D$ cặp. Combine **không** bảo đảm chỉ còn $O(D)$ cặp toàn cục, vì cùng giá trị có thể ở nhiều Map. Một Reduce giữ toàn bộ tập giá trị cũng đúng nhưng cần bộ nhớ $\Theta(D)$. **Biên:** đầu vào rỗng → $D = 0$, do chương trình điều phối trả.
+Hai vòng như mục 3.2: Job 1 phát $(x, 1)$, Reduce thay mỗi nhóm bằng một cặp $(x, 1)$. Job 2 đổi thành $(*, 1)$ rồi cộng. Job 1 tạo tối đa $n$ cặp trung gian và $D$ cặp đầu ra. Job 2 tạo tối đa $D$ cặp. Combine **không** bảo đảm chỉ còn $O(D)$ cặp toàn cục, vì cùng giá trị có thể ở nhiều Map. Một Reduce giữ toàn bộ tập giá trị cũng đúng nhưng cần bộ nhớ $\Theta(D)$. **Biên:** Đầu vào rỗng → $D = 0$, do chương trình điều phối trả.
 
 ---
 
 ## 8. Code minh họa: Mô phỏng Map-Reduce bằng Python
 
-Chương trình dưới đây là một **máy Map-Reduce thu nhỏ** chạy trong một tiến trình: Chia đầu vào, Map, Combine, phân phối theo băm, nhóm, Reduce — đúng như giả mã hình thức ở mục 2.5. Nó chạy lại toàn bộ năm dry-run của bài và kiểm tra bằng NumPy.
+Chương trình dưới đây là một **máy Map-Reduce thu nhỏ** chạy trong một tiến trình: Chia đầu vào, Map, Combine, phân phối theo băm, nhóm, Reduce, đúng như giả mã hình thức ở mục 2.5. Chương trình chạy lại toàn bộ năm dry-run của bài giảng và đối chiếu kiểm tra bằng NumPy.
 
 ```python
 """

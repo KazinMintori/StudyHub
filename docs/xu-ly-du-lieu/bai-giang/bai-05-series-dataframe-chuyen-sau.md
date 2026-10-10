@@ -37,7 +37,7 @@ Trong phân tích dữ liệu, hầu hết các câu hỏi nghiệp vụ đều 
 <DataDiagram name="groupby" />
 
 ### 2.1. Cú pháp Đặt tên Cột Tổng hợp (Named Aggregation)
-Thay vì dùng cú pháp cũ trả về MultiIndex phức tạp, pandas hỗ trợ cú pháp đặt tên cột trực tiếp cực kỳ tường minh:
+Thay vì dùng cú pháp cũ trả về MultiIndex phức tạp, pandas hỗ trợ cú pháp đặt tên cột trực tiếp rất tường minh:
 ```python
 thong_ke = df.groupby("phan_khuc").agg(
     so_phong=("id", "size"),
@@ -126,6 +126,6 @@ Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đ�
 ## 6. Tổng kết Bài học
 
 1. **Hiểu rõ Index Alignment**: Phép toán giữa hai Series luôn tự động so khớp theo nhãn chỉ mục. Khi nhãn bị lệch, kết quả sẽ sinh ra `NaN`.
-2. **Phân biệt `agg` và `transform`**: `agg` dùng để thu gọn và tóm tắt theo nhóm; `transform` dùng để tính toán và phát tán ngược lại từng dòng mà không làm thay đổi kích thước bảng ban đầu.
+2. **Phân biệt `agg` và `transform`**: Phương thức `agg` dùng để thu gọn và tóm tắt theo nhóm, trong khi `transform` dùng để tính toán và phát tán ngược lại từng dòng mà không làm thay đổi kích thước bảng ban đầu.
 3. **Phân tích đa chiều với `pivot_table`**: Luôn kiểm tra các tương tác chéo để tránh cào bằng số liệu và nhận diện các biến ẩn ngoại sinh.
 4. **Kỷ luật `validate="m:1"` khi nối bảng**: Luôn kiểm định quan hệ khóa ngoại khi thực hiện `pd.merge()` để bảo vệ đường ống dữ liệu khỏi lỗi nhân bản số dòng.

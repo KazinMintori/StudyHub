@@ -20,7 +20,7 @@ Sử dụng Định lý thợ để xác định bậc độ phức tạp thời
 4. $T(n) = 8T(n/2) + O(n^3)$
 
 #### Lời giải gợi ý
-Dạng chuẩn của định lý thợ: $T(n) = a T(n/b) + f(n)$ với $a \ge 1, b > 1$. Xét giá trị $c_{\text{crit}} = \log_b a$:
+Dạng chuẩn của định lý thợ là $T(n) = a T(n/b) + f(n)$ với $a \ge 1, b > 1$. Xét giá trị $c_{\text{crit}} = \log_b a$:
 1. $a = 2, b = 2 \implies \log_2 2 = 1$. Ở đây $f(n) = \Theta(n) = \Theta(n^1)$. Rơi vào trường hợp 2 của Định lý thợ:
    $$T(n) = \Theta(n \log n)$$
 2. $a = 4, b = 2 \implies \log_2 4 = 2$. Ở đây $f(n) = O(n^1)$. Vì $1 < 2$, rơi vào trường hợp 1:
@@ -89,11 +89,11 @@ $$12, 26, 19, 33, 40$$
 
 #### Lời giải gợi ý
 1. Dò tuyến tính:
-   - Khóa $12$: $12 \pmod 7 = 5 \implies$ ô 5 (trống).
-   - Khóa $26$: $26 \pmod 7 = 5 \implies$ xung đột ô 5! Thử $i=1$: $(5+1)\%7 = 6 \implies$ ô 6 (trống). (1 xung đột)
-   - Khóa $19$: $19 \pmod 7 = 5 \implies$ xung đột ô 5, thử ô 6 (xung đột), thử ô 0: $(5+2)\%7 = 0 \implies$ ô 0 (trống). (2 xung đột)
-   - Khóa $33$: $33 \pmod 7 = 5 \implies$ xung đột 5, 6, 0. Thử ô 1: $(5+3)\%7 = 1 \implies$ ô 1 (trống). (3 xung đột)
-   - Khóa $40$: $40 \pmod 7 = 5 \implies$ xung đột 5, 6, 0, 1. Thử ô 2: $(5+4)\%7 = 2 \implies$ ô 2 (trống). (4 xung đột)
+   - Khóa $12$: Phép tính $12 \pmod 7 = 5 \implies$ ô 5 (trống).
+   - Khóa $26$: Phép tính $26 \pmod 7 = 5 \implies$ xung đột ô 5! Thử $i=1$: Giá trị $(5+1)\%7 = 6 \implies$ ô 6 (trống). (1 xung đột)
+   - Khóa $19$: Phép tính $19 \pmod 7 = 5 \implies$ xung đột ô 5, thử ô 6 (xung đột), thử ô 0: Giá trị $(5+2)\%7 = 0 \implies$ ô 0 (trống). (2 xung đột)
+   - Khóa $33$: Phép tính $33 \pmod 7 = 5 \implies$ xung đột 5, 6, 0. Thử ô 1: Giá trị $(5+3)\%7 = 1 \implies$ ô 1 (trống). (3 xung đột)
+   - Khóa $40$: Phép tính $40 \pmod 7 = 5 \implies$ xung đột 5, 6, 0, 1. Thử ô 2: Giá trị $(5+4)\%7 = 2 \implies$ ô 2 (trống). (4 xung đột)
    - Bảng cuối cùng:
      - Ô 0: 19
      - Ô 1: 33

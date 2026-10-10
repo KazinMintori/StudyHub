@@ -59,7 +59,7 @@ flowchart TD
 Dijkstra tìm đường đi ngắn nhất từ một đỉnh nguồn $S$ đến tất cả các đỉnh còn lại trên đồ thị có **trọng số không âm** ($w \ge 0$).
 
 ###  Nguyên lý Tham lam (Greedy Strategy):
-1. Khởi tạo mảng khoảng cách `dist[i] = vô cùng`, riêng `dist[S] = 0`.
+1. Khởi tạo mảng khoảng cách `dist[i] = +\infty`, riêng `dist[S] = 0`.
 2. Dùng hàng đợi ưu tiên (Min-Priority Queue / `std::priority_queue` trong C++) để luôn chọn ra **đỉnh $u$ chưa xét có khoảng cách nhỏ nhất**.
 3. Thử "thư giãn" (Relaxation) tất cả các cạnh kề $(u, v)$ với trọng số $w$:
    Nếu điều kiện sau thỏa mãn:

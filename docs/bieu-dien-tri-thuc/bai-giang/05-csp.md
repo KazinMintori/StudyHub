@@ -8,7 +8,7 @@ lessonStatus: draft
 description: "Cấu trúc bài toán CSP, thuật toán lan truyền ràng buộc AC-3, quay lui Backtracking và các kỹ thuật heuristic MRV, Degree, LCV."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 ← [Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 14: Logic & Biểu diễn tri thức →](/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md)
 
@@ -137,13 +137,13 @@ bool revise(CSP& csp, Variable xi, Variable xj) {
 }
 ```
 
-Độ phức tạp thời gian của AC-3: Giả sử bài toán có $c$ ràng buộc nhị phân (tương ứng $2c$ cung) và kích thước miền giá trị lớn nhất là $d$. Mỗi cung $(X_k, X_i)$ chỉ bị đưa vào hàng đợi tối đa $d$ lần (vì $D_i$ chỉ có tối đa $d$ phần tử để bị xóa). Mỗi lần kiểm tra cung tốn $O(d^2)$. Do đó, thời gian tồi nhất của AC-3 là $O(c \cdot d^3)$ — một chi phí rất nhỏ so với việc tìm kiếm vét cạn hàm mũ!
+Độ phức tạp thời gian của AC-3: Giả sử bài toán có $c$ ràng buộc nhị phân (tương ứng $2c$ cung) và kích thước miền giá trị lớn nhất là $d$. Mỗi cung $(X_k, X_i)$ chỉ bị đưa vào hàng đợi tối đa $d$ lần (vì $D_i$ chỉ có tối đa $d$ phần tử để bị xóa). Mỗi lần kiểm tra cung tốn $O(d^2)$. Do đó, thời gian tồi nhất của AC-3 là $O(c \cdot d^3)$ (đây là mức chi phí tiết kiệm vượt bậc so với việc tìm kiếm vét cạn hàm mũ).
 
 ---
 
 ## 5.4 Tìm kiếm quay lui (Backtracking Search) và Bộ ba Heuristic
 
-Tìm kiếm quay lui là giải thuật DFS chuyên dụng cho CSP: Tại mỗi bước, ta chọn **một biến chưa được gán**, gán thử lần lượt từng giá trị trong miền của nó, kiểm tra tính nhất quán; nếu gặp ngõ cụt thì lùi lại (backtrack).
+Tìm kiếm quay lui là giải thuật DFS chuyên dụng cho CSP: Tại mỗi bước, ta chọn **một biến chưa được gán**, gán thử lần lượt từng giá trị trong miền của nó, kiểm tra tính nhất quán, và nếu gặp ngõ cụt thì lùi lại (backtrack).
 
 Nếu duyệt ngây thơ, không gian tìm kiếm sẽ bùng nổ $O(d^n)$. Để tăng tốc độ lên hàng ngàn lần, người ta áp dụng ba nguyên tắc heuristic:
 
@@ -154,7 +154,7 @@ flowchart TD
     Q3["3. Phát hiện sớm ngõ cụt?"] --> H3["Forward Checking / MAC (Duy trì AC-3)"]
 ```
 
-### 1. Heuristic MRV (Minimum Remaining Values — Thất bại sớm nhất)
+### 1. Heuristic MRV: Ưu tiên biến ít giá trị nhất (Fail-First)
 - **Quy tắc:** Luôn chọn biến có **số lượng giá trị hợp lệ còn lại trong miền ít nhất** để gán trước.
 - **Trực giác bản chất:** Triết lý "Thất bại sớm" (Fail-First). Biến nào càng khó gán, càng ít lựa chọn thì phải ưu tiên xử lý ngay. Nếu nhánh này không thể có nghiệm, nó sẽ bị phát hiện và cắt tỉa ngay từ gốc, ngăn không cho cây tìm kiếm phân nhánh vô ích.
 
@@ -162,7 +162,7 @@ flowchart TD
 - **Quy tắc:** Dùng để phá vỡ thế hòa điểm (tie-breaker) khi có nhiều biến cùng có giá trị MRV nhỏ nhất. Chọn biến tham gia vào **nhiều ràng buộc nhất đối với các biến chưa được gán khác**.
 - **Tác dụng:** Giúp thu hẹp tối đa miền giá trị của các biến còn lại ở các bước tiếp theo.
 
-### 3. Heuristic LCV (Least Constraining Value — Để lại đường sống)
+### 3. Heuristic LCV: Chọn giá trị ít gây xung đột nhất (Least Constraining Value)
 - **Quy tắc:** Khi đã chọn được biến, ta phải quyết định thử giá trị nào trước. Heuristic LCV khuyên: **Hãy ưu tiên giá trị nào loại trừ ít phương án lựa chọn nhất của các biến lân cận.**
 - **Trực giác bản chất:** Trái ngược với việc chọn biến (cần chọn biến dễ thất bại nhất), khi chọn giá trị, ta mong muốn tìm ra nghiệm càng nhanh càng tốt. Chọn giá trị "hiền lành nhất" sẽ để lại không gian rộng mở nhất cho các biến tiếp theo tìm được nghiệm hợp lệ.
 
@@ -184,7 +184,7 @@ Với các bài toán quy mô khổng lồ (ví dụ bài toán xếp $N$-Hậu 
 3. Thay đổi giá trị của biến đó sang giá trị **gây ra ít xung đột nhất với các biến khác (Min-Conflicts Heuristic)**.
 4. Lặp lại cho tới khi số lượng xung đột bằng 0.
 
-Kỳ diệu thay, với xác suất rất cao, heuristic Min-Conflicts có thể tìm ra nghiệm của bài toán $1.000.000$-Hậu chỉ sau vài chục đến vài trăm bước di chuyển!
+Đáng chú ý, với xác suất rất cao, heuristic Min-Conflicts có thể tìm ra nghiệm của bài toán $1.000.000$-Hậu chỉ sau vài chục đến vài trăm bước di chuyển!
 
 ---
 

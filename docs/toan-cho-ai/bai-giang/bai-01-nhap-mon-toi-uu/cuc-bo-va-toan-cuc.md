@@ -9,7 +9,7 @@ description: "Định nghĩa bài toán tối ưu lồi ở dạng chuẩn và v
 
 Đến đây, mọi mảnh ghép đã đủ: Tập lồi ở phần II, hàm lồi ở phần III. Phần cuối của chương ráp chúng lại thành **bài toán tối ưu lồi**, và trả lời câu hỏi đã đặt ra ngay từ chủ đề đầu tiên: Vì sao người ta dành trọn vẹn một môn học cho họ bài toán tối ưu này?
 
-Câu trả lời ngắn gọn nằm ở một định lý chỉ dài vài dòng: Trong một bài toán tối ưu lồi, mọi điểm cực tiểu cục bộ đều là cực tiểu toàn cục. Một thuật toán gradient hay tìm kiếm cục bộ chỉ khai thác thông tin vi phân trong một lân cận hẹp của điểm hiện tại; và đối với bài toán tối ưu lồi, thông tin cục bộ ấy là hoàn toàn đủ để dẫn hướng tới nghiệm tối ưu toàn cục. Ta sẽ phát biểu chính xác bài toán tối ưu lồi, chứng minh định lý, rồi xem từng giả thiết của nó đóng vai trò gì.
+Câu trả lời ngắn gọn nằm ở một định lý chỉ dài vài dòng: Trong một bài toán tối ưu lồi, mọi điểm cực tiểu cục bộ đều là cực tiểu toàn cục. Một thuật toán gradient hay tìm kiếm cục bộ chỉ khai thác thông tin vi phân trong một lân cận hẹp của điểm hiện tại, và đối với bài toán tối ưu lồi, thông tin cục bộ ấy là hoàn toàn đủ để dẫn hướng tới nghiệm tối ưu toàn cục. Ta sẽ phát biểu chính xác bài toán tối ưu lồi, chứng minh định lý, rồi xem từng giả thiết của nó đóng vai trò gì.
 
 ## 1. Bài toán tối ưu lồi ở dạng chuẩn
 

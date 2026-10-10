@@ -45,7 +45,7 @@ Kỳ vọng sở hữu một tính chất toán học cực kỳ thanh lịch v�
 
 $$\mathbb{E}[aX + bY + c] = a\mathbb{E}[X] + b\mathbb{E}[Y] + c.$$
 
-::: tip Điểm vi diệu của tính tuyến tính
+::: tip Điểm đặc biệt của tính tuyến tính
 Tính tuyến tính của kỳ vọng **luôn luôn đúng cho dù $X$ và $Y$ có độc lập với nhau hay không**!
 
 Trong thực tế, khi đối diện với các bài toán đếm phức tạp (như số cặp trùng nhau, số chu trình trong đồ thị), người ta thường không tính trực tiếp phân phối của tổng, mà phân rã thành tổng của các biến chỉ số (indicator variables), tính kỳ vọng của từng biến chỉ số rồi cộng lại.
@@ -88,7 +88,7 @@ $$\sigma = \sqrt{\operatorname{Var}(X)}.$$
 
 1. **Cộng hằng số không làm đổi phương sai:**
    $$\operatorname{Var}(X + c) = \operatorname{Var}(X).$$
-   Nếu mọi điểm dữ liệu đều tăng thêm $c$ đơn vị, toàn bộ phân phối dịch chuyển sang phải $c$ đơn vị; khoảng cách tương đối giữa các điểm với trung tâm mới hoàn toàn giữ nguyên, do đó độ phân tán không đổi.
+   Nếu mọi điểm dữ liệu đều tăng thêm $c$ đơn vị, toàn bộ phân phối dịch chuyển sang phải $c$ đơn vị, nhưng khoảng cách tương đối giữa các điểm với trung tâm mới hoàn toàn giữ nguyên, do đó độ phân tán không đổi.
 
 2. **Nhân với hằng số phóng đại phương sai theo bậc hai:**
    $$\operatorname{Var}(aX) = a^2 \operatorname{Var}(X) \implies \sigma(aX) = |a|\sigma(X).$$
@@ -141,10 +141,10 @@ Có hai cách hiểu trực giác sâu sắc cho bước hiệu chỉnh này:
 
 ## 4. Luật số lớn và Định lý giới hạn trung tâm
 
-Khi kích thước mẫu $n$ tăng dần, mối liên hệ giữa mẫu và tổng thể trở nên kỳ diệu thông qua hai định lý nền tảng:
+Khi kích thước mẫu $n$ tăng dần, mối liên hệ giữa mẫu và tổng thể được thiết lập chặt chẽ thông qua hai định lý nền tảng:
 
 1. **Luật số lớn (Law of Large Numbers - LLN):**
-   Khi kích thước mẫu $n$ tiến ra vô cùng, trung bình mẫu $\bar{X}_n$ sẽ hội tụ về kỳ vọng lý thuyết $\mu$ với xác suất bằng 1. Đây là lý do các sòng bạc luôn có lãi trong dài hạn, và các công ty bảo hiểm định giá được rủi ro.
+   Khi kích thước mẫu $n$ tiến ra vô hạn, trung bình mẫu $\bar{X}_n$ sẽ hội tụ về kỳ vọng lý thuyết $\mu$ với xác suất bằng 1. Đây là lý do các sòng bạc luôn có lãi trong dài hạn, và các công ty bảo hiểm định giá được rủi ro.
 
 2. **Định lý giới hạn trung tâm (Central Limit Theorem - CLT):**
    Cho dù các biến ngẫu nhiên ban đầu có phân phối theo hình thù kỳ dị nào đi chăng nữa, thì khi kích thước mẫu $n$ đủ lớn (thường $n \ge 30$), **trung bình mẫu $\bar{X}$ luôn xấp xỉ phân phối chuẩn**:

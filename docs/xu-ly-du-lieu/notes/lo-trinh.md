@@ -30,7 +30,7 @@ Ví dụ và bài tập thực hành kèm lời giải chi tiết được tích
 
 ## 📖 Giáo trình & Tài liệu Tham khảo Chuẩn mực
 
-1. **Wes McKinney**, [*Python for Data Analysis (3rd Edition)*](https://wesmckinney.com/book/), O'Reilly Media. Bản sách trực tuyến mở hoàn chỉnh tại [wesmckinney.com/book](https://wesmckinney.com/book/). Tác giả thư viện pandas hướng dẫn trực tiếp về cấu trúc dữ liệu Series, DataFrame, xử lý chuỗi thời gian và công cụ tính toán số học.
+1. **Wes McKinney**, [*Python for Data Analysis (3rd Edition)*](https://wesmckinney.com/book/), O'Reilly Media. Bản trực tuyến mở hoàn chỉnh tại [wesmckinney.com/book](https://wesmckinney.com/book/). Tác giả thư viện pandas hướng dẫn trực tiếp về cấu trúc dữ liệu Series, DataFrame, xử lý chuỗi thời gian và công cụ tính toán số học.
 2. **Jake VanderPlas**, [*Python Data Science Handbook (2nd Edition)*](https://jakevdp.github.io/PythonDataScienceHandbook/), O'Reilly Media. Bản trực tuyến mở tại [jakevdp.github.io](https://jakevdp.github.io/PythonDataScienceHandbook/). Cẩm nang toàn diện về NumPy, Pandas, Matplotlib và Scikit-Learn.
 3. **Tài liệu chính thức Pandas (Pandas Documentation)**: [pandas.pydata.org/docs](https://pandas.pydata.org/docs/). Tra cứu chuẩn mực về API, tối ưu hóa hiệu năng và các hàm biến đổi dữ liệu.
 4. **Tài liệu chính thức NumPy (NumPy Documentation)**: [numpy.org/doc/stable](https://numpy.org/doc/stable/). Nền tảng về mảng nhiều chiều ndarray, tư duy vector hóa và cơ chế broadcasting.

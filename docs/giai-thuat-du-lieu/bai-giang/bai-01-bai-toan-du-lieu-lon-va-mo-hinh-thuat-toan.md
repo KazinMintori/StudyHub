@@ -59,7 +59,7 @@ Tính đóng góp tại nơi lưu dữ liệu rồi gom theo từ là hướng x
 
 Thống kê từ mô tả nội dung kho. Khi một truy vấn khớp nhiều trang, hệ thống tìm kiếm còn phải sắp xếp các kết quả. Bài toán ở đây dùng cấu trúc liên kết để tính một điểm quan trọng cho mỗi trang, làm một tín hiệu hỗ trợ việc sắp xếp.
 
-Đầu vào là đồ thị có hướng: Đỉnh biểu diễn trang, cạnh biểu diễn liên kết. Đồ thị trong hình có ba đỉnh $y,a,m$: $y$ trỏ tới $y,a$. $a$ trỏ tới $y,m$. $m$ trỏ tới $a$. Khuyên tại $y$ biểu diễn liên kết từ trang đó về chính nó.
+Đầu vào là đồ thị có hướng: Đỉnh biểu diễn trang, cạnh biểu diễn liên kết. Đồ thị trong hình có ba đỉnh $y,a,m$: Đỉnh $y$ trỏ tới $y,a$, đỉnh $a$ trỏ tới $y,m$, và đỉnh $m$ trỏ tới $a$. Khuyên tại $y$ biểu diễn liên kết từ trang đó về chính nó.
 
 ![Ba trang liên kết có hướng, trong đó phép đọc liên kết và cập nhật điểm được lặp lại để hỗ trợ sắp xếp kết quả](img/lec-01/ung-dung-xep-hang-web.svg)
 

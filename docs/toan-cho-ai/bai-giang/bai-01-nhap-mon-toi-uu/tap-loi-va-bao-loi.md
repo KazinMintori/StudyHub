@@ -57,7 +57,7 @@ Cũng như với tập affine, ta mở rộng từ hai điểm sang nhiều đi�
 > $$
 > trong đó các trọng số thỏa mãn đồng thời hai điều kiện:
 > $$
-> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 \quad \text{và} \quad \theta_i \ge 0, \; \forall i = 1, \dots, k.
+> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 \quad \text{và} \quad \theta_i \ge 0, \quad \forall i = 1, \dots, k.
 > $$
 
 So với tổ hợp affine, ta thêm đúng một điều kiện: Các trọng số không được mang giá trị âm. Hai điều kiện "tổng bằng 1" và "không âm" chính là hai điều kiện cấu thành một **phân phối xác suất** trên $k$ điểm. Ở góc độ trực quan vật lý và đời sống, tổ hợp lồi bản chất là một **phép pha trộn tỉ lệ (hỗn hợp)**, trong đó $\theta_i$ là tỉ lệ phần trăm của từng thành phần $x_i$:

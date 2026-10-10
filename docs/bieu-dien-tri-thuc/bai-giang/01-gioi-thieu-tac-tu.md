@@ -8,7 +8,7 @@ lessonStatus: draft
 description: "Khái niệm trí tuệ nhân tạo, tác tử hợp lý, đặc tả môi trường PEAS và các kiến trúc tác tử giải quyết vấn đề."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 2: Tìm kiếm mù →](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md)
 
@@ -46,7 +46,7 @@ Alan Turing đề xuất: Thay vì tranh cãi mơ hồ xem "máy tính có biế
 Muốn kết luận một chương trình suy nghĩ như con người, ta phải giải mã được bộ não con người vận hành ra sao (thông qua nội quan tâm lý học hoặc quét ảnh thần kinh fMRI), sau đó mô phỏng lại các xung thần kinh đó trong thuật toán.
 
 ### 3. Suy nghĩ hợp lý: Các quy luật tư duy (Laws of Thought)
-Bắt nguồn từ các tam đoạn luận (Syllogisms) của Aristotle: "Mọi người đều phải chết; Socrates là người; vậy Socrates phải chết." Trường phái này hình thức hóa tư duy thành các hệ thống logic chặt chẽ. Tuy nhiên, nó gặp rào cản khi đối mặt với tri thức không chắc chắn và sự bùng nổ tổ hợp trong thực tế.
+Bắt nguồn từ các tam đoạn luận (Syllogisms) của Aristotle: "Mọi người đều phải chết, Socrates là người, do đó Socrates phải chết." Trường phái này hình thức hóa tư duy thành các hệ thống logic chặt chẽ. Tuy nhiên, nó gặp rào cản khi đối mặt với tri thức không chắc chắn và sự bùng nổ tổ hợp trong thực tế.
 
 ### 4. Hành động hợp lý: Hướng tiếp cận Tác tử (The Rational Agent Approach)
 Một **tác tử (agent)** là bất cứ thực thể nào có khả năng nhận thức môi trường và hành động tác động trở lại môi trường. Một **tác tử hợp lý (rational agent)** là tác tử luôn hành động nhằm đạt được kết quả kỳ vọng tốt nhất.

@@ -83,7 +83,7 @@ Ký hiệu tổng ở câu 3 nghĩa là $S_{100}=X_1+X_2+\cdots+X_{100}$. Chỉ 
 #### Lời giải gợi ý
 1. Theo Định lý giới hạn trung tâm (CLT), với kích thước mẫu lớn $n = 100 \ge 30$, biến ngẫu nhiên trung bình mẫu $\bar{X}$ xấp xỉ phân phối chuẩn:
    $$\bar{X} \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right) = \mathcal{N}\left(120, \frac{30^2}{100}\right) = \mathcal{N}(120, 9)$$
-   Sai số chuẩn của trung bình mẫu: $SE = \frac{\sigma}{\sqrt{n}} = \frac{30}{10} = 3$ ms.
+   Sai số chuẩn của trung bình mẫu là $SE = \frac{\sigma}{\sqrt{n}} = \frac{30}{10} = 3$ ms.
 
 2. Chuẩn hóa biến $\bar{X}$ về biến chuẩn tắc $Z \sim \mathcal{N}(0, 1)$:
    $$

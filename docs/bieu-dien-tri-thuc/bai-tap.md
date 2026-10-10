@@ -62,7 +62,7 @@ Xét đồ thị không gian trạng thái sau đây. Trạng thái bắt đầu
    - Lấy $C(5)$, mở rộng: $G(g=5+5=10)$.
    - Lấy $D(5)$, mở rộng: $G(g=5+3=8)$ (cập nhật chi phí tốt hơn cho $G$). Hàng đợi: $\{G(8), E(9), G(10)\}$.
    - Lấy $G(8)$: Đích được mở rộng! Kết thúc.
-   Đường đi tìm được: $S \to B \to D \to G$ với tổng chi phí $g(G) = 8$.
+   Đường đi tìm được là $S \to B \to D \to G$ với tổng chi phí $g(G) = 8$.
 
 2. Tính hợp lệ (Admissibility):
    - $h(n) \le h^*(n)$ với mọi $n$, trong đó $h^*(n)$ là chi phí thực tế ngắn nhất từ $n$ đến $G$.

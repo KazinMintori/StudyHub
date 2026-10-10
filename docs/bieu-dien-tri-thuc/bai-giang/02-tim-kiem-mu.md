@@ -8,18 +8,18 @@ lessonStatus: ready
 description: "Bản chất không gian trạng thái, cơ chế hoạt động và phân tích chi phí sâu sắc của bốn chiến lược tìm kiếm không thông tin: BFS, DFS, UCS và IDS."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)
 
 ::: info Trọng tâm bài giảng
-Khi giải một bài toán mà máy tính hoàn toàn không có bất kỳ manh mối hay ước lượng nào về vị trí của đích đến — tựa như việc bước vào một mê cung tối đen mà không có la bàn — nó buộc phải dựa vào cấu trúc liên kết thuần túy của các trạng thái. Đó chính là bản chất của **tìm kiếm không có thông tin (Uninformed Search)**, hay thường gọi dân dã là **tìm kiếm mù**.
+Khi giải một bài toán mà máy tính hoàn toàn không có bất kỳ manh mối hay ước lượng nào về vị trí của đích đến (tựa như việc bước vào một mê cung tối đen mà không có la bàn), hệ thống buộc phải dựa vào cấu trúc liên kết thuần túy của các trạng thái. Đó chính là bản chất của **tìm kiếm không có thông tin (Uninformed Search)**, hay thường gọi dân dã là **tìm kiếm mù**.
 
 Bài giảng này phân tích bản chất cơ chế, tính tối ưu, chi phí tài nguyên và các tình huống ứng dụng thực tế của bốn giải thuật kinh điển:
-1. **BFS (Breadth-First Search)** — Tìm kiếm theo chiều rộng: Lan tỏa theo từng lớp đồng mức.
-2. **DFS (Depth-First Search)** — Tìm kiếm theo chiều sâu: Thám hiểm kiên định tới tận cùng nhánh.
-3. **UCS (Uniform-Cost Search)** — Tìm kiếm chi phí đồng nhất: Dẫn đường bằng chi phí tích lũy thực tế.
-4. **IDS (Iterative Deepening Search)** — Tìm kiếm sâu dần: Sự kết hợp tinh tế giữa tiết kiệm bộ nhớ và bảo toàn tính tối ưu.
+1. **BFS (Breadth-First Search)**: Tìm kiếm theo chiều rộng (lan tỏa theo từng lớp đồng mức).
+2. **DFS (Depth-First Search)**: Tìm kiếm theo chiều sâu (thám hiểm kiên định tới tận cùng nhánh).
+3. **UCS (Uniform-Cost Search)**: Tìm kiếm chi phí đồng nhất (dẫn đường bằng chi phí tích lũy thực tế).
+4. **IDS (Iterative Deepening Search)**: Tìm kiếm sâu dần (dung hòa giữa tiết kiệm bộ nhớ và bảo toàn tính tối ưu).
 :::
 
 ## Minh họa tương tác
@@ -71,8 +71,8 @@ flowchart TD
 ```
 
 Bằng quan sát giải tích, ta dễ dàng tính trước được:
-- Đường đi ngắn nhất về **số bước nhảy (cạnh)** là: $S \to A \to C \to G$ hoặc $S \to B \to C \to G$ (cùng tốn 3 bước).
-- Đường đi có **tổng chi phí nhỏ nhất (tối ưu thực tế)** là: $S \to A \to B \to C \to G$ với tổng chi phí:
+- Đường đi ngắn nhất về **số bước nhảy (cạnh)** là: Gồm $S \to A \to C \to G$ hoặc $S \to B \to C \to G$ (cùng tốn 3 bước).
+- Đường đi có **tổng chi phí nhỏ nhất (tối ưu thực tế)** là: Lộ trình $S \to A \to B \to C \to G$ với tổng chi phí:
   $$
   c^* = 1 + 2 + 1 + 3 = 7
   $$
@@ -81,7 +81,7 @@ Con số $7$ này chính là "thước đo chân lý". Chúng ta hãy xem từng
 
 ---
 
-## 2.3 Breadth-First Search (BFS) — Lan tỏa theo từng lớp đồng mức
+## 2.3 Breadth-First Search (BFS): Lan tỏa theo từng lớp đồng mức
 
 ### Trực giác cơ chế
 
@@ -148,7 +148,7 @@ Một cách người ta hay dùng trong thực tế để kiểm tra nhanh xem c
 
 ---
 
-## 2.4 Depth-First Search (DFS) — Thám hiểm kiên định tới tận cùng
+## 2.4 Depth-First Search (DFS): Thám hiểm kiên định tới tận cùng
 
 ### Trực giác cơ chế
 
@@ -192,8 +192,8 @@ Hãy chú ý thật kỹ sự khác biệt ở hàng **bộ nhớ**:
 Trong khi BFS đòi hỏi bộ nhớ bùng nổ theo hàm mũ $O(b^d)$ (buộc phải nhớ toàn bộ biên giới của tầng hiện tại), thì DFS chỉ cần lưu trữ các nút dọc theo đường đi hiện tại từ gốc cộng với các nhánh anh em chưa xét, tức chỉ tốn **bộ nhớ tuyến tính** $O(b \cdot m)$!
 
 Ví dụ sinh động: Giả sử $b = 10$, độ sâu $d = 10$:
-- BFS cần lưu trữ khoảng $10^{10}$ nút trong RAM — tương đương hàng chục Gigabyte, máy tính cá nhân lập tức cạn bộ nhớ và dừng chương trình (Out of Memory).
-- DFS chỉ cần lưu khoảng $10 \times 10 = 100$ nút trong Call Stack — chỉ vỏn vẹn vài Kilobyte!
+- BFS cần lưu trữ khoảng $10^{10}$ nút trong RAM (tương đương hàng chục Gigabyte, máy tính cá nhân lập tức cạn bộ nhớ và dừng chương trình).
+- DFS chỉ cần lưu khoảng $10 \times 10 = 100$ nút trong Call Stack (chỉ vỏn vẹn vài Kilobyte).
 
 Tuy nhiên, **tử huyệt** của DFS là: Nếu không gian trạng thái có chu trình hoặc sâu vô hạn, DFS có thể lao đầu mãi mãi xuống một nhánh cụt mà không bao giờ quay lại, dẫn đến mất tính đầy đủ (Incompleteness).
 
@@ -204,7 +204,7 @@ Tuy nhiên, **tử huyệt** của DFS là: Nếu không gian trạng thái có 
 
 ---
 
-## 2.5 Uniform-Cost Search (UCS) — Dẫn đường bằng chi phí thực tế
+## 2.5 Uniform-Cost Search (UCS): Dẫn đường bằng chi phí thực tế
 
 ### Trực giác cơ chế
 
@@ -259,11 +259,11 @@ Nếu tồn tại cạnh có chi phí bằng $0$ hoặc âm, thuật toán có t
 
 ---
 
-## 2.6 Iterative Deepening Search (IDS) — Đỉnh cao dung hòa
+## 2.6 Iterative Deepening Search (IDS): Đỉnh cao dung hòa
 
 Chúng ta đứng trước một nghịch lý lớn:
 - **BFS:** Tìm được đường tối ưu về số bước, nhưng **bộ nhớ RAM bùng nổ theo hàm mũ**, nhanh chóng làm tràn máy.
-- **DFS:** Bộ nhớ tuyến tính cực kỳ thanh thoát, nhưng **không tối ưu** và có thể **lạc vô tận** trong nhánh sâu.
+- **DFS:** Bộ nhớ tuyến tính rất gọn gàng, nhưng **không tối ưu** và có thể **lạc vô tận** trong nhánh sâu.
 
 Liệu có giải pháp nào mang trọn vẹn ưu điểm của cả hai: Vừa tốn ít bộ nhớ như DFS, lại vừa đảm bảo tìm được lời giải nông nhất như BFS?
 Nhà khoa học máy tính Richard Korf đã đưa ra câu trả lời xuất sắc: **Tìm kiếm sâu dần (Iterative Deepening Search - IDS)**.
@@ -322,7 +322,7 @@ Tổng số thao tác của IDS chỉ tăng thêm khoảng $\frac{b}{b-1}$ lần
 
 ## 2.7 Bảng đối chiếu tổng kết bốn thuật toán
 
-Dưới đây là bức tranh toàn cảnh để định hình tư duy giải thuật:
+Dưới đây là bảng tổng hợp đối chiếu để định hình tư duy giải thuật:
 
 | Tiêu chuẩn đánh giá | BFS | DFS | UCS | IDS |
 |:---|:---:|:---:|:---:|:---:|
@@ -331,7 +331,7 @@ Dưới đây là bức tranh toàn cảnh để định hình tư duy giải th
 | **Thời gian** | $O(b^d)$ | $O(b^m)$ | $O\left(b^{1 + \lfloor C^* / \epsilon \rfloor}\right)$ | $O(b^d)$ |
 | **Bộ nhớ (Không gian)** | $O(b^d)$ *(nút thắt)* | $O(b \cdot m)$ *(rất nhỏ)* | $O\left(b^{1 + \lfloor C^* / \epsilon \rfloor}\right)$ | $O(b \cdot d)$ *(tối ưu nhất)* |
 
-*Ký hiệu: $b$ là hệ số nhánh, $d$ là độ sâu lời giải nông nhất, $m$ là độ sâu lớn nhất của không gian trạng thái, $C^*$ là chi phí của lời giải tối ưu.*
+*Ký hiệu: Trong đó $b$ là hệ số nhánh, $d$ là độ sâu lời giải nông nhất, $m$ là độ sâu lớn nhất của không gian trạng thái, $C^*$ là chi phí của lời giải tối ưu.*
 
 ---
 

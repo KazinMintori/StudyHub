@@ -21,7 +21,7 @@ Trong ngôn ngữ C thực thi CPython, `list` thực chất là một mảng đ
 - `tuple` có cơ chế bộ nhớ tương tự `list` nhưng sở hữu tính bất biến (*immutable*). Khi đã được khởi tạo, danh sách con trỏ bên trong `tuple` không thể thêm bớt hay tráo đổi. Đặc tính bất biến này cho phép CPython tối ưu hóa cấp phát bộ nhớ và cho phép `tuple` sinh mã băm (*hashable*), biến nó thành cấu trúc lý tưởng để làm khóa phức hợp nhiều trường (*composite key*) trong các bài toán gom nhóm dữ liệu.
 
 ### 1.2. Bảng băm (`dict` và `set`): Vũ khí gia tốc tra cứu
-`dict` và `set` được cài đặt dựa trên cấu trúc bảng băm (*hash table*) cực kỳ tinh vi của CPython.
+`dict` và `set` được cài đặt dựa trên cấu trúc bảng băm (*hash table*) được tối ưu hóa cao độ của CPython.
 - Để một đối tượng có thể đưa vào `set` hoặc làm khóa của `dict`, đối tượng đó bắt buộc phải bất biến (như chuỗi, số thực, số nguyên, hoặc tuple chứa các phần tử bất biến) để giá trị băm `hash(obj)` không đổi theo thời gian.
 - Khi kiểm tra `if khoa in tu_dien:` hoặc `if phan_tu in tap_hop:`, Python tính toán mã băm của đối tượng, ánh xạ trực tiếp tới vị trí ô nhớ trong bảng băm. Độ phức tạp trung bình của phép tra cứu này là $O(1)$, hoàn toàn độc lập với kích thước dữ liệu.
 - Phép toán đại số tập hợp giữa hai `set`:
@@ -38,13 +38,13 @@ Trong ngôn ngữ C thực thi CPython, `list` thực chất là một mảng đ
 ### 1.3. Mã định danh không phải là con số
 Một sai lầm kinh điển của người mới bước vào ngành dữ liệu là tự động ép kiểu mọi chuỗi ký tự chứa các chữ số sang dạng số nguyên `int()`.
 Xét mã bưu chính, mã căn cước công dân hoặc mã sản phẩm: `"00123"`. Nếu bạn ép kiểu thành `int("00123")`, giá trị sẽ biến thành `123` và toàn bộ các số $0$ ở đầu (*leading zeros*) sẽ bị triệt tiêu vĩnh viễn. Trong kỹ thuật dữ liệu, nguyên tắc vàng được phát biểu như sau:
-> **Nguyên tắc định danh**: Chỉ chuyển đổi sang kiểu số đối với những trường dữ liệu mà ta có nhu cầu thực hiện các phép toán số học (cộng, trừ, nhân, chia, tính trung bình). Mọi mã số định danh, số điện thoại, mã hợp đồng hay số phòng đều phải được bảo toàn nghiêm ngặt dưới dạng chuỗi (`str`).
+> **Nguyên tắc định danh**: Chỉ chuyển đổi sang kiểu số đối với những trường dữ liệu mà ta có nhu cầu thực hiện các phép toán số học (cộng, trừ, nhân, chia, tính trung bình). Mọi mã số định danh, số điện thoại, mã giao dịch hay số phòng đều phải được bảo toàn nghiêm ngặt dưới dạng chuỗi (`str`).
 
 ---
 
 ## 2. Cơ chế Tham chiếu Vùng nhớ và Đột biến Dữ liệu Ngầm
 
-Python vận hành theo mô hình quản lý bộ nhớ hướng đối tượng thông qua cơ chế gắn nhãn tham chiếu (*name-binding*). Việc không thấu suốt mô hình này là nguyên nhân hàng đầu dẫn tới các lỗi sai logic cực kỳ khó phát hiện.
+Python vận hành theo mô hình quản lý bộ nhớ hướng đối tượng thông qua cơ chế gắn nhãn tham chiếu (*name-binding*). Việc không thấu suốt mô hình này là nguyên nhân hàng đầu dẫn tới các lỗi sai logic rất khó phát hiện.
 
 ### 2.1. Phép gán chưa bao giờ tạo ra bản sao
 Khi bạn viết `b = a`, Python không hề sao chép các phần tử trong danh sách `a` sang một vùng nhớ mới. Lệnh này chỉ đơn thuần tạo thêm một cái tên mới `b` cùng trỏ vào đúng đối tượng mà `a` đang trỏ tới:

@@ -10,7 +10,7 @@ description: "Bản chất biến ngẫu nhiên, phân biệt rời rạc và li
 
 Trong đời sống, kết quả của một hiện tượng ngẫu nhiên xuất hiện dưới vô vàn hình thái: Một đồng xu rơi xuống mặt ngửa hay mặt sấp, một con xúc xắc lăn ra số chấm từ 1 đến 6, thời gian bạn phải chờ chuyến xe buýt kế tiếp, hay số lượng truy cập máy chủ tiếp nhận trong một phần nghìn giây. Làm thế nào để toán học hóa những hiện tượng đa dạng đó vào cùng một hệ thống tính toán nhất quán?
 
-Giải pháp kinh điển của lý thuyết xác suất là phát minh ra khái niệm **biến ngẫu nhiên (Random Variable)**: Một cỗ máy ánh xạ gán mỗi kết cục thực tế thành một con số cụ thể. Khi các kết cục đã trở thành số thực, **quy luật phân phối xác suất** sẽ cung cấp bức tranh toàn cảnh về việc các con số đó xuất hiện với khả năng nhiều hay ít.
+Giải pháp kinh điển của lý thuyết xác suất là phát minh ra khái niệm **biến ngẫu nhiên (Random Variable)**: Một cỗ máy ánh xạ gán mỗi kết cục thực tế thành một con số cụ thể. Khi các kết cục đã trở thành số thực, **quy luật phân phối xác suất** sẽ mô tả đầy đủ việc các con số đó xuất hiện với khả năng nhiều hay ít.
 
 ## 1. Bản chất của biến ngẫu nhiên: Chiếc cầu nối từ biến cố sang con số
 
@@ -86,7 +86,7 @@ Khi chuyển sang các đại lượng đo lường vật lý (như thời gian,
 
 $$P(X = x_0) = 0 \quad \text{với mọi } x_0 \in \mathbb{R}.$$
 
-Để hiểu điều này, hãy tưởng tượng thời gian bạn chờ một chuyến tàu điện là ngẫu nhiên trong khoảng từ 0 đến 10 phút. Khoảng $[0, 10]$ chứa vô số điểm số thực không thể đếm xuể (như $3{,}14159265\ldots$ phút). Khả năng chiếc tàu đến vào đúng tích tắc chính xác tuyệt đối đến vô hạn chữ số thập phân đó là 1 chia cho vô cùng, tức bằng 0.
+Để hiểu điều này, hãy tưởng tượng thời gian bạn chờ một chuyến tàu điện là ngẫu nhiên trong khoảng từ 0 đến 10 phút. Khoảng $[0, 10]$ chứa vô số điểm số thực không thể đếm xuể (như $3{,}14159265\ldots$ phút). Khả năng chiếc tàu đến vào đúng tích tắc chính xác tuyệt đối đến vô hạn chữ số thập phân đó có độ đo xác suất bằng 0.
 
 Vì vậy, với biến liên tục, ta không thể định nghĩa xác suất tại một điểm. Thay vào đó, ta sử dụng **hàm mật độ xác suất (Probability Density Function - PDF)**, ký hiệu là $f(x)$. Xác suất chỉ có ý nghĩa khi xét trên một **khoảng** $[a, b]$, và được tính bằng diện tích hình thang cong dưới đường mật độ:
 

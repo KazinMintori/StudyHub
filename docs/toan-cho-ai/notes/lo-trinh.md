@@ -33,7 +33,7 @@ Khóa học được thiết kế theo cấu trúc module hóa 4 thành phần l
 Để đạt được hiệu quả sư phạm cao nhất, bạn nên chia mỗi bài giảng thành các chặng học tập có chủ đích:
 
 - **Chặng 1: Trực giác và Đặt vấn đề**: Đọc phần dẫn nhập và các ví dụ thực tế trong công nghệ AI (nhận diện hình ảnh, mô hình ngôn ngữ lớn, hệ thống gợi ý). Hiểu rõ bài toán sinh ra để giải quyết bế tắc gì của đời sống.
-- **Chặng 2: Công cụ giải tích và Khảo sát toán học**: Theo dõi các bước biến đổi công thức. Đừng chỉ đọc lướt qua — hãy tự tay đặt bút viết lại các bước khai triển Taylor, nhân ma trận hoặc giải hệ phương trình đạo hàm.
+- **Chặng 2: Công cụ giải tích và Khảo sát toán học**: Theo dõi các bước biến đổi công thức. Đừng chỉ đọc lướt qua, hãy tự tay đặt bút viết lại các bước khai triển Taylor, nhân ma trận hoặc giải hệ phương trình đạo hàm.
 - **Chặng 3: Thử nghiệm tương tác**: Khảo sát các thành phần mô phỏng trực quan trên trang (như đồ thị đường mức, tương tác điểm cực LP, dò đường Bellman) để khắc sâu mối liên hệ giữa đại số và hình học.
 - **Chặng 4: Tự giải bài tập trước khi mở đáp án**: Mỗi bài giảng đều có 3 bài tập tự luyện kèm lời giải chi tiết. Hãy chủ động giải độc lập, sau đó mới đối chiếu tư duy với phần phân tích của giảng viên.
 
@@ -45,15 +45,15 @@ Khóa học được xây dựng dựa trên các chuẩn mực học thuật qu
 
 1. **Stephen Boyd & Lieven Vandenberghe**, [*Convex Optimization*](https://web.stanford.edu/~boyd/cvxbook/), Cambridge University Press. Bản PDF giáo trình mở chính thức từ Đại học Stanford: [Stanford CVX Book (PDF)](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf). Giáo trình nền tảng về giải tích lồi, đối ngẫu Lagrange và các phương pháp điểm trong.
 2. **Marc Peter Deisenroth, A. Aldo Faisal, & Cheng Soon Ong**, [*Mathematics for Machine Learning*](https://mml-book.github.io/), Cambridge University Press. Bản trực tuyến mở chính thức: [MML Book (PDF/Web)](https://mml-book.github.io/book/mml-book.pdf). Hệ thống hóa toàn diện đại số tuyến tính, giải tích ma trận và tối ưu hóa ứng dụng trong học máy.
-3. **Dimitris Bertsimas & John N. Tsitsiklis**, [*Introduction to Linear Optimization*](https://www.athenasc.com/linopt.html), Athena Scientific. Tài liệu chuẩn mực về hình học đa diện, thuật toán Simplex và lý thuyết đối ngẫu tuyến tính; tham khảo bổ trợ tại [MIT OpenCourseWare 15.053](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/).
+3. **Dimitris Bertsimas & John N. Tsitsiklis**, [*Introduction to Linear Optimization*](https://www.athenasc.com/linopt.html), Athena Scientific. Tài liệu chuẩn mực về hình học đa diện, thuật toán Simplex và lý thuyết đối ngẫu tuyến tính. Bạn có thể tham khảo bổ trợ tại [MIT OpenCourseWare 15.053](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/).
 4. **Ian Goodfellow, Yoshua Bengio, & Aaron Courville**, [*Deep Learning*](https://www.deeplearningbook.org/), MIT Press. Bản trực tuyến mở hoàn chỉnh tại [deeplearningbook.org](https://www.deeplearningbook.org/) (đặc biệt Chương 8: Optimization for Training Deep Models).
 5. **Richard S. Sutton & Andrew G. Barto**, [*Reinforcement Learning: An Introduction (2nd Edition)*](http://incompleteideas.net/book/the-book-2nd.html), MIT Press. Bản PDF trực tuyến miễn phí chính thức: [Sutton & Barto Book (PDF)](http://incompleteideas.net/book/RLbook2020.pdf). Tài liệu toàn diện về phương trình Bellman và quá trình ra quyết định Markov.
-6. **Richard Bellman**, *Dynamic Programming*, Princeton University Press. Cuốn sách khởi nguồn định hình nguyên lý tối ưu hóa Bellman và phân rã bài toán chuỗi quyết định.
+6. **Richard Bellman**, *Dynamic Programming*, Princeton University Press. Tác phẩm kinh điển khởi nguồn định hình nguyên lý tối ưu hóa Bellman và phân rã bài toán chuỗi quyết định.
 
 ---
 
 ## 4. Tra cứu nhanh công cụ bổ trợ
 
-- [Hình học tập lồi — Đọc thêm](../doc-them/hinh-hoc-tap-loi.md): Hệ thống hóa các công cụ hình học không gian nâng cao.
+- [Hình học tập lồi - Đọc thêm](../doc-them/hinh-hoc-tap-loi.md): Hệ thống hóa các công cụ hình học không gian nâng cao.
 - [Tổng hợp bài tập theo chủ đề](../bai-tap.md): Bộ bài tập rèn luyện tư duy toán học toàn diện của cả 8 bài giảng.
 - Các mục Wiki cốt lõi: [Gradient](/wiki/gradient.md) · [Hessian](/wiki/hessian.md) · [Ma trận nửa xác định dương (PSD)](/wiki/ma-tran-psd.md) · [Điều kiện KKT](/wiki/kkt.md).

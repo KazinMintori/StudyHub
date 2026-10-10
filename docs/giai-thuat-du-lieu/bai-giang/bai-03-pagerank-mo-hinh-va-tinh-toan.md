@@ -26,7 +26,7 @@ Sau bài học, sinh viên cần lập được ma trận liên kết và một 
 
 ## 2. Bài toán Xếp hạng trang web
 
-**Đầu vào và đầu ra.** Đầu vào là đồ thị có hướng $G=(V,E)$, với $n=|V|$ trang và $m=|E|$ liên kết. Cạnh $j\to i$ nghĩa là trang $j$ trỏ tới trang $i$. Hai liên kết cùng nguồn cùng đích được gộp thành một cạnh. Đầu ra là một điểm $r_i\ge0$ cho mỗi trang và thứ tự giảm dần theo điểm (cho phép đồng hạng). Quy ước chuẩn hóa là $r_1+r_2+\cdots+r_n=1$, viết gọn thành $\sum_{i=1}^n r_i=1$: Chỉ số $i$ chạy qua tất cả trang. Lưu ý tổng bằng 1 chưa xác định duy nhất cách chấm điểm — nhiều véc tơ khác nhau đều thỏa điều kiện này. Quy tắc chấm điểm cụ thể là nội dung của phần 3.
+**Đầu vào và đầu ra.** Đầu vào là đồ thị có hướng $G=(V,E)$, với $n=|V|$ trang và $m=|E|$ liên kết. Cạnh $j\to i$ nghĩa là trang $j$ trỏ tới trang $i$. Hai liên kết cùng nguồn cùng đích được gộp thành một cạnh. Đầu ra là một điểm $r_i\ge0$ cho mỗi trang và thứ tự giảm dần theo điểm (cho phép đồng hạng). Quy ước chuẩn hóa là $r_1+r_2+\cdots+r_n=1$, viết gọn thành $\sum_{i=1}^n r_i=1$: Chỉ số $i$ chạy qua tất cả trang. Lưu ý rằng tổng bằng 1 chưa xác định duy nhất cách chấm điểm, bởi nhiều véc tơ khác nhau đều thỏa mãn điều kiện này. Quy tắc chấm điểm cụ thể là nội dung của phần 3.
 
 **Ví dụ chuẩn xuyên suốt bài giảng.** Ta dùng đồ thị bốn trang trong Hình 5.1 của giáo trình MMDS, $n=4$, $m=8$: A trỏ tới B, C, D. B trỏ tới A, D. C trỏ tới A. D trỏ tới B, C.
 
@@ -34,15 +34,15 @@ Sau bài học, sinh viên cần lập được ma trận liên kết và một 
 
 Bậc ra (số liên kết đi khỏi trang) lần lượt là $d_A=3$, $d_B=2$, $d_C=1$, $d_D=2$. Đồ thị này đủ nhỏ để chạy tay từng bước, và cả bài sẽ quay lại nó ở mô hình, thuật toán, chia khối và chi phí.
 
-**Thử nghiệm đầu tiên: Đếm liên kết vào.** Trên ví dụ, A, B, C, D đều có đúng 2 liên kết vào, nên chuẩn hóa cho mỗi trang $\frac{2}{8}=\frac{1}{4}$ — bốn trang đồng hạng. Cách đếm này có hai hạn chế rõ: Nó coi mọi liên kết ngang giá trị, dù liên kết từ C (chỉ trỏ một nơi) khác liên kết từ A (trỏ ba nơi), và nó không lan truyền tầm quan trọng: Một trang được trỏ bởi trang quan trọng đáng lẽ phải quan trọng hơn.
+**Thử nghiệm đầu tiên: Đếm liên kết vào.** Trên ví dụ, A, B, C, D đều có đúng 2 liên kết vào, nên chuẩn hóa cho mỗi trang $\frac{2}{8}=\frac{1}{4}$, dẫn đến cả bốn trang đều đồng hạng. Cách đếm này có hai hạn chế rõ: Nó coi mọi liên kết ngang giá trị, dù liên kết từ C (chỉ trỏ một nơi) khác liên kết từ A (trỏ ba nơi), và nó không lan truyền tầm quan trọng: Một trang được trỏ bởi trang quan trọng đáng lẽ phải quan trọng hơn.
 
 **Từ đếm sang chia điểm.** Ta cho mỗi trang một lượng điểm rồi để trang nguồn *chia đều* điểm của mình cho các đích theo bậc ra, thay vì chỉ đếm cạnh vào. Khởi tạo mỗi trang $\frac{1}{4}$ điểm. A chia cho ba đích: Mỗi đích nhận $(\frac{1}{4})/3=\frac{1}{12}$. B và D chia cho hai đích, mỗi cạnh mang $\frac{1}{8}$. C chuyển cả $\frac{1}{4}$ cho A.
 
-**Cộng tại đích và một vòng hoàn chỉnh.** Mọi trang tính đồng thời từ *điểm cũ*: A chỉ nhận từ B và C, được $\frac{1}{8}+\frac{1}{4}=\frac{3}{8}$. B nhận $\frac{1}{12}$ từ A và $\frac{1}{8}$ từ D, được $\frac{5}{24}$. Tương tự C và D đều $\frac{5}{24}$. Tổng $\frac{3}{8}+3\times \frac{5}{24} = 1$, không mất không thêm. Sau một vòng, A đứng trước B, C, D đồng hạng — khác kết quả đồng hạng của cách đếm liên kết vào, vì C chuyển toàn bộ điểm cho A.
+**Cộng tại đích và một vòng hoàn chỉnh.** Mọi trang tính đồng thời từ *điểm cũ*: A chỉ nhận từ B và C, được $\frac{1}{8}+\frac{1}{4}=\frac{3}{8}$. B nhận $\frac{1}{12}$ từ A và $\frac{1}{8}$ từ D, được $\frac{5}{24}$. Tương tự C và D đều $\frac{5}{24}$. Tổng $\frac{3}{8}+3\times \frac{5}{24} = 1$, không mất không thêm. Sau một vòng, A đứng trước B, C, D đồng hạng, khác biệt hoàn toàn với kết quả đồng hạng của cách đếm liên kết vào, vì C chuyển toàn bộ điểm cho A.
 
 Ba điểm phương pháp luận cần giữ:
 1. Mọi đóng góp xác định bởi điểm cũ và bậc ra của nguồn, không phải bậc vào của đích.
-2. Đồng bộ — không dùng điểm mới của trang này khi tính trang khác trong cùng vòng.
+2. Đồng bộ: Không dùng điểm mới của trang này khi tính trang khác trong cùng vòng.
 3. Một vòng chưa phải PageRank. Quy tắc hiện tại còn hai lỗ hổng: Chưa xử lý trang không có liên kết ra, và chưa bảo đảm việc lặp hội tụ trên mọi đồ thị. Phần 3 xử lý cả hai.
 
 ---
@@ -51,7 +51,7 @@ Ba điểm phương pháp luận cần giữ:
 
 ### Ma trận liên kết và phép lặp truyền điểm
 
-**Ma trận $M_0$.** Ta hình thức hóa phép chia điểm bằng đại số tuyến tính. Đặt $d_j$ là bậc ra của trang $j$. Ma trận liên kết $M_0$ cỡ $n\times n$ được định nghĩa theo cột: $(M_0)_{ij}=1/d_j$ nếu có cạnh $j\to i$ và $d_j>0$. Bằng $0$ nếu không. Quy ước này quan trọng: **Cột** $j$ là trang nguồn, **hàng** $i$ là trang đích. Với đồ thị bốn trang (thứ tự hàng/cột A, B, C, D):
+**Ma trận $M_0$.** Ta hình thức hóa phép chia điểm bằng đại số tuyến tính. Đặt $d_j$ là bậc ra của trang $j$. Ma trận liên kết $M_0$ cỡ $n\times n$ được định nghĩa theo cột: Giá trị $(M_0)_{ij}=1/d_j$ nếu có cạnh $j\to i$ và $d_j>0$, bằng $0$ trong trường hợp còn lại. Quy ước này quan trọng: **Cột** $j$ là trang nguồn, **hàng** $i$ là trang đích. Với đồ thị bốn trang (thứ tự hàng/cột A, B, C, D):
 
 $$M_0=\begin{pmatrix} 0 & \frac{1}{2} & 1 & 0\\ \frac{1}{3} & 0 & 0 & \frac{1}{2}\\ \frac{1}{3} & 0 & 0 & \frac{1}{2}\\ \frac{1}{3} & \frac{1}{2} & 0 & 0 \end{pmatrix}$$
 
@@ -63,15 +63,15 @@ $$r^{t+1}=M_0\,r^t.$$
 
 Nhân ma trận–véc tơ thực hiện đồng thời "chia tại nguồn, cộng tại đích": Thành phần $i$ của $M_0r$ là $\sum_{j:\,j\to i} r_j/d_j$. Trên ví dụ: $r^1=(\frac{9}{24},\,\frac{5}{24},\,\frac{5}{24},\,\frac{5}{24})^T$, khớp đúng bảng chia điểm của phần 2.
 
-**Điểm ổn định và mối liên hệ với ma trận.** Điểm ổn định là véc tơ không đổi qua cập nhật, $r^*=M_0r^*$ — trong ngôn ngữ đại số tuyến tính, đây là véc tơ riêng ứng với giá trị riêng bằng 1 của ma trận có tổng mỗi cột bằng 1. Giáo trình MMDS trình bày PageRank qua quan điểm này. Với mục đích tính toán, ta không cần khử hay tính giá trị riêng, mà lặp nhân ma trận–véc tơ tới khi véc tơ ít thay đổi. Ở quy mô lớn, ta tận dụng các phần tử khác 0 thay vì lưu và xử lý toàn bộ ma trận đặc. Phần 4 xây dựng cách tổ chức đó.
+**Điểm ổn định và mối liên hệ với ma trận.** Điểm ổn định là véc tơ không đổi qua cập nhật, $r^*=M_0r^*$, tức trong ngôn ngữ đại số tuyến tính, đây chính là véc tơ riêng ứng với giá trị riêng bằng 1 của ma trận có tổng mỗi cột bằng 1. Giáo trình MMDS trình bày PageRank qua quan điểm này. Với mục đích tính toán, ta không cần khử hay tính giá trị riêng, mà lặp nhân ma trận–véc tơ tới khi véc tơ ít thay đổi. Ở quy mô lớn, ta tận dụng các phần tử khác 0 thay vì lưu và xử lý toàn bộ ma trận đặc. Phần 4 xây dựng cách tổ chức đó.
 
-**Một quan sát trên ví dụ.** Hai hàng B và C của $M_0$ giống hệt nhau nên $r_B=r_C$ ở mọi vòng. Lập luận quy nạp đơn giản cho thấy $r_D$ cũng bằng chúng. Giới hạn của ví dụ có nghiệm dạng: $r_A=\frac{3}{9}=\frac{1}{3}$ và $r_B=r_C=r_D=\frac{2}{9}$. Đáng chú ý: **$r_B=r_C=r_D$ là hệ quả của khởi tạo đều và quy tắc cập nhật trên đồ thị này, không phải do ba nút đối xứng về cấu trúc** — C chỉ có 1 liên kết ra trong khi B, D có 2. Điểm số đo tổng khối lượng nhận được, không đo bậc.
+**Một quan sát trên ví dụ.** Hai hàng B và C của $M_0$ giống hệt nhau nên $r_B=r_C$ ở mọi vòng. Lập luận quy nạp đơn giản cho thấy $r_D$ cũng bằng chúng. Giới hạn của ví dụ có nghiệm dạng: Điểm $r_A=\frac{3}{9}=\frac{1}{3}$ và $r_B=r_C=r_D=\frac{2}{9}$. Đáng chú ý: **$r_B=r_C=r_D$ là hệ quả của khởi tạo đều và quy tắc cập nhật trên đồ thị này, không phải do ba nút đối xứng về cấu trúc**, bởi C chỉ có 1 liên kết ra trong khi B, D có 2. Điểm số đo tổng khối lượng nhận được, không đo bậc.
 
 **Giới hạn của phép lặp thô.** Không thể kết luận phép lặp hội tụ trên mọi đồ thị chỉ từ điều kiện tổng cột bằng 1. Chẳng hạn, một đồ thị có thể khiến điểm dao động theo chu kỳ. Web còn có nút cụt và nhóm trang không có liên kết ra ngoài. Ta sẽ bổ sung bước nhảy và xử lý nút cụt, rồi chứng minh hội tụ cho mô hình đầy đủ dưới đây.
 
 ### Nút cụt, bước nhảy và phép cập nhật đầy đủ
 
-**Nút cụt làm mất điểm.** Xóa cạnh C→A khỏi đồ thị ví dụ: C trở thành nút cụt (không còn liên kết ra, nhưng vẫn nhận cạnh vào). Cột C của $M_0$ toàn 0, nên điểm cũ của C không đóng góp cho đích nào. Từ $r^0$ đều, một vòng lặp thô cho $(\frac{3}{24},\,\frac{5}{24},\,\frac{5}{24},\,\frac{5}{24})^T$, tổng $\frac{18}{24}=\frac{3}{4}$: Mất đúng $\frac{1}{4}$ điểm của C. Lặp tiếp, tổng điểm giảm dần về 0 — tầm quan trọng "rò rỉ" khỏi đồ thị. (Biến thể này là Hình 5.3, biến thể `dead` trong mã thực hành.)
+**Nút cụt làm mất điểm.** Xóa cạnh C→A khỏi đồ thị ví dụ: C trở thành nút cụt (không còn liên kết ra, nhưng vẫn nhận cạnh vào). Cột C của $M_0$ toàn 0, nên điểm cũ của C không đóng góp cho đích nào. Từ $r^0$ đều, một vòng lặp thô cho $(\frac{3}{24},\,\frac{5}{24},\,\frac{5}{24},\,\frac{5}{24})^T$, tổng $\frac{18}{24}=\frac{3}{4}$: Mất đúng $\frac{1}{4}$ điểm của C. Lặp tiếp, tổng điểm giảm dần về 0, tức tầm quan trọng bị "rò rỉ" dần khỏi đồ thị. (Biến thể này là Hình 5.3, biến thể `dead` trong mã thực hành.)
 
 **Bẫy liên kết dồn điểm.** Thay C→A bằng khuyên C→C (Hình 5.6, biến thể `trap`): C có bậc ra 1 nên tổng điểm vẫn được giữ, nhưng người đã đến C không bao giờ rời C nếu chỉ đi theo liên kết. Phép lặp thô trên đồ thị này dồn toàn bộ điểm về C. Một bẫy tổng quát là tập trang có liên kết ra nhưng không có cạnh ra khỏi tập.
 
@@ -85,7 +85,7 @@ $$r^{t+1}=\beta M_0 r^t+\bigl((1-\beta)+\beta\delta^t\bigr)u.$$
 
 ![Điểm từ nút cụt được phân phối lại đều tới cả bốn trang](img/lec-03/model-dead-redistribute.svg)
 
-**Phân biệt với công thức taxation trong sách.** Sách MMDS (mục 5.1.5, trang 186–187) viết $v'=\beta Mv+(1-\beta)e/n$ trên ma trận có thể còn cột 0 — dạng này *không* có hạng $\beta\delta$, nên khi có nút cụt tổng điểm có thể nhỏ hơn 1. Quy tắc của bài giảng tương đương với cách diễn giải "chuyển đều ở nút cụt rồi nhảy ở mọi nút", được hỗ trợ bởi các trang chiếu 42 và 52 của MMDS, 45 và 54 của Stanford. Điểm trong bài luôn là phân phối xác suất nên phần bù là bắt buộc.
+**Lưu ý về dạng công thức có xử lý nút cụt (Dead ends):** Nếu chỉ áp dụng công thức taxation thuần túy $v'=\beta Mv+(1-\beta)e/n$ trên ma trận còn cột 0 mà thiếu số hạng tái phân bổ $\beta\delta$, thì khi gặp nút cụt, tổng xác suất toàn mạng sẽ bị suy giảm và nhỏ hơn 1. Quy chuẩn chuẩn hóa trong bài giảng này áp dụng nguyên lý: Tái phân bổ đều lượng xác suất tại nút cụt kết hợp bước nhảy ngẫu nhiên ở mọi nút. Nhờ đó, điểm số PageRank qua các vòng lặp luôn bảo toàn tính chất của một phân phối xác suất hợp lệ với tổng bằng 1.
 
 **Vết tính một vòng, $\beta=\frac{4}{5}$, $r^0$ đều.**
 - *Đồ thị gốc* (không nút cụt, $\delta=0$):
@@ -95,7 +95,7 @@ $$r^{t+1}=\beta M_0 r^t+\bigl((1-\beta)+\beta\delta^t\bigr)u.$$
 - *Biến thể nút cụt* ($\delta^0=\frac{1}{4}$): Thành phần chung $\frac{(\frac{1}{5})+(\frac{1}{5})}{4}=\frac1{10}$.
   - A: $\frac45\cdot\frac18+\frac1{10}=\frac15$.
   - B, C, D: $\frac45\cdot\frac5{24}+\frac1{10}=\frac4{15}$.
-  - Tổng lại bằng 1 — điểm của C được hoàn lại đủ qua phần bù.
+  - Tổng lại bằng 1, tức điểm của C được hoàn lại đầy đủ qua phần bù.
 - *Biến thể `trap` một vòng*, $z_C$ nhận từ A, C và D: $z_C=\frac1{12}+\frac14+\frac18=\frac{11}{24}$, nên $r_C=\frac45\cdot\frac{11}{24}+\frac1{20}=\frac{5}{12}$. A $\frac{3}{20}$, B, D $\frac{13}{60}$. Tổng $\frac{3}{20}+\frac{13}{60}+\frac{5}{12}+\frac{13}{60}=1$.
 
 **Bảo toàn khối lượng.** Nếu $r^t$ không âm, tổng 1 thì $r^{t+1}$ cũng vậy: Nguồn không cụt cộng lại góp $\beta(1-\delta)$, phần bù trả lại $\beta\delta$, bước nhảy góp $1-\beta$. Tổng ba phần bằng 1 và mọi hệ số không âm. Đây là bất biến dùng để kiểm chương trình ở phần 6.
@@ -126,7 +126,7 @@ Lưu ý $\Delta_t=\|r^{t+1}-r^t\|_1$ đo vòng *sau*, còn cận nói về $r^{t
 - C: $1 \to  A$.
 - D: $2 \to  B$, C.
 
-Nút cụt vẫn giữ bản ghi với $d_j=0$, danh sách rỗng — cần cho pha tính $\delta$. Bậc ra ở đây là **bậc toàn cục**, không phải số đích trong một khối cụ thể. Ghi sai bậc sẽ làm sai mọi đóng góp từ nguồn đó.
+Nút cụt vẫn giữ bản ghi với $d_j=0$, danh sách rỗng, điều này rất cần cho pha tính $\delta$. Bậc ra ở đây là **bậc toàn cục**, không phải số đích trong một khối cụ thể. Ghi sai bậc sẽ làm sai mọi đóng góp từ nguồn đó.
 
 **Chia khối (MMDS 5.2.3–5.2.4).** Đặt $z=M_0r$. $V_b$ là tập trang nguồn thuộc dải $b$. Chia $r$ và $z$ thành $k$ dải, $M_0$ thành $k^2$ khối: Khối $M_{ab}$ chứa cạnh từ nguồn dải $b$ tới đích dải $a$. Nếu chỉ chia theo cột, mỗi tác vụ có thể phải cộng vào toàn bộ véc tơ kết quả. Chia thêm theo hàng giới hạn cả miền vào lẫn miền ra. Trên ví dụ với $k=2$ (nguồn A, B | C, D):
 - $M_{11}$ ghi $A\to B$, $B\to A$.
@@ -159,10 +159,10 @@ Reduce(i, L_i):
 ```
 
 **Hai chi tiết quan trọng.**
-1. $\delta$ tính một lần từ phân hoạch nguồn (mỗi nút cụt góp đúng một lần), rồi gửi tới các tác vụ Reduce — không tính lại $\delta$ từ các khối có bản ghi nguồn lặp.
+1. $\delta$ tính một lần từ phân hoạch nguồn (mỗi nút cụt góp đúng một lần), rồi gửi tới các tác vụ Reduce, tránh tính lại $\delta$ từ các khối có bản ghi nguồn lặp.
 2. Tạo bản ghi $(i,0)$ cho **mọi** trang từ danh sách trang, để đích không có liên kết vào nào vẫn xuất hiện khi nhóm theo khóa và nhận phần chung.
 
-**Ví dụ gộp tại A.** Đồ thị gốc, $r^0$ đều, $\beta=\frac{4}{5}$, $k=2$: $M_{11}$ sinh $(A, \frac{1}{8})$ (cạnh $B\to A$), $M_{12}$ sinh $(A, \frac{1}{4})$ (cạnh $C\to A$). $z_A=\frac{1}{8}+\frac{1}{4}=\frac{3}{8}$. $r_A^1=\frac45\cdot\frac38+\frac1{20}=\frac7{20}$ — khớp đúng phép tính một máy của phần 3.
+**Ví dụ gộp tại A.** Đồ thị gốc, $r^0$ đều, $\beta=\frac{4}{5}$, $k=2$: Khối $M_{11}$ sinh $(A, \frac{1}{8})$ (cạnh $B\to A$), $M_{12}$ sinh $(A, \frac{1}{4})$ (cạnh $C\to A$). $z_A=\frac{1}{8}+\frac{1}{4}=\frac{3}{8}$. $r_A^1=\frac45\cdot\frac38+\frac1{20}=\frac7{20}$, hoàn toàn trùng khớp với phép tính một máy của phần 3.
 
 **Tính đúng.** Mọi tác vụ dùng cùng bản chụp cố định của $r$ trong suốt một vòng (véc tơ không đổi khi đang được đọc), nên:
 
@@ -180,7 +180,7 @@ Phần này đánh giá cách tổ chức tính theo khối bằng các đại l
 
 **Dung lượng lưu đĩa $S$.** Quy ước: Giá trị điểm 8 byte (double), mã trang hoặc bậc ra 4 byte (số nguyên 32 bit).
 - Ma trận đặc: $S_{\text{dense}}=8n^2$ byte.
-- Danh sách liên kết (mã nguồn ngầm): $S_{\text{adj}}\approx 4(n+m)$ — $n$ bậc ra cộng $m$ mã đích. Mô hình bỏ qua phần phụ trội của định dạng và lưu trữ.
+- Danh sách liên kết (mã nguồn ngầm): $S_{\text{adj}}\approx 4(n+m)$, gồm $n$ bậc ra cộng $m$ mã đích. Mô hình bỏ qua phần phụ trội của định dạng và lưu trữ.
 - Với $n=4$, $m=8$: 128 và 48 byte. Tỷ số xấp xỉ $2n^2/(n+m)$, có lợi khi $m\ll n^2$.
 - Con số 48 byte là của biểu diễn toàn cục. Biểu diễn theo khối lặp lại bậc ra và mã nguồn ở nhiều khối, nên không gán nó cho $S_{\text{blocks}}$.
 
@@ -188,13 +188,13 @@ Phần này đánh giá cách tổ chức tính theo khối bằng các đại l
 
 $$B_{\text{task}}\approx \frac{16n}{k}+B_{\text{buf}}.$$
 
-Với $n=4$, $k=2$: $2\cdot2\cdot8=32$ byte cộng bộ đệm đọc khối $B_{\text{buf}}$. Tăng $k$ giảm bộ nhớ mỗi tác vụ nhưng tăng số lần mỗi dải được đọc (mỗi dải phục vụ $k$ tác vụ) — đánh đổi xuất hiện lại ở phần đầu vào.
+Với $n=4$, $k=2$: Bộ nhớ cần $2\cdot2\cdot8=32$ byte cộng bộ đệm đọc khối $B_{\text{buf}}$. Việc tăng $k$ giúp giảm bộ nhớ mỗi tác vụ nhưng làm tăng số lần mỗi dải được đọc (mỗi dải phục vụ $k$ tác vụ), đây là sự đánh đổi xuất hiện lại ở phần đầu vào.
 
 **Đầu vào Map $I$.** $I=S_{\text{blocks}}+8kn$: Phần ma trận mỗi khối đọc một lần. Phần véc tơ, mỗi dải $r_b$ được gửi tới $k$ tác vụ cùng cột nên toàn véc tơ được đọc $k$ lần, mỗi lần $8n$ byte. Với ví dụ $n=4$, $m=8$, $k=2$: Bảy bản ghi nguồn (phân bổ 2, 2, 2, 1 trên bốn khối. Định dạng nguồn 4 byte + bậc 4 byte + mỗi đích 4 byte) cho $S_{\text{blocks}}=8\cdot7+4\cdot8=88$ byte. Véc tơ $8\cdot2\cdot4=64$ byte. $I=152$ byte. $I$ chưa gồm các pha $\delta$, kiểm tra $\Delta$ và điều phối. Đồ thị ví dụ không có nút cụt và mọi đích có liên kết vào, nên không cần bản ghi seed hay $\delta$ trong bài tính cốt này.
 
-**Combine và $H$.** Không Combine: $m=8$ bản ghi (khóa 4 + giá trị 8 = 12 byte) → $H=96$ byte. Có Combine: $q=7$ bản ghi khóa (chỉ khối $M_{21}$ gộp hai đóng góp vào D thành một) → $H=84$ byte. Do đó $C=I+H$ giảm từ $248$ xuống $236$ byte. Giảm 12 byte là 12,5% của $H$ — không phải 12,5% toàn bộ thời gian chạy. Đây chỉ là phép nhân theo khối trong một vòng, chưa phải tổng chi phí cả luồng công việc.
+**Combine và $H$:** Khi không dùng Combine: Có $m=8$ bản ghi (khóa 4 + giá trị 8 = 12 byte) → $H=96$ byte. Khi có Combine: Có $q=7$ bản ghi khóa (chỉ khối $M_{21}$ gộp hai đóng góp vào D thành một) → $H=84$ byte. Do đó $C=I+H$ giảm từ $248$ xuống $236$ byte. Mức giảm 12 byte tương ứng 12,5% của $H$, chứ không phải 12,5% toàn bộ thời gian chạy. Đây chỉ là phép nhân theo khối trong một vòng, chưa phải tổng chi phí cả luồng công việc.
 
-**Phân biệt $C$ với $Q$.** $Q$ là số byte **thực sự đi qua mạng**. Nó chỉ bằng $H$ nếu mọi bản ghi ra Map đều qua mạng, không nén, không chạy lại, không phần phụ trội. Dữ liệu khối thường nằm cục bộ, nên $I=Q$ không suy ra được từ dữ kiện. Nếu toàn bộ 7 bản ghi sau Combine qua mạng: $Q=84$ byte và $T_{\text{shuffle}}\ge Q/b_{\text{eff}}$ với $b_{\text{eff}}$ là băng thông hiệu quả tổng hợp (byte/giây).
+**Phân biệt $C$ với $Q$.** $Q$ là số byte **thực sự đi qua mạng**. Nó chỉ bằng $H$ nếu mọi bản ghi ra Map đều qua mạng, không nén, không chạy lại, không phần phụ trội. Dữ liệu khối thường nằm cục bộ, nên $I=Q$ không suy ra được từ dữ kiện. Nếu toàn bộ 7 bản ghi sau Combine qua mạng: Lượng dữ liệu $Q=84$ byte và $T_{\text{shuffle}}\ge Q/b_{\text{eff}}$ với $b_{\text{eff}}$ là băng thông hiệu quả tổng hợp (byte/giây).
 
 **Thời gian.** Mô hình: Mỗi cạnh tốn $c_e$ giây, bỏ I/O, truyền và lập lịch trong pha tính. Tổng việc $W=m\cdot c_e=8c_e$ không đổi theo số máy. Thời gian xử lý các khối tương ứng là:
 - $M_{11}$ tốn $2c_e$,
@@ -202,7 +202,7 @@ Với $n=4$, $k=2$: $2\cdot2\cdot8=32$ byte cộng bộ đệm đọc khối $B_
 - $M_{12}$ tốn $2c_e$,
 - $M_{22}$ tốn $1c_e$.
 
-Một máy tuần tự: $8c_e$. Bốn máy, mỗi máy một tác vụ: $T_{\text{map}}=3c_e$ (tác vụ nặng nhất là nút cổ chai), tăng tốc $\frac{8}{3}$ — không phải 4. Gọi $w_{\max}$ là thời gian của tác vụ nặng nhất. Khi tác vụ không bị chia nhỏ thêm: $T_{\text{map}}\ge\max(W/p,\ w_{\max})$.
+Một máy tuần tự: $8c_e$. Bốn máy, mỗi máy một tác vụ: $T_{\text{map}}=3c_e$ (tác vụ nặng nhất là nút cổ chai), tăng tốc $\frac{8}{3}$, chứ không phải 4. Gọi $w_{\max}$ là thời gian của tác vụ nặng nhất. Khi tác vụ không bị chia nhỏ thêm: $T_{\text{map}}\ge\max(W/p,\ w_{\max})$.
 
 **Một vòng và cả công việc.** Giả định các pha không chồng nhau:
 
@@ -362,10 +362,10 @@ $$2m\lceil\log_2 n\rceil < n^2\quad\Longleftrightarrow\quad \rho=\frac m{n^2}<\f
 Tại điểm bằng nhau hai cách tốn như nhau nên điều kiện phải là bất đẳng thức ngặt. Với $n=1$, $\lceil\log_2 n\rceil=0$ và mô hình tọa độ suy biến. So sánh chỉ có nghĩa từ $n\ge2$. Kết luận là điều kiện theo $n$, không cần dữ liệu cụ thể khác.
 :::
 
-### Bài 4 — MMDS 5.2.2 (trang 195): Biểu diễn đồ thị theo mục 5.2.1
+### Bài 4: Biểu diễn đồ thị theo danh sách kề (Bài tập 5.2.2)
 
 ::: exercise
-Dùng phương pháp mục 5.2.1, lập bảng nguồn — bậc ra — danh sách đích cho: (A) đồ thị Hình 5.4. (b) đồ thị Hình 5.7.
+Dùng phương pháp mục 5.2.1, lập bảng (Nguồn, Bậc ra, Danh sách đích) cho: (a) Đồ thị Hình 5.4. (b) Đồ thị Hình 5.7.
 :::
 
 ![Đồ thị Hình 5.4: A tới B, C, D. Trang B tới A, D. Trang C tới E. Trang D tới B, C, còn E không có cạnh ra](img/lec-03/ex-fig-54.svg)
@@ -377,7 +377,7 @@ Mỗi nguồn ghi bậc ra toàn cục rồi toàn bộ danh sách đích. Ngu�
 :::
 
 ::: solution
-**Hình 5.4** (A→B, C, D. B→A, D. C→E. D→B, C. E không có liên kết ra — tám cạnh):
+**Hình 5.4** (A→B, C, D. B→A, D. C→E. D→B, C. E không có liên kết ra, đồ thị gồm 8 cạnh):
 
 | Nguồn | Bậc ra | Đích |
 |---|---|---|
@@ -387,7 +387,7 @@ Mỗi nguồn ghi bậc ra toàn cục rồi toàn bộ danh sách đích. Ngu�
 | D | 2 | B, C |
 | E | 0 | (rỗng) |
 
-**Hình 5.7** (a→a, b, c. B→a, c. C→b, c — bảy cạnh gồm hai khuyên):
+**Hình 5.7** (a→a, b, c. B→a, c. C→b, c, đồ thị gồm 7 cạnh tính cả 2 khuyên):
 
 | Nguồn | Bậc ra | Đích |
 |---|---|---|
@@ -395,7 +395,7 @@ Mỗi nguồn ghi bậc ra toàn cục rồi toàn bộ danh sách đích. Ngu�
 | b | 2 | a, c |
 | c | 2 | b, c |
 
-Bài này chỉ yêu cầu biểu diễn, không yêu cầu tính PageRank. Tổng bậc ra là 8 và 7, khớp số cạnh hai hình. Lưu ý Hình 5.7 có 5 cạnh giữa các nút khác nhau cộng 2 khuyên, tổng 7 cạnh — không đếm khuyên hai lần.
+Bài này chỉ yêu cầu biểu diễn, không yêu cầu tính PageRank. Tổng bậc ra là 8 và 7, khớp số cạnh hai hình. Lưu ý Hình 5.7 có 5 cạnh giữa các nút khác nhau cộng 2 khuyên, tổng 7 cạnh, cần lưu ý không đếm khuyên hai lần.
 :::
 
 ---
@@ -423,7 +423,7 @@ Bài này chỉ yêu cầu biểu diễn, không yêu cầu tính PageRank. Tổ
 
 ## 9. Đọc thêm và tài liệu tham khảo
 
-- J. Leskovec, A. Rajaraman, J. D. Ullman, *Mining of Massive Datasets*, 3rd ed., Cambridge University Press — chương 5 (Link Analysis), mục 5.1.2–5.1.7 trang 178–188, mục 5.2 trang 189–195. Chương 2, mục 2.5.1 trang 53–54 cho mô hình chi phí. Xem thêm tại [MMDS](http://www.mmds.org).
+- J. Leskovec, A. Rajaraman, J. D. Ullman, *Mining of Massive Datasets*, 3rd ed., Cambridge University Press. Chương 5 (Link Analysis), mục 5.1.2–5.1.7 trang 178–188, mục 5.2 trang 189–195. Chương 2, mục 2.5.1 trang 53–54 cho mô hình chi phí. Xem thêm tại [MMDS](http://www.mmds.org).
 - [Slide MMDS](http://www.mmds.org/), tệp `ch05-linkanalysis1.pdf`, trang chiếu 42 và 52. [Stanford CS246](https://web.stanford.edu/class/cs246/), tệp `09-pagerank.pdf`, trang chiếu 45 và 54: Phân phối điểm nút cụt, nguồn của phần bù $\beta\delta$.
 - Tệp mã thực hành: [materials/lec-03/code/pagerank.py](/materials/lec-03/code/pagerank.py) và [materials/lec-03/code/practice-README.md](/materials/lec-03/code/practice-README.md).
 

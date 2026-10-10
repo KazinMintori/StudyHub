@@ -57,7 +57,7 @@ flowchart TD
 ```
 
 ###  Kỹ thuật Trộn Hai Mảng Đã Sắp Xếp (Merge Step)
-Cho 2 mảng: $A = [2, 7]$ và $B = [3, 5]$.  
+Cho 2 mảng: Mảng $A = [2, 7]$ và mảng $B = [3, 5]$.  
 - Dùng 2 con trỏ `i` trỏ vào $A$, `j` trỏ vào $B$.
 - So sánh $A[i]$ và $B[j]$, phần tử nào nhỏ hơn thì đưa vào mảng kết quả và tăng con trỏ tương ứng.
 - Bước này duyệt qua toàn bộ phần tử $\rightarrow$ Thời gian trộn là **$\mathcal{O}(n)$**.

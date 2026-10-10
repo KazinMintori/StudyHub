@@ -8,15 +8,15 @@ lessonStatus: draft
 description: "Mô hình đồ thị xác suất, tính độc lập có điều kiện, cấu trúc d-separation, bảng CPT và thuật toán khử biến suy luận trong Mạng Bayes."
 ---
 
-*Học phần AIT2004 — Cơ sở Trí tuệ Nhân tạo*
+*Học phần AIT2004 · Cơ sở Trí tuệ Nhân tạo*
 
 ← [Chương 14: Logic & Biểu diễn tri thức](/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md)
 
 ::: info Trọng tâm bài giảng
 Trong các chương về Logic, chúng ta giả định thế giới vận hành tuyệt đối trắng đen: Một mệnh đề chỉ có thể là Đúng hoặc Sai. Nhưng trong đời sống thực tế, một bác sĩ không bao giờ dám khẳng định $100\%$ rằng "Bệnh nhân sốt thì chắc chắn bị cảm cúm", một xe tự hành không thể chắc chắn $100\%$ phía trước là người đi bộ hay một cái bóng đổ khi camera bị mờ sương.
 
-Sự không chắc chắn (Uncertainty) là quy luật của tự nhiên. Để xử lý tri thức không hoàn hảo, Trí tuệ Nhân tạo kết hợp Đại số Đồ thị với Lý thuyết Xác suất để tạo nên một kiệt tác: **Mạng Bayes (Bayesian Networks)** do Judea Pearl (giải Turing 2011) kiến tạo. Bài giảng này phân tích:
-1. **Từ Bùng nổ xác suất đồng thời đến Đồ thị phi chu trình (DAG):** Sức mạnh thần kỳ của tính độc lập có điều kiện.
+Sự không chắc chắn (Uncertainty) là quy luật của tự nhiên. Để xử lý tri thức không hoàn hảo, Trí tuệ Nhân tạo kết hợp Đại số Đồ thị với Lý thuyết Xác suất để tạo nên mô hình **Mạng Bayes (Bayesian Networks)** do Judea Pearl (giải Turing 2011) kiến tạo. Bài giảng này phân tích:
+1. **Từ Bùng nổ xác suất đồng thời đến Đồ thị phi chu trình (DAG):** Vai trò cốt lõi của tính độc lập có điều kiện.
 2. **Quy tắc phân tích nhân tử (Factorization):** Cách thu nhỏ bảng xác suất từ hàng tỷ tham số xuống kích thước bỏ túi.
 3. **Cấu trúc D-separation & Hiện tượng Explaining Away:** Điều kiện hình học để hai biến số độc lập với nhau.
 4. **Thuật toán Suy luận:** Khử biến (Variable Elimination) và lấy mẫu xấp xỉ.
@@ -62,7 +62,7 @@ $$
 
 Hãy thử làm một phép tính định lượng:
 - Nếu $n = 30$ biến (một bệnh xá thu nhỏ): Bảng cần $2^{30} - 1 \approx 1.073.741.823$ giá trị (hơn $1$ tỷ tham số!).
-- Để điền đủ một tỷ con số này từ thực tế, ta cần dữ liệu bệnh án của hàng tỷ người — điều hoàn toàn bất khả thi.
+- Để điền đủ một tỷ con số này từ thực tế, ta cần dữ liệu bệnh án của hàng tỷ người, đây là điều hoàn toàn bất khả thi.
 
 Làm thế nào để thoát khỏi thảm họa bùng nổ lũy thừa này? Lời giải chính là: **Khai thác tính Độc lập có điều kiện (Conditional Independence)**.
 
@@ -92,7 +92,7 @@ $$
 P(X_1, X_2, \ldots, X_n) = \prod_{i=1}^n P(X_i \mid \text{Parents}(X_i))
 $$
 
-### Sức mạnh nén tham số thần kỳ
+### Hiệu quả nén tham số của Mạng Bayes
 Xét mạng Báo trộm gia đình ở trên với $5$ biến nhị phân:
 - Nếu dùng bảng đồng thời đầy đủ: Cần $2^5 - 1 = 31$ tham số.
 - Nếu dùng Mạng Bayes:
@@ -103,7 +103,7 @@ Xét mạng Báo trộm gia đình ở trên với $5$ biến nhị phân:
   - $M$: Có 1 cha ($A$) $\to 2^1 = 2$ tham số.
   - **Tổng cộng:** chỉ cần $1 + 1 + 4 + 2 + 2 = \mathbf{10}$ tham số!
 
-Nếu mỗi nút chỉ có tối đa $k$ nút cha, số lượng tham số toàn mạng chỉ tăng tuyến tính theo số biến: $O(n \cdot 2^k)$ thay vì bùng nổ theo hàm mũ $O(2^n)$!
+Nếu mỗi nút chỉ có tối đa $k$ nút cha, số lượng tham số toàn mạng chỉ tăng tuyến tính theo số biến: Mức $O(n \cdot 2^k)$ thay vì bùng nổ theo hàm mũ $O(2^n)$!
 
 ---
 
@@ -135,13 +135,13 @@ P(Z \mid X, Y) = P(Z \mid Y)
 $$
 
 ### 2. Cấu trúc Nhánh chung (Common Cause / Fork): $X \leftarrow Y \to Z$
-$Y$ là nguyên nhân chung của cả $X$ và $Z$ (ví dụ: $Y$ là "Mùa đông", $X$ là "Cảm cúm", $Z$ là "Bán chạy áo ấm").
+$Y$ là nguyên nhân chung của cả $X$ và $Z$ (ví dụ: Biến $Y$ là "Mùa đông", $X$ là "Cảm cúm", $Z$ là "Bán chạy áo ấm").
 Khi **ĐÃ BIẾT $Y$**: Đường dẫn bị chặn lại! Biết bạn bị cảm cúm không làm thay đổi xác suất người khác mua áo ấm một khi ta đã biết rõ hiện tại đang là mùa đông.
 
 ### 3. Cấu trúc Va chạm (Collider / V-Structure): $X \to Y \leftarrow Z$
-Đây là cấu trúc kỳ thú nhất và khác biệt hoàn toàn với hai cấu trúc trên!
+Đây là cấu trúc đặc biệt quan trọng và khác biệt hoàn toàn với hai cấu trúc trên!
 Hai nguyên nhân độc lập $X$ (Đột nhập) và $Z$ (Động đất) cùng dẫn tới một hậu quả $Y$ (Chuông báo động).
-- Khi **CHƯA BIẾT gì về $Y$**: $X$ và $Z$ hoàn toàn **độc lập** với nhau! (Việc có động đất hay không chẳng liên quan gì tới việc có trộm hay không).
+- Khi **CHƯA BIẾT gì về $Y$**: Hai biến $X$ và $Z$ hoàn toàn **độc lập** với nhau! (Việc có động đất hay không chẳng liên quan gì tới việc có trộm hay không).
 - Khi **ĐÃ BIẾT $Y$** (hoặc biết một con cháu của $Y$): Hai biến $X$ và $Z$ bất ngờ trở nên **PHỤ THUỘC** lẫn nhau!
 
 > **Hiện tượng Giải tỏa nghi vấn (Explaining Away):**
