@@ -77,6 +77,11 @@ const topicGroups = {
     ]),
     group('VIII. Quy hoạch mặt bằng', 'Bài toán bố trí không gian hình học và tối ưu hóa diện tích qua quy hoạch hình học.', [
       topic('quy-hoach-mat-bang', 'Quy hoạch mặt bằng và phân bổ không gian tối ưu', 'Làm thế nào tối ưu kích thước linh kiện và dây nối mà vẫn bảo toàn tỷ lệ khung hình?', '§8.8')
+    ]),
+    group('IX. Thiết kế thí nghiệm và Hình học cực trị', 'Thiết kế thí nghiệm tối ưu Fisher, ellipsoid thể tích cực trị Loewner–John và bài toán định vị mạng lưới.', [
+      topic('thiet-ke-thi-nghiem-toi-uu', 'Thiết kế thí nghiệm tối ưu và Ma trận thông tin Fisher', 'Làm thế nào phân bổ ngân sách đo lường để ma trận thông tin Fisher đạt chất lượng cao nhất qua SDP?', '§7.5'),
+      topic('ellipsoid-cuc-tri-va-tam-hinh-hoc', 'Ellipsoid thể tích cực trị và Các điểm tâm hình học', 'Làm sao tìm ellipsoid bao ngoài nhỏ nhất hoặc quả cầu nội tiếp lớn nhất của một đa diện qua LP và log-det?', '§8.4–8.5'),
+      topic('bai-toan-dinh-vi-va-mang-luoi', 'Bài toán định vị, đặt vị trí và tối ưu hóa mạng lưới', 'Làm thế nào bố trí tọa độ các nút mạng để cực tiểu hóa tổng chi phí dây nối qua SOCP và giải hệ Laplacian?', '§8.7')
     ])
   ],
   'bai-04-gradient-newton': [

@@ -54,6 +54,6 @@ Khóa học được xây dựng dựa trên các chuẩn mực học thuật qu
 
 ## 4. Tra cứu nhanh công cụ bổ trợ
 
-- [Hình học tập lồi - Đọc thêm](../doc-them/hinh-hoc-tap-loi.md): Hệ thống hóa các công cụ hình học không gian nâng cao.
+- [Chuyên đề Đọc thêm & Mở rộng](../doc-them/index.md): Hệ thống hóa các công cụ hình học nâng cao, đại số tuyến tính của LoRA trong LLM, cảnh quan mất mát (SAM) và hệ động lực liên tục (ODE).
 - [Tổng hợp bài tập theo chủ đề](../bai-tap.md): Bộ bài tập rèn luyện tư duy toán học toàn diện của cả 8 bài giảng.
 - Các mục Wiki cốt lõi: [Gradient](/wiki/gradient.md) · [Hessian](/wiki/hessian.md) · [Ma trận nửa xác định dương (PSD)](/wiki/ma-tran-psd.md) · [Điều kiện KKT](/wiki/kkt.md).
