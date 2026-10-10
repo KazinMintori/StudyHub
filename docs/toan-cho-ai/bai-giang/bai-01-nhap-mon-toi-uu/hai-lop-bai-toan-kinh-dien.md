@@ -7,11 +7,9 @@ title: "Bình phương tối thiểu và quy hoạch tuyến tính"
 description: "Hai lớp bài toán giải được một cách đáng tin cậy: Bình phương tối thiểu với hệ phương trình chuẩn và hình học phép chiếu, quy hoạch tuyến tính với hình học đa diện, chứng nhận tối ưu và biến phụ, rồi tối ưu lồi như sự tổng quát hóa của cả hai."
 ---
 
-Ở chủ đề trước, ta đã viết được một bài toán tối ưu cho đúng. Câu hỏi tiếp theo là: Viết xong rồi thì giải bằng cách nào? Sách trả lời thẳng thắn rằng bài toán tối ưu tổng quát **khó giải một cách đáng ngạc nhiên**, kể cả khi mọi hàm đều trơn như đa thức. Những phương pháp tổng quát phải chấp nhận một sự đánh đổi, hoặc chạy rất lâu, hoặc có thể không tìm ra nghiệm.
+Ở chủ đề trước, ta đã nắm vững cách thiết lập mô hình bài toán tối ưu. Câu hỏi tiếp theo là: Thiết lập xong rồi thì giải bằng cách nào? Câu trả lời từ thực tiễn tính toán: Bài toán tối ưu tổng quát **khó giải một cách đáng ngạc nhiên**, kể cả khi mọi hàm số mục tiêu và ràng buộc đều trơn như đa thức. Những phương pháp giải tổng quát luôn phải đối mặt với sự đánh đổi: Hoặc thời gian chạy quá lâu, hoặc không thể bảo đảm tìm ra nghiệm tối ưu.
 
-Thế nhưng có vài ngoại lệ quan trọng: Những lớp bài toán mà ta có thuật toán giải được cả bài lớn, nhanh và gần như chắc chắn. Trang này giới thiệu hai ngoại lệ nổi tiếng nhất là **bình phương tối thiểu** và **quy hoạch tuyến tính**, rồi chỉ ra rằng cả hai đều là trường hợp riêng của một lớp rộng hơn: **Tối ưu lồi**. Hiểu được điều gì khiến hai lớp này dễ là cách tốt nhất để hiểu vì sao cả môn học xoay quanh tính lồi.
-
-Bạn cần biết phép nhân ma trận, gradient của hàm nhiều biến và dạng $\|Ax - b\|_2^2$ đã gặp ở Lecture 00.
+Thế nhưng có những ngoại lệ quan trọng: Các họ bài toán mà khoa học tính toán đã có thuật toán giải quyết quy mô lớn, tốc độ cực nhanh và bảo chứng nghiệm toàn cục chắc chắn. Bài giảng này giới thiệu hai họ bài toán kinh điển nhất là **bình phương tối thiểu** và **quy hoạch tuyến tính**, đồng thời chỉ rõ rằng cả hai đều là trường hợp riêng của một cấu trúc bao trùm rộng lớn: **Tối ưu lồi**. Nắm vững bản chất vì sao hai họ bài toán này giải được chính là chìa khóa thấu suốt vì sao toàn bộ nền tảng toán học cho AI đều xoay quanh tính lồi.
 
 ## 1. Bình phương tối thiểu
 
@@ -56,8 +54,7 @@ Kiểm tra điều kiện vuông góc: Tích của $r$ với cột thứ nhất 
 :::
 
 ### 1.3 Hai biến thể thường gặp
-
-Sách nêu hai kỹ thuật làm bình phương tối thiểu linh hoạt hơn mà vẫn giữ được bản chất "giải được". Thứ nhất là **bình phương tối thiểu có trọng số**, cực tiểu $\sum_{i} w_i (a_i^T x - b_i)^2$ với các trọng số $w_i > 0$. Trọng số lớn nghĩa là ta quan tâm nhiều hơn tới sai số của quan sát đó, chẳng hạn vì quan sát ấy được đo chính xác hơn. Thứ hai là **điều chuẩn** (regularization), cộng thêm vào hàm mục tiêu một số hạng phạt độ lớn của tham số:
+Để mô hình bình phương tối thiểu linh hoạt và thích ứng tốt hơn với dữ liệu thực tế, ta thường trang bị hai kỹ thuật nền tảng: Thứ nhất là **bình phương tối thiểu có trọng số**, cực tiểu $\sum_{i=1}^k w_i (a_i^T x - b_i)^2$ với các trọng số $w_i > 0$. Trọng số lớn thể hiện ta quan tâm nhiều hơn tới sai số của quan sát đó, chẳng hạn khi quan sát ấy có độ tin cậy đo lường cao hơn. Thứ hai là **kỹ thuật điều chuẩn (regularization)**, bổ sung vào hàm mục tiêu một số hạng phạt độ lớn của vector tham số:
 
 $$
 \sum_{i=1}^{k} (a_i^T x - b_i)^2 + \rho \sum_{j=1}^{n} x_j^2, \qquad \rho > 0 .
@@ -65,9 +62,9 @@ $$
 
 Số hạng phạt giữ cho $x$ không quá lớn, và tham số $\rho$ do người dùng chọn để cân bằng giữa hai mong muốn: Khớp dữ liệu và giữ tham số nhỏ. Với $\rho > 0$, hệ chuẩn trở thành $(A^T A + \rho I)x = A^T b$, và ma trận $A^T A + \rho I$ luôn khả nghịch. Vì vậy nghiệm luôn duy nhất, kể cả khi các cột của $A$ phụ thuộc tuyến tính. Trong học máy, cách làm này được gọi là hồi quy ridge.
 
-Bình phương tối thiểu còn có một cách hiểu thống kê mà Lecture 00 đã trình bày: Nếu dữ liệu được tạo ra bởi mô hình tuyến tính cộng nhiễu Gauss độc lập cùng phương sai, thì nghiệm bình phương tối thiểu chính là ước lượng hợp lý cực đại. Điều chuẩn cũng có cách hiểu tương tự, khi ta gán cho tham số một phân phối tiên nghiệm.
+Bình phương tối thiểu còn có một cách hiểu thống kê sâu sắc: Nếu dữ liệu được sinh ra bởi mô hình tuyến tính cộng nhiễu Gauss độc lập cùng phương sai, thì nghiệm bình phương tối thiểu chính là ước lượng hợp lý cực đại (MLE). Kỹ thuật điều chuẩn cũng có cách hiểu tương tự, tương ứng với việc ta áp đặt một phân phối tiên nghiệm Gauss (Gaussian prior) lên vector tham số (ước lượng MAP).
 
-Nhận ra một bài toán bình phương tối thiểu khá dễ: Chỉ cần thấy hàm mục tiêu là một hàm bậc hai, rồi kiểm tra dạng toàn phương đi kèm nửa xác định dương. Sách gọi việc giải bình phương tối thiểu là một **công nghệ trưởng thành**, theo nghĩa người dùng không cần biết chi tiết thuật toán vẫn dùng được một cách đáng tin cậy. Chi phí tính toán xấp xỉ tỉ lệ với $n^2 k$, với một hằng số đã biết.
+Nhận ra một bài toán bình phương tối thiểu khá đơn giản: Chỉ cần quan sát thấy hàm mục tiêu là một hàm bậc hai, rồi kiểm tra ma trận toàn phương đi kèm có nửa xác định dương hay không. Ngày nay, việc giải bài toán bình phương tối thiểu được xem là một **công nghệ đã hoàn thiện và trưởng thành (mature technology)**, theo nghĩa người dùng không cần bận tâm đến từng chi tiết vi mô của thuật toán giải bên dưới mà vẫn có thể tin cậy vào kết quả đầu ra. Độ phức tạp tính toán thực tế xấp xỉ tỉ lệ với $\mathcal{O}(n^2 k)$ phép tính.
 
 ## 2. Quy hoạch tuyến tính
 
@@ -82,7 +79,7 @@ $$
 \end{aligned}
 $$
 
-Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b_m$ là dữ liệu. Khác với bình phương tối thiểu, LP **không có công thức nghiệm đóng**. Bù lại, có những thuật toán rất hiệu quả: Phương pháp đơn hình của Dantzig và các phương pháp điểm trong mà ta sẽ gặp sau. Sách mô tả độ phức tạp thực tế vào khoảng $n^2 m$ phép tính khi $m \ge n$, với hằng số kém xác định hơn so với bình phương tối thiểu. LP cũng được xem là một công nghệ trưởng thành.
+Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b_m$ là dữ liệu bài toán. Khác với bình phương tối thiểu, LP **không có công thức nghiệm đóng**. Bù lại, khoa học tính toán sở hữu những thuật toán đặc biệt hiệu quả: Phương pháp đơn hình (Simplex) của George Dantzig và các phương pháp điểm trong (Interior-point methods). Độ phức tạp tính toán thực tế của các thuật toán LP hiện đại thường rơi vào khoảng $\mathcal{O}(n^2 m)$ phép tính khi $m \ge n$. Tương tự như bình phương tối thiểu, quy hoạch tuyến tính cũng được xếp vào nhóm công nghệ tối ưu hóa đã hoàn thiện và trưởng thành.
 
 ### 2.2 Bức tranh hình học: Đẩy một đường mức qua một đa giác
 
@@ -110,13 +107,13 @@ Cách tìm cặp hệ số ấy cũng là một LP, được gọi là bài toá
 
 ### 2.4 Biến một bài toán không trơn thành LP
 
-Có những bài toán thoạt nhìn không phải LP nhưng biến đổi được thành LP. Ví dụ tiêu biểu trong sách là **xấp xỉ Chebyshev**:
+Có những bài toán thoạt nhìn không phải LP nhưng hoàn toàn có thể biến đổi tương đương thành một bài toán LP chuẩn tắc. Một ví dụ tiêu biểu và xuất hiện liên tục trong thực tế là **xấp xỉ Chebyshev (Chebyshev approximation)**:
 
 $$
 \text{minimize}\quad \max_{i = 1, \ldots, k} |a_i^T x - b_i| .
 $$
 
-Hàm mục tiêu đo phần dư **lớn nhất** thay vì tổng bình phương phần dư, và nó không khả vi ở những điểm mà hai phần dư lớn nhất bằng nhau. Mẹo là thêm một biến $t$ đóng vai trò cận trên cho mọi phần dư:
+Hàm mục tiêu đo phần dư **lớn nhất** thay vì tổng bình phương phần dư, và nó không khả vi ở những điểm mà hai phần dư lớn nhất bằng nhau. Mẹo biến đổi cốt lõi ở đây là bổ sung một biến phụ $t$ đóng vai trò làm chặn trên cho mọi phần dư:
 
 $$
 \begin{aligned}
@@ -125,7 +122,7 @@ $$
 \end{aligned}
 $$
 
-Hai bất đẳng thức cuối cùng nói $|a_i^T x - b_i| \le t$ với mọi $i$, tức $t$ không nhỏ hơn phần dư lớn nhất. Khi cực tiểu hóa, $t$ bị đẩy xuống đúng bằng phần dư lớn nhất, nên hai bài toán có cùng nghiệm $x$. Bài toán mới tuyến tính theo các biến $(x, t)$. Cùng một mẹo áp dụng cho tổng trị tuyệt đối $\sum_i |a_i^T x - b_i|$, với mỗi phần dư một biến phụ riêng. Sách nhận xét rằng người đã quen LP nhận ra ngay các biến đổi này, còn người chưa quen thì khó đoán được một hàm không khả vi lại giải được dễ dàng như vậy.
+Hai bất đẳng thức cuối cùng tương đương với điều kiện $|a_i^T x - b_i| \le t$ với mọi $i$, tức $t$ không nhỏ hơn phần dư lớn nhất. Khi đưa vào bài toán cực tiểu hóa, biến $t$ sẽ bị kéo ghì xuống đúng bằng giá trị phần dư lớn nhất tại nghiệm, do đó hai bài toán có cùng nghiệm $x^\star$. Bài toán mới hoàn toàn tuyến tính theo vector biến mở rộng $(x, t)$. Kỹ thuật tư duy này áp dụng tương tự cho bài toán tổng trị tuyệt đối $\sum_{i=1}^k |a_i^T x - b_i|$ (chuẩn $\ell_1$), với mỗi phần dư được kẹp bởi một biến phụ riêng $t_i$. Đây là một bài học mẫu mực về nghệ thuật mô hình hóa: Những kỹ sư và nhà nghiên cứu giàu kinh nghiệm luôn nhận ra ngay cách làm phẳng các hàm không khả vi bằng các ràng buộc tuyến tính.
 
 Ba tiêu chí đo sai số cho ba nghiệm khác nhau, và sự khác nhau đó không phải chuyện kỹ thuật mà là chuyện ta muốn gì. Mô phỏng sau đặt ba đường thẳng tối ưu cạnh nhau trên cùng dữ liệu.
 
@@ -164,7 +161,7 @@ Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính m�
 
 **Tối ưu toàn cục** tìm nghiệm toàn cục thật sự, nhưng đánh đổi bằng thời gian: Trong trường hợp xấu nhất, chi phí tăng theo hàm mũ của số biến và số ràng buộc. Nó được dùng khi số biến nhỏ và việc chắc chắn có nghiệm tốt nhất đáng giá, chẳng hạn khi cần chứng nhận một hệ thống quan trọng an toàn trong trường hợp xấu nhất.
 
-Sách chỉ ra một sự đảo vai thú vị giữa hai thế giới. Với tối ưu cục bộ, lập bài toán thì dễ, cái khó là giải. Với tối ưu lồi thì ngược lại: Lập được bài toán dạng lồi mới là cái khó, còn giải thì gần như đã là công nghệ. Tối ưu lồi cũng giúp ích cho cả bài toán không lồi, chẳng hạn để tìm điểm khởi tạo tốt hay để tính cận cho giá trị tối ưu.
+Quan sát này dẫn đến một sự đối nghịch triết lý sâu sắc giữa hai thế giới tối ưu hóa: Đối với tối ưu phi tuyến cục bộ, việc thiết lập bài toán ban đầu thường rất dễ và tự nhiên, nhưng khâu giải lại là một thử thách bất định. Ngược lại, đối với tối ưu lồi, công sức lớn nhất nằm ở khâu nhận diện và đưa bài toán về dạng lồi chuẩn tắc, nhưng một khi đã đưa được về dạng lồi, việc tìm ra nghiệm tối ưu toàn cục gần như đã trở thành một quy trình kỹ thuật hoàn toàn tự động và tin cậy. Hơn thế nữa, lý thuyết tối ưu lồi còn là công cụ đắc lực hỗ trợ giải các bài toán phi lồi, chẳng hạn cung cấp điểm khởi tạo tốt hoặc tính toán các ngưỡng chặn dưới chặt chẽ cho giá trị tối ưu toàn cục.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -242,7 +239,6 @@ Bình phương tối thiểu và quy hoạch tuyến tính là hai lớp bài to
 
 Tối ưu lồi chứa cả hai lớp đó như trường hợp riêng. Cái khó của nó nằm ở khâu nhận diện và biến đổi bài toán, chứ không ở khâu giải. Khi bài toán không lồi, ta phải chọn giữa tối ưu cục bộ nhanh nhưng không có bảo đảm và tối ưu toàn cục có bảo đảm nhưng rất tốn kém.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §1.1.2 (tr. 3–4), §1.2 (tr. 4–7) về bình phương tối thiểu, quy hoạch tuyến tính và xấp xỉ Chebyshev, §1.3 (tr. 7–8) về tối ưu lồi, §1.4 (tr. 9–10) về tối ưu cục bộ và toàn cục.
-- Bài toán quy hoạch tuyến tính ở mục 2.3, dữ liệu ba điểm, số liệu của các bài tập, bài toán pha hạt, mô phỏng so sánh ba tiêu chí và các câu hỏi đào sâu do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình, và ba đường khớp trong mô phỏng được đối chiếu với bộ giải LP `scipy.optimize.linprog`.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

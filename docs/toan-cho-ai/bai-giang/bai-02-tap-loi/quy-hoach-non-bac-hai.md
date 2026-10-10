@@ -7,9 +7,9 @@ title: "Quy hoạch nón bậc hai và LP bền vững"
 description: "Ràng buộc nón bậc hai và vì sao nó lồi, quy hoạch nón bậc hai cùng quan hệ với LP và QCQP, cảnh báo khi bình phương hai vế, LP bền vững với hệ số bất định trong ellipsoid, ràng buộc xác suất với hệ số Gauss, ràng buộc hyperbolic và cách viết nhiều bài toán chứa chuẩn Euclid thành SOCP."
 ---
 
-Một ràng buộc tuyến tính $a^Tx \le b$ giả định rằng ta biết chính xác vector $a$. Trong thực tế, $a$ thường là một ước lượng: Hàm lượng dinh dưỡng của thực phẩm, năng suất của một máy, hệ số của một mô hình học từ dữ liệu. Nếu muốn ràng buộc đúng với **mọi** giá trị có thể của $a$ trong một vùng bất định hình ellipsoid, ràng buộc tuyến tính ấy biến thành một ràng buộc có chứa chuẩn Euclid. Lớp bài toán chứa những ràng buộc như thế được gọi là **quy hoạch nón bậc hai** (second-order cone program, SOCP).
+Một ràng buộc tuyến tính $a^Tx \le b$ giả định rằng ta biết chính xác vector $a$. Trong thực tế, $a$ thường là một ước lượng: Hàm lượng dinh dưỡng của thực phẩm, năng suất của một máy, hệ số của một mô hình học từ dữ liệu. Nếu muốn ràng buộc đúng với **mọi** giá trị có thể của $a$ trong một vùng bất định hình ellipsoid, ràng buộc tuyến tính ấy biến thành một ràng buộc có chứa chuẩn Euclid. Họ bài toán chứa những ràng buộc như thế được gọi là **quy hoạch nón bậc hai** (second-order cone program, SOCP).
 
-Trang này định nghĩa SOCP, chỉ ra nó nằm ở đâu so với LP và QCQP, rồi xem hai nguồn sinh ra nó trong sách: LP bền vững và ràng buộc xác suất.
+Bài giảng này định nghĩa chuẩn mực về SOCP, phân tích vị trí bao hàm giữa nó với LP và QCQP, rồi đi sâu vào hai nguồn gốc nảy sinh tự nhiên trong thực tế: Quy hoạch tuyến tính bền vững (Robust LP) và ràng buộc theo xác suất (Chance constraints).
 
 ## 1. Ràng buộc nón bậc hai
 
@@ -25,7 +25,7 @@ $$
 \mathcal{K} = \{(y, t) \in \mathbb{R}^{k+1} : \|y\|_2 \le t\},
 $$
 
-chính là [nón chuẩn](../bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md) của chuẩn Euclid. Vì $\mathcal{K}$ là tập lồi và ánh xạ $x \mapsto (Ax + b, c^Tx + d)$ là affine, tập các $x$ thỏa ràng buộc là ảnh ngược của một tập lồi qua ánh xạ affine, nên lồi. Một **SOCP** cực tiểu một hàm tuyến tính với các ràng buộc như vậy:
+chính là [nón chuẩn](../bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md) của chuẩn Euclid. Vì $\mathcal{K}$ là tập lồi và ánh xạ $x \mapsto (Ax + b, c^Tx + d)$ là affine, tập các $x$ thỏa ràng buộc là ảnh ngược của một tập lồi qua ánh xạ affine, nên lồi. Một bài toán **SOCP** cực tiểu một hàm tuyến tính với các ràng buộc như vậy:
 
 $$
 \begin{aligned}
@@ -35,9 +35,9 @@ $$
 \end{aligned}
 $$
 
-Hai trường hợp riêng cho thấy SOCP chứa những lớp đã biết. Khi mọi $A_i = 0$, vế trái là một hằng số không âm $\|b_i\|_2$, và ràng buộc trở thành một bất đẳng thức tuyến tính: SOCP thành LP. Khi mọi $c_i = 0$, vế phải là hằng số $d_i$, và bình phương hai vế cho một ràng buộc toàn phương lồi: SOCP thành QCQP. SOCP còn tổng quát hơn cả hai.
+Hai trường hợp riêng cho thấy SOCP chứa những dạng bài toán đã biết. Khi mọi $A_i = 0$, vế trái là một hằng số không âm $\|b_i\|_2$, và ràng buộc trở thành một bất đẳng thức tuyến tính: SOCP thành LP. Khi mọi $c_i = 0$, vế phải là hằng số $d_i$, và bình phương hai vế cho một ràng buộc toàn phương lồi: SOCP thành QCQP. SOCP còn tổng quát hơn cả hai.
 
-**Đừng bình phương một cách vô tư.** Bình phương hai vế của $\|Ax + b\|_2 \le c^Tx + d$ cho $\|Ax + b\|_2^2 \le (c^Tx + d)^2$, nhưng hai ràng buộc không tương đương. Ràng buộc gốc buộc ngầm $c^Tx + d \ge 0$, còn ràng buộc bình phương thì không. Ví dụ một biến: $|x| \le -1$ vô nghiệm, nhưng $x^2 \le 1$ có cả đoạn nghiệm $[-1, 1]$. Hơn nữa, $(c^Tx + d)^2$ là hàm lồi, nên ràng buộc bình phương có dạng "lồi ≤ lồi", không phải dạng chuẩn lồi. Cách viết nón bậc hai giữ được cả tính lồi lẫn điều kiện dấu.
+**Đừng bình phương một cách vô tư.** Bình phương hai vế của $\|Ax + b\|_2 \le c^Tx + d$ cho $\|Ax + b\|_2^2 \le (c^Tx + d)^2$, nhưng hai ràng buộc không tương đương. Ràng buộc gốc buộc ngầm $c^Tx + d \ge 0$, còn ràng buộc bình phương thì không. Ví dụ một biến: Bất phương trình $|x| \le -1$ vô nghiệm, nhưng $x^2 \le 1$ lại có cả đoạn nghiệm $[-1, 1]$. Hơn nữa, $(c^Tx + d)^2$ là hàm lồi, nên ràng buộc bình phương có dạng "lồi ≤ lồi", không phải dạng chuẩn lồi. Cách viết nón bậc hai giữ được cả tính lồi lẫn điều kiện dấu.
 
 ## 2. LP bền vững
 
@@ -88,7 +88,7 @@ Ví dụ một biến: Hàm lượng một chất trong mỗi đơn vị nguyên
 
 ## 4. Ràng buộc hyperbolic và những biểu thức khác
 
-Nhiều ràng buộc không trông giống nón bậc hai vẫn viết lại được thành nón bậc hai. Một đồng nhất thức hữu ích, là bài tập 4.26 của sách: Với $y, z \ge 0$,
+Nhiều ràng buộc không trông giống nón bậc hai vẫn viết lại được thành nón bậc hai. Một đồng nhất thức hữu ích thường dùng để biến đổi: Với $y, z \ge 0$,
 
 $$
 x^Tx \le yz \iff \left\|\begin{bmatrix} 2x \\ y - z \end{bmatrix}\right\|_2 \le y + z .
@@ -96,7 +96,7 @@ $$
 
 Chứng minh chỉ là khai triển. Bình phương vế phải trừ bình phương vế trái là $(y + z)^2 - (y - z)^2 - 4x^Tx$, rút gọn thành $4(yz - x^Tx)$, và cả hai vế đều không âm khi $y, z \ge 0$. Nhờ đó, ràng buộc $\tfrac{\|x\|_2^2}{y} \le t$ với $y > 0$, chẳng hạn khi một hàm mục tiêu chứa tỉ số giữa bình phương sai số và một phương sai cần ước lượng, là một ràng buộc nón bậc hai.
 
-Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\|_2$ là cực tiểu $t$ với $\|Ax - b\|_2 \le t$. Cực tiểu tổng các chuẩn $\sum_i \|A_ix + b_i\|_2$ là cực tiểu $\sum_i t_i$ với $\|A_ix + b_i\|_2 \le t_i$. Sách còn trình bày bài toán **mặt cực tiểu**: Tìm mặt có diện tích nhỏ nhất căng trên một khung cho trước. Sau khi rời rạc hóa, diện tích là tổng các chuẩn Euclid của những vector gradient xấp xỉ, nên bài toán cũng là SOCP.
+Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\|_2$ là cực tiểu $t$ với $\|Ax - b\|_2 \le t$. Cực tiểu tổng các chuẩn $\sum_i \|A_ix + b_i\|_2$ là cực tiểu $\sum_i t_i$ với $\|A_ix + b_i\|_2 \le t_i$. Một ứng dụng hình học kinh điển khác là bài toán **mặt cực tiểu (minimal surface problem)**: Tìm mặt cong có diện tích nhỏ nhất căng trên một khung biên không gian cho trước. Sau khi rời rạc hóa, diện tích là tổng các chuẩn Euclid của những vector gradient xấp xỉ, nên bài toán cũng là SOCP.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -104,7 +104,7 @@ Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\
 
 <details><summary>Xem lời giải thích</summary>
 
-Giá trị lớn nhất của $a^Tx$ trên hình hộp là $\bar a^Tx + \delta\|x\|_1$, đạt khi mỗi $a_j$ lệch về phía cùng dấu với $x_j$. Chẳng hạn với $\bar a = (1, 2)$, $\delta = 0.1$ và $x = (3, -1)$, giá trị lớn nhất là $1 + 0.1 \times 4 = 1.4$. Ràng buộc bền vững $\bar a^Tx + \delta\|x\|_1 \le b$ chứa chuẩn $\ell_1$, và viết được thành các bất đẳng thức tuyến tính bằng biến phụ $|x_j| \le s_j$. Vậy LP bền vững với hộp bất định vẫn là một LP. Hình dạng của vùng bất định quyết định lớp bài toán: Hộp cho LP, ellipsoid cho SOCP. Đây là một ví dụ của nguyên tắc chung: Giá trị lớn nhất của $a^Tx$ trên một hình cầu chuẩn là chuẩn đối ngẫu của $x$.
+Giá trị lớn nhất của $a^Tx$ trên hình hộp là $\bar a^Tx + \delta\|x\|_1$, đạt khi mỗi $a_j$ lệch về phía cùng dấu với $x_j$. Chẳng hạn với $\bar a = (1, 2)$, $\delta = 0.1$ và $x = (3, -1)$, giá trị lớn nhất là $1 + 0.1 \times 4 = 1.4$. Ràng buộc bền vững $\bar a^Tx + \delta\|x\|_1 \le b$ chứa chuẩn $\ell_1$, và viết được thành các bất đẳng thức tuyến tính bằng biến phụ $|x_j| \le s_j$. Vậy LP bền vững với hộp bất định vẫn là một LP. Hình dạng của vùng bất định quyết định dạng bài toán: Hộp cho LP, ellipsoid cho SOCP. Đây là một ví dụ của nguyên tắc chung: Giá trị lớn nhất của $a^Tx$ trên một hình cầu chuẩn là chuẩn đối ngẫu của $x$.
 
 </details>
 
@@ -168,7 +168,6 @@ Ràng buộc nón bậc hai $\|Ax + b\|_2 \le c^Tx + d$ lồi vì nó là ảnh 
 
 SOCP xuất hiện tự nhiên khi dữ liệu bất định. Đòi một ràng buộc tuyến tính đúng với mọi hệ số trong một ellipsoid cho thêm một số hạng chuẩn $\|P^Tx\|_2$, đóng vai điều chuẩn và làm miền khả thi co lại thành một miền có biên cong. Đòi ràng buộc đúng với xác suất $\eta \ge \tfrac12$ khi hệ số là Gauss cho một ràng buộc cùng dạng với hệ số $\Phi^{-1}(\eta)$. Đồng nhất thức hyperbolic cho phép viết thêm nhiều biểu thức khác thành nón bậc hai.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.4.2 (tr. 156–160) về SOCP, LP bền vững, LP với ràng buộc xác suất, Ví dụ 4.8 và bài toán mặt cực tiểu. Bài tập 4.26 về ràng buộc hyperbolic.
-- Ví dụ LP năm ràng buộc với hình tròn bất định, mô phỏng, ví dụ nguyên liệu, ví dụ hộp bất định, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình, ràng buộc xác suất được kiểm thêm bằng mô phỏng Monte Carlo.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

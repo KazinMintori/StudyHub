@@ -99,7 +99,7 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 
 13. Ghi file Notes với frontmatter đúng (repo-format.md mục 2). Hình vào `img/<lec>/` cạnh bài.
 14. Catalog: `lessons`, `parts`, `slides` (repo-format.md mục 4). Slides chiếu từ Notes đã khóa.
-15. Kiến thức nền: Chọn `prerequisites` và `supportingConcepts`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu hỏi ôn lại. Khái niệm đa nghĩa phải có ID và lĩnh vực riêng để Notes chỉ liên kết tới đúng nghĩa. Với bài dày thuật ngữ, thêm các khái niệm khó vào Wiki ngay cả khi chúng được dạy trong Notes để liên kết tự động có thể mở ghi chú nhanh; chỉ đưa chúng vào `prerequisites` nếu bài dùng mà không dạy lại.
+15. Kiến thức nền: Chọn `prerequisites` và `supportingConcepts`; thuật ngữ chưa có thì thêm đủ ba chỗ (repo-format.md mục 5), viết định nghĩa văn bản thuần có ví dụ và câu hỏi ôn lại. Khái niệm đa nghĩa phải có ID và lĩnh vực riêng để Notes chỉ liên kết tới đúng nghĩa. Với bài dày thuật ngữ, thêm các khái niệm khó vào Wiki ngay cả khi chúng được dạy trong Notes để liên kết tự động có thể mở ghi chú nhanh; chỉ đưa chúng vào `prerequisites` nếu bài dùng mà không dạy lại. Đối với các khái niệm hoặc định luật thuần túy thuộc lĩnh vực chuyên ngành khác (ví dụ: *Định luật Snell* thuộc Vật lý xuất hiện trong bài toán tối ưu của môn Toán cho AI), cho phép liên kết và hiển thị định nghĩa từ lĩnh vực gốc thông qua cấu hình fallback scope trong `courseWikiScopes`.
 16. Đặt `lessonStatus: ready` chỉ khi mọi phần đầy đủ.
 
 ### E. Kiểm tra (không bỏ qua)

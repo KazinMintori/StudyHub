@@ -1,5 +1,4 @@
 // Tập hợp toàn bộ 13 phòng Lab thực hành môn Lập trình Xử lý Dữ liệu
-import lab01 from './xu-ly-du-lieu/lab-01.mjs'
 import lab02 from './xu-ly-du-lieu/lab-02.mjs'
 import lab03 from './xu-ly-du-lieu/lab-03.mjs'
 import lab04 from './xu-ly-du-lieu/lab-04.mjs'
@@ -14,7 +13,6 @@ import lab13 from './xu-ly-du-lieu/lab-13.mjs'
 import lab14 from './xu-ly-du-lieu/lab-14.mjs'
 
 export const dataProcessingLabs = {
-  'xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai': lab01,
   'xu-ly-du-lieu/bai-02-python-co-ban': lab02,
   'xu-ly-du-lieu/bai-03-numpy': lab03,
   'xu-ly-du-lieu/bai-04-lam-quen-pandas': lab04,

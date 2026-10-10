@@ -230,6 +230,20 @@ export const physicsConcepts = {
     "question": "Khúc xạ ở mặt đứng yên có đổi tần số ánh sáng không?",
     "answer": "Không. Tốc độ và bước sóng đổi, tần số giữ nguyên."
   },
+  "dinh-luat-snell": {
+    "name": "Định luật Snell",
+    "aliases": [
+      "Định luật Snell",
+      "định luật Snell",
+      "định luật khúc xạ Snell",
+      "định luật khúc xạ"
+    ],
+    "definition": "Định luật Snell mô tả sự đổi hướng của tia sóng khi truyền qua mặt phân cách giữa hai môi trường có vận tốc truyền sóng khác nhau: $\\frac{\\sin\\theta_1}{v_1} = \\frac{\\sin\\theta_2}{v_2}$ hoặc $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$.",
+    "example": "Tia sáng truyền từ không khí ($n_1 \\approx 1$) vào nước ($n_2 \\approx 1.33$) bị bẻ gãy lại gần pháp tuyến hơn vì vận tốc trong nước chậm hơn.",
+    "use": "Xác định góc khúc xạ, điều kiện phản xạ toàn phần và chứng minh quang lộ ngắn nhất theo nguyên lý Fermat.",
+    "question": "Khi tia sóng đi từ môi trường nhanh sang môi trường chậm, góc khúc xạ tăng hay giảm so với góc tới?",
+    "answer": "Giảm. Tia sóng bị bẻ gãy lệch về phía pháp tuyến."
+  },
   "nhieu-xa-anh-sang": {
     "name": "Nhiễu xạ ánh sáng",
     "aliases": [
@@ -360,6 +374,7 @@ export const physicsWikiDetails = {
   "pha-song": "Trong sóng điều hòa, $k=2\\pi/\\lambda$ và $\\omega=2\\pi f$. Theo dõi một pha cố định giúp xác định hướng truyền: $kx-\\omega t$ truyền theo chiều x dương khi các tham số dương.\n\nCác pha bằng nhau sai khác số nguyên lần một vòng là tương đương. Khi truyền trong nhiều môi trường, cần đường quang hoặc thời gian truyền, không chỉ chiều dài hình học.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 15. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "giao-thoa-song": "Cộng biên độ trước khi tính cường độ. Với hai sóng cùng tần số và phân cực phù hợp, $I=I_1+I_2+2\\sqrt{I_1I_2}\\cos\\delta$. Nếu pha ngẫu nhiên nhanh, số hạng giao thoa trung bình có thể bằng không.\n\nTriệt tiêu hoàn toàn cần biên độ bằng nhau. Hai nguồn khác biên độ có cực tiểu nhưng cường độ cực tiểu còn dương.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 35. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "chiet-suat": "Snell dùng góc đo từ pháp tuyến: $n_1\\sin\\theta_1=n_2\\sin\\theta_2$. Phản xạ toàn phần cần $n_1>n_2$ và góc tới vượt góc giới hạn.\n\nĐường quang của đoạn trong môi trường đồng nhất là n nhân chiều dài hình học. Phân biệt tốc độ pha dùng trong định nghĩa với tốc độ nhóm khi xét xung trong môi trường tán sắc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 33. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
+  "dinh-luat-snell": "Định luật Snell (định luật khúc xạ ánh sáng) phát biểu rằng tỷ số giữa sin của góc tới và sin của góc khúc xạ bằng tỷ số giữa vận tốc truyền sóng trong hai môi trường, hoặc nghịch đảo tỷ số chiết suất: $\\frac{\\sin\\theta_1}{v_1} = \\frac{\\sin\\theta_2}{v_2} \\iff n_1\\sin\\theta_1 = n_2\\sin\\theta_2$.\n\nTheo nguyên lý Fermat, ánh sáng luôn truyền theo đường đi có thời gian ngắn nhất (quang lộ cực tiểu). Bài toán khúc xạ tại mặt phân cách phẳng là một bài toán tối ưu hóa một biến khả vi có lời giải hình học hoàn hảo dẫn trực tiếp tới định luật Snell.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 33.",
   "nhieu-xa-anh-sang": "Khe rộng a trong miền Fraunhofer có cực tiểu $a\\sin\\theta=m\\lambda$ với m nguyên khác không. Cường độ tại tâm lấy bằng giới hạn của biểu thức sinc bình phương.\n\nKhẩu độ tròn có cực tiểu đầu gần $1.22\\lambda/D$. Tiêu chuẩn Rayleigh là quy ước cho hai nguồn điểm không kết hợp trong mô hình nhiễu xạ giới hạn, không thay mọi tiêu chí xử lý ảnh.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 36. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "thuyet-tuong-doi-hep": "Hệ số $\\gamma=1/\\sqrt{1-v^2/c^2}$ áp dụng cho $|v|<c$. Cần xác định đúng thời gian riêng và chiều dài riêng trước khi dùng giãn thời gian hoặc co chiều dài.\n\nĐộng lượng $\\mathbf p=\\gamma m\\mathbf v$ và năng lượng $E=\\gamma mc^2$ trở về gần đúng Newton khi vận tốc nhỏ. Trọng trường và các bài toán rộng hơn cần lý thuyết tương đối rộng.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 37. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "photon": "Đơn vị electronvolt là năng lượng, không phải điện áp. Khi dùng h theo joule giây, cần đổi năng lượng sang joule hoặc đổi h sang hệ electronvolt phù hợp.\n\nMột photon không được mô tả đầy đủ bằng hạt cổ điển có quỹ đạo luôn xác định; các lần phát hiện riêng lẻ có thể tạo phân bố giao thoa. Quang điện một photon cần xét công thoát và tần số ngưỡng.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 38. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -461,6 +476,10 @@ export const physicsWikiConnections = {
     "song",
     "giao-thoa-song",
     "nhieu-xa-anh-sang"
+  ],
+  "dinh-luat-snell": [
+    "chiet-suat",
+    "song"
   ],
   "nhieu-xa-anh-sang": [
     "giao-thoa-song",

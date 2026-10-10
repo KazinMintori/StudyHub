@@ -4,12 +4,12 @@ lecture: bai-02-tap-loi
 topic: quy-hoach-toan-phuong
 section: topic
 title: "Quy hoạch toàn phương và QCQP"
-description: "Quy hoạch toàn phương với mục tiêu toàn phương lồi trên đa diện, hình học của nghiệm khi đường mức là ellipse, QCQP và quan hệ LP ⊂ QP ⊂ QCQP, các ví dụ của sách: Bình phương tối thiểu có ràng buộc, khoảng cách giữa hai đa diện, phương sai lớn nhất, LP có chi phí ngẫu nhiên và danh mục đầu tư Markowitz."
+description: "Quy hoạch toàn phương với mục tiêu toàn phương lồi trên đa diện, hình học của nghiệm khi đường mức là ellipse, QCQP và quan hệ LP ⊂ QP ⊂ QCQP, cùng các mô hình tiêu biểu: Bình phương tối thiểu có ràng buộc, khoảng cách giữa hai đa diện, phương sai lớn nhất, LP có chi phí ngẫu nhiên và danh mục đầu tư Markowitz."
 ---
 
-Quy hoạch tuyến tính dùng hàm mục tiêu phẳng như một mặt dốc. Rất nhiều bài toán thực tế lại có hàm mục tiêu cong: Bình phương sai số, phương sai của rủi ro, bình phương khoảng cách. Khi hàm mục tiêu là một hàm toàn phương lồi và các ràng buộc vẫn affine, ta có một **quy hoạch toàn phương** (quadratic program, QP). Sự thay đổi tưởng nhỏ ấy làm hình học của nghiệm khác hẳn: Nghiệm không còn bị buộc phải nằm ở đỉnh của đa diện.
+Quy hoạch tuyến tính dùng hàm mục tiêu phẳng như một mặt dốc. Rất nhiều bài toán thực tế lại có hàm mục tiêu cong: Bình phương sai số, phương sai của rủi ro, bình phương khoảng cách. Khi hàm mục tiêu là một hàm toàn phương lồi và các ràng buộc vẫn affine, ta có một **quy hoạch toàn phương** (quadratic program, QP). Sự thay đổi tưởng chừng nhỏ bé ấy làm hình học của nghiệm khác hẳn: Nghiệm không còn bị buộc phải nằm ở đỉnh của đa diện.
 
-Trang này trình bày QP, mở rộng của nó là QCQP, và năm ví dụ của sách cho thấy QP xuất hiện từ những nguồn rất khác nhau: Thống kê, hình học, xác suất và tài chính.
+Bài giảng này trình bày chi tiết về QP, dạng mở rộng QCQP, cùng năm mô hình ứng dụng tiêu biểu cho thấy QP xuất hiện tự nhiên từ các bài toán cốt lõi: Thống kê học máy, hình học tính toán, lý thuyết xác suất và tối ưu hóa tài chính.
 
 ## 1. Bài toán
 
@@ -38,13 +38,13 @@ $$
 \end{aligned}
 $$
 
-với $P_i \succeq 0$, ta có một **quy hoạch toàn phương với ràng buộc toàn phương** (QCQP). Khi $P_i \succ 0$, mỗi ràng buộc mô tả một [ellipsoid](../bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md), và ta cực tiểu một hàm toàn phương lồi trên giao của các ellipsoid. Các lớp bài toán lồng vào nhau: LP là QP với $P = 0$, và QP là QCQP với mọi $P_i = 0$. Một ràng buộc như $x_1^2 + x_2^2 \ge 1$ không thuộc QCQP, vì viết thành $1 - x_1^2 - x_2^2 \le 0$ thì vế trái lõm, và miền khả thi là phần bên ngoài một hình tròn, không lồi.
+với $P_i \succeq 0$, ta có một **quy hoạch toàn phương với ràng buộc toàn phương** (QCQP). Khi $P_i \succ 0$, mỗi ràng buộc mô tả một [ellipsoid](../bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md), và ta cực tiểu một hàm toàn phương lồi trên giao của các ellipsoid. Các họ bài toán lồng ghép vào nhau: LP là trường hợp riêng của QP khi $P = 0$, và QP là trường hợp riêng của QCQP khi mọi $P_i = 0$. Một ràng buộc như $x_1^2 + x_2^2 \ge 1$ không thuộc QCQP, vì viết thành $1 - x_1^2 - x_2^2 \le 0$ thì vế trái lõm, và miền khả thi là phần bên ngoài một hình tròn, không lồi.
 
 ## 3. Bình phương tối thiểu có ràng buộc
 
 Bài toán cực tiểu $\|Ax - b\|_2^2 = x^TA^TAx - 2b^TAx + b^Tb$ là một QP không ràng buộc với $P = 2A^TA \succeq 0$, và nó có công thức nghiệm quen thuộc qua phương trình chuẩn. Khi thêm ràng buộc tuyến tính, chẳng hạn cận dưới và cận trên cho từng biến, $l_i \le x_i \le u_i$, ta được **bình phương tối thiểu có ràng buộc**. Bài toán vẫn là QP, nhưng không còn công thức nghiệm đơn giản.
 
-Ví dụ tự đặt: Khớp $y \approx w_1u + w_2$ với dữ liệu $u = (1, 2, 3, 4)$, $y = (2, 3.5, 5.5, 7)$, nhưng hệ số góc là một đại lượng vật lý chỉ được nằm trong $[0, 1]$. Không có ràng buộc, nghiệm là $w = (1.7,\ 0.25)$ với tổng bình phương sai số 0.05. Hệ số góc 1.7 vi phạm ràng buộc. Dùng [tối ưu theo từng nhóm biến](./khu-rang-buoc-va-toi-uu-tung-phan.md): Với $w_1$ cố định, hệ số chặn tốt nhất là $\bar y - w_1\bar u$, và tổng bình phương sai số còn lại là một parabol theo $w_1$ có đỉnh tại 1.7. Trên đoạn $[0, 1]$, parabol này giảm, nên $w_1^\star = 1$, rồi $w_2^\star = 4.5 - 2.5 = 2$, với tổng bình phương sai số 2.5. Cái giá của ràng buộc vật lý là sai số khớp tăng từ 0.05 lên 2.5.
+Ví dụ: Xét bài toán khớp hàm $y \approx w_1u + w_2$ với tập dữ liệu $u = (1, 2, 3, 4)$, $y = (2, 3.5, 5.5, 7)$, trong đó hệ số góc là một đại lượng vật lý bị chặn trong khoảng $[0, 1]$. Nếu không có ràng buộc, nghiệm bình phương tối thiểu tự do là $w = (1.7,\ 0.25)$ với tổng bình phương sai số 0.05. Hệ số góc 1.7 vi phạm ràng buộc miền vật lý. Dùng [tối ưu theo từng nhóm biến](./khu-rang-buoc-va-toi-uu-tung-phan.md): Với $w_1$ cố định, hệ số chặn tốt nhất là $\bar y - w_1\bar u$, và tổng bình phương sai số còn lại là một parabol theo $w_1$ có đỉnh tại 1.7. Trên đoạn $[0, 1]$, parabol này giảm, nên $w_1^\star = 1$, kéo theo $w_2^\star = 4.5 - 2.5 = 2$, với tổng bình phương sai số là 2.5. Cái giá của việc áp đặt ràng buộc vật lý là sai số khớp tăng từ 0.05 lên 2.5.
 
 Có một cám dỗ cần tránh: Giải bài toán không ràng buộc rồi kẹp từng thành phần vào hộp. Khi các biến tương quan với nhau, cách làm ấy có thể cho kết quả tệ, như Câu 3 sẽ cho thấy.
 
@@ -62,13 +62,13 @@ với biến $(x_1, x_2)$. Bài toán bất khả thi khi và chỉ khi một tr
 
 ## 5. Phương sai lớn nhất và chi phí ngẫu nhiên
 
-**Phương sai lớn nhất.** Trở lại tình huống ở [chủ đề trước](./mo-hinh-lp.md): Một biến ngẫu nhiên nhận các giá trị đã biết, với phân phối $p$ chưa biết, chỉ thỏa vài ràng buộc tuyến tính. Phương sai của $f(x)$ là
+**Phương sai lớn nhất.** Trở lại bài toán tối ưu trên phân phối xác suất: Xét biến ngẫu nhiên nhận các giá trị $f_1, \ldots, f_n$ với phân phối xác suất $p \succeq 0$, $\sum_{i=1}^n p_i = 1$. Phương sai của $f(x)$ được tính tường minh:
 
 $$
-\sum_i f_i^2p_i - \Big(\sum_i f_ip_i\Big)^2,
+\operatorname{Var}(f(x)) = \sum_{i=1}^n f_i^2p_i - \left(\sum_{i=1}^n f_ip_i\right)^2 = \mathbb{E}[f(x)^2] - (\mathbb{E}[f(x)])^2,
 $$
 
-một hàm **lõm** bậc hai của $p$, vì nó là một hàm tuyến tính trừ đi bình phương của một hàm tuyến tính. Cực đại một hàm lõm trên đa diện là một bài toán lồi, và ở đây nó là một QP. Với biến nhận giá trị trong $\{0, 1, 2, 3, 4\}$ và trung bình nằm trong $[1, 2]$, phương sai lớn nhất có thể là 4, đạt khi dồn một nửa khối lượng vào 0 và nửa kia vào 4. Kết quả khớp với trực giác: Muốn phương sai lớn, hãy đẩy khối lượng ra hai đầu.
+đây là một hàm **lõm** bậc hai của $p$, vì nó là một hàm tuyến tính trừ đi bình phương của một hàm tuyến tính. Cực đại một hàm lõm trên đa diện là một bài toán lồi, và ở đây nó chính là một bài toán QP. Với biến nhận giá trị trong $\{0, 1, 2, 3, 4\}$ và trung bình nằm trong đoạn $[1, 2]$, phương sai lớn nhất có thể là 4, đạt khi dồn một nửa khối lượng vào 0 và nửa kia vào 4. Kết quả khớp với trực giác: Muốn phương sai lớn, hãy đẩy khối lượng xác suất dồn ra hai đầu biên.
 
 **LP có chi phí ngẫu nhiên.** Xét một LP mà vector chi phí $c$ là ngẫu nhiên, với trung bình $\bar c$ và ma trận hiệp phương sai $\Sigma$. Với một quyết định $x$, chi phí $c^Tx$ có trung bình $\bar c^Tx$ và phương sai $x^T\Sigma x$. Thường có một sự đánh đổi giữa chi phí trung bình nhỏ và rủi ro nhỏ. Cực tiểu **chi phí có tính đến rủi ro** $\bar c^Tx + \gamma\,x^T\Sigma x$, với $\gamma \ge 0$ là mức ngại rủi ro, trên cùng miền khả thi là một QP, vì $\Sigma \succeq 0$.
 
@@ -82,7 +82,7 @@ $$
 
 tức tìm danh mục ít rủi ro nhất trong những danh mục đạt lợi suất trung bình tối thiểu $r_{\min}$.
 
-Ví dụ tự đặt với hai tài sản: Tài sản A có lợi suất trung bình 10% và độ lệch chuẩn 15%, tài sản B có 4% và 5%, hệ số tương quan $-0.2$. Danh mục ít rủi ro nhất, không cần đạt lợi suất nào, đặt $\tfrac17 \approx 14.3\%$ vốn vào A. Nó có lợi suất khoảng 4.86% và độ lệch chuẩn khoảng 4.39%, **thấp hơn cả** tài sản an toàn hơn trong hai tài sản. Đây là sức mạnh của đa dạng hóa: Khi hai tài sản tương quan âm, biến động của chúng triệt tiêu một phần. Nếu đòi lợi suất ít nhất 7%, ràng buộc lợi suất chặt, buộc đặt một nửa vốn vào mỗi tài sản, và độ lệch chuẩn tăng lên khoảng 7.42%. Chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ xem toàn bộ đường đánh đổi giữa lợi suất và rủi ro.
+Ví dụ: Xét danh mục gồm hai tài sản đầu tư: Tài sản A có lợi suất trung bình 10% và độ lệch chuẩn 15%, tài sản B có 4% và 5%, hệ số tương quan $-0.2$. Danh mục ít rủi ro nhất, không cần đạt lợi suất nào, đặt $\tfrac17 \approx 14.3\%$ vốn vào A. Nó có lợi suất khoảng 4.86% và độ lệch chuẩn khoảng 4.39%, **thấp hơn cả** tài sản an toàn hơn trong hai tài sản. Đây là sức mạnh của đa dạng hóa: Khi hai tài sản tương quan âm, biến động của chúng triệt tiêu một phần. Nếu đòi lợi suất ít nhất 7%, ràng buộc lợi suất chặt, buộc đặt một nửa vốn vào mỗi tài sản, và độ lệch chuẩn tăng lên khoảng 7.42%. Chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ xem toàn bộ đường đánh đổi giữa lợi suất và rủi ro.
 
 ## 7. Những câu hỏi để đào sâu
 
@@ -98,7 +98,7 @@ Vì đường mức của hàm toàn phương cong. Trong LP, đường mức l�
 
 <details><summary>Xem lời giải thích</summary>
 
-Bài toán này tương đương cực đại $\|x\|_2^2$ trên hình hộp. Mọi đỉnh $(\pm1, \ldots, \pm1)$ đều là nghiệm với giá trị $n$, nên ở ví dụ này ta biết nghiệm. Nhưng thay $\|x\|^2$ bằng một dạng toàn phương không xác định tổng quát, bài toán cực đại một hàm lồi trên đa diện nói chung chỉ giải được bằng cách so sánh rất nhiều đỉnh, và hình hộp $n$ chiều có $2^n$ đỉnh. Bài toán QP không lồi thuộc lớp NP-khó, nên không có thuật toán nào được biết là giải nó nhanh trong mọi trường hợp. Điều kiện $P \succeq 0$ không phải chi tiết kỹ thuật, mà là ranh giới giữa dễ và khó.
+Bài toán này tương đương cực đại $\|x\|_2^2$ trên hình hộp. Mọi đỉnh $(\pm1, \ldots, \pm1)$ đều là nghiệm với giá trị $n$, nên ở ví dụ này ta biết nghiệm. Nhưng thay $\|x\|^2$ bằng một dạng toàn phương không xác định tổng quát, bài toán cực đại một hàm lồi trên đa diện nói chung chỉ giải được bằng cách so sánh rất nhiều đỉnh, và hình hộp $n$ chiều có $2^n$ đỉnh. Bài toán QP không lồi thuộc nhóm bài toán NP-khó, nên không có thuật toán nào được biết là giải nó nhanh trong mọi trường hợp. Điều kiện $P \succeq 0$ không phải chi tiết kỹ thuật, mà là ranh giới giữa dễ và khó.
 
 </details>
 
@@ -133,7 +133,7 @@ Cực tiểu $(x_1 - 3)^2 + (x_2 + 1)^2$ trên hình vuông $[0, 2]^2$. Nghiệm
 :::
 
 ::: solution
-Bài toán tìm điểm của hình vuông gần $(3, -1)$ nhất, tức phép chiếu của $(3, -1)$ lên hình vuông. Vì hàm mục tiêu tách được theo hai tọa độ, ta kẹp từng tọa độ: $x_1 = \min\{3, 2\} = 2$ và $x_2 = \max\{-1, 0\} = 0$. Nghiệm là đỉnh $(2, 0)$ với giá trị $1 + 1 = 2$. Hai ràng buộc $x_1 \le 2$ và $x_2 \ge 0$ chặt. Ở đây phép kẹp hợp lệ, khác với Câu 3, vì $P$ chéo.
+Bài toán tìm điểm của hình vuông gần $(3, -1)$ nhất, tức phép chiếu của $(3, -1)$ lên hình vuông. Vì hàm mục tiêu tách được theo hai tọa độ, ta kẹp độc lập từng tọa độ: Biến $x_1 = \min\{3, 2\} = 2$ và biến $x_2 = \max\{-1, 0\} = 0$. Nghiệm là đỉnh $(2, 0)$ với giá trị $1 + 1 = 2$. Hai ràng buộc $x_1 \le 2$ và $x_2 \ge 0$ chặt. Ở đây phép kẹp hợp lệ, khác với Câu 3, vì $P$ chéo.
 :::
 
 ::: exercise 2. Khoảng cách giữa hai hình hộp
@@ -164,7 +164,6 @@ Quy hoạch toàn phương cực tiểu một hàm toàn phương lồi, với $
 
 QP xuất hiện từ nhiều nguồn. Trong thống kê, đó là bình phương tối thiểu có ràng buộc, còn trong hình học, đó là khoảng cách giữa hai đa diện, kèm theo siêu phẳng tách của chúng. Xác suất cho bài toán phương sai lớn nhất trên một tập phân phối và LP có chi phí ngẫu nhiên. Tài chính cho danh mục Markowitz, nơi đa dạng hóa có thể làm rủi ro thấp hơn cả tài sản an toàn nhất.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.4 (tr. 152–153) về QP, QCQP và Hình 4.5. §4.4.1 (tr. 153–156) về bình phương tối thiểu có ràng buộc, khoảng cách giữa hai đa diện, phương sai lớn nhất, LP có chi phí ngẫu nhiên và danh mục Markowitz.
-- Ví dụ khớp dữ liệu có ràng buộc hệ số góc, phản ví dụ về phép kẹp, mô phỏng, ví dụ phương sai lớn nhất, ví dụ hai tài sản, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

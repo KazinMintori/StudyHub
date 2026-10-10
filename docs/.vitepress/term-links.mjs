@@ -3,6 +3,70 @@ import { concepts } from './concepts.mjs'
 import { resolveConceptForCourse } from './wiki-content.mjs'
 import { lectureConceptIds, findLecture } from './lecture-model.mjs'
 
+const COMPOUND_EXCLUSIONS = {
+  'quan-he': [
+    /cơ\s+sở\s+dữ\s+liệu\s+quan\s+hệ/i,
+    /dữ\s+liệu\s+quan\s+hệ/i,
+    /bảng\s+quan\s+hệ/i,
+    /mối\s+quan\s+hệ/i,
+    /quan\s+hệ\s+nhân\s+quả/i,
+    /đại\s+số\s+quan\s+hệ/i,
+    /quan\s+hệ\s+hướng\s+đối\s+tượng/i,
+    /quan\s+hệ\s+khoá/i,
+    /quan\s+hệ\s+khóa/i,
+    /quan\s+hệ\s+1:/i,
+    /quan\s+hệ\s+m:/i,
+    /quan\s+hệ\s+n:/i
+  ],
+  'tap-hop': [
+    /tập\s+dữ\s+liệu/i,
+    /tập\s+tin/i,
+    /tập\s+lệnh/i,
+    /tập\s+huấn\s+luyện/i,
+    /tập\s+kiểm\s+thử/i,
+    /tập\s+đặc\s+trưng/i,
+    /tập\s+nhãn/i
+  ],
+  'do-thi': [
+    /vẽ\s+đồ\s+thị/i,
+    /đồ\s+thị\s+đường/i,
+    /đồ\s+thị\s+cột/i,
+    /đồ\s+thị\s+phân\s+tán/i,
+    /đồ\s+thị\s+trực\s+quan/i,
+    /đồ\s+thị\s+hàm\s+số/i,
+    /đồ\s+thị\s+của\s+hàm/i
+  ],
+  'trang-thai': [
+    /mã\s+trạng\s+thái/i,
+    /trạng\s+thái\s+http/i,
+    /trạng\s+thái\s+kiểm\s+định/i,
+    /trạng\s+thái\s+đơn\s+hàng/i,
+    /trạng\s+thái\s+toàn\s+cục/i,
+    /trạng\s+thái\s+ẩn/i,
+    /trạng\s+thái\s+kết\s+nối/i
+  ],
+  'doc-lap': [
+    /bản\s+sao\s+độc\s+lập/i,
+    /kiểm\s+toán\s+độc\s+lập/i,
+    /thẩm\s+định\s+độc\s+lập/i,
+    /độc\s+lập\s+tuyến\s+tính/i,
+    /biến\s+độc\s+lập/i,
+    /phân\s+loại\s+độc\s+lập/i
+  ],
+  'ky-vong': [
+    /kỳ\s+vọng\s+rằng/i,
+    /kỳ\s+vọng\s+của/i,
+    /kỳ\s+vọng\s+đạt/i,
+    /kỳ\s+vọng\s+người\s+dùng/i
+  ],
+  'ket-hop': [
+    /kết\s+hợp\s+mặt\s+nạ/i,
+    /kết\s+hợp\s+nhiều/i,
+    /kết\s+hợp\s+các/i,
+    /kết\s+hợp\s+với/i
+  ]
+}
+
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 export function termLinks(md) {
   md.core.ruler.after('inline', 'study_term_links', state => {
@@ -23,7 +87,7 @@ export function termLinks(md) {
       if (lesson) {
         allowedConceptIds = new Set(lectureConceptIds(lesson))
       } else {
-        allowedConceptIds = new Set(course.foundations || [])
+        return
       }
     }
 
@@ -56,6 +120,18 @@ export function termLinks(md) {
           for (const match of token.content.matchAll(pattern)) {
             const id = resolveConceptForCourse(aliases.get(match[0].toLocaleLowerCase('vi')), course?.id)
             if (!id || seen.has(id)) continue
+
+            // Loại trừ cụm từ ghép tiếng Việt thông dụng không mang nghĩa học thuật
+            const exclusions = COMPOUND_EXCLUSIONS[id]
+            if (exclusions) {
+              const windowStart = Math.max(0, match.index - 35)
+              const windowEnd = Math.min(token.content.length, match.index + match[0].length + 35)
+              const contextSnippet = token.content.slice(windowStart, windowEnd)
+              if (exclusions.some(p => p.test(contextSnippet))) {
+                continue
+              }
+            }
+
             if (match.index > cursor) { const text = new state.Token('text', '', 0); text.content = token.content.slice(cursor, match.index); output.push(text) }
             const open = new state.Token('html_inline', '', 0)
             open.content = `<button type="button" class="study-term" data-term="${id}" data-wiki="/wiki/${id}.html" aria-haspopup="dialog" aria-expanded="false" aria-controls="study-term-preview">`

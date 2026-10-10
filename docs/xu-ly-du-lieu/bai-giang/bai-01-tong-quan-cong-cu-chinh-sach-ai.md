@@ -55,141 +55,57 @@ Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa tr
 ## 3. Kiến trúc Môi trường Tính toán & IPython Kernel
 
 ### 3.1. Phân định bản chất: Tệp mã nguồn `.py` và Sổ tay tính toán `.ipynb`
-Trong thực tế phát triển phần mềm và nghiên cứu dữ liệu, người học thường tiếp xúc song song với hai định dạng tệp: Tệp kịch bản truyền thống `.py` (*Python script*) và tệp sổ tay tương tác `.ipynb` (*Jupyter Notebook*). Hai định dạng này có cấu trúc lưu trữ và mục đích sử dụng hoàn toàn khác biệt.
+Bạn có thể viết cùng một phép tính trong tệp `.py` hoặc trong một ô của Jupyter Notebook. Khi chạy, cả hai đều có thể in ra cùng một kết quả. Điểm khác biệt nằm ở **những gì được lưu trong tệp**.
 
-#### 1. Tệp mã nguồn `.py` (Plain text script)
-- **Bản chất lưu trữ**: Là tệp văn bản thuần túy (*plain text*) được mã hóa theo chuẩn UTF-8. Tệp chỉ chứa các dòng mã lệnh Python nguyên bản cùng các dòng ghi chú giải thích.
-- **Cơ chế thực thi**: Trình thông dịch CPython đọc tệp một cách tuần tự từ dòng đầu tiên đến dòng cuối cùng trong một tiến trình duy nhất rồi kết thúc phiên làm việc.
-- **Ưu và nhược điểm**: Tệp rất nhẹ, dễ dàng kiểm soát phiên bản qua Git diff theo từng dòng. Định dạng này là chuẩn mực tối thượng để đóng gói thư viện, xây dựng module phần mềm và vận hành các đường ống sản xuất (*production pipelines*). Tuy nhiên, tệp `.py` không lưu lại trạng thái biến số hay hình ảnh đồ thị sau khi chạy xong. Mỗi lần muốn thử nghiệm một phép biến đổi nhỏ ở cuối tệp, lập trình viên buộc phải chạy lại toàn bộ chương trình từ đầu.
+- **Tệp `.py`** là văn bản chứa mã Python và chú thích. Khi chạy bằng lệnh `python tinh_toan.py`, các câu lệnh được thực hiện theo luồng điều khiển của chương trình. Kết quả in ra màn hình không tự được ghi ngược vào tệp mã nguồn. Định dạng này thuận tiện để tổ chức mô-đun, thư viện và các chương trình chạy tự động.
+- **Tệp `.ipynb`** là tài liệu JSON chứa danh sách các ô trong trường `cells`. Ô mã có trường `source` lưu mã, `execution_count` ghi số thứ tự thực thi và `outputs` lưu đầu ra. Notebook còn có siêu dữ liệu `metadata` cùng các trường phiên bản định dạng. Nhờ đó, người đọc có thể xem mã, lời giải thích và kết quả đã lưu trong cùng một tài liệu.
 
-#### 2. Tệp sổ tay tính toán `.ipynb` (JSON document)
-- **Bản chất lưu trữ**: Thực chất là một tệp dữ liệu có cấu trúc định dạng **JSON** (*JavaScript Object Notation*). Nếu mở một tệp `.ipynb` bằng trình soạn thảo văn bản thông thường (như Notepad), bạn sẽ thấy một cây đối tượng JSON chứa danh sách các ô (`cells`), siêu dữ liệu (`metadata`) và thông tin phiên bản.
-- **Cấu trúc bên trong một ô (Cell)**: Mỗi ô được phân loại thành ô mã nguồn (`"cell_type": "code"`) hoặc ô thuyết minh (`"cell_type": "markdown"`). Đặc biệt, ô mã nguồn không chỉ lưu chuỗi lệnh (`source`) mà còn lưu trữ kèm theo số lần thực thi (`execution_count`) và toàn bộ kết quả đầu ra (`outputs`).
-- **Khối kết quả đa phương tiện (`outputs`)**: Jupyter lưu trực tiếp bảng dữ liệu HTML, thông điệp in ra màn hình, thậm chí cả ảnh đồ thị được mã hóa dưới dạng chuỗi nhị phân Base64 (`image/png;base64,...`) vào ngay bên trong tệp JSON.
-- **Ưu và nhược điểm**: Định dạng này lý tưởng cho việc khám phá dữ liệu ban đầu (*Exploratory Data Analysis - EDA*), giảng dạy học thuật và báo cáo khoa học vì kết hợp hài hòa giữa lời dẫn giải thuyết minh, công thức toán học và biểu đồ trực quan. Trái lại, tệp `.ipynb` rất nặng nề, khó hòa giải xung đột (*merge conflict*) trên Git do các thẻ siêu dữ liệu và chuỗi Base64 thay đổi liên tục sau mỗi lần nhấn phím thực thi.
+<DataDiagram name="notebook-file-formats" />
 
-```text
-Sự khác biệt cốt lõi về cấu trúc tệp giữa .py và .ipynb:
+Trong ví dụ này, `print()` tạo đầu ra văn bản thuộc luồng `stdout`. Với đồ thị, đầu ra có thể chứa dữ liệu ảnh hoặc các dạng hiển thị khác. Notebook có thể lớn và khó đối chiếu thay đổi trên Git khi chứa nhiều đầu ra. Kích thước đó phụ thuộc vào nội dung được lưu, không phải mọi tệp `.ipynb` đều nặng.
 
-[ tinh_toan.py ] (Văn bản thuần túy)
-------------------------------------------------------------
-import math
-x = 16
-print("Căn bậc hai:", math.sqrt(x))
-------------------------------------------------------------
-
-[ tinh_toan.ipynb ] (Tệp dữ liệu JSON có cấu trúc)
-------------------------------------------------------------
-{
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": 1,
-      "metadata": {},
-      "source": [
-        "import math\n",
-        "x = 16\n",
-        "print(\"Căn bậc hai:\", math.sqrt(x))"
-      ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": ["Căn bậc hai: 4.0\n"]
-        }
-      ]
-    }
-  ],
-  "metadata": {
-    "language_info": { "name": "python", "version": "3.12" }
-  },
-  "nbformat": 4,
-  "nbformat_minor": 5
-}
-------------------------------------------------------------
-```
+Hai tệp mẫu để xem cấu trúc đầy đủ: [Mã Python `tinh_toan.py`](/materials/xu-ly-du-lieu/lec01/tinh_toan.py) và [Notebook `tinh_toan.ipynb`](/materials/xu-ly-du-lieu/lec01/tinh_toan.ipynb). Mở tệp notebook bằng trình soạn thảo văn bản sẽ thấy cấu trúc JSON tương ứng với các trường trong minh họa.
 
 ### 3.2. Kiến trúc tương tác ba tầng: Trình duyệt, Máy chủ và IPython Kernel
-Một điểm dễ gây nhầm lẫn khi mới tiếp cận là cho rằng giao diện trang web của Jupyter Notebook hay Google Colab chính là nơi trực tiếp chạy mã Python. Trên thực tế, hệ thống vận hành theo mô hình phân tầng ba thành phần độc lập:
-
-```mermaid
-flowchart LR
-    A["Giao diện người dùng<br/>(Browser / VS Code)"] <-->|"WebSocket<br/>(Giao thức mạng)"| B["Máy chủ Notebook<br/>(Jupyter Server)"]
-    B <-->|"ZeroMQ Messages<br/>(Kênh thông điệp nội bộ)"| C["Hạt nhân tính toán<br/>(IPython Kernel trong RAM)"]
-```
+Khi nhấn `Shift + Enter` trong Jupyter Notebook trên trình duyệt, mã không được thực thi ngay trong trang web. Yêu cầu chạy đi qua máy chủ để tới một tiến trình Python riêng, gọi là **kernel**. Ba thành phần và hai kênh trao đổi được ghép trong cùng một sơ đồ dưới đây.
 
 <DataDiagram name="jupyter" />
 
-1. **Giao diện người dùng (Front-end Client)**: Là trang web trên trình duyệt hoặc trình biên tập VS Code. Tầng này chỉ chịu trách nhiệm hiển thị các ô cell, ghi nhận phím bấm của người dùng, kết xuất mã Markdown và vẽ biểu đồ từ dữ liệu nhận về. Trình duyệt hoàn toàn không chứa trình thông dịch Python.
-2. **Máy chủ Sổ tay (Jupyter Server)**: Chạy nền trên máy tính hoặc máy chủ đám mây, đóng vai trò cầu nối điều phối. Máy chủ quản lý các tệp tin trên ổ cứng, xác thực người dùng và chuyển tiếp yêu cầu từ trình duyệt tới hạt nhân tính toán thông qua kết nối WebSocket hai chiều.
-3. **Hạt nhân tính toán (IPython Kernel)**: Là một tiến trình Python độc lập chạy ngầm trên hệ điều hành, sở hữu không gian bộ nhớ RAM riêng biệt. Khi bạn nhấn tổ hợp phím `Shift + Enter` tại một ô mã, nội dung mã được đóng gói thành thông điệp gửi qua socket ZeroMQ tới Kernel. Kernel thông dịch mã, cập nhật dữ liệu trong RAM và truyền kết quả trả ngược về máy chủ để hiển thị lên trình duyệt.
+Cần phân biệt **tệp notebook trên đĩa** với **trạng thái tính toán trong RAM**. Lưu notebook có thể giữ lại mã và đầu ra đang hiển thị, nhưng không tự lưu toàn bộ các đối tượng Python đang tồn tại trong kernel. Sự khác biệt này giải thích vì sao một kết quả vẫn xuất hiện trên trang dù kernel vừa được khởi động lại.
 
 ### 3.3. Minh họa cơ chế chạy Cell và Chỉ số Thực thi `In [ ]`
-Mỗi ô mã nguồn trong giao diện sổ tay đều đi kèm một chỉ số thực thi nằm ở lề trái:
+Nhãn bên cạnh một ô mã giúp nhận biết việc thực thi của ô đó:
 
-- **`In [ ]`**: Ô mã chưa từng được thực thi kể từ khi hạt nhân tính toán khởi động. Toàn bộ biến số khai báo trong ô này chưa tồn tại trong bộ nhớ RAM.
-- **`In [*]`**: Ô mã đang trong quá trình xử lý. Tiến trình Kernel đang bận tính toán, nạp dữ liệu từ đĩa hoặc chờ phản hồi mạng. Các ô mã khác được bấm trong lúc này sẽ bị đưa vào hàng đợi chờ xử lý.
-- **`In [n]`**: Ô mã đã thực thi thành công. Chỉ số $n$ là một số nguyên dương tăng dần, phản ánh **thứ tự thời gian thực tế** mà lệnh được gửi tới hạt nhân, hoàn toàn không phản ánh vị trí hình học của ô đó trên trang tài liệu.
+- **`In [ ]`**: Ô không có số thứ tự thực thi đang hiển thị. Chỉ nhìn nhãn này không thể kết luận một tên biến có tồn tại trong kernel hay không, vì tên đó có thể đã được tạo bởi một ô khác.
+- **`In [*]`**: Ô đang chờ hoặc đang được xử lý. Kernel có thể đang tính toán, đọc dữ liệu hoặc chờ phản hồi mạng.
+- **`In [n]`**: Số thứ tự của lần thực thi gần nhất được ghi nhận cho ô. Nhãn này phản ánh thứ tự chạy, không phản ánh vị trí ô trên trang và cũng không bảo đảm lần chạy đã hoàn tất mà không có lỗi.
 
-Hãy quan sát minh họa trực quan dưới đây về một phiên làm việc có thứ tự bấm ô phi tuần tự:
+Xét một phiên làm việc bắt đầu với kernel sạch. Tài liệu có ba ô, nhưng người dùng **chạy ô 1 trước, chạy ô 3 hai lần rồi mới chạy ô 2**. Hai góc nhìn dưới đây cùng mô tả phiên làm việc đó. Màu của mỗi ô được giữ nguyên để đối chiếu giữa vị trí trong tài liệu và lịch sử thực thi.
 
-```text
-Màn hình Sổ tay tương tác (Thứ tự thị giác từ trên xuống dưới):
+<NotebookExecution />
 
-┌─ Ô Cell 1 ────────────────────────────────────────────────────────┐
-│ In [1]: x = 10                                                    │
-└───────────────────────────────────────────────────────────────────┘
+Ô 2 in ra `20` vì lần chạy của nó xảy ra sau hai lần cộng thêm `5` ở ô 3. Nhãn `In [3]` cạnh ô 3 chỉ ghi lần chạy gần nhất của ô này. Lần chạy trước đó mang nhãn `In [2]` không còn hiện cạnh ô. Đầu ra của `print(x)` là dòng văn bản `20`, không mang nhãn `Out [4]`. Nhãn `Out [n]` thường đi với kết quả của một biểu thức được IPython hiển thị tự động.
 
-┌─ Ô Cell 2 ────────────────────────────────────────────────────────┐
-│ In [4]: print("Giá trị x hiện tại là:", x)                         │
-│                                                                   │
-│ Out [4]: Giá trị x hiện tại là: 20                                 │
-└───────────────────────────────────────────────────────────────────┘
-
-┌─ Ô Cell 3 ────────────────────────────────────────────────────────┐
-│ In [3]: x = x + 5                                                 │
-└───────────────────────────────────────────────────────────────────┘
-```
-
-Trong ví dụ trên, người học có thể bối rối khi thấy Cell 2 nằm ngay dưới Cell 1 (`x = 10`) nhưng lại in ra giá trị `20`. Nguyên nhân bắt nguồn từ trật tự thao tác thực tế theo thời gian:
-1. Người dùng bấm chạy Cell 1 trước tiên $\implies$ Nhãn hiện `In [1]`, gán `x = 10` vào RAM.
-2. Người dùng bỏ qua Cell 2, cuộn chuột xuống bấm chạy Cell 3 lần đầu $\implies$ Nhãn hiện `In [2]`, tính `x = 10 + 5 = 15`.
-3. Người dùng tiếp tục bấm chạy Cell 3 thêm một lần nữa $\implies$ Nhãn tăng lên `In [3]`, tính `x = 15 + 5 = 20`.
-4. Cuối cùng, người dùng cuộn ngược lên trên và bấm chạy Cell 2 $\implies$ Nhãn nhận giá trị `In [4]`, in ra giá trị mới nhất của `x` đang lưu trong RAM là $20$.
+Khi lưu notebook, các nhãn và đầu ra này có thể được giữ lại trong tệp. Khi mở lại tài liệu, hãy xác định kernel hiện tại đã chạy những ô nào trước khi dùng các nhãn đã lưu để suy luận về RAM.
 
 ### 3.4. Bẫy Không gian tên Toàn cục (Global Namespace Trap)
-Hiện tượng trên dẫn đến một trong những cạm bẫy lớn nhất khi làm việc với sổ tay tương tác: **Bẫy Không gian tên Toàn cục**.
+Ví dụ vừa rồi cho thấy trạng thái của `x` phụ thuộc vào lịch sử thực thi. Các ô mã trong cùng một kernel sử dụng chung không gian tên. Biến, hàm và các đối tượng được tạo ra có thể tiếp tục được dùng ở những lần chạy sau cho đến khi bị thay đổi, bị xóa hoặc kernel kết thúc.
 
 #### 1. Cơ chế trạng thái tích lũy trong RAM
-Hạt nhân IPython duy trì một vùng nhớ toàn cục duy nhất xuyên suốt phiên làm việc (*stateful environment*). Mọi biến số, hàm số và kiểu dữ liệu sau khi tạo ra sẽ nằm cố định trong RAM cho đến khi bạn khởi động lại hạt nhân hoặc tắt ứng dụng. Trạng thái của dữ liệu được quyết định hoàn toàn bởi trục thời gian bấm chuột của người dùng, chứ không tuân theo trật tự đọc từ trên xuống dưới của trang tài liệu.
+Mỗi lần chạy `x = x + 5`, Python lấy giá trị hiện tại của `x` để tính giá trị mới rồi gán lại. Vì vậy, chạy lặp một ô có thể làm kết quả thay đổi ngay cả khi nội dung ô vẫn giữ nguyên. Di chuyển ô hoặc sửa văn bản trên trang cũng không tự thực thi lại mã và không tự hoàn tác trạng thái trong RAM.
 
-Bảng dưới đây minh họa sự biến đổi của biến số trong RAM qua từng mốc thời gian:
-
-| Mốc thời gian | Thao tác người dùng | Mã thực thi | Nhãn hiển thị | Trạng thái biến `x` trong RAM |
-| :--- | :--- | :--- | :--- | :--- |
-| Thời điểm $t_1$ | Nhấn chạy Cell 1 | `x = 10` | `In [1]` | $x = 10$ |
-| Thời điểm $t_2$ | Nhấn chạy Cell 3 | `x = x + 5` | `In [2]` | $x = 15$ |
-| Thời điểm $t_3$ | Nhấn lại Cell 3 | `x = x + 5` | `In [3]` | $x = 20$ |
-| Thời điểm $t_4$ | Cuộn lên chạy Cell 2 | `print(x)` | `In [4]` | $x = 20$ (in ra màn hình: 20) |
+Khi gỡ lỗi, hãy lần theo thứ tự thực thi và các lệnh gán trước đó. Đọc từ trên xuống dưới chỉ phản ánh đúng quá trình tính toán khi các ô thực sự đã được chạy theo thứ tự ấy trên một trạng thái khởi đầu xác định.
 
 #### 2. Cạm bẫy biến ma (Ghost Variable Trap)
-Một rủi ro nghiêm trọng khác xảy ra khi người lập trình thử nghiệm mã nguồn nháp:
-1. Bạn tạo một ô cell tạm thời để khai báo biến hỗ trợ: `du_lieu_tam = tai_bang()`.
-2. Bạn chạy ô tiếp theo sử dụng biến đó để vẽ biểu đồ thành công.
-3. Sau khi thấy biểu đồ xuất hiện như ý muốn, bạn cảm thấy ô khai báo tạm thời không còn cần thiết nên bấm nút xóa ô đó khỏi giao diện màn hình.
+Giả sử bạn chạy một ô tạo biến `du_lieu_tam = tai_bang()`, rồi dùng biến đó để vẽ biểu đồ. Sau đó, bạn xóa ô tạo biến khỏi tài liệu. **Xóa ô khỏi notebook không xóa biến đã được tạo trong kernel**, nên các ô còn lại vẫn có thể chạy trong phiên hiện tại.
 
-Tại thời điểm này, biến `du_lieu_tam` vẫn tồn tại nguyên vẹn trong bộ nhớ RAM của hạt nhân hiện tại, do đó mọi ô phía dưới vẫn chạy bình thường mà không hề báo lỗi. Tuy nhiên, khi bạn gửi tệp notebook này cho người khác hoặc đưa vào máy chủ chạy tự động, người nhận mở tệp lên và chạy từ đầu trên một hạt nhân sạch sẽ lập tức gặp lỗi sập chương trình:
+Người nhận notebook sẽ gặp vấn đề khi chạy trên một kernel sạch. Nếu không còn câu lệnh tạo `du_lieu_tam`, lần sử dụng tên đó sẽ báo lỗi:
+
 ```text
 NameError: name 'du_lieu_tam' is not defined
 ```
-Tình huống này giải thích rõ tại sao mã nguồn có thể chạy được trên máy người gửi nhưng lại gãy đổ trên máy người nhận.
 
-> [!IMPORTANT] Kỷ luật sắt về Tính tái lập (Reproducibility)
-> Trước khi nộp bài tập lớn, gửi báo cáo phân tích hoặc đưa mã nguồn vào kho lưu trữ Git, bạn bắt buộc phải thực hiện thao tác kiểm định cuối cùng:
->
-> **Kernel $\to$ Restart Kernel and Run All Cells** *(Khởi động lại Hạt nhân và Chạy toàn bộ các ô)*.
->
-> Thao tác này sẽ hủy tiến trình Python cũ, dọn sạch hoàn toàn bộ nhớ RAM, khởi tạo một tiến trình mới tinh và thực thi tuần tự từ ô đầu tiên đến ô cuối cùng. Nếu toàn bộ cuốn sổ tay chạy thông suốt từ đầu đến cuối mà không phát sinh bất kỳ lỗi nào, đồng thời các chỉ số hiển thị tăng đều đặn `In [1]`, `In [2]`, `In [3]`,..., sản phẩm của bạn mới chính thức đạt chuẩn về tính tái lập khoa học.
+Để phát hiện sự phụ thuộc vào trạng thái cũ, trước khi nộp bài hoặc chia sẻ notebook, hãy dùng thao tác **Restart Kernel and Run All Cells** trong menu quản lý kernel. Thao tác này tạo lại trạng thái tính toán và chạy các ô theo thứ tự tài liệu. Nếu thiếu bước tạo biến, lỗi sẽ xuất hiện thay vì bị trạng thái của phiên trước che khuất. Khả năng tái lập kết quả còn phụ thuộc vào dữ liệu đầu vào, phiên bản thư viện và các nguồn ngẫu nhiên của chương trình.
 
 ---
 
@@ -294,15 +210,18 @@ Quy trình làm việc chuẩn mực của một nhà phân tích khi cộng tá
 
 ---
 
-## 6. Hệ thống Bài tập Thực chiến Lab 1 {#bai-tap}
+## 6. Hệ thống Bài tập Tự luyện {#bai-tap}
 
-Toàn bộ hệ thống bài tập thực hành chuyên sâu và phòng Lab thực chiến của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu thực hành trên dữ liệu thực tế.
+Bài tập củng cố tri thức của bài học này được tích hợp xuyên suốt từng mục lý thuyết trong Notes. Để luyện tập thêm các bài toán thực hành chuyên sâu và làm quen với các tình huống thực tế, bạn có thể tham khảo chuyên trang Bài tập của môn học hoặc chuyển sang tab [**Bài tập**](#bai-tap) ở đầu trang.
 
 ::: tip Chuyển sang Tab Bài tập
-Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở phòng Lab tương tác với 2 hướng tiếp cận (Cơ bản & Nâng cao), phân tích giả thuyết và bộ kiểm chứng tự động `assert`.
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để tra cứu nhanh chuyên trang bài tập của môn học.
 :::
 
 ## 7. Nguồn Tham khảo & Đọc thêm
+
+- [Định dạng tệp notebook và các kiểu đầu ra (Jupyter nbformat)](https://nbformat.readthedocs.io/en/latest/format_description.html).
+- [WebSocket và kênh trao đổi với kernel (Jupyter Server)](https://jupyter-server.readthedocs.io/en/latest/developers/websocket-protocols.html).
 
 - Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics).
 - Tài liệu chính thức về Hạt nhân tương tác: [IPython Architecture and Messaging Protocol](https://ipython.readthedocs.io/en/stable/development/messaging.html).

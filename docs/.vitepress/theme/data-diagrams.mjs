@@ -13,15 +13,29 @@ export const dataDiagrams = {
       { label: '03', title: 'Xử lý dữ liệu bảng', text: 'Pandas · DataFrame · Series' },
       { label: '02', title: 'Mảng đa chiều và đại số tuyến tính', text: 'NumPy · ndarray' },
       { label: '01', title: 'Ngôn ngữ nền tảng', text: 'Python Core · CPython Runtime' }
-    ], caption: 'Đọc từ dưới lên: từ nền tảng ngôn ngữ đến các công cụ ứng dụng.'
+    ], caption: 'Đọc từ dưới lên: Từ nền tảng ngôn ngữ đến các công cụ ứng dụng.'
   },
   jupyter: {
-    title: 'Từ ô mã đến kết quả trong Jupyter',
+    layout: 'exchange', title: 'Ba thành phần phối hợp để chạy một ô mã',
     items: [
-      { title: 'Giao diện trình duyệt · Client', text: 'Nhập mã trong cell và xem kết quả trả về.' },
-      { title: 'Máy chủ Notebook · Server', text: 'Chuyển tiếp yêu cầu thực thi và kết quả giữa trình duyệt với kernel.' },
-      { title: 'IPython Kernel', text: 'Tiến trình Python thực thi mã và lưu trạng thái trong RAM.', code: 'Yêu cầu thực thi → Python → Kết quả trả về' }
-    ], caption: 'Luồng trao đổi đi cả hai chiều. Kênh trình duyệt–máy chủ dùng WebSocket, còn máy chủ–kernel dùng thông điệp ZeroMQ.'
+      { title: 'Giao diện trình duyệt · Client', text: 'Hiển thị ô mã, ghi nhận thao tác chạy và trình bày kết quả. Giao diện này không trực tiếp thực thi mã Python.', channel: '↕ WebSocket · Giao diện ↔ Máy chủ' },
+      { title: 'Máy chủ Notebook · Jupyter Server', text: 'Quản lý tệp, phiên làm việc và chuyển tiếp thông điệp giữa giao diện với kernel.', channel: '↕ ZeroMQ · Máy chủ ↔ Kernel' },
+      { title: 'Hạt nhân tính toán · IPython Kernel', text: 'Thực thi mã Python và duy trì các biến trong RAM. Kernel gửi kết quả hoặc thông báo lỗi về giao diện qua máy chủ.' }
+    ], caption: 'Yêu cầu chạy mã đi từ giao diện xuống kernel. Kết quả đi theo chiều ngược lại. Đây là kiến trúc của Jupyter Notebook trên trình duyệt.'
+  },
+  'notebook-file-formats': {
+    layout: 'compare', title: 'Cùng một phép tính, hai cách lưu trữ',
+    code: 'import math\nx = 16\nprint("Căn bậc hai:", math.sqrt(x))',
+    items: [
+      { label: '.py', title: 'Tệp mã Python', text: 'Nội dung tệp là đoạn mã Python ở trên.',
+        fields: [{ label: 'Kết quả khi chạy', code: 'Căn bậc hai: 4.0', text: 'Dòng này được in ra màn hình. Nó không tự trở thành một phần nội dung tệp .py.' }],
+        lines: ['Tệp lưu các dòng mã và chú thích.', 'Phù hợp để tổ chức mô-đun, thư viện và chương trình chạy tự động.'] },
+      { label: '.ipynb', title: 'Tệp sổ tay JSON', text: 'Ví dụ một ô mã nằm trong danh sách cells của notebook.', fields: [
+        { label: 'source · Mã của ô', text: 'Chứa cùng đoạn mã Python ở trên.' },
+        { label: 'execution_count · Số thứ tự thực thi', code: '1' },
+        { label: 'outputs · Đầu ra được lưu', code: 'Căn bậc hai: 4.0', text: 'Được ghi dưới dạng stream, tên luồng stdout.' }
+      ], lines: ['Notebook còn chứa metadata và phiên bản định dạng nbformat.', 'Có thể lưu cả ô Markdown, bảng và hình ảnh đầu ra.'] }
+    ], caption: 'Đầu ra được lưu trong notebook là kết quả của một lần chạy trước. Nó không thay thế trạng thái biến đang tồn tại trong RAM của kernel.'
   },
   'python-collections': {
     layout: 'compare', title: 'Bốn cấu trúc dữ liệu, bốn cách tổ chức bộ nhớ',

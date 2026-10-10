@@ -48,7 +48,7 @@ onUnmounted(() => {
         </div>
         <button class="study-button" @click="hide">Đóng</button>
       </header>
-      <p>Site miễn phí. Nếu muốn ủng hộ, bạn có thể chuyển khoản theo thông tin dưới đây.</p>
+      <p>Website hoàn toàn miễn phí. Nếu thấy hữu ích, bạn có thể tặng tôi một cốc cà phê theo thông tin dưới đây nhé!</p>
       <img :src="withBase('/donate-qr.png')" alt="Mã QR chuyển khoản Momo" class="coffee-qr-img" />
       <dl>
         <dt>Ngân hàng</dt>

@@ -4,12 +4,12 @@ lecture: bai-02-tap-loi
 topic: mo-hinh-lp
 section: topic
 title: "Những bài toán trở thành LP"
-description: "Ba mô hình của sách trông không tuyến tính nhưng là quy hoạch tuyến tính: Tâm Chebyshev của đa diện với lập luận Cauchy–Schwarz, cực tiểu hàm tuyến tính từng khúc bằng dạng epigraph, và cận chặt cho kỳ vọng khi chỉ biết một phần phân phối, kèm so sánh với bất đẳng thức Markov và Cantelli."
+description: "Ba mô hình bài toán trông có vẻ phi tuyến nhưng thực chất quy về quy hoạch tuyến tính: Tâm Chebyshev của đa diện với lập luận Cauchy–Schwarz, cực tiểu hàm tuyến tính từng khúc bằng dạng epigraph, và cận chặt cho kỳ vọng khi chỉ biết một phần phân phối, kèm so sánh với bất đẳng thức Markov và Cantelli."
 ---
 
-Sức mạnh của quy hoạch tuyến tính không nằm ở chỗ nhiều bài toán được phát biểu sẵn dưới dạng LP, mà ở chỗ rất nhiều bài toán **không trông giống LP chút nào** lại có thể viết thành LP. Tìm hình tròn lớn nhất nằm trong một đa giác là một bài toán hình học về khoảng cách. Cực tiểu một hàm có góc nhọn là một bài toán không khả vi. Tìm xác suất lớn nhất của một biến cố khi chỉ biết vài thông tin về phân phối là một bài toán xác suất. Cả ba đều là LP.
+Sức mạnh của quy hoạch tuyến tính không nằm ở chỗ nhiều bài toán được phát biểu sẵn dưới dạng LP, mà ở chỗ rất nhiều bài toán **không trông giống LP chút nào** lại có thể quy về LP một cách hoàn toàn tự nhiên. Tìm hình tròn lớn nhất nằm trong một đa giác là một bài toán hình học về khoảng cách. Cực tiểu một hàm có góc nhọn là một bài toán không khả vi. Tìm xác suất lớn nhất của một biến cố khi chỉ biết vài thông tin về phân phối là một bài toán xác suất. Cả ba dạng bài này đều chuyển hóa thành LP.
 
-Trang này đi qua ba mô hình ấy, lấy từ mục 4.3.1 của sách. Điều cần học không phải từng công thức, mà là hai thao tác lặp lại trong cả ba: Thay một điều kiện "với mọi" bằng giá trị lớn nhất của nó, và tách một giá trị lớn nhất thành nhiều bất đẳng thức tuyến tính.
+Bài giảng này khảo sát ba mô hình tiêu biểu ấy. Điều quan trọng cần nắm vững không phải là việc ghi nhớ máy móc từng công thức, mà là hai thao tác tư duy cốt lõi lặp lại trong cả ba: Thay một điều kiện "với mọi" bằng giá trị lớn nhất của nó, và tách một giá trị lớn nhất thành nhiều bất đẳng thức tuyến tính.
 
 ## 1. Tâm Chebyshev của một đa diện
 
@@ -38,7 +38,7 @@ $$
 
 Một vô hạn điều kiện, ứng với mọi điểm của hình cầu, đã được thay bằng đúng một bất đẳng thức cho mỗi cạnh. Đây là thao tác thứ nhất của trang này.
 
-Với ví dụ tự đặt, xét ngũ giác cho bởi $x_1 \ge 0$, $x_2 \ge 0$, $x_1 + 2x_2 \le 8$, $3x_1 + x_2 \le 12$ và $-x_1 + x_2 \le 3$, có năm đỉnh $(0, 0)$, $(4, 0)$, $(3.2, 2.4)$, $(\tfrac23, \tfrac{11}{3})$ và $(0, 3)$. Giải LP, ta được tâm $x_c = (r, r)$ với
+Xét ví dụ minh họa: Ngũ giác cho bởi $x_1 \ge 0$, $x_2 \ge 0$, $x_1 + 2x_2 \le 8$, $3x_1 + x_2 \le 12$ và $-x_1 + x_2 \le 3$, có năm đỉnh $(0, 0)$, $(4, 0)$, $(3.2, 2.4)$, $(\tfrac23, \tfrac{11}{3})$ và $(0, 3)$. Giải LP, ta được tâm $x_c = (r, r)$ với
 
 $$
 r = 6 - 2\sqrt5 \approx 1.528 .
@@ -48,7 +48,7 @@ Hình tròn tiếp xúc với ba cạnh $x_1 = 0$, $x_2 = 0$ và $x_1 + 2x_2 = 8
 
 <ChebyshevCenterLab />
 
-Tâm Chebyshev có một ý nghĩa thực tế. Nếu đa diện mô tả những thông số thiết kế chấp nhận được, thì tâm Chebyshev là thiết kế **chịu được sai lệch tốt nhất**: Mọi sai lệch có độ lớn nhỏ hơn $r$ theo bất kỳ hướng nào đều vẫn giữ thiết kế trong vùng chấp nhận được. Điểm này khác trọng tâm diện tích của đa giác. Với ngũ giác trên, trọng tâm ở khoảng $(1.682, 1.501)$, gần cạnh $x_2 = 0$ hơn tâm Chebyshev.
+Tâm Chebyshev có một ý nghĩa thực tế sâu sắc. Nếu đa diện mô tả những thông số thiết kế chấp nhận được, thì tâm Chebyshev là thiết kế **chịu được sai lệch tốt nhất (robust design)**: Mọi sai lệch có độ lớn nhỏ hơn $r$ theo bất kỳ hướng nào đều vẫn giữ thiết kế trong vùng chấp nhận được. Điểm này khác trọng tâm diện tích của đa giác. Với ngũ giác trên, trọng tâm ở khoảng $(1.682, 1.501)$, gần cạnh $x_2 = 0$ hơn tâm Chebyshev.
 
 ## 2. Cực tiểu hàm tuyến tính từng khúc
 
@@ -69,19 +69,25 @@ $$
 
 Đây là thao tác thứ hai: "Giá trị lớn nhất không vượt quá $t$" đúng khi và chỉ khi "từng giá trị không vượt quá $t$".
 
-Ví dụ một biến: $f(x) = \max\{-x + 3,\ 0.5x,\ 2x - 5\}$. LP tương ứng là cực tiểu $t$ với $-x + 3 \le t$, $0.5x \le t$, $2x - 5 \le t$. Đường giảm $-x + 3$ và đường tăng chậm $0.5x$ cắt nhau tại $x = 2$ với giá trị 1, còn đường $2x - 5$ chỉ vượt lên trên $0.5x$ khi $x > \tfrac{10}{3}$. Nghiệm là $x^\star = 2$, $t^\star = 1$. Tại nghiệm, hai ràng buộc đầu chặt và ràng buộc thứ ba còn dư. Các bài toán khớp dữ liệu theo chuẩn $\ell_1$ hay $\ell_\infty$ ở Lecture 01 là những trường hợp riêng của mô hình này.
+Ví dụ một biến: Xét hàm $f(x) = \max\{-x + 3,\ 0.5x,\ 2x - 5\}$. LP tương ứng là cực tiểu $t$ với $-x + 3 \le t$, $0.5x \le t$, $2x - 5 \le t$. Đường giảm $-x + 3$ và đường tăng chậm $0.5x$ cắt nhau tại $x = 2$ với giá trị 1, còn đường $2x - 5$ chỉ vượt lên trên $0.5x$ khi $x > \tfrac{10}{3}$. Nghiệm là $x^\star = 2$, $t^\star = 1$. Tại nghiệm, hai ràng buộc đầu chặt và ràng buộc thứ ba còn dư. Các bài toán khớp dữ liệu theo chuẩn $\ell_1$ hay $\ell_\infty$ ở Lecture 01 là những trường hợp riêng của mô hình này.
 
 ## 3. Cận chặt cho kỳ vọng khi chỉ biết một phần phân phối
 
-Đây là ví dụ đáng ngạc nhiên nhất. Giả sử một biến ngẫu nhiên $x$ chỉ nhận các giá trị $u_1, \ldots, u_n$ đã biết, nhưng phân phối $p_i = \operatorname{prob}(x = u_i)$ thì chưa biết. Vector $p$ chỉ cần thỏa $p \succeq 0$ và $\mathbf{1}^Tp = 1$. Điểm mấu chốt là mọi kỳ vọng $\mathbb{E}f(x) = \sum_i p_i f(u_i)$ và mọi xác suất $\operatorname{prob}(x \in S) = \sum_{u_i \in S} p_i$ đều là **hàm tuyến tính của $p$**. Vì vậy những hiểu biết có sẵn, chẳng hạn cận trên và cận dưới của một vài kỳ vọng, là những ràng buộc tuyến tính trên $p$. Cận nhỏ nhất và lớn nhất có thể của một kỳ vọng khác là nghiệm của hai LP theo biến $p$.
+Đây là một bài toán rất thú vị trong xác suất thống kê. Giả sử biến ngẫu nhiên $x$ chỉ nhận các giá trị rời rạc $u_1, \ldots, u_n$ đã biết, nhưng phân phối xác suất $p_i = \operatorname{prob}(x = u_i)$ thì chưa biết cụ thể. Vector phân phối $p$ chỉ cần thỏa mãn $p \succeq 0$ và điều kiện chuẩn hóa $\sum_{i=1}^n p_i = p_1 + p_2 + \dots + p_n = 1$. Điểm mấu chốt là mọi kỳ vọng:
 
-Ví dụ tự đặt: $x$ nhận giá trị trong $\{0, 1, 2, 3, 4\}$, và ta chỉ biết $\mathbb{E}x = 1$. Xác suất $\operatorname{prob}(x \ge 3)$ lớn nhất có thể là bao nhiêu? LP cực đại $p_3 + p_4$ với $\sum_k p_k = 1$, $\sum_k k\,p_k = 1$, $p \succeq 0$ cho giá trị $\tfrac13$, đạt tại phân phối dồn $\tfrac23$ khối lượng vào 0 và $\tfrac13$ vào 3. Con số $\tfrac13$ chính là cận của **bất đẳng thức Markov**, $\operatorname{prob}(x \ge 3) \le \tfrac{\mathbb{E}x}{3}$, và LP cho thấy cận ấy không thể cải thiện chỉ với thông tin này.
+$$
+\mathbb{E}[f(x)] = \sum_{i=1}^n p_i f(u_i) = p_1 f(u_1) + \dots + p_n f(u_n)
+$$
 
-Bây giờ biết thêm $\mathbb{E}x^2 = 2$, tức phương sai bằng 1. Thêm một ràng buộc tuyến tính $\sum_k k^2 p_k = 2$, LP cho xác suất lớn nhất là $\tfrac16$, đạt tại phân phối $(\tfrac13, \tfrac12, 0, \tfrac16, 0)$. Bất đẳng thức Cantelli một phía cho cận $\tfrac{\sigma^2}{\sigma^2 + 2^2} = 0.2$, nhưng cận ấy dành cho mọi phân phối trên trục số. Muốn đạt 0.2 cần đặt khối lượng tại điểm 0.5, không thuộc tập giá trị cho phép. Biết thêm rằng $x$ chỉ nhận giá trị nguyên từ 0 tới 4, LP trả về một cận chặt hơn, và đó là cận tốt nhất có thể với thông tin đã có, vì nó đạt được bởi một phân phối cụ thể.
+và mọi xác suất $\operatorname{prob}(x \in S) = \sum_{u_i \in S} p_i$ đều là **hàm tuyến tính của vector xác suất $p$**. Vì vậy những hiểu biết có sẵn, chẳng hạn cận trên và cận dưới của một vài kỳ vọng, là những ràng buộc tuyến tính trên $p$. Cận nhỏ nhất và lớn nhất có thể của một kỳ vọng khác chính là nghiệm của hai bài toán LP theo biến $p$.
+
+Ví dụ: Xét biến ngẫu nhiên $x$ nhận giá trị trong tập rời rạc $\{0, 1, 2, 3, 4\}$, và ta chỉ biết thông tin kỳ vọng $\mathbb{E}[x] = 1$. Xác suất $\operatorname{prob}(x \ge 3)$ lớn nhất có thể là bao nhiêu? LP cực đại $p_3 + p_4$ với các ràng buộc $\sum_{k=0}^4 p_k = 1$, $\sum_{k=0}^4 k\,p_k = 1$, $p \succeq 0$ cho giá trị tối ưu $\tfrac13$, đạt tại phân phối dồn $\tfrac23$ khối lượng vào 0 và $\tfrac13$ vào 3. Con số $\tfrac13$ chính là cận của **bất đẳng thức Markov**, $\operatorname{prob}(x \ge 3) \le \tfrac{\mathbb{E}[x]}{3}$, và LP cho thấy cận ấy là chặt nhất không thể cải thiện nếu chỉ dùng duy nhất thông tin này.
+
+Bây giờ ta biết thêm thông tin bậc hai $\mathbb{E}[x^2] = 2$, nghĩa là phương sai $\operatorname{Var}(x) = \mathbb{E}[x^2] - (\mathbb{E}[x])^2 = 2 - 1 = 1$. Bổ sung thêm một ràng buộc tuyến tính $\sum_{k=0}^4 k^2 p_k = 2$, bài toán LP cho xác suất lớn nhất là $\tfrac16$, đạt tại phân phối $(\tfrac13, \tfrac12, 0, \tfrac16, 0)$. Bất đẳng thức Cantelli một phía cho cận $\tfrac{\sigma^2}{\sigma^2 + 2^2} = 0.2$, nhưng cận ấy dành cho mọi phân phối bất kỳ trên trục số thực. Muốn đạt được 0.2 thì phân phối phải đặt khối lượng tại điểm 0.5, vốn không thuộc tập giá trị rời rạc cho phép. Khi biết thêm $x$ chỉ nhận giá trị nguyên từ 0 tới 4, LP trả về cận chặt hơn, và đó là cận tối ưu tuyệt đối với thông tin đã có, vì nó đạt được bởi một phân phối cụ thể.
 
 ## 4. Lập kế hoạch qua nhiều giai đoạn
 
-Sách còn một ví dụ cho thấy LP xử lý được cả yếu tố thời gian. Một nền kinh tế có $n$ ngành, mức hoạt động của ngành $j$ ở giai đoạn $t$ là $x_j(t) \ge 0$. Hoạt động vừa tiêu thụ vừa sản xuất hàng hóa theo tỉ lệ với mức hoạt động, và lượng tiêu thụ ở giai đoạn sau không được vượt lượng sản xuất ở giai đoạn trước. Hàng hóa dư ra ở mỗi giai đoạn là một biến bù, và mục tiêu là cực đại tổng giá trị chiết khấu của hàng hóa dư. Mọi quan hệ đều tuyến tính, nên toàn bộ kế hoạch qua $N$ giai đoạn là một LP dạng chuẩn. Ý tưởng "biến cho từng thời điểm, ràng buộc nối các thời điểm liền nhau" sẽ trở lại ở Lecture 07, khi so sánh LP với quy hoạch động.
+Trong thực tế tối ưu hóa, mô hình quy hoạch tuyến tính còn xử lý rất tự nhiên yếu tố biến thiên theo thời gian (Dynamic LP). Xét bài toán lập kế hoạch kinh tế đa giai đoạn: Một nền kinh tế có $n$ ngành, mức độ hoạt động của ngành $j$ ở giai đoạn $t$ là $x_j(t) \ge 0$. Hoạt động sản xuất vừa tiêu thụ vừa tạo ra hàng hóa theo tỉ lệ với mức hoạt động, và lượng tiêu thụ ở giai đoạn sau không được vượt lượng sản xuất ở giai đoạn trước. Hàng hóa dư ra ở mỗi giai đoạn là một biến bù, và mục tiêu là cực đại tổng giá trị chiết khấu của hàng hóa dư. Mọi quan hệ giữa các biến đều tuyến tính, nên toàn bộ kế hoạch qua $N$ giai đoạn là một bài toán LP dạng chuẩn. Ý tưởng "biến cho từng thời điểm, ràng buộc liên kết các thời điểm liền nhau" sẽ trở lại ở Lecture 07, khi so sánh LP với quy hoạch động.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -161,7 +167,6 @@ Nhiều bài toán không trông giống LP lại là LP nhờ hai thao tác. Th
 
 Tâm Chebyshev là điểm sâu nhất của đa diện và là nghiệm của một LP. Cực tiểu một hàm lồi tuyến tính từng khúc là LP, nhưng cực đại nó thì không. Khi phân phối của một biến ngẫu nhiên hữu hạn chưa biết, mọi kỳ vọng đều tuyến tính theo phân phối, nên cận chặt nhất cho một kỳ vọng từ những thông tin tuyến tính đã có là nghiệm của một LP, và bất đẳng thức Markov là một trường hợp riêng.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.3.1 (tr. 148–151) về bài toán khẩu phần, tâm Chebyshev, lập kế hoạch hoạt động, bất đẳng thức Chebyshev và cực tiểu hàm tuyến tính từng khúc. Tâm Chebyshev còn được bàn ở §8.5.1, bất đẳng thức Chebyshev ở §7.4.1.
-- Ví dụ ngũ giác, mô phỏng, ví dụ hàm tuyến tính từng khúc, ví dụ phân phối trên năm giá trị, so sánh với bất đẳng thức Markov và Cantelli, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

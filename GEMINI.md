@@ -24,6 +24,8 @@ Vui lòng tuân theo hướng dẫn chi tiết tại [AGENTS.md](./AGENTS.md).
 - **Hạn chế dấu chấm phẩy (`;`)**: Trong lời giảng văn xuôi, hạn chế tối đa dấu `;`. Thay thế bằng các từ nối tiếng Việt chuẩn xác (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với...*) hoặc tách thành các câu đơn rõ ràng. Tra cứu tại `references/tu-noi-va-dien-dat.md`.
 - **Tránh dịch máy (`contract` -> "hợp đồng", lạm dụng "lớp")**: Dùng *Quy chuẩn cấu trúc file*, *chuẩn giao tiếp dữ liệu (schema)* thay vì "hợp đồng file/dữ liệu"; dùng *ánh xạ co* (không dùng "ánh xạ hợp đồng"); linh hoạt dùng *họ bài toán*, *dạng bài toán*, *họ hàm*, *tầng mạng* thay vì lạm dụng từ "lớp".
 - **Viết hoa sau dấu hai chấm (`:`)**: Cứ sau dấu `:` trong văn xuôi, tiêu đề, đề mục, danh sách hoặc chú thích hình ảnh/bảng biểu, từ tiếp theo bắt buộc phải viết hoa chữ cái đầu (ví dụ: `Ví dụ: Xét...`, `Lưu ý: Đây là...`, `- **Khái niệm**: Là...`, `Hình 1.1: Đồ thị...`). Tuyệt đối không để chữ cái đầu sau dấu `:` ở dạng chữ thường.
+- **Khái niệm Wiki liên ngành (Cross-Disciplinary Wiki Scope)**: Môn học mặc định ưu tiên tìm kiếm và hiển thị định nghĩa khái niệm trong phạm vi chuyên môn của môn đó. Tuy nhiên, nếu một định luật/khái niệm thuần túy xuất phát từ lĩnh vực khoa học khác (ví dụ: *Định luật Snell* là quang học/vật lý xuất hiện trong bài toán tối ưu của Toán cho AI), cho phép liên kết và hiển thị định nghĩa từ lĩnh vực gốc tương ứng qua fallback scope trong `courseWikiScopes`.
+
 
 ### Lệnh kiểm thử tiêu chuẩn:
 ```sh

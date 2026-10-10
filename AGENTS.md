@@ -101,3 +101,7 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 14. **Triệt tiêu hoàn toàn thanh cuộn & mũi tên scrollbar trên công thức toán (Zero Math Scrollbars & Spinner Arrows)**:
    - Mọi công thức toán học inline (`$...$`) và display (`$$...$$`) trên toàn bộ hệ thống (Notes, Wiki, Slides, Cheatsheets, Popovers, Labs) tuyệt đối không được xuất hiện thanh cuộn ngang/dọc hay các nút mũi tên cuộn của hệ điều hành (`▴▾`).
    - Công thức inline bắt buộc phải có `overflow: visible !important;` và ẩn triệt để thanh cuộn. Thẻ MathML phụ trợ (`mjx-assistive-mml`) phải luôn được ẩn hoàn toàn trên toàn cục dự án để không gây xung đột hiển thị nút mũi tên cuộn trên Windows/Chromium.
+15. **Quy tắc hiển thị khái niệm Wiki liên ngành (Cross-Disciplinary Wiki Scope)**:
+   - Môn học mặc định ưu tiên tìm kiếm và hiển thị định nghĩa khái niệm trong phạm vi chuyên môn của môn đó (ví dụ: Toán học trong môn *Cơ sở toán học cho AI*).
+   - Tuy nhiên, đối với các khái niệm hoặc định luật thuần túy bắt nguồn từ lĩnh vực khoa học khác (ví dụ: *Định luật Snell* là quang học/vật lý xuất hiện trong bài toán tối ưu của Toán cho AI), cho phép liên kết và hiển thị định nghĩa từ lĩnh vực gốc tương ứng thông qua cơ chế fallback scope mở rộng trong `courseWikiScopes` (`docs/.vitepress/wiki-content.mjs`).
+

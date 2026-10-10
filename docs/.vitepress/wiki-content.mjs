@@ -11,7 +11,8 @@ export const wikiGroups = [
   { id:'discrete-math', name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','luong-tu','quy-nap','to-hop','quan-he'] },
   { id:'algorithms', name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
   { id:'mathematics', name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','do-thi-ham-so','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
-  { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood','mau-tong-the','thong-ke-mo-ta','suy-rong-thong-ke','ket-luan-nhan-qua','du-doan-thong-ke'] },
+  { id:'data-analysis', name:'Phân tích & mô tả dữ liệu', ids:['thong-ke-mo-ta','suy-rong-thong-ke','ket-luan-nhan-qua','du-doan-thong-ke','mau-tong-the'] },
+  { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood'] },
   { id:'programming', name:'Python & dữ liệu', ids:['bien-kieu','list','dictionary','ham-lap-trinh','tham-so-lap-trinh','vong-lap','chi-muc','vector-hoa','broadcasting','gia-tri-thieu', ...Object.keys(dataProcessingConcepts)] },
   { id:'physics', name:'Cơ học, nhiệt, điện từ và lượng tử', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song',...physicsConceptIds] },
   { id:'distributed', name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
@@ -19,12 +20,12 @@ export const wikiGroups = [
 
 export const courseWikiScopes = {
   'vat-ly-1':['physics','mathematics','probability'],
-  'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','discrete-math','algorithms'],
-  'xu-ly-du-lieu':['programming','probability','algorithms'],
-  'xac-suat-thong-ke':['probability','mathematics','discrete-math'],
+  'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','data-analysis','discrete-math','algorithms','physics'],
+  'xu-ly-du-lieu':['programming','data-analysis'],
+  'xac-suat-thong-ke':['probability','data-analysis','mathematics','discrete-math'],
   'vat-ly-2':['physics','mathematics'],
   'bieu-dien-tri-thuc':['discrete-math','algorithms','probability'],
-  'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','programming'],
+  'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','data-analysis','programming'],
   dsa:['algorithms','discrete-math','programming'],
   'discrete-math':['discrete-math','algorithms']
 }

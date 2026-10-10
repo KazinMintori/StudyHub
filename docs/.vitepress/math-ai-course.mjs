@@ -81,7 +81,7 @@ const prerequisites = [
 ]
 const supportingConcepts = [
   ['tham-so-toan-hoc','vector','ma-tran','tich-vo-huong','chuan','dao-ham-rieng','quy-tac-chuoi','hessian','ma-tran-psd','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood','binh-phuong-toi-thieu'],
-  ['tham-so-toan-hoc','ham-so','tap-hop','to-hop-loi','tap-loi','ham-loi','chuan','ma-tran','he-phuong-trinh','mien-kha-thi','infimum','epigraph','binh-phuong-toi-thieu','likelihood'],
+  ['tham-so-toan-hoc','ham-so','tap-hop','to-hop-loi','tap-loi','ham-loi','chuan','ma-tran','he-phuong-trinh','mien-kha-thi','infimum','epigraph','binh-phuong-toi-thieu','likelihood','dinh-luat-snell'],
   ['tham-so-toan-hoc','mien-kha-thi','epigraph','he-phuong-trinh','ma-tran','noi-long-toi-uu','infimum','lagrangian'],
   ['tham-so-toan-hoc','mien-kha-thi','infimum','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt','ma-tran'],
   ['tham-so-toan-hoc','chuan','dao-ham','tim-kiem-duong','tu-tuong-hop','mien-kha-thi'],

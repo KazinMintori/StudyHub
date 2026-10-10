@@ -16,7 +16,6 @@ defineEmits(['show-introduction'])
         <nav class="site-introduction-column site-introduction-links" aria-labelledby="footer-about-title">
           <h2 id="footer-about-title">Giới thiệu</h2>
           <a :href="withBase('/guide/')">Hướng dẫn học</a>
-          <a :href="withBase('/guide/contribute.html')">Đóng góp nội dung</a>
           <button @click="$emit('show-introduction')">Xem giới thiệu website</button>
         </nav>
         <nav class="site-introduction-column" aria-labelledby="footer-study-title">
@@ -29,18 +28,17 @@ defineEmits(['show-introduction'])
         </nav>
         <section class="site-introduction-column site-introduction-support" aria-labelledby="footer-support-title">
           <h2 id="footer-support-title">Ủng hộ website</h2>
-          <p>Website miễn phí. Nếu muốn ủng hộ, bạn có thể xem thông tin chuyển khoản tại đây.</p>
+          <p>Website hoàn toàn miễn phí. Nếu thấy hữu ích, bạn có thể tặng tôi một cốc cà phê nhé!</p>
           <button class="coffee-footer-btn" @click="openCoffeeModal"><img :src="withBase('/coffee-logo.svg')" alt="" class="coffee-footer-icon" width="18" height="18" /><span>Buy me a coffee</span></button>
         </section>
       </div>
-      <div class="site-introduction-bottom"><span>UETệ</span><span>Bài giảng · Wiki · Góc học tập</span></div>
     </div>
   </footer>
 </template>
 
 <style scoped>
 .site-introduction { display: block; width: 100%; max-width: none; margin: var(--space-6) 0 0; padding: 0; border-top: 1px solid var(--rule); background: var(--canvas); position: relative; z-index: 10; }
-.site-introduction-inner { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-5); }
+.site-introduction-inner { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6); }
 .site-introduction-columns { display: grid; grid-template-columns: 1.25fr .85fr 1fr 1fr; gap: var(--space-7); }
 .site-introduction-logo { display: block; width: 100%; max-width: 300px; height: auto; margin-bottom: var(--space-5); }
 .site-introduction-brand p, .site-introduction-support p { color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.7; }
@@ -49,7 +47,6 @@ defineEmits(['show-introduction'])
 .site-introduction-column :is(a, button) { display: flex; width: fit-content; max-width: 100%; align-items: center; min-height: 44px; color: var(--ink-2); font-size: var(--fs-ui); text-align: left; }
 .site-introduction-column :is(a, button):hover { color: var(--tim); text-decoration: underline; text-underline-offset: 3px; }
 .site-introduction-support .coffee-footer-btn { color: var(--tim); gap: var(--space-2); margin-top: var(--space-4); }
-.site-introduction-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); border-top: 1px solid var(--rule); margin-top: var(--space-6); padding-top: var(--space-5); font-size: var(--fs-small); color: var(--ink-3); }
 @media (min-width: 960px) {
   :global(.VPContent.has-sidebar ~ .site-introduction) { width: auto; margin-left: var(--vp-sidebar-width); }
   :global(.VPContent.has-sidebar ~ .site-introduction .site-introduction-columns) { gap: var(--space-5); }

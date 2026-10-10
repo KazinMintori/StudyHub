@@ -9,14 +9,14 @@ description: "Hàm tựa lồi định nghĩa qua tập mức dưới, các ví 
 
 Rất nhiều đại lượng ta muốn tối ưu là một tỉ số: Chi phí trên mỗi đơn vị sản phẩm, lợi nhuận trên vốn bỏ ra, khoảng cách tới nơi cần phục vụ so với khoảng cách tới nguồn gây nhiễu. Tỉ số hiếm khi là hàm lồi. Thế nhưng ở nhiều tỉ số, tập các phương án đạt một mức cho trước, chẳng hạn mọi vị trí có tỉ số khoảng cách không quá 0.3, lại là một tập lồi. Những hàm có tính chất này được gọi là **hàm tựa lồi**.
 
-Trang này trả lời hai câu hỏi. Hàm tựa lồi giữ lại được những gì của hàm lồi và mất những gì? Và nếu chỉ biết mọi tập mức dưới đều lồi, ta có giải bài toán một cách đáng tin cậy được không? Câu trả lời cho câu thứ hai là có, bằng một thuật toán rất đơn giản: Thay vì cực tiểu trực tiếp, ta hỏi đi hỏi lại câu "có phương án nào đạt mức $t$ không?" và chia đôi khoảng chứa đáp án sau mỗi câu hỏi.
+Bài giảng này tập trung giải quyết hai câu hỏi nền tảng: Hàm tựa lồi giữ lại được những đặc tính nào của hàm lồi và mất đi những gì? Và nếu chỉ biết mọi tập mức dưới đều lồi, ta có thể tìm nghiệm tối ưu một cách tin cậy và chính xác hay không? Câu trả lời là hoàn toàn có thể, bằng một thuật toán rất trực quan: Thay vì cực tiểu trực tiếp, ta kiểm tra liên tục câu hỏi "có phương án nào đạt mức $t$ không?" và thu hẹp dần khoảng chứa nghiệm bằng phương pháp chia đôi (bisection method).
 
 ## 1. Định nghĩa và ví dụ
 
 Một hàm $f : \mathbb{R}^n \to \mathbb{R}$ là **tựa lồi** nếu miền xác định và mọi tập mức dưới
 
 $$
-S_\alpha = \{x \in \operatorname{dom} f : F(x) \le \alpha\}, \qquad \alpha \in \mathbb{R},
+S_\alpha = \{x \in \operatorname{dom} f : f(x) \le \alpha\}, \qquad \alpha \in \mathbb{R},
 $$
 
 đều là tập lồi. Hàm $f$ là **tựa lõm** nếu $-f$ tựa lồi, tức mọi tập mức trên $\{x : f(x) \ge \alpha\}$ đều lồi, và **tựa tuyến tính** nếu vừa tựa lồi vừa tựa lõm. Mọi hàm lồi đều tựa lồi, vì [tập mức dưới của hàm lồi](../bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md) luôn lồi, nhưng điều ngược lại sai.
@@ -30,7 +30,7 @@ Trên trục số, tập mức dưới lồi nghĩa là một khoảng, nên hà
 - Tích $x_1x_2$ trên $\mathbb{R}^2_+$ không lồi cũng không lõm, nhưng tựa lõm, vì tập $\{x \succeq 0 : x_1x_2 \ge \alpha\}$ với $\alpha > 0$ là vùng nằm trên một nhánh hyperbol, một tập lồi.
 - **Tỉ số khoảng cách** $\|x - a\|_2 / \|x - b\|_2$ tựa lồi trên nửa không gian gồm các điểm gần $a$ hơn $b$. Mục 3 sẽ cho thấy tập mức dưới của nó là những hình cầu.
 
-Tính tựa lồi có một dạng bất đẳng thức Jensen riêng: $f$ tựa lồi khi và chỉ khi miền của nó lồi và
+Tính tựa lồi có một dạng bất đẳng thức Jensen tương ứng: Hàm $f$ tựa lồi khi và chỉ khi miền xác định của nó là tập lồi và
 
 $$
 f(\theta x + (1 - \theta)y) \le \max\{f(x), f(y)\}, \qquad 0 \le \theta \le 1 .

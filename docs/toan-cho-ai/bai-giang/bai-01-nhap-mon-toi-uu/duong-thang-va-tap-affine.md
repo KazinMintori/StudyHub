@@ -21,7 +21,7 @@ $$
 y = \theta x_1 + (1-\theta)\,x_2 .
 $$
 
-Khi $\theta$ chạy trên toàn bộ trục số, điểm $y$ vạch ra đúng đường thẳng đi qua $x_1$ và $x_2$. Hai giá trị đặc biệt có thể kiểm tra ngay: $\theta = 0$ cho $y = x_2$, còn $\theta = 1$ cho $y = x_1$.
+Khi $\theta$ chạy trên toàn bộ trục số, điểm $y$ vạch ra đúng đường thẳng đi qua $x_1$ và $x_2$. Hai giá trị đặc biệt có thể kiểm tra ngay: Với $\theta = 0$, ta có $y = x_2$, còn với $\theta = 1$, ta có $y = x_1$.
 
 Công thức trên đúng nhưng chưa nói được nhiều với người đọc. Hãy gom các số hạng chứa $\theta$ lại:
 
@@ -45,7 +45,7 @@ Với $\theta = \tfrac13$ ta được $y = (2, \tfrac53)$, một điểm trên �
 Điểm $(10, 7)$ có thuộc đường thẳng này không? Từ tọa độ thứ nhất, $1 + 3\theta = 10$ cho $\theta = 3$. Thay $\theta = 3$ vào tọa độ thứ hai được $1 + 2\cdot 3 = 7$, khớp với điểm đã cho. Vậy $(10, 7)$ thuộc đường thẳng và ứng với $\theta = 3$. Làm tương tự với $(5, 4)$: Tọa độ thứ nhất đòi $\theta = \tfrac43$, còn tọa độ thứ hai đòi $\theta = \tfrac32$. Hai đòi hỏi mâu thuẫn nhau, nên $(5, 4)$ không nằm trên đường thẳng.
 :::
 
-Mô phỏng dưới đây tái hiện ý của Hình 2.1 trong sách (tr. 22) với hai điểm vừa dùng. Bạn có thể kéo $x_1$, $x_2$ hoặc trượt $\theta$. Hãy chú ý các vạch nhỏ ghi giá trị $\theta$ dọc theo đường thẳng: Chúng cách đều nhau, đúng như cách đọc "$\theta$ là tỉ lệ quãng đường".
+Hình minh họa tương tác dưới đây mô phỏng trực quan mối quan hệ giữa hai điểm và đường thẳng đi qua chúng với hai điểm vừa dùng. Bạn có thể kéo $x_1$, $x_2$ hoặc trượt $\theta$. Hãy chú ý các vạch nhỏ ghi giá trị $\theta$ dọc theo đường thẳng: Chúng cách đều nhau, đúng như cách đọc "$\theta$ là tỉ lệ quãng đường".
 
 <AffineLab type="line" />
 
@@ -122,7 +122,7 @@ Hãy kéo điểm màu vàng trong mô phỏng sau. Khi điểm đi qua một c�
 
 <AffineLab type="combination" />
 
-Tọa độ trọng tâm có mặt cả ngoài sách toán. Trong đồ họa máy tính, khi tô màu bên trong một tam giác mà ba đỉnh có ba màu khác nhau, máy tính tính màu của mỗi điểm ảnh bằng tổ hợp ba màu ở đỉnh với chính các hệ số $\theta_1, \theta_2, \theta_3$. Điểm ảnh nằm trong tam giác thì mọi hệ số đều không âm, nên màu thu được là một "pha trộn" thực sự của ba màu.
+Tọa độ trọng tâm đóng vai trò đặc biệt quan trọng trong khoa học máy tính và kỹ thuật đồ họa. Khi tô màu bên trong một tam giác mà ba đỉnh mang ba màu khác nhau (chẳng hạn Red, Green, Blue), bộ xử lý đồ họa (GPU) tính toán màu sắc tại mỗi điểm ảnh nội suy bằng tổ hợp ba màu ở đỉnh với chính các hệ số trọng tâm $\theta_1, \theta_2, \theta_3$. Điểm ảnh nằm bên trong tam giác khi và chỉ khi mọi hệ số đều không âm, tạo nên sự pha trộn màu sắc mượt mà và tự nhiên.
 
 ## 4. Vì sao điều kiện lại là tổng bằng 1?
 
@@ -156,7 +156,7 @@ Ngành hình học chỉ quan tâm tới những gì không đổi khi dời g�
 
 ## 5. Mỗi tập affine là một không gian con được tịnh tiến
 
-Ta đã thấy vài ví dụ tập affine: Điểm, đường thẳng, mặt phẳng, toàn không gian. Danh sách đó gợi ý rằng tập affine luôn "phẳng". Kết quả sau đây biến cảm giác ấy thành một mô tả chính xác.
+Ta đã thấy vài ví dụ tập affine: Điểm, đường thẳng, mặt phẳng, toàn không gian. Những ví dụ trên cho thấy tập affine luôn mang hình thái "phẳng". Kết quả sau đây biến cảm nhận trực quan ấy thành một mô tả toán học chính xác.
 
 Nhắc lại, một **không gian con** $V \subseteq \mathbb{R}^n$ là tập khép kín với phép cộng và phép nhân với số: Nếu $v_1, v_2 \in V$ và $\alpha, \beta \in \mathbb{R}$ thì $\alpha v_1 + \beta v_2 \in V$. Đặc biệt, mọi không gian con khác rỗng đều chứa vector $0$.
 
@@ -178,7 +178,7 @@ Ba hệ số $\alpha$, $\beta$ và $1 - \alpha - \beta$ cộng lại bằng 1, n
 
 Mẹo trong chứng minh đáng để ý: Số hạng $(1 - \alpha - \beta)x_0$ được thêm vào chỉ để "bù" cho tổng hệ số trở về 1. Đây là một cách dùng điều kiện tổng bằng 1 mà bạn sẽ gặp lại khi làm việc với tập lồi.
 
-Còn một chi tiết sách nói nhưng không chứng minh: Không gian con $V$ không phụ thuộc vào việc chọn $x_0$. Lý do khá ngắn. Nếu chọn một điểm khác $x_0' \in C$, thì $x_0' - x_0 = u$ là một vector thuộc $V$, và
+Ta cần làm rõ một đặc tính căn bản: Không gian con $V$ hoàn toàn độc lập với việc lựa chọn điểm mốc $x_0 \in C$. Thật vậy, nếu chọn một điểm mốc khác $x_0' \in C$, thì $x_0' - x_0 = u$ là một vector thuộc $V$, và
 
 $$
 C - x_0' = (C - x_0) - u = V - u = V,
@@ -205,7 +205,7 @@ Không gian con gắn với $C$ là **không gian nghiệm** (null space) của 
 Chiều ngược lại cũng đúng, dù ta không chứng minh chi tiết ở đây: **Mọi tập affine khác rỗng trong $\mathbb{R}^n$ đều là tập nghiệm của một hệ phương trình tuyến tính**. Ý chính như sau. Viết $C = x_0 + V$, chọn một cơ sở $a_1, \ldots, a_m$ của phần bù trực giao $V^{\perp}$ và lấy chúng làm các hàng của $A$, rồi đặt $b = Ax_0$. Khi đó $Ax = b$ đúng khi và chỉ khi $x - x_0$ vuông góc với mọi $a_i$, tức là $x - x_0 \in V$. Như vậy "tập affine" và "tập nghiệm của hệ tuyến tính" là hai cách gọi của cùng một loại đối tượng: Cách thứ nhất nhìn từ hình học, cách thứ hai nhìn từ đại số.
 
 ::: example Một mặt phẳng trong không gian ba chiều
-Xét phương trình $x_1 + 2x_2 + 3x_3 = 6$ trong $\mathbb{R}^3$. Điểm $x_0 = (1, 1, 1)$ là một nghiệm vì $1 + 2 + 3 = 6$. Hệ thuần nhất $x_1 + 2x_2 + 3x_3 = 0$ có không gian nghiệm hai chiều, sinh bởi $(-2, 1, 0)$ và $(-3, 0, 1)$. Bạn có thể kiểm tra từng vector: $-2 + 2 + 0 = 0$ và $-3 + 0 + 3 = 0$. Vì vậy
+Xét phương trình $x_1 + 2x_2 + 3x_3 = 6$ trong $\mathbb{R}^3$. Điểm $x_0 = (1, 1, 1)$ là một nghiệm vì $1 + 2 + 3 = 6$. Hệ thuần nhất $x_1 + 2x_2 + 3x_3 = 0$ có không gian nghiệm hai chiều, sinh bởi $(-2, 1, 0)$ và $(-3, 0, 1)$. Bạn có thể kiểm tra từng vector: Ta thấy $-2 + 2 + 0 = 0$ và $-3 + 0 + 3 = 0$. Vì vậy
 
 $$
 C = \{(1,1,1) + s(-2,1,0) + t(-3,0,1) : S, t \in \mathbb{R}\}.
@@ -332,7 +332,7 @@ Tìm $\theta$ từ một tọa độ rồi kiểm tra hai tọa độ còn lại
 :::
 
 ::: solution
-Vector chỉ hướng là $x_1 - x_2 = (2, -2, 2)$, nên mọi điểm có dạng $(2\theta,\ 1 - 2\theta,\ 1 + 2\theta)$. Tọa độ đầu cho $2\theta = 5$, tức $\theta = \tfrac52$. Kiểm tra: $1 - 2\cdot\tfrac52 = -4$ và $1 + 2\cdot\tfrac52 = 6$, khớp cả hai. Vậy điểm thuộc đường thẳng với $\theta = \tfrac52 > 1$, tức là nằm trên phần kéo dài, phía trước $x_1$ khi đi từ $x_2$ sang $x_1$.
+Vector chỉ hướng là $x_1 - x_2 = (2, -2, 2)$, nên mọi điểm có dạng $(2\theta,\ 1 - 2\theta,\ 1 + 2\theta)$. Tọa độ đầu cho $2\theta = 5$, tức $\theta = \tfrac52$. Kiểm tra: Ta thấy $1 - 2\cdot\tfrac52 = -4$ và $1 + 2\cdot\tfrac52 = 6$, khớp cả hai. Vậy điểm thuộc đường thẳng với $\theta = \tfrac52 > 1$, tức là nằm trên phần kéo dài, phía trước $x_1$ khi đi từ $x_2$ sang $x_1$.
 :::
 
 ::: exercise 2. Tập nghiệm và số chiều
@@ -344,7 +344,7 @@ Cho $A = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix}$ và $b = 
 :::
 
 ::: exercise 3. Kiểm tra tập affine qua các đường thẳng
-Chứng minh rằng một tập $C$ là affine khi và chỉ khi giao của $C$ với mọi đường thẳng là một tập affine. (Bài 2.2 trong sách, phần thứ hai.)
+Chứng minh rằng một tập $C$ là affine khi và chỉ khi giao của $C$ với mọi đường thẳng là một tập affine.
 :::
 
 ::: hint
@@ -381,10 +381,10 @@ Một đường thẳng qua hai điểm $x_1, x_2$ trong không gian bất kỳ 
 
 Điều kiện "tổng hệ số bằng 1" là điều kiện để một phép trộn các điểm không phụ thuộc vào gốc tọa độ, vì vậy tổ hợp affine mang nghĩa hình học thật sự. Mỗi tập affine khác rỗng là một không gian con được tịnh tiến, và đó cũng chính là tập nghiệm của một hệ phương trình tuyến tính $Ax = b$, với không gian con đi kèm là $\mathcal{N}(A)$. Bao affine là tập affine nhỏ nhất chứa một tập cho trước. Hàm affine giữ nguyên tổ hợp affine, và "tầng tuyến tính" trong học sâu thực ra là một hàm affine.
 
-Sau trang này, bạn có thể tham số hóa đường thẳng và đoạn thẳng trong $\mathbb{R}^n$, và kiểm tra một tập có affine hay không bằng một phản ví dụ cụ thể. Bạn cũng mô tả được tập nghiệm của một hệ tuyến tính bằng nghiệm riêng cộng không gian nghiệm thuần nhất, và giải thích được vì sao một mô hình có nhiều tham số hơn dữ liệu có vô số nghiệm khớp dữ liệu.
+Sau bài học này, bạn có thể tham số hóa đường thẳng và đoạn thẳng trong $\mathbb{R}^n$, và kiểm tra một tập có affine hay không bằng một phản ví dụ cụ thể. Bạn cũng mô tả được tập nghiệm của một hệ tuyến tính bằng nghiệm riêng cộng không gian nghiệm thuần nhất, và giải thích được vì sao một mô hình có nhiều tham số hơn dữ liệu có vô số nghiệm khớp dữ liệu.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, Cambridge University Press, 2004, §2.1.1–2.1.2 (tr. 21–23), Ví dụ 2.1 và Bài tập 2.2. Hình mô phỏng đầu trang tái hiện ý của Hình 2.1 (tr. 22) bằng dữ liệu tự chọn.
-- Chứng minh không gian con đi kèm không phụ thuộc vào điểm chọn, ví dụ tọa độ trọng tâm, ví dụ dời gốc tọa độ, ví dụ hồi quy thiếu dữ liệu và các bài tập 1, 2, 4, 5 do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
-- I. J. Goodfellow, O. Vinyals, A. M. Saxe, [*Qualitatively characterizing neural network optimization problems*](https://arxiv.org/abs/1412.6544), ICLR 2015. J. Frankle, [*Revisiting "Qualitatively Characterizing Neural Network Optimization Problems"*](https://arxiv.org/abs/2012.06898), 2020. Hai bài này chỉ được nhắc tới như ví dụ về việc khảo sát hàm mất mát dọc một đoạn thẳng trong không gian tham số.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- I. J. Goodfellow, O. Vinyals, A. M. Saxe, [*Qualitatively characterizing neural network optimization problems*](https://arxiv.org/abs/1412.6544), ICLR 2015.
+- J. Frankle, [*Revisiting "Qualitatively Characterizing Neural Network Optimization Problems"*](https://arxiv.org/abs/2012.06898), 2020.

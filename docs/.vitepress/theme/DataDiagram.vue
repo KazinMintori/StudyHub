@@ -7,11 +7,12 @@ const diagram = computed(() => dataDiagrams[props.name])
 </script>
 
 <template>
-  <figure v-if="diagram" class="data-diagram" :class="`data-diagram--${diagram.layout || 'flow'}`">
+  <figure v-if="diagram" class="data-diagram" :class="[`data-diagram--${diagram.layout || 'flow'}`, `data-diagram--${name}`]">
     <figcaption class="data-diagram__heading">{{ diagram.title }}</figcaption>
+    <code v-if="diagram.code" class="data-diagram__code data-diagram__shared-code">{{ diagram.code }}</code>
 
     <template v-if="diagram.layout === 'effort'">
-      <div class="data-diagram__ratio" role="img" aria-label="Minh họa tỷ lệ thời gian: xử lý dữ liệu khoảng 80%, mô hình khoảng 20%.">
+      <div class="data-diagram__ratio" role="img" aria-label="Minh họa tỷ lệ thời gian: Xử lý dữ liệu khoảng 80%, mô hình khoảng 20%.">
         <span>≈ 80%</span><span>≈ 20%</span>
       </div>
       <div class="data-diagram__effort">
@@ -38,9 +39,16 @@ const diagram = computed(() => dataDiagrams[props.name])
         </div>
         <code v-if="item.code" class="data-diagram__code">{{ item.code }}</code>
         <p v-if="item.text" class="data-diagram__text">{{ item.text }}</p>
+        <dl v-if="item.fields" class="data-diagram__fields">
+          <div v-for="field in item.fields" :key="field.label">
+            <dt>{{ field.label }}</dt>
+            <dd><code v-if="field.code" class="data-diagram__code">{{ field.code }}</code><span v-if="field.text">{{ field.text }}</span></dd>
+          </div>
+        </dl>
         <ul v-if="item.lines" class="data-diagram__lines">
           <li v-for="line in item.lines" :key="line">{{ line }}</li>
         </ul>
+        <div v-if="item.channel" class="data-diagram__channel">{{ item.channel }}</div>
         <table v-if="item.rows" class="data-diagram__table">
           <thead><tr><th v-for="column in item.columns" :key="column" scope="col">{{ column }}</th></tr></thead>
           <tbody><tr v-for="(row, r) in item.rows" :key="r"><td v-for="(value, c) in row" :key="c" :data-label="item.columns[c]">{{ value }}</td></tr></tbody>
@@ -94,10 +102,20 @@ const diagram = computed(() => dataDiagrams[props.name])
 .data-diagram--compare .data-diagram__items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
 .data-diagram__card { position: relative; min-width: 0; padding: var(--space-4); border: 1px solid var(--rule); border-left: 3px solid var(--diagram-accent); border-radius: var(--radius); background: var(--diagram-soft); }
 .data-diagram--flow .data-diagram__card + .data-diagram__card::before { content: '↓'; position: absolute; top: -27px; left: 24px; color: var(--ink-3); line-height: 24px; }
+.data-diagram--exchange .data-diagram__card + .data-diagram__card::before { content: '↕'; position: absolute; top: -27px; left: 24px; color: var(--ink-3); line-height: 24px; }
+.data-diagram__channel { margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--rule); color: var(--diagram-accent); font-weight: 600; }
+.data-diagram .data-diagram__fields { margin: var(--space-3) 0 0; }
+.data-diagram__fields > div + div { margin-top: var(--space-3); }
+.data-diagram__fields dt { color: var(--diagram-accent); font-weight: 600; }
+.data-diagram__fields dd { margin: var(--space-1) 0 0; }
+.data-diagram--jupyter, .data-diagram--notebook-file-formats { padding: var(--space-4) 0; border: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); border-radius: 0; }
+.data-diagram--jupyter .data-diagram__number { display: none; }
+.data-diagram--notebook-file-formats .data-diagram__items { align-items: start; }
 .data-diagram__card-heading { display: flex; align-items: baseline; gap: var(--space-3); color: var(--diagram-accent); }
 .data-diagram__number { flex-shrink: 0; font: 600 var(--fs-meta)/1.5 var(--font-ui); }
 .data-diagram__card-heading strong { font-weight: 600; overflow-wrap: anywhere; }
 .data-diagram .data-diagram__code { display: block; margin-top: var(--space-2); padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); background: var(--paper); color: var(--ink); font: var(--fs-small)/1.7 var(--font-code); white-space: pre-wrap; overflow-wrap: anywhere; }
+.data-diagram .data-diagram__shared-code { margin: 0 0 var(--space-4); padding: var(--space-4); border: 1px solid var(--rule); background: var(--canvas); }
 .data-diagram .data-diagram__text { margin: var(--space-2) 0 0; font: inherit; }
 .data-diagram .data-diagram__lines { margin: var(--space-2) 0 0; padding-left: var(--space-4); font: inherit; }
 .data-diagram .data-diagram__lines li { margin: var(--space-1) 0; }

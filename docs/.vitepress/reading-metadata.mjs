@@ -37,12 +37,12 @@ export const readingMetadata = {
     "minutes": 15
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu": {
-    "words": 4268,
-    "minutes": 28
+    "words": 5829,
+    "minutes": 39
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
-    "words": 4554,
-    "minutes": 30
+    "words": 4685,
+    "minutes": 31
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine": {
     "words": 6877,
@@ -225,8 +225,8 @@ export const readingMetadata = {
     "minutes": 5
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
-    "words": 4710,
-    "minutes": 25
+    "words": 4131,
+    "minutes": 20
   },
   "xu-ly-du-lieu/bai-02-python-co-ban": {
     "words": 2115,

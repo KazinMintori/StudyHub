@@ -7,9 +7,9 @@ title: "Quy hoạch hình học"
 description: "Monomial và posynomial cùng các phép toán khép kín, quy hoạch hình học dạng chuẩn và các mở rộng, phép đổi biến logarit đưa GP về dạng lồi qua log-sum-exp, ví dụ thiết kế áp phích có lề, cân bằng ma trận theo chuẩn Frobenius và bài toán bán kính phổ Perron–Frobenius."
 ---
 
-Có những bài toán không lồi trong biến gốc của chúng, nhưng trở thành lồi khi ta đo mọi đại lượng theo **thang logarit**. Quy hoạch hình học (geometric program, GP) là lớp bài toán quan trọng nhất thuộc loại này. Nó xuất hiện tự nhiên trong thiết kế kỹ thuật, nơi các đại lượng như kích thước, công suất, thời gian trễ thường dương và liên hệ với nhau qua những tích và lũy thừa.
+Có những bài toán không lồi trong biến gốc của chúng, nhưng trở thành lồi khi ta đo mọi đại lượng theo **thang logarit**. Quy hoạch hình học (geometric program, GP) là họ bài toán quan trọng nhất thuộc loại này. Nó xuất hiện tự nhiên trong thiết kế kỹ thuật, nơi các đại lượng như kích thước, công suất, thời gian trễ thường dương và liên hệ với nhau qua những tích và lũy thừa.
 
-Trang này định nghĩa các khối dựng của GP, cho thấy phép đổi biến $y = \log x$ biến GP thành một bài toán lồi, và làm hai ví dụ: Thiết kế một tấm áp phích có lề, và cân bằng một ma trận.
+Bài giảng này thiết lập nền tảng lý thuyết cho GP: Khái niệm monomial, posynomial, phép đổi biến logarit $y = \log x$ để chuyển hóa GP về bài toán lồi chuẩn tắc, cùng hai ứng dụng thực tế tiêu biểu là thiết kế tối ưu kích thước và cân bằng ma trận.
 
 ## 1. Monomial và posynomial
 
@@ -19,7 +19,7 @@ $$
 f(x) = c\,x_1^{a_1}x_2^{a_2}\cdots x_n^{a_n}, \qquad c > 0,\ a_i \in \mathbb{R},
 $$
 
-được gọi là một **monomial**. Số mũ có thể là số thực bất kỳ, kể cả phân số hay số âm, nhưng hệ số $c$ phải dương. Đây là chỗ khác với nghĩa của chữ "đơn thức" trong đại số, nơi số mũ phải là số nguyên không âm, và sách lưu ý điều đó. Một tổng hữu hạn các monomial,
+được gọi là một **monomial**. Số mũ có thể là số thực bất kỳ, kể cả phân số hay số âm, nhưng hệ số $c$ phải dương. Đây là điểm khác với khái niệm "đơn thức" trong đại số cổ điển, nơi số mũ phải là số nguyên không âm. Cần đặc biệt chú ý quy ước mở rộng này. Một tổng hữu hạn các monomial,
 
 $$
 f(x) = \sum_{k=1}^K c_k\,x_1^{a_{1k}}x_2^{a_{2k}}\cdots x_n^{a_{nk}}, \qquad c_k > 0,
@@ -27,7 +27,7 @@ $$
 
 được gọi là một **posynomial**. Chẳng hạn $3x_1^{0.5}x_2^{-1}$ là monomial, $x_1 + 2x_1x_2 + x_2^{-1}$ là posynomial, còn $x_1 - x_2$ không phải posynomial vì có hệ số âm.
 
-Các phép toán khép kín là điều làm hai lớp hàm này dễ dùng. Tổng, tích và tích với hằng số dương của các posynomial là posynomial. Tích và thương của các monomial là monomial. Chia một posynomial cho một monomial được một posynomial. Chẳng hạn $(x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2$ là posynomial, và $(x_1 + x_2)/(x_1x_2) = x_2^{-1} + x_1^{-1}$ cũng vậy.
+Các phép toán khép kín là điều làm hai họ hàm này rất linh hoạt trong ứng dụng. Tổng, tích và tích với hằng số dương của các posynomial là posynomial. Tích và thương của các monomial là monomial. Chia một posynomial cho một monomial được một posynomial. Chẳng hạn $(x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2$ là posynomial, và $(x_1 + x_2)/(x_1x_2) = x_2^{-1} + x_1^{-1}$ cũng vậy.
 
 ## 2. Quy hoạch hình học
 
@@ -43,7 +43,7 @@ $$
 
 với $f_0, \ldots, f_m$ là posynomial và $h_1, \ldots, h_p$ là monomial. Miền của bài toán là $\mathbb{R}^n_{++}$, nên điều kiện $x \succ 0$ luôn được ngầm hiểu.
 
-Nhiều ràng buộc trông khác dạng chuẩn vẫn đưa về được nhờ các phép toán khép kín. Ràng buộc "posynomial $\le$ monomial", $f(x) \le h(x)$, viết thành $f(x)/h(x) \le 1$. Ràng buộc "monomial $=$ monomial" viết thành thương của chúng bằng 1. Cực đại một monomial tương đương cực tiểu nghịch đảo của nó, cũng là một monomial. Sách cho một ví dụ: Bài toán cực đại $x/y$ với $2 \le x \le 3$, $x^2 + 3y/z \le \sqrt y$ và $x/y = z^2$ đưa được về GP dạng chuẩn
+Nhiều ràng buộc trông khác dạng chuẩn vẫn đưa về được nhờ các phép toán khép kín. Ràng buộc "posynomial $\le$ monomial", $f(x) \le h(x)$, viết thành $f(x)/h(x) \le 1$. Ràng buộc "monomial $=$ monomial" viết thành thương của chúng bằng 1. Cực đại một monomial tương đương cực tiểu nghịch đảo của nó, cũng là một monomial. Xét ví dụ biến đổi: Bài toán cực đại $x/y$ với $2 \le x \le 3$, $x^2 + 3y/z \le \sqrt y$ và $x/y = z^2$ đưa được về GP dạng chuẩn
 
 $$
 \begin{aligned}
@@ -82,7 +82,7 @@ Nếu mọi posynomial trong GP chỉ có một số hạng, tức đều là mo
 
 ## 4. Ví dụ: Thiết kế một tấm áp phích
 
-Ví dụ tự đặt. Một tấm áp phích cần phần chữ có diện tích ít nhất $600\ \text{cm}^2$, với lề trái và lề phải mỗi bên 2 cm, lề trên và lề dưới mỗi bên 3 cm. Gọi $w, h$ là chiều rộng và chiều cao của phần chữ. Ta muốn tốn ít giấy nhất:
+Ví dụ thiết kế: Một tấm áp phích cần phần chữ có diện tích ít nhất $600\ \text{cm}^2$, với lề trái và lề phải mỗi bên 2 cm, lề trên và lề dưới mỗi bên 3 cm. Gọi $w, h$ là chiều rộng và chiều cao của phần chữ. Ta muốn tối ưu hóa kích thước để tốn ít diện tích giấy nhất:
 
 $$
 \text{minimize}\quad (w + 4)(h + 6) \qquad \text{subject to}\quad wh \ge 600 .
@@ -94,7 +94,7 @@ Nghiệm có thể tìm tay. Tại nghiệm, ràng buộc chặt, nên $h = 600/
 
 ## 5. Ví dụ: Cân bằng một ma trận
 
-Sách đưa ra một ví dụ tính toán. Cho ma trận $M \in \mathbb{R}^{n \times n}$, ta muốn đổi thang các tọa độ bằng một ma trận chéo $D = \operatorname{diag}(d)$ với $d \succ 0$, sao cho ma trận mới $DMD^{-1}$ "nhỏ", đo bằng bình phương chuẩn Frobenius
+Xét bài toán điều hòa thang đo (diagonal matrix scaling): Cho ma trận $M \in \mathbb{R}^{n \times n}$, ta muốn đổi thang các tọa độ bằng một ma trận chéo $D = \operatorname{diag}(d)$ với $d \succ 0$, sao cho ma trận mới $DMD^{-1}$ "nhỏ", đo bằng bình phương chuẩn Frobenius
 
 $$
 \|DMD^{-1}\|_F^2 = \sum_{i, j} M_{ij}^2\,\frac{d_i^2}{d_j^2} .
@@ -102,9 +102,9 @@ $$
 
 Đây là một posynomial theo $d$, nên bài toán là một GP không ràng buộc, với các số mũ chỉ là 0, 2 và $-2$. Phép đổi thang này làm các phần tử của ma trận có độ lớn gần nhau hơn, một điều có lợi cho nhiều thuật toán số.
 
-Ví dụ tự đặt với $M = \begin{bmatrix} 1 & 4 \\ 1 & 1 \end{bmatrix}$. Các phần tử chéo không đổi khi đổi thang, nên chỉ cần cực tiểu $16r^2 + r^{-2}$ theo $r = d_1/d_2$. Nghiệm là $r^2 = \tfrac14$, tức $r = \tfrac12$, và ma trận mới là $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$, với hai phần tử ngoài đường chéo bằng nhau. Bình phương chuẩn Frobenius giảm từ 19 xuống 10.
+Ví dụ: Xét ma trận cụ thể $M = \begin{bmatrix} 1 & 4 \\ 1 & 1 \end{bmatrix}$. Các phần tử chéo không đổi khi đổi thang, nên chỉ cần cực tiểu $16r^2 + r^{-2}$ theo $r = d_1/d_2$. Nghiệm là $r^2 = \tfrac14$, tức $r = \tfrac12$, và ma trận mới là $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$, với hai phần tử ngoài đường chéo bằng nhau. Bình phương chuẩn Frobenius giảm từ 19 xuống 10.
 
-Sách còn một ví dụ sâu hơn: Bán kính phổ của một ma trận dương, tức trị riêng Perron–Frobenius, có thể được cực tiểu bằng GP khi các phần tử của ma trận là posynomial của những tham số thiết kế. Sách áp dụng nó cho một mô hình quần thể vi khuẩn, nơi ta chọn nồng độ hai loại thuốc để quần thể suy giảm nhanh nhất.
+Một hướng phát triển sâu sắc là bài toán cực tiểu hóa bán kính phổ của ma trận dương: Trị riêng Perron–Frobenius có thể được cực tiểu hóa bằng GP khi các phần tử ma trận là posynomial của các tham số thiết kế. Mô hình này được áp dụng trực tiếp để tối ưu hóa sự suy giảm của quần thể sinh học hoặc phân bổ liều lượng điều trị trong dược động học.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -176,7 +176,6 @@ Monomial là tích các lũy thừa thực của biến với hệ số dương,
 
 GP xuất hiện trong thiết kế, như bài toán áp phích có nghiệm $w = 20$, $h = 30$ với tỉ lệ cạnh bằng tỉ lệ lề, và trong tính toán, như bài toán cân bằng ma trận theo chuẩn Frobenius. Khi mọi posynomial chỉ có một số hạng, GP dạng lồi là một LP.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.5 (tr. 160–167) về monomial, posynomial, GP dạng chuẩn và các mở rộng, GP dạng lồi, cân bằng ma trận theo chuẩn Frobenius, thiết kế dầm công-xôn và bài toán Perron–Frobenius với mô hình quần thể vi khuẩn.
-- Ví dụ áp phích, mô phỏng, ví dụ cân bằng ma trận cỡ $2 \times 2$, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

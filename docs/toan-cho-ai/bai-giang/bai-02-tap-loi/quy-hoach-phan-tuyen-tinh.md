@@ -7,7 +7,7 @@ title: "Quy hoạch phân tuyến tính"
 description: "Bài toán cực tiểu tỉ số của hai hàm affine trên đa diện, hình học của các tập mức là những tia quay quanh một điểm chung, phép đổi biến đưa bài toán về đúng một LP cùng chứng minh hai chiều và trường hợp z = 0, trực giác tỉ số trung bình và tỉ số biên, bài toán phân tuyến tính tổng quát và mô hình tăng trưởng von Neumann."
 ---
 
-Nhiều quyết định được đánh giá bằng một tỉ số chứ không bằng một tổng: Lợi ích trên chi phí, sản lượng trên vốn, lợi nhuận trên rủi ro. Khi cả tử số lẫn mẫu số đều là hàm affine của biến quyết định, ta có một **quy hoạch phân tuyến tính**. Hàm mục tiêu không lồi, nên thoạt nhìn bài toán có vẻ khó hơn LP. [Chủ đề về hàm tựa lồi](./toi-uu-tua-loi.md) đã cho một cách giải bằng chia đôi. Trang này cho một cách tốt hơn: Một phép đổi biến biến bài toán thành đúng một LP, không cần lặp.
+Nhiều quyết định được đánh giá bằng một tỉ số chứ không bằng một tổng: Lợi ích trên chi phí, sản lượng trên vốn, lợi nhuận trên rủi ro. Khi cả tử số lẫn mẫu số đều là hàm affine của biến quyết định, ta có một **quy hoạch phân tuyến tính** (linear-fractional program). Hàm mục tiêu không lồi, nên thoạt nhìn bài toán có vẻ khó hơn LP. [Chủ đề về hàm tựa lồi](./toi-uu-tua-loi.md) đã cho một cách giải bằng phương pháp chia đôi. Bài giảng này giới thiệu một phương pháp tối ưu hơn: Một phép đổi biến đại số đưa bài toán về đúng một LP duy nhất mà không cần giải lặp.
 
 ## 1. Bài toán
 
@@ -22,13 +22,13 @@ $$
 
 với miền của hàm mục tiêu là $\{x : e^Tx + f > 0\}$. Như đã thấy ở chủ đề trước, hàm phân tuyến tính vừa tựa lồi vừa tựa lõm, nên bài toán là một bài toán tựa lồi, và bài toán cực đại một hàm phân tuyến tính cũng vậy.
 
-Ta dùng một ví dụ tự đặt xuyên suốt trang này. Một xưởng sản xuất hai sản phẩm với lượng $x_1, x_2$. Mỗi đơn vị sản phẩm thứ nhất mang lại lợi ích 1 và tốn chi phí 1, mỗi đơn vị sản phẩm thứ hai mang lại lợi ích 2 và tốn chi phí 0.5, ngoài ra có một lợi ích cố định 2 và một chi phí cố định 1. Xưởng muốn cực đại **tỉ số lợi ích trên chi phí**
+Xét bài toán thực tế sau đây xuyên suốt bài giảng: Một xưởng sản xuất hai sản phẩm với sản lượng $x_1, x_2$. Mỗi đơn vị sản phẩm thứ nhất mang lại lợi ích 1 và tốn chi phí 1, mỗi đơn vị sản phẩm thứ hai mang lại lợi ích 2 và tốn chi phí 0.5, ngoài ra có một lợi ích cố định 2 và một chi phí cố định 1. Xưởng muốn cực đại **tỉ số lợi ích trên chi phí**
 
 $$
 f(x) = \frac{x_1 + 2x_2 + 2}{x_1 + 0.5x_2 + 1},
 $$
 
-với các ràng buộc: Hợp đồng buộc làm ít nhất một đơn vị sản phẩm thứ nhất, $x_1 \ge 1$, sản phẩm thứ hai không âm, tổng công suất $x_1 + x_2 \le 6$, và nguyên liệu cho sản phẩm thứ hai chỉ đủ $x_2 \le 4$. Miền khả thi là tứ giác có bốn đỉnh $(1, 0)$, $(6, 0)$, $(2, 4)$ và $(1, 4)$.
+với các ràng buộc: Ràng buộc yêu cầu sản xuất ít nhất một đơn vị sản phẩm thứ nhất, $x_1 \ge 1$, sản phẩm thứ hai không âm, tổng công suất $x_1 + x_2 \le 6$, và nguyên liệu cho sản phẩm thứ hai chỉ đủ $x_2 \le 4$. Miền khả thi là tứ giác có bốn đỉnh $(1, 0)$, $(6, 0)$, $(2, 4)$ và $(1, 4)$.
 
 ## 2. Hình học: Các tập mức quay quanh một điểm
 
@@ -94,7 +94,7 @@ $$
 
 trên miền mà mọi mẫu số đều dương. Giá trị lớn nhất của các hàm tựa lồi là tựa lồi, nên bài toán vẫn tựa lồi và giải được bằng chia đôi. Với mỗi mức $t$, bài toán khả thi gồm các bất đẳng thức tuyến tính $c_i^Tx + d_i \le t(e_i^Tx + f_i)$, nên mỗi bước chia đôi là một LP khả thi. Lần này phép đổi biến ở mục 4 không còn dùng được, vì mỗi tỉ số có một mẫu số riêng, và không thể chia cho tất cả cùng lúc.
 
-Sách đưa ra một ví dụ kinh tế cho dạng này, **bài toán tăng trưởng von Neumann**. Một nền kinh tế có $n$ ngành, mức hoạt động hiện tại là $x \succ 0$ và ở giai đoạn sau là $x^+$. Hàng hóa tiêu thụ ở giai đoạn sau không được vượt hàng hóa sản xuất ở giai đoạn này, $Bx^+ \preceq Ax$. Tốc độ tăng trưởng của ngành $i$ là $x_i^+/x_i$, và ta muốn cực đại tốc độ tăng trưởng nhỏ nhất trên mọi ngành. Đó là cực đại giá trị nhỏ nhất của các tỉ số, tương đương cực tiểu giá trị lớn nhất của các tỉ số đã đổi dấu $-x_i^+/x_i$, một bài toán phân tuyến tính tổng quát. Sách còn lưu ý rằng bài toán thuần nhất theo $(x, x^+)$, nên điều kiện ẩn $x \succ 0$ có thể thay bằng điều kiện tường minh $x \succeq \mathbf{1}$.
+Một mô hình kinh tế kinh điển thuộc dạng này là **bài toán tăng trưởng von Neumann (von Neumann growth model)**: Một nền kinh tế gồm $n$ ngành sản xuất, mức độ hoạt động hiện tại là $x \succ 0$ và ở giai đoạn tiếp theo là $x^+$. Ràng buộc công nghệ đòi hỏi lượng hàng hóa tiêu thụ không vượt quá sản lượng sản xuất trước đó, $Bx^+ \preceq Ax$. Tốc độ tăng trưởng của từng ngành $i$ được đo bằng tỉ số $x_i^+/x_i$, và mục tiêu là tối đa hóa tốc độ tăng trưởng của ngành kém nhất trong toàn nền kinh tế: $\max \min_{i} (x_i^+/x_i)$. Bài toán này tương đương với cực tiểu giá trị lớn nhất của các tỉ số đã đổi dấu $\max_{i} (-x_i^+/x_i)$, đúng dạng quy hoạch phân tuyến tính tổng quát. Cần chú ý rằng bài toán có tính thuần nhất theo $(x, x^+)$, nên điều kiện ẩn $x \succ 0$ có thể chuẩn hóa thành điều kiện tường minh $x \succeq \mathbf{1}$.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -110,7 +110,7 @@ Mọi điểm $x$ của đa giác là tổ hợp lồi của các đỉnh. Với
 
 <details><summary>Xem lời giải thích</summary>
 
-Ta có $f(x) - 1 = \tfrac{1.5x_2 + 1}{x_1 + 0.5x_2 + 1} > 0$ trên miền, nên $f > 1$ ở mọi điểm khả thi. Mặt khác, dọc tia $(x_1, 0)$ với $x_1 \to \infty$, $f \to 1$. Vậy giá trị nhỏ nhất là 1 nhưng không đạt. LP sau phép đổi biến cho nghiệm $(y_1, y_2, z) = (1, 0, 0)$ với giá trị 1. Thành phần $z = 0$ báo hiệu rằng nghiệm không ứng với một điểm $x$ nào, mà ứng với hướng $y = (1, 0)$, hướng đi ra vô cùng mà dọc theo nó $f$ tiến tới giá trị tối ưu. Đây đúng là trường hợp đặc biệt ở mục 4.
+Ta có $f(x) - 1 = \tfrac{1.5x_2 + 1}{x_1 + 0.5x_2 + 1} > 0$ trên miền, nên $f > 1$ ở mọi điểm khả thi. Mặt khác, dọc tia $(x_1, 0)$ với $x_1 \to \infty$, $f \to 1$. Vậy giá trị nhỏ nhất là 1 nhưng không đạt. LP sau phép đổi biến cho nghiệm $(y_1, y_2, z) = (1, 0, 0)$ với giá trị 1. Thành phần $z = 0$ báo hiệu rằng nghiệm không ứng với một điểm $x$ hữu hạn nào, mà ứng với hướng $y = (1, 0)$, hướng tiến ra vô cực mà dọc theo nó $f$ tiến tới giá trị tối ưu. Đây đúng là trường hợp đặc biệt ở mục 4.
 
 </details>
 
@@ -118,7 +118,7 @@ Ta có $f(x) - 1 = \tfrac{1.5x_2 + 1}{x_1 + 0.5x_2 + 1} > 0$ trên miền, nên 
 
 <details><summary>Xem lời giải thích</summary>
 
-Có, với một chút thay đổi. Với $y = x/(e^Tx + f)$ và $z = 1/(e^Tx + f)$, tử số chia cho mẫu số trở thành $z\,p(y/z)$, với $p(x) = \|x\|_2^2 + 1$. Biểu thức $z\,p(y/z)$ là [phép phối cảnh](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) của $p$, một hàm lồi theo $(y, z)$ với $z > 0$. Vậy bài toán trở thành một bài toán lồi, không còn là LP nhưng vẫn giải trực tiếp được. Ở đây nó cho $\tfrac{\|y\|_2^2}{z} + z$, và đây là lý do bài tập 4.7 của sách gọi các bài toán này là bài toán phân thức lồi–lõm.
+Có, với một chút thay đổi. Với $y = x/(e^Tx + f)$ và $z = 1/(e^Tx + f)$, tử số chia cho mẫu số trở thành $z\,p(y/z)$, với $p(x) = \|x\|_2^2 + 1$. Biểu thức $z\,p(y/z)$ là [phép phối cảnh](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) của $p$, một hàm lồi theo $(y, z)$ với $z > 0$. Vậy bài toán trở thành một bài toán lồi, không còn là LP nhưng vẫn giải trực tiếp được. Ở đây nó cho $\tfrac{\|y\|_2^2}{z} + z$, và đây là dạng tổng quát thường gọi là bài toán phân thức lồi–lõm (convex-concave fractional program).
 
 </details>
 
@@ -126,7 +126,7 @@ Có, với một chút thay đổi. Với $y = x/(e^Tx + f)$ và $z = 1/(e^Tx + 
 
 <details><summary>Xem lời giải thích</summary>
 
-Khi mẫu số tiến tới 0 từ phía dương trong khi tử số dương, tỉ số tăng không giới hạn. Bài toán cực đại khi đó không bị chặn trên, còn bài toán cực tiểu không bị ảnh hưởng nếu tử số giữ dương. Điểm mà mẫu số bằng 0 nằm ngoài miền của hàm mục tiêu, nên giả thiết của sách đòi hỏi tập khả thi phải nằm trong $\{e^Tx + f > 0\}$. Trong thực tế, mô hình nên được viết sao cho mẫu số bị chặn dưới bởi một số dương, chẳng hạn chi phí luôn có một phần cố định, như chi phí cố định 1 trong ví dụ của xưởng.
+Khi mẫu số tiến tới 0 từ phía dương trong khi tử số dương, tỉ số tăng không giới hạn. Bài toán cực đại khi đó không bị chặn trên, còn bài toán cực tiểu không bị ảnh hưởng nếu tử số giữ dương. Điểm mà mẫu số bằng 0 nằm ngoài miền của hàm mục tiêu, nên giả thiết chuẩn mực của bài toán luôn đòi hỏi tập khả thi phải nằm hoàn toàn trong nửa không gian $\{e^Tx + f > 0\}$. Trong thực tế, mô hình nên được thiết lập sao cho mẫu số bị chặn dưới bởi một số dương, chẳng hạn chi phí luôn có một phần cố định, như chi phí cố định 1 trong ví dụ của xưởng.
 
 </details>
 
@@ -153,16 +153,15 @@ Một bộ giải trả về nghiệm $(y_1, y_2, z) = (0.2, 0.6, 0.4)$ cho LP s
 :::
 
 ::: solution
-Trường hợp thứ nhất có $z = 0.4 > 0$, nên $x^\star = y/z = (0.5, 1.5)$. Trường hợp thứ hai có $z = 0$: Không có nghiệm $x^\star$ nào đạt giá trị tối ưu. Giá trị tối ưu chỉ được tiến tới khi đi từ một điểm khả thi ra vô cùng theo hướng $(0.5, 0)$, tức theo hướng trục $x_1$.
+Trường hợp thứ nhất có $z = 0.4 > 0$, nên $x^\star = y/z = (0.5, 1.5)$. Trường hợp thứ hai có $z = 0$: Không có nghiệm $x^\star$ hữu hạn nào đạt giá trị tối ưu. Giá trị tối ưu chỉ được tiệm cận tới khi tiến từ một điểm khả thi ra vô cực theo hướng tia $(0.5, 0)$, tức theo hướng trục $x_1$.
 :::
 
 ## Tóm tắt
 
 Quy hoạch phân tuyến tính cực tiểu hay cực đại một tỉ số của hai hàm affine trên một đa diện. Hàm mục tiêu không lồi nhưng tựa tuyến tính: Mỗi tập mức là một phần siêu phẳng, và trong mặt phẳng là một tia quay quanh điểm chung nơi tử và mẫu cùng bằng 0. Cả giá trị lớn nhất lẫn nhỏ nhất trên một đa diện bị chặn đều đạt tại đỉnh.
 
-Phép đổi biến $y = x/(e^Tx + f)$, $z = 1/(e^Tx + f)$ chuẩn hóa mẫu số về 1 và biến bài toán thành đúng một LP. Từ nghiệm của LP, ta lấy lại $x = y/z$ khi $z > 0$. Khi $z = 0$, nghiệm của LP là một hướng đi ra vô cùng, và giá trị tối ưu của bài toán gốc không đạt. Với giá trị lớn nhất của nhiều tỉ số, phép đổi biến không còn dùng được, nhưng phương pháp chia đôi vẫn giải được bằng một dãy LP khả thi.
+Phép đổi biến $y = x/(e^Tx + f)$, $z = 1/(e^Tx + f)$ chuẩn hóa mẫu số về 1 và biến bài toán thành đúng một LP. Từ nghiệm của LP, ta lấy lại $x = y/z$ khi $z > 0$. Khi $z = 0$, nghiệm của LP chỉ ra một tia tiến ra vô cực, và giá trị tối ưu của bài toán gốc không đạt tại điểm hữu hạn. Với giá trị lớn nhất của nhiều tỉ số, phép đổi biến không còn dùng được, nhưng phương pháp chia đôi vẫn giải được bằng một dãy LP khả thi.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.3.2 (tr. 151–152) về quy hoạch phân tuyến tính, phép đổi biến (4.33) và chứng minh tương đương, bài toán phân tuyến tính tổng quát và Ví dụ 4.7 về tăng trưởng von Neumann. Bài tập 4.7 về bài toán phân thức lồi–lõm.
-- Ví dụ xưởng sản xuất, mô phỏng, trực giác tỉ số trung bình và tỉ số biên, ví dụ miền không bị chặn, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

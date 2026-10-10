@@ -139,7 +139,7 @@ Nhân $P$ với 4 nhân mọi trị riêng với 4, nên mọi bán trục nhân
 
 <details><summary>Xem lời giải thích</summary>
 
-Giao luôn lồi, vì giao của hai tập lồi là lồi. Nhưng nó nói chung không phải ellipsoid. Giao của hai hình tròn bằng nhau cắt nhau là một hình "thấu kính" có hai góc nhọn, mà ellipse thì không có góc. Điều này cho thấy lớp các ellipsoid không khép kín với phép giao, trong khi lớp các tập lồi thì có. Đây là một lý do khiến tối ưu lồi làm việc với "tập lồi" nói chung, chứ không với một họ hình cụ thể.
+Giao luôn lồi, vì giao của hai tập lồi là lồi. Nhưng nó nói chung không phải ellipsoid. Giao của hai hình tròn bằng nhau cắt nhau là một hình "thấu kính" có hai góc nhọn, mà ellipse thì không có góc. Điều này cho thấy họ các ellipsoid không khép kín với phép giao, trong khi họ các tập lồi thì có. Đây là một lý do khiến tối ưu lồi làm việc với "tập lồi" nói chung, chứ không với một họ hình cụ thể.
 
 </details>
 
@@ -158,7 +158,7 @@ Cho ellipsoid $\{x \in \mathbb{R}^2 : (x - x_c)^T P^{-1}(x - x_c) \le 1\}$ với
 :::
 
 ::: solution
-$P$ chéo nên vector riêng là hai trục tọa độ, trị riêng $9$ và $4$, cho bán trục $3$ theo phương ngang và $2$ theo phương đứng. Điều kiện là $\tfrac{(x_1 - 2)^2}{9} + \tfrac{(x_2 - 1)^2}{4} \le 1$. Điểm có hoành độ lớn nhất là đầu bán trục ngang bên phải, $(2 + 3, 1) = (5, 1)$.
+Vì ma trận $P$ có dạng đường chéo nên các vector riêng chính là hai trục tọa độ, trị riêng $9$ và $4$, cho bán trục $3$ theo phương ngang và $2$ theo phương đứng. Điều kiện là $\tfrac{(x_1 - 2)^2}{9} + \tfrac{(x_2 - 1)^2}{4} \le 1$. Điểm có hoành độ lớn nhất là đầu bán trục ngang bên phải, $(2 + 3, 1) = (5, 1)$.
 :::
 
 ::: exercise 2. Từ dạng ảnh sang dạng ràng buộc
@@ -166,11 +166,11 @@ Cho $\mathcal{E} = \{(1, 0) + Au : \|u\|_2 \le 1\}$ với $A = \begin{bmatrix} 2
 :::
 
 ::: hint
-$P = AA^T$. Điểm $(3, 1)$ ứng với $u$ nào?
+Tính $P = AA^T$. Điểm $(3, 1)$ ứng với vector $u$ nào?
 :::
 
 ::: solution
-$P = AA^T = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 4 & 2 \\ 2 & 2 \end{bmatrix}$, có định thức $4 \ne 0$. Với $x = (3, 1)$, $x - x_c = (2, 1) = A u$ cho $2u_1 = 2$ và $u_1 + u_2 = 1$, tức $u = (1, 0)$, một vector đơn vị, nên $x$ nằm trên biên. Đối chiếu bằng dạng thứ nhất: $P^{-1} = \tfrac14 \begin{bmatrix} 2 & -2 \\ -2 & 4 \end{bmatrix}$ và
+Ta có ma trận $P = AA^T = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 4 & 2 \\ 2 & 2 \end{bmatrix}$, có định thức $4 \ne 0$. Với $x = (3, 1)$, $x - x_c = (2, 1) = A u$ cho $2u_1 = 2$ và $u_1 + u_2 = 1$, tức $u = (1, 0)$, một vector đơn vị, nên $x$ nằm trên biên. Đối chiếu bằng dạng thứ nhất: Ma trận nghịch đảo $P^{-1} = \tfrac14 \begin{bmatrix} 2 & -2 \\ -2 & 4 \end{bmatrix}$ và
 
 $$
 (2, 1)\, P^{-1} (2, 1)^T = \tfrac14 (8 - 4 - 4 + 4) = 1.
@@ -191,8 +191,6 @@ Quả cầu Euclid có hai cách viết: Dạng ràng buộc $\|x - x_c\|_2 \le 
 
 Thể tích ellipsoid tỉ lệ với $\sqrt{\det P}$. Đường đồng mức của mật độ Gauss là các ellipsoid xác định bởi ma trận hiệp phương sai, và khoảng cách Mahalanobis đo khoảng cách theo hình dạng đó.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.2 (tr. 29–30), Hình 2.9, các biểu diễn (2.3) và (2.4). Ví dụ 2.12 (tr. 39) về ellipsoid như ảnh và ảnh ngược affine của quả cầu đơn vị. Bài toán ellipsoid thể tích nhỏ nhất ở chương 8.
-- Phân tích phổ của ma trận đối xứng và căn bậc hai đối xứng: Phụ lục A.5 của sách.
-- Ví dụ ellipse nghiêng, phần liên hệ với phân phối Gauss và khoảng cách Mahalanobis, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

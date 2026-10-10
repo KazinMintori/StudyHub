@@ -19,7 +19,7 @@
 .course-list { border-top: 1px solid var(--rule); }
 .course-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-3); margin: 0 calc(-1 * var(--space-3)); border-bottom: 1px solid var(--rule); transition: background var(--motion-fast) var(--ease); }
 .course-row:hover { background: var(--canvas); }
-.course-copy h3 { font-size: var(--fs-h3); line-height: 1.35; font-weight: 600; margin-bottom: var(--space-2); }
+.course-copy h3 { font-size: var(--fs-h3); line-height: 1.35; font-weight: 600; margin: 0; }
 .course-copy p { font-size: var(--fs-ui); color: var(--ink-2); }
 .course-end { flex-shrink: 0; font-size: var(--fs-small); font-variant-numeric: tabular-nums; color: var(--ink-3); }
 .home-tools { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-5); padding-top: var(--space-7); font-size: var(--fs-ui); }

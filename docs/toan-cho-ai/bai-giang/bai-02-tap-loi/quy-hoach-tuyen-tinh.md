@@ -7,7 +7,7 @@ title: "Quy hoạch tuyến tính: Các dạng viết và hình học của nghi
 description: "Dạng tổng quát của quy hoạch tuyến tính, hình học của nghiệm trên đa diện với bốn khả năng có nghiệm duy nhất, có cả một tập nghiệm, không bị chặn và bất khả thi, dạng chuẩn và dạng bất đẳng thức, cách chuyển một LP bất kỳ về dạng chuẩn bằng biến bù và tách biến tự do, cùng vì sao không thể liệt kê đỉnh."
 ---
 
-Quy hoạch tuyến tính là lớp bài toán tối ưu được dùng nhiều nhất trong thực tế, từ lập kế hoạch sản xuất, điều phối vận tải tới phân bổ ngân sách. [Lecture 01](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) đã giới thiệu LP qua một ví dụ hai biến và một chứng nhận tối ưu. Trang này nhìn LP một cách hệ thống hơn: Nó có những dạng viết chuẩn nào, nghiệm của nó nằm ở đâu trên miền khả thi, và vì sao mọi LP đều có thể đưa về cùng một dạng duy nhất.
+Quy hoạch tuyến tính là dạng bài toán tối ưu được ứng dụng rộng rãi nhất trong thực tế, từ lập kế hoạch sản xuất, điều phối vận tải tới phân bổ ngân sách. [Lecture 01](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) đã giới thiệu LP qua một ví dụ hai biến và một chứng nhận tối ưu. Bài giảng này xem xét LP một cách hệ thống và bài bản: Các dạng biểu diễn chuẩn tắc, vị trí nghiệm trên miền khả thi hình học, và bản chất biến đổi giúp đưa mọi bài toán LP về cùng một dạng duy nhất.
 
 ## 1. Dạng tổng quát
 
@@ -100,7 +100,7 @@ Mô hình này linh hoạt hơn vẻ ngoài của nó. Yêu cầu một lượng
 
 ## 6. Vì sao không thể chỉ thử các đỉnh
 
-Nếu nghiệm luôn nằm ở một đỉnh, sao không liệt kê mọi đỉnh rồi chọn đỉnh tốt nhất? Vì số đỉnh có thể lớn khủng khiếp. Hình lập phương $[0, 1]^n$ chỉ cần $2n$ bất đẳng thức để mô tả, nhưng có $2^n$ đỉnh. Với $n = 30$, đó là 60 bất đẳng thức và hơn một tỉ đỉnh. Một đa diện mô tả bằng $m$ bất đẳng thức trong $\mathbb{R}^n$ có thể có tới cỡ $\binom{m}{n}$ đỉnh, vì mỗi đỉnh được xác định bởi $n$ ràng buộc chặt. Các thuật toán thực tế, như phương pháp đơn hình hay phương pháp điểm trong, tránh việc liệt kê này bằng cách đi có định hướng trên đa diện hoặc xuyên qua bên trong nó.
+Nếu nghiệm luôn nằm ở một đỉnh, sao không liệt kê mọi đỉnh rồi chọn đỉnh tốt nhất? Nguyên nhân là số đỉnh có thể bùng nổ theo cấp số nhân. Hình lập phương $[0, 1]^n$ chỉ cần $2n$ bất đẳng thức để mô tả, nhưng có $2^n$ đỉnh. Với $n = 30$, đó là 60 bất đẳng thức và hơn một tỉ đỉnh. Một đa diện mô tả bằng $m$ bất đẳng thức trong $\mathbb{R}^n$ có thể có tới cỡ $\binom{m}{n}$ đỉnh, vì mỗi đỉnh được xác định bởi $n$ ràng buộc chặt. Các thuật toán thực tế, như phương pháp đơn hình hay phương pháp điểm trong, tránh việc liệt kê này bằng cách đi có định hướng trên đa diện hoặc xuyên qua bên trong nó.
 
 ## 7. Những câu hỏi để đào sâu
 
@@ -176,8 +176,7 @@ Quy hoạch tuyến tính cực tiểu một hàm affine trên một đa diện.
 
 Mọi LP đều đưa được về dạng chuẩn $\min c^Tx$ với $Ax = b$, $x \succeq 0$, bằng cách thêm biến bù cho bất đẳng thức và tách mỗi biến tự do thành hiệu của hai biến không âm. Khi đa diện có đỉnh và giá trị tối ưu hữu hạn, luôn có một đỉnh tối ưu, nhưng số đỉnh có thể tăng theo hàm mũ, nên các thuật toán không liệt kê đỉnh mà đi có định hướng.
 
-## Nguồn và đọc thêm
+## Tài liệu tham khảo
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §4.3 (tr. 146–148) về dạng tổng quát, Hình 4.4, dạng chuẩn, dạng bất đẳng thức và cách chuyển dạng. Bài toán khẩu phần ở §4.3.1 (tr. 148).
-- D. Bertsimas, J. N. Tsitsiklis, *Introduction to Linear Optimization*, chương 2, về đỉnh, nghiệm cơ sở và điều kiện để đa diện có đỉnh.
-- Mô phỏng, ví dụ chuyển dạng, ví dụ dải không có đỉnh, ví dụ phân lớp tuyến tính, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- Dimitris Bertsimas, John N. Tsitsiklis, *Introduction to Linear Optimization*, Athena Scientific.
