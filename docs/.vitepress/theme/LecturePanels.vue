@@ -44,6 +44,12 @@ function printCheatsheet() {
   if (typeof window !== 'undefined') window.print()
 }
 
+function scrollToExercise(event) {
+  if (event) event.preventDefault()
+  const el = document.getElementById('bai-tap') || document.querySelector('.main > .vp-doc h2:last-of-type')
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
 onMounted(() => { load(); window.addEventListener('keydown', keyboard) })
 onUnmounted(() => { window.removeEventListener('keydown', keyboard) })
 watch(() => lesson.value?.slug, load)
@@ -159,6 +165,17 @@ watch(() => lesson.value?.slug, load)
           </div>
         </article>
       </section>
+    </section>
+
+    <section v-else-if="part === 'bai-tap'" class="lecture-exercises" aria-label="Bài tập thực hành của bài giảng">
+      <div class="foundations-heading">
+        <h2>Bài tập thực hành & Ôn luyện: {{ lesson.title }}</h2>
+      </div>
+      <p>Hệ thống bài tập củng cố tri thức của bài học. Bạn có thể làm bài tập chi tiết ngay trong bài giảng ở phía dưới, hoặc mở chuyên trang bài tập của toàn bộ môn học.</p>
+      <div class="button-row" style="margin-top: 1rem; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a class="study-button primary" href="#bai-tap" @click="scrollToExercise">Làm bài tập chi tiết ở dưới ↓</a>
+        <a class="study-button" :href="studyLink(`/${course.id}/bai-tap`)">Toàn bộ bài tập của môn học →</a>
+      </div>
     </section>
   </div>
 </template>

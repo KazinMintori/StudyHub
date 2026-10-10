@@ -174,4 +174,167 @@ Thuật toán đẩy các dấu $\sum$ vào sâu nhất có thể, nhóm các t�
 
 ---
 
+## Hệ thống bài tập tự luyện {#bai-tap}
+
+### Bài tập 1: Phân tích tính độc lập có điều kiện bằng nguyên lý d-separation
+**Đề bài:**
+Xét mạng Bayes kinh điển Alarm gồm 5 biến nhị phân:
+- $B$: Đột nhập (Burglary)
+- $E$: Động đất (Earthquake)
+- $A$: Chuông báo động (Alarm) với hai nút cha là $B$ và $E$
+- $J$: John gọi điện báo (JohnCalls) nhận nút cha là $A$
+- $M$: Mary gọi điện báo (MaryCalls) nhận nút cha là $A$
+
+Áp dụng tiêu chuẩn phân tách có hướng (d-separation), hãy xác định các cặp biến sau đây là độc lập hay phụ thuộc:
+1. $B$ và $E$ khi tập chứng cứ là rỗng: $B \perp E \mid \emptyset$?
+2. $B$ và $E$ khi biết chuông báo động reo: $B \perp E \mid \{A\}$?
+3. $J$ và $M$ khi biết chuông báo động reo: $J \perp M \mid \{A\}$?
+4. $J$ và $M$ khi chưa biết gì về chuông: $J \perp M \mid \emptyset$?
+
+**Phân tích & Hướng dẫn giải:**
+1. **Xét $B$ và $E$ khi tập chứng cứ rỗng:**
+   - Đường dẫn duy nhất nối $B$ và $E$ đi qua $A$: $B \to A \leftarrow E$.
+   - Tại nút $A$, đây là cấu trúc va chạm (Collider).
+   - Theo quy tắc d-separation, một cấu trúc va chạm $B \to A \leftarrow E$ sẽ **bị chặn (blocked)** khi cả nút $A$ lẫn mọi con cháu của $A$ đều không nằm trong tập chứng cứ.
+   - Do đó, đường dẫn bị chặn, kết luận: $B \perp E \mid \emptyset$ (hai biến độc lập biên vô điều kiện).
+2. **Xét $B$ và $E$ khi biết chuông báo động reo ($E = \{A\}$):**
+   - Nút va chạm $A$ được quan sát (nằm trong tập chứng cứ).
+   - Việc quan sát nút va chạm làm đường dẫn $B \to A \leftarrow E$ **mở ra (active)**.
+   - Do đó, thông tin có thể truyền qua lại giữa $B$ và $E$.
+   - Kết luận: $B \not\perp E \mid \{A\}$ (hai biến phụ thuộc có điều kiện, hiện tượng giải tỏa nghi vấn Explaining Away).
+3. **Xét $J$ và $M$ khi biết $A$ ($E = \{A\}$):**
+   - Đường dẫn nối $J$ và $M$ là: $J \leftarrow A \to M$.
+   - Đây là cấu trúc nhánh chung (Common Cause) với $A$ là nguyên nhân chung của cả $J$ và $M$.
+   - Khi nút trung gian $A$ được quan sát, đường dẫn nhánh chung bị chặn lại.
+   - Kết luận: $J \perp M \mid \{A\}$ (khi đã biết chắc chuông có reo hay không, việc John gọi không cung cấp thêm thông tin mới về xác suất Mary gọi).
+4. **Xét $J$ và $M$ khi tập chứng cứ rỗng ($E = \emptyset$):**
+   - Trên đường dẫn $J \leftarrow A \to M$, nút trung gian $A$ không được quan sát, nên đường dẫn nhánh chung đang mở.
+   - Kết luận: $J \not\perp M \mid \emptyset$ (nếu nghe tin John gọi điện, xác suất Mary gọi cũng sẽ tăng lên vì nhiều khả năng chuông đã reo).
+
+---
+
+### Bài tập 2: Tính toán xác suất hậu nghiệm bằng thuật toán Khử biến (Variable Elimination)
+**Đề bài:**
+Cho mạng Bayes gồm 3 biến nhị phân $A, B, C$ với cấu trúc chuỗi nhân quả:
+$$
+A \to B \to C
+$$
+Bảng phân phối xác suất ban đầu:
+- $P(A = 1) = 0.2, \quad P(A = 0) = 0.8$
+- $P(B = 1 \mid A = 1) = 0.8$ và $P(B = 1 \mid A = 0) = 0.3$
+- $P(C = 1 \mid B = 1) = 0.9$ và $P(C = 1 \mid B = 0) = 0.1$
+
+Biết rằng ta quan sát được sự kiện $C = 1$. Hãy tính xác suất hậu nghiệm $P(A = 1 \mid C = 1)$.
+
+**Phân tích & Hướng dẫn giải:**
+1. **Thiết lập công thức theo Định lý Bayes:**
+   - Xác suất hậu nghiệm được biểu diễn thông qua phân phối đồng thời và hằng số chuẩn hóa $\alpha$:
+     $$
+     P(A \mid C = 1) = \alpha \sum_{b \in \{0, 1\}} P(A, B = b, C = 1)
+     $$
+     trong đó công thức phân rã mạng Bayes là:
+     $$
+     P(A, B, C) = P(A) \cdot P(B \mid A) \cdot P(C \mid B)
+     $$
+2. **Khử biến ẩn $B$ bằng cách tính nhân tử (Factors):**
+   - **Trường hợp $A = 1$:**
+     $$
+     \begin{aligned}
+     P(A = 1, C = 1) &= \sum_{b \in \{0, 1\}} P(A = 1) \cdot P(B = b \mid A = 1) \cdot P(C = 1 \mid B = b) \\
+     &= P(A = 1) \cdot [P(B = 1 \mid A = 1) P(C = 1 \mid B = 1) + P(B = 0 \mid A = 1) P(C = 1 \mid B = 0)] \\
+     &= 0.2 \cdot [0.8 \times 0.9 + (1 - 0.8) \times 0.1] \\
+     &= 0.2 \cdot [0.72 + 0.2 \times 0.1] \\
+     &= 0.2 \cdot [0.72 + 0.02] = 0.2 \cdot 0.74 = 0.148
+     \end{aligned}
+     $$
+   - **Trường hợp $A = 0$:**
+     $$
+     \begin{aligned}
+     P(A = 0, C = 1) &= \sum_{b \in \{0, 1\}} P(A = 0) \cdot P(B = b \mid A = 0) \cdot P(C = 1 \mid B = b) \\
+     &= P(A = 0) \cdot [P(B = 1 \mid A = 0) P(C = 1 \mid B = 1) + P(B = 0 \mid A = 0) P(C = 1 \mid B = 0)] \\
+     &= 0.8 \cdot [0.3 \times 0.9 + (1 - 0.3) \times 0.1] \\
+     &= 0.8 \cdot [0.27 + 0.7 \times 0.1] \\
+     &= 0.8 \cdot [0.27 + 0.07] = 0.8 \cdot 0.34 = 0.272
+     \end{aligned}
+     $$
+3. **Chuẩn hóa xác suất:**
+   - Tổng xác suất biên của bằng chứng $P(C = 1)$:
+     $$
+     P(C = 1) = P(A = 1, C = 1) + P(A = 0, C = 1) = 0.148 + 0.272 = 0.420
+     $$
+   - Xác suất hậu nghiệm của $A = 1$:
+     $$
+     P(A = 1 \mid C = 1) = \frac{P(A = 1, C = 1)}{P(C = 1)} = \frac{0.148}{0.420} = \frac{37}{105} \approx 0.3524 \quad (35.24\%)
+     $$
+   - Xác suất tiên nghiệm $P(A=1)$ ban đầu là $20\%$. Khi quan sát thấy hậu quả $C=1$, xác suất niềm tin vào $A=1$ đã tăng mạnh lên $35.24\%$.
+
+---
+
+### Bài tập 3: Mô phỏng định lượng hiện tượng Giải tỏa nghi vấn (Explaining Away)
+**Đề bài:**
+Xét bài toán hai nguyên nhân độc lập $A$ và $B$ cùng dẫn đến hậu quả $C$ ($A \to C \leftarrow B$). Cả ba biến đều là biến nhị phân $\{0, 1\}$.
+- Xác suất tiên nghiệm: $P(A = 1) = 0.1, \quad P(B = 1) = 0.1$.
+- Bảng xác suất có điều kiện của $C$ (luật OR có nhiễu):
+  $$
+  \begin{aligned}
+  P(C = 1 \mid A = 0, B = 0) &= 0.0 \\
+  P(C = 1 \mid A = 1, B = 0) &= 0.9 \\
+  P(C = 1 \mid A = 0, B = 1) &= 0.9 \\
+  P(C = 1 \mid A = 1, B = 1) &= 1.0
+  \end{aligned}
+  $$
+
+1. Tính xác suất hậu nghiệm $P(A = 1 \mid C = 1)$ khi chỉ mới biết hậu quả $C = 1$ xảy ra.
+2. Bây giờ biết thêm nguyên nhân thứ hai cũng xảy ra ($B = 1$). Hãy tính xác suất $P(A = 1 \mid C = 1, B = 1)$.
+3. So sánh hai kết quả trên và giải thích vì sao thông tin $B = 1$ lại làm giảm xác suất của $A = 1$.
+
+**Phân tích & Hướng dẫn giải:**
+1. **Tính $P(A = 1 \mid C = 1)$:**
+   - Ta tính các xác suất đồng thời:
+     $$
+     \begin{aligned}
+     P(A = 1, B = 0, C = 1) &= 0.1 \times 0.9 \times 0.9 = 0.081 \\
+     P(A = 0, B = 1, C = 1) &= 0.9 \times 0.1 \times 0.9 = 0.081 \\
+     P(A = 1, B = 1, C = 1) &= 0.1 \times 0.1 \times 1.0 = 0.010 \\
+     P(A = 0, B = 0, C = 1) &= 0.9 \times 0.9 \times 0.0 = 0.000
+     \end{aligned}
+     $$
+   - Tổng xác suất của $C = 1$:
+     $$
+     P(C = 1) = 0.081 + 0.081 + 0.010 = 0.172
+     $$
+   - Khi đó:
+     $$
+     \begin{aligned}
+     P(A = 1, C = 1) &= P(A = 1, B = 0, C = 1) + P(A = 1, B = 1, C = 1) \\
+     &= 0.081 + 0.010 = 0.091
+     \end{aligned}
+     $$
+   - Suy ra:
+     $$
+     P(A = 1 \mid C = 1) = \frac{0.091}{0.172} \approx 0.5291 \quad (52.91\%)
+     $$
+2. **Tính $P(A = 1 \mid C = 1, B = 1)$:**
+   - Theo định nghĩa xác suất có điều kiện:
+     $$
+     P(A = 1 \mid C = 1, B = 1) = \frac{P(A = 1, B = 1, C = 1)}{P(B = 1, C = 1)}
+     $$
+   - Trong đó:
+     $$
+     \begin{aligned}
+     P(B = 1, C = 1) &= P(A = 0, B = 1, C = 1) + P(A = 1, B = 1, C = 1) \\
+     &= 0.081 + 0.010 = 0.091
+     \end{aligned}
+     $$
+   - Do đó:
+     $$
+     P(A = 1 \mid C = 1, B = 1) = \frac{0.010}{0.091} \approx 0.1099 \quad (10.99\%)
+     $$
+3. **Phân tích bản chất hiện tượng Explaining Away:**
+   - Ban đầu khi thấy $C = 1$, niềm tin rằng $A = 1$ tăng vọt từ $10\%$ lên $52.91\%$.
+   - Nhưng ngay khi biết thêm rằng $B = 1$, xác suất niềm tin vào $A = 1$ lập tức tụt dốc không phanh từ $52.91\%$ xuống chỉ còn $10.99\%$ (gần như quay về mức tiên nghiệm ban đầu $10\%$).
+   - Lý do là vì $B = 1$ đã đủ mạnh để giải thích tại sao $C = 1$ xảy ra, khiến cho giả thuyết $A = 1$ trở nên không còn cấp thiết nữa. Đây chính là minh chứng toán học rõ ràng cho hiện tượng "giải tỏa nghi vấn" trong cấu trúc collider.
+
+---
+
 [← Quay lại Chương 14: Logic & Biểu diễn tri thức](/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md)

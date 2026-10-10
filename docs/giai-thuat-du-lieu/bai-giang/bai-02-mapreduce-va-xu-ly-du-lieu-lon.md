@@ -919,7 +919,9 @@ Dry-run 7: câu hỏi kiểm tra
 | Cộng $n$ số trên $P$ máy | $T_P = (n/P - 1)\tau + (P-1)\tau$, tối ưu gần $P = \sqrt{n}$ |
 | Chi phí MMDS | $C = I + H$ |
 | Thời gian truyền | $T \approx \lambda + V/B$, dùng chung: $T \ge V/B$ |
-| Toàn công việc | $T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền}} + T_{\text{Reduce}}$ |
+| Toàn công việc | $$
+T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền}} + T_{\text{Reduce}}
+$$ |
 | Mức tăng tốc | $S_P = T_1 / T_P$ |
 | Từ khóa | khóa–giá trị, shuffle, combiner, InputSplit, cục bộ hóa, replication, Master, chạy lại, bản dự phòng |
 

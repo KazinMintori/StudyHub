@@ -75,14 +75,7 @@ Một mô hình ngôn ngữ hoàn toàn có thể trả về một chuỗi JSON 
 
 Do đó, một đường ống xử lý dữ liệu nghiêm cẩn phải xây dựng cơ chế kiểm định hai tầng:
 
-```
-[Văn bản gốc] ---> [LLM sinh JSON] ---> [Tầng 1: Pydantic Schema] ---> [Tầng 2: Mỏ neo bằng chứng] ---> [Bảng dữ liệu sạch]
-                                                |                                   |
-                                                v                                   v
-                                        (Lỗi kiểu/nhãn lạ)                 (Ảo giác/trích sai)
-                                                |                                   |
-                                                +---------------> [Hàng đợi xem xét lại (DLQ)]
-```
+<DataDiagram name="llm-validation" />
 
 - **Tầng 1 (Cấu trúc & Định dạng)**: Xác thực xem đối tượng trả về có thỏa mãn toàn bộ các trường bắt buộc, kiểu dữ liệu và giá trị enum hay không.
 - **Tầng 2 (Mỏ neo sự thật - Citation Verification)**: Kiểm tra xem đoạn văn bản trích dẫn (`evidence`) do mô hình đưa ra có thực sự xuất hiện nguyên văn từng ký tự trong văn bản gốc hay không (`assert evidence in raw_text`). Nếu mô hình trích dẫn một câu không hề có trong nguồn, bản ghi lập tức bị gắn cờ cảnh báo ảo giác và chuyển sang hàng đợi kiểm duyệt thủ công.

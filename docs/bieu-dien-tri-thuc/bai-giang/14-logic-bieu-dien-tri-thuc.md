@@ -257,4 +257,132 @@ DL lược bỏ bớt một số tính năng tự do của FOL đầy đủ đ�
 
 ---
 
+## Hệ thống bài tập tự luyện {#bai-tap}
+
+### Bài tập 1: Quy trình chuyển đổi công thức Logic vị từ sang dạng chuẩn hội CNF
+**Đề bài:**
+Cho câu logic vị từ bậc một (FOL) sau:
+$$
+\alpha = \forall x \, [P(x) \implies (\exists y \, Q(x, y) \land \neg R(x))]
+$$
+Hãy thực hiện đầy đủ 5 bước chuẩn hóa để chuyển đổi $\alpha$ thành tập các tuyển mệnh đề dạng chuẩn hội (Conjunctive Normal Form - CNF):
+1. Khử phép kéo theo ($\implies$).
+2. Đẩy phép phủ định ($\neg$) vào sát các nguyên tử (áp dụng luật De Morgan và phủ định lượng từ).
+3. Chuẩn hóa tên biến (đổi tên các biến trùng lặp).
+4. Skolem hóa để loại bỏ lượng từ tồn tại ($\exists$).
+5. Bỏ lượng từ với mọi ($\forall$) và phân phối phép tuyển ($\lor$) qua phép hội ($\land$).
+
+**Phân tích & Hướng dẫn giải:**
+1. **Bước 1: Khử phép kéo theo ($\implies$):**
+   - Áp dụng tương đương $A \implies B \equiv \neg A \lor B$:
+     $$
+     \alpha_1 = \forall x \, [\neg P(x) \lor (\exists y \, Q(x, y) \land \neg R(x))]
+     $$
+2. **Bước 2: Đẩy phép phủ định vào trong:**
+   - Trong $\alpha_1$, dấu phủ định $\neg$ đã nằm trực tiếp trước các nguyên tử $P(x)$ và $R(x)$. Không cần biến đổi thêm.
+3. **Bước 3: Chuẩn hóa tên biến:**
+   - Biến $x$ và biến $y$ là phân biệt, không có sự trùng lặp phạm vi lượng từ.
+4. **Bước 4: Skolem hóa loại bỏ lượng từ tồn tại ($\exists$):**
+   - Biến $y$ nằm trong phạm vi của lượng từ với mọi $\forall x$. Do đó, giá trị của $y$ phụ thuộc vào $x$.
+   - Ta thay thế biến $y$ bằng một hàm Skolem $f(x)$:
+     $$
+     \alpha_4 = \forall x \, [\neg P(x) \lor (Q(x, f(x)) \land \neg R(x))]
+     $$
+5. **Bước 5: Bỏ lượng từ $\forall$ và phân phối phép tuyển qua phép hội:**
+   - Lược bỏ ký hiệu $\forall x$ (ngầm hiểu mọi biến tự do đều chịu tác động của lượng từ với mọi).
+   - Áp dụng luật phân phối $A \lor (B \land C) \equiv (A \lor B) \land (A \lor C)$:
+     $$
+     \alpha_5 = (\neg P(x) \lor Q(x, f(x))) \land (\neg P(x) \lor \neg R(x))
+     $$
+   - Tập các mệnh đề CNF thu được gồm 2 tuyển rời:
+     $$
+     C_1 = \{\neg P(x), Q(x, f(x))\}, \quad C_2 = \{\neg P(x), \neg R(x)\}
+     $$
+
+---
+
+### Bài tập 2: Chứng minh bằng phương pháp Hợp giải phản chứng (Resolution Refutation)
+**Đề bài:**
+Cho cơ sở tri thức (KB) gồm các mệnh đề logic sau:
+1. $P \lor Q$
+2. $\neg P \lor R$
+3. $\neg Q \lor R$
+
+Cần chứng minh rằng câu kết luận $\alpha = R$ được suy dẫn logic từ KB ($KB \models R$).
+Hãy thực hiện thuật toán hợp giải phản chứng bằng cách:
+1. Phủ định kết luận cần chứng minh.
+2. Liệt kê tập hợp các tuyển ban đầu.
+3. Tìm các cặp mệnh đề đối ngẫu để sinh ra tuyển mới qua từng bước cho tới khi rút ra mệnh đề rỗng ($\square$).
+
+**Phân tích & Hướng dẫn giải:**
+1. **Phủ định kết luận:**
+   - Thêm $\neg R$ vào cơ sở tri thức:
+     $$
+     KB' = KB \cup \{\neg R\}
+     $$
+2. **Tập mệnh đề ban đầu:**
+   - $C_1: P \lor Q$
+   - $C_2: \neg P \lor R$
+   - $C_3: \neg Q \lor R$
+   - $C_4: \neg R$ (mệnh đề phản chứng)
+3. **Các bước hợp giải:**
+   - **Bước 1:** Hợp giải $C_2$ ($\neg P \lor R$) với $C_4$ ($\neg R$) trên biến $R$:
+     $$
+     C_5 = \text{Resolve}(C_2, C_4) = \neg P
+     $$
+   - **Bước 2:** Hợp giải $C_3$ ($\neg Q \lor R$) với $C_4$ ($\neg R$) trên biến $R$:
+     $$
+     C_6 = \text{Resolve}(C_3, C_4) = \neg Q
+     $$
+   - **Bước 3:** Hợp giải $C_1$ ($P \lor Q$) với $C_5$ ($\neg P$) trên biến $P$:
+     $$
+     C_7 = \text{Resolve}(C_1, C_5) = Q
+     $$
+   - **Bước 4:** Hợp giải $C_7$ ($Q$) với $C_6$ ($\neg Q$) trên biến $Q$:
+     $$
+     C_8 = \text{Resolve}(C_7, C_6) = \square \quad (\text{Mệnh đề rỗng / Mâu thuẫn})
+     $$
+4. **Kết luận:**
+   - Việc dẫn tới mệnh đề rỗng $\square$ chứng minh rằng giả định $\neg R$ là sai, kéo theo $KB \models R$ là mệnh đề đúng đắn.
+
+---
+
+### Bài tập 3: So sánh cơ chế Suy diễn tiến và Suy diễn lùi trên Luật Horn
+**Đề bài:**
+Cho cơ sở tri thức gồm các sự kiện và luật Horn sau:
+- Sự kiện ban đầu: $A$ đúng, $B$ đúng.
+- Luật 1: $A \land B \implies C$
+- Luật 2: $C \land D \implies E$
+- Luật 3: $B \implies D$
+- Luật 4: $E \implies F$
+
+Mục tiêu cần xác minh: Sự kiện $F$ có đúng hay không?
+1. Trình bày các bước suy luận bằng cơ chế Suy diễn tiến (Forward Chaining).
+2. Trình bày các bước suy luận bằng cơ chế Suy diễn lùi (Backward Chaining).
+3. Trong các hệ chuyên gia chẩn đoán sự cố kỹ thuật, khi nào người ta ưu tiên dùng suy diễn tiến và khi nào ưu tiên dùng suy diễn lùi?
+
+**Phân tích & Hướng dẫn giải:**
+1. **Suy diễn tiến (Forward Chaining - Dẫn xuất từ dữ liệu đến mục tiêu):**
+   - Khởi tạo tập sự kiện đã biết: $\text{Known} = \{A, B\}$.
+   - Vòng 1:
+     + Xét Luật 1: Tiền đề $A \land B$ đều có trong $\text{Known}$. Suy ra thêm $C$. $\text{Known} = \{A, B, C\}$.
+     + Xét Luật 3: Tiền đề $B$ có trong $\text{Known}$. Suy ra thêm $D$. $\text{Known} = \{A, B, C, D\}$.
+   - Vòng 2:
+     + Xét Luật 2: Tiền đề $C \land D$ đều có trong $\text{Known}$. Suy ra thêm $E$. $\text{Known} = \{A, B, C, D, E\}$.
+   - Vòng 3:
+     + Xét Luật 4: Tiền đề $E$ có trong $\text{Known}$. Suy ra thêm $F$. $\text{Known} = \{A, B, C, D, E, F\}$.
+   - Chạm tới mục tiêu $F$, thuật toán kết luận $F$ đúng.
+2. **Suy diễn lùi (Backward Chaining - Dẫn xuất từ mục tiêu về giả thiết):**
+   - Mục tiêu ban đầu: Chứng minh $F$.
+   - Tìm luật có hệ quả là $F$: Luật 4 ($E \implies F$). Tạo mục tiêu con mới: Cần chứng minh $E$.
+   - Tìm luật có hệ quả là $E$: Luật 2 ($C \land D \implies E$). Tạo hai mục tiêu con: Cần chứng minh $C$ và $D$.
+     + Nhánh 1 (chứng minh $C$): Luật 1 ($A \land B \implies C$). Cần chứng minh $A$ và $B$. Cả hai đều là sự kiện đã biết, nhánh 1 hoàn thành.
+     + Nhánh 2 (chứng minh $D$): Luật 3 ($B \implies D$). Cần chứng minh $B$. $B$ là sự kiện đã biết, nhánh 2 hoàn thành.
+   - Vì cả hai nhánh $C$ và $D$ đều đúng, suy ra $E$ đúng, kéo theo $F$ đúng.
+3. **So sánh ứng dụng thực tiễn:**
+   - **Suy diễn tiến (Data-driven):** Thích hợp khi hệ thống nhận được một luồng dữ liệu cảm biến mới và cần dự báo mọi nguy cơ có thể xảy ra (ví dụ: giám sát an toàn lò phản ứng hạt nhân).
+   - **Suy diễn lùi (Goal-driven):** Thích hợp khi người dùng đặt ra một nghi vấn hoặc bài toán cụ thể và hệ thống chỉ cần truy vết những sự kiện liên quan trực tiếp tới nghi vấn đó (ví dụ: bác sĩ chẩn đoán xem bệnh nhân có bị viêm phổi hay không, hệ thống chỉ hỏi thêm các triệu chứng liên quan tới phổi thay vì xét toàn bộ cơ thể).
+
+---
+
 [← Quay lại Chương 4: Tìm kiếm đối kháng](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 16: Mạng Bayes & suy luận →](/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md)

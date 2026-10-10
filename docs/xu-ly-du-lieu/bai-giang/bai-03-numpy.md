@@ -14,23 +14,7 @@ Nếu Python thuần túy là một người điều phối linh hoạt, thì Nu
 
 Để làm chủ NumPy, ta không thể tiếp tục nhìn mảng như một danh sách lồng nhau thông thường, mà phải hiểu rõ cách thức hệ thống quản lý mảng ở tầng bộ nhớ máy tính.
 
-```
-+---------------------------------------------------------------+
-|                       ĐỐI TƯỢNG NDARRAY                       |
-|                                                               |
-|  Metadata (Siêu dữ liệu):                                     |
-|  - dtype    : np.int64 (8 bytes/phần tử)                      |
-|  - shape    : (4, 3) -> 4 hàng, 3 cột                         |
-|  - strides  : (24, 8) -> 24 bytes/hàng, 8 bytes/cột           |
-|  - data ptr : Trỏ tới đầu vùng nhớ đệm liên tục               |
-+---------------------------------------------------------------+
-                               |
-                               v
-+----+----+----+----+----+----+----+----+----+----+----+----+
-| 10 | 12 | 11 | 20 | 21 | 24 | 30 | 33 | 31 | 40 | 44 | 42 |  <- Data Buffer
-+----+----+----+----+----+----+----+----+----+----+----+----+     (Vùng nhớ C liên tục)
-|<--- Hàng 0 --->|<--- Hàng 1 --->|<--- Hàng 2 --->|<--- Hàng 3 --->|
-```
+<DataDiagram name="ndarray-memory" />
 
 Một đối tượng `ndarray` trong NumPy gồm hai thành phần tách biệt hoàn toàn:
 1. **Khối dữ liệu thô (*Data Buffer*)**: Một mảng 1 chiều liên tục trong bộ nhớ RAM, lưu trữ các byte nhị phân của dữ liệu theo chuẩn ngôn ngữ C hoặc Fortran.
@@ -70,22 +54,7 @@ Nếu ta chuyển đổi kiểu dữ liệu sang `int32` thông qua `A.astype(np
 
 Một trong những ưu điểm vượt trội giúp NumPy xử lý dữ liệu lớn với tốc độ chớp nhoáng là cơ chế **Khung nhìn (*View*)**. Tuy nhiên, nếu không phân biệt rõ khi nào NumPy tạo View và khi nào tạo Bản sao (*Copy*), bạn sẽ gặp phải những lỗi biến đổi dữ liệu ngầm cực kỳ tai hại.
 
-```
-                +-----------------------------------------+
-                |     THAO TÁC TRUY CẬP TRÊN NDARRAY      |
-                +-----------------------------------------+
-                                     |
-                 +-------------------+-------------------+
-                 |                                       |
-                 v                                       v
-        LÁT CẮT CƠ BẢN (SLICING)             CHỈ MỤC MẢNG (FANCY INDEXING)
-          arr[1:3, :]                          arr[[0, 2], :] / arr[arr > 0]
-                 |                                       |
-                 v                                       v
-         TẠO KHUNG NHÌN (VIEW)                   TẠO BẢN SAO MỚI (COPY)
-   - Dùng chung vùng đệm bộ nhớ.           - Cấp phát vùng nhớ mới độc lập.
-   - Thay đổi View làm đổi mảng gốc!       - Thay đổi Copy không ảnh hưởng gốc.
-```
+<DataDiagram name="view-copy" />
 
 ### 2.1. Lát cắt cơ bản (Slicing) luôn tạo View
 Khi bạn cắt lát một mảng bằng cú pháp `start:stop:step` (chẳng hạn `V = A[1::2, 0::2]`), NumPy **không hề sao chép dữ liệu**. Thay vào đó, nó tạo ra một đối tượng `ndarray` mới với siêu dữ liệu riêng (con trỏ đầu trỏ tới ô bắt đầu của lát cắt, `shape` mới và `strides` mới), nhưng **dùng chung nguyên vẹn khối dữ liệu đệm ban đầu**.

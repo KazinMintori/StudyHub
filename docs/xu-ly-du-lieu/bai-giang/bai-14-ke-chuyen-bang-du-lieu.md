@@ -31,15 +31,7 @@ Hãy quan sát sự đối lập giữa hai lối trình bày:
 
 Phương pháp luận **Kim tự tháp Minto (The Minto Pyramid Principle)** sắp xếp luồng giao tiếp theo cấu trúc từ trên xuống (Top-Down):
 
-```
-       [1. KẾT LUẬN ĐIỀU HÀNH]  <--- Câu trả lời cốt lõi cho bên đặt hàng
-                 │
-       [2. BẰNG CHỨNG ĐỊNH LƯỢNG]  <--- Số liệu kiểm chứng, so sánh và đồ thị
-                 │
-       [3. PHẠM VI & GIỚI HẠN]  <--- Ranh giới áp dụng, cảnh báo sai số
-                 │
-    [4. CHI TIẾT PHƯƠNG PHÁP]  <--- Cỡ mẫu, mã nguồn thực thi, phụ lục kỹ thuật
-```
+<DataDiagram name="report-pyramid" />
 
 1. **Đỉnh kim tự tháp (Kết luận điều hành)**: Nêu ngay câu trả lời trực tiếp cho bài toán kinh doanh hoặc câu hỏi nghiên cứu.
 2. **Tầng thứ hai (Bằng chứng định lượng)**: Trình bày các con số then chốt và biểu đồ được chọn lọc để chứng minh cho kết luận ở đỉnh.
@@ -192,15 +184,7 @@ Mọi con số trong năm kết luận trên khi tra cứu vào bảng dữ li�
 
 Để đánh giá độc lập một bản báo cáo, chúng ta thực hiện quy trình thẩm định 4 bước:
 
-```
-[Bước 1: TRUY SỐ]       ---> Tính lại con số trực tiếp từ dữ liệu gốc xem có tồn tại không.
-        │
-[Bước 2: KIỂM PHƯƠNG PHÁP] ---> Đánh giá việc chọn trung bình hay trung vị, dữ liệu ngoại lai, kỳ trọn vẹn.
-        │
-[Bước 3: KIỂM DIỄN GIẢI]   ---> Soát xét tính đúng mức của lời văn, phân biệt tương quan vs nhân quả.
-        │
-[Bước 4: PHÁN QUYẾT]    ---> Đưa ra kết luận: Đúng / Cần sửa đổi / Bác bỏ / Chưa thể kiểm chứng.
-```
+<DataDiagram name="claim-audit" />
 
 1. **Bước 1 · Truy số (Number Tracing)**: Viết mã nguồn Python chạy lại từ bảng dữ liệu gốc để xác minh từng con số được nêu. Nếu con số là bịa đặt do ảo giác của mô hình, bác bỏ ngay lập tức.
 2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**: Đánh giá xem thước đo được chọn có phù hợp với phân phối của dữ liệu hay không. Có bị méo mó bởi ngoại lai không? Kỳ thời gian đã khép lại trọn vẹn chưa?

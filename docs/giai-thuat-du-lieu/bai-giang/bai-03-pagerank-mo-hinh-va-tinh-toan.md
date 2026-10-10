@@ -104,7 +104,7 @@ $$r^{t+1}=\beta M_0 r^t+\bigl((1-\beta)+\beta\delta^t\bigr)u.$$
 
 $$\|Sv\|_1\;\le\;\sum_i\sum_j S_{ij}|v_j|\;=\;\|v\|_1,$$
 
-vì mỗi cột của $S$ có tổng 1. Suy ra $\|F(x)-F(y)\|_1\le\beta\|x-y\|_1$ (phần bước nhảy triệt tiêu trong hiệu), nên với $\Delta_t=\|r^{t+1}-r^t\|_1$ ta có $\Delta_t\le\beta^t\Delta_0$. Với $q>p$: $\|r^q-r^p\|_1\le\sum_{j=p}^{q-1}\Delta_j\le \beta^p\Delta_0/(1-\beta)\to 0$, tức dãy lặp là dãy Cauchy. Giới hạn $r^*$ vẫn không âm và có tổng bằng 1 (các điều kiện này được giữ khi lấy giới hạn), $F$ liên tục nên $r^*=F(r^*)$. Hai điểm bất động bất kỳ phải cách nhau $d$ thỏa $d\le\beta d$, tức $d=0$: nghiệm duy nhất.
+vì mỗi cột của $S$ có tổng 1. Suy ra $\|F(x)-F(y)\|_1\le\beta\|x-y\|_1$ (phần bước nhảy triệt tiêu trong hiệu), nên với $\Delta_t=\|r^{t+1}-r^t\|_1$ ta có $\Delta_t\le\beta^t\Delta_0$. Với $q>p$: $\|r^q-r^p\|_1\le\sum_{j=p}^{q-1}\Delta_j$ và $\Delta_j \le \frac{\beta^p\Delta_0}{1-\beta} \to 0$, tức dãy lặp là dãy Cauchy. Giới hạn $r^*$ vẫn không âm và có tổng bằng 1 (các điều kiện này được giữ khi lấy giới hạn), $F$ liên tục nên $r^*=F(r^*)$. Hai điểm bất động bất kỳ phải cách nhau $d$ thỏa $d\le\beta d$, tức $d=0$: nghiệm duy nhất.
 
 ::: derivation Khai triển chi tiết: Cận hậu nghiệm (đọc thêm)
 Sai số so với nghiệm bị chặn bởi:
@@ -112,7 +112,7 @@ $$\|r^{t+1}-r^*\|_1\le\sum_{j=t+1}^{\infty}\Delta_j\le\frac{\beta}{1-\beta}\Delt
 Lưu ý $\Delta_t=\|r^{t+1}-r^t\|_1$ đo vòng *sau*, còn cận nói về $r^{t+1}$. Và trên máy tính số dấu phẩy động, kết luận đúng cho số thực lý tưởng còn phép so sánh cần dung sai.
 :::
 
-**Thuật toán và dừng.** Vào: danh sách kề, $n\ge1$, $0<\beta<1$, ngưỡng $\tau>0$, giới hạn $T_{\max}$ nguyên dương. Mỗi vòng: tính $\delta$ từ véc tơ cũ, đặt phần chung cho mọi trang, cộng đóng góp từng cạnh, tính $\Delta_t=\sum_i|r_i^{t+1}-r_i^t|$, thay $r$. Dừng khi $\Delta_t\le\tau$ (trạng thái *đạt ngưỡng*) hoặc hết $T_{\max}$ (trạng thái *chưa đạt*, kèm véc tơ và $\Delta$ cuối). Lưu ý $\tau$ là ngưỡng độ thay đổi giữa hai vòng, không đồng nhất sai số so với nghiệm. Ví dụ với $\Delta_1=\frac{2}{25}=0{,}08$ và $\tau=0{,}1$ thuật toán dừng sau vòng thứ hai. Vòng đầu có $\Delta_0=\bigl|\frac7{20}-\frac14\bigr|+3\bigl|\frac{13}{60}-\frac14\bigr|=\frac1{10}+3\cdot\frac1{30}=\frac15>0{,}1$. Mỗi vòng quét $n+m$ phần tử.
+**Thuật toán và dừng.** Vào: danh sách kề, $n\ge1$, $0<\beta<1$, ngưỡng $\tau>0$, giới hạn $T_{\max}$ nguyên dương. Mỗi vòng: tính $\delta$ từ véc tơ cũ, đặt phần chung cho mọi trang, cộng đóng góp từng cạnh, tính $\Delta_t=\sum_i|r_i^{t+1}-r_i^t|$, thay $r$. Dừng khi $\Delta_t\le\tau$ (trạng thái *đạt ngưỡng*) hoặc hết $T_{\max}$ (trạng thái *chưa đạt*, kèm véc tơ và $\Delta$ cuối). Lưu ý $\tau$ là ngưỡng độ thay đổi giữa hai vòng, không đồng nhất sai số so với nghiệm. Ví dụ với $\Delta_1=\frac{2}{25}=0{,}08$ và $\tau=0{,}1$ thuật toán dừng sau vòng thứ hai. Vòng đầu có $\Delta_0 = \frac{1}{10} + 3\cdot\frac{1}{30} = \frac{1}{5} > 0{,}1$. Mỗi vòng quét $n+m$ phần tử.
 
 ---
 
@@ -301,7 +301,7 @@ $$a=\frac a3+\frac b2,\qquad b=\frac a3+\frac c2,\qquad c=\frac a3+\frac b2+\fra
 
 Từ phương trình đầu: $a-\frac b2=\frac a3\Rightarrow b=\frac{4a}3$.
 
-Thế vào phương trình hai: $b=\frac a3+\frac c2\Rightarrow c=2b-\frac{2a}3=\frac{8a}3-\frac{2a}3=2a$.
+Thế vào phương trình hai: $b=\frac a3+\frac c2$, suy ra $c=2b-\frac{2a}3=2a$.
 
 Tổng: $a+\frac{4a}3+2a=\frac{13a}3=1$, nên:
 
@@ -325,7 +325,9 @@ Hai phương trình đầu (nhân 15):
 
 $$15a=4a+6b+1\ \Rightarrow\ 11a-6b=1;\qquad 15b=4a+6c+1.$$
 
-Thay $c=1-a-b$: $15b=4a+6-6a-6b+1\Rightarrow 2a+21b=7$. Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
+Thay $c=1-a-b$: $$
+15b = 4a + 6 - 6a - 6b + 1 \implies 2a + 21b = 7
+$$. Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
 
 $$a=\frac7{27}=\frac{21}{81}.$$
 

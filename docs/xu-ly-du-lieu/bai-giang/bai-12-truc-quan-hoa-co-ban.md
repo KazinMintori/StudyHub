@@ -93,15 +93,7 @@ Nếu một người vô tình hay hữu ý cắt cụt trục tung (Truncated A
 
 Mắt người nhìn vào sẽ thấy cột thứ ba cao gấp hơn $3.4$ lần cột thứ nhất, tạo ra cảm giác về một sự vượt trội thần kỳ. Trong khi thực tế, khoảng cách chênh lệch chỉ vỏn vẹn $3.7$ điểm phần trăm.
 
-```
-Biểu đồ cắt cụt trục (92% - 98%)        Biểu đồ trung thực (0% - 100%)
-[Trông cao gấp 3.5 lần!]                 [Chênh lệch thực tế rất khiêm tốn]
-    ┌─┐                                      ┌─┐ ┌─┐ ┌─┐
-    │ │                                      │ │ │ │ │ │
-┌─┐ │ │                                      │ │ │ │ │ │
-│ │ │ │                                      │ │ │ │ │ │
-┴─┴─┴─┴ (Gốc = 92%)                          ┴─┴─┴─┴─┴─┴ (Gốc = 0%)
-```
+<DataDiagram name="truncated-axis" />
 
 **Nguyên tắc đạo đức nghề nghiệp**: Đối với biểu đồ cột và thanh ngang, trục đo độ dài bắt buộc phải bắt đầu từ mốc 0 tuyệt đối. Cắt cụt trục tung của biểu đồ cột là hành vi ngụy tạo thị giác thiếu trung thực.
 *Ngoại lệ*: Với biểu đồ đường (Line plot) theo dõi biến thiên theo thời gian của các chỉ số sinh học hay kinh tế vĩ mô (như thân nhiệt bệnh nhân hay chỉ số chứng khoán), việc thu hẹp trục tung là hợp lệ vì mắt người theo dõi vị trí và độ dốc của đường, nhưng biểu đồ bắt buộc phải ghi chú rõ ràng về thang đo.

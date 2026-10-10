@@ -1,10 +1,10 @@
 import { findCourse } from './course-catalog.mjs'
 import { readingMetadata } from './reading-metadata.mjs'
 export const lectureParts = [
-  { id: 'notes', name: 'Notes' },
+  { id: 'kien-thuc-can-co', name: 'Kiến thức nền' },
   { id: 'slides', name: 'Slides' },
-  { id: 'cheatsheet', name: 'Cheatsheet' },
-  { id: 'kien-thuc-can-co', name: 'Kiến thức nền' }
+  { id: 'notes', name: 'Notes' },
+  { id: 'bai-tap', name: 'Bài tập' }
 ]
 export { getLectureCheatsheet as lectureCheatsheet } from './cheatsheets.mjs'
 export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5

@@ -377,4 +377,138 @@ vector<int> aStarSearch(int start, int goal, const Graph& graph, const vector<in
 
 ---
 
+## Hệ thống bài tập tự luyện {#bai-tap}
+
+### Bài tập 1: So sánh từng bước thuật toán Greedy Best-First Search và A\*
+**Đề bài:**
+Cho không gian trạng thái gồm đỉnh xuất phát $S$, đỉnh đích $G$ và các đỉnh trung gian $A, B$ với trọng số cạnh:
+- $(S, A) = 2, \quad (S, B) = 3$
+- $(A, G) = 6, \quad (B, G) = 2$
+
+Hàm heuristic $h(n)$ ước lượng khoảng cách tới $G$ cho từng đỉnh:
+$$
+h(S) = 4, \quad h(A) = 1, \quad h(B) = 3, \quad h(G) = 0
+$$
+
+1. Hãy mô phỏng thuật toán Greedy Best-First Search (chỉ dùng $h(n)$ để dẫn đường) và chỉ ra đường đi tìm được cùng tổng chi phí.
+2. Hãy mô phỏng thuật toán A\* (dùng $f(n) = g(n) + h(n)$) và xác định xem đường đi tìm được có tối ưu hay không.
+3. Nhận xét về tính tối ưu của hai giải thuật trong bài toán này.
+
+**Phân tích & Hướng dẫn giải:**
+1. **Thuật toán Greedy Best-First Search:**
+   - Khởi tạo: Đỉnh xuất phát $S$ có $h(S) = 4$.
+   - Bước 1: Mở rộng $S$, sinh ra hai đỉnh con $A$ và $B$.
+     + Đỉnh $A$ có $h(A) = 1$.
+     + Đỉnh $B$ có $h(B) = 3$.
+   - Vì GBFS chỉ nhìn vào $h(n)$, thuật toán tham lam chọn mở rộng $A$ do $h(A) = 1 < h(B) = 3$.
+   - Bước 2: Từ $A$, mở rộng ra đích $G$ với $h(G) = 0$. Thuật toán dừng lại ngay khi chạm $G$.
+   - Đường đi tìm được:
+     $$
+     S \to A \to G, \quad \text{Tổng chi phí} = 2 + 6 = 8
+     $$
+2. **Thuật toán A\*:**
+   - Khởi tạo: Hàng đợi ưu tiên chứa $\{(S, g=0, f=0+4=4)\}$.
+   - Bước 1: Trích xuất $S$ ($f=4$).
+     Mở rộng các đỉnh kề:
+     + Đỉnh $A$: $g(A) = 2$, suy ra $f(A) = 3$.
+     + Đỉnh $B$: $g(B) = 3$, suy ra $f(B) = 6$.
+     Hàng đợi: $[(A, f=3), (B, f=6)]$.
+   - Bước 2: Trích xuất $A$ do có $f$ nhỏ nhất ($f=3$).
+     Mở rộng đỉnh kề của $A$:
+     + Đỉnh $G$: $g(G) = 2 + 6 = 8, f(G) = 8 + 0 = 8$.
+     Hàng đợi: $[(B, f=6), (G, f=8)]$.
+   - Bước 3: Trích xuất $B$ do có $f(B) = 6 < f(G) = 8$.
+     Mở rộng đỉnh kề của $B$:
+     + Đỉnh $G$ qua $B$: $g'(G) = 3 + 2 = 5, f'(G) = 5 + 0 = 5$.
+     Cập nhật $G$ với giá trị $f$ mới là $5$.
+     Hàng đợi: $[(G, f=5)]$.
+   - Bước 4: Trích xuất $G$ ($f=5$). Thuật toán hoàn tất.
+   - Đường đi tối ưu:
+     $$
+     S \to B \to G, \quad \text{Tổng chi phí tối ưu} = 3 + 2 = 5
+     $$
+3. **Nhận xét sư phạm:**
+   - Greedy Best-First Search bị đánh lừa bởi giá trị heuristic cục bộ hấp dẫn của $A$ ($h(A)=1$), dẫn tới rơi vào bẫy đường đi đắt đỏ với tổng chi phí bằng 8.
+   - A\* kết hợp cả chi phí thực tế đã đi $g(n)$ lẫn kỳ vọng tương lai $h(n)$, nên kịp thời quay lại khám phá nhánh $B$ và tìm ra đường đi tối ưu với chi phí chỉ bằng 5.
+
+---
+
+### Bài tập 2: Chứng minh tính nhất quán kéo theo tính chấp nhận được
+**Đề bài:**
+Cho không gian trạng thái $S$ với đỉnh đích $G$. Hàm heuristic $h(n)$ được gọi là nhất quán (consistent / monotone) nếu với mọi nút $n$ và nút con $n'$ của nó sinh ra bởi hành động có chi phí $c(n, a, n')$, ta luôn có:
+$$
+h(n) \le c(n, a, n') + h(n') \quad \text{và} \quad h(G) = 0
+$$
+Hãy chứng minh bằng quy nạp toán học rằng: Nếu $h(n)$ nhất quán thì $h(n)$ nhất định là hàm chấp nhận được (admissible), tức $h(n) \le h^*(n)$ với mọi nút $n$, trong đó $h^*(n)$ là chi phí thực tế tối ưu từ $n$ đến $G$.
+
+**Phân tích & Hướng dẫn giải:**
+1. **Trường hợp cơ sở:**
+   - Giả sử đường đi tối ưu từ $n$ đến $G$ chỉ gồm $0$ bước, tức $n = G$.
+   - Khi đó $h^*(G) = 0$. Theo định nghĩa, $h(G) = 0$. Bất đẳng thức $h(G) \le h^*(G)$ nghiệm đúng với dấu bằng.
+2. **Quy nạp theo độ dài đường đi tối ưu:**
+   - Giả sử trên đường đi tối ưu từ $n$ tới $G$, bước đi tối ưu đầu tiên dẫn từ $n$ sang nút kế tiếp $n_1$.
+   - Gọi đường đi tối ưu từ $n$ tới $G$ là dãy các đỉnh:
+     $$
+     n = n_0 \to n_1 \to n_2 \to \dots \to n_k = G
+     $$
+   - Khi đó, chi phí thực tế tối ưu từ $n$ tới $G$ chính là tổng chi phí từng bước:
+     $$
+     h^*(n) = \sum_{i=0}^{k-1} c(n_i, n_{i+1})
+     $$
+   - Áp dụng liên tiếp bất đẳng thức nhất quán từ $n_0$ đến $n_k$:
+     $$
+     \begin{aligned}
+     h(n_0) &\le c(n_0, n_1) + h(n_1) \\
+     h(n_1) &\le c(n_1, n_2) + h(n_2) \\
+     &\ \ \vdots \\
+     h(n_{k-1}) &\le c(n_{k-1}, n_k) + h(n_k)
+     \end{aligned}
+     $$
+   - Cộng dồn $k$ bất đẳng thức trên theo từng vế:
+     $$
+     \begin{aligned}
+     h(n_0) + \sum_{i=1}^{k-1} h(n_i) &\le \sum_{i=0}^{k-1} c(n_i, n_{i+1}) + \sum_{i=1}^{k} h(n_i) \\
+     h(n_0) &\le \sum_{i=0}^{k-1} c(n_i, n_{i+1}) + h(n_k) \\
+     h(n) &\le h^*(n) + h(G)
+     \end{aligned}
+     $$
+   - Do $h(G) = 0$, ta thu được ngay:
+     $$
+     h(n) \le h^*(n)
+     $$
+   - Điều này khẳng định tính nhất quán luôn kéo theo tính chấp nhận được.
+
+---
+
+### Bài tập 3: Thiết kế và so sánh Heuristic cho bài toán 8-Puzzle
+**Đề bài:**
+Xét bài toán xếp 8 ô số (8-Puzzle) trên bảng $3 \times 3$. Ta xét hai hàm heuristic quen thuộc:
+- $h_1(n)$: Số lượng ô số đặt sai vị trí so với trạng thái đích (không tính ô trống).
+- $h_2(n)$: Tổng khoảng cách Manhattan của từng ô số tới vị trí đích của nó.
+
+1. Hãy chứng minh cả $h_1$ và $h_2$ đều là các hàm heuristic chấp nhận được.
+2. Chứng minh rằng $h_2$ luôn trội hơn $h_1$ ($h_2(n) \ge h_1(n)$ với mọi trạng thái $n$).
+3. Ý nghĩa thực tiễn của tính trội (Dominance) trong hiệu năng của thuật toán A\* là gì?
+
+**Phân tích & Hướng dẫn giải:**
+1. **Chứng minh tính chấp nhận được:**
+   - Mỗi bước di chuyển quân cờ hợp lệ chỉ có thể đưa nhiều nhất 1 ô số về đúng vị trí đích. Do đó, để đưa $k$ ô số đang đặt sai vị trí về đúng đích thì cần ít nhất $k$ bước di chuyển, suy ra $h_1(n) \le h^*(n)$.
+   - Đối với một ô số cụ thể $i$ có khoảng cách Manhattan tới đích là $d_i$, mỗi bước trượt chỉ có thể rút ngắn khoảng cách Manhattan này đi tối đa 1 đơn vị. Vì các ô số không được phép nhảy đè lên nhau, tổng số bước di chuyển tối thiểu để đưa tất cả các ô số về đích không thể nhỏ hơn tổng khoảng cách Manhattan của chúng:
+     $$
+     h_2(n) = \sum_{i=1}^8 d_i \le h^*(n)
+     $$
+   - Cả hai hàm đều không bao giờ đánh giá quá cao chi phí thực tế, do đó đều chấp nhận được.
+2. **Chứng minh $h_2$ trội hơn $h_1$:**
+   - Với mọi ô số $i$ đặt đúng vị trí, khoảng cách Manhattan của nó bằng $0$.
+   - Với mọi ô số $j$ đặt sai vị trí, nó cách vị trí đích ít nhất 1 bước di chuyển, tức khoảng cách Manhattan $d_j \ge 1$.
+   - Do đó:
+     $$
+     h_2(n) = \sum_{j \text{ sai vị trí}} d_j \ge \sum_{j \text{ sai vị trí}} 1 = h_1(n)
+     $$
+   - Bất đẳng thức $h_2(n) \ge h_1(n)$ đúng với mọi trạng thái $n$, chứng minh $h_2$ trội hơn $h_1$.
+3. **Ý nghĩa thực tiễn:**
+   - Trong A\*, sử dụng hàm heuristic trội hơn đồng nghĩa với việc giá trị $f(n) = g(n) + h_2(n)$ sát với chi phí thực tế hơn. Nhờ đó, thuật toán sẽ cắt tỉa mạnh mẽ hơn và mở rộng ít trạng thái dư thừa hơn rất nhiều so với khi dùng $h_1$, giúp tiết kiệm cả thời gian lẫn bộ nhớ.
+
+---
+
 [← Quay lại Chương 2: Tìm kiếm mù](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 4: Tìm kiếm đối kháng →](/bieu-dien-tri-thuc/bai-giang/04-tim-kiem-doi-khang.md)

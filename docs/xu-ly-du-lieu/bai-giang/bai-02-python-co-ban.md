@@ -12,16 +12,7 @@ description: "Chọn cấu trúc dữ liệu, cơ chế tham chiếu bộ nhớ,
 
 Trước khi vận hành các thư viện chuyên dụng như NumPy hay pandas, người kỹ sư dữ liệu bắt buộc phải làm chủ các cấu trúc dữ liệu bản địa của Python. Bản thân Python cung cấp một ngăn xếp cấu trúc dữ liệu rất linh hoạt, tuy nhiên mỗi cấu trúc lại mang một thiết kế bộ nhớ và chi phí tính toán hoàn toàn khác biệt. Nếu chọn sai cấu trúc cho một thao tác lặp lại thường xuyên trong đường ống xử lý hàng triệu bản ghi, thời gian thực thi có thể tăng từ vài giây lên tới nhiều giờ đồng hồ.
 
-```
-+----------------+-------------------------------+----------------------+------------------------+
-| Cấu trúc       | Bản chất vùng nhớ             | Tra cứu theo khóa/vị trí | Kiểm tra tồn tại (in) |
-+----------------+-------------------------------+----------------------+------------------------+
-| list           | Mảng động chứa con trỏ        | O(1) theo chỉ số nguyên | O(n) quét tuần tự      |
-| tuple          | Mảng con trỏ cố định bất biến | O(1) theo chỉ số nguyên | O(n) quét tuần tự      |
-| dict           | Bảng băm (Hash Table)         | O(1) trung bình theo khóa | O(1) tra cứu khóa      |
-| set            | Bảng băm chỉ chứa khóa        | Không hỗ trợ chỉ số  | O(1) tra cứu phần tử   |
-+----------------+-------------------------------+----------------------+------------------------+
-```
+<DataDiagram name="python-collections" />
 
 ### 1.1. Bản chất bên dưới của Danh sách (`list`) và Dãy bất biến (`tuple`)
 Trong ngôn ngữ C thực thi CPython, `list` thực chất là một mảng động chứa các con trỏ trỏ tới các đối tượng Python phân tán trong bộ nhớ heap.

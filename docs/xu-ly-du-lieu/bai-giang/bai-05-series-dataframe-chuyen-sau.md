@@ -13,27 +13,7 @@ description: "Cơ chế căn chỉnh Index, Split-Apply-Combine với groupby/ag
 ### 1.1. Bản chất của Index: Nhãn Ngữ nghĩa khác với Vị trí Bộ nhớ
 Điểm độc đáo nhất và cũng là nguồn gốc gây ra nhiều bất ngờ nhất cho người mới học pandas chính là: **pandas luôn tự động căn chỉnh dữ liệu theo nhãn chỉ mục (Index Alignment)**, hoàn toàn không phụ thuộc vào vị trí dòng trong bộ nhớ.
 
-```
-            Series A (Giá cũ)                 Series B (Giá mới)
-        +-------+--------+                +-------+--------+
-        | Index | Giá trị |                | Index | Giá trị |
-        +-------+--------+                +-------+--------+
-        |  "A"  |  100   |                |  "B"  |  220   |
-        |  "B"  |  200   |                |  "A"  |   90   |
-        |  "C"  |   50   |                |  "D"  |   70   |
-        +-------+--------+                +-------+--------+
-                         \               /
-                          v             v
-                    PHÉP TRỪ TỰ ĐỘNG CĂN CHỈNH: B - A
-        +-------+-----------------------------+---------+
-        | Index | Phép toán tương ứng         | Kết quả |
-        +-------+-----------------------------+---------+
-        |  "A"  | 90 (từ B) - 100 (từ A)      |   -10   |
-        |  "B"  | 220 (từ B) - 200 (từ A)     |    20   |
-        |  "C"  | NaN (thiếu ở B) - 50 (từ A) |   NaN   |
-        |  "D"  | 70 (từ B) - NaN (thiếu ở A) |   NaN   |
-        +-------+-----------------------------+---------+
-```
+<DataDiagram name="index-alignment" />
 
 Trong phép trừ `B - A`, pandas không lấy dòng 1 trừ dòng 1 như NumPy! Nó đi tìm phần tử có cùng nhãn `"A"` ở cả hai bên ($90 - 100 = -10$), và phần tử có cùng nhãn `"B"` ($220 - 200 = 20$). Các nhãn chỉ xuất hiện ở một phía (nhãn `"C"` chỉ có ở $A$, nhãn `"D"` chỉ có ở $B$) do thiếu toán hạng đối ứng nên kết quả tự động trở thành `NaN`.
 Index của Series kết quả là **hợp của hai tập nhãn (*Union of indexes*)**: `{"A", "B", "C", "D"}`.
@@ -54,29 +34,7 @@ Trong phân tích dữ liệu, hầu hết các câu hỏi nghiệp vụ đều 
 2. **Apply**: Áp dụng một hàm tính toán lên từng nhóm.
 3. **Combine**: Gộp kết quả của các nhóm thành một cấu trúc dữ liệu mới.
 
-```
-                      BẢNG GỐC BAN ĐẦU (12 dòng)
-                                 |
-                                 v  groupby("phan_khuc")
-            +--------------------+--------------------+
-            |                    |                    |
-            v                    v                    v
-       Nhóm "re"            Nhóm "trung"         Nhóm "cao"
-            |                    |                    |
-            +--------------------+--------------------+
-                                 |
-               +-----------------+-----------------+
-               |                                   |
-               v Dùng .agg(...)                    v Dùng .transform(...)
-      THU GỌN KÍCH THƯỚC (3 dòng)           BẢO TOÀN KÍCH THƯỚC (12 dòng)
-     +-----------+--------------+          Mỗi dòng nhận đúng giá trị
-     | phan_khuc | gia_trung_vi |          thống kê của nhóm chứa nó.
-     +-----------+--------------+          (Dùng để gắn cờ hoặc chuẩn hóa)
-     | re        |   21,500.0   |
-     | trung     |   55,000.0   |
-     | cao       |  120,000.0   |
-     +-----------+--------------+
-```
+<DataDiagram name="groupby" />
 
 ### 2.1. Cú pháp Đặt tên Cột Tổng hợp (Named Aggregation)
 Thay vì dùng cú pháp cũ trả về MultiIndex phức tạp, pandas hỗ trợ cú pháp đặt tên cột trực tiếp cực kỳ tường minh:

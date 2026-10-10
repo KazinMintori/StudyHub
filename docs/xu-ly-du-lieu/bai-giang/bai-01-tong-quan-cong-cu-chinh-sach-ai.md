@@ -21,12 +21,7 @@ Thực tế ngành công nghiệp dữ liệu khắc nghiệt hơn rất nhiều
 ### 1.2. Quy tắc $80/20$ của ngành Khoa học Dữ liệu
 Các cuộc khảo sát thực tế trên toàn cầu đối với các kỹ sư dữ liệu và nhà khoa học dữ liệu đều chỉ ra một tỷ lệ thực tế:
 
-```
-+-------------------------------------------------------------+---------+
-| Thu thập, Khám phá, Làm sạch, Biến đổi & Thẩm định Dữ liệu  | Mô hình |
-|                         (~80% thời gian)                     | (~20%)  |
-+-------------------------------------------------------------+---------+
-```
+<DataDiagram name="effort" />
 
 Khoảng $80\%$ tổng thời lượng và công sức của một dự án được dành cho việc chuyển hóa dữ liệu từ dạng hỗn loạn ban đầu thành một cấu trúc đáng tin cậy. Chỉ có khoảng $20\%$ thời gian còn lại được dùng để áp dụng thuật toán mô hình hóa hoặc vẽ biểu đồ báo cáo. Nếu tầng xử lý dữ liệu nền tảng làm sai lệch giá trị, toàn bộ các mô hình học máy tinh vi nhất đặt ở tầng trên đều trở thành vô nghĩa theo nguyên lý bất biến: **Rác vào thì Rác ra (*Garbage In, Garbage Out*)**.
 
@@ -49,19 +44,7 @@ Khi ta thực hiện một phép nhân hai mảng trong Python, trình thông d�
 
 Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa trên ngăn xếp phân tầng chặt chẽ:
 
-```
-+-----------------------------------------------------------------------+
-|  Ứng dụng Chuyên sâu: Học máy (Scikit-learn), Deep Learning (PyTorch)  |
-+-----------------------------------------------------------------------+
-|  Trực quan hóa Dữ liệu: Matplotlib, Seaborn                            |
-+-----------------------------------------------------------------------+
-|  Xử lý Dữ liệu Bảng (Tabular Data): Pandas                             |
-+-----------------------------------------------------------------------+
-|  Mảng Đa chiều & Đại số Tuyến tính: NumPy                              |
-+-----------------------------------------------------------------------+
-|  Ngôn ngữ Nền tảng: Python Core & CPython Runtime                      |
-+-----------------------------------------------------------------------+
-```
+<DataDiagram name="python-stack" />
 
 - **NumPy (*Numerical Python*)**: Cung cấp cấu trúc mảng nhiều chiều đồng nhất `ndarray` và các hàm toán học vector hóa (*ufuncs*), là nền móng bộ nhớ của mọi thư viện khoa học trong Python.
 - **Pandas**: Xây dựng dựa trên NumPy, bổ sung cấu trúc dữ liệu bảng có nhãn hai chiều `DataFrame` và một chiều `Series`, cung cấp các công cụ đọc tệp, ghép bảng, xử lý giá trị khuyết thiếu và tổng hợp dữ liệu nâng cao.
@@ -74,14 +57,7 @@ Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa tr
 ### 3.1. Phân định rõ Client và Kernel trong Jupyter Notebook
 Nhiều sinh viên thường nhầm lẫn giao diện trang web của Jupyter Notebook hay Google Colab với chính tiến trình đang chạy Python. Trên thực tế, đây là hai thành phần hoàn toàn độc lập giao tiếp với nhau qua kiến trúc Client-Server:
 
-```
-[Giao diện Trình duyệt (Client)]
-        │   ▲
-  JSON  │   │  ZeroMQ Messages
-  gửi đi│   │  trả về kết quả
-        ▼   │
-[Máy chủ Notebook (Server)] ─── IPC ───► [IPython Kernel (Tiến trình Python trong RAM)]
-```
+<DataDiagram name="jupyter" />
 
 1. **Giao diện người dùng (Front-end Client)**: Là trang web hiển thị các ô nhập mã nguồn (cell), văn bản giải thích Markdown và kết quả đồ họa. Nó đóng gói toàn bộ nội dung của phiên làm việc thành một tệp văn bản có định dạng JSON mang phần mở rộng `.ipynb`.
 2. **Hạt nhân tính toán (IPython Kernel)**: Là một tiến trình Python độc lập chạy nền trên hệ điều hành. Khi bạn nhấn tổ hợp phím `Shift + Enter` tại một ô mã, nội dung mã nguồn được gửi qua giao thức tin nhắn ZeroMQ tới Kernel. Kernel thực thi đoạn mã trong bộ nhớ RAM và gửi kết quả trả ngược về để trình duyệt hiển thị.

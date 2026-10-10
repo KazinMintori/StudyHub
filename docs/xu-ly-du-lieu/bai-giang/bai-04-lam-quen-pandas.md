@@ -14,27 +14,7 @@ Khi làm việc với các bài toán thực tế, dữ liệu hiếm khi chỉ 
 
 Năm 2008, Wes McKinney đã phát triển **pandas** nhằm mang lại cho Python một cấu trúc dữ liệu dạng bảng có nhãn (*Labeled Tabular Data*) sánh ngang với ngôn ngữ R hay cơ sở dữ liệu quan hệ SQL.
 
-```
-                     +---------------------------------------+
-                     |           DATAFRAME (2D)              |
-                     |  Tập hợp các cột Series chung Index   |
-                     +---------------------------------------+
-                     |  name              price    room_type |  <- Cột (Columns)
-        +------------+---------------------------------------+
-Index   | 0 (id 101) | Depto Plaza Ñuñoa  45000.0  Entire    |
-(Nhãn   | 1 (id 102) | Pieza cerca metro  18000.0  Private   |
-hàng)   | 2 (id 103) | Loft Irarrázaval   72000.0  Entire    |
-        +------------+---------------------------------------+
-                             |
-                             v Trích xuất 1 cột: df["price"]
-                     +-------------------+
-                     |    SERIES (1D)    |
-                     +-------------------+
-        Index (Nhãn) | 0 -> 45000.0      |  (Mảng dữ liệu 1D
-                     | 1 -> 18000.0      |   gắn liền mảng nhãn)
-                     | 2 -> 72000.0      |
-                     +-------------------+
-```
+<DataDiagram name="dataframe-series" />
 
 ### 1.1. Series vs DataFrame: Cú pháp Một Ngoặc vs Hai Ngoặc
 Hai cấu trúc cốt lõi của pandas:

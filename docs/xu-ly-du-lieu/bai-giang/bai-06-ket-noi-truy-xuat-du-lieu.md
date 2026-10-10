@@ -14,24 +14,7 @@ Trong môi trường phân tích dữ liệu thực tế, các tệp dữ liệu
 
 Nếu bạn thực thi lệnh `pd.read_csv("listings_full.csv.gz")` một cách ngây thơ, máy tính sẽ phải giải nén và nạp toàn bộ $90$ cột vào bộ nhớ RAM. Điều này không chỉ gây lãng phí bộ nhớ nghiêm trọng mà còn khiến thời gian nạp tệp kéo dài hàng chục giây.
 
-```
-+---------------------------------------------------------------------------------+
-| TỆP CSV GỐC TRÊN ĐĨA (90 CỘT, DUNG LƯỢNG LỚN)                                   |
-| [id, name, summary, space, description, ..., price, ..., first_review, ...]     |
-+---------------------------------------------------------------------------------+
-                                       |
-                 +---------------------+---------------------+
-                 |                                           |
-                 v Cách đọc ngây thơ                         v Cách đọc chọn lọc
-        pd.read_csv(file)                           pd.read_csv(file, usecols=[...],
-                 |                                              parse_dates=[...])
-                 v                                           |
-    Nạp toàn bộ 90 cột vào RAM                               v
-    - Tốn 1.2 GB RAM                            Chỉ nạp đúng 5 cột cần thiết
-    - Mất 15.4 giây I/O                         - Tiết kiệm 85% RAM (~180 MB)
-    - Cột ngày vẫn là chuỗi thô                 - Mất chỉ 2.1 giây I/O
-                                                - Cột ngày tự ép kiểu datetime64
-```
+<DataDiagram name="csv-loading" />
 
 ### 1.1. Nạp Chọn lọc với `usecols` và `parse_dates`
 Kỹ thuật chuẩn mực của một kỹ sư dữ liệu là chỉ nạp đúng những cột phục vụ trực tiếp cho bài toán thông qua tham số `usecols`, đồng thời ép kiểu thời gian ngay tại tầng đọc tệp bằng `parse_dates`:
@@ -87,17 +70,7 @@ gia_sach = prices.str.replace("$", "", regex=False).str.replace(",", "", regex=F
 
 Trong quá trình xây dựng các đường ống dữ liệu, việc lựa chọn định dạng lưu trữ trung gian giữa các bước xử lý đóng vai trò quyết định đến hiệu năng tổng thể của toàn bộ hệ thống.
 
-```
-+--------------------+-----------------------------+-------------------------------+
-| Tiêu chí so sánh   | Tệp văn bản CSV             | Tệp nhị phân Apache Parquet   |
-+--------------------+-----------------------------+-------------------------------+
-| Mô hình lưu trữ    | Dòng tuần tự (Row-based)    | Định hướng cột (Columnar)     |
-| Dung lượng đĩa     | Lớn (văn bản thô không nén) | Nhỏ (nén Snappy/ZSTD cao cấp) |
-| Bảo toàn kiểu dữ liệu | KHÔNG (mọi thứ thành chuỗi) | CÓ (lưu trọn vẹn datetime, int)|
-| Tốc độ truy vấn cột| Chậm (phải đọc toàn bộ tệp) | Cực nhanh (chỉ đọc cột cần)  |
-| Hỗ trợ phân vùng   | Hạn chế                     | Chuẩn công nghiệp (Hive-style)|
-+--------------------+-----------------------------+-------------------------------+
-```
+<DataDiagram name="csv-parquet" />
 
 ### 3.1. Bản chất Định hướng Cột của Parquet
 - Trong tệp CSV, dữ liệu được ghi lần lượt từng dòng từ trái sang phải. Nếu bạn chỉ cần đọc đúng một cột giá tiền trong bảng 90 cột, hệ điều hành vẫn buộc phải nạp toàn bộ $100\%$ dung lượng tệp từ đĩa cứng vào bộ nhớ rồi mới bóc tách được cột đó.
@@ -113,17 +86,7 @@ Nếu xuất ra Parquet bằng `df.to_parquet("data.parquet")`, toàn bộ cấu
 
 Khi thu thập dữ liệu từ các dịch vụ web bên ngoài (chẳng hạn như dữ liệu thời tiết lịch sử từ Open-Meteo API), một nguyên tắc bất biến của các kỹ sư dữ liệu là: **Lưu trữ Phản hồi Thô (*Raw Response Persistence*)**.
 
-```
-    [ Open-Meteo API ]
-            |
-            v Gọi HTTP GET một lần duy nhất
-    { Response JSON Thô }
-            |
-            +---> [ Lưu tệp đĩa: raw/weather_2025-01.json ]  <- BẢO TOÀN DẤU VẾT
-            |
-            v pd.DataFrame(payload["daily"])
-    [ Bảng phân tích nội bộ ]
-```
+<DataDiagram name="api-provenance" />
 
 ### Vì sao phải lưu tệp JSON thô trước khi chuyển thành bảng?
 1. **Tính tái lập (*Reproducibility*)**: Nếu sau này bạn phát hiện mã nguồn chuyển đổi bảng bị sai logic hoặc cần trích xuất thêm một trường thông tin mới (như độ ẩm hay tốc độ gió), bạn chỉ cần đọc lại tệp JSON đã lưu trên đĩa mà không cần gọi lại API.

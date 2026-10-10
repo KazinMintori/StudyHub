@@ -8,7 +8,6 @@ import { lectureParts } from '../lecture-model.mjs'
 export const lecturePart = ref('notes')
 export function syncLecturePart() {
   const hash = window.location.hash.slice(1)
-  if (hash === 'bai-tap') window.history.replaceState(null, '', '#notes')
   lecturePart.value = lectureParts.some(part => part.id === hash) ? hash : 'notes'
 }
 export function useLecture() {

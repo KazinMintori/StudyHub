@@ -14,19 +14,7 @@ Trong thế giới thực, dữ liệu văn bản tự do luôn là vùng đất
 
 pandas cung cấp bộ định tuyến chuyên dụng **`.str`**. Bất kỳ phương thức nào được gọi qua `.str` (như `.str.strip()`, `.str.lower()`, `.str.replace()`) đều được vector hóa ở tầng dưới và sở hữu một đặc tính vô cùng quý giá: **tự động bỏ qua các giá trị khuyết thiếu `NaN` mà không làm sập chương trình với lỗi `AttributeError`**.
 
-```
-                        DÒNG VĂN BẢN THÔ BAN ĐẦU
-                     "   Excelente ubicación.<br/>Metro!   "
-                                     |
-                                     v .str.replace("<br/>", " ", regex=False)
-                     "   Excelente ubicación. Metro!   "
-                                     |
-                                     v .str.strip()
-                     "Excelente ubicación. Metro!"
-                                     |
-                                     v .str.lower()
-                     "excelente ubicación. metro!"
-```
+<DataDiagram name="string-cleaning" />
 
 ### 1.1. Chuẩn hóa Bảng mã Unicode Tiếng Việt (NFC vs NFD)
 Một cạm bẫy kỹ thuật kinh điển đối với dữ liệu văn bản tiếng Việt là hiện tượng hai ký tự nhìn giống hệt nhau trên màn hình nhưng máy tính lại coi là khác nhau:
