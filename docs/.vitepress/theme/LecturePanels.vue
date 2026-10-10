@@ -1,13 +1,17 @@
 <script setup>
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useLecture } from './lecture-state'
-import { lectureSlides, lectureCheatsheet } from '../lecture-model.mjs'
+import { lectureSlides, lectureCheatsheet, lectureLab } from '../lecture-model.mjs'
 import { concepts } from '../concepts.mjs'
 import { studyLink } from './links'
 import MathText from './MathText.vue'
 
 const { course, lesson, part } = useLecture()
 const cheatsheet = computed(() => lectureCheatsheet(course.value, lesson.value))
+const lab = computed(() => lectureLab(course.value, lesson.value))
+const activeApproach = ref({})
+function getApproach(taskId) { return activeApproach.value[taskId] || 'advanced' }
+function setApproach(taskId, mode) { activeApproach.value = { ...activeApproach.value, [taskId]: mode } }
 const index = ref(0)
 const slides = computed(() => lectureSlides(course.value, lesson.value))
 const current = computed(() => slides.value[index.value])
@@ -167,15 +171,332 @@ watch(() => lesson.value?.slug, load)
       </section>
     </section>
 
-    <section v-else-if="part === 'bai-tap'" class="lecture-exercises" aria-label="Bài tập thực hành của bài giảng">
-      <div class="foundations-heading">
-        <h2>Bài tập thực hành & Ôn luyện: {{ lesson.title }}</h2>
+    <section v-else-if="part === 'bai-tap'" class="lecture-exercises" aria-label="Bài tập thực hành phòng Lab của bài giảng">
+      <div v-if="lab" class="lab-container">
+        <header class="lab-header">
+          <div class="lab-title-group">
+            <p class="eyebrow">PHÒNG LAB THỰC HÀNH · {{ (course.short || course.name).toUpperCase() }}</p>
+            <h2>{{ lab.title }}</h2>
+          </div>
+        </header>
+
+        <!-- Thẻ thông tin tập dữ liệu sử dụng -->
+        <article v-if="lab.dataset" class="dataset-card">
+          <div class="dataset-header">
+            <div class="dataset-meta">
+              <span class="dataset-badge">{{ lab.dataset.type }}</span>
+              <h3 class="dataset-name">{{ lab.dataset.name }}</h3>
+            </div>
+            <div class="dataset-actions">
+              <a :href="lab.dataset.url" target="_blank" rel="noopener noreferrer" class="study-button primary dataset-download-btn">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M3 17h14"/></svg>
+                <span>Tải / Xem Dữ liệu Gốc</span>
+              </a>
+              <a v-if="lab.dataset.secondary_url" :href="lab.dataset.secondary_url" target="_blank" rel="noopener noreferrer" class="study-button dataset-download-btn">
+                <span>Nguồn Phụ ↗</span>
+              </a>
+            </div>
+          </div>
+          <p class="dataset-desc">{{ lab.dataset.description }}</p>
+        </article>
+
+        <!-- Danh sách các bài tập / tasks -->
+        <div class="lab-tasks-list">
+          <article v-for="(task, tIdx) in lab.tasks" :key="task.id" class="lab-task-card">
+            <header class="task-card-header">
+              <div class="task-badge">Task {{ tIdx + 1 }}</div>
+              <h3>{{ task.title }}</h3>
+            </header>
+
+            <div class="task-prompt">
+              <p><strong>Yêu cầu bài toán:</strong> {{ task.prompt }}</p>
+            </div>
+
+            <!-- Khối Phỏng đoán & Giả thuyết -->
+            <div v-if="task.prediction" class="task-prediction">
+              <div class="prediction-header">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                <strong>Phỏng đoán & Giả thuyết bản chất:</strong>
+              </div>
+              <p>{{ task.prediction }}</p>
+            </div>
+
+            <!-- Bộ chuyển đổi 2 hướng tiếp cận -->
+            <div class="task-solutions-wrapper">
+              <div class="solution-tabs">
+                <button
+                  class="solution-tab-btn"
+                  :class="{ active: getApproach(task.id) === 'basic' }"
+                  @click="setApproach(task.id, 'basic')"
+                >
+                  Cách 1: Tiếp cận Cơ bản & Trực quan
+                </button>
+                <button
+                  class="solution-tab-btn"
+                  :class="{ active: getApproach(task.id) === 'advanced' }"
+                  @click="setApproach(task.id, 'advanced')"
+                >
+                  Cách 2: Tiếp cận Nâng cao & Tối ưu
+                </button>
+              </div>
+
+              <div class="solution-code-block">
+                <pre v-if="getApproach(task.id) === 'basic'"><code>{{ task.solutionBasic }}</code></pre>
+                <pre v-else><code>{{ task.solutionAdvanced }}</code></pre>
+              </div>
+            </div>
+
+            <!-- Phân tích sư phạm & Lưu ý tránh bẫy -->
+            <div v-if="task.explanation" class="task-explanation">
+              <strong>Phân tích sư phạm & Lưu ý tránh bẫy:</strong>
+              <p>{{ task.explanation }}</p>
+            </div>
+
+            <!-- Khối kiểm chứng Assertions -->
+            <div v-if="task.verification" class="task-verification">
+              <div class="verification-title">Kiểm chứng tính đúng đắn (Automated Assertions):</div>
+              <pre><code>{{ task.verification }}</code></pre>
+            </div>
+          </article>
+        </div>
       </div>
-      <p>Hệ thống bài tập củng cố tri thức của bài học. Bạn có thể làm bài tập chi tiết ngay trong bài giảng ở phía dưới, hoặc mở chuyên trang bài tập của toàn bộ môn học.</p>
-      <div class="button-row" style="margin-top: 1rem; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        <a class="study-button primary" href="#bai-tap" @click="scrollToExercise">Làm bài tập chi tiết ở dưới ↓</a>
-        <a class="study-button" :href="studyLink(`/${course.id}/bai-tap`)">Toàn bộ bài tập của môn học →</a>
+
+      <div v-else class="empty-lab-state">
+        <div class="foundations-heading">
+          <h2>Bài tập thực hành: {{ lesson.title }}</h2>
+        </div>
+        <p>Hệ thống bài tập thực hành chuyên sâu của bài học này đang được hoàn thiện. Bạn có thể xem các bài tập minh họa nằm xen kẽ ngay trong phần lý thuyết Notes, hoặc mở chuyên trang bài tập của toàn bộ môn học.</p>
+        <div class="button-row" style="margin-top: 1rem;">
+          <a class="study-button primary" :href="studyLink(`/${course.id}/bai-tap`)">Toàn bộ bài tập của môn học →</a>
+        </div>
       </div>
     </section>
   </div>
 </template>
+
+<style scoped>
+.lab-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+.lab-header {
+  margin-bottom: var(--space-2);
+}
+.lab-title-group h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin: var(--space-1) 0 0;
+  line-height: 1.3;
+}
+.dataset-card {
+  background: var(--canvas);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--tim);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.dataset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+.dataset-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.dataset-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--tim);
+  background: var(--tim-soft);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.dataset-name {
+  font-size: var(--fs-read);
+  font-weight: 600;
+  margin: 0;
+}
+.dataset-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.dataset-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-small);
+  padding: 6px 12px;
+  min-height: 36px;
+  text-decoration: none;
+}
+.dataset-desc {
+  font-size: var(--fs-ui);
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin: 0;
+}
+.lab-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.lab-task-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.task-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-3);
+}
+.task-badge {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: #fff;
+  background: var(--tim);
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.task-card-header h3 {
+  font-size: var(--fs-read);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+.task-prompt p {
+  font-size: var(--fs-ui);
+  line-height: 1.65;
+  margin: 0;
+  color: var(--ink);
+}
+.task-prediction {
+  background: var(--vang-soft);
+  border-left: 3px solid var(--vang);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.prediction-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #b45309;
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-1);
+}
+.task-prediction p {
+  font-size: var(--fs-ui);
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+}
+.task-solutions-wrapper {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--canvas);
+}
+.solution-tabs {
+  display: flex;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.solution-tab-btn {
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink-3);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 40px;
+}
+.solution-tab-btn:hover {
+  color: var(--tim);
+}
+.solution-tab-btn.active {
+  color: var(--tim);
+  border-bottom-color: var(--tim);
+  background: var(--canvas);
+}
+.solution-code-block pre {
+  margin: 0;
+  padding: var(--space-4);
+  background: #1e1e2e;
+  color: #cdd6f4;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-family: var(--font-mono, monospace);
+}
+.task-explanation {
+  background: var(--xanh-soft);
+  border-left: 3px solid var(--xanh);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: var(--fs-ui);
+  line-height: 1.6;
+  color: var(--ink);
+}
+.task-explanation p {
+  margin: var(--space-1) 0 0;
+}
+.task-verification {
+  background: var(--canvas);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+}
+.verification-title {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink-2);
+  margin-bottom: var(--space-2);
+}
+.task-verification pre {
+  margin: 0;
+  padding: var(--space-3);
+  background: #24273a;
+  color: #a6da95;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: var(--font-mono, monospace);
+}
+@media (max-width: 767px) {
+  .dataset-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dataset-actions {
+    flex-direction: column;
+  }
+  .solution-tabs {
+    flex-direction: column;
+  }
+}
+</style>
