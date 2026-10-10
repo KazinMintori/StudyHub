@@ -2,12 +2,14 @@
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useLecture } from './lecture-state'
 import { lectureSlides, lectureCheatsheet } from '../lecture-model.mjs'
+import { getCourseLab } from '../course-labs.mjs'
 import { concepts } from '../concepts.mjs'
 import { studyLink } from './links'
 import MathText from './MathText.vue'
 
 const { course, lesson, part } = useLecture()
 const cheatsheet = computed(() => lectureCheatsheet(course.value, lesson.value))
+const lab = computed(() => getCourseLab(course.value, lesson.value))
 const index = ref(0)
 const slides = computed(() => lectureSlides(course.value, lesson.value))
 const current = computed(() => slides.value[index.value])
@@ -48,6 +50,14 @@ function scrollToExercise(event) {
   if (event) event.preventDefault()
   const el = document.getElementById('bai-tap') || document.querySelector('.main > .vp-doc h2:last-of-type')
   if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
+function selectNotes(event) {
+  if (event) event.preventDefault()
+  part.value = 'notes'
+  if (typeof window !== 'undefined') {
+    window.location.hash = '#notes'
+  }
 }
 
 onMounted(() => { load(); window.addEventListener('keydown', keyboard) })
@@ -167,14 +177,103 @@ watch(() => lesson.value?.slug, load)
       </section>
     </section>
 
-    <section v-else-if="part === 'bai-tap'" class="lecture-exercises" aria-label="Bài tập thực hành của bài giảng">
-      <div class="foundations-heading">
-        <h2>Bài tập thực hành & Ôn luyện: {{ lesson.title }}</h2>
+    <section v-else-if="part === 'bai-tap'" class="lecture-lab-panel" aria-label="Bài tập thực hành phòng Lab">
+      <div class="lab-heading">
+        <div class="lab-title-group">
+          <p class="eyebrow">BÀI TẬP THỰC HÀNH & PHÒNG LAB THỰC CHIẾN</p>
+          <h2>{{ lab?.title || ('Bài tập thực hành: ' + lesson.title) }}</h2>
+        </div>
+        <div class="lab-actions">
+          <a class="study-button" :href="studyLink(`/${course.id}/bai-tap`)">Toàn bộ bài tập của môn học →</a>
+        </div>
       </div>
-      <p>Hệ thống bài tập củng cố tri thức của bài học. Bạn có thể làm bài tập chi tiết ngay trong bài giảng ở phía dưới, hoặc mở chuyên trang bài tập của toàn bộ môn học.</p>
-      <div class="button-row" style="margin-top: 1rem; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        <a class="study-button primary" href="#bai-tap" @click="scrollToExercise">Làm bài tập chi tiết ở dưới ↓</a>
-        <a class="study-button" :href="studyLink(`/${course.id}/bai-tap`)">Toàn bộ bài tập của môn học →</a>
+
+      <!-- Khối thông tin bộ dữ liệu thực nghiệm -->
+      <aside v-if="lab && lab.dataset" class="lab-dataset-card" aria-label="Bộ dữ liệu thực nghiệm">
+        <div class="dataset-header">
+          <span class="dataset-badge">BỘ DỮ LIỆU THỰC NGHIỆM</span>
+          <span v-if="lab.dataset.type" class="dataset-type">{{ lab.dataset.type }}</span>
+        </div>
+        <h3 class="dataset-name">{{ lab.dataset.name }}</h3>
+        <p v-if="lab.dataset.description" class="dataset-desc">{{ lab.dataset.description }}</p>
+        <div v-if="lab.dataset.url" class="dataset-link-row">
+          <a class="study-button primary" :href="lab.dataset.url" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 16v1a2 2 0 002 2h8a2 2 0 002-2v-1M7 10l3 3m0 0l3-3m-3 3V3"/>
+            </svg>
+            <span>Tải / Xem dữ liệu gốc</span>
+          </a>
+          <span class="dataset-url-note">{{ lab.dataset.url }}</span>
+        </div>
+      </aside>
+
+      <!-- Danh sách bài tập thực chiến -->
+      <div v-if="lab && lab.tasks && lab.tasks.length" class="lab-tasks-list">
+        <article v-for="(task, tIdx) in lab.tasks" :key="task.id || tIdx" class="lab-task-card">
+          <header class="task-header">
+            <span class="task-number">BÀI {{ tIdx + 1 }}</span>
+            <h3 class="task-title">{{ task.title }}</h3>
+          </header>
+
+          <!-- Yêu cầu bài toán -->
+          <div class="task-prompt">
+            <MathText as="p" :text="task.prompt" />
+          </div>
+
+          <!-- Phỏng đoán & Trực giác trước khi chạy mã -->
+          <div v-if="task.prediction" class="task-prediction">
+            <div class="prediction-header">
+              <span class="prediction-icon">💡</span>
+              <strong>Phỏng đoán & Trực giác bản chất trước khi chạy mã:</strong>
+            </div>
+            <MathText as="p" :text="task.prediction" />
+          </div>
+
+          <!-- 2 Hướng giải bài tập -->
+          <div class="task-solutions">
+            <div v-if="task.solutionBasic" class="solution-block solution-basic">
+              <div class="solution-header">
+                <span class="solution-badge basic">Cách 1</span>
+                <strong>Tiếp cận Căn bản & Trực quan</strong>
+              </div>
+              <pre class="item-code"><code>{{ task.solutionBasic }}</code></pre>
+            </div>
+
+            <div v-if="task.solutionAdvanced" class="solution-block solution-advanced">
+              <div class="solution-header">
+                <span class="solution-badge advanced">Cách 2</span>
+                <strong>Tiếp cận Nâng cao & Tối ưu hóa</strong>
+              </div>
+              <pre class="item-code"><code>{{ task.solutionAdvanced }}</code></pre>
+            </div>
+          </div>
+
+          <!-- Phân tích sư phạm & Lưu ý tránh bẫy -->
+          <div v-if="task.explanation" class="task-explanation">
+            <div class="explanation-header">
+              <strong>📌 Phân tích bản chất & Điểm mấu chốt:</strong>
+            </div>
+            <MathText as="p" :text="task.explanation" />
+          </div>
+
+          <!-- Mã kiểm chứng tự động (Assert) -->
+          <div v-if="task.verification" class="task-verification">
+            <details>
+              <summary><strong>Mã kiểm chứng tự động (Assertion check)</strong></summary>
+              <pre class="item-code"><code>{{ task.verification }}</code></pre>
+            </details>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trạng thái bài tập chưa có lab riêng -->
+      <div v-else class="lab-empty-state">
+        <p class="empty-lead">Bài tập củng cố tri thức của bài học này đã được tích hợp xuyên suốt từng mục lý thuyết trong Notes.</p>
+        <p>Để luyện tập thêm các bài toán thực chiến nâng cao và làm quen với bộ câu hỏi chuẩn bị cho kỳ thi, bạn có thể tham khảo chuyên trang Bài tập của môn học:</p>
+        <div class="button-row" style="margin-top: 1.25rem;">
+          <a class="study-button primary" :href="studyLink(`/${course.id}/bai-tap`)">Xem bài tập tổng hợp toàn môn →</a>
+          <a class="study-button" href="#notes" @click="selectNotes">Quay lại đọc bài giảng Notes</a>
+        </div>
       </div>
     </section>
   </div>
