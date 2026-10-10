@@ -16,7 +16,7 @@ concurrency:
 
 env:
   PUPPETEER_SKIP_DOWNLOAD: 'true'
-  NODE_OPTIONS: '--max-old-space-size=6144'
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   build:
