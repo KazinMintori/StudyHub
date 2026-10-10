@@ -28,7 +28,7 @@ const total = computed(() => groups.value.reduce((sum, group) => sum + group.ite
             <span class="topic-map-copy">
               <span class="topic-map-title">{{ topic.title }}</span>
               <span class="topic-map-question">{{ topic.question }}</span>
-              <span class="topic-map-source">Khoảng {{ topicMinutes(frontmatter.course, frontmatter.lecture, topic.slug) }} phút<template v-if="topic.source"> · Convex Optimization {{ topic.source }}</template></span>
+              <span class="topic-map-source">Khoảng {{ topicMinutes(frontmatter.course, frontmatter.lecture, topic.slug) }} phút</span>
             </span>
           </a>
         </li>

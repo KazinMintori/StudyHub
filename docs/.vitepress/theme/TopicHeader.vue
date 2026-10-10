@@ -2,7 +2,7 @@
 import { ref, nextTick } from 'vue'
 import { onContentUpdated } from 'vitepress'
 import { useTopic } from './topic-state'
-import { lecturePath, topicPath, topicMinutes } from '../lecture-model.mjs'
+import { lecturePath, topicPath } from '../lecture-model.mjs'
 import { studyLink } from './links'
 
 const { course, lesson, topics, index, topic } = useTopic()
@@ -35,8 +35,6 @@ const lectureLabel = lesson => `Lecture ${String(lesson.number ?? 0).padStart(2,
       <h1>{{ topic.title }}</h1>
       <div class="lecture-meta">
         <span>Chủ đề {{ index + 1 }} / {{ topics.length }}</span>
-        <span>Khoảng {{ topicMinutes(course.id, lesson.slug, topic.slug) }} phút đọc</span>
-        <span v-if="topic.source">Convex Optimization {{ topic.source }}</span>
       </div>
       <ol class="topic-progress" :aria-label="`Vị trí trong chương: chủ đề ${index + 1} trên ${topics.length}`">
         <li v-for="(item, i) in topics" :key="item.slug" :class="{ done: i < index, current: i === index }">
