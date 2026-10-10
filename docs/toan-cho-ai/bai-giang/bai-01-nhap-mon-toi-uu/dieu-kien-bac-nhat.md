@@ -9,7 +9,7 @@ description: "Điều kiện bậc nhất của hàm lồi khả vi và ý nghĩ
 
 Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: Độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói lên điều gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát khổng lồ, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm duy nhất, ta dựng được một mặt phẳng mà toàn bộ cái bát đều nằm phía trên mặt phẳng đó.
 
-Đó là nội dung cốt lõi của điều kiện bậc nhất — một trong những tính chất nền tảng nhất của hàm lồi trong tối ưu hóa. Bản chất nằm ở chỗ: Một thuật toán tối ưu thông thường chỉ đo đạc được thông tin cục bộ, bao gồm giá trị hàm và gradient tại điểm hiện hành. Đối với hàm lồi, thông tin cục bộ đó lại cho phép ta rút ra kết luận chắc chắn trên toàn bộ miền xác định. Bài giảng này phát biểu điều kiện, làm sáng tỏ các hệ quả thực tiễn, phân tích từng bước chứng minh chặt chẽ, và mở rộng sang trường hợp hàm không khả vi tại các điểm gãy thông qua khái niệm dưới đạo hàm.
+Đó là nội dung cốt lõi của điều kiện bậc nhất, một trong những tính chất nền tảng nhất của hàm lồi trong tối ưu hóa. Bản chất nằm ở chỗ: Một thuật toán tối ưu thông thường chỉ đo đạc được thông tin cục bộ, bao gồm giá trị hàm và gradient tại điểm hiện hành. Đối với hàm lồi, thông tin cục bộ đó lại cho phép ta rút ra kết luận chắc chắn trên toàn bộ miền xác định. Bài giảng này phát biểu điều kiện, làm sáng tỏ các hệ quả thực tiễn, phân tích từng bước chứng minh chặt chẽ, và mở rộng sang trường hợp hàm không khả vi tại các điểm gãy thông qua khái niệm dưới đạo hàm.
 
 ## 1. Phát biểu
 

@@ -27,7 +27,7 @@ Câu hỏi đặt ra là: **Người cứu hộ nên chạy tới vị trí nào
 ### Phân tích hai trực giác ban đầu
 Khi đối diện với bài toán này, trực giác thường đưa ra hai phương án đối lập, và cả hai đều chưa phải là phương án tối ưu:
 1. **Phương án đường thẳng ngắn nhất**: Chạy và bơi thẳng một mạch từ vị trí đứng đến chỗ người bị nạn ($AB$). Quãng đường này ngắn nhất về mặt hình học ($\sqrt{60^2 + 70^2} \approx 92.2\text{ m}$), nhưng người cứu hộ phải bơi tới gần $39.5\text{ m}$ dưới nước. Vì tốc độ bơi rất chậm ($1.5\text{ m/s}$), riêng quãng bơi đã tốn tới $26.3\text{ s}$, đưa tổng thời gian lên khoảng $36.88\text{ s}$.
-2. **Phương án giảm thiểu quãng bơi**: Chạy dọc bờ cát đến đúng vị trí đối diện người bị nạn rồi mới bơi vuông góc ra khơi để quãng đường bơi ngắn nhất có thể ($30\text{ m}$). Lộ trình này tốn khoảng $34.42\text{ s}$—nhanh hơn đường thẳng, nhưng vẫn chưa phải là lộ trình nhanh nhất.
+2. **Phương án giảm thiểu quãng bơi**: Chạy dọc bờ cát đến đúng vị trí đối diện người bị nạn rồi mới bơi vuông góc ra khơi để quãng đường bơi ngắn nhất có thể ($30\text{ m}$). Lộ trình này tốn khoảng $34.42\text{ s}$, nhanh hơn đường thẳng, nhưng vẫn chưa phải là lộ trình nhanh nhất.
 
 Phương án tối ưu thực sự nằm ở một điểm cân bằng tinh tế giữa hai thái cực trên. Để tìm ra nó, ta cần chuyển hóa bài toán thực tế thành ngôn ngữ toán học.
 
@@ -130,7 +130,7 @@ Giải bài toán trên, ta thu được nghiệm tối ưu:
 $$
 x^\star \approx 52.6\text{ m}, \qquad T(x^\star) \approx 33.82\text{ s}.
 $$
-Tại nghiệm này, người cứu hộ chạy khoảng $66.1\text{ m}$ trên cát (mất $13.22\text{ s}$), sau đó bơi khoảng $30.9\text{ m}$ dưới nước (mất $20.60\text{ s}$). So với phương án đi theo đường thẳng ($36.88\text{ s}$), người cứu hộ tới nơi sớm hơn khoảng $3.06\text{ s}$—rút ngắn hơn 8% thời gian cứu nạn.
+Tại nghiệm này, người cứu hộ chạy khoảng $66.1\text{ m}$ trên cát (mất $13.22\text{ s}$), sau đó bơi khoảng $30.9\text{ m}$ dưới nước (mất $20.60\text{ s}$). So với phương án đi theo đường thẳng ($36.88\text{ s}$), người cứu hộ tới nơi sớm hơn khoảng $3.06\text{ s}$, rút ngắn hơn 8% thời gian cứu nạn.
 
 *Lưu ý*: Những giả thiết vừa đặt ra là của người lập mô hình toán học nhằm phản ánh các yếu tố trọng yếu nhất. Trong thực tế, bãi biển có thể có sóng ngầm, dòng chảy siết hoặc vùng nước nông có thể lội nhanh hơn bơi. Mỗi chi tiết thực tế được bổ sung sẽ điều chỉnh hàm mục tiêu $T(x)$ và dịch chuyển nghiệm tối ưu tương ứng.
 
@@ -173,9 +173,9 @@ Tại nghiệm tối ưu, $\theta_1 \approx 52.8^\circ$ còn $\theta_2 \approx 1
 ### Từ phương trình đại số đến phương pháp tối ưu số học
 Khi bình phương hai vế để khử căn thức trong phương trình $T'(x) = 0$, ta thu được một phương trình đại số bậc bốn đầy đủ theo biến $x$. 
 
-Mặc dù phương trình bậc bốn về mặt lý thuyết có công thức nghiệm căn thức Ferrari, nhưng biểu thức giải tích đó quá cồng kềnh và nhạy cảm với sai số làm tròn số học. Trong thực tế tính toán khoa học và trí tuệ nhân tạo, người ta không bao giờ giải nghiệm tường minh đại số cho những bài toán này. Thay vào đó, các **thuật toán tối ưu số học (numerical optimization)**—như phương pháp chia đôi (bisection), thuật toán lặp tiếp tuyến Newton-Raphson, hoặc thuật toán hạ gradient (gradient descent)—được áp dụng để tìm ra nghiệm số $x^\star \approx 52.6\text{ m}$ với độ chính xác tùy ý chỉ trong vài micro-giây.
+Mặc dù phương trình bậc bốn về mặt lý thuyết có công thức nghiệm căn thức Ferrari, nhưng biểu thức giải tích đó quá cồng kềnh và nhạy cảm với sai số làm tròn số học. Trong thực tế tính toán khoa học và trí tuệ nhân tạo, người ta không bao giờ giải nghiệm tường minh đại số cho những bài toán này. Thay vào đó, các **thuật toán tối ưu số học (numerical optimization)** như phương pháp chia đôi (bisection), thuật toán lặp tiếp tuyến Newton-Raphson, hoặc thuật toán hạ gradient (gradient descent) được áp dụng để tìm ra nghiệm số $x^\star \approx 52.6\text{ m}$ với độ chính xác tùy ý chỉ trong vài micro-giây.
 
-Đặc tính toán học cốt lõi bảo đảm điểm dừng duy nhất này chắc chắn là điểm cực tiểu toàn cục trên toàn bộ miền xác định—chứ không phải một điểm dừng cục bộ—chính là tính chất hình học mà chúng ta sẽ khảo sát sâu ở các chủ đề tiếp theo: **Hàm thời gian $T(x)$ là một hàm lồi (convex function)**.
+Đặc tính toán học cốt lõi bảo đảm điểm dừng duy nhất này chắc chắn là điểm cực tiểu toàn cục trên toàn bộ miền xác định (chứ không phải một điểm dừng cục bộ) chính là tính chất hình học mà chúng ta sẽ khảo sát sâu ở các chủ đề tiếp theo: **Hàm thời gian $T(x)$ là một hàm lồi (convex function)**.
 
 ### Ba trụ cột cốt lõi của một bài toán tối ưu
 Bài học nhập môn cốt lõi của toàn bộ môn học tối ưu hóa nằm trọn vẹn trong ví dụ trực quan này. Trước khi bắt tay vào tìm lời giải hay áp dụng bất kỳ thuật toán nào, ta bắt buộc phải định nghĩa tường minh ba trụ cột của bài toán:
@@ -224,7 +224,7 @@ Tuy nhiên, trong lý thuyết tối ưu hóa và thực tiễn kỹ nghệ AI, 
    - Ràng buộc đẳng thức $h_i(x) = 0$ làm **giảm số bậc tự do (số chiều)** của không gian tìm kiếm. Mỗi phương trình độc lập giam hãm nghiệm trên một mặt siêu cong mỏng dẹt (hypersurface) có số chiều $n - 1$.
    - Ràng buộc bất đẳng thức $f_i(x) \le 0$ phân chia không gian thành hai nửa: Miền hợp lệ (vùng bên trong và biên) và miền cấm. Không gian tìm kiếm vẫn giữ nguyên số chiều $n$ ban đầu.
 2. **Độ ổn định số học và Giải thuật tính toán (Numerical Algorithm Stability):**
-   - Nếu ta ép một đẳng thức thành hai bất đẳng thức $h(x) \le 0$ và $-h(x) \le 0$, miền khả thi sẽ bị "bóp nghẹt" thành một tập có **phần trong rỗng (empty interior)**. Điều này vi phạm nghiêm trọng điều kiện tiên quyết của các thuật toán điểm trong (Interior-point methods)—như điều kiện Slater—khiến hàm chắn logarit (log-barrier) và ma trận Hessian số học bị kỳ dị (phát nổ).
+   - Nếu ta ép một đẳng thức thành hai bất đẳng thức $h(x) \le 0$ và $-h(x) \le 0$, miền khả thi sẽ bị "bóp nghẹt" thành một tập có **phần trong rỗng (empty interior)**. Điều này vi phạm nghiêm trọng điều kiện tiên quyết của các thuật toán điểm trong (Interior-point methods), tiêu biểu là điều kiện Slater, khiến hàm chắn logarit (log-barrier) và ma trận Hessian số học bị kỳ dị (phát nổ).
    - Giữ nguyên ràng buộc đẳng thức cho phép máy tính áp dụng các phép khử biến trực tiếp hoặc chiếu gradient lên không gian con trực giao (projected gradient) một cách ổn định và chuẩn xác.
 3. **Bản chất ngữ nghĩa của dữ liệu thực tế (Physical & Data Semantics):**
    - Trong các bài toán thực tế, ràng buộc đẳng thức biểu thị các **định luật bảo toàn bất biến** của tự nhiên (bảo toàn năng lượng, cân bằng luồng mạng, tổng xác suất phân phối bằng 1).
@@ -430,7 +430,7 @@ Bảng dưới đây minh họa cách mô hình hóa ba bài toán kỹ nghệ �
 | **Thiết kế vi mạch tích hợp (VLSI)** | Kích thước hình học (chiều rộng, chiều dài) từng cổng logic | Tổng công suất tiêu thụ điện năng | Giới hạn dung sai chế tạo bán dẫn, diện tích chip tối đa, trễ đường truyền tín hiệu không vượt ngưỡng. |
 | **Huấn luyện mô hình học máy** | Vector trọng số và bias của mạng nơ-ron | Hàm mất mát (MSE, Cross-entropy) cộng số hạng điều chuẩn | Giới hạn chuẩn trọng số ($L_2, L_1$), ràng buộc phi âm cho các tham số xác suất. |
 
-::: important Nguyên lý mô hình hóa trong AI
+::: info Lưu ý: Nguyên lý mô hình hóa trong AI
 **Lời giải tối ưu chỉ có giá trị khi mô hình toán học phản ánh trung thực bài toán thực tế.** Một mô hình khớp hoàn hảo dữ liệu huấn luyện (loss bằng 0) vẫn có thể thất bại thảm hại khi triển khai thực tế nếu tiêu chí tối ưu hóa không bao hàm khả năng khái quát hóa (generalization) trên dữ liệu mới.
 :::
 
@@ -520,7 +520,7 @@ Trở lại bài toán người cứu hộ ở Mục 1, nhưng giả sử đoạ
    x^\star = 45\text{ m}, \qquad T(45) \approx 34.40\text{ s}.
    $$
    Ràng buộc $x \le 45$ chặt tại nghiệm.
-3. Tại nghiệm, $T'(45) \approx -0.149 \ne 0$. Đạo hàm không triệt tiêu vì nghiệm nằm tại biên của miền khả thi—nơi người cứu hộ muốn tiếp tục dịch sang phải để bơi ít hơn nhưng rào cản bãi đá đã chặn đứng chuyển động này. Phương trình $T'(x) = 0$ có nghiệm tại $x \approx 52.6\text{ m}$, hoàn toàn nằm ngoài miền khả thi!
+3. Tại nghiệm, $T'(45) \approx -0.149 \ne 0$. Đạo hàm không triệt tiêu vì nghiệm nằm tại biên của miền khả thi, nơi người cứu hộ muốn tiếp tục dịch sang phải để bơi ít hơn nhưng rào cản bãi đá đã chặn đứng chuyển động này. Phương trình $T'(x) = 0$ có nghiệm tại $x \approx 52.6\text{ m}$, hoàn toàn nằm ngoài miền khả thi!
 :::
 
 ::: exercise 2. Xác định giá trị tối ưu và tập tối ưu

@@ -18,7 +18,7 @@ $$
 \text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}.
 $$
 
-Mỗi lớp bài toán kế thừa và mở rộng năng lực biểu diễn hình học của lớp bài toán trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP) — ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
+Mỗi lớp bài toán kế thừa và mở rộng năng lực biểu diễn hình học của lớp bài toán trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
 
 ---
 
@@ -172,4 +172,4 @@ Dành cho bạn đọc muốn nghiên cứu chuyên sâu về các lớp bài to
 - **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 4 (Các bài toán tối ưu lồi chuyên biệt: LP, QP, QCQP, SOCP, SDP, GP) và Phụ lục A.5.5 về Phần bù Schur.
 - **Dimitris Bertsimas & John N. Tsitsiklis**, *Introduction to Linear Optimization*, Athena Scientific. Tài liệu kinh điển về hình học đa diện và thuật toán Simplex cho quy hoạch tuyến tính.
 
-Tiếp theo: [Bài 03 — Lý thuyết đối ngẫu Lagrange và Điều kiện KKT](./bai-03-doi-ngau-lagrange.md).
+Tiếp theo: [Bài 03: Lý thuyết đối ngẫu Lagrange và Điều kiện KKT](./bai-03-doi-ngau-lagrange.md).

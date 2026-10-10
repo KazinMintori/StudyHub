@@ -204,7 +204,7 @@ Nếu như quy hoạch tuyến tính phân tích bài toán dựa trên cấu tr
 ### 6.1. Nguyên lý tối ưu Bellman
 Một chiến lược tối ưu có tính chất: Cho dù trạng thái ban đầu và quyết định ban đầu là gì, các quyết định tiếp theo phải tạo thành một chiến lược tối ưu đối với trạng thái sinh ra từ quyết định đầu tiên.
 
-Xét chuỗi thời gian hữu hạn từ $t = 0$ đến $t = T$. Đặt $V_t(s)$ là **hàm giá trị (Value Function)** — biểu diễn tổng chi phí nhỏ nhất có thể đạt được nếu bắt đầu từ trạng thái $s$ tại thời điểm $t$ cho đến khi kết thúc.
+Xét chuỗi thời gian hữu hạn từ $t = 0$ đến $t = T$. Đặt $V_t(s)$ là **hàm giá trị (Value Function)**, biểu diễn tổng chi phí nhỏ nhất có thể đạt được nếu bắt đầu từ trạng thái $s$ tại thời điểm $t$ cho đến khi kết thúc.
 
 Phương trình truy hồi Bellman được thiết lập bằng cách giải ngược từ tương lai về hiện tại (Backward Induction):
 1. **Điều kiện biên tại đích**:

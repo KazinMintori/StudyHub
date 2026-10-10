@@ -110,7 +110,7 @@ Xét bốn bài toán sau. Hãy xác định bài toán nào là bài toán lồ
 1. **Bài toán lồi**: Chuẩn $L_1$ hợp với biến đổi affine là hàm lồi, bình phương chuẩn Euclid $\|x\|_2^2$ là hàm lồi ngặt, và tổng của hai hàm lồi là hàm lồi. Ràng buộc $x \succeq 0$ xác định một nón không âm (nửa không gian đóng), là tập lồi.
 2. **Có thể chuyển về bài toán lồi**: Ở dạng nguyên bản, hàm mục tiêu $f(x) = x_1 x_2$ không lõm trên $\mathbb{R}^2_+$ (ma trận Hessian $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ có trị riêng $\pm 1$, không nửa xác định âm). Tuy nhiên, với $x \succ 0$, việc cực đại hóa $x_1 x_2$ tương đương hoàn toàn với việc cực đại hóa $\log(x_1 x_2) = \log x_1 + \log x_2$. Vì hàm logarit lõm, bài toán trở thành quy hoạch lồi và có nghiệm duy nhất tại $x_1^* = x_2^* = 2$.
 3. **Bài toán lồi**: Hàm mục tiêu là giá trị lớn nhất (pointwise maximum) của các hàm lồi $|a_i^T x - b_i|$, do đó là hàm lồi. Ta có thể chuyển bài toán này về dạng Quy hoạch tuyến tính (LP) bằng kỹ thuật biến phụ epigraph: Cụ thể, xét bài toán $\min_{x, t} t$ với ràng buộc $-t \le a_i^T x - b_i \le t$ với mọi $i$.
-4. **Không lồi**: Miền ràng buộc $\|x\|_2 \ge 1$ là phần bù của một quả cầu mở, không phải là tập lồi. Tập nghiệm tối ưu là toàn bộ mặt cầu đơn vị $\{x \mid \|x\|_2 = 1\}$, tạo thành một tập hợp không lồi — điều không bao giờ xảy ra đối với bài toán tối ưu lồi có nghiệm duy nhất.
+4. **Không lồi**: Miền ràng buộc $\|x\|_2 \ge 1$ là phần bù của một quả cầu mở, không phải là tập lồi. Tập nghiệm tối ưu là toàn bộ mặt cầu đơn vị $\{x \mid \|x\|_2 = 1\}$, tạo thành một tập hợp không lồi, điều không bao giờ xảy ra đối với bài toán tối ưu lồi có nghiệm duy nhất.
 :::
 
 ::: exercise 2. Bài toán điều khiển tối ưu một bước với giới hạn chấp hành
@@ -180,4 +180,4 @@ Dành cho bạn đọc muốn nghiên cứu chuyên sâu về lý thuyết và h
 - **Stephen Boyd & Lieven Vandenberghe**, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 1 (Tổng quan), Chương 2 (Tập lồi và nón lồi), Chương 3 (Hàm lồi, phép toán bảo toàn tính lồi, bất đẳng thức Jensen), Chương 4 (Bài toán tối ưu lồi và phân loại) và Chương 7 (Mô hình hóa hình học trong thống kê).
 - **R. Tyrrell Rockafellar**, *Convex Analysis*, Princeton University Press. Tác phẩm kinh điển đặt nền móng giải tích hiện đại cho tập lồi, hàm lồi và vi phân dưới (subgradient).
 
-Tiếp theo: [Bài 02 — Phân loại các bài toán tối ưu lồi: LP, QP, SOCP và SDP](./bai-02-tap-loi.md).
+Tiếp theo: [Bài 02: Phân loại các bài toán tối ưu lồi: LP, QP, SOCP và SDP](./bai-02-tap-loi.md).

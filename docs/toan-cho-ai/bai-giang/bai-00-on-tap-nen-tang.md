@@ -277,14 +277,37 @@ $$
 Khi triển khai các thuật toán tối ưu hóa trong thực tế, việc hiểu rõ chi phí tính toán và tính ổn định số học của các thuật toán đại số tuyến tính là kỹ năng phân biệt giữa một người làm lý thuyết thuần túy và một kỹ sư tính toán thực thụ.
 
 ### 6.1. Đơn vị đo độ phức tạp: Flop
-Một **flop** (floating-point operation) là một phép tính số thực dấu phẩy động cơ bản (một phép cộng, trừ, nhân, hoặc chia).
+Một **flop** (floating-point operation) là một phép tính số thực dấu phẩy động cơ bản gồm một phép cộng, trừ, nhân, hoặc chia.
 
-Chi phí tính toán của các thao tác đại số cơ bản trên vector và ma trận:
-- Tích vô hướng của hai vector $x, y \in \mathbb{R}^n$: Tiêu tốn $2n$ flops ($n$ phép nhân và $n-1$ phép cộng).
+Chi phí tính toán của các thao tác đại số cơ bản:
+- Tích vô hướng của hai vector $x, y \in \mathbb{R}^n$: Tiêu tốn $2n$ flops (bao gồm $n$ phép nhân và $n-1$ phép cộng).
 - Nhân ma trận với vector $A x$ với $A \in \mathbb{R}^{m \times n}$: Tiêu tốn $2mn$ flops.
 - Nhân hai ma trận $A B$ với $A \in \mathbb{R}^{m \times p}$ và $B \in \mathbb{R}^{p \times n}$: Tiêu tốn $2mpn$ flops.
 
-### 6.2. Phân tích Cholesky: Cỗ máy giải hệ phương trình xác định dương
+### 6.2. Giải hệ phương trình ma trận tam giác
+Hệ phương trình có ma trận hệ số là ma trận tam giác (dưới hoặc trên) là khối cấu trúc cơ bản nhất của mọi thuật toán đại số tuyến tính số học:
+1. **Thế tiến (Forward substitution)** cho hệ tam giác dưới $L y = b$ (với $L_{ii} \ne 0$):
+   $$
+   \begin{aligned}
+   y_1 &= \frac{b_1}{L_{11}}, \\
+   y_i &= \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad i = 2, \dots, n.
+   \end{aligned}
+   $$
+   Số phép tính cần thực hiện là $\sum_{i=1}^n (2i - 1) = n^2$ flops.
+2. **Thế lùi (Back substitution)** cho hệ tam giác trên $U x = y$: Hoàn toàn tương tự, giải từ $x_n$ ngược lên $x_1$ với chi phí đúng $n^2$ flops.
+
+### 6.3. Phân tích LU cho ma trận vuông tổng quát
+Với một ma trận vuông tổng quát không suy biến $A \in \mathbb{R}^{n \times n}$, phép khử Gauss với chiến lược chọn phần tử trục (pivoting) phân tích ma trận thành dạng:
+
+$$
+A = P L U,
+$$
+
+trong đó $P$ là ma trận hoán vị các hàng, $L$ là ma trận tam giác dưới với các số 1 trên đường chéo chính, và $U$ là ma trận tam giác trên không suy biến.
+- Chi phí phân tích ma trận: Đạt $\frac{2}{3} n^3$ flops.
+- Chi phí giải hệ $A x = b$: Sau khi đã có $P, L, U$, ta áp dụng hoán vị vector $P^T b$, giải thế tiến $L y = P^T b$ ($n^2$ flops) và giải thế lùi $U x = y$ ($n^2$ flops). Tổng chi phí giải sau khi phân tích chỉ là $2n^2$ flops.
+
+### 6.4. Phân tích Cholesky: Cỗ máy giải hệ đối xứng xác định dương
 Để giải hệ phương trình tuyến tính đối xứng xác định dương $H x = b$ (xuất hiện trong mọi bước lặp của phương pháp Newton và bài toán bình phương tối thiểu), ta không bao giờ tính ma trận nghịch đảo $H^{-1}$ một cách trực tiếp vì thao tác này vừa chậm vừa dễ tích lũy sai số số học.
 
 Thay vào đó, ta sử dụng **Phân tích Cholesky**: Mọi ma trận đối xứng dương xác định $H \in \mathbb{S}_{++}^n$ đều có thể phân tích duy nhất thành dạng:
@@ -295,7 +318,7 @@ $$
 
 trong đó $L$ là ma trận tam giác dưới với các phần tử trên đường chéo chính dương ngặt ($L_{ii} > 0$).
 
-Quy trình giải hệ $H x = b$ qua phân tích Cholesky:
+Quy trình giải hệ $H x = b$ qua phân tích Cholesky gồm ba bước:
 1. **Phân tích Cholesky**: Tìm ma trận tam giác dưới $L$ thỏa mãn $H = L L^T$. Chi phí tính toán là:
    $$
    \frac{1}{3} n^3 \text{ flops}.
@@ -303,14 +326,74 @@ Quy trình giải hệ $H x = b$ qua phân tích Cholesky:
 2. **Thế tiến (Forward substitution)**: Giải hệ tam giác dưới $L y = b$. Chi phí là $n^2$ flops.
 3. **Thế lùi (Back substitution)**: Giải hệ tam giác trên $L^T x = y$. Chi phí là $n^2$ flops.
 
-Tổng chi phí để giải hệ là $\frac{1}{3} n^3 + 2n^2 \approx \frac{1}{3} n^3$ flops. Phân tích Cholesky nhanh gấp đôi phân tích LU tổng quát ($\frac{2}{3} n^3$ flops), tiết kiệm một nửa bộ nhớ và có độ ổn định số học vượt trội (không cần hoán vị hàng pivoting).
+Tổng chi phí để giải hệ là $\frac{1}{3} n^3 + 2n^2 \approx \frac{1}{3} n^3$ flops. Phân tích Cholesky nhanh gấp đôi phân tích LU tổng quát ($\frac{2}{3} n^3$ flops), tiết kiệm một nửa bộ nhớ lưu trữ vì chỉ cần lưu nửa tam giác dưới, và có độ ổn định số học tối ưu mà không cần bất kỳ hoán vị hàng nào.
 
-### 6.3. Khai thác Cấu trúc Ma trận Thưa (Sparsity)
+### 6.5. Phân tích $LDL^T$ cho ma trận đối xứng không xác định dấu
+Trong các bài toán tối ưu có ràng buộc đẳng thức, ma trận hệ KKT có dạng:
+
+$$
+K = \begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix}.
+$$
+
+Ma trận $K$ đối xứng nhưng không xác định dương (nó luôn có cả giá trị riêng dương và giá trị riêng âm, tạo thành điểm yên ngựa). Ta không thể dùng phân tích Cholesky trực tiếp cho $K$.
+
+Giải pháp tối ưu số học là **Phân tích $LDL^T$ với ma trận hoán vị**:
+
+$$
+K = P L D L^T P^T,
+$$
+
+trong đó $P$ là ma trận hoán vị, $L$ là ma trận tam giác dưới với đường chéo gồm các số 1, và $D$ là ma trận đường chéo khối gồm các khối con kích thước $1 \times 1$ và $2 \times 2$.
+- Thuật toán Bunch–Kaufman tự động chọn các khối $1 \times 1$ hoặc $2 \times 2$ trên đường chéo để bảo đảm độ ổn định số học mà vẫn duy trì tính đối xứng.
+- Chi phí phân tích: Đúng $\frac{1}{3} n^3$ flops, bằng một nửa chi phí phân tích LU tổng quát.
+
+### 6.6. Khử ma trận khối (Block Elimination) và Phần bù Schur
+Xét hệ phương trình tuyến tính cấu trúc khối:
+
+$$
+\begin{bmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix},
+$$
+
+trong đó $A_{11} \in \mathbb{R}^{n_1 \times n_1}$ là ma trận không suy biến.
+Ta có thể khử biến $x_1$ từ phương trình thứ nhất:
+$$
+x_1 = A_{11}^{-1} (b_1 - A_{12} x_2).
+$$
+Thay biểu thức này vào phương trình thứ hai:
+$$
+A_{21} A_{11}^{-1} (b_1 - A_{12} x_2) + A_{22} x_2 = b_2,
+$$
+dẫn đến hệ phương trình rút gọn theo riêng biến $x_2$:
+$$
+S x_2 = b_2 - A_{21} A_{11}^{-1} b_1,
+$$
+trong đó $S = A_{22} - A_{21} A_{11}^{-1} A_{12}$ chính là **Phần bù Schur** của khối $A_{11}$.
+
+Quy trình giải hệ bằng phương pháp khử khối:
+1. Giải $A_{11} \hat{x}_1 = b_1$ và giải $A_{11} Z = A_{12}$ (gồm $n_2$ hệ phương trình với cùng ma trận hệ số $A_{11}$).
+2. Tính phần bù Schur $S = A_{22} - A_{21} Z$ và vế phải $\tilde{b}_2 = b_2 - A_{21} \hat{x}_1$.
+3. Giải hệ phương trình kích thước nhỏ $S x_2 = \tilde{b}_2$.
+4. Thu hồi nghiệm $x_1$: Giải $A_{11} x_1 = b_1 - A_{12} x_2$.
+
+Phương pháp này rất hiệu quả khi $n_2 \ll n_1$ hoặc khi khối $A_{11}$ có cấu trúc đặc biệt (như ma trận đường chéo, ma trận băng hoặc phân tích Cholesky của nó đã được tính sẵn).
+
+### 6.7. Công thức cập nhật Sherman–Morrison–Woodbury
+Khi giải một chuỗi các hệ phương trình tuyến tính mà ma trận hệ số chỉ bị biến đổi bởi một số hạng hạng thấp (low-rank perturbation):
+
+$$
+(A + U C V)^{-1} = A^{-1} - A^{-1} U (C^{-1} + V A^{-1} U)^{-1} V A^{-1},
+$$
+
+với $A \in \mathbb{R}^{n \times n}$, $U \in \mathbb{R}^{n \times p}$, $C \in \mathbb{R}^{p \times p}$ và $V \in \mathbb{R}^{p \times n}$.
+- Khi $p \ll n$, thay vì phải tính nghịch đảo ma trận $n \times n$ với chi phí $O(n^3)$, ta chỉ cần nghịch đảo ma trận kích thước nhỏ $p \times p$ với chi phí $O(p^3)$ cộng với các phép nhân ma trận.
+- Công thức này là nền tảng của bộ lọc Kalman, thuật toán cập nhật Quasi-Newton (BFGS, DFP, SR1), và các mô hình học trực tuyến (Online Learning).
+
+### 6.8. Khai thác Cấu trúc Ma trận Thưa và Ma trận Băng
 Trong các bài toán học máy quy mô lớn (như đồ thị, bài toán quy hoạch mạng lưới, hay mô hình chuỗi thời gian), ma trận dữ liệu và ma trận Hessian thường chứa phần lớn phần tử bằng 0 (**ma trận thưa - sparse matrix**).
 
 Nếu ma trận $H \in \mathbb{R}^{n \times n}$ là ma trận dạng băng (banded matrix) với độ rộng băng $k \ll n$ (chỉ có các phần tử cách đường chéo chính không quá $k$ vị trí là khác 0):
 - Chi phí phân tích Cholesky giảm từ $O(n^3)$ xuống chỉ còn $O(n k^2)$ flops.
-- Khi $k$ cố định, độ phức tạp là **tuyến tính $O(n)$** theo số chiều biến! Việc nhận diện và khai thác cấu trúc thưa giúp giảm thời gian giải bài toán từ nhiều ngày xuống vài giây.
+- Khi $k$ cố định, độ phức tạp là **tuyến tính $O(n)$** theo số chiều biến. Việc nhận diện và khai thác cấu trúc thưa giúp giảm thời gian giải bài toán từ nhiều ngày xuống vài giây.
 
 ---
 
@@ -362,7 +445,7 @@ $$
 p(b_i \mid w) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left[ -\frac{(b_i - a_i^T w)^2}{2\sigma^2} \right].
 $$
 
-Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood** — hàm hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \dots, b_m)^T$ bằng tích các mật độ thành phần:
+Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood**, tức hàm hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \dots, b_m)^T$ bằng tích các mật độ thành phần:
 
 $$
 \begin{aligned}
@@ -505,6 +588,54 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
    Đây chính là phương trình của một hình ellipse trong mặt phẳng với bán trục lớn bằng $\sigma_1 = 3$ dọc theo trục hoành và bán trục nhỏ bằng $\sigma_2 = 2$ dọc theo trục tung. Ánh xạ ma trận $A$ đã kéo giãn quả cầu tròn thành một khối ellipse có kích thước đúng bằng các giá trị kỳ dị.
 :::
 
+::: exercise 4. So sánh chi phí Flops và Thuật toán Khử khối Schur cho Hệ KKT
+Xét hệ phương trình Newton–KKT xuất hiện trong tối ưu hóa có ràng buộc đẳng thức:
+$$
+\begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} v \\ w \end{bmatrix} = - \begin{bmatrix} g \\ h \end{bmatrix},
+$$
+trong đó $H \in \mathbb{S}_{++}^n$ đối xứng xác định dương và $A \in \mathbb{R}^{p \times n}$ có đủ hạng hàng ($p \le n$).
+1. Trình bày chi tiết thuật toán khử ma trận khối bằng phần bù Schur để tìm nghiệm $(v, w)$.
+2. Phân tích chi phí tính toán (số flops) khi giải hệ theo phương pháp khử khối:
+   - Phân tích Cholesky ma trận $H = L L^T$.
+   - Tính ma trận phần bù Schur $S = -A H^{-1} A^T$ thông qua giải $p$ hệ tam giác.
+   - Giải hệ phương trình theo biến đối ngẫu $w$ và thu hồi nghiệm nguyên thủy $v$.
+3. So sánh chi phí này với phương pháp giải trực tiếp bằng phân tích $LDL^T$ trên toàn bộ ma trận kích thước $(n+p) \times (n+p)$ khi số ràng buộc nhỏ hơn rất nhiều số chiều biến ($p \ll n$).
+:::
+::: solution
+**Lời giải**:
+1. Thuật toán khử ma trận khối Schur:
+   - Từ phương trình thứ nhất, biểu diễn $v$ theo $w$:
+     $$
+     H v + A^T w = -g \implies v = -H^{-1} g - H^{-1} A^T w.
+     $$
+   - Thế biểu thức của $v$ vào phương trình thứ hai $A v = -h$:
+     $$
+     A (-H^{-1} g - H^{-1} A^T w) = -h \iff (A H^{-1} A^T) w = h - A H^{-1} g.
+     $$
+   - Đặt $M = A H^{-1} A^T = -S$. Vì $H \succ 0$ và $A$ đủ hạng hàng, ma trận $M \in \mathbb{S}_{++}^p$ đối xứng dương xác định.
+   - Sau khi giải tìm được $w$, ta thu hồi $v$ từ phương trình: $H v = -(g + A^T w)$.
+
+2. Phân tích chi phí Flops theo từng công đoạn:
+   - Phân tích Cholesky $H = L L^T$: Tốn $\frac{1}{3} n^3$ flops.
+   - Tính $H^{-1} A^T$: Giải $p$ hệ phương trình $H Z = A^T$ (với $Z = H^{-1} A^T \in \mathbb{R}^{n \times p}$) bằng hai lần thế tam giác qua $L$ và $L^T$. Mỗi vector cột tốn $2n^2$ flops, tổng cộng tốn $2p n^2$ flops.
+   - Tính tích ma trận $M = A Z = A H^{-1} A^T$: Nhân ma trận $p \times n$ với ma trận $n \times p$, tận dụng tính đối xứng chỉ cần tính nửa tam giác, tốn khoảng $p^2 n$ flops.
+   - Phân tích Cholesky ma trận kích thước nhỏ $M$ ($p \times p$): Tốn $\frac{1}{3} p^3$ flops.
+   - Giải tìm $w$ và thu hồi $v$: Tốn thêm $2p^2 + 2n^2$ flops (các số hạng bậc hai nhỏ).
+   - Tổng chi phí chủ đạo của phương pháp khử khối là:
+     $$
+     \frac{1}{3} n^3 + 2 p n^2 + p^2 n + \frac{1}{3} p^3 \text{ flops}.
+     $$
+
+3. So sánh hiệu năng:
+   - Nếu giải trực tiếp toàn bộ hệ kích thước $(n+p) \times (n+p)$ bằng phân tích $LDL^T$, chi phí tính toán là:
+     $$
+     \frac{1}{3} (n + p)^3 = \frac{1}{3} n^3 + p n^2 + p^2 n + \frac{1}{3} p^3 \text{ flops}.
+     $$
+   - Khi $p \ll n$ (số ràng buộc đẳng thức rất ít so với số chiều biến tối ưu, chẳng hạn $n = 10000, p = 10$):
+     Chi phí của cả hai phương pháp đều bị chi phối bởi số hạng $\frac{1}{3} n^3$ flops của phân tích ma trận Hessian. Tuy nhiên, phương pháp khử khối cho phép tận dụng trực tiếp tính xác định dương của $H$ để chạy thuật toán Cholesky nhanh nhất và ổn định nhất, không cần theo dõi chiến lược chọn trục (pivoting) phức tạp của $LDL^T$.
+   - Đặc biệt, nếu Hessian $H$ có cấu trúc thưa hoặc đường chéo (như trong phương pháp điểm trong), việc tính $H^{-1} A^T$ chỉ tốn $O(p n)$ flops thay vì $2pn^2$, đưa tổng chi phí của phương pháp khử khối xuống chỉ còn $O(n) + O(p^3)$ flops, nhanh hơn hàng trăm lần so với giải hệ ma trận đầy đủ!
+:::
+
 ---
 
 ## Tóm tắt cốt lõi
@@ -512,9 +643,9 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
 1. **Biểu diễn ma trận**: Gom dữ liệu thành ma trận $A \in \mathbb{R}^{m \times n}$ giúp tính toán đồng thời mọi dự đoán $A w$ và phần dư $r = A w - b$, khai phóng sức mạnh xử lý song song của GPU.
 2. **Gradient và Hướng dốc nhất**: Gradient của hàm mất mát tổng bình phương là $\nabla f(w) = A^T(A w - b)$. Hướng $- \nabla f(w)$ là kim chỉ nam hạ thấp mất mát trong thuật toán Gradient Descent.
 3. **Hessian và Độ cong địa hình**: Ma trận đạo hàm bậc hai $H = A^T A$ luôn nửa xác định dương ($H \succeq 0$), bảo đảm địa hình tối ưu luôn là một mặt lồi paraboloid. Khi $A$ đủ hạng cột, nghiệm cực tiểu là duy nhất.
-4. **Phần bù Schur**: Công cụ mạnh mẽ kiểm tra tính xác định dương của ma trận khối, khử biến trong dạng toàn phương và liên kết với phân phối chuẩn có điều kiện.
+4. **Phần bù Schur**: Công cụ kiểm tra tính xác định dương của ma trận khối, khử biến trong dạng toàn phương và giải hệ phương trình tuyến tính cấu trúc khối lớn.
 5. **Phân tích SVD và Số điều kiện**: SVD giải mã cấu trúc hình học của ma trận qua tích phân rã $U \Sigma V^T$. Tỷ số $\kappa(A) = \sigma_{\max}/\sigma_{\min}$ đo lường độ méo mó của địa hình tối ưu.
-6. **Đại số tuyến tính số**: Phân tích Cholesky ($H = L L^T$) là tiêu chuẩn vàng để giải hệ phương trình Newton với chi phí $\frac{1}{3} n^3$ flops. Việc nhận diện cấu trúc ma trận thưa đưa độ phức tạp về tuyến tính $O(n)$.
+6. **Đại số tuyến tính số**: Phân tích Cholesky ($H = L L^T$) tốn $\frac{1}{3} n^3$ flops là tiêu chuẩn vàng cho ma trận xác định dương. Ma trận đối xứng không xác định dùng $LDL^T$, và các hệ phương trình khối KKT lớn được tối ưu hóa vượt bậc qua kỹ thuật khử khối Schur.
 7. **Cội nguồn xác suất**: Tiêu chuẩn bình phương tối thiểu là hệ quả toán học trực tiếp của nguyên lý Cực đại hóa hợp lý (MLE) khi sai số tuân theo phân phối chuẩn Gauss độc lập.
 
 ---
@@ -525,4 +656,4 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
 - Gene H. Golub, Charles F. Van Loan, *Matrix Computations*, Johns Hopkins University Press.
 - Gilbert Strang, *Linear Algebra and Learning from Data*, Wellesley-Cambridge Press.
 
-Tiếp theo: [Bài 01 — Nhập môn tối ưu hóa, Tập lồi và Hàm lồi](./bai-01-nhap-mon-toi-uu.md).
+Tiếp theo: [Bài 01: Nhập môn tối ưu hóa, Tập lồi và Hàm lồi](./bai-01-nhap-mon-toi-uu.md).

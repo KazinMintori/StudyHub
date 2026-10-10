@@ -10,7 +10,7 @@ description: "Cơ chế thích nghi từng tọa độ của AdaGrad, RMSProp v�
 
 Một trong những thách thức lớn nhất khi huấn luyện mạng nơ-ron sâu là: **Các tham số khác nhau thường đòi hỏi tốc độ cập nhật hoàn toàn khác nhau**. Trong các mô hình ngôn ngữ lớn (LLM) hay hệ thống gợi ý, các đặc trưng hiếm (rare tokens/features) chỉ xuất hiện vài lần trong hàng triệu mẫu dữ liệu, khiến gradient của chúng rất nhỏ và thưa thớt. Ngược lại, các từ nối hay đặc trưng phổ biến xuất hiện liên tục với gradient dồn dập. Nếu ép toàn bộ mô hình dùng chung một tốc độ học $\eta$, các tham số hiếm sẽ hầu như không kịp học, trong khi các tham số phổ biến lại dao động dữ dội.
 
-Lớp thuật toán tối ưu thích nghi (Adaptive Optimization) — dẫn đầu bởi AdaGrad, RMSProp và Adam — giải quyết bài toán này bằng cách tự động gán cho mỗi tham số một tốc độ học riêng biệt, biến thiên linh hoạt theo lịch sử biến động của gradient.
+Lớp thuật toán tối ưu thích nghi (Adaptive Optimization), tiêu biểu là AdaGrad, RMSProp và Adam, giải quyết bài toán này bằng cách tự động gán cho mỗi tham số một tốc độ học riêng biệt, biến thiên linh hoạt theo lịch sử biến động của gradient.
 
 Song song với đó, các phương pháp xấp xỉ bậc hai như **Gradient liên hợp (Conjugate Gradient - CG)** và **Quasi-Newton (BFGS, L-BFGS)** khai thác thông tin độ cong của ma trận Hessian mà không cần lưu trữ ma trận đạo hàm bậc hai khổng lồ trong bộ nhớ.
 
@@ -306,4 +306,4 @@ Dành cho bạn đọc muốn nghiên cứu chuyên sâu về các thuật toán
 - **John Duchi, Elad Hazan & Yoram Singer** (2011), *Adaptive Subgradient Methods for Online Learning and Stochastic Optimization*, JMLR. Nguồn gốc của thuật toán AdaGrad và giải tích subgradient thích nghi.
 - **Jonathan Richard Shewchuk**, *An Introduction to the Conjugate Gradient Method Without the Agonizing Pain*, Carnegie Mellon University. Tài liệu nhập môn trực quan và sâu sắc nhất về phương pháp Gradient liên hợp.
 
-Tiếp theo: [Bài 07 — Quy hoạch tuyến tính và Quy hoạch động Bellman](./bai-07-quy-hoach-tuyen-tinh-va-dong.md).
+Tiếp theo: [Bài 07: Quy hoạch tuyến tính và Quy hoạch động Bellman](./bai-07-quy-hoach-tuyen-tinh-va-dong.md).

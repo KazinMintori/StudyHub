@@ -10,7 +10,7 @@ description: "Lý thuyết đối ngẫu Lagrange toàn diện: Hàm Lagrangian,
 
 Khi đối mặt với một bài toán tối ưu có ràng buộc trong thực tế, làm thế nào để chúng ta khẳng định chắc chắn rằng phương án tìm được là phương án tốt nhất, không thể cải thiện thêm được nữa? Việc tìm ra một điểm khả thi có chi phí thấp mới chỉ giải quyết một nửa bài toán. Nửa còn lại đòi hỏi một chứng nhận toán học không thể bác bỏ: Một ngưỡng cận dưới mà mọi phương án hợp lệ đều không thể vượt qua. Nếu ta chứng minh được rằng chi phí thực tế không bao giờ thấp hơn một ngưỡng $d^*$, và đồng thời ta tìm được một phương án khả thi đạt đúng ngưỡng $d^*$ đó, thì phương án ấy chắc chắn là nghiệm tối ưu toàn cục.
 
-Lý thuyết **Đối ngẫu Lagrange (Lagrangian Duality)** chính là nền tảng toán học thiết lập các chứng nhận cận dưới như vậy. Bằng cách chuyển đổi các ràng buộc cứng thành các khoản chi phí phạt mềm tích hợp vào hàm mục tiêu, đối ngẫu Lagrange mở ra một bài toán song hành phản chiếu bài toán gốc. Không chỉ cung cấp công cụ nhận diện nghiệm, lý thuyết này còn mở rộng sang hàm liên hợp Fenchel, hình học siêu phẳng tựa, lý thuyết trò chơi minimax, phân tích độ nhạy kinh tế học (giá bóng), và khai sinh ra hệ điều kiện Karush–Kuhn–Tucker (KKT) — chuẩn mực tối cao của giải tích tối ưu hiện đại.
+Lý thuyết **Đối ngẫu Lagrange (Lagrangian Duality)** chính là nền tảng toán học thiết lập các chứng nhận cận dưới như vậy. Bằng cách chuyển đổi các ràng buộc cứng thành các khoản chi phí phạt mềm tích hợp vào hàm mục tiêu, đối ngẫu Lagrange mở ra một bài toán song hành phản chiếu bài toán gốc. Không chỉ cung cấp công cụ nhận diện nghiệm, lý thuyết này còn mở rộng sang hàm liên hợp Fenchel, hình học siêu phẳng tựa, lý thuyết trò chơi minimax, phân tích độ nhạy kinh tế học (giá bóng), và khai sinh ra hệ điều kiện Karush–Kuhn–Tucker (KKT), chuẩn mực tối cao của giải tích tối ưu hiện đại.
 
 ---
 
@@ -590,31 +590,122 @@ Vector $\lambda$ ở Hệ 2 chính là **chứng chỉ vô nghiệm** của Hệ
 
 ---
 
-## 13. Tối ưu hai hàm Toàn phương và Bổ đề S-procedure
+## 13. Tối ưu hai hàm Toàn phương và Bổ đề S-procedure (Phụ lục B)
 
-Một kết quả kinh điển trong lý thuyết điều khiển tự động và tối ưu hóa bền vững là bài toán tối ưu với hai hàm toàn phương.
+Trong tối ưu hóa phi lồi, đối ngẫu mạnh thường hiếm khi xảy ra. Tuy nhiên, tồn tại một ngoại lệ toán học tuyệt đẹp và rất quan trọng trong kỹ thuật điều khiển tự động và học máy bền vững: **Bài toán tối ưu với đúng hai hàm toàn phương**.
 
-Xét hai hàm toàn phương $F_1(x) = x^T A_1 x + 2 b_1^T x + c_1$ và $F_2(x) = x^T A_2 x + 2 b_2^T x + c_2$. Ta quan tâm đến bài toán kiểm tra xem bất đẳng thức $F_1(x) \le 0$ có kéo theo $F_2(x) \le 0$ hay không:
-
-$$
-F_1(x) \le 0 \implies F_2(x) \le 0.
-$$
-
-Điều này tương đương với việc bài toán tối ưu sau đây có giá trị tối ưu không âm:
+### 13.1. Bài toán cực tiểu hóa với một ràng buộc toàn phương
+Xét bài toán tối ưu với biến $x \in \mathbb{R}^n$:
 
 $$
-\min_x \quad -F_2(x) \quad \text{sao cho} \quad F_1(x) \le 0.
+\begin{aligned}
+\min_{x \in \mathbb{R}^n} \quad & f_0(x) = x^T A_0 x + 2 b_0^T x + c_0 \\
+\text{sao cho} \quad & f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
+\end{aligned}
 $$
 
-Mặc dù bài toán này nhìn chung là phi lồi (nếu ma trận $A_1$ hoặc $-A_2$ không bán xác định dương), một định lý sâu sắc khẳng định rằng: Nếu tồn tại điểm $\bar x$ sao cho $F_1(\bar x) < 0$ (điều kiện Slater), thì **đối ngẫu mạnh luôn luôn đạt được**.
+trong đó $A_0, A_1 \in \mathbb{S}^n$ là các ma trận đối xứng thực tùy ý.
+Điểm đáng chú ý ở đây là: Các ma trận $A_0, A_1$ **hoàn toàn không cần xác định dương**. Do đó, bài toán này nhìn chung là **phi lồi**: Hàm mục tiêu có thể có dạng yên ngựa, và miền ràng buộc có thể là phần ngoài của một hyperboloid.
 
-Hệ quả là **Bổ đề S-procedure**:
-> Bất đẳng thức $F_1(x) \le 0 \implies F_2(x) \le 0$ nghiệm đúng khi và chỉ khi tồn tại một số thực không âm $\lambda \ge 0$ sao cho với mọi $x$:
+Hàm Lagrangian của bài toán:
+$$
+L(x, \lambda) = x^T (A_0 + \lambda A_1) x + 2 (b_0 + \lambda b_1)^T x + (c_0 + \lambda c_1).
+$$
+
+Để hàm Lagrangian bị chặn dưới theo $x$, điều kiện cần và đủ là ma trận liên kết phải nửa xác định dương: $A_0 + \lambda A_1 \succeq 0$.
+Khi $A_0 + \lambda A_1 \succ 0$, điểm cực tiểu duy nhất của $L(x, \lambda)$ theo $x$ là:
+$$
+x^*(\lambda) = -(A_0 + \lambda A_1)^{-1} (b_0 + \lambda b_1).
+$$
+Thay nghiệm này vào, ta thu được hàm đối ngẫu Lagrange:
+$$
+g(\lambda) = c_0 + \lambda c_1 - (b_0 + \lambda b_1)^T (A_0 + \lambda A_1)^{-1} (b_0 + \lambda b_1).
+$$
+
+Sử dụng Bổ đề phần bù Schur, bài toán đối ngẫu Lagrange $\max_{\lambda \ge 0} g(\lambda)$ được viết tương đương dưới dạng một bài toán Quy hoạch nửa xác định (SDP):
+
+$$
+\begin{aligned}
+\max_{\lambda \ge 0, \, \gamma \in \mathbb{R}} \quad & \gamma \\
+\text{sao cho} \quad & \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1 \\ (b_0 + \lambda b_1)^T & c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
+\end{aligned}
+$$
+
+### 13.2. Định lý Dines và Cội nguồn của Đối ngẫu mạnh Phi lồi
+Một câu hỏi nền tảng đặt ra: Tại sao bài toán này phi lồi nhưng đối ngẫu mạnh $d^* = p^*$ vẫn luôn được bảo đảm?
+
+Câu trả lời nằm ở một định lý hình học sâu sắc của nhà toán học L. L. Dines (1941):
+> **Định lý Dines**: Cho hai hàm toàn phương tùy ý $f_0(x), f_1(x)$ trên $\mathbb{R}^n$. Tập ảnh của không gian $\mathbb{R}^n$ qua cặp hàm số:
 > $$
-> F_2(x) \le \lambda F_1(x) \quad \Longleftrightarrow \quad \begin{bmatrix} A_2 & b_2 \\ b_2^T & c_2 \end{bmatrix} \preceq \lambda \begin{bmatrix} A_1 & b_1 \\ b_1^T & c_1 \end{bmatrix}.
+> \mathcal{A} = \left\{ (f_1(x), f_0(x)) \in \mathbb{R}^2 \mid x \in \mathbb{R}^n \right\}
+> $$
+> luôn là một **tập lồi** trong mặt phẳng $\mathbb{R}^2$.
+
+Mặc dù hàm số phi tuyến và phi lồi, sự tương tác đồng thời giữa đúng hai hàm toàn phương không bao giờ tạo ra các chỗ "lõm" trong không gian ảnh hai chiều!
+Vì tập ảnh $\mathcal{A}$ là một tập lồi, tập trên (epigraph) tương ứng $\mathcal{A} + \mathbb{R}_+^2$ cũng là tập lồi.
+Khi tồn tại điểm Slater ngặt $\bar{x}$ sao cho $f_1(\bar{x}) < 0$, ta có thể áp dụng Định lý siêu phẳng tách để kẻ một tiếp tuyến phân tách điểm tối ưu $(0, p^*)$ khỏi tập lồi này. Pháp tuyến của siêu phẳng tách chính là nhân tử Lagrange tối ưu $\lambda^* \ge 0$, và sự tồn tại của tiếp tuyến bảo đảm rằng:
+$$
+p^* = d^* \quad (\text{Khe hở đối ngẫu bằng 0}).
+$$
+
+### 13.3. Bổ đề S-procedure
+Từ tính chất đối ngẫu mạnh của hai hàm toàn phương, ta thu được một công cụ giải tích có tầm ảnh hưởng sâu rộng trong lý thuyết điều khiển và học máy: **Bổ đề S-procedure**.
+
+Xét bài toán kiểm tra xem một điều kiện ràng buộc toàn phương $F_1(x) \le 0$ có bảo đảm một tiêu chuẩn chất lượng toàn phương $F_0(x) \le 0$ hay không:
+
+$$
+F_1(x) \le 0 \implies F_0(x) \le 0.
+$$
+
+Giả sử tồn tại điểm $\bar{x}$ sao cho $F_1(\bar{x}) < 0$ (điều kiện Slater).
+Mệnh đề kéo theo trên tương đương với việc bài toán tối ưu sau có giá trị tối ưu không âm:
+$$
+\min_{x} \quad -F_0(x) \quad \text{sao cho} \quad F_1(x) \le 0.
+$$
+Áp dụng đối ngẫu mạnh, giá trị tối ưu của bài toán trên lớn hơn hoặc bằng 0 khi và chỉ khi bài toán đối ngẫu của nó khả thi với giá trị không âm.
+
+> **Định lý Bổ đề S-procedure**: Mệnh đề $F_1(x) \le 0 \implies F_0(x) \le 0$ nghiệm đúng với mọi $x \in \mathbb{R}^n$ khi và chỉ khi tồn tại một số thực không âm $\lambda \ge 0$ sao cho:
+> $$
+> F_0(x) \le \lambda F_1(x) \quad \forall x \in \mathbb{R}^n,
+> $$
+> điều này tương đương với bất đẳng thức ma trận nửa xác định:
+> $$
+> \begin{bmatrix} A_0 & b_0 \\ b_0^T & c_0 \end{bmatrix} \preceq \lambda \begin{bmatrix} A_1 & b_1 \\ b_1^T & c_1 \end{bmatrix}.
 > $$
 
-Bổ đề S-procedure chuyển một bài toán suy luận phi tuyến tính trên toàn bộ không gian biến $x$ thành một bất đẳng thức ma trận tuyến tính (LMI) đơn giản theo biến vô hướng $\lambda \ge 0$.
+**Ý nghĩa phương pháp**: Thay vì phải giải một bài toán kiểm thử trên vô hạn điểm $x \in \mathbb{R}^n$, S-procedure chuyển đổi bài toán thành một bất đẳng thức ma trận tuyến tính (LMI) chỉ theo một biến số thực duy nhất $\lambda \ge 0$. Ta có thể kiểm tra điều này bằng thuật toán phân tích Cholesky chỉ trong vài micro-giây!
+
+### 13.4. Bổ đề Finsler (Finsler's Lemma)
+Một biến thể thuần nhất kinh điển của S-procedure là **Bổ đề Finsler**:
+Cho hai ma trận đối xứng $A, B \in \mathbb{S}^n$. Xét dạng toàn phương thuần nhất:
+
+$$
+x^T B x = 0, \, x \ne 0 \implies x^T A x > 0.
+$$
+
+Bổ đề Finsler khẳng định rằng mệnh đề trên đúng khi và chỉ khi tồn tại một hệ số vô hướng $\mu \in \mathbb{R}$ sao cho:
+$$
+A + \mu B \succ 0.
+$$
+Kết quả này cho phép chuyển đổi bài toán kiểm tra độ cong dương trên một mặt siêu cong thành việc tìm một ma trận tổng dương xác định trong không gian đại số.
+
+### 13.5. Ứng dụng trong Kiểm thử Độ bền bỉ của Mô hình AI (Robust AI Verification)
+Trong học máy an toàn, ta cần bảo đảm rằng một mô hình mạng nơ-ron hoặc bộ phân loại không bị đánh lừa bởi các nhiễu đối kháng (adversarial perturbations).
+
+Giả sử biên phân chia quyết định của mô hình trong không gian đặc trưng cục bộ được xấp xỉ bằng một hàm bậc hai $q(x) = x^T A x + 2 b^T x + c$. Vùng an toàn của hệ thống là $q(x) \le 0$.
+Tập hợp các nhiễu vật lý hoặc sai số cảm biến được mô hình hóa bằng một ellipsoid bất định:
+$$
+\mathcal{E} = \left\{ x \in \mathbb{R}^n \mid (x - x_0)^T P (x - x_0) \le 1 \right\} \quad (P \succ 0).
+$$
+Để chứng minh hệ thống an toàn tuyệt đối trước mọi nhiễu trong $\mathcal{E}$, ta cần chứng minh:
+$$
+(x - x_0)^T P (x - x_0) - 1 \le 0 \implies x^T A x + 2 b^T x + c \le 0.
+$$
+Áp dụng Bổ đề S-procedure, ta chỉ cần tìm một số thực $\lambda \ge 0$ thỏa mãn bất đẳng thức ma trận:
+$$
+\begin{bmatrix} A & b \\ b^T & c \end{bmatrix} \preceq \lambda \begin{bmatrix} P & -P x_0 \\ -x_0^T P & x_0^T P x_0 - 1 \end{bmatrix}.
+$$
+Bằng cách giải bài toán LMI này, ta có được một chứng nhận an toàn toán học nghiêm ngặt cho mô hình AI mà không cần phải thực hiện bất kỳ phép đo thử nghiệm ngẫu nhiên nào.
 
 ---
 
@@ -780,6 +871,47 @@ $$
    Cả ba điều kiện của Hệ 2 trong Bổ đề Farkas đều được thỏa mãn. Vector $\lambda = (1, 1, 3)^T$ là một chứng chỉ toán học tuyệt đối khẳng định rằng hệ bất đẳng thức ban đầu vô nghiệm.
 :::
 
+::: exercise 5. Bổ đề S-procedure và Điều kiện Bao hàm giữa hai Ellipsoid
+Xét hai ellipsoid trong $\mathbb{R}^n$ có tâm tại gốc tọa độ:
+$$
+\mathcal{E}_1 = \{x \in \mathbb{R}^n \mid x^T A_1 x \le 1\}, \qquad \mathcal{E}_2 = \{x \in \mathbb{R}^n \mid x^T A_2 x \le 1\},
+$$
+với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác định dương.
+1. Hãy viết điều kiện bao hàm $\mathcal{E}_1 \subseteq \mathcal{E}_2$ dưới dạng mệnh đề kéo theo giữa hai bất đẳng thức toàn phương.
+2. Áp dụng Bổ đề S-procedure để thiết lập điều kiện ma trận tương đương cho mệnh đề bao hàm trên, và chứng minh rằng $\mathcal{E}_1 \subseteq \mathcal{E}_2 \iff A_1 \succeq A_2$.
+3. Giải thích ý nghĩa hình học của kết quả này trong bài toán xấp xỉ bao bọc tập dữ liệu học máy.
+:::
+::: solution
+**Lời giải**:
+1. Điều kiện $\mathcal{E}_1 \subseteq \mathcal{E}_2$ đồng nghĩa với việc mọi điểm $x \in \mathcal{E}_1$ đều phải thuộc $\mathcal{E}_2$:
+   $$
+   x^T A_1 x - 1 \le 0 \implies x^T A_2 x - 1 \le 0.
+   $$
+   Đặt $F_1(x) = x^T A_1 x - 1$ và $F_0(x) = x^T A_2 x - 1$. Vì tại gốc tọa độ $x = 0$, ta có $F_1(0) = -1 < 0$, điều kiện Slater ngặt thỏa mãn hoàn toàn.
+
+2. Áp dụng Bổ đề S-procedure: Mệnh đề $F_1(x) \le 0 \implies F_0(x) \le 0$ đúng khi và chỉ khi tồn tại $\lambda \ge 0$ sao cho:
+   $$
+   F_0(x) \le \lambda F_1(x) \quad \forall x \in \mathbb{R}^n.
+   $$
+   Thay biểu thức của $F_0, F_1$:
+   $$
+   x^T A_2 x - 1 \le \lambda (x^T A_1 x - 1) \iff x^T (\lambda A_1 - A_2) x + (1 - \lambda) \ge 0 \quad \forall x \in \mathbb{R}^n.
+   $$
+   Bất đẳng thức này nghiệm đúng với mọi $x \in \mathbb{R}^n$ khi và chỉ khi:
+   - Hệ số tự do không âm: $1 - \lambda \ge 0 \implies \lambda \le 1$.
+   - Ma trận liên kết nửa xác định dương: $\lambda A_1 - A_2 \succeq 0 \implies A_2 \preceq \lambda A_1$.
+
+   Vì $\lambda \le 1$ và $A_1 \succ 0$, ta có:
+   $$
+   A_2 \preceq \lambda A_1 \preceq 1 \cdot A_1 = A_1 \implies A_1 \succeq A_2.
+   $$
+   Ngược lại, nếu $A_1 \succeq A_2$, ta chỉ cần chọn đúng $\lambda = 1 \ge 0$, lúc đó $x^T A_2 x - 1 \le 1 \cdot (x^T A_1 x - 1)$ tự động thỏa mãn với mọi $x$.
+   Do đó, điều kiện cần và đủ để $\mathcal{E}_1 \subseteq \mathcal{E}_2$ là $A_1 \succeq A_2$.
+
+3. Ý nghĩa hình học:
+   Độ dài các bán trục của ellipsoid $\mathcal{E}$ tỷ lệ nghịch với căn bậc hai của các giá trị riêng của ma trận định hình ($r_i = 1/\sqrt{\lambda_i(A)}$). Điều kiện $A_1 \succeq A_2$ đồng nghĩa với việc mọi giá trị riêng của $A_1$ đều lớn hơn hoặc bằng giá trị riêng tương ứng của $A_2$ ($\lambda_i(A_1) \ge \lambda_i(A_2)$), kéo theo mọi bán trục của $\mathcal{E}_1$ đều ngắn hơn hoặc bằng bán trục của $\mathcal{E}_2$ trên mọi phương hướng không gian.
+:::
+
 ---
 
 ## Tóm tắt cốt lõi
@@ -791,13 +923,14 @@ $$
 5. **Điểm yên ngựa Minimax**: Điểm tối ưu của bài toán đối ngẫu mạnh chính là điểm yên ngựa của hàm Lagrangian, tương ứng với trạng thái cân bằng trong lý thuyết trò chơi và huấn luyện đối kháng (GANs).
 6. **Hệ điều kiện KKT**: Bốn nhóm điều kiện (Khả thi gốc, Khả thi đối ngẫu, Bù trừ, Triệt tiêu gradient) xác lập tiêu chuẩn cần và đủ cho tính tối ưu toàn cục của các bài toán lồi khả vi.
 7. **Chứng chỉ vô nghiệm và Bổ đề Farkas**: Đối ngẫu cung cấp cơ chế nhị phân kiểm tra tính khả thi của hệ thống ràng buộc mà không cần thử nghiệm từng điểm.
+8. **Hai hàm toàn phương và Bổ đề S-procedure**: Mặc dù phi lồi, bài toán cực tiểu hóa hàm toàn phương với một ràng buộc toàn phương luôn đạt đối ngẫu mạnh nhờ tính lồi của tập ảnh Dines trong $\mathbb{R}^2$. S-procedure đưa điều kiện kiểm thử an toàn phi tuyến về một bất đẳng thức ma trận tuyến tính (LMI) hiệu quả.
 
 ---
 
 ## Tài liệu tham khảo
 
-- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+- Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press. Đọc kỹ Chương 5 (Đối ngẫu Lagrange), Phụ lục B (Các bài toán với hai hàm toàn phương, S-procedure, chứng minh đối ngẫu mạnh).
 - Dimitri P. Bertsekas, *Convex Optimization Theory*, Athena Scientific.
 - R. Tyrrell Rockafellar, *Convex Analysis*, Princeton University Press.
 
-Tiếp theo: [Bài 04 — Thuật toán Gradient Descent và Phương pháp Newton](./bai-04-gradient-newton.md).
+Tiếp theo: [Bài 04: Thuật toán Gradient Descent và Phương pháp Newton](./bai-04-gradient-newton.md).

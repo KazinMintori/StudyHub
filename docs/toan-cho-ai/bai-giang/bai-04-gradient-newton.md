@@ -15,7 +15,7 @@ Quá trình tìm đường trong không gian tối ưu hóa đòi hỏi thuật 
 2. **Chọn độ dài bước** (Step Size / Learning Rate): Di chuyển bao xa theo hướng đã chọn để không bị vọt qua đáy thung lũng?
 3. **Tiêu chí dừng** (Stopping Criteria): Khi nào mức độ tiệm cận nghiệm đã đủ tin cậy để dừng tính toán?
 
-Chúng ta sẽ khảo sát một phổ rộng các thuật toán: Từ phương pháp dốc nhất theo các chuẩn khác nhau ($L_2, L_1, L_\infty$), kỹ thuật tìm kiếm bước Backtracking (Armijo), phương pháp Newton bậc hai và đại lượng Newton decrement, mở rộng sang tối ưu ràng buộc đẳng thức qua hệ Newton–KKT, lý thuyết hàm tự tương hợp Nesterov–Nemirovski, và đỉnh cao là **Phương pháp điểm trong (Interior-Point Methods)** — cỗ máy giải các bài toán tối ưu lồi tổng quát có ràng buộc bất đẳng thức.
+Chúng ta sẽ khảo sát một phổ rộng các thuật toán: Từ phương pháp dốc nhất theo các chuẩn khác nhau ($L_2, L_1, L_\infty$), kỹ thuật tìm kiếm bước Backtracking (Armijo), phương pháp Newton bậc hai và đại lượng Newton decrement, mở rộng sang tối ưu ràng buộc đẳng thức qua hệ Newton–KKT, lý thuyết hàm tự tương hợp Nesterov–Nemirovski, và đỉnh cao là **Phương pháp điểm trong (Interior-Point Methods)**, cỗ máy giải các bài toán tối ưu lồi tổng quát có ràng buộc bất đẳng thức.
 
 ---
 
@@ -245,6 +245,25 @@ $$
 \|r(x + t \Delta x, \nu + t \Delta \nu)\|_2 \le (1 - \alpha t) \|r(x, \nu)\|_2.
 $$
 
+### 6.4. Kỹ thuật giải số học Hệ phương trình Newton–KKT (Phụ lục C)
+Mỗi bước lặp của phương pháp Newton đòi hỏi phải giải hệ phương trình tuyến tính khối Newton–KKT:
+$$
+\begin{bmatrix} H & A^T \\ A & 0 \end{bmatrix} \begin{bmatrix} \Delta x \\ w \end{bmatrix} = - \begin{bmatrix} g \\ h \end{bmatrix}.
+$$
+
+Trong thực tế tính toán, ta không bao giờ tính ma trận nghịch đảo trực tiếp mà lựa chọn một trong hai chiến lược số học chuyên biệt:
+1. **Phương pháp Khử ma trận khối bằng Phần bù Schur**:
+   Vì Hessian $H = \nabla^2 f(x) \succ 0$, ta tính phân tích Cholesky của $H$: $H = L L^T$ ($\frac{1}{3} n^3$ flops).
+   Từ phương trình thứ nhất, $\Delta x = -H^{-1} g - H^{-1} A^T w$.
+   Thay vào phương trình thứ hai, ta giải hệ phương trình rút gọn kích thước $p \times p$ theo nhân tử đối ngẫu $w$:
+   $$
+   (A H^{-1} A^T) w = h - A H^{-1} g.
+   $$
+   Ma trận $M = A H^{-1} A^T \succ 0$ là ma trận đối xứng xác định dương. Ta giải hệ $p \times p$ bằng phân tích Cholesky trên $M$ với chi phí $\frac{1}{3} p^3$ flops, sau đó thu hồi $\Delta x$.
+   Phương pháp này tối ưu vượt trội khi số ràng buộc nhỏ ($p \ll n$) hoặc khi ma trận Hessian $H$ có cấu trúc thưa, đường chéo (như trong phương pháp điểm trong).
+2. **Phương pháp Phân tích $LDL^T$ trực tiếp**:
+   Khi số ràng buộc lớn ($p \approx n$) hoặc khi $H$ không thuận tiện để đảo khối, ta phân tích toàn bộ ma trận hệ KKT kích thước $(n+p) \times (n+p)$ bằng phân tích $P L D L^T P^T$ (thuật toán Bunch–Kaufman) với chi phí $\frac{1}{3} (n+p)^3$ flops. Phương pháp này bảo đảm độ ổn định số học tối ưu ngay cả khi ma trận KKT có các giá trị riêng mang dấu đối nghịch.
+
 ---
 
 ## 7. Phương pháp Điểm trong (Interior-Point Methods)
@@ -434,4 +453,4 @@ Như vậy, chỉ sau đúng **9 bước lặp ngoài**, thuật toán hàm ch�
 - Yurii Nesterov, *Lectures on Convex Optimization*, Springer.
 - Jorge Nocedal, Stephen J. Wright, *Numerical Optimization*, Springer.
 
-Tiếp theo: [Bài 05 — Tối ưu hóa trong Huấn luyện Học sâu: Mini-batch SGD và Momentum](./bai-05-toi-uu-huan-luyen.md).
+Tiếp theo: [Bài 05: Tối ưu hóa trong Huấn luyện Học sâu: Mini-batch SGD và Momentum](./bai-05-toi-uu-huan-luyen.md).

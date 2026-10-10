@@ -26,13 +26,13 @@ $$
 J(\theta) = \frac{1}{N} \sum_{i=1}^N \ell_i(\theta) = \frac{\ell_1(\theta) + \ell_2(\theta) + \cdots + \ell_N(\theta)}{N}.
 $$
 
-Nếu áp dụng kỹ thuật điều chuẩn (regularization), ta cộng thêm số hạng phạt độ phức tạp $\rho R(\theta)$ (với hệ số phạt $\rho > 0$). Gradient của hàm mục tiêu theo tham số $\theta$ được tính bằng thuật toán lan truyền ngược (backpropagation) — về bản chất là việc áp dụng quy tắc chuỗi giải tích trên đồ thị tính toán của mạng nơ-ron.
+Nếu áp dụng kỹ thuật điều chuẩn (regularization), ta cộng thêm số hạng phạt độ phức tạp $\rho R(\theta)$ (với hệ số phạt $\rho > 0$). Gradient của hàm mục tiêu theo tham số $\theta$ được tính bằng thuật toán lan truyền ngược (backpropagation), về bản chất là việc áp dụng quy tắc chuỗi giải tích trên đồ thị tính toán của mạng nơ-ron.
 
 Ở đây, chúng ta cần phân biệt rạch ròi giữa hai mục tiêu hoàn toàn khác nhau:
 1. **Bài toán tối ưu (Optimization)**: Tìm bộ tham số $\theta$ để cực tiểu hóa hàm mất mát thực nghiệm $J(\theta)$ trên dữ liệu đã biết trong tập huấn luyện.
 2. **Khả năng khái quát hóa (Generalization)**: Đo lường chất lượng dự đoán của mô hình trên phân phối dữ liệu thực tế chưa từng xuất hiện trong quá trình huấn luyện.
 
-Một thuật toán tối ưu hội tụ hoàn hảo về điểm có mất mát bằng 0 trên tập huấn luyện hoàn toàn không đồng nghĩa với việc mô hình sẽ hoạt động tốt trên thực tế — nó có thể đang rơi vào bẫy học vẹt (overfitting). Do đó, trong thực hành ta luôn chia tách dữ liệu thành:
+Một thuật toán tối ưu hội tụ hoàn hảo về điểm có mất mát bằng 0 trên tập huấn luyện hoàn toàn không đồng nghĩa với việc mô hình sẽ hoạt động tốt trên thực tế vì mô hình có thể rơi vào bẫy học vẹt (overfitting). Do đó, trong thực hành ta luôn chia tách dữ liệu thành:
 - **Tập huấn luyện (Training set)**: Dùng trực tiếp để tính gradient và cập nhật tham số.
 - **Tập xác thực (Validation set)**: Dùng để tinh chỉnh siêu tham số và theo dõi hiện tượng overfitting.
 - **Tập kiểm thử (Test set)**: Giữ độc lập tuyệt đối cho lần đánh giá năng lực cuối cùng.
@@ -229,7 +229,7 @@ Trước khi thuật toán tối ưu hóa bắt đầu bước đi đầu tiên,
 Nếu ta khởi tạo toàn bộ trọng số của một tầng ẩn bằng 0:
 - Tất cả các nơ-ron trong tầng đó sẽ nhận tín hiệu đầu vào giống nhau và sinh ra đầu ra giống hệt nhau.
 - Trong pha lan truyền ngược, tất cả các nơ-ron sẽ nhận cùng một gradient, dẫn tới việc chúng được cập nhật cùng một giá trị như nhau ở mọi bước lặp.
-- Mạng nơ-ron hoàn toàn mất khả năng học các đặc trưng đa dạng — hiện tượng này gọi là **sự sụp đổ đối xứng (symmetry trap)**.
+- Mạng nơ-ron hoàn toàn mất khả năng học các đặc trưng đa dạng, hiện tượng này được gọi là **sự sụp đổ đối xứng (symmetry trap)**.
 
 Để phá vỡ đối xứng, ta bắt buộc phải khởi tạo trọng số ngẫu nhiên. Nhưng ngẫu nhiên với phương sai bao nhiêu?
 - Nếu phương sai quá lớn: Tín hiệu kích hoạt sẽ phóng đại theo cấp số nhân qua các tầng, dẫn tới hiện tượng **bùng nổ gradient (exploding gradients)**.
@@ -337,4 +337,4 @@ Dành cho bạn đọc muốn nghiên cứu chuyên sâu về tối ưu hóa tro
 - **Ian Goodfellow, Yoshua Bengio & Aaron Courville**, *Deep Learning*, MIT Press. Đọc kỹ Chương 8 (Tối ưu hóa trong huấn luyện mô hình học sâu: Các thách thức giải tích, thuật toán cơ bản, thuật toán với momentum, và chiến lược khởi tạo).
 - **Xavier Glorot & Yoshua Bengio** (2010), *Understanding the difficulty of training deep feedforward neural networks*, AISTATS. Công trình nền tảng khai sinh phương pháp khởi tạo chuẩn hóa (Glorot / Xavier initialization).
 
-Tiếp theo: [Bài 06 — Các phương pháp tối ưu thích nghi: AdaGrad, RMSProp và Adam](./bai-06-phuong-phap-thich-nghi.md).
+Tiếp theo: [Bài 06: Các phương pháp tối ưu thích nghi: AdaGrad, RMSProp và Adam](./bai-06-phuong-phap-thich-nghi.md).
