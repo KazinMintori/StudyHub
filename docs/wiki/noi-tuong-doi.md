@@ -15,7 +15,7 @@ Nội tương đối của tập C gồm các điểm x của C sao cho một qu
 
 **Định nghĩa.** $\operatorname{relint} C = \{x \in C : B(x, r) \cap \operatorname{aff} C \subseteq C \text{ với một } r > 0\}$. Biên tương đối là $\operatorname{cl} C \setminus \operatorname{relint} C$.
 
-**Vì sao cần.** Phần trong thông thường phụ thuộc vào không gian chứa tập: cùng một đoạn thẳng có phần trong khác rỗng trong $\mathbb R$ nhưng rỗng trong $\mathbb R^2$. Nội tương đối không phụ thuộc vào điều đó, nên là khái niệm đúng cho các tập thấp chiều, chẳng hạn miền khả thi có ràng buộc đẳng thức. Mọi tập lồi khác rỗng đều có nội tương đối khác rỗng. Nguồn: Convex Optimization, §2.1.3.
+**Vì sao cần.** Phần trong thông thường phụ thuộc vào không gian chứa tập: Cùng một đoạn thẳng có phần trong khác rỗng trong $\mathbb R$ nhưng rỗng trong $\mathbb R^2$. Nội tương đối không phụ thuộc vào điều đó, nên là khái niệm đúng cho các tập thấp chiều, chẳng hạn miền khả thi có ràng buộc đẳng thức. Mọi tập lồi khác rỗng đều có nội tương đối khác rỗng. Nguồn: Convex Optimization, §2.1.3.
 
 ## Ví dụ
 

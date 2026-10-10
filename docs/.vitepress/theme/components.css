@@ -33,19 +33,43 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .vp-doc th { background: var(--canvas); font-weight: 600; }
 .vp-doc tr { background: var(--paper); border: 0; }
 .vp-doc tr:nth-child(2n) { background: var(--canvas); }
-.vp-doc mjx-container { min-width: 0; color: inherit; }
-/* MathML ẩn dành cho trình đọc màn hình: vẫn đọc được, nhưng bề rộng của nó không được tạo thanh cuộn ngang trên điện thoại. */
-.vp-doc mjx-container mjx-assistive-mml { width: 1px !important; height: 1px !important; overflow: hidden !important; clip-path: inset(50%) !important; white-space: nowrap; }
+
+/* Quy chuẩn chống thanh cuộn & mũi tên scrollbar (No Math Scrollbars & Arrows) trên toàn bộ hệ thống */
+mjx-container {
+  min-width: 0;
+  color: inherit;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+mjx-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Ẩn hoàn toàn MathML phụ trợ của MathJax trên toàn bộ dự án, triệt tiêu lỗi hiện icon mũi tên cuộn Windows */
+mjx-container mjx-assistive-mml,
+.vp-doc mjx-container mjx-assistive-mml,
+.math-text mjx-container mjx-assistive-mml {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
 .math-text { min-width: 0; overflow-wrap: break-word; }
-.math-text mjx-container { color: inherit; min-width: 0; }
-.math-text mjx-container:not([display=true]) { display: inline-block; margin: 0 .06em; max-width: 100%; vertical-align: baseline; }
-.math-text mjx-container[display=true] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .65em .1em; margin: .6em 0; text-align: center; scrollbar-width: none; -ms-overflow-style: none; }
-.math-text mjx-container[display=true]::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
 .math-text mjx-container svg { max-width: none; }
 .math-text mjx-container[display=true] svg { display: inline-block; }
 .slide-example .math-text { line-height: 1.9; }
-.vp-doc mjx-container:not([display=true]) {
-  display: inline-block;
+
+/* Công thức inline ($...$): luôn hiển thị tự nhiên, không bao giờ xuất hiện thanh cuộn hay mũi tên */
+mjx-container:not([display=true]),
+.vp-doc mjx-container:not([display=true]),
+.math-text mjx-container:not([display=true]) {
+  display: inline-block !important;
   max-width: none !important;
   overflow: visible !important;
   overflow-x: visible !important;
@@ -53,42 +77,36 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
   padding: 0 0.1em;
   margin: 0;
   vertical-align: -0.05em;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
-.vp-doc mjx-container:not([display=true])::-webkit-scrollbar {
+mjx-container:not([display=true])::-webkit-scrollbar,
+.vp-doc mjx-container:not([display=true])::-webkit-scrollbar,
+.math-text mjx-container:not([display=true])::-webkit-scrollbar {
   display: none !important;
   height: 0 !important;
   width: 0 !important;
 }
-.vp-doc mjx-container[display=true] {
+
+/* Công thức block ($$...$$): căn giữa trang trọng, ẩn toàn bộ thanh cuộn giao diện */
+mjx-container[display=true],
+.vp-doc mjx-container[display=true],
+.math-text mjx-container[display=true],
+.slide-formula mjx-container[display=true] {
   display: block;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
   max-width: 100%;
   padding: var(--space-3) var(--space-2);
   margin: var(--space-5) 0;
   text-align: center;
   font-size: 1.05em;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
-.vp-doc mjx-container[display=true]::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-.slide-formula mjx-container[display=true] {
-  display: block;
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-  padding: var(--space-2) 0;
-  margin: 12px 0;
-  text-align: center;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
+mjx-container[display=true]::-webkit-scrollbar,
+.vp-doc mjx-container[display=true]::-webkit-scrollbar,
+.math-text mjx-container[display=true]::-webkit-scrollbar,
 .slide-formula mjx-container[display=true]::-webkit-scrollbar {
   display: none !important;
   width: 0 !important;

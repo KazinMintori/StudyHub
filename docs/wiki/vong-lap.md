@@ -19,7 +19,7 @@ Dừng đúng không đồng nghĩa kết quả đúng. Với while, kiểm tra 
 
 ## Ví dụ
 
-for x in [1,2,3]: cộng x vào tổng ban đầu bằng 0, cuối cùng nhận 6.
+for x in [1,2,3]: Cộng x vào tổng ban đầu bằng 0, cuối cùng nhận 6.
 
 ## Khi nào cần dùng?
 

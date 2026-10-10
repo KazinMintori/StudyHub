@@ -2,7 +2,7 @@
 
 Mỗi môn có nhiều bài giảng. **Mỗi bài** gồm Slides, Notes và Kiến thức nền. Ghi chú cá nhân trong Góc học tập là công cụ riêng của người học.
 
-## Notes: nơi viết nội dung chi tiết
+## Notes: Nơi viết nội dung chi tiết
 
 Tạo bài trong `docs/<môn>/bai-giang/<bài>.md`. Mỗi bài nên có mục tiêu học, giải thích, ví dụ, câu hỏi tự kiểm tra và nguồn tài liệu. Tiêu đề chung cùng ba phần được giao diện tạo từ catalog.
 
@@ -34,7 +34,7 @@ Nhúng component đã đăng ký trực tiếp trong Markdown:
 
 Các loại hiện có: `search` (BFS/DFS), `gradient`, `bayes`, `broadcast`, `mapreduce`, `field`. Mỗi loại cho phép thay đầu vào hoặc chạy từng bước. Giải thích giả định và giới hạn của mô hình ngay cạnh minh họa. Có thể tạo thêm component Vue cho nội dung mới rồi đăng ký trong theme.
 
-## Slides: lấy trọng tâm từ Notes
+## Slides: Lấy trọng tâm từ Notes
 
 Khai báo Slides trong `course-catalog.mjs`. Thuộc tính `note` là slug bài giảng sở hữu slide. Giao diện chỉ lấy những Slides của bài đang mở. Mỗi slide có tiêu đề, vài ý chính và công thức nếu cần. Bài chưa soạn được ghi rõ trạng thái.
 
@@ -57,7 +57,7 @@ Khi giới thiệu một ký hiệu viết gọn, hãy viết dạng đầy đ�
 
 Tham khảo cách mở ký hiệu và ví dụ: [Khan Academy — Summation notation](https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-3/a/review-summation-notation), [OpenStax — Series and Their Notations](https://openstax.org/books/algebra-and-trigonometry-2e/pages/13-4-series-and-their-notations). Riêng tổ hợp lồi, [MIT OCW — Convex sets, slide 2–4](https://ocw.mit.edu/courses/6-079-introduction-to-convex-optimization-fall-2009/26c4c530c9db63a12b898d720dd89a44_MIT6_079F09_lec02.pdf) viết rõ tổng các điểm có trọng số và tổng trọng số bằng 1. Khi áp dụng vào StudyHub, giữ đúng ký pháp của từng môn: `shape`, chỉ mục mảng trong code và kích thước ma trận trong toán học có vai trò khác nhau.
 
-## Kiến thức nền: giúp người đọc tự bù nền
+## Kiến thức nền: Giúp người đọc tự bù nền
 
 Mỗi khái niệm trong `concepts.mjs` gồm:
 

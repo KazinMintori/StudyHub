@@ -7,7 +7,7 @@ title: "Phần bù Schur và các bài toán về trị riêng"
 description: "Phần bù Schur của một ma trận khối, cách hiểu qua bài toán cực tiểu một dạng toàn phương, tiêu chuẩn nửa xác định dương của ma trận khối, cách dùng phần bù Schur để viết ràng buộc nón bậc hai, tỉ số bậc hai trên tuyến tính và chuẩn phổ thành LMI, bài toán cực tiểu trị riêng lớn nhất và vì sao nó không trơn."
 ---
 
-[Chủ đề trước](./bai-toan-dang-non-va-sdp.md) định nghĩa SDP nhưng để lại một câu hỏi thực tế: những ràng buộc nào viết được thành bất đẳng thức ma trận tuyến tính? Một ràng buộc như $\|A(x)\|_2 \le t$, chuẩn phổ của một ma trận phụ thuộc vào $x$, trông hoàn toàn phi tuyến. Công cụ biến những ràng buộc như vậy thành LMI là **phần bù Schur**, một kết quả nhỏ của đại số tuyến tính nhưng được dùng ở khắp nơi trong tối ưu lồi.
+[Chủ đề trước](./bai-toan-dang-non-va-sdp.md) định nghĩa SDP nhưng để lại một câu hỏi thực tế: Những ràng buộc nào viết được thành bất đẳng thức ma trận tuyến tính? Một ràng buộc như $\|A(x)\|_2 \le t$, chuẩn phổ của một ma trận phụ thuộc vào $x$, trông hoàn toàn phi tuyến. Công cụ biến những ràng buộc như vậy thành LMI là **phần bù Schur**, một kết quả nhỏ của đại số tuyến tính nhưng được dùng ở khắp nơi trong tối ưu lồi.
 
 Trang này trình bày phần bù Schur theo cách của phụ lục A.5.5 trong sách, tức như nghiệm của một bài toán cực tiểu, rồi dùng nó cho ba loại ràng buộc và cho bài toán cực tiểu trị riêng lớn nhất.
 
@@ -40,11 +40,11 @@ Từ cách hiểu này suy ra ngay tiêu chuẩn nửa xác định dương củ
 - $X \succ 0$ khi và chỉ khi $A \succ 0$ và $S \succ 0$.
 - Nếu $A \succ 0$, thì $X \succeq 0$ khi và chỉ khi $S \succeq 0$.
 
-Lý do cho ý thứ hai: $X \succeq 0$ nghĩa là dạng toàn phương không âm tại mọi $(u, v)$, tức là giá trị nhỏ nhất theo $u$, chính là $v^TSv$, không âm với mọi $v$. Ví dụ nhỏ: với $X = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$, ta có $S = 1 - \tfrac12 = \tfrac12 > 0$, nên $X \succ 0$, khớp với hai trị riêng khoảng $0.382$ và $2.618$. Một ví dụ khối: ma trận $3 \times 3$ với khối $A = 2I_2$, cột $B = (1, 1)$ và góc $C = c$ có phần bù Schur $S = c - \tfrac{1 + 1}{2} = c - 1$, nên nó nửa xác định dương đúng khi $c \ge 1$. Tại $c = 1$, trị riêng nhỏ nhất của nó đúng bằng 0.
+Lý do cho ý thứ hai: $X \succeq 0$ nghĩa là dạng toàn phương không âm tại mọi $(u, v)$, tức là giá trị nhỏ nhất theo $u$, chính là $v^TSv$, không âm với mọi $v$. Ví dụ nhỏ: Với $X = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$, ta có $S = 1 - \tfrac12 = \tfrac12 > 0$, nên $X \succ 0$, khớp với hai trị riêng khoảng $0.382$ và $2.618$. Một ví dụ khối: Ma trận $3 \times 3$ với khối $A = 2I_2$, cột $B = (1, 1)$ và góc $C = c$ có phần bù Schur $S = c - \tfrac{1 + 1}{2} = c - 1$, nên nó nửa xác định dương đúng khi $c \ge 1$. Tại $c = 1$, trị riêng nhỏ nhất của nó đúng bằng 0.
 
 ## 2. Biến ràng buộc phi tuyến thành LMI
 
-Đọc tiêu chuẩn trên theo chiều ngược lại: một ràng buộc phi tuyến dạng "$C - B^TA^{-1}B \succeq 0$", với $A \succ 0$, tương đương với một ma trận khối nửa xác định dương. Nếu $A$, $B$, $C$ phụ thuộc affine vào biến, ma trận khối ấy là một LMI. Ba ví dụ quan trọng:
+Đọc tiêu chuẩn trên theo chiều ngược lại: Một ràng buộc phi tuyến dạng "$C - B^TA^{-1}B \succeq 0$", với $A \succ 0$, tương đương với một ma trận khối nửa xác định dương. Nếu $A$, $B$, $C$ phụ thuộc affine vào biến, ma trận khối ấy là một LMI. Ba ví dụ quan trọng:
 
 **Tỉ số bậc hai trên tuyến tính.** Với $y > 0$, ràng buộc $\dfrac{x^Tx}{y} \le t$ tương đương với
 
@@ -60,7 +60,7 @@ $$
 \begin{bmatrix} tI & u \\ u^T & t \end{bmatrix} \succeq 0 .
 $$
 
-Trường hợp $t = 0$ cũng khớp: ma trận khi đó chỉ nửa xác định dương khi $u = 0$. Vì vậy mọi ràng buộc nón bậc hai đều là một LMI, và mọi SOCP đều là SDP, như chủ đề trước đã báo trước. Chẳng hạn với $u = (3, 4)$, ma trận trên nửa xác định dương đúng khi $t \ge 5 = \|u\|_2$.
+Trường hợp $t = 0$ cũng khớp: Ma trận khi đó chỉ nửa xác định dương khi $u = 0$. Vì vậy mọi ràng buộc nón bậc hai đều là một LMI, và mọi SOCP đều là SDP, như chủ đề trước đã báo trước. Chẳng hạn với $u = (3, 4)$, ma trận trên nửa xác định dương đúng khi $t \ge 5 = \|u\|_2$.
 
 **Chuẩn phổ.** Chuẩn phổ $\|A\|_2$, giá trị kỳ dị lớn nhất của $A \in \mathbb{R}^{p \times q}$, thỏa $\|A\|_2 \le t$ khi và chỉ khi $A^TA \preceq t^2I$ và $t \ge 0$. Áp dụng phần bù Schur, điều kiện này tương đương với
 
@@ -68,7 +68,7 @@ $$
 \begin{bmatrix} tI_p & A \\ A^T & tI_q \end{bmatrix} \succeq 0 .
 $$
 
-Nếu $A(x) = A_0 + x_1A_1 + \cdots + x_nA_n$ phụ thuộc affine vào $x$, ma trận khối là một LMI theo $(x, t)$, và bài toán cực tiểu chuẩn phổ $\|A(x)\|_2$ là SDP: cực tiểu $t$ với ràng buộc trên.
+Nếu $A(x) = A_0 + x_1A_1 + \cdots + x_nA_n$ phụ thuộc affine vào $x$, ma trận khối là một LMI theo $(x, t)$, và bài toán cực tiểu chuẩn phổ $\|A(x)\|_2$ là SDP: Cực tiểu $t$ với ràng buộc trên.
 
 ## 3. Cực tiểu trị riêng lớn nhất
 
@@ -84,7 +84,7 @@ $$
 \text{minimize}\quad t \qquad \text{subject to}\quad tI - A(x) \succeq 0 .
 $$
 
-Bài toán này có một đặc điểm quan trọng: nó thường **không trơn** tại nghiệm. Ví dụ tự đặt $A(x) = \begin{bmatrix} x & \varepsilon \\ \varepsilon & 1 - x \end{bmatrix}$ có hai trị riêng $\tfrac12 \pm \sqrt{(x - \tfrac12)^2 + \varepsilon^2}$. Trị riêng lớn nhất nhỏ nhất bằng $\tfrac12 + \varepsilon$ tại $x = \tfrac12$. Với $\varepsilon > 0$, hai trị riêng không bao giờ bằng nhau và $\lambda_{\max}$ khả vi. Khi $\varepsilon = 0$, ma trận chéo, $\lambda_{\max} = \max\{x, 1 - x\}$ có một góc nhọn đúng tại nghiệm $x = \tfrac12$, nơi hai trị riêng bằng nhau. Hiện tượng này không phải ngẫu nhiên. Cực tiểu trị riêng lớn nhất có xu hướng đẩy nhiều trị riêng lên cùng một mức, và tại những điểm trị riêng lớn nhất có bội lớn hơn 1, hàm không khả vi. Vì vậy các phương pháp gradient thông thường xử lý bài toán này kém, còn cách viết SDP thì không gặp vấn đề gì.
+Bài toán này có một đặc điểm quan trọng: Nó thường **không trơn** tại nghiệm. Ví dụ tự đặt $A(x) = \begin{bmatrix} x & \varepsilon \\ \varepsilon & 1 - x \end{bmatrix}$ có hai trị riêng $\tfrac12 \pm \sqrt{(x - \tfrac12)^2 + \varepsilon^2}$. Trị riêng lớn nhất nhỏ nhất bằng $\tfrac12 + \varepsilon$ tại $x = \tfrac12$. Với $\varepsilon > 0$, hai trị riêng không bao giờ bằng nhau và $\lambda_{\max}$ khả vi. Khi $\varepsilon = 0$, ma trận chéo, $\lambda_{\max} = \max\{x, 1 - x\}$ có một góc nhọn đúng tại nghiệm $x = \tfrac12$, nơi hai trị riêng bằng nhau. Hiện tượng này không phải ngẫu nhiên. Cực tiểu trị riêng lớn nhất có xu hướng đẩy nhiều trị riêng lên cùng một mức, và tại những điểm trị riêng lớn nhất có bội lớn hơn 1, hàm không khả vi. Vì vậy các phương pháp gradient thông thường xử lý bài toán này kém, còn cách viết SDP thì không gặp vấn đề gì.
 
 <EigenLab />
 
@@ -104,7 +104,7 @@ Lấy $X = \begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}$, với $A = 0$ không k
 
 <details><summary>Xem lời giải thích</summary>
 
-$\lambda_{\min}(A) = \inf_{\|u\|_2 = 1} u^TAu$ là infimum của một họ hàm tuyến tính theo $A$, nên lõm. Cực đại một hàm lõm là bài toán lồi, nên cực đại $\lambda_{\min}(A(x))$ cũng là SDP: cực đại $t$ với $A(x) - tI \succeq 0$. Hai bài toán "dễ" là cực tiểu $\lambda_{\max}$ và cực đại $\lambda_{\min}$. Hai bài toán ngược lại, cực đại $\lambda_{\max}$ và cực tiểu $\lambda_{\min}$, nói chung không lồi. Trong mô phỏng, đường $\lambda_{\min}$ ở dưới có dạng một cái mái úp, đúng hình dạng của hàm lõm.
+$\lambda_{\min}(A) = \inf_{\|u\|_2 = 1} u^TAu$ là infimum của một họ hàm tuyến tính theo $A$, nên lõm. Cực đại một hàm lõm là bài toán lồi, nên cực đại $\lambda_{\min}(A(x))$ cũng là SDP: Cực đại $t$ với $A(x) - tI \succeq 0$. Hai bài toán "dễ" là cực tiểu $\lambda_{\max}$ và cực đại $\lambda_{\min}$. Hai bài toán ngược lại, cực đại $\lambda_{\max}$ và cực tiểu $\lambda_{\min}$, nói chung không lồi. Trong mô phỏng, đường $\lambda_{\min}$ ở dưới có dạng một cái mái úp, đúng hình dạng của hàm lõm.
 
 </details>
 
@@ -145,7 +145,7 @@ Tìm $x$ cực tiểu $\lambda_{\max}\!\left(\begin{bmatrix} x & 1 \\ 1 & -x \en
 :::
 
 ::: solution
-Ma trận có vết bằng 0 và định thức $-x^2 - 1$, nên hai trị riêng là $\pm\sqrt{x^2 + 1}$. Vậy $\lambda_{\max} = \sqrt{x^2 + 1}$, nhỏ nhất bằng 1 tại $x = 0$. SDP: cực tiểu $t$ với $\begin{bmatrix} t - x & -1 \\ -1 & t + x \end{bmatrix} \succeq 0$. Với $x = 0$, ma trận là $\begin{bmatrix} t & -1 \\ -1 & t \end{bmatrix}$, nửa xác định dương khi $t \ge 1$, khớp với kết quả trên.
+Ma trận có vết bằng 0 và định thức $-x^2 - 1$, nên hai trị riêng là $\pm\sqrt{x^2 + 1}$. Vậy $\lambda_{\max} = \sqrt{x^2 + 1}$, nhỏ nhất bằng 1 tại $x = 0$. SDP: Cực tiểu $t$ với $\begin{bmatrix} t - x & -1 \\ -1 & t + x \end{bmatrix} \succeq 0$. Với $x = 0$, ma trận là $\begin{bmatrix} t & -1 \\ -1 & t \end{bmatrix}$, nửa xác định dương khi $t \ge 1$, khớp với kết quả trên.
 :::
 
 ::: exercise 3. Từ chuẩn tới LMI
@@ -158,7 +158,7 @@ Cực tiểu $t$ với $\begin{bmatrix} tI_3 & A(x) \\ A(x)^T & tI_2 \end{bmatri
 
 ## Tóm tắt
 
-Phần bù Schur $S = C - B^TA^{-1}B$ của khối $A$ trong một ma trận đối xứng chia khối là giá trị nhỏ nhất của dạng toàn phương theo khối biến thứ nhất. Từ đó, khi $A \succ 0$, ma trận khối nửa xác định dương khi và chỉ khi $S \succeq 0$. Đọc ngược tiêu chuẩn này, nhiều ràng buộc phi tuyến trở thành LMI: tỉ số bậc hai trên tuyến tính, ràng buộc nón bậc hai và ràng buộc chuẩn phổ.
+Phần bù Schur $S = C - B^TA^{-1}B$ của khối $A$ trong một ma trận đối xứng chia khối là giá trị nhỏ nhất của dạng toàn phương theo khối biến thứ nhất. Từ đó, khi $A \succ 0$, ma trận khối nửa xác định dương khi và chỉ khi $S \succeq 0$. Đọc ngược tiêu chuẩn này, nhiều ràng buộc phi tuyến trở thành LMI: Tỉ số bậc hai trên tuyến tính, ràng buộc nón bậc hai và ràng buộc chuẩn phổ.
 
 Trị riêng lớn nhất của một ma trận đối xứng phụ thuộc affine vào $x$ là hàm lồi, trị riêng nhỏ nhất là hàm lõm, và cực tiểu trị riêng lớn nhất là một SDP. Tại nghiệm, các trị riêng lớn nhất thường bằng nhau và hàm không khả vi, nên cách viết SDP đáng tin cậy hơn các phương pháp gradient thông thường.
 

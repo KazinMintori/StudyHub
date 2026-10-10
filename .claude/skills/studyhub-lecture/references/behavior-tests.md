@@ -1,12 +1,12 @@
 # Kiểm thử hành vi của bộ skill giảng dạy
 
-Dùng khi sửa skill, đổi model hoặc kiểm tra một bài giảng mới có giữ được hành vi mong muốn không. Đây là bộ tình huống đánh giá; ghi rõ tình huống nào đã thực sự chạy, với output thật, nguồn, phiên bản skill và lỗi quan sát được. Không đối chiếu từng chữ với một “đáp án vàng”: output khác vẫn đạt nếu giữ bất biến, giải thích đúng và có nhiệm vụ học phù hợp.
+Dùng khi sửa skill, đổi model hoặc kiểm tra một bài giảng mới có giữ được hành vi mong muốn không. Đây là bộ tình huống đánh giá; ghi rõ tình huống nào đã thực sự chạy, với output thật, nguồn, phiên bản skill và lỗi quan sát được. Không đối chiếu từng chữ với một “đáp án vàng”: Output khác vẫn đạt nếu giữ bất biến, giải thích đúng và có nhiệm vụ học phù hợp.
 
 Ba nhóm:
 
-- **S01–S15**: hành vi riêng của StudyHub (trang bài giảng, catalog, Wiki, giọng trên site). Bắt đầu từ đây khi sửa `studyhub-lecture`.
-- **T01–T27**: thiết kế bài, slide, hình, thuật ngữ (kế thừa textbook-to-course-slides 6.1).
-- **B01–B14**: giảng một đoạn trong chat và phản hồi bài làm (kế thừa textbook-passage-explainer 2.1; dùng cho skill `textbook-passage-explainer`).
+- **S01–S15**: Hành vi riêng của StudyHub (trang bài giảng, catalog, Wiki, giọng trên site). Bắt đầu từ đây khi sửa `studyhub-lecture`.
+- **T01–T27**: Thiết kế bài, slide, hình, thuật ngữ (kế thừa textbook-to-course-slides 6.1).
+- **B01–B14**: Giảng một đoạn trong chat và phản hồi bài làm (kế thừa textbook-passage-explainer 2.1; dùng cho skill `textbook-passage-explainer`).
 
 Phần kiểm tra tự động của script nằm ở `scripts/tests/test_tools.py`; chạy `python3 -I .claude/skills/studyhub-lecture/scripts/tests/test_tools.py` từ gốc repo.
 
@@ -28,7 +28,7 @@ Phần kiểm tra tự động của script nằm ở `scripts/tests/test_tools.
 | S12 | Một chương dài gấp ba một bài bình thường | Đề xuất tách bài theo điểm kết thúc nhiệm vụ học, nói rõ phần chuyển sang bài sau | Nén bằng cách xóa điều kiện, bước suy luận hoặc ví dụ |
 | S13 | Notes dày thuật ngữ, người học muốn xem nhanh rồi mới quyết định mở Wiki | Thuật ngữ khó có `concepts` ngắn và `wikiDetails` sâu; bấm/tap mở ghi chú nhanh có ví dụ và nút sang Wiki; dùng được bằng bàn phím, Escape đóng, mobile không tràn màn hình | Nhấp thuật ngữ lập tức đẩy người học khỏi Notes; chỉ hoạt động khi hover; nhồi công thức dài vào tooltip; thêm mọi thuật ngữ Wiki vào prerequisites |
 | S14 | Từ “tham số” xuất hiện trong slide Toán và bài Python | Slide Toán mở `tham-so-toan-hoc`; bài Python mở `tham-so-lap-trinh`; hai trang ghi rõ lĩnh vực và liên kết tới nghĩa còn lại | Dùng alias toàn cục nên trang nào được khai báo sau thắng; Notes Toán mở “tham số hàm Python”; Wiki không nói phạm vi nghĩa |
-| S15 | Notes có chuỗi tiêu đề “Từ A đến B”, “Vì sao…?”, “Chọn gì, chấm gì…?” và đoạn “Cách học: đọc…” | Rà cả danh sách tiêu đề; phần lớn tiêu đề gọi thẳng nội dung; hướng dẫn đọc là câu đầy đủ; dùng “thử trả lời/câu hỏi ôn lại”; chọn động từ cụ thể thay `kiểm` | Chỉ sửa đúng câu người dùng nêu; thay bằng một bộ câu hỏi rút gọn khác; tiếp tục dùng nhãn cụt hoặc “câu tự kiểm” |
+| S15 | Notes có chuỗi tiêu đề “Từ A đến B”, “Vì sao…?”, “Chọn gì, chấm gì…?” và đoạn “Cách học: Đọc…” | Rà cả danh sách tiêu đề; phần lớn tiêu đề gọi thẳng nội dung; hướng dẫn đọc là câu đầy đủ; dùng “thử trả lời/câu hỏi ôn lại”; chọn động từ cụ thể thay `kiểm` | Chỉ sửa đúng câu người dùng nêu; thay bằng một bộ câu hỏi rút gọn khác; tiếp tục dùng nhãn cụt hoặc “câu tự kiểm” |
 | S16 | Người dùng muốn một chương dày được "phân lớp", mỗi trang đi sâu một chủ đề | Giữ trang chương (slug, tiến độ, ba tab) làm bản đồ có `<TopicMap />`; khai báo `topicGroups` trong catalog; mỗi chủ đề một file `bai-giang/<slug>/<topic>.md` có `section: topic`, mô phỏng, câu hỏi đào sâu, bài tập; `check_lecture.mjs` 0 lỗi với cả các trang chủ đề | Dồn mọi thứ vào một trang dài; tạo file chủ đề mà quên catalog (không có thanh điều hướng, sidebar); đổi slug trang chương làm mất tiến độ |
 | S17 | Cả chương có hàng chục câu hỏi đào sâu | Rà danh sách câu hỏi của cả chương một lượt; đổi cách đặt vấn đề theo nội dung (phản ví dụ cần tìm, dự đoán cần kiểm, "điều gì xảy ra nếu", tình huống học máy) | 14 câu cùng mở bằng "Một bạn nói…"; trang nào cũng mở bằng "Trang này…"; thay một khuôn bằng một khuôn mới |
 | S18 | Soạn ví dụ và bài tập khi học phần có bộ bài tập về nhà trong `raw_materials` | Đối chiếu file bài tập trước; tự đặt dữ liệu và hàm mới; không giải sẵn bài về nhà | Dùng lại đúng dữ liệu hồi quy, hàm hay cặp điểm của bài về nhà, kể cả khi đổi lời |
@@ -40,11 +40,11 @@ Phần kiểm tra tự động của script nằm ở `scripts/tests/test_tools.
 | S24 | Thêm thuật ngữ Wiki mới cho một chương, thuật ngữ chỉ xuất hiện qua liên kết tự động | Mọi ký hiệu toán trong definition, example, use, question, answer viết bằng TeX trong $…$; chạy `check_lecture.mjs --all` trước khi build | Viết "chuẩn ℓ₁", "Bᵀ" bằng ký tự Unicode trong định nghĩa; chỉ kiểm từng bài nên không thấy lỗi cho tới khi test của repo dừng build |
 | S25 | Lời giải của một bài tập cần sửa giữa chừng khi soạn | Tính lại bằng code, rồi viết thẳng lập luận đúng | Để lại "... chính xác hơn", "... thay vào đó, hãy" trong lời giải; kết luận sai đứng trước kết luận đúng |
 
-Bất biến chung cho mọi tình huống S: không bịa nguồn/trích dẫn/số liệu; mọi số đã tính lại; Notes tự học được mà không cần giảng viên; Slides không chứa khẳng định Notes không có.
+Bất biến chung cho mọi tình huống S: Không bịa nguồn/trích dẫn/số liệu; mọi số đã tính lại; Notes tự học được mà không cần giảng viên; Slides không chứa khẳng định Notes không có.
 
 ### Đột biến tích hợp tự động
 
-`scripts/tests/test_tools.py` dựng một repo thu nhỏ rồi cố tình làm hỏng để chắc `check_lecture.mjs` bắt được: frontmatter lệch catalog, prerequisite không có trong concepts/wikiGroups/wikiDetails/Wiki, bài `ready` không có slide, slug thiếu trong `parts`, hình không tồn tại, container không đóng, H1 trong Notes, LaTeX trong chuỗi slide hoặc concepts. Với bài nhiều lớp, test còn xóa một file chủ đề, đổi `topic`/`section` trong frontmatter, thêm `<KhongCoLab />`, làm hỏng link tương đối, lặp slug chủ đề trong catalog, thêm file chủ đề thừa và bỏ `<TopicMap />`. Test cũng chèn TAB + `frac` và ký tự form feed vào công thức (`CONTROL_CHAR`), và cắt một công thức inline sang dòng sau (`INLINE_MATH_SPLIT`), đúng hai dấu vết của TeX ghi qua chuỗi Python không raw. Ở chế độ MathText, test còn kiểm rằng ký hiệu toán Unicode trong thuật ngữ bị báo `CONCEPT_UNICODE_MATH` và biến mất khi viết lại bằng TeX. Bộ rà văn phong được thử thêm với lời giải nghĩ thành tiếng và với "vô cùng" theo nghĩa toán học. Bộ rà văn phong được thử với từ ngữ kiểu văn máy, chuỗi câu cụt, đoạn thiếu từ nối, mũi tên thay câu và khuôn câu hỏi lặp trên nhiều trang. Đột biến về kiến thức, giọng và hình vẫn cần người/agent đọc output thật.
+`scripts/tests/test_tools.py` dựng một repo thu nhỏ rồi cố tình làm hỏng để chắc `check_lecture.mjs` bắt được: Frontmatter lệch catalog, prerequisite không có trong concepts/wikiGroups/wikiDetails/Wiki, bài `ready` không có slide, slug thiếu trong `parts`, hình không tồn tại, container không đóng, H1 trong Notes, LaTeX trong chuỗi slide hoặc concepts. Với bài nhiều lớp, test còn xóa một file chủ đề, đổi `topic`/`section` trong frontmatter, thêm `<KhongCoLab />`, làm hỏng link tương đối, lặp slug chủ đề trong catalog, thêm file chủ đề thừa và bỏ `<TopicMap />`. Test cũng chèn TAB + `frac` và ký tự form feed vào công thức (`CONTROL_CHAR`), và cắt một công thức inline sang dòng sau (`INLINE_MATH_SPLIT`), đúng hai dấu vết của TeX ghi qua chuỗi Python không raw. Ở chế độ MathText, test còn kiểm rằng ký hiệu toán Unicode trong thuật ngữ bị báo `CONCEPT_UNICODE_MATH` và biến mất khi viết lại bằng TeX. Bộ rà văn phong được thử thêm với lời giải nghĩ thành tiếng và với "vô cùng" theo nghĩa toán học. Bộ rà văn phong được thử với từ ngữ kiểu văn máy, chuỗi câu cụt, đoạn thiếu từ nối, mũi tên thay câu và khuôn câu hỏi lặp trên nhiều trang. Đột biến về kiến thức, giọng và hình vẫn cần người/agent đọc output thật.
 
 ## T. Thiết kế bài, slide, hình
 
@@ -67,13 +67,13 @@ Bất biến chung cho mọi tình huống S: không bịa nguồn/trích dẫn/
 | T15 | Sơ đồ hình vuông có nhãn cạnh a/b và đường chỉ dẫn | Mỗi nhãn nối đúng cạnh bằng đường đo hoặc dấu ngoặc nhìn rõ trên hình đã render | Nhãn nằm trong vùng tô, leader dừng giữa hình, hoặc người xem có thể gán cho cạnh khác |
 | T16 | Một paragraph vừa diễn giải câu nguồn vừa thêm giả định của giảng viên | Tách ranh giới, gắn nguồn cho phần diễn giải và lý do sư phạm cho phần thêm | Gắn cả paragraph vào ID của sách rồi gọi toàn bộ nội dung là từ nguồn |
 
-### Ví dụ kiểm thử hoàn chỉnh: xác suất có điều kiện
+### Ví dụ kiểm thử hoàn chỉnh: Xác suất có điều kiện
 
 Đoạn nguồn thử nghiệm sau được tự viết để tránh phụ thuộc giáo trình chưa cung cấp:
 
 > Với P(B) > 0, xác suất có điều kiện được định nghĩa bởi P(A|B) = P(A ∩ B) / P(B). Khi đã biết B xảy ra, ta giới hạn nhóm kết quả được xét vào B. Trong một nhóm 100 người, có 40 người tham gia câu lạc bộ B. Trong số 40 người đó, có 10 người cũng thuộc nhóm A.
 
-Yêu cầu: viết và dựng một cụm slide tiếng Việt cho sinh viên đã biết tỉ lệ, chưa học xác suất có điều kiện. Giúp họ giải thích mẫu số và tính kết quả. Có một kiểm tra ngộ nhận, cho người học suy nghĩ trước đáp án.
+Yêu cầu: Viết và dựng một cụm slide tiếng Việt cho sinh viên đã biết tỉ lệ, chưa học xác suất có điều kiện. Giúp họ giải thích mẫu số và tính kết quả. Có một kiểm tra ngộ nhận, cho người học suy nghĩ trước đáp án.
 
 Các bất biến cần giữ:
 
@@ -84,7 +84,7 @@ Các bất biến cần giữ:
 - Hình phải phân biệt nhóm 100 và nhóm 40; không vẽ diện tích ngẫu nhiên như dữ liệu thật.
 - Không thêm độc lập giữa A và B.
 
-Một tuyến mẫu phù hợp: thấy bảng 100 người → biết điều kiện chọn nhóm 40 → tính phần 10 trong nhóm 40 → nối với công thức → sửa lỗi dùng 100 làm mẫu số → lời giải.
+Một tuyến mẫu phù hợp: Thấy bảng 100 người → biết điều kiện chọn nhóm 40 → tính phần 10 trong nhóm 40 → nối với công thức → sửa lỗi dùng 100 làm mẫu số → lời giải.
 
 Đây là một phương án. Một output khác vẫn đạt nếu giữ bất biến, giải thích đúng và có nhiệm vụ phù hợp. Không đối chiếu từng chữ với “đáp án vàng”.
 
@@ -94,14 +94,14 @@ Một tuyến mẫu phù hợp: thấy bảng 100 người → biết điều ki
 
 Sao chép mẫu vào thư mục tạm rồi sửa từng lỗi riêng:
 
-1. Bỏ điều kiện P(B) > 0 khỏi lời giảng: kiểm tra nội dung thủ công phải tìm ra.
-2. Dùng mẫu số 100: kiểm tra tính đúng phải tìm ra.
-3. Chuyển định nghĩa thiết yếu hoàn toàn sang phụ lục: script phải báo.
-4. Cho TERM-CONDITIONAL xuất hiện trước slide giới thiệu: script phải báo.
-5. Bỏ lý do đáp án hoặc link hình: script phải báo.
-6. Đổi hình để số người / tập bị sai, vẫn giữ trường claim đúng: script có thể không báo; QA hình phải tìm ra.
-7. Tạo chữ 10 pt trong hình SVG: kiểm tra hình phải tìm ra dù mọi ID hợp lệ.
-8. Dùng từ ngữ trừu tượng khó hiểu nhưng không sai trường dữ liệu: kiểm tra tiếng Việt phải tìm ra.
+1. Bỏ điều kiện P(B) > 0 khỏi lời giảng: Kiểm tra nội dung thủ công phải tìm ra.
+2. Dùng mẫu số 100: Kiểm tra tính đúng phải tìm ra.
+3. Chuyển định nghĩa thiết yếu hoàn toàn sang phụ lục: Script phải báo.
+4. Cho TERM-CONDITIONAL xuất hiện trước slide giới thiệu: Script phải báo.
+5. Bỏ lý do đáp án hoặc link hình: Script phải báo.
+6. Đổi hình để số người / tập bị sai, vẫn giữ trường claim đúng: Script có thể không báo; QA hình phải tìm ra.
+7. Tạo chữ 10 pt trong hình SVG: Kiểm tra hình phải tìm ra dù mọi ID hợp lệ.
+8. Dùng từ ngữ trừu tượng khó hiểu nhưng không sai trường dữ liệu: Kiểm tra tiếng Việt phải tìm ra.
 
 Chạy các đột biến cấu trúc có thể tự động, còn các đột biến kiến thức và hình thức cần kiểm tra output thật. Không gộp chúng thành một điểm phần trăm.
 
@@ -146,7 +146,7 @@ Nếu có người học thật, so sánh câu trả lời giải thích và kh�
 
 Nguồn tự viết: “Cho f: R^n -> R khả vi và lồi. Với mọi x,y, f(y) >= f(x) + grad f(x)^T(y-x). Nếu grad f(x*) = 0, x* là cực tiểu toàn cục.”
 
-Yêu cầu: giảng trong chat cho người biết đạo hàm nhưng chưa học tối ưu lồi. Giữ miền và tính khả vi; chỉ đúng bất đẳng thức dùng tính lồi và bước dùng gradient bằng 0. Nếu thêm -x^2, tính đạo hàm và chỉ kết luận đúng phạm vi phản ví dụ. Không thay lập luận bằng “tính lồi đảm bảo”.
+Yêu cầu: Giảng trong chat cho người biết đạo hàm nhưng chưa học tối ưu lồi. Giữ miền và tính khả vi; chỉ đúng bất đẳng thức dùng tính lồi và bước dùng gradient bằng 0. Nếu thêm -x^2, tính đạo hàm và chỉ kết luận đúng phạm vi phản ví dụ. Không thay lập luận bằng “tính lồi đảm bảo”.
 
 ### B02 — Chuyển thành note
 
@@ -156,7 +156,7 @@ Dùng cùng nguồn B01, yêu cầu note Markdown tự học. Note phải có ng
 
 Nguồn tự viết: “Gradient descent dùng x_(k+1)=x_k-alpha_k grad f(x_k), alpha_k>0. Với ràng buộc đẳng thức h(x)=0, L(x,nu)=f(x)+nu h(x), nu không bị giới hạn dấu.”
 
-Yêu cầu: giải thích hai đoạn, không tự nối thành thuật toán tối ưu có ràng buộc. Nếu dùng f(x)=(x-3)^2, x_0=0, alpha=1/4, bước đầu phải ra x_1=1.5. Phân biệt gradient, hướng -gradient và độ dời. Không hứa giảm/hội tụ với mọi alpha>0; không coi gradient của L bằng 0 là đủ tối ưu nếu thiếu điều kiện.
+Yêu cầu: Giải thích hai đoạn, không tự nối thành thuật toán tối ưu có ràng buộc. Nếu dùng f(x)=(x-3)^2, x_0=0, alpha=1/4, bước đầu phải ra x_1=1.5. Phân biệt gradient, hướng -gradient và độ dời. Không hứa giảm/hội tụ với mọi alpha>0; không coi gradient của L bằng 0 là đủ tối ưu nếu thiếu điều kiện.
 
 ### B04 — Phản hồi có bằng chứng
 

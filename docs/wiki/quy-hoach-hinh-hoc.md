@@ -19,7 +19,7 @@ Monomial là hàm $c\,x_1^{a_1}\cdots x_n^{a_n}$ với $c > 0$ và số mũ th�
 
 ## Ví dụ
 
-Áp phích có phần chữ $wh \ge 600$, lề hai bên 2 cm, lề trên dưới 3 cm: cực tiểu $(w + 4)(h + 6)$ cho $w = 20$, $h = 30$.
+Áp phích có phần chữ $wh \ge 600$, lề hai bên 2 cm, lề trên dưới 3 cm: Cực tiểu $(w + 4)(h + 6)$ cho $w = 20$, $h = 30$.
 
 ## Khi nào cần dùng?
 

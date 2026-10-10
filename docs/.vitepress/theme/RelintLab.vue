@@ -56,7 +56,7 @@ const axes = [[[0, 0, 0], [2.2, 0, 0], 'x₁'], [[0, 0, 0], [0, 2.2, 0], 'x₂']
       <div class="lab-readout" role="status">
         <p>Hình tròn bán kính r quanh x luôn có điểm nằm ngoài đường thẳng chứa đoạn, nên <span class="is-bad">x không phải điểm trong</span> của C khi xét trong R².</p>
         <p v-if="segInside">Phần giao của hình tròn với đường thẳng aff C là đoạn màu xanh, và nó <span class="is-good">nằm trọn trong C</span>. Với bán kính này, x thỏa điều kiện của nội tương đối.</p>
-        <p v-else>Phần giao của hình tròn với aff C <span class="is-bad">lòi ra ngoài C</span> ở phía đầu mút gần hơn. Hãy thử giảm r. {{ s === 0 || s === 1 ? 'Ở đầu mút, giảm r bao nhiêu cũng không đủ: đầu mút thuộc biên tương đối.' : 'Vì x không phải đầu mút, luôn có một r đủ nhỏ thỏa điều kiện.' }}</p>
+        <p v-else>Phần giao của hình tròn với aff C <span class="is-bad">lòi ra ngoài C</span> ở phía đầu mút gần hơn. Hãy thử giảm r. {{ s === 0 || s === 1 ? 'Ở đầu mút, giảm r bao nhiêu cũng không đủ: Đầu mút thuộc biên tương đối.' : 'Vì x không phải đầu mút, luôn có một r đủ nhỏ thỏa điều kiện.' }}</p>
       </div>
     </template>
 

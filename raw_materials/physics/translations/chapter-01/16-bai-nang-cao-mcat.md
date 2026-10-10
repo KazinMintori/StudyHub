@@ -18,7 +18,7 @@ Các sao của nhóm Big Dipper, một phần của chòm Đại Hùng, có th�
 **(b)** Với người sống trên hành tinh quay quanh Merak, Alkaid và Mặt Trời cách nhau góc bao nhiêu trên bầu trời?
 :::
 
-![Hình P1.91 nguyên tác: các sao của nhóm Big Dipper cùng khoảng cách từ Trái Đất](img/young-01/hinh-p1-91.png)
+![Hình P1.91 nguyên tác: Các sao của nhóm Big Dipper cùng khoảng cách từ Trái Đất](img/young-01/hinh-p1-91.png)
 
 **Hình P1.91:** Alkaid $138\,\mathrm{ly}$; Mizar $73\,\mathrm{ly}$; Alioth $64\,\mathrm{ly}$; Megrez $81\,\mathrm{ly}$; Phad $80\,\mathrm{ly}$; Dubhe $105\,\mathrm{ly}$; Merak $77\,\mathrm{ly}$.
 
@@ -52,6 +52,6 @@ Tổng thể tích phổi khác nhau đáng kể giữa các cá nhân. Hình P1
 **(d)** Cả số phế nang và thể tích từng phế nang giữ nguyên.
 :::
 
-![Hình P1.94 nguyên tác: thể tích phế nang trung bình theo tổng thể tích phổi của sáu người](img/young-01/hinh-p1-94.png)
+![Hình P1.94 nguyên tác: Thể tích phế nang trung bình theo tổng thể tích phổi của sáu người](img/young-01/hinh-p1-94.png)
 
 **Hình P1.94:** Trục ngang là tổng thể tích phổi, theo đơn vị $10^{-6}\,\mathrm{m^3}$, với các mốc $0$, $500$, $1000$, $1500$, $2000$, $2500$. Trục đứng là thể tích phế nang trung bình, theo đơn vị $10^6\,\mu\mathrm{m^3}$, với các mốc từ $1$ tới $6$. Sáu chấm là số liệu của sáu cá nhân.

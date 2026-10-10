@@ -4,7 +4,7 @@
 
 ### Đại lượng vật lý và đơn vị
 
-Ba đại lượng cơ bản xét trong chương là khối lượng, độ dài và thời gian. Các đơn vị SI cơ bản tương ứng là kilôgam, mét và giây. Đơn vị dẫn xuất của các đại lượng khác là tích hoặc thương các đơn vị cơ bản. Phương trình phải nhất quán về thứ nguyên: hai số hạng chỉ cộng được khi đơn vị phù hợp. Xem Ví dụ 1.1 và 1.2.
+Ba đại lượng cơ bản xét trong chương là khối lượng, độ dài và thời gian. Các đơn vị SI cơ bản tương ứng là kilôgam, mét và giây. Đơn vị dẫn xuất của các đại lượng khác là tích hoặc thương các đơn vị cơ bản. Phương trình phải nhất quán về thứ nguyên: Hai số hạng chỉ cộng được khi đơn vị phù hợp. Xem Ví dụ 1.1 và 1.2.
 
 ### Chữ số có nghĩa
 
@@ -16,13 +16,13 @@ $$\pi=\frac{C}{2r}=\frac{0.424\,\mathrm m}{2(0.06750\,\mathrm m)}\approx3.14,$$
 
 và $123.62+8.9\approx132.5$. Những chữ số quyết định độ chính xác được tô màu trong nguyên tác.
 
-![Minh họa tóm tắt trong sách: chữ số có nghĩa khi tính pi và khi cộng số đo](img/young-01/tom-tat-chu-so.png)
+![Minh họa tóm tắt trong sách: Chữ số có nghĩa khi tính pi và khi cộng số đo](img/young-01/tom-tat-chu-so.png)
 
 ### Đại lượng vô hướng, vector và phép cộng
 
 Đại lượng vô hướng là số và kết hợp theo số học thông thường. Đại lượng vector vừa có độ lớn vừa có hướng và kết hợp theo phép cộng vector. Vector đối có cùng độ lớn nhưng hướng ngược vector ban đầu. Xem Ví dụ 1.5.
 
-![Minh họa tóm tắt trong sách: hai vector ghép nối tiếp và vector tổng](img/young-01/tom-tat-cong-vector.png)
+![Minh họa tóm tắt trong sách: Hai vector ghép nối tiếp và vector tổng](img/young-01/tom-tat-cong-vector.png)
 
 ### Thành phần vector và phép cộng
 
@@ -32,7 +32,7 @@ $$R_x=A_x+B_x,\qquad R_y=A_y+B_y,\qquad R_z=A_z+B_z.$$
 
 Đó là các quan hệ (1.9), mở rộng thêm thành phần $z$.
 
-![Minh họa tóm tắt trong sách: cộng các thành phần ngang và đứng](img/young-01/tom-tat-thanh-phan.png)
+![Minh họa tóm tắt trong sách: Cộng các thành phần ngang và đứng](img/young-01/tom-tat-thanh-phan.png)
 
 ### Vector đơn vị
 
@@ -40,7 +40,7 @@ Vector đơn vị mô tả hướng trong không gian, có độ lớn bằng $1
 
 $$\vec A=A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k}.$$
 
-![Minh họa tóm tắt trong sách: vector viết theo hai vector đơn vị](img/young-01/tom-tat-vector-don-vi.png)
+![Minh họa tóm tắt trong sách: Vector viết theo hai vector đơn vị](img/young-01/tom-tat-vector-don-vi.png)
 
 ### Tích vô hướng
 
@@ -50,7 +50,7 @@ $$\vec A\cdot\vec B=AB\cos\varphi=|\vec A|\,|\vec B|\cos\varphi,$$
 
 $$\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.$$
 
-![Minh họa tóm tắt trong sách: góc giữa hai vector và tích vô hướng](img/young-01/tom-tat-tich-vo-huong.png)
+![Minh họa tóm tắt trong sách: Góc giữa hai vector và tích vô hướng](img/young-01/tom-tat-tich-vo-huong.png)
 
 ### Tích có hướng
 
@@ -66,6 +66,6 @@ C_z&=A_xB_y-A_yB_x.
 \end{aligned}
 $$
 
-![Minh họa tóm tắt trong sách: bàn tay phải xác định tích có hướng](img/young-01/tom-tat-tich-co-huong.png)
+![Minh họa tóm tắt trong sách: Bàn tay phải xác định tích có hướng](img/young-01/tom-tat-tich-co-huong.png)
 
 Nhãn hình nhắc lại: $\vec A\times\vec B$ vuông góc mặt phẳng của $\vec A$, $\vec B$; độ lớn bằng $AB\sin\varphi$.

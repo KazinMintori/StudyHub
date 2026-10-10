@@ -3,11 +3,11 @@ course: toan-cho-ai
 lecture: bai-02-tap-loi
 topic: quy-hoach-tuyen-tinh
 section: topic
-title: "Quy hoạch tuyến tính: các dạng viết và hình học của nghiệm"
+title: "Quy hoạch tuyến tính: Các dạng viết và hình học của nghiệm"
 description: "Dạng tổng quát của quy hoạch tuyến tính, hình học của nghiệm trên đa diện với bốn khả năng có nghiệm duy nhất, có cả một tập nghiệm, không bị chặn và bất khả thi, dạng chuẩn và dạng bất đẳng thức, cách chuyển một LP bất kỳ về dạng chuẩn bằng biến bù và tách biến tự do, cùng vì sao không thể liệt kê đỉnh."
 ---
 
-Quy hoạch tuyến tính là lớp bài toán tối ưu được dùng nhiều nhất trong thực tế, từ lập kế hoạch sản xuất, điều phối vận tải tới phân bổ ngân sách. [Lecture 01](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) đã giới thiệu LP qua một ví dụ hai biến và một chứng nhận tối ưu. Trang này nhìn LP một cách hệ thống hơn: nó có những dạng viết chuẩn nào, nghiệm của nó nằm ở đâu trên miền khả thi, và vì sao mọi LP đều có thể đưa về cùng một dạng duy nhất.
+Quy hoạch tuyến tính là lớp bài toán tối ưu được dùng nhiều nhất trong thực tế, từ lập kế hoạch sản xuất, điều phối vận tải tới phân bổ ngân sách. [Lecture 01](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) đã giới thiệu LP qua một ví dụ hai biến và một chứng nhận tối ưu. Trang này nhìn LP một cách hệ thống hơn: Nó có những dạng viết chuẩn nào, nghiệm của nó nằm ở đâu trên miền khả thi, và vì sao mọi LP đều có thể đưa về cùng một dạng duy nhất.
 
 ## 1. Dạng tổng quát
 
@@ -23,11 +23,11 @@ $$
 
 với $G \in \mathbb{R}^{m \times n}$ và $A \in \mathbb{R}^{p \times n}$. Ký hiệu $\preceq$ là bất đẳng thức theo từng thành phần. LP hiển nhiên là bài toán lồi.
 
-Hằng số $d$ không làm thay đổi nghiệm, nên người ta thường bỏ nó đi, nhưng nhớ rằng nó vẫn làm thay đổi giá trị tối ưu. Bài toán cực đại một hàm affine trên cùng loại ràng buộc cũng được gọi là LP, vì cực đại $c^Tx + d$ tương đương cực tiểu $-c^Tx - d$. Trong thực tế tối ưu hóa, ta cũng thường mở rộng định nghĩa: một bài toán có thể đưa về LP bằng các phép biến đổi tương đương cũng được xem là LP, dù ban đầu nó chưa xuất hiện ở dạng chuẩn tắc. Bài toán khớp dữ liệu theo sai số tệ nhất ở Lecture 01 là một ví dụ như vậy.
+Hằng số $d$ không làm thay đổi nghiệm, nên người ta thường bỏ nó đi, nhưng nhớ rằng nó vẫn làm thay đổi giá trị tối ưu. Bài toán cực đại một hàm affine trên cùng loại ràng buộc cũng được gọi là LP, vì cực đại $c^Tx + d$ tương đương cực tiểu $-c^Tx - d$. Trong thực tế tối ưu hóa, ta cũng thường mở rộng định nghĩa: Một bài toán có thể đưa về LP bằng các phép biến đổi tương đương cũng được xem là LP, dù ban đầu nó chưa xuất hiện ở dạng chuẩn tắc. Bài toán khớp dữ liệu theo sai số tệ nhất ở Lecture 01 là một ví dụ như vậy.
 
 ## 2. Hình học của nghiệm
 
-Miền khả thi của một LP là một [đa diện](../bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md) $\mathcal{P}$, giao của hữu hạn nửa không gian và siêu phẳng. Các tập mức $\{x : c^Tx = k\}$ của hàm mục tiêu là những siêu phẳng song song, cùng vuông góc với $c$. Giảm $k$ nghĩa là tịnh tiến siêu phẳng theo hướng $-c$. Vì thế nghiệm tối ưu là điểm của $\mathcal{P}$ nằm **xa nhất theo hướng $-c$**: ta đẩy siêu phẳng mức theo hướng $-c$ cho tới khi nó sắp rời khỏi đa diện.
+Miền khả thi của một LP là một [đa diện](../bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md) $\mathcal{P}$, giao của hữu hạn nửa không gian và siêu phẳng. Các tập mức $\{x : c^Tx = k\}$ của hàm mục tiêu là những siêu phẳng song song, cùng vuông góc với $c$. Giảm $k$ nghĩa là tịnh tiến siêu phẳng theo hướng $-c$. Vì thế nghiệm tối ưu là điểm của $\mathcal{P}$ nằm **xa nhất theo hướng $-c$**: Ta đẩy siêu phẳng mức theo hướng $-c$ cho tới khi nó sắp rời khỏi đa diện.
 
 Hình ảnh này cho thấy ngay bốn khả năng có thể xảy ra.
 
@@ -60,7 +60,7 @@ Hai dạng phục vụ hai mục đích khác nhau. Dạng bất đẳng thức 
 
 ## 4. Đưa một LP bất kỳ về dạng chuẩn
 
-Hai bước là đủ. Bước thứ nhất thêm [biến bù](./bai-toan-tuong-duong.md) $s \succeq 0$ cho các bất đẳng thức, biến $Gx \preceq h$ thành $Gx + s = h$. Bước thứ hai xử lý những biến không có điều kiện dấu: viết mỗi biến tự do thành hiệu của hai biến không âm, $x = x^+ - x^-$ với $x^+, x^- \succeq 0$. Kết quả là bài toán
+Hai bước là đủ. Bước thứ nhất thêm [biến bù](./bai-toan-tuong-duong.md) $s \succeq 0$ cho các bất đẳng thức, biến $Gx \preceq h$ thành $Gx + s = h$. Bước thứ hai xử lý những biến không có điều kiện dấu: Viết mỗi biến tự do thành hiệu của hai biến không âm, $x = x^+ - x^-$ với $x^+, x^- \succeq 0$. Kết quả là bài toán
 
 $$
 \begin{aligned}
@@ -86,9 +86,9 @@ $$
 
 Bài toán có năm biến không âm và hai phương trình. Nghiệm của nó là $u = 1$, $v = 0$, $x_2 = 3$, $s_1 = s_2 = 0$, với cùng giá trị $-5$. Hai biến bù bằng 0 cho biết hai ràng buộc đầu chặt tại nghiệm, đúng với việc đỉnh $(1, 3)$ là giao của hai đường thẳng ấy.
 
-Phép tách $x = x^+ - x^-$ có một điểm đáng chú ý: nó không duy nhất. Cộng cùng một số dương vào cả $x^+$ lẫn $x^-$ không đổi $x$. Câu 2 ở cuối trang cho thấy vì sao điều này không gây hại.
+Phép tách $x = x^+ - x^-$ có một điểm đáng chú ý: Nó không duy nhất. Cộng cùng một số dương vào cả $x^+$ lẫn $x^-$ không đổi $x$. Câu 2 ở cuối trang cho thấy vì sao điều này không gây hại.
 
-## 5. Ví dụ: bài toán khẩu phần
+## 5. Ví dụ: Bài toán khẩu phần
 
 Một ví dụ kinh điển mở đầu cho LP là **bài toán khẩu phần (Diet Problem)**. Có $n$ loại thực phẩm, mỗi đơn vị thực phẩm $j$ có giá $c_j$ và chứa lượng $a_{ij}$ của chất dinh dưỡng $i$. Một khẩu phần lành mạnh cần ít nhất $b_i$ đơn vị chất $i$, với $m$ chất. Gọi $x_j \ge 0$ là lượng thực phẩm $j$ được dùng, khẩu phần rẻ nhất là nghiệm của
 
@@ -108,7 +108,7 @@ Nếu nghiệm luôn nằm ở một đỉnh, sao không liệt kê mọi đỉn
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Tập nghiệm của một bài toán lồi là tập lồi, nên nếu $x$ và $y$ đều là nghiệm thì mọi điểm trên đoạn nối chúng cũng là nghiệm. Vậy một LP có không nghiệm, đúng một nghiệm, hoặc vô số nghiệm. Với LP, tập nghiệm còn là một mặt của đa diện: một đỉnh, một cạnh, hay một mặt có số chiều lớn hơn. Đó là lý do trong mô phỏng, giữa hai hướng $c$ có hai đỉnh tối ưu khác nhau luôn có một hướng làm cả cạnh nối chúng tối ưu.
+Không. Tập nghiệm của một bài toán lồi là tập lồi, nên nếu $x$ và $y$ đều là nghiệm thì mọi điểm trên đoạn nối chúng cũng là nghiệm. Vậy một LP có không nghiệm, đúng một nghiệm, hoặc vô số nghiệm. Với LP, tập nghiệm còn là một mặt của đa diện: Một đỉnh, một cạnh, hay một mặt có số chiều lớn hơn. Đó là lý do trong mô phỏng, giữa hai hướng $c$ có hai đỉnh tối ưu khác nhau luôn có một hướng làm cả cạnh nối chúng tối ưu.
 
 </details>
 
@@ -116,7 +116,7 @@ Không. Tập nghiệm của một bài toán lồi là tập lồi, nên nếu 
 
 <details><summary>Xem lời giải thích</summary>
 
-Có thể. Nếu $(x^+, x^-, s)$ là nghiệm thì $(x^+ + \delta e_i, x^- + \delta e_i, s)$ với $\delta > 0$ cũng khả thi và cho cùng giá trị, nên cũng là nghiệm. Phép biến đổi không hỏng, vì ta luôn lấy lại được $x = x^+ - x^-$ với đúng giá trị tối ưu, và đó là tất cả những gì định nghĩa tương đương đòi hỏi. Hơn nữa, tại các nghiệm là đỉnh của bài toán dạng chuẩn, không bao giờ có cả hai cùng dương: cột của $x_i^+$ và cột của $x_i^-$ trong ma trận ràng buộc đối dấu nhau, tức phụ thuộc tuyến tính, nên không thể cùng là biến cơ sở. Phương pháp đơn hình, vốn chỉ đi qua các đỉnh, vì vậy luôn trả về $\min\{x_i^+, x_i^-\} = 0$.
+Có thể. Nếu $(x^+, x^-, s)$ là nghiệm thì $(x^+ + \delta e_i, x^- + \delta e_i, s)$ với $\delta > 0$ cũng khả thi và cho cùng giá trị, nên cũng là nghiệm. Phép biến đổi không hỏng, vì ta luôn lấy lại được $x = x^+ - x^-$ với đúng giá trị tối ưu, và đó là tất cả những gì định nghĩa tương đương đòi hỏi. Hơn nữa, tại các nghiệm là đỉnh của bài toán dạng chuẩn, không bao giờ có cả hai cùng dương: Cột của $x_i^+$ và cột của $x_i^-$ trong ma trận ràng buộc đối dấu nhau, tức phụ thuộc tuyến tính, nên không thể cùng là biến cơ sở. Phương pháp đơn hình, vốn chỉ đi qua các đỉnh, vì vậy luôn trả về $\min\{x_i^+, x_i^-\} = 0$.
 
 </details>
 
@@ -124,7 +124,7 @@ Có thể. Nếu $(x^+, x^-, s)$ là nghiệm thì $(x^+ + \delta e_i, x^- + \de
 
 <details><summary>Xem lời giải thích</summary>
 
-Tìm $(a, b) \in \mathbb{R}^2 \times \mathbb{R}$ với $a^Tx_i - b \ge 1$ cho mọi điểm dương và $a^Tx_j - b \le -1$ cho mọi điểm âm. Mọi điều kiện đều tuyến tính theo $(a, b)$, nên đây là một bài toán khả thi LP với ba biến và sáu bất đẳng thức. Hằng số 1 không làm mất tính tổng quát: nếu có một đường thẳng tách chặt, nhân $(a, b)$ với một số dương đủ lớn sẽ cho khoảng cách 1. Với dữ liệu này, một bộ giải LP trả về chẳng hạn $a = (\tfrac67, \tfrac47)$ và $b = \tfrac{13}{7}$, tức đường thẳng $6x_1 + 4x_2 = 13$ tách hai nhóm. Đây là bài toán phân lớp tuyến tính ở dạng đơn giản nhất. Khi hai nhóm không tách được, LP bất khả thi, và người ta chuyển sang cực tiểu tổng các vi phạm, một ý tưởng dẫn tới máy vector hỗ trợ.
+Tìm $(a, b) \in \mathbb{R}^2 \times \mathbb{R}$ với $a^Tx_i - b \ge 1$ cho mọi điểm dương và $a^Tx_j - b \le -1$ cho mọi điểm âm. Mọi điều kiện đều tuyến tính theo $(a, b)$, nên đây là một bài toán khả thi LP với ba biến và sáu bất đẳng thức. Hằng số 1 không làm mất tính tổng quát: Nếu có một đường thẳng tách chặt, nhân $(a, b)$ với một số dương đủ lớn sẽ cho khoảng cách 1. Với dữ liệu này, một bộ giải LP trả về chẳng hạn $a = (\tfrac67, \tfrac47)$ và $b = \tfrac{13}{7}$, tức đường thẳng $6x_1 + 4x_2 = 13$ tách hai nhóm. Đây là bài toán phân lớp tuyến tính ở dạng đơn giản nhất. Khi hai nhóm không tách được, LP bất khả thi, và người ta chuyển sang cực tiểu tổng các vi phạm, một ý tưởng dẫn tới máy vector hỗ trợ.
 
 </details>
 
@@ -151,7 +151,7 @@ Một LP có 4 biến, trong đó 2 biến không có điều kiện dấu và 2
 :::
 
 ::: solution
-Hai biến tự do mỗi biến tách thành hai, nên có $2 \times 2 + 2 = 6$ biến từ $x$. Ba bất đẳng thức cho thêm ba biến bù. Tổng cộng 9 biến không âm. Số phương trình là $3 + 1 = 4$: ba phương trình từ các bất đẳng thức đã thêm biến bù và một đẳng thức có sẵn. Hai biến vốn đã có điều kiện không âm thì giữ nguyên, không cần tách.
+Hai biến tự do mỗi biến tách thành hai, nên có $2 \times 2 + 2 = 6$ biến từ $x$. Ba bất đẳng thức cho thêm ba biến bù. Tổng cộng 9 biến không âm. Số phương trình là $3 + 1 = 4$: Ba phương trình từ các bất đẳng thức đã thêm biến bù và một đẳng thức có sẵn. Hai biến vốn đã có điều kiện không âm thì giữ nguyên, không cần tách.
 :::
 
 ::: exercise 2. Giải bằng hình học
@@ -172,7 +172,7 @@ Không, bài toán không bị chặn dưới. Hướng $r = (1, 1)$ có $r_1 - 
 
 ## Tóm tắt
 
-Quy hoạch tuyến tính cực tiểu một hàm affine trên một đa diện. Về hình học, nghiệm là điểm của đa diện xa nhất theo hướng $-c$, và có bốn khả năng: nghiệm duy nhất tại một đỉnh, cả một mặt là tập nghiệm, bài toán không bị chặn dưới khi đa diện kéo dài theo một hướng làm giảm $c^Tx$, hoặc bất khả thi.
+Quy hoạch tuyến tính cực tiểu một hàm affine trên một đa diện. Về hình học, nghiệm là điểm của đa diện xa nhất theo hướng $-c$, và có bốn khả năng: Nghiệm duy nhất tại một đỉnh, cả một mặt là tập nghiệm, bài toán không bị chặn dưới khi đa diện kéo dài theo một hướng làm giảm $c^Tx$, hoặc bất khả thi.
 
 Mọi LP đều đưa được về dạng chuẩn $\min c^Tx$ với $Ax = b$, $x \succeq 0$, bằng cách thêm biến bù cho bất đẳng thức và tách mỗi biến tự do thành hiệu của hai biến không âm. Khi đa diện có đỉnh và giá trị tối ưu hữu hạn, luôn có một đỉnh tối ưu, nhưng số đỉnh có thể tăng theo hàm mũ, nên các thuật toán không liệt kê đỉnh mà đi có định hướng.
 

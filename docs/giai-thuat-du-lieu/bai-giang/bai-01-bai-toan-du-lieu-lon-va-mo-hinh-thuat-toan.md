@@ -59,7 +59,7 @@ Tính đóng góp tại nơi lưu dữ liệu rồi gom theo từ là hướng x
 
 Thống kê từ mô tả nội dung kho. Khi một truy vấn khớp nhiều trang, hệ thống tìm kiếm còn phải sắp xếp các kết quả. Bài toán ở đây dùng cấu trúc liên kết để tính một điểm quan trọng cho mỗi trang, làm một tín hiệu hỗ trợ việc sắp xếp.
 
-Đầu vào là đồ thị có hướng: đỉnh biểu diễn trang, cạnh biểu diễn liên kết. Đồ thị trong hình có ba đỉnh $y,a,m$: $y$ trỏ tới $y,a$. $a$ trỏ tới $y,m$. $m$ trỏ tới $a$. Khuyên tại $y$ biểu diễn liên kết từ trang đó về chính nó.
+Đầu vào là đồ thị có hướng: Đỉnh biểu diễn trang, cạnh biểu diễn liên kết. Đồ thị trong hình có ba đỉnh $y,a,m$: $y$ trỏ tới $y,a$. $a$ trỏ tới $y,m$. $m$ trỏ tới $a$. Khuyên tại $y$ biểu diễn liên kết từ trang đó về chính nó.
 
 ![Ba trang liên kết có hướng, trong đó phép đọc liên kết và cập nhật điểm được lặp lại để hỗ trợ sắp xếp kết quả](img/lec-01/ung-dung-xep-hang-web.svg)
 
@@ -113,7 +113,7 @@ Cho một quy tắc tính khoảng cách và số lượng $k$, đầu ra chính
 
 BIODS 271 dùng tình huống 10 tỷ véc-tơ, 3072 chiều, mỗi thành phần 32 bit. Quét hết kho cho mỗi truy vấn cần tính 10 tỷ khoảng cách. Mỗi khoảng cách còn sử dụng nhiều thành phần. Truy vấn mới phải thực hiện lại công việc này. Quy mô trên lấy từ nguồn, không phải số đo của học phần.
 
-Bài 07 học tổ chức và nén véc-tơ để giảm chi phí truy vấn. Khi cho phép gần đúng, phải đánh giá chất lượng: độ thu hồi tại $k$ là tỷ lệ hàng xóm gần thật xuất hiện trong $k$ kết quả trả về, với tập chuẩn và quy ước hòa đã chốt. Các chi phí khác gồm độ trễ, bộ nhớ, xây dựng và cập nhật chỉ mục. Nguồn: BIODS 271 L12, trang PDF 16 cho bài toán truy hồi đoạn tài liệu, 17–18 cho quy mô và Princeton lớp 8, trang 2–5.
+Bài 07 học tổ chức và nén véc-tơ để giảm chi phí truy vấn. Khi cho phép gần đúng, phải đánh giá chất lượng: Độ thu hồi tại $k$ là tỷ lệ hàng xóm gần thật xuất hiện trong $k$ kết quả trả về, với tập chuẩn và quy ước hòa đã chốt. Các chi phí khác gồm độ trễ, bộ nhớ, xây dựng và cập nhật chỉ mục. Nguồn: BIODS 271 L12, trang PDF 16 cho bài toán truy hồi đoạn tài liệu, 17–18 cho quy mô và Princeton lớp 8, trang 2–5.
 
 ::: tip Tự kiểm tra
 Tìm mọi cặp gần trùng và tìm $k$ mục gần một truy vấn khác nhau về đầu ra và số đối tượng phải xét như thế nào?
@@ -129,7 +129,7 @@ Các yêu cầu tìm kiếm tạo ra nhật ký cần phân tích. Nội dung v�
 
 Máy tìm kiếm muốn nghiên cứu mức lặp truy vấn của người dùng. Mỗi bản ghi gồm người dùng, truy vấn và thời điểm. Nếu không thể lưu hết nhật ký, hệ thống cần chọn một mẫu vẫn cho phép nghiên cứu hành vi ấy. Lấy mẫu từng bản ghi riêng lẻ có thể làm mất những lần lặp cần đo. Chọn người dùng rồi giữ lịch sử truy vấn của họ là đơn vị lấy mẫu phù hợp với ví dụ này.
 
-Bài toán lọc thư có đầu vào khác: một dòng thư kèm địa chỉ gửi và danh sách địa chỉ cho phép. Đầu ra phải nhận thư từ địa chỉ trong danh sách, bỏ thư ngoài danh sách. Nếu danh sách vượt bộ nhớ, mỗi thư có thể cần một lần tra cứu trên đĩa.
+Bài toán lọc thư có đầu vào khác: Một dòng thư kèm địa chỉ gửi và danh sách địa chỉ cho phép. Đầu ra phải nhận thư từ địa chỉ trong danh sách, bỏ thư ngoài danh sách. Nếu danh sách vượt bộ nhớ, mỗi thư có thể cần một lần tra cứu trên đĩa.
 
 ![Nhật ký truy vấn được lấy mẫu theo người dùng, còn thư đến được kiểm địa chỉ theo danh sách cho phép](img/lec-01/ung-dung-dong-truy-van.svg)
 
@@ -161,7 +161,7 @@ Dung lượng phải tính cả dữ liệu mã và thông tin phụ trợ cần
 
 Đầu vào là ảnh cần lưu hoặc truyền. Với nén có mất thông tin, đầu ra sau giải mã được phép khác ảnh gốc nhưng phải đáp ứng tiêu chí chất lượng của ứng dụng. Các ứng dụng cần khôi phục nguyên vẹn ảnh phải dùng đặc tả khác.
 
-![Minh họa định tính: nhiều mức sáng gần nhau được gộp thành ít mức đại diện hơn, làm mất phân biệt giữa các mức ban đầu](img/lec-01/ung-dung-nen-anh.svg)
+![Minh họa định tính: Nhiều mức sáng gần nhau được gộp thành ít mức đại diện hơn, làm mất phân biệt giữa các mức ban đầu](img/lec-01/ung-dung-nen-anh.svg)
 
 Thay các mức sáng gần nhau bằng một mức đại diện làm mất thông tin. Đây là lượng tử hóa, một bước khác với phép biến đổi trong tuyến nén JPEG. Không thể suy ra tỷ lệ nén hoặc chất lượng từ hình định tính. Cần đo dung lượng và đánh giá ảnh khôi phục bằng tiêu chí đã chọn. Nguồn: Nelson–Gailly Chương 11, CMU lossy, trang logic 2–16, đặc biệt trang 3 và Bài 11.
 
@@ -215,7 +215,7 @@ Phân biệt điều phải giữ khi lấy mẫu theo người dùng, khôi ph�
 
 ## Phân tích thuật toán xử lý dữ liệu lớn
 
-Các bài toán trên đĩa cho thấy hai yêu cầu khác nhau: trả đúng kết quả và thực hiện được trong ngân sách tài nguyên. Tìm cặp tài liệu gần trùng còn buộc ta phân biệt một cặp được tìm thấy với toàn bộ các cặp cần tìm.
+Các bài toán trên đĩa cho thấy hai yêu cầu khác nhau: Trả đúng kết quả và thực hiện được trong ngân sách tài nguyên. Tìm cặp tài liệu gần trùng còn buộc ta phân biệt một cặp được tìm thấy với toàn bộ các cặp cần tìm.
 
 ### Bài toán và cách biểu diễn
 
@@ -280,9 +280,9 @@ Với $N=2$, $C_1=S$, $C_2=T$ trong ví dụ, hai vòng chỉ xét $(1,2)$. Phé
 Kết quả được xuất dần, không bắt buộc lưu mọi cặp đã xét hoặc toàn bộ đầu ra trong bộ nhớ. Chi phí ghi đầu ra vẫn tồn tại.
 
 ::: proof Tính đúng và điều kiện dừng
-Mệnh đề: với đầu vào hợp lệ và phép kiểm tương đồng chính xác, thuật toán xuất đúng $R$, mỗi cặp một lần.
+Mệnh đề: Với đầu vào hợp lệ và phép kiểm tương đồng chính xác, thuật toán xuất đúng $R$, mỗi cặp một lần.
 
-Bất biến: sau mỗi bước, các cặp đã xuất gồm đúng các cặp đạt ngưỡng trong phần đã xét.
+Bất biến: Sau mỗi bước, các cặp đã xuất gồm đúng các cặp đạt ngưỡng trong phần đã xét.
 
 Ban đầu chưa xét và chưa xuất cặp nào nên bất biến đúng. Giả sử nó đúng trước một bước. Cặp mới chưa được xét trước đó. Nếu đạt ngưỡng, thuật toán xuất cặp ấy. Nếu không, nó không xuất. Kết quả trước giữ nguyên nên bất biến tiếp tục đúng và không có cặp trùng lặp.
 
@@ -332,7 +332,7 @@ Giả sử mỗi tập được lưu thành danh sách tăng dần không lặp,
 
 ![Bốn tài liệu tạo sáu cặp. Khi số tài liệu tăng, số cặp tăng theo bậc hai.](img/lec-01/ung-dung-tai-lieu-gan-trung.svg)
 
-Coi một lần kiểm là hằng số che mất tác động của độ dài tài liệu. Giảm số cặp kiểm cũng chưa xác định toàn bộ chi phí: còn tạo ứng viên và xuất kết quả. Nếu $R$ chứa bậc hai cặp, riêng xuất đầy đủ từng cặp đã cần bậc hai thao tác. Nguồn: MMDS Chương 3, tr. 73, Stanford 03-lsh, trang 14 và Bài 05.
+Coi một lần kiểm là hằng số che mất tác động của độ dài tài liệu. Giảm số cặp kiểm cũng chưa xác định toàn bộ chi phí: Còn tạo ứng viên và xuất kết quả. Nếu $R$ chứa bậc hai cặp, riêng xuất đầy đủ từng cặp đã cần bậc hai thao tác. Nguồn: MMDS Chương 3, tr. 73, Stanford 03-lsh, trang 14 và Bài 05.
 
 ### Bộ nhớ làm việc
 
@@ -360,7 +360,7 @@ Chi phí mạng ở đây đo lượng dữ liệu trao đổi giữa máy. Vớ
 
 ![Hai máy đếm từ w tại chỗ rồi gửi số đếm để tổng hợp toàn kho.](img/lec-01/danh-gia-truyen-mang.svg)
 
-Đếm đúng đòi hỏi mỗi đóng góp được tính đúng một lần, kể cả khi tác vụ chạy lại. Tổng lượng truyền không tự quyết định thời gian hoàn thành: lệch tải, máy chậm và các vòng đồng bộ còn gây chờ. Lượng dữ liệu mạng chỉ đếm chuyển giữa máy, còn chi phí truyền thông trong MMDS §2.5 có thể tính cả dữ liệu vào ra của tác vụ. Nguồn: MMDS §2.2.4–2.2.6, §2.5 và Stanford 01-intro, trang 67–69.
+Đếm đúng đòi hỏi mỗi đóng góp được tính đúng một lần, kể cả khi tác vụ chạy lại. Tổng lượng truyền không tự quyết định thời gian hoàn thành: Lệch tải, máy chậm và các vòng đồng bộ còn gây chờ. Lượng dữ liệu mạng chỉ đếm chuyển giữa máy, còn chi phí truyền thông trong MMDS §2.5 có thể tính cả dữ liệu vào ra của tác vụ. Nguồn: MMDS §2.2.4–2.2.6, §2.5 và Stanford 01-intro, trang 67–69.
 
 ### Độ trễ truy vấn
 
@@ -392,7 +392,7 @@ Dung lượng lưu trữ gồm dữ liệu đã lưu và phần phụ trợ. V�
 
 ![Bản lưu gồm mã và thông tin giải mã cần thiết để khôi phục đúng văn bản.](img/lec-01/danh-gia-luu-tru.svg)
 
-Thông tin phụ tùy phương pháp: có từ điển được tái dựng, không cần lưu toàn bộ cạnh mã. Nếu có chỉ mục truy cập, phải tính cả nó. Dung lượng bản lưu khác bộ nhớ làm việc khi nén/giải nén. Không phải mọi đầu vào đều nén ngắn hơn. Với ảnh cho phép mất thông tin, báo dung lượng cùng sai số tái tạo. Nguồn: Nelson–Gailly Chương 3, 8–9, 11, CMU về nén LZ và Bài 10–11.
+Thông tin phụ tùy phương pháp: Có từ điển được tái dựng, không cần lưu toàn bộ cạnh mã. Nếu có chỉ mục truy cập, phải tính cả nó. Dung lượng bản lưu khác bộ nhớ làm việc khi nén/giải nén. Không phải mọi đầu vào đều nén ngắn hơn. Với ảnh cho phép mất thông tin, báo dung lượng cùng sai số tái tạo. Nguồn: Nelson–Gailly Chương 3, 8–9, 11, CMU về nén LZ và Bài 10–11.
 
 ### Chất lượng kết quả gần đúng
 
@@ -406,7 +406,7 @@ Tập đúng $\{a,b,c,d,e\}$ và tập trả về $\{c,d,e,f,g\}$ có ba phần 
 
 ![Hai tập năm phần tử có ba phần tử chung, còn a,b bị thiếu và f,g nằm ngoài tập đúng.](img/lec-01/danh-gia-do-thu-hoi.svg)
 
-Đây là ví dụ chạy tay từ Bài 07, không phải đo hiệu năng. Chất lượng đo trên tập truy vấn không tự là bảo đảm xác suất cho mọi đầu vào. Các bài toán dùng sai số khác nhau: độ thu hồi, sai số tái tạo, cận xác định hoặc cận xác suất với giả thiết tương ứng. Nguồn: Bài 07, mục 1 và hình độ thu hồi và Princeton lớp 8–9.
+Đây là ví dụ chạy tay từ Bài 07, không phải đo hiệu năng. Chất lượng đo trên tập truy vấn không tự là bảo đảm xác suất cho mọi đầu vào. Các bài toán dùng sai số khác nhau: Độ thu hồi, sai số tái tạo, cận xác định hoặc cận xác suất với giả thiết tương ứng. Nguồn: Bài 07, mục 1 và hình độ thu hồi và Princeton lớp 8–9.
 
 ### Giảm ứng viên và nguy cơ bỏ sót
 
@@ -414,7 +414,7 @@ Một hướng giảm đối chiếu là chọn cặp ứng viên rồi tính Ja
 
 $$\widehat R=A\cap R.$$
 
-Suy ra $\widehat R\subseteq R$: mọi cặp trả ra đều đạt ngưỡng. Muốn có $\widehat R=R$, còn cần $R\subseteq A$, tức không bỏ sót cặp đúng khi chọn ứng viên.
+Suy ra $\widehat R\subseteq R$: Mọi cặp trả ra đều đạt ngưỡng. Muốn có $\widehat R=R$, còn cần $R\subseteq A$, tức không bỏ sót cặp đúng khi chọn ứng viên.
 
 ![Cặp được chọn đi qua kiểm tra chính xác, còn cặp bị bỏ qua sẽ không xuất hiện lại ở hậu kiểm.](img/lec-01/danh-gia-ung-vien.svg)
 
@@ -434,11 +434,11 @@ Các nhóm phương pháp của học phần xử lý những giới hạn này.
 
 ## Nội dung học phần và phương pháp sẽ học
 
-Các yêu cầu vừa phân tích dẫn tới năm nhóm phương pháp: xử lý phân tán, tìm tương đồng, duy trì trạng thái dòng, nén dữ liệu, tổ chức lưu trữ và truy vấn.
+Các yêu cầu vừa phân tích dẫn tới năm nhóm phương pháp: Xử lý phân tán, tìm tương đồng, duy trì trạng thái dòng, nén dữ liệu, tổ chức lưu trữ và truy vấn.
 
-Học phần Giải thuật nền tảng của Khoa học dữ liệu, mã UET.DSE2053, có 3 tín chỉ. Đề cương quy định bốn chuẩn đầu ra học phần (CLO): giải thích nguyên lý và giải thuật. Phân tích để lựa chọn. Thiết kế, triển khai và đánh giá. Tự học và xử lý dữ liệu có trách nhiệm.
+Học phần Giải thuật nền tảng của Khoa học dữ liệu, mã UET.DSE2053, có 3 tín chỉ. Đề cương quy định bốn chuẩn đầu ra học phần (CLO): Giải thích nguyên lý và giải thuật. Phân tích để lựa chọn. Thiết kế, triển khai và đánh giá. Tự học và xử lý dữ liệu có trách nhiệm.
 
-![Bài 01 là nền chung cho năm nhóm bài: phân tán và xếp hạng, tương đồng và tìm gần, dòng và cửa sổ, nén, cùng lưu trữ và truy vấn](img/lec-01/ban-do-hoc-phan.svg)
+![Bài 01 là nền chung cho năm nhóm bài: Phân tán và xếp hạng, tương đồng và tìm gần, dòng và cửa sổ, nén, cùng lưu trữ và truy vấn](img/lec-01/ban-do-hoc-phan.svg)
 
 Năm nhóm được học liền nhau theo thứ tự dưới đây. Mỗi bài gắn phương pháp với một đầu ra và các thuộc tính cần đánh giá.
 
@@ -465,7 +465,7 @@ Năm nhóm theo thứ tự học là Bài 02–04, 05–07, 08–09, 10–11 và
 
 ### Ý tưởng của các nhóm phương pháp
 
-**Phân tán và xếp hạng.** Với kho văn bản trên nhiều máy, MapReduce tạo cặp khóa–giá trị, gom cùng khóa rồi kết hợp các giá trị. Trong đếm từ, khóa là từ và giá trị là số lần xuất hiện, vì vậy có thể cộng cục bộ các giá trị cùng khóa trước khi truyền. Mỗi đóng góp phải được tính đúng một lần, kể cả khi tác vụ chạy lại. PageRank giải bài toán khác: cập nhật điểm trang qua liên kết và một phân phối dịch chuyển. Dịch chuyển giúp xác định mô hình hội tụ khi xử lý đúng nút cụt. Bài 04 dùng trang mẫu theo chủ đề để ưu tiên kết quả, hoặc trang tin cậy làm nguồn tín hiệu TrustRank. HITS tách điểm trang trung tâm dẫn tới nguồn tốt và điểm trang thẩm quyền được trang trung tâm tốt dẫn tới. Khối lượng rác là tín hiệu so sánh hạng thông thường với tín hiệu tin cậy. Điểm liên kết không tự chứng minh chất lượng nội dung. Nguồn: MMDS 2.2 và 5.1–5.5.
+**Phân tán và xếp hạng.** Với kho văn bản trên nhiều máy, MapReduce tạo cặp khóa–giá trị, gom cùng khóa rồi kết hợp các giá trị. Trong đếm từ, khóa là từ và giá trị là số lần xuất hiện, vì vậy có thể cộng cục bộ các giá trị cùng khóa trước khi truyền. Mỗi đóng góp phải được tính đúng một lần, kể cả khi tác vụ chạy lại. PageRank giải bài toán khác: Cập nhật điểm trang qua liên kết và một phân phối dịch chuyển. Dịch chuyển giúp xác định mô hình hội tụ khi xử lý đúng nút cụt. Bài 04 dùng trang mẫu theo chủ đề để ưu tiên kết quả, hoặc trang tin cậy làm nguồn tín hiệu TrustRank. HITS tách điểm trang trung tâm dẫn tới nguồn tốt và điểm trang thẩm quyền được trang trung tâm tốt dẫn tới. Khối lượng rác là tín hiệu so sánh hạng thông thường với tín hiệu tin cậy. Điểm liên kết không tự chứng minh chất lượng nội dung. Nguồn: MMDS 2.2 và 5.1–5.5.
 
 **Tương đồng và truy vấn véc-tơ.** Tập các đoạn ký tự liên tiếp biểu diễn một tài liệu. MinHash lấy giá trị nhỏ nhất của tập sau một hoán vị. Nhiều hoán vị cho chữ ký gọn. Với hoán vị đều, xác suất hai giá trị MinHash bằng nhau bằng Jaccard. Băm nhạy cảm cục bộ (LSH) dùng các phần của chữ ký để chọn cặp ứng viên. Với hai tập có Jaccard $\frac{3}{8}$ đã xét, cặp chỉ được hậu kiểm nếu bộ lọc đã chọn nó. Tính Jaccard chính xác sau lọc không bảo đảm không bỏ sót.
 
@@ -481,7 +481,7 @@ Khi đầu vào là một véc-tơ truy vấn, HNSW tổ chức đồ thị lân
 
 Flajolet–Martin theo dõi dấu hiệu hiếm ở giá trị băm để ước lượng số khóa khác nhau, chẳng hạn số người dùng. Count-Min chia sẻ nhiều hàng bộ đếm qua băm để ước lượng tần suất một khóa. AMS ước lượng tổng bình phương tần suất, phản ánh mức tập trung của dòng. DGIM gom bit 1 thành các nhóm có kích thước và mốc thời gian để trả lời truy vấn trong cửa sổ gần đây. Suy giảm mũ giảm dần trọng số sự kiện cũ thay vì loại chúng ngay tại một ranh giới. Đây là các đại lượng khác nhau, có giả thiết và sai số khác nhau. Vì thế, một cấu trúc gọn chưa chắc trả lời được mọi loại truy vấn. Nguồn: MMDS 4.2–4.7 và UMass Count-Min và Bài 08–09.
 
-**Nén.** Với chuỗi `aabaacabcabcb` đã xét, có thể khai thác phân phối ký hiệu hoặc các đoạn lặp. Huffman tạo mã tiền tố: không từ mã nào là tiền tố của từ mã khác. Mô hình tĩnh cố định thống kê, còn mô hình thích nghi cập nhật theo ký hiệu đã đọc. Mã hóa số học thu hẹp một khoảng để biểu diễn cả chuỗi. LZ77 tham chiếu đoạn đã xuất hiện trong cửa sổ, còn LZ78 mở rộng từ điển các cụm. Với LZW, hai phía cùng xây từ điển để sử dụng mã của các mục từ. Những cách nén không mất thông tin phải khôi phục nguyên chuỗi, kể cả thứ tự ký hiệu. JPEG được học dùng biến đổi cô-sin rời rạc (DCT) và lượng tử hóa, tức làm tròn hệ số về các mức đại diện. Do đó, bước lượng tử hóa có thể làm mất chi tiết ảnh. Không thể kết luận lợi ích lưu trữ chỉ từ độ dài mã mà bỏ dữ liệu phụ trợ. Nguồn: Nelson–Gailly 3–5, 8–11 và CMU nén.
+**Nén.** Với chuỗi `aabaacabcabcb` đã xét, có thể khai thác phân phối ký hiệu hoặc các đoạn lặp. Huffman tạo mã tiền tố: Không từ mã nào là tiền tố của từ mã khác. Mô hình tĩnh cố định thống kê, còn mô hình thích nghi cập nhật theo ký hiệu đã đọc. Mã hóa số học thu hẹp một khoảng để biểu diễn cả chuỗi. LZ77 tham chiếu đoạn đã xuất hiện trong cửa sổ, còn LZ78 mở rộng từ điển các cụm. Với LZW, hai phía cùng xây từ điển để sử dụng mã của các mục từ. Những cách nén không mất thông tin phải khôi phục nguyên chuỗi, kể cả thứ tự ký hiệu. JPEG được học dùng biến đổi cô-sin rời rạc (DCT) và lượng tử hóa, tức làm tròn hệ số về các mức đại diện. Do đó, bước lượng tử hóa có thể làm mất chi tiết ảnh. Không thể kết luận lợi ích lưu trữ chỉ từ độ dài mã mà bỏ dữ liệu phụ trợ. Nguồn: Nelson–Gailly 3–5, 8–11 và CMU nén.
 
 **Lưu trữ và truy vấn.** Sắp xếp trộn ngoài bộ nhớ tạo các dãy có thứ tự vừa bộ nhớ rồi trộn chúng. Chọn thay thế dùng hàng đợi để tạo dãy ban đầu. Cây B/B+ phân chia miền khóa theo thứ tự để hỗ trợ tìm khóa và khoảng. Băm tĩnh định vị nhóm cho khóa bằng nhau. Bitmap dùng dãy bit đánh dấu bản ghi thuộc một giá trị. Chỉ mục đảo ánh xạ từ sang các tài liệu chứa từ. R-tree nhóm các hộp bao. Kd-tree chia không gian theo tọa độ. Ball tree nhóm các điểm trong vùng cầu. Z-order mã hóa vị trí thành một thứ tự một chiều. Các biểu diễn ấy phù hợp những phép lọc khác nhau, không mặc nhiên thay thế nhau.
 
@@ -533,7 +533,7 @@ Một báo cáo thực nghiệm phải nêu dữ liệu, tập truy vấn, chu�
 
 ### Tự học, hợp tác và trách nhiệm
 
-Tự học bắt đầu từ điểm chưa giải thích được. Ví dụ, khi đọc quy trình chọn ứng viên, cần nêu được vì sao hậu kiểm không cứu cặp đạt ngưỡng nhưng không được chọn: cặp đó không xuất hiện trong đầu vào của bước hậu kiểm. Một phản ví dụ như vậy cụ thể hơn việc chỉ ghi chưa hiểu bộ lọc.
+Tự học bắt đầu từ điểm chưa giải thích được. Ví dụ, khi đọc quy trình chọn ứng viên, cần nêu được vì sao hậu kiểm không cứu cặp đạt ngưỡng nhưng không được chọn: Cặp đó không xuất hiện trong đầu vào của bước hậu kiểm. Một phản ví dụ như vậy cụ thể hơn việc chỉ ghi chưa hiểu bộ lọc.
 
 Khi làm nhóm, ghi nguồn thuật toán, dữ liệu và phần đóng góp của từng người. Báo cáo cả trường hợp bỏ sót, sai số và kết quả không như dự kiến. Chỉ chia sẻ dữ liệu được phép dùng trong bài học. Những hành vi này thực hiện chuẩn đầu ra CLO4 về tự học, phản biện, hợp tác và trách nhiệm.
 
@@ -551,7 +551,7 @@ MMDS mục 1.2.3, trang 7–8 xét việc tìm dấu hiệu hoạt động phố
 
 ![Cặp người u,v trùng khách sạn trong ngày s và ngày t, nhưng khách sạn giữa hai ngày có thể khác nhau](img/lec-01/suy-luan-mau-luu-tru.svg)
 
-Hình chỉ ký hiệu một mẫu cần tìm, không tạo hồ sơ quan sát mới. Khó khăn nằm ở số cặp người và bộ ngày rất lớn: một mẫu hiếm trong mỗi phép thử vẫn có thể xuất hiện nhiều khi xét mọi khả năng. Đầu ra tìm kiếm cần được phân biệt với kết luận về ý định của một người.
+Hình chỉ ký hiệu một mẫu cần tìm, không tạo hồ sơ quan sát mới. Khó khăn nằm ở số cặp người và bộ ngày rất lớn: Một mẫu hiếm trong mỗi phép thử vẫn có thể xuất hiện nhiều khi xét mọi khả năng. Đầu ra tìm kiếm cần được phân biệt với kết luận về ý định của một người.
 
 ### Mô hình lưu trú không phối hợp
 
@@ -564,7 +564,7 @@ Mô hình nền giả sử không có phối hợp, với các tham số nguồn
 | $H$ | Số khách sạn | $10^5$ |
 | $q$ | Xác suất một người lưu trú trong một ngày | $0{,}01$ |
 
-Mỗi người quyết định lưu trú độc lập giữa mọi người và mọi ngày. Nếu đi, người đó chọn đều một trong $H$ khách sạn: mỗi khách sạn có xác suất $1/H$ khi đã lưu trú. Độc lập nghĩa lựa chọn của một người/ngày không làm thay đổi phân phối lựa chọn của người/ngày khác.
+Mỗi người quyết định lưu trú độc lập giữa mọi người và mọi ngày. Nếu đi, người đó chọn đều một trong $H$ khách sạn: Mỗi khách sạn có xác suất $1/H$ khi đã lưu trú. Độc lập nghĩa lựa chọn của một người/ngày không làm thay đổi phân phối lựa chọn của người/ngày khác.
 
 Các điều kiện ấy là giả thiết mô hình, chưa phải kết quả được xác nhận từ hồ sơ thật. Nguồn dùng 100 chỗ mỗi khách sạn để đặt quy mô $H$. Phép tính không áp thêm sức chứa cứng làm các lựa chọn phụ thuộc.
 
@@ -657,7 +657,7 @@ Hai bài từ MMDS, mục 1.2.4, trang 8 dùng mô hình ngẫu nhiên để xé
 | Kỳ vọng số trùng | Cộng đóng góp của các phép thử, phân biệt biến cố với cặp người |
 | Diễn giải | Kết luận trong mô hình và điều chưa suy ra từ mẫu trùng |
 
-### Bài 1.2.1: thay đổi quy mô quan sát
+### Bài 1.2.1: Thay đổi quy mô quan sát
 
 ::: exercise
 Dùng mô hình hồ sơ lưu trú ở mục 1.2.3 của nguồn. Số cặp bị báo nghi vấn thay đổi thế nào nếu áp dụng **từng thay đổi riêng**, các số khác giữ nguyên?
@@ -668,7 +668,7 @@ Dùng mô hình hồ sơ lưu trú ở mục 1.2.3 của nguồn. Số cặp b�
 
 (c) Chỉ báo một cặp nếu họ cùng ở một khách sạn vào cùng thời điểm trong ba ngày khác nhau. Khách sạn có thể khác giữa các ngày vì điều kiện trùng được xét riêng trong từng ngày.
 
-Sản phẩm: với mỗi phần, ghi số phép thử, xác suất một phép thử, kỳ vọng và diễn giải theo mô hình.
+Sản phẩm: Với mỗi phần, ghi số phép thử, xác suất một phép thử, kỳ vọng và diễn giải theo mô hình.
 :::
 
 ::: hint
@@ -717,13 +717,13 @@ Yêu cầu ba ngày làm kỳ vọng trùng ngẫu nhiên xuống dưới 1 tron
 
 Hai thay đổi (a), (b) đều bắt đầu từ mô hình gốc. Với (a), số người và khách sạn không đổi. Với (b), số người và khách sạn cùng tăng, còn thời gian quan sát không đổi. Vì vậy phải tách ảnh hưởng lên số phép thử khỏi ảnh hưởng lên xác suất mỗi phép thử.
 
-![Hai nhánh bắt đầu từ mô hình gốc: tăng thời gian lên 2000 ngày hoặc tăng lên 2 tỷ người và 200 000 khách sạn](img/lec-01/bai-tap-quy-mo.svg)
+![Hai nhánh bắt đầu từ mô hình gốc: Tăng thời gian lên 2000 ngày hoặc tăng lên 2 tỷ người và 200 000 khách sạn](img/lec-01/bai-tap-quy-mo.svg)
 
 Phần (c) giữ quy mô gốc nhưng yêu cầu trùng trong cả ba ngày. Theo mô hình MMDS mục 1.2.3, trang 7, khách sạn có thể khác giữa các ngày. Trong mỗi ngày, hai người phải ở cùng khách sạn. Đơn vị đếm chuyển từ cặp ngày sang bộ ba ngày, và điều kiện xảy ra của một phép thử cũng thay đổi.
 
 ![Một cặp người được kiểm trên bộ ba ngày khác nhau, cần trùng khách sạn trong từng ngày](img/lec-01/bai-tap-ba-ngay.svg)
 
-### Bài 1.2.2: trùng tập mặt hàng
+### Bài 1.2.2: Trùng tập mặt hàng
 
 Bài lưu trú chọn một cặp ngày, còn bài mua hàng chọn một lượt của mỗi người. Hai lượt không buộc có cùng số thứ tự.
 
@@ -733,7 +733,7 @@ Bài lưu trú chọn một cặp ngày, còn bài mua hàng chọn một lượ
 | Quan sát được chọn | Cặp ngày | Một lượt của mỗi người |
 | Điều kiện trùng | Cùng khách sạn trong từng ngày | Hai tập 10 mặt hàng bằng nhau |
 
-Một giỏ là một tập: đổi thứ tự mua không tạo thêm tập mới. Mô hình nền giả sử các lượt độc lập và chọn đều tập 10 mặt hàng. Đây là điều kiện tính toán, không phải mô tả đã được xác nhận cho hành vi mua hàng thực.
+Một giỏ là một tập: Đổi thứ tự mua không tạo thêm tập mới. Mô hình nền giả sử các lượt độc lập và chọn đều tập 10 mặt hàng. Đây là điều kiện tính toán, không phải mô tả đã được xác nhận cho hành vi mua hàng thực.
 
 ::: exercise
 Có thông tin mua sắm của $100$ triệu người. Mỗi người đi siêu thị $100$ lần trong một năm và mua $10$ trong $1000$ mặt hàng được bán.
@@ -742,7 +742,7 @@ Có thông tin mua sắm của $100$ triệu người. Mỗi người đi siêu 
 
 Chú thích 3 của nguồn yêu cầu chấp nhận giả thuyết làm việc ấy, không bàn việc khủng bố có nhất thiết mua như vậy. Đây là giả thuyết của bài tập, không phải căn cứ gán nhãn người trong dữ liệu thực.
 
-Sản phẩm: đơn vị đếm, mô hình nền, xác suất, kỳ vọng và câu trả lời có điều kiện.
+Sản phẩm: Đơn vị đếm, mô hình nền, xác suất, kỳ vọng và câu trả lời có điều kiện.
 :::
 
 ![Một lượt mua của người thứ nhất và một lượt mua của người thứ hai được so sánh theo tập mười mặt hàng](img/lec-01/ung-dung-trung-gio-hang.svg)
@@ -764,7 +764,7 @@ $$
 
 Kỳ vọng trùng ngẫu nhiên rất nhỏ dưới mô hình chọn đều, độc lập. Theo tiêu chí Bonferroni phi hình thức và giả thuyết làm việc của đề, việc tìm mẫu trùng này không bị ngập bởi các trùng ngẫu nhiên như ví dụ khách sạn.
 
-Có thể làm rõ ý nghĩa “ít trùng” mà không suy danh tính: vì $Y$ là số nguyên không âm, chỉ báo $\mathbf1_{\{Y\ge1\}}\le Y$. Lấy kỳ vọng hai vế được $\Pr(Y\ge1)\le\mathbb E[Y]$. Xác suất xuất hiện ít nhất một trùng ngẫu nhiên trong mô hình vì thế không vượt khoảng $1{,}90\times10^{-4}$.
+Có thể làm rõ ý nghĩa “ít trùng” mà không suy danh tính: Vì $Y$ là số nguyên không âm, chỉ báo $\mathbf1_{\{Y\ge1\}}\le Y$. Lấy kỳ vọng hai vế được $\Pr(Y\ge1)\le\mathbb E[Y]$. Xác suất xuất hiện ít nhất một trùng ngẫu nhiên trong mô hình vì thế không vượt khoảng $1{,}90\times10^{-4}$.
 
 Tuy nhiên, xác suất có điều kiện một cặp là khủng bố sau khi quan sát trùng không được xác định chỉ từ $\mathbb E[Y]$ và giả thuyết nguồn. Còn cần tỷ lệ nền và mô hình cho nhóm cần tìm. Lượt mua thực cũng không nhất thiết độc lập hay chọn đều. Đó là giới hạn khi chuyển câu trả lời của bài tập sang kết luận thực tế.
 :::

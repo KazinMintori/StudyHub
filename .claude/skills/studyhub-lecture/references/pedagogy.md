@@ -1,4 +1,4 @@
-# Thiết kế sự hiểu: quyết định cần giải thích gì và giải thích đến đâu
+# Thiết kế sự hiểu: Quyết định cần giải thích gì và giải thích đến đâu
 
 Đọc khi lập mục tiêu, chia bài hoặc soạn một cụm khái niệm. Các câu hỏi dưới đây là công cụ soạn bài, không phải các nhãn phải xuất hiện trên slide hay trong Notes.
 
@@ -8,7 +8,7 @@ Tài liệu này viết chung cho bài giảng trên lớp và tài liệu tự 
 | --- | --- |
 | Tuyến chính / tuyến slide chính | Mạch chính của Notes (ngoài hộp gập) |
 | Tài liệu học / phụ lục | `::: proof`, `::: derivation`, “Đọc thêm”, `materials/` |
-| Ghi chú giảng viên | Không có. Site là tài liệu **tự học**: mọi lý do cần thiết phải nằm trong Notes |
+| Ghi chú giảng viên | Không có. Site là tài liệu **tự học**: Mọi lý do cần thiết phải nằm trong Notes |
 | Kiểm tra hiểu, checkpoint | `::: tip` + `<details>`, `::: exercise` + `::: solution` |
 | Slide | Slides catalog (bản ôn ngắn) hoặc deck khi xuất PDF/PPTX |
 | Thời lượng buổi | Thời gian đọc–làm ước lượng của một bài; tách bài khi quá tải |
@@ -23,9 +23,9 @@ Viết mục tiêu bằng hành động và đối tượng cụ thể:
 
 “Hiểu sâu”, “nắm vững”, “khám phá tinh hoa” chưa đủ để quyết định lời giảng hoặc đánh giá. Nếu dùng những cách gọi này trong lời giới thiệu, vẫn phải có tiêu chí quan sát được trong kế hoạch.
 
-Lập một bảng ngắn: mục tiêu → đoạn nguồn → hoạt động học → bằng chứng đạt. Chỉ dùng số lượng mục tiêu vừa với phạm vi; không tự ép mọi bài thành ba mục tiêu.
+Lập một bảng ngắn: Mục tiêu → đoạn nguồn → hoạt động học → bằng chứng đạt. Chỉ dùng số lượng mục tiêu vừa với phạm vi; không tự ép mọi bài thành ba mục tiêu.
 
-Từ “tinh hoa” cần được cụ thể hóa thành những câu hỏi của môn: nó nghiên cứu đối tượng gì, cách lập luận nào đáng tin, phương pháp nào có sức khái quát, và những giới hạn nào người học phải nhận biết. Không thay chiều sâu bằng một sơ đồ bao trùm mọi thứ.
+Từ “tinh hoa” cần được cụ thể hóa thành những câu hỏi của môn: Nó nghiên cứu đối tượng gì, cách lập luận nào đáng tin, phương pháp nào có sức khái quát, và những giới hạn nào người học phải nhận biết. Không thay chiều sâu bằng một sơ đồ bao trùm mọi thứ.
 
 ## 2. Bản đồ kiến thức đầu vào
 
@@ -94,7 +94,7 @@ Tránh liên tiếp đưa nhiều ví dụ đã giải xong mà người học k
 
 Ví dụ mới nên thay một yếu tố quan trọng tại một thời điểm. Dùng lại đối tượng xuyên suốt giúp người học tập trung vào ý mới. Thay dữ liệu, miền hoặc cách biểu diễn khi chính sự thay đổi là điều cần học.
 
-Chỉ thêm ví dụ nếu nó đóng góp chức năng khác: hiện thực hóa khái niệm, cho thấy ranh giới, chuyển cách biểu diễn hoặc chuyển bối cảnh. Không thêm ví dụ chỉ để có “sự đa dạng”.
+Chỉ thêm ví dụ nếu nó đóng góp chức năng khác: Hiện thực hóa khái niệm, cho thấy ranh giới, chuyển cách biểu diễn hoặc chuyển bối cảnh. Không thêm ví dụ chỉ để có “sự đa dạng”.
 
 Kiểm tra số bằng tính toán độc lập khi cần. Không để con số giống thống kê thực làm người học tưởng là chứng cứ; không ghi các chú thích thừa như "dữ liệu giả định", "thông tin giả định" vào bài.
 
@@ -137,11 +137,11 @@ Không tạo cân bằng giả giữa kết quả đã được chứng minh và
 
 ## 8. Dẫn dắt có chất văn mà vẫn đúng
 
-Một mở đầu tốt tạo ra một nhu cầu trí tuệ: vật nào sẽ nổi, tại sao hai thuật toán cho kết quả khác, vì sao một chi tiết trong truyện gây hai cách đọc?
+Một mở đầu tốt tạo ra một nhu cầu trí tuệ: Vật nào sẽ nổi, tại sao hai thuật toán cho kết quả khác, vì sao một chi tiết trong truyện gây hai cách đọc?
 
 Nếu dùng tình huống, làm rõ dữ kiện trước câu hỏi. Tránh yêu cầu người học dự đoán khi họ chưa có nền tảng tối thiểu; có thể cho họ so sánh hai khả năng có giải thích sơ bộ.
 
-Giữ nhịp bằng cách thay đổi thao tác: xem một hình, đọc một phát biểu, theo một ví dụ, tự làm một bước, quay lại câu hỏi đầu. Mỗi chuyển cảnh cần một câu nối gắn với nội dung.
+Giữ nhịp bằng cách thay đổi thao tác: Xem một hình, đọc một phát biểu, theo một ví dụ, tự làm một bước, quay lại câu hỏi đầu. Mỗi chuyển cảnh cần một câu nối gắn với nội dung.
 
 Một kết thúc có ích trả lời vấn đề mở đầu và chỉ ra điều người học bây giờ làm được. Không kết bằng một lời ca ngợi môn học.
 
@@ -160,10 +160,10 @@ Không tạo các slide “định lý”, “công thức”, “ứng dụng �
 
 ## 10. Chia buổi và giữ chiều sâu
 
-Ước lượng theo hoạt động: giới thiệu, đọc hình, theo lập luận, làm bài, trao đổi và chuyển đoạn. Các con số là ước lượng có giả định, không phải quy luật khoa học.
+Ước lượng theo hoạt động: Giới thiệu, đọc hình, theo lập luận, làm bài, trao đổi và chuyển đoạn. Các con số là ước lượng có giả định, không phải quy luật khoa học.
 
 Nếu biết SESSION_MINUTES, tổng thời gian cần phù hợp và có phần dự phòng hợp lý. Khi quá tải, giảm phạm vi trên lớp, giao phần học bổ sung hoặc chia buổi tại điểm kết thúc nhiệm vụ học; giữ rõ điều thay đổi.
 
 Nếu chưa biết thời lượng, chia theo cụm có thể học và xem lại. Không mặc định số slide, số buổi hoặc “thời gian chú ý 10 phút”. Với một gói chương dài, đánh dấu điểm dừng và tuyến ôn tập.
 
-Trong từng cụm, hỏi: người học đang phải vừa học bao nhiêu đối tượng chưa quen? Nếu quá nhiều, tách theo bước của cơ chế và giữ cùng hình / ví dụ nền. Việc tách slide chỉ hữu ích khi nó giảm bước xử lý đồng thời; cắt một đoạn văn ngẫu nhiên thành nhiều trang có thể làm mạch học khó theo hơn.
+Trong từng cụm, hỏi: Người học đang phải vừa học bao nhiêu đối tượng chưa quen? Nếu quá nhiều, tách theo bước của cơ chế và giữ cùng hình / ví dụ nền. Việc tách slide chỉ hữu ích khi nó giảm bước xử lý đồng thời; cắt một đoạn văn ngẫu nhiên thành nhiều trang có thể làm mạch học khó theo hơn.

@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Tính dự đoán bằng ma trận, gradient và độ cong; nối nhiễu Gauss với bình phương tối thiểu."
 ---
 
-Mọi mô hình trí tuệ nhân tạo, từ hồi quy tuyến tính cổ điển đến các mạng nơ-ron sâu, đều vận hành quanh một cơ chế cốt lõi: ánh xạ dữ liệu thành dự đoán, đo sai số bằng hàm mất mát, và lần theo đạo hàm để tinh chỉnh tham số. Khi mô hình dự đoán chệch hướng, ta cần biết chính xác tham số nào phải thay đổi, thay đổi bao nhiêu và theo chiều nào.
+Mọi mô hình trí tuệ nhân tạo, từ hồi quy tuyến tính cổ điển đến các mạng nơ-ron sâu, đều vận hành quanh một cơ chế cốt lõi: Ánh xạ dữ liệu thành dự đoán, đo sai số bằng hàm mất mát, và lần theo đạo hàm để tinh chỉnh tham số. Khi mô hình dự đoán chệch hướng, ta cần biết chính xác tham số nào phải thay đổi, thay đổi bao nhiêu và theo chiều nào.
 
 Bài học mở đầu này ôn lại ba trụ cột toán học nền tảng sẽ đồng hành cùng chúng ta xuyên suốt môn học:
 1. **Đại số ma trận**: Công cụ biểu diễn đồng thời nhiều dự đoán một cách cô đọng và tận dụng năng lực tính toán song song.
@@ -21,7 +21,7 @@ Toàn bộ công thức và biến đổi giải tích sẽ được hiện th�
 
 ## 1. Biểu diễn dự đoán bằng phép nhân ma trận
 
-Xét bài toán học có giám sát đơn giản: ta muốn xây dựng một mô hình tuyến tính đơn tham số để dự đoán biến mục tiêu $\widehat b_i$ từ đầu vào $a_i$ theo quy tắc $\widehat b_i = a_i w$. 
+Xét bài toán học có giám sát đơn giản: Ta muốn xây dựng một mô hình tuyến tính đơn tham số để dự đoán biến mục tiêu $\widehat b_i$ từ đầu vào $a_i$ theo quy tắc $\widehat b_i = a_i w$. 
 
 Giả sử ta thu thập được ba quan sát thực nghiệm sau:
 
@@ -48,7 +48,7 @@ $$
 
 Trong bài toán tổng quát với $m$ quan sát và $n$ đặc trưng, ma trận dữ liệu có kích thước $A \in \mathbb{R}^{m \times n}$, vector trọng số $w \in \mathbb{R}^n$, còn nhãn thực tế và phần dư là các vector trong không gian $m$ chiều: $b, r \in \mathbb{R}^m$. Hàng thứ $i$ của ma trận $A$ (ký hiệu $a_i^T$) chứa đựng toàn bộ thông tin đặc trưng của mẫu thứ $i$, và tích vô hướng $a_i^T w$ sinh ra đúng giá trị dự đoán cho mẫu đó.
 
-Một cách người ta hay dùng trong thực tế để không bao giờ nhầm lẫn chiều khi nhân ma trận là quy tắc **"khớp ở giữa, nở hai đầu"**: khi nhân ma trận kích thước $(m \times k)$ với ma trận kích thước $(k \times n)$, hai chỉ số ở giữa bắt buộc phải trùng nhau để các phép nhân tích vô hướng thực hiện được, và kết quả thu được sẽ có kích thước chính là hai đầu ngoài cùng $(m \times n)$. Trong kỹ nghệ học sâu, tư duy ma trận hóa này (vectorization) giúp thuật toán chạy nhanh hơn hàng trăm lần trên phần cứng GPU/TPU so với các vòng lặp tuần tự.
+Một cách người ta hay dùng trong thực tế để không bao giờ nhầm lẫn chiều khi nhân ma trận là quy tắc **"khớp ở giữa, nở hai đầu"**: Khi nhân ma trận kích thước $(m \times k)$ với ma trận kích thước $(k \times n)$, hai chỉ số ở giữa bắt buộc phải trùng nhau để các phép nhân tích vô hướng thực hiện được, và kết quả thu được sẽ có kích thước chính là hai đầu ngoài cùng $(m \times n)$. Trong kỹ nghệ học sâu, tư duy ma trận hóa này (vectorization) giúp thuật toán chạy nhanh hơn hàng trăm lần trên phần cứng GPU/TPU so với các vòng lặp tuần tự.
 
 <details><summary>Câu hỏi đào sâu: Nếu ma trận dữ liệu A có 5 hàng và 2 cột thì w và Aw có bao nhiêu thành phần?</summary>
 
@@ -84,7 +84,7 @@ $$
 
 Bình phương mỗi phần dư $r_i^2$ đảm bảo rằng mọi sai lệch — dù âm hay dương — đều đóng góp một lượng không âm vào tổng mất mát. Sai số càng lớn thì hình phạt tăng càng nhanh.
 
-Hệ số $\frac{1}{2}$ phía trước đóng vai trò làm gọn biểu thức giải tích: khi lấy đạo hàm theo $w$, số mũ 2 hạ xuống triệt tiêu với phân số $\frac{1}{2}$, giúp công thức đạo hàm không còn thừa hệ số 2. Vì $\frac{1}{2} > 0$, phép nhân với hằng số dương này không làm thay đổi vị trí của điểm cực tiểu $w^*$.
+Hệ số $\frac{1}{2}$ phía trước đóng vai trò làm gọn biểu thức giải tích: Khi lấy đạo hàm theo $w$, số mũ 2 hạ xuống triệt tiêu với phân số $\frac{1}{2}$, giúp công thức đạo hàm không còn thừa hệ số 2. Vì $\frac{1}{2} > 0$, phép nhân với hằng số dương này không làm thay đổi vị trí của điểm cực tiểu $w^*$.
 
 ::: example So sánh định lượng giữa hai giá trị tham số
 Xét tập dữ liệu 3 điểm ở mục 1:
@@ -98,7 +98,7 @@ Xét tập dữ liệu 3 điểm ở mục 1:
   \end{aligned}
   $$
 
-Rõ ràng $f(1) < f(\frac{1}{2})$, nghĩa là $w = 1$ khớp dữ liệu tốt hơn $w = \frac{1}{2}$. Tuy nhiên, việc thử từng giá trị rời rạc như vậy không thể khẳng định $w = 1$ đã là nghiệm tối ưu toàn cục. Muốn tìm nghiệm tối ưu giữa vô hạn số thực, ta phải viện đến giải tích: đi tìm nơi mà đạo hàm triệt tiêu.
+Rõ ràng $f(1) < f(\frac{1}{2})$, nghĩa là $w = 1$ khớp dữ liệu tốt hơn $w = \frac{1}{2}$. Tuy nhiên, việc thử từng giá trị rời rạc như vậy không thể khẳng định $w = 1$ đã là nghiệm tối ưu toàn cục. Muốn tìm nghiệm tối ưu giữa vô hạn số thực, ta phải viện đến giải tích: Đi tìm nơi mà đạo hàm triệt tiêu.
 :::
 
 Ngoài chuẩn $L_2$, trong học máy chúng ta còn thường xuyên bắt gặp hai chuẩn quan trọng khác:
@@ -110,13 +110,13 @@ $$
 \end{aligned}
 $$
 
-Chẳng hạn với vector $u = (3, -4)^T$, ta có $\|u\|_1 = |3| + |-4| = 7$, $\|u\|_2 = \sqrt{3^2 + (-4)^2} = 5$, và $\|u\|_\infty = \max(3, 4) = 4$. Mỗi chuẩn phản ánh một mục tiêu phạt sai số khác nhau: chuẩn $L_1$ thúc đẩy nghiệm thưa (như trong hồi quy Lasso), chuẩn $L_2$ phạt nặng các sai số lớn và khả vi trơn tru khắp nơi, còn chuẩn $L_\infty$ kiểm soát kịch bản sai lệch lớn nhất.
+Chẳng hạn với vector $u = (3, -4)^T$, ta có $\|u\|_1 = |3| + |-4| = 7$, $\|u\|_2 = \sqrt{3^2 + (-4)^2} = 5$, và $\|u\|_\infty = \max(3, 4) = 4$. Mỗi chuẩn phản ánh một mục tiêu phạt sai số khác nhau: Chuẩn $L_1$ thúc đẩy nghiệm thưa (như trong hồi quy Lasso), chuẩn $L_2$ phạt nặng các sai số lớn và khả vi trơn tru khắp nơi, còn chuẩn $L_\infty$ kiểm soát kịch bản sai lệch lớn nhất.
 
 ---
 
 ## 3. Gradient: La bàn chỉ hướng trong không gian tham số
 
-Với hàm một biến, đạo hàm $f'(w)$ cho biết độ biến thiên xấp xỉ bậc nhất: khi dịch chuyển một bước vi phân $d$, hàm số thay đổi xấp xỉ $f(w+d) \approx f(w) + f'(w)d$. 
+Với hàm một biến, đạo hàm $f'(w)$ cho biết độ biến thiên xấp xỉ bậc nhất: Khi dịch chuyển một bước vi phân $d$, hàm số thay đổi xấp xỉ $f(w+d) \approx f(w) + f'(w)d$. 
 
 Khi mô hình có nhiều tham số ($w \in \mathbb{R}^n$), ta gom toàn bộ các đạo hàm riêng theo từng biến thành vector **gradient**:
 
@@ -152,7 +152,7 @@ $$
 
 Kiểm tra tính tương thích về chiều ma trận: $A^T$ có kích thước $n \times m$, nhân với vector phần dư $r$ có kích thước $m \times 1$. Theo quy tắc khớp chiều, tích này cho ra đúng một vector kích thước $n \times 1$ — hoàn toàn tương thích với số chiều của vector tham số $w$.
 
-Ý nghĩa hình học của gradient: **Vector gradient $\nabla f(w)$ luôn chỉ về hướng hàm số tăng nhanh nhất (dốc nhất)**. Do đó, khi mục tiêu là hạ thấp sai số, hướng di chuyển tự nhiên là ngược chiều gradient: hướng $- \nabla f(w)$. Đây là nguyên lý khai sinh thuật toán **Gradient Descent** trong huấn luyện mô hình học máy.
+Ý nghĩa hình học của gradient: **Vector gradient $\nabla f(w)$ luôn chỉ về hướng hàm số tăng nhanh nhất (dốc nhất)**. Do đó, khi mục tiêu là hạ thấp sai số, hướng di chuyển tự nhiên là ngược chiều gradient: Hướng $- \nabla f(w)$. Đây là nguyên lý khai sinh thuật toán **Gradient Descent** trong huấn luyện mô hình học máy.
 
 ::: example Tìm tham số tối ưu cho mô hình một chiều
 Áp dụng công thức trên vào dữ liệu cụ thể ở đầu bài:
@@ -206,9 +206,9 @@ f(w + d) \approx f(w) + \nabla f(w)^T d + \frac{1}{2} d^T H d.
 $$
 
 Số hạng toàn phương $d^T H d$ thể hiện độ cong của hàm số khi ta dịch chuyển theo hướng vector $d$.
-- Nếu $d^T H d > 0$: địa hình uốn cong lên trên theo hướng $d$ (giống đáy thung lũng hay chiếc bát ngửa).
-- Nếu $d^T H d < 0$: địa hình uốn cong xuống dưới (giống đỉnh đồi).
-- Nếu $d^T H d = 0$: địa hình phẳng theo hướng $d$.
+- Nếu $d^T H d > 0$: Địa hình uốn cong lên trên theo hướng $d$ (giống đáy thung lũng hay chiếc bát ngửa).
+- Nếu $d^T H d < 0$: Địa hình uốn cong xuống dưới (giống đỉnh đồi).
+- Nếu $d^T H d = 0$: Địa hình phẳng theo hướng $d$.
 
 Với hàm mất mát bình phương $f(w) = \frac{1}{2}\|Aw - b\|_2^2$, lấy đạo hàm bậc hai của biểu thức gradient $\nabla f(w) = A^TAw - A^Tb$, ta thu được ma trận Hessian hằng số:
 
@@ -278,7 +278,7 @@ $$
 
 - Ma trận hiệp phương sai $\Sigma$ lưu giữ phương sai của từng thành phần trên đường chéo chính ($\Sigma_{ii} = \sigma_i^2$) và mức độ tương quan tuyến tính giữa các cặp thành phần ở các vị trí ngoài đường chéo ($\Sigma_{ij} = \text{Cov}(Z_i, Z_j)$).
 - Định thức $\det\Sigma$ phản ánh thể tích của ellipsoid phân tán dữ liệu, đóng vai trò chuẩn hóa diện tích tích phân của hàm mật độ về đúng bằng 1.
-- Trường hợp đặc biệt quan trọng: khi các thành phần sai số độc lập thống kê và có cùng phương sai $\sigma^2$, ma trận hiệp phương sai trở thành ma trận đường chéo $\Sigma = \sigma^2 I$. Lúc này, mật độ đa biến phân rã thành tích của $m$ mật độ Gauss độc lập: $p(z) = \prod_{i=1}^m p(z_i)$.
+- Trường hợp đặc biệt quan trọng: Khi các thành phần sai số độc lập thống kê và có cùng phương sai $\sigma^2$, ma trận hiệp phương sai trở thành ma trận đường chéo $\Sigma = \sigma^2 I$. Lúc này, mật độ đa biến phân rã thành tích của $m$ mật độ Gauss độc lập: $p(z) = \prod_{i=1}^m p(z_i)$.
 
 ---
 

@@ -84,14 +84,14 @@ Thời điểm bóng rơi xuống vị trí thấp hơn điểm ném $5.00\,\mat
 <details><summary>Bài tập biến thể VP2.8.3</summary>
 
 **(a)** Quả táo đi qua độ cao $+1.30\,\mathrm m$ hai lần: $t_1 = 0.338\,\mathrm s$ (khi bay lên) và $t_2 = 0.784\,\mathrm s$ (khi rơi xuống).  
-**(b)** Tại độ cao $+1.80\,\mathrm m$: không lần nào (vì độ cao cực đại quả táo đạt được chỉ là $h_{\max} = \frac{v_0^2}{2g} \approx 1.54\,\mathrm m$).
+**(b)** Tại độ cao $+1.80\,\mathrm m$: Không lần nào (vì độ cao cực đại quả táo đạt được chỉ là $h_{\max} = \frac{v_0^2}{2g} \approx 1.54\,\mathrm m$).
 
 </details>
 
 <details><summary>Bài tập biến thể VP2.8.4</summary>
 
-**(a)** Tại thời điểm $t = \dfrac{v_0}{g}$: quả cam ở đỉnh quỹ đạo, vận tốc tức thời bằng 0 (không đi lên cũng không đi xuống).  
-**(b)** Tại độ cao $y = \dfrac{3v_0^2}{8g}$: quả cam đi qua tại $t_1 = \dfrac{v_0}{2g}$ (lượt đi lên) và $t_2 = \dfrac{3v_0}{2g}$ (lượt đi xuống).
+**(a)** Tại thời điểm $t = \dfrac{v_0}{g}$: Quả cam ở đỉnh quỹ đạo, vận tốc tức thời bằng 0 (không đi lên cũng không đi xuống).  
+**(b)** Tại độ cao $y = \dfrac{3v_0^2}{8g}$: Quả cam đi qua tại $t_1 = \dfrac{v_0}{2g}$ (lượt đi lên) và $t_2 = \dfrac{3v_0}{2g}$ (lượt đi xuống).
 
 </details>
 

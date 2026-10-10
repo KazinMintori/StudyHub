@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Bản đồ toàn cảnh: 12 chủ đề về phân loại bài toán tối ưu lồi, quy hoạch tuyến tính, quy hoạch toàn phương, nón bậc hai, quy hoạch hình học, SDP và tối ưu đa mục tiêu Pareto."
 ---
 
-Ở Bài 01, chúng ta đã nắm giữ định lý nền tảng: với bài toán tối ưu lồi, mọi cực tiểu cục bộ đều tự động là cực tiểu toàn cục. Tuy nhiên, trong thực tế kỹ nghệ và nghiên cứu AI, bài toán hiếm khi xuất hiện dưới dạng "nguyên mẫu lồi" hiển nhiên. Bài toán thường ẩn mình dưới dạng một tỉ số chi phí trên lợi nhuận, một hệ thống điều khiển tự hành chịu nhiễu bất định, một bài toán ước lượng ma trận hiệp phương sai của danh mục đầu tư, hay sự đánh đổi giữa độ chính xác và độ thưa thớt của mô hình.
+Ở Bài 01, chúng ta đã nắm giữ định lý nền tảng: Với bài toán tối ưu lồi, mọi cực tiểu cục bộ đều tự động là cực tiểu toàn cục. Tuy nhiên, trong thực tế kỹ nghệ và nghiên cứu AI, bài toán hiếm khi xuất hiện dưới dạng "nguyên mẫu lồi" hiển nhiên. Bài toán thường ẩn mình dưới dạng một tỉ số chi phí trên lợi nhuận, một hệ thống điều khiển tự hành chịu nhiễu bất định, một bài toán ước lượng ma trận hiệp phương sai của danh mục đầu tư, hay sự đánh đổi giữa độ chính xác và độ thưa thớt của mô hình.
 
 Năng lực cốt lõi của một chuyên gia khoa học dữ liệu và tối ưu hóa là **nhận diện cấu trúc toán học** của bài toán và làm chủ nghệ thuật **biến đổi tương đương** để đưa bài toán về các lớp chuẩn tắc mà các bộ giải (solvers) hiện đại có thể giải quyết hiệu quả trong thời gian thực.
 
@@ -18,7 +18,7 @@ $$
 \text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}.
 $$
 
-Mỗi lớp bài toán kế thừa và mở rộng năng lực biểu diễn hình học của lớp bài toán trước nó: từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP) — ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
+Mỗi lớp bài toán kế thừa và mở rộng năng lực biểu diễn hình học của lớp bài toán trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP) — ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, và lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy.
 
 ---
 
@@ -42,7 +42,7 @@ Chương học gồm 12 chủ đề chuyên sâu, phân chia theo sáu nhóm nă
 Dành cho lần đọc đầu tiên để nắm vững các lớp bài toán lồi chuẩn tắc:
 - Chủ đề 1. [Bài toán tương đương và các phép biến đổi cơ bản](./bai-02-tap-loi/bai-toan-tuong-duong.md)
 - Chủ đề 2. [Khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến](./bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.md)
-- Chủ đề 4. [Quy hoạch tuyến tính: các dạng viết và hình học của nghiệm](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md)
+- Chủ đề 4. [Quy hoạch tuyến tính: Các dạng viết và hình học của nghiệm](./bai-02-tap-loi/quy-hoach-tuyen-tinh.md)
 - Chủ đề 7. [Quy hoạch toàn phương và QCQP](./bai-02-tap-loi/quy-hoach-toan-phuong.md)
 - Chủ đề 8. [Quy hoạch nón bậc hai và LP bền vững](./bai-02-tap-loi/quy-hoach-non-bac-hai.md)
 - Chủ đề 10. [Bài toán dạng nón và quy hoạch nửa xác định](./bai-02-tap-loi/bai-toan-dang-non-va-sdp.md)
@@ -82,8 +82,8 @@ flowchart TD
     SDP --> CVX
 ```
 
-- **Phần I**: Trang bị bộ công cụ biến đổi đại số bảo toàn tính lồi: đổi biến khả nghịch, hợp với hàm đơn điệu tăng, đưa vào biến bù (slack variables), biểu diễn dạng epigraph, khử ràng buộc đẳng thức affine, và tối ưu hóa từng phần. Đối với bài toán tựa lồi (quasiconvex) có tập mức dưới lồi nhưng đồ thị không lồi, ta giải quyết triệt để thông qua một dãy bài toán kiểm tra tính khả thi lồi bằng phương pháp chia đôi nhị phân.
-- **Phần II**: Phân tích hình học của Quy hoạch tuyến tính (LP): miền khả thi là một đa diện lồi (polyhedron), và nghiệm tối ưu luôn đạt được tại các đỉnh cực (extreme points). Khám phá các bài toán tưởng chừng phi tuyến nhưng lại quy về LP một cách kỳ tài: xấp xỉ Chebyshev, hàm chi phí tuyến tính từng khúc, và quy hoạch phân tuyến tính.
+- **Phần I**: Trang bị bộ công cụ biến đổi đại số bảo toàn tính lồi: Đổi biến khả nghịch, hợp với hàm đơn điệu tăng, đưa vào biến bù (slack variables), biểu diễn dạng epigraph, khử ràng buộc đẳng thức affine, và tối ưu hóa từng phần. Đối với bài toán tựa lồi (quasiconvex) có tập mức dưới lồi nhưng đồ thị không lồi, ta giải quyết triệt để thông qua một dãy bài toán kiểm tra tính khả thi lồi bằng phương pháp chia đôi nhị phân.
+- **Phần II**: Phân tích hình học của Quy hoạch tuyến tính (LP): Miền khả thi là một đa diện lồi (polyhedron), và nghiệm tối ưu luôn đạt được tại các đỉnh cực (extreme points). Khám phá các bài toán tưởng chừng phi tuyến nhưng lại quy về LP một cách kỳ tài: Xấp xỉ Chebyshev, hàm chi phí tuyến tính từng khúc, và quy hoạch phân tuyến tính.
 - **Phần III**: Mở rộng hàm mục tiêu và ràng buộc sang bậc hai. QP cho phép tối ưu hóa các hàm chi phí khoảng cách và phương sai (mô hình danh mục đầu tư Markowitz, Support Vector Machines). SOCP xuất hiện như một công cụ đắc lực khi mô hình hóa bài toán dưới sự bất định của dữ liệu đầu vào (Robust LP) và các ràng buộc xác suất tin cậy (chance constraints).
 - **Phần IV**: Giới thiệu Quy hoạch hình học (GP). Những bài toán tối ưu với các hàm monomial và posynomial vốn phi lồi trong không gian biến gốc, nhưng sau khi chuyển sang thang đo logarit ($y_i = \log x_i$), bài toán lập tức biến đổi thành một bài toán tối ưu lồi phẳng tuyệt đẹp.
 - **Phần V**: Đỉnh cao của tối ưu hóa hình học dạng nón: Quy hoạch nửa xác định (SDP). Miền ràng buộc là nón các ma trận nửa xác định dương. Sử dụng công cụ bổ đề phần bù Schur (Schur complement), ta có thể "tuyến tính hóa" các ràng buộc toàn phương phi tuyến phức tạp thành các bất đẳng thức ma trận tuyến tính (LMI).
@@ -104,7 +104,7 @@ Với mỗi bài toán sau, hãy xác định lớp bài toán hẹp nhất ch�
 
 ::: solution
 1. **Quy hoạch tuyến tính (LP)**: Bằng cách đưa vào các biến phụ epigraph $u \in \mathbb{R}^m$ cho từng thành phần $|a_i^T x - b_i| \le u_i$ và một biến vô hướng $t \in \mathbb{R}$ cho chuẩn cực đại $\|x\|_\infty \le t \iff -t \le x_j \le t$, bài toán quy về cực tiểu hóa tổng tuyến tính $\sum u_i + t$ dưới các ràng buộc bất đẳng thức tuyến tính.
-2. **Quy hoạch nón bậc hai (SOCP)**: Viết lại dưới dạng epigraph: $\min_{x, t} t$ với ràng buộc nón bậc hai $\|Ax - b\|_2 \le t$ và $x \ge 0$. Lưu ý: nếu bình phương hàm mục tiêu thành $\frac{1}{2}\|Ax - b\|_2^2$, ta thu được một bài toán QP tương đương có cùng nghiệm.
+2. **Quy hoạch nón bậc hai (SOCP)**: Viết lại dưới dạng epigraph: $\min_{x, t} t$ với ràng buộc nón bậc hai $\|Ax - b\|_2 \le t$ và $x \ge 0$. Lưu ý: Nếu bình phương hàm mục tiêu thành $\frac{1}{2}\|Ax - b\|_2^2$, ta thu được một bài toán QP tương đương có cùng nghiệm.
 3. **Quy hoạch hình học (GP)**: Cực đại hóa monomial $x_1 x_2 x_3$ tương đương cực tiểu hóa nghịch đảo của nó $x_1^{-1} x_2^{-1} x_3^{-1}$ (một monomial). Ràng buộc viết lại thành $\frac{1}{6}x_1 + \frac{1}{3}x_2 + \frac{1}{2}x_3 \le 1$ (một posynomial). Theo bất đẳng thức AM-GM, nghiệm tối ưu đạt được khi ba số hạng bằng nhau: $x_1^* = 2, x_2^* = 1, x_3^* = \frac{2}{3}$.
 4. **Quy hoạch nửa xác định (SDP)**: Ràng buộc trị riêng cực đại $\lambda_{\max}(M(x)) \le t$ tương đương với bất đẳng thức ma trận tuyến tính $tI - M(x) \succeq 0$. Do đó bài toán quy về: $\min_{x, t} t$ với ràng buộc $tI - A_0 - x_1 A_1 - x_2 A_2 \succeq 0$, đây là dạng chuẩn của SDP.
 5. **Không lồi (Non-convex)**: Ma trận Hessian của hàm mục tiêu là $\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$ có một trị riêng âm, do đó hàm mục tiêu là dạng yên ngựa phi lồi. Nghiệm tối ưu nằm tại các góc biên rời rạc.

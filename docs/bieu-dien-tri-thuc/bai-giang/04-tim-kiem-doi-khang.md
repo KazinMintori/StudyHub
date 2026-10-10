@@ -13,7 +13,7 @@ description: "Lý thuyết trò chơi tất định, thuật toán Minimax, kỹ
 ← [Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Chương 5: Bài toán ràng buộc CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)
 
 ::: info Trọng tâm bài giảng
-Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung quanh tác tử là một môi trường thụ động: các vật cản đứng yên và không ai cố tình ngăn cản tác tử đến đích. Nhưng trong thế giới thực, trí tuệ nhân tạo thường xuyên phải đối đầu với những thực thể có trí tuệ khác — những đối thủ có lợi ích đối nghịch trực tiếp.
+Trong các bài toán tìm đường đi như BFS hay A\*, thế giới xung quanh tác tử là một môi trường thụ động: Các vật cản đứng yên và không ai cố tình ngăn cản tác tử đến đích. Nhưng trong thế giới thực, trí tuệ nhân tạo thường xuyên phải đối đầu với những thực thể có trí tuệ khác — những đối thủ có lợi ích đối nghịch trực tiếp.
 
 Đó là bối cảnh của **Tìm kiếm đối kháng (Adversarial Search)**, nhánh giao thoa rực rỡ giữa Khoa học Máy tính và Lý thuyết Trò chơi (Game Theory). Bài giảng này làm sáng tỏ:
 1. **Mô hình Trò chơi Tổng bằng Không (Zero-Sum Games):** Định nghĩa toán học và nguyên lý Maximin của John von Neumann.
@@ -189,12 +189,12 @@ flowchart TD
 
 1. **Nhánh $C_1$:** Duyệt lá 3 và 5 $\to C_1 = 5$. Truyền lên $B_1$, $B_1$ cập nhật $\beta = \min(+\infty, 5) = 5$.
 2. **Nhánh $C_2$ (tại $B_1$ với $\alpha=-\infty, \beta=5$):**
-   - Duyệt lá đầu tiên: giá trị là **6**.
+   - Duyệt lá đầu tiên: Giá trị là **6**.
    - Tại nút MAX $C_2$, giá trị hiện thời $v = 6 \ge \beta = 5$.
    - **CẮT TỈA NGAY LẬP TỨC!** Không cần duyệt lá 9, vì $C_2$ chắc chắn có giá trị $\ge 6$. Đối thủ $B_1$ (đang có lựa chọn $5$) sẽ không bao giờ chọn nhánh $C_2$.
 3. **Truyền giá trị lên Gốc:** $B_1$ chốt giá trị 5. Gốc (MAX) cập nhật $\alpha = \max(-\infty, 5) = 5$.
 4. **Nhánh $B_2$ (với $\alpha = 5, \beta = +\infty$):**
-   - Xuống $C_3$: duyệt lá 1 và 2 $\to C_3 = 2$.
+   - Xuống $C_3$: Duyệt lá 1 và 2 $\to C_3 = 2$.
    - Truyền lên $B_2$: $B_2$ cập nhật giá trị hiện thời $v = 2$.
    - Nhưng tại nút MIN $B_2$, giá trị $v = 2 \le \alpha = 5$.
    - **CẮT TỈA TOÀN BỘ NHÁNH $C_4$!** Người chơi MAX ở gốc đã nắm chắc trong tay 5 điểm ở nhánh $B_1$, nên sẽ không bao giờ rẽ sang $B_2$ (nơi điểm số chỉ tối đa là 2).
@@ -317,139 +317,9 @@ Các nguyên lý của Minimax và Alpha–Beta không chỉ giới hạn trong 
 
 ## Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài tập 1: Mô phỏng từng bước thuật toán Cắt tỉa Alpha-Beta
-**Đề bài:**
-Cho cây trò chơi hai người có tổng bằng 0 với người chơi MAX ở nút gốc $A$. Nút $A$ có hai con là $B$ và $C$ (tầng MIN).
-- Nút $B$ có ba con là $D, E, F$ với giá trị lượng giá lá lần lượt là:
-  $$
-  V(D) = 3, \quad V(E) = 5, \quad V(F) = 2
-  $$
-- Nút $C$ có ba con là $G, H, K$ với giá trị lượng giá lá lần lượt là:
-  $$
-  V(G) = 1, \quad V(H) = 8, \quad V(K) = 4
-  $$
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-Duyệt cây từ trái sang phải với khoảng giá trị ban đầu $\alpha = -\infty, \beta = +\infty$.
-1. Hãy theo dõi sự thay đổi của cặp $[\alpha, \beta]$ qua từng nút.
-2. Xác định xem có nhánh nào bị cắt tỉa hay không. Nếu có, đó là cắt tỉa $\alpha$ hay $\beta$?
-3. Nước đi tối ưu của người chơi MAX tại nút gốc là gì, và giá trị Minimax trả về bằng bao nhiêu?
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
+:::
 
-**Phân tích & Hướng dẫn giải:**
-1. **Quá trình duyệt nhánh trái (nút $B$):**
-   - Tại gốc $A$ (MAX): Khởi tạo $[\alpha = -\infty, \beta = +\infty]$.
-   - Đi xuống nút $B$ (MIN): Thừa kế $[\alpha = -\infty, \beta = +\infty]$.
-     + Thăm lá $D$: Giá trị là $3$. Do $B$ là nút MIN, $B$ cập nhật giá trị hiện tại $v = 3$ và cập nhật cận trên:
-       $$
-       \beta = \min(+\infty, 3) = 3
-       $$
-       Khoảng hiện tại ở $B$: $[\alpha = -\infty, \beta = 3]$.
-     + Thăm lá $E$: Giá trị là $5$. Vì $5 > 3$, $B$ không nhận giá trị này. Khoảng vẫn là $[\alpha = -\infty, \beta = 3]$.
-     + Thăm lá $F$: Giá trị là $2 < 3$. Nút $B$ nhận giá trị $v = 2$, cập nhật:
-       $$
-       \beta = \min(3, 2) = 2
-       $$
-     + Nút $B$ duyệt xong toàn bộ các nhánh con, trả về giá trị $2$.
-   - Quay lại nút $A$ (MAX):
-     + Nút $A$ nhận giá trị $v = 2$ từ $B$ và cập nhật cận dưới:
-       $$
-       \alpha = \max(-\infty, 2) = 2
-       $$
-     + Khoảng tại $A$ chuyển thành $[\alpha = 2, \beta = +\infty]$.
-2. **Quá trình duyệt nhánh phải (nút $C$):**
-   - Đi xuống nút $C$ (MIN): Thừa kế khoảng $[\alpha = 2, \beta = +\infty]$.
-     + Thăm lá $G$: Giá trị là $1$. Nút $C$ cập nhật giá trị $v = 1$ và cập nhật cận trên:
-       $$
-       \beta = \min(+\infty, 1) = 1
-       $$
-     + Lúc này kiểm tra điều kiện cắt tỉa:
-       $$
-       \alpha = 2 \ge \beta = 1
-       $$
-     + Điều kiện $\alpha \ge \beta$ đã xảy ra tại nút MIN $C$. Do đó, toàn bộ các nhánh con còn lại của $C$ (gồm các nút $H$ và $K$) lập tức **bị cắt tỉa ($\alpha$-cutoff)** mà không cần xét tới.
-   - Nút $C$ trả về giá trị $1$.
-3. **Kết luận nước đi và giá trị Minimax:**
-   - Tại nút gốc $A$: Nhánh $B$ mang lại giá trị 2, nhánh $C$ mang lại giá trị 1.
-   - Do $A$ là người chơi MAX:
-     $$
-     V(A) = \max(2, 1) = 2
-     $$
-   - Người chơi MAX chọn đi nước sang nhánh $B$, giá trị Minimax của trò chơi là $2$.
-
----
-
-### Bài tập 2: Tầm quan trọng của sắp xếp nước đi (Move Ordering) trong Alpha-Beta
-**Đề bài:**
-Gọi $b$ là hệ số rẽ nhánh của cây trò chơi và $d$ là độ sâu tìm kiếm.
-1. Trong trường hợp lý tưởng nhất (nước đi tốt nhất luôn được duyệt trước), độ phức tạp thời gian của Alpha-Beta là bao nhiêu? Giải thích ý nghĩa của con số này.
-2. Trong trường hợp xấu nhất (nước đi tồi nhất luôn bị duyệt trước), hiệu quả cắt tỉa của Alpha-Beta thay đổi như thế nào?
-3. Nêu hai kỹ thuật thực tế giúp cải thiện thứ tự sắp xếp nước đi trước khi gọi đệ quy Alpha-Beta.
-
-**Phân tích & Hướng dẫn giải:**
-1. **Trường hợp lý tưởng nhất:**
-   - Khi nước đi tốt nhất luôn được xét đầu tiên, tại các nút MAX ta lập tức có cận $\alpha$ rất cao, và tại các nút MIN ta lập tức có cận $\beta$ rất thấp.
-   - Số nút cần thăm giảm xuống xấp xỉ:
-     $$
-     \mathcal{O}(b^{d/2})
-     $$
-   - Ý nghĩa thực tiễn: Với cùng một lượng tài nguyên tính toán và thời gian, thuật toán Alpha-Beta cho phép nhìn sâu gấp đôi ($2d$ so với $d$) so với Minimax thuần túy.
-2. **Trường hợp xấu nhất:**
-   - Nếu các nước đi tốt nhất lại nằm ở cuối cùng bên phải cây, thuật toán buộc phải duyệt qua mọi lá trước khi tìm thấy giá trị tối ưu, không có nhánh nào bị cắt tỉa.
-   - Độ phức tạp khi đó thoái hóa về Minimax thông thường:
-     $$
-     \mathcal{O}(b^d)
-     $$
-3. **Kỹ thuật sắp xếp nước đi thực tế:**
-   - **Nước đi ăn quân (Killer Moves / Capture Moves):** Trong cờ vua, ưu tiên xét các nước ăn quân lớn bằng quân nhỏ trước (ví dụ: Tốt ăn Hậu), vì các biến cố này thường mang tính quyết định bàn cờ nhanh nhất.
-   - **Bảng chuyển vị (Transposition Table) kết hợp IDS:** Sử dụng kết quả lưu trong bảng băm từ lần lặp ở độ sâu $d-1$ để chọn ngay nước đi tốt nhất làm nhánh đầu tiên cho lần lặp ở độ sâu $d$.
-
----
-
-### Bài tập 3: Cây trò chơi có yếu tố ngẫu nhiên (Expectiminimax) và tính bảo toàn thứ tự
-**Đề bài:**
-1. Hãy trình bày công thức xác định giá trị của nút ngẫu nhiên (Chance Node) $C$ với các nhánh hành động con $s_1, s_2, \dots, s_k$ xảy ra với xác suất tương ứng $P(s_i)$.
-2. Giải thích tại sao phép biến đổi đơn điệu tăng bất kỳ $f(x)$ (ví dụ: $f(x) = x^3$) không làm thay đổi quyết định của thuật toán Minimax, nhưng lại có thể làm thay đổi quyết định của thuật toán Expectiminimax.
-
-**Phân tích & Hướng dẫn giải:**
-1. **Giá trị của nút ngẫu nhiên:**
-   - Nút ngẫu nhiên đại diện cho các sự kiện xúc xắc, rút bài ngẫu nhiên. Giá trị của nó là kỳ vọng toán học:
-     $$
-     V(C) = \sum_{i=1}^k P(s_i) \cdot V(s_i)
-     $$
-     với điều kiện tổng xác suất thỏa mãn:
-     $$
-     \sum_{i=1}^k P(s_i) = P(s_1) + P(s_2) + \dots + P(s_k) = 1
-     $$
-2. **Sự khác biệt về tính chất biến đổi đơn điệu:**
-   - Trong Minimax thuần túy, mọi phép toán chỉ là so sánh thứ tự $\max$ và $\min$:
-     $$
-     u > v \iff f(u) > f(v)
-     $$
-     với mọi hàm đơn điệu tăng $f$. Do đó, thang đo điểm số chỉ mang ý nghĩa thứ bậc (ordinal utility).
-   - Trong Expectiminimax, phép tính kỳ vọng toán học là bình quân gia quyền. Phép toán này đòi hỏi hàm thỏa dụng phải có ý nghĩa định lượng (cardinal utility / von Neumann-Morgenstern utility).
-   - Khi áp dụng một phép biến đổi phi tuyến (như $f(x) = x^3$), thứ tự kỳ vọng toán học có thể bị đảo lộn:
-     Xét hai lựa chọn:
-     + Lựa chọn 1: Chắc chắn nhận 10 điểm $\implies \mathbb{E}_1 = 10$.
-     + Lựa chọn 2: Nhận 0 điểm với xác suất 0.5 và nhận 22 điểm với xác suất 0.5:
-     $$
-     \mathbb{E}_2 = 0.5 \times 0 + 0.5 \times 22 = 11 > 10
-     $$
-     do đó chọn Lựa chọn 2.
-     Biến đổi hàm qua $f(x) = x^3$:
-     + Lựa chọn 1: $f(10) = 1{,}000$.
-     + Lựa chọn 2: Kỳ vọng là:
-     $$
-     0.5 \times 0^3 + 0.5 \times 22^3 = 5{,}324 > 1{,}000
-     $$
-     vẫn ưu tiên chọn 2.
-     Tuy nhiên, nếu chọn hàm lõm $f(x) = \sqrt{x}$ (thể hiện tính ngại rủi ro):
-     + Lựa chọn 1: $\sqrt{10} \approx 3.16$.
-     + Lựa chọn 2: Kỳ vọng là:
-     $$
-     0.5 \times 0 + 0.5 \times \sqrt{22} \approx 2.345 < 3.16
-     $$
-     kéo theo quyết định bị đảo ngược sang Lựa chọn 1.
-   - Do đó, trong Expectiminimax, các giá trị lượng giá phải được giữ chuẩn xác theo thang đo kỳ vọng tuyến tính afin ($f(x) = ax + b$ với $a > 0$).
-
----
-
-[← Quay lại Chương 3: Tìm kiếm kinh nghiệm](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md) · [Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 5: Bài toán ràng buộc CSP →](/bieu-dien-tri-thuc/bai-giang/05-csp.md)

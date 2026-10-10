@@ -20,13 +20,13 @@ $$
 
 Tương tự, có thể lấy $B$ nhân thành phần $A\cos\varphi$ của $\vec A$ theo hướng $\vec B$, như Hình 1.26c. Kết quả $B(A\cos\varphi)=AB\cos\varphi$ vẫn như (1.16).
 
-![Hình 1.26 nguyên tác: tích vô hướng được tính từ độ lớn một vector và thành phần vector còn lại theo hướng ấy](img/young-01/hinh-1-26.png)
+![Hình 1.26 nguyên tác: Tích vô hướng được tính từ độ lớn một vector và thành phần vector còn lại theo hướng ấy](img/young-01/hinh-1-26.png)
 
 **Hình 1.26:** (a) Đặt chung đuôi. (b) $\vec A\cdot\vec B=A(B\cos\varphi)$. (c) Cũng có thể tính $\vec A\cdot\vec B=B(A\cos\varphi)$.
 
 Tích vô hướng có thể dương, âm hoặc bằng không. Nếu $0^\circ\le\varphi<90^\circ$, cos dương nên tích dương. Nếu $90^\circ<\varphi\le180^\circ$, thành phần $B\cos\varphi$ âm nên tích âm. Nếu hai vector vuông góc, $\varphi=90^\circ$ và tích bằng không.
 
-![Hình 1.27 nguyên tác: tích vô hướng dương, âm hoặc bằng không theo góc giữa hai vector](img/young-01/hinh-1-27.png)
+![Hình 1.27 nguyên tác: Tích vô hướng dương, âm hoặc bằng không theo góc giữa hai vector](img/young-01/hinh-1-27.png)
 
 **Hình 1.27:** (a) Góc nhọn cho $B\cos\varphi>0$, tích dương. (b) Góc tù cho $B\cos\varphi<0$, tích âm. (c) Góc vuông cho thành phần theo hướng vector kia bằng không, nên tích bằng không.
 
@@ -91,12 +91,12 @@ Nguyên tác đánh dấu ví dụ này có các bài biến thể trong phần 
 Tìm $\vec A\cdot\vec B$ của hai vector ở Hình 1.28, biết $A=4.00$, $B=5.00$. Góc của chúng so với chiều $+x$ lần lượt là $53.0^\circ$ và $130.0^\circ$.
 :::
 
-![Hình 1.28 nguyên tác: hai vector trong mặt phẳng tạo góc 53 độ và 130 độ với trục x](img/young-01/hinh-1-28.png)
+![Hình 1.28 nguyên tác: Hai vector trong mặt phẳng tạo góc 53 độ và 130 độ với trục x](img/young-01/hinh-1-28.png)
 
 **Hình 1.28:** Hai vector nằm trong mặt phẳng $xy$; góc giữa chúng là phần chênh giữa hai góc với $+x$.
 
 ::: solution Lời giải của sách
-**Xác định và thiết lập.** Tính theo hai cách: dùng độ lớn và góc ở (1.16), rồi dùng thành phần ở (1.19). Hai kết quả dùng để kiểm tra lẫn nhau.
+**Xác định và thiết lập.** Tính theo hai cách: Dùng độ lớn và góc ở (1.16), rồi dùng thành phần ở (1.19). Hai kết quả dùng để kiểm tra lẫn nhau.
 
 **Thực hiện.** Góc giữa hai vector:
 
@@ -147,7 +147,7 @@ và:
 $$\vec B=-4.00\hat{\mathbf i}+2.00\hat{\mathbf j}-1.00\hat{\mathbf k}.$$
 :::
 
-![Hình 1.29 nguyên tác: hai vector không gian biểu diễn bằng các cạnh của hai khối hộp](img/young-01/hinh-1-29.png)
+![Hình 1.29 nguyên tác: Hai vector không gian biểu diễn bằng các cạnh của hai khối hộp](img/young-01/hinh-1-29.png)
 
 **Hình 1.29:** $\vec A$ nối gốc tới đỉnh gần của khối hộp đỏ; $\vec B$ nối gốc tới đỉnh xa của khối hộp xanh.
 
@@ -195,12 +195,12 @@ Góc $\varphi$ được đo từ $\vec A$ tới $\vec B$, lấy góc nhỏ hơn 
 Nếu hai vector cùng hướng hoặc ngược hướng thì $\varphi=0^\circ$ hoặc $180^\circ$ và tích có hướng bằng vector không. Đặc biệt, tích có hướng của một vector với chính nó bằng không.
 
 ::: warning Phân biệt hai phép tích
-$AB\sin\varphi$ là **độ lớn của tích có hướng**, còn $AB\cos\varphi$ là **tích vô hướng**. Giữ cố định hai độ lớn rồi thay đổi góc: khi cùng hướng, tích có hướng bằng không còn tích vô hướng đạt giá trị lớn nhất; khi vuông góc, độ lớn tích có hướng đạt lớn nhất còn tích vô hướng bằng không.
+$AB\sin\varphi$ là **độ lớn của tích có hướng**, còn $AB\cos\varphi$ là **tích vô hướng**. Giữ cố định hai độ lớn rồi thay đổi góc: Khi cùng hướng, tích có hướng bằng không còn tích vô hướng đạt giá trị lớn nhất; khi vuông góc, độ lớn tích có hướng đạt lớn nhất còn tích vô hướng bằng không.
 :::
 
 Một mặt phẳng có hai hướng pháp tuyến đối nhau. Để chọn hướng của $\vec A\times\vec B$, tưởng tượng quay $\vec A$ tới $\vec B$ theo góc nhỏ hơn. Khum các ngón bàn tay phải theo chiều quay ấy; ngón cái duỗi ra chỉ hướng tích có hướng.
 
-![Hình 1.30 nguyên tác: quy tắc bàn tay phải khi đổi thứ tự hai vector](img/young-01/hinh-1-30.png)
+![Hình 1.30 nguyên tác: Quy tắc bàn tay phải khi đổi thứ tự hai vector](img/young-01/hinh-1-30.png)
 
 **Hình 1.30a:** (1) Đặt chung đuôi. (2) Hướng các ngón bàn tay phải theo $\vec A$, lòng bàn tay hướng về phía $\vec B$. (3) Khum ngón tay từ $\vec A$ tới $\vec B$. (4) Ngón cái chỉ $\vec A\times\vec B$.
 
@@ -210,7 +210,7 @@ $$\vec A\times\vec B=-\vec B\times\vec A.\tag{1.21}$$
 
 Tương tự tích vô hướng, có thể diễn giải độ lớn bằng hình học. $B\sin\varphi$ là thành phần của $\vec B$ vuông góc hướng $\vec A$, nên độ lớn tích có hướng bằng $A$ nhân thành phần đó. Cũng có thể lấy $B$ nhân thành phần $A\sin\varphi$ của $\vec A$ vuông góc $\vec B$.
 
-![Hình 1.31 nguyên tác: độ lớn tích có hướng qua thành phần vuông góc](img/young-01/hinh-1-31.png)
+![Hình 1.31 nguyên tác: Độ lớn tích có hướng qua thành phần vuông góc](img/young-01/hinh-1-31.png)
 
 **Hình 1.31:** (a) $|\vec A\times\vec B|=A(B\sin\varphi)$. (b) Cũng bằng $B(A\sin\varphi)$. Hình vẽ góc từ $0^\circ$ đến $90^\circ$; hãy dựng hình tương tự cho góc từ $90^\circ$ đến $180^\circ$ để thấy cách diễn giải vẫn đúng.
 
@@ -281,7 +281,7 @@ Nếu đảo chiều trục $z$ của Hình 1.32a, ta được hệ ở Hình 1.
 
 Như vậy có hai loại hệ tọa độ, khác nhau ở dấu các tích vector đơn vị. Hệ thỏa $\hat{\mathbf i}\times\hat{\mathbf j}=\hat{\mathbf k}$ gọi là **hệ tọa độ thuận**, hay hệ bàn tay phải. Sách tuân theo cách dùng thông thường là chỉ dùng hệ này.
 
-![Hình 1.32 nguyên tác: hệ tọa độ bàn tay phải và hệ bàn tay trái](img/young-01/hinh-1-32.png)
+![Hình 1.32 nguyên tác: Hệ tọa độ bàn tay phải và hệ bàn tay trái](img/young-01/hinh-1-32.png)
 
 **Hình 1.32:** (a) Hệ thuận dùng trong sách, có các tích tuần hoàn ở (1.22). (b) Hệ nghịch, hay bàn tay trái, có dấu ngược lại và không được dùng trong các công thức thành phần đang xét.
 
@@ -291,12 +291,12 @@ Như vậy có hai loại hệ tọa độ, khác nhau ở dấu các tích vect
 $\vec A$ có độ lớn $6$ đơn vị, theo chiều $+x$. $\vec B$ có độ lớn $4$ đơn vị, nằm trong mặt phẳng $xy$ và tạo góc $30^\circ$ với $+x$, theo Hình 1.33. Tìm $\vec C=\vec A\times\vec B$.
 :::
 
-![Hình 1.33 nguyên tác: tích có hướng của hai vector trong mặt phẳng xy chỉ theo trục z](img/young-01/hinh-1-33.png)
+![Hình 1.33 nguyên tác: Tích có hướng của hai vector trong mặt phẳng xy chỉ theo trục z](img/young-01/hinh-1-33.png)
 
 **Hình 1.33:** $\vec B$ nằm trong mặt phẳng $xy$, lệch $30^\circ$ từ $+x$ về $+y$; $\vec C$ vuông góc mặt phẳng ấy.
 
 ::: solution Lời giải của sách
-**Xác định và thiết lập.** Tính bằng hai cách để kiểm tra: dùng (1.20) kết hợp bàn tay phải, rồi dùng các thành phần ở (1.25).
+**Xác định và thiết lập.** Tính bằng hai cách để kiểm tra: Dùng (1.20) kết hợp bàn tay phải, rồi dùng các thành phần ở (1.25).
 
 **Thực hiện.** Độ lớn tích:
 
@@ -333,7 +333,7 @@ Vậy một lần nữa $\vec C=12\hat{\mathbf k}$.
 ### Câu hỏi kiểm tra hiểu mục 1.10
 
 ::: exercise Câu hỏi trong sách
-$\vec A$ có độ lớn $2$, $\vec B$ có độ lớn $3$. Góc $\varphi$ thuộc các khả năng: (i) $0^\circ$, (ii) $90^\circ$, (iii) $180^\circ$. Xác định góc có thể cho từng trường hợp; có thể có nhiều đáp án:
+$\vec A$ có độ lớn $2$, $\vec B$ có độ lớn $3$. Góc $\varphi$ thuộc các khả năng: (I) $0^\circ$, (ii) $90^\circ$, (iii) $180^\circ$. Xác định góc có thể cho từng trường hợp; có thể có nhiều đáp án:
 
 **(a)** $\vec A\cdot\vec B=0$.
 

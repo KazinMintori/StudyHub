@@ -37,7 +37,7 @@ Bản yếu: “Gradient bằng 0, kết hợp với tính lồi, đảm bảo t
 
 Lời giảng tốt hơn cho bài toán không ràng buộc trên \(\mathbb R^n\), với \(f\) khả vi và lồi:
 
-> Gradient bằng 0 thì đã đủ chưa? Với một hàm bất kỳ, chưa đủ. Ta cần tính lồi ở bước sau: với mọi \(y\),
+> Gradient bằng 0 thì đã đủ chưa? Với một hàm bất kỳ, chưa đủ. Ta cần tính lồi ở bước sau: Với mọi \(y\),
 > \[
 > f(y)\ge f(x^\star)+\nabla f(x^\star)^T(y-x^\star).
 > \]
@@ -55,15 +55,15 @@ Nếu bỏ tính lồi, \(f(x)=-x^2\) có \(f'(0)=0\) nhưng \(0\) là cực đ�
 
 “Chỗ này dễ nhầm”, “Tại sao lại thế?”, “Đến bước này mới cần tính lồi” được phép khi ngay sau đó có chỗ nhầm, câu trả lời hoặc bước cụ thể. Không rải “khoan”, “hãy tưởng tượng”, “các bạn thấy không” vào mọi đoạn để diễn giọng người. Không ghi ngộ nhận là phổ biến nếu chưa có dữ liệu; có thể nói “Một cách suy ra dễ nhầm là…”.
 
-Đổi nhịp theo chức năng: một câu ngắn nêu vướng mắc, vài câu giải thích, một công thức khi cần, rồi trở lại ý nghĩa. Không bắt mỗi đoạn có câu hỏi tu từ và câu tổng kết tròn trịa.
+Đổi nhịp theo chức năng: Một câu ngắn nêu vướng mắc, vài câu giải thích, một công thức khi cần, rồi trở lại ý nghĩa. Không bắt mỗi đoạn có câu hỏi tu từ và câu tổng kết tròn trịa.
 
 ## Lượt sửa riêng cho ngôn ngữ
 
-Trước khi sửa, ghi những phần phải giữ: điều kiện, miền, phủ định, lượng từ, kết luận, ký hiệu và nguồn. Sau đó:
+Trước khi sửa, ghi những phần phải giữ: Điều kiện, miền, phủ định, lượng từ, kết luận, ký hiệu và nguồn. Sau đó:
 
 1. Chỉ ra câu đang khó học vì thiếu đối tượng, quan hệ, bước nối hay sai giọng.
 2. Khôi phục bước thiếu; dùng động từ hoặc ký hiệu đã biết để gọi đúng đối tượng.
-3. Tách câu khi nó đổi việc: từ chứng minh sang chọn bước, từ tính toán sang quy ước.
+3. Tách câu khi nó đổi việc: Từ chứng minh sang chọn bước, từ tính toán sang quy ước.
 4. Xóa cầu nối có thể dán vào bất kỳ bài nào. Cầu nối thật phải nhắc việc vừa biết và câu hỏi sắp giải quyết.
 5. Đọc liền mạch trong đúng giọng đã chọn; đối chiếu lại các phần phải giữ.
 
@@ -80,7 +80,7 @@ Một lỗi lặp lại của văn bản do AI soạn là bỏ bớt động t�
 - Không lặp cùng khuôn “Từ A đến B”, “Vì sao A?”, “A dùng để B” qua nhiều mục. Đọc riêng danh sách tiêu đề để phát hiện nhịp máy móc.
 - Trong văn xuôi, giữ “vì”, “nếu”, “khi”, chủ thể và động từ. Một câu ngắn không được đánh đổi lấy quan hệ logic bị thiếu.
 
-Đừng dùng “kiểm” như bản dịch mặc định của *check*. Chọn động từ theo hành động thật: “xác định kích thước”, “đối chiếu hai vế”, “xác minh điều kiện KKT”, “chứng minh tính lồi”, “thử một trường hợp”. “Kiểm tra” vẫn dùng được khi đúng nghĩa, nhưng “kiểm kích thước”, “kiểm dạng chuẩn” thường là câu cụt và không tự nhiên.
+Đừng dùng “kiểm” như bản dịch mặc định của *check*. Chọn động từ theo hành động thật: “Xác định kích thước”, “đối chiếu hai vế”, “xác minh điều kiện KKT”, “chứng minh tính lồi”, “thử một trường hợp”. “Kiểm tra” vẫn dùng được khi đúng nghĩa, nhưng “kiểm kích thước”, “kiểm dạng chuẩn” thường là câu cụt và không tự nhiên.
 
 Đoạn hướng dẫn đọc bài phải là văn xuôi hoàn chỉnh. Tránh nhãn “Cách học:” theo sau bởi chuỗi mệnh lệnh rút gọn. Nói rõ phần nào là mạch chính, phần nào có thể để lại và lý do. Sau dấu hai chấm, viết hoa nếu phần sau là một câu độc lập; tốt hơn nữa, tách thành câu mới khi nhãn không cần thiết.
 
@@ -100,12 +100,12 @@ Rà riêng các khuôn sau khi biên tập Notes; chi tiết và cách sửa ở
 
 Người dùng của site đã chỉ ra bốn đặc điểm làm lời giảng đọc như văn máy. Mỗi dấu hiệu dưới đây kèm một ví dụ đã gặp khi soạn Lecture 01 của môn Cơ sở toán cho AI và cách sửa.
 
-1. **Từ ngữ không ai dùng trong ngữ cảnh đó.** "Hãy cùng bước vào hành trình…", "một kỹ thuật kiểm tra rất mạnh", "đóng vai trò then chốt". Sửa bằng việc cụ thể mà khái niệm làm được: "kỹ thuật hạn chế lên một đường thẳng biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều".
+1. **Từ ngữ không ai dùng trong ngữ cảnh đó.** "Hãy cùng bước vào hành trình…", "một kỹ thuật kiểm tra rất mạnh", "đóng vai trò then chốt". Sửa bằng việc cụ thể mà khái niệm làm được: "Kỹ thuật hạn chế lên một đường thẳng biến một câu hỏi nhiều chiều thành nhiều câu hỏi một chiều".
 2. **Khuôn câu và khuôn câu hỏi lặp lại.** Mười bốn câu hỏi đào sâu trong một chương cùng mở bằng "Một bạn nói: … Bạn ấy đúng không?", trang nào cũng mở bằng "Trang này…", và "Đây chính là…" ở rất nhiều đoạn. Sửa theo nội dung của từng câu: "Khẳng định … nghe hợp lý. Hãy tìm một phản ví dụ.", "Để biết y có thuộc K* không, chỉ thử vài vector có đủ không?", "Điều gì xảy ra nếu bỏ giả thiết…?". Với "Đây chính là…", nói thẳng quan hệ: "Ta vừa tìm lại điều kiện nhân tử Lagrange, lần này chỉ bằng hình học."
 3. **Rút ngắn thay vì giải thích.** "Tập lồi. Hàm lồi. Cực tiểu cục bộ. Toàn cục." là ghi chép của người đã hiểu. Người học cần câu có quan hệ: "Vì miền khả thi lồi và hàm mục tiêu lồi, mọi cực tiểu cục bộ đều là cực tiểu toàn cục." Mũi tên "→" trong lời giảng cũng là một dạng rút gọn như vậy.
 4. **Dấu chấm phẩy thay cho từ nối.** "cho f = 1/4; phân phối thứ hai có…" sửa thành "cho f = 1/4, còn phân phối thứ hai có…". Tiếng Việt có rất nhiều từ nối (vì, nên, nhưng, còn, khi đó, chẳng hạn, ngược lại, nhờ đó). Một đoạn năm câu không có từ nối nào thường là danh sách khẳng định, chưa phải lời giải thích.
 
-`review_teaching_text.py` đánh dấu các vị trí tương ứng bằng `AI_LEXICON`, `EVALUATIVE_PHRASE`, `QUESTION_TEMPLATE`, `REPEATED_OPENER`, `CHOPPY_RUN`, `ARROW_IN_PROSE`, `PROSE_SEMICOLON` và `LOW_CONNECTIVES`. Truyền cả chương một lượt, vì khuôn lặp giữa các trang không thấy được khi rà từng trang. Mục tiêu là lời giải thích tốt hơn, không phải né công cụ: đừng thay một khuôn bằng một khuôn mới, đừng đổi sang từ hiếm hay câu vụn để "giống người".
+`review_teaching_text.py` đánh dấu các vị trí tương ứng bằng `AI_LEXICON`, `EVALUATIVE_PHRASE`, `QUESTION_TEMPLATE`, `REPEATED_OPENER`, `CHOPPY_RUN`, `ARROW_IN_PROSE`, `PROSE_SEMICOLON` và `LOW_CONNECTIVES`. Truyền cả chương một lượt, vì khuôn lặp giữa các trang không thấy được khi rà từng trang. Mục tiêu là lời giải thích tốt hơn, không phải né công cụ: Đừng thay một khuôn bằng một khuôn mới, đừng đổi sang từ hiếm hay câu vụn để "giống người".
 
 ## Chủ quyền bài giảng: Bài giảng của bạn, không phải bản dịch sách
 
@@ -118,5 +118,5 @@ Một bài giảng đại học xuất sắc phải có tư cách độc lập v
 2. **Văn phong của một giáo sư và nhà ngôn ngữ tiếng Việt đại tài:**
    - **Chuẩn xác và giàu hình tượng**: Dùng từ ngữ tiếng Việt giàu sức biểu đạt học thuật, gãy gọn, trong sáng. Không “giả trân”, không dùng văn phong AI hoa mỹ sáo rỗng.
    - **Lồng ghép mẹo tư duy tự nhiên**: Đừng đóng khung máy móc thành nhãn *“Mẹo thú vị:”*. Hãy dẫn dắt mượt mà như lời tâm đắc của một bậc thầy: *“Một cách người ta hay dùng để kiểm tra nhanh kết quả này là…”*, *“Kinh nghiệm cho thấy, để không bao giờ nhầm lẫn ở bước này…”*, *“Một mẹo trực quan giúp ta hình dung ngay…”*.
-   - **Gắn liền với đời sống thực tế**: Lý thuyết không nằm im trên trang giấy hay những dòng code trừu tượng. Luôn liên hệ công thức và giải thuật với các ứng dụng thực tế sinh động trong đời sống (trong Trí tuệ Nhân tạo: từ xe tự hành, thuật toán dẫn đường bản đồ Google Maps, công cụ tìm kiếm web, hệ thống gợi ý thương mại điện tử, engine chơi cờ đến chẩn đoán y khoa và suy luận tự động; trong Khoa học Tự nhiên: từ cảm biến điện thoại, công nghệ GPS, hệ thống phanh xe đến các hiện tượng vật lý).
+   - **Gắn liền với đời sống thực tế**: Lý thuyết không nằm im trên trang giấy hay những dòng code trừu tượng. Luôn liên hệ công thức và giải thuật với các ứng dụng thực tế sinh động trong đời sống (trong Trí tuệ Nhân tạo: Từ xe tự hành, thuật toán dẫn đường bản đồ Google Maps, công cụ tìm kiếm web, hệ thống gợi ý thương mại điện tử, engine chơi cờ đến chẩn đoán y khoa và suy luận tự động; trong Khoa học Tự nhiên: Từ cảm biến điện thoại, công nghệ GPS, hệ thống phanh xe đến các hiện tượng vật lý).
    - **Đào sâu bản chất và mở bước khó**: Trả lời thấu đáo câu hỏi *“Tại sao thuật toán/công thức này lại ra đời?”*, *“Nếu bỏ điều kiện này thì điều gì sẽ sụp đổ?”*, giải thích cặn kẽ những bước chuyển biến tư duy hay tính toán mà người mới nhập môn thường lúng túng.

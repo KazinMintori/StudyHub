@@ -31,7 +31,7 @@ Số khách đến trong một giờ thường là biến rời rạc hay liên 
 
 <details><summary>Xem đáp án</summary>
 
-Rời rạc: số khách là số nguyên không âm.
+Rời rạc: Số khách là số nguyên không âm.
 
 </details>
 

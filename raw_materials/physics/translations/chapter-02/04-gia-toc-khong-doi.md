@@ -23,7 +23,7 @@ Chọn thời điểm ban đầu $t_1 = 0$ với vận tốc ban đầu $v_{1x} 
 
 $$v_x = v_{0x} + a_xt.\tag{2.8}$$
 
-Phương trình (2.8) biểu thị quy luật tuyến tính: vận tốc lúc sau bằng vận tốc ban đầu cộng với lượng biến thiên tích lũy $a_xt$. Trên đồ thị vận tốc – thời gian ($v_x-t$), phương trình này là một **đường thẳng** có hệ số góc bằng $a_x$ và tung độ gốc bằng $v_{0x}$ (Hình 2.17).
+Phương trình (2.8) biểu thị quy luật tuyến tính: Vận tốc lúc sau bằng vận tốc ban đầu cộng với lượng biến thiên tích lũy $a_xt$. Trên đồ thị vận tốc – thời gian ($v_x-t$), phương trình này là một **đường thẳng** có hệ số góc bằng $a_x$ và tung độ gốc bằng $v_{0x}$ (Hình 2.17).
 
 ![Hình 2.16: Đồ thị gia tốc theo thời gian — diện tích hình chữ nhật là độ biến thiên vận tốc](img/young-02/hinh-2-16.png)
 
@@ -48,9 +48,9 @@ $$v_{\mathrm{av}-x} = \frac{v_{0x} + (v_{0x} + a_xt)}{2} = v_{0x} + \frac{1}{2}a
 $$x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2.\tag{2.12}$$
 
 Phương trình (2.12) là một hàm số bậc hai của thời gian $t$. Trên đồ thị vị trí – thời gian ($x-t$), đường biểu diễn là một **nhánh parabol** (Hình 2.18 và Hình 2.19):
-- Nếu $a_x > 0$: parabol có bề lõm quay lên trên.
-- Nếu $a_x < 0$: parabol có bề lõm quay xuống dưới.
-- Nếu $a_x = 0$: số hạng bậc hai triệt tiêu, đồ thị thoái hóa thành đường thẳng $x = x_0 + v_{0x}t$ (chuyển động thẳng đều).
+- Nếu $a_x > 0$: Parabol có bề lõm quay lên trên.
+- Nếu $a_x < 0$: Parabol có bề lõm quay xuống dưới.
+- Nếu $a_x = 0$: Số hạng bậc hai triệt tiêu, đồ thị thoái hóa thành đường thẳng $x = x_0 + v_{0x}t$ (chuyển động thẳng đều).
 
 ![Hình 2.18: Đồ thị tọa độ x theo thời gian là đường parabol](img/young-02/hinh-2-18.png)
 
@@ -151,7 +151,7 @@ Thay số:
 $$x = 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})} = 5.0 + \frac{625 - 225}{8.0} = 5.0 + \frac{400}{8.0} = 5.0 + 50.0 = 55.0\,\mathrm m.$$
 
 **Đánh giá:** 
-Kiểm tra lại: thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25\,\mathrm{m/s}$ là $t = \frac{v_x - v_{0x}}{a_x} = \frac{25 - 15}{4.0} = 2.5\,\mathrm s$. Thế $t = 2.5\,\mathrm s$ vào (2.12): $x = 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2 = 5.0 + 37.5 + 12.5 = 55.0\,\mathrm m$. Kết quả hoàn toàn trùng khớp, nhưng hệ thức (2.13) giúp ta giải quyết bài toán chỉ trong một dòng duy nhất!
+Kiểm tra lại: Thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25\,\mathrm{m/s}$ là $t = \frac{v_x - v_{0x}}{a_x} = \frac{25 - 15}{4.0} = 2.5\,\mathrm s$. Thế $t = 2.5\,\mathrm s$ vào (2.12): $x = 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2 = 5.0 + 37.5 + 12.5 = 55.0\,\mathrm m$. Kết quả hoàn toàn trùng khớp, nhưng hệ thức (2.13) giúp ta giải quyết bài toán chỉ trong một dòng duy nhất!
 :::
 
 ---
@@ -194,7 +194,7 @@ $$x_O = (15.0\,\mathrm{m/s})(10.0\,\mathrm s) = 150\,\mathrm m,$$
 $$x_P = \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 = 1.5 \times 100 = 150\,\mathrm m.$$
 
 **Đánh giá bản chất sâu sắc:**
-Quan sát thấy: tại thời điểm gặp nhau, vận tốc của cảnh sát ($30.0\,\mathrm{m/s}$) **gấp đúng 2 lần** vận tốc của chiếc ô tô ($15.0\,\mathrm{m/s}$)!
+Quan sát thấy: Tại thời điểm gặp nhau, vận tốc của cảnh sát ($30.0\,\mathrm{m/s}$) **gấp đúng 2 lần** vận tốc của chiếc ô tô ($15.0\,\mathrm{m/s}$)!
 Đây hoàn toàn không phải là sự trùng hợp ngẫu nhiên. Vì hai xe đi cùng một quãng đường trong cùng một khoảng thời gian, nên vận tốc trung bình của chúng phải bằng nhau:
 - Vận tốc trung bình của ô tô chạy đều là $v_O$.
 - Vận tốc trung bình của cảnh sát xuất phát từ nghỉ là $\frac{0 + v_P}{2} = \frac{v_P}{2}$.

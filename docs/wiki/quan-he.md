@@ -7,7 +7,7 @@ next: false
 
 # Quan hệ
 
-Quan hệ từ A đến B là một tập các cặp có thứ tự trong $A\times B$. Với quan hệ trên A: phản xạ là mọi x có xRx. Đối xứng là xRy kéo theo yRx. Bắc cầu là xRy và yRz kéo theo xRz. Hàm là quan hệ đặc biệt với đúng một đầu ra cho mỗi đầu vào.
+Quan hệ từ A đến B là một tập các cặp có thứ tự trong $A\times B$. Với quan hệ trên A: Phản xạ là mọi x có xRx. Đối xứng là xRy kéo theo yRx. Bắc cầu là xRy và yRz kéo theo xRz. Hàm là quan hệ đặc biệt với đúng một đầu ra cho mỗi đầu vào.
 
 <WikiUsage />
 

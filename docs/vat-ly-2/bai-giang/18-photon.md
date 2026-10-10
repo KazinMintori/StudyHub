@@ -2,7 +2,7 @@
 course: vat-ly-2
 lecture: 18-photon
 section: lecture
-title: "Photon: tính hạt của sóng ánh sáng"
+title: "Photon: Tính hạt của sóng ánh sáng"
 prerequisites: ["thuyet-tuong-doi-hep","cong-nang-luong","song"]
 lessonStatus: draft
 sourceTranslation: full

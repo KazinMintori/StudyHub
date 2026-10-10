@@ -4,12 +4,12 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: hai-lop-bai-toan-kinh-dien
 section: topic
 title: "Bình phương tối thiểu và quy hoạch tuyến tính"
-description: "Hai lớp bài toán giải được một cách đáng tin cậy: bình phương tối thiểu với hệ phương trình chuẩn và hình học phép chiếu, quy hoạch tuyến tính với hình học đa diện, chứng nhận tối ưu và biến phụ, rồi tối ưu lồi như sự tổng quát hóa của cả hai."
+description: "Hai lớp bài toán giải được một cách đáng tin cậy: Bình phương tối thiểu với hệ phương trình chuẩn và hình học phép chiếu, quy hoạch tuyến tính với hình học đa diện, chứng nhận tối ưu và biến phụ, rồi tối ưu lồi như sự tổng quát hóa của cả hai."
 ---
 
-Ở chủ đề trước, ta đã viết được một bài toán tối ưu cho đúng. Câu hỏi tiếp theo là: viết xong rồi thì giải bằng cách nào? Sách trả lời thẳng thắn rằng bài toán tối ưu tổng quát **khó giải một cách đáng ngạc nhiên**, kể cả khi mọi hàm đều trơn như đa thức. Những phương pháp tổng quát phải chấp nhận một sự đánh đổi, hoặc chạy rất lâu, hoặc có thể không tìm ra nghiệm.
+Ở chủ đề trước, ta đã viết được một bài toán tối ưu cho đúng. Câu hỏi tiếp theo là: Viết xong rồi thì giải bằng cách nào? Sách trả lời thẳng thắn rằng bài toán tối ưu tổng quát **khó giải một cách đáng ngạc nhiên**, kể cả khi mọi hàm đều trơn như đa thức. Những phương pháp tổng quát phải chấp nhận một sự đánh đổi, hoặc chạy rất lâu, hoặc có thể không tìm ra nghiệm.
 
-Thế nhưng có vài ngoại lệ quan trọng: những lớp bài toán mà ta có thuật toán giải được cả bài lớn, nhanh và gần như chắc chắn. Trang này giới thiệu hai ngoại lệ nổi tiếng nhất là **bình phương tối thiểu** và **quy hoạch tuyến tính**, rồi chỉ ra rằng cả hai đều là trường hợp riêng của một lớp rộng hơn: **tối ưu lồi**. Hiểu được điều gì khiến hai lớp này dễ là cách tốt nhất để hiểu vì sao cả môn học xoay quanh tính lồi.
+Thế nhưng có vài ngoại lệ quan trọng: Những lớp bài toán mà ta có thuật toán giải được cả bài lớn, nhanh và gần như chắc chắn. Trang này giới thiệu hai ngoại lệ nổi tiếng nhất là **bình phương tối thiểu** và **quy hoạch tuyến tính**, rồi chỉ ra rằng cả hai đều là trường hợp riêng của một lớp rộng hơn: **Tối ưu lồi**. Hiểu được điều gì khiến hai lớp này dễ là cách tốt nhất để hiểu vì sao cả môn học xoay quanh tính lồi.
 
 Bạn cần biết phép nhân ma trận, gradient của hàm nhiều biến và dạng $\|Ax - b\|_2^2$ đã gặp ở Lecture 00.
 
@@ -35,11 +35,11 @@ Hệ này được gọi là **hệ phương trình chuẩn**. Khi các cột c�
 
 Lý do điểm dừng là cực tiểu toàn cục sẽ được làm rõ ở các chủ đề về hàm lồi. Ta có thể thấy trước ý chính: Hessian của $f_0$ là $2A^T A$, và với mọi vector $v$, $v^T(2A^T A)v = 2\|Av\|_2^2 \ge 0$. Một hàm bậc hai có Hessian nửa xác định dương thì "cong lên" theo mọi hướng, nên điểm dừng của nó không thể là đỉnh đồi hay điểm yên ngựa.
 
-### 1.2 Bức tranh hình học: phép chiếu vuông góc
+### 1.2 Bức tranh hình học: Phép chiếu vuông góc
 
 Công thức $A^T A x = A^T b$ có một ý nghĩa hình học rất đẹp, và nó giải thích vì sao bình phương tối thiểu lại "tự nhiên" đến thế. Khi $x$ chạy khắp $\mathbb{R}^n$, vector dự đoán $Ax$ chạy khắp **không gian cột** của $A$, tức tập $\{Ax : x \in \mathbb{R}^n\}$. Đó là một không gian con của $\mathbb{R}^k$. Vector dữ liệu $b$ nói chung nằm ngoài không gian ấy, vì không có mô hình nào khớp hoàn hảo dữ liệu thật.
 
-Cực tiểu $\|Ax - b\|_2$ nghĩa là tìm điểm của không gian cột **gần $b$ nhất** theo khoảng cách Euclid. Hình học phổ thông cho ta câu trả lời: hạ đường vuông góc. Điểm gần nhất là hình chiếu vuông góc của $b$, và phần dư $Ax^\star - b$ vuông góc với cả không gian cột, tức vuông góc với từng cột của $A$. Viết điều kiện vuông góc ấy cho từng cột, ta được đúng $A^T(Ax^\star - b) = 0$. Như vậy hệ phương trình chuẩn không phải một mẹo đại số, nó là điều kiện "phần dư vuông góc với mọi hướng mà mô hình có thể đi".
+Cực tiểu $\|Ax - b\|_2$ nghĩa là tìm điểm của không gian cột **gần $b$ nhất** theo khoảng cách Euclid. Hình học phổ thông cho ta câu trả lời: Hạ đường vuông góc. Điểm gần nhất là hình chiếu vuông góc của $b$, và phần dư $Ax^\star - b$ vuông góc với cả không gian cột, tức vuông góc với từng cột của $A$. Viết điều kiện vuông góc ấy cho từng cột, ta được đúng $A^T(Ax^\star - b) = 0$. Như vậy hệ phương trình chuẩn không phải một mẹo đại số, nó là điều kiện "phần dư vuông góc với mọi hướng mà mô hình có thể đi".
 
 Từ góc nhìn này còn rút ra một điều tinh tế. Vector dự đoán tốt nhất $Ax^\star$, là hình chiếu của $b$, luôn duy nhất. Nhưng bộ tham số $x^\star$ tạo ra nó chỉ duy nhất khi các cột của $A$ độc lập tuyến tính. Nếu có hai đặc trưng trùng nhau, chẳng hạn nhiệt độ đo bằng độ C và cùng nhiệt độ đó đổi sang độ F, thì có vô số cách chia trọng số giữa chúng mà vẫn cho cùng một dự đoán. Tập các nghiệm khi đó là một tập affine, đúng như chủ đề "Đường thẳng, đoạn thẳng và tập affine" đã mô tả.
 
@@ -52,7 +52,7 @@ $$
 
 Hệ chuẩn là $5a + 3c = 10$ và $3a + 3c = 7$. Lấy phương trình đầu trừ phương trình sau được $2a = 3$, nên $a^\star = \tfrac32$ và $c^\star = \tfrac56$. Vector dự đoán là $Ax^\star = (\tfrac56, \tfrac73, \tfrac{23}{6})$ và phần dư là $r = Ax^\star - b = (-\tfrac16, \tfrac13, -\tfrac16)$.
 
-Kiểm tra điều kiện vuông góc: tích của $r$ với cột thứ nhất là $0\cdot(-\tfrac16) + 1\cdot\tfrac13 + 2\cdot(-\tfrac16) = 0$, với cột thứ hai là $-\tfrac16 + \tfrac13 - \tfrac16 = 0$. Tổng bình phương phần dư là $\tfrac1{36} + \tfrac19 + \tfrac1{36} = \tfrac16$. Không đường thẳng nào cho tổng nhỏ hơn.
+Kiểm tra điều kiện vuông góc: Tích của $r$ với cột thứ nhất là $0\cdot(-\tfrac16) + 1\cdot\tfrac13 + 2\cdot(-\tfrac16) = 0$, với cột thứ hai là $-\tfrac16 + \tfrac13 - \tfrac16 = 0$. Tổng bình phương phần dư là $\tfrac1{36} + \tfrac19 + \tfrac1{36} = \tfrac16$. Không đường thẳng nào cho tổng nhỏ hơn.
 :::
 
 ### 1.3 Hai biến thể thường gặp
@@ -63,11 +63,11 @@ $$
 \sum_{i=1}^{k} (a_i^T x - b_i)^2 + \rho \sum_{j=1}^{n} x_j^2, \qquad \rho > 0 .
 $$
 
-Số hạng phạt giữ cho $x$ không quá lớn, và tham số $\rho$ do người dùng chọn để cân bằng giữa hai mong muốn: khớp dữ liệu và giữ tham số nhỏ. Với $\rho > 0$, hệ chuẩn trở thành $(A^T A + \rho I)x = A^T b$, và ma trận $A^T A + \rho I$ luôn khả nghịch. Vì vậy nghiệm luôn duy nhất, kể cả khi các cột của $A$ phụ thuộc tuyến tính. Trong học máy, cách làm này được gọi là hồi quy ridge.
+Số hạng phạt giữ cho $x$ không quá lớn, và tham số $\rho$ do người dùng chọn để cân bằng giữa hai mong muốn: Khớp dữ liệu và giữ tham số nhỏ. Với $\rho > 0$, hệ chuẩn trở thành $(A^T A + \rho I)x = A^T b$, và ma trận $A^T A + \rho I$ luôn khả nghịch. Vì vậy nghiệm luôn duy nhất, kể cả khi các cột của $A$ phụ thuộc tuyến tính. Trong học máy, cách làm này được gọi là hồi quy ridge.
 
-Bình phương tối thiểu còn có một cách hiểu thống kê mà Lecture 00 đã trình bày: nếu dữ liệu được tạo ra bởi mô hình tuyến tính cộng nhiễu Gauss độc lập cùng phương sai, thì nghiệm bình phương tối thiểu chính là ước lượng hợp lý cực đại. Điều chuẩn cũng có cách hiểu tương tự, khi ta gán cho tham số một phân phối tiên nghiệm.
+Bình phương tối thiểu còn có một cách hiểu thống kê mà Lecture 00 đã trình bày: Nếu dữ liệu được tạo ra bởi mô hình tuyến tính cộng nhiễu Gauss độc lập cùng phương sai, thì nghiệm bình phương tối thiểu chính là ước lượng hợp lý cực đại. Điều chuẩn cũng có cách hiểu tương tự, khi ta gán cho tham số một phân phối tiên nghiệm.
 
-Nhận ra một bài toán bình phương tối thiểu khá dễ: chỉ cần thấy hàm mục tiêu là một hàm bậc hai, rồi kiểm tra dạng toàn phương đi kèm nửa xác định dương. Sách gọi việc giải bình phương tối thiểu là một **công nghệ trưởng thành**, theo nghĩa người dùng không cần biết chi tiết thuật toán vẫn dùng được một cách đáng tin cậy. Chi phí tính toán xấp xỉ tỉ lệ với $n^2 k$, với một hằng số đã biết.
+Nhận ra một bài toán bình phương tối thiểu khá dễ: Chỉ cần thấy hàm mục tiêu là một hàm bậc hai, rồi kiểm tra dạng toàn phương đi kèm nửa xác định dương. Sách gọi việc giải bình phương tối thiểu là một **công nghệ trưởng thành**, theo nghĩa người dùng không cần biết chi tiết thuật toán vẫn dùng được một cách đáng tin cậy. Chi phí tính toán xấp xỉ tỉ lệ với $n^2 k$, với một hằng số đã biết.
 
 ## 2. Quy hoạch tuyến tính
 
@@ -82,9 +82,9 @@ $$
 \end{aligned}
 $$
 
-Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b_m$ là dữ liệu. Khác với bình phương tối thiểu, LP **không có công thức nghiệm đóng**. Bù lại, có những thuật toán rất hiệu quả: phương pháp đơn hình của Dantzig và các phương pháp điểm trong mà ta sẽ gặp sau. Sách mô tả độ phức tạp thực tế vào khoảng $n^2 m$ phép tính khi $m \ge n$, với hằng số kém xác định hơn so với bình phương tối thiểu. LP cũng được xem là một công nghệ trưởng thành.
+Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b_m$ là dữ liệu. Khác với bình phương tối thiểu, LP **không có công thức nghiệm đóng**. Bù lại, có những thuật toán rất hiệu quả: Phương pháp đơn hình của Dantzig và các phương pháp điểm trong mà ta sẽ gặp sau. Sách mô tả độ phức tạp thực tế vào khoảng $n^2 m$ phép tính khi $m \ge n$, với hằng số kém xác định hơn so với bình phương tối thiểu. LP cũng được xem là một công nghệ trưởng thành.
 
-### 2.2 Bức tranh hình học: đẩy một đường mức qua một đa giác
+### 2.2 Bức tranh hình học: Đẩy một đường mức qua một đa giác
 
 Mỗi ràng buộc $a_i^T x \le b_i$ cắt không gian làm đôi và giữ lại một nửa. Miền khả thi là giao của các nửa đó, một **đa diện**, trong mặt phẳng là một đa giác lồi. Hàm mục tiêu $c^T x$ có các đường mức $c^T x = \text{hằng số}$ là những đường thẳng song song. Giải LP trong mặt phẳng giống như đẩy một chiếc thước kẻ theo hướng làm giá trị tốt lên, cho tới khi thước chỉ còn chạm đa giác ở mép. Chỗ chạm cuối cùng thường là một đỉnh, và cũng có thể là cả một cạnh nếu thước song song với cạnh ấy.
 
@@ -104,7 +104,7 @@ $$
 3\,(x_1 + x_2) + 1 \cdot (2x_1 + x_2) = 5x_1 + 4x_2 \le 3 \cdot 6 + 1 \cdot 9 = 27 .
 $$
 
-Hệ số được chọn sao cho vế trái đúng bằng hàm mục tiêu. Hai hệ số phải không âm, vì nhân một bất đẳng thức với số âm sẽ đảo chiều nó. Vậy với **mọi** điểm khả thi, giá trị mục tiêu không vượt quá 27, và điểm $(3, 3)$ đạt đúng 27, nên nó tối ưu. Cặp hệ số $(3, 1)$ là một **chứng nhận tối ưu**: ai cũng kiểm tra được nó chỉ bằng vài phép nhân.
+Hệ số được chọn sao cho vế trái đúng bằng hàm mục tiêu. Hai hệ số phải không âm, vì nhân một bất đẳng thức với số âm sẽ đảo chiều nó. Vậy với **mọi** điểm khả thi, giá trị mục tiêu không vượt quá 27, và điểm $(3, 3)$ đạt đúng 27, nên nó tối ưu. Cặp hệ số $(3, 1)$ là một **chứng nhận tối ưu**: Ai cũng kiểm tra được nó chỉ bằng vài phép nhân.
 
 Cách tìm cặp hệ số ấy cũng là một LP, được gọi là bài toán đối ngẫu. Đây là hạt mầm của lý thuyết đối ngẫu Lagrange ở Lecture 03, nơi ý tưởng "cộng các ràng buộc với trọng số không âm để được một cận" được mở rộng cho mọi bài toán lồi.
 
@@ -131,9 +131,9 @@ Ba tiêu chí đo sai số cho ba nghiệm khác nhau, và sự khác nhau đó 
 
 <FitLab />
 
-Thử kéo một điểm thật xa khỏi các điểm còn lại. Đường bình phương tối thiểu bị kéo theo rõ rệt, vì bình phương làm một sai số lớn trở nên rất lớn. Đường ℓ₁ gần như không đổi: nó chịu được vài quan sát bất thường. Còn đường ℓ∞ lo cho trường hợp xấu nhất nên lại bị điểm bất thường chi phối mạnh nhất. Chọn tiêu chí là chọn mô hình, và lựa chọn đó phải đến từ hiểu biết về dữ liệu, không phải từ việc tiêu chí nào dễ tính hơn.
+Thử kéo một điểm thật xa khỏi các điểm còn lại. Đường bình phương tối thiểu bị kéo theo rõ rệt, vì bình phương làm một sai số lớn trở nên rất lớn. Đường ℓ₁ gần như không đổi: Nó chịu được vài quan sát bất thường. Còn đường ℓ∞ lo cho trường hợp xấu nhất nên lại bị điểm bất thường chi phối mạnh nhất. Chọn tiêu chí là chọn mô hình, và lựa chọn đó phải đến từ hiểu biết về dữ liệu, không phải từ việc tiêu chí nào dễ tính hơn.
 
-## 3. Tối ưu lồi: điểm chung của hai lớp bài toán
+## 3. Tối ưu lồi: Điểm chung của hai lớp bài toán
 
 Bây giờ ta có thể nêu lớp bài toán là chủ đề của cả môn học. Một **bài toán tối ưu lồi** có dạng
 
@@ -150,21 +150,21 @@ $$
 f_i(\alpha x + \beta y) \le \alpha f_i(x) + \beta f_i(y).
 $$
 
-Hãy so sánh với điều kiện tuyến tính $f_i(\alpha x + \beta y) = \alpha f_i(x) + \beta f_i(y)$, vốn phải đúng với **mọi** $\alpha, \beta \in \mathbb{R}$. Điều kiện lồi yếu hơn ở hai chỗ: dấu bằng được thay bằng dấu $\le$, và chỉ cần đúng với những cặp $\alpha, \beta$ không âm có tổng bằng 1. Vì vậy mọi hàm tuyến tính đều lồi, mọi LP đều là bài toán tối ưu lồi, và tối ưu lồi là một sự tổng quát hóa của quy hoạch tuyến tính. Bình phương tối thiểu cũng là bài toán lồi, vì hàm $\|Ax - b\|_2^2$ thỏa bất đẳng thức trên (chủ đề về hàm lồi sẽ chứng minh điều này).
+Hãy so sánh với điều kiện tuyến tính $f_i(\alpha x + \beta y) = \alpha f_i(x) + \beta f_i(y)$, vốn phải đúng với **mọi** $\alpha, \beta \in \mathbb{R}$. Điều kiện lồi yếu hơn ở hai chỗ: Dấu bằng được thay bằng dấu $\le$, và chỉ cần đúng với những cặp $\alpha, \beta$ không âm có tổng bằng 1. Vì vậy mọi hàm tuyến tính đều lồi, mọi LP đều là bài toán tối ưu lồi, và tối ưu lồi là một sự tổng quát hóa của quy hoạch tuyến tính. Bình phương tối thiểu cũng là bài toán lồi, vì hàm $\|Ax - b\|_2^2$ thỏa bất đẳng thức trên (chủ đề về hàm lồi sẽ chứng minh điều này).
 
 Tối ưu lồi nói chung không có công thức nghiệm đóng, nhưng có những phương pháp rất hiệu quả. Trong thực tế tính toán, các phương pháp điểm trong thường giải xong trong khoảng 10 đến 100 bước lặp, mỗi bước tốn cỡ $\max\{n^3, n^2 m, F\}$ phép tính, với $F$ là chi phí tính đạo hàm bậc nhất và bậc hai của các hàm. Ngày nay, tối ưu lồi tổng quát đã phát triển vượt bậc và trở thành công nghệ cốt lõi trong kỹ nghệ tính toán khoa học hiện đại.
 
-Một triết lý sâu sắc trong tối ưu hiện đại: nếu bạn đưa được một bài toán thực tế về dạng bài toán tối ưu lồi, thì gần như bạn đã giải quyết xong nó. Cái khó của tối ưu lồi vì vậy không nằm ở khâu giải, mà nằm ở khâu **nhận ra** và **biến đổi** bài toán về dạng lồi. Nhận ra một bài toán bình phương tối thiểu thì dễ, nhận ra một hàm lồi thì khó hơn nhiều, và số mẹo biến đổi cũng nhiều hơn LP. Phần lớn chương này được dành để luyện đúng kỹ năng nhận diện ấy.
+Một triết lý sâu sắc trong tối ưu hiện đại: Nếu bạn đưa được một bài toán thực tế về dạng bài toán tối ưu lồi, thì gần như bạn đã giải quyết xong nó. Cái khó của tối ưu lồi vì vậy không nằm ở khâu giải, mà nằm ở khâu **nhận ra** và **biến đổi** bài toán về dạng lồi. Nhận ra một bài toán bình phương tối thiểu thì dễ, nhận ra một hàm lồi thì khó hơn nhiều, và số mẹo biến đổi cũng nhiều hơn LP. Phần lớn chương này được dành để luyện đúng kỹ năng nhận diện ấy.
 
 ## 4. Khi bài toán không lồi
 
 Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính mà cũng không biết có lồi hay không được gọi chung là **tối ưu phi tuyến**. Với lớp tổng quát này, khoa học tính toán hiện nay chưa có một phương pháp vạn năng nào giải tối ưu trong thời gian đa thức. Người ta đi theo hai hướng, mỗi hướng một sự đánh đổi.
 
-**Tối ưu cục bộ** từ bỏ mục tiêu tìm nghiệm toàn cục và chỉ tìm một điểm tối ưu cục bộ. Các phương pháp này nhanh, áp dụng được cho bài toán rất lớn và chỉ cần các hàm khả vi. Đổi lại, chúng cần một điểm xuất phát, kết quả có thể phụ thuộc mạnh vào điểm xuất phát đó, chúng không cho biết điểm tìm được còn cách nghiệm toàn cục bao xa, và thường nhạy với các tham số của thuật toán. Người ta thường ví tối ưu cục bộ là sự kết hợp tinh tế giữa nghệ thuật mò mẫm và kỹ thuật tính toán. Huấn luyện mạng nơ-ron sâu thuộc đúng loại này: hàm mất mát thường không lồi theo các trọng số, và người ta chạy các biến thể của phương pháp gradient từ một điểm khởi tạo ngẫu nhiên.
+**Tối ưu cục bộ** từ bỏ mục tiêu tìm nghiệm toàn cục và chỉ tìm một điểm tối ưu cục bộ. Các phương pháp này nhanh, áp dụng được cho bài toán rất lớn và chỉ cần các hàm khả vi. Đổi lại, chúng cần một điểm xuất phát, kết quả có thể phụ thuộc mạnh vào điểm xuất phát đó, chúng không cho biết điểm tìm được còn cách nghiệm toàn cục bao xa, và thường nhạy với các tham số của thuật toán. Người ta thường ví tối ưu cục bộ là sự kết hợp tinh tế giữa nghệ thuật mò mẫm và kỹ thuật tính toán. Huấn luyện mạng nơ-ron sâu thuộc đúng loại này: Hàm mất mát thường không lồi theo các trọng số, và người ta chạy các biến thể của phương pháp gradient từ một điểm khởi tạo ngẫu nhiên.
 
-**Tối ưu toàn cục** tìm nghiệm toàn cục thật sự, nhưng đánh đổi bằng thời gian: trong trường hợp xấu nhất, chi phí tăng theo hàm mũ của số biến và số ràng buộc. Nó được dùng khi số biến nhỏ và việc chắc chắn có nghiệm tốt nhất đáng giá, chẳng hạn khi cần chứng nhận một hệ thống quan trọng an toàn trong trường hợp xấu nhất.
+**Tối ưu toàn cục** tìm nghiệm toàn cục thật sự, nhưng đánh đổi bằng thời gian: Trong trường hợp xấu nhất, chi phí tăng theo hàm mũ của số biến và số ràng buộc. Nó được dùng khi số biến nhỏ và việc chắc chắn có nghiệm tốt nhất đáng giá, chẳng hạn khi cần chứng nhận một hệ thống quan trọng an toàn trong trường hợp xấu nhất.
 
-Sách chỉ ra một sự đảo vai thú vị giữa hai thế giới. Với tối ưu cục bộ, lập bài toán thì dễ, cái khó là giải. Với tối ưu lồi thì ngược lại: lập được bài toán dạng lồi mới là cái khó, còn giải thì gần như đã là công nghệ. Tối ưu lồi cũng giúp ích cho cả bài toán không lồi, chẳng hạn để tìm điểm khởi tạo tốt hay để tính cận cho giá trị tối ưu.
+Sách chỉ ra một sự đảo vai thú vị giữa hai thế giới. Với tối ưu cục bộ, lập bài toán thì dễ, cái khó là giải. Với tối ưu lồi thì ngược lại: Lập được bài toán dạng lồi mới là cái khó, còn giải thì gần như đã là công nghệ. Tối ưu lồi cũng giúp ích cho cả bài toán không lồi, chẳng hạn để tìm điểm khởi tạo tốt hay để tính cận cho giá trị tối ưu.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -172,7 +172,7 @@ Sách chỉ ra một sự đảo vai thú vị giữa hai thế giới. Với t�
 
 <details><summary>Xem lời giải thích</summary>
 
-Có thay đổi. Thêm một bản sao của $(1,2)$ tương đương với việc nhân đôi trọng số của quan sát đó trong bình phương tối thiểu có trọng số. Đường thẳng mới sẽ bị kéo về phía $(1, 2)$. Cụ thể, $A^T A = \begin{bmatrix} 6 & 4 \\ 4 & 4 \end{bmatrix}$ và $A^T b = (12, 9)$, cho $a^\star = \tfrac32$ và $c^\star = \tfrac34$. Độ dốc không đổi (một sự trùng hợp của dữ liệu này) nhưng hệ số chặn giảm. Bài học là dữ liệu trùng lặp không "vô hại": nó âm thầm thay đổi trọng số của bài toán.
+Có thay đổi. Thêm một bản sao của $(1,2)$ tương đương với việc nhân đôi trọng số của quan sát đó trong bình phương tối thiểu có trọng số. Đường thẳng mới sẽ bị kéo về phía $(1, 2)$. Cụ thể, $A^T A = \begin{bmatrix} 6 & 4 \\ 4 & 4 \end{bmatrix}$ và $A^T b = (12, 9)$, cho $a^\star = \tfrac32$ và $c^\star = \tfrac34$. Độ dốc không đổi (một sự trùng hợp của dữ liệu này) nhưng hệ số chặn giảm. Bài học là dữ liệu trùng lặp không "vô hại": Nó âm thầm thay đổi trọng số của bài toán.
 
 </details>
 
@@ -196,7 +196,7 @@ Nếu cực đại $t$ với các ràng buộc $|a_i^T x - b_i| \le t$, thì $t$
 
 <details><summary>Xem lời giải thích</summary>
 
-Nhân hai vế của một bất đẳng thức $g(x) \le b$ với số $\lambda < 0$ làm đảo chiều thành $\lambda g(x) \ge \lambda b$, nên không cộng được với các bất đẳng thức khác để ra một cận trên. Với số $\lambda \ge 0$ thì chiều được giữ nguyên. Còn một đẳng thức $h(x) = d$ nhân với số nào cũng vẫn là đẳng thức, nên hệ số của nó không bị ràng buộc dấu. Quy tắc dấu này sẽ xuất hiện lại y hệt trong Lagrangian ở Lecture 03: nhân tử của bất đẳng thức phải không âm, nhân tử của đẳng thức thì tự do về dấu.
+Nhân hai vế của một bất đẳng thức $g(x) \le b$ với số $\lambda < 0$ làm đảo chiều thành $\lambda g(x) \ge \lambda b$, nên không cộng được với các bất đẳng thức khác để ra một cận trên. Với số $\lambda \ge 0$ thì chiều được giữ nguyên. Còn một đẳng thức $h(x) = d$ nhân với số nào cũng vẫn là đẳng thức, nên hệ số của nó không bị ràng buộc dấu. Quy tắc dấu này sẽ xuất hiện lại y hệt trong Lagrangian ở Lecture 03: Nhân tử của bất đẳng thức phải không âm, nhân tử của đẳng thức thì tự do về dấu.
 
 </details>
 
@@ -207,7 +207,7 @@ Khớp mô hình hằng số $y = c$ với bốn số liệu $1, 3, 4, 12$ theo 
 :::
 
 ::: solution
-Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4, 12)$. Hệ chuẩn là $A^T A\, c = A^T b$, tức $4c = 20$, nên $c^\star = 5$. Tổng quát, với $k$ số liệu, hệ chuẩn là $k c = \sum_i b_i$, cho $c^\star = \tfrac1k \sum_i b_i$: trung bình cộng là hằng số gần dữ liệu nhất theo nghĩa bình phương. Số liệu 12 kéo trung bình lên 5, trong khi ba số còn lại đều nhỏ hơn 5.
+Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4, 12)$. Hệ chuẩn là $A^T A\, c = A^T b$, tức $4c = 20$, nên $c^\star = 5$. Tổng quát, với $k$ số liệu, hệ chuẩn là $k c = \sum_i b_i$, cho $c^\star = \tfrac1k \sum_i b_i$: Trung bình cộng là hằng số gần dữ liệu nhất theo nghĩa bình phương. Số liệu 12 kéo trung bình lên 5, trong khi ba số còn lại đều nhỏ hơn 5.
 :::
 
 ::: exercise 2. Cùng dữ liệu, tiêu chí khác
@@ -219,7 +219,7 @@ Với tổng trị tuyệt đối, xét độ dốc của hàm trên từng kho�
 :::
 
 ::: solution
-Hàm $F(c) = \sum_i |c - b_i|$ có độ dốc bằng số số liệu nằm bên trái $c$ trừ số số liệu nằm bên phải. Trên khoảng $(3, 4)$ có hai số liệu ở mỗi bên, nên độ dốc bằng 0. Trước khoảng đó hàm giảm, sau khoảng đó hàm tăng, nên mọi $c \in [3, 4]$ đều tối ưu. Giá trị tối ưu là $F(3) = 2 + 0 + 1 + 9 = 12$, và cũng bằng $F(4) = 3 + 1 + 0 + 8 = 12$. Với sai số lớn nhất, ta cần $c$ cách đều 1 và 12, nên $c^\star = 6.5$ với sai số lớn nhất $5.5$. Ba tiêu chí cho ba câu trả lời: trung bình 5, cả đoạn trung vị $[3, 4]$, và điểm giữa 6.5. Tiêu chí ℓ₁ ít bị số liệu 12 ảnh hưởng nhất, còn tiêu chí sai số lớn nhất bị nó chi phối nhiều nhất.
+Hàm $F(c) = \sum_i |c - b_i|$ có độ dốc bằng số số liệu nằm bên trái $c$ trừ số số liệu nằm bên phải. Trên khoảng $(3, 4)$ có hai số liệu ở mỗi bên, nên độ dốc bằng 0. Trước khoảng đó hàm giảm, sau khoảng đó hàm tăng, nên mọi $c \in [3, 4]$ đều tối ưu. Giá trị tối ưu là $F(3) = 2 + 0 + 1 + 9 = 12$, và cũng bằng $F(4) = 3 + 1 + 0 + 8 = 12$. Với sai số lớn nhất, ta cần $c$ cách đều 1 và 12, nên $c^\star = 6.5$ với sai số lớn nhất $5.5$. Ba tiêu chí cho ba câu trả lời: Trung bình 5, cả đoạn trung vị $[3, 4]$, và điểm giữa 6.5. Tiêu chí ℓ₁ ít bị số liệu 12 ảnh hưởng nhất, còn tiêu chí sai số lớn nhất bị nó chi phối nhiều nhất.
 :::
 
 ::: exercise 3. Viết một LP từ mô tả

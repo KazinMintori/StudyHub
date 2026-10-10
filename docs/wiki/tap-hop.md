@@ -15,7 +15,7 @@ Một tập hợp là một nhóm các phần tử được xác định rõ. $x
 
 **Quan hệ giữa các tập.** A là tập con của B khi mọi phần tử của A cũng thuộc B, ký hiệu A ⊆ B. Hai tập bằng nhau khi chúng chứa cùng các phần tử, không phụ thuộc thứ tự viết. Khi dùng phép bù, phải nêu tập vũ trụ đang xét.
 
-Đừng nhầm phần tử x với tập chỉ chứa x: x và {x} là hai đối tượng khác nhau. Khái niệm tập hợp được dùng để định nghĩa quan hệ, miền xác định của hàm số và không gian mẫu.
+Đừng nhầm phần tử x với tập chỉ chứa x: X và {x} là hai đối tượng khác nhau. Khái niệm tập hợp được dùng để định nghĩa quan hệ, miền xác định của hàm số và không gian mẫu.
 
 ## Ví dụ
 

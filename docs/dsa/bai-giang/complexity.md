@@ -90,7 +90,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-### Quy tắc 3: biến đếm nhân đôi hoặc chia đôi cho thời gian logarithm
+### Quy tắc 3: Biến đếm nhân đôi hoặc chia đôi cho thời gian logarithm
 
 ```cpp
 // Biến i tăng theo cấp số nhân: i = 1, 2, 4, 8, 16...
@@ -114,90 +114,11 @@ Mỗi khi bạn thấy vòng lặp bước nhảy nhân đôi `i *= 2` hoặc ch
 
 ## 5. Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài 1: Phân tích độ phức tạp của các đoạn mã C++
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-::: exercise Yêu cầu
-Xác định độ phức tạp thời gian theo ký hiệu $\mathcal{O}$ của hai đoạn mã nguồn sau theo kích thước đầu vào $n$:
-
-Đoạn mã A:
-```cpp
-long long tong = 0;
-for (int i = 0; i < n; i++) {
-    for (int j = i; j < n; j++) {
-        tong += (i * j);
-    }
-}
-```
-
-Đoạn mã B:
-```cpp
-long long dem = 0;
-for (int i = 1; i <= n; i *= 2) {
-    for (int j = 0; j < i; j++) {
-        dem++;
-    }
-}
-```
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
 :::
-
-::: solution
-#### Lời giải chi tiết
-1. **Xét đoạn mã A:**
-   - Khi $i = 0$, vòng lặp trong chạy $n$ lần.
-   - Khi $i = 1$, vòng lặp trong chạy $n - 1$ lần.
-   - ...
-   - Khi $i = n - 1$, vòng lặp trong chạy $1$ lần.
-   Tổng số phép tính là:
-   $$
-   S = n + (n - 1) + (n - 2) + \dots + 1 = \frac{n(n + 1)}{2} = \frac{n^2}{2} + \frac{n}{2}
-   $$
-   Bỏ qua hệ số hằng số $\frac{1}{2}$ và bậc thấp hơn $\frac{n}{2}$, độ phức tạp thời gian là **$\mathcal{O}(n^2)$**.
-
-2. **Xét đoạn mã B:**
-   - Biến $i$ nhận các giá trị lũy thừa của 2: $1, 2, 4, 8, \dots, 2^k$ với $2^k \le n$.
-   - Tại mỗi bước $i$, vòng lặp trong chạy đúng $i$ lần.
-   Tổng số lần thực hiện phép tính `dem++` là tổng cấp số nhân:
-   $$
-   S = 1 + 2 + 4 + 8 + \dots + 2^k = 2^{k+1} - 1
-   $$
-   Vì $2^k \le n < 2^{k+1}$, ta có $S < 2n$.
-   Do đó, tổng số phép tính bị chặn trên bởi $2n$, suy ra độ phức tạp thời gian là **$\mathcal{O}(n)$**, không phải $\mathcal{O}(n \log n)$.
-:::
-
----
-
-### Bài 2: Giải hệ thức truy hồi bằng Định lý thợ (Master Theorem)
-
-::: exercise Yêu cầu
-Dùng Định lý thợ để xác định bậc độ phức tạp thời gian tiệm cận $T(n)$ cho hai giải thuật đệ quy thỏa mãn:
-1. $T(n) = 2T(n/2) + \mathcal{O}(n)$ (Thuật toán Merge Sort)
-2. $T(n) = 3T(n/2) + \mathcal{O}(n)$
-:::
-
-::: solution
-#### Lời giải chi tiết
-Dạng tổng quát của Định lý thợ: $T(n) = a T(n/b) + f(n)$ với $a \ge 1, b > 1$.
-Ta so sánh $f(n)$ với hàm ngưỡng $n^{\log_b a}$:
-
-1. **Với hệ thức $T(n) = 2T(n/2) + \mathcal{O}(n)$:**
-   - $a = 2, b = 2 \implies \log_b a = \log_2 2 = 1$.
-   - Hàm chi phí phân chia $f(n) = \mathcal{O}(n) = \Theta(n^1)$.
-   - Vì $f(n) = \Theta(n^{\log_b a})$, rơi vào trường hợp 2 của Định lý thợ:
-     $$
-     T(n) = \Theta(n^{\log_b a} \log n) = \Theta(n \log n).
-     $$
-
-2. **Với hệ thức $T(n) = 3T(n/2) + \mathcal{O}(n)$:**
-   - $a = 3, b = 2$, suy ra $\log_2 3 \approx 1.585$.
-   - Hàm chi phí phân chia $f(n) = \mathcal{O}(n) = \mathcal{O}(n^1)$.
-   - Vì $1 < \log_2 3$, ta có $f(n) = \mathcal{O}(n^{\log_2 3 - \epsilon})$ với $\epsilon \approx 0.585 > 0$.
-   - Rơi vào trường hợp 1 của Định lý thợ:
-     $$
-     T(n) = \Theta(n^{\log_b a}) = \Theta(n^{\log_2 3}) \approx \Theta(n^{1.585}).
-     $$
-:::
-
----
 
 ## 6. Nguồn tham khảo & Đọc thêm
 

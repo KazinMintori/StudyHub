@@ -33,7 +33,7 @@ Với hai điểm ($k=2$), điều kiện trở thành $\lambda x + (1 - \lambda
 
 ## Ví dụ
 
-$x = 0$, $y = 10$, $\lambda  = 0.3$: điểm tạo ra là $0.3\times 0 + 0.7\times 10 = 7$.
+$x = 0$, $y = 10$, $\lambda  = 0.3$: Điểm tạo ra là $0.3\times 0 + 0.7\times 10 = 7$.
 
 ## Khi nào cần dùng?
 

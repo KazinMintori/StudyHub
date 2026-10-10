@@ -7,7 +7,7 @@ next: false
 
 # Trạng thái
 
-Trạng thái mô tả đủ thông tin để xác định tình huống hiện tại và các hành động hợp lệ tiếp theo. Bài toán tìm kiếm cần trạng thái đầu, tập hành động, quy tắc chuyển trạng thái và điều kiện đích. Trạng thái khác với nút tìm kiếm: nhiều đường đi có thể tới cùng một trạng thái.
+Trạng thái mô tả đủ thông tin để xác định tình huống hiện tại và các hành động hợp lệ tiếp theo. Bài toán tìm kiếm cần trạng thái đầu, tập hành động, quy tắc chuyển trạng thái và điều kiện đích. Trạng thái khác với nút tìm kiếm: Nhiều đường đi có thể tới cùng một trạng thái.
 
 <WikiUsage />
 

@@ -7,7 +7,7 @@ next: false
 
 # Hessian
 
-Với hàm $f$ có đạo hàm bậc hai liên tục, Hessian $H$ có phần tử $H_{ij}=\frac{\partial^2 f}{\partial x_i\,\partial x_j}$. $H$ mô tả độ cong theo hướng $v$ qua số $v^THv$. Hessian khác gradient: một bên là ma trận, một bên là vector.
+Với hàm $f$ có đạo hàm bậc hai liên tục, Hessian $H$ có phần tử $H_{ij}=\frac{\partial^2 f}{\partial x_i\,\partial x_j}$. $H$ mô tả độ cong theo hướng $v$ qua số $v^THv$. Hessian khác gradient: Một bên là ma trận, một bên là vector.
 
 <WikiUsage />
 

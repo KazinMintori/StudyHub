@@ -7,7 +7,7 @@ next: false
 
 # Cặp khóa–giá trị
 
-Cặp (key, value) gắn một định danh hoặc khóa nhóm với dữ liệu đi kèm. Khóa không nhất thiết là duy nhất trong một luồng dữ liệu: nhiều cặp cùng khóa sẽ được gom lại trước khi xử lý. Khái niệm này khác dictionary đã gom mỗi khóa thành một giá trị.
+Cặp (key, value) gắn một định danh hoặc khóa nhóm với dữ liệu đi kèm. Khóa không nhất thiết là duy nhất trong một luồng dữ liệu: Nhiều cặp cùng khóa sẽ được gom lại trước khi xử lý. Khái niệm này khác dictionary đã gom mỗi khóa thành một giá trị.
 
 <WikiUsage />
 

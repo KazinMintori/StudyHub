@@ -97,7 +97,7 @@ Một nữ sinh hớt hải chạy với tốc độ tối đa không đổi $5.
 ::: exercise 2.89 ••• — Bài toán hai quả bóng thả lệch pha
 Từ mép sân thượng của một tòa nhà cao tầng, quả bóng thứ nhất được ném thẳng đứng lên cao với tốc độ đầu $v_0$. Đúng $1.00\,\mathrm s$ sau, quả bóng thứ hai được buông rơi tự do từ trạng thái nghỉ từ cùng mép sân thượng đó. Bỏ qua sức cản không khí.
 **(a)** Nếu tòa nhà cao $h = 20.0\,\mathrm m$, tốc độ ném ban đầu $v_0$ của quả bóng thứ nhất phải bằng bao nhiêu để cả hai quả bóng chạm mặt đất hoàn toàn đồng thời? Phác họa đồ thị tọa độ $y(t)$ của cả hai bóng trên cùng một hệ trục.
-**(b)** Chiều cao tòa nhà $h$ phải bằng bao nhiêu để hai bóng chạm đất cùng lúc nếu: (i) $v_0 = 6.0\,\mathrm{m/s}$; (ii) $v_0 = 9.5\,\mathrm{m/s}$?
+**(b)** Chiều cao tòa nhà $h$ phải bằng bao nhiêu để hai bóng chạm đất cùng lúc nếu: (I) $v_0 = 6.0\,\mathrm{m/s}$; (ii) $v_0 = 9.5\,\mathrm{m/s}$?
 **(c)** Nếu tốc độ ném $v_0$ vượt quá một ngưỡng cực đại $v_{\max}$, sẽ không tồn tại bất kỳ chiều cao tòa nhà $h$ nào thỏa mãn điều kiện chạm đất đồng thời. Hãy tìm giá trị $v_{\max}$ này và giải thích ý nghĩa vật lý trực giác của nó.
 **(d)** Tương tự, nếu $v_0$ nhỏ hơn một ngưỡng cực tiểu $v_{\min}$, bài toán cũng vô nghiệm. Hãy tìm giá trị $v_{\min}$ và giải thích ý nghĩa vật lý của nó.
 :::
@@ -108,7 +108,7 @@ Từ mép sân thượng của một tòa nhà cao tầng, quả bóng thứ nh�
 
 ### Chuyên đề Sinh cơ học: Động học dòng máu trong hệ tuần hoàn
 
-Hệ tuần hoàn của con người là một mạng lưới thủy lực kín hoàn chỉnh: máu giàu oxy được tâm thất trái co bóp tống vào động mạch chủ, luân chuyển qua mạng lưới mạch máu phân nhánh liên tục tới các mao mạch nuôi mô, rồi thu gom qua hệ tĩnh mạch đổ về tim. Máu trong các buồng tim tạm thời đứng yên tương đối trước mỗi kỳ tâm thu co bóp của cơ tim.
+Hệ tuần hoàn của con người là một mạng lưới thủy lực kín hoàn chỉnh: Máu giàu oxy được tâm thất trái co bóp tống vào động mạch chủ, luân chuyển qua mạng lưới mạch máu phân nhánh liên tục tới các mao mạch nuôi mô, rồi thu gom qua hệ tĩnh mạch đổ về tim. Máu trong các buồng tim tạm thời đứng yên tương đối trước mỗi kỳ tâm thu co bóp của cơ tim.
 
 ::: exercise 2.90
 Thời kỳ tâm thu co bóp của tâm thất trái diễn ra trong khoảng thời gian $\Delta t = 250\,\mathrm{ms}$, và tốc độ của dòng máu trong động mạch chủ đạt tới $0.80\,\mathrm{m/s}$ ở thời điểm cuối của nhịp co bóp. Độ lớn gia tốc trung bình của một tế bào hồng cầu khi vừa được tống ra khỏi tim là bao nhiêu?

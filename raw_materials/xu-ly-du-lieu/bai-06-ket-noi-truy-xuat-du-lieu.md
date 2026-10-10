@@ -4,18 +4,18 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: accessing-data](https://wesmckinney.com/book/accessing-data)
+- [Python for Data Analysis: Accessing-data](https://wesmckinney.com/book/accessing-data)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-06-ket-noi-truy-xuat-du-lieu.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-06-ket-noi-truy-xuat-du-lieu.html)
 
 ## Phạm vi đã biên soạn
 
 - 1. CSV và quy tắc đọc
-- 2. Tệp lớn: giữ tổng và số lượng qua các khối
+- 2. Tệp lớn: Giữ tổng và số lượng qua các khối
 - 3. JSON và dữ liệu lồng nhau
-- 4. SQL: lọc tại nơi dữ liệu được lưu
+- 4. SQL: Lọc tại nơi dữ liệu được lưu
 - 5. API có thể trả từng trang
 - 6. Bài tập tự luyện
 - 7. Nguồn và đọc thêm

@@ -6,7 +6,7 @@
 
 Note không phải bản chép bullet slide hoặc bản ghi lời nói. Giữ phát biểu hình thức, lý do, các bước quyết định và ví dụ có lời giải. Dùng câu hỏi làm tiêu đề khi nó giúp tra cứu, nhưng trả lời câu hỏi trong phần đó. Ký hiệu phải có nghĩa; hình phải có số/ID, chú giải và lời chỉ rõ điều cần nhìn. Không dựa vào thao tác chỉ tay của giảng viên.
 
-Với bộ slide kèm note, đối chiếu từng cụm: cùng giả thiết, ký hiệu, số liệu, kết luận và phiên bản. Note có thể giải thích dài hơn; không được lén sửa một định lý mà slide vẫn ghi bản cũ. Ghi chú riêng của giảng viên không thay note giao cho sinh viên.
+Với bộ slide kèm note, đối chiếu từng cụm: Cùng giả thiết, ký hiệu, số liệu, kết luận và phiên bản. Note có thể giải thích dài hơn; không được lén sửa một định lý mà slide vẫn ghi bản cũ. Ghi chú riêng của giảng viên không thay note giao cho sinh viên.
 
 ## Khi người học đáp lại
 
@@ -20,9 +20,9 @@ Chỉ dùng nhánh tương tác khi người dùng muốn học đối thoại h
 | Sai | Tìm bước sai đầu tiên trong bài làm, minh họa bằng trường hợp nhỏ, rồi cho thử lại bước đó |
 | Không trả lời hoặc chỉ nói “hiểu rồi” | Chưa đủ bằng chứng thành thạo; không tự nâng mức hoặc ghi “đã nắm vững” |
 
-Không trả lời “hãy đọc lại” hoặc lặp nguyên đoạn cũ. Thử đổi biểu diễn: số cụ thể thay ký hiệu, truy vết thay mô tả, hai trường hợp đối chiếu thay định nghĩa. Sau đó nối trở lại phát biểu hình thức. Gợi ý tăng dần nếu người học muốn tự giải; đưa lời giải đầy đủ khi họ yêu cầu.
+Không trả lời “hãy đọc lại” hoặc lặp nguyên đoạn cũ. Thử đổi biểu diễn: Số cụ thể thay ký hiệu, truy vết thay mô tả, hai trường hợp đối chiếu thay định nghĩa. Sau đó nối trở lại phát biểu hình thức. Gợi ý tăng dần nếu người học muốn tự giải; đưa lời giải đầy đủ khi họ yêu cầu.
 
-Nếu ghi trạng thái để học tiếp, chỉ ghi điều người học thực sự đã thể hiện: mục đang học, bước họ làm được, lỗi quan sát được, ký hiệu và bài tiếp theo. Tách giả định khỏi chứng cứ. Không tự lưu dữ liệu cá nhân hoặc bật dịch vụ theo dõi bên ngoài.
+Nếu ghi trạng thái để học tiếp, chỉ ghi điều người học thực sự đã thể hiện: Mục đang học, bước họ làm được, lỗi quan sát được, ký hiệu và bài tiếp theo. Tách giả định khỏi chứng cứ. Không tự lưu dữ liệu cá nhân hoặc bật dịch vụ theo dõi bên ngoài.
 
 ## Kiểm tra bằng một “người học mới” có nền cụ thể
 

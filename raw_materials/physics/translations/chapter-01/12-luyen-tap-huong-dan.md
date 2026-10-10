@@ -80,7 +80,7 @@ Một máy điều hòa được cố định trên mái nghiêng góc $35^\circ
 **(b)** Nếu chỗ cố định hỏng, máy trượt $1.50\,\mathrm m$ dọc mái rồi dừng ở gờ chắn. Nếu máy có trọng lượng vừa tính ở (a), trọng lực thực hiện bao nhiêu công trong lúc trượt? Công của lực trên độ dời là $W=\vec F\cdot\vec s$.
 :::
 
-![Hình 1.34 nguyên tác: máy điều hòa trên mái nghiêng 35 độ, độ dời dọc mái và trọng lực thẳng đứng](img/young-01/hinh-1-34.png)
+![Hình 1.34 nguyên tác: Máy điều hòa trên mái nghiêng 35 độ, độ dời dọc mái và trọng lực thẳng đứng](img/young-01/hinh-1-34.png)
 
 **Hình 1.34:** Máy nằm trên mái nghiêng, lực $\vec F$ hướng xuống, độ dời $1.50\,\mathrm m$ dọc mái. Trục $x$ song song mái, trục $y$ vuông góc mái.
 

@@ -4,11 +4,11 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: time-series](https://wesmckinney.com/book/time-series)
+- [Python for Data Analysis: Time-series](https://wesmckinney.com/book/time-series)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-08-du-lieu-thoi-gian.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-08-du-lieu-thoi-gian.html)
 
 ## Phạm vi đã biên soạn
 

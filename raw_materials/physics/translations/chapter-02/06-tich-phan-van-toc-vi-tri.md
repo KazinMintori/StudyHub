@@ -12,7 +12,7 @@ Trong những tình huống như vậy, toàn bộ các phương trình đại s
 
 **Hình 2.26:** Đạp hết bàn đạp ga không hề tạo ra một gia tốc không đổi. Tốc độ càng cao, lực cản không khí càng lớn và hiệu suất truyền lực của động cơ thay đổi, khiến gia tốc của xe suy giảm dần theo thời gian.
 
-Nếu như phép tính đạo hàm cho phép ta đi từ vị trí sang vận tốc ($v_x = dx/dt$) và từ vận tốc sang gia tốc ($a_x = dv_x/dt$), thì phép tính tích phân chính là quá trình đảo ngược: giúp ta khôi phục lại quy luật vận tốc và vị trí khi đã biết hàm số của gia tốc theo thời gian $a_x(t)$.
+Nếu như phép tính đạo hàm cho phép ta đi từ vị trí sang vận tốc ($v_x = dx/dt$) và từ vận tốc sang gia tốc ($a_x = dv_x/dt$), thì phép tính tích phân chính là quá trình đảo ngược: Giúp ta khôi phục lại quy luật vận tốc và vị trí khi đã biết hàm số của gia tốc theo thời gian $a_x(t)$.
 
 ---
 

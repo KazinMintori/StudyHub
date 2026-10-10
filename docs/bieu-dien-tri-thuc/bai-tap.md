@@ -56,8 +56,8 @@ Xét đồ thị không gian trạng thái sau đây. Trạng thái bắt đầu
 #### Lời giải gợi ý
 1. Thuật toán UCS ưu tiên nút có chi phí đường đi từ gốc $g(n)$ nhỏ nhất:
    - Khởi tạo: Hàng đợi ưu tiên $\{S(g=0)\}$.
-   - Lấy $S(0)$, mở rộng: thêm $A(g=2), B(g=4)$.
-   - Lấy $A(2)$, mở rộng: thêm $C(g=2+3=5), D(g=2+6=8)$. Hàng đợi: $\{B(4), C(5), D(8)\}$.
+   - Lấy $S(0)$, mở rộng: Thêm $A(g=2), B(g=4)$.
+   - Lấy $A(2)$, mở rộng: Thêm $C(g=2+3=5), D(g=2+6=8)$. Hàng đợi: $\{B(4), C(5), D(8)\}$.
    - Lấy $B(4)$, mở rộng: $D(g=4+1=5)$ (cập nhật chi phí tốt hơn cho $D$), $E(g=4+5=9)$. Hàng đợi: $\{C(5), D(5), D(8), E(9)\}$.
    - Lấy $C(5)$, mở rộng: $G(g=5+5=10)$.
    - Lấy $D(5)$, mở rộng: $G(g=5+3=8)$ (cập nhật chi phí tốt hơn cho $G$). Hàng đợi: $\{G(8), E(9), G(10)\}$.
@@ -110,7 +110,7 @@ Giả sử thuật toán duyệt các nhánh từ trái sang phải:
   - Lá 4: $\beta = \min(+\infty, 4) = 4$.
   - Lá 6: $\beta = \min(4, 6) = 4$.
   - Lá 3: $\beta = \min(4, 3) = 3$.
-  - Kết thúc nhánh $B$: giá trị của $B$ là $3$.
+  - Kết thúc nhánh $B$: Giá trị của $B$ là $3$.
   - Cập nhật tại $A$ (MAX): $\alpha = \max(-\infty, 3) = 3$.
 
 - Duyệt nhánh con $C$ của $A$:
@@ -130,7 +130,7 @@ Giả sử thuật toán duyệt các nhánh từ trái sang phải:
   - Giá trị trả về từ $D$ là $1$.
 
 - Kết luận:
-  - Các nút lá bị cắt tỉa: lá 8 (dưới $C$), lá 9 và lá 7 (dưới $D$).
+  - Các nút lá bị cắt tỉa: Lá 8 (dưới $C$), lá 9 và lá 7 (dưới $D$).
   - Giá trị Minimax tại nút gốc $A$ là $\alpha = 3$, quyết định tốt nhất của MAX là đi nhánh $B$.
 
 ---

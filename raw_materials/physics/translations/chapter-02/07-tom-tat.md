@@ -2,7 +2,7 @@
 
 ## Tóm tắt kiến thức cốt lõi Chương 2
 
-Chương 2 đặt nền móng cho cơ học cổ điển thông qua việc mô tả chuyển động một chiều dọc theo một trục thẳng (động học một chiều). Toàn bộ chương xoay quanh ba đại lượng cơ bản: **vị trí** $x(t)$, **vận tốc** $v_x(t)$, và **gia tốc** $a_x(t)$, được liên kết chặt chẽ với nhau thông qua phép tính vi tích phân và các phương trình động học.
+Chương 2 đặt nền móng cho cơ học cổ điển thông qua việc mô tả chuyển động một chiều dọc theo một trục thẳng (động học một chiều). Toàn bộ chương xoay quanh ba đại lượng cơ bản: **Vị trí** $x(t)$, **vận tốc** $v_x(t)$, và **gia tốc** $a_x(t)$, được liên kết chặt chẽ với nhau thông qua phép tính vi tích phân và các phương trình động học.
 
 ---
 
@@ -75,7 +75,7 @@ $$x - x_0 = \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}$$
 
 ![Sơ đồ tóm tắt rơi tự do: Vector gia tốc luôn hướng xuống trong cả hai giai đoạn lên và xuống](img/young-02/tom-tat-roi-tu-do.png)
 
-**Hình 2.S4:** Khi ném thẳng đứng lên cao, vector gia tốc trọng trường $\vec g$ luôn hướng thẳng đứng chúc xuống dưới tại mọi điểm trên quỹ đạo: cả khi bay lên ($v_y > 0$), tại đỉnh cao nhất ($v_y = 0$), và khi rơi xuống ($v_y < 0$).
+**Hình 2.S4:** Khi ném thẳng đứng lên cao, vector gia tốc trọng trường $\vec g$ luôn hướng thẳng đứng chúc xuống dưới tại mọi điểm trên quỹ đạo: Cả khi bay lên ($v_y > 0$), tại đỉnh cao nhất ($v_y = 0$), và khi rơi xuống ($v_y < 0$).
 
 ---
 
@@ -93,4 +93,4 @@ Về mặt hình học:
 
 ![Sơ đồ tóm tắt tích phân: Diện tích dưới đồ thị gia tốc là độ biến thiên vận tốc](img/young-02/tom-tat-tich-phan.png)
 
-**Hình 2.S5:** Ý nghĩa hình học của tích phân: diện tích dải vi phân dưới đường cong gia tốc $a_x(t)$ biểu thị độ biến thiên vận tốc $dv_x = a_x dt$, và tổng diện tích dưới đồ thị cho độ biến thiên vận tốc toàn phần.
+**Hình 2.S5:** Ý nghĩa hình học của tích phân: Diện tích dải vi phân dưới đường cong gia tốc $a_x(t)$ biểu thị độ biến thiên vận tốc $dv_x = a_x dt$, và tổng diện tích dưới đồ thị cho độ biến thiên vận tốc toàn phần.

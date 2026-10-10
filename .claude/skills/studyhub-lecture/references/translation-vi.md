@@ -4,11 +4,11 @@
 
 ## Ba việc khác nhau
 
-1. Hiểu phát biểu: đối tượng, quan hệ, điều kiện, miền, lượng từ, dấu, đơn vị và mức chắc chắn.
+1. Hiểu phát biểu: Đối tượng, quan hệ, điều kiện, miền, lượng từ, dấu, đơn vị và mức chắc chắn.
 2. Chọn thuật ngữ theo khái niệm và môn học. Một từ có thể có nhiều nghĩa; tra cả cụm và định nghĩa thay vì lấy nghĩa phổ biến nhất của từng từ.
 3. Viết câu đúng giọng đầu ra theo [professor-voice.md](professor-voice.md), rồi so nghĩa lại với nguồn.
 
-“Khả thi” là thuật ngữ có thể giữ trong tối ưu. Không loại nó chỉ vì nghe hành chính trong đời thường. “Hợp đồng” có thể đúng trong ngữ cảnh thỏa thuận, nhưng không thay cho contraction mapping trong giải tích. Nhãn nội bộ của công cụ cũng phải rõ: dùng “kế hoạch giảng” hoặc “yêu cầu cho phần nội dung”; không đưa nhãn `teaching_contract` của bản cũ vào lời giảng.
+“Khả thi” là thuật ngữ có thể giữ trong tối ưu. Không loại nó chỉ vì nghe hành chính trong đời thường. “Hợp đồng” có thể đúng trong ngữ cảnh thỏa thuận, nhưng không thay cho contraction mapping trong giải tích. Nhãn nội bộ của công cụ cũng phải rõ: Dùng “kế hoạch giảng” hoặc “yêu cầu cho phần nội dung”; không đưa nhãn `teaching_contract` của bản cũ vào lời giảng.
 
 ## Chọn thuật ngữ có căn cứ
 
@@ -31,10 +31,10 @@ Mỗi mục Wiki ghi rõ lĩnh vực. Alias đa nghĩa được phép xuất hi�
 Không ép dịch chỉ để mọi nhãn đều là tiếng Việt. Giữ tên tiếng Anh khi một trong các điều sau đúng:
 
 - Tên riêng hoặc tên thuật toán là cách tra cứu chính: Adam, RMSProp, BFGS, Nesterov.
-- Bản dịch Việt chưa ổn định hoặc dễ làm sai nghĩa: likelihood, self-concordant.
-- Tên Việt có ích nhưng người học cần biết tên gốc để đọc tài liệu: “gradient liên hợp (conjugate gradient)”.
+- Bản dịch Việt chưa ổn định hoặc dễ làm sai nghĩa: Likelihood, self-concordant.
+- Tên Việt có ích nhưng người học cần biết tên gốc để đọc tài liệu: “Gradient liên hợp (conjugate gradient)”.
 
-Ở lần xuất hiện đầu, dùng một trong hai dạng: “tên Việt (English)” khi tên Việt tự nhiên và khá ổn định; hoặc giữ English rồi giải thích bằng một câu Việt đầy đủ. Không chèn English vào mọi lần xuất hiện và không tạo một từ Hán–Việt mới chỉ để tránh giữ thuật ngữ gốc.
+Ở lần xuất hiện đầu, dùng một trong hai dạng: “Tên Việt (English)” khi tên Việt tự nhiên và khá ổn định; hoặc giữ English rồi giải thích bằng một câu Việt đầy đủ. Không chèn English vào mọi lần xuất hiện và không tạo một từ Hán–Việt mới chỉ để tránh giữ thuật ngữ gốc.
 
 ## Những nghĩa dễ mất khi sửa cho tự nhiên
 
@@ -44,7 +44,7 @@ Không ép dịch chỉ để mọi nhãn đều là tiếng Việt. Giữ tên 
 | `tensor contraction` | “phép co tensor” | Phép cộng theo cặp chỉ số phù hợp, không phải tính chất co khoảng cách. Trong ký hiệu tensor hình học, ghép một chỉ số trên với một chỉ số dưới; nếu ghép cùng loại, cần metric/cấu trúc đã cho. |
 | `current iterate` | “điểm x_k”, “điểm lặp hiện tại” | x_k là điểm/giá trị, k là chỉ số bước. Không gọi k là điểm. |
 | `feasible point` | “điểm khả thi”; “x thỏa mọi ràng buộc” để giải thích | Thỏa mọi ràng buộc trong miền; khả thi chưa có nghĩa tối ưu. |
-| `stationarity condition` | “điều kiện dừng” | Điều kiện phụ thuộc bài toán: có thể là ∇f = 0 hay gradient của L; không tự coi đủ tối ưu. |
+| `stationarity condition` | “điều kiện dừng” | Điều kiện phụ thuộc bài toán: Có thể là ∇f = 0 hay gradient của L; không tự coi đủ tối ưu. |
 | `descent direction` | “hướng giảm” và giải thích tại điểm đang xét | Với f khả vi, ∇f(x)^T d < 0 cho giảm khi bước dương đủ nhỏ; không bảo đảm mọi bước dương đều giảm. |
 | `free in sign` | “không bị giới hạn dấu”; “có thể âm, bằng 0 hoặc dương” | Bao gồm 0. Không chuyển thành “phải khác 0” hoặc “âm hay dương” như mô tả miền đầy đủ. |
 | `active constraint` | “ràng buộc chặt tại x” hoặc tên đã chọn trong môn | Với g_i(x) ≤ 0, chặt tại x nghĩa là g_i(x) = 0. Không có nghĩa mọi ràng buộc đều chặt hay nhân tử luôn khác 0. |
@@ -56,9 +56,9 @@ Các bản dịch thường gặp được chọn cho gói này, không phải b
 
 Lượt ngôn ngữ chỉ sửa câu gượng, danh từ hóa, đối tượng không rõ và khuôn lặp. Giữ riêng danh sách nghĩa phải bảo vệ; không thêm định lý, thuật toán hoặc điều kiện mới để câu nghe xuôi.
 
-Lượt kiểm tra nghĩa so từng phát biểu nguồn với bản Việt: có mất phủ định, “mọi”, “tồn tại”, “có thể”, “nếu”, chiều suy ra, dấu, miền hay đối tượng không? Kiểm tra ví dụ số và công thức độc lập khi cần. Nếu câu cần chia, giữ quan hệ giữa các câu. Tính dừng của bài toán con không tự tạo hướng cập nhật của bài toán chính; thiếu ngữ cảnh thì nói rõ thiếu.
+Lượt kiểm tra nghĩa so từng phát biểu nguồn với bản Việt: Có mất phủ định, “mọi”, “tồn tại”, “có thể”, “nếu”, chiều suy ra, dấu, miền hay đối tượng không? Kiểm tra ví dụ số và công thức độc lập khi cần. Nếu câu cần chia, giữ quan hệ giữa các câu. Tính dừng của bài toán con không tự tạo hướng cập nhật của bài toán chính; thiếu ngữ cảnh thì nói rõ thiếu.
 
-Không dùng dịch ngược như bằng chứng duy nhất: hai model có thể lặp cùng lỗi. Giữ một ghi nhận ngắn ở nơi có rủi ro, chẳng hạn “free in sign gồm 0; active là đẳng thức tại điểm đang xét”. Không công bố toàn bộ suy nghĩ nội bộ.
+Không dùng dịch ngược như bằng chứng duy nhất: Hai model có thể lặp cùng lỗi. Giữ một ghi nhận ngắn ở nơi có rủi ro, chẳng hạn “free in sign gồm 0; active là đẳng thức tại điểm đang xét”. Không công bố toàn bộ suy nghĩ nội bộ.
 
 Kiểm tra cả giả định của ví dụ mới. Với phép co tensor, đừng lấy tổng A_ii của một tensor hai chỉ số dưới bất kỳ rồi gọi đó là phép co độc lập cơ sở. Một ví dụ trace gọn có thể dùng tensor A^i_j biểu diễn ánh xạ tuyến tính, co thành tổng A^i_i. Phân biệt tensor hình học với mảng số trong thư viện; nói rõ quy ước đang dùng mà không giảng thêm cả chương. Xem nguồn khái niệm ở [terminology-research.md](terminology-research.md).
 
@@ -76,4 +76,4 @@ Nguồn tự viết: “The multiplier of an equality constraint is free in sign
 
 Phần giải thích thêm phải được nhận diện đúng. Không gán câu “chưa tối ưu” hoặc ví dụ bổ sung cho tác giả nếu họ không viết. Chọn vài ví dụ gần loại nhiệm vụ, không chép toàn bộ kho vào prompt.
 
-Ví dụ và dữ liệu để nghiên cứu huấn luyện: đọc [training-and-evaluation.md](training-and-evaluation.md) khi cần mở rộng dữ liệu hoặc đánh giá phiên bản; không cần huấn luyện model để dùng bước tra cứu và kiểm tra này.
+Ví dụ và dữ liệu để nghiên cứu huấn luyện: Đọc [training-and-evaluation.md](training-and-evaluation.md) khi cần mở rộng dữ liệu hoặc đánh giá phiên bản; không cần huấn luyện model để dùng bước tra cứu và kiểm tra này.

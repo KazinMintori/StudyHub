@@ -81,10 +81,10 @@ Với phiên bản 6.1, có thể lưu `teaching_plan` cho cụm nội dung và 
 
 Các giá trị chuẩn:
 
-- priority: essential, important, supporting, optional.
-- treatment: core, appendix, notes, omitted.
-- layer: core, appendix.
-- body.type: text, equation, code, table, quote. Nội dung thực tương ứng là text, latex, code, rows, text + attribution.
+- priority: Essential, important, supporting, optional.
+- treatment: Core, appendix, notes, omitted.
+- layer: Core, appendix.
+- body.type: Text, equation, code, table, quote. Nội dung thực tương ứng là text, latex, code, rows, text + attribution.
 - Mỗi source_unit có location, treatment, slide_ids. Phần ngoài tuyến chính có reason. treatment notes có note_ref trỏ đến file + mục thật.
 - Mỗi source_visual có id, location, treatment, slide_ids, reason nếu ở ngoài tuyến chính; khi dùng phải có original_asset_ref. treatment notes có note_ref.
 - Mỗi visual trên slide có id, kind (source hoặc supplementary), claim và asset_ref. Hình nguồn có source_visual_id và preservation (original hoặc faithful-redraw). Bản vẽ lại có verification_note; hình supplementary có provenance.
@@ -135,11 +135,11 @@ Script dùng thư viện chuẩn Python. Nó kiểm tra:
 - Checkpoint thiếu lời giải, lý do, phản hồi; vị trí đáp án không phù hợp tự học.
 - Hình thiếu mục đích, asset, liên kết gốc; bản vẽ lại thiếu ghi chú đối chiếu.
 - Trường nội dung không hợp lệ, bài thiếu ước lượng khi có thời lượng, tổng thời gian vượt buổi.
-- Khi có asset-root: asset nội bộ thiếu hoặc nằm ngoài thư mục được chỉ định.
+- Khi có asset-root: Asset nội bộ thiếu hoặc nằm ngoài thư mục được chỉ định.
 
 Các kiểm tra này dựa trên những gì người soạn khai báo. “introduced_term_ids” không chứng minh định nghĩa đã viết tốt. “verification_note” không chứng minh người soạn đã đối chiếu thật. Script không tự xác nhận sự tự nhiên, tính đúng kiến thức, nguồn OCR, quyền dùng hình hoặc chất lượng layout.
 
-Exit code 0: không có lỗi cấu trúc được script phát hiện. Exit code 1: có lỗi cần sửa. Exit code 2: đầu vào không đọc được hoặc JSON / cấu trúc top-level không hợp lệ. Warnings còn lại phải được xem xét. Không đặt tên kết quả là “pedagogy passed”.
+Exit code 0: Không có lỗi cấu trúc được script phát hiện. Exit code 1: Có lỗi cần sửa. Exit code 2: Đầu vào không đọc được hoặc JSON / cấu trúc top-level không hợp lệ. Warnings còn lại phải được xem xét. Không đặt tên kết quả là “pedagogy passed”.
 
 ## 5. Kiểm tra thủ công theo bằng chứng
 
@@ -164,9 +164,9 @@ Không yêu cầu công bố toàn bộ suy nghĩ nội bộ. Giữ quyết đ�
 
 Nguồn gắn cho cả block có thể chỉ ra đoạn sách liên quan, không khẳng định rằng từng chữ là trích dẫn. Chỉ ghi trích dẫn nguyên văn khi đó thực sự là câu trích; giữ nguyên chữ và attribution.
 
-Ví dụ: nếu không hiểu mẫu số, thêm thao tác chọn nhóm và hình thể hiện nhóm đó. Đổi “chuẩn hóa” thành “điều chỉnh” mà vẫn thiếu thao tác không sửa được nguyên nhân.
+Ví dụ: Nếu không hiểu mẫu số, thêm thao tác chọn nhóm và hình thể hiện nhóm đó. Đổi “chuẩn hóa” thành “điều chỉnh” mà vẫn thiếu thao tác không sửa được nguyên nhân.
 
-Một lượt sửa có thể tác động tới slide sau: đổi thuật ngữ cần rà toàn cụm, tách slide cần sửa phụ thuộc và vị trí đáp án, đổi thang đồ thị cần đối chiếu những trang so sánh.
+Một lượt sửa có thể tác động tới slide sau: Đổi thuật ngữ cần rà toàn cụm, tách slide cần sửa phụ thuộc và vị trí đáp án, đổi thang đồ thị cần đối chiếu những trang so sánh.
 
 Sau các kiểm tra cần thiết, dừng khi các lỗi chặn đã hết và phần giới hạn được mô tả đúng. Nếu vẫn còn một vấn đề sau hai lượt sửa tập trung, đổi phương án ở phần đó hoặc báo rõ hạn chế; không lặp toàn bộ quy trình vô hạn.
 

@@ -8,9 +8,9 @@ lessonStatus: ready
 description: "Phân biệt hàm mục tiêu thực nghiệm với khả năng khái quát hóa; làm chủ Mini-batch SGD, Momentum, Nesterov và nguyên lý khởi tạo Glorot."
 ---
 
-Ở Bài 04, chúng ta giả định rằng tại mỗi bước lặp, thuật toán luôn tính toán được gradient chính xác tuyệt đối của toàn bộ hàm mục tiêu. Thế nhưng khi bước vào thế giới học sâu hiện đại, giả định đó lập tức vấp phải bức tường thực tế: các tập dữ liệu huấn luyện (từ thị giác máy tính đến các mô hình ngôn ngữ lớn) thường chứa hàng triệu, thậm chí hàng nghìn tỷ mẫu dữ liệu. Việc duyệt qua toàn bộ dữ liệu chỉ để thực hiện một bước cập nhật tham số duy nhất là điều hoàn toàn bất khả thi về mặt tài nguyên và thời gian.
+Ở Bài 04, chúng ta giả định rằng tại mỗi bước lặp, thuật toán luôn tính toán được gradient chính xác tuyệt đối của toàn bộ hàm mục tiêu. Thế nhưng khi bước vào thế giới học sâu hiện đại, giả định đó lập tức vấp phải bức tường thực tế: Các tập dữ liệu huấn luyện (từ thị giác máy tính đến các mô hình ngôn ngữ lớn) thường chứa hàng triệu, thậm chí hàng nghìn tỷ mẫu dữ liệu. Việc duyệt qua toàn bộ dữ liệu chỉ để thực hiện một bước cập nhật tham số duy nhất là điều hoàn toàn bất khả thi về mặt tài nguyên và thời gian.
 
-Để vượt qua giới hạn này, kỹ nghệ học sâu vận hành dựa trên một triết lý tối ưu hóa xác suất tinh tế: thay vì tính toán gradient chính xác trên toàn bộ tập dữ liệu (Full-batch), ta ước lượng gradient thông qua một **lô dữ liệu nhỏ (mini-batch)** được lấy mẫu ngẫu nhiên. Bước chuyển dịch này kéo theo hàng loạt câu hỏi cốt lõi:
+Để vượt qua giới hạn này, kỹ nghệ học sâu vận hành dựa trên một triết lý tối ưu hóa xác suất tinh tế: Thay vì tính toán gradient chính xác trên toàn bộ tập dữ liệu (Full-batch), ta ước lượng gradient thông qua một **lô dữ liệu nhỏ (mini-batch)** được lấy mẫu ngẫu nhiên. Bước chuyển dịch này kéo theo hàng loạt câu hỏi cốt lõi:
 - Làm sao bảo đảm gradient trên lô nhỏ phản ánh đúng xu hướng suy giảm chung của toàn bộ dữ liệu?
 - Làm thế nào để kiểm soát và chế ngự phương sai nhiễu ngẫu nhiên sinh ra từ việc lấy mẫu?
 - Cơ chế quán tính (Momentum) và kỹ thuật nhìn trước (Nesterov) giúp thuật toán vượt qua các thung lũng hẹp và điểm yên ngựa ra sao?
@@ -146,7 +146,7 @@ print(sgd_scalar(0.0, [0.0, 2.0], 0.1, [0, 1, 0, 1]))
 
 Khi bề mặt hàm mất mát có dạng hẻm núi hẹp (độ cong theo một số hướng lớn hơn gấp nhiều lần các hướng khác), SGD sẽ dao động mạnh qua lại giữa hai sườn dốc và di chuyển rất chậm chạp dọc theo đáy thung lũng.
 
-Thuật toán **Momentum** mượn ý tưởng trực quan từ cơ học cổ điển: coi tham số như một hòn bi có khối lượng lăn trên bề mặt thế năng mất mát. Hòn bi tích lũy vận tốc theo thời gian, giúp nó vượt qua các gờ nhấp nhô và giữ đà lao nhanh dọc theo hướng dốc chính.
+Thuật toán **Momentum** mượn ý tưởng trực quan từ cơ học cổ điển: Coi tham số như một hòn bi có khối lượng lăn trên bề mặt thế năng mất mát. Hòn bi tích lũy vận tốc theo thời gian, giúp nó vượt qua các gờ nhấp nhô và giữ đà lao nhanh dọc theo hướng dốc chính.
 
 Khởi tạo vector vận tốc $v_0 = 0$, tại mỗi bước ta cập nhật theo quy tắc:
 
@@ -184,7 +184,7 @@ Khởi tạo $\theta_0 = 0$, $v_0 = 0$, tốc độ học $\eta = 0.1$, hệ s�
 
 Mặc dù Momentum thông thường tăng tốc rất tốt, nhược điểm của nó là có thể tích lũy quán tính quá lớn và lao vọt qua đáy thung lũng trước khi kịp hãm phanh.
 
-**Nesterov Accelerated Gradient (NAG)** giải quyết điều này bằng một cơ chế thông minh: tính toán gradient tại **vị trí nhìn trước (lookahead point)** thay vì tại vị trí hiện tại.
+**Nesterov Accelerated Gradient (NAG)** giải quyết điều này bằng một cơ chế thông minh: Tính toán gradient tại **vị trí nhìn trước (lookahead point)** thay vì tại vị trí hiện tại.
 
 Quy tắc cập nhật Nesterov:
 1. Dự phóng vị trí tương lai theo quán tính thuần túy: $\widetilde\theta_t = \theta_t + \mu v_t$.
@@ -193,8 +193,8 @@ Quy tắc cập nhật Nesterov:
    $$v_{t+1} = \mu v_t - \eta g_t, \qquad \theta_{t+1} = \theta_t + v_{t+1}.$$
 
 Sự khác biệt cốt tử giữa Momentum và Nesterov nằm ở **vị trí lấy đạo hàm**:
-- Momentum thông thường: tính gradient tại điểm đang đứng $\theta_t$, rồi mới cộng quán tính $\mu v_t$.
-- Nesterov: nhảy một bước thử theo quán tính tới $\widetilde\theta_t$, quan sát xem phía trước dốc lên hay dốc xuống để tự động "nhấn phanh" hãm đà nếu sắp lao qua đỉnh đối diện!
+- Momentum thông thường: Tính gradient tại điểm đang đứng $\theta_t$, rồi mới cộng quán tính $\mu v_t$.
+- Nesterov: Nhảy một bước thử theo quán tính tới $\widetilde\theta_t$, quan sát xem phía trước dốc lên hay dốc xuống để tự động "nhấn phanh" hãm đà nếu sắp lao qua đỉnh đối diện!
 
 ::: example Kiểm chứng bước Nesterov trên cùng bài toán
 Với bài toán $J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}$, khởi tạo $\theta_0 = 0, v_0 = 0, \eta = 0.1, \mu = 0.9$:
@@ -232,8 +232,8 @@ Nếu ta khởi tạo toàn bộ trọng số của một tầng ẩn bằng 0:
 - Mạng nơ-ron hoàn toàn mất khả năng học các đặc trưng đa dạng — hiện tượng này gọi là **sự sụp đổ đối xứng (symmetry trap)**.
 
 Để phá vỡ đối xứng, ta bắt buộc phải khởi tạo trọng số ngẫu nhiên. Nhưng ngẫu nhiên với phương sai bao nhiêu?
-- Nếu phương sai quá lớn: tín hiệu kích hoạt sẽ phóng đại theo cấp số nhân qua các tầng, dẫn tới hiện tượng **bùng nổ gradient (exploding gradients)**.
-- Nếu phương sai quá nhỏ: tín hiệu kích hoạt sẽ suy giảm dần về 0 khi đi sâu vào mạng, dẫn tới hiện tượng **triệt tiêu gradient (vanishing gradients)**.
+- Nếu phương sai quá lớn: Tín hiệu kích hoạt sẽ phóng đại theo cấp số nhân qua các tầng, dẫn tới hiện tượng **bùng nổ gradient (exploding gradients)**.
+- Nếu phương sai quá nhỏ: Tín hiệu kích hoạt sẽ suy giảm dần về 0 khi đi sâu vào mạng, dẫn tới hiện tượng **triệt tiêu gradient (vanishing gradients)**.
 
 ### Phân tích bảo toàn phương sai của Xavier Glorot & Yoshua Bengio (2010)
 Xét một nơ-ron tuyến tính tính tổng trọng số $z = \sum_{i=1}^{n_{\mathrm{in}}} W_i x_i$. Giả sử các đầu vào $x_i$ và trọng số $W_i$ độc lập thống kê với nhau, có kỳ vọng bằng 0 và phương sai lần lượt là $\operatorname{Var}(x)$ và $\operatorname{Var}(W)$.
@@ -290,11 +290,11 @@ Tại điểm $\theta = 0.5$:
    $$g_B(0.5) = \frac{0.5 + (-1.5)}{2} = \frac{-1.0}{2} = -0.5.$$
    Đạo hàm toàn phần:
    $$J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2} \implies J'(0.5) = 0.5 - 1 = -0.5.$$
-   Hai kết quả trùng khớp hoàn hảo. Chú ý: nếu cộng các gradient mà quên chia cho kích thước lô $B = 2$, ta sẽ thu được $-1.0$, làm sai lệch thang đo của bước cập nhật.
+   Hai kết quả trùng khớp hoàn hảo. Chú ý: Nếu cộng các gradient mà quên chia cho kích thước lô $B = 2$, ta sẽ thu được $-1.0$, làm sai lệch thang đo của bước cập nhật.
 :::
 
 ::: exercise 2. Thực hiện bước thứ ba của thuật toán Momentum
-Tiếp tục ví dụ ở mục 4: tại cuối bước 2, ta có $\theta_2 = 0.28$ và $v_2 = 0.18$.
+Tiếp tục ví dụ ở mục 4: Tại cuối bước 2, ta có $\theta_2 = 0.28$ và $v_2 = 0.18$.
 Hãy tính toán chi tiết bước lặp thứ 3 với gradient toàn phần, tốc độ học $\eta = 0.1$ và hệ số quán tính $\mu = 0.9$.
 :::
 ::: solution

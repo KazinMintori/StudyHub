@@ -1,6 +1,6 @@
 ## 2.2. Vận tốc tức thời và mối liên hệ với đạo hàm
 
-Vận tốc trung bình là một công cụ hữu ích để đánh giá bức tranh tổng thể của một hành trình, nhưng nó hoàn toàn bất lực trong việc cho ta biết: *ngay tại thời điểm này, vật đang chạy nhanh hay chậm, và đang tiến hay lùi?*
+Vận tốc trung bình là một công cụ hữu ích để đánh giá bức tranh tổng thể của một hành trình, nhưng nó hoàn toàn bất lực trong việc cho ta biết: *Ngay tại thời điểm này, vật đang chạy nhanh hay chậm, và đang tiến hay lùi?*
 
 Một vận động viên bơi lội giành huy chương vàng cự ly $50\,\mathrm m$ tự do (Hình 2.4) là người có độ lớn vận tốc trung bình cao nhất trên cả chặng đua. Nhưng trong suốt $50\,\mathrm m$ ấy, có lúc người đó đạp chân tăng tốc mạnh mẽ sau cú xuất phát, có lúc bơi đều, và có lúc chạm đích với tốc độ khác hẳn. Để mô tả trạng thái chuyển động tại từng khoảnh khắc thời gian cá biệt, vật lý học khai sinh khái niệm **vận tốc tức thời** (*instantaneous velocity*).
 
@@ -14,16 +14,16 @@ Trong ngôn ngữ đời thường, người ta hay nói *"chờ tôi một tho�
 
 ### Định nghĩa giải tích của vận tốc tức thời
 
-Để xác định vận tốc của chiếc xe đua ngay tại vị trí $P_1$ ($t_1$) ở Hình 2.1, ta quan sát vị trí $P_2$ ($t_2$) ở các khoảng thời gian $\Delta t = t_2 - t_1$ ngày càng thu hẹp lại: từ $1\,\mathrm s$ xuống $0.1\,\mathrm s$, $0.01\,\mathrm s$, rồi $0.001\,\mathrm s$.
+Để xác định vận tốc của chiếc xe đua ngay tại vị trí $P_1$ ($t_1$) ở Hình 2.1, ta quan sát vị trí $P_2$ ($t_2$) ở các khoảng thời gian $\Delta t = t_2 - t_1$ ngày càng thu hẹp lại: Từ $1\,\mathrm s$ xuống $0.1\,\mathrm s$, $0.01\,\mathrm s$, rồi $0.001\,\mathrm s$.
 
 Khi khoảng thời gian $\Delta t$ co dần về $0$, độ dời $\Delta x$ cũng co dần về $0$. Tuy nhiên, tỷ số $\frac{\Delta x}{\Delta t}$ giữa hai lượng vô cùng bé ấy không hề triệt tiêu, mà tiệm cận đến một giá trị hữu hạn xác định. Giới hạn toán học này chính là **đạo hàm của tọa độ $x$ theo thời gian $t$**:
 
 $$v_x = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}.\tag{2.3}$$
 
 Thành phần vận tốc tức thời $v_x$ chính là **tốc độ biến thiên tức thời của tọa độ vị trí theo thời gian**:
-- Nếu $v_x > 0$: tọa độ $x$ đang tăng, vật chuyển động theo **chiều dương**.
-- Nếu $v_x < 0$: tọa độ $x$ đang giảm, vật chuyển động theo **chiều âm**.
-- Nếu $v_x = 0$: vật dừng lại tức thời tại thời điểm đó (đổi chiều chuyển động hoặc đứng yên).
+- Nếu $v_x > 0$: Tọa độ $x$ đang tăng, vật chuyển động theo **chiều dương**.
+- Nếu $v_x < 0$: Tọa độ $x$ đang giảm, vật chuyển động theo **chiều âm**.
+- Nếu $v_x = 0$: Vật dừng lại tức thời tại thời điểm đó (đổi chiều chuyển động hoặc đứng yên).
 
 ![Hình 2.5: Dấu của vận tốc tức thời phụ thuộc vào cách chọn chiều dương hệ trục](img/young-02/hinh-2-5.png)
 
@@ -32,10 +32,10 @@ Thành phần vận tốc tức thời $v_x$ chính là **tốc độ biến thi
 ### Phân biệt rạch ròi: Vận tốc tức thời và Tốc độ tức thời
 
 Trong đời sống, hai từ "vận tốc" và "tốc độ" thường bị dùng lẫn lộn như từ đồng nghĩa. Nhưng trong vật lý chuẩn tắc, chúng là hai khái niệm khác nhau về bản chất:
-1. **Vận tốc tức thời ($v_x$):** Là một **đại lượng vector** (trong chuyển động 1D, được biểu thị bằng một số có dấu). Nó mang đầy đủ thông tin: độ nhanh chậm VÀ chiều chuyển động.
+1. **Vận tốc tức thời ($v_x$):** Là một **đại lượng vector** (trong chuyển động 1D, được biểu thị bằng một số có dấu). Nó mang đầy đủ thông tin: Độ nhanh chậm VÀ chiều chuyển động.
 2. **Tốc độ tức thời ($v$):** Là một **đại lượng vô hướng không âm**, chính là **độ lớn của vận tốc tức thời**:
    $$v = |v_x|.$$
-   Đồng hồ đo tốc độ (*speedometer*) trên bảng táp-lô ô tô chỉ hiển thị tốc độ tức thời (ví dụ $80\,\mathrm{km/h}$); nó không hề biết bạn đang đi về phía bắc hay phía nam. Hai chiếc xe chạy ngược chiều nhau trên cùng một đoạn đường có thể có cùng tốc độ tức thời $20\,\mathrm{m/s}$, nhưng vận tốc tức thời của chúng mang dấu trái ngược: chiếc này là $+20\,\mathrm{m/s}$ thì chiếc kia là $-20\,\mathrm{m/s}$.
+   Đồng hồ đo tốc độ (*speedometer*) trên bảng táp-lô ô tô chỉ hiển thị tốc độ tức thời (ví dụ $80\,\mathrm{km/h}$); nó không hề biết bạn đang đi về phía bắc hay phía nam. Hai chiếc xe chạy ngược chiều nhau trên cùng một đoạn đường có thể có cùng tốc độ tức thời $20\,\mathrm{m/s}$, nhưng vận tốc tức thời của chúng mang dấu trái ngược: Chiếc này là $+20\,\mathrm{m/s}$ thì chiếc kia là $-20\,\mathrm{m/s}$.
 
 ::: warning Tốc độ trung bình KHÔNG PHẢI là độ lớn của vận tốc trung bình!
 Đây là một cạm bẫy kinh điển:

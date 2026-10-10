@@ -10,7 +10,7 @@ Chuyển động của máy bay là một ví dụ. Ta phải biết máy bay đ
 
 ### Ứng dụng — Nhiệt độ vô hướng, vận tốc gió có hướng
 
-![Ảnh trong ô ứng dụng của sách: người di chuyển ngoài trời trong thời tiết mùa đông](img/young-01/ung-dung-nhiet-do-gio.png)
+![Ảnh trong ô ứng dụng của sách: Người di chuyển ngoài trời trong thời tiết mùa đông](img/young-01/ung-dung-nhiet-do-gio.png)
 
 Mức dễ chịu của một ngày mùa đông phụ thuộc nhiệt độ, một đại lượng vô hướng có thể dương hoặc âm, chẳng hạn $+5^\circ\mathrm C$ hoặc $-20^\circ\mathrm C$, nhưng không có hướng. Nó cũng phụ thuộc vận tốc gió, một đại lượng vector có cả độ lớn lẫn hướng, chẳng hạn gió $15\,\mathrm{km/h}$ thổi từ phía tây.
 
@@ -22,7 +22,7 @@ Sách biểu diễn vector bằng chữ đậm nghiêng có mũi tên phía trê
 
 Một vector được vẽ bằng đoạn thẳng có đầu mũi tên. Chiều dài đoạn biểu thị độ lớn, còn mũi tên biểu thị hướng. Độ dời luôn là đoạn thẳng có hướng từ điểm đầu đến điểm cuối, dù đường đi thực tế có thể cong. Vì vậy độ dời không liên hệ trực tiếp với tổng quãng đường đi được. Nếu vật đi từ $P_1$ qua $P_2$ rồi trở về $P_1$, độ dời tổng bằng không.
 
-![Hình 1.9 nguyên tác: độ dời thẳng, quỹ đạo cong và hành trình khép kín](img/young-01/hinh-1-9.png)
+![Hình 1.9 nguyên tác: Độ dời thẳng, quỹ đạo cong và hành trình khép kín](img/young-01/hinh-1-9.png)
 
 **Hình 1.9:** (a) Độ dời được biểu diễn bằng mũi tên theo hướng dịch chuyển. Các nhãn chỉ vị trí đầu $P_1$, vị trí cuối $P_2$ và độ dời $\vec A$; hình cũng cho cách viết tay vector. (b) Mũi tên độ dời nối thẳng vị trí đầu với cuối, không phụ thuộc đường đi, kể cả khi đường ấy cong. (c) Độ dời tổng của hành trình đi rồi trở về bằng không, bất kể đường đi và quãng đường.
 
@@ -30,7 +30,7 @@ Hai vector có cùng hướng được gọi là **cùng hướng**. Nếu chún
 
 Vector $\vec B$ trong hình không bằng $\vec A$ vì ngược hướng. **Vector đối** của một vector có cùng độ lớn nhưng ngược hướng, ký hiệu $-\vec A$. Nếu $\vec A$ là độ dời $87\,\mathrm m$ về phía nam thì $-\vec A$ là $87\,\mathrm m$ về phía bắc. Vì vậy $\vec B=-\vec A$, hay $\vec A=-\vec B$. Hai vector ngược hướng được gọi là ngược hướng dù độ lớn có bằng nhau hay không.
 
-![Hình 1.10 nguyên tác: hai độ dời bằng nhau và một độ dời đối](img/young-01/hinh-1-10.png)
+![Hình 1.10 nguyên tác: Hai độ dời bằng nhau và một độ dời đối](img/young-01/hinh-1-10.png)
 
 **Hình 1.10:** $\vec A$ và $\vec A'$ bằng nhau vì cùng chiều dài và hướng. $\vec B$ có cùng độ lớn nhưng ngược hướng với $\vec A$, nên là vector đối của $\vec A$.
 
@@ -60,7 +60,7 @@ $$
 
 Như vậy phép cộng vector có **tính giao hoán**. Một cách dựng tương đương là đặt hai vector chung đuôi, dựng hình bình hành có chúng làm hai cạnh kề. Đường chéo đi từ đuôi chung là vector tổng.
 
-![Hình 1.11 nguyên tác: hai cách ghép nối tiếp và cách dựng hình bình hành để cộng vector](img/young-01/hinh-1-11.png)
+![Hình 1.11 nguyên tác: Hai cách ghép nối tiếp và cách dựng hình bình hành để cộng vector](img/young-01/hinh-1-11.png)
 
 **Hình 1.11:** (a) Ghép đuôi $\vec B$ vào đầu $\vec A$, tổng nối từ đuôi $\vec A$ tới đầu $\vec B$. (b) Đổi thứ tự cho cùng kết quả. (c) Đặt chung đuôi và dùng đường chéo hình bình hành.
 
@@ -68,7 +68,7 @@ Như vậy phép cộng vector có **tính giao hoán**. Một cách dựng tư�
 Từ $\vec C=\vec A+\vec B$ không được suy ra $C=A+B$ trong mọi trường hợp. Độ lớn tổng còn phụ thuộc góc giữa hai vector. Chỉ khi hai vector cùng hướng, độ lớn tổng mới bằng tổng hai độ lớn. Khi ngược hướng, độ lớn tổng bằng $|A-B|$. Phân biệt vector với vô hướng sẽ tránh được cách cộng sai này.
 :::
 
-![Hình 1.12 nguyên tác: cộng hai vector cùng hướng hoặc ngược hướng](img/young-01/hinh-1-12.png)
+![Hình 1.12 nguyên tác: Cộng hai vector cùng hướng hoặc ngược hướng](img/young-01/hinh-1-12.png)
 
 **Hình 1.12:** (a) Cùng hướng cho $C=A+B$. (b) Ngược hướng cho $C=|A-B|$.
 
@@ -82,7 +82,7 @@ $$\vec R=\vec A+(\vec B+\vec C)=\vec A+\vec E.$$
 
 Thậm chí không cần dựng riêng $\vec D$ hay $\vec E$. Chỉ cần ghép lần lượt đuôi mỗi vector vào đầu vector trước. Vector tổng nối đuôi đầu tiên với đầu cuối cùng. Thứ tự có thể thay đổi mà kết quả không đổi. Phép cộng vector có **tính kết hợp**.
 
-![Hình 1.13 nguyên tác: các cách nhóm và đổi thứ tự khi cộng ba vector](img/young-01/hinh-1-13.png)
+![Hình 1.13 nguyên tác: Các cách nhóm và đổi thứ tự khi cộng ba vector](img/young-01/hinh-1-13.png)
 
 **Hình 1.13:** (a) Ba vector ban đầu. (b) Cộng $\vec A+\vec B$ rồi thêm $\vec C$. (c) Cộng $\vec B+\vec C$ rồi thêm $\vec A$. (d) Ghép trực tiếp cả ba vector. (e) Đổi thứ tự ghép vẫn thu được $\vec R$.
 
@@ -90,7 +90,7 @@ Ta định nghĩa hiệu hai vector bằng tổng với vector đối:
 
 $$\vec A-\vec B=\vec A+(-\vec B).\tag{1.4}$$
 
-![Hình 1.14 nguyên tác: dựng hiệu vector bằng vector đối hoặc đặt hai vector chung đầu](img/young-01/hinh-1-14.png)
+![Hình 1.14 nguyên tác: Dựng hiệu vector bằng vector đối hoặc đặt hai vector chung đầu](img/young-01/hinh-1-14.png)
 
 **Hình 1.14:** Trừ $\vec B$ khỏi $\vec A$ tương đương cộng $-\vec B$ vào $\vec A$. Khi ghép đuôi $-\vec B$ vào đầu $\vec A$, hiệu nối đuôi $\vec A$ tới đầu $-\vec B$. Khi đặt $\vec A$ và $\vec B$ chung đầu, hiệu đi từ đuôi $\vec A$ tới đuôi $\vec B$.
 
@@ -98,7 +98,7 @@ $$\vec A-\vec B=\vec A+(-\vec B).\tag{1.4}$$
 
 Độ dời $2\vec A$ có cùng hướng nhưng dài gấp đôi $\vec A$, tương đương cộng $\vec A$ với chính nó. Tổng quát, với số vô hướng $c$, vector $c\vec A$ có độ lớn $|c|A$. Nếu $c>0$, hướng giữ nguyên; nếu $c<0$, hướng đảo lại. Vì vậy $3\vec A$ cùng hướng với $\vec A$, còn $-3\vec A$ ngược hướng và có độ lớn gấp ba.
 
-![Hình 1.15 nguyên tác: nhân vector với số dương hoặc số âm](img/young-01/hinh-1-15.png)
+![Hình 1.15 nguyên tác: Nhân vector với số dương hoặc số âm](img/young-01/hinh-1-15.png)
 
 **Hình 1.15:** (a) Nhân với số dương thay đổi chiều dài nhưng giữ hướng: $2\vec A$ dài gấp đôi. (b) Nhân với số âm vừa thay đổi chiều dài vừa đảo hướng: $-3\vec A$ dài gấp ba và ngược hướng.
 
@@ -136,7 +136,7 @@ Do đó $\varphi=\arctan2.00\approx63.4^\circ$. Hướng có thể được mô 
 **Ý chính của ví dụ:** Khi cộng vector, hãy vẽ các vector thành phần và vector tổng, thuận tiện nhất là ghép đuôi vào đầu như Hình 1.11a,b. Hình giúp nhận ra hướng vector tổng. Vẽ hình cũng cần thiết khi trừ vector, như Hình 1.14.
 :::
 
-![Hình 1.16 nguyên tác: hành trình trượt tuyết gồm hai độ dời vuông góc và vector tổng](img/young-01/hinh-1-16.png)
+![Hình 1.16 nguyên tác: Hành trình trượt tuyết gồm hai độ dời vuông góc và vector tổng](img/young-01/hinh-1-16.png)
 
 **Hình 1.16:** Sơ đồ theo tỷ lệ có độ dời $1.00\,\mathrm{km}$ về bắc và $2.00\,\mathrm{km}$ về đông, vector độ dời kết quả cùng góc $\varphi$. Thước tỷ lệ đánh dấu $0$, $1$ và $2\,\mathrm{km}$; hoa gió chỉ bắc, đông, nam, tây.
 

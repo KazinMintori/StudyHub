@@ -7,7 +7,7 @@ next: false
 
 # Quy nạp toán học
 
-Để chứng minh P(n) với mọi số nguyên $n \ge  n_{0}$: kiểm tra trường hợp cơ sở $n_{0}$, rồi giả sử P(k) đúng và chứng minh $P(k+1)$. Hai bước đi cùng nhau: bước cơ sở khởi đầu chuỗi, bước suy diễn truyền tính đúng sang số tiếp theo.
+Để chứng minh P(n) với mọi số nguyên $n \ge  n_{0}$: Kiểm tra trường hợp cơ sở $n_{0}$, rồi giả sử P(k) đúng và chứng minh $P(k+1)$. Hai bước đi cùng nhau: Bước cơ sở khởi đầu chuỗi, bước suy diễn truyền tính đúng sang số tiếp theo.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Cách này hữu ích với đệ quy có nhiều bài toán con. Trước khi �
 
 ## Ví dụ
 
-$1 + 2 + \ldots  + n = \frac{n(n+1)}{2}$: đúng ở $n = 1$. Cộng thêm $k+1$ vào công thức tại k để thu được công thức tại $k+1$.
+$1 + 2 + \ldots  + n = \frac{n(n+1)}{2}$: Đúng ở $n = 1$. Cộng thêm $k+1$ vào công thức tại k để thu được công thức tại $k+1$.
 
 ## Khi nào cần dùng?
 

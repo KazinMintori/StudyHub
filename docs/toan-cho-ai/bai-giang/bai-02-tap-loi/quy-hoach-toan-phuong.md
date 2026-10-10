@@ -4,12 +4,12 @@ lecture: bai-02-tap-loi
 topic: quy-hoach-toan-phuong
 section: topic
 title: "Quy hoạch toàn phương và QCQP"
-description: "Quy hoạch toàn phương với mục tiêu toàn phương lồi trên đa diện, hình học của nghiệm khi đường mức là ellipse, QCQP và quan hệ LP ⊂ QP ⊂ QCQP, các ví dụ của sách: bình phương tối thiểu có ràng buộc, khoảng cách giữa hai đa diện, phương sai lớn nhất, LP có chi phí ngẫu nhiên và danh mục đầu tư Markowitz."
+description: "Quy hoạch toàn phương với mục tiêu toàn phương lồi trên đa diện, hình học của nghiệm khi đường mức là ellipse, QCQP và quan hệ LP ⊂ QP ⊂ QCQP, các ví dụ của sách: Bình phương tối thiểu có ràng buộc, khoảng cách giữa hai đa diện, phương sai lớn nhất, LP có chi phí ngẫu nhiên và danh mục đầu tư Markowitz."
 ---
 
-Quy hoạch tuyến tính dùng hàm mục tiêu phẳng như một mặt dốc. Rất nhiều bài toán thực tế lại có hàm mục tiêu cong: bình phương sai số, phương sai của rủi ro, bình phương khoảng cách. Khi hàm mục tiêu là một hàm toàn phương lồi và các ràng buộc vẫn affine, ta có một **quy hoạch toàn phương** (quadratic program, QP). Sự thay đổi tưởng nhỏ ấy làm hình học của nghiệm khác hẳn: nghiệm không còn bị buộc phải nằm ở đỉnh của đa diện.
+Quy hoạch tuyến tính dùng hàm mục tiêu phẳng như một mặt dốc. Rất nhiều bài toán thực tế lại có hàm mục tiêu cong: Bình phương sai số, phương sai của rủi ro, bình phương khoảng cách. Khi hàm mục tiêu là một hàm toàn phương lồi và các ràng buộc vẫn affine, ta có một **quy hoạch toàn phương** (quadratic program, QP). Sự thay đổi tưởng nhỏ ấy làm hình học của nghiệm khác hẳn: Nghiệm không còn bị buộc phải nằm ở đỉnh của đa diện.
 
-Trang này trình bày QP, mở rộng của nó là QCQP, và năm ví dụ của sách cho thấy QP xuất hiện từ những nguồn rất khác nhau: thống kê, hình học, xác suất và tài chính.
+Trang này trình bày QP, mở rộng của nó là QCQP, và năm ví dụ của sách cho thấy QP xuất hiện từ những nguồn rất khác nhau: Thống kê, hình học, xác suất và tài chính.
 
 ## 1. Bài toán
 
@@ -44,9 +44,9 @@ với $P_i \succeq 0$, ta có một **quy hoạch toàn phương với ràng bu�
 
 Bài toán cực tiểu $\|Ax - b\|_2^2 = x^TA^TAx - 2b^TAx + b^Tb$ là một QP không ràng buộc với $P = 2A^TA \succeq 0$, và nó có công thức nghiệm quen thuộc qua phương trình chuẩn. Khi thêm ràng buộc tuyến tính, chẳng hạn cận dưới và cận trên cho từng biến, $l_i \le x_i \le u_i$, ta được **bình phương tối thiểu có ràng buộc**. Bài toán vẫn là QP, nhưng không còn công thức nghiệm đơn giản.
 
-Ví dụ tự đặt: khớp $y \approx w_1u + w_2$ với dữ liệu $u = (1, 2, 3, 4)$, $y = (2, 3.5, 5.5, 7)$, nhưng hệ số góc là một đại lượng vật lý chỉ được nằm trong $[0, 1]$. Không có ràng buộc, nghiệm là $w = (1.7,\ 0.25)$ với tổng bình phương sai số 0.05. Hệ số góc 1.7 vi phạm ràng buộc. Dùng [tối ưu theo từng nhóm biến](./khu-rang-buoc-va-toi-uu-tung-phan.md): với $w_1$ cố định, hệ số chặn tốt nhất là $\bar y - w_1\bar u$, và tổng bình phương sai số còn lại là một parabol theo $w_1$ có đỉnh tại 1.7. Trên đoạn $[0, 1]$, parabol này giảm, nên $w_1^\star = 1$, rồi $w_2^\star = 4.5 - 2.5 = 2$, với tổng bình phương sai số 2.5. Cái giá của ràng buộc vật lý là sai số khớp tăng từ 0.05 lên 2.5.
+Ví dụ tự đặt: Khớp $y \approx w_1u + w_2$ với dữ liệu $u = (1, 2, 3, 4)$, $y = (2, 3.5, 5.5, 7)$, nhưng hệ số góc là một đại lượng vật lý chỉ được nằm trong $[0, 1]$. Không có ràng buộc, nghiệm là $w = (1.7,\ 0.25)$ với tổng bình phương sai số 0.05. Hệ số góc 1.7 vi phạm ràng buộc. Dùng [tối ưu theo từng nhóm biến](./khu-rang-buoc-va-toi-uu-tung-phan.md): Với $w_1$ cố định, hệ số chặn tốt nhất là $\bar y - w_1\bar u$, và tổng bình phương sai số còn lại là một parabol theo $w_1$ có đỉnh tại 1.7. Trên đoạn $[0, 1]$, parabol này giảm, nên $w_1^\star = 1$, rồi $w_2^\star = 4.5 - 2.5 = 2$, với tổng bình phương sai số 2.5. Cái giá của ràng buộc vật lý là sai số khớp tăng từ 0.05 lên 2.5.
 
-Có một cám dỗ cần tránh: giải bài toán không ràng buộc rồi kẹp từng thành phần vào hộp. Khi các biến tương quan với nhau, cách làm ấy có thể cho kết quả tệ, như Câu 3 sẽ cho thấy.
+Có một cám dỗ cần tránh: Giải bài toán không ràng buộc rồi kẹp từng thành phần vào hộp. Khi các biến tương quan với nhau, cách làm ấy có thể cho kết quả tệ, như Câu 3 sẽ cho thấy.
 
 ## 4. Khoảng cách giữa hai đa diện
 
@@ -56,19 +56,19 @@ $$
 \text{minimize}\quad \|x_1 - x_2\|_2^2 \qquad \text{subject to}\quad A_1x_1 \preceq b_1,\quad A_2x_2 \preceq b_2,
 $$
 
-với biến $(x_1, x_2)$. Bài toán bất khả thi khi và chỉ khi một trong hai đa diện rỗng. Giá trị tối ưu bằng 0 khi và chỉ khi hai đa diện giao nhau. Trong trường hợp còn lại, nghiệm là cặp điểm gần nhau nhất của hai đa diện, và như mô phỏng cho thấy, đường trung trực của đoạn nối chúng là một siêu phẳng tách hai đa diện. Lecture 01 đã dùng đúng cặp điểm gần nhất này để chứng minh [định lý siêu phẳng phân tách](../bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md). Giờ lời chứng minh ấy đã thành một thuật toán: giải một QP rồi lấy đường trung trực.
+với biến $(x_1, x_2)$. Bài toán bất khả thi khi và chỉ khi một trong hai đa diện rỗng. Giá trị tối ưu bằng 0 khi và chỉ khi hai đa diện giao nhau. Trong trường hợp còn lại, nghiệm là cặp điểm gần nhau nhất của hai đa diện, và như mô phỏng cho thấy, đường trung trực của đoạn nối chúng là một siêu phẳng tách hai đa diện. Lecture 01 đã dùng đúng cặp điểm gần nhất này để chứng minh [định lý siêu phẳng phân tách](../bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md). Giờ lời chứng minh ấy đã thành một thuật toán: Giải một QP rồi lấy đường trung trực.
 
 <PolyDistanceLab />
 
 ## 5. Phương sai lớn nhất và chi phí ngẫu nhiên
 
-**Phương sai lớn nhất.** Trở lại tình huống ở [chủ đề trước](./mo-hinh-lp.md): một biến ngẫu nhiên nhận các giá trị đã biết, với phân phối $p$ chưa biết, chỉ thỏa vài ràng buộc tuyến tính. Phương sai của $f(x)$ là
+**Phương sai lớn nhất.** Trở lại tình huống ở [chủ đề trước](./mo-hinh-lp.md): Một biến ngẫu nhiên nhận các giá trị đã biết, với phân phối $p$ chưa biết, chỉ thỏa vài ràng buộc tuyến tính. Phương sai của $f(x)$ là
 
 $$
 \sum_i f_i^2p_i - \Big(\sum_i f_ip_i\Big)^2,
 $$
 
-một hàm **lõm** bậc hai của $p$, vì nó là một hàm tuyến tính trừ đi bình phương của một hàm tuyến tính. Cực đại một hàm lõm trên đa diện là một bài toán lồi, và ở đây nó là một QP. Với biến nhận giá trị trong $\{0, 1, 2, 3, 4\}$ và trung bình nằm trong $[1, 2]$, phương sai lớn nhất có thể là 4, đạt khi dồn một nửa khối lượng vào 0 và nửa kia vào 4. Kết quả khớp với trực giác: muốn phương sai lớn, hãy đẩy khối lượng ra hai đầu.
+một hàm **lõm** bậc hai của $p$, vì nó là một hàm tuyến tính trừ đi bình phương của một hàm tuyến tính. Cực đại một hàm lõm trên đa diện là một bài toán lồi, và ở đây nó là một QP. Với biến nhận giá trị trong $\{0, 1, 2, 3, 4\}$ và trung bình nằm trong $[1, 2]$, phương sai lớn nhất có thể là 4, đạt khi dồn một nửa khối lượng vào 0 và nửa kia vào 4. Kết quả khớp với trực giác: Muốn phương sai lớn, hãy đẩy khối lượng ra hai đầu.
 
 **LP có chi phí ngẫu nhiên.** Xét một LP mà vector chi phí $c$ là ngẫu nhiên, với trung bình $\bar c$ và ma trận hiệp phương sai $\Sigma$. Với một quyết định $x$, chi phí $c^Tx$ có trung bình $\bar c^Tx$ và phương sai $x^T\Sigma x$. Thường có một sự đánh đổi giữa chi phí trung bình nhỏ và rủi ro nhỏ. Cực tiểu **chi phí có tính đến rủi ro** $\bar c^Tx + \gamma\,x^T\Sigma x$, với $\gamma \ge 0$ là mức ngại rủi ro, trên cùng miền khả thi là một QP, vì $\Sigma \succeq 0$.
 
@@ -82,7 +82,7 @@ $$
 
 tức tìm danh mục ít rủi ro nhất trong những danh mục đạt lợi suất trung bình tối thiểu $r_{\min}$.
 
-Ví dụ tự đặt với hai tài sản: tài sản A có lợi suất trung bình 10% và độ lệch chuẩn 15%, tài sản B có 4% và 5%, hệ số tương quan $-0.2$. Danh mục ít rủi ro nhất, không cần đạt lợi suất nào, đặt $\tfrac17 \approx 14.3\%$ vốn vào A. Nó có lợi suất khoảng 4.86% và độ lệch chuẩn khoảng 4.39%, **thấp hơn cả** tài sản an toàn hơn trong hai tài sản. Đây là sức mạnh của đa dạng hóa: khi hai tài sản tương quan âm, biến động của chúng triệt tiêu một phần. Nếu đòi lợi suất ít nhất 7%, ràng buộc lợi suất chặt, buộc đặt một nửa vốn vào mỗi tài sản, và độ lệch chuẩn tăng lên khoảng 7.42%. Chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ xem toàn bộ đường đánh đổi giữa lợi suất và rủi ro.
+Ví dụ tự đặt với hai tài sản: Tài sản A có lợi suất trung bình 10% và độ lệch chuẩn 15%, tài sản B có 4% và 5%, hệ số tương quan $-0.2$. Danh mục ít rủi ro nhất, không cần đạt lợi suất nào, đặt $\tfrac17 \approx 14.3\%$ vốn vào A. Nó có lợi suất khoảng 4.86% và độ lệch chuẩn khoảng 4.39%, **thấp hơn cả** tài sản an toàn hơn trong hai tài sản. Đây là sức mạnh của đa dạng hóa: Khi hai tài sản tương quan âm, biến động của chúng triệt tiêu một phần. Nếu đòi lợi suất ít nhất 7%, ràng buộc lợi suất chặt, buộc đặt một nửa vốn vào mỗi tài sản, và độ lệch chuẩn tăng lên khoảng 7.42%. Chủ đề [tối ưu vector](./toi-uu-vector-va-danh-doi.md) sẽ xem toàn bộ đường đánh đổi giữa lợi suất và rủi ro.
 
 ## 7. Những câu hỏi để đào sâu
 
@@ -106,7 +106,7 @@ Bài toán này tương đương cực đại $\|x\|_2^2$ trên hình hộp. M�
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Điểm kẹp $(1, 0)$ cho tổng bình phương sai số khoảng $5.30$, trong khi nghiệm đúng của QP có ràng buộc hộp là khoảng $(1,\ 0.798)$ với giá trị khoảng $3.38$. Phép kẹp chỉ đúng khi hàm mục tiêu tách được theo từng biến, tức $A^TA$ chéo. Ở đây hai cột của $A$ gần cùng hướng, nên hai biến bù trừ cho nhau mạnh: nghiệm không ràng buộc dùng một biến rất dương và một biến rất âm để triệt tiêu lẫn nhau. Khi một biến bị chặn, biến kia phải điều chỉnh lại theo, và phép kẹp từng thành phần bỏ qua sự điều chỉnh ấy. Muốn đúng, phải giải QP, hoặc ít nhất dùng phương pháp gradient có chiếu.
+Không. Điểm kẹp $(1, 0)$ cho tổng bình phương sai số khoảng $5.30$, trong khi nghiệm đúng của QP có ràng buộc hộp là khoảng $(1,\ 0.798)$ với giá trị khoảng $3.38$. Phép kẹp chỉ đúng khi hàm mục tiêu tách được theo từng biến, tức $A^TA$ chéo. Ở đây hai cột của $A$ gần cùng hướng, nên hai biến bù trừ cho nhau mạnh: Nghiệm không ràng buộc dùng một biến rất dương và một biến rất âm để triệt tiêu lẫn nhau. Khi một biến bị chặn, biến kia phải điều chỉnh lại theo, và phép kẹp từng thành phần bỏ qua sự điều chỉnh ấy. Muốn đúng, phải giải QP, hoặc ít nhất dùng phương pháp gradient có chiếu.
 
 </details>
 
@@ -114,7 +114,7 @@ Không. Điểm kẹp $(1, 0)$ cho tổng bình phương sai số khoảng $5.30
 
 <details><summary>Xem lời giải thích</summary>
 
-Khoảng cách giữa $\mathcal{P}_1$ và $\mathcal{P}_2 + c$ là $\inf\{\|x_1 - x_2 - c\|_2 : x_1 \in \mathcal{P}_1,\ x_2 \in \mathcal{P}_2\}$. Hàm $(x_1, x_2, c) \mapsto \|x_1 - x_2 - c\|_2$ lồi đồng thời theo cả ba biến, và tập các $(x_1, x_2)$ khả thi lồi. Cực tiểu hóa theo một phần biến giữ tính lồi, nên kết quả là hàm lồi theo $c$. Một cách nhìn khác: khoảng cách ấy chính là khoảng cách từ $c$ tới tập lồi $\mathcal{P}_1 - \mathcal{P}_2$, và khoảng cách tới một tập lồi là hàm lồi.
+Khoảng cách giữa $\mathcal{P}_1$ và $\mathcal{P}_2 + c$ là $\inf\{\|x_1 - x_2 - c\|_2 : x_1 \in \mathcal{P}_1,\ x_2 \in \mathcal{P}_2\}$. Hàm $(x_1, x_2, c) \mapsto \|x_1 - x_2 - c\|_2$ lồi đồng thời theo cả ba biến, và tập các $(x_1, x_2)$ khả thi lồi. Cực tiểu hóa theo một phần biến giữ tính lồi, nên kết quả là hàm lồi theo $c$. Một cách nhìn khác: Khoảng cách ấy chính là khoảng cách từ $c$ tới tập lồi $\mathcal{P}_1 - \mathcal{P}_2$, và khoảng cách tới một tập lồi là hàm lồi.
 
 </details>
 
@@ -145,7 +145,7 @@ Theo trục $x_1$, khoảng cách giữa hai đoạn $[0, 1]$ và $[3, 4]$ là 2
 :::
 
 ::: exercise 3. Danh mục hai tài sản
-Với hai tài sản A, B như ở mục 6, chứng minh danh mục ít rủi ro nhất đặt $\tfrac17$ vốn vào A. Gợi ý: viết phương sai như hàm một biến $x_1$, với $x_2 = 1 - x_1$.
+Với hai tài sản A, B như ở mục 6, chứng minh danh mục ít rủi ro nhất đặt $\tfrac17$ vốn vào A. Gợi ý: Viết phương sai như hàm một biến $x_1$, với $x_2 = 1 - x_1$.
 :::
 
 ::: solution

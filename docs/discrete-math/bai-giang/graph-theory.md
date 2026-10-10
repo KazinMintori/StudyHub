@@ -62,95 +62,9 @@ Trong đó $V$ là số đỉnh, $E$ là số cạnh, và $F$ là số miền m�
 
 ## 4. Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài 1: Ứng dụng Định lý bắt tay kiểm tra tính khả thi của đồ thị
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-::: exercise Yêu cầu
-1. Một đồ thị vô hướng có 15 đỉnh, trong đó mỗi đỉnh đều có đúng bậc 4. Hãy tính tổng số cạnh của đồ thị này.
-2. Liệu có tồn tại một đồ thị đơn vô hướng gồm 9 đỉnh mà bậc của các đỉnh lần lượt là:
-   $$3, 3, 3, 3, 5, 5, 5, 5, 5?$$
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
 :::
 
-::: solution
-#### Lời giải chi tiết
-1. Áp dụng trực tiếp định lý bắt tay:
-   $$
-   \sum_{v \in V} \deg(v) = 15 \times 4 = 60
-   $$
-   Vì $\sum_{v \in V} \deg(v) = 2|E|$, ta suy ra:
-   $$
-   |E| = \frac{60}{2} = 30 \text{ cạnh}.
-   $$
-
-2. Xét dãy bậc gồm 9 đỉnh: $3, 3, 3, 3, 5, 5, 5, 5, 5$.
-   - Các đỉnh có bậc là $3$ và $5$ đều là các đỉnh có bậc lẻ.
-   - Số lượng đỉnh có bậc lẻ ở đây là $4 + 5 = 9$ đỉnh.
-   - Vì $9$ là một số lẻ, điều này vi phạm trực tiếp hệ quả của định lý bắt tay (số đỉnh bậc lẻ trong bất kỳ đồ thị nào cũng phải là một số chẵn).
-   - *Kết luận:* Không thể tồn tại một đồ thị như vậy.
-:::
-
----
-
-### Bài 2: Nhận diện chu trình và đường đi Euler
-
-::: exercise Yêu cầu
-Cho đồ thị lưỡng phân đầy đủ $K_{m, n}$ (gồm hai tập đỉnh độc lập có kích thước $m$ và $n$, mọi đỉnh thuộc tập này đều nối với mọi đỉnh thuộc tập kia).
-1. Hãy xác định bậc của từng đỉnh trong $K_{m, n}$.
-2. Tìm điều kiện của $m$ và $n$ để $K_{m, n}$ có chu trình Euler.
-3. Tìm điều kiện của $m$ và $n$ để $K_{m, n}$ có đường đi Euler nhưng không có chu trình Euler.
-:::
-
-::: solution
-#### Lời giải chi tiết
-1. Trong đồ thị lưỡng phân đầy đủ $K_{m, n}$:
-   - Mỗi đỉnh thuộc tập thứ nhất (gồm $m$ đỉnh) đều nối với toàn bộ $n$ đỉnh của tập thứ hai, do đó có bậc là $n$.
-   - Mỗi đỉnh thuộc tập thứ hai (gồm $n$ đỉnh) đều nối với toàn bộ $m$ đỉnh của tập thứ nhất, do đó có bậc là $m$.
-
-2. **Điều kiện để có chu trình Euler:**
-   Đồ thị liên thông có chu trình Euler khi và chỉ khi tất cả các đỉnh đều có bậc chẵn.
-   Do đó, bậc của mọi đỉnh phải là số chẵn, tức là **cả $m$ và $n$ đều phải là các số nguyên dương chẵn**.
-
-3. **Điều kiện để có đường đi Euler (không khép kín):**
-   Đồ thị liên thông có đường đi Euler khi và chỉ khi có đúng hai đỉnh bậc lẻ (các đỉnh còn lại đều có bậc chẵn).
-   - Nếu $m = 2$ và $n$ là số lẻ: Khi đó $n$ đỉnh có bậc 2 (chẵn) và $m = 2$ đỉnh có bậc $n$ (lẻ). Đồ thị có đúng 2 đỉnh bậc lẻ.
-   - Tương tự, nếu $n = 2$ và $m$ là số lẻ: Đồ thị có đúng 2 đỉnh bậc lẻ.
-   - *Kết luận:* Điều kiện là **($m = 2$ và $n$ lẻ) hoặc ($n = 2$ và $m$ lẻ)**.
-:::
-
----
-
-### Bài 3: Ứng dụng công thức Euler chứng minh đồ thị không phẳng
-
-::: exercise Yêu cầu
-Trong một đơn đồ thị phẳng liên thông với $V \ge 3$ đỉnh và $E$ cạnh, mỗi miền mặt phẳng được bao bởi ít nhất 3 cạnh ($2E \ge 3F$).
-1. Từ công thức Euler $V - E + F = 2$, hãy chứng minh bất đẳng thức:
-   $$E \le 3V - 6$$
-2. Sử dụng bất đẳng thức trên để chứng minh đồ thị đầy đủ 5 đỉnh $K_5$ không thể là đồ thị phẳng.
-:::
-
-::: solution
-#### Lời giải chi tiết
-1. Chứng minh bất đẳng thức:
-   - Từ công thức Euler: $F = E - V + 2$.
-   - Vì mỗi miền được giới hạn bởi ít nhất 3 cạnh và mỗi cạnh chỉ là biên của tối đa 2 miền, ta có hệ thức:
-     $$3F \le 2E$$
-   - Thay $F = E - V + 2$ vào bất đẳng thức:
-     $$
-     \begin{aligned}
-     3(E - V + 2) &\le 2E \\
-     3E - 3V + 6 &\le 2E \\
-     E &\le 3V - 6.
-     \end{aligned}
-     $$
-
-2. Áp dụng cho đồ thị đầy đủ $K_5$:
-   - Đồ thị $K_5$ có $V = 5$ đỉnh.
-   - Số cạnh của $K_5$ là:
-     $$
-     E = \binom{5}{2} = \frac{5 \times 4}{2} = 10 \text{ cạnh}.
-     $$
-   - Nếu $K_5$ là đồ thị phẳng, số cạnh của nó phải thỏa mãn bất đẳng thức:
-     $$
-     E \le 3V - 6 \iff 10 \le 3(5) - 6 = 15 - 6 = 9 \quad (\text{Vô lý!})
-     $$
-   - Mâu thuẫn này chứng minh rằng **đồ thị $K_5$ không thể vẽ trên mặt phẳng mà không có cạnh cắt nhau** (không phải là đồ thị phẳng).
-:::

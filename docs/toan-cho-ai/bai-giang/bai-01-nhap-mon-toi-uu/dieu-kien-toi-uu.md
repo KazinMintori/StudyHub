@@ -4,19 +4,19 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: dieu-kien-toi-uu
 section: topic
 title: "Điều kiện tối ưu bậc nhất trên miền lồi"
-description: "Tiêu chuẩn tối ưu ∇f₀(x)ᵀ(y − x) ≥ 0 cho bài toán lồi khả vi và ý nghĩa siêu phẳng tựa, lời chứng minh hai chiều, ba trường hợp riêng: không ràng buộc, ràng buộc đẳng thức với nhân tử Lagrange, ràng buộc không âm với điều kiện bù, cùng phép chiếu và phương pháp gradient có chiếu."
+description: "Tiêu chuẩn tối ưu ∇f₀(x)ᵀ(y − x) ≥ 0 cho bài toán lồi khả vi và ý nghĩa siêu phẳng tựa, lời chứng minh hai chiều, ba trường hợp riêng: Không ràng buộc, ràng buộc đẳng thức với nhân tử Lagrange, ràng buộc không âm với điều kiện bù, cùng phép chiếu và phương pháp gradient có chiếu."
 ---
 
 Khi không có ràng buộc, điều kiện tối ưu quen thuộc là gradient bằng 0. Nhưng phần lớn bài toán thực tế có ràng buộc, và khi nghiệm nằm trên biên của miền khả thi, gradient tại đó thường **khác 0**. Cực tiểu $x$ trên đoạn $[1, 2]$ đạt tại $x = 1$, nơi đạo hàm bằng 1. Vậy làm sao kiểm chứng một điểm trên biên là tối ưu?
 
-Với bài toán lồi khả vi, câu trả lời là một bất đẳng thức duy nhất, và nó có một ý nghĩa hình học rất gọn: tại nghiệm, mặt phẳng vuông góc với gradient phải tựa vào miền khả thi. Sau khi phát biểu và chứng minh tiêu chuẩn đó, ta xem nó biến thành gì trong ba tình huống hay gặp nhất. Chương sau về đối ngẫu sẽ khai triển những trường hợp này thành điều kiện KKT tổng quát.
+Với bài toán lồi khả vi, câu trả lời là một bất đẳng thức duy nhất, và nó có một ý nghĩa hình học rất gọn: Tại nghiệm, mặt phẳng vuông góc với gradient phải tựa vào miền khả thi. Sau khi phát biểu và chứng minh tiêu chuẩn đó, ta xem nó biến thành gì trong ba tình huống hay gặp nhất. Chương sau về đối ngẫu sẽ khai triển những trường hợp này thành điều kiện KKT tổng quát.
 
 ## 1. Tiêu chuẩn tối ưu
 
 > **Định lý.** Xét bài toán lồi với hàm mục tiêu $f_0$ khả vi và miền khả thi $X$. Điểm $x$ là nghiệm tối ưu khi và chỉ khi $x \in X$ và
 > $$\nabla f_0(x)^T (y - x) \ge 0 \quad \text{với mọi } y \in X.$$
 
-Đọc từng phần của bất đẳng thức. Vector $y - x$ là hướng đi từ $x$ tới một điểm khả thi $y$. Đại lượng $\nabla f_0(x)^T (y - x)$ là đạo hàm theo hướng của $f_0$ khi bắt đầu đi theo hướng đó. Tiêu chuẩn nói: tại nghiệm, **không có hướng khả thi nào làm $f_0$ giảm ngay từ bước đầu tiên**. Mọi hướng đi vào miền khả thi đều làm $f_0$ tăng, hoặc ít nhất là không giảm, theo xấp xỉ bậc nhất.
+Đọc từng phần của bất đẳng thức. Vector $y - x$ là hướng đi từ $x$ tới một điểm khả thi $y$. Đại lượng $\nabla f_0(x)^T (y - x)$ là đạo hàm theo hướng của $f_0$ khi bắt đầu đi theo hướng đó. Tiêu chuẩn nói: Tại nghiệm, **không có hướng khả thi nào làm $f_0$ giảm ngay từ bước đầu tiên**. Mọi hướng đi vào miền khả thi đều làm $f_0$ tăng, hoặc ít nhất là không giảm, theo xấp xỉ bậc nhất.
 
 Về hình học, nếu $\nabla f_0(x) \ne 0$, tiêu chuẩn nói rằng toàn bộ $X$ nằm trong nửa không gian $\{y : \nabla f_0(x)^T (y - x) \ge 0\}$. Siêu phẳng đi qua $x$ với pháp tuyến $\nabla f_0(x)$ là một **siêu phẳng tựa** của $X$ tại $x$, và $-\nabla f_0(x)$, hướng mà $f_0$ giảm nhanh nhất, chỉ thẳng ra ngoài miền khả thi (Hình 4.2 trong sách). Đồng thời, siêu phẳng ấy cũng tựa vào tập mức dưới $\{y : f_0(y) \le f_0(x)\}$, như ở chủ đề điều kiện bậc nhất. Vậy tại nghiệm, miền khả thi và tập mức dưới chạm nhau tại $x$, và một siêu phẳng tách chúng.
 
@@ -44,9 +44,9 @@ Khi $X = \operatorname{dom} f_0$ là tập mở, mọi điểm đủ gần $x$ �
 
 Ví dụ 4.5 của sách phân tích hàm bậc hai lồi $f_0(x) = \tfrac12 x^T P x + q^T x + r$ với $P \succeq 0$. Điều kiện $Px + q = 0$ là một hệ phương trình tuyến tính, và ba khả năng tương ứng với ba hình dạng đã gặp ở chủ đề điều kiện bậc hai:
 
-- $P \succ 0$, cái bát: nghiệm duy nhất $x^\star = -P^{-1} q$.
-- $P$ suy biến và $q$ thuộc không gian cột của $P$, cái máng có đáy nằm ngang: vô số nghiệm, tạo thành một tập affine.
-- $P$ suy biến và $q$ không thuộc không gian cột của $P$, cái máng có đáy nghiêng: không có nghiệm, và $f_0$ giảm về $-\infty$ dọc đáy máng.
+- $P \succ 0$, cái bát: Nghiệm duy nhất $x^\star = -P^{-1} q$.
+- $P$ suy biến và $q$ thuộc không gian cột của $P$, cái máng có đáy nằm ngang: Vô số nghiệm, tạo thành một tập affine.
+- $P$ suy biến và $q$ không thuộc không gian cột của $P$, cái máng có đáy nghiêng: Không có nghiệm, và $f_0$ giảm về $-\infty$ dọc đáy máng.
 
 Ví dụ với $P = \operatorname{diag}(2, 0)$. Với $q = (-2, 0)$, $f_0 = x_1^2 - 2x_1$, mọi điểm $(1, x_2)$ đều là nghiệm. Với $q = (-2, 1)$, $f_0 = x_1^2 - 2x_1 + x_2$, cho $x_2 \to -\infty$ thì $f_0 \to -\infty$.
 
@@ -72,9 +72,9 @@ $$
 x \succeq 0, \qquad \nabla f_0(x) \succeq 0, \qquad x_i \,\big(\nabla f_0(x)\big)_i = 0 \ \text{ với mọi } i .
 $$
 
-Điều kiện cuối gọi là **điều kiện bù**: với mỗi $i$, hoặc $x_i = 0$, hoặc đạo hàm riêng theo $x_i$ bằng 0. Đọc theo từng tọa độ: nếu biến $x_i$ nằm hẳn trong miền ($x_i > 0$), nó được tự do dịch chuyển cả hai phía, nên đạo hàm theo nó phải bằng 0 như bài toán không ràng buộc. Nếu $x_i$ bị chặn ở biên 0, đạo hàm theo nó chỉ cần không âm: hàm muốn $x_i$ giảm tiếp xuống dưới 0, nhưng ràng buộc không cho.
+Điều kiện cuối gọi là **điều kiện bù**: Với mỗi $i$, hoặc $x_i = 0$, hoặc đạo hàm riêng theo $x_i$ bằng 0. Đọc theo từng tọa độ: Nếu biến $x_i$ nằm hẳn trong miền ($x_i > 0$), nó được tự do dịch chuyển cả hai phía, nên đạo hàm theo nó phải bằng 0 như bài toán không ràng buộc. Nếu $x_i$ bị chặn ở biên 0, đạo hàm theo nó chỉ cần không âm: Hàm muốn $x_i$ giảm tiếp xuống dưới 0, nhưng ràng buộc không cho.
 
-Ví dụ: cực tiểu $(x_1 - 1)^2 + (x_2 + 2)^2$ với $x \succeq 0$. Không ràng buộc, nghiệm sẽ là $(1, -2)$, nhưng $x_2 = -2$ vi phạm ràng buộc. Ứng viên $x = (1, 0)$ có $\nabla f_0(x) = (0,\ 4)$. Kiểm tra: $x \succeq 0$, gradient $\succeq 0$, và $x_1 \cdot 0 = 0$, $x_2 \cdot 4 = 0$. Cả ba điều kiện thỏa, nên $(1, 0)$ tối ưu.
+Ví dụ: Cực tiểu $(x_1 - 1)^2 + (x_2 + 2)^2$ với $x \succeq 0$. Không ràng buộc, nghiệm sẽ là $(1, -2)$, nhưng $x_2 = -2$ vi phạm ràng buộc. Ứng viên $x = (1, 0)$ có $\nabla f_0(x) = (0,\ 4)$. Kiểm tra: $x \succeq 0$, gradient $\succeq 0$, và $x_1 \cdot 0 = 0$, $x_2 \cdot 4 = 0$. Cả ba điều kiện thỏa, nên $(1, 0)$ tối ưu.
 
 ## 4. Phép chiếu và phương pháp gradient có chiếu
 
@@ -88,7 +88,7 @@ Giờ lấy $z = x - t\nabla f_0(x)$ với $t > 0$. Điểm $x$ là hình chiế
 
 > $x$ là nghiệm tối ưu khi và chỉ khi $x = \Pi_X\big(x - t\nabla f_0(x)\big)$ với một (và khi đó mọi) $t > 0$.
 
-Nghiệm là **điểm bất động** của phép "đi một bước gradient rồi chiếu về miền khả thi". Điều này gợi ý ngay **phương pháp gradient có chiếu**: lặp $x^{(k+1)} = \Pi_X\big(x^{(k)} - t\nabla f_0(x^{(k)})\big)$. Nếu dãy dừng lại, nó dừng đúng tại nghiệm. Trong mô phỏng ở mục 1, dòng cuối của bảng kết quả cho thấy một bước như vậy đẩy $x$ đi bao xa, và khoảng cách đó bằng 0 đúng khi $x$ tối ưu. Trong học máy, phương pháp này được dùng khi tham số phải nằm trong một tập đơn giản, chẳng hạn ràng buộc chuẩn $\|w\|_2 \le r$, mà phép chiếu chỉ là co vector về độ dài $r$ khi nó dài hơn.
+Nghiệm là **điểm bất động** của phép "đi một bước gradient rồi chiếu về miền khả thi". Điều này gợi ý ngay **phương pháp gradient có chiếu**: Lặp $x^{(k+1)} = \Pi_X\big(x^{(k)} - t\nabla f_0(x^{(k)})\big)$. Nếu dãy dừng lại, nó dừng đúng tại nghiệm. Trong mô phỏng ở mục 1, dòng cuối của bảng kết quả cho thấy một bước như vậy đẩy $x$ đi bao xa, và khoảng cách đó bằng 0 đúng khi $x$ tối ưu. Trong học máy, phương pháp này được dùng khi tham số phải nằm trong một tập đơn giản, chẳng hạn ràng buộc chuẩn $\|w\|_2 \le r$, mà phép chiếu chỉ là co vector về độ dài $r$ khi nó dài hơn.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -104,7 +104,7 @@ Nếu $x$ nằm trong phần trong của $X$, mọi hướng $v$ đều khả th
 
 <details><summary>Xem lời giải thích</summary>
 
-Đúng khi nghiệm nằm ở chỗ biên trơn, chẳng hạn trên một cạnh của đa giác (không ở đỉnh) hay trên đường tròn: khi đó siêu phẳng tựa duy nhất là tiếp tuyến của biên, nên $\nabla f_0(x)$ phải vuông góc với biên và hướng vào trong miền. Sai khi nghiệm nằm ở một đỉnh. Tại đỉnh, có cả một chùm siêu phẳng tựa, và $-\nabla f_0(x)$ chỉ cần nằm trong một "nón" các hướng chỉ ra ngoài, không cần vuông góc với cạnh nào. Đặt tâm $c$ của mô phỏng sao cho nghiệm rơi vào đỉnh $(2.2, 0.5)$ để thấy gradient nghiêng tự do trong một khoảng góc.
+Đúng khi nghiệm nằm ở chỗ biên trơn, chẳng hạn trên một cạnh của đa giác (không ở đỉnh) hay trên đường tròn: Khi đó siêu phẳng tựa duy nhất là tiếp tuyến của biên, nên $\nabla f_0(x)$ phải vuông góc với biên và hướng vào trong miền. Sai khi nghiệm nằm ở một đỉnh. Tại đỉnh, có cả một chùm siêu phẳng tựa, và $-\nabla f_0(x)$ chỉ cần nằm trong một "nón" các hướng chỉ ra ngoài, không cần vuông góc với cạnh nào. Đặt tâm $c$ của mô phỏng sao cho nghiệm rơi vào đỉnh $(2.2, 0.5)$ để thấy gradient nghiêng tự do trong một khoảng góc.
 
 </details>
 
@@ -112,7 +112,7 @@ Nếu $x$ nằm trong phần trong của $X$, mọi hướng $v$ đều khả th
 
 <details><summary>Xem lời giải thích</summary>
 
-Điều kiện $\nabla f_0(x) + \nu \mathbf{1} = 0$ nói mọi đạo hàm riêng bằng $-\nu$, nên $-\nu$ là chi phí biên chung. Khi tổng tăng thêm $\delta$ nhỏ, cách rẻ nhất là chia phần tăng sao cho chi phí biên vẫn bằng nhau, và chi phí tăng xấp xỉ $(\text{chi phí biên}) \times \delta = \tfrac{12}{11}\delta$. Kiểm tra chính xác: nghiệm với tổng $s$ là $s \cdot (\tfrac{6}{11}, \tfrac{3}{11}, \tfrac{2}{11})$ và giá trị tối ưu là $\tfrac{6}{11}s^2$, có đạo hàm theo $s$ tại $s = 1$ bằng $\tfrac{12}{11}$. Nhân tử Lagrange đo **độ nhạy** của giá trị tối ưu theo vế phải của ràng buộc, và chương đối ngẫu sẽ chứng minh điều này tổng quát.
+Điều kiện $\nabla f_0(x) + \nu \mathbf{1} = 0$ nói mọi đạo hàm riêng bằng $-\nu$, nên $-\nu$ là chi phí biên chung. Khi tổng tăng thêm $\delta$ nhỏ, cách rẻ nhất là chia phần tăng sao cho chi phí biên vẫn bằng nhau, và chi phí tăng xấp xỉ $(\text{chi phí biên}) \times \delta = \tfrac{12}{11}\delta$. Kiểm tra chính xác: Nghiệm với tổng $s$ là $s \cdot (\tfrac{6}{11}, \tfrac{3}{11}, \tfrac{2}{11})$ và giá trị tối ưu là $\tfrac{6}{11}s^2$, có đạo hàm theo $s$ tại $s = 1$ bằng $\tfrac{12}{11}$. Nhân tử Lagrange đo **độ nhạy** của giá trị tối ưu theo vế phải của ràng buộc, và chương đối ngẫu sẽ chứng minh điều này tổng quát.
 
 </details>
 
@@ -120,7 +120,7 @@ Nếu $x$ nằm trong phần trong của $X$, mọi hướng $v$ đều khả th
 
 <details><summary>Xem lời giải thích</summary>
 
-Phép chiếu có công thức đóng cho nhiều tập đơn giản: hình hộp $\{l \preceq x \preceq u\}$ (kẹp từng tọa độ vào đoạn của nó), nón không âm (thay thành phần âm bằng 0), quả cầu Euclid (co vector về bán kính nếu nó dài quá), siêu phẳng và nửa không gian (một công thức tường minh). Đơn hình xác suất cần một thuật toán sắp xếp ngắn. Nhưng với một đa diện tổng quát $\{x : Ax \preceq b\}$ có nhiều ràng buộc, phép chiếu là một quy hoạch bậc hai, khó gần ngang bài toán gốc. Khi đó người ta chuyển sang những phương pháp khác, chẳng hạn các phương pháp dựa trên đối ngẫu.
+Phép chiếu có công thức đóng cho nhiều tập đơn giản: Hình hộp $\{l \preceq x \preceq u\}$ (kẹp từng tọa độ vào đoạn của nó), nón không âm (thay thành phần âm bằng 0), quả cầu Euclid (co vector về bán kính nếu nó dài quá), siêu phẳng và nửa không gian (một công thức tường minh). Đơn hình xác suất cần một thuật toán sắp xếp ngắn. Nhưng với một đa diện tổng quát $\{x : Ax \preceq b\}$ có nhiều ràng buộc, phép chiếu là một quy hoạch bậc hai, khó gần ngang bài toán gốc. Khi đó người ta chuyển sang những phương pháp khác, chẳng hạn các phương pháp dựa trên đối ngẫu.
 
 </details>
 
@@ -164,7 +164,7 @@ $\nabla f_0(x) = (2x_1 - 2,\ 2x_2 + 6)$. Thành phần thứ hai luôn dương k
 
 ## Tóm tắt
 
-Với bài toán lồi có hàm mục tiêu khả vi, $x$ tối ưu khi và chỉ khi $x$ khả thi và $\nabla f_0(x)^T (y - x) \ge 0$ với mọi điểm khả thi $y$: không hướng khả thi nào làm hàm giảm ngay từ đầu. Về hình học, siêu phẳng qua $x$ vuông góc với gradient tựa vào miền khả thi, và $-\nabla f_0(x)$ chỉ ra ngoài miền. Chiều đủ dùng tính lồi của hàm, chiều cần dùng tính lồi của miền.
+Với bài toán lồi có hàm mục tiêu khả vi, $x$ tối ưu khi và chỉ khi $x$ khả thi và $\nabla f_0(x)^T (y - x) \ge 0$ với mọi điểm khả thi $y$: Không hướng khả thi nào làm hàm giảm ngay từ đầu. Về hình học, siêu phẳng qua $x$ vuông góc với gradient tựa vào miền khả thi, và $-\nabla f_0(x)$ chỉ ra ngoài miền. Chiều đủ dùng tính lồi của hàm, chiều cần dùng tính lồi của miền.
 
 Khi không có ràng buộc, tiêu chuẩn là $\nabla f_0(x) = 0$. Với ràng buộc $Ax = b$, nó là điều kiện nhân tử Lagrange $\nabla f_0(x) + A^T\nu = 0$. Với ràng buộc $x \succeq 0$, nó là gradient không âm cùng điều kiện bù. Cuối cùng, nghiệm chính là điểm bất động của phép đi một bước gradient rồi chiếu về miền, và đó là nền của phương pháp gradient có chiếu.
 

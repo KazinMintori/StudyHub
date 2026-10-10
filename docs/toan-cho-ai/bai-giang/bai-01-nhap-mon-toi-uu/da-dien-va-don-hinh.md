@@ -9,7 +9,7 @@ description: "Đa diện là giao hữu hạn nửa không gian và siêu phẳn
 
 Quy hoạch tuyến tính, bài toán quen thuộc nhất của tối ưu, có miền khả thi được mô tả bằng một danh sách bất đẳng thức tuyến tính. Mỗi bất đẳng thức cắt bỏ một nửa không gian, và phần còn lại sau khi cắt hết là một **đa diện**. Hiểu hình dạng của đa diện, nó có những đỉnh nào, có bị chặn không, có rỗng không, là hiểu được nửa câu chuyện của quy hoạch tuyến tính.
 
-Trang này cũng giới thiệu **đơn hình**, loại đa diện đơn giản nhất: đoạn thẳng, tam giác, tứ diện và các "anh em" nhiều chiều của chúng. Đơn hình xác suất, tập mọi phân phối xác suất trên hữu hạn kết quả, là đơn hình mà bạn gặp mỗi ngày trong học máy mà có khi không để ý. Cuối trang là một câu hỏi tinh tế hơn: một đa diện có thể mô tả bằng các mặt hoặc bằng các đỉnh, và hai cách mô tả đó có thể chênh nhau về kích thước tới mức hàm mũ.
+Trang này cũng giới thiệu **đơn hình**, loại đa diện đơn giản nhất: Đoạn thẳng, tam giác, tứ diện và các "anh em" nhiều chiều của chúng. Đơn hình xác suất, tập mọi phân phối xác suất trên hữu hạn kết quả, là đơn hình mà bạn gặp mỗi ngày trong học máy mà có khi không để ý. Cuối trang là một câu hỏi tinh tế hơn: Một đa diện có thể mô tả bằng các mặt hoặc bằng các đỉnh, và hai cách mô tả đó có thể chênh nhau về kích thước tới mức hàm mũ.
 
 ## 1. Đa diện
 
@@ -26,7 +26,7 @@ $$
 
 trong đó các hàng của $A$ là $a_1^T, \ldots, a_m^T$, các hàng của $C$ là $c_1^T, \ldots, c_p^T$, và ký hiệu $u \preceq v$ giữa hai vector nghĩa là $u_i \le v_i$ **với từng thành phần** $i$. Ký hiệu này khác với dấu $\le$ giữa hai số. Hai vector $u = (1, 3)$ và $v = (2, 2)$ chẳng hạn không thỏa cả $u \preceq v$ lẫn $v \preceq u$, vì thành phần thứ nhất của $u$ nhỏ hơn còn thành phần thứ hai lại lớn hơn. Chủ đề về bất đẳng thức tổng quát sẽ biến nhận xét nhỏ này thành một lý thuyết.
 
-Nhiều tập quen thuộc là đa diện: tập affine (chỉ có đẳng thức), tia, đoạn thẳng, nửa không gian, và **góc phần tư không âm** $\mathbb{R}^n_+ = \{x : x \succeq 0\}$. Góc phần tư không âm vừa là đa diện vừa là nón, nên được gọi là **nón đa diện**.
+Nhiều tập quen thuộc là đa diện: Tập affine (chỉ có đẳng thức), tia, đoạn thẳng, nửa không gian, và **góc phần tư không âm** $\mathbb{R}^n_+ = \{x : x \succeq 0\}$. Góc phần tư không âm vừa là đa diện vừa là nón, nên được gọi là **nón đa diện**.
 
 Một đa diện có thể không bị chặn, chẳng hạn một nửa không gian, và có thể rỗng, khi các ràng buộc mâu thuẫn. Đa diện bị chặn đôi khi được gọi là **đa đỉnh** (polytope). Sách lưu ý rằng các tác giả khác nhau dùng hai từ này theo những quy ước ngược nhau, nên khi đọc tài liệu khác, hãy kiểm tra định nghĩa của họ.
 
@@ -34,7 +34,7 @@ Bạn có thể tự ghép một đa diện trong mặt phẳng từ các nửa 
 
 <PolyhedronLab />
 
-Hãy để ý cột "chặt" bên cạnh mỗi đỉnh. Trong mặt phẳng, mỗi đỉnh của đa diện có ít nhất hai ràng buộc chặt, và hai đường biên đó cắt nhau đúng tại đỉnh. Nhận xét này mở rộng thành định nghĩa đại số của đỉnh ở Lecture 07: trong $\mathbb{R}^n$, một đỉnh là điểm khả thi tại đó có $n$ ràng buộc chặt với các pháp tuyến độc lập tuyến tính.
+Hãy để ý cột "chặt" bên cạnh mỗi đỉnh. Trong mặt phẳng, mỗi đỉnh của đa diện có ít nhất hai ràng buộc chặt, và hai đường biên đó cắt nhau đúng tại đỉnh. Nhận xét này mở rộng thành định nghĩa đại số của đỉnh ở Lecture 07: Trong $\mathbb{R}^n$, một đỉnh là điểm khả thi tại đó có $n$ ràng buộc chặt với các pháp tuyến độc lập tuyến tính.
 
 ## 2. Đơn hình
 
@@ -82,13 +82,13 @@ Với tam giác trong $\mathbb{R}^3$ có đỉnh $v_0 = (0, 0, 1)$, $v_1 = (1, 0
 
 ## 4. Hai cách mô tả một đa diện
 
-Bao lồi của hữu hạn điểm $\operatorname{conv}\{v_1, \ldots, v_k\}$ luôn là một đa diện bị chặn. Sách nêu một mở rộng: tập
+Bao lồi của hữu hạn điểm $\operatorname{conv}\{v_1, \ldots, v_k\}$ luôn là một đa diện bị chặn. Sách nêu một mở rộng: Tập
 
 $$
 \{\theta_1 v_1 + \cdots + \theta_k v_k : \theta_1 + \cdots + \theta_m = 1,\ \theta_i \ge 0,\ i = 1, \ldots, k\}, \qquad m \le k,
 $$
 
-là bao lồi của $v_1, \ldots, v_m$ cộng với bao nón của $v_{m+1}, \ldots, v_k$, và nó là một đa diện. Điều ngược lại cũng đúng, dù sách không chứng minh: **mọi đa diện đều viết được dưới dạng "bao lồi của hữu hạn điểm cộng bao nón của hữu hạn hướng"**. Kết quả này thường được gọi là định lý Minkowski–Weyl. Như vậy mỗi đa diện có hai cách mô tả. Cách mô tả bằng ràng buộc $Ax \preceq b$ trả lời câu hỏi "làm sao kiểm tra một điểm có thuộc đa diện". Cách mô tả bằng đỉnh và hướng trả lời câu hỏi "làm sao sinh ra mọi điểm của đa diện". Đó đúng là sự đối ngẫu "kiểm tra hay sinh ra" mà ta đã gặp với quả cầu.
+là bao lồi của $v_1, \ldots, v_m$ cộng với bao nón của $v_{m+1}, \ldots, v_k$, và nó là một đa diện. Điều ngược lại cũng đúng, dù sách không chứng minh: **Mọi đa diện đều viết được dưới dạng "bao lồi của hữu hạn điểm cộng bao nón của hữu hạn hướng"**. Kết quả này thường được gọi là định lý Minkowski–Weyl. Như vậy mỗi đa diện có hai cách mô tả. Cách mô tả bằng ràng buộc $Ax \preceq b$ trả lời câu hỏi "làm sao kiểm tra một điểm có thuộc đa diện". Cách mô tả bằng đỉnh và hướng trả lời câu hỏi "làm sao sinh ra mọi điểm của đa diện". Đó đúng là sự đối ngẫu "kiểm tra hay sinh ra" mà ta đã gặp với quả cầu.
 
 Sách nhấn mạnh rằng việc chọn cách mô tả có hệ quả thực tế rất lớn, bằng ví dụ quả cầu $\ell_\infty$ trong $\mathbb{R}^n$:
 
@@ -96,9 +96,9 @@ $$
 \{x : |x_i| \le 1,\ i = 1, \ldots, n\} .
 $$
 
-Mô tả bằng ràng buộc chỉ cần $2n$ bất đẳng thức $\pm e_i^T x \le 1$. Mô tả bằng bao lồi cần ít nhất $2^n$ đỉnh, là mọi vector có các thành phần bằng $\pm 1$. Với $n = 50$, một bên là 100 bất đẳng thức, bên kia là hơn $10^{15}$ đỉnh. Với quả cầu $\ell_1$ thì ngược lại: nó có đúng $2n$ đỉnh $\pm e_i$, nhưng viết bằng bất đẳng thức tuyến tính theo cách trực tiếp cần $2^n$ bất đẳng thức $s^T x \le 1$ với $s \in \{-1, 1\}^n$.
+Mô tả bằng ràng buộc chỉ cần $2n$ bất đẳng thức $\pm e_i^T x \le 1$. Mô tả bằng bao lồi cần ít nhất $2^n$ đỉnh, là mọi vector có các thành phần bằng $\pm 1$. Với $n = 50$, một bên là 100 bất đẳng thức, bên kia là hơn $10^{15}$ đỉnh. Với quả cầu $\ell_1$ thì ngược lại: Nó có đúng $2n$ đỉnh $\pm e_i$, nhưng viết bằng bất đẳng thức tuyến tính theo cách trực tiếp cần $2^n$ bất đẳng thức $s^T x \le 1$ với $s \in \{-1, 1\}^n$.
 
-Hai ví dụ này cho thấy một điều sâu sắc: một đa diện có thể "đơn giản" theo cách mô tả này nhưng "phức tạp" theo cách kia. Khi lập mô hình, chọn đúng cách mô tả đôi khi là sự khác nhau giữa một bài toán giải trong một giây và một bài toán không thể viết ra.
+Hai ví dụ này cho thấy một điều sâu sắc: Một đa diện có thể "đơn giản" theo cách mô tả này nhưng "phức tạp" theo cách kia. Khi lập mô hình, chọn đúng cách mô tả đôi khi là sự khác nhau giữa một bài toán giải trong một giây và một bài toán không thể viết ra.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -122,7 +122,7 @@ Có. Một nửa mặt phẳng, một dải $\{x : 0 \le x_1 \le 1\}$ hay một 
 
 <details><summary>Xem lời giải thích</summary>
 
-Với ba điểm đầu, lấy $v_0 = (1, 0, 0)$: hai hiệu $(-1, 1, 0)$ và $(0, 1, 0)$ độc lập tuyến tính, nên ba điểm độc lập affine. Chúng không thẳng hàng, tạo thành một tam giác. Với bốn điểm sau, lấy $v_0 = 0$: ba hiệu $(1,0,0)$, $(0,1,0)$, $(1,1,0)$ phụ thuộc tuyến tính vì vector thứ ba là tổng hai vector đầu. Vậy bốn điểm không độc lập affine. Chúng là bốn đỉnh của một hình vuông nằm trong mặt phẳng $x_3 = 0$, và bao lồi của chúng không phải đơn hình.
+Với ba điểm đầu, lấy $v_0 = (1, 0, 0)$: Hai hiệu $(-1, 1, 0)$ và $(0, 1, 0)$ độc lập tuyến tính, nên ba điểm độc lập affine. Chúng không thẳng hàng, tạo thành một tam giác. Với bốn điểm sau, lấy $v_0 = 0$: Ba hiệu $(1,0,0)$, $(0,1,0)$, $(1,1,0)$ phụ thuộc tuyến tính vì vector thứ ba là tổng hai vector đầu. Vậy bốn điểm không độc lập affine. Chúng là bốn đỉnh của một hình vuông nằm trong mặt phẳng $x_3 = 0$, và bao lồi của chúng không phải đơn hình.
 
 </details>
 
@@ -140,7 +140,7 @@ Có ít nhất ba nghĩa. Nó là trung bình cộng của $n$ đỉnh, tức t�
 Tìm mọi đỉnh của đa diện
 
 $$
-\{x \in \mathbb{R}^2 : x_1 \ge 0,\ x_2 \ge 0,\ x_1 + 2x_2 \le 6,\ 2x_1 + x_2 \le 6\}
+\{x \in \mathbb{R}^2 : X_1 \ge 0,\ x_2 \ge 0,\ x_1 + 2x_2 \le 6,\ 2x_1 + x_2 \le 6\}
 $$
 
 và chỉ ra các ràng buộc chặt tại mỗi đỉnh.
@@ -181,5 +181,5 @@ Mỗi đơn hình viết được thành hệ đẳng thức và bất đẳng t
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.4 (tr. 31–34), Hình 2.11, Ví dụ 2.4 và 2.5, biểu diễn (2.5)–(2.9), Bài tập 2.8.
-- Định lý Minkowski–Weyl và điều kiện có đỉnh của đa diện: có thể xem D. Bertsimas, J. N. Tsitsiklis, *Introduction to Linear Optimization*, Athena Scientific, 1997, chương 2.
+- Định lý Minkowski–Weyl và điều kiện có đỉnh của đa diện: Có thể xem D. Bertsimas, J. N. Tsitsiklis, *Introduction to Linear Optimization*, Athena Scientific, 1997, chương 2.
 - Hai ví dụ tam giác, liên hệ với softmax và attention, các câu hỏi và bài tập 1, 2 do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

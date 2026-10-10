@@ -32,7 +32,7 @@ Mỗi bài học được thiết kế độc lập, kết nối giữa bản ch
 | 35 | [Giao thoa](/vat-ly-2/bai-giang/15-giao-thoa.md) | 1159–1184 | Chưa dịch |
 | 36 | [Nhiễu xạ](/vat-ly-2/bai-giang/16-nhieu-xa.md) | 1185–1216 | Chưa dịch |
 | 37 | [Thuyết tương đối](/vat-ly-2/bai-giang/17-thuyet-tuong-doi.md) | 1217–1252 | Chưa dịch |
-| 38 | [Photon: tính hạt của sóng ánh sáng](/vat-ly-2/bai-giang/18-photon.md) | 1253–1278 | Chưa dịch |
+| 38 | [Photon: Tính hạt của sóng ánh sáng](/vat-ly-2/bai-giang/18-photon.md) | 1253–1278 | Chưa dịch |
 | 39 | [Tính sóng của hạt](/vat-ly-2/bai-giang/19-song-vat-chat.md) | 1279–1320 | Chưa dịch |
 | 40 | [Cơ học lượng tử I: Hàm sóng](/vat-ly-2/bai-giang/20-ham-song-schrodinger.md) | 1321–1359 | Chưa dịch |
 | 41 | [Cơ học lượng tử II: Cấu trúc nguyên tử](/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu.md) | 1360–1407 | Chưa dịch |

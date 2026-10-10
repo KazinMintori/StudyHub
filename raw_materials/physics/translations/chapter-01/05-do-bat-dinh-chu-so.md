@@ -4,7 +4,7 @@
 
 Phép đo luôn có độ bất định. Nếu đo độ dày bìa một bản sách đóng bìa cứng bằng thước thông thường, kết quả chỉ đáng tin đến milimét gần nhất, chẳng hạn $3\,\mathrm{mm}$. Viết $3.00\,\mathrm{mm}$ là không đúng với khả năng của dụng cụ, vì thước ấy không cho biết độ dày thực là $3.00$, $2.85$ hay $3.11\,\mathrm{mm}$. Nếu dùng panme đo được đến $0.01\,\mathrm{mm}$, ta có thể thu được $2.91\,\mathrm{mm}$.
 
-Hai phép đo khác nhau ở **độ bất định**: phép đo bằng panme có độ bất định nhỏ hơn. Trong cách trình bày nhập môn của sách, độ bất định còn được gọi là sai số vì cho biết độ chênh lớn nhất có khả năng xảy ra giữa giá trị đo và giá trị thực. Độ bất định hay sai số của giá trị đo phụ thuộc phương pháp đo.
+Hai phép đo khác nhau ở **độ bất định**: Phép đo bằng panme có độ bất định nhỏ hơn. Trong cách trình bày nhập môn của sách, độ bất định còn được gọi là sai số vì cho biết độ chênh lớn nhất có khả năng xảy ra giữa giá trị đo và giá trị thực. Độ bất định hay sai số của giá trị đo phụ thuộc phương pháp đo.
 
 Ta thường thể hiện mức gần với giá trị thực bằng cách viết giá trị đo, dấu $\pm$ và một số chỉ độ bất định. Nếu đường kính thanh thép là $56.47\pm0.02\,\mathrm{mm}$, giá trị thực có khả năng nằm trong khoảng $56.45$ đến $56.49\,\mathrm{mm}$.
 
@@ -23,9 +23,9 @@ Sai số phần trăm tương ứng xấp xỉ $0.0004\times100\%=0.04\%$. Một
 
 ### Hình 1.7 — Sai số phần trăm nhỏ vẫn có thể gây hậu quả lớn
 
-![Hình 1.7 nguyên tác: một đầu tàu lao qua phần tường phía trước nhà ga](img/young-01/hinh-1-7.png)
+![Hình 1.7 nguyên tác: Một đầu tàu lao qua phần tường phía trước nhà ga](img/young-01/hinh-1-7.png)
 
-Sự cố trong hình là kết quả của một sai số phần trăm rất nhỏ: đi quá vài mét ở cuối một hành trình dài hàng trăm nghìn mét.
+Sự cố trong hình là kết quả của một sai số phần trăm rất nhỏ: Đi quá vài mét ở cuối một hành trình dài hàng trăm nghìn mét.
 
 ### Chữ số có nghĩa
 
@@ -62,7 +62,7 @@ Thoạt nhìn, kết quả dường như không phù hợp với giá trị đú
 
 ### Hình 1.8 — Xác định giá trị pi bằng chu vi và đường kính
 
-![Hình 1.8 nguyên tác: đo chu vi 424 milimét và đường kính 135 milimét của hình tròn](img/young-01/hinh-1-8.png)
+![Hình 1.8 nguyên tác: Đo chu vi 424 milimét và đường kính 135 milimét của hình tròn](img/young-01/hinh-1-8.png)
 
 Các số đo chỉ có ba chữ số có nghĩa. Vì vậy tỷ số tính từ chúng, tức giá trị $\pi$ thu được bằng phép đo này, cũng chỉ có ba chữ số có nghĩa.
 

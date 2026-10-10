@@ -7,9 +7,9 @@ title: "Quả cầu và ellipsoid"
 description: "Quả cầu Euclid với hai cách biểu diễn và chứng minh tính lồi. Ellipsoid từ ma trận xác định dương, bán trục theo vector riêng, dạng ảnh affine của quả cầu đơn vị, ellipsoid suy biến, thể tích và liên hệ với phân phối Gauss."
 ---
 
-Quả cầu là tập lồi mà ai cũng hình dung được: mọi điểm cách tâm không quá một khoảng $r$. Ellipsoid là quả cầu bị kéo dãn theo một số hướng và nén theo những hướng khác. Hai hình này xuất hiện trong tối ưu thường xuyên hơn bạn nghĩ. Ràng buộc "tham số không được lệch quá xa giá trị ban đầu" theo chuẩn Euclid là một quả cầu. Vùng tin cậy của một ước lượng thống kê, đường đồng mức của một hàm bậc hai lồi, và vùng mà phương pháp Newton tin rằng xấp xỉ bậc hai còn đúng thì đều là ellipsoid.
+Quả cầu là tập lồi mà ai cũng hình dung được: Mọi điểm cách tâm không quá một khoảng $r$. Ellipsoid là quả cầu bị kéo dãn theo một số hướng và nén theo những hướng khác. Hai hình này xuất hiện trong tối ưu thường xuyên hơn bạn nghĩ. Ràng buộc "tham số không được lệch quá xa giá trị ban đầu" theo chuẩn Euclid là một quả cầu. Vùng tin cậy của một ước lượng thống kê, đường đồng mức của một hàm bậc hai lồi, và vùng mà phương pháp Newton tin rằng xấp xỉ bậc hai còn đúng thì đều là ellipsoid.
 
-Ngoài định nghĩa, ellipsoid còn đáng học vì một lý do khác: đây là nơi đầu tiên ta thấy một **ma trận** mang một **hình dạng hình học** rõ ràng: các trị riêng của ma trận là bình phương độ dài các bán trục, còn các vector riêng chỉ hướng của chúng. Hiểu được mối liên hệ này, bạn sẽ "nhìn thấy" được ma trận hiệp phương sai, Hessian và ma trận xác định dương ở mọi chương sau. Bạn cần biết trị riêng và vector riêng của ma trận đối xứng, và khái niệm ma trận xác định dương.
+Ngoài định nghĩa, ellipsoid còn đáng học vì một lý do khác: Đây là nơi đầu tiên ta thấy một **ma trận** mang một **hình dạng hình học** rõ ràng: Các trị riêng của ma trận là bình phương độ dài các bán trục, còn các vector riêng chỉ hướng của chúng. Hiểu được mối liên hệ này, bạn sẽ "nhìn thấy" được ma trận hiệp phương sai, Hessian và ma trận xác định dương ở mọi chương sau. Bạn cần biết trị riêng và vector riêng của ma trận đối xứng, và khái niệm ma trận xác định dương.
 
 ## 1. Quả cầu Euclid
 
@@ -22,7 +22,7 @@ $$
 B(x_c, r) = \{x_c + r u : \|u\|_2 \le 1\}.
 $$
 
-Cách viết này nói rằng muốn tới một điểm của quả cầu, ta xuất phát từ tâm và đi theo một vector $ru$ có độ dài không quá $r$. Hai cách viết mô tả cùng một tập nhưng phục vụ hai việc khác nhau. Cách thứ nhất là một **ràng buộc**: cho một điểm $x$, nó cho biết cách kiểm tra $x$ có thuộc quả cầu không. Cách thứ hai là một **tham số hóa**: nó cho biết cách sinh ra mọi điểm của quả cầu từ quả cầu đơn vị. Bạn sẽ gặp lại sự đối ngẫu "kiểm tra hay sinh ra" này với đa diện ở một chủ đề sau.
+Cách viết này nói rằng muốn tới một điểm của quả cầu, ta xuất phát từ tâm và đi theo một vector $ru$ có độ dài không quá $r$. Hai cách viết mô tả cùng một tập nhưng phục vụ hai việc khác nhau. Cách thứ nhất là một **ràng buộc**: Cho một điểm $x$, nó cho biết cách kiểm tra $x$ có thuộc quả cầu không. Cách thứ hai là một **tham số hóa**: Nó cho biết cách sinh ra mọi điểm của quả cầu từ quả cầu đơn vị. Bạn sẽ gặp lại sự đối ngẫu "kiểm tra hay sinh ra" này với đa diện ở một chủ đề sau.
 
 Quả cầu Euclid là tập lồi. Lấy $x_1, x_2 \in B(x_c, r)$ và $0 \le \theta \le 1$. Viết $x_c = \theta x_c + (1 - \theta)x_c$ để tách đúng hai phần:
 
@@ -33,7 +33,7 @@ $$
 \end{aligned}
 $$
 
-Bước bất đẳng thức đầu dùng bất đẳng thức tam giác và tính thuần nhất của chuẩn (cần $\theta \ge 0$ và $1 - \theta \ge 0$), bước sau dùng giả thiết hai điểm nằm trong quả cầu. Mẹo "viết tâm thành tổ hợp lồi của chính nó" có vẻ vụn vặt, nhưng nó là bước quyết định: không có nó, ta không tách được hiệu thành tổng hai số hạng mà mỗi số hạng chỉ chứa một điểm.
+Bước bất đẳng thức đầu dùng bất đẳng thức tam giác và tính thuần nhất của chuẩn (cần $\theta \ge 0$ và $1 - \theta \ge 0$), bước sau dùng giả thiết hai điểm nằm trong quả cầu. Mẹo "viết tâm thành tổ hợp lồi của chính nó" có vẻ vụn vặt, nhưng nó là bước quyết định: Không có nó, ta không tách được hiệu thành tổng hai số hạng mà mỗi số hạng chỉ chứa một điểm.
 
 ## 2. Ellipsoid từ một ma trận xác định dương
 
@@ -49,9 +49,9 @@ $$
 y^T \Lambda^{-1} y = \frac{y_1^2}{\lambda_1} + \frac{y_2^2}{\lambda_2} + \cdots + \frac{y_n^2}{\lambda_n} \le 1 .
 $$
 
-Đây là phương trình của một ellipsoid có các trục song song với hệ trục mới, mà bạn đã gặp ở phổ thông dưới dạng $\tfrac{x^2}{a^2} + \tfrac{y^2}{b^2} \le 1$. Đọc ra ngay: **bán trục thứ $i$ nằm dọc vector riêng $q_i$ và dài $\sqrt{\lambda_i}$**. Trị riêng lớn cho trục dài, trị riêng nhỏ cho trục ngắn. Phép đổi biến $y = Q^T(x - x_c)$ chỉ dời tâm về gốc rồi xoay hệ trục, nên không làm méo hình.
+Đây là phương trình của một ellipsoid có các trục song song với hệ trục mới, mà bạn đã gặp ở phổ thông dưới dạng $\tfrac{x^2}{a^2} + \tfrac{y^2}{b^2} \le 1$. Đọc ra ngay: **Bán trục thứ $i$ nằm dọc vector riêng $q_i$ và dài $\sqrt{\lambda_i}$**. Trị riêng lớn cho trục dài, trị riêng nhỏ cho trục ngắn. Phép đổi biến $y = Q^T(x - x_c)$ chỉ dời tâm về gốc rồi xoay hệ trục, nên không làm méo hình.
 
-Hãy dừng lại ở kết luận này một chút, vì nó biến một ma trận thành một hình dạng. Các phần tử của $P$, chẳng hạn $P_{12}$, không có ý nghĩa hình học riêng lẻ nào rõ ràng: đổi hệ trục là chúng thay đổi hết. Còn các trị riêng và vector riêng thì gắn với chính hình ellipsoid, không phụ thuộc cách ta đặt trục tọa độ.
+Hãy dừng lại ở kết luận này một chút, vì nó biến một ma trận thành một hình dạng. Các phần tử của $P$, chẳng hạn $P_{12}$, không có ý nghĩa hình học riêng lẻ nào rõ ràng: Đổi hệ trục là chúng thay đổi hết. Còn các trị riêng và vector riêng thì gắn với chính hình ellipsoid, không phụ thuộc cách ta đặt trục tọa độ.
 
 ::: example Một ellipse nghiêng
 Lấy $x_c = (1, -1)$ và $P = \begin{bmatrix} 5 & 3 \\ 3 & 5 \end{bmatrix}$. Ma trận này có trị riêng $8$ với vector riêng $\tfrac{1}{\sqrt2}(1, 1)$ và trị riêng $2$ với vector riêng $\tfrac{1}{\sqrt2}(-1, 1)$. Vậy ellipse có bán trục dài $\sqrt 8 = 2\sqrt2 \approx 2.83$ nằm theo đường chéo $(1, 1)$, và bán trục ngắn $\sqrt 2 \approx 1.41$ nằm theo hướng vuông góc.
@@ -77,7 +77,7 @@ $$
 \mathcal{E} = \{x_c + A u : \|u\|_2 \le 1\},
 $$
 
-với $A$ là ma trận vuông khả nghịch. Nó nói rằng ellipsoid là ảnh của quả cầu đơn vị qua ánh xạ affine $u \mapsto x_c + Au$: lấy quả cầu tròn, biến dạng tuyến tính bằng $A$, rồi dời tâm tới $x_c$.
+với $A$ là ma trận vuông khả nghịch. Nó nói rằng ellipsoid là ảnh của quả cầu đơn vị qua ánh xạ affine $u \mapsto x_c + Au$: Lấy quả cầu tròn, biến dạng tuyến tính bằng $A$, rồi dời tâm tới $x_c$.
 
 Hai cách biểu diễn khớp nhau khi $P = AA^T$. Thật vậy, với $x = x_c + Au$,
 
@@ -89,7 +89,7 @@ $$
 \end{aligned}
 $$
 
-nên điều kiện $\|u\|_2 \le 1$ đúng là điều kiện $(x - x_c)^T P^{-1}(x - x_c) \le 1$. Một lỗi dễ mắc là đồng nhất $A$ với $P$. Quan hệ đúng là $P = AA^T$, tức là $A$ đóng vai trò "căn bậc hai" của $P$. Ta có thể chọn $A = P^{1/2}$, căn bậc hai đối xứng xác định dương của $P$, và hoàn toàn có thể giả sử $A$ đối xứng xác định dương mà không mất tính tổng quát. Lý do là nhiều ma trận $A$ khác nhau cho cùng một ellipsoid: thay $A$ bằng $AQ$ với $Q$ trực giao bất kỳ, quả cầu đơn vị $\{Qu\}$ vẫn là chính nó, và $(AQ)(AQ)^T = AA^T$ vẫn bằng $P$.
+nên điều kiện $\|u\|_2 \le 1$ đúng là điều kiện $(x - x_c)^T P^{-1}(x - x_c) \le 1$. Một lỗi dễ mắc là đồng nhất $A$ với $P$. Quan hệ đúng là $P = AA^T$, tức là $A$ đóng vai trò "căn bậc hai" của $P$. Ta có thể chọn $A = P^{1/2}$, căn bậc hai đối xứng xác định dương của $P$, và hoàn toàn có thể giả sử $A$ đối xứng xác định dương mà không mất tính tổng quát. Lý do là nhiều ma trận $A$ khác nhau cho cùng một ellipsoid: Thay $A$ bằng $AQ$ với $Q$ trực giao bất kỳ, quả cầu đơn vị $\{Qu\}$ vẫn là chính nó, và $(AQ)(AQ)^T = AA^T$ vẫn bằng $P$.
 
 Trong mô phỏng, điểm vàng là $Au$ với $u$ chạy trên đường tròn đơn vị nét đứt. Khi $u$ đi một vòng, $Au$ đi đúng một vòng quanh biên ellipse. Đó là cách nhìn "sinh ra", trong khi định nghĩa ở mục 2 là cách nhìn "kiểm tra".
 
@@ -115,7 +115,7 @@ Mật độ của phân phối Gauss nhiều chiều $\mathcal{N}(\mu, \Sigma)$,
 
 Đại lượng $\sqrt{(x - \mu)^T \Sigma^{-1}(x - \mu)}$ được gọi là **khoảng cách Mahalanobis** từ $x$ tới $\mu$. Nó đo khoảng cách bằng "đơn vị độ lệch chuẩn theo từng hướng". Chẳng hạn với $\mu = 0$ và $\Sigma = \operatorname{diag}(4, 1)$, điểm $(2, 1)$ có khoảng cách Mahalanobis bình phương $\tfrac{4}{4} + \tfrac{1}{1} = 2$. Theo hướng thứ nhất, độ lệch 2 chỉ bằng một độ lệch chuẩn, nên nó "không xa" như con số 2 gợi ý.
 
-Một điểm cần nói rõ: việc đường đồng mức là ellipsoid là một tính chất hình học của mật độ Gauss, chứ không phải lý do để coi mọi dữ liệu thật đều có dạng ellipsoid. Dữ liệu có nhiều cụm hay có đuôi dài thì vùng tập trung của nó trông khác hẳn.
+Một điểm cần nói rõ: Việc đường đồng mức là ellipsoid là một tính chất hình học của mật độ Gauss, chứ không phải lý do để coi mọi dữ liệu thật đều có dạng ellipsoid. Dữ liệu có nhiều cụm hay có đuôi dài thì vùng tập trung của nó trông khác hẳn.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -123,7 +123,7 @@ Một điểm cần nói rõ: việc đường đồng mức là ellipsoid là m
 
 <details><summary>Xem lời giải thích</summary>
 
-Điều kiện là $2x_1 x_2 \le 1$, tức $x_1 x_2 \le \tfrac12$. Tập này chứa cả hai trục tọa độ nên không bị chặn, vì vậy không phải ellipsoid. Nó cũng không lồi: hai điểm $(1, \tfrac12)$ và $(\tfrac12, 1)$ đều cho $x_1 x_2 = \tfrac12$, nhưng trung điểm $(\tfrac34, \tfrac34)$ cho $\tfrac{9}{16} > \tfrac12$, nằm ngoài tập. Ma trận $M$ có hai trị riêng $1$ và $-1$, tức là không xác định dương. Điều kiện $P \succ 0$ trong định nghĩa ellipsoid chính là để loại những trường hợp như thế.
+Điều kiện là $2x_1 x_2 \le 1$, tức $x_1 x_2 \le \tfrac12$. Tập này chứa cả hai trục tọa độ nên không bị chặn, vì vậy không phải ellipsoid. Nó cũng không lồi: Hai điểm $(1, \tfrac12)$ và $(\tfrac12, 1)$ đều cho $x_1 x_2 = \tfrac12$, nhưng trung điểm $(\tfrac34, \tfrac34)$ cho $\tfrac{9}{16} > \tfrac12$, nằm ngoài tập. Ma trận $M$ có hai trị riêng $1$ và $-1$, tức là không xác định dương. Điều kiện $P \succ 0$ trong định nghĩa ellipsoid chính là để loại những trường hợp như thế.
 
 </details>
 
@@ -131,7 +131,7 @@ Một điểm cần nói rõ: việc đường đồng mức là ellipsoid là m
 
 <details><summary>Xem lời giải thích</summary>
 
-Nhân $P$ với 4 nhân mọi trị riêng với 4, nên mọi bán trục nhân với $\sqrt 4 = 2$: ellipsoid phóng to gấp đôi mà giữ hình dạng, bán trục thành $6$ và $2$. Thay $P$ bằng $P^2$ thì trị riêng bình phương lên, từ $9$ và $1$ thành $81$ và $1$, nên bán trục thành $9$ và $1$. Hình bị kéo dãn mạnh hơn theo trục dài. Tỉ số giữa hai bán trục, $\sqrt{\lambda_{\max}/\lambda_{\min}}$, liên quan tới **số điều kiện** của ma trận, và ellipsoid càng dẹt thì phương pháp gradient càng chạy chậm, như Lecture 04 sẽ cho thấy.
+Nhân $P$ với 4 nhân mọi trị riêng với 4, nên mọi bán trục nhân với $\sqrt 4 = 2$: Ellipsoid phóng to gấp đôi mà giữ hình dạng, bán trục thành $6$ và $2$. Thay $P$ bằng $P^2$ thì trị riêng bình phương lên, từ $9$ và $1$ thành $81$ và $1$, nên bán trục thành $9$ và $1$. Hình bị kéo dãn mạnh hơn theo trục dài. Tỉ số giữa hai bán trục, $\sqrt{\lambda_{\max}/\lambda_{\min}}$, liên quan tới **số điều kiện** của ma trận, và ellipsoid càng dẹt thì phương pháp gradient càng chạy chậm, như Lecture 04 sẽ cho thấy.
 
 </details>
 
@@ -147,7 +147,7 @@ Giao luôn lồi, vì giao của hai tập lồi là lồi. Nhưng nó nói chun
 
 <details><summary>Xem lời giải thích</summary>
 
-Quả cầu đơn vị không thay đổi khi xoay hay lật bằng một ma trận trực giao $Q$, nên $A$ và $AQ$ sinh ra cùng một tập. Dạng thứ nhất thì mô tả tập bằng một hàm toàn phương $(x - x_c)^T P^{-1}(x - x_c)$, và một ellipsoid không suy biến xác định duy nhất tâm cùng hàm toàn phương đó, nên $P$ duy nhất. Quan hệ $P = AA^T$ "quên đi" phép xoay $Q$, đúng như $AQ(AQ)^T = AA^T$. Hiện tượng này xuất hiện cả trong thống kê: nhiều cách biến đổi nhiễu trắng thành cùng một phân phối Gauss, chẳng hạn bằng phân tích Cholesky hay bằng căn bậc hai đối xứng của ma trận hiệp phương sai.
+Quả cầu đơn vị không thay đổi khi xoay hay lật bằng một ma trận trực giao $Q$, nên $A$ và $AQ$ sinh ra cùng một tập. Dạng thứ nhất thì mô tả tập bằng một hàm toàn phương $(x - x_c)^T P^{-1}(x - x_c)$, và một ellipsoid không suy biến xác định duy nhất tâm cùng hàm toàn phương đó, nên $P$ duy nhất. Quan hệ $P = AA^T$ "quên đi" phép xoay $Q$, đúng như $AQ(AQ)^T = AA^T$. Hiện tượng này xuất hiện cả trong thống kê: Nhiều cách biến đổi nhiễu trắng thành cùng một phân phối Gauss, chẳng hạn bằng phân tích Cholesky hay bằng căn bậc hai đối xứng của ma trận hiệp phương sai.
 
 </details>
 
@@ -182,17 +182,17 @@ Với $\Sigma = \begin{bmatrix} 5 & 3 \\ 3 & 5 \end{bmatrix}$ và $\mu = 0$, tí
 :::
 
 ::: solution
-Trị riêng của $\Sigma$ là $8$ và $2$, nên diện tích là $\pi\sqrt{16} = 4\pi$. Với $\Sigma^{-1} = \tfrac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}$: điểm $(2, 2)$ cho $\tfrac{1}{16}(20 - 12 - 12 + 20) = 1$, khoảng cách 1. Điểm $(1, -1)$ cho $\tfrac{1}{16}(5 + 3 + 3 + 5) = 1$, khoảng cách cũng là 1. Hai điểm cách gốc theo Euclid lần lượt $2\sqrt2$ và $\sqrt2$, nhưng theo Mahalanobis thì như nhau, vì điểm thứ nhất nằm theo hướng có độ lệch chuẩn $\sqrt8$, còn điểm thứ hai theo hướng có độ lệch chuẩn $\sqrt2$.
+Trị riêng của $\Sigma$ là $8$ và $2$, nên diện tích là $\pi\sqrt{16} = 4\pi$. Với $\Sigma^{-1} = \tfrac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}$: Điểm $(2, 2)$ cho $\tfrac{1}{16}(20 - 12 - 12 + 20) = 1$, khoảng cách 1. Điểm $(1, -1)$ cho $\tfrac{1}{16}(5 + 3 + 3 + 5) = 1$, khoảng cách cũng là 1. Hai điểm cách gốc theo Euclid lần lượt $2\sqrt2$ và $\sqrt2$, nhưng theo Mahalanobis thì như nhau, vì điểm thứ nhất nằm theo hướng có độ lệch chuẩn $\sqrt8$, còn điểm thứ hai theo hướng có độ lệch chuẩn $\sqrt2$.
 :::
 
 ## Tóm tắt
 
-Quả cầu Euclid có hai cách viết: dạng ràng buộc $\|x - x_c\|_2 \le r$ để kiểm tra một điểm, và dạng tham số $x_c + ru$ với $\|u\|_2 \le 1$ để sinh ra các điểm. Nó lồi nhờ bất đẳng thức tam giác và tính thuần nhất của chuẩn. Ellipsoid $\{(x - x_c)^T P^{-1}(x - x_c) \le 1\}$ với $P \succ 0$ có các bán trục nằm theo vector riêng của $P$ và dài bằng căn bậc hai trị riêng tương ứng. Nó cũng là ảnh $x_c + Au$ của quả cầu đơn vị với $P = AA^T$, và khi $A$ suy biến ta được ellipsoid suy biến có chiều affine bằng hạng của $A$.
+Quả cầu Euclid có hai cách viết: Dạng ràng buộc $\|x - x_c\|_2 \le r$ để kiểm tra một điểm, và dạng tham số $x_c + ru$ với $\|u\|_2 \le 1$ để sinh ra các điểm. Nó lồi nhờ bất đẳng thức tam giác và tính thuần nhất của chuẩn. Ellipsoid $\{(x - x_c)^T P^{-1}(x - x_c) \le 1\}$ với $P \succ 0$ có các bán trục nằm theo vector riêng của $P$ và dài bằng căn bậc hai trị riêng tương ứng. Nó cũng là ảnh $x_c + Au$ của quả cầu đơn vị với $P = AA^T$, và khi $A$ suy biến ta được ellipsoid suy biến có chiều affine bằng hạng của $A$.
 
 Thể tích ellipsoid tỉ lệ với $\sqrt{\det P}$. Đường đồng mức của mật độ Gauss là các ellipsoid xác định bởi ma trận hiệp phương sai, và khoảng cách Mahalanobis đo khoảng cách theo hình dạng đó.
 
 ## Nguồn và đọc thêm
 
 - S. Boyd, L. Vandenberghe, *Convex Optimization*, §2.2.2 (tr. 29–30), Hình 2.9, các biểu diễn (2.3) và (2.4). Ví dụ 2.12 (tr. 39) về ellipsoid như ảnh và ảnh ngược affine của quả cầu đơn vị. Bài toán ellipsoid thể tích nhỏ nhất ở chương 8.
-- Phân tích phổ của ma trận đối xứng và căn bậc hai đối xứng: phụ lục A.5 của sách.
+- Phân tích phổ của ma trận đối xứng và căn bậc hai đối xứng: Phụ lục A.5 của sách.
 - Ví dụ ellipse nghiêng, phần liên hệ với phân phối Gauss và khoảng cách Mahalanobis, các câu hỏi và bài tập do người soạn bổ sung. Mọi con số đã được tính lại bằng chương trình.

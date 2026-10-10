@@ -15,7 +15,7 @@ Không gian mẫu Ω chứa mọi kết quả có thể của thí nghiệm ng�
 
 **Đồng khả năng là một giả định.** Chia số kết quả thuận lợi cho tổng số kết quả chỉ đúng khi mọi kết quả cơ bản có cùng xác suất. Với đồng xu lệch, hai kết quả ngửa/sấp không nhất thiết mỗi kết quả xác suất $\frac{1}{2}$.
 
-Khi tung nhiều lần, chọn kết quả cơ bản đủ chi tiết. Đếm “0,1,2 mặt ngửa” như ba kết quả đồng khả năng là sai: trường hợp một mặt ngửa có hai cách xảy ra.
+Khi tung nhiều lần, chọn kết quả cơ bản đủ chi tiết. Đếm “0,1,2 mặt ngửa” như ba kết quả đồng khả năng là sai: Trường hợp một mặt ngửa có hai cách xảy ra.
 
 ## Ví dụ
 

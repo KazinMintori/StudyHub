@@ -99,6 +99,15 @@ class LanguageReview(unittest.TestCase):
         protected = "```python\na=1; b=2\n```\n`a=1; b=2`\n$x;y$\n$$\nx\\;y\n$$\nTên &amp; mã.\n<span style=\"color:red;\">Nhãn</span>"
         self.assertNotIn("PROSE_SEMICOLON", self.codes(protected))
 
+    def test_colon_capitalization_rule(self):
+        self.assertIn("PROSE_COLON_CAPITALIZATION", self.codes("Ví dụ: xét mô hình này."))
+        self.assertIn("PROSE_COLON_CAPITALIZATION", self.codes("Lưu ý: đây là điểm cần nhớ."))
+        self.assertNotIn("PROSE_COLON_CAPITALIZATION", self.codes("Ví dụ: Xét mô hình này."))
+        self.assertNotIn("PROSE_COLON_CAPITALIZATION", self.codes("Lưu ý: Đây là điểm cần nhớ."))
+        self.assertNotIn("PROSE_COLON_CAPITALIZATION", self.codes("Xem tài liệu: [pandas.org](https://pandas.pydata.org)."))
+        self.assertNotIn("PROSE_COLON_CAPITALIZATION", self.codes("Tỉ lệ 1:2 và thời gian 12:30."))
+
+
     def test_ignores_fences_and_unattributed_quotes(self):
         text = '> điểm hiện hành\n```\ntạo bước đi\n```\n~~~text\ntiến hành\n~~~\nGradient tại điểm hiện hành.'
         report = self.reviewer.review([("lesson", text)])

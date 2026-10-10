@@ -13,13 +13,13 @@ Bài toán cực tiểu hoặc cực đại một hàm affine với các ràng b
 
 ## Giải thích kỹ thuật
 
-**Hình học.** Tập mức của $c^Tx$ là những siêu phẳng vuông góc với $c$, và nghiệm là điểm của đa diện xa nhất theo hướng $-c$. Có bốn khả năng: nghiệm duy nhất tại đỉnh, cả một mặt là tập nghiệm, không bị chặn dưới khi đa diện kéo dài theo một hướng $r$ có $c^Tr < 0$, hoặc bất khả thi.
+**Hình học.** Tập mức của $c^Tx$ là những siêu phẳng vuông góc với $c$, và nghiệm là điểm của đa diện xa nhất theo hướng $-c$. Có bốn khả năng: Nghiệm duy nhất tại đỉnh, cả một mặt là tập nghiệm, không bị chặn dưới khi đa diện kéo dài theo một hướng $r$ có $c^Tr < 0$, hoặc bất khả thi.
 
-**Chuyển về dạng chuẩn.** Thêm biến bù $s \succeq 0$ cho mỗi bất đẳng thức và viết mỗi biến tự do thành $x^+ - x^-$ với $x^+, x^- \succeq 0$. Nhiều bài toán không trông tuyến tính cũng là LP: tâm Chebyshev, cực tiểu hàm tuyến tính từng khúc, cận chặt cho kỳ vọng khi chỉ biết vài thông tin tuyến tính về phân phối, và quy hoạch phân tuyến tính sau một phép đổi biến. Nguồn: Convex Optimization, §4.3.
+**Chuyển về dạng chuẩn.** Thêm biến bù $s \succeq 0$ cho mỗi bất đẳng thức và viết mỗi biến tự do thành $x^+ - x^-$ với $x^+, x^- \succeq 0$. Nhiều bài toán không trông tuyến tính cũng là LP: Tâm Chebyshev, cực tiểu hàm tuyến tính từng khúc, cận chặt cho kỳ vọng khi chỉ biết vài thông tin tuyến tính về phân phối, và quy hoạch phân tuyến tính sau một phép đổi biến. Nguồn: Convex Optimization, §4.3.
 
 ## Ví dụ
 
-Tìm hình tròn lớn nhất nằm trong một đa giác, tức tâm Chebyshev, là một LP với ba biến: hai tọa độ của tâm và bán kính.
+Tìm hình tròn lớn nhất nằm trong một đa giác, tức tâm Chebyshev, là một LP với ba biến: Hai tọa độ của tâm và bán kính.
 
 ## Khi nào cần dùng?
 

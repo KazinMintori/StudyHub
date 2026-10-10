@@ -10,7 +10,7 @@ $$\vec A=A_x\hat{\mathbf i}+A_y\hat{\mathbf j}.\tag{1.12}$$
 
 Đây là phương trình vector. Mỗi số hạng, chẳng hạn $A_x\hat{\mathbf i}$, là một vector, như Hình 1.24b.
 
-![Hình 1.24 nguyên tác: vector đơn vị theo hai trục và cách biểu diễn vector bằng thành phần](img/young-01/hinh-1-24.png)
+![Hình 1.24 nguyên tác: Vector đơn vị theo hai trục và cách biểu diễn vector bằng thành phần](img/young-01/hinh-1-24.png)
 
 **Hình 1.24:** (a) $\hat{\mathbf i}$, $\hat{\mathbf j}$ hướng theo các trục dương $x$, $y$, mỗi vector có độ lớn $1$. (b) $\vec A$ là tổng $A_x\hat{\mathbf i}+A_y\hat{\mathbf j}$.
 
@@ -48,7 +48,7 @@ $$
 \end{aligned}\tag{1.15}
 $$
 
-![Hình 1.25 nguyên tác: ba vector đơn vị theo các trục dương trong không gian](img/young-01/hinh-1-25.png)
+![Hình 1.25 nguyên tác: Ba vector đơn vị theo các trục dương trong không gian](img/young-01/hinh-1-25.png)
 
 **Hình 1.25:** Các vector đơn vị $\hat{\mathbf i}$, $\hat{\mathbf j}$, $\hat{\mathbf k}$ lần lượt hướng theo $+x$, $+y$, $+z$, và đều có độ lớn $1$.
 

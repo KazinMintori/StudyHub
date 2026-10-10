@@ -9,7 +9,7 @@ description: "Bài toán lồi với bất đẳng thức suy rộng, bài toán
 
 Quy hoạch tuyến tính dùng thứ tự của từng thành phần: $Gx \preceq h$ nghĩa là mọi thành phần của $h - Gx$ không âm. [Lecture 01](../bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md) đã cho thấy thứ tự này chỉ là một trường hợp của bất đẳng thức suy rộng, sinh bởi nón không âm. Thay nón không âm bằng một nón chính quy khác, ta được những lớp bài toán mới có cùng cấu trúc với LP. Quan trọng nhất trong số đó là **quy hoạch nửa xác định** (semidefinite program, SDP), dùng nón các ma trận nửa xác định dương.
 
-Trang này định nghĩa bài toán dạng nón và SDP, rồi nhìn miền khả thi của SDP qua một câu hỏi rất cụ thể của thống kê: ba biến ngẫu nhiên có thể có những bộ hệ số tương quan nào?
+Trang này định nghĩa bài toán dạng nón và SDP, rồi nhìn miền khả thi của SDP qua một câu hỏi rất cụ thể của thống kê: Ba biến ngẫu nhiên có thể có những bộ hệ số tương quan nào?
 
 ## 1. Ràng buộc bất đẳng thức suy rộng
 
@@ -23,7 +23,7 @@ $$
 \end{aligned}
 $$
 
-với $K_i$ là các nón chính quy và mỗi $f_i$ lồi theo nón $K_i$. Bài toán lồi thông thường là trường hợp $K_i = \mathbb{R}_+$. Những tính chất quan trọng nhất vẫn giữ nguyên: miền khả thi, các tập mức dưới và tập nghiệm đều lồi, mọi cực tiểu cục bộ là toàn cục, và [điều kiện tối ưu bậc nhất](../bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md) vẫn đúng mà không cần sửa gì.
+với $K_i$ là các nón chính quy và mỗi $f_i$ lồi theo nón $K_i$. Bài toán lồi thông thường là trường hợp $K_i = \mathbb{R}_+$. Những tính chất quan trọng nhất vẫn giữ nguyên: Miền khả thi, các tập mức dưới và tập nghiệm đều lồi, mọi cực tiểu cục bộ là toàn cục, và [điều kiện tối ưu bậc nhất](../bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md) vẫn đúng mà không cần sửa gì.
 
 ## 2. Bài toán dạng nón
 
@@ -63,7 +63,7 @@ $$
 \operatorname{diag}\big(Gx - h,\ F^{(1)}(x),\ \ldots,\ F^{(K)}(x)\big) \preceq 0 .
 $$
 
-## 4. Ví dụ: ba hệ số tương quan
+## 4. Ví dụ: Ba hệ số tương quan
 
 Cho ba biến ngẫu nhiên, ma trận tương quan của chúng là
 
@@ -73,19 +73,19 @@ $$
 
 Mỗi hệ số tương quan nằm trong $[-1, 1]$, nhưng điều kiện ấy chưa đủ. Một ma trận như trên là ma trận tương quan của ba biến ngẫu nhiên nào đó khi và chỉ khi nó nửa xác định dương, vì $v^TRv$ là phương sai của tổ hợp tuyến tính $\sum_i v_iX_i/\sigma_i$. Điều kiện $R \succeq 0$ là một LMI theo ba biến $(\rho_{12}, \rho_{13}, \rho_{23})$.
 
-Hãy hỏi một câu cụ thể: nếu biến 1 tương quan 0.8 với biến 2, và biến 2 tương quan 0.8 với biến 3, thì biến 1 và biến 3 có thể tương quan bao nhiêu? Đó là hai SDP, cực tiểu và cực đại $\rho_{13}$ với ràng buộc $R \succeq 0$ khi $\rho_{12} = \rho_{23} = 0.8$. Với ma trận $3 \times 3$ có các phần tử đường chéo bằng 1, điều kiện nửa xác định dương ở đây quy về định thức không âm, tức
+Hãy hỏi một câu cụ thể: Nếu biến 1 tương quan 0.8 với biến 2, và biến 2 tương quan 0.8 với biến 3, thì biến 1 và biến 3 có thể tương quan bao nhiêu? Đó là hai SDP, cực tiểu và cực đại $\rho_{13}$ với ràng buộc $R \succeq 0$ khi $\rho_{12} = \rho_{23} = 0.8$. Với ma trận $3 \times 3$ có các phần tử đường chéo bằng 1, điều kiện nửa xác định dương ở đây quy về định thức không âm, tức
 
 $$
 -\rho_{13}^2 + 1.28\,\rho_{13} - 0.28 \ge 0,
 $$
 
-nên $\rho_{13} \in [0.28, 1]$. Tương quan không có tính bắc cầu tùy ý: biến 1 và biến 3 bắt buộc phải tương quan dương ít nhất 0.28. Tổng quát hơn, với $\rho_{12}$ và $\rho_{23}$ cho trước,
+nên $\rho_{13} \in [0.28, 1]$. Tương quan không có tính bắc cầu tùy ý: Biến 1 và biến 3 bắt buộc phải tương quan dương ít nhất 0.28. Tổng quát hơn, với $\rho_{12}$ và $\rho_{23}$ cho trước,
 
 $$
 \rho_{13} \in \left[\rho_{12}\rho_{23} - \sqrt{(1 - \rho_{12}^2)(1 - \rho_{23}^2)},\ \ \rho_{12}\rho_{23} + \sqrt{(1 - \rho_{12}^2)(1 - \rho_{23}^2)}\right].
 $$
 
-Giữ $\rho_{23} = c$ cố định, miền các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\,\rho_{12}\rho_{13} \le 1 - c^2$, nằm gọn trong hình vuông $[-1, 1]^2$. Diện tích của nó là $\pi\sqrt{1 - c^2}$: khoảng 78.5% hình vuông khi $c = 0$, nhưng chỉ còn khoảng 47% khi $c = 0.8$. Miền khả thi của một LMI là một tập lồi có thể có biên cong, và người ta gọi nó là một **spectrahedron**. Trong không gian ba chiều, tập các ma trận tương quan $3 \times 3$ có hình dạng giống một chiếc gối phồng, với bốn đỉnh nhọn ứng với những ma trận chỉ gồm các phần tử $\pm 1$.
+Giữ $\rho_{23} = c$ cố định, miền các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\,\rho_{12}\rho_{13} \le 1 - c^2$, nằm gọn trong hình vuông $[-1, 1]^2$. Diện tích của nó là $\pi\sqrt{1 - c^2}$: Khoảng 78.5% hình vuông khi $c = 0$, nhưng chỉ còn khoảng 47% khi $c = 0.8$. Miền khả thi của một LMI là một tập lồi có thể có biên cong, và người ta gọi nó là một **spectrahedron**. Trong không gian ba chiều, tập các ma trận tương quan $3 \times 3$ có hình dạng giống một chiếc gối phồng, với bốn đỉnh nhọn ứng với những ma trận chỉ gồm các phần tử $\pm 1$.
 
 <CorrelationLab />
 
@@ -93,13 +93,13 @@ Giữ $\rho_{23} = c$ cố định, miền các cặp $(\rho_{12}, \rho_{13})$ h
 
 ## 5. LP, SOCP và SDP lồng vào nhau
 
-Ta đã có LP $\subset$ QP $\subset$ QCQP $\subset$ SOCP. SDP còn tổng quát hơn nữa: một ràng buộc nón bậc hai $\|u\|_2 \le t$ tương đương với LMI
+Ta đã có LP $\subset$ QP $\subset$ QCQP $\subset$ SOCP. SDP còn tổng quát hơn nữa: Một ràng buộc nón bậc hai $\|u\|_2 \le t$ tương đương với LMI
 
 $$
 \begin{bmatrix} tI & u \\ u^T & t \end{bmatrix} \succeq 0,
 $$
 
-một hệ quả của phần bù Schur mà [chủ đề tiếp theo](./phan-bu-schur-va-bai-toan-tri-rieng.md) sẽ chứng minh. Vì vậy mọi SOCP đều là một SDP. Cái giá của sự tổng quát là chi phí tính toán: một LMI cỡ $k \times k$ nặng hơn nhiều so với $k$ bất đẳng thức tuyến tính, nên trong thực hành người ta luôn dùng lớp hẹp nhất đủ để mô tả bài toán.
+một hệ quả của phần bù Schur mà [chủ đề tiếp theo](./phan-bu-schur-va-bai-toan-tri-rieng.md) sẽ chứng minh. Vì vậy mọi SOCP đều là một SDP. Cái giá của sự tổng quát là chi phí tính toán: Một LMI cỡ $k \times k$ nặng hơn nhiều so với $k$ bất đẳng thức tuyến tính, nên trong thực hành người ta luôn dùng lớp hẹp nhất đủ để mô tả bài toán.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -107,7 +107,7 @@ một hệ quả của phần bù Schur mà [chủ đề tiếp theo](./phan-bu-
 
 <details><summary>Xem lời giải thích</summary>
 
-Không, theo cả hai chiều. Ma trận $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ có mọi phần tử dương nhưng định thức $-3 < 0$, nên có một trị riêng âm, không nửa xác định dương. Ngược lại, $\begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$ có phần tử âm nhưng nửa xác định dương, vì dạng toàn phương là $(v_1 - v_2)^2 \ge 0$. Đây là lý do LMI được viết bằng ký hiệu $\succeq$ riêng: nó là thứ tự theo nón PSD, khác hẳn thứ tự từng phần tử.
+Không, theo cả hai chiều. Ma trận $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ có mọi phần tử dương nhưng định thức $-3 < 0$, nên có một trị riêng âm, không nửa xác định dương. Ngược lại, $\begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$ có phần tử âm nhưng nửa xác định dương, vì dạng toàn phương là $(v_1 - v_2)^2 \ge 0$. Đây là lý do LMI được viết bằng ký hiệu $\succeq$ riêng: Nó là thứ tự theo nón PSD, khác hẳn thứ tự từng phần tử.
 
 </details>
 
@@ -115,7 +115,7 @@ Không, theo cả hai chiều. Ma trận $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bm
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Ma trận có trị riêng nhỏ nhất khoảng $-0.547$. Trực giác: biến 1 gần như cùng chiều với biến 2 và gần như ngược chiều với biến 3, nên biến 2 và biến 3 phải gần như ngược chiều nhau, tức $\rho_{23}$ phải gần $-1$. Thế mà $\rho_{23} = 0.5$ lại nói chúng cùng chiều vừa phải. Ba thông tin mâu thuẫn, và LMI $R \succeq 0$ chính là cách diễn đạt chính xác sự nhất quán mà trực giác ấy cảm nhận được.
+Không. Ma trận có trị riêng nhỏ nhất khoảng $-0.547$. Trực giác: Biến 1 gần như cùng chiều với biến 2 và gần như ngược chiều với biến 3, nên biến 2 và biến 3 phải gần như ngược chiều nhau, tức $\rho_{23}$ phải gần $-1$. Thế mà $\rho_{23} = 0.5$ lại nói chúng cùng chiều vừa phải. Ba thông tin mâu thuẫn, và LMI $R \succeq 0$ chính là cách diễn đạt chính xác sự nhất quán mà trực giác ấy cảm nhận được.
 
 </details>
 
@@ -123,7 +123,7 @@ Không. Ma trận có trị riêng nhỏ nhất khoảng $-0.547$. Trực giác:
 
 <details><summary>Xem lời giải thích</summary>
 
-Có hai cách nhìn. Cách thứ nhất: nón $\mathbb{S}^k_+$ lồi, và miền khả thi là ảnh ngược của nón ấy qua một ánh xạ affine $x \mapsto -(x_1F_1 + \cdots + x_nF_n + G)$, nên lồi. Cách thứ hai: LMI tương đương với họ vô hạn bất đẳng thức $v^T(x_1F_1 + \cdots + G)v \le 0$, mỗi bất đẳng thức tuyến tính theo $x$ với $v$ cố định. Giao của vô hạn nửa không gian là tập lồi. Biên cong vì các nửa không gian có pháp tuyến thay đổi liên tục theo $v$. Góc xuất hiện ở những điểm mà ma trận có trị riêng 0 bội cao, như các ma trận tương quan chỉ gồm $\pm1$.
+Có hai cách nhìn. Cách thứ nhất: Nón $\mathbb{S}^k_+$ lồi, và miền khả thi là ảnh ngược của nón ấy qua một ánh xạ affine $x \mapsto -(x_1F_1 + \cdots + x_nF_n + G)$, nên lồi. Cách thứ hai: LMI tương đương với họ vô hạn bất đẳng thức $v^T(x_1F_1 + \cdots + G)v \le 0$, mỗi bất đẳng thức tuyến tính theo $x$ với $v$ cố định. Giao của vô hạn nửa không gian là tập lồi. Biên cong vì các nửa không gian có pháp tuyến thay đổi liên tục theo $v$. Góc xuất hiện ở những điểm mà ma trận có trị riêng 0 bội cao, như các ma trận tương quan chỉ gồm $\pm1$.
 
 </details>
 
@@ -158,14 +158,14 @@ Với những $(x, y)$ nào thì $\begin{bmatrix} 1 & x \\ x & y \end{bmatrix} \
 :::
 
 ::: solution
-Ma trận $2 \times 2$ đối xứng nửa xác định dương khi và chỉ khi hai phần tử đường chéo không âm và định thức không âm. Phần tử đầu là 1, nên điều kiện còn $y \ge 0$ và $y - x^2 \ge 0$, gộp lại là $y \ge x^2$: miền phía trên parabol, một tập lồi. Điểm $(1, 2)$ thỏa vì $2 \ge 1$, với hai trị riêng khoảng $0.382$ và $2.618$. Điểm $(2, 3)$ không thỏa vì $3 < 4$, và ma trận có một trị riêng khoảng $-0.236$. LMI này chính là epigraph của hàm $x^2$ viết dưới dạng ma trận.
+Ma trận $2 \times 2$ đối xứng nửa xác định dương khi và chỉ khi hai phần tử đường chéo không âm và định thức không âm. Phần tử đầu là 1, nên điều kiện còn $y \ge 0$ và $y - x^2 \ge 0$, gộp lại là $y \ge x^2$: Miền phía trên parabol, một tập lồi. Điểm $(1, 2)$ thỏa vì $2 \ge 1$, với hai trị riêng khoảng $0.382$ và $2.618$. Điểm $(2, 3)$ không thỏa vì $3 < 4$, và ma trận có một trị riêng khoảng $-0.236$. LMI này chính là epigraph của hàm $x^2$ viết dưới dạng ma trận.
 :::
 
 ## Tóm tắt
 
 Thay thứ tự từng thành phần bằng thứ tự theo một nón chính quy, ta được bài toán với bất đẳng thức suy rộng, vẫn giữ mọi tính chất quan trọng của bài toán lồi. Bài toán dạng nón cực tiểu một hàm tuyến tính với một ràng buộc affine theo nón, và là LP khi nón là nón không âm. Quy hoạch nửa xác định dùng nón các ma trận nửa xác định dương, với ràng buộc là bất đẳng thức ma trận tuyến tính. LMI chéo cho LP, nhiều LMI gộp được thành một khối chéo, và mọi SOCP đều là SDP.
 
-Miền khả thi của một LMI là một tập lồi có thể có biên cong và góc. Ví dụ ma trận tương quan cho thấy nó mang ý nghĩa rất cụ thể: không phải bộ hệ số tương quan nào trong $[-1, 1]$ cũng hợp lệ, và khoảng giá trị của một hệ số khi biết các hệ số còn lại là nghiệm của hai SDP.
+Miền khả thi của một LMI là một tập lồi có thể có biên cong và góc. Ví dụ ma trận tương quan cho thấy nó mang ý nghĩa rất cụ thể: Không phải bộ hệ số tương quan nào trong $[-1, 1]$ cũng hợp lệ, và khoảng giá trị của một hệ số khi biết các hệ số còn lại là nghiệm của hai SDP.
 
 ## Nguồn và đọc thêm
 

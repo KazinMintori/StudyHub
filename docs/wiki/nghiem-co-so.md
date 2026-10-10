@@ -15,7 +15,7 @@ Với $Ax=b$ có m hàng độc lập, chọn m cột độc lập làm cơ sở
 
 **Liên hệ với đỉnh.** Trong dạng chuẩn $Ax=b$, $x\ge0$, giả sử $A$ có hạng hàng $m$. Một cơ sở chọn $m$ cột độc lập $A_B$. Nghiệm cơ sở đặt $x_N=0$ và giải $A_Bx_B=b$. Khả thi đòi $x_B\ge0$.
 
-Một biến cơ sở bằng 0 tạo suy biến: nhiều cơ sở có thể biểu diễn cùng một đỉnh. Không phải mọi lựa chọn $m$ cột đều độc lập, và nghiệm giải được vẫn có thể chứa thành phần âm. Nguồn: Bertsimas & Tsitsiklis, Introduction to Linear Optimization, chương 2.
+Một biến cơ sở bằng 0 tạo suy biến: Nhiều cơ sở có thể biểu diễn cùng một đỉnh. Không phải mọi lựa chọn $m$ cột đều độc lập, và nghiệm giải được vẫn có thể chứa thành phần âm. Nguồn: Bertsimas & Tsitsiklis, Introduction to Linear Optimization, chương 2.
 
 ## Ví dụ
 

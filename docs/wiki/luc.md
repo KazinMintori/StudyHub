@@ -7,7 +7,7 @@ next: false
 
 # Lực & định luật Newton
 
-Lực là vector mô tả tương tác. Trong cơ học Newton cho vật khối lượng không đổi, tổng lực $F = ma$. Khi có nhiều lực, cộng vector các lực. Lực không bằng vận tốc: tổng lực bằng 0 nghĩa là gia tốc bằng 0, vật có thể đứng yên hoặc chuyển động thẳng đều.
+Lực là vector mô tả tương tác. Trong cơ học Newton cho vật khối lượng không đổi, tổng lực $F = ma$. Khi có nhiều lực, cộng vector các lực. Lực không bằng vận tốc: Tổng lực bằng 0 nghĩa là gia tốc bằng 0, vật có thể đứng yên hoặc chuyển động thẳng đều.
 
 <WikiUsage />
 

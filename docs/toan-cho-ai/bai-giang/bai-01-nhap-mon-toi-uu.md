@@ -10,12 +10,12 @@ description: "Bản đồ toàn cảnh: 25 chủ đề về bài toán tối ưu
 
 Nhà toán học lỗi lạc R. Tyrrell Rockafellar từng đưa ra một đúc kết kinh điển làm thay đổi hoàn toàn diện mạo của lý thuyết tối ưu hiện đại: *"Ranh giới phân chia cốt lõi trong tối ưu không nằm ở sự phân biệt giữa bài toán tuyến tính và phi tuyến, mà nằm ở ranh giới giữa tính lồi và phi lồi."*
 
-Ở Bài 00, ta đã giải một bài toán bình phương tối thiểu đơn giản bằng cách tính đạo hàm rồi cho triệt tiêu về 0. Cách tiếp cận giải tích cổ điển đó vận hành trơn tru khi bài toán không có bất kỳ ràng buộc nào. Thế nhưng trong thế giới thực, các bài toán luôn bị bủa vây bởi các giới hạn: năng lượng pin có hạn, ngân sách đầu tư cố định, độ trễ mạng viễn thông, hay xác suất dự đoán phải nằm trong đoạn $[0, 1]$. Khi đưa các ràng buộc vào mô hình, hàng loạt câu hỏi hóc búa lập tức xuất hiện:
+Ở Bài 00, ta đã giải một bài toán bình phương tối thiểu đơn giản bằng cách tính đạo hàm rồi cho triệt tiêu về 0. Cách tiếp cận giải tích cổ điển đó vận hành trơn tru khi bài toán không có bất kỳ ràng buộc nào. Thế nhưng trong thế giới thực, các bài toán luôn bị bủa vây bởi các giới hạn: Năng lượng pin có hạn, ngân sách đầu tư cố định, độ trễ mạng viễn thông, hay xác suất dự đoán phải nằm trong đoạn $[0, 1]$. Khi đưa các ràng buộc vào mô hình, hàng loạt câu hỏi hóc búa lập tức xuất hiện:
 - Điểm dừng vừa tìm được có thực sự là nghiệm tốt nhất trên toàn bộ miền khảo sát hay chỉ là một cực tiểu cục bộ trong một thung lũng hẹp?
 - Nếu nghiệm tối ưu bị đẩy ra tận đường biên của miền khả thi thì làm sao kiểm chứng khi gradient không còn bằng 0?
 - Làm thế nào để thuật toán không bị mắc kẹt vô vọng ở những điểm yên ngựa hay cực tiểu địa phương nghèo nàn?
 
-Chương này mở rộng phân tích sang một lớp bài toán có cấu trúc toán học đặc biệt: **Bài toán tối ưu lồi (Convex Optimization)**. Với bài toán tối ưu lồi, ta có một bảo đảm toán học vững chắc: **mọi cực tiểu cục bộ đều là cực tiểu toàn cục**. Để làm chủ công cụ này, chúng ta sẽ khảo sát hai trụ cột gắn kết hữu cơ:
+Chương này mở rộng phân tích sang một lớp bài toán có cấu trúc toán học đặc biệt: **Bài toán tối ưu lồi (Convex Optimization)**. Với bài toán tối ưu lồi, ta có một bảo đảm toán học vững chắc: **Mọi cực tiểu cục bộ đều là cực tiểu toàn cục**. Để làm chủ công cụ này, chúng ta sẽ khảo sát hai trụ cột gắn kết hữu cơ:
 1. **Hình học của tập lồi (Convex Sets)**: Không gian dung chứa các quyết định và phương án khả thi.
 2. **Giải tích của hàm lồi (Convex Functions)**: Thước đo đánh giá mục tiêu mất mát hoặc chi phí cần tối thiểu hóa.
 
@@ -89,10 +89,10 @@ flowchart TD
     I --> J
 ```
 
-- **Phần I**: Thiết lập ngôn ngữ toán học chuẩn mực: biến quyết định, hàm mục tiêu, hệ thống ràng buộc đẳng thức và bất đẳng thức. Chỉ ra ba trạng thái suy biến khiến bài toán không có nghiệm: không khả thi (miền rỗng), không bị chặn dưới, hoặc giá trị tối ưu chỉ đạt được ở vô cực (không đạt cận).
-- **Phần II**: Xây dựng nền tảng hình học của tập lồi từ tổ hợp affine, tổ hợp lồi tới tổ hợp nón. Giới thiệu các khối hình cơ sở cấu thành miền ràng buộc thực tế: siêu phẳng, nửa không gian, ellipsoid, đa diện và nón nửa xác định dương. Thiết lập hai định lý hình học nền tảng: siêu phẳng phân tách và siêu phẳng tựa.
-- **Phần III**: Chuyển giao từ hình học sang giải tích. Hàm lồi được định nghĩa qua bất đẳng thức dây cung, tương đương với việc phần trên đồ thị (epigraph) tạo thành một tập lồi. Trang bị ba công cụ nhận diện tính lồi: định nghĩa gốc, điều kiện vi phân bậc nhất (mặt phẳng tiếp tuyến luôn là cận dưới toàn cục), và điều kiện bậc hai (ma trận Hessian nửa xác định dương khắp nơi).
-- **Phần IV**: Hội tụ hai thế giới hình học và giải tích. Chứng minh định lý trung tâm: cực tiểu cục bộ trên miền lồi luôn là cực tiểu toàn cục. Mở rộng điều kiện tối ưu sang trường hợp nghiệm nằm trên biên của miền ràng buộc qua bất đẳng thức biến phân $\nabla f_0(x^*)^T (y - x^*) \ge 0$. Cuối cùng, làm sáng tỏ câu hỏi cốt tử trong AI: tại sao bài toán hồi quy Logistic lồi theo trọng số, trong khi mạng nơ-ron sâu lại phi lồi.
+- **Phần I**: Thiết lập ngôn ngữ toán học chuẩn mực: Biến quyết định, hàm mục tiêu, hệ thống ràng buộc đẳng thức và bất đẳng thức. Chỉ ra ba trạng thái suy biến khiến bài toán không có nghiệm: Không khả thi (miền rỗng), không bị chặn dưới, hoặc giá trị tối ưu chỉ đạt được ở vô cực (không đạt cận).
+- **Phần II**: Xây dựng nền tảng hình học của tập lồi từ tổ hợp affine, tổ hợp lồi tới tổ hợp nón. Giới thiệu các khối hình cơ sở cấu thành miền ràng buộc thực tế: Siêu phẳng, nửa không gian, ellipsoid, đa diện và nón nửa xác định dương. Thiết lập hai định lý hình học nền tảng: Siêu phẳng phân tách và siêu phẳng tựa.
+- **Phần III**: Chuyển giao từ hình học sang giải tích. Hàm lồi được định nghĩa qua bất đẳng thức dây cung, tương đương với việc phần trên đồ thị (epigraph) tạo thành một tập lồi. Trang bị ba công cụ nhận diện tính lồi: Định nghĩa gốc, điều kiện vi phân bậc nhất (mặt phẳng tiếp tuyến luôn là cận dưới toàn cục), và điều kiện bậc hai (ma trận Hessian nửa xác định dương khắp nơi).
+- **Phần IV**: Hội tụ hai thế giới hình học và giải tích. Chứng minh định lý trung tâm: Cực tiểu cục bộ trên miền lồi luôn là cực tiểu toàn cục. Mở rộng điều kiện tối ưu sang trường hợp nghiệm nằm trên biên của miền ràng buộc qua bất đẳng thức biến phân $\nabla f_0(x^*)^T (y - x^*) \ge 0$. Cuối cùng, làm sáng tỏ câu hỏi cốt tử trong AI: Tại sao bài toán hồi quy Logistic lồi theo trọng số, trong khi mạng nơ-ron sâu lại phi lồi.
 
 ---
 
@@ -114,7 +114,7 @@ Xét bốn bài toán sau. Hãy xác định bài toán nào là bài toán lồ
 :::
 
 ::: exercise 2. Bài toán điều khiển tối ưu một bước với giới hạn chấp hành
-Xét bài toán điều khiển một bước cho xe tự hành: trạng thái hiện tại là $s = 2$. Sau khi áp dụng lực điều khiển $u$, trạng thái tiếp theo trở thành $s + u$. Ta muốn triệt tiêu độ lệch trạng thái về 0 nhưng đồng thời phải tiết kiệm năng lượng, và cơ cấu chấp hành có giới hạn vật lý:
+Xét bài toán điều khiển một bước cho xe tự hành: Trạng thái hiện tại là $s = 2$. Sau khi áp dụng lực điều khiển $u$, trạng thái tiếp theo trở thành $s + u$. Ta muốn triệt tiêu độ lệch trạng thái về 0 nhưng đồng thời phải tiết kiệm năng lượng, và cơ cấu chấp hành có giới hạn vật lý:
 $$
 \min_u \frac{1}{2} (2 + u)^2 + \frac{1}{2} u^2 \quad \text{sao cho} \quad |u| \le 0.5.
 $$
@@ -167,7 +167,7 @@ Xét hàm số $f(x) = \log(e^{x_1} + e^{x_2}) + \frac{1}{2}\|x\|_2^2$ xác đ�
 
 ## Tóm tắt cốt lõi
 
-1. **Bản chất của bài toán lồi**: Miền khả thi là tập lồi và hàm mục tiêu là hàm lồi. Tính chất này loại bỏ triệt để nguy cơ rơi vào cực tiểu cục bộ: mọi cực tiểu cục bộ đều là cực tiểu toàn cục.
+1. **Bản chất của bài toán lồi**: Miền khả thi là tập lồi và hàm mục tiêu là hàm lồi. Tính chất này loại bỏ triệt để nguy cơ rơi vào cực tiểu cục bộ: Mọi cực tiểu cục bộ đều là cực tiểu toàn cục.
 2. **Khối hình và Phép toán bảo toàn**: Các miền ràng buộc phức tạp trong thực tế được thiết lập từ các khối hình cơ sở (siêu phẳng, nửa không gian, quả cầu, đa diện, nón PSD) thông qua phép giao, ảnh affine và phép phối cảnh.
 3. **Điều kiện vi phân và Nhận diện**: Hàm lồi có tiếp diện luôn nằm dưới đồ thị ($\nabla f(x)^T(y-x) \le f(y) - f(x)$) và ma trận Hessian luôn nửa xác định dương ($\nabla^2 f(x) \succeq 0$).
 4. **Điều kiện tối ưu tổng quát**: Khi bài toán có ràng buộc, nghiệm tối ưu $x^*$ được chứng nhận bởi bất đẳng thức $\nabla f_0(x^*)^T (y - x^*) \ge 0$ với mọi điểm khả thi $y$, ngay cả khi nghiệm nằm ở đường biên và gradient không triệt tiêu.

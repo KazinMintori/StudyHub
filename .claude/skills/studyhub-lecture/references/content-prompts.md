@@ -41,16 +41,16 @@ Không thêm công thức hay phản ví dụ toán học cho mọi môn. “Bư
 
 **Nguồn → thiết kế → lời giảng → biên tập ngôn ngữ → kiểm tra nghĩa → dựng.** Có thể gộp các lượt cho đoạn ngắn. Với bài dài, lưu đầu ra giữa các lượt để không đánh mất điều kiện và thuật ngữ.
 
-1. Đọc nguồn: ghi phát biểu, điều kiện, vị trí và điểm thiếu. Nếu OCR mơ hồ làm thay đổi kết quả, để mở lỗi thay vì đoán.
-2. Thiết kế: xác định câu hỏi của người học, bước cần mở, ví dụ và cách kiểm tra. Đây là các quyết định ngắn, không phải bản ghi toàn bộ suy nghĩ nội bộ.
+1. Đọc nguồn: Ghi phát biểu, điều kiện, vị trí và điểm thiếu. Nếu OCR mơ hồ làm thay đổi kết quả, để mở lỗi thay vì đoán.
+2. Thiết kế: Xác định câu hỏi của người học, bước cần mở, ví dụ và cách kiểm tra. Đây là các quyết định ngắn, không phải bản ghi toàn bộ suy nghĩ nội bộ.
 3. Soạn đúng giọng đầu ra, đủ lý do; chưa ép chữ theo layout.
 4. Biên tập riêng theo professor-voice.md. Đừng dùng biên tập để thêm định lý chưa kiểm chứng.
 5. So lại nguồn và các phần phải giữ; kiểm tra tính toán/mã, phản ví dụ và đáp án.
-6. Khi có slide: chiếu cùng nội dung sang chữ trên màn hình, lời giảng và note tự học; render đúng đặc tả đã sửa.
+6. Khi có slide: Chiếu cùng nội dung sang chữ trên màn hình, lời giảng và note tự học; render đúng đặc tả đã sửa.
 
-Khi thất bại, trả lỗi về đúng lượt: ví dụ sai về nội dung thì sửa và tính lại; lời khó nghe thì sửa giọng; quá tải thì phân đoạn. Không để một lượt “polish” viết lại mọi thứ và làm mất nghĩa.
+Khi thất bại, trả lỗi về đúng lượt: Ví dụ sai về nội dung thì sửa và tính lại; lời khó nghe thì sửa giọng; quá tải thì phân đoạn. Không để một lượt “polish” viết lại mọi thứ và làm mất nghĩa.
 
-Với nguồn EN, thực hiện hiểu nghĩa → chọn thuật ngữ theo lĩnh vực → câu kỹ thuật → lời giảng → kiểm tra nghĩa. Giữ tách hai lượt cuối: câu trôi chảy không chứng minh đã giữ lượng từ, miền hay số 0.
+Với nguồn EN, thực hiện hiểu nghĩa → chọn thuật ngữ theo lĩnh vực → câu kỹ thuật → lời giảng → kiểm tra nghĩa. Giữ tách hai lượt cuối: Câu trôi chảy không chứng minh đã giữ lượng từ, miền hay số 0.
 
 ## Công cụ khởi tạo tùy chọn
 

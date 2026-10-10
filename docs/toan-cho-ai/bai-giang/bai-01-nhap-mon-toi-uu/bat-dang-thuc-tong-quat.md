@@ -7,9 +7,9 @@ title: "Nón chính quy và bất đẳng thức tổng quát"
 description: "Bốn điều kiện của nón chính quy và vai trò của từng điều kiện, bất đẳng thức tổng quát x ⪯_K y, các ví dụ theo từng thành phần, thứ tự ma trận và đa thức không âm, các tính chất còn giữ và tính chất bị mất, phần tử nhỏ nhất và phần tử tối thiểu."
 ---
 
-Trên trục số, hai số bất kỳ luôn so sánh được: hoặc $a \le b$, hoặc $b \le a$. Thói quen này mạnh đến mức ta ít khi nghĩ về nó. Nhưng hãy thử so sánh hai mô hình học máy, một mô hình có độ chính xác 92% và thời gian dự đoán 30 ms, một mô hình có độ chính xác 89% và thời gian 8 ms. Mô hình nào "tốt hơn"? Không có câu trả lời nếu không nói thêm ta coi trọng tiêu chí nào. Khi đại lượng cần so sánh là một vector, khái niệm "nhỏ hơn" không còn hiển nhiên.
+Trên trục số, hai số bất kỳ luôn so sánh được: Hoặc $a \le b$, hoặc $b \le a$. Thói quen này mạnh đến mức ta ít khi nghĩ về nó. Nhưng hãy thử so sánh hai mô hình học máy, một mô hình có độ chính xác 92% và thời gian dự đoán 30 ms, một mô hình có độ chính xác 89% và thời gian 8 ms. Mô hình nào "tốt hơn"? Không có câu trả lời nếu không nói thêm ta coi trọng tiêu chí nào. Khi đại lượng cần so sánh là một vector, khái niệm "nhỏ hơn" không còn hiển nhiên.
 
-Ta sẽ xây dựng một khái niệm "nhỏ hơn" cho vector và ma trận, dựa hoàn toàn vào hình học của nón. Ý tưởng rất gọn: chọn một nón $K$ làm "tập các vector không âm", rồi định nghĩa $x \preceq y$ khi $y - x$ không âm theo nghĩa đó. Ta sẽ thấy những điều kiện nào trên nón làm cho phép so sánh hành xử giống phép so sánh trên trục số, và những thói quen nào của trục số phải bỏ. Cuối trang là hai khái niệm sẽ dùng mãi trong tối ưu đa mục tiêu: phần tử **nhỏ nhất** và phần tử **tối thiểu**.
+Ta sẽ xây dựng một khái niệm "nhỏ hơn" cho vector và ma trận, dựa hoàn toàn vào hình học của nón. Ý tưởng rất gọn: Chọn một nón $K$ làm "tập các vector không âm", rồi định nghĩa $x \preceq y$ khi $y - x$ không âm theo nghĩa đó. Ta sẽ thấy những điều kiện nào trên nón làm cho phép so sánh hành xử giống phép so sánh trên trục số, và những thói quen nào của trục số phải bỏ. Cuối trang là hai khái niệm sẽ dùng mãi trong tối ưu đa mục tiêu: Phần tử **nhỏ nhất** và phần tử **tối thiểu**.
 
 ## 1. Nón chính quy
 
@@ -17,7 +17,7 @@ Ta sẽ xây dựng một khái niệm "nhỏ hơn" cho vector và ma trận, d�
 > 1. $K$ lồi.
 > 2. $K$ đóng.
 > 3. $K$ **đặc** (solid), tức là có phần trong khác rỗng.
-> 4. $K$ **nhọn** (pointed), tức là không chứa đường thẳng nào. Tương đương: nếu $x \in K$ và $-x \in K$ thì $x = 0$.
+> 4. $K$ **nhọn** (pointed), tức là không chứa đường thẳng nào. Tương đương: Nếu $x \in K$ và $-x \in K$ thì $x = 0$.
 
 Mỗi điều kiện có một nhiệm vụ riêng trong phép so sánh mà ta sắp định nghĩa. Lồi bảo đảm cộng hai bất đẳng thức được. Đóng bảo đảm bất đẳng thức được giữ khi qua giới hạn. Đặc bảo đảm có những cặp được so sánh "chặt". Nhọn bảo đảm $x \preceq y$ và $y \preceq x$ kéo theo $x = y$. Bảng dưới đây cho thấy điều gì xảy ra khi thiếu một điều kiện:
 
@@ -29,7 +29,7 @@ Mỗi điều kiện có một nhiệm vụ riêng trong phép so sánh mà ta s
 | $\{0\} \cup \{(u, v) : u > 0,\ v > 0\}$ | Có | Không | Có | Có |
 | Hợp hai trục tọa độ | Không | Có | Không | Không |
 
-Ví dụ thứ hai thiếu phần trong: một tia trong mặt phẳng không chứa hình tròn nào, dù nó có nội tương đối. Ví dụ thứ ba thiếu tính nhọn vì chứa trọn trục hoành. Ví dụ thứ tư không đóng vì thiếu hai nửa trục dương, là giới hạn của các điểm trong tập.
+Ví dụ thứ hai thiếu phần trong: Một tia trong mặt phẳng không chứa hình tròn nào, dù nó có nội tương đối. Ví dụ thứ ba thiếu tính nhọn vì chứa trọn trục hoành. Ví dụ thứ tư không đóng vì thiếu hai nửa trục dương, là giới hạn của các điểm trong tập.
 
 ## 2. Bất đẳng thức tổng quát
 
@@ -48,7 +48,7 @@ Ba ví dụ chính trong sách:
 - **Đa thức không âm** (Ví dụ 2.16). Xét tập các vector hệ số của những đa thức không âm trên $[0, 1]$,
 
   $$
-  K = \{c \in \mathbb{R}^n : c_1 + c_2 t + \cdots + c_n t^{n-1} \ge 0 \text{ với mọi } t \in [0, 1]\}.
+  K = \{c \in \mathbb{R}^n : C_1 + c_2 t + \cdots + c_n t^{n-1} \ge 0 \text{ với mọi } t \in [0, 1]\}.
   $$
 
   Đây là một nón chính quy, và $c \preceq_K d$ nghĩa là đa thức của $c$ không vượt đa thức của $d$ tại mọi điểm của $[0, 1]$. Nón $K$ chứa cả những vector có thành phần âm: $c = (1, -1)$ cho đa thức $1 - t \ge 0$ trên $[0, 1]$.
@@ -59,18 +59,18 @@ Ví dụ thứ hai đáng dừng lại. Thứ tự ma trận không phải thứ
 
 Sách liệt kê các tính chất mà bất đẳng thức tổng quát thừa hưởng từ bốn điều kiện của nón chính quy. Với $\preceq_K$:
 
-- Cộng được: nếu $x \preceq_K y$ và $u \preceq_K v$ thì $x + u \preceq_K y + v$.
-- Bắc cầu: nếu $x \preceq_K y$ và $y \preceq_K z$ thì $x \preceq_K z$.
-- Nhân với số không âm: nếu $x \preceq_K y$ và $\alpha \ge 0$ thì $\alpha x \preceq_K \alpha y$.
+- Cộng được: Nếu $x \preceq_K y$ và $u \preceq_K v$ thì $x + u \preceq_K y + v$.
+- Bắc cầu: Nếu $x \preceq_K y$ và $y \preceq_K z$ thì $x \preceq_K z$.
+- Nhân với số không âm: Nếu $x \preceq_K y$ và $\alpha \ge 0$ thì $\alpha x \preceq_K \alpha y$.
 - Phản xạ: $x \preceq_K x$.
-- Phản đối xứng: nếu $x \preceq_K y$ và $y \preceq_K x$ thì $x = y$.
-- Giữ qua giới hạn: nếu $x_i \preceq_K y_i$ với mọi $i$, $x_i \to x$ và $y_i \to y$, thì $x \preceq_K y$.
+- Phản đối xứng: Nếu $x \preceq_K y$ và $y \preceq_K x$ thì $x = y$.
+- Giữ qua giới hạn: Nếu $x_i \preceq_K y_i$ với mọi $i$, $x_i \to x$ và $y_i \to y$, thì $x \preceq_K y$.
 
-Mỗi tính chất là một dòng chứng minh từ một điều kiện của nón. Tính cộng được và tính bắc cầu đến từ việc $K$ khép kín với phép cộng: $(y - x) + (v - u) \in K$ và $(z - y) + (y - x) \in K$. Tính phản xạ đến từ $0 \in K$. Tính phản đối xứng dùng tính nhọn: $y - x \in K$ và $x - y \in K$ buộc $y - x = 0$. Tính giữ qua giới hạn dùng tính đóng. Bất đẳng thức chặt cũng có các tính chất tương tự, chẳng hạn $x \prec_K y$ và $u \preceq_K v$ kéo theo $x + u \prec_K y + v$, và quan trọng hơn: nếu $x \prec_K y$ thì với $u, v$ đủ nhỏ, vẫn có $x + u \prec_K y + v$. Tính chất cuối nói rằng bất đẳng thức chặt "bền" với nhiễu nhỏ, nhờ phần trong của $K$ là tập mở.
+Mỗi tính chất là một dòng chứng minh từ một điều kiện của nón. Tính cộng được và tính bắc cầu đến từ việc $K$ khép kín với phép cộng: $(y - x) + (v - u) \in K$ và $(z - y) + (y - x) \in K$. Tính phản xạ đến từ $0 \in K$. Tính phản đối xứng dùng tính nhọn: $y - x \in K$ và $x - y \in K$ buộc $y - x = 0$. Tính giữ qua giới hạn dùng tính đóng. Bất đẳng thức chặt cũng có các tính chất tương tự, chẳng hạn $x \prec_K y$ và $u \preceq_K v$ kéo theo $x + u \prec_K y + v$, và quan trọng hơn: Nếu $x \prec_K y$ thì với $u, v$ đủ nhỏ, vẫn có $x + u \prec_K y + v$. Tính chất cuối nói rằng bất đẳng thức chặt "bền" với nhiễu nhỏ, nhờ phần trong của $K$ là tập mở.
 
-## 4. Thói quen phải bỏ: không phải mọi cặp đều so sánh được
+## 4. Thói quen phải bỏ: Không phải mọi cặp đều so sánh được
 
-Trên trục số, hai số luôn so sánh được, và người ta gọi đó là một **thứ tự tuyến tính** (hay toàn phần). Bất đẳng thức tổng quát nói chung chỉ là **thứ tự bộ phận**: có những cặp không so sánh được. Với $K = \mathbb{R}^2_+$, hai vector $x = (1, 4)$ và $y = (2, 3)$ cho $y - x = (1, -1) \notin \mathbb{R}^2_+$ và $x - y = (-1, 1) \notin \mathbb{R}^2_+$, nên không có $x \preceq y$ và cũng không có $y \preceq x$.
+Trên trục số, hai số luôn so sánh được, và người ta gọi đó là một **thứ tự tuyến tính** (hay toàn phần). Bất đẳng thức tổng quát nói chung chỉ là **thứ tự bộ phận**: Có những cặp không so sánh được. Với $K = \mathbb{R}^2_+$, hai vector $x = (1, 4)$ và $y = (2, 3)$ cho $y - x = (1, -1) \notin \mathbb{R}^2_+$ và $x - y = (-1, 1) \notin \mathbb{R}^2_+$, nên không có $x \preceq y$ và cũng không có $y \preceq x$.
 
 Đây không phải khiếm khuyết của định nghĩa, mà là phản ánh trung thực của thực tế. Hai mô hình ở đầu trang, với vector "(lỗi, thời gian)" là $(8\%, 30)$ và $(11\%, 8)$, không so sánh được theo từng thành phần. Một phép so sánh buộc mọi cặp phải so sánh được sẽ phải ngầm áp đặt một cách quy đổi giữa lỗi và thời gian.
 
@@ -97,7 +97,7 @@ Tập $x + K$ gồm mọi điểm lớn hơn hoặc bằng $x$, nên điều ki�
 
 <OrderLab type="order" />
 
-Với dữ liệu mặc định trong mô phỏng, mỗi điểm là một cấu hình của một hệ thống, với hai tiêu chí đều muốn nhỏ. Các điểm $A, B, C, F$ là tối thiểu: không cấu hình nào khác tốt hơn hoặc bằng chúng ở cả hai tiêu chí. Các điểm $D, E, G$ bị trội. Không có phần tử nhỏ nhất, vì không cấu hình nào tốt nhất ở cả hai tiêu chí cùng lúc. Trong tối ưu đa mục tiêu, phần tử tối thiểu được gọi là **tối ưu Pareto**, và tập các phần tử tối thiểu là **biên Pareto**. Chủ đề tiếp theo, về nón đối ngẫu, sẽ cho một cách tìm chúng bằng tối ưu một tổng có trọng số.
+Với dữ liệu mặc định trong mô phỏng, mỗi điểm là một cấu hình của một hệ thống, với hai tiêu chí đều muốn nhỏ. Các điểm $A, B, C, F$ là tối thiểu: Không cấu hình nào khác tốt hơn hoặc bằng chúng ở cả hai tiêu chí. Các điểm $D, E, G$ bị trội. Không có phần tử nhỏ nhất, vì không cấu hình nào tốt nhất ở cả hai tiêu chí cùng lúc. Trong tối ưu đa mục tiêu, phần tử tối thiểu được gọi là **tối ưu Pareto**, và tập các phần tử tối thiểu là **biên Pareto**. Chủ đề tiếp theo, về nón đối ngẫu, sẽ cho một cách tìm chúng bằng tối ưu một tổng có trọng số.
 
 Hãy thử xoay hai vector sinh của nón trong mô phỏng. Khi nón hẹp lại, ít cặp điểm so sánh được hơn, và số phần tử tối thiểu tăng lên. Khi nón rộng ra, nhiều cặp so sánh được hơn, phần tử tối thiểu ít đi, và có khi xuất hiện một phần tử nhỏ nhất. Nón càng rộng, thứ tự càng "quyết đoán".
 
@@ -117,7 +117,7 @@ $S_1$ có phần tử nhỏ nhất là $(1, 2)$, vì mọi điểm của $S_1$ c
 
 <details><summary>Xem lời giải thích</summary>
 
-Phần tử tối thiểu không liên quan tới "lân cận" hay khoảng cách. Nó so sánh với **mọi** phần tử của tập, chỉ là theo một thứ tự bộ phận, nên nhiều phần tử có thể cùng không bị ai thắng. Cực tiểu cục bộ thì so sánh giá trị của một hàm với các điểm ở gần. Vì vậy "minimal element" không được dịch thành "cực tiểu địa phương": hai khái niệm thuộc hai thế giới khác nhau.
+Phần tử tối thiểu không liên quan tới "lân cận" hay khoảng cách. Nó so sánh với **mọi** phần tử của tập, chỉ là theo một thứ tự bộ phận, nên nhiều phần tử có thể cùng không bị ai thắng. Cực tiểu cục bộ thì so sánh giá trị của một hàm với các điểm ở gần. Vì vậy "minimal element" không được dịch thành "cực tiểu địa phương": Hai khái niệm thuộc hai thế giới khác nhau.
 
 </details>
 
@@ -133,7 +133,7 @@ Lấy $x = (0, 0)$ và $y = (1, 0)$. Ta có $y - x = (1, 0) \in K$ và $x - y = 
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập thứ nhất có phần tử nhỏ nhất là $I$, vì theo định nghĩa mọi phần tử $X$ của nó thỏa $I \preceq X$. Tập thứ hai không có phần tử nhỏ nhất. Nó chứa $\begin{bmatrix} 1 & a \\ a & 1 \end{bmatrix}$ với mọi $a$, và một phần tử nhỏ nhất $M$ phải thỏa $M \preceq \begin{bmatrix} 1 & a \\ a & 1 \end{bmatrix}$ với mọi $a$. Lấy $z = (1, -1)$: điều kiện đó đòi $z^T M z \le 2 - 2a$ với mọi $a$, không thể đúng khi $a$ lớn. Ràng buộc chỉ trên đường chéo không đủ để có một phần tử "nhỏ hơn mọi thứ" theo thứ tự ma trận.
+Tập thứ nhất có phần tử nhỏ nhất là $I$, vì theo định nghĩa mọi phần tử $X$ của nó thỏa $I \preceq X$. Tập thứ hai không có phần tử nhỏ nhất. Nó chứa $\begin{bmatrix} 1 & a \\ a & 1 \end{bmatrix}$ với mọi $a$, và một phần tử nhỏ nhất $M$ phải thỏa $M \preceq \begin{bmatrix} 1 & a \\ a & 1 \end{bmatrix}$ với mọi $a$. Lấy $z = (1, -1)$: Điều kiện đó đòi $z^T M z \le 2 - 2a$ với mọi $a$, không thể đúng khi $a$ lớn. Ràng buộc chỉ trên đường chéo không đủ để có một phần tử "nhỏ hơn mọi thứ" theo thứ tự ma trận.
 
 </details>
 
@@ -156,14 +156,14 @@ $$
 :::
 
 ::: solution
-$(4, 4)$ bị $(4, 2)$ trội vì $(4, 2) \preceq (4, 4)$ và hai điểm khác nhau. $(6, 6)$ bị trội bởi nhiều điểm, chẳng hạn $(3, 5)$. Bốn điểm còn lại $(3, 5)$, $(4, 2)$, $(2, 6)$, $(5, 1)$ không bị điểm nào trội, nên là phần tử tối thiểu. Không có phần tử nhỏ nhất, vì $(2, 6)$ và $(5, 1)$ không so sánh được mà cả hai đều thuộc $S$: một phần tử nhỏ nhất phải nhỏ hơn hoặc bằng cả hai, tức là có hoành độ không quá 2 và tung độ không quá 1, mà không điểm nào của $S$ như vậy.
+$(4, 4)$ bị $(4, 2)$ trội vì $(4, 2) \preceq (4, 4)$ và hai điểm khác nhau. $(6, 6)$ bị trội bởi nhiều điểm, chẳng hạn $(3, 5)$. Bốn điểm còn lại $(3, 5)$, $(4, 2)$, $(2, 6)$, $(5, 1)$ không bị điểm nào trội, nên là phần tử tối thiểu. Không có phần tử nhỏ nhất, vì $(2, 6)$ và $(5, 1)$ không so sánh được mà cả hai đều thuộc $S$: Một phần tử nhỏ nhất phải nhỏ hơn hoặc bằng cả hai, tức là có hoành độ không quá 2 và tung độ không quá 1, mà không điểm nào của $S$ như vậy.
 :::
 
 ## Tóm tắt
 
 Một nón chính quy là nón lồi, đóng, có phần trong khác rỗng và không chứa đường thẳng. Nó sinh ra bất đẳng thức tổng quát $x \preceq_K y \iff y - x \in K$, với bản chặt dùng phần trong của $K$. Thứ tự theo từng thành phần, thứ tự ma trận và thứ tự giữa các đa thức trên một đoạn đều là những trường hợp riêng. Bất đẳng thức tổng quát giữ được tính cộng, bắc cầu, nhân với số không âm, phản xạ, phản đối xứng và tính đóng qua giới hạn, mỗi tính chất đến từ một điều kiện của nón.
 
-Điều bị mất là tính so sánh được của mọi cặp. Vì vậy khái niệm "nhỏ nhất" tách đôi: phần tử nhỏ nhất thắng mọi phần tử khác và là duy nhất nếu có, còn phần tử tối thiểu chỉ cần không bị phần tử nào thắng và có thể có nhiều. Với thứ tự theo từng thành phần, phần tử tối thiểu chính là lựa chọn tối ưu Pareto.
+Điều bị mất là tính so sánh được của mọi cặp. Vì vậy khái niệm "nhỏ nhất" tách đôi: Phần tử nhỏ nhất thắng mọi phần tử khác và là duy nhất nếu có, còn phần tử tối thiểu chỉ cần không bị phần tử nào thắng và có thể có nhiều. Với thứ tự theo từng thành phần, phần tử tối thiểu chính là lựa chọn tối ưu Pareto.
 
 ## Nguồn và đọc thêm
 

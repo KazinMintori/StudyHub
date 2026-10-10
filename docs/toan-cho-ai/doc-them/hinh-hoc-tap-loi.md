@@ -22,7 +22,7 @@ Hệ thống kiến thức hình học tập lồi chuyên sâu được tổ ch
 | **Nón ma trận PSD** | [11. Nón các ma trận nửa xác định dương](../bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md) | Nền tảng của bài toán Quy hoạch nửa xác định (SDP), phân tích thành phần chính (PCA) và tối ưu hóa ma trận hiệp phương sai. |
 | **Phép biến đổi bảo toàn tính lồi** | [13. Phép phối cảnh và hàm phân tuyến tính](../bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md) | Kỹ thuật biến đổi không gian tọa độ quang học (perspective), tỉ số tuyến tính trong thị giác máy tính và tối ưu hóa phân thức. |
 | **Siêu phẳng phân tách & Siêu phẳng tựa** | [15. Siêu phẳng phân tách và siêu phẳng tựa](../bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md) | Định lý tách Hahn-Banach; cơ sở toán học trực tiếp của máy học vector hỗ trợ (Support Vector Machines - SVM) và đối ngẫu Lagrange. |
-| **Nón đối ngẫu & Tối ưu đa mục tiêu** | [16. Nón đối ngẫu và lựa chọn Pareto](../bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md) | Khảo sát đường biên Pareto (Pareto frontier) khi phải cân bằng nhiều mục tiêu xung đột (ví dụ: tối đa độ chính xác vs tối thiểu độ trễ phần cứng). |
+| **Nón đối ngẫu & Tối ưu đa mục tiêu** | [16. Nón đối ngẫu và lựa chọn Pareto](../bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md) | Khảo sát đường biên Pareto (Pareto frontier) khi phải cân bằng nhiều mục tiêu xung đột (ví dụ: Tối đa độ chính xác vs tối thiểu độ trễ phần cứng). |
 
 ---
 

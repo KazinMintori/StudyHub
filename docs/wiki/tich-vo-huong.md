@@ -15,7 +15,7 @@ Tích vô hướng $u\cdot v$ là tổng các tích thành phần tương ứng.
 
 **Góc, chiếu và dấu.** Tích vô hướng dương khi góc nhỏ hơn 90°, âm khi góc lớn hơn 90°, bằng 0 khi hai vector khác 0 vuông góc. Hình chiếu vô hướng của u lên hướng đơn vị n là $u\cdot n$.
 
-Điều này xuất hiện trong công của lực và thông lượng: chỉ thành phần cùng hướng độ dời hoặc pháp tuyến mới đóng góp. Công thức góc cần hai vector khác 0.
+Điều này xuất hiện trong công của lực và thông lượng: Chỉ thành phần cùng hướng độ dời hoặc pháp tuyến mới đóng góp. Công thức góc cần hai vector khác 0.
 
 ## Ví dụ
 

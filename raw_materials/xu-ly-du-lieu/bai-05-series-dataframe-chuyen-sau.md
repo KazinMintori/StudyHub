@@ -4,13 +4,13 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: pandas-basics](https://wesmckinney.com/book/pandas-basics)
-- [Python for Data Analysis: data-wrangling](https://wesmckinney.com/book/data-wrangling)
-- [Python for Data Analysis: data-aggregation](https://wesmckinney.com/book/data-aggregation)
+- [Python for Data Analysis: Pandas-basics](https://wesmckinney.com/book/pandas-basics)
+- [Python for Data Analysis: Data-wrangling](https://wesmckinney.com/book/data-wrangling)
+- [Python for Data Analysis: Data-aggregation](https://wesmckinney.com/book/data-aggregation)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-05-series-dataframe-chuyen-sau.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-05-series-dataframe-chuyen-sau.html)
 
 ## Phạm vi đã biên soạn
 

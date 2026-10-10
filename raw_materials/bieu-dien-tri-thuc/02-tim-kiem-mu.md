@@ -29,7 +29,7 @@ Chi phí tối ưu thật sự (đã tính ở Chương 3) là $S \to A \to B \t
 ## 2.2 Breadth-First Search (BFS) — lan toả theo từng lớp
 
 ::: tip Ẩn dụ
-Thả một giọt mực vào ly nước: vết mực lan ra thành **từng vòng tròn đồng tâm cách đều nhau theo thời gian** — không quan tâm vòng nào "đặc" hay "loãng" (chi phí cạnh), chỉ quan tâm **số bước nhảy**.
+Thả một giọt mực vào ly nước: Vết mực lan ra thành **từng vòng tròn đồng tâm cách đều nhau theo thời gian** — không quan tâm vòng nào "đặc" hay "loãng" (chi phí cạnh), chỉ quan tâm **số bước nhảy**.
 :::
 
 BFS dùng hàng đợi FIFO, mở rộng theo từng lớp (độ sâu) một. Trên đồ thị mẫu, giả sử tại mỗi đỉnh ta luôn duyệt cạnh theo thứ tự bảng trên (A trước B):
@@ -100,7 +100,7 @@ Giống hệt bẫy ở A\* (Chương 3): UCS chỉ được dừng khi **lấy 
 ## 2.5 Iterative Deepening Search (IDS) — "DFS lặp lại nhiều lần, sâu dần"
 
 ::: tip Ẩn dụ
-Giống việc bạn dò tìm chìa khoá bị rơi trong sân tối bằng đèn pin có tầm chiếu **tăng dần từng mét một**: mỗi lượt soi tới đúng bán kính giới hạn rồi tắt đèn, bật lại với bán kính xa hơn. Có vẻ lãng phí (soi lại vùng gần nhiều lần), nhưng tổng công sức vẫn cùng cấp độ lớn với soi một lần bán kính xa nhất.
+Giống việc bạn dò tìm chìa khoá bị rơi trong sân tối bằng đèn pin có tầm chiếu **tăng dần từng mét một**: Mỗi lượt soi tới đúng bán kính giới hạn rồi tắt đèn, bật lại với bán kính xa hơn. Có vẻ lãng phí (soi lại vùng gần nhiều lần), nhưng tổng công sức vẫn cùng cấp độ lớn với soi một lần bán kính xa nhất.
 :::
 
 IDS = DFS có giới hạn độ sâu (Depth-Limited Search), tăng dần giới hạn $\ell = 0, 1, 2, \ldots$ cho tới khi tìm thấy đích.
@@ -214,7 +214,7 @@ vector<int> iterativeDeepeningSearch(int start, int goal, const Graph& g, int ma
 - Russell & Norvig, *AIMA* 4th ed., mục 3.4 (Uninformed Search Strategies).
 - Cormen et al., *Introduction to Algorithms* 4th ed., chương 20 (BFS/DFS) và 22.3 (Dijkstra ≈ UCS).
 - Bài giảng gốc AIT2004 — [Bài 2: Tìm kiếm mù](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-02-tim-kiem-mu.html).
-- VisuAlgo — [visualgo.net/en/dfsbfs](https://visualgo.net/en/dfsbfs): minh hoạ trực quan BFS/DFS trên đồ thị.
+- VisuAlgo — [visualgo.net/en/dfsbfs](https://visualgo.net/en/dfsbfs): Minh hoạ trực quan BFS/DFS trên đồ thị.
 
 ---
 ← [Chương 1](./01-gioi-thieu-tac-tu.md) · [Mục lục](./00-muc-luc.md) · [Chương 3 →](./03-tim-kiem-kinh-nghiem.md)

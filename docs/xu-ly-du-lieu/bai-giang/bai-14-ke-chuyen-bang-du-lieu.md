@@ -5,7 +5,7 @@ section: lecture
 title: "Kể chuyện bằng dữ liệu & thẩm định phân tích AI"
 prerequisites: ["ky-vong","gia-tri-thieu","thong-ke-mo-ta","ket-luan-nhan-qua"]
 lessonStatus: ready
-description: "Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm: cấu trúc Kim tự tháp Minto, bóc trần nghịch lý Simpson, chuẩn hóa ngôn ngữ đo lường và quy trình thẩm định 4 bước đối với báo cáo do trí tuệ nhân tạo tạo ra."
+description: "Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm: Cấu trúc Kim tự tháp Minto, bóc trần nghịch lý Simpson, chuẩn hóa ngôn ngữ đo lường và quy trình thẩm định 4 bước đối với báo cáo do trí tuệ nhân tạo tạo ra."
 ---
 
 Chúng ta bước vào bài giảng tổng kết của toàn bộ môn học. Hãy nhìn lại chuỗi hành trình kỹ nghệ dữ liệu mà bạn đã đi qua:
@@ -15,13 +15,13 @@ Chúng ta bước vào bài giảng tổng kết của toàn bộ môn học. H�
 - **Trực quan hóa dữ liệu** (Bài 12 và Bài 13): Xây dựng biểu đồ phục vụ đúng câu hỏi nghiệp vụ, đọc thang đo trung thực và tránh các bẫy thị giác.
 - **Kể chuyện và thẩm định** (Bài 14 này): Đóng gói toàn bộ kết quả thành câu chuyện dữ liệu có sức thuyết phục và thẩm định độc lập các báo cáo do AI hỗ trợ viết.
 
-Triết lý nền tảng của bài học này rất giản dị nhưng sâu sắc: **Kết quả phân tích chỉ có giá trị khi người đọc hiểu được kết luận và kiểm chứng được bằng chứng**. Toàn bộ khối lượng công việc tính toán đồ sộ trước đó sẽ trở nên vô nghĩa nếu khâu cuối cùng bị gãy đổ: khâu truyền tải thông điệp tới người ra quyết định và bảo vệ tính trung thực của các phát hiện khoa học.
+Triết lý nền tảng của bài học này rất giản dị nhưng sâu sắc: **Kết quả phân tích chỉ có giá trị khi người đọc hiểu được kết luận và kiểm chứng được bằng chứng**. Toàn bộ khối lượng công việc tính toán đồ sộ trước đó sẽ trở nên vô nghĩa nếu khâu cuối cùng bị gãy đổ: Khâu truyền tải thông điệp tới người ra quyết định và bảo vệ tính trung thực của các phát hiện khoa học.
 
 ---
 
 ## 1. Từ phân tích đến câu chuyện dữ liệu
 
-Khi bắt tay vào báo cáo kết quả cho ban điều hành, đối tác hay hội đồng bảo vệ, người mới làm dữ liệu thường mắc phải một sai lầm phổ biến: kể lại toàn bộ nhật ký những gì mình đã làm. Người nghe không cần xem qua mọi biểu đồ bạn từng thử nghiệm, họ cần một câu trả lời dứt khoát có căn cứ khoa học.
+Khi bắt tay vào báo cáo kết quả cho ban điều hành, đối tác hay hội đồng bảo vệ, người mới làm dữ liệu thường mắc phải một sai lầm phổ biến: Kể lại toàn bộ nhật ký những gì mình đã làm. Người nghe không cần xem qua mọi biểu đồ bạn từng thử nghiệm, họ cần một câu trả lời dứt khoát có căn cứ khoa học.
 
 ### Kết luận trước, chi tiết sau: Cấu trúc Kim tự tháp Minto
 
@@ -57,7 +57,7 @@ Nguyên tắc vàng khi trình bày số liệu: **Bảng dữ liệu giữ đ�
 
 ### Nêu rõ giới hạn giúp gia tăng độ tin cậy khoa học
 
-Nhiều người lầm tưởng rằng việc thừa nhận giới hạn sẽ làm giảm giá trị của bản phân tích. Thực tế hoàn toàn ngược lại: một bản báo cáo tự nhận mình "chính xác tuyệt đối 100%" chỉ chứng minh người làm thiếu hiểu biết về sự bất định của dữ liệu thực tế.
+Nhiều người lầm tưởng rằng việc thừa nhận giới hạn sẽ làm giảm giá trị của bản phân tích. Thực tế hoàn toàn ngược lại: Một bản báo cáo tự nhận mình "chính xác tuyệt đối 100%" chỉ chứng minh người làm thiếu hiểu biết về sự bất định của dữ liệu thực tế.
 
 Trong suốt khóa học, chúng ta đã nhận diện hàng loạt giới hạn thực nghiệm:
 - **Số lượng đánh giá chỉ là một biến đại diện**: Số lượng đánh giá phản ánh lượng khách lưu trú với độ trễ nhất định, không phản ánh toàn bộ lượng khách thực tế (vì không phải ai cũng viết nhận xét) và càng không đại diện cho mức độ hài lòng nếu chưa xét tới điểm số.
@@ -66,7 +66,7 @@ Trong suốt khóa học, chúng ta đã nhận diện hàng loạt giới hạn
 - **Sai số của mô hình ngôn ngữ**: Nhãn trích xuất từ LLM có thể có tỷ lệ sai sót khoảng 10% trên các trường phức tạp.
 - **Bẫy diện tích trên biểu đồ bản đồ**: Các quận ngoại thành có diện tích rộng lớn dễ lấn át thị giác dù mật độ chỗ ở thực tế rất thưa thớt.
 
-Việc chủ động đặt các giới hạn này ngay cạnh kết luận giúp người ra quyết định đánh giá đúng ranh giới an toàn của thông tin. Với mỗi kết luận lớn, hãy luôn ghi rõ: **nguồn dữ liệu gốc, cỡ mẫu quan sát hợp lệ, các giả định đã sử dụng và loại sai số có thể phát sinh**.
+Việc chủ động đặt các giới hạn này ngay cạnh kết luận giúp người ra quyết định đánh giá đúng ranh giới an toàn của thông tin. Với mỗi kết luận lớn, hãy luôn ghi rõ: **Nguồn dữ liệu gốc, cỡ mẫu quan sát hợp lệ, các giả định đã sử dụng và loại sai số có thể phát sinh**.
 
 ---
 
@@ -90,7 +90,7 @@ Dữ liệu quan sát thuần túy chỉ cho phép chúng ta khẳng định **h
 
 Hãy xem xét phát biểu sau: *"Lượng đánh giá tại Santiago tăng trưởng bùng nổ 50 lần kể từ năm 2020!"*
 
-Về mặt số học thuần túy, con số 50 lần này hoàn toàn đúng dữ liệu: người làm đã lấy số đánh giá của một tháng đỉnh cao gần đây chia cho số đánh giá của tháng 4 năm 2020 (khi đó chỉ ghi nhận 321 đánh giá vì toàn thành phố đang bị phong tỏa do đại dịch COVID-19).
+Về mặt số học thuần túy, con số 50 lần này hoàn toàn đúng dữ liệu: Người làm đã lấy số đánh giá của một tháng đỉnh cao gần đây chia cho số đánh giá của tháng 4 năm 2020 (khi đó chỉ ghi nhận 321 đánh giá vì toàn thành phố đang bị phong tỏa do đại dịch COVID-19).
 
 Tuy nhiên, nếu chọn kỳ gốc là mức trung bình hàng tháng của năm 2019 (giai đoạn trước đại dịch), mức tăng trưởng thực tế chỉ còn khoảng 8 lần. Mặt khác, nếu so sánh quy mô cả năm 2020 so với năm 2025 như đã tính ở Bài 13, mức tăng trưởng là khoảng 16 lần.
 
@@ -127,7 +127,7 @@ Khi so sánh giữa hai kỳ khảo sát (ví dụ mốc chụp Tháng 9 năm 20
 
 Từng phân khúc riêng lẻ đều tăng giá thêm $10\%$, không có bất kỳ phân khúc nào giảm giá. Nhưng giá trung vị gộp của toàn bộ thị trường lại ghi nhận mức sụt giảm!
 
-Nguyên nhân nằm ở **sự thay đổi cơ cấu mẫu giữa hai mốc chụp**: ở mốc Tháng 6 năm 2026, số lượng phòng riêng giá rẻ tăng đột biến khiến tỷ trọng của nhóm này trong toàn bộ thị trường tăng vọt. Vì phòng riêng có mức giá nền thấp hơn căn hộ nguyên căn, sự gia tăng áp đảo về số lượng của chúng đã kéo tụt con số bình quân gộp chung của toàn thành phố.
+Nguyên nhân nằm ở **sự thay đổi cơ cấu mẫu giữa hai mốc chụp**: Ở mốc Tháng 6 năm 2026, số lượng phòng riêng giá rẻ tăng đột biến khiến tỷ trọng của nhóm này trong toàn bộ thị trường tăng vọt. Vì phòng riêng có mức giá nền thấp hơn căn hộ nguyên căn, sự gia tăng áp đảo về số lượng của chúng đã kéo tụt con số bình quân gộp chung của toàn thành phố.
 
 Bài học cốt lõi: **Khi phân tích biến động qua thời gian, bắt buộc phải kiểm tra cơ cấu tỷ trọng của các nhóm thành phần trước khi vội vã diễn giải một con số gộp chung**.
 
@@ -255,288 +255,11 @@ Hãy áp dụng **quy trình thẩm định 4 bước** cho mọi đoạn văn b
 
 ## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 14) {#bai-tap}
 
-Hệ thống bài tập dưới đây rèn luyện kỹ năng thực hành kể chuyện dữ liệu, tính toán nghịch lý Simpson và triển khai quy trình thẩm định báo cáo độc lập.
+Toàn bộ hệ thống bài tập thực hành chuyên sâu và phòng Lab thực chiến của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu thực hành trên dữ liệu thực tế.
 
-### Thiết lập môi trường và Dữ liệu thử nghiệm
-
-```python
-import numpy as np
-import pandas as pd
-
-# Bảng dữ liệu mô phỏng nghịch lý Simpson
-BANG_SIMPSON = pd.DataFrame({
-    "ky": ["T9", "T9", "T6", "T6"],
-    "phan_khuc": ["cao", "re", "cao", "re"],
-    "n": [100, 100, 80, 220],
-    "gia_tb": [60.0, 30.0, 66.0, 33.0], # Mỗi phân khúc đều tăng giá 10%
-})
-
-# Dữ liệu chỗ ở mẫu dùng cho bài toán thẩm định
-DEMO_DS = pd.DataFrame({
-    "id": range(301, 313),
-    "calculated_host_listings_count": [1, 7, 2, 12, 5, 1, 3, 9, 1, 6, 2, 4],
-    "number_of_reviews_ltm": [8, 20, 14, 31, 9, 0, 22, 16, 5, 12, 18, 10],
-    "review_scores_rating": [4.9, 4.6, 4.95, 4.7, 4.5, None, 4.85, 4.6, 4.9, 4.55, 4.8, 4.75],
-})
-```
-
----
-
-### Bài 1: Sắp xếp đoạn văn báo cáo theo Cấu trúc Kim tự tháp Minto
-
-::: exercise Yêu cầu nghiệp vụ
-Cho 4 câu văn rời rạc thuộc một mục báo cáo về giá thuê tại Santiago:
-- **Câu A**: *"Con số dựa trên 17.688 chỗ ở có giá hợp lệ ở mốc chụp 29/06/2026; 846 chỗ ở không có giá đã được loại và ghi trong qa_report."*
-- **Câu B**: *"Giá thuê điển hình ở Santiago là 59.000 CLP/đêm (khoảng 1,65 triệu đồng), thấp hơn mức trung bình 118.000 CLP."*
-- **Câu C**: *"Trung vị ít bị ảnh hưởng bởi giá ngoại lai: 177 giá trị cực đoan đã gắn cờ làm trung bình cao hơn 44% nhưng gần như không làm thay đổi trung vị."*
-- **Câu D**: *"Kết luận chỉ áp dụng cho giá niêm yết một đêm, chưa gồm phí vệ sinh/dịch vụ; giá thực tế khách trả có thể cao hơn."*
-
-Hãy sắp xếp lại 4 câu này thành một danh sách biến `thu_tu` theo đúng cấu trúc Kim tự tháp Minto: (1) Kết luận chính $\to$ (2) Bằng chứng định lượng $\to$ (3) Phạm vi và giới hạn $\to$ (4) Chi tiết phương pháp.
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở phòng Lab tương tác với 2 hướng tiếp cận (Cơ bản & Nâng cao), phân tích giả thuyết và bộ kiểm chứng tự động `assert`.
 :::
-
-::: solution
-#### Lời giải chuẩn xác
-
-```python
-# Sắp xếp theo Kim tự tháp: B (Kết luận) -> C (Bằng chứng) -> D (Giới hạn) -> A (Phương pháp)
-thu_tu = ["B", "C", "D", "A"]
-```
-
-#### Phân tích sư phạm chuyên sâu
-- **B (Đỉnh kim tự tháp)**: Đưa ra ngay thông điệp chủ đạo: con số giá thuê điển hình (trung vị) là 59.000 CLP.
-- **C (Tầng bằng chứng)**: Giải thích vì sao chọn con số trung vị thay vì trung bình (bằng chứng về 177 giá trị cực đoan).
-- **D (Tầng giới hạn)**: Nêu ranh giới của nhận định: giá chưa gồm phí phụ thu.
-- **A (Tầng phương pháp)**: Cung cấp chi tiết cỡ mẫu 17.688 căn hộ phục vụ kiểm toán ở cuối mục hoặc trong phụ lục.
-:::
-
----
-
-### Bài 2: Đánh giá tính đúng mức của ngôn từ trong các cặp câu kết luận
-
-::: exercise Yêu cầu nghiệp vụ
-Với mỗi cặp số liệu và lời văn dưới đây, hãy gán nhãn `"vua"` (diễn đạt đúng mức) hoặc `"qua"` (diễn đạt quá mức, phóng đại) vào từ điển `nhan`:
-1. `+53.7% YoY`: *"Thị trường tăng trưởng mạnh so với cùng kỳ"*
-2. `+3.0% MoM`: *"Bứt phá thần tốc trong tháng 5"*
-3. `Hệ số tương quan r = 0.081`: *"Nhiệt độ ngày ảnh hưởng rõ rệt tới lượng đánh giá"*
-4. `Đúng 1 chỗ ở đòi ở tối thiểu 730 đêm`: *"Một vài ca cực đoan cần gắn cờ"*
-5. `Nhóm es chiếm 65.4% (quy tắc từ khóa thô)`: *"Chắc chắn 2/3 khách nói tiếng Tây Ban Nha"*
-:::
-
-::: solution
-#### Lời giải chuẩn xác
-
-```python
-nhan = {
-    1: "vua", # +53.7% so cùng kỳ là tăng trưởng mạnh
-    2: "qua", # +3.0% giữa hai tháng chỉ là tăng nhẹ, không thể gọi là bứt phá thần tốc
-    3: "qua", # r = 0.081 là tương quan hầu như không có, không thể nói là ảnh hưởng rõ rệt
-    4: "vua", # Gắn cờ ca cực đoan là hành vi thận trọng đúng mức
-    5: "qua"  # Dùng từ "chắc chắn" khi quy tắc từ khóa chưa được kiểm định là võ đoán
-}
-```
-
-#### Phân tích sư phạm chuyên sâu
-Việc nhận diện các từ ngữ "quá mức" giúp sinh viên rèn luyện tác phong khoa học: từ chối các mỹ từ tiếp thị và trung thành với mức độ tin cậy mà dữ liệu thực tế cho phép.
-:::
-
----
-
-### Bài 3: Tính toán giá trung bình gộp (Có trọng số)
-
-::: exercise Yêu cầu nghiệp vụ
-Hãy viết hàm `pooled_means(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series` nhận vào bảng dữ liệu phân khúc qua các kỳ.
-
-Hàm tính toán và trả về một Series:
-- Chỉ mục là các kỳ (`ky`).
-- Giá trị là **giá trung bình gộp có trọng số** của kỳ đó theo công thức:
-  $$
-  \bar{X}_{\text{gộp}} = \frac{\sum (n \times \text{gia})}{\sum n}
-  $$
-Tuyệt đối không lấy trung bình cộng giản đơn các dòng và không làm thay đổi bảng dữ liệu đầu vào.
-:::
-
-::: solution
-#### Cách 1: Tiếp cận Căn bản & Trực quan
-
-```python
-def pooled_means_co_ban(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series:
-    # 1. Tính tổng giá trị của từng dòng
-    tong_tien_dong = bang[n] * bang[gia]
-    
-    # 2. Gom nhóm tính tổng tiền và tổng số lượng theo kỳ
-    tong_tien_ky = tong_tien_dong.groupby(bang[ky]).sum()
-    tong_n_ky = bang[n].groupby(bang[ky]).sum()
-    
-    # 3. Chia lấy trung bình có trọng số
-    gia_gop = tong_tien_ky / tong_n_ky
-    return gia_gop
-```
-
-#### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa một dòng)
-
-```python
-def pooled_means(bang: pd.DataFrame, ky: str = "ky", n: str = "n", gia: str = "gia_tb") -> pd.Series:
-    return (bang[n] * bang[gia]).groupby(bang[ky]).sum() / bang.groupby(ky)[n].sum()
-```
-
-#### Phân tích so sánh & Trực giác bản chất
-Đoạn mã trên phản ánh đúng định nghĩa toán học của kỳ vọng phân phối có trọng số. Nếu người dùng gọi `bang.groupby(ky)[gia].mean()`, pandas sẽ tính trung bình cộng giản đơn ($(66 + 33)/2 = 49.5$), hoàn toàn bỏ qua việc phân khúc rẻ có tới 220 căn hộ trong khi phân khúc đắt chỉ có 80 căn hộ.
-:::
-
----
-
-### Bài 4: Tính toán tỷ trọng cơ cấu của một phân khúc
-
-::: exercise Yêu cầu nghiệp vụ
-Hãy viết hàm `segment_share(bang: pd.DataFrame, phan_khuc: str, ky: str = "ky", nhom: str = "phan_khuc", n: str = "n") -> pd.Series` nhận vào bảng dữ liệu và tên của một phân khúc cụ thể (ví dụ `"re"`).
-
-Hàm tính toán và trả về Series:
-- Chỉ mục là các kỳ.
-- Giá trị là **tỷ trọng số chỗ ở** của phân khúc đó trong từng kỳ (tổng $n$ của phân khúc chia cho tổng $n$ của kỳ đó, thang đo từ 0 đến 1). Kỳ nào không có phân khúc đó thì tỷ trọng bằng 0.
-:::
-
-::: solution
-#### Mã nguồn cài đặt chuẩn
-
-```python
-def segment_share(bang: pd.DataFrame, phan_khuc: str, ky: str = "ky", nhom: str = "phan_khuc", n: str = "n") -> pd.Series:
-    # Tổng số lượng toàn kỳ
-    tong_n_ky = bang.groupby(ky)[n].sum()
-    
-    # Lọc lấy số lượng của phân khúc cần tính
-    bang_pk = bang.loc[bang[nhom] == phan_khuc]
-    n_pk_ky = bang_pk.groupby(ky)[n].sum()
-    
-    # Khớp vào toàn bộ các kỳ (điền 0 nếu kỳ đó vắng bóng phân khúc)
-    ty_trong = (n_pk_ky.reindex(tong_n_ky.index, fill_value=0) / tong_n_ky)
-    return ty_trong
-```
-
-#### Phân tích sư phạm chuyên sâu
-Khi chạy trên bảng `BANG_SIMPSON` với phân khúc `"re"`, kết quả cho thấy tỷ trọng căn hộ giá rẻ đã tăng từ $50.0\%$ (Kỳ T9) lên $73.3\%$ (Kỳ T6). Đây chính là bằng chứng định lượng bóc trần nguyên nhân vì sao giá trung bình gộp lại giảm dù từng nhóm đều tăng giá.
-:::
-
----
-
-### Bài 5: Thẩm định kết luận (Bước 1: Truy số từ dữ liệu thô)
-
-::: exercise Yêu cầu nghiệp vụ
-Một báo cáo do AI sinh ra đưa ra kết luận: *"Chủ nhà chuyên nghiệp được khách yêu thích hơn so với chủ nhà cá nhân, với 15,5 so với 12,7 đánh giá/năm."*
-Để thẩm định bước 1 (Truy số), hãy viết hàm `reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series` nhận vào bảng chỗ ở `ds` có cột `calculated_host_listings_count` và `number_of_reviews_ltm`.
-
-Hàm thực hiện:
-- Gom nhóm theo điều kiện boolean: `calculated_host_listings_count >= nguong` (tuyệt đối không thêm cột vào `ds`).
-- Tính giá trị trung bình của cột `number_of_reviews_ltm` cho từng nhóm.
-- Trả về Series có chỉ mục là các giá trị boolean `False` và `True`.
-:::
-
-::: solution
-#### Mã nguồn cài đặt chuẩn
-
-```python
-def reviews_by_host_type(ds: pd.DataFrame, nguong: int = 5) -> pd.Series:
-    la_chuyen_nghiep = ds["calculated_host_listings_count"].ge(nguong)
-    return ds.groupby(la_chuyen_nghiep)["number_of_reviews_ltm"].mean()
-```
-
-#### Phân tích so sánh & Trực giác bản chất
-Kết quả chạy trên snapshot thật tại Santiago cho ra đúng con số: nhóm chuyên nghiệp đạt 15.5 và nhóm cá nhân đạt 12.7 đánh giá/năm. Như vậy, bước 1 (Truy số) xác nhận rằng các con số toán học là có thật, không phải ảo giác bịa số.
-:::
-
----
-
-### Bài 6: Thẩm định kết luận (Bước 2 và Bước 3: Phán quyết chuyên gia)
-
-::: exercise Yêu cầu nghiệp vụ
-Dựa trên kết quả ở Bài 5, hãy chọn **một** phán quyết chuẩn xác nhất về mặt khoa học dữ liệu cho kết luận trên:
-- **A.** "Giữ nguyên vì số đúng thì kết luận đúng."
-- **B.** "Sửa cách diễn đạt: số đo là LƯỢNG ĐÁNH GIÁ (biến đại diện cho lượng đặt phòng), không đo 'yêu thích'; muốn nói yêu thích phải dùng điểm đánh giá, vì vậy viết lại thành 'có nhiều đánh giá hơn' và kiểm thêm theo từng nhóm."
-- **C.** "Bác bỏ do số liệu sai."
-
-Gán lựa chọn của bạn vào biến `phan_quyet` (chuỗi `"A"`, `"B"` hoặc `"C"`).
-:::
-
-::: solution
-#### Phán quyết chuẩn xác
-
-```python
-phan_quyet = "B"
-```
-
-#### Phân tích sư phạm chuyên sâu: Lý do phán quyết và Bước 4
-- **Tại sao không chọn A?**
-  Số liệu 15.5 và 12.7 là đúng, nhưng con số này đo lường **số lượng đánh giá trong năm** (`number_of_reviews_ltm`). Lượng đánh giá cao chỉ chứng minh căn hộ đó có nhiều lượt khách ra vào (lượng đặt phòng cao), hoàn toàn không chứng minh khách hàng "yêu thích" căn hộ đó hơn. Một căn hộ giá rẻ ở bến xe có thể có 50 lượt khách/năm nhưng điểm đánh giá chỉ 3.5 sao, trong khi một biệt thự nghỉ dưỡng chỉ đón 5 đoàn khách/năm nhưng đạt tuyệt đối 5.0 sao. Đánh đồng số lượt đánh giá với sự "yêu thích" là lỗi ngụy biện đánh tráo khái niệm.
-- **Tại sao không chọn C?**
-  Số liệu không hề sai, ta không thể bác bỏ sạch trơn công sức tính toán.
-- **Kết luận viết lại đúng mức (Bước 4)**:
-  > *"Tại Santiago, các chỗ ở thuộc sở hữu của chủ nhà chuyên nghiệp ghi nhận lượng đánh giá bình quân cao hơn nhóm cá nhân (15.5 so với 12.7 lượt/năm), phản ánh tần suất đón khách cao hơn. Tuy nhiên, về mức độ hài lòng (điểm số đánh giá), hai nhóm không có sự khác biệt đáng kể (đều đạt trung vị 4.8 sao)."*
-:::
-
----
-
-### Bài tự làm mở rộng: Quy trình thẩm định báo cáo AI toàn diện
-
-::: exercise Đề bài mở rộng
-Hãy đóng vai một chuyên gia thẩm định dữ liệu độc lập, thiết lập danh mục kiểm toán 4 bước dưới dạng một danh sách kiểm tra (Audit Checklist) có thể thực thi tự động bằng Python để rà soát toàn bộ các câu kết luận trong một báo cáo phân tích kinh doanh.
-:::
-
-::: solution
-#### Mã nguồn khung thẩm định tự động
-
-```python
-class KiemToanBaoCaoAI:
-    def __init__(self, df_goc: pd.DataFrame):
-        self.df = df_goc
-        self.nhat_ky = []
-        
-    def kiem_toan_tuyen_bo(self, id_tuyen_bo: str, noi_dung: str, ham_truy_so, dieu_kien_phuong_phap, tu_khoa_cam: list):
-        ho_so = {"id": id_tuyen_bo, "tuyen_bo": noi_dung, "trang_thai": "DAT", "ghi_chu": []}
-        
-        # 1. Bước 1: Truy số
-        try:
-            so_lieu = ham_truy_so(self.df)
-            ho_so["so_thuc_te"] = so_lieu
-        except Exception as e:
-            ho_so["trang_thai"] = "BAC_BO"
-            ho_so["ghi_chu"].append(f"Lỗi truy số: Không thể tái lập số liệu ({e})")
-            self.nhat_ky.append(ho_so)
-            return
-            
-        # 2. Bước 2: Kiểm tra phương pháp
-        if not dieu_kien_phuong_phap(self.df):
-            ho_so["trang_thai"] = "CAN_SUA"
-            ho_so["ghi_chu"].append("Phương pháp có tì vết: Mất cân bằng cơ cấu hoặc chọn mốc thiên lệch")
-            
-        # 3. Bước 3: Rà soát ngôn từ phóng đại
-        for tu in tu_khoa_cam:
-            if tu.lower() in noi_dung.lower():
-                ho_so["trang_thai"] = "CAN_SUA"
-                ho_so["ghi_chu"].append(f"Ngôn từ quá mức: Chứa từ khóa phóng đại '{tu}'")
-                
-        self.nhat_ky.append(ho_so)
-        
-    def xuat_bao_cao(self):
-        return pd.DataFrame(self.nhat_ky)
-
-# Thử nghiệm thẩm định trên tuyên bố của Bài 5
-kiem_toan = KiemToanBaoCaoAI(DEMO_DS)
-kiem_toan.kiem_toan_tuyen_bo(
-    id_tuyen_bo="TB_01",
-    noi_dung="Chủ nhà chuyên nghiệp được khách yêu thích hơn hẳn, bùng nổ 15.5 đánh giá",
-    ham_truy_so=lambda df: reviews_by_host_type(df).to_dict(),
-    dieu_kien_phuong_phap=lambda df: "review_scores_rating" in df.columns, # Kiểm tra xem có dùng đúng cột đo sự yêu thích
-    tu_khoa_cam=["hơn hẳn", "bùng nổ", "thần kỳ", "chắc chắn"]
-)
-
-print("KẾT QUẢ KIỂM TOÁN ĐỘC LẬP:")
-print(kiem_toan.xuat_bao_cao().to_string(index=False))
-```
-
-#### Bình luận chuyên môn
-Khung kiểm toán trên biến việc đọc báo cáo thành một quy trình kỹ nghệ có cấu trúc. Khi làm việc với các hệ thống AI sinh báo cáo tự động, một lớp kiểm toán độc lập bằng quy tắc là chốt chặn an toàn bắt buộc để bảo vệ doanh nghiệp trước các quyết định đầu tư sai lầm.
-:::
-
----
 
 ## 6. Tổng kết và Đọc thêm
 

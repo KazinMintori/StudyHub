@@ -4,16 +4,16 @@ lecture: bai-02-tap-loi
 topic: mo-hinh-lp
 section: topic
 title: "Những bài toán trở thành LP"
-description: "Ba mô hình của sách trông không tuyến tính nhưng là quy hoạch tuyến tính: tâm Chebyshev của đa diện với lập luận Cauchy–Schwarz, cực tiểu hàm tuyến tính từng khúc bằng dạng epigraph, và cận chặt cho kỳ vọng khi chỉ biết một phần phân phối, kèm so sánh với bất đẳng thức Markov và Cantelli."
+description: "Ba mô hình của sách trông không tuyến tính nhưng là quy hoạch tuyến tính: Tâm Chebyshev của đa diện với lập luận Cauchy–Schwarz, cực tiểu hàm tuyến tính từng khúc bằng dạng epigraph, và cận chặt cho kỳ vọng khi chỉ biết một phần phân phối, kèm so sánh với bất đẳng thức Markov và Cantelli."
 ---
 
 Sức mạnh của quy hoạch tuyến tính không nằm ở chỗ nhiều bài toán được phát biểu sẵn dưới dạng LP, mà ở chỗ rất nhiều bài toán **không trông giống LP chút nào** lại có thể viết thành LP. Tìm hình tròn lớn nhất nằm trong một đa giác là một bài toán hình học về khoảng cách. Cực tiểu một hàm có góc nhọn là một bài toán không khả vi. Tìm xác suất lớn nhất của một biến cố khi chỉ biết vài thông tin về phân phối là một bài toán xác suất. Cả ba đều là LP.
 
-Trang này đi qua ba mô hình ấy, lấy từ mục 4.3.1 của sách. Điều cần học không phải từng công thức, mà là hai thao tác lặp lại trong cả ba: thay một điều kiện "với mọi" bằng giá trị lớn nhất của nó, và tách một giá trị lớn nhất thành nhiều bất đẳng thức tuyến tính.
+Trang này đi qua ba mô hình ấy, lấy từ mục 4.3.1 của sách. Điều cần học không phải từng công thức, mà là hai thao tác lặp lại trong cả ba: Thay một điều kiện "với mọi" bằng giá trị lớn nhất của nó, và tách một giá trị lớn nhất thành nhiều bất đẳng thức tuyến tính.
 
 ## 1. Tâm Chebyshev của một đa diện
 
-Cho đa diện $\mathcal{P} = \{x \in \mathbb{R}^n : a_i^Tx \le b_i,\ i = 1, \ldots, m\}$. Ta muốn tìm hình cầu Euclid lớn nhất nằm trong $\mathcal{P}$. Tâm của hình cầu ấy được gọi là **tâm Chebyshev** của đa diện: điểm nằm sâu nhất bên trong, xa biên nhất. Biểu diễn hình cầu bằng tâm $x_c$ và bán kính $r$:
+Cho đa diện $\mathcal{P} = \{x \in \mathbb{R}^n : a_i^Tx \le b_i,\ i = 1, \ldots, m\}$. Ta muốn tìm hình cầu Euclid lớn nhất nằm trong $\mathcal{P}$. Tâm của hình cầu ấy được gọi là **tâm Chebyshev** của đa diện: Điểm nằm sâu nhất bên trong, xa biên nhất. Biểu diễn hình cầu bằng tâm $x_c$ và bán kính $r$:
 
 $$
 \mathcal{B} = \{x_c + u : \|u\|_2 \le r\}.
@@ -21,7 +21,7 @@ $$
 
 Biến của bài toán là $x_c$ và $r$, và ta muốn cực đại $r$ với điều kiện $\mathcal{B} \subseteq \mathcal{P}$.
 
-Điều kiện "hình cầu nằm trong một nửa không gian" là một điều kiện "với mọi": với mọi $u$ có $\|u\|_2 \le r$, ta cần $a_i^T(x_c + u) \le b_i$. Điều kiện này đúng khi và chỉ khi nó đúng với $u$ làm vế trái lớn nhất. Theo bất đẳng thức Cauchy–Schwarz, $a_i^Tu \le \|a_i\|_2\|u\|_2 \le r\|a_i\|_2$, với dấu bằng khi $u$ cùng hướng với $a_i$, nên
+Điều kiện "hình cầu nằm trong một nửa không gian" là một điều kiện "với mọi": Với mọi $u$ có $\|u\|_2 \le r$, ta cần $a_i^T(x_c + u) \le b_i$. Điều kiện này đúng khi và chỉ khi nó đúng với $u$ làm vế trái lớn nhất. Theo bất đẳng thức Cauchy–Schwarz, $a_i^Tu \le \|a_i\|_2\|u\|_2 \le r\|a_i\|_2$, với dấu bằng khi $u$ cùng hướng với $a_i$, nên
 
 $$
 \sup\{a_i^Tu : \|u\|_2 \le r\} = r\|a_i\|_2 .
@@ -44,11 +44,11 @@ $$
 r = 6 - 2\sqrt5 \approx 1.528 .
 $$
 
-Hình tròn tiếp xúc với ba cạnh $x_1 = 0$, $x_2 = 0$ và $x_1 + 2x_2 = 8$. Thật vậy, khoảng cách từ $(r, r)$ tới đường $x_1 + 2x_2 = 8$ là $\tfrac{8 - 3r}{\sqrt5}$, và đặt nó bằng $r$ cho đúng $r = \tfrac{8}{3 + \sqrt5} = 6 - 2\sqrt5$. Hai ràng buộc còn lại không chặt, nên có thể dịch chúng một chút mà nghiệm không đổi. Trong mặt phẳng, LP có ba biến, nên ở một đỉnh của miền khả thi trong $\mathbb{R}^3$ thường có đúng ba ràng buộc chặt: hình tròn lớn nhất thường chạm đúng ba cạnh.
+Hình tròn tiếp xúc với ba cạnh $x_1 = 0$, $x_2 = 0$ và $x_1 + 2x_2 = 8$. Thật vậy, khoảng cách từ $(r, r)$ tới đường $x_1 + 2x_2 = 8$ là $\tfrac{8 - 3r}{\sqrt5}$, và đặt nó bằng $r$ cho đúng $r = \tfrac{8}{3 + \sqrt5} = 6 - 2\sqrt5$. Hai ràng buộc còn lại không chặt, nên có thể dịch chúng một chút mà nghiệm không đổi. Trong mặt phẳng, LP có ba biến, nên ở một đỉnh của miền khả thi trong $\mathbb{R}^3$ thường có đúng ba ràng buộc chặt: Hình tròn lớn nhất thường chạm đúng ba cạnh.
 
 <ChebyshevCenterLab />
 
-Tâm Chebyshev có một ý nghĩa thực tế. Nếu đa diện mô tả những thông số thiết kế chấp nhận được, thì tâm Chebyshev là thiết kế **chịu được sai lệch tốt nhất**: mọi sai lệch có độ lớn nhỏ hơn $r$ theo bất kỳ hướng nào đều vẫn giữ thiết kế trong vùng chấp nhận được. Điểm này khác trọng tâm diện tích của đa giác. Với ngũ giác trên, trọng tâm ở khoảng $(1.682, 1.501)$, gần cạnh $x_2 = 0$ hơn tâm Chebyshev.
+Tâm Chebyshev có một ý nghĩa thực tế. Nếu đa diện mô tả những thông số thiết kế chấp nhận được, thì tâm Chebyshev là thiết kế **chịu được sai lệch tốt nhất**: Mọi sai lệch có độ lớn nhỏ hơn $r$ theo bất kỳ hướng nào đều vẫn giữ thiết kế trong vùng chấp nhận được. Điểm này khác trọng tâm diện tích của đa giác. Với ngũ giác trên, trọng tâm ở khoảng $(1.682, 1.501)$, gần cạnh $x_2 = 0$ hơn tâm Chebyshev.
 
 ## 2. Cực tiểu hàm tuyến tính từng khúc
 
@@ -67,7 +67,7 @@ $$
 \end{aligned}
 $$
 
-Đây là thao tác thứ hai: "giá trị lớn nhất không vượt quá $t$" đúng khi và chỉ khi "từng giá trị không vượt quá $t$".
+Đây là thao tác thứ hai: "Giá trị lớn nhất không vượt quá $t$" đúng khi và chỉ khi "từng giá trị không vượt quá $t$".
 
 Ví dụ một biến: $f(x) = \max\{-x + 3,\ 0.5x,\ 2x - 5\}$. LP tương ứng là cực tiểu $t$ với $-x + 3 \le t$, $0.5x \le t$, $2x - 5 \le t$. Đường giảm $-x + 3$ và đường tăng chậm $0.5x$ cắt nhau tại $x = 2$ với giá trị 1, còn đường $2x - 5$ chỉ vượt lên trên $0.5x$ khi $x > \tfrac{10}{3}$. Nghiệm là $x^\star = 2$, $t^\star = 1$. Tại nghiệm, hai ràng buộc đầu chặt và ràng buộc thứ ba còn dư. Các bài toán khớp dữ liệu theo chuẩn $\ell_1$ hay $\ell_\infty$ ở Lecture 01 là những trường hợp riêng của mô hình này.
 
@@ -97,7 +97,7 @@ Còn. Lập luận giữ nguyên, chỉ thay $\sup\{a^Tu : \|u\|_\infty \le r\}$
 
 <details><summary>Xem lời giải thích</summary>
 
-Bán kính lớn nhất là $1$ và duy nhất, vì nó là giá trị tối ưu của LP. Tâm thì không duy nhất: mọi điểm $(t, 1)$ với $1 \le t \le 3$ đều là tâm của một hình tròn bán kính 1 nằm trong hình chữ nhật. Tập nghiệm của LP là cả đoạn thẳng ấy, đúng như một LP có thể có cả một cạnh làm tập nghiệm. Nếu cần một tâm duy nhất, chẳng hạn trung điểm $(2, 1)$, phải thêm một tiêu chí phụ, ví dụ cực tiểu khoảng cách tới trọng tâm trong số các tâm tối ưu.
+Bán kính lớn nhất là $1$ và duy nhất, vì nó là giá trị tối ưu của LP. Tâm thì không duy nhất: Mọi điểm $(t, 1)$ với $1 \le t \le 3$ đều là tâm của một hình tròn bán kính 1 nằm trong hình chữ nhật. Tập nghiệm của LP là cả đoạn thẳng ấy, đúng như một LP có thể có cả một cạnh làm tập nghiệm. Nếu cần một tâm duy nhất, chẳng hạn trung điểm $(2, 1)$, phải thêm một tiêu chí phụ, ví dụ cực tiểu khoảng cách tới trọng tâm trong số các tâm tối ưu.
 
 </details>
 
@@ -105,7 +105,7 @@ Bán kính lớn nhất là $1$ và duy nhất, vì nó là giá trị tối ưu
 
 <details><summary>Xem lời giải thích</summary>
 
-Không còn là LP, và nói chung khó hơn hẳn. Cực đại một hàm lồi trên một đa diện đạt tại một đỉnh, nhưng không có cách nào tránh việc so sánh nhiều đỉnh, vì hàm lồi không cho ta biết đỉnh nào xa hơn chỉ từ thông tin cục bộ. Về hình thức, điều kiện "$\max_i(a_i^Tx + b_i) \ge t$" là một phép "hoặc": chỉ cần một trong các bất đẳng thức $a_i^Tx + b_i \ge t$ đúng. Một phép "hoặc" mô tả hợp của các nửa không gian, không phải giao, nên tập khả thi không còn lồi. Sự bất đối xứng giữa cực tiểu và cực đại một hàm lồi là một trong những bài học quan trọng nhất của môn học.
+Không còn là LP, và nói chung khó hơn hẳn. Cực đại một hàm lồi trên một đa diện đạt tại một đỉnh, nhưng không có cách nào tránh việc so sánh nhiều đỉnh, vì hàm lồi không cho ta biết đỉnh nào xa hơn chỉ từ thông tin cục bộ. Về hình thức, điều kiện "$\max_i(a_i^Tx + b_i) \ge t$" là một phép "hoặc": Chỉ cần một trong các bất đẳng thức $a_i^Tx + b_i \ge t$ đúng. Một phép "hoặc" mô tả hợp của các nửa không gian, không phải giao, nên tập khả thi không còn lồi. Sự bất đối xứng giữa cực tiểu và cực đại một hàm lồi là một trong những bài học quan trọng nhất của môn học.
 
 </details>
 
@@ -121,7 +121,7 @@ Cận $\tfrac16$ đạt được bởi một phân phối cụ thể, $(\tfrac13
 
 <details><summary>Xem lời giải thích</summary>
 
-LP cực tiểu cho giá trị 0, đạt tại phân phối dồn $\tfrac12$ vào 0 và $\tfrac12$ vào 2, có trung bình 1 và $\mathbb{E}x^2 = 2$. Vậy với thông tin này, xác suất của biến cố có thể nằm bất kỳ đâu trong $[0, \tfrac16]$. Một khoảng rộng như thế là một câu trả lời trung thực: thông tin đã có không đủ để kết luận chính xác, và mọi con số cụ thể trong khoảng ấy đều cần thêm giả định.
+LP cực tiểu cho giá trị 0, đạt tại phân phối dồn $\tfrac12$ vào 0 và $\tfrac12$ vào 2, có trung bình 1 và $\mathbb{E}x^2 = 2$. Vậy với thông tin này, xác suất của biến cố có thể nằm bất kỳ đâu trong $[0, \tfrac16]$. Một khoảng rộng như thế là một câu trả lời trung thực: Thông tin đã có không đủ để kết luận chính xác, và mọi con số cụ thể trong khoảng ấy đều cần thêm giả định.
 
 </details>
 
@@ -152,7 +152,7 @@ Biến $x$ nhận giá trị trong $\{0, 1, 2\}$. (a) Chỉ biết $\mathbb{E}x 
 :::
 
 ::: solution
-(a) Cực đại $p_2$ với $p_0 + p_1 + p_2 = 1$, $p_1 + 2p_2 = 0.5$, $p \succeq 0$. Để $p_2$ lớn nhất, đặt $p_1 = 0$, được $p_2 = 0.25$ và $p_0 = 0.75$, đúng cận Markov $\tfrac{\mathbb{E}x}{2}$. (b) Hai phương trình $p_1 + 2p_2 = 0.5$ và $p_1 + 4p_2 = 0.7$ cho $p_2 = 0.1$, $p_1 = 0.3$, rồi $p_0 = 0.6$. Ba ràng buộc đẳng thức trên ba biến xác định hoàn toàn phân phối, nên cận dưới và cận trên trùng nhau: xác suất đúng bằng 0.1.
+(a) Cực đại $p_2$ với $p_0 + p_1 + p_2 = 1$, $p_1 + 2p_2 = 0.5$, $p \succeq 0$. Để $p_2$ lớn nhất, đặt $p_1 = 0$, được $p_2 = 0.25$ và $p_0 = 0.75$, đúng cận Markov $\tfrac{\mathbb{E}x}{2}$. (b) Hai phương trình $p_1 + 2p_2 = 0.5$ và $p_1 + 4p_2 = 0.7$ cho $p_2 = 0.1$, $p_1 = 0.3$, rồi $p_0 = 0.6$. Ba ràng buộc đẳng thức trên ba biến xác định hoàn toàn phân phối, nên cận dưới và cận trên trùng nhau: Xác suất đúng bằng 0.1.
 :::
 
 ## Tóm tắt

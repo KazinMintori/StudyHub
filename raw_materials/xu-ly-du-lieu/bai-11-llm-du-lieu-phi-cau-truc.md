@@ -4,14 +4,14 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: accessing-data](https://wesmckinney.com/book/accessing-data)
-- [Python for Data Analysis: data-cleaning](https://wesmckinney.com/book/data-cleaning)
+- [Python for Data Analysis: Accessing-data](https://wesmckinney.com/book/accessing-data)
+- [Python for Data Analysis: Data-cleaning](https://wesmckinney.com/book/data-cleaning)
 
 Sách cung cấp nền tảng JSON và làm sạch; phần LLM là nội dung bổ sung ngoài sách.
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-11-llm-du-lieu-phi-cau-truc.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-11-llm-du-lieu-phi-cau-truc.html)
 - [Tài liệu API chính thức](https://ai.google.dev/gemini-api/docs/structured-output)
 
 ## Phạm vi đã biên soạn

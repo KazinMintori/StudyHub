@@ -89,7 +89,7 @@ const optEdge = computed(() => {
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Hình học của quy hoạch tuyến tính: đẩy đường mức theo hướng giảm">
+  <figure class="study-lab" aria-label="Hình học của quy hoạch tuyến tính: Đẩy đường mức theo hướng giảm">
     <p class="lab-title">Đẩy đường mức theo hướng −c</p>
     <p class="lab-lead">Mỗi đường nét đứt là một đường mức cᵀx = hằng số, vuông góc với c. Cực tiểu cᵀx nghĩa là đẩy đường mức theo hướng mũi tên −c cho tới khi nó sắp rời khỏi miền khả thi.</p>
     <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Miền khả thi, các đường mức của hàm mục tiêu, hướng giảm và điểm hoặc cạnh tối ưu">

@@ -1,6 +1,6 @@
 <!-- Nguồn: trang in 1, trang PDF 21; lời mở chương, câu hỏi ảnh và 10 mục tiêu. -->
 
-![Ảnh mở chương: lốc xoáy hình thành dưới một đám mây dông](img/young-01/mo-chuong-loc-xoay.png)
+![Ảnh mở chương: Lốc xoáy hình thành dưới một đám mây dông](img/young-01/mo-chuong-loc-xoay.png)
 
 ::: exercise Câu hỏi mở chương của sách
 Lốc xoáy được sinh ra từ những cơn dông mạnh, vì vậy việc dự đoán đường đi của dông rất cần thiết. Nếu một cơn dông di chuyển với tốc độ $15\,\mathrm{km/h}$ theo hướng lệch $37^\circ$ về phía bắc so với hướng đông, trong $2.0\,\mathrm h$ nó đi được bao xa về phía bắc?
@@ -27,4 +27,4 @@ Trong chương này, bạn sẽ học:
 7. **Mục 1.7:** Sự khác nhau giữa đại lượng vô hướng và vector, cùng cách cộng và trừ vector bằng hình học.
 8. **Mục 1.8:** Thành phần của vector là gì và cách sử dụng chúng trong tính toán.
 9. **Mục 1.9:** Vector đơn vị là gì và cách kết hợp chúng với các thành phần để biểu diễn vector.
-10. **Mục 1.10:** Hai phép nhân vector: tích vô hướng và tích có hướng.
+10. **Mục 1.10:** Hai phép nhân vector: Tích vô hướng và tích có hướng.

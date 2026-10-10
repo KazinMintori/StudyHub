@@ -12,7 +12,7 @@
 
 [translation-examples.jsonl](translation-examples.jsonl) là bộ ví dụ nhỏ do dự án viết, không phải corpus thu từ lớp học hoặc dữ liệu đủ để huấn luyện một model. Các trường là định dạng nội bộ, không phải payload API của nhà cung cấp. Mỗi record có `source_en`, `context`, `literal_bad`, `technical_vi`, `lecture_vi`, `term_ids`, `why_bad`, `meaning_that_must_be_preserved`, `provenance`, `review_status` và `split`.
 
-Tên `literal_bad` là bản cần sửa trong ngữ cảnh đó: có thể sai nghĩa hoặc chỉ gượng. `why_bad` phải phân biệt hai trường hợp. Câu Việt trôi chảy nhưng sai toán không được chọn làm đáp án tốt. Không tạo cặp preference từ ví dụ “tìm hướng cập nhật bằng điều kiện dừng” khi chưa có mô hình bài toán con cho phép thao tác đó.
+Tên `literal_bad` là bản cần sửa trong ngữ cảnh đó: Có thể sai nghĩa hoặc chỉ gượng. `why_bad` phải phân biệt hai trường hợp. Câu Việt trôi chảy nhưng sai toán không được chọn làm đáp án tốt. Không tạo cặp preference từ ví dụ “tìm hướng cập nhật bằng điều kiện dừng” khi chưa có mô hình bài toán con cho phép thao tác đó.
 
 ## Khi thu corpus thật
 

@@ -1,11 +1,11 @@
 ---
-title: "Điều chuẩn: ridge và lasso"
+title: "Điều chuẩn: Ridge và lasso"
 wikiTerm: dieu-chuan
 prev: false
 next: false
 ---
 
-# Điều chuẩn: ridge và lasso
+# Điều chuẩn: Ridge và lasso
 
 Điều chuẩn thêm vào hàm mục tiêu một số hạng phạt độ lớn của tham số. Ridge, hay điều chuẩn Tikhonov, cực tiểu $\|Ax - b\|_2^2 + \mu\|x\|_2^2$ và có nghiệm $(A^TA + \mu I)^{-1}A^Tb$, luôn tồn tại và duy nhất khi $\mu > 0$. Lasso dùng $\mu\|x\|_1$ thay cho $\mu\|x\|_2^2$ và cho nghiệm có thành phần bằng đúng 0. Cả hai là vô hướng hóa của một bài toán hai mục tiêu giữa sai số và độ lớn tham số.
 

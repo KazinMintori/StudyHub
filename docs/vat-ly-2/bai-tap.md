@@ -24,7 +24,7 @@ Bài tập được dịch nguyên vẹn trong chương tương ứng, giữ s�
 - [Chương 35: Giao thoa](/vat-ly-2/bai-giang/15-giao-thoa.md).
 - [Chương 36: Nhiễu xạ](/vat-ly-2/bai-giang/16-nhieu-xa.md).
 - [Chương 37: Thuyết tương đối](/vat-ly-2/bai-giang/17-thuyet-tuong-doi.md).
-- [Chương 38: Photon: tính hạt của sóng ánh sáng](/vat-ly-2/bai-giang/18-photon.md).
+- [Chương 38: Photon: Tính hạt của sóng ánh sáng](/vat-ly-2/bai-giang/18-photon.md).
 - [Chương 39: Tính sóng của hạt](/vat-ly-2/bai-giang/19-song-vat-chat.md).
 - [Chương 40: Cơ học lượng tử I: Hàm sóng](/vat-ly-2/bai-giang/20-ham-song-schrodinger.md).
 - [Chương 41: Cơ học lượng tử II: Cấu trúc nguyên tử](/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu.md).

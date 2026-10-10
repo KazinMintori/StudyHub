@@ -36,7 +36,7 @@ Từ những đơn vị cơ bản, ta có thể lập các đơn vị dẫn xu�
 
 ### Hình 1.3 — Phép đo dùng để xác định giây và mét
 
-![Hình 1.3 nguyên tác: chuyển trạng thái nguyên tử cesium-133 và quãng đường ánh sáng truyền trong một giây](img/young-01/hinh-1-3.png)
+![Hình 1.3 nguyên tác: Chuyển trạng thái nguyên tử cesium-133 và quãng đường ánh sáng truyền trong một giây](img/young-01/hinh-1-3.png)
 
 **(a) Đo giây.** Bức xạ vi sóng có tần số chính xác $9\,192\,631\,770$ chu kỳ mỗi giây làm electron ngoài cùng của nguyên tử cesium-133 đảo hướng spin, theo cách mô tả trong hình. Đồng hồ nguyên tử dùng hiện tượng này để điều chỉnh vi sóng tới đúng tần số, rồi đếm một giây cho mỗi $9\,192\,631\,770$ chu kỳ. Các nhãn trong hình lần lượt chỉ bức xạ vi sóng, nguyên tử cesium-133 và electron ngoài cùng.
 
@@ -46,7 +46,7 @@ Các phép đo dùng để xác định khoảng thời gian một giây và chi
 
 ### Hình 1.4 — Chuẩn kilôgam cũ
 
-![Hình 1.4 nguyên tác: khối trụ kim loại chuẩn khối lượng được bảo quản dưới các chụp kính](img/young-01/hinh-1-4.png)
+![Hình 1.4 nguyên tác: Khối trụ kim loại chuẩn khối lượng được bảo quản dưới các chụp kính](img/young-01/hinh-1-4.png)
 
 Trước năm 2018, khối trụ kim loại được dùng để xác định giá trị kilôgam. Khối trụ trong ảnh là bản sao của mẫu tại Pháp, được Viện Tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ lưu giữ. Ngày nay, kilôgam được định nghĩa qua một hằng số cơ bản của tự nhiên.
 
@@ -102,22 +102,22 @@ Sách dùng SI cho mọi ví dụ và bài tập, nhưng đôi lúc ghi thêm gi
 
 ### Hình 1.5 — Một số độ dài điển hình trong vũ trụ
 
-![Hình 1.5 nguyên tác: các thang độ dài từ vũ trụ quan sát được đến hạt nhân nguyên tử](img/young-01/hinh-1-5.png)
+![Hình 1.5 nguyên tác: Các thang độ dài từ vũ trụ quan sát được đến hạt nhân nguyên tử](img/young-01/hinh-1-5.png)
 
 Các nhãn từ (a) đến (g) lần lượt là:
 
-- **(a)** $10^{26}\,\mathrm m$: giới hạn vũ trụ quan sát được.
-- **(b)** $10^{11}\,\mathrm m$: khoảng cách tới Mặt Trời.
-- **(c)** $10^7\,\mathrm m$: đường kính Trái Đất.
-- **(d)** $1\,\mathrm m$: kích thước con người.
-- **(e)** $10^{-5}\,\mathrm m$: đường kính hồng cầu.
-- **(f)** $10^{-10}\,\mathrm m$: bán kính nguyên tử.
-- **(g)** $10^{-14}\,\mathrm m$: bán kính hạt nhân nguyên tử.
+- **(a)** $10^{26}\,\mathrm m$: Giới hạn vũ trụ quan sát được.
+- **(b)** $10^{11}\,\mathrm m$: Khoảng cách tới Mặt Trời.
+- **(c)** $10^7\,\mathrm m$: Đường kính Trái Đất.
+- **(d)** $1\,\mathrm m$: Kích thước con người.
+- **(e)** $10^{-5}\,\mathrm m$: Đường kính hồng cầu.
+- **(f)** $10^{-10}\,\mathrm m$: Bán kính nguyên tử.
+- **(g)** $10^{-14}\,\mathrm m$: Bán kính hạt nhân nguyên tử.
 
 Hình (f) là ảnh hiển vi quét xuyên hầm của các nguyên tử trên bề mặt tinh thể. Hình (g) là hình dung của họa sĩ.
 
 ### Hình 1.6 — Hai hệ đơn vị trên đồng hồ tốc độ
 
-![Hình 1.6 nguyên tác: đồng hồ tốc độ ô tô có thang kilômét trên giờ và dặm trên giờ](img/young-01/hinh-1-6.png)
+![Hình 1.6 nguyên tác: Đồng hồ tốc độ ô tô có thang kilômét trên giờ và dặm trên giờ](img/young-01/hinh-1-6.png)
 
 Nhiều vật dụng hằng ngày sử dụng đồng thời đơn vị SI và đơn vị Anh. Đồng hồ tốc độ của chiếc xe sản xuất tại Hoa Kỳ trong hình có thang trong tính bằng kilômét trên giờ và thang ngoài tính bằng dặm trên giờ.

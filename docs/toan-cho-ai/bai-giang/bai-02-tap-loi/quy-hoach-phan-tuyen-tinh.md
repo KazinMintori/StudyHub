@@ -7,7 +7,7 @@ title: "Quy hoạch phân tuyến tính"
 description: "Bài toán cực tiểu tỉ số của hai hàm affine trên đa diện, hình học của các tập mức là những tia quay quanh một điểm chung, phép đổi biến đưa bài toán về đúng một LP cùng chứng minh hai chiều và trường hợp z = 0, trực giác tỉ số trung bình và tỉ số biên, bài toán phân tuyến tính tổng quát và mô hình tăng trưởng von Neumann."
 ---
 
-Nhiều quyết định được đánh giá bằng một tỉ số chứ không bằng một tổng: lợi ích trên chi phí, sản lượng trên vốn, lợi nhuận trên rủi ro. Khi cả tử số lẫn mẫu số đều là hàm affine của biến quyết định, ta có một **quy hoạch phân tuyến tính**. Hàm mục tiêu không lồi, nên thoạt nhìn bài toán có vẻ khó hơn LP. [Chủ đề về hàm tựa lồi](./toi-uu-tua-loi.md) đã cho một cách giải bằng chia đôi. Trang này cho một cách tốt hơn: một phép đổi biến biến bài toán thành đúng một LP, không cần lặp.
+Nhiều quyết định được đánh giá bằng một tỉ số chứ không bằng một tổng: Lợi ích trên chi phí, sản lượng trên vốn, lợi nhuận trên rủi ro. Khi cả tử số lẫn mẫu số đều là hàm affine của biến quyết định, ta có một **quy hoạch phân tuyến tính**. Hàm mục tiêu không lồi, nên thoạt nhìn bài toán có vẻ khó hơn LP. [Chủ đề về hàm tựa lồi](./toi-uu-tua-loi.md) đã cho một cách giải bằng chia đôi. Trang này cho một cách tốt hơn: Một phép đổi biến biến bài toán thành đúng một LP, không cần lặp.
 
 ## 1. Bài toán
 
@@ -28,9 +28,9 @@ $$
 f(x) = \frac{x_1 + 2x_2 + 2}{x_1 + 0.5x_2 + 1},
 $$
 
-với các ràng buộc: hợp đồng buộc làm ít nhất một đơn vị sản phẩm thứ nhất, $x_1 \ge 1$, sản phẩm thứ hai không âm, tổng công suất $x_1 + x_2 \le 6$, và nguyên liệu cho sản phẩm thứ hai chỉ đủ $x_2 \le 4$. Miền khả thi là tứ giác có bốn đỉnh $(1, 0)$, $(6, 0)$, $(2, 4)$ và $(1, 4)$.
+với các ràng buộc: Hợp đồng buộc làm ít nhất một đơn vị sản phẩm thứ nhất, $x_1 \ge 1$, sản phẩm thứ hai không âm, tổng công suất $x_1 + x_2 \le 6$, và nguyên liệu cho sản phẩm thứ hai chỉ đủ $x_2 \le 4$. Miền khả thi là tứ giác có bốn đỉnh $(1, 0)$, $(6, 0)$, $(2, 4)$ và $(1, 4)$.
 
-## 2. Hình học: các tập mức quay quanh một điểm
+## 2. Hình học: Các tập mức quay quanh một điểm
 
 Tập mức $\{x : f(x) = t\}$ trong miền xác định là tập các điểm thỏa $c^Tx + d = t(e^Tx + f)$, tức
 
@@ -46,7 +46,7 @@ Với ví dụ của xưởng, tử số và mẫu số cùng bằng 0 tại $P 
 
 Hình ảnh này giải thích vì sao nghiệm vẫn nằm ở một đỉnh, như với LP. Các giá trị tại bốn đỉnh là $\tfrac32$, $\tfrac87$, $\tfrac{12}{5}$ và $\tfrac{11}{4}$. Vậy giá trị lớn nhất là $\tfrac{11}{4} = 2.75$ tại $(1, 4)$, và giá trị nhỏ nhất là $\tfrac87 \approx 1.143$ tại $(6, 0)$.
 
-## 3. Trực giác: tỉ số trung bình và tỉ số biên
+## 3. Trực giác: Tỉ số trung bình và tỉ số biên
 
 Vì sao nghiệm lại là $(1, 4)$, làm ít sản phẩm thứ nhất nhất có thể và nhiều sản phẩm thứ hai nhất có thể? Hãy so sánh tỉ số hiện tại với **tỉ số biên** của một hướng thay đổi. Nếu tăng $x$ theo hướng $v$ với $e^Tv > 0$, thì $f$ tăng khi và chỉ khi
 
@@ -54,7 +54,7 @@ $$
 \frac{c^Tv}{e^Tv} > f(x),
 $$
 
-vì đạo hàm của $f$ theo hướng $v$ cùng dấu với $c^Tv - f(x)\,e^Tv$. Tỉ số biên của sản phẩm thứ hai là $\tfrac{2}{0.5} = 4$, lớn hơn mọi giá trị của $f$ trên miền, nên thêm sản phẩm thứ hai luôn có lợi. Tỉ số biên của sản phẩm thứ nhất là $\tfrac11 = 1$, nhỏ hơn $f$ tại mọi điểm khả thi, nên bớt sản phẩm thứ nhất luôn có lợi. Quy tắc này quen thuộc với bất kỳ ai từng tính điểm trung bình: thêm một môn học có điểm cao hơn điểm trung bình hiện tại sẽ kéo điểm trung bình lên, và ngược lại.
+vì đạo hàm của $f$ theo hướng $v$ cùng dấu với $c^Tv - f(x)\,e^Tv$. Tỉ số biên của sản phẩm thứ hai là $\tfrac{2}{0.5} = 4$, lớn hơn mọi giá trị của $f$ trên miền, nên thêm sản phẩm thứ hai luôn có lợi. Tỉ số biên của sản phẩm thứ nhất là $\tfrac11 = 1$, nhỏ hơn $f$ tại mọi điểm khả thi, nên bớt sản phẩm thứ nhất luôn có lợi. Quy tắc này quen thuộc với bất kỳ ai từng tính điểm trung bình: Thêm một môn học có điểm cao hơn điểm trung bình hiện tại sẽ kéo điểm trung bình lên, và ngược lại.
 
 ## 4. Đổi biến để được một LP
 
@@ -78,11 +78,11 @@ $$
 
 với biến $(y, z)$. Lập luận tương đương cần hai chiều, và chiều thứ hai có một trường hợp đặc biệt.
 
-**Từ bài toán gốc sang LP.** Nếu $x$ khả thi thì cặp $(y, z)$ định nghĩa như trên khả thi cho LP: nhân $Gx \preceq h$ với $z > 0$ cho $Gy \preceq hz$, và $e^Ty + fz = z(e^Tx + f) = 1$. Hàm mục tiêu cũng bằng nhau, $c^Ty + dz = \tfrac{c^Tx + d}{e^Tx + f} = f_0(x)$. Vậy giá trị tối ưu của LP không lớn hơn giá trị tối ưu của bài toán gốc.
+**Từ bài toán gốc sang LP.** Nếu $x$ khả thi thì cặp $(y, z)$ định nghĩa như trên khả thi cho LP: Nhân $Gx \preceq h$ với $z > 0$ cho $Gy \preceq hz$, và $e^Ty + fz = z(e^Tx + f) = 1$. Hàm mục tiêu cũng bằng nhau, $c^Ty + dz = \tfrac{c^Tx + d}{e^Tx + f} = f_0(x)$. Vậy giá trị tối ưu của LP không lớn hơn giá trị tối ưu của bài toán gốc.
 
 **Từ LP về bài toán gốc.** Nếu $(y, z)$ khả thi cho LP với $z > 0$, thì $x = y/z$ khả thi cho bài toán gốc với cùng giá trị mục tiêu. Nếu $z = 0$, ta không chia được, nhưng khi đó $Gy \preceq 0$ và $Ay = 0$, nên $y$ là một hướng đi được mãi trong miền khả thi. Lấy một điểm khả thi $x_0$, mọi điểm $x_0 + \tau y$ với $\tau \ge 0$ đều khả thi, và khi $\tau \to \infty$, giá trị $f_0(x_0 + \tau y)$ tiến tới $c^Ty$, chính là giá trị của $(y, 0)$ trong LP. Vậy dù $z = 0$, giá trị của LP vẫn được xấp xỉ tùy ý bởi các điểm khả thi của bài toán gốc. Hai chiều gộp lại cho thấy hai bài toán có cùng giá trị tối ưu.
 
-Với ví dụ của xưởng, viết bài toán cực đại thành LP: cực đại $y_1 + 2y_2 + 2z$ với $-y_1 + z \le 0$, $-y_2 \le 0$, $y_1 + y_2 - 6z \le 0$, $y_2 - 4z \le 0$, $y_1 + 0.5y_2 + z = 1$ và $z \ge 0$. Một bộ giải LP trả về $(y_1, y_2, z) = (0.25, 1, 0.25)$ với giá trị $2.75$, và ta lấy lại $x = y/z = (1, 4)$. Không cần chia đôi, không cần thử đỉnh.
+Với ví dụ của xưởng, viết bài toán cực đại thành LP: Cực đại $y_1 + 2y_2 + 2z$ với $-y_1 + z \le 0$, $-y_2 \le 0$, $y_1 + y_2 - 6z \le 0$, $y_2 - 4z \le 0$, $y_1 + 0.5y_2 + z = 1$ và $z \ge 0$. Một bộ giải LP trả về $(y_1, y_2, z) = (0.25, 1, 0.25)$ với giá trị $2.75$, và ta lấy lại $x = y/z = (1, 4)$. Không cần chia đôi, không cần thử đỉnh.
 
 ## 5. Bài toán phân tuyến tính tổng quát
 
@@ -153,12 +153,12 @@ Một bộ giải trả về nghiệm $(y_1, y_2, z) = (0.2, 0.6, 0.4)$ cho LP s
 :::
 
 ::: solution
-Trường hợp thứ nhất có $z = 0.4 > 0$, nên $x^\star = y/z = (0.5, 1.5)$. Trường hợp thứ hai có $z = 0$: không có nghiệm $x^\star$ nào đạt giá trị tối ưu. Giá trị tối ưu chỉ được tiến tới khi đi từ một điểm khả thi ra vô cùng theo hướng $(0.5, 0)$, tức theo hướng trục $x_1$.
+Trường hợp thứ nhất có $z = 0.4 > 0$, nên $x^\star = y/z = (0.5, 1.5)$. Trường hợp thứ hai có $z = 0$: Không có nghiệm $x^\star$ nào đạt giá trị tối ưu. Giá trị tối ưu chỉ được tiến tới khi đi từ một điểm khả thi ra vô cùng theo hướng $(0.5, 0)$, tức theo hướng trục $x_1$.
 :::
 
 ## Tóm tắt
 
-Quy hoạch phân tuyến tính cực tiểu hay cực đại một tỉ số của hai hàm affine trên một đa diện. Hàm mục tiêu không lồi nhưng tựa tuyến tính: mỗi tập mức là một phần siêu phẳng, và trong mặt phẳng là một tia quay quanh điểm chung nơi tử và mẫu cùng bằng 0. Cả giá trị lớn nhất lẫn nhỏ nhất trên một đa diện bị chặn đều đạt tại đỉnh.
+Quy hoạch phân tuyến tính cực tiểu hay cực đại một tỉ số của hai hàm affine trên một đa diện. Hàm mục tiêu không lồi nhưng tựa tuyến tính: Mỗi tập mức là một phần siêu phẳng, và trong mặt phẳng là một tia quay quanh điểm chung nơi tử và mẫu cùng bằng 0. Cả giá trị lớn nhất lẫn nhỏ nhất trên một đa diện bị chặn đều đạt tại đỉnh.
 
 Phép đổi biến $y = x/(e^Tx + f)$, $z = 1/(e^Tx + f)$ chuẩn hóa mẫu số về 1 và biến bài toán thành đúng một LP. Từ nghiệm của LP, ta lấy lại $x = y/z$ khi $z > 0$. Khi $z = 0$, nghiệm của LP là một hướng đi ra vô cùng, và giá trị tối ưu của bài toán gốc không đạt. Với giá trị lớn nhất của nhiều tỉ số, phép đổi biến không còn dùng được, nhưng phương pháp chia đôi vẫn giải được bằng một dãy LP khả thi.
 

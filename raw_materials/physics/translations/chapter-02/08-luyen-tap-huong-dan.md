@@ -81,7 +81,7 @@ Từ sân thượng một tòa nhà, bạn ném một quả bóng rổ thẳng �
 
 ::: exercise VP2.8.3
 Bạn tung một quả táo thẳng đứng lên không trung lúc $t = 0$ với tốc độ đầu $5.50\,\mathrm{m/s}$. Bỏ qua sức cản không khí.
-**(a)** Quả táo sẽ đi qua điểm cao hơn tay bạn $1.30\,\mathrm m$ bao nhiêu lần: hai lần, một lần hay không lần nào? Nếu có, hãy tìm các thời điểm đó và nêu rõ chiều chuyển động của quả táo.
+**(a)** Quả táo sẽ đi qua điểm cao hơn tay bạn $1.30\,\mathrm m$ bao nhiêu lần: Hai lần, một lần hay không lần nào? Nếu có, hãy tìm các thời điểm đó và nêu rõ chiều chuyển động của quả táo.
 **(b)** Trả lời câu hỏi tương tự đối với độ cao $1.80\,\mathrm m$ phía trên điểm ném.
 :::
 
@@ -96,7 +96,7 @@ Một quả cam được ném thẳng đứng lên cao từ trạng thái nghỉ
 ## Bài toán tổng hợp — Cú rơi của siêu anh hùng
 
 ::: exercise Bài toán tổng hợp
-Trong một phân cảnh giải cứu kịch tính, siêu anh hùng Green Lantern bước khỏi mép sân thượng của một tòa nhà chọc trời và rơi tự do từ trạng thái nghỉ xuống mặt đất. Dữ liệu ghi hình cho thấy: **trong đúng $1.00\,\mathrm s$ cuối cùng của cú rơi, anh đã vượt qua một nửa tổng chiều cao của tòa nhà** (Hình 2.30). Hãy xác định chiều cao $h$ của tòa nhà đó. Bỏ qua sức cản của không khí.
+Trong một phân cảnh giải cứu kịch tính, siêu anh hùng Green Lantern bước khỏi mép sân thượng của một tòa nhà chọc trời và rơi tự do từ trạng thái nghỉ xuống mặt đất. Dữ liệu ghi hình cho thấy: **Trong đúng $1.00\,\mathrm s$ cuối cùng của cú rơi, anh đã vượt qua một nửa tổng chiều cao của tòa nhà** (Hình 2.30). Hãy xác định chiều cao $h$ của tòa nhà đó. Bỏ qua sức cản của không khí.
 :::
 
 ![Hình 2.30: Green Lantern rơi tự do từ đỉnh tòa nhà, vượt qua nửa chiều cao sau trong 1.00 giây](img/young-02/hinh-2-30.png)

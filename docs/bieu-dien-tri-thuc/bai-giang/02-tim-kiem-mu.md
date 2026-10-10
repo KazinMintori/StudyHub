@@ -58,7 +58,7 @@ flowchart TD
 
 ## 2.2 Đồ thị mẫu dùng xuyên suốt bài học
 
-Để so sánh công bằng và trực quan sức mạnh của từng giải thuật, chúng ta sử dụng một đồ thị trạng thái mẫu có trọng số cố định: trạng thái ban đầu là $S$, đích cần đến là $G$.
+Để so sánh công bằng và trực quan sức mạnh của từng giải thuật, chúng ta sử dụng một đồ thị trạng thái mẫu có trọng số cố định: Trạng thái ban đầu là $S$, đích cần đến là $G$.
 
 ```mermaid
 flowchart TD
@@ -85,7 +85,7 @@ Con số $7$ này chính là "thước đo chân lý". Chúng ta hãy xem từng
 
 ### Trực giác cơ chế
 
-Hãy hình dung bạn thả một giọt mực vào ly nước tĩnh lặng: vết mực lan dần thành từng vòng tròn đồng tâm cách đều nhau theo thời gian. BFS hoạt động theo đúng cơ chế đó: nó quét sạch tất cả các nút ở độ sâu $d$ trước khi chạm vào bất kỳ nút nào ở độ sâu $d+1$.
+Hãy hình dung bạn thả một giọt mực vào ly nước tĩnh lặng: Vết mực lan dần thành từng vòng tròn đồng tâm cách đều nhau theo thời gian. BFS hoạt động theo đúng cơ chế đó: Nó quét sạch tất cả các nút ở độ sâu $d$ trước khi chạm vào bất kỳ nút nào ở độ sâu $d+1$.
 
 Để hiện thực hóa trật tự này, BFS sử dụng một hàng đợi vào-trước-ra-trước (**FIFO Queue**). Mỗi khi một nút được lấy ra khỏi đầu hàng đợi, tất cả các nút lân cận chưa từng được khám phá của nó sẽ được đưa vào cuối hàng đợi.
 
@@ -117,7 +117,7 @@ flowchart TD
 
 ### Quá trình duyệt từng bước trên đồ thị mẫu
 
-Quy ước thứ tự duyệt khi có nhiều lựa chọn: ưu tiên đỉnh theo thứ tự chữ cái ($A$ trước $B$).
+Quy ước thứ tự duyệt khi có nhiều lựa chọn: Ưu tiên đỉnh theo thứ tự chữ cái ($A$ trước $B$).
 
 | Lượt | Đỉnh lấy ra | Tập đỉnh kề sinh ra | Hàng đợi FIFO sau lượt | Ghi chú |
 |:---:|:---:|:---|:---|:---|
@@ -152,7 +152,7 @@ Một cách người ta hay dùng trong thực tế để kiểm tra nhanh xem c
 
 ### Trực giác cơ chế
 
-Nếu BFS là giọt mực lan đều, thì DFS giống như một người thám hiểm đi trong mê cung theo nguyên tắc: **luôn rẽ trái ở mọi ngã rẽ cho đến khi đụng ngõ cụt**, chỉ khi không còn đường đi tiếp mới chịu quay lui (backtracking) lại ngã ba gần nhất để thử hướng rẽ khác.
+Nếu BFS là giọt mực lan đều, thì DFS giống như một người thám hiểm đi trong mê cung theo nguyên tắc: **Luôn rẽ trái ở mọi ngã rẽ cho đến khi đụng ngõ cụt**, chỉ khi không còn đường đi tiếp mới chịu quay lui (backtracking) lại ngã ba gần nhất để thử hướng rẽ khác.
 
 DFS sử dụng ngăn xếp vào-sau-ra-trước (**LIFO Stack**), thường được cài đặt trực tiếp thông qua kỹ thuật **đệ quy**.
 
@@ -265,7 +265,7 @@ Chúng ta đứng trước một nghịch lý lớn:
 - **BFS:** Tìm được đường tối ưu về số bước, nhưng **bộ nhớ RAM bùng nổ theo hàm mũ**, nhanh chóng làm tràn máy.
 - **DFS:** Bộ nhớ tuyến tính cực kỳ thanh thoát, nhưng **không tối ưu** và có thể **lạc vô tận** trong nhánh sâu.
 
-Liệu có giải pháp nào mang trọn vẹn ưu điểm của cả hai: vừa tốn ít bộ nhớ như DFS, lại vừa đảm bảo tìm được lời giải nông nhất như BFS?
+Liệu có giải pháp nào mang trọn vẹn ưu điểm của cả hai: Vừa tốn ít bộ nhớ như DFS, lại vừa đảm bảo tìm được lời giải nông nhất như BFS?
 Nhà khoa học máy tính Richard Korf đã đưa ra câu trả lời xuất sắc: **Tìm kiếm sâu dần (Iterative Deepening Search - IDS)**.
 
 ```mermaid
@@ -456,114 +456,9 @@ vector<int> iterativeDeepeningSearch(int start, int goal, const Graph& graph, in
 
 ## Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài tập 1: Lập bảng so sánh vết duyệt BFS, DFS và UCS trên đồ thị có trọng số
-**Đề bài:**
-Cho không gian trạng thái biểu diễn bởi đồ thị có hướng với đỉnh xuất phát $S$ và đỉnh đích $G$:
-- Từ $S$ có cạnh tới $A$ (chi phí 2) và tới $B$ (chi phí 5).
-- Từ $A$ có cạnh tới $B$ (chi phí 1) và tới $C$ (chi phí 4).
-- Từ $B$ có cạnh tới $G$ (chi phí 6).
-- Từ $C$ có cạnh tới $G$ (chi phí 1).
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-Giả định khi các đỉnh có cùng mức ưu tiên thì thứ tự duyệt theo bảng chữ cái ($A$ trước $B$).
-1. Hãy xác định đường đi và tổng chi phí tìm được theo thuật toán BFS (xét đồ thị không trọng số, mỗi bước tính 1 cạnh).
-2. Hãy xác định đường đi và tổng chi phí tìm được theo thuật toán DFS (duyệt nhánh chữ cái đứng trước).
-3. Hãy lập bảng mô phỏng từng bước thuật toán UCS (Uniform-Cost Search) và rút ra đường đi tối ưu kèm tổng chi phí.
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
+:::
 
-**Phân tích & Hướng dẫn giải:**
-1. **Thuật toán BFS:**
-   - BFS duyệt theo số cạnh tăng dần từ gốc:
-     + Tầng 0: $\{S\}$.
-     + Tầng 1: $\{A, B\}$.
-     + Tầng 2: Từ $A$ sinh $\{B, C\}$; từ $B$ sinh $\{G\}$.
-   - Đích $G$ xuất hiện đầu tiên qua nhánh $S \to B \to G$ với độ dài 2 cạnh.
-   - Tổng chi phí thực tế của đường đi này:
-     $$
-     \text{cost}(S \to B \to G) = 5 + 6 = 11
-     $$
-2. **Thuật toán DFS:**
-   - DFS ưu tiên đi sâu nhánh chữ cái nhỏ trước:
-     + Xuất phát từ $S$, chọn nhánh $A$.
-     + Từ $A$, chọn nhánh $B$ (vì $B$ đứng trước $C$).
-     + Từ $B$, đi tiếp tới $G$.
-   - Đường đi tìm được:
-     $$
-     S \to A \to B \to G, \quad \text{Tổng chi phí} = 2 + 1 + 6 = 9
-     $$
-3. **Thuật toán UCS:**
-   - Bảng theo dõi hàng đợi ưu tiên:
-     + Khởi tạo: Hàng đợi $= [(S, 0)]$, tập đóng $= \emptyset$.
-     + Bước 1: Rút $S$ ($g=0$). Mở rộng $A$ ($g=2$), $B$ ($g=5$). Hàng đợi: $[(A, 2), (B, 5)]$.
-     + Bước 2: Rút $A$ ($g=2$). Mở rộng $B$ qua $A$ với $g=2+1=3 < 5$ (cập nhật $B$), mở rộng $C$ với $g=2+4=6$. Hàng đợi: $[(B, 3), (C, 6)]$.
-     + Bước 3: Rút $B$ ($g=3$). Mở rộng $G$ với $g=3+6=9$. Hàng đợi: $[(C, 6), (G, 9)]$.
-     + Bước 4: Rút $C$ ($g=6$). Mở rộng $G$ qua $C$ với $g=6+1=7 < 9$ (cập nhật $G$). Hàng đợi: $[(G, 7)]$.
-     + Bước 5: Rút $G$ ($g=7$). Chạm đích và dừng lại.
-   - Đường đi tối ưu toàn cục:
-     $$
-     S \to A \to C \to G, \quad \text{Tổng chi phí tối ưu} = 2 + 4 + 1 = 7
-     $$
-
----
-
-### Bài tập 2: Tính toán tỷ lệ chi phí duyệt lặp của IDS so với BFS
-**Đề bài:**
-Cho cây tìm kiếm đều với hệ số rẽ nhánh $b = 10$, lời giải nằm ở độ sâu $d = 5$.
-1. Tính số nút được sinh ra bởi BFS ở độ sâu $d$.
-2. Tính tổng số nút được sinh ra bởi thuật toán tìm kiếm sâu dần (IDS) khi lặp từ độ sâu $0$ đến $d$.
-3. Khai triển công thức tổng quát và tính tỷ số giữa số nút duyệt bởi IDS so với BFS. Từ đó rút ra kết luận về tính khả thi trong thực tế của IDS.
-
-**Phân tích & Hướng dẫn giải:**
-1. **Số nút sinh ra bởi BFS:**
-   - Ở độ sâu $d = 5$, tổng số nút sinh ra trên toàn bộ cây tìm kiếm được tính theo tổng cấp số nhân:
-     $$
-     \begin{aligned}
-     N_{\text{BFS}} &= 1 + b + b^2 + b^3 + \dots + b^d \\
-     &= 1 + 10 + 10^2 + 10^3 + 10^4 + 10^5 \\
-     &= 111{,}111 \text{ nút}
-     \end{aligned}
-     $$
-2. **Số nút sinh ra bởi IDS:**
-   - Ở độ sâu giới hạn $k$ ($0 \le k \le d$), nút gốc được duyệt lại $d+1$ lần, các nút ở tầng 1 được duyệt lại $d$ lần, tổng quát nút ở tầng $i$ được duyệt lại $d - i + 1$ lần:
-     $$
-     \begin{aligned}
-     N_{\text{IDS}} &= (d + 1) \cdot 1 + d \cdot b + (d - 1) \cdot b^2 + \dots + 1 \cdot b^d \\
-     &= 6 \cdot 1 + 5 \cdot 10 + 4 \cdot 100 + 3 \cdot 1{,}000 + 2 \cdot 10{,}000 + 1 \cdot 100{,}000 \\
-     &= 6 + 50 + 400 + 3{,}000 + 20{,}000 + 100{,}000 \\
-     &= 123{,}456 \text{ nút}
-     \end{aligned}
-     $$
-3. **So sánh và tỷ lệ lãng phí:**
-   - Tỷ số khối lượng tính toán giữa IDS và BFS:
-     $$
-     \frac{N_{\text{IDS}}}{N_{\text{BFS}}} = \frac{123{,}456}{111{,}111} \approx 1.111
-     $$
-   - Như vậy, việc duyệt lặp ở các tầng trên chỉ làm tăng tổng số thao tác thêm khoảng $11\%$. Ngược lại, lợi ích thu về là vô cùng to lớn: bộ nhớ của BFS đòi hỏi $\mathcal{O}(b^d) = 10^5$ phần tử trong RAM, trong khi IDS chỉ cần duy trì ngăn xếp đệ quy $\mathcal{O}(b \cdot d) = 10 \times 5 = 50$ phần tử. Do đó, IDS là lựa chọn ưu việt hàng đầu cho không gian tìm kiếm lớn có độ sâu chưa biết trước.
-
----
-
-### Bài tập 3: Cơ chế tìm kiếm hai phía (Bidirectional Search)
-**Đề bài:**
-Trình bày nguyên lý hoạt động của thuật toán tìm kiếm hai phía (Bidirectional Search). Tại sao độ phức tạp thời gian giảm từ $\mathcal{O}(b^d)$ xuống $\mathcal{O}(b^{d/2})$, và những khó khăn kỹ thuật nào phát sinh khi cài đặt thuật toán này trong thực tế?
-
-**Phân tích & Hướng dẫn giải:**
-1. **Nguyên lý hoạt động:**
-   - Thay vì chỉ tìm kiếm xuôi từ trạng thái xuất phát $S$ tới đích $G$, thuật toán triển khai đồng thời hai luồng tìm kiếm:
-     + Một luồng đi xuôi từ $S$ bằng BFS hoặc UCS.
-     + Một luồng đi ngược từ $G$ về $S$.
-   - Thuật toán dừng lại ngay khi biên giới (Frontier) của hai luồng gặp nhau tại một trạng thái trung gian chung.
-2. **Cơ sở giảm độ phức tạp:**
-   - Mỗi luồng chỉ cần duyệt tới độ sâu $d/2$.
-   - Số nút tối đa cần mở rộng là:
-     $$
-     b^{d/2} + b^{d/2} = 2 \cdot b^{d/2} \ll b^d
-     $$
-   - Ví dụ với $b = 10$ và $d = 6$:
-     + Tìm kiếm một phía đòi hỏi mở rộng khoảng $10^6 = 1{,}000{,}000$ nút.
-     + Tìm kiếm hai phía chỉ cần mở rộng $2 \times 10^3 = 2{,}000$ nút, giảm khối lượng tính toán tới 500 lần.
-3. **Thách thức kỹ thuật khi cài đặt:**
-   - Cần tính được hàm toán tử ngược (predecessor function) để duyệt từ trạng thái con về trạng thái cha, điều này rất khó trong các bài toán có toán tử một chiều.
-   - Cần cấu trúc dữ liệu bảng băm (Hash Table) hiệu quả để kiểm tra giao điểm giữa hai biên giới ở mỗi bước mở rộng đỉnh.
-   - Nếu bài toán có nhiều trạng thái đích (tập đích), luồng ngược phải khởi tạo với toàn bộ tập đích, làm phình to biên giới ngược ngay từ đầu.
-
----
-
-[← Quay lại Mục lục](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 3: Tìm kiếm kinh nghiệm →](/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md)

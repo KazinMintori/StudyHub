@@ -4,12 +4,12 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: python-basics](https://wesmckinney.com/book/python-basics)
-- [Python for Data Analysis: python-builtin](https://wesmckinney.com/book/python-builtin)
+- [Python for Data Analysis: Python-basics](https://wesmckinney.com/book/python-basics)
+- [Python for Data Analysis: Python-builtin](https://wesmckinney.com/book/python-builtin)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-02-python-co-ban.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-02-python-co-ban.html)
 
 ## Phạm vi đã biên soạn
 

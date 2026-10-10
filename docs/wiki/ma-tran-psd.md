@@ -23,7 +23,7 @@ Ma trận
 
 $$P=\begin{bmatrix}1&2\\2&1\end{bmatrix}$$
 
-không PSD: với $v=(1,-1)^T$, ta được $v^TPv=-2$. Ngược lại, $A^TA$ luôn PSD vì $v^TA^TAv=\|Av\|_2^2\ge0$.
+không PSD: Với $v=(1,-1)^T$, ta được $v^TPv=-2$. Ngược lại, $A^TA$ luôn PSD vì $v^TA^TAv=\|Av\|_2^2\ge0$.
 
 ## Khi nào cần dùng?
 
@@ -35,7 +35,7 @@ Ma trận diag(1,0) là PSD hay PD?
 
 <details><summary>Xem đáp án</summary>
 
-PSD, không PD: với $v=(0,1)$ khác 0, dạng toàn phương bằng 0.
+PSD, không PD: Với $v=(0,1)$ khác 0, dạng toàn phương bằng 0.
 
 </details>
 

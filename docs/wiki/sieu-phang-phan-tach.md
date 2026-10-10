@@ -7,7 +7,7 @@ next: false
 
 # Siêu phẳng phân tách và siêu phẳng tựa
 
-Hai tập lồi rời nhau luôn có một siêu phẳng phân tách: tồn tại $a \ne 0$ và b với $a^T x \le b$ trên tập này và $a^T x \ge b$ trên tập kia. Siêu phẳng tựa của tập C tại điểm biên $x_0$ là siêu phẳng đi qua $x_0$ sao cho C nằm trọn một phía.
+Hai tập lồi rời nhau luôn có một siêu phẳng phân tách: Tồn tại $a \ne 0$ và b với $a^T x \le b$ trên tập này và $a^T x \ge b$ trên tập kia. Siêu phẳng tựa của tập C tại điểm biên $x_0$ là siêu phẳng đi qua $x_0$ sao cho C nằm trọn một phía.
 
 <WikiUsage />
 

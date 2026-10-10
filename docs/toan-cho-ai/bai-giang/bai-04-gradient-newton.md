@@ -39,7 +39,7 @@ $$
 \nabla f(z)^T d < 0.
 $$
 
-Khi điều kiện này thỏa mãn, giải tích bảo đảm rằng luôn tồn tại một bước nhảy $t > 0$ đủ nhỏ sao cho $f(z + td) < f(z)$. Cần phân biệt rõ: độ dời thực tế trong không gian là vector $td$, và khoảng cách hình học di chuyển là $t\|d\|_2$.
+Khi điều kiện này thỏa mãn, giải tích bảo đảm rằng luôn tồn tại một bước nhảy $t > 0$ đủ nhỏ sao cho $f(z + td) < f(z)$. Cần phân biệt rõ: Độ dời thực tế trong không gian là vector $td$, và khoảng cách hình học di chuyển là $t\|d\|_2$.
 
 Thuật toán **Gradient Descent** (Phương pháp dốc đứng) lựa chọn hướng di chuyển trực tiếp ngược chiều gradient: $d = -\nabla f(z)$. Khi gradient khác 0, ta có:
 
@@ -134,7 +134,7 @@ Nếu điểm thử nghiệm $z + td$ rơi ra ngoài miền xác định ($\oper
 
 ## 3. Phương pháp Newton và Mô hình xấp xỉ bậc hai
 
-Tại sao Gradient Descent thường di chuyển ziczac rất chậm chạp trong các hẻm núi hẹp? Vì Gradient Descent là một phương pháp bậc nhất: nó coi địa hình mọi hướng đều dốc phẳng như nhau và hoàn toàn mù tịt về độ cong.
+Tại sao Gradient Descent thường di chuyển ziczac rất chậm chạp trong các hẻm núi hẹp? Vì Gradient Descent là một phương pháp bậc nhất: Nó coi địa hình mọi hướng đều dốc phẳng như nhau và hoàn toàn mù tịt về độ cong.
 
 **Phương pháp Newton** khắc phục triệt để nhược điểm này bằng cách sử dụng thông tin độ cong của ma trận Hessian $H = \nabla^2 f(z)$. Tại điểm hiện tại, phương pháp Newton dựng một mô hình xấp xỉ Taylor bậc hai theo vector độ dời $d$:
 
@@ -202,7 +202,7 @@ $$
 |f'''(x)| \le 2 [f''(x)]^{3/2} \quad \forall x \in \operatorname{dom} f.
 $$
 
-Vế trái đo lường tốc độ biến thiên của độ cong (đạo hàm bậc ba), còn vế phải là thang đo độ cong tại chính điểm khảo sát. Bất đẳng thức này phát biểu rằng: **độ cong của hàm số không được phép thay đổi quá đột ngột so với bản thân độ cong tại điểm đó**.
+Vế trái đo lường tốc độ biến thiên của độ cong (đạo hàm bậc ba), còn vế phải là thang đo độ cong tại chính điểm khảo sát. Bất đẳng thức này phát biểu rằng: **Độ cong của hàm số không được phép thay đổi quá đột ngột so với bản thân độ cong tại điểm đó**.
 
 Đối với hàm nhiều biến, hàm $f$ được gọi là tự tương hợp nếu hàm một biến thu hẹp $t \mapsto f(z + tv)$ là tự tương hợp trên mọi đường thẳng đi qua miền xác định.
 - Hàm toàn phương lồi là tự tương hợp vì đạo hàm bậc ba triệt tiêu: $f'''(x) = 0$.
@@ -268,7 +268,7 @@ $$
 
 ## 6. Bước Newton–KKT từ một Điểm Khởi tạo Chưa Khả thi (Infeasible Start)
 
-Nếu ta không có sẵn một điểm khả thi thỏa mãn $Az = b$ thì sao? Ta có thể bắt đầu thuật toán từ một điểm $z$ bất kỳ và để phương pháp Newton đồng thời giải quyết hai nhiệm vụ: **tiến tới nghiệm tối ưu** và **khắc phục sai số ràng buộc**.
+Nếu ta không có sẵn một điểm khả thi thỏa mãn $Az = b$ thì sao? Ta có thể bắt đầu thuật toán từ một điểm $z$ bất kỳ và để phương pháp Newton đồng thời giải quyết hai nhiệm vụ: **Tiến tới nghiệm tối ưu** và **khắc phục sai số ràng buộc**.
 
 Định nghĩa hai vector phần dư của hệ KKT:
 - **Phần dư đối ngẫu** (Dual residual): $r_{\mathrm{dual}} = \nabla f(z) + A^T \nu$.

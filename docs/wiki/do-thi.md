@@ -19,7 +19,7 @@ BFS và DFS duyệt danh sách kề trong $O(|V|+|E|)$ nếu mỗi đỉnh chỉ
 
 ## Ví dụ
 
-$V = \{A, B, C\}$, cạnh $A \to  B$ giá 2 và $B \to  C$ giá 3: đường $A \to  B \to  C$ có tổng chi phí 5.
+$V = \{A, B, C\}$, cạnh $A \to  B$ giá 2 và $B \to  C$ giá 3: Đường $A \to  B \to  C$ có tổng chi phí 5.
 
 ## Khi nào cần dùng?
 

@@ -1,4 +1,4 @@
-# Hình trong bài giảng: hình phải làm công việc trí tuệ
+# Hình trong bài giảng: Hình phải làm công việc trí tuệ
 
 Đọc trước khi vẽ hình cho Notes hoặc dựng deck. Mục 0 dành cho trang web StudyHub; các mục 1–10 áp dụng cho mọi hình và chi tiết cho deck PDF/PPTX. Các kích thước là điểm khởi đầu cần kiểm tra trên bản render, không phải luật thay thế việc nhìn.
 
@@ -16,22 +16,22 @@ Chọn công cụ theo nhiệm vụ của hình:
 
 Quy tắc cho SVG của site:
 
-- `viewBox` cố định, `width="100%"`, không đặt chiều cao cứng. Ảnh co theo bề rộng cột (~343px trên điện thoại 375px), nên cỡ chữ hiển thị ≈ font-size × 343 / bề rộng viewBox: với viewBox 680, chữ 14 còn ~7px. `DiagramLightbox.vue` cho phép bấm để phóng to ảnh và sơ đồ Mermaid, nhưng nhãn cần đọc để hiểu bài nên lớn (≥ 14 trên viewBox 680, hoặc thu hẹp viewBox), ít chữ, và đặt phần giải thích dài trong văn bản Notes thay vì trong hình.
+- `viewBox` cố định, `width="100%"`, không đặt chiều cao cứng. Ảnh co theo bề rộng cột (~343px trên điện thoại 375px), nên cỡ chữ hiển thị ≈ font-size × 343 / bề rộng viewBox: Với viewBox 680, chữ 14 còn ~7px. `DiagramLightbox.vue` cho phép bấm để phóng to ảnh và sơ đồ Mermaid, nhưng nhãn cần đọc để hiểu bài nên lớn (≥ 14 trên viewBox 680, hoặc thu hẹp viewBox), ít chữ, và đặt phần giải thích dài trong văn bản Notes thay vì trong hình.
 - Site có chế độ sáng/tối. Hình có nền riêng (ví dụ `#f8fafc`) và chữ tối trên nền đó, hoặc dùng `currentColor` một cách có kiểm tra; không để chữ đen trên nền trong suốt rơi vào nền tối.
 - Font: `system-ui, -apple-system, 'Segoe UI', sans-serif` có dấu tiếng Việt; ký hiệu toán trong SVG viết bằng Unicode và chữ nghiêng (`font-style="italic"`) cho biến.
 - Tọa độ, số liệu, đường cong lấy từ phép tính xác định (script), không ước lượng bằng mắt.
 - Mỗi hình có alt mô tả điều cần nhận ra, và một câu trong Notes dẫn người đọc nhìn vào đúng phần của hình.
-- Vẽ lại hình giáo trình: giữ dữ liệu và cấu trúc, ghi “Vẽ lại theo Hình x.y, <nguồn>”.
+- Vẽ lại hình giáo trình: Giữ dữ liệu và cấu trúc, ghi “Vẽ lại theo Hình x.y, <nguồn>”.
 
-Kiểm tra: build site và mở trang ở bề rộng 375px và 1440px, cả hai chế độ màu nếu có thể. Nếu không mở được trình duyệt, ít nhất mở SVG đã render thành ảnh (ví dụ bằng công cụ chuyển SVG→PNG) và nhìn.
+Kiểm tra: Build site và mở trang ở bề rộng 375px và 1440px, cả hai chế độ màu nếu có thể. Nếu không mở được trình duyệt, ít nhất mở SVG đã render thành ảnh (ví dụ bằng công cụ chuyển SVG→PNG) và nhìn.
 
-## Phần dưới: thiết kế hình và deck nói chung
+## Phần dưới: Thiết kế hình và deck nói chung
 
 ## 1. Khóa hướng thiết kế từ tham chiếu phù hợp
 
 Ưu tiên mẫu người dùng, hình trong giáo trình, slide học tốt của cùng môn hoặc một tham chiếu học thuật phù hợp. Khi cần tìm thêm, chọn hình có nhiệm vụ giống bài đang dạy, thay vì mẫu quảng cáo đẹp nhưng khác chức năng.
 
-Ghi ngắn: điều giữ từ tham chiếu, điều điều chỉnh, điều không phù hợp lớp học. Quan sát cách đặt nhãn, phân cấp, mật độ, quan hệ chữ–hình và độ chính xác; không chỉ lấy màu.
+Ghi ngắn: Điều giữ từ tham chiếu, điều điều chỉnh, điều không phù hợp lớp học. Quan sát cách đặt nhãn, phân cấp, mật độ, quan hệ chữ–hình và độ chính xác; không chỉ lấy màu.
 
 Nếu không có tham chiếu, dùng hệ mặc định bên dưới và kiểm tra bằng một cụm giảng khó. Không dừng công việc chỉ để tìm một phong cách riêng.
 
@@ -129,7 +129,7 @@ Các phép thử:
 
 Kiểm kê mọi hình / bảng có ý nghĩa trong phạm vi, cùng số trang PDF và số trang in nếu khác nhau. Ghi ID, mục đích, nơi dùng, cách trích và việc dịch nhãn.
 
-Ưu tiên vector hoặc ảnh gốc; crop trang là phương án sau. DPI không tự bảo đảm đọc được: kiểm tra độ phân giải tại kích thước hiển thị cuối.
+Ưu tiên vector hoặc ảnh gốc; crop trang là phương án sau. DPI không tự bảo đảm đọc được: Kiểm tra độ phân giải tại kích thước hiển thị cuối.
 
 Giữ toàn bộ hình khi cần quan hệ giữa các phần. Khi phóng một bảng nhỏ, giữ vị trí của nó trong hình tổng thể và chỉ dẫn; không cắt trục hoặc legend để làm hình trông sạch.
 
@@ -160,7 +160,7 @@ Chép từ nguồn và đối chiếu từng ký hiệu; kiểm tra riêng giả
 
 Render bằng phương trình native, LaTeX hoặc MathML thành vector nếu phù hợp công cụ. Giữ nguồn biểu thức để sửa tiếp; không chỉ lưu bitmap cuối.
 
-Cho thấy cấu trúc khi đó là phần cần hiểu: một vector với các phần tử, ma trận có hàng / cột, họ ràng buộc có miền chỉ số. Không bắt mọi ký hiệu đơn giản đều có một sơ đồ phân rã.
+Cho thấy cấu trúc khi đó là phần cần hiểu: Một vector với các phần tử, ma trận có hàng / cột, họ ràng buộc có miền chỉ số. Không bắt mọi ký hiệu đơn giản đều có một sơ đồ phân rã.
 
 Màu, bracket hoặc đường dẫn có thể nối một số hạng với lời giải thích. Tránh dùng màu làm lẫn dấu toán. Một bước biến đổi cần lý do ở cạnh bước nếu người học chưa làm tự động.
 
@@ -170,17 +170,17 @@ Dùng ảnh gốc khi chứng cứ vật lý, lịch sử, nghệ thuật hoặc
 
 Minh họa tạo sinh có thể hữu ích cho tình huống giả định hoặc vật thể khó hình dung. Kiểm tra lỗi giải phẫu, cấu trúc, chữ và bối cảnh. Không trình bày ảnh đó như quan sát thật.
 
-Tạo chuyển động khi sự thay đổi theo thời gian là kiến thức đang học: quỹ đạo, vòng lặp, trạng thái hoặc phép biến đổi. Có điều khiển nhịp, điểm dừng và phương án giảm chuyển động khi định dạng hỗ trợ.
+Tạo chuyển động khi sự thay đổi theo thời gian là kiến thức đang học: Quỹ đạo, vòng lặp, trạng thái hoặc phép biến đổi. Có điều khiển nhịp, điểm dừng và phương án giảm chuyển động khi định dạng hỗ trợ.
 
 Trong PDF, dùng chuỗi khung chính có trạng thái đầu, bước quyết định và kết quả. Mỗi khung cần đọc được độc lập. Không hứa PDF có animation. Lưu asset đã chọn để tái sử dụng; bản render khóa không gọi lại bộ tạo ảnh.
 
 ## 10. Kiểm tra thẩm mỹ và khả năng đọc
 
-Xem contact sheet để tìm nhịp lặp: nhiều trang cùng tỉ lệ, cùng ô, cùng vị trí nhấn dù nhiệm vụ học khác nhau. Chỉ sửa lặp vô ích; một hình nền ổn định trong chuỗi suy luận giúp người học theo bài.
+Xem contact sheet để tìm nhịp lặp: Nhiều trang cùng tỉ lệ, cùng ô, cùng vị trí nhấn dù nhiệm vụ học khác nhau. Chỉ sửa lặp vô ích; một hình nền ổn định trong chuỗi suy luận giúp người học theo bài.
 
-Xem mọi trang ở kích thước trình chiếu. Phóng các công thức, bảng dày, hình nguồn và trang có chữ nhiều để kiểm tra chi tiết. Đọc trang như sinh viên: tiêu đề dẫn đến đâu, nhìn phần nào trước, nhãn nào ứng với đối tượng nào?
+Xem mọi trang ở kích thước trình chiếu. Phóng các công thức, bảng dày, hình nguồn và trang có chữ nhiều để kiểm tra chi tiết. Đọc trang như sinh viên: Tiêu đề dẫn đến đâu, nhìn phần nào trước, nhãn nào ứng với đối tượng nào?
 
-Kiểm tra thật trên output cuối: overflow, cắt glyph, đổi font, opacity, label collision, nguồn ảnh, đáp án bị lộ và thứ tự trang. Contact sheet một mình không đủ.
+Kiểm tra thật trên output cuối: Overflow, cắt glyph, đổi font, opacity, label collision, nguồn ảnh, đáp án bị lộ và thứ tự trang. Contact sheet một mình không đủ.
 
 Sau sửa, render lại các trang bị ảnh hưởng và kiểm tra liên kết / thứ tự nếu có tách hoặc gộp. Không báo “đã QA” khi chỉ chạy một phép đo tự động.
 

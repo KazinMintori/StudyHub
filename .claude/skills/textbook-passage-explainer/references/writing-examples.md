@@ -1,4 +1,4 @@
-# Ví dụ biên tập: rõ nghĩa, có nhịp và không phô
+# Ví dụ biên tập: Rõ nghĩa, có nhịp và không phô
 
 Các ví dụ dưới đây là câu minh họa do người soạn skill tạo. Dùng làm phép thử biên tập; không chèn chúng vào bài học nếu không khớp đoạn người dùng đưa.
 

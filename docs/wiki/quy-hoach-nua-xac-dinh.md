@@ -15,7 +15,7 @@ SDP cực tiểu một hàm tuyến tính với ràng buộc bất đẳng thứ
 
 **Dạng chuẩn.** Tương tự LP, SDP dạng chuẩn cực tiểu $\operatorname{tr}(CX)$ với $\operatorname{tr}(A_iX) = b_i$ và $X \succeq 0$. Nhiều LMI và bất đẳng thức tuyến tính gộp được thành một LMI khối chéo. Một LMI chéo là một hệ bất đẳng thức tuyến tính.
 
-**Ví dụ.** Ma trận tương quan của ba biến phải nửa xác định dương. Giữ $\rho_{23} = c$, tập các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\rho_{12}\rho_{13} \le 1 - c^2$. Cực tiểu trị riêng lớn nhất $\lambda_{\max}(A(x))$ là SDP: cực tiểu $t$ với $tI - A(x) \succeq 0$. Nguồn: Convex Optimization, §4.6.
+**Ví dụ.** Ma trận tương quan của ba biến phải nửa xác định dương. Giữ $\rho_{23} = c$, tập các cặp $(\rho_{12}, \rho_{13})$ hợp lệ là ellipse $\rho_{12}^2 + \rho_{13}^2 - 2c\rho_{12}\rho_{13} \le 1 - c^2$. Cực tiểu trị riêng lớn nhất $\lambda_{\max}(A(x))$ là SDP: Cực tiểu $t$ với $tI - A(x) \succeq 0$. Nguồn: Convex Optimization, §4.6.
 
 ## Ví dụ
 

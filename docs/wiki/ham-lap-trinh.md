@@ -7,7 +7,7 @@ next: false
 
 # Hàm trong lập trình
 
-Hàm gom một công việc có tên, nhận tham số và có thể trả kết quả bằng return. Tham số là tên trong định nghĩa. Đối số là giá trị truyền khi gọi. In ra màn hình bằng print khác trả kết quả: print chủ yếu tạo tác động phụ, còn return cho phép dùng kết quả trong biểu thức tiếp theo.
+Hàm gom một công việc có tên, nhận tham số và có thể trả kết quả bằng return. Tham số là tên trong định nghĩa. Đối số là giá trị truyền khi gọi. In ra màn hình bằng print khác trả kết quả: Print chủ yếu tạo tác động phụ, còn return cho phép dùng kết quả trong biểu thức tiếp theo.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Hàm có tác động phụ khác hàm chỉ trả kết quả. Đọc kiểu đ
 
 ## Ví dụ
 
-def double(x): return 2*x. Gọi double(3) nhận 6 và có thể gán cho biến.
+def double(x): Return 2*x. Gọi double(3) nhận 6 và có thể gán cho biến.
 
 ## Khi nào cần dùng?
 

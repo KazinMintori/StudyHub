@@ -804,7 +804,7 @@ export const physics2Course = {
     },
     {
       "slug": "18-photon",
-      "title": "Photon: tính hạt của sóng ánh sáng",
+      "title": "Photon: Tính hạt của sóng ánh sáng",
       "prerequisites": [
         "thuyet-tuong-doi-hep",
         "cong-nang-luong",

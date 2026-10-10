@@ -7,7 +7,7 @@ next: false
 
 # Siêu phẳng và nửa không gian
 
-Siêu phẳng là tập $\{x : a^T x = b\}$ với $a \ne 0$, còn nửa không gian là $\{x : a^T x \le b\}$. Vector a là pháp tuyến: nó vuông góc với siêu phẳng và chỉ về phía $a^T x$ tăng.
+Siêu phẳng là tập $\{x : a^T x = b\}$ với $a \ne 0$, còn nửa không gian là $\{x : a^T x \le b\}$. Vector a là pháp tuyến: Nó vuông góc với siêu phẳng và chỉ về phía $a^T x$ tăng.
 
 <WikiUsage />
 

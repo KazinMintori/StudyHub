@@ -7,7 +7,7 @@ title: "Chiều affine và nội tương đối"
 description: "Chiều affine của một tập, sự khác nhau giữa điểm trong và điểm trong tương đối, biên tương đối, và vì sao các điều kiện như Slater cần nội tương đối thay vì phần trong thông thường."
 ---
 
-Hãy cầm một tờ giấy phẳng và hỏi: tờ giấy có "phần bên trong" không? Câu trả lời trực giác là có, đó là toàn bộ tờ giấy trừ bốn mép. Nhưng nếu dùng định nghĩa điểm trong quen thuộc của giải tích, thì trong không gian ba chiều tờ giấy **không có điểm trong nào**. Quanh bất kỳ điểm nào trên tờ giấy, một quả cầu nhỏ đến mấy cũng có phần nhô lên phía trên và phần chìm xuống phía dưới mặt giấy, tức là có điểm không thuộc tờ giấy.
+Hãy cầm một tờ giấy phẳng và hỏi: Tờ giấy có "phần bên trong" không? Câu trả lời trực giác là có, đó là toàn bộ tờ giấy trừ bốn mép. Nhưng nếu dùng định nghĩa điểm trong quen thuộc của giải tích, thì trong không gian ba chiều tờ giấy **không có điểm trong nào**. Quanh bất kỳ điểm nào trên tờ giấy, một quả cầu nhỏ đến mấy cũng có phần nhô lên phía trên và phần chìm xuống phía dưới mặt giấy, tức là có điểm không thuộc tờ giấy.
 
 Mâu thuẫn giữa trực giác và định nghĩa ấy không phải chuyện bắt bẻ chữ nghĩa. Trong tối ưu, miền khả thi rất thường "mỏng" như tờ giấy, chẳng hạn khi có ràng buộc đẳng thức $x_1 + x_2 + x_3 = 1$. Nếu chỉ dùng khái niệm điểm trong thông thường, những miền đó không có điểm trong, và mọi định lý nào đòi hỏi "một điểm nằm hẳn bên trong miền" đều không dùng được. Khái niệm thay thế là **nội tương đối**, tức phần trong được đo bên trong bao affine của tập. Ta cũng làm rõ một khái niệm đi kèm là **chiều affine**.
 
@@ -21,13 +21,13 @@ Bạn cần nắm bao affine từ chủ đề trước và biết khái niệm q
 
 Một đoạn thẳng trong $\mathbb{R}^3$ có chiều affine 1, vì bao affine của nó là một đường thẳng. Một tam giác đặc trong $\mathbb{R}^3$ có chiều affine 2. Tập các phân phối xác suất trên ba kết quả, tức các vector $p \in \mathbb{R}^3$ với $p_i \ge 0$ và $p_1 + p_2 + p_3 = 1$, có chiều affine 2, vì nó nằm trọn trong mặt phẳng $p_1 + p_2 + p_3 = 1$ và không nằm trong đường thẳng nào.
 
-Chiều affine không phải lúc nào cũng khớp với các khái niệm số chiều khác. Sách lấy ví dụ đường tròn đơn vị $\{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$. Theo hầu hết các định nghĩa, đường tròn là đối tượng một chiều: muốn chỉ ra một điểm trên nó, chỉ cần một con số là góc. Nhưng bao affine của đường tròn là cả mặt phẳng $\mathbb{R}^2$, nên chiều affine của nó bằng 2. Sự lệch nhau này có lý do. Chiều affine đo xem tập "phẳng" đến mức nào, tức là nó cần bao nhiêu chiều không gian phẳng để chứa được, chứ không đo độ "dày" hay số tham số cần để mô tả tập. Đường tròn cong, nên không có đường thẳng nào chứa nổi nó.
+Chiều affine không phải lúc nào cũng khớp với các khái niệm số chiều khác. Sách lấy ví dụ đường tròn đơn vị $\{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$. Theo hầu hết các định nghĩa, đường tròn là đối tượng một chiều: Muốn chỉ ra một điểm trên nó, chỉ cần một con số là góc. Nhưng bao affine của đường tròn là cả mặt phẳng $\mathbb{R}^2$, nên chiều affine của nó bằng 2. Sự lệch nhau này có lý do. Chiều affine đo xem tập "phẳng" đến mức nào, tức là nó cần bao nhiêu chiều không gian phẳng để chứa được, chứ không đo độ "dày" hay số tham số cần để mô tả tập. Đường tròn cong, nên không có đường thẳng nào chứa nổi nó.
 
 ## 2. Điểm trong và vấn đề của những tập mỏng
 
 Nhắc lại, $x$ là một **điểm trong** của $C \subseteq \mathbb{R}^n$ nếu có một bán kính $r > 0$ sao cho cả quả cầu $B(x, r)$ nằm trong $C$. Tập các điểm trong là **phần trong**, ký hiệu $\operatorname{int} C$.
 
-Định nghĩa này phụ thuộc vào không gian ta đang đứng. Đoạn thẳng $[0, 1]$ xét trong $\mathbb{R}$ có phần trong là khoảng mở $(0, 1)$. Cũng đoạn thẳng đó, đặt nằm trên trục hoành của $\mathbb{R}^2$, lại có phần trong rỗng: quanh điểm $(\tfrac12, 0)$, mọi hình tròn nhỏ đều chứa những điểm có tung độ khác 0, nên không nằm trên đoạn.
+Định nghĩa này phụ thuộc vào không gian ta đang đứng. Đoạn thẳng $[0, 1]$ xét trong $\mathbb{R}$ có phần trong là khoảng mở $(0, 1)$. Cũng đoạn thẳng đó, đặt nằm trên trục hoành của $\mathbb{R}^2$, lại có phần trong rỗng: Quanh điểm $(\tfrac12, 0)$, mọi hình tròn nhỏ đều chứa những điểm có tung độ khác 0, nên không nằm trên đoạn.
 
 Mô phỏng dưới đây cho thấy đúng hiện tượng ấy. Hình tròn quanh $x$ luôn lòi ra khỏi đường thẳng chứa đoạn. Tuy vậy, nếu chỉ nhìn phần hình tròn nằm trên đường thẳng đó, câu chuyện lại khác.
 
@@ -35,14 +35,14 @@ Mô phỏng dưới đây cho thấy đúng hiện tượng ấy. Hình tròn qu
 
 ## 3. Nội tương đối
 
-Ý tưởng sửa chữa rất tự nhiên: khi kiểm tra một điểm có nằm "bên trong" hay không, ta chỉ xét những điểm lân cận thuộc bao affine của tập, bỏ qua các hướng mà tập vốn dĩ không bao giờ đi tới.
+Ý tưởng sửa chữa rất tự nhiên: Khi kiểm tra một điểm có nằm "bên trong" hay không, ta chỉ xét những điểm lân cận thuộc bao affine của tập, bỏ qua các hướng mà tập vốn dĩ không bao giờ đi tới.
 
 > **Định nghĩa.** **Nội tương đối** của tập $C$ là
 > $$\operatorname{relint} C = \{x \in C : B(x, r) \cap \operatorname{aff} C \subseteq C \text{ với một } r > 0 \text{ nào đó}\}.$$
 
-So sánh với định nghĩa điểm trong, chỉ có một chỗ khác: quả cầu $B(x, r)$ được thay bằng phần giao $B(x, r) \cap \operatorname{aff} C$. Với tờ giấy trong $\mathbb{R}^3$, phần giao này là một hình tròn nằm phẳng trên mặt giấy, và câu hỏi trở thành "có hình tròn phẳng nhỏ nào quanh $x$ nằm trọn trên tờ giấy không?". Câu hỏi này có câu trả lời khớp với trực giác.
+So sánh với định nghĩa điểm trong, chỉ có một chỗ khác: Quả cầu $B(x, r)$ được thay bằng phần giao $B(x, r) \cap \operatorname{aff} C$. Với tờ giấy trong $\mathbb{R}^3$, phần giao này là một hình tròn nằm phẳng trên mặt giấy, và câu hỏi trở thành "có hình tròn phẳng nhỏ nào quanh $x$ nằm trọn trên tờ giấy không?". Câu hỏi này có câu trả lời khớp với trực giác.
 
-Sách lưu ý thêm rằng chuẩn dùng để định nghĩa quả cầu không quan trọng: dùng chuẩn nào cũng cho cùng một nội tương đối. Điều này đúng vì trong $\mathbb{R}^n$ mọi chuẩn đều tương đương, nghĩa là quả cầu của chuẩn này luôn chứa một quả cầu nhỏ hơn của chuẩn kia cùng tâm.
+Sách lưu ý thêm rằng chuẩn dùng để định nghĩa quả cầu không quan trọng: Dùng chuẩn nào cũng cho cùng một nội tương đối. Điều này đúng vì trong $\mathbb{R}^n$ mọi chuẩn đều tương đương, nghĩa là quả cầu của chuẩn này luôn chứa một quả cầu nhỏ hơn của chuẩn kia cùng tâm.
 
 Từ nội tương đối ta định nghĩa **biên tương đối** là $\operatorname{cl} C \setminus \operatorname{relint} C$, trong đó $\operatorname{cl} C$ là bao đóng của $C$. Biên tương đối là "mép" của tập khi nhìn từ bên trong bao affine của nó.
 
@@ -62,11 +62,11 @@ $$
 và biên tương đối là khung viền $\{x \in \mathbb{R}^3 : \max\{|x_1|, |x_2|\} = 1,\ x_3 = 0\}$. Nói cách khác, nội tương đối là hình vuông bỏ đi bốn cạnh, đúng như cảm nhận ban đầu về "phần bên trong của tờ giấy".
 :::
 
-Bạn có thể kiểm tra từng điểm trong mô phỏng sau. Hình được vẽ bằng phép chiếu xiên nên chỉ mang tính sơ đồ: đường tròn nét đứt tượng trưng cho quả cầu quanh điểm đang xét, còn hình tròn tô màu là phần giao của quả cầu với mặt phẳng $x_3 = 0$.
+Bạn có thể kiểm tra từng điểm trong mô phỏng sau. Hình được vẽ bằng phép chiếu xiên nên chỉ mang tính sơ đồ: Đường tròn nét đứt tượng trưng cho quả cầu quanh điểm đang xét, còn hình tròn tô màu là phần giao của quả cầu với mặt phẳng $x_3 = 0$.
 
 <RelintLab type="square" />
 
-Một điểm $(a, b, 0)$ với $|a| < 1$ và $|b| < 1$ thuộc nội tương đối, vì chọn $r \le \min\{1 - |a|, 1 - |b|\}$ thì hình tròn giao nằm trọn trong hình vuông. Điểm trên cạnh, chẳng hạn $(1, 0, 0)$, thì không: hình tròn giao có bán kính bao nhiêu cũng chứa những điểm có $x_1 > 1$.
+Một điểm $(a, b, 0)$ với $|a| < 1$ và $|b| < 1$ thuộc nội tương đối, vì chọn $r \le \min\{1 - |a|, 1 - |b|\}$ thì hình tròn giao nằm trọn trong hình vuông. Điểm trên cạnh, chẳng hạn $(1, 0, 0)$, thì không: Hình tròn giao có bán kính bao nhiêu cũng chứa những điểm có $x_1 > 1$.
 
 ## 4. Một vài ví dụ để luyện mắt
 
@@ -81,7 +81,7 @@ Bảng sau đặt phần trong và nội tương đối cạnh nhau. Hai khái n
 | Đơn hình xác suất trong $\mathbb{R}^3$ | Rỗng | Các $p$ có mọi $p_i > 0$ và tổng bằng 1 |
 | Một đường thẳng trong $\mathbb{R}^2$ | Rỗng | Chính đường thẳng đó |
 
-Dòng thứ ba thường làm người học bất ngờ. Bao affine của một điểm là chính điểm đó, nên $B(x_0, r) \cap \operatorname{aff}\{x_0\} = \{x_0\} \subseteq \{x_0\}$ với mọi $r$. Vì thế một điểm đơn lẻ là "toàn bộ phần trong của chính nó". Kết quả nghe kỳ lạ nhưng nhất quán: trong không gian không chiều chứa nó, điểm ấy không có mép nào cả.
+Dòng thứ ba thường làm người học bất ngờ. Bao affine của một điểm là chính điểm đó, nên $B(x_0, r) \cap \operatorname{aff}\{x_0\} = \{x_0\} \subseteq \{x_0\}$ với mọi $r$. Vì thế một điểm đơn lẻ là "toàn bộ phần trong của chính nó". Kết quả nghe kỳ lạ nhưng nhất quán: Trong không gian không chiều chứa nó, điểm ấy không có mép nào cả.
 
 Dòng thứ năm có ý nghĩa trực tiếp trong học máy. Đầu ra của hàm softmax là một vector xác suất có mọi thành phần **dương**, nên nó luôn nằm trong nội tương đối của đơn hình xác suất, không bao giờ chạm biên tương đối. Một mô hình softmax không thể gán xác suất đúng bằng 0 cho một lớp nào. Đó cũng là lý do hàm mất mát cross-entropy không bao giờ đạt đúng giá trị 0 với một tham số hữu hạn, chỉ tiến dần về 0.
 
@@ -91,11 +91,11 @@ Thoạt nhìn, nội tương đối giống một khái niệm kỹ thuật dàn
 
 Chỗ quan trọng nhất là **điều kiện Slater** ở Lecture 03, điều kiện bảo đảm đối ngẫu mạnh cho bài toán lồi. Điều kiện này yêu cầu có một điểm thỏa mọi đẳng thức và thỏa **chặt** mọi bất đẳng thức, đồng thời nằm trong **nội tương đối** của miền xác định chung. Nếu ta đòi điểm đó nằm trong phần trong thông thường, thì mọi bài toán có miền xác định nằm trong một tập affine thấp chiều sẽ bị loại oan, dù chúng hoàn toàn bình thường.
 
-Chỗ thứ hai là tính liên tục của hàm lồi. Sách nêu một kết quả: hàm lồi liên tục trên nội tương đối của miền xác định, và chỉ có thể gián đoạn trên biên tương đối. Chẳng hạn hàm nhận giá trị 0 trên khoảng mở $(0, 1)$ và giá trị 1 tại hai đầu mút của đoạn $[0, 1]$ là một hàm lồi trên $[0, 1]$, gián đoạn đúng ở hai đầu mút, tức ở biên tương đối.
+Chỗ thứ hai là tính liên tục của hàm lồi. Sách nêu một kết quả: Hàm lồi liên tục trên nội tương đối của miền xác định, và chỉ có thể gián đoạn trên biên tương đối. Chẳng hạn hàm nhận giá trị 0 trên khoảng mở $(0, 1)$ và giá trị 1 tại hai đầu mút của đoạn $[0, 1]$ là một hàm lồi trên $[0, 1]$, gián đoạn đúng ở hai đầu mút, tức ở biên tương đối.
 
-Chỗ thứ ba là chứng minh định lý siêu phẳng tựa ở một chủ đề sau. Lập luận chia làm hai trường hợp: tập có phần trong khác rỗng, hoặc tập nằm trọn trong một tập affine thấp chiều. Trường hợp thứ hai chính là tình huống mà phần trong thông thường không còn hữu ích.
+Chỗ thứ ba là chứng minh định lý siêu phẳng tựa ở một chủ đề sau. Lập luận chia làm hai trường hợp: Tập có phần trong khác rỗng, hoặc tập nằm trọn trong một tập affine thấp chiều. Trường hợp thứ hai chính là tình huống mà phần trong thông thường không còn hữu ích.
 
-Có một kết quả nền tảng của giải tích lồi mà ta chỉ phát biểu: **mọi tập lồi khác rỗng trong $\mathbb{R}^n$ đều có nội tương đối khác rỗng**. Phần trong thì có thể rỗng, nhưng nội tương đối thì không bao giờ. Đây là lý do nội tương đối là khái niệm "đúng" để làm việc với tập lồi.
+Có một kết quả nền tảng của giải tích lồi mà ta chỉ phát biểu: **Mọi tập lồi khác rỗng trong $\mathbb{R}^n$ đều có nội tương đối khác rỗng**. Phần trong thì có thể rỗng, nhưng nội tương đối thì không bao giờ. Đây là lý do nội tương đối là khái niệm "đúng" để làm việc với tập lồi.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -103,7 +103,7 @@ Có một kết quả nền tảng của giải tích lồi mà ta chỉ phát b
 
 <details><summary>Xem lời giải thích</summary>
 
-Có thể, nếu tập không lồi. Đường tròn đơn vị trong $\mathbb{R}^2$ có bao affine là cả mặt phẳng, nên nội tương đối trùng với phần trong thông thường, và phần này rỗng vì quanh mỗi điểm của đường tròn luôn có điểm không thuộc đường tròn. Một ví dụ khác là tập hai điểm $\{(0,0), (1,0)\}$: bao affine là trục hoành, và quanh mỗi điểm, phần giao của quả cầu với trục hoành là một đoạn chứa những điểm không thuộc tập. Kết quả "nội tương đối luôn khác rỗng" ở mục 5 cần giả thiết lồi.
+Có thể, nếu tập không lồi. Đường tròn đơn vị trong $\mathbb{R}^2$ có bao affine là cả mặt phẳng, nên nội tương đối trùng với phần trong thông thường, và phần này rỗng vì quanh mỗi điểm của đường tròn luôn có điểm không thuộc đường tròn. Một ví dụ khác là tập hai điểm $\{(0,0), (1,0)\}$: Bao affine là trục hoành, và quanh mỗi điểm, phần giao của quả cầu với trục hoành là một đoạn chứa những điểm không thuộc tập. Kết quả "nội tương đối luôn khác rỗng" ở mục 5 cần giả thiết lồi.
 
 </details>
 
@@ -123,7 +123,7 @@ Miền khả thi là đoạn nối $(1, 0)$ và $(0, 1)$. Nội tương đối l
 
 </details>
 
-**Câu 4.** Thử một định nghĩa khác cho "điểm trong theo chiều affine": thay $\mathbb{R}^n$ bởi không gian con $V$ đi kèm $\operatorname{aff} C$ thay vì chính $\operatorname{aff} C$. Định nghĩa đó có cho cùng kết quả không?
+**Câu 4.** Thử một định nghĩa khác cho "điểm trong theo chiều affine": Thay $\mathbb{R}^n$ bởi không gian con $V$ đi kèm $\operatorname{aff} C$ thay vì chính $\operatorname{aff} C$. Định nghĩa đó có cho cùng kết quả không?
 
 <details><summary>Xem lời giải thích</summary>
 
@@ -134,11 +134,11 @@ Không, nếu $\operatorname{aff} C$ không đi qua gốc. Chẳng hạn với $
 ## 7. Bài tập tự luyện
 
 ::: exercise 1. Xác định nội tương đối
-Tìm chiều affine, phần trong và nội tương đối của các tập sau: (a) $\{(x_1, x_2, x_3) : x_1^2 + x_2^2 \le 1,\ x_3 = 2\}$ trong $\mathbb{R}^3$, (b) $\{x \in \mathbb{R}^3 : x \succeq 0,\ x_1 + x_2 + x_3 = 1\}$, (c) đoạn nối $(1, 1)$ và $(3, 2)$ trong $\mathbb{R}^2$.
+Tìm chiều affine, phần trong và nội tương đối của các tập sau: (A) $\{(x_1, x_2, x_3) : x_1^2 + x_2^2 \le 1,\ x_3 = 2\}$ trong $\mathbb{R}^3$, (b) $\{x \in \mathbb{R}^3 : x \succeq 0,\ x_1 + x_2 + x_3 = 1\}$, (c) đoạn nối $(1, 1)$ và $(3, 2)$ trong $\mathbb{R}^2$.
 :::
 
 ::: solution
-(a) Tập là một hình tròn đặc nằm trong mặt phẳng $x_3 = 2$. Chiều affine bằng 2, phần trong trong $\mathbb{R}^3$ rỗng, nội tương đối là $\{x_1^2 + x_2^2 < 1,\ x_3 = 2\}$. (b) Đơn hình xác suất trong $\mathbb{R}^3$: chiều affine 2, phần trong rỗng, nội tương đối là $\{x \succ 0,\ x_1 + x_2 + x_3 = 1\}$, trong đó $x \succ 0$ nghĩa là mọi thành phần dương. (c) Chiều affine 1, phần trong rỗng, nội tương đối là $\{(1,1) + t(2, 1) : 0 < t < 1\}$.
+(a) Tập là một hình tròn đặc nằm trong mặt phẳng $x_3 = 2$. Chiều affine bằng 2, phần trong trong $\mathbb{R}^3$ rỗng, nội tương đối là $\{x_1^2 + x_2^2 < 1,\ x_3 = 2\}$. (b) Đơn hình xác suất trong $\mathbb{R}^3$: Chiều affine 2, phần trong rỗng, nội tương đối là $\{x \succ 0,\ x_1 + x_2 + x_3 = 1\}$, trong đó $x \succ 0$ nghĩa là mọi thành phần dương. (c) Chiều affine 1, phần trong rỗng, nội tương đối là $\{(1,1) + t(2, 1) : 0 < t < 1\}$.
 :::
 
 ::: exercise 2. Chuẩn không ảnh hưởng

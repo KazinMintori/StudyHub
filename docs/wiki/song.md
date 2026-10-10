@@ -15,7 +15,7 @@ Sóng tuần hoàn có chu kỳ T, tần số $f=\frac{1}{T}$, bước sóng $\l
 
 **Pha của sóng điều hòa.** Một mô hình thường dùng là $y(x,t)=A \cos(kx-\omega t+\varphi _{0})$, với $k=\frac{2\pi}{\lambda}$ và $\omega =2\pi f$. Dấu trong pha quyết định hướng truyền theo quy ước tọa độ.
 
-Cùng tần số chưa đủ để luôn tăng cường: cần xét độ lệch pha tại vị trí đang quan sát. Hai sóng ngược pha chỉ triệt tiêu hoàn toàn nếu biên độ bằng nhau.
+Cùng tần số chưa đủ để luôn tăng cường: Cần xét độ lệch pha tại vị trí đang quan sát. Hai sóng ngược pha chỉ triệt tiêu hoàn toàn nếu biên độ bằng nhau.
 
 ## Ví dụ
 

@@ -4,12 +4,12 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: cac-ham-loi-quen-thuoc
 section: topic
 title: "Những hàm lồi thường gặp"
-description: "Bảng các hàm lồi và lõm cơ bản cùng cách chứng minh: lũy thừa, mũ, logarit, entropy âm, chuẩn, hàm max, log-sum-exp và softmax, trung bình nhân, log det, entropy và phân phối đều. Chọn công cụ chứng minh phù hợp cho từng loại hàm."
+description: "Bảng các hàm lồi và lõm cơ bản cùng cách chứng minh: Lũy thừa, mũ, logarit, entropy âm, chuẩn, hàm max, log-sum-exp và softmax, trung bình nhân, log det, entropy và phân phối đều. Chọn công cụ chứng minh phù hợp cho từng loại hàm."
 ---
 
-Khi học đạo hàm, ta không tính lại mọi thứ từ định nghĩa giới hạn. Ta thuộc một bảng đạo hàm của vài hàm cơ bản, rồi dùng quy tắc tổng, tích, hợp để xử lý những biểu thức phức tạp. Với tính lồi cũng vậy. Phần dưới đây dựng "bảng" đó: một danh sách ngắn những hàm lồi và lõm mà bạn sẽ gặp đi gặp lại, mỗi hàm kèm một lý do. Chủ đề sau sẽ cung cấp các "quy tắc" lắp ghép.
+Khi học đạo hàm, ta không tính lại mọi thứ từ định nghĩa giới hạn. Ta thuộc một bảng đạo hàm của vài hàm cơ bản, rồi dùng quy tắc tổng, tích, hợp để xử lý những biểu thức phức tạp. Với tính lồi cũng vậy. Phần dưới đây dựng "bảng" đó: Một danh sách ngắn những hàm lồi và lõm mà bạn sẽ gặp đi gặp lại, mỗi hàm kèm một lý do. Chủ đề sau sẽ cung cấp các "quy tắc" lắp ghép.
 
-Ở các chủ đề trước, ta đã có ba công cụ: định nghĩa với dây cung, điều kiện Hessian, và hạn chế lên đường thẳng. Mỗi ví dụ dưới đây được chọn để minh họa một công cụ đúng chỗ của nó. Biết vì sao một công cụ hợp với một loại hàm cũng quan trọng không kém việc nhớ kết quả.
+Ở các chủ đề trước, ta đã có ba công cụ: Định nghĩa với dây cung, điều kiện Hessian, và hạn chế lên đường thẳng. Mỗi ví dụ dưới đây được chọn để minh họa một công cụ đúng chỗ của nó. Biết vì sao một công cụ hợp với một loại hàm cũng quan trọng không kém việc nhớ kết quả.
 
 ## 1. Hàm một biến
 
@@ -25,11 +25,11 @@ Dòng về lũy thừa chứa nhiều thông tin nhất, và mô phỏng sau cho
 
 <PowerLab />
 
-Hai giá trị $a = 0$ và $a = 1$ là hai "bản lề": tại đó $x^a$ là hằng số hoặc tuyến tính, vừa lồi vừa lõm, và khi $a$ đi qua chúng, hàm đổi từ lồi sang lõm hay ngược lại. Hai hàm $1/x$ (ứng với $a = -1$) và $x^2$ cùng lồi, dù một hàm giảm và một hàm tăng. Tính lồi nói về **độ cong**, không nói về chiều biến thiên.
+Hai giá trị $a = 0$ và $a = 1$ là hai "bản lề": Tại đó $x^a$ là hằng số hoặc tuyến tính, vừa lồi vừa lõm, và khi $a$ đi qua chúng, hàm đổi từ lồi sang lõm hay ngược lại. Hai hàm $1/x$ (ứng với $a = -1$) và $x^2$ cùng lồi, dù một hàm giảm và một hàm tăng. Tính lồi nói về **độ cong**, không nói về chiều biến thiên.
 
 Điều kiện $p \ge 1$ trong dòng thứ ba không thể bỏ. Với $p = 0.5$, hàm $|x|^{0.5}$ tại trung điểm $0.5$ của đoạn $[0, 1]$ có giá trị $\sqrt{0.5} \approx 0.707$, trong khi dây cung cho $\tfrac12(0 + 1) = 0.5$. Đồ thị vượt lên trên dây cung, nên hàm không lồi.
 
-## 2. Chuẩn và hàm max: dùng định nghĩa
+## 2. Chuẩn và hàm max: Dùng định nghĩa
 
 Hai hàm tiếp theo không khả vi ở mọi nơi, nên điều kiện bậc hai không dùng được. May là định nghĩa cho lời chứng minh chỉ trong một dòng.
 
@@ -41,9 +41,9 @@ $$
 
 **Hàm max lồi.** Với $f(x) = \max_i x_i$, mỗi thành phần $\theta x_i + (1-\theta) y_i$ không vượt quá $\theta \max_j x_j + (1 - \theta) \max_j y_j$. Lấy max theo $i$ ở vế trái, ta được $f(\theta x + (1-\theta)y) \le \theta f(x) + (1-\theta) f(y)$.
 
-Hai lập luận này cho thấy một quy luật: khi hàm được định nghĩa bằng những phép toán "thô" như trị tuyệt đối, max, chuẩn, định nghĩa thường là con đường ngắn nhất. Hàm mất mát hinge $\max\{0,\ 1 - z\}$ của máy vector hỗ trợ và hàm ReLU $\max\{0, x\}$ đều thuộc loại này. Chủ đề sau sẽ tổng quát hóa thành quy tắc "max của các hàm lồi là hàm lồi".
+Hai lập luận này cho thấy một quy luật: Khi hàm được định nghĩa bằng những phép toán "thô" như trị tuyệt đối, max, chuẩn, định nghĩa thường là con đường ngắn nhất. Hàm mất mát hinge $\max\{0,\ 1 - z\}$ của máy vector hỗ trợ và hàm ReLU $\max\{0, x\}$ đều thuộc loại này. Chủ đề sau sẽ tổng quát hóa thành quy tắc "max của các hàm lồi là hàm lồi".
 
-## 3. Log-sum-exp: hàm max được làm trơn
+## 3. Log-sum-exp: Hàm max được làm trơn
 
 Hàm max có góc nhọn, và góc nhọn gây khó cho những phương pháp cần đạo hàm. Hàm **log-sum-exp**
 
@@ -57,7 +57,7 @@ $$
 \max_i x_i \ \le\ f(x) \ \le\ \max_i x_i + \log n .
 $$
 
-Bất đẳng thức thứ hai chặt khi mọi thành phần bằng nhau. Với $x = (2, 2, 2)$, $f(x) = 2 + \log 3 \approx 3.099$. Khi một thành phần trội hẳn, $f$ gần max hơn nhiều: với $x = (3, 1, 0)$, $f(x) \approx 3.170$, chỉ hơn max một chút.
+Bất đẳng thức thứ hai chặt khi mọi thành phần bằng nhau. Với $x = (2, 2, 2)$, $f(x) = 2 + \log 3 \approx 3.099$. Khi một thành phần trội hẳn, $f$ gần max hơn nhiều: Với $x = (3, 1, 0)$, $f(x) \approx 3.170$, chỉ hơn max một chút.
 
 Để điều chỉnh độ trơn, người ta thêm một tham số **nhiệt độ nghịch đảo** $\beta > 0$:
 
@@ -75,13 +75,13 @@ Mỗi thành phần không âm và tổng bằng 1. Khi $\beta$ lớn, softmax d
 
 <SoftmaxLab />
 
-**Vì sao log-sum-exp lồi: một cách nhìn bằng phương sai.** Đặt $p = \operatorname{softmax}(x)$. Tính đạo hàm thêm một lần, Hessian của $f$ là
+**Vì sao log-sum-exp lồi: Một cách nhìn bằng phương sai.** Đặt $p = \operatorname{softmax}(x)$. Tính đạo hàm thêm một lần, Hessian của $f$ là
 
 $$
 \nabla^2 f(x) = \operatorname{diag}(p) - p p^T, \qquad v^T \nabla^2 f(x)\, v = \sum_i p_i v_i^2 - \Big(\sum_i p_i v_i\Big)^2 .
 $$
 
-Vế phải chính là **phương sai** của một biến ngẫu nhiên nhận giá trị $v_i$ với xác suất $p_i$. Phương sai không bao giờ âm, nên Hessian nửa xác định dương và $f$ lồi. Sách viết cùng lập luận này dưới dạng bất đẳng thức Cauchy–Schwarz, và hai cách là một. Cách nhìn phương sai còn cho biết khi nào độ cong bằng 0: phương sai bằng 0 khi biến ngẫu nhiên là hằng số, tức $v$ tỉ lệ với $(1, \dots, 1)$. Đó là lý do dọc hướng $(1, 1)$, hàm $\log(e^{x_1} + e^{x_2})$ tăng tuyến tính mà không cong, như ta đã thấy ở hai chủ đề trước.
+Vế phải chính là **phương sai** của một biến ngẫu nhiên nhận giá trị $v_i$ với xác suất $p_i$. Phương sai không bao giờ âm, nên Hessian nửa xác định dương và $f$ lồi. Sách viết cùng lập luận này dưới dạng bất đẳng thức Cauchy–Schwarz, và hai cách là một. Cách nhìn phương sai còn cho biết khi nào độ cong bằng 0: Phương sai bằng 0 khi biến ngẫu nhiên là hằng số, tức $v$ tỉ lệ với $(1, \dots, 1)$. Đó là lý do dọc hướng $(1, 1)$, hàm $\log(e^{x_1} + e^{x_2})$ tăng tuyến tính mà không cong, như ta đã thấy ở hai chủ đề trước.
 
 **Liên hệ với hàm mất mát entropy chéo.** Một bộ phân loại $n$ lớp xuất ra vector logit $z$, và với nhãn đúng $y$, hàm mất mát entropy chéo là
 
@@ -89,31 +89,31 @@ $$
 L(z) = -\log \operatorname{softmax}(z)_y = \log \sum_j e^{z_j} - z_y .
 $$
 
-Đó là log-sum-exp trừ đi một hàm tuyến tính, nên $L$ lồi theo $z$. Gradient bằng $\operatorname{softmax}(z) - e_y$. Với $z = (2, 1, -1)$ và nhãn đúng là lớp thứ nhất, $L \approx 0.349$ và $\operatorname{softmax}(z) \approx (0.705,\ 0.260,\ 0.035)$. Thành phần thứ $y$ của gradient bằng $p_y - 1$, luôn âm vì $p_y < 1$, nên gradient không bao giờ bằng 0 và $L$ không có điểm cực tiểu: tăng $z_y$ thêm 10 đã kéo $L$ xuống khoảng $1.9 \times 10^{-5}$, nhưng không bao giờ chạm 0. Chi tiết này sẽ quay lại trong phần bài tập.
+Đó là log-sum-exp trừ đi một hàm tuyến tính, nên $L$ lồi theo $z$. Gradient bằng $\operatorname{softmax}(z) - e_y$. Với $z = (2, 1, -1)$ và nhãn đúng là lớp thứ nhất, $L \approx 0.349$ và $\operatorname{softmax}(z) \approx (0.705,\ 0.260,\ 0.035)$. Thành phần thứ $y$ của gradient bằng $p_y - 1$, luôn âm vì $p_y < 1$, nên gradient không bao giờ bằng 0 và $L$ không có điểm cực tiểu: Tăng $z_y$ thêm 10 đã kéo $L$ xuống khoảng $1.9 \times 10^{-5}$, nhưng không bao giờ chạm 0. Chi tiết này sẽ quay lại trong phần bài tập.
 
-## 4. Trung bình nhân: một hàm lõm thuần nhất
+## 4. Trung bình nhân: Một hàm lõm thuần nhất
 
 **Trung bình nhân** $f(x) = (x_1 x_2 \cdots x_n)^{1/n}$ lõm trên $\mathbb{R}^n_{++}$. Sách chứng minh bằng Hessian và bất đẳng thức Cauchy–Schwarz, theo cùng khuôn với log-sum-exp. Ta kiểm tra nhanh bằng số: $f(1, 4) = 2$ và $f(4, 1) = 2$, còn tại trung điểm $(2.5,\ 2.5)$ thì $f = 2.5 \ge 2$, đúng chiều của hàm lõm.
 
-Trung bình nhân có chung một đặc điểm với chuẩn và với hàm $x^2/y$: nó **thuần nhất bậc một**, $f(tx) = t f(x)$ với $t > 0$. Dọc mỗi tia đi ra từ gốc, đồ thị là một đường thẳng. Một hàm thuần nhất bậc một vì thế không bao giờ lồi hay lõm nghiêm ngặt, và tính lồi hay lõm của nó chỉ quyết định bởi cách nó cong theo những hướng ngang qua các tia.
+Trung bình nhân có chung một đặc điểm với chuẩn và với hàm $x^2/y$: Nó **thuần nhất bậc một**, $f(tx) = t f(x)$ với $t > 0$. Dọc mỗi tia đi ra từ gốc, đồ thị là một đường thẳng. Một hàm thuần nhất bậc một vì thế không bao giờ lồi hay lõm nghiêm ngặt, và tính lồi hay lõm của nó chỉ quyết định bởi cách nó cong theo những hướng ngang qua các tia.
 
 Bất đẳng thức quen thuộc giữa trung bình cộng và trung bình nhân, $(x_1 \cdots x_n)^{1/n} \le (x_1 + \cdots + x_n)/n$, cũng là hệ quả của tính lõm, cụ thể là của hàm $\log$. Ta sẽ chứng minh nó bằng bất đẳng thức Jensen ở chủ đề sau. Với $x = (1, 4, 16)$, trung bình nhân bằng 4, nhỏ hơn hẳn trung bình cộng bằng 7.
 
-## 5. Log det: khi biến là một ma trận
+## 5. Log det: Khi biến là một ma trận
 
-Hàm $f(X) = \log\det X$ trên tập ma trận đối xứng xác định dương $\mathbb{S}^n_{++}$ là hàm lõm. Viết Hessian của một hàm theo biến ma trận rất cồng kềnh, nên ta dùng công cụ thứ ba: hạn chế hàm lên một đường thẳng $X = Z + tV$ với $Z \succ 0$ và $V$ đối xứng. Đặt $g(t) = \log\det(Z + tV)$ và tách $Z = Z^{1/2} Z^{1/2}$:
+Hàm $f(X) = \log\det X$ trên tập ma trận đối xứng xác định dương $\mathbb{S}^n_{++}$ là hàm lõm. Viết Hessian của một hàm theo biến ma trận rất cồng kềnh, nên ta dùng công cụ thứ ba: Hạn chế hàm lên một đường thẳng $X = Z + tV$ với $Z \succ 0$ và $V$ đối xứng. Đặt $g(t) = \log\det(Z + tV)$ và tách $Z = Z^{1/2} Z^{1/2}$:
 
 $$
 g(t) = \log\det\Big(Z^{1/2}\big(I + t\, Z^{-1/2} V Z^{-1/2}\big) Z^{1/2}\Big) = \log\det Z + \sum_{i=1}^n \log(1 + t\lambda_i),
 $$
 
-trong đó $\lambda_i$ là các trị riêng của ma trận đối xứng $Z^{-1/2} V Z^{-1/2}$. Bước cuối dùng hai sự kiện: định thức của tích bằng tích các định thức, và $I + tW$ có trị riêng $1 + t\lambda_i$ khi $W$ có trị riêng $\lambda_i$. Giờ $g$ là tổng các hàm logarit một biến, và
+trong đó $\lambda_i$ là các trị riêng của ma trận đối xứng $Z^{-1/2} V Z^{-1/2}$. Bước cuối dùng hai sự kiện: Định thức của tích bằng tích các định thức, và $I + tW$ có trị riêng $1 + t\lambda_i$ khi $W$ có trị riêng $\lambda_i$. Giờ $g$ là tổng các hàm logarit một biến, và
 
 $$
 g''(t) = -\sum_{i=1}^n \frac{\lambda_i^2}{(1 + t\lambda_i)^2} \le 0 .
 $$
 
-Vậy $g$ lõm trên mọi đường thẳng, và $\log\det$ lõm. Lời chứng minh này là ví dụ điển hình cho sức mạnh của kỹ thuật hạn chế: một câu hỏi về hàm của ma trận biến thành câu hỏi về tổng các hàm một biến.
+Vậy $g$ lõm trên mọi đường thẳng, và $\log\det$ lõm. Lời chứng minh này là ví dụ điển hình cho sức mạnh của kỹ thuật hạn chế: Một câu hỏi về hàm của ma trận biến thành câu hỏi về tổng các hàm một biến.
 
 ::: example Log det dọc một đường thẳng cụ thể
 Lấy $Z = I$ cỡ $2 \times 2$ và $V = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$, có trị riêng $\pm\sqrt2$. Khi đó
@@ -129,7 +129,7 @@ Hàm log det xuất hiện ở nhiều nơi. Thể tích của ellipsoid $\{x : 
 
 ## 6. Entropy và phân phối đều
 
-Với phân phối xác suất $p = (p_1, \dots, p_n)$, **entropy** $H(p) = -\sum_i p_i \log p_i$ là tổng của các hàm lõm $-p_i \log p_i$, nên lõm. Entropy đo mức độ bất định: phân phối dồn hết vào một kết quả có entropy 0, còn phân phối đều có entropy lớn nhất bằng $\log n$.
+Với phân phối xác suất $p = (p_1, \dots, p_n)$, **entropy** $H(p) = -\sum_i p_i \log p_i$ là tổng của các hàm lõm $-p_i \log p_i$, nên lõm. Entropy đo mức độ bất định: Phân phối dồn hết vào một kết quả có entropy 0, còn phân phối đều có entropy lớn nhất bằng $\log n$.
 
 Tính lõm cho một lời chứng minh rất gọn của khẳng định cuối, chỉ dùng tính đối xứng. Lấy một phân phối $p$ bất kỳ và xét mọi hoán vị của nó. Vì $H$ không thay đổi khi đổi chỗ các thành phần, mọi hoán vị có cùng entropy $H(p)$. Trung bình cộng của tất cả các hoán vị là phân phối đều $u$, vì mỗi thành phần $p_i$ xuất hiện ở mỗi vị trí với tần suất như nhau. Tính lõm cho entropy của trung bình lớn hơn hoặc bằng trung bình các entropy:
 
@@ -163,7 +163,7 @@ $x^3$ không lồi trên $\mathbb{R}$, vì $f''(x) = 6x < 0$ khi $x < 0$, như c
 
 <details><summary>Xem lời giải thích</summary>
 
-Ta có $f(z + c\mathbf{1}) = f(z) + c$, nên dọc hướng $\mathbf{1} = (1, \dots, 1)$ hàm log-sum-exp tuyến tính và Hessian có trị riêng 0 theo hướng đó. Theo cách nhìn phương sai, $v = \mathbf{1}$ cho biến ngẫu nhiên hằng số, phương sai 0. Gradient $\operatorname{softmax}(z)$ vì thế không đổi khi đi dọc hướng này. Hệ quả thực tế: vector logit chỉ được xác định sai khác một hằng số cộng. Nếu tối ưu trực tiếp theo logit, hàm mất mát có cả một đường thẳng các điểm tương đương, giống cái máng của hai đặc trưng cộng tuyến ở chủ đề trước.
+Ta có $f(z + c\mathbf{1}) = f(z) + c$, nên dọc hướng $\mathbf{1} = (1, \dots, 1)$ hàm log-sum-exp tuyến tính và Hessian có trị riêng 0 theo hướng đó. Theo cách nhìn phương sai, $v = \mathbf{1}$ cho biến ngẫu nhiên hằng số, phương sai 0. Gradient $\operatorname{softmax}(z)$ vì thế không đổi khi đi dọc hướng này. Hệ quả thực tế: Vector logit chỉ được xác định sai khác một hằng số cộng. Nếu tối ưu trực tiếp theo logit, hàm mất mát có cả một đường thẳng các điểm tương đương, giống cái máng của hai đặc trưng cộng tuyến ở chủ đề trước.
 
 </details>
 
@@ -175,11 +175,11 @@ $\min_i x_i = -\max_i(-x_i)$ là âm của một hàm lồi hợp với phép bi
 
 </details>
 
-**Câu 4.** Lập luận đối xứng ở mục 6 dùng hai tính chất của entropy: lõm và đối xứng. Nếu bỏ đi một trong hai, kết luận "phân phối đều là tốt nhất" còn đúng không?
+**Câu 4.** Lập luận đối xứng ở mục 6 dùng hai tính chất của entropy: Lõm và đối xứng. Nếu bỏ đi một trong hai, kết luận "phân phối đều là tốt nhất" còn đúng không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Không còn bảo đảm. Bỏ tính đối xứng: hàm lõm $g(p) = \log p_1$ trên đơn hình đạt lớn nhất tại $p = (1, 0, \dots, 0)$ chứ không tại phân phối đều. Bỏ tính lõm: hàm đối xứng $\sum_i p_i^2$ là hàm lồi, và nó đạt **nhỏ nhất** tại phân phối đều, còn lớn nhất tại các đỉnh của đơn hình. Lập luận đối xứng chỉ chạy được khi cả hai tính chất cùng có mặt, và nó cho ta một mẹo dùng được lâu dài: với bài toán lõm và đối xứng, hãy thử nghiệm đối xứng trước.
+Không còn bảo đảm. Bỏ tính đối xứng: Hàm lõm $g(p) = \log p_1$ trên đơn hình đạt lớn nhất tại $p = (1, 0, \dots, 0)$ chứ không tại phân phối đều. Bỏ tính lõm: Hàm đối xứng $\sum_i p_i^2$ là hàm lồi, và nó đạt **nhỏ nhất** tại phân phối đều, còn lớn nhất tại các đỉnh của đơn hình. Lập luận đối xứng chỉ chạy được khi cả hai tính chất cùng có mặt, và nó cho ta một mẹo dùng được lâu dài: Với bài toán lõm và đối xứng, hãy thử nghiệm đối xứng trước.
 
 </details>
 
@@ -190,7 +190,7 @@ Mỗi hàm sau lồi, lõm, hay không thuộc loại nào? (a) $x^{-1/2}$ trên
 :::
 
 ::: solution
-(a) Lồi, vì $a(a - 1) = (-0.5)(-1.5) = 0.75 > 0$. (b) Lồi, vì $1.5 \cdot 0.5 = 0.75 > 0$. (c) $x^{0.3}$ lõm vì $0.3 \cdot (-0.7) < 0$, nên $-x^{0.3}$ lồi. (d) Không lồi: tại trung điểm $0.5$ của đoạn $[0, 1]$, hàm bằng $0.707$ còn dây cung bằng $0.5$. Nó cũng không lõm: tại trung điểm $0$ của đoạn $[-1, 1]$, hàm bằng $0$ còn dây cung bằng $1$, nên đồ thị nằm dưới dây cung. (e) Lồi, vì với mọi $x, y$ và $\theta \in [0, 1]$, mỗi hàm tuyến tính trong ngoặc tại $\theta x + (1-\theta) y$ không vượt quá $\theta f(x) + (1 - \theta) f(y)$, theo đúng lập luận của hàm max ở mục 2.
+(a) Lồi, vì $a(a - 1) = (-0.5)(-1.5) = 0.75 > 0$. (b) Lồi, vì $1.5 \cdot 0.5 = 0.75 > 0$. (c) $x^{0.3}$ lõm vì $0.3 \cdot (-0.7) < 0$, nên $-x^{0.3}$ lồi. (d) Không lồi: Tại trung điểm $0.5$ của đoạn $[0, 1]$, hàm bằng $0.707$ còn dây cung bằng $0.5$. Nó cũng không lõm: Tại trung điểm $0$ của đoạn $[-1, 1]$, hàm bằng $0$ còn dây cung bằng $1$, nên đồ thị nằm dưới dây cung. (e) Lồi, vì với mọi $x, y$ và $\theta \in [0, 1]$, mỗi hàm tuyến tính trong ngoặc tại $\theta x + (1-\theta) y$ không vượt quá $\theta f(x) + (1 - \theta) f(y)$, theo đúng lập luận của hàm max ở mục 2.
 :::
 
 ::: exercise 2. Nhiệt độ và độ chính xác của log-sum-exp
@@ -211,7 +211,7 @@ Thay nhãn one-hot bằng phân phối mục tiêu $q = (0.8,\ 0.1,\ 0.1)$, mộ
 
 ## Tóm tắt
 
-Những hàm lồi cơ bản gồm $e^{ax}$, $x^a$ với $a \ge 1$ hoặc $a \le 0$ trên $\mathbb{R}_{++}$, $|x|^p$ với $p \ge 1$, $x \log x$, mọi chuẩn, hàm max, $x^2/y$ và log-sum-exp. Những hàm lõm cơ bản gồm $\log x$, $x^a$ với $0 \le a \le 1$, trung bình nhân, $\log\det X$ và entropy. Mỗi hàm có một công cụ chứng minh hợp với nó: dấu $f''$ cho hàm một biến, định nghĩa cho các hàm có góc nhọn, Hessian kèm Cauchy–Schwarz cho log-sum-exp và trung bình nhân, hạn chế lên đường thẳng cho $\log\det$.
+Những hàm lồi cơ bản gồm $e^{ax}$, $x^a$ với $a \ge 1$ hoặc $a \le 0$ trên $\mathbb{R}_{++}$, $|x|^p$ với $p \ge 1$, $x \log x$, mọi chuẩn, hàm max, $x^2/y$ và log-sum-exp. Những hàm lõm cơ bản gồm $\log x$, $x^a$ với $0 \le a \le 1$, trung bình nhân, $\log\det X$ và entropy. Mỗi hàm có một công cụ chứng minh hợp với nó: Dấu $f''$ cho hàm một biến, định nghĩa cho các hàm có góc nhọn, Hessian kèm Cauchy–Schwarz cho log-sum-exp và trung bình nhân, hạn chế lên đường thẳng cho $\log\det$.
 
 Log-sum-exp là phiên bản trơn của max, có gradient là softmax và Hessian là một ma trận hiệp phương sai, và nó là nền của hàm mất mát entropy chéo. Tính lõm cùng tính đối xứng cho thấy phân phối đều có entropy lớn nhất.
 

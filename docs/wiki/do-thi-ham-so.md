@@ -13,9 +13,9 @@ next: false
 
 ## Giải thích kỹ thuật
 
-**Đồ thị là một tập hợp.** Với $f:\mathbb R^n\to\mathbb R$, đồ thị là $\{(x,f(x)) : x\in\operatorname{dom} f\}$, một tập con của $\mathbb R^{n+1}$. Nhìn hàm như một tập hợp cho phép dùng hình học của tập hợp: hàm lồi khi đồ thị nằm dưới mọi dây cung nối hai điểm của nó, và khi khả vi thì tiếp tuyến hay siêu phẳng tiếp xúc tại mọi điểm nằm dưới đồ thị.
+**Đồ thị là một tập hợp.** Với $f:\mathbb R^n\to\mathbb R$, đồ thị là $\{(x,f(x)) : x\in\operatorname{dom} f\}$, một tập con của $\mathbb R^{n+1}$. Nhìn hàm như một tập hợp cho phép dùng hình học của tập hợp: Hàm lồi khi đồ thị nằm dưới mọi dây cung nối hai điểm của nó, và khi khả vi thì tiếp tuyến hay siêu phẳng tiếp xúc tại mọi điểm nằm dưới đồ thị.
 
-**Đồ thị, epigraph và đường mức.** Epigraph $\{(x,t): f(x)\le t\}$ gồm đồ thị và mọi điểm nằm phía trên nó. Hàm lồi khi và chỉ khi epigraph là tập lồi, trong khi bản thân đồ thị của một hàm lồi không affine thì không lồi: đồ thị của $x^2$ chứa $(-1,1)$ và $(1,1)$ nhưng không chứa trung điểm $(0,1)$. Đường mức $\{x: f(x)=\alpha\}$ là hình chiếu xuống mặt phẳng nằm ngang của giao giữa đồ thị và mặt phẳng độ cao $\alpha$, nên các đường mức là cách vẽ đồ thị của hàm hai biến trên giấy.
+**Đồ thị, epigraph và đường mức.** Epigraph $\{(x,t): f(x)\le t\}$ gồm đồ thị và mọi điểm nằm phía trên nó. Hàm lồi khi và chỉ khi epigraph là tập lồi, trong khi bản thân đồ thị của một hàm lồi không affine thì không lồi: Đồ thị của $x^2$ chứa $(-1,1)$ và $(1,1)$ nhưng không chứa trung điểm $(0,1)$. Đường mức $\{x: f(x)=\alpha\}$ là hình chiếu xuống mặt phẳng nằm ngang của giao giữa đồ thị và mặt phẳng độ cao $\alpha$, nên các đường mức là cách vẽ đồ thị của hàm hai biến trên giấy.
 
 **Không nhầm với đồ thị trong lý thuyết đồ thị.** Cùng là chữ “đồ thị”, nhưng trong lý thuyết đồ thị và trong học sâu (đồ thị tính toán), từ này chỉ một cấu trúc gồm đỉnh và cạnh, hoàn toàn khác đồ thị của một hàm số.
 
@@ -25,7 +25,7 @@ next: false
 
 ## Khi nào cần dùng?
 
-Đọc tính lồi bằng hình học: đồ thị nằm dưới mọi dây cung, tiếp tuyến nằm dưới đồ thị.
+Đọc tính lồi bằng hình học: Đồ thị nằm dưới mọi dây cung, tiếp tuyến nằm dưới đồ thị.
 
 ## Câu hỏi ôn lại
 

@@ -4,16 +4,16 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: phep-toan-giu-tinh-loi-cua-ham
 section: topic
 title: "Các phép toán giữ tính lồi của hàm"
-description: "Bộ quy tắc lắp ghép hàm lồi: tổng có trọng số không âm, hợp với ánh xạ affine, max và supremum theo từng điểm, hàm lồi như bao trên của các hàm affine, quy tắc hợp hàm với điều kiện đơn điệu của mở rộng giá trị, cực tiểu hóa theo một phần biến và hàm Huber, phối cảnh của hàm, cùng những phép toán làm mất tính lồi."
+description: "Bộ quy tắc lắp ghép hàm lồi: Tổng có trọng số không âm, hợp với ánh xạ affine, max và supremum theo từng điểm, hàm lồi như bao trên của các hàm affine, quy tắc hợp hàm với điều kiện đơn điệu của mở rộng giá trị, cực tiểu hóa theo một phần biến và hàm Huber, phối cảnh của hàm, cùng những phép toán làm mất tính lồi."
 ---
 
-Chủ đề trước cho ta một "bảng" các hàm lồi cơ bản. Chủ đề này cho các "quy tắc" lắp ghép chúng, giống như quy tắc tổng, tích, hợp của đạo hàm. Nhờ những quy tắc này, để biết hàm mất mát $\frac1m\sum_i \log\big(1 + e^{-y_i x_i^T w}\big) + \lambda\|w\|_2^2$ có lồi theo $w$ hay không, ta không cần tính Hessian: chỉ cần đọc biểu thức từ trong ra ngoài và kiểm tra mỗi bước dùng một quy tắc hợp lệ.
+Chủ đề trước cho ta một "bảng" các hàm lồi cơ bản. Chủ đề này cho các "quy tắc" lắp ghép chúng, giống như quy tắc tổng, tích, hợp của đạo hàm. Nhờ những quy tắc này, để biết hàm mất mát $\frac1m\sum_i \log\big(1 + e^{-y_i x_i^T w}\big) + \lambda\|w\|_2^2$ có lồi theo $w$ hay không, ta không cần tính Hessian: Chỉ cần đọc biểu thức từ trong ra ngoài và kiểm tra mỗi bước dùng một quy tắc hợp lệ.
 
 Nhưng khác với đạo hàm, không phải phép toán nào cũng giữ được tính lồi. Tích, thương, hiệu, min và phần lớn các phép hợp hàm đều có thể phá nó. Vì vậy học các quy tắc ở đây cũng là học chỗ nào phải dừng lại kiểm tra giả thiết. Nội dung bám theo §3.2 của sách.
 
-## 1. Hai quy tắc nền: tổng không âm và hợp với ánh xạ affine
+## 1. Hai quy tắc nền: Tổng không âm và hợp với ánh xạ affine
 
-**Tổng có trọng số không âm.** Nếu $f_1, \dots, f_m$ lồi và $w_1, \dots, w_m \ge 0$ thì $w_1 f_1 + \cdots + w_m f_m$ lồi. Nói cách khác, tập các hàm lồi là một **nón lồi**, đúng khái niệm ở phần tập lồi. Quy tắc mở rộng sang tổng vô hạn và tích phân: nếu $f(x, y)$ lồi theo $x$ với mỗi $y$, và $w(y) \ge 0$, thì $\int w(y) f(x, y)\,dy$ lồi theo $x$. Đó là lý do **kỳ vọng** của một hàm mất mát lồi theo tham số, lấy trên phân phối của dữ liệu, vẫn lồi theo tham số.
+**Tổng có trọng số không âm.** Nếu $f_1, \dots, f_m$ lồi và $w_1, \dots, w_m \ge 0$ thì $w_1 f_1 + \cdots + w_m f_m$ lồi. Nói cách khác, tập các hàm lồi là một **nón lồi**, đúng khái niệm ở phần tập lồi. Quy tắc mở rộng sang tổng vô hạn và tích phân: Nếu $f(x, y)$ lồi theo $x$ với mỗi $y$, và $w(y) \ge 0$, thì $\int w(y) f(x, y)\,dy$ lồi theo $x$. Đó là lý do **kỳ vọng** của một hàm mất mát lồi theo tham số, lấy trên phân phối của dữ liệu, vẫn lồi theo tham số.
 
 Điều kiện "không âm" là thật sự cần: $x^2 - 2x^2 = -x^2$ là hiệu của hai hàm lồi nhưng lõm.
 
@@ -27,28 +27,28 @@ Cộng các số hạng của từng điểm dữ liệu với trọng số $1/m
 
 ## 2. Max, supremum, và hàm lồi như bao trên của các hàm affine
 
-**Max theo từng điểm.** Nếu $f_1, \dots, f_m$ lồi thì $f(x) = \max\{f_1(x), \dots, f_m(x)\}$ lồi. Cách thấy nhanh nhất là qua epigraph: điểm $(x, t)$ nằm trên đồ thị của max khi và chỉ khi nó nằm trên đồ thị của từng $f_i$, nên $\operatorname{epi} f = \bigcap_i \operatorname{epi} f_i$, giao của các tập lồi.
+**Max theo từng điểm.** Nếu $f_1, \dots, f_m$ lồi thì $f(x) = \max\{f_1(x), \dots, f_m(x)\}$ lồi. Cách thấy nhanh nhất là qua epigraph: Điểm $(x, t)$ nằm trên đồ thị của max khi và chỉ khi nó nằm trên đồ thị của từng $f_i$, nên $\operatorname{epi} f = \bigcap_i \operatorname{epi} f_i$, giao của các tập lồi.
 
-Lập luận bằng epigraph không quan tâm có bao nhiêu hàm, nên quy tắc mở rộng sang **supremum** của một họ vô hạn: nếu $f(x, y)$ lồi theo $x$ với mỗi $y \in \mathcal{A}$ thì $g(x) = \sup_{y \in \mathcal{A}} f(x, y)$ lồi theo $x$. Sách đưa ra một loạt ví dụ chỉ cần quy tắc này:
+Lập luận bằng epigraph không quan tâm có bao nhiêu hàm, nên quy tắc mở rộng sang **supremum** của một họ vô hạn: Nếu $f(x, y)$ lồi theo $x$ với mỗi $y \in \mathcal{A}$ thì $g(x) = \sup_{y \in \mathcal{A}} f(x, y)$ lồi theo $x$. Sách đưa ra một loạt ví dụ chỉ cần quy tắc này:
 
 - **Hàm tuyến tính từng khúc** $\max_i (a_i^T x + b_i)$ (Ví dụ 3.5). Hàm mất mát hinge $\max\{0,\ 1 - y\, x^T w\}$ là trường hợp hai khúc.
 - **Tổng $r$ thành phần lớn nhất** của $x$ (Ví dụ 3.6), là max của mọi tổng $r$ thành phần khác nhau. Với $x = (3, -1, 4, 1, 5)$ và $r = 2$, đó là max của $\binom{5}{2} = 10$ hàm tuyến tính, bằng $5 + 4 = 9$.
 - **Hàm tựa** $S_C(x) = \sup_{y \in C} x^T y$ của một tập $C$ (Ví dụ 3.7), là supremum của các hàm tuyến tính, nên lồi dù $C$ có lồi hay không.
 - **Trị riêng lớn nhất** $\lambda_{\max}(X) = \sup_{\|y\|_2 = 1} y^T X y$ của ma trận đối xứng (Ví dụ 3.10). Mỗi $y^T X y$ tuyến tính theo $X$, nên $\lambda_{\max}$ lồi. Thử bằng số: $\lambda_{\max}$ của $\operatorname{diag}(1, 0)$ và của $\operatorname{diag}(0, 1)$ đều bằng 1, còn của trung bình $\tfrac12 I$ chỉ bằng $0.5$.
 
-**Mọi hàm lồi đều là supremum của các hàm affine.** Ví dụ trên gợi ý một cách chứng minh tính lồi: viết hàm thành supremum của một họ hàm affine. Sách chỉ ra rằng, ngoài một điều kiện kỹ thuật, cách này luôn làm được. Với $f$ lồi và $\operatorname{dom} f = \mathbb{R}^n$,
+**Mọi hàm lồi đều là supremum của các hàm affine.** Ví dụ trên gợi ý một cách chứng minh tính lồi: Viết hàm thành supremum của một họ hàm affine. Sách chỉ ra rằng, ngoài một điều kiện kỹ thuật, cách này luôn làm được. Với $f$ lồi và $\operatorname{dom} f = \mathbb{R}^n$,
 
 $$
-f(x) = \sup\{\, g(x) : g \text{ affine},\ g(z) \le f(z) \text{ với mọi } z \,\}.
+f(x) = \sup\{\, g(x) : G \text{ affine},\ g(z) \le f(z) \text{ với mọi } z \,\}.
 $$
 
-Lý do: tại mỗi $x$, epigraph lồi có một siêu phẳng tựa tại $(x, f(x))$, và siêu phẳng đó không thể thẳng đứng, nên nó là đồ thị của một hàm affine nằm dưới $f$ và chạm $f$ tại $x$. Khi $f$ khả vi, đó chính là tiếp tuyến. Hàm lồi là **bao trên** của các tiếp tuyến của nó.
+Lý do: Tại mỗi $x$, epigraph lồi có một siêu phẳng tựa tại $(x, f(x))$, và siêu phẳng đó không thể thẳng đứng, nên nó là đồ thị của một hàm affine nằm dưới $f$ và chạm $f$ tại $x$. Khi $f$ khả vi, đó chính là tiếp tuyến. Hàm lồi là **bao trên** của các tiếp tuyến của nó.
 
 <EnvelopeLab />
 
-Mô phỏng cho thấy max của $k$ tiếp tuyến tiến dần tới hàm khi $k$ tăng. Với $x^2$ và các tiếp điểm cách nhau $h$, hai tiếp tuyến kề nhau cắt nhau ở giữa, và sai số lớn nhất bằng $h^2/4$. Tăng gấp đôi số tiếp tuyến thì sai số giảm khoảng bốn lần. Mô hình "max các tiếp tuyến" luôn nằm **dưới** hàm thật, và đây là ý tưởng của các phương pháp mặt phẳng cắt: mỗi lần tính gradient, thêm một tiếp tuyến vào mô hình.
+Mô phỏng cho thấy max của $k$ tiếp tuyến tiến dần tới hàm khi $k$ tăng. Với $x^2$ và các tiếp điểm cách nhau $h$, hai tiếp tuyến kề nhau cắt nhau ở giữa, và sai số lớn nhất bằng $h^2/4$. Tăng gấp đôi số tiếp tuyến thì sai số giảm khoảng bốn lần. Mô hình "max các tiếp tuyến" luôn nằm **dưới** hàm thật, và đây là ý tưởng của các phương pháp mặt phẳng cắt: Mỗi lần tính gradient, thêm một tiếp tuyến vào mô hình.
 
-## 3. Hợp hàm: khi nào $h(g(x))$ lồi
+## 3. Hợp hàm: Khi nào $h(g(x))$ lồi
 
 Quy tắc hợp hàm là quy tắc khó nhất, và cũng hay bị dùng sai nhất. Để tìm ra nó, sách xét trường hợp một biến, $h$ và $g$ khả vi hai lần trên toàn $\mathbb{R}$. Đạo hàm bậc hai của $f = h \circ g$ là
 
@@ -67,13 +67,13 @@ Số hạng đầu không âm khi $h$ lồi. Số hạng sau là tích của **�
 
 Dòng đầu được dùng nhiều nhất. Nó cho ngay $e^{g(x)}$ lồi khi $g$ lồi, và $g(x)^p$ lồi khi $g$ lồi, không âm và $p \ge 1$. Dòng thứ hai cho $1/g(x)$ lồi và $-\log g(x)$ lồi khi $g$ lõm và dương, nên hàm rào chắn logarit $-\sum_i \log(b_i - a_i^T x)$ lồi trên miền $a_i^T x < b_i$. Dòng thứ ba cho $\log g(x)$ lõm khi $g$ lõm và dương (Ví dụ 3.13).
 
-**Vì sao không bỏ được điều kiện đơn điệu.** Lấy $h(u) = u^2$, lồi nhưng không đơn điệu, và $g(x) = x^2 - 1$, lồi. Hàm hợp $(x^2 - 1)^2$ là hàm giếng đôi đã gặp ở chủ đề điều kiện bậc hai, có $f''(0) = -4 < 0$. Lấy $h = \exp$, lồi và tăng, nhưng $g(x) = -x^2$ lõm thay vì lồi: hàm hợp $e^{-x^2}$ là đường chuông, cong xuống ở giữa.
+**Vì sao không bỏ được điều kiện đơn điệu.** Lấy $h(u) = u^2$, lồi nhưng không đơn điệu, và $g(x) = x^2 - 1$, lồi. Hàm hợp $(x^2 - 1)^2$ là hàm giếng đôi đã gặp ở chủ đề điều kiện bậc hai, có $f''(0) = -4 < 0$. Lấy $h = \exp$, lồi và tăng, nhưng $g(x) = -x^2$ lõm thay vì lồi: Hàm hợp $e^{-x^2}$ là đường chuông, cong xuống ở giữa.
 
 **Đơn điệu phải hiểu cho mở rộng giá trị.** Khi $h$ không xác định trên toàn $\mathbb{R}$, điều kiện "$h$ không giảm" phải áp dụng cho mở rộng giá trị $\tilde h$, hàm bằng $+\infty$ ngoài miền xác định của hàm lồi $h$. Điều này buộc miền của $h$ phải kéo dài vô tận về phía âm. Hàm $u^{3/2}$ trên $\mathbb{R}_+$ lồi và tăng trên miền của nó, nhưng $\tilde h(-1) = \infty > \tilde h(1) = 1$, nên nó không thỏa điều kiện (Ví dụ 3.12). Hợp nó với $g(x) = x^2 - 1$ cho hàm xác định trên $|x| \ge 1$, một miền gồm hai mảnh rời nhau, nên không thể lồi. Ghi chú 3.3 của sách đưa một ví dụ cùng kiểu.
 
 <CompositionLab />
 
-Hãy để ý tình huống $h = u^2$ với $g = |x|$: không quy tắc nào áp dụng vì $u^2$ không đơn điệu, vậy mà $|x|^2 = x^2$ vẫn lồi. Bốn quy tắc là **điều kiện đủ**. Khi chúng im lặng, ta chưa kết luận được gì và phải dùng công cụ khác.
+Hãy để ý tình huống $h = u^2$ với $g = |x|$: Không quy tắc nào áp dụng vì $u^2$ không đơn điệu, vậy mà $|x|^2 = x^2$ vẫn lồi. Bốn quy tắc là **điều kiện đủ**. Khi chúng im lặng, ta chưa kết luận được gì và phải dùng công cụ khác.
 
 **Hợp với hàm nhiều biến.** Quy tắc mở rộng cho $f(x) = h(g_1(x), \dots, g_k(x))$: $f$ lồi nếu $h$ lồi, không giảm theo từng đối số, và mọi $g_i$ lồi. Chẳng hạn $\log \sum_i e^{g_i(x)}$ lồi khi mọi $g_i$ lồi, vì log-sum-exp lồi và tăng theo từng đối số (Ví dụ 3.14).
 
@@ -83,13 +83,13 @@ Max của các hàm lồi luôn lồi. Min thì nói chung không. Nhưng có m�
 
 > Nếu $f(x, y)$ lồi **đồng thời** theo $(x, y)$ và $C$ là tập lồi khác rỗng, thì $g(x) = \inf_{y \in C} f(x, y)$ lồi theo $x$, với điều kiện $g(x) > -\infty$.
 
-Về hình học, epigraph của $g$ là hình chiếu của epigraph của $f$ lên các tọa độ $(x, t)$, và hình chiếu của một tập lồi là tập lồi. Hãy nhìn một cái bát trong không gian $(x, y, t)$ từ phía trục $y$: bóng của nó là một cái bát trong mặt phẳng $(x, t)$.
+Về hình học, epigraph của $g$ là hình chiếu của epigraph của $f$ lên các tọa độ $(x, t)$, và hình chiếu của một tập lồi là tập lồi. Hãy nhìn một cái bát trong không gian $(x, y, t)$ từ phía trục $y$: Bóng của nó là một cái bát trong mặt phẳng $(x, t)$.
 
 Chữ "đồng thời" là điều kiện cốt lõi. Hàm $f(x, y) = y^2 - xy$ lồi theo $y$ với mỗi $x$ cố định, và tuyến tính theo $x$ với mỗi $y$ cố định. Nhưng Hessian $\begin{bmatrix} 0 & -1 \\ -1 & 2 \end{bmatrix}$ có định thức $-1$, nên $f$ không lồi đồng thời. Cực tiểu theo $y$ đạt tại $y = x/2$ và cho $g(x) = -x^2/4$, một hàm **lõm**.
 
 Ba ví dụ quen thuộc:
 
-- **Khoảng cách tới một tập lồi** $\operatorname{dist}(x, S) = \inf_{y \in S} \|x - y\|$ lồi, vì $\|x - y\|$ lồi đồng thời theo $(x, y)$ (Ví dụ 3.16). Với tập không lồi thì không còn đúng: khoảng cách tới $\{-1, 1\}$ bằng 1 tại $x = 0$, nhưng bằng 0 tại $x = \pm 1$.
+- **Khoảng cách tới một tập lồi** $\operatorname{dist}(x, S) = \inf_{y \in S} \|x - y\|$ lồi, vì $\|x - y\|$ lồi đồng thời theo $(x, y)$ (Ví dụ 3.16). Với tập không lồi thì không còn đúng: Khoảng cách tới $\{-1, 1\}$ bằng 1 tại $x = 0$, nhưng bằng 0 tại $x = \pm 1$.
 - **Phần bù Schur** (Ví dụ 3.15). Cực tiểu dạng toàn phương lồi $x^T A x + 2x^T B y + y^T C y$ theo $y$ cho $x^T (A - BC^{-1}B^T) x$ khi $C \succ 0$, nên ma trận $A - BC^{-1}B^T$ nửa xác định dương. Lập luận này chứng minh được một chiều của tiêu chuẩn phần bù Schur đã dùng ở chủ đề về epigraph, mà không cần một phép tính ma trận nào.
 - **Hàm Huber.** Cực tiểu theo biến phụ $s$ của hàm lồi đồng thời $\tfrac12 (r - s)^2 + |s|$ cho
 
@@ -97,7 +97,7 @@ $$
 \phi(r) = \min_s \Big( \tfrac12 (r - s)^2 + |s| \Big) = \begin{cases} \tfrac12 r^2 & |r| \le 1, \\ |r| - \tfrac12 & |r| > 1. \end{cases}
 $$
 
-Đây là hàm phạt Huber của hồi quy bền vững: phạt bình phương với sai số nhỏ và phạt tuyến tính với sai số lớn, nên một điểm dữ liệu ngoại lai không kéo nghiệm đi quá xa. Ta biết ngay nó lồi mà không cần xét hai nhánh. Cách đọc biến phụ $s$ cũng thú vị: $s$ là phần sai số được "tha" cho một mức phạt tuyến tính, còn phần còn lại $r - s$ bị phạt bình phương. Kiểm tra bằng số: tại $r = 3$, giá trị nhỏ nhất bằng $2.5$, đạt tại $s = 2$.
+Đây là hàm phạt Huber của hồi quy bền vững: Phạt bình phương với sai số nhỏ và phạt tuyến tính với sai số lớn, nên một điểm dữ liệu ngoại lai không kéo nghiệm đi quá xa. Ta biết ngay nó lồi mà không cần xét hai nhánh. Cách đọc biến phụ $s$ cũng thú vị: $s$ là phần sai số được "tha" cho một mức phạt tuyến tính, còn phần còn lại $r - s$ bị phạt bình phương. Kiểm tra bằng số: Tại $r = 3$, giá trị nhỏ nhất bằng $2.5$, đạt tại $s = 2$.
 
 ## 5. Phối cảnh của hàm
 
@@ -122,7 +122,7 @@ Dòng "lồi theo từng biến riêng rẽ" đáng để tâm nhất. Một hà
 
 ## 7. Đọc một hàm mất mát từ trong ra ngoài
 
-Ghép các quy tắc lại, ta có một quy trình kiểm tra tính lồi chỉ bằng cách đọc biểu thức. Các thư viện tối ưu như CVXPY cài đặt đúng tinh thần này dưới tên **lập trình lồi có kỷ luật** (disciplined convex programming): mỗi biểu thức được phân tích thành cây, và tính lồi được suy ra từ lá lên gốc bằng các quy tắc vừa học.
+Ghép các quy tắc lại, ta có một quy trình kiểm tra tính lồi chỉ bằng cách đọc biểu thức. Các thư viện tối ưu như CVXPY cài đặt đúng tinh thần này dưới tên **lập trình lồi có kỷ luật** (disciplined convex programming): Mỗi biểu thức được phân tích thành cây, và tính lồi được suy ra từ lá lên gốc bằng các quy tắc vừa học.
 
 ::: example Đọc hàm mất mát của hồi quy logistic có điều chuẩn
 Xét hàm mất mát sau, với $\lambda \ge 0$:
@@ -146,7 +146,7 @@ Kết luận: $L$ lồi theo $w$. Ta không cần tính một đạo hàm nào, 
 
 <details><summary>Xem lời giải thích</summary>
 
-Có thể là bất cứ thứ gì. $x^2 + (-x^2) = 0$ là affine. $x^2 + (-2x^2) = -x^2$ là lõm. $2x^2 + (-x^2) = x^2$ là lồi. Còn $x^4 + (-x^2)$ không lồi cũng không lõm: đạo hàm bậc hai $12x^2 - 2$ âm gần gốc và dương khi $|x|$ lớn. Một trường hợp đặc biệt luôn an toàn là khi hàm lõm thật ra là affine, vì hàm affine vừa lồi vừa lõm.
+Có thể là bất cứ thứ gì. $x^2 + (-x^2) = 0$ là affine. $x^2 + (-2x^2) = -x^2$ là lõm. $2x^2 + (-x^2) = x^2$ là lồi. Còn $x^4 + (-x^2)$ không lồi cũng không lõm: Đạo hàm bậc hai $12x^2 - 2$ âm gần gốc và dương khi $|x|$ lớn. Một trường hợp đặc biệt luôn an toàn là khi hàm lõm thật ra là affine, vì hàm affine vừa lồi vừa lõm.
 
 </details>
 
@@ -154,7 +154,7 @@ Có thể là bất cứ thứ gì. $x^2 + (-x^2) = 0$ là affine. $x^2 + (-2x^2
 
 <details><summary>Xem lời giải thích</summary>
 
-$\lambda_{\min}(X) = \inf_{\|y\|_2 = 1} y^T X y$ là infimum của một họ hàm tuyến tính theo $X$, nên **lõm**. Quy tắc "supremum của các hàm lồi là lồi" có bản sao "infimum của các hàm lõm là lõm". Ví dụ với hai ma trận ở mục 2: $\lambda_{\min}$ của $\operatorname{diag}(1, 0)$ và $\operatorname{diag}(0, 1)$ đều bằng 0, còn của trung bình $\tfrac12 I$ bằng $0.5 \ge 0$, đúng chiều lõm. Hệ quả: điều kiện $\lambda_{\min}(X) \ge \alpha$ xác định một tập lồi, vì đó là tập mức trên của một hàm lõm.
+$\lambda_{\min}(X) = \inf_{\|y\|_2 = 1} y^T X y$ là infimum của một họ hàm tuyến tính theo $X$, nên **lõm**. Quy tắc "supremum của các hàm lồi là lồi" có bản sao "infimum của các hàm lõm là lõm". Ví dụ với hai ma trận ở mục 2: $\lambda_{\min}$ của $\operatorname{diag}(1, 0)$ và $\operatorname{diag}(0, 1)$ đều bằng 0, còn của trung bình $\tfrac12 I$ bằng $0.5 \ge 0$, đúng chiều lõm. Hệ quả: Điều kiện $\lambda_{\min}(X) \ge \alpha$ xác định một tập lồi, vì đó là tập mức trên của một hàm lõm.
 
 </details>
 
@@ -170,7 +170,7 @@ Không, nếu $f$ chỉ lồi theo từng khối biến mà không lồi đồng
 
 <details><summary>Xem lời giải thích</summary>
 
-Hinge là max của hai hàm affine theo $w$, nên lồi, và trung bình của các hàm lồi là lồi. Hàm đếm sai dùng hàm bậc thang $\mathbf{1}[u \le 0]$, không lồi: với $u = -1$ và $u = 1$, hàm bằng 1 và 0, trung điểm $u = 0$ cho giá trị 1, lớn hơn trung bình $0.5$. Đó là lý do người ta tối ưu hinge hay mất mát logistic thay cho tỉ lệ lỗi: chúng là những **cận trên lồi** của hàm đếm sai. Với $u = y\, x^T w$, ta có $\max\{0, 1 - u\} \ge \mathbf{1}[u \le 0]$ với mọi $u$.
+Hinge là max của hai hàm affine theo $w$, nên lồi, và trung bình của các hàm lồi là lồi. Hàm đếm sai dùng hàm bậc thang $\mathbf{1}[u \le 0]$, không lồi: Với $u = -1$ và $u = 1$, hàm bằng 1 và 0, trung điểm $u = 0$ cho giá trị 1, lớn hơn trung bình $0.5$. Đó là lý do người ta tối ưu hinge hay mất mát logistic thay cho tỉ lệ lỗi: Chúng là những **cận trên lồi** của hàm đếm sai. Với $u = y\, x^T w$, ta có $\max\{0, 1 - u\} \ge \mathbf{1}[u \le 0]$ với mọi $u$.
 
 </details>
 
@@ -197,7 +197,7 @@ Với $\delta > 0$, tính $\phi_\delta(r) = \min_s \big(\tfrac12 (r - s)^2 + \de
 :::
 
 ::: solution
-Hàm $\tfrac12 (r - s)^2 + \delta|s|$ lồi đồng thời theo $(r, s)$: số hạng đầu là bình phương của hàm tuyến tính $r - s$, số hạng sau là $\delta$ lần trị tuyệt đối. Theo quy tắc cực tiểu hóa từng phần, $\phi_\delta$ lồi. Để tính, cực tiểu theo $s$: nếu $|r| \le \delta$ thì $s = 0$ và $\phi_\delta(r) = \tfrac12 r^2$. Nếu $|r| > \delta$ thì $s = r - \delta\operatorname{sign}(r)$, phần dư $r - s$ có độ lớn $\delta$, và $\phi_\delta(r) = \tfrac12\delta^2 + \delta(|r| - \delta) = \delta|r| - \tfrac12\delta^2$. Với $\delta = 1$: $\phi(0.5) = 0.125$ và $\phi(3) = 3 - 0.5 = 2.5$, khớp với giá trị cực tiểu tính bằng số.
+Hàm $\tfrac12 (r - s)^2 + \delta|s|$ lồi đồng thời theo $(r, s)$: Số hạng đầu là bình phương của hàm tuyến tính $r - s$, số hạng sau là $\delta$ lần trị tuyệt đối. Theo quy tắc cực tiểu hóa từng phần, $\phi_\delta$ lồi. Để tính, cực tiểu theo $s$: Nếu $|r| \le \delta$ thì $s = 0$ và $\phi_\delta(r) = \tfrac12 r^2$. Nếu $|r| > \delta$ thì $s = r - \delta\operatorname{sign}(r)$, phần dư $r - s$ có độ lớn $\delta$, và $\phi_\delta(r) = \tfrac12\delta^2 + \delta(|r| - \delta) = \delta|r| - \tfrac12\delta^2$. Với $\delta = 1$: $\phi(0.5) = 0.125$ và $\phi(3) = 3 - 0.5 = 2.5$, khớp với giá trị cực tiểu tính bằng số.
 :::
 
 ## Tóm tắt
@@ -208,5 +208,5 @@ Quy tắc hợp hàm đòi độ dốc của hàm ngoài và độ cong của h�
 
 ## Nguồn và đọc thêm
 
-- S. Boyd, L. Vandenberghe, *Convex Optimization*, §3.2 (tr. 79–90): các Ví dụ 3.5–3.7, 3.10, 3.12–3.16, 3.18, 3.19, Ghi chú 3.3 và Hình 3.7.
+- S. Boyd, L. Vandenberghe, *Convex Optimization*, §3.2 (tr. 79–90): Các Ví dụ 3.5–3.7, 3.10, 3.12–3.16, 3.18, 3.19, Ghi chú 3.3 và Hình 3.7.
 - Hai mô phỏng, ví dụ hàm Huber như một bài cực tiểu hóa từng phần, phản ví dụ $y^2 - xy$ và bảng các phép toán làm mất tính lồi do người soạn bổ sung. Ví dụ đọc hàm mất mát logistic, các câu hỏi và bài tập cũng do người soạn viết. Mọi con số đã được tính lại bằng chương trình.

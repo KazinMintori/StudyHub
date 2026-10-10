@@ -9,7 +9,7 @@ description: "Monomial và posynomial cùng các phép toán khép kín, quy ho�
 
 Có những bài toán không lồi trong biến gốc của chúng, nhưng trở thành lồi khi ta đo mọi đại lượng theo **thang logarit**. Quy hoạch hình học (geometric program, GP) là lớp bài toán quan trọng nhất thuộc loại này. Nó xuất hiện tự nhiên trong thiết kế kỹ thuật, nơi các đại lượng như kích thước, công suất, thời gian trễ thường dương và liên hệ với nhau qua những tích và lũy thừa.
 
-Trang này định nghĩa các khối dựng của GP, cho thấy phép đổi biến $y = \log x$ biến GP thành một bài toán lồi, và làm hai ví dụ: thiết kế một tấm áp phích có lề, và cân bằng một ma trận.
+Trang này định nghĩa các khối dựng của GP, cho thấy phép đổi biến $y = \log x$ biến GP thành một bài toán lồi, và làm hai ví dụ: Thiết kế một tấm áp phích có lề, và cân bằng một ma trận.
 
 ## 1. Monomial và posynomial
 
@@ -43,7 +43,7 @@ $$
 
 với $f_0, \ldots, f_m$ là posynomial và $h_1, \ldots, h_p$ là monomial. Miền của bài toán là $\mathbb{R}^n_{++}$, nên điều kiện $x \succ 0$ luôn được ngầm hiểu.
 
-Nhiều ràng buộc trông khác dạng chuẩn vẫn đưa về được nhờ các phép toán khép kín. Ràng buộc "posynomial $\le$ monomial", $f(x) \le h(x)$, viết thành $f(x)/h(x) \le 1$. Ràng buộc "monomial $=$ monomial" viết thành thương của chúng bằng 1. Cực đại một monomial tương đương cực tiểu nghịch đảo của nó, cũng là một monomial. Sách cho một ví dụ: bài toán cực đại $x/y$ với $2 \le x \le 3$, $x^2 + 3y/z \le \sqrt y$ và $x/y = z^2$ đưa được về GP dạng chuẩn
+Nhiều ràng buộc trông khác dạng chuẩn vẫn đưa về được nhờ các phép toán khép kín. Ràng buộc "posynomial $\le$ monomial", $f(x) \le h(x)$, viết thành $f(x)/h(x) \le 1$. Ràng buộc "monomial $=$ monomial" viết thành thương của chúng bằng 1. Cực đại một monomial tương đương cực tiểu nghịch đảo của nó, cũng là một monomial. Sách cho một ví dụ: Bài toán cực đại $x/y$ với $2 \le x \le 3$, $x^2 + 3y/z \le \sqrt y$ và $x/y = z^2$ đưa được về GP dạng chuẩn
 
 $$
 \begin{aligned}
@@ -56,7 +56,7 @@ $$
 
 ## 3. Đổi sang thang logarit
 
-GP không lồi trong biến $x$: một posynomial như $\sqrt{x_1} + \sqrt{x_2}$ là hàm lõm, và tập $\{x : \sqrt{x_1} + \sqrt{x_2} \le 2\}$ không lồi. Đổi biến $y_i = \log x_i$, tức $x_i = e^{y_i}$. Một monomial trở thành
+GP không lồi trong biến $x$: Một posynomial như $\sqrt{x_1} + \sqrt{x_2}$ là hàm lõm, và tập $\{x : \sqrt{x_1} + \sqrt{x_2} \le 2\}$ không lồi. Đổi biến $y_i = \log x_i$, tức $x_i = e^{y_i}$. Một monomial trở thành
 
 $$
 c\,e^{a_1y_1}\cdots e^{a_ny_n} = e^{a^Ty + b}, \qquad b = \log c,
@@ -72,15 +72,15 @@ $$
 \end{aligned}
 $$
 
-Mỗi hàm $\log\sum_k e^{a_k^Ty + b_k}$ là hàm [log-sum-exp](../bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md) hợp với một ánh xạ affine, nên lồi. Mỗi ràng buộc monomial $h_i(x) = 1$ trở thành $\log h_i = 0$, một phương trình affine. Vậy GP dạng lồi là một bài toán lồi ở dạng chuẩn. Đáng chú ý là phép biến đổi không cần tính toán gì: dữ liệu của hai dạng hoàn toàn như nhau, chỉ cách viết hàm là khác.
+Mỗi hàm $\log\sum_k e^{a_k^Ty + b_k}$ là hàm [log-sum-exp](../bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md) hợp với một ánh xạ affine, nên lồi. Mỗi ràng buộc monomial $h_i(x) = 1$ trở thành $\log h_i = 0$, một phương trình affine. Vậy GP dạng lồi là một bài toán lồi ở dạng chuẩn. Đáng chú ý là phép biến đổi không cần tính toán gì: Dữ liệu của hai dạng hoàn toàn như nhau, chỉ cách viết hàm là khác.
 
-Về hình học, một đoạn thẳng trong biến $y$ ứng với đường $x(\theta) = p^{1-\theta}q^{\theta}$ trong biến $x$, tính theo từng thành phần. Trung điểm của đoạn ấy là **trung bình nhân** $\sqrt{pq}$ chứ không phải trung bình cộng. Tính lồi trong biến $\log x$ vì thế có nghĩa là: tập chứa trung bình nhân của hai điểm bất kỳ của nó.
+Về hình học, một đoạn thẳng trong biến $y$ ứng với đường $x(\theta) = p^{1-\theta}q^{\theta}$ trong biến $x$, tính theo từng thành phần. Trung điểm của đoạn ấy là **trung bình nhân** $\sqrt{pq}$ chứ không phải trung bình cộng. Tính lồi trong biến $\log x$ vì thế có nghĩa là: Tập chứa trung bình nhân của hai điểm bất kỳ của nó.
 
 <GPLab />
 
 Nếu mọi posynomial trong GP chỉ có một số hạng, tức đều là monomial, thì sau khi lấy logarit, mọi hàm đều affine và GP dạng lồi là một LP. Vì vậy có thể xem GP là một mở rộng của quy hoạch tuyến tính.
 
-## 4. Ví dụ: thiết kế một tấm áp phích
+## 4. Ví dụ: Thiết kế một tấm áp phích
 
 Ví dụ tự đặt. Một tấm áp phích cần phần chữ có diện tích ít nhất $600\ \text{cm}^2$, với lề trái và lề phải mỗi bên 2 cm, lề trên và lề dưới mỗi bên 3 cm. Gọi $w, h$ là chiều rộng và chiều cao của phần chữ. Ta muốn tốn ít giấy nhất:
 
@@ -90,9 +90,9 @@ $$
 
 Khai triển hàm mục tiêu cho posynomial $wh + 6w + 4h + 24$, và ràng buộc viết thành $600\,w^{-1}h^{-1} \le 1$, nên đây là một GP. Trong biến $(w, h)$, hàm mục tiêu không lồi, vì Hessian của $(w + 4)(h + 6)$ là $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, có một trị riêng âm. Trong biến $u = \log w$, $v = \log h$, ràng buộc trở thành nửa mặt phẳng $u + v \ge \log 600$, và hàm mục tiêu là log-sum-exp của bốn hàm affine.
 
-Nghiệm có thể tìm tay. Tại nghiệm, ràng buộc chặt, nên $h = 600/w$, và hàm mục tiêu thành $600 + 6w + \tfrac{2400}{w} + 24$, nhỏ nhất khi $6w = \tfrac{2400}{w}$, tức $w = 20$ và $h = 30$. Diện tích giấy là $24 \times 36 = 864\ \text{cm}^2$. Kết quả có một cách đọc đẹp: tỉ lệ $h/w = 30/20$ đúng bằng tỉ lệ giữa lề trên dưới và lề trái phải, $3/2$. Nếu chọn phần chữ hình vuông cạnh $\sqrt{600} \approx 24.5$, ta tốn khoảng $869\ \text{cm}^2$, nhiều hơn khoảng 0.6%.
+Nghiệm có thể tìm tay. Tại nghiệm, ràng buộc chặt, nên $h = 600/w$, và hàm mục tiêu thành $600 + 6w + \tfrac{2400}{w} + 24$, nhỏ nhất khi $6w = \tfrac{2400}{w}$, tức $w = 20$ và $h = 30$. Diện tích giấy là $24 \times 36 = 864\ \text{cm}^2$. Kết quả có một cách đọc đẹp: Tỉ lệ $h/w = 30/20$ đúng bằng tỉ lệ giữa lề trên dưới và lề trái phải, $3/2$. Nếu chọn phần chữ hình vuông cạnh $\sqrt{600} \approx 24.5$, ta tốn khoảng $869\ \text{cm}^2$, nhiều hơn khoảng 0.6%.
 
-## 5. Ví dụ: cân bằng một ma trận
+## 5. Ví dụ: Cân bằng một ma trận
 
 Sách đưa ra một ví dụ tính toán. Cho ma trận $M \in \mathbb{R}^{n \times n}$, ta muốn đổi thang các tọa độ bằng một ma trận chéo $D = \operatorname{diag}(d)$ với $d \succ 0$, sao cho ma trận mới $DMD^{-1}$ "nhỏ", đo bằng bình phương chuẩn Frobenius
 
@@ -104,7 +104,7 @@ $$
 
 Ví dụ tự đặt với $M = \begin{bmatrix} 1 & 4 \\ 1 & 1 \end{bmatrix}$. Các phần tử chéo không đổi khi đổi thang, nên chỉ cần cực tiểu $16r^2 + r^{-2}$ theo $r = d_1/d_2$. Nghiệm là $r^2 = \tfrac14$, tức $r = \tfrac12$, và ma trận mới là $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$, với hai phần tử ngoài đường chéo bằng nhau. Bình phương chuẩn Frobenius giảm từ 19 xuống 10.
 
-Sách còn một ví dụ sâu hơn: bán kính phổ của một ma trận dương, tức trị riêng Perron–Frobenius, có thể được cực tiểu bằng GP khi các phần tử của ma trận là posynomial của những tham số thiết kế. Sách áp dụng nó cho một mô hình quần thể vi khuẩn, nơi ta chọn nồng độ hai loại thuốc để quần thể suy giảm nhanh nhất.
+Sách còn một ví dụ sâu hơn: Bán kính phổ của một ma trận dương, tức trị riêng Perron–Frobenius, có thể được cực tiểu bằng GP khi các phần tử của ma trận là posynomial của những tham số thiết kế. Sách áp dụng nó cho một mô hình quần thể vi khuẩn, nơi ta chọn nồng độ hai loại thuốc để quần thể suy giảm nhanh nhất.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -112,7 +112,7 @@ Sách còn một ví dụ sâu hơn: bán kính phổ của một ma trận dư�
 
 <details><summary>Xem lời giải thích</summary>
 
-Bước lấy logarit cần các hàm dương. Một monomial với $c > 0$ dương trên $\mathbb{R}^n_{++}$, nên lấy log được, và kết quả là affine. Với hệ số âm, tổng $x_1 - x_2$ có thể âm hoặc bằng 0, và không có cách viết nó thành log-sum-exp. Những bài toán cho phép hệ số âm được gọi là signomial program, và nói chung không lồi theo bất kỳ phép đổi biến đơn giản nào. Hệ số dương không phải chi tiết kỹ thuật: chính nó làm mỗi số hạng trở thành một hàm mũ của hàm affine, và tổng các hàm như thế mới cho log-sum-exp.
+Bước lấy logarit cần các hàm dương. Một monomial với $c > 0$ dương trên $\mathbb{R}^n_{++}$, nên lấy log được, và kết quả là affine. Với hệ số âm, tổng $x_1 - x_2$ có thể âm hoặc bằng 0, và không có cách viết nó thành log-sum-exp. Những bài toán cho phép hệ số âm được gọi là signomial program, và nói chung không lồi theo bất kỳ phép đổi biến đơn giản nào. Hệ số dương không phải chi tiết kỹ thuật: Chính nó làm mỗi số hạng trở thành một hàm mũ của hàm affine, và tổng các hàm như thế mới cho log-sum-exp.
 
 </details>
 
@@ -128,7 +128,7 @@ Có khi có, có khi không. Hàm $x^{-1}$ trên $x > 0$ lồi, hàm $x^2$ lồi
 
 <details><summary>Xem lời giải thích</summary>
 
-Với ràng buộc chặt $h = A/w$, hàm mục tiêu $(w + 2a)(A/w + 2b)$ bằng $A + 2bw + \tfrac{2aA}{w} + 4ab$. Phần phụ thuộc $w$ là $2bw + 2aA/w$, nhỏ nhất khi $2bw = 2aA/w$, tức $w^2 = aA/b$. Khi đó $h = A/w$ cho $h^2 = bA/a$, và $h/w = b/a$. Diện tích giấy là $A + 4\sqrt{abA} + 4ab = (\sqrt A + 2\sqrt{ab})^2$. Trực giác: tại nghiệm, việc dời phần diện tích chữ từ chiều này sang chiều kia phải cân bằng giữa lượng giấy lề tiết kiệm được ở hai chiều, nên mỗi chiều của phần chữ tỉ lệ với lề của chiều ấy.
+Với ràng buộc chặt $h = A/w$, hàm mục tiêu $(w + 2a)(A/w + 2b)$ bằng $A + 2bw + \tfrac{2aA}{w} + 4ab$. Phần phụ thuộc $w$ là $2bw + 2aA/w$, nhỏ nhất khi $2bw = 2aA/w$, tức $w^2 = aA/b$. Khi đó $h = A/w$ cho $h^2 = bA/a$, và $h/w = b/a$. Diện tích giấy là $A + 4\sqrt{abA} + 4ab = (\sqrt A + 2\sqrt{ab})^2$. Trực giác: Tại nghiệm, việc dời phần diện tích chữ từ chiều này sang chiều kia phải cân bằng giữa lượng giấy lề tiết kiệm được ở hai chiều, nên mỗi chiều của phần chữ tỉ lệ với lề của chiều ấy.
 
 </details>
 
@@ -159,7 +159,7 @@ Viết bài toán cực tiểu $x + y^2$ với $xy \ge 4$ và $x \le 3y$ thành 
 :::
 
 ::: solution
-Dạng chuẩn: cực tiểu $x + y^2$ với $4x^{-1}y^{-1} \le 1$ và $\tfrac13 xy^{-1} \le 1$. Với $u = \log x$, $v = \log y$, dạng lồi là cực tiểu $\log(e^u + e^{2v})$ với $\log 4 - u - v \le 0$ và $u - v - \log 3 \le 0$. Để giải, dùng ràng buộc chặt $x = 4/y$, cực tiểu $\tfrac4y + y^2$: đạo hàm $-\tfrac{4}{y^2} + 2y = 0$ cho $y^3 = 2$, tức $y = 2^{1/3} \approx 1.260$ và $x = 4/y \approx 3.175$. Kiểm tra $x \le 3y \approx 3.780$, thỏa và không chặt. Giá trị tối ưu là $x + y^2 \approx 4.762$.
+Dạng chuẩn: Cực tiểu $x + y^2$ với $4x^{-1}y^{-1} \le 1$ và $\tfrac13 xy^{-1} \le 1$. Với $u = \log x$, $v = \log y$, dạng lồi là cực tiểu $\log(e^u + e^{2v})$ với $\log 4 - u - v \le 0$ và $u - v - \log 3 \le 0$. Để giải, dùng ràng buộc chặt $x = 4/y$, cực tiểu $\tfrac4y + y^2$: Đạo hàm $-\tfrac{4}{y^2} + 2y = 0$ cho $y^3 = 2$, tức $y = 2^{1/3} \approx 1.260$ và $x = 4/y \approx 3.175$. Kiểm tra $x \le 3y \approx 3.780$, thỏa và không chặt. Giá trị tối ưu là $x + y^2 \approx 4.762$.
 :::
 
 ::: exercise 3. Cân bằng ma trận
@@ -167,7 +167,7 @@ Cân bằng ma trận $M = \begin{bmatrix} 2 & 9 \\ 1 & 3 \end{bmatrix}$ theo ch
 :::
 
 ::: solution
-Cực tiểu $81r^2 + r^{-2}$ theo $r = d_1/d_2$: nghiệm $r^2 = \tfrac19$, tức $r = \tfrac13$. Hai phần tử ngoài đường chéo trở thành $9 \cdot \tfrac13 = 3$ và $1 \cdot 3 = 3$, bằng nhau. Bình phương chuẩn Frobenius giảm từ $4 + 81 + 1 + 9 = 95$ xuống $4 + 9 + 9 + 9 = 31$.
+Cực tiểu $81r^2 + r^{-2}$ theo $r = d_1/d_2$: Nghiệm $r^2 = \tfrac19$, tức $r = \tfrac13$. Hai phần tử ngoài đường chéo trở thành $9 \cdot \tfrac13 = 3$ và $1 \cdot 3 = 3$, bằng nhau. Bình phương chuẩn Frobenius giảm từ $4 + 81 + 1 + 9 = 95$ xuống $4 + 9 + 9 + 9 = 31$.
 :::
 
 ## Tóm tắt

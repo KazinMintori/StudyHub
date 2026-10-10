@@ -1,12 +1,32 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { withBase } from 'vitepress'
+import { useData, useRoute, withBase } from 'vitepress'
+
+const { frontmatter, page, site } = useData()
+const route = useRoute()
 
 const dialog = ref(null)
 const startButton = ref(null)
 const storageKey = 'studyhub_welcome_seen'
 let previousFocus
 let previousOverflow
+let memorySeen = false
+
+function isHomePage() {
+  if (frontmatter.value?.layout === 'home' || page.value?.relativePath === 'index.md') {
+    return true
+  }
+  if (route?.path === '/' || route?.path === '/index.html') {
+    return true
+  }
+  if (typeof window !== 'undefined') {
+    const normalize = (path) => (path || '').replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/'
+    const base = normalize(site.value?.base || withBase('/'))
+    const current = normalize(window.location.pathname)
+    return current === base
+  }
+  return false
+}
 
 function show() {
   if (!dialog.value || dialog.value.open) return
@@ -47,8 +67,21 @@ function onClose() {
 
 onMounted(() => {
   let seen = false
-  try { seen = sessionStorage.getItem(storageKey) === '1' } catch {}
-  if (!seen) show()
+  try {
+    seen = sessionStorage.getItem(storageKey) === '1'
+  } catch {
+    seen = memorySeen
+  }
+  if (seen) return
+
+  memorySeen = true
+  try {
+    sessionStorage.setItem(storageKey, '1')
+  } catch {}
+
+  if (isHomePage()) {
+    show()
+  }
 })
 
 onUnmounted(() => {

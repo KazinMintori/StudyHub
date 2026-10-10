@@ -6,7 +6,7 @@ description: "Tuyển tập bài tập thực hành từ căn bản đến nâng
 
 # Hệ thống Bài tập Thực hành Lập trình Xử lý Dữ liệu
 
-Một người kỹ sư dữ liệu giỏi không chỉ biết viết code để chương trình chạy ra kết quả, mà còn thấu hiểu tường tận cơ chế vận hành bên dưới: từ việc bố cục bộ nhớ của mảng được xếp đặt ra sao, tại sao phép tính này sinh ra bản sao ngầm làm cạn kiệt RAM, cho đến cách viết biểu thức chính quy sao cho vừa an toàn, vừa triệt để quét sạch dữ liệu bẩn.
+Một người kỹ sư dữ liệu giỏi không chỉ biết viết code để chương trình chạy ra kết quả, mà còn thấu hiểu tường tận cơ chế vận hành bên dưới: Từ việc bố cục bộ nhớ của mảng được xếp đặt ra sao, tại sao phép tính này sinh ra bản sao ngầm làm cạn kiệt RAM, cho đến cách viết biểu thức chính quy sao cho vừa an toàn, vừa triệt để quét sạch dữ liệu bẩn.
 
 Mỗi bài tập dưới đây được thiết kế như một tình huống thực chiến độc lập. Với mỗi bài toán, bạn sẽ được tiếp cận theo hai tầng tư duy:
 - **Cách 1 · Căn bản & Trực quan**: Tiếp cận tuần tự, tường minh từng bước, ưu tiên tính dễ đọc cho người mới bắt đầu.
@@ -18,7 +18,7 @@ Mỗi bài tập dưới đây được thiết kế như một tình huống th
 ## Phần 1. Trạng thái Kernel, Dòng tính toán & Tư duy kiểm chứng
 
 ::: info Trọng tâm tư duy
-Môi trường Notebook (Jupyter/Colab) mang tính tương tác cao nhưng lại tiềm ẩn hiểm họa lớn nhất: **trạng thái toàn cục (global state) bị biến đổi ngoài trật tự (out-of-order execution)**. Một bài phân tích đáng tin cậy phải được thiết kế dưới dạng các hàm thuần khiết (*pure functions*), có khả năng tái lập hoàn toàn từ đầu đến cuối (*Restart Kernel & Run All*).
+Môi trường Notebook (Jupyter/Colab) mang tính tương tác cao nhưng lại tiềm ẩn hiểm họa lớn nhất: **Trạng thái toàn cục (global state) bị biến đổi ngoài trật tự (out-of-order execution)**. Một bài phân tích đáng tin cậy phải được thiết kế dưới dạng các hàm thuần khiết (*pure functions*), có khả năng tái lập hoàn toàn từ đầu đến cuối (*Restart Kernel & Run All*).
 :::
 
 ### Bài 1.1: Quản lý biến trạng thái và bẫy thực thi ngoài trật tự
@@ -178,7 +178,7 @@ Khi triển khai ứng dụng trên các hệ thống nhúng, container siêu nh
 ### Bài 2.1: Chuẩn hóa trường tiền tệ và chuyển đổi kiểu số an toàn
 
 #### Tình huống thực tế
-Một chuỗi khách sạn lưu dữ liệu phòng ở dạng tệp CSV. Cột giá phòng (`price`) chứa dữ liệu hỗn hợp: ký hiệu tiền tệ `"$"`, dấu phẩy phân tách hàng nghìn `","`, khoảng trắng ngẫu nhiên và một số dòng ghi chữ `"Miễn phí"` hoặc rỗng. Cần làm sạch cột này về số thực `float`.
+Một chuỗi khách sạn lưu dữ liệu phòng ở dạng tệp CSV. Cột giá phòng (`price`) chứa dữ liệu hỗn hợp: Ký hiệu tiền tệ `"$"`, dấu phẩy phân tách hàng nghìn `","`, khoảng trắng ngẫu nhiên và một số dòng ghi chữ `"Miễn phí"` hoặc rỗng. Cần làm sạch cột này về số thực `float`.
 
 ```python
 du_lieu_tho = [
@@ -522,7 +522,7 @@ assert np.array_equal(ma_tran_giao, [[11, 13], [31, 33]])
 ```
 
 #### Phân tích bản chất & Bình luận sư phạm
-- **Vì sao `M[[0, 2], [1, 3]]` không trả về ma trận $2 \times 2$?**: Đây là một trong những hiểu lầm lớn nhất của người mới học NumPy. Khi bạn truyền hai danh sách chỉ mục có cùng kích thước, NumPy hiểu rằng bạn muốn lấy các phần tử theo từng cặp tọa độ tương ứng: ô $(0, 1)$ và ô $(2, 3)$ $\implies$ kết quả trả về là một mảng 1 chiều có shape `(2,)`.
+- **Vì sao `M[[0, 2], [1, 3]]` không trả về ma trận $2 \times 2$?**: Đây là một trong những hiểu lầm lớn nhất của người mới học NumPy. Khi bạn truyền hai danh sách chỉ mục có cùng kích thước, NumPy hiểu rằng bạn muốn lấy các phần tử theo từng cặp tọa độ tương ứng: Ô $(0, 1)$ và ô $(2, 3)$ $\implies$ kết quả trả về là một mảng 1 chiều có shape `(2,)`.
 - **Vai trò của `np.ix_`**: Hàm `np.ix_` biến đổi mảng hàng thành cột có shape `(2, 1)` và mảng cột thành hàng có shape `(1, 2)`. Nhờ cơ chế broadcasting, hai mảng này tạo thành một lưới tọa độ 2 chiều bao phủ toàn bộ $2 \times 2 = 4$ giao điểm trong đúng một thao tác duy nhất.
 
 ---
@@ -574,11 +574,11 @@ assert np.allclose(gia_chuan_hoa.sum(axis=1), 0.0)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Luật Broadcasting của NumPy**: Khi thực hiện phép toán giữa hai mảng có hình dạng khác nhau, NumPy so sánh kích thước của các trục bắt đầu từ **phải sang trái** (*trailing dimensions*):
-  - Hai trục tương thích nếu: kích thước của chúng bằng nhau, hoặc một trong hai kích thước bằng 1.
+  - Hai trục tương thích nếu: Kích thước của chúng bằng nhau, hoặc một trong hai kích thước bằng 1.
 - **Tầm quan trọng sống còn của `keepdims=True`**:
   - Nếu bạn chỉ gọi `gia_phong.mean(axis=1)`, kết quả trả về có shape là `(3,)` (mảng 1 chiều).
   - Khi lấy `(3, 4) - (3,)`, NumPy sẽ căn lề trục cuối cùng: $4$ so với $3$ $\implies$ **Báo lỗi `ValueError: operands could not be broadcast together`**!
-  - Khi có `keepdims=True`, shape là `(3, 1)`. NumPy so khớp: trục 1 có $1$ tự nhân bản thành $4$; trục 0 có $3$ khớp với $3$. Phép toán diễn ra hoàn hảo ở tốc độ C tối đa.
+  - Khi có `keepdims=True`, shape là `(3, 1)`. NumPy so khớp: Trục 1 có $1$ tự nhân bản thành $4$; trục 0 có $3$ khớp với $3$. Phép toán diễn ra hoàn hảo ở tốc độ C tối đa.
 
 ---
 
@@ -649,7 +649,7 @@ assert ket_qua_loc_loc.equals(ket_qua_query[["ma_kh", "chi_tieu", "is_vip"]])
 ### Bài 4.2: Xóa sổ cảnh báo `SettingWithCopyWarning` khi cập nhật dữ liệu
 
 #### Tình huống thực tế
-Bạn muốn áp dụng chương trình khuyến mãi: đối với các khách hàng tại `"Hà Nội"`, tặng thêm $500{,}000$ đồng vào tài khoản điểm thưởng (`diem_thuong`). Khi chạy code dưới đây:
+Bạn muốn áp dụng chương trình khuyến mãi: Đối với các khách hàng tại `"Hà Nội"`, tặng thêm $500{,}000$ đồng vào tài khoản điểm thưởng (`diem_thuong`). Khi chạy code dưới đây:
 
 ```python
 df_khach = pd.DataFrame({
@@ -756,7 +756,7 @@ print("Thống kê trên quan sát hợp lệ (bỏ qua NaN):\n", stats)
 - **Hiểm họa khi điền số 0 bừa bãi**: Hãy quan sát cột `sales`: `[100, None, 250, 0, 150]`.
   - Nếu bỏ qua `None`, trung bình các sản phẩm đã biết là: $(100 + 250 + 0 + 150) / 4 = 125.0$.
   - Nếu tự tiện điền `fillna(0)` vào vị trí thiếu, trung bình sụt xuống thành: $(100 + 0 + 250 + 0 + 150) / 5 = 100.0$. Mức trung bình bị giảm nhân tạo tới 20%!
-- **Quy tắc ứng xử với `NaN`**: Trong thực tế, chỉ điền số 0 khi giá trị thiếu mang bản chất là "không phát sinh sự kiện" (ví dụ: số lần vi phạm luật, số đánh giá khiếu nại). Với các đại lượng đo lường vật lý, giá tiền, hay mức độ hài lòng, giá trị thiếu mang ý nghĩa là "chưa thu thập được thông tin" — khi đó, giữ nguyên `NaN` hoặc phân tích độ nhạy (*sensitivity analysis*) là hướng đi chuẩn mực nhất.
+- **Quy tắc ứng xử với `NaN`**: Trong thực tế, chỉ điền số 0 khi giá trị thiếu mang bản chất là "không phát sinh sự kiện" (ví dụ: Số lần vi phạm luật, số đánh giá khiếu nại). Với các đại lượng đo lường vật lý, giá tiền, hay mức độ hài lòng, giá trị thiếu mang ý nghĩa là "chưa thu thập được thông tin" — khi đó, giữ nguyên `NaN` hoặc phân tích độ nhạy (*sensitivity analysis*) là hướng đi chuẩn mực nhất.
 
 ---
 
@@ -815,7 +815,7 @@ assert s_tong_chuan["SP04"] == 90.0
 #### Tình huống thực tế
 Cho bảng dữ liệu giao dịch khách hàng. Cần:
 1. Chia khách hàng thành 3 phân khúc chi tiêu: `"Tiết kiệm"` ($< 1$ triệu), `"Trung cấp"` ($1 - 5$ triệu), và `"Cao cấp"` ($\ge 5$ triệu).
-2. Thống kê theo từng phân khúc: số lượng khách, tổng doanh thu, doanh thu trung bình và điểm hài lòng lớn nhất.
+2. Thống kê theo từng phân khúc: Số lượng khách, tổng doanh thu, doanh thu trung bình và điểm hài lòng lớn nhất.
 
 ```python
 df_gd = pd.DataFrame({
@@ -926,8 +926,8 @@ print("Cách transform vector hóa tối ưu:\n", df_nv)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Phân biệt `agg()` và `transform()`**:
-  - `agg()` là phép **thu gọn dữ liệu** (*aggregation*): nhận vào một nhóm nhiều dòng và trả về một giá trị đơn lẻ đại diện cho nhóm đó (số dòng của bảng kết quả bằng số nhóm).
-  - `transform()` là phép **chuyển hóa phát tán**: nhận vào một nhóm và trả về một Series có **cùng độ dài chính xác** với số dòng ban đầu của nhóm đó, các giá trị được gán tương ứng vào từng dòng.
+  - `agg()` là phép **thu gọn dữ liệu** (*aggregation*): Nhận vào một nhóm nhiều dòng và trả về một giá trị đơn lẻ đại diện cho nhóm đó (số dòng của bảng kết quả bằng số nhóm).
+  - `transform()` là phép **chuyển hóa phát tán**: Nhận vào một nhóm và trả về một Series có **cùng độ dài chính xác** với số dòng ban đầu của nhóm đó, các giá trị được gán tương ứng vào từng dòng.
 - **Tiết kiệm tài nguyên**: Việc dùng `groupby().transform()` giúp bạn tránh hoàn toàn việc phải tạo bảng phụ và thực hiện một phép nối bảng (`merge`) đắt đỏ, tiết kiệm đáng kể thời gian CPU và bộ nhớ.
 
 ---
@@ -999,7 +999,7 @@ print("Ma trận doanh thu hai chiều chuẩn báo cáo:\n", ma_tran_doanh_thu)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Cạm bẫy nhân đôi dòng khi `merge`**:
-  Nếu bảng danh mục `df_discounts` vô tình bị lỗi hệ thống làm xuất hiện 2 dòng cho cùng mã `"N01"`, phép `merge` thông thường sẽ nhân bản đơn hàng `101` thành 2 dòng, làm doanh thu bị tính khống gấp đôi mà hệ thống hoàn toàn không báo lỗi! Tham số `validate="many_to_one"` là chiếc phanh an toàn: nếu bảng bên phải có khóa trùng, nó lập tức ném ra ngoại lệ `MergeError` để bạn ngăn chặn lỗi ngay từ đầu.
+  Nếu bảng danh mục `df_discounts` vô tình bị lỗi hệ thống làm xuất hiện 2 dòng cho cùng mã `"N01"`, phép `merge` thông thường sẽ nhân bản đơn hàng `101` thành 2 dòng, làm doanh thu bị tính khống gấp đôi mà hệ thống hoàn toàn không báo lỗi! Tham số `validate="many_to_one"` là chiếc phanh an toàn: Nếu bảng bên phải có khóa trùng, nó lập tức ném ra ngoại lệ `MergeError` để bạn ngăn chặn lỗi ngay từ đầu.
 - **`pivot_table` vs `groupby().unstack()`**:
   `pivot_table()` cung cấp giao diện trực quan, tự động xử lý các giá trị khuyết bằng `fill_value`, và đặc biệt là tham số `margins=True` tự động sinh dòng/cột tổng cộng mà bạn không cần phải tính toán chắp vá bằng tay.
 
@@ -1008,7 +1008,7 @@ print("Ma trận doanh thu hai chiều chuẩn báo cáo:\n", ma_tran_doanh_thu)
 ## Phần 6. Dữ liệu Quy mô lớn, Chuỗi thời gian, Parquet & DuckDB
 
 ::: info Trọng tâm tư duy
-Khi kích thước dữ liệu vượt quá dung lượng bộ nhớ RAM (từ vài gigabyte đến hàng trăm gigabyte), việc đọc toàn bộ tệp bằng `pd.read_csv` sẽ làm sập chương trình. Đây là lúc tư duy xử lý dữ liệu lớn phát huy tác dụng: đọc chọn lọc, chuyển sang định dạng cột Parquet, và khai thác động cơ SQL trong bộ nhớ DuckDB.
+Khi kích thước dữ liệu vượt quá dung lượng bộ nhớ RAM (từ vài gigabyte đến hàng trăm gigabyte), việc đọc toàn bộ tệp bằng `pd.read_csv` sẽ làm sập chương trình. Đây là lúc tư duy xử lý dữ liệu lớn phát huy tác dụng: Đọc chọn lọc, chuyển sang định dạng cột Parquet, và khai thác động cơ SQL trong bộ nhớ DuckDB.
 :::
 
 ### Bài 6.1: Đọc tệp lớn có chọn lọc và tối ưu bộ nhớ RAM
@@ -1066,7 +1066,7 @@ print(df_toi_uu.info())
 ### Bài 6.2: Làm sạch cột tiền tệ và số liệu bẩn: Chuỗi hàm cơ bản vs Biểu thức chính quy (Regex)
 
 #### Tình huống thực tế
-Cho một Series chứa dữ liệu giá bán bị ô nhiễm nặng: chứa ký tự ngoại tệ `"$"`, `"€"`, dấu phẩy phân cách hàng nghìn `","`, các từ ngữ chú thích `"Liên hệ"`, `"Hết hàng"`, dấu âm đặt sai vị trí `"-15.5$"`, và giá trị rỗng `None`. Cần làm sạch cột này về chuẩn số thực `float64`.
+Cho một Series chứa dữ liệu giá bán bị ô nhiễm nặng: Chứa ký tự ngoại tệ `"$"`, `"€"`, dấu phẩy phân cách hàng nghìn `","`, các từ ngữ chú thích `"Liên hệ"`, `"Hết hàng"`, dấu âm đặt sai vị trí `"-15.5$"`, và giá trị rỗng `None`. Cần làm sạch cột này về chuẩn số thực `float64`.
 
 ```python
 prices_raw = pd.Series([
@@ -1285,7 +1285,7 @@ os.remove("temp_listings.csv")
 ## Phần 7. Xử lý Dữ liệu Chuỗi & Biểu thức Chính quy (Regex)
 
 ::: info Trọng tâm tư duy
-Dữ liệu văn bản trong thực tế luôn chứa đầy rác: khoảng trắng thừa, thẻ HTML, ký tự đặc biệt, định dạng số điện thoại hay email hỗn tạp. Việc thành thạo **Biểu thức chính quy (Regex)** kết hợp các phương thức chuỗi vector hóa của Pandas (`.str`) là chìa khóa để trích xuất tri thức chuẩn xác từ dữ liệu phi cấu trúc.
+Dữ liệu văn bản trong thực tế luôn chứa đầy rác: Khoảng trắng thừa, thẻ HTML, ký tự đặc biệt, định dạng số điện thoại hay email hỗn tạp. Việc thành thạo **Biểu thức chính quy (Regex)** kết hợp các phương thức chuỗi vector hóa của Pandas (`.str`) là chìa khóa để trích xuất tri thức chuẩn xác từ dữ liệu phi cấu trúc.
 :::
 
 ### Bài 7.1: Làm sạch văn bản HTML và chuẩn hóa khoảng trắng
@@ -1349,7 +1349,7 @@ print("Cách nâng cao với Regex & html.unescape:\n", df_bds[["ma_tin", "mo_ta
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Mẫu `<[^>]+>` hoạt động ra sao?**:
-  Một sai lầm kinh điển của người mới học Regex là viết `<.*>` để tìm thẻ HTML. Do tính chất tham lam (*greedy*), `<.*>` sẽ nuốt chửng toàn bộ từ dấu `<` đầu tiên của `<p>` cho đến dấu `>` cuối cùng của `</p>`, xóa sạch cả nội dung văn bản bên trong! Mẫu `<[^>]+>` sử dụng lớp ký tự phủ định: bắt đầu bằng `<`, theo sau bởi một hoặc nhiều ký tự **không phải là `>`**, rồi kết thúc bằng `>`. Nó khớp chính xác từng thẻ HTML đơn lẻ một cách an toàn tuyệt đối.
+  Một sai lầm kinh điển của người mới học Regex là viết `<.*>` để tìm thẻ HTML. Do tính chất tham lam (*greedy*), `<.*>` sẽ nuốt chửng toàn bộ từ dấu `<` đầu tiên của `<p>` cho đến dấu `>` cuối cùng của `</p>`, xóa sạch cả nội dung văn bản bên trong! Mẫu `<[^>]+>` sử dụng lớp ký tự phủ định: Bắt đầu bằng `<`, theo sau bởi một hoặc nhiều ký tự **không phải là `>`**, rồi kết thúc bằng `>`. Nó khớp chính xác từng thẻ HTML đơn lẻ một cách an toàn tuyệt đối.
 - **Thư viện chuẩn `html.unescape`**: Tuyệt đối không tự viết hàng chục lệnh `.replace("&amp;", "&")`. Thư viện `html` có sẵn của Python nắm giữ bảng tra cứu toàn bộ hàng nghìn mã HTML entities chuẩn W3C, xử lý triệt để cả các mã dạng số như `&#39;`.
 
 ---
@@ -1456,7 +1456,7 @@ assert dung_lazy == dung_negated == ['Phòng rất rộng', 'vệ sinh quá bẩ
 ```
 
 #### Phân tích bản chất & Bình luận sư phạm
-- **Cơ chế tham lam (Greedy Matching)**: Trong các biểu thức chính quy, các lượng từ `*`, `+` mặc định hoạt động theo cơ chế tham lam: chúng cố gắng "nuốt" càng nhiều ký tự càng tốt cho đến tận cuối chuỗi, sau đó mới quay lui (*backtrack*) dần dần để tìm ký tự đóng `"`. Điều này giải thích tại sao `r'"(.*)"'` nuốt chửng từ dấu ngoặc kép đầu tiên đến dấu ngoặc kép cuối cùng.
+- **Cơ chế tham lam (Greedy Matching)**: Trong các biểu thức chính quy, các lượng từ `*`, `+` mặc định hoạt động theo cơ chế tham lam: Chúng cố gắng "nuốt" càng nhiều ký tự càng tốt cho đến tận cuối chuỗi, sau đó mới quay lui (*backtrack*) dần dần để tìm ký tự đóng `"`. Điều này giải thích tại sao `r'"(.*)"'` nuốt chửng từ dấu ngoặc kép đầu tiên đến dấu ngoặc kép cuối cùng.
 - **Vì sao Cách 2b (`"[^"]+"`) tối ưu hơn Cách 2a (`".*?"`)?**:
   Khớp lười biếng `.*?` phải liên tục kiểm tra điều kiện dừng sau từng ký tự một, gây ra chi phí kiểm tra lặp lại rất lớn. Ngược lại, mẫu phủ định `[^"]+` thông báo dứt khoát cho máy trạng thái hữu hạn (NFA): *"Cứ đọc thẳng liên tục mọi ký tự cho đến khi chạm đúng dấu ngoặc kép tiếp theo thì dừng ngay"*. Nó không bao giờ phải quay lui (*zero backtracking*), tốc độ thực thi nhanh hơn từ 3 đến 10 lần trên các đoạn văn bản dài.
 
@@ -1516,7 +1516,7 @@ print("Cách get_dummies vector hóa chuyên nghiệp:\n", df_encoded_adv)
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Sức mạnh của `.str.get_dummies()`**:
-  Thay vì phải viết hai vòng lặp lồng nhau phức tạp để thu thập tập hợp duy nhất và gán giá trị, phương thức `.str.get_dummies(sep=...)` của Pandas thực hiện toàn bộ quy trình: băm từ khóa, loại bỏ khoảng trắng theo dấu phân cách, và sinh ra một DataFrame nhị phân thưa tối ưu chỉ trong một thao tác duy nhất.
+  Thay vì phải viết hai vòng lặp lồng nhau phức tạp để thu thập tập hợp duy nhất và gán giá trị, phương thức `.str.get_dummies(sep=...)` của Pandas thực hiện toàn bộ quy trình: Băm từ khóa, loại bỏ khoảng trắng theo dấu phân cách, và sinh ra một DataFrame nhị phân thưa tối ưu chỉ trong một thao tác duy nhất.
 - **Lưu ý dấu phân cách**: Hãy chú ý dấu cách sau dấu chấm phẩy (`sep="; "`). Nếu chỉ viết `sep=";"`, các mục đứng sau sẽ bị dính khoảng trắng ở đầu (`" Máy lạnh"` thay vì `"Máy lạnh"`), dẫn đến việc sinh ra các cột bị trùng lặp giả tạo.
 
 ---
@@ -1524,7 +1524,7 @@ print("Cách get_dummies vector hóa chuyên nghiệp:\n", df_encoded_adv)
 ## Phần 8. Xử lý Dữ liệu Thời gian & Chuỗi Thời gian (Time Series)
 
 ::: info Trọng tâm tư duy
-Thời gian là một chiều dữ liệu đặc thù: nó vừa mang tính liên tục, vừa tuân theo các chu kỳ lịch không đều (tháng 28 đến 31 ngày, năm nhuận, chu kỳ tuần). Việc làm chủ `DatetimeIndex`, `resample()`, `rolling()` và phép dịch chuyển `shift()` là nền tảng để phân tích tăng trưởng và dự báo chuỗi thời gian.
+Thời gian là một chiều dữ liệu đặc thù: Nó vừa mang tính liên tục, vừa tuân theo các chu kỳ lịch không đều (tháng 28 đến 31 ngày, năm nhuận, chu kỳ tuần). Việc làm chủ `DatetimeIndex`, `resample()`, `rolling()` và phép dịch chuyển `shift()` là nền tảng để phân tích tăng trưởng và dự báo chuỗi thời gian.
 :::
 
 ### Bài 8.1: Đổi kiểu ngày giờ an toàn và phân biệt `NaT` lỗi đọc với thiếu từ nguồn
@@ -1532,7 +1532,7 @@ Thời gian là một chiều dữ liệu đặc thù: nó vừa mang tính liê
 #### Tình huống thực tế
 Cho bảng ghi nhận thông tin đặt phòng gồm ngày nhận phòng (`check_in`) và ngày trả phòng (`check_out`). Cần:
 1. Chuyển đổi hai cột sang kiểu `datetime64[ns]`.
-2. Phân biệt rõ: ô nào vốn bị để trống từ nguồn, và ô nào bị lỗi do người dùng nhập chuỗi sai định dạng (ví dụ `"2025/15/01"`).
+2. Phân biệt rõ: Ô nào vốn bị để trống từ nguồn, và ô nào bị lỗi do người dùng nhập chuỗi sai định dạng (ví dụ `"2025/15/01"`).
 3. Tính số đêm lưu trú hợp lệ (`so_dem = check_out - check_in`) và phát hiện các đơn hàng có logic phi lý (ngày trả phòng xảy ra trước ngày nhận phòng).
 
 ```python
@@ -1603,7 +1603,7 @@ print("Xử lý vector hóa chuẩn kỹ sư dữ liệu:\n", df_booking[[
 ```
 
 #### Phân tích bản chất & Bình luận sư phạm
-- **`NaT` (Not a Time) là gì?**: Trong Pandas, `NaT` là giá trị đặc biệt đại diện cho thời điểm khuyết thiếu (tương đương với `NaN` của kiểu số thực). `NaT` có thể tham gia vào các phép trừ vector: kết quả trừ giữa một mốc ngày với `NaT` sẽ trả về `NaT` mà không làm sập chương trình.
+- **`NaT` (Not a Time) là gì?**: Trong Pandas, `NaT` là giá trị đặc biệt đại diện cho thời điểm khuyết thiếu (tương đương với `NaN` của kiểu số thực). `NaT` có thể tham gia vào các phép trừ vector: Kết quả trừ giữa một mốc ngày với `NaT` sẽ trả về `NaT` mà không làm sập chương trình.
 - **Bẫy gom chung lỗi**: Người làm dữ liệu thiếu kinh nghiệm thường chỉ gọi `pd.to_datetime(errors='coerce')` rồi kết luận rằng mọi giá trị `NaT` đều là "khách hàng không nhập ngày". Hãy luôn ghi nhận số ô bị rỗng từ trước (`isna()`) để tách bạch rành mạch giữa *dữ liệu thiếu tự nhiên* và *dữ liệu bị lỗi trong quá trình thu thập/chuyển đổi*.
 
 ---
@@ -1675,7 +1675,7 @@ print("Báo cáo theo quý chuẩn mực phân tích:\n", tk_quy_chuan)
 ### Bài 8.3: Cửa sổ trượt (Rolling Window) — Làm mịn dao động tuần
 
 #### Tình huống thực tế
-Doanh số bán lẻ của một siêu thị biến động mạnh theo ngày trong tuần: thứ Bảy và Chủ Nhật luôn cao gấp 3 lần ngày thường. Hãy tính đường trung bình trượt 7 ngày (*7-day rolling average*) để triệt tiêu hiệu ứng ngày trong tuần, và xác định cửa sổ 7 ngày liên tiếp nào có tổng doanh số cao kỷ lục.
+Doanh số bán lẻ của một siêu thị biến động mạnh theo ngày trong tuần: Thứ Bảy và Chủ Nhật luôn cao gấp 3 lần ngày thường. Hãy tính đường trung bình trượt 7 ngày (*7-day rolling average*) để triệt tiêu hiệu ứng ngày trong tuần, và xác định cửa sổ 7 ngày liên tiếp nào có tổng doanh số cao kỷ lục.
 
 ```python
 # Tạo dữ liệu doanh thu 30 ngày (đơn vị: triệu đồng)
@@ -1742,8 +1742,8 @@ $$
 
 Nếu chỉ đơn thuần gọi `.pct_change(4)`, Quý 3/2025 sẽ bị so sánh số liệu mới trải qua 51 ngày với Quý 3/2024 trọn vẹn 92 ngày, dẫn đến một con số sụt giảm giả tạo ($-40\%$) gây hoảng loạn không đáng có cho ban điều hành! Hãy xây dựng giải pháp phân tích:
 1. Tổng hợp doanh số theo từng quý và nhận diện tính trọn vẹn của từng quý (`is_complete`).
-2. Với các quý đã trọn vẹn: tính chỉ số tăng trưởng YoY chuẩn xác.
-3. Với quý dang dở: chỉ so sánh trên cùng khoảng thời gian tương đương (51 ngày đầu của Quý 3/2024) hoặc chuẩn hóa thành doanh số bình quân ngày ($Sales / Days$).
+2. Với các quý đã trọn vẹn: Tính chỉ số tăng trưởng YoY chuẩn xác.
+3. Với quý dang dở: Chỉ so sánh trên cùng khoảng thời gian tương đương (51 ngày đầu của Quý 3/2024) hoặc chuẩn hóa thành doanh số bình quân ngày ($Sales / Days$).
 4. Định dạng chuỗi báo cáo chuyên nghiệp (`+12.4%`, `-3.8%`, hoặc `Chưa đủ kỳ gốc`).
 
 ```python
@@ -1845,7 +1845,7 @@ print("Báo cáo tăng trưởng YoY chuẩn mực sư phạm:
 ## Phần 9. Đảm bảo Chất lượng Dữ liệu & Kiểm thử Chéo bảng (Cross-table QA)
 
 ::: info Trọng tâm tư duy
-Một bảng dữ liệu đơn lẻ trông có thể rất sạch, nhưng khi ghép nối vào toàn bộ hệ thống cơ sở dữ liệu, các lỗi nghiêm trọng mới bắt đầu lộ diện: **bản ghi con mồ côi (orphaned records)**, **khóa tự nhiên bị trùng lặp**, và **con số tổng hợp dẫn xuất bị lệch pha**. Một kỹ sư dữ liệu chuyên nghiệp luôn xây dựng bộ kiểm thử chất lượng (QA report) tự động trước khi nạp dữ liệu vào kho.
+Một bảng dữ liệu đơn lẻ trông có thể rất sạch, nhưng khi ghép nối vào toàn bộ hệ thống cơ sở dữ liệu, các lỗi nghiêm trọng mới bắt đầu lộ diện: **Bản ghi con mồ côi (orphaned records)**, **khóa tự nhiên bị trùng lặp**, và **con số tổng hợp dẫn xuất bị lệch pha**. Một kỹ sư dữ liệu chuyên nghiệp luôn xây dựng bộ kiểm thử chất lượng (QA report) tự động trước khi nạp dữ liệu vào kho.
 :::
 
 ### Bài 9.1: Kiểm tra toàn vẹn khóa ngoại và phát hiện bản ghi mồ côi
@@ -2350,7 +2350,7 @@ print(df_kiem_dinh[["id", "rating", "sentiment", "qa_status"]])
 #### Phân tích bản chất & Bình luận sư phạm
 - **FinOps trong Khoa học Dữ liệu**: Không bao giờ nhấn nút chạy một pipeline gọi LLM trên hàng chục nghìn dòng mà không tính toán trước chi phí và thời gian thực thi (*Latency*). Một phép tính dự toán trước chỉ mất 2 phút nhưng bảo vệ bạn khỏi các sự cố tiêu lạm ngân sách đám mây.
 - **Hậu kiểm Assertion — Tầng phòng thủ thứ hai**:
-  Schema Pydantic chỉ đảm bảo **tính toàn vẹn về mặt cú pháp** (*Syntactic Integrity* — đúng kiểu int, đúng chuỗi enum). Nó hoàn toàn bất lực trước **tính toàn vẹn về mặt nghiệp vụ** (*Semantic/Business Invariant*). Việc đặt các luật Assertion để sàng lọc những trường hợp mâu thuẫn giữa điểm số và cảm xúc giúp xây dựng mô hình Hybrid: máy móc xử lý $95\%$ trường hợp thông thường, con người chỉ cần can thiệp rà soát $5\%$ trường hợp có cờ cảnh báo (*Human-in-the-loop*).
+  Schema Pydantic chỉ đảm bảo **tính toàn vẹn về mặt cú pháp** (*Syntactic Integrity* — đúng kiểu int, đúng chuỗi enum). Nó hoàn toàn bất lực trước **tính toàn vẹn về mặt nghiệp vụ** (*Semantic/Business Invariant*). Việc đặt các luật Assertion để sàng lọc những trường hợp mâu thuẫn giữa điểm số và cảm xúc giúp xây dựng mô hình Hybrid: Máy móc xử lý $95\%$ trường hợp thông thường, con người chỉ cần can thiệp rà soát $5\%$ trường hợp có cờ cảnh báo (*Human-in-the-loop*).
 
 ---
 
@@ -2364,7 +2364,7 @@ Mục đích tối thượng của biểu đồ là trả lời một câu hỏi
 ### Bài 11.1: Histogram và lựa chọn số khoảng chia (Bins) — Vạch trần phân phối hai đỉnh
 
 #### Tình huống thực tế
-Cho dữ liệu khảo sát số ngày mở bán trong năm (`availability_365`) của 1,000 chỗ ở. Dữ liệu thực tế có phân phối hai cực: một nhóm lớn chỉ mở cửa bán dưới 15 ngày (hoặc đóng cửa hoàn toàn), và một nhóm khác mở bán chuyên nghiệp gần như quanh năm (trên 340 ngày), ở khoảng giữa rất ít phòng.
+Cho dữ liệu khảo sát số ngày mở bán trong năm (`availability_365`) của 1,000 chỗ ở. Dữ liệu thực tế có phân phối hai cực: Một nhóm lớn chỉ mở cửa bán dưới 15 ngày (hoặc đóng cửa hoàn toàn), và một nhóm khác mở bán chuyên nghiệp gần như quanh năm (trên 340 ngày), ở khoảng giữa rất ít phòng.
 Hãy so sánh:
 1. Khi vẽ histogram với `bins=5` (quá ít).
 2. Khi vẽ histogram với `bins=40` (chuẩn xác).
@@ -2496,7 +2496,7 @@ print("Đã đối chiếu thành công hai biểu đồ!")
 
 #### Phân tích bản chất & Bình luận sư phạm
 - **Nguyên tắc bất biến của Biểu đồ Cột (Bar Chart)**: Biểu đồ cột mã hóa dữ liệu bằng **chiều dài của thanh cột**. Não bộ con người tự động so sánh tỷ lệ giữa chiều dài của hai thanh để suy ra tỷ lệ chênh lệch giá trị. Khi bạn cắt ngắn trục tung, tỷ lệ chiều dài thị giác không còn tương ứng với tỷ lệ số học, biến biểu đồ thành một công cụ ngụy tạo số liệu.
-- **Khi nào được phép thu hẹp trục $Y$?**: Bạn chỉ được phép thu hẹp thang đo trục $Y$ trên **Biểu đồ Đường (Line Chart)** khi mục tiêu là theo dõi sự biến động (*fluctuation*) của một chuỗi thời gian liên tục (ví dụ: chỉ số chứng khoán VN-Index hay nhiệt độ cơ thể người bệnh), và bắt buộc phải ghi chú rõ ràng thang đo trên đồ thị.
+- **Khi nào được phép thu hẹp trục $Y$?**: Bạn chỉ được phép thu hẹp thang đo trục $Y$ trên **Biểu đồ Đường (Line Chart)** khi mục tiêu là theo dõi sự biến động (*fluctuation*) của một chuỗi thời gian liên tục (ví dụ: Chỉ số chứng khoán VN-Index hay nhiệt độ cơ thể người bệnh), và bắt buộc phải ghi chú rõ ràng thang đo trên đồ thị.
 
 ---
 
@@ -2592,7 +2592,7 @@ plt.close(fig)
 ## Phần 12. Trực quan hóa Nâng cao & Phản biện Thống kê
 
 ::: info Trọng tâm tư duy
-Phân tích nâng cao đòi hỏi bạn phải nhìn sâu vào các tầng lớp dữ liệu: dùng Boxplot phân rã phân phối theo biến phân loại đa tầng (`hue`), và luôn cảnh giác cao độ trước các thủ thuật thống kê tinh vi như **chọn kỳ gốc có lợi (cherry-picking)**.
+Phân tích nâng cao đòi hỏi bạn phải nhìn sâu vào các tầng lớp dữ liệu: Dùng Boxplot phân rã phân phối theo biến phân loại đa tầng (`hue`), và luôn cảnh giác cao độ trước các thủ thuật thống kê tinh vi như **chọn kỳ gốc có lợi (cherry-picking)**.
 :::
 
 ### Bài 12.1: Seaborn Boxplot kết hợp Hue và giải mã râu hộp Tukey
@@ -2871,7 +2871,7 @@ print(f"Ban ngày: Mean = {mean_ngay/1e6:.2f}tr | Median = {median_ngay/1e6:.2f}
 
 #### Tình huống thực tế
 Một nhà phân tích dữ liệu thực tập gửi bản thảo báo cáo chiến dịch ra mắt dịch vụ phòng cao cấp:
-*"Chúng tôi đã họp từ tháng 1, sau đó thu thập dữ liệu đặt phòng. Đến tháng 5 chúng tôi triển khai chương trình hội viên Vàng. Dữ liệu cho thấy chiến dịch đã tạo ra sự đột phá thần kỳ: tỷ lệ đặt phòng lặp lại tăng vọt 5% từ 20% lên 25%, chứng tỏ chương trình hội viên là chìa khóa duy nhất thúc đẩy lòng trung thành của khách hàng."*
+*"Chúng tôi đã họp từ tháng 1, sau đó thu thập dữ liệu đặt phòng. Đến tháng 5 chúng tôi triển khai chương trình hội viên Vàng. Dữ liệu cho thấy chiến dịch đã tạo ra sự đột phá thần kỳ: Tỷ lệ đặt phòng lặp lại tăng vọt 5% từ 20% lên 25%, chứng tỏ chương trình hội viên là chìa khóa duy nhất thúc đẩy lòng trung thành của khách hàng."*
 
 Hãy chỉ ra 4 lỗi diễn đạt số liệu nghiêm trọng trong đoạn văn trên, và tái cấu trúc lại toàn bộ báo cáo theo mô hình **Kim tự tháp Minto (Minto Pyramid Principle)**:
 1. **Đỉnh tháp (Hành động & Kết luận cốt lõi)**: Đưa khuyến nghị then chốt lên câu đầu tiên.

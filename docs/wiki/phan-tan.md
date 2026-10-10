@@ -19,7 +19,7 @@ Thiết kế cần tính khả năng máy lỗi, xử lý lặp và tái lập k
 
 ## Ví dụ
 
-Chia 1000 dòng cho 4 máy rồi cộng kết quả: cần cả chi phí chia dữ liệu, tính tổng từng máy và gom kết quả.
+Chia 1000 dòng cho 4 máy rồi cộng kết quả: Cần cả chi phí chia dữ liệu, tính tổng từng máy và gom kết quả.
 
 ## Khi nào cần dùng?
 

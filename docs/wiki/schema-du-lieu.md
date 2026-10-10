@@ -7,7 +7,7 @@ next: false
 
 # Schema dữ liệu
 
-Schema dữ liệu mô tả cấu trúc được chấp nhận: trường, kiểu và các ràng buộc. Kiểm schema phát hiện lỗi cấu trúc nhưng chưa chứng minh nội dung đúng với thực tế.
+Schema dữ liệu mô tả cấu trúc được chấp nhận: Trường, kiểu và các ràng buộc. Kiểm schema phát hiện lỗi cấu trúc nhưng chưa chứng minh nội dung đúng với thực tế.
 
 <WikiUsage />
 
@@ -15,7 +15,7 @@ Schema dữ liệu mô tả cấu trúc được chấp nhận: trường, kiể
 
 Một schema cho bảng có thể gồm tên cột, dtype, miền giá và khóa duy nhất. Schema cho phản hồi JSON mô tả trường và kiểu lồng nhau. Đầu ra đạt schema vẫn có thể sai nội dung, chẳng hạn một nhãn cảm xúc nằm trong tập cho phép nhưng không khớp văn bản. Kết hợp kiểm schema với kiểm dữ liệu và mẫu chuẩn.
 
-Nguồn đọc chính: Wes McKinney, *Python for Data Analysis*, [Chương 6–7: nền tảng nạp và làm sạch](https://wesmckinney.com/book/data-cleaning). Ví dụ trong mục này do StudyHub tự tạo.
+Nguồn đọc chính: Wes McKinney, *Python for Data Analysis*, [Chương 6–7: Nền tảng nạp và làm sạch](https://wesmckinney.com/book/data-cleaning). Ví dụ trong mục này do StudyHub tự tạo.
 
 ## Ví dụ
 

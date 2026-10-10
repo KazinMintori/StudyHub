@@ -3,11 +3,11 @@ course: toan-cho-ai
 lecture: bai-01-nhap-mon-toi-uu
 topic: dieu-kien-bac-nhat
 section: topic
-title: "Điều kiện bậc nhất: tiếp tuyến nằm dưới đồ thị"
-description: "Điều kiện bậc nhất của hàm lồi khả vi và ý nghĩa của tiếp tuyến như một cận dưới toàn cục: điểm dừng là cực tiểu toàn cục, cận dưới cho giá trị tối ưu, các bất đẳng thức cổ điển và độ phân kỳ KL, gradient loại bỏ nửa không gian, gradient đơn điệu, lồi nghiêm ngặt và dưới đạo hàm."
+title: "Điều kiện bậc nhất: Tiếp tuyến nằm dưới đồ thị"
+description: "Điều kiện bậc nhất của hàm lồi khả vi và ý nghĩa của tiếp tuyến như một cận dưới toàn cục: Điểm dừng là cực tiểu toàn cục, cận dưới cho giá trị tối ưu, các bất đẳng thức cổ điển và độ phân kỳ KL, gradient loại bỏ nửa không gian, gradient đơn điệu, lồi nghiêm ngặt và dưới đạo hàm."
 ---
 
-Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm, ta dựng được một mặt phẳng mà cả cái bát nằm phía trên nó.
+Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dày. Bạn chỉ đo được hai thứ: Độ cao chỗ mình đứng và độ dốc của mặt đất ngay dưới chân. Với một địa hình bất kỳ, hai con số ấy gần như không nói gì về những nơi ở xa, vì ngay sau mỏm đá trước mặt có thể là một thung lũng sâu hơn hẳn. Nhưng nếu biết trước địa hình có dạng một cái bát, câu chuyện thay đổi hoàn toàn. Từ độ cao và độ dốc tại đúng một điểm, ta dựng được một mặt phẳng mà cả cái bát nằm phía trên nó.
 
 Đó là nội dung của điều kiện bậc nhất, và sách gọi đây có lẽ là tính chất quan trọng nhất của hàm lồi. Lý do nằm ở chỗ một thuật toán tối ưu chỉ đo được thông tin cục bộ, như giá trị và gradient tại điểm đang đứng. Với hàm lồi, thông tin cục bộ ấy lại cho kết luận về toàn bộ hàm. Trang này phát biểu điều kiện, rút ra những hệ quả quan trọng nhất của nó, đọc chậm lời chứng minh, và kết thúc ở trường hợp hàm có điểm gãy, nơi khái niệm gradient phải được mở rộng.
 
@@ -16,7 +16,7 @@ Hãy hình dung bạn đứng trên sườn đồi giữa một màn sương dà
 > **Định lý.** Giả sử $f$ khả vi, nghĩa là $\operatorname{dom} f$ là tập mở và gradient $\nabla f$ tồn tại tại mọi điểm của nó. Khi đó $f$ lồi khi và chỉ khi $\operatorname{dom} f$ lồi và
 > $$f(y) \ge f(x) + \nabla f(x)^T (y - x) \quad \text{với mọi } x, y \in \operatorname{dom} f.$$
 
-Cố định $x$ và xem vế phải như một hàm của $y$. Đó là một hàm affine, và cũng chính là xấp xỉ Taylor bậc nhất của $f$ quanh $x$: nó khớp với $f$ cả về giá trị lẫn về đạo hàm tại $x$. Khi $n = 1$, đồ thị của nó là tiếp tuyến tại $(x, f(x))$. Khi $n \ge 2$, đó là siêu phẳng tiếp xúc với đồ thị. Bất đẳng thức nói rằng xấp xỉ bậc nhất của một hàm lồi **không bao giờ đánh giá quá cao**: tiếp tuyến tại bất kỳ điểm nào cũng nằm dưới toàn bộ đồ thị (Hình 3.2 trong sách).
+Cố định $x$ và xem vế phải như một hàm của $y$. Đó là một hàm affine, và cũng chính là xấp xỉ Taylor bậc nhất của $f$ quanh $x$: Nó khớp với $f$ cả về giá trị lẫn về đạo hàm tại $x$. Khi $n = 1$, đồ thị của nó là tiếp tuyến tại $(x, f(x))$. Khi $n \ge 2$, đó là siêu phẳng tiếp xúc với đồ thị. Bất đẳng thức nói rằng xấp xỉ bậc nhất của một hàm lồi **không bao giờ đánh giá quá cao**: Tiếp tuyến tại bất kỳ điểm nào cũng nằm dưới toàn bộ đồ thị (Hình 3.2 trong sách).
 
 Chữ "toàn bộ" là chỗ tạo nên khác biệt. Với mọi hàm khả vi, xấp xỉ bậc nhất đều tốt khi $y$ đủ gần $x$. Nhưng chỉ với hàm lồi, xấp xỉ đó mới là một **cận dưới toàn cục**, đúng với mọi $y$ trong miền xác định dù $y$ ở xa $x$ đến đâu.
 
@@ -106,9 +106,9 @@ $$
 f(x) \ge f(z) + f'(z)(x - z), \qquad f(y) \ge f(z) + f'(z)(y - z).
 $$
 
-Nhân bất đẳng thức đầu với $\theta$, bất đẳng thức sau với $1 - \theta$ rồi cộng lại. Vì $\theta(x - z) + (1 - \theta)(y - z) = 0$, các số hạng chứa đạo hàm triệt tiêu, chỉ còn $\theta f(x) + (1 - \theta) f(y) \ge f(z)$, chính là định nghĩa của hàm lồi. Hình ảnh ở đây cũng rõ: tiếp tuyến tại $z$ nằm dưới cả hai điểm $(x, f(x))$ và $(y, f(y))$, nên dây cung nối hai điểm ấy nằm trên tiếp tuyến. Tại $z$, tiếp tuyến chạm đồ thị, vì vậy dây cung nằm trên đồ thị tại $z$.
+Nhân bất đẳng thức đầu với $\theta$, bất đẳng thức sau với $1 - \theta$ rồi cộng lại. Vì $\theta(x - z) + (1 - \theta)(y - z) = 0$, các số hạng chứa đạo hàm triệt tiêu, chỉ còn $\theta f(x) + (1 - \theta) f(y) \ge f(z)$, chính là định nghĩa của hàm lồi. Hình ảnh ở đây cũng rõ: Tiếp tuyến tại $z$ nằm dưới cả hai điểm $(x, f(x))$ và $(y, f(y))$, nên dây cung nối hai điểm ấy nằm trên tiếp tuyến. Tại $z$, tiếp tuyến chạm đồ thị, vì vậy dây cung nằm trên đồ thị tại $z$.
 
-**Lên nhiều chiều.** Với $x, y \in \operatorname{dom} f$, đặt $g(t) = f(x + t(y - x))$. Theo quy tắc dây chuyền, $g'(t) = \nabla f(x + t(y - x))^T (y - x)$. Nếu $f$ lồi thì $g$ lồi, và trường hợp một biến cho $g(1) \ge g(0) + g'(0)$, tức đúng bất đẳng thức cần chứng minh. Chiều ngược lại cũng đi qua $g$: giả thiết cho $g$ thỏa điều kiện bậc nhất một biến tại mọi cặp điểm, nên $g$ lồi trên mọi đường thẳng, và $f$ lồi.
+**Lên nhiều chiều.** Với $x, y \in \operatorname{dom} f$, đặt $g(t) = f(x + t(y - x))$. Theo quy tắc dây chuyền, $g'(t) = \nabla f(x + t(y - x))^T (y - x)$. Nếu $f$ lồi thì $g$ lồi, và trường hợp một biến cho $g(1) \ge g(0) + g'(0)$, tức đúng bất đẳng thức cần chứng minh. Chiều ngược lại cũng đi qua $g$: Giả thiết cho $g$ thỏa điều kiện bậc nhất một biến tại mọi cặp điểm, nên $g$ lồi trên mọi đường thẳng, và $f$ lồi.
 
 ## 5. Mỗi gradient loại bỏ nửa không gian
 
@@ -125,7 +125,7 @@ Hai hệ quả của hình ảnh này sẽ theo bạn suốt môn học.
 - **Hướng giảm.** Đi từ $x$ theo hướng $\Delta x$ chỉ có thể làm $f$ giảm nếu $\nabla f(x)^T \Delta x < 0$, tức $\Delta x$ tạo góc nhọn với $-\nabla f(x)$. Lập luận này là nền tảng để định nghĩa hướng giảm của các phương pháp tối ưu không ràng buộc. Phương pháp gradient chọn chính $\Delta x = -\nabla f(x)$, hướng mà theo xấp xỉ bậc nhất làm $f$ giảm nhanh nhất trong các hướng có cùng độ dài.
 - **Thu hẹp vùng chứa nghiệm.** Nếu nghiệm nằm trong một vùng đã biết, mỗi gradient cắt vùng đó làm đôi và giữ lại một nửa. Lặp lại, vùng chứa nghiệm co dần. Đây là ý tưởng của các phương pháp mặt phẳng cắt.
 
-Trong mô phỏng, hàm $-\exp(-x_1^2 - 2x_2^2)$ không lồi, vậy mà phép loại bỏ vẫn luôn đúng với nó. Điều phép loại bỏ thật sự cần chỉ là mọi tập mức dưới đều lồi. Những hàm như vậy gọi là **tựa lồi**, và §3.4.3 của sách chứng minh rằng một hàm khả vi tựa lồi khi và chỉ khi từ $f(y) \le f(x)$ suy ra $\nabla f(x)^T (y - x) \le 0$. Điều kiện bậc nhất của hàm lồi mạnh hơn hẳn: nó không chỉ cho biết điểm tốt hơn nằm ở phía nào, mà còn cho biết $f(y)$ lớn hơn $f(x)$ ít nhất bao nhiêu. Cũng vì yếu hơn nên với hàm tựa lồi, gradient bằng 0 không còn bảo đảm cực tiểu toàn cục. Hàm $x^3$ là một ví dụ, vì nó đơn điệu nên tựa lồi, nhưng đạo hàm của nó bằng 0 tại gốc.
+Trong mô phỏng, hàm $-\exp(-x_1^2 - 2x_2^2)$ không lồi, vậy mà phép loại bỏ vẫn luôn đúng với nó. Điều phép loại bỏ thật sự cần chỉ là mọi tập mức dưới đều lồi. Những hàm như vậy gọi là **tựa lồi**, và §3.4.3 của sách chứng minh rằng một hàm khả vi tựa lồi khi và chỉ khi từ $f(y) \le f(x)$ suy ra $\nabla f(x)^T (y - x) \le 0$. Điều kiện bậc nhất của hàm lồi mạnh hơn hẳn: Nó không chỉ cho biết điểm tốt hơn nằm ở phía nào, mà còn cho biết $f(y)$ lớn hơn $f(x)$ ít nhất bao nhiêu. Cũng vì yếu hơn nên với hàm tựa lồi, gradient bằng 0 không còn bảo đảm cực tiểu toàn cục. Hàm $x^3$ là một ví dụ, vì nó đơn điệu nên tựa lồi, nhưng đạo hàm của nó bằng 0 tại gốc.
 
 ## 6. Gradient của hàm lồi là đơn điệu
 
@@ -143,11 +143,11 @@ $$
 
 Khi $n = 1$, bất đẳng thức này nói $f'$ là hàm không giảm, điều quen thuộc với hàm lồi một biến. Khi $n \ge 2$, nó nói rằng khi di chuyển từ $x$ tới $y$, thành phần của gradient theo hướng di chuyển không giảm. Bất đẳng thức này phát biểu lại hình ảnh "đi dọc một đường thẳng, độ dốc tăng dần" của hàm hạn chế $g(t)$, mà không cần nhắc tới đường thẳng nào. Một ánh xạ $\psi$ thỏa $(\psi(y) - \psi(x))^T (y - x) \ge 0$ với mọi $x, y$ được gọi là **đơn điệu** (Bài tập 3.11).
 
-Chiều ngược lại không đúng khi $n \ge 2$: không phải ánh xạ đơn điệu nào cũng là gradient của một hàm. Phép quay $\psi(x) = (-x_2, x_1)$ thỏa $(\psi(y) - \psi(x))^T (y - x) = 0$ với mọi $x, y$, nên đơn điệu. Nhưng nếu $\psi = \nabla f$ thì ma trận Jacobian của $\psi$ phải là Hessian của $f$, tức đối xứng, trong khi Jacobian của phép quay là $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$.
+Chiều ngược lại không đúng khi $n \ge 2$: Không phải ánh xạ đơn điệu nào cũng là gradient của một hàm. Phép quay $\psi(x) = (-x_2, x_1)$ thỏa $(\psi(y) - \psi(x))^T (y - x) = 0$ với mọi $x, y$, nên đơn điệu. Nhưng nếu $\psi = \nabla f$ thì ma trận Jacobian của $\psi$ phải là Hessian của $f$, tức đối xứng, trong khi Jacobian của phép quay là $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$.
 
 ## 7. Lồi nghiêm ngặt, hàm lõm và những điểm gãy
 
-**Lồi nghiêm ngặt.** Hàm khả vi $f$ lồi nghiêm ngặt khi và chỉ khi $\operatorname{dom} f$ lồi và $f(y) > f(x) + \nabla f(x)^T (y - x)$ với mọi $x \ne y$. Tiếp tuyến khi đó chỉ chạm đồ thị tại đúng một điểm. Hệ quả: một hàm lồi nghiêm ngặt có **nhiều nhất một** điểm cực tiểu, vì tại điểm cực tiểu $x^\star$ gradient bằng 0, và bất đẳng thức chặt cho $f(y) > f(x^\star)$ với mọi $y \ne x^\star$. Nhưng "nhiều nhất một" khác với "có đúng một". Hàm $e^x$ lồi nghiêm ngặt, có cận dưới đúng là 0, vậy mà không đạt được cận đó ở đâu cả, vì đạo hàm $e^x$ luôn dương.
+**Lồi nghiêm ngặt.** Hàm khả vi $f$ lồi nghiêm ngặt khi và chỉ khi $\operatorname{dom} f$ lồi và $f(y) > f(x) + \nabla f(x)^T (y - x)$ với mọi $x \ne y$. Tiếp tuyến khi đó chỉ chạm đồ thị tại đúng một điểm. Hệ quả: Một hàm lồi nghiêm ngặt có **nhiều nhất một** điểm cực tiểu, vì tại điểm cực tiểu $x^\star$ gradient bằng 0, và bất đẳng thức chặt cho $f(y) > f(x^\star)$ với mọi $y \ne x^\star$. Nhưng "nhiều nhất một" khác với "có đúng một". Hàm $e^x$ lồi nghiêm ngặt, có cận dưới đúng là 0, vậy mà không đạt được cận đó ở đâu cả, vì đạo hàm $e^x$ luôn dương.
 
 **Hàm lõm.** Mọi thứ đảo chiều: $f$ lõm khi và chỉ khi $f(y) \le f(x) + \nabla f(x)^T (y - x)$, tức tiếp tuyến nằm trên đồ thị. Bất đẳng thức $\log y \le y - 1$ ở mục 3 là một ví dụ.
 
@@ -173,7 +173,7 @@ Chưa đủ. Định lý đòi bất đẳng thức đúng tại **mọi** $x$, 
 
 <details><summary>Xem lời giải thích</summary>
 
-Bài toán không có nghiệm, theo nghĩa cực tiểu không đạt được ở đâu cả. Nếu $x^\star$ là một điểm cực tiểu thì, vì miền xác định mở, gradient tại đó phải bằng 0, mâu thuẫn với giả thiết. Giá trị cận dưới vẫn có thể hữu hạn, như $e^x$ có cận dưới 0, hoặc bằng $-\infty$, như hàm tuyến tính $x_1$. Hàm $\log(e^{x_1} + e^{x_2})$ là một ví dụ hai chiều: dọc hướng $(-1, -1)$ nó giảm mãi về $-\infty$. Trong học máy, hồi quy logistic trên dữ liệu tách được tuyến tính rơi vào đúng tình huống này: hàm mất mát giảm mãi khi trọng số phình to, và không có nghiệm hữu hạn.
+Bài toán không có nghiệm, theo nghĩa cực tiểu không đạt được ở đâu cả. Nếu $x^\star$ là một điểm cực tiểu thì, vì miền xác định mở, gradient tại đó phải bằng 0, mâu thuẫn với giả thiết. Giá trị cận dưới vẫn có thể hữu hạn, như $e^x$ có cận dưới 0, hoặc bằng $-\infty$, như hàm tuyến tính $x_1$. Hàm $\log(e^{x_1} + e^{x_2})$ là một ví dụ hai chiều: Dọc hướng $(-1, -1)$ nó giảm mãi về $-\infty$. Trong học máy, hồi quy logistic trên dữ liệu tách được tuyến tính rơi vào đúng tình huống này: Hàm mất mát giảm mãi khi trọng số phình to, và không có nghiệm hữu hạn.
 
 </details>
 
@@ -202,7 +202,7 @@ Có thể, khi hàm affine trên một đoạn chứa $x$. Với $f(x) = |x|$ v�
 ## 9. Bài tập tự luyện
 
 ::: exercise 1. Bất đẳng thức từ tiếp tuyến
-Dùng điều kiện bậc nhất cho một hàm thích hợp tại một điểm thích hợp để chứng minh: (a) $e^y \ge e\,y$ với mọi $y \in \mathbb{R}$, và (b) $y \log y \ge y - 1$ với mọi $y > 0$. Dấu bằng xảy ra khi nào?
+Dùng điều kiện bậc nhất cho một hàm thích hợp tại một điểm thích hợp để chứng minh: (A) $e^y \ge e\,y$ với mọi $y \in \mathbb{R}$, và (b) $y \log y \ge y - 1$ với mọi $y > 0$. Dấu bằng xảy ra khi nào?
 :::
 
 ::: solution
@@ -214,7 +214,7 @@ Cho $f(x) = x_1^2 + 2x_2^2 - 2x_1 + 4x_2$ và điểm $x = (2, 1)$. (a) Tính $\
 :::
 
 ::: solution
-(a) $\nabla f(x) = (2x_1 - 2,\ 4x_2 + 4) = (2, 8)$. Mọi điểm tốt hơn thỏa $2(y_1 - 2) + 8(y_2 - 1) < 0$, tức $y_1 + 4y_2 < 6$. (b) Điểm $(-1, 2)$ cho $-1 + 8 = 7 \ge 6$, nằm ở nửa bị loại, nên chắc chắn không tốt hơn $x$. Điểm $(3, 0)$ cho $3 < 6$, nằm ở nửa còn lại, và nhát cắt không kết luận được gì: điểm đó có thể tốt hơn hoặc không. (c) $f(x) = 4 + 2 - 4 + 4 = 6$, $f(-1, 2) = 1 + 8 + 2 + 8 = 19 \ge 6$, và $f(3, 0) = 9 - 6 = 3 < 6$. Vậy $(3, 0)$ thật sự tốt hơn. Nghiệm tối ưu $(1, -1)$ với $f = -3$ cũng nằm ở nửa được giữ lại, vì $1 - 4 = -3 < 6$.
+(a) $\nabla f(x) = (2x_1 - 2,\ 4x_2 + 4) = (2, 8)$. Mọi điểm tốt hơn thỏa $2(y_1 - 2) + 8(y_2 - 1) < 0$, tức $y_1 + 4y_2 < 6$. (b) Điểm $(-1, 2)$ cho $-1 + 8 = 7 \ge 6$, nằm ở nửa bị loại, nên chắc chắn không tốt hơn $x$. Điểm $(3, 0)$ cho $3 < 6$, nằm ở nửa còn lại, và nhát cắt không kết luận được gì: Điểm đó có thể tốt hơn hoặc không. (c) $f(x) = 4 + 2 - 4 + 4 = 6$, $f(-1, 2) = 1 + 8 + 2 + 8 = 19 \ge 6$, và $f(3, 0) = 9 - 6 = 3 < 6$. Vậy $(3, 0)$ thật sự tốt hơn. Nghiệm tối ưu $(1, -1)$ với $f = -3$ cũng nằm ở nửa được giữ lại, vì $1 - 4 = -3 < 6$.
 :::
 
 ::: exercise 3. Softplus và sigmoid

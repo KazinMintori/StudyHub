@@ -24,13 +24,13 @@ $$A_x=A\cos\theta,\qquad A_y=A\sin\theta.\tag{1.5}$$
 
 Ở đây, $\theta$ được đo từ $+x$, chiều quay dương hướng về $+y$.
 
-![Hình 1.17 nguyên tác: chiếu vector lên hai trục vuông góc](img/young-01/hinh-1-17.png)
+![Hình 1.17 nguyên tác: Chiếu vector lên hai trục vuông góc](img/young-01/hinh-1-17.png)
 
 **Hình 1.17:** Hai thành phần là hình chiếu của vector lên trục $x$, $y$. Trong trường hợp được vẽ, $A_x$, $A_y$ đều dương, phù hợp vì $\theta$ ở góc phần tư thứ nhất nên cả sin và cos đều dương.
 
 Trong Hình 1.18a, $B_x<0$, $B_y>0$. Nếu $+x$ là đông và $+y$ là bắc, vector có thể biểu diễn $2.00\,\mathrm m$ về tây và $1.00\,\mathrm m$ về bắc, nên $B_x=-2.00\,\mathrm m$, $B_y=+1.00\,\mathrm m$. Góc thuộc phần tư thứ hai có cos âm, sin dương, phù hợp công thức (1.5). Trong Hình 1.18b, cả $C_x$, $C_y$ âm vì cả sin và cos âm ở phần tư thứ ba.
 
-![Hình 1.18 nguyên tác: dấu của các thành phần trong góc phần tư thứ hai và thứ ba](img/young-01/hinh-1-18.png)
+![Hình 1.18 nguyên tác: Dấu của các thành phần trong góc phần tư thứ hai và thứ ba](img/young-01/hinh-1-18.png)
 
 **Hình 1.18:** (a) Thành phần ngang của $\vec B$ âm, thành phần đứng dương. (b) Cả hai thành phần của $\vec C$ âm.
 
@@ -46,7 +46,7 @@ Công thức (1.5) chỉ đúng với quy ước góc đo từ $+x$ và chiều 
 **(b)** Tìm thành phần $x$, $y$ của $\vec E$ ở Hình 1.19b, biết $E=4.50\,\mathrm m$ và $\beta=37.0^\circ$.
 :::
 
-![Hình 1.19 nguyên tác: góc đo theo chiều âm và góc đo từ trục dương y](img/young-01/hinh-1-19.png)
+![Hình 1.19 nguyên tác: Góc đo theo chiều âm và góc đo từ trục dương y](img/young-01/hinh-1-19.png)
 
 **Hình 1.19:** (a) $\alpha$ đo từ $+x$ theo chiều ngược quy ước của công thức (1.5), nên cần dùng $-\alpha$. $D_x>0$, $D_y<0$. (b) $\beta$ đo từ $+y$, nên cần đổi thành góc $\theta$ đo từ $+x$ về $+y$. Cả $E_x$, $E_y$ dương.
 
@@ -107,7 +107,7 @@ Sách dùng $\arctan$ để ký hiệu hàm tang ngược. Ký hiệu $\tan^{-1}
 Hai góc lệch nhau $180^\circ$ có cùng tang. Trong Hình 1.20, $A_x=-2\,\mathrm m$, $A_y=-2\,\mathrm m$, nên tỷ số $A_y/A_x=+1$. Máy tính cho $\arctan1=45^\circ$, nhưng $225^\circ$ cũng có tang bằng $1$. Hình cho thấy vector ở góc phần tư thứ ba, nên góc đúng là $225^\circ$. Luôn vẽ phác để chọn đúng trong hai khả năng.
 :::
 
-![Hình 1.20 nguyên tác: vector có cả hai thành phần âm và góc 225 độ](img/young-01/hinh-1-20.png)
+![Hình 1.20 nguyên tác: Vector có cả hai thành phần âm và góc 225 độ](img/young-01/hinh-1-20.png)
 
 **Hình 1.20:** Tang bằng $+1$ chưa đủ phân biệt $45^\circ$ với $225^\circ$. Dấu hai thành phần và hình vẽ xác định $225^\circ$ là đáp án đúng.
 
@@ -117,7 +117,7 @@ Nếu $\vec D=c\vec A$, mỗi thành phần của tích bằng $c$ nhân thành 
 
 $$D_x=cA_x,\qquad D_y=cA_y.\tag{1.8}$$
 
-Vì thế, mỗi thành phần của $2\vec A$ gấp đôi thành phần ban đầu: vector giữ hướng và có độ lớn gấp đôi. Mỗi thành phần của $-3\vec A$ gấp ba về độ lớn nhưng đổi dấu: vector ngược hướng và có độ lớn gấp ba. Kết quả phù hợp với phép nhân vector ở mục 1.7 và Hình 1.15.
+Vì thế, mỗi thành phần của $2\vec A$ gấp đôi thành phần ban đầu: Vector giữ hướng và có độ lớn gấp đôi. Mỗi thành phần của $-3\vec A$ gấp ba về độ lớn nhưng đổi dấu: Vector ngược hướng và có độ lớn gấp ba. Kết quả phù hợp với phép nhân vector ở mục 1.7 và Hình 1.15.
 
 ### Cộng vector theo thành phần
 
@@ -125,7 +125,7 @@ Hình 1.21 vẽ $\vec A$, $\vec B$ và tổng $\vec R$. Thành phần $x$ của 
 
 $$R_x=A_x+B_x,\qquad R_y=A_y+B_y.\tag{1.9}$$
 
-![Hình 1.21 nguyên tác: các thành phần của vector tổng bằng tổng các thành phần tương ứng](img/young-01/hinh-1-21.png)
+![Hình 1.21 nguyên tác: Các thành phần của vector tổng bằng tổng các thành phần tương ứng](img/young-01/hinh-1-21.png)
 
 **Hình 1.21:** $\vec R$ là tổng của $\vec A$ và $\vec B$. $R_x=A_x+B_x$ và $R_y=A_y+B_y$. Hình minh họa trường hợp mọi thành phần đều dương. Bạn có thể vẽ thêm các trường hợp khác để kiểm tra quan hệ vẫn đúng khi thành phần có dấu âm.
 
@@ -148,7 +148,7 @@ Ta vẫn lấy căn không âm. Đồng thời, phép cộng có thêm phương 
 
 $$R_z=A_z+B_z+C_z+D_z+E_z+\cdots.$$
 
-![Hình 1.22 nguyên tác: vector và ba thành phần trong hệ tọa độ không gian](img/young-01/hinh-1-22.png)
+![Hình 1.22 nguyên tác: Vector và ba thành phần trong hệ tọa độ không gian](img/young-01/hinh-1-22.png)
 
 **Hình 1.22:** Vector trong ba chiều có thành phần theo $x$, $y$, $z$. Độ lớn được tính từ tổng bình phương ba thành phần như (1.11).
 
@@ -182,7 +182,7 @@ Ba người chơi một chương trình truyền hình thực tế được đư
 Ba độ dời dẫn tới nơi chôn chìa khóa một chiếc Porsche mới. Hai người bắt đầu đo ngay; người thắng lại tính trước mình cần đi đâu. Người ấy tính gì?
 :::
 
-![Hình 1.23 nguyên tác: ba độ dời nối tiếp trên hệ trục đông–bắc và vector tổng](img/young-01/hinh-1-23.png)
+![Hình 1.23 nguyên tác: Ba độ dời nối tiếp trên hệ trục đông–bắc và vector tổng](img/young-01/hinh-1-23.png)
 
 **Hình 1.23:** Trục $x$ hướng đông, trục $y$ hướng bắc. Các độ dời $\vec A$, $\vec B$, $\vec C$ được ghép nối tiếp; $\vec R=\vec A+\vec B+\vec C$ nối từ điểm đầu đến điểm cuối.
 

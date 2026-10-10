@@ -2,7 +2,7 @@
 
 Nếu vận tốc mô tả tốc độ thay đổi của tọa độ vị trí theo thời gian, thì **gia tốc** (*acceleration*) mô tả tốc độ thay đổi của chính vận tốc theo thời gian.
 
-Trong ngôn ngữ giao tiếp hằng ngày, người ta thường dùng từ "gia tốc" hay "tăng tốc" với hàm ý chuyển động nhanh dần lên, còn khi xe hãm phanh thì gọi là "giảm tốc". Nhưng trong cơ học vật lý chuẩn tắc, khái niệm **gia tốc** bao trùm mọi sự biến thiên của vector vận tốc: dù vật chạy nhanh lên, chạy chậm lại, hay đổi hướng chuyển động, vật thể đó đều đang có gia tốc!
+Trong ngôn ngữ giao tiếp hằng ngày, người ta thường dùng từ "gia tốc" hay "tăng tốc" với hàm ý chuyển động nhanh dần lên, còn khi xe hãm phanh thì gọi là "giảm tốc". Nhưng trong cơ học vật lý chuẩn tắc, khái niệm **gia tốc** bao trùm mọi sự biến thiên của vector vận tốc: Dù vật chạy nhanh lên, chạy chậm lại, hay đổi hướng chuyển động, vật thể đó đều đang có gia tốc!
 
 ---
 
@@ -14,7 +14,7 @@ Thành phần **gia tốc trung bình** trên đoạn thời gian đó được 
 
 $$a_{\mathrm{av}-x} = \frac{\Delta v_x}{\Delta t} = \frac{v_{2x} - v_{1x}}{t_2 - t_1}.\tag{2.4}$$
 
-Nếu vận tốc tính bằng mét trên giây ($\mathrm{m/s}$) và thời gian tính bằng giây ($\mathrm s$), đơn vị của gia tốc là mét trên giây chia cho giây, tức **mét trên giây bình phương** ($\mathrm{m/s^2}$). Ý nghĩa vật lý của đơn vị này rất trực quan: một gia tốc $2\,\mathrm{m/s^2}$ nghĩa là cứ sau mỗi giây trôi qua, vận tốc của vật lại tăng thêm $2\,\mathrm{m/s}$.
+Nếu vận tốc tính bằng mét trên giây ($\mathrm{m/s}$) và thời gian tính bằng giây ($\mathrm s$), đơn vị của gia tốc là mét trên giây chia cho giây, tức **mét trên giây bình phương** ($\mathrm{m/s^2}$). Ý nghĩa vật lý của đơn vị này rất trực quan: Một gia tốc $2\,\mathrm{m/s^2}$ nghĩa là cứ sau mỗi giây trôi qua, vận tốc của vật lại tăng thêm $2\,\mathrm{m/s}$.
 
 ::: warning Cảm nhận sinh lý học về gia tốc và vận tốc
 Hệ tiền đình của cơ thể con người không thể trực tiếp cảm nhận vận tốc không đổi, nhưng lại cực kỳ nhạy cảm với gia tốc! Khi bạn ngồi trên một chiếc máy bay phản lực đang bay bằng đều đặn ở tốc độ $900\,\mathrm{km/h}$, bạn cảm thấy êm ái y như đang ngồi trong phòng khách. Nhưng khi máy bay bắt đầu gầm rú lấy đà cất cánh trên đường băng (gia tốc hướng về phía trước), lưng bạn bị ép chặt vào thành ghế; và khi máy bay phanh gấp lúc hạ cánh, dây an toàn ghì chặt ngực bạn về phía trước. Gia tốc chính là đại lượng gắn liền trực tiếp với lực quán tính tác dụng lên cơ thể.
@@ -65,7 +65,7 @@ Tốc độ tăng từ $0.4\,\mathrm{m/s}$ lên $1.0\,\mathrm{m/s}$ ($|-1.0| > |
 $$a_{\mathrm{av}-x} = \frac{-0.8 - (-1.6)}{15.0 - 13.0} = \frac{+0.8\,\mathrm{m/s}}{2.0\,\mathrm s} = +0.4\,\mathrm{m/s^2}.$$
 Tốc độ giảm từ $1.6\,\mathrm{m/s}$ xuống $0.8\,\mathrm{m/s}$ ($|-0.8| < |-1.6|$) $\implies$ **chậm dần theo chiều âm**.
 
-**Đánh giá:** Lưu ý sâu sắc ở câu (c): Gia tốc mang dấu âm ($-0.3\,\mathrm{m/s^2}$) nhưng chuyển động lại là **nhanh dần**! Điều này khẳng định quy tắc vàng: khi gia tốc và vận tốc cùng dấu, vật luôn chuyển động nhanh dần.
+**Đánh giá:** Lưu ý sâu sắc ở câu (c): Gia tốc mang dấu âm ($-0.3\,\mathrm{m/s^2}$) nhưng chuyển động lại là **nhanh dần**! Điều này khẳng định quy tắc vàng: Khi gia tốc và vận tốc cùng dấu, vật luôn chuyển động nhanh dần.
 :::
 
 ---
@@ -147,7 +147,7 @@ Tương tự như mối liên hệ giữa tọa độ và vận tốc:
 ### Quy tắc vàng xóa tan ngộ nhận: Dấu của tích số $v_x \cdot a_x$
 
 ::: warning Xóa tan ngộ nhận: Gia tốc âm KHÔNG ĐỒNG NGHĨA với chuyển động chậm dần!
-Hàng triệu học sinh thường mang ngộ nhận: *"cứ gia tốc âm là xe đang phanh chậm dần"*. Đây là một sai lầm bản chất!
+Hàng triệu học sinh thường mang ngộ nhận: *"Cứ gia tốc âm là xe đang phanh chậm dần"*. Đây là một sai lầm bản chất!
 Dấu của gia tốc $a_x$ chỉ đơn thuần cho biết vector gia tốc đang hướng theo chiều dương hay chiều âm của trục tọa độ đã chọn.
 
 Quy luật vật lý duy nhất quyết định một vật chuyển động nhanh dần hay chậm dần là **mối tương quan dấu giữa vận tốc $v_x$ và gia tốc $a_x$** (tức dấu của tích số $v_x \cdot a_x$):

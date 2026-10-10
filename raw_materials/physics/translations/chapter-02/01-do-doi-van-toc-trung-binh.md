@@ -15,7 +15,7 @@ $$\Delta x = x_2 - x_1 = 277\,\mathrm m - 19\,\mathrm m = +258\,\mathrm m.\tag{2
 Đại lượng $\Delta x$ được gọi là **thành phần độ dời** (hay ngắn gọn là độ dời) của chất điểm dọc theo trục $x$. 
 
 ::: warning Bản chất của ký hiệu biến thiên $\Delta$ (Delta)
-Ký hiệu $\Delta x$ không phải là tích của chữ cái $\Delta$ nhân với $x$. Trong toán học và vật lý, chữ cái Hy Lạp viết hoa $\Delta$ (delta) là một toán tử biểu thị **độ biến thiên**: luôn lấy **giá trị lúc sau trừ đi giá trị lúc đầu**:
+Ký hiệu $\Delta x$ không phải là tích của chữ cái $\Delta$ nhân với $x$. Trong toán học và vật lý, chữ cái Hy Lạp viết hoa $\Delta$ (delta) là một toán tử biểu thị **độ biến thiên**: Luôn lấy **giá trị lúc sau trừ đi giá trị lúc đầu**:
 $$\Delta (\text{đại lượng}) = (\text{giá trị cuối}) - (\text{giá trị đầu}).$$
 Tương tự, $\Delta t = t_2 - t_1$ là khoảng thời gian trôi qua giữa hai sự kiện (luôn là số dương).
 :::
@@ -62,7 +62,7 @@ Dấu dương hay âm của vận tốc không phải là bản chất tự thâ
 
 Một phương thức trực quan và mạnh mẽ để nắm bắt chuyển động là biểu diễn vị trí $x$ dưới dạng hàm số của thời gian $t$ trên mặt phẳng tọa độ (đồ thị $x-t$, Hình 2.3).
 
-Cần phân biệt rõ: **đường cong trên đồ thị $x-t$ không phải là quỹ đạo hình học của chiếc xe trong không gian!** Xe vẫn đang chạy trên một đường thẳng tắp; đường cong trên đồ thị chỉ mô tả quy luật biến thiên của tọa độ vị trí theo thời gian.
+Cần phân biệt rõ: **Đường cong trên đồ thị $x-t$ không phải là quỹ đạo hình học của chiếc xe trong không gian!** Xe vẫn đang chạy trên một đường thẳng tắp; đường cong trên đồ thị chỉ mô tả quy luật biến thiên của tọa độ vị trí theo thời gian.
 
 ![Hình 2.3: Ý nghĩa hình học của vận tốc trung bình — độ dốc của cát tuyến trên đồ thị x-t](img/young-02/hinh-2-3.png)
 

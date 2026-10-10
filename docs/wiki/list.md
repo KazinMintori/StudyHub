@@ -7,7 +7,7 @@ next: false
 
 # List
 
-List Python là dãy có thứ tự, có thể thay đổi và có thể chứa nhiều kiểu đối tượng. Chỉ mục bắt đầu từ 0. Chỉ mục âm đếm từ cuối. append thêm ở cuối. List khác mảng NumPy: list * 2 lặp lại dãy, không nhân số trong dãy.
+List Python là dãy có thứ tự, có thể thay đổi và có thể chứa nhiều kiểu đối tượng. Chỉ mục bắt đầu từ 0. Chỉ mục âm đếm từ cuối. append thêm ở cuối. List khác mảng NumPy: List * 2 lặp lại dãy, không nhân số trong dãy.
 
 <WikiUsage />
 

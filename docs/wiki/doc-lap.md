@@ -7,7 +7,7 @@ next: false
 
 # Độc lập
 
-Hai biến cố A, B độc lập khi $P(A\cap B)=P(A)P(B)$. Khi $P(B)>0$, điều này tương đương $P(A|B)=P(A)$. Độc lập khác loại trừ nhau: hai biến cố không thể cùng xảy ra và đều có xác suất dương sẽ không độc lập.
+Hai biến cố A, B độc lập khi $P(A\cap B)=P(A)P(B)$. Khi $P(B)>0$, điều này tương đương $P(A|B)=P(A)$. Độc lập khác loại trừ nhau: Hai biến cố không thể cùng xảy ra và đều có xác suất dương sẽ không độc lập.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ Hai biến cố A, B độc lập khi $P(A\cap B)=P(A)P(B)$. Khi $P(B)>0$, đi�
 
 ## Ví dụ
 
-Hai lần tung đồng xu độc lập: biết lần một ngửa không thay đổi xác suất lần hai ngửa.
+Hai lần tung đồng xu độc lập: Biết lần một ngửa không thay đổi xác suất lần hai ngửa.
 
 ## Khi nào cần dùng?
 

@@ -7,9 +7,9 @@ title: "Siêu phẳng và nửa không gian"
 description: "Siêu phẳng như tập nghiệm của một phương trình tuyến tính, vector pháp tuyến và độ lệch, biểu diễn x₀ + a⊥, nửa không gian và pháp tuyến hướng ra ngoài, khoảng cách có dấu, quan hệ chứa giữa hai nửa không gian và nửa không gian Voronoi."
 ---
 
-Một phương trình tuyến tính duy nhất, chẳng hạn $3x_1 + 4x_2 = 10$, có thể được đọc theo hai cách. Người làm đại số thấy một ràng buộc giữa hai ẩn và đi tìm nghiệm. Người làm hình học thấy một đường thẳng trong mặt phẳng. Trong $\mathbb{R}^3$, phương trình $3x_1 + 4x_2 + x_3 = 10$ là một mặt phẳng, và trong $\mathbb{R}^n$ nó là một **siêu phẳng**: một "mặt phẳng" có số chiều $n - 1$, mỏng hơn không gian chứa nó đúng một chiều.
+Một phương trình tuyến tính duy nhất, chẳng hạn $3x_1 + 4x_2 = 10$, có thể được đọc theo hai cách. Người làm đại số thấy một ràng buộc giữa hai ẩn và đi tìm nghiệm. Người làm hình học thấy một đường thẳng trong mặt phẳng. Trong $\mathbb{R}^3$, phương trình $3x_1 + 4x_2 + x_3 = 10$ là một mặt phẳng, và trong $\mathbb{R}^n$ nó là một **siêu phẳng**: Một "mặt phẳng" có số chiều $n - 1$, mỏng hơn không gian chứa nó đúng một chiều.
 
-Siêu phẳng và nửa không gian là những viên gạch nhỏ nhất của hình học lồi. Đa diện được ghép từ nửa không gian, tập lồi đóng bất kỳ là giao của các nửa không gian chứa nó, và định lý siêu phẳng phân tách ở cuối phần hình học nói rằng hai tập lồi rời nhau luôn ngăn được bằng một siêu phẳng. Trang này giúp bạn đọc được một siêu phẳng chỉ bằng cách nhìn vào phương trình của nó: biết nó vuông góc với hướng nào, nằm cách gốc bao xa, và một điểm cho trước ở phía nào.
+Siêu phẳng và nửa không gian là những viên gạch nhỏ nhất của hình học lồi. Đa diện được ghép từ nửa không gian, tập lồi đóng bất kỳ là giao của các nửa không gian chứa nó, và định lý siêu phẳng phân tách ở cuối phần hình học nói rằng hai tập lồi rời nhau luôn ngăn được bằng một siêu phẳng. Trang này giúp bạn đọc được một siêu phẳng chỉ bằng cách nhìn vào phương trình của nó: Biết nó vuông góc với hướng nào, nằm cách gốc bao xa, và một điểm cho trước ở phía nào.
 
 ## 1. Định nghĩa và cách đọc thứ nhất
 
@@ -17,7 +17,7 @@ Siêu phẳng và nửa không gian là những viên gạch nhỏ nhất của 
 
 Về mặt giải tích, siêu phẳng là tập nghiệm của một phương trình tuyến tính không tầm thường, nên theo chủ đề về tập affine, nó là một tập affine. Điều kiện $a \ne 0$ loại bỏ phương trình suy biến $0 = b$, vốn vô nghiệm khi $b \ne 0$ và nhận mọi điểm làm nghiệm khi $b = 0$.
 
-Về mặt hình học, sách đưa ra cách đọc thứ nhất: siêu phẳng là **tập các điểm có cùng tích vô hướng $b$ với vector $a$**. Để thấy cách đọc này nói lên điều gì, hãy nhớ rằng $\tfrac{a^T x}{\|a\|_2}$ là độ dài có dấu của hình chiếu của $x$ lên đường thẳng theo hướng $a$. Vì thế phương trình $a^T x = b$ có nghĩa là "hình chiếu của $x$ lên trục theo hướng $a$ luôn ở cùng một vị trí $\tfrac{b}{\|a\|_2}$". Tất cả những điểm có cùng hình chiếu như vậy tạo thành một siêu phẳng **vuông góc với $a$**, đi qua điểm nằm trên trục đó cách gốc một khoảng có dấu bằng $\tfrac{b}{\|a\|_2}$.
+Về mặt hình học, sách đưa ra cách đọc thứ nhất: Siêu phẳng là **tập các điểm có cùng tích vô hướng $b$ với vector $a$**. Để thấy cách đọc này nói lên điều gì, hãy nhớ rằng $\tfrac{a^T x}{\|a\|_2}$ là độ dài có dấu của hình chiếu của $x$ lên đường thẳng theo hướng $a$. Vì thế phương trình $a^T x = b$ có nghĩa là "hình chiếu của $x$ lên trục theo hướng $a$ luôn ở cùng một vị trí $\tfrac{b}{\|a\|_2}$". Tất cả những điểm có cùng hình chiếu như vậy tạo thành một siêu phẳng **vuông góc với $a$**, đi qua điểm nằm trên trục đó cách gốc một khoảng có dấu bằng $\tfrac{b}{\|a\|_2}$.
 
 Vector $a$ được gọi là **vector pháp tuyến** của siêu phẳng, còn hằng số $b$ quyết định độ lệch của siêu phẳng so với gốc. Hai cách thay đổi phương trình cho hai hiệu ứng khác nhau mà bạn nên phân biệt. Nhân cả $a$ và $b$ với cùng một số khác 0 thì siêu phẳng **không đổi**, vì phương trình mới tương đương phương trình cũ. Còn nếu chỉ thay $b$ mà giữ $a$, siêu phẳng **tịnh tiến song song** theo hướng $a$.
 
@@ -31,7 +31,7 @@ $$
 và quả thật $3 \cdot 1.2 + 4 \cdot 1.6 = 3.6 + 6.4 = 10$. Một vector chỉ phương của đường thẳng là $d = (4, -3)$, vì $a^T d = 12 - 12 = 0$.
 :::
 
-## 2. Cách đọc thứ hai: một điểm cộng với mọi hướng vuông góc
+## 2. Cách đọc thứ hai: Một điểm cộng với mọi hướng vuông góc
 
 Chọn một điểm bất kỳ $x_0$ trên siêu phẳng, tức một điểm có $a^T x_0 = b$. Khi đó $a^T x = b$ tương đương với $a^T x = a^T x_0$, hay
 
@@ -42,10 +42,10 @@ $$
 Phương trình cuối nói rằng vector $x - x_0$, đi từ $x_0$ tới $x$, vuông góc với $a$. Gọi $a^{\perp} = \{v : a^T v = 0\}$ là **phần bù trực giao** của $a$, tập mọi vector vuông góc với $a$. Ta được
 
 $$
-\{x : a^T x = b\} = x_0 + a^{\perp}.
+\{x : A^T x = b\} = x_0 + a^{\perp}.
 $$
 
-Đây đúng là cấu trúc "không gian con được tịnh tiến" của mọi tập affine: không gian con đi kèm là $a^{\perp}$, có số chiều $n - 1$, và điểm tịnh tiến là $x_0$. Hình 2.6 trong sách vẽ đúng điều này: từ một điểm $x_0$ trên đường thẳng, mọi vector $x - x_0$ dọc theo đường thẳng đều vuông góc với $a$.
+Đây đúng là cấu trúc "không gian con được tịnh tiến" của mọi tập affine: Không gian con đi kèm là $a^{\perp}$, có số chiều $n - 1$, và điểm tịnh tiến là $x_0$. Hình 2.6 trong sách vẽ đúng điều này: Từ một điểm $x_0$ trên đường thẳng, mọi vector $x - x_0$ dọc theo đường thẳng đều vuông góc với $a$.
 
 ## 3. Nửa không gian
 
@@ -53,7 +53,7 @@ Một siêu phẳng chia $\mathbb{R}^n$ thành hai nửa.
 
 > **Định nghĩa.** Một **nửa không gian đóng** là tập có dạng $\{x : a^T x \le b\}$ với $a \ne 0$, tức là tập nghiệm của một bất đẳng thức tuyến tính không tầm thường.
 
-Nửa không gian lồi nhưng không affine. Tính lồi suy ra trực tiếp: nếu $a^T x_1 \le b$, $a^T x_2 \le b$ và $\theta \in [0, 1]$, thì
+Nửa không gian lồi nhưng không affine. Tính lồi suy ra trực tiếp: Nếu $a^T x_1 \le b$, $a^T x_2 \le b$ và $\theta \in [0, 1]$, thì
 
 $$
 a^T(\theta x_1 + (1-\theta)x_2) = \theta a^T x_1 + (1-\theta) a^T x_2 \le \theta b + (1 - \theta) b = b,
@@ -63,7 +63,7 @@ trong đó bước bất đẳng thức cần $\theta \ge 0$ và $1 - \theta \ge
 
 Nửa không gian $a^T x \le b$ nằm về phía **ngược** với hướng của $a$. Lý do là khi đi theo hướng $a$, giá trị $a^T x$ tăng, nên muốn giữ $a^T x \le b$ ta phải ở phía $-a$. Vì vậy sách gọi $a$ là **pháp tuyến hướng ra ngoài** của nửa không gian $\{a^T x \le b\}$. Ngược lại, nửa không gian $\{a^T x \ge b\}$ mở rộng theo hướng $a$.
 
-Viết lại với một điểm $x_0$ trên biên, nửa không gian là $\{x : a^T(x - x_0) \le 0\}$. Cách viết này cho một hình ảnh rất trực quan (Hình 2.8 trong sách): nửa không gian gồm $x_0$ cộng với mọi vector tạo với $a$ một **góc tù hoặc vuông**. Một điểm $x$ mà vector $x - x_0$ tạo góc nhọn với $a$ thì nằm ngoài.
+Viết lại với một điểm $x_0$ trên biên, nửa không gian là $\{x : a^T(x - x_0) \le 0\}$. Cách viết này cho một hình ảnh rất trực quan (Hình 2.8 trong sách): Nửa không gian gồm $x_0$ cộng với mọi vector tạo với $a$ một **góc tù hoặc vuông**. Một điểm $x$ mà vector $x - x_0$ tạo góc nhọn với $a$ thì nằm ngoài.
 
 Biên của nửa không gian $\{a^T x \le b\}$ là siêu phẳng $\{a^T x = b\}$. Bỏ biên đi, ta được **nửa không gian mở** $\{a^T x < b\}$, chính là phần trong của nửa không gian đóng.
 
@@ -71,7 +71,7 @@ Biên của nửa không gian $\{a^T x \le b\}$ là siêu phẳng $\{a^T x = b\}
 
 ## 4. Khoảng cách có dấu và ý nghĩa của giá trị $a^T x - b$
 
-Trong mô phỏng, con số được tính cho điểm thử $x$ là $\tfrac{a^T x - b}{\|a\|_2}$. Đây là **khoảng cách có dấu** từ $x$ tới siêu phẳng: trị tuyệt đối của nó là khoảng cách thông thường, còn dấu cho biết $x$ ở phía nào.
+Trong mô phỏng, con số được tính cho điểm thử $x$ là $\tfrac{a^T x - b}{\|a\|_2}$. Đây là **khoảng cách có dấu** từ $x$ tới siêu phẳng: Trị tuyệt đối của nó là khoảng cách thông thường, còn dấu cho biết $x$ ở phía nào.
 
 Để thấy vì sao, gọi $x_0$ là một điểm bất kỳ trên siêu phẳng. Khoảng cách từ $x$ tới siêu phẳng là độ dài hình chiếu của $x - x_0$ lên hướng pháp tuyến đơn vị $\tfrac{a}{\|a\|_2}$, bởi vì thành phần của $x - x_0$ dọc theo siêu phẳng không làm thay đổi khoảng cách. Độ dài có dấu của hình chiếu đó là
 
@@ -79,11 +79,11 @@ $$
 \frac{a^T(x - x_0)}{\|a\|_2} = \frac{a^T x - a^T x_0}{\|a\|_2} = \frac{a^T x - b}{\|a\|_2}.
 $$
 
-Với siêu phẳng $3x_1 + 4x_2 = 10$ ở ví dụ trên, điểm $(4, 2)$ cho $\tfrac{12 + 8 - 10}{5} = 2$: nó cách đường thẳng 2 đơn vị, về phía $a$ chỉ tới. Gốc tọa độ cho $\tfrac{0 - 10}{5} = -2$: cũng cách 2 đơn vị, nhưng ở phía bên kia.
+Với siêu phẳng $3x_1 + 4x_2 = 10$ ở ví dụ trên, điểm $(4, 2)$ cho $\tfrac{12 + 8 - 10}{5} = 2$: Nó cách đường thẳng 2 đơn vị, về phía $a$ chỉ tới. Gốc tọa độ cho $\tfrac{0 - 10}{5} = -2$: Cũng cách 2 đơn vị, nhưng ở phía bên kia.
 
 Cùng công thức cho khoảng cách giữa hai siêu phẳng song song $\{a^T x = b_1\}$ và $\{a^T x = b_2\}$ (Bài tập 2.5 trong sách). Lấy một điểm trên siêu phẳng thứ nhất, khoảng cách có dấu của nó tới siêu phẳng thứ hai là $\tfrac{b_1 - b_2}{\|a\|_2}$. Vậy hai siêu phẳng cách nhau $\tfrac{|b_1 - b_2|}{\|a\|_2}$. Hãy bật siêu phẳng thứ hai trong mô phỏng và đối chiếu.
 
-Giá trị $a^T x - b$, chưa chia cho $\|a\|_2$, cũng có tên riêng trong học máy. Một bộ phân loại tuyến tính tính **điểm số** $s(x) = w^T x + b$ và gán nhãn theo dấu của nó. Ranh giới quyết định $\{x : w^T x + b = 0\}$ là một siêu phẳng, và $\tfrac{s(x)}{\|w\|_2}$ là khoảng cách có dấu từ điểm dữ liệu tới ranh giới. Điểm số lớn về trị tuyệt đối nghĩa là điểm nằm xa ranh giới. Tuy vậy, chỉ so sánh điểm số thì chưa đủ để nói về độ "chắc chắn" của mô hình: nhân $w$ và $b$ với 10 thì ranh giới y nguyên nhưng mọi điểm số lớn gấp 10. Khoảng cách hình học mới không phụ thuộc vào cách viết phương trình. Ý tưởng chọn siêu phẳng sao cho khoảng cách tới điểm dữ liệu gần nhất là lớn nhất chính là gốc rễ của máy vector hỗ trợ (SVM).
+Giá trị $a^T x - b$, chưa chia cho $\|a\|_2$, cũng có tên riêng trong học máy. Một bộ phân loại tuyến tính tính **điểm số** $s(x) = w^T x + b$ và gán nhãn theo dấu của nó. Ranh giới quyết định $\{x : w^T x + b = 0\}$ là một siêu phẳng, và $\tfrac{s(x)}{\|w\|_2}$ là khoảng cách có dấu từ điểm dữ liệu tới ranh giới. Điểm số lớn về trị tuyệt đối nghĩa là điểm nằm xa ranh giới. Tuy vậy, chỉ so sánh điểm số thì chưa đủ để nói về độ "chắc chắn" của mô hình: Nhân $w$ và $b$ với 10 thì ranh giới y nguyên nhưng mọi điểm số lớn gấp 10. Khoảng cách hình học mới không phụ thuộc vào cách viết phương trình. Ý tưởng chọn siêu phẳng sao cho khoảng cách tới điểm dữ liệu gần nhất là lớn nhất chính là gốc rễ của máy vector hỗ trợ (SVM).
 
 ## 5. Khi nào một nửa không gian chứa một nửa không gian khác?
 
@@ -95,7 +95,7 @@ Chiều "nếu" là một phép nhân. Nếu $a^T x \le b$ thì $\tilde a^T x = 
 
 Chiều "chỉ nếu" thú vị hơn, vì nó cho thấy khi nào một bất đẳng thức tuyến tính là hệ quả của một bất đẳng thức khác. Giả sử có quan hệ chứa. Nếu $\tilde a$ không cùng phương với $a$, ta tìm được một hướng $d$ với $a^T d = 0$ nhưng $\tilde a^T d \ne 0$ (chẳng hạn hình chiếu của $\tilde a$ lên $a^{\perp}$, vốn khác 0). Đi từ một điểm của nửa không gian thứ nhất theo hướng $\pm d$, ta ở lại nửa không gian đó mãi mãi vì $a^T x$ không đổi, trong khi $\tilde a^T x$ tăng không giới hạn theo một trong hai chiều. Như vậy có điểm thuộc nửa không gian thứ nhất mà không thuộc nửa không gian thứ hai, mâu thuẫn. Do đó $\tilde a = \lambda a$. Nếu $\lambda < 0$, đi theo hướng $-a$ thì $a^T x$ giảm nên ta ở lại nửa không gian thứ nhất, nhưng $\tilde a^T x = \lambda a^T x$ tăng vô hạn, lại mâu thuẫn. Vậy $\lambda > 0$. Cuối cùng, giá trị lớn nhất của $\tilde a^T x = \lambda a^T x$ trên nửa không gian thứ nhất là $\lambda b$, đạt trên biên, nên quan hệ chứa buộc $\lambda b \le \tilde b$.
 
-Kết luận đáng nhớ là: một bất đẳng thức tuyến tính chỉ suy ra được một bất đẳng thức tuyến tính khác khi bất đẳng thức sau là **bội dương** của bất đẳng thức trước, có thể nới thêm vế phải. Ở chủ đề về hai lớp bài toán kinh điển, ta đã chứng nhận nghiệm một LP bằng tổ hợp không âm của nhiều ràng buộc. Mệnh đề này là trường hợp một ràng buộc của cùng ý tưởng, và bổ đề Farkas ở chủ đề về siêu phẳng phân tách sẽ là trường hợp nhiều ràng buộc tổng quát.
+Kết luận đáng nhớ là: Một bất đẳng thức tuyến tính chỉ suy ra được một bất đẳng thức tuyến tính khác khi bất đẳng thức sau là **bội dương** của bất đẳng thức trước, có thể nới thêm vế phải. Ở chủ đề về hai lớp bài toán kinh điển, ta đã chứng nhận nghiệm một LP bằng tổ hợp không âm của nhiều ràng buộc. Mệnh đề này là trường hợp một ràng buộc của cùng ý tưởng, và bổ đề Farkas ở chủ đề về siêu phẳng phân tách sẽ là trường hợp nhiều ràng buộc tổng quát.
 
 ## 6. Nửa không gian Voronoi
 
@@ -109,7 +109,7 @@ Số hạng $z^T z$ xuất hiện ở cả hai vế và triệt tiêu, nên đi�
 
 <HyperplaneLab type="voronoi" />
 
-Kết quả nhỏ này có hệ quả lớn. Với $K + 1$ điểm $x_0, x_1, \ldots, x_K$, tập các điểm gần $x_0$ hơn mọi điểm khác là giao của $K$ nửa không gian như trên, nên là một đa diện, gọi là **miền Voronoi** của $x_0$ (Bài tập 2.9 trong sách). Bộ phân loại láng giềng gần nhất, khi gán cho một điểm mới nhãn của điểm dữ liệu gần nó nhất, thực chất chia không gian thành các miền Voronoi. Bước gán cụm trong thuật toán k-means cũng vậy: mỗi điểm thuộc về tâm cụm gần nhất, nên các cụm được ngăn cách bởi những siêu phẳng trung trực.
+Kết quả nhỏ này có hệ quả lớn. Với $K + 1$ điểm $x_0, x_1, \ldots, x_K$, tập các điểm gần $x_0$ hơn mọi điểm khác là giao của $K$ nửa không gian như trên, nên là một đa diện, gọi là **miền Voronoi** của $x_0$ (Bài tập 2.9 trong sách). Bộ phân loại láng giềng gần nhất, khi gán cho một điểm mới nhãn của điểm dữ liệu gần nó nhất, thực chất chia không gian thành các miền Voronoi. Bước gán cụm trong thuật toán k-means cũng vậy: Mỗi điểm thuộc về tâm cụm gần nhất, nên các cụm được ngăn cách bởi những siêu phẳng trung trực.
 
 ## 7. Siêu phẳng ở những nơi không ngờ tới
 
@@ -124,7 +124,7 @@ Siêu phẳng cũng xuất hiện ngoài không gian các vector tọa độ. B�
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Bất đẳng thức thứ hai là bất đẳng thức thứ nhất nhân với $-2$, và nhân với số âm làm đảo chiều. Thật vậy, $-4x_1 + 2x_2 \le -6$ tương đương $2x_1 - x_2 \ge 3$. Hai nửa mặt phẳng nằm về hai phía của cùng một đường biên, và giao của chúng chính là đường thẳng. Câu hỏi minh họa mệnh đề ở mục 5: nửa không gian chỉ không đổi khi nhân với hệ số **dương**.
+Không. Bất đẳng thức thứ hai là bất đẳng thức thứ nhất nhân với $-2$, và nhân với số âm làm đảo chiều. Thật vậy, $-4x_1 + 2x_2 \le -6$ tương đương $2x_1 - x_2 \ge 3$. Hai nửa mặt phẳng nằm về hai phía của cùng một đường biên, và giao của chúng chính là đường thẳng. Câu hỏi minh họa mệnh đề ở mục 5: Nửa không gian chỉ không đổi khi nhân với hệ số **dương**.
 
 </details>
 
@@ -154,7 +154,7 @@ Nói chung là không. Mẹo triệt tiêu $z^T z$ chỉ hoạt động với ch
 
 <details><summary>Xem lời giải thích</summary>
 
-Cách làm đó quên độ lệch $b$. Phía của $x$ được quyết định bởi dấu của $a^T x - b$, không phải dấu của $a^T x$. Cách làm chỉ đúng khi $b = 0$, tức siêu phẳng đi qua gốc. Trong học máy, lỗi tương tự là quên hệ số chặn của bộ phân loại tuyến tính. Đó cũng là lý do người ta hay gộp hệ số chặn vào $w$ bằng cách thêm một đặc trưng luôn bằng 1: siêu phẳng trong không gian mở rộng khi đó luôn đi qua gốc.
+Cách làm đó quên độ lệch $b$. Phía của $x$ được quyết định bởi dấu của $a^T x - b$, không phải dấu của $a^T x$. Cách làm chỉ đúng khi $b = 0$, tức siêu phẳng đi qua gốc. Trong học máy, lỗi tương tự là quên hệ số chặn của bộ phân loại tuyến tính. Đó cũng là lý do người ta hay gộp hệ số chặn vào $w$ bằng cách thêm một đặc trưng luôn bằng 1: Siêu phẳng trong không gian mở rộng khi đó luôn đi qua gốc.
 
 </details>
 

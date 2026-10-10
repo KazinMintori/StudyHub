@@ -1,7 +1,7 @@
 <!-- File: docs/co-so-toan-ai/bai-02-tap-loi.md -->
 ---
 title: "Bài 02 · Tập lồi: Hình học của những lựa chọn"
-description: "Ôn tập chuyên đề: tập affine/lồi/nón, các tập lồi kinh điển, phép bảo toàn tính lồi, nón chính quy, siêu phẳng phân tách/tựa, nón đối ngẫu và Pareto."
+description: "Ôn tập chuyên đề: Tập affine/lồi/nón, các tập lồi kinh điển, phép bảo toàn tính lồi, nón chính quy, siêu phẳng phân tách/tựa, nón đối ngẫu và Pareto."
 ---
 
 # Bài 02 · Tập lồi: Hình học của những lựa chọn
@@ -18,9 +18,9 @@ Xét miền $C=\{(x_1,x_2): x_1^2+x_2^2\le 2.25\}$ — một hình tròn bán k�
 Đoạn thẳng nối hai điểm bất kỳ *trong hình tròn* có luôn nằm trong hình tròn không? Còn đoạn nối hai trong 9 điểm nguyên đó thì sao?
 :::
 
-Đáp án: **hình tròn là lồi** (đoạn nối luôn ở trong), nhưng **tập 9 điểm nguyên thì không** — ví dụ đoạn nối $(1,0)$ và $(0,1)$ đi qua điểm $(0.5,0.5)$, một điểm **không** nằm trong tập 9 điểm rời rạc đó.
+Đáp án: **Hình tròn là lồi** (đoạn nối luôn ở trong), nhưng **tập 9 điểm nguyên thì không** — ví dụ đoạn nối $(1,0)$ và $(0,1)$ đi qua điểm $(0.5,0.5)$, một điểm **không** nằm trong tập 9 điểm rời rạc đó.
 
-::: info Bản chất: tập lồi sinh ra để giải quyết vấn đề gì?
+::: info Bản chất: Tập lồi sinh ra để giải quyết vấn đề gì?
 Trong tối ưu, **miền khả thi lồi** là điều kiện để "trộn hai phương án hợp lệ luôn cho ra một phương án hợp lệ khác" — đây chính là điều kiện để các thuật toán tối ưu (gradient descent, LP solver...) có thể *di chuyển an toàn* bên trong miền mà không "rơi ra ngoài". Bài này xây dựng một bộ từ vựng hình học đầy đủ để nhận diện, xây dựng và so sánh các tập lồi — nền tảng bắt buộc trước khi học **hàm lồi** và **đối ngẫu Lagrange** (Bài 03).
 :::
 
@@ -67,17 +67,17 @@ $$x(\theta)=\theta p+(1-\theta)q$$
 | $\theta\in[0,1]$ | **Chỉ đoạn thẳng** từ $q$ ($\theta{=}0$) đến $p$ ($\theta{=}1$) |
 
 ::: warning Bẫy thi cử — "tổng trọng số bằng 1" chưa đủ để nằm giữa hai điểm
-Với $p=(1,1), q=(4,2)$: tại $\theta=1.5$ ta được điểm $(-0.5,0.5)$ — **tổng trọng số vẫn bằng 1** ($1.5+(-0.5)=1$) nhưng điểm này nằm **ngoài** đoạn $pq$, vì $\theta\notin[0,1]$. Sự khác biệt giữa **affine** và **lồi** nằm đúng ở điều kiện *không âm* của trọng số, không phải tổng bằng 1.
+Với $p=(1,1), q=(4,2)$: Tại $\theta=1.5$ ta được điểm $(-0.5,0.5)$ — **tổng trọng số vẫn bằng 1** ($1.5+(-0.5)=1$) nhưng điểm này nằm **ngoài** đoạn $pq$, vì $\theta\notin[0,1]$. Sự khác biệt giữa **affine** và **lồi** nằm đúng ở điều kiện *không âm* của trọng số, không phải tổng bằng 1.
 :::
 
 ### 1.1 Tập affine — giữ cả đường thẳng
 
 $$C \text{ affine} \iff p,q\in C,\ \theta\in\mathbb R \implies \theta p+(1-\theta)q\in C$$
 
-**Ví dụ quan trọng nhất:** $C=\{x:Ax=b\}$. Nếu $x_0$ là một nghiệm của $Ax=b$ thì $C=x_0+\ker A$ — một **không gian con được tịnh tiến**. Chú ý: tập affine *không nhất thiết* đi qua gốc (vd. $x_1+2x_2=4$ không chứa $0$).
+**Ví dụ quan trọng nhất:** $C=\{x:Ax=b\}$. Nếu $x_0$ là một nghiệm của $Ax=b$ thì $C=x_0+\ker A$ — một **không gian con được tịnh tiến**. Chú ý: Tập affine *không nhất thiết* đi qua gốc (vd. $x_1+2x_2=4$ không chứa $0$).
 
 ::: tip Quan hệ bao trùm — học thuộc chiều mũi tên
-**Mọi tập affine đều lồi.** Chiều ngược lại **sai**: một đoạn thẳng là tập lồi nhưng không phải tập affine (không chứa cả đường thẳng).
+**Mọi tập affine đều lồi.** Chiều ngược lại **sai**: Một đoạn thẳng là tập lồi nhưng không phải tập affine (không chứa cả đường thẳng).
 :::
 
 ### 1.2 Tập lồi — không bỏ rơi đoạn nối
@@ -91,7 +91,7 @@ Chỉ cần tìm **một cặp điểm** trong tập và **một trọng số $\
 **Ví dụ AI:** $x_1,x_2$ là số GPU-giờ cấp cho hai tác vụ, tài nguyên chia nhỏ được: $C=\{x: x_1,x_2\ge0,\ x_1+x_2\le10\}$. Hai phương án hợp lệ $p=(8,2)$, $q=(2,8)$; trộn với $\theta=\tfrac14$: $\tfrac14 p+\tfrac34 q=(3.5,6.5)\in C$.
 
 ::: danger Bẫy suy luận ngược — "trộn được" không có nghĩa "chất lượng cũng được trộn"
-Lồi chỉ nói rằng **trộn hai lựa chọn khả thi vẫn khả thi**. Nó **không** tự động suy ra rằng chất lượng (accuracy, loss...) của hai mô hình AI khi "trộn tuyến tính" (vd. trộn trọng số hai mạng — *model soup*) cũng được nội suy tuyến tính. Đây là hai khái niệm hoàn toàn độc lập: một cái nói về **tập** (miền tham số hợp lệ), một cái nói về **hàm** (chất lượng mô hình) trên tập đó.
+Lồi chỉ nói rằng **trộn hai lựa chọn khả thi vẫn khả thi**. Nó **không** tự động suy ra rằng chất lượng (accuracy, loss...) của hai mô hình AI khi "trộn tuyến tính" (vd. trộn trọng số hai mạng — *model soup*) cũng được nội suy tuyến tính. Đây là hai khái niệm hoàn toàn độc lập: Một cái nói về **tập** (miền tham số hợp lệ), một cái nói về **hàm** (chất lượng mô hình) trên tập đó.
 :::
 
 **Hai phản ví dụ kinh điển:**
@@ -102,7 +102,7 @@ Lồi chỉ nói rằng **trộn hai lựa chọn khả thi vẫn khả thi**. N
 | Quyết định rời rạc $D=\{(1,0),(0,1)\}$ | $\tfrac12(1,0)+\tfrac12(0,1)=(\tfrac12,\tfrac12)\notin D$ |
 
 ::: warning Chỉ cần đổi "=" thành "≤", hoặc bỏ điều kiện nguyên, hình học đổi hẳn
-$\{x:x_1^2+x_2^2\le1\}$ (hình tròn **đặc**) là lồi, nhưng $\{x:x_1^2+x_2^2=1\}$ (chỉ đường **biên**) thì không. Đây là bẫy trắc nghiệm cực kỳ phổ biến: đọc lướt qua dấu "=" và "≤" có thể đổi ngược đáp án.
+$\{x:x_1^2+x_2^2\le1\}$ (hình tròn **đặc**) là lồi, nhưng $\{x:x_1^2+x_2^2=1\}$ (chỉ đường **biên**) thì không. Đây là bẫy trắc nghiệm cực kỳ phổ biến: Đọc lướt qua dấu "=" và "≤" có thể đổi ngược đáp án.
 :::
 
 ### 1.3 Tổ hợp lồi và Bao lồi (convex hull)
@@ -113,14 +113,14 @@ là một **tổ hợp lồi**. Bằng quy nạp từ định nghĩa 2 điểm, 
 
 $$\operatorname{conv} S = \left\{\sum_{i=1}^k\theta_ix_i : x_i\in S,\ \theta_i\ge0,\ \sum_i\theta_i=1,\ k<\infty\right\}$$
 
-**Hai cách hiểu tương đương:** (1) tập tất cả tổ hợp lồi của các điểm thuộc $S$; (2) **tập lồi nhỏ nhất chứa $S$**. Trực giác: căng một sợi dây thun bao quanh các điểm rời rạc — phần được bao kín (kể cả bên trong, không chỉ đường viền) chính là $\operatorname{conv}S$.
+**Hai cách hiểu tương đương:** (1) tập tất cả tổ hợp lồi của các điểm thuộc $S$; (2) **tập lồi nhỏ nhất chứa $S$**. Trực giác: Căng một sợi dây thun bao quanh các điểm rời rạc — phần được bao kín (kể cả bên trong, không chỉ đường viền) chính là $\operatorname{conv}S$.
 
 #### Simplex — bao lồi đặc biệt quan trọng nhất cho AI
 
 $$\Delta_3=\{p\in\mathbb R^3: p_i\ge0,\ p_1+p_2+p_3=1\}=\operatorname{conv}\{e_1,e_2,e_3\}$$
 
 ::: info Toán học này dùng ở đâu trong AI? (kết nối trực tiếp, cực kỳ quan trọng)
-**Simplex xác suất chính là không gian đầu ra của hàm `softmax`** trong mọi bài toán phân loại: mỗi vector xác suất $(p_1,\dots,p_C)$ với $p_i\ge0,\sum p_i=1$ là **một điểm trong simplex $\Delta_C$**. Tương tự, **trọng số attention** trong Transformer ($\alpha_1,\dots,\alpha_n\ge0,\sum\alpha_i=1$) cũng là một điểm trong simplex — mỗi hàng của ma trận attention sau `softmax` là một tổ hợp lồi!
+**Simplex xác suất chính là không gian đầu ra của hàm `softmax`** trong mọi bài toán phân loại: Mỗi vector xác suất $(p_1,\dots,p_C)$ với $p_i\ge0,\sum p_i=1$ là **một điểm trong simplex $\Delta_C$**. Tương tự, **trọng số attention** trong Transformer ($\alpha_1,\dots,\alpha_n\ge0,\sum\alpha_i=1$) cũng là một điểm trong simplex — mỗi hàng của ma trận attention sau `softmax` là một tổ hợp lồi!
 :::
 
 ### 1.4 Nón lồi — cho phép thay đổi cả quy mô
@@ -159,7 +159,7 @@ $$H=\{x\in\mathbb R^n: a^Tx=b\},\quad a\ne0$$
 
 Nếu $x,x_0\in H$ thì $a^T(x-x_0)=0$ — nghĩa là **$a$ vuông góc với mọi hướng nằm trong $H$**: $a$ chính là **vectơ pháp tuyến**. Trong $\mathbb R^2$, siêu phẳng là đường thẳng; trong $\mathbb R^3$, là mặt phẳng — và **siêu phẳng luôn vừa affine vừa lồi**.
 
-Nửa không gian $C=\{x:a^Tx\le b\}$ là **một bất đẳng thức affine duy nhất** — và nó tạo ra một tập lồi ngay lập tức: nếu $a^Tp,a^Tq\le b$ thì $a^T(\theta p+(1-\theta)q)\le b$.
+Nửa không gian $C=\{x:a^Tx\le b\}$ là **một bất đẳng thức affine duy nhất** — và nó tạo ra một tập lồi ngay lập tức: Nếu $a^Tp,a^Tq\le b$ thì $a^T(\theta p+(1-\theta)q)\le b$.
 
 ::: info Toán học này dùng ở đâu trong AI? (kết nối trực tiếp)
 $a^Tx=b$ chính xác là **ranh giới quyết định (decision boundary)** của mọi bộ phân loại tuyến tính: **Perceptron, Logistic Regression, SVM tuyến tính**. Nửa không gian $a^Tx\le b$ là "vùng lớp âm", $a^Tx>b$ là "vùng lớp dương" — toàn bộ lý thuyết phân loại tuyến tính là lý thuyết về nửa không gian.
@@ -169,7 +169,7 @@ $a^Tx=b$ chính xác là **ranh giới quyết định (decision boundary)** c�
 
 $$P=\{x: Ax\preceq b,\ Cx=d\}$$
 
-($\preceq$: bất đẳng thức theo từng thành phần). Đa diện là **giao của hữu hạn nửa không gian và siêu phẳng** — luôn lồi, nhưng **không nhất thiết bị chặn** (một nửa không gian đơn lẻ cũng là một đa diện suy biến).
+($\preceq$: Bất đẳng thức theo từng thành phần). Đa diện là **giao của hữu hạn nửa không gian và siêu phẳng** — luôn lồi, nhưng **không nhất thiết bị chặn** (một nửa không gian đơn lẻ cũng là một đa diện suy biến).
 
 ::: info Toán học này dùng ở đâu trong AI?
 Đây chính là miền khả thi của mọi bài toán **Quy hoạch tuyến tính** (Bài 01, mục 3.2) và là cơ sở hình học của **nghiệm nằm ở đỉnh** trong thuật toán đơn hình.
@@ -255,7 +255,7 @@ $$K=\{(x,t)\in\mathbb R^n\times\mathbb R:\|x\|\le t\}$$
 Với chuẩn Euclid, $Q=\{(x,t):\|x\|_2\le t\}$ gọi là **nón bậc hai (second-order cone, SOC)**. Ví dụ $(3,4,5)$ nằm trên biên vì $\sqrt{3^2+4^2}=5$.
 
 ::: tip Trực giác
-Ràng buộc $\|x\|\le t$ trong không gian $(x,t)$ là một tập lồi — đây là **kỹ thuật nâng chiều (lifting)** cực kỳ hữu ích trong tối ưu: biến một ràng buộc chuẩn thành một ràng buộc nón bằng cách thêm một biến phụ $t$ (giống hệt "biến phụ epigraph" đã dùng ở Bài 01 cho $\ell_\infty,\ell_1$).
+Ràng buộc $\|x\|\le t$ trong không gian $(x,t)$ là một tập lồi — đây là **kỹ thuật nâng chiều (lifting)** cực kỳ hữu ích trong tối ưu: Biến một ràng buộc chuẩn thành một ràng buộc nón bằng cách thêm một biến phụ $t$ (giống hệt "biến phụ epigraph" đã dùng ở Bài 01 cho $\ell_\infty,\ell_1$).
 :::
 
 ### 2.6 Nón PSD (Positive Semidefinite) — khi "điểm" là một ma trận
@@ -288,7 +288,7 @@ print(is_psd(X2))   # (False, array([-1., 3.]))
 
 **Với ma trận $2\times2$**, $X=\begin{bmatrix}u&v\\v&w\end{bmatrix}$: $X\succeq0 \iff u\ge0 \text{ và } uw\ge v^2$ — chỉ kiểm tra đường chéo *hoặc* chỉ kiểm tra định thức đều **chưa đủ**, cần đúng cả hai điều kiện.
 
-**Vì sao $S^n_+$ là một nón lồi?** Lấy $X,Y\succeq0$, $\alpha,\beta\ge0$: với mọi $z$, $z^T(\alpha X+\beta Y)z=\alpha z^TXz+\beta z^TYz\ge0$ ⟹ $\alpha X+\beta Y\succeq0$.
+**Vì sao $S^n_+$ là một nón lồi?** Lấy $X,Y\succeq0$, $\alpha,\beta\ge0$: Với mọi $z$, $z^T(\alpha X+\beta Y)z=\alpha z^TXz+\beta z^TYz\ge0$ ⟹ $\alpha X+\beta Y\succeq0$.
 
 ::: info Toán học này dùng ở đâu trong AI? (một trong những kết nối quan trọng bậc nhất môn học)
 - **Ma trận hiệp phương sai** của bất kỳ tập dữ liệu nào **luôn PSD** (theo xây dựng) — đây là điều kiện để phân phối Gauss đa biến "hợp lệ".
@@ -333,7 +333,7 @@ Cho $f(x)=Ax+b$, $S$ lồi. **Ảnh** $f(S)=\{Ax+b:x\in S\}$ luôn lồi — **k
 
 $$\theta f(x_1)+(1-\theta)f(x_2) = f(\theta x_1+(1-\theta)x_2) \in f(S)$$
 
-Các trường hợp quen thuộc: co giãn $f(x)=\alpha x$; tịnh tiến $f(x)=x+b$; chiếu $f(x_1,x_2,x_3)=(x_1,x_2)$; và **ellipsoid** $f(u)=x_c+Au$ trên quả cầu đơn vị (mục 2.3).
+Các trường hợp quen thuộc: Co giãn $f(x)=\alpha x$; tịnh tiến $f(x)=x+b$; chiếu $f(x_1,x_2,x_3)=(x_1,x_2)$; và **ellipsoid** $f(u)=x_c+Au$ trên quả cầu đơn vị (mục 2.3).
 
 Với $C$ lồi, **ảnh ngược** $f^{-1}(C)=\{x:f(x)\in C\}$ cũng lồi — "ảnh ngược" ở đây là **tập mọi đầu vào đưa đến miền đích**, không đòi hỏi $f$ là song ánh (không cần tìm "ma trận nghịch đảo").
 
@@ -343,7 +343,7 @@ $$C=\left\{x:\sum_{i=1}^m x_iA_i\preceq B\right\} = \left\{x: B-\sum_ix_iA_i\suc
 :::
 
 ::: info Nón hyperbolic — một ảnh ngược tinh tế của SOC
-Với $P\succeq0$, đặt $P=R^TR$: $K=\{x:x^TPx\le(c^Tx)^2,\ c^Tx\ge0\}=\{x:\|Rx\|_2\le c^Tx\}$ — đây là ảnh ngược affine của nón bậc hai (SOC) nên lồi. **Bỏ điều kiện $c^Tx\ge0$ sẽ sai**: bất đẳng thức $u^2\le t^2$ (không ràng buộc dấu $t$) chấp nhận cả hai nhánh $t=\pm|u|$, và trung điểm của hai điểm hợp lệ trên hai nhánh khác nhau có thể không còn hợp lệ.
+Với $P\succeq0$, đặt $P=R^TR$: $K=\{x:x^TPx\le(c^Tx)^2,\ c^Tx\ge0\}=\{x:\|Rx\|_2\le c^Tx\}$ — đây là ảnh ngược affine của nón bậc hai (SOC) nên lồi. **Bỏ điều kiện $c^Tx\ge0$ sẽ sai**: Bất đẳng thức $u^2\le t^2$ (không ràng buộc dấu $t$) chấp nhận cả hai nhánh $t=\pm|u|$, và trung điểm của hai điểm hợp lệ trên hai nhánh khác nhau có thể không còn hợp lệ.
 :::
 
 ### 3.3 Phép phối cảnh (perspective) — chia cho một toạ độ dương
@@ -366,7 +366,7 @@ $$f(x)=\frac{Ax+b}{c^Tx+d},\qquad \operatorname{dom}f=\{x:c^Tx+d>0\}$$
 "Mẫu dương" ($c^Tx+d>0$) phải được đảm bảo trong toàn miền đang xét — không áp dụng kết quả này trên một miền tuỳ ý cắt ngang qua nơi mẫu số bằng 0.
 :::
 
-### 3.5 Thực hành: bảng nhận diện nhanh phép bảo toàn
+### 3.5 Thực hành: Bảng nhận diện nhanh phép bảo toàn
 
 | Khi thấy dạng | Hãy nghĩ đến |
 |---|---|
@@ -418,7 +418,7 @@ Với $x=(1,4), y=(2,3)$: $y-x=(1,-1)\notin\mathbb R^2_+$ và $x-y=(-1,1)\notin\
 
 **Thứ tự ma trận** ($K=S^n_+$) dùng lại đúng ký hiệu $\preceq$ nhưng ý nghĩa hoàn toàn khác: $X\preceq Y \iff Y-X\succeq0 \iff z^TXz\le z^TYz\ \forall z$ — **không** có nghĩa từng phần tử $X_{ij}\le Y_{ij}$!
 
-Các quy tắc số học quen thuộc **vẫn đúng**: cộng bất đẳng thức ($x\preceq y, u\preceq v\Rightarrow x+u\preceq y+v$), nhân với số không âm, và phản đối xứng ($x\preceq y$ và $y\preceq x\Rightarrow x=y$, vì $K\cap(-K)=\{0\}$ — cần tính **nhọn**). Nhưng **không suy ra** mọi cặp đều so sánh được.
+Các quy tắc số học quen thuộc **vẫn đúng**: Cộng bất đẳng thức ($x\preceq y, u\preceq v\Rightarrow x+u\preceq y+v$), nhân với số không âm, và phản đối xứng ($x\preceq y$ và $y\preceq x\Rightarrow x=y$, vì $K\cap(-K)=\{0\}$ — cần tính **nhọn**). Nhưng **không suy ra** mọi cặp đều so sánh được.
 
 ### 4.3 Phần tử nhỏ nhất (minimum) vs. Phần tử tối thiểu (minimal) — phân biệt quan trọng nhất mục 4
 
@@ -447,7 +447,7 @@ A, B, C đều **tối thiểu** (không ai trội hơn chúng); D, E bị **tr�
 **Đối lập:** $S_1=\{(u,v):u\ge1,v\ge2\}$ **có** phần tử nhỏ nhất $(1,2)$. Nhưng $S_2=\{(u,v):u,v\ge0,u+v\ge4\}$ thì **mọi điểm** trên đoạn $\{u+v=4,u,v\ge0\}$ đều tối thiểu — không có phần tử nhỏ nhất.
 
 ::: info Toán học này dùng ở đâu trong AI? (ứng dụng thực tế hàng ngày của kỹ sư ML)
-Đây chính xác là bài toán **tối ưu đa mục tiêu (multi-objective optimization)**: chọn kiến trúc mạng cân bằng *độ chính xác*, *độ trễ (latency)*, *kích thước mô hình* trong **Neural Architecture Search**. Tập các mô hình "tối thiểu" (không bị mô hình nào khác trội hơn ở mọi tiêu chí) chính là **biên Pareto (Pareto front)** mà kỹ sư ML lựa chọn mô hình triển khai thực tế — không có một "mô hình nhỏ nhất" tuyệt đối, chỉ có các lựa chọn *đánh đổi (trade-off)*.
+Đây chính xác là bài toán **tối ưu đa mục tiêu (multi-objective optimization)**: Chọn kiến trúc mạng cân bằng *độ chính xác*, *độ trễ (latency)*, *kích thước mô hình* trong **Neural Architecture Search**. Tập các mô hình "tối thiểu" (không bị mô hình nào khác trội hơn ở mọi tiêu chí) chính là **biên Pareto (Pareto front)** mà kỹ sư ML lựa chọn mô hình triển khai thực tế — không có một "mô hình nhỏ nhất" tuyệt đối, chỉ có các lựa chọn *đánh đổi (trade-off)*.
 :::
 
 ---
@@ -468,13 +468,13 @@ flowchart LR
 ```
 
 ::: warning Bẫy thi cử — không được tự ý đổi thành dấu chặt ($<$)
-Xét $C=(-\infty,0)$, $D=[0,+\infty)$ trong $\mathbb R$: chọn $b=0$ thì $x\le0$ trên $C$ và $y\ge0$ trên $D$ đều đúng, nhưng **không tồn tại** ngưỡng $b$ thoả $x<b<y$ với mọi $x\in C,y\in D$ (vì $0\in D$ buộc $b<0$, khi đó vẫn có $x\in C$ với $x>b$). Muốn phân tách **nghiêm ngặt**, cần thêm điều kiện — ví dụ $C$ đóng, lồi, khác rỗng và $D=\{p\}$ với $p\notin C$.
+Xét $C=(-\infty,0)$, $D=[0,+\infty)$ trong $\mathbb R$: Chọn $b=0$ thì $x\le0$ trên $C$ và $y\ge0$ trên $D$ đều đúng, nhưng **không tồn tại** ngưỡng $b$ thoả $x<b<y$ với mọi $x\in C,y\in D$ (vì $0\in D$ buộc $b<0$, khi đó vẫn có $x\in C$ với $x>b$). Muốn phân tách **nghiêm ngặt**, cần thêm điều kiện — ví dụ $C$ đóng, lồi, khác rỗng và $D=\{p\}$ với $p\notin C$.
 :::
 
 ::: info Toán học này dùng ở đâu trong AI? (kết nối lịch sử nổi tiếng nhất của môn học)
 **Lớp âm** $\{(0,0),(1,1)\}$, **lớp dương** $\{(2,2),(3,1)\}$ — tách được bằng đường $x_1+x_2=3$.
 
-**Bài toán XOR** (Minsky & Papert, 1969) — lý do lịch sử dẫn đến "mùa đông AI" đầu tiên: lớp A $=\{(0,0),(1,1)\}$, lớp B $=\{(1,0),(0,1)\}$. Bao lồi của hai lớp **giao nhau** tại đúng điểm $(0.5,0.5)$:
+**Bài toán XOR** (Minsky & Papert, 1969) — lý do lịch sử dẫn đến "mùa đông AI" đầu tiên: Lớp A $=\{(0,0),(1,1)\}$, lớp B $=\{(1,0),(0,1)\}$. Bao lồi của hai lớp **giao nhau** tại đúng điểm $(0.5,0.5)$:
 
 ```python
 import numpy as np
@@ -512,7 +512,7 @@ Một bất đẳng thức **đúng trên toàn miền**, đạt **dấu bằng*
 
 $$K^\* = \{y: y^Tx\ge0\ \ \forall x\in K\}$$
 
-Đọc theo hình học Euclid: với $x,y\ne0$, $y^Tx\ge0$ nghĩa là **góc giữa chúng không quá $90°$**. $K^\*$ là tập hợp mọi **hướng đánh giá** đồng thuận (không âm) với **mọi** hướng của $K$.
+Đọc theo hình học Euclid: Với $x,y\ne0$, $y^Tx\ge0$ nghĩa là **góc giữa chúng không quá $90°$**. $K^\*$ là tập hợp mọi **hướng đánh giá** đồng thuận (không âm) với **mọi** hướng của $K$.
 
 ::: warning Có chữ "mọi" trong định nghĩa
 Một tích vô hướng dương với **một** điểm của $K$ là chưa đủ để kết luận $y\in K^\*$ — phải đúng với **toàn bộ** $K$.
@@ -547,14 +547,14 @@ Ba dòng đầu **tự đối ngẫu** ($K^\*=K$). Cặp $\ell_1$/$\ell_\infty$ 
 
 **Vì sao $S^n_+$ tự đối ngẫu? (chứng minh hai chiều)**
 
-- **Chiều 1** ($Y\succeq0\Rightarrow Y\in(S^n_+)^\*$): phân tích phổ $X=\sum_i\lambda_iu_iu_i^T,\ \lambda_i\ge0$ với $X\succeq0$ bất kỳ. Khi đó $\operatorname{tr}(YX)=\sum_i\lambda_i\operatorname{tr}(Yu_iu_i^T)=\sum_i\lambda_iu_i^TYu_i\ge0$.
-- **Chiều 2** ($Y\in(S^n_+)^\*\Rightarrow Y\succeq0$): với mọi $z$, ma trận $zz^T$ là PSD (hạng một). Do đó $\operatorname{tr}(Yzz^T)=z^TYz\ge0$ — chính là định nghĩa $Y\succeq0$.
+- **Chiều 1** ($Y\succeq0\Rightarrow Y\in(S^n_+)^\*$): Phân tích phổ $X=\sum_i\lambda_iu_iu_i^T,\ \lambda_i\ge0$ với $X\succeq0$ bất kỳ. Khi đó $\operatorname{tr}(YX)=\sum_i\lambda_i\operatorname{tr}(Yu_iu_i^T)=\sum_i\lambda_iu_i^TYu_i\ge0$.
+- **Chiều 2** ($Y\in(S^n_+)^\*\Rightarrow Y\succeq0$): Với mọi $z$, ma trận $zz^T$ là PSD (hạng một). Do đó $\operatorname{tr}(Yzz^T)=z^TYz\ge0$ — chính là định nghĩa $Y\succeq0$.
 
 ::: tip Mẹo chứng minh PSD
 Chỉ cần thử trên các ma trận **hạng một** $zz^T$ là đủ để chứng minh chiều khó của tính tự đối ngẫu — một kỹ thuật rất hay tái sử dụng.
 :::
 
-### 6.3 Đối ngẫu tạo ra bất đẳng thức tổng quát: tối ưu tổng trọng số cho một phần tử tối thiểu
+### 6.3 Đối ngẫu tạo ra bất đẳng thức tổng quát: Tối ưu tổng trọng số cho một phần tử tối thiểu
 
 Nếu $K$ là nón chính quy thì $K^\*$ cũng là nón chính quy. Với $\lambda\in\operatorname{int}K^\*$: $\lambda^Tv>0\ \forall v\in K\setminus\{0\}$ — nghĩa là **trọng số dương nghiêm không bỏ qua bất kỳ tiêu chí nào**.
 
@@ -574,7 +574,7 @@ Nếu $K$ là nón chính quy thì $K^\*$ cũng là nón chính quy. Với $\lam
 Chiều ngược (từ "tối thiểu" suy ra "tồn tại trọng số tối ưu hoá nó") chỉ đảm bảo $\lambda\in K^\*\setminus\{0\}$ — có thể nằm **trên biên**. Tự động nâng cấp thành $\lambda\in\operatorname{int}K^\*$ là một lỗi suy luận thường gặp.
 :::
 
-### 6.4 Ví dụ số: đổi trọng số, đổi cấu hình tối ưu
+### 6.4 Ví dụ số: Đổi trọng số, đổi cấu hình tối ưu
 
 Chuẩn hoá $x=(\text{thời gian}/1\text{s}, \text{bộ nhớ}/1\text{GB})$:
 
@@ -592,7 +592,7 @@ Chuẩn hoá $x=(\text{thời gian}/1\text{s}, \text{bộ nhớ}/1\text{GB})$:
 Mỗi khi bạn viết `total_loss = ce_loss + lambda_reg * reg_loss` hay `total_loss = alpha * task1_loss + beta * task2_loss` (multi-task learning), bạn đang **chọn một trọng số $\lambda$ trong nội nón đối ngẫu $\operatorname{int}(\mathbb R^2_+)$** để tìm **một điểm cụ thể trên biên Pareto** giữa các mục tiêu — không có "một" cách kết hợp đúng tuyệt đối, chỉ có các lựa chọn đánh đổi mà $\lambda$ mã hoá mức độ ưu tiên. Đây chính là cơ sở lý thuyết của **scalarization** trong tối ưu đa mục tiêu.
 :::
 
-### 6.5 Ví dụ gốc: biên sản xuất hiệu quả (Pareto front)
+### 6.5 Ví dụ gốc: Biên sản xuất hiệu quả (Pareto front)
 
 Mỗi phương pháp sản xuất dùng một vectơ tài nguyên $x$ (vd. lao động, nhiên liệu); tập $P$ chứa mọi phương pháp khả thi. Một phương pháp **hiệu quả theo Pareto** nếu không có phương pháp khác dùng **không nhiều hơn** ở mọi tài nguyên và **ít hơn** ở ít nhất một tài nguyên — chính là **phần tử tối thiểu theo $\mathbb R^n_+$**.
 
@@ -643,7 +643,7 @@ Miền khả thi lồi mới đảm bảo *cấu trúc hình học tốt*; còn 
 5. Trong phép phối cảnh, ảnh của trung điểm luôn là trung điểm của hai ảnh.
 
 ::: details Xem lời giải đầy đủ
-**1. SAI.** Tập lồi chỉ đảm bảo chứa **tổ hợp lồi** ($\theta_i\ge0,\sum\theta_i=1$), không phải tổ hợp affine ($\theta_i$ tuỳ ý miễn tổng $=1$). Phản ví dụ: đoạn thẳng $[0,1]\subset\mathbb R$ là lồi nhưng tổ hợp affine $2\cdot1+(-1)\cdot0=2\notin[0,1]$.
+**1. SAI.** Tập lồi chỉ đảm bảo chứa **tổ hợp lồi** ($\theta_i\ge0,\sum\theta_i=1$), không phải tổ hợp affine ($\theta_i$ tuỳ ý miễn tổng $=1$). Phản ví dụ: Đoạn thẳng $[0,1]\subset\mathbb R$ là lồi nhưng tổ hợp affine $2\cdot1+(-1)\cdot0=2\notin[0,1]$.
 
 **2. ĐÚNG.** $f^{-1}(C)=\{x:Ax+b\in C\}$ lồi với mọi $A$ (không cần khả nghịch) — chứng minh trực tiếp từ $f(\theta x_1+(1-\theta)x_2)=\theta f(x_1)+(1-\theta)f(x_2)\in C$ khi $f(x_1),f(x_2)\in C$.
 

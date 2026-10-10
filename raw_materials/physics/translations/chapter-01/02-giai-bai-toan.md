@@ -49,7 +49,7 @@ Mô hình lý tưởng hóa được sử dụng xuyên suốt sách. Khi đọc
 
 ### Hình 1.2 — Quả bóng thật và mô hình lý tưởng hóa
 
-![Hình 1.2 nguyên tác: đối chiếu một quả bóng chày đang bay với mô hình chất điểm](img/young-01/hinh-1-2.png)
+![Hình 1.2 nguyên tác: Đối chiếu một quả bóng chày đang bay với mô hình chất điểm](img/young-01/hinh-1-2.png)
 
 Hình đối chiếu hai cách mô tả:
 

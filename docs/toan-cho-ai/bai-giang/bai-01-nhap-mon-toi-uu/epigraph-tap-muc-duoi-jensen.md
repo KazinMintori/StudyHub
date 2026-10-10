@@ -4,10 +4,10 @@ lecture: bai-01-nhap-mon-toi-uu
 topic: epigraph-tap-muc-duoi-jensen
 section: topic
 title: "Epigraph, tập mức dưới và bất đẳng thức Jensen"
-description: "Ba cây cầu nối hàm lồi với tập lồi và xác suất: tập mức dưới lồi và chiều ngược sai, epigraph lồi khi và chỉ khi hàm lồi cùng mẹo viết bài toán ở dạng epigraph, bất đẳng thức Jensen với kỳ vọng, nhiễu, phương sai và cận dưới ELBO, các bất đẳng thức AM–GM và Hölder."
+description: "Ba cây cầu nối hàm lồi với tập lồi và xác suất: Tập mức dưới lồi và chiều ngược sai, epigraph lồi khi và chỉ khi hàm lồi cùng mẹo viết bài toán ở dạng epigraph, bất đẳng thức Jensen với kỳ vọng, nhiễu, phương sai và cận dưới ELBO, các bất đẳng thức AM–GM và Hölder."
 ---
 
-Đến đây ta có hai thế giới song song: tập lồi ở phần II của chương, và hàm lồi ở vài chủ đề vừa qua. Ở đây ta dựng ba cây cầu giữa chúng. Cây cầu thứ nhất đi từ hàm sang tập: các tập mức dưới của một hàm lồi là tập lồi. Cây cầu thứ hai đi theo cả hai chiều: một hàm lồi khi và chỉ khi miền nằm phía trên đồ thị của nó, gọi là epigraph, là một tập lồi. Cây cầu thứ ba nối hàm lồi với xác suất: bất đẳng thức Jensen.
+Đến đây ta có hai thế giới song song: Tập lồi ở phần II của chương, và hàm lồi ở vài chủ đề vừa qua. Ở đây ta dựng ba cây cầu giữa chúng. Cây cầu thứ nhất đi từ hàm sang tập: Các tập mức dưới của một hàm lồi là tập lồi. Cây cầu thứ hai đi theo cả hai chiều: Một hàm lồi khi và chỉ khi miền nằm phía trên đồ thị của nó, gọi là epigraph, là một tập lồi. Cây cầu thứ ba nối hàm lồi với xác suất: Bất đẳng thức Jensen.
 
 Mỗi cây cầu cho ta một cách mới để nhìn và để chứng minh. Ta sẽ dùng epigraph để viết lại bài toán tối ưu, dùng Jensen để thấy vì sao phương sai không âm, vì sao thêm nhiễu không làm giảm một hàm lồi, và vì sao những bất đẳng thức như AM–GM hay Hölder thật ra chỉ là một.
 
@@ -15,7 +15,7 @@ Mỗi cây cầu cho ta một cách mới để nhìn và để chứng minh. Ta
 
 > **Định nghĩa.** Tập mức dưới mức $\alpha$ của hàm $f$ là $C_\alpha = \{x \in \operatorname{dom} f : f(x) \le \alpha\}$.
 
-Nếu $f$ lồi thì mọi tập mức dưới đều lồi, với mọi $\alpha$. Lời chứng minh đi thẳng từ định nghĩa: nếu $x, y \in C_\alpha$ thì
+Nếu $f$ lồi thì mọi tập mức dưới đều lồi, với mọi $\alpha$. Lời chứng minh đi thẳng từ định nghĩa: Nếu $x, y \in C_\alpha$ thì
 
 $$
 f(\theta x + (1-\theta) y) \le \theta f(x) + (1-\theta) f(y) \le \theta\alpha + (1 - \theta)\alpha = \alpha .
@@ -29,15 +29,15 @@ Chiều ngược lại **sai**, và ví dụ của sách rất gọn: $-e^x$ lõ
 
 Trong mô phỏng, vạch xanh trên trục hoành là tập mức dưới. Kéo thanh trượt $\alpha$ với $x^2$ hay $e^x$, vạch xanh luôn là một khoảng liền. Với $0.3x^2 + \sin(1.5x)$, có những mức $\alpha$ mà tập mức dưới tách thành hai khoảng rời nhau, và đó là một bằng chứng không lồi. Với $-e^x$ và $x^3$, tập mức dưới luôn là một khoảng, dù cả hai hàm đều không lồi trên $\mathbb{R}$.
 
-**Dùng tập mức dưới để chứng minh một tập là lồi.** Kết quả vừa chứng minh cho một cách nhận ra tập lồi rất gọn. Muốn chứng minh tập $S$ lồi, ta cố viết nó thành $\{x : f(x) \le \alpha\}$ với $f$ lồi, hoặc $\{x : g(x) \ge \alpha\}$ với $g$ lõm, vì tập mức trên của hàm lõm cũng lồi. Chẳng hạn, ràng buộc $\|w\|_2 \le r$ trong học máy là tập mức dưới của một chuẩn, nên lồi. Ví dụ 3.3 của sách còn tinh tế hơn: tập các vector $x \in \mathbb{R}^n_+$ có trung bình nhân ít nhất bằng $\alpha$ lần trung bình cộng, với $0 \le \alpha \le 1$, là tập mức trên mức 0 của hàm lõm $G(x) - \alpha A(x)$, nên lồi.
+**Dùng tập mức dưới để chứng minh một tập là lồi.** Kết quả vừa chứng minh cho một cách nhận ra tập lồi rất gọn. Muốn chứng minh tập $S$ lồi, ta cố viết nó thành $\{x : f(x) \le \alpha\}$ với $f$ lồi, hoặc $\{x : g(x) \ge \alpha\}$ với $g$ lõm, vì tập mức trên của hàm lõm cũng lồi. Chẳng hạn, ràng buộc $\|w\|_2 \le r$ trong học máy là tập mức dưới của một chuẩn, nên lồi. Ví dụ 3.3 của sách còn tinh tế hơn: Tập các vector $x \in \mathbb{R}^n_+$ có trung bình nhân ít nhất bằng $\alpha$ lần trung bình cộng, với $0 \le \alpha \le 1$, là tập mức trên mức 0 của hàm lõm $G(x) - \alpha A(x)$, nên lồi.
 
-Một hệ quả có ý nghĩa thực tế: nếu hàm mất mát huấn luyện $L(w)$ lồi theo tham số $w$, thì tập các mô hình "đủ tốt" $\{w : L(w) \le \varepsilon\}$ là tập lồi. Lấy trung bình tham số của hai mô hình đủ tốt luôn cho một mô hình đủ tốt. Với mạng nơ-ron, hàm mất mát không lồi, và trung bình tham số của hai mạng huấn luyện độc lập có thể cho một mạng rất tệ.
+Một hệ quả có ý nghĩa thực tế: Nếu hàm mất mát huấn luyện $L(w)$ lồi theo tham số $w$, thì tập các mô hình "đủ tốt" $\{w : L(w) \le \varepsilon\}$ là tập lồi. Lấy trung bình tham số của hai mô hình đủ tốt luôn cho một mô hình đủ tốt. Với mạng nơ-ron, hàm mất mát không lồi, và trung bình tham số của hai mạng huấn luyện độc lập có thể cho một mạng rất tệ.
 
-## 2. Epigraph: hàm lồi chính là tập lồi
+## 2. Epigraph: Hàm lồi chính là tập lồi
 
 > **Định nghĩa.** Epigraph của $f$ là tập $\operatorname{epi} f = \{(x, t) : x \in \operatorname{dom} f,\ f(x) \le t\}$, một tập con của $\mathbb{R}^{n+1}$.
 
-Tiền tố "epi" nghĩa là "phía trên": epigraph gồm đồ thị và mọi điểm nằm phía trên nó (Hình 3.5 trong sách). Kết quả nối hai thế giới là:
+Tiền tố "epi" nghĩa là "phía trên": Epigraph gồm đồ thị và mọi điểm nằm phía trên nó (Hình 3.5 trong sách). Kết quả nối hai thế giới là:
 
 > $f$ lồi khi và chỉ khi $\operatorname{epi} f$ là tập lồi.
 
@@ -49,9 +49,9 @@ $$
 
 nên điểm $(\theta x + (1-\theta)y,\ \theta t + (1-\theta)s)$ cũng thuộc epigraph. Ngược lại, nếu epigraph lồi, lấy hai điểm $(x, f(x))$ và $(y, f(y))$ của nó, tổ hợp lồi của chúng thuộc epigraph, và đó chính là bất đẳng thức dây cung. Tương tự, $f$ lõm khi và chỉ khi **hypograph** $\{(x, t) : t \le f(x)\}$ lồi.
 
-Hãy so sánh với đồ thị: đồ thị của một hàm lồi không affine thì không phải tập lồi. Đồ thị của $x^2$ chứa $(-1, 1)$ và $(1, 1)$ nhưng không chứa trung điểm $(0, 1)$, điểm này nằm hẳn phía trên đồ thị. Phải "đổ đầy" phần phía trên thì mới được một tập lồi.
+Hãy so sánh với đồ thị: Đồ thị của một hàm lồi không affine thì không phải tập lồi. Đồ thị của $x^2$ chứa $(-1, 1)$ và $(1, 1)$ nhưng không chứa trung điểm $(0, 1)$, điểm này nằm hẳn phía trên đồ thị. Phải "đổ đầy" phần phía trên thì mới được một tập lồi.
 
-**Điều kiện bậc nhất nhìn từ epigraph.** Điều kiện $f(y) \ge f(x) + \nabla f(x)^T (y - x)$ có thể viết lại thành: với mọi $(y, t) \in \operatorname{epi} f$,
+**Điều kiện bậc nhất nhìn từ epigraph.** Điều kiện $f(y) \ge f(x) + \nabla f(x)^T (y - x)$ có thể viết lại thành: Với mọi $(y, t) \in \operatorname{epi} f$,
 
 $$
 \begin{bmatrix} \nabla f(x) \\ -1 \end{bmatrix}^T \left( \begin{bmatrix} y \\ t \end{bmatrix} - \begin{bmatrix} x \\ f(x) \end{bmatrix} \right) \le 0 .
@@ -65,9 +65,9 @@ $$
 \frac{x^2}{y} \le t \iff \begin{bmatrix} y & x \\ x & t \end{bmatrix} \succeq 0 .
 $$
 
-Ma trận bên phải phụ thuộc affine vào $(x, y, t)$, và điều kiện nửa xác định dương nghĩa là ma trận nằm trong nón PSD, một tập lồi. Vậy epigraph là ảnh ngược của một tập lồi qua một ánh xạ affine, nên lồi, và hàm lồi. So với việc tính Hessian ở chủ đề điều kiện bậc hai, lời chứng minh này không cần đạo hàm nào. Thử bằng số: với $(x, y) = (1, 2)$, ta có $x^2/y = 0.5$. Ma trận $\begin{bmatrix} 2 & 1 \\ 1 & 0.5 \end{bmatrix}$ nửa xác định dương, còn $\begin{bmatrix} 2 & 1 \\ 1 & 0.4 \end{bmatrix}$ thì không, đúng như $0.5 \le 0.5$ còn $0.5 > 0.4$.
+Ma trận bên phải phụ thuộc affine vào $(x, y, t)$, và điều kiện nửa xác định dương nghĩa là ma trận nằm trong nón PSD, một tập lồi. Vậy epigraph là ảnh ngược của một tập lồi qua một ánh xạ affine, nên lồi, và hàm lồi. So với việc tính Hessian ở chủ đề điều kiện bậc hai, lời chứng minh này không cần đạo hàm nào. Thử bằng số: Với $(x, y) = (1, 2)$, ta có $x^2/y = 0.5$. Ma trận $\begin{bmatrix} 2 & 1 \\ 1 & 0.5 \end{bmatrix}$ nửa xác định dương, còn $\begin{bmatrix} 2 & 1 \\ 1 & 0.4 \end{bmatrix}$ thì không, đúng như $0.5 \le 0.5$ còn $0.5 > 0.4$.
 
-**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Bạn đã thấy mẹo này ở chủ đề về hai lớp bài toán kinh điển: cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Kỹ thuật này được gọi là dạng epigraph chuẩn tắc của bài toán tối ưu.
+**Dạng epigraph của bài toán tối ưu.** Mẹo dùng nhiều nhất của epigraph là trong mô hình hóa: Cực tiểu $f(x)$ tương đương với cực tiểu một biến mới $t$ dưới ràng buộc $f(x) \le t$. Hàm mục tiêu trở thành tuyến tính, và toàn bộ độ phức tạp chuyển vào một ràng buộc lồi. Bạn đã thấy mẹo này ở chủ đề về hai lớp bài toán kinh điển: Cực tiểu sai số lớn nhất $\max_i |r_i|$ được viết lại thành cực tiểu $t$ với $-t \le r_i \le t$, và nhờ vậy trở thành một quy hoạch tuyến tính. Kỹ thuật này được gọi là dạng epigraph chuẩn tắc của bài toán tối ưu.
 
 ## 3. Bất đẳng thức Jensen
 
@@ -83,7 +83,7 @@ $$
 f(\mathbf{E}\,X) \le \mathbf{E}\, f(X)
 $$
 
-với mọi biến ngẫu nhiên $X$ nhận giá trị trong miền xác định của hàm lồi $f$, miễn là các kỳ vọng tồn tại. Hàm lồi của giá trị trung bình không vượt trung bình của hàm. Sách nhận xét rằng bất đẳng thức này **đặc trưng** cho tính lồi: nếu $f$ không lồi, luôn có một biến ngẫu nhiên hai giá trị làm nó sai.
+với mọi biến ngẫu nhiên $X$ nhận giá trị trong miền xác định của hàm lồi $f$, miễn là các kỳ vọng tồn tại. Hàm lồi của giá trị trung bình không vượt trung bình của hàm. Sách nhận xét rằng bất đẳng thức này **đặc trưng** cho tính lồi: Nếu $f$ không lồi, luôn có một biến ngẫu nhiên hai giá trị làm nó sai.
 
 <FunctionLab type="jensen" />
 
@@ -109,7 +109,7 @@ Sai số bình phương trung bình bằng bình phương độ lệch cộng ph
 
 ### Thêm nhiễu không làm giảm hàm lồi
 
-Ghi chú 3.2 của sách rút ra một hệ quả gọn: nếu $z$ là một vector ngẫu nhiên có trung bình 0, thì
+Ghi chú 3.2 của sách rút ra một hệ quả gọn: Nếu $z$ là một vector ngẫu nhiên có trung bình 0, thì
 
 $$
 \mathbf{E}\, f(x + z) \ge f(x).
@@ -125,7 +125,7 @@ $$
 \log p(x) = \log \mathbf{E}_{z \sim q}\left[\frac{p(x, z)}{q(z)}\right] \ \ge\ \mathbf{E}_{z \sim q}\left[\log \frac{p(x, z)}{q(z)}\right].
 $$
 
-Vế phải gọi là **cận dưới bằng chứng** (evidence lower bound, ELBO). Thay vì cực đại $\log p(x)$, các phương pháp suy luận biến phân, trong đó có mô hình tự mã hóa biến phân (VAE), cực đại cận dưới này. Jensen còn cho biết khi nào cận chặt: khi biến ngẫu nhiên $p(x, z)/q(z)$ là hằng số, tức $q(z)$ đúng bằng phân phối hậu nghiệm $p(z \mid x)$.
+Vế phải gọi là **cận dưới bằng chứng** (evidence lower bound, ELBO). Thay vì cực đại $\log p(x)$, các phương pháp suy luận biến phân, trong đó có mô hình tự mã hóa biến phân (VAE), cực đại cận dưới này. Jensen còn cho biết khi nào cận chặt: Khi biến ngẫu nhiên $p(x, z)/q(z)$ là hằng số, tức $q(z)$ đúng bằng phân phối hậu nghiệm $p(z \mid x)$.
 
 ::: example ELBO trên một mô hình hai trạng thái
 Biến ẩn $z \in \{0, 1\}$ với $p(z) = (0.5, 0.5)$, và $p(x \mid z) = (0.2, 0.6)$. Khi đó $p(x) = 0.4$ và $\log p(x) \approx -0.916$. Phân phối hậu nghiệm là $p(z \mid x) = (0.25, 0.75)$. Với $q = (0.5, 0.5)$, ELBO $\approx -1.060$. Với $q = (0.1, 0.9)$, ELBO $\approx -0.989$. Với $q = (0.25, 0.75)$, ELBO bằng đúng $-0.916$. Mọi giá trị đều không vượt $\log p(x)$, và dấu bằng xảy ra đúng tại hậu nghiệm.
@@ -149,7 +149,7 @@ $$
 \sum_i x_i y_i \le \Big(\sum_i |x_i|^p\Big)^{1/p} \Big(\sum_i |y_i|^q\Big)^{1/q} .
 $$
 
-Lời chứng minh của sách chỉ là AM–GM có trọng số với một lựa chọn khéo: đặt $a = |x_i|^p / \sum_j |x_j|^p$, $b = |y_i|^q / \sum_j |y_j|^q$, $\theta = 1/p$, rồi cộng theo $i$. Vế phải sau khi cộng bằng $1/p + 1/q = 1$, và bất đẳng thức hiện ra. Khi $p = q = 2$, ta được bất đẳng thức Cauchy–Schwarz. Kiểm tra với $x = (1, 2, 3)$, $y = (3, 1, 2)$, $p = 3$, $q = 1.5$: vế trái bằng $11$, vế phải xấp xỉ $3.302 \times 4.335 \approx 14.31$. Với $p = q = 2$, vế phải bằng $\sqrt{14} \cdot \sqrt{14} = 14$.
+Lời chứng minh của sách chỉ là AM–GM có trọng số với một lựa chọn khéo: Đặt $a = |x_i|^p / \sum_j |x_j|^p$, $b = |y_i|^q / \sum_j |y_j|^q$, $\theta = 1/p$, rồi cộng theo $i$. Vế phải sau khi cộng bằng $1/p + 1/q = 1$, và bất đẳng thức hiện ra. Khi $p = q = 2$, ta được bất đẳng thức Cauchy–Schwarz. Kiểm tra với $x = (1, 2, 3)$, $y = (3, 1, 2)$, $p = 3$, $q = 1.5$: Vế trái bằng $11$, vế phải xấp xỉ $3.302 \times 4.335 \approx 14.31$. Với $p = q = 2$, vế phải bằng $\sqrt{14} \cdot \sqrt{14} = 14$.
 
 Bất đẳng thức Hölder là lý do chuẩn $\ell_p$ và chuẩn $\ell_q$ đối ngẫu với nhau khi $1/p + 1/q = 1$, đúng như cặp $\ell_1$ và $\ell_\infty$ ở chủ đề nón đối ngẫu.
 
@@ -175,7 +175,7 @@ Có. Điểm $(x, t)$ nằm trên đồ thị của $\max\{f_1, f_2\}$ khi và c
 
 <details><summary>Xem lời giải thích</summary>
 
-Bất đẳng thức đúng: với $X$ đều trên $\{1, 2, 3, 4\}$, $\mathbf{E}\,e^X \approx 21.20$ trong khi $e^{\mathbf{E}X} \approx 12.18$. Nhưng kết luận "biến động càng có lợi" chỉ đúng nếu điều ta quan tâm là **trung bình** của $e^X$. Nếu điều ta quan tâm là một hàm lõm của của cải, như logarit, thì Jensen đi theo chiều ngược lại và biến động gây thiệt. Bài học tổng quát: Jensen cho biết nhiễu tác động theo chiều nào **tùy vào độ cong** của hàm mà ta lấy trung bình. Với hàm lồi, trung bình được lợi từ nhiễu, với hàm lõm thì bị thiệt.
+Bất đẳng thức đúng: Với $X$ đều trên $\{1, 2, 3, 4\}$, $\mathbf{E}\,e^X \approx 21.20$ trong khi $e^{\mathbf{E}X} \approx 12.18$. Nhưng kết luận "biến động càng có lợi" chỉ đúng nếu điều ta quan tâm là **trung bình** của $e^X$. Nếu điều ta quan tâm là một hàm lõm của của cải, như logarit, thì Jensen đi theo chiều ngược lại và biến động gây thiệt. Bài học tổng quát: Jensen cho biết nhiễu tác động theo chiều nào **tùy vào độ cong** của hàm mà ta lấy trung bình. Với hàm lồi, trung bình được lợi từ nhiễu, với hàm lõm thì bị thiệt.
 
 </details>
 
@@ -210,12 +210,12 @@ Cho $X$ phân phối đều trên $\{1, 2, 3, 4\}$. Tính khoảng cách Jensen 
 :::
 
 ::: solution
-$\mathbf{E}\,X = 2.5$. (a) $7.5 - 6.25 = 1.25$, bằng phương sai. (b) $\mathbf{E}(-\log X) \approx -0.795$ và $-\log 2.5 \approx -0.916$, hiệu xấp xỉ $0.122$. (c) $\mathbf{E}\,e^X \approx 21.20$ và $e^{2.5} \approx 12.18$, hiệu xấp xỉ $9.02$. Khoảng cách của $e^x$ lớn nhất vì trên $[1, 4]$ độ cong $f''(x) = e^x$ của nó lớn hơn hẳn: từ $e \approx 2.7$ tới $e^4 \approx 54.6$, trong khi $x^2$ có độ cong không đổi bằng 2 và $-\log x$ có độ cong $1/x^2$ chỉ từ $1/16$ tới 1. Khi phân tán của $X$ nhỏ, khoảng cách Jensen xấp xỉ $\tfrac12 f''(\mathbf{E}\,X)\operatorname{Var}(X)$, nên độ cong càng lớn thì khoảng cách càng lớn.
+$\mathbf{E}\,X = 2.5$. (a) $7.5 - 6.25 = 1.25$, bằng phương sai. (b) $\mathbf{E}(-\log X) \approx -0.795$ và $-\log 2.5 \approx -0.916$, hiệu xấp xỉ $0.122$. (c) $\mathbf{E}\,e^X \approx 21.20$ và $e^{2.5} \approx 12.18$, hiệu xấp xỉ $9.02$. Khoảng cách của $e^x$ lớn nhất vì trên $[1, 4]$ độ cong $f''(x) = e^x$ của nó lớn hơn hẳn: Từ $e \approx 2.7$ tới $e^4 \approx 54.6$, trong khi $x^2$ có độ cong không đổi bằng 2 và $-\log x$ có độ cong $1/x^2$ chỉ từ $1/16$ tới 1. Khi phân tán của $X$ nhỏ, khoảng cách Jensen xấp xỉ $\tfrac12 f''(\mathbf{E}\,X)\operatorname{Var}(X)$, nên độ cong càng lớn thì khoảng cách càng lớn.
 :::
 
 ## Tóm tắt
 
-Tập mức dưới của hàm lồi luôn lồi, nhưng chiều ngược lại sai: hàm có mọi tập mức dưới lồi chỉ là tựa lồi. Viết một tập thành tập mức dưới của một hàm lồi là cách nhanh để chứng minh nó lồi. Epigraph nối hai thế giới theo cả hai chiều: $f$ lồi khi và chỉ khi $\operatorname{epi} f$ lồi. Từ đó, tiếp tuyến là siêu phẳng tựa của epigraph, các hàm như $x^2/y$ được chứng minh lồi bằng phần bù Schur, và mọi bài toán tối ưu có thể viết ở dạng epigraph với hàm mục tiêu tuyến tính.
+Tập mức dưới của hàm lồi luôn lồi, nhưng chiều ngược lại sai: Hàm có mọi tập mức dưới lồi chỉ là tựa lồi. Viết một tập thành tập mức dưới của một hàm lồi là cách nhanh để chứng minh nó lồi. Epigraph nối hai thế giới theo cả hai chiều: $f$ lồi khi và chỉ khi $\operatorname{epi} f$ lồi. Từ đó, tiếp tuyến là siêu phẳng tựa của epigraph, các hàm như $x^2/y$ được chứng minh lồi bằng phần bù Schur, và mọi bài toán tối ưu có thể viết ở dạng epigraph với hàm mục tiêu tuyến tính.
 
 Bất đẳng thức Jensen $f(\mathbf{E}X) \le \mathbf{E}f(X)$ là dạng xác suất của tính lồi. Nó giải thích vì sao phương sai không âm, vì sao sai số bình phương tách thành độ lệch và phương sai, vì sao nhiễu trung bình 0 không làm giảm một hàm lồi, và vì sao ELBO là một cận dưới. AM–GM và Hölder cũng chỉ là Jensen cho hàm $-\log$.
 

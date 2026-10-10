@@ -15,7 +15,7 @@ Nới lỏng mở rộng miền khả thi hoặc bỏ bớt điều kiện để
 
 **Chiều của cận phụ thuộc min hay max.** Nếu $C\subseteq\widetilde C$, thì với bài min, $\inf_{x\in\widetilde C}f(x)\le\inf_{x\in C}f(x)$. Với bài max, chiều đảo lại. Đây là quan hệ tập hợp, không cần hai bài đều lồi.
 
-Nới lỏng thường đi cùng một phép thu hồi nghiệm: làm tròn, chiếu hoặc một quy tắc gần đúng khác. Giá trị nới lỏng cho cận. Giá trị của ứng viên khả thi cho cận phía còn lại. Chỉ khi hai cận gặp nhau mới có chứng nhận tối ưu. Nguồn: Convex Optimization, §4.1 và các ví dụ về nới lỏng trong §5.1.2.
+Nới lỏng thường đi cùng một phép thu hồi nghiệm: Làm tròn, chiếu hoặc một quy tắc gần đúng khác. Giá trị nới lỏng cho cận. Giá trị của ứng viên khả thi cho cận phía còn lại. Chỉ khi hai cận gặp nhau mới có chứng nhận tối ưu. Nguồn: Convex Optimization, §4.1 và các ví dụ về nới lỏng trong §5.1.2.
 
 ## Ví dụ
 

@@ -8,7 +8,7 @@ Thư mục lưu trữ danh mục tài liệu tham khảo, giáo trình chuẩn m
 
 1. **Introduction to Algorithms (4th Edition - CLRS)** — *Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein* (MIT Press)
    - **Trang nhà xuất bản & tài nguyên:** [MIT Press CLRS 4e](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
-   - **Nội dung:** Giáo trình "kinh thánh" của ngành Khoa học Máy tính: phân tích tiệm cận (Big-O, Master Theorem), thuật toán chia để trị, sắp xếp (MergeSort, QuickSort, HeapSort), cấu trúc dữ liệu cây (BST, Red-Black Trees), quy hoạch động, thuật toán tham lam và đồ thị (BFS, DFS, Dijkstra, Bellman-Ford, Kruskal, Prim).
+   - **Nội dung:** Giáo trình "kinh thánh" của ngành Khoa học Máy tính: Phân tích tiệm cận (Big-O, Master Theorem), thuật toán chia để trị, sắp xếp (MergeSort, QuickSort, HeapSort), cấu trúc dữ liệu cây (BST, Red-Black Trees), quy hoạch động, thuật toán tham lam và đồ thị (BFS, DFS, Dijkstra, Bellman-Ford, Kruskal, Prim).
 
 2. **Algorithms (4th Edition)** — *Robert Sedgewick & Kevin Wayne* (Addison-Wesley / Princeton University)
    - **Trang tài nguyên khóa học trực tuyến chính thức:** [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)

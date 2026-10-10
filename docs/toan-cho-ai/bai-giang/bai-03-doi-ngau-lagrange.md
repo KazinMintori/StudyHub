@@ -126,7 +126,7 @@ Như vậy, ta có $p^* = d^* = 1$. Cận dưới đối ngẫu đã chạm đú
 
 Một trong những tính chất toán học đẹp đẽ nhất của lý thuyết đối ngẫu là: **Hàm đối ngẫu $g(\lambda, \nu)$ luôn là hàm lõm (concave), bất kể bài toán gốc có lồi hay không**.
 
-Để chứng minh điều này, hãy nhìn vào dạng của Lagrangian: với mỗi điểm $x$ cố định, biểu thức
+Để chứng minh điều này, hãy nhìn vào dạng của Lagrangian: Với mỗi điểm $x$ cố định, biểu thức
 $$
 (\lambda, \nu) \mapsto L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x)
 $$
@@ -176,7 +176,7 @@ Bài toán lồi có tự động bảo đảm đối ngẫu mạnh hay không? 
 
 Một điểm $\bar x$ thỏa mãn $f_i(\bar x) < 0$ được gọi là một **điểm khả thi ngặt (strictly feasible point)**. Trong ví dụ một chiều ở mục 2, bài toán có $f_1(x) = x - 1 \le 0$. Điểm $\bar x = 0$ cho $f_1(0) = -1 < 0$, do đó điều kiện Slater được thỏa mãn lập tức, giải thích vì sao ta thu được $p^* = d^* = 1$.
 
-Nếu tất cả các ràng buộc bất đẳng thức đều là hàm affine ($f_i(x) = c_i^T x - d_i$), điều kiện Slater được nới lỏng: ta chỉ cần bài toán khả thi ($f_i(x) \le 0$) mà không cần bất đẳng thức ngặt $< 0$. Đây là lý do vì sao trong Quy hoạch tuyến tính (LP), đối ngẫu mạnh luôn được bảo đảm khi bài toán có miền khả thi khác rỗng và bị chặn.
+Nếu tất cả các ràng buộc bất đẳng thức đều là hàm affine ($f_i(x) = c_i^T x - d_i$), điều kiện Slater được nới lỏng: Ta chỉ cần bài toán khả thi ($f_i(x) \le 0$) mà không cần bất đẳng thức ngặt $< 0$. Đây là lý do vì sao trong Quy hoạch tuyến tính (LP), đối ngẫu mạnh luôn được bảo đảm khi bài toán có miền khả thi khác rỗng và bị chặn.
 
 ---
 
@@ -193,8 +193,8 @@ Giả sử các hàm $f_0, f_1, \ldots, f_m$ và $h_1, \ldots, h_p$ đều khả
 
 ### Ý nghĩa cốt tử của Điều kiện bù trừ (Complementary Slackness)
 Đẳng thức $\lambda_i^* f_i(x^*) = 0$ là trái tim của tối ưu hóa có ràng buộc. Nó dẫn tới hai kịch bản loại trừ lẫn nhau:
-- Nếu $f_i(x^*) < 0$ (ràng buộc không chặt, điểm tối ưu nằm an toàn bên trong miền): nhân tử bắt buộc phải bằng 0 ($\lambda_i^* = 0$). Nghĩa là ràng buộc này không hề cản trở mục tiêu tối ưu, nới lỏng nó thêm cũng không mang lại lợi ích gì.
-- Nếu $\lambda_i^* > 0$ (nhân tử dương ngặt): ràng buộc bắt buộc phải chặt ($f_i(x^*) = 0$). Điểm tối ưu đang bị "ép sát" vào đường biên bởi ràng buộc này.
+- Nếu $f_i(x^*) < 0$ (ràng buộc không chặt, điểm tối ưu nằm an toàn bên trong miền): Nhân tử bắt buộc phải bằng 0 ($\lambda_i^* = 0$). Nghĩa là ràng buộc này không hề cản trở mục tiêu tối ưu, nới lỏng nó thêm cũng không mang lại lợi ích gì.
+- Nếu $\lambda_i^* > 0$ (nhân tử dương ngặt): Ràng buộc bắt buộc phải chặt ($f_i(x^*) = 0$). Điểm tối ưu đang bị "ép sát" vào đường biên bởi ràng buộc này.
 
 > Trong thuật toán máy vector hỗ trợ (Support Vector Machines - SVM) của AI, điều kiện bù trừ giải thích trọn vẹn vì sao mô hình chỉ phụ thuộc vào một số ít điểm dữ liệu nằm sát biên phân chia (các vector hỗ trợ - Support Vectors có $\lambda_i^* > 0$), trong khi hàng triệu điểm dữ liệu nằm sâu bên trong đều có $\lambda_i^* = 0$ và bị triệt tiêu hoàn toàn khỏi mô hình dự đoán!
 
@@ -287,7 +287,7 @@ $$
 g(\lambda, \nu) \le p^* \le f_0(x).
 $$
 
-Hiệu số $\eta = f_0(x) - g(\lambda, \nu) \ge 0$ được gọi là **khoảng cách đối ngẫu (duality gap)**. Ý nghĩa thực tiễn to lớn của khoảng cách đối ngẫu: nó cung cấp một **tiêu chuẩn dừng thuật toán** chính xác tuyệt đối. Khi một thuật toán tối ưu tạo ra một cặp nghiệm $(x^{(k)}, (\lambda^{(k)}, \nu^{(k)}))$ thỏa mãn $f_0(x^{(k)}) - g(\lambda^{(k)}, \nu^{(k)}) \le \epsilon$, ta biết chắc chắn rằng nghiệm hiện tại chỉ cách nghiệm tối ưu thực tế không quá $\epsilon$, dù không hề biết trước giá trị $p^*$.
+Hiệu số $\eta = f_0(x) - g(\lambda, \nu) \ge 0$ được gọi là **khoảng cách đối ngẫu (duality gap)**. Ý nghĩa thực tiễn to lớn của khoảng cách đối ngẫu: Nó cung cấp một **tiêu chuẩn dừng thuật toán** chính xác tuyệt đối. Khi một thuật toán tối ưu tạo ra một cặp nghiệm $(x^{(k)}, (\lambda^{(k)}, \nu^{(k)}))$ thỏa mãn $f_0(x^{(k)}) - g(\lambda^{(k)}, \nu^{(k)}) \le \epsilon$, ta biết chắc chắn rằng nghiệm hiện tại chỉ cách nghiệm tối ưu thực tế không quá $\epsilon$, dù không hề biết trước giá trị $p^*$.
 
 ### Ý nghĩa kinh tế: Nhân tử Lagrange là Độ nhạy biên (Shadow Price)
 Xét bài toán khi ta nới lỏng ràng buộc từ $f_i(x) \le 0$ thành $f_i(x) \le u_i$. Gọi $p^*(u)$ là giá trị tối ưu của bài toán bị nhiễu theo vector $u$.
@@ -329,11 +329,11 @@ Hãy xác minh hệ điều kiện KKT tại điểm $x = 0$ và $\lambda = 0$. 
 - Bù trừ: $\lambda x = 0 \cdot 0 = 0$ (thỏa mãn).
 - Triệt tiêu gradient: $\nabla L(0, 0) = 2x + \lambda = 2(0) + 0 = 0$ (thỏa mãn).
 
-Tại nghiệm $x = 0$, ràng buộc $x \le 0$ là **chặt** vì $f_1(0) = 0$, tuy nhiên nhân tử Lagrange lại bằng 0 ($\lambda = 0$). Đây là một ví dụ điển hình chứng minh rằng chiều suy luận *"ràng buộc chặt thì nhân tử phải dương"* không phải lúc nào cũng đúng. Lý do: điểm cực tiểu không ràng buộc của hàm số vốn đã rơi đúng vào $x = 0$, do đó ràng buộc ở đây không hề tạo ra lực cản nào lên nghiệm.
+Tại nghiệm $x = 0$, ràng buộc $x \le 0$ là **chặt** vì $f_1(0) = 0$, tuy nhiên nhân tử Lagrange lại bằng 0 ($\lambda = 0$). Đây là một ví dụ điển hình chứng minh rằng chiều suy luận *"ràng buộc chặt thì nhân tử phải dương"* không phải lúc nào cũng đúng. Lý do: Điểm cực tiểu không ràng buộc của hàm số vốn đã rơi đúng vào $x = 0$, do đó ràng buộc ở đây không hề tạo ra lực cản nào lên nghiệm.
 :::
 
 ::: exercise 3. Chứng nhận nghiệm KKT cho bài toán hồi quy có ràng buộc
-Xét bài toán hồi quy ở Bài 02: hàm mất mát $f(w) = 7w^2 - 11w + \frac{9}{2}$ với ràng buộc $w \le \frac{1}{2}$.
+Xét bài toán hồi quy ở Bài 02: Hàm mất mát $f(w) = 7w^2 - 11w + \frac{9}{2}$ với ràng buộc $w \le \frac{1}{2}$.
 Hãy thiết lập điều kiện KKT và tìm nhân tử Lagrange $\lambda^*$ để chứng nhận nghiệm $w^* = \frac{1}{2}$.
 :::
 ::: solution

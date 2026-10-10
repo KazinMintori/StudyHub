@@ -8,7 +8,7 @@ Website ôn tập VitePress cho sinh viên UET. Nội dung bằng tiếng Việt
 - Người dùng dán một đoạn giáo trình và nhờ giảng, hoặc gửi bài làm để sửa → `.agents/skills/textbook-passage-explainer` (hoặc `.claude/skills/textbook-passage-explainer`).
 - Kiểm tra giao diện, responsive, UI/UX của website → `.agents/skills/web-design-reviewer`.
 
-Nguyên tắc chung khi viết nội dung học: đúng giả thiết và điều kiện của nguồn; mở bước khó thay vì khẳng định; mọi con số được tính lại bằng code; không bịa trích dẫn, năm tháng, số liệu hay “lỗi thường gặp”; tiếng Việt chuyên ngành tự nhiên, không khẩu hiệu.
+Nguyên tắc chung khi viết nội dung học: Đúng giả thiết và điều kiện của nguồn; mở bước khó thay vì khẳng định; mọi con số được tính lại bằng code; không bịa trích dẫn, năm tháng, số liệu hay “lỗi thường gặp”; tiếng Việt chuyên ngành tự nhiên, không khẩu hiệu.
 
 ## Lệnh
 

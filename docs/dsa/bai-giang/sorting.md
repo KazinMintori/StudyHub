@@ -132,87 +132,11 @@ void quickSort(vector<int>& arr, int low, int high) {
 
 ## 5. Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài 1: Phân tích tính ổn định (Stability) của thuật toán sắp xếp
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-::: exercise Yêu cầu
-1. Thế nào là một thuật toán sắp xếp ổn định (Stable Sort)? Nêu ý nghĩa thực tiễn khi sắp xếp các bản ghi có nhiều trường dữ liệu (ví dụ: sắp xếp sinh viên theo điểm số, những người bằng điểm nhau phải giữ nguyên thứ tự tên ban đầu).
-2. Tại sao Merge Sort là thuật toán ổn định trong khi Quick Sort kinh điển lại không ổn định? Đưa ra một mảng ví dụ cụ thể minh chứng Quick Sort làm đảo lộn thứ tự tương đối của các phần tử bằng nhau.
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
 :::
-
-::: solution
-#### Lời giải chi tiết
-1. **Định nghĩa tính ổn định:**
-   Một thuật toán sắp xếp được gọi là ổn định nếu nó bảo toàn thứ tự tương đối ban đầu của các phần tử có cùng giá trị khóa. Nghĩa là, nếu $A[i] = A[j]$ với $i < j$ trước khi sắp xếp, thì sau khi sắp xếp, vị trí mới của $A[i]$ vẫn luôn đứng trước vị trí mới của $A[j]$.
-   *Ý nghĩa thực tế:* Giúp thực hiện sắp xếp nhiều tiêu chí (Multi-key sort). Ví dụ danh sách đã được xếp theo thứ tự bảng chữ cái tên; khi ta chạy một thuật toán ổn định để xếp theo điểm GPA, các bạn cùng GPA sẽ tự động giữ nguyên thứ tự bảng chữ cái mà không cần so sánh lại trường tên.
-
-2. **So sánh Merge Sort và Quick Sort:**
-   - **Merge Sort ổn định** vì trong bước trộn (`merge`), khi hai phần tử ở mảng con trái và mảng con phải bằng nhau ($L[i] == R[j]$), thuật toán luôn ưu tiên chọn phần tử từ mảng con trái $L[i]$ vào mảng kết quả trước.
-   - **Quick Sort không ổn định** vì trong bước phân hoạch (`partition`), các phép hoán đổi từ xa (`swap`) có thể đưa một phần tử nhảy vọt qua các phần tử bằng nó.
-   *Ví dụ phản chứng:* Xét mảng các cặp `(giá trị, nhãn)`:
-   $$
-   A = [ (3, \text{a}), (5, \text{x}), (3, \text{b}), (2, \text{y}) ]
-   $$
-   Chọn phần tử cuối $(2, \text{y})$ làm pivot trong phân hoạch Lomuto. Thuật toán duyệt và hoán đổi $(3, \text{a})$ với chính nó không đổi, nhưng cuối cùng hoán đổi pivot $(2, \text{y})$ với phần tử tại chỉ số ranh giới $(5, \text{x})$. Trong các trường hợp hoán đổi từ xa với pivot ở giữa mảng, phần tử $(3, \text{a})$ có thể bị đổi chỗ về phía sau $(3, \text{b})$, làm mất thứ tự ban đầu.
-:::
-
----
-
-### Bài 2: Đếm số cặp nghịch thế bằng Merge Sort cải tiến
-
-::: exercise Yêu cầu
-Cho một mảng số nguyên $A$ gồm $n$ phần tử. Một cặp chỉ số $(i, j)$ được gọi là một cặp nghịch thế nếu:
-$$
-i < j \quad \text{và} \quad A[i] > A[j]
-$$
-1. Viết mã giả hoặc mã C++ đếm số cặp nghịch thế trong thời gian $\mathcal{O}(n \log n)$ bằng cách cải biên bước trộn (`merge`) của Merge Sort.
-2. Giải thích vì sao thuật toán này có thể đếm được số cặp nghịch thế mà không cần so sánh từng cặp một trong $\mathcal{O}(n^2)$.
-:::
-
-::: solution
-#### Lời giải chi tiết
-1. **Mã nguồn C++:**
-```cpp
-long long mergeAndCount(vector<int>& arr, int left, int mid, int right) {
-    vector<int> L(arr.begin() + left, arr.begin() + mid + 1);
-    vector<int> R(arr.begin() + mid + 1, arr.begin() + right + 1);
-
-    int i = 0, j = 0, k = left;
-    long long count = 0;
-
-    while (i < L.size() && j < R.size()) {
-        if (L[i] <= R[j]) {
-            arr[k++] = L[i++];
-        } else {
-            arr[k++] = R[j++];
-            // Tất cả các phần tử còn lại từ L[i] đến cuối L đều lớn hơn R[j]
-            count += (L.size() - i);
-        }
-    }
-    while (i < L.size()) arr[k++] = L[i++];
-    while (j < R.size()) arr[k++] = R[j++];
-    return count;
-}
-
-long long countInversions(vector<int>& arr, int left, int right) {
-    long long count = 0;
-    if (left < right) {
-        int mid = left + (right - left) / 2;
-        count += countInversions(arr, left, mid);
-        count += countInversions(arr, mid + 1, right);
-        count += mergeAndCount(arr, left, mid, right);
-    }
-    return count;
-}
-```
-
-2. **Bản chất thuật toán:**
-   Khi trộn hai mảng con đã được sắp xếp tăng dần $L$ và $R$: nếu phát hiện $L[i] > R[j]$, vì mảng $L$ đã có thứ tự nên toàn bộ các phần tử đứng sau $i$ trong $L$ (tức là $L[i], L[i+1], \dots, L[|L|-1]$) đều lớn hơn $R[j]$.
-   Do đó, chỉ với một phép so sánh, ta đếm được ngay lập tức $(|L| - i)$ cặp nghịch thế cùng lúc mà không cần duyệt từng phần tử.
-   Độ phức tạp tổng thể vẫn tuân theo hệ thức truy hồi của Merge Sort:
-   $$T(n) = 2T(n/2) + \mathcal{O}(n) \implies \mathcal{O}(n \log n)$$
-:::
-
----
 
 ## 6. Nguồn tham khảo & Đọc thêm
 

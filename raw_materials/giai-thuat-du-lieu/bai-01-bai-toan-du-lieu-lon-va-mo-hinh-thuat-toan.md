@@ -12,9 +12,9 @@ description: "Đặc tả bài toán dữ liệu lớn, tìm cặp tài liệu g
 ::: info Bài này giải quyết vấn đề gì?
 Khi dữ liệu lớn hơn bộ nhớ của một máy, nằm rải trên nhiều máy, hoặc đến liên tục không dừng, những thuật toán "học ở năm hai" (sắp xếp mảng, duyệt mọi cặp, nạp hết vào RAM) bắt đầu gãy. Bài 01 không dạy một thuật toán cụ thể, mà dạy **cách đặt bài toán và cách chấm điểm một lời giải**:
 
-- **Đặc tả**: đầu vào là gì, đầu ra chính xác là gì, có cho phép sai số không.
-- **Đánh giá**: lời giải có đúng không, tốn bao nhiêu phép tính, bộ nhớ, khối đĩa, byte qua mạng, độ trễ.
-- **Giới hạn suy luận**: tìm đúng mẫu trong dữ liệu chưa chắc đã đủ căn cứ để kết luận về thế giới thật (nguyên lý Bonferroni).
+- **Đặc tả**: Đầu vào là gì, đầu ra chính xác là gì, có cho phép sai số không.
+- **Đánh giá**: Lời giải có đúng không, tốn bao nhiêu phép tính, bộ nhớ, khối đĩa, byte qua mạng, độ trễ.
+- **Giới hạn suy luận**: Tìm đúng mẫu trong dữ liệu chưa chắc đã đủ căn cứ để kết luận về thế giới thật (nguyên lý Bonferroni).
 
 Toàn bộ học phần (Bài 02–15) là những câu trả lời khác nhau cho các giới hạn được nêu ở đây.
 :::
@@ -23,10 +23,10 @@ Toàn bộ học phần (Bài 02–15) là những câu trả lời khác nhau c
 
 ---
 
-## 1. Dữ liệu lớn: khi nào thì "lớn"?
+## 1. Dữ liệu lớn: Khi nào thì "lớn"?
 
 ::: tip Ẩn dụ: Thư viện quốc gia và chiếc bàn học
-Bạn cần tổng hợp thông tin từ **cả một thư viện quốc gia** (dữ liệu $D$), nhưng **chiếc bàn học** (bộ nhớ chính $M$) chỉ đặt được vài chục cuốn. Bạn không thể "bê cả thư viện lên bàn". Bạn phải chọn: đọc lần lượt từng chồng sách (quét tuần tự), ghi chú lại những gì cần (trạng thái gọn), nhờ bạn bè chia nhau đọc (phân tán), hoặc làm thẻ mục lục để khỏi lật lại (chỉ mục). Mỗi lựa chọn có giá của nó.
+Bạn cần tổng hợp thông tin từ **cả một thư viện quốc gia** (dữ liệu $D$), nhưng **chiếc bàn học** (bộ nhớ chính $M$) chỉ đặt được vài chục cuốn. Bạn không thể "bê cả thư viện lên bàn". Bạn phải chọn: Đọc lần lượt từng chồng sách (quét tuần tự), ghi chú lại những gì cần (trạng thái gọn), nhờ bạn bè chia nhau đọc (phân tán), hoặc làm thẻ mục lục để khỏi lật lại (chỉ mục). Mỗi lựa chọn có giá của nó.
 :::
 
 "Lớn" không phải là một con số cố định. Dữ liệu là **lớn** khi nó vượt **một giới hạn tài nguyên** của cách giải đơn giản:
@@ -69,7 +69,7 @@ $D$ là **dung lượng tệp bản ghi**, $M$ là **bộ nhớ khả dụng**. 
 ## 2. Khung phân tích: Đặc tả → Thuật toán → Đánh giá
 
 ::: tip Ẩn dụ: Hợp đồng xây nhà
-**Đặc tả** là bản hợp đồng: nhà mấy tầng, mấy phòng, chịu được bão cấp mấy. **Thuật toán** là cách đội thợ xây. **Đánh giá** là nghiệm thu: nhà có đúng hợp đồng không (tính đúng), tốn bao nhiêu gạch, bao nhiêu ngày công (chi phí). Bạn không thể nghiệm thu một ngôi nhà nếu chưa có hợp đồng.
+**Đặc tả** là bản hợp đồng: Nhà mấy tầng, mấy phòng, chịu được bão cấp mấy. **Thuật toán** là cách đội thợ xây. **Đánh giá** là nghiệm thu: Nhà có đúng hợp đồng không (tính đúng), tốn bao nhiêu gạch, bao nhiêu ngày công (chi phí). Bạn không thể nghiệm thu một ngôi nhà nếu chưa có hợp đồng.
 :::
 
 ```mermaid
@@ -92,17 +92,17 @@ Ba câu hỏi phải tách bạch:
 
 ---
 
-## 3. Bài toán mẫu: tìm cặp tài liệu gần trùng
+## 3. Bài toán mẫu: Tìm cặp tài liệu gần trùng
 
 ### 3.1. Hiện tượng
 
-Kho web có rất nhiều bản sao "gần giống": trang được sao chép sang máy chủ khác, đổi tên miền, đổi vài liên kết, nhưng nội dung chính giữ nguyên. So sánh **bằng nhau từng ký tự** sẽ bỏ sót toàn bộ các cặp này. Ta cần một **độ đo tương đồng** và một **ngưỡng**.
+Kho web có rất nhiều bản sao "gần giống": Trang được sao chép sang máy chủ khác, đổi tên miền, đổi vài liên kết, nhưng nội dung chính giữ nguyên. So sánh **bằng nhau từng ký tự** sẽ bỏ sót toàn bộ các cặp này. Ta cần một **độ đo tương đồng** và một **ngưỡng**.
 
 ::: tip Ẩn dụ: Hai danh sách bài hát yêu thích
 Hai người bạn mỗi người có một danh sách bài hát yêu thích. Để đo "gu nhạc giống nhau đến đâu", ta đếm **số bài cả hai cùng thích** chia cho **số bài có trong ít nhất một danh sách**. Một bài người A nghe 100 lần vẫn chỉ tính là một bài — ta so **tập hợp**, không so **số lần**.
 :::
 
-### 3.2. Trực giác hình học: biểu đồ Venn
+### 3.2. Trực giác hình học: Biểu đồ Venn
 
 Biểu diễn mỗi tài liệu bằng **tập các đoạn ký tự liên tiếp cùng độ dài** (shingle — học kỹ ở Bài 05). Hai tập $S, T$ chồng lên nhau như hai hình tròn Venn:
 
@@ -138,7 +138,7 @@ Với ngưỡng $\tau$, cặp này được chọn **khi và chỉ khi** $\tau \
 | $C_i$ | Tập shingle (đoạn ký tự) của tài liệu thứ $i$ |
 | $\tau$ | Ngưỡng tương đồng, do người dùng cung cấp |
 | $J(S,T)$ | Độ tương đồng Jaccard của hai tập |
-| $R$ | Tập kết quả: các cặp chỉ số đạt ngưỡng |
+| $R$ | Tập kết quả: Các cặp chỉ số đạt ngưỡng |
 | $L$ | Kích thước tập lớn nhất, $L = \max_i \lvert C_i \rvert$ |
 | $i < j$ | Loại cặp tự so sánh $(i,i)$ và cặp đảo thứ tự $(j,i)$ |
 
@@ -207,7 +207,7 @@ Bốn tài liệu:
 - $C_3 = \lbrace a,b,c,d \rbrace$
 - $C_4 = \lbrace x,y \rbrace$
 
-| Bước | Cặp $(i,j)$ | Giao | Hợp | $J$ | $J \ge 0{,}3$? | $R$ sau bước | Bất biến: phần đã xét |
+| Bước | Cặp $(i,j)$ | Giao | Hợp | $J$ | $J \ge 0{,}3$? | $R$ sau bước | Bất biến: Phần đã xét |
 |---|---|---|---|---|---|---|---|
 | 0 | — | — | — | — | — | $\varnothing$ | chưa xét cặp nào |
 | 1 | (1,2) | 3 | 8 | 0,375 | Có | $\lbrace(1,2)\rbrace$ | (1,2) |
@@ -221,7 +221,7 @@ Kết quả cuối: $R = \lbrace (1,2), (1,3) \rbrace$. Tổng số cặp đã x
 
 **Câu hỏi slide:** Nếu vòng trong bắt đầu từ $j = 1$ thì sao? Thuật toán sẽ xét cả $(1,1)$ (tự so sánh, luôn có $J = 1$, bị xuất sai) và cả $(2,1)$ lẫn $(1,2)$ (xuất trùng hai thứ tự). Vi phạm điều kiện $i < j$ của đặc tả.
 
-### 3.8. Tính đúng: chứng minh bằng bất biến vòng lặp
+### 3.8. Tính đúng: Chứng minh bằng bất biến vòng lặp
 
 ::: tip Ẩn dụ: Người kiểm phiếu
 Người kiểm phiếu đọc từng lá phiếu một. Tại **bất kỳ thời điểm nào**, bảng đếm trên tường phản ánh **chính xác** các lá phiếu đã đọc — không thiếu, không thừa. Khi đọc hết thùng phiếu, bảng đếm chính là kết quả bầu cử. Đó là tư tưởng của **bất biến**.
@@ -254,7 +254,7 @@ Nếu đầu ra $R$ vốn đã có cỡ $\Theta(N^2)$ cặp thì riêng việc *
 ## 4. Mười tiêu chí đánh giá một lời giải
 
 ::: tip Ẩn dụ: Chọn phương tiện đi Đà Nẵng
-Máy bay nhanh nhất nhưng đắt; tàu hỏa rẻ hơn nhưng lâu; xe khách rẻ nhất nhưng mệt. Không có "phương tiện tốt nhất" — chỉ có phương tiện tốt nhất **theo tiêu chí bạn đặt ra**. Thuật toán cũng vậy: chỉ so sánh được khi đã nêu **mô hình chi phí** và **yêu cầu đầu ra**.
+Máy bay nhanh nhất nhưng đắt; tàu hỏa rẻ hơn nhưng lâu; xe khách rẻ nhất nhưng mệt. Không có "phương tiện tốt nhất" — chỉ có phương tiện tốt nhất **theo tiêu chí bạn đặt ra**. Thuật toán cũng vậy: Chỉ so sánh được khi đã nêu **mô hình chi phí** và **yêu cầu đầu ra**.
 :::
 
 | Nhóm | Tiêu chí | Đơn vị điển hình | Ví dụ minh họa trong slide |
@@ -264,8 +264,8 @@ Máy bay nhanh nhất nhưng đắt; tàu hỏa rẻ hơn nhưng lâu; xe khách
 | Tài nguyên | Khối lượng tính toán | số phép toán | $O(N^2 L)$ cho gần trùng |
 | Tài nguyên | Bộ nhớ làm việc | số khối, byte | Nối bảng 100 + 400 khối, $M = 20$ khối |
 | Tài nguyên | Đọc ghi, số lượt quét | số khối chuyển | Sắp xếp ngoài, $2F$ cho đọc + ghi |
-| Tài nguyên | Dữ liệu truyền qua mạng | byte | Đếm từ: gửi số đếm thay vì văn bản |
-| Tài nguyên | Dung lượng lưu trữ | byte | Nén văn bản: mã + thông tin giải mã |
+| Tài nguyên | Dữ liệu truyền qua mạng | byte | Đếm từ: Gửi số đếm thay vì văn bản |
+| Tài nguyên | Dung lượng lưu trữ | byte | Nén văn bản: Mã + thông tin giải mã |
 | Vận hành | Độ trễ truy vấn | giây | Truy vấn véc-tơ |
 | Vận hành | Chi phí xây dựng | giây, bộ nhớ đỉnh | Xây chỉ mục véc-tơ |
 | Vận hành | Chi phí cập nhật | thao tác mỗi cập nhật | Chỉ mục theo lương phải sửa khi lương đổi |
@@ -274,18 +274,18 @@ Máy bay nhanh nhất nhưng đắt; tàu hỏa rẻ hơn nhưng lâu; xe khách
 Không có phép tính "5 giây + 20 khối + 80 byte". Mỗi tiêu chí đo một thứ riêng. Báo cáo phải nêu rõ đang so sánh theo tiêu chí nào.
 :::
 
-### 4.1. Đọc ghi: một lượt quét không phải là $F$
+### 4.1. Đọc ghi: Một lượt quét không phải là $F$
 
 Gọi $F$ là số khối của tệp. Đọc hết tệp tốn $F$ lần chuyển khối. Nếu một lượt **vừa đọc vừa ghi** ra $F$ khối mới thì tốn $2F$, không phải $F$. Sắp xếp ngoài có nhiều lượt trộn, mỗi lượt lại đọc và ghi toàn bộ dữ liệu. **Ít phép so sánh chưa chắc ít khối đọc ghi.**
 
 ### 4.2. Độ trễ khác thông lượng
 
-- **Độ trễ**: thời gian từ khi nhận **một** truy vấn đến khi trả kết quả, gồm cả thời gian chờ trong hàng đợi.
-- **Thông lượng**: số truy vấn hoàn tất trong một đơn vị thời gian.
+- **Độ trễ**: Thời gian từ khi nhận **một** truy vấn đến khi trả kết quả, gồm cả thời gian chờ trong hàng đợi.
+- **Thông lượng**: Số truy vấn hoàn tất trong một đơn vị thời gian.
 
 Hai đại lượng này không đồng nhất.
 
-### 4.3. Chất lượng gần đúng: recall@$k$
+### 4.3. Chất lượng gần đúng: Recall@$k$
 
 Với bài toán tìm $k$ hàng xóm gần nhất, gọi $G$ là tập $k$ hàng xóm thật (chuẩn đúng) và $A$ là tập $k$ kết quả thuật toán trả về:
 
@@ -310,7 +310,7 @@ $3/8$ là **Jaccard** của hai tập shingle. $3/5$ là **recall@5** của truy
 
 ### 4.4. Lọc ứng viên và nguy cơ bỏ sót
 
-Nhiều thuật toán nhanh chia làm hai giai đoạn: **bộ lọc** chọn ra một số **cặp ứng viên**, rồi **hậu kiểm** tính Jaccard chính xác cho từng ứng viên.
+Nhiều thuật toán nhanh chia làm hai giai đoạn: **Bộ lọc** chọn ra một số **cặp ứng viên**, rồi **hậu kiểm** tính Jaccard chính xác cho từng ứng viên.
 
 ```mermaid
 flowchart LR
@@ -339,7 +339,7 @@ flowchart LR
     B1 --> G5["Bài 12 đến 15<br/>Lưu trữ, chỉ mục<br/>và nối bảng"]
 ```
 
-Đây là **thứ tự học**, không phải chuỗi tiên quyết bắt buộc: nhóm sau không cần toàn bộ nhóm trước.
+Đây là **thứ tự học**, không phải chuỗi tiên quyết bắt buộc: Nhóm sau không cần toàn bộ nhóm trước.
 
 | Mạch | Phương pháp đại diện | Ý tưởng một câu |
 |---|---|---|
@@ -455,12 +455,12 @@ MMDS xấp xỉ $\binom{n}{2} \approx n^2/2$ nên được $\approx 250\,000$. C
 **Lời giải chi tiết:**
 
 - **(a)** $\binom{T}{2}$ tăng từ $\approx T^2/2$ lên $\approx (2T)^2/2$, tức **gấp khoảng 4 lần**; xác suất mỗi phép thử không đổi. $\mathbb{E} \approx 999\,499{,}999 \approx 10^6$.
-- **(b)** $\binom{P}{2}$ gấp khoảng 4 lần (vì $P$ gấp đôi), nhưng $p = q^2/H$ giảm một nửa nên $p^2$ giảm **4 lần**. Hai hiệu ứng triệt tiêu: $\mathbb{E} \approx 249\,749{,}999875$. Lỗi hay gặp: tăng $P$ mà quên tăng $H$, hoặc tưởng $p^2$ chỉ giảm 2 lần.
+- **(b)** $\binom{P}{2}$ gấp khoảng 4 lần (vì $P$ gấp đôi), nhưng $p = q^2/H$ giảm một nửa nên $p^2$ giảm **4 lần**. Hai hiệu ứng triệt tiêu: $\mathbb{E} \approx 249\,749{,}999875$. Lỗi hay gặp: Tăng $P$ mà quên tăng $H$, hoặc tưởng $p^2$ chỉ giảm 2 lần.
 - **(c)** Đổi $\binom{T}{2}$ thành $\binom{T}{3} = 166\,167\,000$ và lũy thừa xác suất thành 3: $\mathbb{E} \approx 0{,}0831$. Kỳ vọng dưới 1 **không** có nghĩa không bao giờ xảy ra trùng, càng không chứng minh danh tính của cặp nào.
 
 ### Bài 1.2.2 — Giỏ hàng trùng nhau
 
-$10^8$ người, mỗi người $100$ lượt mua/năm, mỗi lượt mua đúng $10$ trong $1000$ mặt hàng. Giả thuyết của đề: một cặp cần tìm sẽ mua **cùng một tập 10 mặt hàng** vào một thời điểm trong năm.
+$10^8$ người, mỗi người $100$ lượt mua/năm, mỗi lượt mua đúng $10$ trong $1000$ mặt hàng. Giả thuyết của đề: Một cặp cần tìm sẽ mua **cùng một tập 10 mặt hàng** vào một thời điểm trong năm.
 
 | Bước | Lập luận | Kết quả |
 |---|---|---|
@@ -471,7 +471,7 @@ $10^8$ người, mỗi người $100$ lượt mua/năm, mỗi lượt mua đúng
 
 **Kết luận có điều kiện:** khác hẳn ví dụ khách sạn, nền ngẫu nhiên gần như không tạo trùng, nên phép tìm **không bị ngập** bởi trùng ngẫu nhiên — trong khuôn khổ giả thuyết của đề. Nhưng kỳ vọng nền **không phải** xác suất một cặp là đối tượng cần tìm khi đã quan sát thấy trùng; còn cần mô hình thay thế và tỷ lệ nền.
 
-Lỗi hay gặp: nhân thêm $10!$ cho thứ tự mặt hàng (giỏ là **tập**, không có thứ tự); chỉ so lượt thứ $k$ của người này với lượt thứ $k$ của người kia (phải so **mọi** kết hợp $100 \times 100$).
+Lỗi hay gặp: Nhân thêm $10!$ cho thứ tự mặt hàng (giỏ là **tập**, không có thứ tự); chỉ so lượt thứ $k$ của người này với lượt thứ $k$ của người kia (phải so **mọi** kết hợp $100 \times 100$).
 
 ---
 

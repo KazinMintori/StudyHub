@@ -7,7 +7,7 @@ title: "Điều kiện bậc hai và độ cong"
 description: "Điều kiện Hessian nửa xác định dương, độ cong theo từng hướng và trị riêng, vì sao điều kiện đúng, hàm bậc hai và bình phương tối thiểu với đặc trưng cộng tuyến, hàm x²/y, lồi nghiêm ngặt, lồi mạnh và số điều kiện quyết định tốc độ của phương pháp gradient."
 ---
 
-Điều kiện bậc nhất so sánh hàm với các tiếp tuyến của nó, và để dùng được, ta vẫn phải xét từng cặp điểm $x, y$. Nếu hàm có đạo hàm bậc hai, câu chuyện gọn hơn nhiều. Tính lồi trở thành một phép kiểm tra **tại từng điểm**: tại mỗi $x$, ma trận Hessian phải nửa xác định dương. Đây là công cụ được dùng nhiều nhất khi cần nhận diện một hàm lồi cụ thể.
+Điều kiện bậc nhất so sánh hàm với các tiếp tuyến của nó, và để dùng được, ta vẫn phải xét từng cặp điểm $x, y$. Nếu hàm có đạo hàm bậc hai, câu chuyện gọn hơn nhiều. Tính lồi trở thành một phép kiểm tra **tại từng điểm**: Tại mỗi $x$, ma trận Hessian phải nửa xác định dương. Đây là công cụ được dùng nhiều nhất khi cần nhận diện một hàm lồi cụ thể.
 
 Nhưng Hessian còn cho biết nhiều hơn một câu trả lời có hoặc không. Nó đo độ cong của hàm theo từng hướng, cho biết hàm có dạng cái bát, cái máng hay cái yên ngựa quanh mỗi điểm, và các trị riêng của nó quyết định một thuật toán như phương pháp gradient chạy nhanh hay chậm. Lần lượt từng vai trò ấy sẽ được làm rõ dưới đây.
 
@@ -16,7 +16,7 @@ Nhưng Hessian còn cho biết nhiều hơn một câu trả lời có hoặc kh
 > **Định lý.** Giả sử $f$ khả vi hai lần, nghĩa là $\operatorname{dom} f$ mở và Hessian $\nabla^2 f$ tồn tại tại mọi điểm của nó. Khi đó $f$ lồi khi và chỉ khi $\operatorname{dom} f$ lồi và
 > $$\nabla^2 f(x) \succeq 0 \quad \text{với mọi } x \in \operatorname{dom} f.$$
 
-Với hàm một biến, điều kiện là $f''(x) \ge 0$ trên một khoảng, tức đạo hàm $f'$ không giảm. Điều kiện này không mới: nó là tính đơn điệu của gradient ở chủ đề trước, phát biểu lại qua đạo hàm của đạo hàm. Sách diễn giải điều kiện $\nabla^2 f(x) \succeq 0$ là đồ thị có **độ cong hướng lên** tại $x$. Tương tự, $f$ lõm khi và chỉ khi miền xác định lồi và $\nabla^2 f(x) \preceq 0$ tại mọi điểm.
+Với hàm một biến, điều kiện là $f''(x) \ge 0$ trên một khoảng, tức đạo hàm $f'$ không giảm. Điều kiện này không mới: Nó là tính đơn điệu của gradient ở chủ đề trước, phát biểu lại qua đạo hàm của đạo hàm. Sách diễn giải điều kiện $\nabla^2 f(x) \succeq 0$ là đồ thị có **độ cong hướng lên** tại $x$. Tương tự, $f$ lõm khi và chỉ khi miền xác định lồi và $\nabla^2 f(x) \preceq 0$ tại mọi điểm.
 
 Hai chữ "mọi điểm" và "miền lồi" đều quan trọng. Hàm $1/x^2$ có $f''(x) = 6/x^4 > 0$ tại mọi điểm thuộc miền xác định, nhưng miền xác định gồm hai nửa trục rời nhau, nên hàm không lồi (Ghi chú 3.1). Ở chiều ngược lại, một hàm có Hessian tốt gần như khắp nơi, chỉ hỏng trên một dải hẹp, cũng đủ mất tính lồi, như mô phỏng ở mục 2 sẽ cho thấy.
 
@@ -49,7 +49,7 @@ Với hàm hai biến, dấu của hai trị riêng cho ta bốn hình dạng c�
 
 <HessianMapLab />
 
-Mô phỏng tô đỏ những điểm mà Hessian có trị riêng âm. Với $(x_1^2 - 1)^2 + x_2^2$, Hessian là $\operatorname{diag}(12x_1^2 - 4,\ 2)$, nên vùng đỏ đúng là dải $|x_1| < 1/\sqrt3 \approx 0.577$. Ngoài dải ấy hàm cong lên theo mọi hướng, vậy mà chỉ dải hẹp này thôi đã đủ làm hàm mất tính lồi. Với $0.4(x_1^2 + x_2^2) + \cos(2x_1)$, vùng đỏ gồm dải giữa $|x_1| < 0.685$ và hai mép $|x_1| > 2.457$ của khung nhìn. Hàm $x_1^2 + 3x_1x_2 + x_2^2$ thì đỏ khắp khung, dù cả hai phần tử trên đường chéo của Hessian đều dương: ma trận $\begin{bmatrix} 2 & 3 \\ 3 & 2 \end{bmatrix}$ có trị riêng $5$ và $-1$, và theo hướng $(1, -1)$ đồ thị cong xuống.
+Mô phỏng tô đỏ những điểm mà Hessian có trị riêng âm. Với $(x_1^2 - 1)^2 + x_2^2$, Hessian là $\operatorname{diag}(12x_1^2 - 4,\ 2)$, nên vùng đỏ đúng là dải $|x_1| < 1/\sqrt3 \approx 0.577$. Ngoài dải ấy hàm cong lên theo mọi hướng, vậy mà chỉ dải hẹp này thôi đã đủ làm hàm mất tính lồi. Với $0.4(x_1^2 + x_2^2) + \cos(2x_1)$, vùng đỏ gồm dải giữa $|x_1| < 0.685$ và hai mép $|x_1| > 2.457$ của khung nhìn. Hàm $x_1^2 + 3x_1x_2 + x_2^2$ thì đỏ khắp khung, dù cả hai phần tử trên đường chéo của Hessian đều dương: Ma trận $\begin{bmatrix} 2 & 3 \\ 3 & 2 \end{bmatrix}$ có trị riêng $5$ và $-1$, và theo hướng $(1, -1)$ đồ thị cong xuống.
 
 Hai hàm còn lại, $\log(e^{x_1} + e^{x_2})$ và $x_1^2/x_2$, không có điểm đỏ nào, nhưng mỗi điểm đều có một hướng với độ cong bằng 0. Ta sẽ trở lại với chúng ở mục 5.
 
@@ -57,7 +57,7 @@ Hai hàm còn lại, $\log(e^{x_1} + e^{x_2})$ và $x_1^2/x_2$, không có đi�
 
 Sách để chứng minh này làm Bài tập 3.8. Ý chính là quy về một biến bằng kỹ thuật hạn chế lên đường thẳng, nên ta chỉ cần hai mắt xích.
 
-**Một biến.** Với hàm $g$ khả vi hai lần trên một khoảng, $g'' \ge 0$ tương đương với $g'$ không giảm. Mà $g'$ không giảm thì $g$ lồi: lập luận trong bài tập về hàm softplus ở chủ đề trước áp dụng nguyên vẹn, vì nó chỉ dùng tính đơn điệu của đạo hàm để suy ra điều kiện bậc nhất. Ngược lại, $g$ lồi thì $g'$ không giảm theo tính đơn điệu của gradient, nên $g'' \ge 0$.
+**Một biến.** Với hàm $g$ khả vi hai lần trên một khoảng, $g'' \ge 0$ tương đương với $g'$ không giảm. Mà $g'$ không giảm thì $g$ lồi: Lập luận trong bài tập về hàm softplus ở chủ đề trước áp dụng nguyên vẹn, vì nó chỉ dùng tính đơn điệu của đạo hàm để suy ra điều kiện bậc nhất. Ngược lại, $g$ lồi thì $g'$ không giảm theo tính đơn điệu của gradient, nên $g'' \ge 0$.
 
 **Nhiều biến.** $f$ lồi khi và chỉ khi mọi hàm hạn chế $g(t) = f(x + tv)$ lồi. Theo trường hợp một biến, điều này tương đương với $g''(t) = v^T \nabla^2 f(x + tv) v \ge 0$ với mọi $x$, mọi $v$ và mọi $t$ hợp lệ. Vì mỗi điểm $z$ của miền xác định đều có dạng $x + tv$ với $x = z$ và $t = 0$, điều kiện đó chính là $v^T \nabla^2 f(z) v \ge 0$ với mọi $z$ và mọi $v$, tức $\nabla^2 f(z) \succeq 0$ tại mọi điểm.
 
@@ -74,14 +74,14 @@ $$
 ta thấy Hessian bằng $2A^T A$. Ma trận này luôn nửa xác định dương vì $v^T A^T A v = \|Av\|_2^2 \ge 0$, nên bình phương tối thiểu **luôn** là bài toán lồi. Nó lồi nghiêm ngặt khi và chỉ khi $Av \ne 0$ với mọi $v \ne 0$, tức các cột của $A$ độc lập tuyến tính. Khi hai đặc trưng tỉ lệ với nhau, điều này không còn đúng, và hệ quả nhìn thấy được ngay trên nghiệm.
 
 ::: example Hai đặc trưng cộng tuyến và tác dụng của điều chuẩn ridge
-Lấy $A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \\ 3 & 6 \end{bmatrix}$, trong đó cột thứ hai gấp đôi cột thứ nhất, và $b = (1, 2, 2)$. Ta có $A^T A = \begin{bmatrix} 14 & 28 \\ 28 & 56 \end{bmatrix}$ với trị riêng $70$ và $0$. Hướng có độ cong bằng 0 là $(2, -1)$, vì $A(2, -1) = 0$: tăng $w_1$ thêm 2 và giảm $w_2$ đi 1 không làm thay đổi dự đoán.
+Lấy $A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \\ 3 & 6 \end{bmatrix}$, trong đó cột thứ hai gấp đôi cột thứ nhất, và $b = (1, 2, 2)$. Ta có $A^T A = \begin{bmatrix} 14 & 28 \\ 28 & 56 \end{bmatrix}$ với trị riêng $70$ và $0$. Hướng có độ cong bằng 0 là $(2, -1)$, vì $A(2, -1) = 0$: Tăng $w_1$ thêm 2 và giảm $w_2$ đi 1 không làm thay đổi dự đoán.
 
 Hàm mất mát là một cái máng. Phương trình chuẩn $A^T A w = A^T b = (11, 22)$ rút về một phương trình $w_1 + 2w_2 = 11/14$, nên **mọi** điểm trên đường thẳng này đều tối ưu, với cùng tổng bình phương sai số $5/14 \approx 0.357$. Bộ giải trả về điểm nào là tùy cách nó được cài đặt, và các hệ số riêng lẻ không còn ý nghĩa diễn giải.
 
 Thêm điều chuẩn ridge $\lambda \|w\|_2^2$, Hessian trở thành $2(A^T A + \lambda I)$ với trị riêng $2(70 + \lambda)$ và $2\lambda$, cả hai dương. Cái máng được uốn thành cái bát, và nghiệm trở nên duy nhất. Với $\lambda = 1$, giải $(A^T A + I) w = A^T b$ được $w = (11/71,\ 22/71) \approx (0.155,\ 0.310)$. Khi $\lambda$ giảm dần về 0, nghiệm ridge tiến về $(11/70,\ 22/70)$, điểm có chuẩn nhỏ nhất trên đường nghiệm.
 :::
 
-## 5. Cái máng xoay quanh gốc: hàm $x^2/y$
+## 5. Cái máng xoay quanh gốc: Hàm $x^2/y$
 
 Hàm $f(x, y) = x^2 / y$ trên nửa mặt phẳng $y > 0$ (Hình 3.3 trong sách) cho một hình ảnh đẹp về Hessian suy biến. Tính trực tiếp,
 
@@ -101,7 +101,7 @@ Nếu $\nabla^2 f(x) \succ 0$ tại mọi $x$ thì $f$ lồi nghiêm ngặt. Chi
 
 ## 7. Độ cong cho biết bài toán dễ hay khó
 
-Ngoài câu trả lời lồi hay không, Hessian còn chứa một thông tin thực dụng hơn: độ lớn các trị riêng của nó quyết định một thuật toán chạy nhanh hay chậm.
+Ngoài câu trả lời lồi hay không, Hessian còn chứa một thông tin thực dụng hơn: Độ lớn các trị riêng của nó quyết định một thuật toán chạy nhanh hay chậm.
 
 **Lồi mạnh.** Sách gọi $f$ là **lồi mạnh** trên một tập $S$ nếu có $m > 0$ sao cho $\nabla^2 f(x) \succeq mI$ với mọi $x \in S$ (§9.1.2). Khai triển Taylor kèm phần dư khi đó cho một cận dưới tốt hơn điều kiện bậc nhất:
 
@@ -111,14 +111,14 @@ $$
 
 Về hình học, nằm dưới đồ thị giờ là cả một cái bát với độ cong $m$ chạm đồ thị tại $x$, một cận dưới chặt hơn hẳn mặt phẳng tiếp xúc. Lấy cực tiểu vế phải theo $y$, sách suy ra $p^\star \ge f(x) - \|\nabla f(x)\|_2^2 / (2m)$. Vậy với hàm lồi mạnh, gradient nhỏ thì điểm đang đứng gần tối ưu, điều mà tính lồi thông thường không bảo đảm. Hàm $e^x$ lồi nghiêm ngặt nhưng không lồi mạnh trên $\mathbb{R}$, vì $f''(x) = e^x$ tiến về 0 khi $x \to -\infty$. Ở đó gradient bé tí, vậy mà bài toán còn chẳng có nghiệm.
 
-**Số điều kiện.** Nếu thêm $\nabla^2 f(x) \preceq MI$, tỉ số $\kappa = M/m$ đo mức độ "dẹt" của các tập mức: đường mức của một hàm bậc hai với trị riêng $m$ và $M$ là ellipse có hai bán trục tỉ lệ $\sqrt{\kappa}$. Sách phân tích ví dụ $f(x) = \tfrac12 (x_1^2 + \gamma x_2^2)$ với phương pháp gradient và tìm kiếm chính xác theo tia (§9.3.2). Xuất phát từ $(\gamma, 1)$, sai số $f(x^{(k)}) - p^\star$ bị nhân với đúng $\big((\gamma - 1)/(\gamma + 1)\big)^2$ sau mỗi bước.
+**Số điều kiện.** Nếu thêm $\nabla^2 f(x) \preceq MI$, tỉ số $\kappa = M/m$ đo mức độ "dẹt" của các tập mức: Đường mức của một hàm bậc hai với trị riêng $m$ và $M$ là ellipse có hai bán trục tỉ lệ $\sqrt{\kappa}$. Sách phân tích ví dụ $f(x) = \tfrac12 (x_1^2 + \gamma x_2^2)$ với phương pháp gradient và tìm kiếm chính xác theo tia (§9.3.2). Xuất phát từ $(\gamma, 1)$, sai số $f(x^{(k)}) - p^\star$ bị nhân với đúng $\big((\gamma - 1)/(\gamma + 1)\big)^2$ sau mỗi bước.
 
 | $\gamma$ | Hệ số giảm sai số mỗi bước | Số bước để sai số giảm $10^6$ lần |
 | --- | --- | --- |
 | 10 | 0.669 | 35 |
 | 100 | 0.961 | 346 |
 
-Cùng là một cái bát, nhưng bát càng dẹt thì phương pháp gradient càng đi zíc zắc và càng chậm. Đây là một trong những lý do người ta chuẩn hóa thang đo của các đặc trưng trước khi huấn luyện mô hình: đưa các đặc trưng về cùng thang đo thường làm Hessian của hàm mất mát bớt lệch giữa các hướng.
+Cùng là một cái bát, nhưng bát càng dẹt thì phương pháp gradient càng đi zíc zắc và càng chậm. Đây là một trong những lý do người ta chuẩn hóa thang đo của các đặc trưng trước khi huấn luyện mô hình: Đưa các đặc trưng về cùng thang đo thường làm Hessian của hàm mất mát bớt lệch giữa các hướng.
 
 ## 8. Những câu hỏi để đào sâu
 
@@ -126,7 +126,7 @@ Cùng là một cái bát, nhưng bát càng dẹt thì phương pháp gradient 
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Phần tử dương không có nghĩa là ma trận nửa xác định dương. $P$ có trị riêng $3$ và $-1$, với vector riêng ứng với $-1$ là $(1, -1)/\sqrt2$. Theo hướng đó, $v^T P v = \tfrac12(1 - 4 + 1) = -1 < 0$, đồ thị cong xuống, và $f$ là một cái yên ngựa. Điều ngược lại cũng đúng: ma trận $\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}$ có phần tử âm nhưng xác định dương.
+Không. Phần tử dương không có nghĩa là ma trận nửa xác định dương. $P$ có trị riêng $3$ và $-1$, với vector riêng ứng với $-1$ là $(1, -1)/\sqrt2$. Theo hướng đó, $v^T P v = \tfrac12(1 - 4 + 1) = -1 < 0$, đồ thị cong xuống, và $f$ là một cái yên ngựa. Điều ngược lại cũng đúng: Ma trận $\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}$ có phần tử âm nhưng xác định dương.
 
 </details>
 
@@ -150,7 +150,7 @@ Không lồi mạnh, vì không có $m > 0$ nào để $e^x \ge m$ với mọi $
 
 <details><summary>Xem lời giải thích</summary>
 
-Về dự đoán thì không hại: mọi nghiệm trên đường $w_1 + 2w_2 = 11/14$ cho cùng vector dự đoán $Aw = \tfrac{11}{14}(1, 2, 3)$, nên cùng sai số. Nhưng khi đọc hệ số thì có vấn đề lớn. Nghiệm $(11/14,\ 0)$ nói chỉ đặc trưng thứ nhất quan trọng, nghiệm $(0,\ 11/28)$ nói chỉ đặc trưng thứ hai quan trọng, và cả hai đều tối ưu như nhau. Một thay đổi nhỏ trong dữ liệu có thể đẩy bộ giải từ nghiệm này sang nghiệm kia. Hessian suy biến báo trước điều đó, và điều chuẩn ridge là một cách chọn ra một nghiệm ổn định.
+Về dự đoán thì không hại: Mọi nghiệm trên đường $w_1 + 2w_2 = 11/14$ cho cùng vector dự đoán $Aw = \tfrac{11}{14}(1, 2, 3)$, nên cùng sai số. Nhưng khi đọc hệ số thì có vấn đề lớn. Nghiệm $(11/14,\ 0)$ nói chỉ đặc trưng thứ nhất quan trọng, nghiệm $(0,\ 11/28)$ nói chỉ đặc trưng thứ hai quan trọng, và cả hai đều tối ưu như nhau. Một thay đổi nhỏ trong dữ liệu có thể đẩy bộ giải từ nghiệm này sang nghiệm kia. Hessian suy biến báo trước điều đó, và điều chuẩn ridge là một cách chọn ra một nghiệm ổn định.
 
 </details>
 
@@ -181,7 +181,7 @@ Cho $f(x) = \|x\|_2$ trên $\mathbb{R}^n$. (a) Với $x \ne 0$, chứng minh $\n
 :::
 
 ::: solution
-(a) $\partial \|x\|_2 / \partial x_i = x_i / \|x\|_2$. Đạo hàm tiếp theo $x_j$ cho $\delta_{ij}/\|x\|_2 - x_i x_j / \|x\|_2^3$, tức $\nabla^2 f(x) = \big(I - xx^T/\|x\|_2^2\big)/\|x\|_2$. (b) $I - uu^T$ là phép chiếu lên siêu phẳng vuông góc với $u$, có trị riêng 1 (bội $n - 1$) và 0 (theo hướng $u$). Vậy Hessian có trị riêng $1/\|x\|_2$ bội $n - 1$ và trị riêng 0 theo hướng $x$. Lý do giống hàm $x^2/y$: $f(tx) = t f(x)$ với $t > 0$, nên dọc tia từ gốc qua $x$, chuẩn tăng tuyến tính và không cong. Đồ thị của $\|x\|_2$ là một cái nón. (c) Gốc tọa độ thuộc miền xác định nhưng $f$ không khả vi tại đó, nên định lý không áp dụng trên toàn $\mathbb{R}^n$. Ta kết luận bằng định nghĩa: bất đẳng thức tam giác và tính thuần nhất cho
+(a) $\partial \|x\|_2 / \partial x_i = x_i / \|x\|_2$. Đạo hàm tiếp theo $x_j$ cho $\delta_{ij}/\|x\|_2 - x_i x_j / \|x\|_2^3$, tức $\nabla^2 f(x) = \big(I - xx^T/\|x\|_2^2\big)/\|x\|_2$. (b) $I - uu^T$ là phép chiếu lên siêu phẳng vuông góc với $u$, có trị riêng 1 (bội $n - 1$) và 0 (theo hướng $u$). Vậy Hessian có trị riêng $1/\|x\|_2$ bội $n - 1$ và trị riêng 0 theo hướng $x$. Lý do giống hàm $x^2/y$: $f(tx) = t f(x)$ với $t > 0$, nên dọc tia từ gốc qua $x$, chuẩn tăng tuyến tính và không cong. Đồ thị của $\|x\|_2$ là một cái nón. (c) Gốc tọa độ thuộc miền xác định nhưng $f$ không khả vi tại đó, nên định lý không áp dụng trên toàn $\mathbb{R}^n$. Ta kết luận bằng định nghĩa: Bất đẳng thức tam giác và tính thuần nhất cho
 
 $$
 \|\theta x + (1-\theta)y\|_2 \le \theta\|x\|_2 + (1-\theta)\|y\|_2,

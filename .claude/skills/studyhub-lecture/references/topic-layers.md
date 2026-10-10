@@ -1,12 +1,12 @@
-# Bài nhiều lớp: trang chương và các trang chủ đề
+# Bài nhiều lớp: Trang chương và các trang chủ đề
 
-Một chương dày (ví dụ chương 2–3 của *Convex Optimization*) không nên dồn vào một trang Notes dài: người học mới bị ngợp, mỗi khái niệm chỉ được vài đoạn, và không còn chỗ cho ví dụ, mô phỏng, câu hỏi đào sâu. StudyHub cho phép tách một bài thành **trang chương** (hub) và nhiều **trang chủ đề**, mỗi trang đi sâu vào một ý. Lecture 01 của môn Cơ sở toán cho AI là mẫu đầy đủ: 25 chủ đề trong bốn nhóm.
+Một chương dày (ví dụ chương 2–3 của *Convex Optimization*) không nên dồn vào một trang Notes dài: Người học mới bị ngợp, mỗi khái niệm chỉ được vài đoạn, và không còn chỗ cho ví dụ, mô phỏng, câu hỏi đào sâu. StudyHub cho phép tách một bài thành **trang chương** (hub) và nhiều **trang chủ đề**, mỗi trang đi sâu vào một ý. Lecture 01 của môn Cơ sở toán cho AI là mẫu đầy đủ: 25 chủ đề trong bốn nhóm.
 
 Dùng kiến trúc này khi người dùng yêu cầu "phân lớp", hoặc khi nguồn của một bài có nhiều khái niệm độc lập mà mỗi khái niệm cần ví dụ, hình và bài tập riêng. Với bài ngắn, một trang Notes vẫn tốt hơn.
 
 ## 1. Kiến trúc và đường dẫn
 
-- Trang chương giữ nguyên: `docs/<course>/bai-giang/<lesson>.md`, `section: lecture`, ba tab Notes, Slides, Kiến thức nền, slug và tiến độ cũ. Notes của trang chương trở thành **bản đồ chương**: lời mở, `<TopicMap />`, lộ trình đọc, bức tranh chung (có thể kèm sơ đồ Mermaid), bài tập tổng hợp, tóm tắt, nguồn.
+- Trang chương giữ nguyên: `docs/<course>/bai-giang/<lesson>.md`, `section: lecture`, ba tab Notes, Slides, Kiến thức nền, slug và tiến độ cũ. Notes của trang chương trở thành **bản đồ chương**: Lời mở, `<TopicMap />`, lộ trình đọc, bức tranh chung (có thể kèm sơ đồ Mermaid), bài tập tổng hợp, tóm tắt, nguồn.
 - Mỗi chủ đề: `docs/<course>/bai-giang/<lesson>/<topic-slug>.md`, URL `/<course>/bai-giang/<lesson>/<topic-slug>.html`.
 - Catalog khai báo thứ tự đọc trong `topicGroups` của bài (với môn Toán cho AI: `docs/.vitepress/math-ai-course.mjs`):
 
@@ -37,18 +37,18 @@ description: "Một hai câu nói trang dạy gì, dùng cho tìm kiếm."
 
 Không viết H1: `TopicHeader` đã in đường dẫn chương, tiêu đề, "Chủ đề k / N", thời gian đọc, mục sách và thanh tiến độ. Khung đã dùng tốt:
 
-1. Hai ba đoạn mở đầu: câu hỏi có thật mà chủ đề trả lời, nối với chủ đề trước, rồi một câu nói phần dưới sẽ làm gì. Đổi cách nói câu cuối giữa các trang; đừng trang nào cũng "Trang này…".
+1. Hai ba đoạn mở đầu: Câu hỏi có thật mà chủ đề trả lời, nối với chủ đề trước, rồi một câu nói phần dưới sẽ làm gì. Đổi cách nói câu cuối giữa các trang; đừng trang nào cũng "Trang này…".
 2. Các mục đánh số `## 1.`, `## 2.`… Định nghĩa đặt trong `> **Định nghĩa.**`, định lý trong `> **Định lý.**`. Chứng minh, ví dụ, mẹo dùng `::: proof`, `::: example Tiêu đề`, `::: tip`.
 3. Mô phỏng tương tác đặt ngay sau đoạn giới thiệu khái niệm, kèm một đoạn nói nên thử gì và quan sát gì (mục 4).
 4. `## n. Những câu hỏi để đào sâu`: 3–4 câu `**Câu k.**`, mỗi câu một `<details><summary>Xem lời giải thích</summary>` có lập luận đầy đủ. Đa dạng cách đặt vấn đề (phản ví dụ cần tìm, dự đoán cần kiểm, "điều gì xảy ra nếu", tình huống học máy); không lặp khuôn "Một bạn nói…" ở nhiều trang.
 5. `## n. Bài tập tự luyện`: `::: exercise` + `::: solution` (có thể `::: hint`). Dữ liệu tự đặt, không lấy dữ liệu bài tập về nhà của học phần.
-6. `## Tóm tắt` hai đoạn và `## Nguồn và đọc thêm`: mục, trang, hình, ví dụ của sách; dòng cuối nói rõ phần nào người soạn bổ sung và "mọi con số đã được tính lại bằng chương trình".
+6. `## Tóm tắt` hai đoạn và `## Nguồn và đọc thêm`: Mục, trang, hình, ví dụ của sách; dòng cuối nói rõ phần nào người soạn bổ sung và "mọi con số đã được tính lại bằng chương trình".
 
 Liên kết giữa các chủ đề dùng đường dẫn tương đối tới file `.md` (`[siêu phẳng tựa](./sieu-phang-phan-tach-va-tua.md)`). Từ trang chương: `./<lesson>/<topic>.md`.
 
 ## 3. Độ sâu mong đợi của một chủ đề
 
-Một chủ đề không phải tóm tắt mục sách. Nó cần: ý nghĩa hình học của định nghĩa, ví dụ và phản ví dụ đã tính bằng code, cách nhìn khác của cùng một kết quả (chẳng hạn Hessian của log-sum-exp là một phương sai), liên hệ với các chủ đề khác và với học máy khi liên hệ đó đúng, và ranh giới của kết quả (bỏ giả thiết nào thì sai, phản ví dụ). Mỗi khẳng định ngoài sách phải kiểm được: tính lại, hoặc dẫn nguồn đã tra.
+Một chủ đề không phải tóm tắt mục sách. Nó cần: Ý nghĩa hình học của định nghĩa, ví dụ và phản ví dụ đã tính bằng code, cách nhìn khác của cùng một kết quả (chẳng hạn Hessian của log-sum-exp là một phương sai), liên hệ với các chủ đề khác và với học máy khi liên hệ đó đúng, và ranh giới của kết quả (bỏ giả thiết nào thì sai, phản ví dụ). Mỗi khẳng định ngoài sách phải kiểm được: Tính lại, hoặc dẫn nguồn đã tra.
 
 ## 4. Mô phỏng tương tác (labs)
 
@@ -67,11 +67,11 @@ python3 -I .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --for
 npm run ci:build
 ```
 
-`check_lecture.mjs` kiểm thêm cho lớp chủ đề: file có đủ theo catalog (`TOPIC_MISSING`), frontmatter khớp (`FRONTMATTER_TOPIC`, `TOPIC_TITLE_MISMATCH`), file thừa không có trong catalog (`TOPIC_ORPHAN`), trang chương thiếu `<TopicMap />`, link tương đối hỏng, slug chủ đề trùng, và **công thức inline rộng hơn 38ex** (`INLINE_MATH_WIDE`) vì công thức inline không xuống dòng và sẽ tràn ngang trên điện thoại. Chuyển những công thức đó thành `$$…$$` (có thể `aligned`) hoặc tách nhỏ. Hai dấu vết của TeX bị hỏng khi ghi bằng script cũng được bắt: ký tự điều khiển giữa dòng (`CONTROL_CHAR`, lỗi) và dòng có số dấu `$` lẻ (`INLINE_MATH_SPLIT`, cảnh báo).
+`check_lecture.mjs` kiểm thêm cho lớp chủ đề: File có đủ theo catalog (`TOPIC_MISSING`), frontmatter khớp (`FRONTMATTER_TOPIC`, `TOPIC_TITLE_MISMATCH`), file thừa không có trong catalog (`TOPIC_ORPHAN`), trang chương thiếu `<TopicMap />`, link tương đối hỏng, slug chủ đề trùng, và **công thức inline rộng hơn 38ex** (`INLINE_MATH_WIDE`) vì công thức inline không xuống dòng và sẽ tràn ngang trên điện thoại. Chuyển những công thức đó thành `$$…$$` (có thể `aligned`) hoặc tách nhỏ. Hai dấu vết của TeX bị hỏng khi ghi bằng script cũng được bắt: Ký tự điều khiển giữa dòng (`CONTROL_CHAR`, lỗi) và dòng có số dấu `$` lẻ (`INLINE_MATH_SPLIT`, cảnh báo).
 
 Truyền **cả chương** cho `review_teaching_text.py` một lượt để thấy khuôn lặp giữa các trang (`QUESTION_TEMPLATE`, `REPEATED_OPENER`), ngoài các khuôn trong từng trang.
 
-Cuối cùng mở trang ở bề rộng 375px và trên máy bàn: không cuộn ngang, mô phỏng kéo được, công thức hiển thị, sơ đồ Mermaid hiện.
+Cuối cùng mở trang ở bề rộng 375px và trên máy bàn: Không cuộn ngang, mô phỏng kéo được, công thức hiển thị, sơ đồ Mermaid hiện.
 
 ## 6. Những lỗi đã gặp khi soạn Lecture 01 và 02
 
@@ -82,4 +82,4 @@ Cuối cùng mở trang ở bề rộng 375px và trên máy bàn: không cuộn
 - Lời giải "nghĩ thành tiếng" ("à không, thử lại…") làm người học rối. Lời giải chỉ trình bày lập luận đúng cuối cùng; phản ví dụ được kiểm bằng code trước. Ở Lecture 02 lỗi này vẫn lọt hai lần ("... thay vào đó, hãy", "... chính xác hơn"), một lần kèm kết luận sai về miền khả thi, nên `review_teaching_text.py` nay báo `THINKING_ALOUD`.
 - Ví dụ minh họa phải thật sự có tính chất được nói tới. Ví dụ "chi phí trung bình" $(x_1^2 + 2x_2^2 + 1)/(x_1 + x_2)$ được chọn để minh họa hàm chỉ tựa lồi, nhưng kiểm Hessian cho thấy nó lồi (phối cảnh của bình phương chuẩn). Ví dụ được thay bằng tỉ số khoảng cách, và trường hợp cũ thành một câu hỏi đào sâu. Trước khi viết "không lồi", tính Hessian hoặc thử một dây cung bằng code.
 - Thuật ngữ mới chỉ được dùng qua liên kết tự động không nằm trong `prerequisites` của bài nào, nên bản kiểm cũ bỏ qua chúng, và ký hiệu Unicode như ℓ₁, Bᵀ trong định nghĩa chỉ bị test của repo bắt lúc build. `check_lecture.mjs --all` nay kiểm mọi thuật ngữ.
-- Từ đa nghĩa bị liên kết nhầm: "đồ thị" (của hàm số và lý thuyết đồ thị), "phép chiếu" (Euclid, tọa độ, phối cảnh), "đơn hình" (hình học và phương pháp đơn hình). Tạo ID riêng theo lĩnh vực hoặc dùng alias dài hơn; xem repo-format.md mục 5.
+- Từ đa nghĩa bị liên kết nhầm: "Đồ thị" (của hàm số và lý thuyết đồ thị), "phép chiếu" (Euclid, tọa độ, phối cảnh), "đơn hình" (hình học và phương pháp đơn hình). Tạo ID riêng theo lĩnh vực hoặc dùng alias dài hơn; xem repo-format.md mục 5.

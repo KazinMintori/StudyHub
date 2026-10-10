@@ -4,12 +4,12 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: data-analysis-examples](https://wesmckinney.com/book/data-analysis-examples)
-- [Python for Data Analysis: data-aggregation](https://wesmckinney.com/book/data-aggregation)
+- [Python for Data Analysis: Data-analysis-examples](https://wesmckinney.com/book/data-analysis-examples)
+- [Python for Data Analysis: Data-aggregation](https://wesmckinney.com/book/data-aggregation)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-14-ke-chuyen-bang-du-lieu.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-14-ke-chuyen-bang-du-lieu.html)
 
 ## Phạm vi đã biên soạn
 

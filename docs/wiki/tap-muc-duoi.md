@@ -19,7 +19,7 @@ Tập mức dưới mức $\alpha$ của hàm f là $\{x \in \operatorname{dom} 
 
 ## Ví dụ
 
-Hàm $-e^x$ lõm, nhưng mọi tập mức dưới của nó là một nửa trục, nên lồi: hàm này tựa lồi mà không lồi.
+Hàm $-e^x$ lõm, nhưng mọi tập mức dưới của nó là một nửa trục, nên lồi: Hàm này tựa lồi mà không lồi.
 
 ## Khi nào cần dùng?
 

@@ -7,9 +7,9 @@ title: "Nón các ma trận nửa xác định dương"
 description: "Không gian các ma trận đối xứng, nón S₊ⁿ và Sⁿ₊₊, chứng minh tính nón lồi, biểu diễn như giao vô hạn nửa không gian, điều kiện cho ma trận 2×2, những cái bẫy khi kiểm tra tính nửa xác định dương và vai trò của ma trận hiệp phương sai, ma trận Gram."
 ---
 
-Cho tới giờ, các "điểm" của ta luôn là vector. Trang này đi thêm một bước mà lần đầu gặp có thể thấy lạ: coi mỗi **ma trận đối xứng** là một điểm trong một không gian, rồi hỏi tập các ma trận nửa xác định dương có hình dạng gì. Câu trả lời là một nón lồi, và nó trông rất giống nón kem của chủ đề trước khi nhìn trong không gian ba chiều.
+Cho tới giờ, các "điểm" của ta luôn là vector. Trang này đi thêm một bước mà lần đầu gặp có thể thấy lạ: Coi mỗi **ma trận đối xứng** là một điểm trong một không gian, rồi hỏi tập các ma trận nửa xác định dương có hình dạng gì. Câu trả lời là một nón lồi, và nó trông rất giống nón kem của chủ đề trước khi nhìn trong không gian ba chiều.
 
-Vì sao phải quan tâm tới hình học của một tập ma trận? Vì trong tối ưu và học máy, rất nhiều đối tượng cần tìm chính là ma trận: ma trận hiệp phương sai trong thống kê, ma trận kernel trong các phương pháp kernel, ma trận khoảng cách trong học metric. Ràng buộc "ma trận này phải nửa xác định dương" xuất hiện ở khắp nơi, và việc tập nghiệm của nó là một nón lồi là lý do những bài toán đó vẫn giải được. Lecture 02 sẽ gọi chúng là quy hoạch nửa xác định.
+Vì sao phải quan tâm tới hình học của một tập ma trận? Vì trong tối ưu và học máy, rất nhiều đối tượng cần tìm chính là ma trận: Ma trận hiệp phương sai trong thống kê, ma trận kernel trong các phương pháp kernel, ma trận khoảng cách trong học metric. Ràng buộc "ma trận này phải nửa xác định dương" xuất hiện ở khắp nơi, và việc tập nghiệm của nó là một nón lồi là lý do những bài toán đó vẫn giải được. Lecture 02 sẽ gọi chúng là quy hoạch nửa xác định.
 
 Bạn cần nhớ định nghĩa ma trận nửa xác định dương, trị riêng của ma trận đối xứng, và nón lồi từ các chủ đề trước.
 
@@ -33,15 +33,15 @@ $$
 
 Ta dùng ba ký hiệu song song với các tập số $\mathbb{R}$, $\mathbb{R}_+$ (số không âm) và $\mathbb{R}_{++}$ (số dương):
 
-- $\mathbb{S}^n$: mọi ma trận đối xứng.
-- $\mathbb{S}^n_+ = \{X \in \mathbb{S}^n : X \succeq 0\}$: các ma trận **nửa xác định dương** (PSD), tức $z^T X z \ge 0$ với mọi $z \in \mathbb{R}^n$.
-- $\mathbb{S}^n_{++} = \{X \in \mathbb{S}^n : X \succ 0\}$: các ma trận **xác định dương** (PD), tức $z^T X z > 0$ với mọi $z \ne 0$.
+- $\mathbb{S}^n$: Mọi ma trận đối xứng.
+- $\mathbb{S}^n_+ = \{X \in \mathbb{S}^n : X \succeq 0\}$: Các ma trận **nửa xác định dương** (PSD), tức $z^T X z \ge 0$ với mọi $z \in \mathbb{R}^n$.
+- $\mathbb{S}^n_{++} = \{X \in \mathbb{S}^n : X \succ 0\}$: Các ma trận **xác định dương** (PD), tức $z^T X z > 0$ với mọi $z \ne 0$.
 
 Sự song song này có cơ sở cụ thể. Một ma trận đối xứng là PSD khi và chỉ khi mọi trị riêng của nó không âm, và PD khi và chỉ khi mọi trị riêng dương. Nói cách khác, $X \succeq 0$ nghĩa là "các trị riêng của $X$ đều thuộc $\mathbb{R}_+$". Ma trận đối xứng giống như một "số" có nhiều trị riêng, và PSD nghĩa là "số" ấy không âm theo mọi hướng.
 
 ## 3. $\mathbb{S}^n_+$ là một nón lồi
 
-> **Mệnh đề.** $\mathbb{S}^n_+$ là một nón lồi: nếu $A, B \in \mathbb{S}^n_+$ và $\theta_1, \theta_2 \ge 0$ thì $\theta_1 A + \theta_2 B \in \mathbb{S}^n_+$.
+> **Mệnh đề.** $\mathbb{S}^n_+$ là một nón lồi: Nếu $A, B \in \mathbb{S}^n_+$ và $\theta_1, \theta_2 \ge 0$ thì $\theta_1 A + \theta_2 B \in \mathbb{S}^n_+$.
 
 Chứng minh đi thẳng từ định nghĩa, không cần tới trị riêng. Với mọi $z \in \mathbb{R}^n$,
 
@@ -49,12 +49,12 @@ $$
 z^T (\theta_1 A + \theta_2 B) z = \theta_1\, z^T A z + \theta_2\, z^T B z \ge 0,
 $$
 
-vì cả hai số hạng là tích của một số không âm với một số không âm. Mọi việc nằm ở đẳng thức đầu: biểu thức $z^T X z$ **tuyến tính theo $X$** khi $z$ cố định. Ta không cần biết trị riêng của $\theta_1 A + \theta_2 B$, một thứ khó tính hơn nhiều.
+vì cả hai số hạng là tích của một số không âm với một số không âm. Mọi việc nằm ở đẳng thức đầu: Biểu thức $z^T X z$ **tuyến tính theo $X$** khi $z$ cố định. Ta không cần biết trị riêng của $\theta_1 A + \theta_2 B$, một thứ khó tính hơn nhiều.
 
 Cùng nhận xét ấy cho một cách nhìn thứ hai (Ví dụ 2.7 trong sách). Với mỗi $z \ne 0$ cố định, tập $\{X \in \mathbb{S}^n : z^T X z \ge 0\}$ là một **nửa không gian** trong $\mathbb{S}^n$, vì vế trái là một hàm tuyến tính khác 0 của $X$. Thật vậy, $z^T X z = \operatorname{tr}(X z z^T) = \sum_{i,j} X_{ij} z_i z_j$. Do đó
 
 $$
-\mathbb{S}^n_+ = \bigcap_{z \ne 0} \{X \in \mathbb{S}^n : z^T X z \ge 0\}
+\mathbb{S}^n_+ = \bigcap_{z \ne 0} \{X \in \mathbb{S}^n : Z^T X z \ge 0\}
 $$
 
 là giao của **vô số** nửa không gian, nên lồi. Khác với đa diện, ở đây cần vô hạn nửa không gian, mỗi hướng $z$ một cái. Đó là lý do biên của $\mathbb{S}^n_+$ cong chứ không phẳng từng mảnh, và ràng buộc PSD thật sự mạnh hơn mọi hệ hữu hạn bất đẳng thức tuyến tính.
@@ -93,7 +93,7 @@ Cách kiểm tra đáng tin cậy là tính trị riêng nhỏ nhất, hoặc th
 
 Ba ví dụ dưới đây giải thích vì sao trong học máy, ma trận PSD gần như tự xuất hiện:
 
-- **Ma trận hiệp phương sai** $\Sigma = \operatorname{Cov}(x)$ của một vector ngẫu nhiên luôn PSD. Lý do rất đẹp: với mọi $v$, $v^T \Sigma v = \operatorname{Var}(v^T x) \ge 0$, vì phương sai của một biến ngẫu nhiên vô hướng không bao giờ âm. Dạng toàn phương của ma trận hiệp phương sai theo hướng $v$ chính là phương sai của dữ liệu khi chiếu lên hướng $v$.
+- **Ma trận hiệp phương sai** $\Sigma = \operatorname{Cov}(x)$ của một vector ngẫu nhiên luôn PSD. Lý do rất đẹp: Với mọi $v$, $v^T \Sigma v = \operatorname{Var}(v^T x) \ge 0$, vì phương sai của một biến ngẫu nhiên vô hướng không bao giờ âm. Dạng toàn phương của ma trận hiệp phương sai theo hướng $v$ chính là phương sai của dữ liệu khi chiếu lên hướng $v$.
 - **Ma trận Gram** $K_{ij} = \phi(x_i)^T \phi(x_j)$, nền tảng của các phương pháp kernel, luôn PSD vì $v^T K v = \left\|\sum_i v_i \phi(x_i)\right\|_2^2 \ge 0$.
 - **Hessian của hàm lồi** là PSD tại mọi điểm. Đó là nội dung của điều kiện bậc hai ở chủ đề về độ cong. Hàm mất mát bình phương tối thiểu có Hessian $2A^T A$, một ma trận Gram.
 
@@ -101,11 +101,11 @@ Vì $\mathbb{S}^n_+$ là nón lồi, ta có thể so sánh hai ma trận bằng 
 
 ## 7. Những câu hỏi để đào sâu
 
-**Câu 1.** Ma trận đơn vị $I$ nằm ở đâu trong nón $\mathbb{S}^n_+$: trên biên hay bên trong? Còn ma trận $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ thì sao?
+**Câu 1.** Ma trận đơn vị $I$ nằm ở đâu trong nón $\mathbb{S}^n_+$: Trên biên hay bên trong? Còn ma trận $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ thì sao?
 
 <details><summary>Xem lời giải thích</summary>
 
-$I$ có mọi trị riêng bằng 1 > 0 nên xác định dương, và nằm bên trong nón: mọi ma trận đối xứng đủ gần $I$ vẫn có trị riêng dương. Thật ra $I$ nằm trên trục của nón, vì nó "cân bằng" theo mọi hướng. Ma trận $\operatorname{diag}(1, 0)$ có một trị riêng bằng 0 nên nằm trên biên: thêm một lượng âm rất nhỏ vào phần tử thứ hai trên đường chéo là đủ đưa nó ra ngoài nón. Phần trong của $\mathbb{S}^n_+$ (trong không gian $\mathbb{S}^n$) đúng là $\mathbb{S}^n_{++}$.
+$I$ có mọi trị riêng bằng 1 > 0 nên xác định dương, và nằm bên trong nón: Mọi ma trận đối xứng đủ gần $I$ vẫn có trị riêng dương. Thật ra $I$ nằm trên trục của nón, vì nó "cân bằng" theo mọi hướng. Ma trận $\operatorname{diag}(1, 0)$ có một trị riêng bằng 0 nên nằm trên biên: Thêm một lượng âm rất nhỏ vào phần tử thứ hai trên đường chéo là đủ đưa nó ra ngoài nón. Phần trong của $\mathbb{S}^n_+$ (trong không gian $\mathbb{S}^n$) đúng là $\mathbb{S}^n_{++}$.
 
 </details>
 
@@ -113,7 +113,7 @@ $I$ có mọi trị riêng bằng 1 > 0 nên xác định dương, và nằm bê
 
 <details><summary>Xem lời giải thích</summary>
 
-$AB = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, không đối xứng, nên câu hỏi "có PSD không" theo định nghĩa của ta thậm chí không đặt ra được. Nón $\mathbb{S}^n_+$ khép kín với tổ hợp nón, nhưng không khép kín với phép nhân ma trận. Phép toán "an toàn" là $B^T A B$: nếu $A \succeq 0$ thì $z^T B^T A B z = (Bz)^T A (Bz) \ge 0$, nên $B^T A B \succeq 0$ với mọi $B$.
+$AB = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, không đối xứng, nên câu hỏi "có PSD không" theo định nghĩa của ta thậm chí không đặt ra được. Nón $\mathbb{S}^n_+$ khép kín với tổ hợp nón, nhưng không khép kín với phép nhân ma trận. Phép toán "an toàn" là $B^T A B$: Nếu $A \succeq 0$ thì $z^T B^T A B z = (Bz)^T A (Bz) \ge 0$, nên $B^T A B \succeq 0$ với mọi $B$.
 
 </details>
 
@@ -121,7 +121,7 @@ $AB = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, không đối xứng, nên 
 
 <details><summary>Xem lời giải thích</summary>
 
-Theo điều kiện $2 \times 2$: $2 \ge 0$, $8 \ge 0$ và $16 \ge t^2$, tức $-4 \le t \le 4$. Tập các $t$ là một đoạn thẳng, một tập lồi. Điều này không ngẫu nhiên: ánh xạ $t \mapsto \begin{bmatrix} 2 & t \\ t & 8 \end{bmatrix}$ là affine, và tập các $t$ là ảnh ngược của nón lồi $\mathbb{S}^2_+$ qua ánh xạ đó. Chủ đề về các phép toán giữ tính lồi sẽ chứng minh ảnh ngược affine của tập lồi luôn lồi. Hai đầu mút $t = \pm 4$ cho ma trận suy biến, và ma trận xác định dương khi $|t| < 4$.
+Theo điều kiện $2 \times 2$: $2 \ge 0$, $8 \ge 0$ và $16 \ge t^2$, tức $-4 \le t \le 4$. Tập các $t$ là một đoạn thẳng, một tập lồi. Điều này không ngẫu nhiên: Ánh xạ $t \mapsto \begin{bmatrix} 2 & t \\ t & 8 \end{bmatrix}$ là affine, và tập các $t$ là ảnh ngược của nón lồi $\mathbb{S}^2_+$ qua ánh xạ đó. Chủ đề về các phép toán giữ tính lồi sẽ chứng minh ảnh ngược affine của tập lồi luôn lồi. Hai đầu mút $t = \pm 4$ cho ma trận suy biến, và ma trận xác định dương khi $|t| < 4$.
 
 </details>
 

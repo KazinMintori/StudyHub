@@ -4,11 +4,11 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: data-cleaning](https://wesmckinney.com/book/data-cleaning)
+- [Python for Data Analysis: Data-cleaning](https://wesmckinney.com/book/data-cleaning)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-07-xu-ly-chuoi.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-07-xu-ly-chuoi.html)
 
 ## Phạm vi đã biên soạn
 

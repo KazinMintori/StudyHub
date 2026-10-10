@@ -19,7 +19,7 @@ Muốn tính trung bình phân tán, gửi cặp (tổng,số lượng), cộng 
 
 ## Ví dụ
 
-Cộng số nguyên kết hợp và giao hoán. Nối chuỗi kết hợp nhưng không giao hoán: "ab" khác "ba".
+Cộng số nguyên kết hợp và giao hoán. Nối chuỗi kết hợp nhưng không giao hoán: "Ab" khác "ba".
 
 ## Khi nào cần dùng?
 

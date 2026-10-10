@@ -22,7 +22,7 @@ Hãy ghi mỗi số cùng đơn vị đúng và giữ đơn vị qua các bướ
 
 ### Chiến lược giải bài toán 1.2 — Đổi đơn vị
 
-**Xác định khái niệm.** Trong phần lớn bài toán, nên dùng các đơn vị SI cơ bản: độ dài bằng mét, khối lượng bằng kilôgam và thời gian bằng giây. Nếu đề yêu cầu kết quả theo đơn vị khác như kilômét, gam hoặc giờ, có thể đợi đến cuối lời giải mới quy đổi.
+**Xác định khái niệm.** Trong phần lớn bài toán, nên dùng các đơn vị SI cơ bản: Độ dài bằng mét, khối lượng bằng kilôgam và thời gian bằng giây. Nếu đề yêu cầu kết quả theo đơn vị khác như kilômét, gam hoặc giờ, có thể đợi đến cuối lời giải mới quy đổi.
 
 **Thiết lập và thực hiện.** Đơn vị được nhân và chia như ký hiệu đại số. Ta có thể đổi đơn vị bằng cách biểu diễn cùng một đại lượng theo hai đơn vị khác nhau rồi lập một đẳng thức.
 
@@ -53,7 +53,7 @@ Theo dữ kiện được sách ghi lại, kỷ lục tốc độ trên mặt đ
 :::
 
 ::: solution Lời giải của sách
-**Xác định, thiết lập và thực hiện.** Ta đổi tốc độ từ dặm trên giờ sang mét trên giây. Vì vậy cần những hệ số liên hệ: (i) dặm với mét, (ii) giờ với giây. Phụ lục E cho:
+**Xác định, thiết lập và thực hiện.** Ta đổi tốc độ từ dặm trên giờ sang mét trên giây. Vì vậy cần những hệ số liên hệ: (I) dặm với mét, (ii) giờ với giây. Phụ lục E cho:
 
 $$
 1\,\mathrm{mi}=1.609\,\mathrm{km},\qquad
@@ -74,7 +74,7 @@ $$
 \end{aligned}
 $$
 
-**Đánh giá.** Ví dụ cho một quy tắc ước lượng: giá trị tốc độ tính bằng $\mathrm{m/s}$ hơi nhỏ hơn một nửa giá trị tính bằng $\mathrm{mi/h}$, và hơi nhỏ hơn một phần ba giá trị tính bằng $\mathrm{km/h}$. Chẳng hạn, tốc độ thông thường trên đường cao tốc xấp xỉ $30\,\mathrm{m/s}=67\,\mathrm{mi/h}=108\,\mathrm{km/h}$; tốc độ đi bộ điển hình xấp xỉ $1.4\,\mathrm{m/s}=3.1\,\mathrm{mi/h}=5.0\,\mathrm{km/h}$.
+**Đánh giá.** Ví dụ cho một quy tắc ước lượng: Giá trị tốc độ tính bằng $\mathrm{m/s}$ hơi nhỏ hơn một nửa giá trị tính bằng $\mathrm{mi/h}$, và hơi nhỏ hơn một phần ba giá trị tính bằng $\mathrm{km/h}$. Chẳng hạn, tốc độ thông thường trên đường cao tốc xấp xỉ $30\,\mathrm{m/s}=67\,\mathrm{mi/h}=108\,\mathrm{km/h}$; tốc độ đi bộ điển hình xấp xỉ $1.4\,\mathrm{m/s}=3.1\,\mathrm{mi/h}=5.0\,\mathrm{km/h}$.
 
 **Ý chính của ví dụ:** Đổi đơn vị bằng cách nhân với hệ số đổi đơn vị thích hợp.
 :::

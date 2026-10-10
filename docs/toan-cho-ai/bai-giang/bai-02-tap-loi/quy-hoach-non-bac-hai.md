@@ -7,7 +7,7 @@ title: "Quy hoạch nón bậc hai và LP bền vững"
 description: "Ràng buộc nón bậc hai và vì sao nó lồi, quy hoạch nón bậc hai cùng quan hệ với LP và QCQP, cảnh báo khi bình phương hai vế, LP bền vững với hệ số bất định trong ellipsoid, ràng buộc xác suất với hệ số Gauss, ràng buộc hyperbolic và cách viết nhiều bài toán chứa chuẩn Euclid thành SOCP."
 ---
 
-Một ràng buộc tuyến tính $a^Tx \le b$ giả định rằng ta biết chính xác vector $a$. Trong thực tế, $a$ thường là một ước lượng: hàm lượng dinh dưỡng của thực phẩm, năng suất của một máy, hệ số của một mô hình học từ dữ liệu. Nếu muốn ràng buộc đúng với **mọi** giá trị có thể của $a$ trong một vùng bất định hình ellipsoid, ràng buộc tuyến tính ấy biến thành một ràng buộc có chứa chuẩn Euclid. Lớp bài toán chứa những ràng buộc như thế được gọi là **quy hoạch nón bậc hai** (second-order cone program, SOCP).
+Một ràng buộc tuyến tính $a^Tx \le b$ giả định rằng ta biết chính xác vector $a$. Trong thực tế, $a$ thường là một ước lượng: Hàm lượng dinh dưỡng của thực phẩm, năng suất của một máy, hệ số của một mô hình học từ dữ liệu. Nếu muốn ràng buộc đúng với **mọi** giá trị có thể của $a$ trong một vùng bất định hình ellipsoid, ràng buộc tuyến tính ấy biến thành một ràng buộc có chứa chuẩn Euclid. Lớp bài toán chứa những ràng buộc như thế được gọi là **quy hoạch nón bậc hai** (second-order cone program, SOCP).
 
 Trang này định nghĩa SOCP, chỉ ra nó nằm ở đâu so với LP và QCQP, rồi xem hai nguồn sinh ra nó trong sách: LP bền vững và ràng buộc xác suất.
 
@@ -50,7 +50,7 @@ $$
 với tâm $\bar a_i$ là giá trị danh nghĩa và ma trận $P_i$ mô tả độ bất định. Ta đòi hỏi mỗi ràng buộc đúng với mọi $a_i \in \mathcal{E}_i$. Đây là một điều kiện "với mọi", và cũng như với [tâm Chebyshev](./mo-hinh-lp.md), ta thay nó bằng giá trị lớn nhất:
 
 $$
-\sup\{a_i^Tx : a_i \in \mathcal{E}_i\} = \bar a_i^Tx + \sup\{u^TP_i^Tx : \|u\|_2 \le 1\} = \bar a_i^Tx + \|P_i^Tx\|_2 ,
+\sup\{a_i^Tx : A_i \in \mathcal{E}_i\} = \bar a_i^Tx + \sup\{u^TP_i^Tx : \|u\|_2 \le 1\} = \bar a_i^Tx + \|P_i^Tx\|_2 ,
 $$
 
 trong đó đẳng thức cuối là bất đẳng thức Cauchy–Schwarz, đạt khi $u$ cùng hướng với $P_i^Tx$. Vậy LP bền vững là SOCP
@@ -62,9 +62,9 @@ $$
 \end{aligned}
 $$
 
-Số hạng $\|P_i^Tx\|_2$ có một cách hiểu đáng nhớ: nó đóng vai một **số hạng điều chuẩn**, ngăn $x$ lớn theo những hướng mà hệ số còn nhiều bất định. Một nghiệm bền vững là một nghiệm thận trọng: nó chấp nhận giá trị mục tiêu kém hơn một chút để đổi lấy sự an toàn trước sai số của dữ liệu.
+Số hạng $\|P_i^Tx\|_2$ có một cách hiểu đáng nhớ: Nó đóng vai một **số hạng điều chuẩn**, ngăn $x$ lớn theo những hướng mà hệ số còn nhiều bất định. Một nghiệm bền vững là một nghiệm thận trọng: Nó chấp nhận giá trị mục tiêu kém hơn một chút để đổi lấy sự an toàn trước sai số của dữ liệu.
 
-Ví dụ tự đặt: cực đại $x_1 + 2x_2$ với năm ràng buộc $x_1 \le 3$, $x_2 \le 2$, $x_1 + x_2 \le 4$, $-x_1 \le 1$, $-x_2 \le 1$. Nghiệm danh nghĩa là $(2, 2)$ với giá trị 6. Bây giờ giả sử mỗi vector hệ số chỉ biết nằm trong hình tròn bán kính $\rho$ quanh giá trị danh nghĩa, tức $P_i = \rho I$, và ràng buộc bền vững là $\bar a_i^Tx + \rho\|x\|_2 \le b_i$. Với $\rho = 0.2$, nghiệm bền vững là $(2,\ 1.5)$ với giá trị 5. Kiểm tra trực tiếp: $\|(2, 1.5)\|_2 = 2.5$, nên hai ràng buộc $x_2 \le 2$ và $x_1 + x_2 \le 4$ trở thành $1.5 + 0.5 = 2$ và $3.5 + 0.5 = 4$, cùng chặt. Còn nghiệm danh nghĩa $(2, 2)$ có $\rho\|x\|_2 \approx 0.566$, nên trong trường hợp xấu nhất nó vượt cả hai ràng buộc ấy khoảng 0.566.
+Ví dụ tự đặt: Cực đại $x_1 + 2x_2$ với năm ràng buộc $x_1 \le 3$, $x_2 \le 2$, $x_1 + x_2 \le 4$, $-x_1 \le 1$, $-x_2 \le 1$. Nghiệm danh nghĩa là $(2, 2)$ với giá trị 6. Bây giờ giả sử mỗi vector hệ số chỉ biết nằm trong hình tròn bán kính $\rho$ quanh giá trị danh nghĩa, tức $P_i = \rho I$, và ràng buộc bền vững là $\bar a_i^Tx + \rho\|x\|_2 \le b_i$. Với $\rho = 0.2$, nghiệm bền vững là $(2,\ 1.5)$ với giá trị 5. Kiểm tra trực tiếp: $\|(2, 1.5)\|_2 = 2.5$, nên hai ràng buộc $x_2 \le 2$ và $x_1 + x_2 \le 4$ trở thành $1.5 + 0.5 = 2$ và $3.5 + 0.5 = 4$, cùng chặt. Còn nghiệm danh nghĩa $(2, 2)$ có $\rho\|x\|_2 \approx 0.566$, nên trong trường hợp xấu nhất nó vượt cả hai ràng buộc ấy khoảng 0.566.
 
 <RobustLPLab />
 
@@ -84,11 +84,11 @@ $$
 
 Khi $\eta \ge \tfrac12$, hệ số $\Phi^{-1}(\eta) \ge 0$, và đây là một ràng buộc nón bậc hai. Khi $\eta < \tfrac12$, hệ số âm, vế trái là một hàm affine trừ đi một chuẩn, hàm lõm, và ràng buộc không còn lồi. Đòi hỏi độ tin cậy cao lại cho bài toán dễ, còn đòi hỏi độ tin cậy thấp lại cho bài toán khó, một điều thoạt nghe rất ngược đời.
 
-Ví dụ một biến: hàm lượng một chất trong mỗi đơn vị nguyên liệu là biến Gauss với trung bình 2 và độ lệch chuẩn 0.3, và tổng hàm lượng trong $x$ đơn vị không được vượt quá 10 với xác suất ít nhất 95%. Với $\Phi^{-1}(0.95) \approx 1.645$, ràng buộc là $2x + 1.645 \times 0.3\,x \le 10$, tức $x \le 4.01$. Nếu bỏ qua bất định và dùng giá trị trung bình, ta cho phép $x$ tới 5, nhưng khi đó xác suất vi phạm là đúng 50%. Một mô phỏng Monte Carlo với hai triệu mẫu xác nhận xác suất thỏa ràng buộc tại $x = 4.01$ là khoảng 0.95.
+Ví dụ một biến: Hàm lượng một chất trong mỗi đơn vị nguyên liệu là biến Gauss với trung bình 2 và độ lệch chuẩn 0.3, và tổng hàm lượng trong $x$ đơn vị không được vượt quá 10 với xác suất ít nhất 95%. Với $\Phi^{-1}(0.95) \approx 1.645$, ràng buộc là $2x + 1.645 \times 0.3\,x \le 10$, tức $x \le 4.01$. Nếu bỏ qua bất định và dùng giá trị trung bình, ta cho phép $x$ tới 5, nhưng khi đó xác suất vi phạm là đúng 50%. Một mô phỏng Monte Carlo với hai triệu mẫu xác nhận xác suất thỏa ràng buộc tại $x = 4.01$ là khoảng 0.95.
 
 ## 4. Ràng buộc hyperbolic và những biểu thức khác
 
-Nhiều ràng buộc không trông giống nón bậc hai vẫn viết lại được thành nón bậc hai. Một đồng nhất thức hữu ích, là bài tập 4.26 của sách: với $y, z \ge 0$,
+Nhiều ràng buộc không trông giống nón bậc hai vẫn viết lại được thành nón bậc hai. Một đồng nhất thức hữu ích, là bài tập 4.26 của sách: Với $y, z \ge 0$,
 
 $$
 x^Tx \le yz \iff \left\|\begin{bmatrix} 2x \\ y - z \end{bmatrix}\right\|_2 \le y + z .
@@ -96,7 +96,7 @@ $$
 
 Chứng minh chỉ là khai triển. Bình phương vế phải trừ bình phương vế trái là $(y + z)^2 - (y - z)^2 - 4x^Tx$, rút gọn thành $4(yz - x^Tx)$, và cả hai vế đều không âm khi $y, z \ge 0$. Nhờ đó, ràng buộc $\tfrac{\|x\|_2^2}{y} \le t$ với $y > 0$, chẳng hạn khi một hàm mục tiêu chứa tỉ số giữa bình phương sai số và một phương sai cần ước lượng, là một ràng buộc nón bậc hai.
 
-Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\|_2$ là cực tiểu $t$ với $\|Ax - b\|_2 \le t$. Cực tiểu tổng các chuẩn $\sum_i \|A_ix + b_i\|_2$ là cực tiểu $\sum_i t_i$ với $\|A_ix + b_i\|_2 \le t_i$. Sách còn trình bày bài toán **mặt cực tiểu**: tìm mặt có diện tích nhỏ nhất căng trên một khung cho trước. Sau khi rời rạc hóa, diện tích là tổng các chuẩn Euclid của những vector gradient xấp xỉ, nên bài toán cũng là SOCP.
+Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\|_2$ là cực tiểu $t$ với $\|Ax - b\|_2 \le t$. Cực tiểu tổng các chuẩn $\sum_i \|A_ix + b_i\|_2$ là cực tiểu $\sum_i t_i$ với $\|A_ix + b_i\|_2 \le t_i$. Sách còn trình bày bài toán **mặt cực tiểu**: Tìm mặt có diện tích nhỏ nhất căng trên một khung cho trước. Sau khi rời rạc hóa, diện tích là tổng các chuẩn Euclid của những vector gradient xấp xỉ, nên bài toán cũng là SOCP.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -104,7 +104,7 @@ Một số bài toán quen thuộc khác cũng là SOCP. Cực tiểu $\|Ax - b\
 
 <details><summary>Xem lời giải thích</summary>
 
-Giá trị lớn nhất của $a^Tx$ trên hình hộp là $\bar a^Tx + \delta\|x\|_1$, đạt khi mỗi $a_j$ lệch về phía cùng dấu với $x_j$. Chẳng hạn với $\bar a = (1, 2)$, $\delta = 0.1$ và $x = (3, -1)$, giá trị lớn nhất là $1 + 0.1 \times 4 = 1.4$. Ràng buộc bền vững $\bar a^Tx + \delta\|x\|_1 \le b$ chứa chuẩn $\ell_1$, và viết được thành các bất đẳng thức tuyến tính bằng biến phụ $|x_j| \le s_j$. Vậy LP bền vững với hộp bất định vẫn là một LP. Hình dạng của vùng bất định quyết định lớp bài toán: hộp cho LP, ellipsoid cho SOCP. Đây là một ví dụ của nguyên tắc chung: giá trị lớn nhất của $a^Tx$ trên một hình cầu chuẩn là chuẩn đối ngẫu của $x$.
+Giá trị lớn nhất của $a^Tx$ trên hình hộp là $\bar a^Tx + \delta\|x\|_1$, đạt khi mỗi $a_j$ lệch về phía cùng dấu với $x_j$. Chẳng hạn với $\bar a = (1, 2)$, $\delta = 0.1$ và $x = (3, -1)$, giá trị lớn nhất là $1 + 0.1 \times 4 = 1.4$. Ràng buộc bền vững $\bar a^Tx + \delta\|x\|_1 \le b$ chứa chuẩn $\ell_1$, và viết được thành các bất đẳng thức tuyến tính bằng biến phụ $|x_j| \le s_j$. Vậy LP bền vững với hộp bất định vẫn là một LP. Hình dạng của vùng bất định quyết định lớp bài toán: Hộp cho LP, ellipsoid cho SOCP. Đây là một ví dụ của nguyên tắc chung: Giá trị lớn nhất của $a^Tx$ trên một hình cầu chuẩn là chuẩn đối ngẫu của $x$.
 
 </details>
 
@@ -112,7 +112,7 @@ Giá trị lớn nhất của $a^Tx$ trên hình hộp là $\bar a^Tx + \delta\|
 
 <details><summary>Xem lời giải thích</summary>
 
-Với $\eta = 0.1$, $\Phi^{-1}(0.1) \approx -1.28 < 0$, và ràng buộc là $\bar a^Tx - 1.28\,\|\Sigma^{1/2}x\|_2 \le b$. Vế trái là affine trừ một chuẩn, nên lõm, và tập các $x$ thỏa ràng buộc nói chung không lồi. Trực giác như sau. Với độ tin cậy thấp, ta được phép "đánh cược" rằng sai số sẽ có lợi cho mình, và có nhiều cách đặt cược rời rạc nhau: đi theo một hướng mà sai số có thể kéo $a^Tx$ xuống, hoặc theo một hướng khác. Hợp của những lựa chọn ấy không lồi. Với độ tin cậy cao, ta phải phòng thủ theo mọi hướng, và yêu cầu phòng thủ là một giao, một tập lồi. Trong một chiều, như ví dụ nguyên liệu với $x \ge 0$, ràng buộc vẫn chỉ là một đoạn, nên điều này chỉ lộ ra từ hai chiều trở lên.
+Với $\eta = 0.1$, $\Phi^{-1}(0.1) \approx -1.28 < 0$, và ràng buộc là $\bar a^Tx - 1.28\,\|\Sigma^{1/2}x\|_2 \le b$. Vế trái là affine trừ một chuẩn, nên lõm, và tập các $x$ thỏa ràng buộc nói chung không lồi. Trực giác như sau. Với độ tin cậy thấp, ta được phép "đánh cược" rằng sai số sẽ có lợi cho mình, và có nhiều cách đặt cược rời rạc nhau: Đi theo một hướng mà sai số có thể kéo $a^Tx$ xuống, hoặc theo một hướng khác. Hợp của những lựa chọn ấy không lồi. Với độ tin cậy cao, ta phải phòng thủ theo mọi hướng, và yêu cầu phòng thủ là một giao, một tập lồi. Trong một chiều, như ví dụ nguyên liệu với $x \ge 0$, ràng buộc vẫn chỉ là một đoạn, nên điều này chỉ lộ ra từ hai chiều trở lên.
 
 </details>
 
@@ -139,7 +139,7 @@ Viết bài toán cực tiểu $\|Ax - b\|_2 + \lambda\|x\|_2$, với $\lambda >
 :::
 
 ::: solution
-Thêm hai biến $t_1, t_2$ và viết: cực tiểu $t_1 + \lambda t_2$ với $\|Ax - b\|_2 \le t_1$ và $\|x\|_2 \le t_2$. Hai ràng buộc là ràng buộc nón bậc hai theo $(x, t_1, t_2)$, hàm mục tiêu tuyến tính. Bài toán tương đương bài toán gốc vì tại nghiệm, cả hai ràng buộc đều chặt: nếu $t_1 > \|Ax - b\|_2$, giảm $t_1$ sẽ giảm hàm mục tiêu.
+Thêm hai biến $t_1, t_2$ và viết: Cực tiểu $t_1 + \lambda t_2$ với $\|Ax - b\|_2 \le t_1$ và $\|x\|_2 \le t_2$. Hai ràng buộc là ràng buộc nón bậc hai theo $(x, t_1, t_2)$, hàm mục tiêu tuyến tính. Bài toán tương đương bài toán gốc vì tại nghiệm, cả hai ràng buộc đều chặt: Nếu $t_1 > \|Ax - b\|_2$, giảm $t_1$ sẽ giảm hàm mục tiêu.
 :::
 
 ::: exercise 2. Ràng buộc xác suất
@@ -159,7 +159,7 @@ Với $x = (1, 2)$, $y = 2$, $z = 3$, kiểm tra cả hai vế của đồng nh�
 :::
 
 ::: solution
-Vế trái: $x^Tx = 5 \le yz = 6$, đúng. Vế phải: vector $(2x, y - z) = (2, 4, -1)$ có chuẩn $\sqrt{21} \approx 4.583$, không vượt quá $y + z = 5$, cũng đúng. Hai vế cùng đúng, và hiệu bình phương $25 - 21 = 4 = 4(yz - x^Tx)$, khớp với chứng minh.
+Vế trái: $x^Tx = 5 \le yz = 6$, đúng. Vế phải: Vector $(2x, y - z) = (2, 4, -1)$ có chuẩn $\sqrt{21} \approx 4.583$, không vượt quá $y + z = 5$, cũng đúng. Hai vế cùng đúng, và hiệu bình phương $25 - 21 = 4 = 4(yz - x^Tx)$, khớp với chứng minh.
 :::
 
 ## Tóm tắt

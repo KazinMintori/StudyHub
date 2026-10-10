@@ -15,7 +15,7 @@ Tập C là affine nếu với mọi $x, y \in C$ và mọi số thực $\theta$
 
 **Từ tổ hợp affine tới không gian con.** Tổ hợp affine $\theta_1 x_1 + \cdots + \theta_k x_k$ với $\sum_i \theta_i = 1$ cho phép trọng số âm. Nếu $C$ affine và $x_0 \in C$ thì $V = C - x_0$ đóng với phép cộng và nhân vô hướng, nên là không gian con, và chiều của $C$ được định nghĩa là chiều của $V$.
 
-**Tập nghiệm của hệ tuyến tính.** Tập $\{x : Ax = b\}$ là affine, và ngược lại mọi tập affine đều viết được dưới dạng này, với không gian con tương ứng là không gian không $\mathcal N(A)$. Vì vậy ràng buộc đẳng thức trong bài toán lồi phải affine: một đẳng thức phi tuyến như $x_1^2 + x_2^2 = 1$ cho đường tròn, không lồi.
+**Tập nghiệm của hệ tuyến tính.** Tập $\{x : Ax = b\}$ là affine, và ngược lại mọi tập affine đều viết được dưới dạng này, với không gian con tương ứng là không gian không $\mathcal N(A)$. Vì vậy ràng buộc đẳng thức trong bài toán lồi phải affine: Một đẳng thức phi tuyến như $x_1^2 + x_2^2 = 1$ cho đường tròn, không lồi.
 
 **Bao affine.** Bao affine $\operatorname{aff} C$ gồm mọi tổ hợp affine của các điểm trong $C$. Ba điểm không thẳng hàng trong $\mathbb R^3$ có bao affine là cả một mặt phẳng. Nguồn: Convex Optimization, §2.1.1–2.1.3.
 

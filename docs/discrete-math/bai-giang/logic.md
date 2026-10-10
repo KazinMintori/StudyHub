@@ -69,94 +69,9 @@ $$
 
 ## 3. Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài 1: Chứng minh tương đương logic bằng luật biến đổi
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-::: exercise Yêu cầu
-Không dùng bảng chân trị, hãy sử dụng các luật tương đương logic cơ bản để chứng minh rằng:
-$$
-p \rightarrow (q \rightarrow r) \equiv (p \land q) \rightarrow r
-$$
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
 :::
 
-::: solution
-#### Lời giải chi tiết
-Biến đổi vế trái bằng cách áp dụng luật kéo theo $A \rightarrow B \equiv \neg A \lor B$:
-
-$$
-\begin{aligned}
-p \rightarrow (q \rightarrow r) &\equiv \neg p \lor (q \rightarrow r) \\
-&\equiv \neg p \lor (\neg q \lor r) \quad (\text{Luật kéo theo cho ngoặc trong}) \\
-&\equiv (\neg p \lor \neg q) \lor r \quad (\text{Tính chất kết hợp của phép tuyển}) \\
-&\equiv \neg (p \land q) \lor r \quad (\text{Luật De Morgan}) \\
-&\equiv (p \land q) \rightarrow r \quad (\text{Đưa về dạng kéo theo}).
-\end{aligned}
-$$
-
-Đẳng thức được chứng minh hoàn tất.
-:::
-
----
-
-### Bài 2: Phủ định mệnh đề lượng từ vị từ phức tạp
-
-::: exercise Yêu cầu
-Cho vị từ $P(x, y)$ và $Q(x)$ xác định trên tập số thực $\mathbb{R}$. Hãy tìm mệnh đề phủ định của phát biểu sau sao cho dấu phủ định $\neg$ chỉ đứng ngay trước các vị từ cơ sở:
-$$
-\forall x \exists y \left( P(x, y) \rightarrow Q(x) \right)
-$$
-:::
-
-::: solution
-#### Lời giải chi tiết
-Áp dụng quy tắc phủ định lượng từ và luật kéo theo:
-
-1. Phủ định bên ngoài:
-   $$
-   \neg \left[ \forall x \exists y (P(x, y) \rightarrow Q(x)) \right] \equiv \exists x \forall y \neg \left[ P(x, y) \rightarrow Q(x) \right]
-   $$
-
-2. Biến đổi phần phủ định bên trong:
-   Vì $P(x, y) \rightarrow Q(x) \equiv \neg P(x, y) \lor Q(x)$, nên:
-   $$
-   \neg \left[ P(x, y) \rightarrow Q(x) \right] \equiv \neg \left[ \neg P(x, y) \lor Q(x) \right]
-   $$
-   Áp dụng luật De Morgan:
-   $$
-   \neg \left[ \neg P(x, y) \lor Q(x) \right] \equiv P(x, y) \land \neg Q(x)
-   $$
-
-3. Kết quả phủ định cuối cùng:
-   $$
-   \exists x \forall y \left( P(x, y) \land \neg Q(x) \right)
-   $$
-:::
-
----
-
-### Bài 3: Kiểm tra tính hằng đúng (Tautology)
-
-::: exercise Yêu cầu
-Xét biểu thức logic sau:
-$$
-E = \left[ (p \rightarrow q) \land (q \rightarrow r) \right] \rightarrow (p \rightarrow r)
-$$
-Hãy chứng minh $E$ là một hằng đúng (luôn có giá trị chân lý là 1 trên mọi trường hợp của $p, q, r$). Quy tắc suy luận này có tên gọi là gì?
-:::
-
-::: solution
-#### Lời giải chi tiết
-Đây là **Quy tắc tam đoạn luận giả định (Hypothetical Syllogism)**. Ta chứng minh bằng phương pháp phản chứng:
-
-Giả sử biểu thức $E$ nhận giá trị SAI ($0$).
-Vì $E$ có dạng $A \rightarrow B$, điều này chỉ xảy ra khi:
-- Tiền đề $A = 1 \iff (p \rightarrow q) \land (q \rightarrow r) = 1$, tức là:
-  $$p \rightarrow q = 1 \quad \text{và} \quad q \rightarrow r = 1$$
-- Kết luận $B = 0 \iff p \rightarrow r = 0$, điều này xảy ra khi và chỉ khi:
-  $$p = 1 \quad \text{và} \quad r = 0$$
-
-Từ $p = 1$ và $p \rightarrow q = 1$, suy ra bắt buộc $q = 1$.
-Từ $q = 1$ và $q \rightarrow r = 1$, suy ra bắt buộc $r = 1$.
-
-Điều này mâu thuẫn trực tiếp với điều kiện $r = 0$ ở trên.
-Do giả thiết phản chứng dẫn tới mâu thuẫn, biểu thức $E$ không bao giờ nhận giá trị 0. Vậy $E$ là một hằng đúng.
-:::

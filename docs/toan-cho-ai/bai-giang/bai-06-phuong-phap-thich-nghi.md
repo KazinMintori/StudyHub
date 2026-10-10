@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Cơ chế thích nghi từng tọa độ của AdaGrad, RMSProp và Adam; đối chiếu Newton, Gradient liên hợp (CG) và BFGS; phương pháp luận so sánh optimizer."
 ---
 
-Một trong những thách thức lớn nhất khi huấn luyện mạng nơ-ron sâu là: **các tham số khác nhau thường đòi hỏi tốc độ cập nhật hoàn toàn khác nhau**. Trong các mô hình ngôn ngữ lớn (LLM) hay hệ thống gợi ý, các đặc trưng hiếm (rare tokens/features) chỉ xuất hiện vài lần trong hàng triệu mẫu dữ liệu, khiến gradient của chúng rất nhỏ và thưa thớt. Ngược lại, các từ nối hay đặc trưng phổ biến xuất hiện liên tục với gradient dồn dập. Nếu ép toàn bộ mô hình dùng chung một tốc độ học $\eta$, các tham số hiếm sẽ hầu như không kịp học, trong khi các tham số phổ biến lại dao động dữ dội.
+Một trong những thách thức lớn nhất khi huấn luyện mạng nơ-ron sâu là: **Các tham số khác nhau thường đòi hỏi tốc độ cập nhật hoàn toàn khác nhau**. Trong các mô hình ngôn ngữ lớn (LLM) hay hệ thống gợi ý, các đặc trưng hiếm (rare tokens/features) chỉ xuất hiện vài lần trong hàng triệu mẫu dữ liệu, khiến gradient của chúng rất nhỏ và thưa thớt. Ngược lại, các từ nối hay đặc trưng phổ biến xuất hiện liên tục với gradient dồn dập. Nếu ép toàn bộ mô hình dùng chung một tốc độ học $\eta$, các tham số hiếm sẽ hầu như không kịp học, trong khi các tham số phổ biến lại dao động dữ dội.
 
 Lớp thuật toán tối ưu thích nghi (Adaptive Optimization) — dẫn đầu bởi AdaGrad, RMSProp và Adam — giải quyết bài toán này bằng cách tự động gán cho mỗi tham số một tốc độ học riêng biệt, biến thiên linh hoạt theo lịch sử biến động của gradient.
 
@@ -18,7 +18,7 @@ Song song với đó, các phương pháp xấp xỉ bậc hai như **Gradient l
 
 ## 1. AdaGrad: Thích nghi hóa theo Tổng bình phương Gradient
 
-Thuật toán **AdaGrad** (Duchi et al., 2011) khởi xướng ý tưởng: các tọa độ nào nhận gradient lớn trong quá khứ cần giảm tốc độ học lại để tránh dao động; ngược lại, các tọa độ nào ít nhận gradient cần được tăng bước nhảy để nhanh chóng bắt kịp.
+Thuật toán **AdaGrad** (Duchi et al., 2011) khởi xướng ý tưởng: Các tọa độ nào nhận gradient lớn trong quá khứ cần giảm tốc độ học lại để tránh dao động; ngược lại, các tọa độ nào ít nhận gradient cần được tăng bước nhảy để nhanh chóng bắt kịp.
 
 Khởi tạo bộ tích lũy $s_0 = 0$, tại mỗi bước $t$, AdaGrad cập nhật:
 
@@ -95,8 +95,8 @@ Bước nhảy ban đầu này lớn hơn so với AdaGrad ($-0.1$) vì trạng 
 Thuật toán **Adam (Adaptive Moment Estimation)** do Diederik Kingma và Jimmy Ba công bố năm 2014, hiện là thuật toán tối ưu hóa mặc định và phổ biến bậc nhất trong toàn bộ nền kỹ nghệ AI.
 
 Adam kết hợp sức mạnh của cả hai trường phái:
-- **Moment bậc nhất** (First Moment - quán tính như Momentum): ước lượng kỳ vọng của gradient có dấu để làm mượt hướng đi.
-- **Moment bậc hai** (Second Moment - thang đo như RMSProp): ước lượng phương sai không định tâm của bình phương gradient để co giãn bước đi.
+- **Moment bậc nhất** (First Moment - quán tính như Momentum): Ước lượng kỳ vọng của gradient có dấu để làm mượt hướng đi.
+- **Moment bậc hai** (Second Moment - thang đo như RMSProp): Ước lượng phương sai không định tâm của bình phương gradient để co giãn bước đi.
 
 ### Thuật toán Adam chuẩn tắc
 Khởi tạo $m_0 = 0$, $v_0 = 0$, tại mỗi bước $t = 1, 2, \ldots$:
@@ -170,7 +170,7 @@ Trong phương pháp Newton, ta phải giải hệ phương trình $H d = -g$. K
 
 Làm sao giải hệ $Hz = b$ (với $b = -g$) mà không cần lưu ma trận $H$? Câu trả lời là **Phương pháp Gradient liên hợp (Conjugate Gradient - CG)**.
 
-CG chỉ đòi hỏi một thao tác tính duy nhất: **tính tích ma trận - vector $H v$** (thao tác này có thể thực hiện nhanh chóng qua phép vi phân tự động cấp hai mà không cần lập ma trận $H$).
+CG chỉ đòi hỏi một thao tác tính duy nhất: **Tính tích ma trận - vector $H v$** (thao tác này có thể thực hiện nhanh chóng qua phép vi phân tự động cấp hai mà không cần lập ma trận $H$).
 
 Với ma trận $H$ đối xứng dương xác định ($H \succ 0$), khởi tạo $z_0$, phần dư $r_0 = b - H z_0$, và hướng liên hợp đầu tiên $p_0 = r_0$:
 
@@ -208,7 +208,7 @@ Cho $H = \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ và $b = \begin{bmatrix} 
 
 ## 5. Phương pháp Quasi-Newton: BFGS và Điều kiện Secant
 
-Một hướng tiếp cận khác để khai thác độ cong mà không phải tính đạo hàm bậc hai là **Phương pháp Quasi-Newton (Tựa Newton)**. Ý tưởng: tích lũy thông tin độ cong từ chuỗi các vector dịch chuyển vị trí $s_k = \theta_{k+1} - \theta_k$ và biến thiên gradient $y_k = g_{k+1} - g_k$.
+Một hướng tiếp cận khác để khai thác độ cong mà không phải tính đạo hàm bậc hai là **Phương pháp Quasi-Newton (Tựa Newton)**. Ý tưởng: Tích lũy thông tin độ cong từ chuỗi các vector dịch chuyển vị trí $s_k = \theta_{k+1} - \theta_k$ và biến thiên gradient $y_k = g_{k+1} - g_k$.
 
 Theo định lý giá trị trung bình, ta có $y_k \approx H s_k \iff H^{-1} y_k \approx s_k$.
 Thuật toán **BFGS (Broyden–Fletcher–Goldfarb–Shanno)** xấp xỉ trực tiếp ma trận Hessian nghịch đảo $M_k \approx H_k^{-1}$ thỏa mãn **điều kiện secant**:

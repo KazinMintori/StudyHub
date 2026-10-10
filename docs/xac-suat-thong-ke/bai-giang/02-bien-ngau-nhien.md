@@ -8,9 +8,9 @@ lessonStatus: ready
 description: "Bản chất biến ngẫu nhiên, phân biệt rời rạc và liên tục, hàm khối xác suất PMF, hàm mật độ PDF và hàm phân phối tích lũy CDF."
 ---
 
-Trong đời sống, kết quả của một hiện tượng ngẫu nhiên xuất hiện dưới vô vàn hình thái: một đồng xu rơi xuống mặt ngửa hay mặt sấp, một con xúc xắc lăn ra số chấm từ 1 đến 6, thời gian bạn phải chờ chuyến xe buýt kế tiếp, hay số lượng truy cập máy chủ tiếp nhận trong một phần nghìn giây. Làm thế nào để toán học hóa những hiện tượng đa dạng đó vào cùng một hệ thống tính toán nhất quán?
+Trong đời sống, kết quả của một hiện tượng ngẫu nhiên xuất hiện dưới vô vàn hình thái: Một đồng xu rơi xuống mặt ngửa hay mặt sấp, một con xúc xắc lăn ra số chấm từ 1 đến 6, thời gian bạn phải chờ chuyến xe buýt kế tiếp, hay số lượng truy cập máy chủ tiếp nhận trong một phần nghìn giây. Làm thế nào để toán học hóa những hiện tượng đa dạng đó vào cùng một hệ thống tính toán nhất quán?
 
-Giải pháp kinh điển của lý thuyết xác suất là phát minh ra khái niệm **biến ngẫu nhiên (Random Variable)**: một cỗ máy ánh xạ gán mỗi kết cục thực tế thành một con số cụ thể. Khi các kết cục đã trở thành số thực, **quy luật phân phối xác suất** sẽ cung cấp bức tranh toàn cảnh về việc các con số đó xuất hiện với khả năng nhiều hay ít.
+Giải pháp kinh điển của lý thuyết xác suất là phát minh ra khái niệm **biến ngẫu nhiên (Random Variable)**: Một cỗ máy ánh xạ gán mỗi kết cục thực tế thành một con số cụ thể. Khi các kết cục đã trở thành số thực, **quy luật phân phối xác suất** sẽ cung cấp bức tranh toàn cảnh về việc các con số đó xuất hiện với khả năng nhiều hay ít.
 
 ## 1. Bản chất của biến ngẫu nhiên: Chiếc cầu nối từ biến cố sang con số
 
@@ -72,7 +72,7 @@ Trong thực tế kỹ thuật và đời sống, phần lớn các bài toán �
    :::
 
 3. **Phân phối Poisson** $\text{Poisson}(\lambda)$:
-   Mô hình hóa số lần một biến cố hiếm xảy ra trong một khoảng thời gian hoặc không gian liên tục cố định (ví dụ: số yêu cầu gửi tới máy chủ web trong 1 giây, số lỗi chính tả trên 1 trang sách, số cuộc gọi tới tổng đài cấp cứu trong 1 giờ).
+   Mô hình hóa số lần một biến cố hiếm xảy ra trong một khoảng thời gian hoặc không gian liên tục cố định (ví dụ: Số yêu cầu gửi tới máy chủ web trong 1 giây, số lỗi chính tả trên 1 trang sách, số cuộc gọi tới tổng đài cấp cứu trong 1 giờ).
    $$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k = 0, 1, 2, \ldots$$
    với tham số $\lambda > 0$ là tốc độ xảy ra trung bình trong khoảng quan sát.
 
@@ -82,7 +82,7 @@ Trong thực tế kỹ thuật và đời sống, phần lớn các bài toán �
 
 ## 3. Biến ngẫu nhiên liên tục: Mật độ không phải là xác suất
 
-Khi chuyển sang các đại lượng đo lường vật lý (như thời gian, khoảng cách, nhiệt độ, trọng lượng), ta bước vào thế giới của biến ngẫu nhiên liên tục. Ở đây, một hiện tượng phản trực giác xuất hiện: **xác suất để biến ngẫu nhiên nhận đúng một giá trị cụ thể bất kỳ luôn bằng 0**.
+Khi chuyển sang các đại lượng đo lường vật lý (như thời gian, khoảng cách, nhiệt độ, trọng lượng), ta bước vào thế giới của biến ngẫu nhiên liên tục. Ở đây, một hiện tượng phản trực giác xuất hiện: **Xác suất để biến ngẫu nhiên nhận đúng một giá trị cụ thể bất kỳ luôn bằng 0**.
 
 $$P(X = x_0) = 0 \quad \text{với mọi } x_0 \in \mathbb{R}.$$
 

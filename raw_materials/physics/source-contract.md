@@ -8,8 +8,8 @@ Yêu cầu trực tiếp của người dùng thay thế cách soạn tóm lư�
 
 Nguồn duy nhất cho nội dung giảng là bản *University Physics with Modern Physics*, Young & Freedman, ấn bản 15 do người dùng cung cấp. Bản nguồn cục bộ: `source/young-freedman-15.pdf`.
 
-- Vật lý đại cương 1: chương 1–20, bao gồm mọi trang từ đầu chương 1 đến hết bài tập chương 20.
-- Vật lý đại cương 2: chương 21–44, bao gồm mọi trang từ đầu chương 21 đến hết bài tập chương 44.
+- Vật lý đại cương 1: Chương 1–20, bao gồm mọi trang từ đầu chương 1 đến hết bài tập chương 20.
+- Vật lý đại cương 2: Chương 21–44, bao gồm mọi trang từ đầu chương 21 đến hết bài tập chương 44.
 - Chương 44 kết thúc ở trang in **1524**, tương ứng trang PDF **1544**. Mốc cũ 1521 chỉ là nơi bắt đầu câu hỏi/bài tập, không phải nơi kết thúc chương.
 - Phụ lục, bảng hằng số, bảng đơn vị và đáp số có trong sách phải được giữ làm tài nguyên nguồn dùng chung khi nội dung chương dẫn tới chúng.
 

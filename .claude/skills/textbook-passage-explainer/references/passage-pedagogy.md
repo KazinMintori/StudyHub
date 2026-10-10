@@ -2,7 +2,7 @@
 
 ## Đọc “đoạn” như một lập luận
 
-Một đoạn có thể vừa định nghĩa vừa cảnh báo ngoại lệ; câu cuối đôi khi nêu hệ quả, không phải ý chính. Tìm quan hệ giữa các mệnh đề trước khi viết lại: tiền đề–kết luận, cơ chế–kết quả, ví dụ–quy tắc, điều kiện–phạm vi, đối chiếu–phân biệt.
+Một đoạn có thể vừa định nghĩa vừa cảnh báo ngoại lệ; câu cuối đôi khi nêu hệ quả, không phải ý chính. Tìm quan hệ giữa các mệnh đề trước khi viết lại: Tiền đề–kết luận, cơ chế–kết quả, ví dụ–quy tắc, điều kiện–phạm vi, đối chiếu–phân biệt.
 
 Lập một sơ đồ cực ngắn trong đầu:
 

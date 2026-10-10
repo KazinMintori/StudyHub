@@ -59,8 +59,8 @@ câu sau chỉ nói "**mỗi** môn đều có (**có thể là**) một giảng
 ::: danger Bẫy thi #1 — Đảo thứ tự lượng từ
 $\exists x \,\forall y\, P(x,y)$ **KHÔNG tương đương** $\forall y\, \exists x\, P(x,y)$.
 
-- $\exists x \forall y\, \text{Yeu}(x,y)$: "có một người yêu **tất cả mọi người**".
-- $\forall y \exists x\, \text{Yeu}(x,y)$: "**mỗi người** đều được ai đó yêu" (có thể mỗi người một người yêu khác nhau — yếu hơn nhiều).
+- $\exists x \forall y\, \text{Yeu}(x,y)$: "Có một người yêu **tất cả mọi người**".
+- $\forall y \exists x\, \text{Yeu}(x,y)$: "**Mỗi người** đều được ai đó yêu" (có thể mỗi người một người yêu khác nhau — yếu hơn nhiều).
 
 Chiều ngược lại ($\forall\forall$ hay $\exists\exists$) thì **được phép đảo tự do**: $\forall x\forall y \equiv \forall y \forall x$, và $\exists x \exists y \equiv \exists y \exists x$.
 :::
@@ -68,19 +68,19 @@ Chiều ngược lại ($\forall\forall$ hay $\exists\exists$) thì **được p
 ::: danger Bẫy thi #2 — Sai liên từ chính đi kèm lượng từ
 Lỗi sinh viên mắc **nhiều nhất**:
 
-- Với $\forall$: liên từ chính phải là $\Rightarrow$.
+- Với $\forall$: Liên từ chính phải là $\Rightarrow$.
   - ✅ $\forall x\,(\text{SinhVien}(x) \Rightarrow \text{ChamChi}(x))$ — "mọi sinh viên đều chăm chỉ".
   - ❌ $\forall x\, \text{SinhVien}(x) \land \text{ChamChi}(x)$ — nói "**mọi thứ trên đời** vừa là sinh viên vừa chăm chỉ" (vô lý).
-- Với $\exists$: liên từ chính phải là $\land$.
+- Với $\exists$: Liên từ chính phải là $\land$.
   - ✅ $\exists x\,(\text{SinhVien}(x) \land \text{DiemA}(x))$ — "có sinh viên đạt điểm A".
   - ❌ $\exists x\, (\text{SinhVien}(x) \Rightarrow \text{DiemA}(x))$ — câu này **luôn đúng một cách tầm thường** (chỉ cần tồn tại một vật bất kỳ không phải sinh viên) — không diễn tả đúng ý!
 :::
 
-## 14.4 Ngữ nghĩa: mô hình và diễn giải
+## 14.4 Ngữ nghĩa: Mô hình và diễn giải
 
-Một câu FOL đúng/sai phụ thuộc vào **mô hình** (tập đối tượng + quan hệ) và **diễn giải** (ánh xạ: ký hiệu hằng → đối tượng, ký hiệu vị từ → quan hệ, ký hiệu hàm → hàm). Cùng một câu $\text{Brother}(Richard, John)$ có thể đúng trong mô hình này, sai trong mô hình khác — **luôn có thể tồn tại nhiều mô hình thoả mãn cùng một cơ sở tri thức**, đó là lý do suy luận logic phải đúng trong **mọi** mô hình thoả mãn tiền đề (entailment), không phải chỉ một mô hình cụ thể.
+Một câu FOL đúng/sai phụ thuộc vào **mô hình** (tập đối tượng + quan hệ) và **diễn giải** (ánh xạ: Ký hiệu hằng → đối tượng, ký hiệu vị từ → quan hệ, ký hiệu hàm → hàm). Cùng một câu $\text{Brother}(Richard, John)$ có thể đúng trong mô hình này, sai trong mô hình khác — **luôn có thể tồn tại nhiều mô hình thoả mãn cùng một cơ sở tri thức**, đó là lý do suy luận logic phải đúng trong **mọi** mô hình thoả mãn tiền đề (entailment), không phải chỉ một mô hình cụ thể.
 
-## 14.5 Suy luận: hợp nhất hoá (Unification) & Modus Ponens tổng quát
+## 14.5 Suy luận: Hợp nhất hoá (Unification) & Modus Ponens tổng quát
 
 Để áp dụng luật suy diễn, cần tìm phép thế $\theta$ khiến hai biểu thức "khớp" nhau:
 
@@ -107,7 +107,7 @@ Khi đề cho cơ sở tri thức và hỏi "suy ra được gì", hãy tìm ph�
 ## 14.6 Ontology (Bản thể luận) & Mạng ngữ nghĩa
 
 ::: tip Ẩn dụ
-Nếu FOL là **từ vựng và ngữ pháp**, thì ontology là **cách sắp xếp cả một thư viện**: quyết định "ngăn nào chứa cái gì" trước khi bắt đầu viết câu. Một bản thể luận bậc trên (upper ontology) giống khung tủ hồ sơ gốc — chưa biết chi tiết bên trong từng ngăn, nhưng đã có sẵn chỗ để nhét kiến thức mới vào mà không phải đập lại cả tủ.
+Nếu FOL là **từ vựng và ngữ pháp**, thì ontology là **cách sắp xếp cả một thư viện**: Quyết định "ngăn nào chứa cái gì" trước khi bắt đầu viết câu. Một bản thể luận bậc trên (upper ontology) giống khung tủ hồ sơ gốc — chưa biết chi tiết bên trong từng ngăn, nhưng đã có sẵn chỗ để nhét kiến thức mới vào mà không phải đập lại cả tủ.
 :::
 
 ### Một bản thể luận bậc trên tự thiết kế
@@ -145,7 +145,7 @@ flowchart LR
     Long -->|nghiên_cứu| CRS["Hệ gợi ý hội thoại (CRS)"]
 ```
 
-Ưu điểm: trực quan, suy luận kế thừa thuộc tính theo liên kết `là_một` rất nhanh. Nhược điểm hay bị hỏi thi: mạng ngữ nghĩa **không có ngữ nghĩa hình thức chuẩn** cho tới khi được ánh xạ tương đương sang FOL.
+Ưu điểm: Trực quan, suy luận kế thừa thuộc tính theo liên kết `là_một` rất nhanh. Nhược điểm hay bị hỏi thi: Mạng ngữ nghĩa **không có ngữ nghĩa hình thức chuẩn** cho tới khi được ánh xạ tương đương sang FOL.
 
 ### Logic mô tả (Description Logic)
 
@@ -156,7 +156,7 @@ $$
 đọc là: "Sinh viên là một Người-học **và** có học ít nhất một Môn học" — tương đương một câu FOL nhưng thiết kế để suy luận (subsumption, phân loại lớp) trong thời gian đa thức, đánh đổi lại **biểu đạt yếu hơn** FOL đầy đủ.
 
 ::: warning Bẫy thi #4 — "Ontology càng tổng quát càng tốt"
-AIMA chương 10 chỉ rõ: nỗ lực xây một **bản thể luận tổng quát duy nhất cho cả thế giới** cho tới nay **chưa có ứng dụng lớn nào thành công hoàn toàn** — mọi hệ thống AI hàng đầu đều dùng bản thể luận **chuyên biệt cho từng miền** kết hợp học máy, không phải một ontology vạn năng. Đừng trả lời "ontology tổng quát luôn tốt hơn" trong bài tự luận — hãy nêu được sự đánh đổi.
+AIMA chương 10 chỉ rõ: Nỗ lực xây một **bản thể luận tổng quát duy nhất cho cả thế giới** cho tới nay **chưa có ứng dụng lớn nào thành công hoàn toàn** — mọi hệ thống AI hàng đầu đều dùng bản thể luận **chuyên biệt cho từng miền** kết hợp học máy, không phải một ontology vạn năng. Đừng trả lời "ontology tổng quát luôn tốt hơn" trong bài tự luận — hãy nêu được sự đánh đổi.
 :::
 
 ## 14.7 Bảng bẫy thi chương này

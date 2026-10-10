@@ -9,7 +9,7 @@ description: "Khái niệm hai bài toán tương đương, phép co giãn, đ�
 
 Cùng một bài toán có thể được viết theo nhiều cách. Người này đo sai số bằng chuẩn Euclid, người kia đo bằng bình phương của nó. Người này tham số hóa độ lệch chuẩn bằng $\sigma$, người kia bằng $\log\sigma$. Trong khi đó, phần mềm giải tối ưu chỉ nhận một vài dạng nhất định, nên một phần lớn công việc của người lập mô hình là biến bài toán mình đang có thành bài toán mà công cụ giải được.
 
-Mỗi phép biến đổi như thế đi kèm hai câu hỏi. Thứ nhất, lời giải có được bảo toàn không, nghĩa là từ nghiệm của bài toán mới có lấy lại được nghiệm của bài toán cũ không? Thứ hai, tính lồi có được bảo toàn không? Trang này cho thấy hai câu hỏi ấy độc lập với nhau: có những phép biến đổi giữ nguyên nghiệm nhưng phá hỏng tính lồi, và ngược lại, có những phép biến đổi làm tính lồi hiện ra từ một bài toán trông không lồi chút nào. Bạn cần nắm [dạng chuẩn của bài toán tối ưu](../bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md) và [bài toán lồi ở dạng chuẩn](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) từ Lecture 01.
+Mỗi phép biến đổi như thế đi kèm hai câu hỏi. Thứ nhất, lời giải có được bảo toàn không, nghĩa là từ nghiệm của bài toán mới có lấy lại được nghiệm của bài toán cũ không? Thứ hai, tính lồi có được bảo toàn không? Trang này cho thấy hai câu hỏi ấy độc lập với nhau: Có những phép biến đổi giữ nguyên nghiệm nhưng phá hỏng tính lồi, và ngược lại, có những phép biến đổi làm tính lồi hiện ra từ một bài toán trông không lồi chút nào. Bạn cần nắm [dạng chuẩn của bài toán tối ưu](../bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md) và [bài toán lồi ở dạng chuẩn](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) từ Lecture 01.
 
 ## 1. Hai bài toán tương đương
 
@@ -25,13 +25,13 @@ $$
 \end{aligned}
 $$
 
-Miền khả thi không thay đổi, vì $\alpha_i f_i(x)$ cùng dấu với $f_i(x)$, còn $\beta_i h_i(x) = 0$ khi và chỉ khi $h_i(x) = 0$. Một điểm tối ưu cho bài toán này cũng tối ưu cho bài toán kia. Thế nhưng hai bài toán không **giống nhau**: giá trị tối ưu bị nhân với $\alpha_0$, và các hàm đã là những hàm khác.
+Miền khả thi không thay đổi, vì $\alpha_i f_i(x)$ cùng dấu với $f_i(x)$, còn $\beta_i h_i(x) = 0$ khi và chỉ khi $h_i(x) = 0$. Một điểm tối ưu cho bài toán này cũng tối ưu cho bài toán kia. Thế nhưng hai bài toán không **giống nhau**: Giá trị tối ưu bị nhân với $\alpha_0$, và các hàm đã là những hàm khác.
 
-Khác biệt nhỏ ấy có hệ quả thật. Nhân hàm mục tiêu với 1000 không đổi nghiệm, nhưng làm gradient lớn lên 1000 lần, nên một thuật toán gradient với bước cố định có thể đang hội tụ bỗng phân kỳ. Sự phân biệt "tương đương nhưng không giống nhau" sẽ còn trở lại suốt trang này, vì hầu hết các phép biến đổi đều giữ nghiệm nhưng thay đổi một thứ khác: khi thì giá trị tối ưu, khi thì tính khả vi, khi thì chính tính lồi.
+Khác biệt nhỏ ấy có hệ quả thật. Nhân hàm mục tiêu với 1000 không đổi nghiệm, nhưng làm gradient lớn lên 1000 lần, nên một thuật toán gradient với bước cố định có thể đang hội tụ bỗng phân kỳ. Sự phân biệt "tương đương nhưng không giống nhau" sẽ còn trở lại suốt trang này, vì hầu hết các phép biến đổi đều giữ nghiệm nhưng thay đổi một thứ khác: Khi thì giá trị tối ưu, khi thì tính khả vi, khi thì chính tính lồi.
 
 ## 2. Đổi biến
 
-Giả sử $\phi : \mathbb{R}^n \to \mathbb{R}^n$ là một ánh xạ một-một, và ảnh của nó phủ kín miền $\mathcal{D}$ của bài toán. Thay $x = \phi(z)$ vào mọi hàm, ta được các hàm mới $\tilde f_i(z) = f_i(\phi(z))$ và $\tilde h_i(z) = h_i(\phi(z))$, và một bài toán với biến $z$. Hai bài toán tương đương: nếu $x$ là nghiệm của bài toán gốc thì $z = \phi^{-1}(x)$ là nghiệm của bài toán mới, và nếu $z$ là nghiệm của bài toán mới thì $x = \phi(z)$ là nghiệm của bài toán gốc. Hai điều kiện đặt lên $\phi$ đều có lý do. Tính một-một bảo đảm mỗi $x$ ứng với đúng một $z$, còn điều kiện phủ miền bảo đảm không có điểm khả thi nào bị bỏ sót.
+Giả sử $\phi : \mathbb{R}^n \to \mathbb{R}^n$ là một ánh xạ một-một, và ảnh của nó phủ kín miền $\mathcal{D}$ của bài toán. Thay $x = \phi(z)$ vào mọi hàm, ta được các hàm mới $\tilde f_i(z) = f_i(\phi(z))$ và $\tilde h_i(z) = h_i(\phi(z))$, và một bài toán với biến $z$. Hai bài toán tương đương: Nếu $x$ là nghiệm của bài toán gốc thì $z = \phi^{-1}(x)$ là nghiệm của bài toán mới, và nếu $z$ là nghiệm của bài toán mới thì $x = \phi(z)$ là nghiệm của bài toán gốc. Hai điều kiện đặt lên $\phi$ đều có lý do. Tính một-một bảo đảm mỗi $x$ ứng với đúng một $z$, còn điều kiện phủ miền bảo đảm không có điểm khả thi nào bị bỏ sót.
 
 Điều đáng chú ý là phép đổi biến có thể làm tính lồi xuất hiện, hoặc làm nó biến mất. Hãy xét bài toán ước lượng độ lệch chuẩn $\sigma$ của một phân phối Gauss đã biết trung bình. Với $n$ quan sát và $S$ là tổng bình phương độ lệch của chúng so với trung bình, âm log-likelihood (bỏ đi hằng số) là
 
@@ -45,7 +45,7 @@ $$
 g(s) = f(e^s) = ns + \frac{S}{2}e^{-2s} .
 $$
 
-Lần này $g''(s) = 2Se^{-2s} > 0$ với mọi $s$, nên $g$ lồi. Phương trình $g'(s) = n - Se^{-2s} = 0$ cho $e^{2s} = S/n$, tức $\sigma^\star = \sqrt{S/n}$, đúng là ước lượng hợp lý cực đại quen thuộc của độ lệch chuẩn. Với số liệu trên, $\sigma^\star = 2$ và $s^\star = \log 2 \approx 0.693$, và hai bài toán có cùng giá trị tối ưu, khoảng 5.966, vì $f(e^s) = g(s)$ tại mọi điểm. Cách tham số hóa qua $\log\sigma$ vì thế rất tiện khi một mô hình phải học cả phương sai: ràng buộc $\sigma > 0$ biến mất, và trong ví dụ này, hàm mục tiêu còn trở nên lồi.
+Lần này $g''(s) = 2Se^{-2s} > 0$ với mọi $s$, nên $g$ lồi. Phương trình $g'(s) = n - Se^{-2s} = 0$ cho $e^{2s} = S/n$, tức $\sigma^\star = \sqrt{S/n}$, đúng là ước lượng hợp lý cực đại quen thuộc của độ lệch chuẩn. Với số liệu trên, $\sigma^\star = 2$ và $s^\star = \log 2 \approx 0.693$, và hai bài toán có cùng giá trị tối ưu, khoảng 5.966, vì $f(e^s) = g(s)$ tại mọi điểm. Cách tham số hóa qua $\log\sigma$ vì thế rất tiện khi một mô hình phải học cả phương sai: Ràng buộc $\sigma > 0$ biến mất, và trong ví dụ này, hàm mục tiêu còn trở nên lồi.
 
 <EquivalenceLab />
 
@@ -55,9 +55,9 @@ Chiều ngược lại cũng xảy ra. Một phép đổi biến không affine c
 
 Thay vì đổi biến, ta có thể bọc từng hàm trong một hàm một biến. Giả sử $\psi_0$ tăng ngặt, mỗi $\psi_i$ với $i = 1, \ldots, m$ thỏa $\psi_i(u) \le 0$ khi và chỉ khi $u \le 0$, và mỗi $\psi_{m+i}$ thỏa $\psi_{m+i}(u) = 0$ khi và chỉ khi $u = 0$. Thay $f_i$ bằng $\psi_i \circ f_i$ và $h_i$ bằng $\psi_{m+i} \circ h_i$, ta được một bài toán có cùng miền khả thi và cùng tập nghiệm với bài toán gốc. Phép co giãn ở mục 1 chỉ là trường hợp riêng khi mọi $\psi_i$ tuyến tính.
 
-Ví dụ 4.3 của sách so sánh hai bài toán: cực tiểu $\|Ax - b\|_2$ và cực tiểu $\|Ax - b\|_2^2$. Hàm $u \mapsto u^2$ tăng ngặt trên $[0, \infty)$, tập giá trị của chuẩn, nên hai bài toán có cùng nghiệm, còn giá trị tối ưu liên hệ bởi $p^\star_2 = (p^\star_1)^2$. Hai bài toán vẫn không giống nhau: hàm thứ nhất không khả vi tại những điểm có $Ax = b$, còn hàm thứ hai là một hàm toàn phương khả vi ở mọi nơi. Phép biến đổi quen thuộc nhất trong học máy cũng thuộc loại này: thay vì cực đại hóa hàm hợp lý của dữ liệu, ta cực tiểu hóa âm logarit của nó. Logarit tăng ngặt nên tập nghiệm không đổi, và tích của các mật độ biến thành một tổng, dễ lấy đạo hàm hơn nhiều.
+Ví dụ 4.3 của sách so sánh hai bài toán: Cực tiểu $\|Ax - b\|_2$ và cực tiểu $\|Ax - b\|_2^2$. Hàm $u \mapsto u^2$ tăng ngặt trên $[0, \infty)$, tập giá trị của chuẩn, nên hai bài toán có cùng nghiệm, còn giá trị tối ưu liên hệ bởi $p^\star_2 = (p^\star_1)^2$. Hai bài toán vẫn không giống nhau: Hàm thứ nhất không khả vi tại những điểm có $Ax = b$, còn hàm thứ hai là một hàm toàn phương khả vi ở mọi nơi. Phép biến đổi quen thuộc nhất trong học máy cũng thuộc loại này: Thay vì cực đại hóa hàm hợp lý của dữ liệu, ta cực tiểu hóa âm logarit của nó. Logarit tăng ngặt nên tập nghiệm không đổi, và tích của các mật độ biến thành một tổng, dễ lấy đạo hàm hơn nhiều.
 
-Với ràng buộc, điều kiện đặt lên $\psi_i$ yếu hơn: nó chỉ cần giữ đúng dấu, không cần đơn điệu. Ràng buộc $x^3 \le 0$ chẳng hạn tương đương $x \le 0$, vì hàm căn bậc ba giữ dấu. Hàm $x^3$ không lồi trên $\mathbb{R}$, nên cách viết thứ nhất không phải dạng chuẩn lồi, còn cách viết thứ hai thì có. Ràng buộc $\|x\|_2 \le 1$ cũng có thể viết thành $\|x\|_2^2 \le 1$, và cách viết sau khả vi ở mọi nơi.
+Với ràng buộc, điều kiện đặt lên $\psi_i$ yếu hơn: Nó chỉ cần giữ đúng dấu, không cần đơn điệu. Ràng buộc $x^3 \le 0$ chẳng hạn tương đương $x \le 0$, vì hàm căn bậc ba giữ dấu. Hàm $x^3$ không lồi trên $\mathbb{R}$, nên cách viết thứ nhất không phải dạng chuẩn lồi, còn cách viết thứ hai thì có. Ràng buộc $\|x\|_2 \le 1$ cũng có thể viết thành $\|x\|_2^2 \le 1$, và cách viết sau khả vi ở mọi nơi.
 
 ## 4. Biến bù
 
@@ -74,7 +74,7 @@ $$
 
 với biến $(x, s) \in \mathbb{R}^n \times \mathbb{R}^m$. Biến $s_i$ được gọi là **biến bù** (slack variable) của ràng buộc thứ $i$. Nó đo khoảng trống còn lại của ràng buộc, nên $s_i = 0$ đúng khi ràng buộc chặt. Hai bài toán tương đương theo cả hai chiều. Nếu $(x, s)$ khả thi cho bài toán mới thì $x$ khả thi cho bài toán gốc, vì $f_i(x) = -s_i \le 0$. Ngược lại, nếu $x$ khả thi cho bài toán gốc thì chọn $s_i = -f_i(x)$, ta được một điểm khả thi của bài toán mới với cùng giá trị mục tiêu.
 
-Về tính lồi thì khác. Ràng buộc đẳng thức trong một bài toán lồi phải affine, nên phép thêm biến bù chỉ giữ tính lồi khi $f_i$ affine. Với một ràng buộc phi tuyến như $x^2 \le 1$, phép thêm biến bù cho $x^2 + s = 1$ và $s \ge 0$. Tập các cặp $(x, s)$ thỏa điều kiện này là cung parabol $s = 1 - x^2$ trên đoạn $[-1, 1]$: hai điểm $(-1, 0)$ và $(1, 0)$ thuộc tập, nhưng trung điểm $(0, 0)$ thì không, vì $0^2 + 0 \ne 1$. Bài toán mới tương đương bài toán cũ nhưng không lồi, dù hình chiếu của miền khả thi xuống trục $x$ vẫn là đoạn lồi $[-1, 1]$. Đây là lý do biến bù được dùng thoải mái trong quy hoạch tuyến tính, nơi mọi ràng buộc đều affine, nhưng hiếm khi được dùng cho ràng buộc phi tuyến.
+Về tính lồi thì khác. Ràng buộc đẳng thức trong một bài toán lồi phải affine, nên phép thêm biến bù chỉ giữ tính lồi khi $f_i$ affine. Với một ràng buộc phi tuyến như $x^2 \le 1$, phép thêm biến bù cho $x^2 + s = 1$ và $s \ge 0$. Tập các cặp $(x, s)$ thỏa điều kiện này là cung parabol $s = 1 - x^2$ trên đoạn $[-1, 1]$: Hai điểm $(-1, 0)$ và $(1, 0)$ thuộc tập, nhưng trung điểm $(0, 0)$ thì không, vì $0^2 + 0 \ne 1$. Bài toán mới tương đương bài toán cũ nhưng không lồi, dù hình chiếu của miền khả thi xuống trục $x$ vẫn là đoạn lồi $[-1, 1]$. Đây là lý do biến bù được dùng thoải mái trong quy hoạch tuyến tính, nơi mọi ràng buộc đều affine, nhưng hiếm khi được dùng cho ràng buộc phi tuyến.
 
 ## 5. Dạng epigraph
 
@@ -89,23 +89,23 @@ $$
 \end{aligned}
 $$
 
-với biến $(x, t)$. Thật vậy, $(x, t)$ là nghiệm của bài toán này khi và chỉ khi $x$ là nghiệm của bài toán gốc và $t = f_0(x)$. Hình ảnh hình học rất gọn: ràng buộc $f_0(x) \le t$ nói rằng điểm $(x, t)$ nằm trong [epigraph](../bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md) của $f_0$, và ta đang tìm **điểm thấp nhất của epigraph**, trong số những điểm có $x$ khả thi.
+với biến $(x, t)$. Thật vậy, $(x, t)$ là nghiệm của bài toán này khi và chỉ khi $x$ là nghiệm của bài toán gốc và $t = f_0(x)$. Hình ảnh hình học rất gọn: Ràng buộc $f_0(x) \le t$ nói rằng điểm $(x, t)$ nằm trong [epigraph](../bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md) của $f_0$, và ta đang tìm **điểm thấp nhất của epigraph**, trong số những điểm có $x$ khả thi.
 
-Nếu bài toán gốc lồi thì dạng epigraph cũng lồi: hàm mục tiêu $t$ tuyến tính, và hàm $f_0(x) - t$ lồi theo cặp $(x, t)$. Vì vậy người ta nói hàm mục tiêu tuyến tính là **phổ quát** cho tối ưu lồi: mọi bài toán lồi đều viết lại được với một hàm mục tiêu tuyến tính. Điều này đơn giản hóa cả lý thuyết lẫn thuật toán, vì một thuật toán chỉ cần xử lý mục tiêu tuyến tính và các ràng buộc lồi là đủ dùng cho mọi bài toán lồi.
+Nếu bài toán gốc lồi thì dạng epigraph cũng lồi: Hàm mục tiêu $t$ tuyến tính, và hàm $f_0(x) - t$ lồi theo cặp $(x, t)$. Vì vậy người ta nói hàm mục tiêu tuyến tính là **phổ quát** cho tối ưu lồi: Mọi bài toán lồi đều viết lại được với một hàm mục tiêu tuyến tính. Điều này đơn giản hóa cả lý thuyết lẫn thuật toán, vì một thuật toán chỉ cần xử lý mục tiêu tuyến tính và các ràng buộc lồi là đủ dùng cho mọi bài toán lồi.
 
-Phép biến đổi này đặc biệt hữu ích khi hàm mục tiêu là một giá trị lớn nhất. Bài toán cực tiểu $\max_i f_i(x)$ tương đương cực tiểu $t$ với $f_i(x) \le t$ cho mọi $i$: điều kiện "giá trị lớn nhất không vượt quá $t$" được tách thành nhiều điều kiện đơn giản. Khi các $f_i$ affine, ta được một LP, và [bài toán khớp dữ liệu theo sai số tệ nhất](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) ở Lecture 01 chính là một trường hợp như vậy.
+Phép biến đổi này đặc biệt hữu ích khi hàm mục tiêu là một giá trị lớn nhất. Bài toán cực tiểu $\max_i f_i(x)$ tương đương cực tiểu $t$ với $f_i(x) \le t$ cho mọi $i$: Điều kiện "giá trị lớn nhất không vượt quá $t$" được tách thành nhiều điều kiện đơn giản. Khi các $f_i$ affine, ta được một LP, và [bài toán khớp dữ liệu theo sai số tệ nhất](../bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md) ở Lecture 01 chính là một trường hợp như vậy.
 
 ## 6. Ràng buộc ẩn và ràng buộc tường minh
 
-Có một mẹo ký hiệu cho phép giấu mọi ràng buộc vào hàm mục tiêu. Định nghĩa $F(x) = f_0(x)$ khi $x$ khả thi và $F(x) = \infty$ trong trường hợp còn lại. Bài toán cực tiểu $F$ trông như không có ràng buộc, nhưng tất nhiên nó không dễ hơn chút nào. Thậm chí nó còn khó phân tích hơn: nếu $f_0$ khả vi với miền mở, thì $F$ thường không khả vi, vì miền của nó, tức miền khả thi, hiếm khi là tập mở.
+Có một mẹo ký hiệu cho phép giấu mọi ràng buộc vào hàm mục tiêu. Định nghĩa $F(x) = f_0(x)$ khi $x$ khả thi và $F(x) = \infty$ trong trường hợp còn lại. Bài toán cực tiểu $F$ trông như không có ràng buộc, nhưng tất nhiên nó không dễ hơn chút nào. Thậm chí nó còn khó phân tích hơn: Nếu $f_0$ khả vi với miền mở, thì $F$ thường không khả vi, vì miền của nó, tức miền khả thi, hiếm khi là tập mở.
 
-Chiều ngược lại hữu ích hơn. Nhiều bài toán chứa những **ràng buộc ẩn** nằm trong miền xác định của hàm. Hàm $-\sum_i \log x_i$ ngầm đòi hỏi $x_i > 0$ với mọi $i$, và hàm mất mát entropy chéo ngầm đòi hỏi các xác suất dự đoán dương. Sách đưa ra một ví dụ khác: hàm bằng $x^Tx$ khi $Ax = b$ và bằng $\infty$ khi ngược lại. Bài toán cực tiểu hàm này không có ràng buộc, nhưng hàm mục tiêu không khả vi. Viết ràng buộc ra ngoài, ta được bài toán cực tiểu $x^Tx$ với $Ax = b$: có thêm một ràng buộc đẳng thức, nhưng mọi hàm đều khả vi. Nhận ra ràng buộc ẩn quan trọng cả khi chạy thuật toán: một bước lặp đi ra ngoài miền xác định sẽ cho giá trị vô nghĩa, và kỹ thuật tìm kiếm đường ở Lecture 04 phải kiểm tra điều đó trước tiên.
+Chiều ngược lại hữu ích hơn. Nhiều bài toán chứa những **ràng buộc ẩn** nằm trong miền xác định của hàm. Hàm $-\sum_i \log x_i$ ngầm đòi hỏi $x_i > 0$ với mọi $i$, và hàm mất mát entropy chéo ngầm đòi hỏi các xác suất dự đoán dương. Sách đưa ra một ví dụ khác: Hàm bằng $x^Tx$ khi $Ax = b$ và bằng $\infty$ khi ngược lại. Bài toán cực tiểu hàm này không có ràng buộc, nhưng hàm mục tiêu không khả vi. Viết ràng buộc ra ngoài, ta được bài toán cực tiểu $x^Tx$ với $Ax = b$: Có thêm một ràng buộc đẳng thức, nhưng mọi hàm đều khả vi. Nhận ra ràng buộc ẩn quan trọng cả khi chạy thuật toán: Một bước lặp đi ra ngoài miền xác định sẽ cho giá trị vô nghĩa, và kỹ thuật tìm kiếm đường ở Lecture 04 phải kiểm tra điều đó trước tiên.
 
 ## 7. Viết lại để tính lồi hiện ra
 
-Sách định nghĩa bài toán lồi một cách chặt: không chỉ cực tiểu một hàm lồi trên một tập lồi, mà miền khả thi phải được mô tả bằng các bất đẳng thức của hàm lồi và các đẳng thức affine. Chủ đề [cực tiểu cục bộ và toàn cục](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) của Lecture 01 đã đưa ra ví dụ của sách, với ràng buộc $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$: miền khả thi lồi, nhưng cách viết thì không. Các phép biến đổi ở trên chính là công cụ để sửa cách viết. Nhân ràng buộc thứ nhất với $1 + x_2^2 > 0$ cho $x_1 \le 0$, một phép co giãn bằng một hàm dương. Lấy căn bậc hai ở ràng buộc thứ hai cho $x_1 + x_2 = 0$, một phép biến đổi giữ nghiệm của phương trình.
+Sách định nghĩa bài toán lồi một cách chặt: Không chỉ cực tiểu một hàm lồi trên một tập lồi, mà miền khả thi phải được mô tả bằng các bất đẳng thức của hàm lồi và các đẳng thức affine. Chủ đề [cực tiểu cục bộ và toàn cục](../bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md) của Lecture 01 đã đưa ra ví dụ của sách, với ràng buộc $x_1/(1 + x_2^2) \le 0$ và $(x_1 + x_2)^2 = 0$: Miền khả thi lồi, nhưng cách viết thì không. Các phép biến đổi ở trên chính là công cụ để sửa cách viết. Nhân ràng buộc thứ nhất với $1 + x_2^2 > 0$ cho $x_1 \le 0$, một phép co giãn bằng một hàm dương. Lấy căn bậc hai ở ràng buộc thứ hai cho $x_1 + x_2 = 0$, một phép biến đổi giữ nghiệm của phương trình.
 
-Có hai giới hạn cần nhớ. Thứ nhất, khi chính miền khả thi không lồi, không cách viết nào giữ nguyên biến làm nó lồi được. Ràng buộc $x^2 \ge 1$ mô tả hai nửa đường thẳng rời nhau, và đó là một sự thật về tập hợp, không phải về cách viết. Thứ hai, lồi không có nghĩa là giải được: bài toán cực tiểu $-\log x$ với $x \ge 1$ là bài toán lồi ở dạng chuẩn, nhưng hàm mục tiêu giảm về $-\infty$ khi $x \to \infty$, nên bài toán không có nghiệm.
+Có hai giới hạn cần nhớ. Thứ nhất, khi chính miền khả thi không lồi, không cách viết nào giữ nguyên biến làm nó lồi được. Ràng buộc $x^2 \ge 1$ mô tả hai nửa đường thẳng rời nhau, và đó là một sự thật về tập hợp, không phải về cách viết. Thứ hai, lồi không có nghĩa là giải được: Bài toán cực tiểu $-\log x$ với $x \ge 1$ là bài toán lồi ở dạng chuẩn, nhưng hàm mục tiêu giảm về $-\infty$ khi $x \to \infty$, nên bài toán không có nghiệm.
 
 ## 8. Tương đương, nới lỏng và xấp xỉ
 
@@ -127,7 +127,7 @@ nên giá trị tối ưu của bài toán nới lỏng là một cận dưới 
 
 <details><summary>Xem lời giải thích</summary>
 
-Còn tùy giá trị tối ưu $p^\star$ của bài toán gốc. Nếu $p^\star > 0$ thì mọi điểm khả thi có $f_0(x) \ge p^\star > 0$, nên trên miền khả thi hai hàm mục tiêu trùng nhau và hai bài toán có cùng tập nghiệm. Nếu $p^\star < 0$ thì khác hẳn: mọi điểm khả thi có $f_0(x) \le 0$ đều cho giá trị $0$ trong bài toán mới, nên đều là nghiệm của nó. Những điểm này phần lớn không phải nghiệm của bài toán gốc. Từ một nghiệm của bài toán mới, ta không lấy lại được nghiệm của bài toán cũ, nên tương đương bị gãy ở một chiều. Điều kiện "tăng ngặt" của $\psi_0$ chính là để chặn hiện tượng các giá trị khác nhau bị dồn thành một.
+Còn tùy giá trị tối ưu $p^\star$ của bài toán gốc. Nếu $p^\star > 0$ thì mọi điểm khả thi có $f_0(x) \ge p^\star > 0$, nên trên miền khả thi hai hàm mục tiêu trùng nhau và hai bài toán có cùng tập nghiệm. Nếu $p^\star < 0$ thì khác hẳn: Mọi điểm khả thi có $f_0(x) \le 0$ đều cho giá trị $0$ trong bài toán mới, nên đều là nghiệm của nó. Những điểm này phần lớn không phải nghiệm của bài toán gốc. Từ một nghiệm của bài toán mới, ta không lấy lại được nghiệm của bài toán cũ, nên tương đương bị gãy ở một chiều. Điều kiện "tăng ngặt" của $\psi_0$ chính là để chặn hiện tượng các giá trị khác nhau bị dồn thành một.
 
 </details>
 
@@ -135,7 +135,7 @@ Còn tùy giá trị tối ưu $p^\star$ của bài toán gốc. Nếu $p^\star 
 
 <details><summary>Xem lời giải thích</summary>
 
-Về nghiệm thì không sai: ánh xạ $z \mapsto z^2$ phủ kín $[0, \infty)$, hai nghiệm $z = \pm 1$ đều cho $x = 1$, đúng nghiệm của bài toán gốc. Ánh xạ không một-một, nhưng điều đó chỉ làm mỗi nghiệm có hai bản sao. Vấn đề nằm ở hình dạng của hàm mới. Hàm $h(z) = (z^2 - 1)^2$ có $h''(0) = -4 < 0$, nên không lồi, và nó có một điểm dừng tại $z = 0$, ứng với $x = 0$. Thế nhưng tại $x = 0$, bài toán gốc có đạo hàm $2(0 - 1) = -2 \ne 0$, nghĩa là $x = 0$ chẳng có gì đặc biệt. Phép đổi biến đã sinh ra một điểm dừng giả, và một thuật toán gradient xuất phát đúng tại $z = 0$ sẽ đứng yên ở đó mãi. Bài học: tương đương về nghiệm không kéo theo việc giữ được tính lồi, và phải kiểm tra lại tính lồi sau mỗi phép đổi biến không affine.
+Về nghiệm thì không sai: Ánh xạ $z \mapsto z^2$ phủ kín $[0, \infty)$, hai nghiệm $z = \pm 1$ đều cho $x = 1$, đúng nghiệm của bài toán gốc. Ánh xạ không một-một, nhưng điều đó chỉ làm mỗi nghiệm có hai bản sao. Vấn đề nằm ở hình dạng của hàm mới. Hàm $h(z) = (z^2 - 1)^2$ có $h''(0) = -4 < 0$, nên không lồi, và nó có một điểm dừng tại $z = 0$, ứng với $x = 0$. Thế nhưng tại $x = 0$, bài toán gốc có đạo hàm $2(0 - 1) = -2 \ne 0$, nghĩa là $x = 0$ chẳng có gì đặc biệt. Phép đổi biến đã sinh ra một điểm dừng giả, và một thuật toán gradient xuất phát đúng tại $z = 0$ sẽ đứng yên ở đó mãi. Bài học: Tương đương về nghiệm không kéo theo việc giữ được tính lồi, và phải kiểm tra lại tính lồi sau mỗi phép đổi biến không affine.
 
 </details>
 
@@ -159,7 +159,7 @@ Phương pháp Newton không bị ảnh hưởng. Bước Newton là $\Delta x =
 
 <details><summary>Xem lời giải thích</summary>
 
-Không. Dạng epigraph là cực tiểu $t$ với $e^x \le t$. Mọi điểm khả thi có $t \ge e^x > 0$, và $t$ nhỏ tùy ý khi $x \to -\infty$, nên giá trị tối ưu là $0$ nhưng không đạt. Điều này đúng một cách tổng quát: vì mỗi nghiệm của bài toán này cho một nghiệm của bài toán kia, một phép biến đổi tương đương giữ nguyên cả việc có nghiệm hay không. Phép biến đổi chỉ đổi hình dạng của bài toán, không tạo ra nghiệm từ chỗ không có.
+Không. Dạng epigraph là cực tiểu $t$ với $e^x \le t$. Mọi điểm khả thi có $t \ge e^x > 0$, và $t$ nhỏ tùy ý khi $x \to -\infty$, nên giá trị tối ưu là $0$ nhưng không đạt. Điều này đúng một cách tổng quát: Vì mỗi nghiệm của bài toán này cho một nghiệm của bài toán kia, một phép biến đổi tương đương giữ nguyên cả việc có nghiệm hay không. Phép biến đổi chỉ đổi hình dạng của bài toán, không tạo ra nghiệm từ chỗ không có.
 
 </details>
 

@@ -29,7 +29,7 @@ Tất cả các kỹ năng (Skills) đã được chuẩn hóa theo định dạ
 
 > [!IMPORTANT]
 > - Luôn đọc tài liệu `references/repo-format.md` bên trong `studyhub-lecture` trước khi chỉnh sửa bất kỳ tệp Markdown hay catalog nào của trang web.
-> - Khi soạn bài hoặc giải thích có chứa phép tính số học/toán học: **bắt buộc chạy code Python tính lại**, không được đoán hoặc dựa vào trực giác.
+> - Khi soạn bài hoặc giải thích có chứa phép tính số học/toán học: **Bắt buộc chạy code Python tính lại**, không được đoán hoặc dựa vào trực giác.
 > - **Tuyệt đối không để xuất hiện thanh cuộn (scrollbar) trên công thức toán**: Công thức hiển thị dài phải bẻ dòng bằng `\begin{aligned}` với `\\` và `&`; công thức inline không quá 38ex.
 
 ---
@@ -65,7 +65,7 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 4. **Không bịa đặt**: Tuyệt đối không bịa trích dẫn, tác giả, số liệu thống kê hoặc năm tháng lịch sử.
 5. **Tiếng Việt tự nhiên**: Hành văn sáng sủa, thuần Việt, tránh câu cú dịch máy thô cứng.
 6. **Chủ quyền bài giảng (Chính danh, biến tri thức thành bài giảng độc lập)**: Bài giảng của StudyHub là giáo trình giảng dạy độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các cụm từ: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“theo sách…”*, *“sách dùng…”*, *“nguyên tác…”*, *“bản dịch của…”*, *“tiến độ bản dịch…”*. Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (*“Hình 1.1: …”*, *“Xét bài toán thực tế sau:…”*, *“Quan sát đồ thị chuyển trạng thái…”*).
-7. **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Dùng từ ngữ tiếng Việt chuẩn xác, giàu tính sư phạm, uyên bác và dễ hiểu, không “giả trân”, không sáo rỗng kiểu AI. Các mẹo tư duy, trực giác thuật toán được lồng ghép tự nhiên (*“Một cách người ta hay dùng trong thực tế để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”* thay vì đóng khung máy móc *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết trừu tượng với các ứng dụng thực tế sinh động trong đời sống và đặt câu hỏi đào sâu bản chất vấn đề.
+7. **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Dùng từ ngữ tiếng Việt chuẩn xác, giàu tính sư phạm, uyên bác và dễ hiểu, không “giả trân”, không sáo rỗng kiểu AI. Các mẹo tư duy, trực giác thuật toán được lồng ghép tự nhiên (*“Một cách người người ta hay dùng trong thực tế để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”* thay vì đóng khung máy móc *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết trừu tượng với các ứng dụng thực tế sinh động trong đời sống và đặt câu hỏi đào sâu bản chất vấn đề.
 8. **Chuẩn mực toán học & Chống tràn / Tuyệt đối không xuất hiện thanh cuộn (No Math Scrollbars)**:
    - Mọi công thức, phương trình, hàm số toán học hiển thị (`$$...$$`) và nội dòng (`$...$`) phải được format chính xác, thẩm mỹ, tuyệt đối không xuất hiện thanh cuộn ngang (scrollbar) trên bất kỳ kích cỡ màn hình nào (kể cả di động ~360px–375px hay trong các hộp `::: info`, `::: details`).
    - Với công thức hiển thị: Chủ động bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt dòng bằng `\\` tại dấu bằng, dấu bất đẳng thức ($=$, $\le$, $\ge$, $\approx$, $\implies$) hoặc phép toán ($+$, $-$) và căn lề bằng `&`. Không viết chuỗi đẳng thức trải dài trên một dòng đơn.
@@ -75,14 +75,29 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 9. **Khai triển tường minh trước khi viết tắt (Explicit Unpacking before Abbreviation)**:
    - Mọi công thức chứa ký hiệu viết tắt dồn ($\sum$, $\prod$, $\arg\min$, $\arg\max$, $\mathbb{E}[\cdot]$, tích Kronecker, ma trận khối...) **bắt buộc phải được khai triển tường minh ít nhất một lần khi giới thiệu**.
    - Tuyệt đối không viết $\sum_i \theta_i = 1$ lơ lửng, cộc lốc mà phải ghi rõ miền chỉ số và dạng khai triển: $\sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1$ với $\theta_i \ge 0, \forall i = 1, \dots, k$.
-   - Luôn giải thích bản chất bằng ngôn ngữ tự nhiên: Nêu rõ ý nghĩa vật lý/hình học (ví dụ: các trọng số $\theta_i$ là tỷ lệ phần trăm phân bổ 100%, không có trọng số âm, phép bình quân gia quyền không làm biến dạng thang đo).
-   - Xuất phát từ trường hợp nhỏ nhất ($k=2$: đoạn thẳng $\theta_1 x_1 + (1 - \theta_1) x_2$ với $\theta_1 \in [0, 1]$) trước khi tổng quát hóa lên $k$ điểm hay $n$ chiều, giúp sinh viên nắm vững trực giác hình học trước khi dùng đại số trừu tượng.
+   - Luôn giải thích bản chất bằng ngôn ngữ tự nhiên: Nêu rõ ý nghĩa vật lý/hình học (ví dụ: Các trọng số $\theta_i$ là tỷ lệ phần trăm phân bổ 100%, không có trọng số âm, phép bình quân gia quyền không làm biến dạng thang đo).
+   - Xuất phát từ trường hợp nhỏ nhất ($k=2$: Đoạn thẳng $\theta_1 x_1 + (1 - \theta_1) x_2$ với $\theta_1 \in [0, 1]$) trước khi tổng quát hóa lên $k$ điểm hay $n$ chiều, giúp sinh viên nắm vững trực giác hình học trước khi dùng đại số trừu tượng.
    - Khuyến khích sử dụng công thức có chú thích (Annotated Math) bằng `\underbrace{...}_{...}` để chỉ rõ vai trò của từng cụm số hạng.
 10. **Chuẩn mực văn phong tiếng Việt & Hạn chế dấu chấm phẩy (`;`)**:
    - Trong lời giảng văn xuôi, **hạn chế tối đa việc dùng dấu chấm phẩy (`;`)**. Dấu `;` thường khiến câu văn trở nên khô khan, rời rạc và mang nặng tính liệt kê máy móc.
    - Thay vào đó, hãy đọc kỹ quan hệ ngữ nghĩa giữa các vế để lựa chọn **từ nối tiếng Việt chuẩn xác** (*và, nhưng, tuy nhiên, trái lại, ngược lại, vì vậy, do đó, kéo theo, dẫn đến, suy ra, hệ quả là, đồng nghĩa với việc, trong khi, song song đó, cụ thể là, chẳng hạn...*) hoặc tách thành hai câu đơn độc lập với chủ ngữ rõ ràng.
    - Tra cứu chi tiết tại cẩm nang `references/tu-noi-va-dien-dat.md`.
 11. **Thoát khỏi tư duy dịch máy (Calque & Translationese) — Tránh dùng từ máy móc kiểu "hợp đồng", lạm dụng "lớp"**:
-   - **Không dịch bám từ `contract` thành "hợp đồng"** trong kỹ thuật và lập trình: Tránh dùng *"hợp đồng file"*, *"hợp đồng dữ liệu"*, *"hợp đồng nội dung"*. Hãy thay bằng các từ ngữ tiếng Việt tự nhiên và chuẩn mực: *quy chuẩn cấu trúc file*, *chuẩn giao tiếp dữ liệu (schema)*, *yêu cầu nội dung*, *ràng buộc định dạng*. Tuyệt đối không dịch *contraction mapping* thành *"ánh xạ hợp đồng"* (bắt buộc dùng *ánh xạ co*).
-   - **Tránh lạm dụng từ "lớp"**: Thay vì dịch máy móc mọi từ `class` hay `layer` thành "lớp", hãy sử dụng vốn từ tiếng Việt linh hoạt: dùng *họ bài toán*, *dạng bài toán*, *nhóm bài toán* (thay vì lặp từ "lớp bài toán"); dùng *họ hàm* (thay vì "lớp hàm"); dùng *tầng kiến trúc*, *tầng mạng* (thay vì "lớp").
-
+   - **Không dịch bám từ `contract` thành "hợp đồng"** trong kỹ thuật và lập trình: Tránh dùng *"hợp đồng file"*, *"hợp đồng dữ liệu"*, *"hợp đồng nội dung"*. Hãy thay bằng các từ ngữ tiếng Việt tự nhiên và chuẩn mực: *Quy chuẩn cấu trúc file*, *chuẩn giao tiếp dữ liệu (schema)*, *yêu cầu nội dung*, *ràng buộc định dạng*. Tuyệt đối không dịch *contraction mapping* thành *"ánh xạ hợp đồng"* (bắt buộc dùng *ánh xạ co*).
+   - **Tránh lạm dụng từ "lớp"**: Thay vì dịch máy móc mọi từ `class` hay `layer` thành "lớp", hãy sử dụng vốn từ tiếng Việt linh hoạt: Dùng *họ bài toán*, *dạng bài toán*, *nhóm bài toán* (thay vì lặp từ "lớp bài toán"); dùng *họ hàm* (thay vì "lớp hàm"); dùng *tầng kiến trúc*, *tầng mạng* (thay vì "lớp").
+12. **Quy tắc viết hoa sau dấu hai chấm (`:`) (Capitalization After Colons)**:
+   - Trong toàn bộ câu văn xuôi, tiêu đề, đề mục, danh sách liệt kê, chú thích hình ảnh/bảng biểu hoặc nhãn giải thích: **Cứ sau dấu hai chấm (`:`) thì từ tiếp theo bắt buộc phải bắt đầu bằng chữ cái viết hoa**.
+   - Tuyệt đối không để chữ cái đầu tiên sau dấu `:` ở dạng chữ thường.
+   - Các trường hợp chuẩn mực:
+     - `Ví dụ: Xét mô hình tuyến tính sau...` (không viết `Ví dụ: xét mô hình...`)
+     - `Lưu ý: Đây là bước chuyển trạng thái quan trọng...` (không viết `Lưu ý: đây là...`)
+     - `- **Khái niệm**: Là ánh xạ từ tập nguồn sang tập đích...` (không viết `- **Khái niệm**: là ánh xạ...`)
+     - `Hình 1.1: Đồ thị chuyển trạng thái của tác tử...` (không viết `Hình 1.1: đồ thị...`)
+     - `Tập dữ liệu gồm ba cột: Cột ID, cột đặc trưng và cột nhãn mục tiêu.` (không viết `...ba cột: cột ID...`)
+   - Quy tắc áp dụng cho toàn bộ dự án StudyHub (bài giảng, topic, wiki, catalog, cheatsheet, slides). Chỉ ngoại trừ các trường hợp cú pháp mã nguồn lập trình (`code`), đường dẫn URL, địa chỉ drive (`C:\`), hoặc công thức toán học TeX.
+13. **Giao diện bài giảng tinh gọn & trực diện (Clean & Focused Lecture Presentation)**:
+   - Danh sách bài giảng trong trang tổng quan môn học (`CourseOverview`) chỉ hiển thị duy nhất số thứ tự và tiêu đề bài giảng (`lesson.title`). Tuyệt đối không chèn các thông số phụ gây nhiễu thị giác như `X slide · Y mục hỗ trợ`.
+   - Không hiển thị số lượng kiến thức nền ở thanh thông tin đầu môn học (`course-meta`), và không đặt các câu chú thích thừa thãi ở cuối trang môn học (như *"Trong Notes, bấm vào thuật ngữ có gạch chấm..."*). Giao diện phải sạch sẽ, tập trung tối đa vào nội dung học tập.
+14. **Triệt tiêu hoàn toàn thanh cuộn & mũi tên scrollbar trên công thức toán (Zero Math Scrollbars & Spinner Arrows)**:
+   - Mọi công thức toán học inline (`$...$`) và display (`$$...$$`) trên toàn bộ hệ thống (Notes, Wiki, Slides, Cheatsheets, Popovers, Labs) tuyệt đối không được xuất hiện thanh cuộn ngang/dọc hay các nút mũi tên cuộn của hệ điều hành (`▴▾`).
+   - Công thức inline bắt buộc phải có `overflow: visible !important;` và ẩn triệt để thanh cuộn. Thẻ MathML phụ trợ (`mjx-assistive-mml`) phải luôn được ẩn hoàn toàn trên toàn cục dự án để không gây xung đột hiển thị nút mũi tên cuộn trên Windows/Chromium.

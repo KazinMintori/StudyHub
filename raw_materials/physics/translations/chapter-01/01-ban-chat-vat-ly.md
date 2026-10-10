@@ -5,7 +5,7 @@
 Vật lý là một khoa học thực nghiệm. Các nhà vật lý quan sát hiện tượng tự nhiên rồi tìm những quy luật liên hệ các hiện tượng ấy. Những cách mô tả quy luật này được gọi là **lý thuyết vật lý**. Khi đã được xác lập vững chắc và sử dụng rộng rãi, chúng thường được gọi là định luật hoặc nguyên lý vật lý.
 
 ::: warning Ý nghĩa của từ “lý thuyết”
-Lý thuyết không phải một suy nghĩ tùy hứng hay một ý niệm chưa được kiểm chứng. Đó là cách giải thích hiện tượng tự nhiên dựa trên quan sát và những nguyên lý cơ bản đã được chấp nhận. Lý thuyết tiến hóa sinh học là một ví dụ: nó được hình thành từ quá trình nghiên cứu và quan sát sâu rộng của nhiều thế hệ nhà sinh học.
+Lý thuyết không phải một suy nghĩ tùy hứng hay một ý niệm chưa được kiểm chứng. Đó là cách giải thích hiện tượng tự nhiên dựa trên quan sát và những nguyên lý cơ bản đã được chấp nhận. Lý thuyết tiến hóa sinh học là một ví dụ: Nó được hình thành từ quá trình nghiên cứu và quan sát sâu rộng của nhiều thế hệ nhà sinh học.
 :::
 
 Để xây dựng một lý thuyết vật lý, nhà vật lý phải đặt câu hỏi thích hợp, thiết kế thí nghiệm nhằm trả lời câu hỏi ấy và rút ra kết luận phù hợp từ kết quả. Hình 1.1 cho thấy hai nơi được sử dụng để nghiên cứu vật lý.
@@ -20,7 +20,7 @@ Trở lại với Galileo, hãy xét việc thả một chiếc lông và một 
 
 ### Hình 1.1 — Hai nơi nghiên cứu vật lý
 
-![Hình 1.1a trong sách: tháp nghiêng Pisa và nhà thờ bên cạnh](img/young-01/hinh-1-1a.png)
+![Hình 1.1a trong sách: Tháp nghiêng Pisa và nhà thờ bên cạnh](img/young-01/hinh-1-1a.png)
 
 **(a)** Theo giai thoại, Galileo nghiên cứu vật rơi bằng cách thả chúng từ tháp nghiêng Pisa ở Ý. Ông cũng nghiên cứu chuyển động con lắc bằng cách quan sát chiếc đèn treo đung đưa trong nhà thờ bên cạnh.
 

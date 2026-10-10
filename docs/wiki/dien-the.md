@@ -21,7 +21,7 @@ V là vô hướng, E là vector. $V=0$ tại một điểm không kéo theo $E=
 
 ## Ví dụ
 
-Điện tích +2 C đi từ điểm có điện thế 5 V đến 3 V: thế năng thay đổi $2\times (3-5)=-4 J$.
+Điện tích +2 C đi từ điểm có điện thế 5 V đến 3 V: Thế năng thay đổi $2\times (3-5)=-4 J$.
 
 ## Khi nào cần dùng?
 

@@ -25,7 +25,7 @@ Các cuộc khảo sát thực tế trên toàn cầu đối với các kỹ sư
 
 Khoảng $80\%$ tổng thời lượng và công sức của một dự án được dành cho việc chuyển hóa dữ liệu từ dạng hỗn loạn ban đầu thành một cấu trúc đáng tin cậy. Chỉ có khoảng $20\%$ thời gian còn lại được dùng để áp dụng thuật toán mô hình hóa hoặc vẽ biểu đồ báo cáo. Nếu tầng xử lý dữ liệu nền tảng làm sai lệch giá trị, toàn bộ các mô hình học máy tinh vi nhất đặt ở tầng trên đều trở thành vô nghĩa theo nguyên lý bất biến: **Rác vào thì Rác ra (*Garbage In, Garbage Out*)**.
 
-Môn học **Lập trình xử lý dữ liệu** được thiết kế nhằm xây dựng cho sinh viên năng lực thực chiến cốt lõi này: biến những luồng dữ liệu bẩn, phân tán thành những tài sản thông tin sạch sẽ, chuẩn mực và có thể kiểm chứng được bằng mã nguồn.
+Môn học **Lập trình xử lý dữ liệu** được thiết kế nhằm xây dựng cho sinh viên năng lực thực chiến cốt lõi này: Biến những luồng dữ liệu bẩn, phân tán thành những tài sản thông tin sạch sẽ, chuẩn mực và có thể kiểm chứng được bằng mã nguồn.
 
 ---
 
@@ -38,7 +38,7 @@ Câu trả lời nằm ở vai trò **ngôn ngữ keo (*glue language*)**. Các 
 1. **Tầng người dùng (Cú pháp bậc cao)**: Python cung cấp cú pháp sáng rõ, gần gũi với ngôn ngữ tự nhiên, cho phép nhà nghiên cứu và kỹ sư thử nghiệm ý tưởng nhanh chóng mà không phải bận tâm về việc quản lý con trỏ, cấp phát bộ nhớ thủ công hay biên dịch mã nguồn phức tạp.
 2. **Tầng tính toán hạt nhân (Hiệu năng C/Fortran/Rust)**: Bên dưới mui xe (*under the hood*), toàn bộ các thao tác tính toán nặng nề trên ma trận số học đều được giao phó cho các thư viện gốc viết bằng C, C++ hoặc Fortran (như BLAS, LAPACK, OpenBLAS).
 
-Khi ta thực hiện một phép nhân hai mảng trong Python, trình thông dịch Python chỉ đóng vai trò người điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, lập trình viên tận hưởng trọn vẹn cả hai ưu điểm: sự linh hoạt trong phát triển mã nguồn và tốc độ tính toán xấp xỉ mã C gốc.
+Khi ta thực hiện một phép nhân hai mảng trong Python, trình thông dịch Python chỉ đóng vai trò người điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, lập trình viên tận hưởng trọn vẹn cả hai ưu điểm: Sự linh hoạt trong phát triển mã nguồn và tốc độ tính toán xấp xỉ mã C gốc.
 
 ### 2.2. Các trụ cột của Hệ sinh thái Dữ liệu Python
 
@@ -54,56 +54,221 @@ Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa tr
 
 ## 3. Kiến trúc Môi trường Tính toán & IPython Kernel
 
-### 3.1. Phân định rõ Client và Kernel trong Jupyter Notebook
-Nhiều sinh viên thường nhầm lẫn giao diện trang web của Jupyter Notebook hay Google Colab với chính tiến trình đang chạy Python. Trên thực tế, đây là hai thành phần hoàn toàn độc lập giao tiếp với nhau qua kiến trúc Client-Server:
+### 3.1. Phân định bản chất: Tệp mã nguồn `.py` và Sổ tay tính toán `.ipynb`
+Trong thực tế phát triển phần mềm và nghiên cứu dữ liệu, người học thường tiếp xúc song song với hai định dạng tệp: Tệp kịch bản truyền thống `.py` (*Python script*) và tệp sổ tay tương tác `.ipynb` (*Jupyter Notebook*). Hai định dạng này có cấu trúc lưu trữ và mục đích sử dụng hoàn toàn khác biệt.
+
+#### 1. Tệp mã nguồn `.py` (Plain text script)
+- **Bản chất lưu trữ**: Là tệp văn bản thuần túy (*plain text*) được mã hóa theo chuẩn UTF-8. Tệp chỉ chứa các dòng mã lệnh Python nguyên bản cùng các dòng ghi chú giải thích.
+- **Cơ chế thực thi**: Trình thông dịch CPython đọc tệp một cách tuần tự từ dòng đầu tiên đến dòng cuối cùng trong một tiến trình duy nhất rồi kết thúc phiên làm việc.
+- **Ưu và nhược điểm**: Tệp rất nhẹ, dễ dàng kiểm soát phiên bản qua Git diff theo từng dòng. Định dạng này là chuẩn mực tối thượng để đóng gói thư viện, xây dựng module phần mềm và vận hành các đường ống sản xuất (*production pipelines*). Tuy nhiên, tệp `.py` không lưu lại trạng thái biến số hay hình ảnh đồ thị sau khi chạy xong. Mỗi lần muốn thử nghiệm một phép biến đổi nhỏ ở cuối tệp, lập trình viên buộc phải chạy lại toàn bộ chương trình từ đầu.
+
+#### 2. Tệp sổ tay tính toán `.ipynb` (JSON document)
+- **Bản chất lưu trữ**: Thực chất là một tệp dữ liệu có cấu trúc định dạng **JSON** (*JavaScript Object Notation*). Nếu mở một tệp `.ipynb` bằng trình soạn thảo văn bản thông thường (như Notepad), bạn sẽ thấy một cây đối tượng JSON chứa danh sách các ô (`cells`), siêu dữ liệu (`metadata`) và thông tin phiên bản.
+- **Cấu trúc bên trong một ô (Cell)**: Mỗi ô được phân loại thành ô mã nguồn (`"cell_type": "code"`) hoặc ô thuyết minh (`"cell_type": "markdown"`). Đặc biệt, ô mã nguồn không chỉ lưu chuỗi lệnh (`source`) mà còn lưu trữ kèm theo số lần thực thi (`execution_count`) và toàn bộ kết quả đầu ra (`outputs`).
+- **Khối kết quả đa phương tiện (`outputs`)**: Jupyter lưu trực tiếp bảng dữ liệu HTML, thông điệp in ra màn hình, thậm chí cả ảnh đồ thị được mã hóa dưới dạng chuỗi nhị phân Base64 (`image/png;base64,...`) vào ngay bên trong tệp JSON.
+- **Ưu và nhược điểm**: Định dạng này lý tưởng cho việc khám phá dữ liệu ban đầu (*Exploratory Data Analysis - EDA*), giảng dạy học thuật và báo cáo khoa học vì kết hợp hài hòa giữa lời dẫn giải thuyết minh, công thức toán học và biểu đồ trực quan. Trái lại, tệp `.ipynb` rất nặng nề, khó hòa giải xung đột (*merge conflict*) trên Git do các thẻ siêu dữ liệu và chuỗi Base64 thay đổi liên tục sau mỗi lần nhấn phím thực thi.
+
+```text
+Sự khác biệt cốt lõi về cấu trúc tệp giữa .py và .ipynb:
+
+[ tinh_toan.py ] (Văn bản thuần túy)
+------------------------------------------------------------
+import math
+x = 16
+print("Căn bậc hai:", math.sqrt(x))
+------------------------------------------------------------
+
+[ tinh_toan.ipynb ] (Tệp dữ liệu JSON có cấu trúc)
+------------------------------------------------------------
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {},
+      "source": [
+        "import math\n",
+        "x = 16\n",
+        "print(\"Căn bậc hai:\", math.sqrt(x))"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": ["Căn bậc hai: 4.0\n"]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "language_info": { "name": "python", "version": "3.12" }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
+------------------------------------------------------------
+```
+
+### 3.2. Kiến trúc tương tác ba tầng: Trình duyệt, Máy chủ và IPython Kernel
+Một điểm dễ gây nhầm lẫn khi mới tiếp cận là cho rằng giao diện trang web của Jupyter Notebook hay Google Colab chính là nơi trực tiếp chạy mã Python. Trên thực tế, hệ thống vận hành theo mô hình phân tầng ba thành phần độc lập:
+
+```mermaid
+flowchart LR
+    A["Giao diện người dùng<br/>(Browser / VS Code)"] <-->|"WebSocket<br/>(Giao thức mạng)"| B["Máy chủ Notebook<br/>(Jupyter Server)"]
+    B <-->|"ZeroMQ Messages<br/>(Kênh thông điệp nội bộ)"| C["Hạt nhân tính toán<br/>(IPython Kernel trong RAM)"]
+```
 
 <DataDiagram name="jupyter" />
 
-1. **Giao diện người dùng (Front-end Client)**: Là trang web hiển thị các ô nhập mã nguồn (cell), văn bản giải thích Markdown và kết quả đồ họa. Nó đóng gói toàn bộ nội dung của phiên làm việc thành một tệp văn bản có định dạng JSON mang phần mở rộng `.ipynb`.
-2. **Hạt nhân tính toán (IPython Kernel)**: Là một tiến trình Python độc lập chạy nền trên hệ điều hành. Khi bạn nhấn tổ hợp phím `Shift + Enter` tại một ô mã, nội dung mã nguồn được gửi qua giao thức tin nhắn ZeroMQ tới Kernel. Kernel thực thi đoạn mã trong bộ nhớ RAM và gửi kết quả trả ngược về để trình duyệt hiển thị.
+1. **Giao diện người dùng (Front-end Client)**: Là trang web trên trình duyệt hoặc trình biên tập VS Code. Tầng này chỉ chịu trách nhiệm hiển thị các ô cell, ghi nhận phím bấm của người dùng, kết xuất mã Markdown và vẽ biểu đồ từ dữ liệu nhận về. Trình duyệt hoàn toàn không chứa trình thông dịch Python.
+2. **Máy chủ Sổ tay (Jupyter Server)**: Chạy nền trên máy tính hoặc máy chủ đám mây, đóng vai trò cầu nối điều phối. Máy chủ quản lý các tệp tin trên ổ cứng, xác thực người dùng và chuyển tiếp yêu cầu từ trình duyệt tới hạt nhân tính toán thông qua kết nối WebSocket hai chiều.
+3. **Hạt nhân tính toán (IPython Kernel)**: Là một tiến trình Python độc lập chạy ngầm trên hệ điều hành, sở hữu không gian bộ nhớ RAM riêng biệt. Khi bạn nhấn tổ hợp phím `Shift + Enter` tại một ô mã, nội dung mã được đóng gói thành thông điệp gửi qua socket ZeroMQ tới Kernel. Kernel thông dịch mã, cập nhật dữ liệu trong RAM và truyền kết quả trả ngược về máy chủ để hiển thị lên trình duyệt.
 
-### 3.2. Bẫy Không gian tên Toàn cục (Global Namespace Trap)
-Điều quan trọng cần ghi nhớ: **Hạt nhân IPython duy trì một không gian tên toàn cục duy nhất xuyên suốt phiên làm việc**. 
+### 3.3. Minh họa cơ chế chạy Cell và Chỉ số Thực thi `In [ ]`
+Mỗi ô mã nguồn trong giao diện sổ tay đều đi kèm một chỉ số thực thi nằm ở lề trái:
 
-Trạng thái của các biến số trong RAM được quyết định bởi **trật tự bấm chạy thực tế của bạn**, hoàn toàn không phụ thuộc vào vị trí hiển thị từ trên xuống dưới của các ô cell trên màn hình:
-- Nếu bạn khai báo `x = 10` ở ô cell số 1, sau đó chạy ô cell số 3 có lệnh `x = x + 5` hai lần liên tiếp, giá trị của `x` trong bộ nhớ RAM lúc này là $20$.
-- Nếu một người đồng nghiệp mở cuốn notebook đó ra và bấm chạy tuần tự từ trên xuống dưới, họ sẽ nhận được kết quả `x = 15`. Đây chính là nguyên nhân hàng đầu gây ra hiện tượng **mã chạy được trên máy tôi nhưng lỗi trên máy bạn**.
+- **`In [ ]`**: Ô mã chưa từng được thực thi kể từ khi hạt nhân tính toán khởi động. Toàn bộ biến số khai báo trong ô này chưa tồn tại trong bộ nhớ RAM.
+- **`In [*]`**: Ô mã đang trong quá trình xử lý. Tiến trình Kernel đang bận tính toán, nạp dữ liệu từ đĩa hoặc chờ phản hồi mạng. Các ô mã khác được bấm trong lúc này sẽ bị đưa vào hàng đợi chờ xử lý.
+- **`In [n]`**: Ô mã đã thực thi thành công. Chỉ số $n$ là một số nguyên dương tăng dần, phản ánh **thứ tự thời gian thực tế** mà lệnh được gửi tới hạt nhân, hoàn toàn không phản ánh vị trí hình học của ô đó trên trang tài liệu.
 
-> [!IMPORTANT] Quy tắc vàng về Tính tái lập (Reproducibility)
-> Trước khi nộp bài hoặc bàn giao sản phẩm phân tích dữ liệu, bạn bắt buộc phải thực hiện thao tác: **Restart Kernel and Run All Cells** (Khởi động lại Hạt nhân và Chạy toàn bộ các ô từ đầu đến cuối). Nếu cuốn notebook không thể chạy trơn tru từ dòng 1 đến dòng cuối cùng trên một hạt nhân sạch, mã nguồn đó được coi là chưa hoàn thiện.
+Hãy quan sát minh họa trực quan dưới đây về một phiên làm việc có thứ tự bấm ô phi tuần tự:
+
+```text
+Màn hình Sổ tay tương tác (Thứ tự thị giác từ trên xuống dưới):
+
+┌─ Ô Cell 1 ────────────────────────────────────────────────────────┐
+│ In [1]: x = 10                                                    │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ Ô Cell 2 ────────────────────────────────────────────────────────┐
+│ In [4]: print("Giá trị x hiện tại là:", x)                         │
+│                                                                   │
+│ Out [4]: Giá trị x hiện tại là: 20                                 │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ Ô Cell 3 ────────────────────────────────────────────────────────┐
+│ In [3]: x = x + 5                                                 │
+└───────────────────────────────────────────────────────────────────┘
+```
+
+Trong ví dụ trên, người học có thể bối rối khi thấy Cell 2 nằm ngay dưới Cell 1 (`x = 10`) nhưng lại in ra giá trị `20`. Nguyên nhân bắt nguồn từ trật tự thao tác thực tế theo thời gian:
+1. Người dùng bấm chạy Cell 1 trước tiên $\implies$ Nhãn hiện `In [1]`, gán `x = 10` vào RAM.
+2. Người dùng bỏ qua Cell 2, cuộn chuột xuống bấm chạy Cell 3 lần đầu $\implies$ Nhãn hiện `In [2]`, tính `x = 10 + 5 = 15`.
+3. Người dùng tiếp tục bấm chạy Cell 3 thêm một lần nữa $\implies$ Nhãn tăng lên `In [3]`, tính `x = 15 + 5 = 20`.
+4. Cuối cùng, người dùng cuộn ngược lên trên và bấm chạy Cell 2 $\implies$ Nhãn nhận giá trị `In [4]`, in ra giá trị mới nhất của `x` đang lưu trong RAM là $20$.
+
+### 3.4. Bẫy Không gian tên Toàn cục (Global Namespace Trap)
+Hiện tượng trên dẫn đến một trong những cạm bẫy lớn nhất khi làm việc với sổ tay tương tác: **Bẫy Không gian tên Toàn cục**.
+
+#### 1. Cơ chế trạng thái tích lũy trong RAM
+Hạt nhân IPython duy trì một vùng nhớ toàn cục duy nhất xuyên suốt phiên làm việc (*stateful environment*). Mọi biến số, hàm số và kiểu dữ liệu sau khi tạo ra sẽ nằm cố định trong RAM cho đến khi bạn khởi động lại hạt nhân hoặc tắt ứng dụng. Trạng thái của dữ liệu được quyết định hoàn toàn bởi trục thời gian bấm chuột của người dùng, chứ không tuân theo trật tự đọc từ trên xuống dưới của trang tài liệu.
+
+Bảng dưới đây minh họa sự biến đổi của biến số trong RAM qua từng mốc thời gian:
+
+| Mốc thời gian | Thao tác người dùng | Mã thực thi | Nhãn hiển thị | Trạng thái biến `x` trong RAM |
+| :--- | :--- | :--- | :--- | :--- |
+| Thời điểm $t_1$ | Nhấn chạy Cell 1 | `x = 10` | `In [1]` | $x = 10$ |
+| Thời điểm $t_2$ | Nhấn chạy Cell 3 | `x = x + 5` | `In [2]` | $x = 15$ |
+| Thời điểm $t_3$ | Nhấn lại Cell 3 | `x = x + 5` | `In [3]` | $x = 20$ |
+| Thời điểm $t_4$ | Cuộn lên chạy Cell 2 | `print(x)` | `In [4]` | $x = 20$ (in ra màn hình: 20) |
+
+#### 2. Cạm bẫy biến ma (Ghost Variable Trap)
+Một rủi ro nghiêm trọng khác xảy ra khi người lập trình thử nghiệm mã nguồn nháp:
+1. Bạn tạo một ô cell tạm thời để khai báo biến hỗ trợ: `du_lieu_tam = tai_bang()`.
+2. Bạn chạy ô tiếp theo sử dụng biến đó để vẽ biểu đồ thành công.
+3. Sau khi thấy biểu đồ xuất hiện như ý muốn, bạn cảm thấy ô khai báo tạm thời không còn cần thiết nên bấm nút xóa ô đó khỏi giao diện màn hình.
+
+Tại thời điểm này, biến `du_lieu_tam` vẫn tồn tại nguyên vẹn trong bộ nhớ RAM của hạt nhân hiện tại, do đó mọi ô phía dưới vẫn chạy bình thường mà không hề báo lỗi. Tuy nhiên, khi bạn gửi tệp notebook này cho người khác hoặc đưa vào máy chủ chạy tự động, người nhận mở tệp lên và chạy từ đầu trên một hạt nhân sạch sẽ lập tức gặp lỗi sập chương trình:
+```text
+NameError: name 'du_lieu_tam' is not defined
+```
+Tình huống này giải thích rõ tại sao mã nguồn có thể chạy được trên máy người gửi nhưng lại gãy đổ trên máy người nhận.
+
+> [!IMPORTANT] Kỷ luật sắt về Tính tái lập (Reproducibility)
+> Trước khi nộp bài tập lớn, gửi báo cáo phân tích hoặc đưa mã nguồn vào kho lưu trữ Git, bạn bắt buộc phải thực hiện thao tác kiểm định cuối cùng:
+>
+> **Kernel $\to$ Restart Kernel and Run All Cells** *(Khởi động lại Hạt nhân và Chạy toàn bộ các ô)*.
+>
+> Thao tác này sẽ hủy tiến trình Python cũ, dọn sạch hoàn toàn bộ nhớ RAM, khởi tạo một tiến trình mới tinh và thực thi tuần tự từ ô đầu tiên đến ô cuối cùng. Nếu toàn bộ cuốn sổ tay chạy thông suốt từ đầu đến cuối mà không phát sinh bất kỳ lỗi nào, đồng thời các chỉ số hiển thị tăng đều đặn `In [1]`, `In [2]`, `In [3]`,..., sản phẩm của bạn mới chính thức đạt chuẩn về tính tái lập khoa học.
 
 ---
 
-## 4. Quản trị Dự án Chuẩn mực: Venv, Phụ thuộc & Git
+## 4. Quản trị Dự án Chuẩn mực: Môi trường ảo `venv` và Kiểm soát Phụ thuộc
 
-Một kỹ sư dữ liệu chuyên nghiệp không bao giờ cài đặt tất cả các thư viện vào môi trường Python gốc của hệ điều hành. Mỗi dự án phải là một thực thể độc lập và tự khép kín.
+Một kỹ sư dữ liệu chuyên nghiệp không bao giờ cài đặt thư viện bừa bãi vào môi trường Python gốc của hệ điều hành. Mỗi dự án nghiên cứu hoặc sản phẩm phân tích phải là một không gian độc lập và tự khép kín.
 
-### 4.1. Môi trường ảo (`venv`)
-Môi trường ảo tạo ra một thư mục biệt lập chứa bản sao nhị phân của Python và khu vực cài đặt các gói thư viện (`site-packages`) riêng biệt cho từng dự án. Điều này giúp ngăn chặn triệt để xung đột phiên bản:
+### 4.1. Vì sao người ta nghĩ ra Môi trường ảo (`venv`)?
+Để hiểu được giá trị của môi trường ảo, trước hết ta cần nắm được cách thức tổ chức mặc định của Python trên máy tính.
+
+Khi bạn cài đặt Python lên hệ điều hành, hệ thống chỉ cung cấp một thư mục lưu trữ duy nhất dành cho các gói phần mềm bên thứ ba, thường mang tên `site-packages` nằm sâu trong thư mục cài đặt gốc. Mỗi khi bạn gõ lệnh `pip install <ten-goi>`, trình quản lý gói sẽ tải mã nguồn về và ghi thẳng vào thư mục dùng chung này. Nếu gói phần mềm đó đã tồn tại một phiên bản trước đó, lệnh cài đặt mới sẽ âm thầm ghi đè và xóa bỏ phiên bản cũ.
+
+Cách thiết kế dùng chung một chiếc tủ đồ này nhanh chóng bộc lộ hạn chế khi một lập trình viên phải phụ trách nhiều dự án cùng lúc. Các kỹ sư nhận thấy rằng: Mỗi dự án phần mềm có chu kỳ phát triển, đối tác công nghệ và ràng buộc thư viện hoàn toàn khác nhau. Một dự án không thể bị phụ thuộc hoặc làm hỏng các dự án khác chỉ vì một bản nâng cấp thư viện.
+
+Môi trường ảo (*virtual environment* hay `venv`) ra đời như một **chiếc hộp cách ly (sandbox)** độc lập cho từng dự án. Về mặt bản chất kỹ thuật, `venv` thực chất chỉ là một thư mục con nằm ngay bên trong dự án của bạn (thường đặt tên là `.venv`), bao gồm:
+1. **Bản sao hoặc liên kết biểu tượng (*symlink*)**: Trỏ tới tệp thực thi `python` của hệ thống.
+2. **Thư mục `site-packages` riêng biệt**: Chứa toàn bộ các thư viện được cài đặt riêng cho dự án đó, hoàn toàn cách ly với phần còn lại của máy tính.
+3. **Các kịch bản kích hoạt (`activate`)**: Có nhiệm vụ tạm thời điều chỉnh biến môi trường hệ thống `$PATH`, ưu tiên trỏ các lệnh `python` và `pip` vào bên trong thư mục `.venv`.
+
+Khi bạn làm việc xong hoặc muốn dọn dẹp dự án, bạn chỉ cần xóa bỏ thư mục `.venv` đó là toàn bộ thư viện liên quan biến mất sạch sẽ, không để lại bất kỳ rác thải hay ảnh hưởng tiêu cực nào lên hệ điều hành.
+
+### 4.2. Ba tình huống thực tế hằng ngày nếu không sử dụng `venv`
+Nếu không duy trì kỷ luật tạo môi trường ảo, bạn sẽ thường xuyên đối mặt với ba tình huống trớ trêu sau đây trong công việc hằng ngày:
+
+#### 1. Bi kịch xung đột phiên bản giữa các dự án (Dependency Collision)
+- **Bối cảnh**: Bạn đang duy trì một hệ thống báo cáo bán hàng cho doanh nghiệp xây dựng từ năm ngoái (Dự án A), sử dụng thư viện `pandas` phiên bản cũ `1.5.3`. Sang học kỳ này, bạn bắt đầu làm đồ án môn Xử lý dữ liệu (Dự án B) cần sử dụng các tính năng tối ưu hóa kiểu dữ liệu chuỗi mới nhất của `pandas 2.2.0`.
+- **Diễn biến**: Do không dùng môi trường ảo, bạn mở terminal lên và gõ `pip install pandas==2.2.0`. Lệnh này lập tức gỡ bỏ bản 1.5.3 và chép đè bản 2.2.0 vào hệ thống máy tính.
+- **Hệ quả**: Dự án B chạy rất tốt, nhưng ngày hôm sau khi công ty yêu cầu bạn xuất báo cáo định kỳ cho Dự án A, chương trình Dự án A lập tức ném ra hàng loạt lỗi màu đỏ `ImportError` và gãy đổ chức năng vì nhiều cú pháp cũ đã bị loại bỏ ở phiên bản mới. Bạn rơi vào bẫy bế tắc: Nâng cấp mã nguồn Dự án A thì mất nhiều ngày kiểm thử lại toàn bộ hệ thống, trong khi hạ cấp phiên bản về `1.5.3` thì đồ án Dự án B không thể tiếp tục thực hiện.
+
+#### 2. Ô nhiễm và làm tê liệt Python của Hệ điều hành (Corrupting System Python)
+- **Bối cảnh**: Trên các hệ điều hành phổ biến dành cho lập trình viên như Ubuntu, Debian hay macOS, rất nhiều công cụ quản trị hệ thống cốt lõi (chẳng hạn công cụ cài đặt gói `apt`, trình quản lý mạng, các dịch vụ tường lửa hay tiện ích đồ họa) được viết và vận hành bằng chính phiên bản Python mặc định của hệ điều hành.
+- **Diễn biến**: Khi gặp thông báo lỗi thiếu quyền cài đặt thư viện, người mới học thường gõ thêm quyền quản trị viên tối cao: `sudo pip install <ten-goi>`.
+- **Hệ quả**: Trình quản lý gói `pip` với quyền root sẽ ghi đè các thư viện nền tảng của hệ điều hành bằng các phiên bản thử nghiệm của ngành khoa học dữ liệu. Sự bất tương thích này có thể khiến các công cụ quản lý hệ thống bị tê liệt, máy tính không thể cập nhật phần mềm, thậm chí mất hoàn toàn giao diện đồ họa khi khởi động lại máy. Đây là lý do các hệ điều hành hiện đại đã áp dụng tiêu chuẩn bảo vệ nghiêm ngặt (PEP 668), từ chối lệnh `pip install` ở môi trường ngoài và yêu cầu người dùng bắt buộc phải sử dụng môi trường ảo.
+
+#### 3. Mất khả năng đóng gói và tái lập môi trường ("Chạy trên máy tôi nhưng sập trên máy bạn")
+- **Bối cảnh**: Sau một thời gian học tập, máy tính của bạn đã được cài đặt tự do hàng trăm thư viện khác nhau phục vụ từ làm web, lập trình game, trí tuệ nhân tạo đến phân tích dữ liệu. Đến hạn nộp bài tập lớn, bạn gõ lệnh xuất danh sách phụ thuộc `pip freeze > requirements.txt` để gửi cho bạn cùng nhóm.
+- **Diễn biến**: Tệp văn bản sinh ra chứa một danh sách khổng lồ gồm hơn 180 thư viện với các phiên bản hỗn tạp, trong đó chứa cả những gói chỉ hoạt động trên một hệ điều hành nhất định hoặc đòi hỏi driver phần cứng đặc thù của riêng máy bạn.
+- **Hệ quả**: Khi giảng viên hoặc bạn cùng nhóm tải mã nguồn về và gõ `pip install -r requirements.txt`, quá trình cài đặt liên tục báo lỗi biên dịch, làm tràn bộ nhớ ổ đĩa hoặc cài đặt hàng loạt thư viện thừa thãi không liên quan. Nguy hiểm hơn, dự án có thể thiếu mất tính năng cốt lõi do bạn quên mất tên gói thư viện thực sự cần dùng.
+
+### 4.3. Quy trình thực hành chuẩn mực với `venv`
+Một quy trình làm việc chuyên nghiệp luôn bắt đầu bằng việc thiết lập môi trường biệt lập ngay khi khởi tạo dự án:
 
 ```bash
-# Khởi tạo môi trường ảo có tên .venv trong thư mục dự án
+# Bước 1: Điều hướng vào thư mục dự án và khởi tạo môi trường ảo có tên .venv
 python -m venv .venv
 
-# Kích hoạt môi trường ảo
+# Bước 2: Kích hoạt môi trường ảo
 # Trên macOS / Linux:
 source .venv/bin/activate
 # Trên Windows PowerShell:
 .venv\Scripts\Activate.ps1
 ```
 
-### 4.2. Khóa phiên bản thư viện (`requirements.txt`)
-Để bảo đảm bất kỳ ai tải dự án về cũng tái lập được chính xác môi trường làm việc, danh sách các thư viện cùng phiên bản cụ thể cần được xuất ra tệp cấu hình:
+Khi kích hoạt thành công, dấu nhắc lệnh trên terminal sẽ hiển thị thêm tiền tố `(.venv)`, báo hiệu cho bạn biết mọi lệnh gọi `python` hay `pip` từ lúc này trở đi đều được gói gọn an toàn bên trong chiếc hộp cát của dự án.
 
 ```bash
-# Xuất danh sách thư viện hiện hành
-pip freeze > requirements.txt
+# Bước 3: Cài đặt các thư viện cần thiết cho dự án
+pip install pandas numpy matplotlib
 
-# Cài đặt chính xác các thư viện trên một máy mới
+# Bước 4: Khóa danh sách phụ thuộc ra tệp cấu hình
+pip freeze > requirements.txt
+```
+
+Khi một thành viên khác trong nhóm nghiên cứu nhận dự án hoặc khi triển khai lên máy chủ, họ chỉ cần thực hiện hai thao tác tái lập đơn giản:
+```bash
+# Tạo môi trường ảo sạch trên máy mới và kích hoạt
+python -m venv .venv
+source .venv/bin/activate  # Hoặc .venv\Scripts\Activate.ps1 trên Windows
+
+# Cài đặt chính xác các phiên bản thư viện đã được khóa
 pip install -r requirements.txt
 ```
 
 Bên cạnh đó, tệp `.python-version` ghi rõ phiên bản Python chuẩn (ví dụ `3.12.8`) để các công cụ quản lý như `pyenv` hay `uv` tự động đồng bộ môi trường giữa các thành viên trong nhóm nghiên cứu.
+
+> [!TIP] Nguyên tắc vàng khi làm việc với Git
+> Thư mục `.venv` có thể chứa hàng chục nghìn tệp tin với dung lượng hàng trăm megabyte. Tuyệt đối **không bao giờ đưa thư mục `.venv` lên kho lưu trữ Git**.
+>
+> Bạn chỉ cần thêm dòng chữ `.venv/` vào tệp `.gitignore`. Kho lưu trữ mã nguồn chỉ cần lưu trữ mã lệnh của bạn và tệp kê khai `requirements.txt`. Bất kỳ ai tải mã nguồn về đều có thể tự động dựng lại môi trường nguyên bản chỉ bằng một dòng lệnh.
 
 ---
 
@@ -118,7 +283,7 @@ avg_price = df["price"].mean()
 ```
 Dòng mã này trông có vẻ hoàn hảo, nhưng thực chất AI vừa âm thầm chọn thay bạn hàng loạt quy ước nghiệp vụ quan trọng mà bạn không hề hay biết:
 1. **Xử lý giá trị khuyết thiếu**: Hàm `.mean()` của pandas mặc định bỏ qua các giá trị `NaN` (`skipna=True`). Nếu cột có tới $40\%$ dữ liệu bị thiếu và các ô bị thiếu đó đều thuộc về các căn hộ giá rẻ, kết quả trung bình thu được sẽ bị kéo lệch lên cao một cách sai lầm.
-2. **Hiện diện của ngoại lai**: Giá trị trung bình cộng (*Mean*) cực kỳ nhạy cảm với các điểm ngoại lai. Nếu có một căn biệt thự giá 500 triệu đồng/đêm, con số trung bình không còn đại diện cho mức giá phổ biến của thị trường (vốn phải dùng Trung vị - *Median*).
+2. **Hiện diện của ngoại lai**: Giá trị trung bình cộng (*Mean*) rất nhạy cảm với các điểm ngoại lai. Nếu có một căn biệt thự giá 500 triệu đồng/đêm, con số trung bình không còn đại diện cho mức giá phổ biến của thị trường (vốn phải dùng Trung vị - *Median*).
 3. **Mẫu số bằng không**: Nếu tập dữ liệu lọc ra bị rỗng, phép tính sẽ trả về `NaN` và có thể làm sập các khối tính toán tài chính phía sau.
 
 ### 5.2. Nguyên tắc "Tự phác thảo trước khi hỏi" (Think First, Prompt Later)
@@ -131,284 +296,11 @@ Quy trình làm việc chuẩn mực của một nhà phân tích khi cộng tá
 
 ## 6. Hệ thống Bài tập Thực chiến Lab 1 {#bai-tap}
 
-Hệ thống bài tập dưới đây chuyển hóa toàn bộ nội dung thực hành từ `lab-01.ipynb` sang chuẩn mực phân tích dữ liệu độc lập. Mỗi bài tập đều đi kèm tình huống thực tế, các câu hỏi phỏng đoán kiểm chứng cơ chế hạt nhân, và lời giải hai tầng (căn bản và nâng cao).
+Toàn bộ hệ thống bài tập thực hành chuyên sâu và phòng Lab thực chiến của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu thực hành trên dữ liệu thực tế.
 
-::: exercise Bài 1.1: Quản lý biến trạng thái và Bẫy thực thi ngoài trật tự (Notebook State)
-Trong một cuốn sổ tay phân tích, một sinh viên tạo 3 ô mã liên tiếp như sau:
-
-```python
-# Ô mã A:
-x = 10
-
-# Ô mã B:
-x = x + 5
-
-# Ô mã C:
-print(f"Giá trị hiện tại của x là: {x}")
-```
-
-**Nhiệm vụ phỏng đoán và giải thích:**
-1. **Kịch bản 1**: Giả sử sinh viên bấm chạy ô A một lần, sau đó bấm chạy ô B hai lần liên tiếp, rồi mới bấm chạy ô C. Dự đoán giá trị được in ra ở màn hình console và giải thích cơ chế bộ nhớ bên dưới của IPython Kernel.
-2. **Kịch bản 2**: Sinh viên khởi động lại hạt nhân (Restart Kernel) và ngay lập tức bấm chạy ô C trước tiên. Điều gì sẽ xảy ra? Trình thông dịch Python báo lỗi gì?
-3. **Đề xuất giải pháp**: Viết lại logic tăng giá trị trên dưới dạng một hàm thuần khiết (*pure function*) để loại bỏ hoàn toàn sự phụ thuộc vào biến trạng thái toàn cục.
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở phòng Lab tương tác với 2 hướng tiếp cận (Cơ bản & Nâng cao), phân tích giả thuyết và bộ kiểm chứng tự động `assert`.
 :::
-
-::: solution
-#### 1. Phân tích Dự đoán & Cơ chế Hạt nhân
-- **Kết quả Kịch bản 1**: Giá trị in ra là **`20`**.
-  * **Giải thích**: Khi chạy ô A, biến `x` được tạo trong không gian tên toàn cục với giá trị 10. Khi chạy ô B lần thứ nhất, `x` nhận giá trị $10 + 5 = 15$. Khi chạy ô B lần thứ hai, giá trị hiện thời trong RAM là 15 được cộng thêm 5 thành 20. Ô C chỉ đơn thuần đọc giá trị đang lưu trong RAM tại thời điểm nó được kích hoạt.
-- **Kết quả Kịch bản 2**: Trình thông dịch sẽ ném ra ngoại lệ:
-  `NameError: name 'x' is not defined`
-  * **Giải thích**: Khi khởi động lại Kernel, toàn bộ không gian tên bộ nhớ RAM bị xóa sạch. Biến `x` chưa từng được cấp phát và gán giá trị, do đó lệnh truy xuất `x` ở ô C sẽ lập tức thất bại.
-
-#### 2. Lời giải Kỹ thuật Hai tầng
-
-##### Cách 1: Tiếp cận Căn bản & Trực quan (Biến cục bộ tuần tự)
-Một cách người ta hay dùng để tránh nhầm lẫn là đặt tên biến phản ánh rõ từng bước biến đổi, không ghi đè biến cũ:
-
-```python
-x_goc = 10
-x_buoc_1 = x_goc + 5
-x_buoc_2 = x_buoc_1 + 5
-print(f"Giá trị sau hai bước tăng: {x_buoc_2}")  # 20
-```
-
-##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói Hàm thuần khiết - Pure Function)
-Kỹ sư chuyên nghiệp sẽ đóng gói logic thành hàm độc lập, không làm biến đổi bất kỳ trạng thái toàn cục nào bên ngoài:
-
-```python
-def tang_gia_tri(gia_tri_ban_dau: int, so_buoc: int = 1, buoc_nhay: int = 5) -> int:
-    """Tính toán giá trị sau một số bước tăng nhất định.
-    
-    Hàm thuần khiết (Pure function): Cùng đầu vào luôn cho cùng đầu ra,
-    hoàn toàn không làm biến đổi bộ nhớ toàn cục.
-    """
-    assert so_buoc >= 0, "Số bước lặp không được âm!"
-    return gia_tri_ban_dau + so_buoc * buoc_nhay
-
-# Chạy thử nghiệm có kiểm chứng
-ket_qua = tang_gia_tri(10, so_buoc=2, buoc_nhay=5)
-assert ket_qua == 20
-print(f"Giá trị tính toán an toàn: {ket_qua}")
-```
-
-#### Phân tích bản chất & Bình luận sư phạm
-- Việc dùng biến toàn cục lỏng lẻo trong Notebook giống như việc xây nhà trên cát. Chỉ cần vô tình bấm chạy lại một ô cell ở giữa trang, toàn bộ số liệu của các ô bên dưới sẽ bị sai lệch mà không hề phát sinh thông báo lỗi (*Silent Data Corruption*).
-- Đóng gói logic vào hàm thuần khiết giúp mã nguồn có thể kiểm thử đơn vị (*Unit Test*), tái sử dụng trong các pipeline lớn và hoàn toàn miễn nhiễm với trật tự bấm phím của người dùng.
-:::
-
----
-
-::: exercise Bài 1.2: Đọc bảng dữ liệu thực tế và Thẩm định cấu trúc (Shape & Dtypes)
-Cho một bảng dữ liệu khảo sát thị trường lưu trú được lưu dưới định dạng bảng. Bạn cần tải dữ liệu và thực hiện các bước thẩm định cấu trúc ban đầu:
-1. Đọc dữ liệu thành DataFrame.
-2. Kiểm tra kích thước hình học của bảng: có bao nhiêu dòng quan sát và bao nhiêu cột đặc trưng?
-3. Trích xuất danh sách tên các cột và phân loại kiểu dữ liệu (`dtypes`).
-4. Viết các câu lệnh kiểm tra tự động (`assert`) để đảm bảo bảng không bị rỗng và chứa đúng các cột bắt buộc phục vụ phân tích.
-:::
-
-::: solution
-#### Lời giải Kỹ thuật Hai tầng
-
-```python
-import pandas as pd
-import numpy as np
-from io import StringIO
-
-# Giả lập dữ liệu chỗ ở thực tế
-csv_data = """id,ten_cho_o,quan,loai_phong,gia_dem,so_danh_gia
-101,Homestay Phố Cổ,Hoàn Kiếm,Entire home/apt,850000,45
-102,Phòng Riêng View Hồ,Tây Hồ,Private room,450000,12
-103,Studio Cầu Giấy,Cầu Giấy,Entire home/apt,600000,28
-104,Căn hộ Vinhomes,Nam Từ Liêm,Entire home/apt,1200000,60
-105,Nhà tập thể xưa,Đống Đa,Private room,350000,5
-"""
-```
-
-##### Cách 1: Tiếp cận Căn bản & Trực quan (Truy xuất thuộc tính cơ bản)
-
-```python
-df_cho_o = pd.read_csv(StringIO(csv_data))
-
-# 1. Kiểm tra kích thước
-so_dong = len(df_cho_o)
-so_cot = len(df_cho_o.columns)
-print(f"Bảng có {so_dong} dòng và {so_cot} cột.")
-
-# 2. Xem tên cột và kiểu dữ liệu
-print("Danh sách cột:", list(df_cho_o.columns))
-print("Kiểu dữ liệu từng cột:\n", df_cho_o.dtypes)
-```
-
-##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Đóng gói Hàm Thẩm định Cấu trúc với Assertions)
-
-```python
-def tham_dinh_cau_truc_bang(df: pd.DataFrame, cot_bat_buoc: list[str]) -> dict:
-    """Thẩm định cấu trúc và tính toàn vẹn ban đầu của bảng dữ liệu."""
-    # 1. Chốt chặn an toàn: Bảng không được phép rỗng
-    assert not df.empty, "LỖI DỮ LIỆU: Bảng nạp vào bị rỗng hoàn toàn!"
-    
-    # 2. Chốt chặn an toàn: Phải chứa đầy đủ các cột bắt buộc
-    tap_cot_thieu = set(cot_bat_buoc) - set(df.columns)
-    assert len(tap_cot_thieu) == 0, f"LỖI CẤU TRÚC: Thiếu các cột bắt buộc: {tap_cot_thieu}"
-    
-    # 3. Tổng hợp báo cáo kiểm định
-    n_rows, n_cols = df.shape
-    phan_loai_kieu = df.dtypes.value_counts().to_dict()
-    
-    return {
-        "so_dong": n_rows,
-        "so_cot": n_cols,
-        "danh_sach_cot": df.columns.tolist(),
-        "phan_bo_kieu_du_lieu": {str(k): v for k, v in phan_loai_kieu.items()},
-        "kich_thuoc_bo_nho_kb": round(df.memory_usage(deep=True).sum() / 1024, 2)
-    }
-
-cot_can_kiem_tra = ["id", "loai_phong", "gia_dem"]
-bao_cao = tham_dinh_cau_truc_bang(df_cho_o, cot_can_kiem_tra)
-print("Báo cáo thẩm định cấu trúc:\n", pd.Series(bao_cao))
-```
-
-#### Phân tích bản chất & Bình luận sư phạm
-- Thuộc tính `.shape` trả về một tuple `(n_rows, n_cols)` được tính toán trực tiếp từ cấu trúc khối nhớ bên dưới của mảng hai chiều, nhanh hơn nhiều so với việc gọi `len(df)` kết hợp `len(df.columns)`.
-- Việc kiểm tra kích thước bộ nhớ với `memory_usage(deep=True)` là phản xạ cần thiết khi chuyển sang xử lý tệp dữ liệu lớn, giúp nhận biết các cột kiểu chuỗi (`object`) đang tiêu tốn bộ nhớ RAM gấp nhiều lần so với các kiểu số học.
-:::
-
----
-
-::: exercise Bài 1.3: Tính tỷ lệ phân bố có kiểm chứng và Bẫy mẫu số rỗng
-Từ bảng dữ liệu chỗ ở trên, ban quản lý muốn xác định tỷ trọng chỗ ở thuộc loại "Căn hộ nguyên căn" (`Entire home/apt`) trên toàn thị trường để đánh giá mức độ chuyên nghiệp hóa của các chủ nhà:
-
-$$
-\text{Tỷ lệ} = \frac{\text{Số chỗ ở loại Entire home/apt}}{\text{Tổng số chỗ ở hợp lệ}}
-$$
-
-**Yêu cầu kỹ thuật:**
-1. Tính toán tỷ lệ trên bằng code Python.
-2. Xử lý an toàn trường hợp tập dữ liệu bị rỗng (mẫu số bằng 0) để hàm không ném ra ngoại lệ `ZeroDivisionError` mà trả về kết quả hợp lý.
-3. Diễn giải ý nghĩa kinh tế/nghiệp vụ của con số thu được.
-:::
-
-::: solution
-#### Lời giải Kỹ thuật Hai tầng
-
-##### Cách 1: Tiếp cận Căn bản & Trực quan (Đếm tuần tự với vòng lặp Python)
-
-```python
-danh_sach_phong = df_cho_o["loai_phong"].tolist()
-so_luong_nguyen_can = 0
-tong_so = len(danh_sach_phong)
-
-for lp in danh_sach_phong:
-    if lp == "Entire home/apt":
-        so_luong_nguyen_can += 1
-
-if tong_so > 0:
-    ty_le_cb = so_luong_nguyen_can / tong_so
-else:
-    ty_le_cb = 0.0
-
-print(f"Số lượng nguyên căn: {so_luong_nguyen_can}/{tong_so}")
-print(f"Tỷ lệ (Căn bản): {ty_le_cb:.1%}")
-```
-
-##### Cách 2: Tiếp cận Nâng cao & Tối ưu (Vector hóa với Pandas và Kiểm soát Mẫu số)
-
-```python
-def tinh_ty_le_loai_phong(df: pd.DataFrame, loai_phong_muc_tieu: str = "Entire home/apt") -> float:
-    """Tính tỷ lệ chỗ ở thuộc loại chỉ định với cơ chế bảo vệ mẫu số rỗng."""
-    if df.empty or "loai_phong" not in df.columns:
-        return 0.0
-    
-    # 1. Tạo mặt nạ Boolean ở tầng C (nhanh gấp hàng chục lần vòng for)
-    mat_na_dung = (df["loai_phong"] == loai_phong_muc_tieu)
-    
-    # 2. Lấy trung bình của mảng Boolean chính là tỷ lệ phần trăm (True = 1, False = 0)
-    # Pandas .mean() tự động xử lý mẫu số an toàn
-    ty_le = mat_na_dung.mean()
-    
-    return float(ty_le)
-
-ty_le_nc = tinh_ty_le_loai_phong(df_cho_o, "Entire home/apt")
-print(f"Tỷ lệ nguyên căn (Nâng cao): {ty_le_nc:.2%}")
-assert np.isclose(ty_le_nc, 3 / 5)
-```
-
-#### Diễn giải Ý nghĩa Nghiệp vụ & Bình luận sư phạm
-- **Mẹo toán học vector hóa**: Trong khoa học dữ liệu, một cách người ta hay dùng để tính tỷ lệ của một điều kiện là **lấy trung bình cộng của mặt nạ Boolean** (`mask.mean()`). Vì kiểu Boolean quy ước `True == 1` và `False == 0`, trung bình cộng của dãy số 0 và 1 chính là tổng số lần xuất hiện chia cho kích thước mẫu. Phép tính này thực thi hoàn toàn trong hạt nhân C của NumPy mà không tốn chi phí duyệt từng phần tử.
-- **Ý nghĩa thị trường**: Tỷ lệ $60\%$ chỗ ở là căn hộ nguyên căn cho thấy thị trường lưu trú này mang tính chuyên nghiệp và thương mại hóa cao (các nhà đầu tư sở hữu trọn vẹn bất động sản để cho thuê), thay vì mô hình chia sẻ phòng ở truyền thống mang tính gia đình (`Private room` chỉ chiếm $40\%$).
-:::
-
----
-
-::: exercise Bài 1.4: Đóng gói Báo cáo Thị trường Độc lập (Bài tập mở rộng E1)
-Hãy thiết kế một hàm độc lập mang tên `dong_goi_bao_cao_thi_truong(data: pd.DataFrame) -> dict` nhận vào một DataFrame chỗ ở bất kỳ và trả về một từ điển tổng hợp các chỉ số quan trọng phục vụ ban giám đốc:
-- `tong_so_cho_o`: Số lượng chỗ ở hợp lệ.
-- `gia_trung_binh`: Giá thuê trung bình mỗi đêm (làm tròn đến hàng đơn vị).
-- `gia_trung_vi`: Mức giá trung vị (đại diện cho phân khúc phổ thông).
-- `ty_le_nguyen_can`: Tỷ lệ phần trăm chỗ ở loại nguyên căn.
-- `thong_diep_chinh`: Chuỗi nhận định ngắn gọn về đặc điểm thị trường dựa trên mức chênh lệch giữa giá trung bình và giá trung vị.
-:::
-
-::: solution
-#### Lời giải Kỹ thuật Chuẩn mực
-
-```python
-def dong_goi_bao_cao_thi_truong(data: pd.DataFrame) -> dict:
-    """Đóng gói báo cáo phân tích thị trường chỗ ở tự động và toàn diện."""
-    if data.empty:
-        return {
-            "trang_thai": "DU_LIEU_RONG",
-            "tong_so_cho_o": 0,
-            "gia_trung_binh": 0.0,
-            "gia_trung_vi": 0.0,
-            "ty_le_nguyen_can": 0.0,
-            "thong_diep_chinh": "Không có dữ liệu để phân tích."
-        }
-    
-    n_total = len(data)
-    
-    # 1. Tính toán các chỉ số thống kê tiền tệ
-    gia_mean = data["gia_dem"].mean()
-    gia_median = data["gia_dem"].median()
-    
-    # 2. Tính tỷ lệ loại phòng
-    ty_le_nc = (data["loai_phong"] == "Entire home/apt").mean()
-    
-    # 3. Phân tích độ lệch phân phối (Skewness Insight)
-    # Nếu giá trung bình cao hơn trung vị đáng kể (> 15%), thị trường có phân khúc siêu sang kéo lệch
-    do_lech_gia = (gia_mean - gia_median) / gia_median if gia_median > 0 else 0
-    if do_lech_gia > 0.15:
-        thong_diep = (
-            f"Giá trung bình ({gia_mean:,.0f} đ) cao hơn trung vị ({gia_median:,.0f} đ) "
-            f"{do_lech_gia:.1%}, cho thấy sự hiện diện của phân khúc căn hộ cao cấp kéo lệch thị trường."
-        )
-    else:
-        thong_diep = (
-            f"Giá trung bình ({gia_mean:,.0f} đ) bám sát trung vị ({gia_median:,.0f} đ), "
-            "thị trường có phân bố giá tương đối đồng đều."
-        )
-        
-    return {
-        "tong_so_cho_o": n_total,
-        "gia_trung_binh": round(gia_mean, 0),
-        "gia_trung_vi": round(gia_median, 0),
-        "ty_le_nguyen_can": round(ty_le_nc * 100, 2),
-        "thong_diep_chinh": thong_diep
-    }
-
-# Chạy thử nghiệm và hiển thị kết quả
-bao_cao_kinh_doanh = dong_goi_bao_cao_thi_truong(df_cho_o)
-print("BÁO CÁO PHÂN TÍCH THỊ TRƯỜNG TỰ ĐỘNG:")
-for k, v in bao_cao_kinh_doanh.items():
-    print(f"- {k}: {v}")
-```
-
-#### Phân tích bản chất & Bình luận sư phạm
-- Báo cáo này áp dụng nguyên tắc **phản biện thống kê giữa Trung bình cộng và Trung vị**. Trong phân tích kinh doanh, không bao giờ báo cáo đơn độc giá trung bình mà phải đặt cạnh trung vị. Việc nhận diện giá trung bình ($690,000$ đ) cao hơn trung vị ($600,000$ đ) tới $15\%$ giúp ban lãnh đạo lập tức nhận ra tác động của căn hộ cao cấp 1.2 triệu đồng ở Nam Từ Liêm kéo lệch chỉ số chung.
-:::
-
----
 
 ## 7. Nguồn Tham khảo & Đọc thêm
 

@@ -15,7 +15,7 @@ Tập C là nón nếu $\theta x \in C$ với mọi $x \in C$ và mọi $\theta 
 
 **Bốn loại tổ hợp.** Tổ hợp tuyến tính không ràng buộc hệ số, tổ hợp affine đòi tổng hệ số bằng 1, tổ hợp nón đòi hệ số không âm, tổ hợp lồi đòi cả hai điều kiện. Tương ứng với chúng là không gian con, tập affine, nón lồi và tập lồi.
 
-**Các ví dụ quan trọng.** Nón không âm $\mathbb R^n_+$, nón bậc hai $\{(x, t) : \|x\|_2 \le t\}$ và nón ma trận nửa xác định dương $\mathbb S^n_+$. Kiểm tra $b$ có thuộc nón sinh bởi các cột của $A$ hay không là một bài toán khả thi tuyến tính: tìm $\lambda \succeq 0$ với $A\lambda = b$. Nguồn: Convex Optimization, §2.1.5 và §2.2.3–2.2.5.
+**Các ví dụ quan trọng.** Nón không âm $\mathbb R^n_+$, nón bậc hai $\{(x, t) : \|x\|_2 \le t\}$ và nón ma trận nửa xác định dương $\mathbb S^n_+$. Kiểm tra $b$ có thuộc nón sinh bởi các cột của $A$ hay không là một bài toán khả thi tuyến tính: Tìm $\lambda \succeq 0$ với $A\lambda = b$. Nguồn: Convex Optimization, §2.1.5 và §2.2.3–2.2.5.
 
 ## Ví dụ
 

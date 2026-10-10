@@ -7,9 +7,9 @@ title: "Quả cầu chuẩn và nón chuẩn"
 description: "Bốn tiên đề của chuẩn và các chuẩn ℓ1, ℓ2, ℓ∞, ℓp, chuẩn bậc hai. Vì sao quả cầu chuẩn lồi và liên hệ của điều đó với bất đẳng thức tam giác. Nón chuẩn, nón bậc hai, mẹo nâng chiều, và vì sao góc nhọn của quả cầu ℓ1 tạo ra nghiệm thưa."
 ---
 
-Ở chủ đề trước, "khoảng cách" luôn là khoảng cách Euclid, đo bằng thước thẳng. Nhưng trong tối ưu và học máy, ta thường đo độ lớn của vector theo những cách khác. Tổng giá trị tuyệt đối các thành phần đo "tổng lượng thay đổi", thành phần lớn nhất đo "trường hợp tệ nhất", còn chuẩn Euclid đo "năng lượng". Mỗi cách đo cho một hình dạng quả cầu khác nhau: hình thoi, hình tròn, hình vuông.
+Ở chủ đề trước, "khoảng cách" luôn là khoảng cách Euclid, đo bằng thước thẳng. Nhưng trong tối ưu và học máy, ta thường đo độ lớn của vector theo những cách khác. Tổng giá trị tuyệt đối các thành phần đo "tổng lượng thay đổi", thành phần lớn nhất đo "trường hợp tệ nhất", còn chuẩn Euclid đo "năng lượng". Mỗi cách đo cho một hình dạng quả cầu khác nhau: Hình thoi, hình tròn, hình vuông.
 
-Có hai câu hỏi dẫn đường cho phần này. Thứ nhất, vì sao quả cầu của **mọi** chuẩn đều lồi, và vì sao chính tính lồi ấy là điều phân biệt một chuẩn thật sự với một công thức trông giống chuẩn. Thứ hai, làm thế nào để biến bán kính của quả cầu thành một biến, và vì sao mẹo đó lại sinh ra một trong những nón quan trọng nhất của tối ưu: nón bậc hai.
+Có hai câu hỏi dẫn đường cho phần này. Thứ nhất, vì sao quả cầu của **mọi** chuẩn đều lồi, và vì sao chính tính lồi ấy là điều phân biệt một chuẩn thật sự với một công thức trông giống chuẩn. Thứ hai, làm thế nào để biến bán kính của quả cầu thành một biến, và vì sao mẹo đó lại sinh ra một trong những nón quan trọng nhất của tối ưu: Nón bậc hai.
 
 ## 1. Chuẩn là gì
 
@@ -20,7 +20,7 @@ Một **chuẩn** trên $\mathbb{R}^n$ là một hàm $\|\cdot\| : \mathbb{R}^n 
 3. Thuần nhất: $\|\alpha x\| = |\alpha|\, \|x\|$ với mọi số thực $\alpha$.
 4. Bất đẳng thức tam giác: $\|x + y\| \le \|x\| + \|y\|$.
 
-Ba tính chất đầu nói rằng chuẩn hành xử như một "độ dài": chỉ vector 0 có độ dài 0, và kéo dài vector gấp đôi thì độ dài gấp đôi. Tính chất thứ tư nói rằng đi đường vòng qua một điểm trung gian không bao giờ ngắn hơn đi thẳng. Như ta sẽ thấy ở mục 3, tính chất thứ tư mới là tính chất có nội dung hình học sâu nhất.
+Ba tính chất đầu nói rằng chuẩn hành xử như một "độ dài": Chỉ vector 0 có độ dài 0, và kéo dài vector gấp đôi thì độ dài gấp đôi. Tính chất thứ tư nói rằng đi đường vòng qua một điểm trung gian không bao giờ ngắn hơn đi thẳng. Như ta sẽ thấy ở mục 3, tính chất thứ tư mới là tính chất có nội dung hình học sâu nhất.
 
 Những chuẩn quen thuộc nhất là họ chuẩn $\ell_p$ với $p \ge 1$:
 
@@ -30,9 +30,9 @@ $$
 
 trong đó ba trường hợp đặc biệt có tên riêng: $\|x\|_1 = \sum_i |x_i|$, chuẩn Euclid $\|x\|_2 = \sqrt{\sum_i x_i^2}$, và $\|x\|_\infty = \max_i |x_i|$, chính là giới hạn của $\|x\|_p$ khi $p \to \infty$. Với $x = (1, -2, 2)$, ta có $\|x\|_1 = 5$, $\|x\|_2 = 3$ và $\|x\|_\infty = 2$.
 
-Còn một họ chuẩn nữa cần nhớ: **chuẩn bậc hai** $\|x\|_P = \sqrt{x^T P x}$ với $P \succ 0$. Quả cầu đơn vị của nó là $\{x : x^T P x \le 1\}$, chính là ellipsoid với ma trận $P^{-1}$ ở chủ đề trước. Nói cách khác, mỗi ellipsoid có tâm ở gốc là quả cầu đơn vị của một chuẩn.
+Còn một họ chuẩn nữa cần nhớ: **Chuẩn bậc hai** $\|x\|_P = \sqrt{x^T P x}$ với $P \succ 0$. Quả cầu đơn vị của nó là $\{x : x^T P x \le 1\}$, chính là ellipsoid với ma trận $P^{-1}$ ở chủ đề trước. Nói cách khác, mỗi ellipsoid có tâm ở gốc là quả cầu đơn vị của một chuẩn.
 
-Lưu ý ký hiệu: trong sách và trong môn học, $\|\cdot\|$ không kèm chỉ số nghĩa là **một chuẩn bất kỳ**, không mặc định là chuẩn Euclid. Những kết luận viết với $\|\cdot\|$ đúng cho mọi chuẩn.
+Lưu ý ký hiệu: Trong sách và trong môn học, $\|\cdot\|$ không kèm chỉ số nghĩa là **một chuẩn bất kỳ**, không mặc định là chuẩn Euclid. Những kết luận viết với $\|\cdot\|$ đúng cho mọi chuẩn.
 
 ## 2. Quả cầu chuẩn luôn lồi
 
@@ -52,7 +52,7 @@ Hình cũng cho thấy một chuỗi bất đẳng thức đáng nhớ. Quả c�
 
 ## 3. Vì sao $p < 1$ không cho một chuẩn
 
-Công thức $\left(\sum_i |x_i|^p\right)^{1/p}$ vẫn tính được với $0 < p < 1$. Vậy tại sao người ta chỉ gọi nó là chuẩn khi $p \ge 1$? Trượt $p$ xuống dưới 1 trong mô phỏng, bạn sẽ thấy câu trả lời bằng mắt: "quả cầu" bị lõm vào giữa bốn đỉnh và **không còn lồi**. Với $p = \tfrac12$, hai điểm $(1, 0)$ và $(0, 1)$ có "độ dài" bằng 1, nhưng trung điểm $(\tfrac12, \tfrac12)$ có giá trị $(\sqrt{0.5} + \sqrt{0.5})^2 = 2 > 1$.
+Công thức $\left(\sum_i |x_i|^p\right)^{1/p}$ vẫn tính được với $0 < p < 1$. Vậy tại sao người ta chỉ gọi nó là chuẩn khi $p \ge 1$? Trượt $p$ xuống dưới 1 trong mô phỏng, bạn sẽ thấy câu trả lời bằng mắt: "Quả cầu" bị lõm vào giữa bốn đỉnh và **không còn lồi**. Với $p = \tfrac12$, hai điểm $(1, 0)$ và $(0, 1)$ có "độ dài" bằng 1, nhưng trung điểm $(\tfrac12, \tfrac12)$ có giá trị $(\sqrt{0.5} + \sqrt{0.5})^2 = 2 > 1$.
 
 Không lồi và vi phạm bất đẳng thức tam giác là hai mặt của cùng một hiện tượng. Thật vậy, $\|(1, 0) + (0, 1)\|_{1/2} = (1 + 1)^2 = 4$, lớn hơn tổng $\|(1, 0)\|_{1/2} + \|(0, 1)\|_{1/2} = 2$. Tổng quát hơn, có một mối liên hệ hai chiều đẹp đẽ:
 
@@ -65,7 +65,7 @@ $$
 \frac{x + y}{\|x\| + \|y\|} = \theta \frac{x}{\|x\|} + (1 - \theta)\frac{y}{\|y\|} \in B ,
 $$
 
-nên $\left\|\tfrac{x + y}{\|x\| + \|y\|}\right\| \le 1$, và dùng tính thuần nhất thì được $\|x + y\| \le \|x\| + \|y\|$. Chiều thứ hai là nội dung của **hàm Minkowski**, ta chỉ phát biểu. Kết luận của cả hai chiều có thể tóm thành một câu: chuẩn và tập lồi đối xứng là hai cách nói về cùng một thứ. Đây là ví dụ đầu tiên trong môn học cho thấy tính lồi nằm ngay trong định nghĩa của khái niệm "độ dài", chứ không phải một điều kiện kỹ thuật gắn thêm từ bên ngoài.
+nên $\left\|\tfrac{x + y}{\|x\| + \|y\|}\right\| \le 1$, và dùng tính thuần nhất thì được $\|x + y\| \le \|x\| + \|y\|$. Chiều thứ hai là nội dung của **hàm Minkowski**, ta chỉ phát biểu. Kết luận của cả hai chiều có thể tóm thành một câu: Chuẩn và tập lồi đối xứng là hai cách nói về cùng một thứ. Đây là ví dụ đầu tiên trong môn học cho thấy tính lồi nằm ngay trong định nghĩa của khái niệm "độ dài", chứ không phải một điều kiện kỹ thuật gắn thêm từ bên ngoài.
 
 ## 4. Góc của quả cầu $\ell_1$ và nghiệm thưa
 
@@ -75,11 +75,11 @@ $$
 \text{minimize}\quad \|x - y\|_2^2 \quad \text{subject to}\quad \|x\| \le 1 .
 $$
 
-Với quả cầu Euclid, nghiệm là $\tfrac{y}{\|y\|_2} = (0.894, 0.447)$: cả hai thành phần đều khác 0. Với quả cầu $\ell_1$, nghiệm là $(1, 0)$, đúng một đỉnh của hình thoi, với thành phần thứ hai **bằng 0**. Hình ảnh giải thích vì sao: các đường đồng mức của $\|x - y\|_2^2$ là những hình tròn đồng tâm tại $y$, và hình tròn nhỏ nhất chạm vào hình thoi thường chạm ở một đỉnh nhọn, vì đỉnh "nhô ra" về phía $y$ nhiều nhất. Các đỉnh của quả cầu $\ell_1$ nằm trên các trục tọa độ, tức là ở những điểm có nhiều thành phần bằng 0.
+Với quả cầu Euclid, nghiệm là $\tfrac{y}{\|y\|_2} = (0.894, 0.447)$: Cả hai thành phần đều khác 0. Với quả cầu $\ell_1$, nghiệm là $(1, 0)$, đúng một đỉnh của hình thoi, với thành phần thứ hai **bằng 0**. Hình ảnh giải thích vì sao: Các đường đồng mức của $\|x - y\|_2^2$ là những hình tròn đồng tâm tại $y$, và hình tròn nhỏ nhất chạm vào hình thoi thường chạm ở một đỉnh nhọn, vì đỉnh "nhô ra" về phía $y$ nhiều nhất. Các đỉnh của quả cầu $\ell_1$ nằm trên các trục tọa độ, tức là ở những điểm có nhiều thành phần bằng 0.
 
-Hiện tượng nghiệm rơi vào đỉnh giải thích vì sao chuẩn $\ell_1$ được dùng để tìm **nghiệm thưa** trong thống kê và học máy, chẳng hạn trong hồi quy LASSO, nơi người ta muốn mô hình chỉ dùng một số ít đặc trưng. Cần nói cẩn thận: "thường chạm ở đỉnh" là một cách hình dung, không phải định lý. Có những vị trí của $y$ mà nghiệm nằm trên một cạnh và không thưa. Nhưng các vùng của $y$ cho nghiệm ở đỉnh chiếm phần lớn, và chúng càng lớn khi số chiều tăng.
+Hiện tượng nghiệm rơi vào đỉnh giải thích vì sao chuẩn $\ell_1$ được dùng để tìm **nghiệm thưa** trong thống kê và học máy, chẳng hạn trong hồi quy LASSO, nơi người ta muốn mô hình chỉ dùng một số ít đặc trưng. Cần nói cẩn thận: "Thường chạm ở đỉnh" là một cách hình dung, không phải định lý. Có những vị trí của $y$ mà nghiệm nằm trên một cạnh và không thưa. Nhưng các vùng của $y$ cho nghiệm ở đỉnh chiếm phần lớn, và chúng càng lớn khi số chiều tăng.
 
-## 5. Nón chuẩn: biến bán kính thành biến
+## 5. Nón chuẩn: Biến bán kính thành biến
 
 Một quả cầu chuẩn có bán kính $r$ cố định. Nếu muốn coi bán kính là một biến, ta xét tập trong không gian lớn hơn một chiều:
 
@@ -93,13 +93,13 @@ $$
 \mathcal{Q} = \{(x, t) \in \mathbb{R}^{n+1} : \|x\|_2 \le t\}.
 $$
 
-Điểm $(3, 4, 5)$ nằm đúng trên biên của $\mathcal{Q} \subseteq \mathbb{R}^3$ vì $\sqrt{9 + 16} = 5$. Sách cũng viết nón bậc hai bằng một bất đẳng thức bậc hai, $x^T x - t^2 \le 0$ cùng với $t \ge 0$, và giải thích vì sao nó còn được gọi là nón bậc hai. Điều kiện $t \ge 0$ là cần thiết: thiếu nó, tập $\{x^T x \le t^2\}$ gồm cả nón ngược phía dưới và không lồi.
+Điểm $(3, 4, 5)$ nằm đúng trên biên của $\mathcal{Q} \subseteq \mathbb{R}^3$ vì $\sqrt{9 + 16} = 5$. Sách cũng viết nón bậc hai bằng một bất đẳng thức bậc hai, $x^T x - t^2 \le 0$ cùng với $t \ge 0$, và giải thích vì sao nó còn được gọi là nón bậc hai. Điều kiện $t \ge 0$ là cần thiết: Thiếu nó, tập $\{x^T x \le t^2\}$ gồm cả nón ngược phía dưới và không lồi.
 
 <Cone3DLab type="soc" />
 
-Vì sao nâng chiều lại có ích? Một ràng buộc như $\|Ax + b\|_2 \le c^T x + d$, trong đó vế phải là một hàm affine của biến, trông không giống quả cầu nào cả, vì "bán kính" thay đổi theo $x$. Nhưng nó nói đúng một điều: điểm $(Ax + b,\ c^T x + d)$ thuộc nón bậc hai. Tập các $x$ thỏa điều kiện là ảnh ngược của nón bậc hai qua một ánh xạ affine, và như chủ đề về các phép toán giữ tính lồi sẽ cho thấy, ảnh ngược affine của một tập lồi là lồi. Những bài toán có ràng buộc loại này được gọi là quy hoạch nón bậc hai (SOCP), một lớp bài toán lồi giải được hiệu quả mà Lecture 02 sẽ giới thiệu.
+Vì sao nâng chiều lại có ích? Một ràng buộc như $\|Ax + b\|_2 \le c^T x + d$, trong đó vế phải là một hàm affine của biến, trông không giống quả cầu nào cả, vì "bán kính" thay đổi theo $x$. Nhưng nó nói đúng một điều: Điểm $(Ax + b,\ c^T x + d)$ thuộc nón bậc hai. Tập các $x$ thỏa điều kiện là ảnh ngược của nón bậc hai qua một ánh xạ affine, và như chủ đề về các phép toán giữ tính lồi sẽ cho thấy, ảnh ngược affine của một tập lồi là lồi. Những bài toán có ràng buộc loại này được gọi là quy hoạch nón bậc hai (SOCP), một lớp bài toán lồi giải được hiệu quả mà Lecture 02 sẽ giới thiệu.
 
-Nón chuẩn của $\ell_1$ và $\ell_\infty$ là những đa diện, vì các quả cầu $\ell_1$, $\ell_\infty$ có hữu hạn mặt phẳng. Nón bậc hai thì không: biên tròn của nó cần vô số siêu phẳng tựa. Đó là lý do SOCP thật sự rộng hơn quy hoạch tuyến tính.
+Nón chuẩn của $\ell_1$ và $\ell_\infty$ là những đa diện, vì các quả cầu $\ell_1$, $\ell_\infty$ có hữu hạn mặt phẳng. Nón bậc hai thì không: Biên tròn của nó cần vô số siêu phẳng tựa. Đó là lý do SOCP thật sự rộng hơn quy hoạch tuyến tính.
 
 ## 6. Những câu hỏi để đào sâu
 
@@ -123,7 +123,7 @@ Với $x = (1, 0)$, ta có $\|x\|_p = (1^p + 0)^{1/p} = 1$ với mọi $p$, nên
 
 <details><summary>Xem lời giải thích</summary>
 
-Không hẳn. Ellipsoid đó chính là quả cầu bán kính 1, tâm $x_c$, của chuẩn bậc hai $\|z\|_{P^{-1}} = \sqrt{z^T P^{-1} z}$. Vì vậy mọi ellipsoid không suy biến đều là một quả cầu chuẩn. Điều ngược lại sai: quả cầu $\ell_1$ hay $\ell_\infty$ có góc nhọn nên không phải ellipsoid. Ellipsoid là những quả cầu của các chuẩn "đến từ một tích vô hướng".
+Không hẳn. Ellipsoid đó chính là quả cầu bán kính 1, tâm $x_c$, của chuẩn bậc hai $\|z\|_{P^{-1}} = \sqrt{z^T P^{-1} z}$. Vì vậy mọi ellipsoid không suy biến đều là một quả cầu chuẩn. Điều ngược lại sai: Quả cầu $\ell_1$ hay $\ell_\infty$ có góc nhọn nên không phải ellipsoid. Ellipsoid là những quả cầu của các chuẩn "đến từ một tích vô hướng".
 
 </details>
 
@@ -131,7 +131,7 @@ Không hẳn. Ellipsoid đó chính là quả cầu bán kính 1, tâm $x_c$, c�
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập này là epigraph của hàm $\|x\|_2^2$, một hàm lồi, nên lồi (chủ đề về epigraph sẽ chứng minh điều này). Nhưng nó không phải nón: điểm $(x, t) = (1, 1)$ thuộc tập, còn $2\cdot(1, 1) = (2, 2)$ thì không, vì $4 > 2$. Lát cắt tại độ cao $t$ của nó là quả cầu bán kính $\sqrt t$, nên nó có hình một cái bát parabol chứ không phải hình nón. Nón bậc hai dùng $\|x\|_2$ chứ không dùng $\|x\|_2^2$, và chính tính thuần nhất bậc một của chuẩn làm cho nó thành nón.
+Tập này là epigraph của hàm $\|x\|_2^2$, một hàm lồi, nên lồi (chủ đề về epigraph sẽ chứng minh điều này). Nhưng nó không phải nón: Điểm $(x, t) = (1, 1)$ thuộc tập, còn $2\cdot(1, 1) = (2, 2)$ thì không, vì $4 > 2$. Lát cắt tại độ cao $t$ của nó là quả cầu bán kính $\sqrt t$, nên nó có hình một cái bát parabol chứ không phải hình nón. Nón bậc hai dùng $\|x\|_2$ chứ không dùng $\|x\|_2^2$, và chính tính thuần nhất bậc một của chuẩn làm cho nó thành nón.
 
 </details>
 
@@ -158,7 +158,7 @@ Viết tập $\{x \in \mathbb{R}^2 : \sqrt{(x_1 - 1)^2 + x_2^2} \le x_1 + 1\}$ d
 :::
 
 ::: solution
-Điều kiện nói rằng $(x_1 - 1,\ x_2,\ x_1 + 1)$ thuộc $\mathcal{Q} \subseteq \mathbb{R}^3$, tức tập là ảnh ngược của $\mathcal{Q}$ qua ánh xạ affine $x \mapsto (x_1 - 1, x_2, x_1 + 1)$. Với $(0, 0)$: vế trái $\sqrt{1} = 1$, vế phải $1$, nên điểm nằm trên biên. Với $(0, 2)$: vế trái $\sqrt{1 + 4} = \sqrt5 \approx 2.24$, vế phải $1$, nên điểm không thuộc tập. Bình phương hai vế (hợp lệ khi $x_1 + 1 \ge 0$) cho $x_2^2 \le 4x_1$, một miền parabol lồi.
+Điều kiện nói rằng $(x_1 - 1,\ x_2,\ x_1 + 1)$ thuộc $\mathcal{Q} \subseteq \mathbb{R}^3$, tức tập là ảnh ngược của $\mathcal{Q}$ qua ánh xạ affine $x \mapsto (x_1 - 1, x_2, x_1 + 1)$. Với $(0, 0)$: Vế trái $\sqrt{1} = 1$, vế phải $1$, nên điểm nằm trên biên. Với $(0, 2)$: Vế trái $\sqrt{1 + 4} = \sqrt5 \approx 2.24$, vế phải $1$, nên điểm không thuộc tập. Bình phương hai vế (hợp lệ khi $x_1 + 1 \ge 0$) cho $x_2^2 \le 4x_1$, một miền parabol lồi.
 :::
 
 ## Tóm tắt

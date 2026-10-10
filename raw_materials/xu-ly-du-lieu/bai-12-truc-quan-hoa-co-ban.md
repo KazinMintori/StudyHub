@@ -4,11 +4,11 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: plotting-and-visualization](https://wesmckinney.com/book/plotting-and-visualization)
+- [Python for Data Analysis: Plotting-and-visualization](https://wesmckinney.com/book/plotting-and-visualization)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-12-truc-quan-hoa-co-ban.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-12-truc-quan-hoa-co-ban.html)
 
 ## Phạm vi đã biên soạn
 

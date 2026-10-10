@@ -11,9 +11,9 @@ description: "Khám phá hình học đa diện, nghiệm cơ sở trong quy ho�
 Trong bức tranh toàn cảnh của toán học tối ưu hóa dành cho Trí tuệ Nhân tạo, có hai trường phái tư duy kinh điển, đại diện cho hai góc nhìn hoàn toàn khác nhau về bài toán ra quyết định quy mô lớn:
 
 1. **Quy hoạch tuyến tính (Linear Programming - LP)**: Tiếp cận bài toán dưới **góc nhìn hình học không gian tĩnh**. Mọi giới hạn tài nguyên đan xen tạo thành một khối đa diện lồi nhiều chiều (polyhedron), và mục tiêu là tìm kiếm một "đỉnh cực" (extreme point) cao nhất hoặc thấp nhất trên khối đa diện đó. LP là xương sống của các hệ thống phân bổ tài nguyên, điều độ luồng mạng, và lập lịch tính toán trên các cụm máy chủ huấn luyện mô hình ngôn ngữ lớn (LLM).
-2. **Quy hoạch động (Dynamic Programming - DP)**: Tiếp cận bài toán dưới **góc nhìn chuỗi quyết định động theo thời gian**. Nhà toán học Richard Bellman đã đúc kết một chân lý sâu sắc: một quyết định dài hạn tối ưu luôn có thể phân rã thành một bước hành động tức thời cộng với giá trị tối ưu của phần bài toán còn lại. DP là linh hồn của các thuật toán tìm đường, giải mã chuỗi (Viterbi decoding, Beam Search trong mô hình ngôn ngữ) và là nền tảng toán học trực tiếp của Học tăng cường (Reinforcement Learning - RL).
+2. **Quy hoạch động (Dynamic Programming - DP)**: Tiếp cận bài toán dưới **góc nhìn chuỗi quyết định động theo thời gian**. Nhà toán học Richard Bellman đã đúc kết một chân lý sâu sắc: Một quyết định dài hạn tối ưu luôn có thể phân rã thành một bước hành động tức thời cộng với giá trị tối ưu của phần bài toán còn lại. DP là linh hồn của các thuật toán tìm đường, giải mã chuỗi (Viterbi decoding, Beam Search trong mô hình ngôn ngữ) và là nền tảng toán học trực tiếp của Học tăng cường (Reinforcement Learning - RL).
 
-Điều kỳ diệu nhất mà chúng ta sẽ khám phá trong bài giảng này: **hai trường phái tưởng chừng tách biệt ấy thực chất lại là hai mặt của cùng một đồng xu**. Biến tiềm năng (thế năng) trong bài toán đối ngẫu tuyến tính của đường đi ngắn nhất chính là hàm giá trị tối ưu của phương trình Bellman.
+Điều kỳ diệu nhất mà chúng ta sẽ khám phá trong bài giảng này: **Hai trường phái tưởng chừng tách biệt ấy thực chất lại là hai mặt của cùng một đồng xu**. Biến tiềm năng (thế năng) trong bài toán đối ngẫu tuyến tính của đường đi ngắn nhất chính là hàm giá trị tối ưu của phương trình Bellman.
 
 ---
 
@@ -154,7 +154,7 @@ Bất đẳng thức này đúng với **mọi điểm khả thi** trong toàn b
 Nếu như quy hoạch tuyến tính phân tích bài toán dựa trên cấu trúc không gian phẳng, thì **quy hoạch động (Dynamic Programming)** tổ chức việc giải quyết bài toán theo dòng chảy thời gian của các trạng thái.
 
 ### Nguyên lý tối ưu Bellman (1957)
-> *"Một chiến lược tối ưu có tính chất là: cho dù trạng thái ban đầu và quyết định ban đầu là gì, các quyết định tiếp theo phải tạo thành một chiến lược tối ưu đối với trạng thái sinh ra từ quyết định đầu tiên."*
+> *"Một chiến lược tối ưu có tính chất là: Cho dù trạng thái ban đầu và quyết định ban đầu là gì, các quyết định tiếp theo phải tạo thành một chiến lược tối ưu đối với trạng thái sinh ra từ quyết định đầu tiên."*
 
 Xét chuỗi thời gian hữu hạn từ $t = 0$ đến $t = T$. Tại bước $t$:
 - Hệ thống ở trạng thái $s \in \mathcal{S}$.
@@ -175,13 +175,13 @@ Phương trình truy hồi Bellman được thiết lập bằng cách giải ng
    $$
 
 ### Trực giác then chốt: Tính Markov của không gian trạng thái
-Để quy hoạch động hoạt động chính xác, **trạng thái $s$ phải chứa đủ toàn bộ thông tin trong quá khứ cần thiết để định đoạt tương lai**. Nếu chi phí hoặc tập hành động tương lai còn phụ thuộc vào việc "ta đã đi đến trạng thái này bằng con đường nào", thì bài toán đã vi phạm tính chất Markov. Khi đó, ta bắt buộc phải mở rộng định nghĩa của trạng thái (ví dụ: gộp thêm biến nhiên liệu còn lại, thời gian đã trôi qua) để khôi phục lại tính Markov.
+Để quy hoạch động hoạt động chính xác, **trạng thái $s$ phải chứa đủ toàn bộ thông tin trong quá khứ cần thiết để định đoạt tương lai**. Nếu chi phí hoặc tập hành động tương lai còn phụ thuộc vào việc "ta đã đi đến trạng thái này bằng con đường nào", thì bài toán đã vi phạm tính chất Markov. Khi đó, ta bắt buộc phải mở rộng định nghĩa của trạng thái (ví dụ: Gộp thêm biến nhiên liệu còn lại, thời gian đã trôi qua) để khôi phục lại tính Markov.
 
 ---
 
 ## 5. Tính toán các giá trị Bellman trên Đồ thị có hướng không chu trình (DAG)
 
-Trên một đồ thị có hướng không có chu trình (Directed Acyclic Graph - DAG), thứ tự sắp xếp topo (topological sort) cung cấp một trật tự thời gian tự nhiên: mọi cạnh đều đi từ nút có chỉ số topo nhỏ sang nút có chỉ số topo lớn. Điều này cho phép ta giải phương trình Bellman một cách tuần tự từ đỉnh đích $T$ ngược về đỉnh nguồn $S$ với độ phức tạp tuyến tính cực kỳ tối ưu $\mathcal{O}(|V| + |E|)$.
+Trên một đồ thị có hướng không có chu trình (Directed Acyclic Graph - DAG), thứ tự sắp xếp topo (topological sort) cung cấp một trật tự thời gian tự nhiên: Mọi cạnh đều đi từ nút có chỉ số topo nhỏ sang nút có chỉ số topo lớn. Điều này cho phép ta giải phương trình Bellman một cách tuần tự từ đỉnh đích $T$ ngược về đỉnh nguồn $S$ với độ phức tạp tuyến tính cực kỳ tối ưu $\mathcal{O}(|V| + |E|)$.
 
 Xét bài toán tìm đường đi ngắn nhất từ đỉnh xuất phát $S$ đến đỉnh đích $T$ trên đồ thị có các cạnh và trọng số chi phí như sau:
 
@@ -263,12 +263,12 @@ v_{u_{k-1}} - v_T &\le c(u_{k-1}, T).
 \end{aligned}
 $$
 
-Cộng tất cả các bất đẳng thức này lại! Một sự triệt tiêu đại số hoàn hảo (telescoping sum) diễn ra: tất cả các thế năng trung gian $v_{u_i}$ đều bị khử sạch sẽ:
+Cộng tất cả các bất đẳng thức này lại! Một sự triệt tiêu đại số hoàn hảo (telescoping sum) diễn ra: Tất cả các thế năng trung gian $v_{u_i}$ đều bị khử sạch sẽ:
 $$
 v_S - v_T \le \sum_{i=0}^{k-1} c(u_i, u_{i+1}) \implies v_S \le \text{Tổng chi phí của đường đi}.
 $$
 
-Bất đẳng thức này chứng minh rằng: **giá trị $v_S$ là một cận dưới hợp lệ cho chi phí của MỌI đường đi từ $S$ tới $T$**. Để tìm đường đi ngắn nhất, ta chỉ cần đẩy cận dưới này lên mức cao nhất có thể!
+Bất đẳng thức này chứng minh rằng: **Giá trị $v_S$ là một cận dưới hợp lệ cho chi phí của MỌI đường đi từ $S$ tới $T$**. Để tìm đường đi ngắn nhất, ta chỉ cần đẩy cận dưới này lên mức cao nhất có thể!
 
 Ta thu được bài toán Quy hoạch tuyến tính:
 

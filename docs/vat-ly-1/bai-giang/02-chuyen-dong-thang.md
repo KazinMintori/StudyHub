@@ -6,7 +6,7 @@ title: "Chuyển động trên đường thẳng"
 prerequisites: ["do-doi","thanh-phan-vector"]
 lessonStatus: ready
 sourceTranslation: full
-description: "Chuyên đề động học chuyển động thẳng một chiều: vận tốc tức thời, gia tốc, chuyển động biến đổi đều, rơi tự do và ứng dụng vi tích phân trong cơ học."
+description: "Chuyên đề động học chuyển động thẳng một chiều: Vận tốc tức thời, gia tốc, chuyển động biến đổi đều, rơi tự do và ứng dụng vi tích phân trong cơ học."
 ---
 
 ::: info Cấu trúc bài giảng

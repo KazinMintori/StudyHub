@@ -15,7 +15,7 @@ next: false
 
 **Big-O, Θ và Ω.** O là chặn trên tiệm cận. Ω là chặn dưới. Θ là chặn trên và dưới cùng bậc. Một thuật toán Θ(n) cũng thuộc $O(n^{2})$, nhưng $O(n^{2})$ là mô tả kém chặt hơn.
 
-Phải phân biệt thời gian, bộ nhớ và mô hình tính toán. O(n) không tự nghĩa là “trường hợp xấu nhất”: trường hợp đang xét cần được nêu riêng.
+Phải phân biệt thời gian, bộ nhớ và mô hình tính toán. O(n) không tự nghĩa là “trường hợp xấu nhất”: Trường hợp đang xét cần được nêu riêng.
 
 ## Ví dụ
 

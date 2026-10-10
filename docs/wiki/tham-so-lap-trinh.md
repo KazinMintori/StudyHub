@@ -19,7 +19,7 @@ Khi gọi hàm, Python dùng cơ chế chia sẻ đối tượng. Nếu đối s
 
 ## Ví dụ
 
-Trong def double(x): return 2*x, x là tham số. Trong double(3), số 3 là đối số.
+Trong def double(x): Return 2*x, x là tham số. Trong double(3), số 3 là đối số.
 
 ## Khi nào cần dùng?
 

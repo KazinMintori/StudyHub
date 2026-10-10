@@ -19,7 +19,7 @@ Ngăn xếp trừu tượng không tự bảo đảm chương trình kết thúc
 
 ## Ví dụ
 
-Đặt A, B, C lần lượt lên ngăn xếp: lấy ra C trước, rồi B, A.
+Đặt A, B, C lần lượt lên ngăn xếp: Lấy ra C trước, rồi B, A.
 
 ## Khi nào cần dùng?
 

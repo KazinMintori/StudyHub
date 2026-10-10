@@ -8,7 +8,7 @@ lessonStatus: ready
 description: "Kỳ vọng như điểm tựa thăng bằng, phương sai và độ lệch chuẩn, tính chất tuyến tính, bậc tự do và lý do chia n-1 trong phương sai mẫu."
 ---
 
-Khi đối diện với một biến ngẫu nhiên, ta không thể biết chắc ở lượt thử tiếp theo giá trị nào sẽ xuất hiện. Nhưng đằng sau sự hỗn loạn bề ngoài đó luôn tồn tại những quy luật dài hạn: các giá trị có xu hướng hội tụ quanh một "trọng tâm" nào? Mức độ phân tán, co cụm quanh trọng tâm đó rộng hay hẹp? Và khi ta chỉ có trong tay một tập dữ liệu mẫu hữu hạn, làm thế nào để ước lượng chuẩn xác các tham số chưa biết của toàn bộ tổng thể?
+Khi đối diện với một biến ngẫu nhiên, ta không thể biết chắc ở lượt thử tiếp theo giá trị nào sẽ xuất hiện. Nhưng đằng sau sự hỗn loạn bề ngoài đó luôn tồn tại những quy luật dài hạn: Các giá trị có xu hướng hội tụ quanh một "trọng tâm" nào? Mức độ phân tán, co cụm quanh trọng tâm đó rộng hay hẹp? Và khi ta chỉ có trong tay một tập dữ liệu mẫu hữu hạn, làm thế nào để ước lượng chuẩn xác các tham số chưa biết của toàn bộ tổng thể?
 
 Bài học này sẽ trang bị hai đặc trưng số quan trọng bậc nhất của lý thuyết xác suất: **Kỳ vọng** (Expected Value - đo xu thế trung tâm) và **Phương sai** (Variance - đo độ phân tán rủi ro), cùng chiếc cầu nối từ lý thuyết sang thống kê thực nghiệm thông qua **phương sai mẫu hiệu chỉnh $n-1$**.
 
@@ -41,7 +41,7 @@ Không có mặt xúc xắc nào mang $3{,}5$ chấm. Nhưng nếu bạn gieo co
 
 ### 1.2. Tính chất tuyến tính: Vũ khí tính toán tối thượng
 
-Kỳ vọng sở hữu một tính chất toán học cực kỳ thanh lịch và mạnh mẽ: **tính tuyến tính**. Với hai biến ngẫu nhiên bất kỳ $X, Y$ và các hằng số $a, b, c \in \mathbb{R}$:
+Kỳ vọng sở hữu một tính chất toán học cực kỳ thanh lịch và mạnh mẽ: **Tính tuyến tính**. Với hai biến ngẫu nhiên bất kỳ $X, Y$ và các hằng số $a, b, c \in \mathbb{R}$:
 
 $$\mathbb{E}[aX + bY + c] = a\mathbb{E}[X] + b\mathbb{E}[Y] + c.$$
 
@@ -119,7 +119,7 @@ Trung bình mẫu $\bar{X}$ là một **ước lượng không chệch (unbiased
 
 $$\frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2.$$
 
-Thế nhưng, các nhà thống kê phát hiện ra rằng công thức trên bị chệch: nó luôn **đánh giá thấp (underestimate)** phương sai thực sự của tổng thể! 
+Thế nhưng, các nhà thống kê phát hiện ra rằng công thức trên bị chệch: Nó luôn **đánh giá thấp (underestimate)** phương sai thực sự của tổng thể! 
 
 Công thức đúng chuẩn để ước lượng không chệch là **phương sai mẫu hiệu chỉnh**, ký hiệu là $s^2$:
 
@@ -136,7 +136,7 @@ Có hai cách hiểu trực giác sâu sắc cho bước hiệu chỉnh này:
 2. **Mất một bậc tự do (Degrees of Freedom):**
    Trong mẫu gồm $n$ số, luôn tồn tại ràng buộc tất yếu:
    $$\sum_{i=1}^n (x_i - \bar{x}) = 0.$$
-   Ràng buộc này có nghĩa là: nếu bạn đã biết $n - 1$ độ lệch đầu tiên, độ lệch thứ $n$ hoàn toàn bị xác định, không còn tự do thay đổi nữa. Ta đã "tiêu tốn" 1 bậc tự do để ước lượng $\bar{x}$. Do đó, thông tin thực tế về độ biến thiên chỉ còn lại $n - 1$ bậc tự do độc lập.
+   Ràng buộc này có nghĩa là: Nếu bạn đã biết $n - 1$ độ lệch đầu tiên, độ lệch thứ $n$ hoàn toàn bị xác định, không còn tự do thay đổi nữa. Ta đã "tiêu tốn" 1 bậc tự do để ước lượng $\bar{x}$. Do đó, thông tin thực tế về độ biến thiên chỉ còn lại $n - 1$ bậc tự do độc lập.
 :::
 
 ## 4. Luật số lớn và Định lý giới hạn trung tâm

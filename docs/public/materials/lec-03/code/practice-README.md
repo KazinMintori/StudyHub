@@ -20,7 +20,7 @@ Kết quả kỳ vọng:
 - $r_B = r_C = r_D \approx 0.22619048$ ($\frac{19}{84}$).
 - Tổng điểm $\sum r_i = 1.0$.
 
-### Chạy biến thể Nút cụt (Dead End: xóa cạnh C → A)
+### Chạy biến thể Nút cụt (Dead End: Xóa cạnh C → A)
 
 ```bash
 python materials/lec-03/code/pagerank.py --variant dead --beta 0.8 --tol 1e-8 --max-iter 100
@@ -28,7 +28,7 @@ python materials/lec-03/code/pagerank.py --variant dead --beta 0.8 --tol 1e-8 --
 
 Kết quả: Hội tụ sau 12 vòng, điểm nút cụt C được bù đều lại cho cả 4 nút qua phần bù $\beta\delta/n$.
 
-### Chạy biến thể Bẫy liên kết (Spider Trap: thay C → A bằng C → C)
+### Chạy biến thể Bẫy liên kết (Spider Trap: Thay C → A bằng C → C)
 
 ```bash
 python materials/lec-03/code/pagerank.py --variant trap --beta 0.8 --tol 1e-8 --max-iter 100

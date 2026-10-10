@@ -19,7 +19,7 @@ Hàng đợi lấy phần tử theo thứ tự vào trước, ra trước (FIFO)
 
 ## Ví dụ
 
-Thêm A, rồi B, rồi C: thứ tự lấy ra là A, B, C.
+Thêm A, rồi B, rồi C: Thứ tự lấy ra là A, B, C.
 
 ## Khi nào cần dùng?
 

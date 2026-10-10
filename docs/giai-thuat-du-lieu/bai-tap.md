@@ -74,7 +74,7 @@ Xét tập hợp các văn bản $\{D_1, D_2, D_3, D_4\}$ với tập từ vựn
 
 2. Xét thứ tự duyệt của từng hoán vị:
    - Với $\pi_1$: Thứ tự hàng gốc tương ứng là $w_3 \to w_1 \to w_5 \to w_2 \to w_4$.
-     - $D_1$: hàng đầu tiên có số 1 là $w_3 \implies \text{sig}_{\pi_1}(D_1) = 3$ (hoặc chỉ số hàng hoán vị nhỏ nhất là 1).
+     - $D_1$: Hàng đầu tiên có số 1 là $w_3 \implies \text{sig}_{\pi_1}(D_1) = 3$ (hoặc chỉ số hàng hoán vị nhỏ nhất là 1).
      - $D_2$: $w_3$ có số 1 $\implies \text{sig}_{\pi_1}(D_2) = 3$.
      - $D_3$: $w_3, w_1, w_5$ đều là 0, hàng đầu tiên có 1 là $w_2 \implies \text{sig}_{\pi_1}(D_3) = 2$.
      - $D_4$: $w_3$ có số 1 $\implies \text{sig}_{\pi_1}(D_4) = 3$.
@@ -138,9 +138,9 @@ Xét đồ thị web gồm 3 trang $A, B, C$ với các liên kết có hướng
 
 #### Lời giải gợi ý
 1. Ma trận chuyển vị $M$ (trong đó phần tử $M_{ij}$ là xác suất nhảy từ trang $j$ sang trang $i$):
-   - Từ $A$: chia đều cho $B$ và $C \implies$ cột 1 là $[0, \frac{1}{2}, \frac{1}{2}]^T$.
-   - Từ $B$: trỏ đến $C \implies$ cột 2 là $[0, 0, 1]^T$.
-   - Từ $C$: trỏ đến $A \implies$ cột 3 là $[1, 0, 0]^T$.
+   - Từ $A$: Chia đều cho $B$ và $C \implies$ cột 1 là $[0, \frac{1}{2}, \frac{1}{2}]^T$.
+   - Từ $B$: Trỏ đến $C \implies$ cột 2 là $[0, 0, 1]^T$.
+   - Từ $C$: Trỏ đến $A \implies$ cột 3 là $[1, 0, 0]^T$.
    $$M = \begin{bmatrix} 0 & 0 & 1 \\ \frac{1}{2} & 0 & 0 \\ \frac{1}{2} & 1 & 0 \end{bmatrix}$$
 
 2. Với $N = 3, d = 0.85 \implies \frac{1-d}{3} = \frac{0.15}{3} = 0.05$:

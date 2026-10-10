@@ -229,6 +229,24 @@ def review(sections):
             if ";" in punctuation_lines.get(line_number, ""):
                 findings.append({"code": "PROSE_SEMICOLON", "where": where, "text": raw.strip(),
                                  "suggestion": "Hạn chế dấu chấm phẩy trong lời giảng. Xác định quan hệ giữa các vế rồi dùng từ nối phù hợp hoặc tách thành câu đầy đủ. Xem references/tu-noi-va-dien-dat.md."})
+            p_line = punctuation_lines.get(line_number, "")
+            colon_m = re.search(r'(?<!:):(?![:/])\s+([\"\'“‘\(\[\*\_]*)([\w\u00C0-\u1EF9])', p_line)
+            if colon_m:
+                c_char = colon_m.group(2)
+                c_prefix = colon_m.group(1)
+                is_link_domain = False
+                if '[' in c_prefix:
+                    sub = raw[colon_m.start():colon_m.start() + 50]
+                    if any(sym in sub for sym in ['/', '.', '.com', '.org', '.edu']):
+                        is_link_domain = True
+                if c_char.isalpha() and c_char.islower() and not is_link_domain:
+                    findings.append({
+                        "code": "PROSE_COLON_CAPITALIZATION",
+                        "where": where,
+                        "text": raw.strip(),
+                        "suggestion": "Cứ sau dấu hai chấm (:) thì từ tiếp theo bắt buộc phải bắt đầu bằng chữ cái viết hoa (ví dụ: 'Ví dụ: Xét...', 'Lưu ý: Đây là...', '- **Khái niệm**: Là...')."
+                    })
+
             for phrase, suggestion in PHRASES.items():
                 if phrase in lower:
                     findings.append({"code": "CONTEXTUAL_PHRASE", "where": where, "phrase": phrase, "suggestion": suggestion})

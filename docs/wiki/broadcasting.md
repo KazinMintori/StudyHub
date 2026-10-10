@@ -7,7 +7,7 @@ next: false
 
 # Broadcasting
 
-Broadcasting cho phép NumPy thực hiện phép toán trên các mảng có kích thước tương thích mà không cần viết vòng lặp mở rộng. So kích thước từ trục cuối: mỗi cặp phải bằng nhau hoặc có một bên bằng 1. Shape là bộ số mô tả kích thước theo từng trục.
+Broadcasting cho phép NumPy thực hiện phép toán trên các mảng có kích thước tương thích mà không cần viết vòng lặp mở rộng. So kích thước từ trục cuối: Mỗi cặp phải bằng nhau hoặc có một bên bằng 1. Shape là bộ số mô tả kích thước theo từng trục.
 
 <WikiUsage />
 

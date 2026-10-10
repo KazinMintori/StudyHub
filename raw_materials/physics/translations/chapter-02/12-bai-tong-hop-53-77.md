@@ -9,7 +9,7 @@ Hệ thống bài tập dưới đây đòi hỏi sự kết hợp nhuần nhuy�
 ::: exercise 2.53 • BIO — Sinh cơ học chạy nước rút
 Một vận động viên điền kinh nam cự ly ngắn có thể duy trì gia tốc cực đại trong khoảng thời gian $2.0\,\mathrm s$ đầu tiên, và đạt tới tốc độ chạy tối đa là $10.0\,\mathrm{m/s}$. Khi đã đạt tới tốc độ giới hạn này, gia tốc của anh ta triệt tiêu và anh ta tiếp tục duy trì tốc độ đều trên suốt quãng đường còn lại. Giả sử vận động viên xuất phát từ trạng thái nghỉ và chuyển động trên một đường chạy thẳng tắp:
 **(a)** Khi vừa đạt tới tốc độ tối đa, vận động viên đã chạy được quãng đường dài bao nhiêu?
-**(b)** Độ lớn vận tốc trung bình của vận động viên trong các cự ly thi đấu: (i) $50.0\,\mathrm m$; (ii) $100.0\,\mathrm m$; (iii) $200.0\,\mathrm m$ bằng bao nhiêu?
+**(b)** Độ lớn vận tốc trung bình của vận động viên trong các cự ly thi đấu: (I) $50.0\,\mathrm m$; (ii) $100.0\,\mathrm m$; (iii) $200.0\,\mathrm m$ bằng bao nhiêu?
 :::
 
 ::: exercise 2.54 • CALC

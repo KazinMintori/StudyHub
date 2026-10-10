@@ -15,7 +15,7 @@ Tích phân xác định cộng dồn các đóng góp rất nhỏ trên một m
 
 **Tích phân có dấu và đổi cận.** Đổi thứ tự cận làm đổi dấu. Nếu f âm trên một khoảng, phần đóng góp tích phân ở đó âm. Diện tích hình học cần xét |f|.
 
-Định lý cơ bản của giải tích nối tích phân với đạo hàm: khi F là nguyên hàm phù hợp của f, $\int_a^b f(x)\,dx=F(b)-F(a)$. Với phân phối liên tục, tổng mật độ trên toàn miền phải bằng 1.
+Định lý cơ bản của giải tích nối tích phân với đạo hàm: Khi F là nguyên hàm phù hợp của f, $\int_a^b f(x)\,dx=F(b)-F(a)$. Với phân phối liên tục, tổng mật độ trên toàn miền phải bằng 1.
 
 ## Ví dụ
 

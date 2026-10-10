@@ -26,9 +26,9 @@ const topicGroups = {
       topic('sieu-phang-phan-tach-va-tua', 'Siêu phẳng phân tách và siêu phẳng tựa', 'Hai tập lồi rời nhau có luôn ngăn được bằng một siêu phẳng không?', '§2.5'),
       topic('non-doi-ngau', 'Nón đối ngẫu và lựa chọn Pareto', 'Những hướng nào nhìn toàn bộ một nón từ cùng một phía, và điều đó giúp gì khi phải cân nhiều tiêu chí?', '§2.6')
     ]),
-    group('III. Hàm lồi', 'Nối hình học của tập lồi với giải tích: dây cung, tiếp tuyến, độ cong và các quy tắc lắp ghép hàm.', [
+    group('III. Hàm lồi', 'Nối hình học của tập lồi với giải tích: Dây cung, tiếp tuyến, độ cong và các quy tắc lắp ghép hàm.', [
       topic('ham-loi', 'Hàm lồi và bất đẳng thức dây cung', 'Đồ thị nằm dưới mọi dây cung thì nói lên điều gì về một hàm số?', '§3.1.1–3.1.2'),
-      topic('dieu-kien-bac-nhat', 'Điều kiện bậc nhất: tiếp tuyến nằm dưới đồ thị', 'Chỉ biết giá trị và đạo hàm tại một điểm, ta suy ra được gì về toàn bộ hàm?', '§3.1.3'),
+      topic('dieu-kien-bac-nhat', 'Điều kiện bậc nhất: Tiếp tuyến nằm dưới đồ thị', 'Chỉ biết giá trị và đạo hàm tại một điểm, ta suy ra được gì về toàn bộ hàm?', '§3.1.3'),
       topic('dieu-kien-bac-hai', 'Điều kiện bậc hai và độ cong', 'Hessian nửa xác định dương mang ý nghĩa hình học gì?', '§3.1.4'),
       topic('cac-ham-loi-quen-thuoc', 'Những hàm lồi thường gặp', 'Chuẩn, hàm max, log-sum-exp và log det lồi hay lõm, và ta chứng minh điều đó thế nào?', '§3.1.5'),
       topic('epigraph-tap-muc-duoi-jensen', 'Epigraph, tập mức dưới và bất đẳng thức Jensen', 'Nhìn một hàm lồi như một tập hợp thì ta được thêm những công cụ gì?', '§3.1.6–3.1.9'),
@@ -47,7 +47,7 @@ const topicGroups = {
       topic('toi-uu-tua-loi', 'Hàm tựa lồi và phương pháp chia đôi', 'Nếu chỉ biết mọi tập mức dưới đều lồi, ta còn giải bài toán một cách đáng tin cậy được không?', '§3.4, §4.2.5')
     ]),
     group('II. Quy hoạch tuyến tính', 'Lớp bài toán đơn giản nhất nhưng mô tả được rất nhiều mô hình, từ hình học tới xác suất.', [
-      topic('quy-hoach-tuyen-tinh', 'Quy hoạch tuyến tính: các dạng viết và hình học của nghiệm', 'Vì sao mọi LP đều đưa được về cùng một dạng chuẩn, và nghiệm của nó nằm ở đâu trên đa diện?', '§4.3'),
+      topic('quy-hoach-tuyen-tinh', 'Quy hoạch tuyến tính: Các dạng viết và hình học của nghiệm', 'Vì sao mọi LP đều đưa được về cùng một dạng chuẩn, và nghiệm của nó nằm ở đâu trên đa diện?', '§4.3'),
       topic('mo-hinh-lp', 'Những bài toán trở thành LP', 'Tìm hình tròn lớn nhất nằm trong một đa giác nghe chẳng tuyến tính chút nào. Vì sao đó lại là một LP?', '§4.3.1'),
       topic('quy-hoach-phan-tuyen-tinh', 'Quy hoạch phân tuyến tính', 'Cực tiểu một tỉ số của hai hàm affine có khó hơn LP không?', '§4.3.2')
     ]),
@@ -135,8 +135,8 @@ export const mathAiCourse = {
     slide(slugs[6], 'Adam dùng hai trạng thái và hiệu chỉnh khởi đầu', ['m theo dõi trung bình mũ của gradient.', 'v theo dõi trung bình mũ của bình phương gradient.', 'Chia cho 1−βᵗ để hiệu chỉnh trạng thái khởi tạo bằng 0.'], "$$\\theta^+=\\theta-\\frac{\\eta\\hat m}{\\sqrt{\\hat v}+\\varepsilon}$$", "$g_{1}=2$, $\\beta _{1}=0.9$, $\\beta _{2}=0.999$: $\\hat{m}_{1}=2$ và $\\hat{v}_{1}=4$."),
     slide(slugs[6], 'Độ cong còn có thể được dùng bằng hệ tuyến tính', ['Newton cần Hessian hoặc cách giải hệ tương ứng.', 'Gradient liên hợp giải hệ SPD bằng các hướng liên hợp.', "BFGS cập nhật xấp xỉ Hessian nghịch đảo, trong đó điều kiện $y^{T}s>0$ giúp giữ tính dương xác định."]),
     slide(slugs[6], 'So sánh thuật toán cần giữ nguyên điều kiện thử nghiệm', ['Giữ nguyên dữ liệu, điểm khởi tạo, ngân sách và hạt giống ngẫu nhiên khi đối chiếu.', 'Báo riêng hàm mất mát trên tập huấn luyện, trên tập xác thực và thời gian chạy.', "Mô phỏng toàn phương hai chiều chỉ minh họa phép cập nhật, vì vậy không thể dùng nó để xếp hạng các thuật toán cho mạng sâu."]),
-    slide(slugs[7], 'LP đưa hàm tuyến tính lên đa diện', ["Dạng chuẩn là $\\min c^{T}x$ với $Ax=b$, $x\\ge 0$.", 'Nghiệm cơ sở lấy các cột độc lập rồi đặt biến còn lại bằng 0.', 'Có đỉnh và giá trị tối ưu hữu hạn thì có một đỉnh tối ưu.'], "$$x_B=A_B^{-1}b\\ge0$$", "$\\max 3x+2y$, $x+y\\le 4$, $x\\le 2$, x,$y\\ge 0$: tối ưu (2,2), giá trị 10."),
+    slide(slugs[7], 'LP đưa hàm tuyến tính lên đa diện', ["Dạng chuẩn là $\\min c^{T}x$ với $Ax=b$, $x\\ge 0$.", 'Nghiệm cơ sở lấy các cột độc lập rồi đặt biến còn lại bằng 0.', 'Có đỉnh và giá trị tối ưu hữu hạn thì có một đỉnh tối ưu.'], "$$x_B=A_B^{-1}b\\ge0$$", "$\\max 3x+2y$, $x+y\\le 4$, $x\\le 2$, x,$y\\ge 0$: Tối ưu (2,2), giá trị 10."),
     slide(slugs[7], 'Bellman ghép chi phí hiện tại với phần còn lại', ['Trạng thái phải chứa thông tin đủ để xác định các lựa chọn về sau.', 'Với thời hạn hữu hạn tất định, tính từ trạng thái cuối rồi đi ngược.', 'Lưu cả giá trị tối ưu và hành động đạt giá trị đó.'], "$$V_t(s)=\\min_a\\{c_t(s,a)+V_{t+1}(T_t(s,a))\\}$$"),
-    slide(slugs[7], 'LP và quy hoạch động có thể mô tả cùng một bài đường đi', ['DP dùng đệ quy theo cấu trúc thời gian hoặc DAG.', 'LP có thể dùng biến luồng hoặc các bất đẳng thức tiềm năng.', "Nếu có chu trình, cần cách xử lý khác vì đệ quy ngược trên DAG không áp dụng trực tiếp."], "$$V(T)=0,\\qquad V(S)=\\min_u\\{c(S,u)+V(u)\\}$$", "$S\\to A$:1, $S\\to B$:4, $A\\to T$:5, $A\\to B$:2, $B\\to T$:1: đường $S\\to A\\to B\\to T$ có chi phí 4.")
+    slide(slugs[7], 'LP và quy hoạch động có thể mô tả cùng một bài đường đi', ['DP dùng đệ quy theo cấu trúc thời gian hoặc DAG.', 'LP có thể dùng biến luồng hoặc các bất đẳng thức tiềm năng.', "Nếu có chu trình, cần cách xử lý khác vì đệ quy ngược trên DAG không áp dụng trực tiếp."], "$$V(T)=0,\\qquad V(S)=\\min_u\\{c(S,u)+V(u)\\}$$", "$S\\to A$:1, $S\\to B$:4, $A\\to T$:5, $A\\to B$:2, $B\\to T$:1: Đường $S\\to A\\to B\\to T$ có chi phí 4.")
   ], illustration: 'gradient'
 }

@@ -5,7 +5,7 @@ description: Tuyển tập bài tập logic hình thức, chứng minh quy nạp
 
 # Bài tập ôn luyện: Toán rời rạc
 
-Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thiết kế theo chuẩn mực toán học cấu trúc cho khoa học máy tính: suy luận logic, ánh xạ - quan hệ, tổ hợp rời rạc và lý thuyết đồ thị.
+Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thiết kế theo chuẩn mực toán học cấu trúc cho khoa học máy tính: Suy luận logic, ánh xạ - quan hệ, tổ hợp rời rạc và lý thuyết đồ thị.
 
 ---
 
@@ -63,7 +63,7 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
 Xét tập hợp các số nguyên $\mathbb{Z}$. Định nghĩa quan hệ hai ngôi $R$ trên $\mathbb{Z}$ như sau:
 $$a \, R \, b \iff a \equiv b \pmod 5 \quad (a - b \text{ chia hết cho } 5)$$
 
-1. Chứng minh rằng $R$ là một quan hệ tương đương (thỏa mãn 3 tính chất: phản xạ, đối xứng và bắc cầu).
+1. Chứng minh rằng $R$ là một quan hệ tương đương (thỏa mãn 3 tính chất: Phản xạ, đối xứng và bắc cầu).
 2. Xác định các lớp tương đương rời nhau phân hoạch tập $\mathbb{Z}$. Chỉ ra các phần tử tiêu biểu.
 
 #### Lời giải gợi ý
@@ -125,7 +125,7 @@ với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 1. Bổ đề bắt tay: Trong đồ thị vô hướng $G = (V, E)$, tổng bậc của tất cả các đỉnh bằng hai lần số cạnh:
    $$\sum_{v \in V} \deg(v) = 2|E|$$
 
-   Với $V=\{v_1,\ldots,v_n\}$, vế trái là $\deg(v_1)+\cdots+\deg(v_n)$: cộng bậc của từng đỉnh. $|E|$ là số cạnh.
+   Với $V=\{v_1,\ldots,v_n\}$, vế trái là $\deg(v_1)+\cdots+\deg(v_n)$: Cộng bậc của từng đỉnh. $|E|$ là số cạnh.
    Vì $2|E|$ luôn là số chẵn, nên tổng bậc của các đỉnh có bậc lẻ phải là một số chẵn. Điều này chỉ xảy ra khi số lượng các đỉnh có bậc lẻ là một số chẵn.
 
 2. Áp dụng công thức Euler cho đồ thị phẳng liên thông:

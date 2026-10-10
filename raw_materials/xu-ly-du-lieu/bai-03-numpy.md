@@ -4,12 +4,12 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: numpy-basics](https://wesmckinney.com/book/numpy-basics)
-- [Python for Data Analysis: advanced-numpy](https://wesmckinney.com/book/advanced-numpy)
+- [Python for Data Analysis: Numpy-basics](https://wesmckinney.com/book/numpy-basics)
+- [Python for Data Analysis: Advanced-numpy](https://wesmckinney.com/book/advanced-numpy)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-03-numpy.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-03-numpy.html)
 
 ## Phạm vi đã biên soạn
 

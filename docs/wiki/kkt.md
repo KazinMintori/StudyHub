@@ -26,7 +26,7 @@ $0=\nabla f_0(x)+\sum_{i=1}^m\lambda_i\nabla f_i(x)+A^T\nu.$
 
 Với các $f_i$ lồi khả vi và đẳng thức affine, nhân tử không âm làm Lagrangian lồi theo $x$. Điều kiện dừng cho biết $x$ cực tiểu Lagrangian. Khả thi và bù trừ đưa giá trị Lagrangian về $f_0(x)$. Vì vậy khoảng cách đối ngẫu bằng 0 và nghiệm tối ưu.
 
-Slater là điều kiện đủ cho đối ngẫu mạnh: có điểm trong nội tương đối của miền chung, thỏa đẳng thức và thỏa chặt bất đẳng thức. Với điều kiện này và nghiệm đạt, KKT cũng cần. Trong bài không lồi, nghiệm KKT có thể không tối ưu toàn cục. Nguồn: Convex Optimization, §5.2.3 và §5.5.3.
+Slater là điều kiện đủ cho đối ngẫu mạnh: Có điểm trong nội tương đối của miền chung, thỏa đẳng thức và thỏa chặt bất đẳng thức. Với điều kiện này và nghiệm đạt, KKT cũng cần. Trong bài không lồi, nghiệm KKT có thể không tối ưu toàn cục. Nguồn: Convex Optimization, §5.2.3 và §5.5.3.
 
 ## Ví dụ
 

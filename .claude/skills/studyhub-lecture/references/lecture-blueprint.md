@@ -10,28 +10,28 @@ Bài tham chiếu tốt trong repo: `docs/giai-thuat-du-lieu/bai-giang/bai-03-pa
 | --- | --- | --- |
 | Đoạn mở (không H1) | Nêu bài toán/câu hỏi có thật mà bài trả lời; nối với bài trước; nói người học sẽ làm được gì và cần biết gì trước | Một sinh viên đọc xong biết vì sao phải học bài này và mình đã đủ nền chưa |
 | `## 1.` Vấn đề cụ thể | Đặt một trường hợp nhỏ có số/đối tượng thật; cho người học thử dự đoán hoặc thử cách ngây thơ | Cách ngây thơ thất bại ở chỗ chỉ ra được, tạo nhu cầu cho khái niệm mới |
-| `## 2…n.` Các cụm khái niệm | Mỗi cụm: phát biểu chính xác → cơ chế/lý do → ví dụ có lời giải → ranh giới áp dụng → một câu tự kiểm | Không còn bước nhảy mà người học mục tiêu phải tự đoán |
+| `## 2…n.` Các cụm khái niệm | Mỗi cụm: Phát biểu chính xác → cơ chế/lý do → ví dụ có lời giải → ranh giới áp dụng → một câu tự kiểm | Không còn bước nhảy mà người học mục tiêu phải tự đoán |
 | Thực hành (khi môn có thao tác) | Code chạy được, truy vết trạng thái, hoặc quy trình tính tay đầy đủ | Người học tự làm lại được trên đầu vào khác |
-| `## Bài tập tự luyện` | 3–6 bài tăng dần: nhận diện → tính → giải thích → chuyển giao; mỗi bài `::: exercise` + `::: hint` (tùy) + `::: solution` | Lời giải có lý do từng bước, không chỉ đáp số; ghi nguồn bài nếu lấy từ giáo trình |
+| `## Bài tập tự luyện` | 3–6 bài tăng dần: Nhận diện → tính → giải thích → chuyển giao; mỗi bài `::: exercise` + `::: hint` (tùy) + `::: solution` | Lời giải có lý do từng bước, không chỉ đáp số; ghi nguồn bài nếu lấy từ giáo trình |
 | `## Tóm tắt` | Trả lời câu hỏi mở đầu; liệt kê điều đã làm được, kèm điều kiện | Mỗi dòng kiểm tra được, không phải khẩu hiệu |
 | `## Nguồn và đọc thêm` | Tài liệu thật, đến chương/mục/trang; tách nguồn của bài với đọc thêm | Người học mở được và tìm đúng chỗ |
 
 Số mục H2 theo nội dung, không theo mẫu. Đánh số H2 (`## 1.`) khi bài dài để dễ tham chiếu; `(dùng mục lục của VitePress)` cho bài trên khoảng 300 dòng.
 
-## 2. Cụm khái niệm: đơn vị giảng chính
+## 2. Cụm khái niệm: Đơn vị giảng chính
 
 Một cụm trả lời **một** câu hỏi của người học. Trình tự thường dùng (đổi khi nội dung đòi hỏi):
 
 1. **Câu hỏi dẫn.** Một câu nói rõ người học đang thiếu gì: “Một vòng chia điểm chưa xử lý trang không có liên kết ra. Điểm của trang đó đi đâu?”
 2. **Phát biểu chính xác.** Định nghĩa/định lý/thuật toán đủ giả thiết, miền, lượng từ. Có thể in đậm **tên** khái niệm ở lần định nghĩa; không in đậm cả câu.
-3. **Mở bước.** Bước mà chuyên gia làm tự động nhưng người mới chưa: vì sao chọn phép biến đổi này, giả thiết nào được dùng ở dòng nào, ký hiệu nào đang chỉ cái gì. Xem content-prompts.md theo loại nội dung.
+3. **Mở bước.** Bước mà chuyên gia làm tự động nhưng người mới chưa: Vì sao chọn phép biến đổi này, giả thiết nào được dùng ở dòng nào, ký hiệu nào đang chỉ cái gì. Xem content-prompts.md theo loại nội dung.
 4. **Ví dụ có lời giải** trên đối tượng chạy xuyên suốt nếu có. Tính số thật; kiểm bằng code trước khi ghi.
 5. **Ranh giới.** Bỏ một giả thiết thì điều gì gãy? Trường hợp biên nào cần xét? Chỉ dùng phản ví dụ khi nó làm rõ đúng giả thiết đó, và nói nó chứng minh tới đâu.
 6. **Tự kiểm.** Một câu hỏi chẩn đoán đúng chỗ dễ sai, đáp án gập.
 
 Không phải cụm nào cũng cần đủ sáu bước. Một khái niệm nhỏ có thể chỉ là một câu định nghĩa và một ví dụ.
 
-## 3. Hộp (container): mỗi loại một nhiệm vụ
+## 3. Hộp (container): Mỗi loại một nhiệm vụ
 
 | Hộp | Dùng cho | Không dùng cho |
 | --- | --- | --- |
@@ -68,8 +68,8 @@ Mọi con số trong ví dụ, bài tập và lời giải phải được tính
 
 ## 6. Nguồn và ranh giới “sách nói / bài giảng thêm”
 
-- Nội dung lấy từ giáo trình/slide của môn: ghi nguồn ở cuối bài, và ghi tại chỗ khi dùng hình, bài tập hay số liệu cụ thể (“Bài 1 — MMDS 5.1.1, tr. 187”).
-- Ví dụ, ẩn dụ, ứng dụng AI do người soạn thêm: ghi nhận được bằng lời (“Ví dụ thêm:”, “Một cách hình dung:”). Không gán cho tác giả giáo trình.
+- Nội dung lấy từ giáo trình/slide của môn: Ghi nguồn ở cuối bài, và ghi tại chỗ khi dùng hình, bài tập hay số liệu cụ thể (“Bài 1 — MMDS 5.1.1, tr. 187”).
+- Ví dụ, ẩn dụ, ứng dụng AI do người soạn thêm: Ghi nhận được bằng lời (“Ví dụ thêm:”, “Một cách hình dung:”). Không gán cho tác giả giáo trình.
 - Không thêm sự kiện lịch sử, năm tháng, tên nhà khoa học, số liệu thực tế hoặc câu trích nếu chưa kiểm chứng được nguồn. Nếu cần, tra cứu và dẫn link; nếu không kiểm được, bỏ.
 - Không chép nguyên đoạn dài từ giáo trình; diễn đạt lại và giải thích.
 
@@ -77,10 +77,10 @@ Mọi con số trong ví dụ, bài tập và lời giải phải được tính
 
 Đủ để người học tự theo được mà không có giảng viên, không hơn. Bài hiện có trên site dài khoảng 250–900 dòng Markdown. Phần lý thuyết nặng nên tách thành nhiều bài theo điểm kết thúc một nhiệm vụ học, không theo số trang sách. Một đoạn văn thường 2–5 câu; một câu một bước tư duy chính.
 
-## 8. Sau Notes: chiếu sang Slides và Kiến thức nền
+## 8. Sau Notes: Chiếu sang Slides và Kiến thức nền
 
-- **Slides catalog** (xem repo-format.md mục 4): một slide cho mỗi cụm chính, cùng thứ tự; giữ điều kiện cạnh kết luận; công thức Unicode; ví dụ số lấy từ Notes. Đọc từng bullet và tìm câu tương ứng trong Notes — không có thì sửa slide hoặc sửa Notes.
-- **Kiến thức nền**: liệt kê khái niệm Notes dùng mà không dạy lại. Rà các thuật ngữ phụ người soạn vừa thêm (affine, chuẩn, ma trận thưa…): hoặc dạy trong Notes, hoặc đưa vào prerequisites, hoặc bỏ.
+- **Slides catalog** (xem repo-format.md mục 4): Một slide cho mỗi cụm chính, cùng thứ tự; giữ điều kiện cạnh kết luận; công thức Unicode; ví dụ số lấy từ Notes. Đọc từng bullet và tìm câu tương ứng trong Notes — không có thì sửa slide hoặc sửa Notes.
+- **Kiến thức nền**: Liệt kê khái niệm Notes dùng mà không dạy lại. Rà các thuật ngữ phụ người soạn vừa thêm (affine, chuẩn, ma trận thưa…): Hoặc dạy trong Notes, hoặc đưa vào prerequisites, hoặc bỏ.
 
 ## 9. Khung Markdown khởi đầu
 

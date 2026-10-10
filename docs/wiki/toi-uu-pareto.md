@@ -39,4 +39,4 @@ Không. Khi đó có thể có nhiều nghiệm, và chỉ một số trong đó
 
 - [Nón đối ngẫu](./non-doi-ngau.md)
 - [Siêu phẳng phân tách và siêu phẳng tựa](./sieu-phang-phan-tach.md)
-- [Điều chuẩn: ridge và lasso](./dieu-chuan.md)
+- [Điều chuẩn: Ridge và lasso](./dieu-chuan.md)

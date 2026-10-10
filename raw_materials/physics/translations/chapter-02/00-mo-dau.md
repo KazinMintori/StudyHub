@@ -14,10 +14,10 @@ Một chiếc máy bay thương mại cần một đường băng dài bao nhiê
 
 Tất cả những câu hỏi sinh động trên đều quy tụ về bài toán của **động học** (*kinematics*) — phân ngành cơ học nghiên cứu việc mô tả chuyển động của các vật thể trong không gian và thời gian mà chưa cần xét đến nguyên nhân gây ra chuyển động (lực).
 
-Chương 2 khởi đầu hành trình cơ học bằng trường hợp cơ bản và quan trọng nhất: **chuyển động trên đường thẳng (chuyển động một chiều)**. Chúng ta sẽ xây dựng hệ thống khái niệm định lượng chặt chẽ để phân biệt những cặp đại lượng thường bị đánh đồng trong ngôn ngữ đời thường:
+Chương 2 khởi đầu hành trình cơ học bằng trường hợp cơ bản và quan trọng nhất: **Chuyển động trên đường thẳng (chuyển động một chiều)**. Chúng ta sẽ xây dựng hệ thống khái niệm định lượng chặt chẽ để phân biệt những cặp đại lượng thường bị đánh đồng trong ngôn ngữ đời thường:
 - **Độ dời** và **Quãng đường**;
 - **Vận tốc** và **Tốc độ**;
-- **Gia tốc tức thời** và sự thay đổi tốc độ (xóa tan ngộ nhận muôn thuở: gia tốc âm không đồng nghĩa với chuyển động chậm dần!).
+- **Gia tốc tức thời** và sự thay đổi tốc độ (xóa tan ngộ nhận muôn thuở: Gia tốc âm không đồng nghĩa với chuyển động chậm dần!).
 
 Đặc biệt, chương này sẽ trang bị cho bạn hệ 4 phương trình động học kinh điển cho chuyển động biến đổi đều, làm chủ hiện tượng rơi tự do dưới tác dụng của trọng trường, và vận dụng công cụ giải tích vi tích phân ($dx/dt, dv/dt, \int v\,dt$) để khai mở các chuyển động phức tạp trong thế giới thực.
 

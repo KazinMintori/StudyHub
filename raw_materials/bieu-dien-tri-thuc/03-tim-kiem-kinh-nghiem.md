@@ -24,12 +24,12 @@ flowchart LR
     C -->|3| G["G (đích)<br/>h = 0"]
 ```
 
-Chi phí tối ưu thật: $S \to A \to B \to C \to G = 7$. Ở Chương 2, BFS/DFS lần lượt trả về 9 và 8, chỉ UCS ($=$ A\* với $h{=}0$) tìm đúng 7. Câu hỏi của chương này: **thêm $h(n)$ vào có giúp A\* nhanh hơn UCS mà vẫn giữ được đáp án 7 không?**
+Chi phí tối ưu thật: $S \to A \to B \to C \to G = 7$. Ở Chương 2, BFS/DFS lần lượt trả về 9 và 8, chỉ UCS ($=$ A\* với $h{=}0$) tìm đúng 7. Câu hỏi của chương này: **Thêm $h(n)$ vào có giúp A\* nhanh hơn UCS mà vẫn giữ được đáp án 7 không?**
 
 ## 3.1 Tìm kiếm ăn tham (Greedy Best-First Search)
 
 ::: tip Ẩn dụ
-Một chú chó đánh hơi mồi: nó luôn lao về hướng có **mùi nồng nhất ngay lúc này** ($h(n)$ nhỏ nhất), bất kể quãng đường nó *đã* chạy dài hay ngắn. Nếu có một ngõ cụt thơm phức ngay đầu ngõ, chú chó vẫn lao vào — rồi phải quay ra, mất thời gian hơn là đi đường vòng nhưng thẳng tắp.
+Một chú chó đánh hơi mồi: Nó luôn lao về hướng có **mùi nồng nhất ngay lúc này** ($h(n)$ nhỏ nhất), bất kể quãng đường nó *đã* chạy dài hay ngắn. Nếu có một ngõ cụt thơm phức ngay đầu ngõ, chú chó vẫn lao vào — rồi phải quay ra, mất thời gian hơn là đi đường vòng nhưng thẳng tắp.
 :::
 
 **Hàm đánh giá:** chỉ nhìn tương lai, bỏ hoàn toàn quá khứ:
@@ -58,7 +58,7 @@ flowchart TD
     class A1 unexpanded;
 ```
 
-Kết quả: đường đi $S \to B \to C \to G$, chi phí $4+1+3 = \mathbf{8}$ — **không tối ưu** (đáp án đúng là 7)! Vì $h(B)=3 < h(A)=4$, Greedy chọn B trước mà không hề biết cạnh $S \to B$ nặng tới 4, trong khi đi qua A chỉ tốn 1.
+Kết quả: Đường đi $S \to B \to C \to G$, chi phí $4+1+3 = \mathbf{8}$ — **không tối ưu** (đáp án đúng là 7)! Vì $h(B)=3 < h(A)=4$, Greedy chọn B trước mà không hề biết cạnh $S \to B$ nặng tới 4, trong khi đi qua A chỉ tốn 1.
 
 ::: warning Bẫy thi hay gặp
 Sinh viên hay nhầm "Greedy nhanh nên chắc cũng tối ưu". **Sai.** Greedy chỉ đảm bảo **đầy đủ** (complete) trên không gian hữu hạn, **không đảm bảo tối ưu**, và trường hợp xấu nhất độ phức tạp giống hệt DFS bị dẫn dắt tồi: $O(b^m)$.
@@ -115,7 +115,7 @@ vector<int> greedyBestFirst(int start, int goal,
 ## 3.2 Tìm kiếm A\*
 
 ::: tip Ẩn dụ
-Vẫn là người giao hàng, nhưng lần này họ **cộng dồn** hai thứ: quãng đường đã đạp xe ($g$) *và* ước lượng quãng đường còn lại ($h$). A\* = UCS (công bằng, biết quá khứ) + Greedy (nhanh nhạy, biết tương lai).
+Vẫn là người giao hàng, nhưng lần này họ **cộng dồn** hai thứ: Quãng đường đã đạp xe ($g$) *và* ước lượng quãng đường còn lại ($h$). A\* = UCS (công bằng, biết quá khứ) + Greedy (nhanh nhạy, biết tương lai).
 :::
 
 $$
@@ -171,7 +171,7 @@ UCS tạo ra các vòng tròn đồng tâm quanh điểm xuất phát (vì $h=0$
 
 ### Mở rộng: A\* khi $h = 0$ chính là thuật toán Dijkstra (CLRS)
 
-Khi bỏ hẳn heuristic ($h(n) \equiv 0$), A\* suy biến thành UCS — về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein, chương 22.3): thay hàng đợi FIFO của BFS bằng một **hàng đợi ưu tiên tối thiểu** khoá theo $g(n)$, lặp `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
+Khi bỏ hẳn heuristic ($h(n) \equiv 0$), A\* suy biến thành UCS — về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein, chương 22.3): Thay hàng đợi FIFO của BFS bằng một **hàng đợi ưu tiên tối thiểu** khoá theo $g(n)$, lặp `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
 
 | Cách cài Open | Độ phức tạp Dijkstra / UCS |
 |---|---|
@@ -245,7 +245,7 @@ vector<int> aStarSearch(int start, int goal,
 
 ::: tip Ẩn dụ
 - **Chấp nhận được:** một hướng dẫn viên **lạc quan nhưng không bao giờ nói dối theo hướng tệ hơn** — có thể đoán quãng đường còn lại *ngắn hơn* thực tế, nhưng tuyệt đối không đoán *dài hơn*.
-- **Nhất quán:** phiên bản chặt chẽ hơn — lạc quan một cách **hợp lý ở từng bước** (giống bất đẳng thức tam giác: đi tắt không bao giờ dài hơn đi vòng qua đỉnh trung gian).
+- **Nhất quán:** phiên bản chặt chẽ hơn — lạc quan một cách **hợp lý ở từng bước** (giống bất đẳng thức tam giác: Đi tắt không bao giờ dài hơn đi vòng qua đỉnh trung gian).
 :::
 
 **Admissible:** với mọi đỉnh $n$: $\quad 0 \le h(n) \le h^*(n)$ ($h^*(n)$ = chi phí thật rẻ nhất từ $n$ tới đích).
@@ -271,7 +271,7 @@ vector<int> aStarSearch(int start, int goal,
 
 Đổi $h(A)$ từ 4 thành **6** (vẫn admissible vì $6 \le h^*(A){=}6$), giữ nguyên các giá trị còn lại. Kiểm tra cạnh $A \to B$: $h(A)=6 \le 2+h(B)=5$? **Sai** ($6>5$) → không nhất quán.
 
-Chạy A\* trên **đồ thị** (cài đặt "ngây thơ": đỉnh đã đóng thì không mở lại) với heuristic hỏng này:
+Chạy A\* trên **đồ thị** (cài đặt "ngây thơ": Đỉnh đã đóng thì không mở lại) với heuristic hỏng này:
 
 | Bước | Đỉnh mở rộng | $g$ | $f$ | Ghi chú |
 |---|---|---|---|---|
@@ -286,13 +286,13 @@ Kết quả: A\* báo cáo chi phí **8**, trong khi tối ưu thật là **7**.
 ::: danger Ghi nhớ
 - **A\* trên CÂY (không có tập đóng):** chỉ cần $h$ **admissible** là đủ để tối ưu.
 - **A\* trên ĐỒ THỊ (có tập đóng, không mở lại):** cần $h$ **consistent** thì mới đảm bảo tối ưu.
-- Khắc phục: chọn heuristic có tính consistent (thường tự nhiên khi $h$ xây từ "bài toán nới lỏng ràng buộc"), hoặc cho phép mở lại đỉnh đã đóng khi tìm được đường rẻ hơn.
+- Khắc phục: Chọn heuristic có tính consistent (thường tự nhiên khi $h$ xây từ "bài toán nới lỏng ràng buộc"), hoặc cho phép mở lại đỉnh đã đóng khi tìm được đường rẻ hơn.
 :::
 
 ## 3.4 IDA\* (Iterative-Deepening A\*)
 
 ::: tip Ẩn dụ
-A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định; nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
+A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: Mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định; nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
 :::
 
 Ý tưởng: DFS có giới hạn — nhưng giới hạn là **ngưỡng chi phí $f=g+h$**, không phải độ sâu. Ngưỡng mới mỗi vòng = giá trị $f$ nhỏ nhất từng bị vượt quá ở vòng trước.

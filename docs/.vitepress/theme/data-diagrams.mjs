@@ -34,12 +34,12 @@ export const dataDiagrams = {
   },
   'ndarray-memory': {
     layout: 'stack', title: 'ndarray = siêu dữ liệu + vùng đệm',
-    items: [{ title: 'Siêu dữ liệu của mảng', lines: ['dtype: np.int64 · 8 byte/phần tử', 'shape: (4, 3) · 4 hàng, 3 cột', 'strides: (24, 8) · 24 byte/hàng, 8 byte/cột', 'data pointer: trỏ tới đầu vùng nhớ đệm liên tục'] }],
+    items: [{ title: 'Siêu dữ liệu của mảng', lines: ['dtype: np.int64 · 8 byte/phần tử', 'shape: (4, 3) · 4 hàng, 3 cột', 'strides: (24, 8) · 24 byte/hàng, 8 byte/cột', 'data pointer: Trỏ tới đầu vùng nhớ đệm liên tục'] }],
     memory: [[10, 12, 11], [20, 21, 24], [30, 33, 31], [40, 44, 42]],
     caption: 'Các phần tử được lưu nối tiếp theo thứ tự hàng 0 → 1 → 2 → 3. Màu đánh dấu ranh giới hàng trong cùng một vùng đệm.'
   },
   'view-copy': {
-    layout: 'compare', title: 'Truy cập ndarray: dùng chung hay tách bộ nhớ?',
+    layout: 'compare', title: 'Truy cập ndarray: Dùng chung hay tách bộ nhớ?',
     items: [
       { title: 'Lát cắt cơ bản → View', code: 'arr[1:3, :]', lines: ['Dùng chung vùng đệm bộ nhớ.', 'Thay đổi view làm thay đổi mảng gốc.'] },
       { title: 'Chỉ mục mảng → Copy', code: 'arr[[0, 2], :]\narr[arr > 0]', lines: ['Cấp phát vùng nhớ mới độc lập.', 'Thay đổi copy không ảnh hưởng mảng gốc.'] }

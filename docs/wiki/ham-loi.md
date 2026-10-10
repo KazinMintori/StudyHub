@@ -21,7 +21,7 @@ Với $f$ hai lần khả vi, có thể kiểm $\nabla^2f(x)\succeq0$ ở mọi 
 
 ## Ví dụ
 
-$f(x)=x^2$: tại $x=-1$, $y=2$, $\theta =\frac{1}{2}$, giá trị ở trung điểm là $\frac{1}{4}$, còn trung bình hai giá trị là $\frac{5}{2}$.
+$f(x)=x^2$: Tại $x=-1$, $y=2$, $\theta =\frac{1}{2}$, giá trị ở trung điểm là $\frac{1}{4}$, còn trung bình hai giá trị là $\frac{5}{2}$.
 
 ## Khi nào cần dùng?
 

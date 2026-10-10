@@ -10,9 +10,9 @@ description: "Không gian mẫu, tiên đề xác suất, bản chất của xá
 
 Giả sử một xét nghiệm y tế chẩn đoán một căn bệnh hiếm có độ nhạy lên tới 99% (người có bệnh thì 99% xét nghiệm ra dương tính). Nếu một người đi khám ngẫu nhiên và nhận kết quả dương tính, xác suất người đó thực sự mắc bệnh có phải là 99% không?
 
-Câu trả lời gây kinh ngạc của lý thuyết xác suất là: **hoàn toàn không**, xác suất thực tế người này mắc bệnh có thể chưa đầy 2%! 
+Câu trả lời gây kinh ngạc của lý thuyết xác suất là: **Hoàn toàn không**, xác suất thực tế người này mắc bệnh có thể chưa đầy 2%! 
 
-Trực giác thông thường của con người thường thất bại trước các con số tỷ lệ vì ta hay đánh đồng điều kiện suy luận: ta nhầm lẫn giữa "xác suất dương tính khi đã có bệnh" với "xác suất có bệnh khi đã nhận kết quả dương tính". Bài học này sẽ trang bị công cụ toán học nền tảng để giải mã nghịch lý đó: **xác suất có điều kiện** và **định lý Bayes** — trái tim của suy luận thống kê và các mô hình học máy hiện đại.
+Trực giác thông thường của con người thường thất bại trước các con số tỷ lệ vì ta hay đánh đồng điều kiện suy luận: Ta nhầm lẫn giữa "xác suất dương tính khi đã có bệnh" với "xác suất có bệnh khi đã nhận kết quả dương tính". Bài học này sẽ trang bị công cụ toán học nền tảng để giải mã nghịch lý đó: **Xác suất có điều kiện** và **định lý Bayes** — trái tim của suy luận thống kê và các mô hình học máy hiện đại.
 
 ## 1. Không gian mẫu và quy tắc cộng xác suất
 
@@ -53,7 +53,7 @@ Từ định nghĩa trên, ta thu được **quy tắc nhân xác suất**:
 
 $$P(A \cap B) = P(A \mid B)P(B) = P(B \mid A)P(A).$$
 
-Điều này phản ánh một quy luật tự nhiên: để hai biến cố cùng xảy ra, trước hết biến cố thứ nhất phải xuất hiện, sau đó biến cố thứ hai xuất hiện trong điều kiện biến cố thứ nhất đã thành hiện thực.
+Điều này phản ánh một quy luật tự nhiên: Để hai biến cố cùng xảy ra, trước hết biến cố thứ nhất phải xuất hiện, sau đó biến cố thứ hai xuất hiện trong điều kiện biến cố thứ nhất đã thành hiện thực.
 
 ## 3. Độc lập thống kê và sự khác biệt sống còn với xung khắc
 
@@ -66,9 +66,9 @@ Thay điều kiện này vào quy tắc nhân, ta có định nghĩa tương đ�
 $$P(A \cap B) = P(A)P(B).$$
 
 ::: warning Bẫy ngộ nhận: Độc lập không đồng nghĩa với xung khắc
-Đây là một trong những ngộ nhận tai hại nhất của người học xác suất: nhầm lẫn giữa tính độc lập ($P(A \cap B) = P(A)P(B)$) và tính xung khắc ($A \cap B = \emptyset$).
+Đây là một trong những ngộ nhận tai hại nhất của người học xác suất: Nhầm lẫn giữa tính độc lập ($P(A \cap B) = P(A)P(B)$) và tính xung khắc ($A \cap B = \emptyset$).
 
-- **Xung khắc** là một mối quan hệ hình học: hai tập hợp không có điểm chung. Nếu $A$ và $B$ xung khắc và đều có xác suất dương, thì chúng **không bao giờ độc lập**! Bởi vì nếu biết $B$ đã xảy ra, ta biết chắc chắn 100% $A$ không thể xảy ra ($P(A \mid B) = 0 \ne P(A)$). Việc biết $B$ đã mang lại lượng thông tin tối đa về $A$.
+- **Xung khắc** là một mối quan hệ hình học: Hai tập hợp không có điểm chung. Nếu $A$ và $B$ xung khắc và đều có xác suất dương, thì chúng **không bao giờ độc lập**! Bởi vì nếu biết $B$ đã xảy ra, ta biết chắc chắn 100% $A$ không thể xảy ra ($P(A \mid B) = 0 \ne P(A)$). Việc biết $B$ đã mang lại lượng thông tin tối đa về $A$.
 - **Độc lập** đòi hỏi hai tập hợp **bắt buộc phải có phần giao nhau**: $P(A \cap B) = P(A)P(B) > 0$. Tỷ lệ phần giao bên trong $B$ đúng bằng tỷ lệ của $A$ trong toàn bộ không gian mẫu $\Omega$.
 :::
 
@@ -84,7 +84,7 @@ Tập hợp $\{B_1, \ldots, B_n\}$ như vậy được gọi là một **phân h
 
 $$P(A) = \sum_{i=1}^n P(A \cap B_i) = \sum_{i=1}^n P(A \mid B_i)P(B_i).$$
 
-Đây là một cách người ta hay dùng trong thực tế để tính xác suất của những bài toán phức tạp: thay vì tính trực tiếp một biến cố khó, ta chẻ nhỏ bài toán theo các giả thuyết nền tảng khả dĩ, tính xác suất cục bộ trong từng giả thuyết, rồi lấy trung bình có trọng số theo xác suất xuất hiện của từng giả thuyết đó.
+Đây là một cách người ta hay dùng trong thực tế để tính xác suất của những bài toán phức tạp: Thay vì tính trực tiếp một biến cố khó, ta chẻ nhỏ bài toán theo các giả thuyết nền tảng khả dĩ, tính xác suất cục bộ trong từng giả thuyết, rồi lấy trung bình có trọng số theo xác suất xuất hiện của từng giả thuyết đó.
 
 ## 5. Định lý Bayes: Đảo ngược chiều suy luận
 
@@ -105,8 +105,8 @@ Ba thành phần cốt lõi của công thức Bayes:
 
 Để thấy sức mạnh của định lý Bayes và giải thích trọn vẹn câu hỏi mở đầu bài giảng, hãy xem xét một ví dụ y khoa cụ thể:
 - Trong một cộng đồng, tỷ lệ mắc căn bệnh hiếm $B$ là $0{,}1\%$ (nghĩa là $P(B) = 0{,}001$; tỷ lệ người khỏe mạnh $P(\neg B) = 0{,}999$).
-- Xét nghiệm có độ nhạy $99\%$: nếu có bệnh, xác suất nhận kết quả dương tính là $P(+ \mid B) = 0{,}99$.
-- Xét nghiệm có tỷ lệ dương tính giả $5\%$: người hoàn toàn khỏe mạnh vẫn có xác suất bị báo nhầm dương tính là $P(+ \mid \neg B) = 0{,}05$.
+- Xét nghiệm có độ nhạy $99\%$: Nếu có bệnh, xác suất nhận kết quả dương tính là $P(+ \mid B) = 0{,}99$.
+- Xét nghiệm có tỷ lệ dương tính giả $5\%$: Người hoàn toàn khỏe mạnh vẫn có xác suất bị báo nhầm dương tính là $P(+ \mid \neg B) = 0{,}05$.
 
 Một người được chọn ngẫu nhiên đi xét nghiệm và nhận kết quả dương tính (+). Xác suất người này thực sự mang bệnh $P(B \mid +)$ là bao nhiêu?
 
@@ -124,7 +124,7 @@ $$
 P(B \mid +) = \frac{P(+ \mid B)P(B)}{P(+)} = \frac{0{,}00099}{0{,}05094} \approx 0{,}0194 = 1{,}94\%!
 $$
 
-Một kết quả gây sửng sốt: dù xét nghiệm có độ nhạy 99%, một người nhận kết quả dương tính vẫn có tới hơn $98\%$ khả năng là hoàn toàn khỏe mạnh!
+Một kết quả gây sửng sốt: Dù xét nghiệm có độ nhạy 99%, một người nhận kết quả dương tính vẫn có tới hơn $98\%$ khả năng là hoàn toàn khỏe mạnh!
 
 ::: example Biến đổi trực quan bằng bảng tần số 100.000 người
 Một cách người ta hay dùng trong thực tế để không bao giờ bị rối loạn bởi các con số thập phân là quy đổi toàn bộ bài toán về một quần thể cụ thể, ví dụ $100.000$ người:
@@ -145,7 +145,7 @@ Xác suất người có kết quả dương tính thực sự mắc bệnh là:
 $$\frac{99}{5.094} \approx 1{,}94\%.$$
 :::
 
-Trực giác của ta bị đánh lừa vì ta chỉ chú ý đến con số độ nhạy $99\%$ mà quên mất **tỷ lệ nền (base rate)**: căn bệnh quá hiếm trong cộng đồng ($0{,}1\%$), khiến cho số lượng người dương tính giả từ nhóm khỏe mạnh áp đảo hoàn toàn số lượng người dương tính thật!
+Trực giác của ta bị đánh lừa vì ta chỉ chú ý đến con số độ nhạy $99\%$ mà quên mất **tỷ lệ nền (base rate)**: Căn bệnh quá hiếm trong cộng đồng ($0{,}1\%$), khiến cho số lượng người dương tính giả từ nhóm khỏe mạnh áp đảo hoàn toàn số lượng người dương tính thật!
 
 ## 6. Minh họa tương tác
 
@@ -194,7 +194,7 @@ Lập tỷ lệ xác suất $P(M)$, $P(C)$, và $P(M \cap C)$. Kiểm tra xem t�
 ### Bài 2. Bộ lọc thư rác Naive Bayes trong thực tế
 
 ::: exercise
-Một hệ thống lọc thư điện tử ghi nhận: trong hộp thư của người dùng, $20\%$ tổng số thư là thư rác (spam, ký hiệu $S$), còn $80\%$ là thư hợp lệ (ham, ký hiệu $H$).
+Một hệ thống lọc thư điện tử ghi nhận: Trong hộp thư của người dùng, $20\%$ tổng số thư là thư rác (spam, ký hiệu $S$), còn $80\%$ là thư hợp lệ (ham, ký hiệu $H$).
 - Từ khóa "khuyến mãi" xuất hiện trong $70\%$ các thư rác.
 - Từ khóa "khuyến mãi" chỉ xuất hiện trong $5\%$ các thư hợp lệ.
 
@@ -223,7 +223,7 @@ $$
 Bước 2: Áp dụng định lý Bayes để tính xác suất thư là spam khi đã thấy từ "khuyến mãi":
 $$P(S \mid K) = \frac{P(K \mid S)P(S)}{P(K)} = \frac{0{,}14}{0{,}18} = \frac{7}{9} \approx 77{,}78\%.$$
 
-Như vậy, sự xuất hiện của từ khóa "khuyến mãi" đã cập nhật niềm tin của hệ thống: từ tỷ lệ ban đầu $20\%$ (prior) vọt lên thành gần $78\%$ (posterior). Hệ thống có thể tự tin chuyển bức thư này vào hòm thư rác.
+Như vậy, sự xuất hiện của từ khóa "khuyến mãi" đã cập nhật niềm tin của hệ thống: Từ tỷ lệ ban đầu $20\%$ (prior) vọt lên thành gần $78\%$ (posterior). Hệ thống có thể tự tin chuyển bức thư này vào hòm thư rác.
 :::
 
 [Bài tiếp theo: Biến ngẫu nhiên & phân phối](/xac-suat-thong-ke/bai-giang/02-bien-ngau-nhien.md).

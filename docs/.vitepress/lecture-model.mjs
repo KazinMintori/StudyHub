@@ -7,6 +7,7 @@ export const lectureParts = [
   { id: 'bai-tap', name: 'Bài tập' }
 ]
 export { getLectureCheatsheet as lectureCheatsheet } from './cheatsheets.mjs'
+export { getCourseLab as lectureLab } from './course-labs.mjs'
 export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5
 
 export const lecturePath = (courseId, slug, part = '') => `/${courseId}/bai-giang/${slug}${part ? `#${part}` : ''}`

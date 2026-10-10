@@ -4,12 +4,12 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: preliminaries](https://wesmckinney.com/book/preliminaries)
-- [Python for Data Analysis: python-basics](https://wesmckinney.com/book/python-basics)
+- [Python for Data Analysis: Preliminaries](https://wesmckinney.com/book/preliminaries)
+- [Python for Data Analysis: Python-basics](https://wesmckinney.com/book/python-basics)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html)
 
 ## Phạm vi đã biên soạn
 

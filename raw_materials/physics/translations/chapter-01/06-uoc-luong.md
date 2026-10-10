@@ -15,7 +15,7 @@ Bạn đang viết tiểu thuyết phiêu lưu, trong đó nhân vật chính b�
 :::
 
 ::: solution Lời giải của sách
-**Xác định, thiết lập và thực hiện.** Dùng dữ kiện của ví dụ trong sách: vàng có giá khoảng $1400$ đô la mỗi ounce, tức khoảng $100$ đô la cho $1/14$ ounce. Sách ghi nhận mức giá đã dao động từ $200$ đến $1900$ đô la mỗi ounce trong khoảng hai mươi năm trước thời điểm biên soạn. Các giá này là dữ kiện lịch sử của ví dụ, không phải giá đang được cập nhật.
+**Xác định, thiết lập và thực hiện.** Dùng dữ kiện của ví dụ trong sách: Vàng có giá khoảng $1400$ đô la mỗi ounce, tức khoảng $100$ đô la cho $1/14$ ounce. Sách ghi nhận mức giá đã dao động từ $200$ đến $1900$ đô la mỗi ounce trong khoảng hai mươi năm trước thời điểm biên soạn. Các giá này là dữ kiện lịch sử của ví dụ, không phải giá đang được cập nhật.
 
 Một ounce được ước lượng khoảng $30$ gam. Vì vậy, số vàng trị giá $100$ đô la có khối lượng khoảng $1/14$ của $30$ gam, tức xấp xỉ $2$ gam. Một tỷ đô la, $10^9$ đô la, lớn hơn $100$ đô la $10^7$ lần. Khối lượng vàng tương ứng vào khoảng:
 

@@ -13,7 +13,7 @@
 ## 4.1 Minimax
 
 ::: tip Ẩn dụ
-Hai người chơi cờ ca-rô: bạn (MAX) luôn muốn điểm số cao nhất có thể; đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
+Hai người chơi cờ ca-rô: Bạn (MAX) luôn muốn điểm số cao nhất có thể; đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
 :::
 
 $$
@@ -87,7 +87,7 @@ int minimax(GameNode* node, bool maximizingPlayer) {
 ```
 
 ::: warning Độ phức tạp
-Giống hệt DFS: thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Đây chính là động lực cho Alpha–Beta và hàm lượng giá cắt sâu.
+Giống hệt DFS: Thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Đây chính là động lực cho Alpha–Beta và hàm lượng giá cắt sâu.
 :::
 
 ## 4.2 Cắt tỉa Alpha–Beta (Alpha–Beta Pruning)
@@ -98,7 +98,7 @@ Bạn đang nếm một nồi canh chung để so xem canh nào mặn hơn. Vừ
 
 - $\alpha$ = giá trị tốt nhất mà **MAX** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận dưới).
 - $\beta$ = giá trị tốt nhất mà **MIN** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận trên).
-- **Cắt tỉa** khi $\alpha \ge \beta$: nhánh còn lại chắc chắn không ảnh hưởng tới quyết định ở gốc.
+- **Cắt tỉa** khi $\alpha \ge \beta$: Nhánh còn lại chắc chắn không ảnh hưởng tới quyết định ở gốc.
 
 ### Áp dụng lên chính cây ở mục 4.1
 
@@ -154,18 +154,18 @@ flowchart TD
 → Kết quả **giống hệt Minimax đầy đủ (giá trị gốc = 5)**, nhưng chỉ cần thăm **5/8** lá.
 
 ::: danger Bẫy thi #1 — "Alpha-Beta cho kết quả khác Minimax"
-**Sai.** Alpha–Beta **không bao giờ** đổi giá trị minimax của gốc — nó chỉ bỏ qua những phần chắc chắn thừa. Nhưng đề hay hỏi xoáy: *giá trị của các nút bị cắt/nút trung gian có thể không chính xác* (chỉ là cận trên/cận dưới, ví dụ C2 chỉ biết "$\ge 6$" chứ không biết chính xác 9), nên **không được dùng giá trị của nút con bị cắt tỉa để so sánh hay suy luận thêm**.
+**Sai.** Alpha–Beta **không bao giờ** đổi giá trị minimax của gốc — nó chỉ bỏ qua những phần chắc chắn thừa. Nhưng đề hay hỏi xoáy: *Giá trị của các nút bị cắt/nút trung gian có thể không chính xác* (chỉ là cận trên/cận dưới, ví dụ C2 chỉ biết "$\ge 6$" chứ không biết chính xác 9), nên **không được dùng giá trị của nút con bị cắt tỉa để so sánh hay suy luận thêm**.
 :::
 
 ### Thứ tự duyệt quyết định hiệu quả cắt tỉa
 
-Nếu đổi thứ tự lá của $C_2$ thành $(9,6)$ thay vì $(6,9)$: gặp lá 9 trước ($v{=}9\ge\beta(5)$) → cắt ngay từ lá đầu, tiết kiệm hơn nữa. Ngược lại nếu con **tệ nhất** (theo MIN) được xét trước thì **không cắt được gì cả**. Với thứ tự duyệt tối ưu, độ phức tạp giảm từ $O(b^m)$ xuống:
+Nếu đổi thứ tự lá của $C_2$ thành $(9,6)$ thay vì $(6,9)$: Gặp lá 9 trước ($v{=}9\ge\beta(5)$) → cắt ngay từ lá đầu, tiết kiệm hơn nữa. Ngược lại nếu con **tệ nhất** (theo MIN) được xét trước thì **không cắt được gì cả**. Với thứ tự duyệt tối ưu, độ phức tạp giảm từ $O(b^m)$ xuống:
 
 $$
 O\!\left(b^{m/2}\right)
 $$
 
-tức hệ số nhánh hiệu dụng chỉ còn $\sqrt{b}$ — với cờ vua $b\approx35$ giảm còn $\approx6$: cùng thời gian, Alpha–Beta với thứ tự duyệt tốt tìm sâu **gấp đôi** Minimax thường.
+tức hệ số nhánh hiệu dụng chỉ còn $\sqrt{b}$ — với cờ vua $b\approx35$ giảm còn $\approx6$: Cùng thời gian, Alpha–Beta với thứ tự duyệt tốt tìm sâu **gấp đôi** Minimax thường.
 
 ::: tip Mẹo thi
 Câu hỏi "cho cây X, hãy chỉ ra các nút bị cắt tỉa" — luôn duyệt **trái sang phải, từ trên xuống** (DFS tiền tự), cập nhật $\alpha$ ở nút MAX, cập nhật $\beta$ ở nút MIN, và chỉ cắt khi giá trị hiện tại của nút **vi phạm** cận đã nhận từ tổ tiên ($v\ge\beta$ ở nút MAX, $v\le\alpha$ ở nút MIN — KHÔNG so $\alpha$ với $\beta$ của cùng một nút cùng lúc).
@@ -198,7 +198,7 @@ int alphaBetaMin(GameNode* node, int alpha, int beta) {
 // Gọi: alphaBetaMax(root, INT_MIN, INT_MAX);
 ```
 
-### Khi cây quá sâu: hàm lượng giá & cắt độ sâu
+### Khi cây quá sâu: Hàm lượng giá & cắt độ sâu
 
 Với trò chơi thật (cờ vua, cờ vây), ta không thể duyệt tới tận lá. Thay `Utility` bằng hàm lượng giá $\text{Eval}(s)$ áp dụng ở một độ sâu cắt (cutoff):
 

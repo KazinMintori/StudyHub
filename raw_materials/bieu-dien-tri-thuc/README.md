@@ -18,7 +18,7 @@ Thư mục lưu trữ giáo trình, tài liệu tham khảo, bài báo và slide
 2. **Artificial Intelligence: A Modern Approach (4th Edition - AIMA)** — *Stuart Russell & Peter Norvig* (Pearson)
    - **Trang tài nguyên chính thức:** [aima.cs.berkeley.edu](https://aima.cs.berkeley.edu/)
    - **Mã nguồn giải thuật Python:** [github.com/aimacode/aima-python](https://github.com/aimacode/aima-python)
-   - **Nội dung:** Giáo trình AI chuẩn mực toàn cầu: tác tử thông minh (PEAS), tìm kiếm mù (BFS, DFS, UCS, IDS), tìm kiếm kinh nghiệm (Greedy, A*), tìm kiếm đối kháng (Minimax, Alpha-Beta), bài toán thỏa mãn ràng buộc (CSP), logic mệnh đề và vị từ bậc nhất (FOL).
+   - **Nội dung:** Giáo trình AI chuẩn mực toàn cầu: Tác tử thông minh (PEAS), tìm kiếm mù (BFS, DFS, UCS, IDS), tìm kiếm kinh nghiệm (Greedy, A*), tìm kiếm đối kháng (Minimax, Alpha-Beta), bài toán thỏa mãn ràng buộc (CSP), logic mệnh đề và vị từ bậc nhất (FOL).
 
 3. **UC Berkeley CS188: Introduction to Artificial Intelligence** — *Dan Klein, Pieter Abbeel*
    - **Website khóa học:** [inst.eecs.berkeley.edu/~cs188/](https://inst.eecs.berkeley.edu/~cs188/)

@@ -7,9 +7,9 @@ title: "Khử ràng buộc đẳng thức và tối ưu theo từng nhóm biến
 description: "Tham số hóa tập nghiệm của Ax = b để khử ràng buộc đẳng thức, ví dụ kết hợp ba phép đo theo nghịch đảo phương sai, khi nào không nên khử, thêm biến và ràng buộc đẳng thức, cực tiểu hóa theo một nhóm biến với phần bù Schur và hệ số chặn của hồi quy tuyến tính, cùng bảng các phép biến đổi giữ tính lồi."
 ---
 
-Một ràng buộc đẳng thức tuyến tính như $x_1 + x_2 + x_3 = 1$ trông như một điều kiện phải canh chừng suốt quá trình giải. Thực ra nó còn là một thông tin: nó nói rằng chỉ có hai trong ba biến được tự do, biến còn lại bị xác định. Dùng thông tin ấy, ta có thể bỏ hẳn ràng buộc và giải một bài toán ít biến hơn, không còn ràng buộc nào.
+Một ràng buộc đẳng thức tuyến tính như $x_1 + x_2 + x_3 = 1$ trông như một điều kiện phải canh chừng suốt quá trình giải. Thực ra nó còn là một thông tin: Nó nói rằng chỉ có hai trong ba biến được tự do, biến còn lại bị xác định. Dùng thông tin ấy, ta có thể bỏ hẳn ràng buộc và giải một bài toán ít biến hơn, không còn ràng buộc nào.
 
-Trang này trình bày hai phép biến đổi cùng một tinh thần: **khử ràng buộc đẳng thức** bằng cách tham số hóa tập nghiệm của nó, và **tối ưu theo từng nhóm biến**, tức giải trước phần dễ của bài toán rồi mới giải phần còn lại. Cả hai đều cho bài toán tương đương theo nghĩa của [chủ đề trước](./bai-toan-tuong-duong.md). Ta sẽ xem chúng giữ tính lồi ra sao, và cả cái giá phải trả khi dùng chúng.
+Trang này trình bày hai phép biến đổi cùng một tinh thần: **Khử ràng buộc đẳng thức** bằng cách tham số hóa tập nghiệm của nó, và **tối ưu theo từng nhóm biến**, tức giải trước phần dễ của bài toán rồi mới giải phần còn lại. Cả hai đều cho bài toán tương đương theo nghĩa của [chủ đề trước](./bai-toan-tuong-duong.md). Ta sẽ xem chúng giữ tính lồi ra sao, và cả cái giá phải trả khi dùng chúng.
 
 ## 1. Tham số hóa tập nghiệm của một hệ tuyến tính
 
@@ -19,7 +19,7 @@ $$
 x = Fz + x_0, \qquad z \in \mathbb{R}^k .
 $$
 
-Lý do rất đơn giản: hiệu của hai nghiệm nằm trong hạch của $A$, và mọi vector trong hạch đều viết được thành $Fz$. Có thể chọn $F$ có các cột độc lập, khi đó $k = n - \operatorname{rank} A$. Thay vào bài toán, ta được
+Lý do rất đơn giản: Hiệu của hai nghiệm nằm trong hạch của $A$, và mọi vector trong hạch đều viết được thành $Fz$. Có thể chọn $F$ có các cột độc lập, khi đó $k = n - \operatorname{rank} A$. Thay vào bài toán, ta được
 
 $$
 \begin{aligned}
@@ -32,7 +32,7 @@ theo biến $z$, không còn ràng buộc đẳng thức nào và ít hơn $\ope
 
 Tính lồi được giữ nguyên, vì hợp của một hàm lồi với một ánh xạ affine là hàm lồi. Đây là lý do sách nói rằng về nguyên tắc, ta có thể chỉ cần nghiên cứu những bài toán lồi không có ràng buộc đẳng thức.
 
-## 2. Ví dụ: kết hợp ba phép đo
+## 2. Ví dụ: Kết hợp ba phép đo
 
 Ba cảm biến cùng đo một đại lượng, cho ba kết quả không chệch, độc lập, với phương sai lần lượt là 1, 2 và 3. Ta muốn lấy trung bình có trọng số $x_1, x_2, x_3$ của ba kết quả. Để ước lượng vẫn không chệch, các trọng số phải cộng lại bằng 1. Phương sai của ước lượng tổng hợp là $x_1^2 + 2x_2^2 + 3x_3^2$, nên bài toán là
 
@@ -52,7 +52,7 @@ $$
 x^\star = \left(\tfrac{6}{11},\ \tfrac{3}{11},\ \tfrac{2}{11}\right),
 $$
 
-và phương sai nhỏ nhất bằng $\tfrac{6}{11} \approx 0.545$, nhỏ hơn cả phương sai của cảm biến tốt nhất. Các trọng số tỉ lệ với $1, \tfrac12, \tfrac13$, tức tỉ lệ nghịch với phương sai: cảm biến càng nhiễu càng được tin ít. Quy tắc trọng số theo nghịch đảo phương sai này là một kết quả kinh điển của thống kê, và ở đây nó rơi ra từ một phép khử biến.
+và phương sai nhỏ nhất bằng $\tfrac{6}{11} \approx 0.545$, nhỏ hơn cả phương sai của cảm biến tốt nhất. Các trọng số tỉ lệ với $1, \tfrac12, \tfrac13$, tức tỉ lệ nghịch với phương sai: Cảm biến càng nhiễu càng được tin ít. Quy tắc trọng số theo nghịch đảo phương sai này là một kết quả kinh điển của thống kê, và ở đây nó rơi ra từ một phép khử biến.
 
 Mô phỏng dưới đây cho thấy điều tương tự với một hàm hai biến. Đường thẳng $a^Tx = b$ được tham số hóa bởi một số $z$, và bài toán có ràng buộc trở thành bài toán cực tiểu một parabol.
 
@@ -62,7 +62,7 @@ Mô phỏng còn cho thấy một điều sẽ trở thành trung tâm của Lec
 
 ## 3. Khi nào không nên khử
 
-Nếu khử ràng buộc luôn được, vì sao người ta vẫn giữ chúng? Sách trả lời: phép khử có thể làm bài toán khó hiểu hơn và phá hỏng cấu trúc mà thuật toán cần, đặc biệt là tính thưa khi số biến rất lớn.
+Nếu khử ràng buộc luôn được, vì sao người ta vẫn giữ chúng? Sách trả lời: Phép khử có thể làm bài toán khó hiểu hơn và phá hỏng cấu trúc mà thuật toán cần, đặc biệt là tính thưa khi số biến rất lớn.
 
 Ví dụ trên cho thấy điều đó ở quy mô nhỏ. Hessian của hàm mục tiêu gốc theo $x$ là ma trận đường chéo $\operatorname{diag}(2, 4, 6)$, nhưng Hessian của $g$ theo $z$ là
 
@@ -84,7 +84,7 @@ $$
 \end{aligned}
 $$
 
-Bài toán có thêm biến và thêm ràng buộc, nhưng hàm mục tiêu và các ràng buộc bất đẳng thức giờ đây độc lập với nhau, vì chúng phụ thuộc vào những biến khác nhau. Các ràng buộc mới tuyến tính, nên tính lồi được giữ nguyên. Chẳng hạn bài toán cực tiểu $\|Ax - b\|_1$ có thể viết thành cực tiểu $\|y\|_1$ với $y = Ax - b$: phần không trơn của bài toán, chuẩn $\ell_1$, giờ chỉ tác động lên một biến riêng, còn dữ liệu $A, b$ nằm hết trong một ràng buộc tuyến tính. Mục 5.7.1 của sách cho thấy cách viết này có thể làm hàm đối ngẫu, đối tượng chính của Lecture 03, dễ tính hơn hẳn.
+Bài toán có thêm biến và thêm ràng buộc, nhưng hàm mục tiêu và các ràng buộc bất đẳng thức giờ đây độc lập với nhau, vì chúng phụ thuộc vào những biến khác nhau. Các ràng buộc mới tuyến tính, nên tính lồi được giữ nguyên. Chẳng hạn bài toán cực tiểu $\|Ax - b\|_1$ có thể viết thành cực tiểu $\|y\|_1$ với $y = Ax - b$: Phần không trơn của bài toán, chuẩn $\ell_1$, giờ chỉ tác động lên một biến riêng, còn dữ liệu $A, b$ nằm hết trong một ràng buộc tuyến tính. Mục 5.7.1 của sách cho thấy cách viết này có thể làm hàm đối ngẫu, đối tượng chính của Lecture 03, dễ tính hơn hẳn.
 
 ## 5. Tối ưu theo từng nhóm biến
 
@@ -110,9 +110,9 @@ $$
 \tilde f(w) = \sum_i \big((y_i - \bar y) - w(u_i - \bar u)\big)^2 ,
 $$
 
-tức bài toán hồi quy **không có hệ số chặn** trên dữ liệu đã trừ trung bình. Với dữ liệu tự đặt $u = (1, 2, 4, 7)$ và $y = (3, 4, 9, 14)$, ta có $\bar u = 3.5$, $\bar y = 7.5$, và $w^\star = \tfrac{40}{21} \approx 1.905$, rồi $c^\star = 7.5 - w^\star \cdot 3.5 = \tfrac56$. Lời giải trực tiếp bằng bình phương tối thiểu hai biến cho đúng kết quả ấy. Đây là lý do việc chuẩn hóa dữ liệu về trung bình 0 trước khi huấn luyện không làm mất gì: hệ số chặn đã được tối ưu sẵn.
+tức bài toán hồi quy **không có hệ số chặn** trên dữ liệu đã trừ trung bình. Với dữ liệu tự đặt $u = (1, 2, 4, 7)$ và $y = (3, 4, 9, 14)$, ta có $\bar u = 3.5$, $\bar y = 7.5$, và $w^\star = \tfrac{40}{21} \approx 1.905$, rồi $c^\star = 7.5 - w^\star \cdot 3.5 = \tfrac56$. Lời giải trực tiếp bằng bình phương tối thiểu hai biến cho đúng kết quả ấy. Đây là lý do việc chuẩn hóa dữ liệu về trung bình 0 trước khi huấn luyện không làm mất gì: Hệ số chặn đã được tối ưu sẵn.
 
-Về tính lồi, sách khẳng định: cực tiểu một hàm lồi đồng thời theo $(x, y)$ trên một nhóm biến cho một hàm lồi theo nhóm còn lại. Đó là phép toán [cực tiểu hóa theo một phần biến](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) ở Lecture 01, nay được dùng như một phép biến đổi bài toán.
+Về tính lồi, sách khẳng định: Cực tiểu một hàm lồi đồng thời theo $(x, y)$ trên một nhóm biến cho một hàm lồi theo nhóm còn lại. Đó là phép toán [cực tiểu hóa theo một phần biến](../bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md) ở Lecture 01, nay được dùng như một phép biến đổi bài toán.
 
 ## 6. Phép biến đổi nào giữ tính lồi
 
@@ -135,7 +135,7 @@ Dòng cuối là dòng dễ quên nhất. Đổi biến qua hàm mũ ở chủ �
 
 <details><summary>Xem lời giải thích</summary>
 
-Nghiệm $x^\star$ và giá trị tối ưu không đổi, vì cả hai cách tham số hóa đều mô tả đúng cùng một tập khả thi và cùng một hàm trên tập đó. Thứ thay đổi là biến $z$: nếu các cột của $F$ và $F'$ đều độc lập thì $F' = FT$ với một ma trận khả nghịch $T$, và $z' = T^{-1}z$. Kéo theo đó, Hessian của hàm mới đổi thành $T^T(\nabla^2 g)T$, nên độ cong, số điều kiện và tốc độ của phương pháp gradient đều có thể khác. Chọn $F$ có các cột trực chuẩn là một lựa chọn tốt về mặt số học, vì khi đó phép tham số hóa không làm méo khoảng cách.
+Nghiệm $x^\star$ và giá trị tối ưu không đổi, vì cả hai cách tham số hóa đều mô tả đúng cùng một tập khả thi và cùng một hàm trên tập đó. Thứ thay đổi là biến $z$: Nếu các cột của $F$ và $F'$ đều độc lập thì $F' = FT$ với một ma trận khả nghịch $T$, và $z' = T^{-1}z$. Kéo theo đó, Hessian của hàm mới đổi thành $T^T(\nabla^2 g)T$, nên độ cong, số điều kiện và tốc độ của phương pháp gradient đều có thể khác. Chọn $F$ có các cột trực chuẩn là một lựa chọn tốt về mặt số học, vì khi đó phép tham số hóa không làm méo khoảng cách.
 
 </details>
 
@@ -143,7 +143,7 @@ Nghiệm $x^\star$ và giá trị tối ưu không đổi, vì cả hai cách th
 
 <details><summary>Xem lời giải thích</summary>
 
-Nghiệm không đổi, vì trọng số tối ưu tỉ lệ với nghịch đảo phương sai nên luôn dương: điều kiện không âm thỏa sẵn, không chặt. Với phương sai 1000, trọng số của cảm biến ấy là $\tfrac{1/1000}{1 + 1/2 + 1/1000}$, khoảng $0.0007$. Cảm biến đó gần như bị bỏ qua, nhưng không bao giờ bị loại hẳn, vì mỗi phép đo độc lập dù nhiễu đến đâu vẫn mang thêm một chút thông tin. Trong mô hình này, trọng số chỉ bằng 0 khi phương sai lớn vô hạn.
+Nghiệm không đổi, vì trọng số tối ưu tỉ lệ với nghịch đảo phương sai nên luôn dương: Điều kiện không âm thỏa sẵn, không chặt. Với phương sai 1000, trọng số của cảm biến ấy là $\tfrac{1/1000}{1 + 1/2 + 1/1000}$, khoảng $0.0007$. Cảm biến đó gần như bị bỏ qua, nhưng không bao giờ bị loại hẳn, vì mỗi phép đo độc lập dù nhiễu đến đâu vẫn mang thêm một chút thông tin. Trong mô hình này, trọng số chỉ bằng 0 khi phương sai lớn vô hạn.
 
 </details>
 
@@ -151,7 +151,7 @@ Nghiệm không đổi, vì trọng số tối ưu tỉ lệ với nghịch đ�
 
 <details><summary>Xem lời giải thích</summary>
 
-Với $x_1 \ne 0$ cố định, hàm $3x_1^2 + 2x_1x_2$ tuyến tính theo $x_2$ với hệ số $2x_1 \ne 0$, nên giảm về $-\infty$ theo một chiều. Vậy $\tilde f(x_1) = -\infty$ với mọi $x_1 \ne 0$, và $\tilde f(0) = 0$. Bài toán gốc không bị chặn dưới, và bước cực tiểu theo từng nhóm biến cho thấy điều đó ngay. Điều này phù hợp với hình học: ma trận $\begin{bmatrix} 3 & 1 \\ 1 & 0 \end{bmatrix}$ có định thức $-1 < 0$, nên có một trị riêng âm, và hàm toàn phương không lồi. Phần bù Schur chỉ được định nghĩa khi khối bị khử khả nghịch, và nó cho kết luận về tính xác định dương khi khối ấy dương xác định.
+Với $x_1 \ne 0$ cố định, hàm $3x_1^2 + 2x_1x_2$ tuyến tính theo $x_2$ với hệ số $2x_1 \ne 0$, nên giảm về $-\infty$ theo một chiều. Vậy $\tilde f(x_1) = -\infty$ với mọi $x_1 \ne 0$, và $\tilde f(0) = 0$. Bài toán gốc không bị chặn dưới, và bước cực tiểu theo từng nhóm biến cho thấy điều đó ngay. Điều này phù hợp với hình học: Ma trận $\begin{bmatrix} 3 & 1 \\ 1 & 0 \end{bmatrix}$ có định thức $-1 < 0$, nên có một trị riêng âm, và hàm toàn phương không lồi. Phần bù Schur chỉ được định nghĩa khi khối bị khử khả nghịch, và nó cho kết luận về tính xác định dương khi khối ấy dương xác định.
 
 </details>
 
@@ -159,15 +159,15 @@ Với $x_1 \ne 0$ cố định, hàm $3x_1^2 + 2x_1x_2$ tuyến tính theo $x_2$
 
 <details><summary>Xem lời giải thích</summary>
 
-Vì độ khó nằm ở cấu trúc nhiều hơn là ở số biến. Trong cách viết mới, chuẩn $\ell_1$ chỉ tác động lên $y$ và tách được theo từng thành phần, nên các phép tính như cực tiểu hóa từng phần hay phép chiếu có công thức đóng cho từng $y_i$. Ma trận $A$ chỉ còn xuất hiện trong một ràng buộc tuyến tính, nơi đại số tuyến tính xử lý rất hiệu quả. Nhiều thuật toán hiện đại cho bài toán lớn, kể cả trong học máy, dựa đúng vào việc tách bài toán thành những phần mà mỗi phần dễ xử lý. Đây là hình ảnh ngược với mục 3: ở đó khử biến làm mất cấu trúc, ở đây thêm biến làm lộ cấu trúc.
+Vì độ khó nằm ở cấu trúc nhiều hơn là ở số biến. Trong cách viết mới, chuẩn $\ell_1$ chỉ tác động lên $y$ và tách được theo từng thành phần, nên các phép tính như cực tiểu hóa từng phần hay phép chiếu có công thức đóng cho từng $y_i$. Ma trận $A$ chỉ còn xuất hiện trong một ràng buộc tuyến tính, nơi đại số tuyến tính xử lý rất hiệu quả. Nhiều thuật toán hiện đại cho bài toán lớn, kể cả trong học máy, dựa đúng vào việc tách bài toán thành những phần mà mỗi phần dễ xử lý. Đây là hình ảnh ngược với mục 3: Ở đó khử biến làm mất cấu trúc, ở đây thêm biến làm lộ cấu trúc.
 
 </details>
 
-**Câu 5.** Hồi quy tuyến tính có điều chuẩn ridge thường không phạt hệ số chặn: hàm mục tiêu là $\sum_i (y_i - wu_i - c)^2 + \lambda w^2$. Lập luận ở mục 5 còn đúng không?
+**Câu 5.** Hồi quy tuyến tính có điều chuẩn ridge thường không phạt hệ số chặn: Hàm mục tiêu là $\sum_i (y_i - wu_i - c)^2 + \lambda w^2$. Lập luận ở mục 5 còn đúng không?
 
 <details><summary>Xem lời giải thích</summary>
 
-Còn đúng. Số hạng phạt không chứa $c$, nên với $w$ cố định, bước cực tiểu theo $c$ vẫn cho $c = \bar y - w\bar u$. Phần còn lại là ridge không hệ số chặn trên dữ liệu đã trừ trung bình. Nếu ta phạt cả $c$ thì kết luận đổi: khi đó $c$ bị kéo về 0 và không còn bằng $\bar y - w\bar u$, và kết quả phụ thuộc vào việc dữ liệu có được trừ trung bình hay không. Đó là lý do người ta thường không phạt hệ số chặn.
+Còn đúng. Số hạng phạt không chứa $c$, nên với $w$ cố định, bước cực tiểu theo $c$ vẫn cho $c = \bar y - w\bar u$. Phần còn lại là ridge không hệ số chặn trên dữ liệu đã trừ trung bình. Nếu ta phạt cả $c$ thì kết luận đổi: Khi đó $c$ bị kéo về 0 và không còn bằng $\bar y - w\bar u$, và kết quả phụ thuộc vào việc dữ liệu có được trừ trung bình hay không. Đó là lý do người ta thường không phạt hệ số chặn.
 
 </details>
 

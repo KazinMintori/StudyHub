@@ -13,7 +13,7 @@ next: false
 
 ## Giải thích kỹ thuật
 
-**Hai cách mô tả.** Một đa diện bị chặn có thể mô tả bằng các bất đẳng thức, tức giao của nửa không gian, hoặc bằng các đỉnh, tức bao lồi của hữu hạn điểm. Hai cách mô tả có thể chênh lệch rất lớn về kích thước: khối lập phương trong $\mathbb R^n$ có $2n$ mặt nhưng $2^n$ đỉnh.
+**Hai cách mô tả.** Một đa diện bị chặn có thể mô tả bằng các bất đẳng thức, tức giao của nửa không gian, hoặc bằng các đỉnh, tức bao lồi của hữu hạn điểm. Hai cách mô tả có thể chênh lệch rất lớn về kích thước: Khối lập phương trong $\mathbb R^n$ có $2n$ mặt nhưng $2^n$ đỉnh.
 
 **Đơn hình xác suất.** Mỗi điểm của đơn hình xác suất là một phân phối trên $n$ kết quả, và các đỉnh là những phân phối chắc chắn. Đầu ra softmax của một bộ phân loại luôn nằm trong nội tương đối của đơn hình này. Nguồn: Convex Optimization, §2.2.4.
 

@@ -7,9 +7,9 @@ title: "Nón đối ngẫu và lựa chọn Pareto"
 description: "Định nghĩa và hình học của nón đối ngẫu, các nón tự đối ngẫu, đối ngẫu của nón chuẩn và chuẩn đối ngẫu, các tính chất K** = K, bất đẳng thức đối ngẫu, và cách tìm phần tử tối thiểu bằng cực tiểu một tổng có trọng số."
 ---
 
-Ở chủ đề trước, ta thấy một tập lồi đóng được mô tả hoàn toàn bởi các nửa không gian chứa nó. Với một **nón**, câu chuyện còn gọn hơn: một nón lồi đóng được mô tả bởi các nửa không gian **có biên đi qua gốc** chứa nó. Mỗi nửa không gian như vậy có dạng $\{x : y^T x \ge 0\}$ và được xác định bởi một vector $y$. Tập tất cả những vector $y$ "nhìn" toàn bộ nón từ cùng một phía là một nón mới, gọi là **nón đối ngẫu**.
+Ở chủ đề trước, ta thấy một tập lồi đóng được mô tả hoàn toàn bởi các nửa không gian chứa nó. Với một **nón**, câu chuyện còn gọn hơn: Một nón lồi đóng được mô tả bởi các nửa không gian **có biên đi qua gốc** chứa nó. Mỗi nửa không gian như vậy có dạng $\{x : y^T x \ge 0\}$ và được xác định bởi một vector $y$. Tập tất cả những vector $y$ "nhìn" toàn bộ nón từ cùng một phía là một nón mới, gọi là **nón đối ngẫu**.
 
-Nón đối ngẫu là cầu nối giữa hình học của chương này và lý thuyết đối ngẫu ở Lecture 03. Nó cũng trả lời một câu hỏi rất thực tế về các bài toán nhiều tiêu chí: nếu không có phương án nào tốt nhất ở mọi tiêu chí, làm sao tìm được những phương án "không bị trội"? Câu trả lời là cộng các tiêu chí với những trọng số dương, và nón đối ngẫu giải thích chính xác khi nào cách làm đó đúng.
+Nón đối ngẫu là cầu nối giữa hình học của chương này và lý thuyết đối ngẫu ở Lecture 03. Nó cũng trả lời một câu hỏi rất thực tế về các bài toán nhiều tiêu chí: Nếu không có phương án nào tốt nhất ở mọi tiêu chí, làm sao tìm được những phương án "không bị trội"? Câu trả lời là cộng các tiêu chí với những trọng số dương, và nón đối ngẫu giải thích chính xác khi nào cách làm đó đúng.
 
 ## 1. Định nghĩa và hình học
 
@@ -17,7 +17,7 @@ Nón đối ngẫu là cầu nối giữa hình học của chương này và l�
 > $$K^* = \{y : x^T y \ge 0 \ \text{ với mọi } x \in K\}$$
 > được gọi là **nón đối ngẫu** của $K$.
 
-Mỗi vector $y \in K^*$ tạo với mọi vector của $K$ một góc không quá $90°$. Theo đúng tên gọi, $K^*$ là một nón, và nó **luôn lồi, kể cả khi $K$ không lồi**. Lý do: với mỗi $x \in K$ cố định, tập $\{y : x^T y \ge 0\}$ là một nửa không gian theo $y$, và $K^*$ là giao của tất cả các nửa không gian đó.
+Mỗi vector $y \in K^*$ tạo với mọi vector của $K$ một góc không quá $90°$. Theo đúng tên gọi, $K^*$ là một nón, và nó **luôn lồi, kể cả khi $K$ không lồi**. Lý do: Với mỗi $x \in K$ cố định, tập $\{y : x^T y \ge 0\}$ là một nửa không gian theo $y$, và $K^*$ là giao của tất cả các nửa không gian đó.
 
 Sách đưa ra cách đọc hình học (Hình 2.22): $y \in K^*$ khi và chỉ khi nửa không gian $\{x : y^T x \ge 0\}$, có pháp tuyến hướng vào trong là $y$, chứa trọn nón $K$. Nói cách khác, $-y$ là pháp tuyến của một siêu phẳng tựa của $K$ tại gốc. Trong mô phỏng sau, vùng nhạt là nửa mặt phẳng $\{x : y^T x \ge 0\}$. Kéo vector $y$ quanh gốc và quan sát: $y$ thuộc vùng xanh, tức $K^*$, đúng khi nửa mặt phẳng nhạt chứa trọn nón tím $K$.
 
@@ -29,9 +29,9 @@ $$
 K^* = \{y : 2y_1 + y_2 \ge 0,\ y_1 + 3y_2 \ge 0\} = \operatorname{cone}\{(-1, 2),\ (3, -1)\}.
 $$
 
-Hai vector sinh của $K^*$ vuông góc với hai vector sinh của $K$: $(-1, 2)$ vuông góc với $(2, 1)$, còn $(3, -1)$ vuông góc với $(1, 3)$. Đây là quy tắc chung trong mặt phẳng: mỗi tia biên của $K^*$ vuông góc với một tia biên của $K$, và hướng vào phía của $K$.
+Hai vector sinh của $K^*$ vuông góc với hai vector sinh của $K$: $(-1, 2)$ vuông góc với $(2, 1)$, còn $(3, -1)$ vuông góc với $(1, 3)$. Đây là quy tắc chung trong mặt phẳng: Mỗi tia biên của $K^*$ vuông góc với một tia biên của $K$, và hướng vào phía của $K$.
 
-Một hệ quả đáng nhớ thấy ngay trong mô phỏng: **nón càng rộng thì nón đối ngẫu càng hẹp**. Chính xác hơn, nếu $K_1 \subseteq K_2$ thì $K_2^* \subseteq K_1^*$, vì điều kiện "không âm trên cả $K_2$" khó thỏa hơn "không âm trên $K_1$". Ở thái cực, nón $\{0\}$ có đối ngẫu là cả không gian, còn cả không gian có đối ngẫu là $\{0\}$.
+Một hệ quả đáng nhớ thấy ngay trong mô phỏng: **Nón càng rộng thì nón đối ngẫu càng hẹp**. Chính xác hơn, nếu $K_1 \subseteq K_2$ thì $K_2^* \subseteq K_1^*$, vì điều kiện "không âm trên cả $K_2$" khó thỏa hơn "không âm trên $K_1$". Ở thái cực, nón $\{0\}$ có đối ngẫu là cả không gian, còn cả không gian có đối ngẫu là $\{0\}$.
 
 ## 2. Những nón tự đối ngẫu và một cặp nón không đối xứng
 
@@ -50,7 +50,7 @@ $$
 K^* = \{(u, v) : \|u\|_* \le v\}.
 $$
 
-Đối ngẫu của chuẩn Euclid là chính nó, nên nón bậc hai tự đối ngẫu. Đối ngẫu của $\|\cdot\|_1$ là $\|\cdot\|_\infty$ và ngược lại, vì $\sup\{u^T x : \|x\|_1 \le 1\} = \max_i |u_i|$, đạt tại một đỉnh $\pm e_i$ của quả cầu $\ell_1$. Vì vậy nón $\ell_1$ và nón $\ell_\infty$ là đối ngẫu của nhau mà không cái nào tự đối ngẫu. Cặp này cũng giải thích một nhận xét ở chủ đề về đa diện: quả cầu $\ell_1$ có ít đỉnh và nhiều mặt, quả cầu $\ell_\infty$ có nhiều đỉnh và ít mặt, như thể đỉnh của bên này là mặt của bên kia.
+Đối ngẫu của chuẩn Euclid là chính nó, nên nón bậc hai tự đối ngẫu. Đối ngẫu của $\|\cdot\|_1$ là $\|\cdot\|_\infty$ và ngược lại, vì $\sup\{u^T x : \|x\|_1 \le 1\} = \max_i |u_i|$, đạt tại một đỉnh $\pm e_i$ của quả cầu $\ell_1$. Vì vậy nón $\ell_1$ và nón $\ell_\infty$ là đối ngẫu của nhau mà không cái nào tự đối ngẫu. Cặp này cũng giải thích một nhận xét ở chủ đề về đa diện: Quả cầu $\ell_1$ có ít đỉnh và nhiều mặt, quả cầu $\ell_\infty$ có nhiều đỉnh và ít mặt, như thể đỉnh của bên này là mặt của bên kia.
 
 ## 3. Các tính chất của nón đối ngẫu
 
@@ -62,9 +62,9 @@ Sách liệt kê các tính chất sau (Bài tập 2.31):
 - Nếu bao đóng của $K$ nhọn thì $K^*$ có phần trong khác rỗng.
 - $K^{**}$ là bao đóng của bao lồi của $K$. Đặc biệt, nếu $K$ lồi và đóng thì $K^{**} = K$.
 
-Tính chất cuối là phiên bản "nón" của kết quả ở chủ đề trước: một nón lồi đóng được mô tả đầy đủ bởi các nửa không gian qua gốc chứa nó, và lấy đối ngẫu hai lần cho ta trở lại đúng nón ban đầu. Ghép các tính chất lại, **nếu $K$ là nón chính quy thì $K^*$ cũng là nón chính quy, và $K^{**} = K$**. Tính "đặc" và tính "nhọn" đổi chỗ cho nhau khi lấy đối ngẫu: nón không nhọn có đối ngẫu không đặc, và ngược lại. Bạn có thể thấy điều đó trong mô phỏng bằng cách kéo hai vector sinh của $K$ gần như ngược hướng: $K$ gần thành nửa mặt phẳng, không còn nhọn, và $K^*$ co lại gần thành một tia, không còn đặc.
+Tính chất cuối là phiên bản "nón" của kết quả ở chủ đề trước: Một nón lồi đóng được mô tả đầy đủ bởi các nửa không gian qua gốc chứa nó, và lấy đối ngẫu hai lần cho ta trở lại đúng nón ban đầu. Ghép các tính chất lại, **nếu $K$ là nón chính quy thì $K^*$ cũng là nón chính quy, và $K^{**} = K$**. Tính "đặc" và tính "nhọn" đổi chỗ cho nhau khi lấy đối ngẫu: Nón không nhọn có đối ngẫu không đặc, và ngược lại. Bạn có thể thấy điều đó trong mô phỏng bằng cách kéo hai vector sinh của $K$ gần như ngược hướng: $K$ gần thành nửa mặt phẳng, không còn nhọn, và $K^*$ co lại gần thành một tia, không còn đặc.
 
-## 4. Bất đẳng thức đối ngẫu: so sánh vector bằng mọi "phép đo dương"
+## 4. Bất đẳng thức đối ngẫu: So sánh vector bằng mọi "phép đo dương"
 
 Khi $K$ là nón chính quy, $K^*$ cũng sinh ra một bất đẳng thức tổng quát $\preceq_{K^*}$, gọi là **đối ngẫu** của $\preceq_K$. Hai bất đẳng thức liên hệ với nhau bởi:
 
@@ -76,19 +76,19 @@ $$
 x \prec_K y \iff \lambda^T x < \lambda^T y \ \text{ với mọi } \lambda \succeq_{K^*} 0,\ \lambda \ne 0 .
 $$
 
-Đọc bằng lời: một bất đẳng thức giữa hai **vector** tương đương với vô số bất đẳng thức giữa các **số**, mỗi bất đẳng thức ứng với một cách "đo" $\lambda$ trong nón đối ngẫu. Với $K = \mathbb{R}^n_+$, điều này nói rằng $x \preceq y$ theo từng thành phần khi và chỉ khi mọi tổng có trọng số không âm của $x$ không vượt tổng tương ứng của $y$. Với thứ tự ma trận, $X \preceq Y$ khi và chỉ khi $\operatorname{tr}(ZX) \le \operatorname{tr}(ZY)$ với mọi $Z \succeq 0$. Đây là kỹ thuật chủ đạo trong các bài toán có bất đẳng thức tổng quát: chuyển một điều kiện về vector hay ma trận thành một họ điều kiện về số, rồi làm việc với các số.
+Đọc bằng lời: Một bất đẳng thức giữa hai **vector** tương đương với vô số bất đẳng thức giữa các **số**, mỗi bất đẳng thức ứng với một cách "đo" $\lambda$ trong nón đối ngẫu. Với $K = \mathbb{R}^n_+$, điều này nói rằng $x \preceq y$ theo từng thành phần khi và chỉ khi mọi tổng có trọng số không âm của $x$ không vượt tổng tương ứng của $y$. Với thứ tự ma trận, $X \preceq Y$ khi và chỉ khi $\operatorname{tr}(ZX) \le \operatorname{tr}(ZY)$ với mọi $Z \succeq 0$. Đây là kỹ thuật chủ đạo trong các bài toán có bất đẳng thức tổng quát: Chuyển một điều kiện về vector hay ma trận thành một họ điều kiện về số, rồi làm việc với các số.
 
-Sách cũng mở rộng định lý lựa chọn của chủ đề trước sang bất đẳng thức tổng quát (Ví dụ 2.26): hệ $Ax \prec_K b$ vô nghiệm khi và chỉ khi có $\lambda \ne 0$ với $\lambda \succeq_{K^*} 0$, $A^T \lambda = 0$ và $\lambda^T b \le 0$. Vai trò của "trọng số không âm" giờ được đóng bởi các phần tử của nón đối ngẫu.
+Sách cũng mở rộng định lý lựa chọn của chủ đề trước sang bất đẳng thức tổng quát (Ví dụ 2.26): Hệ $Ax \prec_K b$ vô nghiệm khi và chỉ khi có $\lambda \ne 0$ với $\lambda \succeq_{K^*} 0$, $A^T \lambda = 0$ và $\lambda^T b \le 0$. Vai trò của "trọng số không âm" giờ được đóng bởi các phần tử của nón đối ngẫu.
 
 ## 5. Tìm phần tử tối thiểu bằng tổng có trọng số
 
-Ở chủ đề về bất đẳng thức tổng quát, ta đã thấy một tập có thể có nhiều phần tử tối thiểu và không có phần tử nhỏ nhất. Câu hỏi thực tế là làm sao **tìm** các phần tử tối thiểu. Nón đối ngẫu cho một câu trả lời rất tự nhiên: chọn một vector trọng số $\lambda$, rồi cực tiểu hóa một con số duy nhất $\lambda^T z$ trên tập $S$. Cách làm này được gọi là **vô hướng hóa**.
+Ở chủ đề về bất đẳng thức tổng quát, ta đã thấy một tập có thể có nhiều phần tử tối thiểu và không có phần tử nhỏ nhất. Câu hỏi thực tế là làm sao **tìm** các phần tử tối thiểu. Nón đối ngẫu cho một câu trả lời rất tự nhiên: Chọn một vector trọng số $\lambda$, rồi cực tiểu hóa một con số duy nhất $\lambda^T z$ trên tập $S$. Cách làm này được gọi là **vô hướng hóa**.
 
 > **Mệnh đề (điều kiện đủ).** Nếu $\lambda \succ_{K^*} 0$ và $x$ cực tiểu $\lambda^T z$ trên $z \in S$, thì $x$ là phần tử tối thiểu của $S$.
 
 Chứng minh rất ngắn. Giả sử $x$ không tối thiểu, tức có $z \in S$, $z \ne x$, với $z \preceq_K x$. Khi đó $x - z \in K \setminus \{0\}$, và vì $\lambda$ nằm trong phần trong của $K^*$, ta có $\lambda^T(x - z) > 0$, tức $\lambda^T z < \lambda^T x$. Điều này mâu thuẫn với việc $x$ cực tiểu $\lambda^T z$. Mệnh đề này **không cần $S$ lồi**.
 
-Với $K = \mathbb{R}^n_+$, điều kiện $\lambda \succ_{K^*} 0$ nghĩa là mọi trọng số $\lambda_i$ **dương**. Sách diễn giải bằng ngôn ngữ kinh tế (Ví dụ 2.27): mỗi phương án sản xuất tiêu tốn một vector tài nguyên $x$ (lao động, nhiên liệu, ...), $\lambda_i$ là giá của tài nguyên thứ $i$, và $\lambda^T x$ là tổng chi phí. Phương án rẻ nhất theo một bảng giá dương bất kỳ chắc chắn là phương án **hiệu quả** theo nghĩa Pareto: không có phương án nào dùng ít hơn ở một tài nguyên mà không dùng nhiều hơn ở tài nguyên khác.
+Với $K = \mathbb{R}^n_+$, điều kiện $\lambda \succ_{K^*} 0$ nghĩa là mọi trọng số $\lambda_i$ **dương**. Sách diễn giải bằng ngôn ngữ kinh tế (Ví dụ 2.27): Mỗi phương án sản xuất tiêu tốn một vector tài nguyên $x$ (lao động, nhiên liệu, ...), $\lambda_i$ là giá của tài nguyên thứ $i$, và $\lambda^T x$ là tổng chi phí. Phương án rẻ nhất theo một bảng giá dương bất kỳ chắc chắn là phương án **hiệu quả** theo nghĩa Pareto: Không có phương án nào dùng ít hơn ở một tài nguyên mà không dùng nhiều hơn ở tài nguyên khác.
 
 <OrderLab type="pareto" />
 
@@ -137,7 +137,7 @@ Tìm nón đối ngẫu của $K = \operatorname{cone}\{(1, 0), (1, 2)\}$ trong 
 $y \in K^*$ khi và chỉ khi $y^T(1, 0) = y_1 \ge 0$ và $y^T(1, 2) = y_1 + 2y_2 \ge 0$. Vậy
 
 $$
-K^* = \{y : y_1 \ge 0,\ y_1 + 2y_2 \ge 0\} = \operatorname{cone}\{(0, 1), (2, -1)\}.
+K^* = \{y : Y_1 \ge 0,\ y_1 + 2y_2 \ge 0\} = \operatorname{cone}\{(0, 1), (2, -1)\}.
 $$
 
 Với $y = (1, -0.4)$: $y_1 = 1 \ge 0$ và $1 - 0.8 = 0.2 \ge 0$, nên $y \in K^*$.
@@ -156,7 +156,7 @@ Cho các cấu hình $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$, $(6, 7)$, $(9, 
 :::
 
 ::: solution
-$(6, 7)$ bị $(5.5, 4)$ trội, $(9, 8)$ bị nhiều điểm trội, nên các phần tử tối thiểu là $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$. Với $\lambda = (1, 0.2)$, các giá trị là $3.8, 4.3, 6.3, 8.6, 7.4, 10.6$, nên $(2, 9)$ được chọn. Với $\lambda = (1, 1)$, hai điểm $(3, 6.5)$ và $(5.5, 4)$ cùng cho giá trị 9.5 nhỏ nhất: đường mức $z_1 + z_2 = 9.5$ chạm cả cạnh nối hai điểm, nên nghiệm vô hướng hóa không duy nhất. Với $\lambda = (0.3, 1)$, các giá trị là $9.6, 7.4, 5.65, 5.4, 8.8, 10.7$, nên $(8, 3)$ được chọn. Mọi điểm được chọn đều là phần tử tối thiểu, đúng như mệnh đề ở mục 5.
+$(6, 7)$ bị $(5.5, 4)$ trội, $(9, 8)$ bị nhiều điểm trội, nên các phần tử tối thiểu là $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$. Với $\lambda = (1, 0.2)$, các giá trị là $3.8, 4.3, 6.3, 8.6, 7.4, 10.6$, nên $(2, 9)$ được chọn. Với $\lambda = (1, 1)$, hai điểm $(3, 6.5)$ và $(5.5, 4)$ cùng cho giá trị 9.5 nhỏ nhất: Đường mức $z_1 + z_2 = 9.5$ chạm cả cạnh nối hai điểm, nên nghiệm vô hướng hóa không duy nhất. Với $\lambda = (0.3, 1)$, các giá trị là $9.6, 7.4, 5.65, 5.4, 8.8, 10.7$, nên $(8, 3)$ được chọn. Mọi điểm được chọn đều là phần tử tối thiểu, đúng như mệnh đề ở mục 5.
 :::
 
 ## Tóm tắt

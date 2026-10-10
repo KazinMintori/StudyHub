@@ -10,7 +10,7 @@ description: "Bản dịch chương 1 của Young & Freedman; đang đối chi�
 ---
 
 ::: info Tiến độ bản dịch
-Đã có bản dịch các phần: lời mở chương, mục 1.1, mục 1.2, mục 1.3, mục 1.4, mục 1.5, mục 1.6, mục 1.7, mục 1.8, mục 1.9, mục 1.10, tóm tắt của sách, luyện tập có hướng dẫn và bài tổng hợp, câu hỏi thảo luận, mục exercises-1.1-1.48, mục problems-1.49-1.89, mục challenge-and-mcat-1.90-1.94, đáp án cuối chương. Chương chưa hoàn tất; các phần còn thiếu được ghi ở cuối trang.
+Đã có bản dịch các phần: Lời mở chương, mục 1.1, mục 1.2, mục 1.3, mục 1.4, mục 1.5, mục 1.6, mục 1.7, mục 1.8, mục 1.9, mục 1.10, tóm tắt của sách, luyện tập có hướng dẫn và bài tổng hợp, câu hỏi thảo luận, mục exercises-1.1-1.48, mục problems-1.49-1.89, mục challenge-and-mcat-1.90-1.94, đáp án cuối chương. Chương chưa hoàn tất; các phần còn thiếu được ghi ở cuối trang.
 :::
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-01/00-mo-dau.md-->
@@ -52,7 +52,7 @@ description: "Bản dịch chương 1 của Young & Freedman; đang đối chi�
 ## Phần nguyên tác đang tiếp tục dịch
 
 - Đối chiếu hoàn tất toàn bộ hình, chữ trong hình và chú thích của chương.
-- Đáp số bài lẻ trong phụ lục: đang đối chiếu những dòng nguyên tác có đơn vị hoặc hướng không khớp đề.
+- Đáp số bài lẻ trong phụ lục: Đang đối chiếu những dòng nguyên tác có đơn vị hoặc hướng không khớp đề.
 
 ## Nguồn của bản dịch
 

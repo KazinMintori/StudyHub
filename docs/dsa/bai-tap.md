@@ -46,14 +46,14 @@ $$10, 20, 30, 40, 50, 25$$
 
 #### Lời giải gợi ý
 1. Chèn $10 \to 20 \to 30$:
-   - Tạo thành chuỗi lệch phải (Right-Right): nút $10$ có độ cao cây con phải là $2$, cây con trái là $0 \implies BF(10) = -2$.
+   - Tạo thành chuỗi lệch phải (Right-Right): Nút $10$ có độ cao cây con phải là $2$, cây con trái là $0 \implies BF(10) = -2$.
    - Thực hiện **Phép quay đơn sang trái (Left Rotation)** tại nút $10$:
      - Nút $20$ trở thành gốc mới.
      - Con trái của $20$ là $10$, con phải là $30$. Cây cân bằng hoàn hảo ($h = 2$).
 
 2. Chèn tiếp $40, 50$:
-   - Chèn $40$: vào con phải của $30$. Cây vẫn cân bằng ($BF(20) = -1$).
-   - Chèn $50$: vào con phải của $40$. Tại nút $30$, nhánh phải có độ cao 2, nhánh trái độ cao 0 $\implies BF(30) = -2$ (dạng Right-Right).
+   - Chèn $40$: Vào con phải của $30$. Cây vẫn cân bằng ($BF(20) = -1$).
+   - Chèn $50$: Vào con phải của $40$. Tại nút $30$, nhánh phải có độ cao 2, nhánh trái độ cao 0 $\implies BF(30) = -2$ (dạng Right-Right).
    - Thực hiện **Phép quay đơn sang trái (Left Rotation)** tại nút $30$:
      - Nút $40$ lên làm con phải của $20$.
      - Con trái của $40$ là $30$, con phải là $50$. Cây cân bằng.
@@ -63,12 +63,12 @@ $$10, 20, 30, 40, 50, 25$$
    - Kiểm tra hệ số cân bằng từ dưới lên:
      $BF(30) = 1$ (cân bằng).
      $BF(40) = h_{\text{left}}(30) - h_{\text{right}}(50) = 2 - 1 = 1$ (cân bằng).
-     Tại nút gốc $20$: nhánh trái (chứa $10$) có $h = 1$. Nhánh phải (chứa $40$) có $h = 3 \implies BF(20) = 1 - 3 = -2$ (mất cân bằng).
+     Tại nút gốc $20$: Nhánh trái (chứa $10$) có $h = 1$. Nhánh phải (chứa $40$) có $h = 3 \implies BF(20) = 1 - 3 = -2$ (mất cân bằng).
      Tại nút con phải $40$, $BF(40) = 1 > 0 \implies$ dạng **Right-Left (RL)**.
    - Kích hoạt **Phép quay kép Right-Left**:
      - Bước 1: Quay phải tại $40$. Nút $30$ lên thay $40$, $40$ trở thành con phải của $30$.
      - Bước 2: Quay trái tại gốc $20$. Nút $30$ trở thành gốc mới của toàn cây!
-     - Cây cân bằng hoàn toàn sau thao tác: gốc là $30$, cây con trái có gốc $20$ (với con $10, 25$), cây con phải có gốc $40$ (với con $50$).
+     - Cây cân bằng hoàn toàn sau thao tác: Gốc là $30$, cây con trái có gốc $20$ (với con $10, 25$), cây con phải có gốc $40$ (với con $50$).
 
 ---
 

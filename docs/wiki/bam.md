@@ -7,7 +7,7 @@ next: false
 
 # Hàm băm
 
-Hàm băm chuyển dữ liệu thành một giá trị trong miền đích hữu hạn. Đầu vào khác nhau có thể trùng giá trị băm: đó là va chạm. Hàm băm cần phù hợp với mục tiêu: tra cứu, chia phân vùng hay bảo mật có các yêu cầu khác nhau.
+Hàm băm chuyển dữ liệu thành một giá trị trong miền đích hữu hạn. Đầu vào khác nhau có thể trùng giá trị băm: Đó là va chạm. Hàm băm cần phù hợp với mục tiêu: Tra cứu, chia phân vùng hay bảo mật có các yêu cầu khác nhau.
 
 <WikiUsage />
 

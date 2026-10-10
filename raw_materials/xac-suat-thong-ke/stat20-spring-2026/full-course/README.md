@@ -1,6 +1,6 @@
 # Kiểm kê toàn bộ tài liệu nguồn
 
-Phạm vi đã truy cập: toàn bộ mục lục Notes và toàn bộ liên kết Slides trong lịch học Spring 2026, không chỉ bài mở đầu. Tải ngày 09-10-2026.
+Phạm vi đã truy cập: Toàn bộ mục lục Notes và toàn bộ liên kết Slides trong lịch học Spring 2026, không chỉ bài mở đầu. Tải ngày 09-10-2026.
 
 - 27 bài giảng, mỗi bài có Notes và Slides.
 - 4 trang Notes mở đầu phần.

@@ -112,8 +112,8 @@ Ví dụ: Bạn nhìn sang hai bên đường, thấy đường vắng và quy�
 Bản chất của môi trường quyết định trực tiếp việc bạn phải chọn thuật toán nào:
 
 1. **Quan sát toàn phần (Fully Observable) vs. Một phần (Partially Observable):**
-   - *Toàn phần:* Cảm biến thu thập trọn vẹn trạng thái môi trường ở mọi thời điểm (ví dụ: bàn cờ vua).
-   - *Một phần:* Môi trường có góc khuất, tiếng ồn hoặc cảm biến bị hạn chế (ví dụ: xe tự hành không nhìn xuyên qua xe tải phía trước, bài Poker không nhìn thấy bài đối thủ).
+   - *Toàn phần:* Cảm biến thu thập trọn vẹn trạng thái môi trường ở mọi thời điểm (ví dụ: Bàn cờ vua).
+   - *Một phần:* Môi trường có góc khuất, tiếng ồn hoặc cảm biến bị hạn chế (ví dụ: Xe tự hành không nhìn xuyên qua xe tải phía trước, bài Poker không nhìn thấy bài đối thủ).
 2. **Đơn tác tử (Single Agent) vs. Đa tác tử (Multi-Agent):**
    - *Đơn tác tử:* Tác tử hoạt động một mình (giải Sudoku, robot dọn phòng).
    - *Đa tác tử:* Có nhiều tác tử cùng hiện diện, có thể cạnh tranh (cờ vua) hoặc hợp tác (xe tự hành nhường đường nhau).
@@ -121,11 +121,11 @@ Bản chất của môi trường quyết định trực tiếp việc bạn ph�
    - *Tất định:* Trạng thái tiếp theo được quyết định hoàn toàn bởi trạng thái hiện tại và hành động của tác tử.
    - *Bất định:* Có yếu tố ngẫu nhiên ngoài tầm kiểm soát (thời tiết, xúc xắc, hành vi người đi bộ).
 4. **Theo giai đoạn (Episodic) vs. Tuần tự (Sequential):**
-   - *Theo giai đoạn:* Quyết định ở lượt này không ảnh hưởng tới các lượt sau (ví dụ: phân loại ảnh sản phẩm lỗi trên băng chuyền).
-   - *Tuần tự:* Quyết định hiện tại sẽ thay đổi tương lai lâu dài (ví dụ: cờ vua, tìm đường đi).
+   - *Theo giai đoạn:* Quyết định ở lượt này không ảnh hưởng tới các lượt sau (ví dụ: Phân loại ảnh sản phẩm lỗi trên băng chuyền).
+   - *Tuần tự:* Quyết định hiện tại sẽ thay đổi tương lai lâu dài (ví dụ: Cờ vua, tìm đường đi).
 5. **Tĩnh (Static) vs. Động (Dynamic):**
-   - *Tĩnh:* Môi trường đứng yên trong khi tác tử đang suy nghĩ (ví dụ: cờ ca-rô).
-   - *Động:* Môi trường biến đổi liên tục trong khi tác tử đang tính toán (ví dụ: lái xe trên cao tốc).
+   - *Tĩnh:* Môi trường đứng yên trong khi tác tử đang suy nghĩ (ví dụ: Cờ ca-rô).
+   - *Động:* Môi trường biến đổi liên tục trong khi tác tử đang tính toán (ví dụ: Lái xe trên cao tốc).
 6. **Rời rạc (Discrete) vs. Liên tục (Continuous):**
    - *Rời rạc:* Số lượng trạng thái và hành động là đếm được (các ô cờ, số bước đi).
    - *Liên tục:* Tọa độ vị trí, vận tốc, thời gian biến thiên liên tục trong không gian thực $\mathbb{R}^n$.
@@ -164,64 +164,9 @@ Khi có nhiều cách đạt được mục tiêu, hoặc khi các mục tiêu x
 
 ## Hệ thống bài tập tự luyện {#bai-tap}
 
-### Bài tập 1: Đặc tả khung PEAS cho hệ thống giao dịch tài chính tự động (Trading Agent)
-**Đề bài:**
-Hãy xác định và phân tích 4 thành phần của khung PEAS đối với một tác tử phần mềm tự động giao dịch chứng khoán tần suất cao (High-Frequency Trading Agent) trên thị trường tài chính.
+Toàn bộ hệ thống bài tập thực hành chuyên sâu của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu luyện tập.
 
-**Phân tích & Hướng dẫn giải:**
-1. **Thước đo hiệu năng (Performance Measure - P):**
-   - Lợi nhuận ròng thu về trên tổng vốn đầu tư (ROI).
-   - Chỉ số Sharpe đo lường tỷ suất sinh lời trên mỗi đơn vị rủi ro chịu đựng.
-   - Mức độ sụt giảm tài sản tối đa trong một chu kỳ (Max Drawdown).
-   - Chi phí giao dịch và thuế phát sinh khi thực hiện lệnh.
-2. **Môi trường hoạt động (Environment - E):**
-   - Sàn giao dịch chứng khoán điện tử (khớp lệnh liên tục và khớp lệnh định kỳ).
-   - Sổ lệnh khớp (Order Book) chứa các lệnh chờ mua và bán.
-   - Tin tức kinh tế vĩ mô, báo cáo tài chính định kỳ từ doanh nghiệp.
-   - Các bên tham gia thị trường khác gồm nhà đầu tư cá nhân và các thuật toán cạnh tranh.
-3. **Cơ cấu chấp hành (Actuators - A):**
-   - Lệnh gửi qua giao diện kết nối API của sàn: đặt lệnh mua (Buy), đặt lệnh bán (Sell), hủy lệnh chờ (Cancel).
-   - Lệnh cơ cấu danh mục tài sản và tái phân bổ hạn mức tiền mặt.
-4. **Cảm biến (Sensors - S):**
-   - Dòng dữ liệu giá khớp và khối lượng giao dịch theo thời gian thực (Market Data Feeds).
-   - Dữ liệu độ sâu sổ lệnh cấp 2 (Level 2 Order Book Depth).
-   - Trình phân tích văn bản tin tức tài chính và thông cáo báo chí (News Feeds).
-   - Đồng hồ hệ thống đo thời gian với độ chính xác nano giây.
+::: tip Chuyển sang Tab Bài tập
+Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở các bài tập thực chiến có hướng dẫn chi tiết và kiểm chứng tự động.
+:::
 
----
-
-### Bài tập 2: Phân loại đặc trưng môi trường cho ba bài toán tiêu biểu
-**Đề bài:**
-Hãy lập bảng phân tích 6 thuộc tính môi trường cho ba hệ thống sau: (1) Cờ vua tiêu chuẩn, (2) Xe taxi tự lái trong đô thị, (3) Trò chơi Poker (Texas Hold'em).
-
-**Phân tích & Hướng dẫn giải:**
-
-| Thuộc tính môi trường | Cờ vua tiêu chuẩn | Xe taxi tự lái | Trò chơi Poker |
-| :--- | :--- | :--- | :--- |
-| **Khả năng quan sát** | Toàn phần (toàn bộ quân cờ đều nhìn thấy) | Một phần (có điểm mù, bị khuất tầm nhìn, thời tiết xấu) | Một phần (bài tẩy của đối phương bị úp) |
-| **Số lượng tác tử** | Đa tác tử cạnh tranh (2 người đối kháng) | Đa tác tử hỗn hợp (vừa hợp tác nhường đường, vừa cạnh tranh không gian) | Đa tác tử cạnh tranh (nhiều người chơi đối kháng) |
-| **Tính tất định** | Tất định (nước đi dẫn tới trạng thái xác định) | Bất định (người đi bộ ngẫu nhiên, sự cố kỹ thuật xe) | Bất định (yếu tố xáo bài ngẫu nhiên từ bộ bài) |
-| **Thời gian ra quyết định** | Tuần tự (nước cờ đầu ảnh hưởng tới tàn cuộc) | Tuần tự (đánh lái ảnh hưởng vị trí tiếp theo) | Tuần tự (cược ở vòng Pre-flop ảnh hưởng đến vòng River) |
-| **Tính biến động** | Bán tĩnh (bàn cờ không đổi nhưng có đồng hồ tính giờ) | Động (môi trường giao thông thay đổi liên tục khi tác tử suy nghĩ) | Tĩnh (ở lượt cược của mình, bài không tự đổi) |
-| **Không gian biểu diễn** | Rời rạc (64 ô cờ, số lượng nước đi đếm được) | Liên tục (tọa độ, vận tốc, góc lái là số thực liên tục) | Rời rạc (lá bài, số phỉnh đặt cược) |
-
----
-
-### Bài tập 3: Khắc phục điểm mù của tác tử phản xạ đơn giản bằng mô hình nội tại
-**Đề bài:**
-Một robot hút bụi hoạt động trong phòng có vật cản di động. Nếu chỉ sử dụng kiến trúc tác tử phản xạ đơn giản (Simple Reflex), robot rất dễ rơi vào vòng lặp vô hạn (chẳng hạn va chạm tường, lùi lại, rồi lại tiến lên đâm vào đúng vị trí cũ). Hãy giải thích bản chất nguyên nhân và đề xuất cách giải quyết bằng kiến trúc tác tử có mô hình (Model-based Reflex Agent).
-
-**Phân tích & Hướng dẫn giải:**
-1. **Bản chất nguyên nhân:**
-   - Tác tử phản xạ đơn giản ánh xạ trực tiếp tri giác hiện tại thành hành động mà không lưu lại ký ức lịch sử.
-   - Khi môi trường chỉ quan sát được một phần (robot không có bản đồ toàn phòng mà chỉ có cảm biến va chạm trước mũi), hai vị trí khác nhau trong phòng có thể tạo ra cùng một tri giác (đâm vào tường).
-   - Do đó, tác tử chọn cùng một hành động phản xạ, dẫn tới chu kỳ hành động tuần hoàn không hồi kết.
-2. **Giải pháp kiến trúc có mô hình:**
-   - Robot duy trì một trạng thái nội tại bao gồm lưới tọa độ của căn phòng (Occupancy Grid Map).
-   - Mỗi khi di chuyển hoặc va chạm, robot cập nhật xác suất có vật cản tại ô tương ứng trên bản đồ nội tại.
-   - Robot cập nhật vị trí ước lượng của bản thân và ghi nhớ những ô đã dọn sạch.
-   - Khi gặp vật cản, tác tử tra cứu bản đồ nội tại để tìm một hướng chưa dọn và chưa bị chặn, từ đó phá vỡ hoàn toàn vòng lặp vô hạn.
-
----
-
-[← Quay lại Mục lục môn học](/bieu-dien-tri-thuc/notes/00-muc-luc.md) · [Tiếp tục sang Chương 2: Tìm kiếm mù →](/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md)

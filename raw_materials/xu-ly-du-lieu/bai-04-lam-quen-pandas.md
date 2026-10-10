@@ -4,12 +4,12 @@
 
 ## Nguồn chính
 
-- [Python for Data Analysis: pandas-basics](https://wesmckinney.com/book/pandas-basics)
-- [Python for Data Analysis: accessing-data](https://wesmckinney.com/book/accessing-data)
+- [Python for Data Analysis: Pandas-basics](https://wesmckinney.com/book/pandas-basics)
+- [Python for Data Analysis: Accessing-data](https://wesmckinney.com/book/accessing-data)
 
 ## Bổ sung
 
-- [iaidev: đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-04-lam-quen-pandas.html)
+- [iaidev: Đối chiếu kỹ thuật](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-04-lam-quen-pandas.html)
 
 ## Phạm vi đã biên soạn
 

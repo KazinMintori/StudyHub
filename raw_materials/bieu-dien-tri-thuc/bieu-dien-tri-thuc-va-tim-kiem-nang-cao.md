@@ -12,7 +12,7 @@ Bốn "cây đinh" hay xuất hiện trong đề thi giữa kỳ/cuối kỳ AIT
 3. **Minimax** và **cắt tỉa Alpha–Beta** — chơi cờ với một đối thủ luôn chơi tối ưu.
 4. **Logic vị từ bậc nhất (FOL)** và **bản thể luận (ontology)** — cách "viết" tri thức về thế giới sao cho máy suy luận được.
 
-Mỗi phần đều có: ẩn dụ đời thường, sơ đồ Mermaid, bảng chạy từng bước, code C++, và khung "bẫy thi".
+Mỗi phần đều có: Ẩn dụ đời thường, sơ đồ Mermaid, bảng chạy từng bước, code C++, và khung "bẫy thi".
 :::
 
 ```mermaid
@@ -34,9 +34,9 @@ mindmap
 
 [[toc]]
 
-## 0. Nhắc lại: vì sao "tìm kiếm mù" chưa đủ?
+## 0. Nhắc lại: Vì sao "tìm kiếm mù" chưa đủ?
 
-BFS, DFS, UCS chỉ biết **quá khứ**: chúng biết mình đã đi bao xa (chi phí $g(n)$), nhưng hoàn toàn "mù" về việc đích còn cách bao xa. Đó là lý do UCS phải nở đều ra mọi hướng như sóng nước lan trên mặt hồ — kể cả những hướng chắc chắn đi ngược đích.
+BFS, DFS, UCS chỉ biết **quá khứ**: Chúng biết mình đã đi bao xa (chi phí $g(n)$), nhưng hoàn toàn "mù" về việc đích còn cách bao xa. Đó là lý do UCS phải nở đều ra mọi hướng như sóng nước lan trên mặt hồ — kể cả những hướng chắc chắn đi ngược đích.
 
 ::: tip Ẩn dụ cốt lõi
 Tìm kiếm mù giống một người bịt mắt dò đường bằng cách đo từng bước chân. Tìm kiếm có thông tin giống người đó được đưa thêm một **la bàn ước lượng** — không hoàn toàn chính xác, nhưng đủ để biết "hướng nào có vẻ gần đích hơn". La bàn đó chính là **hàm kinh nghiệm (heuristic) $h(n)$**.
@@ -61,7 +61,7 @@ Chi phí đường đi thật ngắn nhất tới G: $S \to A \to B \to C \to G$
 ## 1. Tìm kiếm ăn tham (Greedy Best-First Search)
 
 ::: tip Ẩn dụ
-Một chú chó đánh hơi mồi: nó luôn lao về hướng có **mùi nồng nhất ngay lúc này** ($h(n)$ nhỏ nhất), bất kể quãng đường nó *đã* chạy dài hay ngắn. Nếu có một ngõ cụt thơm phức ngay đầu ngõ, chú chó vẫn lao vào — rồi phải quay ra, mất thời gian hơn là đi đường vòng nhưng thẳng tắp.
+Một chú chó đánh hơi mồi: Nó luôn lao về hướng có **mùi nồng nhất ngay lúc này** ($h(n)$ nhỏ nhất), bất kể quãng đường nó *đã* chạy dài hay ngắn. Nếu có một ngõ cụt thơm phức ngay đầu ngõ, chú chó vẫn lao vào — rồi phải quay ra, mất thời gian hơn là đi đường vòng nhưng thẳng tắp.
 :::
 
 **Hàm đánh giá:** chỉ nhìn tương lai, bỏ hoàn toàn quá khứ:
@@ -90,7 +90,7 @@ flowchart TD
     class A1 unexpanded;
 ```
 
-Kết quả: đường đi $S \to B \to C \to G$, chi phí $4+1+3 = \mathbf{8}$ — **không tối ưu** (đáp án đúng là 7)! Vì $h(B)=3 < h(A)=4$, Greedy chọn B trước mà không hề biết cạnh $S \to B$ nặng tới 4, trong khi đi qua A chỉ tốn 1.
+Kết quả: Đường đi $S \to B \to C \to G$, chi phí $4+1+3 = \mathbf{8}$ — **không tối ưu** (đáp án đúng là 7)! Vì $h(B)=3 < h(A)=4$, Greedy chọn B trước mà không hề biết cạnh $S \to B$ nặng tới 4, trong khi đi qua A chỉ tốn 1.
 
 ::: warning Bẫy thi hay gặp
 Sinh viên hay nhầm "Greedy nhanh nên chắc cũng tối ưu". **Sai.** Greedy chỉ đảm bảo **đầy đủ** (complete) trên không gian hữu hạn, **không đảm bảo tối ưu**, và trường hợp xấu nhất độ phức tạp giống hệt DFS bị dẫn dắt tồi: $O(b^m)$.
@@ -151,7 +151,7 @@ vector<int> greedyBestFirst(int start, int goal,
 ## 2. Tìm kiếm A\*
 
 ::: tip Ẩn dụ
-Vẫn là người giao hàng, nhưng lần này họ **cộng dồn** hai thứ: quãng đường đã đạp xe ($g$) *và* ước lượng quãng đường còn lại ($h$). A\* = UCS (công bằng, biết quá khứ) + Greedy (nhanh nhạy, biết tương lai).
+Vẫn là người giao hàng, nhưng lần này họ **cộng dồn** hai thứ: Quãng đường đã đạp xe ($g$) *và* ước lượng quãng đường còn lại ($h$). A\* = UCS (công bằng, biết quá khứ) + Greedy (nhanh nhạy, biết tương lai).
 :::
 
 $$
@@ -209,7 +209,7 @@ Vẽ các đường bao quanh những đỉnh có cùng giá trị $f$ (giống 
 
 ### 2.3 Mở rộng: A\* khi $h = 0$ chính là thuật toán Dijkstra (CLRS)
 
-Khi bỏ hẳn thông tin heuristic ($h(n) \equiv 0$), A\* suy biến thành **Uniform-Cost Search**, về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein — *Introduction to Algorithms*, chương 22.3): thay vì hàng đợi FIFO của BFS, Dijkstra dùng một **hàng đợi ưu tiên tối thiểu (min-priority queue)** khoá theo $g(n)$, lặp lại thao tác `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
+Khi bỏ hẳn thông tin heuristic ($h(n) \equiv 0$), A\* suy biến thành **Uniform-Cost Search**, về bản chất là **thuật toán Dijkstra** kinh điển (Cormen, Leiserson, Rivest, Stein — *Introduction to Algorithms*, chương 22.3): Thay vì hàng đợi FIFO của BFS, Dijkstra dùng một **hàng đợi ưu tiên tối thiểu (min-priority queue)** khoá theo $g(n)$, lặp lại thao tác `EXTRACT-MIN` rồi "nới lỏng" (relax) các cạnh liền kề.
 
 | Cách cài Open (hàng đợi ưu tiên) | Độ phức tạp Dijkstra / UCS |
 |---|---|
@@ -285,7 +285,7 @@ vector<int> aStarSearch(int start, int goal,
 
 ::: tip Ẩn dụ
 - **Chấp nhận được (admissible):** một hướng dẫn viên du lịch **lạc quan nhưng không bao giờ nói dối theo hướng tệ hơn** — có thể đoán quãng đường còn lại *ngắn hơn* thực tế, nhưng tuyệt đối không bao giờ đoán *dài hơn*.
-- **Nhất quán (consistent):** phiên bản "chặt chẽ" hơn — không chỉ lạc quan ở đích, mà lạc quan một cách **hợp lý ở từng bước đi** (giống bất đẳng thức tam giác: đi tắt không bao giờ dài hơn đi vòng qua đỉnh trung gian).
+- **Nhất quán (consistent):** phiên bản "chặt chẽ" hơn — không chỉ lạc quan ở đích, mà lạc quan một cách **hợp lý ở từng bước đi** (giống bất đẳng thức tam giác: Đi tắt không bao giờ dài hơn đi vòng qua đỉnh trung gian).
 :::
 
 ### 3.1 Định nghĩa
@@ -304,7 +304,7 @@ và $h(\text{đích}) = 0$.
 
 **Quan hệ:** *Nhất quán $\Rightarrow$ Chấp nhận được* (chiều ngược lại không đúng). Vì consistent nên $f(n) = g(n)+h(n)$ **không bao giờ giảm** dọc theo một đường đi — đây chính là lý do A\* trên **đồ thị** (có tập đóng, không mở rộng lại) chỉ tối ưu khi $h$ nhất quán.
 
-### 3.2 Ví dụ đồ thị mẫu: kiểm tra tính admissible/consistent
+### 3.2 Ví dụ đồ thị mẫu: Kiểm tra tính admissible/consistent
 
 Với đồ thị ở mục 0, chi phí tối ưu tới đích thật sự là $h^*(S){=}7,\ h^*(A){=}6,\ h^*(B){=}4,\ h^*(C){=}3,\ h^*(G){=}0$.
 
@@ -327,7 +327,7 @@ Heuristic ta đã dùng $h = (5,4,3,2,0)$ cho $(S,A,B,C,G)$ — kiểm tra nhanh
 
 Kiểm tra lại cạnh $A \to B$: $h(A) = 6 \le c(A,B) + h(B) = 2+3=5$? **Sai!** $6 > 5$ → **không nhất quán**.
 
-Chạy lại A\* trên **đồ thị** (cài đặt "ngây thơ": khi một đỉnh đã bị đóng thì **không bao giờ mở lại**, kể cả khi sau này tìm được đường rẻ hơn tới nó) với heuristic hỏng này:
+Chạy lại A\* trên **đồ thị** (cài đặt "ngây thơ": Khi một đỉnh đã bị đóng thì **không bao giờ mở lại**, kể cả khi sau này tìm được đường rẻ hơn tới nó) với heuristic hỏng này:
 
 ```mermaid
 flowchart TD
@@ -354,7 +354,7 @@ Kết quả: A\* báo cáo chi phí **8**, trong khi tối ưu thật là **7** 
 ::: danger Ghi nhớ
 - **A\* trên CÂY (Tree-Search, không có tập đóng):** chỉ cần $h$ **admissible** là đủ để tối ưu.
 - **A\* trên ĐỒ THỊ (Graph-Search, có tập đóng, không mở lại đỉnh):** cần $h$ **consistent** thì mới đảm bảo tối ưu. Admissible không chưa đủ!
-- Cách khắc phục: hoặc chọn heuristic có tính consistent (thường xảy ra tự nhiên khi $h$ xây từ "bài toán nới lỏng ràng buộc"), hoặc cho phép **mở lại đỉnh đã đóng** khi tìm được đường rẻ hơn (tốn thêm bộ nhớ/thời gian).
+- Cách khắc phục: Hoặc chọn heuristic có tính consistent (thường xảy ra tự nhiên khi $h$ xây từ "bài toán nới lỏng ràng buộc"), hoặc cho phép **mở lại đỉnh đã đóng** khi tìm được đường rẻ hơn (tốn thêm bộ nhớ/thời gian).
 :::
 
 ---
@@ -362,7 +362,7 @@ Kết quả: A\* báo cáo chi phí **8**, trong khi tối ưu thật là **7** 
 ## 4. IDA\* (Iterative-Deepening A\*)
 
 ::: tip Ẩn dụ
-A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ — giống đào một cái giếng khổng lồ rồi mới biết có nước hay không. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định; nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
+A\* giữ *toàn bộ* các đỉnh đã và đang xét trong bộ nhớ — giống đào một cái giếng khổng lồ rồi mới biết có nước hay không. **IDA\*** giống việc đào **nhiều giếng nhỏ nông dần rồi sâu dần**: Mỗi lượt chỉ đào tới một "ngưỡng $f$" nhất định; nếu chưa chạm nước, lấp lại và đào sâu hơn ở lượt sau — tốn công đào lại, nhưng gần như không tốn đất chứa (bộ nhớ).
 :::
 
 **Ý tưởng:** DFS có giới hạn — nhưng giới hạn không phải là *độ sâu* mà là **ngưỡng chi phí $f = g+h$**. Ở mỗi vòng lặp, ngưỡng mới = giá trị $f$ nhỏ nhất từng bị vượt quá ở vòng trước.
@@ -441,7 +441,7 @@ IDDFS tăng dần **độ sâu**. IDA\* tăng dần **ngưỡng $f = g+h$**. N�
 ## 5. Tìm kiếm đối kháng: Minimax
 
 ::: tip Ẩn dụ
-Hai người chơi cờ ca-rô: bạn (MAX) luôn muốn điểm số cao nhất có thể; đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
+Hai người chơi cờ ca-rô: Bạn (MAX) luôn muốn điểm số cao nhất có thể; đối thủ (MIN) — người **không bao giờ mắc sai lầm** — luôn chọn nước đi khiến bạn tệ nhất có thể. Minimax là cách bạn "tưởng tượng" trước mọi nước đi của cả hai người, rồi lần ngược từ đáy cây lên để biết nước đi *tốt nhất trong tình huống xấu nhất*.
 :::
 
 $$
@@ -515,7 +515,7 @@ int minimax(GameNode* node, bool maximizingPlayer) {
 ```
 
 ::: warning Độ phức tạp
-Giống hệt DFS: thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Đây chính là động lực cho Alpha–Beta và hàm lượng giá cắt sâu.
+Giống hệt DFS: Thời gian $O(b^m)$, bộ nhớ $O(bm)$ ($b$ = hệ số nhánh, $m$ = độ sâu cây trò chơi). Với cờ vua $b\approx35,\ m\approx100$ — **bất khả thi** nếu duyệt hết. Đây chính là động lực cho Alpha–Beta và hàm lượng giá cắt sâu.
 :::
 
 ---
@@ -528,7 +528,7 @@ Bạn đang nếm một nồi canh chung để so xem canh nào mặn hơn. Vừ
 
 - $\alpha$ = giá trị tốt nhất mà **MAX** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận dưới).
 - $\beta$ = giá trị tốt nhất mà **MIN** đảm bảo được dọc theo đường đi từ gốc tới hiện tại (cận trên).
-- **Cắt tỉa** khi $\alpha \ge \beta$ tại một nút: nhánh còn lại chắc chắn không ảnh hưởng tới quyết định ở gốc.
+- **Cắt tỉa** khi $\alpha \ge \beta$ tại một nút: Nhánh còn lại chắc chắn không ảnh hưởng tới quyết định ở gốc.
 
 ### 6.1 Áp dụng lên chính cây ở mục 5.1
 
@@ -584,12 +584,12 @@ flowchart TD
 → Kết quả **giống hệt Minimax đầy đủ (giá trị gốc = 5)**, nhưng chỉ cần thăm **5/8** lá — tiết kiệm hẳn nhánh $C_4$ và một lá của $C_2$.
 
 ::: danger Bẫy thi #4 — "Alpha-Beta cho kết quả khác Minimax"
-**Sai.** Alpha–Beta **không bao giờ** đổi giá trị minimax của gốc — nó chỉ bỏ qua những phần chắc chắn thừa. Tuy nhiên, đề hay hỏi xoáy: *giá trị của các nút bị cắt/nút trung gian có thể không chính xác* (chỉ là cận trên/cận dưới, ví dụ C2 chỉ biết "$\ge 6$" chứ không biết chính xác 9), nên **không được dùng giá trị của nút con bị cắt tỉa để so sánh hay suy luận thêm**.
+**Sai.** Alpha–Beta **không bao giờ** đổi giá trị minimax của gốc — nó chỉ bỏ qua những phần chắc chắn thừa. Tuy nhiên, đề hay hỏi xoáy: *Giá trị của các nút bị cắt/nút trung gian có thể không chính xác* (chỉ là cận trên/cận dưới, ví dụ C2 chỉ biết "$\ge 6$" chứ không biết chính xác 9), nên **không được dùng giá trị của nút con bị cắt tỉa để so sánh hay suy luận thêm**.
 :::
 
 ### 6.2 Thứ tự duyệt quyết định hiệu quả cắt tỉa
 
-Nếu ta đổi thứ tự lá của $C_2$ thành $(9, 6)$ thay vì $(6,9)$: gặp lá 9 trước ($v{=}9 \ge \beta(5)$) → cắt ngay từ lá đầu, tiết kiệm hơn nữa. Ngược lại nếu con **tệ nhất** (theo MIN) được xét trước thì **không cắt được gì cả**. Với thứ tự duyệt tối ưu, độ phức tạp giảm từ $O(b^m)$ xuống còn:
+Nếu ta đổi thứ tự lá của $C_2$ thành $(9, 6)$ thay vì $(6,9)$: Gặp lá 9 trước ($v{=}9 \ge \beta(5)$) → cắt ngay từ lá đầu, tiết kiệm hơn nữa. Ngược lại nếu con **tệ nhất** (theo MIN) được xét trước thì **không cắt được gì cả**. Với thứ tự duyệt tối ưu, độ phức tạp giảm từ $O(b^m)$ xuống còn:
 
 $$
 O\!\left(b^{m/2}\right)
@@ -629,7 +629,7 @@ int alphaBetaMin(GameNode* node, int alpha, int beta) {
 // Gọi: alphaBetaMax(root, INT_MIN, INT_MAX);
 ```
 
-### 6.4 Khi cây quá sâu: hàm lượng giá & cắt độ sâu
+### 6.4 Khi cây quá sâu: Hàm lượng giá & cắt độ sâu
 
 Với trò chơi thật (cờ vua, cờ vây), ta không thể duyệt tới tận lá. Thay `Utility` bằng hàm lượng giá $\text{Eval}(s)$ áp dụng ở một độ sâu cắt (cutoff), thường là tổng có trọng số các đặc trưng:
 
@@ -645,7 +645,7 @@ Nếu cắt ở độ sâu cố định, chương trình có thể bị đối t
 
 ---
 
-## 7. Biểu diễn tri thức: từ Logic mệnh đề tới Logic vị từ bậc nhất (FOL)
+## 7. Biểu diễn tri thức: Từ Logic mệnh đề tới Logic vị từ bậc nhất (FOL)
 
 ::: tip Ẩn dụ
 Logic mệnh đề giống một cuốn **sổ tay liệt kê từng sự thật rời rạc**: "Bình là sinh viên", "An là sinh viên", "Long là sinh viên"... Muốn nói "mọi sinh viên đều phải học Cơ sở Trí tuệ nhân tạo", ta phải chép lại quy tắc cho *từng người một* — không có cách nói "chung". Logic vị từ bậc nhất (FOL) giống việc được cấp thêm **đại từ và lượng từ** ("mọi", "có một") để nói một câu áp dụng cho *cả một lớp đối tượng*.
@@ -685,8 +685,8 @@ câu sau chỉ nói "**mỗi** môn đều có (**có thể là**) một giảng
 ::: danger Bẫy thi #5 — Đảo thứ tự lượng từ
 $\exists x \,\forall y\, P(x,y)$ **KHÔNG tương đương** $\forall y\, \exists x\, P(x,y)$.
 
-- $\exists x \forall y\, \text{Yeu}(x,y)$: "có một người yêu **tất cả mọi người**" (một người, một tình yêu bao la).
-- $\forall y \exists x\, \text{Yeu}(x,y)$: "**mỗi người** đều được ai đó yêu" (có thể mỗi người một người yêu khác nhau — yếu hơn nhiều).
+- $\exists x \forall y\, \text{Yeu}(x,y)$: "Có một người yêu **tất cả mọi người**" (một người, một tình yêu bao la).
+- $\forall y \exists x\, \text{Yeu}(x,y)$: "**Mỗi người** đều được ai đó yêu" (có thể mỗi người một người yêu khác nhau — yếu hơn nhiều).
 
 Chiều ngược lại ($\forall\forall$ hay $\exists\exists$) thì **được phép đảo tự do**: $\forall x\forall y \equiv \forall y \forall x$, và $\exists x \exists y \equiv \exists y \exists x$.
 :::
@@ -694,15 +694,15 @@ Chiều ngược lại ($\forall\forall$ hay $\exists\exists$) thì **được p
 ::: danger Bẫy thi #6 — Sai liên từ chính đi kèm lượng từ
 Đây là lỗi sinh viên mắc **nhiều nhất** khi làm bài:
 
-- Với $\forall$: liên từ chính phải là $\Rightarrow$.
+- Với $\forall$: Liên từ chính phải là $\Rightarrow$.
   - ✅ Đúng: $\forall x\,(\text{SinhVien}(x) \Rightarrow \text{ChamChi}(x))$ — "mọi sinh viên đều chăm chỉ".
   - ❌ Sai: $\forall x\, \text{SinhVien}(x) \land \text{ChamChi}(x)$ — câu này nói "**mọi thứ trên đời** đều vừa là sinh viên vừa chăm chỉ" (vô lý, vì $x$ không bị ràng buộc là sinh viên trước khi khẳng định).
-- Với $\exists$: liên từ chính phải là $\land$.
+- Với $\exists$: Liên từ chính phải là $\land$.
   - ✅ Đúng: $\exists x\,(\text{SinhVien}(x) \land \text{DiemA}(x))$ — "có sinh viên đạt điểm A".
   - ❌ Sai: $\exists x\, (\text{SinhVien}(x) \Rightarrow \text{DiemA}(x))$ — câu này **luôn đúng một cách tầm thường** (chỉ cần tồn tại *một vật bất kỳ không phải sinh viên*, phép kéo theo tự động đúng) — hoàn toàn không diễn tả ý "có sinh viên điểm A"!
 :::
 
-### 7.3 Suy luận: hợp nhất (Unification) & Modus Ponens tổng quát
+### 7.3 Suy luận: Hợp nhất (Unification) & Modus Ponens tổng quát
 
 Để áp dụng luật suy diễn, ta cần tìm phép thế $\theta$ khiến hai biểu thức "khớp" nhau — gọi là **hợp nhất hoá**:
 
@@ -723,7 +723,7 @@ Khi đề cho một cơ sở tri thức và hỏi "suy ra được gì", hãy t�
 ## 8. Ontology (Bản thể luận) & Mạng ngữ nghĩa
 
 ::: tip Ẩn dụ
-Nếu FOL là **từ vựng và ngữ pháp**, thì ontology là **cách sắp xếp cả một thư viện**: quyết định "ngăn nào chứa cái gì" trước khi bắt đầu viết câu. Một bản thể luận tổng quát giống khung tủ hồ sơ gốc — chưa biết chi tiết bên trong từng ngăn, nhưng đã có sẵn chỗ để nhét kiến thức mới vào mà không phải đập lại cả tủ.
+Nếu FOL là **từ vựng và ngữ pháp**, thì ontology là **cách sắp xếp cả một thư viện**: Quyết định "ngăn nào chứa cái gì" trước khi bắt đầu viết câu. Một bản thể luận tổng quát giống khung tủ hồ sơ gốc — chưa biết chi tiết bên trong từng ngăn, nhưng đã có sẵn chỗ để nhét kiến thức mới vào mà không phải đập lại cả tủ.
 :::
 
 ### 8.1 Một bản thể luận bậc trên (upper ontology) tự thiết kế
@@ -761,7 +761,7 @@ flowchart LR
     Long -->|nghiên_cứu| CRS["Hệ gợi ý hội thoại (CRS)"]
 ```
 
-Ưu điểm: trực quan, suy luận kế thừa thuộc tính theo liên kết `là_một` rất nhanh. Nhược điểm kinh điển hay bị hỏi thi: mạng ngữ nghĩa **không có ngữ nghĩa hình thức chuẩn** cho tới khi được ánh xạ tương đương sang FOL — hai người vẽ cùng một mạng có thể "đọc" ra hai câu logic khác nhau nếu không thống nhất quy ước.
+Ưu điểm: Trực quan, suy luận kế thừa thuộc tính theo liên kết `là_một` rất nhanh. Nhược điểm kinh điển hay bị hỏi thi: Mạng ngữ nghĩa **không có ngữ nghĩa hình thức chuẩn** cho tới khi được ánh xạ tương đương sang FOL — hai người vẽ cùng một mạng có thể "đọc" ra hai câu logic khác nhau nếu không thống nhất quy ước.
 
 ### 8.3 Logic mô tả (Description Logic) — cú pháp rất ngắn gọn
 
@@ -772,7 +772,7 @@ $$
 đọc là: "Sinh viên là một Người-học **và** có học ít nhất một Môn học" — về bản chất tương đương một câu FOL nhưng được thiết kế để suy luận (subsumption, phân loại lớp) trong thời gian đa thức, đánh đổi lại là **biểu đạt yếu hơn** FOL đầy đủ.
 
 ::: warning Bẫy thi #7 — "Ontology càng tổng quát càng tốt"
-Sách AIMA (chương 10) chỉ rõ: nỗ lực xây một **bản thể luận tổng quát duy nhất cho cả thế giới** cho tới nay **chưa có ứng dụng lớn nào thành công hoàn toàn** — mọi hệ thống AI hàng đầu đều dùng bản thể luận **chuyên biệt cho từng miền** kết hợp học máy, không phải một ontology vạn năng. Đừng trả lời rằng "ontology tổng quát luôn tốt hơn ontology chuyên biệt" trong bài tự luận — hãy nêu được sự đánh đổi.
+Sách AIMA (chương 10) chỉ rõ: Nỗ lực xây một **bản thể luận tổng quát duy nhất cho cả thế giới** cho tới nay **chưa có ứng dụng lớn nào thành công hoàn toàn** — mọi hệ thống AI hàng đầu đều dùng bản thể luận **chuyên biệt cho từng miền** kết hợp học máy, không phải một ontology vạn năng. Đừng trả lời rằng "ontology tổng quát luôn tốt hơn ontology chuyên biệt" trong bài tự luận — hãy nêu được sự đánh đổi.
 :::
 
 ---
@@ -798,7 +798,7 @@ Sách AIMA (chương 10) chỉ rõ: nỗ lực xây một **bản thể luận t
 - Russell, S. & Norvig, P. — *Artificial Intelligence: A Modern Approach*, 4th ed., chương 3 (Search), 5 (Adversarial Search), 8–10 (Logic & Knowledge Representation). Bộ mã nguồn tham khảo chính thức: [github.com/aimacode](https://github.com/aimacode).
 - Cormen, T. H., Leiserson, C. E., Rivest, R. L., Stein, C. — *Introduction to Algorithms*, 4th ed., chương 3 (ký hiệu $O,\Omega,\Theta$), chương 22.3 (thuật toán Dijkstra), chương 6 (heap & hàng đợi ưu tiên — nền tảng cài đặt A\*/UCS hiệu quả).
 - Bài giảng gốc học phần AIT2004 (dịch & phỏng theo CS188, UC Berkeley — Dan Klein & Pieter Abbeel): [Bài 3 — Tìm kiếm dựa trên kinh nghiệm](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-03-tim-kiem-dua-tren-kinh-nghiem.html), [Bài 4 — Tìm kiếm có đối thủ](https://courses.iaidev.com/ai-foundations/2627-1/lecture-lec-04-tim-kiem-co-doi-thu.html), [Bài bổ sung 2 — Logic vị từ](https://courses.iaidev.com/ai-foundations/2627-1/lecture-extra-02-predicate-logic.html).
-- Red Blob Games — [Introduction to A\*](https://www.redblobgames.com/pathfinding/a-star/introduction.html): minh hoạ tương tác cực trực quan cho A\*, Dijkstra, Greedy Best-First.
+- Red Blob Games — [Introduction to A\*](https://www.redblobgames.com/pathfinding/a-star/introduction.html): Minh hoạ tương tác cực trực quan cho A\*, Dijkstra, Greedy Best-First.
 - GeeksforGeeks — [A\* Search Algorithm](https://www.geeksforgeeks.org/dsa/a-search-algorithm/), [Alpha-Beta Pruning](https://www.geeksforgeeks.org/artificial-intelligence/alpha-beta-pruning-in-adversarial-search-algorithms/).
 - MIT OpenCourseWare — [6.034 Artificial Intelligence](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/) (video bài giảng Search, Games, Logic).
 - VisuAlgo — [visualgo.net](https://visualgo.net) — minh hoạ trực quan các cấu trúc dữ liệu/thuật toán đồ thị nền tảng (BFS/DFS/Dijkstra) hỗ trợ trực giác trước khi học A\*.
