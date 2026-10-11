@@ -325,9 +325,13 @@ Hai phương trình đầu (nhân 15):
 
 $$15a=4a+6b+1\ \Rightarrow\ 11a-6b=1;\qquad 15b=4a+6c+1.$$
 
-Thay $c=1-a-b$: $$
+Thay $c=1-a-b$:
+
+$$
 15b = 4a + 6 - 6a - 6b + 1 \implies 2a + 21b = 7
-$$. Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
+$$
+
+Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
 
 $$a=\frac7{27}=\frac{21}{81}.$$
 

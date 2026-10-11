@@ -88,9 +88,12 @@ flowchart TD
 - Nếu mảng đã có thứ tự sẵn (hoặc ngược chiều) mà bạn luôn chọn **phần tử đầu tiên hoặc cuối cùng** làm Pivot:
   - Một bên sẽ có $0$ phần tử, bên còn lại có $n - 1$ phần tử.
   - Cây đệ quy bị lệch hẳn 1 bên thành cây thoái hóa sâu $n$ tầng.
-  - Tổng số bước: $$
+  - Tổng số bước:
+
+$$
 (n-1) + (n-2) + \dots + 1 = \frac{n(n-1)}{2} \implies \mathcal{O}(n^2)
-$$.
+$$
+
 - **Giải pháp khắc phục:** 
   - Chọn Pivot ngẫu nhiên (Randomized QuickSort).
   - Chọn Pivot là trung vị của 3 phần tử: Đầu, Giữa, Cuối (Median-of-three).

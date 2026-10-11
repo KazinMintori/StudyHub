@@ -53,7 +53,7 @@ Bảng dưới đây tổng hợp đáp số định lượng của các bài t�
 | **2.89** | **(a)** $8.2\,\mathrm{m/s}$; **(b)** (i) $0.411\,\mathrm m$, (ii) $1.15\,\mathrm{km}$; **(c)** $9.8\,\mathrm{m/s}$; **(d)** $4.9\,\mathrm{m/s}$. |
 | **2.91** | **Chọn (b):** $d_a / \sqrt{2}$. |
 
-::: note Lưu ý sư phạm về đơn vị và độ chính xác tính toán
+::: info Lưu ý sư phạm về đơn vị và độ chính xác tính toán
 - **Bài 2.7(c):** Đề bài yêu cầu tìm thời gian, nên đơn vị chuẩn phải là giây ($t \approx 13.3\,\mathrm s$). Trong một số ấn bản trước đây từng xuất hiện lỗi in nhầm đơn vị là $\mathrm{m/s}$.
 - **Bài 2.69(b):** Vector gia tốc có thành phần đại số $a_x = -40\,\mathrm{m/s^2}$. Khi trình bày câu trả lời theo yêu cầu độ lớn và hướng, độ lớn là số dương ($40\,\mathrm{m/s^2}$) và hướng theo chiều âm của trục tọa độ (chiều $-x$).
 - **Bài 2.89(a):** Với $g = 9.80\,\mathrm{m/s^2}$ và chiều cao $h = 20.0\,\mathrm m$, tính toán giải tích cho $v_0 \approx 8.18\,\mathrm{m/s} \approx 8.2\,\mathrm{m/s}$.

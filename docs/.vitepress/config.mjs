@@ -30,12 +30,14 @@ export default withMermaid(defineConfig({
         state.src = state.src
           .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
           // A container title ends on the same line; never consume the next paragraph.
-          .replace(/^::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
-          .replace(/^::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
-          .replace(/^::: exercise(?:[\t ]+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
-          .replace(/^::: solution(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Lời giải${title ? `: ${title}` : ''}`)
-          .replace(/^::: derivation(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
-          .replace(/^::: hint(?:[\t ]+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`);
+          .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: exercise(?:[\t ]+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: solution(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Lời giải${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: derivation(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: hint(?:[\t ]+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: note(?:[\t ]+(.*))?$/gm, (_, title) => `::: info${title ? ` ${title}` : ''}`)
+          .replace(/^[ \t]*:::[ \t]*$/gm, ':::');
       });
       md.use(termLinks,base)
       // Only standalone images become figures; escape alt text before inserting captions.

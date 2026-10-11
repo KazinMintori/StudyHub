@@ -63,13 +63,13 @@ Trong thực tế kỹ thuật và đời sống, phần lớn các bài toán �
    $X$ đếm số lần thành công trong $n$ phép thử Bernoulli độc lập, mỗi phép thử có cùng xác suất thành công $p$. Công thức PMF:
    $$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, n.$$
 
-   ::: derivation Mở rộng bước suy luận của công thức nhị thức
-   Tại sao lại có sự xuất hiện của hệ số tổ hợp $\binom{n}{k}$?
-   
-   Một chuỗi cụ thể gồm đúng $k$ lần thành công và $n - k$ lần thất bại (ví dụ: $k$ lần đầu thành công, $n-k$ lần sau thất bại) có xác suất xảy ra là $p^k(1-p)^{n-k}$ (do tính độc lập giữa các lần thử).
-   
-   Tuy nhiên, $k$ lần thành công có thể nằm rải rác ở bất kỳ vị trí nào trong $n$ lần thử. Số cách chọn ra $k$ vị trí trong tổng số $n$ vị trí chính là tổ hợp $\binom{n}{k} = \frac{n!}{k!(n-k)!}$. Vì các chuỗi này xung khắc nhau, ta cộng xác suất của tất cả các chuỗi lại để thu được công thức tổng quát.
-   :::
+::: derivation Mở rộng bước suy luận của công thức nhị thức
+Tại sao lại có sự xuất hiện của hệ số tổ hợp $\binom{n}{k}$?
+
+Một chuỗi cụ thể gồm đúng $k$ lần thành công và $n - k$ lần thất bại (ví dụ: $k$ lần đầu thành công, $n-k$ lần sau thất bại) có xác suất xảy ra là $p^k(1-p)^{n-k}$ (do tính độc lập giữa các lần thử).
+
+Tuy nhiên, $k$ lần thành công có thể nằm rải rác ở bất kỳ vị trí nào trong $n$ lần thử. Số cách chọn ra $k$ vị trí trong tổng số $n$ vị trí chính là tổ hợp $\binom{n}{k} = \frac{n!}{k!(n-k)!}$. Vì các chuỗi này xung khắc nhau, ta cộng xác suất của tất cả các chuỗi lại để thu được công thức tổng quát.
+:::
 
 3. **Phân phối Poisson** $\text{Poisson}(\lambda)$:
    Mô hình hóa số lần một biến cố hiếm xảy ra trong một khoảng thời gian hoặc không gian liên tục cố định (ví dụ: Số yêu cầu gửi tới máy chủ web trong 1 giây, số lỗi chính tả trên 1 trang sách, số cuộc gọi tới tổng đài cấp cứu trong 1 giờ).
