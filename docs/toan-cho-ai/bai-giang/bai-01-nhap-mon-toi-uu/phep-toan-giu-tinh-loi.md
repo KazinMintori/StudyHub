@@ -7,7 +7,7 @@ title: "Các phép toán giữ tính lồi của tập"
 description: "Giao của một họ tập lồi bất kỳ, ảnh và ảnh ngược qua ánh xạ affine, phép chiếu, tổng Minkowski, đa diện và tập nghiệm LMI như ảnh ngược, nón hyperbolic, ellipsoid, và ràng buộc bền vững trong học máy."
 ---
 
-Đến đây ta đã có một bộ sưu tập các tập lồi cơ bản: Tập affine, nửa không gian, quả cầu chuẩn, ellipsoid, đa diện, nón bậc hai, nón PSD. Nhưng miền khả thi của một bài toán thật hiếm khi trông giống hệt một trong số đó. Nó thường là một thứ phức tạp hơn, chẳng hạn $\{x : \|Ax - b\|_2 \le r,\ Cx \preceq d\}$, hay tệ hơn, một tập được định nghĩa bằng vô hạn ràng buộc.
+Đến đây ta đã có một bộ sưu tập các tập lồi cơ bản: Tập affine, nửa không gian, quả cầu chuẩn, ellipsoid, đa diện, nón bậc hai, nón PSD. Nhưng miền khả thi của một bài toán thật hiếm khi trông giống hệt một trong số đó. Nó thường là một thứ phức tạp hơn, chẳng hạn $\{x \mid \|Ax - b\|_2 \le r,\ Cx \preceq d\}$, hay tệ hơn, một tập được định nghĩa bằng vô hạn ràng buộc.
 
 Chứng minh tính lồi trực tiếp từ định nghĩa bằng cách kiểm tra mọi cặp điểm cho từng tập hợp phức tạp là một quy trình nặng nề và rất dễ sơ suất. Ta sử dụng một phương pháp đại số thanh lịch hơn: **Giải tích các tập lồi** (calculus of convex sets): Thiết lập tính lồi của tập hợp cần xét bằng cách chứng minh nó được tạo thành từ các tập lồi cơ bản thông qua những phép toán bảo toàn tính lồi. Tương tự như trong giải tích cổ điển, ta không chứng minh hàm $e^{x^2 + \sin x}$ khả vi bằng định nghĩa giới hạn của số gia, mà áp dụng các quy tắc đạo hàm của tổng, tích và hàm hợp. Hai phép toán cơ bản nhất, giữ vai trò chủ đạo trong bài học này, là phép lấy giao và biến đổi affine.
 
@@ -17,12 +17,12 @@ Chứng minh tính lồi trực tiếp từ định nghĩa bằng cách kiểm t
 
 Chứng minh rất ngắn gọn: Nếu hai điểm $x_1, x_2$ cùng thuộc phần giao, thì chúng bắt buộc phải thuộc từng tập $S_\alpha$ với mọi $\alpha \in \mathcal{A}$. Do từng $S_\alpha$ là tập lồi, toàn bộ đoạn thẳng nối hai điểm đó nằm trọn trong từng $S_\alpha$, và vì thế nằm trọn trong phần giao. Điểm cốt lõi là tập chỉ số $\mathcal{A}$ có thể mang lực lượng **vô hạn**, thậm chí vô hạn không đếm được, mà lập luận logic vẫn bảo toàn nguyên vẹn. Cần ghi nhận rằng không gian con tuyến tính, tập affine và nón lồi cũng khép kín dưới phép giao tùy ý.
 
-Về mặt tối ưu hóa, phép giao tương ứng với hành động **bổ sung thêm ràng buộc**: Mỗi ràng buộc mới tương đương với việc thu hẹp miền khả thi bằng phần giao với một tập lồi mới. Nhờ đó, tập đa diện (giao của hữu hạn các nửa không gian đóng và siêu phẳng) luôn lồi. Tương tự, nón ma trận nửa xác định dương $\mathbb{S}^n_+$ (giao của vô hạn các nửa không gian dạng $\{X \in \mathbb{S}^n : z^T X z \ge 0\}$ ứng với mọi vector $z \in \mathbb{R}^n$) chắc chắn là một tập lồi.
+Về mặt tối ưu hóa, phép giao tương ứng với hành động **bổ sung thêm ràng buộc**: Mỗi ràng buộc mới tương đương với việc thu hẹp miền khả thi bằng phần giao với một tập lồi mới. Nhờ đó, tập đa diện (giao của hữu hạn các nửa không gian đóng và siêu phẳng) luôn lồi. Tương tự, nón ma trận nửa xác định dương $\mathbb{S}^n_+$ (giao của vô hạn các nửa không gian dạng $\{X \in \mathbb{S}^n \mid z^T X z \ge 0\}$ ứng với mọi vector $z \in \mathbb{R}^n$) chắc chắn là một tập lồi.
 
 Một ví dụ giải tích sâu sắc thể hiện rõ nét sức mạnh của phép giao vô hạn: Xét tập hợp
 
 $$
-S = \left\{x \in \mathbb{R}^m : |p_x(t)| \le 1 \text{ với mọi } |t| \le \frac{\pi}{3}\right\}, \qquad p_x(t) = \sum_{k=1}^{m} x_k \cos(kt) .
+S = \left\{x \in \mathbb{R}^m \;\middle|\; |p_x(t)| \le 1, \; \forall |t| \le \frac{\pi}{3}\right\}, \qquad p_x(t) = \sum_{k=1}^{m} x_k \cos(kt) .
 $$
 
 Mỗi vector $x \in \mathbb{R}^m$ xác định một đa thức lượng giác $p_x(t)$, và tập $S$ bao gồm toàn bộ các vector $x$ sao cho đồ thị đa thức tương ứng không vượt ra ngoài dải $[-1, 1]$ trên đoạn $[-\pi/3, \pi/3]$. Thoạt nhìn, việc xác minh tính lồi trực tiếp là bất khả thi vì đòi hỏi kiểm tra liên tục trên vô số giá trị $t$. Tuy nhiên, với mỗi giá trị $t$ **cố định**, điều kiện biên $-1 \le (\cos t, \ldots, \cos mt) x \le 1$ định nghĩa một **dải phẳng** (slab) kẹp giữa hai siêu phẳng song song, vốn là một tập lồi đóng. Vì vậy, tập $S$ thực chất là giao của vô số dải phẳng lồi, do đó $S$ chắc chắn là một tập lồi.
@@ -37,7 +37,7 @@ Mô phỏng tương tác phía trên minh họa cấu trúc hình học của t�
 
 Nhắc lại rằng ánh xạ $f : \mathbb{R}^n \to \mathbb{R}^m$ được gọi là affine nếu nó có dạng $f(x) = Ax + b$ với $A \in \mathbb{R}^{m \times n}$ và $b \in \mathbb{R}^m$.
 
-> **Mệnh đề.** Nếu $S \subseteq \mathbb{R}^n$ là tập lồi và $f(x) = Ax + b$, thì **ảnh** $f(S) = \{f(x) : x \in S\}$ là tập lồi trong $\mathbb{R}^m$. Ngược lại, nếu $C \subseteq \mathbb{R}^m$ là tập lồi, thì **ảnh ngược** $f^{-1}(C) = \{x \in \mathbb{R}^n : f(x) \in C\}$ là tập lồi trong $\mathbb{R}^n$.
+> **Mệnh đề.** Nếu $S \subseteq \mathbb{R}^n$ là tập lồi và $f(x) = Ax + b$, thì **ảnh** $f(S) = \{f(x) \mid x \in S\}$ là tập lồi trong $\mathbb{R}^m$. Ngược lại, nếu $C \subseteq \mathbb{R}^m$ là tập lồi, thì **ảnh ngược** $f^{-1}(C) = \{x \in \mathbb{R}^n \mid f(x) \in C\}$ là tập lồi trong $\mathbb{R}^n$.
 
 Chứng minh cho cả hai chiều đều bắt nguồn từ tính chất bất biến của ánh xạ affine đối với tổ hợp lồi:
 
@@ -60,21 +60,21 @@ $$
 
 Các phép biến đổi hình học quan trọng là trường hợp đặc biệt của ảnh và ảnh ngược affine:
 
-- **Co giãn và tịnh tiến**: Phép phóng đại $\alpha S = \{\alpha x : x \in S\}$ và phép dịch chuyển vector $S + a = \{x + a : x \in S\}$ luôn bảo toàn tính lồi.
+- **Co giãn và tịnh tiến**: Phép phóng đại $\alpha S = \{\alpha x \mid x \in S\}$ và phép dịch chuyển vector $S + a = \{x + a \mid x \in S\}$ luôn bảo toàn tính lồi.
 - **Phép chiếu tọa độ** (Projection): Nếu $S \subseteq \mathbb{R}^m \times \mathbb{R}^n$ là tập lồi, thì hình chiếu của nó:
 
 $$
-T = \{x_1 \in \mathbb{R}^m : \exists x_2 \in \mathbb{R}^n \text{ sao cho } (x_1, x_2) \in S\}
+T = \left\{x_1 \in \mathbb{R}^m \;\middle|\; \exists x_2 \in \mathbb{R}^n, \; (x_1, x_2) \in S\right\}
 $$
 
 cũng là một tập lồi. Hình chiếu chính là "bóng" của tập hợp lên không gian con tọa độ.
-- **Tổng Minkowski**: Tổng của hai tập lồi $S_1 + S_2 = \{x + y : x \in S_1,\ y \in S_2\}$ luôn là một tập lồi. Lý do: Tích Descartes $S_1 \times S_2$ là tập lồi, và $S_1 + S_2$ chính là ảnh của nó qua ánh xạ affine tuyến tính $(x, y) \mapsto x + y$.
+- **Tổng Minkowski**: Tổng của hai tập lồi $S_1 + S_2 = \{x + y \mid x \in S_1,\ y \in S_2\}$ luôn là một tập lồi. Lý do: Tích Descartes $S_1 \times S_2$ là tập lồi, và $S_1 + S_2$ chính là ảnh của nó qua ánh xạ affine tuyến tính $(x, y) \mapsto x + y$.
 
 ## 3. Nhận diện các tập lồi nâng cao qua lăng kính ảnh ngược
 
 Sức mạnh thực sự của phép lấy ảnh ngược là biến đổi các miền ràng buộc phức tạp về các cấu trúc hình nón hoặc hình cầu chuẩn quen thuộc:
 
-- **Đa diện**: Tập hợp $\{x \in \mathbb{R}^n : Ax \preceq b,\ Cx = d\}$ chính là ảnh ngược của nón lồi $\mathbb{R}^m_+ \times \{0\}$ qua ánh xạ affine $f(x) = (b - Ax,\ d - Cx)$.
+- **Đa diện**: Tập hợp $\{x \in \mathbb{R}^n \mid Ax \preceq b,\ Cx = d\}$ chính là ảnh ngược của nón lồi $\mathbb{R}^m_+ \times \{0\}$ qua ánh xạ affine $f(x) = (b - Ax,\ d - Cx)$.
 - **Tập nghiệm của bất đẳng thức ma trận tuyến tính (LMI)**: Một điều kiện ràng buộc có dạng
   $$
   A(x) = x_1 A_1 + \cdots + x_n A_n \preceq B, \qquad A_i, B \in \mathbb{S}^m,
@@ -82,17 +82,17 @@ Sức mạnh thực sự của phép lấy ảnh ngược là biến đổi các
   được gọi là một bất đẳng thức ma trận tuyến tính (Linear Matrix Inequality - LMI). Ký hiệu ma trận $A(x) \preceq B$ tương đương với $B - A(x) \succeq 0$. Tập nghiệm của LMI chính là ảnh ngược của nón nửa xác định dương $\mathbb{S}^m_+$ qua ánh xạ affine $x \mapsto B - A(x)$, do đó luôn luôn là một tập lồi. Đây là dạng ràng buộc tổng quát bao trùm toàn bộ họ bài toán quy hoạch nửa xác định (SDP).
 
 ::: example Biểu diễn hình tròn bằng một ràng buộc ma trận tuyến tính LMI
-Xét bất đẳng thức ma trận: $\begin{bmatrix} 1 + x_1 & x_2 \\ x_2 & 1 - x_1 \end{bmatrix} \succeq 0$. Đây là một LMI cấp 2 theo hai biến số $(x_1, x_2)$. Theo tiêu chuẩn Sylvester cho ma trận cấp 2, điều kiện nửa xác định dương tương đương với: $1 + x_1 \ge 0$, $1 - x_1 \ge 0$ và định thức không âm $(1 + x_1)(1 - x_1) - x_2^2 \ge 0$, tức $x_1^2 + x_2^2 \le 1$.
+Xét bất đẳng thức ma trận: $\begin{bmatrix} 1 + x_1 & x_2 \\ x_2 & 1 - x_1 \end{bmatrix} \succeq 0$. Đây là một LMI cấp 2 theo hai biến số $(x_1, x_2)$. Theo tiêu chuẩn Sylvester cho ma trận cấp 2, điều kiện nửa xác định dương tương đương với: Các bất đẳng thức $1 + x_1 \ge 0$, $1 - x_1 \ge 0$ và định thức không âm $(1 + x_1)(1 - x_1) - x_2^2 \ge 0$, tức $x_1^2 + x_2^2 \le 1$.
 
 Tập nghiệm chính là hình tròn đơn vị đóng. Một miền cong phi tuyến đã được tuyến tính hóa hoàn hảo dưới dạng ma trận.
 :::
 
 - **Nón hyperbolic**: Cho ma trận $P \in \mathbb{S}^n_+$ và vector $c \in \mathbb{R}^n$. Tập hợp
   $$
-  \{x \in \mathbb{R}^n : x^T P x \le (c^T x)^2,\ c^T x \ge 0\}
+  \{x \in \mathbb{R}^n \mid x^T P x \le (c^T x)^2,\ c^T x \ge 0\}
   $$
-  chính là ảnh ngược của nón bậc hai chuẩn Lorentz $\{(z, t) : \|z\|_2 \le t,\ t \ge 0\}$ qua ánh xạ affine $x \mapsto (P^{1/2}x,\ c^T x)$, do đó luôn là một tập lồi. Điều kiện nửa không gian $c^T x \ge 0$ là bắt buộc để loại bỏ phần nón đối xứng hướng xuống phía dưới.
-- **Tập Ellipsoid**: Khối ellipsoid đóng $\{x \in \mathbb{R}^n : (x - x_c)^T P^{-1}(x - x_c) \le 1\}$ có thể xem đồng thời là ảnh của hình cầu Euclid đơn vị qua ánh xạ affine $u \mapsto P^{1/2}u + x_c$, và là ảnh ngược của hình cầu Euclid qua ánh xạ $x \mapsto P^{-1/2}(x - x_c)$.
+  chính là ảnh ngược của nón bậc hai chuẩn Lorentz $\{(z, t) \mid \|z\|_2 \le t,\ t \ge 0\}$ qua ánh xạ affine $x \mapsto (P^{1/2}x,\ c^T x)$, do đó luôn là một tập lồi. Điều kiện nửa không gian $c^T x \ge 0$ là bắt buộc để loại bỏ phần nón đối xứng hướng xuống phía dưới.
+- **Tập Ellipsoid**: Khối ellipsoid đóng $\{x \in \mathbb{R}^n \mid (x - x_c)^T P^{-1}(x - x_c) \le 1\}$ có thể xem đồng thời là ảnh của hình cầu Euclid đơn vị qua ánh xạ affine $u \mapsto P^{1/2}u + x_c$, và là ảnh ngược của hình cầu Euclid qua ánh xạ $x \mapsto P^{-1/2}(x - x_c)$.
 
 ## 4. Giao vô hạn trong học máy: Mô hình tối ưu hóa bền vững
 
@@ -114,7 +114,7 @@ Sự xuất hiện của số hạng điều chuẩn chuẩn $\ell_1$ (Lasso reg
 
 <details><summary>Xem lời giải thích</summary>
 
-Hình chiếu của một tập không lồi hoàn toàn có thể là một tập lồi. Xét đường tròn một chiều $\{x \in \mathbb{R}^2 : x_1^2 + x_2^2 = 1\}$, tập này không lồi vì chỉ gồm đường biên rỗng ruột. Tuy nhiên, hình chiếu của nó lên trục hoành $x_1$ chính là đoạn thẳng đóng $[-1, 1]$, vốn là một tập lồi. Vì vậy, tính lồi của hình chiếu không cho phép suy ngược lại tính lồi của tập gốc.
+Hình chiếu của một tập không lồi hoàn toàn có thể là một tập lồi. Xét đường tròn một chiều $\{x \in \mathbb{R}^2 \mid x_1^2 + x_2^2 = 1\}$, tập này không lồi vì chỉ gồm đường biên rỗng ruột. Tuy nhiên, hình chiếu của nó lên trục hoành $x_1$ chính là đoạn thẳng đóng $[-1, 1]$, vốn là một tập lồi. Vì vậy, tính lồi của hình chiếu không cho phép suy ngược lại tính lồi của tập gốc.
 
 Đối với ảnh ngược, nếu ánh xạ affine là toàn ánh, ảnh ngược của một tập không lồi thường không lồi. Tuy nhiên, nếu ánh xạ suy biến (chẳng hạn ánh xạ hằng số đưa mọi điểm về một giá trị duy nhất), ảnh ngược có thể trở thành toàn bộ không gian $\mathbb{R}^n$, do đó vẫn lồi. Quy tắc logic luôn mang tính một chiều: Tính lồi chỉ được bảo toàn xuôi theo chiều biến đổi affine.
 
@@ -124,7 +124,7 @@ Hình chiếu của một tập không lồi hoàn toàn có thể là một t�
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập hợp mới sẽ không còn lồi. Việc thay lượng từ "với mọi" bằng "tồn tại" tương đương với việc chuyển từ phép **giao** các tập hợp sang phép **hợp** các tập hợp: $S_{\text{mới}} = \bigcup_{t} S_t$. Hợp của các tập lồi nói chung không phải là một tập lồi. Chẳng hạn với $m = 2$, hai vector $x = (3, 3)^T$ và $y = (3, -3)^T$ đều thuộc tập mới vì đa thức của chúng triệt tiêu tại các điểm biên tương ứng. Tuy nhiên trung điểm của chúng là $(3, 0)^T$ có giá trị đa thức $p(t) = 3\cos t \ge 1.5 > 1$ tại mọi điểm trên đoạn xét, do đó không thuộc tập hợp, phá vỡ tính lồi.
+Tập hợp mới sẽ không còn lồi. Việc thay lượng từ "với mọi" bằng "tồn tại" tương đương với việc chuyển từ phép **giao** các tập hợp sang phép **hợp** các tập hợp: Đặt $S_{\text{mới}} = \bigcup_{t} S_t$. Hợp của các tập lồi nói chung không phải là một tập lồi. Chẳng hạn với $m = 2$, hai vector $x = (3, 3)^T$ và $y = (3, -3)^T$ đều thuộc tập mới vì đa thức của chúng triệt tiêu tại các điểm biên tương ứng. Tuy nhiên trung điểm của chúng là $(3, 0)^T$ có giá trị đa thức $p(t) = 3\cos t \ge 1.5 > 1$ tại mọi điểm trên đoạn xét, do đó không thuộc tập hợp, phá vỡ tính lồi.
 
 </details>
 
@@ -138,11 +138,11 @@ Tổng Minkowski của hai đoạn thẳng đóng không cùng phương trong m�
 
 </details>
 
-**Câu 4.** Vì sao miền ràng buộc dạng nón bậc hai $\{x \in \mathbb{R}^n : \|Ax - b\|_2 \le c^T x + d\}$ luôn là một tập lồi?
+**Câu 4.** Vì sao miền ràng buộc dạng nón bậc hai $\{x \in \mathbb{R}^n \mid \|Ax - b\|_2 \le c^T x + d\}$ luôn là một tập lồi?
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập hợp này là ảnh ngược của nón bậc hai Lorentz chuẩn $K = \{(z, t) \in \mathbb{R}^{m+1} : \|z\|_2 \le t\}$ qua ánh xạ affine $x \mapsto (Ax - b,\ c^T x + d)$. Vì nón Lorentz là một tập lồi, và phép lấy ảnh ngược qua ánh xạ affine luôn bảo toàn tính lồi, nên tập ràng buộc trên chắc chắn là một tập lồi. Đây chính là cấu trúc miền khả thi mẫu mực trong quy hoạch nón bậc hai (SOCP).
+Tập hợp này là ảnh ngược của nón bậc hai Lorentz chuẩn $K = \{(z, t) \in \mathbb{R}^{m+1} \mid \|z\|_2 \le t\}$ qua ánh xạ affine $x \mapsto (Ax - b,\ c^T x + d)$. Vì nón Lorentz là một tập lồi, và phép lấy ảnh ngược qua ánh xạ affine luôn bảo toàn tính lồi, nên tập ràng buộc trên chắc chắn là một tập lồi. Đây chính là cấu trúc miền khả thi mẫu mực trong quy hoạch nón bậc hai (SOCP).
 
 </details>
 
@@ -150,9 +150,9 @@ Tập hợp này là ảnh ngược của nón bậc hai Lorentz chuẩn $K = \{
 
 ::: exercise 1. Nhận diện phép toán bảo toàn tính lồi
 Với mỗi tập hợp sau đây, hãy xác định các phép toán giữ tính lồi đã tạo ra nó từ các tập lồi cơ bản:
-- Trường hợp (a): Tập nghiệm $\{x \in \mathbb{R}^n : \|Ax - b\|_2 \le r\}$ với bán kính $r \ge 0$.
+- Trường hợp (a): Tập nghiệm $\{x \in \mathbb{R}^n \mid \|Ax - b\|_2 \le r\}$ với bán kính $r \ge 0$.
 - Trường hợp (b): Tập hợp các vector $x \in \mathbb{R}^n$ thỏa mãn $x \succeq 0$, $\mathbf{1}^T x = 1$ và $\|x - u\|_\infty \le 0.1$.
-- Trường hợp (c): Miền phẳng $\{(x, y) \in \mathbb{R}^2 : |x| + |y - 1| \le 1\}$.
+- Trường hợp (c): Miền phẳng $\{(x, y) \in \mathbb{R}^2 \mid |x| + |y - 1| \le 1\}$.
 :::
 
 ::: solution
@@ -165,16 +165,19 @@ Với mỗi tập hợp sau đây, hãy xác định các phép toán giữ tín
 Hãy mô tả tường minh tập nghiệm của bất đẳng thức ma trận tuyến tính sau trong $\mathbb{R}^2$:
 
 $$
-\mathcal{S} = \left\{x \in \mathbb{R}^2 : \begin{bmatrix} x_1 & 1 \\ 1 & x_2 \end{bmatrix} \succeq 0\right\}
+\mathcal{S} = \left\{x \in \mathbb{R}^2 \;\middle|\; \begin{bmatrix} x_1 & 1 \\ 1 & x_2 \end{bmatrix} \succeq 0\right\}
 $$
 
 và giải thích đặc tính hình học của nó.
 :::
 
 ::: solution
-Theo tiêu chuẩn ma trận đối xứng cấp 2 nửa xác định dương, điều kiện tương đương với:
+Theo tiêu chuẩn ma trận đối xứng cấp 2 nửa xác định dương, điều kiện tương đương với hệ sau:
 $$
-x_1 \ge 0, \qquad x_2 \ge 0, \qquad x_1 x_2 - 1 \ge 0 \iff x_1 x_2 \ge 1.
+\begin{aligned}
+x_1 &\ge 0, \quad x_2 \ge 0, \\
+x_1 x_2 - 1 &\ge 0 \iff x_1 x_2 \ge 1.
+\end{aligned}
 $$
 Kết hợp lại, tập nghiệm chính là miền nằm phía trên nhánh hyperbol $x_2 \ge 1/x_1$ trong góc phần tư thứ nhất $\mathbb{R}^2_{++}$. Tập này là một tập lồi đóng, được kiến tạo như ảnh ngược của nón PSD qua ánh xạ affine ma trận.
 :::
@@ -184,9 +187,12 @@ Cho điểm dữ liệu $x = (2, 1)^T$ và bán kính nhiễu không chắc ch�
 :::
 
 ::: solution
-Ràng buộc bền vững tương đương với bất đẳng thức:
+Ràng buộc bền vững tương đương với bất đẳng thức sau:
 $$
-w^T x - \varepsilon \|w\|_1 \ge 1 \iff 2w_1 + w_2 - 0.5 (|w_1| + |w_2|) \ge 1.
+\begin{aligned}
+w^T x - \varepsilon \|w\|_1 &\ge 1 \\
+\iff 2w_1 + w_2 - 0.5 (|w_1| + |w_2|) &\ge 1.
+\end{aligned}
 $$
 
 - Với vector $w_1 = (1, 1)^T$: Ta có $w^T x = 2(1) + 1 = 3$ và $\|w\|_1 = 2$. Vế trái bằng $3 - 0.5(2) = 2 \ge 1$. Do đó $w_1$ thỏa mãn ràng buộc bền vững.

@@ -14,19 +14,24 @@ Bài học này cũng giới thiệu **đơn hình**, cấu trúc đa diện ngu
 ## 1. Đa diện
 
 > **Định nghĩa.** Một **đa diện** (polyhedron) là tập nghiệm của một số hữu hạn bất đẳng thức và đẳng thức tuyến tính:
-> $$\mathcal{P} = \{x \in \mathbb{R}^n : a_j^T x \le b_j,\ j = 1, \ldots, m,\quad c_j^T x = d_j,\ j = 1, \ldots, p\}.$$
+> $$
+> \begin{aligned}
+> \mathcal{P} = \Big\{x \in \mathbb{R}^n \;\Big|\;& a_j^T x \le b_j, \quad j = 1, \ldots, m, \\
+> & c_j^T x = d_j, \quad j = 1, \ldots, p\Big\}.
+> \end{aligned}
+> $$
 
 Nói cách khác, đa diện là giao của một số hữu hạn các nửa không gian đóng và siêu phẳng. Vì mỗi nửa không gian và mỗi siêu phẳng đều là tập lồi, đồng thời giao của một họ tùy ý các tập lồi luôn là một tập lồi, nên **mọi đa diện đều là tập lồi**. Hình ảnh trực quan của một đa diện chính là phần giao nhau của các nửa không gian, trong đó mỗi nửa không gian được phân định bởi một pháp tuyến $a_j$ hướng ra ngoài.
 
 Ta thường sử dụng dạng biểu diễn ma trận cô đọng:
 
 $$
-\mathcal{P} = \{x \in \mathbb{R}^n : Ax \preceq b,\ Cx = d\},
+\mathcal{P} = \{x \in \mathbb{R}^n \mid Ax \preceq b,\ Cx = d\},
 $$
 
 trong đó các hàng của ma trận $A \in \mathbb{R}^{m \times n}$ lần lượt là $a_1^T, \ldots, a_m^T$, các hàng của $C \in \mathbb{R}^{p \times n}$ là $c_1^T, \ldots, c_p^T$, và ký hiệu $u \preceq v$ giữa hai vector thể hiện quan hệ so sánh **trên từng thành phần**: Cụ thể $u_i \le v_i$ với mọi $i = 1, \dots, m$. Ký hiệu này khác biệt căn bản với dấu so sánh trên trục số thực: Hai vector $u = (1, 3)^T$ và $v = (2, 2)^T$ hoàn toàn không thể so sánh được theo thứ tự này vì $u_1 < v_1$ nhưng $u_2 > v_2$.
 
-Nhiều tập hợp quen thuộc trong giải tích và đại số tuyến tính là đa diện: Tập affine (chỉ chứa các ràng buộc đẳng thức), tia, đoạn thẳng, nửa không gian đóng, và **nón phần tư không âm** $\mathbb{R}^n_+ = \{x \in \mathbb{R}^n : x \succeq 0\}$. Nón phần tư không âm vừa mang cấu trúc nón vừa là đa diện nên được gọi là **nón đa diện** (polyhedral cone).
+Nhiều tập hợp quen thuộc trong giải tích và đại số tuyến tính là đa diện: Tập affine (chỉ chứa các ràng buộc đẳng thức), tia, đoạn thẳng, nửa không gian đóng, và **nón phần tư không âm** $\mathbb{R}^n_+ = \{x \in \mathbb{R}^n \mid x \succeq 0\}$. Nón phần tư không âm vừa mang cấu trúc nón vừa là đa diện nên được gọi là **nón đa diện** (polyhedral cone).
 
 Một đa diện có thể không bị chặn (chẳng hạn như một nửa không gian) và có thể rỗng khi hệ ràng buộc xảy ra mâu thuẫn. Một đa diện bị chặn được gọi là **đa đỉnh** (polytope). Trong y văn tối ưu hóa, các tác giả đôi khi dùng hai thuật ngữ đa diện (polyhedron) và đa đỉnh (polytope) theo những quy ước hoán đổi cho nhau, do đó việc đối chiếu định nghĩa giả thiết luôn là bước cẩn trọng cần thiết.
 
@@ -45,17 +50,22 @@ Trước khi định nghĩa đơn hình, ta cần một khái niệm độc lậ
 Ý nghĩa hình học: Ba điểm độc lập affine nghĩa là chúng không thẳng hàng (tạo thành một tam giác thực sự), bốn điểm độc lập affine nghĩa là chúng không đồng phẳng (tạo thành một tứ diện thực sự). Định nghĩa đo các vector hiệu so với mốc $v_0$, hoàn toàn độc lập với việc chọn gốc tọa độ. Việc thay thế $v_0$ bằng bất kỳ điểm nào khác trong tập điểm đều dẫn đến kết luận tương đương.
 
 > **Định nghĩa.** Với $k + 1$ điểm độc lập affine $v_0, \dots, v_k$, **đơn hình** (simplex) xác định bởi chúng là bao lồi của các điểm này:
-> $$C = \operatorname{conv}\{v_0, \ldots, v_k\} = \left\{\sum_{i=0}^k \theta_i v_i : \theta_i \ge 0,\ \sum_{i=0}^k \theta_i = \theta_0 + \theta_1 + \cdots + \theta_k = 1\right\}.$$
+> $$
+> \begin{aligned}
+> C &= \operatorname{conv}\{v_0, \ldots, v_k\} \\
+> &= \left\{\sum_{i=0}^k \theta_i v_i \;\middle|\; \theta_i \ge 0,\ \sum_{i=0}^k \theta_i = \theta_0 + \theta_1 + \cdots + \theta_k = 1\right\}.
+> \end{aligned}
+> $$
 
 Đơn hình này có số chiều affine đúng bằng $k$, nên được gọi là một đơn hình $k$-chiều trong $\mathbb{R}^n$. Cụ thể: Đơn hình 1-chiều là một đoạn thẳng nối hai điểm, đơn hình 2-chiều là một tam giác đặc nối ba điểm, đơn hình 3-chiều là một khối tứ diện nối bốn điểm.
 
 Hai họ đơn hình giữ vai trò nền tảng đặc biệt:
 
-- **Đơn hình đơn vị** (Unit simplex): Được xác định bởi gốc tọa độ cùng các vector cơ sở chính tắc $\{0, e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp $\{x \in \mathbb{R}^n : x \succeq 0,\ \mathbf{1}^T x \le 1\}$. Đơn hình này có số chiều bằng $n$.
+- **Đơn hình đơn vị** (Unit simplex): Được xác định bởi gốc tọa độ cùng các vector cơ sở chính tắc $\{0, e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp $\{x \in \mathbb{R}^n \mid x \succeq 0,\ \mathbf{1}^T x \le 1\}$. Đơn hình này có số chiều bằng $n$.
 - **Đơn hình xác suất** (Probability simplex): Được xác định bởi các vector cơ sở chính tắc $\{e_1, \ldots, e_n\}$, biểu diễn dưới dạng tập hợp:
 
 $$
-\Delta^n = \left\{x \in \mathbb{R}^n : x \succeq 0,\ \mathbf{1}^T x = \sum_{i=1}^n x_i = 1\right\}.
+\Delta^n = \left\{x \in \mathbb{R}^n \;\middle|\; x \succeq 0,\ \mathbf{1}^T x = \sum_{i=1}^n x_i = 1\right\}.
 $$
 
 Đơn hình này có số chiều affine bằng $n - 1$, và mỗi điểm $x \in \Delta^n$ tương ứng với một phân phối xác suất rời rạc trên $n$ biến cố, với $x_i$ là xác suất của biến cố thứ $i$.
@@ -77,7 +87,11 @@ với ma trận $B = \begin{bmatrix} v_1 - v_0 & \cdots & v_k - v_0 \end{bmatrix
 Nhân cả hai vế của $x = v_0 + By$ với $A$ từ bên trái, ta phân rã thành hai hệ phương trình: Cụ thể là $A_1 x = A_1 v_0 + y$ và $A_2 x = A_2 v_0$. Từ phương trình thứ nhất ta rút ra $y = A_1 (x - v_0)$. Thay biểu thức này vào các điều kiện của $y$, ta nhận được hệ điều kiện cần và đủ để $x$ thuộc đơn hình như sau:
 
 $$
-A_2 x = A_2 v_0, \qquad A_1 x \succeq A_1 v_0, \qquad \mathbf{1}^T A_1 x \le 1 + \mathbf{1}^T A_1 v_0 .
+\begin{aligned}
+A_2 x &= A_2 v_0, \\
+A_1 x &\succeq A_1 v_0, \\
+\mathbf{1}^T A_1 x &\le 1 + \mathbf{1}^T A_1 v_0 .
+\end{aligned}
 $$
 
 Hệ trên hoàn toàn bao gồm các đẳng thức và bất đẳng thức tuyến tính theo biến $x$. Ràng buộc $A_2 x = A_2 v_0$ định vị điểm $x$ nằm trọn vẹn trong không gian con affine $k$-chiều sinh bởi đơn hình, trong khi các bất đẳng thức bảo đảm các tọa độ trọng tâm (barycentric coordinates) đều không âm và có tổng không vượt quá 1.
@@ -85,7 +99,7 @@ Hệ trên hoàn toàn bao gồm các đẳng thức và bất đẳng thức tu
 ::: example Chuyển đổi biểu diễn tam giác trong mặt phẳng và không gian
 Xét tam giác trong $\mathbb{R}^2$ với ba đỉnh $v_0 = (1, 1)^T$, $v_1 = (3, 1)^T$ và $v_2 = (1, 4)^T$. Ma trận vector hiệu là $B = \begin{bmatrix} 2 & 0 \\ 0 & 3 \end{bmatrix}$. Vì $B$ khả nghịch nên ta chọn ngay $A = A_1 = B^{-1} = \begin{bmatrix} 1/2 & 0 \\ 0 & 1/3 \end{bmatrix}$, và không xuất hiện thành phần $A_2$.
 
-Điều kiện $y = B^{-1}(x - v_0) \succeq 0$ dẫn tới $x_1 \ge 1$ và $x_2 \ge 1$. Điều kiện $\mathbf{1}^T y \le 1$ tương đương với $\tfrac{x_1 - 1}{2} + \tfrac{x_2 - 1}{3} \le 1 \iff 3x_1 + 2x_2 \le 11$. Ta thu được hệ ba bất đẳng thức mô tả trọn vẹn tam giác.
+Điều kiện $y = B^{-1}(x - v_0) \succeq 0$ dẫn tới $x_1 \ge 1$ và $x_2 \ge 1$. Điều kiện $\mathbf{1}^T y \le 1$ tương đương với $\tfrac{x_1 - 1}{2} + \tfrac{x_2 - 1}{3} \le 1$, tức $3x_1 + 2x_2 \le 11$. Ta thu được hệ ba bất đẳng thức mô tả trọn vẹn tam giác.
 
 Xét tiếp tam giác trong $\mathbb{R}^3$ có các đỉnh $v_0 = (0, 0, 1)^T$, $v_1 = (1, 0, 1)^T$ và $v_2 = (0, 1, 1)^T$. Ma trận $B = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}$ có hạng bằng 2. Chọn ma trận biến đổi $A = I_3$, trong đó $A_1$ gồm hai hàng đầu và $A_2 = \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}$. Khi đó hệ thu được gồm: Phương trình mặt phẳng $x_3 = 1$, cùng các bất đẳng thức $x_1 \ge 0$, $x_2 \ge 0$ và $x_1 + x_2 \le 1$.
 :::
@@ -95,7 +109,7 @@ Xét tiếp tam giác trong $\mathbb{R}^3$ có các đỉnh $v_0 = (0, 0, 1)^T$,
 Bao lồi của một tập hợp hữu hạn điểm $\operatorname{conv}\{v_1, \ldots, v_k\}$ luôn là một đa diện bị chặn (polytope). Ta có một kết quả mở rộng quan trọng: Tập hợp
 
 $$
-\left\{\sum_{i=1}^k \theta_i v_i : \sum_{i=1}^m \theta_i = 1,\ \theta_i \ge 0,\ i = 1, \ldots, k\right\}, \qquad m \le k,
+\left\{\sum_{i=1}^k \theta_i v_i \;\middle|\; \sum_{i=1}^m \theta_i = 1,\ \theta_i \ge 0,\ i = 1, \ldots, k\right\}, \qquad m \le k,
 $$
 
 chính là tổng Minkowski của bao lồi của $v_1, \ldots, v_m$ và bao nón (conical hull) của $v_{m+1}, \ldots, v_k$. Tập hợp này luôn là một đa diện. Ngược lại, ta có định lý nền tảng: **Mọi đa diện đều viết được dưới dạng bao lồi của hữu hạn điểm cộng bao nón của hữu hạn hướng cực biên**. Đây chính là nội dung của **Định lý Minkowski–Weyl**.
@@ -107,7 +121,7 @@ Do đó, mỗi đa diện đều sở hữu hai lăng kính toán học:
 Việc chọn cách mô tả có hệ quả tính toán mang tính sống còn trong thực tế. Hãy quan sát quả cầu chuẩn $\ell_\infty$ trong $\mathbb{R}^n$:
 
 $$
-\{x \in \mathbb{R}^n : |x_i| \le 1,\ i = 1, \ldots, n\}.
+\{x \in \mathbb{R}^n \mid |x_i| \le 1,\ i = 1, \ldots, n\}.
 $$
 
 - Theo H-representation: Chỉ cần đúng $2n$ bất đẳng thức tuyến tính dạng $\pm e_i^T x \le 1$.
@@ -125,7 +139,7 @@ Sự tương phản này mang lại một bài học trực giác sâu sắc tro
 
 <details><summary>Xem lời giải thích</summary>
 
-Hình tròn đóng là giao của **vô hạn** các nửa mặt phẳng đóng, chẳng hạn họ các nửa mặt phẳng $\{x \in \mathbb{R}^2 : u^T x \le 1\}$ với mọi vector đơn vị $\|u\|_2 = 1$. Tuy nhiên, nó không phải là một đa diện, bởi vì định nghĩa của đa diện bắt buộc số lượng nửa không gian tham gia phép giao phải là **hữu hạn**. Biên của một đa diện luôn gồm các đoạn thẳng hoặc diện phẳng, trong khi biên của hình tròn có độ cong dương tại mọi điểm.
+Hình tròn đóng là giao của **vô hạn** các nửa mặt phẳng đóng, chẳng hạn họ các nửa mặt phẳng $\{x \in \mathbb{R}^2 \mid u^T x \le 1\}$ với mọi vector đơn vị $\|u\|_2 = 1$. Tuy nhiên, nó không phải là một đa diện, bởi vì định nghĩa của đa diện bắt buộc số lượng nửa không gian tham gia phép giao phải là **hữu hạn**. Biên của một đa diện luôn gồm các đoạn thẳng hoặc diện phẳng, trong khi biên của hình tròn có độ cong dương tại mọi điểm.
 
 </details>
 
@@ -133,7 +147,7 @@ Hình tròn đóng là giao của **vô hạn** các nửa mặt phẳng đóng,
 
 <details><summary>Xem lời giải thích</summary>
 
-Hoàn toàn có thể. Một nửa không gian đóng, một dải vô hạn $\{x \in \mathbb{R}^2 : 0 \le x_1 \le 1\}$ hay một đường thẳng đều là các đa diện nhưng không có đỉnh nào. Đặc điểm chung của chúng là đều chứa trọn vẹn ít nhất một đường thẳng vô hạn đi qua không gian. Người ta chứng minh được rằng: Một đa diện không rỗng có ít nhất một đỉnh khi và chỉ khi nó không chứa bất kỳ đường thẳng vô hạn nào. Kết quả này là tiền đề trọng yếu cho phương pháp Đơn hình (Simplex algorithm) trong quy hoạch tuyến tính.
+Hoàn toàn có thể. Một nửa không gian đóng, một dải vô hạn $\{x \in \mathbb{R}^2 \mid 0 \le x_1 \le 1\}$ hay một đường thẳng đều là các đa diện nhưng không có đỉnh nào. Đặc điểm chung của chúng là đều chứa trọn vẹn ít nhất một đường thẳng vô hạn đi qua không gian. Người ta chứng minh được rằng: Một đa diện không rỗng có ít nhất một đỉnh khi và chỉ khi nó không chứa bất kỳ đường thẳng vô hạn nào. Kết quả này là tiền đề trọng yếu cho phương pháp Đơn hình (Simplex algorithm) trong quy hoạch tuyến tính.
 
 </details>
 
@@ -164,7 +178,7 @@ Trọng tâm của đơn hình xác suất hội tụ ba tính chất hình họ
 Tìm toàn bộ các đỉnh của đa diện sau trong $\mathbb{R}^2$:
 
 $$
-\mathcal{P} = \{x \in \mathbb{R}^2 : x_1 \ge 0,\ x_2 \ge 0,\ x_1 + 2x_2 \le 6,\ 2x_1 + x_2 \le 6\}
+\mathcal{P} = \{x \in \mathbb{R}^2 \mid x_1 \ge 0,\ x_2 \ge 0,\ x_1 + 2x_2 \le 6,\ 2x_1 + x_2 \le 6\}
 $$
 
 và chỉ rõ các ràng buộc chặt tại từng đỉnh.
@@ -177,11 +191,11 @@ Ta giải phương trình giao điểm của từng cặp ràng buộc biên đ�
 - Giao của $x_1 = 0$ và $x_1 + 2x_2 = 6$ cho đỉnh $(0, 3)$.
 - Giao của hai ràng buộc $x_1 + 2x_2 = 6$ và $2x_1 + x_2 = 6$ cho nghiệm $(2, 2)$, điểm này thỏa mãn cả hai ràng buộc không âm nên là một đỉnh khả thi.
 
-Các giao điểm khác như $(6, 0)$ hay $(0, 6)$ vi phạm các ràng buộc còn lại nên bị loại. Đa diện có đúng bốn đỉnh gồm: $(0, 0)$, $(3, 0)$, $(2, 2)$, $(0, 3)$, mỗi đỉnh đều được xác định bởi đúng hai ràng buộc chặt độc lập.
+Các giao điểm khác như $(6, 0)$ hay $(0, 6)$ vi phạm các ràng buộc còn lại nên bị loại. Đa diện có đúng bốn đỉnh gồm: Tọa độ $(0, 0)$, $(3, 0)$, $(2, 2)$ và $(0, 3)$, mỗi đỉnh đều được xác định bởi đúng hai ràng buộc chặt độc lập.
 :::
 
 ::: exercise 2. Đơn hình xác suất dưới dạng chuẩn ma trận
-Hãy biểu diễn đơn hình xác suất trong không gian $\mathbb{R}^3$ dưới dạng chuẩn $\{x \in \mathbb{R}^3 : Ax \preceq b,\ Cx = d\}$, chỉ rõ cấu trúc của $A, b, C, d$. Số chiều affine của tập này bằng bao nhiêu?
+Hãy biểu diễn đơn hình xác suất trong không gian $\mathbb{R}^3$ dưới dạng chuẩn $\{x \in \mathbb{R}^3 \mid Ax \preceq b,\ Cx = d\}$, chỉ rõ cấu trúc của $A, b, C, d$. Số chiều affine của tập này bằng bao nhiêu?
 :::
 
 ::: solution
@@ -196,7 +210,7 @@ Chiều affine của đơn hình xác suất bằng $3 - 1 = 2$, vì tập hợp
 Cho hai vector $a_1, a_2 \in \mathbb{R}^n$ và tập hợp:
 
 $$
-S = \{y_1 a_1 + y_2 a_2 : -1 \le y_1 \le 1,\ -1 \le y_2 \le 1\}.
+S = \{y_1 a_1 + y_2 a_2 \mid -1 \le y_1 \le 1,\ -1 \le y_2 \le 1\}.
 $$
 
 Tập hợp $S$ có phải là một đa diện hay không? Hãy mô tả cấu trúc của nó khi $n = 2$ và hai vector $a_1, a_2$ độc lập tuyến tính.
@@ -210,7 +224,7 @@ Khi $n = 2$ và $a_1, a_2$ độc lập tuyến tính, đặt ma trận khả ng
 
 ## Tóm tắt
 
-Đa diện là tập nghiệm của một hệ hữu hạn các bất đẳng thức và đẳng thức tuyến tính, biểu diễn ma trận là $\{x : Ax \preceq b,\ Cx = d\}$. Mọi đa diện đều lồi, có thể bị chặn hoặc không bị chặn. Đơn hình là bao lồi của một tập điểm độc lập affine, bao gồm các cấu trúc hình học cơ bản như đoạn thẳng, tam giác và tứ diện. Đơn hình xác suất mô tả không gian của các phân phối rời rạc và là nền tảng của các hàm kích hoạt softmax và trọng số attention trong trí tuệ nhân tạo.
+Đa diện là tập nghiệm của một hệ hữu hạn các bất đẳng thức và đẳng thức tuyến tính, biểu diễn ma trận là $\{x \mid Ax \preceq b,\ Cx = d\}$. Mọi đa diện đều lồi, có thể bị chặn hoặc không bị chặn. Đơn hình là bao lồi của một tập điểm độc lập affine, bao gồm các cấu trúc hình học cơ bản như đoạn thẳng, tam giác và tứ diện. Đơn hình xác suất mô tả không gian của các phân phối rời rạc và là nền tảng của các hàm kích hoạt softmax và trọng số attention trong trí tuệ nhân tạo.
 
 Định lý Minkowski–Weyl thiết lập sự tương đương giữa hai cách mô tả đa diện: Biểu diễn bằng nửa không gian (H-rep) và biểu diễn bằng đỉnh cực biên (V-rep). Chuyển đổi giữa hai biểu diễn này có thể dẫn đến sự bùng nổ kích thước theo hàm mũ, đòi hỏi sự lựa chọn thận trọng trong thiết kế mô hình toán học và thuật toán tối ưu.
 

@@ -24,9 +24,9 @@ Mỗi điều kiện có một vai trò hình học xác định trong phép so 
 | Nón trong $\mathbb{R}^2$ | Lồi | Đóng | Đặc | Nhọn |
 | --- | --- | --- | --- | --- | --- |
 | Góc phần tư $\mathbb{R}^2_+$ | Có | Có | Có | Có |
-| Tia $\{(u, 0) : u \ge 0\}$ | Có | Có | Không | Có |
-| Nửa mặt phẳng $\{(u, v) : v \ge 0\}$ | Có | Có | Có | Không |
-| $\{0\} \cup \{(u, v) : u > 0,\ v > 0\}$ | Có | Không | Có | Có |
+| Tia $\{(u, 0) \mid u \ge 0\}$ | Có | Có | Không | Có |
+| Nửa mặt phẳng $\{(u, v) \mid v \ge 0\}$ | Có | Có | Có | Không |
+| $\{0\} \cup \{(u, v) \mid u > 0,\ v > 0\}$ | Có | Không | Có | Có |
 | Hợp hai trục tọa độ | Không | Có | Không | Không |
 
 Để không bao giờ nhầm lẫn ở bước này, ta chú ý quan sát: Tia trong mặt phẳng không chứa bất kỳ hình tròn mở nào nên thiếu tính đặc, dù nó vẫn có nội tương đối. Nửa mặt phẳng thiếu tính nhọn vì chứa trọn vẹn cả trục hoành là một đường thẳng đi qua gốc tọa độ. Tập hợp thứ tư không đóng vì thiếu hai nửa trục dương là các điểm giới hạn của dãy điểm trong tập.
@@ -49,7 +49,7 @@ Ba ví dụ kinh điển về bất đẳng thức tổng quát:
 - **Đa thức không âm**: Xét tập hợp các vector hệ số của những đa thức không âm trên đoạn $[0, 1]$:
 
   $$
-  K = \{c \in \mathbb{R}^n : c_1 + c_2 t + \cdots + c_n t^{n-1} \ge 0 \text{ với mọi } t \in [0, 1]\}.
+  K = \left\{c \in \mathbb{R}^n \;\middle|\; c_1 + c_2 t + \cdots + c_n t^{n-1} \ge 0, \; \forall t \in [0, 1]\right\}.
   $$
 
   Đây là một nón chính quy, và quan hệ $c \preceq_K d$ khẳng định đa thức ứng với $c$ không vượt quá giá trị của đa thức ứng với $d$ tại mọi điểm trên $[0, 1]$. Nón $K$ chứa cả những vector có thành phần âm: Chẳng hạn $c = (1, -1)$ sinh ra đa thức $1 - t \ge 0$ với mọi $t \in [0, 1]$.
@@ -102,15 +102,15 @@ Trong mô phỏng tương tác trên, mỗi điểm đại diện cho một phư
 
 Khi ta thay đổi độ mở của nón trong mô phỏng: Nếu nón hẹp lại, số cặp điểm so sánh được sẽ giảm đi, dẫn đến số lượng phần tử tối thiểu tăng lên. Ngược lại, khi nón mở rộng ra, nhiều cặp điểm trở nên so sánh được, số phần tử tối thiểu giảm dần, và có thể dẫn tới sự xuất hiện của một phần tử nhỏ nhất duy nhất.
 
-Xét một mô hình hình học trực quan về thứ tự ma trận thông qua các tập ellipsoid: Mỗi ma trận đối xứng xác định dương $A \succ 0$ tương ứng với một hình ellipsoid có tâm tại gốc tọa độ $\mathcal{E}_A = \{x \in \mathbb{R}^n : x^T A^{-1} x \le 1\}$. Người ta chứng minh được rằng $A \preceq B$ khi và chỉ khi $\mathcal{E}_A \subseteq \mathcal{E}_B$. Giả sử ta xét tập $S$ gồm các ma trận sinh ra những ellipsoid bao quanh một tập điểm dữ liệu cho trước trong bài toán bọc dữ liệu. Tập hợp này không tồn tại phần tử nhỏ nhất, bởi vì hai hình ellipsoid cùng bao bọc tập điểm có thể mở rộng theo các hướng vuông góc nhau mà không hình nào chứa trọn hình nào. Một ellipsoid được gọi là tối thiểu nếu không tồn tại ellipsoid nào khác trong họ vừa bao bọc tập điểm lại vừa nằm lọt thỏm bên trong nó.
+Xét một mô hình hình học trực quan về thứ tự ma trận thông qua các tập ellipsoid: Mỗi ma trận đối xứng xác định dương $A \succ 0$ tương ứng với một hình ellipsoid có tâm tại gốc tọa độ $\mathcal{E}_A = \{x \in \mathbb{R}^n \mid x^T A^{-1} x \le 1\}$. Người ta chứng minh được rằng $A \preceq B$ khi và chỉ khi $\mathcal{E}_A \subseteq \mathcal{E}_B$. Giả sử ta xét tập $S$ gồm các ma trận sinh ra những ellipsoid bao quanh một tập điểm dữ liệu cho trước trong bài toán bọc dữ liệu. Tập hợp này không tồn tại phần tử nhỏ nhất, bởi vì hai hình ellipsoid cùng bao bọc tập điểm có thể mở rộng theo các hướng vuông góc nhau mà không hình nào chứa trọn hình nào. Một ellipsoid được gọi là tối thiểu nếu không tồn tại ellipsoid nào khác trong họ vừa bao bọc tập điểm lại vừa nằm lọt thỏm bên trong nó.
 
 ## 6. Những câu hỏi để đào sâu
 
-**Câu 1.** Trong $\mathbb{R}^2$ với thứ tự theo từng thành phần, tập $S_1 = \{(u, v) : u \ge 1,\ v \ge 2\}$ có phần tử nhỏ nhất không? Tập $S_2 = \{(u, v) : u + v \ge 4,\ u \ge 0,\ v \ge 0\}$ thì sao?
+**Câu 1.** Trong $\mathbb{R}^2$ với thứ tự theo từng thành phần, tập $S_1 = \{(u, v) \mid u \ge 1,\ v \ge 2\}$ có phần tử nhỏ nhất không? Tập $S_2 = \{(u, v) \mid u + v \ge 4,\ u \ge 0,\ v \ge 0\}$ thì sao?
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập $S_1$ có phần tử nhỏ nhất là $(1, 2)$, bởi vì mọi điểm $(u, v) \in S_1$ đều thỏa mãn $u \ge 1$ và $v \ge 2$, tức là nằm trọn trong $(1, 2) + \mathbb{R}^2_+$. Điểm này cũng là phần tử tối thiểu duy nhất của tập. Ngược lại, tập $S_2$ không có phần tử nhỏ nhất, vì hai điểm $(4, 0)$ và $(0, 4)$ đều thuộc $S_2$ nhưng không tồn tại điểm nào trong $S_2$ nhỏ hơn hoặc bằng cả hai (điểm như vậy buộc phải có $u \le 0$ và $v \le 0$). Mọi điểm trên đoạn thẳng $\{u + v = 4,\ u \ge 0,\ v \ge 0\}$ đều là phần tử tối thiểu. Chẳng hạn điểm $(2, 2)$ là tối thiểu vì bất kỳ điểm $(u, v) \in S_2$ thỏa mãn $(u, v) \preceq (2, 2)$ đều dẫn đến $u + v \le 4$, kết hợp với điều kiện $u + v \ge 4$ suy ra $u = 2$ và $v = 2$.
+Tập $S_1$ có phần tử nhỏ nhất là $(1, 2)$, bởi vì mọi điểm $(u, v) \in S_1$ đều thỏa mãn $u \ge 1$ và $v \ge 2$, tức là nằm trọn trong $(1, 2) + \mathbb{R}^2_+$. Điểm này cũng là phần tử tối thiểu duy nhất của tập. Ngược lại, tập $S_2$ không có phần tử nhỏ nhất, vì hai điểm $(4, 0)$ và $(0, 4)$ đều thuộc $S_2$ nhưng không tồn tại điểm nào trong $S_2$ nhỏ hơn hoặc bằng cả hai (điểm như vậy buộc phải có $u \le 0$ và $v \le 0$). Mọi điểm trên đoạn thẳng $\{(u, v) \mid u + v = 4,\ u \ge 0,\ v \ge 0\}$ đều là phần tử tối thiểu. Chẳng hạn điểm $(2, 2)$ là tối thiểu vì bất kỳ điểm $(u, v) \in S_2$ thỏa mãn $(u, v) \preceq (2, 2)$ đều dẫn đến $u + v \le 4$, kết hợp với điều kiện $u + v \ge 4$ suy ra $u = 2$ và $v = 2$.
 
 </details>
 
@@ -122,7 +122,7 @@ Khái niệm phần tử tối thiểu hoàn toàn không phụ thuộc vào kh�
 
 </details>
 
-**Câu 3.** Vì sao điều kiện "nhọn" lại mang tính quyết định đối với tính phản đối xứng? Hãy tìm hai vector phân biệt $x \ne y$ thỏa mãn cả $x \preceq_K y$ lẫn $y \preceq_K x$ khi $K$ là nửa mặt phẳng $\{(u, v) : v \ge 0\}$.
+**Câu 3.** Vì sao điều kiện "nhọn" lại mang tính quyết định đối với tính phản đối xứng? Hãy tìm hai vector phân biệt $x \ne y$ thỏa mãn cả $x \preceq_K y$ lẫn $y \preceq_K x$ khi $K$ là nửa mặt phẳng $\{(u, v) \mid v \ge 0\}$.
 
 <details><summary>Xem lời giải thích</summary>
 
@@ -130,7 +130,7 @@ Chọn $x = (0, 0)$ và $y = (1, 0)$. Ta nhận thấy hiệu $y - x = (1, 0) \i
 
 </details>
 
-**Câu 4.** Với thứ tự ma trận, tập hợp $\{X \in \mathbb{S}^2 : X \succeq I\}$ có phần tử nhỏ nhất không? Tập hợp $\{X \in \mathbb{S}^2 : X_{11} \ge 1,\ X_{22} \ge 1\}$ thì sao?
+**Câu 4.** Với thứ tự ma trận, tập hợp $\{X \in \mathbb{S}^2 \mid X \succeq I\}$ có phần tử nhỏ nhất không? Tập hợp $\{X \in \mathbb{S}^2 \mid X_{11} \ge 1,\ X_{22} \ge 1\}$ thì sao?
 
 <details><summary>Xem lời giải thích</summary>
 
@@ -141,7 +141,7 @@ Tập thứ nhất có phần tử nhỏ nhất là ma trận đơn vị $I$, v�
 ## 7. Bài tập tự luyện
 
 ::: exercise 1. Kiểm tra nón chính quy
-Tập $K = \{(x_1, x_2) : x_1 \ge |x_2|\}$ có phải là nón chính quy không? Với thứ tự $\preceq_K$, hãy so sánh hai vector $x = (1, 0)$ và $y = (3, 1)$.
+Tập $K = \{(x_1, x_2) \mid x_1 \ge |x_2|\}$ có phải là nón chính quy không? Với thứ tự $\preceq_K$, hãy so sánh hai vector $x = (1, 0)$ và $y = (3, 1)$.
 :::
 
 ::: solution
