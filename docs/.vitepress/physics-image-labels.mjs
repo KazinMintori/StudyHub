@@ -1,3 +1,4 @@
+import {capacitanceImageAnnotations} from './physics24-image-annotations.mjs'
 // One English label -> one Vietnamese explanation in the caption of each image.
 // The figure's scientific description remains separate from this label glossary.
 import {physics21ImageAnnotations} from './physics21-image-annotations.mjs'
@@ -5,7 +6,6 @@ import {physics22ImageAnnotations} from './physics22-image-annotations.mjs'
 import {physics23ImageAnnotations,physics24ImageAnnotations} from './physics23-24-image-annotations.mjs'
 const originalLabels={
  'young-21/hinh-21-1':[['Nhựa','Plastic'],['Lông thú','Fur'],['Thủy tinh','Glass'],['Lụa','Silk']],
- 'young-21/hinh-21-2':[['Mực bột tích điện dương','Toner (positively charged)'],['Giấy chạy sang trái','Paper (feeding to left)'],['Trống tạo ảnh quay','Rotating imaging drum'],['Trục ép nhiệt','Fuser rollers'],['Đèn xóa điện tích','Lamp']],
  'young-21/hinh-21-3':[['Electron mang điện âm','Electron: Negative charge'],['Neutron không mang điện','Neutron: No charge'],['Proton mang điện dương','Proton: Positive charge'],['Hạt nhân','Nucleus'],['Nguyên tử','Atom'],['Khối lượng','Mass']],
  'young-21/hinh-21-4':[['Proton','Protons'],['Neutron','Neutrons'],['Electron','Electrons'],['Nguyên tử liti trung hòa','Neutral lithium atom'],['Ion liti dương','Positive lithium ion'],['Ion liti âm','Negative lithium ion'],['Tổng điện tích bằng không','Zero net charge'],['Tổng điện tích dương','Positive net charge'],['Tổng điện tích âm','Negative net charge']],
  'young-21/hinh-21-6':[['Sợi nylon cách điện','Insulating nylon threads'],['Quả cầu kim loại','Metal ball'],['Dây đồng','Copper wire'],['Thanh nhựa nhiễm điện','Charged plastic rod'],['Thanh thủy tinh nhiễm điện','Charged glass rod']],
@@ -91,6 +91,7 @@ const originalLabels={
  'young-24/hinh-24-17':[['Không có điện trường','In the absence of an electric field'],['Phân tử phân cực','Polar molecules'],['Định hướng ngẫu nhiên','Orient randomly'],['Có xu hướng sắp theo trường','Tend to align with it']],
  'young-24/hinh-24-18':[['Phân tử không phân cực','Nonpolar molecules'],['Lưỡng cực điện','Electric dipoles'],['Điện tích dương và âm','Positive and negative charges']],
  'young-24/hinh-24-20':[['Chưa có điện môi','No dielectric'],['Điện môi vừa đưa vào','Dielectric just inserted'],['Điện tích cảm ứng tạo trường','Induced charges create electric field'],['Trường tổng','Resultant field'],['Điện trường ban đầu','Original electric field'],['Trường yếu hơn trong điện môi do điện tích liên kết','Weaker field in dielectric due to induced (bound) charges']],
- 'young-24/hinh-24-22':[['Mặt Gauss','Gaussian surface'],['Điện môi','Dielectric'],['Vật dẫn','Conductor'],['Hình nhìn cạnh','Side view'],['Hình phối cảnh','Perspective view']]
+ 'young-24/hinh-24-22':[['Mặt Gauss','Gaussian surface'],['Điện môi','Dielectric'],['Vật dẫn','Conductor'],['Hình nhìn cạnh','Side view'],['Hình phối cảnh','Perspective view']],
+ ...capacitanceImageAnnotations
 }
 export const physicsImageLabels={...originalLabels,...physics21ImageAnnotations,...physics22ImageAnnotations,...physics23ImageAnnotations,...physics24ImageAnnotations}

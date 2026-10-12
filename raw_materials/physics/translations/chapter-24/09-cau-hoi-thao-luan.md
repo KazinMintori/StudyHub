@@ -61,14 +61,16 @@ Với cùng một pin, muốn tụ phẳng giữ năng lượng lớn nhất th�
 **Hướng đi:**
 
 - Ở cùng V, U = CV²/2 tăng theo C.
-- C = $\varepsilon_0$A/d tăng khi khe nhỏ, trong miền chưa đánh thủng hoặc chạm bản.
+- C = $\varepsilon_0A/d$ tăng khi khe nhỏ, trong miền chưa đánh thủng hoặc chạm bản.
 
 Nên để bản gần nhau trong giới hạn làm việc của tụ. Nếu giảm d tới mức cách điện không còn giữ được, mô hình tụ tích trữ năng lượng không còn áp dụng. Không dùng kết luận ở cùng Q để so trường hợp pin giữ V.
 :::
 
 ::: exercise Q24.5
-Kéo hai bản tụ trong Hình 24.2 ra xa đến khi d lớn hơn nhiều kích thước bản. (a) Trường trong khoảng giữa còn đều không? (b) Ở cùng Q, điện áp thực lớn hay nhỏ hơn Qd/($\varepsilon_0$A)? (c) Điện dung thực lớn, nhỏ hay bằng $\varepsilon_0$A/d? Giải thích.
+Kéo hai bản tụ trong Hình 24.2 ra xa đến khi $d$ lớn hơn nhiều kích thước bản. (a) Trường trong khoảng giữa còn đều không? (b) Với cùng độ lớn điện tích $Q$, điện áp thực lớn hay nhỏ hơn giá trị $Qd/(\varepsilon_0A)$? (c) Điện dung thực lớn, nhỏ hay bằng $\varepsilon_0A/d$? Giải thích.
 :::
+
+![Hình 24.2: Tụ phẳng với khoảng cách giữa bản lớn so với kích thước bản, có hiệu ứng loe ở mép](img/young-24/hinh-24-2.png)
 
 <!-- detailed-solution:Q24.5 -->
 ::: solution Chi tiết
@@ -77,9 +79,9 @@ Kéo hai bản tụ trong Hình 24.2 ra xa đến khi d lớn hơn nhiều kích
 **Hướng đi:**
 
 - Xét trường loe và sự giảm trường theo khoảng cách của hai vật dẫn hữu hạn.
-- So điện áp ở cùng Q trước, rồi dùng C = Q/V để suy chiều so điện dung.
+- So điện áp ở cùng $Q$ trước, rồi dùng $C=Q/V$ để suy chiều so điện dung.
 
-(a) Không. Đường sức loe ra ngoài mạnh và trường thay đổi theo vị trí. (b) Điện áp thực nhỏ hơn dự đoán Qd/($\varepsilon_0$A). Công thức ấy giả sử trường Q/($\varepsilon_0$A) không giảm suốt cả khe, trong khi trường của bản hữu hạn giảm ở xa. Khi hai bản rất xa, điện áp hướng tới giá trị hữu hạn do điện thế riêng của hai vật, thay vì tăng tuyến tính không giới hạn theo d. (c) Vì Q giữ nguyên và V thực nhỏ hơn, điện dung thực **lớn hơn** $\varepsilon_0$A/d. Đây không phải trường hợp tiếp tục dùng công thức tụ phẳng rồi bỏ qua điều kiện hình học.
+(a) Không. Đường sức loe ra ngoài mạnh và trường thay đổi theo vị trí. (b) Điện áp thực nhỏ hơn dự đoán $Qd/(\varepsilon_0A)$. Công thức ấy giả sử trường $Q/(\varepsilon_0A)$ không giảm suốt cả khe, trong khi trường của bản hữu hạn giảm ở xa. Khi hai bản rất xa, điện áp hướng tới giá trị hữu hạn do điện thế riêng của hai vật, thay vì tăng tuyến tính không giới hạn theo $d$. (c) Vì $Q$ giữ nguyên và $V$ thực nhỏ hơn, điện dung thực **lớn hơn** $\varepsilon_0A/d. Đây không phải trường hợp tiếp tục dùng công thức tụ phẳng rồi bỏ qua điều kiện hình học.
 :::
 
 ::: exercise Q24.6
@@ -92,7 +94,7 @@ Tụ phẳng được nạp và giữ nối pin. Tăng khe gấp đôi, trườn
 
 **Hướng đi:**
 
-- E = V/d và C = $\varepsilon_0$A/d đều giảm khi d tăng.
+- E = V/d và C = $\varepsilon_0A/d$ đều giảm khi d tăng.
 - Dùng Q = CV, U = CV²/2 vì pin giữ V.
 
 E,C,Q,U đều còn **một nửa** giá trị đầu. Điện tích chạy trở lại pin khi điện dung giảm. Tổng điện tích của từng bản không được coi cố định trong tình huống còn nối pin.
@@ -108,7 +110,7 @@ Tụ phẳng được nạp rồi ngắt pin. Tăng khe gấp đôi, trường, 
 
 **Hướng đi:**
 
-- E = Q/($\varepsilon_0$A) không phụ thuộc d khi Q,A cố định.
+- E = $Q/(\varepsilon_0A)$ không phụ thuộc d khi Q,A cố định.
 - C giảm một nửa. Dùng V = Q/C và U = Q²/(2C) để suy các đại lượng còn lại.
 
 Trường không đổi, điện áp và năng lượng đều gấp đôi. Công kéo hai bản chống lực hút chuyển thành năng lượng trường tăng. Điều kiện cô lập làm kết quả khác Q24.6.
@@ -223,7 +225,7 @@ Các lỗ nhỏ chỉ chiếm phần diện tích nhỏ nên điện dung tổng
 - Trường không đều ở mép hút tấm điện môi vào khe.
 - Với tụ cô lập, lực sinh công lấy từ độ giảm năng lượng trường.
 
-Tấm bị hút vào. Nếu tụ cô lập và Q giữ nguyên, C tăng làm U = Q²/(2C) giảm. Độ giảm có thể thành công cơ hoặc động năng tấm. Nếu nguồn giữ V, năng lượng riêng của tụ lại tăng, nhưng nguồn cung cấp năng lượng và lực vẫn hút vào. Không suy chiều lực chỉ từ U = CV²/2 mà bỏ công của nguồn.
+Tấm bị hút vào. Nếu tụ cô lập và $Q$ giữ nguyên, C tăng làm U = Q²/(2C) giảm. Độ giảm có thể thành công cơ hoặc động năng tấm. Nếu nguồn giữ V, năng lượng riêng của tụ lại tăng, nhưng nguồn cung cấp năng lượng và lực vẫn hút vào. Không suy chiều lực chỉ từ U = CV²/2 mà bỏ công của nguồn.
 :::
 
 ::: exercise Q24.15
@@ -259,8 +261,10 @@ Khoảng cách hữu hiệu nhỏ làm điện dung lớn trong kích thước n
 :::
 
 ::: exercise Q24.17
-Điện thông qua mặt Gauss trong Hình 24.22 đổi theo K thế nào khi thêm điện môi vào khe trước đó là chân không?
+Điện thông qua mặt Gauss trong Hình 24.22 đổi theo $K$ thế nào khi thêm điện môi vào khe trước đó là chân không?
 :::
+
+![Hình 24.22: Mặt Gauss cắt qua một phần điện môi trong khe giữa hai bản dẫn](img/young-24/hinh-24-22.png)
 
 <!-- detailed-solution:Q24.17 -->
 ::: solution Chi tiết
@@ -268,10 +272,10 @@ Khoảng cách hữu hiệu nhỏ làm điện dung lớn trong kích thước n
 
 **Hướng đi:**
 
-- Điện thông của E bằng EA, trường trong điện môi còn E₀/K ở cùng Q.
+- Điện thông của $E$ bằng $EA$, trường trong điện môi còn $E_0/K$ ở cùng $Q$.
 - Điện thông của KE là đại lượng khác, được Gauss cải biên liên hệ riêng với điện tích tự do.
 
-Điện thông **của E giảm K lần**, từ E₀A xuống E₀A/K. Điện thông của KE giữ nguyên và bằng σA/$\varepsilon_0$. Nếu nguồn giữ điện áp và cho Q thay đổi, không dùng kết luận giữ điện tích của cấu hình này mà không xét lại.
+Điện thông **của $E$ giảm K lần**, từ $E_0A$ xuống $E_0A/K$. Điện thông của $KE$ giữ nguyên và bằng $\sigma A/\varepsilon_0$. Nếu nguồn giữ điện áp và cho $Q$ thay đổi, không dùng kết luận giữ điện tích của cấu hình này mà không xét lại.
 :::
 
 ::: exercise Q24.18

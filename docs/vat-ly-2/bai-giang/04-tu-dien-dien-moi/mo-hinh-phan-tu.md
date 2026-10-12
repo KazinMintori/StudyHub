@@ -4,6 +4,7 @@ lecture: 04-tu-dien-dien-moi
 topic: mo-hinh-phan-tu
 section: topic
 title: "Mô hình phân tử của điện tích cảm ứng"
+description: "Điện tích liên kết xuất hiện từ sự sắp xếp nào của các phân tử?"
 ---
 
 <!--@include: ../../../../raw_materials/physics/translations/chapter-24/05-mo-hinh-phan-tu.md-->

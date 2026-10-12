@@ -187,6 +187,17 @@
 }
 
 @media (max-width: 900px) { .course-slide { padding: 24px; } .course-slide h2 { font-size: 25px; } }
+/* Keep the reading column available inside cards on narrow phones. The small
+   outer extension keeps text aligned with the article while retaining borders. */
+@media (max-width: 480px) {
+  .Layout.physics-layout .vp-doc .custom-block,
+  .Layout.physics-layout .lecture-exercises-content details {
+    margin-inline: -6px;
+    padding-inline: 6px;
+  }
+  .Layout.physics-layout .course-slide { padding: 12px; }
+  .Layout.physics-layout .slide-formula { margin-inline: -8px; padding-inline: 8px; }
+}
 
 /* Cheatsheet Panel Styles */
 .lecture-cheatsheet {

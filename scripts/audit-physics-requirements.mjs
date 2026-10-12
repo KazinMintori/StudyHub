@@ -35,9 +35,19 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const expectedExercises=Math.max(0,...sourceNumbers)
  const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|$)`,'gm'))].map(m=>Number(m[1]))
  const missing=Array.from({length:expectedExercises},(_,i)=>i+1).filter(n=>!prompts.includes(n))
- const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)]
- const malformed=solutionBlocks.filter(m=>!m[2].includes('**Tóm tắt đề bài:**')||!m[2].includes('**Hướng đi:**')||!/^\s*- /m.test(m[2])).map(m=>m[1])
- const unsolved=prompts.filter(n=>!solutionBlocks.some(m=>m[1]===`${ch.chapter}.${n}`))
+ const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)].map(m=>({id:m[1],body:m[2]}))
+ // A valid collapsed solution does not require an invisible authoring marker.
+ // Also inspect actual details containers following each numbered prompt.
+ const promptBlocks=[...all.matchAll(new RegExp(`^::: exercise (${ch.chapter}\\.\\d+)\\b[^\\n]*\\n`,'gm'))]
+ for(let i=0;i<promptBlocks.length;i++){
+  const p=promptBlocks[i]
+  if(solutionBlocks.some(s=>s.id===p[1]))continue
+  const section=all.slice(p.index,promptBlocks[i+1]?.index??all.length)
+  const detail=section.match(/^::: (?:details|solution)[^\n]*\n([\s\S]*?)\n:::/m)
+  if(detail)solutionBlocks.push({id:p[1],body:detail[1]})
+ }
+ const malformed=solutionBlocks.filter(m=>!m.body.includes('**Tóm tắt đề bài:**')||!m.body.includes('**Hướng đi:**')||!/^\s*- /m.test(m.body)).map(m=>m.id)
+ const unsolved=prompts.filter(n=>!solutionBlocks.some(m=>m.id===`${ch.chapter}.${n}`))
  const outsideExercises=main.split('<div class="lecture-exercises-content"')[0]
  const misplaced=new RegExp(`^::: exercise (?:Q|VP)?${ch.chapter}\\.`,'m').test(outsideExercises)
  const prereqs=[...(lesson.prerequisites||[]),...(lesson.supportingConcepts||[])]

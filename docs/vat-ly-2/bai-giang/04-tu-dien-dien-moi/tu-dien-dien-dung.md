@@ -4,6 +4,7 @@ lecture: 04-tu-dien-dien-moi
 topic: tu-dien-dien-dung
 section: topic
 title: "Tụ điện và điện dung"
+description: "Hình học của hai vật dẫn quyết định điện dung như thế nào?"
 ---
 
 <!--@include: ../../../../raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md-->

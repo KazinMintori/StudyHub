@@ -288,7 +288,8 @@ Một xu Mỹ nặng $2.5\,\mathrm g$ gồm $97.5\%$ kẽm và $2.5\%$ đồng. 
 
 $$
 \begin{aligned}
-N_e&=30\frac{2.5}{65.38}N_A\approx6.9\times10^{23},\\
+N_e&=30\,\frac{2.5}{65.38}N_A\\
+&\approx6.9\times10^{23},\\
 Q_e&=-N_ee\approx-1.1\times10^5\,\mathrm C,\\
 F&=kQ_e^2/(0.02)^2\approx2.8\times10^{23}\,\mathrm N.
 \end{aligned}

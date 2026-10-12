@@ -73,7 +73,7 @@ async function inspect(label){
  results.push(label)
 }
 try{
- for(const width of [360,375,1440]){
+ for(const width of (process.env.QA_WIDTHS||'320,360,375,1440').split(',').map(Number)){
   await page.setViewport({width,height:900})
   for(const chapter of chapters){
    const lesson=physics2Course.lessons.find(l=>l.sourceChapter===chapter)
@@ -93,7 +93,13 @@ try{
    assert.equal(await page.$$eval('.lecture-exercises-content details',es=>es.some(e=>e.open)),false,'Solutions must initially be collapsed')
    await inspect(`${width}/chapter${chapter}/notes`)
    await page.click('.lecture-tabs a[href$="#bai-tap"]')
-   await page.waitForFunction(()=>getComputedStyle(document.querySelector('.lecture-exercises-content')).display!=='none')
+   await page.waitForFunction(()=>{
+    const notes=document.querySelector('.lecture-notes-content')
+    const exercises=document.querySelector('.lecture-exercises-content')
+    return document.querySelector('.Layout.lecture-exercises-layout')
+      &&getComputedStyle(notes).display==='none'
+      &&getComputedStyle(exercises).display!=='none'
+   })
    assert(await page.$eval('.lecture-notes-content',e=>getComputedStyle(e).display==='none'))
    const first=await page.$('.lecture-exercises-content details')
    assert(first)

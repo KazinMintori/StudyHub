@@ -2,7 +2,8 @@ import {readFile,readdir,access,writeFile} from 'node:fs/promises'
 import assert from 'node:assert/strict'
 import {physicsImageLabels} from '../docs/.vitepress/physics-image-labels.mjs'
 const source=JSON.parse(await readFile('qa/physics/image-labels-source.json','utf8'))
-const ignored={'young-21/hinh-21-22':'Adjacent body text clipped into the source crop, not an image label.',
+const ignored={'young-21/hinh-21-2':'Process steps described directly in caption without English callout list.',
+ 'young-21/hinh-21-22':'Adjacent body text clipped into the source crop, not an image label.',
  'young-21/hinh-21-23':'Mathematical component names, explained with the formula in Notes.',
  'young-21/hinh-21-31':'Mathematical distance annotation.',
  'young-21/hinh-p21-96':'Stray prose from the following problem.',
@@ -18,7 +19,7 @@ for(const [key,labels] of Object.entries(physicsImageLabels)){
  const seen=new Set()
  for(const [vi,en] of labels){
   assert(vi.length&&en.length,key)
-  assert(/^[A-ZÀ-ỸĐ]/u.test(vi.replace(/^\([a-z]\)\s*/,'')),`${key}: Caption starts uppercase`)
+  assert(/^[A-ZÀ-ỸĐ]/u.test(vi.replace(/^\((?:[a-z]|\d+)\)\s*/,'')),`${key}: Caption starts uppercase`)
   const normalized=en.toLowerCase().replace(/\s+/g,' ').trim()
   assert(!seen.has(normalized),`${key}: Duplicate label ${en}`)
   seen.add(normalized);pairs++

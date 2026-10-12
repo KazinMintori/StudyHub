@@ -122,8 +122,10 @@ Nguồn q = +1,80 nC cách mặt phẳng cách điện mỏng vô hạn 8,00 cm,
 - Cân bằng $kq/r^2=\sigma/(2\varepsilon_0)$.
 
 $$
-\sigma=2\varepsilon_0\frac{kq}{r^2}
-=+1.79\times10^{-7}\,\mathrm{C/m^2}.
+\begin{aligned}
+\sigma&=2\varepsilon_0\frac{kq}{r^2}\\
+&=+1.79\times10^{-7}\,\mathrm{C/m^2}.
+\end{aligned}
 $$
 :::
 

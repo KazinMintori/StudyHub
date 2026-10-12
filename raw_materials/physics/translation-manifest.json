@@ -2089,13 +2089,13 @@
           "page": 801
         }
       ],
-      "status": "in-progress",
+      "status": "content-complete",
       "fragments": [
         {
           "sourceUnit": "chapter-opening",
           "file": "raw_materials/physics/translations/chapter-24/00-mo-dau.md",
           "destination": "notes",
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.1",
@@ -2105,7 +2105,7 @@
             782,
             786
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.2",
@@ -2115,7 +2115,7 @@
             786,
             789
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.3",
@@ -2125,7 +2125,7 @@
             790,
             793
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.4",
@@ -2135,7 +2135,7 @@
             793,
             799
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.5",
@@ -2145,7 +2145,7 @@
             799,
             800
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
           "sourceUnit": "24.6",
@@ -2155,30 +2155,67 @@
             801,
             802
           ],
-          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+          "status": "authored-and-reviewed"
         },
         {
-          "sourceUnit": "guided-practice-and-bridge",
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-24/07-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "08-luyen-tap-huong-dan",
           "file": "raw_materials/physics/translations/chapter-24/08-luyen-tap-huong-dan.md",
           "destination": "bai-tap",
-          "status": "authored-and-checked-awaiting-full-exercise-tab-integration"
+          "status": "authored-and-reviewed"
         },
         {
-          "sourceUnit": "discussion-questions",
+          "sourceUnit": "09-cau-hoi-thao-luan",
           "file": "raw_materials/physics/translations/chapter-24/09-cau-hoi-thao-luan.md",
           "destination": "bai-tap",
-          "status": "authored-and-checked-awaiting-full-exercise-tab-integration"
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "10-bai-tap-01-24",
+          "file": "raw_materials/physics/translations/chapter-24/10-bai-tap-01-24.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tap-25-44",
+          "file": "raw_materials/physics/translations/chapter-24/11-bai-tap-25-44.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-tap-40-55",
+          "file": "raw_materials/physics/translations/chapter-24/12-bai-tap-40-55.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-56-68",
+          "file": "raw_materials/physics/translations/chapter-24/13-bai-tap-56-68.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "14-bai-nang-cao-mcat",
+          "file": "raw_materials/physics/translations/chapter-24/14-bai-nang-cao-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "15-dap-so",
+          "file": "raw_materials/physics/translations/chapter-24/15-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
         }
       ],
       "pendingSourceUnits": [
-        "chapter-summary",
-        "all-end-of-chapter-exercises-and-problems",
-        "appendix-odd-answers",
-        "slides-and-cheatsheet",
-        "supporting-wiki-details",
-        "final-semantic-and-render-review",
-        "exercise-tab-integration"
-      ]
+        "direct-browser-render-review"
+      ],
+      "completionReview": "raw_materials/physics/chapter-24-review.json"
     },
     {
       "chapter": 25,

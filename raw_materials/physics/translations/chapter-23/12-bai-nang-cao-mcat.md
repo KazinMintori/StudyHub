@@ -429,7 +429,8 @@ Va chạm hạt nhân thường lệch tâm hơn thẳng tâm. Hạt α ở Bài
 
 $$
 \begin{aligned}
-K_0&=A/r+L^2/(2mr^2),\\
+K_0&=A/r\\
+&+\frac{L^2}{2mr^2},\\
 r^2-r_0r-b^2&=0,\\
 r_{\min}&=\frac{r_0+\sqrt{r_0^2+4b^2}}2.
 \end{aligned}
@@ -501,8 +502,10 @@ Máy tandem điển hình có điện thế giữa cực đại 6,0 MV. Khoảng
 - Không dùng toàn chiều dài hai nửa máy cho chênh thế một nửa.
 
 $$
-E_{\mathrm{tb}}=\frac{6.0\times10^6}{12}
-=5.0\times10^5\,\mathrm{V/m}.
+\begin{aligned}
+E_{\mathrm{tb}}&=\frac{6.0\times10^6\,\mathrm V}{12\,\mathrm m}\\
+&=5.0\times10^5\,\mathrm{V/m}.
+\end{aligned}
 $$
 
 Chọn (c).

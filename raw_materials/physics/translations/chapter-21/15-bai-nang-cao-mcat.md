@@ -78,11 +78,32 @@ Do đó:
 $$
 \begin{aligned}
 F_{2x}&=\frac{2k\lambda^2}{a}J\\
-&=\frac{2kQ^2}{L^2}\left(\sqrt{1+(L/a)^2}-1\right).
+&=\frac{2kQ^2}{L^2}\frac{J}{a}.
 \end{aligned}
 $$
 
-Với a ≫ L, dùng $\sqrt{1+z}\approx1+z/2$ để có $F_{2x}\approx kQ^2/a^2$.
+Đặt $\eta=L/a\ll1$. Khai triển căn bậc hai đến số hạng bậc hai theo η:
+
+$$
+\begin{aligned}
+\sqrt{a^2+L^2}&=a\sqrt{1+\eta^2}\\
+&\approx a\left(1+\frac12\eta^2\right),\\
+J&=a\left(\sqrt{1+\eta^2}-1\right)\\
+&\approx\frac{a\eta^2}{2}\\
+&=\frac{L^2}{2a}.
+\end{aligned}
+$$
+
+Thay J vào biểu thức lực:
+
+$$
+\begin{aligned}
+F_{2x}&=\frac{2kQ^2J}{L^2a}\\
+&\approx\frac{kQ^2}{a^2}.
+\end{aligned}
+$$
+
+Ở khoảng cách lớn, mỗi thanh phân bố điện tích tạo trường gần như điện tích điểm Q.
 
 (e) Công ngoài khi đưa thanh chậm từ rất xa đến a bằng thế năng cuối. Lực đẩy hướng về phía khoảng cách tăng, còn lực ngoài hướng ngược lại, nên:
 
@@ -268,7 +289,8 @@ $$
 
 $$
 \begin{aligned}
-\ln(1+z)&=z-\frac12z^2+\frac13z^3-\cdots.
+\ln(1+z)&=z-\frac12z^2\\
+&\quad+\frac13z^3-\cdots.
 \end{aligned}
 $$
 

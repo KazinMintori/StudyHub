@@ -13,7 +13,11 @@ export const electrostaticsCheatsheet={
   summary:'Các định nghĩa, tính chất và công thức của chương Điện tích và điện trường.',
   sections:[
     {id:'charge',title:'Điện tích',items:[
-      {name:'Bảo toàn và lượng tử hóa',formula:'$$\n\\begin{aligned}\nQ_{\\mathrm{hệ\\ kín}}&=\\text{hằng số},\\\\\nQ&=ne,\\quad n\\in\\mathbb Z,\\\\\ne&=1.602176634\\times10^{-19}\\,\\mathrm C.\n\\end{aligned}\n$$',description:'Điện tích cùng dấu đẩy nhau, trái dấu hút nhau. Vật dẫn cho điện tích dễ di chuyển, vật cách điện thì không. Phân cực không bắt buộc tạo điện tích tổng khác không.'}
+      {name:'Bảo toàn và lượng tử hóa',formulaRows:[
+        {label:'Tổng điện tích trong hệ kín được bảo toàn',formula:'$$\nQ_{\\mathrm{tổng}}=Q_0\n$$'},
+        {label:'Điện tích của vật cô lập được lượng tử hóa',formula:'$$\nQ=ne,\\quad n\\in\\mathbb Z\n$$'},
+        {label:'Độ lớn điện tích cơ bản, chính xác theo định nghĩa',formula:'$$\n\\begin{aligned}\ne&=1.602176634\\\\\n&\\quad\\times10^{-19}\\,\\mathrm C.\n\\end{aligned}\n$$'}
+      ],description:'Điện tích cùng dấu đẩy nhau, trái dấu hút nhau. Vật dẫn cho điện tích dễ di chuyển, vật cách điện thì không. Phân cực không bắt buộc tạo điện tích tổng khác không.'}
     ]},
     {id:'force-field',title:'Lực điện và điện trường',items:[
       {name:'Hai điện tích điểm trong chân không',formula:'$$\n\\begin{aligned}\nF&=k\\frac{|q_1q_2|}{r^2},\\\\\nk&=\\frac1{4\\pi\\varepsilon_0}.\n\\end{aligned}\n$$',description:'r là khoảng cách dương giữa nguồn. Lực nằm trên đường nối hai nguồn. Hai lực của một cặp tuân theo định luật III Newton.'},

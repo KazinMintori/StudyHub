@@ -706,11 +706,15 @@ export const physics2Course = {
       ],
       "supportingConcepts": [
         "dien-dung",
+        "dien-moi",
+        "do-dien-tham",
+        "do-ben-dien-moi",
+        "mat-do-nang-luong-dien-truong",
         "vat-dan-cach-dien",
         "mat-dang-the",
         "cong-nang-luong"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 4,
       "sourceChapter": 24,
       "topicGroups": [
@@ -719,15 +723,21 @@ export const physics2Course = {
           "topics": [
             {
               "slug": "tu-dien-dien-dung",
-              "title": "Tụ điện và điện dung"
+              "title": "Tụ điện và điện dung",
+              "question": "Hình học của hai vật dẫn quyết định điện dung như thế nào?",
+              "source": "24.1"
             },
             {
               "slug": "mac-tu-dien",
-              "title": "Tụ mắc nối tiếp và song song"
+              "title": "Tụ mắc nối tiếp và song song",
+              "question": "Đại lượng nào được giữ chung trong mỗi cách mắc?",
+              "source": "24.2"
             },
             {
               "slug": "nang-luong-tu-dien",
-              "title": "Năng lượng của tụ và điện trường"
+              "title": "Năng lượng của tụ và điện trường",
+              "question": "Công nạp điện được tích trữ ở đâu?",
+              "source": "24.3"
             }
           ]
         },
@@ -736,19 +746,26 @@ export const physics2Course = {
           "topics": [
             {
               "slug": "dien-moi",
-              "title": "Điện môi"
+              "title": "Điện môi",
+              "question": "Vì sao thêm chất cách điện có thể làm điện dung tăng?",
+              "source": "24.4"
             },
             {
               "slug": "mo-hinh-phan-tu",
-              "title": "Mô hình phân tử của điện tích cảm ứng"
+              "title": "Mô hình phân tử của điện tích cảm ứng",
+              "question": "Điện tích liên kết xuất hiện từ sự sắp xếp nào của các phân tử?",
+              "source": "24.5"
             },
             {
               "slug": "gauss-trong-dien-moi",
-              "title": "Định luật Gauss trong điện môi"
+              "title": "Định luật Gauss trong điện môi",
+              "question": "Gauss đếm điện tích tự do và điện tích liên kết ra sao?",
+              "source": "24.6"
             }
           ]
         }
-      ]
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "05-dong-dien-dien-tro",
@@ -1205,7 +1222,7 @@ export const physics2Course = {
         "Công thêm một nguồn vào hệ chỉ tính các cặp liên quan nguồn mới.",
         "Mốc bằng không khi mọi nguồn ở xa vô hạn phù hợp hệ nguồn hữu hạn."
       ],
-      "formula": "$$\n\\begin{aligned}\nU_{123}&=\\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}+\\frac{kq_2q_3}{r_{23}},\\\\\nU&=k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nU_{123}&=\\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}\\\\\n&\\quad+\\frac{kq_2q_3}{r_{23}},\\\\\nU&=k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1250,6 +1267,94 @@ export const physics2Course = {
         "Cộng một hằng số vào điện thế không thay đổi điện trường."
       ],
       "formula": "$$\n\\begin{aligned}\nE_x&=-\\frac{\\partial V}{\\partial x},\\\\\nE_y&=-\\frac{\\partial V}{\\partial y},\\\\\nE_z&=-\\frac{\\partial V}{\\partial z},\\\\\n\\vec E&=-\\nabla V.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Điện dung thuộc cấu hình của hai vật dẫn",
+      "bullets": [
+        "Điện tích Q là độ lớn trên từng bản. Tổng điện tích của hai bản ±Q bằng không.",
+        "Hiệu điện thế được lấy từ bản dương đến bản âm.",
+        "Với hình học và điện môi tuyến tính giữ nguyên, tăng Q làm V tăng cùng tỉ lệ."
+      ],
+      "formula": "$$\n\\begin{aligned}\nC&=\\frac{Q}{V_{ab}},\\\\\n1\\,\\mathrm F&=1\\,\\mathrm{C/V}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Tìm điện dung bằng trường và hiệu điện thế",
+      "bullets": [
+        "Giả sử hai vật dẫn mang ±Q, dùng đối xứng tìm điện trường.",
+        "Tích phân trường từ bản dương đến bản âm để tính hiệu điện thế.",
+        "Trong tụ phẳng, chỉ bỏ hiệu ứng mép khi khe nhỏ so với kích thước bản."
+      ],
+      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\int_a^b\\vec E\\cdot d\\vec\\ell,\\\\\nC_0&=\\frac{\\varepsilon_0 A}{d}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Nối tiếp giữ cùng điện tích, song song giữ cùng điện áp",
+      "bullets": [
+        "Chuỗi tụ bắt đầu chưa nạp có các nút giữa trung hòa và cô lập.",
+        "Ở chuỗi ấy, độ lớn điện tích trên mọi tụ bằng nhau và các điện áp cộng.",
+        "Các nhánh song song nối cùng hai nút nên có cùng điện áp."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\frac1{C_s}&=\\frac1{C_1}+\\frac1{C_2}+\\frac1{C_3},\\\\\nC_p&=C_1+C_2+C_3.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Công nạp tích trữ thành năng lượng điện trường",
+      "bullets": [
+        "Điện áp tăng dần trong quá trình nạp nên công không bằng Q nhân điện áp cuối.",
+        "Ba biểu thức năng lượng là các cách viết tương đương cho tụ tuyến tính.",
+        "Năng lượng điện trường và thế năng của tụ là cùng một năng lượng."
+      ],
+      "formula": "$$\n\\begin{aligned}\nU&=\\frac{Q^2}{2C}=\\frac12 CV^2,\\\\\nU&=\\frac12 QV,\\\\\nu_0&=\\frac12\\varepsilon_0 E^2.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Điện môi tăng điện dung nhờ sự phân cực",
+      "bullets": [
+        "Điện tích liên kết trên mặt điện môi tạo trường chống lại trường của các bản.",
+        "Điện môi tuyến tính đồng nhất lấp toàn khe làm điện dung tăng K lần.",
+        "Giữ điện tích tự do thì trường và điện áp giảm K lần."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\varepsilon&=K\\varepsilon_0,\\\\\nC&=KC_0,\\\\\nE&=E_0/K,\\quad Q=Q_0.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Phân cực ở mức phân tử không làm điện tích chảy tự do",
+      "bullets": [
+        "Phân tử không phân cực bị tách tương đối các tâm điện tích trong trường.",
+        "Phân tử phân cực có lưỡng cực thường trực và chịu mômen định hướng.",
+        "Trong vật liệu trung hòa, các điện tích liên kết trong thể tích có thể bù nhau, còn ở mặt ngoài thì không."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\vec\\tau&=\\vec p\\times\\vec E,\\\\\nU_{\\mathrm{lưỡng\\ cực}}&=-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Điều kiện nối nguồn quyết định năng lượng sau khi thêm điện môi",
+      "bullets": [
+        "Ngắt nguồn giữ điện tích tự do, vì các bản không trao đổi điện tích với nguồn.",
+        "Giữ nguồn lý tưởng thì điện áp giữ nguyên và nguồn chuyển thêm điện tích.",
+        "Độ bền điện môi đặt giới hạn trường mà mô hình cách điện còn dùng được."
+      ],
+      "formula": "$$\n\\begin{aligned}\nU_Q&=U_0/K,\\quad Q=Q_0,\\\\\nU_V&=KU_0,\\quad V=V_0.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "04-tu-dien-dien-moi",
+      "title": "Gauss cải biên chỉ đếm điện tích tự do",
+      "bullets": [
+        "Điện trường thực đã bao gồm tác dụng của điện tích tự do và điện tích liên kết.",
+        "Dạng cải biên giữ K trong tích phân nếu vật liệu thay đổi trên mặt Gauss.",
+        "Mật độ năng lượng trong điện môi dùng điện trường thực và độ điện thẩm của vật liệu."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\oint_S K\\vec E\\cdot d\\vec A&=\\frac{Q_{\\mathrm{free}}}{\\varepsilon_0},\\\\\nu&=\\frac12\\varepsilon E^2.\n\\end{aligned}\n$$",
       "example": ""
     }
   ],

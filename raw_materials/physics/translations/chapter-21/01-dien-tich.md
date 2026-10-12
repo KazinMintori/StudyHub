@@ -28,7 +28,15 @@ Lực điện được sử dụng để đưa các hạt mực đến đúng v�
 
 ![Hình 21.2: Các giai đoạn hoạt động của máy in laser](../img/young-21/hinh-21-2.png)
 
-**Hình 21.2:** Dây điện phun ion lên trống tạo điện tích dương. Tia laser ghi các vùng ảnh mang điện âm, rồi con lăn đưa mực mang điện dương lên trống. Các dây tiếp theo tạo điện tích âm mạnh hơn trên giấy để hút mực sang giấy. Con lăn nung làm mực bám lâu dài, còn đèn khử điện tích trên trống để bắt đầu chu kỳ mới. Giấy chuyển sang trái và trống quay trong quá trình này.
+**Hình 21.2:** Chu trình hoạt động gồm 6 bước của máy in laser:
+- (1) Dây điện phun ion lên trống tạo điện tích dương.
+- (2) Tia laser "ghi" lên trống, để lại các vùng mang điện tích âm nơi sẽ tạo ảnh.
+- (3) Con lăn đưa hạt mực mang điện tích dương lên trống, mực chỉ bám vào các vùng mang điện âm do tia laser ghi.
+- (4) Các dây điện tiếp theo tạo điện tích âm mạnh hơn trên giấy để hút mực sang giấy.
+- (5) Con lăn nung nóng giấy làm mực bám vĩnh viễn vào giấy.
+- (6) Đèn khử điện tích trên trống để bắt đầu chu kỳ mới.
+
+Trống tạo ảnh quay và giấy chuyển sang trái trong suốt quá trình này.
 
 ### Điện tích và cấu tạo vật chất
 
@@ -46,9 +54,12 @@ Các giá trị khối lượng cùng độ bất định được sử dụng t
 
 $$
 \begin{aligned}
-m_e&=9.10938356(11)\times10^{-31}\,\mathrm{kg},\\
-m_p&=1.672621898(21)\times10^{-27}\,\mathrm{kg},\\
-m_n&=1.674927471(21)\times10^{-27}\,\mathrm{kg}.
+m_e&=9.10938356(11)\\
+&\quad\times10^{-31}\,\mathrm{kg},\\
+m_p&=1.672621898(21)\\
+&\quad\times10^{-27}\,\mathrm{kg},\\
+m_n&=1.674927471(21)\\
+&\quad\times10^{-27}\,\mathrm{kg}.
 \end{aligned}
 $$
 

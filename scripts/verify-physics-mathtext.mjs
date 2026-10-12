@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import {mathTextPlugin} from './math-text-plugin.mjs'
 import {mathSegments,renderMathText} from '../docs/.vitepress/math-text.mjs'
 const plugin=mathTextPlugin(),rendered={},missing=[]
-const modules=['physics-motion-course','physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations']
+const modules=['physics-motion-course','physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations','physics-capacitance-course','physics-capacitance-foundations']
 for(const name of modules){
  const path=`docs/.vitepress/${name}.mjs`,source=await readFile(path,'utf8')
  const transformed=plugin.transform(source,path.replaceAll('\\','/'))

@@ -4,6 +4,7 @@ lecture: 04-tu-dien-dien-moi
 topic: nang-luong-tu-dien
 section: topic
 title: "Năng lượng của tụ và điện trường"
+description: "Công nạp điện được tích trữ ở đâu?"
 ---
 
 <!--@include: ../../../../raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md-->

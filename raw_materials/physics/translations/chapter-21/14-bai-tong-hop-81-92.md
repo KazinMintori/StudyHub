@@ -265,7 +265,8 @@ Giải hệ cho $q_1\approx8.00$ µC và $q_2\approx3.00$ µC. Tại x = −0,20
 
 $$
 \begin{aligned}
-F_x&=-kq_3(q_1/0.200^2+q_2/0.600^2)\\
+F_x&=-k\frac{q_3q_1}{(0.200)^2}\\
+&\quad-k\frac{q_3q_2}{(0.600)^2}\\
 &=-7.50\,\mathrm N.
 \end{aligned}
 $$

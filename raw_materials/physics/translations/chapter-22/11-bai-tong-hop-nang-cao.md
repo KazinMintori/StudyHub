@@ -86,9 +86,10 @@ Phân bố cầu đối xứng có $\rho(r)=\rho_0(1-r/R)$ khi 0 ≤ r ≤ R, b�
 
 $$
 \begin{aligned}
-Q_{\mathrm{trong}}(r)&=4\pi\rho_0\int_0^r
-\left(s^2-\frac{s^3}{R}\right)ds\\
-&=4\pi\rho_0\left(\frac{r^3}{3}-\frac{r^4}{4R}\right).
+F(r)&=\int_0^r s^2\,ds\\
+&\quad-\frac1R\int_0^r s^3\,ds\\
+&=\frac{r^3}{3}-\frac{r^4}{4R},\\
+Q_{\mathrm{trong}}(r)&=4\pi\rho_0F(r).
 \end{aligned}
 $$
 
@@ -588,12 +589,10 @@ Với 1/2 ≤ u ≤ 1:
 
 $$
 \begin{aligned}
-Q_{\mathrm{trong}}&=Q_1+4\pi\alpha\\
-&\quad\times\int_{R/2}^{r}\left(s^2-\frac{s^4}{R^2}\right)ds\\
-&=\frac Q{233}\\
-&\quad\times(640u^3-384u^5-23),\\
-E_2&=\frac{kQ}{233R^2}\\
-&\quad\times\left(640u-384u^3-\frac{23}{u^2}\right).
+f(u)&=640u^3-384u^5-23,\\
+g(u)&=640u-384u^3-\frac{23}{u^2},\\
+Q_{\mathrm{trong}}&=\frac{Q}{233}f(u),\\
+E_2&=\frac{kQ}{233R^2}g(u).
 \end{aligned}
 $$
 
@@ -644,7 +643,10 @@ Chọn (a).
 - Khoảng cách từ 25 m xuống 2,5 m giảm mười lần, nên trường tăng một trăm lần.
 
 $$
-E(R^+)=10^6(25/2.5)^2=10^8\,\mathrm{N/C}.
+\begin{aligned}
+E(R^+)&=10^6(25/2.5)^2\\
+&=10^8\,\mathrm{N/C}.
+\end{aligned}
 $$
 
 Chọn (d).

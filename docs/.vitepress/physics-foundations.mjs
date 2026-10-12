@@ -1,8 +1,10 @@
+import {capacitanceConcepts,capacitanceWikiDetails,capacitanceWikiConnections} from './physics-capacitance-foundations.mjs'
 import { physicsMotionConcepts, physicsMotionWikiDetails, physicsMotionWikiConnections } from './physics-motion-foundations.mjs'
 import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiConnections } from './physics-electrostatics-foundations.mjs'
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...capacitanceConcepts,
   ...physicsMotionConcepts,
   ...electrostaticsConcepts,
   ...gaussConcepts,
@@ -119,18 +121,6 @@ export const physicsConcepts = {
     "use": "Tính tương tác điện, thông lượng và quan hệ với điện thế.",
     "question": "Đổi dấu điện tích thử có đổi chiều điện trường nguồn không?",
     "answer": "Không nếu điện tích thử không làm thay đổi phân bố nguồn."
-  },
-  "dien-dung": {
-    "name": "Điện dung",
-    "aliases": [
-      "Điện dung",
-      "điện dung"
-    ],
-    "definition": "Điện dung của tụ là $C=Q/V$ trong mô hình điện môi tuyến tính, với Q là độ lớn điện tích một bản và V là hiệu điện thế giữa hai bản. Đơn vị là farad.",
-    "example": "Đưa điện môi vào tụ cô lập làm điện dung tăng trong khi điện tích tự do giữ nguyên.",
-    "use": "Phân tích ghép tụ và năng lượng điện trường.",
-    "question": "Tụ nối nguồn điện áp lý tưởng có giữ điện tích khi thêm điện môi không?",
-    "answer": "Không nói chung. Điện áp giữ nguyên; điện tích thay đổi theo điện dung."
   },
   "dong-dien": {
     "name": "Dòng điện",
@@ -361,6 +351,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...capacitanceWikiDetails,
   ...electrostaticsWikiDetails,
   ...gaussWikiDetails,
   ...potentialWikiDetails,
@@ -374,7 +365,6 @@ export const physicsWikiDetails = {
   "noi-nang": "Với quy ước nhiệt hệ nhận dương và công hệ thực hiện dương, $\\Delta U=Q-W$. Nếu dùng quy ước công nhận vào hệ, dấu công trong phương trình đổi; phải ghi quy ước trước.\n\nMột chu trình có $\\Delta U=0$ nhưng vẫn có thể nhận nhiệt ròng và sinh công ròng. Đẳng nhiệt khí lý tưởng có nội năng không đổi, còn chất thực cần xét phương trình nội năng phù hợp.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 19. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "entropy-nhiet-dong": "Để tính biến thiên entropy của quá trình không thuận nghịch, chọn một đường thuận nghịch tưởng tượng nối cùng hai trạng thái rồi tích phân. Không thay nhiệt thực vào $\\int\\delta Q/T$ nếu thiếu điều kiện thuận nghịch.\n\n$S=k_B\\ln\\Omega$ liên hệ với số trạng thái vi mô trong mô hình thống kê phù hợp. Định nghĩa này khác entropy thông tin dù hai lĩnh vực có quan hệ hình thức.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 20. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dien-truong": "Đơn vị điện trường là newton trên coulomb, tương đương volt trên mét. Điện trường nhiều nguồn cộng vector tại cùng điểm. Trong tĩnh điện, $\\mathbf E=-\\nabla V$.\n\nĐường sức biểu diễn hướng trường, không phải quỹ đạo bắt buộc của hạt có vận tốc ban đầu. Điện trường cảm ứng có thể không là gradient của điện thế tĩnh đơn trị.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 21. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
-  "dien-dung": "Tụ phẳng lý tưởng có $C=\\varepsilon A/d$, bỏ trường mép và dùng môi trường phù hợp. Năng lượng $U=Q^2/(2C)=CV^2/2$. Khi điện dung thay đổi, phải xác định đại lượng được giữ nguyên và năng lượng trao đổi với nguồn.\n\nTụ nối tiếp và song song có quy tắc ghép khác điện trở. Nút trung gian trung hòa là một giả thiết của quy tắc điện tích bằng nhau trong chuỗi tụ.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 24. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dong-dien": "Mật độ dòng $\\mathbf J=nq\\mathbf v_d$ liên hệ với mật độ hạt và vận tốc trôi. Dòng qua mặt là tích phân $\\mathbf J\\cdot d\\mathbf A$. Chiều dấu phụ thuộc hướng pháp tuyến hoặc chiều nhánh được chọn.\n\nQuy tắc nút dạng tổng dòng vào bằng tổng dòng ra cần mô hình nút không tích lũy điện tích đáng kể. Nếu có tích điện, phải đưa tốc độ biến thiên điện tích nút vào phương trình.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dien-tro": "Dây đồng nhất có $R=\\rho_e\\ell/A$. Công suất điện trở là $I^2R=V^2/R$ khi các đại lượng phù hợp cùng thời điểm hoặc dùng hiệu dụng cho mạch điều hòa.\n\nQuan hệ ohmic chỉ đúng trong điều kiện đáp ứng tuyến tính đang xét. Một linh kiện không ohmic không thể dùng một R không đổi cho toàn đường đặc tuyến điện áp–dòng.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "tu-truong": "Hướng lực dùng bàn tay phải cho điện tích dương rồi đảo chiều với điện tích âm. Từ thông qua mặt là $\\Phi_B=\\int\\mathbf B\\cdot d\\mathbf A$. Thông lượng mặt kín bằng không không bắt buộc từ trường bằng không từng điểm.\n\nDòng ổn định tạo trường theo Biot–Savart; điện trường biến thiên cũng góp nguồn trong Ampère–Maxwell. Không nhầm từ trường với lực từ, vì lực còn phụ thuộc điện tích và vận tốc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -395,6 +385,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...capacitanceWikiConnections,
   ...electrostaticsWikiConnections,
   ...gaussWikiConnections,
   ...potentialWikiConnections,
@@ -443,11 +434,6 @@ export const physicsWikiConnections = {
     "dien-tich",
     "dien-the",
     "thong-luong"
-  ],
-  "dien-dung": [
-    "dien-the",
-    "dien-truong",
-    "cong-nang-luong"
   ],
   "dong-dien": [
     "dien-tich",

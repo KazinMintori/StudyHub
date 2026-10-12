@@ -332,4 +332,6 @@ V(R)-V(\infty)&=Q/C\\
 $$
 
 Mật độ lớn nhất ở ngay ngoài mặt cầu và bằng không trong vật liệu dẫn. Ngoài cầu, nó giảm về không ở giới hạn vô hạn. Thay cầu đặc bằng vỏ dẫn rỗng cùng bán kính, hốc trống vẫn có trường bằng không, nên trường ngoài, năng lượng và điện dung giữ nguyên. Hiệu điện thế mặt với vô hạn trùng kết quả nguồn cầu ở Ví dụ 23.8.
+
+**Tự kiểm tra kết quả:** (1) Mật độ năng lượng lớn nhất ngay ngoài mặt cầu; nhỏ nhất bằng không trong vật dẫn và tiến về không khi $r$ tiến ra vô hạn. (2) Nếu thay bằng vỏ dẫn rỗng cùng bán kính $R$ và hốc không chứa điện tích, các kết quả bên ngoài và điện dung không đổi. (3) Từ $C=Q/V$ suy ra hiệu điện thế mặt so với vô hạn là $kQ/R$, khớp kết quả của cầu dẫn ở Ví dụ 23.8.
 :::

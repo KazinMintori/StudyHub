@@ -401,7 +401,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 22711,
+    "words": 22767,
     "minutes": 115
   },
   "vat-ly-2/01-dien-truong-coulomb/dien-tich": {
@@ -433,7 +433,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 15791,
+    "words": 15796,
     "minutes": 80
   },
   "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
@@ -457,7 +457,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 20657,
+    "words": 20679,
     "minutes": 105
   },
   "vat-ly-2/02-dien-the/the-nang-dien": {
@@ -481,8 +481,8 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/04-tu-dien-dien-moi": {
-    "words": 486,
-    "minutes": 5
+    "words": 21490,
+    "minutes": 105
   },
   "vat-ly-2/04-tu-dien-dien-moi/tu-dien-dien-dung": {
     "words": 20,

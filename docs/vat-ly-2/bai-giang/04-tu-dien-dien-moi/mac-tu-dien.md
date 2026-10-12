@@ -4,6 +4,7 @@ lecture: 04-tu-dien-dien-moi
 topic: mac-tu-dien
 section: topic
 title: "Tụ mắc nối tiếp và song song"
+description: "Đại lượng nào được giữ chung trong mỗi cách mắc?"
 ---
 
 <!--@include: ../../../../raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md-->

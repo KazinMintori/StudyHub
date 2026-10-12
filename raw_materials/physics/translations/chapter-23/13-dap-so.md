@@ -88,14 +88,22 @@ V(r)&=0,\quad r\ge r_b.
 \end{aligned}
 $$
 
-Với Bài 23.61, chọn vỏ ngoài V = 0. Ba vùng điện thế là:
+Với Bài 23.61, chọn vỏ ngoài có điện thế bằng không. Trong lõi trụ, khi $r\le a$:
 
 $$
-V(r)=\begin{cases}
-2k\lambda\ln(b/a),&r\le a,\\
-2k\lambda\ln(b/r),&a\le r\le b,\\
-0,&r\ge b.
-\end{cases}
+V(r)=2k\lambda\ln(b/a).
+$$
+
+Trong thành vỏ, khi $a\le r\le b$:
+
+$$
+V(r)=2k\lambda\ln(b/r).
+$$
+
+Ngoài vỏ, khi $r\ge b$:
+
+$$
+V(r)=0.
 $$
 
 Với Bài 23.71:

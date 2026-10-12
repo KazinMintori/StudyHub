@@ -50,7 +50,7 @@ Trang in 718–746, PDF 738–766. Đã có năm chủ đề lý thuyết, 12 v�
 
 ## Chương 24
 
-Đã tích hợp bản thảo sáu mục lý thuyết, 12 ví dụ, 23 công thức đánh số và 28 hình. Đã soạn riêng 12 bài biến thể, một bài tổng hợp, 21 câu hỏi thảo luận và Bài 24.1–24.39. Các bài đang ở hồ sơ biên soạn, chờ khép kín phần cuối chương và tích hợp vào tab Bài tập. Chương còn thiếu Bài 24.40–24.76, đáp số, tóm tắt, Slides, Cheatsheet và lượt rà toàn chương.
+Đã tích hợp đủ sáu mục lý thuyết, 12 ví dụ, 23 công thức đánh số, 22 hình đánh số và các hình ứng dụng, tóm tắt, bài tập. Tab Bài tập có 76 bài đánh số, 21 câu hỏi thảo luận, 12 bài biến thể và một bài tổng hợp, tương ứng 110 khung lời giải. Có tám Slides, Cheatsheet chỉ gồm định nghĩa, tính chất và công thức, bốn Wiki mới và mục điện dung mở rộng. Ba Luna đã đọc đối chiếu theo phạm vi trong báo cáo riêng. Hai lỗi đọc mạch 24.52–24.53 đã được sửa và kiểm lại bằng phương trình điện tích nút NumPy. Bảy bộ tính toán cùng kiểm tra cấu trúc đã qua. Chờ chốt hiển thị trực tiếp trước khi xác nhận hoàn tất và xuất bản.
 
 ## Các chương 25–44
 
