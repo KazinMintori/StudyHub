@@ -26,14 +26,17 @@
     "Bee charge in the MCAT introduction is +(30 +/- 5) pC. The PDF text extraction was incorrect."
   ],
   "renderReview": "passed",
-  "publication": "requested-after-final-validation",
-  "renderEvidence": "qa/physics/browser/results.json",
+  "publication": "ready-for-github-push",
+  "renderEvidence": "qa/physics/browser/results-all.json",
   "renderViewports": [
+    320,
     360,
     375,
     1440
   ],
   "figureReview": "Manually inspected PDF crops and corrected clipped labels and diagrams.",
   "independentReview": "raw_materials/physics/reviews/luna-ch21.md",
-  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md"
+  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md",
+  "responsiveEvidence": "qa/physics/responsive-layout/results.json",
+  "wikiRenderEvidence": "qa/physics/wiki/browser-results.json"
 }

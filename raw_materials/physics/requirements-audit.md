@@ -28,7 +28,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 21 | Điện tích và điện trường | 101/101 | 137 | Đủ theo hồ sơ |
 | vat-ly-2 | 22 | Định luật Gauss | 66/66 | 95 | Đủ theo hồ sơ |
 | vat-ly-2 | 23 | Điện thế | 86/86 | 121 | Đủ theo hồ sơ |
-| vat-ly-2 | 24 | Điện dung và điện môi | 76/76 | 110 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 24 | Điện dung và điện môi | 76/76 | 110 | Đủ theo hồ sơ |
 | vat-ly-2 | 25 | Dòng điện, điện trở và suất điện động | 0/82 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 26 | Mạch điện một chiều | 0/88 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 27 | Từ trường và lực từ | 0/85 | 0 | Còn thiếu hoặc chưa rà xong |

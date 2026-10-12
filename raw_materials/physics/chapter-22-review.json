@@ -23,9 +23,10 @@
   ],
   "numericEvidence": "qa/physics/chapter22/numeric-checks.json",
   "renderReview": "passed",
-  "publication": "requested-after-final-validation",
-  "renderEvidence": "qa/physics/browser/results.json",
+  "publication": "ready-for-github-push",
+  "renderEvidence": "qa/physics/browser/results-all.json",
   "renderViewports": [
+    320,
     360,
     375,
     1440
@@ -33,5 +34,7 @@
   "figureReview": "Manually inspected PDF crops and corrected clipped labels and diagrams.",
   "numericCheckGroups": 58,
   "independentReview": "raw_materials/physics/reviews/luna-ch22.md",
-  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md"
+  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md",
+  "responsiveEvidence": "qa/physics/responsive-layout/results.json",
+  "wikiRenderEvidence": "qa/physics/wiki/browser-results.json"
 }

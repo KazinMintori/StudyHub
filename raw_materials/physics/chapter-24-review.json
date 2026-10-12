@@ -14,7 +14,9 @@
   "slides": 8,
   "strictCheatsheetSections": 5,
   "newWikiTerms": 4,
-  "expandedWikiTerms": ["dien-dung"],
+  "expandedWikiTerms": [
+    "dien-dung"
+  ],
   "sourceReview": [
     "raw_materials/physics/reviews/luna-ch24-draft.md",
     "raw_materials/physics/reviews/ch24-01-39.md",
@@ -34,6 +36,15 @@
     "24.57: Recalculation without premature rounding gives final parallel energy 1.22472 millijoules.",
     "24.76: Choice (b) is 3 microjoules; choice (d) is 3 picojoules. The ideal capacitor energy change is about 2.51 picojoules."
   ],
-  "renderReview": "pending",
-  "publication": "requested-after-final-validation"
+  "renderReview": "passed",
+  "publication": "ready-for-github-push",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "renderEvidence": "qa/physics/browser/results-all.json",
+  "responsiveEvidence": "qa/physics/responsive-layout/results.json",
+  "wikiRenderEvidence": "qa/physics/wiki/browser-results.json"
 }

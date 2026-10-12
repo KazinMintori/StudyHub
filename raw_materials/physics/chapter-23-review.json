@@ -29,14 +29,17 @@
   "numericCheckGroups": 138,
   "figureReview": "All theory and exercise crops visually reviewed; summary crops and cell-label crop corrected.",
   "renderReview": "passed",
-  "publication": "requested-after-final-validation",
+  "publication": "ready-for-github-push",
   "renderEvidence": "qa/physics/browser/results-all.json",
   "renderViewports": [
+    320,
     360,
     375,
     1440
   ],
   "captionReview": "qa/physics/image-label-review.json",
   "independentReview": "raw_materials/physics/reviews/luna-ch23.md",
-  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md"
+  "reviewDispositions": "raw_materials/physics/reviews/resolution-ledger.md",
+  "responsiveEvidence": "qa/physics/responsive-layout/results.json",
+  "wikiRenderEvidence": "qa/physics/wiki/browser-results.json"
 }
