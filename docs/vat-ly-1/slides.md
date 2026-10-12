@@ -2,7 +2,8 @@
 layout: page
 search: false
 course: vat-ly-1
-legacyKind: slides
 ---
 
-<LegacyCourseRoute />
+# Slides
+
+Slides not available because the Creator too lazy

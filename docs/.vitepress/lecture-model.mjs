@@ -4,7 +4,8 @@ export const lectureParts = [
   { id: 'kien-thuc-can-co', name: 'Kiến thức nền' },
   { id: 'slides', name: 'Slides' },
   { id: 'notes', name: 'Notes' },
-  { id: 'bai-tap', name: 'Bài tập' }
+  { id: 'bai-tap', name: 'Bài tập' },
+  { id: 'cheatsheet', name: 'Cheatsheet' }
 ]
 export { getLectureCheatsheet as lectureCheatsheet } from './cheatsheets.mjs'
 export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5
@@ -27,8 +28,5 @@ export function findTopic(courseId, lessonSlug, topicSlug) {
 }
 export function lectureSlides(course, lesson) {
   if (!course || !lesson) return []
-  const slides = course.slides.filter(slide => slide.note === lesson.slug)
-  if (slides.length || lesson.status !== 'ready') return slides
-  if (course.id === 'dsa' && lesson.slug === 'trees') return [{ title: 'Cây & cây nhị phân', note: 'trees', bullets: ['Cây gốc biểu diễn quan hệ cha–con; lá không có con.', 'Cây nhị phân có tối đa hai con. Cây tìm kiếm nhị phân còn yêu cầu quy tắc thứ tự.', 'Duyệt trước, giữa và sau khác nhau ở thời điểm xử lý nút gốc.', 'Chi phí tìm kiếm trên BST phụ thuộc chiều cao; cây lệch có thể tốn O(n).'], formula: 'Cây cân bằng: chiều cao O(log n)', example: 'Duyệt giữa một BST với khóa phân biệt cho dãy khóa tăng dần.' }]
-  return []
+  return (course.slides || []).filter(slide => slide.note === lesson.slug)
 }

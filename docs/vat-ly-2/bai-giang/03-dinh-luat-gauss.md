@@ -3,26 +3,42 @@ course: vat-ly-2
 lecture: 03-dinh-luat-gauss
 section: lecture
 title: "Định luật Gauss"
-prerequisites: ["tich-vo-huong","tich-phan","dien-tich","dien-truong"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Định luật Gauss."
+prerequisites: ["dien-truong","tich-vo-huong","tich-phan","vat-dan-cach-dien"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Điện thông, định luật Gauss, đối xứng cầu, trụ, phẳng và điện tích trên vật dẫn."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 22.1 — Charge and Electric Flux (từ trang 718).
-- 22.2 — Calculating Electric Flux (từ trang 721).
-- 22.3 — Gauss’s Law (từ trang 725).
-- 22.4 — Applications of Gauss’s Law (từ trang 729).
-- 22.5 — Charges on Conductors (từ trang 734).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/06-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 22, trang 718–746.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Định luật Gauss">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/07-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/08-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/10-bai-tong-hop-29-44.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/11-bai-tong-hop-nang-cao.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-22/12-dap-so.md-->
+
+## Tài liệu tham khảo phần luyện tập
+
+Young & Freedman, ấn bản 15, chương 22, trang 739–746 và phụ lục đáp số A-14–A-15.
+
+</div>

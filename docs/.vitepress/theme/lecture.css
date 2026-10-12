@@ -1,4 +1,34 @@
 .lecture-header { margin-bottom: var(--space-5); }
+.has-chapter-exercises .lecture-exercises-content { display: none; }
+.Layout.lecture-exercises-layout .main > .vp-doc { display: block; }
+.lecture-exercises-layout .lecture-notes-content { display: none; }
+.lecture-exercises-layout .lecture-exercises-content { display: block; }
+.lecture-exercises-content > :first-child { margin-top: 0; }
+.Layout.physics-layout mjx-container[display=true] {
+  overflow: visible !important;
+  padding-inline: 0;
+}
+.Layout.has-chapter-exercises .cheatsheet-card,
+.Layout.has-chapter-exercises .cheatsheet-item,
+.Layout.has-chapter-exercises .item-formula { min-width: 0; }
+.Layout.has-chapter-exercises .item-formula { overflow: visible; }
+@media (max-width: 767px) {
+  .Layout.has-chapter-exercises .cheatsheet-grid { grid-template-columns: minmax(0, 1fr); }
+  .Layout.has-chapter-exercises .cheatsheet-card { padding: var(--space-3); }
+  .Layout.has-chapter-exercises .item-formula { padding: var(--space-2); }
+}
+.Layout.has-chapter-exercises .lecture-exercises-content details {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md, 8px);
+  background: var(--paper);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-3) 0 var(--space-5);
+}
+.Layout.has-chapter-exercises .lecture-exercises-content details > summary {
+  min-height: 44px;
+  cursor: pointer;
+  font-weight: 600;
+}
 .mobile-lecture-nav { display: none; }
 .lecture-header h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-3) 0; }
 .lecture-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); font-size: var(--fs-small); color: var(--ink-3); font-variant-numeric: tabular-nums; }

@@ -49,59 +49,59 @@ export const readingMetadata = {
     "minutes": 31
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine": {
-    "words": 6849,
-    "minutes": 46
+    "words": 7339,
+    "minutes": 49
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/noi-tuong-doi": {
-    "words": 1209,
-    "minutes": 8
+    "words": 1405,
+    "minutes": 9
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi": {
-    "words": 3588,
-    "minutes": 24
+    "words": 5398,
+    "minutes": 36
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-loi": {
-    "words": 2723,
-    "minutes": 18
+    "words": 4124,
+    "minutes": 27
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian": {
-    "words": 3574,
-    "minutes": 24
+    "words": 5188,
+    "minutes": 35
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid": {
-    "words": 2893,
-    "minutes": 19
+    "words": 2990,
+    "minutes": 20
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan": {
-    "words": 2728,
-    "minutes": 18
+    "words": 1465,
+    "minutes": 10
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh": {
-    "words": 3593,
+    "words": 3596,
     "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-psd": {
-    "words": 2357,
-    "minutes": 16
+    "words": 3622,
+    "minutes": 24
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi": {
-    "words": 3296,
+    "words": 3304,
     "minutes": 22
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh": {
-    "words": 2709,
-    "minutes": 18
+    "words": 2919,
+    "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat": {
-    "words": 2716,
+    "words": 2719,
     "minutes": 18
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua": {
-    "words": 3173,
+    "words": 3176,
     "minutes": 21
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/non-doi-ngau": {
-    "words": 2811,
+    "words": 2824,
     "minutes": 19
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/ham-loi": {
@@ -252,6 +252,58 @@ export const readingMetadata = {
     "words": 3467,
     "minutes": 15
   },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap": {
+    "words": 687,
+    "minutes": 5
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/khong-gian-va-ma-tran": {
+    "words": 474,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/dao-ham-va-cuc-tri": {
+    "words": 381,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/tinh-loi-va-toi-uu": {
+    "words": 1002,
+    "minutes": 7
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/mo-hinh-va-hoi-quy": {
+    "words": 1002,
+    "minutes": 7
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/quy-hoach-tuyen-tinh": {
+    "words": 729,
+    "minutes": 5
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/bai-tap-cos": {
+    "words": 568,
+    "minutes": 4
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/dieu-kien-kkt": {
+    "words": 405,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/kkt-co-tham-so": {
+    "words": 375,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/doi-ngau-lagrange": {
+    "words": 402,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/bai-tap-rang-buoc": {
+    "words": 305,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/quy-tac-chuoi-va-taylor": {
+    "words": 281,
+    "minutes": 3
+  },
+  "toan-cho-ai/bai-08-tai-lieu-on-tap/gradient-backtracking-newton": {
+    "words": 520,
+    "minutes": 3
+  },
   "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
     "words": 2548,
     "minutes": 15
@@ -401,12 +453,60 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 144,
-    "minutes": 5
+    "words": 22127,
+    "minutes": 110
+  },
+  "vat-ly-2/01-dien-truong-coulomb/dien-tich": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/vat-dan-cach-dien": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/dinh-luat-coulomb": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/dien-truong-luc-dien": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/tinh-dien-truong": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/duong-suc-dien": {
+    "words": 26,
+    "minutes": 3
+  },
+  "vat-ly-2/01-dien-truong-coulomb/luong-cuc-dien": {
+    "words": 26,
+    "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 127,
-    "minutes": 5
+    "words": 15596,
+    "minutes": 80
+  },
+  "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/03-dinh-luat-gauss/tinh-dien-thong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/03-dinh-luat-gauss/dinh-luat-gauss": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/03-dinh-luat-gauss/ung-dung-gauss": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/03-dinh-luat-gauss/dien-tich-vat-dan": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
     "words": 123,

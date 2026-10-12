@@ -1,0 +1,19 @@
+export const gaussConcepts={
+ 'dien-thong':{name:'Điện thông',aliases:['điện thông'],definition:'Điện thông là tích phân thành phần điện trường theo pháp tuyến qua một mặt. Với mặt phẳng trong trường đều, $\\Phi_E=EA\\cos\\varphi$. Góc φ đo với pháp tuyến đã chọn.',example:'Trường đi xuyên hộp có thể cho điện thông âm ở mặt này, dương ở mặt đối diện và tổng bằng không.',use:'Phân biệt trường tại điểm với tích phân trường qua mặt.',question:'Điện thông không có buộc trường không không?',answer:'Không. Phần đi vào có thể bù phần đi ra.'},
+ 'dinh-luat-gauss':{name:'Định luật Gauss',aliases:['định luật Gauss'],definition:'Điện thông tổng qua mặt kín bằng tổng đại số điện tích bên trong chia $\\varepsilon_0$. Trường trong tích phân là trường của mọi nguồn. Nguồn ngoài không góp điện thông tổng.',example:'Mặt kín bao +q và −q có điện thông tổng bằng không dù trường trên mặt khác không.',use:'Tìm điện tích được bao hoặc tìm trường khi có đủ đối xứng.',question:'Biết điện thông có luôn tìm được trường tại từng điểm không?',answer:'Không. Cần thêm thông tin về đối xứng hoặc phân bố trường.'},
+ 'mat-gauss':{name:'Mặt Gauss',aliases:['mặt Gauss','mặt Gaussian'],definition:'Mặt Gauss là mặt kín tưởng tượng được chọn để áp dụng định luật Gauss. Pháp tuyến hướng ra ngoài. Không cần có một vật thể thật ở vị trí mặt.',example:'Mặt trụ đồng trục với dây vô hạn có trường vuông góc mặt bên và song song hai đáy.',use:'Chọn mặt có hình học phù hợp đối xứng nguồn để tính điện thông.',question:'Mặt cầu có tự làm trường của nguồn không đối xứng trở nên đều không?',answer:'Không. Đối xứng phải thuộc toàn cấu hình nguồn.'},
+ 'che-chan-tinh-dien':{name:'Che chắn tĩnh điện',aliases:['che chắn tĩnh điện','lồng Faraday'],definition:'Ở cân bằng tĩnh điện, điện tích vật dẫn kín tái phân bố để trường trong vật liệu dẫn bằng không. Hốc kín không chứa nguồn riêng cũng được che chắn khỏi trường ngoài.',example:'Hộp kim loại bao thiết bị đo che chắn điện trường tĩnh bên ngoài khỏi khoang trong.',use:'Phân biệt vật liệu dẫn, hốc có nguồn, hốc trống và nối đất.',question:'Hốc chứa nguồn q có nhất thiết có trường bằng không không?',answer:'Không. Thành hốc cảm ứng tổng −q nhưng trường trong hốc có thể khác không.'}
+}
+const reference='\n\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.'
+export const gaussWikiDetails={
+ 'dien-thong':'Chia mặt thành phần nhỏ và cộng các tích vô hướng. Với mặt hở phải nêu hướng pháp tuyến, mặt kín luôn chọn ra ngoài. Đơn vị là N m²/C.\n\n$$\n\\Phi_E=\\int_A\\vec E\\cdot d\\vec A.\n$$'+reference,
+ 'dinh-luat-gauss':'Dạng tích phân là:\n\n$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=Q_{\\mathrm{trong}}/\\varepsilon_0.\n\\end{aligned}\n$$\n\nNguồn ngoài có thể thay đổi trường tại từng điểm nhưng không đổi điện thông tổng. Chỉ rút E ra ngoài tích phân khi thành phần pháp tuyến không đổi trên phần mặt đang xét.'+reference,
+ 'mat-gauss':'Đối xứng cầu dùng cầu đồng tâm. Đối xứng trụ dùng trụ đồng trục. Đối xứng phẳng dùng hình trụ xuyên mặt nguồn với hai đáy song song mặt nguồn. Muốn tính trường tại một điểm, chọn mặt đi qua điểm ấy. Định luật đúng với mọi mặt kín, nhưng chỉ một số lựa chọn làm tích phân đơn giản.'+reference,
+ 'che-chan-tinh-dien':'Nếu hốc chứa nguồn q, mặt Gauss trong vật liệu dẫn cho điện tích thành hốc −q. Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q. Nối đất cho phép trao đổi điện tích, nên tổng điện tích vật dẫn không còn cố định. Hốc trống có trường bằng không, còn hốc có nguồn nói chung có trường khác không.'+reference
+}
+export const gaussWikiConnections={
+ 'dien-thong':['thong-luong','tich-vo-huong','dien-truong','dinh-luat-gauss'],
+ 'dinh-luat-gauss':['dien-thong','mat-gauss','dien-tich','vat-dan-cach-dien'],
+ 'mat-gauss':['dinh-luat-gauss','tich-phan','vector'],
+ 'che-chan-tinh-dien':['vat-dan-cach-dien','dinh-luat-gauss','phan-cuc-dien']
+}

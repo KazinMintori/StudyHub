@@ -40,7 +40,7 @@ for (const course of courseCatalog) {
   }
   await writeFile(path.join(dir,'index.md'),`---\nlayout: page\ntitle: ${JSON.stringify(course.name)}\ncourse: ${course.id}\nsection: overview\noutline: false\n---\n\n<CourseOverview />\n`)
   await writeFile(path.join(dir,'notes/index.md'),redirect(`/${course.id}/`))
-  await writeFile(path.join(dir,'slides.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: slides\n---\n\n<LegacyCourseRoute />\n`)
+  await writeFile(path.join(dir,'slides.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\n---\n\n# Slides\n\nSlides not available because the Creator too lazy\n`)
   await writeFile(path.join(dir,'kien-thuc-can-co.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: foundations\n---\n\n<LegacyCourseRoute />\n`)
 }
 await mkdir(path.join(docs,'wiki'),{recursive:true})

@@ -113,6 +113,9 @@ await writeFile(manifestFile,JSON.stringify(manifest,null,2)+'\n')
 const backup=path.join(root,'qa/physics/previous-summaries')
 await mkdir(backup,{recursive:true})
 for(const course of [physics1Course,physics2Course]) {
+  // Physics 2 has dedicated chapter integrations with topic pages and separate
+  // exercise tabs. The older whole-course generator must not overwrite them.
+  if(course.id==='vat-ly-2')continue
   const moduleBackup=path.join(backup,'physics-courses.mjs')
   if(!await exists(moduleBackup))await writeFile(moduleBackup,await readFile('docs/.vitepress/physics-courses.mjs'))
   course.contentPolicy='full-source-translation'

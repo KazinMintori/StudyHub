@@ -5,9 +5,12 @@ section: lecture
 title: "Chuyển động trên đường thẳng"
 prerequisites: ["do-doi","thanh-phan-vector"]
 lessonStatus: ready
+hasChapterExercises: true
 sourceTranslation: full
 description: "Chuyên đề động học chuyển động thẳng một chiều: Vận tốc tức thời, gia tốc, chuyển động biến đổi đều, rơi tự do và ứng dụng vi tích phân trong cơ học."
 ---
+
+<div class="lecture-notes-content">
 
 ::: info Cấu trúc bài giảng
 Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), sơ đồ tóm tắt kiến thức, hệ thống bài tập rèn luyện kỹ năng, bài toán tổng hợp, câu hỏi thảo luận đào sâu bản chất, 92 bài tập tự luyện và bảng đáp số tham khảo đối chiếu.
@@ -29,6 +32,16 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/07-tom-tat.md-->
 
+
+## Tài liệu tham khảo học thuật
+
+- Hugh D. Young & Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition (Pearson).
+- Halliday, Resnick & Walker, *Fundamentals of Physics*, 11th Edition (Wiley).
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Chuyển động thẳng">
+
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md-->
@@ -46,7 +59,5 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md-->
 
 
-## Tài liệu tham khảo học thuật
 
-- Hugh D. Young & Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition (Pearson).
-- Halliday, Resnick & Walker, *Fundamentals of Physics*, 11th Edition (Wiley).
+</div>

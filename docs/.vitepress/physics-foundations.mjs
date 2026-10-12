@@ -1,6 +1,10 @@
 import { physicsMotionConcepts, physicsMotionWikiDetails, physicsMotionWikiConnections } from './physics-motion-foundations.mjs'
+import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiConnections } from './physics-electrostatics-foundations.mjs'
+import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 export const physicsConcepts = {
   ...physicsMotionConcepts,
+  ...electrostaticsConcepts,
+  ...gaussConcepts,
   "dong-luong-vat-ly": {
     "name": "Động lượng trong vật lý",
     "aliases": [
@@ -355,6 +359,8 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...electrostaticsWikiDetails,
+  ...gaussWikiDetails,
   ...physicsMotionWikiDetails,
   "dong-luong-vat-ly": "Chọn hệ trước khi phân biệt nội lực với ngoại lực. Quan hệ $\\Delta\\mathbf P=\\int\\mathbf F_{\\mathrm{ngoài}}dt$ cần xét các thành phần vector trong cùng hệ quán tính. Trong va chạm ngắn, có thể bỏ xung lượng ngoài dù ngoại lực không bằng không từng thời điểm, nếu xung lượng đó nhỏ so với trao đổi giữa các vật.\n\nỞ vận tốc gần tốc độ ánh sáng, dùng $\\mathbf p=\\gamma m\\mathbf v$ thay cho biểu thức Newton. “Momentum” trong tối ưu hóa là một thuật toán khác; đây là đại lượng cơ học.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 8. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "momen-luc": "Độ lớn mômen là $\\tau=Fd$ với $d$ là khoảng cách vuông góc từ gốc tới đường tác dụng lực. Không thay $d$ bằng khoảng cách từ gốc tới điểm đặt nếu lực không vuông góc vector vị trí.\n\nĐơn vị là newton mét; mômen là vector, khác công là số vô hướng. Trong hệ quán tính với gốc cố định, tổng mômen ngoài quyết định đạo hàm mômen động lượng đối với cùng gốc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 10. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -386,6 +392,8 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...electrostaticsWikiConnections,
+  ...gaussWikiConnections,
   ...physicsMotionWikiConnections,
   "dong-luong-vat-ly": [
     "luc",

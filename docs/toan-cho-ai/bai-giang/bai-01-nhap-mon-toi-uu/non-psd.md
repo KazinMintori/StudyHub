@@ -206,7 +206,9 @@ Tích của hai ma trận PSD nói chung không phải là ma trận PSD, thậm
 
 $$
 16 - t^2 \ge 0 \iff t^2 \le 16 \iff -4 \le t \le 4 .
-$$ Tập hợp các giá trị $t$ hợp lệ là đoạn đóng $[-4, 4]$, một tập lồi trong $\mathbb{R}$. Kết quả này không phải ngẫu nhiên: Ánh xạ $t \mapsto X(t)$ là một ánh xạ affine từ $\mathbb{R}$ vào $\mathbb{S}^2$, và tập các giá trị $t$ chính là ảnh ngược của nón lồi $\mathbb{S}^2_+$ qua ánh xạ affine đó. Ảnh ngược affine của một tập lồi luôn luôn là một tập lồi. Hai đầu mút $t = \pm 4$ ứng với ma trận suy biến nằm trên biên của nón.
+$$
+
+Tập hợp các giá trị $t$ hợp lệ là đoạn đóng $[-4, 4]$, một tập lồi trong $\mathbb{R}$. Kết quả này không phải ngẫu nhiên: Ánh xạ $t \mapsto X(t)$ là một ánh xạ affine từ $\mathbb{R}$ vào $\mathbb{S}^2$, và tập các giá trị $t$ chính là ảnh ngược của nón lồi $\mathbb{S}^2_+$ qua ánh xạ affine đó. Ảnh ngược affine của một tập lồi luôn luôn là một tập lồi. Hai đầu mút $t = \pm 4$ ứng với ma trận suy biến nằm trên biên của nón.
 
 </details>
 
@@ -218,7 +220,9 @@ Khẳng định này hoàn toàn đúng. Với mỗi chỉ số $i$, chọn vect
 
 $$
 X_{ii} X_{jj} - X_{ij}^2 \ge 0 \iff X_{ij}^2 \le X_{ii} X_{jj} \iff |X_{ij}| \le \sqrt{X_{ii} X_{jj}} .
-$$ Trong thống kê, bất đẳng thức này chính là điều kiện hệ số tương quan tuyến tính luôn nằm trong đoạn $[-1, 1]$.
+$$
+
+Trong thống kê, bất đẳng thức này chính là điều kiện hệ số tương quan tuyến tính luôn nằm trong đoạn $[-1, 1]$.
 
 </details>
 

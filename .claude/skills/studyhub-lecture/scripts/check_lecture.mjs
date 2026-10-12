@@ -240,7 +240,8 @@ async function checkLesson(course, lesson) {
     add('error', where, 'NOT_IN_PARTS', 'Slug không có trong course.parts → bài không hiện trong sidebar.')
   // Dùng đúng hàm của site (có slide dự phòng viết cứng cho vài bài); repo thử thì lọc theo note.
   const slides = lectureSlides ? lectureSlides(course, lesson) : (course.slides || []).filter(s => s.note === lesson.slug)
-  if (lesson.status === 'ready' && !slides.length) add('error', where, 'READY_WITHOUT_SLIDES', 'Bài ready nhưng catalog chưa có slide nào note trỏ tới bài.')
+  const hasCourseSlides = (course.slides || []).length > 0
+  if (hasCourseSlides && lesson.status === 'ready' && !slides.length) add('error', where, 'READY_WITHOUT_SLIDES', 'Bài ready nhưng catalog chưa có slide nào note trỏ tới bài.')
   slides.forEach((s, i) => {
     const sw = `${where} slide ${i + 1} "${s.title}"`
     if (!Array.isArray(s.bullets) || !s.bullets.length) add('error', sw, 'SLIDE_NO_BULLETS', 'Slide không có bullet.')

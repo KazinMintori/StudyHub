@@ -4,6 +4,8 @@ Phiên bản biên soạn cập nhật ngày 09/10/2026, skill `studyhub-lecture
 
 ## Ranh giới nguồn
 
+- Bổ sung ngày 12/10/2026: Người dùng giao xử lý trực tiếp toàn bộ 103 ảnh trong `toan-cho-ai/Tài liệu ôn tập/`, cho phép sao chép nội dung, phân chia, sắp xếp và bổ sung giải thích. Bộ ảnh này là nguồn được phép dùng, kể cả ví dụ và bài tập xuất hiện trên bảng. Ngoại lệ này chỉ áp dụng cho bộ ảnh được giao. Sổ đối chiếu nằm ở `on-tap-plan.md`, manifest lưu từng ảnh, SHA-256 và nơi đến. Các sai số toán học trên bảng được bảo toàn trong ảnh và ghi nhận khi hiệu chỉnh bản bài học.
+
 - Trang `https://courses.iaidev.com/math-4-AI/2627-1/` chỉ được đọc ở chỉ mục. Dùng số, tên và thứ tự Lecture 00–07; không mở các liên kết Notes, Slides hoặc bài tập để lấy nội dung.
 - Ranh giới này áp dụng cho câu chuyện mở đầu, ví dụ nhỏ, số liệu và bài toán mẫu. Một dòng ghi công không thay được việc tự biên soạn. Bản Lecture 01 trước ngày 08/10/2026 có dùng câu chuyện Dido với mô hình bờ biển thẳng, bài LP phân bổ thời gian chạy hai tác vụ, ví dụ khớp hằng số với ba số 2, 4, 6, tập quyết định {(1, 0), (0, 1)} và vài ghi chú lấy từ slide. Tất cả đã được thay bằng ví dụ tự đặt: Bài toán người cứu hộ (điều kiện tối ưu là định luật Snell), LP cực đại 5x₁ + 4x₂ với chứng nhận (3, 1), ba số 1, 5, 6, tập {0, 1}² và bộ điểm Pareto mới.
 - Dữ liệu của bài tập về nhà chương 01 và 02 không được dùng lại trong ví dụ, bài tập tự luyện hay mô phỏng. Mô phỏng `OptimumLab` vì thế dùng (x − 3)² thay cho (x − 2)². Lecture 02 tránh luôn các tình huống của bộ bài tập 02: Hộp kín, phân bổ công suất, pha trộn hai nguyên liệu, chọn gói, dữ liệu hồi quy chung và lời giải ngưỡng mềm của lasso.

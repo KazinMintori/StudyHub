@@ -2,7 +2,8 @@
 layout: page
 search: false
 course: xu-ly-du-lieu
-legacyKind: slides
 ---
 
-<LegacyCourseRoute />
+# Slides
+
+Slides not available because the Creator too lazy

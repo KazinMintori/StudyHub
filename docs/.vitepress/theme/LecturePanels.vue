@@ -68,16 +68,7 @@ watch(() => lesson.value?.slug, load)
 <template>
   <div v-if="course && lesson" class="lecture-panels">
     <section v-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
-      <p class="eyebrow">Ý CHÍNH CỦA BÀI NÀY</p>
-      <article v-if="current" class="course-slide" aria-live="polite">
-        <p class="eyebrow">{{ index + 1 }} / {{ slides.length }}</p>
-        <h2>{{ current.title }}</h2>
-        <ul><li v-for="bullet in current.bullets" :key="bullet"><MathText :text="bullet" /></li></ul>
-        <MathText v-if="current.formula" as="div" class="slide-formula" :text="current.formula" />
-        <div v-if="current.example" class="slide-example"><strong>Ví dụ:</strong> <MathText :text="current.example" /></div>
-      </article>
-      <p v-else class="empty-state">Slides của bài đang được biên soạn.</p>
-      <div v-if="current" class="slide-controls"><button class="study-button" :disabled="index === 0" @click="next(-1)">← Trước</button><span>{{ index + 1 }} / {{ slides.length }} · Phím ← →</span><button class="study-button primary" :disabled="index === slides.length - 1" @click="next(1)">Tiếp →</button></div>
+      <p class="empty-state">Slides not available because the Creator too lazy</p>
     </section>
 
     <section v-else-if="part === 'cheatsheet'" class="lecture-cheatsheet" aria-label="Cheatsheet tra cứu nhanh của bài giảng">
@@ -177,7 +168,12 @@ watch(() => lesson.value?.slug, load)
       </section>
     </section>
 
-    <section v-else-if="part === 'bai-tap'" class="lecture-lab-panel" aria-label="Bài tập thực hành phòng Lab">
+    <section v-else-if="part === 'bai-tap' && !lesson.hasChapterExercises && ['vat-ly-1', 'vat-ly-2'].includes(course.id)" class="lecture-exercises-pending">
+      <h2>Bài tập cuối chương</h2>
+      <p>Phần bài tập và lời giải chi tiết của chương đang được biên soạn.</p>
+    </section>
+
+    <section v-else-if="part === 'bai-tap' && !lesson.hasChapterExercises" class="lecture-lab-panel" aria-label="Bài tập thực hành phòng Lab">
       <div class="lab-heading">
         <div class="lab-title-group">
           <p class="eyebrow">BÀI TẬP THỰC HÀNH & PHÒNG LAB THỰC CHIẾN</p>

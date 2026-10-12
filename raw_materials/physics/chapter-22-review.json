@@ -1,0 +1,34 @@
+{
+  "chapter": 22,
+  "status": "content-complete",
+  "theorySections": 5,
+  "examples": 12,
+  "equations": 10,
+  "numberedFigures": 29,
+  "sourceFigureAssets": 47,
+  "solutionPlots": 12,
+  "exercises": 66,
+  "discussionQuestions": 16,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 95,
+  "sourceClarifications": [
+    "Exercise22.33 surface I is at x=0 with outward normal +x. The slab extends toward negative x. Flux is +750 and the opposite-face field is +577 N/C.",
+    "VP22.10.2 is 2.40 microN from the stated data. The printed answer is 2.42 microN; the extracted mN is an OCR representation of microN.",
+    "VP22.12.4 inner-surface charge is -4.00 nC. The printed chapter answer has the wrong sign (+4.00 nC).",
+    "MCAT22.63 choice (c) is -80 microC, not milliC.",
+    "Exercise22.46 historical note gives 1910, while Rutherford's original nuclear-atom paper is dated 1911. Primary source: https://personal.math.ubc.ca/~cass/rutherford/rutherford669.html",
+    "Magnitude-only field measurements do not determine the sign of charge; the relevant solutions state this explicitly."
+  ],
+  "numericEvidence": "qa/physics/chapter22/numeric-checks.json",
+  "renderReview": "passed",
+  "publication": "not-requested-for-this-chapter",
+  "renderEvidence": "qa/physics/browser/results.json",
+  "renderViewports": [
+    360,
+    375,
+    1440
+  ],
+  "figureReview": "Manually inspected PDF crops and corrected clipped labels and diagrams.",
+  "numericCheckGroups": 58
+}

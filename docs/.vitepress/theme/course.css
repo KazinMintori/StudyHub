@@ -5,6 +5,8 @@
 .course-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); font-size: var(--fs-small); color: var(--ink-3); margin: var(--space-4) 0 var(--space-6); font-variant-numeric: tabular-nums; }
 .course-meta a { color: var(--tim); display: inline-flex; align-items: center; min-height: 44px; }
 .course-part-section { margin-top: var(--space-7); }
+.course-overview-tabs { scroll-margin-top: calc(var(--vp-nav-height) + var(--space-4)); }
+.course-overview-tabs + div { scroll-margin-top: calc(var(--vp-nav-height) + var(--space-4)); }
 .part-banner h2 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.35; margin-bottom: var(--space-2); }
 .part-description { color: var(--ink-2); font-size: var(--fs-ui); margin-bottom: var(--space-4); }
 .lecture-list { border-top: 1px solid var(--rule); margin-top: var(--space-4); }

@@ -2,7 +2,8 @@
 layout: page
 search: false
 course: xac-suat-thong-ke
-legacyKind: slides
 ---
 
-<LegacyCourseRoute />
+# Slides
+
+Slides not available because the Creator too lazy

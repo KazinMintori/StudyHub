@@ -7,6 +7,7 @@ import { lecturePath } from '../lecture-model.mjs'
 import { studyLink } from './links'
 const {frontmatter}=useData(), router=useRouter()
 onMounted(()=>{
+  if (frontmatter.value.legacyKind === 'slides') return
   const course=findCourse(frontmatter.value.course), hash=window.location.hash.slice(1)
   let target=`/${course.id}/`
   if(frontmatter.value.legacyKind==='foundations')target=concepts[hash]?`/wiki/${hash}`:'/wiki/'
@@ -14,4 +15,7 @@ onMounted(()=>{
   target=studyLink(target);window.history.replaceState({},'',target);router.go(target)
 })
 </script>
-<template><p class="course-shell">Các phần đã được gom theo từng bài giảng. Đang mở địa chỉ mới…</p></template>
+<template>
+  <p v-if="frontmatter.legacyKind === 'slides'" class="course-shell empty-state">Slides not available because the Creator too lazy</p>
+  <p v-else class="course-shell">Các phần đã được gom theo từng bài giảng. Đang mở địa chỉ mới…</p>
+</template>
