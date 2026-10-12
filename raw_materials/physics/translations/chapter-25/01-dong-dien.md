@@ -56,10 +56,10 @@ $$
 
 $$
 \begin{aligned}
-1\,\mathrm{mA}&=10^{-3}\,\mathrm A,\qquad
-1\,\mathrm{\mu A}=10^{-6}\,\mathrm A,\\
-1\,\mathrm{nA}&=10^{-9}\,\mathrm A,\qquad
-1\,\mathrm{pA}=10^{-12}\,\mathrm A.
+1\,\mathrm{mA}&=10^{-3}\,\mathrm A,\\
+1\,\mathrm{\mu A}&=10^{-6}\,\mathrm A,\\
+1\,\mathrm{nA}&=10^{-9}\,\mathrm A,\\
+1\,\mathrm{pA}&=10^{-12}\,\mathrm A.
 \end{aligned}
 $$
 

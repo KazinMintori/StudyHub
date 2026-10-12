@@ -20,11 +20,11 @@ Các nhãn/chữ tiếng Anh nhìn thấy trong nguồn và bản Việt đề n
 
 | Hình | Trang | Chữ tiếng Anh trong hình | Nghĩa tiếng Việt |
 | --- | ---: | --- | --- |
-| 25.21 | 828 | Circuit element; a; b; \(V_a\); \(V_b\); I | Phần tử mạch; đầu a; đầu b; điện thế tại a; điện thế tại b; dòng điện |
-| 25.22 | 829 | Diagrammatic circuit; emf source with internal resistance \(r\); External circuit; Battery; Headlight; The emf source converts nonelectrical to electrical energy at a rate \(EI\); Its internal resistance dissipates energy at a rate \(I^2r\); The difference \(EI-I^2r\) is its power output | Sơ đồ mạch; nguồn suất điện động có điện trở trong \(r\); mạch ngoài; pin; đèn pha; nguồn chuyển hóa năng lượng không điện thành điện năng với tốc độ \(EI\); điện trở trong tỏa năng lượng với tốc độ \(I^2r\); hiệu \(EI-I^2r\) là công suất đầu ra |
-| 25.23 | 829 | Battery (small emf); Alternator (large emf) | Pin (suất điện động nhỏ); máy phát điện (suất điện động lớn) |
-| 25.24 | 830 | Các nhãn trong sơ đồ là ký hiệu/đại lượng toán học: \(V_{ab}=V_{a'b'}=8\,\mathrm V\), \(\mathcal E=12\,\mathrm V\), \(r=2\,\Omega\), \(R=4\,\Omega\), \(I=2\,\mathrm A\) | Không có nhãn văn bản tiếng Anh cần dịch ngoài ký hiệu và đơn vị |
-| 25.25 | 831 | \(V_{ab}=0\), \(r=2\,\Omega\), \(\mathcal E=12\,\mathrm V\), \(R=0\), \(I=6\,\mathrm A\) | Không có nhãn văn bản tiếng Anh cần dịch ngoài ký hiệu và đơn vị |
+| 25.21 | 828 | Figure caption: “The power input to the circuit element between a and b is \(P=(V_a-V_b)I=V_{ab}I\)”; Circuit element; a; b; \(V_a\); \(V_b\); I | Chú thích: Công suất đưa vào phần tử mạch giữa a và b là \(P=(V_a-V_b)I=V_{ab}I\); phần tử mạch; đầu a; đầu b; điện thế tại a; điện thế tại b; dòng điện |
+| 25.22 | 829 | Figure caption: “Energy conversion in a simple circuit”; Diagrammatic circuit; emf source with internal resistance \(r\); External circuit; Battery; Headlight; The emf source converts nonelectrical to electrical energy at a rate \(EI\); Its internal resistance dissipates energy at a rate \(I^2r\); The difference \(EI-I^2r\) is its power output | Chú thích: Chuyển hóa năng lượng trong mạch đơn giản; sơ đồ mạch; nguồn suất điện động có điện trở trong \(r\); mạch ngoài; pin; đèn pha; nguồn chuyển hóa năng lượng không điện thành điện năng với tốc độ \(EI\); điện trở trong tỏa năng lượng với tốc độ \(I^2r\); hiệu \(EI-I^2r\) là công suất đầu ra |
+| 25.23 | 829 | Figure caption: “When two sources are connected in a simple loop circuit, the source with the larger emf delivers energy to the other source”; Battery (small emf); Alternator (large emf) | Chú thích: Khi hai nguồn nối trong một mạch vòng đơn giản, nguồn có suất điện động lớn hơn truyền năng lượng cho nguồn kia; pin (suất điện động nhỏ); máy phát điện (suất điện động lớn) |
+| 25.24 | 830 | Figure caption: “Our sketch for this problem”; circuit labels \(V_{ab}=V_{a'b'}=8\,\mathrm V\), \(\mathcal E=12\,\mathrm V\), \(r=2\,\Omega\), \(R=4\,\Omega\), \(I=2\,\mathrm A\) | Chú thích: Sơ đồ dùng cho bài toán; các nhãn còn lại là ký hiệu/đại lượng toán học |
+| 25.25 | 831 | Figure caption: “Our sketch for this problem”; circuit labels \(V_{ab}=0\), \(r=2\,\Omega\), \(\mathcal E=12\,\mathrm V\), \(R=0\), \(I=6\,\mathrm A\) | Chú thích: Sơ đồ dùng cho bài toán; các nhãn còn lại là ký hiệu/đại lượng toán học |
 
 ## Phần 25.6: Lý thuyết dẫn điện trong kim loại
 
@@ -42,9 +42,8 @@ Nhãn và chú thích tiếng Anh cần dịch trong map:
 
 | Hình | Trang | Chữ tiếng Anh trong hình | Nghĩa tiếng Việt |
 | --- | ---: | --- | --- |
-| 25.26(a) | 832 | Collision with crystal; START; END; With \(\vec E\) field: random motion | Va chạm với mạng tinh thể; bắt đầu; kết thúc; khi có điện trường \(\vec E\): chuyển động ngẫu nhiên |
-| 25.26(b) | 832 | START; END; With \(\vec E\) field: random motion plus drift; Net displacement | Bắt đầu; kết thúc; khi có điện trường \(\vec E\): chuyển động ngẫu nhiên cộng với độ trôi; độ dời thuần |
-| 25.27 | 832 | Caption: “The motion of a ball rolling down an inclined plane and bouncing off pegs in its path is analogous to the motion of an electron in a metallic conductor with an electric field present.” | Chú thích: Chuyển động của quả cầu lăn xuống mặt phẳng nghiêng và nảy khi va vào các chốt tương tự chuyển động electron trong vật dẫn kim loại có điện trường. |
+| 25.26 | 832 | Figure caption: “Random motions of an electron in a metallic crystal (a) with zero electric field and (b) with an electric field that causes drift. The curvatures of the paths are greatly exaggerated”; Collision with crystal; START; END; Without \(\vec E\) field: random motion; With \(\vec E\) field: random motion plus drift; Net displacement | Chú thích: Chuyển động ngẫu nhiên của electron trong tinh thể kim loại (a) khi không có điện trường và (b) khi có điện trường gây ra độ trôi. Độ cong quỹ đạo được phóng đại nhiều; va chạm với mạng tinh thể; bắt đầu; kết thúc; khi không có điện trường \(\vec E\): chuyển động ngẫu nhiên; khi có điện trường \(\vec E\): chuyển động ngẫu nhiên cộng độ trôi; độ dời thuần |
+| 25.27 | 832 | Figure caption: “The motion of a ball rolling down an inclined plane and bouncing off pegs in its path is analogous to the motion of an electron in a metallic conductor with an electric field present.” | Chú thích: Chuyển động của quả cầu lăn xuống mặt phẳng nghiêng và nảy khi va vào các chốt tương tự chuyển động electron trong vật dẫn kim loại có điện trường. |
 
 ## Kiểm tra số
 
@@ -56,6 +55,6 @@ Nhãn và chú thích tiếng Anh cần dịch trong map:
 | 25.9 | Dòng 1,2 A; điện áp tải 9,6 V; tải 11,52 W (làm tròn 12 W); chuyển hóa 14,4 W; nhiệt trong pin 2,88 W. |
 | 25.10 | Dòng ngắn mạch 6 A; chuyển hóa 72 W; nhiệt trong pin 72 W; công suất ra bằng 0. |
 | Câu kiểm tra 25.5 | \(55\ \mathrm W>7{,}2\ \mathrm W>1{,}4\ \mathrm W\), theo thứ tự (iii), (ii), (i). |
-| 25.11 | \(\tau\approx2{,}4\times10^{-14}\) s; \(1/\tau\approx4{,}2\times10^{13}\) s⁻¹. |
+| 25.11 | Từ dữ kiện chưa làm tròn, \(\tau=2{,}434\times10^{-14}\) s và \(1/\tau=4{,}108\times10^{13}\) s⁻¹. Nguồn làm tròn \(\tau\) thành \(2{,}4\times10^{-14}\) s rồi ghi nghịch đảo gần đúng \(4{,}2\times10^{13}\) s⁻¹. |
 
 Phạm vi nguồn đã soạn là toàn bộ mục 25.5–25.6 cùng các ví dụ, chiến lược giải và câu tự kiểm đi kèm trong trang 828–835. Báo cáo không xác nhận độ hoàn tất các mục 25.1–25.4, bài tập cuối chương, hình crop đích chưa được tạo, hay hiển thị trong trình duyệt.
