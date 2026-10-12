@@ -48,7 +48,13 @@ const resume = computed(() => {
   const course = courseCatalog.find(c => c.lessons.some(l => l.status === 'ready' && progressKey(c, l) === path))
   if (!course) return null
   const lesson = course.lessons.find(l => progressKey(course, l) === path)
-  return { course, lesson, path, heading: typeof saved.heading === 'string' ? saved.heading : '' }
+  return {
+    course,
+    lesson,
+    path,
+    heading: typeof saved.heading === 'string' ? saved.heading : '',
+    headingTitle: typeof saved.headingTitle === 'string' ? saved.headingTitle : ''
+  }
 })
 const resumeLink = computed(() => resume.value ? `${resume.value.path}#${resume.value.heading || 'notes'}` : '')
 
@@ -59,7 +65,9 @@ const defaultStarter = computed(() => {
       return {
         course,
         lesson,
-        path: `/${course.id}/bai-giang/${lesson.slug}`
+        path: `/${course.id}/bai-giang/${lesson.slug}`,
+        heading: '',
+        headingTitle: ''
       }
     }
   }
@@ -81,14 +89,29 @@ const activeResumeLink = computed(() => {
       <div class="resume-card-inner">
         <div class="resume-copy">
           <div class="resume-header-row">
-            <span class="course-badge">{{ activeResume.course.name }}</span>
-            <span v-if="getLessonChapter(activeResume.course, activeResume.lesson)" class="resume-chapter-tag">
-              {{ getLessonChapter(activeResume.course, activeResume.lesson) }}
+            <span class="resume-kicker">
+              <svg class="resume-kicker-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>{{ resume ? 'Tiếp tục bài giảng' : 'Bắt đầu học' }}</span>
             </span>
+            <span class="resume-top-divider" aria-hidden="true">·</span>
+            <span class="course-badge">{{ activeResume.course.name }}</span>
+            <template v-if="getLessonChapter(activeResume.course, activeResume.lesson)">
+              <span class="resume-path-sep" aria-hidden="true">/</span>
+              <span class="resume-chapter-name">{{ getLessonChapter(activeResume.course, activeResume.lesson) }}</span>
+            </template>
           </div>
           <h2 id="resume-heading" class="resume-title">
             {{ getLessonDetailTitle(activeResume.course, activeResume.lesson) }}
           </h2>
+          <div v-if="activeResume.headingTitle" class="resume-bookmark">
+            <svg class="resume-bookmark-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+            <span>Đang đọc: <strong>{{ activeResume.headingTitle }}</strong></span>
+          </div>
         </div>
 
         <div class="resume-action">
