@@ -305,22 +305,42 @@ Mạng này không phải tổ hợp nối tiếp hoặc song song đơn giản,
 $$
 \begin{aligned}
 13\,\mathrm V-I_1(1\,\Omega)
--(I_1-I_3)(1\,\Omega)&=0,\\
+-(I_1-I_3)(1\,\Omega)&=0.
+\end{aligned}
+\tag{1}
+$$
+
+$$
+\begin{aligned}
 -I_2(1\,\Omega)
 -(I_2+I_3)(2\,\Omega)
-+13\,\mathrm V&=0,\\
++13\,\mathrm V&=0.
+\end{aligned}
+\tag{2}
+$$
+
+$$
+\begin{aligned}
 -I_1(1\,\Omega)-I_3(1\,\Omega)
 +I_2(1\,\Omega)&=0.
 \end{aligned}
+\tag{3}
 $$
 
 Từ phương trình thứ ba, $I_2=I_1+I_3$. Thay vào phương trình thứ hai, rồi thu gọn phương trình thứ nhất, ta được
 
 $$
 \begin{aligned}
-13\,\mathrm V&=I_1(2\,\Omega)-I_3(1\,\Omega),\\
+13\,\mathrm V&=I_1(2\,\Omega)-I_3(1\,\Omega).
+\end{aligned}
+\tag{1'}
+$$
+
+$$
+\begin{aligned}
 13\,\mathrm V&=I_1(3\,\Omega)+I_3(5\,\Omega).
 \end{aligned}
+\tag{2'}
 $$
 
 Nhân phương trình đầu với $5$ rồi cộng phương trình sau, ta khử được $I_3$:
