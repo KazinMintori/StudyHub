@@ -7,381 +7,779 @@ title: "Đường thẳng, đoạn thẳng và tập affine"
 description: "Tham số hóa đường thẳng bằng θ, tập affine, tổ hợp affine, ý nghĩa của điều kiện tổng hệ số bằng 1, cấu trúc không gian con tịnh tiến, tập nghiệm của Ax = b và bao affine."
 ---
 
-Ở phổ thông, đường thẳng thường được viết dưới dạng $y = ax + b$. Cách viết ấy rất tiện để vẽ đồ thị, nhưng nó có hai nhược điểm khi ta bước sang tối ưu. Nhược điểm thứ nhất là nó không mô tả được đường thẳng đứng, vì khi đó hệ số góc không tồn tại. Nhược điểm thứ hai nghiêm trọng hơn: Cách viết này gắn chặt với mặt phẳng hai chiều. Không ai viết "$y = ax + b$" cho một đường thẳng trong không gian các bộ trọng số của một mô hình có hàng triệu tham số, vậy mà trong học máy ta vẫn liên tục phải nói về những đường thẳng như thế.
+Ở bậc phổ thông, đường thẳng trong mặt phẳng thường được làm quen qua phương trình đại số quen thuộc $y = ax + b$. Cách biểu diễn này trực quan khi vẽ đồ thị hàm số, tuy nhiên lại bộc lộ hai hạn chế lớn khi bước vào lĩnh vực tối ưu hóa và trí tuệ nhân tạo. Thứ nhất, nó hoàn toàn bất lực trước các đường thẳng đứng vuông góc với trục hoành, bởi khi đó hệ số góc $a$ tiến tới vô cực. Thứ hai, cách tiếp cận này bị trói buộc chặt chẽ trong không gian hai chiều $\mathbb{R}^2$. Trong học máy hiện đại, không gian tham số của một mô hình học sâu thường chứa hàng triệu hoặc hàng tỷ chiều, nơi ta không thể dùng phương trình hai biến để khảo sát quỹ đạo tham số.
 
-Chương này cần một cách nói về đường thẳng, đoạn thẳng và "mặt phẳng" dùng được ở bất kỳ số chiều nào. Cách nói đó dựa trên một hình ảnh rất đời thường: Đứng ở một điểm, nhìn về phía một điểm khác, rồi đi một quãng theo hướng ấy. Toàn bộ trang này được xây lên từ hình ảnh đó. Ta sẽ thấy nó dẫn tới khái niệm **tập affine**. Khái niệm này giải thích vì sao tập nghiệm của một hệ phương trình tuyến tính trông như một không gian con bị đẩy lệch khỏi gốc tọa độ, và vì sao điều kiện "các hệ số cộng lại bằng 1" xuất hiện ở khắp nơi trong môn học.
+Chính vì vậy, ta cần một phương pháp mô tả đường thẳng, đoạn thẳng và các cấu trúc phẳng hoạt động nhất quán trên không gian $\mathbb{R}^n$ với số chiều tùy ý. Phương pháp này xuất phát từ một trực giác vật lý hết sức gần gũi: Chọn một điểm xuất phát làm mốc, định hướng nhìn về một điểm thứ hai, sau đó di chuyển một quãng đường theo hướng đó. Tư duy hình học này dẫn trực tiếp tới khái niệm **tập affine**. Khái niệm này làm sáng tỏ cấu trúc hình học của tập nghiệm hệ phương trình tuyến tính, đồng thời giải mã lý do vì sao điều kiện "tổng các trọng số bằng 1" lại xuất hiện xuyên suốt trong giải tích lồi và học máy.
 
-Để tiếp thu trọn vẹn nội dung này, kiến thức tiên quyết bao gồm phép cộng vector, phép nhân vô hướng và khái niệm không gian con tuyến tính. Về mặt trực giác hình học, một không gian con tuyến tính chính là một đường thẳng hoặc một mặt phẳng đi qua gốc tọa độ.
+Để tiếp thu bài học một cách tự nhiên và trọn vẹn nhất, kiến thức nền tảng cần nhớ là các phép toán vector cơ bản gồm phép cộng vector, phép nhân vô hướng với một số thực, cùng khái niệm không gian con tuyến tính (về mặt hình học, đó là các đường thẳng, mặt phẳng hoặc siêu phẳng đi qua gốc tọa độ).
 
-## 1. Một điểm chạy trên đường thẳng
+## 1. Điểm chạy trên đường thẳng và tham số hóa hình học
 
-Lấy hai điểm khác nhau $x_1, x_2 \in \mathbb{R}^n$. Với mỗi số thực $\theta$, ta đặt
+Giả sử ta xét hai điểm phân biệt $x_1, x_2 \in \mathbb{R}^n$. Với mỗi số thực $\theta \in \mathbb{R}$, ta lập biểu thức:
 
 $$
 y = \theta x_1 + (1-\theta)\,x_2 .
 $$
 
-Khi $\theta$ chạy trên toàn bộ trục số, điểm $y$ vạch ra đúng đường thẳng đi qua $x_1$ và $x_2$. Hai giá trị đặc biệt có thể kiểm tra ngay: Với $\theta = 0$, ta có $y = x_2$, còn với $\theta = 1$, ta có $y = x_1$.
+Khi tham số $\theta$ quét qua toàn bộ trục số thực $\mathbb{R}$, tập hợp các điểm $y$ vạch nên trọn vẹn đường thẳng duy nhất đi qua hai điểm $x_1$ và $x_2$. Ta có thể kiểm tra ngay hai mốc tọa độ đặc biệt:
+- Khi $\theta = 0$, điểm thu được chính là $y = 0 \cdot x_1 + 1 \cdot x_2 = x_2$.
+- Khi $\theta = 1$, điểm thu được chính là $y = 1 \cdot x_1 + 0 \cdot x_2 = x_1$.
 
-Công thức trên đúng nhưng chưa nói được nhiều với người đọc. Hãy gom các số hạng chứa $\theta$ lại:
+Để hiểu rõ bản chất chuyển động học của điểm $y$, ta gom nhóm các số hạng chứa $\theta$:
 
 $$
 y = x_2 + \theta\,(x_1 - x_2).
 $$
 
-Bây giờ công thức có thể đọc thành lời. Ta xuất phát từ điểm $x_2$, đi theo vector $x_1 - x_2$ (vector chỉ từ $x_2$ sang $x_1$), và đi một quãng bằng $\theta$ lần vector đó. Như vậy $\theta$ chính là tỉ lệ quãng đường đã đi từ $x_2$ về phía $x_1$. Với $\theta = \tfrac12$ ta dừng ở trung điểm, với $\theta = \tfrac13$ ta dừng ở điểm cách $x_2$ một phần ba đoạn. Khi $\theta > 1$, ta đã đi quá $x_1$. Còn khi $\theta < 0$, ta đi lùi ra phía sau $x_2$.
+Biểu thức trên mô tả một hành trình chuyển động rất rõ ràng:
+1. Điểm xuất phát ban đầu là vị trí mốc $x_2$.
+2. Vector chỉ phương dẫn đường là hiệu hai vector $x_1 - x_2$, tức vector có hướng từ vị trí $x_2$ hướng thẳng tới vị trí $x_1$.
+3. Tham số $\theta$ đóng vai trò là hệ số khuếch đại, xác định tỉ lệ khoảng cách tương đối mà ta di chuyển dọc theo vector định hướng đó.
 
-Các giá trị $0 \le \theta \le 1$ cho ra **đoạn thẳng** đóng nối $x_1$ với $x_2$. Chỉ cần thu hẹp miền của $\theta$, cùng một công thức đã sinh ra một đối tượng hình học khác. Ý tưởng "giữ nguyên công thức, đổi miền của hệ số" sẽ quay lại nhiều lần trong chương: Đoạn thẳng dẫn tới tập lồi, còn tia và hình quạt dẫn tới nón. Đây là một mẹo tư duy hình học cốt lõi cần đặc biệt lưu tâm ngay từ đầu.
+Từ góc nhìn này, ý nghĩa của các khoảng giá trị $\theta$ hiện lên rất cụ thể:
+- Với $\theta = \tfrac{1}{2}$, điểm $y = x_2 + \tfrac{1}{2}(x_1 - x_2) = \tfrac{x_1 + x_2}{2}$ dừng lại chính xác tại trung điểm của hai vị trí.
+- Với $\theta = \tfrac{1}{3}$, điểm $y$ cách vị trí mốc $x_2$ một phần ba độ dài quãng đường tiến về phía $x_1$.
+- Khi $0 \le \theta \le 1$, điểm $y$ luôn nằm trọn vẹn trên **đoạn thẳng** đóng nối giữa $x_1$ và $x_2$.
+- Khi $\theta > 1$, điểm $y$ vượt qua mốc $x_1$, tiến xa về phía phần kéo dài của đoạn thẳng.
+- Khi $\theta < 0$, đại lượng $\theta (x_1 - x_2)$ đảo chiều, khiến điểm $y$ lùi về phía sau của điểm mốc $x_2$.
 
-::: example Đi trên đường thẳng qua hai điểm cụ thể
-Chọn $x_1 = (4, 3)$ và $x_2 = (1, 1)$. Vector chỉ hướng là $x_1 - x_2 = (3, 2)$, nên mọi điểm trên đường thẳng có dạng
+Ý tưởng cốt lõi ở đây là: Cùng một dạng biểu thức toán học, nhưng khi ta thay đổi miền xác định của các hệ số trọng số, ta sẽ thu được các đối tượng hình học hoàn toàn khác nhau. Giữ nguyên tổng hệ số bằng 1 nhưng cho $\theta \in \mathbb{R}$ ta được đường thẳng, giới hạn $\theta \in [0, 1]$ ta được đoạn thẳng, và nếu cho $\theta \ge 0$ ta sẽ thu được một tia. Đây là nguyên lý tư duy nền tảng dẫn dắt từ tập affine tới tập lồi và nón lồi.
+
+::: example Tính toán chi tiết tọa độ điểm chạy trên đường thẳng
+Xét hai điểm cụ thể trong mặt phẳng $\mathbb{R}^2$: Điểm $x_1 = (4, 3)$ và điểm $x_2 = (1, 1)$.
+
+**Bước 1: Xác định vector chỉ phương và phương trình tham số**
+Vector dịch chuyển từ $x_2$ sang $x_1$ là:
 
 $$
-y = (1, 1) + \theta\,(3, 2) = (1 + 3\theta,\; 1 + 2\theta).
+v = x_1 - x_2 = (4 - 1,\; 3 - 1) = (3, 2).
 $$
 
-Với $\theta = \tfrac13$ ta được $y = (2, \tfrac53)$, một điểm trên đoạn và cách $x_2$ một phần ba quãng đường. Với $\theta = 2$ ta được $(7, 5)$, nằm trên phần kéo dài về phía $x_1$. Với $\theta = -1$ ta được $(-2, -1)$, nằm phía sau $x_2$.
+Phương trình tham số của đường thẳng đi qua $x_1$ và $x_2$ có dạng:
 
-Điểm $(10, 7)$ có thuộc đường thẳng này không? Từ tọa độ thứ nhất, $1 + 3\theta = 10$ cho $\theta = 3$. Thay $\theta = 3$ vào tọa độ thứ hai được $1 + 2\cdot 3 = 7$, khớp với điểm đã cho. Vậy $(10, 7)$ thuộc đường thẳng và ứng với $\theta = 3$. Làm tương tự với $(5, 4)$: Tọa độ thứ nhất đòi $\theta = \tfrac43$, còn tọa độ thứ hai đòi $\theta = \tfrac32$. Hai đòi hỏi mâu thuẫn nhau, nên $(5, 4)$ không nằm trên đường thẳng.
+$$
+y(\theta) = (1, 1) + \theta(3, 2) = (1 + 3\theta,\; 1 + 2\theta).
+$$
+
+**Bước 2: Khảo sát các điểm cụ thể tương ứng với từng miền giá trị của $\theta$**
+- Với $\theta = \tfrac{1}{3}$: Tọa độ là $y = (2,\; \tfrac{5}{3})$. Điểm này nằm bên trong đoạn thẳng nối $x_1$ và $x_2$, cách $x_2$ đúng một phần ba chiều dài đoạn thẳng.
+- Với $\theta = 2$: Tọa độ là $y = (7, 5)$. Điểm này nằm trên phần kéo dài vượt qua điểm $x_1$.
+- Với $\theta = -1$: Tọa độ là $y = (-2, -1)$, xác định từ $1 + 3(-1) = -2$ và $1 + 2(-1) = -1$. Điểm này nằm ở phần kéo dài lùi về phía sau điểm $x_2$.
+
+**Bước 3: Kiểm tra một điểm bất kỳ có nằm trên đường thẳng hay không**
+- Xét điểm $M(10, 7)$: Ta thiết lập hệ phương trình tìm tham số $\theta$:
+  $$
+  \begin{cases}
+  1 + 3\theta = 10 \implies 3\theta = 9 \implies \theta = 3 \\
+  1 + 2\theta = 7 \implies 2\theta = 6 \implies \theta = 3
+  \end{cases}
+  $$
+  Cả hai tọa độ đều cho cùng một giá trị $\theta = 3$. Do đó, điểm $M(10, 7)$ thuộc đường thẳng, ứng với vị trí $\theta = 3$.
+- Xét điểm $N(5, 4)$: Ta giải hệ điều kiện:
+  $$
+  \begin{cases}
+  1 + 3\theta = 5 \implies \theta = \tfrac{4}{3} \\
+  1 + 2\theta = 4 \implies \theta = \tfrac{3}{2}
+  \end{cases}
+  $$
+  Vì $\tfrac{4}{3} \ne \tfrac{3}{2}$, hai phương trình đưa ra hai đòi hỏi mâu thuẫn về cùng một tham số $\theta$. Kết luận: Điểm $N(5, 4)$ không nằm trên đường thẳng đi qua $x_1$ và $x_2$.
 :::
 
-Hình minh họa tương tác dưới đây mô phỏng trực quan mối quan hệ giữa hai điểm và đường thẳng đi qua chúng. Mô phỏng cho phép kéo thả $x_1, x_2$ hoặc trượt $\theta$. Cần chú ý các vạch nhỏ ghi giá trị $\theta$ dọc theo đường thẳng: Chúng cách đều nhau, phản ánh đúng bản chất "$\theta$ là tỉ lệ quãng đường".
+Mô phỏng tương tác dưới đây minh họa trực quan vị trí tương đối giữa hai điểm và đường thẳng đi qua chúng. Bạn có thể kéo thả hai điểm mốc $x_1, x_2$ hoặc điều chỉnh thanh trượt $\theta$ để quan sát chuyển động của điểm $y$:
 
 <AffineLab type="line" />
 
-Không có bước nào ở trên dùng đến việc $n = 2$. Với hai vector trong $\mathbb{R}^{1000}$, công thức $\theta x_1 + (1-\theta)x_2$ vẫn mô tả đường thẳng và đoạn thẳng nối chúng, dù ta không còn vẽ được. Trong học máy, người ta dùng đúng công thức này để "nhìn" một hàm mất mát nhiều triệu chiều: Lấy hai bộ trọng số $w_1, w_2$ của cùng một mạng và vẽ giá trị hàm mất mát tại $\theta w_1 + (1-\theta) w_2$ khi $\theta$ chạy từ 0 đến 1. Goodfellow, Vinyals và Saxe đã dùng cách nhìn qua một lát cắt thẳng như vậy để khảo sát đường đi từ điểm khởi tạo tới điểm đã huấn luyện. Một nghiên cứu sau đó của Frankle cho thấy trên các mạng và tập dữ liệu lớn hơn, bức tranh dọc lát cắt phức tạp hơn nhiều. Điều đáng giữ lại ở đây không phải là kết luận của các nghiên cứu ấy, mà là việc một đường thẳng trong không gian tham số được mô tả hoàn toàn bằng một số thực $\theta$.
+Cách xây dựng phương trình tham số này không phụ thuộc vào số chiều không gian. Với hai vector trọng số trong không gian tham số $1000$ chiều $\mathbb{R}^{1000}$, biểu thức $\theta w_1 + (1-\theta) w_2$ vẫn mô tả chính xác đường thẳng nối giữa hai cấu hình mạng nơ-ron. Trong nghiên cứu tối ưu hóa học sâu, các nhà khoa học thường dùng lát cắt tuyến tính một chiều này (linear interpolation) để đo đạc sự biến thiên của hàm mất mát khi di chuyển từ điểm khởi tạo ngẫu nhiên tới điểm tối ưu cục bộ.
 
-## 2. Tập affine: Tập giữ trọn mọi đường thẳng của nó
+## 2. Định nghĩa tập affine: Tập khép kín với mọi đường thẳng
 
-Bây giờ ta đặt câu hỏi ngược lại. Thay vì bắt đầu từ hai điểm rồi vẽ đường thẳng, ta bắt đầu từ một tập hợp và hỏi nó có "khép kín" đối với việc kẻ đường thẳng hay không.
+Sau khi đã hiểu cách kẻ một đường thẳng từ hai điểm cho trước, ta lật ngược lại vấn đề: Xét một tập hợp $C \subseteq \mathbb{R}^n$, liệu tập hợp đó có đặc tính hình học nào để mọi đường thẳng nối hai điểm bất kỳ của nó đều bị "giữ trọn" bên trong hay không?
 
-> **Định nghĩa.** Tập $C \subseteq \mathbb{R}^n$ là **tập affine** nếu với mọi $x_1, x_2 \in C$ và mọi $\theta \in \mathbb{R}$, ta có $\theta x_1 + (1-\theta)x_2 \in C$.
+> **Định nghĩa.** Tập hợp $C \subseteq \mathbb{R}^n$ được gọi là một **tập affine** nếu với mọi cặp điểm $x_1, x_2 \in C$ và với mọi số thực $\theta \in \mathbb{R}$, điểm kết hợp sau luôn thuộc về $C$:
+> $$
+> \theta x_1 + (1-\theta)\,x_2 \in C.
+> $$
 
-Nói bằng hình học, cứ chọn hai điểm khác nhau bất kỳ trong $C$ thì toàn bộ đường thẳng đi qua chúng phải nằm trong $C$, kể cả hai phần kéo dài vô hạn. Định nghĩa có hai chữ "mọi", và cả hai đều quan trọng. Chữ "mọi" thứ nhất áp lên cặp điểm: Chỉ một cặp điểm vi phạm là đủ để kết luận $C$ không affine. Chữ "mọi" thứ hai áp lên $\theta$: Không chỉ các điểm nằm giữa, mà cả những điểm rất xa ở hai đầu cũng phải thuộc $C$.
+Về mặt hình học trực quan, một tập là affine khi và chỉ khi: Nếu chọn hai điểm phân biệt bất kỳ nằm trong tập hợp, thì toàn bộ đường thẳng vô hạn đi qua hai điểm đó (kéo dài mãi mãi về cả hai phía) phải nằm lọt hoàn toàn trong tập hợp đó.
 
-Vài tập quen thuộc giúp ta cảm được định nghĩa. Một đường thẳng là tập affine, và một mặt phẳng trong $\mathbb{R}^3$ cũng vậy. Toàn bộ không gian $\mathbb{R}^n$ trực tiếp thỏa mãn định nghĩa tập affine. Hai trường hợp suy biến cũng thỏa định nghĩa: Tập chỉ có một điểm (khi $x_1 = x_2$ thì "đường thẳng" thu lại thành chính điểm đó) và tập rỗng (không có cặp điểm nào để kiểm tra, nên điều kiện thỏa mãn một cách tự nhiên theo logic mệnh đề).
+Định nghĩa này bao hàm hai lượng từ "với mọi" mang tính chuẩn mực toán học:
+1. **Với mọi cặp điểm**: Chỉ cần tìm ra một cặp điểm duy nhất trong tập hợp mà đường thẳng đi qua chúng bị chệch ra ngoài tập hợp dù chỉ một điểm, tập hợp đó lập tức mất đi tính chất affine.
+2. **Với mọi số thực $\theta$**: Điểm kết hợp phải nằm trong tập hợp không chỉ khi $0 \le \theta \le 1$ (phần đoạn thẳng ở giữa), mà còn phải đúng với cả những giá trị $\theta$ rất lớn hoặc nhận giá trị âm (hai đầu kéo dài).
 
-Những tập sau thì không affine, và mỗi trường hợp đều có một giá trị $\theta$ cụ thể làm hỏng định nghĩa:
+Các tập hợp affine quen thuộc trong thực tế bao gồm:
+- Một điểm đơn lẻ $\{x_0\}$: Khi $x_1 = x_2 = x_0$, biểu thức $\theta x_0 + (1-\theta) x_0 = x_0$ luôn thuộc tập hợp với mọi $\theta$. Đây là tập affine có số chiều bằng $0$.
+- Tập rỗng $\emptyset$: Thỏa mãn định nghĩa một cách tự nhiên theo logic hình thức, vì không tồn tại cặp điểm nào vi phạm điều kiện.
+- Một đường thẳng bất kỳ trong không gian: Có số chiều bằng $1$.
+- Một mặt phẳng bất kỳ trong $\mathbb{R}^3$: Có số chiều bằng $2$.
+- Toàn bộ không gian $\mathbb{R}^n$: Luôn chứa mọi đường thẳng nối các phần tử của nó.
 
-| Tập | Vì sao không phải tập affine |
-| --- | --- |
-| Đoạn thẳng $[x_1, x_2]$ với $x_1 \ne x_2$ | $\theta = 2$ cho điểm $2x_1 - x_2$, nằm ngoài đoạn |
-| Tia $\{x_0 + \theta v : \theta \ge 0\}$ với $v \ne 0$ | Hai điểm $x_0$ và $x_0 + v$ thuộc tia, nhưng $\theta = 2$ trong công thức $\theta x_0 + (1-\theta)(x_0+v)$ cho $x_0 - v$, nằm ngoài tia |
-| Đường tròn $x_1^2 + x_2^2 = 1$ | Đường thẳng qua $(1,0)$ và $(-1,0)$ đi qua gốc tọa độ, mà gốc không nằm trên đường tròn |
-| Hợp của hai đường thẳng song song | Đường thẳng nối một điểm trên đường này với một điểm trên đường kia đi ra ngoài cả hai |
+Ngược lại, bảng dưới đây phân tích cặn kẽ các tập hợp không thỏa mãn tính chất affine cùng phản ví dụ số học minh họa:
 
-::: tip Thử trả lời trước khi đọc tiếp
-Hợp của hai đường thẳng cắt nhau, chẳng hạn hai trục tọa độ trong mặt phẳng, có phải là tập affine không?
+| Tập hợp $C$ | Vì sao không phải là tập affine? | Phản ví dụ số học cụ thể |
+| :--- | :--- | :--- |
+| Đoạn thẳng $[x_1, x_2]$ với $x_1 \ne x_2$ | Bị giới hạn ở hai đầu mút, không chứa phần kéo dài vô hạn. | Chọn $\theta = 2$, điểm thu được là $2x_1 - x_2$. Điểm này vượt ra ngoài mút $x_1$ nên không thuộc đoạn thẳng. |
+| Tia $\{x_0 + \theta v : \theta \ge 0\}$ với $v \ne 0$ | Bị chặn ở gốc xuất phát $x_0$, không thể lùi về phía ngược lại. | Lấy hai điểm $x_0$ (ứng với $\theta = 0$) và $x_0 + v$ (ứng với $\theta = 1$). Với tham số $\theta = -1$, điểm $x_0 - v$ lọt ra ngoài tia. |
+| Đường tròn $x_1^2 + x_2^2 = 1$ | Là đường cong khép kín, không chứa bất kỳ đoạn thẳng thẳng tắp nào. | Lấy hai điểm đối xứng $(1, 0)$ và $(-1, 0)$ trên đường tròn. Tại $\theta = \tfrac{1}{2}$, trung điểm là gốc $(0, 0)$ có $0^2 + 0^2 = 0 \ne 1$, không thuộc đường tròn. |
+| Hợp của hai đường thẳng song song | Không chứa các đường chéo nối từ đường thẳng này sang đường thẳng kia. | Lấy $x_1$ thuộc đường thẳng thứ nhất và $x_2$ thuộc đường thẳng thứ hai. Trung điểm $\tfrac{x_1+x_2}{2}$ nằm ở dải không gian rỗng ở giữa hai đường thẳng. |
+
+::: tip Câu hỏi kiểm tra trực giác
+Xét hợp của hai trục tọa độ trong mặt phẳng $\mathbb{R}^2$: $C = \{(x_1, x_2) : x_1 x_2 = 0\}$. Tập hợp gồm hai đường thẳng cắt nhau vuông góc tại gốc tọa độ này có phải là tập affine hay không?
 :::
 
-<details><summary>Xem lời giải thích</summary>
+<details><summary>Xem phân tích chi tiết</summary>
 
-Không. Lấy $(1, 0)$ trên trục hoành và $(0, 1)$ trên trục tung. Trung điểm $(\tfrac12, \tfrac12)$, ứng với $\theta = \tfrac12$, không nằm trên trục nào. Hai đường thẳng giao nhau tại một điểm chung, nhưng việc có điểm chung không giúp chúng khép kín đối với phép kẻ đường thẳng giữa hai điểm thuộc hai nhánh khác nhau.
+**Trả lời**: Không phải là tập affine.
 
+**Chứng minh bằng phản ví dụ**:
+- Lấy điểm $A(1, 0)$ nằm trên trục hoành (thỏa mãn $1 \cdot 0 = 0 \implies A \in C$).
+- Lấy điểm $B(0, 1)$ nằm trên trục tung (thỏa mãn $0 \cdot 1 = 0 \implies B \in C$).
+- Lấy trung điểm ứng với trọng số $\theta = \tfrac{1}{2}$:
+  $$
+  M = \tfrac{1}{2} A + \tfrac{1}{2} B = \left(\tfrac{1}{2},\; \tfrac{1}{2}\right).
+  $$
+- Tích tọa độ tại điểm $M$ là $\tfrac{1}{2} \cdot \tfrac{1}{2} = \tfrac{1}{4} \ne 0$. Do đó, điểm $M$ không thuộc trục hoành cũng không thuộc trục tung, nghĩa là $M \notin C$.
+
+**Bài học sư phạm**: Dù hai đường thẳng cùng đi qua gốc tọa độ, việc hợp chúng lại không thể tạo thành một tập affine, bởi đoạn thẳng nối chéo giữa hai nhánh luôn rơi vào vùng không gian nằm ngoài cả hai đường thẳng.
 </details>
 
-## 3. Tổ hợp affine của nhiều điểm
+## 3. Tổ hợp affine của nhiều điểm và tọa độ trọng tâm
 
-Định nghĩa tập affine chỉ nói về hai điểm. Tuy nhiên, trong tính toán ta thường gặp những biểu thức có nhiều điểm hơn, chẳng hạn trọng tâm $\tfrac13(x_1 + x_2 + x_3)$ của một tam giác. Vì vậy ta mở rộng khái niệm.
+Định nghĩa tập affine ban đầu chỉ đề cập tới cặp hai điểm. Trong thực tế tính toán tối ưu và hình học tính toán, ta thường xuyên làm việc với các hệ thống gồm nhiều điểm đồng thời, chẳng hạn trọng tâm của một cụm dữ liệu $\tfrac{1}{k}\sum_{i=1}^k x_i$.
 
-> **Định nghĩa.** Một điểm có dạng $\theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k$ với $\theta_1 + \theta_2 + \cdots + \theta_k = 1$ được gọi là một **tổ hợp affine** của các điểm $x_1, \ldots, x_k$.
+> **Định nghĩa.** Một điểm $y$ được gọi là một **tổ hợp affine** của $k$ điểm $x_1, x_2, \dots, x_k \in \mathbb{R}^n$ nếu nó được biểu diễn dưới dạng:
+> $$
+> y = \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k = \sum_{i=1}^k \theta_i x_i,
+> $$
+> trong đó các hệ số số thực $\theta_i \in \mathbb{R}$ thỏa mãn ràng buộc chuẩn hóa:
+> $$
+> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \cdots + \theta_k = 1.
+> $$
 
-Các hệ số $\theta_i$ ở đây được phép âm, miễn là tổng của chúng bằng 1. Viết gọn bằng ký hiệu tổng, điểm đó là $\sum_{i=1}^{k} \theta_i x_i$ với $\sum_{i=1}^{k} \theta_i = 1$. Trường hợp $k = 2$ chính là công thức $\theta x_1 + (1-\theta)x_2$ ở mục 1, vì hai hệ số $\theta$ và $1 - \theta$ cộng lại bằng 1.
+Các hệ số $\theta_i$ ở đây hoàn toàn được phép nhận giá trị âm, miễn là tổng đại số của toàn bộ $k$ hệ số bằng đúng $1$. Khi $k = 2$, biểu thức này quay trở về đúng dạng $\theta_1 x_1 + \theta_2 x_2$ với $\theta_1 + \theta_2 = 1$, tức $\theta x_1 + (1-\theta)x_2$.
 
-Câu hỏi tự nhiên là: Một tập affine, vốn chỉ được định nghĩa qua các cặp điểm, có chứa mọi tổ hợp affine của nhiều điểm hay không? Câu trả lời là có, và cách chứng minh cho thấy rõ vai trò của điều kiện tổng bằng 1.
+Định lý nền tảng dưới đây khẳng định rằng: Tính chất khép kín trên từng cặp hai điểm là hoàn toàn đủ để bảo đảm tính khép kín trên mọi tổ hợp hữu hạn điểm.
 
-::: proof Tập affine chứa mọi tổ hợp affine của các điểm của nó
-Ta quy nạp theo số điểm $k$. Với $k = 1$, tổ hợp chỉ là $1\cdot x_1 = x_1 \in C$. Với $k = 2$, đó là định nghĩa.
+::: proof Định lý: Tập affine chứa trọn mọi tổ hợp affine của các phần tử của nó
+Giả sử $C$ là một tập affine. Ta chứng minh bằng phương pháp quy nạp toán học theo số lượng điểm $k$.
 
-Giả sử khẳng định đúng cho $k - 1$ điểm, với $k \ge 3$. Xét $y = \theta_1 x_1 + \cdots + \theta_k x_k$ với tổng các hệ số bằng 1. Không phải mọi $\theta_i$ đều bằng 1, vì nếu thế thì tổng của chúng bằng $k \ne 1$. Đánh số lại nếu cần để $\theta_k \ne 1$, rồi tách $y$ thành hai phần:
+**Bước cơ sở**:
+- Với $k = 1$: Biểu thức chỉ có một hệ số duy nhất $\theta_1 = 1$, điểm $y = 1 \cdot x_1 = x_1 \in C$. Khẳng định đúng.
+- Với $k = 2$: Đây chính là định nghĩa gốc của tập affine. Khẳng định đúng.
 
+**Bước quy nạp**:
+Giả sử mệnh đề đúng với mọi tổ hợp của $k - 1$ điểm ($k \ge 3$). Xét một tổ hợp affine bất kỳ của $k$ điểm thuộc $C$:
 $$
-y = (1 - \theta_k)\left(\frac{\theta_1}{1-\theta_k}x_1 + \cdots + \frac{\theta_{k-1}}{1-\theta_k}x_{k-1}\right) + \theta_k x_k .
+y = \sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k, \qquad \sum_{i=1}^k \theta_i = 1.
 $$
 
-Các hệ số trong ngoặc cộng lại bằng $\dfrac{\theta_1 + \cdots + \theta_{k-1}}{1 - \theta_k} = \dfrac{1-\theta_k}{1-\theta_k} = 1$. Vì vậy biểu thức trong ngoặc là một tổ hợp affine của $k - 1$ điểm, và theo giả thiết quy nạp nó là một điểm $z \in C$. Khi đó $y = (1-\theta_k)z + \theta_k x_k$ là tổ hợp affine của hai điểm $z, x_k \in C$, nên $y \in C$.
+Vì tổng $k$ hệ số bằng $1$ và $k \ge 3$, không thể xảy ra trường hợp mọi hệ số đều bằng $1$. Ta có thể đổi thứ tự đánh số các điểm nếu cần thiết để đảm bảo hệ số cuối cùng $\theta_k \ne 1$, đồng nghĩa với việc $1 - \theta_k \ne 0$.
+
+Bây giờ, ta áp dụng kỹ thuật phân rã gom nhóm đại số:
+$$
+\begin{aligned}
+y &= \sum_{i=1}^{k-1} \theta_i x_i + \theta_k x_k \\
+  &= (1 - \theta_k) \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i + \theta_k x_k .
+\end{aligned}
+$$
+
+Hãy kiểm tra tổng các hệ số mới bên trong dấu tổng thu gọn:
+$$
+\sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} = \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i = \frac{1 - \theta_k}{1 - \theta_k} = 1.
+$$
+
+Biểu thức $\sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i$ chính là một tổ hợp affine của $k - 1$ điểm thuộc $C$. Theo giả thiết quy nạp, điểm trung gian này là một điểm hợp lệ $z \in C$. Khi đó:
+$$
+y = (1 - \theta_k) z + \theta_k x_k .
+$$
+
+Đây chính là tổ hợp affine của hai điểm $z \in C$ và $x_k \in C$. Theo định nghĩa tập affine, điểm $y$ bắt buộc phải thuộc về $C$. Theo nguyên lý quy nạp toán học, định lý được chứng minh hoàn tất cho mọi $k \ge 1$.
 :::
 
-Điều kiện tổng bằng 1 được dùng đúng một lần, ở bước kiểm tra các hệ số trong ngoặc. Không có nó, phép chia tách trên không đưa ta về một tổ hợp affine ngắn hơn.
+### 3.1 Tọa độ trọng tâm (Barycentric Coordinates)
 
-### 3.1 Tọa độ trọng tâm
-
-Ba điểm không thẳng hàng trong mặt phẳng là đủ để "đi tới" mọi điểm của mặt phẳng bằng tổ hợp affine. Chính xác hơn, nếu $p_1, p_2, p_3$ không thẳng hàng thì mỗi điểm $y \in \mathbb{R}^2$ viết được duy nhất dưới dạng $y = \theta_1 p_1 + \theta_2 p_2 + \theta_3 p_3$ với $\theta_1 + \theta_2 + \theta_3 = 1$. Bộ ba $(\theta_1, \theta_2, \theta_3)$ được gọi là **tọa độ trọng tâm** (barycentric coordinates) của $y$ đối với tam giác.
-
-::: example Tọa độ trọng tâm trong một tam giác vuông
-Xét $A = (0, 0)$, $B = (4, 0)$, $C = (0, 4)$. Điểm $(1, 1)$ có tọa độ trọng tâm $(\tfrac12, \tfrac14, \tfrac14)$, vì
+Trong không gian hai chiều $\mathbb{R}^2$, nếu ba điểm $p_1, p_2, p_3$ không thẳng hàng (tạo thành một tam giác không suy biến), thì mọi điểm $y \in \mathbb{R}^2$ trên mặt phẳng đều được biểu diễn duy nhất dưới dạng một tổ hợp affine:
 
 $$
-\tfrac12(0,0) + \tfrac14(4,0) + \tfrac14(0,4) = (1, 1), \qquad \tfrac12 + \tfrac14 + \tfrac14 = 1 .
+y = \theta_1 p_1 + \theta_2 p_2 + \theta_3 p_3, \qquad \theta_1 + \theta_2 + \theta_3 = 1.
 $$
 
-Cả ba hệ số đều dương, và điểm $(1,1)$ nằm trong tam giác. Còn điểm $(3, 3)$ nằm ngoài tam giác, phía bên kia cạnh $BC$. Tọa độ trọng tâm của nó là $(-\tfrac12, \tfrac34, \tfrac34)$. Tổng vẫn bằng 1, nhưng hệ số gắn với $A$ đã âm. Hệ số âm ở $A$ cho biết điểm nằm khác phía với $A$ so với cạnh đối diện $BC$.
+Bộ ba số thực duy nhất $(\theta_1, \theta_2, \theta_3)$ này được gọi là **tọa độ trọng tâm** của điểm $y$ đối với tam giác $p_1 p_2 p_3$.
+
+::: example Thiết lập hệ phương trình tính tọa độ trọng tâm
+Trong mặt phẳng $\mathbb{R}^2$, xét tam giác vuông tại gốc với ba đỉnh:
+$A = (0, 0)$, $B = (4, 0)$, $C = (0, 4)$.
+
+**Trường hợp 1: Tính tọa độ trọng tâm của điểm $M(1, 1)$ nằm trong tam giác**
+Ta cần tìm bộ ba $(\theta_1, \theta_2, \theta_3)$ thỏa mãn phương trình vector và phương trình tổng chuẩn hóa:
+$$
+\theta_1 \begin{bmatrix} 0 \\ 0 \end{bmatrix} + \theta_2 \begin{bmatrix} 4 \\ 0 \end{bmatrix} + \theta_3 \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \qquad \theta_1 + \theta_2 + \theta_3 = 1.
+$$
+
+Khai triển thành hệ ba phương trình bậc nhất ba ẩn số:
+$$
+\begin{cases}
+4\theta_2 = 1 \\
+4\theta_3 = 1 \\
+\theta_1 + \theta_2 + \theta_3 = 1
+\end{cases}
+\implies
+\begin{cases}
+\theta_2 = \tfrac{1}{4} \\
+\theta_3 = \tfrac{1}{4} \\
+\theta_1 = 1 - \tfrac{1}{4} - \tfrac{1}{4} = \tfrac{1}{2}
+\end{cases}
+$$
+
+Kết quả: Tọa độ trọng tâm của điểm $M(1, 1)$ là $(\tfrac{1}{2},\; \tfrac{1}{4},\; \tfrac{1}{4})$.
+- Vì cả ba hệ số đều dương ngặt ($\theta_1 > 0, \theta_2 > 0, \theta_3 > 0$), điểm $M$ nằm lọt hoàn toàn bên trong tam giác $ABC$.
+
+**Trường hợp 2: Tính tọa độ trọng tâm của điểm $P(3, 3)$ nằm ngoài tam giác**
+Thiết lập hệ phương trình tìm tọa độ trọng tâm cho $P(3, 3)$:
+$$
+\begin{cases}
+4\theta_2 = 3 \implies \theta_2 = \tfrac{3}{4} \\
+4\theta_3 = 3 \implies \theta_3 = \tfrac{3}{4} \\
+\theta_1 + \theta_2 + \theta_3 = 1 \implies \theta_1 = 1 - \tfrac{3}{4} - \tfrac{3}{4} = -\tfrac{1}{2}
+\end{cases}
+$$
+
+Kết quả: Tọa độ trọng tâm của điểm $P(3, 3)$ là $(-\tfrac{1}{2},\; \tfrac{3}{4},\; \tfrac{3}{4})$.
+- Dù tổng ba hệ số vẫn bảo toàn bằng $1$, hệ số $\theta_1$ ứng với đỉnh $A$ nhận giá trị âm ($-\tfrac{1}{2} < 0$).
+- Dấu âm này mang ý nghĩa hình học sâu sắc: Điểm $P$ đã vượt qua cạnh đối diện $BC$, nằm ở phía đối nghịch hoàn toàn với đỉnh $A$.
 :::
 
-Hãy kéo điểm màu vàng trong mô phỏng sau. Khi điểm đi qua một cạnh, đúng một hệ số đổi dấu, và đó là hệ số của đỉnh đối diện cạnh ấy. Các đường nét đứt kéo dài ba cạnh chia mặt phẳng thành bảy miền theo dấu của ba hệ số.
+Mô phỏng tương tác dưới đây cho phép bạn kéo thả điểm kiểm tra trong mặt phẳng tam giác. Hãy quan sát cách các hệ số trọng tâm biến đổi dấu khi điểm vượt qua các đường kéo dài của ba cạnh tam giác:
 
 <AffineLab type="combination" />
 
-Tọa độ trọng tâm đóng vai trò đặc biệt quan trọng trong khoa học máy tính và kỹ thuật đồ họa. Khi tô màu bên trong một tam giác mà ba đỉnh mang ba màu khác nhau (chẳng hạn Red, Green, Blue), bộ xử lý đồ họa (GPU) tính toán màu sắc tại mỗi điểm ảnh nội suy bằng tổ hợp ba màu ở đỉnh với chính các hệ số trọng tâm $\theta_1, \theta_2, \theta_3$. Điểm ảnh nằm bên trong tam giác khi và chỉ khi mọi hệ số đều không âm, tạo nên sự pha trộn màu sắc mượt mà và tự nhiên.
+Trong đồ họa máy tính (Computer Graphics), các bộ xử lý đồ họa (GPU) dùng chính tọa độ trọng tâm để nội suy màu sắc (shading) và tọa độ chất liệu (texture mapping). Khi ba đỉnh tam giác mang ba thuộc tính màu khác nhau, mỗi điểm ảnh bên trong tam giác sẽ có màu sắc là tổ hợp affine $\theta_1 C_1 + \theta_2 C_2 + \theta_3 C_3$, đảm bảo quá trình pha trộn màu sắc diễn ra mượt mà và liên tục.
 
-## 4. Vì sao điều kiện lại là tổng bằng 1?
+## 4. Vì sao điều kiện bắt buộc phải là tổng các hệ số bằng 1?
 
-Đến đây ta đã dùng điều kiện $\sum_i \theta_i = 1$ nhiều lần mà chưa hỏi vì sao nó lại tự nhiên đến thế. Câu trả lời nằm ở sự khác nhau giữa một **điểm** và một **vector**.
+Đến đây, một câu hỏi sư phạm then chốt cần được giải đáp: Tại sao trong tổ hợp affine, tổng các hệ số trọng số bắt buộc phải bằng đúng 1 mà không thể là một con số nào khác?
 
-Một điểm là một vị trí, chẳng hạn vị trí của Hà Nội trên bản đồ. Một vector là một độ dời, chẳng hạn "đi 100 km về phía nam". Cộng hai độ dời với nhau thì có nghĩa. Nhân một độ dời với 2 cũng có nghĩa. Thế nhưng "Hà Nội cộng Huế" thì không có nghĩa gì cả. Con số ta tính ra phụ thuộc vào việc ta đặt gốc tọa độ ở đâu, mà gốc tọa độ chỉ là một quy ước của người vẽ bản đồ, không phải một phần của địa lý.
+Câu trả lời nằm ở sự phân biệt bản chất vật lý giữa một **vị trí (điểm)** và một **độ dời (vector)**:
+- Một **điểm** là một vị trí cụ thể trong không gian (chẳng hạn vị trí địa lý của Hà Nội). Điểm không thể tự cộng với điểm: "Hà Nội cộng Thành phố Hồ Chí Minh" là một biểu thức vô nghĩa trong vật lý.
+- Một **vector** là một độ dời (chẳng hạn di chuyển 100 km về hướng Nam). Ta hoàn toàn có thể cộng hai độ dời để tạo thành một độ dời tổng hợp, hoặc nhân độ dời với một số thực để tăng độ dài quãng đường.
 
-Phép tính nào trên các điểm thì không phụ thuộc vào quy ước ấy? Giả sử ta dời gốc tọa độ, khiến mọi điểm $x_i$ được ghi thành $x_i + c$ với cùng một vector $c$. Một tổ hợp bất kỳ $\sum_i \theta_i x_i$ khi đó trở thành
+Vị trí của một điểm trên hệ trục tọa độ phụ thuộc hoàn toàn vào vị trí ta chọn đặt gốc tọa độ $O$. Nếu một phép tính hình học phụ thuộc vào việc người vẽ bản đồ đặt gốc $O$ ở đâu, phép tính đó sẽ không có ý nghĩa khách quan.
+
+Giả sử ta thực hiện tịnh tiến gốc tọa độ đi một vector dời $c \in \mathbb{R}^n$. Khi đó, tọa độ của mỗi điểm $x_i$ trong hệ tọa độ mới sẽ chuyển thành $x_i + c$. Xét một tổ hợp tuyến tính tùy ý $\sum_{i=1}^k \theta_i x_i$:
 
 $$
-\sum_{i=1}^{k} \theta_i (x_i + c) = \sum_{i=1}^{k} \theta_i x_i + \Big(\sum_{i=1}^{k} \theta_i\Big) c .
+\sum_{i=1}^k \theta_i (x_i + c) = \sum_{i=1}^k \theta_i x_i + \left(\sum_{i=1}^k \theta_i\right) c .
 $$
 
-Nếu tổng các hệ số bằng 1 thì kết quả dời đúng một lượng $c$, giống hệt mọi điểm khác. Nghĩa là trong hệ tọa độ mới, nó vẫn chỉ cùng một vị trí như trước. Ngược lại, nếu tổng các hệ số là $s \ne 1$, kết quả dời một lượng $sc$ khác với $c$, và vị trí mà biểu thức chỉ ra thay đổi theo cách ta đặt gốc.
+Hãy so sánh kết quả này với tọa độ của một điểm thực sự: Khi tịnh tiến gốc, một điểm thực sự phải dịch chuyển đúng một lượng bằng $c$. Do đó, để tổ hợp điểm $\sum_{i=1}^k \theta_i x_i$ giữ nguyên vị trí hình học nội tại (không bị bóp méo hay trôi dạt theo việc chọn gốc tọa độ), hệ số trước vector tịnh tiến $c$ bắt buộc phải bằng 1:
 
-Nói cách khác, **tổ hợp affine là những tổ hợp có nghĩa hình học**, vì chúng không phụ thuộc vào gốc tọa độ. Trung bình có trọng số của các vị trí, như trọng tâm của một tam giác hay vị trí trung bình của một nhóm người, đều là tổ hợp affine. Còn phép cộng hai vị trí thì không phải.
+$$
+\sum_{i=1}^k \theta_i = 1.
+$$
 
-Mô phỏng dưới đây cho phép tùy ý dời gốc tọa độ $O$. Các mũi tên xuất phát từ $O$ là các vector vị trí của ba điểm, và chúng thay đổi khi $O$ di chuyển. Thế nhưng điểm màu tím, một tổ hợp affine, đứng yên hoàn toàn. Trái lại, điểm màu đỏ ứng với tổ hợp có tổng hệ số khác 1 sẽ bị dịch chuyển theo $O$.
+Nếu tổng các hệ số là một số $s \ne 1$, vị trí tính ra sẽ bị dời đi một đoạn $s \cdot c \ne c$. Điểm tính ra sẽ chạy tán loạn mỗi khi ta chọn một gốc tọa độ khác. Điều này khẳng định: **Tổ hợp affine là dạng tổ hợp duy nhất giữa các điểm bảo toàn tính bất biến đối với hệ quy chiếu**.
+
+Mô phỏng dưới đây cho phép bạn tự do kéo dời vị trí gốc tọa độ $O$. Điểm màu tím biểu diễn tổ hợp affine (tổng hệ số bằng 1) đứng yên bất biến trong không gian, trong khi điểm màu đỏ (tổng hệ số khác 1) bị kéo lê theo vị trí của gốc:
 
 <AffineLab type="origin" />
 
-Có một cách nhìn khác cho cùng hiện tượng. Mọi tổ hợp affine đều viết lại được thành "một điểm cộng với một vector":
+Một cách nhìn đại số tương đương là biến đổi tổ hợp affine thành dạng "một điểm mốc cộng với tổ hợp tuyến tính các vector độ dời":
 
 $$
-\theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k = x_1 + \theta_2 (x_2 - x_1) + \cdots + \theta_k (x_k - x_1),
+\begin{aligned}
+\sum_{i=1}^k \theta_i x_i &= \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
+&= (1 - \theta_2 - \cdots - \theta_k) x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
+&= x_1 + \theta_2 (x_2 - x_1) + \theta_3 (x_3 - x_1) + \cdots + \theta_k (x_k - x_1).
+\end{aligned}
 $$
 
-vì $\theta_1 = 1 - \theta_2 - \cdots - \theta_k$. Hiệu hai điểm $x_i - x_1$ là một độ dời, không phụ thuộc gốc tọa độ. Do đó vế phải là "đứng ở $x_1$, rồi đi theo một tổ hợp tuyến tính của các độ dời". Phép tính này hoàn toàn có nghĩa trên bản đồ.
+Mỗi hiệu số $x_i - x_1$ là một vector độ dời từ mốc $x_1$ tới mốc $x_i$, hoàn toàn không phụ thuộc vào gốc tọa độ. Do đó, biểu thức "đứng ở điểm $x_1$, di chuyển theo một tổ hợp tuyến tính của các vector độ dời" là một thao tác hình học chuẩn xác và độc lập tuyệt đối với mọi hệ tọa độ.
 
-Ngành hình học chỉ quan tâm tới những gì không đổi khi dời gốc và khi biến đổi bởi các ánh xạ affine (mục 8) được gọi là **hình học affine**. Trong đó có khái niệm đường thẳng, tính song song và tỉ lệ độ dài trên cùng một đường thẳng (chính là $\theta$). Ngược lại, khoảng cách và góc không thuộc về hình học affine, vì một ánh xạ affine có thể kéo dãn hay làm méo chúng. Sau này, khi gặp các tính chất bảo toàn qua ánh xạ affine như tính lồi, ta hiểu vì sao các tính chất này chỉ liên quan đến đoạn thẳng và tỉ lệ phân chia, mà không phụ thuộc vào độ dài hay khoảng cách Euclidean.
+## 5. Cấu trúc hình học: Mỗi tập affine là một không gian con được tịnh tiến
 
-## 5. Mỗi tập affine là một không gian con được tịnh tiến
+Từ các ví dụ về điểm, đường thẳng, mặt phẳng, ta nhận thấy tập affine luôn mang một hình thái hình học chung: Chúng là các cấu trúc "phẳng", không có độ cong, nhưng có thể không đi qua gốc tọa độ. Định lý sau đây mô tả chính xác mối liên hệ đại số giữa tập affine và không gian con tuyến tính.
 
-Ta đã thấy vài ví dụ tập affine: Điểm, đường thẳng, mặt phẳng, toàn không gian. Những ví dụ trên cho thấy tập affine luôn mang hình thái "phẳng". Kết quả sau đây biến cảm nhận trực quan ấy thành một mô tả toán học chính xác.
+> **Định lý.** Cho $C \subseteq \mathbb{R}^n$ là một tập affine khác rỗng, và chọn một điểm mốc tùy ý $x_0 \in C$. Khi đó:
+> 1. Tập hợp sai số dịch chuyển về gốc:
+>    $$
+>    V = C - x_0 = \{x - x_0 \mid x \in C\}
+>    $$
+>    là một không gian con tuyến tính của $\mathbb{R}^n$.
+> 2. Tập affine ban đầu được khôi phục bằng phép tịnh tiến không gian con $V$ theo vector $x_0$:
+>    $$
+>    C = V + x_0 = \{v + x_0 \mid v \in V\}.
+>    $$
 
-Nhắc lại, một **không gian con** $V \subseteq \mathbb{R}^n$ là tập khép kín với phép cộng và phép nhân với số: Nếu $v_1, v_2 \in V$ và $\alpha, \beta \in \mathbb{R}$ thì $\alpha v_1 + \beta v_2 \in V$. Đặc biệt, mọi không gian con khác rỗng đều chứa vector $0$.
+::: proof Chứng minh tính chất không gian con của V = C − x₀
+Để chứng minh $V$ là một không gian con tuyến tính, ta cần chứng minh $V$ khép kín đối với mọi tổ hợp tuyến tính: Lấy hai vector tùy ý $v_1, v_2 \in V$ và hai số thực bất kỳ $\alpha, \beta \in \mathbb{R}$, ta phải chứng tỏ $\alpha v_1 + \beta v_2 \in V$.
 
-> **Mệnh đề.** Cho $C$ là một tập affine và $x_0$ là một điểm bất kỳ thuộc $C$. Khi đó tập
-> $$V = C - x_0 = \{x - x_0 : x \in C\}$$
-> là một không gian con, và $C = V + x_0 = \{v + x_0 : v \in V\}$.
-
-Bằng lời, ta "kéo" tập $C$ về sao cho điểm $x_0$ trùng với gốc tọa độ, và thu được một không gian con. Ngược lại, $C$ chính là không gian con $V$ được tịnh tiến đi một đoạn $x_0$.
-
-::: proof Vì sao C − x₀ là một không gian con
-Lấy $v_1, v_2 \in V$ và $\alpha, \beta \in \mathbb{R}$. Theo định nghĩa của $V$, các điểm $v_1 + x_0$ và $v_2 + x_0$ thuộc $C$. Ta viết
-
+Theo định nghĩa của tập $V$, vì $v_1, v_2 \in V$ nên tồn tại hai điểm $x_1, x_2 \in C$ sao cho:
 $$
-\alpha v_1 + \beta v_2 + x_0 = \alpha (v_1 + x_0) + \beta (v_2 + x_0) + (1 - \alpha - \beta)\, x_0 .
+v_1 = x_1 - x_0 \implies x_1 = v_1 + x_0 \in C,
+$$
+$$
+v_2 = x_2 - x_0 \implies x_2 = v_2 + x_0 \in C.
 $$
 
-Ba hệ số $\alpha$, $\beta$ và $1 - \alpha - \beta$ cộng lại bằng 1, nên vế phải là một tổ hợp affine của ba điểm thuộc $C$. Theo mục 3, nó thuộc $C$. Vì vậy $\alpha v_1 + \beta v_2 + x_0 \in C$, tức là $\alpha v_1 + \beta v_2 \in V$.
+Xét biểu thức tịnh tiến của tổ hợp cần kiểm tra:
+$$
+\begin{aligned}
+(\alpha v_1 + \beta v_2) + x_0 &= \alpha (x_1 - x_0) + \beta (x_2 - x_0) + x_0 \\
+&= \alpha x_1 + \beta x_2 + (1 - \alpha - \beta) x_0 .
+\end{aligned}
+$$
+
+Quan sát ba hệ số trọng số của ba điểm $x_1, x_2, x_0 \in C$:
+$$
+\alpha + \beta + (1 - \alpha - \beta) = 1.
+$$
+
+Tổng ba hệ số bằng đúng $1$, do đó vế phải chính là một tổ hợp affine của ba điểm thuộc $C$. Vì $C$ là tập affine, điểm này bắt buộc phải thuộc về $C$. Ta đặt điểm đó là $x_3 \in C$:
+$$
+(\alpha v_1 + \beta v_2) + x_0 = x_3 \in C \implies \alpha v_1 + \beta v_2 = x_3 - x_0 \in V.
+$$
+
+Như vậy, $V$ khép kín với mọi phép cộng vector và phép nhân vô hướng. Kết luận: Không gian $V = C - x_0$ là một không gian con tuyến tính hoàn chỉnh.
 :::
 
-Điểm mấu chốt trong chứng minh: Số hạng $(1 - \alpha - \beta)x_0$ được bổ sung nhằm bảo đảm tổng hệ số cân bằng về 1. Đây là kỹ thuật chuẩn hóa điều kiện tổng bằng 1 mà ta sẽ gặp lại nhiều lần khi phân tích tập lồi.
-
-Ta cần làm rõ một đặc tính căn bản: Không gian con $V$ hoàn toàn độc lập với việc lựa chọn điểm mốc $x_0 \in C$. Cụ thể, nếu chọn một điểm mốc khác $x_0' \in C$, thì $x_0' - x_0 = u$ là một vector thuộc $V$, và
-
+::: example Minh họa cụ thể phép tịnh tiến đường thẳng về không gian con
+Trong mặt phẳng $\mathbb{R}^2$, xét đường thẳng:
 $$
-C - x_0' = (C - x_0) - u = V - u = V,
+C = \{(x_1, x_2) : 2x_1 - 3x_2 = 6\}.
 $$
 
-trong đó đẳng thức cuối đúng vì một không gian con không thay đổi khi ta dịch nó đi một vector của chính nó. Vì $V$ chỉ phụ thuộc vào $C$, ta có thể định nghĩa **số chiều của tập affine** $C$ là số chiều của $V$. Một điểm có số chiều 0, một đường thẳng có số chiều 1, một mặt phẳng có số chiều 2.
+Đường thẳng này không đi qua gốc tọa độ vì $2(0) - 3(0) = 0 \ne 6$.
 
-Mệnh đề cũng cho một cách nhận diện trực tiếp khi nào tập affine là không gian con. Nếu $0 \in C$ thì chọn $x_0 = 0$, ta được $C = V$. Ngược lại, mọi không gian con đều chứa 0 và trực tiếp thỏa mãn định nghĩa tập affine. Tóm lại, **một tập affine là không gian con khi và chỉ khi nó chứa gốc tọa độ**. Tập affine chính là không gian con "được phép đứng lệch khỏi gốc".
-
-## 6. Tập nghiệm của hệ phương trình tuyến tính
-
-Đến đây ta đã sẵn sàng cho ví dụ quan trọng nhất về tập affine, cũng là ví dụ xuất hiện trong gần như mọi bài toán tối ưu có ràng buộc đẳng thức.
-
-Cho $A \in \mathbb{R}^{m \times n}$ và $b \in \mathbb{R}^m$. Tập nghiệm $C = \{x : Ax = b\}$ là một tập affine. Để kiểm chứng, lấy $x_1, x_2 \in C$, tức là $Ax_1 = b$ và $Ax_2 = b$. Với mọi $\theta \in \mathbb{R}$,
-
+**Bước 1: Chọn điểm mốc thứ nhất $x_0 = (3, 0) \in C$**
+Xét tập dịch chuyển $V_1 = C - x_0$:
 $$
-A\big(\theta x_1 + (1-\theta)x_2\big) = \theta A x_1 + (1-\theta) A x_2 = \theta b + (1-\theta) b = b .
+v = x - x_0 = (x_1 - 3,\; x_2 - 0) \implies x_1 = v_1 + 3, \quad x_2 = v_2.
 $$
-
-Bước cuối dùng đúng điều kiện hai hệ số cộng lại bằng 1. Nếu thay $(\theta, 1-\theta)$ bằng hai hệ số tùy ý $(\alpha, \beta)$, vế phải sẽ là $(\alpha + \beta) b$, và nó chỉ bằng $b$ khi $\alpha + \beta = 1$ hoặc $b = 0$. Đó cũng là lý do tập nghiệm của hệ **thuần nhất** $Ax = 0$ là không gian con, còn tập nghiệm của hệ $Ax = b$ với $b \ne 0$ thì không.
-
-Không gian con gắn với $C$ là **không gian nghiệm** (null space) của $A$, ký hiệu $\mathcal{N}(A) = \{v : Av = 0\}$. Kết hợp với mục 5, ta được một điều quen thuộc từ đại số tuyến tính: Nếu $x_0$ là một nghiệm riêng của $Ax = b$, thì mọi nghiệm có dạng $x_0 + v$ với $v \in \mathcal{N}(A)$. "Nghiệm tổng quát bằng nghiệm riêng cộng nghiệm tổng quát của hệ thuần nhất" thực ra là một mệnh đề hình học: Tập nghiệm là không gian con $\mathcal{N}(A)$ được tịnh tiến tới $x_0$.
-
-Chiều ngược lại cũng đúng, dù ta không chứng minh chi tiết ở đây: **Mọi tập affine khác rỗng trong $\mathbb{R}^n$ đều là tập nghiệm của một hệ phương trình tuyến tính**. Ý chính như sau. Viết $C = x_0 + V$, chọn một cơ sở $a_1, \ldots, a_m$ của phần bù trực giao $V^{\perp}$ và lấy chúng làm các hàng của $A$, rồi đặt $b = Ax_0$. Khi đó $Ax = b$ đúng khi và chỉ khi $x - x_0$ vuông góc với mọi $a_i$, tức là $x - x_0 \in V$. Như vậy "tập affine" và "tập nghiệm của hệ tuyến tính" là hai cách gọi của cùng một loại đối tượng: Cách thứ nhất nhìn từ hình học, cách thứ hai nhìn từ đại số.
-
-::: example Một mặt phẳng trong không gian ba chiều
-Xét phương trình $x_1 + 2x_2 + 3x_3 = 6$ trong $\mathbb{R}^3$. Điểm $x_0 = (1, 1, 1)$ là một nghiệm vì $1 + 2 + 3 = 6$. Hệ thuần nhất $x_1 + 2x_2 + 3x_3 = 0$ có không gian nghiệm hai chiều, sinh bởi $(-2, 1, 0)$ và $(-3, 0, 1)$. Kiểm chứng trực tiếp từng vector cơ sở: Ta thấy $-2 + 2 + 0 = 0$ và $-3 + 0 + 3 = 0$. Vì vậy
-
+Thay vào phương trình xác định của $C$:
 $$
-C = \{(1,1,1) + s(-2,1,0) + t(-3,0,1) : S, t \in \mathbb{R}\}.
+2(v_1 + 3) - 3v_2 = 6 \implies 2v_1 + 6 - 3v_2 = 6 \implies 2v_1 - 3v_2 = 0.
 $$
+Như vậy, $V_1 = \{(v_1, v_2) : 2v_1 - 3v_2 = 0\}$. Đây là một đường thẳng đi qua gốc tọa độ, tức là một không gian con một chiều sinh bởi vector chỉ phương $(3, 2)$.
 
-Đây là một mặt phẳng không đi qua gốc tọa độ, song song với mặt phẳng $x_1 + 2x_2 + 3x_3 = 0$. Lấy thử $s = t = 1$ được điểm $(-4, 2, 2)$, và quả thật $-4 + 4 + 6 = 6$.
+**Bước 2: Chọn điểm mốc thứ hai $x_0' = (0, -2) \in C$**
+Xét tập dịch chuyển $V_2 = C - x_0'$:
+$$
+v = x - x_0' = (x_1 - 0,\; x_2 - (-2)) \implies x_1 = v_1, \quad x_2 = v_2 - 2.
+$$
+Thay vào phương trình của $C$:
+$$
+2v_1 - 3(v_2 - 2) = 6 \implies 2v_1 - 3v_2 + 6 = 6 \implies 2v_1 - 3v_2 = 0.
+$$
+Ta thấy $V_2$ hoàn toàn trùng khớp với $V_1$.
 :::
 
-Trong mặt phẳng, một phương trình $a_1 x_1 + a_2 x_2 = b$ (với $a_1, a_2$ không đồng thời bằng 0) cho một đường thẳng. Mô phỏng sau tách đường thẳng đó thành hai phần: Một nghiệm riêng $x_0$ và một hướng $d$ của không gian nghiệm thuần nhất. Khi thay đổi giá trị $b$, đường nét đứt đi qua gốc không thay đổi vị trí. Chỉ có lượng tịnh tiến $x_0$ thay đổi.
+Kết quả trên chứng minh một tính chất cơ bản: **Không gian con $V$ hoàn toàn độc lập với việc lựa chọn điểm mốc $x_0 \in C$**. Nếu chọn một điểm mốc khác $x_0' \in C$, hiệu $u = x_0' - x_0$ là một vector nằm trong $V$, và phép dời một không gian con bởi một vector của chính nó không làm thay đổi không gian con đó.
+
+Vì không gian con $V$ đi kèm với $C$ là duy nhất, ta định nghĩa **số chiều của tập affine** $C$ chính là số chiều của không gian con $V$:
+$$
+\dim(C) = \dim(V).
+$$
+- Một điểm đơn lẻ có số chiều bằng $0$.
+- Một đường thẳng có số chiều bằng $1$.
+- Một mặt phẳng có số chiều bằng $2$.
+
+Hệ quả trực tiếp: **Một tập affine là một không gian con khi và chỉ khi nó chứa gốc tọa độ $0$**. Khi tập affine không chứa gốc tọa độ, nó đơn thuần là một không gian con bị đẩy lệch song song khỏi vị trí gốc.
+
+## 6. Biểu diễn đại số: Tập nghiệm của hệ phương trình tuyến tính
+
+Mối liên hệ giữa tập affine và không gian con dẫn thẳng tới ví dụ trung tâm của toàn bộ lý thuyết tối ưu hóa: Hệ phương trình tuyến tính $Ax = b$.
+
+Cho ma trận $A \in \mathbb{R}^{m \times n}$ và vector vế phải $b \in \mathbb{R}^m$. Tập hợp tất cả các nghiệm:
+
+$$
+C = \{x \in \mathbb{R}^n : Ax = b\}
+$$
+
+luôn luôn là một tập affine.
+
+**Kiểm chứng trực tiếp bằng định nghĩa**:
+Lấy hai nghiệm tùy ý $x_1, x_2 \in C$, tức $Ax_1 = b$ và $Ax_2 = b$. Với mọi hệ số $\theta \in \mathbb{R}$, ta nhân ma trận $A$ với tổ hợp affine của hai nghiệm:
+
+$$
+\begin{aligned}
+A\big(\theta x_1 + (1-\theta)x_2\big) &= \theta A x_1 + (1-\theta) A x_2 \\
+&= \theta b + (1-\theta) b \\
+&= \big(\theta + (1-\theta)\big) b = 1 \cdot b = b .
+\end{aligned}
+$$
+
+Vì tích với ma trận $A$ luôn cho ra kết quả bằng $b$, điểm $\theta x_1 + (1-\theta)x_2$ luôn là một nghiệm hợp lệ của hệ phương trình, tức thuộc $C$. Do đó, tập nghiệm $C$ là một tập affine.
+
+Không gian con tuyến tính đi kèm với tập nghiệm $C$ chính là **không gian hạt nhân (null space / kernel)** của ma trận $A$:
+
+$$
+\mathcal{N}(A) = \{v \in \mathbb{R}^n : Av = 0\}.
+$$
+
+Nếu hệ phương trình có ít nhất một nghiệm riêng $x_0$ (thỏa mãn $Ax_0 = b$), thì mọi nghiệm của hệ đều biểu diễn dưới dạng:
+
+$$
+x = x_0 + v, \qquad v \in \mathcal{N}(A).
+$$
+
+Mệnh đề đại số quen thuộc "Nghiệm tổng quát của hệ không thuần nhất bằng một nghiệm riêng cộng với nghiệm tổng quát của hệ thuần nhất" thực chất là một phát biểu hình học: Tập nghiệm là không gian con $\mathcal{N}(A)$ được tịnh tiến song song một đoạn bằng vector $x_0$.
+
+::: example Giải và tham số hóa tập nghiệm của một siêu phẳng trong không gian 3D
+Xét phương trình mặt phẳng trong $\mathbb{R}^3$:
+$$
+x_1 + 2x_2 + 3x_3 = 6.
+$$
+
+Ma trận hệ số là $A = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \in \mathbb{R}^{1 \times 3}$ và $b = 6$.
+
+**Bước 1: Tìm một nghiệm riêng $x_0$**
+Chọn các biến tự do $x_2 = 0, x_3 = 0$, ta tính được ngay $x_1 = 6$. Ta có nghiệm riêng $x_0 = (6, 0, 0)$. Hoặc ta có thể chọn $x_0 = (1, 1, 1)$ vì $1(1) + 2(1) + 3(1) = 6$. Cả hai lựa chọn đều hoàn toàn chuẩn xác.
+
+**Bước 2: Tìm cơ sở của không gian nghiệm thuần nhất $\mathcal{N}(A)$**
+Xét phương trình thuần nhất $x_1 + 2x_2 + 3x_3 = 0$, ta rút ra $x_1 = -2x_2 - 3x_3$.
+Đặt hai biến tự do $x_2 = s$ và $x_3 = t$ ($s, t \in \mathbb{R}$):
+$$
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} -2s - 3t \\ s \\ t \end{bmatrix} = s \begin{bmatrix} -2 \\ 1 \\ 0 \end{bmatrix} + t \begin{bmatrix} -3 \\ 0 \\ 1 \end{bmatrix}.
+$$
+
+Hai vector chỉ phương cơ sở là $v_1 = (-2, 1, 0)$ và $v_2 = (-3, 0, 1)$. Hai vector này độc lập tuyến tính và sinh ra không gian con hai chiều $\mathcal{N}(A)$.
+
+**Bước 3: Biểu diễn hình học của tập nghiệm**
+Toàn bộ tập nghiệm $C$ được mô tả dưới dạng tịnh tiến:
+$$
+C = \left\{(1, 1, 1) + s(-2, 1, 0) + t(-3, 0, 1) \;\middle|\; s, t \in \mathbb{R}\right\}.
+$$
+Đây là một mặt phẳng hai chiều trong không gian $\mathbb{R}^3$, song song với mặt phẳng đi qua gốc tọa độ có phương trình $x_1 + 2x_2 + 3x_3 = 0$.
+:::
+
+Mô phỏng sau minh họa trực quan sự phân tách của một tập nghiệm thành vector nghiệm riêng $x_0$ và không gian nghiệm thuần nhất $\mathcal{N}(A)$:
 
 <AffineLab type="solutions" />
 
-### 6.1 Khi dữ liệu không đủ để chọn ra một bộ tham số
+Định lý đảo của đại số tuyến tính cũng khẳng định: **Mọi tập affine khác rỗng trong $\mathbb{R}^n$ đều có thể biểu diễn dưới dạng tập nghiệm của một hệ phương trình tuyến tính $Ax = b$**. Như vậy, "tập affine" trong hình học và "tập nghiệm của hệ phương trình tuyến tính" trong đại số là hai cách diễn đạt cho cùng một thực thể toán học.
 
-Kết quả "tập nghiệm là tập affine" có một hệ quả rất cụ thể trong học máy. Giả sử ta có $m$ mẫu dữ liệu và một mô hình tuyến tính với $n$ tham số, trong đó $n > m$. Đây là tình huống "nhiều tham số hơn dữ liệu" rất thường gặp với các mô hình lớn. Gọi $X \in \mathbb{R}^{m \times n}$ là ma trận dữ liệu, mỗi hàng là một mẫu, và $y \in \mathbb{R}^m$ là nhãn. Tập các bộ tham số khớp dữ liệu hoàn toàn, $\{w : Xw = y\}$, là một tập affine. Nếu các hàng của $X$ độc lập tuyến tính thì tập này khác rỗng, có số chiều $n - m \ge 1$, nên có vô số bộ tham số cùng cho sai số huấn luyện bằng 0.
+### 6.1 Ứng dụng trong học máy: Hiện tượng thừa tham số (Overparameterization)
 
-Vậy thuật toán huấn luyện sẽ chọn bộ nào? Hãy xem trường hợp nhỏ nhất: Một mẫu duy nhất với đặc trưng $(1, 1)$ và nhãn $2$. Mô hình $w_1 \cdot 1 + w_2 \cdot 1$ khớp dữ liệu khi $w_1 + w_2 = 2$, tức là trên cả một đường thẳng. Chạy phương pháp gradient cho hàm mất mát $f(w) = \tfrac12 (w_1 + w_2 - 2)^2$ với bước $\eta = \tfrac14$:
+Trong học máy hiện đại, đặc biệt là với các mạng nơ-ron sâu, số lượng tham số $n$ thường vượt xa số lượng mẫu dữ liệu huấn luyện $m$ ($n \gg m$).
 
-$$
-w^{(k+1)} = w^{(k)} - \eta\,\big(w_1^{(k)} + w_2^{(k)} - 2\big)\,(1, 1).
-$$
-
-Mỗi bước chỉ cộng thêm một bội của vector $(1, 1)$. Vì vậy, nếu xuất phát từ $w^{(0)} = (0, 0)$, mọi bước lặp đều nằm trên đường $w_1 = w_2$. Các bước đầu là $(0.5, 0.5)$ rồi $(0.75, 0.75)$, và dãy hội tụ về $(1, 1)$. Đây là giao điểm của đường $w_1 = w_2$ với tập nghiệm, cũng là nghiệm có chuẩn nhỏ nhất trong cả đường thẳng nghiệm. Nhưng nếu xuất phát từ $(2, -2)$, phần vuông góc với $(1,1)$ của điểm đầu không bao giờ bị xóa đi, và dãy hội tụ về $(3, -1)$. Đó vẫn là một nghiệm, chỉ là một nghiệm khác.
-
-Bài học từ ví dụ nhỏ này khá sâu. Khi tập nghiệm là một tập affine nhiều chiều, hàm mất mát không đủ để quyết định mô hình cuối cùng. Thuật toán tối ưu và điểm khởi tạo cùng tham gia vào lựa chọn đó. Lập luận "mọi bước lặp nằm trong $w^{(0)} + \operatorname{span}\{\text{các hàng của } X\}$" đúng cho mọi ma trận $X$, không riêng ví dụ này, và kết quả này sẽ được người học tự tay kiểm chứng trong phần bài tập thực hành.
-
-## 7. Bao affine
-
-Với một tập $C$ bất kỳ, chưa chắc affine, ta có thể hỏi: Tập affine nhỏ nhất chứa $C$ là gì? Câu trả lời được gọi là bao affine.
-
-> **Định nghĩa.** **Bao affine** của tập $C \subseteq \mathbb{R}^n$, ký hiệu $\operatorname{aff} C$, là tập mọi tổ hợp affine của các điểm thuộc $C$:
-> $$\operatorname{aff} C = \{\theta_1 x_1 + \cdots + \theta_k x_k : x_1, \ldots, x_k \in C,\ \theta_1 + \cdots + \theta_k = 1\}.$$
-
-Bao affine là tập affine nhỏ nhất chứa $C$, theo nghĩa nếu $S$ là một tập affine bất kỳ chứa $C$ thì $\operatorname{aff} C \subseteq S$. Lý do nằm ngay ở mục 3: Tập affine $S$ chứa mọi tổ hợp affine của các điểm của nó, trong đó có các điểm của $C$.
-
-Bảng dưới đây tổng hợp các ví dụ điển hình. Khuyến nghị người học tự giải thích từng trường hợp trước khi đối chiếu cột phân tích.
-
-| Tập $C$ | $\operatorname{aff} C$ | Số chiều |
-| --- | --- | --- |
-| Hai điểm khác nhau | Đường thẳng qua hai điểm | 1 |
-| Ba điểm không thẳng hàng trong $\mathbb{R}^3$ | Mặt phẳng qua ba điểm | 2 |
-| $\{(1,1), (2,2), (3,3)\}$ | Đường thẳng $x_1 = x_2$ | 1 |
-| Đường tròn đơn vị trong $\mathbb{R}^2$ | Cả mặt phẳng $\mathbb{R}^2$ | 2 |
-| Ba vector đơn vị $e_1, e_2, e_3$ trong $\mathbb{R}^3$ | Mặt phẳng $x_1 + x_2 + x_3 = 1$ | 2 |
-
-Dòng thứ tư có thể gây bất ngờ. Đường tròn là một đường cong, ta quen coi nó là đối tượng "một chiều". Nhưng không có đường thẳng nào chứa nó, nên tập affine nhỏ nhất chứa đường tròn là cả mặt phẳng. Dòng cuối cũng đáng chú ý: Tập các phân phối xác suất trên ba kết quả, những vector $p$ có $p_i \ge 0$ và $p_1 + p_2 + p_3 = 1$, nằm trọn trong mặt phẳng $x_1 + x_2 + x_3 = 1$. Mặt phẳng ấy là "không gian nền" tự nhiên của nó, dù cả hai đều nằm trong $\mathbb{R}^3$.
-
-Ý tưởng "không gian nền tự nhiên" là cầu nối sang chủ đề tiếp theo. Một hình vuông nằm phẳng trong $\mathbb{R}^3$ không có điểm trong nào nếu ta nhìn bằng con mắt của $\mathbb{R}^3$, nhưng nhìn trong mặt phẳng chứa nó thì nó có cả một miền trong rõ ràng. Bao affine cho ta đúng mặt phẳng đó.
-
-## 8. Hàm affine: Ánh xạ giữ nguyên tổ hợp affine
-
-Có tập affine thì cũng có hàm affine. Một hàm $f : \mathbb{R}^n \to \mathbb{R}^m$ được gọi là **affine** nếu nó có dạng $f(x) = Ax + b$ với $A \in \mathbb{R}^{m \times n}$ và $b \in \mathbb{R}^m$, tức là một hàm tuyến tính cộng thêm một hằng số. Tính chất quan trọng nhất của hàm affine là nó giữ nguyên tổ hợp affine. Nếu $\sum_i \theta_i = 1$ thì
+Giả sử ta xét mô hình hồi quy tuyến tính với ma trận dữ liệu $X \in \mathbb{R}^{m \times n}$ (mỗi hàng là một vector đặc trưng của một mẫu) và vector nhãn mục tiêu $y \in \mathbb{R}^m$. Tập hợp các bộ trọng số khớp hoàn hảo với toàn bộ tập dữ liệu huấn luyện (đạt sai số huấn luyện bằng 0) chính là tập nghiệm của hệ phương trình:
 
 $$
-f\Big(\sum_{i=1}^{k} \theta_i x_i\Big) = A\sum_{i=1}^{k} \theta_i x_i + b = \sum_{i=1}^{k} \theta_i A x_i + \Big(\sum_{i=1}^{k} \theta_i\Big) b = \sum_{i=1}^{k} \theta_i f(x_i).
+C = \{w \in \mathbb{R}^n : Xw = y\}.
 $$
 
-Một lần nữa, điều kiện tổng bằng 1 làm cho số hạng $b$ "đi qua" được dấu tổng. Với tổ hợp tuyến tính tùy ý thì đẳng thức này sai, trừ khi $b = 0$. Hệ quả trực tiếp là ảnh của một tập affine qua hàm affine lại là một tập affine, và ảnh của một đoạn thẳng là một đoạn thẳng (có thể suy biến thành một điểm), với cùng tỉ lệ $\theta$ trên đó.
+Khi các hàng của ma trận dữ liệu $X$ độc lập tuyến tính, hệ phương trình thiếu xác định này có vô số nghiệm. Tập nghiệm $C$ là một tập affine có số chiều bằng $n - m \ge 1$.
 
-Hàm affine xuất hiện phổ biến trong kiến trúc học sâu, đôi khi dưới một tên gọi gây nhầm lẫn. Tầng mà các thư viện gọi là "tầng tuyến tính" (linear layer) tính $Wx + b$. Theo định nghĩa của toán học, đó là một hàm affine, và nó chỉ là hàm tuyến tính khi độ lệch $b = 0$. Sự phân biệt này có hệ quả cụ thể: Hàm tuyến tính luôn biến $0$ thành $0$, còn hàm affine thì không.
+Một câu hỏi mang tính bản chất: **Thuật toán tối ưu hóa sẽ chọn nghiệm nào trong vô số nghiệm khả thi đó?**
 
-Cuối cùng, tập mức của một hàm affine nhận giá trị thực, $\{x : a^T x + c = 0\}$ với $a \ne 0$, là một tập affine có số chiều $n - 1$. Đó là **siêu phẳng**, đối tượng mà ta sẽ nghiên cứu kỹ ở một chủ đề sau. Ranh giới quyết định của một bộ phân loại tuyến tính, nơi điểm số $w^T x + b$ đổi dấu, chính là một siêu phẳng như vậy.
+Xét trường hợp cụ thể: Huấn luyện mô hình hai tham số $w_1, w_2$ trên một mẫu dữ liệu duy nhất có vector đặc trưng $x = (1, 1)$ và nhãn mục tiêu $y = 2$.
+Phương trình khớp dữ liệu là:
+$$
+w_1 \cdot 1 + w_2 \cdot 1 = 2 \implies w_1 + w_2 = 2.
+$$
+Tập nghiệm là một đường thẳng trong mặt phẳng tham số $\mathbb{R}^2$.
 
-## 9. Những câu hỏi để đào sâu
+Hàm mất mát bình phương:
+$$
+L(w) = \tfrac{1}{2}(w_1 + w_2 - 2)^2.
+$$
+Gradient của hàm mất mát tại điểm $w$:
+$$
+\nabla L(w) = (w_1 + w_2 - 2) \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+$$
 
-Các câu hỏi dưới đây không cần tính toán dài. Mỗi câu nhắm vào một chỗ mà định nghĩa dễ bị hiểu lệch. Hãy tự trả lời trước khi mở phần giải thích.
+Thuật toán Gradient Descent cập nhật theo công thức:
+$$
+w^{(k+1)} = w^{(k)} - \eta \nabla L(w^{(k)}) = w^{(k)} - \eta (w_1^{(k)} + w_2^{(k)} - 2) \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+$$
 
-**Câu 1.** Nếu chỉ cho phép $\theta \ge 0$ trong công thức $\theta x_1 + (1-\theta)x_2$, tập điểm thu được có hình dạng gì? Nó bắt đầu từ đâu và chạy về phía nào?
+Vector hiệu chỉnh ở mọi bước lặp luôn luôn cùng phương với vector $(1, 1)$, tức là vector hàng của ma trận dữ liệu $X$. Do đó:
+- **Nếu khởi tạo từ gốc tọa độ $w^{(0)} = (0, 0)$**: Toàn bộ các bước cập nhật sẽ bị giam giữ trên đường phân giác $w_1 = w_2$. Khi thuật toán hội tụ, nghiệm tìm được phải vừa thuộc đường $w_1 = w_2$, vừa thuộc đường nghiệm $w_1 + w_2 = 2$. Nghiệm duy nhất thỏa mãn là $w^* = (1, 1)$. Đây chính là nghiệm có chuẩn Euclid nhỏ nhất $\|w\|_2$ trong toàn bộ tập nghiệm.
+- **Nếu khởi tạo từ điểm $w^{(0)} = (2, -2)$**: Điểm khởi tạo nằm trên đường $w_1 - w_2 = 4$ vuông góc với $(1, 1)$. Thành phần hình chiếu này không bao giờ bị triệt tiêu bởi gradient, khiến thuật toán hội tụ về điểm $(3, -1)$.
 
-<details><summary>Xem lời giải thích</summary>
+Bài học sư phạm sâu sắc: Khi tập nghiệm là một tập affine nhiều chiều, hàm mất mát không đơn độc quyết định mô hình cuối cùng. Điểm khởi tạo và thuật toán tối ưu hóa đóng vai trò là cơ chế điều chuẩn ẩn (implicit regularization), trực tiếp quyết định nghiệm nào trong tập affine sẽ được lựa chọn.
 
-Viết lại thành $x_2 + \theta(x_1 - x_2)$ với $\theta \ge 0$. Ta xuất phát từ $x_2$ và chỉ được đi tới theo hướng $x_1 - x_2$. Kết quả là một tia có gốc tại $x_2$, đi qua $x_1$ (ứng với $\theta = 1$) rồi chạy mãi về phía sau $x_1$. Tia này không chứa những điểm nằm phía sau $x_2$, nên nó không phải tập affine.
+## 7. Bao affine (Affine Hull)
 
+Nếu một tập hợp $C \subseteq \mathbb{R}^n$ bất kỳ chưa phải là tập affine, ta có thể đặt câu hỏi: Không gian affine nhỏ nhất bao bọc lấy $C$ là gì?
+
+> **Định nghĩa.** **Bao affine** của tập hợp $C \subseteq \mathbb{R}^n$, ký hiệu là $\operatorname{aff}(C)$, là tập hợp tất cả các tổ hợp affine có thể tạo thành từ các phần tử của $C$:
+> $$
+> \operatorname{aff}(C) = \left\{\sum_{i=1}^k \theta_i x_i \;\middle|\; x_i \in C, \ \sum_{i=1}^k \theta_i = 1, \ k \ge 1\right\}.
+> $$
+
+Bao affine $\operatorname{aff}(C)$ là tập affine nhỏ nhất chứa $C$, theo nghĩa: Nếu $S$ là một tập affine bất kỳ thỏa mãn $C \subseteq S$, thì bắt buộc $\operatorname{aff}(C) \subseteq S$.
+
+::: example Phân tích bao affine của các tập hình học tiêu biểu
+1. **Tập gồm hai điểm phân biệt $\{x_1, x_2\}$**:
+   Bao affine là đường thẳng duy nhất đi qua hai điểm đó, có số chiều bằng $1$:
+   $$
+   \operatorname{aff}(\{x_1, x_2\}) = \{\theta x_1 + (1-\theta)x_2 \mid \theta \in \mathbb{R}\}.
+   $$
+2. **Đoạn thẳng nối hai điểm $[x_1, x_2]$**:
+   Dù đoạn thẳng bị chặn ở hai đầu mút, mọi tổ hợp affine tự do của các điểm trên đoạn thẳng sẽ kéo dài vô hạn về hai phía, tạo thành trọn vẹn đường thẳng chứa đoạn thẳng đó: $\operatorname{aff}([x_1, x_2]) = \operatorname{aff}(\{x_1, x_2\})$.
+3. **Đường tròn đơn vị $S^1 = \{(x_1, x_2) \in \mathbb{R}^2 \mid x_1^2 + x_2^2 = 1\}$**:
+   Đường tròn là đường cong một chiều. Tuy nhiên, không có bất kỳ đường thẳng một chiều nào có thể chứa trọn vẹn đường tròn. Cứ lấy ba điểm trên đường tròn, tổ hợp affine của chúng sẽ quét qua toàn bộ mặt phẳng. Do đó: $\operatorname{aff}(S^1) = \mathbb{R}^2$, có số chiều bằng $2$.
+4. **Tập ba vector đơn vị chuẩn tắc trong $\mathbb{R}^3$**:
+   Xét tập $\{e_1, e_2, e_3\}$ với các vector $e_1 = (1,0,0)$, $e_2 = (0,1,0)$, $e_3 = (0,0,1)$.
+   Mọi tổ hợp affine có dạng $\theta_1 e_1 + \theta_2 e_2 + \theta_3 e_3 = (\theta_1, \theta_2, \theta_3)$ với $\theta_1 + \theta_2 + \theta_3 = 1$.
+   Do đó, bao affine chính là mặt phẳng:
+   $$
+   \operatorname{aff}(\{e_1, e_2, e_3\}) = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_1 + x_2 + x_3 = 1\}.
+   $$
+   Mặt phẳng này có số chiều bằng $2$. Đây cũng chính là không gian nền tự nhiên chứa đơn hình xác suất (probability simplex) của ba biến cố rời rạc.
+:::
+
+Bao affine đóng vai trò là "không gian nền tự nhiên" của một tập hợp. Một hình vuông phẳng đặt trong không gian ba chiều $\mathbb{R}^3$ hoàn toàn không có điểm trong topo theo nghĩa quả cầu 3D (phần trong rỗng), nhưng khi xét trong không gian nền tự nhiên là bao affine của nó (mặt phẳng 2D chứa hình vuông), nó sở hữu một phần trong trọn vẹn gọi là **phần trong tương đối (relative interior)**.
+
+## 8. Hàm affine: Ánh xạ bảo toàn cấu trúc affine
+
+Đi cùng với tập affine là lớp hàm số bảo toàn cấu trúc này:
+
+> **Định nghĩa.** Một ánh xạ $f: \mathbb{R}^n \to \mathbb{R}^m$ được gọi là **hàm affine** nếu nó được biểu diễn dưới dạng:
+> $$
+> f(x) = Ax + b,
+> $$
+> trong đó $A \in \mathbb{R}^{m \times n}$ là một ma trận và $b \in \mathbb{R}^m$ là một vector hằng số.
+
+Đặc tính đại số quan trọng nhất của hàm affine là nó **bảo toàn hoàn toàn các tổ hợp affine**. Thật vậy, với mọi tập hợp điểm $x_1, \dots, x_k$ và mọi bộ trọng số thỏa mãn $\sum_{i=1}^k \theta_i = 1$:
+
+$$
+\begin{aligned}
+f\left(\sum_{i=1}^k \theta_i x_i\right) &= A\left(\sum_{i=1}^k \theta_i x_i\right) + b \\
+&= \sum_{i=1}^k \theta_i A x_i + 1 \cdot b \\
+&= \sum_{i=1}^k \theta_i A x_i + \left(\sum_{i=1}^k \theta_i\right) b \\
+&= \sum_{i=1}^k \theta_i (A x_i + b) = \sum_{i=1}^k \theta_i f(x_i).
+\end{aligned}
+$$
+
+::: example Minh họa tính bảo toàn tổ hợp affine qua hàm số cụ thể
+Xét hàm số $f: \mathbb{R} \to \mathbb{R}$ xác định bởi $f(x) = 2x + 3$ (ở đây $A = 2, b = 3$).
+
+Lấy hai điểm $x_1 = 1, x_2 = 5$. Giá trị hàm số tại hai điểm là:
+$$
+f(x_1) = 2(1) + 3 = 5, \qquad f(x_2) = 2(5) + 3 = 13.
+$$
+
+- **Trường hợp 1: Chọn tổ hợp affine với $\theta_1 = \tfrac{1}{4}, \theta_2 = \tfrac{3}{4}$ (tổng bằng 1)**:
+  Tọa độ điểm tổ hợp là $x = \tfrac{1}{4}(1) + \tfrac{3}{4}(5) = 4$.
+  Giá trị hàm số tại điểm tổ hợp: $f(4) = 2(4) + 3 = 11$.
+  Tổ hợp các giá trị hàm số:
+  $$
+  \tfrac{1}{4} f(x_1) + \tfrac{3}{4} f(x_2) = \tfrac{1}{4}(5) + \tfrac{3}{4}(13) = \tfrac{44}{4} = 11.
+  $$
+  Hai kết quả trùng khớp hoàn toàn: $f(\tfrac{1}{4} x_1 + \tfrac{3}{4} x_2) = \tfrac{1}{4} f(x_1) + \tfrac{3}{4} f(x_2)$.
+
+- **Trường hợp 2: Xét tổ hợp tuyến tính với $\alpha_1 = 1, \alpha_2 = 1$ (tổng bằng $2 \ne 1$)**:
+  Điểm kết hợp: $x = 1(1) + 1(5) = 6$, cho giá trị hàm số:
+  $$
+  f(6) = 2(6) + 3 = 15.
+  $$
+  Tổng hai giá trị hàm số: $f(x_1) + f(x_2) = 5 + 13 = 18 \ne 15$.
+  Đẳng thức bị phá vỡ vì hệ số tự do $b = 3$ bị nhân đôi ở vế phải thành $3 + 3 = 6$ thay vì $3$.
+:::
+
+Trong học sâu (Deep Learning), các tầng kết nối đầy đủ thường được gọi tên là `Linear Layer` (chẳng hạn `nn.Linear` trong PyTorch). Tuy nhiên, về mặt toán học chuẩn mực, phép biến đổi $y = Wx + b$ là một **ánh xạ affine**, và nó chỉ thực sự là ánh xạ tuyến tính thuần túy khi vector độ lệch (bias) triệt tiêu ($b = 0$).
+
+Hệ quả hình học:
+- Ảnh của một tập affine qua một hàm affine luôn luôn là một tập affine.
+- Tập mức của một hàm affine nhận giá trị thực, $\{x \mid a^T x + c = 0\}$ với $a \ne 0$, là một tập affine có số chiều $n - 1$, được gọi là một **siêu phẳng**. Siêu phẳng chính là ranh giới phân định lớp (decision boundary) của các thuật toán phân loại tuyến tính như Logistic Regression và Support Vector Machines (SVM).
+
+## 9. Các câu hỏi đào sâu tư duy
+
+Mỗi câu hỏi dưới đây nhằm làm sáng tỏ một góc nhìn bản chất dễ gây ngộ nhận. Bạn hãy suy ngẫm kỹ trước khi mở phần lời giải.
+
+**Câu 1.** Nếu trong công thức $\theta x_1 + (1-\theta)x_2$ ta chỉ cho phép $\theta \ge 0$, hình học của tập hợp điểm thu được là gì? Nó có phải là tập affine không?
+
+<details><summary>Xem phân tích chi tiết</summary>
+
+Viết lại dưới dạng chuyển động học: Biểu thức $y = x_2 + \theta(x_1 - x_2)$ với $\theta \ge 0$.
+- Khi $\theta = 0$, điểm ở mốc $x_2$.
+- Khi $\theta = 1$, điểm tới mốc $x_1$.
+- Khi $\theta > 1$, điểm tiếp tục đi thẳng về phía trước theo hướng $x_1 - x_2$.
+- Do $\theta \ge 0$, điểm không bao giờ được phép lùi về phía sau điểm $x_2$ (ứng với $\theta < 0$).
+
+Tập hợp thu được là một **tia (ray)** xuất phát từ gốc $x_2$ và đi qua $x_1$. Tia này không phải là tập affine vì nó không chứa các điểm ở phần kéo dài lùi về phía sau của $x_2$.
 </details>
 
-**Câu 2.** Nếu tập $C$ chứa đoạn thẳng nối hai điểm bất kỳ của nó, đã đủ để $C$ là tập affine chưa? Hãy chỉ ra chỗ thiếu trong suy luận đó và đưa ra một ví dụ cho thấy kết luận sai.
+**Câu 2.** Nếu một tập $C$ chứa toàn bộ đoạn thẳng nối hai điểm bất kỳ của nó, ta đã có thể kết luận $C$ là tập affine hay chưa?
 
-<details><summary>Xem lời giải thích</summary>
+<details><summary>Xem phân tích chi tiết</summary>
 
-Chứa đoạn thẳng chỉ bảo đảm các tổ hợp với $0 \le \theta \le 1$. Định nghĩa tập affine đòi hỏi mọi $\theta \in \mathbb{R}$. Hình tròn đặc $\{x : \|x\|_2 \le 1\}$ chứa mọi đoạn nối hai điểm của nó, nhưng đường thẳng qua $(0,0)$ và $(\tfrac12, 0)$ đi ra ngoài hình tròn, chẳng hạn tại điểm $(2, 0)$ ứng với $\theta = 4$ trong công thức $\theta(\tfrac12,0) + (1-\theta)(0,0)$. Tính chất trong nhận định trên chính là tính lồi, chủ đề của bài học tiếp theo. Mọi tập affine đều lồi, nhưng điều ngược lại không đúng.
+Chưa thể kết luận. Tập hợp chứa trọn vẹn đoạn thẳng nối hai điểm bất kỳ của nó được gọi là **tập lồi (convex set)**. Tập lồi chỉ đòi hỏi tính khép kín trên đoạn thẳng ứng với $\theta \in [0, 1]$, trong khi tập affine đòi hỏi tính khép kín trên toàn bộ đường thẳng kéo dài vô hạn với mọi $\theta \in \mathbb{R}$.
 
+**Phản ví dụ**: Hình tròn đóng $C = \{(x_1, x_2) : x_1^2 + x_2^2 \le 1\}$ là tập lồi vì đoạn thẳng nối hai điểm trong hình tròn luôn nằm trong hình tròn. Nhưng lấy hai điểm $(0, 0)$ và $(0.5, 0)$ thuộc $C$, đường thẳng đi qua chúng sẽ đi qua điểm $(2, 0)$ (ứng với $\theta = 4$), điểm này nằm ngoài hình tròn. Mọi tập affine đều lồi, nhưng điều ngược lại không đúng.
 </details>
 
-**Câu 3.** Tập nghiệm của hệ $x_1 + x_2 + x_3 = 1$ và $x_1 - x_3 = 0$ trong $\mathbb{R}^3$ có số chiều bằng bao nhiêu? Mô tả nó bằng một nghiệm riêng và một hướng.
+**Câu 3.** Giao của một họ các tập affine có phải là tập affine không? Hợp của chúng thì sao?
 
-<details><summary>Xem lời giải thích</summary>
+<details><summary>Xem phân tích chi tiết</summary>
 
-Hai phương trình độc lập (ma trận hệ số có hạng 2), nên không gian nghiệm thuần nhất có số chiều $3 - 2 = 1$, và tập nghiệm là một đường thẳng. Đặt $x_1 = x_3 = s$, phương trình đầu cho $x_2 = 1 - 2s$. Vậy tập nghiệm là $\{(0, 1, 0) + s(1, -2, 1) : s \in \mathbb{R}\}$. Với $s = 2$ ta được $(2, -3, 2)$, và quả thật $2 - 3 + 2 = 1$, $2 - 2 = 0$.
-
+- **Giao của các tập affine**: Luôn là một tập affine (kể cả giao của vô hạn tập affine).
+  *Chứng minh*: Giả sử $C = \bigcap_{i} C_i$ với mỗi $C_i$ là tập affine. Lấy hai điểm bất kỳ $x_1, x_2 \in C$. Khi đó $x_1, x_2 \in C_i$ với mọi $i$. Do mỗi $C_i$ là tập affine, toàn bộ đường thẳng $L = \{\theta x_1 + (1-\theta)x_2 : \theta \in \mathbb{R}\}$ đều nằm trong $C_i$ với mọi $i$. Do đó, đường thẳng $L$ nằm trong giao $C$.
+  *Ý nghĩa đại số*: Giao của các tập affine tương ứng với việc ghép nối thêm các phương trình tuyến tính ràng buộc vào hệ phương trình ban đầu.
+- **Hợp của các tập affine**: Nói chung **không** phải là tập affine. Hợp của hai trục tọa độ cắt nhau trong $\mathbb{R}^2$ là phản ví dụ kinh điển.
 </details>
 
-**Câu 4.** Giao của hai tập affine có phải là tập affine không? Còn hợp của chúng thì sao?
+**Câu 4.** Tập các số hữu tỉ trong mặt phẳng $\mathbb{Q}^2$ chứa trung điểm của hai điểm bất kỳ của nó, và chứa cả điểm đối xứng $2x_1 - x_2$. Tập này có phải là tập affine trong $\mathbb{R}^2$ không?
 
-<details><summary>Xem lời giải thích</summary>
+<details><summary>Xem phân tích chi tiết</summary>
 
-Giao luôn là tập affine. Nếu $x_1, x_2$ thuộc cả hai tập, thì mỗi tập chứa toàn bộ đường thẳng qua $x_1, x_2$, nên giao cũng chứa đường thẳng đó. Lập luận này dùng được cho giao của bất kỳ họ tập affine nào, kể cả vô hạn tập. Hợp thì nói chung không phải: Hai trục tọa độ trong câu hỏi ở mục 2 là một phản ví dụ. Theo ngôn ngữ đại số, giao tương ứng với việc gộp hai hệ phương trình thành một hệ lớn hơn, và tập nghiệm của hệ lớn vẫn là tập nghiệm của một hệ tuyến tính.
-
+Không phải là tập affine.
+Trung điểm tương ứng với $\theta = \tfrac{1}{2}$, điểm đối xứng tương ứng với $\theta = 2$. Việc lặp lại hai phép toán này chỉ sinh ra các tham số $\theta$ thuộc tập số hữu tỉ $\mathbb{Q}$.
+Định nghĩa tập affine đòi hỏi tính khép kín với **mọi số thực $\theta \in \mathbb{R}$**.
+Lấy hai điểm $x_1 = (1, 0) \in \mathbb{Q}^2$ và $x_2 = (0, 0) \in \mathbb{Q}^2$. Với tham số vô tỉ $\theta = \sqrt{2}$, điểm kết hợp là:
+$$
+y = \sqrt{2} (1, 0) + (1 - \sqrt{2}) (0, 0) = (\sqrt{2}, 0) \notin \mathbb{Q}^2.
+$$
+Ví dụ này khẳng định tầm quan trọng của trường số thực liên tục trong giải tích lồi.
 </details>
 
-**Câu 5.** Xét $\mathbb{Q}^2$, tập các điểm có hai tọa độ hữu tỉ. Nó chứa trung điểm của hai điểm bất kỳ của nó, và chứa cả điểm đối xứng $2x_1 - x_2$. Có thể kết luận $\mathbb{Q}^2$ là tập affine không?
+## 10. Bài tập tự luyện có lời giải chi tiết
 
-<details><summary>Xem lời giải thích</summary>
-
-Không. Trung điểm ứng với $\theta = \tfrac12$, điểm đối xứng ứng với $\theta = 2$, và lặp lại hai phép này chỉ sinh ra những giá trị $\theta$ hữu tỉ. Định nghĩa đòi mọi $\theta$ thực. Với $x_1 = (1, 0)$, $x_2 = (0, 0)$ và $\theta = \sqrt{2}$, ta được $(\sqrt{2}, 0) \notin \mathbb{Q}^2$. Câu hỏi này cho thấy chữ "mọi $\theta \in \mathbb{R}$" trong định nghĩa không phải chi tiết hình thức: Kiểm tra một số hữu hạn giá trị $\theta$ không đủ để kết luận.
-
-</details>
-
-**Câu 6.** Nếu một tập $C$ chứa gốc tọa độ và khép kín với phép lấy tổ hợp affine, thì $C$ có khép kín với phép cộng hai vector không?
-
-<details><summary>Xem lời giải thích</summary>
-
-Có. Với $x, y \in C$, tổng $x + y$ là tổ hợp affine $1\cdot x + 1\cdot y + (-1)\cdot 0$ của ba điểm $x, y, 0 \in C$, vì $1 + 1 - 1 = 1$. Tương tự, $\alpha x = \alpha x + (1-\alpha)\cdot 0$ thuộc $C$ với mọi $\alpha$. Do đó $C$ là một không gian con. Lập luận này chứng minh lại chiều "tập affine chứa gốc là không gian con" ở mục 5, theo một đường khác.
-
-</details>
-
-## 10. Bài tập tự luyện
-
-::: exercise 1. Đọc vị trí trên đường thẳng
-Cho $x_1 = (2, -1, 3)$ và $x_2 = (0, 1, 1)$ trong $\mathbb{R}^3$. Viết tham số hóa của đường thẳng qua hai điểm dưới dạng $x_2 + \theta(x_1 - x_2)$. Điểm $(5, -4, 6)$ có thuộc đường thẳng không? Nếu có, nó nằm trên đoạn $[x_2, x_1]$, phía sau $x_2$ hay phía trước $x_1$?
+::: exercise 1. Tham số hóa và xác định vị trí tương đối trên đường thẳng
+Trong không gian $\mathbb{R}^3$, cho hai điểm $x_1 = (2, -1, 3)$ và $x_2 = (0, 1, 1)$.
+1. Viết phương trình tham số của đường thẳng đi qua $x_1, x_2$ theo tham số $\theta$.
+2. Kiểm tra xem điểm $M(5, -4, 6)$ và điểm $N(1, 1, 2)$ có thuộc đường thẳng này không. Nếu có, hãy xác định điểm đó nằm trên đoạn $[x_2, x_1]$, phía sau $x_2$ hay vượt trước $x_1$.
 :::
 
 ::: hint
-Tìm $\theta$ từ một tọa độ rồi kiểm tra hai tọa độ còn lại.
+Tính vector chỉ phương $x_1 - x_2$, thiết lập phương trình từng tọa độ theo $\theta$ rồi đối chiếu tính nhất quán của $\theta$.
 :::
 
 ::: solution
-Vector chỉ hướng là $x_1 - x_2 = (2, -2, 2)$, nên mọi điểm có dạng $(2\theta,\ 1 - 2\theta,\ 1 + 2\theta)$. Tọa độ đầu cho $2\theta = 5$, tức $\theta = \tfrac52$. Kiểm tra: Ta thấy $1 - 2\cdot\tfrac52 = -4$ và $1 + 2\cdot\tfrac52 = 6$, khớp cả hai. Vậy điểm thuộc đường thẳng với $\theta = \tfrac52 > 1$, tức là nằm trên phần kéo dài, phía trước $x_1$ khi đi từ $x_2$ sang $x_1$.
+**Lời giải từng bước**:
+
+**Bước 1: Thiết lập phương trình tham số**
+Vector dịch chuyển từ $x_2$ sang $x_1$ là:
+$$
+v = x_1 - x_2 = (2 - 0,\; -1 - 1,\; 3 - 1) = (2, -2, 2).
+$$
+Mọi điểm $y$ trên đường thẳng có phương trình tham số:
+$$
+y(\theta) = x_2 + \theta(x_1 - x_2) = (0 + 2\theta,\; 1 - 2\theta,\; 1 + 2\theta) = (2\theta,\; 1 - 2\theta,\; 1 + 2\theta).
+$$
+
+**Bước 2: Kiểm tra điểm $M(5, -4, 6)$**
+Thiết lập hệ phương trình theo $\theta$:
+$$
+\begin{cases}
+2\theta = 5 \implies \theta = \tfrac{5}{2} \\
+1 - 2\theta = -4 \implies 2\theta = 5 \implies \theta = \tfrac{5}{2} \\
+1 + 2\theta = 6 \implies 2\theta = 5 \implies \theta = \tfrac{5}{2}
+\end{cases}
+$$
+Cả ba phương trình đều cho cùng một giá trị $\theta = \tfrac{5}{2} = 2.5$. Do đó, điểm $M$ thuộc đường thẳng.
+Vì $\theta = 2.5 > 1$, điểm $M$ nằm ở phần kéo dài vượt qua điểm $x_1$.
+
+**Bước 3: Kiểm tra điểm $N(1, 1, 2)$**
+Thiết lập hệ phương trình:
+$$
+\begin{cases}
+2\theta = 1 \implies \theta = \tfrac{1}{2} \\
+1 - 2\theta = 1 \implies 2\theta = 0 \implies \theta = 0
+\end{cases}
+$$
+Hai phương trình mâu thuẫn về giá trị $\theta$. Do đó, điểm $N(1, 1, 2)$ không thuộc đường thẳng.
 :::
 
-::: exercise 2. Tập nghiệm và số chiều
-Cho $A = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix}$ và $b = (2, 3)$. Tìm một nghiệm riêng của $Ax = b$, một cơ sở của $\mathcal{N}(A)$, và cho biết tập nghiệm có số chiều bao nhiêu.
+::: exercise 2. Xác định cấu trúc tập nghiệm và số chiều
+Cho hệ phương trình tuyến tính $Ax = b$ với:
+$$
+A = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix} \in \mathbb{R}^{2 \times 4}, \qquad b = \begin{bmatrix} 2 \\ 3 \end{bmatrix}.
+$$
+1. Tìm một nghiệm riêng $x_0$ của hệ phương trình.
+2. Xác định cơ sở của không gian nghiệm thuần nhất $\mathcal{N}(A)$.
+3. Biểu diễn tập nghiệm dưới dạng không gian con tịnh tiến và xác định số chiều của tập nghiệm.
 :::
 
 ::: solution
-Đặt $x_2 = 0$ và $x_4 = 0$, ta được $x_1 = 2$ và $x_3 = 3$, nên $x_0 = (2, 0, 3, 0)$ là một nghiệm riêng. Hệ thuần nhất cho $x_1 = -x_2$ và $x_3 = -x_2$, còn $x_4$ tùy ý. Chọn $x_2 = 1, x_4 = 0$ được $(-1, 1, -1, 0)$, chọn $x_2 = 0, x_4 = 1$ được $(0, 0, 0, 1)$. Hai vector này độc lập và sinh ra $\mathcal{N}(A)$. Tập nghiệm là $x_0 + \operatorname{span}\{(-1,1,-1,0), (0,0,0,1)\}$, một tập affine hai chiều trong $\mathbb{R}^4$. Số chiều cũng có thể suy ra từ hạng: $4 - \operatorname{rank} A = 4 - 2 = 2$.
+**Lời giải từng bước**:
+
+**Bước 1: Tìm nghiệm riêng $x_0$**
+Hệ phương trình tương đương:
+$$
+\begin{cases}
+x_1 + x_2 = 2 \\
+x_2 + x_3 = 3
+\end{cases}
+$$
+Ta có thể chọn hai biến tự do $x_2 = 0$ và $x_4 = 0$. Khi đó:
+$$
+x_1 = 2 - 0 = 2, \qquad x_3 = 3 - 0 = 3.
+$$
+Ta thu được một nghiệm riêng: $x_0 = (2, 0, 3, 0)$.
+
+**Bước 2: Tìm cơ sở của $\mathcal{N}(A)$**
+Xét hệ thuần nhất $Ax = 0$:
+$$
+\begin{cases}
+x_1 + x_2 = 0 \implies x_1 = -x_2 \\
+x_2 + x_3 = 0 \implies x_3 = -x_2
+\end{cases}
+$$
+Hai biến $x_2$ và $x_4$ hoàn toàn tự do. Đặt $x_2 = s$ và $x_4 = t$ ($s, t \in \mathbb{R}$):
+$$
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} -s \\ s \\ -s \\ t \end{bmatrix} = s \begin{bmatrix} -1 \\ 1 \\ -1 \\ 0 \end{bmatrix} + t \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}.
+$$
+Hai vector chỉ phương cơ sở là $v_1 = (-1, 1, -1, 0)$ và $v_2 = (0, 0, 0, 1)$. Hai vector này độc lập tuyến tính và sinh ra không gian hạt nhân $\mathcal{N}(A)$.
+
+**Bước 3: Biểu diễn hình học và số chiều**
+Tập nghiệm của hệ phương trình là tập affine:
+$$
+C = \left\{(2, 0, 3, 0) + s(-1, 1, -1, 0) + t(0, 0, 0, 1) : s, t \in \mathbb{R}\right\}.
+$$
+Số chiều của tập nghiệm bằng số chiều của $\mathcal{N}(A)$:
+$$
+\dim(C) = n - \operatorname{rank}(A) = 4 - 2 = 2.
+$$
+Tập nghiệm là một mặt phẳng affine hai chiều trong không gian bốn chiều $\mathbb{R}^4$.
 :::
 
-::: exercise 3. Kiểm tra tập affine qua các đường thẳng
-Chứng minh rằng một tập $C$ là affine khi và chỉ khi giao của $C$ với mọi đường thẳng là một tập affine.
-:::
-
-::: hint
-Một chiều là hệ quả của câu 4 ở mục 9. Với chiều còn lại, hãy chọn đúng đường thẳng đi qua hai điểm của $C$ cần kiểm chứng.
+::: exercise 3. Khảo sát bao affine và tính chất không gian con
+Tìm bao affine của hai tập hợp sau và cho biết tập nào là không gian con tuyến tính:
+1. Tập $S_1 = \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}$ trong $\mathbb{R}^3$.
+2. Tập $S_2 = \{(1, 2),\; (3, 6)\} \subset \mathbb{R}^2$.
 :::
 
 ::: solution
-Nếu $C$ affine, giao của nó với một đường thẳng $L$ là giao của hai tập affine, nên affine theo câu 4. Ngược lại, giả sử mọi giao $C \cap L$ đều affine. Lấy $x_1 \ne x_2$ thuộc $C$ và gọi $L$ là đường thẳng qua chúng. Tập $C \cap L$ là affine và chứa $x_1, x_2$, nên chứa mọi $\theta x_1 + (1-\theta)x_2$. Các điểm này thuộc $C \cap L \subseteq C$. Nếu $x_1 = x_2$ thì mọi tổ hợp đều bằng $x_1 \in C$. Vậy $C$ affine.
+**Lời giải từng bước**:
+
+**Xét tập $S_1$**:
+Mọi tổ hợp affine của ba điểm thuộc $S_1$ có dạng:
+$$
+y = \theta_1 (1,0,0) + \theta_2 (0,1,0) + \theta_3 (0,0,1) = (\theta_1, \theta_2, \theta_3), \qquad \theta_1 + \theta_2 + \theta_3 = 1.
+$$
+Đặt $x_1 = \theta_1, x_2 = \theta_2, x_3 = \theta_3$, ta thấy tập hợp này chính là mặt phẳng:
+$$
+\operatorname{aff}(S_1) = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_1 + x_2 + x_3 = 1\}.
+$$
+Mặt phẳng này không chứa gốc tọa độ $0 = (0, 0, 0)$ vì $0 + 0 + 0 = 0 \ne 1$.
+Kết luận: Bao affine $\operatorname{aff}(S_1)$ là một tập affine hai chiều nhưng **không phải** là một không gian con tuyến tính.
+
+**Xét tập $S_2$**:
+Tập $S_2$ gồm hai điểm $p_1 = (1, 2)$ và $p_2 = (3, 6)$.
+Vector chỉ phương là $p_2 - p_1 = (2, 4) = 2(1, 2)$.
+Bao affine là đường thẳng đi qua hai điểm:
+$$
+y(\theta) = (1, 2) + \theta(2, 4) = (1 + 2\theta,\; 2 + 4\theta).
+$$
+Quan sát thấy tỉ số giữa hai tọa độ luôn thỏa mãn: $x_2 = 2x_1 \implies 2x_1 - x_2 = 0$.
+Do đó:
+$$
+\operatorname{aff}(S_2) = \{(x_1, x_2) \in \mathbb{R}^2 \mid 2x_1 - x_2 = 0\}.
+$$
+Đường thẳng này đi qua gốc tọa độ $(0, 0)$ (ứng với $\theta = -0.5$).
+Kết luận: Bao affine $\operatorname{aff}(S_2)$ là một tập affine một chiều và **chính là một không gian con tuyến tính** của $\mathbb{R}^2$.
 :::
 
-::: exercise 4. Bao affine của một tập điểm
-Viết $\operatorname{aff}\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}$ dưới dạng tập nghiệm của một phương trình tuyến tính. Làm tương tự với $\operatorname{aff}\{(1, 2), (3, 6)\}$ trong $\mathbb{R}^2$. Tập nào trong hai tập là không gian con?
-:::
+## Tóm tắt cốt lõi
 
-::: solution
-Tổ hợp affine của ba vector đơn vị là $(\theta_1, \theta_2, \theta_3)$ với $\theta_1 + \theta_2 + \theta_3 = 1$. Mọi điểm thỏa $x_1 + x_2 + x_3 = 1$ đều viết được như vậy bằng cách chọn $\theta_i = x_i$. Do đó bao affine là mặt phẳng $x_1 + x_2 + x_3 = 1$, không chứa gốc nên không phải không gian con. Với hai điểm $(1,2)$ và $(3,6)$, bao affine là đường thẳng qua chúng, và cả hai đều nằm trên đường $2x_1 - x_2 = 0$, vốn đi qua gốc. Vì vậy bao affine thứ hai là không gian con $\{x : 2x_1 = x_2\}$.
-:::
-
-::: exercise 5. Phương pháp gradient không rời khỏi một tập affine
-Cho $X \in \mathbb{R}^{m \times n}$ và $f(w) = \tfrac12 \|Xw - y\|_2^2$. Phương pháp gradient lặp $w^{(k+1)} = w^{(k)} - \eta X^T (X w^{(k)} - y)$. Chứng minh rằng mọi $w^{(k)}$ đều thuộc tập affine $w^{(0)} + \mathcal{R}(X^T)$, trong đó $\mathcal{R}(X^T)$ là không gian sinh bởi các hàng của $X$. Từ đó giải thích vì sao, trong ví dụ ở mục 6.1, xuất phát từ $(0, 0)$ cho nghiệm $(1, 1)$.
-:::
-
-::: hint
-Quan sát rằng mỗi bước cộng thêm một vector có dạng $X^T u$. Với ví dụ ở mục 6.1, hãy tìm giao của đường $w_1 = w_2$ với đường $w_1 + w_2 = 2$.
-:::
-
-::: solution
-Mỗi bước cộng vào $w^{(k)}$ vector $-\eta X^T(Xw^{(k)} - y)$, có dạng $X^T u$ với $u = -\eta(Xw^{(k)} - y)$, nên thuộc $\mathcal{R}(X^T)$. Quy nạp theo $k$ cho $w^{(k)} - w^{(0)} \in \mathcal{R}(X^T)$, tức $w^{(k)} \in w^{(0)} + \mathcal{R}(X^T)$. Với $X = [1 \;\; 1]$ ta có $\mathcal{R}(X^T) = \operatorname{span}\{(1,1)\}$, nên khi $w^{(0)} = 0$ mọi bước lặp nằm trên đường $w_1 = w_2$. Nếu dãy hội tụ về một nghiệm thì nghiệm đó phải nằm trên cả đường $w_1 = w_2$ lẫn đường $w_1 + w_2 = 2$, nên đó là $(1, 1)$. Để thấy dãy thật sự hội tụ với $\eta = \tfrac14$, đặt $s_k = w_1^{(k)} + w_2^{(k)}$. Công thức lặp cho $s_{k+1} - 2 = (1 - 2\eta)(s_k - 2)$. Với $\eta = \tfrac14$, hệ số $1 - 2\eta$ bằng $\tfrac12$, nên khoảng cách từ $s_k$ tới 2 giảm một nửa sau mỗi bước và $s_k \to 2$.
-:::
-
-## Tóm tắt
-
-Một đường thẳng qua hai điểm $x_1, x_2$ trong không gian bất kỳ được mô tả bởi $\theta x_1 + (1-\theta)x_2$, trong đó $\theta$ là tỉ lệ quãng đường đi từ $x_2$ về phía $x_1$. Giới hạn $0 \le \theta \le 1$ cho đoạn thẳng. Tập affine là tập chứa trọn đường thẳng qua hai điểm bất kỳ của nó, và nó cũng chứa mọi tổ hợp affine của các điểm của nó.
-
-Điều kiện "tổng hệ số bằng 1" là điều kiện để một phép trộn các điểm không phụ thuộc vào gốc tọa độ, vì vậy tổ hợp affine mang nghĩa hình học thật sự. Mỗi tập affine khác rỗng là một không gian con được tịnh tiến, và đó cũng chính là tập nghiệm của một hệ phương trình tuyến tính $Ax = b$, với không gian con đi kèm là $\mathcal{N}(A)$. Bao affine là tập affine nhỏ nhất chứa một tập cho trước. Hàm affine giữ nguyên tổ hợp affine, và "tầng tuyến tính" trong học sâu thực ra là một hàm affine.
-
-Sau bài học này, người học có thể tham số hóa đường thẳng và đoạn thẳng trong $\mathbb{R}^n$, đồng thời kiểm tra tính affine của một tập hợp bằng phản ví dụ cụ thể. Người học cũng làm chủ kỹ năng mô tả tập nghiệm của hệ tuyến tính qua nghiệm riêng cộng không gian nghiệm thuần nhất, và giải thích tường minh cơ chế thừa tham số trong mô hình học máy.
+1. **Phương trình đường thẳng & đoạn thẳng**: Đường thẳng đi qua $x_1, x_2$ được tham số hóa bằng $\theta x_1 + (1-\theta)x_2$ với $\theta \in \mathbb{R}$. Thu hẹp $\theta \in [0, 1]$ cho ta đoạn thẳng đóng.
+2. **Tập affine**: Là tập hợp khép kín với mọi đường thẳng đi qua hai điểm bất kỳ của nó. Một tập affine chứa trọn mọi tổ hợp affine $\sum_{i=1}^k \theta_i x_i$ với tổng trọng số chuẩn hóa $\sum_{i=1}^k \theta_i = 1$.
+3. **Ý nghĩa của điều kiện tổng bằng 1**: Là điều kiện cần và đủ để tổ hợp các vị trí điểm bất biến đối với phép tịnh tiến gốc tọa độ, phản ánh đúng bản chất vật lý độc lập với hệ quy chiếu.
+4. **Cấu trúc không gian con tịnh tiến**: Mọi tập affine khác rỗng $C$ đều có dạng $C = V + x_0$, trong đó $V = C - x_0$ là một không gian con tuyến tính duy nhất. Tập affine là không gian con khi và chỉ khi nó chứa gốc tọa độ $0$.
+5. **Tập nghiệm hệ tuyến tính**: Tập nghiệm của $Ax = b$ luôn là một tập affine với không gian con đi kèm là $\mathcal{N}(A)$. Ngược lại, mọi tập affine đều là tập nghiệm của một hệ phương trình tuyến tính thích hợp.
+6. **Hàm affine**: Ánh xạ $f(x) = Ax + b$ bảo toàn tổ hợp affine, biến tập affine thành tập affine. Tầng tuyến tính trong học sâu là một hàm affine.
 
 ## Tài liệu tham khảo
 
