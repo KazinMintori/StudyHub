@@ -60,7 +60,9 @@ Có tám Slides, Cheatsheet gồm sáu nhóm định nghĩa, tính chất và c�
 
 ## Chương 26
 
-Đã chuẩn bị nguyên liệu cho năm mục lý thuyết, lời mở và tóm tắt. Các phần luyện tập, hình minh họa, Slides, Cheatsheet, Wiki và rà tích hợp còn đang được thực hiện. Chương chưa được ghi hoàn tất.
+Đã hoàn tất lời mở, năm mục lý thuyết, 14 ví dụ, 18 công thức đánh số và 27 hình đánh số. Có 96 ảnh nguồn, gồm ảnh ứng dụng, tóm tắt, câu hỏi và bài tập, cùng năm sơ đồ hoặc đồ thị lời giải. Các mép ảnh bị cắt đã được dựng lại từ PDF và kiểm tra, chú giải tiếng Việt được đặt dưới ảnh.
+
+Tab Bài tập có 88 bài đánh số, 21 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 122 lời giải có Tóm tắt đề bài, Hướng đi dạng gạch đầu dòng và bước giải chi tiết. Chương có tám Slides, Cheatsheet sáu nhóm chỉ gồm định nghĩa, tính chất và công thức, cùng tám Wiki mới. Chín bộ Python và 39 kiểm thử skill đã qua. Bản build cuối exit 0, có 72 lượt kiểm tra các tab và chủ đề ở 320, 360, 375, 1440 px, 53 lần chuyển kích thước và 102 lượt Wiki. Không có tràn công thức hoặc lỗi JavaScript. Nội dung và hiển thị chương đã được kiểm tra, sẵn sàng push.
 
 ## Các chương 27–44
 

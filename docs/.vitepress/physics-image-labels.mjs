@@ -1,3 +1,5 @@
+import {physics26TheoryImageAnnotations} from './physics26-theory-image-annotations.mjs'
+import {physics26ExerciseImageAnnotations} from './physics26-exercise-image-annotations.mjs'
 import {physics25ImageAnnotations} from './physics25-image-annotations.mjs'
 import {capacitanceImageAnnotations} from './physics24-image-annotations.mjs'
 // One English label -> one Vietnamese explanation in the caption of each image.
@@ -6,6 +8,9 @@ import {physics21ImageAnnotations} from './physics21-image-annotations.mjs'
 import {physics22ImageAnnotations} from './physics22-image-annotations.mjs'
 import {physics23ImageAnnotations,physics24ImageAnnotations} from './physics23-24-image-annotations.mjs'
 const originalLabels={
+ ...physics26TheoryImageAnnotations,
+ ...physics26ExerciseImageAnnotations,
+ 'young-26/hinh-26-27':[],
  'young-21/hinh-21-1':[['Nhựa','Plastic'],['Lông thú','Fur'],['Thủy tinh','Glass'],['Lụa','Silk']],
  'young-21/hinh-21-3':[['Electron mang điện âm','Electron: Negative charge'],['Neutron không mang điện','Neutron: No charge'],['Proton mang điện dương','Proton: Positive charge'],['Hạt nhân','Nucleus'],['Nguyên tử','Atom'],['Khối lượng','Mass']],
  'young-21/hinh-21-4':[['Proton','Protons'],['Neutron','Neutrons'],['Electron','Electrons'],['Nguyên tử liti trung hòa','Neutral lithium atom'],['Ion liti dương','Positive lithium ion'],['Ion liti âm','Negative lithium ion'],['Tổng điện tích bằng không','Zero net charge'],['Tổng điện tích dương','Positive net charge'],['Tổng điện tích âm','Negative net charge']],

@@ -31,6 +31,8 @@ def chart(name,yA,yB,curveA,curveB,ylabel):
         ax.annotate('I ≈ 2,34 A khi V = 4,00 V',xy=(I4,4),xytext=(1.1,7.0),
                     arrowprops={'arrowstyle':'->','color':'#676767'},fontsize=9.5)
     fig.savefig(out/(name+'.svg'))
+    svg_path=out/(name+'.svg')
+    svg_path.write_text('\n'.join(line.rstrip() for line in svg_path.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8')
     fig.savefig(qa/(name+'.png'),dpi=140)
     plt.close(fig)
 chart('hinh-giai25-73-dien-ap',VA,VB,f,3.88*x,'Hiệu điện thế V (V)')

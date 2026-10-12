@@ -101,10 +101,11 @@ close(p_bulb, 12)
 close(p_supply_net, p_battery_stored + p_battery_internal + p_bulb)
 
 # Example 26.6: solve the displayed three-loop system independently.
-# Unknowns are I1, I2, I3. The coefficient rows follow the printed equations.
+# Unknowns are I1, I2, I3. The reduced equations are
 # 2 I1 - I3 = 13; 3 I1 + 5 I3 = 13; -I1 + I2 - I3 = 0.
-i1 = 6
-i3 = -1
+det = 2 * 5 - (-1 * 3)
+i1 = (13 * 5 - (-1 * 13)) / det
+i3 = (2 * 13 - 3 * 13) / det
 i2 = i1 + i3
 branch_currents = (i1, i2, i3, i1 - i3, i2 + i3)
 loop_residuals = (
@@ -143,4 +144,4 @@ path_cbdac = (
 close(dependent_loop, 0)
 close(path_cbdac, dependent_loop)
 
-print("Chapter 26.1–26.2 calculations, dimensions-by-equation, and sign checks passed.")
+print("Chapter 26.1–26.2 arithmetic and Kirchhoff sign checks passed.")

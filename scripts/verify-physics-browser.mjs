@@ -49,7 +49,7 @@ async function go(path){
  }))
  const captions=await page.$$eval('.lecture-figure',figures=>figures.map(f=>({alt:f.querySelector('img')?.alt,caption:f.querySelector('figcaption')?.textContent,labels:f.querySelector('.figure-labels')?.textContent})))
  for(const item of captions){
-  assert(item.caption?.startsWith(item.alt),'Vietnamese caption must appear below the image')
+  assert(item.caption?.startsWith(item.alt),'Vietnamese caption must appear below the image: '+JSON.stringify(item))
   if(item.labels)for(const [vi,en] of Object.values(physicsImageLabels).flat()){
    const pair=`${vi} (${en})`
    if(item.labels.includes(pair))assert.equal(item.labels.split(pair).length-1,1,`Repeated caption label ${pair}`)

@@ -38,16 +38,24 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)].map(m=>({id:m[1],body:m[2]}))
  // A valid collapsed solution does not require an invisible authoring marker.
  // Also inspect actual details containers following each numbered prompt.
- const promptBlocks=[...all.matchAll(new RegExp(`^::: exercise (${ch.chapter}\\.\\d+)\\b[^\\n]*\\n`,'gm'))]
+ const exerciseText=main.includes('<div class="lecture-exercises-content"')?main.split('<div class="lecture-exercises-content"')[1]:all
+ const promptPattern=`^::: exercise ((?:Bài )?(?:Q|VP)?${ch.chapter}\\.\\d+(?:\\.\\d+)?|Bài (?:cầu nối|tổng hợp) ${ch.chapter}(?:\\.\\d+)?)\\b[^\\n]*\\n`
+ const promptBlocks=[...exerciseText.matchAll(new RegExp(promptPattern,'gm'))]
  for(let i=0;i<promptBlocks.length;i++){
   const p=promptBlocks[i]
-  if(solutionBlocks.some(s=>s.id===p[1]))continue
-  const section=all.slice(p.index,promptBlocks[i+1]?.index??all.length)
+  const id=p[1].replace(/^Bài (?=\d)/,'')
+  if(solutionBlocks.some(s=>s.id===id))continue
+  const section=exerciseText.slice(p.index,promptBlocks[i+1]?.index??exerciseText.length)
   const detail=section.match(/^::: (?:details|solution)[^\n]*\n([\s\S]*?)\n:::/m)
-  if(detail)solutionBlocks.push({id:p[1],body:detail[1]})
+  if(detail){
+   const existing=solutionBlocks.find(s=>s.body.trim()===detail[1].trim())
+   if(existing)existing.aliases=[...(existing.aliases||[]),id]
+   else solutionBlocks.push({id,body:detail[1]})
+  }
  }
  const malformed=solutionBlocks.filter(m=>!m.body.includes('**Tóm tắt đề bài:**')||!m.body.includes('**Hướng đi:**')||!/^\s*- /m.test(m.body)).map(m=>m.id)
  const unsolved=prompts.filter(n=>!solutionBlocks.some(m=>m.id===`${ch.chapter}.${n}`))
+ const unsolvedPromptIds=promptBlocks.map(p=>p[1].replace(/^Bài (?=\d)/,'')).filter(id=>!solutionBlocks.some(s=>s.id===id||s.aliases?.includes(id)))
  const outsideExercises=main.split('<div class="lecture-exercises-content"')[0]
  const misplaced=new RegExp(`^::: exercise (?:Q|VP)?${ch.chapter}\\.`,'m').test(outsideExercises)
  const prereqs=[...(lesson.prerequisites||[]),...(lesson.supportingConcepts||[])]
@@ -61,7 +69,7 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const status={sourceComplete:ch.status==='complete'&&ch.pendingSourceUnits.length===0,
   endExercisesPresent:expectedExercises>0&&missing.length===0,
   separateExerciseTab:lesson.hasChapterExercises===true&&!misplaced,
-  exerciseSolutionFormat:prompts.length>0&&unsolved.length===0&&malformed.length===0,
+  exerciseSolutionFormat:prompts.length>0&&unsolved.length===0&&unsolvedPromptIds.length===0&&malformed.length===0,
   cheatsheetOnlyDefinitionsPropertiesFormulas:Boolean(sheet)&&!sheetExtra,
   slidesPresent:course.slides.some(s=>s.note===lesson.slug),
   foundationsAndWikiRegistered:badWiki.length===0,
@@ -70,7 +78,7 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
   renderedMobileReview:review?.renderReview==='passed'}
  rows.push({course:course.id,chapter:ch.chapter,slug:lesson.slug,title:lesson.title,
   expectedExercises,exercisePrompts:prompts.length,detailedSolutions:solutionBlocks.length,
-  missingExerciseNumbers:missing,unsolvedExerciseNumbers:unsolved,malformedSolutions:malformed,
+  missingExerciseNumbers:missing,unsolvedExerciseNumbers:unsolved,unsolvedPromptIds,malformedSolutions:malformed,
   missingWiki:badWiki,forbiddenPhrases:forbidden,pendingSourceUnits:ch.pendingSourceUnits,status})
 }
 const cheatIndex=lectureParts.findIndex(p=>p.id==='cheatsheet')

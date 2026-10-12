@@ -2410,21 +2410,115 @@
           "page": 863
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "26.1",
-        "26.2",
-        "26.3",
-        "26.4",
-        "26.5",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-26/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "26.1",
+          "file": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+          "destination": "topic:noi-tiep-song-song",
+          "printedPages": [
+            845,
+            849
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "26.2",
+          "file": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+          "destination": "topic:kirchhoff",
+          "printedPages": [
+            849,
+            853
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "26.3",
+          "file": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+          "destination": "topic:dung-cu-do",
+          "printedPages": [
+            854,
+            858
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "26.4",
+          "file": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+          "destination": "topic:mach-rc",
+          "printedPages": [
+            858,
+            863
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "26.5",
+          "file": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+          "destination": "topic:phan-phoi-dien",
+          "printedPages": [
+            863,
+            866
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "07-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "08-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "09-bai-tap-01-32",
+          "file": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "10-bai-tap-33-60",
+          "file": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tong-hop-61-80",
+          "file": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-nang-cao-mcat",
+          "file": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "13-dap-so",
+          "file": "raw_materials/physics/translations/chapter-26/13-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-26-review.json"
     },
     {
       "chapter": 27,

@@ -848,13 +848,70 @@ export const physics2Course = {
       "prerequisites": [
         "dong-dien",
         "dien-tro",
+        "dien-the",
+        "suat-dien-dong",
         "dien-dung",
-        "dien-the"
+        "cong-nang-luong",
+        "dao-ham",
+        "tich-phan"
       ],
-      "supportingConcepts": [],
-      "status": "draft",
+      "supportingConcepts": [
+        "dien-tro-tuong-duong",
+        "quy-tac-kirchhoff",
+        "dien-ke",
+        "ampe-ke",
+        "von-ke",
+        "chiet-ap-can-bang",
+        "mach-rc",
+        "hang-so-thoi-gian",
+        "dien-tro-trong"
+      ],
+      "status": "ready",
       "number": 6,
-      "sourceChapter": 26
+      "sourceChapter": 26,
+      "topicGroups": [
+        {
+          "title": "Tổ hợp điện trở và mạch nhiều nhánh",
+          "topics": [
+            {
+              "slug": "noi-tiep-song-song",
+              "title": "Điện trở nối tiếp và song song",
+              "question": "Dòng và điện áp được phân chia thế nào trong từng kiểu mắc?",
+              "source": "26.1"
+            },
+            {
+              "slug": "kirchhoff",
+              "title": "Quy tắc Kirchhoff",
+              "question": "Lập phương trình cho mạch không thu gọn được bằng nối tiếp và song song ra sao?",
+              "source": "26.2"
+            }
+          ]
+        },
+        {
+          "title": "Đo điện, quá trình chuyển tiếp và phân phối điện",
+          "topics": [
+            {
+              "slug": "dung-cu-do",
+              "title": "Dụng cụ đo điện",
+              "question": "Dụng cụ đo ảnh hưởng đến mạch như thế nào?",
+              "source": "26.3"
+            },
+            {
+              "slug": "mach-rc",
+              "title": "Mạch điện trở và tụ điện",
+              "question": "Vì sao điện tích và dòng thay đổi theo hàm mũ khi nạp hoặc phóng tụ?",
+              "source": "26.4"
+            },
+            {
+              "slug": "phan-phoi-dien",
+              "title": "Hệ thống phân phối điện",
+              "question": "Mạch nhánh, bảo vệ quá dòng và dây bảo vệ thực hiện những chức năng gì?",
+              "source": "26.5"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "07-tu-truong-luc-tu",
@@ -1502,6 +1559,94 @@ export const physics2Course = {
         "Mô hình dự đoán điện trở suất không đổi theo trường khi n và τ không đổi theo trường."
       ],
       "formula": "$$\n\\begin{aligned}\n\\vec v_d&=\\frac{q\\tau}{m}\\vec E,\\\\\n\\rho&=\\frac{m}{ne^2\\tau}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Nối tiếp giữ dòng, song song giữ điện áp",
+      "bullets": [
+        "Nối tiếp không có nhánh rẽ giữa các điện trở nên các dòng bằng nhau.",
+        "Song song nối vào cùng hai nút nên các hiệu điện thế bằng nhau.",
+        "Điện trở tương đương giữ nguyên quan hệ dòng và điện áp nhìn từ hai đầu tổ hợp."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR_s&=R_1+R_2,\\\\\n\\frac1{R_p}&=\\frac1{R_1}+\\frac1{R_2},\\\\\nR_p&=\\frac{R_1R_2}{R_1+R_2}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Quy tắc nút biểu diễn bảo toàn điện tích",
+      "bullets": [
+        "Ở trạng thái ổn định, điện tích không tích tụ liên tục tại nút.",
+        "Dòng vào và dòng ra được gán dấu trái nhau trong phương trình nút.",
+        "Kết quả dòng âm chỉ ra chiều thực ngược với chiều giả định."
+      ],
+      "formula": "$$\n\\begin{aligned}\nI_1+I_2-I_3&=0,\\\\\nI_1+I_2&=I_3.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Quy tắc vòng giữ nhất quán các biến thiên điện thế",
+      "bullets": [
+        "Đi dọc chiều dòng qua điện trở cho biến thiên −IR. Đi ngược chiều cho +IR.",
+        "Qua nguồn từ cực âm đến cực dương cho +ℰ, ngược lại cho −ℰ.",
+        "Chiều duyệt vòng do người giải chọn và không buộc trùng chiều dòng."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\Delta V_1+\\Delta V_2+\\Delta V_3&=0,\\\\\n\\mathcal E-IR_1-IR_2&=0.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Dòng toàn thang quyết định điện trở bổ sung của dụng cụ",
+      "bullets": [
+        "Điện kế d’Arsonval có góc lệch tỉ lệ dòng trong miền hiệu chuẩn.",
+        "Điện trở rẽ song song cho phép đo dòng lớn hơn dòng toàn thang của cuộn.",
+        "Điện trở nối tiếp cho phép đo điện áp lớn hơn điện áp toàn thang của cuộn."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR_{\\mathrm{sh}}&=\\frac{I_GR_G}{I-I_G},\\\\\nR_s&=\\frac{V}{I_G}-R_G.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Dụng cụ thực làm thay đổi đại lượng đang đo",
+      "bullets": [
+        "Ampe kế mắc nối tiếp và có điện trở nhỏ.",
+        "Vôn kế mắc song song và có điện trở lớn.",
+        "Chiết áp cân bằng đo suất điện động mà không lấy dòng từ nguồn cần đo ở điểm cân bằng."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR_A&\\to0,\\\\\nR_V&\\to\\infty,\\\\\nI_G&=0\\quad\\text{(cân bằng)}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Nạp tụ qua điện trở là quá trình tiến dần đến cân bằng",
+      "bullets": [
+        "Tụ ban đầu chưa tích điện, nguồn và điện trở không đổi.",
+        "Điện tích liên tục nên tụ chưa có điện áp ngay khi đóng công tắc.",
+        "Khi thời gian đủ dài, dòng bằng không và điện áp tụ bằng suất điện động nguồn."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\tau&=RC,\\\\\nq(t)&=C\\mathcal E(1-e^{-t/\\tau}),\\\\\ni(t)&=\\frac{\\mathcal E}{R}e^{-t/\\tau}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Phóng tụ chuyển năng lượng điện trường thành nhiệt",
+      "bullets": [
+        "Nguồn được ngắt, tụ có điện tích đầu Q₀ và phóng qua điện trở R.",
+        "Dấu âm của dòng dùng chiều nạp làm chiều dương.",
+        "Năng lượng giảm với thời gian đặc trưng RC/2, khác thời gian giảm điện tích RC."
+      ],
+      "formula": "$$\n\\begin{aligned}\nq(t)&=Q_0e^{-t/\\tau},\\\\\ni(t)&=-\\frac{Q_0}{\\tau}e^{-t/\\tau},\\\\\nU(t)&=\\frac{Q_0^2}{2C}e^{-2t/\\tau}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "06-mach-dien-mot-chieu",
+      "title": "Mạch nhánh dùng chung điện áp và cộng dòng ở nguồn",
+      "bullets": [
+        "Các thiết bị được mắc song song để nhận cùng điện áp cấp trong mô hình.",
+        "Cầu chì và bộ ngắt bảo vệ mạch trước dòng quá mức.",
+        "Dây bảo vệ và thiết bị ngắt do chênh dòng có chức năng khác bảo vệ quá dòng."
+      ],
+      "formula": "$$\n\\begin{aligned}\nI&=I_1+I_2\\\\\n&\\quad+\\cdots+I_n,\\\\\nP&=VI,\\\\\n1\\,\\mathrm{kW\\cdot h}&=3.60\\,\\mathrm{MJ},\\\\\n1\\,\\mathrm{MJ}&=10^6\\,\\mathrm J.\n\\end{aligned}\n$$",
       "example": ""
     }
   ],

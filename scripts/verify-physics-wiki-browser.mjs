@@ -7,12 +7,13 @@ import {gaussConcepts} from '../docs/.vitepress/physics-gauss-foundations.mjs'
 import {potentialConcepts} from '../docs/.vitepress/physics-potential-foundations.mjs'
 import {capacitanceConcepts} from '../docs/.vitepress/physics-capacitance-foundations.mjs'
 import {currentConcepts} from '../docs/.vitepress/physics-current-foundations.mjs'
+import {dcConcepts} from '../docs/.vitepress/physics-dc-foundations.mjs'
 const preview=await startPhysicsPreview()
 const browser=await puppeteer.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'})
 const page=await browser.newPage(),results=[],errors=[]
 page.on('pageerror',error=>errors.push(error.message))
 await page.evaluateOnNewDocument(()=>sessionStorage.setItem('studyhub_welcome_seen','1'))
-const ids=Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts})
+const ids=Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts,...dcConcepts})
 try{
  for(const width of [320,375,1440]){
   await page.setViewport({width,height:900})
