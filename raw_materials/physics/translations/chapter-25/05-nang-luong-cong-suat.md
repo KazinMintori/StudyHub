@@ -12,7 +12,7 @@ $$
 V_{ab}=V_a-V_b
 $$
 
-là hiệu điện thế giữa hai đầu và quy ước dòng điện $I$ đi vào đầu a, đi ra đầu b như Hình 25.21. Phần tử có thể là điện trở, pin hoặc linh kiện khác. Khi điện tích $q$ đi qua, độ biến thiên thế năng điện của nó là $qV_{ab}$.
+là hiệu điện thế giữa hai đầu và quy ước dòng điện $I$ đi vào đầu a, đi ra đầu b như Hình 25.21. Phần tử có thể là điện trở, pin hoặc linh kiện khác. Khi điện tích $q$ đi qua từ a đến b, thế năng điện đổi một lượng $\Delta U=-qV_{ab}$. Bên trong nguồn suất điện động, lực không tĩnh điện còn làm công để đẩy điện tích đi ngược chiều giảm thế.
 
 Với điện tích dương và $V_{ab}>0$, điện tích đi từ thế cao $V_a$ xuống thế thấp $V_b$, nên thế năng điện giảm. Điện tích đang chạy trong mạch không tích lũy động năng đều đặn. Dòng điện đi ra khỏi phần tử phải bằng dòng đi vào. Vì vậy, năng lượng $qV_{ab}$ được truyền vào phần tử, chẳng hạn biến thành nhiệt trong dây đốt của lò nướng.
 
@@ -207,7 +207,7 @@ Công suất ra của nguồn bằng không vì điện áp hai cực pin bằng
 
 1. Vẽ sơ đồ mạch.
 2. Đánh dấu từng phần tử, gồm nguồn điện động và điện trở. Các bài sau có thể thêm tụ điện hoặc cuộn cảm.
-3. Liệt kê đại lượng cần tìm: công suất từng phần tử, hoặc năng lượng truyền vào/ra trong một khoảng thời gian.
+3. Liệt kê đại lượng cần tìm: Công suất từng phần tử, hoặc năng lượng truyền vào/ra trong một khoảng thời gian.
 
 **Thực hiện:**
 
