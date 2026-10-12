@@ -553,9 +553,17 @@ $$
 - Với A, đọc giao điểm của đường cong gần đúng với $V=4{,}00$ V. Dữ liệu rời rạc nên công suất từ đồ thị là xấp xỉ.
 - Với B, dùng điện trở không đổi.
 
-(a) Các điểm A cho $R=5{,}10,\ 3{,}11,\ 1{,}89,\ 1{,}15\,\Omega$, nên R phụ thuộc dòng. Các điểm B đều cho $R=3{,}88\,\Omega$. (b) A không tuân định luật Ôm. (c) B tuân theo định luật Ôm.
+(a) Các điểm A cho $R=5{,}10,\ 3{,}11,\ 1{,}89,\ 1{,}15\,\Omega$, nên R phụ thuộc dòng. Các điểm B đều cho $R=3{,}88\,\Omega$.
 
-(d) Từ đường cong V–I của A, tại 4,00 V dòng xấp xỉ 2,35 A, nên $P_A\approx(4{,}00)(2{,}35)=9{,}4$ W. (e)
+![Đồ thị điện áp theo dòng của hai điện trở A và B](img/young-25/hinh-giai25-73-dien-ap.svg)
+
+![Đồ thị điện trở theo dòng, với R được tính bằng V trên I tại từng điểm đo](img/young-25/hinh-giai25-73-dien-tro.svg)
+
+Các điểm đánh dấu là dữ liệu đã cho. Đường cong nét đứt là đường gần đúng bậc hai trên khoảng dòng đo được để đọc giá trị trung gian, không phải một định luật vật liệu ngoài khoảng đó. Điện trở B cho đường điện áp tuyến tính và đường điện trở nằm ngang.
+
+(b) A không tuân theo định luật Ohm. (c) B tuân theo định luật Ohm trong miền dữ liệu.
+
+(d) Từ đường gần đúng V–I của A, tại 4,00 V dòng xấp xỉ 2,34 A, nên công suất khoảng 9,36 W, làm tròn thành 9,4 W. (e)
 
 $$
 \begin{aligned}

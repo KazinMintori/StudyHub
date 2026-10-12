@@ -36,7 +36,7 @@ $$
 =1\,\mathrm W.
 $$
 
-![Hình 25.21: Quy ước điện áp và dòng điện giữa hai đầu của một phần tử mạch](img/young-25/hinh-25-21.png)
+![Hình 25.21: Quy ước điện áp và dòng điện giữa hai đầu của một phần tử mạch](../img/young-25/hinh-25-21.png)
 
 ### Điện trở nhận công suất và tỏa nhiệt
 
@@ -75,7 +75,7 @@ $$
 
 Hạng $\mathcal EI$ là tốc độ chuyển hóa hóa năng thành điện năng trong nguồn. Hạng $I^2r$ là công suất tỏa nhiệt trong điện trở trong. Phần còn lại, $\mathcal EI-I^2r$, là công suất điện thực sự đi ra mạch ngoài. Hình 25.22b liên hệ sơ đồ với pin ô tô cấp điện cho đèn.
 
-![Hình 25.22: Pin có suất điện động và điện trở trong cấp điện cho tải ngoài](img/young-25/hinh-25-22.png)
+![Hình 25.22: Pin có suất điện động và điện trở trong cấp điện cho tải ngoài](../img/young-25/hinh-25-22.png)
 
 ### Công suất điện đưa vào pin khi sạc
 
@@ -97,7 +97,7 @@ $$
 
 Phần $\mathcal EI$ chuyển thành hóa năng có thể lấy ra về sau. Phần $I^2r$ tỏa nhiệt trong pin. Vì vậy pin sạc có thể ấm lên. Mạch nạp phải giới hạn dòng và công suất để tránh quá nhiệt.
 
-![Hình 25.23: Nguồn có suất điện động lớn hơn nạp năng lượng cho pin nhỏ hơn](img/young-25/hinh-25-23.png)
+![Hình 25.23: Nguồn có suất điện động lớn hơn nạp năng lượng cho pin nhỏ hơn](../img/young-25/hinh-25-23.png)
 
 ### Ví dụ 25.8: Cân bằng công suất trong mạch kín
 
@@ -141,7 +141,7 @@ $$
 
 **Đánh giá:** Công suất pin cấp ra đúng bằng công suất tỏa ở điện trở ngoài. Cân bằng năng lượng cho toàn mạch là $24\,\mathrm W=8\,\mathrm W+16\,\mathrm W$.
 
-![Hình 25.24: Sơ đồ mạch gồm pin 12 V có điện trở trong 2 Ω và tải 4 Ω](img/young-25/hinh-25-24.png)
+![Hình 25.24: Sơ đồ mạch gồm pin 12 V có điện trở trong 2 Ω và tải 4 Ω](../img/young-25/hinh-25-24.png)
 
 ### Ví dụ 25.9: Tăng điện trở tải
 
@@ -217,7 +217,7 @@ Công suất ra của nguồn bằng không vì điện áp hai cực pin bằng
 
 **Đánh giá:** Dây nối tắt lý tưởng cùng ampe kế lý tưởng có thể làm pin hỏng nhanh và quá nóng. Không nối trực tiếp hai cực pin để thử dòng điện.
 
-![Hình 25.25: Pin bị nối tắt ngoài, điện trở ngoài bằng không](img/young-25/hinh-25-25.png)
+![Hình 25.25: Pin bị nối tắt ngoài, điện trở ngoài bằng không](../img/young-25/hinh-25-25.png)
 
 ### Chiến lược giải toán 25.1: Công suất và năng lượng trong mạch
 

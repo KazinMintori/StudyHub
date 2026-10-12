@@ -6,6 +6,7 @@
   "equations": 24,
   "numberedFigures": 27,
   "sourceFigureAssets": 53,
+  "solutionDiagrams": 2,
   "exercises": 82,
   "discussionQuestions": 24,
   "variationProblems": 12,
@@ -39,6 +40,17 @@
     "25.79: The best multiple-choice description is distinguished from quantitative reversibility; the data have substantial hysteresis.",
     "25.6: Gold material valuation uses a dated primary quotation and NIST unit conversion, with manufacturing excluded."
   ],
-  "renderReview": "pending",
-  "publication": "requested-after-final-validation"
+  "renderReview": "passed",
+  "renderViewports": [320, 360, 375, 1440],
+  "renderEvidence": {
+    "chapterViews": 76,
+    "liveViewportTransitions": 46,
+    "wikiViews": 78,
+    "mathOverflows": 0,
+    "javascriptErrors": 0,
+    "finalBuild": "qa/physics/release-verified",
+    "browserReport": "qa/physics/browser/results-chapter25.json",
+    "scope": "The final chapter build includes both 25.73 plots and the corrected neA unit C/m. Transition and Wiki checks were run before that unit-only correction, with unchanged layouts and Wiki content."
+  },
+  "publication": "ready-for-push"
 }

@@ -1,6 +1,9 @@
 import {readFile,readdir,access,writeFile} from 'node:fs/promises'
 import assert from 'node:assert/strict'
 import {physicsImageLabels} from '../docs/.vitepress/physics-image-labels.mjs'
+import path from 'node:path'
+import {physics2Course} from '../docs/.vitepress/physics-courses.mjs'
+import {readMarkdownIncludes} from './read-markdown-includes.mjs'
 const source=JSON.parse(await readFile('qa/physics/image-labels-source.json','utf8'))
 const ignored={'young-21/hinh-21-2':'Process steps described directly in caption without English callout list.',
  'young-21/hinh-21-22':'Adjacent body text clipped into the source crop, not an image label.',
@@ -29,3 +32,18 @@ const unannotated=Object.entries(source).filter(([key,item])=>item.text&&!physic
 assert.deepEqual(unannotated,[])
 await writeFile('qa/physics/image-label-review.json',JSON.stringify({status:'passed',annotatedImages:Object.keys(physicsImageLabels).length,distinctLabelsPerImage:pairs,unannotated,ignored},null,2)+'\n')
 console.log('Verified',Object.keys(physicsImageLabels).length,'caption glossaries;',pairs,'labels, each explained once per image.')
+// VitePress resolves included Markdown's images from the destination page.
+// Check that location explicitly, including nested topic pages.
+let references=0
+for(const lesson of physics2Course.lessons.filter(l=>l.status==='ready')){
+ const base=`docs/vat-ly-2/bai-giang/${lesson.slug}`
+ const files=[base+'.md',...(lesson.topicGroups||[]).flatMap(g=>g.topics).map(t=>`${base}/${t.slug}.md`)]
+ for(const file of files){
+  const source=await readMarkdownIncludes(file)
+  for(const match of source.matchAll(/!\[[^\]]*\]\(([^)]+young-\d+\/[^)]+)\)/g)){
+   await access(path.resolve(path.dirname(file),match[1]))
+   references++
+  }
+ }
+}
+console.log('Verified',references,'figure paths from their final lecture and topic locations.')

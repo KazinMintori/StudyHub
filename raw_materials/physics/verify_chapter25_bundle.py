@@ -35,9 +35,14 @@ for i,body in enumerate(solutions):
 theory='\n'.join(p.read_text(encoding='utf8') for p in sorted(raw.glob('*.md')) if 1<=int(p.name[:2])<=6)
 tags=list(map(int,re.findall(r'\\tag\{25\.(\d+)\}',theory)))
 assert sorted(tags)==list(range(1,25)),tags
-assert not re.search(r'^# ',theory,re.M),'Raw includes must not duplicate the page H1'
+assert not re.search(r'^# ',theory+end,re.M),'Raw includes must not duplicate the page H1'
 assert not re.search(r'\\\(|\\\)',theory+end),'Use Markdown math delimiters'
 assert not re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f]',theory+end),'Control character from an escaped TeX string'
+# In I = neAv_d, n has L^-3, e has charge dimension and A has L^2.
+# Therefore neA has charge/length, rather than charge/area.
+assert -3+2==-1
+assert r'4.93\times10^4\,\mathrm{C/m}' in end
+assert r'4.93\times10^4\,\mathrm{C/m^2}' not in end
 report={'status':'passed','chapter':25,'theorySections':6,'equations':24,'workedExamples':11,
  'exercises':82,'discussionQuestions':24,'variationProblems':12,'bridgingProblems':1,
  'detailedSolutions':119,'calculationSuites':scripts,

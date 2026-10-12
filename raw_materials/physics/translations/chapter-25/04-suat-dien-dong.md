@@ -6,7 +6,7 @@ Vì sao một điện tích có thể đi qua điện trở và mất thế năn
 
 Nếu tạo điện trường bên trong một vật dẫn cô lập, điện tích bắt đầu dịch chuyển. Điện tích dương tích tụ ở một đầu, điện tích âm tích tụ ở đầu kia. Phân bố điện tích này sinh ra điện trường ngược với điện trường ban đầu. Chỉ trong một khoảng thời gian rất ngắn, điện trường tổng bên trong vật dẫn giảm về không, kéo theo mật độ dòng điện và dòng điện cũng bằng không.
 
-![Hình 25.11: Điện tích ở hai đầu vật dẫn cô lập tạo điện trường chống lại trường ban đầu và làm dòng điện dừng](img/young-25/hinh-25-11.png)
+![Hình 25.11: Điện tích ở hai đầu vật dẫn cô lập tạo điện trường chống lại trường ban đầu và làm dòng điện dừng](../img/young-25/hinh-25-11.png)
 
 **Hình 25.11:** Trong vật dẫn không thuộc mạch kín, dòng điện ban đầu làm điện tích dồn về hai đầu. Trường do điện tích tích tụ tạo ra ngược trường ban đầu, đến khi trường tổng bằng không thì dòng điện dừng.
 
@@ -14,7 +14,7 @@ Nếu tạo điện trường bên trong một vật dẫn cô lập, điện t�
 
 Có thể hình dung như đài phun nước tuần hoàn. Nước chảy từ cao xuống thấp và gom ở bể phía dưới. Máy bơm nâng nước lên trên để chu trình tiếp tục. Không có máy bơm, nước sẽ dồn ở bể đáy và ngừng chảy.
 
-![Hình 25.12: Đài phun nước tuần hoàn cần máy bơm để đưa nước từ thấp lên cao](img/young-25/hinh-25-12.png)
+![Hình 25.12: Đài phun nước tuần hoàn cần máy bơm để đưa nước từ thấp lên cao](../img/young-25/hinh-25-12.png)
 
 **Hình 25.12:** Máy bơm đưa nước ngược chiều trọng lực để duy trì tuần hoàn. Nguồn điện đảm nhiệm vai trò tương tự đối với điện tích, nhưng cơ chế vật lý của hai hệ khác nhau.
 
@@ -42,7 +42,7 @@ $$
 
 Điều kiện $V_{ab}=\mathcal E$ mô tả nguồn lý tưởng hoặc nguồn thực khi không có dòng điện qua nguồn. Pin, máy phát điện, pin mặt trời, cặp nhiệt điện và pin nhiên liệu đều là các nguồn suất điện động. Chúng chuyển hóa năng lượng cơ, hóa, nhiệt hoặc dạng khác thành thế năng điện của mạch. Một pin đèn pin có suất điện động 1.5 V thực hiện công 1.5 J trên mỗi coulomb điện tích đi qua nó.
 
-![Hình 25.13: Trong nguồn hở, lực không tĩnh điện đẩy điện tích dương từ cực âm lên cực dương, cân bằng lực điện](img/young-25/hinh-25-13.png)
+![Hình 25.13: Trong nguồn hở, lực không tĩnh điện đẩy điện tích dương từ cực âm lên cực dương, cân bằng lực điện](../img/young-25/hinh-25-13.png)
 
 **Hình 25.13:** Ở mạch hở, điện tích không chạy liên tục qua mạch. Bên trong nguồn, lực không tĩnh điện hướng từ cực âm sang cực dương và cân bằng lực điện trên điện tích dương. Vì không có dòng, điện áp đầu cực bằng suất điện động.
 
@@ -66,7 +66,7 @@ $$
 Trong một vòng đơn giản, dòng điện có cùng cường độ tại mọi điểm, ngay cả khi tiết diện dây thay đổi. Điện tích được bảo toàn và không tích tụ trong các phần tử mạch đang xét. Điện tích không bị tạo ra hay phá hủy khi đi qua bóng đèn hoặc điện trở. Đại lượng giảm trên điện trở là thế năng điện của điện tích, không phải lượng dòng điện.
 :::
 
-![Hình 25.14: Dòng điện chạy từ cực dương qua mạch ngoài về cực âm, còn trong nguồn đi từ cực âm lên cực dương](img/young-25/hinh-25-14.png)
+![Hình 25.14: Dòng điện chạy từ cực dương qua mạch ngoài về cực âm, còn trong nguồn đi từ cực âm lên cực dương](../img/young-25/hinh-25-14.png)
 
 **Hình 25.14:** Trong mạch kín, lực không tĩnh điện bên trong nguồn duy trì dòng điện qua nguồn theo chiều từ cực âm lên cực dương. Trong mạch ngoài, dòng điện chạy từ điện thế cao xuống thấp.
 
@@ -98,7 +98,7 @@ Nguồn suất điện động không tạo ra cùng một dòng điện cho m�
 
 Điện trở trong luôn là đặc tính của nguồn thực, dù sơ đồ mạch vẽ nó thành một phần tử riêng.
 
-![Hình 25.15: Pin có điện áp đầu cực bằng suất điện động khi hở mạch, nhưng thấp hơn khi đang cấp dòng](img/young-25/hinh-25-15.png)
+![Hình 25.15: Pin có điện áp đầu cực bằng suất điện động khi hở mạch, nhưng thấp hơn khi đang cấp dòng](../img/young-25/hinh-25-15.png)
 
 **Hình 25.15:** Điện áp không tải của pin 12 V bằng suất điện động 12 V. Khi pin cấp dòng cho bóng đèn, sụt áp trên điện trở trong làm điện áp đầu cực nhỏ hơn 12 V.
 
@@ -125,7 +125,7 @@ Vôn kế lý tưởng mắc giữa hai điểm cần đo và không hút dòng 
 
 Cá đuối điện tạo cú sốc để làm choáng con mồi hoặc ngăn kẻ săn mồi. Cơ quan phát điện gồm các tế bào dẹt chuyên hóa gọi là electroplaque. Mỗi tế bào tạo suất điện động khoảng 0.05 V. Hàng nghìn tế bào xếp chồng nối tiếp làm suất điện động cộng lại, có thể đạt đến 200 V. Các chồng tế bào này chiếm hơn một nửa khối lượng cơ thể. Cá có thể phát dòng điện đến 30 A trong vài mili giây. Từ thời La Mã cổ đại, cá đuối điện từng được dùng trong một dạng sơ khai của liệu pháp điện để chữa đau đầu và bệnh gút.
 
-![Ảnh ứng dụng sinh học: Cá đuối điện tạo xung điện nhờ các tế bào electroplaque xếp chồng](img/young-25/anh-ca-duoi-dien.png)
+![Ảnh ứng dụng sinh học: Cá đuối điện tạo xung điện nhờ các tế bào electroplaque xếp chồng](../img/young-25/anh-ca-duoi-dien.png)
 
 **Ảnh ứng dụng sinh học:** Các tế bào điện chuyên hóa xếp chồng làm tăng suất điện động tổng. Hệ này chuyển hóa năng lượng sinh học thành năng lượng điện trong thời gian ngắn.
 
@@ -135,7 +135,7 @@ Cá đuối điện tạo cú sốc để làm choáng con mồi hoặc ngăn k�
 
 Một nguồn có suất điện động $\mathcal E=12\,\mathrm V$ và điện trở trong $r=2\,\Omega$. Mạch ngoài bị hở. Vôn kế và ampe kế lý tưởng chỉ bao nhiêu?
 
-![Hình 25.16: Vôn kế đo điện áp nguồn khi mạch ngoài hở, còn ampe kế chỉ dòng điện bằng không](img/young-25/hinh-25-16.png)
+![Hình 25.16: Vôn kế đo điện áp nguồn khi mạch ngoài hở, còn ampe kế chỉ dòng điện bằng không](../img/young-25/hinh-25-16.png)
 
 **Hình 25.16:** Hai đầu mạch ngoài không nối với tải, nên không có vòng kín cho dòng điện.
 
@@ -165,7 +165,7 @@ Ampe kế chỉ 0 A, vôn kế chỉ 12 V.
 
 Nối điện trở ngoài $R=4\,\Omega$ vào nguồn của ví dụ trước. Tìm dòng điện và điện áp đầu cực.
 
-![Hình 25.17: Nguồn có điện trở trong nối với điện trở tải 4 Ω, ampe kế nối tiếp và vôn kế đo điện áp hai cực nguồn](img/young-25/hinh-25-17.png)
+![Hình 25.17: Nguồn có điện trở trong nối với điện trở tải 4 Ω, ampe kế nối tiếp và vôn kế đo điện áp hai cực nguồn](../img/young-25/hinh-25-17.png)
 
 **Hình 25.17:** Điện trở trong và điện trở tải nối tiếp nhau trong vòng kín. Vôn kế mắc song song với hai đầu nguồn.
 
@@ -206,7 +206,7 @@ Trong trường hợp pin cấp điện, dòng chạy bên trong pin từ cực 
 
 Giữ nguyên nguồn $\mathcal E=12$ V, $r=2\,\Omega$ và tải $R=4\,\Omega$, nhưng chuyển vị trí các dụng cụ đo như Hình 25.18. So sánh hai cách mắc.
 
-![Hình 25.18: Hai vị trí khác nhau của vôn kế và ampe kế trong cùng một mạch nguồn và điện trở](img/young-25/hinh-25-18.png)
+![Hình 25.18: Hai vị trí khác nhau của vôn kế và ampe kế trong cùng một mạch nguồn và điện trở](../img/young-25/hinh-25-18.png)
 
 **Hình 25.18:** Ở (a), vôn kế đo song song với tải còn ampe kế nằm nối tiếp, nên mạch vẫn kín. Ở (b), vôn kế lý tưởng nằm nối tiếp trong vòng mạch và làm dòng điện bằng không.
 
@@ -243,7 +243,7 @@ Sơ đồ thường vẽ suất điện động $\mathcal E$ và điện trở t
 
 Thay điện trở $4\,\Omega$ trong Ví dụ 25.5 bằng một dây dẫn có điện trở bằng không. Tìm dòng điện và điện áp đầu cực.
 
-![Hình 25.19: Hai cực nguồn nối trực tiếp qua dây dẫn có điện trở bằng không](img/young-25/hinh-25-19.png)
+![Hình 25.19: Hai cực nguồn nối trực tiếp qua dây dẫn có điện trở bằng không](../img/young-25/hinh-25-19.png)
 
 **Hình 25.19:** Dây dẫn lý tưởng nối tắt hai cực, nên hiệu điện thế giữa hai cực bằng không.
 
@@ -283,7 +283,7 @@ $$
 
 Khi đi qua nguồn theo chiều từ cực âm lên cực dương, điện thế tăng $\mathcal E$. Khi đi qua điện trở trong và điện trở ngoài theo chiều dòng điện, điện thế giảm lần lượt $Ir$ và $IR$. Sau một vòng, điện thế trở về giá trị ban đầu.
 
-![Hình 25.20: Đồ thị điện thế tăng qua nguồn rồi giảm qua điện trở trong và điện trở ngoài](img/young-25/hinh-25-20.png)
+![Hình 25.20: Đồ thị điện thế tăng qua nguồn rồi giảm qua điện trở trong và điện trở ngoài](../img/young-25/hinh-25-20.png)
 
 **Hình 25.20:** Đồ thị ghi điện thế tại các điểm dọc vòng mạch. Trục ngang biểu thị thứ tự đi quanh mạch, không nhất thiết là khoảng cách hình học.
 

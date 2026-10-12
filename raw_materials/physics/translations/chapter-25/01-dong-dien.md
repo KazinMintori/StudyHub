@@ -18,7 +18,7 @@ Trong chân không, lực không đổi làm hạt gia tốc đều theo hướn
 
 Tốc độ ngẫu nhiên điển hình của electron khoảng $10^6\,\mathrm{m/s}$, còn tốc độ trôi thường chỉ cỡ $10^{-4}\,\mathrm{m/s}$. Dù từng electron đi rất chậm dọc dây, đèn vẫn sáng gần như ngay khi bật công tắc. Điện trường được thiết lập dọc dây với tốc độ gần tốc độ ánh sáng, khiến electron bắt đầu trôi tại nhiều vị trí gần như đồng thời. Thời gian một electron riêng lẻ đi từ công tắc đến bóng đèn không quyết định thời điểm đèn sáng. Có thể hình dung một hàng binh sĩ bắt đầu bước đi khi nghe lệnh. Âm thanh truyền nhanh hơn nhiều so với tốc độ hành quân, nên cả hàng bắt đầu gần như cùng lúc.
 
-![Hình 25.1: Chuyển động trôi của electron khi có điện trường bên trong vật dẫn](img/young-25/hinh-25-01.png)
+![Hình 25.1: Chuyển động trôi của electron khi có điện trường bên trong vật dẫn](../img/young-25/hinh-25-01.png)
 
 **Hình 25.1:** Khi không có điện trường bên trong vật dẫn, electron chuyển động ngẫu nhiên. Điện trường làm lực điện tác dụng lên electron lệch hướng chuyển động và tạo độ dời trôi nhỏ theo hướng lực.
 
@@ -28,7 +28,7 @@ Tốc độ ngẫu nhiên điển hình của electron khoảng $10^6\,\mathrm{m
 
 Hạt tải điện có thể mang điện dương hoặc âm. Trong kim loại, hạt chuyển động là electron âm. Trong plasma hoặc dung dịch ion, dòng điện có thể do cả electron lẫn ion dương đảm nhiệm. Trong chất bán dẫn như germani và silic, dòng điện một phần do electron, một phần do sự chuyển động của lỗ trống. Lỗ trống là vị trí thiếu electron và ứng xử như hạt mang điện dương.
 
-![Hình 25.2: Dòng điện quy ước và chiều chuyển động của hạt mang điện dương, âm](img/young-25/hinh-25-02.png)
+![Hình 25.2: Dòng điện quy ước và chiều chuyển động của hạt mang điện dương, âm](../img/young-25/hinh-25-02.png)
 
 **Hình 25.2:** Dòng điện quy ước cùng chiều chuyển động của điện tích dương và ngược chiều chuyển động của electron. Hai tình huống vẫn biểu diễn cùng chiều dòng điện.
 
@@ -142,11 +142,11 @@ Trong dung dịch natri clorua, ion natri dương và ion clorua âm đều góp
 
 Một dòng điện không đổi chỉ có thể duy trì khi vật liệu dẫn tạo thành một vòng kín hoàn chỉnh. Khi dòng ổn định, tổng điện tích trong mỗi đoạn dây không đổi. Vì thế, ở mọi thời điểm, tốc độ điện tích đi ra khỏi một đầu đoạn dây bằng tốc độ đi vào đầu kia, và dòng điện có cùng giá trị qua mọi tiết diện của mạch.
 
-![Hình 25.3: Điện tích trôi qua tiết diện vật dẫn và dòng điện trong mạch đèn](img/young-25/hinh-25-03.png)
+![Hình 25.3: Điện tích trôi qua tiết diện vật dẫn và dòng điện trong mạch đèn](../img/young-25/hinh-25-03.png)
 
 **Hình 25.3:** Trong một khoảng thời gian, các hạt nằm trong khối trụ dài $v_d dt$ dịch chuyển qua tiết diện $A$. Chuyển động ngẫu nhiên triệt tiêu khi lấy trung bình, nên dòng điện cùng chiều điện trường với cả hạt tải dương lẫn âm. Mạch kín bên cạnh cho thấy cùng dòng điện chạy qua các bộ phận nối tiếp.
 
-![Hình 25.4: Bóng đèn được cấp điện qua dung dịch natri clorua](img/young-25/hinh-25-04.png)
+![Hình 25.4: Bóng đèn được cấp điện qua dung dịch natri clorua](../img/young-25/hinh-25-04.png)
 
 **Hình 25.4:** Dòng điện trong dung dịch natri clorua được tải bởi cả ion natri dương và ion clorua âm.
 

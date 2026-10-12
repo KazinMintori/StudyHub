@@ -33,7 +33,7 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const endSource=exercisesStart>=0?source.slice(exercisesStart):source
  const sourceNumbers=[...endSource.matchAll(new RegExp(`^${ch.chapter}\\.(\\d+)\\s`,'gm'))].map(m=>Number(m[1])).filter(n=>n<=500)
  const expectedExercises=Math.max(0,...sourceNumbers)
- const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|$)`,'gm'))].map(m=>Number(m[1]))
+ const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|\\.|$)`,'gm'))].map(m=>Number(m[1]))
  const missing=Array.from({length:expectedExercises},(_,i)=>i+1).filter(n=>!prompts.includes(n))
  const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)].map(m=>({id:m[1],body:m[2]}))
  // A valid collapsed solution does not require an invisible authoring marker.

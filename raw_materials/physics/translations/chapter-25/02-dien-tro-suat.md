@@ -67,7 +67,7 @@ $$
 
 Vật liệu dẫn điện tốt có độ dẫn điện lớn. Độ dẫn điện tương tự độ dẫn nhiệt trong phép so sánh truyền nhiệt. Kim loại thường dẫn điện và dẫn nhiệt tốt, còn gốm và nhựa thường dẫn kém cả điện lẫn nhiệt. Trong kim loại, electron tự do vừa tải điện, vừa là cơ chế chính truyền nhiệt. Sự tương đồng này giải thích phần nào vì sao hai tính chất thường đi cùng nhau.
 
-![Hình 25.5: Các đường dẫn bằng đồng in trên bảng mạch cách điện](img/young-25/hinh-25-05.png)
+![Hình 25.5: Các đường dẫn bằng đồng in trên bảng mạch cách điện](../img/young-25/hinh-25-05.png)
 
 **Hình 25.5:** Những đường dẫn đồng trên bảng mạch chỉ cách nhau khoảng một milimét. Điện trở suất cao và độ dẫn điện thấp của nền cách điện giúp dòng điện gần như không truyền từ đường mạch này sang đường mạch bên cạnh.
 
@@ -94,7 +94,7 @@ $$
 
 Trong đó $\rho_0$ là điện trở suất tại nhiệt độ tham chiếu $T_0$, còn $\alpha$ là hệ số nhiệt điện trở suất. $T_0$ thường được chọn là $0^\circ\mathrm C$ hoặc $20^\circ\mathrm C$, còn $T$ có thể cao hơn hoặc thấp hơn $T_0$. Hiệu nhiệt độ có cùng độ lớn khi tính bằng kelvin hoặc độ Celsius. Hợp kim manganin gần như không đổi điện trở suất theo nhiệt độ.
 
-![Hình 25.6: Sự phụ thuộc của điện trở suất vào nhiệt độ ở kim loại, bán dẫn và siêu dẫn](img/young-25/hinh-25-06.png)
+![Hình 25.6: Sự phụ thuộc của điện trở suất vào nhiệt độ ở kim loại, bán dẫn và siêu dẫn](../img/young-25/hinh-25-06.png)
 
 **Hình 25.6:** Đường biểu diễn (a) kim loại thường, (b) chất bán dẫn và (c) chất siêu dẫn. Đường thẳng gần đúng của kim loại đi qua đúng điểm $(T_0,\rho_0)$.
 
@@ -108,7 +108,7 @@ Siêu dẫn được Heike Kamerlingh Onnes phát hiện năm 1911 ở thủy ng
 
 ### Ứng dụng sinh học: Điện trở suất và sự dẫn truyền thần kinh
 
-![Ảnh hiển vi mặt cắt sợi thần kinh có bao myelin cách điện quanh sợi trục](img/young-25/anh-mang-myelin.png)
+![Ảnh hiển vi mặt cắt sợi thần kinh có bao myelin cách điện quanh sợi trục](../img/young-25/anh-mang-myelin.png)
 
 Ảnh hiển vi điện tử tô màu cho thấy mặt cắt của một sợi thần kinh có đường kính khoảng $1\,\mathrm{\mu m}=10^{-6}\,\mathrm m$. Lớp myelin cách điện bao quanh sợi trục dẫn điện, giúp giới hạn dòng điện thần kinh trong đường dẫn đó.
 
@@ -116,14 +116,20 @@ Siêu dẫn được Heike Kamerlingh Onnes phát hiện năm 1911 ở thủy ng
 
 Các hệ số dưới đây là giá trị gần đúng trong vùng lân cận nhiệt độ phòng. Đơn vị là $^\circ\mathrm C^{-1}$.
 
-| Vật liệu | $\alpha\,(^\circ\mathrm C^{-1})$ | Vật liệu | $\alpha\,(^\circ\mathrm C^{-1})$ |
-| --- | ---: | --- | ---: |
-| Nhôm | $0{,}0039$ | Chì | $0{,}0043$ |
-| Đồng thau | $0{,}0020$ | Manganin | $0{,}00000$ |
-| Than chì | $-0{,}0005$ | Thủy ngân | $0{,}00088$ |
-| Constantan | $0{,}000008$ | Nichrome | $0{,}0004$ |
-| Đồng | $0{,}00393$ | Bạc | $0{,}0038$ |
-| Sắt | $0{,}0050$ | Vonfram | $0{,}0045$ |
+| Vật liệu | Hệ số nhiệt α (Nghịch độ C) |
+| --- | ---: |
+| Nhôm | $0{,}0039$ |
+| Chì | $0{,}0043$ |
+| Đồng thau | $0{,}0020$ |
+| Manganin | $0{,}00000$ |
+| Than chì | $-0{,}0005$ |
+| Thủy ngân | $0{,}00088$ |
+| Constantan | $0{,}000008$ |
+| Nichrome | $0{,}0004$ |
+| Đồng | $0{,}00393$ |
+| Bạc | $0{,}0038$ |
+| Sắt | $0{,}0050$ |
+| Vonfram | $0{,}0045$ |
 
 ::: exercise Kiểm tra hiểu mục 25.2
 Giữ điện trường bên trong một mẫu bán dẫn không đổi rồi hạ nhiệt độ của mẫu. Mật độ dòng điện thay đổi thế nào? Chọn một phương án trong danh sách sau:

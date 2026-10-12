@@ -509,7 +509,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/05-dong-dien-dien-tro": {
-    "words": 24217,
+    "words": 24316,
     "minutes": 120
   },
   "vat-ly-2/05-dong-dien-dien-tro/dong-dien": {

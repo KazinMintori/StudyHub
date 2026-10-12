@@ -52,7 +52,17 @@ Trang in 718–746, PDF 738–766. Đã có năm chủ đề lý thuyết, 12 v�
 
 Đã tích hợp đủ sáu mục lý thuyết, 12 ví dụ, 23 công thức đánh số, 22 hình đánh số và các hình ứng dụng, tóm tắt, bài tập. Tab Bài tập có 76 bài đánh số, 21 câu hỏi thảo luận, 12 bài biến thể và một bài tổng hợp, tương ứng 110 khung lời giải. Có tám Slides, Cheatsheet chỉ gồm định nghĩa, tính chất và công thức, bốn Wiki mới và mục điện dung mở rộng. Ba Luna đã đọc đối chiếu theo phạm vi trong báo cáo riêng. Hai lỗi đọc mạch 24.52–24.53 đã được sửa và kiểm lại bằng phương trình điện tích nút NumPy. Bảy bộ tính toán cùng kiểm tra cấu trúc đã qua. Kiểm tra hiển thị trên bản build cuối đã qua: 276 lượt Notes, lời giải, Slides và chủ đề ở 320, 360, 375, 1440 px. Có 39 lần chuyển kích thước trực tiếp, 54 lượt Wiki và 39 kiểm thử skill đạt. Các công thức cuối cùng còn vượt khung đã được bẻ dòng, không thu nhỏ hoặc cắt nội dung. Chương đã khép kín nội dung và kiểm tra hiển thị.
 
-## Các chương 25–44
+## Chương 25
+
+Đã tích hợp sáu chủ đề, 11 ví dụ, 24 công thức đánh số, 27 hình đánh số và 53 ảnh nguồn, gồm hình ứng dụng, tóm tắt và các sơ đồ cuối chương. Tab Bài tập có 82 bài đánh số, 24 câu thảo luận, 12 bài biến thể và một bài tổng hợp, với 119 lời giải gập mở. Bài 25.73 có thêm hai đồ thị điện áp và điện trở theo dòng, được vẽ từ toàn bộ dữ liệu đề.
+
+Có tám Slides, Cheatsheet gồm sáu nhóm định nghĩa, tính chất và công thức, sáu Wiki mới và hai mục Wiki được mở rộng. Tám bộ tính toán và kiểm tra cấu trúc lời giải đã qua. Các ký hiệu µ ở 25.1, 25.55, 25.57 và 25.67 đã được đọc trực tiếp trên ảnh PDF. Bản build cuối có hai đồ thị và đơn vị $neA$ đúng là C/m đã qua 76 lượt kiểm tra ở 320, 360, 375, 1440 px, không có tràn công thức hoặc lỗi JavaScript. Có thêm 46 lần chuyển kích thước trực tiếp và 78 lượt Wiki của bộ năm chương điện học. Chương đã khép nội dung và rà hiển thị, sẵn sàng push.
+
+## Chương 26
+
+Đã chuẩn bị nguyên liệu cho năm mục lý thuyết, lời mở và tóm tắt. Các phần luyện tập, hình minh họa, Slides, Cheatsheet, Wiki và rà tích hợp còn đang được thực hiện. Chương chưa được ghi hoàn tất.
+
+## Các chương 27–44
 
 Tiếp tục theo thứ tự điện dung và điện môi, dòng điện, mạch điện, từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

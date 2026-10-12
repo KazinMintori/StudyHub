@@ -12,9 +12,9 @@ Khi không có điện trường, electron đi theo đoạn thẳng giữa các 
 
 Tốc độ do chuyển động ngẫu nhiên cỡ $10^6$ m/s, còn tốc độ trôi thường chỉ cỡ $10^{-4}$ m/s. Vì thế dòng điện không phải dòng electron chạy nhanh đồng loạt qua dây. Nó là độ lệch rất nhỏ của chuyển động ngẫu nhiên có sẵn. Thời gian trung bình giữa hai va chạm liên tiếp của một electron được gọi là thời gian tự do trung bình, ký hiệu $\tau$. Hình 25.27 dùng quả cầu lăn qua các chốt để gợi hình ảnh va chạm làm đổi hướng.
 
-![Hình 25.26: Chuyển động ngẫu nhiên của electron khi không có trường và chuyển động trôi khi có điện trường](img/young-25/hinh-25-26.png)
+![Hình 25.26: Chuyển động ngẫu nhiên của electron khi không có trường và chuyển động trôi khi có điện trường](../img/young-25/hinh-25-26.png)
 
-![Hình 25.27: Quả cầu lăn và đổi hướng khi va vào các chốt, mô hình hóa va chạm của electron](img/young-25/hinh-25-27.png)
+![Hình 25.27: Quả cầu lăn và đổi hướng khi va vào các chốt, mô hình hóa va chạm của electron](../img/young-25/hinh-25-27.png)
 
 ### Từ va chạm đến điện trở suất
 

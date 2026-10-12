@@ -23,7 +23,7 @@ $$
 
 trong đó $V$ là hiệu điện thế giữa đầu có điện thế cao và đầu có điện thế thấp, nên $V>0$. Vì $\vec E$ hướng về phía điện thế giảm, dòng điện quy ước chạy từ đầu điện thế cao đến đầu điện thế thấp. Khi điện tích đi qua dây dẫn, thế năng điện giảm và năng lượng được truyền cho các ion của vật liệu qua va chạm.
 
-![Hình 25.7: Dây dẫn tiết diện đều có mật độ dòng điện phân bố đều và điện trường không đổi dọc chiều dài](img/young-25/hinh-25-07.png)
+![Hình 25.7: Dây dẫn tiết diện đều có mật độ dòng điện phân bố đều và điện trường không đổi dọc chiều dài](../img/young-25/hinh-25-07.png)
 
 **Hình 25.7:** Với dây đồng chất, tiết diện đều và điều kiện dòng phân bố đều, $J$ không đổi trên mỗi tiết diện còn điện trường dọc dây có độ lớn không đổi. Dòng điện hướng từ điện thế cao sang điện thế thấp.
 
@@ -53,7 +53,7 @@ $$
 
 Điện trở tăng theo chiều dài và điện trở suất, đồng thời giảm khi tiết diện tăng. Điện trở suất là tính chất của vật liệu, còn điện trở còn phụ thuộc kích thước vật dẫn.
 
-![Hình 25.8: Vòi cứu hỏa dài cần chênh lệch áp suất lớn để duy trì dòng nước mạnh](img/young-25/hinh-25-08.png)
+![Hình 25.8: Vòi cứu hỏa dài cần chênh lệch áp suất lớn để duy trì dòng nước mạnh](../img/young-25/hinh-25-08.png)
 
 Ống dài cản dòng nước nhiều hơn ống ngắn, và ống hẹp cản nhiều hơn ống rộng. Nhồi bông hoặc cát vào ống làm tăng sức cản, tương tự tăng điện trở suất của vật liệu. Lưu lượng gần tỉ lệ chênh lệch áp suất, như dòng điện và hiệu điện thế trong mô hình Ohm.
 
@@ -80,7 +80,7 @@ Các đơn vị thường gặp khác là kilôôm $1\,\mathrm{k\Omega}=10^3\,\O
 
 Điện trở có giá trị xác định được chế tạo sẵn gọi là **resistor** (điện trở linh kiện). Nhiều linh kiện có dạng trụ nhỏ với các vòng màu đánh dấu giá trị. Hai vòng đầu biểu diễn chữ số, vòng thứ ba là hệ số nhân lũy thừa của 10. Vòng thứ tư, nếu có, cho biết sai số cho phép. Ví dụ, xanh lục–tím–đỏ biểu diễn $57\times10^2\,\Omega=5.7\,\mathrm{k\Omega}$. Không có vòng dung sai nghĩa là ±20%, vòng bạc là ±10%, vòng vàng là ±5%. Điện trở linh kiện bán sẵn thường có dải giá trị từ $0.01$ đến $10^7\,\Omega$. Công suất cực đại mà linh kiện chịu được mà không hỏng cũng là thông số quan trọng.
 
-![Hình 25.9: Điện trở linh kiện có các vòng màu biểu thị trị số và dung sai](img/young-25/hinh-25-09.png)
+![Hình 25.9: Điện trở linh kiện có các vòng màu biểu thị trị số và dung sai](../img/young-25/hinh-25-09.png)
 
 **Hình 25.9:** Hai vòng gần đầu linh kiện là chữ số, vòng tiếp theo là hệ số nhân, còn vòng cuối cho biết dung sai. Mẫu minh họa có trị số 5.7 kΩ và dung sai ±10%.
 
@@ -119,7 +119,7 @@ Khi L và A gần như giữ nguyên trong R = ρL/A, hệ số nhiệt của đ
 
 Với một điện trở tuân theo định luật Ohm, đồ thị $I$ theo $V$ là đường thẳng qua gốc tọa độ. Độ dốc bằng $1/R$. Đảo dấu hiệu điện thế làm dòng điện đổi chiều. Khi đó điện trường và mật độ dòng điện cũng đổi chiều.
 
-![Hình 25.10: Đồ thị dòng điện theo điện áp của điện trở Ohm và điôt bán dẫn](img/young-25/hinh-25-10.png)
+![Hình 25.10: Đồ thị dòng điện theo điện áp của điện trở Ohm và điôt bán dẫn](../img/young-25/hinh-25-10.png)
 
 **Hình 25.10:** Đồ thị (a) của điện trở Ohm là đường thẳng có độ dốc $1/R$. Đồ thị (b) của điôt không tuyến tính và không đối xứng theo chiều dòng điện.
 

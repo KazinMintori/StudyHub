@@ -2255,7 +2255,7 @@
           "page": 832
         }
       ],
-      "status": "content-complete",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "chapter-opening",
@@ -2372,9 +2372,7 @@
           "status": "authored-and-reviewed"
         }
       ],
-      "pendingSourceUnits": [
-        "direct-browser-render-review"
-      ],
+      "pendingSourceUnits": [],
       "completionReview": "raw_materials/physics/chapter-25-review.json"
     },
     {
