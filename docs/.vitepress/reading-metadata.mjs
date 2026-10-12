@@ -45,8 +45,8 @@ export const readingMetadata = {
     "minutes": 40
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien": {
-    "words": 4719,
-    "minutes": 31
+    "words": 5691,
+    "minutes": 38
   },
   "toan-cho-ai/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine": {
     "words": 7339,
@@ -401,8 +401,8 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 22152,
-    "minutes": 110
+    "words": 22683,
+    "minutes": 115
   },
   "vat-ly-2/01-dien-truong-coulomb/dien-tich": {
     "words": 26,
@@ -433,7 +433,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 15645,
+    "words": 15791,
     "minutes": 80
   },
   "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
@@ -457,7 +457,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 20673,
+    "words": 20658,
     "minutes": 105
   },
   "vat-ly-2/02-dien-the/the-nang-dien": {
@@ -481,8 +481,32 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/04-tu-dien-dien-moi": {
-    "words": 142,
+    "words": 486,
     "minutes": 5
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/tu-dien-dien-dung": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/mac-tu-dien": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/nang-luong-tu-dien": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/dien-moi": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/mo-hinh-phan-tu": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/04-tu-dien-dien-moi/gauss-trong-dien-moi": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/05-dong-dien-dien-tro": {
     "words": 134,

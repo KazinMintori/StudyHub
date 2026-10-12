@@ -39,6 +39,8 @@ Hai cầu có thể trái dấu, hoặc một cầu nhiễm điện còn cầu k
 Lực điện giữa hai hạt yếu đi khi khoảng cách tăng. Giả sử lực điện không phụ thuộc khoảng cách. Lược mang điện còn làm vật cách điện trung hòa bị phân cực như Hình 21.8 không? Vì sao? Vật trung hòa còn bị hút về lược không? Vì sao?
 :::
 
+![Hình 21.8: Lược mang điện hút các mảnh nhựa trung hòa nhờ phân cực](img/young-21/hinh-21-8.png)
+
 
 <!-- detailed-solution:Q21.3 -->
 ::: solution Chi tiết
@@ -109,7 +111,7 @@ $$
 :::
 
 ::: exercise Q21.7
-Hình Q21.7 cho một số đường sức của ba điện tích điểm trên trục đứng, đều có cùng độ lớn điện tích. **(a)** Dấu mỗi điện tích là gì? Giải thích. **(b)** Tại điểm nào độ lớn trường nhỏ nhất? Giải thích cách các trường thành phần cộng để tạo trường tổng nhỏ tại đó.
+Hình Q21.7 cho một số đường sức của ba điện tích điểm trên trục đứng, đều có cùng độ lớn điện tích. (a) Dấu mỗi điện tích là gì? Giải thích. (b) Tại điểm nào độ lớn trường nhỏ nhất? Giải thích cách các trường thành phần cộng để tạo trường tổng nhỏ tại đó.
 :::
 
 ![Hình Q21.7: Đường sức của ba điện tích bằng nhau về độ lớn](img/young-21/hinh-q21-7.png)
@@ -145,6 +147,8 @@ Electron tự do trong kim loại vừa vận chuyển điện tích vừa trao 
 ::: exercise Q21.9
 Nguồn trong Hình 21.28a được giữ cố định. Thả một hạt nhỏ dương từ nghỉ tại một vị trí: Quỹ đạo có theo đường sức không? Giải thích. Lặp tình huống ở Hình 21.28b, giữ cả hai nguồn cố định. Quỹ đạo có theo đường sức không? Giải thích sự khác nhau giữa hai câu trả lời.
 :::
+
+![Hình 21.28: Đường sức của điện tích dương, lưỡng cực và hai điện tích dương bằng nhau](img/young-21/hinh-21-28.png)
 
 
 <!-- detailed-solution:Q21.9 -->
@@ -205,6 +209,8 @@ Lực đẩy rất lớn vì cả hai dư dương. Sự ổn định của vật
 ::: exercise Q21.12
 Đi trên thảm nylon rồi chạm vật kim loại lớn như tay nắm cửa có thể tạo tia lửa và gây giật. Vì sao dễ xảy ra vào ngày khô hơn ngày ẩm? Gợi ý: Xét phân tử nước ở Hình 21.30. Vì sao chạm vật kim loại nhỏ như kẹp giấy ít gây giật hơn?
 :::
+
+![Hình 21.30: Phân tử nước có hai phía điện tích và các chất hòa tan trong nước](img/young-21/hinh-21-30.png)
 
 
 <!-- detailed-solution:Q21.12 -->
@@ -317,7 +323,7 @@ Cả hai là lực dọc đường nối hai hạt, giảm như nghịch đảo 
 :::
 
 ::: exercise Q21.19
-Hai vật hình dạng không đều A, B mang điện trái dấu. Hình Q21.19 cho đường sức gần chúng. **(a)** Vật nào dương? Vì sao? **(b)** Trường mạnh hơn gần A hay gần B? Vì sao?
+Hai vật hình dạng không đều A, B mang điện trái dấu. Hình Q21.19 cho đường sức gần chúng. (a) Vật nào dương? Vì sao? (b) Trường mạnh hơn gần A hay gần B? Vì sao?
 :::
 
 ![Hình Q21.19: Đường sức gần hai vật A và B trái dấu](img/young-21/hinh-q21-19.png)

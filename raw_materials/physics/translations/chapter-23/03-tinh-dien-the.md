@@ -15,7 +15,7 @@ Có hai đường tính điện thế. Nếu biết phân bố nguồn, cộng c
 
 So với việc tính riêng các thành phần trường, tính điện thế thường đơn giản hơn. Phương pháp năng lượng và phương pháp lực đều dùng được, nhưng dữ kiện và đại lượng cần tìm quyết định cách thuận tiện.
 
-### Ví dụ 23.8 — Cầu dẫn tích điện
+### Ví dụ 23.8: Cầu dẫn tích điện
 
 Cầu dẫn đặc bán kính R mang tổng điện tích q. Tìm điện thế trong và ngoài cầu.
 
@@ -60,7 +60,7 @@ Khi muốn hạn chế vầng quang, có thể dùng bề mặt có bán kính c
 
 ![Hình 23.17: Cột kim loại trên đỉnh Empire State Building nhận phóng điện sét](../img/young-23/hinh-23-17.png)
 
-### Ví dụ 23.9 — Hai bản song song trái dấu
+### Ví dụ 23.9: Hai bản song song trái dấu
 
 Tìm điện thế ở độ cao y giữa hai bản song song đã xét ở mục 23.1. Trường đều hướng xuống, bản dưới chọn y = 0 và U = 0.
 
@@ -82,9 +82,9 @@ $$
 **Đánh giá.** Tại bản dưới V = 0 nhưng bản vẫn mang mật độ điện tích −σ. Mốc điện thế bằng không được chọn tùy ý, không có nghĩa vật tại mốc phải trung hòa. Quan hệ E = V_ab/d dùng ở trường đều của cấu hình phẳng này, không tự áp dụng cho hai cầu hoặc hai trụ đồng tâm có trường biến thiên.
 :::
 
-Trở lại câu hỏi hàn hồ quang, khi hiệu điện thế được giữ, khoảng cách nhỏ làm trường giữa dụng cụ và kim loại lớn hơn. Chọn **(iii)** trong mô hình của câu hỏi.
+Trở lại câu hỏi hàn hồ quang, khi hiệu điện thế được giữ, khoảng cách nhỏ làm trường giữa dụng cụ và kim loại lớn hơn. Chọn (iii) trong mô hình của câu hỏi.
 
-### Ví dụ 23.10 — Dây dài và trụ dẫn dài
+### Ví dụ 23.10: Dây dài và trụ dẫn dài
 
 Tìm điện thế cách một dây rất dài có mật độ điện tích λ một khoảng r.
 
@@ -110,7 +110,7 @@ $$
 Với λ dương, r tăng làm V giảm, đúng chiều trường. Nếu là trụ dẫn dài bán kính R, cùng biểu thức dùng được **ngoài trụ**. Chọn r₀ = R thì V trên mặt bằng không, điện thế trong vật liệu dẫn cũng bằng không. Không kéo nhánh logarit vào vùng trong trụ dẫn.
 :::
 
-### Ví dụ 23.11 — Vòng tích điện
+### Ví dụ 23.11: Vòng tích điện
 
 Điện tích Q phân bố đều trên vòng mảnh bán kính a. Tìm điện thế tại P trên trục vòng, cách tâm x.
 
@@ -129,7 +129,7 @@ $$
 **Đánh giá.** Khi |x| lớn hơn nhiều a, điện thế gần kQ/|x| của nguồn điểm Q. Trên trục còn có thể tích phân trường đã tìm ở Ví dụ 21.9 để nhận cùng kết quả. Lợi ích của tính điện thế ở đây là không cần chiếu từng vector trường.
 :::
 
-### Ví dụ 23.12 — Đoạn dây tích điện
+### Ví dụ 23.12: Đoạn dây tích điện
 
 Điện tích dương Q đều trên đoạn dài 2a dọc trục y, từ −a đến +a. Tìm điện thế tại P trên trục x, cách gốc x > 0.
 

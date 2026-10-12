@@ -50,6 +50,18 @@ Các ví dụ sau do dự án tự viết, không chép từ mục từ của ng
 | “Ta tính từng thành phần; cộng lại.” | “Ta tính từng thành phần rồi cộng các kết quả.” | Trình tự |
 | “Gradient bằng không; đây là cực tiểu.” | Chưa thể nối thành kết luận. Phải bổ sung giả thiết hoặc kiểm tra độ cong trước khi kết luận. | Không tự tạo một suy luận sai |
 
+### Chuyển câu lạm dụng dấu gạch ngang dài (em dash —)
+
+Dấu gạch ngang dài (`—`) chêm giữa câu thường là thói quen dịch máy từ tiếng Anh, làm gãy nhịp đọc tiếng Việt. Cần chuyển đổi linh hoạt:
+
+| Bản cần sửa | Bản biên tập | Phương thức thay thế |
+| --- | --- | --- |
+| “Quy hoạch lồi — vốn là công cụ quan trọng — giúp tìm cực tiểu toàn cục.” | “Quy hoạch lồi, vốn là công cụ quan trọng, giúp tìm cực tiểu toàn cục.” | Dấu phẩy cho vế phụ bổ nghĩa |
+| “Điểm tối ưu — tức là điểm có gradient bằng 0 — thỏa mãn điều kiện dừng.” | “Điểm tối ưu (tức là điểm có gradient bằng 0) thỏa mãn điều kiện dừng.” | Dấu ngoặc đơn cho vế giải thích phụ |
+| “Ta có hai tiêu chuẩn — tiêu chuẩn giá trị hàm và tiêu chuẩn bước di chuyển.” | “Ta có hai tiêu chuẩn: Tiêu chuẩn giá trị hàm và tiêu chuẩn bước di chuyển.” | Dấu hai chấm trước liệt kê (viết hoa sau `:`) |
+| “Nghiệm này duy nhất — điều này đồng nghĩa với việc không có cực tiểu khác.” | “Nghiệm này là duy nhất, đồng nghĩa với việc không tồn tại điểm cực tiểu nào khác.” | Từ nối tường minh |
+| “Thuật toán dừng lại — miền tìm kiếm đã thu hẹp dưới ngưỡng cho phép.” | “Thuật toán dừng lại vì miền tìm kiếm đã thu hẹp dưới ngưỡng cho phép.” | Từ nối chỉ nguyên nhân |
+
 ## 4. Vốn từ để giải thích thao tác và lập luận
 
 Chọn động từ theo việc thực sự làm. Không dùng nhiều từ gần nghĩa để che một bước chưa được giải thích.

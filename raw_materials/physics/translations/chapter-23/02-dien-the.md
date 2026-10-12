@@ -6,10 +6,8 @@
 
 $$
 \begin{aligned}
-&V\\
-&=U/q_0,\\
-&U\\
-&=q_0V.
+V&=U/q_0\\
+U&=q_0V
 \end{aligned}
 \tag{23.12}
 $$
@@ -28,9 +26,8 @@ Chia hệ thức công của lực điện cho q₀:
 
 $$
 \begin{aligned}
-&\frac{W_{a\to b}}{q_0}\\
-&=-\frac{U_b-U_a}{q_0}\\
-&=V_a-V_b.
+\frac{W_{a\to b}}{q_0}&=-\frac{U_b-U_a}{q_0}\\
+&=V_a-V_b
 \end{aligned}
 \tag{23.13}
 $$
@@ -90,12 +87,9 @@ Khi điện trường đã biết hoặc dễ tìm bằng Gauss, có thể dùng
 
 $$
 \begin{aligned}
-&W_{a\to b}\\
-&=q_0\\
-&\quad\times\int_a^b\vec E\cdot d\vec\ell,\\
-&V_a-V_b\\
-&=\int_a^b\vec E\cdot d\vec\ell\\
-&=\int_a^bE_\parallel\,d\ell.
+W_{a\to b}&=q_0\int_a^b\vec E\cdot d\vec\ell\\
+V_a-V_b&=\int_a^b\vec E\cdot d\vec\ell\\
+&=\int_a^bE_\parallel\,d\ell
 \end{aligned}
 \tag{23.17}
 $$
@@ -113,10 +107,7 @@ Quy tắc chung là đi cùng chiều trường thì điện thế giảm, đi n
 Đổi chiều tích phân cho cách viết tương đương:
 
 $$
-\begin{aligned}
-&V_a-V_b\\
-&=-\int_b^a\vec E\cdot d\vec\ell.
-\end{aligned}
+V_a-V_b=-\int_b^a\vec E\cdot d\vec\ell
 \tag{23.18}
 $$
 
@@ -130,7 +121,7 @@ $$
 
 Volt trên mét thường được dùng làm đơn vị trường trong thực hành.
 
-### Ứng dụng — Điện tâm đồ
+### Ứng dụng: Điện tâm đồ
 
 Các điện cực của điện tâm đồ, viết tắt ECG hoặc EKG, đo hiệu điện thế giữa các vùng da khác nhau, điển hình không quá 1 mV. Những hiệu ấy phản ánh khác biệt điện thế giữa các vùng tim, cho phép khảo sát hoạt động điện điều khiển co bóp tim. Ở đây đại lượng được đo là **hiệu điện thế**, không phải điện thế tuyệt đối của một vùng da.
 
@@ -158,15 +149,15 @@ $$
 
 Electron volt cũng đo mọi dạng năng lượng khác, chẳng hạn động năng. “Proton một triệu electron volt” nghĩa là proton có động năng 1 MeV, bằng $1.602\times10^{-13}$ J. Máy gia tốc LHC gần Geneva được thiết kế để gia tốc proton đến động năng 7 TeV, tức $7\times10^{12}$ eV.
 
-### Ứng dụng — Electron năng lượng cao trong xạ trị
+### Ứng dụng: Electron năng lượng cao trong xạ trị
 
 Một phương pháp xạ trị dùng chùm electron động năng 4–20 MeV truyền năng lượng cho mô qua va chạm với các nguyên tử. Electron trong khoảng năng lượng này đi vào mô một độ sâu cỡ vài centimét trong mô hình được mô tả, nên có ứng dụng với khối u gần bề mặt, chẳng hạn ở da hoặc môi. Ví dụ cho thấy eV và MeV diễn tả năng lượng của từng hạt, không phải điện áp của toàn thiết bị.
 
 ![Thiết bị dùng chùm hạt năng lượng cao để truyền năng lượng cho mô](../img/young-23/ung-dung-xa-tri.png)
 
-### Ví dụ 23.3 — Lực điện và hiệu điện thế
+### Ví dụ 23.3: Lực điện và hiệu điện thế
 
-Proton mang $+e=1.602\times10^{-19}$ C đi thẳng d = 0,50 m từ a đến b trong máy gia tốc tuyến tính. Trường đều hướng a đến b có độ lớn $E=1.5\times10^7$ V/m. Tìm **(a)** lực, **(b)** công lực điện, **(c)** Vₐ − Vᵦ.
+Proton mang $+e=1.602\times10^{-19}$ C đi thẳng d = 0,50 m từ a đến b trong máy gia tốc tuyến tính. Trường đều hướng a đến b có độ lớn $E=1.5\times10^7$ V/m. Tìm (a) lực, (b) công lực điện, (c) Vₐ − Vᵦ.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** F = eE. Trường đều cho lực không đổi và cùng chiều đường đi. Công bằng Fd, còn hiệu điện thế bằng W/e.
@@ -185,7 +176,7 @@ $$
 **Đánh giá.** Cũng có thể tích phân trường dọc đường: Trường không đổi, góc bằng không, nên Vₐ − Vᵦ = Ed. Trường hướng a đến b nên V giảm theo chiều chuyển động. Sự trùng giá trị 7,5 MeV và 7,5 MV ở đây gắn với điện tích proton bằng e, không phải hai đơn vị giống nhau.
 :::
 
-### Ví dụ 23.4 — Điện thế do lưỡng cực
+### Ví dụ 23.4: Điện thế do lưỡng cực
 
 Hai nguồn +12 nC và −12 nC cách 10,0 cm. Điểm a nằm giữa, cách nguồn dương 6,0 cm và nguồn âm 4,0 cm. Điểm b ở phía ngoài nguồn dương, cách hai nguồn lần lượt 4,0 cm và 14,0 cm. Điểm c trên trung trực, cách mỗi nguồn 13,0 cm. Tìm điện thế a,b,c.
 
@@ -207,7 +198,7 @@ $$
 **Đánh giá.** a gần nguồn âm hơn nên thế âm. b gần nguồn dương hơn nên thế dương. c cách hai nguồn bằng nhau, nên hai thế trái dấu bù nhau. Tính điện thế đơn giản hơn cộng hai vector trường, nhưng V_c = 0 không có nghĩa trường tại c bằng không.
 :::
 
-### Ví dụ 23.5 — Điện thế và thế năng
+### Ví dụ 23.5: Điện thế và thế năng
 
 Đặt nguồn điểm +4,0 nC ở lần lượt a,b,c của Ví dụ 23.4. Tìm phần thế năng tương tác liên quan điện tích này.
 
@@ -226,7 +217,7 @@ $$
 **Đánh giá.** Đưa q từ c ra vô hạn cho tổng công lực điện bằng không theo mọi đường đi vì hai đầu có cùng thế năng. Nếu chọn đi dọc trung trực lưỡng cực, lực ở mỗi điểm vuông góc đường đi, nên công từng phần dịch chuyển cũng bằng không. Với một đường khác, công từng phần có thể khác không nhưng tổng vẫn bằng không.
 :::
 
-### Ví dụ 23.6 — Tìm điện thế bằng tích phân
+### Ví dụ 23.6: Tìm điện thế bằng tích phân
 
 Dùng tích phân điện trường để tìm điện thế cách nguồn điểm q một khoảng r.
 
@@ -248,7 +239,7 @@ $$
 **Đánh giá.** Trùng (23.14) và dùng được với cả q dương hoặc âm. Tích phân điện trường từ a đến b cho Vₐ − Vᵦ, độc lập đường đi.
 :::
 
-### Ví dụ 23.7 — Chuyển động qua hiệu điện thế
+### Ví dụ 23.7: Chuyển động qua hiệu điện thế
 
 Hạt bụi có $m=5.0\times10^{-9}$ kg, tức 5,0 µg, mang q₀ = +2,0 nC, bắt đầu nghỉ ở a rồi đi thẳng đến b. Hai nguồn cố định +3,0 nC và −3,0 nC cách 3,0 cm. a cách nguồn dương 1,0 cm, nguồn âm 2,0 cm. b cách nguồn dương 2,0 cm, nguồn âm 1,0 cm. Chỉ lực điện sinh công. Tìm tốc độ ở b.
 

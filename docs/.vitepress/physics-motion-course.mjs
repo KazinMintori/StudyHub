@@ -1,27 +1,51 @@
 export const physicsMotionSlides = []
-
-export const physicsMotionCheatsheet = {
-  summary: 'Định nghĩa, tính chất và công thức của chuyển động thẳng, cùng quy ước trục và điều kiện áp dụng.',
-  sections: [
-    { id: 'definitions', title: 'Định nghĩa và đơn vị', badge: 'Mục 2.1–2.3', items: [
-      { name: 'Độ dời và vận tốc trung bình', formula: '$$\\Delta x=x_2-x_1,\\qquad v_{\\mathrm{av}-x}=\\frac{\\Delta x}{\\Delta t},\\quad\\Delta t>0$$', description: 'Tọa độ và độ dời tính bằng mét; vận tốc tính bằng m/s. Độ dời và vận tốc theo trục có thể dương, âm hoặc bằng không.' },
-      { name: 'Vận tốc tức thời và tốc độ', formula: '$$v_x=\\frac{dx}{dt},\\qquad v=|v_x|$$', description: 'Tốc độ tức thời không âm. Tốc độ trung bình bằng toàn bộ quãng đường chia toàn bộ thời gian, khác độ lớn vận tốc trung bình khi hành trình đổi chiều.' },
-      { name: 'Gia tốc trung bình và tức thời', formula: '$$a_{\\mathrm{av}-x}=\\frac{\\Delta v_x}{\\Delta t},\\qquad a_x=\\frac{dv_x}{dt}=\\frac{d^2x}{dt^2}$$', description: 'Gia tốc có đơn vị m/s². Trong chuyển động thẳng, gia tốc và vận tốc cùng dấu thì tốc độ tăng, trái dấu thì tốc độ giảm.' }
-    ] },
-    { id: 'constant-acceleration', title: 'Gia tốc không đổi', badge: 'Mục 2.4', items: [
-      { name: 'Bốn phương trình động học', formula: '$$\\begin{aligned}v_x&=v_{0x}+a_xt\\\\x-x_0&=v_{0x}t+\\tfrac12a_xt^2\\\\v_x^2-v_{0x}^2&=2a_x(x-x_0)\\\\x-x_0&=\\tfrac12(v_{0x}+v_x)t\\end{aligned}$$', description: 'Các phương trình dùng khi gia tốc không đổi trên toàn khoảng xét. Vị trí đầu và vận tốc đầu là điều kiện tại t = 0.' },
-      { name: 'Vận tốc trung bình trong trường hợp này', formula: '$$v_{\\mathrm{av}-x}=\\frac{v_{0x}+v_x}{2}$$', description: 'Quan hệ này theo vận tốc biến thiên tuyến tính theo thời gian; không dùng như định nghĩa tổng quát khi gia tốc thay đổi.' }
-    ] },
-    { id: 'free-fall', title: 'Rơi tự do', badge: 'Mục 2.5', items: [
-      { name: 'Chọn +y hướng lên', formula: '$$\\begin{aligned}a_y&=-g,\\quad g\\approx9.80\\,\\mathrm{m/s^2}>0\\\\v_y&=v_{0y}-gt\\\\y-y_0&=v_{0y}t-\\tfrac12gt^2\\\\v_y^2&=v_{0y}^2-2g(y-y_0)\\end{aligned}$$', description: 'Bỏ lực cản không khí, xét quãng rơi nhỏ so với bán kính Trái Đất và bỏ ảnh hưởng quay. Gia tốc hướng xuống trong cả nhánh đi lên và đi xuống; tại đỉnh vᵧ = 0 nhưng aᵧ = −g.' }
-    ] },
-    { id: 'graphs', title: 'Đọc đồ thị', badge: 'Mục 2.2–2.3, 2.6', table: {
-      headers: ['Đồ thị', 'Độ dốc tiếp tuyến', 'Diện tích có dấu'],
-      rows: [['Vị trí x theo thời gian t', 'Vận tốc vₓ', 'Không dùng để tính vận tốc hoặc độ dời'], ['Vận tốc vₓ theo t', 'Gia tốc aₓ', 'Độ dời Δx'], ['Gia tốc aₓ theo t', 'Không dùng trong công thức chương này', 'Độ biến thiên vận tốc Δvₓ']]
-    } },
-    { id: 'integration', title: 'Gia tốc biến thiên và điều kiện đầu', badge: 'Mục 2.6', items: [
-      { name: 'Tích phân giữa hai thời điểm', formula: '$$v_{2x}-v_{1x}=\\int_{t_1}^{t_2}a_x\\,dt,\\qquad x_2-x_1=\\int_{t_1}^{t_2}v_x\\,dt$$', description: 'Các tích phân cho độ biến thiên có dấu. Muốn tìm vận tốc hoặc vị trí tuyệt đối theo mốc tọa độ phải dùng thêm vận tốc đầu hoặc vị trí đầu.' },
-      { name: 'Hai vật gặp nhau', formula: '$$x_A(t)=x_B(t)$$', description: 'Hai vật gặp nhau khi có cùng tọa độ tại cùng thời điểm. Vận tốc của chúng khi gặp có thể khác nhau.' }
-    ] }
-  ]
+const d=tex=>'$$\n'+tex+'\n$$'
+export const physicsMotionCheatsheet={
+ summary:'Định nghĩa, tính chất và công thức của chuyển động thẳng, cùng quy ước trục và điều kiện áp dụng.',
+ sections:[
+  {id:'definitions',title:'Định nghĩa và đơn vị',badge:'Mục 2.1–2.3',items:[
+   {name:'Độ dời và vận tốc trung bình',formulaRows:[
+    {label:'Độ dời giữa hai thời điểm',formula:d(String.raw`\Delta x=x_2-x_1`)},
+    {label:'Vận tốc trung bình, Δt > 0',formula:d(String.raw`v_{\mathrm{av}-x}=\Delta x/\Delta t`)}
+   ],description:'Tọa độ và độ dời tính bằng mét, vận tốc tính bằng m/s. Độ dời và vận tốc theo trục có thể dương, âm hoặc bằng không.'},
+   {name:'Vận tốc tức thời và tốc độ',formulaRows:[
+    {label:'Vận tốc theo trục x',formula:d(String.raw`v_x=dx/dt`)},
+    {label:'Tốc độ tức thời',formula:d(String.raw`v=|v_x|`)}
+   ],description:'Tốc độ tức thời không âm. Tốc độ trung bình bằng toàn bộ quãng đường chia toàn bộ thời gian, khác độ lớn vận tốc trung bình khi hành trình đổi chiều.'},
+   {name:'Gia tốc trung bình và tức thời',formulaRows:[
+    {label:'Gia tốc trung bình, Δt > 0',formula:d(String.raw`a_{\mathrm{av}-x}=\Delta v_x/\Delta t`)},
+    {label:'Đạo hàm của vận tốc',formula:d(String.raw`a_x=dv_x/dt`)},
+    {label:'Đạo hàm bậc hai của vị trí',formula:d(String.raw`a_x=d^2x/dt^2`)}
+   ],description:'Gia tốc có đơn vị m/s². Trong chuyển động thẳng, gia tốc và vận tốc cùng dấu thì tốc độ tăng, trái dấu thì tốc độ giảm.'}
+  ]},
+  {id:'constant-acceleration',title:'Gia tốc không đổi',badge:'Mục 2.4',items:[
+   {name:'Bốn phương trình động học',formulaRows:[
+    {label:'Vận tốc sau thời gian t',formula:d(String.raw`v_x=v_{0x}+a_xt`)},
+    {label:'Độ dời sau thời gian t',formula:d(String.raw`x-x_0=v_{0x}t+\tfrac12a_xt^2`)},
+    {label:'Quan hệ không chứa thời gian',formula:d(String.raw`v_x^2-v_{0x}^2=2a_x(x-x_0)`)},
+    {label:'Độ dời theo hai vận tốc đầu, cuối',formula:d(String.raw`x-x_0=\tfrac12(v_{0x}+v_x)t`)}
+   ],description:'Các phương trình dùng khi gia tốc không đổi trên toàn khoảng xét. Vị trí đầu và vận tốc đầu là điều kiện tại t = 0.'},
+   {name:'Vận tốc trung bình trong trường hợp này',formula:d(String.raw`v_{\mathrm{av}-x}=\frac{v_{0x}+v_x}{2}`),description:'Quan hệ này theo vận tốc biến thiên tuyến tính theo thời gian, không dùng như định nghĩa tổng quát khi gia tốc thay đổi.'}
+  ]},
+  {id:'free-fall',title:'Rơi tự do',badge:'Mục 2.5',items:[
+   {name:'Chọn +y hướng lên',formulaRows:[
+    {label:'Gia tốc hướng xuống',formula:d(String.raw`a_y=-g`)},
+    {label:'Độ lớn gia tốc trọng trường, g > 0',formula:d(String.raw`g\approx9.80\,\mathrm{m/s^2}`)},
+    {label:'Vận tốc sau thời gian t',formula:d(String.raw`v_y=v_{0y}-gt`)},
+    {label:'Độ dời theo thời gian',formula:d(String.raw`y-y_0=v_{0y}t-\tfrac12gt^2`)},
+    {label:'Quan hệ không chứa thời gian',formula:d(String.raw`v_y^2=v_{0y}^2-2g(y-y_0)`)}
+   ],description:'Bỏ lực cản không khí, xét quãng rơi nhỏ so với bán kính Trái Đất và bỏ ảnh hưởng quay. Gia tốc hướng xuống trong cả nhánh đi lên và đi xuống. Tại đỉnh vᵧ = 0 nhưng aᵧ = −g.'}
+  ]},
+  {id:'graphs',title:'Đọc đồ thị',badge:'Mục 2.2–2.3, 2.6',table:{
+   headers:['Đồ thị','Độ dốc tiếp tuyến','Diện tích có dấu'],
+   rows:[['Vị trí x theo thời gian t','Vận tốc vₓ','Không dùng để tính vận tốc hoặc độ dời'],['Vận tốc vₓ theo t','Gia tốc aₓ','Độ dời Δx'],['Gia tốc aₓ theo t','Không dùng trong công thức chương này','Độ biến thiên vận tốc Δvₓ']]
+  }},
+  {id:'integration',title:'Gia tốc biến thiên và điều kiện đầu',badge:'Mục 2.6',items:[
+   {name:'Tích phân giữa hai thời điểm',formulaRows:[
+    {label:'Độ biến thiên vận tốc',formula:d(String.raw`v_{2x}-v_{1x}=\int_{t_1}^{t_2}a_x\,dt`)},
+    {label:'Độ dời',formula:d(String.raw`x_2-x_1=\int_{t_1}^{t_2}v_x\,dt`)}
+   ],description:'Các tích phân cho độ biến thiên có dấu. Muốn tìm vận tốc hoặc vị trí tuyệt đối theo mốc tọa độ phải dùng thêm vận tốc đầu hoặc vị trí đầu.'},
+   {name:'Hai vật gặp nhau',formula:d(String.raw`x_A(t)=x_B(t)`),description:'Hai vật gặp nhau khi có cùng tọa độ tại cùng thời điểm. Vận tốc của chúng khi gặp có thể khác nhau.'}
+  ]}
+ ]
 }

@@ -5,7 +5,7 @@
 ### Biến thể từ Ví dụ 23.1–23.2
 
 ::: exercise VP23.2.1
-Electron điện tích −e = $-1.60\times10^{-19}$ C nghỉ cách tâm hạt nhân chì mang +82e = $1.31\times10^{-17}$ C một khoảng $1.00\times10^{-10}$ m. Coi cả hai là nguồn điểm. **(a)** Cần công ngoài bao nhiêu để đưa electron chậm đến cách tâm $5.00\times10^{-10}$ m? **(b)** Thả từ nghỉ ở vị trí đó, electron có động năng bao nhiêu khi đến cách tâm $8.00\times10^{-12}$ m? Coi hạt nhân đứng yên do khối lượng lớn hơn nhiều.
+Electron điện tích −e = $-1.60\times10^{-19}$ C nghỉ cách tâm hạt nhân chì mang +82e = $1.31\times10^{-17}$ C một khoảng $1.00\times10^{-10}$ m. Coi cả hai là nguồn điểm. (a) Cần công ngoài bao nhiêu để đưa electron chậm đến cách tâm $5.00\times10^{-10}$ m? (b) Thả từ nghỉ ở vị trí đó, electron có động năng bao nhiêu khi đến cách tâm $8.00\times10^{-12}$ m? Coi hạt nhân đứng yên do khối lượng lớn hơn nhiều.
 :::
 
 <!-- detailed-solution:VP23.2.1 -->
@@ -32,7 +32,7 @@ Công ở (a) dương vì phải đưa electron ra xa lực hút. Ở (b), lực
 :::
 
 ::: exercise VP23.2.2
-Proton có m = $1.67\times10^{-27}$ kg, +e = $1.60\times10^{-19}$ C được bắn thẳng vào hạt nhân chưa biết điện tích. Coi hai nguồn điểm, hạt nhân đứng yên. Ở rất xa, proton có tốc độ $2.50\times10^6$ m/s. Nó dừng tức thời cách tâm hạt nhân $5.29\times10^{-13}$ m rồi quay lại. **(a)** Tìm thế năng lúc dừng. **(b)** Tìm điện tích hạt nhân.
+Proton có m = $1.67\times10^{-27}$ kg, +e = $1.60\times10^{-19}$ C được bắn thẳng vào hạt nhân chưa biết điện tích. Coi hai nguồn điểm, hạt nhân đứng yên. Ở rất xa, proton có tốc độ $2.50\times10^6$ m/s. Nó dừng tức thời cách tâm hạt nhân $5.29\times10^{-13}$ m rồi quay lại. (a) Tìm thế năng lúc dừng. (b) Tìm điện tích hạt nhân.
 :::
 
 <!-- detailed-solution:VP23.2.2 -->
@@ -56,7 +56,7 @@ $$
 :::
 
 ::: exercise VP23.2.3
-Nguồn q₁ = +e cố định ở y = 0, q₂ = −e ở y = a. **(a)** Tìm công ngoài để đưa q₃ = −e từ vô hạn đến nghỉ ở y = −2a. **(b)** Tìm thế năng tổng của hệ ba nguồn.
+Nguồn q₁ = +e cố định ở y = 0, q₂ = −e ở y = a. (a) Tìm công ngoài để đưa q₃ = −e từ vô hạn đến nghỉ ở y = −2a. (b) Tìm thế năng tổng của hệ ba nguồn.
 :::
 
 <!-- detailed-solution:VP23.2.3 -->
@@ -81,7 +81,7 @@ Công âm cho thấy lực điện sinh công dương khi đưa q₃ vào chậm
 :::
 
 ::: exercise VP23.2.4
-Nguồn q₁ = +5,00 nC cố định tại gốc. Cần công ngoài $8.10\times10^{-6}$ J để đưa nguồn thứ hai từ vô hạn đến (4,00 cm,0,0). **(a)** Tìm q₂. **(b)** Sau khi q₂ ở vị trí ấy, cần thêm công bao nhiêu để đưa q₃ = +2,00 nC từ vô hạn đến (0,3,00 cm,0)?
+Nguồn q₁ = +5,00 nC cố định tại gốc. Cần công ngoài $8.10\times10^{-6}$ J để đưa nguồn thứ hai từ vô hạn đến (4,00 cm,0,0). (a) Tìm q₂. (b) Sau khi q₂ ở vị trí ấy, cần thêm công bao nhiêu để đưa q₃ = +2,00 nC từ vô hạn đến (0,3,00 cm,0)?
 :::
 
 <!-- detailed-solution:VP23.2.4 -->
@@ -106,7 +106,7 @@ $$
 ### Biến thể từ Ví dụ 23.3–23.7
 
 ::: exercise VP23.7.1
-Trong vùng có trường đều $\vec E=(5.00\times10^2\,\mathrm{V/m})\hat{\mathbf i}$. Điện thế tại gốc là V₀. Tìm V₀ − V_P với P tại **(a)** (5,00 cm,0,0), **(b)** (3,00 cm,4,00 cm,0), **(c)** (0,5,00 cm,0), **(d)** (−5,00 cm,0,0).
+Trong vùng có trường đều $\vec E=(5.00\times10^2\,\mathrm{V/m})\hat{\mathbf i}$. Điện thế tại gốc là V₀. Tìm V₀ − V_P với P tại (a) (5,00 cm,0,0), (b) (3,00 cm,4,00 cm,0), (c) (0,5,00 cm,0), (d) (−5,00 cm,0,0).
 :::
 
 <!-- detailed-solution:VP23.7.1 -->
@@ -122,7 +122,7 @@ Kết quả theo thứ tự **+25,0 V, +15,0 V, 0, −25,0 V**. Dấu âm ở (d
 :::
 
 ::: exercise VP23.7.2
-Hai nguồn +6,0 nC ở (3,0 cm,0,0) và (−3,0 cm,0,0). Với mốc vô hạn, tìm V tại **(a)** gốc, **(b)** (0,4,0 cm,0), **(c)** (8,0 cm,0,0). **(d)** Trong những điểm này, điểm nào có trường bằng không? Trường bằng không có buộc điện thế bằng không không?
+Hai nguồn +6,0 nC ở (3,0 cm,0,0) và (−3,0 cm,0,0). Với mốc vô hạn, tìm V tại (a) gốc, (b) (0,4,0 cm,0), (c) (8,0 cm,0,0). (d) Trong những điểm này, điểm nào có trường bằng không? Trường bằng không có buộc điện thế bằng không không?
 :::
 
 <!-- detailed-solution:VP23.7.2 -->
@@ -138,7 +138,7 @@ Hai nguồn +6,0 nC ở (3,0 cm,0,0) và (−3,0 cm,0,0). Với mốc vô hạn,
 :::
 
 ::: exercise VP23.7.3
-Nguồn +5,90 nC tại (3,00 cm,0,0), nguồn −5,90 nC tại (−3,00 cm,0,0). Với mốc vô hạn, tìm V tại **(a)** (3,00 cm,8,00 cm,0), **(b)** (−3,00 cm,8,00 cm,0). **(c)** Proton m = $1.67\times10^{-27}$ kg, +e = $1.60\times10^{-19}$ C đi từ (b) đến (a), tốc độ ở (b) $3.00\times10^5$ m/s. Tìm tốc độ ở (a).
+Nguồn +5,90 nC tại (3,00 cm,0,0), nguồn −5,90 nC tại (−3,00 cm,0,0). Với mốc vô hạn, tìm V tại (a) (3,00 cm,8,00 cm,0), (b) (−3,00 cm,8,00 cm,0). (c) Proton m = $1.67\times10^{-27}$ kg, +e = $1.60\times10^{-19}$ C đi từ (b) đến (a), tốc độ ở (b) $3.00\times10^5$ m/s. Tìm tốc độ ở (a).
 :::
 
 <!-- detailed-solution:VP23.7.3 -->
@@ -163,7 +163,7 @@ $$
 :::
 
 ::: exercise VP23.7.4
-Cầu cách điện đều trong thể tích có điện tích dương Q, bán kính R, trường trong xuyên tâm với $E=kQr/R^3$. **(a)** Tích phân để tìm hiệu điện thế giữa tâm và mặt. **(b)** Tâm hay mặt có điện thế cao hơn?
+Cầu cách điện đều trong thể tích có điện tích dương Q, bán kính R, trường trong xuyên tâm với $E=kQr/R^3$. (a) Tích phân để tìm hiệu điện thế giữa tâm và mặt. (b) Tâm hay mặt có điện thế cao hơn?
 :::
 
 <!-- detailed-solution:VP23.7.4 -->
@@ -189,7 +189,7 @@ Tâm có điện thế cao hơn mặt.
 ### Biến thể từ Ví dụ 23.8–23.12
 
 ::: exercise VP23.12.1
-Cầu dẫn bán kính R mang q dương. Tìm công ngoài để đưa điện tích thử nhỏ q₀ dương chậm **(a)** từ 5R đến 3R, **(b)** từ 2R đến 7R, **(c)** từ 4R đến R/2. Giả sử q₀ không làm đổi phân bố q trên cầu.
+Cầu dẫn bán kính R mang q dương. Tìm công ngoài để đưa điện tích thử nhỏ q₀ dương chậm (a) từ 5R đến 3R, (b) từ 2R đến 7R, (c) từ 4R đến R/2. Giả sử q₀ không làm đổi phân bố q trên cầu.
 :::
 
 <!-- detailed-solution:VP23.12.1 -->
@@ -214,8 +214,10 @@ $$
 :::
 
 ::: exercise VP23.12.2
-Hai bản trái dấu trong Hình 23.18 có V_ab = 24,0 V, bản dưới V = 0, cách nhau d = 4,50 mm. **(a)** Tìm V cách bản dưới 3,00 mm. **(b)** Tìm thế năng của bụi m = $5.00\times10^{-9}$ kg, q = +2,00 nC ở đó. **(c)** Thả bụi từ nghỉ, nó đi đến bản nào và có tốc độ bao nhiêu khi chạm?
+Hai bản trái dấu trong Hình 23.18 có V_ab = 24,0 V, bản dưới V = 0, cách nhau d = 4,50 mm. (a) Tìm V cách bản dưới 3,00 mm. (b) Tìm thế năng của bụi m = $5.00\times10^{-9}$ kg, q = +2,00 nC ở đó. (c) Thả bụi từ nghỉ, nó đi đến bản nào và có tốc độ bao nhiêu khi chạm?
 :::
+
+![Hình 23.18: Hai bản song song với bản dưới chọn y = 0](img/young-23/hinh-23-18.png)
 
 <!-- detailed-solution:VP23.12.2 -->
 ::: solution Chi tiết
@@ -226,11 +228,11 @@ Hai bản trái dấu trong Hình 23.18 có V_ab = 24,0 V, bản dưới V = 0, 
 - Tỷ số độ cao y/d cho điện thế.
 - Bụi dương chịu lực về thế thấp, đi xuống. Độ giảm qV thành động năng.
 
-**(a)** V = 24(3,00/4,50) = 16,0 V. **(b)** U = qV = $3.20\times10^{-8}$ J. **(c)** Bụi đi đến bản dưới, có $v=\sqrt{2U/m}=3.58$ m/s khi chạm trong mô hình chỉ lực điện sinh công.
+(a) V = 24(3,00/4,50) = 16,0 V. (b) U = qV = $3.20\times10^{-8}$ J. (c) Bụi đi đến bản dưới, có $v=\sqrt{2U/m}=3.58$ m/s khi chạm trong mô hình chỉ lực điện sinh công.
 :::
 
 ::: exercise VP23.12.3
-Vòng đều mang +5,00 nC, bán kính 2,50 cm. Hạt q = +3,00 nC, m = $4.00\times10^{-9}$ kg ở trên trục, cách tâm 8,00 cm, đang đi về tâm với 60,0 m/s. Mốc V ở vô hạn. Tìm thế năng **(a)** tại 8,00 cm, **(b)** tại tâm, **(c)** động năng và tốc độ tại tâm.
+Vòng đều mang +5,00 nC, bán kính 2,50 cm. Hạt q = +3,00 nC, m = $4.00\times10^{-9}$ kg ở trên trục, cách tâm 8,00 cm, đang đi về tâm với 60,0 m/s. Mốc V ở vô hạn. Tìm thế năng (a) tại 8,00 cm, (b) tại tâm, (c) động năng và tốc độ tại tâm.
 :::
 
 <!-- detailed-solution:VP23.12.3 -->
@@ -258,7 +260,7 @@ Kết quả động năng dương cho biết hạt vượt được rào thế n
 :::
 
 ::: exercise VP23.12.4
-Điện tích dương Q đều trên đoạn dài L dọc trục x từ x = L đến 2L. **(a)** Điện tích của phần dx bằng bao nhiêu? **(b)** Tích phân tìm điện thế tại gốc.
+Điện tích dương Q đều trên đoạn dài L dọc trục x từ x = L đến 2L. (a) Điện tích của phần dx bằng bao nhiêu? (b) Tích phân tìm điện thế tại gốc.
 :::
 
 <!-- detailed-solution:VP23.12.4 -->
@@ -279,7 +281,7 @@ V(0)&=\frac{kQ}{L}\int_L^{2L}\frac{dx}{x}\\
 $$
 :::
 
-## Bài tổng hợp — Nguồn điểm và đoạn dây
+## Bài tổng hợp: Nguồn điểm và đoạn dây
 
 ::: exercise Bài tổng hợp 23
 Điện tích dương Q đều trên thanh mảnh dài 2a, dọc trục x từ −a đến +a. Tìm công ngoài cần để đưa nguồn dương q chậm từ vô hạn đến x = +L, với L > a.

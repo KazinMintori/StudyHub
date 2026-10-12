@@ -64,7 +64,7 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 3. **Mở bước khó**: Làm rõ những bước biến đổi mà người mới hay vấp ngã.
 4. **Không bịa đặt**: Tuyệt đối không bịa trích dẫn, tác giả, số liệu thống kê hoặc năm tháng lịch sử.
 5. **Tiếng Việt tự nhiên**: Hành văn sáng sủa, thuần Việt, tránh câu cú dịch máy thô cứng.
-6. **Chủ quyền bài giảng (Chính danh, biến tri thức thành bài giảng độc lập)**: Bài giảng của StudyHub là giáo trình giảng dạy độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các cụm từ: *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“theo sách…”*, *“sách dùng…”*, *“nguyên tác…”*, *“bản dịch của…”*, *“tiến độ bản dịch…”*. Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (*“Hình 1.1: …”*, *“Xét bài toán thực tế sau:…”*, *“Quan sát đồ thị chuyển trạng thái…”*).
+6. **Chủ quyền bài giảng (Chính danh, biến tri thức thành bài giảng độc lập)**: Bài giảng của StudyHub là giáo trình giảng dạy độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các câu và cụm từ: *“Nội dung lấy từ giáo trình…”*, *“Lấy từ slide của môn…”*, *“Bài tập lấy từ sách…”*, *“Ví dụ do người soạn thêm, không gán cho tác giả giáo trình…”*, *“Ảnh lấy từ sách”*, *“ảnh nguyên gốc sách”*, *“hình trong sách”*, *“dữ liệu này từ…”*, *“theo sách…”*, *“sách dùng…”*, *“nguyên tác…”*, *“bản dịch của…”*, *“tiến độ bản dịch…”*. Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (*“Hình 1.1: …”*, *“Xét bài toán thực tế sau:…”*, *“Quan sát đồ thị chuyển trạng thái…”*). Mọi bài giảng là một thực thể tri thức độc lập, hoàn chỉnh, tự chịu trách nhiệm về mặt học thuật và sư phạm. Mục cuối bài luôn đặt tên là `## Tài liệu tham khảo` theo chuẩn học thuật chuẩn mực, không phân bua “do người soạn bổ sung”.
 7. **Văn phong giáo sư và nhà ngôn ngữ tiếng Việt đại tài**: Dùng từ ngữ tiếng Việt chuẩn xác, giàu tính sư phạm, uyên bác và dễ hiểu, không “giả trân”, không sáo rỗng kiểu AI. Các mẹo tư duy, trực giác thuật toán được lồng ghép tự nhiên (*“Một cách người người ta hay dùng trong thực tế để…”*, *“Để không bao giờ nhầm lẫn ở bước này…”* thay vì đóng khung máy móc *“Mẹo thú vị:”*). Luôn gắn kết lý thuyết trừu tượng với các ứng dụng thực tế sinh động trong đời sống và đặt câu hỏi đào sâu bản chất vấn đề.
 8. **Chuẩn mực toán học & Chống tràn / Tuyệt đối không xuất hiện thanh cuộn (No Math Scrollbars)**:
    - Mọi công thức, phương trình, hàm số toán học hiển thị (`$$...$$`) và nội dòng (`$...$`) phải được format chính xác, thẩm mỹ, tuyệt đối không xuất hiện thanh cuộn ngang (scrollbar) trên bất kỳ kích cỡ màn hình nào (kể cả di động ~360px–375px hay trong các hộp `::: info`, `::: details`).
@@ -104,4 +104,35 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 15. **Quy tắc hiển thị khái niệm Wiki liên ngành (Cross-Disciplinary Wiki Scope)**:
    - Môn học mặc định ưu tiên tìm kiếm và hiển thị định nghĩa khái niệm trong phạm vi chuyên môn của môn đó (ví dụ: Toán học trong môn *Cơ sở toán học cho AI*).
    - Tuy nhiên, đối với các khái niệm hoặc định luật thuần túy bắt nguồn từ lĩnh vực khoa học khác (ví dụ: *Định luật Snell* là quang học/vật lý xuất hiện trong bài toán tối ưu của Toán cho AI), cho phép liên kết và hiển thị định nghĩa từ lĩnh vực gốc tương ứng thông qua cơ chế fallback scope mở rộng trong `courseWikiScopes` (`docs/.vitepress/wiki-content.mjs`).
+16. **Hạn chế dấu gạch ngang dài (em dash —) trong văn xuôi (Minimize Em Dashes)**:
+   - Trong văn xuôi tiếng Việt, tuyệt đối hạn chế lạm dụng dấu gạch ngang dài (`—` hoặc `--`) để chêm xen vế phụ giải thích giữa câu. Đây là thói quen dịch máy bắt chước ngữ pháp tiếng Anh, làm gãy vụn câu văn và mất đi nhịp điệu tự nhiên của tiếng Việt.
+   - Thay thế bằng các phương thức tiếng Việt chuẩn mực:
+     - Dùng dấu phẩy (`,`) cho các vế phụ ngắn liền mạch.
+     - Dùng dấu ngoặc đơn (`(...)`) cho chú thích bổ trợ, giải thích phụ hoặc thuật ngữ tương đương.
+     - Dùng dấu hai chấm (`:`) khi chuẩn bị phát biểu định nghĩa, giải thích bản chất hoặc mở đầu liệt kê.
+     - Dùng từ nối tiếng Việt tự nhiên (*tức là, cụ thể là, nghĩa là, vốn là, đồng nghĩa với việc...*).
+     - Tách thành hai câu đơn độc lập khi vế giải thích đủ dài và có chủ ngữ riêng.
+   - Các trường hợp hợp lệ duy nhất của dấu gạch ngang:
+     - Dấu nối khoảng số, ngày tháng, thời gian (dùng en dash `–`: Ví dụ `tr. 12–15`, `1945–1975`).
+     - Tên định lý, thuật toán liên danh hai hoặc nhiều tác giả (ví dụ: *Karush–Kuhn–Tucker*, *Cauchy–Schwarz*, *Gauss–Jordan*).
+     - Dấu gạch đầu dòng danh sách liệt kê (`- ...`).
+17. **Tính trực diện và đúng bản chất của ví dụ minh họa (Direct & Verified Exemplification)**:
+   - Khi vừa phát biểu một khái niệm, định lý hoặc tính chất toán học, ví dụ đi kèm ngay sau đó bắt buộc phải chạm đúng vào bản chất kỹ thuật đặc thù của tính chất ấy.
+   - Tuyệt đối không chọn ví dụ hời hợt, chung chung hoặc lấy đối tượng tầm thường làm lu mờ tính chất cần giảng dạy.
+   - Mọi ví dụ đối chứng hoặc phản chứng phải được kiểm tra tính chất bằng code Python trước khi viết vào bài (chẳng hạn: Muốn minh họa hàm tựa lồi nhưng không lồi thì bắt buộc phải kiểm tra ma trận Hessian hoặc phép thử dây cung để chắc chắn hàm đó thực sự không lồi).
+18. **Chuẩn hóa ký hiệu toán học trị tuyệt đối và chuẩn (Absolute Value & Norm Syntax)**:
+   - Giá trị tuyệt đối hoặc khoảng cách: Dùng trực tiếp `|x - y|` hoặc `|c - b_i|`.
+   - Chuẩn vector hoặc ma trận: Dùng `\|x\|` hoặc `\lVert x \rVert_2`.
+   - Tuyệt đối không dùng `\vert{}` hay `\Vert{}` vì gây lỗi phân tích cú pháp, khoảng cách xấu và để lại cặp ngoặc nhọn `{}` rỗng trong MathJax / KaTeX của VitePress.
+19. **Cấm lối viết "nghĩ thành tiếng" trong lời giải bài tập (No Thinking-Aloud in Solutions)**:
+   - Lời giải bài tập phải là văn bản sư phạm mẫu mực, lập luận mạch lạc, chắc chắn và dứt khoát từ đầu đến cuối.
+   - Nghiêm cấm đưa vào các câu nháp "nghĩ thành tiếng" kiểu tự độc thoại: *“Khoan đã, hãy xem lại…”*, *“À không, thay vào đó…”*, *“Ý tôi là…”*, *“Thử lại nào…”*, *“Nhầm rồi…”*. Mọi phép thử sai hay phân tích phản ví dụ phải được trình bày khách quan như một phần tự nhiên của bài giảng.
+20. **Không bịa đặt tần suất lỗi sinh viên hoặc "bẫy thi cử" vô căn cứ (No Fabricated Error Frequency)**:
+   - Tuyệt đối không đưa ra các khẳng định mang tính thống kê cảm tính về sai sót của người học nếu không có số liệu thực nghiệm: Nghiêm cấm các câu *“Sinh viên rất hay nhầm…”*, *“Lỗi phổ biến nhất của sinh viên là…”*, *“Đa số sinh viên đều mắc bẫy này…”*, *“Bẫy thi cử cực kỳ phổ biến…”*.
+   - Cách diễn đạt chuẩn mực: Nêu trực diện hai cách hiểu đối lập hoặc chỉ rõ điểm mấu chốt dễ gây ngộ nhận (*“Một cách đọc dễ dẫn đến sai sót là... Trái lại, khi xét kỹ giả thiết...”*).
+21. **Kiểm soát độ dài câu và mật độ in đậm (Sentence Length & Boldness Balance)**:
+   - Tránh câu văn quá dài lê thê: Mỗi câu văn xuôi nên dưới 50–55 từ. Khi câu quá dài hoặc chứa nhiều ý, chủ động tách thành hai câu đơn độc lập với chủ ngữ rõ ràng để người học dễ tiếp thu và tránh hụt hơi.
+   - Không lạm dụng in đậm (`**...**`): Chỉ in đậm tên thuật ngữ ở lần đầu tiên định nghĩa hoặc các điều kiện tiên quyết mang tính quyết định. Tuyệt đối không in đậm 4–5 cụm từ trong cùng một đoạn văn làm loãng điểm nhấn và tạo cảm giác tiếp thị, quảng cáo.
+
+
 

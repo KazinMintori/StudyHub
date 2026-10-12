@@ -3,13 +3,12 @@
 ## Bài tập tổng hợp
 
 ::: exercise 21.57 •••
-Bốn nguồn giống nhau Q đặt tại các đỉnh hình vuông cạnh L. **(a)** Vẽ mọi lực tác dụng lên một nguồn. **(b)** Tìm độ lớn và hướng tổng lực do ba nguồn còn lại lên nguồn đó.
+Bốn nguồn giống nhau Q đặt tại các đỉnh hình vuông cạnh L. (a) Vẽ mọi lực tác dụng lên một nguồn. (b) Tìm độ lớn và hướng tổng lực do ba nguồn còn lại lên nguồn đó.
 :::
 
 
 <!-- detailed-solution:21.57 -->
 ::: solution Chi tiết
-
 ![Ba lực đẩy trên một điện tích ở đỉnh hình vuông](img/young-21/loi-giai-21-57.svg)
 **Tóm tắt đề bài:** Bốn nguồn Q tại đỉnh vuông cạnh L, xét một đỉnh.
 
@@ -27,6 +26,9 @@ F&=\sqrt2F_0+F_0/2\\
 $$
 
 Sơ đồ lực gồm hai mũi tên theo hai cạnh ra ngoài và một mũi tên theo đường chéo ra ngoài. Không gộp chúng trước khi thể hiện từng nguồn.
+
+![Ba lực đẩy trên một điện tích ở đỉnh hình vuông](img/young-21/loi-giai-21-57.svg)
+
 :::
 
 ::: exercise 21.58 •••
@@ -58,7 +60,7 @@ $$
 :::
 
 ::: exercise 21.59 ••
-$q_1=+5.00\,\mathrm{nC}$ tại gốc và $q_2=-2.00\,\mathrm{nC}$ tại $x=4.00\,\mathrm{cm}$. **(a)** Đặt $q_3=+6.00\,\mathrm{nC}$ ở $(4.00\,\mathrm{cm},3.00\,\mathrm{cm})$, tìm thành phần x và y của tổng lực lên nó. **(b)** Tìm độ lớn và hướng lực đó.
+$q_1=+5.00\,\mathrm{nC}$ tại gốc và $q_2=-2.00\,\mathrm{nC}$ tại $x=4.00\,\mathrm{cm}$. (a) Đặt $q_3=+6.00\,\mathrm{nC}$ ở $(4.00\,\mathrm{cm},3.00\,\mathrm{cm})$, tìm thành phần x và y của tổng lực lên nó. (b) Tìm độ lớn và hướng lực đó.
 :::
 
 
@@ -122,8 +124,10 @@ Không dùng gần đúng này nếu góc lớn.
 :::
 
 ::: exercise 21.61 ••• CP
-Hai cầu nhỏ $m=15.0\,\mathrm g$ treo từ cùng điểm bằng dây lụa $L=1.20\,\mathrm m$, như Hình P21.60. Cho hai cầu điện tích âm bằng nhau q, mỗi dây lệch $25.0^\circ$ so với phương thẳng đứng. **(a)** Vẽ lực trên mỗi cầu, coi cầu là điểm. **(b)** Tìm độ lớn q. **(c)** Rút cả hai dây còn $0.600\,\mathrm m$, giữ điện tích không đổi. Góc lệch mới bằng bao nhiêu? Có thể giải số bằng cách thử và điều chỉnh góc đến khi phương trình tự nhất quán.
+Hai cầu nhỏ $m=15.0\,\mathrm g$ treo từ cùng điểm bằng dây lụa $L=1.20\,\mathrm m$, như Hình P21.60. Cho hai cầu điện tích âm bằng nhau q, mỗi dây lệch $25.0^\circ$ so với phương thẳng đứng. (a) Vẽ lực trên mỗi cầu, coi cầu là điểm. (b) Tìm độ lớn q. (c) Rút cả hai dây còn $0.600\,\mathrm m$, giữ điện tích không đổi. Góc lệch mới bằng bao nhiêu? Có thể giải số bằng cách thử và điều chỉnh góc đến khi phương trình tự nhất quán.
 :::
+
+![Hình P21.60: Hai cầu cùng điện tích treo từ một điểm và đẩy nhau](img/young-21/hinh-p21-60.png)
 
 
 <!-- detailed-solution:21.61 -->
@@ -242,7 +246,7 @@ $$
 :::
 
 ::: exercise 21.65 ••
-Cọ bóng bay lên tóc làm electron chuyển sang bóng, khiến bóng âm. Gần trần, electron dư của bóng đẩy electron trong trần, tạo phía dương gần bóng hơn. Mô hình tương tác bằng hai điện tích điểm bằng nhau về độ lớn và trái dấu, cách $500\,\mu\mathrm m$, bỏ điện tích âm xa hơn trong trần. **(a)** Với bóng thường nặng $4\,\mathrm g$, ước lượng điện tích tối thiểu để bám trần. **(b)** Vì bóng dễ bám sau cọ xát, giả sử điện tích đạt gấp 10 giá trị tối thiểu. Ước lượng số electron đã chuyển sang bóng.
+Cọ bóng bay lên tóc làm electron chuyển sang bóng, khiến bóng âm. Gần trần, electron dư của bóng đẩy electron trong trần, tạo phía dương gần bóng hơn. Mô hình tương tác bằng hai điện tích điểm bằng nhau về độ lớn và trái dấu, cách $500\,\mu\mathrm m$, bỏ điện tích âm xa hơn trong trần. (a) Với bóng thường nặng $4\,\mathrm g$, ước lượng điện tích tối thiểu để bám trần. (b) Vì bóng dễ bám sau cọ xát, giả sử điện tích đạt gấp 10 giá trị tối thiểu. Ước lượng số electron đã chuyển sang bóng.
 :::
 
 
@@ -268,7 +272,7 @@ Electron chuyển sang bóng tạo điện tích âm; phần trần gần bóng 
 :::
 
 ::: exercise 21.66 ••
-Một xu Mỹ nặng $2.5\,\mathrm g$ gồm $97.5\%$ kẽm và $2.5\%$ đồng. **(a)** Gần đúng xu là kẽm nguyên chất, khối lượng mol $65.38\,\mathrm{g/mol}$ và 30 electron mỗi nguyên tử, ước lượng tổng số electron. **(b)** Ước lượng tổng điện tích electron. **(c)** Proton có điện tích tổng dương cùng độ lớn. Ước lượng lực giữa hai vật mang độ lớn điện tích đó, cách $2\,\mathrm{cm}$. **(d)** Ước lượng số lá trên cây sồi cao $60\,\mathrm{ft}$. **(e)** Một rừng gồm những cây đó theo lưới vuông, mỗi cây cách cây bên cạnh $10\,\mathrm m$, cần rộng bao nhiêu để số lá bằng số electron trong một xu? **(f)** So sánh diện tích ấy với diện tích bề mặt Trái Đất.
+Một xu Mỹ nặng $2.5\,\mathrm g$ gồm $97.5\%$ kẽm và $2.5\%$ đồng. (a) Gần đúng xu là kẽm nguyên chất, khối lượng mol $65.38\,\mathrm{g/mol}$ và 30 electron mỗi nguyên tử, ước lượng tổng số electron. (b) Ước lượng tổng điện tích electron. (c) Proton có điện tích tổng dương cùng độ lớn. Ước lượng lực giữa hai vật mang độ lớn điện tích đó, cách $2\,\mathrm{cm}$. (d) Ước lượng số lá trên cây sồi cao $60\,\mathrm{ft}$. (e) Một rừng gồm những cây đó theo lưới vuông, mỗi cây cách cây bên cạnh $10\,\mathrm m$, cần rộng bao nhiêu để số lá bằng số electron trong một xu? (f) So sánh diện tích ấy với diện tích bề mặt Trái Đất.
 :::
 
 
@@ -317,7 +321,7 @@ $$
 :::
 
 ::: exercise 21.68 ••
-Nguồn $-3.00\,\mathrm{nC}$ ở $x=1.20\,\mathrm m$, nguồn Q ở $x=-0.600\,\mathrm m$. Q có dấu và độ lớn nào để tổng trường tại gốc là **(a)** $45.0\,\mathrm{N/C}$ hướng $+x$ hoặc **(b)** cùng độ lớn hướng $-x$?
+Nguồn $-3.00\,\mathrm{nC}$ ở $x=1.20\,\mathrm m$, nguồn Q ở $x=-0.600\,\mathrm m$. Q có dấu và độ lớn nào để tổng trường tại gốc là (a) $45.0\,\mathrm{N/C}$ hướng $+x$ hoặc (b) cùng độ lớn hướng $-x$?
 :::
 
 
@@ -336,7 +340,7 @@ Q&=\frac{(E_*-18.7)(0.600)^2}{k}.
 \end{aligned}
 $$
 
-Ở đây $E_*$ là thành phần trường mục tiêu. **(a)** Với $E_*=+45.0$ N/C, $Q=+1.05$ nC. **(b)** Với $E_*=-45.0$ N/C, $Q=-2.55$ nC. Dấu đã được suy ra bằng trường có dấu, không lấy giá trị tuyệt đối trước khi cộng.
+Ở đây $E_*$ là thành phần trường mục tiêu. (a) Với $E_*=+45.0$ N/C, $Q=+1.05$ nC. (b) Với $E_*=-45.0$ N/C, $Q=-2.55$ nC. Dấu đã được suy ra bằng trường có dấu, không lấy giá trị tuyệt đối trước khi cộng.
 :::
 
 ::: exercise 21.69 •••
@@ -366,7 +370,7 @@ Thế giá trị này cũng cân bằng nguồn 4Q. Cân bằng lực không t�
 :::
 
 ::: exercise 21.70 ••
-Nguồn $-3.00\,\mathrm{nC}$ ở gốc, nguồn $2.00\,\mathrm{nC}$ ở $(0,4.00\,\mathrm{cm})$. **(a)** Đặt nguồn thứ ba $5.00\,\mathrm{nC}$ tại $(3.00\,\mathrm{cm},4.00\,\mathrm{cm})$, tìm thành phần x và y của tổng lực lên nó. **(b)** Tìm độ lớn và hướng lực.
+Nguồn $-3.00\,\mathrm{nC}$ ở gốc, nguồn $2.00\,\mathrm{nC}$ ở $(0,4.00\,\mathrm{cm})$. (a) Đặt nguồn thứ ba $5.00\,\mathrm{nC}$ tại $(3.00\,\mathrm{cm},4.00\,\mathrm{cm})$, tìm thành phần x và y của tổng lực lên nó. (b) Tìm độ lớn và hướng lực.
 :::
 
 
@@ -393,13 +397,12 @@ $$
 :::
 
 ::: exercise 21.71 •
-Ba nguồn điểm giống nhau q ở ba đỉnh hình vuông cạnh L. Tìm độ lớn và hướng tổng lực lên $-3q$ đặt **(a)** tại tâm hoặc **(b)** tại đỉnh còn trống. Trong mỗi trường hợp, vẽ sơ đồ lực do từng nguồn.
+Ba nguồn điểm giống nhau q ở ba đỉnh hình vuông cạnh L. Tìm độ lớn và hướng tổng lực lên $-3q$ đặt (a) tại tâm hoặc (b) tại đỉnh còn trống. Trong mỗi trường hợp, vẽ sơ đồ lực do từng nguồn.
 :::
 
 
 <!-- detailed-solution:21.71 -->
 ::: solution Chi tiết
-
 ![Các lực hút lên −3q tại tâm và tại đỉnh còn trống](img/young-21/loi-giai-21-71.svg)
 **Tóm tắt đề bài:** Ba nguồn q ở ba đỉnh, nguồn −3q ở tâm hoặc đỉnh trống.
 
@@ -409,9 +412,9 @@ Ba nguồn điểm giống nhau q ở ba đỉnh hình vuông cạnh L. Tìm đ�
 - Tại tâm, dùng đối xứng của bốn đỉnh đầy đủ rồi bỏ lực của đỉnh trống.
 - Tại đỉnh trống, hai lực theo cạnh cộng thành đường chéo và lực nguồn chéo cùng hướng.
 
-**(a)** Mỗi lực tại tâm có độ lớn $6kq^2/L^2$. Tổng ba lực bằng âm lực đỉnh bị bỏ, nên hướng ra xa đỉnh trống với cùng độ lớn ấy.
+(a) Mỗi lực tại tâm có độ lớn $6kq^2/L^2$. Tổng ba lực bằng âm lực đỉnh bị bỏ, nên hướng ra xa đỉnh trống với cùng độ lớn ấy.
 
-**(b)** Hai lực cạnh có độ lớn $3kq^2/L^2$, lực chéo bằng nửa giá trị đó:
+(b) Hai lực cạnh có độ lớn $3kq^2/L^2$, lực chéo bằng nửa giá trị đó:
 
 $$
 \begin{aligned}
@@ -420,6 +423,9 @@ F&=\frac{3kq^2}{L^2}\left(\sqrt2+\frac12\right).
 $$
 
 Hướng về tâm hình vuông.
+
+![Các lực hút lên −3q tại tâm và tại đỉnh còn trống](img/young-21/loi-giai-21-71.svg)
+
 :::
 
 ::: exercise 21.72 •••
@@ -450,8 +456,8 @@ q_2&=-6.18\times10^{-8}\,\mathrm C.
 $$
 :::
 
-::: exercise 21.73 •• CP — Độ mạnh lực điện
-Tưởng tượng hai túi proton, mỗi túi $1.0\,\mathrm g$, đặt ở hai cực bắc và nam Trái Đất. **(a)** Mỗi túi có bao nhiêu proton? **(b)** Tính lực hút hấp dẫn và lực đẩy điện giữa chúng. **(c)** Những lực ấy có đủ để cảm nhận nếu cầm một túi không?
+::: exercise 21.73 •• CP: Độ mạnh lực điện
+Tưởng tượng hai túi proton, mỗi túi $1.0\,\mathrm g$, đặt ở hai cực bắc và nam Trái Đất. (a) Mỗi túi có bao nhiêu proton? (b) Tính lực hút hấp dẫn và lực đẩy điện giữa chúng. (c) Những lực ấy có đủ để cảm nhận nếu cầm một túi không?
 :::
 
 
@@ -479,7 +485,7 @@ Lực điện rất dễ cảm nhận, lực hấp dẫn giữa hai túi không 
 :::
 
 ::: exercise 21.74 ••• CP
-Hai cầu rất nhỏ $6.80\,\mathrm{mg}$ có điện tích cùng độ lớn $72.0\,\mathrm{nC}$ nhưng trái dấu, treo từ cùng móc trần bằng dây nhẹ dài $0.530\,\mathrm m$. Bật trường đều nằm ngang hướng trái, hai cầu đứng yên với góc giữa dây $58.0^\circ$ như Hình P21.74. **(a)** Cầu bên phải hay bên trái mang điện dương? **(b)** Độ lớn E bằng bao nhiêu?
+Hai cầu rất nhỏ $6.80\,\mathrm{mg}$ có điện tích cùng độ lớn $72.0\,\mathrm{nC}$ nhưng trái dấu, treo từ cùng móc trần bằng dây nhẹ dài $0.530\,\mathrm m$. Bật trường đều nằm ngang hướng trái, hai cầu đứng yên với góc giữa dây $58.0^\circ$ như Hình P21.74. (a) Cầu bên phải hay bên trái mang điện dương? (b) Độ lớn E bằng bao nhiêu?
 :::
 
 ![Hình P21.74: Hai cầu trái dấu trong điện trường hướng trái](img/young-21/hinh-p21-74.png)
@@ -527,7 +533,7 @@ $$
 :::
 
 ::: exercise 21.76 ••• CP
-Đĩa bán kính R với mật độ mặt dương đều $\sigma$ nằm ngang trên bàn. Cầu nhựa nhỏ khối lượng M, điện tích dương Q lơ lửng đứng yên trên tâm nhờ lực đẩy Coulomb. **(a)** Tìm lực hướng lên tổng cộng theo độ cao z. **(b)** Độ cao cân bằng h bằng bao nhiêu? Biểu diễn theo hằng số không thứ nguyên $\omega=2\varepsilon_0Mg/(Q\sigma)$. **(c)** Với $M=100\,\mathrm g$, $Q=1\,\mu\mathrm C$, $R=5\,\mathrm{cm}$ và $\sigma=10\,\mathrm{nC/cm^2}$, h bằng bao nhiêu?
+Đĩa bán kính R với mật độ mặt dương đều $\sigma$ nằm ngang trên bàn. Cầu nhựa nhỏ khối lượng M, điện tích dương Q lơ lửng đứng yên trên tâm nhờ lực đẩy Coulomb. (a) Tìm lực hướng lên tổng cộng theo độ cao z. (b) Độ cao cân bằng h bằng bao nhiêu? Biểu diễn theo hằng số không thứ nguyên $\omega=2\varepsilon_0Mg/(Q\sigma)$. (c) Với $M=100\,\mathrm g$, $Q=1\,\mu\mathrm C$, $R=5\,\mathrm{cm}$ và $\sigma=10\,\mathrm{nC/cm^2}$, h bằng bao nhiêu?
 :::
 
 
@@ -554,7 +560,7 @@ $$
 :::
 
 ::: exercise 21.77 •• CP
-Proton được phóng vào trường đều hướng thẳng đứng lên có độ lớn E. Vận tốc đầu có độ lớn $v_0$, hợp với phương ngang góc $\alpha$ hướng xuống. **(a)** Tìm độ hạ thấp cực đại $h_{\max}$ so với độ cao đầu, bỏ trọng lực. **(b)** Sau quãng ngang d nào proton trở lại độ cao đầu? **(c)** Phác quỹ đạo. **(d)** Tính $h_{\max},d$ với $E=500\,\mathrm{N/C}$, $v_0=4.00\times10^5\,\mathrm{m/s}$, $\alpha=30.0^\circ$.
+Proton được phóng vào trường đều hướng thẳng đứng lên có độ lớn E. Vận tốc đầu có độ lớn $v_0$, hợp với phương ngang góc $\alpha$ hướng xuống. (a) Tìm độ hạ thấp cực đại $h_{\max}$ so với độ cao đầu, bỏ trọng lực. (b) Sau quãng ngang d nào proton trở lại độ cao đầu? (c) Phác quỹ đạo. (d) Tính $h_{\max},d$ với $E=500\,\mathrm{N/C}$, $v_0=4.00\times10^5\,\mathrm{m/s}$, $\alpha=30.0^\circ$.
 :::
 
 
@@ -612,7 +618,7 @@ Vật lệch cùng hướng trường xuống nên q dương.
 :::
 
 ::: exercise 21.79 •• CALC
-Q dương phân bố đều trên trục x từ 0 đến a. Nguồn dương q tại $x=a+r$, cách đầu đoạn r như Hình P21.79. **(a)** Tính $E_x,E_y$ do Q tại các điểm trục x với $x>a$. **(b)** Tính độ lớn và hướng lực Q lên q. **(c)** Chứng tỏ với $r\gg a$, độ lớn lực gần bằng $Qq/(4\pi\varepsilon_0r^2)$ và giải thích.
+Q dương phân bố đều trên trục x từ 0 đến a. Nguồn dương q tại $x=a+r$, cách đầu đoạn r như Hình P21.79. (a) Tính $E_x,E_y$ do Q tại các điểm trục x với $x>a$. (b) Tính độ lớn và hướng lực Q lên q. (c) Chứng tỏ với $r\gg a$, độ lớn lực gần bằng $Qq/(4\pi\varepsilon_0r^2)$ và giải thích.
 :::
 
 ![Hình P21.79: Điện tích đều trên đoạn trục x và điện tích điểm ở bên phải](img/young-21/hinh-p21-79.png)
@@ -649,7 +655,7 @@ Khi r ≫ a, $r+a\approx r$ nên lực gần $kQq/r^2$, vì đoạn nhìn từ x
 :::
 
 ::: exercise 21.80 •• CALC
-Q dương phân bố đều trên trục y từ 0 đến a. Nguồn điểm $-q$ trên trục x dương cách gốc x, như Hình P21.80. **(a)** Tính $E_x,E_y$ do Q tại điểm trục x dương. **(b)** Tính $F_x,F_y$ lên điện tích $-q$. **(c)** Chứng tỏ khi $x\gg a$:
+Q dương phân bố đều trên trục y từ 0 đến a. Nguồn điểm $-q$ trên trục x dương cách gốc x, như Hình P21.80. (a) Tính $E_x,E_y$ do Q tại điểm trục x dương. (b) Tính $F_x,F_y$ lên điện tích $-q$. (c) Chứng tỏ khi $x\gg a$:
 
 $$
 \begin{aligned}

@@ -3,7 +3,7 @@
 ### Phân bố điện tích không đều
 
 ::: exercise 22.45 ••• CALC
-Vỏ cầu cách điện có bán kính trong a, ngoài b. Trong vật liệu, mật độ thể tích $\rho(r)=\alpha/r$ với α dương. **(a)** Tìm độ lớn trường ở a < r < b theo α và a. **(b)** Đặt nguồn điểm q tại tâm hốc. Tìm dấu và độ lớn q để trường ở a < r < b không đổi, rồi tìm giá trị trường ấy.
+Vỏ cầu cách điện có bán kính trong a, ngoài b. Trong vật liệu, mật độ thể tích $\rho(r)=\alpha/r$ với α dương. (a) Tìm độ lớn trường ở a < r < b theo α và a. (b) Đặt nguồn điểm q tại tâm hốc. Tìm dấu và độ lớn q để trường ở a < r < b không đổi, rồi tìm giá trị trường ấy.
 :::
 
 <!-- detailed-solution:22.45 -->
@@ -15,7 +15,7 @@ Vỏ cầu cách điện có bán kính trong a, ngoài b. Trong vật liệu, m
 - Tích phân $dQ=\rho(s)4\pi s^2ds$ vì mật độ không đều.
 - Gauss cho $E_r=kQ_{\mathrm{trong}}/r^2$. Nguồn ở tâm có thể triệt tiêu số hạng phụ thuộc $1/r^2$.
 
-**(a)**
+(a)
 
 $$
 \begin{aligned}
@@ -26,7 +26,7 @@ E_r&=\frac{\alpha}{2\varepsilon_0}
 \end{aligned}
 $$
 
-**(b)** Thêm q cho:
+(b) Thêm q cho:
 
 $$
 E_r=\frac{\alpha}{2\varepsilon_0}
@@ -36,8 +36,8 @@ $$
 Chọn $q=+2\pi\alpha a^2$ làm số hạng sau bằng không. Trường khi ấy có độ lớn α/(2$\varepsilon_0$), hướng ra ở toàn vùng vật liệu.
 :::
 
-::: exercise 22.46 •• CP — Mô hình nguyên tử Thomson
-Trong mô hình Thomson đầu thế kỷ XX, electron âm nằm trong một khối cầu vật chất dương, giống các hạt chocolate trong khối bột bánh. Xét một electron khối lượng m, điện tích −e, coi là nguồn điểm, nằm trong cầu dương đều có điện tích +e và bán kính R. **(a)** Giải thích vì sao cân bằng ở tâm. **(b)** Giả sử vật chất dương gần như không cản chuyển động, chứng tỏ khi lệch tâm ít hơn R, electron dao động điều hòa và tìm tần số. Ôn dạng lực dao động ở mục 14.2. **(c)** Mô hình giả sử tần số ánh sáng phát ra bằng tần số dao động electron. Để phát ánh sáng đỏ $4.57\times10^{14}$ Hz, R phải bằng bao nhiêu? So với kích thước nguyên tử thật cỡ $10^{-10}$ m. **(d)** Nếu lệch ban đầu lớn hơn R, electron có dao động không và có điều hòa không? Việc phát hiện hạt nhân nhỏ cỡ $10^{-14}$–$10^{-15}$ m đã bác bỏ giả thiết điện tích dương trải đều trong cả thể tích nguyên tử.
+::: exercise 22.46 •• CP: Mô hình nguyên tử Thomson
+Trong mô hình Thomson đầu thế kỷ XX, electron âm nằm trong một khối cầu vật chất dương, giống các hạt chocolate trong khối bột bánh. Xét một electron khối lượng m, điện tích −e, coi là nguồn điểm, nằm trong cầu dương đều có điện tích +e và bán kính R. (a) Giải thích vì sao cân bằng ở tâm. (b) Giả sử vật chất dương gần như không cản chuyển động, chứng tỏ khi lệch tâm ít hơn R, electron dao động điều hòa và tìm tần số. Ôn dạng lực dao động ở mục 14.2. (c) Mô hình giả sử tần số ánh sáng phát ra bằng tần số dao động electron. Để phát ánh sáng đỏ $4.57\times10^{14}$ Hz, R phải bằng bao nhiêu? So với kích thước nguyên tử thật cỡ $10^{-10}$ m. (d) Nếu lệch ban đầu lớn hơn R, electron có dao động không và có điều hòa không? Việc phát hiện hạt nhân nhỏ cỡ $10^{-14}$–$10^{-15}$ m đã bác bỏ giả thiết điện tích dương trải đều trong cả thể tích nguyên tử.
 :::
 
 <!-- detailed-solution:22.46 -->
@@ -49,7 +49,7 @@ Trong mô hình Thomson đầu thế kỷ XX, electron âm nằm trong một kh�
 - Trong cầu, trường tỷ lệ với vector vị trí. Nhân −e tạo lực phục hồi tỷ lệ với độ lệch.
 - So sánh với $\vec F=-m\omega^2\vec r$ để xác định tần số.
 
-**(a)** Tâm có trường bằng không. Lệch sang phía nào, electron cũng bị hút về tâm. **(b)**
+(a) Tâm có trường bằng không. Lệch sang phía nào, electron cũng bị hút về tâm. (b)
 
 $$
 \begin{aligned}
@@ -59,7 +59,7 @@ f&=\frac1{2\pi}\sqrt{\frac{ke^2}{mR^3}}.
 \end{aligned}
 $$
 
-**(c)** Đảo biểu thức tần số, dùng khối lượng electron:
+(c) Đảo biểu thức tần số, dùng khối lượng electron:
 
 $$
 \begin{aligned}
@@ -68,11 +68,11 @@ R&=\left(\frac{ke^2}{4\pi^2m_ef^2}\right)^{1/3}\\
 \end{aligned}
 $$
 
-Giá trị cùng bậc kích thước nguyên tử. Điều đó chưa chứng minh mô hình đúng. **(d)** Nếu thả từ nghỉ ngoài cầu, lực hút vẫn đưa electron về và xuyên qua tâm rồi sang phía đối diện, nên có dao động trong mô hình không cản. Tuy nhiên ngoài cầu lực tỷ lệ với $1/r^2$, không tỷ lệ với độ lệch, nên toàn chuyển động không điều hòa. Công trình về cấu trúc nguyên tử của Rutherford năm 1911 cho thấy điện tích dương tập trung trong vùng nhỏ, thay vì trải đều như giả thiết Thomson. [Công trình Rutherford](https://personal.math.ubc.ca/~cass/rutherford/rutherford669.html).
+Giá trị cùng bậc kích thước nguyên tử. Điều đó chưa chứng minh mô hình đúng. (d) Nếu thả từ nghỉ ngoài cầu, lực hút vẫn đưa electron về và xuyên qua tâm rồi sang phía đối diện, nên có dao động trong mô hình không cản. Tuy nhiên ngoài cầu lực tỷ lệ với $1/r^2$, không tỷ lệ với độ lệch, nên toàn chuyển động không điều hòa. Công trình về cấu trúc nguyên tử của Rutherford năm 1911 cho thấy điện tích dương tập trung trong vùng nhỏ, thay vì trải đều như giả thiết Thomson. [Công trình Rutherford](https://personal.math.ubc.ca/~cass/rutherford/rutherford669.html).
 :::
 
 ::: exercise 22.47 •• CALC
-Phân bố cầu đối xứng có $\rho(r)=\rho_0(1-r/R)$ khi 0 ≤ r ≤ R, bằng không khi r ≥ R, với $\rho_0=3Q/(\pi R^3)>0$. **(a)** Chứng tỏ điện tích tổng Q. **(b)** Chứng tỏ trường ngoài giống nguồn Q ở tâm. **(c)** Tìm trường trong. **(d)** Vẽ độ lớn trường theo r. **(e)** Tìm vị trí và giá trị trường cực đại.
+Phân bố cầu đối xứng có $\rho(r)=\rho_0(1-r/R)$ khi 0 ≤ r ≤ R, bằng không khi r ≥ R, với $\rho_0=3Q/(\pi R^3)>0$. (a) Chứng tỏ điện tích tổng Q. (b) Chứng tỏ trường ngoài giống nguồn Q ở tâm. (c) Tìm trường trong. (d) Vẽ độ lớn trường theo r. (e) Tìm vị trí và giá trị trường cực đại.
 :::
 
 <!-- detailed-solution:22.47 -->
@@ -113,7 +113,7 @@ $$
 :::
 
 ::: exercise 22.48 ••
-**(a)** Cần bao nhiêu electron dư phân bố đều trong quả cầu nhựa cô lập đường kính 30,0 cm để trường ngay ngoài mặt có độ lớn 1390 N/C? **(b)** Trường cách mặt 10,0 cm ra ngoài bằng bao nhiêu?
+(a) Cần bao nhiêu electron dư phân bố đều trong quả cầu nhựa cô lập đường kính 30,0 cm để trường ngay ngoài mặt có độ lớn 1390 N/C? (b) Trường cách mặt 10,0 cm ra ngoài bằng bao nhiêu?
 :::
 
 <!-- detailed-solution:22.48 -->
@@ -125,7 +125,7 @@ $$
 - Trường ngoài cho $|Q|=ER^2/k$, số electron bằng |Q|/e.
 - Điểm thứ hai cách tâm 0,250 m, dùng cùng tổng Q.
 
-**(a)** $N=2.17\times10^{10}$ electron. **(b)** $E=1390(0.150/0.250)^2=500$ N/C, hướng về tâm.
+(a) $N=2.17\times10^{10}$ electron. (b) $E=1390(0.150/0.250)^2=500$ N/C, hướng về tâm.
 :::
 
 ::: exercise 22.49 •• CALC
@@ -156,7 +156,7 @@ Tại R, cả hai bằng αR/(6$\varepsilon_0$). Trường hướng ra và liên
 :::
 
 ::: exercise 22.50 •• CALC
-Cầu cách điện đặc bán kính R có mật độ $\rho(r)=\rho_0(1-r/R)>0$ trong cầu, đối xứng cầu. **(a)** Suy ra E(r) bên trong. **(b)** Bên ngoài. **(c)** Tìm r làm trường cực đại.
+Cầu cách điện đặc bán kính R có mật độ $\rho(r)=\rho_0(1-r/R)>0$ trong cầu, đối xứng cầu. (a) Suy ra E(r) bên trong. (b) Bên ngoài. (c) Tìm r làm trường cực đại.
 :::
 
 <!-- detailed-solution:22.50 -->
@@ -181,7 +181,7 @@ $$
 Hai nhánh khớp tại r = R và trường hướng ra.
 :::
 
-::: exercise 22.51 • CALC — Tấm có mật độ không đều
+::: exercise 22.51 • CALC: Tấm có mật độ không đều
 Tấm cách điện dày 2d có hai mặt x = ±d, song song mặt yz. Kích thước theo y,z rất lớn so với d, coi vô hạn. Mật độ $\rho(x)=\rho_0(x/d)^2$ với ρ₀ dương. Dùng Gauss tìm độ lớn và hướng trường ở mọi điểm.
 :::
 
@@ -205,7 +205,7 @@ Phía x > d, $E_x=\rho_0d/(3\varepsilon_0)$. Phía x < −d, $E_x=-\rho_0d/(3\va
 :::
 
 ::: exercise 22.52 • CALC
-Mật độ cầu đối xứng là $\rho(r)=\rho_0[1-4r/(3R)]$ khi r ≤ R và bằng không khi r ≥ R, với ρ₀ dương. **(a)** Tìm tổng điện tích. **(b)** Tìm trường ở r ≥ R. **(c)** Tìm trường ở r ≤ R. **(d)** Vẽ độ lớn trường. **(e)** Tìm vị trí và giá trị trường cực đại.
+Mật độ cầu đối xứng là $\rho(r)=\rho_0[1-4r/(3R)]$ khi r ≤ R và bằng không khi r ≥ R, với ρ₀ dương. (a) Tìm tổng điện tích. (b) Tìm trường ở r ≥ R. (c) Tìm trường ở r ≤ R. (d) Vẽ độ lớn trường. (e) Tìm vị trí và giá trị trường cực đại.
 :::
 
 <!-- detailed-solution:22.52 -->
@@ -234,7 +234,7 @@ Trong cầu trường hướng ra, dù mật độ ở phần ngoài âm. Lấy 
 :::
 
 ::: exercise 22.53 •
-**(a)** Cầu cách điện bán kính a có mật độ đều ρ, tâm ở vector $\vec b$. Chứng tỏ trường trong cầu là $\vec E=\rho(\vec r-\vec b)/(3\varepsilon_0)$. **(b)** Cầu lớn bán kính R có hốc cầu bán kính a, tâm hốc lệch tâm cầu lớn một khoảng b, với a < b < R và hốc nằm trọn trong cầu. Vật liệu còn lại có mật độ đều ρ. Tìm độ lớn, hướng trường trong hốc và chứng tỏ trường đều. Gợi ý: Chồng chất với kết quả (a).
+(a) Cầu cách điện bán kính a có mật độ đều ρ, tâm ở vector $\vec b$. Chứng tỏ trường trong cầu là $\vec E=\rho(\vec r-\vec b)/(3\varepsilon_0)$. (b) Cầu lớn bán kính R có hốc cầu bán kính a, tâm hốc lệch tâm cầu lớn một khoảng b, với a < b < R và hốc nằm trọn trong cầu. Vật liệu còn lại có mật độ đều ρ. Tìm độ lớn, hướng trường trong hốc và chứng tỏ trường đều. Gợi ý: Chồng chất với kết quả (a).
 :::
 
 ![Hình P22.53: Hốc cầu lệch tâm trong quả cầu cách điện](img/young-22/hinh-p22-53.png)
@@ -248,7 +248,18 @@ Trong cầu trường hướng ra, dù mật độ ở phần ngoài âm. Lấy 
 - Trường trong cầu đều phụ thuộc độ lệch so với **tâm riêng** của cầu.
 - Tạo hốc bằng chồng cầu lớn mật độ +ρ với cầu nhỏ mật độ −ρ, rồi cộng vector trường ở điểm trong hốc.
 
-**(a)** Khoảng cách vector từ tâm cầu nhỏ đến điểm là $\vec r-\vec b$. Kết quả cầu đều cho biểu thức cần chứng minh. **(b)**
+(a) Khoảng cách vector từ tâm cầu nhỏ đến điểm là $\vec s=\vec r-\vec b$. Chọn mặt Gauss cầu bán kính s < a, đồng tâm cầu nhỏ. Đối xứng cầu làm trường xuyên tâm và có độ lớn không đổi trên mặt. Như ở Ví dụ 22.9:
+
+$$
+\begin{aligned}
+Q_{\mathrm{trong}}&=\frac43\pi\rho s^3,\\
+E_s(4\pi s^2)&=Q_{\mathrm{trong}}/\varepsilon_0,\\
+\vec E&=\frac{\rho\vec s}{3\varepsilon_0}\\
+&=\frac{\rho(\vec r-\vec b)}{3\varepsilon_0}.
+\end{aligned}
+$$
+
+Thành phần E_s giữ dấu của ρ. (b) Cộng trường của cầu lớn +ρ và cầu nhỏ −ρ:
 
 $$
 \begin{aligned}
@@ -276,6 +287,18 @@ Trụ cách điện đặc rất dài bán kính R có hốc trụ xuyên dọc,
 - Chồng trụ lớn +ρ với trụ nhỏ −ρ để tạo hốc.
 - Trường trong trụ đều là $\rho\vec r_\perp/(2\varepsilon_0)$, khác hệ số 1/3 của cầu.
 
+Để thấy hệ số 1/2, chọn mặt Gauss trụ đồng trục, bán kính s trong một trụ đều, chiều dài ℓ. Hai đáy không góp điện thông, mặt bên có điện thông E_s·2πsℓ:
+
+$$
+\begin{aligned}
+Q_{\mathrm{trong}}&=\rho\pi s^2\ell,\\
+E_s(2\pi s\ell)&=Q_{\mathrm{trong}}/\varepsilon_0,\\
+E_s&=\rho s/(2\varepsilon_0).
+\end{aligned}
+$$
+
+Đây là kết quả của Bài 22.39. Viết dạng vector cho hai tâm trục rồi chồng chất:
+
 $$
 \begin{aligned}
 \vec E&=\frac{\rho\vec r_\perp}{2\varepsilon_0}
@@ -290,7 +313,7 @@ Trường đều, độ lớn ρb/(2$\varepsilon_0$), hướng đến trục h�
 ### Bài tập dữ liệu và ứng dụng
 
 ::: exercise 22.55 •• DATA
-Thí nghiệm thứ nhất đo trường ở khoảng cách r đến dây đều dài ℓ với ℓ ≫ r. Thí nghiệm thứ hai đo trường ở r > R của cầu cách điện đều bán kính R = 8,00 mm. Bảng cho hai bộ dữ liệu nhưng chưa ghi bộ nào ứng với nguồn nào. Với mỗi bộ, vẽ Er² theo r và Er theo r. **(a)** Xác định nguồn của bộ A và B, giải thích. **(b)** Dùng đồ thị tìm λ của dây và ρ của cầu.
+Thí nghiệm thứ nhất đo trường ở khoảng cách r đến dây đều dài ℓ với ℓ ≫ r. Thí nghiệm thứ hai đo trường ở r > R của cầu cách điện đều bán kính R = 8,00 mm. Bảng cho hai bộ dữ liệu nhưng chưa ghi bộ nào ứng với nguồn nào. Với mỗi bộ, vẽ Er² theo r và Er theo r. (a) Xác định nguồn của bộ A và B, giải thích. (b) Dùng đồ thị tìm λ của dây và ρ của cầu.
 
 | r (cm) | E_A ($10^5$ N/C) | E_B ($10^5$ N/C) |
 | --- | --- | --- |
@@ -315,12 +338,27 @@ Thí nghiệm thứ nhất đo trường ở khoảng cách r đến dây đều
 
 ![Bốn đồ thị Er và Er² cho hai bộ dữ liệu A, B](img/young-22/loi-giai-22-55.svg)
 
-**(a)** A có Er gần $2.70\times10^3$ N m/C, nên là dây. B có Er² gần 54,1 N m²/C, nên là cầu. **(b)** Lấy trung bình những tích đã biến đổi để giảm ảnh hưởng làm tròn dữ liệu:
+(a) A có Er gần $2.70\times10^3$ N m/C, nên là dây. B có Er² gần 54,1 N m²/C, nên là cầu. (b) Lấy trung bình những tích đã biến đổi để giảm ảnh hưởng làm tròn dữ liệu:
+
+Gọi cᵢ = Eᵢrᵢ với bộ A và dᵢ = Eᵢrᵢ² với bộ B, i chạy từ 1 đến 7 qua các hàng dữ liệu. Khai triển phép trung bình trước khi viết gọn:
 
 $$
 \begin{aligned}
-\lambda&=\frac{Er}{2k}\approx1.50\times10^{-7}\,\mathrm{C/m},\\
-Q&=\frac{Er^2}{k},\\
+\bar c&=\frac{c_1+c_2+\cdots+c_7}{7}\\
+&=\frac17\sum_{i=1}^{7}c_i\\
+&=2695.57\,\mathrm{N\,m/C},\\
+\bar d&=\frac{d_1+d_2+\cdots+d_7}{7}\\
+&=\frac17\sum_{i=1}^{7}d_i\\
+&=54.0971\,\mathrm{N\,m^2/C}.
+\end{aligned}
+$$
+
+Các giá trị này là hệ số gần hằng của hai dạng đồ thị. Dùng chúng trong các công thức mật độ:
+
+$$
+\begin{aligned}
+\lambda&=\frac{\bar c}{2k}\approx1.50\times10^{-7}\,\mathrm{C/m},\\
+Q&=\frac{\bar d}{k},\\
 \rho&=\frac{3Q}{4\pi R^3}\\
 &\approx2.81\times10^{-3}\,\mathrm{C/m^3}.
 \end{aligned}
@@ -355,7 +393,7 @@ Nếu trường hướng ra, ρ dương. Đồ thị độ lớn đơn độc ch
 :::
 
 ::: exercise 22.57 •• DATA
-Cầu bán kính R = 6,00 mm có mật độ không đều theo Hình P22.57. Tính trường tại r bằng **(i)** 1,00 mm, **(ii)** 3,00 mm, **(iii)** 5,00 mm, **(iv)** 7,00 mm.
+Cầu bán kính R = 6,00 mm có mật độ không đều theo Hình P22.57. Tính trường tại r bằng (i) 1,00 mm, (ii) 3,00 mm, (iii) 5,00 mm, (iv) 7,00 mm.
 :::
 
 ![Hình P22.57: Mật độ theo ba vùng bán kính, lần lượt 10, 4 và −2 µC/m³](img/young-22/hinh-p22-57.png)
@@ -370,9 +408,9 @@ Cầu bán kính R = 6,00 mm có mật độ không đều theo Hình P22.57. T�
 - Lớp từ a đến b có điện tích $4\pi\rho(b^3-a^3)/3$.
 - Sau đó dùng $E_r=kQ_{\mathrm{trong}}/r^2$.
 
-**(i)** Chỉ có phần lớp đầu: E = 376 N/C. **(ii)** Bao hết lớp đầu và phần lớp thứ hai đến 3 mm: E = 653 N/C. **(iii)** Bao hai lớp đầu và phần lớp âm đến 5 mm: E = 274 N/C. Ba trường đều hướng ra.
+(i) Chỉ có phần lớp đầu: E = 376 N/C. (ii) Bao hết lớp đầu và phần lớp thứ hai đến 3 mm: E = 653 N/C. (iii) Bao hai lớp đầu và phần lớp âm đến 5 mm: E = 274 N/C. Ba trường đều hướng ra.
 
-**(iv)** Điện tích tổng tỷ lệ với:
+(iv) Điện tích tổng tỷ lệ với:
 
 $$
 \begin{aligned}
@@ -385,7 +423,7 @@ Vì thế trường ở 7 mm bằng không. Các số trong phép so cuối dùn
 :::
 
 ::: exercise 22.58 •• BIO
-Khi ong mật bay, không khí lấy bớt electron khỏi lông, làm ong dương. Hoa âm có thể kéo phấn nhảy lên ong dù ong chưa chạm phấn. **(a)** Ước lượng đường kính đĩa giữa hoa cúc. **(b)** Ong mất 75.000 electron có điện tích bao nhiêu? **(c)** Ong đậu ở một mép đĩa, tìm trường của ong tại mép đối diện, coi ong là vỏ cầu mỏng có điện tích đều. **(d)** Một hạt phấn cần lực 10 pN để rời nhị. Ước lượng điện tích hạt phấn ở mép xa để nó rời nhị và nhảy đến ong.
+Khi ong mật bay, không khí lấy bớt electron khỏi lông, làm ong dương. Hoa âm có thể kéo phấn nhảy lên ong dù ong chưa chạm phấn. (a) Ước lượng đường kính đĩa giữa hoa cúc. (b) Ong mất 75.000 electron có điện tích bao nhiêu? (c) Ong đậu ở một mép đĩa, tìm trường của ong tại mép đối diện, coi ong là vỏ cầu mỏng có điện tích đều. (d) Một hạt phấn cần lực 10 pN để rời nhị. Ước lượng điện tích hạt phấn ở mép xa để nó rời nhị và nhảy đến ong.
 :::
 
 <!-- detailed-solution:22.58 -->
@@ -397,7 +435,7 @@ Khi ong mật bay, không khí lấy bớt electron khỏi lông, làm ong dươ
 - Chọn và nêu rõ giả thiết kích thước, vì đề không cho một đường kính duy nhất.
 - Ngoài vỏ cầu đều, dùng trường nguồn điểm. Hạt phấn phải âm để chịu lực hút về ong.
 
-**(a)** Chọn d ≈ 1 cm làm ước lượng cho đĩa giữa một bông cúc nhỏ. **(b)** $Q=75000e=1.20\times10^{-14}$ C. **(c)**
+(a) Chọn d ≈ 1 cm làm ước lượng cho đĩa giữa một bông cúc nhỏ. (b) $Q=75000e=1.20\times10^{-14}$ C. (c)
 
 $$
 \begin{aligned}
@@ -407,11 +445,11 @@ E&\approx kQ/d^2=1.08\,\mathrm{N/C},\\
 \end{aligned}
 $$
 
-**(d)** Điện tích cần xấp xỉ **−9,3 pC** với ước lượng kích thước đã chọn. Nếu chọn đường kính d khác, trường tỷ lệ 1/d² và độ lớn điện tích phấn cần tỷ lệ d². Không nên coi số ước lượng là phép đo chính xác.
+(d) Điện tích cần xấp xỉ **−9,3 pC** với ước lượng kích thước đã chọn. Nếu chọn đường kính d khác, trường tỷ lệ 1/d² và độ lớn điện tích phấn cần tỷ lệ d². Không nên coi số ước lượng là phép đo chính xác.
 :::
 
 ::: exercise 22.59 •• CP CALC
-Trụ cách điện rất dài bán kính $R_c$ có mật độ $\rho(r)=(1-r/R_c)\rho_0$. Hạt điện tích −Q, khối lượng M quay tròn quanh trụ ở bán kính $R_o>R_c$. **(a)** Tìm mật độ dài λ của trụ. **(b)** Tìm chu kỳ theo $R_o$. Gợi ý: Dùng Gauss tìm lực điện đóng vai trò hướng tâm.
+Trụ cách điện rất dài bán kính $R_c$ có mật độ $\rho(r)=(1-r/R_c)\rho_0$. Hạt điện tích −Q, khối lượng M quay tròn quanh trụ ở bán kính $R_o>R_c$. (a) Tìm mật độ dài λ của trụ. (b) Tìm chu kỳ theo $R_o$. Gợi ý: Dùng Gauss tìm lực điện đóng vai trò hướng tâm.
 :::
 
 <!-- detailed-solution:22.59 -->
@@ -437,7 +475,7 @@ Tốc độ không phụ thuộc bán kính quỹ đạo trong mô hình này, n
 :::
 
 ::: exercise 22.60 •• CP
-**(a)** Chứng tỏ thành phần lực điện vuông góc một mặt phẳng mang mật độ đều σ là $F_\perp=\sigma\Phi_E$, với Φ là điện thông của **trường ngoài** qua mặt đó. **(b)** Một bán cầu cách điện bán kính R mang điện tích Q đều trên mặt tròn phẳng, nằm phía trên mặt phẳng rất lớn có mật độ đều σ. Trục bán cầu thẳng đứng. Khối lượng M phải bằng bao nhiêu để đứng yên? **(c)** Nếu mật độ trên mặt tròn và mặt lớn đều 100 µC/m², R = 3,00 cm, M = 100 g, gia tốc hướng lên bằng bao nhiêu?
+(a) Chứng tỏ thành phần lực điện vuông góc một mặt phẳng mang mật độ đều σ là $F_\perp=\sigma\Phi_E$, với Φ là điện thông của **trường ngoài** qua mặt đó. (b) Một bán cầu cách điện bán kính R mang điện tích Q đều trên mặt tròn phẳng, nằm phía trên mặt phẳng rất lớn có mật độ đều σ. Trục bán cầu thẳng đứng. Khối lượng M phải bằng bao nhiêu để đứng yên? (c) Nếu mật độ trên mặt tròn và mặt lớn đều 100 µC/m², R = 3,00 cm, M = 100 g, gia tốc hướng lên bằng bao nhiêu?
 :::
 
 <!-- detailed-solution:22.60 -->
@@ -450,7 +488,7 @@ Tốc độ không phụ thuộc bán kính quỹ đạo trong mô hình này, n
 - Ở (b), trường mặt vô hạn đều. Cân bằng lực điện hướng lên với trọng lượng.
 - Ở (c), phải trừ g khi chuyển lực điện sang gia tốc tổng.
 
-**(a)**
+(a)
 
 $$
 \begin{aligned}
@@ -460,9 +498,9 @@ F_\perp&=\int E_\perp\,dq\\
 \end{aligned}
 $$
 
-Không dùng trường do chính phần điện tích mặt đang xét tạo ra như một trường ngoài gây lực lên toàn hệ. **(b)** Nếu Q và σ cùng dấu, lực điện hướng lên có độ lớn Qσ/(2$\varepsilon_0$). Vì thế $M=Q\sigma/(2g\varepsilon_0)$. Nếu trái dấu, lực điện cũng hướng xuống nên không có cân bằng này.
+Không dùng trường do chính phần điện tích mặt đang xét tạo ra như một trường ngoài gây lực lên toàn hệ. (b) Nếu Q và σ cùng dấu, lực điện hướng lên có độ lớn Qσ/(2$\varepsilon_0$). Vì thế $M=Q\sigma/(2g\varepsilon_0)$. Nếu trái dấu, lực điện cũng hướng xuống nên không có cân bằng này.
 
-**(c)** $Q=\sigma\pi R^2$, lực điện bằng 1,60 N. Gia tốc tổng:
+(c) $Q=\sigma\pi R^2$, lực điện bằng 1,60 N. Gia tốc tổng:
 
 $$
 a_z=\frac{\sigma^2\pi R^2}{2M\varepsilon_0}-g
@@ -473,7 +511,7 @@ $$
 ## Bài tập nâng cao
 
 ::: exercise 22.61 ••• CALC
-Cầu cách điện tích điện đều, bán kính r, điện tích +Q, ở tâm một trụ rỗng thành mỏng bán kính R > r và chiều dài L > 2r. Trụ không dẫn điện và không mang điện tích tổng. **(a)** Tìm điện thông ra qua mặt bên, bỏ hai đáy. Gợi ý: Trục z theo trục trụ, gốc tại tâm cầu, phần diện tích bên là dA = 2πR dz. **(b)** Tìm điện thông hướng lên qua đáy trên. **(c)** Hướng xuống qua đáy dưới. **(d)** Cộng điện thông ba phần. **(e)** Kiểm tra sự phù hợp với Gauss.
+Cầu cách điện tích điện đều, bán kính r, điện tích +Q, ở tâm một trụ rỗng thành mỏng bán kính R > r và chiều dài L > 2r. Trụ không dẫn điện và không mang điện tích tổng. (a) Tìm điện thông ra qua mặt bên, bỏ hai đáy. Gợi ý: Trục z theo trục trụ, gốc tại tâm cầu, phần diện tích bên là dA = 2πR dz. (b) Tìm điện thông hướng lên qua đáy trên. (c) Hướng xuống qua đáy dưới. (d) Cộng điện thông ba phần. (e) Kiểm tra sự phù hợp với Gauss.
 :::
 
 <!-- detailed-solution:22.61 -->
@@ -516,7 +554,7 @@ $$
 - Khi R/2 ≤ r ≤ R, $\rho(r)=\alpha[1-(r/R)^2]$.
 - Khi r ≥ R, mật độ bằng không.
 
-Hằng số α dương có đơn vị C/m³. **(a)** Tìm α theo Q,R. **(b)** Dùng Gauss tìm độ lớn trường trong cả ba vùng, biểu diễn theo Q. **(c)** Phần điện tích trong R/2 ≤ r ≤ R chiếm tỷ lệ nào của Q? **(d)** Tìm E tại R/2. **(e)** Electron thả từ nghỉ trong một trong ba vùng dao động nhưng không điều hòa. Giải thích.
+Hằng số α dương có đơn vị C/m³. (a) Tìm α theo Q,R. (b) Dùng Gauss tìm độ lớn trường trong cả ba vùng, biểu diễn theo Q. (c) Phần điện tích trong R/2 ≤ r ≤ R chiếm tỷ lệ nào của Q? (d) Tìm E tại R/2. (e) Electron thả từ nghỉ trong một trong ba vùng dao động nhưng không điều hòa. Giải thích.
 :::
 
 <!-- detailed-solution:22.62 -->
@@ -529,7 +567,7 @@ Hằng số α dương có đơn vị C/m³. **(a)** Tìm α theo Q,R. **(b)** D
 - Trong vùng ngoài của cầu, phải giữ cả điện tích vùng trong đã được bao.
 - Chỉ sau khi tìm điện tích theo r mới chia diện tích Gauss để có E.
 
-**(a)** Hai phần điện tích là:
+(a) Hai phần điện tích là:
 
 $$
 \begin{aligned}
@@ -540,7 +578,7 @@ Q&=\frac{233\pi\alpha R^3}{480},\\
 \end{aligned}
 $$
 
-**(b)** Đặt u = r/R. Với 0 ≤ u ≤ 1/2, tích phân mật độ cho $Q_{\mathrm{trong}}=(720Q/233)u^4$. Do đó:
+(b) Đặt u = r/R. Với 0 ≤ u ≤ 1/2, tích phân mật độ cho $Q_{\mathrm{trong}}=(720Q/233)u^4$. Do đó:
 
 $$
 E_1=\frac{kQ}{R^2}\frac{720u^2}{233}.
@@ -561,7 +599,7 @@ $$
 
 Với u ≥ 1, $E_3=kQ/r^2$. Trường hướng ra, bằng không tại tâm và liên tục ở hai điểm nối.
 
-**(c)** $Q_2/Q=188/233\approx80.7\%$. **(d)** $E(R/2)=180kQ/(233R^2)$. **(e)** Electron chịu lực hút về tâm và trong mô hình không mất năng lượng sẽ chuyển động qua lại. Lực không tỷ lệ tuyến tính với độ lệch, chẳng hạn trong vùng trong cùng E ∝ r², nên dao động không điều hòa. Nếu thả đúng tâm r = 0, electron đứng yên tại cân bằng. Kết luận dao động áp dụng cho vị trí ban đầu lệch tâm.
+(c) $Q_2/Q=188/233\approx80.7\%$. (d) $E(R/2)=180kQ/(233R^2)$. (e) Electron chịu lực hút về tâm và trong mô hình không mất năng lượng sẽ chuyển động qua lại. Lực không tỷ lệ tuyến tính với độ lệch, chẳng hạn trong vùng trong cùng E ∝ r², nên dao động không điều hòa. Nếu thả đúng tâm r = 0, electron đứng yên tại cân bằng. Kết luận dao động áp dụng cho vị trí ban đầu lệch tâm.
 :::
 
 ## Bài đọc và câu hỏi kiểu MCAT
@@ -573,7 +611,7 @@ Bức xạ không gian gồm các hạt mang điện năng lượng cao do Mặt
 Mỗi cầu có thể có cấu tạo tương tự bóng Mylar, với một lớp dẫn điện mỏng ở mặt ngoài mang điện tích dương hoặc âm. Đường kính điển hình trong mô hình này là 5 m. Các câu sau khảo sát mô hình điện trường, không đánh giá đầy đủ hiệu quả kỹ thuật của phương án che chắn.
 
 ::: exercise 22.63
-Để đẩy electron của bức xạ bùng phát, mỗi cầu cần tạo trường có độ lớn $1\times10^6$ N/C ở cách tâm 25 m. Điện tích cần trên mỗi cầu là **(a)** −0,07 C, **(b)** −8 mC, **(c)** −80 µC, hay **(d)** $-1\times10^{-20}$ C?
+Để đẩy electron của bức xạ bùng phát, mỗi cầu cần tạo trường có độ lớn $1\times10^6$ N/C ở cách tâm 25 m. Điện tích cần trên mỗi cầu là (a) −0,07 C, (b) −8 mC, (c) −80 µC, hay (d) $-1\times10^{-20}$ C?
 :::
 
 <!-- detailed-solution:22.63 -->
@@ -589,11 +627,11 @@ $$
 Q=-\frac{(10^6)(25)^2}{k}\approx-0.070\,\mathrm C.
 $$
 
-Chọn **(a)**.
+Chọn (a).
 :::
 
 ::: exercise 22.64
-Độ lớn trường ngay ngoài mặt cầu ấy là **(a)** 0, **(b)** $10^6$ N/C, **(c)** $10^7$ N/C, hay **(d)** $10^8$ N/C?
+Độ lớn trường ngay ngoài mặt cầu ấy là (a) 0, (b) $10^6$ N/C, (c) $10^7$ N/C, hay (d) $10^8$ N/C?
 :::
 
 <!-- detailed-solution:22.64 -->
@@ -609,11 +647,11 @@ $$
 E(R^+)=10^6(25/2.5)^2=10^8\,\mathrm{N/C}.
 $$
 
-Chọn **(d)**.
+Chọn (d).
 :::
 
 ::: exercise 22.65
-Trường ngay ngoài cầu có hướng **(a)** tiếp tuyến mặt, **(b)** vuông góc mặt và hướng vào cầu, **(c)** vuông góc mặt và hướng ra, hay **(d)** không có trường ngay ngoài mặt?
+Trường ngay ngoài cầu có hướng (a) tiếp tuyến mặt, (b) vuông góc mặt và hướng vào cầu, (c) vuông góc mặt và hướng ra, hay (d) không có trường ngay ngoài mặt?
 :::
 
 <!-- detailed-solution:22.65 -->
@@ -625,11 +663,11 @@ Trường ngay ngoài cầu có hướng **(a)** tiếp tuyến mặt, **(b)** v
 - Trường tại mặt dẫn phải vuông góc, nếu không điện tích sẽ chuyển động tiếp tuyến.
 - Điện tích âm cho trường hướng vào.
 
-Chọn **(b)**. Electron có lực ngược chiều trường nên bị đẩy ra, phù hợp mục tiêu ở Bài 22.63.
+Chọn (b). Electron có lực ngược chiều trường nên bị đẩy ra, phù hợp mục tiêu ở Bài 22.63.
 :::
 
 ::: exercise 22.66
-Trường trong cầu âm vừa mô tả có tính chất nào? **(a)** Hướng từ tâm ra mặt và lớn nhất ở tâm. **(b)** Hướng từ mặt vào tâm và lớn nhất ở mặt. **(c)** Bằng không. **(d)** Không đổi nhưng khác không.
+Trường trong cầu âm vừa mô tả có tính chất nào? (a) Hướng từ tâm ra mặt và lớn nhất ở tâm. (b) Hướng từ mặt vào tâm và lớn nhất ở mặt. (c) Bằng không. (d) Không đổi nhưng khác không.
 :::
 
 <!-- detailed-solution:22.66 -->
@@ -641,5 +679,5 @@ Trường trong cầu âm vừa mô tả có tính chất nào? **(a)** Hướng
 - Trong vật liệu dẫn cân bằng, trường bằng không.
 - Hốc kín không chứa nguồn riêng cũng có trường bằng không. Không được thay mô hình bằng quả cầu cách điện tích điện trong thể tích.
 
-Chọn **(c)**.
+Chọn (c).
 :::

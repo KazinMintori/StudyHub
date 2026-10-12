@@ -12,7 +12,7 @@ Hai thanh thủy tinh cọ xát bằng lụa cũng nhiễm điện và đẩy nh
 
 ![Hình 21.1: Tương tác giữa thanh nhựa, thanh thủy tinh và vật dùng để cọ xát](../img/young-21/hinh-21-1.png)
 
-**Hình 21.1:** (a) Hai thanh nhựa cọ bằng lông thú đẩy nhau. (b) Hai thanh thủy tinh cọ bằng lụa đẩy nhau. (c) Thanh nhựa và thanh thủy tinh hút nhau, đồng thời mỗi thanh hút vật dùng để cọ nó. Các nhãn “Plastic”, “Fur”, “Glass”, “Silk” lần lượt chỉ nhựa, lông thú, thủy tinh và lụa.
+**Hình 21.1:** (a) Hai thanh nhựa cọ bằng lông thú đẩy nhau. (b) Hai thanh thủy tinh cọ bằng lụa đẩy nhau. (c) Thanh nhựa và thanh thủy tinh hút nhau, đồng thời mỗi thanh hút vật dùng để cọ nó.
 
 Các thí nghiệm như vậy cho thấy có hai loại điện tích. Benjamin Franklin (1706–1790) đề nghị gọi điện tích trên thanh nhựa cọ bằng lông là **âm**, còn điện tích trên thanh thủy tinh cọ bằng lụa là **dương**. Thanh nhựa và miếng lụa mang điện âm, trong khi thanh thủy tinh và miếng lông mang điện dương.
 
@@ -22,7 +22,7 @@ Hai điện tích dương đẩy nhau, hai điện tích âm cũng đẩy nhau. 
 “Cùng dấu” không có nghĩa hai điện tích phải bằng nhau về độ lớn. Nó chỉ có nghĩa cả hai dương hoặc cả hai âm. “Trái dấu” có nghĩa cả hai vật đều mang điện, với một điện tích dương và một điện tích âm.
 :::
 
-### Ứng dụng — Máy in laser
+### Ứng dụng: Máy in laser
 
 Lực điện được sử dụng để đưa các hạt mực đến đúng vị trí trên giấy. Trống tạo ảnh nhạy sáng được nạp điện dương. Trong khi trống quay, tia laser chiếu lên những vùng được chọn, làm chúng mang điện âm. Các hạt mực điện dương chỉ bám vào những vùng âm ấy. Khi giấy tiếp xúc với trống, các hạt mực chuyển sang giấy tạo thành hình ảnh.
 
@@ -91,9 +91,9 @@ Liên kết hóa học giữa các nguyên tử bắt nguồn từ tương tác 
 ::: exercise Câu hỏi ôn lại mục 21.1
 Hai vật mang điện đẩy nhau bằng lực điện. Điện tích của chúng thuộc trường hợp nào?
 
-**(i)** Một dương, một âm. **(ii)** Cả hai dương. **(iii)** Cả hai âm. **(iv)** Hoặc (ii), hoặc (iii). **(v)** Bất kỳ trường hợp (i), (ii), (iii).
+(i) Một dương, một âm. (ii) Cả hai dương. (iii) Cả hai âm. (iv) Hoặc (ii), hoặc (iii). (v) Bất kỳ trường hợp (i), (ii), (iii).
 :::
 
 ::: solution Giải thích
-Chọn **(iv)**. Hai vật mang điện đẩy nhau nếu điện tích cùng dấu, tức đều dương hoặc đều âm.
+Chọn (iv). Hai vật mang điện đẩy nhau nếu điện tích cùng dấu, tức đều dương hoặc đều âm.
 :::

@@ -155,7 +155,7 @@ evidence.append({'test':'22.61-independent-surface-integrals','side':side,'eachC
 text='\n'.join(p.read_text(encoding='utf8') for p in (root/'raw_materials/physics/translations/chapter-22').glob('*.md'))
 for n in range(1,67):assert re.search(rf'^::: exercise 22\.{n}(?: |\n)',text,re.M),n
 for n in range(1,17):assert re.search(rf'^::: exercise Q22\.{n}(?: |\n)',text,re.M),n
-for n in range(1,13):assert f'### Ví dụ 22.{n} —' in text,n
+for n in range(1,13):assert f'### Ví dụ 22.{n}:' in text,n
 for n in range(1,11):assert rf'\tag{{22.{n}}}' in text,n
 solutions=re.findall(r'<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::',text)
 assert len(solutions)==95,len(solutions)

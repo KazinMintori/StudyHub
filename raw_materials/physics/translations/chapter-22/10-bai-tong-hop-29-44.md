@@ -74,8 +74,10 @@ Dây lệch về phía mặt âm.
 :::
 
 ::: exercise 22.32 ••
-Lập phương như Hình E22.6 có cạnh L = 0,300 m, một đỉnh ở gốc. Trường không đều có $E_x=-5.00x$, $E_y=0$, $E_z=3.00z$, với tọa độ tính bằng m và trường bằng N/C. **(a)** Tìm điện thông qua sáu mặt S₁–S₆. **(b)** Tìm điện tích tổng trong lập phương.
+Lập phương như Hình E22.6 có cạnh L = 0,300 m, một đỉnh ở gốc. Trường không đều có $E_x=-5.00x$, $E_y=0$, $E_z=3.00z$, với tọa độ tính bằng m và trường bằng N/C. (a) Tìm điện thông qua sáu mặt S₁–S₆. (b) Tìm điện tích tổng trong lập phương.
 :::
+
+![Hình E22.6: Sáu mặt lập phương và các trục tọa độ](img/young-22/hinh-e22-6.png)
 
 <!-- detailed-solution:22.32 -->
 ::: solution Chi tiết
@@ -99,7 +101,7 @@ $$
 :::
 
 ::: exercise 22.33 •
-Trường trong Hình P22.33 luôn song song trục x, với Eᵧ = E_z = 0 và Eₓ chỉ phụ thuộc x. Ở x = 0, Eₓ = 125 N/C. **(a)** Tìm điện thông qua mặt I. **(b)** Qua mặt II. **(c)** Khối vẽ là một phần của tấm cách điện rất lớn dày 1,0 m, có tổng điện tích −24,0 nC trong phần thể tích vẽ. Tìm độ lớn và hướng trường ở mặt đối diện I. **(d)** Trường chỉ do điện tích trong tấm hay còn có nguồn ngoài tấm? Giải thích cách nhận biết.
+Trường trong Hình P22.33 luôn song song trục x, với Eᵧ = E_z = 0 và Eₓ chỉ phụ thuộc x. Ở x = 0, Eₓ = 125 N/C. (a) Tìm điện thông qua mặt I. (b) Qua mặt II. (c) Khối vẽ là một phần của tấm cách điện rất lớn dày 1,0 m, có tổng điện tích −24,0 nC trong phần thể tích vẽ. Tìm độ lớn và hướng trường ở mặt đối diện I. (d) Trường chỉ do điện tích trong tấm hay còn có nguồn ngoài tấm? Giải thích cách nhận biết.
 :::
 
 ![Hình P22.33: Khối tấm có mặt I diện tích 2,0 m nhân 3,0 m](img/young-22/hinh-p22-33.png)
@@ -113,7 +115,7 @@ Trường trong Hình P22.33 luôn song song trục x, với Eᵧ = E_z = 0 và 
 - Mặt I có điện thông +EₓA, còn mặt II song song trường nên điện thông không.
 - Những mặt bên khác cũng không có điện thông, nên Gauss liên hệ hai mặt đối diện.
 
-**(a)** Φᵢ = +125(6,0) = +750 N m²/C. **(b)** Φᵢᵢ = 0. **(c)**
+(a) Φᵢ = +125(6,0) = +750 N m²/C. (b) Φᵢᵢ = 0. (c)
 
 $$
 \begin{aligned}
@@ -122,7 +124,7 @@ E_{x,\mathrm{đối}}&=+577\,\mathrm{N/C}.
 \end{aligned}
 $$
 
-Trường hướng +x, độ lớn 577 N/C. **(d)** Hai phía ngoài một tấm phẳng rất lớn nếu chỉ do điện tích trong tấm tạo ra phải có trường bằng nhau về độ lớn và ngược chiều. Ở đây hai trường cùng hướng +x và có độ lớn 125, 577 N/C, nên còn có trường do điện tích ngoài tấm. Trung bình hai thành phần ngoài là khoảng +351 N/C, cho phần trường ngoài chung theo x.
+Trường hướng +x, độ lớn 577 N/C. (d) Hai phía ngoài một tấm phẳng rất lớn nếu chỉ do điện tích trong tấm tạo ra phải có trường bằng nhau về độ lớn và ngược chiều. Ở đây hai trường cùng hướng +x và có độ lớn 125, 577 N/C, nên còn có trường do điện tích ngoài tấm. Trung bình hai thành phần ngoài là khoảng +351 N/C, cho phần trường ngoài chung theo x.
 :::
 
 ::: exercise 22.34 •• CALC
@@ -150,7 +152,7 @@ Nếu chọn pháp tuyến −z, điện thông đổi dấu.
 :::
 
 ::: exercise 22.35 •
-Điện tích −Q đều trên mặt một vỏ cầu cách điện mỏng bán kính R. Tìm độ lớn và hướng lực lên nguồn điểm dương q cách tâm **(a)** r > R, **(b)** r < R.
+Điện tích −Q đều trên mặt một vỏ cầu cách điện mỏng bán kính R. Tìm độ lớn và hướng lực lên nguồn điểm dương q cách tâm (a) r > R, (b) r < R.
 :::
 
 <!-- detailed-solution:22.35 -->
@@ -162,7 +164,7 @@ Nếu chọn pháp tuyến −z, điện thông đổi dấu.
 - Trường ngoài tương đương nguồn −Q tại tâm.
 - Trong vỏ cầu, đối xứng và Gauss cho trường bằng không.
 
-**(a)** Lực có độ lớn $kQq/r^2$, hướng về tâm. **(b)** Lực bằng không. Vỏ cách điện giữ phân bố đều theo giả thiết, kể cả khi nguồn thử nằm lệch tâm bên trong.
+(a) Lực có độ lớn $kQq/r^2$, hướng về tâm. (b) Lực bằng không. Vỏ cách điện giữ phân bố đều theo giả thiết, kể cả khi nguồn thử nằm lệch tâm bên trong.
 :::
 
 ::: exercise 22.36 •
@@ -190,8 +192,8 @@ $$
 Giữa dây và tấm, hai trường cùng hướng về tấm nên không thể triệt tiêu. Tập nghiệm gồm **hai đường thẳng song song dây**, một cách tấm 25,9 cm ở phía dây, một cách tấm 5,92 cm ở phía đối diện.
 :::
 
-::: exercise 22.37 • — Cáp đồng trục
-Cáp dài gồm lõi dẫn trụ bán kính a và vỏ dẫn đồng trục có bán kính trong b, ngoài c. Vỏ được đỡ bằng vật cách điện và có điện tích tổng bằng không. Lõi mang mật độ dài dương λ. **(a)** Tìm trường giữa lõi và vỏ tại r. **(b)** Tìm trường ngoài vỏ. **(c)** Vẽ E theo r từ 0 đến 2c. **(d)** Tìm mật độ dài trên mặt trong và mặt ngoài của vỏ.
+::: exercise 22.37 •: Cáp đồng trục
+Cáp dài gồm lõi dẫn trụ bán kính a và vỏ dẫn đồng trục có bán kính trong b, ngoài c. Vỏ được đỡ bằng vật cách điện và có điện tích tổng bằng không. Lõi mang mật độ dài dương λ. (a) Tìm trường giữa lõi và vỏ tại r. (b) Tìm trường ngoài vỏ. (c) Vẽ E theo r từ 0 đến 2c. (d) Tìm mật độ dài trên mặt trong và mặt ngoài của vỏ.
 :::
 
 <!-- detailed-solution:22.37 -->
@@ -216,7 +218,7 @@ Trường hướng ra. Đồ thị từ không nhảy lên tại a, giảm theo 
 :::
 
 ::: exercise 22.38 •
-Ống dẫn rất dài có bán kính trong a, ngoài b, mang điện tích dài +α. Trên trục ống có dây mang điện tích dài +α, với α dương, đơn vị C/m. **(a)** Tìm trường và vẽ đồ thị ở r < a, a < r < b, r > b. **(b)** Tìm điện tích dài trên mặt trong và mặt ngoài ống.
+Ống dẫn rất dài có bán kính trong a, ngoài b, mang điện tích dài +α. Trên trục ống có dây mang điện tích dài +α, với α dương, đơn vị C/m. (a) Tìm trường và vẽ đồ thị ở r < a, a < r < b, r > b. (b) Tìm điện tích dài trên mặt trong và mặt ngoài ống.
 :::
 
 <!-- detailed-solution:22.38 -->
@@ -234,7 +236,7 @@ Trong hốc r < a, $E_r=\alpha/(2\pi\varepsilon_0r)$. Trong vật liệu a < r <
 :::
 
 ::: exercise 22.39 •
-Trụ cách điện đặc rất dài bán kính R có mật độ thể tích dương đều ρ. **(a)** Suy ra trường ở r < R. **(b)** Tìm trường ngoài theo mật độ dài λ. **(c)** So hai biểu thức tại R. **(d)** Vẽ độ lớn trường từ 0 đến 3R.
+Trụ cách điện đặc rất dài bán kính R có mật độ thể tích dương đều ρ. (a) Suy ra trường ở r < R. (b) Tìm trường ngoài theo mật độ dài λ. (c) So hai biểu thức tại R. (d) Vẽ độ lớn trường từ 0 đến 3R.
 :::
 
 <!-- detailed-solution:22.39 -->
@@ -259,8 +261,8 @@ Tại r = R, hai giá trị đều bằng ρR/(2$\varepsilon_0$), nên liên t�
 ![Đồ thị trường của trụ cách điện tích điện đều](img/young-22/loi-giai-22-39.svg)
 :::
 
-::: exercise 22.40 • — Cầu trong vỏ cầu
-Cầu dẫn đặc mang q, bán kính a, nằm đồng tâm trong vỏ cầu dẫn có bán kính trong b, ngoài c. Vỏ trung hòa. **(a)** Suy ra độ lớn trường trong các vùng r < a, a < r < b, b < r < c, r > c. **(b)** Vẽ E từ 0 đến 2c. **(c), (d)** Tìm điện tích mặt trong và mặt ngoài vỏ. **(e)** Biểu diễn điện tích cầu nhỏ bằng bốn dấu cộng và phác đường sức trong thể tích cầu bán kính 2c.
+::: exercise 22.40 •: Cầu trong vỏ cầu
+Cầu dẫn đặc mang q, bán kính a, nằm đồng tâm trong vỏ cầu dẫn có bán kính trong b, ngoài c. Vỏ trung hòa. (a) Suy ra độ lớn trường trong các vùng r < a, a < r < b, b < r < c, r > c. (b) Vẽ E từ 0 đến 2c. **(c), (d)** Tìm điện tích mặt trong và mặt ngoài vỏ. (e) Biểu diễn điện tích cầu nhỏ bằng bốn dấu cộng và phác đường sức trong thể tích cầu bán kính 2c.
 :::
 
 <!-- detailed-solution:22.40 -->
@@ -282,7 +284,7 @@ Với bốn dấu cộng trên cầu nhỏ, vẽ bốn đường đi ra và kế
 :::
 
 ::: exercise 22.41 •
-Cầu dẫn đặc bán kính R mang Q dương, đồng tâm với vỏ cách điện rất mỏng bán kính 2R mang Q phân bố đều. **(a)** Tìm độ lớn và hướng trường ở 0 < r < R, R < r < 2R, r > 2R. **(b)** Vẽ độ lớn trường theo r.
+Cầu dẫn đặc bán kính R mang Q dương, đồng tâm với vỏ cách điện rất mỏng bán kính 2R mang Q phân bố đều. (a) Tìm độ lớn và hướng trường ở 0 < r < R, R < r < 2R, r > 2R. (b) Vẽ độ lớn trường theo r.
 :::
 
 <!-- detailed-solution:22.41 -->
@@ -300,7 +302,7 @@ Ba vùng có độ lớn trường lần lượt **0, $kQ/r^2$, $2kQ/r^2$**. Cá
 :::
 
 ::: exercise 22.42 •
-Vỏ cầu dẫn có bán kính trong a, ngoài b, nguồn điểm dương Q tại tâm. Điện tích tổng của vỏ là −3Q và vỏ cách điện với xung quanh. **(a)** Tìm độ lớn trường ở r < a, a < r < b, r > b. **(b), (c)** Tìm mật độ điện tích mặt trong và ngoài. **(d)** Phác đường sức và vị trí các điện tích. **(e)** Vẽ E theo r.
+Vỏ cầu dẫn có bán kính trong a, ngoài b, nguồn điểm dương Q tại tâm. Điện tích tổng của vỏ là −3Q và vỏ cách điện với xung quanh. (a) Tìm độ lớn trường ở r < a, a < r < b, r > b. **(b), (c)** Tìm mật độ điện tích mặt trong và ngoài. (d) Phác đường sức và vị trí các điện tích. (e) Vẽ E theo r.
 :::
 
 ![Hình P22.42: Nguồn Q trong vỏ dẫn mang tổng điện tích −3Q](img/young-22/hinh-p22-42.png)
@@ -330,8 +332,8 @@ $$
 ![Nguồn Q tạo đường sức ra thành hốc, còn đường sức bên ngoài đi vào mặt ngoài mang −2Q](img/young-22/duong-suc-22-42.svg)
 :::
 
-::: exercise 22.43 • — Hai vỏ cầu đồng tâm
-Vỏ cầu dẫn nhỏ có bán kính trong a, ngoài b, đồng tâm với vỏ lớn có bán kính trong c, ngoài d. Vỏ nhỏ mang +2q, vỏ lớn mang +4q. **(a)** Tính vector trường theo r trong năm vùng r < a, a < r < b, b < r < c, c < r < d, r > d, rồi vẽ thành phần xuyên tâm. **(b)** Tìm điện tích trên mặt trong và ngoài của mỗi vỏ.
+::: exercise 22.43 •: Hai vỏ cầu đồng tâm
+Vỏ cầu dẫn nhỏ có bán kính trong a, ngoài b, đồng tâm với vỏ lớn có bán kính trong c, ngoài d. Vỏ nhỏ mang +2q, vỏ lớn mang +4q. (a) Tính vector trường theo r trong năm vùng r < a, a < r < b, b < r < c, c < r < d, r > d, rồi vẽ thành phần xuyên tâm. (b) Tìm điện tích trên mặt trong và ngoài của mỗi vỏ.
 :::
 
 ![Hình P22.43: Bốn bán kính giới hạn của hai vỏ dẫn đồng tâm](img/young-22/hinh-p22-43.png)

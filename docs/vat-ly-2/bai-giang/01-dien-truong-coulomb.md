@@ -43,7 +43,7 @@ Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, �
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-21/17-dap-so-bai-le.md-->
 
-## Tài liệu tham khảo phần luyện tập
+## Tài liệu tham khảo
 
 Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 21, trang 707–717 và đáp số phụ lục A-14–A-15.
 

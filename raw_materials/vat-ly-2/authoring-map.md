@@ -9,6 +9,8 @@ Phạm vi được người học yêu cầu: Chương 21–44 của Young & Fre
 - Notes là bài giảng độc lập bằng tiếng Việt. Nguồn đối chiếu và hồ sơ tính toán nằm tại đây, không chèn lời kể về quá trình biên soạn vào trang học.
 - Các ví dụ, câu hỏi và bài toán trong mạch lý thuyết giữ ở Notes. Tab Bài tập chứa phần cuối chương: Guided Practice, bài tổng hợp, câu hỏi thảo luận, Exercises, Problems, Challenge Problems, MCAT và đáp án cuối chương/phụ lục.
 - Cheatsheet đứng sau Bài tập, chỉ gồm định nghĩa, tính chất, công thức và điều kiện áp dụng. Không có đề bài, ví dụ, mẹo thi hoặc ghi nhận kiểm chứng.
+- Hình có chữ tiếng Anh được giải nghĩa ngay trong chú thích phía dưới bằng cặp Việt (English), mỗi nhãn một lần trên mỗi hình. Dữ liệu chú thích nằm ở `docs/.vitepress/physics-image-labels.mjs`. Hình chỉ có công thức hoặc đã dùng tiếng Việt không cần thêm một danh sách nhãn trống.
+- Cách đặt dòng, nhãn và số hiệu công thức theo `../physics/math-format-guidelines.md`. Rà cả ảnh hiển thị, không coi việc không tràn ngang là đủ.
 
 ## Chương 21
 
@@ -44,9 +46,13 @@ Trang in 718–746, PDF 738–766. Đã có năm chủ đề lý thuyết, 12 v�
 
 ## Chương 23
 
-Đã soạn bản thảo lời mở và mục 23.1–23.5, gồm 14 ví dụ và công thức 23.1–23.23. Các phép tính, tích phân và đạo hàm có hồ sơ Python riêng. **Chưa hoàn tất chương** vì còn hình, tóm tắt, phần luyện tập và bài cuối chương, đáp số, tích hợp trang và lượt rà cuối.
+Đã hoàn tất lời mở, năm chủ đề lý thuyết, 14 ví dụ, công thức 23.1–23.23 và 27 hình đánh số. Tab Bài tập có 86 bài đánh số, 22 câu hỏi thảo luận, 12 bài biến thể và một bài tổng hợp, tương ứng 121 khung lời giải. Có Slides, Cheatsheet và ba khái niệm Wiki hỗ trợ. 138 nhóm tính toán, tích phân và đạo hàm đã qua. Kiểm tra hiển thị và chú thích ảnh ở 360, 375, 1440 px đã qua.
 
-## Các chương 24–44
+## Chương 24
+
+Đã tích hợp bản thảo sáu mục lý thuyết, 12 ví dụ, 23 công thức đánh số và 28 hình. Đã soạn riêng 12 bài biến thể, một bài tổng hợp, 21 câu hỏi thảo luận và Bài 24.1–24.39. Các bài đang ở hồ sơ biên soạn, chờ khép kín phần cuối chương và tích hợp vào tab Bài tập. Chương còn thiếu Bài 24.40–24.76, đáp số, tóm tắt, Slides, Cheatsheet và lượt rà toàn chương.
+
+## Các chương 25–44
 
 Tiếp tục theo thứ tự điện dung và điện môi, dòng điện, mạch điện, từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

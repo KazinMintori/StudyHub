@@ -79,7 +79,7 @@ d&=\frac{mv_0^2\sin2\alpha}{eE}.
 \end{aligned}
 $$
 
-**(d)** $h_{\max}=0.418\,\mathrm m$, $d=2.89\,\mathrm m$.
+(d) $h_{\max}=0.418\,\mathrm m$, $d=2.89\,\mathrm m$.
 
 </details>
 
@@ -126,7 +126,7 @@ $$
 \end{aligned}
 $$
 
-**(d)**
+(d)
 
 $$
 \begin{aligned}
@@ -144,7 +144,7 @@ E&=\frac{\sigma}{2\varepsilon_0\sqrt{1+(R/\Delta)^2}}.
 \end{aligned}
 $$
 
-**(b)** $m_{\max}=q\sigma/(2g\varepsilon_0)$.
+(b) $m_{\max}=q\sigma/(2g\varepsilon_0)$.
 
 $$
 \begin{aligned}
@@ -155,7 +155,7 @@ W_g&=mg\Delta,\\
 \end{aligned}
 $$
 
-**(g)** $m_{\max}=57.7\,\mathrm g$, $\Delta_{\max}=10.7\,\mathrm{cm}$.
+(g) $m_{\max}=57.7\,\mathrm g$, $\Delta_{\max}=10.7\,\mathrm{cm}$.
 
 **Bài 21.93:** (b) Đặt $\lambda=Q/L$:
 
@@ -167,7 +167,7 @@ dF_{2x}&=\frac{k\lambda^2}{a}\left(\frac{y_2}{r_0}-\frac{y_2-L}{r_L}\right)dy_2.
 \end{aligned}
 $$
 
-**(c)**
+(c)
 
 $$
 \begin{aligned}
@@ -177,7 +177,7 @@ F_{2x}&=\frac{2kQ^2}{L^2}\\
 \end{aligned}
 $$
 
-**(e)**
+(e)
 
 $$
 \begin{aligned}
@@ -187,7 +187,7 @@ W&=\frac{2kQ^2}{L}\ln\frac{L+\sqrt{a^2+L^2}}a\\
 \end{aligned}
 $$
 
-**(f)** $6.55\,\mathrm{m/s}$.
+(f) $6.55\,\mathrm{m/s}$.
 
 **Bài 21.95:** (b) $q_1<0$, $q_2>0$. (c) $0.843\,\mu\mathrm C$. (d) $56.2\,\mathrm N$.
 

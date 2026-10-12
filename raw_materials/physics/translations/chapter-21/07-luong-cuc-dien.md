@@ -15,7 +15,7 @@ Phân tử nước $\mathrm{H_2O}$ trung hòa về tổng điện tích nhưng l
 Sự lệch rất nhỏ của điện tích có hệ quả lớn. Muối ăn hòa tan thành ion natri dương và ion clo âm. Các ion ấy bị hút đến những phía trái dấu của phân tử nước, giúp giữ chúng trong dung dịch. Nếu phân tử nước không có lưỡng cực, nước sẽ là dung môi kém đối với chất ion và phần lớn hóa học trong dung dịch nước không thể diễn ra như hiện nay. Các phản ứng sinh hóa của sự sống cũng thuộc những quá trình ấy.
 
 ::: solution Trở lại bài toán mở đầu
-Chọn **(ii)**. Phân tử nước có tổng điện tích bằng không, nhưng điện tích dương và âm có tâm phân bố không trùng nhau. Chính đặc điểm lưỡng cực giúp tương tác với các ion trong dung dịch.
+Chọn (ii). Phân tử nước có tổng điện tích bằng không, nhưng điện tích dương và âm có tâm phân bố không trùng nhau. Chính đặc điểm lưỡng cực giúp tương tác với các ion trong dung dịch.
 :::
 
 Ta xét hai câu hỏi: Trường ngoài gây lực và mômen lực nào lên lưỡng cực, và bản thân lưỡng cực tạo trường gì?
@@ -109,9 +109,9 @@ Thế năng nhỏ nhất là $-pE$ khi cùng chiều, lớn nhất là $+pE$ khi
 
 Kết luận hợp lực bằng không dựa vào **trường đều**. Trong trường không đều, trường ở hai đầu có thể khác nhau, khiến hai lực không bù hết. Vì thế vật có tổng điện tích bằng không nhưng có mômen lưỡng cực vẫn chịu hợp lực trong trường không đều. Phân cực tạo lưỡng cực là cơ chế hút vật trung hòa đã xét ở mục 21.2.
 
-### Ví dụ 21.13 — Lực, mômen lực và thế năng
+### Ví dụ 21.13: Lực, mômen lực và thế năng
 
-Lưỡng cực ở Hình 21.32 nằm trong điện trường đều có độ lớn $5.0\times10^5\,\mathrm{N/C}$, song song mặt hình. Hai điện tích là $\pm1.6\times10^{-19}\,\mathrm C$, cách $0.125\,\mathrm{nm}$. Tìm **(a)** hợp lực, **(b)** độ lớn và hướng $\vec p$, **(c)** độ lớn và hướng mômen lực, **(d)** thế năng ở vị trí đã vẽ.
+Lưỡng cực ở Hình 21.32 nằm trong điện trường đều có độ lớn $5.0\times10^5\,\mathrm{N/C}$, song song mặt hình. Hai điện tích là $\pm1.6\times10^{-19}\,\mathrm C$, cách $0.125\,\mathrm{nm}$. Tìm (a) hợp lực, (b) độ lớn và hướng $\vec p$, (c) độ lớn và hướng mômen lực, (d) thế năng ở vị trí đã vẽ.
 
 ![Hình 21.32: Lưỡng cực tạo góc 145 độ với điện trường](../img/young-21/hinh-21-32.png)
 
@@ -122,7 +122,7 @@ Lưỡng cực ở Hình 21.32 nằm trong điện trường đều có độ l�
 
 **Thực hiện (a).** Vì trường đều, hai lực bằng nhau và đối nhau nên hợp lực bằng không.
 
-**(b)**
+(b)
 
 $$
 \begin{aligned}
@@ -133,7 +133,7 @@ $$
 
 Hướng $\vec p$ là từ âm đến dương, như hình.
 
-**(c)**
+(c)
 
 $$
 \begin{aligned}
@@ -146,7 +146,7 @@ $$
 
 Quy tắc bàn tay phải cho hướng ra khỏi mặt hình, tương ứng quay ngược chiều kim đồng hồ để $\vec p$ tiến đến cùng chiều trường.
 
-**(d)**
+(d)
 
 $$
 \begin{aligned}
@@ -164,13 +164,13 @@ $$
 
 Trường lưỡng cực là tổng vector trường hai điện tích, như ở Ví dụ 21.8. Các biểu thức tại điểm bất kỳ thường phức tạp hơn hình vẽ đường sức. Ngay cả với chỉ hai nguồn, có thể cần gần đúng để nhận ra dạng trường ở xa. Với phân bố nguồn tùy ý, việc phân tích bằng máy tính thường được dùng.
 
-### Ứng dụng sinh học — Cá tạo trường để tìm mồi
+### Ứng dụng sinh học: Cá tạo trường để tìm mồi
 
 Khác cá mập cảm nhận trường của con mồi, cá dao châu Phi *Gymnarchus niloticus* hoạt động ban đêm và nhìn kém có thể tạo trường của chính nó. Đuôi âm so với đầu tạo trường gần dạng lưỡng cực. Cơ thể cá nhỏ đi vào vùng trường làm mẫu trường thay đổi, giúp cá phát hiện con mồi.
 
 ![Cá Gymnarchus niloticus sử dụng trường điện do cơ thể tạo ra](../img/young-21/ung-dung-ca-dao.png)
 
-### Ví dụ 21.14 — Trường lưỡng cực ở xa trên trục
+### Ví dụ 21.14: Trường lưỡng cực ở xa trên trục
 
 Lưỡng cực có tâm tại gốc, $\vec p$ hướng $+y$. Tìm biểu thức gần đúng của trường tại P trên trục y với $y\gg d$. Dùng khai triển nhị thức khi đối số nhỏ.
 
@@ -224,9 +224,9 @@ So sánh các dạng nguồn: Điện tích điểm cho $1/r^2$, dây rất dài
 :::
 
 ::: exercise Câu hỏi ôn lại mục 21.7
-Lưỡng cực đặt trong trường đều với $\vec p$ ngược chiều $\vec E$ đang ở **(i)** cân bằng bền, **(ii)** cân bằng không bền, hay **(iii)** không thuộc hai trường hợp ấy?
+Lưỡng cực đặt trong trường đều với $\vec p$ ngược chiều $\vec E$ đang ở (i) cân bằng bền, (ii) cân bằng không bền, hay (iii) không thuộc hai trường hợp ấy?
 :::
 
 ::: solution Giải thích
-Chọn **(ii)**. Khi $\varphi=180^\circ$, $\cos\varphi=-1$ nên $U=+pE$, giá trị lớn nhất của thế năng. Đây là cân bằng không bền: Một lệch nhỏ khỏi vị trí đó tạo xu hướng quay đi xa hơn.
+Chọn (ii). Khi $\varphi=180^\circ$, $\cos\varphi=-1$ nên $U=+pE$, giá trị lớn nhất của thế năng. Đây là cân bằng không bền: Một lệch nhỏ khỏi vị trí đó tạo xu hướng quay đi xa hơn.
 :::

@@ -31,7 +31,7 @@ $$
 :::
 
 ::: exercise VP21.4.2
-$q_1=+3.60\,\mathrm{nC}$ ở $x=0$, điện tích chưa biết $q_2$ ở $x=-4.00\,\mathrm{cm}$. Tổng lực lên $q_3=+2.00\,\mathrm{nC}$ tại $x=4.00\,\mathrm{cm}$ hướng $+x$ và có độ lớn $54.0\,\mu\mathrm N$. Tìm **(a)** độ lớn và hướng lực của $q_1$ lên $q_3$, **(b)** độ lớn và hướng lực của $q_2$ lên $q_3$, **(c)** $q_2$.
+$q_1=+3.60\,\mathrm{nC}$ ở $x=0$, điện tích chưa biết $q_2$ ở $x=-4.00\,\mathrm{cm}$. Tổng lực lên $q_3=+2.00\,\mathrm{nC}$ tại $x=4.00\,\mathrm{cm}$ hướng $+x$ và có độ lớn $54.0\,\mu\mathrm N$. Tìm (a) độ lớn và hướng lực của $q_1$ lên $q_3$, (b) độ lớn và hướng lực của $q_2$ lên $q_3$, (c) $q_2$.
 :::
 
 
@@ -113,7 +113,7 @@ Kết quả $F_x=+0.452$ µN, $F_y=+0.329$ µN.
 Ôn trường lưỡng cực, vòng và đoạn dây trước khi làm nhóm này.
 
 ::: exercise VP21.10.1
-$q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)$ và $q_2=-5.00\,\mathrm{nC}$ ở gốc. Tìm thành phần x, y của tổng trường tại **(a)** $(0,0.100\,\mathrm m)$, **(b)** $(0,0.400\,\mathrm m)$, **(c)** $(0.200\,\mathrm m,0)$.
+$q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)$ và $q_2=-5.00\,\mathrm{nC}$ ở gốc. Tìm thành phần x, y của tổng trường tại (a) $(0,0.100\,\mathrm m)$, (b) $(0,0.400\,\mathrm m)$, (c) $(0.200\,\mathrm m,0)$.
 :::
 
 
@@ -126,7 +126,7 @@ $q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)$ và $q_2=-5.00\,\mathrm{nC}$
 - Dùng $kq\vec r/r^3$ cho từng nguồn.
 - Ở hai điểm trên trục y chỉ cộng thành phần đứng; ở điểm c cần cả thành phần ngang và đứng.
 
-**(a)** Hai trường đều hướng xuống, nên $E_x=0$. Thành phần đứng là:
+(a) Hai trường đều hướng xuống, nên $E_x=0$. Thành phần đứng là:
 
 $$
 \begin{aligned}
@@ -135,7 +135,7 @@ E_y&=-\frac{k(4+5)10^{-9}}{0.100^2}\\
 \end{aligned}
 $$
 
-**(b)** Hai trường đối hướng:
+(b) Hai trường đối hướng:
 
 $$
 \begin{aligned}
@@ -145,11 +145,11 @@ E_y&=\frac{k(4.00\times10^{-9})}{0.200^2}\\
 \end{aligned}
 $$
 
-**(c)** Nguồn trên cách điểm c $\sqrt{0.200^2+0.200^2}$ m, có trường phải và xuống; nguồn gốc có trường trái. Cộng cho $E_x=-806$ N/C, $E_y=-318$ N/C.
+(c) Nguồn trên cách điểm c $\sqrt{0.200^2+0.200^2}$ m, có trường phải và xuống; nguồn gốc có trường trái. Cộng cho $E_x=-806$ N/C, $E_y=-318$ N/C.
 :::
 
 ::: exercise VP21.10.2
-$q_1=+1.80\,\mathrm{nC}$ tại $x=0$, nguồn chưa biết $q_2$ tại $x=+4.00\,\mathrm{cm}$. Tổng trường tại P ở $x=+2.00\,\mathrm{cm}$ hướng $+x$, độ lớn $6.75\times10^4\,\mathrm{N/C}$. Tìm **(a)** trường do $q_1$ tại P, **(b)** trường do $q_2$ tại P, **(c)** điện tích $q_2$.
+$q_1=+1.80\,\mathrm{nC}$ tại $x=0$, nguồn chưa biết $q_2$ tại $x=+4.00\,\mathrm{cm}$. Tổng trường tại P ở $x=+2.00\,\mathrm{cm}$ hướng $+x$, độ lớn $6.75\times10^4\,\mathrm{N/C}$. Tìm (a) trường do $q_1$ tại P, (b) trường do $q_2$ tại P, (c) điện tích $q_2$.
 :::
 
 
@@ -175,7 +175,7 @@ $$
 :::
 
 ::: exercise VP21.10.3
-Mô hình đơn giản của nguyên tử hydrogen gồm nguồn $+e$ tại tâm vòng bán kính a, và điện tích $-e$ phân bố đều trên vòng để biểu diễn electron quay quanh proton. **(a)** Tìm độ lớn trường tổng ở điểm cách proton một khoảng a theo phương vuông góc mặt vòng. **(b)** Trường hướng về hay ra xa proton?
+Mô hình đơn giản của nguyên tử hydrogen gồm nguồn $+e$ tại tâm vòng bán kính a, và điện tích $-e$ phân bố đều trên vòng để biểu diễn electron quay quanh proton. (a) Tìm độ lớn trường tổng ở điểm cách proton một khoảng a theo phương vuông góc mặt vòng. (b) Trường hướng về hay ra xa proton?
 :::
 
 
@@ -200,7 +200,7 @@ Hệ số ngoặc dương, nên tổng hướng ra xa proton.
 :::
 
 ::: exercise VP21.10.4
-Điện tích dương Q phân bố đều trên thanh dài L, nằm dọc trục x từ $x=L$ đến $x=2L$. Tìm **(a)** điện tích trong phần dài $dx$, **(b)** thành phần x, y của trường tại gốc do phần tử ở x, **(c)** thành phần x, y của tổng trường tại gốc do cả thanh.
+Điện tích dương Q phân bố đều trên thanh dài L, nằm dọc trục x từ $x=L$ đến $x=2L$. Tìm (a) điện tích trong phần dài $dx$, (b) thành phần x, y của trường tại gốc do phần tử ở x, (c) thành phần x, y của tổng trường tại gốc do cả thanh.
 :::
 
 
@@ -228,7 +228,7 @@ $$
 ### Các bài biến thể từ Ví dụ 21.13–21.14
 
 ::: exercise VP21.14.1
-Phân tử nước có mômen lưỡng cực $6.13\times10^{-30}\,\mathrm{C\,m}$, đặt trong trường đều $3.00\times10^5\,\mathrm{N/C}$ với góc giữa mômen và trường $50.0^\circ$. Tính **(a)** độ lớn mômen lực và **(b)** thế năng.
+Phân tử nước có mômen lưỡng cực $6.13\times10^{-30}\,\mathrm{C\,m}$, đặt trong trường đều $3.00\times10^5\,\mathrm{N/C}$ với góc giữa mômen và trường $50.0^\circ$. Tính (a) độ lớn mômen lực và (b) thế năng.
 :::
 
 
@@ -297,7 +297,7 @@ $$
 :::
 
 ::: exercise VP21.14.4
-Phân tử ion KBr gồm ion kali có $+e=1.60\times10^{-19}\,\mathrm C$ và ion brom có $-e$, với mômen lưỡng cực $3.50\times10^{-29}\,\mathrm{C\,m}$. **(a)** Tìm khoảng cách hai ion. **(b)** Trên trục nối hai ion, trường có độ lớn $8.00\times10^4\,\mathrm{N/C}$. Điểm ấy cách tâm phân tử bao xa?
+Phân tử ion KBr gồm ion kali có $+e=1.60\times10^{-19}\,\mathrm C$ và ion brom có $-e$, với mômen lưỡng cực $3.50\times10^{-29}\,\mathrm{C\,m}$. (a) Tìm khoảng cách hai ion. (b) Trên trục nối hai ion, trường có độ lớn $8.00\times10^4\,\mathrm{N/C}$. Điểm ấy cách tâm phân tử bao xa?
 :::
 
 
@@ -324,7 +324,7 @@ Khoảng đến tâm lớn hơn d khoảng 91 lần, phù hợp điều kiện t
 
 Tài nguyên học tập đa phương tiện và bài tập được giao của học phần có thể được mở qua Mastering Physics.
 
-## Bài tổng hợp — Điện trường ở tâm nửa vòng tròn
+## Bài tổng hợp: Điện trường ở tâm nửa vòng tròn
 
 ::: exercise Điện tích phân bố trên nửa vòng
 Điện tích dương Q phân bố đều trên nửa đường tròn bán kính a trong Hình 21.34. Tìm độ lớn và hướng trường tại P, tâm cong của nửa vòng.

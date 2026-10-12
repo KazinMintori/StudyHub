@@ -47,9 +47,9 @@ Với các cấu hình hộp chữ nhật và nguồn điểm hoặc mặt tích
 Đây là phát biểu định tính của định luật Gauss. Để mở rộng sang nguồn và mặt có hình dạng bất kỳ, trước hết cần định nghĩa điện thông bằng toán học.
 
 ::: exercise Câu hỏi ôn lại mục 22.1
-Trong Hình 22.2a, tăng mọi kích thước dài của hộp gấp ba thì điện thông qua hộp **(i)** gấp 9, **(ii)** gấp 3, **(iii)** không đổi, **(iv)** còn một phần ba, **(v)** còn một phần chín, hay **(vi)** chưa đủ dữ kiện?
+Trong Hình 22.2a, tăng mọi kích thước dài của hộp gấp ba thì điện thông qua hộp (i) gấp 9, (ii) gấp 3, (iii) không đổi, (iv) còn một phần ba, (v) còn một phần chín, hay (vi) chưa đủ dữ kiện?
 :::
 
 ::: solution Giải thích
-Chọn **(iii)**. Mỗi phần tương ứng trên mặt mới cách nguồn gấp ba nên trường còn một phần chín. Diện tích của phần đó tăng gấp chín. Hai hệ số bù nhau và điện thông tổng không đổi.
+Chọn (iii). Mỗi phần tương ứng trên mặt mới cách nguồn gấp ba nên trường còn một phần chín. Diện tích của phần đó tăng gấp chín. Hai hệ số bù nhau và điện thông tổng không đổi.
 :::

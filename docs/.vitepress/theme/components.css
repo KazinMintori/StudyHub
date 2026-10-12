@@ -138,10 +138,21 @@ mjx-container[display=true]::-webkit-scrollbar,
 .vp-doc .custom-block mjx-container[display=true] {
   margin: var(--space-4) 0;
 }
+.static-math-numbered { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); }
+.static-math-body { min-width: 0; }
+.equation-number { font: var(--fs-small)/1.5 var(--font-ui); color: var(--ink-2); white-space: nowrap; }
+@media (max-width: 600px) {
+  .static-math-numbered { grid-template-columns: minmax(0, 1fr); gap: 0; margin: var(--space-4) 0; }
+  .static-math-numbered mjx-container[display=true] { margin: 0; }
+  .equation-number { justify-self: end; margin-top: var(--space-2); }
+}
 .vp-doc img { height: auto; max-width: 100%; border-radius: var(--radius); }
 .lecture-figure { margin: var(--space-6) 0; }
 .lecture-figure img { display: block; margin: 0 auto; }
 .lecture-figure figcaption { font-family: var(--font-ui); font-size: var(--fs-small); line-height: 1.45; color: var(--ink-3); margin-top: var(--space-3); }
+.lecture-figure .figure-labels { display: block; margin-top: var(--space-2); line-height: 1.65; }
+.lecture-figure .figure-label-list { margin: var(--space-2) 0 0; padding-left: var(--space-4); }
+.lecture-figure .figure-label-list li { font: inherit; margin: var(--space-1) 0; overflow-wrap: anywhere; }
 .dark .vp-doc img[src$='.svg'] { background: var(--printed-paper); padding: var(--space-3); }
 .mermaid { position: relative; max-width: 100%; overflow-x: auto; margin: var(--space-6) 0; padding: var(--space-6) var(--space-4) var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
 .mermaid svg { display: block; max-width: 100%; height: auto; margin: auto; }

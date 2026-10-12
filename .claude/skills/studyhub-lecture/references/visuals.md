@@ -21,7 +21,7 @@ Quy tắc cho SVG của site:
 - Font: `system-ui, -apple-system, 'Segoe UI', sans-serif` có dấu tiếng Việt; ký hiệu toán trong SVG viết bằng Unicode và chữ nghiêng (`font-style="italic"`) cho biến.
 - Tọa độ, số liệu, đường cong lấy từ phép tính xác định (script), không ước lượng bằng mắt.
 - Mỗi hình có alt mô tả điều cần nhận ra, và một câu trong Notes dẫn người đọc nhìn vào đúng phần của hình.
-- Vẽ lại hình giáo trình: Giữ dữ liệu và cấu trúc, ghi “Vẽ lại theo Hình x.y, <nguồn>”.
+- Đồ họa và biểu đồ tự vẽ: Thể hiện chính xác dữ liệu và cấu trúc toán học hoặc vật lý, chú thích chuẩn mực (ví dụ: "Hình 1.1: Đồ thị chuyển trạng thái..."), tuyệt đối không ghi các câu kiểu "vẽ lại từ sách" hay "ảnh lấy từ giáo trình".
 
 Kiểm tra: Build site và mở trang ở bề rộng 375px và 1440px, cả hai chế độ màu nếu có thể. Nếu không mở được trình duyệt, ít nhất mở SVG đã render thành ảnh (ví dụ bằng công cụ chuyển SVG→PNG) và nhìn.
 
@@ -29,7 +29,7 @@ Kiểm tra: Build site và mở trang ở bề rộng 375px và 1440px, cả hai
 
 ## 1. Khóa hướng thiết kế từ tham chiếu phù hợp
 
-Ưu tiên mẫu người dùng, hình trong giáo trình, slide học tốt của cùng môn hoặc một tham chiếu học thuật phù hợp. Khi cần tìm thêm, chọn hình có nhiệm vụ giống bài đang dạy, thay vì mẫu quảng cáo đẹp nhưng khác chức năng.
+Ưu tiên mẫu người dùng, tài liệu học thuật chất lượng cao của cùng môn hoặc một tham chiếu khoa học phù hợp. Khi cần tìm thêm, chọn hình có nhiệm vụ giống bài đang dạy, thay vì mẫu quảng cáo đẹp nhưng khác chức năng.
 
 Ghi ngắn: Điều giữ từ tham chiếu, điều điều chỉnh, điều không phù hợp lớp học. Quan sát cách đặt nhãn, phân cấp, mật độ, quan hệ chữ–hình và độ chính xác; không chỉ lấy màu.
 

@@ -4,6 +4,7 @@ import re
 root=Path(__file__).resolve().parents[1]
 paths=list((root/'raw_materials/physics/translations/chapter-21').glob('*.md'))+list((root/'raw_materials/physics/translations/chapter-22').glob('*.md'))
 paths+=list((root/'raw_materials/physics/translations/chapter-23').glob('*.md'))
+paths+=list((root/'raw_materials/physics/translations/chapter-24').glob('*.md'))
 paths += [root/'docs/wiki'/f'{name}.md' for name in ['dien-thong','dinh-luat-gauss','mat-gauss','che-chan-tinh-dien']]
 for p in paths:
     if not p.exists():continue

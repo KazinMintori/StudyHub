@@ -5,7 +5,7 @@ Một đứa trẻ chạm vào quả cầu kim loại đã nhiễm điện, nh�
 ![Hiện tượng tóc dựng khi cơ thể nhận điện tích từ máy phát tĩnh điện](img/young-22/mo-chuong.png)
 
 ::: exercise Câu hỏi mở đầu
-Khi đứng trong vỏ kim loại lớn mang điện, em sẽ **(i)** nhận điện tích cùng dấu với vỏ và tóc dựng lên, **(ii)** nhận điện tích trái dấu và tóc dựng lên, **(iii)** không nhận điện tích và tóc không dựng, hay **(iv)** có thể xảy ra bất kỳ trường hợp nào tùy điện tích của vỏ?
+Khi đứng trong vỏ kim loại lớn mang điện, em sẽ (i) nhận điện tích cùng dấu với vỏ và tóc dựng lên, (ii) nhận điện tích trái dấu và tóc dựng lên, (iii) không nhận điện tích và tóc không dựng, hay (iv) có thể xảy ra bất kỳ trường hợp nào tùy điện tích của vỏ?
 :::
 
 Một hình trụ không thay đổi hình dạng khi quay quanh trục. Một quả cầu tích điện đều cũng không có phương đặc biệt nào qua tâm. Những tính đối xứng như vậy không chỉ giúp ta mô tả hình học mà còn làm đơn giản đáng kể việc tính điện trường.

@@ -215,7 +215,7 @@
 }
 .cheatsheet-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
   gap: var(--space-5);
 }
 .cheatsheet-card {
@@ -281,9 +281,42 @@
   border-radius: var(--radius-sm);
   padding: var(--space-3);
   margin: var(--space-2) 0;
-  overflow-x: auto;
+  min-width: 0;
+  overflow: visible;
   font-size: 16px;
   line-height: 1.6;
+}
+.item-formula .math-text mjx-container[display=true] {
+  margin: 0 !important;
+  padding: var(--space-2) 0 !important;
+  font-size: 1em !important;
+  overflow: visible !important;
+}
+.formula-set {
+  container-type: inline-size;
+  min-width: 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--canvas);
+  padding: var(--space-3);
+  margin: var(--space-3) 0;
+}
+.formula-row { display: grid; min-width: 0; gap: var(--space-2); padding: var(--space-3) 0; }
+.formula-row + .formula-row { border-top: 1px solid var(--rule); }
+.formula-row:first-child { padding-top: 0; }
+.formula-row:last-child { padding-bottom: 0; }
+.formula-label { margin: 0; font: 500 var(--fs-small)/1.5 var(--font-ui); color: var(--ink-2); }
+.formula-value { min-width: 0; font-size: 17px; }
+.formula-value mjx-container[display=true] { margin: 0 !important; padding: 2px 0 !important; text-align: left !important; font-size: 1em !important; overflow: visible !important; }
+@container (min-width: 540px) {
+  .formula-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); align-items: center; gap: var(--space-5); }
+}
+@media (max-width: 767px) {
+  .Layout.physics-layout .lecture-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; overflow: visible; }
+  .Layout.physics-layout .lecture-tabs a { justify-content: center; min-width: 0; padding-inline: var(--space-1); font-size: 14px; line-height: 1.35; text-align: center; white-space: normal; }
+  .Layout.physics-layout .lecture-tabs .tab-count { display: none; }
+  .Layout.physics-layout .main > .vp-doc :is(h2, h3, h4, [id]) { scroll-margin-top: 100px; }
+  .formula-set { padding: var(--space-3); }
 }
 .item-code {
   background: var(--canvas);

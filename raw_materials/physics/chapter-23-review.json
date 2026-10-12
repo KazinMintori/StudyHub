@@ -22,9 +22,19 @@
     "23.76: Circular level curves exist only when V/A+3y0^2 is positive. Zero gives a point, negative gives no level curve.",
     "23.83: Closest approaches were checked against both energy and angular momentum conservation. The last two appendix values do not satisfy the given data."
   ],
-  "numericEvidence": ["qa/physics/chapter23/theory-checks.json", "qa/physics/chapter23/numeric-checks.json"],
+  "numericEvidence": [
+    "qa/physics/chapter23/theory-checks.json",
+    "qa/physics/chapter23/numeric-checks.json"
+  ],
   "numericCheckGroups": 138,
   "figureReview": "All theory and exercise crops visually reviewed; summary crops and cell-label crop corrected.",
-  "renderReview": "pending",
-  "publication": "not-requested-for-this-chapter"
+  "renderReview": "passed",
+  "publication": "not-requested-for-this-chapter",
+  "renderEvidence": "qa/physics/browser/results-all.json",
+  "renderViewports": [
+    360,
+    375,
+    1440
+  ],
+  "captionReview": "qa/physics/image-label-review.json"
 }

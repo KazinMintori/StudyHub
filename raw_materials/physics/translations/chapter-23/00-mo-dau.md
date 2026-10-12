@@ -9,7 +9,7 @@ Khi hạt mang điện chuyển động trong trường, lực điện có thể
 Ta sẽ dùng **điện thế**, tức thế năng điện trên một đơn vị điện tích thử, để mô tả tương tác. Hiệu điện thế giữa hai điểm còn được gọi là điện áp trong mạch điện. Những khái niệm này giúp hiểu mạch, chùm electron dùng trong xạ trị, máy gia tốc hạt năng lượng cao và nhiều thiết bị khác.
 
 ::: exercise Câu hỏi mở đầu
-Trong hàn hồ quang, điện tích đi giữa dụng cụ hàn và những mảnh kim loại cần nối, tạo hồ quang có nhiệt độ cao làm kim loại nóng chảy. Vì sao phải giữ dụng cụ gần kim loại? **(i)** Để hiệu điện thế lớn nhất, **(ii)** để hiệu điện thế nhỏ nhất, **(iii)** để điện trường lớn nhất, **(iv)** để điện trường nhỏ nhất, hay **(v)** có nhiều hơn một ý đúng?
+Trong hàn hồ quang, điện tích đi giữa dụng cụ hàn và những mảnh kim loại cần nối, tạo hồ quang có nhiệt độ cao làm kim loại nóng chảy. Vì sao phải giữ dụng cụ gần kim loại? (i) Để hiệu điện thế lớn nhất, (ii) để hiệu điện thế nhỏ nhất, (iii) để điện trường lớn nhất, (iv) để điện trường nhỏ nhất, hay (v) có nhiều hơn một ý đúng?
 :::
 
 Sau chương này, bạn cần thực hiện được những việc sau:

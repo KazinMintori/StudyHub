@@ -68,7 +68,22 @@ watch(() => lesson.value?.slug, load)
 <template>
   <div v-if="course && lesson" class="lecture-panels">
     <section v-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
-      <p class="empty-state">Slides not available because the Creator too lazy</p>
+      <template v-if="course.id === 'vat-ly-2' && current">
+        <article class="course-slide" aria-live="polite">
+          <p class="eyebrow">Thẻ ôn tập {{ index + 1 }} / {{ slides.length }}</p>
+          <h2>{{ current.title }}</h2>
+          <ul><li v-for="(bullet, bulletIndex) in current.bullets" :key="bulletIndex"><MathText :text="bullet" /></li></ul>
+          <div v-if="current.formula" class="slide-formula"><MathText as="div" :text="current.formula" /></div>
+          <p v-if="current.example" class="slide-example"><MathText :text="current.example" /></p>
+        </article>
+        <nav class="slide-controls" aria-label="Chuyển thẻ ôn tập">
+          <button class="study-button" :disabled="index === 0" @click="next(-1)">Thẻ trước</button>
+          <span>{{ index + 1 }} / {{ slides.length }}</span>
+          <button class="study-button" :disabled="index === slides.length - 1" @click="next(1)">Thẻ sau</button>
+        </nav>
+      </template>
+      <p v-else-if="course.id === 'vat-ly-2'" class="empty-state">Bộ thẻ ôn tập đang được biên soạn.</p>
+      <p v-else class="empty-state">Slides not available because the Creator too lazy</p>
     </section>
 
     <section v-else-if="part === 'cheatsheet'" class="lecture-cheatsheet" aria-label="Cheatsheet tra cứu nhanh của bài giảng">
@@ -97,7 +112,13 @@ watch(() => lesson.value?.slug, load)
             <div v-for="(item, idx) in section.items" :key="idx" class="cheatsheet-item">
               <h4 v-if="item.name" class="item-name">{{ item.name }}</h4>
 
-              <div v-if="item.formula" class="item-formula">
+              <div v-if="item.formulaRows?.length" class="formula-set" aria-label="Các công thức và điều kiện áp dụng">
+                <div v-for="(row, rowIndex) in item.formulaRows" :key="rowIndex" class="formula-row">
+                  <p v-if="row.label" class="formula-label"><MathText :text="row.label" /></p>
+                  <MathText as="div" class="formula-value" :text="row.formula" />
+                </div>
+              </div>
+              <div v-else-if="item.formula" class="item-formula">
                 <MathText as="div" :text="item.formula" />
               </div>
 

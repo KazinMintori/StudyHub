@@ -71,13 +71,13 @@ $$
 
 Tính trường trực tiếp cần cộng vector hoặc tích phân từng thành phần. Tính điện thế trước chỉ cần tổng hoặc tích phân vô hướng, rồi lấy gradient. Vì vậy cách thứ hai thường làm tính toán gọn hơn. Tuy nhiên phải biết **miền mà biểu thức điện thế đúng** trước khi lấy đạo hàm.
 
-### Ứng dụng — Điện thế qua màng tế bào
+### Ứng dụng: Điện thế qua màng tế bào
 
 Trong mô hình tế bào nghỉ, điện thế bên trong thấp hơn bên ngoài. Hiệu bên trong so với bên ngoài điển hình cỡ −70 mV ở neuron và −95 mV ở tế bào cơ xương. Vì vậy gradient điện thế hướng từ trong ra ngoài màng, còn điện trường hướng từ ngoài vào trong. Trường ảnh hưởng sự đi vào, đi ra của các ion natri, kali, canxi qua những kênh chuyên biệt trong màng.
 
 ![Điện trường qua màng ảnh hưởng sự di chuyển của ion canxi, kali và natri](../img/young-23/ung-dung-mang-te-bao.png)
 
-### Ví dụ 23.13 — Trường từ điện thế nguồn điểm
+### Ví dụ 23.13: Trường từ điện thế nguồn điểm
 
 Điện thế nguồn điểm q là V = kq/r. Tìm vector trường.
 
@@ -117,7 +117,7 @@ $$
 Hai cách cho cùng kết quả. Khai thác đối xứng ngay từ đầu giúp tránh ba đạo hàm riêng không cần thiết.
 :::
 
-### Ví dụ 23.14 — Trường trên trục vòng tích điện
+### Ví dụ 23.14: Trường trên trục vòng tích điện
 
 Vòng bán kính a mang Q có điện thế trên trục x là $V(x)=kQ/\sqrt{x^2+a^2}$. Tìm trường tại điểm trên trục.
 
@@ -135,7 +135,7 @@ Trùng Ví dụ 21.9. Biểu thức điện thế được cho chỉ đúng trê
 :::
 
 ::: exercise Câu hỏi ôn lại mục 23.5
-Trong vùng có $V=A+Bx+Cy^3+Dxy$, với A,B,C,D dương, những phát biểu nào đúng? **(i)** Tăng A làm trường tăng ở mọi điểm. **(ii)** Tăng A làm trường giảm ở mọi điểm. **(iii)** Trường không có thành phần z. **(iv)** Trường bằng không ở gốc.
+Trong vùng có $V=A+Bx+Cy^3+Dxy$, với A,B,C,D dương, những phát biểu nào đúng? (i) Tăng A làm trường tăng ở mọi điểm. (ii) Tăng A làm trường giảm ở mọi điểm. (iii) Trường không có thành phần z. (iv) Trường bằng không ở gốc.
 :::
 
 ::: solution Giải thích
@@ -149,5 +149,5 @@ E_z&=0.
 \end{aligned}
 $$
 
-A không ảnh hưởng các đạo hàm. Ở gốc, Eₓ = −B khác không. Vì vậy chỉ **(iii)** đúng. Cộng một hằng số vào điện thế không đổi trường hoặc hiệu điện thế.
+A không ảnh hưởng các đạo hàm. Ở gốc, Eₓ = −B khác không. Vì vậy chỉ (iii) đúng. Cộng một hằng số vào điện thế không đổi trường hoặc hiệu điện thế.
 :::

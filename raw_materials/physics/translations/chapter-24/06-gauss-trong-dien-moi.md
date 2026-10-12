@@ -2,7 +2,7 @@
 
 ## Định luật Gauss trong điện môi
 
-Gauss với ε₀ luôn đếm **toàn bộ điện tích**, gồm điện tích tự do và điện tích liên kết. Trong điện môi tuyến tính, có thể viết lại định luật để chỉ cần điện tích tự do ở vế phải. Ta suy dạng ấy từ tụ phẳng đã xét.
+Gauss với $\varepsilon_0$ luôn đếm **toàn bộ điện tích**, gồm điện tích tự do và điện tích liên kết. Trong điện môi tuyến tính, có thể viết lại định luật để chỉ cần điện tích tự do ở vế phải. Ta suy dạng ấy từ tụ phẳng đã xét.
 
 ### Mặt Gauss đi qua biên dẫn và điện môi
 
@@ -10,10 +10,10 @@ Chọn một hộp nhỏ cắt qua bản dẫn dương và mặt điện môi g�
 
 ![Hình 24.22: Hộp Gauss nằm một nửa trong vật dẫn, một nửa trong điện môi](../img/young-24/hinh-24-22.png)
 
-Hộp bao điện tích tự do +σA và điện tích liên kết −σᵢA. Gauss cho:
+Hộp bao điện tích tự do +σA và điện tích liên kết −σᵢA. Đặt $\sigma_t=\sigma-\sigma_i$, Gauss cho:
 
 $$
-EA=\frac{(\sigma-\sigma_i)A}{\varepsilon_0}.
+EA=\frac{\sigma_tA}{\varepsilon_0}.
 \tag{24.21}
 $$
 
@@ -28,15 +28,14 @@ Vế phải bây giờ chỉ chứa điện tích tự do trên bản dẫn. V�
 
 ### Dạng tích phân
 
-Đối với điện môi tuyến tính, đẳng hướng được xét, dạng tổng quát là:
+Đặt $\Phi_{KE}=\oint K\vec E\cdot d\vec A$ và gọi Q_f là tổng điện tích tự do được bao. Đối với điện môi tuyến tính, đẳng hướng được xét, dạng tổng quát là:
 
 $$
-\oint K\vec E\cdot d\vec A
-=\frac{Q_{\mathrm{tự\ do,\ trong}}}{\varepsilon_0}.
+\Phi_{KE}=Q_f/\varepsilon_0.
 \tag{24.23}
 $$
 
-$Q_{\mathrm{tự\ do,\ trong}}$ là tổng đại số điện tích tự do bên trong mặt kín, không gồm điện tích liên kết. Pháp tuyến vẫn hướng ra ngoài.
+Q_f là tổng đại số điện tích tự do bên trong mặt kín, không gồm điện tích liên kết. Pháp tuyến vẫn hướng ra ngoài.
 
 K có thể khác nhau trên các phần mặt nằm trong các điện môi khác nhau. Khi ấy phải dùng K đúng tại từng điểm và giữ trong tích phân. Chỉ kéo K ra ngoài nếu nó không đổi trên toàn phần mặt được tích phân. Dạng này cần đáp ứng tuyến tính, tức K không phụ thuộc độ lớn trường. Với các trường không quá mạnh, điều kiện ấy đúng cho nhiều điện môi thông thường.
 
@@ -47,9 +46,9 @@ $$
 =\frac{Q_{\mathrm{tổng,\ trong}}}{\varepsilon_0}.
 $$
 
-Hai vế phải khác loại điện tích. Không thay ε₀ bằng Kε₀ nhưng vẫn lấy tổng gồm điện tích liên kết, vì khi đó đã tính tác dụng phân cực hai lần.
+Hai vế phải khác loại điện tích. Không thay $\varepsilon_0$ bằng K$\varepsilon_0$ nhưng vẫn lấy tổng gồm điện tích liên kết, vì khi đó đã tính tác dụng phân cực hai lần.
 
-### Ví dụ 24.12 — Tụ cầu được lấp bằng dầu cách điện
+### Ví dụ 24.12: Tụ cầu được lấp bằng dầu cách điện
 
 Tụ cầu ở Ví dụ 24.3 có hai bán kính rₐ,rᵦ. Lấp toàn khe bằng dầu cách điện có hằng số K. Dùng Gauss tìm điện dung.
 
@@ -64,7 +63,7 @@ E(r)&=\frac{Q}{4\pi K\varepsilon_0r^2}\\
 \end{aligned}
 $$
 
-So với chân không ở cùng Q, trường còn một phần K, nên hiệu điện thế cũng còn một phần K. Tích phân xuyên tâm cho:
+So với chân không ở cùng Q, trường bằng 1/K giá trị ban đầu, nên hiệu điện thế cũng giảm K lần. Tích phân xuyên tâm cho:
 
 $$
 \begin{aligned}
@@ -80,9 +79,9 @@ $$
 :::
 
 ::: exercise Câu hỏi ôn lại mục 24.6
-Một nguồn điểm q dương nằm sâu trong khối điện môi rất lớn, đồng đều, hằng số K. Ở điểm cách nguồn r trong điện môi, độ lớn trường là **(i)** kq/r², **(ii)** Kkq/r², **(iii)** kq/(Kr²), hay **(iv)** không đáp án nào?
+Một nguồn điểm q dương nằm sâu trong khối điện môi rất lớn, đồng đều, hằng số K. Ở điểm cách nguồn r trong điện môi, độ lớn trường là (i) kq/r², (ii) Kkq/r², (iii) kq/(Kr²), hay (iv) không đáp án nào?
 :::
 
 ::: solution Giải thích
-Chọn **(iii)**. Mặt cầu đồng tâm có KE·4πr² = q/ε₀, nên E = kq/(Kr²). Mô hình khối rất lớn bỏ ảnh hưởng biên. Nếu q âm thì trường hướng vào và độ lớn dùng |q|.
+Chọn (iii). Mặt cầu đồng tâm có KE·4πr² = q/$\varepsilon_0$, nên E = kq/(Kr²). Mô hình khối rất lớn bỏ ảnh hưởng biên. Nếu q âm thì trường hướng vào và độ lớn dùng |q|.
 :::

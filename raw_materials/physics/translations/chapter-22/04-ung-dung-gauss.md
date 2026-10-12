@@ -27,7 +27,7 @@ Vẽ một mặt Gauss nằm hoàn toàn trong vật liệu. Trường trên m�
 
 Đừng suy ra trường bằng không chỉ vì mặt không bao điện tích. Điều được bảo đảm khi ấy là **điện thông tổng** bằng không. Đường sức đi vào và đi ra giúp dự đoán dấu, nhưng số đường vẽ chỉ biểu diễn tỷ lệ với điện thông.
 
-### Ví dụ 22.5 — Quả cầu dẫn mang điện
+### Ví dụ 22.5: Quả cầu dẫn mang điện
 
 Quả cầu dẫn đặc bán kính R mang điện tích tổng dương q. Tìm trường ở mọi điểm trong và ngoài cầu.
 
@@ -60,7 +60,7 @@ Với vỏ cầu dẫn có hốc cầu đồng tâm không chứa nguồn, cũng
 Có thể dùng cách chọn mặt tương tự để tìm điện trường giữa một quả cầu tích điện và một vỏ cầu dẫn đồng tâm bao quanh nó hay không?
 :::
 
-### Ví dụ 22.6 — Dây dài vô hạn tích điện đều
+### Ví dụ 22.6: Dây dài vô hạn tích điện đều
 
 Dây mảnh dài vô hạn có mật độ điện tích dài dương λ. Dùng Gauss để tìm trường.
 
@@ -85,7 +85,7 @@ Nếu λ âm, trường hướng về dây và công thức độ lớn dùng |�
 Với dây hữu hạn, độ lớn trường nhìn chung không đều trên mặt trụ và có thể có thành phần dọc trục. Gauss vẫn đúng, nhưng không cho phép thay điện thông bằng E nhân diện tích mặt bên như trên. Khi ấy cần tích phân Coulomb. Cách chọn mặt trụ còn dùng được cho trụ dài tích điện đều và khoảng giữa hai trụ dẫn đồng trục, như trong các bài cuối chương.
 :::
 
-### Ví dụ 22.7 — Mặt phẳng vô hạn tích điện đều
+### Ví dụ 22.7: Mặt phẳng vô hạn tích điện đều
 
 Mặt phẳng mỏng vô hạn có mật độ điện tích mặt dương σ. Tìm trường bằng Gauss.
 
@@ -108,7 +108,7 @@ Nếu σ âm, trường hướng về mặt, điện thông tổng âm và công
 **Đánh giá.** Kết quả trùng giới hạn mặt phẳng vô hạn của Ví dụ 21.11, nhưng không cần tích phân theo các vòng. Trường có độ lớn độc lập khoảng cách đến mặt. Mặt Gauss phù hợp biến toàn bộ tích phân thành điện thông qua hai đáy, nhờ đối xứng phẳng.
 :::
 
-### Ví dụ 22.8 — Hai bản dẫn song song trái dấu
+### Ví dụ 22.8: Hai bản dẫn song song trái dấu
 
 Hai bản dẫn phẳng lớn song song mang điện tích trái dấu và cùng độ lớn. Mật độ trên hai mặt đối diện là +σ và −σ. Tìm điện trường giữa hai bản.
 
@@ -133,7 +133,7 @@ Trường hướng từ bản dương sang bản âm. Mặt S₄ cho cùng kết
 **Đánh giá.** Cũng có thể cộng trường của hai mặt mang điện. Mỗi mặt tạo độ lớn $\sigma/(2\varepsilon_0)$. Ngoài hai bản, hai trường đối nhau và triệt tiêu. Giữa hai bản, chúng cùng chiều và cộng thành $\sigma/\varepsilon_0$. Trường trong vật liệu bản dẫn bằng không. Kết quả trùng Ví dụ 21.12, đồng thời làm rõ điện tích nằm trên những mặt nào của bản dẫn.
 :::
 
-### Ví dụ 22.9 — Quả cầu cách điện tích điện đều theo thể tích
+### Ví dụ 22.9: Quả cầu cách điện tích điện đều theo thể tích
 
 Điện tích dương Q phân bố đều khắp thể tích quả cầu cách điện bán kính R. Tìm độ lớn trường tại điểm P cách tâm r.
 
@@ -179,7 +179,7 @@ Trường ngoài giống nguồn điểm Q đặt tại tâm. Với Q âm, hư�
 Cách làm còn áp dụng cho mật độ chỉ phụ thuộc bán kính dù không đều. Với mọi phân bố đối xứng cầu, trường tại r tương đương trường của toàn bộ điện tích nằm trong r dồn về tâm. Những phần điện tích ở bán kính lớn hơn r không tạo trường tổng tại đó. Các mô hình điện tích trong nguyên tử và hạt nhân cũng sử dụng kết quả này.
 :::
 
-### Ví dụ 22.10 — Suy ra điện tích trên vỏ cầu
+### Ví dụ 22.10: Suy ra điện tích trên vỏ cầu
 
 Vỏ cầu mỏng bán kính 0,250 m có điện tích chưa biết phân bố đều trên mặt. Ở cách tâm 0,300 m, trường hướng xuyên tâm vào trong và có độ lớn $1.80\times10^2$ N/C. Tìm điện tích trên vỏ.
 

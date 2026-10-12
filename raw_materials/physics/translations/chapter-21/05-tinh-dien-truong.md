@@ -57,7 +57,7 @@ Với nguồn liên tục, chọn phần điện tích nhỏ có thể coi là �
 
 **Đánh giá.** Xét hướng trường có phù hợp dấu nguồn và đối xứng không. Nếu trường phụ thuộc vị trí, thử những giới hạn có kết quả đã biết. Khi có thể, tìm cùng trường bằng một cách khác. Những kỹ thuật này cũng sẽ dùng để tính từ trường do điện tích chuyển động ở chương 28.
 
-### Ví dụ 21.8 — Trường của một lưỡng cực điện
+### Ví dụ 21.8: Trường của một lưỡng cực điện
 
 Hai điện tích $q_1=+12\,\mathrm{nC}$ và $q_2=-12\,\mathrm{nC}$ cách $0.100\,\mathrm m$. Một cặp bằng nhau về độ lớn và trái dấu như vậy gọi là lưỡng cực điện. Tính trường của từng nguồn và tổng trường tại a, b, c trong Hình 21.22.
 
@@ -85,7 +85,7 @@ Tính tương tự cho các khoảng cách còn lại:
 | b | $6.8\times10^4$ | $0.55\times10^4$ |
 | c | $6.39\times10^3$ | $6.39\times10^3$ |
 
-**(a)** Tại a, cả hai trường hướng sang phải:
+(a) Tại a, cả hai trường hướng sang phải:
 
 $$
 \begin{aligned}
@@ -93,7 +93,7 @@ $$
 \end{aligned}
 $$
 
-**(b)** Tại b, trường nguồn dương hướng trái, trường nguồn âm hướng phải:
+(b) Tại b, trường nguồn dương hướng trái, trường nguồn âm hướng phải:
 
 $$
 \begin{aligned}
@@ -101,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-**(c)** Tại c, hai thành phần ngang bằng nhau, còn hai thành phần đứng đối nhau:
+(c) Tại c, hai thành phần ngang bằng nhau, còn hai thành phần đứng đối nhau:
 
 $$
 \begin{aligned}
@@ -138,7 +138,7 @@ $$
 Kết quả trùng phép cộng thành phần. Ví dụ có các bài biến thể ở phần cuối chương.
 :::
 
-### Ví dụ 21.9 — Điện trường trên trục vòng tích điện
+### Ví dụ 21.9: Điện trường trên trục vòng tích điện
 
 Điện tích Q phân bố đều trên vòng dẫn bán kính a. Tìm trường tại P trên trục vòng, cách tâm một khoảng x.
 
@@ -204,7 +204,7 @@ $$
 Vòng nhỏ so với khoảng cách tạo trường gần như điện tích điểm Q. Quy trình tổng quát là tìm thành phần của từng phần nhỏ rồi tích phân trên toàn nguồn. Ví dụ có bài biến thể ở phần cuối chương.
 :::
 
-### Ví dụ 21.10 — Điện trường trên trung trực đoạn dây tích điện
+### Ví dụ 21.10: Điện trường trên trung trực đoạn dây tích điện
 
 Điện tích dương Q phân bố đều trên trục y từ $y=-a$ đến $y=+a$. Tìm trường tại P trên trục x, với $x>0$.
 
@@ -289,7 +289,7 @@ $$
 Trường giảm như $1/r$, chậm hơn trường điện tích điểm giảm như $1/r^2$. Không có dây vô hạn thật, nhưng nếu điểm khảo sát gần phần giữa của dây dài, công thức này rất gần kết quả hữu hạn. Khi r bằng $1\%$ chiều dài toàn dây, chênh lệch nhỏ hơn $0.02\%$. Ví dụ có bài biến thể ở phần cuối chương.
 :::
 
-### Ví dụ 21.11 — Điện trường trên trục đĩa tích điện đều
+### Ví dụ 21.11: Điện trường trên trục đĩa tích điện đều
 
 Đĩa cách điện bán kính R có mật độ mặt dương đều $\sigma$. Tìm trường trên trục, tại khoảng cách $x>0$ từ tâm.
 
@@ -348,7 +348,7 @@ $$
 Giới hạn mặt phẳng vô hạn không phụ thuộc khoảng cách đến mặt. Trường vuông góc mặt và hướng ra xa nếu mật độ dương. Với điểm phía bên kia, hướng đảo sang phía bên kia. Mật độ âm làm trường hai phía hướng về mặt. Mặt thật có thể dùng gần đúng này nếu kích thước lớn hơn nhiều khoảng cách từ điểm khảo sát đến mặt.
 :::
 
-### Ví dụ 21.12 — Hai mặt phẳng tích điện trái dấu
+### Ví dụ 21.12: Hai mặt phẳng tích điện trái dấu
 
 Hai mặt phẳng vô hạn song song cách nhau d, có mật độ mặt $+\sigma$ và $-\sigma$. Tìm trường giữa hai mặt, phía trên mặt trên và phía dưới mặt dưới.
 
@@ -375,9 +375,9 @@ $$
 :::
 
 ::: exercise Câu hỏi ôn lại mục 21.5
-Trong Hình 21.24, nếu phân bố $+Q$ đều trên nửa đoạn $0<y<a$, còn $-Q$ đều trên nửa đoạn $-a<y<0$, trường tại P hướng **(i)** $+x$, **(ii)** $-x$, **(iii)** $+y$, **(iv)** $-y$, **(v)** bằng không, hay **(vi)** không thuộc các trường hợp đó?
+Trong Hình 21.24, nếu phân bố $+Q$ đều trên nửa đoạn $0<y<a$, còn $-Q$ đều trên nửa đoạn $-a<y<0$, trường tại P hướng (i) $+x$, (ii) $-x$, (iii) $+y$, (iv) $-y$, (v) bằng không, hay (vi) không thuộc các trường hợp đó?
 :::
 
 ::: solution Giải thích
-Chọn **(iv)**. Ghép phần tử dương ở y với phần tử âm cùng độ lớn ở $-y$. Trường của phần dương có thành phần ngang dương, đứng âm. Trường của phần âm có thành phần ngang âm, đứng âm. Hai thành phần ngang triệt tiêu, còn thành phần đứng âm cộng lại.
+Chọn (iv). Ghép phần tử dương ở y với phần tử âm cùng độ lớn ở $-y$. Trường của phần dương có thành phần ngang dương, đứng âm. Trường của phần âm có thành phần ngang âm, đứng âm. Hai thành phần ngang triệt tiêu, còn thành phần đứng âm cộng lại.
 :::

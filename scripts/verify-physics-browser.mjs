@@ -3,13 +3,33 @@
 import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import {mkdir,writeFile} from 'node:fs/promises'
+import {readFile,stat} from 'node:fs/promises'
+import {createServer} from 'node:http'
+import {resolve,extname,sep} from 'node:path'
 import {physics2Course} from '../docs/.vitepress/physics-courses.mjs'
+import {physicsImageLabels} from '../docs/.vitepress/physics-image-labels.mjs'
 
-const base=process.env.QA_URL||'http://127.0.0.1:5175'
+let base=process.env.QA_URL,server
+if(!base){
+ const root=resolve('docs/.vitepress/dist')
+ const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.woff2':'font/woff2','.woff':'font/woff','.ico':'image/x-icon'}
+ server=createServer(async(req,res)=>{
+  try{
+   const path=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname)
+   let file=resolve(root,'.'+path)
+   if(file!==root&&!file.startsWith(root+sep)){res.writeHead(403);res.end();return}
+   if((await stat(file)).isDirectory())file=resolve(file,'index.html')
+   res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream'})
+   res.end(req.method==='HEAD'?undefined:await readFile(file))
+  }catch{res.writeHead(404);res.end()}
+ })
+ await new Promise(done=>server.listen(0,'127.0.0.1',done))
+ base=`http://127.0.0.1:${server.address().port}`
+}
 const chapters=process.env.QA_CHAPTERS?process.env.QA_CHAPTERS.split(',').map(Number):[21,22,23]
 assert(/^http:\/\/127\.0\.0\.1:\d+$/.test(base),'QA target must be localhost')
 const browser=await puppeteer.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'})
-const page=await browser.newPage(),errors=[],results=[],overflow=[]
+const page=await browser.newPage(),errors=[],results=[],overflow=[],verifiedImages=new Set()
 page.on('pageerror',e=>errors.push(e.message))
 await page.evaluateOnNewDocument(()=>sessionStorage.setItem('studyhub_welcome_seen','1'))
 await mkdir('qa/physics/browser',{recursive:true})
@@ -19,6 +39,22 @@ async function go(path){
  assert([200,304].includes(response.status()),`${path}: HTTP ${response.status()}`)
  await page.waitForSelector('.lecture-tabs, .topic-header',{timeout:30000})
  await page.evaluate(()=>document.fonts.ready)
+ const sources=await page.$$eval('.vp-doc img',es=>es.map(e=>e.src))
+ await Promise.all([...new Set(sources)].filter(src=>!verifiedImages.has(src)).map(async src=>{
+  if(src.startsWith('data:image/')){verifiedImages.add(src);return}
+  assert.equal(new URL(src).origin,base,'Exercise illustrations must be local assets')
+  const response=await fetch(src,{method:'HEAD'})
+  assert(response.ok,`Image HTTP ${response.status}: ${src}`)
+  verifiedImages.add(src)
+ }))
+ const captions=await page.$$eval('.lecture-figure',figures=>figures.map(f=>({alt:f.querySelector('img')?.alt,caption:f.querySelector('figcaption')?.textContent,labels:f.querySelector('.figure-labels')?.textContent})))
+ for(const item of captions){
+  assert(item.caption?.startsWith(item.alt),'Vietnamese caption must appear below the image')
+  if(item.labels)for(const [vi,en] of Object.values(physicsImageLabels).flat()){
+   const pair=`${vi} (${en})`
+   if(item.labels.includes(pair))assert.equal(item.labels.split(pair).length-1,1,`Repeated caption label ${pair}`)
+  }
+ }
 }
 async function inspect(label){
  const found=await page.evaluate(()=>{
@@ -46,14 +82,15 @@ try{
    const tabs=await page.$$eval('.lecture-tabs a',es=>es.map(e=>e.textContent.replace(/\d+/g,'').trim()))
    assert.equal(tabs[tabs.indexOf('Bài tập')+1],'Cheatsheet')
    if(!lesson.hasChapterExercises){
-    await inspect(`${width}/chapter23/notes-draft`)
+    await inspect(`${width}/chapter${chapter}/notes-draft`)
     for(const topic of lesson.topicGroups.flatMap(g=>g.topics)){
      await go(`/vat-ly-2/bai-giang/${lesson.slug}/${topic.slug}.html`)
-     await inspect(`${width}/chapter23/${topic.slug}`)
+     await inspect(`${width}/chapter${chapter}/${topic.slug}`)
     }
     continue
    }
    assert(await page.$eval('.lecture-exercises-content',e=>getComputedStyle(e).display==='none'))
+   assert.equal(await page.$$eval('.lecture-exercises-content details',es=>es.some(e=>e.open)),false,'Solutions must initially be collapsed')
    await inspect(`${width}/chapter${chapter}/notes`)
    await page.click('.lecture-tabs a[href$="#bai-tap"]')
    await page.waitForFunction(()=>getComputedStyle(document.querySelector('.lecture-exercises-content')).display!=='none')
@@ -78,6 +115,16 @@ try{
     await page.click(`.lecture-tabs a[href$="#${part}"]`)
     await page.waitForFunction(part=>document.querySelector(`.lecture-tabs a[href$="#${part}"]`)?.getAttribute('aria-current')==='page',{},part)
     await inspect(`${width}/chapter${chapter}/${part}`)
+    if(part==='slides'){
+     const slideData=physics2Course.slides.filter(s=>s.note===lesson.slug)
+     assert(slideData.length>0,'Ready Physics2 lecture needs review cards')
+     for(let index=0;index<slideData.length;index++){
+      assert.equal(await page.$eval('.course-slide h2',e=>e.textContent),slideData[index].title)
+      await inspect(`${width}/chapter${chapter}/slide-${index+1}`)
+      if(index+1<slideData.length)await page.click('.slide-controls button:last-child')
+     }
+     assert(await page.$eval('.slide-controls button:last-child',e=>e.disabled))
+    }
     if(width===375&&part==='cheatsheet')await page.screenshot({path:`qa/physics/browser/chapter${chapter}-cheatsheet-mobile.png`,fullPage:false})
    }
    for(const topic of lesson.topicGroups.flatMap(g=>g.topics)){
@@ -88,7 +135,7 @@ try{
   }
  }
  assert.deepEqual(errors,[])
- await writeFile(`qa/physics/browser/results${chapters.includes(23)?'-chapter23':''}.json`,JSON.stringify({base,checks:results.length,results,errors,overflow},null,2)+'\n')
+ await writeFile(`qa/physics/browser/results${chapters.length===1?'-chapter'+chapters[0]:'-all'}.json`,JSON.stringify({base,checks:results.length,verifiedImages:verifiedImages.size,results,errors,overflow},null,2)+'\n')
  console.log(JSON.stringify({checks:results.length,errors,overflow},null,2))
  assert.equal(overflow.length,0,'Math, image or document overflow')
-}finally{await browser.close()}
+}finally{await browser.close();if(server)await new Promise(done=>server.close(done))}

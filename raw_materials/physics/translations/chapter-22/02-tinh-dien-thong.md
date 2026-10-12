@@ -92,9 +92,9 @@ Với $E_\perp=E\cos\varphi$, cách viết thứ ba là tích phân $\int_A E\co
 
 Ba cách viết là cùng một đại lượng. Tùy hình học, một dạng có thể thuận tiện hơn các dạng còn lại. Tích phân cũng bằng giá trị trung bình có dấu của thành phần trường vuông góc mặt nhân với diện tích mặt.
 
-### Ví dụ 22.1 — Điện thông qua một đĩa
+### Ví dụ 22.1: Điện thông qua một đĩa
 
-Đĩa bán kính 0,10 m có pháp tuyến đơn vị hợp góc 30° với điện trường đều $E=2.0\times10^3$ N/C. **(a)** Tìm điện thông. **(b)** Điện thông bằng bao nhiêu nếu quay đĩa để pháp tuyến vuông góc trường? **(c)** Nếu pháp tuyến cùng chiều trường thì sao?
+Đĩa bán kính 0,10 m có pháp tuyến đơn vị hợp góc 30° với điện trường đều $E=2.0\times10^3$ N/C. (a) Tìm điện thông. (b) Điện thông bằng bao nhiêu nếu quay đĩa để pháp tuyến vuông góc trường? (c) Nếu pháp tuyến cùng chiều trường thì sao?
 
 ![Hình 22.7: Pháp tuyến đĩa hợp góc 30 độ với điện trường](../img/young-22/hinh-22-7.png)
 
@@ -116,22 +116,22 @@ $$
 **Đánh giá.** Điện thông ở (b) nhỏ nhất, ở (c) lớn nhất. Cùng diện tích, chỉ thành phần trường vuông góc mặt góp phần vào điện thông.
 :::
 
-### Ứng dụng — Nước đi qua miệng cá nhám phơi
+### Ứng dụng: Nước đi qua miệng cá nhám phơi
 
 Khác cá mập trắng săn mồi, cá nhám phơi thu sinh vật phù du từ nước đi qua mang khi bơi. Miệng có thể rộng đến một mét, cho phép thông lượng nước rất lớn. Tích của tốc độ bơi với diện tích miệng có thể đạt khoảng 0,5 m³/s, tức 500 lít mỗi giây hoặc gần $5\times10^5$ gallon mỗi giờ. Tương tự, điện thông phụ thuộc độ lớn trường, diện tích và hướng tương đối giữa trường với mặt.
 
 ![Cá nhám phơi mở miệng để nước mang sinh vật phù du đi qua](../img/young-22/ung-dung-ca-nham.png)
 
-### Ví dụ 22.2 — Điện thông qua một lập phương
+### Ví dụ 22.2: Điện thông qua một lập phương
 
-Một mặt lập phương tưởng tượng cạnh L nằm trong điện trường đều $\vec E$. Tìm điện thông qua từng mặt và qua toàn lập phương khi **(a)** hai mặt vuông góc trường và **(b)** lập phương quay góc θ quanh trục đứng.
+Một mặt lập phương tưởng tượng cạnh L nằm trong điện trường đều $\vec E$. Tìm điện thông qua từng mặt và qua toàn lập phương khi (a) hai mặt vuông góc trường và (b) lập phương quay góc θ quanh trục đứng.
 
 ![Hình 22.8: Các pháp tuyến ra ngoài của lập phương trước và sau khi quay](../img/young-22/hinh-22-8.png)
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Mỗi mặt là phẳng, trường đều và diện tích bằng L². Dùng tích vô hướng với pháp tuyến ra ngoài cho từng mặt, rồi cộng sáu điện thông.
 
-**(a)** Trường đi vào mặt 1, đi ra mặt 2 và song song bốn mặt còn lại:
+(a) Trường đi vào mặt 1, đi ra mặt 2 và song song bốn mặt còn lại:
 
 $$
 \begin{aligned}
@@ -155,7 +155,7 @@ $$
 \end{aligned}
 $$
 
-**(b)** Sau khi quay, trường đi vào mặt 1 và 3, đi ra mặt 2 và 4. Các góc tương ứng là 180° − θ, θ, 90° + θ và 90° − θ:
+(b) Sau khi quay, trường đi vào mặt 1 và 3, đi ra mặt 2 và 4. Các góc tương ứng là 180° − θ, θ, 90° + θ và 90° − θ:
 
 $$
 \begin{aligned}
@@ -170,7 +170,7 @@ $$
 Từng cặp triệt tiêu, nên tổng vẫn bằng không. Đây là kết quả đã thấy ở Hình 22.3c. Khi tính điện thông qua mặt kín, phải giữ quy ước pháp tuyến ra ngoài ở tất cả các phần mặt.
 :::
 
-### Ví dụ 22.3 — Điện thông qua một mặt cầu
+### Ví dụ 22.3: Điện thông qua một mặt cầu
 
 Điện tích điểm $q=+3.0\,\mu\mathrm C$ ở tâm mặt cầu tưởng tượng bán kính $r=0.20$ m. Tìm điện thông qua mặt cầu.
 
@@ -196,10 +196,10 @@ $$
 ::: exercise Câu hỏi ôn lại mục 22.2
 Xếp bốn mặt sau theo điện thông từ dương nhất đến âm nhất. Đơn vị vector diện tích là m² và đơn vị trường là N/C:
 
-- **(i)** Mặt chữ nhật có $\vec A=6\hat{\mathbf i}$ và $\vec E=4\hat{\mathbf j}$.
-- **(ii)** Mặt tròn có $\vec A=3\hat{\mathbf j}$ và $\vec E=4\hat{\mathbf i}+2\hat{\mathbf j}$.
-- **(iii)** Mặt vuông có $\vec A=3\hat{\mathbf i}+7\hat{\mathbf j}$ và $\vec E=4\hat{\mathbf i}-2\hat{\mathbf j}$.
-- **(iv)** Mặt bầu dục có $\vec A=3\hat{\mathbf i}-7\hat{\mathbf j}$ và cùng trường như (iii).
+- (i) Mặt chữ nhật có $\vec A=6\hat{\mathbf i}$ và $\vec E=4\hat{\mathbf j}$.
+- (ii) Mặt tròn có $\vec A=3\hat{\mathbf j}$ và $\vec E=4\hat{\mathbf i}+2\hat{\mathbf j}$.
+- (iii) Mặt vuông có $\vec A=3\hat{\mathbf i}+7\hat{\mathbf j}$ và $\vec E=4\hat{\mathbf i}-2\hat{\mathbf j}$.
+- (iv) Mặt bầu dục có $\vec A=3\hat{\mathbf i}-7\hat{\mathbf j}$ và cùng trường như (iii).
 :::
 
 ::: solution Giải thích

@@ -42,10 +42,10 @@ Tụ tương tự một lò xo kéo giãn có năng lượng κx²/2. Điện t�
 **Giữ điện áp hay giữ điện tích cho hai so sánh khác nhau.** Ở cùng V, C lớn hơn cho cả Q và U lớn hơn. Nếu cần chuyển cùng một Q giữa hai vật dẫn, công Q²/(2C) nhỏ hơn khi C lớn hơn. Vì vậy điện dung lớn giúp giữ nhiều điện tích ở cùng điện áp, đồng thời giảm công cần để đạt một điện tích cho trước.
 
 ::: solution Trở lại câu hỏi đèn flash
-Tụ giữ nguyên điện dung. Tăng Q gấp đôi làm Q² tăng gấp bốn, nên năng lượng tăng **4 lần**, chọn **(iv)**. Không dùng U tỷ lệ Q ở điện áp cố định vì trong câu hỏi này điện áp cũng tăng theo Q.
+Tụ giữ nguyên điện dung. Tăng Q gấp đôi làm Q² tăng gấp bốn, nên năng lượng tăng **4 lần**, chọn (iv). Không dùng U tỷ lệ Q ở điện áp cố định vì trong câu hỏi này điện áp cũng tăng theo Q.
 :::
 
-### Ứng dụng — Tích trữ và giải phóng năng lượng
+### Ứng dụng: Tích trữ và giải phóng năng lượng
 
 Trong đèn flash, nhấn chụp tạo đường dẫn từ bản này qua ống flash tới bản kia. Năng lượng tụ được chuyển nhanh thành một chớp sáng ngắn và mạnh.
 
@@ -62,11 +62,14 @@ Mắc nhiều tụ song song làm điện dung tương đương lớn, nên ở 
 Chuyển electron giữa hai bản đòi hỏi công chống điện trường trong khe. Vì vậy có thể diễn tả năng lượng là năng lượng của điện trường. Với tụ phẳng diện tích A, khe d, thể tích khe là Ad. **Mật độ năng lượng** là năng lượng trên mỗi đơn vị thể tích:
 
 $$
-u=\frac{U}{Ad}=\frac{CV^2}{2Ad}.
+\begin{aligned}
+u&=\frac{U}{Ad}\\
+&=\frac{CV^2}{2Ad}.
+\end{aligned}
 \tag{24.10}
 $$
 
-Thay C = ε₀A/d và V = Ed. Các yếu tố hình học triệt tiêu:
+Thay C = $\varepsilon_0$A/d và V = Ed. Các yếu tố hình học triệt tiêu:
 
 $$
 u=\frac12\varepsilon_0E^2.
@@ -77,9 +80,9 @@ Ta vừa suy công thức bằng tụ phẳng, nhưng kết quả còn đúng ch
 
 Năng lượng điện trường là cách diễn tả thế năng điện đã xét. Không cộng thêm nó vào năng lượng tương tác các nguồn như thể đó là hai phần khác nhau. Có thể gán năng lượng cho toàn hệ điện tích hoặc cho điện trường do hệ tạo ra. Hai cách tính cùng một năng lượng.
 
-### Ví dụ 24.7 — Chia sẻ điện tích giữa hai tụ
+### Ví dụ 24.7: Chia sẻ điện tích giữa hai tụ
 
-Nạp C₁ = 8,0 µF đến V₀ = 120 V rồi ngắt nguồn. C₂ = 4,0 µF ban đầu chưa nạp. Công tắc S đang mở. Tìm **(a)** điện tích đầu, **(b)** năng lượng đầu, **(c)** điện áp và điện tích từng tụ sau khi đóng S để hai tụ song song và đạt trạng thái ổn định, **(d)** năng lượng cuối.
+Nạp C₁ = 8,0 µF đến V₀ = 120 V rồi ngắt nguồn. C₂ = 4,0 µF ban đầu chưa nạp. Công tắc S đang mở. Tìm (a) điện tích đầu, (b) năng lượng đầu, (c) điện áp và điện tích từng tụ sau khi đóng S để hai tụ song song và đạt trạng thái ổn định, (d) năng lượng cuối.
 
 ![Hình 24.12: Công tắc nối hai bản trên với nhau và hai bản dưới với nhau](../img/young-24/hinh-24-12.png)
 
@@ -114,9 +117,9 @@ Năng lượng đầu xấp xỉ 0,058 J, cuối xấp xỉ 0,038 J theo độ c
 **Đánh giá.** Điện tích bảo toàn nhưng năng lượng còn trong hai tụ giảm. Phần chênh 0,0192 J chuyển thành nhiệt trong điện trở dây và có thể thành bức xạ điện từ khi dòng thay đổi. Không đặt bảo toàn riêng năng lượng điện trường hai tụ trong quá trình nối chúng rồi bỏ qua các dạng năng lượng ấy.
 :::
 
-### Ví dụ 24.8 — Năng lượng trên mỗi mét khối
+### Ví dụ 24.8: Năng lượng trên mỗi mét khối
 
-**(a)** Cần trường có độ lớn bao nhiêu để chứa 1,00 J trong 1,00 m³ chân không? **(b)** Nếu trường mạnh gấp 10 thì năng lượng trên mỗi mét khối bằng bao nhiêu?
+(a) Cần trường có độ lớn bao nhiêu để chứa 1,00 J trong 1,00 m³ chân không? (b) Nếu trường mạnh gấp 10 thì năng lượng trên mỗi mét khối bằng bao nhiêu?
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Mật độ cần đạt là 1,00 J/m³. Giải (24.11) theo E:
@@ -133,14 +136,14 @@ Tăng E gấp 10 làm E² gấp 100, nên mật độ cuối là 100 J/m³.
 **Đánh giá.** Không khí khô chịu được trường cỡ $3\times10^6$ V/m trước khi đánh thủng. Một số chất cách điện có thể chịu trường cao hơn. Các ngưỡng phụ thuộc vật liệu và điều kiện, được xét ở mục 24.4.
 :::
 
-### Ví dụ 24.9 — Hai cách tìm năng lượng tụ cầu
+### Ví dụ 24.9: Hai cách tìm năng lượng tụ cầu
 
-Tụ cầu ở Ví dụ 24.3 có hai mặt bán kính rₐ,rᵦ và điện tích ±Q. Tìm năng lượng **(a)** từ điện dung, **(b)** từ tích phân mật độ năng lượng điện trường.
+Tụ cầu ở Ví dụ 24.3 có hai mặt bán kính rₐ,rᵦ và điện tích ±Q. Tìm năng lượng (a) từ điện dung, (b) từ tích phân mật độ năng lượng điện trường.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Trong mô hình cầu đồng tâm này, trường chỉ khác không trong khe rₐ < r < rᵦ. Trong hốc và vật liệu dẫn trường bằng không. Ngoài tụ, mặt Gauss bao tổng điện tích không và đối xứng cho trường không. Hai cách phải cho cùng một năng lượng.
 
-**(a)** Dùng điện dung tụ cầu:
+(a) Dùng điện dung tụ cầu:
 
 $$
 \begin{aligned}
@@ -151,7 +154,7 @@ U&=Q^2/(2C)\\
 \end{aligned}
 $$
 
-**(b)** Trong khe E = Q/(4πε₀r²). Do đó:
+(b) Trong khe E = Q/(4π$\varepsilon_0$r²). Do đó:
 
 $$
 u(r)=\frac{Q^2}{32\pi^2\varepsilon_0r^4}.
@@ -173,9 +176,9 @@ $$
 :::
 
 ::: exercise Câu hỏi ôn lại mục 24.3
-Mắc hai tụ 4 µF, 8 µF theo cách nào để tụ 4 µF giữ năng lượng lớn hơn tụ 8 µF? **(i)** Nối tiếp, **(ii)** song song, **(iii)** cả hai cách, hoặc **(iv)** không cách nào?
+Mắc hai tụ 4 µF, 8 µF theo cách nào để tụ 4 µF giữ năng lượng lớn hơn tụ 8 µF? (i) Nối tiếp, (ii) song song, (iii) cả hai cách, hoặc (iv) không cách nào?
 :::
 
 ::: solution Giải thích
-Chọn **(i)**. Nối tiếp giữ cùng Q, nên U = Q²/(2C) lớn hơn ở tụ nhỏ. Song song giữ cùng V, nên U = CV²/2 lớn hơn ở tụ lớn. Có thể dùng bất kỳ dạng tương đương nào của U, nhưng phải tính đúng điện áp hoặc điện tích thực của mỗi tụ, không tự coi cả Q lẫn V đều giống nhau.
+Chọn (i). Nối tiếp giữ cùng Q, nên U = Q²/(2C) lớn hơn ở tụ nhỏ. Song song giữ cùng V, nên U = CV²/2 lớn hơn ở tụ lớn. Có thể dùng bất kỳ dạng tương đương nào của U, nhưng phải tính đúng điện áp hoặc điện tích thực của mỗi tụ, không tự coi cả Q lẫn V đều giống nhau.
 :::

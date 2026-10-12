@@ -55,7 +55,7 @@ Gia tốc đầu cực đại là $a_p=5.45\times10^{18}$ m/s² và $a_\alpha=a_
 :::
 
 ::: exercise 23.53 •
-Hạt +7,60 nC trong trường đều hướng trái còn chịu một lực khác. Thả từ nghỉ, hạt đi phải 8,00 cm, lực khác sinh công $6.50\times10^{-5}$ J, hạt có động năng $4.35\times10^{-5}$ J. Tìm **(a)** công lực điện, **(b)** điện thế điểm đầu so với cuối, **(c)** độ lớn trường.
+Hạt +7,60 nC trong trường đều hướng trái còn chịu một lực khác. Thả từ nghỉ, hạt đi phải 8,00 cm, lực khác sinh công $6.50\times10^{-5}$ J, hạt có động năng $4.35\times10^{-5}$ J. Tìm (a) công lực điện, (b) điện thế điểm đầu so với cuối, (c) độ lớn trường.
 :::
 
 <!-- detailed-solution:23.53 -->
@@ -81,7 +81,7 @@ Hạt đi ngược lực điện nên công lực điện âm. Lực khác bù p
 :::
 
 ::: exercise 23.54 ••
-Hai nguồn bằng nhau q = +5,00 µC ở hai đỉnh đối diện hình vuông cạnh 8,00 cm. A là đỉnh trống, B là tâm. Nguồn q₀ = −3,00 µC đi dọc đường chéo từ A đến B. **(a)** Tìm độ lớn hợp lực điện tại A và vẽ vị trí, hướng lực. **(b)** Tìm lực tại B. **(c)** Tìm công lực điện từ A đến B, xác định dấu công và hạt đi về thế cao hay thấp.
+Hai nguồn bằng nhau q = +5,00 µC ở hai đỉnh đối diện hình vuông cạnh 8,00 cm. A là đỉnh trống, B là tâm. Nguồn q₀ = −3,00 µC đi dọc đường chéo từ A đến B. (a) Tìm độ lớn hợp lực điện tại A và vẽ vị trí, hướng lực. (b) Tìm lực tại B. (c) Tìm công lực điện từ A đến B, xác định dấu công và hạt đi về thế cao hay thấp.
 :::
 
 <!-- detailed-solution:23.54 -->
@@ -109,7 +109,7 @@ Hợp lực ở A hướng theo đường chéo từ A đến B. Hạt âm đi v
 :::
 
 ::: exercise 23.55 •• CALC
-Diode chân không có catôt âm và anôt dương là những điện cực trụ đồng tâm. Do điện tích tích lũy gần catôt, điện thế giữa chúng được mô tả bởi V(x) = Cx^(4/3), với x là khoảng cách từ catôt và C hằng theo điều kiện hoạt động. Khoảng cách hai điện cực 13,0 mm, điện áp 240 V. **(a)** Tìm C. **(b)** Tìm trường theo x. **(c)** Tìm lực lên electron ở giữa khoảng điện cực.
+Diode chân không có catôt âm và anôt dương là những điện cực trụ đồng tâm. Do điện tích tích lũy gần catôt, điện thế giữa chúng được mô tả bởi V(x) = Cx^(4/3), với x là khoảng cách từ catôt và C hằng theo điều kiện hoạt động. Khoảng cách hai điện cực 13,0 mm, điện áp 240 V. (a) Tìm C. (b) Tìm trường theo x. (c) Tìm lực lên electron ở giữa khoảng điện cực.
 :::
 
 <!-- detailed-solution:23.55 -->
@@ -134,8 +134,8 @@ $$
 Lực electron hướng theo +x, về anôt dương. Hệ số 4C/3 xấp xỉ $1.05\times10^5$ V/m^(4/3).
 :::
 
-::: exercise 23.56 •• — Phóng điện tĩnh điện ở ngón tay
-Cọ chân trên thảm làm cơ thể nhận electron và tích điện âm. Đưa ngón tay gần tay nắm kim loại tạo trường tăng khi khoảng cách giảm. Khi trường vượt cỡ 3 MV/m, không khí đánh thủng và có phóng điện nhỏ. **(a)** Ước lượng khoảng cách lúc phóng điện. **(b)** Dùng ngưỡng trường và khoảng cách ấy để tìm độ lớn điện áp. **(c)** Coi đầu ngón tay và tay nắm là hai mặt dẫn phẳng trái dấu ở khoảng cách nhỏ, ước lượng mật độ mặt. **(d)** Ước lượng diện tích hữu hiệu đầu ngón tay. **(e)** Tính độ lớn điện tích. **(f)** Ước lượng số electron trao đổi khi cọ chân, đồng thời xác định nhận thêm hay mất bớt trong cấu hình âm đã mô tả.
+::: exercise 23.56 ••: Phóng điện tĩnh điện ở ngón tay
+Cọ chân trên thảm làm cơ thể nhận electron và tích điện âm. Đưa ngón tay gần tay nắm kim loại tạo trường tăng khi khoảng cách giảm. Khi trường vượt cỡ 3 MV/m, không khí đánh thủng và có phóng điện nhỏ. (a) Ước lượng khoảng cách lúc phóng điện. (b) Dùng ngưỡng trường và khoảng cách ấy để tìm độ lớn điện áp. (c) Coi đầu ngón tay và tay nắm là hai mặt dẫn phẳng trái dấu ở khoảng cách nhỏ, ước lượng mật độ mặt. (d) Ước lượng diện tích hữu hiệu đầu ngón tay. (e) Tính độ lớn điện tích. (f) Ước lượng số electron trao đổi khi cọ chân, đồng thời xác định nhận thêm hay mất bớt trong cấu hình âm đã mô tả.
 :::
 
 <!-- detailed-solution:23.56 -->
@@ -148,13 +148,13 @@ Cọ chân trên thảm làm cơ thể nhận electron và tích điện âm. Đ
 - Trường giữa hai mặt dẫn trái dấu cho |σ| = $\varepsilon_0$E, điện áp xấp xỉ Ed.
 - Điện tích hữu hiệu bằng σA và số electron bằng |Q|/e.
 
-**(a)** Chọn d ≈ 1 mm. **(b)** |ΔV| ≈ 3000 V. **(c)** |σ| ≈ $2.7\times10^{-5}$ C/m². **(d)** Chọn A ≈ 1 cm², tức $10^{-4}$ m². **(e)** |Q| ≈ 2,7 nC. **(f)** Số electron cỡ $1.7\times10^{10}$.
+(a) Chọn d ≈ 1 mm. (b) |ΔV| ≈ 3000 V. (c) |σ| ≈ $2.7\times10^{-5}$ C/m². (d) Chọn A ≈ 1 cm², tức $10^{-4}$ m². (e) |Q| ≈ 2,7 nC. (f) Số electron cỡ $1.7\times10^{10}$.
 
 Vì cơ thể được mô tả tích điện **âm**, đó là số electron **nhận thêm**, không phải mất bớt. Nếu chọn các kích thước ước lượng khác, phải tính lại với chúng. Các giá trị này nhằm diễn tả mô hình điện trường và điện tích, không phải phép đo riêng của một người.
 :::
 
-::: exercise 23.57 •• — Tinh thể ion
-Tám điện tích ±q nằm tại các đỉnh lập phương cạnh d như Hình P23.57. Đây là mô hình một ô mạng tinh thể ion, chẳng hạn Na⁺ và Cl⁻ của natri chloride. **(a)** Tính thế năng với mốc các ion ở vô hạn. **(b)** Kết quả U < 0 liên hệ thế nào với việc các tinh thể ion tồn tại trong tự nhiên?
+::: exercise 23.57 ••: Tinh thể ion
+Tám điện tích ±q nằm tại các đỉnh lập phương cạnh d như Hình P23.57. Đây là mô hình một ô mạng tinh thể ion, chẳng hạn Na⁺ và Cl⁻ của natri chloride. (a) Tính thế năng với mốc các ion ở vô hạn. (b) Kết quả U < 0 liên hệ thế nào với việc các tinh thể ion tồn tại trong tự nhiên?
 :::
 
 ![Hình P23.57: Tám điện tích dấu luân phiên ở các đỉnh lập phương](img/young-23/hinh-p23-57.png)
@@ -182,7 +182,7 @@ Thế năng âm nghĩa là cấu hình có năng lượng thấp hơn khi các i
 :::
 
 ::: exercise 23.58 ••
-Dây tải điện dân dụng trên cột có điện thế cực đại cỡ 22 kV so với đất. Coi điện thế này hằng trong mô hình nguồn tích điện trên dây. **(a)** Ước lượng độ cao dây. **(b)** Coi dây là trụ dẫn dài R = 2 cm, điện thế mặt so với điểm đất ngay dưới dây bằng 22 kV, tìm λ. **(c)** Ước lượng trường ở điểm dưới dây bằng λ vừa tìm.
+Dây tải điện dân dụng trên cột có điện thế cực đại cỡ 22 kV so với đất. Coi điện thế này hằng trong mô hình nguồn tích điện trên dây. (a) Ước lượng độ cao dây. (b) Coi dây là trụ dẫn dài R = 2 cm, điện thế mặt so với điểm đất ngay dưới dây bằng 22 kV, tìm λ. (c) Ước lượng trường ở điểm dưới dây bằng λ vừa tìm.
 :::
 
 <!-- detailed-solution:23.58 -->
@@ -233,7 +233,7 @@ Cầu dương bị kéo về bản âm.
 :::
 
 ::: exercise 23.60 ••
-Hai vỏ cầu đồng tâm R₁ = 5,00 cm, q₁ = +3,00 µC và R₂ = 15,0 cm, q₂ = −5,00 µC, điện tích đều trên từng mặt. Mốc V ở xa. Tìm V tại **(a)** 2,50 cm, **(b)** 10,0 cm, **(c)** 20,0 cm từ tâm.
+Hai vỏ cầu đồng tâm R₁ = 5,00 cm, q₁ = +3,00 µC và R₂ = 15,0 cm, q₂ = −5,00 µC, điện tích đều trên từng mặt. Mốc V ở xa. Tìm V tại (a) 2,50 cm, (b) 10,0 cm, (c) 20,0 cm từ tâm.
 :::
 
 <!-- detailed-solution:23.60 -->
@@ -251,7 +251,7 @@ Hai vỏ cầu đồng tâm R₁ = 5,00 cm, q₁ = +3,00 µC và R₂ = 15,0 cm,
 ### Trụ đồng trục và ứng dụng
 
 ::: exercise 23.61 • CALC
-Trụ kim loại dài bán kính a nằm đồng trục trong ống kim loại dài bán kính b. Trụ trong mang mật độ dài +λ, ống ngoài −λ. Chọn V = 0 tại b. **(a)** Tính V trong r < a, a < r < b và r > b. **(b)** Chứng tỏ V_ab = λ ln(b/a)/(2π$\varepsilon_0$). **(c)** Từ đạo hàm tìm E giữa trụ theo V_ab. **(d)** Hiệu điện thế giữa hai trụ thế nào nếu ống ngoài trung hòa?
+Trụ kim loại dài bán kính a nằm đồng trục trong ống kim loại dài bán kính b. Trụ trong mang mật độ dài +λ, ống ngoài −λ. Chọn V = 0 tại b. (a) Tính V trong r < a, a < r < b và r > b. (b) Chứng tỏ V_ab = λ ln(b/a)/(2π$\varepsilon_0$). (c) Từ đạo hàm tìm E giữa trụ theo V_ab. (d) Hiệu điện thế giữa hai trụ thế nào nếu ống ngoài trung hòa?
 :::
 
 <!-- detailed-solution:23.61 -->
@@ -264,7 +264,7 @@ Trụ kim loại dài bán kính a nằm đồng trục trong ống kim loại d
 - Miền có trường bằng không là miền điện thế hằng, nối liên tục với giá trị mặt.
 - Điện tích mặt ngoài của ống không đổi trường trong khe khi giữ điện tích trụ trong.
 
-**(a)** Với r < a, V = 2kλ ln(b/a). Trong khe, V(r) = 2kλ ln(b/r). Ngoài b, V = 0. **(b)** V_ab = 2kλ ln(b/a). **(c)**
+(a) Với r < a, V = 2kλ ln(b/a). Trong khe, V(r) = 2kλ ln(b/r). Ngoài b, V = 0. (b) V_ab = 2kλ ln(b/a). (c)
 
 $$
 \begin{aligned}
@@ -273,10 +273,10 @@ E_r&=-dV/dr=2k\lambda/r\\
 \end{aligned}
 $$
 
-**(d)** V_ab giữ nguyên. Mặt trong ống vẫn cần −λ để trường trong vật liệu bằng không, còn mặt ngoài có +λ khi ống trung hòa. Trường ngoài thay đổi nhưng hiệu giữa hai trụ không đổi.
+(d) V_ab giữ nguyên. Mặt trong ống vẫn cần −λ để trường trong vật liệu bằng không, còn mặt ngoài có +λ khi ống trung hòa. Trường ngoài thay đổi nhưng hiệu giữa hai trụ không đổi.
 :::
 
-::: exercise 23.62 •• — Bộ đếm Geiger
+::: exercise 23.62 ••: Bộ đếm Geiger
 Bức xạ ion hóa không khí dọc đường đi. Trong bộ đếm Geiger, dây mảnh cách điện với ống kim loại dài nằm trên trục ống. Dây ở thế cao hơn ống, tạo trường xuyên tâm ra. Bức xạ tạo một số electron tự do, chúng bị hút về dây và ion hóa thêm không khí, tạo xung dòng có thể phát thành tiếng “click”. Dây có bán kính 145 µm, ống có bán kính 1,80 cm. Cần điện áp bao nhiêu để trường ở cách trục 1,20 cm có độ lớn $2.00\times10^4$ V/m? Coi hai điện cực dài so với bán kính.
 :::
 
@@ -301,8 +301,8 @@ $$
 Dây phải cao thế hơn ống để electron chuyển động về dây, ngược chiều trường.
 :::
 
-::: exercise 23.63 • CP — Lệch chùm electron trong CRT
-Trong Hình P23.63, electron có tốc độ đầu $6.50\times10^6$ m/s đi giữa hai bản lệch hướng. Bản dài 6,0 cm, cách nhau 2,0 cm, màn cách mép ra 12,0 cm. Điện áp 22,0 V, bản dưới cao thế hơn. Tìm **(a)** lực, **(b)** gia tốc, **(c)** độ lệch khi ra bản, **(d)** góc vận tốc lúc ra, **(e)** độ lệch khi đến màn.
+::: exercise 23.63 • CP: Lệch chùm electron trong CRT
+Trong Hình P23.63, electron có tốc độ đầu $6.50\times10^6$ m/s đi giữa hai bản lệch hướng. Bản dài 6,0 cm, cách nhau 2,0 cm, màn cách mép ra 12,0 cm. Điện áp 22,0 V, bản dưới cao thế hơn. Tìm (a) lực, (b) gia tốc, (c) độ lệch khi ra bản, (d) góc vận tốc lúc ra, (e) độ lệch khi đến màn.
 :::
 
 ![Hình P23.63: Electron qua bản dài 6,0 cm rồi bay thêm 12,0 cm đến màn](img/young-23/hinh-p23-63.png)
@@ -338,7 +338,7 @@ Lực, gia tốc và độ lệch đều xuống. Độ lệch lúc ra nhỏ hơ
 :::
 
 ::: exercise 23.64 •• CP
-Hai bản lệch hướng của máy hiện sóng là bản kim loại vuông cạnh cỡ 3,0 cm, cách cỡ 5,0 mm, điện áp 25,0 V. Bỏ trường loe ở mép. **(a)** Tìm điện tích mỗi bản. **(b)** Tìm trường giữa bản. **(c)** Electron thả nghỉ từ bản âm có tốc độ bao nhiêu khi đến bản dương?
+Hai bản lệch hướng của máy hiện sóng là bản kim loại vuông cạnh cỡ 3,0 cm, cách cỡ 5,0 mm, điện áp 25,0 V. Bỏ trường loe ở mép. (a) Tìm điện tích mỗi bản. (b) Tìm trường giữa bản. (c) Electron thả nghỉ từ bản âm có tốc độ bao nhiêu khi đến bản dương?
 :::
 
 <!-- detailed-solution:23.64 -->
@@ -350,7 +350,7 @@ Hai bản lệch hướng của máy hiện sóng là bản kim loại vuông c�
 - E = |ΔV|/d, còn mật độ trên mỗi mặt đối diện là ±$\varepsilon_0$E.
 - Điện tích mặt bằng σA. Electron nhận động năng e|ΔV|.
 
-**(a)** Hai bản mang điện tích khoảng ±40 pC. **(b)** E ≈ $5.0\times10^3$ V/m. **(c)**
+(a) Hai bản mang điện tích khoảng ±40 pC. (b) E ≈ $5.0\times10^3$ V/m. (c)
 
 $$
 \begin{aligned}
@@ -362,8 +362,8 @@ $$
 Số chữ số được giới hạn bởi kích thước ước lượng của bản.
 :::
 
-::: exercise 23.65 •• — Thiết bị lọc bụi tĩnh điện
-Một dạng bộ lọc bụi dùng ống kim loại đứng rỗng và dây mảnh cách điện với ống trên trục. Dây ở thế thấp hơn ống, tạo trường hướng vào. Khói đi từ dưới lên, tro bụi nhận electron trong vùng khí ion hóa gần dây rồi bị lực điện đẩy ra thành ống. Bán kính dây 90,0 µm, ống 14,0 cm, điện áp 50,0 kV. Coi điện cực dài so với bán kính. **(a)** Tìm trường ở giữa dây và thành. **(b)** Hạt tro 30,0 µg phải mang độ lớn điện tích bao nhiêu để lực điện ở đó bằng 10 lần trọng lượng?
+::: exercise 23.65 ••: Thiết bị lọc bụi tĩnh điện
+Một dạng bộ lọc bụi dùng ống kim loại đứng rỗng và dây mảnh cách điện với ống trên trục. Dây ở thế thấp hơn ống, tạo trường hướng vào. Khói đi từ dưới lên, tro bụi nhận electron trong vùng khí ion hóa gần dây rồi bị lực điện đẩy ra thành ống. Bán kính dây 90,0 µm, ống 14,0 cm, điện áp 50,0 kV. Coi điện cực dài so với bán kính. (a) Tìm trường ở giữa dây và thành. (b) Hạt tro 30,0 µg phải mang độ lớn điện tích bao nhiêu để lực điện ở đó bằng 10 lần trọng lượng?
 :::
 
 ![Hình P23.65: Dây thấp thế và thành ống thu bụi mang điện âm](img/young-23/hinh-p23-65.png)
@@ -377,13 +377,13 @@ Một dạng bộ lọc bụi dùng ống kim loại đứng rỗng và dây m�
 - Dùng trường của điện cực đồng trục, không chia điện áp cho toàn khoảng cách như trường đều.
 - Giải |q|E = 10mg. Hạt bụi âm chịu lực ra, ngược trường vào.
 
-**(a)** E = 97,1 kV/m. **(b)** Đổi m = 30,0 µg = $3.00\times10^{-8}$ kg, được |q| = 30,3 pC. Điện tích thực của hạt thu electron là âm.
+(a) E = 97,1 kV/m. (b) Đổi m = 30,0 µg = $3.00\times10^{-8}$ kg, được |q| = 30,3 pC. Điện tích thực của hạt thu electron là âm.
 :::
 
 ### Điện thế của các nguồn liên tục
 
 ::: exercise 23.66 •• CALC
-Đĩa bán kính R có mật độ mặt đều σ. **(a)** Chia thành vòng đồng tâm để tính V tại điểm trên trục cách tâm x ≥ 0, chọn mốc vô hạn. **(b)** Lấy −dV/dx và chứng tỏ trùng trường đĩa ở Ví dụ 21.11.
+Đĩa bán kính R có mật độ mặt đều σ. (a) Chia thành vòng đồng tâm để tính V tại điểm trên trục cách tâm x ≥ 0, chọn mốc vô hạn. (b) Lấy −dV/dx và chứng tỏ trùng trường đĩa ở Ví dụ 21.11.
 :::
 
 <!-- detailed-solution:23.66 -->
@@ -409,7 +409,7 @@ $$
 Biểu thức trường dùng ở phía x > 0 và đúng với Ví dụ 21.11. Điện thế giảm về không ở rất xa, phù hợp mốc hữu hạn của đĩa hữu hạn.
 :::
 
-::: exercise 23.67 ••• CALC — Năng lượng lắp ráp cầu tích điện
+::: exercise 23.67 ••• CALC: Năng lượng lắp ráp cầu tích điện
 Cầu đặc R có tổng Q đều trong thể tích. Tìm năng lượng để lắp ráp bằng cách đưa các điện tích nhỏ từ rất xa. Gợi ý: Sau khi đã có q trong cầu bán kính r, xét công thêm một lớp cầu mỏng dr mang dq, rồi tích phân toàn cầu.
 :::
 
@@ -475,7 +475,7 @@ $$
 :::
 
 ::: exercise 23.70 •
-**(a)** Giọt mưa cầu R = 0,650 mm mang q = −3,60 pC đều trong thể tích. Tìm thế mặt, mốc vô hạn. **(b)** Hai giọt giống nhau nhập thành một giọt cầu lớn. Tìm bán kính và thế mặt của giọt mới, điện tích vẫn đều theo thể tích.
+(a) Giọt mưa cầu R = 0,650 mm mang q = −3,60 pC đều trong thể tích. Tìm thế mặt, mốc vô hạn. (b) Hai giọt giống nhau nhập thành một giọt cầu lớn. Tìm bán kính và thế mặt của giọt mới, điện tích vẫn đều theo thể tích.
 :::
 
 <!-- detailed-solution:23.70 -->
@@ -487,7 +487,7 @@ $$
 - Thế ngoài phân bố cầu đối xứng ở mặt là kq/R.
 - Thể tích gấp đôi cho bán kính tăng theo căn bậc ba, không tăng gấp đôi.
 
-**(a)** V = −49,8 V. **(b)**
+(a) V = −49,8 V. (b)
 
 $$
 \begin{aligned}

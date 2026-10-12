@@ -80,7 +80,7 @@ $$
 
 Đơn vị F/m nhân A/d, có đơn vị m, cho F, nên (24.2) đúng thứ nguyên.
 
-### Ví dụ 24.1 — Kích thước của tụ 1 F
+### Ví dụ 24.1: Kích thước của tụ 1 F
 
 Một tụ phẳng chân không có C = 1,0 F, hai bản cách nhau 1,0 mm. Cần diện tích bản bao nhiêu?
 
@@ -113,9 +113,9 @@ Tụ của đèn flash máy ảnh thường có điện dung cỡ vài trăm mic
 
 ![Hình 24.4: Các tụ linh kiện có nhãn 2200 µF, 1000 µF và 470 µF](../img/young-24/hinh-24-4.png)
 
-### Ví dụ 24.2 — Điện dung, điện tích và điện trường
+### Ví dụ 24.2: Điện dung, điện tích và điện trường
 
-Tụ phẳng chân không có hai bản cách 5,00 mm, diện tích mỗi bản 2,00 m², được đặt hiệu điện thế 10,0 kV. Tìm **(a)** điện dung, **(b)** điện tích mỗi bản, **(c)** trường trong khe.
+Tụ phẳng chân không có hai bản cách 5,00 mm, diện tích mỗi bản 2,00 m², được đặt hiệu điện thế 10,0 kV. Tìm (a) điện dung, (b) điện tích mỗi bản, (c) trường trong khe.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Đổi khe sang mét và điện áp sang volt. Tìm C theo hình học, Q theo định nghĩa và E theo mật độ mặt:
@@ -138,7 +138,7 @@ Bản cao thế có +35,4 µC, bản thấp thế có −35,4 µC. Tổng điệ
 **Đánh giá.** Trường đều còn có E = V_ab/d, cho $2.00\times10^6$ V/m, cùng kết quả vì N/C và V/m tương đương. Công thức theo điện áp và theo điện tích diễn tả cùng điện trường.
 :::
 
-### Ví dụ 24.3 — Tụ cầu
+### Ví dụ 24.3: Tụ cầu
 
 Hai vỏ cầu dẫn đồng tâm ngăn bởi chân không. Vỏ trong có điện tích +Q, bán kính ngoài rₐ. Vỏ ngoài có −Q, bán kính trong rᵦ > rₐ. Tìm điện dung.
 
@@ -157,12 +157,12 @@ $$
 
 Nếu rₐ = 9,5 cm và rᵦ = 10,5 cm, điện dung xấp xỉ $1.1\times10^{-10}$ F, tức 110 pF.
 
-**Đánh giá.** Đặt d = rᵦ − rₐ. Diện tích $A_g=4\pi r_ar_b$ là trung bình nhân của hai diện tích mặt cầu $4\pi r_a^2$ và $4\pi r_b^2$. Công thức điện dung trở thành C = ε₀A_g/d. Khi khe nhỏ hơn nhiều hai bán kính, hai mặt gần như phẳng trên một miền nhỏ và kết quả gần điện dung tụ phẳng cùng diện tích, cùng khe.
+**Đánh giá.** Đặt d = rᵦ − rₐ. Diện tích $A_g=4\pi r_ar_b$ là trung bình nhân của hai diện tích mặt cầu $4\pi r_a^2$ và $4\pi r_b^2$. Công thức điện dung trở thành C = $\varepsilon_0$A_g/d. Khi khe nhỏ hơn nhiều hai bán kính, hai mặt gần như phẳng trên một miền nhỏ và kết quả gần điện dung tụ phẳng cùng diện tích, cùng khe.
 
 Muốn tìm điện dung một cấu hình hai vật dẫn, tìm hiệu điện thế ứng với +Q,−Q trước, rồi lấy Q chia hiệu điện thế ấy.
 :::
 
-### Ví dụ 24.4 — Tụ trụ
+### Ví dụ 24.4: Tụ trụ
 
 Hai vật dẫn trụ dài đồng trục ngăn bởi chân không. Trụ trong có bán kính ngoài rₐ và mật độ dài +λ. Trụ ngoài có bán kính trong rᵦ và mật độ dài −λ. Tìm điện dung trên một đơn vị chiều dài, bỏ hiệu ứng hai đầu.
 
@@ -193,9 +193,9 @@ Cáp đồng trục có cấu trúc này nhưng thường chứa chất cách đ
 :::
 
 ::: exercise Câu hỏi ôn lại mục 24.1
-Một tụ có chân không giữa hai vật dẫn. Tăng độ lớn điện tích mỗi vật gấp đôi, giữ nguyên hình học, thì điện dung **(i)** tăng, **(ii)** giảm, **(iii)** không đổi, hay **(iv)** còn tùy hình dạng, kích thước vật dẫn?
+Một tụ có chân không giữa hai vật dẫn. Tăng độ lớn điện tích mỗi vật gấp đôi, giữ nguyên hình học, thì điện dung (i) tăng, (ii) giảm, (iii) không đổi, hay (iv) còn tùy hình dạng, kích thước vật dẫn?
 :::
 
 ::: solution Giải thích
-Chọn **(iii)**. Tăng Q gấp đôi làm V_ab gấp đôi, nên tỷ số Q/V_ab giữ nguyên. Kết luận đúng với mọi hình học cố định của tụ chân không trong mô hình đang xét.
+Chọn (iii). Tăng Q gấp đôi làm V_ab gấp đôi, nên tỷ số Q/V_ab giữ nguyên. Kết luận đúng với mọi hình học cố định của tụ chân không trong mô hình đang xét.
 :::

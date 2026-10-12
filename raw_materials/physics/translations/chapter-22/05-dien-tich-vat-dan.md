@@ -34,7 +34,7 @@ $$
 
 Hai điện tích mặt cộng lại đúng bằng $q_C$. Các hệ thức cho **tổng** điện tích mỗi mặt, không nói rằng mật độ phân bố đều trên mặt có hình dạng bất kỳ.
 
-### Ứng dụng — Điện tích trong tế bào thần kinh
+### Ứng dụng: Điện tích trong tế bào thần kinh
 
 Trong tế bào thần kinh có ion potassium $\mathrm{K^+}$ và các phân tử protein âm $\mathrm{Pr^-}$. Ion potassium có thể đi ra qua màng, trong khi phân tử protein lớn hơn nhiều không đi qua được. Vì thế phần trong tế bào có điện tích tổng âm, được cân bằng bởi điện tích dương của chất lỏng bên ngoài.
 
@@ -42,7 +42,7 @@ Chất lỏng bên trong dẫn điện tốt. Trong mô hình tĩnh điện này
 
 ![Tế bào thần kinh với điện tích dư ở ranh giới giữa chất lỏng dẫn và màng cách điện](../img/young-22/ung-dung-neuron.png)
 
-### Ví dụ 22.11 — Vật dẫn có hốc
+### Ví dụ 22.11: Vật dẫn có hốc
 
 Vật dẫn có hốc mang tổng điện tích +7 nC. Trong hốc có nguồn điểm −5 nC được cách điện với vật dẫn. Tìm điện tích trên mặt trong và mặt ngoài.
 
@@ -111,15 +111,15 @@ Nếu σ dương, trường hướng ra khỏi vật dẫn. Nếu σ âm, trư�
 
 Với cầu dẫn bán kính R mang q đều trên mặt, $\sigma=q/(4\pi R^2)$ và $E(R^+)=kq/R^2$, nên cũng có $E_\perp=\sigma/\varepsilon_0$. Hai bản dẫn vô hạn trái dấu của Ví dụ 22.8 có độ lớn trường giữa bản bằng σ/$\varepsilon_0$ ở mọi khoảng cách trong vùng giữa, nhờ đối xứng phẳng.
 
-### Ứng dụng — Phương của tia sét
+### Ứng dụng: Phương của tia sét
 
 Bề mặt Trái Đất là vật dẫn tốt, với điện tích tổng âm trong mô hình đang xét. Điện trường khí quyển gần mặt đất thường hướng xuống, vuông góc bề mặt. Điện tích dương trong khí quyển cân bằng phần điện tích âm này. Trong giông, trường có thể đủ mạnh gây chuyển động điện tích, kích thích và ion hóa không khí, tạo vệt sáng của tia sét. Mô hình giải thích xu hướng theo phương thẳng đứng của phóng điện gần mặt đất.
 
 ![Tia sét trong khí quyển gần bề mặt Trái Đất](../img/young-22/ung-dung-set.png)
 
-### Ví dụ 22.12 — Điện trường của Trái Đất
+### Ví dụ 22.12: Điện trường của Trái Đất
 
-Điện trường trung bình gần bề mặt Trái Đất khoảng 150 N/C, hướng về tâm. **(a)** Tìm mật độ điện tích mặt tương ứng. **(b)** Tìm điện tích tổng trên mặt, dùng bán kính $R_E=6.38\times10^6$ m.
+Điện trường trung bình gần bề mặt Trái Đất khoảng 150 N/C, hướng về tâm. (a) Tìm mật độ điện tích mặt tương ứng. (b) Tìm điện tích tổng trên mặt, dùng bán kính $R_E=6.38\times10^6$ m.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Trường hướng vào nên thành phần pháp tuyến ra ngoài âm. Dùng (22.10) tìm mật độ rồi nhân diện tích mặt cầu.
@@ -148,4 +148,4 @@ Vỏ cầu dẫn ban đầu trung hòa, trong hốc cầu đồng tâm có ngu�
 Không. Ban đầu mặt trong có −q và mặt ngoài có +q, nên có trường ngoài. Khi nối đất, electron từ đất đi vào trung hòa +q ở mặt ngoài. Mặt trong vẫn có −q để trường trong vật liệu dẫn bằng không, còn mặt ngoài hết điện tích và trường ngoài bằng không trong cấu hình cầu này.
 :::
 
-Trở lại câu hỏi mở đầu, chọn **(iii)**. Khi đứng trong hốc kín không có nguồn riêng, đứa trẻ không nhận điện tích dư từ mặt trong và tóc không bị đẩy dựng lên như khi chạm mặt ngoài đã nhiễm điện.
+Trở lại câu hỏi mở đầu, chọn (iii). Khi đứng trong hốc kín không có nguồn riêng, đứa trẻ không nhận điện tích dư từ mặt trong và tóc không bị đẩy dựng lên như khi chạm mặt ngoài đã nhiễm điện.

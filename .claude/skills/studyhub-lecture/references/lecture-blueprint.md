@@ -12,9 +12,9 @@ Bài tham chiếu tốt trong repo: `docs/giai-thuat-du-lieu/bai-giang/bai-03-pa
 | `## 1.` Vấn đề cụ thể | Đặt một trường hợp nhỏ có số/đối tượng thật; cho người học thử dự đoán hoặc thử cách ngây thơ | Cách ngây thơ thất bại ở chỗ chỉ ra được, tạo nhu cầu cho khái niệm mới |
 | `## 2…n.` Các cụm khái niệm | Mỗi cụm: Phát biểu chính xác → cơ chế/lý do → ví dụ có lời giải → ranh giới áp dụng → một câu tự kiểm | Không còn bước nhảy mà người học mục tiêu phải tự đoán |
 | Thực hành (khi môn có thao tác) | Code chạy được, truy vết trạng thái, hoặc quy trình tính tay đầy đủ | Người học tự làm lại được trên đầu vào khác |
-| `## Bài tập tự luyện` | 3–6 bài tăng dần: Nhận diện → tính → giải thích → chuyển giao; mỗi bài `::: exercise` + `::: hint` (tùy) + `::: solution` | Lời giải có lý do từng bước, không chỉ đáp số; ghi nguồn bài nếu lấy từ giáo trình |
+| `## Bài tập tự luyện` | 3–6 bài tăng dần: Nhận diện → tính → giải thích → chuyển giao; mỗi bài `::: exercise` + `::: hint` (tùy) + `::: solution` | Lời giải có lý do từng bước, giải thích bản chất tường minh, không chỉ đưa ra đáp số đơn thuần |
 | `## Tóm tắt` | Trả lời câu hỏi mở đầu; liệt kê điều đã làm được, kèm điều kiện | Mỗi dòng kiểm tra được, không phải khẩu hiệu |
-| `## Nguồn và đọc thêm` | Tài liệu thật, đến chương/mục/trang; tách nguồn của bài với đọc thêm | Người học mở được và tìm đúng chỗ |
+| `## Tài liệu tham khảo` | Danh mục tài liệu tham khảo chuẩn mực theo quy chuẩn học thuật | Người học tra cứu và mở rộng |
 
 Số mục H2 theo nội dung, không theo mẫu. Đánh số H2 (`## 1.`) khi bài dài để dễ tham chiếu; `(dùng mục lục của VitePress)` cho bài trên khoảng 300 dòng.
 
@@ -66,12 +66,12 @@ Chọn **một** đối tượng nhỏ, tính tay được, dùng lại qua các
 
 Mọi con số trong ví dụ, bài tập và lời giải phải được tính lại bằng code (Python `fractions.Fraction` cho phân số, NumPy cho ma trận) trước khi ghi. Không đặt số trông như thống kê thật làm người học tưởng là chứng cứ; không ghi các chú thích thừa như "dữ liệu giả định", "thông tin giả định" vào bài.
 
-## 6. Nguồn và ranh giới “sách nói / bài giảng thêm”
+## 6. Chủ quyền bài giảng và tính xác thực học thuật
 
-- Nội dung lấy từ giáo trình/slide của môn: Ghi nguồn ở cuối bài, và ghi tại chỗ khi dùng hình, bài tập hay số liệu cụ thể (“Bài 1 — MMDS 5.1.1, tr. 187”).
-- Ví dụ, ẩn dụ, ứng dụng AI do người soạn thêm: Ghi nhận được bằng lời (“Ví dụ thêm:”, “Một cách hình dung:”). Không gán cho tác giả giáo trình.
-- Không thêm sự kiện lịch sử, năm tháng, tên nhà khoa học, số liệu thực tế hoặc câu trích nếu chưa kiểm chứng được nguồn. Nếu cần, tra cứu và dẫn link; nếu không kiểm được, bỏ.
-- Không chép nguyên đoạn dài từ giáo trình; diễn đạt lại và giải thích.
+- Bài giảng của StudyHub là giáo trình độc lập, hoàn chỉnh của chính người giảng viên. Tuyệt đối không để bài giảng mang tính chất sổ tay trích dẫn hay đối chiếu sách thụ động. Nghiêm cấm các câu và cụm từ: “Nội dung lấy từ giáo trình…”, “Lấy từ slide của môn…”, “Bài tập lấy từ sách…”, “Ví dụ do người soạn thêm, không gán cho tác giả giáo trình…”, “Ảnh lấy từ sách”, “Hình trong sách”, “Dữ liệu này từ…”, “Theo sách…”, “Nguyên tác…”, “Bản dịch của…”.
+- Mọi tư liệu, hình ảnh, ví dụ, bài tập phải trở thành một phần tự nhiên của bài giảng (“Hình 1.1: …”, “Xét bài toán thực tế sau: …”, “Quan sát đồ thị chuyển trạng thái…”). Mọi bài giảng là một thực thể tri thức độc lập, hoàn chỉnh, tự chịu trách nhiệm về mặt học thuật và sư phạm.
+- Không thêm sự kiện lịch sử, năm tháng, tên nhà khoa học, số liệu thực tế hoặc câu trích nếu chưa kiểm chứng được nguồn. Nếu cần, tra cứu và kiểm chứng nguồn gốc chuẩn xác; nếu không kiểm chứng được, kiên quyết lược bỏ.
+- Mục cuối bài luôn đặt tên là `## Tài liệu tham khảo` theo đúng quy chuẩn học thuật chuẩn mực, không phân bua “do người soạn bổ sung”.
 
 ## 7. Độ dài và mật độ
 
@@ -79,7 +79,7 @@ Mọi con số trong ví dụ, bài tập và lời giải phải được tính
 
 ## 8. Sau Notes: Chiếu sang Slides và Kiến thức nền
 
-- **Slides catalog** (xem repo-format.md mục 4): Một slide cho mỗi cụm chính, cùng thứ tự; giữ điều kiện cạnh kết luận; công thức Unicode; ví dụ số lấy từ Notes. Đọc từng bullet và tìm câu tương ứng trong Notes — không có thì sửa slide hoặc sửa Notes.
+- **Slides catalog** (xem repo-format.md mục 4): Một slide cho mỗi cụm chính, cùng thứ tự; giữ điều kiện cạnh kết luận; công thức Unicode; ví dụ số lấy từ Notes. Đọc từng bullet và tìm câu tương ứng trong Notes. Nếu không có thì sửa slide hoặc sửa Notes.
 - **Kiến thức nền**: Liệt kê khái niệm Notes dùng mà không dạy lại. Rà các thuật ngữ phụ người soạn vừa thêm (affine, chuẩn, ma trận thưa…): Hoặc dạy trong Notes, hoặc đưa vào prerequisites, hoặc bỏ.
 
 ## 9. Khung Markdown khởi đầu
@@ -95,7 +95,7 @@ lessonStatus: draft
 description: "<Phạm vi bài trong một câu.>"
 ---
 
-<Đoạn mở: câu hỏi của bài, nối với bài trước, sau bài học làm được gì, cần biết gì trước.>
+<Đoạn mở: Câu hỏi của bài, nối với bài trước, sau bài học làm được gì, cần biết gì trước.>
 
 (dùng mục lục của VitePress)
 
@@ -123,10 +123,10 @@ description: "<Phạm vi bài trong một câu.>"
 
 ## <n>. Bài tập tự luyện
 
-### Bài 1 — <nguồn nếu có>
+### Bài 1: <Tiêu đề bài tập>
 
 ::: exercise
-<Đề.>
+<Đề bài.>
 :::
 
 ::: hint
@@ -134,16 +134,16 @@ description: "<Phạm vi bài trong một câu.>"
 :::
 
 ::: solution
-<Lời giải đủ lý do.>
+<Lời giải đủ lý do và tính toán chính xác.>
 :::
 
 ## <n+1>. Tóm tắt
 
 <Trả lời câu hỏi mở đầu; điều làm được, kèm điều kiện.>
 
-## <n+2>. Nguồn và đọc thêm
+## <n+2>. Tài liệu tham khảo
 
-- <Tác giả, *Tên sách*, ấn bản — chương/mục/trang.>
+- <Tác giả, *Tên sách*, Nhà xuất bản.>
 ```
 
 Đổi `lessonStatus` sang `ready` chỉ khi các phần đã đầy đủ và catalog đã có slide.

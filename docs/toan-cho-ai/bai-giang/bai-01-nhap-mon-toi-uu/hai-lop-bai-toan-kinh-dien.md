@@ -225,35 +225,60 @@ Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4
 :::
 
 ::: exercise 2. Cùng dữ liệu, tiêu chí khác
-Với bốn số liệu $1, 3, 4, 12$, tìm mọi hằng số $c$ cực tiểu hóa biểu thức $|c - 1| + |c - 3| + |c - 4| + |c - 12|$ (chuẩn $\ell_1$), và tìm hằng số cực tiểu hóa $\max_i |c - b_i|$ (chuẩn $\ell_\infty$). So sánh với kết quả bình phương tối thiểu ở Bài 1.
+Với bốn số liệu $1, 3, 4, 12$, xét bài toán tìm hằng số $c$ theo hai tiêu chuẩn khác nhau:
+1. Cực tiểu hóa tổng sai số tuyệt đối theo chuẩn $\ell_1$:
+   $$
+   \begin{aligned}
+   f(c) &= \sum_{i=1}^4 |c - b_i| \\
+   &= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+   \end{aligned}
+   $$
+2. Cực tiểu hóa sai số lớn nhất theo chuẩn $\ell_\infty$: $\max_{i=1,\dots,4} |c - b_i|$.
+
+Hãy tìm nghiệm tối ưu trong từng trường hợp và so sánh với nghiệm bình phương tối thiểu ở Bài 1.
 :::
 
 ::: hint
-Với chuẩn $\ell_1$, ghép các cặp đối xứng từ ngoài vào trong và áp dụng bất đẳng thức tam giác $|x| + |y| \ge |x - y|$. Với chuẩn $\ell_\infty$, nhận xét rằng sai số lớn nhất chỉ phụ thuộc vào hai điểm mút cực trị $b_{\min}$ và $b_{\max}$.
+Với chuẩn $\ell_1$, ghép các cặp đối xứng từ ngoài vào trong và áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$. Với chuẩn $\ell_\infty$, nhận xét rằng sai số lớn nhất chỉ phụ thuộc vào hai điểm mút cực trị $b_{\min} = 1$ và $b_{\max} = 12$.
 :::
 
 ::: solution
-### 1. Tìm mọi hằng số $c$ cực tiểu hóa $|c - 1| + |c - 3| + |c - 4| + |c - 12|$ (Chuẩn $\ell_1$)
+### 1. Tìm hằng số $c$ theo chuẩn $\ell_1$ (Tổng sai số tuyệt đối)
 
-Xét hàm số:
+Hàm mục tiêu cần cực tiểu hóa là:
 
 $$
-f(c) = |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+\begin{aligned}
+f(c) &= |c - 1| + |c - 3| \\
+&\quad + |c - 4| + |c - 12|.
+\end{aligned}
 $$
 
-Áp dụng bất đẳng thức $|x| + |y| \ge |x - y|$ bằng cách ghép các cặp đối xứng từ ngoài vào trong:
+Ta áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$ bằng cách ghép các cặp số đối xứng từ ngoài vào trong:
 
-- **Với cặp ngoài cùng**: Đổi dấu số hạng thứ hai và áp dụng bất đẳng thức tam giác:
-  $$
-  |c - 1| + |c - 12| = |c - 1| + |12 - c| \ge |(c - 1) + (12 - c)| = 11.
-  $$
-  Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0 \iff 1 \le c \le 12$.
+**Xét cặp ngoài cùng**: Đổi dấu số hạng thứ hai và áp dụng bất đẳng thức tam giác:
 
-- **Với cặp bên trong**: Thực hiện tương tự cho hai số hạng giữa:
-  $$
-  |c - 3| + |c - 4| = |c - 3| + |4 - c| \ge |(c - 3) + (4 - c)| = 1.
-  $$
-  Dấu bằng xảy ra khi $(c - 3)(4 - c) \ge 0 \iff 3 \le c \le 4$.
+$$
+\begin{aligned}
+|c - 1| + |c - 12| &= |c - 1| + |12 - c| \\
+&\ge |(c - 1) + (12 - c)| \\
+&= 11.
+\end{aligned}
+$$
+
+Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
+
+**Xét cặp bên trong**: Thực hiện tương tự cho hai số hạng ở giữa:
+
+$$
+\begin{aligned}
+|c - 3| + |c - 4| &= |c - 3| + |4 - c| \\
+&\ge |(c - 3) + (4 - c)| \\
+&= 1.
+\end{aligned}
+$$
+
+Dấu bằng xảy ra khi $(c - 3)(4 - c) \ge 0$, tức là $3 \le c \le 4$.
 
 Cộng hai bất đẳng thức trên theo từng vế:
 
@@ -261,44 +286,52 @@ $$
 f(c) \ge 11 + 1 = 12.
 $$
 
-Dấu bằng xảy ra đồng thời khi và chỉ khi:
+Dấu bằng đạt được đồng thời khi và chỉ khi:
 
 $$
 \begin{cases}
 1 \le c \le 12, \\
-3 \le c \le 4,
+3 \le c \le 4.
 \end{cases}
-\iff 3 \le c \le 4.
 $$
 
-**Kết luận**: Mọi giá trị $c \in [3, 4]$ đều làm cực tiểu hóa biểu thức (với giá trị cực tiểu đúng bằng $12$). Đây chính là khoảng **trung vị (median)** của tập dữ liệu.
+Giao của hai điều kiện trên cho ta tập nghiệm tối ưu là đoạn $3 \le c \le 4$.
+
+**Kết luận**: Mọi giá trị $c \in [3, 4]$ đều làm cực tiểu hóa hàm mục tiêu, với giá trị cực tiểu đúng bằng $12$. Đoạn nghiệm tối ưu này chính là khoảng **trung vị (median)** của tập dữ liệu $\{1, 3, 4, 12\}$.
 
 ---
 
-### 2. Tìm hằng số $c$ cực tiểu hóa $\max_i |c - b_i|$ (Chuẩn $\ell_\infty$)
+### 2. Tìm hằng số $c$ theo chuẩn $\ell_\infty$ (Sai số cực đại)
 
-Với tập số liệu $\{1, 3, 4, 12\}$, giá trị nhỏ nhất là $b_{\min} = 1$ và lớn nhất là $b_{\max} = 12$. Do đó:
+Với tập số liệu $\{1, 3, 4, 12\}$, giá trị nhỏ nhất là $b_{\min} = 1$ và lớn nhất là $b_{\max} = 12$. Sai số lớn nhất của $c$ đối với cả bốn điểm luôn do hai điểm mút này quyết định:
 
 $$
-\max_i |c - b_i| = \max(|c - 1|, |c - 12|).
+\max_{i=1,\dots,4} |c - b_i| = \max(|c - 1|, |c - 12|).
 $$
 
-Áp dụng tính chất $\max(x, y) \ge \frac{x + y}{2}$ với mọi $x, y \ge 0$:
+Áp dụng tính chất $\max(u, v) \ge \frac{u + v}{2}$ với mọi $u, v \ge 0$:
 
 $$
 \begin{aligned}
 \max(|c - 1|, |12 - c|) &\ge \frac{|c - 1| + |12 - c|}{2} \\
-&\ge \frac{|(c - 1) + (12 - c)|}{2} = \frac{11}{2} = 5.5.
+&\ge \frac{|(c - 1) + (12 - c)|}{2} \\
+&= \frac{11}{2} = 5.5.
 \end{aligned}
 $$
 
 Dấu bằng đạt được khi hai khoảng cách bằng nhau:
 
 $$
-|c - 1| = |12 - c| \iff c - 1 = 12 - c \iff 2c = 13 \iff c = 6.5.
+|c - 1| = |12 - c|.
 $$
 
-**Kết luận**: Hằng số cực tiểu hóa duy nhất là $c = 6.5$ (điểm chính giữa của hai đầu mút, hay **midrange** $\frac{1 + 12}{2}$), với giá trị cực tiểu là $5.5$.
+Vì điểm cực tiểu hiển nhiên nằm giữa hai đầu mút $1 \le c \le 12$, phương trình trên tương đương với:
+
+$$
+c - 1 = 12 - c \iff 2c = 13 \iff c = 6.5.
+$$
+
+**Kết luận**: Hằng số cực tiểu hóa duy nhất là $c = 6.5$ (điểm chính giữa của hai đầu mút, hay **midrange** $\frac{1 + 12}{2}$), với giá trị sai số cực đại nhỏ nhất là $5.5$.
 
 ---
 
@@ -310,9 +343,9 @@ $$
 c_{\ell_2} = \bar{b} = \frac{1 + 3 + 4 + 12}{4} = 5.
 $$
 
-**So sánh tổng quan theo 3 chuẩn**:
+**So sánh tổng quan theo ba chuẩn**:
 - **Chuẩn $\ell_1$ (Tổng sai số tuyệt đối)**: Nghiệm tối ưu là cả đoạn trung vị $c \in [3, 4]$. Nghiệm không duy nhất do số lượng mẫu là chẵn ($N = 4$). Tiêu chí này có tính bền vững cao (robust), hoàn toàn không bị ảnh hưởng bởi giá trị ngoại lai $12$.
-- **Chuẩn $\ell_2$ (Tổng bình phương sai số - Bài 1)**: Nghiệm tối ưu duy nhất là giá trị trung bình $c = 5$. Phép bình phương phạt rất nặng sai số lớn, vì vậy nghiệm bị kéo mạnh về phía điểm ngoại lai $12$.
+- **Chuẩn $\ell_2$ (Tổng bình phương sai số - Bài 1)**: Nghiệm tối ưu duy nhất là giá trị trung bình $c = 5$. Phép bình phương phạt rất nặng sai số lớn, vì vậy nghiệm bị kéo lệch đáng kể về phía điểm ngoại lai $12$.
 - **Chuẩn $\ell_\infty$ (Sai số cực đại nhỏ nhất)**: Nghiệm tối ưu duy nhất là trung điểm của hai đầu mút $c = 6.5$. Tiêu chí này chỉ quan tâm tới tình huống xấu nhất (worst-case), do đó chịu sự chi phối hoàn toàn bởi giá trị cực biên lớn nhất $12$.
 :::
 

@@ -139,7 +139,7 @@ files=sorted((ROOT/'raw_materials/physics/translations/chapter-21').glob('*.md')
 text='\n'.join(p.read_text(encoding='utf8') for p in files)
 for n in range(1,102):assert re.search(rf'^::: exercise 21\.{n}(?: |\n)',text,re.M),n
 for n in range(1,24):assert re.search(rf'^::: exercise Q21\.{n}(?: |\n)',text,re.M),n
-for n in range(1,15):assert f'### Ví dụ 21.{n} —' in text,n
+for n in range(1,15):assert f'### Ví dụ 21.{n}:' in text,n
 for n in range(1,19):assert rf'\tag{{21.{n}}}' in text,n
 for section in [4,10,14]:
     for n in range(1,5):assert f'::: exercise VP21.{section}.{n}\n' in text

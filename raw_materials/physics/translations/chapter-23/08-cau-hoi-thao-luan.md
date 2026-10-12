@@ -124,7 +124,7 @@ V không buộc bằng không, nhưng là cùng một hằng số trong vùng li
 :::
 
 ::: exercise Q23.8
-Chọn V = 0 ở vô hạn. **(a)** V = 0 tại một điểm có buộc E = 0 không? **(b)** E = 0 tại một điểm có buộc V = 0 không? Chứng minh bằng ví dụ đơn giản.
+Chọn V = 0 ở vô hạn. (a) V = 0 tại một điểm có buộc E = 0 không? (b) E = 0 tại một điểm có buộc V = 0 không? Chứng minh bằng ví dụ đơn giản.
 :::
 
 <!-- detailed-solution:Q23.8 -->
@@ -136,7 +136,7 @@ Chọn V = 0 ở vô hạn. **(a)** V = 0 tại một điểm có buộc E = 0 k
 - Lưỡng cực cho điện thế triệt tiêu mà trường không triệt tiêu tại trung điểm.
 - Hai nguồn dương bằng nhau cho trường triệt tiêu nhưng thế cộng tại trung điểm.
 
-**(a)** Không. Trung điểm lưỡng cực có V = 0 nhưng trường khác không hướng từ nguồn dương sang âm. **(b)** Không. Trung điểm hai nguồn +q cách d có E = 0 nhưng V = 4kq/d > 0. Hai phản ví dụ vẫn dùng cùng mốc vô hạn.
+(a) Không. Trung điểm lưỡng cực có V = 0 nhưng trường khác không hướng từ nguồn dương sang âm. (b) Không. Trung điểm hai nguồn +q cách d có E = 0 nhưng V = 4kq/d > 0. Hai phản ví dụ vẫn dùng cùng mốc vô hạn.
 :::
 
 ::: exercise Q23.9
@@ -212,6 +212,8 @@ Không. Những hàm V có thể cùng giá trị tại một điểm nhưng kh�
 ::: exercise Q23.13
 Hai mặt đẳng thế khác nhau không cắt nhau vì trường sẽ có hướng mơ hồ tại giao điểm. Tuy nhiên các mặt cắt trong Hình 23.23c có vẻ cắt ở tâm. Vì sao không có mâu thuẫn ở đó?
 :::
+
+![Hình 23.23: Đường sức đỏ vuông góc các mặt cắt đẳng thế xanh](img/young-23/hinh-23-23.png)
 
 <!-- detailed-solution:Q23.13 -->
 ::: solution Chi tiết
@@ -300,6 +302,8 @@ Phù hợp. Trái Đất có thể mang điện tích tổng khác không nhưng
 Cầu dẫn đặt giữa hai bản song song tích điện như Hình 23.2. Trường trong cầu có phụ thuộc vị trí cầu giữa bản không? Điện thế trong cầu thì sao? Hai câu trả lời có phụ thuộc cầu có điện tích tổng khác không không?
 :::
 
+![Hình 23.2: Điện tích thử dương đi xuống trong trường đều giữa hai bản](img/young-23/hinh-23-2.png)
+
 <!-- detailed-solution:Q23.18 -->
 ::: solution Chi tiết
 **Tóm tắt đề bài:** Cầu đạt cân bằng tĩnh điện trong trường ngoài.
@@ -329,7 +333,7 @@ Vật dẫn có điện tích tổng Q và hốc trống. Điện thế có thay
 :::
 
 ::: exercise Q23.20
-Dây điện một chiều điện áp cao rơi lên ô tô, khiến toàn vỏ kim loại ở điện thế 10.000 V so với đất. Điều gì xảy ra với người **(a)** khi ngồi trong xe, **(b)** khi bước ra? Giải thích.
+Dây điện một chiều điện áp cao rơi lên ô tô, khiến toàn vỏ kim loại ở điện thế 10.000 V so với đất. Điều gì xảy ra với người (a) khi ngồi trong xe, (b) khi bước ra? Giải thích.
 :::
 
 <!-- detailed-solution:Q23.20 -->
@@ -341,7 +345,7 @@ Dây điện một chiều điện áp cao rơi lên ô tô, khiến toàn vỏ 
 - Lực điện trong mô hình phụ thuộc hiệu điện thế và trường, không chỉ một giá trị thế lớn.
 - Nối đồng thời những vùng có thế khác nhau tạo đường cho dòng điện qua cơ thể.
 
-**(a)** Trong mô hình vỏ kín, người không có hiệu điện thế lớn giữa các phần cơ thể và được che chắn khỏi trường của vỏ. **(b)** Nếu cơ thể nối vỏ xe với đất trong lúc ra, hiệu 10.000 V có thể tạo dòng lớn qua cơ thể, gây nguy hiểm nghiêm trọng. Hai tình huống khác nhau ở việc có hay không đường dẫn giữa xe và đất, không phải vì điện thế vỏ đổi khi người đứng lên.
+(a) Trong mô hình vỏ kín, người không có hiệu điện thế lớn giữa các phần cơ thể và được che chắn khỏi trường của vỏ. (b) Nếu cơ thể nối vỏ xe với đất trong lúc ra, hiệu 10.000 V có thể tạo dòng lớn qua cơ thể, gây nguy hiểm nghiêm trọng. Hai tình huống khác nhau ở việc có hay không đường dẫn giữa xe và đất, không phải vì điện thế vỏ đổi khi người đứng lên.
 :::
 
 ::: exercise Q23.21
@@ -363,6 +367,8 @@ Khi giông đến, thủy thủ đôi khi thấy ánh sáng xanh nhấp nháy �
 ::: exercise Q23.22
 Nguồn điểm dương đặt gần một mặt phẳng dẫn rất lớn. Một giảng viên nói trường của cấu hình giống trường khi bỏ mặt dẫn và đặt nguồn âm bằng độ lớn ở vị trí ảnh gương phía bên kia mặt phẳng. Phát biểu có đúng không? Vì sao? Gợi ý: Xét Hình 23.23b.
 :::
+
+![Hình 23.23: Đường sức đỏ vuông góc các mặt cắt đẳng thế xanh](img/young-23/hinh-23-23.png)
 
 <!-- detailed-solution:Q23.22 -->
 ::: solution Chi tiết

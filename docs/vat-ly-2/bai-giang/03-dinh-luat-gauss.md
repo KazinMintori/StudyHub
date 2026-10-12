@@ -37,7 +37,7 @@ Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chư�
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-22/12-dap-so.md-->
 
-## Tài liệu tham khảo phần luyện tập
+## Tài liệu tham khảo
 
 Young & Freedman, ấn bản 15, chương 22, trang 739–746 và phụ lục đáp số A-14–A-15.
 

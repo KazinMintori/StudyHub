@@ -1939,7 +1939,7 @@
           "page": 767
         }
       ],
-      "status": "content-complete",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "chapter-opening",
@@ -2046,9 +2046,7 @@
           "status": "authored-and-self-reviewed"
         }
       ],
-      "pendingSourceUnits": [
-        "direct-browser-render-review"
-      ],
+      "pendingSourceUnits": [],
       "completionReview": "raw_materials/physics/chapter-23-review.json"
     },
     {
@@ -2091,21 +2089,95 @@
           "page": 801
         }
       ],
-      "status": "pending",
-      "fragments": [],
+      "status": "in-progress",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-24/00-mo-dau.md",
+          "destination": "notes",
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.1",
+          "file": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+          "destination": "topic:tu-dien-dien-dung",
+          "printedPages": [
+            782,
+            786
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.2",
+          "file": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+          "destination": "topic:mac-tu-dien",
+          "printedPages": [
+            786,
+            789
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.3",
+          "file": "raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md",
+          "destination": "topic:nang-luong-tu-dien",
+          "printedPages": [
+            790,
+            793
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.4",
+          "file": "raw_materials/physics/translations/chapter-24/04-dien-moi.md",
+          "destination": "topic:dien-moi",
+          "printedPages": [
+            793,
+            799
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.5",
+          "file": "raw_materials/physics/translations/chapter-24/05-mo-hinh-phan-tu.md",
+          "destination": "topic:mo-hinh-phan-tu",
+          "printedPages": [
+            799,
+            800
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "24.6",
+          "file": "raw_materials/physics/translations/chapter-24/06-gauss-trong-dien-moi.md",
+          "destination": "topic:gauss-trong-dien-moi",
+          "printedPages": [
+            801,
+            802
+          ],
+          "status": "theory-authored-and-numerically-checked-awaiting-full-chapter-review"
+        },
+        {
+          "sourceUnit": "guided-practice-and-bridge",
+          "file": "raw_materials/physics/translations/chapter-24/08-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-checked-awaiting-full-exercise-tab-integration"
+        },
+        {
+          "sourceUnit": "discussion-questions",
+          "file": "raw_materials/physics/translations/chapter-24/09-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-checked-awaiting-full-exercise-tab-integration"
+        }
+      ],
       "pendingSourceUnits": [
-        "chapter-opening",
-        "24.1",
-        "24.2",
-        "24.3",
-        "24.4",
-        "24.5",
-        "24.6",
-        "all-original-figures-and-captions",
         "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
+        "all-end-of-chapter-exercises-and-problems",
+        "appendix-odd-answers",
+        "slides-and-cheatsheet",
+        "supporting-wiki-details",
+        "final-semantic-and-render-review",
+        "exercise-tab-integration"
       ]
     },
     {
@@ -3350,5 +3422,10 @@
         "all-end-of-chapter-exercises-and-problems"
       ]
     }
+  ],
+  "permittedAdditions": [
+    "experimental-simulations",
+    "illustrations-authorized-in-follow-up",
+    "detailed-end-exercise-solutions-authorized-in-follow-up"
   ]
 }

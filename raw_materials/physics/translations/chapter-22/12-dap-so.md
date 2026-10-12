@@ -19,7 +19,7 @@
 | VP22.12.3 | 0, $2.7\times10^{-5}$ C, $2.7\times10^{-6}$ C/m² |
 | VP22.12.4 | −4,00 nC, −2,00 nC, $2.50\times10^3$ N/C, 165 N/C |
 
-Câu hỏi mở đầu chọn **(iii)**. Với bài tổng hợp hydrogen, đặt u = r/a₀:
+Câu hỏi mở đầu chọn (iii). Với bài tổng hợp hydrogen, đặt u = r/a₀:
 
 $$
 \begin{aligned}

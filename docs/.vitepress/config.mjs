@@ -8,6 +8,8 @@ import { readFileSync, mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
+import { staticMathPlugin } from '../../scripts/static-math-plugin.mjs'
+import { physicsImageLabels } from './physics-image-labels.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
@@ -26,6 +28,7 @@ export default withMermaid(defineConfig({
     math:true,
     lineNumbers:false,
     config:md=>{
+      md.use(staticMathPlugin)
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = state.src
           .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
@@ -54,7 +57,10 @@ export default withMermaid(defineConfig({
           state.tokens[i+1].tag = 'figure'
           if (caption) {
             const token = new state.Token('html_inline', '', 0)
-            token.content = `<figcaption>${md.utils.escapeHtml(caption)}</figcaption>`
+            const key=image.attrGet('src')?.match(/(young-\d+\/[^/.]+)\.(?:png|svg)$/)?.[1]
+            const pairs=physicsImageLabels[key]||[]
+            const labels=pairs.map(([vi,en])=>`<li>${md.utils.escapeHtml(vi)} (${md.utils.escapeHtml(en)})</li>`).join('')
+            token.content = `<figcaption>${md.utils.escapeHtml(caption)}${labels?`<div class="figure-labels"><span>Chú thích:</span><ul class="figure-label-list">${labels}</ul></div>`:''}</figcaption>`
             state.tokens[i].children.push(token)
           }
         }
@@ -65,7 +71,6 @@ export default withMermaid(defineConfig({
   appearance:true,
   vite:{
     build:{
-      minify: process.env.STUDYHUB_REVIEW_BUILD ? false : 'esbuild',
       chunkSizeWarningLimit: 2000,
       rollupOptions:{
         cache: false,

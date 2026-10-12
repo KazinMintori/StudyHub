@@ -28,13 +28,13 @@ Cắm đầu hai dây mang điện trái dấu vào dầu khoáng cách điện 
 
 ![Hình 21.29: Hạt cỏ phân cực trong dầu định hướng theo điện trường](../img/young-21/hinh-21-29.png)
 
-**Hình 21.29:** (a) Các đầu dây trái dấu tạo mẫu hạt cỏ tương tự trường lưỡng cực. (b) Hạt cỏ có phần dương và âm bị kéo theo hai chiều, nên quay để trục dài nằm theo hướng đường sức. Các nhãn chỉ hạt cỏ, dây dương, dây âm và đường sức.
+**Hình 21.29:** (a) Các đầu dây trái dấu tạo mẫu hạt cỏ tương tự trường lưỡng cực. (b) Hạt cỏ có phần dương và âm bị kéo theo hai chiều, nên quay để trục dài nằm theo hướng đường sức.
 
 ::: warning Đường sức khác quỹ đạo hạt
 Không thể kết luận điện tích đang chuyển động sẽ luôn đi theo đường sức. Lực $\vec F=q\vec E$, và do đó gia tốc, nằm theo tiếp tuyến đường sức hoặc ngược chiều ấy tùy dấu q. Nhưng với quỹ đạo cong, gia tốc còn phải có thành phần làm đổi hướng vận tốc, nên không thể luôn tiếp tuyến với quỹ đạo. Quỹ đạo hạt nhìn chung không trùng đường sức.
 :::
 
-### Mô phỏng thí nghiệm — Thay đổi các nguồn điện tích
+### Mô phỏng thí nghiệm: Thay đổi các nguồn điện tích
 
 Chọn một nguồn dương, hai nguồn cùng dấu hoặc lưỡng cực. Quan sát hướng các vector trường và cách đường sức thay đổi khi kéo vị trí nguồn. Hãy phân biệt hai phép cộng trường: Hai nguồn trái dấu tăng cường trường ở vùng giữa, còn hai nguồn cùng dấu triệt tiêu trường tại trung điểm đối xứng.
 

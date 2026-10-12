@@ -4,7 +4,7 @@
 
 <details><summary>Câu hỏi mở đầu</summary>
 
-Chọn **(ii)**. Phân tử nước có mômen lưỡng cực thường trực. Đầu dương hút ion âm và đầu âm hút ion dương, giữ các ion tách nhau trong dung dịch. Nước hòa tan kém hơn những chất không ion hóa như dầu.
+Chọn (ii). Phân tử nước có mômen lưỡng cực thường trực. Đầu dương hút ion âm và đầu âm hút ion dương, giữ các ion tách nhau trong dung dịch. Nước hòa tan kém hơn những chất không ion hóa như dầu.
 
 </details>
 
@@ -16,7 +16,7 @@ $\vec F=(-98.9\,\mu\mathrm N)\hat{\mathbf i}$.
 
 <details><summary>VP21.4.2</summary>
 
-**(a)** $40.5\,\mu\mathrm N$ hướng $+x$. **(b)** $13.6\,\mu\mathrm N$ hướng $+x$. **(c)** $q_2=+4.82\,\mathrm{nC}$.
+(a) $40.5\,\mu\mathrm N$ hướng $+x$. (b) $13.6\,\mu\mathrm N$ hướng $+x$. (c) $q_2=+4.82\,\mathrm{nC}$.
 
 </details>
 
@@ -34,27 +34,27 @@ $F_x=+0.452\,\mu\mathrm N$, $F_y=+0.329\,\mu\mathrm N$.
 
 <details><summary>VP21.10.1</summary>
 
-**(a)** $E_x=0$, $E_y=-8.09\times10^3\,\mathrm{N/C}$.
+(a) $E_x=0$, $E_y=-8.09\times10^3\,\mathrm{N/C}$.
 
-**(b)** $E_x=0$, $E_y=+6.18\times10^2\,\mathrm{N/C}$.
+(b) $E_x=0$, $E_y=+6.18\times10^2\,\mathrm{N/C}$.
 
-**(c)** $E_x=-8.06\times10^2\,\mathrm{N/C}$, $E_y=-3.18\times10^2\,\mathrm{N/C}$.
+(c) $E_x=-8.06\times10^2\,\mathrm{N/C}$, $E_y=-3.18\times10^2\,\mathrm{N/C}$.
 
 </details>
 
 <details><summary>VP21.10.2</summary>
 
-**(a)** $4.05\times10^4\,\mathrm{N/C}$ hướng $+x$.
+(a) $4.05\times10^4\,\mathrm{N/C}$ hướng $+x$.
 
-**(b)** $2.70\times10^4\,\mathrm{N/C}$ hướng $+x$.
+(b) $2.70\times10^4\,\mathrm{N/C}$ hướng $+x$.
 
-**(c)** $q_2=-1.20\,\mathrm{nC}$.
+(c) $q_2=-1.20\,\mathrm{nC}$.
 
 </details>
 
 <details><summary>VP21.10.3</summary>
 
-**(a)**
+(a)
 
 $$
 \begin{aligned}
@@ -62,15 +62,15 @@ E&=\frac{e}{4\pi\varepsilon_0a^2}\left(1-\frac1{2\sqrt2}\right).
 \end{aligned}
 $$
 
-**(b)** Trường hướng ra xa proton.
+(b) Trường hướng ra xa proton.
 
 </details>
 
 <details><summary>VP21.10.4</summary>
 
-**(a)** $dq=(Q/L)\,dx$.
+(a) $dq=(Q/L)\,dx$.
 
-**(b)**
+(b)
 
 $$
 \begin{aligned}
@@ -80,13 +80,13 @@ dE_y&=0.
 \end{aligned}
 $$
 
-**(c)** $E_x=-Q/(8\pi\varepsilon_0L^2)$, $E_y=0$.
+(c) $E_x=-Q/(8\pi\varepsilon_0L^2)$, $E_y=0$.
 
 </details>
 
 <details><summary>VP21.14.1</summary>
 
-**(a)** $1.41\times10^{-24}\,\mathrm{N\,m}$. **(b)** $-1.18\times10^{-24}\,\mathrm J$.
+(a) $1.41\times10^{-24}\,\mathrm{N\,m}$. (b) $-1.18\times10^{-24}\,\mathrm J$.
 
 </details>
 
@@ -104,11 +104,11 @@ $1.92\times10^{-30}\,\mathrm{C\,m}$.
 
 <details><summary>VP21.14.4</summary>
 
-**(a)** $2.19\times10^{-10}\,\mathrm m$. **(b)** $1.99\times10^{-8}\,\mathrm m$.
+(a) $2.19\times10^{-10}\,\mathrm m$. (b) $1.99\times10^{-8}\,\mathrm m$.
 
 </details>
 
-<details><summary>Bài tổng hợp — Nửa vòng tích điện</summary>
+<details><summary>Bài tổng hợp: Nửa vòng tích điện</summary>
 
 $$
 \begin{aligned}

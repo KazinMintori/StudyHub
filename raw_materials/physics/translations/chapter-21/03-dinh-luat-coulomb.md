@@ -33,7 +33,7 @@ $$
 
 Sự phụ thuộc vào nghịch đảo bình phương khoảng cách đã được kiểm tra với độ chính xác rất cao. Hình thức này giống định luật hấp dẫn, nhưng hai tương tác khác nhau. Lực điện phụ thuộc điện tích, có thể hút hoặc đẩy. Lực hấp dẫn trong mô hình đang xét phụ thuộc khối lượng và luôn hút vì không có khối lượng âm.
 
-### Ứng dụng sinh học — Lực điện và sự tái hấp thu ion trong mồ hôi
+### Ứng dụng sinh học: Lực điện và sự tái hấp thu ion trong mồ hôi
 
 ![Sự tái hấp thu ion quyết định lượng muối còn lại trong mồ hôi](../img/young-21/ung-dung-xo-nang.png)
 
@@ -87,7 +87,7 @@ $$
 \end{aligned}
 $$
 
-### Ví dụ 21.1 — So sánh lực điện và lực hấp dẫn
+### Ví dụ 21.1: So sánh lực điện và lực hấp dẫn
 
 Một hạt alpha, tức hạt nhân helium, có khối lượng $m=6.64\times10^{-27}\,\mathrm{kg}$ và điện tích $q=+2e=3.2\times10^{-19}\,\mathrm C$. So sánh lực đẩy điện và lực hút hấp dẫn giữa hai hạt alpha.
 
@@ -155,9 +155,9 @@ Chỉ số $i$ chạy qua mọi nguồn gây lực lên điện tích đang xét
 
 **Đánh giá.** Kiểm tra độ lớn có hợp lý và hướng có phù hợp quy tắc cùng dấu đẩy, trái dấu hút.
 
-### Ví dụ 21.2 — Lực giữa hai điện tích điểm
+### Ví dụ 21.2: Lực giữa hai điện tích điểm
 
-Hai điện tích $q_1=+25\,\mathrm{nC}$, $q_2=-75\,\mathrm{nC}$ cách nhau $r=3.0\,\mathrm{cm}$. Tìm độ lớn và hướng của **(a)** lực $q_1$ tác dụng lên $q_2$ và **(b)** lực $q_2$ tác dụng lên $q_1$.
+Hai điện tích $q_1=+25\,\mathrm{nC}$, $q_2=-75\,\mathrm{nC}$ cách nhau $r=3.0\,\mathrm{cm}$. Tìm độ lớn và hướng của (a) lực $q_1$ tác dụng lên $q_2$ và (b) lực $q_2$ tác dụng lên $q_1$.
 
 ![Hình 21.12: Hai điện tích và các sơ đồ lực riêng trên mỗi điện tích](../img/young-21/hinh-21-12.png)
 
@@ -179,7 +179,7 @@ $$
 
 Hai điện tích trái dấu nên $q_2$ bị hút về $q_1$, tức sang trái.
 
-**(b)** Đổi thứ tự hai điện tích không làm đổi tích độ lớn:
+(b) Đổi thứ tự hai điện tích không làm đổi tích độ lớn:
 
 $$
 \begin{aligned}
@@ -193,7 +193,7 @@ Lực lên $q_1$ hướng sang phải, về $q_2$.
 **Đánh giá.** Hai điện tích có độ lớn khác nhau nhưng hai lực vẫn bằng nhau về độ lớn. Mỗi lực đặt trên một hạt khác, nên không triệt tiêu trong sơ đồ lực của một hạt riêng.
 :::
 
-### Ví dụ 21.3 — Cộng lực trên một đường thẳng
+### Ví dụ 21.3: Cộng lực trên một đường thẳng
 
 Trên trục $x$, điện tích $q_1=1.0\,\mathrm{nC}$ ở $x=+2.0\,\mathrm{cm}$ và $q_2=-3.0\,\mathrm{nC}$ ở $x=+4.0\,\mathrm{cm}$. Tìm tổng lực của chúng lên $q_3=5.0\,\mathrm{nC}$ tại $x=0$.
 
@@ -228,7 +228,7 @@ $$
 
 Ví dụ này có các bài biến thể ở phần luyện tập cuối chương.
 
-### Ví dụ 21.4 — Cộng lực trong mặt phẳng
+### Ví dụ 21.4: Cộng lực trong mặt phẳng
 
 Hai điện tích dương bằng nhau $q_1=q_2=2.0\,\mu\mathrm C$ ở $(0,0.30\,\mathrm m)$ và $(0,-0.30\,\mathrm m)$. Tìm độ lớn và hướng tổng lực lên $Q=4.0\,\mu\mathrm C$ tại $(0.40\,\mathrm m,0)$.
 
@@ -269,9 +269,9 @@ Tổng lực có độ lớn $0.46\,\mathrm N$, hướng $+x$.
 Ví dụ này có các bài biến thể ở phần luyện tập cuối chương.
 
 ::: exercise Câu hỏi ôn lại mục 21.3
-Nếu đổi điện tích $q_2$ trong Ví dụ 21.4 thành $-2.0\,\mu\mathrm C$, tổng lực lên $Q$ sẽ hướng **(i)** $+x$, **(ii)** $-x$, **(iii)** $+y$, **(iv)** $-y$, **(v)** bằng không, hay **(vi)** không thuộc các trường hợp trên?
+Nếu đổi điện tích $q_2$ trong Ví dụ 21.4 thành $-2.0\,\mu\mathrm C$, tổng lực lên $Q$ sẽ hướng (i) $+x$, (ii) $-x$, (iii) $+y$, (iv) $-y$, (v) bằng không, hay (vi) không thuộc các trường hợp trên?
 :::
 
 ::: solution Giải thích
-Chọn **(iv)**. Lực do $q_1$ không đổi. Lực do $q_2$ có cùng độ lớn nhưng đảo chiều, hướng từ $Q$ xuống trái về $q_2$. Hai thành phần ngang triệt tiêu, còn hai thành phần đứng âm cộng lại, nên lực tổng hướng $-y$.
+Chọn (iv). Lực do $q_1$ không đổi. Lực do $q_2$ có cùng độ lớn nhưng đảo chiều, hướng từ $Q$ xuống trái về $q_2$. Hai thành phần ngang triệt tiêu, còn hai thành phần đứng âm cộng lại, nên lực tổng hướng $-y$.
 :::

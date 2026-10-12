@@ -97,7 +97,7 @@ Trường tại P tồn tại dù có hay không điện tích thứ hai để c
 
 Nếu mọi vector trường trong một vùng có cùng độ lớn và hướng, ta gọi đó là **điện trường đều**. Một trường hợp quan trọng là vùng vật liệu của vật dẫn ở cân bằng tĩnh điện. Nếu bên trong có trường khác không, electron tự do chịu lực và có chuyển động tổng. Nhưng tĩnh điện đòi hỏi không có chuyển động tổng như vậy, nên trường bên trong vật liệu dẫn phải bằng không. Kết luận này không tự nói trường trong một lỗ rỗng nằm trong vật dẫn cũng bằng không.
 
-### Ứng dụng sinh học — Khả năng cảm nhận điện của cá mập
+### Ứng dụng sinh học: Khả năng cảm nhận điện của cá mập
 
 Cá mập có thể tìm cá ẩn dưới cát đáy biển nhờ cảm nhận trường rất yếu do sự co cơ của con mồi. Những ống chứa chất dạng gel trong cơ thể cá mập kết thúc ở các lỗ trên da. Trường cỡ $5\times10^{-7}\,\mathrm{N/C}$ gây dòng điện tích trong ống và kích hoạt tín hiệu thần kinh. Các ống hướng khác nhau cho phép cảm nhận những thành phần khác nhau của vector trường, từ đó xác định hướng.
 
@@ -107,7 +107,7 @@ Cá mập có thể tìm cá ẩn dưới cát đáy biển nhờ cảm nhận t
 
 Trước hết, tính trường do phân bố nguồn. Tiếp theo, xét lực và chuyển động của điện tích đặt trong trường ấy. Bước thứ hai thường kết hợp tương tác điện với định luật Newton. Ba ví dụ sau minh họa cả việc tính trường và việc dùng trường đã biết để tìm chuyển động.
 
-### Ví dụ 21.5 — Độ lớn trường của điện tích điểm
+### Ví dụ 21.5: Độ lớn trường của điện tích điểm
 
 Tìm độ lớn trường tại điểm cách điện tích $q=4.0\,\mathrm{nC}$ một khoảng $2.0\,\mathrm m$.
 
@@ -124,7 +124,7 @@ $$
 **Đánh giá.** Nếu đặt điện tích $1.0\,\mathrm C$ tại điểm đó mà giữ phân bố nguồn, nó chịu lực $9.0\,\mathrm N$. Với $2.0\,\mathrm C$, lực là $18\,\mathrm N$. Trường của nguồn không đổi, còn lực tỷ lệ với điện tích thử.
 :::
 
-### Ví dụ 21.6 — Vector trường của điện tích điểm
+### Ví dụ 21.6: Vector trường của điện tích điểm
 
 Nguồn $q=-8.0\,\mathrm{nC}$ đặt tại gốc. Tìm vector điện trường tại $x=1.2\,\mathrm m$, $y=-1.6\,\mathrm m$.
 
@@ -164,11 +164,11 @@ $$
 **Đánh giá.** Nguồn âm nên trường hướng từ P về nguồn, ngược $\hat{\mathbf r}$. Bạn có thể tính tiếp độ lớn và góc hướng từ hai thành phần. Khi xác định $\hat{\mathbf r}$, luôn lấy từ nguồn đến điểm trường, rồi để dấu q quyết định có đảo chiều hay không.
 :::
 
-### Ví dụ 21.7 — Electron trong điện trường đều
+### Ví dụ 21.7: Electron trong điện trường đều
 
 Hai bản dẫn song song cách $1.0\,\mathrm{cm}$ nối với pin $100\,\mathrm V$. Điện trường giữa chúng gần đều, hướng lên với $E=1.00\times10^4\,\mathrm{N/C}$. Một electron có điện tích $-e=-1.60\times10^{-19}\,\mathrm C$ và khối lượng $m=9.11\times10^{-31}\,\mathrm{kg}$ được thả từ nghỉ tại bản trên.
 
-**(a)** Gia tốc bằng bao nhiêu? **(b)** Tốc độ và động năng khi đi $1.0\,\mathrm{cm}$ đến bản dưới bằng bao nhiêu? **(c)** Thời gian đi quãng đó là bao lâu?
+(a) Gia tốc bằng bao nhiêu? (b) Tốc độ và động năng khi đi $1.0\,\mathrm{cm}$ đến bản dưới bằng bao nhiêu? (c) Thời gian đi quãng đó là bao lâu?
 
 ![Hình 21.20: Điện trường đều hướng lên giữa hai bản dẫn và lực lên electron hướng xuống](../img/young-21/hinh-21-20.png)
 
@@ -188,7 +188,7 @@ a_y&=F_y/m=-eE/m\\
 \end{aligned}
 $$
 
-**(b)** Electron chỉ đi theo y. Ở $y=-1.0\times10^{-2}\,\mathrm m$:
+(b) Electron chỉ đi theo y. Ở $y=-1.0\times10^{-2}\,\mathrm m$:
 
 $$
 \begin{aligned}
@@ -209,7 +209,7 @@ K&=\frac12mv^2\\
 \end{aligned}
 $$
 
-**(c)**
+(c)
 
 $$
 \begin{aligned}
@@ -223,13 +223,13 @@ $$
 :::
 
 ::: exercise Câu hỏi ôn lại mục 21.4
-**(a)** Một điện tích điểm âm đi thẳng về phía một điện tích điểm dương cố định. Yếu tố nào của lực điện lên điện tích âm giữ nguyên: **(i)** Độ lớn, **(ii)** hướng, **(iii)** cả hai, hay **(iv)** không yếu tố nào?
+(a) Một điện tích điểm âm đi thẳng về phía một điện tích điểm dương cố định. Yếu tố nào của lực điện lên điện tích âm giữ nguyên: (i) Độ lớn, (ii) hướng, (iii) cả hai, hay (iv) không yếu tố nào?
 
-**(b)** Nếu điện tích âm chuyển động trên đường tròn quanh điện tích dương, yếu tố nào giữ nguyên theo bốn lựa chọn trên?
+(b) Nếu điện tích âm chuyển động trên đường tròn quanh điện tích dương, yếu tố nào giữ nguyên theo bốn lựa chọn trên?
 :::
 
 ::: solution Giải thích
-**(a)** Chọn **(ii)**. Lực luôn hướng về nguồn dương trên cùng đường thẳng, nhưng tăng độ lớn khi khoảng cách giảm.
+(a) Chọn (ii). Lực luôn hướng về nguồn dương trên cùng đường thẳng, nhưng tăng độ lớn khi khoảng cách giảm.
 
-**(b)** Chọn **(i)**. Khoảng cách không đổi nên độ lớn lực không đổi, còn hướng liên tục thay đổi để luôn chỉ về nguồn dương.
+(b) Chọn (i). Khoảng cách không đổi nên độ lớn lực không đổi, còn hướng liên tục thay đổi để luôn chỉ về nguồn dương.
 :::

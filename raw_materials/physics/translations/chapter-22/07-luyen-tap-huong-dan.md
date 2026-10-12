@@ -5,7 +5,7 @@
 ### Biến thể từ Ví dụ 22.2–22.4
 
 ::: exercise VP22.4.1
-Mặt lập phương tưởng tượng có các cạnh song song trục x,y,z, hai đỉnh đối diện ở (0,0,0) và (L,L,L). Trong vùng có trường đều $\vec E=E_1\hat{\mathbf i}+E_2\hat{\mathbf j}$, với E₁,E₂ dương. Tính điện thông qua mặt **(a)** x = 0, **(b)** x = L, **(c)** y = 0, **(d)** y = L, **(e)** z = 0, **(f)** z = L và **(g)** toàn lập phương. Pháp tuyến mọi mặt hướng ra ngoài.
+Mặt lập phương tưởng tượng có các cạnh song song trục x,y,z, hai đỉnh đối diện ở (0,0,0) và (L,L,L). Trong vùng có trường đều $\vec E=E_1\hat{\mathbf i}+E_2\hat{\mathbf j}$, với E₁,E₂ dương. Tính điện thông qua mặt (a) x = 0, (b) x = L, (c) y = 0, (d) y = L, (e) z = 0, (f) z = L và (g) toàn lập phương. Pháp tuyến mọi mặt hướng ra ngoài.
 :::
 
 <!-- detailed-solution:VP22.4.1 -->
@@ -17,11 +17,11 @@ Mặt lập phương tưởng tượng có các cạnh song song trục x,y,z, h
 - Mỗi điện thông bằng thành phần trường có dấu theo pháp tuyến nhân L².
 - Các mặt tại tọa độ 0 có pháp tuyến theo chiều âm, các mặt tại L theo chiều dương.
 
-Các kết quả (a)–(f) lần lượt **−E₁L², +E₁L², −E₂L², +E₂L², 0, 0**. Từng cặp đối diện triệt tiêu nên **(g)** điện thông tổng bằng không.
+Các kết quả (a)–(f) lần lượt **−E₁L², +E₁L², −E₂L², +E₂L², 0, 0**. Từng cặp đối diện triệt tiêu nên (g) điện thông tổng bằng không.
 :::
 
 ::: exercise VP22.4.2
-Nguồn điểm q tại gốc. Cắt bỏ nửa z < 0 của mặt cầu bán kính R tâm tại gốc, giữ lại **mặt cong bán cầu** z ≥ 0. Pháp tuyến hướng ra xa tâm. Tính điện thông khi **(a)** q = 8,00 nC, R = 0,100 m, **(b)** q = −4,00 nC, R = 0,100 m, **(c)** q = −4,00 nC, R = 0,200 m.
+Nguồn điểm q tại gốc. Cắt bỏ nửa z < 0 của mặt cầu bán kính R tâm tại gốc, giữ lại **mặt cong bán cầu** z ≥ 0. Pháp tuyến hướng ra xa tâm. Tính điện thông khi (a) q = 8,00 nC, R = 0,100 m, (b) q = −4,00 nC, R = 0,100 m, (c) q = −4,00 nC, R = 0,200 m.
 :::
 
 <!-- detailed-solution:VP22.4.2 -->
@@ -33,11 +33,11 @@ Nguồn điểm q tại gốc. Cắt bỏ nửa z < 0 của mặt cầu bán kí
 - Trường xuyên tâm, điện thông phân bố như nhau theo góc khối.
 - Bán cầu chiếm nửa diện tích cầu cùng bán kính, nên điện thông bằng q/(2$\varepsilon_0$).
 
-Kết quả **(a)** +452, **(b)** −226, **(c)** −226 N m²/C. Bán kính không ảnh hưởng. Không thêm mặt đáy đi qua nguồn vào phép tính mặt cong này.
+Kết quả (a) +452, (b) −226, (c) −226 N m²/C. Bán kính không ảnh hưởng. Không thêm mặt đáy đi qua nguồn vào phép tính mặt cong này.
 :::
 
 ::: exercise VP22.4.3
-Lập phương tưởng tượng cạnh 5,00 cm có q = +6,00 nC tại tâm. Tính điện thông **(a)** qua toàn mặt kín, **(b)** qua một trong sáu mặt.
+Lập phương tưởng tượng cạnh 5,00 cm có q = +6,00 nC tại tâm. Tính điện thông (a) qua toàn mặt kín, (b) qua một trong sáu mặt.
 :::
 
 <!-- detailed-solution:VP22.4.3 -->
@@ -49,11 +49,11 @@ Lập phương tưởng tượng cạnh 5,00 cm có q = +6,00 nC tại tâm. Tí
 - Gauss cho điện thông toàn phần q/$\varepsilon_0$.
 - Đối xứng chia đều điện thông cho sáu mặt, dù trường không đều trên mỗi mặt.
 
-**(a)** Φ = +678 N m²/C. **(b)** Φ/6 = +113 N m²/C. Không được suy từ chia đều điện thông sang trường đều trên từng mặt.
+(a) Φ = +678 N m²/C. (b) Φ/6 = +113 N m²/C. Không được suy từ chia đều điện thông sang trường đều trên từng mặt.
 :::
 
 ::: exercise VP22.4.4
-Mặt cầu tưởng tượng R = 5,00 cm tâm tại gốc. Tính điện thông khi có **(a)** q₁ = +3,00 nC ở (1,00 cm,1,00 cm,0), **(b)** thêm q₂ = −8,00 nC ở (2,00 cm,0,−4,00 cm), **(c)** thêm q₃ = +2,00 nC ở (4,00 cm,−2,00 cm,3,00 cm).
+Mặt cầu tưởng tượng R = 5,00 cm tâm tại gốc. Tính điện thông khi có (a) q₁ = +3,00 nC ở (1,00 cm,1,00 cm,0), (b) thêm q₂ = −8,00 nC ở (2,00 cm,0,−4,00 cm), (c) thêm q₃ = +2,00 nC ở (4,00 cm,−2,00 cm,3,00 cm).
 :::
 
 <!-- detailed-solution:VP22.4.4 -->
@@ -65,13 +65,13 @@ Mặt cầu tưởng tượng R = 5,00 cm tâm tại gốc. Tính điện thông
 - q₁ cách gốc √2 cm, q₂ cách √20 cm, đều nằm trong.
 - q₃ cách √29 cm, nằm ngoài và không góp điện thông tổng.
 
-**(a)** +339 N m²/C. **(b)** Tổng được bao −5,00 nC cho −565 N m²/C. **(c)** Vẫn −565 N m²/C, dù nguồn thứ ba làm trường trên mặt thay đổi.
+(a) +339 N m²/C. (b) Tổng được bao −5,00 nC cho −565 N m²/C. (c) Vẫn −565 N m²/C, dù nguồn thứ ba làm trường trên mặt thay đổi.
 :::
 
 ### Biến thể từ Ví dụ 22.5–22.10
 
 ::: exercise VP22.10.1
-Cầu bán kính 5,00 cm mang +3,00 nC. Tìm độ lớn trường tại r = 4,00 cm và 6,00 cm nếu cầu là **(a)** vật cách điện đặc, điện tích đều trong thể tích, **(b)** vật dẫn đặc.
+Cầu bán kính 5,00 cm mang +3,00 nC. Tìm độ lớn trường tại r = 4,00 cm và 6,00 cm nếu cầu là (a) vật cách điện đặc, điện tích đều trong thể tích, (b) vật dẫn đặc.
 :::
 
 <!-- detailed-solution:VP22.10.1 -->
@@ -83,7 +83,7 @@ Cầu bán kính 5,00 cm mang +3,00 nC. Tìm độ lớn trường tại r = 4,0
 - Với cầu cách điện đều, trường trong bằng kQr/R³.
 - Với cầu dẫn, trường trong vật liệu bằng không. Trường ngoài của cả hai cùng kQ/r².
 
-**(a)** Hai độ lớn tương ứng $8.63\times10^3$ và $7.49\times10^3$ N/C. **(b)** Tương ứng 0 và $7.49\times10^3$ N/C. Các trường khác không hướng ra.
+(a) Hai độ lớn tương ứng $8.63\times10^3$ và $7.49\times10^3$ N/C. (b) Tương ứng 0 và $7.49\times10^3$ N/C. Các trường khác không hướng ra.
 :::
 
 ::: exercise VP22.10.2
@@ -149,7 +149,7 @@ $$
 ### Biến thể từ Ví dụ 22.11–22.12
 
 ::: exercise VP22.12.1
-Khối đồng dẫn tốt có hốc. Nguồn +3,00 nC trong hốc cách điện với khối. Khối đồng mang điện tích dư −8,00 nC. Tìm điện tích **(a)** mặt ngoài và **(b)** thành hốc.
+Khối đồng dẫn tốt có hốc. Nguồn +3,00 nC trong hốc cách điện với khối. Khối đồng mang điện tích dư −8,00 nC. Tìm điện tích (a) mặt ngoài và (b) thành hốc.
 :::
 
 <!-- detailed-solution:VP22.12.1 -->
@@ -161,11 +161,11 @@ Khối đồng dẫn tốt có hốc. Nguồn +3,00 nC trong hốc cách điện
 - Thành hốc phải −q để trường trong vật liệu bằng không.
 - Phần còn lại của tổng điện tích khối nằm trên mặt ngoài.
 
-**(b)** Thành hốc −3,00 nC. **(a)** Mặt ngoài −8,00 − (−3,00) = −5,00 nC. Cộng hai mặt đúng bằng −8,00 nC.
+(b) Thành hốc −3,00 nC. (a) Mặt ngoài −8,00 − (−3,00) = −5,00 nC. Cộng hai mặt đúng bằng −8,00 nC.
 :::
 
 ::: exercise VP22.12.2
-Cầu bạc dẫn có hốc cầu ở tâm, nguồn điểm ở tâm hốc. Mặt ngoài có +9,00 nC, thành hốc có −2,00 nC. **(a)** Tìm nguồn điểm. **(b)** Nếu nguồn điểm chuyển đến vị trí lệch tâm trong hốc, điện tích tổng trên mỗi mặt có đổi không?
+Cầu bạc dẫn có hốc cầu ở tâm, nguồn điểm ở tâm hốc. Mặt ngoài có +9,00 nC, thành hốc có −2,00 nC. (a) Tìm nguồn điểm. (b) Nếu nguồn điểm chuyển đến vị trí lệch tâm trong hốc, điện tích tổng trên mỗi mặt có đổi không?
 :::
 
 <!-- detailed-solution:VP22.12.2 -->
@@ -177,11 +177,11 @@ Cầu bạc dẫn có hốc cầu ở tâm, nguồn điểm ở tâm hốc. Mặ
 - Mặt Gauss trong vật liệu buộc q cộng điện tích thành hốc bằng không.
 - Dời nguồn không truyền điện tích, nên các tổng điện tích giữ nguyên dù mật độ thay đổi.
 
-**(a)** q = +2,00 nC. **(b)** Cả hai tổng không đổi. Phân bố thành hốc trở nên không đều khi nguồn lệch tâm.
+(a) q = +2,00 nC. (b) Cả hai tổng không đổi. Phân bố thành hốc trở nên không đều khi nguồn lệch tâm.
 :::
 
 ::: exercise VP22.12.3
-Trong một trình diễn tại Deutsches Museum ở Munich, một người ngồi trong vỏ cầu kim loại bán kính 0,90 m. Nạp điện cho đến khi trường ngay ngoài mặt có độ lớn $3.0\times10^5$ N/C. Người ra ngoài sau trình diễn không bị ảnh hưởng. Tìm độ lớn **(a)** trường trong cầu, **(b)** điện tích tổng trên cầu, **(c)** mật độ mặt ngoài.
+Trong một trình diễn tại Deutsches Museum ở Munich, một người ngồi trong vỏ cầu kim loại bán kính 0,90 m. Nạp điện cho đến khi trường ngay ngoài mặt có độ lớn $3.0\times10^5$ N/C. Người ra ngoài sau trình diễn không bị ảnh hưởng. Tìm độ lớn (a) trường trong cầu, (b) điện tích tổng trên cầu, (c) mật độ mặt ngoài.
 :::
 
 <!-- detailed-solution:VP22.12.3 -->
@@ -193,11 +193,11 @@ Trong một trình diễn tại Deutsches Museum ở Munich, một người ng�
 - Che chắn tĩnh điện cho E trong hốc bằng không.
 - Trường ngoài cầu và quan hệ E = |σ|/$\varepsilon_0$ cho hai độ lớn còn lại.
 
-**(a)** E = 0. **(b)** $|Q|=ER^2/k=2.7\times10^{-5}$ C. **(c)** $|\sigma|=\varepsilon_0E=2.7\times10^{-6}$ C/m². Dấu điện tích chưa xác định vì chỉ cho độ lớn trường.
+(a) E = 0. (b) $|Q|=ER^2/k=2.7\times10^{-5}$ C. (c) $|\sigma|=\varepsilon_0E=2.7\times10^{-6}$ C/m². Dấu điện tích chưa xác định vì chỉ cho độ lớn trường.
 :::
 
 ::: exercise VP22.12.4
-Cầu dẫn bán kính ngoài 0,330 m có hốc cầu đồng tâm bán kính 0,120 m. Vật dẫn mang tổng −6,00 nC, nguồn +4,00 nC ở tâm hốc. Tìm **(a)** điện tích thành hốc, **(b)** điện tích mặt ngoài, **(c)** độ lớn trường ngay bên trong hốc sát thành, **(d)** độ lớn trường ngay ngoài mặt ngoài.
+Cầu dẫn bán kính ngoài 0,330 m có hốc cầu đồng tâm bán kính 0,120 m. Vật dẫn mang tổng −6,00 nC, nguồn +4,00 nC ở tâm hốc. Tìm (a) điện tích thành hốc, (b) điện tích mặt ngoài, (c) độ lớn trường ngay bên trong hốc sát thành, (d) độ lớn trường ngay ngoài mặt ngoài.
 :::
 
 <!-- detailed-solution:VP22.12.4 -->
@@ -209,7 +209,7 @@ Cầu dẫn bán kính ngoài 0,330 m có hốc cầu đồng tâm bán kính 0,
 - Thành hốc mang −4 nC để tổng trong mặt Gauss thuộc vật liệu bằng không.
 - Mặt ngoài còn −2 nC. Tính trường hốc bằng nguồn tâm, trường ngoài bằng tổng toàn hệ.
 
-**(a)** −4,00 nC. **(b)** −2,00 nC. **(c)** Trường trong hốc sát thành là:
+(a) −4,00 nC. (b) −2,00 nC. (c) Trường trong hốc sát thành là:
 
 $$
 \begin{aligned}
@@ -218,10 +218,10 @@ E&=\frac{k(4.00\times10^{-9})}{0.120^2}\\
 \end{aligned}
 $$
 
-Trường này hướng ra. **(d)** Trường ngoài có độ lớn $E=k(2.00\times10^{-9})/0.330^2$, bằng 165 N/C và hướng vào. Ở phía vật liệu dẫn của mặt trong, trường bằng không, khác với giới hạn lấy từ phía hốc ở (c).
+Trường này hướng ra. (d) Trường ngoài có độ lớn $E=k(2.00\times10^{-9})/0.330^2$, bằng 165 N/C và hướng vào. Ở phía vật liệu dẫn của mặt trong, trường bằng không, khác với giới hạn lấy từ phía hốc ở (c).
 :::
 
-## Bài tổng hợp — Điện trường trong nguyên tử hydrogen
+## Bài tổng hợp: Điện trường trong nguyên tử hydrogen
 
 ::: exercise Bài tổng hợp 22
 Nguyên tử hydrogen gồm proton $+Q=1.60\times10^{-19}$ C ở r = 0 và electron −Q. Trong mô hình phân bố cầu, chuyển động electron làm điện tích âm trải ra với mật độ:
@@ -230,7 +230,7 @@ $$
 \rho(r)=-\frac{Q}{\pi a_0^3}e^{-2r/a_0}.
 $$
 
-Bán kính Bohr $a_0=5.29\times10^{-11}$ m. **(a)** Tìm điện tích tổng của nguyên tử được bao trong cầu bán kính r. **(b)** Tìm độ lớn và hướng điện trường theo r. **(c)** Vẽ tỷ số giữa độ lớn trường tổng và trường của riêng proton theo r, thuận tiện dùng r/a₀.
+Bán kính Bohr $a_0=5.29\times10^{-11}$ m. (a) Tìm điện tích tổng của nguyên tử được bao trong cầu bán kính r. (b) Tìm độ lớn và hướng điện trường theo r. (c) Vẽ tỷ số giữa độ lớn trường tổng và trường của riêng proton theo r, thuận tiện dùng r/a₀.
 :::
 
 ![Hình 22.29: Proton điểm và phân bố điện tích cầu của electron](img/young-22/hinh-22-29.png)
@@ -247,7 +247,7 @@ Bán kính Bohr $a_0=5.29\times10^{-11}$ m. **(a)** Tìm điện tích tổng c�
 - Tích phân từ 0 đến r, rồi dùng Gauss. Đổi biến x = 2s/a₀ giúp tính tích phân bằng từng phần.
 - Dùng tỷ số trường để vẽ đồ thị và xét giới hạn gần tâm, xa tâm.
 
-**(a)** Điện tích được bao là:
+(a) Điện tích được bao là:
 
 $$
 \begin{aligned}
@@ -277,13 +277,13 @@ $$
 Q_{\mathrm{trong}}=Qe^{-2u}(1+2u+2u^2).
 $$
 
-**(b)** Mọi r > 0 đều có điện tích được bao dương. Trường hướng xuyên tâm ra ngoài:
+(b) Mọi r > 0 đều có điện tích được bao dương. Trường hướng xuyên tâm ra ngoài:
 
 $$
 E(r)=\frac{kQ}{r^2}e^{-2u}(1+2u+2u^2).
 $$
 
-**(c)** Chia cho trường proton $E_p=kQ/r^2$:
+(c) Chia cho trường proton $E_p=kQ/r^2$:
 
 $$
 \frac E{E_p}=e^{-2u}(1+2u+2u^2).

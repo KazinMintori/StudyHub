@@ -5,7 +5,7 @@ const md=new MarkdownIt().use(mathjax),findings=[]
 let display=0,inline=0
 function inspect(source,file){
  for(const m of source.matchAll(/\$\$([\s\S]*?)\$\$/g)){
-  display++;const html=md.render('$$\n'+m[1].trim()+'\n$$')
+  display++;const html=md.render('$$\n'+m[1].trim().replace(/\\tag\{[\d.]+\}/g,'')+'\n$$')
   const width=Number(html.match(/(?:min-width:\s*|width=")([\d.]+)ex/)?.[1]||0)
   const invalid=/data-mjx-error|<merror/.test(html)
   if(invalid||width>32)findings.push({file,line:source.slice(0,m.index).split('\n').length,kind:'display',widthEx:width,invalid,tex:m[1].trim()})

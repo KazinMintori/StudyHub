@@ -3,8 +3,10 @@
 ### Bài tập tổng hợp tiếp theo
 
 ::: exercise 21.81 •••
-Đĩa tích điện đều như Hình 21.25 có bán kính $2.50\,\mathrm{cm}$ và điện tích tổng $7.0\times10^{-12}\,\mathrm C$. **(a)** Tìm độ lớn và hướng trường trên trục tại $x=20.0\,\mathrm{cm}$. **(b)** Chứng tỏ khi $x\gg R$, (21.11) trở thành $E=Q/(4\pi\varepsilon_0x^2)$. **(c)** Trường ở (a) lớn hơn hay nhỏ hơn trường của điện tích điểm cùng Q cách $20.0\,\mathrm{cm}$? Giải thích bằng gần đúng ở (b). **(d)** Tìm chênh lệch phần trăm giữa hai trường tại $x=20.0\,\mathrm{cm}$ và $10.0\,\mathrm{cm}$.
+Đĩa tích điện đều như Hình 21.25 có bán kính $2.50\,\mathrm{cm}$ và điện tích tổng $7.0\times10^{-12}\,\mathrm C$. (a) Tìm độ lớn và hướng trường trên trục tại $x=20.0\,\mathrm{cm}$. (b) Chứng tỏ khi $x\gg R$, (21.11) trở thành $E=Q/(4\pi\varepsilon_0x^2)$. (c) Trường ở (a) lớn hơn hay nhỏ hơn trường của điện tích điểm cùng Q cách $20.0\,\mathrm{cm}$? Giải thích bằng gần đúng ở (b). (d) Tìm chênh lệch phần trăm giữa hai trường tại $x=20.0\,\mathrm{cm}$ và $10.0\,\mathrm{cm}$.
 :::
+
+![Hình 21.25: Chia đĩa thành những vòng đồng tâm để tính trường](img/young-21/hinh-21-25.png)
 
 
 <!-- detailed-solution:21.81 -->
@@ -24,7 +26,7 @@ E&=\frac{Q}{2\pi\varepsilon_0R^2}\\
 \end{aligned}
 $$
 
-**(a)** Tại x = 0,200 m, E = 1,56 N/C, hướng +x. **(b)** Với $u=R^2/x^2\ll1$, $(1+u)^{-1/2}\approx1-u/2$, nên:
+(a) Tại x = 0,200 m, E = 1,56 N/C, hướng +x. (b) Với $u=R^2/x^2\ll1$, $(1+u)^{-1/2}\approx1-u/2$, nên:
 
 $$
 \begin{aligned}
@@ -32,7 +34,7 @@ E\approx\frac{Q}{2\pi\varepsilon_0R^2}\frac{R^2}{2x^2}&=\frac{kQ}{x^2}.
 \end{aligned}
 $$
 
-**(c)** Đĩa cho trường nhỏ hơn nguồn điểm: Những phần xa tâm vừa cách P xa hơn vừa không hướng hoàn toàn theo trục. **(d)** Lấy phần trăm so với trường đĩa, $(E_{\mathrm{điểm}}-E_{\mathrm{đĩa}})/E_{\mathrm{đĩa}}$, được khoảng 1,17% tại 20,0 cm và 4,66% tại 10,0 cm. Nếu dùng trường điểm làm mẫu số, các giá trị tương ứng là 1,16% và 4,46%.
+(c) Đĩa cho trường nhỏ hơn nguồn điểm: Những phần xa tâm vừa cách P xa hơn vừa không hướng hoàn toàn theo trục. (d) Lấy phần trăm so với trường đĩa, $(E_{\mathrm{điểm}}-E_{\mathrm{đĩa}})/E_{\mathrm{đĩa}}$, được khoảng 1,17% tại 20,0 cm và 4,66% tại 10,0 cm. Nếu dùng trường điểm làm mẫu số, các giá trị tương ứng là 1,16% và 4,46%.
 :::
 
 ::: exercise 21.82 •• CP
@@ -110,7 +112,7 @@ $$
 :::
 
 ::: exercise 21.85 ••
-Hai thanh không dẫn điện dài $1.20\,\mathrm m$ gặp nhau vuông góc. Một thanh có $+2.50\,\mu\mathrm C$ phân bố đều, thanh kia có $-2.50\,\mu\mathrm C$ như Hình P21.85. **(a)** Tìm trường tại P cách mỗi thanh $60.0\,\mathrm{cm}$. **(b)** Nếu thả electron tại P, tìm độ lớn và hướng tổng lực do các thanh.
+Hai thanh không dẫn điện dài $1.20\,\mathrm m$ gặp nhau vuông góc. Một thanh có $+2.50\,\mu\mathrm C$ phân bố đều, thanh kia có $-2.50\,\mu\mathrm C$ như Hình P21.85. (a) Tìm trường tại P cách mỗi thanh $60.0\,\mathrm{cm}$. (b) Nếu thả electron tại P, tìm độ lớn và hướng tổng lực do các thanh.
 :::
 
 ![Hình P21.85: Thanh ngang dương, thanh đứng âm và điểm P cách đều](img/young-21/hinh-p21-85.png)
@@ -138,7 +140,7 @@ Lực electron ngược trường, tạo góc 45° từ hướng phải.
 :::
 
 ::: exercise 21.86 •
-Hai mặt rất lớn song song cách $5.00\,\mathrm{cm}$. A có mật độ đều $-8.80\,\mu\mathrm{C/m^2}$. B ở bên phải A có mật độ đều $-11.6\,\mu\mathrm{C/m^2}$. Coi hai mặt vô hạn. Tìm trường tại **(a)** điểm cách A $4.00\,\mathrm{cm}$ về phải, **(b)** điểm cách A $4.00\,\mathrm{cm}$ về trái, **(c)** điểm cách B $4.00\,\mathrm{cm}$ về phải.
+Hai mặt rất lớn song song cách $5.00\,\mathrm{cm}$. A có mật độ đều $-8.80\,\mu\mathrm{C/m^2}$. B ở bên phải A có mật độ đều $-11.6\,\mu\mathrm{C/m^2}$. Coi hai mặt vô hạn. Tìm trường tại (a) điểm cách A $4.00\,\mathrm{cm}$ về phải, (b) điểm cách A $4.00\,\mathrm{cm}$ về trái, (c) điểm cách B $4.00\,\mathrm{cm}$ về phải.
 :::
 
 
@@ -161,11 +163,11 @@ E_{\mathrm{ngoài}}&=\frac{(11.6+8.80)\times10^{-6}}{2\varepsilon_0}\\
 \end{aligned}
 $$
 
-**(a)** Hướng phải. **(b)** Hướng phải. **(c)** Hướng trái.
+(a) Hướng phải. (b) Hướng phải. (c) Hướng trái.
 :::
 
 ::: exercise 21.87 •• CP
-Đĩa mỏng có lỗ tròn tại tâm, gọi là vành khăn, có bán kính trong $R_1$, ngoài $R_2$ và mật độ mặt dương đều $\sigma$, như Hình P21.87. **(a)** Tìm điện tích tổng. **(b)** Đặt vành trong mặt yz, tâm ở gốc. Tìm độ lớn và hướng trường tại điểm bất kỳ trên trục x, ở cả hai phía. **(c)** Chứng tỏ gần gốc, độ lớn trường gần tỷ lệ với khoảng cách đến tâm. “Đủ gần” cần thỏa điều kiện nào? **(d)** Hạt điểm khối lượng m, điện tích $-q$ chỉ được chuyển động trên trục x. Thả từ nghỉ tại $x=0.01R_1$, tìm tần số dao động. Ôn mục 14.2 và coi vành đứng yên.
+Đĩa mỏng có lỗ tròn tại tâm, gọi là vành khăn, có bán kính trong $R_1$, ngoài $R_2$ và mật độ mặt dương đều $\sigma$, như Hình P21.87. (a) Tìm điện tích tổng. (b) Đặt vành trong mặt yz, tâm ở gốc. Tìm độ lớn và hướng trường tại điểm bất kỳ trên trục x, ở cả hai phía. (c) Chứng tỏ gần gốc, độ lớn trường gần tỷ lệ với khoảng cách đến tâm. “Đủ gần” cần thỏa điều kiện nào? (d) Hạt điểm khối lượng m, điện tích $-q$ chỉ được chuyển động trên trục x. Thả từ nghỉ tại $x=0.01R_1$, tìm tần số dao động. Ôn mục 14.2 và coi vành đứng yên.
 :::
 
 ![Hình P21.87: Vành khăn tích điện và trục vuông góc x](img/young-21/hinh-p21-87.png)
@@ -181,7 +183,7 @@ $$
 - Gần tâm, khai triển theo $x^2/R_1^2$ cho trường tuyến tính.
 - Lực lên hạt âm khi đó có dạng phục hồi để dùng dao động điều hòa.
 
-**(a)** $Q=\pi\sigma(R_2^2-R_1^2)$. **(b)** Biểu thức có dấu dùng được cả hai phía:
+(a) $Q=\pi\sigma(R_2^2-R_1^2)$. (b) Biểu thức có dấu dùng được cả hai phía:
 
 $$
 \begin{aligned}
@@ -190,7 +192,7 @@ E_x&=\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}}\\
 \end{aligned}
 $$
 
-Trường dương với x > 0, âm với x < 0, bằng không ở tâm. **(c)** Khi $|x|\ll R_1$:
+Trường dương với x > 0, âm với x < 0, bằng không ở tâm. (c) Khi $|x|\ll R_1$:
 
 $$
 \begin{aligned}
@@ -198,7 +200,7 @@ E_x\approx\frac{\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)x.
 \end{aligned}
 $$
 
-**(d)** $F_x=-qE_x=-\kappa x$, với hệ số phục hồi dương. Tần số:
+(d) $F_x=-qE_x=-\kappa x$, với hệ số phục hồi dương. Tần số:
 
 $$
 \begin{aligned}
@@ -209,8 +211,8 @@ $$
 Biên độ ban đầu 0,01R₁ thỏa gần đúng nhỏ.
 :::
 
-::: exercise 21.88 ••• DATA CP — Thiết kế máy in phun
-Máy in phun có thể phun liên tục hoặc theo từng giọt khi cần. Trong kiểu liên tục, các giọt từ đầu phun chuyển động nhanh tạo chữ trên giấy. Bạn thuộc nhóm thiết kế máy, với mỗi giọt mực khối lượng $1.4\times10^{-8}\,\mathrm g$, bay ngang đến giấy ở $50\,\mathrm{m/s}$. Bộ nạp lấy bớt electron để giọt có điện tích dương q. Giọt qua hai bản lệch hướng dài $2.0\,\mathrm{cm}$, có trường đứng đều $8.0\times10^4\,\mathrm{N/C}$. **(a)** Để giọt lệch $0.30\,\mathrm{mm}$ khi đến mép ra, cần q bao nhiêu và phải lấy bớt bao nhiêu electron? **(b)** Nếu đổi tốc độ giọt còn $25\,\mathrm{m/s}$, q cần bao nhiêu để cùng độ lệch?
+::: exercise 21.88 ••• DATA CP: Thiết kế máy in phun
+Máy in phun có thể phun liên tục hoặc theo từng giọt khi cần. Trong kiểu liên tục, các giọt từ đầu phun chuyển động nhanh tạo chữ trên giấy. Bạn thuộc nhóm thiết kế máy, với mỗi giọt mực khối lượng $1.4\times10^{-8}\,\mathrm g$, bay ngang đến giấy ở $50\,\mathrm{m/s}$. Bộ nạp lấy bớt electron để giọt có điện tích dương q. Giọt qua hai bản lệch hướng dài $2.0\,\mathrm{cm}$, có trường đứng đều $8.0\times10^4\,\mathrm{N/C}$. (a) Để giọt lệch $0.30\,\mathrm{mm}$ khi đến mép ra, cần q bao nhiêu và phải lấy bớt bao nhiêu electron? (b) Nếu đổi tốc độ giọt còn $25\,\mathrm{m/s}$, q cần bao nhiêu để cùng độ lệch?
 :::
 
 
@@ -238,7 +240,7 @@ Giảm tốc độ một nửa làm thời gian gấp đôi, nên để cùng đ
 :::
 
 ::: exercise 21.89 •• DATA
-Hai cầu nhỏ dương cách $0.400\,\mathrm m$. Đặt $q_1$ tại gốc, $q_2$ tại $x=+0.400\,\mathrm m$. Có cầu thứ ba $q_3=4.00\times10^{-6}\,\mathrm C$ và thiết bị đo chính xác vị trí, lực tổng. Tại $x=0.200\,\mathrm m$, lực lên $q_3$ là $4.50\,\mathrm N$ hướng $+x$. Chuyển đến $x=+0.600\,\mathrm m$, lực là $3.50\,\mathrm N$ hướng $+x$. **(a)** Tính $q_1,q_2$. **(b)** Tìm lực lên $q_3$ tại $x=-0.200\,\mathrm m$. **(c)** Ngoài vị trí vô cùng xa, đặt $q_3$ ở x nào để lực bằng không?
+Hai cầu nhỏ dương cách $0.400\,\mathrm m$. Đặt $q_1$ tại gốc, $q_2$ tại $x=+0.400\,\mathrm m$. Có cầu thứ ba $q_3=4.00\times10^{-6}\,\mathrm C$ và thiết bị đo chính xác vị trí, lực tổng. Tại $x=0.200\,\mathrm m$, lực lên $q_3$ là $4.50\,\mathrm N$ hướng $+x$. Chuyển đến $x=+0.600\,\mathrm m$, lực là $3.50\,\mathrm N$ hướng $+x$. (a) Tính $q_1,q_2$. (b) Tìm lực lên $q_3$ tại $x=-0.200\,\mathrm m$. (c) Ngoài vị trí vô cùng xa, đặt $q_3$ ở x nào để lực bằng không?
 :::
 
 
@@ -272,8 +274,10 @@ $$
 :::
 
 ::: exercise 21.90 ••• DATA
-Điện tích dương Q phân bố đều trên vòng dẫn rất mảnh bán kính a, như Hình 21.23. Đo E trên trục ở nhiều khoảng cách x. **(a)** Các số đo x lớn được vẽ thành $Ex^2$ theo x ở Hình P21.90a. Giải thích vì sao $Ex^2$ tiến đến hằng số khi x tăng, rồi dùng đồ thị tính Q. **(b)** Các số đo x nhỏ được vẽ thành $E/x$ theo x ở Hình P21.90b. Giải thích giới hạn hằng khi x tiến tới không, rồi dùng đồ thị tính a.
+Điện tích dương Q phân bố đều trên vòng dẫn rất mảnh bán kính a, như Hình 21.23. Đo E trên trục ở nhiều khoảng cách x. (a) Các số đo x lớn được vẽ thành $Ex^2$ theo x ở Hình P21.90a. Giải thích vì sao $Ex^2$ tiến đến hằng số khi x tăng, rồi dùng đồ thị tính Q. (b) Các số đo x nhỏ được vẽ thành $E/x$ theo x ở Hình P21.90b. Giải thích giới hạn hằng khi x tiến tới không, rồi dùng đồ thị tính a.
 :::
+
+![Hình 21.23: Phần điện tích nhỏ trên vòng và các thành phần trường tại P](img/young-21/hinh-21-23.png)
 
 ![Hình P21.90: Hai đồ thị đo trường vòng ở xa và gần tâm](img/young-21/hinh-p21-90.png)
 
@@ -303,7 +307,7 @@ $$
 :::
 
 ::: exercise 21.91 ••• CP
-Mặt phẳng vô hạn tích điện dương đều $\sigma$ có lỗ tròn bán kính R, nằm trong mặt xy, tâm lỗ tại gốc, trục $+z$ hướng lên. Hạt khối lượng m, điện tích $-q$ ban đầu nghỉ ở tâm lỗ, chỉ được chuyển động dọc z. Khi thả, hạt rơi. Càng xuống dưới, lực điện hút lên càng tăng. Nếu m đủ nhỏ, lực điện vượt trọng lượng làm hạt chậm lại, dừng rồi trở về vị trí đầu, lặp lại chuyển động. **(a)** Tìm trường ở độ sâu $\Delta$ dưới gốc. **(b)** Tìm khối lượng cực đại $m_{\max}$ để hạt không rơi mãi. **(c)** Với $m<m_{\max}$, tìm công lực điện khi hạt từ $z=0$ đến $z=-\Delta$. **(d)** Tìm công trọng lực trên cùng khoảng. **(e)** Tìm độ sâu cực đại theo $\alpha=m/m_{\max}$, dùng định lý công–động năng để tìm tốc độ theo độ sâu rồi xét lúc tốc độ bằng không. **(f)** Tốc độ tại $\Delta\le\Delta_{\max}$ bằng bao nhiêu? **(g)** Với $\sigma=1.00\,\mathrm{nC/cm^2}$, $R=10.0\,\mathrm{cm}$, $m=25.0\,\mathrm g$ và độ lớn điện tích $1.00\,\mu\mathrm C$, tìm $m_{\max},\Delta_{\max}$.
+Mặt phẳng vô hạn tích điện dương đều $\sigma$ có lỗ tròn bán kính R, nằm trong mặt xy, tâm lỗ tại gốc, trục $+z$ hướng lên. Hạt khối lượng m, điện tích $-q$ ban đầu nghỉ ở tâm lỗ, chỉ được chuyển động dọc z. Khi thả, hạt rơi. Càng xuống dưới, lực điện hút lên càng tăng. Nếu m đủ nhỏ, lực điện vượt trọng lượng làm hạt chậm lại, dừng rồi trở về vị trí đầu, lặp lại chuyển động. (a) Tìm trường ở độ sâu $\Delta$ dưới gốc. (b) Tìm khối lượng cực đại $m_{\max}$ để hạt không rơi mãi. (c) Với $m<m_{\max}$, tìm công lực điện khi hạt từ $z=0$ đến $z=-\Delta$. (d) Tìm công trọng lực trên cùng khoảng. (e) Tìm độ sâu cực đại theo $\alpha=m/m_{\max}$, dùng định lý công–động năng để tìm tốc độ theo độ sâu rồi xét lúc tốc độ bằng không. (f) Tốc độ tại $\Delta\le\Delta_{\max}$ bằng bao nhiêu? (g) Với $\sigma=1.00\,\mathrm{nC/cm^2}$, $R=10.0\,\mathrm{cm}$, $m=25.0\,\mathrm g$ và độ lớn điện tích $1.00\,\mu\mathrm C$, tìm $m_{\max},\Delta_{\max}$.
 :::
 
 
@@ -317,7 +321,7 @@ Mặt phẳng vô hạn tích điện dương đều $\sigma$ có lỗ tròn bá
 - Lực điện lên hạt âm hướng lên.
 - Dùng tích phân công và định lý công–động năng để tìm điểm quay đầu.
 
-**(a)** Ở độ sâu Δ:
+(a) Ở độ sâu Δ:
 
 $$
 \begin{aligned}
@@ -325,7 +329,7 @@ $$
 \end{aligned}
 $$
 
-**(b)** Lực điện giới hạn ở rất sâu là $q\sigma/(2\varepsilon_0)$. Ngưỡng khối lượng $m_{\max}=q\sigma/(2g\varepsilon_0)$. Muốn quay đầu cần **m nhỏ hơn ngưỡng này**, vì ở ngưỡng lực điện chỉ tiến đến trọng lực mà không vượt nó.
+(b) Lực điện giới hạn ở rất sâu là $q\sigma/(2\varepsilon_0)$. Ngưỡng khối lượng $m_{\max}=q\sigma/(2g\varepsilon_0)$. Muốn quay đầu cần **m nhỏ hơn ngưỡng này**, vì ở ngưỡng lực điện chỉ tiến đến trọng lực mà không vượt nó.
 
 **(c), (d)**
 
@@ -337,16 +341,34 @@ W_g&=mg\Delta.
 \end{aligned}
 $$
 
-**(e)** Đặt $\alpha=m/m_{\max}<1$. Khi quay đầu, $W_e+W_g=0$:
+(e) Đặt $\alpha=m/m_{\max}<1$. Khi quay đầu, $W_e+W_g=0$:
 
 $$
 \begin{aligned}
 \alpha\Delta&=\sqrt{\Delta^2+R^2}-R,\\
-\Delta_{\max}&=\frac{2R\alpha}{1-\alpha^2}.
+\alpha\Delta+R&=\sqrt{\Delta^2+R^2},\\
+(\alpha\Delta+R)^2&=\Delta^2+R^2.
 \end{aligned}
 $$
 
-**(f)**
+Khai triển bình phương vế trái rồi khử cùng R² ở hai vế:
+
+$$
+\begin{aligned}
+\alpha^2\Delta^2+2\alpha R\Delta&=\Delta^2,\\
+(1-\alpha^2)\Delta^2&=2\alpha R\Delta.
+\end{aligned}
+$$
+
+Nghiệm Δ = 0 là vị trí thả ban đầu. Điểm quay đầu thứ hai có Δ > 0. Với 0 < α < 1, chia hai vế cho Δ và cho 1 − α² được:
+
+$$
+\Delta_{\max}=\frac{2R\alpha}{1-\alpha^2}.
+$$
+
+Hai vế ở bước trước khi bình phương đều không âm, nên phép bình phương không thêm nghiệm trái dấu. Điều kiện α < 1 cũng bảo đảm độ sâu tìm được dương và hữu hạn.
+
+(f)
 
 $$
 \begin{aligned}
@@ -354,11 +376,11 @@ v&=\sqrt{2g\left[\Delta-\frac{\sqrt{\Delta^2+R^2}-R}{\alpha}\right]}.
 \end{aligned}
 $$
 
-**(g)** Đổi mật độ thành $10^{-5}$ C/m², được $m_{\max}=57.7$ g, $\alpha=0.434$ và $\Delta_{\max}=10.7$ cm.
+(g) Đổi mật độ thành $10^{-5}$ C/m², được $m_{\max}=57.7$ g, $\alpha=0.434$ và $\Delta_{\max}=10.7$ cm.
 :::
 
 ::: exercise 21.92 ••• CP
-Hai thanh cách điện cứng dài L, khối lượng không đáng kể, nối tâm bằng bản lề không ma sát. Một thanh cố định nằm ngang trên trụ đứng, thanh kia quay tự do theo phương ngang. Mỗi đầu thanh có cầu nhỏ điện tích Q, khối lượng M. Khi thanh vuông góc, mômen tổng lên thanh động bằng không. Thanh cố định theo trục x, tâm bản lề tại gốc, thanh động quay theo chiều kim đồng hồ khi nhìn từ trên như Hình P21.92. Gọi góc giữa thanh là $\theta$. **(a)** Tìm lực $\vec F_1$ do cầu trái thanh cố định lên cầu phía trên bên phải thanh động theo $\theta$. **(b)** Tìm lực $\vec F_2$ do cầu phải thanh cố định lên cùng cầu đó. **(c)** Tìm mômen $\vec F_1$ quanh bản lề. **(d)** Tìm mômen $\vec F_2$. **(e)** Tính mômen tổng lên thanh động, kể cả đóng góp từ hai đầu. **(f)** Gần cân bằng $\theta=\pi/2$, đặt $\theta=\pi/2-\epsilon$. Dùng khai triển chuỗi lũy thừa ở Phụ lục B, giữ số hạng bậc thấp nhất theo $\epsilon$ để tìm mômen. **(g)** Với biên độ nhỏ, hệ là dao động xoắn. Từ kết quả trước, tìm tần số dao động nhỏ.
+Hai thanh cách điện cứng dài L, khối lượng không đáng kể, nối tâm bằng bản lề không ma sát. Một thanh cố định nằm ngang trên trụ đứng, thanh kia quay tự do theo phương ngang. Mỗi đầu thanh có cầu nhỏ điện tích Q, khối lượng M. Khi thanh vuông góc, mômen tổng lên thanh động bằng không. Thanh cố định theo trục x, tâm bản lề tại gốc, thanh động quay theo chiều kim đồng hồ khi nhìn từ trên như Hình P21.92. Gọi góc giữa thanh là $\theta$. (a) Tìm lực $\vec F_1$ do cầu trái thanh cố định lên cầu phía trên bên phải thanh động theo $\theta$. (b) Tìm lực $\vec F_2$ do cầu phải thanh cố định lên cùng cầu đó. (c) Tìm mômen $\vec F_1$ quanh bản lề. (d) Tìm mômen $\vec F_2$. (e) Tính mômen tổng lên thanh động, kể cả đóng góp từ hai đầu. (f) Gần cân bằng $\theta=\pi/2$, đặt $\theta=\pi/2-\epsilon$. Dùng khai triển chuỗi lũy thừa ở Phụ lục B, giữ số hạng bậc thấp nhất theo $\epsilon$ để tìm mômen. (g) Với biên độ nhỏ, hệ là dao động xoắn. Từ kết quả trước, tìm tần số dao động nhỏ.
 :::
 
 ![Hình P21.92: Bốn điện tích tại đầu hai thanh nối bằng bản lề](img/young-21/hinh-p21-92.png)

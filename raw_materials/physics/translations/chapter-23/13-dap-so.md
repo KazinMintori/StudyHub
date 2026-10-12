@@ -19,7 +19,7 @@
 | VP23.12.3 | Thế năng $1.61\times10^{-6}$ J và $5.39\times10^{-6}$ J. Tại tâm, động năng $3.42\times10^{-6}$ J, tốc độ 41,3 m/s |
 | VP23.12.4 | dq = (Q/L)dx, V(0) = (kQ/L)ln2 |
 
-Câu hỏi mở đầu chọn **(iii)**. Khi điện áp giữa dụng cụ và kim loại được giữ cố định, khoảng cách nhỏ làm điện trường lớn, đủ để ion hóa khí và tạo hồ quang.
+Câu hỏi mở đầu chọn (iii). Khi điện áp giữa dụng cụ và kim loại được giữ cố định, khoảng cách nhỏ làm điện trường lớn, đủ để ion hóa khí và tạo hồ quang.
 
 Với bài tổng hợp, công ngoài đưa nguồn q chậm từ vô hạn đến x = L > a là:
 

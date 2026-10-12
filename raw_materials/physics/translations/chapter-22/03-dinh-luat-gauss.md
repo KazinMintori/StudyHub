@@ -117,7 +117,7 @@ Vì vậy, khi $Q_{\mathrm{trong}}=0$, điện thông tổng phải bằng khôn
 
 Định luật đã trả lời câu hỏi đi từ trường trên mặt đến điện tích bên trong. Theo chiều ngược lại, nếu biết phân bố điện tích, ta có thể tìm trường hay không? Điều đó còn phụ thuộc việc có tính được tích phân hay không. Các cấu hình đối xứng sẽ làm bước này đặc biệt đơn giản.
 
-### Ví dụ 22.4 — Điện thông và điện tích được bao
+### Ví dụ 22.4: Điện thông và điện tích được bao
 
 Hình 22.15 biểu diễn trường của lưỡng cực gồm $+q$ và $-q$. Tìm điện thông qua các mặt kín A, B, C và D.
 

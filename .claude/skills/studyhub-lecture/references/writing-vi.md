@@ -109,6 +109,8 @@ Cho phép câu có nhịp dài ngắn khác nhau, đối chiếu hoặc một c�
 
 Dấu câu được chọn theo ngữ pháp và nhịp đọc. Theo yêu cầu biên tập của StudyHub, hạn chế dấu chấm phẩy trong lời giảng. Hãy dùng từ nối đúng quan hệ hoặc tách thành câu có chủ ngữ rõ ràng. Chẳng hạn, dùng “còn” để đối chiếu, “vì” để nêu lý do và “sau đó” để nối các bước. Không đổi mọi dấu chấm phẩy thành cùng một từ nối. Với slide, tránh chuỗi nhiều vế khó đọc lướt.
 
+Hạn chế tối đa dấu gạch ngang dài (em dash `—` hoặc `--`) trong câu văn xuôi: Tuyệt đối không lạm dụng em dash để chêm xen vế phụ giải thích giữa câu (thói quen dịch máy bắt chước ngữ pháp tiếng Anh làm gãy vụn nhịp đọc tiếng Việt). Thay vào đó, hãy dùng dấu phẩy cho vế phụ ngắn liền mạch, dùng dấu ngoặc đơn `(...)` cho chú thích bổ trợ hoặc thuật ngữ tương đương, dùng dấu hai chấm `:` khi chuẩn bị phát biểu định nghĩa hoặc giải thích bản chất, dùng từ nối tiếng Việt tự nhiên (*tức là, cụ thể là, nghĩa là, đồng nghĩa với việc...*), hoặc tách thành hai câu đơn độc lập. Dấu gạch ngang chỉ dùng hợp lệ cho khoảng số hoặc thời gian (`1945–1975`), tên định lý liên danh (*Cauchy–Schwarz*), hoặc gạch đầu dòng danh sách.
+
 Tra [Từ nối và cách diễn đạt tiếng Việt](tu-noi-va-dien-dat.md) để chọn từ theo chức năng, phân biệt sắc thái và xem nguồn từ điển. Làm phong phú vốn từ bằng cách gọi đúng thao tác và quan hệ, không bằng từ hiếm hoặc việc thay thuật ngữ chuyên môn bằng các từ gần nghĩa tùy tiện. Dấu chấm phẩy trong code, ký pháp toán và thực thể HTML phải được giữ nguyên.
 
 Giữ hình ảnh ngôn ngữ khi nó có ánh xạ rõ và vừa với người học. Không biến cả khóa học thành một ẩn dụ sân khấu, hành trình hoặc cánh cửa. Giọng văn có sức dẫn vẫn phải giúp người học gọi đúng khái niệm.

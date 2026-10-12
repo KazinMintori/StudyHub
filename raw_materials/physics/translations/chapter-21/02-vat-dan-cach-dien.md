@@ -8,7 +8,7 @@ Treo một dây đồng bằng sợi nylon, cho một đầu dây chạm thanh n
 
 ![Hình 21.6: Truyền điện tích qua dây đồng đến quả cầu kim loại](../img/young-21/hinh-21-6.png)
 
-**Hình 21.6:** (a) Dây đồng truyền điện tích âm từ thanh nhựa đến quả cầu. Sợi nylon cách điện ngăn điện tích thoát khỏi dây và cầu. (b) Sau đó, thanh nhựa âm đẩy quả cầu. (c) Thanh thủy tinh dương hút quả cầu. Những nhãn trong hình chỉ dây đồng, sợi nylon cách điện, quả cầu kim loại và các thanh nhiễm điện.
+**Hình 21.6:** (a) Dây đồng truyền điện tích âm từ thanh nhựa đến quả cầu. Sợi nylon cách điện ngăn điện tích thoát khỏi dây và cầu. (b) Sau đó, thanh nhựa âm đẩy quả cầu. (c) Thanh thủy tinh dương hút quả cầu.
 
 Dây đồng là **vật dẫn điện**. Nếu thay dây bằng dây cao su hoặc sợi nylon, điện tích không chuyển được đến cầu theo cách ấy. Cao su và nylon là **vật cách điện**. Vật dẫn cho điện tích dễ di chuyển bên trong, còn vật cách điện thì không.
 
@@ -26,7 +26,7 @@ Không phải mọi electron tự do đều chạy sang mặt xa. Ngay khi đi�
 
 ![Hình 21.7: Năm bước làm quả cầu nhiễm điện dương bằng hưởng ứng](../img/young-21/hinh-21-7.png)
 
-**Hình 21.7:** (a) Cầu kim loại trung hòa trên giá cách điện. (b) Thanh âm ở gần đẩy electron sang phía xa, tạo vùng dư electron và vùng thiếu electron. (c) Nối phía xa với đất bằng dây dẫn làm một phần electron chảy xuống đất. (d) Tháo dây nối đất trước, cầu còn thiếu electron. (e) Lấy thanh ra, electron phân bố lại nhưng tổng điện tích của cầu vẫn dương. Những nhãn tương ứng chỉ quả cầu, giá cách điện, thanh âm, dây nối và điện tích âm truyền xuống đất.
+**Hình 21.7:** (a) Cầu kim loại trung hòa trên giá cách điện. (b) Thanh âm ở gần đẩy electron sang phía xa, tạo vùng dư electron và vùng thiếu electron. (c) Nối phía xa với đất bằng dây dẫn làm một phần electron chảy xuống đất. (d) Tháo dây nối đất trước, cầu còn thiếu electron. (e) Lấy thanh ra, electron phân bố lại nhưng tổng điện tích của cầu vẫn dương.
 
 Trái Đất là vật dẫn rất lớn, có thể coi như nguồn cung electron hoặc nơi nhận electron gần như vô hạn. Khi nối cầu với đất trong lúc thanh còn ở gần, một phần điện tích âm chảy theo dây xuống đất. Tháo dây trước rồi mới lấy thanh ra để điện tích dương còn lại trên cầu. Điện tích thanh âm không đổi trong toàn quá trình. Đất nhận điện tích âm có độ lớn bằng điện tích dương còn lại trên cầu, nên tổng điện tích được bảo toàn.
 
@@ -42,22 +42,22 @@ Lược dương cũng hút vật cách điện trung hòa. Khi ấy electron d�
 
 **Hình 21.8:** (a) Lược hút những mảnh nhựa. (b) Lược âm đẩy electron trong mỗi phân tử ra xa, để điện tích dương ở gần hơn. (c) Lược dương hút electron về gần, để điện tích âm ở gần hơn. Trong cả hai trường hợp, lực hút ở phía gần mạnh hơn lực đẩy ở phía xa. Vật trung hòa tác dụng lại lên lược bằng lực hút cùng độ lớn và ngược chiều, theo định luật III Newton.
 
-### Ứng dụng — Sơn tĩnh điện
+### Ứng dụng: Sơn tĩnh điện
 
 ![Hình 21.9: Sơn tĩnh điện lên vật kim loại nối đất](../img/young-21/hinh-21-9.png)
 
-**Hình 21.9:** Đầu phun tạo các giọt sơn âm, còn vật kim loại được nối đất. Khi giọt sơn tiến đến, điện tích dương hưởng ứng xuất hiện trên bề mặt và hút giọt sơn vào vật. Quá trình giảm lượng sơn bay lạc ra ngoài và tạo bề mặt phủ đặc biệt nhẵn. Các nhãn chỉ đầu phun, luồng giọt sơn âm, vật kim loại và đất.
+**Hình 21.9:** Đầu phun tạo các giọt sơn âm, còn vật kim loại được nối đất. Khi giọt sơn tiến đến, điện tích dương hưởng ứng xuất hiện trên bề mặt và hút giọt sơn vào vật. Quá trình giảm lượng sơn bay lạc ra ngoài và tạo bề mặt phủ đặc biệt nhẵn.
 
 ::: exercise Câu hỏi ôn lại mục 21.2
 Có hai quả cầu kim loại nhẹ, mỗi quả treo bằng sợi nylon cách điện. Một cầu mang điện tổng âm, cầu kia có điện tích tổng bằng không.
 
-**(a)** Đưa chúng lại gần nhưng không cho chạm nhau. Chúng **(i)** hút, **(ii)** đẩy, hay **(iii)** không tác dụng lực lên nhau?
+(a) Đưa chúng lại gần nhưng không cho chạm nhau. Chúng (i) hút, (ii) đẩy, hay (iii) không tác dụng lực lên nhau?
 
-**(b)** Cho hai cầu chạm nhau rồi tách ra. Khi đó chúng **(i)** hút, **(ii)** đẩy, hay **(iii)** không tác dụng lực lên nhau?
+(b) Cho hai cầu chạm nhau rồi tách ra. Khi đó chúng (i) hút, (ii) đẩy, hay (iii) không tác dụng lực lên nhau?
 :::
 
 ::: solution Giải thích
-**(a)** Chọn **(i)**. Cầu âm đẩy electron trong cầu trung hòa, tạo vùng dương gần và vùng âm xa. Vùng dương gần chịu lực hút mạnh hơn lực đẩy lên vùng âm xa, nên hai cầu hút nhau.
+(a) Chọn (i). Cầu âm đẩy electron trong cầu trung hòa, tạo vùng dương gần và vùng âm xa. Vùng dương gần chịu lực hút mạnh hơn lực đẩy lên vùng âm xa, nên hai cầu hút nhau.
 
-**(b)** Chọn **(ii)**. Khi chạm nhau, một phần electron dư chuyển từ cầu âm sang cầu còn lại vì kim loại dẫn điện. Cả hai cầu mang điện tổng âm nên đẩy nhau.
+(b) Chọn (ii). Khi chạm nhau, một phần electron dư chuyển từ cầu âm sang cầu còn lại vì kim loại dẫn điện. Cả hai cầu mang điện tổng âm nên đẩy nhau.
 :::

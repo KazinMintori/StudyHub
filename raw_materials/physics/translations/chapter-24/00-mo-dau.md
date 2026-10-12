@@ -11,7 +11,7 @@ Với một tụ trong mô hình đang xét, tỷ số điện tích trên một
 Năng lượng của tụ còn gắn với điện trường giữa các vật dẫn. Ta sẽ diễn tả thế năng điện như năng lượng được tích trữ trong chính điện trường. Cách nhìn này dẫn tới lý thuyết sóng điện từ và bản chất ánh sáng ở chương 32.
 
 ::: exercise Câu hỏi mở đầu
-Trong đèn flash, hai vật dẫn của tụ ở gần nhau và mang điện tích trái dấu. Nếu độ lớn điện tích trên mỗi vật tăng gấp đôi, năng lượng tích trữ tăng bao nhiêu lần? **(i)** √2, **(ii)** 2, **(iii)** 2√2, **(iv)** 4, hay **(v)** 8?
+Trong đèn flash, hai vật dẫn của tụ ở gần nhau và mang điện tích trái dấu. Nếu độ lớn điện tích trên mỗi vật tăng gấp đôi, năng lượng tích trữ tăng bao nhiêu lần? (i) √2, (ii) 2, (iii) 2√2, (iv) 4, hay (v) 8?
 :::
 
 Sau chương này, bạn cần:

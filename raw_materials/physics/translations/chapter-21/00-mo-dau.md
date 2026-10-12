@@ -10,18 +10,18 @@ Ta bắt đầu bằng bản chất của điện tích: Điện tích được 
 
 Những ý tưởng nền của điện từ học không quá phức tạp, nhưng giải bài toán cụ thể đòi hỏi hình học, phép toán vector và tích phân. Khi tính lực hoặc trường, cần xác định đồng thời độ lớn, hướng và miền áp dụng của mô hình.
 
-::: exercise Bài toán mở đầu — Vì sao nước là dung môi tốt?
+::: exercise Bài toán mở đầu: Vì sao nước là dung môi tốt?
 Nước làm sự sống có thể tồn tại. Các tế bào không hoạt động được nếu thiếu nước để hòa tan những phân tử sinh học thiết yếu. Nước là dung môi tốt vì các phân tử của nó:
 
-**(i)** Có điện tích tổng bằng không.
+(i) Có điện tích tổng bằng không.
 
-**(ii)** Có điện tích tổng bằng không, nhưng tâm điện tích dương và tâm điện tích âm không trùng nhau.
+(ii) Có điện tích tổng bằng không, nhưng tâm điện tích dương và tâm điện tích âm không trùng nhau.
 
-**(iii)** Có điện tích tổng khác không.
+(iii) Có điện tích tổng khác không.
 
-**(iv)** Không đáp ứng lực điện.
+(iv) Không đáp ứng lực điện.
 
-**(v)** Tác dụng lực đẩy điện lên nhau.
+(v) Tác dụng lực đẩy điện lên nhau.
 :::
 
 Ta sẽ trở lại câu hỏi này sau khi xây dựng khái niệm lưỡng cực điện.

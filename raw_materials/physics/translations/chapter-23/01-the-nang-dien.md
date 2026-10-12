@@ -8,9 +8,8 @@ Khi lực $\vec F$ tác dụng lên hạt đi từ a đến b, công được t�
 
 $$
 \begin{aligned}
-&W_{a\to b}\\
-&=\int_a^b\vec F\cdot d\vec\ell\\
-&=\int_a^bF\cos\varphi\,d\ell.
+W_{a\to b}&=\int_a^b\vec F\cdot d\vec\ell\\
+&=\int_a^bF\cos\varphi\,d\ell
 \end{aligned}
 \tag{23.1}
 $$
@@ -32,10 +31,7 @@ Công dương làm thế năng giảm. Khi quả bóng rơi, trọng lực sinh 
 Định lý công–động năng cho biến thiên động năng bằng tổng công. Nếu chỉ các lực thế sinh công, biến thiên động năng bằng âm biến thiên thế năng, nên:
 
 $$
-\begin{aligned}
-&K_a+U_a\\
-&=K_b+U_b.
-\end{aligned}
+K_a+U_a=K_b+U_b
 \tag{23.3}
 $$
 
@@ -47,8 +43,8 @@ Hai bản kim loại song song lớn tạo trường đều hướng xuống, đ
 
 $$
 \begin{aligned}
-&W_{a\to b}\\
-&=Fd=q_0Ed.
+W_{a\to b}&=Fd\\
+&=q_0Ed
 \end{aligned}
 \tag{23.4}
 $$
@@ -66,10 +62,9 @@ Mốc U = 0 được chọn tại y = 0. Vì vậy:
 
 $$
 \begin{aligned}
-&W_{a\to b}\\
-&=-\Delta U\\
+W_{a\to b}&=-\Delta U\\
 &=-q_0E(y_b-y_a)\\
-&=q_0E(y_a-y_b).
+&=q_0E(y_a-y_b)
 \end{aligned}
 \tag{23.6}
 $$
@@ -97,11 +92,8 @@ Hai điện tích cùng dấu cho Fᵣ dương, lực đẩy. Hai điện tích 
 
 $$
 \begin{aligned}
-&W_{a\to b}\\
-&=kqq_0\\
-&\quad\times\int_{r_a}^{r_b}\frac{dr}{r^2}\\
-&=kqq_0\\
-&\quad\times\left(\frac1{r_a}-\frac1{r_b}\right).
+W_{a\to b}&=kqq_0\int_{r_a}^{r_b}\frac{dr}{r^2}\\
+&=kqq_0\left(\frac1{r_a}-\frac1{r_b}\right)
 \end{aligned}
 \tag{23.8}
 $$
@@ -127,27 +119,31 @@ Thế năng này thuộc **hệ tương tác của hai điện tích**, không t
 
 Công thức cũng dùng được khi q₀ ở ngoài một phân bố cầu đối xứng có tổng q. Khoảng cách r lúc ấy đo đến tâm phân bố, vì Gauss cho trường ngoài giống nguồn điểm q ở tâm.
 
-### Ví dụ 23.1 — Bảo toàn năng lượng với lực điện
+### Ví dụ 23.1: Bảo toàn năng lượng với lực điện
 
-Positron, phản hạt của electron, có khối lượng $m=9.11\times10^{-31}$ kg và điện tích $q_0=+1.60\times10^{-19}$ C. Hạt α có $q=+3.20\times10^{-19}$ C, khối lượng $6.64\times10^{-27}$ kg. Hạt α nặng hơn positron trên 7000 lần, nên coi nó đứng yên. Ở $r_a=1.00\times10^{-10}$ m, positron bay thẳng ra xa với $v_a=3.00\times10^6$ m/s. **(a)** Tìm tốc độ tại $r_b=2.00\times10^{-10}$ m. **(b)** Tìm tốc độ ở rất xa. **(c)** Giữ cùng điều kiện đầu nhưng thay positron bằng electron cùng khối lượng, điện tích âm, mô tả chuyển động sau đó.
+Positron, phản hạt của electron, có khối lượng $m=9.11\times10^{-31}$ kg và điện tích $q_0=+1.60\times10^{-19}$ C. Hạt α có $q=+3.20\times10^{-19}$ C, khối lượng $6.64\times10^{-27}$ kg. Hạt α nặng hơn positron trên 7000 lần, nên coi nó đứng yên. Ở $r_a=1.00\times10^{-10}$ m, positron bay thẳng ra xa với $v_a=3.00\times10^6$ m/s. (a) Tìm tốc độ tại $r_b=2.00\times10^{-10}$ m. (b) Tìm tốc độ ở rất xa. (c) Giữ cùng điều kiện đầu nhưng thay positron bằng electron cùng khối lượng, điện tích âm, mô tả chuyển động sau đó.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Lực điện là lực thế và nguồn α được coi cố định, nên bảo toàn cơ năng của hạt chuyển động với thế năng tương tác kqq₀/r. Với positron, lực đẩy làm hạt nhanh lên khi ra xa.
 
-**(a)** Các năng lượng đầu và thế năng cuối là:
+(a) Các năng lượng đầu và thế năng cuối là:
 
 $$
 \begin{aligned}
-K_a&=\frac12mv_a^2=4.10\times10^{-18}\,\mathrm J,\\
-U_a&=kqq_0/r_a=4.61\times10^{-18}\,\mathrm J,\\
-U_b&=kqq_0/r_b=2.30\times10^{-18}\,\mathrm J,\\
+K_a&=\frac12mv_a^2\\
+&=4.10\times10^{-18}\,\mathrm J,\\
+U_a&=kqq_0/r_a\\
+&=4.61\times10^{-18}\,\mathrm J,\\
+U_b&=kqq_0/r_b\\
+&=2.30\times10^{-18}\,\mathrm J,\\
 K_b&=K_a+U_a-U_b\\
 &=6.41\times10^{-18}\,\mathrm J,\\
-v_b&=\sqrt{2K_b/m}\approx3.8\times10^6\,\mathrm{m/s}.
+v_b&=\sqrt{2K_b/m}\\
+&\approx3.8\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
-**(b)** Ở vô hạn, U tiến về không, nên:
+(b) Ở vô hạn, U tiến về không, nên:
 
 $$
 \begin{aligned}
@@ -157,7 +153,7 @@ v_\infty&\approx4.4\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
-**(c)** Electron bị hút về α và chậm lại khi đi ra. Thế năng đầu đổi thành $-4.61\times10^{-18}$ J, nên cơ năng đầu khoảng $-0.51\times10^{-18}$ J. Ở vô hạn, thế năng bằng không và động năng không thể âm, vì vậy cơ năng âm không cho electron thoát ra vô hạn.
+(c) Electron bị hút về α và chậm lại khi đi ra. Thế năng đầu đổi thành $-4.61\times10^{-18}$ J, nên cơ năng đầu khoảng $-0.51\times10^{-18}$ J. Ở vô hạn, thế năng bằng không và động năng không thể âm, vì vậy cơ năng âm không cho electron thoát ra vô hạn.
 
 Hạt đến khoảng cách lớn nhất r_d thì vận tốc và động năng bằng không. Đặt U_d bằng cơ năng đầu:
 
@@ -204,7 +200,7 @@ Mọi phân bố tĩnh đều có thể chia thành nguồn điểm hoặc phầ
 
 Trong (23.9), (23.10), mốc U = 0 được đặt khi q₀ ở rất xa mọi nguồn. Có thể cộng một hằng số để chọn mốc khác mà không đổi công hoặc lực. Mốc vô hạn thường thuận tiện trong tĩnh điện, còn trong mạch điện có những mốc phù hợp hơn.
 
-### Ứng dụng — Động cơ ion
+### Ứng dụng: Động cơ ion
 
 Động cơ ion của tàu vũ trụ dùng lực điện phóng các ion xenon dương $\mathrm{Xe^+}$ với tốc độ trên 30 km/s. Lực đẩy có thể rất nhỏ, khoảng 0,09 N trong cấu hình được xét, nhưng duy trì liên tục nhiều ngày. Điều đó khác tên lửa hóa học tạo lực lớn trong thời gian ngắn. Các động cơ ion đã được sử dụng để điều khiển tàu liên hành tinh.
 
@@ -235,16 +231,16 @@ Có thể đi từ công của lực điện: Hạt đi từ a đến b thì cô
 
 Cũng có thể hỏi công của người đưa hạt từ b lên a **thật chậm**, sao cho động năng không đổi. Khi ấy lực ngoài bằng và ngược lực điện, công lực ngoài bằng Uₐ − Uᵦ. Nếu đưa hạt xuống vùng thế năng thấp hơn, công lực ngoài âm. Hai cách hiểu tương đương, nhưng phải giữ đúng chiều di chuyển và phân biệt lực nào đang sinh công.
 
-### Ví dụ 23.2 — Hệ ba nguồn điểm
+### Ví dụ 23.2: Hệ ba nguồn điểm
 
-Hai nguồn cố định trên trục x, q₁ = −e tại x = 0 và q₂ = +e tại x = a. **(a)** Tìm công lực ngoài để đưa q₃ = +e chậm từ vô hạn đến x = 2a. **(b)** Tìm thế năng tổng hệ ba nguồn.
+Hai nguồn cố định trên trục x, q₁ = −e tại x = 0 và q₂ = +e tại x = a. (a) Tìm công lực ngoài để đưa q₃ = +e chậm từ vô hạn đến x = 2a. (b) Tìm thế năng tổng hệ ba nguồn.
 
 ![Hình 23.10: Ba điện tích −e, +e, +e ở x = 0, a, 2a](../img/young-23/hinh-23-10.png)
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Ở (a), chỉ tính tương tác mới giữa q₃ với hai nguồn có sẵn. Ở (b), tính cả cặp q₁,q₂.
 
-**(a)** Hai khoảng cách từ q₃ đến q₁,q₂ là 2a và a. Công ngoài bằng phần thế năng được thêm, vì tại vô hạn phần ấy bằng không:
+(a) Hai khoảng cách từ q₃ đến q₁,q₂ là 2a và a. Công ngoài bằng phần thế năng được thêm, vì tại vô hạn phần ấy bằng không:
 
 $$
 \begin{aligned}
@@ -255,7 +251,7 @@ $$
 
 Kết quả dương. Khi đưa q₃ vào từ phía +x, lực đẩy của nguồn dương gần hơn mạnh hơn lực hút của nguồn âm xa hơn, nên phải sinh công dương.
 
-**(b)** Cộng ba cặp:
+(b) Cộng ba cặp:
 
 $$
 \begin{aligned}
@@ -268,7 +264,7 @@ $$
 :::
 
 ::: exercise Câu hỏi ôn lại mục 23.1
-Xét ba điện tích trong Ví dụ 21.4 và Hình 21.14. **(a)** Thế năng tổng có dấu dương, âm hay bằng không? **(b)** Công ngoài để đưa chúng thật chậm ra xa nhau vô hạn có dấu dương, âm hay bằng không?
+Xét ba điện tích trong Ví dụ 21.4 và Hình 21.14. (a) Thế năng tổng có dấu dương, âm hay bằng không? (b) Công ngoài để đưa chúng thật chậm ra xa nhau vô hạn có dấu dương, âm hay bằng không?
 :::
 
 ::: solution Giải thích

@@ -22,6 +22,8 @@ Một bóng cao su chứa một điện tích điểm. Điện thông qua bóng 
 Nếu cả hai nguồn trong Hình 22.15 đều dương, điện thông qua A, B, C và D bằng bao nhiêu?
 :::
 
+![Hình 22.15: Bốn mặt kín bao những phần khác nhau của một lưỡng cực](img/young-22/hinh-22-15.png)
+
 <!-- detailed-solution:Q22.2 -->
 ::: solution Chi tiết
 **Tóm tắt đề bài:** Thay −q thành +q, giữ các mặt bao như cũ.
@@ -38,6 +40,8 @@ Các điện thông theo A,B,C,D là **q/$\varepsilon_0$, q/$\varepsilon_0$, 2q/
 Đặt thêm một điện tích điểm ở ngoài mặt tím C trong Hình 22.15. Điện thông qua A, B, C hoặc D có thay đổi không? Vì sao?
 :::
 
+![Hình 22.15: Bốn mặt kín bao những phần khác nhau của một lưỡng cực](img/young-22/hinh-22-15.png)
+
 <!-- detailed-solution:Q22.3 -->
 ::: solution Chi tiết
 **Tóm tắt đề bài:** Nguồn mới nằm ngoài các mặt đang xét trong hình.
@@ -47,7 +51,7 @@ Các điện thông theo A,B,C,D là **q/$\varepsilon_0$, q/$\varepsilon_0$, 2q/
 - Trường nguồn ngoài có thể khác không trên mặt nhưng điện thông tổng của nó bằng không.
 - Gauss chỉ đếm nguồn được bao.
 
-Không điện thông nào thay đổi nếu nguồn mới nằm ngoài cả A,B,C,D. Cần lưu ý rằng “ngoài C” nói chung chưa tự bảo đảm “ngoài mọi mặt khác”. Nếu đặt nguồn vào trong D nhưng vẫn ngoài C, điện thông qua D sẽ đổi. Với cách hiểu nguồn được đặt ngoài toàn bộ các mặt của hình, cả bốn kết quả giữ nguyên.
+Trong Hình 22.15, các mặt A, B và D đều nằm trong mặt C. Nguồn mới ở ngoài C vì thế cũng ở ngoài ba mặt còn lại. Nó có thể làm điện trường tại từng điểm trên các mặt thay đổi, nhưng không làm thay đổi điện thông tổng qua bất kỳ mặt nào. Cả bốn điện thông giữ nguyên.
 :::
 
 ::: exercise Q22.4
@@ -150,6 +154,8 @@ Không mâu thuẫn. Electron tự do có mặt và chuyển động vi mô tron
 Nạp điện máy Van de Graaff ở Hình 22.26, rồi đưa đến gần một vỏ cầu dẫn giống hệt nhưng trung hòa, không cho hai cầu chạm nhau. Phác phân bố điện tích trên cầu thứ hai. Điện thông tổng qua nó và trường trong nó bằng bao nhiêu?
 :::
 
+![Hình 22.26: Đai cách điện chuyển điện tích đến vỏ dẫn của máy Van de Graaff](img/young-22/hinh-22-26.png)
+
 <!-- detailed-solution:Q22.10 -->
 ::: solution Chi tiết
 **Tóm tắt đề bài:** Cầu thứ hai trung hòa, có hốc trống, đặt gần nguồn ngoài dương.
@@ -212,7 +218,7 @@ Trên vật dẫn, thành phần tiếp tuyến khác không làm điện tích 
 :::
 
 ::: exercise Q22.14
-Một vùng có điện trường đều. **(a)** Dùng Gauss chứng minh mật độ thể tích ρ trong vùng phải bằng không. **(b)** Chiều đảo có đúng không, tức vùng không có điện tích có buộc trường đều không?
+Một vùng có điện trường đều. (a) Dùng Gauss chứng minh mật độ thể tích ρ trong vùng phải bằng không. (b) Chiều đảo có đúng không, tức vùng không có điện tích có buộc trường đều không?
 :::
 
 <!-- detailed-solution:Q22.14 -->
@@ -224,11 +230,11 @@ Một vùng có điện trường đều. **(a)** Dùng Gauss chứng minh mật
 - Với trường đều, điện thông hai mặt đối diện triệt tiêu.
 - Gauss cho điện tích trong mọi hộp nhỏ bằng không, suy ra mật độ bằng không.
 
-**(a)** Φ = 0 cho mọi hộp nên Q được bao bằng không ở mọi phần thể tích, tức ρ = 0. **(b)** Không. Một vùng ngoài nguồn điểm không chứa điện tích nhưng trường thay đổi theo khoảng cách và hướng. Điều kiện mật độ không không buộc trường đều.
+(a) Φ = 0 cho mọi hộp nên Q được bao bằng không ở mọi phần thể tích, tức ρ = 0. (b) Không. Một vùng ngoài nguồn điểm không chứa điện tích nhưng trường thay đổi theo khoảng cách và hướng. Điều kiện mật độ không không buộc trường đều.
 :::
 
 ::: exercise Q22.15
-**(a)** Trong vùng có mật độ thể tích dương đều ρ, trường có thể đều không? Giải thích. **(b)** Nếu trong vùng có một “bong bóng” mà ρ = 0, trường trong bong bóng có thể đều không?
+(a) Trong vùng có mật độ thể tích dương đều ρ, trường có thể đều không? Giải thích. (b) Nếu trong vùng có một “bong bóng” mà ρ = 0, trường trong bong bóng có thể đều không?
 :::
 
 <!-- detailed-solution:Q22.15 -->
@@ -240,7 +246,7 @@ Một vùng có điện trường đều. **(a)** Dùng Gauss chứng minh mật
 - Dùng kết quả Q22.14 để loại trừ trường đều ở vùng có ρ khác không.
 - Với bong bóng, xét một cấu hình cụ thể bằng chồng chất thay vì suy từ ρ = 0 sang “bắt buộc đều”.
 
-**(a)** Không. Trường đều sẽ cho điện thông không qua hộp nhỏ, trái với điện tích dương trong hộp. **(b)** Có thể. Một hốc cầu nằm trong cầu tích điện đều cho trường đều như Bài 22.53. Nhưng không phải mọi hình dạng bong bóng hoặc phân bố xung quanh đều cho trường đều. Mật độ không chỉ làm điều đó có thể xảy ra, không bảo đảm nó.
+(a) Không. Trường đều sẽ cho điện thông không qua hộp nhỏ, trái với điện tích dương trong hộp. (b) Có thể. Một hốc cầu nằm trong cầu tích điện đều cho trường đều như Bài 22.53. Nhưng không phải mọi hình dạng bong bóng hoặc phân bố xung quanh đều cho trường đều. Mật độ không chỉ làm điều đó có thể xảy ra, không bảo đảm nó.
 :::
 
 ::: exercise Q22.16

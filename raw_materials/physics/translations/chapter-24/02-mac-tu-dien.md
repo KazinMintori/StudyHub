@@ -19,8 +19,16 @@ Hai bản ở nút c chỉ nối với nhau và tổng điện tích của nút 
 $$
 \begin{aligned}
 V&=V_1+V_2\\
-&=Q(1/C_1+1/C_2),\\
-V/Q&=1/C_1+1/C_2.
+&=Q(1/C_1+1/C_2).
+\end{aligned}
+$$
+
+Chia hai vế cho cùng điện tích Q khác không:
+
+$$
+\begin{aligned}
+V/Q&=1/C_1\\
+&\quad+1/C_2.
 \end{aligned}
 \tag{24.3}
 $$
@@ -57,8 +65,7 @@ $$
 \begin{aligned}
 Q_1&=C_1V,\\
 Q_2&=C_2V,\\
-Q&=Q_1+Q_2\\
-&=(C_1+C_2)V,\\
+Q&=Q_1+Q_2,\\
 Q/V&=C_1+C_2.
 \end{aligned}
 \tag{24.6}
@@ -70,7 +77,8 @@ Tụ tương đương có cùng V và cùng tổng điện tích Q. Với n nhá
 
 $$
 \begin{aligned}
-C_{\mathrm{eq}}&=C_1+C_2+\cdots+C_n\\
+C_{\mathrm{eq}}&=C_1+C_2\\
+&\quad+\cdots+C_n\\
 &=\sum_{i=1}^{n}C_i.
 \end{aligned}
 \tag{24.7}
@@ -78,7 +86,7 @@ $$
 
 i chạy từ 1 đến n qua các tụ song song. Với ít nhất hai tụ dương hữu hạn, C_eq lớn hơn từng điện dung riêng. Điện áp giống nhau nhưng Q chỉ giống nhau nếu C giống nhau. Tổng điện tích mỗi phía là Q₁ + Q₂ + ⋯ + Qₙ.
 
-### Ứng dụng — Màn hình cảm ứng
+### Ứng dụng: Màn hình cảm ứng
 
 Phía sau màn hình điện thoại, máy tính bảng hoặc thiết bị y tế có hai tầng dải dẫn mỏng, trong suốt, chẳng hạn indium tin oxide. Hai tầng được giữ ở một điện áp. Các dải của tầng này vuông góc các dải tầng kia, tạo lưới các tụ tại vị trí chồng lên nhau.
 
@@ -94,14 +102,14 @@ Với nhóm nối tiếp chưa nạp ban đầu, các điện tích cùng độ 
 
 Sau mỗi bước, điện dung nối tiếp phải nhỏ hơn từng thành phần, điện dung song song phải lớn hơn từng thành phần khi có ít nhất hai tụ dương. Những quan hệ ấy giúp nhận một cách ghép bị đọc sai.
 
-### Ví dụ 24.5 — Cùng hai tụ, hai cách mắc
+### Ví dụ 24.5: Cùng hai tụ, hai cách mắc
 
-Cho C₁ = 6,0 µF, C₂ = 3,0 µF và điện áp hai đầu 18 V. Tìm điện dung tương đương, điện tích và điện áp mỗi tụ khi **(a)** nối tiếp, **(b)** song song.
+Cho C₁ = 6,0 µF, C₂ = 3,0 µF và điện áp hai đầu 18 V. Tìm điện dung tương đương, điện tích và điện áp mỗi tụ khi (a) nối tiếp, (b) song song.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Dùng (24.5) cho chuỗi và (24.7) cho các nhánh. Sau đó dùng Q = CV với đúng điện áp của từng nhóm.
 
-**(a)** Nối tiếp:
+(a) Nối tiếp:
 
 $$
 \begin{aligned}
@@ -117,7 +125,7 @@ $$
 
 Điện tích mỗi tụ có cùng độ lớn 36 µC. Tụ điện dung nhỏ hơn chịu điện áp lớn hơn.
 
-**(b)** Song song:
+(b) Song song:
 
 $$
 \begin{aligned}
@@ -140,7 +148,7 @@ Chứng tỏ tổng Q₁ + Q₂ trong cách mắc song song bằng điện tích
 Vì Q₁ = C₁V và Q₂ = C₂V, tổng bằng (C₁ + C₂)V = C_eqV. Quan hệ dùng cùng điện áp V trên hai nhánh.
 :::
 
-### Ví dụ 24.6 — Mạng năm tụ
+### Ví dụ 24.6: Mạng năm tụ
 
 Tìm điện dung tương đương giữa a,b trong Hình 24.10. Mạng có tụ 9 µF nối tiếp với một nhóm song song gồm nhánh 3 µF, nhánh 11 µF và nhánh hai tụ 12 µF, 6 µF nối tiếp.
 
@@ -182,9 +190,9 @@ Khi V_ab = 9,0 V, hãy tự tìm điện tích và điện áp từng tụ trong
 :::
 
 ::: exercise Câu hỏi ôn lại mục 24.2
-Có hai tụ 4 µF và 8 µF, ban đầu chưa nạp. **(a)** Mắc thế nào để tụ 4 µF có điện áp lớn hơn tụ 8 µF? **(b)** Mắc thế nào để tụ 4 µF có điện tích lớn hơn tụ 8 µF? Với mỗi câu chọn **(i)** nối tiếp, **(ii)** song song, **(iii)** cả hai cách, hoặc **(iv)** không cách nào trong hai cách ấy.
+Có hai tụ 4 µF và 8 µF, ban đầu chưa nạp. (a) Mắc thế nào để tụ 4 µF có điện áp lớn hơn tụ 8 µF? (b) Mắc thế nào để tụ 4 µF có điện tích lớn hơn tụ 8 µF? Với mỗi câu chọn (i) nối tiếp, (ii) song song, (iii) cả hai cách, hoặc (iv) không cách nào trong hai cách ấy.
 :::
 
 ::: solution Giải thích
-**(a)** Chọn **(i)**. Nối tiếp giữ cùng Q, nên V = Q/C lớn hơn ở tụ 4 µF. **(b)** Chọn **(iv)**. Nối tiếp cho Q bằng nhau, song song cho Q ở tụ 8 µF lớn hơn vì cùng V. Hai cách ấy không làm tụ 4 µF có điện tích lớn hơn tụ 8 µF trong điều kiện đã cho.
+(a) Chọn (i). Nối tiếp giữ cùng Q, nên V = Q/C lớn hơn ở tụ 4 µF. (b) Chọn (iv). Nối tiếp cho Q bằng nhau, song song cho Q ở tụ 8 µF lớn hơn vì cùng V. Hai cách ấy không làm tụ 4 µF có điện tích lớn hơn tụ 8 µF trong điều kiện đã cho.
 :::
