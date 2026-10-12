@@ -35,9 +35,11 @@
 .VPDocAsideOutline .outline-title { font-size: var(--fs-small); }
 .VPDoc .outline-link.active { color: var(--tim); }
 .lecture-alt .VPDoc .aside { display: none; }
-.Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content { max-width: 100%; }
-.lecture-alt:not(.lecture-slides-layout) .VPDoc .content-container { max-width: 960px; }
-.Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content-container { max-width: 960px; }
+.lecture-layout .VPDoc.has-sidebar .container { justify-content: flex-start; }
+.lecture-layout .VPDoc.has-sidebar .content-container { margin-left: 0; }
+.Layout.lecture-alt .VPDoc.has-aside .content { max-width: 100%; }
+.lecture-alt .VPDoc .content-container { max-width: 960px; }
+.Layout.lecture-alt .VPDoc.has-aside .content-container { max-width: 960px; }
 .lecture-alt .main > .vp-doc, .lecture-alt .VPDocFooter { display: none; }
 .lecture-layout .VPDocFooter .prev-next { display: none; }
 .lecture-layout .VPDocFooter { padding-top: var(--space-4); margin-top: 0; }
@@ -47,8 +49,8 @@
   .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 840px; }
   .lecture-layout .VPDoc .content { max-width: 888px; }
   .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 100%; }
-  .Layout.lecture-alt:not(.lecture-slides-layout) .VPDoc.has-aside .content { max-width: 100%; }
-  .lecture-alt:not(.lecture-slides-layout) .VPDoc .content-container { max-width: 960px; }
+  .Layout.lecture-alt .VPDoc.has-aside .content { max-width: 100%; }
+  .lecture-alt .VPDoc .content-container { max-width: 960px; }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   /* VitePress exposes no token for this intermediate menu breakpoint. */
@@ -63,5 +65,3 @@
   .lecture-layout .VPDoc.has-sidebar .content { padding: 0; }
   .lecture-layout .VPLocalNav { display: none; }
 }
-
-.Layout.lecture-slides-layout .VPDoc.has-aside .content-container { max-width: 688px; }

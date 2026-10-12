@@ -85,7 +85,7 @@ Kết quả $F_x=+0.452$ µN, $F_y=+0.329$ µN.
 - Dùng $kq\vec r/r^3$ cho từng nguồn.
 - Ở hai điểm trên trục y chỉ cộng thành phần đứng; ở điểm c cần cả thành phần ngang và đứng.
 
-**(a)** Hai trường đều hướng xuống, nên $E_x=0$. Thành phần đứng là:
+(a) Hai trường đều hướng xuống, nên $E_x=0$. Thành phần đứng là:
 
 $$
 \begin{aligned}
@@ -94,7 +94,7 @@ E_y&=-\frac{k(4+5)10^{-9}}{0.100^2}\\
 \end{aligned}
 $$
 
-**(b)** Hai trường đối hướng:
+(b) Hai trường đối hướng:
 
 $$
 \begin{aligned}
@@ -104,7 +104,7 @@ E_y&=\frac{k(4.00\times10^{-9})}{0.200^2}\\
 \end{aligned}
 $$
 
-**(c)** Nguồn trên cách điểm c $\sqrt{0.200^2+0.200^2}$ m, có trường phải và xuống; nguồn gốc có trường trái. Cộng cho $E_x=-806$ N/C, $E_y=-318$ N/C.
+(c) Nguồn trên cách điểm c $\sqrt{0.200^2+0.200^2}$ m, có trường phải và xuống; nguồn gốc có trường trái. Cộng cho $E_x=-806$ N/C, $E_y=-318$ N/C.
 
 <!-- solution: VP21.10.2 -->
 

@@ -42,12 +42,12 @@ Quả cầu dẫn đặc bán kính R mang điện tích tổng dương q. Tìm 
 
 $$
 \begin{aligned}
-E(4\pi r^2)&=q/\varepsilon_0,\\
-E&=kq/r^2.
+E(4\pi r^2)&=\frac{q}{\varepsilon_0},\\
+E&=\frac{kq}{r^2}.
 \end{aligned}
 $$
 
-Ngay sát mặt ngoài, $E(R^+)=kq/R^2$. Với $r<R$, mặt không bao điện tích dư. Kết hợp đối xứng với Gauss cho $E(4\pi r^2)=0$, nên E = 0. Tại tâm, trường cũng bằng không.
+Ngay sát mặt ngoài, $E(R^+)=\frac{kq}{R^2}$. Với $r<R$, mặt không bao điện tích dư. Kết hợp đối xứng với Gauss cho $E(4\pi r^2)=0$, nên E = 0. Tại tâm, trường cũng bằng không.
 
 **Đánh giá.** Ngoài cầu, trường giống hệt trường của nguồn điểm q đặt tại tâm. Nếu q âm, trường hướng vào, còn công thức độ lớn dùng |q|. Đồ thị bằng không trong cầu, nhảy tại bề mặt rồi giảm theo $1/r^2$ bên ngoài.
 
@@ -73,7 +73,7 @@ Dây mảnh dài vô hạn có mật độ điện tích dài dương λ. Dùng 
 
 $$
 \begin{aligned}
-E(2\pi r\ell)&=\lambda\ell/\varepsilon_0,\\
+E(2\pi r\ell)&=\frac{\lambda\ell}{\varepsilon_0},\\
 E&=\frac{\lambda}{2\pi\varepsilon_0r}.
 \end{aligned}
 $$
@@ -98,7 +98,7 @@ Mặt phẳng mỏng vô hạn có mật độ điện tích mặt dương σ. T
 
 $$
 \begin{aligned}
-2EA&=\sigma A/\varepsilon_0,\\
+2EA&=\frac{\sigma A}{\varepsilon_0},\\
 E&=\frac{\sigma}{2\varepsilon_0}.
 \end{aligned}
 $$
@@ -123,14 +123,14 @@ Chọn mặt trụ S₁ có một đáy nằm trong vật liệu bản dương v
 
 $$
 \begin{aligned}
-EA&=\sigma A/\varepsilon_0,\\
-E&=\sigma/\varepsilon_0.
+EA&=\frac{\sigma A}{\varepsilon_0},\\
+E&=\frac{\sigma}{\varepsilon_0}.
 \end{aligned}
 $$
 
 Trường hướng từ bản dương sang bản âm. Mặt S₄ cho cùng kết quả. Dùng S₂ và S₃ có một đáy trong vật liệu, đáy kia ở ngoài hệ, điện tích được bao bằng không nên trường ngoài bằng không trong mô hình lý tưởng.
 
-**Đánh giá.** Cũng có thể cộng trường của hai mặt mang điện. Mỗi mặt tạo độ lớn $\sigma/(2\varepsilon_0)$. Ngoài hai bản, hai trường đối nhau và triệt tiêu. Giữa hai bản, chúng cùng chiều và cộng thành $\sigma/\varepsilon_0$. Trường trong vật liệu bản dẫn bằng không. Kết quả trùng Ví dụ 21.12, đồng thời làm rõ điện tích nằm trên những mặt nào của bản dẫn.
+**Đánh giá.** Cũng có thể cộng trường của hai mặt mang điện. Mỗi mặt tạo độ lớn $\frac{\sigma}{2\varepsilon_0}$. Ngoài hai bản, hai trường đối nhau và triệt tiêu. Giữa hai bản, chúng cùng chiều và cộng thành $\frac{\sigma}{\varepsilon_0}$. Trường trong vật liệu bản dẫn bằng không. Kết quả trùng Ví dụ 21.12, đồng thời làm rõ điện tích nằm trên những mặt nào của bản dẫn.
 :::
 
 ### Ví dụ 22.9: Quả cầu cách điện tích điện đều theo thể tích
@@ -146,7 +146,7 @@ Trường hướng từ bản dương sang bản âm. Mặt S₄ cho cùng kết
 
 $$
 \begin{aligned}
-\rho&=\frac{Q}{4\pi R^3/3},\\
+\rho&=\frac{Q}{\frac{4}{3}\pi R^3},\\
 Q_{\mathrm{trong}}&=\rho\frac{4\pi r^3}{3}\\
 &=Q\frac{r^3}{R^3}.
 \end{aligned}
@@ -161,14 +161,14 @@ E&=k\frac{Qr}{R^3}.
 \end{aligned}
 $$
 
-Trường tăng tuyến tính từ không tại tâm đến $kQ/R^2$ ở mặt.
+Trường tăng tuyến tính từ không tại tâm đến $\frac{kQ}{R^2}$ ở mặt.
 
 **Thực hiện ngoài cầu.** Với $r>R$, mặt bao toàn bộ Q:
 
 $$
 \begin{aligned}
-4\pi r^2E&=Q/\varepsilon_0,\\
-E&=kQ/r^2.
+4\pi r^2E&=\frac{Q}{\varepsilon_0},\\
+E&=\frac{kQ}{r^2}.
 \end{aligned}
 $$
 

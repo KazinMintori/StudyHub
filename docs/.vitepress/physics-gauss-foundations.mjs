@@ -7,7 +7,7 @@ export const gaussConcepts={
 const reference='\n\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.'
 export const gaussWikiDetails={
  'dien-thong':'Chia mặt thành phần nhỏ và cộng các tích vô hướng. Với mặt hở phải nêu hướng pháp tuyến, mặt kín luôn chọn ra ngoài. Đơn vị là N m²/C.\n\n$$\n\\Phi_E=\\int_A\\vec E\\cdot d\\vec A.\n$$'+reference,
- 'dinh-luat-gauss':'Dạng tích phân là:\n\n$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=Q_{\\mathrm{trong}}/\\varepsilon_0.\n\\end{aligned}\n$$\n\nNguồn ngoài có thể thay đổi trường tại từng điểm nhưng không đổi điện thông tổng. Chỉ rút E ra ngoài tích phân khi thành phần pháp tuyến không đổi trên phần mặt đang xét.'+reference,
+ 'dinh-luat-gauss':'Dạng tích phân là:\n\n$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=\\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\n\\end{aligned}\n$$\n\nNguồn ngoài có thể thay đổi trường tại từng điểm nhưng không đổi điện thông tổng. Chỉ rút E ra ngoài tích phân khi thành phần pháp tuyến không đổi trên phần mặt đang xét.'+reference,
  'mat-gauss':'Đối xứng cầu dùng cầu đồng tâm. Đối xứng trụ dùng trụ đồng trục. Đối xứng phẳng dùng hình trụ xuyên mặt nguồn với hai đáy song song mặt nguồn. Muốn tính trường tại một điểm, chọn mặt đi qua điểm ấy. Định luật đúng với mọi mặt kín, nhưng chỉ một số lựa chọn làm tích phân đơn giản.'+reference,
  'che-chan-tinh-dien':'Nếu hốc chứa nguồn q, mặt Gauss trong vật liệu dẫn cho điện tích thành hốc −q. Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q. Nối đất cho phép trao đổi điện tích, nên tổng điện tích vật dẫn không còn cố định. Hốc trống có trường bằng không, còn hốc có nguồn nói chung có trường khác không.'+reference
 }

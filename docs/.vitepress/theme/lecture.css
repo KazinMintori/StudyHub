@@ -3,7 +3,35 @@
 .Layout.lecture-exercises-layout .main > .vp-doc { display: block; }
 .lecture-exercises-layout .lecture-notes-content { display: none; }
 .lecture-exercises-layout .lecture-exercises-content { display: block; }
-.lecture-exercises-content > :first-child { margin-top: 0; }
+.lecture-panels:empty { display: none; }
+.lecture-panels { margin: 0; padding: 0; }
+.lecture-layout .lecture-notes-content > :first-child,
+.lecture-layout .main > .vp-doc > div > :first-child,
+.lecture-layout .main > .vp-doc > :first-child,
+.lecture-layout .lecture-exercises-content > :first-child,
+.lecture-layout .lecture-foundations > :first-child,
+.lecture-layout .lecture-slides > :first-child,
+.lecture-layout .lecture-lab-panel > :first-child,
+.lecture-layout .lecture-cheatsheet > :first-child,
+.lecture-layout .lecture-exercises-pending > :first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+.foundations-heading,
+.foundations-heading h2,
+.cheatsheet-heading,
+.cheatsheet-heading h2,
+.cheatsheet-title-group .eyebrow,
+.lab-heading,
+.lab-heading h2,
+.lab-heading .eyebrow,
+.lecture-exercises-pending h2,
+.lecture-slides .empty-state,
+.lecture-slides .course-slide,
+.lab-empty-state {
+  margin-top: 0 !important;
+}
 .Layout.physics-layout mjx-container[display=true] {
   overflow: visible !important;
   padding-inline: 0;
@@ -33,7 +61,7 @@
 .lecture-header h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-3) 0; }
 .lecture-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); font-size: var(--fs-small); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .lecture-meta a { color: var(--tim); }
-.lecture-tabs { position: sticky; top: var(--vp-nav-height); z-index: 20; background: var(--paper); margin: 0 0 var(--space-4); }
+.lecture-tabs { position: sticky; top: var(--vp-nav-height); z-index: 20; background: var(--paper); margin: 0 0 var(--space-5); }
 .lecture-tabs .tab-count { font-size: var(--fs-small); margin-left: var(--space-2); color: var(--ink-3); }
 .draft-notice { color: var(--vang); font-size: var(--fs-ui); margin: var(--space-3) 0; }
 /* Plain reading keeps examples and exercises aligned with the article text. */
@@ -148,7 +176,7 @@
     padding-left: 20px;
     padding-right: 20px;
     gap: var(--space-3);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }

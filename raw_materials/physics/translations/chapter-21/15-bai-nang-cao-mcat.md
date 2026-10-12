@@ -105,7 +105,16 @@ $$
 U(a)=\frac{2kQ^2}{L^2}[H(\infty)-H(a)].
 $$
 
-Khai triển H(a) cho kết quả:
+Thế s = a vào H rồi đổi dấu từng số hạng, ta được:
+
+$$
+\begin{aligned}
+-H(a)&=L\ln\frac{L+\sqrt{a^2+L^2}}a\\
+&\quad+a-\sqrt{a^2+L^2}.
+\end{aligned}
+$$
+
+Nhân từng số hạng với hệ số 2kQ²/L² cho kết quả:
 
 $$
 \begin{aligned}

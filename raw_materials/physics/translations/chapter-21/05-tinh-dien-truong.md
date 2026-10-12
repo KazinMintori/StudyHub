@@ -323,7 +323,7 @@ E_x&=\frac{\sigma x}{4\varepsilon_0}\int_{x^2}^{x^2+R^2}u^{-3/2}\,du\\
 \end{aligned}
 $$
 
-Đặt $E_0=\sigma/(2\varepsilon_0)$ để tách hệ số không phụ thuộc vị trí. Phần còn lại là hệ số hình học:
+Đặt $E_0=\frac{\sigma}{2\varepsilon_0}$ để tách hệ số không phụ thuộc vị trí. Phần còn lại là hệ số hình học:
 
 $$
 f(x)=1-\frac{x}{\sqrt{x^2+R^2}}.
@@ -357,7 +357,7 @@ Hai mặt phẳng vô hạn song song cách nhau d, có mật độ mặt $+\sig
 **Hình 21.26:** Mặt 1 phía dưới dương, mặt 2 phía trên âm. Trục y hướng từ mặt dương đến mặt âm. Hình là mặt cắt nhìn cạnh và chỉ biểu diễn một phần hai mặt vô hạn.
 
 ::: solution Lời giải
-**Xác định và thiết lập.** Mỗi mặt riêng tạo độ lớn trường $\sigma/(2\varepsilon_0)$ ở cả hai phía. Cộng hai vector theo nguyên lý chồng chất.
+**Xác định và thiết lập.** Mỗi mặt riêng tạo độ lớn trường $\frac{\sigma}{2\varepsilon_0}$ ở cả hai phía. Cộng hai vector theo nguyên lý chồng chất.
 
 **Thực hiện.** Trường mặt dương hướng ra xa mặt, còn trường mặt âm hướng về mặt. Giữa hai mặt, hai trường cùng hướng từ dương đến âm:
 

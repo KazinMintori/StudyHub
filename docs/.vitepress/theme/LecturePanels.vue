@@ -30,6 +30,12 @@ const foundationGroups = computed(() => [
   }
 ].filter(group => group.ids.length))
 const allFoundations = computed(() => foundationGroups.value.flatMap(group => group.ids))
+const hasPanelContent = computed(() => {
+  if (!course.value || !lesson.value) return false
+  if (['slides', 'cheatsheet', 'kien-thuc-can-co'].includes(part.value)) return true
+  if (part.value === 'bai-tap') return !lesson.value.hasChapterExercises
+  return false
+})
 function load() {
   index.value = 0
 }
@@ -66,7 +72,7 @@ watch(() => lesson.value?.slug, load)
 </script>
 
 <template>
-  <div v-if="course && lesson" class="lecture-panels">
+  <div v-if="hasPanelContent" class="lecture-panels">
     <section v-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
       <template v-if="course.id === 'vat-ly-2' && current">
         <article class="course-slide" aria-live="polite">

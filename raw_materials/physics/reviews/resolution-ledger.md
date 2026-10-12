@@ -19,3 +19,5 @@ Phạm vi xuất bản của lượt này là ba chương 21–23 đã hoàn t�
 | Nhấn đậm dày ở các ý (a), (b) và lựa chọn | Bỏ nhấn đậm ở ký hiệu ý, giữ nhấn ở thuật ngữ và điều kiện quyết định. |
 
 Hồ sơ Python bổ sung là `verify_reviewed_integral_steps.py`. Bộ kiểm tra ảnh, MathText, bố cục chuyển kích thước và browser được chạy riêng. Build thành công và kiểm tra tự động không thay thế các kết luận đối chiếu nguồn của reviewer.
+
+Tóm tắt sau lượt đọc lại: 21.1 đã sửa cả đề và tóm tắt lời giải thành quả cầu bằng chì. 21.93(e) đã khai triển dấu của −H(a) trước khi nhân hệ số. Những hạn chế reviewer nêu về phạm vi tự giải độc lập vẫn được giữ trong báo cáo, không nâng thành tuyên bố tự giải lại toàn bộ mọi bài.

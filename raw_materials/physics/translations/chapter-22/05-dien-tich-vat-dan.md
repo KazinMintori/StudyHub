@@ -101,15 +101,15 @@ Chọn hình trụ Gauss rất nhỏ, hai đáy diện tích A. Một đáy tron
 
 $$
 \begin{aligned}
-E_\perp A&=\sigma A/\varepsilon_0,\\
-E_\perp&=\sigma/\varepsilon_0.
+E_\perp A&=\frac{\sigma A}{\varepsilon_0},\\
+E_\perp&=\frac{\sigma}{\varepsilon_0}.
 \end{aligned}
 \tag{22.10}
 $$
 
 Nếu σ dương, trường hướng ra khỏi vật dẫn. Nếu σ âm, trường hướng vào. Đây là quan hệ tại **ngay ngoài mặt**, không phải công thức trường ở mọi khoảng cách cho vật dẫn có hình dạng bất kỳ.
 
-Với cầu dẫn bán kính R mang q đều trên mặt, $\sigma=q/(4\pi R^2)$ và $E(R^+)=kq/R^2$, nên cũng có $E_\perp=\sigma/\varepsilon_0$. Hai bản dẫn vô hạn trái dấu của Ví dụ 22.8 có độ lớn trường giữa bản bằng σ/$\varepsilon_0$ ở mọi khoảng cách trong vùng giữa, nhờ đối xứng phẳng.
+Với cầu dẫn bán kính R mang q đều trên mặt, $\sigma=\frac{q}{4\pi R^2}$ và $E(R^+)=\frac{kq}{R^2}$, nên cũng có $E_\perp=\frac{\sigma}{\varepsilon_0}$. Hai bản dẫn vô hạn trái dấu của Ví dụ 22.8 có độ lớn trường giữa bản bằng $\frac{\sigma}{\varepsilon_0}$ ở mọi khoảng cách trong vùng giữa, nhờ đối xứng phẳng.
 
 ### Ứng dụng: Phương của tia sét
 

@@ -23,7 +23,7 @@ U&=-\vec p\cdot\vec E.
 \end{aligned}
 $$
 
-Góc φ nằm giữa hai vector. Mômen quay có xu hướng đưa p cùng chiều trường. Điều kiện trường đều thiết yếu cho kết luận hợp lực bằng không; trong trường không đều, lưỡng cực có thể chịu hợp lực. Ở xa trên trục, với r lớn hơn nhiều kích thước d, trường gần có độ lớn $2kp/r^3$.
+Góc φ nằm giữa hai vector. Mômen quay có xu hướng đưa p cùng chiều trường. Điều kiện trường đều thiết yếu cho kết luận hợp lực bằng không. Trong trường không đều, lưỡng cực có thể chịu hợp lực. Ở xa trên trục, với r lớn hơn nhiều kích thước d, trường gần có độ lớn $\frac{2kp}{r^3}$.
 
 Tài liệu tham khảo: Young & Freedman, ấn bản 15, mục 21.7, trang 701–705.
 

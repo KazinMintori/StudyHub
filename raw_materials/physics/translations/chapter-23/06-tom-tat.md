@@ -11,7 +11,7 @@ Lực do một phân bố điện tích đứng yên là lực thế. Công lự
 $$
 \begin{aligned}
 W_{a\to b}&=U_a-U_b,\\
-U&=kqq_0/r.
+U&=\frac{kqq_0}{r}.
 \end{aligned}
 $$
 
@@ -19,25 +19,25 @@ Trong trường của nhiều nguồn, phần thế năng tương tác liên qua
 
 $$
 \begin{aligned}
-U&=kq_0q_1/r_1+kq_0q_2/r_2\\
-&\quad+kq_0q_3/r_3.
+U&=\frac{kq_0q_1}{r_1}+\frac{kq_0q_2}{r_2}\\
+&\quad+\frac{kq_0q_3}{r_3}.
 \end{aligned}
 $$
 
-Với n nguồn, tổng ấy viết là $kq_0\sum_{i=1}^{n}q_i/r_i$. Chỉ số i chạy qua từng nguồn, rᵢ đo đến vị trí q₀. Xem Ví dụ 23.1–23.2.
+Với n nguồn, tổng ấy viết là $kq_0\sum_{i=1}^{n}\frac{q_i}{r_i}$. Chỉ số i chạy qua từng nguồn, rᵢ đo đến vị trí q₀. Xem Ví dụ 23.1–23.2.
 
 ### Điện thế
 
 ![Điện thế tại P là tổng các phần thế do từng nguồn](img/young-23/tom-tat-dien-the.png)
 
-Điện thế là thế năng trên một đơn vị điện tích thử, V = U/q₀. Hiệu điện thế Vₐ − Vᵦ bằng công lực điện trên mỗi coulomb khi điện tích thử dương đi từ a đến b, hoặc công lực ngoài trên mỗi coulomb khi đưa điện tích ấy chậm từ b đến a.
+Điện thế là thế năng trên một đơn vị điện tích thử, $V = \frac{U}{q_0}$. Hiệu điện thế Vₐ − Vᵦ bằng công lực điện trên mỗi coulomb khi điện tích thử dương đi từ a đến b, hoặc công lực ngoài trên mỗi coulomb khi đưa điện tích ấy chậm từ b đến a.
 
-Nguồn điểm cho V = kq/r với mốc ở vô hạn. Nhiều nguồn được cộng đại số, còn nguồn liên tục được tích phân:
+Nguồn điểm cho $V = \frac{kq}{r}$ với mốc ở vô hạn. Nhiều nguồn được cộng đại số, còn nguồn liên tục được tích phân:
 
 $$
 \begin{aligned}
-V&=k\sum_{i=1}^{n}q_i/r_i,\\
-V&=k\int dq/r,\\
+V&=k\sum_{i=1}^{n}\frac{q_i}{r_i},\\
+V&=k\int\frac{dq}{r},\\
 V_a-V_b&=\int_a^b\vec E\cdot d\vec\ell.
 \end{aligned}
 $$
@@ -56,9 +56,9 @@ Biết V như hàm vị trí, lấy đạo hàm riêng để tìm các thành ph
 
 $$
 \begin{aligned}
-E_x&=-\partial V/\partial x,\\
-E_y&=-\partial V/\partial y,\\
-E_z&=-\partial V/\partial z,\\
+E_x&=-\frac{\partial V}{\partial x},\\
+E_y&=-\frac{\partial V}{\partial y},\\
+E_z&=-\frac{\partial V}{\partial z},\\
 \vec E&=-\nabla V.
 \end{aligned}
 $$

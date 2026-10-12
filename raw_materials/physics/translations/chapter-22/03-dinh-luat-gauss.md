@@ -47,7 +47,7 @@ Trường xuyên tâm có độ lớn E tại vị trí đang xét. Điện thô
 $$
 \begin{aligned}
 \Phi_E&=\oint\vec E\cdot d\vec A\\
-&=q/\varepsilon_0.
+&=\frac{q}{\varepsilon_0}.
 \end{aligned}
 \tag{22.7}
 $$
@@ -70,7 +70,7 @@ $$
 
 ### Phát biểu tổng quát
 
-Xét trước hai điện tích được bao. Trường tổng là $\vec E_1+\vec E_2$, và tính tuyến tính của tích phân cho điện thông bằng $(q_1+q_2)/\varepsilon_0$. Với n điện tích, tổng đại số được bao là:
+Xét trước hai điện tích được bao. Trường tổng là $\vec E_1+\vec E_2$, và tính tuyến tính của tích phân cho điện thông bằng $\frac{q_1+q_2}{\varepsilon_0}$. Với n điện tích, tổng đại số được bao là:
 
 $$
 \begin{aligned}
@@ -86,7 +86,7 @@ Chỉ số i chạy qua từng điện tích nằm bên trong mặt, từ 1 đ�
 $$
 \begin{aligned}
 \Phi_E&=\oint\vec E\cdot d\vec A\\
-&=Q_{\mathrm{trong}}/\varepsilon_0.
+&=\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
 \end{aligned}
 \tag{22.8}
 $$
@@ -109,7 +109,7 @@ Mặt kín được dùng trong định luật gọi là **mặt Gauss**. Đây 
 
 ![Hình 22.14: Mặt Gauss cầu bao điện tích dương và điện tích âm](../img/young-22/hinh-22-14.png)
 
-Với nguồn $+q$, thành phần trường theo pháp tuyến ra ngoài là $E_\perp=+kq/r^2$. Tích phân trên mặt cầu cho $+q/\varepsilon_0$. Với nguồn $-q$, trong đó q là độ lớn dương, thành phần ấy là $E_\perp=-kq/r^2$, nên tích phân cho $-q/\varepsilon_0$. Không được thay thành phần có dấu bằng độ lớn E ở cả hai trường hợp.
+Với nguồn $+q$, thành phần trường theo pháp tuyến ra ngoài là $E_\perp=+\frac{kq}{r^2}$. Tích phân trên mặt cầu cho $+\frac{q}{\varepsilon_0}$. Với nguồn $-q$, trong đó q là độ lớn dương, thành phần ấy là $E_\perp=-\frac{kq}{r^2}$, nên tích phân cho $-\frac{q}{\varepsilon_0}$. Không được thay thành phần có dấu bằng độ lớn E ở cả hai trường hợp.
 
 Trong (22.8) và (22.9), $\vec E$ là **trường tổng tại điểm trên mặt**, do cả điện tích trong lẫn điện tích ngoài tạo ra. Chỉ vế phải sử dụng riêng điện tích được bao. Nguồn ngoài có thể làm trường trên mặt thay đổi mạnh, nhưng điện thông tổng của riêng phần trường ấy luôn bằng không.
 
@@ -128,9 +128,9 @@ Mặt A bao điện tích dương, B bao điện tích âm, C bao cả hai, còn
 
 $$
 \begin{aligned}
-\Phi_{EA}&=+q/\varepsilon_0,\\
-\Phi_{EB}&=-q/\varepsilon_0,\\
-\Phi_{EC}&=(q-q)/\varepsilon_0=0,\\
+\Phi_{EA}&=+\frac{q}{\varepsilon_0},\\
+\Phi_{EB}&=-\frac{q}{\varepsilon_0},\\
+\Phi_{EC}&=\frac{q-q}{\varepsilon_0}=0,\\
 \Phi_{ED}&=0.
 \end{aligned}
 $$

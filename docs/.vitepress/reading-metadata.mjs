@@ -401,7 +401,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 22683,
+    "words": 22711,
     "minutes": 115
   },
   "vat-ly-2/01-dien-truong-coulomb/dien-tich": {
@@ -457,7 +457,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 20658,
+    "words": 20657,
     "minutes": 105
   },
   "vat-ly-2/02-dien-the/the-nang-dien": {

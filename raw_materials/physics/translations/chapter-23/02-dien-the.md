@@ -6,8 +6,8 @@
 
 $$
 \begin{aligned}
-V&=U/q_0\\
-U&=q_0V
+V&=\frac{U}{q_0},\\
+U&=q_0V.
 \end{aligned}
 \tag{23.12}
 $$
@@ -15,7 +15,7 @@ $$
 Thế năng và điện tích đều là số vô hướng, nên điện thế cũng là số vô hướng. Đơn vị SI là volt, đặt theo tên Alessandro Volta (1745–1827):
 
 $$
-1\,\mathrm V=1\,\mathrm{J/C}.
+1\,\mathrm V=1\,\frac{\mathrm J}{\mathrm C}.
 $$
 
 Điện thế thường dễ tính hơn điện trường vì không phải cộng vector. Sau khi tính điện thế, có thể dùng sự biến thiên theo vị trí để suy ra trường.
@@ -47,13 +47,13 @@ Dụng cụ đo hiệu điện thế gọi là volt kế. Volt kế đo mức 1 
 Chia (23.9) cho q₀:
 
 $$
-V=kq/r.
+V=\frac{kq}{r}.
 \tag{23.14}
 $$
 
 Mốc V = 0 chọn ở vô hạn. Nguồn q dương tạo điện thế dương tại mọi khoảng cách hữu hạn, nguồn âm tạo điện thế âm. Điện thế không phụ thuộc điện tích thử dùng để định nghĩa, tương tự điện trường không phụ thuộc nguồn thử.
 
-Với hai nguồn, điện thế là $kq_1/r_1+kq_2/r_2$. Với n nguồn:
+Với hai nguồn, điện thế là $\frac{kq_1}{r_1}+\frac{kq_2}{r_2}$. Với n nguồn:
 
 $$
 \begin{aligned}
@@ -167,7 +167,7 @@ $$
 F&=eE=2.4\times10^{-12}\,\mathrm N,\\
 W&=Fd=1.2\times10^{-12}\,\mathrm J\\
 &=7.5\,\mathrm{MeV},\\
-V_a-V_b&=W/e\\
+V_a-V_b&=\frac{W}{e}\\
 &=7.5\times10^6\,\mathrm V\\
 &=7.5\,\mathrm{MV}.
 \end{aligned}
@@ -232,7 +232,7 @@ $$
 \begin{aligned}
 V(r)&=\int_r^\infty\frac{kq}{s^2}ds\\
 &=\left[-\frac{kq}{s}\right]_r^\infty\\
-&=kq/r.
+&=\frac{kq}{r}.
 \end{aligned}
 $$
 

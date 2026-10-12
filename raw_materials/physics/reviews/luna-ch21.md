@@ -1,10 +1,33 @@
 # Rà độc lập chương 21, Young & Freedman ấn bản 15
 
+## Disposition sau lượt rà trước push, 12/10/2026
+
+Đã đọc lại các đoạn và mở trực tiếp sáu ảnh đã sửa. Các finding dưới đây đã được xử lý trong phạm vi được giao:
+
+- `raw_materials/physics/translations/chapter-21/11-bai-tap-01-30.md`: Đề 21.1 nay gọi đúng “quả cầu nhỏ bằng chì”. Tóm tắt lời giải ngay bên dưới vẫn viết “Cầu chì $m=8.00\,\mathrm g$”, có thể bị hiểu là thiết bị cầu chì. Đổi thành “Quả cầu bằng chì” để nhất quán.
+- `raw_materials/physics/translations/chapter-21/14-bai-tong-hop-81-92.md`: Lời giải 21.91 đã khai triển bình phương, tách nghiệm ban đầu $\Delta=0$ và nghiệm quay đầu $\Delta>0$, đồng thời nêu điều kiện $0<\alpha<1$. Finding này đã giải quyết.
+- `raw_materials/physics/translations/chapter-21/15-bai-nang-cao-mcat.md`: Lời giải 21.93 đã mở đối xứng, đổi biến và cận ở tích phân trong, rồi nguyên hàm và cận ở tích phân ngoài. Phần (e) vẫn ghi “Khai triển $H(a)$ cho kết quả” sau khi giới thiệu nguyên hàm $H$, nên bước thế $H(a)$ vào $H(\infty)-H(a)$ và khai triển các hạng để ra công thức đóng còn hơi tắt. Công thức đúng, nhưng có thể hiển thị thêm dòng thay thế và rút gọn nếu muốn lời giải tự kiểm tra được từng hạng.
+
+  Dòng rút gọn trung gian cụ thể là:
+
+  $$
+  \begin{aligned}
+  H(\infty)-H(a)
+  &=L\ln\frac{L+\sqrt{a^2+L^2}}{a}+a-\sqrt{a^2+L^2}.
+  \end{aligned}
+  $$
+
+  Nhân dòng này với $2kQ^2/L^2$ cho biểu thức thế năng đang có.
+- `raw_materials/physics/translations/chapter-21/15-bai-nang-cao-mcat.md`: Lời giải 21.97 nay trình bày tích phân tạo trường, tích phân lực trên thanh kia, thế cận và giới hạn xa. Finding này đã giải quyết.
+- `docs/vat-ly-2/bai-giang/img/young-21/hinh-21-9.png`, `hinh-21-17.png`, `hinh-21-20.png`, `hinh-21-22.png`, `hinh-21-30.png` và `hinh-p21-96.png`: Đã mở từng crop ở kích thước gốc. Hình 21.9 có đủ chữ “Ground” và ký hiệu đất. Hình 21.17, 21.22 và P21.96 không còn chữ thân bài dính vào hình. Chú thích Hình 21.20 và 21.30 được giữ trọn câu. Không thấy vấn đề mới về nghĩa hoặc nhãn sau khi sửa.
+
+Tính lại độc lập bằng Python cho dữ kiện ví dụ của 21.91 cho $m_{\max}=0.05762\,\mathrm{kg}$, $\Delta_{\max}=0.10689\,\mathrm m$. Bài 21.93 cho $U=5.366\,\mathrm J$, $v_{\mathrm{rel}}=6.552\,\mathrm{m/s}$. Bài 21.97 đúng với công thức đề và giới hạn $a\gg L$. Không sửa các tệp nội dung, ảnh, catalog, CSS hoặc Git trong lượt xác nhận này.
+
 Phạm vi đối chiếu là chương in trang 678–717, tương ứng PDF trang 698–737; phần lời giải đáp số cuối chương dùng phụ lục PDF 1559–1560. Tôi đã đọc quy chuẩn StudyHub, `studyhub-lecture/SKILL.md`, `references/repo-format.md` và `references/teaching-review.md`, kiểm tra nội dung Notes và các include thực tế, xem montage trang nguồn và các montage ảnh đã cắt. Tôi không sửa Notes, catalog, CSS hoặc ảnh.
 
 ## Kết quả rà soát
 
-### Cần sửa
+### Findings tại lượt rà ban đầu
 
 1. **Crop Hình 21.9 làm cụt nhãn “Ground”.** Tệp `docs/vat-ly-2/bai-giang/img/young-21/hinh-21-9.png` cắt mất phần dưới của chữ “Ground” và biểu tượng nối đất, trong khi trang nguồn in 684 hiển thị trọn nhãn và ký hiệu. Caption ở `raw_materials/physics/translations/chapter-21/02-vat-dan-cach-dien.md:47` nhận diện vật nối đất nhưng không bù được chữ bị cắt trong hình. Nới crop xuống dưới để giữ đủ nhãn và biểu tượng.
 

@@ -7,7 +7,7 @@ next: False
 
 # Thế năng điện
 
-Thế năng điện là năng lượng tương tác của một hệ điện tích trong trường tĩnh. Công lực điện từ a đến b bằng $U_a-U_b$. Với hai nguồn điểm và mốc ở vô hạn, $U=kqq_0/r$.
+Thế năng điện là năng lượng tương tác của một hệ điện tích trong trường tĩnh. Công lực điện từ a đến b bằng $U_a-U_b$. Với hai nguồn điểm và mốc ở vô hạn, $U=\frac{kqq_0}{r}$.
 
 <WikiUsage />
 
@@ -16,16 +16,13 @@ Thế năng điện là năng lượng tương tác của một hệ điện tí
 Thế năng chỉ xác định đến một hằng số cộng. Với hai nguồn điểm hữu hạn, mốc ở vô hạn cho:
 
 $$
-U=kqq_0/r.
+U=\frac{kqq_0}{r}.
 $$
 
 Công lực điện bằng độ giảm thế năng, còn công lực ngoài khi di chuyển chậm bằng độ tăng thế năng. Với ba nguồn phải đếm ba cặp khác nhau:
 
 $$
-\begin{aligned}
-U_{123}&=kq_1q_2/r_{12}\\
-&\quad+kq_1q_3/r_{13}+kq_2q_3/r_{23}.
-\end{aligned}
+U_{123}=\frac{kq_1q_2}{r_{12}}+\frac{kq_1q_3}{r_{13}}+\frac{kq_2q_3}{r_{23}}.
 $$
 
 Điện thế V thuộc phân bố nguồn, còn thế năng của điện tích thử còn phụ thuộc q₀ qua U = q₀V. Vì vậy hạt âm đi về thế cao có thể giảm thế năng.

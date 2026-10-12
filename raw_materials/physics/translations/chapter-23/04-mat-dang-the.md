@@ -50,7 +50,7 @@ Mặt của một mức khác V₀ không thể đi đến thành hốc, vì m�
 
 Điện thông qua mặt ấy phải khác không. Gauss khi đó đòi hỏi điện tích được bao khác không, trái với giả thiết hốc không chứa nguồn. Vì vậy không thể có điểm P khác điện thế thành hốc. Toàn hốc có V = V₀.
 
-Điện thế không đổi trong toàn hốc cho điện trường bằng không. Quan hệ $E_\perp=\sigma/\varepsilon_0$ tại mặt dẫn khi ấy cho σ = 0 ở mọi điểm thành hốc. Mạch lập luận cần đủ ba bước: Điện thế đồng nhất, trường bằng không, rồi mật độ mặt bằng không. Chỉ biết điện tích tổng trên thành bằng không từ Gauss chưa đủ trực tiếp kết luận mật độ ở từng điểm bằng không.
+Điện thế không đổi trong toàn hốc cho điện trường bằng không. Quan hệ $E_\perp=\frac{\sigma}{\varepsilon_0}$ tại mặt dẫn khi ấy cho σ = 0 ở mọi điểm thành hốc. Mạch lập luận cần đủ ba bước: Điện thế đồng nhất, trường bằng không, rồi mật độ mặt bằng không. Chỉ biết điện tích tổng trên thành bằng không từ Gauss chưa đủ trực tiếp kết luận mật độ ở từng điểm bằng không.
 
 Mặt đẳng thế khác mặt Gauss. Ta được tự chọn mặt Gauss thuận tiện để áp dụng định luật. Hình dạng các mặt đẳng thế do phân bố nguồn quyết định, không thể tùy ý chọn chúng.
 

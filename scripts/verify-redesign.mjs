@@ -45,7 +45,7 @@ try {
     await page.waitForFunction(id=>JSON.parse(localStorage.getItem('studyhub_last_lesson'))?.heading===id,{},headingId)
     const saved = await page.evaluate(()=>JSON.parse(localStorage.getItem('studyhub_last_lesson')))
     await go('/')
-    assert.match(await page.$eval('.resume-panel', el=>el.textContent), /Tiếp tục đọc/)
+    assert.match(await page.$eval('.resume-panel', el=>el.textContent), /Tiếp tục (học|đọc)/)
     assert(await page.$eval('.resume-panel a', (el,id)=>el.getAttribute('href').endsWith('#'+id),saved.heading))
     await page.click('.resume-panel a'); await page.waitForFunction(()=>!!location.hash && document.querySelector('.lecture-tabs a[aria-current]')?.textContent.trim()==='Notes')
   })

@@ -51,3 +51,10 @@ Cheatsheet của môn đặt trong `docs/.vitepress/physics-potential-course.mjs
 
 
 
+
+
+## Disposition sau lượt kiểm tra tích hợp
+
+Đã xem lại crop P23.65 đã mở rộng: 50,0 kV và nhãn Airflow đều nằm trọn trong ảnh, khớp Hình P23.65 trang in 777. Đã đọc lại Bài 23.41(e) tại `raw_materials/physics/translations/chapter-23/10-bai-tap-26-50.md` và đối chiếu trang nguồn 775: thành phần xuyên tâm ngoài là $k(q-Q)/r^2$, chiều ra/vào phụ thuộc dấu của $q-Q$, và trường bằng không khi $q=Q$.
+
+Rà logic chi tiết các lời giải 23.72, 23.73 và 23.83. Với 23.72, mômen phục hồi, mômen quán tính và tần số dao động góc nhỏ nhất quán. Với 23.73, cực tiểu có $U\prime\prime(d_0)=3\kappa>0$; các giá trị năng lượng/tốc độ lần lượt 2,16 MeV và $1,44\times10^7$ m/s đúng với giả thiết toàn năng lượng truyền thành động năng. Cách diễn giải thứ hai được gắn rõ với giả thiết năng lượng đàn hồi không truyền sang các proton. Với 23.83, bảo toàn năng lượng tại điểm gần nhất phải giữ động năng tiếp tuyến; phương trình bậc hai và ba nghiệm đã được tính lại bằng Python, khớp các giá trị in trong lời giải. Không phát hiện lỗi logic mới trong các mục khó đã lấy mẫu.

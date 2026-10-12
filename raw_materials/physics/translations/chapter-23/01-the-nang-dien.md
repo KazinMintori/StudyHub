@@ -124,7 +124,7 @@ Công thức cũng dùng được khi q₀ ở ngoài một phân bố cầu đ�
 Positron, phản hạt của electron, có khối lượng $m=9.11\times10^{-31}$ kg và điện tích $q_0=+1.60\times10^{-19}$ C. Hạt α có $q=+3.20\times10^{-19}$ C, khối lượng $6.64\times10^{-27}$ kg. Hạt α nặng hơn positron trên 7000 lần, nên coi nó đứng yên. Ở $r_a=1.00\times10^{-10}$ m, positron bay thẳng ra xa với $v_a=3.00\times10^6$ m/s. (a) Tìm tốc độ tại $r_b=2.00\times10^{-10}$ m. (b) Tìm tốc độ ở rất xa. (c) Giữ cùng điều kiện đầu nhưng thay positron bằng electron cùng khối lượng, điện tích âm, mô tả chuyển động sau đó.
 
 ::: solution Chi tiết
-**Xác định và thiết lập.** Lực điện là lực thế và nguồn α được coi cố định, nên bảo toàn cơ năng của hạt chuyển động với thế năng tương tác kqq₀/r. Với positron, lực đẩy làm hạt nhanh lên khi ra xa.
+**Xác định và thiết lập.** Lực điện là lực thế và nguồn α được coi cố định, nên bảo toàn cơ năng của hạt chuyển động với thế năng tương tác $\frac{kqq_0}{r}$. Với positron, lực đẩy làm hạt nhanh lên khi ra xa.
 
 (a) Các năng lượng đầu và thế năng cuối là:
 
@@ -132,13 +132,13 @@ $$
 \begin{aligned}
 K_a&=\frac12mv_a^2\\
 &=4.10\times10^{-18}\,\mathrm J,\\
-U_a&=kqq_0/r_a\\
+U_a&=\frac{kqq_0}{r_a}\\
 &=4.61\times10^{-18}\,\mathrm J,\\
-U_b&=kqq_0/r_b\\
+U_b&=\frac{kqq_0}{r_b}\\
 &=2.30\times10^{-18}\,\mathrm J,\\
 K_b&=K_a+U_a-U_b\\
 &=6.41\times10^{-18}\,\mathrm J,\\
-v_b&=\sqrt{2K_b/m}\\
+v_b&=\sqrt{\frac{2K_b}{m}}\\
 &\approx3.8\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$

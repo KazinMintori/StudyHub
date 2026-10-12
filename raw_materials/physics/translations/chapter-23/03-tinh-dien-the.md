@@ -26,15 +26,15 @@ Cầu dẫn đặc bán kính R mang tổng điện tích q. Tìm điện thế 
 
 $$
 \begin{aligned}
-V(r)&=kq/r,\quad r\ge R,\\
-V(R)&=kq/R.
+V(r)&=\frac{kq}{r},\quad r\ge R,\\
+V(R)&=\frac{kq}{R}.
 \end{aligned}
 $$
 
 Trong cầu, tích phân trường giữa hai điểm bất kỳ bằng không, nên hiệu điện thế giữa chúng bằng không. Điện thế toàn cầu bằng giá trị ở mặt:
 
 $$
-V(r)=kq/R,\quad r<R.
+V(r)=\frac{kq}{R},\quad r<R.
 $$
 
 **Đánh giá.** Với q dương, V là hằng số dương trong cầu rồi giảm theo 1/r ngoài cầu, liên tục tại R. Trường bằng không bên trong nhưng V không buộc bằng không. Trường ngoài giảm theo 1/r² và nhảy tại mặt. Các bài biến thể nằm trong phần cuối chương.
@@ -46,7 +46,7 @@ $$
 
 Điện thế cao nhất đạt được của vật dẫn trong không khí bị giới hạn bởi sự ion hóa. Trong mô hình gần đúng này, không khí trở nên dẫn điện khi trường đạt cỡ $3\times10^6$ V/m, gọi là độ bền điện môi của không khí.
 
-Với cầu dẫn dương, điện thế mặt $V_s=kq/R$ và trường mặt $E_s=kq/R^2$, nên $V_s=RE_s$. Nếu E_m là ngưỡng ion hóa, điện thế mặt giới hạn là:
+Với cầu dẫn dương, điện thế mặt $V_s=\frac{kq}{R}$ và trường mặt $E_s=\frac{kq}{R^2}$, nên $V_s=RE_s$. Nếu E_m là ngưỡng ion hóa, điện thế mặt giới hạn là:
 
 $$
 V_m=RE_m.
@@ -73,13 +73,13 @@ $$
 \begin{aligned}
 V(y)&=Ey,\\
 V_a-V_b&=Ed,\\
-E&=(V_a-V_b)/d.
+E&=\frac{V_a-V_b}{d}.
 \end{aligned}
 $$
 
 Điện thế giảm tuyến tính khi đi xuống cùng chiều trường. Khi hiệu điện thế giữ nguyên, hai bản gần nhau hơn cho trường lớn hơn.
 
-**Đánh giá.** Tại bản dưới V = 0 nhưng bản vẫn mang mật độ điện tích −σ. Mốc điện thế bằng không được chọn tùy ý, không có nghĩa vật tại mốc phải trung hòa. Quan hệ E = V_ab/d dùng ở trường đều của cấu hình phẳng này, không tự áp dụng cho hai cầu hoặc hai trụ đồng tâm có trường biến thiên.
+**Đánh giá.** Tại bản dưới V = 0 nhưng bản vẫn mang mật độ điện tích −σ. Mốc điện thế bằng không được chọn tùy ý, không có nghĩa vật tại mốc phải trung hòa. Quan hệ $E = \frac{V_{ab}}{d}$ dùng ở trường đều của cấu hình phẳng này, không tự áp dụng cho hai cầu hoặc hai trụ đồng tâm có trường biến thiên.
 :::
 
 Trở lại câu hỏi hàn hồ quang, khi hiệu điện thế được giữ, khoảng cách nhỏ làm trường giữa dụng cụ và kim loại lớn hơn. Chọn (iii) trong mô hình của câu hỏi.
@@ -91,7 +91,7 @@ Tìm điện thế cách một dây rất dài có mật độ điện tích λ 
 ![Hình 23.19: Trường xuyên tâm ngoài dây dài và trụ dẫn dài](../img/young-23/hinh-23-19.png)
 
 ::: solution Chi tiết
-**Xác định và thiết lập.** Trường chỉ có thành phần xuyên tâm $E_r=\lambda/(2\pi\varepsilon_0r)$. Tích phân theo đường xuyên tâm giữa hai khoảng cách rₐ,rᵦ:
+**Xác định và thiết lập.** Trường chỉ có thành phần xuyên tâm $E_r=\frac{\lambda}{2\pi\varepsilon_0r}$. Tích phân theo đường xuyên tâm giữa hai khoảng cách rₐ,rᵦ:
 
 $$
 \begin{aligned}

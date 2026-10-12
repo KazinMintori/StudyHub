@@ -5,7 +5,7 @@ export const physics1Course = {
   "name": "Vật lý đại cương 1",
   "short": "Vật lý 1",
   "current": true,
-  "description": "Bản dịch tiếng Việt theo chương 1–20 của Young & Freedman, từ cơ học đến hết nhiệt học. Đang dịch và đối chiếu từng mục, hình, ví dụ và bài tập nguyên tác.",
+  "description": "Cơ học, dao động, sóng cơ và nhiệt học đại cương.",
   "foundations": [
     "don-vi",
     "vector",
@@ -1073,7 +1073,7 @@ export const physics2Course = {
         "Trong chân không, độ lớn lực tỷ lệ tích độ lớn điện tích và nghịch đảo bình phương khoảng cách.",
         "Hai lực của một cặp bằng nhau về độ lớn và ngược chiều."
       ],
-      "formula": "$$\nF=k|q_1q_2|/r^2\n$$",
+      "formula": "$$\nF=\\frac{k|q_1q_2|}{r^2}\n$$",
       "example": ""
     },
     {
@@ -1084,7 +1084,7 @@ export const physics2Course = {
         "Nguồn thử dương chịu lực cùng chiều trường, nguồn thử âm chịu lực ngược chiều.",
         "Vector đơn vị trong trường nguồn điểm hướng từ nguồn đến điểm khảo sát."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec F_0&=q_0\\vec E,\\\\\n\\vec E&=kq\\hat{\\mathbf r}/r^2.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n\\vec F_0&=q_0\\vec E,\\\\\n\\vec E&=\\frac{kq}{r^2}\\hat{\\mathbf r}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1150,7 +1150,7 @@ export const physics2Course = {
         "Trường trong tích phân là trường của cả nguồn trong và ngoài.",
         "Nguồn ngoài không đóng góp điện thông tổng qua mặt kín."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=Q_{\\mathrm{trong}}/\\varepsilon_0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=\\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1172,7 +1172,7 @@ export const physics2Course = {
         "Trong cầu cách điện đều theo thể tích, trường tăng tuyến tính theo bán kính.",
         "Trường ngoài của hai phân bố cầu cùng tổng điện tích giống nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_{\\mathrm{trong}}&=k|Q|r/R^3,\\quad r<R,\\\\\nE_{\\mathrm{ngoài}}&=k|Q|/r^2,\\quad r>R.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nE_{\\mathrm{trong}}&=\\frac{k|Q|r}{R^3},\\quad r<R,\\\\\nE_{\\mathrm{ngoài}}&=\\frac{k|Q|}{r^2},\\quad r>R.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1183,7 +1183,7 @@ export const physics2Course = {
         "Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q.",
         "Ngay ngoài mặt dẫn, trường vuông góc mặt."
       ],
-      "formula": "$$\n\\begin{aligned}\nQ_{\\mathrm{trong}}&=-q,\\\\\nQ_{\\mathrm{ngoài}}&=q_C+q,\\\\\nE_\\perp&=\\sigma/\\varepsilon_0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nQ_{\\mathrm{trong}}&=-q,\\\\\nQ_{\\mathrm{ngoài}}&=q_C+q,\\\\\nE_\\perp&=\\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1205,7 +1205,7 @@ export const physics2Course = {
         "Công thêm một nguồn vào hệ chỉ tính các cặp liên quan nguồn mới.",
         "Mốc bằng không khi mọi nguồn ở xa vô hạn phù hợp hệ nguồn hữu hạn."
       ],
-      "formula": "$$\n\\begin{aligned}\nU_{123}&=kq_1q_2/r_{12}\\\\\n&\\quad+kq_1q_3/r_{13}+kq_2q_3/r_{23}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nU_{123}&=\\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}+\\frac{kq_2q_3}{r_{23}},\\\\\nU&=k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1216,7 +1216,7 @@ export const physics2Course = {
         "Hiệu điện thế cho công lực điện trên mỗi coulomb.",
         "Điện thế cao không luôn tương ứng thế năng cao vì điện tích thử có thể âm."
       ],
-      "formula": "$$\n\\begin{aligned}\nV&=U/q_0,\\\\\nW_{a\\to b}&=q_0(V_a-V_b),\\\\\n1\\,\\mathrm V&=1\\,\\mathrm{J/C}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nV&=\\frac{U}{q_0},\\\\\nW_{a\\to b}&=q_0(V_a-V_b),\\\\\n1\\,\\mathrm V&=1\\,\\mathrm{J/C}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1227,7 +1227,7 @@ export const physics2Course = {
         "Phân bố liên tục được chia thành các phần dq.",
         "Nguồn kéo dài vô hạn thường cần mốc hữu hạn thay cho vô hạn."
       ],
-      "formula": "$$\n\\begin{aligned}\nV&=k\\int dq/r,\\\\\nV_a-V_b&=\\int_a^b\\vec E\\cdot d\\vec\\ell.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nV&=k\\int \\frac{dq}{r},\\\\\nV_a-V_b&=\\int_a^b\\vec E\\cdot d\\vec\\ell.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1249,7 +1249,7 @@ export const physics2Course = {
         "Trường hướng về phía điện thế giảm nhanh nhất.",
         "Cộng một hằng số vào điện thế không thay đổi điện trường."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_x&=-\\partial V/\\partial x,\\\\\nE_y&=-\\partial V/\\partial y,\\\\\nE_z&=-\\partial V/\\partial z,\\\\\n\\vec E&=-\\nabla V.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nE_x&=-\\frac{\\partial V}{\\partial x},\\\\\nE_y&=-\\frac{\\partial V}{\\partial y},\\\\\nE_z&=-\\frac{\\partial V}{\\partial z},\\\\\n\\vec E&=-\\nabla V.\n\\end{aligned}\n$$",
       "example": ""
     }
   ],

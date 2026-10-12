@@ -79,7 +79,7 @@ Trong mô hình tế bào nghỉ, điện thế bên trong thấp hơn bên ngo�
 
 ### Ví dụ 23.13: Trường từ điện thế nguồn điểm
 
-Điện thế nguồn điểm q là V = kq/r. Tìm vector trường.
+Điện thế nguồn điểm q là $V = \frac{kq}{r}$. Tìm vector trường.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Đối xứng cho trường chỉ có thành phần xuyên tâm. Dùng (23.23):
@@ -87,8 +87,8 @@ Trong mô hình tế bào nghỉ, điện thế bên trong thấp hơn bên ngo�
 $$
 \begin{aligned}
 E_r&=-\frac{d}{dr}\left(\frac{kq}{r}\right)\\
-&=kq/r^2,\\
-\vec E&=(kq/r^2)\hat{\mathbf r}.
+&=\frac{kq}{r^2},\\
+\vec E&=\frac{kq}{r^2}\hat{\mathbf r}.
 \end{aligned}
 $$
 
@@ -104,7 +104,7 @@ $$
 \end{aligned}
 $$
 
-Thay vào gradient và nhận $\hat{\mathbf r}=(x\hat{\mathbf i}+y\hat{\mathbf j}+z\hat{\mathbf k})/r$:
+Thay vào gradient và nhận $\hat{\mathbf r}=\frac{x\hat{\mathbf i}+y\hat{\mathbf j}+z\hat{\mathbf k}}{r}$:
 
 $$
 \begin{aligned}
@@ -119,7 +119,7 @@ Hai cách cho cùng kết quả. Khai thác đối xứng ngay từ đầu giúp
 
 ### Ví dụ 23.14: Trường trên trục vòng tích điện
 
-Vòng bán kính a mang Q có điện thế trên trục x là $V(x)=kQ/\sqrt{x^2+a^2}$. Tìm trường tại điểm trên trục.
+Vòng bán kính a mang Q có điện thế trên trục x là $V(x)=\frac{kQ}{\sqrt{x^2+a^2}}$. Tìm trường tại điểm trên trục.
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Đối xứng của vòng buộc các thành phần y,z bằng không **trên trục**. Lấy đạo hàm điện thế theo x để tìm thành phần còn lại:

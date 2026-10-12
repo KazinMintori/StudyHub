@@ -61,9 +61,9 @@ $\vec F_0=q_0\vec E$ dùng trực tiếp cho điện tích điểm tại điểm
 
 ### Điện trường của một điện tích điểm
 
-Gọi S là điểm đặt điện tích nguồn $q$, còn P là điểm cần tính trường. Vector $\vec r$ đi từ S đến P. Khoảng cách $r=|\vec r|$ và vector đơn vị $\hat{\mathbf r}=\vec r/r$ cũng luôn hướng từ nguồn đến điểm khảo sát.
+Gọi S là điểm đặt điện tích nguồn $q$, còn P là điểm cần tính trường. Vector $\vec r$ đi từ S đến P. Khoảng cách $r=|\vec r|$ và vector đơn vị $\hat{\mathbf r}=\frac{\vec r}{r}$ cũng luôn hướng từ nguồn đến điểm khảo sát.
 
-Độ lớn lực lên điện tích thử tại P là $F_0=k|qq_0|/r^2$. Chia cho độ lớn điện tích thử cho:
+Độ lớn lực lên điện tích thử tại P là $F_0=\frac{k|qq_0|}{r^2}$. Chia cho độ lớn điện tích thử cho:
 
 $$
 \begin{aligned}
@@ -181,7 +181,7 @@ Hai bản dẫn song song cách $1.0\,\mathrm{cm}$ nối với pin $100\,\mathrm
 
 $$
 \begin{aligned}
-a_y&=F_y/m=-eE/m\\
+a_y&=\frac{F_y}{m}=-\frac{eE}{m}\\
 &=-\frac{(1.60)(1.00)}{9.11}\\
 &\quad\times10^{16}\,\mathrm{m/s^2}\\
 &=-1.76\times10^{15}\,\mathrm{m/s^2}.

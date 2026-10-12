@@ -18,7 +18,7 @@ Dạng tích phân là:
 $$
 \begin{aligned}
 \Phi_E&=\oint\vec E\cdot d\vec A\\
-&=Q_{\mathrm{trong}}/\varepsilon_0.
+&=\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
 \end{aligned}
 $$
 

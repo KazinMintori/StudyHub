@@ -7,7 +7,7 @@ next: false
 
 # Điện thế
 
-Điện thế $V$ là thế năng điện trên một đơn vị điện tích thử, xác định bởi biểu thức $V=\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt $(V)=J/C$. Trong trường tĩnh điện, $\Delta V=-\int\mathbf E\cdot d\mathbf l$.
+Điện thế $V$ là thế năng điện trên một đơn vị điện tích thử, xác định bởi biểu thức $V=\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt ($1\,\mathrm V=1\,\frac{\mathrm J}{\mathrm C}$). Trong trường tĩnh điện, $\Delta V=-\int\vec E\cdot d\vec\ell$.
 
 <WikiUsage />
 
@@ -15,7 +15,12 @@ next: false
 
 **Quan hệ cục bộ với trường.** Trong tĩnh điện:
 
-$$V_B-V_A=-\int_A^B\mathbf E\cdot d\mathbf l,\qquad\mathbf E=-\nabla V.$$
+$$
+\begin{aligned}
+V_B-V_A&=-\int_A^B\vec E\cdot d\vec\ell,\\
+\vec E&=-\nabla V.
+\end{aligned}
+$$
 
 V là vô hướng, E là vector. $V=0$ tại một điểm không kéo theo $E=0$ vì gradient đo biến thiên không gian của V. Trong vật dẫn liên thông ở cân bằng tĩnh điện, $E=0$ trong lòng và V không đổi. Với trường biến thiên theo thời gian, cần mô hình rộng hơn để mô tả đầy đủ điện trường.
 
