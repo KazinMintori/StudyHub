@@ -41,7 +41,7 @@ export const potentialCheatsheet={summary:'Định nghĩa, tính chất và côn
  {id:'energy',title:'Thế năng và công',items:[
   {name:'Trường tĩnh điện và bảo toàn cơ năng',formulaRows:[
    {label:'Công lực điện',formula:d(String.raw`W_{a\to b}=U_a-U_b=-\Delta U`)},
-   {label:'Công lực ngoài khi chuyển động chậm',formula:d(String.raw`W_{\mathrm{ngoài}}=\Delta U`)},
+   {label:'Công lực ngoài khi chuyển động chậm',formula:d(String.raw`W_{\mathrm{ngoai}}=\Delta U`)},
    {label:'Cơ năng khi chỉ lực thế sinh công',formula:d(String.raw`K_a+U_a=K_b+U_b`)}
   ],description:'Lực điện trong trường tĩnh là lực thế. Công ngoài chậm có động năng không đổi. Bảo toàn cơ năng khi chỉ lực thế sinh công.'},
   {name:'Hai điện tích điểm',formula:d(String.raw`U=\frac{kqq_0}{r}`),description:'r là khoảng cách hai nguồn, k = 1/(4πε₀). Mốc thế năng bằng không ở khoảng cách vô hạn. Tích qq₀ được giữ dấu.'},

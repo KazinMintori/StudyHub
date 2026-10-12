@@ -365,15 +365,15 @@ Tế bào tim được mô hình hóa thành vỏ trụ dài 100 µm, đường 
 - Điện tích tổng một mặt bằng λℓ. Trường sát mặt trong có r = a, vẫn ở phần màng, không ở chất lỏng bên trong.
 - Chuyển thế trong từ −90 mV lên +20 mV cần thay đổi 110 mV, không chỉ 20 mV.
 
-Đặt hệ số $C_\mathrm{trụ}=2\pi\varepsilon_0\ell/\ln(b/a)$:
+Đặt hệ số $C_\mathrm{cylinder}=2\pi\varepsilon_0\ell/\ln(b/a)$:
 
 $$
 \begin{aligned}
-|Q_{\mathrm{nghỉ}}|&=C_\mathrm{trụ}(0.0900)\\
+|Q_{\mathrm{rest}}|&=C_\mathrm{cylinder}(0.0900)\\
 &=4.75\times10^{-15}\,\mathrm C,\\
 E(a^+)&=\frac{0.0900}{a\ln(b/a)}\\
 &=94.9\,\mathrm{kV/m},\\
-\Delta Q&=C_\mathrm{trụ}(0.110)\\
+\Delta Q&=C_\mathrm{cylinder}(0.110)\\
 &=5.81\times10^{-15}\,\mathrm C,\\
 N_{\mathrm{Na^+}}&=\Delta Q/e\\
 &\approx3.63\times10^4.

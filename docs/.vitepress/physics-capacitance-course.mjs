@@ -35,7 +35,7 @@ E&=E_0/K,\quad Q=Q_0.
 \end{aligned}`),example:''},
  {note,title:'Phân cực ở mức phân tử không làm điện tích chảy tự do',bullets:['Phân tử không phân cực bị tách tương đối các tâm điện tích trong trường.','Phân tử phân cực có lưỡng cực thường trực và chịu mômen định hướng.','Trong vật liệu trung hòa, các điện tích liên kết trong thể tích có thể bù nhau, còn ở mặt ngoài thì không.'],formula:d(String.raw`\begin{aligned}
 \vec\tau&=\vec p\times\vec E,\\
-U_{\mathrm{lưỡng\ cực}}&=-\vec p\cdot\vec E.
+U_{\mathrm{dipole}}&=-\vec p\cdot\vec E.
 \end{aligned}`),example:''},
  {note,title:'Điều kiện nối nguồn quyết định năng lượng sau khi thêm điện môi',bullets:['Ngắt nguồn giữ điện tích tự do, vì các bản không trao đổi điện tích với nguồn.','Giữ nguồn lý tưởng thì điện áp giữ nguyên và nguồn chuyển thêm điện tích.','Độ bền điện môi đặt giới hạn trường mà mô hình cách điện còn dùng được.'],formula:d(String.raw`\begin{aligned}
 U_Q&=U_0/K,\quad Q=Q_0,\\

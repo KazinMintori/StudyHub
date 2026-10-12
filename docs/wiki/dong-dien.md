@@ -7,38 +7,49 @@ next: false
 
 # Dòng điện
 
-Dòng điện là tốc độ điện tích đi qua một tiết diện: $I=dQ/dt$. Chiều quy ước theo hạt tải dương; electron trôi ngược chiều đó trong kim loại.
+Dòng điện là tốc độ điện lượng đi qua một tiết diện, $I=dQ/dt$. Đơn vị ampere bằng coulomb trên giây. Dòng điện là vô hướng, còn chiều quy ước theo chuyển động của điện tích dương.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Mật độ dòng $\mathbf J=nq\mathbf v_d$ liên hệ với mật độ hạt và vận tốc trôi. Dòng qua mặt là tích phân $\mathbf J\cdot d\mathbf A$. Chiều dấu phụ thuộc hướng pháp tuyến hoặc chiều nhánh được chọn.
+I đo lượng điện tích thuần đi qua tiết diện trong một đơn vị thời gian. Nếu I không đổi, điện lượng trong khoảng Δt bằng IΔt. Nếu dòng đổi theo thời gian, cộng các điện lượng vi phân:
 
-Quy tắc nút dạng tổng dòng vào bằng tổng dòng ra cần mô hình nút không tích lũy điện tích đáng kể. Nếu có tích điện, phải đưa tốc độ biến thiên điện tích nút vào phương trình.
+$$
+\Delta Q=\int_{t_1}^{t_2}I(t)\,dt.
+$$
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Chiều dòng quy ước theo điện tích dương. Electron trong kim loại đi ngược chiều ấy. Điện tích dương và âm chuyển ngược nhau trong dung dịch vẫn có thể đóng góp dòng cùng chiều.
+
+Ở dòng ổn định, điện tích không tích tụ liên tục tại một phần mạch. Dòng đi vào và ra một phần tử nối tiếp bằng nhau. Điện trở và bóng đèn chuyển hóa năng lượng, không làm điện tích biến mất.
+
+Các electron có chuyển động ngẫu nhiên rất nhanh và một vận tốc trôi nhỏ. Vận tốc trôi không phải tốc độ truyền tín hiệu hoặc tốc độ thiết lập điện trường dọc dây.
 
 ## Ví dụ
 
-Trong một nhánh ổn định không rò, điện trở làm tiêu hao năng lượng nhưng không làm dòng giảm dần dọc nhánh.
+Trong một vòng mạch ổn định không có nhánh, dòng đi ra bóng đèn bằng dòng đi vào. Bóng chuyển hóa năng lượng mà không tiêu thụ điện tích.
 
 ## Khi nào cần dùng?
 
-Lập phương trình nút, tính công suất và mật độ dòng.
+Liên hệ điện lượng, thời gian, chuyển động hạt tải và các đại lượng trong mạch.
 
 ## Câu hỏi ôn lại
 
-Điện trở tiêu thụ dòng điện hay năng lượng?
+Electron phải đi từ công tắc đến bóng trước khi bóng bắt đầu sáng không?
 
 <details><summary>Xem đáp án</summary>
 
-Năng lượng. Bảo toàn điện tích giữ dòng trong nhánh ổn định.
+Không. Điện trường được thiết lập dọc mạch và làm electron ở nhiều vị trí bắt đầu trôi. Thời gian truyền tác động ấy khác thời gian một electron đi hết chiều dài dây.
 
 </details>
 
 ## Thuật ngữ liên quan
 
 - [Điện tích](./dien-tich.md)
-- [Điện trở](./dien-tro.md)
+- [Mật độ dòng điện](./mat-do-dong-dien.md)
 - [Điện thế](./dien-the.md)
+- [Suất điện động](./suat-dien-dong.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25, trang 812–835.

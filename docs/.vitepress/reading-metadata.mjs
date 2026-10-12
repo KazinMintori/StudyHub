@@ -433,7 +433,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 15796,
+    "words": 15806,
     "minutes": 80
   },
   "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
@@ -457,7 +457,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 20679,
+    "words": 20694,
     "minutes": 105
   },
   "vat-ly-2/02-dien-the/the-nang-dien": {
@@ -481,8 +481,8 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/04-tu-dien-dien-moi": {
-    "words": 21490,
-    "minutes": 105
+    "words": 21506,
+    "minutes": 110
   },
   "vat-ly-2/04-tu-dien-dien-moi/tu-dien-dien-dung": {
     "words": 20,
@@ -509,8 +509,32 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/05-dong-dien-dien-tro": {
-    "words": 134,
-    "minutes": 5
+    "words": 24217,
+    "minutes": 120
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/dong-dien": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/dien-tro-suat": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/dien-tro": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/suat-dien-dong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/nang-luong-cong-suat": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/05-dong-dien-dien-tro/dan-dien-kim-loai": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/06-mach-dien-mot-chieu": {
     "words": 126,

@@ -3,27 +3,44 @@ course: vat-ly-2
 lecture: 05-dong-dien-dien-tro
 section: lecture
 title: "Dòng điện, điện trở và suất điện động"
-prerequisites: ["dien-tich","dien-the","cong-nang-luong"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Dòng điện, điện trở và suất điện động."
+prerequisites: ["dien-tich","dien-the","dien-truong","cong-nang-luong","dan-nhiet","tich-phan"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Dòng điện, chuyển động trôi, điện trở suất, nguồn thực và năng lượng trong mạch điện."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 25.1 — Current (từ trang 813).
-- 25.2 — Resistivity (từ trang 816).
-- 25.3 — Resistance (từ trang 819).
-- 25.4 — Electromotive Force and Circuits (từ trang 822).
-- 25.5 — Energy and Power in Electric Circuits (từ trang 828).
-- 25.6 — Theory of Metallic Conduction (từ trang 832).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/07-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25, trang 812–843.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Dòng điện, điện trở và suất điện động">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/08-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/09-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/10-bai-tap-01-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/11-bai-tap-31-58.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/12-bai-tong-hop-59-78.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/13-bai-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-25/14-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, chương 25, trang 836–843 và phụ lục đáp số A-16.
+
+</div>

@@ -27,8 +27,8 @@ Tổng quát hơn, nếu vật dẫn ban đầu có điện tích $q_C$, sau khi
 
 $$
 \begin{aligned}
-Q_{\mathrm{mặt\ trong}}&=-q,\\
-Q_{\mathrm{mặt\ ngoài}}&=q_C+q.
+Q_{\mathrm{trong}}&=-q,\\
+Q_{\mathrm{ngoai}}&=q_C+q.
 \end{aligned}
 $$
 
@@ -53,7 +53,7 @@ Trường trên mặt Gauss bằng không. Điện tích nguồn là q = −5 nC
 
 $$
 \begin{aligned}
-Q_{\mathrm{ngoài}}&=(+7)-(+5)\\
+Q_{\mathrm{ngoai}}&=(+7)-(+5)\\
 &=+2\,\mathrm{nC}.
 \end{aligned}
 $$

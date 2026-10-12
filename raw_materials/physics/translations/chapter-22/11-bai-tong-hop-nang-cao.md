@@ -93,7 +93,7 @@ Q_{\mathrm{trong}}(r)&=4\pi\rho_0F(r).
 \end{aligned}
 $$
 
-Thay r = R cho $Q_{\mathrm{tổng}}=\pi\rho_0R^3/3=Q$. Với u = r/R, trường trong là:
+Thay r = R cho $Q_{\mathrm{tong}}=\pi\rho_0R^3/3=Q$. Với u = r/R, trường trong là:
 
 $$
 E=\frac{kQ}{R^2}(4u-3u^2).
@@ -148,8 +148,8 @@ $$
 \int_0^r\left(s-\frac{s^2}{R}\right)ds,\\
 E_{\mathrm{trong}}&=\frac{\alpha}{\varepsilon_0}
 \left(\frac r2-\frac{r^2}{3R}\right),\\
-\lambda_{\mathrm{tổng}}&=\pi\alpha R^2/3,\\
-E_{\mathrm{ngoài}}&=\frac{\alpha R^2}{6\varepsilon_0r}.
+\lambda_{\mathrm{tong}}&=\pi\alpha R^2/3,\\
+E_{\mathrm{ngoai}}&=\frac{\alpha R^2}{6\varepsilon_0r}.
 \end{aligned}
 $$
 
@@ -173,8 +173,8 @@ $$
 \begin{aligned}
 E_{\mathrm{trong}}&=\frac{\rho_0}{\varepsilon_0}
 \left(\frac r3-\frac{r^2}{4R}\right),\\
-Q_{\mathrm{tổng}}&=\pi\rho_0R^3/3,\\
-E_{\mathrm{ngoài}}&=\frac{\rho_0R^3}{12\varepsilon_0r^2},\\
+Q_{\mathrm{tong}}&=\pi\rho_0R^3/3,\\
+E_{\mathrm{ngoai}}&=\frac{\rho_0R^3}{12\varepsilon_0r^2},\\
 r_{\max}&=2R/3.
 \end{aligned}
 $$
@@ -222,8 +222,8 @@ $$
 \begin{aligned}
 Q_{\mathrm{trong}}(r)&=\frac{4\pi\rho_0}{3}
 \left(r^3-\frac{r^4}{R}\right),\\
-Q_{\mathrm{tổng}}&=0,\\
-E_{\mathrm{ngoài}}&=0,\\
+Q_{\mathrm{tong}}&=0,\\
+E_{\mathrm{ngoai}}&=0,\\
 E_{\mathrm{trong}}&=\frac{\rho_0r}{3\varepsilon_0}
 \left(1-\frac rR\right).
 \end{aligned}
@@ -441,7 +441,7 @@ Khi ong mật bay, không khí lấy bớt electron khỏi lông, làm ong dươ
 $$
 \begin{aligned}
 E&\approx kQ/d^2=1.08\,\mathrm{N/C},\\
-|q_{\mathrm{phấn}}|&\approx F/E\\
+|q_{\mathrm{dust}}|&\approx F/E\\
 &=9.3\times10^{-12}\,\mathrm C.
 \end{aligned}
 $$
@@ -528,7 +528,7 @@ Trên mặt bên, khoảng cách đến tâm là $\sqrt{R^2+z^2}$ và thành ph�
 
 $$
 \begin{aligned}
-\Phi_{\mathrm{bên}}&=2\pi kQR^2\\
+\Phi_{\mathrm{side}}&=2\pi kQR^2\\
 &\quad\times\int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}}\\
 &=\frac Q{\varepsilon_0}
 \frac{L}{\sqrt{L^2+4R^2}}.
@@ -539,9 +539,9 @@ $$
 
 $$
 \begin{aligned}
-\Phi_{\mathrm{trên}}&=\frac{Q}{2\varepsilon_0}
+\Phi_{\mathrm{top}}&=\frac{Q}{2\varepsilon_0}
 \left(1-\frac{L}{\sqrt{L^2+4R^2}}\right),\\
-\Phi_{\mathrm{dưới}}&=\Phi_{\mathrm{trên}}.
+\Phi_{\mathrm{bot}}&=\Phi_{\mathrm{top}}.
 \end{aligned}
 $$
 

@@ -14,23 +14,23 @@ export const electrostaticsCheatsheet={
   sections:[
     {id:'charge',title:'Điện tích',items:[
       {name:'Bảo toàn và lượng tử hóa',formulaRows:[
-        {label:'Tổng điện tích trong hệ kín được bảo toàn',formula:'$$\nQ_{\\mathrm{tổng}}=Q_0\n$$'},
+        {label:'Tổng điện tích trong hệ kín được bảo toàn',formula:'$$\nQ_{\\mathrm{tong}}=Q_0\n$$'},
         {label:'Điện tích của vật cô lập được lượng tử hóa',formula:'$$\nQ=ne,\\quad n\\in\\mathbb Z\n$$'},
         {label:'Độ lớn điện tích cơ bản, chính xác theo định nghĩa',formula:'$$\n\\begin{aligned}\ne&=1.602176634\\\\\n&\\quad\\times10^{-19}\\,\\mathrm C.\n\\end{aligned}\n$$'}
       ],description:'Điện tích cùng dấu đẩy nhau, trái dấu hút nhau. Vật dẫn cho điện tích dễ di chuyển, vật cách điện thì không. Phân cực không bắt buộc tạo điện tích tổng khác không.'}
     ]},
     {id:'force-field',title:'Lực điện và điện trường',items:[
       {name:'Hai điện tích điểm trong chân không',formula:'$$\n\\begin{aligned}\nF&=k\\frac{|q_1q_2|}{r^2},\\\\\nk&=\\frac1{4\\pi\\varepsilon_0}.\n\\end{aligned}\n$$',description:'r là khoảng cách dương giữa nguồn. Lực nằm trên đường nối hai nguồn. Hai lực của một cặp tuân theo định luật III Newton.'},
-      {name:'Trường và lực lên điện tích điểm',formula:'$$\n\\begin{aligned}\n\\vec E&=\\frac{\\vec F_0}{q_0},\\quad q_0\\ne0,\\\\\n\\vec F_0&=q_0\\vec E,\\\\\n\\vec E_{\\mathrm{điểm}}&=k\\frac q{r^2}\\hat{\\mathbf r}.\n\\end{aligned}\n$$',description:'Vector đơn vị hướng từ nguồn đến điểm trường. Đơn vị trường là N/C. Nguồn dương tạo trường ra xa, nguồn âm tạo trường hướng về. Trường trong vật liệu dẫn ở cân bằng tĩnh điện bằng không.'}
+      {name:'Trường và lực lên điện tích điểm',formula:'$$\n\\begin{aligned}\n\\vec E&=\\frac{\\vec F_0}{q_0},\\quad q_0\\ne0,\\\\\n\\vec F_0&=q_0\\vec E,\\\\\n\\vec E_{\\mathrm{point}}&=k\\frac q{r^2}\\hat{\\mathbf r}.\n\\end{aligned}\n$$',description:'Vector đơn vị hướng từ nguồn đến điểm trường. Đơn vị trường là N/C. Nguồn dương tạo trường ra xa, nguồn âm tạo trường hướng về. Trường trong vật liệu dẫn ở cân bằng tĩnh điện bằng không.'}
     ]},
     {id:'distribution',title:'Chồng chất và mật độ điện tích',items:[
       {name:'Các nguồn rời rạc',formula:'$$\n\\begin{aligned}\n\\vec E&=\\vec E_1+\\vec E_2+\\cdots+\\vec E_n\\\\\n&=\\sum_{i=1}^{n}\\vec E_i.\n\\end{aligned}\n$$',description:'Các thành phần đều được tính tại cùng điểm khảo sát, trong đó chỉ số i chạy từ 1 đến n qua các nguồn.'},
-      {name:'Nguồn liên tục',formula:'$$\n\\begin{aligned}\ndq&=\\lambda\\,d\\ell,\\\\\ndq&=\\sigma\\,dA,\\\\\ndq&=\\rho\\,dV,\\\\\nd\\vec E&=k\\frac{dq}{r^2}\\hat{\\mathbf r},\\\\\n\\vec E&=\\int_{\\mathrm{nguồn}}d\\vec E.\n\\end{aligned}\n$$',description:'Mật độ dài đo bằng C/m, mật độ mặt bằng C/m² và mật độ thể tích bằng C/m³.'}
+      {name:'Nguồn liên tục',formula:'$$\n\\begin{aligned}\ndq&=\\lambda\\,d\\ell,\\\\\ndq&=\\sigma\\,dA,\\\\\ndq&=\\rho\\,dV,\\\\\nd\\vec E&=k\\frac{dq}{r^2}\\hat{\\mathbf r},\\\\\n\\vec E&=\\int_{\\mathrm{src}}d\\vec E.\n\\end{aligned}\n$$',description:'Mật độ dài đo bằng C/m, mật độ mặt bằng C/m² và mật độ thể tích bằng C/m³.'}
     ]},
     {id:'standard-fields',title:'Các phân bố điện tích đều',items:[
       {name:'Trên trục vòng bán kính a',formula:'$$\n\\begin{aligned}\nE_x&=\\frac{kQx}{(x^2+a^2)^{3/2}},\\\\\n\\vec E&=E_x\\hat{\\mathbf i}.\n\\end{aligned}\n$$',description:'x đo từ tâm theo trục vòng. Trường tại tâm bằng không. Ở xa vòng, trường gần như nguồn điểm.'},
       {name:'Trên trung trực đoạn dây dài 2a',formula:'$$\n\\begin{aligned}\nE_x&=\\frac{kQ}{x\\sqrt{x^2+a^2}},\\\\\n\\vec E&=E_x\\hat{\\mathbf i},\\quad x>0.\n\\end{aligned}\n$$',description:'Q phân bố đều từ y = −a đến y = +a. Thành phần y triệt tiêu.'},
-      {name:'Dây vô hạn và mặt phẳng vô hạn',formula:'$$\n\\begin{aligned}\nE_{\\mathrm{dây}}&=\\frac{|\\lambda|}{2\\pi\\varepsilon_0r},\\\\\nE_{\\mathrm{mặt}}&=\\frac{|\\sigma|}{2\\varepsilon_0}.\n\\end{aligned}\n$$',description:'Trường vuông góc nguồn, ra xa nếu mật độ dương và hướng về nếu mật độ âm.'},
+      {name:'Dây vô hạn và mặt phẳng vô hạn',formula:'$$\n\\begin{aligned}\nE_{\\mathrm{wire}}&=\\frac{|\\lambda|}{2\\pi\\varepsilon_0r},\\\\\nE_{\\mathrm{sheet}}&=\\frac{|\\sigma|}{2\\varepsilon_0}.\n\\end{aligned}\n$$',description:'Trường vuông góc nguồn, ra xa nếu mật độ dương và hướng về nếu mật độ âm.'},
       {name:'Trên trục đĩa bán kính R',formula:'$$\n\\begin{aligned}\nE_x&=\\frac{\\sigma}{2\\varepsilon_0}\\\\\n&\\quad-\\frac{\\sigma x}{2\\varepsilon_0\\sqrt{x^2+R^2}},\\\\\nx&>0.\n\\end{aligned}\n$$',description:'Mật độ mặt đều. Hai mặt vô hạn song song trái dấu có trường giữa bản bằng $\\frac{|\\sigma|}{\\varepsilon_0}$, trường ngoài bằng không.'}
     ]},
     {id:'dipole',title:'Lưỡng cực trong trường đều',items:[

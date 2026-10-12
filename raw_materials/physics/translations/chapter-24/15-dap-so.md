@@ -27,7 +27,7 @@ $$
 \begin{aligned}
 u(r)&=\frac{Q^2}{32\pi^2\varepsilon_0 r^4},\\
 U&=\frac{Q^2}{8\pi\varepsilon_0 R},\\
-W_{\mathrm{nạp}}&=U,\\
+W_{\mathrm{charge}}&=U,\\
 C&=4\pi\varepsilon_0 R.
 \end{aligned}
 $$

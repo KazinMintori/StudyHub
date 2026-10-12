@@ -31,7 +31,7 @@ Các tệp Markdown hiện tham chiếu hình 25.1–25.6 tại `img/young-25/hi
 | 25.1 | ... the E field results in a net displacement along the wire. | ... điện trường tạo ra độ dời thuần dọc theo dây dẫn. |
 | 25.1 | An electron has a negative charge q, so the force on it due to the E field is in the direction opposite to E. | Electron mang điện tích âm $q$, nên lực điện do điện trường tác dụng lên nó hướng ngược chiều điện trường. |
 | 25.2 | A conventional current is treated as a flow of positive charges, regardless of whether the free charges in the conductor are positive, negative, or both. | Dòng điện quy ước được xem là dòng điện tích dương, bất kể hạt tải tự do là điện tích dương, âm hay gồm cả hai loại. |
-| 25.2 | In a metallic conductor, the moving charges are electrons—but the current still points in the direction positive charges would flow. | Trong vật dẫn kim loại, hạt chuyển động là electron, nhưng dòng điện vẫn hướng theo chiều điện tích dương sẽ chuyển động. |
+| 25.2 | In a metallic conductor, the moving charges are electrons, but the current still points in the direction positive charges would flow. | Trong vật dẫn kim loại, hạt chuyển động là electron, nhưng dòng điện vẫn hướng theo chiều điện tích dương sẽ chuyển động. |
 | 25.3 | Current $I=dQ/dt$ | Dòng điện $I=dQ/dt$ |
 | 25.3 | Current flows from higher to lower electric potential | Dòng điện đi từ điện thế cao đến điện thế thấp |
 | 25.3 | Higher potential / Lower potential | Điện thế cao / Điện thế thấp |

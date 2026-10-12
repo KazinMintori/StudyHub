@@ -10,6 +10,7 @@ $$
 \begin{aligned}
 \rho&=\frac EJ.
 \end{aligned}
+\tag{25.5}
 $$
 
 Điện trở suất càng lớn thì cần điện trường càng mạnh để tạo cùng một mật độ dòng điện. Với điện trường đã cho, điện trở suất lớn cũng tạo mật độ dòng nhỏ hơn.
@@ -82,12 +83,13 @@ Có thể hình dung mối quan hệ này qua dòng chất lỏng qua một bộ
 
 Điện trở suất của kim loại gần như luôn tăng khi nhiệt độ tăng. Các ion trong vật dẫn dao động với biên độ lớn hơn, làm electron chuyển động dễ va chạm hơn. Va chạm cản trở chuyển động trôi của electron và làm giảm dòng điện nếu các điều kiện khác giữ nguyên.
 
-Trong một khoảng nhiệt độ nhỏ, thường đến khoảng $100\,\mathrm K$ độ chênh, điện trở suất của kim loại có thể được xấp xỉ tuyến tính:
+Trong một khoảng nhiệt độ nhỏ, thường đến độ chênh khoảng $100^\circ\mathrm C$, điện trở suất của kim loại có thể được xấp xỉ tuyến tính:
 
 $$
 \begin{aligned}
 \rho(T)&=\rho_0\left[1+\alpha(T-T_0)\right].
 \end{aligned}
+\tag{25.6}
 $$
 
 Trong đó $\rho_0$ là điện trở suất tại nhiệt độ tham chiếu $T_0$, còn $\alpha$ là hệ số nhiệt điện trở suất. $T_0$ thường được chọn là $0^\circ\mathrm C$ hoặc $20^\circ\mathrm C$, còn $T$ có thể cao hơn hoặc thấp hơn $T_0$. Hiệu nhiệt độ có cùng độ lớn khi tính bằng kelvin hoặc độ Celsius. Hợp kim manganin gần như không đổi điện trở suất theo nhiệt độ.
@@ -105,6 +107,8 @@ Siêu dẫn được Heike Kamerlingh Onnes phát hiện năm 1911 ở thủy ng
 Đến năm 1987, người ta tìm được oxit phức hợp yttri, đồng và bari có nhiệt độ tới hạn cao hơn điểm sôi $77\,\mathrm K$ của nitơ lỏng, chất làm lạnh rẻ và an toàn. Tài liệu ghi nhận kỷ lục nhiệt độ tới hạn năm 2018 là $203{,}5\,\mathrm K$ và nêu khả năng chế tạo vật liệu siêu dẫn ở nhiệt độ phòng. Các ứng dụng tiềm năng gồm truyền tải điện, thiết kế máy tính và giao thông. Nam châm điện siêu dẫn làm lạnh bằng heli lỏng được dùng trong máy gia tốc hạt và một số hệ thống tàu đệm từ thử nghiệm. Những tính chất khác của siêu dẫn cần kiến thức từ chương về từ học.
 
 ### Ứng dụng sinh học: Điện trở suất và sự dẫn truyền thần kinh
+
+![Ảnh hiển vi mặt cắt sợi thần kinh có bao myelin cách điện quanh sợi trục](img/young-25/anh-mang-myelin.png)
 
 Ảnh hiển vi điện tử tô màu cho thấy mặt cắt của một sợi thần kinh có đường kính khoảng $1\,\mathrm{\mu m}=10^{-6}\,\mathrm m$. Lớp myelin cách điện bao quanh sợi trục dẫn điện, giúp giới hạn dòng điện thần kinh trong đường dẫn đó.
 

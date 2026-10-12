@@ -73,7 +73,7 @@ $$
 Chỉ số i chạy qua mọi nguồn, rᵢ là khoảng cách nguồn i đến điểm khảo sát. Đây là tổng đại số với dấu của điện tích. Với nguồn liên tục, chia thành điện tích nhỏ dq rồi lấy tích phân:
 
 $$
-V=k\int_{\mathrm{nguồn}}\frac{dq}{r}.
+V=k\int_{\mathrm{src}}\frac{dq}{r}.
 \tag{23.16}
 $$
 

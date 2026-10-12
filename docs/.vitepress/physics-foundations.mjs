@@ -1,9 +1,11 @@
+import {currentConcepts,currentWikiDetails,currentWikiConnections} from './physics-current-foundations.mjs'
 import {capacitanceConcepts,capacitanceWikiDetails,capacitanceWikiConnections} from './physics-capacitance-foundations.mjs'
 import { physicsMotionConcepts, physicsMotionWikiDetails, physicsMotionWikiConnections } from './physics-motion-foundations.mjs'
 import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiConnections } from './physics-electrostatics-foundations.mjs'
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...currentConcepts,
   ...capacitanceConcepts,
   ...physicsMotionConcepts,
   ...electrostaticsConcepts,
@@ -121,32 +123,6 @@ export const physicsConcepts = {
     "use": "Tính tương tác điện, thông lượng và quan hệ với điện thế.",
     "question": "Đổi dấu điện tích thử có đổi chiều điện trường nguồn không?",
     "answer": "Không nếu điện tích thử không làm thay đổi phân bố nguồn."
-  },
-  "dong-dien": {
-    "name": "Dòng điện",
-    "aliases": [
-      "Dòng điện",
-      "dòng điện",
-      "cường độ dòng điện"
-    ],
-    "definition": "Dòng điện là tốc độ điện tích đi qua một tiết diện: $I=dQ/dt$. Chiều quy ước theo hạt tải dương; electron trôi ngược chiều đó trong kim loại.",
-    "example": "Trong một nhánh ổn định không rò, điện trở làm tiêu hao năng lượng nhưng không làm dòng giảm dần dọc nhánh.",
-    "use": "Lập phương trình nút, tính công suất và mật độ dòng.",
-    "question": "Điện trở tiêu thụ dòng điện hay năng lượng?",
-    "answer": "Năng lượng. Bảo toàn điện tích giữ dòng trong nhánh ổn định."
-  },
-  "dien-tro": {
-    "name": "Điện trở",
-    "aliases": [
-      "Điện trở",
-      "điện trở",
-      "điện trở suất"
-    ],
-    "definition": "Điện trở R liên hệ điện áp với dòng theo $V=IR$ trong miền ohmic. Điện trở suất là tính chất vật liệu, còn điện trở còn phụ thuộc hình học và nhiệt độ.",
-    "example": "Dây đồng nhất dài hơn có điện trở lớn hơn khi tiết diện, vật liệu và nhiệt độ giữ nguyên.",
-    "use": "Rút gọn mạch và tính nhiệt Joule.",
-    "question": "Điện trở và điện trở suất có cùng đơn vị không?",
-    "answer": "Không. Điện trở đo bằng ohm; điện trở suất đo bằng ohm mét."
   },
   "tu-truong": {
     "name": "Từ trường",
@@ -351,12 +327,13 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...currentWikiDetails,
   ...capacitanceWikiDetails,
   ...electrostaticsWikiDetails,
   ...gaussWikiDetails,
   ...potentialWikiDetails,
   ...physicsMotionWikiDetails,
-  "dong-luong-vat-ly": "Chọn hệ trước khi phân biệt nội lực với ngoại lực. Quan hệ $\\Delta\\mathbf P=\\int\\mathbf F_{\\mathrm{ngoài}}dt$ cần xét các thành phần vector trong cùng hệ quán tính. Trong va chạm ngắn, có thể bỏ xung lượng ngoài dù ngoại lực không bằng không từng thời điểm, nếu xung lượng đó nhỏ so với trao đổi giữa các vật.\n\nỞ vận tốc gần tốc độ ánh sáng, dùng $\\mathbf p=\\gamma m\\mathbf v$ thay cho biểu thức Newton. “Momentum” trong tối ưu hóa là một thuật toán khác; đây là đại lượng cơ học.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 8. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
+  "dong-luong-vat-ly": "Chọn hệ trước khi phân biệt nội lực với ngoại lực. Quan hệ $\\Delta\\mathbf P=\\int\\mathbf F_{\\mathrm{ngoai}}dt$ cần xét các thành phần vector trong cùng hệ quán tính. Trong va chạm ngắn, có thể bỏ xung lượng ngoài dù ngoại lực không bằng không từng thời điểm, nếu xung lượng đó nhỏ so với trao đổi giữa các vật.\n\nỞ vận tốc gần tốc độ ánh sáng, dùng $\\mathbf p=\\gamma m\\mathbf v$ thay cho biểu thức Newton. “Momentum” trong tối ưu hóa là một thuật toán khác; đây là đại lượng cơ học.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 8. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "momen-luc": "Độ lớn mômen là $\\tau=Fd$ với $d$ là khoảng cách vuông góc từ gốc tới đường tác dụng lực. Không thay $d$ bằng khoảng cách từ gốc tới điểm đặt nếu lực không vuông góc vector vị trí.\n\nĐơn vị là newton mét; mômen là vector, khác công là số vô hướng. Trong hệ quán tính với gốc cố định, tổng mômen ngoài quyết định đạo hàm mômen động lượng đối với cùng gốc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 10. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "momen-quan-tinh": "Với $n$ phần tử, $I=m_1r_1^2+\\cdots+m_nr_n^2=\\sum_{i=1}^nm_ir_i^2$. Đơn vị là kilôgam mét vuông. Với trục cố định và $I$ không đổi, $K=I\\omega^2/2$ và $\\sum\\tau_z=I\\alpha_z$.\n\nĐịnh lý $I=I_{\\mathrm{cm}}+Md^2$ dùng hai trục song song, một trục qua khối tâm. Không áp dụng nó cho hai trục bất kỳ.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 9. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dao-dong-dieu-hoa": "$\\omega$ là tần số góc, $T=2\\pi/\\omega$ là chu kỳ. Biên độ và pha được xác định bởi vị trí và vận tốc ban đầu. Với vật lò xo, $\\omega=\\sqrt{k/m}$; con lắc chỉ gần điều hòa khi góc nhỏ.\n\nCó lực cản hoặc kích thích ngoài thì phải phân biệt tần số riêng, tần số kích thích và tần số dao động tắt dần. Không đồng nhất các đại lượng này trong mọi điều kiện.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 14. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -365,8 +342,6 @@ export const physicsWikiDetails = {
   "noi-nang": "Với quy ước nhiệt hệ nhận dương và công hệ thực hiện dương, $\\Delta U=Q-W$. Nếu dùng quy ước công nhận vào hệ, dấu công trong phương trình đổi; phải ghi quy ước trước.\n\nMột chu trình có $\\Delta U=0$ nhưng vẫn có thể nhận nhiệt ròng và sinh công ròng. Đẳng nhiệt khí lý tưởng có nội năng không đổi, còn chất thực cần xét phương trình nội năng phù hợp.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 19. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "entropy-nhiet-dong": "Để tính biến thiên entropy của quá trình không thuận nghịch, chọn một đường thuận nghịch tưởng tượng nối cùng hai trạng thái rồi tích phân. Không thay nhiệt thực vào $\\int\\delta Q/T$ nếu thiếu điều kiện thuận nghịch.\n\n$S=k_B\\ln\\Omega$ liên hệ với số trạng thái vi mô trong mô hình thống kê phù hợp. Định nghĩa này khác entropy thông tin dù hai lĩnh vực có quan hệ hình thức.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 20. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dien-truong": "Đơn vị điện trường là newton trên coulomb, tương đương volt trên mét. Điện trường nhiều nguồn cộng vector tại cùng điểm. Trong tĩnh điện, $\\mathbf E=-\\nabla V$.\n\nĐường sức biểu diễn hướng trường, không phải quỹ đạo bắt buộc của hạt có vận tốc ban đầu. Điện trường cảm ứng có thể không là gradient của điện thế tĩnh đơn trị.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 21. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
-  "dong-dien": "Mật độ dòng $\\mathbf J=nq\\mathbf v_d$ liên hệ với mật độ hạt và vận tốc trôi. Dòng qua mặt là tích phân $\\mathbf J\\cdot d\\mathbf A$. Chiều dấu phụ thuộc hướng pháp tuyến hoặc chiều nhánh được chọn.\n\nQuy tắc nút dạng tổng dòng vào bằng tổng dòng ra cần mô hình nút không tích lũy điện tích đáng kể. Nếu có tích điện, phải đưa tốc độ biến thiên điện tích nút vào phương trình.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
-  "dien-tro": "Dây đồng nhất có $R=\\rho_e\\ell/A$. Công suất điện trở là $I^2R=V^2/R$ khi các đại lượng phù hợp cùng thời điểm hoặc dùng hiệu dụng cho mạch điều hòa.\n\nQuan hệ ohmic chỉ đúng trong điều kiện đáp ứng tuyến tính đang xét. Một linh kiện không ohmic không thể dùng một R không đổi cho toàn đường đặc tuyến điện áp–dòng.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 25. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "tu-truong": "Hướng lực dùng bàn tay phải cho điện tích dương rồi đảo chiều với điện tích âm. Từ thông qua mặt là $\\Phi_B=\\int\\mathbf B\\cdot d\\mathbf A$. Thông lượng mặt kín bằng không không bắt buộc từ trường bằng không từng điểm.\n\nDòng ổn định tạo trường theo Biot–Savart; điện trường biến thiên cũng góp nguồn trong Ampère–Maxwell. Không nhầm từ trường với lực từ, vì lực còn phụ thuộc điện tích và vận tốc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "cam-ung-dien-tu": "Cuộn N vòng cùng từ thông có $\\mathcal E=-N\\,d\\Phi_B/dt$. Từ thông có thể đổi do trường, diện tích hoặc góc. Vòng không kín có thể có suất điện động nhưng chưa có dòng vòng.\n\nMạch chuyển động cần xét cả điện trường và lực từ trên điện tích theo vận tốc dây. Năng lượng cảm ứng đến từ tác nhân đổi trường hoặc tác nhân thực hiện công chuyển động.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 29. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "tu-cam": "Điện áp cuộn theo quy ước thụ động là $v_L=L\\,di/dt$ và năng lượng $U_B=Li^2/2$. Dòng không thể nhảy tức thời nếu L khác không và điện áp hữu hạn.\n\nHỗ cảm là liên kết giữa hai mạch, khác tự cảm của một mạch. L và M có thể phụ thuộc trạng thái vật liệu từ; công thức hệ số không đổi cần miền tuyến tính phù hợp.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 30. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -385,6 +360,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...currentWikiConnections,
   ...capacitanceWikiConnections,
   ...electrostaticsWikiConnections,
   ...gaussWikiConnections,
@@ -434,16 +410,6 @@ export const physicsWikiConnections = {
     "dien-tich",
     "dien-the",
     "thong-luong"
-  ],
-  "dong-dien": [
-    "dien-tich",
-    "dien-tro",
-    "dien-the"
-  ],
-  "dien-tro": [
-    "dong-dien",
-    "dien-the",
-    "cong-nang-luong"
   ],
   "tu-truong": [
     "dong-dien",

@@ -21,7 +21,7 @@ Electron điện tích −e = $-1.60\times10^{-19}$ C nghỉ cách tâm hạt nh
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoài}}&=C(1/r_1-1/r_2)\\
+W_{\mathrm{ngoai}}&=C(1/r_1-1/r_2)\\
 &=1.51\times10^{-16}\,\mathrm J,\\
 K_3&=C(1/r_3-1/r_2)\\
 &=2.32\times10^{-15}\,\mathrm J.
@@ -70,9 +70,9 @@ Nguồn q₁ = +e cố định ở y = 0, q₂ = −e ở y = a. (a) Tìm công 
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoài}}&=-\frac{ke^2}{2a}+\frac{ke^2}{3a}\\
+W_{\mathrm{ngoai}}&=-\frac{ke^2}{2a}+\frac{ke^2}{3a}\\
 &=-\frac{ke^2}{6a},\\
-U_{\mathrm{hệ}}&=-\frac{ke^2}{a}+W_{\mathrm{ngoài}}\\
+U_{\mathrm{sys}}&=-\frac{ke^2}{a}+W_{\mathrm{ngoai}}\\
 &=-\frac{7ke^2}{6a}.
 \end{aligned}
 $$
@@ -305,7 +305,7 @@ $$
 V(L)&=\frac{kQ}{2a}\int_{-a}^{a}\frac{dx'}{L-x'}\\
 &=\frac{kQ}{2a}\ln\frac{L+a}{L-a},\\
 U(L)&=qV(L),\\
-W_{\mathrm{ngoài}}&=\frac{kQq}{2a}\ln\frac{L+a}{L-a}.
+W_{\mathrm{ngoai}}&=\frac{kQq}{2a}\ln\frac{L+a}{L-a}.
 \end{aligned}
 $$
 

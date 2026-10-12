@@ -56,3 +56,6 @@ output/
 scratch/
 # Logs
 *.log
+
+# Temp directory
+tmp/

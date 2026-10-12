@@ -68,7 +68,7 @@ Hai điện tích $+q$ và $-q$ cách d tạo mômen lưỡng cực có độ l�
 
 $$
 \begin{aligned}
-\vec F_{\mathrm{tổng}}&=0,\\
+\vec F_{\mathrm{tong}}&=0,\\
 \vec\tau&=\vec p\times\vec E,\\
 \tau&=pE\sin\varphi,\\
 U&=-\vec p\cdot\vec E.

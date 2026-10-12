@@ -1,3 +1,4 @@
+import {physics25ImageAnnotations} from './physics25-image-annotations.mjs'
 import {capacitanceImageAnnotations} from './physics24-image-annotations.mjs'
 // One English label -> one Vietnamese explanation in the caption of each image.
 // The figure's scientific description remains separate from this label glossary.
@@ -92,6 +93,6 @@ const originalLabels={
  'young-24/hinh-24-18':[['Phân tử không phân cực','Nonpolar molecules'],['Lưỡng cực điện','Electric dipoles'],['Điện tích dương và âm','Positive and negative charges']],
  'young-24/hinh-24-20':[['Chưa có điện môi','No dielectric'],['Điện môi vừa đưa vào','Dielectric just inserted'],['Điện tích cảm ứng tạo trường','Induced charges create electric field'],['Trường tổng','Resultant field'],['Điện trường ban đầu','Original electric field'],['Trường yếu hơn trong điện môi do điện tích liên kết','Weaker field in dielectric due to induced (bound) charges']],
  'young-24/hinh-24-22':[['Mặt Gauss','Gaussian surface'],['Điện môi','Dielectric'],['Vật dẫn','Conductor'],['Hình nhìn cạnh','Side view'],['Hình phối cảnh','Perspective view']],
- ...capacitanceImageAnnotations
+ ...capacitanceImageAnnotations,...physics25ImageAnnotations
 }
 export const physicsImageLabels={...originalLabels,...physics21ImageAnnotations,...physics22ImageAnnotations,...physics23ImageAnnotations,...physics24ImageAnnotations}

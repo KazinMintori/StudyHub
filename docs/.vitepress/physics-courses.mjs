@@ -773,15 +773,74 @@ export const physics2Course = {
       "prerequisites": [
         "dien-tich",
         "dien-the",
-        "cong-nang-luong"
+        "dien-truong",
+        "cong-nang-luong",
+        "dan-nhiet",
+        "tich-phan"
       ],
       "supportingConcepts": [
         "dong-dien",
-        "dien-tro"
+        "mat-do-dong-dien",
+        "dien-tro-suat",
+        "do-dan-dien",
+        "dien-tro",
+        "suat-dien-dong",
+        "dien-tro-trong",
+        "nhiet-do-tuyet-doi",
+        "do-ben-dien-moi"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 5,
-      "sourceChapter": 25
+      "sourceChapter": 25,
+      "topicGroups": [
+        {
+          "title": "Dòng điện và tính chất vật liệu",
+          "topics": [
+            {
+              "slug": "dong-dien",
+              "title": "Dòng điện",
+              "question": "Chuyển động ngẫu nhiên và vận tốc trôi tạo dòng như thế nào?",
+              "source": "25.1"
+            },
+            {
+              "slug": "dien-tro-suat",
+              "title": "Điện trở suất",
+              "question": "Vật liệu và nhiệt độ ảnh hưởng đến mật độ dòng ra sao?",
+              "source": "25.2"
+            },
+            {
+              "slug": "dien-tro",
+              "title": "Điện trở",
+              "question": "Từ điện trở suất và hình học suy điện trở của một mẫu như thế nào?",
+              "source": "25.3"
+            }
+          ]
+        },
+        {
+          "title": "Nguồn điện, năng lượng và mô hình vi mô",
+          "topics": [
+            {
+              "slug": "suat-dien-dong",
+              "title": "Suất điện động và mạch điện",
+              "question": "Nguồn duy trì dòng và điện áp hai cực như thế nào?",
+              "source": "25.4"
+            },
+            {
+              "slug": "nang-luong-cong-suat",
+              "title": "Năng lượng và công suất trong mạch",
+              "question": "Dòng và điện áp cho biết phần tử nhận hay cấp năng lượng ra sao?",
+              "source": "25.5"
+            },
+            {
+              "slug": "dan-dien-kim-loai",
+              "title": "Mô hình dẫn điện trong kim loại",
+              "question": "Tán xạ electron liên hệ với điện trở suất như thế nào?",
+              "source": "25.6"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "06-mach-dien-mot-chieu",
@@ -1189,7 +1248,7 @@ export const physics2Course = {
         "Trong cầu cách điện đều theo thể tích, trường tăng tuyến tính theo bán kính.",
         "Trường ngoài của hai phân bố cầu cùng tổng điện tích giống nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_{\\mathrm{trong}}&=\\frac{k|Q|r}{R^3},\\quad r<R,\\\\\nE_{\\mathrm{ngoài}}&=\\frac{k|Q|}{r^2},\\quad r>R.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nE_{\\mathrm{trong}}&=\\frac{k|Q|r}{R^3},\\quad r<R,\\\\\nE_{\\mathrm{ngoai}}&=\\frac{k|Q|}{r^2},\\quad r>R.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1200,7 +1259,7 @@ export const physics2Course = {
         "Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q.",
         "Ngay ngoài mặt dẫn, trường vuông góc mặt."
       ],
-      "formula": "$$\n\\begin{aligned}\nQ_{\\mathrm{trong}}&=-q,\\\\\nQ_{\\mathrm{ngoài}}&=q_C+q,\\\\\nE_\\perp&=\\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\nQ_{\\mathrm{trong}}&=-q,\\\\\nQ_{\\mathrm{ngoai}}&=q_C+q,\\\\\nE_\\perp&=\\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1332,7 +1391,7 @@ export const physics2Course = {
         "Phân tử phân cực có lưỡng cực thường trực và chịu mômen định hướng.",
         "Trong vật liệu trung hòa, các điện tích liên kết trong thể tích có thể bù nhau, còn ở mặt ngoài thì không."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec\\tau&=\\vec p\\times\\vec E,\\\\\nU_{\\mathrm{lưỡng\\ cực}}&=-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n\\vec\\tau&=\\vec p\\times\\vec E,\\\\\nU_{\\mathrm{dipole}}&=-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1355,6 +1414,94 @@ export const physics2Course = {
         "Mật độ năng lượng trong điện môi dùng điện trường thực và độ điện thẩm của vật liệu."
       ],
       "formula": "$$\n\\begin{aligned}\n\\oint_S K\\vec E\\cdot d\\vec A&=\\frac{Q_{\\mathrm{free}}}{\\varepsilon_0},\\\\\nu&=\\frac12\\varepsilon E^2.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Dòng điện đo điện lượng chuyển qua tiết diện",
+      "bullets": [
+        "Dòng là đại lượng vô hướng. Chiều quy ước theo điện tích dương.",
+        "Electron trôi ngược chiều dòng quy ước trong kim loại.",
+        "Dòng ổn định trong một vòng không bị bóng đèn hoặc điện trở tiêu thụ."
+      ],
+      "formula": "$$\n\\begin{aligned}\nI&=\\frac{dQ}{dt},\\\\\n1\\,\\mathrm A&=1\\,\\mathrm{C/s}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Mật độ dòng điện giữ thông tin về hướng",
+      "bullets": [
+        "Chuyển động ngẫu nhiên không tạo dòng thuần. Độ trôi nhỏ tạo dòng.",
+        "Cùng một dòng qua dây to và dây nhỏ có thể cho mật độ dòng khác nhau.",
+        "Điện tích âm và vận tốc trôi ngược trường vẫn cho mật độ dòng cùng chiều trường."
+      ],
+      "formula": "$$\n\\begin{aligned}\nI&=n|q|v_dA,\\\\\nJ&=I/A,\\\\\n\\vec J&=nq\\vec v_d.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Điện trở suất thuộc vật liệu và điều kiện khảo sát",
+      "bullets": [
+        "Độ dẫn điện là nghịch đảo điện trở suất.",
+        "Vật liệu Ohm có điện trở suất không đổi theo độ lớn trường trong miền xét.",
+        "Hệ số nhiệt cần dùng trong khoảng nhiệt độ mà gần đúng tuyến tính còn phù hợp."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\rho&=E/J,\\\\\n\\sigma&=1/\\rho,\\\\\n\\rho(T)&\\approx\\rho_0[1+\\alpha(T-T_0)].\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Điện trở còn phụ thuộc chiều dài và tiết diện",
+      "bullets": [
+        "Dây đồng nhất, tiết diện đều có điện trở tỉ lệ chiều dài và nghịch tiết diện.",
+        "Định nghĩa R = V/I không tự khẳng định định luật Ohm.",
+        "Muốn V tỉ lệ I phải giữ R không đổi trong điều kiện khảo sát."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR&=\\frac{\\rho L}{A},\\\\\nV&=IR,\\\\\n1\\,\\Omega&=1\\,\\mathrm{V/A}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Suất điện động là năng lượng trên mỗi coulomb",
+      "bullets": [
+        "Nguồn dùng tác động không tĩnh điện đưa điện tích lên điện thế cao.",
+        "Suất điện động có đơn vị volt và không phải lực cơ học.",
+        "Nguồn thực có điện trở trong, nên điện áp hai cực phụ thuộc tải."
+      ],
+      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\mathcal E-Ir,\\\\\nI&=\\frac{\\mathcal E}{R+r}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Mắc dụng cụ đo làm thay đổi mạch nếu chọn sai vị trí",
+      "bullets": [
+        "Ampe kế lý tưởng có điện trở bằng không, mắc nối tiếp.",
+        "Vôn kế lý tưởng có điện trở vô hạn, mắc song song giữa hai điểm cần đo.",
+        "Mạch hở và ngắn mạch có điện áp, dòng điện rất khác nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}\nI_{\\mathrm{oc}}&=0,\\\\\nV_{\\mathrm{oc}}&=\\mathcal E,\\\\\nI_{\\mathrm{sc}}&=\\mathcal E/r,\\\\\nV_{\\mathrm{sc}}&=0.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Công suất có dấu phân biệt nhận và cấp năng lượng",
+      "bullets": [
+        "Dòng đi vào đầu a cho công suất nhận bằng (Va − Vb)I.",
+        "Điện trở nhận điện năng rồi chuyển hóa thành nhiệt hoặc các dạng khác.",
+        "Nguồn phát điện có phần chuyển hóa và phần hao trong điện trở trong."
+      ],
+      "formula": "$$\n\\begin{aligned}\nP&=V_{ab}I,\\\\\nP_R&=I^2R,\\\\\nP_{\\mathrm{ra}}&=\\mathcal EI-I^2r.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "05-dong-dien-dien-tro",
+      "title": "Tán xạ liên hệ vận tốc trôi với điện trở suất",
+      "bullets": [
+        "Mô hình cổ điển dùng thời gian tự do trung bình giữa các va chạm.",
+        "Độ trôi có hướng rất nhỏ so với chuyển động ngẫu nhiên.",
+        "Mô hình dự đoán điện trở suất không đổi theo trường khi n và τ không đổi theo trường."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\vec v_d&=\\frac{q\\tau}{m}\\vec E,\\\\\n\\rho&=\\frac{m}{ne^2\\tau}.\n\\end{aligned}\n$$",
       "example": ""
     }
   ],

@@ -43,7 +43,7 @@ Gauss ban đầu vẫn đúng:
 
 $$
 \oint\vec E\cdot d\vec A
-=\frac{Q_{\mathrm{tổng,\ trong}}}{\varepsilon_0}.
+=\frac{Q_{\mathrm{tong,trong}}}{\varepsilon_0}.
 $$
 
 Hai vế phải khác loại điện tích. Không thay $\varepsilon_0$ bằng K$\varepsilon_0$ nhưng vẫn lấy tổng gồm điện tích liên kết, vì khi đó đã tính tác dụng phân cực hai lần.

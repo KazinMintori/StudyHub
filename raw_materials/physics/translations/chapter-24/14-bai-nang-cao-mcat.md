@@ -208,7 +208,7 @@ $$
 **Hướng đi:**
 
 - Hai vùng điện môi và không khí nằm cạnh nhau theo diện tích, cùng chịu hiệu điện thế giữa hai bản, nên điện dung cộng song song.
-- Với nguồn nối, $V$ cố định và $U=CV^2/2$. Với tụ ngắt nguồn, $Q$ cố định và $U=Q^2/(2C)$.
+- Với nguồn nối, $V$ cố định và $U=\frac{1}{2}CV^2$. Với tụ ngắt nguồn, $Q$ cố định và $U=Q^2/(2C)$.
 - Khi $V$ cố định, năng lượng pin trao đổi với tụ cũng thay đổi. Không thể xem riêng độ tăng năng lượng điện trường là công cơ học cần thiết.
 
 (a) Hai vùng có điện dung:
@@ -226,7 +226,7 @@ $$
 C(x)=\frac{\varepsilon_0L}{D}\left[L+(K-1)x\right].
 $$
 
-(b) Khi V không đổi, $U=CV^2/2$, vì vậy:
+(b) Khi V không đổi, $U=\frac{1}{2}CV^2$, vì vậy:
 
 $$
 \begin{aligned}
@@ -255,7 +255,10 @@ $$
 (e) Khi tấm đi vào, điện dung tăng một lượng $dC$ và điện tích từ pin tăng $dQ=VdC$. Công pin truyền cho hệ tụ là:
 
 $$
-dW_{\mathrm{pin}}=VdQ=V^2dC.
+\begin{aligned}
+dW_{\mathrm{pin}}&=VdQ\\
+&=V^2dC.
+\end{aligned}
 $$
 
 Phần năng lượng điện trường chỉ tăng $dU=V^2dC/2$. Bảo toàn năng lượng cho công cơ học ngoài:
@@ -292,7 +295,7 @@ Màng trứng hoạt động như một tụ điện có điện dung trên mộ
 Nồng độ Na⁺ bên trong trứng xấp xỉ 30 mmol/L, còn trong nước biển xung quanh là 450 mmol/L. Nồng độ K⁺ bên trong xấp xỉ 200 mmol/L, còn bên ngoài là 10 mmol/L. Hằng số Faraday liên hệ các đại lượng điện và hóa học, có giá trị gần $10^5$ C/mol. Nghĩa là một mol ion đơn hóa trị như Na⁺ hoặc K⁺ mang điện tích $10^5$ C.
 
 ::: exercise 24.73
-Nếu xem màng chỉ như một tụ điện, mỗi đơn vị diện tích màng cần nhận bao nhiêu mol Na⁺ để $V_m$ đổi từ −70 mV lên +30 mV? Chọn: (a) $10^{-4}$ mol/cm², (b) $10^{-9}$ mol/cm², (c) $10^{-12}$ mol/cm² hoặc (d) $10^{-14}$ mol/cm².
+Nếu xem màng chỉ như một tụ điện, mỗi đơn vị diện tích màng cần nhận bao nhiêu mol Na⁺ để $V_m$ đổi từ −70 mV lên +30 mV? Chọn phương án đúng: (A) $10^{-4}$ mol/cm², (b) $10^{-9}$ mol/cm², (c) $10^{-12}$ mol/cm² hoặc (d) $10^{-14}$ mol/cm².
 :::
 
 <!-- detailed-solution:24.73 -->
@@ -401,7 +404,7 @@ Chọn (a). Nồng độ trong và ngoài không cần dùng vì câu hỏi ch�
 :::
 
 ::: exercise 24.76
-Lượng công nhỏ nhất tế bào phải thực hiện để đưa $V_m$ trở về −70 mV là bao nhiêu? Chọn: (a) 3 mJ, (b) 3 µJ, (c) 3 nJ hoặc (d) 3 pJ.
+Lượng công nhỏ nhất tế bào phải thực hiện để đưa $V_m$ trở về −70 mV là bao nhiêu? Chọn phương án đúng: (A) 3 mJ, (b) 3 µJ, (c) 3 nJ hoặc (d) 3 pJ.
 :::
 
 <!-- detailed-solution:24.76 -->
@@ -434,5 +437,5 @@ $$
 \end{aligned}
 $$
 
-Chọn (d). Dù điện thế cuối âm, độ lớn của nó lớn hơn ban đầu nên năng lượng $CV_m^2/2$ tăng.
+Chọn (d). Dù điện thế cuối âm, độ lớn của nó lớn hơn ban đầu nên năng lượng $\frac{1}{2}CV_m^2$ tăng.
 :::

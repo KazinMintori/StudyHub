@@ -49,7 +49,7 @@ Nước có K lớn nhưng thường không thích hợp làm điện môi của
 
 K khác hằng số điện $\varepsilon_0$. K tùy vật liệu và không có đơn vị, còn $\varepsilon_0$ là hằng số có đơn vị F/m hoặc C²/(N m²).
 
-Điện môi thực không cách điện hoàn hảo, nên luôn có dòng rò. Các quan hệ nối tiếp, song song ở mục 24.2 đã bỏ dòng này. Nếu dòng rò chạy đủ lâu làm thay đổi đáng kể điện tích các nút, không được tiếp tục dùng nguyên trạng phân bố điện tích lý tưởng đã suy cho các bản cô lập.
+Điện môi thực tế không cách điện tuyệt đối, nên luôn có dòng rò. Các quan hệ nối tiếp, song song ở mục 24.2 đã bỏ dòng này. Nếu dòng rò chạy đủ lâu làm thay đổi đáng kể điện tích các nút, không được tiếp tục dùng nguyên trạng phân bố điện tích lý tưởng đã suy cho các bản cô lập.
 
 ### Điện tích cảm ứng và phân cực
 

@@ -1,3 +1,4 @@
+import { currentCheatsheet } from './physics-current-course.mjs'
 import { concepts } from './concepts.mjs'
 import { lectureSlides, lectureConceptIds } from './lecture-model.mjs'
 import { physicsMotionCheatsheet } from './physics-motion-course.mjs'
@@ -7,7 +8,7 @@ import { potentialCheatsheet } from './physics-potential-course.mjs'
 import { capacitanceCheatsheet } from './physics-capacitance-course.mjs'
 import { mathAiReviewCheatsheet } from './math-ai-review-course.mjs'
 
-export const cheatsheets = { 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet }
+export const cheatsheets = { 'vat-ly-2/05-dong-dien-dien-tro': currentCheatsheet, 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet }
 
 export function getLectureCheatsheet(course, lesson) {
   if (!course || !lesson) return null

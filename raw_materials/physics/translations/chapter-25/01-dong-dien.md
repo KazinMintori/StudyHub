@@ -40,6 +40,7 @@ $$
 \begin{aligned}
 I&=\frac{dQ}{dt}.
 \end{aligned}
+\tag{25.1}
 $$
 
 Dòng điện $I$ là đại lượng vô hướng, không phải véc-tơ. Dù ta nói dòng điện có chiều, một véc-tơ đơn lẻ không thể mô tả đầy đủ dòng điện chạy dọc một dây cong. Ta thường mô tả chiều bằng lời, chẳng hạn dòng chạy theo chiều kim đồng hồ, hoặc chọn một chiều dọc dây làm chiều dương. Khi dòng thực chạy ngược chiều đã chọn, giá trị $I$ mang dấu âm.
@@ -98,9 +99,18 @@ $$
 
 $$
 \begin{aligned}
-I&=n|q|v_dA,\\
-J&=\frac IA=n|q|v_d.
+I&=\frac{dQ}{dt}\\
+&=n|q|v_dA.
 \end{aligned}
+\tag{25.2}
+$$
+
+$$
+\begin{aligned}
+J&=\frac IA\\
+&=n|q|v_d.
+\end{aligned}
+\tag{25.3}
 $$
 
 Do đó độ lớn dòng điện qua tiết diện bằng tích của mật độ hạt tải, độ lớn điện tích mỗi hạt, tốc độ trôi và diện tích tiết diện.
@@ -111,6 +121,7 @@ $$
 \begin{aligned}
 \vec J&=nq\vec v_d.
 \end{aligned}
+\tag{25.4}
 $$
 
 Ở đây không lấy trị tuyệt đối của $q$. Nếu $q>0$, $\vec v_d$ cùng chiều điện trường. Nếu $q<0$, $\vec v_d$ ngược chiều điện trường. Trong cả hai trường hợp, $\vec J$ cùng chiều điện trường, còn $J$ ở công thức độ lớn phía trên là độ lớn của véc-tơ $\vec J$.
@@ -170,9 +181,16 @@ Tốc độ trôi của electron dùng độ lớn điện tích nguyên tố $|
 
 $$
 \begin{aligned}
-v_d&=\frac{J}{n|q|}\\
-n|q|&=(8{,}5\times10^{28})(1{,}60\times10^{-19})\\
-&=1{,}36\times10^{10}\,\mathrm{C/m^3},\\
+n|q|&=(8{,}5)(1{,}60)\times10^9\\
+&=13{,}6\times10^9\\
+&=1{,}36\times10^{10}\,\mathrm{C/m^3}.
+\end{aligned}
+$$
+
+Thay tích này vào $v_d=J/(n|q|)$:
+
+$$
+\begin{aligned}
 v_d&=\frac{2{,}04\times10^6}{1{,}36\times10^{10}}\,\mathrm{m/s}\\
 &=1{,}5\times10^{-4}\,\mathrm{m/s}\\
 &=0{,}15\,\mathrm{mm/s}.

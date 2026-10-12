@@ -8,7 +8,7 @@
 
 Trong tinh thể kim loại, mỗi nguyên tử góp một hoặc nhiều electron ngoài vào nhóm electron có thể chuyển động trong vật liệu. Các electron va chạm với các ion dương gần như đứng yên trong mạng tinh thể. Có thể hình dung chuyển động này như phân tử khí đi qua một lớp cát xốp.
 
-Khi không có điện trường, electron đi gần như thẳng giữa các va chạm nhưng hướng chuyển động phân bố ngẫu nhiên. Vận tốc trung bình có hướng của cả nhóm bằng không, nên không có dòng điện thuần. Khi có điện trường, mỗi electron vẫn chuyển động nhiệt ngẫu nhiên, đồng thời quỹ đạo bị lệch nhẹ và xuất hiện một vận tốc trôi có hướng. Hình 25.26 phóng đại độ cong quỹ đạo để biểu diễn độ trôi này.
+Khi không có điện trường, electron đi theo đoạn thẳng giữa các va chạm nhưng hướng chuyển động phân bố ngẫu nhiên. Vận tốc trung bình có hướng của cả nhóm bằng không, nên không có dòng điện thuần. Khi có điện trường, mỗi electron vẫn chuyển động nhiệt ngẫu nhiên, đồng thời quỹ đạo bị lệch nhẹ và xuất hiện một vận tốc trôi có hướng. Hình 25.26 phóng đại độ cong quỹ đạo để biểu diễn độ trôi này.
 
 Tốc độ do chuyển động ngẫu nhiên cỡ $10^6$ m/s, còn tốc độ trôi thường chỉ cỡ $10^{-4}$ m/s. Vì thế dòng điện không phải dòng electron chạy nhanh đồng loạt qua dây. Nó là độ lệch rất nhỏ của chuyển động ngẫu nhiên có sẵn. Thời gian trung bình giữa hai va chạm liên tiếp của một electron được gọi là thời gian tự do trung bình, ký hiệu $\tau$. Hình 25.27 dùng quả cầu lăn qua các chốt để gợi hình ảnh va chạm làm đổi hướng.
 
@@ -18,6 +18,20 @@ Tốc độ do chuyển động ngẫu nhiên cỡ $10^6$ m/s, còn tốc độ 
 
 ### Từ va chạm đến điện trở suất
 
+Để nối mô hình với các đại lượng đo được, dùng định nghĩa điện trở suất và mật độ dòng điện:
+
+$$
+\rho=\frac EJ.
+\tag{25.21}
+$$
+
+$$
+\vec J=nq\vec v_d.
+\tag{25.22}
+$$
+
+n là số electron tự do trong một đơn vị thể tích và q = −e là điện tích mỗi electron.
+
 Xét một khoảng thời gian $\tau$ giữa các va chạm. Điện trường $\vec E$ tác dụng lực $\vec F=q\vec E$ lên hạt mang điện, nên gia tốc là:
 
 $$
@@ -25,7 +39,9 @@ $$
 =\frac{q\vec E}{m}.
 $$
 
-Để thấy độ trôi hình thành ra sao, tưởng tượng lúc đầu chưa có điện trường. Chuyển động hoàn toàn ngẫu nhiên và vận tốc trung bình có hướng của nhiều electron bằng không. Bật một điện trường không đổi tại $t=0$. Trong khoảng thời gian $\tau$ trước lần va chạm tiếp theo, lực điện làm vận tốc mỗi electron đổi thêm $\vec a\tau$. Gọi $\vec v_0$ là vận tốc ngẫu nhiên của một electron tại thời điểm bắt đầu khoảng đang xét. Sau thời gian $\tau$, vận tốc của nó là:
+Để dựng phép tính, tưởng tượng lúc đầu chưa có điện trường. Chuyển động hoàn toàn ngẫu nhiên và vận tốc trung bình có hướng của nhiều electron bằng không. Tại $t=0$, bật điện trường không đổi và tạm cho các va chạm ngừng tác dụng. Sau khoảng thời gian tự do trung bình $\tau$, cho các va chạm tác dụng trở lại.
+
+Trong khoảng này, lực điện làm vận tốc mỗi electron đổi thêm $\vec a\tau$. Gọi $\vec v_0$ là vận tốc ngẫu nhiên của một electron tại thời điểm bắt đầu. Sau thời gian $\tau$, vận tốc của nó là:
 
 $$
 \vec v=\vec v_0+\vec a\tau.
@@ -35,6 +51,7 @@ Lấy trung bình trên nhiều electron, các hướng ban đầu triệt tiêu
 
 $$
 \vec v_d=\frac{q\tau}{m}\vec E.
+\tag{25.23}
 $$
 
 Với electron, $q=-e$, nên electron trôi ngược chiều điện trường. Mật độ dòng điện quy ước vẫn hướng cùng chiều điện trường, vì mật độ điện tích của hạt tải cũng âm.
@@ -49,16 +66,15 @@ $$
 \end{aligned}
 $$
 
-Định nghĩa điện trở suất bằng tỷ số độ lớn của điện trường và mật độ dòng điện:
+Theo định nghĩa ở công thức (25.21), điện trở suất là tỉ số độ lớn của điện trường và mật độ dòng điện.
 
-$$
-\rho=\frac{E}{J}.
-$$
+
 
 Do đó, với mô hình electron cổ điển:
 
 $$
 \rho=\frac{m}{ne^2\tau}.
+\tag{25.24}
 $$
 
 Điện trở suất giảm khi mật độ hạt tải $n$ hoặc thời gian tự do trung bình $\tau$ tăng. Nó tăng khi hạt tải nặng hơn. Nếu $n$ và $\tau$ không đổi theo độ lớn điện trường, $\rho$ cũng không đổi và vật liệu tuân theo định luật Ôm. Việc tưởng tượng tất cả electron bắt đầu cùng lúc chỉ là cách dựng phép tính. Nếu từng electron có thời điểm va chạm riêng, trung bình trên thời gian giữa va chạm vẫn cho cùng vận tốc trôi.
@@ -87,8 +103,10 @@ $$
 
 $$
 \begin{aligned}
-\tau&=\frac{9{,}11\times10^{-31}}
-{(8{,}5\times10^{28})(1{,}60\times10^{-19})^2(1{,}72\times10^{-8})}\\
+e^2&=2{,}56\times10^{-38}\,\mathrm{C^2},\\
+ne^2&=2{,}176\times10^{-9}\,\mathrm{C^2/m^3},\\
+ne^2\rho&=3{,}74272\times10^{-17}\,\mathrm{kg/s},\\
+\tau&=\frac{9{,}11\times10^{-31}}{3{,}74272\times10^{-17}}\,\mathrm s\\
 &\approx2{,}4\times10^{-14}\,\mathrm s.
 \end{aligned}
 $$

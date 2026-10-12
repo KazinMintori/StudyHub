@@ -89,13 +89,13 @@ Một tụ phẳng chân không có C = 1,0 F, hai bản cách nhau 1,0 mm. Cầ
 
 $$
 \begin{aligned}
-A&=Cd/\varepsilon_0\\
+A&=\frac{Cd}{\varepsilon_0}\\
 &=\frac{(1.0)(1.0\times10^{-3})}{8.85\times10^{-12}}\\
 &\approx1.1\times10^8\,\mathrm{m^2}.
 \end{aligned}
 $$
 
-Một bản vuông cần cạnh cỡ 10 km. Thể tích khe ít nhất cỡ $1.1\times10^5$ m³, tương đương một khối lập phương cạnh khoảng 50 m. Tuy vậy, có thể chế tạo tụ 1 F chỉ cỡ vài centimét bằng vật liệu và cấu trúc phù hợp, trong đó khoảng cách hữu hiệu giữa các mặt tích điện được giảm rất mạnh. Tụ thực tế không cần giữ mô hình hai bản chân không cách 1 mm của ví dụ này.
+Một bản vuông cần cạnh cỡ 10 km. Thể tích khe ít nhất cỡ $1.1\times10^5$ m³, tương đương một khối lập phương cạnh khoảng 50 m. Tuy vậy, có thể chế tạo tụ 1 F chỉ cỡ vài centimét bằng vật liệu và cấu trúc phù hợp, trong đó khoảng cách hữu hiệu giữa các mặt tích điện được thu hẹp đáng kể xuống cỡ nanomét nhờ lớp điện môi phân cực hoặc lớp điện kép bề mặt. Tụ thực tế không cần giữ mô hình hai bản chân không cách 1 mm của ví dụ này.
 
 Điện dung đo lượng điện tích có thể giữ ở điện áp cho trước, tỷ lệ thuận diện tích và nghịch khoảng cách trong mô hình tụ phẳng.
 :::

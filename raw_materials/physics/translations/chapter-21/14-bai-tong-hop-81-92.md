@@ -34,7 +34,7 @@ E\approx\frac{Q}{2\pi\varepsilon_0R^2}\frac{R^2}{2x^2}&=\frac{kQ}{x^2}.
 \end{aligned}
 $$
 
-(c) Đĩa cho trường nhỏ hơn nguồn điểm: Những phần xa tâm vừa cách P xa hơn vừa không hướng hoàn toàn theo trục. (d) Lấy phần trăm so với trường đĩa, $(E_{\mathrm{điểm}}-E_{\mathrm{đĩa}})/E_{\mathrm{đĩa}}$, được khoảng 1,17% tại 20,0 cm và 4,66% tại 10,0 cm. Nếu dùng trường điểm làm mẫu số, các giá trị tương ứng là 1,16% và 4,46%.
+(c) Đĩa cho trường nhỏ hơn nguồn điểm: Những phần xa tâm vừa cách P xa hơn vừa không hướng hoàn toàn theo trục. (d) Lấy phần trăm so với trường đĩa, $(E_{\mathrm{point}}-E_{\mathrm{disk}})/E_{\mathrm{disk}}$, được khoảng 1,17% tại 20,0 cm và 4,66% tại 10,0 cm. Nếu dùng trường điểm làm mẫu số, các giá trị tương ứng là 1,16% và 4,46%.
 :::
 
 ::: exercise 21.82 •• CP
@@ -156,9 +156,9 @@ Hai mặt rất lớn song song cách $5.00\,\mathrm{cm}$. A có mật độ đ�
 
 $$
 \begin{aligned}
-E_{\mathrm{giữa}}&=\frac{(11.6-8.80)\times10^{-6}}{2\varepsilon_0}\\
+E_{\mathrm{khe}}&=\frac{(11.6-8.80)\times10^{-6}}{2\varepsilon_0}\\
 &=1.58\times10^5\,\mathrm{N/C},\\
-E_{\mathrm{ngoài}}&=\frac{(11.6+8.80)\times10^{-6}}{2\varepsilon_0}\\
+E_{\mathrm{ngoai}}&=\frac{(11.6+8.80)\times10^{-6}}{2\varepsilon_0}\\
 &=1.15\times10^6\,\mathrm{N/C}.
 \end{aligned}
 $$

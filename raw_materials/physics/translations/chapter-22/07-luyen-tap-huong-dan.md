@@ -143,8 +143,10 @@ Hai bản dẫn lớn song song mang điện tích trái dấu và cùng độ l
 - Đây là hai bản dẫn, nên không dùng riêng hệ số 1/(2$\varepsilon_0$) của một mặt cách điện.
 
 $$
-|\sigma|=\varepsilon_0F/q
-=5.41\times10^{-8}\,\mathrm{C/m^2}.
+\begin{aligned}
+|\sigma|&=\frac{\varepsilon_0F}{q}\\
+&=5{,}41\times10^{-8}\,\mathrm{C/m^2}.
+\end{aligned}
 $$
 :::
 

@@ -69,9 +69,9 @@ Hạt +7,60 nC trong trường đều hướng trái còn chịu một lực kh�
 
 $$
 \begin{aligned}
-W_e&=\Delta K-W_{\mathrm{khác}}\\
+W_e&=\Delta K-W_{\mathrm{other}}\\
 &=-2.15\times10^{-5}\,\mathrm J,\\
-V_{\mathrm{đầu}}-V_{\mathrm{cuối}}&=W_e/q\\
+V_{\mathrm{dau}}-V_{\mathrm{cuoi}}&=W_e/q\\
 &=-2.83\,\mathrm{kV},\\
 E&=35.4\,\mathrm{kV/m}.
 \end{aligned}
@@ -450,7 +450,10 @@ Thanh cách điện mảnh uốn thành nửa vòng bán kính a, điện tích 
 - Vì khoảng cách không đổi, đưa 1/a ra ngoài tích phân.
 
 $$
-V=\frac{k}{a}\int dq=kQ/a.
+\begin{aligned}
+V&=\frac{k}{a}\int dq\\
+&=\frac{kQ}{a}.
+\end{aligned}
 $$
 
 Không cần chiếu theo góc như khi tìm vector trường của nửa vòng.
@@ -470,7 +473,10 @@ Cầu cách điện R = 5,00 cm có Q = +4,00 µC đều trong thể tích. Tìm
 - Trường ra nên tâm cao thế hơn.
 
 $$
-V(0)-V(R)=\frac{kQ}{2R}=+360\,\mathrm{kV}.
+\begin{aligned}
+V(0)-V(R)&=\frac{kQ}{2R}\\
+&=+360\,\mathrm{kV}.
+\end{aligned}
 $$
 :::
 

@@ -93,8 +93,8 @@ Với Bài 22.61, đặt $\eta=L/\sqrt{L^2+4R^2}$:
 
 $$
 \begin{aligned}
-\Phi_{\mathrm{bên}}&=Q\eta/\varepsilon_0,\\
-\Phi_{\mathrm{mỗi\ đáy}}&=Q(1-\eta)/(2\varepsilon_0).
+\Phi_{\mathrm{side}}&=Q\eta/\varepsilon_0,\\
+\Phi_{\mathrm{base}}&=Q(1-\eta)/(2\varepsilon_0).
 \end{aligned}
 $$
 :::

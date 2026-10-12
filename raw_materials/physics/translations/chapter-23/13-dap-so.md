@@ -24,7 +24,7 @@ Câu hỏi mở đầu chọn (iii). Khi điện áp giữa dụng cụ và kim 
 Với bài tổng hợp, công ngoài đưa nguồn q chậm từ vô hạn đến x = L > a là:
 
 $$
-W_{\mathrm{ngoài}}=\frac{kQq}{2a}\ln\frac{L+a}{L-a}.
+W_{\mathrm{ngoai}}=\frac{kQq}{2a}\ln\frac{L+a}{L-a}.
 $$
 :::
 

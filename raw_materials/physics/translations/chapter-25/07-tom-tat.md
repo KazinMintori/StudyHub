@@ -4,6 +4,8 @@
 
 ### Dòng điện và mật độ dòng điện
 
+![Điện tích dương trôi qua tiết diện khi có điện trường dọc vật dẫn](img/young-25/tom-tat-dong-dien.png)
+
 Dòng điện là điện lượng đi qua một diện tích xác định trong một đơn vị thời gian. Đơn vị SI là ampere, với 1 A = 1 C/s. Với hạt tải có mật độ số n, điện tích q và độ lớn vận tốc trôi v_d, dòng qua tiết diện vuông góc chuyển động là:
 
 $$
@@ -17,6 +19,8 @@ $$
 Mật độ dòng điện là dòng trên một đơn vị diện tích tiết diện khi dòng phân bố đều. Chiều dòng điện quy ước theo chuyển động của điện tích dương. Quy ước ấy vẫn dùng khi hạt tải thực là âm hoặc gồm cả hai dấu. Xem Ví dụ 25.1.
 
 ### Điện trở suất
+
+![Điện trở suất kim loại tăng theo nhiệt độ trong miền gần tuyến tính](img/young-25/tom-tat-dien-tro-suat.png)
 
 Điện trở suất ρ của vật liệu là tỉ số độ lớn điện trường và mật độ dòng điện. Vật dẫn tốt có ρ nhỏ, còn vật cách điện tốt có ρ lớn:
 
@@ -33,6 +37,8 @@ $$
 ρ₀ là điện trở suất ở nhiệt độ T₀, còn α là hệ số nhiệt của điện trở suất.
 
 ### Điện trở
+
+![Điện trường và dòng điện hướng từ đầu thế cao đến đầu thế thấp của dây đồng nhất](img/young-25/tom-tat-dien-tro.png)
 
 Hiệu điện thế qua một mẫu vật liệu tuân theo Ohm tỉ lệ với dòng điện qua mẫu. Điện trở R là tỉ số V/I, có đơn vị ohm:
 
@@ -53,7 +59,9 @@ $$
 
 ### Mạch điện và suất điện động
 
-Mạch kín có một đường dẫn liên tục cho dòng điện. Để duy trì dòng ổn định, mạch cần nguồn suất điện động. Suất điện động có đơn vị volt và biểu thị năng lượng nguồn cung cấp trên mỗi coulomb điện tích, dù tên gọi có chữ “lực”.
+![Nguồn có điện trở trong cung cấp dòng cho một điện trở ngoài](img/young-25/tom-tat-suat-dien-dong.png)
+
+Mạch kín có một đường dẫn liên tục cho dòng điện. Để duy trì dòng ổn định, mạch cần nguồn suất điện động. Suất điện động có đơn vị volt và biểu thị năng lượng nguồn cung cấp trên mỗi coulomb điện tích. Dù tên tiếng Anh có chữ force, đại lượng này không phải lực.
 
 Nguồn thực có điện trở trong r. Khi nguồn đang cung cấp dòng I ra mạch ngoài, điện áp hai cực là:
 
@@ -64,6 +72,8 @@ $$
 Suất điện động của nguồn là $\mathcal E$. Điện áp hai cực phụ thuộc dòng tải và có thể khác suất điện động. Xem Ví dụ 25.4–25.7.
 
 ### Năng lượng và công suất trong mạch
+
+![Dòng quy ước đi vào đầu a và ra đầu b của một phần tử mạch](img/young-25/tom-tat-cong-suat.png)
 
 Khi dòng quy ước đi qua một phần tử từ thế thấp lên thế cao, phần tử đưa năng lượng vào mạch. Khi dòng đi từ thế cao xuống thế thấp, phần tử nhận năng lượng điện từ mạch. Với dòng từ a đến b, công suất nhận là:
 
@@ -84,6 +94,8 @@ $$
 Xem Ví dụ 25.8–25.10.
 
 ### Sự dẫn điện trong kim loại
+
+![Độ lệch có hướng xuất hiện trên chuyển động ngẫu nhiên của electron trong điện trường](img/young-25/tom-tat-dan-dien.png)
 
 Trong kim loại, dòng điện do electron chuyển động tạo ra. Các electron có thể chuyển động trong mạng tinh thể nhưng bị tán xạ khi tương tác với các ion dương. Mô hình cổ điển đơn giản liên hệ điện trở suất với khối lượng m, điện tích có độ lớn e, mật độ số electron n và thời gian tự do trung bình τ:
 

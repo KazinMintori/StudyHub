@@ -244,7 +244,7 @@ Hai nguồn cố định trên trục x, q₁ = −e tại x = 0 và q₂ = +e t
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoài}}&=ke\left(\frac{-e}{2a}+\frac e a\right)\\
+W_{\mathrm{ngoai}}&=ke\left(\frac{-e}{2a}+\frac e a\right)\\
 &=\frac{ke^2}{2a}.
 \end{aligned}
 $$

@@ -213,7 +213,8 @@ Pin có suất điện động 24,0 V và điện trở trong 1,30 Ω, nối m�
 
 $$
 \begin{aligned}
-I&=24.0/(18.0+1.30)=1.24\,\mathrm A,\\
+I&=24.0/(18.0+1.30)\\
+&=1.24\,\mathrm A,\\
 P_{\mathrm{hóa}}&=\mathcal EI=29.8\,\mathrm W,\\
 P_r&=I^2r=2.01\,\mathrm W,\\
 P_{\mathrm{ra}}&=\mathcal EI-I^2r=27.8\,\mathrm W,\\
@@ -241,8 +242,10 @@ $$
 \begin{aligned}
 I&=\sqrt{6.54/12.0}=0.738\,\mathrm A,\\
 P_{\mathrm{ra}}&=6.54\,\mathrm W,\\
-V_{ab}&=IR=8.86\,\mathrm V,\\
-r&=(9.00-V_{ab})/I=0.191\,\Omega.
+V_{ab}&=IR\\
+&=8.86\,\mathrm V,\\
+r&=(9.00-V_{ab})/I\\
+&=0.191\,\Omega.
 \end{aligned}
 $$
 :::
@@ -262,12 +265,16 @@ Mạch có dòng 0,720 A khi pin suất điện động 12,0 V nối với đi�
 
 $$
 \begin{aligned}
-V_{ab}&=(0.720)(16.0)=11.52\,\mathrm V,\\
+V_{ab}&=(0.720)(16.0)\\
+&=11.52\,\mathrm V,\\
 r&=(12.0-11.52)/0.720\\
 &=0.667\,\Omega,\\
-P_R&=I^2R=8.29\,\mathrm W,\\
-P_{\mathrm{hóa}}&=\mathcal EI=8.64\,\mathrm W,\\
-P_r&=I^2r=0.346\,\mathrm W.
+P_R&=I^2R\\
+&=8.29\,\mathrm W,\\
+P_{\mathrm{hóa}}&=\mathcal EI\\
+&=8.64\,\mathrm W,\\
+P_r&=I^2r\\
+&=0.346\,\mathrm W.
 \end{aligned}
 $$
 :::
@@ -293,16 +300,16 @@ $$
 \end{aligned}
 $$
 
-Dòng qua R lớn hơn vì tổng điện trở nhỏ hơn. Để so công suất, xét:
+Dòng qua R lớn hơn vì tổng điện trở nhỏ hơn. Khai triển hiệu giữa mẫu và tử của tỉ số công suất cho biểu thức dưới đây. Vì $R>r\ge0$, biểu thức này dương:
 
 $$
 \begin{aligned}
-(2R+r)^2-2(R+r)^2&=2R^2-r^2,\\
+2R^2-r^2&>R^2-r^2\\
 &>0.
 \end{aligned}
 $$
 
-Vì R > r > 0, tử của tỉ số công suất nhỏ hơn mẫu. Do đó P₂/P₁ < 1, điện trở R cũng nhận công suất lớn hơn. Kết luận dùng điều kiện R > r đã cho.
+Vì R > r ≥ 0, tử của tỉ số công suất nhỏ hơn mẫu. Do đó P₂/P₁ < 1, điện trở R cũng nhận công suất lớn hơn. Kết luận dùng điều kiện R > r đã cho.
 :::
 
 ## Bài tổng hợp: Điện trở suất, nhiệt độ và công suất

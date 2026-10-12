@@ -119,8 +119,8 @@ Trường trong Hình P22.33 luôn song song trục x, với Eᵧ = E_z = 0 và 
 
 $$
 \begin{aligned}
-A(125-E_{x,\mathrm{đối}})&=Q/\varepsilon_0,\\
-E_{x,\mathrm{đối}}&=+577\,\mathrm{N/C}.
+A(125-E_{x,\mathrm{opp}})&=Q/\varepsilon_0,\\
+E_{x,\mathrm{opp}}&=+577\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -251,7 +251,7 @@ Trụ cách điện đặc rất dài bán kính R có mật độ thể tích d
 $$
 \begin{aligned}
 E_{\mathrm{trong}}&=\frac{\rho r}{2\varepsilon_0},\\
-E_{\mathrm{ngoài}}&=\frac{\lambda}{2\pi\varepsilon_0r}\\
+E_{\mathrm{ngoai}}&=\frac{\lambda}{2\pi\varepsilon_0r}\\
 &=\frac{\rho R^2}{2\varepsilon_0r}.
 \end{aligned}
 $$

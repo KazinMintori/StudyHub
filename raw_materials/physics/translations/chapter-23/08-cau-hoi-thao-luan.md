@@ -155,7 +155,7 @@ Vì sao tích phân trường trên một vòng kín như Hình Q23.9 luôn bằ
 - Tích phân đường trường là hiệu điện thế, không phải điện thông qua mặt Gauss.
 
 $$
-\oint\vec E\cdot d\vec\ell=V_{\mathrm{đầu}}-V_{\mathrm{cuối}}=0.
+\oint\vec E\cdot d\vec\ell=V_{\mathrm{dau}}-V_{\mathrm{cuoi}}=0.
 $$
 
 Việc có nguồn bên trong vòng không làm tích phân đường thành Q/$\varepsilon_0$. Gauss liên hệ Q với **tích phân mặt kín**, là một phép tính khác.

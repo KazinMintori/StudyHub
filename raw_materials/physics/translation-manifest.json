@@ -2255,22 +2255,127 @@
           "page": 832
         }
       ],
-      "status": "pending",
-      "fragments": [],
+      "status": "content-complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-25/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.1",
+          "file": "raw_materials/physics/translations/chapter-25/01-dong-dien.md",
+          "destination": "topic:dong-dien",
+          "printedPages": [
+            813,
+            816
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.2",
+          "file": "raw_materials/physics/translations/chapter-25/02-dien-tro-suat.md",
+          "destination": "topic:dien-tro-suat",
+          "printedPages": [
+            816,
+            819
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.3",
+          "file": "raw_materials/physics/translations/chapter-25/03-dien-tro.md",
+          "destination": "topic:dien-tro",
+          "printedPages": [
+            819,
+            822
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.4",
+          "file": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+          "destination": "topic:suat-dien-dong",
+          "printedPages": [
+            822,
+            827
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.5",
+          "file": "raw_materials/physics/translations/chapter-25/05-nang-luong-cong-suat.md",
+          "destination": "topic:nang-luong-cong-suat",
+          "printedPages": [
+            828,
+            832
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "25.6",
+          "file": "raw_materials/physics/translations/chapter-25/06-mo-hinh-dan-dien-kim-loai.md",
+          "destination": "topic:dan-dien-kim-loai",
+          "printedPages": [
+            832,
+            835
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-25/07-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "08-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-25/08-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "09-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-25/09-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "10-bai-tap-01-30",
+          "file": "raw_materials/physics/translations/chapter-25/10-bai-tap-01-30.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tap-31-58",
+          "file": "raw_materials/physics/translations/chapter-25/11-bai-tap-31-58.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-tong-hop-59-78",
+          "file": "raw_materials/physics/translations/chapter-25/12-bai-tong-hop-59-78.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-nang-cao-mcat",
+          "file": "raw_materials/physics/translations/chapter-25/13-bai-nang-cao-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "14-dap-so",
+          "file": "raw_materials/physics/translations/chapter-25/14-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        }
+      ],
       "pendingSourceUnits": [
-        "chapter-opening",
-        "25.1",
-        "25.2",
-        "25.3",
-        "25.4",
-        "25.5",
-        "25.6",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+        "direct-browser-render-review"
+      ],
+      "completionReview": "raw_materials/physics/chapter-25-review.json"
     },
     {
       "chapter": 26,

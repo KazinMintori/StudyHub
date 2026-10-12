@@ -25,6 +25,7 @@ $$
 P&=\frac{V_{ab}\,dQ}{dt}\\
 &=V_{ab}I.
 \end{aligned}
+\tag{25.17}
 $$
 
 Với quy ước dòng điện đi vào đầu a, $P>0$ nghĩa là phần tử nhận điện năng. Khi $P<0$, phần tử cấp điện năng cho mạch. Đơn vị của công suất là oát vì một vôn bằng một jun trên culông và một ampe bằng một culông trên giây:
@@ -47,6 +48,7 @@ P&=V_{ab}I\\
 &=I^2R\\
 &=\frac{V_{ab}^2}{R}.
 \end{aligned}
+\tag{25.18}
 $$
 
 Công suất này luôn dương với điện trở thụ động. Điện tích truyền năng lượng cho các nguyên tử của vật liệu qua va chạm, làm tăng nội năng. Điện trở nóng lên, truyền nhiệt ra môi trường, hoặc cả hai cùng xảy ra. Ta gọi quá trình đó là tỏa nhiệt Joule.
@@ -55,7 +57,7 @@ Mỗi điện trở có công suất định mức, tức công suất lớn nh�
 
 ### Công suất pin đang cấp cho mạch
 
-Hình 25.22a mô tả nguồn điện có suất điện động $\mathcal E$ và điện trở trong $r$, nối với mạch ngoài bằng dây dẫn lý tưởng. Gọi a là cực có điện thế cao, b là cực có điện thế thấp. Khi pin cấp dòng ra ngoài từ cực dương, điện áp hai cực là:
+Hình 25.22a mô tả nguồn điện có suất điện động $\mathcal E$ và điện trở trong $r$, nối với mạch ngoài bằng dây dẫn lý tưởng. Gọi a là cực có điện thế cao, b là cực có điện thế thấp. Khi pin cấp dòng, I sau đây là độ lớn dòng đi ra cực dương. Đây là quy ước công suất ra của nguồn, khác quy ước công suất nhận khi dòng đi vào đầu a. Điện áp hai cực là:
 
 $$
 V_{ab}=\mathcal E-Ir.
@@ -68,6 +70,7 @@ $$
 P_{\mathrm{ra}}&=V_{ab}I\\
 &=\mathcal EI-I^2r.
 \end{aligned}
+\tag{25.19}
 $$
 
 Hạng $\mathcal EI$ là tốc độ chuyển hóa hóa năng thành điện năng trong nguồn. Hạng $I^2r$ là công suất tỏa nhiệt trong điện trở trong. Phần còn lại, $\mathcal EI-I^2r$, là công suất điện thực sự đi ra mạch ngoài. Hình 25.22b liên hệ sơ đồ với pin ô tô cấp điện cho đèn.
@@ -89,6 +92,7 @@ $$
 P_{\mathrm{vào}}&=V_{ab}I\\
 &=\mathcal EI+I^2r.
 \end{aligned}
+\tag{25.20}
 $$
 
 Phần $\mathcal EI$ chuyển thành hóa năng có thể lấy ra về sau. Phần $I^2r$ tỏa nhiệt trong pin. Vì vậy pin sạc có thể ấm lên. Mạch nạp phải giới hạn dòng và công suất để tránh quá nhiệt.
@@ -103,19 +107,24 @@ Một pin có suất điện động 12 V và điện trở trong 2 Ω cấp dò
 
 **Thực hiện:** Tốc độ chuyển hóa hóa năng:
 
+Ký hiệu $P_{\mathcal E}$ là tốc độ chuyển hóa hóa năng thành điện năng của nguồn.
+
 $$
-P_{\mathrm{hóa}\to\mathrm{điện}}
-=\mathcal EI
-=(12\,\mathrm V)(2\,\mathrm A)
-=24\,\mathrm W.
+\begin{aligned}
+P_{\mathcal E}&=\mathcal EI\\
+&=(12\,\mathrm V)(2\,\mathrm A)\\
+&=24\,\mathrm W.
+\end{aligned}
 $$
 
 Công suất tỏa nhiệt trong pin:
 
 $$
-P_r=I^2r
-=(2\,\mathrm A)^2(2\,\Omega)
-=8\,\mathrm W.
+\begin{aligned}
+P_r&=I^2r\\
+&=(2\,\mathrm A)^2(2\,\Omega)\\
+&=8\,\mathrm W.
+\end{aligned}
 $$
 
 Vậy công suất điện ra của pin là $24-8=16$ W. Điện trở ngoài nhận:
@@ -143,17 +152,28 @@ Giữ pin có $\mathcal E=12$ V, $r=2$ Ω, nhưng thay điện trở ngoài 4 Ω
 **Thực hiện:** Dòng mạch là:
 
 $$
-I=\frac{\mathcal E}{R+r}
-=\frac{12\,\mathrm V}{8\,\Omega+2\,\Omega}
-=1{,}2\,\mathrm A.
+\begin{aligned}
+R_{\mathrm{tđ}}&=8\,\Omega+2\,\Omega\\
+&=10\,\Omega.
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+I&=\frac{\mathcal E}{R_{\mathrm{tđ}}}\\
+&=\frac{12\,\mathrm V}{10\,\Omega}\\
+&=1{,}2\,\mathrm A.
+\end{aligned}
 $$
 
 Điện áp trên tải:
 
 $$
-V_{ab}=IR
-=(1{,}2\,\mathrm A)(8\,\Omega)
-=9{,}6\,\mathrm V.
+\begin{aligned}
+V_{ab}&=IR\\
+&=(1{,}2\,\mathrm A)(8\,\Omega)\\
+&=9{,}6\,\mathrm V.
+\end{aligned}
 $$
 
 Do đó:
@@ -169,7 +189,7 @@ P_R&=\frac{V_{ab}^2}{R}\\
 \end{aligned}
 $$
 
-Mạch 4 Ω trước đó tỏa 16 W. Tăng tải lên 8 Ω làm công suất tải giảm xuống 12 W. Nếu giữ nhầm dòng cũ 2 A, ta sẽ ước lượng $P=32$ W. Nếu giữ nhầm điện áp cũ 8 V, ta sẽ được 8 W. Cả hai đều sai vì cả dòng và điện áp đầu cực thay đổi khi tải đổi. Dòng giảm quan trọng hơn việc điện trở tăng. Hệ quả tương tự xảy ra ở bóng đèn: bóng định mức 50 W thường có điện trở lớn hơn bóng định mức 100 W khi so ở cùng điện áp danh định.
+Mạch 4 Ω trước đó tỏa 16 W. Tăng tải lên 8 Ω làm công suất tải giảm xuống 12 W. Nếu giữ nhầm dòng cũ 2 A, ta sẽ ước lượng $P=32$ W. Nếu giữ nhầm điện áp cũ 8 V, ta sẽ được 8 W. Cả hai đều sai vì cả dòng và điện áp đầu cực thay đổi khi tải đổi. Dòng giảm quan trọng hơn việc điện trở tăng. Hệ quả tương tự xảy ra ở bóng đèn: Bóng định mức 50 W thường có điện trở lớn hơn bóng định mức 100 W khi so ở cùng điện áp danh định.
 
 **Đánh giá:** Công suất hóa năng thành điện năng của pin giảm từ 24 W xuống $14{,}4$ W, còn tổn hao nội tại giảm từ 8 W xuống $2{,}88$ W. Công suất ra còn $14{,}4-2{,}88=11{,}52$ W, phần chênh do làm tròn trong số liệu 12 W đã làm tròn.
 
@@ -183,7 +203,7 @@ Hai cực pin có $\mathcal E=12$ V, $r=2$ Ω được nối bằng dây lý tư
 
 $$
 \begin{aligned}
-P_{\mathrm{hóa}\to\mathrm{điện}}
+P_{\mathcal E}
 &=\mathcal EI\\
 &=(12\,\mathrm V)(6\,\mathrm A)\\
 &=72\,\mathrm W,\\

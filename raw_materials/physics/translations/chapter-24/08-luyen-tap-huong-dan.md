@@ -182,9 +182,9 @@ Tụ phẳng chân không có khe 1,40 mm, diện tích mỗi bản 2,45 m² và
 
 $$
 \begin{aligned}
-\sigma&=Q/A=5.10\times10^{-6}\,\mathrm{C/m^2},\\
-E&=\sigma/\varepsilon_0=5.76\times10^5\,\mathrm{V/m},\\
-u&=\varepsilon_0E^2/2=1.47\,\mathrm{J/m^3},\\
+\sigma&=\frac{Q}{A}=5.10\times10^{-6}\,\mathrm{C/m^2},\\
+E&=\frac{\sigma}{\varepsilon_0}=5.76\times10^5\,\mathrm{V/m},\\
+u&=\frac{1}{2}\varepsilon_0E^2=1.47\,\mathrm{J/m^3},\\
 U&=uAd=5.04\times10^{-3}\,\mathrm J.
 \end{aligned}
 $$
@@ -207,9 +207,9 @@ Tụ phẳng ban đầu chân không có mỗi bản diện tích 0,460 m², khe
 
 $$
 \begin{aligned}
-C_0&=\varepsilon_0A/d=1.36\,\mathrm{nF},\\
+C_0&=\frac{\varepsilon_0A}{d}=1.36\,\mathrm{nF},\\
 Q&=C_0V_0=5.43\,\mathrm{\mu C},\\
-K&=V_0/V=1.60,\\
+K&=\frac{V_0}{V}=1.60,\\
 C&=KC_0=2.17\,\mathrm{nF},\\
 Q_i&=Q(1-1/K)=2.04\,\mathrm{\mu C}.
 \end{aligned}
@@ -257,8 +257,8 @@ Tụ phẳng chân không có C₀ = 4,50 µF, được nạp đến 2,80 kV r�
 $$
 \begin{aligned}
 Q&=C_0V_0=0.0126\,\mathrm C,\\
-U_0&=QV_0/2=17.6\,\mathrm J,\\
-U&=QV/2=7.56\,\mathrm J.
+U_0&=\frac{1}{2}QV_0=17.6\,\mathrm J,\\
+U&=\frac{1}{2}QV=7.56\,\mathrm J.
 \end{aligned}
 $$
 
@@ -280,8 +280,8 @@ Tụ phẳng chân không có C₀ = 5,60 µF, được nối nguồn 1,50 kV. G
 
 $$
 \begin{aligned}
-U_0&=C_0V^2/2=6.30\,\mathrm J,\\
-U&=KC_0V^2/2=18.0\,\mathrm J.
+U_0&=\frac{1}{2}C_0V^2=6.30\,\mathrm J,\\
+U&=\frac{1}{2}KC_0V^2=18.0\,\mathrm J.
 \end{aligned}
 $$
 :::
@@ -324,14 +324,14 @@ $$
 
 $$
 \begin{aligned}
-C&=Q^2/(2U)\\
+C&=\frac{Q^2}{2U}\\
 &=4\pi\varepsilon_0R,\\
-V(R)-V(\infty)&=Q/C\\
-&=kQ/R.
+V(R)-V(\infty)&=\frac{Q}{C}\\
+&=\frac{kQ}{R}.
 \end{aligned}
 $$
 
 Mật độ lớn nhất ở ngay ngoài mặt cầu và bằng không trong vật liệu dẫn. Ngoài cầu, nó giảm về không ở giới hạn vô hạn. Thay cầu đặc bằng vỏ dẫn rỗng cùng bán kính, hốc trống vẫn có trường bằng không, nên trường ngoài, năng lượng và điện dung giữ nguyên. Hiệu điện thế mặt với vô hạn trùng kết quả nguồn cầu ở Ví dụ 23.8.
 
-**Tự kiểm tra kết quả:** (1) Mật độ năng lượng lớn nhất ngay ngoài mặt cầu; nhỏ nhất bằng không trong vật dẫn và tiến về không khi $r$ tiến ra vô hạn. (2) Nếu thay bằng vỏ dẫn rỗng cùng bán kính $R$ và hốc không chứa điện tích, các kết quả bên ngoài và điện dung không đổi. (3) Từ $C=Q/V$ suy ra hiệu điện thế mặt so với vô hạn là $kQ/R$, khớp kết quả của cầu dẫn ở Ví dụ 23.8.
+**Tự kiểm tra kết quả:** (1) Mật độ năng lượng lớn nhất ngay ngoài mặt cầu, trái lại đạt giá trị cực tiểu bằng không trong vật dẫn và tiến về không khi $r$ tiến ra vô hạn. (2) Nếu thay bằng vỏ dẫn rỗng cùng bán kính $R$ và hốc không chứa điện tích, các kết quả bên ngoài và điện dung không đổi. (3) Từ $C=Q/V$ suy ra hiệu điện thế mặt so với vô hạn là $kQ/R$, khớp kết quả của cầu dẫn ở Ví dụ 23.8.
 :::
