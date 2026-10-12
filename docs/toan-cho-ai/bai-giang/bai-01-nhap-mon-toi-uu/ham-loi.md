@@ -14,7 +14,9 @@ Trọng tâm câu trả lời nằm ở công cụ hình học trực quan: Kh�
 ## 1. Định nghĩa
 
 > **Định nghĩa.** Hàm số $f : \mathbb{R}^n \to \mathbb{R}$ được gọi là **hàm lồi** (convex function) nếu miền xác định $\operatorname{dom} f$ là một tập lồi trong $\mathbb{R}^n$, và với mọi cặp điểm $x, y \in \operatorname{dom} f$ cùng mọi hệ số $\theta \in [0, 1]$, ta luôn có bất đẳng thức dây cung:
-> $$f(\theta x + (1 - \theta) y) \le \theta f(x) + (1 - \theta) f(y).$$
+> $$
+> f(\theta x + (1 - \theta) y) \le \theta f(x) + (1 - \theta) f(y).
+> $$
 
 Hai vế của bất đẳng thức mô tả hai quá trình tính toán hoàn toàn khác nhau:
 - Vế trái thực hiện **tổ hợp các đầu vào trước rồi mới tính giá trị hàm**: Lấy điểm trung gian $z = \theta x + (1-\theta)y$ trên đoạn nối $x$ và $y$, sau đó tính $f(z)$.
@@ -22,7 +24,7 @@ Hai vế của bất đẳng thức mô tả hai quá trình tính toán hoàn t
 
 Hàm lồi là hàm số mà giá trị tính sau khi trộn đầu vào không bao giờ vượt quá giá trị trộn sau khi tính hàm.
 
-Về mặt hình học, xét hai điểm $A(x, f(x))$ và $B(y, f(y))$ trên đồ thị của $f$. Đoạn thẳng nối $A$ và $B$ được gọi là **dây cung** (chord). Dây cung đi qua điểm $(z,\ \theta f(x) + (1-\theta) f(y))$ nằm ngay phía trên điểm tọa độ $z$. Bất đẳng thức dây cung khẳng định: Tại mọi điểm $z$ nằm giữa $x$ và $y$, đồ thị hàm số luôn nằm **phía dưới hoặc tiếp xúc** với dây cung. Trực giác trực quan giống như một lòng chảo ngửa: Căng một sợi chỉ nối hai điểm bất kỳ trên vành chảo, sợi chỉ luôn lơ lửng phía trên lòng chảo.
+Về mặt hình học, xét hai điểm $A(x, f(x))$ và $B(y, f(y))$ trên đồ thị của $f$. Đoạn thẳng nối $A$ và $B$ được gọi là **dây cung** (chord). Dây cung đi qua điểm $(z, \theta f(x) + (1-\theta) f(y))$ nằm ngay phía trên điểm tọa độ $z$. Bất đẳng thức dây cung khẳng định: Tại mọi điểm $z$ nằm giữa $x$ và $y$, đồ thị hàm số luôn nằm **phía dưới hoặc tiếp xúc** với dây cung. Trực giác trực quan giống như một lòng chảo ngửa: Căng một sợi chỉ nối hai điểm bất kỳ trên vành chảo, sợi chỉ luôn lơ lửng phía trên lòng chảo.
 
 <FunctionLab type="chord" />
 
@@ -40,7 +42,8 @@ $$
 $$
 \begin{aligned}
 &\theta x^2 + (1-\theta)y^2 - \theta^2 x^2 - 2\theta(1-\theta)xy - (1-\theta)^2 y^2 \\
-&\quad = \theta(1-\theta)\,\big(x^2 - 2xy + y^2\big) = \theta(1-\theta)(x - y)^2.
+&\quad = \theta(1-\theta)\big(x^2 - 2xy + y^2\big) \\
+&\quad = \theta(1-\theta)(x - y)^2.
 \end{aligned}
 $$
 
@@ -60,7 +63,7 @@ Vì $\theta \in [0, 1]$ nên $\theta(1-\theta) \ge 0$, và bình phương $(x - 
 
 > **Mệnh đề (Tiêu chuẩn hạn chế trên đường thẳng).** Hàm số $f$ là hàm lồi khi và chỉ khi với mọi điểm $x \in \operatorname{dom} f$ và mọi hướng vector $v \in \mathbb{R}^n$, hàm số một biến
 > $$g(t) = f(x + tv)$$
-> là hàm lồi trên miền xác định $\{t \in \mathbb{R} : x + tv \in \operatorname{dom} f\}$.
+> là hàm lồi trên miền xác định $\{t \in \mathbb{R} \mid x + tv \in \operatorname{dom} f\}$.
 
 Chứng minh:
 - Chiều thuận: Đoạn thẳng trên trục $t$ tương ứng trực tiếp với đoạn thẳng của $f$ trên đường thẳng $x + tv$. Miền của $g$ là giao của một đường thẳng với tập lồi $\operatorname{dom} f$ nên là một khoảng lồi trong $\mathbb{R}$.
@@ -77,15 +80,21 @@ Trong mô phỏng 2D trên: Với hàm yên ngựa $f(x_1, x_2) = x_1^2 - x_2^2$
 Để tránh việc lặp lại điều kiện ràng buộc "với mọi $x \in \operatorname{dom} f$", giải tích lồi sử dụng quy ước mở rộng miền giá trị: **Hàm mở rộng** $\tilde f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}$ của hàm lồi $f$ được định nghĩa bởi:
 
 $$
-\tilde f(x) = \begin{cases} f(x), & \text{nếu } x \in \operatorname{dom} f, \\ +\infty, & \text{nếu } x \notin \operatorname{dom} f. \end{cases}
+\tilde f(x) = \begin{cases} 
+f(x), & \text{nếu } x \in \operatorname{dom} f, \\ 
++\infty, & \text{nếu } x \notin \operatorname{dom} f. 
+\end{cases}
 $$
 
-Miền xác định gốc được tái lập trực tiếp thông qua tập mức: $\operatorname{dom} f = \{x \in \mathbb{R}^n : \tilde f(x) < +\infty\}$. Với quy ước số học mở rộng ($a + \infty = +\infty$ và $0 \cdot \infty = 0$), bất đẳng thức dây cung áp dụng tự nhiên cho mọi $x, y \in \mathbb{R}^n$: Nếu một trong hai điểm nằm ngoài $\operatorname{dom} f$, vế phải bằng $+\infty$ và bất đẳng thức hiển nhiên nghiệm đúng. Trong toàn bộ môn học, ta mặc định mọi hàm lồi đều được mở rộng tự nhiên như vậy.
+Miền xác định gốc được tái lập trực tiếp thông qua tập mức: $\operatorname{dom} f = \{x \in \mathbb{R}^n \mid \tilde f(x) < +\infty\}$. Với quy ước số học mở rộng ($a + \infty = +\infty$ và $0 \cdot \infty = 0$), bất đẳng thức dây cung áp dụng tự nhiên cho mọi $x, y \in \mathbb{R}^n$: Nếu một trong hai điểm nằm ngoài $\operatorname{dom} f$, vế phải bằng $+\infty$ và bất đẳng thức hiển nhiên nghiệm đúng. Trong toàn bộ môn học, ta mặc định mọi hàm lồi đều được mở rộng tự nhiên như vậy.
 
 Một ứng dụng nền tảng của kỹ thuật này là **hàm chỉ thị** (indicator function) của một tập hợp $C \subseteq \mathbb{R}^n$:
 
 $$
-I_C(x) = \begin{cases} 0, & \text{nếu } x \in C, \\ +\infty, & \text{nếu } x \notin C. \end{cases}
+I_C(x) = \begin{cases} 
+0, & \text{nếu } x \in C, \\ 
++\infty, & \text{nếu } x \notin C. 
+\end{cases}
 $$
 
 Hàm chỉ thị $I_C$ là hàm lồi khi và chỉ khi tập hợp $C$ là tập lồi. Hàm chỉ thị cho phép chuyển đổi một bài toán tối ưu có ràng buộc thành bài toán tối ưu không ràng buộc tương đương: Bài toán cực tiểu hóa hàm mục tiêu $f(x)$ trên tập khả thi $C$ hoàn toàn đồng nhất với bài toán cực tiểu hóa không ràng buộc của hàm mục tiêu tổng hợp $f(x) + I_C(x)$ trên toàn bộ không gian $\mathbb{R}^n$.
@@ -130,7 +139,7 @@ Về hình học, đồ thị là một đường parabol bị cắt cụt ở n
 
 <details><summary>Xem lời giải thích</summary>
 
-Bài toán được viết lại thành: $\min_{x \in \mathbb{R}^n} \left(\|x\|_2^2 + I_C(x)\right)$, trong đó tập khả thi $C = \{x \in \mathbb{R}^n : Ax = b\}$.
+Bài toán được viết lại thành: $\min_{x \in \mathbb{R}^n} \left(\|x\|_2^2 + I_C(x)\right)$, trong đó tập khả thi $C = \{x \in \mathbb{R}^n \mid Ax = b\}$.
 
 Hàm mục tiêu mới là tổng của hai hàm lồi (hàm bình phương chuẩn $\|x\|_2^2$ lồi ngặt và hàm chỉ thị $I_C$ lồi do tập affine $C$ lồi), do đó nó là một hàm lồi mở rộng. Tuy nhiên, hàm số này không khả vi trên toàn không gian và nhận giá trị $+\infty$ tại mọi điểm nằm ngoài $C$.
 
@@ -146,7 +155,10 @@ Chứng minh rằng hàm số $f(x) = |x|$ là hàm lồi trên $\mathbb{R}$ tr�
 Với mọi $x, y \in \mathbb{R}$ và mọi hệ số $\theta \in [0, 1]$, áp dụng bất đẳng thức tam giác của giá trị tuyệt đối ta có:
 
 $$
-|\theta x + (1-\theta)y| \le |\theta x| + |(1-\theta)y| = \theta|x| + (1-\theta)|y|,
+\begin{aligned}
+|\theta x + (1-\theta)y| &\le |\theta x| + |(1-\theta)y| \\
+&= \theta|x| + (1-\theta)|y|,
+\end{aligned}
 $$
 
 trong đó đẳng thức thứ hai đúng vì $\theta \ge 0$ và $1-\theta \ge 0$. Do đó $f(x) = |x|$ là một hàm lồi.
@@ -171,7 +183,7 @@ Cho hàm số hai biến $f(x_1, x_2) = x_1 x_2$ trên $\mathbb{R}^2$. Hãy tín
 Với $x = (0, 0)^T$ và $v = (1, -1)^T$, điểm trên đường thẳng có tọa độ $x + tv = (t, -t)^T$. Hàm hạn chế nhận dạng:
 
 $$
-g(t) = f(t, -t) = (t)(-t) = -t^2 .
+g(t) = f(t, -t) = t(-t) = -t^2 .
 $$
 
 Hàm số $g(t) = -t^2$ có đạo hàm cấp hai $g''(t) = -2 < 0$, do đó nó là một hàm lõm nghiêm ngặt trên $\mathbb{R}$. Theo tiêu chuẩn hạn chế trên đường thẳng, sự xuất hiện của một hướng làm hàm số lõm ngặt chứng minh rằng $f(x_1, x_2) = x_1 x_2$ không phải là hàm lồi trên $\mathbb{R}^2$. Ma trận Hessian của hàm số là $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, có hai giá trị riêng là $+1$ và $-1$, sinh ra bề mặt yên ngựa kinh điển.

@@ -7,26 +7,28 @@ title: "Nón đối ngẫu và lựa chọn Pareto"
 description: "Định nghĩa và hình học của nón đối ngẫu, các nón tự đối ngẫu, đối ngẫu của nón chuẩn và chuẩn đối ngẫu, các tính chất K** = K, bất đẳng thức đối ngẫu, và cách tìm phần tử tối thiểu bằng cực tiểu một tổng có trọng số."
 ---
 
-Ở chủ đề trước, ta thấy một tập lồi đóng được mô tả hoàn toàn bởi các nửa không gian chứa nó. Với một **nón**, câu chuyện còn gọn hơn: Một nón lồi đóng được mô tả bởi các nửa không gian **có biên đi qua gốc** chứa nó. Mỗi nửa không gian như vậy có dạng $\{x : y^T x \ge 0\}$ và được xác định bởi một vector $y$. Tập tất cả những vector $y$ "nhìn" toàn bộ nón từ cùng một phía là một nón mới, gọi là **nón đối ngẫu**.
+Ở chủ đề trước, ta thấy một tập lồi đóng được mô tả hoàn toàn bởi các nửa không gian chứa nó. Với một **nón**, câu chuyện còn gọn hơn: Một nón lồi đóng được mô tả bởi các nửa không gian **có biên đi qua gốc** chứa nó. Mỗi nửa không gian như vậy có dạng $\{x \mid y^T x \ge 0\}$ và được xác định bởi một vector $y$. Tập tất cả những vector $y$ "nhìn" toàn bộ nón từ cùng một phía là một nón mới, gọi là **nón đối ngẫu**.
 
 Nón đối ngẫu là cầu nối giữa hình học không gian tập lồi và lý thuyết đối ngẫu Lagrange. Nó cũng giải quyết một bài toán thực tế sâu sắc trong tối ưu hóa đa mục tiêu: Khi không tồn tại phương án duy nhất nào tối ưu trên mọi tiêu chí, làm thế nào để tìm được toàn bộ các phương án không bị chi phối (Pareto optimal)? Phương pháp tự nhiên là tổ hợp các tiêu chí với những trọng số dương, và cấu trúc nón đối ngẫu sẽ giải thích chính xác điều kiện bảo đảm tính đúng đắn của phương pháp này.
 
 ## 1. Định nghĩa và hình học
 
 > **Định nghĩa.** Cho $K$ là một nón trong $\mathbb{R}^n$. Tập hợp
-> $$K^* = \{y : x^T y \ge 0 \ \text{ với mọi } x \in K\}$$
+> $$
+> K^* = \{y \mid x^T y \ge 0, \quad \forall x \in K\}
+> $$
 > được gọi là **nón đối ngẫu** (dual cone) của $K$.
 
-Mỗi vector $y \in K^*$ tạo với mọi vector thuộc $K$ một góc không vượt quá $90^\circ$. Đúng như tên gọi, $K^*$ là một nón, và nó **luôn luôn lồi và đóng, kể cả khi nón gốc $K$ không lồi**. Bản chất là vì: Với mỗi điểm $x \in K$ cố định, tập hợp $\{y : x^T y \ge 0\}$ là một nửa không gian đóng theo biến $y$, và $K^*$ chính là giao của vô số nửa không gian đóng xuất phát từ gốc tọa độ đó.
+Mỗi vector $y \in K^*$ tạo với mọi vector thuộc $K$ một góc không vượt quá $90^\circ$. Đúng như tên gọi, $K^*$ là một nón, và nó **luôn luôn lồi và đóng, kể cả khi nón gốc $K$ không lồi**. Bản chất là vì: Với mỗi điểm $x \in K$ cố định, tập hợp $\{y \mid x^T y \ge 0\}$ là một nửa không gian đóng theo biến $y$, và $K^*$ chính là giao của vô số nửa không gian đóng xuất phát từ gốc tọa độ đó.
 
-Ý nghĩa hình học trực quan của nón đối ngẫu được làm sáng tỏ như sau: Điểm $y \in K^*$ khi và chỉ khi nửa không gian $\{x : y^T x \ge 0\}$, với pháp tuyến hướng vào trong là $y$, chứa trọn vẹn nón $K$. Nói cách khác, $-y$ là vector pháp tuyến của một siêu phẳng tựa của nón $K$ tại gốc tọa độ. Trong mô phỏng dưới đây, vùng nhạt là nửa mặt phẳng $\{x : y^T x \ge 0\}$. Khi di chuyển vector $y$ quanh gốc tọa độ: Điểm $y$ thuộc vùng xanh $K^*$ chính xác khi nửa mặt phẳng nhạt bao trọn vẹn nón tím $K$.
+Ý nghĩa hình học trực quan của nón đối ngẫu được làm sáng tỏ như sau: Điểm $y \in K^*$ khi và chỉ khi nửa không gian $\{x \mid y^T x \ge 0\}$, với pháp tuyến hướng vào trong là $y$, chứa trọn vẹn nón $K$. Nói cách khác, $-y$ là vector pháp tuyến của một siêu phẳng tựa của nón $K$ tại gốc tọa độ. Trong mô phỏng dưới đây, vùng nhạt là nửa mặt phẳng $\{x \mid y^T x \ge 0\}$. Khi di chuyển vector $y$ quanh gốc tọa độ: Điểm $y$ thuộc vùng xanh $K^*$ chính xác khi nửa mặt phẳng nhạt bao trọn vẹn nón tím $K$.
 
 <ConeLab type="dual" />
 
 Một cách người ta hay dùng trong thực tế để tìm nón đối ngẫu của nón đa diện là kiểm tra trực tiếp trên các vector sinh. Nếu $K = \operatorname{cone}\{v_1, \ldots, v_k\}$ thì $y \in K^*$ khi và chỉ khi $y^T v_i \ge 0$ với mọi chỉ số $i = 1, \dots, k$, bởi vì mọi phần tử của $K$ đều là tổ hợp hình nón (tổ hợp tuyến tính với hệ số không âm) của các $v_i$. Chẳng hạn với $K = \operatorname{cone}\{(2, 1), (1, 3)\}$, ta xác định được:
 
 $$
-K^* = \{y : 2y_1 + y_2 \ge 0,\ y_1 + 3y_2 \ge 0\} = \operatorname{cone}\{(-1, 2),\ (3, -1)\}.
+K^* = \{y \mid 2y_1 + y_2 \ge 0, \ y_1 + 3y_2 \ge 0\} = \operatorname{cone}\{(-1, 2), \ (3, -1)\}.
 $$
 
 Hai vector sinh của $K^*$ trực giao với hai vector sinh biên của $K$: Vector $(-1, 2)$ vuông góc với $(2, 1)$, còn vector $(3, -1)$ vuông góc với $(1, 3)$. Đây là quy tắc hình học mẫu mực trong mặt phẳng: Mỗi tia biên của $K^*$ vuông góc với một tia biên tương ứng của $K$, và hướng vào phía bên trong của $K$.
@@ -35,18 +37,18 @@ Từ đó dẫn tới một tính chất cốt lõi: **Nón càng mở rộng th
 
 ## 2. Những nón tự đối ngẫu và cặp nón đối ngẫu quan trọng
 
-- **Không gian con tuyến tính**: Đối ngẫu của một không gian con $V \subseteq \mathbb{R}^n$ chính là phần bù trực giao $V^\perp = \{y : v^T y = 0 \text{ với mọi } v \in V\}$. Thật vậy, nếu $y^T v \ge 0$ đúng với mọi $v \in V$, thì áp dụng cho cả vector đối $-v \in V$ ta suy ra $y^T (-v) \ge 0 \iff y^T v \le 0$, buộc $y^T v = 0$.
+- **Không gian con tuyến tính**: Đối ngẫu của một không gian con $V \subseteq \mathbb{R}^n$ chính là phần bù trực giao $V^\perp = \{y \mid v^T y = 0, \quad \forall v \in V\}$. Thật vậy, nếu $y^T v \ge 0$ đúng với mọi $v \in V$, thì áp dụng cho cả vector đối $-v \in V$ ta suy ra $y^T (-v) \ge 0 \iff y^T v \le 0$, buộc $y^T v = 0$.
 - **Góc phần tư không âm**: Ta có đẳng thức $(\mathbb{R}^n_+)^* = \mathbb{R}^n_+$. Một nón thỏa mãn $K^* = K$ được gọi là **nón tự đối ngẫu** (self-dual cone). Nếu $y \succeq 0$ thì rõ ràng $x^T y = \sum_{i=1}^n x_i y_i \ge 0$ với mọi $x \succeq 0$. Ngược lại, nếu $y \in (\mathbb{R}^n_+)^*$, lần lượt chọn $x = e_i$ (các vector cơ sở chính tắc) ta suy ra $y_i \ge 0$ với mọi $i$.
 - **Nón ma trận nửa xác định dương (PSD)**: Trong không gian các ma trận đối xứng $\mathbb{S}^n$ trang bị tích vô hướng chuẩn Frobenius $\langle X, Y\rangle = \operatorname{tr}(XY) = \sum_{i,j} X_{ij} Y_{ij}$, nón $\mathbb{S}^n_+$ cũng là nón tự đối ngẫu: Điều kiện $\operatorname{tr}(XY) \ge 0$ với mọi $X \succeq 0$ tương đương với $Y \succeq 0$. Lập luận gồm hai chiều tường minh:
   - Chiều thuận: Giả sử $Y \not\succeq 0$, tức tồn tại vector $q \ne 0$ sao cho $q^T Y q < 0$. Chọn ma trận hạng một $X = qq^T \succeq 0$, ta tính được $\operatorname{tr}(XY) = \operatorname{tr}(q q^T Y) = q^T Y q < 0$, dẫn tới mâu thuẫn $Y \notin (\mathbb{S}^n_+)^*$. Các ma trận hạng một $qq^T$ đóng vai trò như những phép thử đầy uy lực.
   - Chiều nghịch: Nếu cả $X, Y \succeq 0$, ta khai triển phổ $X = \sum_{i=1}^n \lambda_i q_i q_i^T$ với các giá trị riêng $\lambda_i \ge 0$. Khi đó $\operatorname{tr}(XY) = \sum_{i=1}^n \lambda_i q_i^T Y q_i \ge 0$ vì từng số hạng đều không âm.
-- **Nón chuẩn và chuẩn đối ngẫu**: Với một chuẩn tổng quát $\|\cdot\|$ trên $\mathbb{R}^n$, **chuẩn đối ngẫu** tương ứng được định nghĩa là $\|u\|_* = \sup\{u^T x : \|x\| \le 1\}$, đo độ dốc cực đại của dạng tuyến tính $u^T x$ trên hình cầu đơn vị. Ta chứng minh được rằng đối ngẫu của nón chuẩn $K = \{(x, t) : \|x\| \le t\}$ chính là nón sinh bởi chuẩn đối ngẫu:
+- **Nón chuẩn và chuẩn đối ngẫu**: Với một chuẩn tổng quát $\|\cdot\|$ trên $\mathbb{R}^n$, **chuẩn đối ngẫu** tương ứng được định nghĩa là $\|u\|_* = \sup\{u^T x \mid \|x\| \le 1\}$, đo độ dốc cực đại của dạng tuyến tính $u^T x$ trên hình cầu đơn vị. Ta chứng minh được rằng đối ngẫu của nón chuẩn $K = \{(x, t) \mid \|x\| \le t\}$ chính là nón sinh bởi chuẩn đối ngẫu:
 
   $$
-  K^* = \{(u, v) : \|u\|_* \le v\}.
+  K^* = \{(u, v) \mid \|u\|_* \le v\}.
   $$
 
-  Chuẩn Euclid $\|\cdot\|_2$ tự đối ngẫu với chính nó ($\|\cdot\|_{2, *} = \|\cdot\|_2$), do đó nón bậc hai (nón Lorentz) là nón tự đối ngẫu. Chuẩn $\|\cdot\|_1$ có đối ngẫu là $\|\cdot\|_\infty$ và ngược lại, vì $\sup\{u^T x : \|x\|_1 \le 1\} = \max_i |u_i|$, đạt được tại các đỉnh cực biên $\pm e_i$ của hình cầu $\ell_1$. Vì vậy nón chuẩn $\ell_1$ và nón chuẩn $\ell_\infty$ là cặp đối ngẫu của nhau, dù không nón nào tự đối ngẫu. Cặp đối ngẫu này giải thích trực quan cấu trúc hình học: Hình cầu $\ell_1$ có ít đỉnh nhưng nhiều diện (mặt), trong khi hình cầu $\ell_\infty$ có nhiều đỉnh nhưng ít diện, đỉnh của hình cầu này tương ứng với mặt của hình cầu kia.
+  Chuẩn Euclid $\|\cdot\|_2$ tự đối ngẫu với chính nó ($\|\cdot\|_{2, *} = \|\cdot\|_2$), do đó nón bậc hai (nón Lorentz) là nón tự đối ngẫu. Chuẩn $\|\cdot\|_1$ có đối ngẫu là $\|\cdot\|_\infty$ và ngược lại, vì $\sup\{u^T x \mid \|x\|_1 \le 1\} = \max_i |u_i|$, đạt được tại các đỉnh cực biên $\pm e_i$ của hình cầu $\ell_1$. Vì vậy nón chuẩn $\ell_1$ và nón chuẩn $\ell_\infty$ là cặp đối ngẫu của nhau, dù không nón nào tự đối ngẫu. Cặp đối ngẫu này giải thích trực quan cấu trúc hình học: Hình cầu $\ell_1$ có ít đỉnh nhưng nhiều diện (mặt), trong khi hình cầu $\ell_\infty$ có nhiều đỉnh nhưng ít diện, đỉnh của hình cầu này tương ứng với mặt của hình cầu kia.
 
 ## 3. Các tính chất đại số và giải tích của nón đối ngẫu
 
@@ -65,11 +67,11 @@ Hệ thống tính chất nền tảng của nón đối ngẫu bao gồm:
 Khi $K$ là nón chính quy, nón đối ngẫu $K^*$ cũng sinh ra một quan hệ thứ tự bộ phận $\preceq_{K^*}$. Hai quan hệ thứ tự này gắn kết mật thiết qua các mệnh đề tương đương sau:
 
 $$
-x \preceq_K y \iff \lambda^T x \le \lambda^T y \quad \text{với mọi } \lambda \succeq_{K^*} 0,
+x \preceq_K y \iff \lambda^T x \le \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0,
 $$
 
 $$
-x \prec_K y \iff \lambda^T x < \lambda^T y \quad \text{với mọi } \lambda \succeq_{K^*} 0,\ \lambda \ne 0.
+x \prec_K y \iff \lambda^T x < \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \ \lambda \ne 0.
 $$
 
 Ý nghĩa bản chất: Một bất đẳng thức giữa hai **vector** trong không gian nhiều chiều tương đương với vô số bất đẳng thức giữa các **số thực**, trong đó mỗi số thực ứng với một phép chiếu có trọng số $\lambda$ thuộc nón đối ngẫu. Với $K = \mathbb{R}^n_+$, điều này khẳng định $x \preceq y$ theo từng tọa độ khi và chỉ khi mọi tổ hợp tuyến tính với trọng số không âm của $x$ không vượt quá giá trị tương ứng của $y$. Với thứ tự ma trận, $X \preceq Y$ khi và chỉ khi $\operatorname{tr}(ZX) \le \operatorname{tr}(ZY)$ với mọi ma trận kiểm tra $Z \succeq 0$. Đây là công cụ toán học chủ đạo: Chuyển một điều kiện phức tạp trên vector hoặc ma trận thành một họ điều kiện đại số trên số thực.
@@ -99,11 +101,11 @@ Trong học máy hiện đại, vô hướng hóa là nền tảng của các b�
 
 ## 6. Những câu hỏi để đào sâu
 
-**Câu 1.** Nón đối ngẫu của nửa mặt phẳng $\{x \in \mathbb{R}^2 : a^T x \ge 0\}$ là gì? Của một tia $\{t v : t \ge 0\}$ là gì?
+**Câu 1.** Nón đối ngẫu của nửa mặt phẳng $\{x \in \mathbb{R}^2 \mid a^T x \ge 0\}$ là gì? Của một tia $\{t v \mid t \ge 0\}$ là gì?
 
 <details><summary>Xem lời giải thích</summary>
 
-Với nửa mặt phẳng $\{a^T x \ge 0\}$, chỉ các vector $y$ cùng phương dương với $a$ mới bảo đảm $y^T x \ge 0$ với mọi $x$ thuộc nửa mặt phẳng, do đó nón đối ngẫu là tia $\{t a : t \ge 0\}$. Với tia $\{t v : t \ge 0\}$, điều kiện đối ngẫu quy về $y^T v \ge 0$, do đó nón đối ngẫu là nửa mặt phẳng $\{y : v^T y \ge 0\}$. Hai ví dụ minh chứng hoàn hảo tính đối ngẫu hai lần $K^{**} = K$. Nửa mặt phẳng đặc nhưng không nhọn, đối ngẫu của nó là tia, nhọn nhưng không đặc.
+Với nửa mặt phẳng $\{x \in \mathbb{R}^2 \mid a^T x \ge 0\}$, chỉ các vector $y$ cùng phương dương với $a$ mới bảo đảm $y^T x \ge 0$ với mọi $x$ thuộc nửa mặt phẳng, do đó nón đối ngẫu là tia $\{t a \mid t \ge 0\}$. Với tia $\{t v \mid t \ge 0\}$, điều kiện đối ngẫu quy về $y^T v \ge 0$, do đó nón đối ngẫu là nửa mặt phẳng $\{y \mid v^T y \ge 0\}$. Hai ví dụ minh chứng hoàn hảo tính đối ngẫu hai lần $K^{**} = K$. Nửa mặt phẳng đặc nhưng không nhọn, đối ngẫu của nó là tia, nhọn nhưng không đặc.
 
 </details>
 
@@ -133,7 +135,7 @@ Tìm nón đối ngẫu của nón $K = \operatorname{cone}\{(1, 0), (1, 2)\}$ t
 Vector $y \in K^*$ khi và chỉ khi $y^T(1, 0) = y_1 \ge 0$ và $y^T(1, 2) = y_1 + 2y_2 \ge 0$. Từ đó ta xác định:
 
 $$
-K^* = \{y \in \mathbb{R}^2 : y_1 \ge 0,\ y_1 + 2y_2 \ge 0\} = \operatorname{cone}\{(0, 1), (2, -1)\}.
+K^* = \{y \in \mathbb{R}^2 \mid y_1 \ge 0, \ y_1 + 2y_2 \ge 0\} = \operatorname{cone}\{(0, 1), (2, -1)\}.
 $$
 
 Với vector $y = (1, -0.4)$: Ta có $y_1 = 1 \ge 0$ và $y_1 + 2y_2 = 1 - 0.8 = 0.2 \ge 0$, do đó $y \in K^*$.
@@ -156,11 +158,11 @@ Cho tập hợp gồm các phương án $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3
 :::
 
 ::: solution
-Điểm $(6, 7)$ bị điểm $(5.5, 4)$ chi phối, điểm $(9, 8)$ bị chi phối bởi nhiều điểm khác trong tập. Do đó tập các phần tử tối thiểu Pareto gồm bốn điểm: $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$, $(8, 3)$.
+Điểm $(6, 7)$ bị điểm $(5.5, 4)$ chi phối, điểm $(9, 8)$ bị chi phối bởi nhiều điểm khác trong tập. Do đó tập các phần tử tối thiểu Pareto gồm bốn điểm: $(2, 9)$, $(3, 6.5)$, $(5.5, 4)$ và $(8, 3)$.
 
-- Với $\lambda = (1, 0.2)$, giá trị $\lambda^T z$ tại các điểm lần lượt là $3.8,\ 4.3,\ 6.3,\ 8.6,\ 7.4,\ 10.6$, do đó điểm $(2, 9)$ được chọn.
+- Với $\lambda = (1, 0.2)$, giá trị $\lambda^T z$ tại các điểm lần lượt là $3.8, \ 4.3, \ 6.3, \ 8.6, \ 7.4, \ 10.6$, do đó điểm $(2, 9)$ được chọn.
 - Với $\lambda = (1, 1)$, hai điểm $(3, 6.5)$ và $(5.5, 4)$ cùng đạt giá trị cực tiểu là $9.5$: Đường mức $z_1 + z_2 = 9.5$ tiếp xúc với toàn bộ đoạn thẳng nối hai điểm này, cho thấy bài toán vô hướng hóa có thể có đa nghiệm tối ưu cùng lúc.
-- Với $\lambda = (0.3, 1)$, các giá trị tương ứng là $9.6,\ 7.4,\ 5.65,\ 5.4,\ 8.8,\ 10.7$, do đó điểm $(8, 3)$ được chọn.
+- Với $\lambda = (0.3, 1)$, các giá trị tương ứng là $9.6, \ 7.4, \ 5.65, \ 5.4, \ 8.8, \ 10.7$, do đó điểm $(8, 3)$ được chọn.
 
 Mọi nghiệm tìm được qua bài toán vô hướng hóa với vector trọng số dương ngặt đều là các phần tử tối thiểu Pareto hợp thức.
 :::
@@ -173,4 +175,5 @@ Quan hệ bất đẳng thức tổng quát giữa các vector tương đương 
 
 ## Tài liệu tham khảo
 - Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.
+
 

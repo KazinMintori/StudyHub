@@ -14,7 +14,9 @@ Xét một hình ảnh trực giác: Một người leo núi đứng trên sư�
 ## 1. Phát biểu
 
 > **Định lý.** Giả sử $f$ khả vi, nghĩa là $\operatorname{dom} f$ là tập mở và gradient $\nabla f$ tồn tại tại mọi điểm của nó. Khi đó $f$ lồi khi và chỉ khi $\operatorname{dom} f$ lồi và
-> $$f(y) \ge f(x) + \nabla f(x)^T (y - x) \quad \text{với mọi } x, y \in \operatorname{dom} f.$$
+> $$
+> f(y) \ge f(x) + \nabla f(x)^T (y - x), \quad \forall x, y \in \operatorname{dom} f.
+> $$
 
 Cố định $x$ và xem vế phải như một hàm của $y$. Đó là một hàm affine, đồng thời chính là xấp xỉ Taylor bậc nhất của $f$ quanh $x$: Biểu thức này khớp với $f$ cả về giá trị lẫn về đạo hàm tại $x$. Khi $n = 1$, đồ thị của nó là tiếp tuyến tại $(x, f(x))$. Khi $n \ge 2$, đó là siêu phẳng tiếp xúc với đồ thị. Bất đẳng thức khẳng định rằng xấp xỉ bậc nhất của một hàm lồi **không bao giờ đánh giá vượt mức**: Tiếp tuyến tại bất kỳ điểm nào cũng luôn nằm dưới toàn bộ đồ thị.
 
@@ -37,16 +39,19 @@ Thiếu tính lồi, kết luận này có thể sai theo nhiều cách. Hàm $x
 Hệ quả thứ hai ít được nhắc tới hơn, nhưng rất thực tế. Giả sử ta cực tiểu hàm lồi $f$ trên tập $C$ và đang đứng ở một điểm $x \in C$ chưa chắc tối ưu. Lấy cực tiểu theo $y \in C$ ở cả hai vế của điều kiện bậc nhất, ta được
 
 $$
-p^\star = \min_{y \in C} f(y) \ \ge\ f(x) + \min_{y \in C} \nabla f(x)^T (y - x).
+\begin{aligned}
+p^\star &= \min_{y \in C} f(y) \\
+&\ge f(x) + \min_{y \in C} \nabla f(x)^T (y - x).
+\end{aligned}
 $$
 
 Vế phải là cực tiểu của một hàm **tuyến tính** trên $C$, việc này thường dễ hơn nhiều so với bài toán gốc, chẳng hạn khi $C$ là một hình hộp. Như vậy chỉ với giá trị và gradient tại điểm hiện tại, ta có cả cận trên $f(x)$ lẫn một cận dưới cho $p^\star$, và biết chắc rằng mình kém tối ưu không quá hiệu của hai cận đó.
 
 ::: example Một chứng nhận chỉ cần một lần tính gradient
-Cực tiểu $f(y) = (y_1 - 1)^2 + 2(y_2 + 0.5)^2$ trên hình vuông $C = [0, 2] \times [0, 2]$. Tại $x = (1, 0.2)$, ta có $f(x) = 2 \cdot 0.7^2 = 0.98$ và $\nabla f(x) = (0,\ 2.8)$. Hàm tuyến tính $2.8(y_2 - 0.2)$ đạt nhỏ nhất trên $C$ khi $y_2 = 0$, với giá trị $-0.56$. Do đó
+Cực tiểu $f(y) = (y_1 - 1)^2 + 2(y_2 + 0.5)^2$ trên hình vuông $C = [0, 2] \times [0, 2]$. Tại $x = (1, 0.2)$, ta có $f(x) = 2 \cdot 0.7^2 = 0.98$ và $\nabla f(x) = (0, 2.8)$. Hàm tuyến tính $2.8(y_2 - 0.2)$ đạt nhỏ nhất trên $C$ khi $y_2 = 0$, với giá trị $-0.56$. Do đó
 
 $$
-0.42 = 0.98 - 0.56 \ \le\ p^\star \ \le\ 0.98 .
+0.42 = 0.98 - 0.56 \le p^\star \le 0.98 .
 $$
 
 Ta chưa biết $p^\star$, nhưng đã biết điểm hiện tại kém tối ưu không quá $0.56$. Để đối chiếu, nghiệm thật là $y^\star = (1, 0)$ với $p^\star = 2 \cdot 0.5^2 = 0.5$, nằm đúng trong khoảng vừa tìm. Nếu đứng ở một điểm xa nghiệm như $(2, 2)$ thì cận dưới thu được là $-10.5$, vẫn đúng nhưng rất lỏng. Điểm hiện tại càng gần nghiệm thì cận càng chặt.
@@ -106,7 +111,10 @@ Hiện tượng "độ dốc dây cung tăng dần" trở nên rất sáng rõ k
 **Tiếp tuyến nằm dưới suy ra lồi.** Lấy $z = \theta x + (1 - \theta) y$ và áp dụng giả thiết tại $z$ hai lần:
 
 $$
-f(x) \ge f(z) + f'(z)(x - z), \qquad f(y) \ge f(z) + f'(z)(y - z).
+\begin{aligned}
+f(x) &\ge f(z) + f'(z)(x - z), \\
+f(y) &\ge f(z) + f'(z)(y - z).
+\end{aligned}
 $$
 
 Nhân bất đẳng thức đầu với $\theta$, bất đẳng thức sau với $1 - \theta$ rồi cộng lại. Vì $\theta(x - z) + (1 - \theta)(y - z) = 0$, các số hạng chứa đạo hàm triệt tiêu, chỉ còn $\theta f(x) + (1 - \theta) f(y) \ge f(z)$, chính là định nghĩa của hàm lồi. Hình ảnh ở đây cũng rõ: Tiếp tuyến tại $z$ nằm dưới cả hai điểm $(x, f(x))$ và $(y, f(y))$, nên dây cung nối hai điểm ấy nằm trên tiếp tuyến. Tại $z$, tiếp tuyến chạm đồ thị, vì vậy dây cung nằm trên đồ thị tại $z$.
@@ -117,9 +125,9 @@ Nhân bất đẳng thức đầu với $\theta$, bất đẳng thức sau với
 
 Đọc điều kiện bậc nhất theo một cách khác. Nếu $\nabla f(x)^T (y - x) \ge 0$ thì $f(y) \ge f(x) + \nabla f(x)^T (y - x) \ge f(x)$. Nói cách khác:
 
-> Với $f$ lồi khả vi, mọi điểm $y$ tốt hơn $x$, tức $f(y) < f(x)$, đều nằm trong nửa không gian mở $\{y : \nabla f(x)^T (y - x) < 0\}$.
+> Với $f$ lồi khả vi, mọi điểm $y$ tốt hơn $x$, tức $f(y) < f(x)$, đều nằm trong nửa không gian mở $\{y \mid \nabla f(x)^T (y - x) < 0\}$.
 
-Chỉ một lần tính gradient, ta loại được cả nửa không gian còn lại khỏi vùng tìm kiếm. Về hình học, siêu phẳng đi qua $x$ với pháp tuyến $\nabla f(x)$ là một **siêu phẳng tựa** của tập mức dưới $\{y : f(y) \le f(x)\}$ tại $x$, đúng khái niệm ở chủ đề [siêu phẳng phân tách và siêu phẳng tựa](./sieu-phang-phan-tach-va-tua.md). Tập mức dưới nằm trọn một phía, còn gradient chỉ ra phía bên kia.
+Chỉ một lần tính gradient, ta loại được cả nửa không gian còn lại khỏi vùng tìm kiếm. Về hình học, siêu phẳng đi qua $x$ với pháp tuyến $\nabla f(x)$ là một **siêu phẳng tựa** của tập mức dưới $\{y \mid f(y) \le f(x)\}$ tại $x$, đúng khái niệm ở chủ đề [siêu phẳng phân tách và siêu phẳng tựa](./sieu-phang-phan-tach-va-tua.md). Tập mức dưới nằm trọn một phía, còn gradient chỉ ra phía bên kia.
 
 <GradientCutLab />
 
@@ -135,7 +143,10 @@ Trong mô phỏng, hàm $-\exp(-x_1^2 - 2x_2^2)$ không phải hàm lồi, vậy
 Viết điều kiện bậc nhất hai lần, một lần đứng ở $x$ nhìn sang $y$, một lần đứng ở $y$ nhìn sang $x$:
 
 $$
-f(y) \ge f(x) + \nabla f(x)^T (y - x), \qquad f(x) \ge f(y) + \nabla f(y)^T (x - y).
+\begin{aligned}
+f(y) &\ge f(x) + \nabla f(x)^T (y - x), \\
+f(x) &\ge f(y) + \nabla f(y)^T (x - y).
+\end{aligned}
 $$
 
 Cộng hai bất đẳng thức rồi chuyển vế, ta được
@@ -157,7 +168,7 @@ Chiều ngược lại không đúng khi $n \ge 2$: Không phải ánh xạ đơ
 **Khi không có đạo hàm.** Hàm $|x|$ lồi nhưng không khả vi tại 0, nên ở đó không có tiếp tuyến. Thay vào đó, mọi đường thẳng qua gốc với độ dốc $g \in [-1, 1]$ đều nằm dưới đồ thị, vì $|y| \ge g y$ với mọi $y$. Một số $g$ như vậy gọi là một **dưới đạo hàm** (subgradient) của $f$ tại 0. Tổng quát, $g$ là dưới đạo hàm của $f$ tại $x$ nếu
 
 $$
-f(y) \ge f(x) + g^T (y - x) \quad \text{với mọi } y,
+f(y) \ge f(x) + g^T (y - x), \quad \forall y \in \operatorname{dom} f,
 $$
 
 tức là điều kiện bậc nhất với $g$ thay cho gradient. Tại điểm khả vi, dưới đạo hàm duy nhất là gradient. Tại điểm gãy, có cả một tập dưới đạo hàm. Trong mô phỏng ở mục 1, chọn hàm $|x|$ và đặt $x_0 = 0$ để kéo thanh trượt độ dốc và thấy điều này. Khái niệm mở rộng này đặc biệt cần thiết cho những hàm số xuất hiện thường xuyên trong học máy như hàm kích hoạt ReLU $\max\{0, x\}$, hàm mất mát hinge $\max\{0, 1 - z\}$ trong máy vector hỗ trợ (SVM) và chuẩn $\ell_1$ trong hồi quy Lasso. Điều kiện tối ưu "gradient triệt tiêu" $\nabla f(x) = 0$ khi đó được thay thế bằng "vector không là một dưới đạo hàm", tức $0 \in \partial f(x)$. Với hàm $|x|$, điều kiện này nghiệm đúng tại gốc vì $0 \in [-1, 1]$, và gốc tọa độ chính là điểm cực tiểu toàn cục.
@@ -247,5 +258,4 @@ Với hàm khả vi, $f$ lồi khi và chỉ khi miền xác định lồi và m
 Nhiều bất đẳng thức cổ điển chỉ là tiếp tuyến của một hàm lồi hay lõm, và độ phân kỳ KL chính là khoảng cách từ entropy âm tới siêu phẳng tiếp xúc của nó. Gradient của hàm lồi là ánh xạ đơn điệu. Lồi nghiêm ngặt cho bất đẳng thức chặt và nhiều nhất một điểm cực tiểu. Tại điểm gãy, dưới đạo hàm thay vai trò của gradient.
 
 ## Tài liệu tham khảo
-
 - Stephen Boyd, Lieven Vandenberghe, *Convex Optimization*, Cambridge University Press.

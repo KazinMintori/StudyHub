@@ -14,9 +14,14 @@ Xét trực giác hình học: Khi đặt hai vật thể lồi không giao nhau
 ## 1. Định lý siêu phẳng phân tách
 
 > **Định lý.** Cho $C$ và $D$ là hai tập hợp lồi khác rỗng, rời nhau trong $\mathbb{R}^n$ ($C \cap D = \varnothing$). Khi đó tồn tại vector pháp tuyến $a \ne 0$ và số thực $b$ sao cho:
-> $$a^T x \le b \ \text{ với mọi } x \in C, \qquad a^T x \ge b \ \text{ với mọi } x \in D.$$
+> $$
+> \begin{aligned}
+> a^T x &\le b, \quad \forall x \in C, \\
+> a^T x &\ge b, \quad \forall x \in D.
+> \end{aligned}
+> $$
 
-Nói cách khác, dạng affine $a^T x - b$ không dương trên toàn bộ tập $C$ và không âm trên toàn bộ tập $D$. Siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n : a^T x = b\}$ được gọi là **siêu phẳng phân tách** (separating hyperplane) của $C$ và $D$: Hai tập hợp nằm về hai phía đối diện của siêu phẳng, có thể tiếp xúc với siêu phẳng nhưng không bao giờ cắt xuyên qua.
+Nói cách khác, dạng affine $a^T x - b$ không dương trên toàn bộ tập $C$ và không âm trên toàn bộ tập $D$. Siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n \mid a^T x = b\}$ được gọi là **siêu phẳng phân tách** (separating hyperplane) của $C$ và $D$: Hai tập hợp nằm về hai phía đối diện của siêu phẳng, có thể tiếp xúc với siêu phẳng nhưng không bao giờ cắt xuyên qua.
 
 Ba lưu ý sư phạm cần khắc sâu khi phân tích định lý:
 1. Tính lồi là điều kiện bắt buộc: Ví dụ hai tập hợp dạng lưỡi liềm lồng vào nhau cho thấy nếu thiếu tính lồi, định lý phân tách sẽ sụp đổ hoàn toàn dù hai tập không giao nhau.
@@ -30,7 +35,7 @@ Ba lưu ý sư phạm cần khắc sâu khi phân tích định lý:
 Ta bắt đầu bằng việc chứng minh định lý trong trường hợp trực quan nhất: Khi hai tập hợp sở hữu một cặp điểm gần nhau nhất. Giả sử khoảng cách Euclid giữa hai tập lồi:
 
 $$
-\operatorname{dist}(C, D) = \inf\{\|u - v\|_2 : u \in C,\ v \in D\}
+\operatorname{dist}(C, D) = \inf\{\|u - v\|_2 \mid u \in C, \ v \in D\}
 $$
 
 là một số dương ngặt, và tồn tại hai điểm $c \in C$, $d \in D$ đạt đúng khoảng cách cực tiểu này: $\|c - d\|_2 = \operatorname{dist}(C, D) > 0$. Giả thiết này luôn được thỏa mãn khi $C$ và $D$ là hai tập đóng và ít nhất một trong hai tập bị chặn (tập compact).
@@ -38,7 +43,10 @@ là một số dương ngặt, và tồn tại hai điểm $c \in C$, $d \in D$ 
 **Dựng siêu phẳng phân tách.** Chọn vector pháp tuyến $a = d - c$ và hệ số tự do $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2}$. Hàm affine tương ứng nhận biểu diễn:
 
 $$
-f(x) = a^T x - b = (d - c)^T \left(x - \tfrac12(d + c)\right).
+\begin{aligned}
+f(x) &= a^T x - b \\
+&= (d - c)^T \left(x - \tfrac12(d + c)\right).
+\end{aligned}
 $$
 
 Về hình học, siêu phẳng $f(x) = 0$ vuông góc với đoạn thẳng $[c, d]$ và đi qua chính xác trung điểm $\tfrac{1}{2}(c + d)$, tức là **siêu phẳng trung trực** của đoạn thẳng nối hai điểm gần nhất.
@@ -59,7 +67,7 @@ $$
 
 Lập luận tương tự cho phép khẳng định $f(x) \le 0$ với mọi $x \in C$.
 
-Điểm mấu chốt sử dụng tính lồi nằm ở chỗ: Đoạn thẳng nối $d$ và $u$ phải nằm trọn trong $D$. Khi không tồn tại cặp điểm đạt khoảng cách cực tiểu (chẳng hạn hai tập mở hoặc không bị chặn), người ta sử dụng kỹ thuật tịnh tiến bằng cách xét tập hiệu Minkowski $C - D = \{x - y : x \in C,\ y \in D\}$. Tập $C - D$ là một tập lồi không chứa gốc tọa độ, quy bài toán về việc phân tách gốc tọa độ $0$ khỏi một tập lồi.
+Điểm mấu chốt sử dụng tính lồi nằm ở chỗ: Đoạn thẳng nối $d$ và $u$ phải nằm trọn trong $D$. Khi không tồn tại cặp điểm đạt khoảng cách cực tiểu (chẳng hạn hai tập mở hoặc không bị chặn), người ta sử dụng kỹ thuật tịnh tiến bằng cách xét tập hiệu Minkowski $C - D = \{x - y \mid x \in C, \ y \in D\}$. Tập $C - D$ là một tập lồi không chứa gốc tọa độ, quy bài toán về việc phân tách gốc tọa độ $0$ khỏi một tập lồi.
 
 ## 3. Điều kiện phân tách nghiêm ngặt
 
@@ -68,7 +76,10 @@ Siêu phẳng trung trực dựng ở mục trên thỏa mãn điều kiện ng�
 Chẳng hạn trong $\mathbb{R}^2$, xét hai tập hợp:
 
 $$
-C = \{(x_1, x_2) : x_2 \le 0\}, \qquad D = \{(x_1, x_2) : x_1 > 0,\ x_1 x_2 \ge 1\}.
+\begin{aligned}
+C &= \{(x_1, x_2) \mid x_2 \le 0\}, \\
+D &= \{(x_1, x_2) \mid x_1 > 0, \ x_1 x_2 \ge 1\}.
+\end{aligned}
 $$
 
 Cả hai tập đều lồi, đóng và không giao nhau. Tuy nhiên khi hoành độ $x_1 \to \infty$, tung độ $1/x_1 \to 0$, khoảng cách giữa hai tập tiệm cận về 0. Siêu phẳng duy nhất có thể phân tách chúng là trục hoành $x_2 = 0$. Đường thẳng này tiếp xúc trực tiếp với biên của $C$, do đó không thể phân tách nghiêm ngặt.
@@ -83,10 +94,13 @@ Chiều ngược của định lý phân tách ("tồn tại siêu phẳng phân
 
 Tổng hợp lại, ta có định lý tương đương: Hai tập lồi, trong đó ít nhất một tập là tập mở, rời nhau **khi và chỉ khi** tồn tại một siêu phẳng phân tách chúng.
 
-Ta có ứng dụng trực tiếp vào giải quyết hệ bất đẳng thức tuyến tính: Hệ bất đẳng thức ngặt $Ax \prec b$ (với ma trận $A \in \mathbb{R}^{m \times n}$) vô nghiệm khi và chỉ khi tập affine $\{b - Ax : x \in \mathbb{R}^n\}$ không giao với nón mở các số dương $\mathbb{R}^m_{++}$. Áp dụng định lý phân tách cho hai tập lồi này, ta thu được kết quả: **Hệ $Ax \prec b$ vô nghiệm khi và chỉ khi tồn tại vector $\lambda \in \mathbb{R}^m$ thỏa mãn đồng thời:**
+Ta có ứng dụng trực tiếp vào giải quyết hệ bất đẳng thức tuyến tính: Hệ bất đẳng thức ngặt $Ax \prec b$ (với ma trận $A \in \mathbb{R}^{m \times n}$) vô nghiệm khi và chỉ khi tập affine $\{b - Ax \mid x \in \mathbb{R}^n\}$ không giao với nón mở các số dương $\mathbb{R}^m_{++}$. Áp dụng định lý phân tách cho hai tập lồi này, ta thu được kết quả: **Hệ $Ax \prec b$ vô nghiệm khi và chỉ khi tồn tại vector $\lambda \in \mathbb{R}^m$ thỏa mãn đồng thời:**
 
 $$
-\lambda \ne 0, \qquad \lambda \succeq 0, \qquad A^T \lambda = 0, \qquad \lambda^T b \le 0 .
+\begin{aligned}
+\lambda &\ne 0, \quad \lambda \succeq 0, \\
+A^T \lambda &= 0, \quad \lambda^T b \le 0 .
+\end{aligned}
 $$
 
 Hai hệ trên tạo thành một **cặp giải pháp thay thế** (theorem of alternatives): Với bất kỳ bộ dữ liệu $A, b$ nào, đúng một và chỉ một trong hai hệ có nghiệm khả thi. Ý nghĩa thực tiễn là: Để chứng minh một bài toán tối ưu hoặc một hệ ràng buộc vô nghiệm, ta không cần phải duyệt qua không gian nghiệm vô hạn, mà chỉ cần cung cấp một vector chứng chỉ $\lambda$ (certificate of infeasibility).
@@ -101,7 +115,7 @@ Cơ chế hoạt động của chứng chỉ: Lấy tổ hợp tuyến tính cá
 
 Định lý phân tách có một phiên bản giới hạn khi tập thứ hai thu về một điểm biên duy nhất:
 
-> **Định nghĩa.** Cho tập hợp $C \subseteq \mathbb{R}^n$ và điểm $x_0$ thuộc biên của $C$. Nếu tồn tại vector $a \ne 0$ sao cho $a^T x \le a^T x_0$ với mọi $x \in C$, thì siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n : a^T x = a^T x_0\}$ được gọi là một **siêu phẳng tựa** (supporting hyperplane) của $C$ tại điểm $x_0$.
+> **Định nghĩa.** Cho tập hợp $C \subseteq \mathbb{R}^n$ và điểm $x_0$ thuộc biên của $C$. Nếu tồn tại vector $a \ne 0$ sao cho $a^T x \le a^T x_0$ với mọi $x \in C$, thì siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n \mid a^T x = a^T x_0\}$ được gọi là một **siêu phẳng tựa** (supporting hyperplane) của $C$ tại điểm $x_0$.
 
 Về mặt trực giác, siêu phẳng tựa tiếp xúc với tập $C$ tại điểm biên $x_0$ và giữ toàn bộ tập $C$ nằm trọn vẹn ở một phía của nó. Khi biên trơn khả vi tại $x_0$, siêu phẳng tựa trùng khớp với mặt phẳng tiếp diện. Khi $x_0$ là một điểm góc nhọn hoặc điểm kỳ dị, tồn tại một hình nón gồm vô số siêu phẳng tựa tựa vào điểm đó.
 
@@ -135,7 +149,7 @@ Trong mô hình SVM, chỉ những điểm dữ liệu nằm trên biên của l
 
 <details><summary>Xem lời giải thích</summary>
 
-Định lý sẽ không còn đúng. Xét trong $\mathbb{R}^2$, chọn tập lồi $C$ là hình tròn đơn vị đóng $\{x : \|x\|_2 \le 1\}$ và tập không lồi $D$ là hình vành khăn $\{x : 2 \le \|x\|_2 \le 3\}$. Rõ ràng hai tập hợp này không giao nhau. Tuy nhiên, vì vành khăn $D$ bao bọc hoàn toàn hình tròn $C$ theo mọi hướng không gian, bất kỳ đường thẳng nào để $C$ nằm trọn về một phía đều cắt qua vành khăn $D$. Do đó không tồn tại bất kỳ siêu phẳng phân tách nào. Định lý bắt buộc **cả hai** tập hợp đều phải là tập lồi.
+Định lý sẽ không còn đúng. Xét trong $\mathbb{R}^2$, chọn tập lồi $C$ là hình tròn đơn vị đóng $\{x \mid \|x\|_2 \le 1\}$ và tập không lồi $D$ là hình vành khăn $\{x \mid 2 \le \|x\|_2 \le 3\}$. Rõ ràng hai tập hợp này không giao nhau. Tuy nhiên, vì vành khăn $D$ bao bọc hoàn toàn hình tròn $C$ theo mọi hướng không gian, bất kỳ đường thẳng nào để $C$ nằm trọn về một phía đều cắt qua vành khăn $D$. Do đó không tồn tại bất kỳ siêu phẳng phân tách nào. Định lý bắt buộc **cả hai** tập hợp đều phải là tập lồi.
 
 </details>
 
@@ -151,7 +165,7 @@ Việc đổi dấu vector pháp tuyến và hệ số tự do chỉ làm đảo
 
 <details><summary>Xem lời giải thích</summary>
 
-Hoàn toàn có thể. Xét hai nửa mặt phẳng đóng $C = \{x \in \mathbb{R}^2 : x_2 \le 0\}$ và $D = \{x \in \mathbb{R}^2 : x_2 \ge 1\}$. Cả hai tập đều đóng, không bị chặn và rời nhau. Đường thẳng $x_2 = \tfrac{1}{2}$ phân tách nghiêm ngặt hai tập hợp này. Yếu tố cốt lõi để bảo đảm phân tách nghiêm ngặt không phải là tính bị chặn, mà là khoảng cách Euclid giữa hai tập phải dương ngặt $\operatorname{dist}(C, D) > 0$.
+Hoàn toàn có thể. Xét hai nửa mặt phẳng đóng $C = \{x \in \mathbb{R}^2 \mid x_2 \le 0\}$ và $D = \{x \in \mathbb{R}^2 \mid x_2 \ge 1\}$. Cả hai tập đều đóng, không bị chặn và rời nhau. Đường thẳng $x_2 = \tfrac{1}{2}$ phân tách nghiêm ngặt hai tập hợp này. Yếu tố cốt lõi để bảo đảm phân tách nghiêm ngặt không phải là tính bị chặn, mà là khoảng cách Euclid giữa hai tập phải dương ngặt $\operatorname{dist}(C, D) > 0$.
 
 </details>
 
@@ -159,20 +173,20 @@ Hoàn toàn có thể. Xét hai nửa mặt phẳng đóng $C = \{x \in \mathbb{
 
 <details><summary>Xem lời giải thích</summary>
 
-Hoàn toàn phân tách được. Sau khi chiếu vào $\mathbb{R}^3$, bốn điểm dữ liệu trở thành: Cụ thể gồm $(0, 0, 0)^T$ và $(1, 1, 1)^T$ cho lớp thứ nhất, $(1, 0, 0)^T$ và $(0, 1, 0)^T$ cho lớp thứ hai. Chọn hàm affine $f(x) = x_1 + x_2 - 2x_3 - \tfrac{1}{2}$, ta nhận thấy $f(x) = -\tfrac{1}{2} < 0$ trên toàn bộ lớp thứ nhất và $f(x) = \tfrac{1}{2} > 0$ trên toàn bộ lớp thứ hai. Siêu phẳng $x_1 + x_2 - 2x_3 = \tfrac{1}{2}$ phân tách hoàn hảo hai lớp dữ liệu. Đây chính là nguyên lý cốt lõi của phương pháp Kernel trong học máy.
+Hoàn toàn phân tách được. Sau khi chiếu vào $\mathbb{R}^3$, bốn điểm dữ liệu trở thành $(0, 0, 0)^T$ và $(1, 1, 1)^T$ cho lớp thứ nhất, cùng $(1, 0, 0)^T$ và $(0, 1, 0)^T$ cho lớp thứ hai. Chọn hàm affine $f(x) = x_1 + x_2 - 2x_3 - \tfrac{1}{2}$, ta nhận thấy $f(x) = -\tfrac{1}{2} < 0$ trên toàn bộ lớp thứ nhất và $f(x) = \tfrac{1}{2} > 0$ trên toàn bộ lớp thứ hai. Siêu phẳng $x_1 + x_2 - 2x_3 = \tfrac{1}{2}$ phân tách hoàn hảo hai lớp dữ liệu. Đây chính là nguyên lý cốt lõi của phương pháp Kernel trong học máy.
 
 </details>
 
 ## 8. Bài tập tự luyện
 
 ::: exercise 1. Dựng siêu phẳng phân tách giữa hai hình tròn
-Cho hai hình tròn đóng trong mặt phẳng: Cụ thể là $C = \{x \in \mathbb{R}^2 : \|x\|_2 \le 1\}$ và $D = \{x \in \mathbb{R}^2 : \|x - (4, 3)^T\|_2 \le 2\}$. Hãy xác định cặp điểm gần nhất giữa hai tập và phương trình siêu phẳng phân tách tương ứng.
+Cho hai hình tròn đóng trong mặt phẳng: Cụ thể là $C = \{x \in \mathbb{R}^2 \mid \|x\|_2 \le 1\}$ và $D = \{x \in \mathbb{R}^2 \mid \|x - (4, 3)^T\|_2 \le 2\}$. Hãy xác định cặp điểm gần nhất giữa hai tập và phương trình siêu phẳng phân tách tương ứng.
 :::
 
 ::: solution
 Khoảng cách giữa hai tâm là $\sqrt{4^2 + 3^2} = 5$, lớn hơn tổng hai bán kính $1 + 2 = 3$, do đó hai hình tròn rời nhau. Vector đơn vị hướng từ tâm của $C$ sang tâm của $D$ là $u = (0.8, 0.6)^T$.
 
-Cặp điểm đạt khoảng cách cực tiểu giữa hai tập là:
+Cặp điểm đạt khoảng cách cực tiểu giữa hai tập được xác định cụ thể:
 - $c = 1 \cdot u = (0.8, 0.6)^T \in C$,
 - $d = (4, 3)^T - 2u = (2.4, 1.8)^T \in D$.
 
@@ -202,7 +216,7 @@ Nhân các bất đẳng thức với trọng số $\lambda$ và cộng lại, t
 :::
 
 ::: exercise 3. Siêu phẳng tựa của hình vuông chuẩn ℓ∞
-Xác định toàn bộ các siêu phẳng tựa của hình vuông đơn vị $\{x \in \mathbb{R}^2 : \|x\|_\infty \le 1\}$ tại điểm biên $x_0 = (1, 0.5)^T$ và tại đỉnh cực biên $x_1 = (1, 1)^T$.
+Xác định toàn bộ các siêu phẳng tựa của hình vuông đơn vị $\{x \in \mathbb{R}^2 \mid \|x\|_\infty \le 1\}$ tại điểm biên $x_0 = (1, 0.5)^T$ và tại đỉnh cực biên $x_1 = (1, 1)^T$.
 :::
 
 ::: solution
