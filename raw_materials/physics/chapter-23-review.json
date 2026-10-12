@@ -1,0 +1,30 @@
+{
+  "chapter": 23,
+  "status": "content-complete",
+  "theorySections": 5,
+  "examples": 14,
+  "equations": 23,
+  "numberedFigures": 27,
+  "sourceFigureAssets": 47,
+  "solutionDiagrams": 2,
+  "exercises": 86,
+  "discussionQuestions": 22,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 121,
+  "sourceClarifications": [
+    "23.21: Potential difference is explicitly ordered. VB-VC is +17.1 V; VC-VB is -17.1 V.",
+    "23.23, 23.37, 23.47 and 23.53: The appendix text extraction misrepresents micro as milli. Values were recalculated in SI.",
+    "23.38: Source image specifies 1.0 microV/m, not milliV/m.",
+    "23.56: The body receives electrons in the stated negative-charge configuration. The last question's wording about electrons lost is inconsistent with that configuration.",
+    "23.63: Figure specifies 12.0 cm from plate exit to screen. The screen displacement is 4.12 cm. The appendix's 3.29 cm does not match that geometry.",
+    "23.73: A spring breaking alone does not specify what happens to elastic stored energy. Solution gives both complete energy transfer and removal of elastic energy.",
+    "23.76: Circular level curves exist only when V/A+3y0^2 is positive. Zero gives a point, negative gives no level curve.",
+    "23.83: Closest approaches were checked against both energy and angular momentum conservation. The last two appendix values do not satisfy the given data."
+  ],
+  "numericEvidence": ["qa/physics/chapter23/theory-checks.json", "qa/physics/chapter23/numeric-checks.json"],
+  "numericCheckGroups": 138,
+  "figureReview": "All theory and exercise crops visually reviewed; summary crops and cell-label crop corrected.",
+  "renderReview": "pending",
+  "publication": "not-requested-for-this-chapter"
+}

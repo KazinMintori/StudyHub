@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { mathAiReviewLesson as lesson } from '../docs/.vitepress/math-ai-review-course.mjs'
+import { mathAiCourse } from '../docs/.vitepress/math-ai-course.mjs'
 
 const base = process.env.QA_URL || 'http://127.0.0.1:5191'
 const browser = await puppeteer.launch({ headless: true, executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe' })
@@ -35,45 +36,31 @@ async function inspect(label) {
 try {
   await page.setViewport({ width: 1440, height: 1000 })
   await go('/toan-cho-ai/')
-  assert.equal(await page.$$eval('#bai-giang .lecture-row', elements => elements.length), 8)
-  await page.click('.course-overview-tabs a[href="#on-luyen"]')
+  assert.equal(await page.$$eval('#bai-giang .lecture-row', elements => elements.length), mathAiCourse.lessons.length)
+  await go('/toan-cho-ai/on-luyen')
   await page.waitForSelector('#on-luyen .lecture-row')
   assert.deepEqual(await page.$$eval('#on-luyen .part-banner h2', elements => elements.map(element => element.textContent)), lesson.topicGroups.map(group => group.title))
   assert.equal(await page.$$eval('#on-luyen .lecture-row', elements => elements.length), 12)
   await page.screenshot({ path: 'qa/math-ai-review/overview-desktop.png', fullPage: true })
   await page.reload({ waitUntil: 'networkidle0' })
   assert(await page.$('#on-luyen'))
-  await page.click('.course-overview-tabs a[href="#bai-giang"]')
-  await page.waitForSelector('#bai-giang')
-  await page.goBack({ waitUntil: 'networkidle0' })
-  await page.waitForSelector('#on-luyen')
-  await page.goForward({ waitUntil: 'networkidle0' })
-  await page.waitForSelector('#bai-giang')
-  results.push('Course tabs, direct link, reload and browser history')
+  results.push('Independent review route and reload')
 
   for (const width of (process.env.QA_SMOKE ? [375] : [360, 375, 1440])) {
     await page.setViewport({ width, height: 900 })
-    await go('/toan-cho-ai/#on-luyen')
+    await go('/toan-cho-ai/on-luyen')
     await inspect(`overview-${width}`)
     if (width === 375) await page.screenshot({ path: 'qa/math-ai-review/overview-mobile.png', fullPage: true })
     for (const group of lesson.topicGroups) {
       for (const topic of group.topics) {
         if (process.env.QA_SMOKE && !['khong-gian-va-ma-tran', 'bai-tap-cos', 'gradient-backtracking-newton'].includes(topic.slug)) continue
-        await go(`/toan-cho-ai/bai-giang/${lesson.slug}/${topic.slug}.html`)
+        await go(`/toan-cho-ai/on-luyen/${topic.slug}.html`)
         assert.equal(await page.$eval('.topic-header h1', element => element.textContent), topic.title)
         await inspect(`${width}/${topic.slug}`)
         if (width === 375 && ['mo-hinh-va-hoi-quy', 'bai-tap-cos', 'gradient-backtracking-newton'].includes(topic.slug)) {
           await page.screenshot({ path: `qa/math-ai-review/${topic.slug}-mobile.png`, fullPage: true })
         }
       }
-    }
-    await go(`/toan-cho-ai/bai-giang/${lesson.slug}.html`)
-    for (const part of ['cheatsheet', 'kien-thuc-can-co', 'notes']) {
-      await page.click(`.lecture-tabs a[href$="#${part}"]`)
-      await page.waitForFunction(part => document.querySelector(`.lecture-tabs a[href$="#${part}"]`)?.getAttribute('aria-current') === 'page', {}, part)
-      assert.equal(await page.$$eval('mjx-merror,[data-mml-node="merror"]', elements => elements.length), 0)
-      assert.equal(await page.$eval('body', element => element.textContent.includes('$$')), false, `${part}: raw formula delimiters`)
-      await inspect(`${width}/bundle-${part}`)
     }
   }
   assert.deepEqual(errors, [])

@@ -252,58 +252,6 @@ export const readingMetadata = {
     "words": 3467,
     "minutes": 15
   },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap": {
-    "words": 687,
-    "minutes": 5
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/khong-gian-va-ma-tran": {
-    "words": 474,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/dao-ham-va-cuc-tri": {
-    "words": 381,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/tinh-loi-va-toi-uu": {
-    "words": 1002,
-    "minutes": 7
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/mo-hinh-va-hoi-quy": {
-    "words": 1002,
-    "minutes": 7
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/quy-hoach-tuyen-tinh": {
-    "words": 729,
-    "minutes": 5
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/bai-tap-cos": {
-    "words": 568,
-    "minutes": 4
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/dieu-kien-kkt": {
-    "words": 405,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/kkt-co-tham-so": {
-    "words": 375,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/doi-ngau-lagrange": {
-    "words": 402,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/bai-tap-rang-buoc": {
-    "words": 305,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/quy-tac-chuoi-va-taylor": {
-    "words": 281,
-    "minutes": 3
-  },
-  "toan-cho-ai/bai-08-tai-lieu-on-tap/gradient-backtracking-newton": {
-    "words": 520,
-    "minutes": 3
-  },
   "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
     "words": 2548,
     "minutes": 15
@@ -377,7 +325,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-1/02-chuyen-dong-thang": {
-    "words": 24772,
+    "words": 24738,
     "minutes": 125
   },
   "vat-ly-1/03-chuyen-dong-khong-gian": {
@@ -453,7 +401,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-2/01-dien-truong-coulomb": {
-    "words": 22127,
+    "words": 22152,
     "minutes": 110
   },
   "vat-ly-2/01-dien-truong-coulomb/dien-tich": {
@@ -485,11 +433,11 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 15596,
+    "words": 15645,
     "minutes": 80
   },
   "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
-    "words": 20,
+    "words": 48,
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss/tinh-dien-thong": {
@@ -509,8 +457,28 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 123,
-    "minutes": 5
+    "words": 20673,
+    "minutes": 105
+  },
+  "vat-ly-2/02-dien-the/the-nang-dien": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/02-dien-the/dien-the": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/02-dien-the/tinh-dien-the": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/02-dien-the/mat-dang-the": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/02-dien-the/gradient-dien-the": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/04-tu-dien-dien-moi": {
     "words": 142,

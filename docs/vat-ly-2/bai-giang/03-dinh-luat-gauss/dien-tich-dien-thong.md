@@ -11,4 +11,4 @@ description: "Trường bên ngoài cho biết gì về điện tích bên trong
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 22.1, trang 718–721.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 22.1, trang 718–721. Mạch trình bày điện tích và điện thông có nền tảng từ Ruth W. Chabay và Bruce A. Sherwood, *Electric and Magnetic Interactions*, John Wiley & Sons, 1994.

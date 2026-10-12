@@ -68,7 +68,7 @@ R&=\left(\frac{ke^2}{4\pi^2m_ef^2}\right)^{1/3}\\
 \end{aligned}
 $$
 
-Giá trị cùng bậc kích thước nguyên tử. Điều đó chưa chứng minh mô hình đúng. **(d)** Nếu thả từ nghỉ ngoài cầu, lực hút vẫn đưa electron về và xuyên qua tâm rồi sang phía đối diện, nên có dao động trong mô hình không cản. Tuy nhiên ngoài cầu lực tỷ lệ với $1/r^2$, không tỷ lệ với độ lệch, nên toàn chuyển động không điều hòa. Phát hiện hạt nhân cho thấy điện tích dương tập trung trong vùng nhỏ, thay vì trải đều như giả thiết Thomson.
+Giá trị cùng bậc kích thước nguyên tử. Điều đó chưa chứng minh mô hình đúng. **(d)** Nếu thả từ nghỉ ngoài cầu, lực hút vẫn đưa electron về và xuyên qua tâm rồi sang phía đối diện, nên có dao động trong mô hình không cản. Tuy nhiên ngoài cầu lực tỷ lệ với $1/r^2$, không tỷ lệ với độ lệch, nên toàn chuyển động không điều hòa. Công trình về cấu trúc nguyên tử của Rutherford năm 1911 cho thấy điện tích dương tập trung trong vùng nhỏ, thay vì trải đều như giả thiết Thomson. [Công trình Rutherford](https://personal.math.ubc.ca/~cass/rutherford/rutherford669.html).
 :::
 
 ::: exercise 22.47 •• CALC

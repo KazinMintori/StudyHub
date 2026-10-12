@@ -15,7 +15,7 @@ await mkdir(`${dir}/${slug}`,{recursive:true})
 const pages=[['dien-tich-dien-thong','01-dien-tich-dien-thong.md','22.1',718,721],['tinh-dien-thong','02-tinh-dien-thong.md','22.2',721,725],['dinh-luat-gauss','03-dinh-luat-gauss.md','22.3',725,729],['ung-dung-gauss','04-ung-dung-gauss.md','22.4',729,733],['dien-tich-vat-dan','05-dien-tich-vat-dan.md','22.5',734,737]]
 for(const [topic,file,section,start,end] of pages){
  const t=gaussTopics.flatMap(g=>g.topics).find(t=>t.slug===topic)
- await writeFile(`${dir}/${slug}/${topic}.md`,`---\ncourse: vat-ly-2\nlecture: ${slug}\ntopic: ${topic}\nsection: topic\ntitle: ${JSON.stringify(t.title)}\ndescription: ${JSON.stringify(t.question)}\n---\n\n<!--@include: ../../../../${raw}/${file}-->\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục ${section}, trang ${start}–${end}.\n`)
+ await writeFile(`${dir}/${slug}/${topic}.md`,`---\ncourse: vat-ly-2\nlecture: ${slug}\ntopic: ${topic}\nsection: topic\ntitle: ${JSON.stringify(t.title)}\ndescription: ${JSON.stringify(t.question)}\n---\n\n<!--@include: ../../../../${raw}/${file}-->\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục ${section}, trang ${start}–${end}.${section==='22.1'?' Mạch trình bày điện tích và điện thông có nền tảng từ Ruth W. Chabay và Bruce A. Sherwood, *Electric and Magnetic Interactions*, John Wiley & Sons, 1994.':''}\n`)
 }
 const exercises=['07-luyen-tap-huong-dan.md','08-cau-hoi-thao-luan.md','09-bai-tap-01-28.md','10-bai-tong-hop-29-44.md','11-bai-tong-hop-nang-cao.md','12-dap-so.md']
 const include=f=>`<!--@include: ../../../${raw}/${f}-->\n\n`

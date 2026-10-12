@@ -9,6 +9,8 @@ Bốn nguồn giống nhau Q đặt tại các đỉnh hình vuông cạnh L. **
 
 <!-- detailed-solution:21.57 -->
 ::: solution Chi tiết
+
+![Ba lực đẩy trên một điện tích ở đỉnh hình vuông](img/young-21/loi-giai-21-57.svg)
 **Tóm tắt đề bài:** Bốn nguồn Q tại đỉnh vuông cạnh L, xét một đỉnh.
 
 **Hướng đi:**
@@ -397,6 +399,8 @@ Ba nguồn điểm giống nhau q ở ba đỉnh hình vuông cạnh L. Tìm đ�
 
 <!-- detailed-solution:21.71 -->
 ::: solution Chi tiết
+
+![Các lực hút lên −3q tại tâm và tại đỉnh còn trống](img/young-21/loi-giai-21-71.svg)
 **Tóm tắt đề bài:** Ba nguồn q ở ba đỉnh, nguồn −3q ở tâm hoặc đỉnh trống.
 
 **Hướng đi:**

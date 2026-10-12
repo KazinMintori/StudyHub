@@ -1,0 +1,22 @@
+export const potentialConcepts={
+ 'the-nang-dien':{name:'Thế năng điện',aliases:['thế năng điện'],definition:'Thế năng điện là năng lượng tương tác của một hệ điện tích trong trường tĩnh. Công lực điện từ a đến b bằng $U_a-U_b$. Với hai nguồn điểm và mốc ở vô hạn, $U=kqq_0/r$.',example:'Hai nguồn cùng dấu có thế năng dương với mốc ở vô hạn. Thả tự do cho khoảng cách tăng thì thế năng giảm và động năng tăng.',use:'Tính công, lắp ráp hệ nguồn và tốc độ hạt khi chỉ lực điện sinh công.',question:'Thế năng chỉ thuộc riêng hạt đang chuyển động không?',answer:'Không. Nó thuộc tương tác của hệ gồm hạt và các nguồn tạo trường.'},
+ 'mat-dang-the':{name:'Mặt đẳng thế',aliases:['mặt đẳng thế','đường đẳng thế'],definition:'Mặt đẳng thế là tập điểm có cùng điện thế. Dịch chuyển trên mặt không làm lực điện sinh công. Tại điểm điện trường khác không, điện trường vuông góc mặt.',example:'Nguồn điểm tạo các mặt đẳng thế cầu đồng tâm và đường sức xuyên tâm.',use:'Đọc hình học điện thế, liên hệ mật độ các mức điện thế với độ lớn trường.',question:'Ở điểm trường bằng không, có xác định hướng vuông góc của trường được không?',answer:'Không. Vector không không có hướng, nên phát biểu về hướng cần trường khác không.'},
+ 'electron-volt':{name:'Electron-volt',aliases:['electron-volt','electron volt'],definition:String.raw`Electron-volt, ký hiệu eV, là đơn vị năng lượng. Nó bằng độ lớn năng lượng mà một điện tích có độ lớn e nhận khi đi qua hiệu điện thế có độ lớn 1 V.
+$$
+\begin{aligned}
+1\,\mathrm{eV}&=1.602176634\\
+&\quad\times10^{-19}\,\mathrm J.
+\end{aligned}
+$$`,example:'Một ion mang +2e nhận 2 keV khi được gia tốc qua chênh thế có độ lớn 1 kV.',use:'Diễn tả năng lượng nguyên tử, hạt nhân và chùm hạt, đổi sang SI khi dùng khối lượng kg.',question:'eV có phải đơn vị điện thế không?',answer:'Không. Volt là điện thế, electron-volt là năng lượng.'}
+}
+const reference='\n\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 23, trang 747–769.'
+export const potentialWikiDetails={
+ 'the-nang-dien':'Thế năng chỉ xác định đến một hằng số cộng. Với hai nguồn điểm hữu hạn, mốc ở vô hạn cho:\n\n$$\nU=kqq_0/r.\n$$\n\nCông lực điện bằng độ giảm thế năng, còn công lực ngoài khi di chuyển chậm bằng độ tăng thế năng. Với ba nguồn phải đếm ba cặp khác nhau:\n\n$$\n\\begin{aligned}\nU_{123}&=kq_1q_2/r_{12}\\\\\n&\\quad+kq_1q_3/r_{13}+kq_2q_3/r_{23}.\n\\end{aligned}\n$$\n\nĐiện thế V thuộc phân bố nguồn, còn thế năng của điện tích thử còn phụ thuộc q₀ qua U = q₀V. Vì vậy hạt âm đi về thế cao có thể giảm thế năng.'+reference,
+ 'mat-dang-the':'Trên một mặt đẳng thế, thay đổi điện thế bằng không. Quan hệ vi phân là:\n\n$$\ndV=-\\vec E\\cdot d\\vec\\ell.\n$$\n\nMọi dịch chuyển tiếp tuyến cho tích vô hướng bằng không, nên trường khác không phải theo pháp tuyến. Các mặt đẳng thế không cắt nhau ở vùng V là hàm đơn trị. Khi nhiều mặt được vẽ với cùng bước chênh thế, các mặt sát nhau hơn biểu thị trường mạnh hơn trong giới hạn bước nhỏ.\n\nToàn vật dẫn cân bằng tĩnh điện có cùng V. Hốc kín không chứa nguồn riêng cũng có V bằng thành hốc và trường bằng không. Hốc có nguồn riêng thường không đẳng thế trong thể tích.'+reference,
+ 'electron-volt':'Điện tích có độ lớn e qua chênh thế có độ lớn ΔV nhận năng lượng e|ΔV| khi lực điện làm nó tăng tốc. Định nghĩa đơn vị là:\n\n$$\n\\begin{aligned}\n1\\,\\mathrm{eV}&=1.602176634\\\\\n&\\quad\\times10^{-19}\\,\\mathrm J,\\\\\n1\\,\\mathrm{keV}&=10^3\\,\\mathrm{eV},\\\\\n1\\,\\mathrm{MeV}&=10^6\\,\\mathrm{eV},\\\\\n1\\,\\mathrm{GeV}&=10^9\\,\\mathrm{eV}.\n\\end{aligned}\n$$\n\nVới ion có điện tích ze, độ tăng động năng là |z|e|ΔV| khi chuyển động theo chiều được gia tốc. Dấu công được xác định bằng q(V_đầu − V_cuối), không bằng riêng độ lớn hiệu điện thế.'+reference
+}
+export const potentialWikiConnections={
+ 'the-nang-dien':['dien-the','cong-nang-luong','dien-truong','dien-tich'],
+ 'mat-dang-the':['dien-the','dien-truong','gradient','vat-dan-cach-dien'],
+ 'electron-volt':['dien-the','cong-nang-luong','dien-tich']
+}

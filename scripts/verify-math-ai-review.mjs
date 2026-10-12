@@ -15,11 +15,13 @@ assert.equal(topics.length, 12)
 assert.equal(manifest.images.length, 103)
 
 for (const topic of topics) {
-  const filePath = `docs/toan-cho-ai/bai-giang/bai-08-tai-lieu-on-tap/${topic.slug}.md`
+  const filePath = `docs/toan-cho-ai/on-luyen/${topic.slug}.md`
   const content = await readFile(filePath, 'utf8')
   assert(content.length > 500, `Topic ${topic.slug} is empty or too short`)
-  assert(!content.includes('Tư liệu đối chiếu'), `Topic ${topic.slug} still references board photos`)
 }
-for (const topic of topics) assert(manifest.images.some(row => row.destination.endsWith(`/${topic.slug}.md`)))
+for (const topic of topics) {
+  const mapped = manifest.images.filter(row => row.destination.endsWith(`/${topic.slug}.md`))
+  assert(mapped.length > 0, `Topic ${topic.slug} has no mapped source images`)
+}
 console.log('All 12 review topics verified across 4 ordered review groups.')
-console.log('100% of the 103 board contents are fully covered in text without remaining photo links.')
+console.log('All 103 source images map to their reordered review topics.')

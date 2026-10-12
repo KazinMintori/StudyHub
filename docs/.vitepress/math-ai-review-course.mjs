@@ -1,6 +1,6 @@
 const topic = (slug, title, question) => ({ slug, title, question, source: 'Tài liệu ôn tập' })
 export const mathAiReviewLesson = {
-  number: 8, slug: 'bai-08-tai-lieu-on-tap', title: 'Ôn luyện: Từ nền tảng đến thuật toán', kind: 'review',
+  slug: 'on-luyen', title: 'Ôn luyện: Từ nền tảng đến thuật toán', kind: 'review',
   prerequisites: ['ham-so', 'dao-ham', 'tap-hop'],
   supportingConcepts: ['vector', 'ma-tran', 'chuan', 'gradient', 'hessian', 'ma-tran-psd', 'binh-phuong-toi-thieu', 'tap-loi', 'ham-loi', 'lagrangian', 'kkt', 'ham-doi-ngau', 'dieu-kien-slater', 'quy-tac-chuoi', 'tim-kiem-duong'],
   status: 'ready',

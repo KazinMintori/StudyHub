@@ -3,26 +3,44 @@ course: vat-ly-2
 lecture: 02-dien-the
 section: lecture
 title: "Điện thế"
-prerequisites: ["dien-truong","cong-nang-luong","tich-phan","gradient"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Điện thế."
+prerequisites: ["cong-nang-luong","dien-truong","tich-phan","gradient"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Thế năng điện, hiệu điện thế, tính điện thế, mặt đẳng thế và gradient điện thế."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 23.1 — Electric Potential Energy (từ trang 747).
-- 23.2 — Electric Potential (từ trang 754).
-- 23.3 — Calculating Electric Potential (từ trang 760).
-- 23.4 — Equipotential Surfaces (từ trang 764).
-- 23.5 — Potential Gradient (từ trang 767).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/06-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 23, trang 747–780.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Điện thế">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/07-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/08-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/09-bai-tap-01-25.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/10-bai-tap-26-50.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/11-bai-tong-hop-51-70.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/12-bai-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-23/13-dap-so.md-->
+
+## Tài liệu tham khảo phần luyện tập
+
+Young & Freedman, ấn bản 15, chương 23, trang 771–780 và phụ lục đáp số A-15–A-16.
+
+</div>

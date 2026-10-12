@@ -2,6 +2,8 @@
 
 Bật đèn, dùng điện thoại hoặc nướng bánh bằng máy nướng đều cần năng lượng điện. Các khái niệm công và năng lượng đã giúp giải nhiều bài cơ học. Bây giờ ta kết hợp chúng với điện tích, lực điện và điện trường để giải những bài mà việc theo dõi lực và gia tốc từng lúc có thể phức tạp.
 
+![Hàn hồ quang tạo vùng kim loại nóng chảy nhờ sự truyền năng lượng điện](img/young-23/mo-chuong.png)
+
 Khi hạt mang điện chuyển động trong trường, lực điện có thể sinh công. Công ấy được diễn tả qua **thế năng điện**. Tương tự thế năng trọng trường phụ thuộc vị trí của vật so với Trái Đất, thế năng điện của hệ phụ thuộc vị trí tương đối giữa các điện tích.
 
 Ta sẽ dùng **điện thế**, tức thế năng điện trên một đơn vị điện tích thử, để mô tả tương tác. Hiệu điện thế giữa hai điểm còn được gọi là điện áp trong mạch điện. Những khái niệm này giúp hiểu mạch, chùm electron dùng trong xạ trị, máy gia tốc hạt năng lượng cao và nhiều thiết bị khác.

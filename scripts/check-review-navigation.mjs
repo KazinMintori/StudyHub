@@ -1,0 +1,35 @@
+import puppeteer from 'puppeteer'
+import assert from 'node:assert/strict'
+import { mathAiCourse } from '../docs/.vitepress/math-ai-course.mjs'
+assert.equal(mathAiCourse.lessons.length, 8)
+assert.deepEqual(mathAiCourse.lessons.map(item => item.number), [0,1,2,3,4,5,6,7])
+assert.equal(mathAiCourse.parts[0].title, 'Bài giảng')
+assert(!('number' in mathAiCourse.review))
+const browser = await puppeteer.launch({headless:true, executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'})
+try {
+  const page = await browser.newPage()
+  page.setDefaultNavigationTimeout(120000)
+  page.setDefaultTimeout(120000)
+  await page.evaluateOnNewDocument(() => sessionStorage.setItem('studyhub_welcome_seen','1'))
+  const base = process.env.QA_URL || 'http://127.0.0.1:5191'
+  await page.goto(base+'/toan-cho-ai/on-luyen', {waitUntil:'domcontentloaded'})
+  await page.waitForSelector('#on-luyen .lecture-row')
+  assert.equal(await page.$$eval('#on-luyen .lecture-row', nodes => nodes.length),12)
+  const sidebar = await page.$$eval('.VPSidebar a', nodes=>nodes.map(node=>({text:node.textContent.trim(),path:new URL(node.href).pathname.replace(/\.html$/,'')})))
+  const overview = sidebar.findIndex(item=>item.text==='Tổng quan môn học')
+  const review = sidebar.findIndex(item=>item.path==='/toan-cho-ai/on-luyen')
+  const practice = sidebar.findIndex(item=>item.path==='/toan-cho-ai/bai-tap')
+  assert(overview >= 0 && overview < review && review < practice)
+  assert(!sidebar.some(item=>item.text.includes('Lecture 08') || item.text.includes('Tài liệu ôn tập: Bốn buổi')))
+  assert.equal(await page.$$eval('.VPSidebar .VPSidebarItem .text', nodes=>nodes.some(node=>node.textContent.trim()==='Bài giảng')),true)
+  await page.click('#on-luyen .lecture-row')
+  await page.waitForSelector('.topic-header')
+  assert(!await page.$eval('.topic-header', node => /Lecture 08|Lecture 00/.test(node.textContent)))
+  assert(page.url().includes('/on-luyen/khong-gian-va-ma-tran'))
+  await page.setViewport({width:375,height:900})
+  await page.goto(base+'/toan-cho-ai/on-luyen', {waitUntil:'domcontentloaded'})
+  await page.waitForSelector('#on-luyen .lecture-row')
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth > innerWidth+2),false)
+  await page.screenshot({path:'qa/math-ai-review/independent-review-mobile.png',fullPage:true})
+  console.log('Eight lectures only; independent review route, sidebar order, labels and mobile layout passed.')
+} finally {await browser.close()}

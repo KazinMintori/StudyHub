@@ -48,8 +48,30 @@ rr=np.array([.01,.015,.02,.025,.03,.035,.04]);A=np.array([2.72,1.79,1.34,1.07,.9
 fig,axes=plt.subplots(2,2,figsize=(8,6))
 for row,(data,label) in enumerate([(A,'A'),(B,'B')]):
  for col,power in enumerate([1,2]):
-  ax=axes[row,col];ax.plot(rr*100,data*rr**power,'o-',color=color);ax.set(title=f'Bộ {label}: '+('Er' if power==1 else 'Er²'),xlabel='r (cm)',ylabel='Er (N m/C)' if power==1 else 'Er² (N m²/C)');ax.grid(alpha=.2)
+  values=data*rr**power
+  ax=axes[row,col];ax.plot(rr*100,values,'o-',color=color);ax.set(title=f'Bộ {label}: '+('Er' if power==1 else 'Er²'),xlabel='r (cm)',ylabel='Er (N m/C)' if power==1 else 'Er² (N m²/C)',ylim=(0,max(values)*1.15));ax.grid(alpha=.2)
 save(fig,'loi-giai-22-55')
 fig,ax=plt.subplots(figsize=(6.5,3.6));u=np.linspace(0,4,500);ratio=np.exp(-2*u)*(1+2*u+2*u*u)
 ax.plot(u,ratio,color=color,lw=2);ax.set(xlim=(0,4),ylim=(0,1.03),xlabel='r/a₀',ylabel='E / Eₚ',title='Điện trường trong mô hình hydrogen');ax.grid(alpha=.2);save(fig,'loi-giai-hydrogen')
-print('Generated 12 scientific solution SVG plots.')
+
+for number,negative in [(40,False),(42,True)]:
+ fig,ax=plt.subplots(figsize=(5,5));ax.set_aspect('equal')
+ from matplotlib.patches import Circle
+ for radius in [1.4,2.0]:ax.add_patch(Circle((0,0),radius,fill=False,color='#777',lw=2))
+ if not negative:ax.add_patch(Circle((0,0),.5,facecolor='#eceafb',edgecolor=color))
+ ax.text(0,0,'+Q' if negative else 'q',ha='center',va='center',color=color,fontsize=14)
+ for t in np.linspace(0,2*np.pi,8 if negative else 4,endpoint=False):
+  vec=np.array([np.cos(t),np.sin(t)])
+  if not negative:ax.text(*(vec*.48),'+',ha='center',va='center',color=color,fontsize=12)
+  start=vec*(.15 if negative else .5);end=vec*1.34
+  ax.annotate('',xy=end,xytext=start,arrowprops={'arrowstyle':'->','color':'#b1446e','lw':1.5})
+  ax.text(*(vec*1.43),'−',ha='center',va='center',color='#b1446e',fontsize=15)
+ for t in np.linspace(0,2*np.pi,16 if negative else 4,endpoint=False):
+  vec=np.array([np.cos(t),np.sin(t)])
+  ax.text(*(vec*2.04),'−' if negative else '+',ha='center',va='center',color=color,fontsize=13)
+  inner,outer=vec*2.10,vec*2.72
+  ax.annotate('',xy=inner if negative else outer,xytext=outer if negative else inner,arrowprops={'arrowstyle':'->','color':'#b1446e','lw':1.5})
+ ax.text(0,1.72,'Vật liệu dẫn: E = 0',ha='center',fontsize=10)
+ ax.set(xlim=(-2.9,2.9),ylim=(-2.9,2.9),title='Nguồn và vỏ cầu −3Q' if negative else 'Cầu dẫn và vỏ cầu trung hòa');ax.axis('off')
+ save(fig,f'duong-suc-22-{number}')
+print('Generated 12 scientific plots and 2 field-line diagrams.')

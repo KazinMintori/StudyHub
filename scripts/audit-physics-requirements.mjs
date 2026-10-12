@@ -4,6 +4,7 @@ import {physics1Course,physics2Course} from '../docs/.vitepress/physics-courses.
 import {concepts} from '../docs/.vitepress/concepts.mjs'
 import {cheatsheets} from '../docs/.vitepress/cheatsheets.mjs'
 import {lectureParts} from '../docs/.vitepress/lecture-model.mjs'
+import {courseCatalog} from '../docs/.vitepress/course-catalog.mjs'
 
 const manifest=JSON.parse(await readFile('raw_materials/physics/translation-manifest.json','utf8'))
 const exists=async f=>{try{await access(f);return true}catch{return false}}
@@ -28,7 +29,9 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const all=texts.join('\n')
  let source=''
  for(let p=ch.pdfStart;p<=ch.pdfEnd;p++)source+=await readFile(`qa/physics/full-source/pdf-${String(p).padStart(4,'0')}.txt`,'utf8')+'\n'
- const sourceNumbers=[...source.matchAll(new RegExp(`^${ch.chapter}\\.(\\d+)\\s`,'gm'))].map(m=>Number(m[1]))
+ const exercisesStart=source.search(/^EXERCISES\s*$/m)
+ const endSource=exercisesStart>=0?source.slice(exercisesStart):source
+ const sourceNumbers=[...endSource.matchAll(new RegExp(`^${ch.chapter}\\.(\\d+)\\s`,'gm'))].map(m=>Number(m[1])).filter(n=>n<=500)
  const expectedExercises=Math.max(0,...sourceNumbers)
  const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|$)`,'gm'))].map(m=>Number(m[1]))
  const missing=Array.from({length:expectedExercises},(_,i)=>i+1).filter(n=>!prompts.includes(n))
@@ -44,6 +47,7 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const sheetItems=sheet?.sections?.flatMap(s=>s.items||[])||[]
  const sheetExtra=sheetItems.some(i=>i.example||i.warning||i.correct||i.code)
  const forbidden=[...all.replace(/<!--[\s\S]*?-->/g,'').matchAll(/(?:theo sách|sách dùng|nguyên tác|bản dịch của|tiến độ bản dịch|ảnh lấy từ sách)/gi)].map(m=>m[0])
+ const review=ch.completionReview&&await exists(ch.completionReview)?JSON.parse(await readFile(ch.completionReview,'utf8')):null
  const status={sourceComplete:ch.status==='complete'&&ch.pendingSourceUnits.length===0,
   endExercisesPresent:expectedExercises>0&&missing.length===0,
   separateExerciseTab:lesson.hasChapterExercises===true&&!misplaced,
@@ -52,15 +56,15 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
   slidesPresent:course.slides.some(s=>s.note===lesson.slug),
   foundationsAndWikiRegistered:badWiki.length===0,
   independentVietnamesePresentation:forbidden.length===0,
-  sourceFiguresCaptionsAndSemanticReview:ch.completionReview||null,
-  renderedMobileReview:'Requires direct browser review. Static checks do not certify this.'}
+  sourceFiguresCaptionsAndSemanticReview:Boolean(review&&(review.status==='content-complete'||review.status==='complete')),
+  renderedMobileReview:review?.renderReview==='passed'}
  rows.push({course:course.id,chapter:ch.chapter,slug:lesson.slug,title:lesson.title,
   expectedExercises,exercisePrompts:prompts.length,detailedSolutions:solutionBlocks.length,
   missingExerciseNumbers:missing,unsolvedExerciseNumbers:unsolved,malformedSolutions:malformed,
   missingWiki:badWiki,forbiddenPhrases:forbidden,pendingSourceUnits:ch.pendingSourceUnits,status})
 }
 const cheatIndex=lectureParts.findIndex(p=>p.id==='cheatsheet')
-const shared={courseOrder:physics1Course.id==='vat-ly-1'&&physics2Course.id==='vat-ly-2',
+const shared={courseOrder:courseCatalog.findIndex(c=>c.id==='vat-ly-2')===courseCatalog.findIndex(c=>c.id==='vat-ly-1')+1,
  cheatsheetImmediatelyAfterExercises:cheatIndex>0&&lectureParts[cheatIndex-1].id==='bai-tap'}
 const report={generatedAt:new Date().toISOString(),scope:'44 lectures in Physics 1 and Physics 2',
  status:rows.every(r=>Object.values(r.status).every(v=>v===true))?'complete':'incomplete',shared,lectures:rows}

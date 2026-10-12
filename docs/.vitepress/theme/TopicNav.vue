@@ -46,7 +46,7 @@ watch(() => route.path, remember)
       </a>
     </div>
     <details class="topic-outline">
-      <summary>Toàn bộ chủ đề của {{ `Lecture ${String(lesson.number ?? 0).padStart(2, '0')}` }}</summary>
+      <summary>{{ lesson.kind === 'review' ? 'Toàn bộ chủ đề ôn luyện' : `Toàn bộ chủ đề của Lecture ${String(lesson.number ?? 0).padStart(2, '0')}` }}</summary>
       <div v-for="group in groups" :key="group.title" class="topic-outline-group">
         <p>{{ group.title }}</p>
         <ol>

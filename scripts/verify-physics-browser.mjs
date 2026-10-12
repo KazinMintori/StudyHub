@@ -6,6 +6,7 @@ import {mkdir,writeFile} from 'node:fs/promises'
 import {physics2Course} from '../docs/.vitepress/physics-courses.mjs'
 
 const base=process.env.QA_URL||'http://127.0.0.1:5175'
+const chapters=process.env.QA_CHAPTERS?process.env.QA_CHAPTERS.split(',').map(Number):[21,22,23]
 assert(/^http:\/\/127\.0\.0\.1:\d+$/.test(base),'QA target must be localhost')
 const browser=await puppeteer.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'})
 const page=await browser.newPage(),errors=[],results=[],overflow=[]
@@ -15,7 +16,7 @@ await mkdir('qa/physics/browser',{recursive:true})
 async function go(path){
  console.log('Inspecting',path)
  const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:45000})
- assert.equal(response.status(),200,path)
+ assert([200,304].includes(response.status()),`${path}: HTTP ${response.status()}`)
  await page.waitForSelector('.lecture-tabs, .topic-header',{timeout:30000})
  await page.evaluate(()=>document.fonts.ready)
 }
@@ -29,20 +30,29 @@ async function inspect(label){
    return r.right>innerWidth+2||r.left< -2||(s&&s.width>r.width+2)||scroll?[{tex:e.textContent.slice(0,180),width:r.width,svg:s?.width,left:r.left,right:r.right,scroll}]:[]
   })
   const images=[...document.querySelectorAll('.vp-doc img')].filter(i=>i.getBoundingClientRect().width>0).filter(i=>i.complete&&!i.naturalWidth).map(i=>i.src)
-  return {math,images,documentOverflow:document.documentElement.scrollWidth>innerWidth+2,mathErrors:document.querySelectorAll('mjx-merror,[data-mml-node="merror"]').length}
+  const unrendered=[...document.querySelectorAll('.math-text')].filter(e=>e.getBoundingClientRect().width>0).flatMap(e=>[...e.childNodes].filter(n=>n.nodeType===Node.TEXT_NODE).map(n=>n.textContent).filter(t=>/\$[^$]+\$|\\begin\{|\\frac\{/.test(t)))
+  return {math,images,unrendered,documentOverflow:document.documentElement.scrollWidth>innerWidth+2,mathErrors:document.querySelectorAll('mjx-merror,[data-mml-node="merror"]').length}
  })
- if(found.math.length||found.documentOverflow||found.images.length||found.mathErrors)overflow.push({label,...found})
+ if(found.math.length||found.documentOverflow||found.images.length||found.mathErrors||found.unrendered.length)overflow.push({label,...found})
  results.push(label)
 }
 try{
  for(const width of [360,375,1440]){
   await page.setViewport({width,height:900})
-  for(const chapter of [21,22]){
+  for(const chapter of chapters){
    const lesson=physics2Course.lessons.find(l=>l.sourceChapter===chapter)
    const path=`/vat-ly-2/bai-giang/${lesson.slug}.html`
    await go(path)
    const tabs=await page.$$eval('.lecture-tabs a',es=>es.map(e=>e.textContent.replace(/\d+/g,'').trim()))
    assert.equal(tabs[tabs.indexOf('Bài tập')+1],'Cheatsheet')
+   if(!lesson.hasChapterExercises){
+    await inspect(`${width}/chapter23/notes-draft`)
+    for(const topic of lesson.topicGroups.flatMap(g=>g.topics)){
+     await go(`/vat-ly-2/bai-giang/${lesson.slug}/${topic.slug}.html`)
+     await inspect(`${width}/chapter23/${topic.slug}`)
+    }
+    continue
+   }
    assert(await page.$eval('.lecture-exercises-content',e=>getComputedStyle(e).display==='none'))
    await inspect(`${width}/chapter${chapter}/notes`)
    await page.click('.lecture-tabs a[href$="#bai-tap"]')
@@ -68,6 +78,7 @@ try{
     await page.click(`.lecture-tabs a[href$="#${part}"]`)
     await page.waitForFunction(part=>document.querySelector(`.lecture-tabs a[href$="#${part}"]`)?.getAttribute('aria-current')==='page',{},part)
     await inspect(`${width}/chapter${chapter}/${part}`)
+    if(width===375&&part==='cheatsheet')await page.screenshot({path:`qa/physics/browser/chapter${chapter}-cheatsheet-mobile.png`,fullPage:false})
    }
    for(const topic of lesson.topicGroups.flatMap(g=>g.topics)){
     await go(`/vat-ly-2/bai-giang/${lesson.slug}/${topic.slug}.html`)
@@ -77,7 +88,7 @@ try{
   }
  }
  assert.deepEqual(errors,[])
- await writeFile('qa/physics/browser/results.json',JSON.stringify({base,checks:results.length,results,errors,overflow},null,2)+'\n')
+ await writeFile(`qa/physics/browser/results${chapters.includes(23)?'-chapter23':''}.json`,JSON.stringify({base,checks:results.length,results,errors,overflow},null,2)+'\n')
  console.log(JSON.stringify({checks:results.length,errors,overflow},null,2))
  assert.equal(overflow.length,0,'Math, image or document overflow')
 }finally{await browser.close()}

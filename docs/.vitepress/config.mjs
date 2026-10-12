@@ -14,7 +14,7 @@ const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`)
 
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
-  buildConcurrency: 2,
+  buildConcurrency: 1,
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   ignoreDeadLinks: true, lastUpdated: true,
   head:[
@@ -65,6 +65,7 @@ export default withMermaid(defineConfig({
   appearance:true,
   vite:{
     build:{
+      minify: process.env.STUDYHUB_REVIEW_BUILD ? false : 'esbuild',
       chunkSizeWarningLimit: 2000,
       rollupOptions:{
         cache: false,
@@ -86,9 +87,16 @@ export default withMermaid(defineConfig({
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
         {text: course.name, items:[
           {text:'Tổng quan môn học',link:`/${course.id}/`},
-          {text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`},
-          ...(course.id === 'xac-suat-thong-ke' ? [{text:'Toàn bộ Notes và Slides',link:'/xac-suat-thong-ke/tai-lieu-day-du'}] : [])
+          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : []),
+          ...(!course.review && course.id === 'xac-suat-thong-ke' ? [{text:'Toàn bộ Notes và Slides',link:'/xac-suat-thong-ke/tai-lieu-day-du'}] : [])
         ]},
+        ...(course.review ? [
+          {text:'Ôn luyện',collapsed:false,items:[
+            {text:'Tổng quan ôn luyện',link:`/${course.id}/on-luyen`},
+            ...course.review.topicGroups.map(group=>({text:group.title,collapsed:true,items:group.topics.map(topic=>({text:topic.title,link:`/${course.id}/on-luyen/${topic.slug}`}))}))
+          ]},
+          {text:'Bài tập ôn luyện',items:[{text:'Bài tập',link:`/${course.id}/bai-tap`}]}
+        ] : []),
         ...(course.parts ? course.parts.map(part=>({
           text: part.title,
           collapsed: false,

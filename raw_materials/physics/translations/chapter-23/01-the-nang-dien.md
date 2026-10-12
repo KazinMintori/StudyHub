@@ -8,7 +8,8 @@ Khi lực $\vec F$ tác dụng lên hạt đi từ a đến b, công được t�
 
 $$
 \begin{aligned}
-W_{a\to b}&=\int_a^b\vec F\cdot d\vec\ell\\
+&W_{a\to b}\\
+&=\int_a^b\vec F\cdot d\vec\ell\\
 &=\int_a^bF\cos\varphi\,d\ell.
 \end{aligned}
 \tag{23.1}
@@ -26,10 +27,15 @@ $$
 
 Công dương làm thế năng giảm. Khi quả bóng rơi, trọng lực sinh công dương và thế năng trọng trường giảm. Khi bóng đi lên, trọng lực sinh công âm và thế năng tăng.
 
+![Hình 23.1: Công trọng lực khi bóng đi từ a xuống b không phụ thuộc đường đi](../img/young-23/hinh-23-1.png)
+
 Định lý công–động năng cho biến thiên động năng bằng tổng công. Nếu chỉ các lực thế sinh công, biến thiên động năng bằng âm biến thiên thế năng, nên:
 
 $$
-K_a+U_a=K_b+U_b.
+\begin{aligned}
+&K_a+U_a\\
+&=K_b+U_b.
+\end{aligned}
 \tag{23.3}
 $$
 
@@ -40,9 +46,14 @@ Cơ năng được bảo toàn **trong điều kiện ấy**. Nếu có lực ng
 Hai bản kim loại song song lớn tạo trường đều hướng xuống, độ lớn E. Điện tích thử dương q₀ chịu lực hướng xuống có độ lớn q₀E. Khi đi xuống từ a đến b một khoảng d, trường sinh công:
 
 $$
-W_{a\to b}=Fd=q_0Ed.
+\begin{aligned}
+&W_{a\to b}\\
+&=Fd=q_0Ed.
+\end{aligned}
 \tag{23.4}
 $$
+
+![Hình 23.2: Điện tích thử dương đi xuống trong trường đều giữa hai bản](../img/young-23/hinh-23-2.png)
 
 Chọn +y hướng lên. Thành phần lực là $F_y=-q_0E$, còn các thành phần x,z bằng không. Cấu trúc này giống $F_y=-mg$ của trọng lực gần mặt đất. Lực điện trong trường đều là lực thế, nên công không phụ thuộc đường đi giữa hai điểm. Tương tự U = mgy của trọng trường, ta dùng:
 
@@ -55,7 +66,8 @@ Mốc U = 0 được chọn tại y = 0. Vì vậy:
 
 $$
 \begin{aligned}
-W_{a\to b}&=-\Delta U\\
+&W_{a\to b}\\
+&=-\Delta U\\
 &=-q_0E(y_b-y_a)\\
 &=q_0E(y_a-y_b).
 \end{aligned}
@@ -64,7 +76,11 @@ $$
 
 Nếu q₀ dương và yₐ > yᵦ, hạt đi cùng trường, lực cùng dịch chuyển, công dương và U giảm. Nếu hạt dương đi ngược trường, công âm và U tăng. Khi q₀ âm, lực đảo chiều: Đi cùng trường làm U tăng, đi ngược trường làm U giảm.
 
+![Hình 23.3: Điện tích dương đi cùng trường làm U giảm, đi ngược trường làm U tăng](../img/young-23/hinh-23-3.png)
+
 Quy tắc chung cần gắn với **hướng lực**, không chỉ hướng trường. Đi cùng lực điện làm thế năng giảm. Đi ngược lực điện làm thế năng tăng. Với điện tích âm, hướng lực ngược hướng trường.
+
+![Hình 23.4: Điện tích âm có lực ngược trường và sự thay đổi thế năng tương ứng](../img/young-23/hinh-23-4.png)
 
 ### Hai điện tích điểm
 
@@ -75,15 +91,22 @@ F_r=k\frac{qq_0}{r^2}.
 \tag{23.7}
 $$
 
+![Hình 23.5: Điện tích thử thay đổi khoảng cách từ rₐ đến rᵦ theo đường xuyên tâm](../img/young-23/hinh-23-5.png)
+
 Hai điện tích cùng dấu cho Fᵣ dương, lực đẩy. Hai điện tích trái dấu cho Fᵣ âm, lực hút. Lực thay đổi theo r nên phải tích phân:
 
 $$
 \begin{aligned}
-W_{a\to b}&=kqq_0\int_{r_a}^{r_b}\frac{dr}{r^2}\\
-&=kqq_0\left(\frac1{r_a}-\frac1{r_b}\right).
+&W_{a\to b}\\
+&=kqq_0\\
+&\quad\times\int_{r_a}^{r_b}\frac{dr}{r^2}\\
+&=kqq_0\\
+&\quad\times\left(\frac1{r_a}-\frac1{r_b}\right).
 \end{aligned}
 \tag{23.8}
 $$
+
+![Hình 23.6: Dịch chuyển theo đường bất kỳ chỉ sinh công qua thành phần xuyên tâm](../img/young-23/hinh-23-6.png)
 
 Với đường đi bất kỳ, lực vẫn xuyên tâm. Thành phần dịch chuyển theo phương xuyên tâm là dr, nên tích vô hướng lực với dịch chuyển bằng Fᵣdr. Những phần dịch chuyển tiếp tuyến không sinh công. Tích phân công do đó vẫn bằng (23.8), chỉ phụ thuộc hai khoảng cách đầu, cuối.
 
@@ -95,6 +118,8 @@ U=k\frac{qq_0}{r}.
 $$
 
 **Giữ dấu trong tích qq₀.** Cùng dấu cho U dương, trái dấu cho U âm. U biến thiên theo 1/r, còn lực theo 1/r². Hai công thức không được dùng thay nhau.
+
+![Hình 23.7: Thế năng theo khoảng cách với hai nguồn cùng dấu hoặc trái dấu](../img/young-23/hinh-23-7.png)
 
 U còn bằng công của lực điện nếu q₀ đi từ khoảng cách r ra vô hạn. Với cùng dấu, lực đẩy sinh công dương và U dương. Với trái dấu, lực hút sinh công âm khi hạt bị đưa ra xa và U âm. Ở r rất nhỏ, mô hình nguồn điểm cho U tiến đến +∞ với cùng dấu và −∞ với trái dấu. Ở r rất lớn, U tiến về không.
 
@@ -158,11 +183,20 @@ Nếu trường do q₁,q₂,q₃,... tạo ra, công tổng lên q₀ bằng t�
 
 $$
 \begin{aligned}
-U&=kq_0\left(\frac{q_1}{r_1}+\frac{q_2}{r_2}+\cdots+\frac{q_n}{r_n}\right)\\
-&=kq_0\sum_{i=1}^{n}\frac{q_i}{r_i}.
+U&=kq_0\frac{q_1}{r_1}
++kq_0\frac{q_2}{r_2}\\
+&\quad+\cdots+kq_0\frac{q_n}{r_n}.
 \end{aligned}
+$$
+
+Với chỉ số i chạy từ 1 đến n, viết gọn thành:
+
+$$
+U=kq_0\sum_{i=1}^{n}\frac{q_i}{r_i}.
 \tag{23.10}
 $$
+
+![Hình 23.8: Ba nguồn tạo thế năng tương tác với q₀ tại điểm a](../img/young-23/hinh-23-8.png)
 
 Chỉ số i chạy qua n nguồn, rᵢ là khoảng cách từ nguồn i đến vị trí q₀. Đây là **tổng đại số**, không phải tổng vector. Khi q₀ chuyển từ a sang b, các khoảng cách đổi và công vẫn bằng Uₐ − Uᵦ.
 
@@ -173,6 +207,8 @@ Trong (23.9), (23.10), mốc U = 0 được đặt khi q₀ ở rất xa mọi n
 ### Ứng dụng — Động cơ ion
 
 Động cơ ion của tàu vũ trụ dùng lực điện phóng các ion xenon dương $\mathrm{Xe^+}$ với tốc độ trên 30 km/s. Lực đẩy có thể rất nhỏ, khoảng 0,09 N trong cấu hình được xét, nhưng duy trì liên tục nhiều ngày. Điều đó khác tên lửa hóa học tạo lực lớn trong thời gian ngắn. Các động cơ ion đã được sử dụng để điều khiển tàu liên hành tinh.
+
+![Hình 23.9: Động cơ ion phóng dòng xenon dương để tạo lực đẩy tàu vũ trụ](../img/young-23/hinh-23-9.png)
 
 ### Thế năng của cả hệ nguồn
 
@@ -187,7 +223,7 @@ $$
 Tổng quát, với n nguồn:
 
 $$
-U=k\sum_{1\le i<j\le n}\frac{q_iq_j}{r_{ij}}.
+U=k\sum_{\substack{1\le i<j\\j\le n}}\frac{q_iq_j}{r_{ij}}.
 \tag{23.11}
 $$
 
@@ -202,6 +238,8 @@ Cũng có thể hỏi công của người đưa hạt từ b lên a **thật ch
 ### Ví dụ 23.2 — Hệ ba nguồn điểm
 
 Hai nguồn cố định trên trục x, q₁ = −e tại x = 0 và q₂ = +e tại x = a. **(a)** Tìm công lực ngoài để đưa q₃ = +e chậm từ vô hạn đến x = 2a. **(b)** Tìm thế năng tổng hệ ba nguồn.
+
+![Hình 23.10: Ba điện tích −e, +e, +e ở x = 0, a, 2a](../img/young-23/hinh-23-10.png)
 
 ::: solution Chi tiết
 **Xác định và thiết lập.** Ở (a), chỉ tính tương tác mới giữa q₃ với hai nguồn có sẵn. Ở (b), tính cả cặp q₁,q₂.

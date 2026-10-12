@@ -124,6 +124,9 @@ for(const course of [physics1Course,physics2Course]) {
     :'Bản dịch tiếng Việt theo chương 21–44 của Young & Freedman, từ điện học đến hết vật lý hiện đại. Đang dịch và đối chiếu từng mục, hình, ví dụ và bài tập nguyên tác.'
   course.slides=course.id==='vat-ly-1' && chapter2.status==='complete' ? physicsMotionSlides : []
   for(const lesson of course.lessons) {
+    // Dedicated exercise bundles have an authored layout. Preserve it instead
+    // of replacing it with the legacy flat include list.
+    if(lesson.hasChapterExercises)continue
     const ch=manifest.chapters.find(ch=>ch.chapter===lesson.sourceChapter)
     lesson.title=chapterTitles[ch.chapter-1]
     lesson.status=ch.status==='complete'?'ready':'draft'

@@ -277,6 +277,8 @@ Cầu dẫn đặc mang q, bán kính a, nằm đồng tâm trong vỏ cầu d�
 Với bốn dấu cộng trên cầu nhỏ, vẽ bốn đường đi ra và kết thúc trên bốn dấu trừ của mặt trong vỏ. Không có đường trong vật liệu vỏ. Từ mặt ngoài mang bốn dấu cộng, các đường tiếp tục đi ra vô hạn. Nếu q âm, đảo mọi mũi tên và dấu.
 
 ![Đồ thị trường của cầu dẫn trong vỏ cầu trung hòa](img/young-22/loi-giai-22-40.svg)
+
+![Đường sức từ cầu dương kết thúc trên mặt trong âm, các đường ngoài đi ra từ mặt ngoài dương](img/young-22/duong-suc-22-40.svg)
 :::
 
 ::: exercise 22.41 •
@@ -324,6 +326,8 @@ $$
 Đường sức từ Q kết thúc ở mặt trong mang −Q. Những đường ngoài đi từ xa vào mặt ngoài mang −2Q. Không có đường trong vật liệu. Đồ thị độ lớn dùng các giá trị dương vừa tìm, còn đồ thị thành phần xuyên tâm có nhánh âm ngoài vỏ.
 
 ![Độ lớn và thành phần xuyên tâm của trường trong hệ nguồn Q và vỏ −3Q](img/young-22/loi-giai-22-42.svg)
+
+![Nguồn Q tạo đường sức ra thành hốc, còn đường sức bên ngoài đi vào mặt ngoài mang −2Q](img/young-22/duong-suc-22-42.svg)
 :::
 
 ::: exercise 22.43 • — Hai vỏ cầu đồng tâm

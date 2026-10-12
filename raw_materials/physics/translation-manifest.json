@@ -1939,21 +1939,117 @@
           "page": 767
         }
       ],
-      "status": "pending",
-      "fragments": [],
+      "status": "content-complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-23/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "23.1",
+          "file": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
+          "printedPages": [
+            747,
+            753
+          ],
+          "destination": "topic:the-nang-dien",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "23.2",
+          "file": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+          "printedPages": [
+            754,
+            759
+          ],
+          "destination": "topic:dien-the",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "23.3",
+          "file": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+          "printedPages": [
+            760,
+            764
+          ],
+          "destination": "topic:tinh-dien-the",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "23.4",
+          "file": "raw_materials/physics/translations/chapter-23/04-mat-dang-the.md",
+          "printedPages": [
+            764,
+            767
+          ],
+          "destination": "topic:mat-dang-the",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "23.5",
+          "file": "raw_materials/physics/translations/chapter-23/05-gradient-dien-the.md",
+          "printedPages": [
+            767,
+            769
+          ],
+          "destination": "topic:gradient-dien-the",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-23/06-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "07-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-23/07-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "08-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-23/08-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "09-bai-tap-01-25",
+          "file": "raw_materials/physics/translations/chapter-23/09-bai-tap-01-25.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "10-bai-tap-26-50",
+          "file": "raw_materials/physics/translations/chapter-23/10-bai-tap-26-50.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tong-hop-51-70",
+          "file": "raw_materials/physics/translations/chapter-23/11-bai-tong-hop-51-70.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-nang-cao-mcat",
+          "file": "raw_materials/physics/translations/chapter-23/12-bai-nang-cao-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        },
+        {
+          "sourceUnit": "13-dap-so",
+          "file": "raw_materials/physics/translations/chapter-23/13-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-and-self-reviewed"
+        }
+      ],
       "pendingSourceUnits": [
-        "chapter-opening",
-        "23.1",
-        "23.2",
-        "23.3",
-        "23.4",
-        "23.5",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+        "direct-browser-render-review"
+      ],
+      "completionReview": "raw_materials/physics/chapter-23-review.json"
     },
     {
       "chapter": 24,

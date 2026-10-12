@@ -6,11 +6,11 @@ import { lecturePath, topicPath } from '../lecture-model.mjs'
 import { studyLink } from './links'
 const { frontmatter } = useData()
 const course = computed(() => findCourse(frontmatter.value.course))
-const review = computed(() => course.value?.lessons.find(lesson => lesson.slug === course.value.reviewSlug))
-const view = ref('bai-giang')
-const lessons = computed(() => course.value?.lessons.filter(lesson => lesson.slug !== course.value.reviewSlug) || [])
+const review = computed(() => course.value?.review)
+const view = ref(frontmatter.value.reviewOverview ? 'on-luyen' : 'bai-giang')
+const lessons = computed(() => course.value?.lessons || [])
 const groups = computed(() => course.value.parts?.length ? course.value.parts.map(p => ({ ...p, entries: p.lessons.map(slug => lessons.value.find(l => l.slug === slug)).filter(Boolean) })).filter(group => group.entries.length) : [{ title: 'Bài giảng', entries: lessons.value }])
-function syncView() { view.value = review.value && window.location.hash === '#on-luyen' ? 'on-luyen' : 'bai-giang' }
+function syncView() { view.value = review.value && (frontmatter.value.reviewOverview || window.location.hash === '#on-luyen') ? 'on-luyen' : 'bai-giang' }
 onMounted(() => {
   syncView()
   window.addEventListener('hashchange', syncView)
@@ -34,8 +34,8 @@ watch(() => frontmatter.value.course, () => { if (typeof window !== 'undefined')
       <a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a>
     </div>
     <nav v-if="review" class="workspace-tabs course-overview-tabs" aria-label="Nội dung môn học">
-      <a href="#bai-giang" :aria-current="view === 'bai-giang' ? 'page' : undefined" @click="view = 'bai-giang'">Bài giảng</a>
-      <a href="#on-luyen" :aria-current="view === 'on-luyen' ? 'page' : undefined" @click="view = 'on-luyen'">Ôn luyện</a>
+      <a :href="studyLink(`/${course.id}/`)" :aria-current="view === 'bai-giang' ? 'page' : undefined">Bài giảng</a>
+      <a :href="studyLink(`/${course.id}/on-luyen`)" :aria-current="view === 'on-luyen' ? 'page' : undefined">Ôn luyện</a>
     </nav>
     <div v-if="view === 'bai-giang'" id="bai-giang">
       <section v-for="group in groups" :key="group.title" class="course-part-section">

@@ -153,15 +153,32 @@ Tối ưu lồi nói chung không có công thức nghiệm đóng, nhưng có n
 
 Một triết lý sâu sắc trong tối ưu hiện đại: Khi đưa được một bài toán thực tế về dạng bài toán tối ưu lồi, bài toán đó về cơ bản coi như đã giải quyết xong. Cái khó của tối ưu lồi vì vậy không nằm ở khâu giải, mà nằm ở khâu **nhận ra** và **biến đổi** bài toán về dạng lồi. Nhận ra một bài toán bình phương tối thiểu thì dễ, nhận ra một hàm lồi thì khó hơn nhiều, và số mẹo biến đổi cũng nhiều hơn LP. Phần lớn chương này được dành để luyện đúng kỹ năng nhận diện ấy.
 
-## 4. Khi bài toán không lồi
+## 4. Khi bài toán không lồi và vai trò trợ lực của tối ưu lồi
 
-Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính mà cũng không biết có lồi hay không được gọi chung là **tối ưu phi tuyến**. Với lớp tổng quát này, khoa học tính toán hiện nay chưa có một phương pháp vạn năng nào giải tối ưu trong thời gian đa thức. Người ta đi theo hai hướng, mỗi hướng một sự đánh đổi.
+Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính mà cũng không bảo đảm tính lồi được gọi chung là **tối ưu phi tuyến (nonconvex optimization)**. Với lớp bài toán tổng quát này, khoa học tính toán hiện nay chưa có một phương pháp vạn năng nào có thể tìm ra nghiệm tối ưu toàn cục trong thời gian đa thức. Khi đối mặt với địa hình phi lồi hiểm trở với vô số cực tiểu cục bộ và điểm yên ngựa, người ta thường đứng trước hai sự lựa chọn mang tính đánh đổi:
 
-**Tối ưu cục bộ** từ bỏ mục tiêu tìm nghiệm toàn cục và chỉ tìm một điểm tối ưu cục bộ. Các phương pháp này nhanh, áp dụng được cho bài toán rất lớn và chỉ cần các hàm khả vi. Đổi lại, chúng cần một điểm xuất phát, kết quả có thể phụ thuộc mạnh vào điểm xuất phát đó, chúng không cho biết điểm tìm được còn cách nghiệm toàn cục bao xa, và thường nhạy với các tham số của thuật toán. Trong thực tiễn kỹ thuật, các phương pháp tối ưu cục bộ thường kết hợp chặt chẽ giữa kinh nghiệm khởi tạo tham số và hiệu năng tính toán gradient. Huấn luyện mạng nơ-ron sâu thuộc đúng dạng bài toán này: Hàm mất mát thường không lồi theo không gian trọng số, và thuật toán vận hành các biến thể của phương pháp hạ gradient từ một điểm khởi tạo ngẫu nhiên.
+- **Tối ưu cục bộ (Local optimization)**: Chấp nhận từ bỏ tham vọng tìm nghiệm toàn cục để tập trung tìm một điểm tối ưu cục bộ khả thi. Các thuật toán này đạt tốc độ tính toán nhanh, xử lý được các mô hình quy mô hàng triệu biến và chỉ đòi hỏi hàm số khả vi. Tuy nhiên, kết quả phụ thuộc rất nhạy vào điểm xuất phát, thuật toán không thể đo lường xem điểm tìm được còn cách nghiệm toàn cục bao xa, và rất dễ mắc kẹt trong các bẫy cực tiểu cục bộ nông. Huấn luyện mạng nơ-ron sâu là ví dụ điển hình của trường phái này: Hàm mất mát phi lồi được tối ưu bằng các biến thể của phương pháp hạ gradient ngẫu nhiên (SGD, Adam).
+- **Tối ưu toàn cục (Global optimization)**: Tìm kiếm nghiệm tối ưu toàn cục thực sự của bài toán. Cái giá phải trả là thời gian tính toán tăng theo hàm mũ theo số biến và số ràng buộc trong trường hợp xấu nhất. Phương pháp này chỉ khả thi với các bài toán có số lượng biến khiêm tốn (vài chục đến vài trăm biến) nhưng đòi hỏi độ an toàn tuyệt đối, chẳng hạn như chứng nhận vận hành hệ thống điều khiển hàng không vũ trụ hay thiết kế mạng lưới năng lượng trọng yếu.
 
-**Tối ưu toàn cục** tìm nghiệm toàn cục thật sự, nhưng đánh đổi bằng thời gian: Trong trường hợp xấu nhất, chi phí tăng theo hàm mũ của số biến và số ràng buộc. Nó được dùng khi số biến nhỏ và việc chắc chắn có nghiệm tốt nhất đáng giá, chẳng hạn khi cần chứng nhận một hệ thống quan trọng an toàn trong trường hợp xấu nhất.
+### Tối ưu lồi trợ giúp bài toán phi lồi như thế nào?
 
-Quan sát này dẫn đến một sự đối nghịch triết lý sâu sắc giữa hai thế giới tối ưu hóa: Đối với tối ưu phi tuyến cục bộ, việc thiết lập bài toán ban đầu thường rất dễ và tự nhiên, nhưng khâu giải lại là một thử thách bất định. Ngược lại, đối với tối ưu lồi, công sức lớn nhất nằm ở khâu nhận diện và đưa bài toán về dạng lồi chuẩn tắc, nhưng một khi đã đưa được về dạng lồi, việc tìm ra nghiệm tối ưu toàn cục gần như đã trở thành một quy trình kỹ thuật hoàn toàn tự động và tin cậy. Hơn thế nữa, lý thuyết tối ưu lồi còn là công cụ đắc lực hỗ trợ giải các bài toán phi lồi, chẳng hạn cung cấp điểm khởi tạo tốt hoặc tính toán các ngưỡng chặn dưới chặt chẽ cho giá trị tối ưu toàn cục.
+Mặc dù tối ưu phi lồi là một bài toán khó, lý thuyết và thuật toán tối ưu lồi không hề đứng ngoài cuộc. Ngược lại, tối ưu lồi đóng vai trò là "bộ khung xương sống" cung cấp bốn cơ chế trợ lực nền tảng cho tối ưu phi lồi:
+
+1. **Khởi tạo chất lượng cao cho tối ưu cục bộ (Convex initialization)**:
+   Hiệu năng của các phương pháp tối ưu cục bộ phụ thuộc quyết định vào điểm xuất phát ban đầu $x^{(0)}$. Thay vì gieo xúc xắc ngẫu nhiên trong không gian nhiều chiều, người ta thường xây dựng một **bài toán xấp xỉ lồi (convex surrogate)** bằng cách lược bỏ các ràng buộc phi tuyến phức tạp hoặc thay hàm mục tiêu bằng một hàm lồi gần đúng. Nghiệm tối ưu toàn cục $x^\star_{\mathrm{lồi}}$ của bài toán xấp xỉ này được dùng làm điểm xuất phát cho thuật toán tối ưu cục bộ phi lồi. Điểm khởi tạo này đưa thuật toán vào ngay thung lũng tiềm năng chứa nghiệm tốt, giúp hạ gradient hội tụ nhanh chóng và tránh được các bẫy cục bộ kém chất lượng.
+
+2. **Nới lỏng lồi và tính toán chặn dưới toàn cục (Convex relaxation & Global lower bounds)**:
+   Bằng cách nới lỏng các ràng buộc rời rạc hoặc phi lồi thành các tập lồi chứa chúng (ví dụ: Ràng buộc nhị phân $x_i \in \{0, 1\}$ được nới lỏng thành đoạn lồi $x_i \in [0, 1]$, hoặc ràng buộc ma trận hạng một được nới lỏng thành nón ma trận nửa xác định dương trong SDP relaxation), ta thu được một bài toán tối ưu lồi nới lỏng. Do tập khả thi của bài toán lồi bao trọn tập khả thi của bài toán phi lồi, giá trị tối ưu của bài toán lồi luôn cung cấp một **ngưỡng chặn dưới toàn cục (global lower bound)** chắc chắn:
+   $$
+   p^\star_{\mathrm{lồi}} \le p^\star_{\mathrm{phi\ lồi}} \le f_0(x_{\mathrm{khả\ thi}}).
+   $$
+   Với bất kỳ nghiệm khả thi $x_{\mathrm{khả\ thi}}$ nào tìm được, khoảng cách $f_0(x_{\mathrm{khả\ thi}}) - p^\star_{\mathrm{lồi}}$ mang lại một **chứng chỉ giới hạn khoảng cách nghiệm (suboptimality certificate)**: Ta biết chắc chắn giải pháp hiện tại chỉ kém nghiệm toàn cục lý tưởng nhiều nhất là bao nhiêu, mang lại sự tự tin kỹ thuật mà không cần phải giải bài toán phi lồi đầy đủ.
+
+3. **Cắt tỉa trong thuật toán nhánh và cận (Branch-and-Bound algorithms)**:
+   Trong các thuật toán tối ưu toàn cục chính xác, không gian tìm kiếm được phân nhánh đệ quy thành các miền con nhỏ hơn. Tại mỗi nút của cây tìm kiếm, thuật toán giải một bài toán tối ưu lồi nới lỏng để xác định chặn dưới của miền con đó. Nếu chặn dưới này lớn hơn giá trị của nghiệm khả thi tốt nhất đã tìm thấy ở các nhánh khác, toàn bộ nhánh con đó lập tức bị **cắt tỉa (pruned)** mà không cần kiểm tra tiếp. Khả năng giải cực nhanh và chắc chắn của tối ưu lồi chính là động cơ then chốt giúp loại bỏ hàng tỷ nhánh vô vọng, thu hẹp đột phá không gian tìm kiếm.
+
+4. **Quy hoạch lồi tuần tự (Sequential Convex Programming - SCP)**:
+   Nhiều bài toán phi tuyến phức tạp trong kỹ thuật robot và dẫn đường quỹ đạo được giải bằng cách xấp xỉ bài toán phi lồi thành một chuỗi các bài toán lồi kế tiếp nhau. Tại mỗi bước lặp $x^{(k)}$, thuật toán tuyến tính hóa các ràng buộc phi lồi hoặc lồi hóa cục bộ quanh điểm hiện tại (như trong phương pháp Convex-Concave Procedure - CCP), sau đó giải bài toán lồi cục bộ để bước sang điểm $x^{(k+1)}$. Quy trình này biến một bài toán phi lồi nan giải thành một chuỗi các bước giải lồi ổn định và hội tụ tin cậy.
 
 ## 5. Những câu hỏi để đào sâu
 
@@ -208,15 +225,95 @@ Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4
 :::
 
 ::: exercise 2. Cùng dữ liệu, tiêu chí khác
-Với bốn số liệu $1, 3, 4, 12$, tìm mọi hằng số $c$ cực tiểu $|c - 1| + |c - 3| + |c - 4| + |c - 12|$, và tìm hằng số cực tiểu $\max_i |c - b_i|$. So sánh với kết quả bài 1.
+Với bốn số liệu $1, 3, 4, 12$, tìm mọi hằng số $c$ cực tiểu hóa biểu thức $|c - 1| + |c - 3| + |c - 4| + |c - 12|$ (chuẩn $\ell_1$), và tìm hằng số cực tiểu hóa $\max_i |c - b_i|$ (chuẩn $\ell_\infty$). So sánh với kết quả bình phương tối thiểu ở Bài 1.
 :::
 
 ::: hint
-Với tổng trị tuyệt đối, xét độ dốc của hàm trên từng khoảng giữa các số liệu. Với sai số lớn nhất, chỉ hai số liệu nhỏ nhất và lớn nhất quyết định.
+Với chuẩn $\ell_1$, ghép các cặp đối xứng từ ngoài vào trong và áp dụng bất đẳng thức tam giác $|x| + |y| \ge |x - y|$. Với chuẩn $\ell_\infty$, nhận xét rằng sai số lớn nhất chỉ phụ thuộc vào hai điểm mút cực trị $b_{\min}$ và $b_{\max}$.
 :::
 
 ::: solution
-Hàm $F(c) = \sum_i |c - b_i|$ có độ dốc bằng số số liệu nằm bên trái $c$ trừ số số liệu nằm bên phải. Trên khoảng $(3, 4)$ có hai số liệu ở mỗi bên, nên độ dốc bằng 0. Trước khoảng đó hàm giảm, sau khoảng đó hàm tăng, nên mọi $c \in [3, 4]$ đều tối ưu. Giá trị tối ưu là $F(3) = 2 + 0 + 1 + 9 = 12$, và cũng bằng $F(4) = 3 + 1 + 0 + 8 = 12$. Với sai số lớn nhất, ta cần $c$ cách đều 1 và 12, nên $c^\star = 6.5$ với sai số lớn nhất $5.5$. Ba tiêu chí cho ba câu trả lời: Trung bình 5, cả đoạn trung vị $[3, 4]$, và điểm giữa 6.5. Tiêu chí ℓ₁ ít bị số liệu 12 ảnh hưởng nhất, còn tiêu chí sai số lớn nhất bị nó chi phối nhiều nhất.
+### 1. Tìm mọi hằng số $c$ cực tiểu hóa $|c - 1| + |c - 3| + |c - 4| + |c - 12|$ (Chuẩn $\ell_1$)
+
+Xét hàm số:
+
+$$
+f(c) = |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+$$
+
+Áp dụng bất đẳng thức $|x| + |y| \ge |x - y|$ bằng cách ghép các cặp đối xứng từ ngoài vào trong:
+
+- **Với cặp ngoài cùng**: Đổi dấu số hạng thứ hai và áp dụng bất đẳng thức tam giác:
+  $$
+  |c - 1| + |c - 12| = |c - 1| + |12 - c| \ge |(c - 1) + (12 - c)| = 11.
+  $$
+  Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0 \iff 1 \le c \le 12$.
+
+- **Với cặp bên trong**: Thực hiện tương tự cho hai số hạng giữa:
+  $$
+  |c - 3| + |c - 4| = |c - 3| + |4 - c| \ge |(c - 3) + (4 - c)| = 1.
+  $$
+  Dấu bằng xảy ra khi $(c - 3)(4 - c) \ge 0 \iff 3 \le c \le 4$.
+
+Cộng hai bất đẳng thức trên theo từng vế:
+
+$$
+f(c) \ge 11 + 1 = 12.
+$$
+
+Dấu bằng xảy ra đồng thời khi và chỉ khi:
+
+$$
+\begin{cases}
+1 \le c \le 12, \\
+3 \le c \le 4,
+\end{cases}
+\iff 3 \le c \le 4.
+$$
+
+**Kết luận**: Mọi giá trị $c \in [3, 4]$ đều làm cực tiểu hóa biểu thức (với giá trị cực tiểu đúng bằng $12$). Đây chính là khoảng **trung vị (median)** của tập dữ liệu.
+
+---
+
+### 2. Tìm hằng số $c$ cực tiểu hóa $\max_i |c - b_i|$ (Chuẩn $\ell_\infty$)
+
+Với tập số liệu $\{1, 3, 4, 12\}$, giá trị nhỏ nhất là $b_{\min} = 1$ và lớn nhất là $b_{\max} = 12$. Do đó:
+
+$$
+\max_i |c - b_i| = \max(|c - 1|, |c - 12|).
+$$
+
+Áp dụng tính chất $\max(x, y) \ge \frac{x + y}{2}$ với mọi $x, y \ge 0$:
+
+$$
+\begin{aligned}
+\max(|c - 1|, |12 - c|) &\ge \frac{|c - 1| + |12 - c|}{2} \\
+&\ge \frac{|(c - 1) + (12 - c)|}{2} = \frac{11}{2} = 5.5.
+\end{aligned}
+$$
+
+Dấu bằng đạt được khi hai khoảng cách bằng nhau:
+
+$$
+|c - 1| = |12 - c| \iff c - 1 = 12 - c \iff 2c = 13 \iff c = 6.5.
+$$
+
+**Kết luận**: Hằng số cực tiểu hóa duy nhất là $c = 6.5$ (điểm chính giữa của hai đầu mút, hay **midrange** $\frac{1 + 12}{2}$), với giá trị cực tiểu là $5.5$.
+
+---
+
+### 3. So sánh với bài toán bình phương tối thiểu (Bài 1)
+
+Ở Bài 1, bài toán tìm hằng số $c$ cực tiểu hóa tổng bình phương sai số $\sum_{i=1}^4 (c - b_i)^2$ (chuẩn $\ell_2$) cho nghiệm là **giá trị trung bình (mean)**:
+
+$$
+c_{\ell_2} = \bar{b} = \frac{1 + 3 + 4 + 12}{4} = 5.
+$$
+
+**So sánh tổng quan theo 3 chuẩn**:
+- **Chuẩn $\ell_1$ (Tổng sai số tuyệt đối)**: Nghiệm tối ưu là cả đoạn trung vị $c \in [3, 4]$. Nghiệm không duy nhất do số lượng mẫu là chẵn ($N = 4$). Tiêu chí này có tính bền vững cao (robust), hoàn toàn không bị ảnh hưởng bởi giá trị ngoại lai $12$.
+- **Chuẩn $\ell_2$ (Tổng bình phương sai số - Bài 1)**: Nghiệm tối ưu duy nhất là giá trị trung bình $c = 5$. Phép bình phương phạt rất nặng sai số lớn, vì vậy nghiệm bị kéo mạnh về phía điểm ngoại lai $12$.
+- **Chuẩn $\ell_\infty$ (Sai số cực đại nhỏ nhất)**: Nghiệm tối ưu duy nhất là trung điểm của hai đầu mút $c = 6.5$. Tiêu chí này chỉ quan tâm tới tình huống xấu nhất (worst-case), do đó chịu sự chi phối hoàn toàn bởi giá trị cực biên lớn nhất $12$.
 :::
 
 ::: exercise 3. Viết một LP từ mô tả

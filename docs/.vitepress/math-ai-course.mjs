@@ -132,8 +132,8 @@ export const mathAiCourse = {
   description: 'Tám bài giảng từ kiến thức nền tới tối ưu lồi và huấn luyện mô hình, cùng tài liệu bốn buổi ôn tập có lời giải.',
   foundations: [...new Set([...prerequisites.flat(), ...supportingConcepts.flat(), ...mathAiReviewLesson.prerequisites, ...mathAiReviewLesson.supportingConcepts])],
   structureSource: 'https://courses.iaidev.com/math-4-AI/2627-1/',
-  reviewSlug: mathAiReviewLesson.slug,
-  parts: [{ title: 'Bài giảng 00–07', lessons: slugs }, { title: 'Ôn luyện', lessons: [mathAiReviewLesson.slug] }],
-  lessons: [...titles.map((title, i) => ({ ...lesson(i, slugs[i], title, prerequisites[i], supportingConcepts[i]), description: descriptions[i], topicGroups: topicGroups[slugs[i]] || [] })), mathAiReviewLesson],
+  review: mathAiReviewLesson,
+  parts: [{ title: 'Bài giảng', lessons: slugs }],
+  lessons: titles.map((title, i) => ({ ...lesson(i, slugs[i], title, prerequisites[i], supportingConcepts[i]), description: descriptions[i], topicGroups: topicGroups[slugs[i]] || [] })),
   slides: [], illustration: 'gradient'
 }
