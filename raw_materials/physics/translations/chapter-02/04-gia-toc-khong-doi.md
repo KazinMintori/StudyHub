@@ -145,7 +145,8 @@ Khi đọc đề bài, hãy tự hỏi: **Đại lượng nào đề bài KHÔNG
 
 1. **Vật lý an toàn giao thông — Khoảng cách phanh tỷ lệ với bình phương vận tốc:**
    Khi một chiếc xe đang chạy với vận tốc ban đầu $v_0$ và tài xế đạp phanh khẩn cấp tạo gia tốc hãm $a_x = -a$ (không đổi), xe dừng lại hoàn toàn khi $v_x = 0$. Áp dụng hệ thức (2.13):
-   $$
+
+$$
 \begin{aligned}
 0^2 &= v_0^2 + 2(-a)d\\
 &\implies d = \frac{v_0^2}{2a}.
@@ -273,7 +274,8 @@ $$
 Phương trình cho hai nghiệm:
 1. $t = 0$: Thời điểm ban đầu khi chiếc ô tô vượt qua xe cảnh sát tại vạch xuất phát.
 2. Thời điểm cảnh sát đuổi kịp:
-   $$
+
+$$
 \begin{aligned}
 t &= \frac{2v_{O0x}}{a_{Px}}\\
 &= \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}}\\

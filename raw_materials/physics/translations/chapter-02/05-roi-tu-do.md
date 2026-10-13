@@ -90,7 +90,8 @@ $$
 
 **Tính toán cụ thể:**
 - Tại $t_1 = 1.0\,\mathrm s$:
-  $$
+
+$$
 \begin{aligned}
 y_1 &= -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2\\
 &= -4.9\,\mathrm m,\\
@@ -101,7 +102,8 @@ $$
   Đồng xu ở dưới vị trí thả $4.9\,\mathrm m$ và đang lao xuống với tốc độ $9.8\,\mathrm{m/s}$.
 
 - Tại $t_2 = 2.0\,\mathrm s$:
-  $$
+
+$$
 \begin{aligned}
 y_2 &= -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2\\
 &\approx -20\,\mathrm m,\\
@@ -112,7 +114,8 @@ $$
   Sau khoảng thời gian gấp đôi, quãng đường rơi đã tăng gấp 4 lần ($2^2 = 4$).
 
 - Tại $t_3 = 3.0\,\mathrm s$:
-  $$
+
+$$
 \begin{aligned}
 y_3 &= -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2\\
 &\approx -44\,\mathrm m,\\
@@ -163,7 +166,8 @@ $$
 
 **(a) Tại các thời điểm $t = 1.00\,\mathrm s$ và $t = 4.00\,\mathrm s$:**
 - Tại $t = 1.00\,\mathrm s$:
-  $$
+
+$$
 \begin{aligned}
 y &= (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2\\
 &= +10.1\,\mathrm m,\\
@@ -174,7 +178,8 @@ $$
   Tọa độ $y > 0$ và $v_y > 0$: Quả bóng đang ở vị trí cao hơn lan can $10.1\,\mathrm m$ và vẫn đang tiếp tục bay lên, nhưng tốc độ đã giảm đi đáng kể so với lúc ném.
 
 - Tại $t = 4.00\,\mathrm s$:
-  $$
+
+$$
 \begin{aligned}
 y &= (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2\\
 &= 60.0 - 78.4\\
