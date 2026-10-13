@@ -170,10 +170,6 @@ watch(() => lesson.value?.slug, load)
         </article>
       </div>
       <p v-else class="empty-state">Tờ tra cứu của bài đang được biên soạn.</p>
-
-      <footer class="cheatsheet-footer">
-        <p><em>Bấm <strong>In / PDF</strong> để in hoặc lưu bản tra cứu khi ôn tập.</em></p>
-      </footer>
     </section>
 
     <section v-else-if="part === 'kien-thuc-can-co'" class="lecture-foundations" aria-label="Kiến thức nền của bài giảng">
