@@ -293,9 +293,9 @@ $$
 Dựa trên xấp xỉ chuẩn tắc của Định lý Giới hạn Trung tâm, khoảng tin cậy 95% là:
 $$
 \begin{aligned}
-\text{CI}_{95\%} &= \left[ \bar{x} - 1.96 \cdot \widehat{\text{SE}}(\bar{x}), \; \bar{x} + 1.96 \cdot \widehat{\text{SE}}(\bar{x}) \right] \\
-&= [118.0 - 1.96(14.88), \; 118.0 + 1.96(14.88)] \\
-&= [118.0 - 29.16, \; 118.0 + 29.16] = [88.84, \; 147.16] \text{ phút}
+&\text{CI}_{95\%} = \left[ \bar{x} - 1.96 \cdot \widehat{\text{SE}}(\bar{x}), \; \bar{x} + 1.96 \cdot \widehat{\text{SE}}(\bar{x}) \right]\\
+&\quad = [118.0 - 1.96(14.88), \; 118.0 + 1.96(14.88)]\\
+&\quad = [118.0 - 29.16, \; 118.0 + 29.16] = [88.84, \; 147.16] \text{ phút}
 \end{aligned}
 $$
 Kết luận: Ta tin tưởng 95% rằng thời gian bay trung bình của toàn bộ các chuyến bay nằm trong khoảng từ $88.84$ phút đến $147.16$ phút.

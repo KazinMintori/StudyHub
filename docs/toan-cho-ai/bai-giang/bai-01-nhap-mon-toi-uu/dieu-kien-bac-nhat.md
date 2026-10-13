@@ -40,8 +40,8 @@ Hệ quả thứ hai ít được nhắc tới hơn, nhưng rất thực tế. G
 
 $$
 \begin{aligned}
-p^\star &= \min_{y \in C} f(y) \\
-&\ge f(x) + \min_{y \in C} \nabla f(x)^T (y - x).
+&p^\star = \min_{y \in C} f(y)\\
+&\quad \ge f(x) + \min_{y \in C} \nabla f(x)^T (y - x).
 \end{aligned}
 $$
 
@@ -73,8 +73,8 @@ Cách nhìn này mang lại một ứng dụng rất đẹp trong học máy. X�
 
 $$
 \begin{aligned}
-f(u) - f(v) - \nabla f(v)^T (u - v) &= \sum_{i=1}^n \left( u_i \log \frac{u_i}{v_i} - u_i + v_i \right) \\
-&= \left(u_1 \log \frac{u_1}{v_1} - u_1 + v_1\right) + \dots + \left(u_n \log \frac{u_n}{v_n} - u_n + v_n\right).
+&f(u) - f(v) - \nabla f(v)^T (u - v) = \sum_{i=1}^n \left( u_i \log \frac{u_i}{v_i} - u_i + v_i \right)\\
+&\quad = \left(u_1 \log \frac{u_1}{v_1} - u_1 + v_1\right) + \dots + \left(u_n \log \frac{u_n}{v_n} - u_n + v_n\right).
 \end{aligned}
 $$
 
@@ -112,8 +112,8 @@ Hiện tượng "độ dốc dây cung tăng dần" trở nên rất sáng rõ k
 
 $$
 \begin{aligned}
-f(x) &\ge f(z) + f'(z)(x - z), \\
-f(y) &\ge f(z) + f'(z)(y - z).
+&f(x) \ge f(z) + f'(z)(x - z),\\
+&f(y) \ge f(z) + f'(z)(y - z).
 \end{aligned}
 $$
 
@@ -144,8 +144,8 @@ Viết điều kiện bậc nhất hai lần, một lần đứng ở $x$ nhìn 
 
 $$
 \begin{aligned}
-f(y) &\ge f(x) + \nabla f(x)^T (y - x), \\
-f(x) &\ge f(y) + \nabla f(y)^T (x - y).
+&f(y) \ge f(x) + \nabla f(x)^T (y - x),\\
+&f(x) \ge f(y) + \nabla f(y)^T (x - y).
 \end{aligned}
 $$
 

@@ -23,8 +23,8 @@ Với q âm, vector vận tốc trôi ngược trường, nhưng tích nq với 
 
 $$
 \begin{aligned}
-J&=n|q|v_d,\\
-I&=JA.
+&J = n|q|v_d,\\
+&I = JA.
 \end{aligned}
 $$
 
@@ -34,8 +34,8 @@ Với hai loại hạt tải, tính riêng J₁ và J₂ rồi cộng vector. T�
 
 $$
 \begin{aligned}
-\vec J&=\vec J_1+\vec J_2+\cdots+\vec J_N,\\
-\vec J&=\sum_{i=1}^{N}\vec J_i.
+&\vec J = \vec J_1+\vec J_2+\cdots+\vec J_N,\\
+&\vec J = \sum_{i=1}^{N}\vec J_i.
 \end{aligned}
 $$
 

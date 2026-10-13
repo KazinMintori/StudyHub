@@ -122,8 +122,8 @@ Ta chuyển đổi bài toán này về bài toán Quy hoạch tuyến tính (LP
 
 $$
 \begin{aligned}
-\min_{x, t} \quad & \sum_{i=1}^m t_i = \mathbf{1}^T t \\
-\text{sao cho} \quad & -t_i \le a_i^T x - b_i \le t_i, \quad i = 1, \dots, m.
+&\min_{x, t} \quad \sum_{i=1}^m t_i = \mathbf{1}^T t\\
+&\text{sao cho}\quad -t_i \le a_i^T x - b_i \le t_i, \quad i = 1, \dots, m.
 \end{aligned}
 $$
 
@@ -141,8 +141,8 @@ Chuyển đổi về bài toán LP bằng cách đưa vào một biến vô hư�
 
 $$
 \begin{aligned}
-\min_{x, t} \quad & t \\
-\text{sao cho} \quad & -t \mathbf{1} \preceq A x - b \preceq t \mathbf{1}.
+&\min_{x, t} \quad t\\
+&\text{sao cho}\quad -t \mathbf{1} \preceq A x - b \preceq t \mathbf{1}.
 \end{aligned}
 $$
 
@@ -178,9 +178,9 @@ Bài toán tìm quả cầu nội tiếp lớn nhất trở thành bài toán Qu
 
 $$
 \begin{aligned}
-\max_{x_c, r} \quad & r \\
-\text{sao cho} \quad & a_i^T x_c + r \|a_i\|_2 \le b_i, \quad i = 1, \dots, m, \\
-& r \ge 0.
+&\max_{x_c, r} \quad r\\
+&\text{sao cho}\quad a_i^T x_c + r \|a_i\|_2 \le b_i, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } r \ge 0.
 \end{aligned}
 $$
 
@@ -303,11 +303,11 @@ $$
    Bài toán LP trở thành:
    $$
    \begin{aligned}
-   \min_{x_1, x_2, t_1, t_2, t_3} \quad & t_1 + t_2 + t_3 \\
-   \text{sao cho} \quad & -(t_1) \le x_1 + 2 x_2 - 3 \le t_1, \\
-   & -(t_2) \le 2 x_1 + x_2 - 1 \le t_2, \\
-   & -(t_3) \le x_1 - x_2 \le t_3, \\
-   & t_1, t_2, t_3 \ge 0.
+   &\min_{x_1, x_2, t_1, t_2, t_3} \quad t_1 + t_2 + t_3\\
+   &\text{sao cho}\quad -(t_1) \le x_1 + 2 x_2 - 3 \le t_1,\\
+   &\phantom{\text{subject to}\quad } -(t_2) \le 2 x_1 + x_2 - 1 \le t_2,\\
+   &\phantom{\text{subject to}\quad } -(t_3) \le x_1 - x_2 \le t_3,\\
+   &\phantom{\text{subject to}\quad } t_1, t_2, t_3 \ge 0.
    \end{aligned}
    $$
    Bài toán có $n + m = 2 + 3 = 5$ biến và $2m = 6$ ràng buộc bất đẳng thức tuyến tính.
@@ -316,11 +316,11 @@ $$
    Bài toán LP trở thành:
    $$
    \begin{aligned}
-   \min_{x_1, x_2, t} \quad & t \\
-   \text{sao cho} \quad & -t \le x_1 + 2 x_2 - 3 \le t, \\
-   & -t \le 2 x_1 + x_2 - 1 \le t, \\
-   & -t \le x_1 - x_2 \le t, \\
-   & t \ge 0.
+   &\min_{x_1, x_2, t} \quad t\\
+   &\text{sao cho}\quad -t \le x_1 + 2 x_2 - 3 \le t,\\
+   &\phantom{\text{subject to}\quad } -t \le 2 x_1 + x_2 - 1 \le t,\\
+   &\phantom{\text{subject to}\quad } -t \le x_1 - x_2 \le t,\\
+   &\phantom{\text{subject to}\quad } t \ge 0.
    \end{aligned}
    $$
    Bài toán có $n + 1 = 3$ biến và $2m = 6$ ràng buộc bất đẳng thức tuyến tính.
@@ -344,11 +344,11 @@ $$
    Bài toán LP tìm tâm Chebyshev $(x_1, x_2, r)$:
    $$
    \begin{aligned}
-   \max_{x_1, x_2, r} \quad & r \\
-   \text{sao cho} \quad & -x_1 + r(1) \le 0 \iff x_1 \ge r, \\
-   & -x_2 + r(1) \le 0 \iff x_2 \ge r, \\
-   & x_1 + x_2 + r \sqrt{2} \le 1, \\
-   & r \ge 0.
+   &\max_{x_1, x_2, r} \quad r\\
+   &\text{sao cho}\quad -x_1 + r(1) \le 0 \iff x_1 \ge r,\\
+   &\phantom{\text{subject to}\quad } -x_2 + r(1) \le 0 \iff x_2 \ge r,\\
+   &\phantom{\text{subject to}\quad } x_1 + x_2 + r \sqrt{2} \le 1,\\
+   &\phantom{\text{subject to}\quad } r \ge 0.
    \end{aligned}
    $$
 

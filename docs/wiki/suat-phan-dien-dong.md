@@ -17,8 +17,8 @@ Suất phản điện động trong mô hình động cơ nối tiếp thỏa m�
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E+Ir,\\
-V_{ab}I&=\mathcal EI+I^2r.
+&V_{ab} = \mathcal E+Ir,\\
+&V_{ab}I = \mathcal EI+I^2r.
 \end{aligned}
 $$
 

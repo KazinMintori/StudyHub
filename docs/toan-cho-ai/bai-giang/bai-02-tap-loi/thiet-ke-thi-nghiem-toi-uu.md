@@ -99,9 +99,9 @@ Thu nhỏ thể tích tương đương với cực đại hóa định thức $\
 
 $$
 \begin{aligned}
-\min_{\lambda} \quad & -\log \det M(\lambda) \\
-\text{sao cho} \quad & \sum_{i=1}^p \lambda_i = 1, \\
-& \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
+&\min_{\lambda} \quad -\log \det M(\lambda)\\
+&\text{sao cho}\quad \sum_{i=1}^p \lambda_i = 1,\\
+&\phantom{\text{subject to}\quad } \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$
 
@@ -119,9 +119,9 @@ Bỏ qua hằng số $\sigma^2$, bài toán được phát biểu thành:
 
 $$
 \begin{aligned}
-\min_{\lambda} \quad & \operatorname{tr}\left( M(\lambda)^{-1} \right) \\
-\text{sao cho} \quad & \sum_{i=1}^p \lambda_i = 1, \\
-& \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
+&\min_{\lambda} \quad \operatorname{tr}\left( M(\lambda)^{-1} \right)\\
+&\text{sao cho}\quad \sum_{i=1}^p \lambda_i = 1,\\
+&\phantom{\text{subject to}\quad } \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$
 
@@ -129,9 +129,9 @@ Hàm số $f(X) = \operatorname{tr}(X^{-1})$ là hàm lồi trên $\mathbb{S}_{+
 
 $$
 \begin{aligned}
-\min_{\lambda, u} \quad & \sum_{j=1}^n u_j \\
-\text{sao cho} \quad & \begin{bmatrix} M(\lambda) & e_j \\ e_j^T & u_j \end{bmatrix} \succeq 0, \quad \forall j = 1, \dots, n, \\
-& \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p,
+&\min_{\lambda, u} \quad \sum_{j=1}^n u_j\\
+&\text{sao cho}\quad \begin{bmatrix} M(\lambda) & e_j\\ &e_j^T u_j \end{bmatrix} \succeq 0, \quad \forall j = 1, \dots, n,\\
+&\phantom{\text{subject to}\quad } \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p,
 \end{aligned}
 $$
 
@@ -145,9 +145,9 @@ Do đó, tiêu chuẩn $E$-optimal cực đại hóa trị riêng nhỏ nhất c
 
 $$
 \begin{aligned}
-\max_{\lambda, t} \quad & t \\
-\text{sao cho} \quad & M(\lambda) \succeq t I_n, \\
-& \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
+&\max_{\lambda, t} \quad t\\
+&\text{sao cho}\quad M(\lambda) \succeq t I_n,\\
+&\phantom{\text{subject to}\quad } \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$
 

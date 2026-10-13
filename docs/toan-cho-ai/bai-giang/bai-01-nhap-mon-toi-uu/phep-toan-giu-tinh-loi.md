@@ -175,8 +175,8 @@ và giải thích đặc tính hình học của nó.
 Theo tiêu chuẩn ma trận đối xứng cấp 2 nửa xác định dương, điều kiện tương đương với hệ sau:
 $$
 \begin{aligned}
-x_1 &\ge 0, \quad x_2 \ge 0, \\
-x_1 x_2 - 1 &\ge 0 \iff x_1 x_2 \ge 1.
+&x_1 \ge 0, \quad x_2 \ge 0,\\
+&x_1 x_2 - 1 \ge 0 \iff x_1 x_2 \ge 1.
 \end{aligned}
 $$
 Kết hợp lại, tập nghiệm chính là miền nằm phía trên nhánh hyperbol $x_2 \ge 1/x_1$ trong góc phần tư thứ nhất $\mathbb{R}^2_{++}$. Tập này là một tập lồi đóng, được kiến tạo như ảnh ngược của nón PSD qua ánh xạ affine ma trận.
@@ -190,8 +190,8 @@ Cho điểm dữ liệu $x = (2, 1)^T$ và bán kính nhiễu không chắc ch�
 Ràng buộc bền vững tương đương với bất đẳng thức sau:
 $$
 \begin{aligned}
-w^T x - \varepsilon \|w\|_1 &\ge 1 \\
-\iff 2w_1 + w_2 - 0.5 (|w_1| + |w_2|) &\ge 1.
+&w^T x - \varepsilon \|w\|_1 \ge 1\\
+&\iff 2w_1 + w_2 - 0.5 (|w_1| + |w_2|) \ge 1.
 \end{aligned}
 $$
 

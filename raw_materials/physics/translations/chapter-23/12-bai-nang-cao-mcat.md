@@ -20,10 +20,10 @@ Thanh mảnh dài a có tổng Q đều theo chiều dài, mốc điện thế �
 
 $$
 \begin{aligned}
-V_P&=\frac{kQ}{a}\int_0^a\frac{d\xi}{x+\xi}\\
-&=\frac{kQ}{a}\ln\frac{x+a}{x},\\
-V_R&=\frac{kQ}{a}\int_0^a\frac{d\xi}{\sqrt{y^2+\xi^2}}\\
-&=\frac{kQ}{a}\ln\frac{a+\sqrt{a^2+y^2}}y.
+&V_P = \frac{kQ}{a}\int_0^a\frac{d\xi}{x+\xi}\\
+&\quad =\frac{kQ}{a}\ln\frac{x+a}{x},\\
+&V_R = \frac{kQ}{a}\int_0^a\frac{d\xi}{\sqrt{y^2+\xi^2}}\\
+&\quad =\frac{kQ}{a}\ln\frac{a+\sqrt{a^2+y^2}}y.
 \end{aligned}
 $$
 
@@ -50,8 +50,8 @@ Thanh cứng khối lượng M, dài L, mang điện tích dương đều Q, qua
 
 $$
 \begin{aligned}
-U(\theta)&=\frac QL\int_0^L(V_0-Es\cos\theta)ds\\
-&=QV_0-\frac{QEL}{2}\cos\theta.
+&U(\theta) = \frac QL\int_0^L(V_0-Es\cos\theta)ds\\
+&\quad =QV_0-\frac{QEL}{2}\cos\theta.
 \end{aligned}
 $$
 
@@ -59,8 +59,8 @@ $$
 
 $$
 \begin{aligned}
-\frac12I\omega^2&=QEL/2,\\
-\omega&=\sqrt{3QE/(ML)}.
+&\frac12I\omega^2 = QEL/2,\\
+&\omega = \sqrt{3QE/(ML)}.
 \end{aligned}
 $$
 
@@ -89,10 +89,10 @@ Hạt α có hai proton và hai neutron, đường kính cỡ 1 fm. Hai proton +
 
 $$
 \begin{aligned}
-U(d)&=\frac12\kappa d^2+ke^2/d,\\
-U'(d)&=\kappa d-ke^2/d^2,\\
-d_0&=(ke^2/\kappa)^{1/3},\\
-U''(d_0)&=3\kappa>0.
+&U(d) = \frac12\kappa d^2+ke^2/d,\\
+&U'(d) = \kappa d-ke^2/d^2,\\
+&d_0 = (ke^2/\kappa)^{1/3},\\
+&U''(d_0) = 3\kappa>0.
 \end{aligned}
 $$
 
@@ -100,8 +100,8 @@ Với d₀ = 1 fm, κ ≈ $2.31\times10^{17}$ N/m. Ở cân bằng, κd₀² = k
 
 $$
 \begin{aligned}
-U(d_0)&=\frac{3ke^2}{2d_0}\\
-&=2.16\,\mathrm{MeV}.
+&U(d_0) = \frac{3ke^2}{2d_0}\\
+&\quad =2.16\,\mathrm{MeV}.
 \end{aligned}
 $$
 
@@ -126,11 +126,11 @@ Cầu kim loại R₁ mang Q₁, mốc V ở vô hạn. (a) Tìm trường và t
 
 $$
 \begin{aligned}
-Q'_1+Q'_2&=Q_1,\\
-Q'_1/R_1&=Q'_2/R_2,\\
-Q'_1&=\frac{Q_1R_1}{R_1+R_2},\\
-Q'_2&=\frac{Q_1R_2}{R_1+R_2},\\
-V_1=V_2&=\frac{kQ_1}{R_1+R_2}.
+&Q'_1+Q'_2 = Q_1,\\
+&Q'_1/R_1 = Q'_2/R_2,\\
+&Q'_1 = \frac{Q_1R_1}{R_1+R_2},\\
+&Q'_2 = \frac{Q_1R_2}{R_1+R_2},\\
+&V_1=V_2 = \frac{kQ_1}{R_1+R_2}.
 \end{aligned}
 $$
 
@@ -152,9 +152,9 @@ Hạt α ở rất xa có động năng 9,50 MeV, đi thẳng vào hạt nhân c
 
 $$
 \begin{aligned}
-K_0&=9.50\times10^6e,\\
-r_{\min}&=\frac{k(2e)(82e)}{K_0}\\
-&=2.49\times10^{-14}\,\mathrm m.
+&K_0 = 9.50\times10^6e,\\
+&r_{\min} = \frac{k(2e)(82e)}{K_0}\\
+&\quad =2.49\times10^{-14}\,\mathrm m.
 \end{aligned}
 $$
 :::
@@ -281,12 +281,10 @@ $$
 
 $$
 \begin{aligned}
-6\pi\eta rv_t&=\frac{4\pi\rho r^3g}{3},\\
-r^2&=\frac{9\eta v_t}{2\rho g},\\
-|q|&=\frac{4\pi\rho g d}{3V_{AB}}
-\left(\frac{9\eta v_t}{2\rho g}\right)^{3/2}\\
-&=\frac{18\pi d}{V_{AB}}
-\sqrt{\frac{\eta^3v_t^3}{2\rho g}}.
+&6\pi\eta rv_t = \frac{4\pi\rho r^3g}{3},\\
+&r^2 = \frac{9\eta v_t}{2\rho g},\\
+&|q| =\frac{4\pi\rho g d}{3V_{AB}} \left(\frac{9\eta v_t}{2\rho g}\right)^{3/2}\\
+&\quad =\frac{18\pi d}{V_{AB}} \sqrt{\frac{\eta^3v_t^3}{2\rho g}}.
 \end{aligned}
 $$
 
@@ -324,9 +322,9 @@ Vành khăn trong mặt xy, tâm tại gốc, bán kính trong a, ngoài b, mậ
 
 $$
 \begin{aligned}
-V(z)&=2\pi k\sigma\int_a^b
+&V(z) =2\pi k\sigma\int_a^b
 \frac{r\,dr}{\sqrt{z^2+r^2}}\\
-&=\frac{\sigma\sqrt{z^2+b^2}}{2\varepsilon_0}\\
+&\quad =\frac{\sigma\sqrt{z^2+b^2}}{2\varepsilon_0}\\
 &\quad-\frac{\sigma\sqrt{z^2+a^2}}{2\varepsilon_0}.
 \end{aligned}
 $$
@@ -335,7 +333,7 @@ $$
 
 $$
 \begin{aligned}
-E_z&=\frac{\sigma z}{2\varepsilon_0\sqrt{z^2+a^2}}\\
+&E_z = \frac{\sigma z}{2\varepsilon_0\sqrt{z^2+a^2}}\\
 &\quad-\frac{\sigma z}{2\varepsilon_0\sqrt{z^2+b^2}}.
 \end{aligned}
 $$
@@ -369,14 +367,14 @@ Tế bào tim được mô hình hóa thành vỏ trụ dài 100 µm, đường 
 
 $$
 \begin{aligned}
-|Q_{\mathrm{rest}}|&=C_\mathrm{cylinder}(0.0900)\\
-&=4.75\times10^{-15}\,\mathrm C,\\
-E(a^+)&=\frac{0.0900}{a\ln(b/a)}\\
-&=94.9\,\mathrm{kV/m},\\
-\Delta Q&=C_\mathrm{cylinder}(0.110)\\
-&=5.81\times10^{-15}\,\mathrm C,\\
-N_{\mathrm{Na^+}}&=\Delta Q/e\\
-&\approx3.63\times10^4.
+&|Q_{\mathrm{rest}}| = C_\mathrm{cylinder}(0.0900)\\
+&\quad =4.75\times10^{-15}\,\mathrm C,\\
+&E(a^+) = \frac{0.0900}{a\ln(b/a)}\\
+&\quad =94.9\,\mathrm{kV/m},\\
+&\Delta Q = C_\mathrm{cylinder}(0.110)\\
+&\quad =5.81\times10^{-15}\,\mathrm C,\\
+&N_{\mathrm{Na^+}} = \Delta Q/e\\
+&\quad \approx3.63\times10^4.
 \end{aligned}
 $$
 
@@ -401,10 +399,10 @@ Trường nghỉ hướng từ mặt ngoài dương về mặt trong âm. Điệ
 
 $$
 \begin{aligned}
-V(z)&=\frac{kQ}{L}\int_{-h}^h
+&V(z) =\frac{kQ}{L}\int_{-h}^h
 \frac{d\zeta}{\sqrt{R^2+(z-\zeta)^2}}\\
-&=\frac{kQ}{L}\ln\frac{z+h+r_+}{z-h+r_-},\\
-E_z&=\frac{kQ}{L}\left(\frac1{r_-}-\frac1{r_+}\right).
+&\quad =\frac{kQ}{L}\ln\frac{z+h+r_+}{z-h+r_-},\\
+&E_z = \frac{kQ}{L}\left(\frac1{r_-}-\frac1{r_+}\right).
 \end{aligned}
 $$
 
@@ -429,10 +427,10 @@ Va chạm hạt nhân thường lệch tâm hơn thẳng tâm. Hạt α ở Bài
 
 $$
 \begin{aligned}
-K_0&=A/r\\
-&+\frac{L^2}{2mr^2},\\
-r^2-r_0r-b^2&=0,\\
-r_{\min}&=\frac{r_0+\sqrt{r_0^2+4b^2}}2.
+&K_0 = A/r\\
+&\quad +\frac{L^2}{2mr^2},\\
+&r^2-r_0r-b^2 = 0,\\
+&r_{\min} = \frac{r_0+\sqrt{r_0^2+4b^2}}2.
 \end{aligned}
 $$
 
@@ -479,9 +477,9 @@ Ion He²⁺ đến gần cỡ 10 fm từ tâm hạt nhân mẫu có thể gây p
 
 $$
 \begin{aligned}
-\frac{2kZe^2}{r}&\ge K,\\
-Z&\ge\frac{Kr}{2ke^2}\\
-&\approx10.4.
+&\frac{2kZe^2}{r} \ge K,\\
+&Z \ge \frac{Kr}{2ke^2}\\
+&\quad \approx10.4.
 \end{aligned}
 $$
 
@@ -503,8 +501,8 @@ Máy tandem điển hình có điện thế giữa cực đại 6,0 MV. Khoảng
 
 $$
 \begin{aligned}
-E_{\mathrm{tb}}&=\frac{6.0\times10^6\,\mathrm V}{12\,\mathrm m}\\
-&=5.0\times10^5\,\mathrm{V/m}.
+&E_{\mathrm{tb}} = \frac{6.0\times10^6\,\mathrm V}{12\,\mathrm m}\\
+&\quad =5.0\times10^5\,\mathrm{V/m}.
 \end{aligned}
 $$
 

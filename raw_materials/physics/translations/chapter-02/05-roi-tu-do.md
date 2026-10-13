@@ -69,24 +69,39 @@ Một du khách thả một đồng xu 1 euro từ tầng trên cùng của thá
 
 Các phương trình chuyển động của đồng xu là:
 
-$$y = y_0 + v_{0y}t + \frac{1}{2}a_y t^2 = -\frac{1}{2}gt^2 = -(4.9\,\mathrm{m/s^2})t^2,$$
-
-$$v_y = v_{0y} + a_y t = -gt = -(9.8\,\mathrm{m/s^2})t.$$
+$$
+\begin{aligned}
+    &y = y_0 + v_{0y}t + \frac{1}{2}a_y t^2 = -\frac{1}{2}gt^2 = -(4.9\,\mathrm{m/s^2})t^2,\\
+    &v_y = v_{0y} + a_y t = -gt = -(9.8\,\mathrm{m/s^2})t.
+\end{aligned}
+$$
 
 **Tính toán cụ thể:**
 - Tại $t_1 = 1.0\,\mathrm s$:
-  $$y_1 = -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2 = -4.9\,\mathrm m,$$
-  $$v_{1y} = -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s) = -9.8\,\mathrm{m/s}.$$
+  $$
+\begin{aligned}
+    &y_1 = -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2 = -4.9\,\mathrm m,\\
+    &v_{1y} = -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s) = -9.8\,\mathrm{m/s}.
+\end{aligned}
+$$
   Đồng xu ở dưới vị trí thả $4.9\,\mathrm m$ và đang lao xuống với tốc độ $9.8\,\mathrm{m/s}$.
 
 - Tại $t_2 = 2.0\,\mathrm s$:
-  $$y_2 = -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2 \approx -20\,\mathrm m,$$
-  $$v_{2y} = -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s) \approx -20\,\mathrm{m/s}.$$
+  $$
+\begin{aligned}
+    &y_2 = -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2 \approx -20\,\mathrm m,\\
+    &v_{2y} = -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s) \approx -20\,\mathrm{m/s}.
+\end{aligned}
+$$
   Sau khoảng thời gian gấp đôi, quãng đường rơi đã tăng gấp 4 lần ($2^2 = 4$).
 
 - Tại $t_3 = 3.0\,\mathrm s$:
-  $$y_3 = -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2 \approx -44\,\mathrm m,$$
-  $$v_{3y} = -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s) \approx -29\,\mathrm{m/s}.$$
+  $$
+\begin{aligned}
+    &y_3 = -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2 \approx -44\,\mathrm m,\\
+    &v_{3y} = -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s) \approx -29\,\mathrm{m/s}.
+\end{aligned}
+$$
 
 **Nhận xét và Đánh giá:**
 Cả vị trí $y$ và vận tốc $v_y$ đều mang dấu âm, hoàn toàn phù hợp với thực tế vật đang ở bên dưới điểm xuất phát và chuyển động ngược chiều dương đã chọn. Một kinh nghiệm hữu ích: Nếu ta chọn chiều dương hướng xuống dưới, thì $a_y = +g$, khi đó tọa độ và vận tốc đều mang giá trị dương, thuận tiện hơn khi ta chỉ quan tâm đến độ lớn của quãng đường rơi.
@@ -118,21 +133,32 @@ Toàn bộ hành trình bay lên và rơi xuống đều là chuyển động r�
 
 Phương trình tọa độ và vận tốc theo thời gian:
 
-$$y = (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2 = (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2,$$
-
-$$v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})t.$$
+$$
+\begin{aligned}
+    &y = (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2 = (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2,\\
+    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})t.
+\end{aligned}
+$$
 
 **Triển khai tính toán:**
 
 **(a) Tại các thời điểm $t = 1.00\,\mathrm s$ và $t = 4.00\,\mathrm s$:**
 - Tại $t = 1.00\,\mathrm s$:
-  $$y = (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2 = +10.1\,\mathrm m,$$
-  $$v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s) = +5.20\,\mathrm{m/s}.$$
+  $$
+\begin{aligned}
+    &y = (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2 = +10.1\,\mathrm m,\\
+    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s) = +5.20\,\mathrm{m/s}.
+\end{aligned}
+$$
   Tọa độ $y > 0$ và $v_y > 0$: Quả bóng đang ở vị trí cao hơn lan can $10.1\,\mathrm m$ và vẫn đang tiếp tục bay lên, nhưng tốc độ đã giảm đi đáng kể so với lúc ném.
 
 - Tại $t = 4.00\,\mathrm s$:
-  $$y = (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2 = 60.0 - 78.4 = -18.4\,\mathrm m,$$
-  $$v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s) = 15.0 - 39.2 = -24.2\,\mathrm{m/s}.$$
+  $$
+\begin{aligned}
+    &y = (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2 = 60.0 - 78.4 = -18.4\,\mathrm m,\\
+    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s) = 15.0 - 39.2 = -24.2\,\mathrm{m/s}.
+\end{aligned}
+$$
   Tọa độ $y < 0$ và $v_y < 0$: Bóng đã vượt qua đỉnh cao nhất, rơi qua mép lan can và hiện đang ở dưới mức lan can $18.4\,\mathrm m$, lao thẳng xuống dưới với tốc độ $24.2\,\mathrm{m/s}$.
 
 **(b) Vận tốc khi bóng ở độ cao $y = +5.00\,\mathrm m$ phía trên lan can:**

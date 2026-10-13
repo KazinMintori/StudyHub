@@ -19,8 +19,8 @@ Vôn kế nối giữa hai điểm cần so sánh điện thế. Dòng qua vôn 
 
 $$
 \begin{aligned}
-R_G+R_s&=V/I_G,\\
-R_s&=\frac V{I_G}-R_G.
+&R_G+R_s = V/I_G,\\
+&R_s = \frac V{I_G}-R_G.
 \end{aligned}
 $$
 

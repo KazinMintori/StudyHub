@@ -16,8 +16,8 @@ Bài học này cũng giới thiệu **đơn hình**, cấu trúc đa diện ngu
 > **Định nghĩa.** Một **đa diện** (polyhedron) là tập nghiệm của một số hữu hạn bất đẳng thức và đẳng thức tuyến tính:
 > $$
 > \begin{aligned}
-> \mathcal{P} = \Big\{x \in \mathbb{R}^n \;\Big|\;& a_j^T x \le b_j, \quad j = 1, \ldots, m, \\
-> & c_j^T x = d_j, \quad j = 1, \ldots, p\Big\}.
+&> \mathcal{P} = \Big\{x \in \mathbb{R}^n \;\Big|\; a_j^T x \le b_j, \quad j = 1, \ldots, m,\\
+&> c_j^T x = d_j, \quad j = 1, \ldots, p\Big\}.
 > \end{aligned}
 > $$
 
@@ -52,8 +52,8 @@ Trước khi định nghĩa đơn hình, ta cần một khái niệm độc lậ
 > **Định nghĩa.** Với $k + 1$ điểm độc lập affine $v_0, \dots, v_k$, **đơn hình** (simplex) xác định bởi chúng là bao lồi của các điểm này:
 > $$
 > \begin{aligned}
-> C &= \operatorname{conv}\{v_0, \ldots, v_k\} \\
-> &= \left\{\sum_{i=0}^k \theta_i v_i \;\middle|\; \theta_i \ge 0,\ \sum_{i=0}^k \theta_i = \theta_0 + \theta_1 + \cdots + \theta_k = 1\right\}.
+&> C = \operatorname{conv}\{v_0, \ldots, v_k\}\\
+&> = \left\{\sum_{i=0}^k \theta_i v_i \;\middle|\; \theta_i \ge 0,\ \sum_{i=0}^k \theta_i = \theta_0 + \theta_1 + \cdots + \theta_k = 1\right\}.
 > \end{aligned}
 > $$
 
@@ -88,9 +88,9 @@ Nhân cả hai vế của $x = v_0 + By$ với $A$ từ bên trái, ta phân rã
 
 $$
 \begin{aligned}
-A_2 x &= A_2 v_0, \\
-A_1 x &\succeq A_1 v_0, \\
-\mathbf{1}^T A_1 x &\le 1 + \mathbf{1}^T A_1 v_0 .
+&A_2 x = A_2 v_0,\\
+&A_1 x \succeq A_1 v_0,\\
+&\mathbf{1}^T A_1 x \le 1 + \mathbf{1}^T A_1 v_0 .
 \end{aligned}
 $$
 

@@ -20,9 +20,9 @@ Ví dụ, cuộn dây có $R_c=20{,}0\,\Omega$ và dòng toàn thang $I_{\mathrm
 
 $$
 \begin{aligned}
-V_{\mathrm{fs}}&=I_{\mathrm{fs}}R_c\\
-&=(1{,}00\times10^{-3}\,\mathrm A)(20{,}0\,\Omega)\\
-&=0{,}0200\,\mathrm V.
+&V_{\mathrm{fs}} = I_{\mathrm{fs}}R_c\\
+&\quad =(1{,}00\times10^{-3}\,\mathrm A)(20{,}0\,\Omega)\\
+&\quad =0{,}0200\,\mathrm V.
 \end{aligned}
 $$
 
@@ -38,8 +38,7 @@ Muốn đo dòng lớn hơn dòng toàn thang của điện kế, ta mắc thêm
 
 $$
 \begin{aligned}
-I_{\mathrm{fs}}R_c&=(I_a-I_{\mathrm{fs}})R_{\mathrm{sh}}.
-\end{aligned}
+&I_{\mathrm{fs}}R_c = (I_a-I_{\mathrm{fs}})R_{\mathrm{sh}}.\end{aligned}
 \tag{26.7}
 $$
 
@@ -64,9 +63,9 @@ Hãy tìm điện trở rẽ để biến điện kế có dòng toàn thang $1{
 
 $$
 \begin{aligned}
-R_{\mathrm{sh}}&=\frac{I_{\mathrm{fs}}R_c}{I_a-I_{\mathrm{fs}}}\\
-&=\frac{1{,}00}{50{,}0-1{,}00}(20{,}0\,\Omega)\\
-&=0{,}408\,\Omega.
+&R_{\mathrm{sh}} = \frac{I_{\mathrm{fs}}R_c}{I_a-I_{\mathrm{fs}}}\\
+&\quad =\frac{1{,}00}{50{,}0-1{,}00}(20{,}0\,\Omega)\\
+&\quad =0{,}408\,\Omega.
 \end{aligned}
 $$
 
@@ -74,8 +73,8 @@ $$
 
 $$
 \begin{aligned}
-R_{\mathrm{eq}}&=\left(\frac{1}{R_c}+\frac{1}{R_{\mathrm{sh}}}\right)^{-1}\\
-&=0{,}400\,\Omega.
+&R_{\mathrm{eq}} = \left(\frac{1}{R_c}+\frac{1}{R_{\mathrm{sh}}}\right)^{-1}\\
+&\quad =0{,}400\,\Omega.
 \end{aligned}
 $$
 
@@ -93,8 +92,7 @@ Vôn kế đo hiệu điện thế giữa hai điểm, nên hai đầu vôn kế
 
 $$
 \begin{aligned}
-V_V&=I_{\mathrm{fs}}(R_c+R_s).
-\end{aligned}
+&V_V = I_{\mathrm{fs}}(R_c+R_s).\end{aligned}
 \tag{26.8}
 $$
 
@@ -119,9 +117,9 @@ Hãy tìm điện trở nối tiếp cần mắc để biến điện kế có d
 
 $$
 \begin{aligned}
-R_s&=\frac{V_V}{I_{\mathrm{fs}}}-R_c\\
-&=\frac{10{,}0\,\mathrm V}{1{,}00\times10^{-3}\,\mathrm A}-20{,}0\,\Omega\\
-&=9980\,\Omega.
+&R_s = \frac{V_V}{I_{\mathrm{fs}}}-R_c\\
+&\quad =\frac{10{,}0\,\mathrm V}{1{,}00\times10^{-3}\,\mathrm A}-20{,}0\,\Omega\\
+&\quad =9980\,\Omega.
 \end{aligned}
 $$
 
@@ -156,9 +154,9 @@ Trong cách mắc Hình 26.16a, vôn kế chỉ $12{,}0\,\mathrm V$ và ampe k�
 
 $$
 \begin{aligned}
-V_{bc}&=IR_A\\
-&=(0{,}100\,\mathrm A)(2{,}00\,\Omega)\\
-&=0{,}200\,\mathrm V.
+&V_{bc} = IR_A\\
+&\quad =(0{,}100\,\mathrm A)(2{,}00\,\Omega)\\
+&\quad =0{,}200\,\mathrm V.
 \end{aligned}
 $$
 
@@ -166,9 +164,9 @@ Hiệu điện thế thực trên điện trở cần đo bằng số chỉ vôn
 
 $$
 \begin{aligned}
-V_{ab}&=V-V_{bc}\\
-&=12{,}0\,\mathrm V-0{,}200\,\mathrm V\\
-&=11{,}8\,\mathrm V.
+&V_{ab} = V-V_{bc}\\
+&\quad =12{,}0\,\mathrm V-0{,}200\,\mathrm V\\
+&\quad =11{,}8\,\mathrm V.
 \end{aligned}
 $$
 
@@ -176,9 +174,9 @@ Vì dòng qua điện trở là $0{,}100\,\mathrm A$:
 
 $$
 \begin{aligned}
-R&=\frac{V_{ab}}{I}\\
-&=\frac{11{,}8\,\mathrm V}{0{,}100\,\mathrm A}\\
-&=118\,\Omega.
+&R = \frac{V_{ab}}{I}\\
+&\quad =\frac{11{,}8\,\mathrm V}{0{,}100\,\mathrm A}\\
+&\quad =118\,\Omega.
 \end{aligned}
 $$
 
@@ -186,9 +184,9 @@ Công suất tỏa nhiệt trong điện trở là:
 
 $$
 \begin{aligned}
-P&=V_{ab}I\\
-&=(11{,}8\,\mathrm V)(0{,}100\,\mathrm A)\\
-&=1{,}18\,\mathrm W.
+&P = V_{ab}I\\
+&\quad =(11{,}8\,\mathrm V)(0{,}100\,\mathrm A)\\
+&\quad =1{,}18\,\mathrm W.
 \end{aligned}
 $$
 
@@ -211,12 +209,12 @@ Giữ nguyên hai dụng cụ đo nhưng mắc theo Hình 26.16b. Vôn kế vẫ
 
 $$
 \begin{aligned}
-I_V&=\frac{V_{ab}}{R_V}\\
-&=\frac{12{,}0\,\mathrm V}{10\,000\,\Omega}\\
-&=1{,}20\,\mathrm{mA},\\
-I&=I_A-I_V\\
-&=0{,}100\,\mathrm A-0{,}00120\,\mathrm A\\
-&=0{,}0988\,\mathrm A.
+&I_V = \frac{V_{ab}}{R_V}\\
+&\quad =\frac{12{,}0\,\mathrm V}{10\,000\,\Omega}\\
+&\quad =1{,}20\,\mathrm{mA},\\
+&I = I_A-I_V\\
+&\quad =0{,}100\,\mathrm A-0{,}00120\,\mathrm A\\
+&\quad =0{,}0988\,\mathrm A.
 \end{aligned}
 $$
 
@@ -224,9 +222,9 @@ Do vôn kế mắc trực tiếp vào hai đầu điện trở:
 
 $$
 \begin{aligned}
-R&=\frac{V_{ab}}{I}\\
-&=\frac{12{,}0\,\mathrm V}{0{,}0988\,\mathrm A}\\
-&\approx121\,\Omega.
+&R = \frac{V_{ab}}{I}\\
+&\quad =\frac{12{,}0\,\mathrm V}{0{,}0988\,\mathrm A}\\
+&\quad \approx121\,\Omega.
 \end{aligned}
 $$
 
@@ -234,9 +232,9 @@ Công suất tỏa nhiệt trong điện trở là:
 
 $$
 \begin{aligned}
-P&=V_{ab}I\\
-&=(12{,}0\,\mathrm V)(0{,}0988\,\mathrm A)\\
-&\approx1{,}19\,\mathrm W.
+&P = V_{ab}I\\
+&\quad =(12{,}0\,\mathrm V)(0{,}0988\,\mathrm A)\\
+&\quad \approx1{,}19\,\mathrm W.
 \end{aligned}
 $$
 

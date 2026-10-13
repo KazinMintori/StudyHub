@@ -36,9 +36,13 @@ Dấu cộng ($+$) của vận tốc trung bình cho biết tọa độ $x$ đan
 
 Ngược lại, nếu một chiếc xe cứu hộ chạy lùi hoặc di chuyển ngược chiều từ vị trí $x_1 = 277\,\mathrm m$ ($t_1 = 16.0\,\mathrm s$) về lại vị trí $x_2 = 19\,\mathrm m$ ($t_2 = 25.0\,\mathrm s$) như ở Hình 2.2:
 
-$$\Delta x = x_2 - x_1 = 19\,\mathrm m - 277\,\mathrm m = -258\,\mathrm m,$$
-$$\Delta t = 25.0\,\mathrm s - 16.0\,\mathrm s = 9.0\,\mathrm s,$$
-$$v_{\mathrm{av}-x} = \frac{\Delta x}{\Delta t} = \frac{-258\,\mathrm m}{9.0\,\mathrm s} \approx -29\,\mathrm{m/s}.$$
+$$
+\begin{aligned}
+    &\Delta x = x_2 - x_1 = 19\,\mathrm m - 277\,\mathrm m = -258\,\mathrm m,\\
+    &\Delta t = 25.0\,\mathrm s - 16.0\,\mathrm s = 9.0\,\mathrm s,\\
+    &v_{\mathrm{av}-x} = \frac{\Delta x}{\Delta t} = \frac{-258\,\mathrm m}{9.0\,\mathrm s} \approx -29\,\mathrm{m/s}.
+\end{aligned}
+$$
 
 Dấu trừ ($-$) chỉ ra rằng vật đang chuyển động ngược chiều dương, tức theo **chiều âm của trục tọa độ**.
 

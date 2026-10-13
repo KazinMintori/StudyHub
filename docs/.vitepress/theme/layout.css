@@ -5,24 +5,30 @@
 .course-sidebar-toggle { display: none; }
 @media (min-width: 960px) {
   .course-sidebar-toggle {
-    position: fixed;
-    z-index: calc(var(--vp-z-index-nav) + 1);
-    top: calc(var(--vp-layout-top-height, 0px) + (var(--vp-nav-height) - 44px) / 2);
-    left: calc(var(--vp-sidebar-width) - 60px);
     display: inline-flex;
+    flex: 0 0 44px;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
-    border: 1px solid var(--rule);
+    margin-inline: var(--space-2) auto;
     border-radius: var(--radius-sm);
-    background: var(--paper);
+    background: transparent;
     color: var(--ink-2);
     cursor: pointer;
   }
   .course-sidebar-toggle:hover { background: var(--tim-soft); color: var(--tim); }
   .course-sidebar-toggle:focus-visible { outline: 2px solid var(--tim); outline-offset: 2px; }
   .Layout.sidebar-collapsed .VPNavBar { background: var(--paper); }
+  /* Reflow the entire header together with the sidebar. The control belongs to
+     the header's flex row, so it cannot cover either scrollbar or float in a
+     removed sidebar column. */
+  .Layout.sidebar-collapsed .VPNavBar .wrapper { padding-inline: 32px; }
+  .Layout.sidebar-collapsed .VPNavBar .container { max-width: calc(var(--vp-layout-max-width) - 64px); }
+  .Layout.sidebar-collapsed .VPNavBar .container > .title { position: static; width: auto; padding: 0; }
+  .Layout.sidebar-collapsed .VPNavBar .VPNavBarTitle .title { border-bottom-color: transparent; }
+  .Layout.sidebar-collapsed .VPNavBar .content { padding-inline: 0; margin-left: var(--space-4); }
+  .Layout.sidebar-collapsed .VPNavBar .divider { padding-left: 0; }
   /* Hide the whole navigation from both the screen and keyboard tab order. */
   .Layout.sidebar-collapsed .VPSidebar { display: none; }
   .Layout.sidebar-collapsed .VPContent.has-sidebar { padding-inline: 0; }
@@ -32,11 +38,21 @@
   .Layout.sidebar-collapsed .VPDoc.has-sidebar .content-container { margin-inline: auto; }
   .Layout.sidebar-collapsed .VPContent.has-sidebar ~ .site-introduction { margin-inline: 0; }
 }
-@media (min-width: 1440px) {
-  .course-sidebar-toggle { left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) - 60px); }
-}
 @media print {
   .course-sidebar-toggle { display: none !important; }
+}
+/* The outline and lecture tabs occupy separate sticky rows on tablets and
+   small desktops. Keep outline flyouts above the tabs as well. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .Layout.lecture-layout .VPLocalNav { z-index: 21; }
+  .Layout.lecture-layout .VPLocalNavOutlineDropdown .items { top: 100%; }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .Layout.lecture-layout .lecture-tabs { top: 48px; }
+}
+@media (min-width: 960px) and (max-width: 1279px) {
+  .Layout.lecture-layout:has(> .VPLocalNav:not(.empty)) .lecture-tabs { top: calc(var(--vp-nav-height) + 48px); }
+  .Layout.sidebar-collapsed .VPLocalNavOutlineDropdown .items { left: max(32px, calc((100% - 844px) / 2 + 32px)); }
 }
 .VPHome { padding-bottom: 0; margin-bottom: 0; }
 .study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }

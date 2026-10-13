@@ -48,13 +48,14 @@ Chương 2 đặt nền móng cho cơ học cổ điển thông qua việc mô t
 
 Khi gia tốc không đổi, ta có hệ bốn phương trình động học kinh điển kết nối 5 đại lượng $(x - x_0, v_{0x}, v_x, a_x, t)$:
 
-$$v_x = v_{0x} + a_x t,\qquad\text{(2.8)}$$
-
-$$x = x_0 + v_{0x}t + \frac{1}{2}a_x t^2,\qquad\text{(2.12)}$$
-
-$$v_x^2 = v_{0x}^2 + 2a_x(x - x_0),\qquad\text{(2.13)}$$
-
-$$x - x_0 = \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}$$
+$$
+\begin{aligned}
+    &v_x = v_{0x} + a_x t,\qquad\text{(2.8)}\\
+    &x = x_0 + v_{0x}t + \frac{1}{2}a_x t^2,\qquad\text{(2.12)}\\
+    &v_x^2 = v_{0x}^2 + 2a_x(x - x_0),\qquad\text{(2.13)}\\
+    &x - x_0 = \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}
+\end{aligned}
+$$
 
 *(Lưu ý: Bộ phương trình này CHỈ có giá trị khi và chỉ khi gia tốc là một hằng số).*
 
@@ -83,9 +84,12 @@ $$x - x_0 = \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}$$
 
 Khi gia tốc phụ thuộc vào thời gian $a_x = a_x(t)$, ta tìm lại vận tốc và vị trí thông qua hai lần lấy tích phân xác định:
 
-$$v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\qquad\text{(2.17)}$$
-
-$$x(t) = x_0 + \int_0^t v_x(t')\, dt'.\qquad\text{(2.18)}$$
+$$
+\begin{aligned}
+    &v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\qquad\text{(2.17)}\\
+    &x(t) = x_0 + \int_0^t v_x(t')\, dt'.\qquad\text{(2.18)}
+\end{aligned}
+$$
 
 Về mặt hình học:
 - **Độ biến thiên vận tốc** $\Delta v_x$ bằng **diện tích hình thang cong** dưới đồ thị gia tốc — thời gian $a_x(t)$.

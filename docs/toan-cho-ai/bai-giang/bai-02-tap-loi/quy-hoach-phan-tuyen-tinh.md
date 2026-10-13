@@ -15,8 +15,8 @@ Quy hoạch phân tuyến tính có dạng
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x) = \frac{c^Tx + d}{e^Tx + f}\\
-\text{subject to}\quad & Gx \preceq h,\quad Ax = b,
+&\text{minimize}\quad f_0(x) = \frac{c^Tx + d}{e^Tx + f}\\
+&\text{subject to}\quad Gx \preceq h,\quad Ax = b,
 \end{aligned}
 $$
 
@@ -68,11 +68,11 @@ $$
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^Ty + dz\\
-\text{subject to}\quad & Gy - hz \preceq 0,\\
-& Ay - bz = 0,\\
-& e^Ty + fz = 1,\\
-& z \ge 0,
+&\text{minimize}\quad c^Ty + dz\\
+&\text{subject to}\quad Gy - hz \preceq 0,\\
+&\phantom{\text{subject to}\quad } Ay - bz = 0,\\
+&\phantom{\text{subject to}\quad } e^Ty + fz = 1,\\
+&\phantom{\text{subject to}\quad } z \ge 0,
 \end{aligned}
 $$
 

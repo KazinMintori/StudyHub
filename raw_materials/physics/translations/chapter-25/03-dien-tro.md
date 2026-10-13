@@ -31,8 +31,8 @@ Từ hai hệ thức $I=JA$ và $V=EL$, ta có $J=I/A$ và $E=V/L$. Thay vào $E
 
 $$
 \begin{aligned}
-\frac{V}{L}&=\rho\frac{I}{A},\\
-V&=\frac{\rho L}{A}I.
+&\frac{V}{L} = \rho\frac{I}{A},\\
+&V = \frac{\rho L}{A}I.
 \end{aligned}
 \tag{25.8}
 $$
@@ -105,8 +105,8 @@ Các đơn vị thường gặp khác là kilôôm $1\,\mathrm{k\Omega}=10^3\,\O
 
 $$
 \begin{aligned}
-R(T)&=R_0[1+\alpha(T-T_0)],\\
-\Delta R&=R_0\alpha(T-T_0).
+&R(T) = R_0[1+\alpha(T-T_0)],\\
+&\Delta R = R_0\alpha(T-T_0).
 \end{aligned}
 \tag{25.12}
 $$
@@ -142,9 +142,9 @@ Dây đồng 18 gauge có tiết diện $8.17\times10^{-7}\,\mathrm{m^2}$ và d�
 
 $$
 \begin{aligned}
-J&=\frac{I}{A}\\
-&=\frac{1.67}{8.17\times10^{-7}}\\
-&=2.044\times10^6\,\mathrm{A/m^2}.
+&J = \frac{I}{A}\\
+&\quad =\frac{1.67}{8.17\times10^{-7}}\\
+&\quad =2.044\times10^6\,\mathrm{A/m^2}.
 \end{aligned}
 $$
 
@@ -152,9 +152,9 @@ $$
 
 $$
 \begin{aligned}
-E&=\rho J\\
-&=(1.72)(2.044)\times10^{-2}\\
-&=3.516\times10^{-2}\,\mathrm{V/m}.
+&E = \rho J\\
+&\quad =(1.72)(2.044)\times10^{-2}\\
+&\quad =3.516\times10^{-2}\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -162,10 +162,10 @@ $$
 
 $$
 \begin{aligned}
-V&=EL\\
-&=(3.516\times10^{-2})(50.0)\\
-&=1.758\,\mathrm V\\
-&\approx1.76\,\mathrm V.
+&V = EL\\
+&\quad =(3.516\times10^{-2})(50.0)\\
+&\quad =1.758\,\mathrm V\\
+&\quad \approx1.76\,\mathrm V.
 \end{aligned}
 $$
 
@@ -173,10 +173,10 @@ $$
 
 $$
 \begin{aligned}
-R&=\rho\frac{L}{A}\\
-&=\frac{(1.72\times10^{-8})(50.0)}{8.17\times10^{-7}}\\
-&=1.05263\,\Omega\\
-&\approx1.05\,\Omega.
+&R = \rho\frac{L}{A}\\
+&\quad =\frac{(1.72\times10^{-8})(50.0)}{8.17\times10^{-7}}\\
+&\quad =1.05263\,\Omega\\
+&\quad \approx1.05\,\Omega.
 \end{aligned}
 $$
 
@@ -184,9 +184,9 @@ Kiểm tra bằng định nghĩa điện trở:
 
 $$
 \begin{aligned}
-R&=\frac{V}{I}\\
-&=\frac{1.758}{1.67}\\
-&=1.05269\,\Omega.
+&R = \frac{V}{I}\\
+&\quad =\frac{1.758}{1.67}\\
+&\quad =1.05269\,\Omega.
 \end{aligned}
 $$
 
@@ -209,17 +209,12 @@ Một dây đồng có điện trở $1.05\,\Omega$ ở $20^\circ\mathrm C$. Hã
 
 $$
 \begin{aligned}
-R(0)&=R_0[1+\alpha(0-T_0)]\\
-&=R_0(1-20\alpha)\\
-&=R_0(0.9214).
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-R(0)&=1.05(0.9214)\,\Omega\\
-&=0.9675\,\Omega\\
-&\approx0.97\,\Omega.
+    &R(0) = R_0[1+\alpha(0-T_0)]\\
+    &\quad =R_0(1-20\alpha)\\
+    &\quad =R_0(0.9214).\\
+    &R(0) = 1.05(0.9214)\,\Omega\\
+    &\quad =0.9675\,\Omega\\
+    &\quad \approx0.97\,\Omega.
 \end{aligned}
 $$
 
@@ -227,17 +222,12 @@ $$
 
 $$
 \begin{aligned}
-R(100)&=R_0[1+\alpha(100-T_0)]\\
-&=R_0(1+80\alpha)\\
-&=R_0(1.3144).
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-R(100)&=1.05(1.3144)\,\Omega\\
-&=1.3801\,\Omega\\
-&\approx1.38\,\Omega.
+    &R(100) = R_0[1+\alpha(100-T_0)]\\
+    &\quad =R_0(1+80\alpha)\\
+    &\quad =R_0(1.3144).\\
+    &R(100) = 1.05(1.3144)\,\Omega\\
+    &\quad =1.3801\,\Omega\\
+    &\quad \approx1.38\,\Omega.
 \end{aligned}
 $$
 

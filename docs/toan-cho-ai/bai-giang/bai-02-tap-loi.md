@@ -125,9 +125,9 @@ $$
 1. **Thiết lập dạng LP**: Đưa vào hai biến phụ $u, v \in \mathbb{R}$ thỏa mãn $u \ge |x - 1|$ và $v \ge |x + 1|$. Bài toán trở thành:
    $$
    \begin{aligned}
-   \min_{x, u, v} \quad & u + 2v \\
-   \text{sao cho} \quad & u \ge x - 1, \quad u \ge 1 - x, \\
-   & v \ge x + 1, \quad v \ge -x - 1.
+   &\min_{x, u, v} \quad u + 2v\\
+   &\text{sao cho}\quad u \ge x - 1, \quad u \ge 1 - x,\\
+   &\phantom{\text{subject to}\quad } v \ge x + 1, \quad v \ge -x - 1.
    \end{aligned}
    $$
    Hàm mục tiêu tuyến tính và cả bốn ràng buộc đều là bất đẳng thức affine. Hai ràng buộc ngầm $u \ge 0$ và $v \ge 0$ được tự động thỏa mãn bởi các bất đẳng thức trên.
@@ -177,10 +177,10 @@ Gọi $x_1, x_2 \ge 0$ lần lượt là khối lượng phân bón loại I và
    Hàm mục tiêu chi phí và các ràng buộc kỹ thuật được viết như sau:
    $$
    \begin{aligned}
-   \min_{x_1, x_2} \quad & 3x_1 + 2x_2 \\
-   \text{sao cho} \quad & 2x_1 + x_2 \ge 4, \\
-   & x_1 + 2x_2 \ge 5, \\
-   & x_1 \ge 0, \quad x_2 \ge 0.
+   &\min_{x_1, x_2} \quad 3x_1 + 2x_2\\
+   &\text{sao cho}\quad 2x_1 + x_2 \ge 4,\\
+   &\phantom{\text{subject to}\quad } x_1 + 2x_2 \ge 5,\\
+   &\phantom{\text{subject to}\quad } x_1 \ge 0, \quad x_2 \ge 0.
    \end{aligned}
    $$
    Hàm mục tiêu là hàm affine nên lồi. Tập khả thi là giao của bốn nửa không gian đóng nên là một đa diện lồi (polyhedron). Do đó bài toán là một LP lồi.
@@ -249,16 +249,16 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
    - **Hồi quy sai số tuyệt đối (chuẩn L1)**: Đưa vào $5$ biến phụ $t = (t_1, \dots, t_5)^T \in \mathbb{R}^5$:
      $$
      \begin{aligned}
-     \min_{w, t} \quad & \sum_{i=1}^5 t_i \\
-     \text{sao cho} \quad & -t_i \le u_i a + b - y_i \le t_i, \quad \forall i = 1, \dots, 5.
+     &\min_{w, t} \quad \sum_{i=1}^5 t_i\\
+     &\text{sao cho}\quad -t_i \le u_i a + b - y_i \le t_i, \quad \forall i = 1, \dots, 5.
      \end{aligned}
      $$
      Bài toán có $7$ biến ($2$ biến mô hình và $5$ biến phụ) cùng $10$ ràng buộc bất đẳng thức tuyến tính.
    - **Hồi quy minimax (chuẩn vô cùng)**: Đưa vào $1$ biến phụ vô hướng duy nhất $t \in \mathbb{R}$:
      $$
      \begin{aligned}
-     \min_{w, t} \quad & t \\
-     \text{sao cho} \quad & -t \le u_i a + b - y_i \le t, \quad \forall i = 1, \dots, 5.
+     &\min_{w, t} \quad t\\
+     &\text{sao cho}\quad -t \le u_i a + b - y_i \le t, \quad \forall i = 1, \dots, 5.
      \end{aligned}
      $$
      Bài toán có $3$ biến và $10$ ràng buộc bất đẳng thức tuyến tính.
@@ -272,11 +272,11 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
    Phần dư tại từng điểm quan sát có dạng:
    $$
    \begin{aligned}
-   r_1 &= -2a + b - (-2) = b - 2(a - 1), \\
-   r_2 &= -a + b - (-1) = b - (a - 1), \\
-   r_3 &= b - 3, \\
-   r_4 &= a + b - 1 = b + (a - 1), \\
-   r_5 &= 2a + b - 2 = b + 2(a - 1).
+   &r_1 = -2a + b - (-2) = b - 2(a - 1),\\
+   &r_2 = -a + b - (-1) = b - (a - 1),\\
+   &r_3 = b - 3,\\
+   &r_4 = a + b - 1 = b + (a - 1),\\
+   &r_5 = 2a + b - 2 = b + 2(a - 1).
    \end{aligned}
    $$
    Đặt độ lệch hệ số góc $d = a - 1$.
@@ -284,9 +284,9 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
    - **Xét bài toán L1**: Dùng bất đẳng thức tam giác cho từng cặp điểm đối xứng:
      $$
      \begin{aligned}
-     |b - d| + |b + d| &\ge |(b - d) + (b + d)| = 2|b|, \\
-     |b - 2d| + |b + 2d| &\ge |(b - 2d) + (b + 2d)| = 2|b|, \\
-     |b - 3| &\ge 3 - |b|.
+     &|b - d| + |b + d| \ge |(b - d) + (b + d)| = 2|b|,\\
+     &|b - 2d| + |b + 2d| \ge |(b - 2d) + (b + 2d)| = 2|b|,\\
+     &|b - 3| \ge 3 - |b|.
      \end{aligned}
      $$
      Cộng các vế lại:
@@ -342,10 +342,10 @@ $$
    Hàm mất mát bình phương được khai triển:
    $$
    \begin{aligned}
-   E(w) &= w^T (X^T X) w - 2 (X^T y)^T w + y^T y \\
-   &= 10a^2 + 5b^2 - 20a - 6b + 19 \\
-   &= 10(a^2 - 2a + 1) + 5\left(b^2 - \frac{6}{5}b + \frac{9}{25}\right) + 19 - 10 - \frac{9}{5} \\
-   &= 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
+   &E(w) = w^T (X^T X) w - 2 (X^T y)^T w + y^T y\\
+   &\quad = 10a^2 + 5b^2 - 20a - 6b + 19\\
+   &\quad = 10(a^2 - 2a + 1) + 5\left(b^2 - \frac{6}{5}b + \frac{9}{25}\right) + 19 - 10 - \frac{9}{5}\\
+   &\quad = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
    \end{aligned}
    $$
    Dạng chuẩn QP $\frac{1}{2} w^T P w + q^T w + r_0$ có:
@@ -378,9 +378,9 @@ $$
    Tính toán mất mát khớp dữ liệu $E$ tại nghiệm Ridge:
    $$
    \begin{aligned}
-   E(w_{\text{Ridge}}^*) &= 10\left(\frac{2}{3} - 1\right)^2 + 5\left(\frac{3}{10} - \frac{6}{10}\right)^2 + \frac{36}{5} \\
-   &= 10\left(\frac{1}{9}\right) + 5\left(\frac{9}{100}\right) + \frac{36}{5} \\
-   &= \frac{10}{9} + \frac{9}{20} + \frac{36}{5} = \frac{200 + 81 + 1296}{180} = \frac{1577}{180} \approx 8{,}76.
+   &E(w_{\text{Ridge}}^*) = 10\left(\frac{2}{3} - 1\right)^2 + 5\left(\frac{3}{10} - \frac{6}{10}\right)^2 + \frac{36}{5}\\
+   &\quad = 10\left(\frac{1}{9}\right) + 5\left(\frac{9}{100}\right) + \frac{36}{5}\\
+   &\quad = \frac{10}{9} + \frac{9}{20} + \frac{36}{5} = \frac{200 + 81 + 1296}{180} = \frac{1577}{180} \approx 8{,}76.
    \end{aligned}
    $$
    So sánh: Mất mát $E$ tăng từ $7{,}2$ lên $8{,}76$ (kém khớp dữ liệu hơn), nhưng bình phương độ dài tham số giảm rõ rệt:
@@ -559,10 +559,10 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
    - Cải dạng về GP: Đặt biến ngưỡng $t > 0$, bài toán tương đương:
      $$
      \begin{aligned}
-     \min_{p > 0, t > 0} \quad & t^{-1} \\
-     \text{sao cho} \quad & S_1(p) \ge t \iff \frac{t(1 + \frac{1}{4}p_2)}{p_1} \le 1 \iff t p_1^{-1} + \frac{1}{4}t p_1^{-1} p_2 \le 1, \\
-     & S_2(p) \ge t \iff \frac{t(1 + \frac{3}{2}p_1)}{p_2} \le 1 \iff t p_2^{-1} + \frac{3}{2}t p_1 p_2^{-1} \le 1, \\
-     & \frac{1}{6}p_1 + \frac{1}{6}p_2 \le 1.
+     &\min_{p > 0, t > 0} \quad t^{-1}\\
+     &\text{sao cho}\quad S_1(p) \ge t \iff \frac{t(1 + \frac{1}{4}p_2)}{p_1} \le 1 \iff t p_1^{-1} + \frac{1}{4}t p_1^{-1} p_2 \le 1,\\
+     &\phantom{\text{subject to}\quad } S_2(p) \ge t \iff \frac{t(1 + \frac{3}{2}p_1)}{p_2} \le 1 \iff t p_2^{-1} + \frac{3}{2}t p_1 p_2^{-1} \le 1,\\
+     &\phantom{\text{subject to}\quad } \frac{1}{6}p_1 + \frac{1}{6}p_2 \le 1.
      \end{aligned}
      $$
      Hàm mục tiêu $t^{-1}$ là một monomial, các vế trái của cả ba ràng buộc bất đẳng thức đều là các posynomial. Đây chính là dạng chuẩn GP.
@@ -633,9 +633,9 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
    Đặt các biến bù epigraph $\xi_i \ge 0$ đại diện cho mức vi phạm biên tại mỗi điểm:
    $$
    \begin{aligned}
-   \min_{\theta, \xi} \quad & \sum_{i=1}^4 \xi_i \\
-   \text{sao cho} \quad & \xi_i \ge 1 - y_i(u_i - \theta), \quad \forall i = 1, \dots, 4, \\
-   & \xi_i \ge 0, \quad \forall i = 1, \dots, 4.
+   &\min_{\theta, \xi} \quad \sum_{i=1}^4 \xi_i\\
+   &\text{sao cho}\quad \xi_i \ge 1 - y_i(u_i - \theta), \quad \forall i = 1, \dots, 4,\\
+   &\phantom{\text{subject to}\quad } \xi_i \ge 0, \quad \forall i = 1, \dots, 4.
    \end{aligned}
    $$
    Khai triển bốn số hạng của $H(\theta)$:
@@ -691,11 +691,11 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
      Bài toán trở thành:
      $$
      \begin{aligned}
-     \min_{x} \quad & 2x_1 + 3x_2 + 4x_3 \\
-     \text{sao cho} \quad & x_1 + x_3 \ge 1, \\
-     & x_1 + x_2 \ge 1, \\
-     & x_2 + x_3 \ge 1, \\
-     & 0 \le x_i \le 1, \quad \forall i = 1, 2, 3.
+     &\min_{x} \quad 2x_1 + 3x_2 + 4x_3\\
+     &\text{sao cho}\quad x_1 + x_3 \ge 1,\\
+     &\phantom{\text{subject to}\quad } x_1 + x_2 \ge 1,\\
+     &\phantom{\text{subject to}\quad } x_2 + x_3 \ge 1,\\
+     &\phantom{\text{subject to}\quad } 0 \le x_i \le 1, \quad \forall i = 1, 2, 3.
      \end{aligned}
      $$
      Cộng ba ràng buộc phủ:

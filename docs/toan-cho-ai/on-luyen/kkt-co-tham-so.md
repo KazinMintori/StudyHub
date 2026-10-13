@@ -16,7 +16,7 @@ Cho $r>0$ cố định. Tìm
 $$
 \begin{aligned}
 &\min_{x_1,x_2,x_3}P(x),\\
-P(x)&=x_3+\frac12(x_1^2+x_2^2+x_3^2),\\
+&P(x) = x_3+\frac12(x_1^2+x_2^2+x_3^2),\\
 &x_1+x_2+x_3=r,\\
 &x_1,x_2,x_3\ge0.
 \end{aligned}
@@ -30,7 +30,7 @@ Viết các bất đẳng thức thành $-x_i\le0$. Lagrangian là
 
 $$
 \begin{aligned}
-L&=x_3+\frac12(x_1^2+x_2^2+x_3^2)-\mu_1x_1-\mu_2x_2-\mu_3x_3\\
+&L = x_3+\frac12(x_1^2+x_2^2+x_3^2)-\mu_1x_1-\mu_2x_2-\mu_3x_3\\
 &\quad+\lambda(x_1+x_2+x_3-r).
 \end{aligned}
 $$
@@ -39,12 +39,12 @@ Hệ KKT gồm
 
 $$
 \begin{aligned}
-x_1-\mu_1+\lambda&=0,\\
-x_2-\mu_2+\lambda&=0,\\
-1+x_3-\mu_3+\lambda&=0,\\
-\mu_1x_1=\mu_2x_2=\mu_3x_3&=0,\\
-x_1+x_2+x_3&=r,\\
-x_i\ge0,\quad\mu_i&\ge0.
+&x_1-\mu_1+\lambda = 0,\\
+&x_2-\mu_2+\lambda = 0,\\
+&1+x_3-\mu_3+\lambda = 0,\\
+&\mu_1x_1=\mu_2x_2=\mu_3x_3 = 0,\\
+&x_1+x_2+x_3 = r,\\
+&x_i\ge0,\quad\mu_i \ge 0.
 \end{aligned}
 $$
 
@@ -64,11 +64,11 @@ Cho $x_1,x_2>0$ và $x_3=0$. Bù trừ cho $\mu_1=\mu_2=0$. Từ điều kiện 
 
 $$
 \begin{aligned}
-x_1=x_2&=-\lambda,\\
-x_1+x_2&=r,\\
-x_1=x_2&=\frac r2,\\
-\lambda&=-\frac r2,\\
-\mu_3&=1+\lambda=\frac{2-r}{2}.
+&x_1=x_2 = -\lambda,\\
+&x_1+x_2 = r,\\
+&x_1=x_2 = \frac r2,\\
+&\lambda = -\frac r2,\\
+&\mu_3 = 1+\lambda=\frac{2-r}{2}.
 \end{aligned}
 $$
 
@@ -76,10 +76,10 @@ $$
 
 $$
 \begin{aligned}
-x^\star&=(r/2,r/2,0),\\
-\mu_1=\mu_2&=0,\\
-\mu_3&=(2-r)/2,\\
-\lambda&=-r/2.
+&x^\star = (r/2,r/2,0),\\
+&\mu_1=\mu_2 = 0,\\
+&\mu_3 = (2-r)/2,\\
+&\lambda = -r/2.
 \end{aligned}
 $$
 
@@ -91,10 +91,10 @@ Bù trừ cho $\mu_1=\mu_2=\mu_3=0$. Khi đó
 
 $$
 \begin{aligned}
-x_1=x_2&=-\lambda,\\
-x_3&=-1-\lambda,\\
--3\lambda-1&=r,\\
-\lambda&=-\frac{r+1}{3}.
+&x_1=x_2 = -\lambda,\\
+&x_3 = -1-\lambda,\\
+&-3\lambda-1 = r,\\
+&\lambda = -\frac{r+1}{3}.
 \end{aligned}
 $$
 
@@ -102,8 +102,8 @@ Suy ra
 
 $$
 \begin{aligned}
-x_1=x_2&=\frac{r+1}{3},\\
-x_3&=\frac{r-2}{3}.
+&x_1=x_2 = \frac{r+1}{3},\\
+&x_3 = \frac{r-2}{3}.
 \end{aligned}
 $$
 

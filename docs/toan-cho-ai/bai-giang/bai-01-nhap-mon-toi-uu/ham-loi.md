@@ -156,8 +156,8 @@ Với mọi $x, y \in \mathbb{R}$ và mọi hệ số $\theta \in [0, 1]$, áp d
 
 $$
 \begin{aligned}
-|\theta x + (1-\theta)y| &\le |\theta x| + |(1-\theta)y| \\
-&= \theta|x| + (1-\theta)|y|,
+&|\theta x + (1-\theta)y| \le |\theta x| + |(1-\theta)y|\\
+&\quad = \theta|x| + (1-\theta)|y|,
 \end{aligned}
 $$
 

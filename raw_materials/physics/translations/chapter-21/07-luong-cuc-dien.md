@@ -28,8 +28,7 @@ Nhưng hai lực không cùng đường tác dụng. Gọi $\varphi$ là góc gi
 
 $$
 \begin{aligned}
-\tau&=(qE)d\sin\varphi.
-\end{aligned}
+&\tau = (qE)d\sin\varphi.\end{aligned}
 \tag{21.13}
 $$
 
@@ -54,8 +53,7 @@ Theo định nghĩa đó:
 
 $$
 \begin{aligned}
-\tau&=pE\sin\varphi.
-\end{aligned}
+&\tau = pE\sin\varphi.\end{aligned}
 \tag{21.15}
 $$
 
@@ -63,8 +61,7 @@ Vì $\varphi$ là góc giữa $\vec p$ và $\vec E$, biểu thức vector là t�
 
 $$
 \begin{aligned}
-\vec\tau&=\vec p\times\vec E.
-\end{aligned}
+&\vec\tau = \vec p\times\vec E.\end{aligned}
 \tag{21.16}
 $$
 
@@ -76,16 +73,15 @@ Khi lưỡng cực đổi hướng, mômen của trường thực hiện công v
 
 $$
 \begin{aligned}
-dW&=-pE\sin\varphi\,d\varphi.
-\end{aligned}
+&dW = -pE\sin\varphi\,d\varphi.\end{aligned}
 $$
 
 Công khi quay từ $\varphi_1$ đến $\varphi_2$:
 
 $$
 \begin{aligned}
-W&=\int_{\varphi_1}^{\varphi_2}(-pE\sin\varphi)\,d\varphi\\
-&=pE\cos\varphi_2-pE\cos\varphi_1.
+&W = \int_{\varphi_1}^{\varphi_2}(-pE\sin\varphi)\,d\varphi\\
+&\quad =pE\cos\varphi_2-pE\cos\varphi_1.
 \end{aligned}
 $$
 
@@ -100,8 +96,7 @@ $$
 
 $$
 \begin{aligned}
-U&=-\vec p\cdot\vec E.
-\end{aligned}
+&U = -\vec p\cdot\vec E.\end{aligned}
 \tag{21.18}
 $$
 
@@ -126,8 +121,8 @@ Lưỡng cực ở Hình 21.32 nằm trong điện trường đều có độ l�
 
 $$
 \begin{aligned}
-p&=(1.6)(0.125)10^{-28}\,\mathrm{C\,m}\\
-&=2.0\times10^{-29}\,\mathrm{C\,m}.
+&p = (1.6)(0.125)10^{-28}\,\mathrm{C\,m}\\
+&\quad =2.0\times10^{-29}\,\mathrm{C\,m}.
 \end{aligned}
 $$
 
@@ -137,10 +132,10 @@ Hướng $\vec p$ là từ âm đến dương, như hình.
 
 $$
 \begin{aligned}
-\tau&=pE\sin145^\circ\\
-&=(2.0\times10^{-29})(5.0\times10^5)\\
+&\tau = pE\sin145^\circ\\
+&\quad =(2.0\times10^{-29})(5.0\times10^5)\\
 &\quad\times\sin145^\circ\,\mathrm{N\,m}\\
-&=5.7\times10^{-24}\,\mathrm{N\,m}.
+&\quad =5.7\times10^{-24}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -150,10 +145,10 @@ Quy tắc bàn tay phải cho hướng ra khỏi mặt hình, tương ứng quay
 
 $$
 \begin{aligned}
-U&=-pE\cos145^\circ\\
-&=-(2.0\times10^{-29})(5.0\times10^5)\\
+&U = -pE\cos145^\circ\\
+&\quad =-(2.0\times10^{-29})(5.0\times10^5)\\
 &\quad\times\cos145^\circ\,\mathrm J\\
-&=8.2\times10^{-24}\,\mathrm J.
+&\quad =8.2\times10^{-24}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -183,9 +178,9 @@ Lưỡng cực có tâm tại gốc, $\vec p$ hướng $+y$. Tìm biểu thức 
 
 $$
 \begin{aligned}
-E_y&=\frac{kq}{(y-d/2)^2}\\
+&E_y = \frac{kq}{(y-d/2)^2}\\
 &\quad-\frac{kq}{(y+d/2)^2}\\
-&=\frac{kq}{y^2}\left(1-\frac d{2y}\right)^{-2}\\
+&\quad =\frac{kq}{y^2}\left(1-\frac d{2y}\right)^{-2}\\
 &\quad-\frac{kq}{y^2}\left(1+\frac d{2y}\right)^{-2}.
 \end{aligned}
 $$
@@ -194,7 +189,7 @@ $$
 
 $$
 \begin{aligned}
-(1+u)^n&=1+nu\\
+&(1+u)^n = 1+nu\\
 &\quad+\frac{n(n-1)}2u^2+\cdots.
 \end{aligned}
 $$
@@ -203,8 +198,8 @@ $$
 
 $$
 \begin{aligned}
-\left(1-\frac d{2y}\right)^{-2}&\approx1+\frac dy,\\
-\left(1+\frac d{2y}\right)^{-2}&\approx1-\frac dy.
+&\left(1-\frac d{2y}\right)^{-2} \approx 1+\frac dy,\\
+&\left(1+\frac d{2y}\right)^{-2} \approx 1-\frac dy.
 \end{aligned}
 $$
 
@@ -212,9 +207,9 @@ Do đó:
 
 $$
 \begin{aligned}
-E_y&\approx\frac{kq}{y^2}\left[1+\frac dy-\left(1-\frac dy\right)\right]\\
-&=\frac{2kqd}{y^3}\\
-&=\frac{p}{2\pi\varepsilon_0y^3}.
+&E_y \approx \frac{kq}{y^2}\left[1+\frac dy-\left(1-\frac dy\right)\right]\\
+&\quad =\frac{2kqd}{y^3}\\
+&\quad =\frac{p}{2\pi\varepsilon_0y^3}.
 \end{aligned}
 $$
 

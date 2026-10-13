@@ -298,9 +298,9 @@ Một công ty công nghệ thử nghiệm hai giao diện thanh toán: Giao di�
   $$\text{ATE} = \frac{\tau_1 + \tau_2 + \tau_3 + \tau_4}{4} = \frac{-15 + (-10) + (-5) + (-5)}{4} = \frac{-35}{4} = -8.75 \text{ giây}$$
 - Hoặc tính thông qua kỳ vọng:
   $$\begin{aligned}
-  \mathbb{E}[Y(1)] &= \frac{30 + 40 + 55 + 65}{4} = \frac{190}{4} = 47.5 \text{ giây} \\
-  \mathbb{E}[Y(0)] &= \frac{45 + 50 + 60 + 70}{4} = \frac{225}{4} = 56.25 \text{ giây} \\
-  \text{ATE} &= 47.5 - 56.25 = -8.75 \text{ giây}
+  &\mathbb{E}[Y(1)] = \frac{30 + 40 + 55 + 65}{4} = \frac{190}{4} = 47.5 \text{ giây}\\
+  &\mathbb{E}[Y(0)] = \frac{45 + 50 + 60 + 70}{4} = \frac{225}{4} = 56.25 \text{ giây}\\
+  &\text{ATE} = 47.5 - 56.25 = -8.75 \text{ giây}
   \end{aligned}$$
 - Kết luận: Giao diện B thực sự giúp khách hàng tiết kiệm trung bình $8.75$ giây so với giao diện A.
 

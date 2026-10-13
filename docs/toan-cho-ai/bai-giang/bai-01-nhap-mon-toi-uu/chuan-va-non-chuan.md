@@ -62,10 +62,10 @@ Chứng minh mệnh đề này hoàn toàn tương tự như trường hợp qu�
 
 $$
 \begin{aligned}
-\|\theta x_1 + (1-\theta)x_2 - x_c\| &= \|\theta (x_1 - x_c) + (1-\theta)(x_2 - x_c)\| \\
-&\le \|\theta (x_1 - x_c)\| + \|(1-\theta)(x_2 - x_c)\| \\
-&= \theta \|x_1 - x_c\| + (1-\theta)\|x_2 - x_c\| \\
-&\le \theta r + (1-\theta)r = r .
+&\|\theta x_1 + (1-\theta)x_2 - x_c\| = \|\theta (x_1 - x_c) + (1-\theta)(x_2 - x_c)\|\\
+&\quad \le \|\theta (x_1 - x_c)\| + \|(1-\theta)(x_2 - x_c)\|\\
+&\quad = \theta \|x_1 - x_c\| + (1-\theta)\|x_2 - x_c\|\\
+&\quad \le \theta r + (1-\theta)r = r .
 \end{aligned}
 $$
 
@@ -134,8 +134,8 @@ Sự khác biệt hình học giữa quả cầu $\ell_1$ và quả cầu $\ell_
 
 $$
 \begin{aligned}
-\text{Cực tiểu hóa:}\quad & \|x - y\|_2^2 \\
-\text{Thỏa mãn:}\quad & \|x\| \le 1 .
+&\text{Cực tiểu hóa:}\quad \|x - y\|_2^2\\
+&\text{Thỏa mãn:}\quad \|x\| \le 1 .
 \end{aligned}
 $$
 

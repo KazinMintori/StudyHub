@@ -127,6 +127,13 @@ watch(() => lesson.value?.slug, load)
                 <MathText as="div" :text="item.formula" />
               </div>
 
+              <div v-if="item.variables && item.variables.length" class="item-variables" aria-label="Chú thích các đại lượng và đơn vị đo">
+                <div class="variables-header"><strong>Ý nghĩa đại lượng & đơn vị:</strong></div>
+                <ul class="variables-list">
+                  <li v-for="(v, vIdx) in item.variables" :key="vIdx"><MathText :text="v" /></li>
+                </ul>
+              </div>
+
               <pre v-if="item.code" class="item-code"><code>{{ item.code }}</code></pre>
 
               <MathText v-if="item.description" as="p" class="item-desc" :text="item.description" />

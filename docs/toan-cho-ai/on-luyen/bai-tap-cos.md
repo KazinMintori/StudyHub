@@ -21,9 +21,9 @@ $$
 
 $$
 \begin{aligned}
-f_x&=4x+2y+z-\sin x,\\
-f_y&=2x+2y,\\
-f_z&=x+4z.
+&f_x = 4x+2y+z-\sin x,\\
+&f_y = 2x+2y,\\
+&f_z = x+4z.
 \end{aligned}
 $$
 
@@ -31,9 +31,9 @@ Các thành phần gradient cho hệ điểm dừng
 
 $$
 \begin{aligned}
-4x+2y+z-\sin x&=0,\\
-2x+2y&=0,\\
-x+4z&=0.
+&4x+2y+z-\sin x = 0,\\
+&2x+2y = 0,\\
+&x+4z = 0.
 \end{aligned}
 $$
 
@@ -53,11 +53,11 @@ $$
 
 $$
 \begin{aligned}
-\Delta_1&=4-c\ge3>0,\\
-\Delta_2&=2(4-c)-4\\
-&=4-2c\ge2>0,\\
-\Delta_3&=\det H\\
-&=14-8c\ge6>0.
+&\Delta_1 = 4-c\ge3>0,\\
+&\Delta_2 = 2(4-c)-4\\
+&\quad =4-2c\ge2>0,\\
+&\Delta_3 = \det H\\
+&\quad =14-8c\ge6>0.
 \end{aligned}
 $$
 
@@ -69,9 +69,9 @@ Giữ cách tiếp cận qua trị riêng của buổi học, dùng $\chi_H(t)=\
 
 $$
 \begin{aligned}
-\chi_H(t)&=-t^3+(10-c)t^2\\
+&\chi_H(t) = -t^3+(10-c)t^2\\
 &\quad-(27-6c)t+(14-8c),\\
-c&=\cos x.
+&c = \cos x.
 \end{aligned}
 $$
 
@@ -87,8 +87,8 @@ Hai phương trình cuối cho $y=-x$ và $z=-x/4$. Thay vào phương trình đ
 
 $$
 \begin{aligned}
-4x-2x-\frac x4-\sin x&=0,\\
-\frac74x-\sin x&=0.
+&4x-2x-\frac x4-\sin x = 0,\\
+&\frac74x-\sin x = 0.
 \end{aligned}
 $$
 
@@ -124,8 +124,8 @@ Vì vậy
 
 $$
 \begin{aligned}
-f(x,y,z)&\ge1+\frac38x^2+(y+x)^2+2(z+x/4)^2\\
-&\ge1.
+&f(x,y,z) \ge 1+\frac38x^2+(y+x)^2+2(z+x/4)^2\\
+&\quad \ge1.
 \end{aligned}
 $$
 

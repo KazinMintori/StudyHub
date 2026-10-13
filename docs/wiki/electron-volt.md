@@ -11,7 +11,7 @@ Electron-volt, ký hiệu eV, là đơn vị năng lượng. Nó bằng độ l�
 
 $$
 \begin{aligned}
-1\,\mathrm{eV}&=1.602176634\\
+&1\,\mathrm{eV} = 1.602176634\\
 &\quad\times10^{-19}\,\mathrm J.
 \end{aligned}
 $$
@@ -24,11 +24,11 @@ $$
 
 $$
 \begin{aligned}
-1\,\mathrm{eV}&=1.602176634\\
+&1\,\mathrm{eV} = 1.602176634\\
 &\quad\times10^{-19}\,\mathrm J,\\
-1\,\mathrm{keV}&=10^3\,\mathrm{eV},\\
-1\,\mathrm{MeV}&=10^6\,\mathrm{eV},\\
-1\,\mathrm{GeV}&=10^9\,\mathrm{eV}.
+&1\,\mathrm{keV} = 10^3\,\mathrm{eV},\\
+&1\,\mathrm{MeV} = 10^6\,\mathrm{eV},\\
+&1\,\mathrm{GeV} = 10^9\,\mathrm{eV}.
 \end{aligned}
 $$
 

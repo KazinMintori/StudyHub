@@ -260,10 +260,8 @@ Gọi $s\ge0$ là khoảng cách từ góc dây xuống phần tử đang xét. 
 
 $$
 \begin{aligned}
-&B =\frac{\mu_0I}{4\pi}
-\int_0^\infty\frac{a\,ds}{(a^2+s^2)^{3/2}}\\
-&=\frac{\mu_0I}{4\pi}
-\left[\frac{s}{a\sqrt{a^2+s^2}}\right]_0^\infty\\
+&B =\frac{\mu_0I}{4\pi} \int_0^\infty\frac{a\,ds}{(a^2+s^2)^{3/2}}\\
+&\quad =\frac{\mu_0I}{4\pi} \left[\frac{s}{a\sqrt{a^2+s^2}}\right]_0^\infty\\
 &\quad =\frac{\mu_0I}{4\pi a}.
 \end{aligned}
 $$
@@ -303,10 +301,8 @@ Trong trụ, biểu thức áp dụng với $r\le a$. Ngoài trụ, $\vec J=0$.
 
 $$
 \begin{aligned}
-&I_{\mathrm{tổng}} = \frac{4I_0}{a^2}\\
-&\quad\times\int_0^a\left(s-\frac{s^3}{a^2}\right)ds\\
-&=\frac{4I_0}{a^2}
-\left(\frac{a^2}{2}-\frac{a^2}{4}\right)\\
+&I_{\mathrm{tổng}} = \frac{4I_0}{a^2} \int_0^a\left(s-\frac{s^3}{a^2}\right)ds\\
+&\quad =\frac{4I_0}{a^2} \left(\frac{a^2}{2}-\frac{a^2}{4}\right)\\
 &\quad =I_0.
 \end{aligned}
 $$
@@ -332,8 +328,7 @@ $$
 $$
 \begin{aligned}
 &B(r) = \frac{\mu_0I(r)}{2\pi r}\\
-&=\frac{\mu_0I_0r}{2\pi a^2}
-\left(2-\frac{r^2}{a^2}\right).
+&\quad =\frac{\mu_0I_0r}{2\pi a^2} \left(2-\frac{r^2}{a^2}\right).
 \end{aligned}
 $$
 

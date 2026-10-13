@@ -17,8 +17,8 @@ next: false
 
 $$
 \begin{aligned}
-V_B-V_A&=-\int_A^B\vec E\cdot d\vec\ell,\\
-\vec E&=-\nabla V.
+&V_B-V_A = -\int_A^B\vec E\cdot d\vec\ell,\\
+&\vec E = -\nabla V.
 \end{aligned}
 $$
 

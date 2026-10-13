@@ -102,8 +102,8 @@ Thanh dương hút electron trong cầu về phía gần, tạo mặt gần âm 
 
 $$
 \begin{aligned}
-N_e&\approx\frac{70}{2m_p}\approx2.1\times10^{28},\\
-Q_e&=-N_ee\approx-3.4\times10^9\,\mathrm C.
+&N_e \approx \frac{70}{2m_p}\approx2.1\times10^{28},\\
+&Q_e = -N_ee\approx-3.4\times10^9\,\mathrm C.
 \end{aligned}
 $$
 
@@ -196,10 +196,10 @@ Giả sử độ lớn điện tích electron nhỏ hơn proton $0.00100\%$, tha
 
 $$
 \begin{aligned}
-Q&\approx\frac{10^{-5}e}{2m_p}\\
-&=4.8\times10^2\,\mathrm C,\\
-F&\approx kQ^2/5.0^2\\
-&=8.2\times10^{13}\,\mathrm N.
+&Q \approx \frac{10^{-5}e}{2m_p}\\
+&\quad =4.8\times10^2\,\mathrm C,\\
+&F \approx kQ^2/5.0^2\\
+&\quad =8.2\times10^{13}\,\mathrm N.
 \end{aligned}
 $$
 

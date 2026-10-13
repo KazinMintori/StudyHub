@@ -17,8 +17,8 @@ next: false
 
 $$
 \begin{aligned}
-\sigma&=1/\rho,\\
-\vec J&=\sigma\vec E.
+&\sigma = 1/\rho,\\
+&\vec J = \sigma\vec E.
 \end{aligned}
 $$
 

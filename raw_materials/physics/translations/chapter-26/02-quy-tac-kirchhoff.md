@@ -21,9 +21,9 @@ Chỉ số j chạy qua m nhánh nối với nút. $\widetilde I_j$ là dòng đ
 
 $$
 \begin{aligned}
-\widetilde I_1+\widetilde I_2+\widetilde I_3&=0,\\
-I_1+I_2-I_3&=0,\\
-I_1+I_2&=I_3.
+&\widetilde I_1+\widetilde I_2+\widetilde I_3 = 0,\\
+&I_1+I_2-I_3 = 0,\\
+&I_1+I_2 = I_3.
 \end{aligned}
 $$
 
@@ -128,8 +128,8 @@ Thu gọn các hạng tử:
 
 $$
 \begin{aligned}
-8\,\mathrm V&=I(16\,\Omega),\\
-I&=0{,}5\,\mathrm A.
+&8\,\mathrm V = I(16\,\Omega),\\
+&I = 0{,}5\,\mathrm A.
 \end{aligned}
 $$
 
@@ -139,9 +139,9 @@ Dòng điện tìm được dương, vì vậy chiều dòng điện thực đú
 
 $$
 \begin{aligned}
-V_{ab}&=(0{,}5\,\mathrm A)(7\,\Omega)+4\,\mathrm V\\
+&V_{ab} = (0{,}5\,\mathrm A)(7\,\Omega)+4\,\mathrm V\\
 &\quad +(0{,}5\,\mathrm A)(4\,\Omega)\\
-&=9{,}5\,\mathrm V.
+&\quad =9{,}5\,\mathrm V.
 \end{aligned}
 $$
 
@@ -149,9 +149,9 @@ Vậy điện thế tại $a$ cao hơn tại $b$ $9{,}5\,\mathrm V$. Mọi số 
 
 $$
 \begin{aligned}
-V_{ab}&=12\,\mathrm V-(0{,}5\,\mathrm A)(2\,\Omega)\\
+&V_{ab} = 12\,\mathrm V-(0{,}5\,\mathrm A)(2\,\Omega)\\
 &\quad -(0{,}5\,\mathrm A)(3\,\Omega)\\
-&=9{,}5\,\mathrm V.
+&\quad =9{,}5\,\mathrm V.
 \end{aligned}
 $$
 
@@ -161,10 +161,10 @@ Trên nhánh trên, hai số hạng $IR$ âm vì ta đi cùng chiều dòng đi�
 
 $$
 \begin{aligned}
-P_{12\,\mathrm V}&=(12\,\mathrm V)(0{,}5\,\mathrm A)\\
-&=6\,\mathrm W,\\
-P_{4\,\mathrm V}&=(-4\,\mathrm V)(0{,}5\,\mathrm A)\\
-&=-2\,\mathrm W.
+&P_{12\,\mathrm V} = (12\,\mathrm V)(0{,}5\,\mathrm A)\\
+&\quad =6\,\mathrm W,\\
+&P_{4\,\mathrm V} = (-4\,\mathrm V)(0{,}5\,\mathrm A)\\
+&\quad =-2\,\mathrm W.
 \end{aligned}
 $$
 
@@ -176,10 +176,10 @@ Tổng công suất tỏa nhiệt ở bốn điện trở, tính theo $P=I^2R$, 
 
 $$
 \begin{aligned}
-P_R&=I^2(4\,\Omega+7\,\Omega)\\
+&P_R = I^2(4\,\Omega+7\,\Omega)\\
 &\quad+I^2(2\,\Omega+3\,\Omega)\\
-&=(0{,}5\,\mathrm A)^2(16\,\Omega)\\
-&=4\,\mathrm W.
+&\quad =(0{,}5\,\mathrm A)^2(16\,\Omega)\\
+&\quad =4\,\mathrm W.
 \end{aligned}
 $$
 
@@ -207,8 +207,8 @@ Mạch có nhiều vòng và nút phân nhánh, nên cần dùng cả quy tắc 
 
 $$
 \begin{aligned}
--I+1\,\mathrm A+2\,\mathrm A&=0,\\
-I&=3\,\mathrm A.
+&-I+1\,\mathrm A+2\,\mathrm A = 0,\\
+&I = 3\,\mathrm A.
 \end{aligned}
 $$
 
@@ -216,9 +216,9 @@ $$
 
 $$
 \begin{aligned}
-12\,\mathrm V-(3\,\mathrm A)r&=(2\,\mathrm A)(3\,\Omega)\\
-&=6\,\mathrm V,\\
-r&=2\,\Omega.
+&12\,\mathrm V-(3\,\mathrm A)r = (2\,\mathrm A)(3\,\Omega)\\
+&\quad =6\,\mathrm V,\\
+&r = 2\,\Omega.
 \end{aligned}
 $$
 
@@ -226,9 +226,9 @@ $$
 
 $$
 \begin{aligned}
-&-\mathcal E+(1\,\mathrm A)(1\,\Omega)\\
-&-(2\,\mathrm A)(3\,\Omega)=0,\\
-\mathcal E&=-5\,\mathrm V.
+&\quad -\mathcal E+(1\,\mathrm A)(1\,\Omega)\\
+&\quad -(2\,\mathrm A)(3\,\Omega)=0,\\
+&\mathcal E = -5\,\mathrm V.
 \end{aligned}
 $$
 
@@ -240,8 +240,8 @@ Nếu dùng quy tắc nút tại $b$ hoặc đi theo chiều kim đồng hồ qu
 
 $$
 \begin{aligned}
-12\,\mathrm V-(3\,\mathrm A)(2\,\Omega)&\\
--(1\,\mathrm A)(1\,\Omega)+\mathcal E&=0.
+&12\,\mathrm V-(3\,\mathrm A)(2\,\Omega) \\
+&-(1\,\mathrm A)(1\,\Omega)+\mathcal E = 0.
 \end{aligned}
 $$
 
@@ -257,8 +257,8 @@ $$
 
 $$
 \begin{aligned}
-V_{ba}&=12\,\mathrm V-(3\,\mathrm A)(2\,\Omega)\\
-&=6\,\mathrm V.
+&V_{ba} = 12\,\mathrm V-(3\,\mathrm A)(2\,\Omega)\\
+&\quad =6\,\mathrm V.
 \end{aligned}
 $$
 
@@ -266,8 +266,8 @@ $$
 
 $$
 \begin{aligned}
-V_{ba}&=-(-5\,\mathrm V)+(1\,\mathrm A)(1\,\Omega)\\
-&=6\,\mathrm V.
+&V_{ba} = -(-5\,\mathrm V)+(1\,\mathrm A)(1\,\Omega)\\
+&\quad =6\,\mathrm V.
 \end{aligned}
 $$
 
@@ -349,53 +349,33 @@ Mạng này không phải tổ hợp nối tiếp hoặc song song đơn giản,
 
 $$
 \begin{aligned}
-13\,\mathrm V&=I_1(1\,\Omega)\\
-&+(I_1-I_3)\,\Omega.
+    &13\,\mathrm V = I_1(1\,\Omega)\\
+    &\quad +(I_1-I_3)\,\Omega.\\
+    &13\,\mathrm V = I_2(1\,\Omega)\\
+    &\quad +2(I_2+I_3)\,\Omega.\\
+    &-I_1(1\,\Omega)\\
+    &-I_3(1\,\Omega)\\
+    &+I_2(1\,\Omega)=0.
 \end{aligned}
-\tag{1}
-$$
-
-$$
-\begin{aligned}
-13\,\mathrm V&=I_2(1\,\Omega)\\
-&+2(I_2+I_3)\,\Omega.
-\end{aligned}
-\tag{2}
-$$
-
-$$
-\begin{aligned}
-&-I_1(1\,\Omega)\\
-&-I_3(1\,\Omega)\\
-&+I_2(1\,\Omega)=0.
-\end{aligned}
-\tag{3}
 $$
 
 Từ phương trình thứ ba, $I_2=I_1+I_3$. Thay vào phương trình thứ hai, rồi thu gọn phương trình thứ nhất, ta được
 
 $$
 \begin{aligned}
-13\,\mathrm V&=I_1(2\,\Omega)\\
-&\quad-I_3(1\,\Omega).
+    &13\,\mathrm V = I_1(2\,\Omega)\\
+    &\quad-I_3(1\,\Omega).\\
+    &13\,\mathrm V = I_1(3\,\Omega)\\
+    &\quad+I_3(5\,\Omega).
 \end{aligned}
-\tag{1'}
-$$
-
-$$
-\begin{aligned}
-13\,\mathrm V&=I_1(3\,\Omega)\\
-&\quad+I_3(5\,\Omega).
-\end{aligned}
-\tag{2'}
 $$
 
 Nhân phương trình đầu với $5$ rồi cộng phương trình sau, ta khử được $I_3$:
 
 $$
 \begin{aligned}
-78\,\mathrm V&=I_1(13\,\Omega),\\
-I_1&=6\,\mathrm A.
+&78\,\mathrm V = I_1(13\,\Omega),\\
+&I_1 = 6\,\mathrm A.
 \end{aligned}
 $$
 
@@ -431,9 +411,9 @@ Phép trừ cho
 
 $$
 \begin{aligned}
--I_2(1\,\Omega)&\\
--(I_2+I_3)(2\,\Omega)&\\
-+(I_1-I_3)(1\,\Omega)+I_1(1\,\Omega)&=0.
+&-I_2(1\,\Omega) \\
+&-(I_2+I_3)(2\,\Omega) \\
+&+(I_1-I_3)(1\,\Omega)+I_1(1\,\Omega) = 0.
 \end{aligned}
 $$
 
@@ -454,8 +434,8 @@ Trong mạch ở Ví dụ 26.6 và Hình 26.12, tìm hiệu điện thế $V_{ab
 
 $$
 \begin{aligned}
-V_{ab}&=-(1\,\mathrm A)(1\,\Omega)\\
-&=-1\,\mathrm V.
+&V_{ab} = -(1\,\mathrm A)(1\,\Omega)\\
+&\quad =-1\,\mathrm V.
 \end{aligned}
 $$
 
@@ -467,8 +447,8 @@ Có thể kiểm tra bằng đường đi từ $b$ đến $a$ qua hai điện tr
 
 $$
 \begin{aligned}
-I_2+I_3&=5\,\mathrm A+(-1\,\mathrm A)=4\,\mathrm A,\\
-I_1-I_3&=6\,\mathrm A-(-1\,\mathrm A)=7\,\mathrm A.
+&I_2+I_3 = 5\,\mathrm A+(-1\,\mathrm A)=4\,\mathrm A,\\
+&I_1-I_3 = 6\,\mathrm A-(-1\,\mathrm A)=7\,\mathrm A.
 \end{aligned}
 $$
 
@@ -476,9 +456,9 @@ Theo đường này,
 
 $$
 \begin{aligned}
-V_{ab}&=-(4\,\mathrm A)(2\,\Omega)\\
-&+(7\,\mathrm A)(1\,\Omega)\\
-&=-1\,\mathrm V.
+&V_{ab} = -(4\,\mathrm A)(2\,\Omega)\\
+&\quad +(7\,\mathrm A)(1\,\Omega)\\
+&\quad =-1\,\mathrm V.
 \end{aligned}
 $$
 

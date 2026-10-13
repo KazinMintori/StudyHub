@@ -19,8 +19,8 @@ Ampe kế được mắc nối tiếp để dòng của nhánh cần đo đi qua
 
 $$
 \begin{aligned}
-I_GR_G&=(I-I_G)R_{\mathrm{sh}},\\
-R_{\mathrm{sh}}&=\frac{I_GR_G}{I-I_G}.
+&I_GR_G = (I-I_G)R_{\mathrm{sh}},\\
+&R_{\mathrm{sh}} = \frac{I_GR_G}{I-I_G}.
 \end{aligned}
 $$
 

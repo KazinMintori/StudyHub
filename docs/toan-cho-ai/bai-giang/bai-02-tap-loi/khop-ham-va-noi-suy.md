@@ -25,9 +25,9 @@ Mặc dù các hàm cơ sở $f_j(x)$ có thể phi tuyến đối với biến 
 
 $$
 \begin{aligned}
-f(x) &= a(x)^T \theta \quad \text{với } a(x) = \begin{bmatrix} f_1(x) \\ \vdots \\ f_k(x) \end{bmatrix}, \\
-f'(x) &= a'(x)^T \theta \quad \text{với } a'(x) = \begin{bmatrix} f'_1(x) \\ \vdots \\ f'_k(x) \end{bmatrix}, \\
-f''(x) &= a''(x)^T \theta \quad \text{với } a''(x) = \begin{bmatrix} f''_1(x) \\ \vdots \\ f''_k(x) \end{bmatrix}.
+&f(x) = a(x)^T \theta \quad \text{với } a(x) = \begin{bmatrix} f_1(x)\\ &\vdots\\ &f_k(x) \end{bmatrix},\\
+&f'(x) = a'(x)^T \theta \quad \text{với } a'(x) = \begin{bmatrix} f'_1(x)\\ &\vdots\\ &f'_k(x) \end{bmatrix},\\
+&f''(x) = a''(x)^T \theta \quad \text{với } a''(x) = \begin{bmatrix} f''_1(x)\\ &\vdots\\ &f''_k(x) \end{bmatrix}.
 \end{aligned}
 $$
 
@@ -63,9 +63,9 @@ Khi kết hợp tiêu chí bình phương tối thiểu với các ràng buộc 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \|A \theta - y\|_2^2 \\
-\text{subject to}\quad & A' \theta \succeq 0, \\
-& A'' \theta \succeq 0,
+&\text{minimize}\quad \|A \theta - y\|_2^2\\
+&\text{subject to}\quad A' \theta \succeq 0,\\
+&\phantom{\text{subject to}\quad } A'' \theta \succeq 0,
 \end{aligned}
 $$
 
@@ -153,10 +153,10 @@ Cho tập dữ liệu gồm 4 điểm trên đoạn $[-1, 1]$: $(-1, -2)$, $(-0{
    Ma trận dữ liệu $A \in \mathbb{R}^{4 \times 4}$ tại các điểm $x_i \in \{-1, -0{,}5, 0{,}5, 1\}$ có các hàng là $[1, x_i, x_i^2, x_i^3]$. Bài toán QP có dạng:
    $$
    \begin{aligned}
-   \text{minimize}\quad & \|A \theta - y\|_2^2 \\
-   \text{subject to}\quad & \theta_1 \ge 0, \\
-   & \theta_1 + 2\theta_2 + 3\theta_3 \ge 0, \\
-   & \theta_1 - 2\theta_2 + 3\theta_3 \ge 0.
+   &\text{minimize}\quad \|A \theta - y\|_2^2\\
+   &\text{subject to}\quad \theta_1 \ge 0,\\
+   &\phantom{\text{subject to}\quad } \theta_1 + 2\theta_2 + 3\theta_3 \ge 0,\\
+   &\phantom{\text{subject to}\quad } \theta_1 - 2\theta_2 + 3\theta_3 \ge 0.
    \end{aligned}
    $$
    Đây là bài toán QP chuẩn mực với mục tiêu toàn phương lồi và các ràng buộc affine.
@@ -230,8 +230,8 @@ Cho 3 điểm dữ liệu một chiều: $(0, 1)$, $(1, 0)$, và $(3, 2)$.
 3. **Xây dựng hàm lồi nội suy**:
    $$
    \begin{aligned}
-   f_{\text{interp}}(x) &= \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\} \\
-   &= \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
+   &f_{\text{interp}}(x) = \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\}\\
+   &\quad = \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
    \end{aligned}
    $$
    Kiểm tra tại các điểm mút:

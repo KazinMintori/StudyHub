@@ -36,10 +36,10 @@ Quả cầu Euclid luôn là một tập lồi. Lấy hai điểm bất kỳ $x_
 
 $$
 \begin{aligned}
-\|\theta x_1 + (1-\theta) x_2 - x_c\|_2 &= \|\theta (x_1 - x_c) + (1 - \theta)(x_2 - x_c)\|_2 \\
-&\le \|\theta (x_1 - x_c)\|_2 + \|(1 - \theta)(x_2 - x_c)\|_2 \\
-&= \theta \|x_1 - x_c\|_2 + (1 - \theta)\|x_2 - x_c\|_2 \\
-&\le \theta r + (1 - \theta) r = r .
+&\|\theta x_1 + (1-\theta) x_2 - x_c\|_2 = \|\theta (x_1 - x_c) + (1 - \theta)(x_2 - x_c)\|_2\\
+&\quad \le \|\theta (x_1 - x_c)\|_2 + \|(1 - \theta)(x_2 - x_c)\|_2\\
+&\quad = \theta \|x_1 - x_c\|_2 + (1 - \theta)\|x_2 - x_c\|_2\\
+&\quad \le \theta r + (1 - \theta) r = r .
 \end{aligned}
 $$
 
@@ -137,9 +137,9 @@ Hai cách biểu diễn này hoàn toàn tương đương khi liên hệ qua đ�
 
 $$
 \begin{aligned}
-(x - x_c)^T P^{-1} (x - x_c) &= (Au)^T (AA^T)^{-1} (Au) \\
-&= u^T A^T (A^T)^{-1} A^{-1} A u \\
-&= u^T I u = \|u\|_2^2 .
+&(x - x_c)^T P^{-1} (x - x_c) = (Au)^T (AA^T)^{-1} (Au)\\
+&\quad = u^T A^T (A^T)^{-1} A^{-1} A u\\
+&\quad = u^T I u = \|u\|_2^2 .
 \end{aligned}
 $$
 
@@ -160,10 +160,10 @@ Biểu diễn tham số $\mathcal{E} = x_c + A\,B(0, 1)$ mang lại một công 
 
 $$
 \begin{aligned}
-\operatorname{vol}(\mathcal{E}) &= |\det A| \cdot \operatorname{vol}(B(0, 1)) \\
-&= \sqrt{\det(AA^T)} \cdot \operatorname{vol}(B(0, 1)) \\
-&= \sqrt{\det P} \cdot \operatorname{vol}(B(0, 1)) \\
-&= \left(\prod_{i=1}^n \lambda_i\right)^{1/2} \cdot \operatorname{vol}(B(0, 1)) = \sqrt{\lambda_1 \lambda_2 \dots \lambda_n} \cdot \operatorname{vol}(B(0, 1)) .
+&\operatorname{vol}(\mathcal{E}) = |\det A| \cdot \operatorname{vol}(B(0, 1))\\
+&\quad = \sqrt{\det(AA^T)} \cdot \operatorname{vol}(B(0, 1))\\
+&\quad = \sqrt{\det P} \cdot \operatorname{vol}(B(0, 1))\\
+&\quad = \left(\prod_{i=1}^n \lambda_i\right)^{1/2} \cdot \operatorname{vol}(B(0, 1)) = \sqrt{\lambda_1 \lambda_2 \dots \lambda_n} \cdot \operatorname{vol}(B(0, 1)) .
 \end{aligned}
 $$
 

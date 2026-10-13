@@ -16,8 +16,8 @@ Với thanh đồng nhất dài L, tiết diện A, hai đầu giữ ở nhiệt
 
 $$
 \begin{aligned}
-H&=\frac{dQ}{dt},\\
-H&=\frac{kA(T_H-T_C)}{L}.
+&H = \frac{dQ}{dt},\\
+&H = \frac{kA(T_H-T_C)}{L}.
 \end{aligned}
 $$
 
@@ -51,8 +51,8 @@ Với q âm, vector vận tốc trôi ngược trường, nhưng tích nq với 
 
 $$
 \begin{aligned}
-J&=n|q|v_d,\\
-I&=JA.
+&J = n|q|v_d,\\
+&I = JA.
 \end{aligned}
 $$
 
@@ -62,8 +62,8 @@ Với hai loại hạt tải, tính riêng J₁ và J₂ rồi cộng vector. T�
 
 $$
 \begin{aligned}
-\vec J&=\vec J_1+\vec J_2+\cdots+\vec J_N,\\
-\vec J&=\sum_{i=1}^{N}\vec J_i.
+&\vec J = \vec J_1+\vec J_2+\cdots+\vec J_N,\\
+&\vec J = \sum_{i=1}^{N}\vec J_i.
 \end{aligned}
 $$
 
@@ -89,8 +89,8 @@ Khi chỉ thay chiều dài hoặc tiết diện mẫu mà giữ vật liệu v�
 
 $$
 \begin{aligned}
-\sigma&=1/\rho,\\
-\vec J&=\sigma\vec E.
+&\sigma = 1/\rho,\\
+&\vec J = \sigma\vec E.
 \end{aligned}
 $$
 
@@ -103,10 +103,10 @@ Với mẫu trụ đồng nhất dài L, tiết diện A, điện trở là R = 
 
 $$
 \begin{aligned}
-V&=EL,\\
-I&=JA,\\
-\frac VI&=\rho\frac LA,\\
-R&=\frac{\rho L}{A}.
+&V = EL,\\
+&I = JA,\\
+&\frac VI = \rho\frac LA,\\
+&R = \frac{\rho L}{A}.
 \end{aligned}
 $$
 
@@ -133,8 +133,8 @@ Với nguồn lý tưởng, điện áp hai cực bằng ℰ. Với nguồn có 
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E-Ir,\\
-I&=\frac{\mathcal E}{R+r}.
+&V_{ab} = \mathcal E-Ir,\\
+&I = \frac{\mathcal E}{R+r}.
 \end{aligned}
 $$
 
@@ -147,9 +147,9 @@ Các công suất tương ứng là:
 
 $$
 \begin{aligned}
-P_{\mathcal E}&=\mathcal EI,\\
-P_r&=I^2r,\\
-P_{\mathrm{ra}}&=\mathcal EI-I^2r.
+&P_{\mathcal E} = \mathcal EI,\\
+&P_r = I^2r,\\
+&P_{\mathrm{ra}} = \mathcal EI-I^2r.
 \end{aligned}
 $$
 

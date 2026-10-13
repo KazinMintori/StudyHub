@@ -44,8 +44,8 @@ Lấy tích phân hai vế từ thời điểm $t_1$ (ứng với vận tốc $v
 
 $$
 \begin{aligned}
-v_{2x} - v_{1x} &= \int_{v_{1x}}^{v_{2x}} dv_x \\
-&= \int_{t_1}^{t_2} a_x\, dt.
+&v_{2x} - v_{1x} = \int_{v_{1x}}^{v_{2x}} dv_x\\
+&\quad = \int_{t_1}^{t_2} a_x\, dt.
 \end{aligned}
 \tag{2.15}
 $$
@@ -62,8 +62,8 @@ Tích phân hai vế từ thời điểm $t_1$ (tọa độ $x_1$) đến thời
 
 $$
 \begin{aligned}
-x_2 - x_1 &= \int_{x_1}^{x_2} dx \\
-&= \int_{t_1}^{t_2} v_x\, dt.
+&x_2 - x_1 = \int_{x_1}^{x_2} dx\\
+&\quad = \int_{t_1}^{t_2} v_x\, dt.
 \end{aligned}
 \tag{2.16}
 $$
@@ -72,9 +72,12 @@ $$
 
 Nếu ta chọn thời điểm ban đầu là $t_1 = 0$ với các điều kiện ban đầu $x(0) = x_0$ và $v_x(0) = v_{0x}$, và xét thời điểm tổng quát $t_2 = t$, các công thức (2.15) và (2.16) trở thành dạng tường minh:
 
-$$v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\tag{2.17}$$
-
-$$x(t) = x_0 + \int_0^t v_x(t')\, dt'.\tag{2.18}$$
+$$
+\begin{aligned}
+    &v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\tag{2.17}\\
+    &x(t) = x_0 + \int_0^t v_x(t')\, dt'.\tag{2.18}
+\end{aligned}
+$$
 
 *(Ở đây ta dùng biến tích phân hình thức $t'$ để phân biệt với cận trên $t$).*
 
@@ -115,10 +118,10 @@ Các điều kiện ban đầu đã cho:
 
 $$
 \begin{aligned}
-v_x(t) &= v_{0x} + \int_0^t a_x(t')\, dt' \\
-&= 10.0\,\mathrm{m/s} + \int_0^t \left( 2.0\,\mathrm{m/s^2} - 0.10\,\mathrm{m/s^3}\, t' \right) dt' \\
-&= 10.0\,\mathrm{m/s} + (2.0\,\mathrm{m/s^2})t - \frac{1}{2}(0.10\,\mathrm{m/s^3})t^2 \\
-&= 10.0 + 2.0t - 0.050t^2 \quad (\text{m/s}).
+&v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt'\\
+&\quad = 10.0\,\mathrm{m/s} + \int_0^t \left( 2.0\,\mathrm{m/s^2} - 0.10\,\mathrm{m/s^3}\, t' \right) dt'\\
+&\quad = 10.0\,\mathrm{m/s} + (2.0\,\mathrm{m/s^2})t - \frac{1}{2}(0.10\,\mathrm{m/s^3})t^2\\
+&\quad = 10.0 + 2.0t - 0.050t^2 \quad (\text{m/s}).
 \end{aligned}
 $$
 
@@ -126,10 +129,10 @@ Tiếp tục lấy tích phân hàm vận tốc theo công thức (2.18) để t
 
 $$
 \begin{aligned}
-x(t) &= x_0 + \int_0^t v_x(t')\, dt' \\
-&= 50.0\,\mathrm m + \int_0^t \left( 10.0 + 2.0t' - 0.050{t'}^2 \right) dt' \\
-&= 50.0 + 10.0t + \frac{1}{2}(2.0)t^2 - \frac{1}{3}(0.050)t^3 \\
-&= 50.0 + 10.0t + 1.0t^2 - \frac{1}{60}t^3 \quad (\text{m}).
+&x(t) = x_0 + \int_0^t v_x(t')\, dt'\\
+&\quad = 50.0\,\mathrm m + \int_0^t \left( 10.0 + 2.0t' - 0.050{t'}^2 \right) dt'\\
+&\quad = 50.0 + 10.0t + \frac{1}{2}(2.0)t^2 - \frac{1}{3}(0.050)t^3\\
+&\quad = 50.0 + 10.0t + 1.0t^2 - \frac{1}{60}t^3 \quad (\text{m}).
 \end{aligned}
 $$
 
@@ -150,9 +153,9 @@ Thay $t = 20.0\,\mathrm s$ vào biểu thức vị trí $x(t)$:
 
 $$
 \begin{aligned}
-x(20.0\,\mathrm s) &= 50.0 + 10.0(20.0) + 1.0(20.0)^2 - \frac{1}{60}(20.0)^3 \\
-&= 50.0 + 200.0 + 400.0 - \frac{8000}{60} \\
-&= 650.0 - 133.3 \approx 517\,\mathrm m.
+&x(20.0\,\mathrm s) = 50.0 + 10.0(20.0) + 1.0(20.0)^2 - \frac{1}{60}(20.0)^3\\
+&\quad = 50.0 + 200.0 + 400.0 - \frac{8000}{60}\\
+&\quad = 650.0 - 133.3 \approx 517\,\mathrm m.
 \end{aligned}
 $$
 

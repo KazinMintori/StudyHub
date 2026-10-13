@@ -59,8 +59,7 @@ Với vòng tròn bán kính $a$, trường tại điểm trên trục cách tâ
 
 $$
 \begin{aligned}
- B_x&=\frac{\mu_0Ia^2}{2(x^2+a^2)^{3/2}}.
-\end{aligned}
+ &B_x = \frac{\mu_0Ia^2}{2(x^2+a^2)^{3/2}}.\end{aligned}
 \tag{28.15}
 $$
 

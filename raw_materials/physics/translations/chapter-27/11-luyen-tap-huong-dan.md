@@ -25,16 +25,11 @@ Thành phần vận tốc vuông góc từ trường hướng $+x$. Do $\hat{\im
 
 $$
 \begin{aligned}
-|q|v&=3{,}52\times10^{-14},\\
-|q|vB&=5{,}46\times10^{-14}.
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-F&=|q|vB\sin50{,}0^\circ\\
-&=(5{,}46\times10^{-14})\sin50{,}0^\circ\\
-&=4{,}18\times10^{-14}.
+    &|q|v = 3{,}52\times10^{-14},\\
+    &|q|vB = 5{,}46\times10^{-14}.\\
+    &F = |q|vB\sin50{,}0^\circ\\
+    &\quad =(5{,}46\times10^{-14})\sin50{,}0^\circ\\
+    &\quad =4{,}18\times10^{-14}.
 \end{aligned}
 $$
 
@@ -56,11 +51,11 @@ Một hạt mang điện chuyển động trong từ trường $0{,}750\,\mathrm
 
 $$
 \begin{aligned}
-vB&=1{,}46\times10^5\,\mathrm{T\,m/s},\\
-vB\sin\theta&=8{,}59\times10^4\,\mathrm{T\,m/s},\\
-|q|&=\frac{F}{vB\sin\theta}\\
-&=\frac{2{,}50\times10^{-10}}{8{,}59\times10^4}\\
-&=2{,}91\times10^{-15}\,\mathrm{C}.
+&vB = 1{,}46\times10^5\,\mathrm{T\,m/s},\\
+&vB\sin\theta = 8{,}59\times10^4\,\mathrm{T\,m/s},\\
+&|q| = \frac{F}{vB\sin\theta}\\
+&\quad =\frac{2{,}50\times10^{-10}}{8{,}59\times10^4}\\
+&\quad =2{,}91\times10^{-15}\,\mathrm{C}.
 \end{aligned}
 $$
 :::
@@ -82,10 +77,10 @@ Vì $\hat{\imath}\times\hat{k}=-\hat{\jmath}$, thành phần $B_z$ phải dươn
 
 $$
 \begin{aligned}
-qv_x&=1{,}20\times10^{-13}\,\mathrm{C\,m/s},\\
-B_z&=\frac{F}{qv_x}\\
-&=\frac{2{,}10\times10^{-15}}{1{,}20\times10^{-13}}\\
-&=1{,}75\times10^{-2}\,\mathrm{T}.
+&qv_x = 1{,}20\times10^{-13}\,\mathrm{C\,m/s},\\
+&B_z = \frac{F}{qv_x}\\
+&\quad =\frac{2{,}10\times10^{-15}}{1{,}20\times10^{-13}}\\
+&\quad =1{,}75\times10^{-2}\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -107,12 +102,12 @@ Trong vành nhật hoa Mặt Trời có các ion sắt bị ion hóa mạnh. M�
 
 $$
 \begin{aligned}
-v_x&=(7{,}30\times10^3)\cos36{,}9^\circ\\
-&=5{,}84\times10^3\,\mathrm{m/s},\\
-qv_x&=1{,}215\times10^{-14}\,\mathrm{C\,m/s},\\
-B&=\frac{F}{qv_x}\\
-&=\frac{2{,}30\times10^{-15}}{1{,}21\times10^{-14}}\\
-&=0{,}189\,\mathrm{T}.
+&v_x = (7{,}30\times10^3)\cos36{,}9^\circ\\
+&\quad =5{,}84\times10^3\,\mathrm{m/s},\\
+&qv_x = 1{,}215\times10^{-14}\,\mathrm{C\,m/s},\\
+&B = \frac{F}{qv_x}\\
+&\quad =\frac{2{,}30\times10^{-15}}{1{,}21\times10^{-14}}\\
+&\quad =0{,}189\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -138,24 +133,14 @@ Từ trường điển hình trong vết đen Mặt Trời có độ lớn $0{,}
 
 $$
 \begin{aligned}
-qB&=4{,}80\times10^{-20},\\
-mv&=2{,}09\times10^{-23}.
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-r&=\frac{mv}{qB}\\
-&=\frac{2{,}09}{4{,}80}\times10^{-3}\,\mathrm{m}\\
-&=4{,}35\times10^{-4}\,\mathrm{m}\\
-&=0{,}435\,\mathrm{mm}.
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\omega&=\frac{qB}{m}=2{,}87\times10^7\,\mathrm{rad/s},\\
-f&=\frac{\omega}{2\pi}=4{,}57\times10^6\,\mathrm{Hz}.
+    &qB = 4{,}80\times10^{-20},\\
+    &mv = 2{,}09\times10^{-23}.\\
+    &r = \frac{mv}{qB}\\
+    &\quad =\frac{2{,}09}{4{,}80}\times10^{-3}\,\mathrm{m}\\
+    &\quad =4{,}35\times10^{-4}\,\mathrm{m}\\
+    &\quad =0{,}435\,\mathrm{mm}.\\
+    &\omega = \frac{qB}{m}=2{,}87\times10^7\,\mathrm{rad/s},\\
+    &f = \frac{\omega}{2\pi}=4{,}57\times10^6\,\mathrm{Hz}.
 \end{aligned}
 $$
 :::
@@ -177,10 +162,10 @@ Chu kỳ quay có độ lớn như trường hợp chuyển động tròn với 
 
 $$
 \begin{aligned}
-r&=\frac{mv_x}{qB}=0{,}348\,\mathrm{mm},\\
-T&=\frac{2\pi m}{qB}=2{,}19\times10^{-7}\,\mathrm{s},\\
-p&=v_yT=1{,}64\,\mathrm{mm},\\
-F&=qv_xB=4{,}80\times10^{-16}\,\mathrm{N}.
+&r = \frac{mv_x}{qB}=0{,}348\,\mathrm{mm},\\
+&T = \frac{2\pi m}{qB}=2{,}19\times10^{-7}\,\mathrm{s},\\
+&p = v_yT=1{,}64\,\mathrm{mm},\\
+&F = qv_xB=4{,}80\times10^{-16}\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -204,8 +189,8 @@ Bộ chọn vận tốc dùng điện trường $\vec E=(2{,}80\times10^4\,\math
 
 $$
 \begin{aligned}
-v&=\frac{E}{B}=\frac{2{,}80\times10^4}{0{,}0350}\\
-&=8{,}00\times10^5\,\mathrm{m/s}.
+&v = \frac{E}{B}=\frac{2{,}80\times10^4}{0{,}0350}\\
+&\quad =8{,}00\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -227,11 +212,11 @@ Một chùm ion oxygen đi qua khối phổ kế như Hình 27.24. Hạt nhân r
 
 $$
 \begin{aligned}
-qB'&=8{,}00\times10^{-21}\,\mathrm{C\,T},\\
-m_{16}v&=5{,}32\times10^{-22}\,\mathrm{kg\,m/s},\\
-r_{16}&=\frac{m_{16}v}{qB'}=6{,}64\,\mathrm{cm},\\
-m_{18}v&=5{,}98\times10^{-22}\,\mathrm{kg\,m/s},\\
-r_{18}&=\frac{m_{18}v}{qB'}=7{,}47\,\mathrm{cm}.
+&qB' = 8{,}00\times10^{-21}\,\mathrm{C\,T},\\
+&m_{16}v = 5{,}32\times10^{-22}\,\mathrm{kg\,m/s},\\
+&r_{16} = \frac{m_{16}v}{qB'}=6{,}64\,\mathrm{cm},\\
+&m_{18}v = 5{,}98\times10^{-22}\,\mathrm{kg\,m/s},\\
+&r_{18} = \frac{m_{18}v}{qB'}=7{,}47\,\mathrm{cm}.
 \end{aligned}
 $$
 :::
@@ -255,11 +240,11 @@ Một dây thẳng dài $0{,}150\,\mathrm{m}$ mang dòng điện $3{,}50\,\mathr
 
 $$
 \begin{aligned}
-I\ell B&=(3{,}50)(0{,}150)(0{,}0136)\\
-&=7{,}14\times10^{-3}\,\mathrm{N},\\
-F&=I\ell B\sin20^\circ\\
-&=(7{,}14\times10^{-3})\sin20^\circ\\
-&=2{,}44\times10^{-3}\,\mathrm{N}.
+&I\ell B = (3{,}50)(0{,}150)(0{,}0136)\\
+&\quad =7{,}14\times10^{-3}\,\mathrm{N},\\
+&F = I\ell B\sin20^\circ\\
+&\quad =(7{,}14\times10^{-3})\sin20^\circ\\
+&\quad =2{,}44\times10^{-3}\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -281,9 +266,9 @@ Một dây thẳng đứng dài $25{,}0\,\mathrm{cm}$ mang dòng điện chưa b
 
 $$
 \begin{aligned}
-I&=\frac{F}{\ell B}\\
-&=\frac{0{,}0140}{(0{,}250)(0{,}0350)}\\
-&=1{,}60\,\mathrm{A}.
+&I = \frac{F}{\ell B}\\
+&\quad =\frac{0{,}0140}{(0{,}250)(0{,}0350)}\\
+&\quad =1{,}60\,\mathrm{A}.
 \end{aligned}
 $$
 
@@ -305,13 +290,13 @@ Một dây thẳng mang dòng $1{,}20\,\mathrm{A}$. Véc-tơ chiều dài dây l
 
 $$
 \begin{aligned}
-F_x&=I\ell_yB_z\\
-&=(1{,}20)(-0{,}120)(0{,}0175)\\
-&=-2{,}52\times10^{-3}\,\mathrm{N},\\
-F_y&=-I\ell_xB_z\\
-&=-(1{,}20)(0{,}200)(0{,}0175)\\
-&=-4{,}20\times10^{-3}\,\mathrm{N},\\
-F_z&=0.
+&F_x = I\ell_yB_z\\
+&\quad =(1{,}20)(-0{,}120)(0{,}0175)\\
+&\quad =-2{,}52\times10^{-3}\,\mathrm{N},\\
+&F_y = -I\ell_xB_z\\
+&\quad =-(1{,}20)(0{,}200)(0{,}0175)\\
+&\quad =-4{,}20\times10^{-3}\,\mathrm{N},\\
+&F_z = 0.
 \end{aligned}
 $$
 
@@ -319,8 +304,8 @@ Do đó $F_x=-2{,}52\times10^{-3}\,\mathrm{N}$, $F_y=-4{,}20\times10^{-3}\,\math
 
 $$
 \begin{aligned}
-F&=\sqrt{F_x^2+F_y^2}\\
-&=4{,}90\times10^{-3}\,\mathrm{N}.
+&F = \sqrt{F_x^2+F_y^2}\\
+&\quad =4{,}90\times10^{-3}\,\mathrm{N}.
 \end{aligned}
 $$
 :::
@@ -340,10 +325,10 @@ Một dây thẳng dài $0{,}280\,\mathrm{m}$ mang dòng $3{,}40\,\mathrm{A}$. H
 
 $$
 \begin{aligned}
-\sin\theta&=\frac{0{,}0250}{(3{,}40)(0{,}280)(0{,}0400)}\\
-&=0{,}655,\\
-\theta_1&=41{,}0^\circ,\\
-\theta_2&=180^\circ-\theta_1=139{,}0^\circ.
+&\sin\theta = \frac{0{,}0250}{(3{,}40)(0{,}280)(0{,}0400)}\\
+&\quad =0{,}655,\\
+&\theta_1 = 41{,}0^\circ,\\
+&\theta_2 = 180^\circ-\theta_1=139{,}0^\circ.
 \end{aligned}
 $$
 :::
@@ -356,9 +341,9 @@ Một vòng dây tròn diện tích $4{,}45\,\mathrm{cm^2}$ mang dòng $12{,}5\,
 
 $$
 \begin{aligned}
-\vec B&=B_0(12\hat{\imath}\\
+&\vec B = B_0(12\hat{\imath}\\
 &\quad+3\hat{\jmath}-4\hat{k}),\\
-B_0&=1{,}15\times10^{-2}\,\mathrm{T}.
+&B_0 = 1{,}15\times10^{-2}\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -385,9 +370,9 @@ Từ trường có các thành phần $B_x=0{,}138\,\mathrm{T}$, $B_y=0{,}0345\,
 
 $$
 \begin{aligned}
-\mu&=IA\\
-&=(12{,}5)(4{,}45\times10^{-4})\\
-&=5{,}5625\times10^{-3}\,\mathrm{A\,m^2}.
+&\mu = IA\\
+&\quad =(12{,}5)(4{,}45\times10^{-4})\\
+&\quad =5{,}5625\times10^{-3}\,\mathrm{A\,m^2}.
 \end{aligned}
 $$
 
@@ -397,12 +382,12 @@ $$
 
 $$
 \begin{aligned}
-\tau_x&=\mu_yB_z-\mu_zB_y\\
-&=-1{,}54\times10^{-4}\,\mathrm{N\,m},\\
-\tau_y&=\mu_zB_x-\mu_xB_z\\
-&=-2{,}05\times10^{-4}\,\mathrm{N\,m},\\
-\tau_z&=\mu_xB_y-\mu_yB_x\\
-&=-6{,}14\times10^{-4}\,\mathrm{N\,m}.
+&\tau_x = \mu_yB_z-\mu_zB_y\\
+&\quad =-1{,}54\times10^{-4}\,\mathrm{N\,m},\\
+&\tau_y = \mu_zB_x-\mu_xB_z\\
+&\quad =-2{,}05\times10^{-4}\,\mathrm{N\,m},\\
+&\tau_z = \mu_xB_y-\mu_yB_x\\
+&\quad =-6{,}14\times10^{-4}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -412,11 +397,11 @@ Ba thành phần mômen lực ban đầu đều hướng theo chiều âm của 
 
 $$
 \begin{aligned}
-U_i&=0{,}0897\mu\\
-&=+4{,}99\times10^{-4}\,\mathrm{J},\\
-U_f&=-0{,}0460\mu\\
-&=-2{,}56\times10^{-4}\,\mathrm{J},\\
-U_i-U_f&=7{,}55\times10^{-4}\,\mathrm{J}.
+&U_i = 0{,}0897\mu\\
+&\quad =+4{,}99\times10^{-4}\,\mathrm{J},\\
+&U_f = -0{,}0460\mu\\
+&\quad =-2{,}56\times10^{-4}\,\mathrm{J},\\
+&U_i-U_f = 7{,}55\times10^{-4}\,\mathrm{J}.
 \end{aligned}
 $$
 
@@ -424,9 +409,9 @@ $$
 
 $$
 \begin{aligned}
-K_f&=U_i-U_f\\
-&=7{,}55\times10^{-4}\,\mathrm{J},\\
-K_f&=\frac12 I_{\mathrm{quay}}\omega^2.
+&K_f = U_i-U_f\\
+&\quad =7{,}55\times10^{-4}\,\mathrm{J},\\
+&K_f = \frac12 I_{\mathrm{quay}}\omega^2.
 \end{aligned}
 $$
 
@@ -434,8 +419,8 @@ $$
 
 $$
 \begin{aligned}
-\omega&=\sqrt{\frac{2(U_i-U_f)}{I_{\mathrm{quay}}}}\\
-&=42{,}1\,\mathrm{rad/s}.
+&\omega = \sqrt{\frac{2(U_i-U_f)}{I_{\mathrm{quay}}}}\\
+&\quad =42{,}1\,\mathrm{rad/s}.
 \end{aligned}
 $$
 

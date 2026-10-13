@@ -12,8 +12,8 @@ Với bất kỳ tổ hợp điện trở nào, ta có thể thay cả tổ hợ
 
 $$
 \begin{aligned}
-V_{ab}&=IR_{\mathrm{eq}},\\
-R_{\mathrm{eq}}&=\frac{V_{ab}}{I}.
+&V_{ab} = IR_{\mathrm{eq}},\\
+&R_{\mathrm{eq}} = \frac{V_{ab}}{I}.
 \end{aligned}
 $$
 
@@ -25,9 +25,9 @@ Trong Hình 26.1a, dòng điện $I$ như nhau qua cả ba điện trở. Địn
 
 $$
 \begin{aligned}
-V_{ax}&=IR_1,\\
-V_{xy}&=IR_2,\\
-V_{yb}&=IR_3.
+&V_{ax} = IR_1,\\
+&V_{xy} = IR_2,\\
+&V_{yb} = IR_3.
 \end{aligned}
 $$
 
@@ -35,9 +35,9 @@ Hiệu điện thế trên từng điện trở không nhất thiết bằng nha
 
 $$
 \begin{aligned}
-V_{ab}&=V_{ax}+V_{xy}+V_{yb}\\
-&=IR_1+IR_2+IR_3\\
-&=I(R_1+R_2+R_3).
+&V_{ab} = V_{ax}+V_{xy}+V_{yb}\\
+&\quad =IR_1+IR_2+IR_3\\
+&\quad =I(R_1+R_2+R_3).
 \end{aligned}
 $$
 
@@ -45,7 +45,7 @@ Chia hai vế cho dòng điện chung $I$ và dùng định nghĩa điện trở
 
 $$
 \begin{aligned}
-R_{\mathrm{eq}}&=R_1+R_2\\
+&R_{\mathrm{eq}} = R_1+R_2\\
 &\quad+R_3.
 \end{aligned}
 \tag{26.1}
@@ -75,9 +75,9 @@ Gọi các dòng điện qua ba điện trở lần lượt là $I_1$, $I_2$ và
 
 $$
 \begin{aligned}
-I_1&=\frac{V_{ab}}{R_1},\\
-I_2&=\frac{V_{ab}}{R_2},\\
-I_3&=\frac{V_{ab}}{R_3}.
+&I_1 = \frac{V_{ab}}{R_1},\\
+&I_2 = \frac{V_{ab}}{R_2},\\
+&I_3 = \frac{V_{ab}}{R_3}.
 \end{aligned}
 $$
 
@@ -85,8 +85,8 @@ $$
 
 $$
 \begin{aligned}
-I&=I_1+I_2+I_3\\
-&=\frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2}\\
+&I = I_1+I_2+I_3\\
+&\quad =\frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2}\\
 &\quad+\frac{V_{ab}}{R_3}.
 \end{aligned}
 $$
@@ -95,7 +95,7 @@ Theo định nghĩa điện trở tương đương, $I/V_{ab}=1/R_{\mathrm{eq}}$
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{eq}}}&=\frac{1}{R_1}\\
+&\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1}\\
 &\quad+\frac{1}{R_2}\\
 &\quad+\frac{1}{R_3}.
 \end{aligned}
@@ -106,9 +106,9 @@ Với $n$ điện trở mắc song song, ta khai triển ba số hạng đầu t
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{eq}}}&=\frac{1}{R_1}+\frac{1}{R_2}\\
+&\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1}+\frac{1}{R_2}\\
 &\quad+\frac{1}{R_3}+\cdots+\frac{1}{R_n}\\
-&=\sum_{i=1}^{n}\frac{1}{R_i}.
+&\quad =\sum_{i=1}^{n}\frac{1}{R_i}.
 \end{aligned}
 $$
 
@@ -122,9 +122,9 @@ Với hai điện trở song song, quy tắc trên cho
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{eq}}}&=\frac{1}{R_1}\\
-&+\frac{1}{R_2}\\
-&=\frac{R_1+R_2}{R_1R_2}.
+&\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1}\\
+&\quad +\frac{1}{R_2}\\
+&\quad =\frac{R_1+R_2}{R_1R_2}.
 \end{aligned}
 $$
 
@@ -132,7 +132,7 @@ Suy ra công thức tích trên tổng:
 
 $$
 \begin{aligned}
-R_{\mathrm{eq}}&=\\
+&R_{\mathrm{eq}} = \\
 &\frac{R_1R_2}{R_1+R_2}.
 \end{aligned}
 \tag{26.3}
@@ -188,10 +188,10 @@ Từ (26.2), điện trở tương đương của cặp $6\,\Omega$ và $3\,\Ome
 
 $$
 \begin{aligned}
-\frac{1}{R_{6\parallel3}}&=\frac{1}{6\,\Omega}\\
-&+\frac{1}{3\,\Omega}\\
-&=\frac{1}{2\,\Omega},\\
-R_{6\parallel3}&=2\,\Omega.
+&\frac{1}{R_{6\parallel3}} = \frac{1}{6\,\Omega}\\
+&\quad +\frac{1}{3\,\Omega}\\
+&\quad =\frac{1}{2\,\Omega},\\
+&R_{6\parallel3} = 2\,\Omega.
 \end{aligned}
 $$
 
@@ -217,8 +217,8 @@ Hai điện trở song song cùng chịu hiệu điện thế này. Do đó,
 
 $$
 \begin{aligned}
-I_{6\,\Omega}&=\frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A,\\
-I_{3\,\Omega}&=\frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
+&I_{6\,\Omega} = \frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A,\\
+&I_{3\,\Omega} = \frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
 \end{aligned}
 $$
 
@@ -260,9 +260,9 @@ Vì hai điện trở bằng nhau, hiệu điện thế trên từng bóng cũng
 
 $$
 \begin{aligned}
-V_{ab}=V_{bc}&=IR\\
-&=(2\,\mathrm A)(2\,\Omega)\\
-&=4\,\mathrm V.
+&V_{ab}=V_{bc} = IR\\
+&\quad =(2\,\mathrm A)(2\,\Omega)\\
+&\quad =4\,\mathrm V.
 \end{aligned}
 $$
 
@@ -270,9 +270,9 @@ Công suất mỗi bóng là
 
 $$
 \begin{aligned}
-P&=I^2R\\
-&=(2\,\mathrm A)^2(2\,\Omega)\\
-&=8\,\mathrm W.
+&P = I^2R\\
+&\quad =(2\,\mathrm A)^2(2\,\Omega)\\
+&\quad =8\,\mathrm W.
 \end{aligned}
 $$
 
@@ -280,9 +280,9 @@ Có thể kiểm tra công suất bằng hiệu điện thế trên bóng:
 
 $$
 \begin{aligned}
-P&=\frac{V^2}{R}\\
-&=\frac{(4\,\mathrm V)^2}{2\,\Omega}\\
-&=8\,\mathrm W.
+&P = \frac{V^2}{R}\\
+&\quad =\frac{(4\,\mathrm V)^2}{2\,\Omega}\\
+&\quad =8\,\mathrm W.
 \end{aligned}
 $$
 
@@ -302,9 +302,9 @@ Công suất mỗi bóng là
 
 $$
 \begin{aligned}
-P&=I^2R\\
-&=(4\,\mathrm A)^2(2\,\Omega)\\
-&=32\,\mathrm W.
+&P = I^2R\\
+&\quad =(4\,\mathrm A)^2(2\,\Omega)\\
+&\quad =32\,\mathrm W.
 \end{aligned}
 $$
 
@@ -312,9 +312,9 @@ Kiểm tra theo hiệu điện thế:
 
 $$
 \begin{aligned}
-P&=\frac{V^2}{R}\\
-&=\frac{(8\,\mathrm V)^2}{2\,\Omega}\\
-&=32\,\mathrm W.
+&P = \frac{V^2}{R}\\
+&\quad =\frac{(8\,\mathrm V)^2}{2\,\Omega}\\
+&\quad =32\,\mathrm W.
 \end{aligned}
 $$
 

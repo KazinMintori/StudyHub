@@ -17,9 +17,9 @@ Bài toán tối ưu vector có dạng
 
 $$
 \begin{aligned}
-\text{minimize (theo } K\text{)}\quad & f_0(x)\\
-\text{subject to}\quad & f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-& h_i(x) = 0, \quad i = 1, \ldots, p,
+&\text{minimize (theo } K\text{)}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p,
 \end{aligned}
 $$
 

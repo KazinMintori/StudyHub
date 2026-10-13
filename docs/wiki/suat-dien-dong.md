@@ -25,8 +25,8 @@ Với nguồn lý tưởng, điện áp hai cực bằng ℰ. Với nguồn có 
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E-Ir,\\
-I&=\frac{\mathcal E}{R+r}.
+&V_{ab} = \mathcal E-Ir,\\
+&I = \frac{\mathcal E}{R+r}.
 \end{aligned}
 $$
 

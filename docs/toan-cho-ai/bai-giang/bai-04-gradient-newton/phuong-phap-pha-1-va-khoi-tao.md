@@ -19,9 +19,9 @@ Xét bài toán tối ưu lồi tổng quát:
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x) \\
-\text{subject to}\quad & f_i(x) \le 0, \quad i = 1, \dots, m, \\
-& A x = b.
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } A x = b.
 \end{aligned}
 $$
 
@@ -29,9 +29,9 @@ $$
 
 $$
 \begin{aligned}
-\text{minimize}\quad & s \\
-\text{subject to}\quad & f_i(x) \le s, \quad i = 1, \dots, m, \\
-& A x = b,
+&\text{minimize}\quad s\\
+&\text{subject to}\quad f_i(x) \le s, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } A x = b,
 \end{aligned}
 $$
 
@@ -68,10 +68,10 @@ Phương pháp biến bù cơ bản gán cùng một mức độ nới lỏng $s
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \mathbf{1}^T s = \sum_{i=1} s_i \\
-\text{subject to}\quad & f_i(x) \le s_i, \quad i = 1, \dots, m, \\
-& s_i \ge 0, \quad i = 1, \dots, m, \\
-& A x = b,
+&\text{minimize}\quad \mathbf{1}^T s = \sum_{i=1} s_i\\
+&\text{subject to}\quad f_i(x) \le s_i, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } s_i \ge 0, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } A x = b,
 \end{aligned}
 $$
 
@@ -90,9 +90,9 @@ Nếu giá trị tối ưu của bài toán bằng 0 ($\mathbf{1}^T s^* = 0$), t
 Xét hệ bất đẳng thức tuyến tính gồm 3 ràng buộc trên mặt phẳng $\mathbb{R}^2$:
 $$
 \begin{aligned}
-f_1(x) &= x_1 + x_2 - 2 \le 0, \\
-f_2(x) &= -x_1 + x_2 - 2 \le 0, \\
-f_3(x) &= -x_2 - 1 \le 0.
+&f_1(x) = x_1 + x_2 - 2 \le 0,\\
+&f_2(x) = -x_1 + x_2 - 2 \le 0,\\
+&f_3(x) = -x_2 - 1 \le 0.
 \end{aligned}
 $$
 1. Chọn điểm khởi đầu $x^{(0)} = (2, 2)^T$. Xác định giá trị biến bù ban đầu $s^{(0)}$ tối thiểu để cặp $(x^{(0)}, s^{(0)})$ khả thi ngặt với bài toán Pha I.
@@ -116,10 +116,10 @@ $$
    Bài toán Pha I:
    $$
    \begin{aligned}
-   \text{minimize}\quad & s \\
-   \text{subject to}\quad & x_1 + x_2 - 2 \le s, \\
-   & -x_1 + x_2 - 2 \le s, \\
-   & -x_2 - 1 \le s.
+   &\text{minimize}\quad s\\
+   &\text{subject to}\quad x_1 + x_2 - 2 \le s,\\
+   &\phantom{\text{subject to}\quad } -x_1 + x_2 - 2 \le s,\\
+   &\phantom{\text{subject to}\quad } -x_2 - 1 \le s.
    \end{aligned}
    $$
    Cộng hai bất đẳng thức đầu tiên:
@@ -153,10 +153,10 @@ Xét hệ hai bất đẳng thức trên trục số thực: Giả sử $x \ge 3
    Bài toán tổng độ vi phạm:
    $$
    \begin{aligned}
-   \text{minimize}\quad & s_1 + s_2 \\
-   \text{subject to}\quad & 3 - x \le s_1, \\
-   & x - 1 \le s_2, \\
-   & s_1 \ge 0, \quad s_2 \ge 0.
+   &\text{minimize}\quad s_1 + s_2\\
+   &\text{subject to}\quad 3 - x \le s_1,\\
+   &\phantom{\text{subject to}\quad } x - 1 \le s_2,\\
+   &\phantom{\text{subject to}\quad } s_1 \ge 0, \quad s_2 \ge 0.
    \end{aligned}
    $$
 

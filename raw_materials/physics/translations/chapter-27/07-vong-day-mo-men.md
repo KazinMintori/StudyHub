@@ -23,8 +23,8 @@ Các cạnh dài $b$ hợp với từ trường góc $90^\circ-\phi$, nên lực
 
 $$
 \begin{aligned}
-F'&=IbB\sin(90^\circ-\phi)\\
-&=IbB\cos\phi.
+&F' = IbB\sin(90^\circ-\phi)\\
+&\quad =IbB\cos\phi.
 \end{aligned}
 $$
 
@@ -32,8 +32,8 @@ Các lực trên từng cặp cạnh triệt tiêu theo véc-tơ. Vì thế tổ
 
 $$
 \begin{aligned}
-\tau&=2F\left(\frac{b}{2}\sin\phi\right)\\
-&=(IaB)(b\sin\phi).
+&\tau = 2F\left(\frac{b}{2}\sin\phi\right)\\
+&\quad =(IaB)(b\sin\phi).
 \end{aligned}
 \tag{27.22}
 $$
@@ -53,8 +53,7 @@ Tích của dòng điện với diện tích vòng được gọi là độ lớ
 
 $$
 \begin{aligned}
-\mu&=IA.
-\end{aligned}
+&\mu = IA.\end{aligned}
 \tag{27.24}
 $$
 
@@ -64,8 +63,7 @@ Với góc $\phi$ giữa $\vec{\mu}$ và $\vec{B}$, độ lớn mômen lực là
 
 $$
 \begin{aligned}
-\tau&=\mu B\sin\phi.
-\end{aligned}
+&\tau = \mu B\sin\phi.\end{aligned}
 \tag{27.25}
 $$
 
@@ -73,8 +71,7 @@ Chiều mômen được cho bởi tích có hướng:
 
 $$
 \begin{aligned}
-\vec{\tau}&=\vec{\mu}\times\vec{B}.
-\end{aligned}
+&\vec{\tau} = \vec{\mu}\times\vec{B}.\end{aligned}
 \tag{27.26}
 $$
 
@@ -90,8 +87,8 @@ Khi mômen từ đổi hướng trong từ trường, từ trường sinh công.
 
 $$
 \begin{aligned}
-U&=-\vec{\mu}\cdot\vec{B}\\
-&=-\mu B\cos\phi.
+&U = -\vec{\mu}\cdot\vec{B}\\
+&\quad =-\mu B\cos\phi.
 \end{aligned}
 \tag{27.27}
 $$
@@ -112,8 +109,8 @@ Với cuộn gồm $N$ vòng sát nhau, mỗi vòng đóng góp cùng chiều. M
 
 $$
 \begin{aligned}
-\mu&=NIA,\\
-\tau&=NIAB\sin\phi.
+&\mu = NIA,\\
+&\tau = NIAB\sin\phi.
 \end{aligned}
 \tag{27.28}
 $$
@@ -158,9 +155,9 @@ Diện tích một vòng là $A=\pi r^2$. Mômen từ của cả cuộn là:
 
 $$
 \begin{aligned}
-\mu&=NIA\\
-&=30(5{,}00)\pi(0{,}0500)^2\\
-&=1{,}18\,\mathrm{A\,m^2}.
+&\mu = NIA\\
+&\quad =30(5{,}00)\pi(0{,}0500)^2\\
+&\quad =1{,}18\,\mathrm{A\,m^2}.
 \end{aligned}
 $$
 
@@ -168,9 +165,9 @@ Theo quy tắc bàn tay phải, $\vec{\mu}$ hướng lên, vuông góc với $\v
 
 $$
 \begin{aligned}
-\tau&=\mu B\sin90^\circ\\
-&=(1{,}18)(1{,}20)\\
-&=1{,}41\,\mathrm{N\,m}.
+&\tau = \mu B\sin90^\circ\\
+&\quad =(1{,}18)(1{,}20)\\
+&\quad =1{,}41\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -182,9 +179,9 @@ Nếu cuộn ở trên quay đến vị trí $\vec{\mu}$ song song $\vec{B}$, g�
 
 $$
 \begin{aligned}
-\Delta U&=U_f-U_i\\
-&=-\mu B(\cos0^\circ-\cos90^\circ)\\
-&=-1{,}41\,\mathrm{J}.
+&\Delta U = U_f-U_i\\
+&\quad =-\mu B(\cos0^\circ-\cos90^\circ)\\
+&\quad =-1{,}41\,\mathrm{J}.
 \end{aligned}
 $$
 

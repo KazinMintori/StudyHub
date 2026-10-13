@@ -19,9 +19,9 @@ Ví dụ đơn giản nhất là phép co giãn. Nhân hàm mục tiêu và các
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \alpha_0 f_0(x)\\
-\text{subject to}\quad & \alpha_i f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-& \beta_i h_i(x) = 0, \quad i = 1, \ldots, p.
+&\text{minimize}\quad \alpha_0 f_0(x)\\
+&\text{subject to}\quad \alpha_i f_i(x) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } \beta_i h_i(x) = 0, \quad i = 1, \ldots, p.
 \end{aligned}
 $$
 
@@ -65,10 +65,10 @@ Một bất đẳng thức có thể được thay bằng một đẳng thức c
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x)\\
-\text{subject to}\quad & s_i \ge 0, \quad i = 1, \ldots, m,\\
-& f_i(x) + s_i = 0, \quad i = 1, \ldots, m,\\
-& h_i(x) = 0, \quad i = 1, \ldots, p,
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad s_i \ge 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } f_i(x) + s_i = 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p,
 \end{aligned}
 $$
 
@@ -82,10 +82,10 @@ Bài toán gốc tương đương với bài toán
 
 $$
 \begin{aligned}
-\text{minimize}\quad & t\\
-\text{subject to}\quad & f_0(x) - t \le 0,\\
-& f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-& h_i(x) = 0, \quad i = 1, \ldots, p,
+&\text{minimize}\quad t\\
+&\text{subject to}\quad f_0(x) - t \le 0,\\
+&\phantom{\text{subject to}\quad } f_i(x) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p,
 \end{aligned}
 $$
 

@@ -38,13 +38,11 @@ Hãy xem xét phát biểu tưởng chừng rất tự nhiên sau:
 
 Nếu chỉ dùng logic mệnh đề, chúng ta bất lực trong việc viết ra một quy tắc khái quát! Vì không có khái niệm biến số hay đối tượng, chúng ta buộc phải tạo ra vô số mệnh đề độc lập cho từng người:
 $$
-\text{SinhVien\_An} \implies \text{DuTinChi\_An}
-$$
-$$
-\text{SinhVien\_Binh} \implies \text{DuTinChi\_Binh}
-$$
-$$
-\text{SinhVien\_Cuong} \implies \text{DuTinChi\_Cuong}
+\begin{aligned}
+    &\text{SinhVien\_An} \implies \text{DuTinChi\_An}\\
+    &\text{SinhVien\_Binh} \implies \text{DuTinChi\_Binh}\\
+    &\text{SinhVien\_Cuong} \implies \text{DuTinChi\_Cuong}
+\end{aligned}
 $$
 
 Nếu trường học có 10.000 sinh viên, cơ sở tri thức phải lưu 10.000 câu riêng rẽ. Nếu có một sinh viên mới nhập học, hệ thống hoàn toàn không biết sinh viên đó có cần đủ tín chỉ hay không cho đến khi ta tự tay chép thêm một câu mới vào bộ nhớ!
@@ -128,10 +126,10 @@ Rõ ràng Câu B đưa ra một đòi hỏi mạnh mẽ hơn Câu A rất nhiề
 
 Tuy nhiên, nếu hai lượng từ cùng loại đi liền nhau, ta hoàn toàn có quyền đảo thứ tự tự do:
 $$
-\forall x \forall y \; P(x, y) \iff \forall y \forall x \; P(x, y)
-$$
-$$
-\exists x \exists y \; P(x, y) \iff \exists y \exists x \; P(x, y)
+\begin{aligned}
+    &\forall x \forall y \; P(x, y) \iff \forall y \forall x \; P(x, y)\\
+    &\exists x \exists y \; P(x, y) \iff \exists y \exists x \; P(x, y)
+\end{aligned}
 $$
 
 ---

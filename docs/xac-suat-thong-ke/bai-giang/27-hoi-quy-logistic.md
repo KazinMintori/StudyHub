@@ -168,11 +168,11 @@ Biến đổi phương trình hồi quy logistic:
 
 $$
 \begin{aligned}
-p &= \frac{1}{1 + e^{-z}} \\
-\iff 1 + e^{-z} &= \frac{1}{p} \\
-\iff e^{-z} &= \frac{1 - p}{p} \\
-\iff e^z &= \frac{p}{1 - p} = \text{Odds} \\
-\iff z &= \ln\left(\frac{p}{1 - p}\right)
+&p = \frac{1}{1 + e^{-z}}\\
+&\iff 1 + e^{-z} = \frac{1}{p}\\
+&\iff e^{-z} = \frac{1 - p}{p}\\
+&\iff e^z = \frac{p}{1 - p} = \text{Odds}\\
+&\iff z = \ln\left(\frac{p}{1 - p}\right)
 \end{aligned}
 $$
 

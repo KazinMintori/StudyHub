@@ -21,8 +21,8 @@ Khoảng cách Euclid được tính bằng
 
 $$
 \begin{aligned}
-\|x-y\|_2^2&=(x_1-y_1)^2+\cdots+(x_n-y_n)^2,\\
-\|x-y\|_2&=\left(\sum_{i=1}^{n}(x_i-y_i)^2\right)^{1/2}.
+&\|x-y\|_2^2 = (x_1-y_1)^2+\cdots+(x_n-y_n)^2,\\
+&\|x-y\|_2 = \left(\sum_{i=1}^{n}(x_i-y_i)^2\right)^{1/2}.
 \end{aligned}
 $$
 
@@ -36,8 +36,8 @@ Vì chưa biết $x^\star$, tiêu chuẩn khoảng cách thường không kiểm
 
 $$
 \begin{aligned}
-f(x+h)&=f(x)+f'(x+\theta_1h)h,\\
-0&<\theta_1<1.
+&f(x+h) = f(x)+f'(x+\theta_1h)h,\\
+&0 <\theta_1<1.
 \end{aligned}
 $$
 
@@ -45,8 +45,8 @@ Công thức đúng với cả $h>0$ và $h<0$, vì $x+\theta_1h$ luôn nằm gi
 
 $$
 \begin{aligned}
-f(x+h)&=f(x)+f'(x)h+\frac12f''(x+\theta_2h)h^2,\\
-0&<\theta_2<1.
+&f(x+h) = f(x)+f'(x)h+\frac12f''(x+\theta_2h)h^2,\\
+&0 <\theta_2<1.
 \end{aligned}
 $$
 
@@ -74,9 +74,9 @@ Cho $F:\mathbb R^n\to\mathbb R^m$ và $g:\mathbb R^m\to\mathbb R$. Viết
 
 $$
 \begin{aligned}
-F(x)&=(F_1(x),\ldots,F_m(x)),\\
-G(x)&=(g\circ F)(x)\\
-&=g(F_1(x),\ldots,F_m(x)).
+&F(x) = (F_1(x),\ldots,F_m(x)),\\
+&G(x) = (g\circ F)(x)\\
+&\quad =g(F_1(x),\ldots,F_m(x)).
 \end{aligned}
 $$
 
@@ -84,8 +84,7 @@ Với hai thành phần của hàm trong, đạo hàm theo $x_i$ là
 
 $$
 \begin{aligned}
-\frac{\partial G}{\partial x_i}(x)
-&=\frac{\partial g}{\partial y_1}(F(x))
+&\frac{\partial G}{\partial x_i}(x) =\frac{\partial g}{\partial y_1}(F(x))
 \frac{\partial F_1}{\partial x_i}(x)\\
 &\quad+\frac{\partial g}{\partial y_2}(F(x))
 \frac{\partial F_2}{\partial x_i}(x).
@@ -121,9 +120,8 @@ Trong $n$ chiều, công thức là
 
 $$
 \begin{aligned}
-\frac{d}{dt}f(\varphi(t))
-&=\sum_{i=1}^{n}f_{x_i}(\varphi(t))\varphi_i'(t)\\
-&=\nabla f(\varphi(t))^T\varphi'(t).
+&\frac{d}{dt}f(\varphi(t)) = \sum_{i=1}^{n}f_{x_i}(\varphi(t))\varphi_i'(t)\\
+&\quad =\nabla f(\varphi(t))^T\varphi'(t).
 \end{aligned}
 $$
 
@@ -135,8 +133,8 @@ Cố định $x,h\in\mathbb R^n$ và đặt
 
 $$
 \begin{aligned}
-\varphi(t)&=x+th,\\
-g(t)&=f(x+th).
+&\varphi(t) = x+th,\\
+&g(t) = f(x+th).
 \end{aligned}
 $$
 
@@ -144,8 +142,8 @@ Các tọa độ của đường là $x_i+th_i$ và đạo hàm của chúng b�
 
 $$
 \begin{aligned}
-g'(t)&=\sum_{i=1}^{n}f_{x_i}(x+th)h_i\\
-&=\nabla f(x+th)^Th.
+&g'(t) = \sum_{i=1}^{n}f_{x_i}(x+th)h_i\\
+&\quad =\nabla f(x+th)^Th.
 \end{aligned}
 $$
 
@@ -153,10 +151,9 @@ Nếu $f\in C^2$, lấy đạo hàm lần nữa được
 
 $$
 \begin{aligned}
-g''(t)
-&=\sum_{i=1}^{n}\sum_{j=1}^{n}
+&g''(t) =\sum_{i=1}^{n}\sum_{j=1}^{n}
 f_{x_jx_i}(x+th)h_ih_j\\
-&=h^T\nabla^2f(x+th)h.
+&\quad =h^T\nabla^2f(x+th)h.
 \end{aligned}
 $$
 
@@ -164,7 +161,7 @@ $$
 
 $$
 \begin{aligned}
-g''(t)&=f_{x_1x_1}h_1^2+f_{x_2x_1}h_1h_2\\
+&g''(t) = f_{x_1x_1}h_1^2+f_{x_2x_1}h_1h_2\\
 &\quad+f_{x_1x_2}h_2h_1+f_{x_2x_2}h_2^2.
 \end{aligned}
 $$
@@ -177,8 +174,8 @@ Các đạo hàm trên đều được đánh giá tại $x+th$. Vì Hessian đ�
 
 $$
 \begin{aligned}
-g(1)&=g(0)+g'(\theta_1),\\
-f(x+h)&=f(x)+\nabla f(x+\theta_1h)^Th.
+&g(1) = g(0)+g'(\theta_1),\\
+&f(x+h) = f(x)+\nabla f(x+\theta_1h)^Th.
 \end{aligned}
 $$
 
@@ -207,9 +204,9 @@ Khai triển được
 
 $$
 \begin{aligned}
-g(t)&=(2-4t)^2+2(1-4t)^2\\
-&=6-32t+48t^2,\\
-g'(0)&=-32,\quad g''(t)=96.
+&g(t) = (2-4t)^2+2(1-4t)^2\\
+&\quad =6-32t+48t^2,\\
+&g'(0) = -32,\quad g''(t)=96.
 \end{aligned}
 $$
 

@@ -21,7 +21,7 @@
 
 $$
 \begin{aligned}
-E&=\frac{Q}{2\pi\varepsilon_0R^2}\\
+&E = \frac{Q}{2\pi\varepsilon_0R^2}\\
 &\quad-\frac{Qx}{2\pi\varepsilon_0R^2\sqrt{x^2+R^2}}.
 \end{aligned}
 $$
@@ -30,8 +30,7 @@ $$
 
 $$
 \begin{aligned}
-E\approx\frac{Q}{2\pi\varepsilon_0R^2}\frac{R^2}{2x^2}&=\frac{kQ}{x^2}.
-\end{aligned}
+&E\approx\frac{Q}{2\pi\varepsilon_0R^2}\frac{R^2}{2x^2} = \frac{kQ}{x^2}.\end{aligned}
 $$
 
 (c) Đĩa cho trường nhỏ hơn nguồn điểm: Những phần xa tâm vừa cách P xa hơn vừa không hướng hoàn toàn theo trục. (d) Lấy phần trăm so với trường đĩa, $(E_{\mathrm{point}}-E_{\mathrm{disk}})/E_{\mathrm{disk}}$, được khoảng 1,17% tại 20,0 cm và 4,66% tại 10,0 cm. Nếu dùng trường điểm làm mẫu số, các giá trị tương ứng là 1,16% và 4,46%.
@@ -53,9 +52,9 @@ Cầu nhỏ khối lượng m, điện tích dương q gắn vào một đầu s
 
 $$
 \begin{aligned}
-T\cos\theta&=mg,\\
-T\sin\theta&=q\sigma/(2\varepsilon_0),\\
-\theta&=\arctan\left(\frac{q\sigma}{2mg\varepsilon_0}\right).
+&T\cos\theta = mg,\\
+&T\sin\theta = q\sigma/(2\varepsilon_0),\\
+&\theta = \arctan\left(\frac{q\sigma}{2mg\varepsilon_0}\right).
 \end{aligned}
 $$
 
@@ -78,10 +77,10 @@ Góc không phụ thuộc L trong mô hình mặt phẳng vô hạn.
 
 $$
 \begin{aligned}
-E_x&=\frac{2kQ}{\pi a^2}\int_0^{\pi/2}\cos\theta\,d\theta,\\
-E_y&=\frac{2kQ}{\pi a^2}\int_0^{\pi/2}\sin\theta\,d\theta,\\
-E_x&=E_y\\
-&=\frac{2kQ}{\pi a^2}.
+&E_x = \frac{2kQ}{\pi a^2}\int_0^{\pi/2}\cos\theta\,d\theta,\\
+&E_y = \frac{2kQ}{\pi a^2}\int_0^{\pi/2}\sin\theta\,d\theta,\\
+&E_x = E_y\\
+&\quad =\frac{2kQ}{\pi a^2}.
 \end{aligned}
 $$
 :::
@@ -106,8 +105,7 @@ Mỗi nửa cung góp thành phần x bằng $2kQ/(\pi a^2)$ và thành phần y
 
 $$
 \begin{aligned}
-\vec E&=\frac{4kQ}{\pi a^2}\hat{\mathbf i}.
-\end{aligned}
+&\vec E = \frac{4kQ}{\pi a^2}\hat{\mathbf i}.\end{aligned}
 $$
 :::
 
@@ -130,9 +128,9 @@ Hai thanh không dẫn điện dài $1.20\,\mathrm m$ gặp nhau vuông góc. M�
 
 $$
 \begin{aligned}
-E_0&=\frac{kQ}{0.600\sqrt{0.600^2+0.600^2}},\\
-E&=\sqrt2E_0=6.25\times10^4\,\mathrm{N/C},\\
-F_e&=eE=1.00\times10^{-14}\,\mathrm N.
+&E_0 = \frac{kQ}{0.600\sqrt{0.600^2+0.600^2}},\\
+&E = \sqrt2E_0=6.25\times10^4\,\mathrm{N/C},\\
+&F_e = eE=1.00\times10^{-14}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -156,10 +154,10 @@ Hai mặt rất lớn song song cách $5.00\,\mathrm{cm}$. A có mật độ đ�
 
 $$
 \begin{aligned}
-E_{\mathrm{khe}}&=\frac{(11.6-8.80)\times10^{-6}}{2\varepsilon_0}\\
-&=1.58\times10^5\,\mathrm{N/C},\\
-E_{\mathrm{ngoai}}&=\frac{(11.6+8.80)\times10^{-6}}{2\varepsilon_0}\\
-&=1.15\times10^6\,\mathrm{N/C}.
+&E_{\mathrm{khe}} = \frac{(11.6-8.80)\times10^{-6}}{2\varepsilon_0}\\
+&\quad =1.58\times10^5\,\mathrm{N/C},\\
+&E_{\mathrm{ngoai}} = \frac{(11.6+8.80)\times10^{-6}}{2\varepsilon_0}\\
+&\quad =1.15\times10^6\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -187,7 +185,7 @@ $$
 
 $$
 \begin{aligned}
-E_x&=\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}}\\
+&E_x = \frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}}\\
 &\quad-\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_2^2}}.
 \end{aligned}
 $$
@@ -196,16 +194,14 @@ Trường dương với x > 0, âm với x < 0, bằng không ở tâm. (c) Khi 
 
 $$
 \begin{aligned}
-E_x\approx\frac{\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)x.
-\end{aligned}
+&E_x\approx\frac{\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)x.\end{aligned}
 $$
 
 (d) $F_x=-qE_x=-\kappa x$, với hệ số phục hồi dương. Tần số:
 
 $$
 \begin{aligned}
-f&=\frac1{2\pi}\sqrt{\frac{q\sigma}{2m\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)}.
-\end{aligned}
+&f = \frac1{2\pi}\sqrt{\frac{q\sigma}{2m\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)}.\end{aligned}
 $$
 
 Biên độ ban đầu 0,01R₁ thỏa gần đúng nhỏ.
@@ -228,11 +224,11 @@ Máy in phun có thể phun liên tục hoặc theo từng giọt khi cần. Tro
 
 $$
 \begin{aligned}
-t&=0.020/50\\
-&=4.0\times10^{-4}\,\mathrm s,\\
-q&=\frac{2md}{Et^2}\\
-&=6.6\times10^{-13}\,\mathrm C,\\
-N&=q/e\approx4.1\times10^6.
+&t = 0.020/50\\
+&\quad =4.0\times10^{-4}\,\mathrm s,\\
+&q = \frac{2md}{Et^2}\\
+&\quad =6.6\times10^{-13}\,\mathrm C,\\
+&N = q/e\approx4.1\times10^6.
 \end{aligned}
 $$
 
@@ -255,8 +251,8 @@ Hai cầu nhỏ dương cách $0.400\,\mathrm m$. Đặt $q_1$ tại gốc, $q_2
 
 $$
 \begin{aligned}
-4.50&=kq_3(q_1-q_2)/0.200^2,\\
-3.50&=\frac{kq_3q_1}{0.600^2}\\
+&4.50 = kq_3(q_1-q_2)/0.200^2,\\
+&3.50 = \frac{kq_3q_1}{0.600^2}\\
 &\quad+\frac{kq_3q_2}{0.200^2}.
 \end{aligned}
 $$
@@ -265,9 +261,9 @@ Giải hệ cho $q_1\approx8.00$ µC và $q_2\approx3.00$ µC. Tại x = −0,20
 
 $$
 \begin{aligned}
-F_x&=-k\frac{q_3q_1}{(0.200)^2}\\
+&F_x = -k\frac{q_3q_1}{(0.200)^2}\\
 &\quad-k\frac{q_3q_2}{(0.600)^2}\\
-&=-7.50\,\mathrm N.
+&\quad =-7.50\,\mathrm N.
 \end{aligned}
 $$
 
@@ -296,11 +292,11 @@ $$
 
 $$
 \begin{aligned}
-\lim_{x\to\infty}Ex^2&=kQ,\\
-Q&\approx50/k=5.6\,\mathrm{nC},\\
-\lim_{x\to0}E/x&=kQ/a^3,\\
-a&\approx(50/700)^{1/3}\\
-&=0.41\,\mathrm m.
+&\lim_{x\to\infty}Ex^2 = kQ,\\
+&Q \approx 50/k=5.6\,\mathrm{nC},\\
+&\lim_{x\to0}E/x = kQ/a^3,\\
+&a \approx (50/700)^{1/3}\\
+&\quad =0.41\,\mathrm m.
 \end{aligned}
 $$
 
@@ -326,8 +322,7 @@ Mặt phẳng vô hạn tích điện dương đều $\sigma$ có lỗ tròn bá
 
 $$
 \begin{aligned}
-\vec E&=-\frac{\sigma\Delta}{2\varepsilon_0\sqrt{\Delta^2+R^2}}\hat{\mathbf k}.
-\end{aligned}
+&\vec E = -\frac{\sigma\Delta}{2\varepsilon_0\sqrt{\Delta^2+R^2}}\hat{\mathbf k}.\end{aligned}
 $$
 
 (b) Lực điện giới hạn ở rất sâu là $q\sigma/(2\varepsilon_0)$. Ngưỡng khối lượng $m_{\max}=q\sigma/(2g\varepsilon_0)$. Muốn quay đầu cần **m nhỏ hơn ngưỡng này**, vì ở ngưỡng lực điện chỉ tiến đến trọng lực mà không vượt nó.
@@ -336,9 +331,9 @@ $$
 
 $$
 \begin{aligned}
-W_e&=-\frac{q\sigma}{2\varepsilon_0}\int_0^\Delta\frac{s\,ds}{\sqrt{s^2+R^2}}\\
-&=-\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R),\\
-W_g&=mg\Delta.
+&W_e = -\frac{q\sigma}{2\varepsilon_0}\int_0^\Delta\frac{s\,ds}{\sqrt{s^2+R^2}}\\
+&\quad =-\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R),\\
+&W_g = mg\Delta.
 \end{aligned}
 $$
 
@@ -346,9 +341,9 @@ $$
 
 $$
 \begin{aligned}
-\alpha\Delta&=\sqrt{\Delta^2+R^2}-R,\\
-\alpha\Delta+R&=\sqrt{\Delta^2+R^2},\\
-(\alpha\Delta+R)^2&=\Delta^2+R^2.
+&\alpha\Delta = \sqrt{\Delta^2+R^2}-R,\\
+&\alpha\Delta+R = \sqrt{\Delta^2+R^2},\\
+&(\alpha\Delta+R)^2 = \Delta^2+R^2.
 \end{aligned}
 $$
 
@@ -356,8 +351,8 @@ Khai triển bình phương vế trái rồi khử cùng R² ở hai vế:
 
 $$
 \begin{aligned}
-\alpha^2\Delta^2+2\alpha R\Delta&=\Delta^2,\\
-(1-\alpha^2)\Delta^2&=2\alpha R\Delta.
+&\alpha^2\Delta^2+2\alpha R\Delta = \Delta^2,\\
+&(1-\alpha^2)\Delta^2 = 2\alpha R\Delta.
 \end{aligned}
 $$
 
@@ -373,8 +368,7 @@ Hai vế ở bước trước khi bình phương đều không âm, nên phép b
 
 $$
 \begin{aligned}
-v&=\sqrt{2g\left[\Delta-\frac{\sqrt{\Delta^2+R^2}-R}{\alpha}\right]}.
-\end{aligned}
+&v = \sqrt{2g\left[\Delta-\frac{\sqrt{\Delta^2+R^2}-R}{\alpha}\right]}.\end{aligned}
 $$
 
 (g) Đổi mật độ thành $10^{-5}$ C/m², được $m_{\max}=57.7$ g, $\alpha=0.434$ và $\Delta_{\max}=10.7$ cm.
@@ -400,12 +394,12 @@ Hai thanh cách điện cứng dài L, khối lượng không đáng kể, nối
 
 $$
 \begin{aligned}
-F_{1x}&=\frac{kQ^2}{L^2\cos u},\\
-F_{1y}&=\frac{kQ^2\sin u}{L^2\cos^2u},\\
-F_{2x}&=-\frac{kQ^2}{L^2\sin u},\\
-F_{2y}&=\frac{kQ^2\cos u}{L^2\sin^2u},\\
-\tau_{1z}&=-\frac{kQ^2\sin u}{2L\cos^2u},\\
-\tau_{2z}&=\frac{kQ^2\cos u}{2L\sin^2u}.
+&F_{1x} = \frac{kQ^2}{L^2\cos u},\\
+&F_{1y} = \frac{kQ^2\sin u}{L^2\cos^2u},\\
+&F_{2x} = -\frac{kQ^2}{L^2\sin u},\\
+&F_{2y} = \frac{kQ^2\cos u}{L^2\sin^2u},\\
+&\tau_{1z} = -\frac{kQ^2\sin u}{2L\cos^2u},\\
+&\tau_{2z} = \frac{kQ^2\cos u}{2L\sin^2u}.
 \end{aligned}
 $$
 
@@ -413,8 +407,7 @@ Tổng cho hai đầu:
 
 $$
 \begin{aligned}
-\tau_z&=\frac{kQ^2}{L}\left(\frac{\cos u}{\sin^2u}-\frac{\sin u}{\cos^2u}\right).
-\end{aligned}
+&\tau_z = \frac{kQ^2}{L}\left(\frac{\cos u}{\sin^2u}-\frac{\sin u}{\cos^2u}\right).\end{aligned}
 $$
 
 Đặt $\theta=\pi/2-\epsilon$, nên $u=\pi/4-\epsilon/2$. Để thấy rõ số hạng bậc nhất, gọi:
@@ -427,9 +420,9 @@ Hai số hạng bằng nhau tại $u=\pi/4$, nên $g(\pi/4)=0$. Đạo hàm từ
 
 $$
 \begin{aligned}
-g'(u)&=-\frac1{\sin u}-\frac{2\cos^2u}{\sin^3u}\\
+&g'(u) = -\frac1{\sin u}-\frac{2\cos^2u}{\sin^3u}\\
 &\quad-\frac1{\cos u}-\frac{2\sin^2u}{\cos^3u},\\
-g'(\pi/4)&=-6\sqrt2.
+&g'(\pi/4) = -6\sqrt2.
 \end{aligned}
 $$
 
@@ -443,7 +436,6 @@ Khi thanh lệch theo chiều làm θ nhỏ hơn π/2, mômen dương làm θ t�
 
 $$
 \begin{aligned}
-f&=\frac1{2\pi}\sqrt{\frac{6\sqrt2kQ^2}{ML^3}}.
-\end{aligned}
+&f = \frac1{2\pi}\sqrt{\frac{6\sqrt2kQ^2}{ML^3}}.\end{aligned}
 $$
 :::

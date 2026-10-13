@@ -4,8 +4,7 @@ Khi nhiều điện tích chuyển động, mỗi điện tích góp một phầ
 
 $$
 \begin{aligned}
-\vec B_{\mathrm{tổng}}&=\vec B_1+\vec B_2.
-\end{aligned}
+&\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.\end{aligned}
 \tag{28.5}
 $$
 
@@ -22,8 +21,7 @@ Ta dùng nguyên lý chồng chất để tính từ trường do một đoạn 
 
 $$
 \begin{aligned}
-|dQ|&=n|q|A\,d\ell.
-\end{aligned}
+&|dQ| = n|q|A\,d\ell.\end{aligned}
 $$
 
 Các vận tốc nhiệt ngẫu nhiên phân bố theo nhiều hướng nên đóng góp từ trường của chúng triệt tiêu trung bình. Phần từ trường còn lại tương ứng với chuyển động có hướng của các hạt tải.
@@ -126,8 +124,7 @@ Thay $\mu_0/(4\pi)=1{,}0\times10^{-7}\,\mathrm{T\,m/A}$, $d\ell=1{,}0\times10^{-
 
 $$
 \begin{aligned}
-\vec B_1&=-8{,}7\times10^{-8}\,\hat k\,\mathrm T.
-\end{aligned}
+&\vec B_1 = -8{,}7\times10^{-8}\,\hat k\,\mathrm T.\end{aligned}
 $$
 
 Tại $P_2$, véc-tơ đơn vị là $\hat r_2=-\cos30^\circ\,\hat\imath+\sin30^\circ\,\hat\jmath$. Khi tính tích có hướng, thành phần theo $x$ triệt tiêu, còn thành phần theo $y$ tạo hướng $-z$:

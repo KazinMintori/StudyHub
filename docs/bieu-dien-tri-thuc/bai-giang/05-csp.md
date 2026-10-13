@@ -82,7 +82,7 @@ Mô hình hóa CSP:
 Một lời giải hợp lệ:
 $$
 \begin{aligned}
-\{ &\text{WA}=\text{red},\; \text{NT}=\text{green},\; \text{SA}=\text{blue},\; \text{Q}=\text{red}, \\
+&\{ \text{WA}=\text{red},\; \text{NT}=\text{green},\; \text{SA}=\text{blue},\; \text{Q}=\text{red},\\
    &\text{NSW}=\text{green},\; \text{V}=\text{red},\; \text{T}=\text{red} \}
 \end{aligned}
 $$

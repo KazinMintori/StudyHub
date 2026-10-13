@@ -14,10 +14,8 @@ Góc $\phi$ giữa dòng điện và hướng từ phần tử đến $P$ thỏa
 
 $$
 \begin{aligned}
-&dB =\frac{\mu_0 I}{4\pi}\,
-\frac{dy\sin\phi}{r^2}\\
-&=\frac{\mu_0 I}{4\pi}\,
-\frac{x\,dy}{(x^2+y^2)^{3/2}}.
+&dB =\frac{\mu_0 I}{4\pi}\,\frac{dy\sin\phi}{r^2}\\
+&\quad =\frac{\mu_0 I}{4\pi}\,\frac{x\,dy}{(x^2+y^2)^{3/2}}.
 \end{aligned}
 \tag{28.8}
 $$
@@ -56,8 +54,7 @@ Nếu chiều dài dây lớn hơn nhiều khoảng cách đến điểm đo, th
 
 $$
 \begin{aligned}
-B&=\frac{\mu_0 I}{2\pi x}.
-\end{aligned}
+&B = \frac{\mu_0 I}{2\pi x}.\end{aligned}
 \tag{28.9}
 $$
 
@@ -65,8 +62,7 @@ $$
 
 $$
 \begin{aligned}
-B&=\frac{\mu_0 I}{2\pi r}.
-\end{aligned}
+&B = \frac{\mu_0 I}{2\pi r}.\end{aligned}
 $$
 
 Các đường sức là những đường tròn đồng tâm với dây. Chiều của chúng được xác định bằng quy tắc bàn tay phải: Ngón cái chỉ theo chiều dòng điện, các ngón tay khum quanh dây theo chiều đường sức.
@@ -79,8 +75,7 @@ Hình 28.6: Từ trường quanh dây dẫn dài có các đường sức tròn,
 
 $$
 \begin{aligned}
-\oiint_S\vec B\cdot d\vec A&=0.
-\end{aligned}
+&\oiint_S\vec B\cdot d\vec A = 0.\end{aligned}
 \tag{28.10}
 $$
 
@@ -117,8 +112,7 @@ Xét hai dây thẳng, song song, mỗi dây mang dòng có độ lớn $I$ như
 
 $$
 \begin{aligned}
-\vec B_{\mathrm{tổng}}&=\vec B_1+\vec B_2.
-\end{aligned}
+&\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.\end{aligned}
 $$
 
 Chọn gốc tọa độ tại trung điểm hai dây, đặt dây 1 tại $x=-d$ và dây 2 tại $x=+d$. Dòng điện ở dây 1 hướng ra khỏi trang giấy, còn dòng ở dây 2 hướng vào trang giấy. Các khoảng cách đến từng dây cùng quy tắc bàn tay phải xác định độ lớn và dấu của thành phần từ trường theo $y$.

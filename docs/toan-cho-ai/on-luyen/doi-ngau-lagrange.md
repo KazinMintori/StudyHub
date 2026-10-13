@@ -52,11 +52,9 @@ Với $x$ cố định, $L$ là affine theo bộ nhân tử $u=(\mu,\lambda)$. C
 $$
 \begin{aligned}
 &g(tu+(1-t)v)\\
-&=\inf_x[tL(x,u)\\
-&\qquad+(1-t)L(x,v)]\\
-&\ge t\inf_x L(x,u)\\
-&\quad+(1-t)\inf_x L(x,v)\\
-&=t g(u)+(1-t)g(v).
+&\quad = \inf_x[tL(x,u) + (1-t)L(x,v)]\\
+&\quad \ge t\inf_x L(x,u) + (1-t)\inf_x L(x,v)\\
+&\quad = tg(u) + (1-t)g(v).
 \end{aligned}
 $$
 
@@ -70,8 +68,8 @@ Giả sử $f,f_i$ lồi và $h_j$ affine. Slater yêu cầu một điểm $\bar
 
 $$
 \begin{aligned}
-f_i(\bar x)&<0,\quad i=1,\ldots,m,\\
-h_j(\bar x)&=0,\quad j=1,\ldots,p.
+&f_i(\bar x) <0,\quad i=1,\ldots,m,\\
+&h_j(\bar x) = 0,\quad j=1,\ldots,p.
 \end{aligned}
 $$
 
@@ -91,9 +89,9 @@ Xét min $x^2$ với $x\ge1$. Viết ràng buộc $1-x\le0$ và dùng nhân tử
 
 $$
 \begin{aligned}
-L(x,\lambda)&=x^2+\lambda(1-x),\\
-\frac{\partial L}{\partial x}&=2x-\lambda=0,\\
-x(\lambda)&=\lambda/2.
+&L(x,\lambda) = x^2+\lambda(1-x),\\
+&\frac{\partial L}{\partial x} = 2x-\lambda=0,\\
+&x(\lambda) = \lambda/2.
 \end{aligned}
 $$
 
@@ -101,10 +99,10 @@ Hessian theo $x$ bằng 2 nên điểm dừng là cực tiểu duy nhất. Thay 
 
 $$
 \begin{aligned}
-g(\lambda)&=\frac{\lambda^2}{4}
+&g(\lambda) =\frac{\lambda^2}{4}
 +\lambda\left(1-\frac\lambda2\right)\\
-&=\lambda-\frac{\lambda^2}{4}\\
-&=1-\frac{(\lambda-2)^2}{4}.
+&\quad =\lambda-\frac{\lambda^2}{4}\\
+&\quad =1-\frac{(\lambda-2)^2}{4}.
 \end{aligned}
 $$
 
@@ -116,8 +114,8 @@ Xét min $x_1^2+x_2^2$ với $x_1+x_2\ge1$. Dùng ký hiệu $s\ge0$ cho nhân t
 
 $$
 \begin{aligned}
-L(x_1,x_2,s)&=x_1^2+x_2^2+s(1-x_1-x_2),\\
-2x_1-s&=0,\quad2x_2-s=0.
+&L(x_1,x_2,s) = x_1^2+x_2^2+s(1-x_1-x_2),\\
+&2x_1-s = 0,\quad2x_2-s=0.
 \end{aligned}
 $$
 
@@ -125,8 +123,8 @@ Hai tọa độ cực tiểu Lagrangian đều bằng $s/2$. Do đó
 
 $$
 \begin{aligned}
-g(s)&=s-\frac{s^2}{2}\\
-&=\frac12-\frac{(s-1)^2}{2}.
+&g(s) = s-\frac{s^2}{2}\\
+&\quad =\frac12-\frac{(s-1)^2}{2}.
 \end{aligned}
 $$
 
@@ -143,8 +141,8 @@ Ta có
 
 $$
 \begin{aligned}
-L(x_1,x_2,1)&=(x_1-1/2)^2+(x_2-1/2)^2+1/2\\
-&\ge1/2.
+&L(x_1,x_2,1) = (x_1-1/2)^2+(x_2-1/2)^2+1/2\\
+&\quad \ge1/2.
 \end{aligned}
 $$
 

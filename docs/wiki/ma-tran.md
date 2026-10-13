@@ -17,8 +17,8 @@ Với ma trận $A$ có $m$ hàng, $n$ cột và vector $x$ có $n$ thành phầ
 
 $$
 \begin{aligned}
-y_i&=A_{i1}x_1+A_{i2}x_2+\cdots+A_{in}x_n\\
-&=\sum_{j=1}^n A_{ij}x_j.
+&y_i = A_{i1}x_1+A_{i2}x_2+\cdots+A_{in}x_n\\
+&\quad =\sum_{j=1}^n A_{ij}x_j.
 \end{aligned}
 $$
 

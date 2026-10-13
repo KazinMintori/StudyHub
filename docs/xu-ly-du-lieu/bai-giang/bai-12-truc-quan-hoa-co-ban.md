@@ -117,8 +117,8 @@ Khi đó, phân phối dữ liệu có **hai đỉnh nhọn ở hai đầu cực
 
 $$
 \begin{aligned}
-\text{Nhóm khóa lịch hoàn toàn: } & X = 0 \\
-\text{Nhóm kinh doanh quanh năm: } & X \approx 365
+&\text{Nhóm khóa lịch hoàn toàn: } X = 0\\
+&\text{Nhóm kinh doanh quanh năm: } X \approx 365
 \end{aligned}
 $$
 

@@ -176,14 +176,12 @@ Cho nón Lorentz trong $\mathbb{R}^3$: $K = \{(x_1, x_2, t) \mid x_1^2 + x_2^2 \
    Đặt $u = t^2 - x_1^2 - x_2^2 > 0$ trên phần trong của nón. Khi đó $\psi = -\log u$.
    Đạo hàm riêng theo các biến:
    $$
-   \frac{\partial \psi}{\partial x_1} = -\frac{1}{u} (-2x_1) = \frac{2x_1}{t^2 - x_1^2 - x_2^2},
-   $$
-   $$
-   \frac{\partial \psi}{\partial x_2} = -\frac{1}{u} (-2x_2) = \frac{2x_2}{t^2 - x_1^2 - x_2^2},
-   $$
-   $$
-   \frac{\partial \psi}{\partial t} = -\frac{1}{u} (2t) = -\frac{2t}{t^2 - x_1^2 - x_2^2}.
-   $$
+\begin{aligned}
+    &\frac{\partial \psi}{\partial x_1} = -\frac{1}{u} (-2x_1) = \frac{2x_1}{t^2 - x_1^2 - x_2^2},\\
+    &\frac{\partial \psi}{\partial x_2} = -\frac{1}{u} (-2x_2) = \frac{2x_2}{t^2 - x_1^2 - x_2^2},\\
+    &\frac{\partial \psi}{\partial t} = -\frac{1}{u} (2t) = -\frac{2t}{t^2 - x_1^2 - x_2^2}.
+\end{aligned}
+$$
    Vector gradient:
    $$
    \nabla \psi(x, t) = \frac{2}{t^2 - \|x\|_2^2} \begin{bmatrix} x_1 \\ x_2 \\ -t \end{bmatrix}.
@@ -193,10 +191,10 @@ Cho nón Lorentz trong $\mathbb{R}^3$: $K = \{(x_1, x_2, t) \mid x_1^2 + x_2^2 \
    Với $s > 0$:
    $$
    \begin{aligned}
-   \psi(s x, s t) &= -\log\big((s t)^2 - (s x_1)^2 - (s x_2)^2\big) \\
-   &= -\log\big(s^2 (t^2 - x_1^2 - x_2^2)\big) \\
-   &= -\log(s^2) - \log(t^2 - x_1^2 - x_2^2) \\
-   &= -2 \log s + \psi(x, t).
+   &\psi(s x, s t) = -\log\big((s t)^2 - (s x_1)^2 - (s x_2)^2\big)\\
+   &\quad = -\log\big(s^2 (t^2 - x_1^2 - x_2^2)\big)\\
+   &\quad = -\log(s^2) - \log(t^2 - x_1^2 - x_2^2)\\
+   &\quad = -2 \log s + \psi(x, t).
    \end{aligned}
    $$
 

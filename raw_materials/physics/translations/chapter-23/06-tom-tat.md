@@ -10,8 +10,8 @@ Lực do một phân bố điện tích đứng yên là lực thế. Công lự
 
 $$
 \begin{aligned}
-W_{a\to b}&=U_a-U_b,\\
-U&=\frac{kqq_0}{r}.
+&W_{a\to b} = U_a-U_b,\\
+&U = \frac{kqq_0}{r}.
 \end{aligned}
 $$
 
@@ -19,7 +19,7 @@ Trong trường của nhiều nguồn, phần thế năng tương tác liên qua
 
 $$
 \begin{aligned}
-U&=\frac{kq_0q_1}{r_1}+\frac{kq_0q_2}{r_2}\\
+&U = \frac{kq_0q_1}{r_1}+\frac{kq_0q_2}{r_2}\\
 &\quad+\frac{kq_0q_3}{r_3}.
 \end{aligned}
 $$
@@ -36,9 +36,9 @@ Nguồn điểm cho $V = \frac{kq}{r}$ với mốc ở vô hạn. Nhiều nguồ
 
 $$
 \begin{aligned}
-V&=k\sum_{i=1}^{n}\frac{q_i}{r_i},\\
-V&=k\int\frac{dq}{r},\\
-V_a-V_b&=\int_a^b\vec E\cdot d\vec\ell.
+&V = k\sum_{i=1}^{n}\frac{q_i}{r_i},\\
+&V = k\int\frac{dq}{r},\\
+&V_a-V_b = \int_a^b\vec E\cdot d\vec\ell.
 \end{aligned}
 $$
 
@@ -56,10 +56,10 @@ Biết V như hàm vị trí, lấy đạo hàm riêng để tìm các thành ph
 
 $$
 \begin{aligned}
-E_x&=-\frac{\partial V}{\partial x},\\
-E_y&=-\frac{\partial V}{\partial y},\\
-E_z&=-\frac{\partial V}{\partial z},\\
-\vec E&=-\nabla V.
+&E_x = -\frac{\partial V}{\partial x},\\
+&E_y = -\frac{\partial V}{\partial y},\\
+&E_z = -\frac{\partial V}{\partial z},\\
+&\vec E = -\nabla V.
 \end{aligned}
 $$
 

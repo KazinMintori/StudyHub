@@ -12,8 +12,8 @@ Tương tác từ là tương tác giữa các điện tích chuyển động. V
 
 $$
 \begin{aligned}
-\vec F&=q\vec v\times\vec B,\\
-F&=|q|vB\sin\phi.
+&\vec F = q\vec v\times\vec B,\\
+&F = |q|vB\sin\phi.
 \end{aligned}
 $$
 
@@ -29,8 +29,8 @@ Thành phần từ trường theo pháp tuyến đóng góp vào từ thông.
 
 $$
 \begin{aligned}
-\Phi_B&=\int\vec B\cdot d\vec A,\\
-\oint\vec B\cdot d\vec A&=0.
+&\Phi_B = \int\vec B\cdot d\vec A,\\
+&\oint\vec B\cdot d\vec A = 0.
 \end{aligned}
 $$
 
@@ -80,9 +80,9 @@ Vòng dây diện tích $A$, dòng $I$ có mômen từ $\vec\mu=I\vec A$. Mômen
 
 $$
 \begin{aligned}
-\vec\tau&=\vec\mu\times\vec B,\\
-U&=-\vec\mu\cdot\vec B\\
-&=-\mu B\cos\phi.
+&\vec\tau = \vec\mu\times\vec B,\\
+&U = -\vec\mu\cdot\vec B\\
+&\quad =-\mu B\cos\phi.
 \end{aligned}
 $$
 

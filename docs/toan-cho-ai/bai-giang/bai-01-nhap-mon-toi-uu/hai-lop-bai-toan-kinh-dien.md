@@ -74,8 +74,8 @@ Lớp thứ hai là **quy hoạch tuyến tính** (linear program, viết tắt 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^T x\\
-\text{subject to}\quad & a_i^T x \le b_i, \quad i = 1, \ldots, m .
+&\text{minimize}\quad c^T x\\
+&\text{subject to}\quad a_i^T x \le b_i, \quad i = 1, \ldots, m .
 \end{aligned}
 $$
 
@@ -117,8 +117,8 @@ Hàm mục tiêu đo phần dư **lớn nhất** thay vì tổng bình phương 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & t\\
-\text{subject to}\quad & a_i^T x - b_i \le t, \quad -(a_i^T x - b_i) \le t, \quad i = 1, \ldots, k .
+&\text{minimize}\quad t\\
+&\text{subject to}\quad a_i^T x - b_i \le t, \quad -(a_i^T x - b_i) \le t, \quad i = 1, \ldots, k .
 \end{aligned}
 $$
 
@@ -136,8 +136,8 @@ Bây giờ ta có thể phát biểu họ bài toán là chủ đề trọng tâ
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x)\\
-\text{subject to}\quad & f_i(x) \le b_i, \quad i = 1, \ldots, m,
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le b_i, \quad i = 1, \ldots, m,
 \end{aligned}
 $$
 
@@ -229,8 +229,8 @@ Với bốn số liệu $1, 3, 4, 12$, xét bài toán tìm hằng số $c$ theo
 1. Cực tiểu hóa tổng sai số tuyệt đối theo chuẩn $\ell_1$:
    $$
    \begin{aligned}
-   f(c) &= \sum_{i=1}^4 |c - b_i| \\
-   &= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+   &f(c) = \sum_{i=1}^4 |c - b_i|\\
+   &\quad = |c - 1| + |c - 3| + |c - 4| + |c - 12|.
    \end{aligned}
    $$
 2. Cực tiểu hóa sai số lớn nhất theo chuẩn $\ell_\infty$: $\max_{i=1,\dots,4} |c - b_i|$.
@@ -249,7 +249,7 @@ Hàm mục tiêu cần cực tiểu hóa là:
 
 $$
 \begin{aligned}
-f(c) &= |c - 1| + |c - 3| \\
+&f(c) = |c - 1| + |c - 3|\\
 &\quad + |c - 4| + |c - 12|.
 \end{aligned}
 $$
@@ -260,9 +260,9 @@ Ta áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$ bằng các
 
 $$
 \begin{aligned}
-|c - 1| + |c - 12| &= |c - 1| + |12 - c| \\
-&\ge |(c - 1) + (12 - c)| \\
-&= 11.
+&|c - 1| + |c - 12| = |c - 1| + |12 - c|\\
+&\quad \ge |(c - 1) + (12 - c)|\\
+&\quad = 11.
 \end{aligned}
 $$
 
@@ -272,9 +272,9 @@ Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
 
 $$
 \begin{aligned}
-|c - 3| + |c - 4| &= |c - 3| + |4 - c| \\
-&\ge |(c - 3) + (4 - c)| \\
-&= 1.
+&|c - 3| + |c - 4| = |c - 3| + |4 - c|\\
+&\quad \ge |(c - 3) + (4 - c)|\\
+&\quad = 1.
 \end{aligned}
 $$
 
@@ -313,9 +313,9 @@ $$
 
 $$
 \begin{aligned}
-\max(|c - 1|, |12 - c|) &\ge \frac{|c - 1| + |12 - c|}{2} \\
-&\ge \frac{|(c - 1) + (12 - c)|}{2} \\
-&= \frac{11}{2} = 5.5.
+&\max(|c - 1|, |12 - c|) \ge \frac{|c - 1| + |12 - c|}{2}\\
+&\quad \ge \frac{|(c - 1) + (12 - c)|}{2}\\
+&\quad = \frac{11}{2} = 5.5.
 \end{aligned}
 $$
 

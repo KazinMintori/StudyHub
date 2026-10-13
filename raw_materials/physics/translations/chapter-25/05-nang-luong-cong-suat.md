@@ -22,8 +22,8 @@ Trong khoảng thời gian $dt$, điện lượng đi qua phần tử là $dQ=I\
 
 $$
 \begin{aligned}
-P&=\frac{V_{ab}\,dQ}{dt}\\
-&=V_{ab}I.
+&P = \frac{V_{ab}\,dQ}{dt}\\
+&\quad =V_{ab}I.
 \end{aligned}
 \tag{25.17}
 $$
@@ -44,9 +44,9 @@ $$
 
 $$
 \begin{aligned}
-P&=V_{ab}I\\
-&=I^2R\\
-&=\frac{V_{ab}^2}{R}.
+&P = V_{ab}I\\
+&\quad =I^2R\\
+&\quad =\frac{V_{ab}^2}{R}.
 \end{aligned}
 \tag{25.18}
 $$
@@ -67,8 +67,8 @@ Do đó, công suất điện pin đưa ra hai cực là:
 
 $$
 \begin{aligned}
-P_{\mathrm{ra}}&=V_{ab}I\\
-&=\mathcal EI-I^2r.
+&P_{\mathrm{ra}} = V_{ab}I\\
+&\quad =\mathcal EI-I^2r.
 \end{aligned}
 \tag{25.19}
 $$
@@ -89,8 +89,8 @@ Công suất điện đi vào pin trở thành:
 
 $$
 \begin{aligned}
-P_{\mathrm{vào}}&=V_{ab}I\\
-&=\mathcal EI+I^2r.
+&P_{\mathrm{vào}} = V_{ab}I\\
+&\quad =\mathcal EI+I^2r.
 \end{aligned}
 \tag{25.20}
 $$
@@ -111,9 +111,9 @@ Ký hiệu $P_{\mathcal E}$ là tốc độ chuyển hóa hóa năng thành đi�
 
 $$
 \begin{aligned}
-P_{\mathcal E}&=\mathcal EI\\
-&=(12\,\mathrm V)(2\,\mathrm A)\\
-&=24\,\mathrm W.
+&P_{\mathcal E} = \mathcal EI\\
+&\quad =(12\,\mathrm V)(2\,\mathrm A)\\
+&\quad =24\,\mathrm W.
 \end{aligned}
 $$
 
@@ -121,9 +121,9 @@ Công suất tỏa nhiệt trong pin:
 
 $$
 \begin{aligned}
-P_r&=I^2r\\
-&=(2\,\mathrm A)^2(2\,\Omega)\\
-&=8\,\mathrm W.
+&P_r = I^2r\\
+&\quad =(2\,\mathrm A)^2(2\,\Omega)\\
+&\quad =8\,\mathrm W.
 \end{aligned}
 $$
 
@@ -131,11 +131,11 @@ Vậy công suất điện ra của pin là $24-8=16$ W. Điện trở ngoài nh
 
 $$
 \begin{aligned}
-P_R&=V_{a'b'}I\\
-&=(8\,\mathrm V)(2\,\mathrm A)\\
-&=I^2R\\
-&=(2\,\mathrm A)^2(4\,\Omega)\\
-&=16\,\mathrm W.
+&P_R = V_{a'b'}I\\
+&\quad =(8\,\mathrm V)(2\,\mathrm A)\\
+&\quad =I^2R\\
+&\quad =(2\,\mathrm A)^2(4\,\Omega)\\
+&\quad =16\,\mathrm W.
 \end{aligned}
 $$
 
@@ -153,16 +153,11 @@ Giữ pin có $\mathcal E=12$ V, $r=2$ Ω, nhưng thay điện trở ngoài 4 Ω
 
 $$
 \begin{aligned}
-R_{\mathrm{tđ}}&=8\,\Omega+2\,\Omega\\
-&=10\,\Omega.
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-I&=\frac{\mathcal E}{R_{\mathrm{tđ}}}\\
-&=\frac{12\,\mathrm V}{10\,\Omega}\\
-&=1{,}2\,\mathrm A.
+    &R_{\mathrm{tđ}} = 8\,\Omega+2\,\Omega\\
+    &\quad =10\,\Omega.\\
+    &I = \frac{\mathcal E}{R_{\mathrm{tđ}}}\\
+    &\quad =\frac{12\,\mathrm V}{10\,\Omega}\\
+    &\quad =1{,}2\,\mathrm A.
 \end{aligned}
 $$
 
@@ -170,9 +165,9 @@ $$
 
 $$
 \begin{aligned}
-V_{ab}&=IR\\
-&=(1{,}2\,\mathrm A)(8\,\Omega)\\
-&=9{,}6\,\mathrm V.
+&V_{ab} = IR\\
+&\quad =(1{,}2\,\mathrm A)(8\,\Omega)\\
+&\quad =9{,}6\,\mathrm V.
 \end{aligned}
 $$
 
@@ -180,12 +175,12 @@ Do đó:
 
 $$
 \begin{aligned}
-P_R&=I^2R\\
-&=(1{,}2\,\mathrm A)^2(8\,\Omega)\\
-&=12\,\mathrm W,\\
-P_R&=\frac{V_{ab}^2}{R}\\
-&=\frac{(9{,}6\,\mathrm V)^2}{8\,\Omega}\\
-&=12\,\mathrm W.
+&P_R = I^2R\\
+&\quad =(1{,}2\,\mathrm A)^2(8\,\Omega)\\
+&\quad =12\,\mathrm W,\\
+&P_R = \frac{V_{ab}^2}{R}\\
+&\quad =\frac{(9{,}6\,\mathrm V)^2}{8\,\Omega}\\
+&\quad =12\,\mathrm W.
 \end{aligned}
 $$
 
@@ -203,13 +198,12 @@ Hai cực pin có $\mathcal E=12$ V, $r=2$ Ω được nối bằng dây lý tư
 
 $$
 \begin{aligned}
-P_{\mathcal E}
-&=\mathcal EI\\
-&=(12\,\mathrm V)(6\,\mathrm A)\\
-&=72\,\mathrm W,\\
-P_r&=I^2r\\
-&=(6\,\mathrm A)^2(2\,\Omega)\\
-&=72\,\mathrm W.
+&P_{\mathcal E} = \mathcal EI\\
+&\quad =(12\,\mathrm V)(6\,\mathrm A)\\
+&\quad =72\,\mathrm W,\\
+&P_r = I^2r\\
+&\quad =(6\,\mathrm A)^2(2\,\Omega)\\
+&\quad =72\,\mathrm W.
 \end{aligned}
 $$
 

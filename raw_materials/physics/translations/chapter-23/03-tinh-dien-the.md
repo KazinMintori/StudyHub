@@ -26,8 +26,8 @@ Cầu dẫn đặc bán kính R mang tổng điện tích q. Tìm điện thế 
 
 $$
 \begin{aligned}
-V(r)&=\frac{kq}{r},\quad r\ge R,\\
-V(R)&=\frac{kq}{R}.
+&V(r) = \frac{kq}{r},\quad r\ge R,\\
+&V(R) = \frac{kq}{R}.
 \end{aligned}
 $$
 
@@ -71,9 +71,9 @@ Tìm điện thế ở độ cao y giữa hai bản song song đã xét ở mụ
 
 $$
 \begin{aligned}
-V(y)&=Ey,\\
-V_a-V_b&=Ed,\\
-E&=\frac{V_a-V_b}{d}.
+&V(y) = Ey,\\
+&V_a-V_b = Ed,\\
+&E = \frac{V_a-V_b}{d}.
 \end{aligned}
 $$
 
@@ -95,9 +95,9 @@ Tìm điện thế cách một dây rất dài có mật độ điện tích λ 
 
 $$
 \begin{aligned}
-V_a-V_b&=\frac{\lambda}{2\pi\varepsilon_0}
+&V_a-V_b =\frac{\lambda}{2\pi\varepsilon_0}
 \int_{r_a}^{r_b}\frac{dr}{r}\\
-&=\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{r_b}{r_a}.
+&\quad =\frac{\lambda}{2\pi\varepsilon_0}\ln\frac{r_b}{r_a}.
 \end{aligned}
 $$
 
@@ -121,8 +121,8 @@ Với λ dương, r tăng làm V giảm, đúng chiều trường. Nếu là tr�
 
 $$
 \begin{aligned}
-V(x)&=\frac{k}{\sqrt{x^2+a^2}}\int dq\\
-&=\frac{kQ}{\sqrt{x^2+a^2}}.
+&V(x) = \frac{k}{\sqrt{x^2+a^2}}\int dq\\
+&\quad =\frac{kQ}{\sqrt{x^2+a^2}}.
 \end{aligned}
 $$
 
@@ -140,8 +140,8 @@ $$
 
 $$
 \begin{aligned}
-dV&=\frac{kQ}{2a}\frac{dy}{\sqrt{x^2+y^2}},\\
-V(x)&=\frac{kQ}{2a}\int_{-a}^{a}
+&dV = \frac{kQ}{2a}\frac{dy}{\sqrt{x^2+y^2}},\\
+&V(x) =\frac{kQ}{2a}\int_{-a}^{a}
 \frac{dy}{\sqrt{x^2+y^2}}.
 \end{aligned}
 $$

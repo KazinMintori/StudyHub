@@ -40,8 +40,8 @@ Với cùng độ dài dây L, ba lựa chọn "trực giác" là **hình chữ 
 
 $$
 \begin{aligned}
-\underset{x \in \mathbb{R}^n}{\text{minimize}} \quad & f_0(x) \\
-\text{subject to} \quad & f_i(x) \le b_i, \quad i = 1, \dots, m
+&\underset{x \in \mathbb{R}^n}{\text{minimize}} \quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le b_i, \quad i = 1, \dots, m
 \end{aligned}
 $$
 
@@ -266,8 +266,8 @@ Nếu $\text{rank}(A)<n$, công thức $(A^TA)^{-1}$ **không dùng được** (
 
 $$
 \begin{aligned}
-\underset{x\in\mathbb R^n}{\text{minimize}} \quad & c^Tx \\
-\text{subject to} \quad & a_i^Tx \le b_i,\quad i=1,\dots,m
+&\underset{x\in\mathbb R^n}{\text{minimize}} \quad c^Tx\\
+&\text{subject to}\quad a_i^Tx \le b_i,\quad i=1,\dots,m
 \end{aligned}
 $$
 
@@ -287,8 +287,8 @@ $3x_1+2x_2\le 10$ ✓ affine · $x_1+x_2=4$ ✓ affine (đẳng thức affine đ
 
 $$
 \begin{aligned}
-\text{maximize} \quad & 3x_1+2x_2\\
-\text{subject to} \quad & 2x_1+x_2\le 10,\quad x_1+2x_2\le 8,\quad x_1,x_2\ge0
+&\text{maximize}\quad 3x_1+2x_2\\
+&\text{subject to}\quad 2x_1+x_2\le 10,\quad x_1+2x_2\le 8,\quad x_1,x_2\ge0
 \end{aligned}
 $$
 
@@ -354,9 +354,12 @@ Tính chất của bài toán **không chỉ phụ thuộc cách nó được vi
 
 ### 4.1 Tập lồi và hàm lồi
 
-$$C \text{ lồi} \iff \theta x + (1-\theta)y \in C\quad \forall x,y\in C,\ \theta\in[0,1]$$
-
-$$f \text{ lồi trên miền lồi} \iff f(\theta x+(1-\theta)y)\le \theta f(x)+(1-\theta)f(y)$$
+$$
+\begin{aligned}
+    &C \text{ lồi} \iff \theta x + (1-\theta)y \in C\quad \forall x,y\in C,\ \theta\in[0,1]\\
+    &f \text{ lồi trên miền lồi} \iff f(\theta x+(1-\theta)y)\le \theta f(x)+(1-\theta)f(y)
+\end{aligned}
+$$
 
 Đọc bằng hình học: **Đồ thị của $f$ nằm dưới mọi dây cung nối hai điểm trên đồ thị**. (Bài 02 sẽ mổ xẻ tập lồi rất sâu — ở đây ta chỉ cần đủ để hiểu vì sao LS và LP "dễ giải".)
 

@@ -60,12 +60,12 @@ export const mathAiReviewCheatsheet = {
     ] },
     { id: 'kkt', title: 'KKT và đối ngẫu', badge: 'Ôn luyện 3', items: [
       { name: 'Quy ước dấu', bullets: ['Viết $f_i\\le0$ và $\\mu_i\\ge0$.', 'Nhân tử của đẳng thức được lấy dấu tùy ý.', 'KKT cần dưới LICQ và đủ cho bài toán lồi khả vi.'] },
-      { name: 'Khoảng cách đối ngẫu', formula: '$$\\begin{aligned}0&\\le f(x)-p^\\star\\\\&\\le f(x)-g(\\mu,\\lambda)\\end{aligned}$$', bullets: ['x phải khả thi gốc và μ phải không âm.', 'Slater yêu cầu một điểm thỏa nghiêm các bất đẳng thức và thỏa các đẳng thức affine trong miền chung.'] },
+      { name: 'Khoảng cách đối ngẫu', formula: '$$\\begin{aligned}&0 \\le f(x)-p^\\star\\\\&\\le f(x)-g(\\mu,\\lambda)\\end{aligned}$$', bullets: ['x phải khả thi gốc và μ phải không âm.', 'Slater yêu cầu một điểm thỏa nghiêm các bất đẳng thức và thỏa các đẳng thức affine trong miền chung.'] },
       { name: 'Nhánh tham số lớn hơn 2', formula: '$$\\lambda=-\\frac{r+1}{3}$$', bullets: ['Cả ba tọa độ nghiệm đều dương khi r>2.'] }
     ] },
     { id: 'algorithms', title: 'Hướng và độ dài bước', badge: 'Ôn luyện 4', items: [
       { name: 'Hướng gradient', formula: '$$d=-\\nabla f(x)$$', bullets: ['Nếu gradient khác 0 thì tích gradient và hướng âm.', 'Chuẩn gradient nhỏ đo tính dừng, không tự đo khoảng cách đến nghiệm.'] },
-      { name: 'Backtracking Armijo', formula: '$$\\begin{aligned}f(x+td)&\\le f(x)\\\\&\\quad+\\alpha t\\nabla f(x)^Td\\end{aligned}$$', bullets: ['Dùng $0<\\alpha<1/2$ và $0<\\beta<1$.', 'Nếu chưa đạt, thay t bởi beta nhân t và thử lại.', 'Wolfe còn cần điều kiện độ cong.'] },
+      { name: 'Backtracking Armijo', formula: '$$\\begin{aligned}&f(x+td) \\le f(x)\\\\&\\quad+\\alpha t\\nabla f(x)^Td\\end{aligned}$$', bullets: ['Dùng $0<\\alpha<1/2$ và $0<\\beta<1$.', 'Nếu chưa đạt, thay t bởi beta nhân t và thử lại.', 'Wolfe còn cần điều kiện độ cong.'] },
       { name: 'Hướng Newton', formula: '$$\\nabla^2f(x)d=-\\nabla f(x)$$', bullets: ['Hessian PD bảo đảm hướng giảm khi gradient khác 0.', 'Giải hệ tuyến tính thay vì lập nghịch đảo.'] }
     ] }
   ]

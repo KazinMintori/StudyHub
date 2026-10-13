@@ -19,8 +19,8 @@ Xét bài toán tối ưu lồi tổng quát:
 
 $$
 \begin{aligned}
-\min_{x} \quad & f_0(x) \\
-\text{s.t.} \quad & f_i(x) \le 0, \quad i = 1, \dots, m, \\
+&\min_{x} \quad f_0(x)\\
+&\text{s.t.} \quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
 & A x = b,
 \end{aligned}
 $$
@@ -40,10 +40,10 @@ Thay vì giải trực tiếp điều kiện bù trừ rời rạc $\lambda_i f_
 
 $$
 \begin{aligned}
-\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &= 0, \\
--\lambda_i f_i(x) &= \eta, \quad i = 1, \dots, m, \\
-A x &= b, \\
-f_i(x) < 0, \quad \lambda_i &> 0, \quad i = 1, \dots, m.
+&\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu = 0,\\
+&-\lambda_i f_i(x) = \eta, \quad i = 1, \dots, m,\\
+&A x = b,\\
+&f_i(x) < 0, \quad \lambda_i > 0, \quad i = 1, \dots, m.
 \end{aligned}
 $$
 
@@ -304,10 +304,10 @@ với $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) =
    Hệ điều kiện KKT bị xáo trộn:
    $$
    \begin{aligned}
-   c - s + A^T \nu &= 0 \quad (\text{Khả thi đối ngẫu}), \\
-   X S \mathbf{1} &= \eta \mathbf{1} \quad (\text{Bù trừ trung tâm}), \\
-   A x &= b \quad (\text{Khả thi nguyên thủy}), \\
-   x > 0, \quad s &> 0,
+   &c - s + A^T \nu = 0 \quad (\text{Khả thi đối ngẫu}),\\
+   &X S \mathbf{1} = \eta \mathbf{1} \quad (\text{Bù trừ trung tâm}),\\
+   &A x = b \quad (\text{Khả thi nguyên thủy}),\\
+   &x > 0, \quad s > 0,
    \end{aligned}
    $$
    trong đó $X = \operatorname{diag}(x_1, \dots, x_n)$ và $S = \operatorname{diag}(s_1, \dots, s_n)$.
@@ -315,9 +315,9 @@ với $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) =
 2. Các vector phần dư tại điểm hiện tại $(x, s, \nu)$:
    $$
    \begin{aligned}
-   r_{\text{dual}} &= c - s + A^T \nu, \\
-   r_{\text{cent}} &= X S \mathbf{1} - \eta \mathbf{1}, \\
-   r_{\text{pri}} &= A x - b.
+   &r_{\text{dual}} = c - s + A^T \nu,\\
+   &r_{\text{cent}} = X S \mathbf{1} - \eta \mathbf{1},\\
+   &r_{\text{pri}} = A x - b.
    \end{aligned}
    $$
 
@@ -516,8 +516,8 @@ Tại bước lặp hiện tại, nghiệm thử là $x = 2$ và nhân tử đ�
    Cập nhật với bước $s = 0.8$:
    $$
    \begin{aligned}
-   x_{\text{new}} &= x + s \Delta x = 2 + 0.8(-1) = 1.2, \\
-   \lambda_{\text{new}} &= \lambda + s \Delta \lambda = 1 + 0.8(0) = 1.
+   &x_{\text{new}} = x + s \Delta x = 2 + 0.8(-1) = 1.2,\\
+   &\lambda_{\text{new}} = \lambda + s \Delta \lambda = 1 + 0.8(0) = 1.
    \end{aligned}
    $$
 

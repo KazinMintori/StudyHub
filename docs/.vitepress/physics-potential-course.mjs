@@ -11,30 +11,30 @@ export const potentialTopics=[
 ]
 export const potentialSlides=[
  {note,title:'Công lực điện làm thế năng giảm',bullets:['Trường tĩnh điện là trường thế. Công giữa hai điểm không phụ thuộc đường đi.','Thế năng thuộc hệ các điện tích và phụ thuộc mốc được chọn.','Nếu chỉ lực điện sinh công thì động năng cộng thế năng được bảo toàn.'],formula:d(String.raw`\begin{aligned}
-W_{a\to b}&=U_a-U_b,\\
-K_a+U_a&=K_b+U_b.
+&W_{a\to b} = U_a-U_b,\\
+&K_a+U_a = K_b+U_b.
 \end{aligned}`),example:''},
  {note,title:'Thế năng nhiều nguồn đếm mỗi cặp một lần',bullets:['Với hai nguồn điểm, thế năng có dấu của tích điện tích.','Công thêm một nguồn vào hệ chỉ tính các cặp liên quan nguồn mới.','Mốc bằng không khi mọi nguồn ở xa vô hạn phù hợp hệ nguồn hữu hạn.'],formula:d(String.raw`\begin{aligned}
-U_{123}&=\frac{kq_1q_2}{r_{12}}\\
+&U_{123} = \frac{kq_1q_2}{r_{12}}\\
 &\quad+\frac{kq_1q_3}{r_{13}}\\
 &\quad+\frac{kq_2q_3}{r_{23}},\\
-U&=k\sum_{i=1}^{n-1}\sum_{j=i+1}^{n}\frac{q_iq_j}{r_{ij}}.
+&U = k\sum_{i=1}^{n-1}\sum_{j=i+1}^{n}\frac{q_iq_j}{r_{ij}}.
 \end{aligned}`),example:''},
  {note,title:'Điện thế tách ảnh hưởng của điện tích thử',bullets:['Điện thế là thế năng trên mỗi đơn vị điện tích thử.','Hiệu điện thế cho công lực điện trên mỗi coulomb.','Điện thế cao không luôn tương ứng thế năng cao vì điện tích thử có thể âm.'],formula:d(String.raw`\begin{aligned}
-V&=\frac{U}{q_0},\\
-W_{a\to b}&=q_0(V_a-V_b),\\
-1\,\mathrm V&=1\,\mathrm{J/C}.
+&V = \frac{U}{q_0},\\
+&W_{a\to b} = q_0(V_a-V_b),\\
+&1\,\mathrm V = 1\,\mathrm{J/C}.
 \end{aligned}`),example:''},
  {note,title:'Cộng điện thế bằng tổng đại số hoặc tích phân',bullets:['Điện thế là vô hướng, nên cộng phần đóng góp có dấu.','Phân bố liên tục được chia thành các phần dq.','Nguồn kéo dài vô hạn thường cần mốc hữu hạn thay cho vô hạn.'],formula:d(String.raw`\begin{aligned}
-V&=k\int \frac{dq}{r},\\
-V_a-V_b&=\int_a^b\vec E\cdot d\vec\ell.
+&V = k\int \frac{dq}{r},\\
+&V_a-V_b = \int_a^b\vec E\cdot d\vec\ell.
 \end{aligned}`),example:''},
  {note,title:'Mặt đẳng thế vuông góc điện trường',bullets:['Dịch chuyển trên mặt đẳng thế không làm lực điện sinh công.','Tại điểm trường khác không, trường vuông góc mặt đẳng thế.','Vật dẫn cân bằng và hốc kín không có nguồn riêng là miền đẳng thế.'],formula:d(String.raw`dV=-\vec E\cdot d\vec\ell`),example:''},
  {note,title:'Gradient cho trường từ hàm điện thế',bullets:['Lấy âm đạo hàm riêng theo mỗi tọa độ để có thành phần trường.','Trường hướng về phía điện thế giảm nhanh nhất.','Cộng một hằng số vào điện thế không thay đổi điện trường.'],formula:d(String.raw`\begin{aligned}
-E_x&=-\frac{\partial V}{\partial x},\\
-E_y&=-\frac{\partial V}{\partial y},\\
-E_z&=-\frac{\partial V}{\partial z},\\
-\vec E&=-\nabla V.
+&E_x = -\frac{\partial V}{\partial x},\\
+&E_y = -\frac{\partial V}{\partial y},\\
+&E_z = -\frac{\partial V}{\partial z},\\
+&\vec E = -\nabla V.
 \end{aligned}`),example:''}
 ]
 export const potentialCheatsheet={summary:'Định nghĩa, tính chất và công thức của thế năng điện, điện thế, mặt đẳng thế và gradient.',sections:[
@@ -47,7 +47,7 @@ export const potentialCheatsheet={summary:'Định nghĩa, tính chất và côn
   {name:'Hai điện tích điểm',formula:d(String.raw`U=\frac{kqq_0}{r}`),description:'r là khoảng cách hai nguồn, k = 1/(4πε₀). Mốc thế năng bằng không ở khoảng cách vô hạn. Tích qq₀ được giữ dấu.'},
   {name:'Ba điện tích và tổng các cặp',formulaRows:[
    {label:'Hệ ba điện tích điểm',formula:d(String.raw`\begin{aligned}
-U_{123}&=\frac{kq_1q_2}{r_{12}}\\
+&U_{123} = \frac{kq_1q_2}{r_{12}}\\
 &\quad+\frac{kq_1q_3}{r_{13}}\\
 &\quad+\frac{kq_2q_3}{r_{23}}.
 \end{aligned}`)},
@@ -61,15 +61,15 @@ U_{123}&=\frac{kq_1q_2}{r_{12}}\\
    {label:'Đơn vị điện trường',formula:d(String.raw`1\,\mathrm{V/m}=1\,\mathrm{N/C}`)}
   ],description:'q₀ là điện tích thử khác không, đủ nhỏ để không làm đổi phân bố nguồn. Chỉ hiệu điện thế có ý nghĩa độc lập với mốc.'},
   {name:'Công, động năng và electron-volt',formula:d(String.raw`\begin{aligned}
-W_{a\to b}&=q_0(V_a-V_b),\\
-\Delta K&=-q_0\Delta V,\\
-1\,\mathrm{eV}&=1.602176634\\
+&W_{a\to b} = q_0(V_a-V_b),\\
+&\Delta K = -q_0\Delta V,\\
+&1\,\mathrm{eV} = 1.602176634\\
 &\quad\times10^{-19}\,\mathrm J.
 \end{aligned}`),description:'Công thức động năng áp dụng khi chỉ lực điện sinh công. Electron-volt là đơn vị năng lượng, bằng năng lượng một điện tích có độ lớn e nhận qua hiệu điện thế có độ lớn 1 V.'},
   {name:'Nguồn điểm và nhiều nguồn',formula:d(String.raw`\begin{aligned}
-V&=\frac{kq}{r},\\
-V_{123}&=\frac{kq_1}{r_1}+\frac{kq_2}{r_2}+\frac{kq_3}{r_3},\\
-V&=k\sum_{i=1}^{n}\frac{q_i}{r_i}.
+&V = \frac{kq}{r},\\
+&V_{123} = \frac{kq_1}{r_1}+\frac{kq_2}{r_2}+\frac{kq_3}{r_3},\\
+&V = k\sum_{i=1}^{n}\frac{q_i}{r_i}.
 \end{aligned}`),description:'Mốc ở vô hạn với hệ nguồn hữu hạn. Tổng có dấu. i chạy qua n nguồn, rᵢ là khoảng cách từ nguồn i tới điểm khảo sát.'},
   {name:'Phân bố liên tục',formulaRows:[
    {label:'Điện thế của toàn nguồn',formula:d(String.raw`V=k\int \frac{dq}{r}`)},
@@ -79,16 +79,16 @@ V&=k\sum_{i=1}^{n}\frac{q_i}{r_i}.
   ],description:'r đo từ từng phần nguồn tới điểm khảo sát. λ, σ, ρ là mật độ dài, mặt, thể tích. Chọn công thức dq theo hình học nguồn.'}]},
  {id:'field',title:'Điện thế và điện trường',items:[
   {name:'Tích phân dọc đường',formula:d(String.raw`\begin{aligned}
-V_a-V_b&=\int_a^b\vec E\cdot d\vec\ell,\\
-dV&=-\vec E\cdot d\vec\ell,\\
-\Delta V&=-\vec E\cdot\Delta\vec r.
+&V_a-V_b = \int_a^b\vec E\cdot d\vec\ell,\\
+&dV = -\vec E\cdot d\vec\ell,\\
+&\Delta V = -\vec E\cdot\Delta\vec r.
 \end{aligned}`),description:'Hai công thức đầu áp dụng trường tĩnh. Công thức cuối cần trường đều trên đường đi. Đường tích phân tránh điểm kỳ dị của mô hình nguồn.'},
   {name:'Mặt đẳng thế và vật dẫn',formula:'',description:'Điện thế không đổi trên mặt đẳng thế. Trường vuông góc mặt tại điểm trường khác không. Toàn vật dẫn cân bằng tĩnh điện đẳng thế. Hốc kín không có nguồn riêng có cùng thế với thành hốc và trường bằng không.'},
   {name:'Gradient trong tọa độ Descartes',formula:d(String.raw`\begin{aligned}
-E_x&=-\frac{\partial V}{\partial x},\\
-E_y&=-\frac{\partial V}{\partial y},\\
-E_z&=-\frac{\partial V}{\partial z},\\
-\vec E&=-\nabla V.
+&E_x = -\frac{\partial V}{\partial x},\\
+&E_y = -\frac{\partial V}{\partial y},\\
+&E_z = -\frac{\partial V}{\partial z},\\
+&\vec E = -\nabla V.
 \end{aligned}`),description:'Cần V khả vi trong vùng khảo sát. Gradient hướng tăng thế nhanh nhất, điện trường hướng ngược lại. Đổi mốc bằng hằng số không đổi trường.'}]},
  {id:'sources',title:'Các phân bố đối xứng',items:[
   {name:'Cầu dẫn và vỏ cầu đều',formulaRows:[
@@ -100,8 +100,8 @@ E_z&=-\frac{\partial V}{\partial z},\\
    {label:'Trong cầu, r ≤ R',formula:d(String.raw`V(r)=\frac{kQ}{2R}\left(3-\frac{r^2}{R^2}\right)`)}
   ],description:'Q đều trong thể tích cầu bán kính R. Mốc ở vô hạn. Điện thế và thành phần trường liên tục tại R.'},
   {name:'Vòng đều trên trục',formula:d(String.raw`\begin{aligned}
-V(x)&=\frac{kQ}{\sqrt{x^2+a^2}},\\
-E_x&=\frac{kQx}{(x^2+a^2)^{3/2}}.
+&V(x) = \frac{kQ}{\sqrt{x^2+a^2}},\\
+&E_x = \frac{kQx}{(x^2+a^2)^{3/2}}.
 \end{aligned}`),description:'a là bán kính vòng, x đo dọc trục từ tâm. Mốc ở vô hạn. Công thức điện thế trên trục không cho phép lấy đạo hàm theo tọa độ ngoài trục.'},
   {name:'Thanh đều, điểm trên đường trung trực',formulaRows:[
    {label:'Khoảng cách s từ điểm khảo sát đến mỗi đầu thanh',formula:d(String.raw`s=\sqrt{x^2+a^2}`)},

@@ -56,10 +56,10 @@ Xét bài toán cực đại hóa entropy dưới các ràng buộc mô-men th�
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \sum_{i=1}^n p_i \log p_i \\
-\text{subject to}\quad & \sum_{i=1}^n p_i f_j(x_i) = \alpha_j, \quad j = 1, \dots, k, \\
-& \sum_{i=1}^n p_i = 1, \\
-& p \succeq 0.
+&\text{minimize}\quad \sum_{i=1}^n p_i \log p_i\\
+&\text{subject to}\quad \sum_{i=1}^n p_i f_j(x_i) = \alpha_j, \quad j = 1, \dots, k,\\
+&\phantom{\text{subject to}\quad } \sum_{i=1}^n p_i = 1,\\
+&\phantom{\text{subject to}\quad } p \succeq 0.
 \end{aligned}
 $$
 
@@ -122,10 +122,10 @@ $$
 
 $$
 \begin{aligned}
-\text{minimize}\quad & t \\
-\text{subject to}\quad & \sum_{y=1}^m T_{1y} p_2(y) \le t, \\
-& 1 - \sum_{y=1}^m T_{1y} p_1(y) \le t, \\
-& 0 \le T_{1y} \le 1, \quad y = 1, \dots, m.
+&\text{minimize}\quad t\\
+&\text{subject to}\quad \sum_{y=1}^m T_{1y} p_2(y) \le t,\\
+&\phantom{\text{subject to}\quad } 1 - \sum_{y=1}^m T_{1y} p_1(y) \le t,\\
+&\phantom{\text{subject to}\quad } 0 \le T_{1y} \le 1, \quad y = 1, \dots, m.
 \end{aligned}
 $$
 
@@ -134,9 +134,9 @@ Trong thực tế y tế hoặc an ninh quốc phòng, ta thường khống ch�
 
 $$
 \begin{aligned}
-\text{maximize}\quad & \sum_{y=1}^m T_{1y} p_1(y) \\
-\text{subject to}\quad & \sum_{y=1}^m T_{1y} p_2(y) \le \alpha, \\
-& 0 \le T_{1y} \le 1, \quad y = 1, \dots, m.
+&\text{maximize}\quad \sum_{y=1}^m T_{1y} p_1(y)\\
+&\text{subject to}\quad \sum_{y=1}^m T_{1y} p_2(y) \le \alpha,\\
+&\phantom{\text{subject to}\quad } 0 \le T_{1y} \le 1, \quad y = 1, \dots, m.
 \end{aligned}
 $$
 
@@ -157,10 +157,10 @@ Xét biến ngẫu nhiên rời rạc $X$ nhận các giá trị trong tập $\{
    Bài toán cực tiểu hóa hàm lồi:
    $$
    \begin{aligned}
-   \text{minimize}\quad & p_1 \log p_1 + p_2 \log p_2 + p_3 \log p_3 \\
-   \text{subject to}\quad & p_3 - p_1 = 0{,}2, \\
-   & p_1 + p_2 + p_3 = 1, \\
-   & p_1, p_2, p_3 \ge 0.
+   &\text{minimize}\quad p_1 \log p_1 + p_2 \log p_2 + p_3 \log p_3\\
+   &\text{subject to}\quad p_3 - p_1 = 0{,}2,\\
+   &\phantom{\text{subject to}\quad } p_1 + p_2 + p_3 = 1,\\
+   &\phantom{\text{subject to}\quad } p_1, p_2, p_3 \ge 0.
    \end{aligned}
    $$
 
@@ -192,9 +192,9 @@ Xét biến ngẫu nhiên rời rạc $X$ nhận các giá trị trong tập $\{
    Các xác suất tối ưu:
    $$
    \begin{aligned}
-   p_1^* &= \frac{1}{4{,}1951} \approx 0{,}2384, \\
-   p_2^* &= \frac{1{,}3561}{4{,}1951} \approx 0{,}3233, \\
-   p_3^* &= \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
+   &p_1^* = \frac{1}{4{,}1951} \approx 0{,}2384,\\
+   &p_2^* = \frac{1{,}3561}{4{,}1951} \approx 0{,}3233,\\
+   &p_3^* = \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
    \end{aligned}
    $$
    Kiểm tra: Tổng các xác suất là $p_1 + p_2 + p_3 \approx 1{,}0001 \approx 1$, và độ lệch kỳ vọng là $p_3 - p_1 = 0{,}2000$.
@@ -220,11 +220,11 @@ Mục tiêu là thiết kế bộ phát hiện $T_1 = (T_{11}, T_{12}, T_{13})^T
 2. **Bài toán Quy hoạch tuyến tính**:
    $$
    \begin{aligned}
-   \text{maximize}\quad & 0{,}1 T_{11} + 0{,}3 T_{12} + 0{,}6 T_{13} \\
-   \text{subject to}\quad & 0{,}5 T_{11} + 0{,}4 T_{12} + 0{,}1 T_{13} \le 0{,}2, \\
-   & 0 \le T_{11} \le 1, \\
-   & 0 \le T_{12} \le 1, \\
-   & 0 \le T_{13} \le 1.
+   &\text{maximize}\quad 0{,}1 T_{11} + 0{,}3 T_{12} + 0{,}6 T_{13}\\
+   &\text{subject to}\quad 0{,}5 T_{11} + 0{,}4 T_{12} + 0{,}1 T_{13} \le 0{,}2,\\
+   &\phantom{\text{subject to}\quad } 0 \le T_{11} \le 1,\\
+   &\phantom{\text{subject to}\quad } 0 \le T_{12} \le 1,\\
+   &\phantom{\text{subject to}\quad } 0 \le T_{13} \le 1.
    \end{aligned}
    $$
 
@@ -268,11 +268,11 @@ Xét biến ngẫu nhiên nhận giá trị trong $\{1, 2, 3\}$. Quan sát đư�
    Bài toán tối ưu lồi:
    $$
    \begin{aligned}
-   \text{maximize}\quad & \log p_1 + 5 \log p_2 + 4 \log p_3 \\
-   \text{subject to}\quad & p_1 \ge p_2, \\
-   & p_2 \ge p_3, \\
-   & p_3 \ge 0, \\
-   & p_1 + p_2 + p_3 = 1.
+   &\text{maximize}\quad \log p_1 + 5 \log p_2 + 4 \log p_3\\
+   &\text{subject to}\quad p_1 \ge p_2,\\
+   &\phantom{\text{subject to}\quad } p_2 \ge p_3,\\
+   &\phantom{\text{subject to}\quad } p_3 \ge 0,\\
+   &\phantom{\text{subject to}\quad } p_1 + p_2 + p_3 = 1.
    \end{aligned}
    $$
 

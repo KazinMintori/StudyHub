@@ -24,8 +24,7 @@ Chọn chiều dòng dương sao cho điện tích dương đi vào bản trái 
 
 $$
 \begin{aligned}
-\mathcal E-iR-\frac{q}{C}&=0.
-\end{aligned}
+&\mathcal E-iR-\frac{q}{C} = 0.\end{aligned}
 \tag{26.9}
 $$
 
@@ -33,8 +32,8 @@ Giải phương trình theo dòng điện, ta được:
 
 $$
 \begin{aligned}
-i&=\frac{\mathcal E}{R}-\frac{q}{RC}\\
-&=\frac{\mathcal E}{R}\left(1-\frac{q}{C\mathcal E}\right).
+&i = \frac{\mathcal E}{R}-\frac{q}{RC}\\
+&\quad =\frac{\mathcal E}{R}\left(1-\frac{q}{C\mathcal E}\right).
 \end{aligned}
 \tag{26.10}
 $$
@@ -52,8 +51,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{dq}{dt}&=\frac{\mathcal E}{R}-\frac{q}{RC}\\
-&=-\frac{q-C\mathcal E}{RC}.
+&\frac{dq}{dt} = \frac{\mathcal E}{R}-\frac{q}{RC}\\
+&\quad =-\frac{q-C\mathcal E}{RC}.
 \end{aligned}
 $$
 
@@ -61,10 +60,8 @@ Tách biến rồi lấy tích phân từ trạng thái ban đầu $q=0$, $t=0$ 
 
 $$
 \begin{aligned}
-\int_0^q\frac{dq'}{q'-C\mathcal E}
-&=-\int_0^t\frac{dt'}{RC}\\
-\ln\left(\frac{q-C\mathcal E}{-C\mathcal E}\right)
-&=-\frac{t}{RC}.
+&\int_0^q\frac{dq'}{q'-C\mathcal E} = -\int_0^t\frac{dt'}{RC}\\
+&\ln\left(\frac{q-C\mathcal E}{-C\mathcal E}\right) = -\frac{t}{RC}.
 \end{aligned}
 $$
 
@@ -72,8 +69,8 @@ Lấy hàm mũ hai vế rồi giải theo $q$, ta được điện tích trên t
 
 $$
 \begin{aligned}
-q&=C\mathcal E\left(1-e^{-t/(RC)}\right)\\
-&=Q_f\left(1-e^{-t/(RC)}\right).
+&q = C\mathcal E\left(1-e^{-t/(RC)}\right)\\
+&\quad =Q_f\left(1-e^{-t/(RC)}\right).
 \end{aligned}
 \tag{26.12}
 $$
@@ -82,9 +79,9 @@ Dòng điện là đạo hàm theo thời gian của điện tích:
 
 $$
 \begin{aligned}
-i&=\frac{dq}{dt}\\
-&=\frac{\mathcal E}{R}e^{-t/(RC)}\\
-&=I_0e^{-t/(RC)}.
+&i = \frac{dq}{dt}\\
+&\quad =\frac{\mathcal E}{R}e^{-t/(RC)}\\
+&\quad =I_0e^{-t/(RC)}.
 \end{aligned}
 \tag{26.13}
 $$
@@ -129,9 +126,9 @@ Một điện trở $10\,\mathrm{M\Omega}$ mắc nối tiếp với tụ điện
 
 $$
 \begin{aligned}
-\tau&=RC\\
-&=(10\,\mathrm{M\Omega})(1{,}0\,\mathrm{\mu F})\\
-&=10\,\mathrm s.
+&\tau = RC\\
+&\quad =(10\,\mathrm{M\Omega})(1{,}0\,\mathrm{\mu F})\\
+&\quad =10\,\mathrm s.
 \end{aligned}
 $$
 
@@ -139,9 +136,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{q}{Q_f}&=1-e^{-t/\tau}\\
-&=1-e^{-46/10}\\
-&\approx0{,}99.
+&\frac{q}{Q_f} = 1-e^{-t/\tau}\\
+&\quad =1-e^{-46/10}\\
+&\quad \approx0{,}99.
 \end{aligned}
 $$
 
@@ -149,9 +146,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{i}{I_0}&=e^{-t/\tau}\\
-&=e^{-46/10}\\
-&\approx0{,}010.
+&\frac{i}{I_0} = e^{-t/\tau}\\
+&\quad =e^{-46/10}\\
+&\quad \approx0{,}010.
 \end{aligned}
 $$
 
@@ -175,8 +172,8 @@ Khi không còn nguồn trong mạch, quy tắc vòng kín và $i=dq/dt$ cho:
 
 $$
 \begin{aligned}
-i&=\frac{dq}{dt}\\
-&=-\frac{q}{RC}.
+&i = \frac{dq}{dt}\\
+&\quad =-\frac{q}{RC}.
 \end{aligned}
 \tag{26.15}
 $$
@@ -185,10 +182,8 @@ Tách biến và lấy tích phân với điều kiện đầu $q(0)=Q_0$:
 
 $$
 \begin{aligned}
-\int_{Q_0}^{q}\frac{dq'}{q'}
-&=-\int_0^t\frac{dt'}{RC}\\
-\ln\left(\frac{q}{Q_0}\right)
-&=-\frac{t}{RC}.
+&\int_{Q_0}^{q}\frac{dq'}{q'} = -\int_0^t\frac{dt'}{RC}\\
+&\ln\left(\frac{q}{Q_0}\right) = -\frac{t}{RC}.
 \end{aligned}
 $$
 
@@ -196,8 +191,7 @@ Suy ra điện tích và dòng điện trong quá trình phóng:
 
 $$
 \begin{aligned}
-q&=Q_0e^{-t/(RC)},
-\end{aligned}
+&q = Q_0e^{-t/(RC)},\end{aligned}
 \tag{26.16}
 $$
 
@@ -205,9 +199,9 @@ Tại $t=0$, dòng ban đầu theo quy ước này là $I_0=-Q_0/(RC)$. Dòng t�
 
 $$
 \begin{aligned}
-i&=\frac{dq}{dt}\\
-&=-\frac{Q_0}{RC}e^{-t/(RC)}\\
-&=I_0e^{-t/(RC)}.
+&i = \frac{dq}{dt}\\
+&\quad =-\frac{Q_0}{RC}e^{-t/(RC)}\\
+&\quad =I_0e^{-t/(RC)}.
 \end{aligned}
 \tag{26.17}
 $$
@@ -229,9 +223,9 @@ Dấu âm cho biết dòng phóng ngược chiều dòng dương đã chọn. Đ
 
 $$
 \begin{aligned}
-t&=-\tau\ln\left(\frac{q}{Q_0}\right)\\
-&=-(10\,\mathrm s)\ln\left(\frac{0{,}50}{5{,}0}\right)\\
-&\approx23\,\mathrm s.
+&t = -\tau\ln\left(\frac{q}{Q_0}\right)\\
+&\quad =-(10\,\mathrm s)\ln\left(\frac{0{,}50}{5{,}0}\right)\\
+&\quad \approx23\,\mathrm s.
 \end{aligned}
 $$
 
@@ -239,9 +233,9 @@ Tại thời điểm ấy, $q/Q_0=0{,}10$, do đó:
 
 $$
 \begin{aligned}
-i&=-\frac{Q_0}{\tau}\frac{q}{Q_0}\\
-&=-\frac{5{,}0\times10^{-6}\,\mathrm C}{10\,\mathrm s}(0{,}10)\\
-&=-5{,}0\times10^{-8}\,\mathrm A.
+&i = -\frac{Q_0}{\tau}\frac{q}{Q_0}\\
+&\quad =-\frac{5{,}0\times10^{-6}\,\mathrm C}{10\,\mathrm s}(0{,}10)\\
+&\quad =-5{,}0\times10^{-8}\,\mathrm A.
 \end{aligned}
 $$
 
@@ -255,8 +249,7 @@ Trong quá trình nạp, nguồn cung cấp công suất tức thời $P_{\mathr
 
 $$
 \begin{aligned}
-\mathcal E i&=i^2R+i\frac{q}{C}.
-\end{aligned}
+&\mathcal E i = i^2R+i\frac{q}{C}.\end{aligned}
 \tag{26.18}
 $$
 
@@ -266,8 +259,8 @@ Tổng điện tích chuyển từ nguồn sang tụ trong suốt quá trình n�
 
 $$
 \begin{aligned}
-\int_0^\infty i\,dt&=Q_f\\
-&=C\mathcal E.
+&\int_0^\infty i\,dt = Q_f\\
+&\quad =C\mathcal E.
 \end{aligned}
 $$
 
@@ -283,10 +276,10 @@ Ta cũng có thể tính trực tiếp nhiệt lượng tỏa trong điện tr�
 
 $$
 \begin{aligned}
-U_R&=\int_0^\infty i^2R\,dt\\
-&=\frac{\mathcal E^2\tau}{R}\int_0^\infty e^{-2u}\,du\\
-&=\frac{\mathcal E^2\tau}{2R}\\
-&=\frac12 C\mathcal E^2.
+&U_R = \int_0^\infty i^2R\,dt\\
+&\quad =\frac{\mathcal E^2\tau}{R}\int_0^\infty e^{-2u}\,du\\
+&\quad =\frac{\mathcal E^2\tau}{2R}\\
+&\quad =\frac12 C\mathcal E^2.
 \end{aligned}
 $$
 
@@ -296,10 +289,9 @@ Khi phóng tụ, toàn bộ năng lượng điện trường ban đầu chuyển
 
 $$
 \begin{aligned}
-\int_0^\infty i^2R\,dt
-&=\frac{Q_0^2}{C}\int_0^\infty e^{-2u}\,du\\
-&=\frac{Q_0^2}{C}\left(\frac12\right)\\
-&=\frac{Q_0^2}{2C}.
+&\int_0^\infty i^2R\,dt = \frac{Q_0^2}{C}\int_0^\infty e^{-2u}\,du\\
+&\quad =\frac{Q_0^2}{C}\left(\frac12\right)\\
+&\quad =\frac{Q_0^2}{2C}.
 \end{aligned}
 $$
 
@@ -328,8 +320,8 @@ Sau một hằng số thời gian:
 
 $$
 \begin{aligned}
-\frac{q}{Q_0}&=e^{-t/(RC)}\\
-&=e^{-1}.
+&\frac{q}{Q_0} = e^{-t/(RC)}\\
+&\quad =e^{-1}.
 \end{aligned}
 $$
 
@@ -337,9 +329,9 @@ Vì $U=q^2/(2C)$, phần năng lượng còn lại là:
 
 $$
 \begin{aligned}
-\frac{U}{U_0}&=\left(\frac{q}{Q_0}\right)^2\\
-&=\frac1{e^2}\\
-&\approx0{,}135.
+&\frac{U}{U_0} = \left(\frac{q}{Q_0}\right)^2\\
+&\quad =\frac1{e^2}\\
+&\quad \approx0{,}135.
 \end{aligned}
 $$
 

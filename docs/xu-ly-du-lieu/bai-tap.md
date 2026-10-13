@@ -1735,9 +1735,7 @@ print(f"Tổng doanh thu kỷ lục: {doanh_thu_ky_luc:.1f} triệu đồng (Tru
 #### Tình huống thực tế
 Một chuỗi bán lẻ điện máy tại Việt Nam muốn theo dõi đà tăng trưởng doanh số theo quý qua 3 năm (2023 - 2025). Dữ liệu được trích xuất (snapshot) vào ngày `2025-08-20` (giữa Quý 3/2025). Ban giám đốc yêu cầu tính chỉ số tăng trưởng cùng kỳ (Year-over-Year - YoY) cho từng quý:
 $$
-\begin{aligned}
-YoY_t = \frac{V_t - V_{t-4}}{V_{t-4}} \times 100\%
-\end{aligned}
+\text{YoY}_t = \frac{V_t - V_{t-4}}{V_{t-4}} \times 100\%
 $$
 
 Nếu chỉ đơn thuần gọi `.pct_change(4)`, Quý 3/2025 sẽ bị so sánh số liệu mới trải qua 51 ngày với Quý 3/2024 trọn vẹn 92 ngày, dẫn đến một con số sụt giảm giả tạo ($-40\%$) gây hoảng loạn không đáng có cho ban điều hành! Hãy xây dựng giải pháp phân tích:
@@ -2883,9 +2881,7 @@ Hãy chỉ ra 4 lỗi diễn đạt số liệu nghiêm trọng trong đoạn v�
 1. **Lỗi 1 · Nhầm lẫn giữa Thay đổi Phần trăm (%) và Điểm Phần trăm (Percentage Points)**:
    Tỷ lệ tăng từ $20\%$ lên $25\%$ là mức tăng **5 điểm phần trăm (percentage points)**, hoặc mức tăng tương đối bằng:
    $$
-   \begin{aligned}
    \frac{25\% - 20\%}{20\%} = \frac{5}{20} = +25\%
-   \end{aligned}
    $$
    Viết *"tăng vọt 5%"* là sai bản chất toán học (nếu tăng $5\%$ thì từ $20\%$ chỉ lên $20\% \times 1.05 = 21\%$).
 2. **Lỗi 2 · Ngôn từ phóng đại, phi học thuật**:

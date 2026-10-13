@@ -307,8 +307,8 @@ Với dãy số gồm $11$ phần tử của chúng ta:
 
 $$
 \begin{aligned}
-s^2 &\approx 2.87, \\
-s &\approx \sqrt{2.87} \approx 1.69.
+&s^2 \approx 2.87,\\
+&s \approx \sqrt{2.87} \approx 1.69.
 \end{aligned}
 $$
 
@@ -440,8 +440,8 @@ $$
    - Các tứ phân vị:
      $$
      \begin{aligned}
-     Q_1 &= \frac{15 + 16}{2} = 15.5, \\
-     Q_3 &= \frac{25 + 28}{2} = 26.5.
+     &Q_1 = \frac{15 + 16}{2} = 15.5,\\
+     &Q_3 = \frac{25 + 28}{2} = 26.5.
      \end{aligned}
      $$
    - Khoảng tứ phân vị: $\text{IQR} = 26.5 - 15.5 = 11.0$.

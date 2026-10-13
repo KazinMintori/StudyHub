@@ -55,9 +55,9 @@ Cực tiểu hóa thể tích tương đương với việc cực đại hóa $\
 
 $$
 \begin{aligned}
-\min_{A, b} \quad & -\log \det A \\
-\text{sao cho} \quad & \sup_{x \in C} \|Ax + b\|_2 \le 1, \\
-& A \in \mathbb{S}_{++}^n.
+&\min_{A, b} \quad -\log \det A\\
+&\text{sao cho}\quad \sup_{x \in C} \|Ax + b\|_2 \le 1,\\
+&\phantom{\text{subject to}\quad } A \in \mathbb{S}_{++}^n.
 \end{aligned}
 $$
 
@@ -66,9 +66,9 @@ Nếu $C = \operatorname{conv}\{x_1, x_2, \dots, x_m\}$, một ellipsoid chứa 
 
 $$
 \begin{aligned}
-\min_{A, b} \quad & -\log \det A \\
-\text{sao cho} \quad & \|Ax_i + b\|_2 \le 1, \quad \forall i = 1, \dots, m, \\
-& A \in \mathbb{S}_{++}^n.
+&\min_{A, b} \quad -\log \det A\\
+&\text{sao cho}\quad \|Ax_i + b\|_2 \le 1, \quad \forall i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } A \in \mathbb{S}_{++}^n.
 \end{aligned}
 $$
 
@@ -122,9 +122,9 @@ Bài toán tìm ellipsoid nội tiếp lớn nhất trở thành bài toán tố
 
 $$
 \begin{aligned}
-\max_{B, d} \quad & \log \det B \\
-\text{sao cho} \quad & \|B a_i\|_2 + a_i^T d \le b_i, \quad \forall i = 1, \dots, m, \\
-& B \in \mathbb{S}_{++}^n.
+&\max_{B, d} \quad \log \det B\\
+&\text{sao cho}\quad \|B a_i\|_2 + a_i^T d \le b_i, \quad \forall i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } B \in \mathbb{S}_{++}^n.
 \end{aligned}
 $$
 
@@ -147,9 +147,9 @@ Cực đại hóa bán kính $r$ dẫn trực tiếp tới một **Quy hoạch t
 
 $$
 \begin{aligned}
-\max_{x_c, r} \quad & r \\
-\text{sao cho} \quad & a_i^T x_c + r \|a_i\|_2 \le b_i, \quad \forall i = 1, \dots, m, \\
-& r \ge 0.
+&\max_{x_c, r} \quad r\\
+&\text{sao cho}\quad a_i^T x_c + r \|a_i\|_2 \le b_i, \quad \forall i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } r \ge 0.
 \end{aligned}
 $$
 
@@ -221,8 +221,8 @@ $$
 1. **Tính đạo hàm riêng**:
    $$
    \begin{aligned}
-   \frac{\partial \phi}{\partial x_1} &= -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2}, \\
-   \frac{\partial \phi}{\partial x_2} &= -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
+   &\frac{\partial \phi}{\partial x_1} = -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2},\\
+   &\frac{\partial \phi}{\partial x_2} = -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
    \end{aligned}
    $$
 

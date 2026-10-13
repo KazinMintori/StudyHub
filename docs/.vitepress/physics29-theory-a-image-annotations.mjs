@@ -1,0 +1,22 @@
+/** Figure labels and source-page notes for the Chapter 29 theory assets. */
+export const physics29TheoryAImageAnnotations = [
+  { stem: 'mo-chuong-the-doc', label: 'Thẻ từ đi qua đầu đọc (Magnetic-stripe card moving through a reader)', sourcePage: 953 },
+  { stem: 'ung-dung-kich-thich-tu-xuyen-so', label: 'Cuộn kích thích từ xuyên sọ tạo từ trường biến thiên gần đầu (Transcranial magnetic stimulation coil near the head)', sourcePage: 954 },
+  { stem: 'hinh-29-01', label: 'Bốn thí nghiệm cho thấy dòng cảm ứng xuất hiện khi từ trường qua cuộn dây thay đổi (Four induction experiments showing current when the magnetic field through a coil changes)', sourcePage: 954 },
+  { stem: 'hinh-29-02', label: 'Cuộn dây giữa hai cực nam châm điện (A coil between the poles of an electromagnet)', sourcePage: 955 },
+  { stem: 'hinh-29-03', label: 'Từ thông qua phần tử diện tích trong từ trường (Magnetic flux through an area element in a magnetic field)', sourcePage: 955 },
+  { stem: 'hinh-29-04', label: 'Từ thông phụ thuộc góc giữa từ trường và véc-tơ diện tích (Magnetic flux depends on the angle between the field and the area vector)', sourcePage: 956 },
+  { stem: 'hinh-29-05', label: 'Vòng dây đứng yên trong từ trường đang tăng (A stationary loop in an increasing magnetic field)', sourcePage: 956 },
+  { stem: 'hinh-29-06', label: 'Dấu từ thông và chiều suất điện động cảm ứng (Magnetic-flux signs and induced-emf directions)', sourcePage: 957 },
+  { stem: 'hinh-29-07', label: 'Cuộn dây nghiêng trong từ trường dùng cho Ví dụ 29.2 (The tilted coil in the magnetic field for Example 29.2)', sourcePage: 958 },
+  { stem: 'hinh-29-08', label: 'Alternator tạo suất điện động xoay chiều bằng cuộn dây quay (An alternator generating AC emf with a rotating coil)', sourcePage: 959 },
+  { stem: 'hinh-29-09', label: 'Phần ứng nhiều vòng trong một alternator thương mại (The many-turn armature of a commercial alternator)', sourcePage: 960 },
+  { stem: 'hinh-29-10', label: 'Máy phát điện một chiều dùng cổ góp vòng chia (A direct-current generator with a split-ring commutator)', sourcePage: 960 },
+  { stem: 'hinh-29-11', label: 'Máy phát thanh trượt với diện tích mạch đang tăng (A slidewire generator with increasing loop area)', sourcePage: 961 },
+  { stem: 'hinh-29-12', label: 'Lực từ cản chuyển động của thanh trượt (The magnetic force opposing the slidewire motion)', sourcePage: 961 },
+  { stem: 'hinh-29-13', label: 'Dòng cảm ứng tạo từ trường chống lại từ trường đang tăng (An induced current creates a field opposing the increasing field)', sourcePage: 963 },
+  { stem: 'hinh-29-14', label: 'Chiều dòng cảm ứng khi nam châm chuyển động gần vòng dây (Induced-current directions as a magnet moves near a loop)', sourcePage: 964 },
+  { stem: 'hinh-29-15', label: 'Phân cực điện tích và dòng trong thanh dẫn chuyển động (Charge separation and current in a moving conductor)', sourcePage: 965 },
+  { stem: 'hinh-29-16', label: 'Cộng các đóng góp suất điện động trên vòng dẫn chuyển động (Adding emf contributions around a moving conducting loop)', sourcePage: 966 },
+  { stem: 'hinh-29-17', label: 'Đĩa Faraday quay tạo suất điện động một chiều (A rotating Faraday disk producing DC emf)', sourcePage: 967 },
+]

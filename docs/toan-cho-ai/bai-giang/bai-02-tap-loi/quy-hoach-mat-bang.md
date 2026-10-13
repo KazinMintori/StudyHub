@@ -67,10 +67,10 @@ Bài toán có dạng:
 
 $$
 \begin{aligned}
-\text{minimize}\quad & W H \\
-\text{subject to}\quad & w_i h_i \ge S_i, \quad i = 1, \dots, N, \\
-& \alpha_i \le h_i w_i^{-1} \le \beta_i, \quad i = 1, \dots, N, \\
-& \text{các ràng buộc đường phân cắt dọc và ngang.}
+&\text{minimize}\quad W H\\
+&\text{subject to}\quad w_i h_i \ge S_i, \quad i = 1, \dots, N,\\
+&\phantom{\text{subject to}\quad } \alpha_i \le h_i w_i^{-1} \le \beta_i, \quad i = 1, \dots, N,\\
+&\phantom{\text{subject to}\quad } \text{các ràng buộc đường phân cắt dọc và ngang.}
 \end{aligned}
 $$
 
@@ -112,10 +112,10 @@ bài toán tối thiểu hóa chiều dài dây nối đưa thẳng về một b
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \sum_{i < j} C_{ij} (u_{ij} + v_{ij}) \\
-\text{subject to}\quad & -u_{ij} \le x_i - x_j + \frac{w_i - w_j}{2} \le u_{ij}, \\
-& -v_{ij} \le y_i - y_j + \frac{h_i - h_j}{2} \le v_{ij}, \\
-& \text{các ràng buộc không chồng lấn affine trên } (x_i, y_i).
+&\text{minimize}\quad \sum_{i < j} C_{ij} (u_{ij} + v_{ij})\\
+&\text{subject to}\quad -u_{ij} \le x_i - x_j + \frac{w_i - w_j}{2} \le u_{ij},\\
+&\phantom{\text{subject to}\quad } -v_{ij} \le y_i - y_j + \frac{h_i - h_j}{2} \le v_{ij},\\
+&\phantom{\text{subject to}\quad } \text{các ràng buộc không chồng lấn affine trên } (x_i, y_i).
 \end{aligned}
 $$
 
@@ -138,12 +138,12 @@ Xét hai khối chức năng được ghép cạnh nhau theo phương ngang (lá
    Bài toán GP dạng chuẩn:
    $$
    \begin{aligned}
-   \text{minimize}\quad & w_1 H + w_2 H \\
-   \text{subject to}\quad & 4 w_1^{-1} h_1^{-1} \le 1, \\
-   & 8 w_2^{-1} h_2^{-1} \le 1, \\
-   & h_1 H^{-1} \le 1, \quad h_2 H^{-1} \le 1, \\
-   & 0{,}5 w_1 h_1^{-1} \le 1, \quad 0{,}5 h_1 w_1^{-1} \le 1, \\
-   & 0{,}5 w_2 h_2^{-1} \le 1, \quad 0{,}5 h_2 w_2^{-1} \le 1.
+   &\text{minimize}\quad w_1 H + w_2 H\\
+   &\text{subject to}\quad 4 w_1^{-1} h_1^{-1} \le 1,\\
+   &\phantom{\text{subject to}\quad } 8 w_2^{-1} h_2^{-1} \le 1,\\
+   &\phantom{\text{subject to}\quad } h_1 H^{-1} \le 1, \quad h_2 H^{-1} \le 1,\\
+   &\phantom{\text{subject to}\quad } 0{,}5 w_1 h_1^{-1} \le 1, \quad 0{,}5 h_1 w_1^{-1} \le 1,\\
+   &\phantom{\text{subject to}\quad } 0{,}5 w_2 h_2^{-1} \le 1, \quad 0{,}5 h_2 w_2^{-1} \le 1.
    \end{aligned}
    $$
 
@@ -156,10 +156,10 @@ Xét hai khối chức năng được ghép cạnh nhau theo phương ngang (lá
    Các ràng buộc trở thành affine:
    $$
    \begin{aligned}
-   \tilde{w}_1 + \tilde{h}_1 &\ge \log 4, \\
-   \tilde{w}_2 + \tilde{h}_2 &\ge \log 8, \\
-   \tilde{h}_1 \le \tilde{H}, &\quad \tilde{h}_2 \le \tilde{H}, \\
-   -\log 2 \le \tilde{h}_1 - \tilde{w}_1 \le \log 2, &\quad -\log 2 \le \tilde{h}_2 - \tilde{w}_2 \le \log 2.
+   &\tilde{w}_1 + \tilde{h}_1 \ge \log 4,\\
+   &\tilde{w}_2 + \tilde{h}_2 \ge \log 8,\\
+   &\tilde{h}_1 \le \tilde{H}, \quad \tilde{h}_2 \le \tilde{H},\\
+   &-\log 2 \le \tilde{h}_1 - \tilde{w}_1 \le \log 2, \quad -\log 2 \le \tilde{h}_2 - \tilde{w}_2 \le \log 2.
    \end{aligned}
    $$
 
@@ -217,9 +217,9 @@ Cho ba khối chức năng $A, B, C$ có kích thước cố định $1 \times 1
    Hàm mục tiêu mới:
    $$
    \begin{aligned}
-   g(x, y) &= 12 - x + 5y + 4\big(|x - 2| + 3 - y\big) \\
-   &= 12 - x + 5y + 4|x - 2| + 12 - 4y \\
-   &= 24 - x + y + 4|x - 2|.
+   &g(x, y) = 12 - x + 5y + 4\big(|x - 2| + 3 - y\big)\\
+   &\quad = 12 - x + 5y + 4|x - 2| + 12 - 4y\\
+   &\quad = 24 - x + y + 4|x - 2|.
    \end{aligned}
    $$
    - Theo phương $y$: Hàm mục tiêu tăng theo $y$ (hệ số $+1$), do đó nghiệm tối ưu tiếp tục là $y^* = 0$.
@@ -259,11 +259,11 @@ Cho hai khối hình vuông kích thước $2 \times 2$. Ràng buộc không ch�
    Để chọn một trong bốn điều kiện, ta đưa vào bốn biến nhị phân $b_1, b_2, b_3, b_4 \in \{0, 1\}$ và một hằng số đủ lớn $M > 0$:
    $$
    \begin{aligned}
-   x_1 - x_2 + 2 &\le M(1 - b_1), \\
-   x_2 - x_1 + 2 &\le M(1 - b_2), \\
-   y_1 - y_2 + 2 &\le M(1 - b_3), \\
-   y_2 - y_1 + 2 &\le M(1 - b_4), \\
-   b_1 + b_2 + b_3 + b_4 &\ge 1.
+   &x_1 - x_2 + 2 \le M(1 - b_1),\\
+   &x_2 - x_1 + 2 \le M(1 - b_2),\\
+   &y_1 - y_2 + 2 \le M(1 - b_3),\\
+   &y_2 - y_1 + 2 \le M(1 - b_4),\\
+   &b_1 + b_2 + b_3 + b_4 \ge 1.
    \end{aligned}
    $$
    Khi biến nhị phân $b_1 = 1$, vế phải bằng 0 và ràng buộc $x_1 + 2 \le x_2$ có hiệu lực. Các ràng buộc có $b_k = 0$ có vế phải bằng $M$, hoàn toàn bị vô hiệu hóa.

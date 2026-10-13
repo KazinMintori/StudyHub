@@ -140,8 +140,12 @@ Dữ kiện đã biết:
 
 **Thực thi câu (a):**
 Áp dụng trực tiếp phương trình vị trí (2.12) và phương trình vận tốc (2.8) tại $t = 2.0\,\mathrm s$:
-$$x(2.0\,\mathrm s) = x_0 + v_{0x}t + \frac{1}{2}a_xt^2 = 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2 = 5.0 + 30.0 + 8.0 = 43.0\,\mathrm m.$$
-$$v_x(2.0\,\mathrm s) = v_{0x} + a_xt = 15.0 + (4.0)(2.0) = 15.0 + 8.0 = 23.0\,\mathrm{m/s}.$$
+$$
+\begin{aligned}
+    &x(2.0\,\mathrm s) = x_0 + v_{0x}t + \frac{1}{2}a_xt^2 = 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2 = 5.0 + 30.0 + 8.0 = 43.0\,\mathrm m.\\
+    &v_x(2.0\,\mathrm s) = v_{0x} + a_xt = 15.0 + (4.0)(2.0) = 15.0 + 8.0 = 23.0\,\mathrm{m/s}.
+\end{aligned}
+$$
 
 **Thực thi câu (b):**
 Ở câu này, ta cần tìm vị trí $x$ khi biết $v_x = 25.0\,\mathrm{m/s}$, không cần biết thời gian $t$. Áp dụng ngay hệ thức độc lập thời gian (2.13):
@@ -190,8 +194,12 @@ $$v_{Px} = v_{P0x} + a_{Px}t = 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s) = 30.0
 
 **Thực thi câu (c):**
 Quãng đường mỗi xe đi được:
-$$x_O = (15.0\,\mathrm{m/s})(10.0\,\mathrm s) = 150\,\mathrm m,$$
-$$x_P = \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 = 1.5 \times 100 = 150\,\mathrm m.$$
+$$
+\begin{aligned}
+    &x_O = (15.0\,\mathrm{m/s})(10.0\,\mathrm s) = 150\,\mathrm m,\\
+    &x_P = \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 = 1.5 \times 100 = 150\,\mathrm m.
+\end{aligned}
+$$
 
 **Đánh giá bản chất sâu sắc:**
 Quan sát thấy: Tại thời điểm gặp nhau, vận tốc của cảnh sát ($30.0\,\mathrm{m/s}$) **gấp đúng 2 lần** vận tốc của chiếc ô tô ($15.0\,\mathrm{m/s}$)!

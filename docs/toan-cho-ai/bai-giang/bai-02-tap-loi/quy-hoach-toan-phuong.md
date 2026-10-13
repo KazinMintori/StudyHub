@@ -17,8 +17,8 @@ Một QP có dạng
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \tfrac12 x^TPx + q^Tx + r\\
-\text{subject to}\quad & Gx \preceq h,\quad Ax = b,
+&\text{minimize}\quad \tfrac12 x^TPx + q^Tx + r\\
+&\text{subject to}\quad Gx \preceq h,\quad Ax = b,
 \end{aligned}
 $$
 
@@ -32,9 +32,9 @@ Nếu cả các ràng buộc bất đẳng thức cũng là hàm toàn phương 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \tfrac12 x^TP_0x + q_0^Tx + r_0\\
-\text{subject to}\quad & \tfrac12 x^TP_ix + q_i^Tx + r_i \le 0, \quad i = 1, \ldots, m,\\
-& Ax = b,
+&\text{minimize}\quad \tfrac12 x^TP_0x + q_0^Tx + r_0\\
+&\text{subject to}\quad \tfrac12 x^TP_ix + q_i^Tx + r_i \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } Ax = b,
 \end{aligned}
 $$
 

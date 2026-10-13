@@ -16,9 +16,8 @@ Lagrangian cộng mục tiêu với các ràng buộc đã nhân bởi các nhâ
 **Vai trò của quy ước dấu.** Với bài cực tiểu $f_0(x)$ có $m$ bất đẳng thức $f_i(x)\le0$ và $p$ đẳng thức $h_j(x)=0$, mỗi ràng buộc góp một số hạng vào Lagrangian:
 
 $$\begin{aligned}
-L(x,\lambda,\nu)=f_0(x)
-&+\lambda_1f_1(x)+\cdots+\lambda_mf_m(x)\\
-&+\nu_1h_1(x)+\cdots+\nu_ph_p(x).
+&L(x,\lambda,\nu)=f_0(x) +\lambda_1f_1(x)+\cdots+\lambda_mf_m(x)\\
+&\quad +\nu_1h_1(x)+\cdots+\nu_ph_p(x).
 \end{aligned}$$
 
 Viết gọn:

@@ -17,8 +17,8 @@ Chọn chiều dương của từng dòng trước khi lập phương trình. V�
 
 $$
 \begin{aligned}
-\widetilde I_1+\widetilde I_2+\cdots+\widetilde I_m&=0,\\
-\sum_{j=1}^{m}\widetilde I_j&=0.
+&\widetilde I_1+\widetilde I_2+\cdots+\widetilde I_m = 0,\\
+&\sum_{j=1}^{m}\widetilde I_j = 0.
 \end{aligned}
 $$
 

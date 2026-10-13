@@ -24,9 +24,9 @@ Mục tiêu và từng hàng ràng buộc được khai triển thành
 
 $$
 \begin{aligned}
-c^Tx&=c_1x_1+\cdots+c_nx_n,\\
-(Ax)_i&=a_{i1}x_1+\cdots+a_{in}x_n\\
-&\le b_i,\quad i=1,\ldots,m.
+&c^Tx = c_1x_1+\cdots+c_nx_n,\\
+&(Ax)_i = a_{i1}x_1+\cdots+a_{in}x_n\\
+&\quad \le b_i,\quad i=1,\ldots,m.
 \end{aligned}
 $$
 
@@ -38,9 +38,9 @@ Xét bài min $x-y$ trên miền $D$ xác định bởi
 
 $$
 \begin{aligned}
-x+y&\le1,\\
--x&\le0,\\
--y&\le0.
+&x+y \le 1,\\
+&-x \le 0,\\
+&-y \le 0.
 \end{aligned}
 $$
 
@@ -56,9 +56,9 @@ Có thể chứng minh mà không cần hình. Từ $y\le1-x$ và $x\ge0$,
 
 $$
 \begin{aligned}
-x-y&\ge x-(1-x)\\
-&=2x-1\\
-&\ge-1.
+&x-y \ge x-(1-x)\\
+&\quad =2x-1\\
+&\quad \ge-1.
 \end{aligned}
 $$
 
@@ -90,9 +90,9 @@ Vậy giá trị tối ưu là $-16$ tại $(4,2)$. Một chứng nhận ngắn 
 
 $$
 \begin{aligned}
-3x+2y&=x+2(x+y)\\
-&\le4+2\cdot6\\
-&=16.
+&3x+2y = x+2(x+y)\\
+&\quad \le4+2\cdot6\\
+&\quad =16.
 \end{aligned}
 $$
 

@@ -10,9 +10,9 @@
 
 $$
 \begin{aligned}
-\Phi_E&=\vec E\cdot\vec A\\
-&=EA\cos\varphi,\\
-\Phi_E&=\int_A\vec E\cdot d\vec A.
+&\Phi_E = \vec E\cdot\vec A\\
+&\quad =EA\cos\varphi,\\
+&\Phi_E = \int_A\vec E\cdot d\vec A.
 \end{aligned}
 $$
 

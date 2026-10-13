@@ -30,7 +30,7 @@ Hai ràng buộc đều là bất đẳng thức. Vì vậy cả $\mu$ lẫn $\l
 
 $$
 \begin{aligned}
-L&=x_1^3+x_2^3+x_3^3\\
+&L = x_1^3+x_2^3+x_3^3\\
 &\quad+\mu(x_1^2+x_2^2+x_3^2-4)\\
 &\quad+\lambda(x_1+x_2+x_3-1).
 \end{aligned}
@@ -40,12 +40,12 @@ Hệ KKT là
 
 $$
 \begin{aligned}
-3x_i^2+2\mu x_i+\lambda&=0,\\
-x_1^2+x_2^2+x_3^2&\le4,\\
-x_1+x_2+x_3&\le1,\\
-\mu(x_1^2+x_2^2+x_3^2-4)&=0,\\
-\lambda(x_1+x_2+x_3-1)&=0,\\
-\mu\ge0,\quad\lambda&\ge0.
+&3x_i^2+2\mu x_i+\lambda = 0,\\
+&x_1^2+x_2^2+x_3^2 \le 4,\\
+&x_1+x_2+x_3 \le 1,\\
+&\mu(x_1^2+x_2^2+x_3^2-4) = 0,\\
+&\lambda(x_1+x_2+x_3-1) = 0,\\
+&\mu\ge0,\quad\lambda \ge 0.
 \end{aligned}
 $$
 
@@ -55,10 +55,10 @@ $$
 
 $$
 \begin{aligned}
-x_1^3+x_2^3+x_3^3 &\ge -(|x_1|^3+|x_2|^3+|x_3|^3)\\
-&\ge -\sqrt q\,(x_1^2+x_2^2+x_3^2)\\
-&= -q^{3/2}\\
-&\ge -8.
+&x_1^3+x_2^3+x_3^3 \ge -(|x_1|^3+|x_2|^3+|x_3|^3)\\
+&\quad \ge -\sqrt q\,(x_1^2+x_2^2+x_3^2)\\
+&\quad = -q^{3/2}\\
+&\quad \ge -8.
 \end{aligned}
 $$
 
@@ -94,8 +94,8 @@ Bắt đầu từ đẳng thức tổng. Bình phương tổng được khống 
 
 $$
 \begin{aligned}
-(x_1+x_2+x_3)^2 &\le 3(x_1^2+x_2^2+x_3^2),\\
-x_1^2+x_2^2+x_3^2 &\ge \frac43.
+&(x_1+x_2+x_3)^2 \le 3(x_1^2+x_2^2+x_3^2),\\
+&x_1^2+x_2^2+x_3^2 \ge \frac43.
 \end{aligned}
 $$
 
@@ -103,9 +103,8 @@ Cận đạt khi ba tọa độ bằng nhau. Kết hợp tổng bằng $-2$, ứ
 
 $$
 \begin{aligned}
-x_1^{\star2}+x_2^{\star2}+3x_3^\star
-&=\frac49+\frac49-2\\
-&=-\frac{10}{9}<\frac52.
+&x_1^{\star2}+x_2^{\star2}+3x_3^\star = \frac49+\frac49-2\\
+&\quad =-\frac{10}{9}<\frac52.
 \end{aligned}
 $$
 
@@ -115,7 +114,7 @@ Lagrangian là
 
 $$
 \begin{aligned}
-L&=x_1^2+x_2^2+x_3^2\\
+&L = x_1^2+x_2^2+x_3^2\\
 &\quad+\mu(x_1^2+x_2^2+3x_3-5/2)\\
 &\quad+\lambda(x_1+x_2+x_3+2).
 \end{aligned}
@@ -125,11 +124,11 @@ Hệ KKT gồm
 
 $$
 \begin{aligned}
-2(1+\mu)x_1+\lambda&=0,\\
-2(1+\mu)x_2+\lambda&=0,\\
-2x_3+3\mu+\lambda&=0,\\
-\mu(x_1^2+x_2^2+3x_3-5/2)&=0,\\
-\mu&\ge0,
+&2(1+\mu)x_1+\lambda = 0,\\
+&2(1+\mu)x_2+\lambda = 0,\\
+&2x_3+3\mu+\lambda = 0,\\
+&\mu(x_1^2+x_2^2+3x_3-5/2) = 0,\\
+&\mu \ge 0,
 \end{aligned}
 $$
 

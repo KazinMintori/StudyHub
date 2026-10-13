@@ -45,8 +45,8 @@ Trong số vô vàn nghiệm của $\mathcal{S}$, nghiệm tự nhiên nhất l�
 
 $$
 \begin{aligned}
-\min_{x} \quad & \frac{1}{2} \|x\|_2^2 \\
-\text{s.t.} \quad & A x = b.
+&\min_{x} \quad \frac{1}{2} \|x\|_2^2\\
+&\text{s.t.} \quad A x = b.
 \end{aligned}
 $$
 
@@ -64,8 +64,8 @@ $$
 
 $$
 \begin{aligned}
-\nabla_x L(x^*, \nu^*) &= x^* + A^T \nu^* = 0 \implies x^* = -A^T \nu^*, \\
-\nabla_\nu L(x^*, \nu^*) &= A x^* - b = 0.
+&\nabla_x L(x^*, \nu^*) = x^* + A^T \nu^* = 0 \implies x^* = -A^T \nu^*,\\
+&\nabla_\nu L(x^*, \nu^*) = A x^* - b = 0.
 \end{aligned}
 $$
 
@@ -138,11 +138,11 @@ Thế phân tích $A = L_1 Q_1^T$ vào công thức nghiệm chuẩn nhỏ nhấ
 
 $$
 \begin{aligned}
-x_{\text{ln}} &= A^T (A A^T)^{-1} b \\
-&= (Q_1 L_1^T) \left( (L_1 Q_1^T)(Q_1 L_1^T) \right)^{-1} b \\
-&= Q_1 L_1^T (L_1 L_1^T)^{-1} b \\
-&= Q_1 L_1^T (L_1^T)^{-1} L_1^{-1} b \\
-&= Q_1 L_1^{-1} b.
+&x_{\text{ln}} = A^T (A A^T)^{-1} b\\
+&\quad = (Q_1 L_1^T) \left( (L_1 Q_1^T)(Q_1 L_1^T) \right)^{-1} b\\
+&\quad = Q_1 L_1^T (L_1 L_1^T)^{-1} b\\
+&\quad = Q_1 L_1^T (L_1^T)^{-1} L_1^{-1} b\\
+&\quad = Q_1 L_1^{-1} b.
 \end{aligned}
 $$
 
@@ -162,8 +162,8 @@ Nếu ta thay chuẩn $L_2$ bằng chuẩn $L_1$, bài toán tìm nghiệm trở
 
 $$
 \begin{aligned}
-\min_{x} \quad & \|x\|_1 = \sum_{j=1}^n |x_j| \\
-\text{s.t.} \quad & A x = b.
+&\min_{x} \quad \|x\|_1 = \sum_{j=1}^n |x_j|\\
+&\text{s.t.} \quad A x = b.
 \end{aligned}
 $$
 
@@ -175,8 +175,8 @@ Ta phân rã mỗi biến $x_j$ thành hiệu của hai biến không âm: Biể
 
 $$
 \begin{aligned}
-\min_{u, v} \quad & \mathbf{1}^T u + \mathbf{1}^T v \\
-\text{s.t.} \quad & A u - A v = b, \\
+&\min_{u, v} \quad \mathbf{1}^T u + \mathbf{1}^T v\\
+&\text{s.t.} \quad A u - A v = b,\\
 & u \ge 0, \quad v \ge 0.
 \end{aligned}
 $$
@@ -370,8 +370,8 @@ Xét bài toán ước lượng ma trận hiệp phương sai xác định dươ
 
 $$
 \begin{aligned}
-\max_{X} \quad & \log\det(X) \\
-\text{s.t.} \quad & \operatorname{tr}(S X) = n, \quad X \succ 0,
+&\max_{X} \quad \log\det(X)\\
+&\text{s.t.} \quad \operatorname{tr}(S X) = n, \quad X \succ 0,
 \end{aligned}
 $$
 
@@ -386,8 +386,8 @@ trong đó $S \in \mathbb{S}_{++}^n$ là ma trận đối xứng xác định d�
 1. Bài toán tương đương với:
    $$
    \begin{aligned}
-   \min_{X} \quad & -\log\det(X) \\
-   \text{s.t.} \quad & \operatorname{tr}(S X) - n = 0, \quad X \succ 0.
+   &\min_{X} \quad -\log\det(X)\\
+   &\text{s.t.} \quad \operatorname{tr}(S X) - n = 0, \quad X \succ 0.
    \end{aligned}
    $$
 

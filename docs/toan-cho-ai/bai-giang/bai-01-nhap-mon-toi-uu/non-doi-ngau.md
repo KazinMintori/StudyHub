@@ -67,11 +67,10 @@ Hệ thống tính chất nền tảng của nón đối ngẫu bao gồm:
 Khi $K$ là nón chính quy, nón đối ngẫu $K^*$ cũng sinh ra một quan hệ thứ tự bộ phận $\preceq_{K^*}$. Hai quan hệ thứ tự này gắn kết mật thiết qua các mệnh đề tương đương sau:
 
 $$
-x \preceq_K y \iff \lambda^T x \le \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0,
-$$
-
-$$
-x \prec_K y \iff \lambda^T x < \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \ \lambda \ne 0.
+\begin{aligned}
+    &x \preceq_K y \iff \lambda^T x \le \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0,\\
+    &x \prec_K y \iff \lambda^T x < \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \ \lambda \ne 0.
+\end{aligned}
 $$
 
 Ý nghĩa bản chất: Một bất đẳng thức giữa hai **vector** trong không gian nhiều chiều tương đương với vô số bất đẳng thức giữa các **số thực**, trong đó mỗi số thực ứng với một phép chiếu có trọng số $\lambda$ thuộc nón đối ngẫu. Với $K = \mathbb{R}^n_+$, điều này khẳng định $x \preceq y$ theo từng tọa độ khi và chỉ khi mọi tổ hợp tuyến tính với trọng số không âm của $x$ không vượt quá giá trị tương ứng của $y$. Với thứ tự ma trận, $X \preceq Y$ khi và chỉ khi $\operatorname{tr}(ZX) \le \operatorname{tr}(ZY)$ với mọi ma trận kiểm tra $Z \succeq 0$. Đây là công cụ toán học chủ đạo: Chuyển một điều kiện phức tạp trên vector hoặc ma trận thành một họ điều kiện đại số trên số thực.

@@ -79,8 +79,8 @@ Mô hình đưa ra dự đoán đơn tham số $\theta$ với hàm mất mát b�
 Hàm mục tiêu trên toàn bộ tập dữ liệu là:
 $$
 \begin{aligned}
-J(\theta) &= \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right] \\
-&= \frac{1}{4}(2\theta^2 - 4\theta + 4) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
+&J(\theta) = \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right]\\
+&\quad = \frac{1}{4}(2\theta^2 - 4\theta + 4) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
 \end{aligned}
 $$
 
@@ -348,9 +348,9 @@ $$
    Lấy kỳ vọng toán học theo phân phối chọn mẫu:
    $$
    \begin{aligned}
-   \mathbb{E}[g_B(\theta)] &= \frac{1}{m} \sum_{i=1}^N \mathbb{E}[I_i] \nabla \ell(\theta, z_i) \\
-   &= \frac{1}{m} \sum_{i=1}^N \left(\frac{m}{N}\right) \nabla \ell(\theta, z_i) \\
-   &= \frac{1}{N} \sum_{i=1}^N \nabla \ell(\theta, z_i) = \nabla f(\theta).
+   &\mathbb{E}[g_B(\theta)] = \frac{1}{m} \sum_{i=1}^N \mathbb{E}[I_i] \nabla \ell(\theta, z_i)\\
+   &\quad = \frac{1}{m} \sum_{i=1}^N \left(\frac{m}{N}\right) \nabla \ell(\theta, z_i)\\
+   &\quad = \frac{1}{N} \sum_{i=1}^N \nabla \ell(\theta, z_i) = \nabla f(\theta).
    \end{aligned}
    $$
    Đẳng thức này khẳng định $g_B(\theta)$ là một ước lượng không chệch của gradient chân thực.
@@ -360,8 +360,8 @@ $$
    Hiệp phương sai của tổng các biến độc lập bằng tổng các hiệp phương sai:
    $$
    \begin{aligned}
-   \operatorname{Cov}\big(g_B(\theta)\big) &= \operatorname{Cov}\left(\frac{1}{m} \sum_{i \in B} \nabla \ell(\theta, z_i)\right) \\
-   &= \frac{1}{m^2} \sum_{i \in B} \operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big) \\
+   &\operatorname{Cov}\big(g_B(\theta)\big) = \operatorname{Cov}\left(\frac{1}{m} \sum_{i \in B} \nabla \ell(\theta, z_i)\right)\\
+   &\quad = \frac{1}{m^2} \sum_{i \in B} \operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big)\\
    &\preceq \frac{1}{m^2} \big(m \sigma^2 I\big) = \frac{\sigma^2}{m} I.
    \end{aligned}
    $$
@@ -408,8 +408,8 @@ $$
    Áp dụng bất đẳng thức Cauchy-Schwarz và tính chất Lipschitz của gradient:
    $$
    \begin{aligned}
-   \left|f(y) - f(x) - \nabla f(x)^T (y - x)\right| &\le \int_0^1 \left\|\nabla f\big(x + \tau(y - x)\big) - \nabla f(x)\right\|_2 \|y - x\|_2 \, \mathrm{d}\tau \\
-   &\le \int_0^1 L \tau \|y - x\|_2^2 \, \mathrm{d}\tau = L \|y - x\|_2^2 \left[\frac{\tau^2}{2}\right]_0^1 = \frac{L}{2}\|y - x\|_2^2.
+   &\left|f(y) - f(x) - \nabla f(x)^T (y - x)\right| \le \int_0^1 \left\|\nabla f\big(x + \tau(y - x)\big) - \nabla f(x)\right\|_2 \|y - x\|_2 \, \mathrm{d}\tau\\
+   &\quad \le \int_0^1 L \tau \|y - x\|_2^2 \, \mathrm{d}\tau = L \|y - x\|_2^2 \left[\frac{\tau^2}{2}\right]_0^1 = \frac{L}{2}\|y - x\|_2^2.
    \end{aligned}
    $$
    Bỏ dấu giá trị tuyệt đối ta thu được bất đẳng thức bước giảm cần chứng minh.
@@ -422,8 +422,8 @@ $$
    Lấy kỳ vọng có điều kiện theo trạng thái hiện tại $\theta_t$:
    $$
    \begin{aligned}
-   \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] &\le f(\theta_t) - \eta \nabla f(\theta_t)^T \mathbb{E}[g_t \mid \theta_t] + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t] \\
-   &= f(\theta_t) - \eta \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t].
+   &\mathbb{E}[f(\theta_{t+1}) \mid \theta_t] \le f(\theta_t) - \eta \nabla f(\theta_t)^T \mathbb{E}[g_t \mid \theta_t] + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t]\\
+   &\quad = f(\theta_t) - \eta \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t].
    \end{aligned}
    $$
    Tách $\mathbb{E}[\|g_t\|_2^2] = \|\nabla f(\theta_t)\|_2^2 + \sigma^2 \le G^2$:

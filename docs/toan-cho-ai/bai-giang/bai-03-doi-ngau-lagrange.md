@@ -20,9 +20,9 @@ Xét bài toán tối ưu chuẩn tắc với biến vector $x \in \mathbb{R}^n$
 
 $$
 \begin{aligned}
-\min_{x} \quad & f_0(x) \\
-\text{sao cho} \quad & f_i(x) \le 0, \quad i = 1, \dots, m, \\
-& h_j(x) = 0, \quad j = 1, \dots, p.
+&\min_{x} \quad f_0(x)\\
+&\text{sao cho}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } h_j(x) = 0, \quad j = 1, \dots, p.
 \end{aligned}
 $$
 
@@ -36,8 +36,8 @@ $$
 
 $$
 \begin{aligned}
-L(x, \lambda, \nu) &= f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \\
-&= f_0(x) + \lambda_1 f_1(x) + \dots + \lambda_m f_m(x) + \nu_1 h_1(x) + \dots + \nu_p h_p(x),
+&L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x)\\
+&\quad = f_0(x) + \lambda_1 f_1(x) + \dots + \lambda_m f_m(x) + \nu_1 h_1(x) + \dots + \nu_p h_p(x),
 \end{aligned}
 $$
 
@@ -55,8 +55,8 @@ Cộng tất cả các thành phần lại, với mọi điểm khả thi $\wide
 
 $$
 \begin{aligned}
-L(\widetilde x, \lambda, \nu) &= f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0} \\
-&\le f_0(\widetilde x).
+&L(\widetilde x, \lambda, \nu) = f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0}\\
+&\quad \le f_0(\widetilde x).
 \end{aligned}
 $$
 
@@ -66,8 +66,8 @@ Từ quan sát cốt lõi này, ta định nghĩa **hàm đối ngẫu Lagrange*
 
 $$
 \begin{aligned}
-g(\lambda, \nu) &= \inf_{x \in \mathcal{D}} L(x, \lambda, \nu) \\
-&= \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
+&g(\lambda, \nu) = \inf_{x \in \mathcal{D}} L(x, \lambda, \nu)\\
+&\quad = \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
 \end{aligned}
 $$
 
@@ -113,9 +113,9 @@ $$
 
 $$
 \begin{aligned}
-g(\lambda) &= \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right) \\
-&= \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right) \\
-&= \lambda - \frac{\lambda^2}{4}.
+&g(\lambda) = \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right)\\
+&\quad = \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right)\\
+&\quad = \lambda - \frac{\lambda^2}{4}.
 \end{aligned}
 $$
 
@@ -162,10 +162,10 @@ Ta kiểm chứng điều này bằng định nghĩa hàm lõm: Với hai bộ n
 
 $$
 \begin{aligned}
-g(\theta u + (1 - \theta) v) &= \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v) \\
-&= \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right] \\
-&\ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v) \\
-&= \theta g(u) + (1 - \theta) g(v).
+&g(\theta u + (1 - \theta) v) = \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v)\\
+&\quad = \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right]\\
+&\quad \ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v)\\
+&\quad = \theta g(u) + (1 - \theta) g(v).
 \end{aligned}
 $$
 
@@ -235,8 +235,8 @@ $$
    Thay vào:
    $$
    \begin{aligned}
-   f^*(y) &= \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right) \\
-   &= \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
+   &f^*(y) = \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right)\\
+   &\quad = \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
    \end{aligned}
    $$
 
@@ -257,8 +257,8 @@ Hàm Lagrangian với $\lambda \succeq 0$ và $\nu \in \mathbb{R}^p$:
 
 $$
 \begin{aligned}
-L(x, \lambda, \nu) &= f_0(x) + \lambda^T (A x - b) + \nu^T (C x - d) \\
-&= -b^T \lambda - d^T \nu + f_0(x) + (A^T \lambda + C^T \nu)^T x.
+&L(x, \lambda, \nu) = f_0(x) + \lambda^T (A x - b) + \nu^T (C x - d)\\
+&\quad = -b^T \lambda - d^T \nu + f_0(x) + (A^T \lambda + C^T \nu)^T x.
 \end{aligned}
 $$
 
@@ -266,9 +266,9 @@ Lấy cận dưới đúng theo $x$:
 
 $$
 \begin{aligned}
-g(\lambda, \nu) &= -b^T \lambda - d^T \nu + \inf_x \left[ f_0(x) - (-A^T \lambda - C^T \nu)^T x \right] \\
-&= -b^T \lambda - d^T \nu - \sup_x \left[ (-A^T \lambda - C^T \nu)^T x - f_0(x) \right] \\
-&= -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu).
+&g(\lambda, \nu) = -b^T \lambda - d^T \nu + \inf_x \left[ f_0(x) - (-A^T \lambda - C^T \nu)^T x \right]\\
+&\quad = -b^T \lambda - d^T \nu - \sup_x \left[ (-A^T \lambda - C^T \nu)^T x - f_0(x) \right]\\
+&\quad = -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu).
 \end{aligned}
 $$
 
@@ -546,9 +546,9 @@ Xét bài toán tối ưu bị nhiễu bởi vector thông số tài nguyên $u 
 
 $$
 \begin{aligned}
-p^*(u, v) = \min_{x} \quad & f_0(x) \\
-\text{sao cho} \quad & f_i(x) \le u_i, \quad i = 1, \dots, m, \\
-& h_j(x) = v_j, \quad j = 1, \dots, p.
+&p^*(u, v) = \min_{x} \quad f_0(x)\\
+&\text{sao cho}\quad f_i(x) \le u_i, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } h_j(x) = v_j, \quad j = 1, \dots, p.
 \end{aligned}
 $$
 
@@ -599,8 +599,8 @@ Xét bài toán tối ưu với biến $x \in \mathbb{R}^n$:
 
 $$
 \begin{aligned}
-\min_{x \in \mathbb{R}^n} \quad & f_0(x) = x^T A_0 x + 2 b_0^T x + c_0 \\
-\text{sao cho} \quad & f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
+&\min_{x \in \mathbb{R}^n} \quad f_0(x) = x^T A_0 x + 2 b_0^T x + c_0\\
+&\text{sao cho}\quad f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
 \end{aligned}
 $$
 
@@ -626,8 +626,8 @@ Sử dụng Bổ đề phần bù Schur, bài toán đối ngẫu Lagrange $\max
 
 $$
 \begin{aligned}
-\max_{\lambda \ge 0, \, \gamma \in \mathbb{R}} \quad & \gamma \\
-\text{sao cho} \quad & \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1 \\ (b_0 + \lambda b_1)^T & c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
+&\max_{\lambda \ge 0, \, \gamma \in \mathbb{R}} \quad \gamma\\
+&\text{sao cho}\quad \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1\\ &(b_0 + \lambda b_1)^T c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
 \end{aligned}
 $$
 
@@ -770,8 +770,8 @@ $$
 2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$:
    $$
    \begin{aligned}
-   L(x, \lambda, \nu) &= c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2) \\
-   &= -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
+   &L(x, \lambda, \nu) = c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2)\\
+   &\quad = -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
    \end{aligned}
    $$
    trong đó $a_i$ là cột thứ $i$ của ma trận $A$.
@@ -916,9 +916,9 @@ với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác đ�
 Xét bài toán tối ưu lồi với hai biến quyết định $x = (x_1, x_2)^T \in \mathbb{R}^2$:
 $$
 \begin{aligned}
-\min_{x} \quad & x_1^2 + x_2^2 \\
-\text{sao cho} \quad & x_1 + x_2 = 1, \\
-& x_1 \ge 0, \quad x_2 \ge 0.
+&\min_{x} \quad x_1^2 + x_2^2\\
+&\text{sao cho}\quad x_1 + x_2 = 1,\\
+&\phantom{\text{subject to}\quad } x_1 \ge 0, \quad x_2 \ge 0.
 \end{aligned}
 $$
 1. Đưa bài toán về dạng chuẩn tắc. Tìm một điểm thỏa mãn điều kiện Slater ngặt khi có sự hiện diện của ràng buộc đẳng thức affine.
@@ -961,8 +961,8 @@ $$
    - Triệt tiêu đạo hàm:
      $$
      \begin{aligned}
-     \frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
-     \frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
+     &\frac{\partial L}{\partial x_1} = 2x_1 - \lambda_1 + \nu = 0,\\
+     &\frac{\partial L}{\partial x_2} = 2x_2 - \lambda_2 + \nu = 0.
      \end{aligned}
      $$
    
@@ -1127,9 +1127,9 @@ $$
    Hàm Lagrangian với $\lambda \ge 0$:
    $$
    \begin{aligned}
-   L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
-   &= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
-   &= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
+   &L(x, \lambda) = x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2)\\
+   &\quad = \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2}\\
+   &\quad = \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
    \end{aligned}
    $$
    Cực tiểu theo $x$ đạt được tại $x_1(\lambda) = x_2(\lambda) = \frac{\lambda}{2}$.

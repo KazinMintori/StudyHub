@@ -117,8 +117,8 @@ $$\frac{\partial \text{RSS}}{\partial b_0} = 0, \quad \frac{\partial \text{RSS}}
 Trong trường hợp hồi quy tuyến tính đơn biến ($y = b_0 + b_1 x$), việc giải hệ hai phương trình đạo hàm riêng này dẫn tới nghiệm giải tích kinh điển:
 
 $$\begin{aligned}
-b_1 &= \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = r \cdot \frac{s_y}{s_x} \\
-b_0 &= \bar{y} - b_1 \bar{x}
+&b_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = r \cdot \frac{s_y}{s_x}\\
+&b_0 = \bar{y} - b_1 \bar{x}
 \end{aligned}$$
 
 Trong đó:
@@ -288,8 +288,8 @@ $$\text{RSS}(b_0, b_1) = \sum_{i=1}^n (y_i - (b_0 + b_1 x_i))^2$$
 **1. Đạo hàm riêng của hàm tổn thất RSS:**
 - Áp dụng quy tắc đạo hàm hàm hợp cho tổng:
   $$\begin{aligned}
-  \frac{\partial \text{RSS}}{\partial b_0} &= \sum_{i=1}^n 2(y_i - (b_0 + b_1 x_i)) \cdot (-1) = -2 \sum_{i=1}^n (y_i - \hat{y}_i) = -2 \sum_{i=1}^n e_i \\
-  \frac{\partial \text{RSS}}{\partial b_1} &= \sum_{i=1}^n 2(y_i - (b_0 + b_1 x_i)) \cdot (-x_i) = -2 \sum_{i=1}^n x_i (y_i - \hat{y}_i) = -2 \sum_{i=1}^n x_i e_i
+  &\frac{\partial \text{RSS}}{\partial b_0} = \sum_{i=1}^n 2(y_i - (b_0 + b_1 x_i)) \cdot (-1) = -2 \sum_{i=1}^n (y_i - \hat{y}_i) = -2 \sum_{i=1}^n e_i\\
+  &\frac{\partial \text{RSS}}{\partial b_1} = \sum_{i=1}^n 2(y_i - (b_0 + b_1 x_i)) \cdot (-x_i) = -2 \sum_{i=1}^n x_i (y_i - \hat{y}_i) = -2 \sum_{i=1}^n x_i e_i
   \end{aligned}$$
 
 **2. Tính toán gradient tại điểm khởi tạo $b_0^{(0)} = 0.0, b_1^{(0)} = 1.0$:**
@@ -301,11 +301,19 @@ $$\text{RSS}(b_0, b_1) = \sum_{i=1}^n (y_i - (b_0 + b_1 x_i))^2$$
   - Điểm 4 ($x_4 = 4, y_4 = 7$): $\hat{y}_4 = 4 \implies e_4 = 7 - 4 = +3$, $x_4 e_4 = 4 \times 3 = 12$.
   - Điểm 5 ($x_5 = 5, y_5 = 8$): $\hat{y}_5 = 5 \implies e_5 = 8 - 5 = +3$, $x_5 e_5 = 5 \times 3 = 15$.
 - Tổng các phần dư:
-  $$\sum_{i=1}^5 e_i = 1 + 1 + 2 + 3 + 3 = 10$$
-  $$\sum_{i=1}^5 x_i e_i = 1 + 2 + 6 + 12 + 15 = 36$$
+  $$
+\begin{aligned}
+    &\sum_{i=1}^5 e_i = 1 + 1 + 2 + 3 + 3 = 10\\
+    &\sum_{i=1}^5 x_i e_i = 1 + 2 + 6 + 12 + 15 = 36
+\end{aligned}
+$$
 - Thành phần gradient:
-  $$\frac{\partial \text{RSS}}{\partial b_0} = -2 \times 10 = -20.0$$
-  $$\frac{\partial \text{RSS}}{\partial b_1} = -2 \times 36 = -72.0$$
+  $$
+\begin{aligned}
+    &\frac{\partial \text{RSS}}{\partial b_0} = -2 \times 10 = -20.0\\
+    &\frac{\partial \text{RSS}}{\partial b_1} = -2 \times 36 = -72.0
+\end{aligned}
+$$
 - Vector gradient: $\nabla \text{RSS} = (-20.0, -72.0)$.
 
 **3. Cập nhật hệ số với tốc độ học $\eta = 0.01$:**

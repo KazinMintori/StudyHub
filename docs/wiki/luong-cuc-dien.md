@@ -17,9 +17,9 @@ Trong trường ngoài đều:
 
 $$
 \begin{aligned}
-\vec\tau&=\vec p\times\vec E,\\
-\tau&=pE\sin\varphi,\\
-U&=-\vec p\cdot\vec E.
+&\vec\tau = \vec p\times\vec E,\\
+&\tau = pE\sin\varphi,\\
+&U = -\vec p\cdot\vec E.
 \end{aligned}
 $$
 

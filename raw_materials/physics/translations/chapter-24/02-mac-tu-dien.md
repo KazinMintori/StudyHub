@@ -18,8 +18,8 @@ Hai bản ở nút c chỉ nối với nhau và tổng điện tích của nút 
 
 $$
 \begin{aligned}
-V&=V_1+V_2\\
-&=Q(1/C_1+1/C_2).
+&V = V_1+V_2\\
+&\quad =Q(1/C_1+1/C_2).
 \end{aligned}
 $$
 
@@ -27,7 +27,7 @@ Chia hai vế cho cùng điện tích Q khác không:
 
 $$
 \begin{aligned}
-V/Q&=1/C_1\\
+&V/Q = 1/C_1\\
 &\quad+1/C_2.
 \end{aligned}
 \tag{24.3}
@@ -37,8 +37,8 @@ $$
 
 $$
 \begin{aligned}
-C_{\mathrm{eq}}&=Q/V,\\
-1/C_{\mathrm{eq}}&=V/Q.
+&C_{\mathrm{eq}} = Q/V,\\
+&1/C_{\mathrm{eq}} = V/Q.
 \end{aligned}
 \tag{24.4}
 $$
@@ -47,7 +47,7 @@ Thay (24.3) vào (24.4), rồi mở rộng cho n tụ nối tiếp:
 
 $$
 \begin{aligned}
-\frac1{C_{\mathrm{eq}}}&=\frac1{C_1}+\frac1{C_2}\\
+&\frac1{C_{\mathrm{eq}}} = \frac1{C_1}+\frac1{C_2}\\
 &\quad+\cdots+\frac1{C_n}.
 \end{aligned}
 \tag{24.5}
@@ -63,10 +63,10 @@ Nối hai bản trên vào cùng nút a và hai bản dưới vào cùng nút b.
 
 $$
 \begin{aligned}
-Q_1&=C_1V,\\
-Q_2&=C_2V,\\
-Q&=Q_1+Q_2,\\
-Q/V&=C_1+C_2.
+&Q_1 = C_1V,\\
+&Q_2 = C_2V,\\
+&Q = Q_1+Q_2,\\
+&Q/V = C_1+C_2.
 \end{aligned}
 \tag{24.6}
 $$
@@ -77,9 +77,9 @@ Tụ tương đương có cùng V và cùng tổng điện tích Q. Với n nhá
 
 $$
 \begin{aligned}
-C_{\mathrm{eq}}&=C_1+C_2\\
+&C_{\mathrm{eq}} = C_1+C_2\\
 &\quad+\cdots+C_n\\
-&=\sum_{i=1}^{n}C_i.
+&\quad =\sum_{i=1}^{n}C_i.
 \end{aligned}
 \tag{24.7}
 $$
@@ -113,13 +113,13 @@ Cho C₁ = 6,0 µF, C₂ = 3,0 µF và điện áp hai đầu 18 V. Tìm điện
 
 $$
 \begin{aligned}
-1/C_{\mathrm{eq}}&=1/(6.0\,\mathrm{\mu F})\\
+&1/C_{\mathrm{eq}} = 1/(6.0\,\mathrm{\mu F})\\
 &\quad+1/(3.0\,\mathrm{\mu F}),\\
-C_{\mathrm{eq}}&=2.0\,\mathrm{\mu F},\\
-Q&=C_{\mathrm{eq}}V\\
-&=36\,\mathrm{\mu C},\\
-V_1&=Q/C_1=6.0\,\mathrm V,\\
-V_2&=Q/C_2=12.0\,\mathrm V.
+&C_{\mathrm{eq}} = 2.0\,\mathrm{\mu F},\\
+&Q = C_{\mathrm{eq}}V\\
+&\quad =36\,\mathrm{\mu C},\\
+&V_1 = Q/C_1=6.0\,\mathrm V,\\
+&V_2 = Q/C_2=12.0\,\mathrm V.
 \end{aligned}
 $$
 
@@ -129,11 +129,11 @@ $$
 
 $$
 \begin{aligned}
-C_{\mathrm{eq}}&=6.0+3.0\\
-&=9.0\,\mathrm{\mu F},\\
-V_1&=V_2=18\,\mathrm V,\\
-Q_1&=108\,\mathrm{\mu C},\\
-Q_2&=54\,\mathrm{\mu C}.
+&C_{\mathrm{eq}} = 6.0+3.0\\
+&\quad =9.0\,\mathrm{\mu F},\\
+&V_1 = V_2=18\,\mathrm V,\\
+&Q_1 = 108\,\mathrm{\mu C},\\
+&Q_2 = 54\,\mathrm{\mu C}.
 \end{aligned}
 $$
 
@@ -159,12 +159,12 @@ Tìm điện dung tương đương giữa a,b trong Hình 24.10. Mạng có tụ
 
 $$
 \begin{aligned}
-C'&=(1/12+1/6)^{-1}\\
-&=4\,\mathrm{\mu F},\\
-C''&=3+11+4\\
-&=18\,\mathrm{\mu F},\\
-C_{\mathrm{eq}}&=(1/18+1/9)^{-1}\\
-&=6\,\mathrm{\mu F}.
+&C' = (1/12+1/6)^{-1}\\
+&\quad =4\,\mathrm{\mu F},\\
+&C'' = 3+11+4\\
+&\quad =18\,\mathrm{\mu F},\\
+&C_{\mathrm{eq}} = (1/18+1/9)^{-1}\\
+&\quad =6\,\mathrm{\mu F}.
 \end{aligned}
 $$
 

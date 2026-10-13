@@ -60,9 +60,9 @@ Tên đơn vị mới được tạo bằng cách ghép một tiền tố vào t
 
 $$
 \begin{aligned}
-1\text{ kilômét}&=1\,\mathrm{km}=10^3\text{ mét}=10^3\,\mathrm m,\\
-1\text{ kilôgam}&=1\,\mathrm{kg}=10^3\text{ gam}=10^3\,\mathrm g,\\
-1\text{ kilôwatt}&=1\,\mathrm{kW}=10^3\text{ watt}=10^3\,\mathrm W.
+&1\text{ kilômét} = 1\,\mathrm{km}=10^3\text{ mét}=10^3\,\mathrm m,\\
+&1\text{ kilôgam} = 1\,\mathrm{kg}=10^3\text{ gam}=10^3\,\mathrm g,\\
+&1\text{ kilôwatt} = 1\,\mathrm{kW}=10^3\text{ watt}=10^3\,\mathrm W.
 \end{aligned}
 $$
 
@@ -73,11 +73,10 @@ Phụ lục A liệt kê các đơn vị SI tiêu chuẩn, ý nghĩa và ký hi�
 Sách cũng đề cập hệ đơn vị Anh, được sử dụng ở Hoa Kỳ và một số ít quốc gia khác. Theo bối cảnh trình bày trong sách, tại phần lớn những nơi đó, hệ SI đang dần thay thế hệ này. Các đơn vị Anh được định nghĩa chính thức thông qua đơn vị SI:
 
 $$
-1\text{ inch}=2.54\,\mathrm{cm}\quad\text{(chính xác)}.
-$$
-
-$$
-1\text{ pound lực}=4.448221615260\,\mathrm N\quad\text{(chính xác)}.
+\begin{aligned}
+    &1\text{ inch}=2.54\,\mathrm{cm}\quad\text{(chính xác)}.\\
+    &1\text{ pound lực}=4.448221615260\,\mathrm N\quad\text{(chính xác)}.
+\end{aligned}
 $$
 
 Newton, ký hiệu $\mathrm N$, là đơn vị lực của SI. Đơn vị thời gian của hệ Anh là giây và được định nghĩa giống SI. Trong vật lý, hệ đơn vị Anh được dùng cho cơ học và nhiệt động lực học, không có một hệ đơn vị điện tương ứng.

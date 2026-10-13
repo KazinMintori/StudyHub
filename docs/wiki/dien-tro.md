@@ -17,10 +17,10 @@ next: false
 
 $$
 \begin{aligned}
-V&=EL,\\
-I&=JA,\\
-\frac VI&=\rho\frac LA,\\
-R&=\frac{\rho L}{A}.
+&V = EL,\\
+&I = JA,\\
+&\frac VI = \rho\frac LA,\\
+&R = \frac{\rho L}{A}.
 \end{aligned}
 $$
 

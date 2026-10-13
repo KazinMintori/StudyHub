@@ -18,13 +18,12 @@ Dùng vector đơn vị, phép cộng hai vector được viết thành:
 
 $$
 \begin{aligned}
-\vec A&=A_x\hat{\mathbf i}+A_y\hat{\mathbf j},\\
-\vec B&=B_x\hat{\mathbf i}+B_y\hat{\mathbf j},\\
-\vec R&=\vec A+\vec B\\
-&=(A_x\hat{\mathbf i}+A_y\hat{\mathbf j})
- +(B_x\hat{\mathbf i}+B_y\hat{\mathbf j})\\
-&=(A_x+B_x)\hat{\mathbf i}+(A_y+B_y)\hat{\mathbf j}\\
-&=R_x\hat{\mathbf i}+R_y\hat{\mathbf j}.
+&\vec A = A_x\hat{\mathbf i}+A_y\hat{\mathbf j},\\
+&\vec B = B_x\hat{\mathbf i}+B_y\hat{\mathbf j},\\
+&\vec R = \vec A+\vec B\\
+&\quad =(A_x\hat{\mathbf i}+A_y\hat{\mathbf j}) +(B_x\hat{\mathbf i}+B_y\hat{\mathbf j})\\
+&\quad =(A_x+B_x)\hat{\mathbf i}+(A_y+B_y)\hat{\mathbf j}\\
+&\quad =R_x\hat{\mathbf i}+R_y\hat{\mathbf j}.
 \end{aligned}\tag{1.13}
 $$
 
@@ -34,18 +33,13 @@ Nếu các vector không cùng nằm trong mặt phẳng $xy$, cần thêm thàn
 
 $$
 \begin{aligned}
-\vec A&=A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k},\\
-\vec B&=B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k}.
-\end{aligned}\tag{1.14}
-$$
-
-$$
-\begin{aligned}
-\vec R&=(A_x+B_x)\hat{\mathbf i}
+    &\vec A = A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k},\\
+    &\vec B = B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k}.\\
+    &\vec R =(A_x+B_x)\hat{\mathbf i}
  +(A_y+B_y)\hat{\mathbf j}
  +(A_z+B_z)\hat{\mathbf k}\\
-&=R_x\hat{\mathbf i}+R_y\hat{\mathbf j}+R_z\hat{\mathbf k}.
-\end{aligned}\tag{1.15}
+    &\quad =R_x\hat{\mathbf i}+R_y\hat{\mathbf j}+R_z\hat{\mathbf k}.
+\end{aligned}
 $$
 
 ![Hình 1.25 nguyên tác: Ba vector đơn vị theo các trục dương trong không gian](img/young-01/hinh-1-25.png)
@@ -59,8 +53,8 @@ Cho hai độ dời:
 
 $$
 \begin{aligned}
-\vec D&=(6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m,\\
-\vec E&=(4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m.
+&\vec D = (6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m,\\
+&\vec E = (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 
@@ -74,13 +68,9 @@ Tìm độ lớn của $2\vec D-\vec E$.
 
 $$
 \begin{aligned}
-\vec F
-&=2(6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m\\
-&\quad-(4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m\\
-&=[(12.00-4.00)\hat{\mathbf i}
- +(6.00+5.00)\hat{\mathbf j}\\
-&\qquad+(-2.00-8.00)\hat{\mathbf k}]\,\mathrm m\\
-&=(8.00\hat{\mathbf i}+11.00\hat{\mathbf j}-10.00\hat{\mathbf k})\,\mathrm m.
+&\vec F = 2(6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m - (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m\\
+&\quad =[(12.00-4.00)\hat{\mathbf i} +(6.00+5.00)\hat{\mathbf j} +(-2.00-8.00)\hat{\mathbf k}]\,\mathrm m\\
+&\quad =(8.00\hat{\mathbf i}+11.00\hat{\mathbf j}-10.00\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 
@@ -88,9 +78,9 @@ Theo (1.11):
 
 $$
 \begin{aligned}
-F&=\sqrt{F_x^2+F_y^2+F_z^2}\\
-&=\sqrt{(8.00\,\mathrm m)^2+(11.00\,\mathrm m)^2+(-10.00\,\mathrm m)^2}\\
-&\approx16.9\,\mathrm m.
+&F = \sqrt{F_x^2+F_y^2+F_z^2}\\
+&\quad =\sqrt{(8.00\,\mathrm m)^2+(11.00\,\mathrm m)^2+(-10.00\,\mathrm m)^2}\\
+&\quad \approx16.9\,\mathrm m.
 \end{aligned}
 $$
 
@@ -106,10 +96,10 @@ Sắp xếp các vector sau theo độ lớn giảm dần:
 
 $$
 \begin{aligned}
-\text{(i)}\quad\vec A&=(3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-\text{(ii)}\quad\vec B&=(-3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-\text{(iii)}\quad\vec C&=(3\hat{\mathbf i}-5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-\text{(iv)}\quad\vec D&=(3\hat{\mathbf i}+5\hat{\mathbf j}+2\hat{\mathbf k})\,\mathrm m.
+&\text{(i)}\quad\vec A = (3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
+&\text{(ii)}\quad\vec B = (-3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
+&\text{(iii)}\quad\vec C = (3\hat{\mathbf i}-5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
+&\text{(iv)}\quad\vec D = (3\hat{\mathbf i}+5\hat{\mathbf j}+2\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 :::
@@ -118,12 +108,6 @@ $$
 Tất cả có cùng độ lớn, dù hướng khác nhau:
 
 $$
-\begin{aligned}
-A=B=C=D
-&=\sqrt{(\pm3\,\mathrm m)^2+(\pm5\,\mathrm m)^2+(\pm2\,\mathrm m)^2}\\
-&=\sqrt{9+25+4}\,\mathrm m
-=\sqrt{38}\,\mathrm m
-\approx6.2\,\mathrm m.
-\end{aligned}
+A=B=C=D = \sqrt{(\pm3\,\mathrm m)^2+(\pm5\,\mathrm m)^2+(\pm2\,\mathrm m)^2} = \sqrt{38}\,\mathrm m \approx6.2\,\mathrm m.
 $$
 :::

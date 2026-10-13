@@ -126,9 +126,9 @@ Trong lý thuyết tối ưu hóa toán học, một bài toán tối ưu tổng
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x)\\
-\text{subject to}\quad & f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-& h_i(x) = 0, \quad i = 1, \ldots, p.
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p.
 \end{aligned}
 $$
 
@@ -237,8 +237,8 @@ Vì đây là bài toán cực tiểu, mọi điểm khả thi đều có giá t
 
 $$
 \begin{aligned}
-p^\star &\le f_0(x), \\
-f_0(x) &\le p^\star + \varepsilon.
+&p^\star \le f_0(x),\\
+&f_0(x) \le p^\star + \varepsilon.
 \end{aligned}
 $$
 
@@ -361,9 +361,9 @@ Bài toán khi đó được gọi là **Bài toán khả thi**:
 
 $$
 \begin{aligned}
-\text{find}\quad & x\\
-\text{subject to}\quad & f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-& h_i(x) = 0, \quad i = 1, \ldots, p.
+&\text{find}\quad x\\
+&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p.
 \end{aligned}
 $$
 
@@ -519,11 +519,11 @@ $$
 Chuyển bài toán cực đại thành bài toán cực tiểu hàm đối số âm, chuyển các ràng buộc về dạng vế phải bằng 0:
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x_1, x_2) = -5x_1 - 4x_2 \\
-\text{subject to}\quad & f_1(x_1, x_2) = x_1 + x_2 - 6 \le 0, \\
-& f_2(x_1, x_2) = 2x_1 + x_2 - 9 \le 0, \\
-& f_3(x_1, x_2) = -x_1 \le 0, \\
-& f_4(x_1, x_2) = -x_2 \le 0.
+&\text{minimize}\quad f_0(x_1, x_2) = -5x_1 - 4x_2\\
+&\text{subject to}\quad f_1(x_1, x_2) = x_1 + x_2 - 6 \le 0,\\
+&\phantom{\text{subject to}\quad } f_2(x_1, x_2) = 2x_1 + x_2 - 9 \le 0,\\
+&\phantom{\text{subject to}\quad } f_3(x_1, x_2) = -x_1 \le 0,\\
+&\phantom{\text{subject to}\quad } f_4(x_1, x_2) = -x_2 \le 0.
 \end{aligned}
 $$
 Bài toán có 4 ràng buộc bất đẳng thức và 0 ràng buộc đẳng thức. Giá trị tối ưu của bài toán cực đại ban đầu bằng $-p^\star$ của bài toán chuẩn tắc. (Đây là một bài toán quy hoạch tuyến tính kinh điển với nghiệm tối ưu tại đỉnh $(x_1^\star, x_2^\star) = (3, 3)$ và giá trị cực đại bằng $27$).

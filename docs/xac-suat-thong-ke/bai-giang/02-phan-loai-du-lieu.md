@@ -1,4 +1,4 @@
-﻿---
+---
 course: xac-suat-thong-ke
 lecture: 02-phan-loai-du-lieu
 section: lecture
@@ -227,9 +227,7 @@ Trong một bức ảnh màu tiêu chuẩn:
 - Nếu bức ảnh có kích thước $1520 \times 1012$ điểm ảnh, dữ liệu thực tế lưu trữ trong máy tính là một mảng ba chiều gồm:
 
 $$
-\begin{aligned}
-1520 \times 1012 \times 3 &= 4{,}614{,}720 \text{ giá trị số nguyên.}
-\end{aligned}
+1520 \times 1012 \times 3 = 4{,}614{,}720 \text{ giá trị số nguyên.}
 $$
 
 ### 6.2. Ảnh thang xám (Grayscale)
@@ -369,8 +367,8 @@ Phân tích kết quả thực thi từng đoạn mã:
      - Hàm được đánh giá từ trong ra ngoài:
        
        \begin{aligned}
-       \ln(a) &= (\ln(1), \ln(2), \ln(3), \ln(4)) \\
-       &\approx (0, 0.6931, 1.0986, 1.3863).
+       &\ln(a) = (\ln(1), \ln(2), \ln(3), \ln(4))\\
+       &\quad \approx (0, 0.6931, 1.0986, 1.3863).
        \end{aligned}
        
        Sau đó, hàm sqrt() lấy căn bậc hai từng kết quả để tạo ra vector đầu ra cùng độ dài.

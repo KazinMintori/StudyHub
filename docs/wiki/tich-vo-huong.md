@@ -23,9 +23,9 @@ Tích vô hướng của hai vector được tính theo từng thành phần:
 
 $$
 \begin{aligned}
-(1,2)\cdot(3,4)&=1\cdot3\\
+&(1,2)\cdot(3,4) = 1\cdot3\\
 &\quad+2\cdot4\\
-&=11.
+&\quad =11.
 \end{aligned}
 $$
 

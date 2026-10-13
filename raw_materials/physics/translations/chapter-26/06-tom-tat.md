@@ -44,8 +44,8 @@ Viết dưới dạng tổng, với m nhánh tại nút và k phần tử trên 
 
 $$
 \begin{aligned}
-\sum_{i=1}^{m}I_i&=0,\\
-\sum_{j=1}^{k}\Delta V_j&=0.
+&\sum_{i=1}^{m}I_i = 0,\\
+&\sum_{j=1}^{k}\Delta V_j = 0.
 \end{aligned}
 $$
 
@@ -71,9 +71,9 @@ Khi nạp một tụ ban đầu chưa có điện tích qua điện trở R từ
 
 $$
 \begin{aligned}
-q(t)&=C\mathcal E(1-e^{-t/(RC)}),\\
-&=Q_f(1-e^{-t/(RC)}),\\
-i(t)&=\frac{\mathcal E}{R}e^{-t/(RC)}.
+&q(t) = C\mathcal E(1-e^{-t/(RC)}),\\
+&\quad =Q_f(1-e^{-t/(RC)}),\\
+&i(t) = \frac{\mathcal E}{R}e^{-t/(RC)}.
 \end{aligned}
 $$
 
@@ -83,9 +83,9 @@ Khi tụ có điện tích đầu Q₀ được ngắt nguồn rồi phóng qua 
 
 $$
 \begin{aligned}
-q(t)&=Q_0e^{-t/(RC)},\\
-i(t)&=\frac{dq}{dt}\\
-&=-\frac{Q_0}{RC}e^{-t/(RC)}.
+&q(t) = Q_0e^{-t/(RC)},\\
+&i(t) = \frac{dq}{dt}\\
+&\quad =-\frac{Q_0}{RC}e^{-t/(RC)}.
 \end{aligned}
 $$
 

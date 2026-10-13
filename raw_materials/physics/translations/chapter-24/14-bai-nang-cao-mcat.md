@@ -22,8 +22,8 @@ Bạn khảo sát một tụ điện phẳng chứa không khí. Tụ được n
 
 $$
 \begin{aligned}
-U&=\frac12CV^2\\
-&=\frac{\varepsilon_0AV^2}{2d}.
+&U = \frac12CV^2\\
+&\quad =\frac{\varepsilon_0AV^2}{2d}.
 \end{aligned}
 $$
 
@@ -31,8 +31,8 @@ Vì vậy $U$ tuyến tính theo $1/d$. Nếu tụ bị ngắt khỏi nguồn, Q
 
 $$
 \begin{aligned}
-U&=\frac{Q^2}{2C}\\
-&=\frac{Q^2d}{2\varepsilon_0A}.
+&U = \frac{Q^2}{2C}\\
+&\quad =\frac{Q^2d}{2\varepsilon_0A}.
 \end{aligned}
 $$
 
@@ -42,8 +42,8 @@ nên $U$ tuyến tính theo d, không phải theo $1/d$.
 
 $$
 \begin{aligned}
-m&=3{,}67\frac{10^{-9}\,\mathrm J}{\mathrm{cm}^{-1}}\\
-&=3{,}67\times10^{-11}\,\mathrm{J\,m}.
+&m = 3{,}67\frac{10^{-9}\,\mathrm J}{\mathrm{cm}^{-1}}\\
+&\quad =3{,}67\times10^{-11}\,\mathrm{J\,m}.
 \end{aligned}
 $$
 
@@ -51,10 +51,10 @@ So sánh với $U=(\varepsilon_0AV^2/2)(1/d)$, ta có $m=\varepsilon_0AV^2/2$. D
 
 $$
 \begin{aligned}
-A&=\frac{2m}{\varepsilon_0V^2}\\
-&=\frac{7{,}34\times10^{-11}}{5{,}100\times10^{-9}}\,\mathrm{m^2}\\
-&\approx1{,}44\times10^{-2}\,\mathrm{m^2}\\
-&\approx144\,\mathrm{cm^2}.
+&A = \frac{2m}{\varepsilon_0V^2}\\
+&\quad =\frac{7{,}34\times10^{-11}}{5{,}100\times10^{-9}}\,\mathrm{m^2}\\
+&\quad \approx1{,}44\times10^{-2}\,\mathrm{m^2}\\
+&\quad \approx144\,\mathrm{cm^2}.
 \end{aligned}
 $$
 
@@ -81,9 +81,9 @@ Một lát đồng trục thuần không khí dài ℓ có điện dung $2\pi\va
 
 $$
 \begin{aligned}
-V&=\int_a^R\frac{\lambda}{2\pi\varepsilon_0K r}\,dr\\
+&V = \int_a^R\frac{\lambda}{2\pi\varepsilon_0K r}\,dr\\
 &\quad+\int_R^b\frac{\lambda}{2\pi\varepsilon_0 r}\,dr\\
-&=\frac{\lambda}{2\pi\varepsilon_0K}\ln\frac Ra\\
+&\quad =\frac{\lambda}{2\pi\varepsilon_0K}\ln\frac Ra\\
 &\quad+\frac{\lambda}{2\pi\varepsilon_0}\ln\frac bR.
 \end{aligned}
 $$
@@ -92,8 +92,8 @@ Vì điện tích trên trụ trong của lát có độ lớn $Q=\lambda\ell$, 
 
 $$
 \begin{aligned}
-C_D(\ell)&=\frac{Q}{V}\\
-&=\frac{2\pi\varepsilon_0\ell}{\ln(R/a)/K+\ln(b/R)}.
+&C_D(\ell) = \frac{Q}{V}\\
+&\quad =\frac{2\pi\varepsilon_0\ell}{\ln(R/a)/K+\ln(b/R)}.
 \end{aligned}
 $$
 
@@ -101,8 +101,8 @@ $$
 
 $$
 \begin{aligned}
-c_a&=\frac{2\pi\varepsilon_0}{\ln(b/a)},\\
-c_D&=\frac{2\pi\varepsilon_0}{\ln(R/a)/K+\ln(b/R)}.
+&c_a = \frac{2\pi\varepsilon_0}{\ln(b/a)},\\
+&c_D = \frac{2\pi\varepsilon_0}{\ln(R/a)/K+\ln(b/R)}.
 \end{aligned}
 $$
 
@@ -116,8 +116,8 @@ $$
 
 $$
 \begin{aligned}
-C(0)&=\frac{2\pi\varepsilon_0L}{\ln(b/a)}\\
-&\approx4{,}01\,\mathrm{pF}.
+&C(0) = \frac{2\pi\varepsilon_0L}{\ln(b/a)}\\
+&\quad \approx4{,}01\,\mathrm{pF}.
 \end{aligned}
 $$
 
@@ -125,8 +125,8 @@ $$
 
 $$
 \begin{aligned}
-C(L)&=\frac{2\pi\varepsilon_0L}{\ln(R/a)/K+\ln(b/R)}\\
-&\approx8{,}83\,\mathrm{pF}.
+&C(L) = \frac{2\pi\varepsilon_0L}{\ln(R/a)/K+\ln(b/R)}\\
+&\quad \approx8{,}83\,\mathrm{pF}.
 \end{aligned}
 $$
 
@@ -134,9 +134,9 @@ $$
 
 $$
 \begin{aligned}
-x&=\frac{C_{\mathrm{yc}}-c_aL}{c_D-c_a}\\
-&\approx0{,}0412\,\mathrm m\\
-&=4{,}12\,\mathrm{cm}.
+&x = \frac{C_{\mathrm{yc}}-c_aL}{c_D-c_a}\\
+&\quad \approx0{,}0412\,\mathrm m\\
+&\quad =4{,}12\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -167,10 +167,10 @@ Với lát mỏng bề dày $dx$, nghịch đảo điện dung là $dx/[\varepsi
 
 $$
 \begin{aligned}
-\frac1C&=\frac1{\varepsilon_0A}\int_0^d\frac{dx}{K(x)}\\
-&=\frac1{\varepsilon_0A}\int_0^d\frac{dx}{1+(K-1)x/d}\\
-&=\frac{d}{\varepsilon_0A(K-1)}\int_1^K\frac{du}{u}\\
-&=\frac{d\ln K}{\varepsilon_0A(K-1)}.
+&\frac1C = \frac1{\varepsilon_0A}\int_0^d\frac{dx}{K(x)}\\
+&\quad =\frac1{\varepsilon_0A}\int_0^d\frac{dx}{1+(K-1)x/d}\\
+&\quad =\frac{d}{\varepsilon_0A(K-1)}\int_1^K\frac{du}{u}\\
+&\quad =\frac{d\ln K}{\varepsilon_0A(K-1)}.
 \end{aligned}
 $$
 
@@ -215,8 +215,8 @@ $$
 
 $$
 \begin{aligned}
-C_D&=\frac{K\varepsilon_0Lx}{D},\\
-C_a&=\frac{\varepsilon_0L(L-x)}D.
+&C_D = \frac{K\varepsilon_0Lx}{D},\\
+&C_a = \frac{\varepsilon_0L(L-x)}D.
 \end{aligned}
 $$
 
@@ -230,8 +230,8 @@ $$
 
 $$
 \begin{aligned}
-dU&=\frac12V^2dC\\
-&=+\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
+&dU = \frac12V^2dC\\
+&\quad =+\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
 \end{aligned}
 $$
 
@@ -245,8 +245,8 @@ Sau khi ngắt, $Q$ giữ nguyên. Vi phân $U=Q^2/(2C)$ theo $C$ cho $dU=-Q^2dC
 
 $$
 \begin{aligned}
-dU&=-\frac12V^2dC\\
-&=-\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
+&dU = -\frac12V^2dC\\
+&\quad =-\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
 \end{aligned}
 $$
 
@@ -256,8 +256,8 @@ $$
 
 $$
 \begin{aligned}
-dW_{\mathrm{pin}}&=VdQ\\
-&=V^2dC.
+&dW_{\mathrm{pin}} = VdQ\\
+&\quad =V^2dC.
 \end{aligned}
 $$
 
@@ -265,8 +265,8 @@ Phần năng lượng điện trường chỉ tăng $dU=V^2dC/2$. Bảo toàn n�
 
 $$
 \begin{aligned}
-dW_{\mathrm{ext}}&=dU-dW_{\mathrm{pin}}\\
-&=-\frac12V^2dC.
+&dW_{\mathrm{ext}} = dU-dW_{\mathrm{pin}}\\
+&\quad =-\frac12V^2dC.
 \end{aligned}
 $$
 
@@ -274,8 +274,8 @@ Do $dW_{\mathrm{ext}}=-Fdx$, lực điện hướng vào trong. Độ lớn củ
 
 $$
 \begin{aligned}
-F&=\frac12V^2\frac{dC}{dx}\\
-&=\frac{(K-1)\varepsilon_0V^2L}{2D}.
+&F = \frac12V^2\frac{dC}{dx}\\
+&\quad =\frac{(K-1)\varepsilon_0V^2L}{2D}.
 \end{aligned}
 $$
 
@@ -311,8 +311,8 @@ Nếu xem màng chỉ như một tụ điện, mỗi đơn vị diện tích mà
 
 $$
 \begin{aligned}
-\Delta V_m&=+30\,\mathrm{mV}-(-70\,\mathrm{mV})\\
-&=0{,}100\,\mathrm V.
+&\Delta V_m = +30\,\mathrm{mV}-(-70\,\mathrm{mV})\\
+&\quad =0{,}100\,\mathrm V.
 \end{aligned}
 $$
 
@@ -320,9 +320,9 @@ Số mol Na⁺ đi vào trên mỗi cm² là:
 
 $$
 \begin{aligned}
-\frac{\Delta n_{\mathrm{Na}}}{A}&=\frac{(C/A)\Delta V_m}{F}\\
-&=\frac{1{,}0\times10^{-7}}{1{,}0\times10^5}\,\mathrm{mol/cm^2}\\
-&=1{,}0\times10^{-12}\,\mathrm{mol/cm^2}.
+&\frac{\Delta n_{\mathrm{Na}}}{A} = \frac{(C/A)\Delta V_m}{F}\\
+&\quad =\frac{1{,}0\times10^{-7}}{1{,}0\times10^5}\,\mathrm{mol/cm^2}\\
+&\quad =1{,}0\times10^{-12}\,\mathrm{mol/cm^2}.
 \end{aligned}
 $$
 
@@ -347,11 +347,11 @@ Giả sử trứng có đường kính 200 µm. Nồng độ Na⁺ bên trong th
 
 $$
 \begin{aligned}
-A&=4\pi r^2\\
-&=1{,}2566\times10^{-3}\,\mathrm{cm^2},\\
-\mathcal V&=\frac43\pi r^3\\
-&=4{,}1888\times10^{-6}\,\mathrm{cm^3}\\
-&=4{,}1888\times10^{-9}\,\mathrm L.
+&A = 4\pi r^2\\
+&\quad =1{,}2566\times10^{-3}\,\mathrm{cm^2},\\
+&\mathcal V = \frac43\pi r^3\\
+&\quad =4{,}1888\times10^{-6}\,\mathrm{cm^3}\\
+&\quad =4{,}1888\times10^{-9}\,\mathrm L.
 \end{aligned}
 $$
 
@@ -359,8 +359,8 @@ Tổng số mol Na⁺ đi vào là:
 
 $$
 \begin{aligned}
-\Delta n&=(\Delta n/A)A\\
-&=1{,}2566\times10^{-15}\,\mathrm{mol}.
+&\Delta n = (\Delta n/A)A\\
+&\quad =1{,}2566\times10^{-15}\,\mathrm{mol}.
 \end{aligned}
 $$
 
@@ -368,10 +368,10 @@ Do đó:
 
 $$
 \begin{aligned}
-\Delta c&=\frac{\Delta n}{\mathcal V}\\
-&=3{,}00\times10^{-7}\,\mathrm{mol/L},\\
-\frac{\Delta c}{c_0}&=\frac{3{,}00\times10^{-7}}{3{,}00\times10^{-2}}\\
-&=1{,}00\times10^{-5}.
+&\Delta c = \frac{\Delta n}{\mathcal V}\\
+&\quad =3{,}00\times10^{-7}\,\mathrm{mol/L},\\
+&\frac{\Delta c}{c_0} = \frac{3{,}00\times10^{-7}}{3{,}00\times10^{-2}}\\
+&\quad =1{,}00\times10^{-5}.
 \end{aligned}
 $$
 
@@ -395,8 +395,8 @@ Gọi $N$ là số ion Na⁺ cần đi vào và $N_{\mathrm{Ca}}$ là số ion C
 
 $$
 \begin{aligned}
-N_{\mathrm{Ca}}(2e)&=N e,\\
-N_{\mathrm{Ca}}&=\frac N2.
+&N_{\mathrm{Ca}}(2e) = N e,\\
+&N_{\mathrm{Ca}} = \frac N2.
 \end{aligned}
 $$
 
@@ -421,9 +421,9 @@ Lượng công nhỏ nhất tế bào phải thực hiện để đưa $V_m$ tr�
 
 $$
 \begin{aligned}
-\frac{\Delta U}{A}&=\frac12\frac CA(V_f^2-V_i^2)\\
-&=\frac12(10^{-6})(0{,}00400)\\
-&=2{,}0\times10^{-9}\,\mathrm{J/cm^2}.
+&\frac{\Delta U}{A} = \frac12\frac CA(V_f^2-V_i^2)\\
+&\quad =\frac12(10^{-6})(0{,}00400)\\
+&\quad =2{,}0\times10^{-9}\,\mathrm{J/cm^2}.
 \end{aligned}
 $$
 
@@ -431,9 +431,9 @@ Với diện tích màng $A=1{,}2566\times10^{-3}\,\mathrm{cm^2}$,
 
 $$
 \begin{aligned}
-\Delta U&=(\Delta U/A)A\\
-&=2{,}51\times10^{-12}\,\mathrm J\\
-&\approx2{,}5\,\mathrm{pJ}.
+&\Delta U = (\Delta U/A)A\\
+&\quad =2{,}51\times10^{-12}\,\mathrm J\\
+&\quad \approx2{,}5\,\mathrm{pJ}.
 \end{aligned}
 $$
 

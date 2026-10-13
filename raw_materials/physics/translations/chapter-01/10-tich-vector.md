@@ -38,14 +38,12 @@ Trước hết xét các vector đơn vị trực chuẩn $\hat{\mathbf i}$, $\h
 
 $$
 \begin{aligned}
-\hat{\mathbf i}\cdot\hat{\mathbf i}
+&\hat{\mathbf i}\cdot\hat{\mathbf i}
 =\hat{\mathbf j}\cdot\hat{\mathbf j}
-=\hat{\mathbf k}\cdot\hat{\mathbf k}
-&=(1)(1)\cos0^\circ=1,\\
-\hat{\mathbf i}\cdot\hat{\mathbf j}
+=\hat{\mathbf k}\cdot\hat{\mathbf k} =(1)(1)\cos0^\circ=1,\\
+&\hat{\mathbf i}\cdot\hat{\mathbf j}
 =\hat{\mathbf i}\cdot\hat{\mathbf k}
-=\hat{\mathbf j}\cdot\hat{\mathbf k}
-&=(1)(1)\cos90^\circ=0.
+=\hat{\mathbf j}\cdot\hat{\mathbf k} =(1)(1)\cos90^\circ=0.
 \end{aligned}\tag{1.17}
 $$
 
@@ -53,27 +51,13 @@ Biểu diễn hai vector bằng thành phần rồi khai triển đầy đủ:
 
 $$
 \begin{aligned}
-\vec A\cdot\vec B
-&=(A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k})\\
-&\quad\cdot(B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k})\\
-&=A_x\hat{\mathbf i}\cdot B_x\hat{\mathbf i}
- +A_x\hat{\mathbf i}\cdot B_y\hat{\mathbf j}
- +A_x\hat{\mathbf i}\cdot B_z\hat{\mathbf k}\\
-&\quad+A_y\hat{\mathbf j}\cdot B_x\hat{\mathbf i}
- +A_y\hat{\mathbf j}\cdot B_y\hat{\mathbf j}
- +A_y\hat{\mathbf j}\cdot B_z\hat{\mathbf k}\\
-&\quad+A_z\hat{\mathbf k}\cdot B_x\hat{\mathbf i}
- +A_z\hat{\mathbf k}\cdot B_y\hat{\mathbf j}
- +A_z\hat{\mathbf k}\cdot B_z\hat{\mathbf k}\\
-&=A_xB_x(\hat{\mathbf i}\cdot\hat{\mathbf i})
- +A_xB_y(\hat{\mathbf i}\cdot\hat{\mathbf j})
- +A_xB_z(\hat{\mathbf i}\cdot\hat{\mathbf k})\\
-&\quad+A_yB_x(\hat{\mathbf j}\cdot\hat{\mathbf i})
- +A_yB_y(\hat{\mathbf j}\cdot\hat{\mathbf j})
- +A_yB_z(\hat{\mathbf j}\cdot\hat{\mathbf k})\\
-&\quad+A_zB_x(\hat{\mathbf k}\cdot\hat{\mathbf i})
- +A_zB_y(\hat{\mathbf k}\cdot\hat{\mathbf j})
- +A_zB_z(\hat{\mathbf k}\cdot\hat{\mathbf k}).
+&\vec A\cdot\vec B = (A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k}) \cdot(B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k})\\
+&\quad = A_x\hat{\mathbf i}\cdot B_x\hat{\mathbf i} + A_x\hat{\mathbf i}\cdot B_y\hat{\mathbf j} + A_x\hat{\mathbf i}\cdot B_z\hat{\mathbf k}\\
+&\quad\quad + A_y\hat{\mathbf j}\cdot B_x\hat{\mathbf i} + A_y\hat{\mathbf j}\cdot B_y\hat{\mathbf j} + A_y\hat{\mathbf j}\cdot B_z\hat{\mathbf k}\\
+&\quad\quad + A_z\hat{\mathbf k}\cdot B_x\hat{\mathbf i} + A_z\hat{\mathbf k}\cdot B_y\hat{\mathbf j} + A_z\hat{\mathbf k}\cdot B_z\hat{\mathbf k}\\
+&\quad = A_xB_x(\hat{\mathbf i}\cdot\hat{\mathbf i}) + A_xB_y(\hat{\mathbf i}\cdot\hat{\mathbf j}) + A_xB_z(\hat{\mathbf i}\cdot\hat{\mathbf k})\\
+&\quad\quad + A_yB_x(\hat{\mathbf j}\cdot\hat{\mathbf i}) + A_yB_y(\hat{\mathbf j}\cdot\hat{\mathbf j}) + A_yB_z(\hat{\mathbf j}\cdot\hat{\mathbf k})\\
+&\quad\quad + A_zB_x(\hat{\mathbf k}\cdot\hat{\mathbf i}) + A_zB_y(\hat{\mathbf k}\cdot\hat{\mathbf j}) + A_zB_z(\hat{\mathbf k}\cdot\hat{\mathbf k}).
 \end{aligned}\tag{1.18}
 $$
 
@@ -110,10 +94,10 @@ $$\vec A\cdot\vec B=(4.00)(5.00)\cos77.0^\circ\approx4.50.$$
 
 $$
 \begin{aligned}
-A_x&=(4.00)\cos53.0^\circ\approx2.407,\\
-A_y&=(4.00)\sin53.0^\circ\approx3.195,\\
-B_x&=(5.00)\cos130.0^\circ\approx-3.214,\\
-B_y&=(5.00)\sin130.0^\circ\approx3.830.
+&A_x = (4.00)\cos53.0^\circ\approx2.407,\\
+&A_y = (4.00)\sin53.0^\circ\approx3.195,\\
+&B_x = (5.00)\cos130.0^\circ\approx-3.214,\\
+&B_y = (5.00)\sin130.0^\circ\approx3.830.
 \end{aligned}
 $$
 
@@ -121,10 +105,9 @@ Giữ thêm một chữ số ở thành phần và làm tròn ở cuối, như V
 
 $$
 \begin{aligned}
-\vec A\cdot\vec B
-&=A_xB_x+A_yB_y+A_zB_z\\
-&\approx(2.407)(-3.214)+(3.195)(3.830)+(0)(0)\\
-&\approx4.50.
+&\vec A\cdot\vec B = A_xB_x+A_yB_y+A_zB_z\\
+&\quad \approx(2.407)(-3.214)+(3.195)(3.830)+(0)(0)\\
+&\quad \approx4.50.
 \end{aligned}
 $$
 
@@ -163,11 +146,10 @@ Trong trường hợp này:
 
 $$
 \begin{aligned}
-\vec A\cdot\vec B
-&=(2.00)(-4.00)+(3.00)(2.00)+(1.00)(-1.00)\\
-&=-3.00,\\
-A&=\sqrt{(2.00)^2+(3.00)^2+(1.00)^2}=\sqrt{14.00},\\
-B&=\sqrt{(-4.00)^2+(2.00)^2+(-1.00)^2}=\sqrt{21.00}.
+&\vec A\cdot\vec B = (2.00)(-4.00)+(3.00)(2.00)+(1.00)(-1.00)\\
+&\quad =-3.00,\\
+&A = \sqrt{(2.00)^2+(3.00)^2+(1.00)^2}=\sqrt{14.00},\\
+&B = \sqrt{(-4.00)^2+(2.00)^2+(-1.00)^2}=\sqrt{21.00}.
 \end{aligned}
 $$
 
@@ -226,12 +208,9 @@ $\vec0$ là vector có mọi thành phần bằng không và không có hướng
 
 $$
 \begin{aligned}
-\hat{\mathbf i}\times\hat{\mathbf j}
-&=-\hat{\mathbf j}\times\hat{\mathbf i}=\hat{\mathbf k},\\
-\hat{\mathbf j}\times\hat{\mathbf k}
-&=-\hat{\mathbf k}\times\hat{\mathbf j}=\hat{\mathbf i},\\
-\hat{\mathbf k}\times\hat{\mathbf i}
-&=-\hat{\mathbf i}\times\hat{\mathbf k}=\hat{\mathbf j}.
+&\hat{\mathbf i}\times\hat{\mathbf j} = -\hat{\mathbf j}\times\hat{\mathbf i}=\hat{\mathbf k},\\
+&\hat{\mathbf j}\times\hat{\mathbf k} = -\hat{\mathbf k}\times\hat{\mathbf j}=\hat{\mathbf i},\\
+&\hat{\mathbf k}\times\hat{\mathbf i} = -\hat{\mathbf i}\times\hat{\mathbf k}=\hat{\mathbf j}.
 \end{aligned}\tag{1.22}
 $$
 
@@ -239,18 +218,10 @@ Có thể kiểm tra từng quan hệ bằng Hình 1.32a. Biểu diễn hai vect
 
 $$
 \begin{aligned}
-\vec A\times\vec B
-&=(A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k})\\
-&\quad\times(B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k})\\
-&=A_x\hat{\mathbf i}\times B_x\hat{\mathbf i}
- +A_x\hat{\mathbf i}\times B_y\hat{\mathbf j}
- +A_x\hat{\mathbf i}\times B_z\hat{\mathbf k}\\
-&\quad+A_y\hat{\mathbf j}\times B_x\hat{\mathbf i}
- +A_y\hat{\mathbf j}\times B_y\hat{\mathbf j}
- +A_y\hat{\mathbf j}\times B_z\hat{\mathbf k}\\
-&\quad+A_z\hat{\mathbf k}\times B_x\hat{\mathbf i}
- +A_z\hat{\mathbf k}\times B_y\hat{\mathbf j}
- +A_z\hat{\mathbf k}\times B_z\hat{\mathbf k}.
+&\vec A\times\vec B = (A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k}) \times(B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k})\\
+&\quad = A_x\hat{\mathbf i}\times B_x\hat{\mathbf i} + A_x\hat{\mathbf i}\times B_y\hat{\mathbf j} + A_x\hat{\mathbf i}\times B_z\hat{\mathbf k}\\
+&\quad\quad + A_y\hat{\mathbf j}\times B_x\hat{\mathbf i} + A_y\hat{\mathbf j}\times B_y\hat{\mathbf j} + A_y\hat{\mathbf j}\times B_z\hat{\mathbf k}\\
+&\quad\quad + A_z\hat{\mathbf k}\times B_x\hat{\mathbf i} + A_z\hat{\mathbf k}\times B_y\hat{\mathbf j} + A_z\hat{\mathbf k}\times B_z\hat{\mathbf k}.
 \end{aligned}\tag{1.23}
 $$
 
@@ -258,8 +229,7 @@ Mỗi số hạng có thể viết lại, chẳng hạn $A_x\hat{\mathbf i}\time
 
 $$
 \begin{aligned}
-\vec A\times\vec B
-&=(A_yB_z-A_zB_y)\hat{\mathbf i}\\
+&\vec A\times\vec B = (A_yB_z-A_zB_y)\hat{\mathbf i}\\
 &\quad+(A_zB_x-A_xB_z)\hat{\mathbf j}\\
 &\quad+(A_xB_y-A_yB_x)\hat{\mathbf k}.
 \end{aligned}\tag{1.24}
@@ -269,9 +239,9 @@ So với cách viết vector ở (1.14), các thành phần của $\vec C=\vec A
 
 $$
 \begin{aligned}
-C_x&=A_yB_z-A_zB_y,\\
-C_y&=A_zB_x-A_xB_z,\\
-C_z&=A_xB_y-A_yB_x.
+&C_x = A_yB_z-A_zB_y,\\
+&C_y = A_zB_x-A_xB_z,\\
+&C_z = A_xB_y-A_yB_x.
 \end{aligned}\tag{1.25}
 $$
 
@@ -308,8 +278,12 @@ Theo cách thành phần, vì $\vec A$ theo $x$, chỉ $A_x$ khác không. Góc 
 
 $$
 \begin{aligned}
-A_x&=6,&A_y&=0,&A_z&=0,\\
-B_x&=4\cos30^\circ=2\sqrt3,&B_y&=4\sin30^\circ=2,&B_z&=0.
+&A_x = 6,\\
+&A_y = 0,\\
+&A_z = 0,\\
+&B_x = 4\cos30^\circ = 2\sqrt3,\\
+&B_y = 4\sin30^\circ = 2,\\
+&B_z = 0.
 \end{aligned}
 $$
 
@@ -317,9 +291,9 @@ Thay vào (1.25):
 
 $$
 \begin{aligned}
-C_x&=(0)(0)-(0)(2)=0,\\
-C_y&=(0)(2\sqrt3)-(6)(0)=0,\\
-C_z&=(6)(2)-(0)(2\sqrt3)=12.
+&C_x = (0)(0)-(0)(2)=0,\\
+&C_y = (0)(2\sqrt3)-(6)(0)=0,\\
+&C_z = (6)(2)-(0)(2\sqrt3)=12.
 \end{aligned}
 $$
 

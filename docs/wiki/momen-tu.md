@@ -23,11 +23,11 @@ Khum ngón tay phải theo chiều dòng, ngón cái chỉ hướng vector diệ
 
 $$
 \begin{aligned}
-\vec\mu&=\vec\mu_1+\vec\mu_2+\cdots\\
+&\vec\mu = \vec\mu_1+\vec\mu_2+\cdots\\
 &\quad+\vec\mu_N,\\
-\vec\mu&=\sum_{j=1}^{N}\vec\mu_j,\\
-\vec\mu_j&=I\vec A,\\
-\vec\mu&=NI\vec A.
+&\vec\mu = \sum_{j=1}^{N}\vec\mu_j,\\
+&\vec\mu_j = I\vec A,\\
+&\vec\mu = NI\vec A.
 \end{aligned}
 $$
 

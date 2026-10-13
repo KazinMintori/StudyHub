@@ -46,9 +46,12 @@ $$\vec A=A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k}.$$
 
 $\vec A\cdot\vec B$ là đại lượng vô hướng. Có thể tính bằng độ lớn, góc giữa hai vector hoặc bằng thành phần. Phép tích có tính giao hoán, và tích hai vector vuông góc bằng không. Xem Ví dụ 1.9 và 1.10. Các công thức (1.16), (1.19) là:
 
-$$\vec A\cdot\vec B=AB\cos\varphi=|\vec A|\,|\vec B|\cos\varphi,$$
-
-$$\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.$$
+$$
+\begin{aligned}
+    &\vec A\cdot\vec B=AB\cos\varphi=|\vec A|\,|\vec B|\cos\varphi,\\
+    &\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.
+\end{aligned}
+$$
 
 ![Minh họa tóm tắt trong sách: Góc giữa hai vector và tích vô hướng](img/young-01/tom-tat-tich-vo-huong.png)
 
@@ -56,13 +59,12 @@ $$\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.$$
 
 $\vec C=\vec A\times\vec B$ là một vector thứ ba. Độ lớn phụ thuộc độ lớn hai vector và góc giữa chúng. Hướng vuông góc mặt phẳng chứa hai vector, xác định bằng bàn tay phải. Các thành phần được tính từ thành phần của hai vector ban đầu. Phép tích không giao hoán: $\vec A\times\vec B=-\vec B\times\vec A$. Nếu cùng hướng hoặc ngược hướng, tích bằng vector không. Xem Ví dụ 1.11. Các công thức (1.20), (1.25) là:
 
-$$C=AB\sin\varphi,$$
-
 $$
 \begin{aligned}
-C_x&=A_yB_z-A_zB_y,\\
-C_y&=A_zB_x-A_xB_z,\\
-C_z&=A_xB_y-A_yB_x.
+    &C=AB\sin\varphi,\\
+    &C_x = A_yB_z-A_zB_y,\\
+    &C_y = A_zB_x-A_xB_z,\\
+    &C_z = A_xB_y-A_yB_x.
 \end{aligned}
 $$
 

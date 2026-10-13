@@ -61,10 +61,8 @@ Do đó:
 
 $$
 \begin{aligned}
-D_x&=D\cos\theta=(3.00\,\mathrm m)\cos(-45^\circ)
-\approx+2.1\,\mathrm m,\\
-D_y&=D\sin\theta=(3.00\,\mathrm m)\sin(-45^\circ)
-\approx-2.1\,\mathrm m.
+&D_x = D\cos\theta = (3.00\,\mathrm m)\cos(-45^\circ) \approx +2.1\,\mathrm m,\\
+&D_y = D\sin\theta = (3.00\,\mathrm m)\sin(-45^\circ) \approx -2.1\,\mathrm m.
 \end{aligned}
 $$
 
@@ -78,8 +76,8 @@ Vì vậy:
 
 $$
 \begin{aligned}
-E_x&=(4.50\,\mathrm m)\cos53.0^\circ\approx+2.71\,\mathrm m,\\
-E_y&=(4.50\,\mathrm m)\sin53.0^\circ\approx+3.59\,\mathrm m.
+&E_x = (4.50\,\mathrm m)\cos53.0^\circ\approx+2.71\,\mathrm m,\\
+&E_y = (4.50\,\mathrm m)\sin53.0^\circ\approx+3.59\,\mathrm m.
 \end{aligned}
 $$
 
@@ -135,8 +133,8 @@ Phương pháp cũng dùng được cho nhiều vector. Nếu $\vec R$ là tổn
 
 $$
 \begin{aligned}
-R_x&=A_x+B_x+C_x+D_x+E_x+\cdots,\\
-R_y&=A_y+B_y+C_y+D_y+E_y+\cdots.
+&R_x = A_x+B_x+C_x+D_x+E_x+\cdots,\\
+&R_y = A_y+B_y+C_y+D_y+E_y+\cdots.
 \end{aligned}\tag{1.10}
 $$
 
@@ -193,9 +191,9 @@ Ba độ dời dẫn tới nơi chôn chìa khóa một chiếc Porsche mới. H
 
 $$
 \begin{aligned}
-\theta_A&=90.0^\circ-32.0^\circ=58.0^\circ,\\
-\theta_B&=180.0^\circ+36.0^\circ=216.0^\circ,\\
-\theta_C&=270.0^\circ.
+&\theta_A = 90.0^\circ-32.0^\circ=58.0^\circ,\\
+&\theta_B = 180.0^\circ+36.0^\circ=216.0^\circ,\\
+&\theta_C = 270.0^\circ.
 \end{aligned}
 $$
 
@@ -203,8 +201,8 @@ Ví dụ, thành phần $\vec A$ là:
 
 $$
 \begin{aligned}
-A_x&=(72.4\,\mathrm m)\cos58.0^\circ\approx38.37\,\mathrm m,\\
-A_y&=(72.4\,\mathrm m)\sin58.0^\circ\approx61.40\,\mathrm m.
+&A_x = (72.4\,\mathrm m)\cos58.0^\circ\approx38.37\,\mathrm m,\\
+&A_y = (72.4\,\mathrm m)\sin58.0^\circ\approx61.40\,\mathrm m.
 \end{aligned}
 $$
 

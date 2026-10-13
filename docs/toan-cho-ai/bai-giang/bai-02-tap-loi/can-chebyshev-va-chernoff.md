@@ -61,9 +61,9 @@ Khi điều kiện $f(x) \ge 0, \forall x$ được thỏa mãn, ma trận $P$ b
 
 $$
 \begin{aligned}
-\mathbb{E}[f(X)] &= \mathbb{E}\big[\operatorname{tr}(P X X^T) + 2 q^T X + r\big] \\
-&= \operatorname{tr}(P M) + 2 q^T \mu + r \\
-&= \operatorname{tr}(P \Sigma) + \mu^T P \mu + 2 q^T \mu + r.
+&\mathbb{E}[f(X)] = \mathbb{E}\big[\operatorname{tr}(P X X^T) + 2 q^T X + r\big]\\
+&\quad = \operatorname{tr}(P M) + 2 q^T \mu + r\\
+&\quad = \operatorname{tr}(P \Sigma) + \mu^T P \mu + 2 q^T \mu + r.
 \end{aligned}
 $$
 
@@ -71,9 +71,9 @@ Bài toán tìm cận Chebyshev nhiều chiều chặt nhất quy về việc c�
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \operatorname{tr}(P \Sigma) + \mu^T P \mu + 2 q^T \mu + r \\
-\text{subject to}\quad & P \succeq 0, \\
-& x^T P x + 2 q^T x + r \ge 1, \quad \forall x \notin \mathcal{S}.
+&\text{minimize}\quad \operatorname{tr}(P \Sigma) + \mu^T P \mu + 2 q^T \mu + r\\
+&\text{subject to}\quad P \succeq 0,\\
+&\phantom{\text{subject to}\quad } x^T P x + 2 q^T x + r \ge 1, \quad \forall x \notin \mathcal{S}.
 \end{aligned}
 $$
 
@@ -154,8 +154,8 @@ Cho biến ngẫu nhiên $X$ tuân theo phân phối Poisson với tham số $\m
    Vì $t > \mu$, ta có $\lambda^* > 0$. Thay vào biểu thức liên hợp:
    $$
    \begin{aligned}
-   \psi^*(t) &= t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right) \\
-   &= t \log\left(\frac{t}{\mu}\right) - t + \mu.
+   &\psi^*(t) = t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right)\\
+   &\quad = t \log\left(\frac{t}{\mu}\right) - t + \mu.
    \end{aligned}
    $$
 
@@ -200,11 +200,11 @@ Cho biến ngẫu nhiên $X$ có $\mathbb{E}[X] = 0$ và $\operatorname{Var}(X) 
    $$
    Thay $u^*$ vào biểu thức $g(u)$:
    $$
-   a + u^* = a + \frac{\sigma^2}{a} = \frac{a^2 + \sigma^2}{a},
-   $$
-   $$
-   \sigma^2 + (u^*)^2 = \sigma^2 + \frac{\sigma^4}{a^2} = \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right) = \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
-   $$
+\begin{aligned}
+    &a + u^* = a + \frac{\sigma^2}{a} = \frac{a^2 + \sigma^2}{a},\\
+    &\sigma^2 + (u^*)^2 = \sigma^2 + \frac{\sigma^4}{a^2} = \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right) = \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
+\end{aligned}
+$$
    Do đó:
    $$
    g(u^*) = \frac{\frac{\sigma^2(a^2 + \sigma^2)}{a^2}}{\frac{(a^2 + \sigma^2)^2}{a^2}} = \frac{\sigma^2}{a^2 + \sigma^2} = \frac{\sigma^2}{\sigma^2 + a^2}.
@@ -255,9 +255,9 @@ Xét vector tỉ suất sinh lời của hai tài sản $R = (R_1, R_2)^T$ có v
    Do đó, cực tiểu hóa cận xác suất thua lỗ Cantelli tương đương cực đại hóa chỉ số Sharpe $\frac{w^T \mu}{\| \Sigma^{1/2} w \|_2}$. Với chuẩn hóa $w^T \mu = 1$, bài toán quy về bài toán QP lồi tiêu chuẩn:
    $$
    \begin{aligned}
-   \text{minimize}\quad & w^T \Sigma w \\
-   \text{subject to}\quad & w^T \mu = 1, \\
-   & \mathbf{1}^T w = c > 0, \quad w \succeq 0.
+   &\text{minimize}\quad w^T \Sigma w\\
+   &\text{subject to}\quad w^T \mu = 1,\\
+   &\phantom{\text{subject to}\quad } \mathbf{1}^T w = c > 0, \quad w \succeq 0.
    \end{aligned}
    $$
    Đây là bài toán danh mục Markowitz cổ điển, kết nối trực tiếp lý thuyết cận xác suất với tối ưu hóa lồi thực hành.

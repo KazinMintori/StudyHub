@@ -109,9 +109,9 @@ Vì hàm chuẩn Euclid không khả vi tại gốc tọa độ (khi hai điểm
 
 $$
 \begin{aligned}
-\min \quad & \sum_{1 \le i < j \le N} w_{ij} t_{ij} + \sum_{i=1}^N \sum_{k=1}^K v_{ik} s_{ik} \\
-\text{sao cho} \quad & \|x_i - x_j\|_2 \le t_{ij}, \quad \forall 1 \le i < j \le N, \\
-& \|x_i - p_k\|_2 \le s_{ik}, \quad \forall i, k.
+&\min \quad \sum_{1 \le i < j \le N} w_{ij} t_{ij} + \sum_{i=1}^N \sum_{k=1}^K v_{ik} s_{ik}\\
+&\text{sao cho}\quad \|x_i - x_j\|_2 \le t_{ij}, \quad \forall 1 \le i < j \le N,\\
+&\phantom{\text{subject to}\quad } \|x_i - p_k\|_2 \le s_{ik}, \quad \forall i, k.
 \end{aligned}
 $$
 
@@ -217,8 +217,8 @@ Ngoài ra, vì lý do địa hình, trạm mới phải nằm bên phải đư�
    Khai triển:
    $$
    \begin{aligned}
-   f(x) &= x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2 \\
-   &= 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9 = 3x_1^2 + 3(x_2 - 1)^2 + 38.
+   &f(x) = x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2\\
+   &\quad = 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9 = 3x_1^2 + 3(x_2 - 1)^2 + 38.
    \end{aligned}
    $$
    Bài toán tối ưu: Cực tiểu hóa $\min f(x_1, x_2)$ sao cho $1 - x_1 \le 0$.

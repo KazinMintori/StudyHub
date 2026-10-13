@@ -17,9 +17,9 @@ Khi nạp tụ chưa tích điện từ nguồn lý tưởng có suất điện 
 
 $$
 \begin{aligned}
-\frac{dq}{dt}&=\frac{\mathcal E}{R}-\frac q{RC},\\
-q(t)&=C\mathcal E(1-e^{-t/(RC)}),\\
-i(t)&=\frac{\mathcal E}{R}e^{-t/(RC)}.
+&\frac{dq}{dt} = \frac{\mathcal E}{R}-\frac q{RC},\\
+&q(t) = C\mathcal E(1-e^{-t/(RC)}),\\
+&i(t) = \frac{\mathcal E}{R}e^{-t/(RC)}.
 \end{aligned}
 $$
 
@@ -29,8 +29,8 @@ Ngắt nguồn rồi cho tụ có điện tích Q₀ phóng qua R:
 
 $$
 \begin{aligned}
-q(t)&=Q_0e^{-t/(RC)},\\
-i(t)&=-\frac{Q_0}{RC}e^{-t/(RC)}.
+&q(t) = Q_0e^{-t/(RC)},\\
+&i(t) = -\frac{Q_0}{RC}e^{-t/(RC)}.
 \end{aligned}
 $$
 

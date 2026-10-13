@@ -240,18 +240,18 @@ Xét hai cặp phân phối tần số giữa giá trị quan sát ($O$) và gi�
 - **Đối với Cặp phân phối A**:
   $$
   \begin{aligned}
-  \chi^2_A &= \frac{(O_1 - E_1)^2}{E_1} + \frac{(O_2 - E_2)^2}{E_2} + \frac{(O_3 - E_3)^2}{E_3} \\
-  &= \frac{(1 - 1)^2}{1} + \frac{(10 - 1)^2}{1} + \frac{(1 - 10)^2}{10} \\
-  &= 0 + \frac{81}{1} + \frac{81}{10} = 81 + 8.1 = 89.1
+  &\chi^2_A = \frac{(O_1 - E_1)^2}{E_1} + \frac{(O_2 - E_2)^2}{E_2} + \frac{(O_3 - E_3)^2}{E_3}\\
+  &\quad = \frac{(1 - 1)^2}{1} + \frac{(10 - 1)^2}{1} + \frac{(1 - 10)^2}{10}\\
+  &\quad = 0 + \frac{81}{1} + \frac{81}{10} = 81 + 8.1 = 89.1
   \end{aligned}
   $$
 
 - **Đối với Cặp phân phối B**:
   $$
   \begin{aligned}
-  \chi^2_B &= \frac{(O_1 - E_1)^2}{E_1} + \frac{(O_2 - E_2)^2}{E_2} + \frac{(O_3 - E_3)^2}{E_3} \\
-  &= \frac{(3 - 5)^2}{5} + \frac{(4 - 4)^2}{4} + \frac{(5 - 3)^2}{3} \\
-  &= \frac{(-2)^2}{5} + 0 + \frac{2^2}{3} = \frac{4}{5} + \frac{4}{3} = 0.8 + 1.333 \approx 2.13
+  &\chi^2_B = \frac{(O_1 - E_1)^2}{E_1} + \frac{(O_2 - E_2)^2}{E_2} + \frac{(O_3 - E_3)^2}{E_3}\\
+  &\quad = \frac{(3 - 5)^2}{5} + \frac{(4 - 4)^2}{4} + \frac{(5 - 3)^2}{3}\\
+  &\quad = \frac{(-2)^2}{5} + 0 + \frac{2^2}{3} = \frac{4}{5} + \frac{4}{3} = 0.8 + 1.333 \approx 2.13
   \end{aligned}
   $$
 
@@ -310,9 +310,9 @@ Gọi $p$ là xác suất một người lựa chọn tên "Kiki" cho hình sắ
 Dưới $H_0$, số sinh viên chọn Kiki $X$ tuân theo phân phối nhị thức $\text{Binomial}(n = 80, p = 0.5)$:
 $$
 \begin{aligned}
-E(X) &= n p = 80 \times 0.5 = 40 \text{ người} \\
-\text{Var}(X) &= n p (1 - p) = 80 \times 0.5 \times 0.5 = 20 \\
-\text{SD}(X) &= \sqrt{20} \approx 4.472 \text{ người}
+&E(X) = n p = 80 \times 0.5 = 40 \text{ người}\\
+&\text{Var}(X) = n p (1 - p) = 80 \times 0.5 \times 0.5 = 20\\
+&\text{SD}(X) = \sqrt{20} \approx 4.472 \text{ người}
 \end{aligned}
 $$
 

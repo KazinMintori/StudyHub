@@ -105,13 +105,10 @@ Năng lượng nghỉ $E$ của vật có khối lượng nghỉ $m$ được ch
 
 $$
 \begin{aligned}
-E&=(9.11\times10^{-31}\,\mathrm{kg})
- (2.99792458\times10^8\,\mathrm{m/s})^2\\
-&=(9.11)(2.99792458)^2
- (10^{-31})(10^8)^2\,\mathrm{kg\,m^2/s^2}\\
-&=(81.87659678)
- 10^{-31+2\times8}\,\mathrm{kg\,m^2/s^2}\\
-&\approx8.187659678\times10^{-14}\,\mathrm{kg\,m^2/s^2}.
+&E =(9.11\times10^{-31}\,\mathrm{kg}) (2.99792458\times10^8\,\mathrm{m/s})^2\\
+&\quad =(9.11)(2.99792458)^2 (10^{-31})(10^8)^2\,\mathrm{kg\,m^2/s^2}\\
+&\quad =(81.87659678) 10^{-31+2\times8}\,\mathrm{kg\,m^2/s^2}\\
+&\quad \approx8.187659678\times10^{-14}\,\mathrm{kg\,m^2/s^2}.
 \end{aligned}
 $$
 

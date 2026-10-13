@@ -15,8 +15,8 @@ Với $f:\mathbb R^n\to\mathbb R$ và $D\subseteq\mathbb R^n$, xét min $f(x)$ t
 
 $$
 \begin{aligned}
-x^\star&\in D,\\
-f(y)&\ge f(x^\star),\quad\forall y\in D.
+&x^\star \in D,\\
+&f(y) \ge f(x^\star),\quad\forall y\in D.
 \end{aligned}
 $$
 
@@ -24,8 +24,8 @@ Phương án tối ưu địa phương chỉ yêu cầu so sánh với các đi�
 
 $$
 \begin{aligned}
-f_i(x)&\le0,\quad i=1,\ldots,m,\\
-h_j(x)&=0,\quad j=1,\ldots,p.
+&f_i(x) \le 0,\quad i=1,\ldots,m,\\
+&h_j(x) = 0,\quad j=1,\ldots,p.
 \end{aligned}
 $$
 
@@ -41,9 +41,8 @@ Với $1\le p<\infty$, chuẩn $p$ là
 
 $$
 \begin{aligned}
-\|x\|_p
-&=(|x_1|^p+\cdots+|x_n|^p)^{1/p}\\
-&=\left(\sum_{i=1}^{n}|x_i|^p\right)^{1/p}.
+&\|x\|_p = (|x_1|^p+\cdots+|x_n|^p)^{1/p}\\
+&\quad =\left(\sum_{i=1}^{n}|x_i|^p\right)^{1/p}.
 \end{aligned}
 $$
 
@@ -51,9 +50,9 @@ Ba trường hợp cần dùng là
 
 $$
 \begin{aligned}
-\|x\|_1&=|x_1|+\cdots+|x_n|,\\
-\|x\|_2&=\sqrt{x_1^2+\cdots+x_n^2},\\
-\|x\|_\infty&=\max\{|x_1|,\ldots,|x_n|\}.
+&\|x\|_1 = |x_1|+\cdots+|x_n|,\\
+&\|x\|_2 = \sqrt{x_1^2+\cdots+x_n^2},\\
+&\|x\|_\infty = \max\{|x_1|,\ldots,|x_n|\}.
 \end{aligned}
 $$
 
@@ -69,8 +68,8 @@ Với tâm $x$ và bán kính $r>0$, hình cầu mở và đóng là
 
 $$
 \begin{aligned}
-B(x,r)&=\{y:\|y-x\|<r\},\\
-\overline B(x,r)&=\{y:\|y-x\|\le r\}.
+&B(x,r) = \{y:\|y-x\|<r\},\\
+&\overline B(x,r) = \{y:\|y-x\|\le r\}.
 \end{aligned}
 $$
 
@@ -107,8 +106,8 @@ Một hàm vô hướng affine có dạng
 
 $$
 \begin{aligned}
-\ell(x)&=a_1x_1+\cdots+a_nx_n+b\\
-&=a^Tx+b.
+&\ell(x) = a_1x_1+\cdots+a_nx_n+b\\
+&\quad =a^Tx+b.
 \end{aligned}
 $$
 
@@ -120,7 +119,7 @@ Với $A$ đối xứng, dạng toàn phương là $Q(x)=x^TAx$. Trong ba chiề
 
 $$
 \begin{aligned}
-Q(x)&=a_{11}x_1^2+a_{22}x_2^2+a_{33}x_3^2\\
+&Q(x) = a_{11}x_1^2+a_{22}x_2^2+a_{33}x_3^2\\
 &\quad+2a_{12}x_1x_2+2a_{13}x_1x_3+2a_{23}x_2x_3.
 \end{aligned}
 $$
@@ -144,8 +143,8 @@ Nhờ chéo hóa trực giao, tồn tại $U$ trực giao và các trị riêng 
 
 $$
 \begin{aligned}
-x^TAx&=\lambda_1z_1^2+\cdots+\lambda_nz_n^2\\
-&=\sum_{i=1}^{n}\lambda_i z_i^2.
+&x^TAx = \lambda_1z_1^2+\cdots+\lambda_nz_n^2\\
+&\quad =\sum_{i=1}^{n}\lambda_i z_i^2.
 \end{aligned}
 $$
 

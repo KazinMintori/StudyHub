@@ -32,10 +32,10 @@ Nguồn điện thực hiện công không do lực điện trường lên đi�
 
 $$
 \begin{aligned}
-W_{\mathrm n}&=q\mathcal E,\\
-\Delta U&=qV_{ab},\\
-q\mathcal E&=qV_{ab},\\
-V_{ab}&=\mathcal E.
+&W_{\mathrm n} = q\mathcal E,\\
+&\Delta U = qV_{ab},\\
+&q\mathcal E = qV_{ab},\\
+&V_{ab} = \mathcal E.
 \end{aligned}
 \tag{25.13}
 $$
@@ -54,10 +54,10 @@ Với nguồn lý tưởng và điện trở ngoài Ohm:
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E,\\
-V_{ab}&=IR,\\
-\mathcal E&=IR,\\
-I&=\frac{\mathcal E}{R}.
+&V_{ab} = \mathcal E,\\
+&V_{ab} = IR,\\
+&\mathcal E = IR,\\
+&I = \frac{\mathcal E}{R}.
 \end{aligned}
 \tag{25.14}
 $$
@@ -85,9 +85,9 @@ Trong mạch ngoài, $V_{ab}=IR$. Ghép hai hệ thức cho nguồn đang cấp 
 
 $$
 \begin{aligned}
-\mathcal E-Ir&=IR,\\
-\mathcal E&=I(R+r),\\
-I&=\frac{\mathcal E}{R+r}.
+&\mathcal E-Ir = IR,\\
+&\mathcal E = I(R+r),\\
+&I = \frac{\mathcal E}{R+r}.
 \end{aligned}
 \tag{25.16}
 $$
@@ -151,10 +151,10 @@ Do đó:
 
 $$
 \begin{aligned}
-I&=0,\\
-V_{ab}&=\mathcal E-Ir\\
-&=12-0\\
-&=12\,\mathrm V.
+&I = 0,\\
+&V_{ab} = \mathcal E-Ir\\
+&\quad =12-0\\
+&\quad =12\,\mathrm V.
 \end{aligned}
 $$
 
@@ -180,12 +180,12 @@ Nối điện trở ngoài $R=4\,\Omega$ vào nguồn của ví dụ trước. T
 
 $$
 \begin{aligned}
-I&=\frac{\mathcal E}{R+r}\\
-&=\frac{12}{4+2}\\
-&=2.00\,\mathrm A,\\
-V_{ab}&=IR\\
-&=(2.00)(4)\\
-&=8.00\,\mathrm V.
+&I = \frac{\mathcal E}{R+r}\\
+&\quad =\frac{12}{4+2}\\
+&\quad =2.00\,\mathrm A,\\
+&V_{ab} = IR\\
+&\quad =(2.00)(4)\\
+&\quad =8.00\,\mathrm V.
 \end{aligned}
 $$
 
@@ -193,9 +193,9 @@ Kiểm tra trực tiếp ở nguồn:
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E-Ir\\
-&=12-(2.00)(2)\\
-&=8.00\,\mathrm V.
+&V_{ab} = \mathcal E-Ir\\
+&\quad =12-(2.00)(2)\\
+&\quad =8.00\,\mathrm V.
 \end{aligned}
 $$
 
@@ -257,13 +257,13 @@ Thay điện trở $4\,\Omega$ trong Ví dụ 25.5 bằng một dây dẫn có �
 
 $$
 \begin{aligned}
-V_{ab}&=IR\\
-&=I(0)\\
-&=0,\\
-0&=\mathcal E-Ir,\\
-I&=\frac{\mathcal E}{r}\\
-&=\frac{12}{2}\\
-&=6.00\,\mathrm A.
+&V_{ab} = IR\\
+&\quad =I(0)\\
+&\quad =0,\\
+&0 = \mathcal E-Ir,\\
+&I = \frac{\mathcal E}{r}\\
+&\quad =\frac{12}{2}\\
+&\quad =6.00\,\mathrm A.
 \end{aligned}
 $$
 
@@ -276,8 +276,8 @@ $$
 
 $$
 \begin{aligned}
-\mathcal E-Ir-IR&=0,\\
-\mathcal E&=I(r+R).
+&\mathcal E-Ir-IR = 0,\\
+&\mathcal E = I(r+R).
 \end{aligned}
 $$
 

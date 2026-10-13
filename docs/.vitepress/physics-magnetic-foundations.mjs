@@ -17,8 +17,8 @@ export const magneticWikiDetails={
 
 $$
 \begin{aligned}
-\vec F_B&=q\vec v\times\vec B,\\
-F_B&=|q|vB\sin\phi.
+&\vec F_B = q\vec v\times\vec B,\\
+&F_B = |q|vB\sin\phi.
 \end{aligned}
 $$
 
@@ -35,8 +35,8 @@ Vì vuông góc vận tốc, công suất tức thời của riêng lực từ b
 
 $$
 \begin{aligned}
-P_B&=\vec F_B\cdot\vec v=0,\\
-dW_B&=\vec F_B\cdot d\vec r=0.
+&P_B = \vec F_B\cdot\vec v=0,\\
+&dW_B = \vec F_B\cdot d\vec r=0.
 \end{aligned}
 $$
 
@@ -50,9 +50,9 @@ Trong các bản đồ nam châm, đường sức đi qua bên ngoài và tiếp
 
 $$
 \begin{aligned}
-d\Phi_B&=\vec B\cdot d\vec A\\
-&=B\cos\phi\,dA,\\
-\Phi_B&=\int\vec B\cdot d\vec A.
+&d\Phi_B = \vec B\cdot d\vec A\\
+&\quad =B\cos\phi\,dA,\\
+&\Phi_B = \int\vec B\cdot d\vec A.
 \end{aligned}
 $$
 
@@ -67,11 +67,11 @@ Thông lượng vào có dấu âm, thông lượng ra có dấu dương. Chúng
 
 $$
 \begin{aligned}
-|q|v_\perp B&=mv_\perp^2/R,\\
-R&=\frac{mv_\perp}{|q|B},\\
-\omega&=|q|B/m,\\
-T&=\frac{2\pi m}{|q|B},\\
-p&=v_\parallel T.
+&|q|v_\perp B = mv_\perp^2/R,\\
+&R = \frac{mv_\perp}{|q|B},\\
+&\omega = |q|B/m,\\
+&T = \frac{2\pi m}{|q|B},\\
+&p = v_\parallel T.
 \end{aligned}
 $$
 
@@ -89,9 +89,9 @@ Các hạt nhanh hơn hoặc chậm hơn có lực tổng khác không và bị 
 
 $$
 \begin{aligned}
-v&=E/B,\\
-R&=\frac{mv}{|q|B'},\\
-\frac m{|q|}&=\frac{BB'R}{E}.
+&v = E/B,\\
+&R = \frac{mv}{|q|B'},\\
+&\frac m{|q|} = \frac{BB'R}{E}.
 \end{aligned}
 $$
 
@@ -106,11 +106,11 @@ Khum ngón tay phải theo chiều dòng, ngón cái chỉ hướng vector diệ
 
 $$
 \begin{aligned}
-\vec\mu&=\vec\mu_1+\vec\mu_2+\cdots\\
+&\vec\mu = \vec\mu_1+\vec\mu_2+\cdots\\
 &\quad+\vec\mu_N,\\
-\vec\mu&=\sum_{j=1}^{N}\vec\mu_j,\\
-\vec\mu_j&=I\vec A,\\
-\vec\mu&=NI\vec A.
+&\vec\mu = \sum_{j=1}^{N}\vec\mu_j,\\
+&\vec\mu_j = I\vec A,\\
+&\vec\mu = NI\vec A.
 \end{aligned}
 $$
 
@@ -119,8 +119,8 @@ j chạy từ 1 đến N qua các vòng. Nếu hướng hoặc diện tích các
 
 $$
 \begin{aligned}
-\vec\tau&=\vec\mu\times\vec B,\\
-\tau&=\mu B\sin\phi.
+&\vec\tau = \vec\mu\times\vec B,\\
+&\tau = \mu B\sin\phi.
 \end{aligned}
 $$
 
@@ -137,8 +137,8 @@ Mô hình lưỡng cực giúp giải thích nam châm định hướng, lực h
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E+Ir,\\
-V_{ab}I&=\mathcal EI+I^2r.
+&V_{ab} = \mathcal E+Ir,\\
+&V_{ab}I = \mathcal EI+I^2r.
 \end{aligned}
 $$
 
@@ -149,10 +149,10 @@ Mômen động cơ còn phụ thuộc cách tạo từ trường. Với nam châ
 
 $$
 \begin{aligned}
-qE_z+qv_xB_y&=0,\\
-E_z&=-v_xB_y,\\
-J_x&=nqv_x,\\
-nq&=-\frac{J_xB_y}{E_z}.
+&qE_z+qv_xB_y = 0,\\
+&E_z = -v_xB_y,\\
+&J_x = nqv_x,\\
+&nq = -\frac{J_xB_y}{E_z}.
 \end{aligned}
 $$
 

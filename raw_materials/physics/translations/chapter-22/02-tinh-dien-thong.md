@@ -14,9 +14,9 @@ Gọi φ là góc giữa vận tốc và **pháp tuyến** của khung. Hai cạ
 
 $$
 \begin{aligned}
-A_\perp&=A\cos\varphi,\\
-\frac{dV}{dt}&=vA\cos\varphi\\
-&=v_\perp A.
+&A_\perp = A\cos\varphi,\\
+&\frac{dV}{dt} = vA\cos\varphi\\
+&\quad =v_\perp A.
 \end{aligned}
 $$
 
@@ -40,13 +40,12 @@ $$
 Ở đây φ là góc giữa trường và pháp tuyến đã chọn, không phải góc giữa trường và mặt phẳng. Các dạng tương đương là:
 
 $$
-\Phi_E=E_\perp A.
-\tag{22.2}
-$$
-
-$$
-\Phi_E=\vec E\cdot\vec A.
+\begin{aligned}
+    &\Phi_E=E_\perp A.
+\tag{22.2}\\
+    &\Phi_E=\vec E\cdot\vec A.
 \tag{22.3}
+\end{aligned}
 $$
 
 Diện tích lớn hơn có nhiều đường sức xuyên qua hơn. Với cùng diện tích và hướng, trường mạnh hơn cũng có nhiều đường sức hơn. Đây là cách hình dung điện thông, không phải phép đếm số đường sức có ý nghĩa tuyệt đối.
@@ -72,7 +71,7 @@ Với ba phần nhỏ để hình dung, tổng gần đúng là:
 
 $$
 \begin{aligned}
-\Phi_E&\approx E_{\perp1}\Delta A_1\\
+&\Phi_E \approx E_{\perp1}\Delta A_1\\
 &\quad+E_{\perp2}\Delta A_2\\
 &\quad+E_{\perp3}\Delta A_3.
 \end{aligned}
@@ -82,8 +81,8 @@ Chia ngày càng mịn rồi lấy giới hạn cho tích phân mặt:
 
 $$
 \begin{aligned}
-\Phi_E&=\int_A E_\perp\,dA\\
-&=\int_A\vec E\cdot d\vec A.
+&\Phi_E = \int_A E_\perp\,dA\\
+&\quad =\int_A\vec E\cdot d\vec A.
 \end{aligned}
 \tag{22.5}
 $$
@@ -105,11 +104,11 @@ Ba cách viết là cùng một đại lượng. Tùy hình học, một dạng 
 
 $$
 \begin{aligned}
-\Phi_{Ea}&=(2.0\times10^3)(0.0314)\cos30^\circ\\
-&\approx54\,\mathrm{N\,m^2/C},\\
-\Phi_{Eb}&=EA\cos90^\circ=0,\\
-\Phi_{Ec}&=EA\cos0^\circ\\
-&\approx63\,\mathrm{N\,m^2/C}.
+&\Phi_{Ea} = (2.0\times10^3)(0.0314)\cos30^\circ\\
+&\quad \approx54\,\mathrm{N\,m^2/C},\\
+&\Phi_{Eb} = EA\cos90^\circ=0,\\
+&\Phi_{Ec} = EA\cos0^\circ\\
+&\quad \approx63\,\mathrm{N\,m^2/C}.
 \end{aligned}
 $$
 
@@ -135,10 +134,10 @@ Một mặt lập phương tưởng tượng cạnh L nằm trong điện trư�
 
 $$
 \begin{aligned}
-\Phi_{E1}&=EL^2\cos180^\circ=-EL^2,\\
-\Phi_{E2}&=EL^2\cos0^\circ=+EL^2,\\
-\Phi_{E3}&=\Phi_{E4}=0,\\
-\Phi_{E5}&=\Phi_{E6}=0.
+&\Phi_{E1} = EL^2\cos180^\circ=-EL^2,\\
+&\Phi_{E2} = EL^2\cos0^\circ=+EL^2,\\
+&\Phi_{E3} = \Phi_{E4}=0,\\
+&\Phi_{E5} = \Phi_{E6}=0.
 \end{aligned}
 $$
 
@@ -146,12 +145,12 @@ $$
 
 $$
 \begin{aligned}
-\Phi_E&=\Phi_{E1}+\Phi_{E2}\\
+&\Phi_E = \Phi_{E1}+\Phi_{E2}\\
 &\quad+\Phi_{E3}+\Phi_{E4}\\
 &\quad+\Phi_{E5}+\Phi_{E6}\\
-&=(-EL^2+EL^2)\\
+&\quad =(-EL^2+EL^2)\\
 &\quad+(0+0)+(0+0)\\
-&=0.
+&\quad =0.
 \end{aligned}
 $$
 
@@ -159,11 +158,11 @@ $$
 
 $$
 \begin{aligned}
-\Phi_{E1}&=-EL^2\cos\theta,\\
-\Phi_{E2}&=+EL^2\cos\theta,\\
-\Phi_{E3}&=-EL^2\sin\theta,\\
-\Phi_{E4}&=+EL^2\sin\theta,\\
-\Phi_{E5}&=\Phi_{E6}=0.
+&\Phi_{E1} = -EL^2\cos\theta,\\
+&\Phi_{E2} = +EL^2\cos\theta,\\
+&\Phi_{E3} = -EL^2\sin\theta,\\
+&\Phi_{E4} = +EL^2\sin\theta,\\
+&\Phi_{E5} = \Phi_{E6}=0.
 \end{aligned}
 $$
 
@@ -183,10 +182,10 @@ Từng cặp triệt tiêu, nên tổng vẫn bằng không. Đây là kết qu�
 
 $$
 \begin{aligned}
-\Phi_E&=E\int_A dA\\
-&=\frac{q}{4\pi\varepsilon_0r^2}(4\pi r^2)\\
-&=\frac q{\varepsilon_0}\\
-&\approx3.4\times10^5\,\mathrm{N\,m^2/C}.
+&\Phi_E = E\int_A dA\\
+&\quad =\frac{q}{4\pi\varepsilon_0r^2}(4\pi r^2)\\
+&\quad =\frac q{\varepsilon_0}\\
+&\quad \approx3.4\times10^5\,\mathrm{N\,m^2/C}.
 \end{aligned}
 $$
 

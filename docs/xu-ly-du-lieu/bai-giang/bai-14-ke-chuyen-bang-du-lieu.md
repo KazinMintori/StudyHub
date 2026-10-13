@@ -106,8 +106,8 @@ Giá trị trung bình gộp của một tổng thể gồm $k$ nhóm thành ph�
 
 $$
 \begin{aligned}
-\bar{X}_{\text{gộp}} &= \sum_{i=1}^k w_i \bar{X}_i \\
-&= w_1 \bar{X}_1 + w_2 \bar{X}_2 + \dots + w_k \bar{X}_k
+&\bar{X}_{\text{gộp}} = \sum_{i=1}^k w_i \bar{X}_i\\
+&\quad = w_1 \bar{X}_1 + w_2 \bar{X}_2 + \dots + w_k \bar{X}_k
 \end{aligned}
 $$
 

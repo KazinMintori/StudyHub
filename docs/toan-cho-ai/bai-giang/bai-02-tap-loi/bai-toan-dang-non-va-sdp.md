@@ -17,9 +17,9 @@ Ta mở rộng bài toán lồi dạng chuẩn bằng cách cho phép hàm ràng
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x)\\
-\text{subject to}\quad & f_i(x) \preceq_{K_i} 0, \quad i = 1, \ldots, m,\\
-& Ax = b,
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \preceq_{K_i} 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } Ax = b,
 \end{aligned}
 $$
 
@@ -41,9 +41,9 @@ Khi $K = \mathbb{S}^k_+$, [nón các ma trận nửa xác định dương](../ba
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^Tx\\
-\text{subject to}\quad & x_1F_1 + \cdots + x_nF_n + G \preceq 0,\\
-& Ax = b,
+&\text{minimize}\quad c^Tx\\
+&\text{subject to}\quad x_1F_1 + \cdots + x_nF_n + G \preceq 0,\\
+&\phantom{\text{subject to}\quad } Ax = b,
 \end{aligned}
 $$
 

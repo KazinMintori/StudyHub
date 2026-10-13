@@ -18,8 +18,8 @@ Hình 27.17: Chuyển động của hạt trong từ trường. (a) Khi vận t�
 
 $$
 \begin{aligned}
-F&=|q|vB\\
-&=m\frac{v^2}{R}.
+&F = |q|vB\\
+&\quad =m\frac{v^2}{R}.
 \end{aligned}
 \tag{27.10}
 $$
@@ -87,9 +87,9 @@ Một magnetron trong lò vi sóng phát sóng điện từ có tần số $f=24
 
 $$
 \begin{aligned}
-\omega&=2\pi f\\
-&=2\pi\left(2450\times10^6\,\mathrm{s^{-1}}\right)\\
-&=1{,}54\times10^{10}\,\mathrm{s^{-1}}.
+&\omega = 2\pi f\\
+&\quad =2\pi\left(2450\times10^6\,\mathrm{s^{-1}}\right)\\
+&\quad =1{,}54\times10^{10}\,\mathrm{s^{-1}}.
 \end{aligned}
 $$
 
@@ -97,10 +97,10 @@ Từ phương trình (27.12), từ trường cần có độ lớn
 
 $$
 \begin{aligned}
-B&=\frac{m\omega}{|q|}\\
-&=\frac{(9{,}11)(1{,}54)}{1{,}60}\\
+&B = \frac{m\omega}{|q|}\\
+&\quad =\frac{(9{,}11)(1{,}54)}{1{,}60}\\
 &\quad\times10^{-2}\,\mathrm T\\
-&=0{,}0877\,\mathrm{T}.
+&\quad =0{,}0877\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -120,11 +120,10 @@ Một proton có điện tích $q=1{,}60\times10^{-19}\,\mathrm{C}$ và khối l
 
 $$
 \begin{aligned}
-\vec{F}
-&=q\,\vec{v}\times\vec{B}\\
-&=q\left(v_x\hat{\imath}+v_z\hat{k}\right)\times\left(B\hat{\imath}\right)\\
-&=qv_zB\hat{\jmath}\\
-&=1{,}60\times10^{-14}\,\hat{\jmath}\,\mathrm{N}.
+&\vec{F} = q\,\vec{v}\times\vec{B}\\
+&\quad =q\left(v_x\hat{\imath}+v_z\hat{k}\right)\times\left(B\hat{\imath}\right)\\
+&\quad =qv_zB\hat{\jmath}\\
+&\quad =1{,}60\times10^{-14}\,\hat{\jmath}\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -132,8 +131,8 @@ Gia tốc proton là
 
 $$
 \begin{aligned}
-\vec{a}&=\frac{\vec{F}}{m}\\
-&=9{,}58\times10^{12}\,\hat{\jmath}\,\mathrm{m/s^2}.
+&\vec{a} = \frac{\vec{F}}{m}\\
+&\quad =9{,}58\times10^{12}\,\hat{\jmath}\,\mathrm{m/s^2}.
 \end{aligned}
 $$
 
@@ -141,9 +140,9 @@ $$
 
 $$
 \begin{aligned}
-R&=\frac{mv_{\perp}}{|q|B}\\
-&=4{,}18\times10^{-3}\,\mathrm{m}\\
-&=4{,}18\,\mathrm{mm}.
+&R = \frac{mv_{\perp}}{|q|B}\\
+&\quad =4{,}18\times10^{-3}\,\mathrm{m}\\
+&\quad =4{,}18\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -151,10 +150,10 @@ Tốc độ góc và chu kì quay lần lượt là
 
 $$
 \begin{aligned}
-\omega&=\frac{|q|B}{m}\\
-&=4{,}79\times10^7\,\mathrm{rad/s},\\
-T&=\frac{2\pi}{\omega}\\
-&=1{,}31\times10^{-7}\,\mathrm{s}.
+&\omega = \frac{|q|B}{m}\\
+&\quad =4{,}79\times10^7\,\mathrm{rad/s},\\
+&T = \frac{2\pi}{\omega}\\
+&\quad =1{,}31\times10^{-7}\,\mathrm{s}.
 \end{aligned}
 $$
 
@@ -162,11 +161,11 @@ Trong một chu kì, proton tiến dọc trục $x$ một đoạn
 
 $$
 \begin{aligned}
-p&=v_xT\\
-&=(1{,}50)(1{,}31)\\
+&p = v_xT\\
+&\quad =(1{,}50)(1{,}31)\\
 &\quad\times10^{-2}\,\mathrm m\\
-&=0{,}0197\,\mathrm{m}\\
-&=19{,}7\,\mathrm{mm}.
+&\quad =0{,}0197\,\mathrm{m}\\
+&\quad =19{,}7\,\mathrm{mm}.
 \end{aligned}
 $$
 

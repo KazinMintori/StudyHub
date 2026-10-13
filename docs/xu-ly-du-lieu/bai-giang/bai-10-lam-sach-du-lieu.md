@@ -88,13 +88,11 @@ Tuyệt đối không được nhắm mắt gọi `drop_duplicates(subset=["ma_d
 Giá trị ngoại lai (Outlier) là các điểm dữ liệu nằm cách biệt bất thường so với phân phối chung. Phương pháp hàng rào Tukey dựa trên **Khoảng tứ phân vị (Interquartile Range - IQR)** là công cụ phi tham số mạnh mẽ vì không phụ thuộc vào giả định phân phối chuẩn:
 
 $$
-IQR = Q_3 - Q_1
-$$
-$$
-\text{Hàng rào dưới: } lo = Q_1 - 1.5 \times IQR
-$$
-$$
-\text{Hàng rào trên: } hi = Q_3 + 1.5 \times IQR
+\begin{aligned}
+    &IQR = Q_3 - Q_1\\
+    &\text{Hàng rào dưới: } lo = Q_1 - 1.5 \times IQR\\
+    &\text{Hàng rào trên: } hi = Q_3 + 1.5 \times IQR
+\end{aligned}
 $$
 
 ```python

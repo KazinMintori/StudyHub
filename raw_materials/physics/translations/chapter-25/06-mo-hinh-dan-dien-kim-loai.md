@@ -21,13 +21,12 @@ Tốc độ do chuyển động ngẫu nhiên cỡ $10^6$ m/s, còn tốc độ 
 Để nối mô hình với các đại lượng đo được, dùng định nghĩa điện trở suất và mật độ dòng điện:
 
 $$
-\rho=\frac EJ.
-\tag{25.21}
-$$
-
-$$
-\vec J=nq\vec v_d.
+\begin{aligned}
+    &\rho=\frac EJ.
+\tag{25.21}\\
+    &\vec J=nq\vec v_d.
 \tag{25.22}
+\end{aligned}
 $$
 
 n là số electron tự do trong một đơn vị thể tích và q = −e là điện tích mỗi electron.
@@ -60,9 +59,9 @@ Nếu có $n$ electron tự do trong một đơn vị thể tích, mật độ d
 
 $$
 \begin{aligned}
-\vec J&=nq\left(\frac{q\tau}{m}\vec E\right)\\
-&=\frac{nq^2\tau}{m}\vec E\\
-&=\frac{ne^2\tau}{m}\vec E.
+&\vec J = nq\left(\frac{q\tau}{m}\vec E\right)\\
+&\quad =\frac{nq^2\tau}{m}\vec E\\
+&\quad =\frac{ne^2\tau}{m}\vec E.
 \end{aligned}
 $$
 
@@ -103,11 +102,11 @@ $$
 
 $$
 \begin{aligned}
-e^2&=2{,}56\times10^{-38}\,\mathrm{C^2},\\
-ne^2&=2{,}176\times10^{-9}\,\mathrm{C^2/m^3},\\
-ne^2\rho&=3{,}74272\times10^{-17}\,\mathrm{kg/s},\\
-\tau&=\frac{9{,}11\times10^{-31}}{3{,}74272\times10^{-17}}\,\mathrm s\\
-&\approx2{,}4\times10^{-14}\,\mathrm s.
+&e^2 = 2{,}56\times10^{-38}\,\mathrm{C^2},\\
+&ne^2 = 2{,}176\times10^{-9}\,\mathrm{C^2/m^3},\\
+&ne^2\rho = 3{,}74272\times10^{-17}\,\mathrm{kg/s},\\
+&\tau = \frac{9{,}11\times10^{-31}}{3{,}74272\times10^{-17}}\,\mathrm s\\
+&\quad \approx2{,}4\times10^{-14}\,\mathrm s.
 \end{aligned}
 $$
 

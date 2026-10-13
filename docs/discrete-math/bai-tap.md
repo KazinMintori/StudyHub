@@ -28,17 +28,17 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
      Ta cần chứng minh mệnh đề đúng với $n = k + 1$, tức là:
      $$
      \begin{aligned}
-     1^2 + 2^2 + \dots + k^2 + (k+1)^2 &= \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6} \\
-     &= \frac{(k+1)(k+2)(2k+3)}{6}.
+     &1^2 + 2^2 + \dots + k^2 + (k+1)^2 = \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}\\
+     &\quad = \frac{(k+1)(k+2)(2k+3)}{6}.
      \end{aligned}
      $$
      Thật vậy:
      $$
      \begin{aligned}
-     \text{VT} &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
-     &= (k+1) \left[ \frac{k(2k+1) + 6(k+1)}{6} \right] \\
-     &= (k+1) \left[ \frac{2k^2 + 7k + 6}{6} \right] \\
-     &= \frac{(k+1)(k+2)(2k+3)}{6} = \text{VP}.
+     &\text{VT} = \frac{k(k+1)(2k+1)}{6} + (k+1)^2\\
+     &\quad = (k+1) \left[ \frac{k(2k+1) + 6(k+1)}{6} \right]\\
+     &\quad = (k+1) \left[ \frac{2k^2 + 7k + 6}{6} \right]\\
+     &\quad = \frac{(k+1)(k+2)(2k+3)}{6} = \text{VP}.
      \end{aligned}
      $$
      Theo nguyên lý quy nạp toán học, đẳng thức đúng với mọi $n \ge 1$.
@@ -49,8 +49,8 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
    - Với $n = k + 1$:
      $$
      \begin{aligned}
-     4^{k+1} - 1 &= 4 \cdot 4^k - 1 = 4(3m + 1) - 1 \\
-     &= 12m + 4 - 1 = 12m + 3 = 3(4m + 1),
+     &4^{k+1} - 1 = 4 \cdot 4^k - 1 = 4(3m + 1) - 1\\
+     &\quad = 12m + 4 - 1 = 12m + 3 = 3(4m + 1),
      \end{aligned}
      $$
      chia hết cho 3. Điều phải chứng minh.
@@ -74,11 +74,15 @@ $$a \, R \, b \iff a \equiv b \pmod 5 \quad (a - b \text{ chia hết cho } 5)$$
    Vậy $R$ là một quan hệ tương đương.
 
 2. Các lớp tương đương chính là các lớp đồng dư modulo 5:
-   $$[0] = \{\dots, -10, -5, 0, 5, 10, \dots\} = \{5k \mid k \in \mathbb{Z}\}$$
-   $$[1] = \{\dots, -9, -4, 1, 6, 11, \dots\} = \{5k + 1 \mid k \in \mathbb{Z}\}$$
-   $$[2] = \{\dots, -8, -3, 2, 7, 12, \dots\} = \{5k + 2 \mid k \in \mathbb{Z}\}$$
-   $$[3] = \{\dots, -7, -2, 3, 8, 13, \dots\} = \{5k + 3 \mid k \in \mathbb{Z}\}$$
-   $$[4] = \{\dots, -6, -1, 4, 9, 14, \dots\} = \{5k + 4 \mid k \in \mathbb{Z}\}$$
+   $$
+\begin{aligned}
+    &[0] = \{\dots, -10, -5, 0, 5, 10, \dots\} = \{5k \mid k \in \mathbb{Z}\}\\
+    &[1] = \{\dots, -9, -4, 1, 6, 11, \dots\} = \{5k + 1 \mid k \in \mathbb{Z}\}\\
+    &[2] = \{\dots, -8, -3, 2, 7, 12, \dots\} = \{5k + 2 \mid k \in \mathbb{Z}\}\\
+    &[3] = \{\dots, -7, -2, 3, 8, 13, \dots\} = \{5k + 3 \mid k \in \mathbb{Z}\}\\
+    &[4] = \{\dots, -6, -1, 4, 9, 14, \dots\} = \{5k + 4 \mid k \in \mathbb{Z}\}
+\end{aligned}
+$$
    Tập thương $\mathbb{Z}/R = \{[0], [1], [2], [3], [4]\}$.
 
 ---

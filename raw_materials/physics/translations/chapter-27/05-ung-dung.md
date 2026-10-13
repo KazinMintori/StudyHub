@@ -35,8 +35,8 @@ Trong ống thủy tinh được hút chân không cao, electron phát ra từ c
 
 $$
 \begin{aligned}
-\frac{1}{2}mv^2&=eV,\\
-v&=\sqrt{\frac{2eV}{m}}.
+&\frac{1}{2}mv^2 = eV,\\
+&v = \sqrt{\frac{2eV}{m}}.
 \end{aligned}
 \tag{27.14}
 $$
@@ -45,8 +45,8 @@ Electron đi giữa hai bản $P$ và $P'$, sau đó đập vào màn hình ph�
 
 $$
 \begin{aligned}
-\frac{E}{B}&=\sqrt{\frac{2eV}{m}},\\
-\frac{e}{m}&=\frac{E^2}{2VB^2}.
+&\frac{E}{B} = \sqrt{\frac{2eV}{m}},\\
+&\frac{e}{m} = \frac{E^2}{2VB^2}.
 \end{aligned}
 \tag{27.15}
 $$
@@ -57,7 +57,7 @@ Giá trị độ chính xác cao được nêu cho tỉ số điện tích trên
 
 $$
 \begin{aligned}
-\frac{e}{m}&=1{,}758820024(11)\\
+&\frac{e}{m} = 1{,}758820024(11)\\
 &\quad\times10^{11}\,\mathrm{C/kg}.
 \end{aligned}
 $$
@@ -99,10 +99,10 @@ Với $e/m=1{,}76\times10^{11}\,\mathrm{C/kg}$ và $V=150\,\mathrm{V}$, biểu t
 
 $$
 \begin{aligned}
-v&=\sqrt{2(e/m)V}\\
-&=\sqrt{5{,}28\times10^{13}\,\mathrm{m^2/s^2}}\\
-&=7{,}27\times10^6\,\mathrm{m/s}\\
-&=0{,}024c.
+&v = \sqrt{2(e/m)V}\\
+&\quad =\sqrt{5{,}28\times10^{13}\,\mathrm{m^2/s^2}}\\
+&\quad =7{,}27\times10^6\,\mathrm{m/s}\\
+&\quad =0{,}024c.
 \end{aligned}
 $$
 
@@ -110,10 +110,9 @@ $$
 
 $$
 \begin{aligned}
-B&=\frac{E}{v}\\
-&=\frac{6{,}0\times10^6\,\mathrm{N/C}}
-{7{,}27\times10^6\,\mathrm{m/s}}\\
-&=0{,}83\,\mathrm{T}.
+&B = \frac{E}{v}\\
+&\quad =\frac{6{,}0\times10^6\,\mathrm{N/C}}{7{,}27\times10^6\,\mathrm{m/s}}\\
+&\quad =0{,}83\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -135,9 +134,9 @@ Không khí thường chứa rất ít heli, vì vậy heli được phun gần 
 
 $$
 \begin{aligned}
-R&=\frac{10{,}16\,\mathrm{cm}}{2}\\
-&=5{,}08\,\mathrm{cm}\\
-&=5{,}08\times10^{-2}\,\mathrm{m}.
+&R = \frac{10{,}16\,\mathrm{cm}}{2}\\
+&\quad =5{,}08\,\mathrm{cm}\\
+&\quad =5{,}08\times10^{-2}\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -145,10 +144,9 @@ Thay các đại lượng vào tử số cho $mv=6{,}65\times10^{-22}\,\mathrm{k
 
 $$
 \begin{aligned}
-B'&=\frac{mv}{|q|R}\\
-&=\frac{6{,}65\times10^{-22}\,\mathrm{kg\,m/s}}
-{8{,}128\times10^{-21}\,\mathrm{C\,m}}\\
-&=0{,}0818\,\mathrm{T}.
+&B' = \frac{mv}{|q|R}\\
+&\quad =\frac{6{,}65\times10^{-22}\,\mathrm{kg\,m/s}}{8{,}128\times10^{-21}\,\mathrm{C\,m}}\\
+&\quad =0{,}0818\,\mathrm{T}.
 \end{aligned}
 $$
 

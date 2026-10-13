@@ -164,16 +164,16 @@ Giả sử ta khảo sát ngẫu nhiên $n = 10$ cử tri (lấy mẫu có hoàn
 - Biến cố cần tìm là $\{X > 2\}$. Sử dụng quy tắc biến cố đối:
 $$
 \begin{aligned}
-P(X > 2) &= 1 - P(X \le 2) \\
-&= 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
+&P(X > 2) = 1 - P(X \le 2)\\
+&\quad = 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
 \end{aligned}
 $$
 - Tính từng xác suất thành phần:
 $$
 \begin{aligned}
-P(X = 0) &= \binom{10}{0} (0{,}25)^0 (0{,}75)^{10} \approx 0{,}056314 \\
-P(X = 1) &= \binom{10}{1} (0{,}25)^1 (075)^9 \approx 0{,}187712 \\
-P(X = 2) &= \binom{10}{2} (0{,}25)^2 (0{,}75)^8 \approx 0{,}281568
+&P(X = 0) = \binom{10}{0} (0{,}25)^0 (0{,}75)^{10} \approx 0{,}056314\\
+&P(X = 1) = \binom{10}{1} (0{,}25)^1 (075)^9 \approx 0{,}187712\\
+&P(X = 2) = \binom{10}{2} (0{,}25)^2 (0{,}75)^8 \approx 0{,}281568
 \end{aligned}
 $$
 - Cộng dồn lại:
@@ -200,9 +200,9 @@ Hãy kiểm định xem: Nếu ban giám đốc thực sự chọn ngẫu nhiên
 - Mô hình hóa $X \sim \text{HG}(N = 1000, G = 500, n = 10)$:
 $$
 \begin{aligned}
-P(X = 0) &= \frac{\binom{500}{0} \times \binom{500}{10}}{\binom{1000}{10}} \\
-&= \frac{1 \times 245.778.230.575.800}{263.352.885.366.640.000} \\
-&\approx 0{,}000933 \quad (\text{khoảng } 9\text{ trên } 10.000)
+&P(X = 0) = \frac{\binom{500}{0} \times \binom{500}{10}}{\binom{1000}{10}}\\
+&\quad = \frac{1 \times 245.778.230.575.800}{263.352.885.366.640.000}\\
+&\quad \approx 0{,}000933 \quad (\text{khoảng } 9\text{ trên } 10.000)
 \end{aligned}
 $$
 Xác suất để điều này xảy ra do ngẫu nhiên thuần túy chưa đầy $0{,}1\%$. Đây là bằng chứng định lượng đanh thép trước tòa án bác bỏ lời ngụy biện của công ty.
@@ -394,10 +394,10 @@ Hàm CDF $F(x)$ là hàm bậc thang và chỉ xảy ra bước nhảy tại cá
 Khối lượng xác suất tại mỗi điểm chính là độ lớn bước nhảy:
 $$
 \begin{aligned}
-f(0) &= F(0) - \lim_{t \to 0^-} F(t) = 0{,}15 - 0 = 0{,}15 \\
-f(1) &= F(1) - \lim_{t \to 1^-} F(t) = 0{,}40 - 0{,}15 = 0{,}25 \\
-f(2) &= F(2) - \lim_{t \to 2^-} F(t) = 0{,}75 - 0{,}40 = 0{,}35 \\
-f(3) &= F(3) - \lim_{t \to 3^-} F(t) = 1{,}00 - 0{,}75 = 0{,}25
+&f(0) = F(0) - \lim_{t \to 0^-} F(t) = 0{,}15 - 0 = 0{,}15\\
+&f(1) = F(1) - \lim_{t \to 1^-} F(t) = 0{,}40 - 0{,}15 = 0{,}25\\
+&f(2) = F(2) - \lim_{t \to 2^-} F(t) = 0{,}75 - 0{,}40 = 0{,}35\\
+&f(3) = F(3) - \lim_{t \to 3^-} F(t) = 1{,}00 - 0{,}75 = 0{,}25
 \end{aligned}
 $$
 
@@ -459,10 +459,10 @@ Do đó, $X \sim \text{Bin}(n = 10, p = 0{,}20)$.
 Áp dụng quy tắc biến cố đối:
 $$
 \begin{aligned}
-P(X \ge 1) &= 1 - P(X = 0) \\
-&= 1 - \binom{10}{0} (0{,}20)^0 (0{,}80)^{10} \\
-&= 1 - (0{,}80)^{10} \\
-&\approx 1 - 0{,}107374 = 0{,}892626 \approx 89{,}26\%
+&P(X \ge 1) = 1 - P(X = 0)\\
+&\quad = 1 - \binom{10}{0} (0{,}20)^0 (0{,}80)^{10}\\
+&\quad = 1 - (0{,}80)^{10}\\
+&\quad \approx 1 - 0{,}107374 = 0{,}892626 \approx 89{,}26\%
 \end{aligned}
 $$
 
@@ -470,16 +470,16 @@ $$
 Ta cần tìm số nguyên dương $n$ nhỏ nhất thỏa mãn bất phương trình:
 $$
 \begin{aligned}
-1 - (0{,}80)^n &\ge 0{,}99 \\
-\iff (0{,}80)^n &\le 1 - 0{,}99 = 0{,}01
+&1 - (0{,}80)^n \ge 0{,}99\\
+&\iff (0{,}80)^n \le 1 - 0{,}99 = 0{,}01
 \end{aligned}
 $$
 Lấy logarit tự nhiên cả hai vế (lưu ý đổi chiều bất đẳng thức vì $\ln(0{,}80) < 0$):
 $$
 \begin{aligned}
-n \cdot \ln(0{,}80) &\le \ln(0{,}01) \\
-\iff n &\ge \frac{\ln(0{,}01)}{\ln(0{,}80)} \\
-&= \frac{-4{,}60517}{-0{,}22314} \approx 20{,}64
+&n \cdot \ln(0{,}80) \le \ln(0{,}01)\\
+&\iff n \ge \frac{\ln(0{,}01)}{\ln(0{,}80)}\\
+&\quad = \frac{-4{,}60517}{-0{,}22314} \approx 20{,}64
 \end{aligned}
 $$
 Vì $n$ phải là một số nguyên dương, ta làm tròn lên $n = 21$.
@@ -506,9 +506,9 @@ $$
 **Câu 2: Xác suất có đúng 3 khách hàng ($X = 3$)**:
 $$
 \begin{aligned}
-P(X = 3) &= e^{-3} \frac{3^3}{3!} \\
-&= e^{-3} \times \frac{27}{6} = 4{,}5 \times e^{-3} \\
-&\approx 4{,}5 \times 0{,}049787 = 0{,}224042 \approx 22{,}40\%
+&P(X = 3) = e^{-3} \frac{3^3}{3!}\\
+&\quad = e^{-3} \times \frac{27}{6} = 4{,}5 \times e^{-3}\\
+&\quad \approx 4{,}5 \times 0{,}049787 = 0{,}224042 \approx 22{,}40\%
 \end{aligned}
 $$
 
@@ -516,15 +516,15 @@ $$
 Sử dụng biến cố bù:
 $$
 \begin{aligned}
-P(X > 2) &= 1 - P(X \le 2) \\
-&= 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
+&P(X > 2) = 1 - P(X \le 2)\\
+&\quad = 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
 \end{aligned}
 $$
 Tính các thành phần còn lại:
 $$
 \begin{aligned}
-P(X = 1) &= e^{-3} \frac{3^1}{1!} = 3 \times e^{-3} \approx 0{,}149361 \\
-P(X = 2) &= e^{-3} \frac{3^2}{2!} = 4{,}5 \times e^{-3} \approx 0{,}224042
+&P(X = 1) = e^{-3} \frac{3^1}{1!} = 3 \times e^{-3} \approx 0{,}149361\\
+&P(X = 2) = e^{-3} \frac{3^2}{2!} = 4{,}5 \times e^{-3} \approx 0{,}224042
 \end{aligned}
 $$
 Tổng xác suất tích lũy đến 2 là:

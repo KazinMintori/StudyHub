@@ -155,8 +155,8 @@ flowchart TD
    - $C_3$ là tập lồi vì là một siêu phẳng (tập affine). Với mọi $x, y \in C_3$ và $\theta \in [0, 1]$, tổ hợp lồi thỏa mãn:
      $$
      \begin{aligned}
-     (\theta x_1 + (1-\theta)y_1) + (\theta x_2 + (1-\theta)y_2) &= \theta(x_1 + x_2) + (1-\theta)(y_1 + y_2) \\
-     &= \theta(1) + (1-\theta)(1) = 1.
+     &(\theta x_1 + (1-\theta)y_1) + (\theta x_2 + (1-\theta)y_2) = \theta(x_1 + x_2) + (1-\theta)(y_1 + y_2)\\
+     &\quad = \theta(1) + (1-\theta)(1) = 1.
      \end{aligned}
      $$
 
@@ -211,11 +211,11 @@ $$
 ::: solution
 1. **Thiết lập các đại lượng**:
    $$
-   X^TX = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{bmatrix} = \begin{bmatrix} 3 & 3 \\ 3 & 5 \end{bmatrix}.
-   $$
-   $$
-   X^Ty = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \\ 3 \end{bmatrix} = \begin{bmatrix} 4 \\ 7 \end{bmatrix}.
-   $$
+\begin{aligned}
+    &X^TX = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{bmatrix} = \begin{bmatrix} 3 & 3 \\ 3 & 5 \end{bmatrix}.\\
+    &X^Ty = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \\ 3 \end{bmatrix} = \begin{bmatrix} 4 \\ 7 \end{bmatrix}.
+\end{aligned}
+$$
 2. **Giải hệ phương trình chuẩn tắc**:
    Định thức $\det(X^TX) = 15 - 9 = 6 \ne 0$. Ma trận khả nghịch:
    $$
@@ -286,11 +286,11 @@ $$
 ::: solution
 1. **Tính đạo hàm và chứng minh lồi ngặt**:
    $$
-   L'(w) = 2 \cdot \frac{-e^{-w}}{1 + e^{-w}} = -\frac{2}{1 + e^w} < 0 \quad \forall w \in \mathbb{R}.
-   $$
-   $$
-   L''(w) = -2 \cdot \frac{-(e^w)}{(1 + e^w)^2} = \frac{2e^w}{(1 + e^w)^2} > 0 \quad \forall w \in \mathbb{R}.
-   $$
+\begin{aligned}
+    &L'(w) = 2 \cdot \frac{-e^{-w}}{1 + e^{-w}} = -\frac{2}{1 + e^w} < 0 \quad \forall w \in \mathbb{R}.\\
+    &L''(w) = -2 \cdot \frac{-(e^w)}{(1 + e^w)^2} = \frac{2e^w}{(1 + e^w)^2} > 0 \quad \forall w \in \mathbb{R}.
+\end{aligned}
+$$
    Vì $L''(w) > 0$ với mọi $w \in \mathbb{R}$, hàm mất mát $L(w)$ lồi ngặt (strictly convex) trên toàn trục số.
 2. **Giá trị tối ưu và sự vắng mặt của nghiệm**:
    Vì $L'(w) < 0$ khắp nơi, hàm số nghịch biến nghiêm ngặt. Khi $w \to +\infty$:
@@ -356,9 +356,9 @@ Mục tiêu là điều chỉnh công suất $p$ sao cho độ rọi thực tế
 1. **Thiết lập mô hình**:
    $$
    \begin{aligned}
-   \text{minimize}\quad & \|Ap - I_{\mathrm{des}}\|_2^2 \\
-   \text{subject to}\quad & 0 \le p_j \le p_{\max}, \quad j = 1, \dots, m, \\
-   & \sum_{j=1}^m p_j \le P_{\mathrm{total}}.
+   &\text{minimize}\quad \|Ap - I_{\mathrm{des}}\|_2^2\\
+   &\text{subject to}\quad 0 \le p_j \le p_{\max}, \quad j = 1, \dots, m,\\
+   &\phantom{\text{subject to}\quad } \sum_{j=1}^m p_j \le P_{\mathrm{total}}.
    \end{aligned}
    $$
 2. **Chứng nhận tính lồi**:

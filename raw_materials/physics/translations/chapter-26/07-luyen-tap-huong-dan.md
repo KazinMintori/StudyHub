@@ -28,9 +28,9 @@ Có ba điện trở $R_1=1{,}00\,\Omega$, $R_2=2{,}00\,\Omega$ và $R_3=4{,}00\
 
 $$
 \begin{aligned}
-R_{\mathrm{eq}}&=R_1+R_2+R_3\\
-&=1{,}00\,\Omega+2{,}00\,\Omega+4{,}00\,\Omega\\
-&=7{,}00\,\Omega.
+&R_{\mathrm{eq}} = R_1+R_2+R_3\\
+&\quad =1{,}00\,\Omega+2{,}00\,\Omega+4{,}00\,\Omega\\
+&\quad =7{,}00\,\Omega.
 \end{aligned}
 $$
 
@@ -38,12 +38,11 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{eq}}}
-&=\frac{1}{1{,}00\,\Omega}
+&\frac{1}{R_{\mathrm{eq}}} =\frac{1}{1{,}00\,\Omega}
 +\frac{1}{2{,}00\,\Omega}\\
 &\quad+\frac{1}{4{,}00\,\Omega}\\
-&=1{,}75\,\Omega^{-1},\\
-R_{\mathrm{eq}}&=0{,}571\,\Omega.
+&\quad =1{,}75\,\Omega^{-1},\\
+&R_{\mathrm{eq}} = 0{,}571\,\Omega.
 \end{aligned}
 $$
 
@@ -51,12 +50,11 @@ $$
 
 $$
 \begin{aligned}
-R_{23}&=\frac{R_2R_3}{R_2+R_3}\\
-&=\frac{(2{,}00\,\Omega)(4{,}00\,\Omega)}
-{2{,}00\,\Omega+4{,}00\,\Omega}\\
-&=1{,}33\,\Omega,\\
-R_{\mathrm{eq}}&=R_1+R_{23}\\
-&=2{,}33\,\Omega.
+&R_{23} = \frac{R_2R_3}{R_2+R_3}\\
+&\quad =\frac{(2{,}00\,\Omega)(4{,}00\,\Omega)}{2{,}00\,\Omega+4{,}00\,\Omega}\\
+&\quad =1{,}33\,\Omega,\\
+&R_{\mathrm{eq}} = R_1+R_{23}\\
+&\quad =2{,}33\,\Omega.
 \end{aligned}
 $$
 
@@ -64,11 +62,11 @@ $$
 
 $$
 \begin{aligned}
-R_{23}&=R_2+R_3\\
-&=6{,}00\,\Omega,\\
-R_{\mathrm{eq}}&=\frac{R_1R_{23}}{R_1+R_{23}}\\
-&=\frac{(1{,}00)(6{,}00)}{1{,}00+6{,}00}\,\Omega\\
-&=0{,}857\,\Omega.
+&R_{23} = R_2+R_3\\
+&\quad =6{,}00\,\Omega,\\
+&R_{\mathrm{eq}} = \frac{R_1R_{23}}{R_1+R_{23}}\\
+&\quad =\frac{(1{,}00)(6{,}00)}{1{,}00+6{,}00}\,\Omega\\
+&\quad =0{,}857\,\Omega.
 \end{aligned}
 $$
 
@@ -94,9 +92,9 @@ Có ba điện trở $R_1=4{,}00\,\Omega$, $R_2=5{,}00\,\Omega$ và $R_3=6{,}00\
 
 $$
 \begin{aligned}
-R_{23}&=R_2+R_3\\
-&=5{,}00\,\Omega+6{,}00\,\Omega\\
-&=11{,}00\,\Omega.
+&R_{23} = R_2+R_3\\
+&\quad =5{,}00\,\Omega+6{,}00\,\Omega\\
+&\quad =11{,}00\,\Omega.
 \end{aligned}
 $$
 
@@ -104,8 +102,8 @@ Dòng qua nhánh $R_1$:
 
 $$
 \begin{aligned}
-I_1&=\frac{24{,}0\,\mathrm V}{4{,}00\,\Omega}\\
-&=6{,}00\,\mathrm A.
+&I_1 = \frac{24{,}0\,\mathrm V}{4{,}00\,\Omega}\\
+&\quad =6{,}00\,\mathrm A.
 \end{aligned}
 $$
 
@@ -113,8 +111,8 @@ Dòng qua nhánh nối tiếp:
 
 $$
 \begin{aligned}
-I_{23}&=\frac{24{,}0\,\mathrm V}{11{,}00\,\Omega}\\
-&=2{,}18\,\mathrm A.
+&I_{23} = \frac{24{,}0\,\mathrm V}{11{,}00\,\Omega}\\
+&\quad =2{,}18\,\mathrm A.
 \end{aligned}
 $$
 
@@ -122,8 +120,8 @@ Do $R_2$, $R_3$ nối tiếp, cùng dòng $2{,}18\,\mathrm A$ chạy qua mỗi �
 
 $$
 \begin{aligned}
-I_{\mathrm{pin}}&=I_1+I_{23}\\
-&=8{,}18\,\mathrm A.
+&I_{\mathrm{pin}} = I_1+I_{23}\\
+&\quad =8{,}18\,\mathrm A.
 \end{aligned}
 $$
 
@@ -148,12 +146,12 @@ Có ba điện trở $R_1=7{,}00\,\Omega$, $R_2=8{,}00\,\Omega$ và $R_3=9{,}00\
 
 $$
 \begin{aligned}
-P_1&=\frac{(12{,}0\,\mathrm V)^2}{7{,}00\,\Omega}\\
-&=20{,}6\,\mathrm W,\\
-P_2&=\frac{(12{,}0\,\mathrm V)^2}{8{,}00\,\Omega}\\
-&=18{,}0\,\mathrm W,\\
-P_3&=\frac{(12{,}0\,\mathrm V)^2}{9{,}00\,\Omega}\\
-&=16{,}0\,\mathrm W.
+&P_1 = \frac{(12{,}0\,\mathrm V)^2}{7{,}00\,\Omega}\\
+&\quad =20{,}6\,\mathrm W,\\
+&P_2 = \frac{(12{,}0\,\mathrm V)^2}{8{,}00\,\Omega}\\
+&\quad =18{,}0\,\mathrm W,\\
+&P_3 = \frac{(12{,}0\,\mathrm V)^2}{9{,}00\,\Omega}\\
+&\quad =16{,}0\,\mathrm W.
 \end{aligned}
 $$
 
@@ -161,8 +159,8 @@ Do đó:
 
 $$
 \begin{aligned}
-P_{\mathrm{pin}}&=P_1+P_2+P_3\\
-&=54{,}6\,\mathrm W.
+&P_{\mathrm{pin}} = P_1+P_2+P_3\\
+&\quad =54{,}6\,\mathrm W.
 \end{aligned}
 $$
 
@@ -188,12 +186,11 @@ Có ba điện trở $R_1=5{,}00\,\Omega$, $R_2=6{,}00\,\Omega$ và $R_3=7{,}00\
 
 $$
 \begin{aligned}
-R_{23}&=\frac{R_2R_3}{R_2+R_3}\\
-&=\frac{(6{,}00\,\Omega)(7{,}00\,\Omega)}
-{6{,}00\,\Omega+7{,}00\,\Omega}\\
-&=\frac{42}{13}\,\Omega,\\
-R_{\mathrm{eq}}&=R_1+R_{23}\\
-&=\frac{107}{13}\,\Omega.
+&R_{23} = \frac{R_2R_3}{R_2+R_3}\\
+&\quad =\frac{(6{,}00\,\Omega)(7{,}00\,\Omega)}{6{,}00\,\Omega+7{,}00\,\Omega}\\
+&\quad =\frac{42}{13}\,\Omega,\\
+&R_{\mathrm{eq}} = R_1+R_{23}\\
+&\quad =\frac{107}{13}\,\Omega.
 \end{aligned}
 $$
 
@@ -201,9 +198,9 @@ Dòng qua pin và $R_1$:
 
 $$
 \begin{aligned}
-I&=\frac{9{,}00\,\mathrm V}{R_{\mathrm{eq}}}\\
-&=\frac{117}{107}\,\mathrm A\\
-&=1{,}09\,\mathrm A.
+&I = \frac{9{,}00\,\mathrm V}{R_{\mathrm{eq}}}\\
+&\quad =\frac{117}{107}\,\mathrm A\\
+&\quad =1{,}09\,\mathrm A.
 \end{aligned}
 $$
 
@@ -211,9 +208,9 @@ Công suất đầu ra của pin:
 
 $$
 \begin{aligned}
-P_{\mathrm{pin}}&=VI\\
-&=(9{,}00\,\mathrm V)\left(\frac{117}{107}\,\mathrm A\right)\\
-&=9{,}84\,\mathrm W.
+&P_{\mathrm{pin}} = VI\\
+&\quad =(9{,}00\,\mathrm V)\left(\frac{117}{107}\,\mathrm A\right)\\
+&\quad =9{,}84\,\mathrm W.
 \end{aligned}
 $$
 
@@ -221,9 +218,9 @@ Hiệu điện thế trên cặp song song:
 
 $$
 \begin{aligned}
-V_{23}&=I R_{23}\\
-&=\frac{378}{107}\,\mathrm V\\
-&=3{,}53\,\mathrm V.
+&V_{23} = I R_{23}\\
+&\quad =\frac{378}{107}\,\mathrm V\\
+&\quad =3{,}53\,\mathrm V.
 \end{aligned}
 $$
 
@@ -231,9 +228,9 @@ Công suất trên từng điện trở:
 
 $$
 \begin{aligned}
-P_1&=I^2R_1=5{,}98\,\mathrm W,\\
-P_2&=\frac{V_{23}^2}{R_2}=2{,}08\,\mathrm W,\\
-P_3&=\frac{V_{23}^2}{R_3}=1{,}78\,\mathrm W.
+&P_1 = I^2R_1=5{,}98\,\mathrm W,\\
+&P_2 = \frac{V_{23}^2}{R_2}=2{,}08\,\mathrm W,\\
+&P_3 = \frac{V_{23}^2}{R_3}=1{,}78\,\mathrm W.
 \end{aligned}
 $$
 
@@ -263,8 +260,8 @@ Trong mạch ở Hình 26.10a, đảo pin $4\,\mathrm V$ sao cho cực dương n
 
 $$
 \begin{aligned}
-\mathcal E_{\mathrm{tổng}}&=12\,\mathrm V+4\,\mathrm V\\
-&=16\,\mathrm V.
+&\mathcal E_{\mathrm{tổng}} = 12\,\mathrm V+4\,\mathrm V\\
+&\quad =16\,\mathrm V.
 \end{aligned}
 $$
 
@@ -272,9 +269,9 @@ Tổng điện trở của vòng:
 
 $$
 \begin{aligned}
-R_{\mathrm{tổng}}&=2+3+4+7\\
-&=2\,\Omega+3\,\Omega+4\,\Omega+7\,\Omega\\
-&=16\,\Omega.
+&R_{\mathrm{tổng}} = 2+3+4+7\\
+&\quad =2\,\Omega+3\,\Omega+4\,\Omega+7\,\Omega\\
+&\quad =16\,\Omega.
 \end{aligned}
 $$
 
@@ -282,8 +279,8 @@ Vì vậy dòng điện là:
 
 $$
 \begin{aligned}
-I&=\frac{\mathcal E_{\mathrm{tổng}}}{R_{\mathrm{tổng}}}\\
-&=1{,}00\,\mathrm A.
+&I = \frac{\mathcal E_{\mathrm{tổng}}}{R_{\mathrm{tổng}}}\\
+&\quad =1{,}00\,\mathrm A.
 \end{aligned}
 $$
 
@@ -291,9 +288,9 @@ $$
 
 $$
 \begin{aligned}
-V_{ab}&=12\,\mathrm V-(1{,}00\,\mathrm A)(2\,\Omega)\\
+&V_{ab} = 12\,\mathrm V-(1{,}00\,\mathrm A)(2\,\Omega)\\
 &\quad -(1{,}00\,\mathrm A)(3\,\Omega)\\
-&=7{,}00\,\mathrm V.
+&\quad =7{,}00\,\mathrm V.
 \end{aligned}
 $$
 
@@ -301,10 +298,10 @@ Dòng đi qua cả hai suất điện động từ cực âm đến cực dươn
 
 $$
 \begin{aligned}
-P_{12\,\mathrm V}&=(12\,\mathrm V)(1{,}00\,\mathrm A)\\
-&=12{,}0\,\mathrm W,\\
-P_{4\,\mathrm V}&=(4\,\mathrm V)(1{,}00\,\mathrm A)\\
-&=4{,}00\,\mathrm W.
+&P_{12\,\mathrm V} = (12\,\mathrm V)(1{,}00\,\mathrm A)\\
+&\quad =12{,}0\,\mathrm W,\\
+&P_{4\,\mathrm V} = (4\,\mathrm V)(1{,}00\,\mathrm A)\\
+&\quad =4{,}00\,\mathrm W.
 \end{aligned}
 $$
 
@@ -330,8 +327,8 @@ Hình 26.6a biểu diễn hai pin có suất điện động $\mathcal E_1$, $\m
 
 $$
 \begin{aligned}
-I_R&=I_1+I_2\\
-&=1{,}55\,\mathrm A.
+&I_R = I_1+I_2\\
+&\quad =1{,}55\,\mathrm A.
 \end{aligned}
 $$
 
@@ -339,9 +336,9 @@ $$
 
 $$
 \begin{aligned}
-V_{ab}&=I_RR\\
-&=(1{,}55\,\mathrm A)(5{,}00\,\Omega)\\
-&=7{,}75\,\mathrm V.
+&V_{ab} = I_RR\\
+&\quad =(1{,}55\,\mathrm A)(5{,}00\,\Omega)\\
+&\quad =7{,}75\,\mathrm V.
 \end{aligned}
 $$
 
@@ -349,21 +346,14 @@ Với pin thứ nhất và thứ hai, lần lượt:
 
 $$
 \begin{aligned}
-V_{ab}&=\mathcal E_1-I_1r_1,\\
-r_1&=\frac{\mathcal E_1-V_{ab}}{I_1}\\
-&=\frac{8{,}00\,\mathrm V-7{,}75\,\mathrm V}
-{0{,}200\,\mathrm A}\\
-&=1{,}25\,\Omega,
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-V_{ab}&=\mathcal E_2-I_2r_2,\\
-r_2&=\frac{\mathcal E_2-V_{ab}}{I_2}\\
-&=\frac{9{,}00\,\mathrm V-7{,}75\,\mathrm V}
-{1{,}35\,\mathrm A}\\
-&=0{,}926\,\Omega.
+    &V_{ab} = \mathcal E_1-I_1r_1,\\
+    &r_1 = \frac{\mathcal E_1-V_{ab}}{I_1}\\
+    &\quad =\frac{8{,}00\,\mathrm V-7{,}75\,\mathrm V}{0{,}200\,\mathrm A}\\
+    &\quad =1{,}25\,\Omega,\\
+    &V_{ab} = \mathcal E_2-I_2r_2,\\
+    &r_2 = \frac{\mathcal E_2-V_{ab}}{I_2}\\
+    &\quad =\frac{9{,}00\,\mathrm V-7{,}75\,\mathrm V}{1{,}35\,\mathrm A}\\
+    &\quad =0{,}926\,\Omega.
 \end{aligned}
 $$
 
@@ -389,22 +379,12 @@ Trong mạch ở Hình 26.12, thay điện trở $2\,\Omega$ giữa hai điểm 
 
 $$
 \begin{aligned}
-&13\,\mathrm V-I_1(1\,\Omega)\\
--(I_1-I_3)(1\,\Omega)&=0,
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-&-I_2(1\,\Omega)\\
--(I_2+I_3)(3\,\Omega)+13\,\mathrm V&=0,
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-&-I_1(1\,\Omega)-I_3(1\,\Omega)\\
-+I_2(1\,\Omega)&=0.
+    &13\,\mathrm V-I_1(1\,\Omega)\\
+    &-(I_1-I_3)(1\,\Omega) = 0,\\
+    &\quad -I_2(1\,\Omega)\\
+    &-(I_2+I_3)(3\,\Omega)+13\,\mathrm V = 0,\\
+    &\quad -I_1(1\,\Omega)-I_3(1\,\Omega)\\
+    &+I_2(1\,\Omega) = 0.
 \end{aligned}
 $$
 
@@ -412,8 +392,8 @@ Từ vòng giữa, $I_2=I_1+I_3$. Hai phương trình còn lại rút gọn thà
 
 $$
 \begin{aligned}
-13\,\mathrm V&=I_1(2\,\Omega)-I_3(1\,\Omega),\\
-13\,\mathrm V&=I_1(4\,\Omega)+I_3(7\,\Omega).
+&13\,\mathrm V = I_1(2\,\Omega)-I_3(1\,\Omega),\\
+&13\,\mathrm V = I_1(4\,\Omega)+I_3(7\,\Omega).
 \end{aligned}
 $$
 
@@ -421,9 +401,9 @@ Giải hệ:
 
 $$
 \begin{aligned}
-I_1&=\frac{52}{9}\,\mathrm A=5{,}78\,\mathrm A,\\
-I_2&=\frac{13}{3}\,\mathrm A=4{,}33\,\mathrm A,\\
-I_3&=-\frac{13}{9}\,\mathrm A=-1{,}44\,\mathrm A.
+&I_1 = \frac{52}{9}\,\mathrm A=5{,}78\,\mathrm A,\\
+&I_2 = \frac{13}{3}\,\mathrm A=4{,}33\,\mathrm A,\\
+&I_3 = -\frac{13}{9}\,\mathrm A=-1{,}44\,\mathrm A.
 \end{aligned}
 $$
 
@@ -431,11 +411,11 @@ Dấu âm cho biết dòng giữa thực chạy từ $b$ đến $a$. Năm dòng 
 
 $$
 \begin{aligned}
-I_{ca}&=I_1=\frac{52}{9}\,\mathrm A,\\
-I_{cb}&=I_2=\frac{13}{3}\,\mathrm A,\\
-I_{ab}&=I_3=-\frac{13}{9}\,\mathrm A,\\
-I_{ad}&=I_1-I_3=\frac{65}{9}\,\mathrm A,\\
-I_{bd}&=I_2+I_3=\frac{26}{9}\,\mathrm A.
+&I_{ca} = I_1=\frac{52}{9}\,\mathrm A,\\
+&I_{cb} = I_2=\frac{13}{3}\,\mathrm A,\\
+&I_{ab} = I_3=-\frac{13}{9}\,\mathrm A,\\
+&I_{ad} = I_1-I_3=\frac{65}{9}\,\mathrm A,\\
+&I_{bd} = I_2+I_3=\frac{26}{9}\,\mathrm A.
 \end{aligned}
 $$
 
@@ -443,11 +423,11 @@ Suy ra công suất tỏa nhiệt:
 
 $$
 \begin{aligned}
-P_{ca}&=I_{ca}^2(1\,\Omega)=33{,}4\,\mathrm W,\\
-P_{cb}&=I_{cb}^2(1\,\Omega)=18{,}8\,\mathrm W,\\
-P_{ab}&=I_{ab}^2(1\,\Omega)=2{,}09\,\mathrm W,\\
-P_{ad}&=I_{ad}^2(1\,\Omega)=52{,}2\,\mathrm W,\\
-P_{bd}&=I_{bd}^2(3\,\Omega)=25{,}0\,\mathrm W.
+&P_{ca} = I_{ca}^2(1\,\Omega)=33{,}4\,\mathrm W,\\
+&P_{cb} = I_{cb}^2(1\,\Omega)=18{,}8\,\mathrm W,\\
+&P_{ab} = I_{ab}^2(1\,\Omega)=2{,}09\,\mathrm W,\\
+&P_{ad} = I_{ad}^2(1\,\Omega)=52{,}2\,\mathrm W,\\
+&P_{bd} = I_{bd}^2(3\,\Omega)=25{,}0\,\mathrm W.
 \end{aligned}
 $$
 
@@ -473,9 +453,9 @@ Trong mạch ở Hình 26.9a, cho $r_1=r_2=0$ (điện trở trong rất nhỏ) 
 
 $$
 \begin{aligned}
-I_1&=\frac{V-\mathcal E_1}{R},\\
-I_2&=\frac{V-\mathcal E_2}{R},\\
-I_3&=\frac{0-V}{R}.
+&I_1 = \frac{V-\mathcal E_1}{R},\\
+&I_2 = \frac{V-\mathcal E_2}{R},\\
+&I_3 = \frac{0-V}{R}.
 \end{aligned}
 $$
 
@@ -483,8 +463,8 @@ Tại nút trên, $I_3=I_1+I_2$. Thay các biểu thức trên:
 
 $$
 \begin{aligned}
--V&=(V-\mathcal E_1)+(V-\mathcal E_2),\\
-V&=\frac{\mathcal E_1+\mathcal E_2}{3}.
+&-V = (V-\mathcal E_1)+(V-\mathcal E_2),\\
+&V = \frac{\mathcal E_1+\mathcal E_2}{3}.
 \end{aligned}
 $$
 
@@ -492,9 +472,9 @@ Do đó:
 
 $$
 \begin{aligned}
-I_1&=\frac{\mathcal E_2-2\mathcal E_1}{3R},\\
-I_2&=\frac{\mathcal E_1-2\mathcal E_2}{3R},\\
-I_3&=-\frac{\mathcal E_1+\mathcal E_2}{3R}.
+&I_1 = \frac{\mathcal E_2-2\mathcal E_1}{3R},\\
+&I_2 = \frac{\mathcal E_1-2\mathcal E_2}{3R},\\
+&I_3 = -\frac{\mathcal E_1+\mathcal E_2}{3R}.
 \end{aligned}
 $$
 
@@ -522,12 +502,12 @@ Nối điện trở $10{,}0\,\mathrm{M}\Omega$, tụ điện $3{,}20\,\mu\mathrm
 
 $$
 \begin{aligned}
-Q_f&=(3{,}20\,\mu\mathrm F)(9{,}00\,\mathrm V)\\
-&=28{,}8\,\mu\mathrm C,\\
-I_0&=\frac{9{,}00\,\mathrm V}{10{,}0\,\mathrm{M}\Omega}\\
-&=0{,}900\,\mu\mathrm A,\\
-\tau&=(10{,}0\,\mathrm{M}\Omega)(3{,}20\,\mu\mathrm F)\\
-&=32{,}0\,\mathrm s.
+&Q_f = (3{,}20\,\mu\mathrm F)(9{,}00\,\mathrm V)\\
+&\quad =28{,}8\,\mu\mathrm C,\\
+&I_0 = \frac{9{,}00\,\mathrm V}{10{,}0\,\mathrm{M}\Omega}\\
+&\quad =0{,}900\,\mu\mathrm A,\\
+&\tau = (10{,}0\,\mathrm{M}\Omega)(3{,}20\,\mu\mathrm F)\\
+&\quad =32{,}0\,\mathrm s.
 \end{aligned}
 $$
 
@@ -535,10 +515,10 @@ Tại $18{,}0\,\mathrm s$:
 
 $$
 \begin{aligned}
-\frac{q}{Q_f}&=1-e^{-18{,}0/32{,}0}\\
-&=0{,}430,\\
-\frac{i}{I_0}&=e^{-18{,}0/32{,}0}\\
-&=0{,}570.
+&\frac{q}{Q_f} = 1-e^{-18{,}0/32{,}0}\\
+&\quad =0{,}430,\\
+&\frac{i}{I_0} = e^{-18{,}0/32{,}0}\\
+&\quad =0{,}570.
 \end{aligned}
 $$
 
@@ -562,8 +542,8 @@ Tụ điện $2{,}20\,\mu\mathrm F$ ban đầu mang điện tích $4{,}20\,\mu\m
 
 $$
 \begin{aligned}
-\tau&=(4{,}00\,\mathrm{M}\Omega)(2{,}20\,\mu\mathrm F)\\
-&=8{,}80\,\mathrm s.
+&\tau = (4{,}00\,\mathrm{M}\Omega)(2{,}20\,\mu\mathrm F)\\
+&\quad =8{,}80\,\mathrm s.
 \end{aligned}
 $$
 
@@ -571,9 +551,9 @@ Từ phương trình phóng điện:
 
 $$
 \begin{aligned}
-t&=\tau\ln\left(\frac{Q_0}{q}\right)\\
-&=(8{,}80\,\mathrm s)\ln\left(\frac{4{,}20}{1{,}20}\right)\\
-&=11{,}0\,\mathrm s.
+&t = \tau\ln\left(\frac{Q_0}{q}\right)\\
+&\quad =(8{,}80\,\mathrm s)\ln\left(\frac{4{,}20}{1{,}20}\right)\\
+&\quad =11{,}0\,\mathrm s.
 \end{aligned}
 $$
 
@@ -581,9 +561,9 @@ Dòng điện khi điện tích còn $1{,}20\,\mu\mathrm C$:
 
 $$
 \begin{aligned}
-|i|&=\frac{q}{\tau}\\
-&=\frac{1{,}20\,\mu\mathrm C}{8{,}80\,\mathrm s}\\
-&=0{,}136\,\mu\mathrm A.
+&|i| = \frac{q}{\tau}\\
+&\quad =\frac{1{,}20\,\mu\mathrm C}{8{,}80\,\mathrm s}\\
+&\quad =0{,}136\,\mu\mathrm A.
 \end{aligned}
 $$
 
@@ -607,8 +587,8 @@ Nối một điện trở chưa biết nối tiếp với tụ điện $8{,}00\,
 
 $$
 \begin{aligned}
-\tau&=\frac{17{,}0\,\mathrm s}{\ln(5{,}50/1{,}10)}\\
-&=10{,}6\,\mathrm s.
+&\tau = \frac{17{,}0\,\mathrm s}{\ln(5{,}50/1{,}10)}\\
+&\quad =10{,}6\,\mathrm s.
 \end{aligned}
 $$
 
@@ -616,9 +596,9 @@ $$
 
 $$
 \begin{aligned}
-R&=\frac{\tau}{C}\\
-&=\frac{10{,}6\,\mathrm s}{8{,}00\,\mu\mathrm F}\\
-&=1{,}32\,\mathrm{M}\Omega.
+&R = \frac{\tau}{C}\\
+&\quad =\frac{10{,}6\,\mathrm s}{8{,}00\,\mu\mathrm F}\\
+&\quad =1{,}32\,\mathrm{M}\Omega.
 \end{aligned}
 $$
 
@@ -626,10 +606,10 @@ Dòng ban đầu và dòng tại $17{,}0\,\mathrm s$:
 
 $$
 \begin{aligned}
-|i_0|&=\frac{5{,}50\,\mu\mathrm C}{10{,}6\,\mathrm s}\\
-&=0{,}521\,\mu\mathrm A,\\
-|i(17{,}0\,\mathrm s)|&=\frac{1{,}10\,\mu\mathrm C}{10{,}6\,\mathrm s}\\
-&=0{,}104\,\mu\mathrm A.
+&|i_0| = \frac{5{,}50\,\mu\mathrm C}{10{,}6\,\mathrm s}\\
+&\quad =0{,}521\,\mu\mathrm A,\\
+&|i(17{,}0\,\mathrm s)| = \frac{1{,}10\,\mu\mathrm C}{10{,}6\,\mathrm s}\\
+&\quad =0{,}104\,\mu\mathrm A.
 \end{aligned}
 $$
 
@@ -653,10 +633,10 @@ Nối tụ điện $6{,}40\,\mu\mathrm F$ chưa tích điện nối tiếp với
 
 $$
 \begin{aligned}
-\tau_1&=(5{,}00\,\mathrm{M}\Omega)(6{,}40\,\mu\mathrm F)\\
-&=32{,}0\,\mathrm s,\\
-Q_f&=(6{,}40\,\mu\mathrm F)(12{,}0\,\mathrm V)\\
-&=76{,}8\,\mu\mathrm C.
+&\tau_1 = (5{,}00\,\mathrm{M}\Omega)(6{,}40\,\mu\mathrm F)\\
+&\quad =32{,}0\,\mathrm s,\\
+&Q_f = (6{,}40\,\mu\mathrm F)(12{,}0\,\mathrm V)\\
+&\quad =76{,}8\,\mu\mathrm C.
 \end{aligned}
 $$
 
@@ -664,8 +644,8 @@ Sau $51{,}0\,\mathrm s$:
 
 $$
 \begin{aligned}
-q_1&=Q_f\left(1-e^{-51{,}0/\tau_1}\right)\\
-&=61{,}2\,\mu\mathrm C.
+&q_1 = Q_f\left(1-e^{-51{,}0/\tau_1}\right)\\
+&\quad =61{,}2\,\mu\mathrm C.
 \end{aligned}
 $$
 
@@ -673,10 +653,10 @@ Khi phóng điện qua điện trở thứ hai:
 
 $$
 \begin{aligned}
-\tau_2&=(6{,}00\,\mathrm{M}\Omega)(6{,}40\,\mu\mathrm F)\\
-&=38{,}4\,\mathrm s,\\
-q_2&=q_1e^{-70{,}0/\tau_2}\\
-&=9{,}89\,\mu\mathrm C.
+&\tau_2 = (6{,}00\,\mathrm{M}\Omega)(6{,}40\,\mu\mathrm F)\\
+&\quad =38{,}4\,\mathrm s,\\
+&q_2 = q_1e^{-70{,}0/\tau_2}\\
+&\quad =9{,}89\,\mu\mathrm C.
 \end{aligned}
 $$
 
@@ -716,11 +696,10 @@ Hai tụ mắc nối tiếp có thể thay bằng điện dung tương đương 
 
 $$
 \begin{aligned}
-\frac{1}{C_{\mathrm{eq}}}
-&=\frac{1}{2{,}40\,\mu\mathrm F}
+&\frac{1}{C_{\mathrm{eq}}} =\frac{1}{2{,}40\,\mu\mathrm F}
 +\frac{1}{3{,}60\,\mu\mathrm F}\\
-&=\frac{1}{1{,}44\,\mu\mathrm F},\\
-C_{\mathrm{eq}}&=1{,}44\,\mu\mathrm F.
+&\quad =\frac{1}{1{,}44\,\mu\mathrm F},\\
+&C_{\mathrm{eq}} = 1{,}44\,\mu\mathrm F.
 \end{aligned}
 $$
 
@@ -728,10 +707,9 @@ Năng lượng tổng cộng của hai tụ:
 
 $$
 \begin{aligned}
-U_0&=\frac{Q_0^2}{2C_{\mathrm{eq}}}\\
-&=\frac{(5{,}20\,\mu\mathrm C)^2}
-{2(1{,}44\,\mu\mathrm F)}\\
-&=9{,}39\,\mu\mathrm J.
+&U_0 = \frac{Q_0^2}{2C_{\mathrm{eq}}}\\
+&\quad =\frac{(5{,}20\,\mu\mathrm C)^2}{2(1{,}44\,\mu\mathrm F)}\\
+&\quad =9{,}39\,\mu\mathrm J.
 \end{aligned}
 $$
 
@@ -739,10 +717,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{eq}}}
-&=\frac{1}{655\,\Omega}
+&\frac{1}{R_{\mathrm{eq}}} =\frac{1}{655\,\Omega}
 +\frac{1}{4{,}58\times10^4\,\Omega},\\
-R_{\mathrm{eq}}&=645{,}8\,\Omega.
+&R_{\mathrm{eq}} = 645{,}8\,\Omega.
 \end{aligned}
 $$
 
@@ -750,9 +727,9 @@ Ban đầu, hiệu điện thế hai đầu tổ hợp tụ là:
 
 $$
 \begin{aligned}
-V_0&=\frac{Q_0}{C_{\mathrm{eq}}}\\
-&=\frac{5{,}20\,\mu\mathrm C}{1{,}44\,\mu\mathrm F}\\
-&=3{,}611\,\mathrm V.
+&V_0 = \frac{Q_0}{C_{\mathrm{eq}}}\\
+&\quad =\frac{5{,}20\,\mu\mathrm C}{1{,}44\,\mu\mathrm F}\\
+&\quad =3{,}611\,\mathrm V.
 \end{aligned}
 $$
 
@@ -760,9 +737,8 @@ Năng lượng giảm với tốc độ bằng âm công suất tỏa nhiệt tr
 
 $$
 \begin{aligned}
-\left.\frac{dU}{dt}\right|_{t=0}
-&=-\frac{V_0^2}{R_{\mathrm{eq}}}\\
-&=-20{,}2\,\mathrm{mW}.
+&\left.\frac{dU}{dt}\right|_{t=0} = -\frac{V_0^2}{R_{\mathrm{eq}}}\\
+&\quad =-20{,}2\,\mathrm{mW}.
 \end{aligned}
 $$
 
@@ -772,12 +748,12 @@ Dấu âm cho biết năng lượng dự trữ của tụ đang giảm.
 
 $$
 \begin{aligned}
-\tau&=R_{\mathrm{eq}}C_{\mathrm{eq}}\\
-&=(645{,}8\,\Omega)(1{,}44\,\mu\mathrm F)\\
-&=0{,}9299\,\mathrm{ms},\\
-U(t)&=\frac{U_0}{e},\\
-t&=\frac{\tau}{2}\\
-&=0{,}465\,\mathrm{ms}.
+&\tau = R_{\mathrm{eq}}C_{\mathrm{eq}}\\
+&\quad =(645{,}8\,\Omega)(1{,}44\,\mu\mathrm F)\\
+&\quad =0{,}9299\,\mathrm{ms},\\
+&U(t) = \frac{U_0}{e},\\
+&t = \frac{\tau}{2}\\
+&\quad =0{,}465\,\mathrm{ms}.
 \end{aligned}
 $$
 
@@ -785,9 +761,8 @@ $$
 
 $$
 \begin{aligned}
-\left.\frac{dU}{dt}\right|_{t=\tau/2}
-&=-\frac{V_0^2}{eR_{\mathrm{eq}}}\\
-&=-7{,}43\,\mathrm{mW}.
+&\left.\frac{dU}{dt}\right|_{t=\tau/2} = -\frac{V_0^2}{eR_{\mathrm{eq}}}\\
+&\quad =-7{,}43\,\mathrm{mW}.
 \end{aligned}
 $$
 
@@ -797,10 +772,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{dU}{dt}
-&=\frac{Q}{C_{\mathrm{eq}}}\frac{dQ}{dt}\\
-&=-\frac{Q^2}{C_{\mathrm{eq}}\tau}\\
-&=-\frac{2U}{\tau}.
+&\frac{dU}{dt} = \frac{Q}{C_{\mathrm{eq}}}\frac{dQ}{dt}\\
+&\quad =-\frac{Q^2}{C_{\mathrm{eq}}\tau}\\
+&\quad =-\frac{2U}{\tau}.
 \end{aligned}
 $$
 
@@ -808,9 +782,8 @@ Tại $t=\tau/2$, $U=U_0/e$, nên:
 
 $$
 \begin{aligned}
-\frac{dU}{dt}
-&=-\frac{2U_0}{e\tau}\\
-&=-7{,}43\,\mathrm{mW},
+&\frac{dU}{dt} = -\frac{2U_0}{e\tau}\\
+&\quad =-7{,}43\,\mathrm{mW},
 \end{aligned}
 $$
 

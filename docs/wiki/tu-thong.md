@@ -17,9 +17,9 @@ Vector diện tích của phần tử mặt có độ lớn dA và hướng phá
 
 $$
 \begin{aligned}
-d\Phi_B&=\vec B\cdot d\vec A\\
-&=B\cos\phi\,dA,\\
-\Phi_B&=\int\vec B\cdot d\vec A.
+&d\Phi_B = \vec B\cdot d\vec A\\
+&\quad =B\cos\phi\,dA,\\
+&\Phi_B = \int\vec B\cdot d\vec A.
 \end{aligned}
 $$
 

@@ -21,8 +21,8 @@ Nếu muốn đại lượng giảm còn một phần f, với 0 < f < 1:
 
 $$
 \begin{aligned}
-f&=e^{-t/\tau},\\
-t&=-\tau\ln f.
+&f = e^{-t/\tau},\\
+&t = -\tau\ln f.
 \end{aligned}
 $$
 

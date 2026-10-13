@@ -21,10 +21,10 @@ Một số máy bay dùng dây nhôm thay dây đồng để giảm khối lư�
 
 $$
 \begin{aligned}
-E&=V/L=0.0414\,\mathrm{V/m},\\
-R&=V/I=1.21\,\Omega,\\
-A&=\rho L/R\\
-&=7.97\times10^{-7}\,\mathrm{m^2}.
+&E = V/L=0.0414\,\mathrm{V/m},\\
+&R = V/I=1.21\,\Omega,\\
+&A = \rho L/R\\
+&\quad =7.97\times10^{-7}\,\mathrm{m^2}.
 \end{aligned}
 $$
 :::
@@ -44,10 +44,10 @@ Dây dài 20,0 m có tiết diện $8.19\times10^{-7}\,\mathrm{m^2}$. Khi dòng 
 
 $$
 \begin{aligned}
-V&=EL=0.130\,\mathrm V,\\
-R&=EL/I=0.596\,\Omega,\\
-\rho&=RA/L\\
-&=2.44\times10^{-8}\,\Omega\,\mathrm m.
+&V = EL=0.130\,\mathrm V,\\
+&R = EL/I=0.596\,\Omega,\\
+&\rho = RA/L\\
+&\quad =2.44\times10^{-8}\,\Omega\,\mathrm m.
 \end{aligned}
 $$
 :::
@@ -67,11 +67,11 @@ Hai dây tiết diện tròn làm từ cùng một kim loại. Dây 1 có bán k
 
 $$
 \begin{aligned}
-\frac{A_2}{A_1}&=\frac{(2r)^2}{r^2}=4,\\
-\frac{R_2}{R_1}&=\frac{2}{4}=\frac12,\\
-\frac{I_2}{I_1}&=2,\\
-\frac{J_2}{J_1}&=\frac{2}{4}=\frac12,\\
-\frac{E_2}{E_1}&=\frac12.
+&\frac{A_2}{A_1} = \frac{(2r)^2}{r^2}=4,\\
+&\frac{R_2}{R_1} = \frac{2}{4}=\frac12,\\
+&\frac{I_2}{I_1} = 2,\\
+&\frac{J_2}{J_1} = \frac{2}{4}=\frac12,\\
+&\frac{E_2}{E_1} = \frac12.
 \end{aligned}
 $$
 Điện trở suất không đổi vì việc đổi kích thước không tự đổi vật liệu hoặc nhiệt độ.
@@ -92,10 +92,10 @@ $$
 
 $$
 \begin{aligned}
-R_0&=1.50/2.40=0.625\,\Omega,\\
-R_f&=1.50/2.00=0.750\,\Omega,\\
-\alpha&=\frac{R_f/R_0-1}{60.0}\,{}^\circ\mathrm C^{-1}\\
-&=3.33\times10^{-3}\,{}^\circ\mathrm C^{-1}.
+&R_0 = 1.50/2.40=0.625\,\Omega,\\
+&R_f = 1.50/2.00=0.750\,\Omega,\\
+&\alpha = \frac{R_f/R_0-1}{60.0}\,{}^\circ\mathrm C^{-1}\\
+&\quad =3.33\times10^{-3}\,{}^\circ\mathrm C^{-1}.
 \end{aligned}
 $$
 :::
@@ -119,10 +119,10 @@ Pin có suất điện động 9,00 V, điện trở trong 1,10 Ω, nối thành
 
 $$
 \begin{aligned}
-I&=9.00/(15.3+1.10)\\
-&=0.549\,\mathrm A,\\
-V_R&=IR=8.40\,\mathrm V,\\
-V_{ab}&=\mathcal E-Ir=8.40\,\mathrm V.
+&I = 9.00/(15.3+1.10)\\
+&\quad =0.549\,\mathrm A,\\
+&V_R = IR=8.40\,\mathrm V,\\
+&V_{ab} = \mathcal E-Ir=8.40\,\mathrm V.
 \end{aligned}
 $$
 :::
@@ -142,8 +142,8 @@ $$
 
 $$
 \begin{aligned}
-V&=(0.480)(25.0)=12.0\,\mathrm V,\\
-r&=\frac{12.6-12.0}{0.480}=1.25\,\Omega.
+&V = (0.480)(25.0)=12.0\,\mathrm V,\\
+&r = \frac{12.6-12.0}{0.480}=1.25\,\Omega.
 \end{aligned}
 $$
 :::
@@ -163,8 +163,8 @@ Pin AA có suất điện động 1,50 V. Sau một thời gian sử dụng, đi
 
 $$
 \begin{aligned}
-I&=1.30/20.0=0.0650\,\mathrm A,\\
-r&=(1.50-1.30)/I=3.08\,\Omega.
+&I = 1.30/20.0=0.0650\,\mathrm A,\\
+&r = (1.50-1.30)/I=3.08\,\Omega.
 \end{aligned}
 $$
 :::
@@ -184,10 +184,10 @@ Nhà sản xuất một loại pin AAA cho suất điện động 1,50 V, điệ
 
 $$
 \begin{aligned}
-R_{\min}&=1.50/2.00-0.160\\
-&=0.590\,\Omega,\\
-V_{ab}&=1.50-(2.00)(0.160)\\
-&=1.18\,\mathrm V.
+&R_{\min} = 1.50/2.00-0.160\\
+&\quad =0.590\,\Omega,\\
+&V_{ab} = 1.50-(2.00)(0.160)\\
+&\quad =1.18\,\mathrm V.
 \end{aligned}
 $$
 Điện trở trong không được bỏ khỏi tổng điện trở khi đặt giới hạn dòng.
@@ -213,12 +213,12 @@ Pin có suất điện động 24,0 V và điện trở trong 1,30 Ω, nối m�
 
 $$
 \begin{aligned}
-I&=24.0/(18.0+1.30)\\
-&=1.24\,\mathrm A,\\
-P_{\mathrm{hóa}}&=\mathcal EI=29.8\,\mathrm W,\\
-P_r&=I^2r=2.01\,\mathrm W,\\
-P_{\mathrm{ra}}&=\mathcal EI-I^2r=27.8\,\mathrm W,\\
-P_R&=I^2R=27.8\,\mathrm W.
+&I = 24.0/(18.0+1.30)\\
+&\quad =1.24\,\mathrm A,\\
+&P_{\mathrm{hóa}} = \mathcal EI=29.8\,\mathrm W,\\
+&P_r = I^2r=2.01\,\mathrm W,\\
+&P_{\mathrm{ra}} = \mathcal EI-I^2r=27.8\,\mathrm W,\\
+&P_R = I^2R=27.8\,\mathrm W.
 \end{aligned}
 $$
 Hai giá trị công suất ra và công suất tải bằng nhau trong mô hình dây nối không có điện trở.
@@ -240,12 +240,12 @@ Nối pin có suất điện động 9,00 V với điện trở 12,0 Ω thì cô
 
 $$
 \begin{aligned}
-I&=\sqrt{6.54/12.0}=0.738\,\mathrm A,\\
-P_{\mathrm{ra}}&=6.54\,\mathrm W,\\
-V_{ab}&=IR\\
-&=8.86\,\mathrm V,\\
-r&=(9.00-V_{ab})/I\\
-&=0.191\,\Omega.
+&I = \sqrt{6.54/12.0}=0.738\,\mathrm A,\\
+&P_{\mathrm{ra}} = 6.54\,\mathrm W,\\
+&V_{ab} = IR\\
+&\quad =8.86\,\mathrm V,\\
+&r = (9.00-V_{ab})/I\\
+&\quad =0.191\,\Omega.
 \end{aligned}
 $$
 :::
@@ -265,16 +265,16 @@ Mạch có dòng 0,720 A khi pin suất điện động 12,0 V nối với đi�
 
 $$
 \begin{aligned}
-V_{ab}&=(0.720)(16.0)\\
-&=11.52\,\mathrm V,\\
-r&=(12.0-11.52)/0.720\\
-&=0.667\,\Omega,\\
-P_R&=I^2R\\
-&=8.29\,\mathrm W,\\
-P_{\mathrm{hóa}}&=\mathcal EI\\
-&=8.64\,\mathrm W,\\
-P_r&=I^2r\\
-&=0.346\,\mathrm W.
+&V_{ab} = (0.720)(16.0)\\
+&\quad =11.52\,\mathrm V,\\
+&r = (12.0-11.52)/0.720\\
+&\quad =0.667\,\Omega,\\
+&P_R = I^2R\\
+&\quad =8.29\,\mathrm W,\\
+&P_{\mathrm{hóa}} = \mathcal EI\\
+&\quad =8.64\,\mathrm W,\\
+&P_r = I^2r\\
+&\quad =0.346\,\mathrm W.
 \end{aligned}
 $$
 :::
@@ -295,8 +295,8 @@ Pin có suất điện động ℰ và điện trở trong r, ban đầu nối v
 
 $$
 \begin{aligned}
-\frac{I_2}{I_1}&=\frac{R+r}{2R+r},\\
-\frac{P_2}{P_1}&=2\left(\frac{R+r}{2R+r}\right)^2.
+&\frac{I_2}{I_1} = \frac{R+r}{2R+r},\\
+&\frac{P_2}{P_1} = 2\left(\frac{R+r}{2R+r}\right)^2.
 \end{aligned}
 $$
 
@@ -304,7 +304,7 @@ Dòng qua R lớn hơn vì tổng điện trở nhỏ hơn. Khai triển hiệu 
 
 $$
 \begin{aligned}
-2R^2-r^2&>R^2-r^2\\
+&2R^2-r^2 >R^2-r^2\\
 &>0.
 \end{aligned}
 $$
@@ -332,8 +332,8 @@ Máy nướng bánh dùng dây Nichrome và hoạt động ở điện áp 120 V
 
 $$
 \begin{aligned}
-R_i&=120/1.35=88.9\,\Omega,\\
-R_f&=120/1.23=97.6\,\Omega.
+&R_i = 120/1.35=88.9\,\Omega,\\
+&R_f = 120/1.23=97.6\,\Omega.
 \end{aligned}
 $$
 
@@ -341,10 +341,10 @@ Vì điện áp không đổi, R_f/R_i = I_i/I_f. Do đó:
 
 $$
 \begin{aligned}
-\frac{I_i}{I_f}&=1+\alpha(T_f-T_i),\\
-T_f&=T_i+\frac{I_i/I_f-1}{\alpha},\\
-&=20+\frac{1.35/1.23-1}{4.5\times10^{-4}}\\
-&\approx237\,{}^\circ\mathrm C.
+&\frac{I_i}{I_f} = 1+\alpha(T_f-T_i),\\
+&T_f = T_i+\frac{I_i/I_f-1}{\alpha},\\
+&\quad =20+\frac{1.35/1.23-1}{4.5\times10^{-4}}\\
+&\quad \approx237\,{}^\circ\mathrm C.
 \end{aligned}
 $$
 
@@ -352,8 +352,8 @@ $$
 
 $$
 \begin{aligned}
-P_i&=(120)(1.35)=162\,\mathrm W,\\
-P_f&=(120)(1.23)=147.6\,\mathrm W.
+&P_i = (120)(1.35)=162\,\mathrm W,\\
+&P_f = (120)(1.23)=147.6\,\mathrm W.
 \end{aligned}
 $$
 

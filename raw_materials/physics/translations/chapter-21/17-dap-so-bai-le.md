@@ -54,8 +54,7 @@
 
 $$
 \begin{aligned}
-F&=\frac{Q^2}{8\pi\varepsilon_0L^2}(1+2\sqrt2).
-\end{aligned}
+&F = \frac{Q^2}{8\pi\varepsilon_0L^2}(1+2\sqrt2).\end{aligned}
 $$
 
 Hướng ra xa tâm hình vuông.
@@ -64,8 +63,7 @@ Hướng ra xa tâm hình vuông.
 
 $$
 \begin{aligned}
-F&=\frac{3q^2}{4\pi\varepsilon_0L^2}\left(\sqrt2+\frac12\right),
-\end{aligned}
+&F = \frac{3q^2}{4\pi\varepsilon_0L^2}\left(\sqrt2+\frac12\right),\end{aligned}
 $$
 
 hướng về tâm hình vuông.
@@ -74,8 +72,8 @@ hướng về tâm hình vuông.
 
 $$
 \begin{aligned}
-h_{\max}&=\frac{mv_0^2\sin^2\alpha}{2eE},\\
-d&=\frac{mv_0^2\sin2\alpha}{eE}.
+&h_{\max} = \frac{mv_0^2\sin^2\alpha}{2eE},\\
+&d = \frac{mv_0^2\sin2\alpha}{eE}.
 \end{aligned}
 $$
 
@@ -89,9 +87,9 @@ $$
 
 $$
 \begin{aligned}
-E_x&=\frac{Q}{4\pi\varepsilon_0a}\left(\frac1{x-a}-\frac1x\right),\\
-E_y&=0,\\
-\vec F&=\frac{qQ}{4\pi\varepsilon_0a}\left(\frac1r-\frac1{r+a}\right)\hat{\mathbf i}.
+&E_x = \frac{Q}{4\pi\varepsilon_0a}\left(\frac1{x-a}-\frac1x\right),\\
+&E_y = 0,\\
+&\vec F = \frac{qQ}{4\pi\varepsilon_0a}\left(\frac1r-\frac1{r+a}\right)\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -101,8 +99,8 @@ $$
 
 $$
 \begin{aligned}
-E_x&=E_y\\
-&=\frac{Q}{2\pi^2\varepsilon_0a^2}.
+&E_x = E_y\\
+&\quad =\frac{Q}{2\pi^2\varepsilon_0a^2}.
 \end{aligned}
 $$
 
@@ -112,9 +110,9 @@ $$
 
 $$
 \begin{aligned}
-E_x&=\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}}\\
+&E_x = \frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}}\\
 &\quad-\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_2^2}},\\
-\vec E&=E_x\hat{\mathbf i}.
+&\vec E = E_x\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -122,16 +120,14 @@ Tại $x=0$, trường bằng không. (c) Khi $|x|\ll R_1$:
 
 $$
 \begin{aligned}
-\vec E\approx\frac{\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)x\hat{\mathbf i}.
-\end{aligned}
+&\vec E\approx\frac{\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)x\hat{\mathbf i}.\end{aligned}
 $$
 
 (d)
 
 $$
 \begin{aligned}
-f&=\frac1{2\pi}\sqrt{\frac{q\sigma}{2\varepsilon_0m}\left(\frac1{R_1}-\frac1{R_2}\right)}.
-\end{aligned}
+&f = \frac1{2\pi}\sqrt{\frac{q\sigma}{2\varepsilon_0m}\left(\frac1{R_1}-\frac1{R_2}\right)}.\end{aligned}
 $$
 
 **Bài 21.89:** (a) $q_1=8.00\,\mu\mathrm C$, $q_2=3.00\,\mu\mathrm C$. (b) $7.50\,\mathrm N$ hướng $-x$. (c) $x=0.248\,\mathrm m$.
@@ -140,18 +136,17 @@ $$
 
 $$
 \begin{aligned}
-E&=\frac{\sigma}{2\varepsilon_0\sqrt{1+(R/\Delta)^2}}.
-\end{aligned}
+&E = \frac{\sigma}{2\varepsilon_0\sqrt{1+(R/\Delta)^2}}.\end{aligned}
 $$
 
 (b) $m_{\max}=q\sigma/(2g\varepsilon_0)$.
 
 $$
 \begin{aligned}
-W_e&=-\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R),\\
-W_g&=mg\Delta,\\
-\Delta_{\max}&=\frac{2R\alpha}{1-\alpha^2},\\
-\frac12mv^2&=W_e+W_g.
+&W_e = -\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R),\\
+&W_g = mg\Delta,\\
+&\Delta_{\max} = \frac{2R\alpha}{1-\alpha^2},\\
+&\frac12mv^2 = W_e+W_g.
 \end{aligned}
 $$
 
@@ -161,9 +156,9 @@ $$
 
 $$
 \begin{aligned}
-r_0&=\sqrt{y_2^2+a^2},\\
-r_L&=\sqrt{(y_2-L)^2+a^2},\\
-dF_{2x}&=\frac{k\lambda^2}{a}\left(\frac{y_2}{r_0}-\frac{y_2-L}{r_L}\right)dy_2.
+&r_0 = \sqrt{y_2^2+a^2},\\
+&r_L = \sqrt{(y_2-L)^2+a^2},\\
+&dF_{2x} = \frac{k\lambda^2}{a}\left(\frac{y_2}{r_0}-\frac{y_2-L}{r_L}\right)dy_2.
 \end{aligned}
 $$
 
@@ -171,9 +166,9 @@ $$
 
 $$
 \begin{aligned}
-F_{2x}&=\frac{2kQ^2}{L^2}\\
+&F_{2x} = \frac{2kQ^2}{L^2}\\
 &\quad\times\left(\sqrt{1+(L/a)^2}-1\right),\\
-\vec F_2&=F_{2x}\hat{\mathbf i}.
+&\vec F_2 = F_{2x}\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -181,7 +176,7 @@ $$
 
 $$
 \begin{aligned}
-W&=\frac{2kQ^2}{L}\ln\frac{L+\sqrt{a^2+L^2}}a\\
+&W = \frac{2kQ^2}{L}\ln\frac{L+\sqrt{a^2+L^2}}a\\
 &\quad+\frac{2kQ^2a}{L^2}\\
 &\quad-\frac{2kQ^2}{L^2}\sqrt{a^2+L^2}.
 \end{aligned}
@@ -195,7 +190,7 @@ $$
 
 $$
 \begin{aligned}
-E_x&=\frac{2kQ}{L(2x+a)}\\
+&E_x = \frac{2kQ}{L(2x+a)}\\
 &\quad-\frac{2kQ}{L(2L+2x+a)}.
 \end{aligned}
 $$

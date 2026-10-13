@@ -16,8 +16,8 @@ Nếu đặt nguồn q trong hốc, cách điện với thành hốc, mặt Gaus
 
 $$
 \begin{aligned}
-q+Q_{\mathrm{trong}}&=0,\\
-Q_{\mathrm{trong}}&=-q.
+&q+Q_{\mathrm{trong}} = 0,\\
+&Q_{\mathrm{trong}} = -q.
 \end{aligned}
 $$
 
@@ -27,8 +27,8 @@ Tổng quát hơn, nếu vật dẫn ban đầu có điện tích $q_C$, sau khi
 
 $$
 \begin{aligned}
-Q_{\mathrm{trong}}&=-q,\\
-Q_{\mathrm{ngoai}}&=q_C+q.
+&Q_{\mathrm{trong}} = -q,\\
+&Q_{\mathrm{ngoai}} = q_C+q.
 \end{aligned}
 $$
 
@@ -53,8 +53,8 @@ Trường trên mặt Gauss bằng không. Điện tích nguồn là q = −5 nC
 
 $$
 \begin{aligned}
-Q_{\mathrm{ngoai}}&=(+7)-(+5)\\
-&=+2\,\mathrm{nC}.
+&Q_{\mathrm{ngoai}} = (+7)-(+5)\\
+&\quad =+2\,\mathrm{nC}.
 \end{aligned}
 $$
 
@@ -101,8 +101,8 @@ Chọn hình trụ Gauss rất nhỏ, hai đáy diện tích A. Một đáy tron
 
 $$
 \begin{aligned}
-E_\perp A&=\frac{\sigma A}{\varepsilon_0},\\
-E_\perp&=\frac{\sigma}{\varepsilon_0}.
+&E_\perp A = \frac{\sigma A}{\varepsilon_0},\\
+&E_\perp = \frac{\sigma}{\varepsilon_0}.
 \end{aligned}
 \tag{22.10}
 $$
@@ -128,12 +128,12 @@ Bề mặt Trái Đất là vật dẫn tốt, với điện tích tổng âm tr
 
 $$
 \begin{aligned}
-E_\perp&=-150\,\mathrm{N/C},\\
-\sigma&=\varepsilon_0E_\perp\\
-&\approx-1.33\times10^{-9}\,\mathrm{C/m^2},\\
-Q&=4\pi R_E^2\sigma\\
-&\approx-6.8\times10^5\,\mathrm C\\
-&=-680\,\mathrm{kC}.
+&E_\perp = -150\,\mathrm{N/C},\\
+&\sigma = \varepsilon_0E_\perp\\
+&\quad \approx-1.33\times10^{-9}\,\mathrm{C/m^2},\\
+&Q = 4\pi R_E^2\sigma\\
+&\quad \approx-6.8\times10^5\,\mathrm C\\
+&\quad =-680\,\mathrm{kC}.
 \end{aligned}
 $$
 

@@ -45,11 +45,11 @@ Kết quả chồng chất ở Ví dụ 21.12 hoặc Gauss ở Ví dụ 22.8 cho
 
 $$
 \begin{aligned}
-\sigma&=Q/A,\\
-E&=\sigma/\varepsilon_0\\
-&=Q/(\varepsilon_0A),\\
-V_{ab}&=Ed\\
-&=Qd/(\varepsilon_0A).
+&\sigma = Q/A,\\
+&E = \sigma/\varepsilon_0\\
+&\quad =Q/(\varepsilon_0A),\\
+&V_{ab} = Ed\\
+&\quad =Qd/(\varepsilon_0A).
 \end{aligned}
 $$
 
@@ -72,9 +72,9 @@ Các đơn vị của hằng số điện liên hệ với farad như sau:
 
 $$
 \begin{aligned}
-1\,\mathrm F&=1\,\mathrm{C^2/(N\,m)}\\
-&=1\,\mathrm{C^2/J},\\
-\varepsilon_0&=8.85\times10^{-12}\,\mathrm{F/m}.
+&1\,\mathrm F = 1\,\mathrm{C^2/(N\,m)}\\
+&\quad =1\,\mathrm{C^2/J},\\
+&\varepsilon_0 = 8.85\times10^{-12}\,\mathrm{F/m}.
 \end{aligned}
 $$
 
@@ -89,9 +89,9 @@ Một tụ phẳng chân không có C = 1,0 F, hai bản cách nhau 1,0 mm. Cầ
 
 $$
 \begin{aligned}
-A&=\frac{Cd}{\varepsilon_0}\\
-&=\frac{(1.0)(1.0\times10^{-3})}{8.85\times10^{-12}}\\
-&\approx1.1\times10^8\,\mathrm{m^2}.
+&A = \frac{Cd}{\varepsilon_0}\\
+&\quad =\frac{(1.0)(1.0\times10^{-3})}{8.85\times10^{-12}}\\
+&\quad \approx1.1\times10^8\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -104,8 +104,8 @@ Một farad là điện dung lớn đối với nhiều linh kiện thông thư�
 
 $$
 \begin{aligned}
-1\,\mathrm{\mu F}&=10^{-6}\,\mathrm F,\\
-1\,\mathrm{pF}&=10^{-12}\,\mathrm F.
+&1\,\mathrm{\mu F} = 10^{-6}\,\mathrm F,\\
+&1\,\mathrm{pF} = 10^{-12}\,\mathrm F.
 \end{aligned}
 $$
 
@@ -122,14 +122,14 @@ Tụ phẳng chân không có hai bản cách 5,00 mm, diện tích mỗi bản 
 
 $$
 \begin{aligned}
-C&=\varepsilon_0A/d\\
-&=3.54\times10^{-9}\,\mathrm F\\
-&=0.00354\,\mathrm{\mu F},\\
-Q&=CV_{ab}\\
-&=3.54\times10^{-5}\,\mathrm C\\
-&=35.4\,\mathrm{\mu C},\\
-E&=Q/(\varepsilon_0A)\\
-&=2.00\times10^6\,\mathrm{N/C}.
+&C = \varepsilon_0A/d\\
+&\quad =3.54\times10^{-9}\,\mathrm F\\
+&\quad =0.00354\,\mathrm{\mu F},\\
+&Q = CV_{ab}\\
+&\quad =3.54\times10^{-5}\,\mathrm C\\
+&\quad =35.4\,\mathrm{\mu C},\\
+&E = Q/(\varepsilon_0A)\\
+&\quad =2.00\times10^6\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -149,9 +149,9 @@ Hai vỏ cầu dẫn đồng tâm ngăn bởi chân không. Vỏ trong có đi�
 
 $$
 \begin{aligned}
-V_{ab}&=kQ(1/r_a-1/r_b),\\
-C&=Q/V_{ab}\\
-&=4\pi\varepsilon_0\frac{r_ar_b}{r_b-r_a}.
+&V_{ab} = kQ(1/r_a-1/r_b),\\
+&C = Q/V_{ab}\\
+&\quad =4\pi\varepsilon_0\frac{r_ar_b}{r_b-r_a}.
 \end{aligned}
 $$
 
@@ -179,11 +179,11 @@ Chọn r₀ = rᵦ thì thế ở trụ trong chính là hiệu điện thế ha
 
 $$
 \begin{aligned}
-V_{ab}&=\frac{\lambda}{2\pi\varepsilon_0}\ln(r_b/r_a),\\
-Q&=\lambda L,\\
-C&=\frac{2\pi\varepsilon_0L}{\ln(r_b/r_a)},\\
-\frac CL&=\frac{2\pi\varepsilon_0}{\ln(r_b/r_a)}\\
-&=\frac{55.6\,\mathrm{pF/m}}{\ln(r_b/r_a)}.
+&V_{ab} = \frac{\lambda}{2\pi\varepsilon_0}\ln(r_b/r_a),\\
+&Q = \lambda L,\\
+&C = \frac{2\pi\varepsilon_0L}{\ln(r_b/r_a)},\\
+&\frac CL = \frac{2\pi\varepsilon_0}{\ln(r_b/r_a)}\\
+&\quad =\frac{55.6\,\mathrm{pF/m}}{\ln(r_b/r_a)}.
 \end{aligned}
 $$
 

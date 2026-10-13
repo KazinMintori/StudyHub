@@ -24,11 +24,10 @@ Hai lực ngang triệt tiêu. Lực tổng là −I B_0 L theo −y. Bản nhá
 Với dòng hướng về bản lề P và trường hướng vào trang, mômen từ cùng chiều với mômen trọng lực. Các độ lớn là:
 
 $$
-\tau_B = \frac{IBL^2}{2} = 0{,}023328\ \mathrm{N\,m}
-$$
-
-$$
-\tau_g = mg\frac{L}{2}\cos 53^\circ = 0{,}04451\ \mathrm{N\,m}
+\begin{aligned}
+    &\tau_B = \frac{IBL^2}{2} = 0{,}023328\ \mathrm{N\,m}\\
+    &\tau_g = mg\frac{L}{2}\cos 53^\circ = 0{,}04451\ \mathrm{N\,m}
+\end{aligned}
 $$
 
 Dây ngang ở đầu thanh có cánh tay đòn L sin 53°. Vì thế lực căng là

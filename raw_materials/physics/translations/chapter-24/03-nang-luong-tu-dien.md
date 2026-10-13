@@ -16,8 +16,8 @@ $$
 
 $$
 \begin{aligned}
-W&=\frac1C\int_0^Qq\,dq\\
-&=\frac{Q^2}{2C}.
+&W = \frac1C\int_0^Qq\,dq\\
+&\quad =\frac{Q^2}{2C}.
 \end{aligned}
 \tag{24.8}
 $$
@@ -28,9 +28,9 @@ Chọn tụ chưa nạp có U = 0. Dùng Q = CV, ba dạng tương đương củ
 
 $$
 \begin{aligned}
-U&=\frac{Q^2}{2C}\\
-&=\frac12CV^2\\
-&=\frac12QV.
+&U = \frac{Q^2}{2C}\\
+&\quad =\frac12CV^2\\
+&\quad =\frac12QV.
 \end{aligned}
 \tag{24.9}
 $$
@@ -63,8 +63,8 @@ Chuyển electron giữa hai bản đòi hỏi công chống điện trường t
 
 $$
 \begin{aligned}
-u&=\frac{U}{Ad}\\
-&=\frac{CV^2}{2Ad}.
+&u = \frac{U}{Ad}\\
+&\quad =\frac{CV^2}{2Ad}.
 \end{aligned}
 \tag{24.10}
 $$
@@ -93,9 +93,9 @@ Phần giữa của công tắc là tay cầm cách điện. Điện tích chỉ
 
 $$
 \begin{aligned}
-Q_0&=C_1V_0=960\,\mathrm{\mu C},\\
-U_0&=\frac12C_1V_0^2\\
-&=0.0576\,\mathrm J.
+&Q_0 = C_1V_0=960\,\mathrm{\mu C},\\
+&U_0 = \frac12C_1V_0^2\\
+&\quad =0.0576\,\mathrm J.
 \end{aligned}
 $$
 
@@ -103,12 +103,12 @@ $$
 
 $$
 \begin{aligned}
-V&=\frac{Q_0}{C_1+C_2}=80\,\mathrm V,\\
-Q_1&=640\,\mathrm{\mu C},\\
-Q_2&=320\,\mathrm{\mu C},\\
-U_f&=\frac12Q_1V+\frac12Q_2V\\
-&=\frac12Q_0V\\
-&=0.0384\,\mathrm J.
+&V = \frac{Q_0}{C_1+C_2}=80\,\mathrm V,\\
+&Q_1 = 640\,\mathrm{\mu C},\\
+&Q_2 = 320\,\mathrm{\mu C},\\
+&U_f = \frac12Q_1V+\frac12Q_2V\\
+&\quad =\frac12Q_0V\\
+&\quad =0.0384\,\mathrm J.
 \end{aligned}
 $$
 
@@ -126,8 +126,8 @@ Năng lượng đầu xấp xỉ 0,058 J, cuối xấp xỉ 0,038 J theo độ c
 
 $$
 \begin{aligned}
-E&=\sqrt{2u/\varepsilon_0}\\
-&=4.75\times10^5\,\mathrm{V/m}.
+&E = \sqrt{2u/\varepsilon_0}\\
+&\quad =4.75\times10^5\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -147,10 +147,9 @@ Tụ cầu ở Ví dụ 24.3 có hai mặt bán kính rₐ,rᵦ và điện tíc
 
 $$
 \begin{aligned}
-C&=4\pi\varepsilon_0r_ar_b/(r_b-r_a),\\
-U&=Q^2/(2C)\\
-&=\frac{Q^2}{8\pi\varepsilon_0}
-\left(\frac1{r_a}-\frac1{r_b}\right).
+&C = 4\pi\varepsilon_0r_ar_b/(r_b-r_a),\\
+&U = Q^2/(2C)\\
+&\quad =\frac{Q^2}{8\pi\varepsilon_0} \left(\frac1{r_a}-\frac1{r_b}\right).
 \end{aligned}
 $$
 
@@ -164,11 +163,9 @@ Mật độ không đều mà giảm theo r⁻⁴. Chia khe thành các lớp c�
 
 $$
 \begin{aligned}
-U&=\int u\,d\mathcal V\\
-&=\frac{Q^2}{8\pi\varepsilon_0}
-\int_{r_a}^{r_b}\frac{dr}{r^2}\\
-&=\frac{Q^2}{8\pi\varepsilon_0}
-\left(\frac1{r_a}-\frac1{r_b}\right).
+&U = \int u\,d\mathcal V\\
+&\quad =\frac{Q^2}{8\pi\varepsilon_0} \int_{r_a}^{r_b}\frac{dr}{r^2}\\
+&\quad =\frac{Q^2}{8\pi\varepsilon_0} \left(\frac1{r_a}-\frac1{r_b}\right).
 \end{aligned}
 $$
 

@@ -70,9 +70,8 @@ Trong mô hình ba dây được mô tả, công ty điện lực cung cấp m�
 
 $$
 \begin{aligned}
-1\,\mathrm{kW\cdot h}
-&=(10^3\,\mathrm W)(3600\,\mathrm s)\\
-&=3{,}6\times10^6\,\mathrm J.
+&1\,\mathrm{kW\cdot h} = (10^3\,\mathrm W)(3600\,\mathrm s)\\
+&\quad =3{,}6\times10^6\,\mathrm J.
 \end{aligned}
 $$
 
@@ -88,12 +87,12 @@ Một máy nướng bánh mì $1800\,\mathrm W$, một chảo điện $1{,}3\,\m
 
 $$
 \begin{aligned}
-I_1&=\frac{1800\,\mathrm W}{120\,\mathrm V}=15\,\mathrm A,\\
-R_1&=\frac{(120\,\mathrm V)^2}{1800\,\mathrm W}=8\,\Omega,\\
-I_2&=\frac{1300\,\mathrm W}{120\,\mathrm V}\approx11\,\mathrm A,\\
-R_2&=\frac{(120\,\mathrm V)^2}{1300\,\mathrm W}\approx11\,\Omega,\\
-I_3&=\frac{100\,\mathrm W}{120\,\mathrm V}\approx0{,}83\,\mathrm A,\\
-R_3&=\frac{(120\,\mathrm V)^2}{100\,\mathrm W}=144\,\Omega.
+&I_1 = \frac{1800\,\mathrm W}{120\,\mathrm V}=15\,\mathrm A,\\
+&R_1 = \frac{(120\,\mathrm V)^2}{1800\,\mathrm W}=8\,\Omega,\\
+&I_2 = \frac{1300\,\mathrm W}{120\,\mathrm V}\approx11\,\mathrm A,\\
+&R_2 = \frac{(120\,\mathrm V)^2}{1300\,\mathrm W}\approx11\,\Omega,\\
+&I_3 = \frac{100\,\mathrm W}{120\,\mathrm V}\approx0{,}83\,\mathrm A,\\
+&R_3 = \frac{(120\,\mathrm V)^2}{100\,\mathrm W}=144\,\Omega.
 \end{aligned}
 $$
 
@@ -101,10 +100,9 @@ Tổng dòng qua dây cấp là tổng dòng của ba nhánh:
 
 $$
 \begin{aligned}
-I_{\mathrm{tổng}}
-&=I_1+I_2+I_3\\
-&=15+10{,}83+0{,}83\\
-&\approx26{,}7\,\mathrm A.
+&I_{\mathrm{tổng}} = I_1+I_2+I_3\\
+&\quad =15+10{,}83+0{,}83\\
+&\quad \approx26{,}7\,\mathrm A.
 \end{aligned}
 $$
 
@@ -112,9 +110,8 @@ Vì tổng dòng vượt mức $20\,\mathrm A$ của mạch, bộ ngắt sẽ t�
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{tđ}}}
-&=\frac{1}{8\,\Omega}+\frac{1}{11\,\Omega}+\frac{1}{144\,\Omega},\\
-I_{\mathrm{tổng}}&=\frac{120\,\mathrm V}{R_{\mathrm{tđ}}}\approx26{,}7\,\mathrm A.
+&\frac{1}{R_{\mathrm{tđ}}} = \frac{1}{8\,\Omega}+\frac{1}{11\,\Omega}+\frac{1}{144\,\Omega},\\
+&I_{\mathrm{tổng}} = \frac{120\,\mathrm V}{R_{\mathrm{tđ}}}\approx26{,}7\,\mathrm A.
 \end{aligned}
 $$
 

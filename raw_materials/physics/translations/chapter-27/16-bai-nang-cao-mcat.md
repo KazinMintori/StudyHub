@@ -30,8 +30,8 @@ $$
 
 $$
 \begin{aligned}
-\phi&=\sin^{-1}\left(\frac{0{,}250}{5{,}14}\right)\\
-&=0{,}0487\,\mathrm{rad}.
+&\phi = \sin^{-1}\left(\frac{0{,}250}{5{,}14}\right)\\
+&\quad =0{,}0487\,\mathrm{rad}.
 \end{aligned}
 $$
 
@@ -39,8 +39,8 @@ Thời gian đi cung là
 
 $$
 \begin{aligned}
-t_1&=\frac{R\phi}{v_0}\\
-&=1{,}72\times10^{-6}\,\mathrm{s}.
+&t_1 = \frac{R\phi}{v_0}\\
+&\quad =1{,}72\times10^{-6}\,\mathrm{s}.
 \end{aligned}
 $$
 
@@ -48,8 +48,8 @@ $$
 
 $$
 \begin{aligned}
-\Delta x_1&=R(1-\cos\phi)\\
-&=6{,}08\times10^{-3}\,\mathrm{m}.
+&\Delta x_1 = R(1-\cos\phi)\\
+&\quad =6{,}08\times10^{-3}\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -57,8 +57,8 @@ $$
 
 $$
 \begin{aligned}
-\Delta x&=\Delta x_1+(D-d)\tan\phi\\
-&=3{,}05\times10^{-2}\,\mathrm{m}.
+&\Delta x = \Delta x_1+(D-d)\tan\phi\\
+&\quad =3{,}05\times10^{-2}\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -88,8 +88,8 @@ Một hạt khối lượng $m$, điện tích dương $q$, bắt đầu từ ng
 
 $$
 \begin{aligned}
-\frac12 mv^2&=qEy,\\
-v&=\sqrt{\frac{2qEy}{m}}.
+&\frac12 mv^2 = qEy,\\
+&v = \sqrt{\frac{2qEy}{m}}.
 \end{aligned}
 $$
 
@@ -136,8 +136,8 @@ Nếu một proton đặt trong từ trường ngoài $2\,\mathrm{T}$ vuông gó
 
 $$
 \begin{aligned}
-\tau&=(1{,}4\times10^{-26})(2)(1)\\
-&=2{,}8\times10^{-26}\,\mathrm{N\,m}.
+&\tau = (1{,}4\times10^{-26})(2)(1)\\
+&\quad =2{,}8\times10^{-26}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -186,8 +186,8 @@ Từ trường lớn dùng trong MRI có thể tạo lực lên các dòng đi�
 
 $$
 \begin{aligned}
-R&=\frac{\rho L}{A}\\
-&=3{,}40\times10^2\,\Omega.
+&R = \frac{\rho L}{A}\\
+&\quad =3{,}40\times10^2\,\Omega.
 \end{aligned}
 $$
 
@@ -195,8 +195,8 @@ Dòng điện là $I=V/R=2{,}94\times10^{-4}\,\mathrm{A}$. Vì đề yêu cầu 
 
 $$
 \begin{aligned}
-F_{\max}&=ILB\\
-&=5{,}88\times10^{-7}\,\mathrm{N}.
+&F_{\max} = ILB\\
+&\quad =5{,}88\times10^{-7}\,\mathrm{N}.
 \end{aligned}
 $$
 

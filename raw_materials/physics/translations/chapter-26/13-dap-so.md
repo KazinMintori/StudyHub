@@ -23,9 +23,9 @@ Với VP26.7.4, dùng các chiều dòng đã chọn trong lời giải:
 
 $$
 \begin{aligned}
-I_1&=\frac{2\mathcal E_1+\mathcal E_2}{3R},\\
-I_2&=-\frac{\mathcal E_1+2\mathcal E_2}{3R},\\
-I_3&=\frac{\mathcal E_1-\mathcal E_2}{3R}.
+&I_1 = \frac{2\mathcal E_1+\mathcal E_2}{3R},\\
+&I_2 = -\frac{\mathcal E_1+2\mathcal E_2}{3R},\\
+&I_3 = \frac{\mathcal E_1-\mathcal E_2}{3R}.
 \end{aligned}
 $$
 
@@ -84,9 +84,9 @@ Các kết quả năng lượng ở 26.53:
 
 $$
 \begin{aligned}
-U_C&=\frac12C\mathcal E^2,\\
-W_{\mathcal E}&=C\mathcal E^2,\\
-W_R&=\frac12C\mathcal E^2.
+&U_C = \frac12C\mathcal E^2,\\
+&W_{\mathcal E} = C\mathcal E^2,\\
+&W_R = \frac12C\mathcal E^2.
 \end{aligned}
 $$
 :::

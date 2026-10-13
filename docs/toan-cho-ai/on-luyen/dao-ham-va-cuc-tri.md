@@ -20,9 +20,7 @@ $$
 Đạo hàm đo tốc độ thay đổi khi bước $h$ tiến về không. Nếu $f$ liên tục trên đoạn nối $x_0$ với $x$ và khả vi trong khoảng giữa hai điểm, định lý giá trị trung bình cho một $z$ nằm giữa chúng sao cho
 
 $$
-\begin{aligned}
-\frac{f(x)-f(x_0)}{x-x_0}&=f'(z),\\
-\end{aligned}
+\frac{f(x)-f(x_0)}{x-x_0} = f'(z).
 $$
 
 Tương đương,
@@ -88,9 +86,9 @@ Cho $f(x,y,z)=x^2+xy+xz$. Khi lấy đạo hàm theo $x$, hai biến còn lại 
 
 $$
 \begin{aligned}
-f_x&=2x+y+z,\\
-f_y&=x,\\
-f_z&=x.
+&f_x = 2x+y+z,\\
+&f_y = x,\\
+&f_z = x.
 \end{aligned}
 $$
 

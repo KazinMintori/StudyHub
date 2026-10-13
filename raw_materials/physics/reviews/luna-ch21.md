@@ -12,9 +12,7 @@
 
   $$
   \begin{aligned}
-  H(\infty)-H(a)
-  &=L\ln\frac{L+\sqrt{a^2+L^2}}{a}+a-\sqrt{a^2+L^2}.
-  \end{aligned}
+  &H(\infty)-H(a) = L\ln\frac{L+\sqrt{a^2+L^2}}{a}+a-\sqrt{a^2+L^2}.\end{aligned}
   $$
 
   Nhân dòng này với $2kQ^2/L^2$ cho biểu thức thế năng đang có.

@@ -398,10 +398,8 @@ $$
 
 $$
 \begin{aligned}
-B_{\max}&=\frac{\mu_0NI}{2\pi r_{\mathrm{trong}}}\\
-&=2{,}33\times10^{-3}\,\mathrm T,\\
-B_{\min}&=\frac{\mu_0NI}{2\pi r_{\mathrm{ngoài}}}\\
-&=1{,}75\times10^{-3}\,\mathrm T.
+&B_{\max} = \frac{\mu_0NI}{2\pi r_{\mathrm{trong}}} = 2{,}33\times10^{-3}\,\mathrm T,\\
+&B_{\min} = \frac{\mu_0NI}{2\pi r_{\mathrm{ngoài}}} = 1{,}75\times10^{-3}\,\mathrm T.
 \end{aligned}
 $$
 :::

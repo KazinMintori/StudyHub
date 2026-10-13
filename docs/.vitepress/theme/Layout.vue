@@ -24,6 +24,18 @@ const { hasSidebar } = useSidebar()
 const desktopSidebarCollapsed = ref(false)
 const { frontmatter, page } = useData(), route = useRoute()
 const hasCourseSidebar = computed(() => hasSidebar.value && courseCatalog.some(course => page.value.relativePath.startsWith(`${course.id}/`)))
+let sidebarBreakpoint
+let navigationBreakpoint
+function syncResponsiveNavigation() {
+  if (sidebarBreakpoint?.matches && document.querySelector('.VPSidebar.open')) {
+    const restoreFocus = desktopSidebarCollapsed.value && document.querySelector('.VPSidebar')?.contains(document.activeElement)
+    // Close the actual DefaultTheme drawer so its modal state and scroll lock
+    // are cleared. useSidebar() instances do not share their isOpen ref.
+    document.querySelector('.Layout > .VPBackdrop.backdrop')?.click()
+    if (restoreFocus) nextTick(() => document.querySelector('.course-sidebar-toggle')?.focus({ preventScroll: true }))
+  }
+  if (navigationBreakpoint?.matches) document.querySelector('.VPNavBarHamburger[aria-expanded="true"]')?.click()
+}
 function openSearch() { document.querySelector('.DocSearch-Button')?.click() }
 function syncLink(event) {
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -35,11 +47,17 @@ function syncLink(event) {
 }
 onMounted(() => {
   syncLecturePart()
+  sidebarBreakpoint = window.matchMedia('(min-width: 960px)')
+  navigationBreakpoint = window.matchMedia('(min-width: 1200px)')
+  sidebarBreakpoint.addEventListener('change', syncResponsiveNavigation)
+  navigationBreakpoint.addEventListener('change', syncResponsiveNavigation)
   window.addEventListener('hashchange', syncLecturePart)
   window.addEventListener('popstate', syncLecturePart)
   document.addEventListener('click', syncLink, true)
 })
 onUnmounted(() => {
+  sidebarBreakpoint?.removeEventListener('change', syncResponsiveNavigation)
+  navigationBreakpoint?.removeEventListener('change', syncResponsiveNavigation)
   window.removeEventListener('hashchange', syncLecturePart)
   window.removeEventListener('popstate', syncLecturePart)
   document.removeEventListener('click', syncLink, true)
@@ -49,7 +67,7 @@ watch(() => route.path, syncLecturePart)
 
 <template>
   <Layout :class="{ 'sidebar-collapsed': hasCourseSidebar && desktopSidebarCollapsed, 'lecture-layout': frontmatter.section === 'lecture' || frontmatter.section === 'topic', 'topic-layout': frontmatter.section === 'topic', 'physics-layout': ['vat-ly-1', 'vat-ly-2'].includes(frontmatter.course), 'lecture-reading-plain': frontmatter.section === 'lecture' && frontmatter.readingStyle === 'plain', 'lecture-slides-layout': frontmatter.section === 'lecture' && lecturePart === 'slides', 'lecture-alt': frontmatter.section === 'lecture' && lecturePart !== 'notes', 'has-chapter-exercises': frontmatter.hasChapterExercises, 'lecture-exercises-layout': frontmatter.hasChapterExercises && lecturePart === 'bai-tap' }">
-    <template #layout-top>
+    <template #nav-bar-content-before>
       <button
         v-if="hasCourseSidebar"
         class="course-sidebar-toggle"

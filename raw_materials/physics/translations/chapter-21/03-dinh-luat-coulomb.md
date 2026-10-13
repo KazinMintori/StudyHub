@@ -16,8 +16,7 @@ Với vật mang điện rất nhỏ so với khoảng cách $r$ giữa chúng, 
 
 $$
 \begin{aligned}
-F&=k\frac{|q_1q_2|}{r^2}.
-\end{aligned}
+&F = k\frac{|q_1q_2|}{r^2}.\end{aligned}
 \tag{21.1}
 $$
 
@@ -27,8 +26,7 @@ Hai lực tuân theo định luật III Newton, kể cả khi độ lớn hai đ
 
 $$
 \begin{aligned}
-\vec F_{1\to2}&=-\vec F_{2\to1}.
-\end{aligned}
+&\vec F_{1\to2} = -\vec F_{2\to1}.\end{aligned}
 $$
 
 Sự phụ thuộc vào nghịch đảo bình phương khoảng cách đã được kiểm tra với độ chính xác rất cao. Hình thức này giống định luật hấp dẫn, nhưng hai tương tác khác nhau. Lực điện phụ thuộc điện tích, có thể hút hoặc đẩy. Lực hấp dẫn trong mô hình đang xét phụ thuộc khối lượng và luôn hút vì không có khối lượng âm.
@@ -45,8 +43,8 @@ Trong điện từ học ta dùng hệ SI, với các đơn vị quen thuộc nh
 
 $$
 \begin{aligned}
-k&=8.987551787\times10^9\,\mathrm{N\,m^2/C^2}\\
-&\approx8.988\times10^9\,\mathrm{N\,m^2/C^2}.
+&k = 8.987551787\times10^9\,\mathrm{N\,m^2/C^2}\\
+&\quad \approx8.988\times10^9\,\mathrm{N\,m^2/C^2}.
 \end{aligned}
 $$
 
@@ -56,8 +54,7 @@ Về nguyên tắc, đo lực giữa hai điện tích bằng nhau ở một kho
 
 $$
 \begin{aligned}
-e&=1.602176634\times10^{-19}\,\mathrm C.
-\end{aligned}
+&e = 1.602176634\times10^{-19}\,\mathrm C.\end{aligned}
 $$
 
 Giá trị này chính xác theo định nghĩa. Một coulomb tương ứng độ lớn tổng điện tích của khoảng $6\times10^{18}$ electron. Để so sánh, một khối đồng cạnh $1\,\mathrm{cm}$ chứa khoảng $2.4\times10^{24}$ electron, và khoảng $10^{19}$ electron đi qua dây tóc sáng của bóng đèn pin mỗi giây. Định nghĩa coulomb trước đây dựa vào đơn vị dòng điện được thay đổi cùng hệ định nghĩa SI.
@@ -66,15 +63,9 @@ Ta thường viết $k=1/(4\pi\varepsilon_0)$, với $\varepsilon_0$ gọi là h
 
 $$
 \begin{aligned}
-F&=k\frac{|q_1q_2|}{r^2}.
-\end{aligned}
-\tag{21.2}
-$$
-
-$$
-\begin{aligned}
-\varepsilon_0&\approx8.854\times10^{-12}\,\mathrm{C^2/(N\,m^2)},\\
-k&\approx8.988\times10^9\,\mathrm{N\,m^2/C^2}.
+    &F = k\frac{|q_1q_2|}{r^2}.\\
+    &\varepsilon_0 \approx 8.854\times10^{-12}\,\mathrm{C^2/(N\,m^2)},\\
+    &k \approx 8.988\times10^9\,\mathrm{N\,m^2/C^2}.
 \end{aligned}
 $$
 
@@ -82,8 +73,8 @@ Trong nhiều bài tính, có thể làm tròn hệ số đến $9.0\times10^9\,
 
 $$
 \begin{aligned}
-1\,\mu\mathrm C&=10^{-6}\,\mathrm C,\\
-1\,\mathrm{nC}&=10^{-9}\,\mathrm C.
+&1\,\mu\mathrm C = 10^{-6}\,\mathrm C,\\
+&1\,\mathrm{nC} = 10^{-9}\,\mathrm C.
 \end{aligned}
 $$
 
@@ -98,8 +89,8 @@ Một hạt alpha, tức hạt nhân helium, có khối lượng $m=6.64\times10
 
 $$
 \begin{aligned}
-F_e&=k\frac{q^2}{r^2},\\
-F_g&=G\frac{m^2}{r^2}.
+&F_e = k\frac{q^2}{r^2},\\
+&F_g = G\frac{m^2}{r^2}.
 \end{aligned}
 $$
 
@@ -107,10 +98,10 @@ $$
 
 $$
 \begin{aligned}
-\frac{F_e}{F_g}&=\frac{k}{G}\frac{q^2}{m^2}\\
-&=\frac{9.0\times10^9}{6.67\times10^{-11}}\\
+&\frac{F_e}{F_g} = \frac{k}{G}\frac{q^2}{m^2}\\
+&\quad =\frac{9.0\times10^9}{6.67\times10^{-11}}\\
 &\quad\times\frac{(3.2\times10^{-19})^2}{(6.64\times10^{-27})^2}\\
-&\approx3.1\times10^{35}.
+&\quad \approx3.1\times10^{35}.
 \end{aligned}
 $$
 
@@ -129,8 +120,8 @@ Với hai nguồn, ta cộng $\vec F_1+\vec F_2$. Với ba nguồn, cộng thêm
 
 $$
 \begin{aligned}
-\vec F&=\vec F_1+\vec F_2+\cdots+\vec F_n\\
-&=\sum_{i=1}^{n}\vec F_i.
+&\vec F = \vec F_1+\vec F_2+\cdots+\vec F_n\\
+&\quad =\sum_{i=1}^{n}\vec F_i.
 \end{aligned}
 $$
 
@@ -170,10 +161,10 @@ Hai điện tích $q_1=+25\,\mathrm{nC}$, $q_2=-75\,\mathrm{nC}$ cách nhau $r=3
 
 $$
 \begin{aligned}
-F_{1\to2}&=k\frac{|q_1q_2|}{r^2}\\
-&=9.0\times10^9\\
+&F_{1\to2} = k\frac{|q_1q_2|}{r^2}\\
+&\quad =9.0\times10^9\\
 &\quad\times\frac{|(25)(-75)10^{-18}|}{(0.030)^2}\,\mathrm N\\
-&\approx0.019\,\mathrm N.
+&\quad \approx0.019\,\mathrm N.
 \end{aligned}
 $$
 
@@ -183,8 +174,8 @@ Hai điện tích trái dấu nên $q_2$ bị hút về $q_1$, tức sang trái.
 
 $$
 \begin{aligned}
-F_{2\to1}&=F_{1\to2}\\
-&=0.019\,\mathrm N.
+&F_{2\to1} = F_{1\to2}\\
+&\quad =0.019\,\mathrm N.
 \end{aligned}
 $$
 
@@ -206,10 +197,10 @@ Trên trục $x$, điện tích $q_1=1.0\,\mathrm{nC}$ ở $x=+2.0\,\mathrm{cm}$
 
 $$
 \begin{aligned}
-F_{1\to3}&=\frac{(9.0)(1.0)(5.0)}{0.020^2}10^{-9}\,\mathrm N\\
-&\approx112\,\mu\mathrm N,\\
-F_{2\to3}&=\frac{(9.0)(3.0)(5.0)}{0.040^2}10^{-9}\,\mathrm N\\
-&\approx84\,\mu\mathrm N.
+&F_{1\to3} = \frac{(9.0)(1.0)(5.0)}{0.020^2}10^{-9}\,\mathrm N\\
+&\quad \approx112\,\mu\mathrm N,\\
+&F_{2\to3} = \frac{(9.0)(3.0)(5.0)}{0.040^2}10^{-9}\,\mathrm N\\
+&\quad \approx84\,\mu\mathrm N.
 \end{aligned}
 $$
 
@@ -217,9 +208,9 @@ Lấy $\hat{\mathbf i}$ theo chiều $+x$:
 
 $$
 \begin{aligned}
-\vec F_3&=(-112\,\mu\mathrm N)\hat{\mathbf i}\\
+&\vec F_3 = (-112\,\mu\mathrm N)\hat{\mathbf i}\\
 &\quad+(84\,\mu\mathrm N)\hat{\mathbf i}\\
-&=(-28\,\mu\mathrm N)\hat{\mathbf i}.
+&\quad =(-28\,\mu\mathrm N)\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -241,10 +232,10 @@ Hai điện tích dương bằng nhau $q_1=q_2=2.0\,\mu\mathrm C$ ở $(0,0.30\,
 
 $$
 \begin{aligned}
-F_{1\to Q}&=F_{2\to Q}\\
-&=9.0\times10^9\\
+&F_{1\to Q} = F_{2\to Q}\\
+&\quad =9.0\times10^9\\
 &\quad\times\frac{(4.0)(2.0)10^{-12}}{(0.50)^2}\,\mathrm N\\
-&\approx0.29\,\mathrm N.
+&\quad \approx0.29\,\mathrm N.
 \end{aligned}
 $$
 
@@ -252,12 +243,12 @@ Góc $\alpha$ của mỗi lực với trục ngang thỏa $\cos\alpha=0.40/0.50$
 
 $$
 \begin{aligned}
-F_{1x}&=F_{2x}\\
-&=(0.29\,\mathrm N)\frac{0.40}{0.50}\\
-&\approx0.23\,\mathrm N,\\
-F_y&=0,\\
-F_x&=0.23\,\mathrm N+0.23\,\mathrm N\\
-&=0.46\,\mathrm N.
+&F_{1x} = F_{2x}\\
+&\quad =(0.29\,\mathrm N)\frac{0.40}{0.50}\\
+&\quad \approx0.23\,\mathrm N,\\
+&F_y = 0,\\
+&F_x = 0.23\,\mathrm N+0.23\,\mathrm N\\
+&\quad =0.46\,\mathrm N.
 \end{aligned}
 $$
 

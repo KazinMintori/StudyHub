@@ -1384,7 +1384,7 @@ export const physics2Course = {
         "Nguồn thử dương chịu lực cùng chiều trường, nguồn thử âm chịu lực ngược chiều.",
         "Vector đơn vị trong trường nguồn điểm hướng từ nguồn đến điểm khảo sát."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec F_0&=q_0\\vec E,\\\\\n\\vec E&=\\frac{kq}{r^2}\\hat{\\mathbf r}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec F_0 =q_0\\vec E,\\\\\n&\\vec E =\\frac{kq}{r^2}\\hat{\\mathbf r}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1395,7 +1395,7 @@ export const physics2Course = {
         "Chia nguồn liên tục thành phần nhỏ rồi tích phân vector trường.",
         "Cận tích phân phủ toàn nguồn và không đếm một phần nguồn hai lần."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec E&=\\vec E_1+\\vec E_2+\\cdots+\\vec E_n\\\\\n&=\\sum_{i=1}^{n}\\vec E_i.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec E = \\vec E_1+\\vec E_2+\\cdots+\\vec E_n,\\\\\n&\\vec E = \\sum_{i=1}^{n}\\vec E_i.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1417,7 +1417,7 @@ export const physics2Course = {
         "Trong trường đều, hai lực bù nhau nhưng có thể tạo mômen.",
         "Cùng chiều trường là cân bằng bền, ngược chiều là không bền."
       ],
-      "formula": "$$\n\\begin{aligned}\np&=qd,\\\\\n\\vec\\tau&=\\vec p\\times\\vec E,\\\\\nU&=-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&p =qd,\\\\\n&\\vec\\tau =\\vec p\\times\\vec E,\\\\\n&U =-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1450,7 +1450,7 @@ export const physics2Course = {
         "Trường trong tích phân là trường của cả nguồn trong và ngoài.",
         "Nguồn ngoài không đóng góp điện thông tổng qua mặt kín."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\Phi_E&=\\oint\\vec E\\cdot d\\vec A\\\\\n&=\\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\Phi_E = \\oint\\vec E\\cdot d\\vec A,\\\\\n&\\Phi_E = \\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1472,7 +1472,7 @@ export const physics2Course = {
         "Trong cầu cách điện đều theo thể tích, trường tăng tuyến tính theo bán kính.",
         "Trường ngoài của hai phân bố cầu cùng tổng điện tích giống nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_{\\mathrm{trong}}&=\\frac{k|Q|r}{R^3},\\quad r<R,\\\\\nE_{\\mathrm{ngoai}}&=\\frac{k|Q|}{r^2},\\quad r>R.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&E_{\\mathrm{trong}} =\\frac{k|Q|r}{R^3},\\quad r<R,\\\\\n&E_{\\mathrm{ngoai}} =\\frac{k|Q|}{r^2},\\quad r>R.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1483,7 +1483,7 @@ export const physics2Course = {
         "Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q.",
         "Ngay ngoài mặt dẫn, trường vuông góc mặt."
       ],
-      "formula": "$$\n\\begin{aligned}\nQ_{\\mathrm{trong}}&=-q,\\\\\nQ_{\\mathrm{ngoai}}&=q_C+q,\\\\\nE_\\perp&=\\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&Q_{\\mathrm{trong}} =-q,\\\\\n&Q_{\\mathrm{ngoai}} =q_C+q,\\\\\n&E_\\perp =\\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1494,7 +1494,7 @@ export const physics2Course = {
         "Thế năng thuộc hệ các điện tích và phụ thuộc mốc được chọn.",
         "Nếu chỉ lực điện sinh công thì động năng cộng thế năng được bảo toàn."
       ],
-      "formula": "$$\n\\begin{aligned}\nW_{a\\to b}&=U_a-U_b,\\\\\nK_a+U_a&=K_b+U_b.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&W_{a\\to b} =U_a-U_b,\\\\\n&K_a+U_a =K_b+U_b.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1505,7 +1505,7 @@ export const physics2Course = {
         "Công thêm một nguồn vào hệ chỉ tính các cặp liên quan nguồn mới.",
         "Mốc bằng không khi mọi nguồn ở xa vô hạn phù hợp hệ nguồn hữu hạn."
       ],
-      "formula": "$$\n\\begin{aligned}\nU_{123}&=\\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}\\\\\n&\\quad+\\frac{kq_2q_3}{r_{23}},\\\\\nU&=k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&U_{123} =\\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}\\\\\n&\\quad+\\frac{kq_2q_3}{r_{23}},\\\\\n&U =k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1516,7 +1516,7 @@ export const physics2Course = {
         "Hiệu điện thế cho công lực điện trên mỗi coulomb.",
         "Điện thế cao không luôn tương ứng thế năng cao vì điện tích thử có thể âm."
       ],
-      "formula": "$$\n\\begin{aligned}\nV&=\\frac{U}{q_0},\\\\\nW_{a\\to b}&=q_0(V_a-V_b),\\\\\n1\\,\\mathrm V&=1\\,\\mathrm{J/C}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&V =\\frac{U}{q_0},\\\\\n&W_{a\\to b} =q_0(V_a-V_b),\\\\\n&1\\,\\mathrm V =1\\,\\mathrm{J/C}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1527,7 +1527,7 @@ export const physics2Course = {
         "Phân bố liên tục được chia thành các phần dq.",
         "Nguồn kéo dài vô hạn thường cần mốc hữu hạn thay cho vô hạn."
       ],
-      "formula": "$$\n\\begin{aligned}\nV&=k\\int \\frac{dq}{r},\\\\\nV_a-V_b&=\\int_a^b\\vec E\\cdot d\\vec\\ell.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&V =k\\int \\frac{dq}{r},\\\\\n&V_a-V_b =\\int_a^b\\vec E\\cdot d\\vec\\ell.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1549,7 +1549,7 @@ export const physics2Course = {
         "Trường hướng về phía điện thế giảm nhanh nhất.",
         "Cộng một hằng số vào điện thế không thay đổi điện trường."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_x&=-\\frac{\\partial V}{\\partial x},\\\\\nE_y&=-\\frac{\\partial V}{\\partial y},\\\\\nE_z&=-\\frac{\\partial V}{\\partial z},\\\\\n\\vec E&=-\\nabla V.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&E_x =-\\frac{\\partial V}{\\partial x},\\\\\n&E_y =-\\frac{\\partial V}{\\partial y},\\\\\n&E_z =-\\frac{\\partial V}{\\partial z},\\\\\n&\\vec E =-\\nabla V.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1560,7 +1560,7 @@ export const physics2Course = {
         "Hiệu điện thế được lấy từ bản dương đến bản âm.",
         "Với hình học và điện môi tuyến tính giữ nguyên, tăng Q làm V tăng cùng tỉ lệ."
       ],
-      "formula": "$$\n\\begin{aligned}\nC&=\\frac{Q}{V_{ab}},\\\\\n1\\,\\mathrm F&=1\\,\\mathrm{C/V}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&C =\\frac{Q}{V_{ab}},\\\\\n&1\\,\\mathrm F =1\\,\\mathrm{C/V}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1571,7 +1571,7 @@ export const physics2Course = {
         "Tích phân trường từ bản dương đến bản âm để tính hiệu điện thế.",
         "Trong tụ phẳng, chỉ bỏ hiệu ứng mép khi khe nhỏ so với kích thước bản."
       ],
-      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\int_a^b\\vec E\\cdot d\\vec\\ell,\\\\\nC_0&=\\frac{\\varepsilon_0 A}{d}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&V_{ab} =\\int_a^b\\vec E\\cdot d\\vec\\ell,\\\\\n&C_0 =\\frac{\\varepsilon_0 A}{d}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1582,7 +1582,7 @@ export const physics2Course = {
         "Ở chuỗi ấy, độ lớn điện tích trên mọi tụ bằng nhau và các điện áp cộng.",
         "Các nhánh song song nối cùng hai nút nên có cùng điện áp."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\frac1{C_s}&=\\frac1{C_1}+\\frac1{C_2}+\\frac1{C_3},\\\\\nC_p&=C_1+C_2+C_3.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\frac1{C_s} =\\frac1{C_1}+\\frac1{C_2}+\\frac1{C_3},\\\\\n&C_p =C_1+C_2+C_3.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1593,7 +1593,7 @@ export const physics2Course = {
         "Ba biểu thức năng lượng là các cách viết tương đương cho tụ tuyến tính.",
         "Năng lượng điện trường và thế năng của tụ là cùng một năng lượng."
       ],
-      "formula": "$$\n\\begin{aligned}\nU&=\\frac{Q^2}{2C}=\\frac12 CV^2,\\\\\nU&=\\frac12 QV,\\\\\nu_0&=\\frac12\\varepsilon_0 E^2.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&U =\\frac{Q^2}{2C}=\\frac12 CV^2,\\\\\n&U =\\frac12 QV,\\\\\n&u_0 =\\frac12\\varepsilon_0 E^2.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1604,7 +1604,7 @@ export const physics2Course = {
         "Điện môi tuyến tính đồng nhất lấp toàn khe làm điện dung tăng K lần.",
         "Giữ điện tích tự do thì trường và điện áp giảm K lần."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\varepsilon&=K\\varepsilon_0,\\\\\nC&=KC_0,\\\\\nE&=E_0/K,\\quad Q=Q_0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\varepsilon =K\\varepsilon_0,\\\\\n&C =KC_0,\\\\\n&E =E_0/K,\\quad Q=Q_0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1615,7 +1615,7 @@ export const physics2Course = {
         "Phân tử phân cực có lưỡng cực thường trực và chịu mômen định hướng.",
         "Trong vật liệu trung hòa, các điện tích liên kết trong thể tích có thể bù nhau, còn ở mặt ngoài thì không."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec\\tau&=\\vec p\\times\\vec E,\\\\\nU_{\\mathrm{dipole}}&=-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec\\tau =\\vec p\\times\\vec E,\\\\\n&U_{\\mathrm{dipole}} =-\\vec p\\cdot\\vec E.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1626,7 +1626,7 @@ export const physics2Course = {
         "Giữ nguồn lý tưởng thì điện áp giữ nguyên và nguồn chuyển thêm điện tích.",
         "Độ bền điện môi đặt giới hạn trường mà mô hình cách điện còn dùng được."
       ],
-      "formula": "$$\n\\begin{aligned}\nU_Q&=U_0/K,\\quad Q=Q_0,\\\\\nU_V&=KU_0,\\quad V=V_0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&U_Q =U_0/K,\\quad Q=Q_0,\\\\\n&U_V =KU_0,\\quad V=V_0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1637,7 +1637,7 @@ export const physics2Course = {
         "Dạng cải biên giữ K trong tích phân nếu vật liệu thay đổi trên mặt Gauss.",
         "Mật độ năng lượng trong điện môi dùng điện trường thực và độ điện thẩm của vật liệu."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\oint_S K\\vec E\\cdot d\\vec A&=\\frac{Q_{\\mathrm{free}}}{\\varepsilon_0},\\\\\nu&=\\frac12\\varepsilon E^2.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\oint_S K\\vec E\\cdot d\\vec A =\\frac{Q_{\\mathrm{free}}}{\\varepsilon_0},\\\\\n&u =\\frac12\\varepsilon E^2.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1648,7 +1648,7 @@ export const physics2Course = {
         "Electron trôi ngược chiều dòng quy ước trong kim loại.",
         "Dòng ổn định trong một vòng không bị bóng đèn hoặc điện trở tiêu thụ."
       ],
-      "formula": "$$\n\\begin{aligned}\nI&=\\frac{dQ}{dt},\\\\\n1\\,\\mathrm A&=1\\,\\mathrm{C/s}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&I =\\frac{dQ}{dt},\\\\\n&1\\,\\mathrm A =1\\,\\mathrm{C/s}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1659,7 +1659,7 @@ export const physics2Course = {
         "Cùng một dòng qua dây to và dây nhỏ có thể cho mật độ dòng khác nhau.",
         "Điện tích âm và vận tốc trôi ngược trường vẫn cho mật độ dòng cùng chiều trường."
       ],
-      "formula": "$$\n\\begin{aligned}\nI&=n|q|v_dA,\\\\\nJ&=I/A,\\\\\n\\vec J&=nq\\vec v_d.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&I =n|q|v_dA,\\\\\n&J =I/A,\\\\\n&\\vec J =nq\\vec v_d.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1670,7 +1670,7 @@ export const physics2Course = {
         "Vật liệu Ohm có điện trở suất không đổi theo độ lớn trường trong miền xét.",
         "Hệ số nhiệt cần dùng trong khoảng nhiệt độ mà gần đúng tuyến tính còn phù hợp."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\rho&=E/J,\\\\\n\\sigma&=1/\\rho,\\\\\n\\rho(T)&\\approx\\rho_0[1+\\alpha(T-T_0)].\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\rho =E/J,\\\\\n&\\sigma =1/\\rho,\\\\\n&\\rho(T) \\approx\\rho_0[1+\\alpha(T-T_0)].\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1681,7 +1681,7 @@ export const physics2Course = {
         "Định nghĩa R = V/I không tự khẳng định định luật Ohm.",
         "Muốn V tỉ lệ I phải giữ R không đổi trong điều kiện khảo sát."
       ],
-      "formula": "$$\n\\begin{aligned}\nR&=\\frac{\\rho L}{A},\\\\\nV&=IR,\\\\\n1\\,\\Omega&=1\\,\\mathrm{V/A}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R =\\frac{\\rho L}{A},\\\\\n&V =IR,\\\\\n&1\\,\\Omega =1\\,\\mathrm{V/A}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1692,7 +1692,7 @@ export const physics2Course = {
         "Suất điện động có đơn vị volt và không phải lực cơ học.",
         "Nguồn thực có điện trở trong, nên điện áp hai cực phụ thuộc tải."
       ],
-      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\mathcal E-Ir,\\\\\nI&=\\frac{\\mathcal E}{R+r}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&V_{ab} =\\mathcal E-Ir,\\\\\n&I =\\frac{\\mathcal E}{R+r}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1703,7 +1703,7 @@ export const physics2Course = {
         "Vôn kế lý tưởng có điện trở vô hạn, mắc song song giữa hai điểm cần đo.",
         "Mạch hở và ngắn mạch có điện áp, dòng điện rất khác nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nI_{\\mathrm{oc}}&=0,\\\\\nV_{\\mathrm{oc}}&=\\mathcal E,\\\\\nI_{\\mathrm{sc}}&=\\mathcal E/r,\\\\\nV_{\\mathrm{sc}}&=0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&I_{\\mathrm{oc}} =0,\\\\\n&V_{\\mathrm{oc}} =\\mathcal E,\\\\\n&I_{\\mathrm{sc}} =\\mathcal E/r,\\\\\n&V_{\\mathrm{sc}} =0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1714,7 +1714,7 @@ export const physics2Course = {
         "Điện trở nhận điện năng rồi chuyển hóa thành nhiệt hoặc các dạng khác.",
         "Nguồn phát điện có phần chuyển hóa và phần hao trong điện trở trong."
       ],
-      "formula": "$$\n\\begin{aligned}\nP&=V_{ab}I,\\\\\nP_R&=I^2R,\\\\\nP_{\\mathrm{ra}}&=\\mathcal EI-I^2r.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&P =V_{ab}I,\\\\\n&P_R =I^2R,\\\\\n&P_{\\mathrm{ra}} =\\mathcal EI-I^2r.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1725,7 +1725,7 @@ export const physics2Course = {
         "Độ trôi có hướng rất nhỏ so với chuyển động ngẫu nhiên.",
         "Mô hình dự đoán điện trở suất không đổi theo trường khi n và τ không đổi theo trường."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec v_d&=\\frac{q\\tau}{m}\\vec E,\\\\\n\\rho&=\\frac{m}{ne^2\\tau}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec v_d =\\frac{q\\tau}{m}\\vec E,\\\\\n&\\rho =\\frac{m}{ne^2\\tau}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1736,7 +1736,7 @@ export const physics2Course = {
         "Song song nối vào cùng hai nút nên các hiệu điện thế bằng nhau.",
         "Điện trở tương đương giữ nguyên quan hệ dòng và điện áp nhìn từ hai đầu tổ hợp."
       ],
-      "formula": "$$\n\\begin{aligned}\nR_s&=R_1+R_2,\\\\\n\\frac1{R_p}&=\\frac1{R_1}+\\frac1{R_2},\\\\\nR_p&=\\frac{R_1R_2}{R_1+R_2}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R_s =R_1+R_2,\\\\\n&\\frac1{R_p} =\\frac1{R_1}+\\frac1{R_2},\\\\\n&R_p =\\frac{R_1R_2}{R_1+R_2}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1747,7 +1747,7 @@ export const physics2Course = {
         "Dòng vào và dòng ra được gán dấu trái nhau trong phương trình nút.",
         "Kết quả dòng âm chỉ ra chiều thực ngược với chiều giả định."
       ],
-      "formula": "$$\n\\begin{aligned}\nI_1+I_2-I_3&=0,\\\\\nI_1+I_2&=I_3.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&I_1+I_2-I_3 =0,\\\\\n&I_1+I_2 =I_3.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1758,7 +1758,7 @@ export const physics2Course = {
         "Qua nguồn từ cực âm đến cực dương cho +ℰ, ngược lại cho −ℰ.",
         "Chiều duyệt vòng do người giải chọn và không buộc trùng chiều dòng."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\Delta V_1+\\Delta V_2+\\Delta V_3&=0,\\\\\n\\mathcal E-IR_1-IR_2&=0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\Delta V_1+\\Delta V_2+\\Delta V_3 =0,\\\\\n&\\mathcal E-IR_1-IR_2 =0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1769,7 +1769,7 @@ export const physics2Course = {
         "Điện trở rẽ song song cho phép đo dòng lớn hơn dòng toàn thang của cuộn.",
         "Điện trở nối tiếp cho phép đo điện áp lớn hơn điện áp toàn thang của cuộn."
       ],
-      "formula": "$$\n\\begin{aligned}\nR_{\\mathrm{sh}}&=\\frac{I_GR_G}{I-I_G},\\\\\nR_s&=\\frac{V}{I_G}-R_G.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R_{\\mathrm{sh}} =\\frac{I_GR_G}{I-I_G},\\\\\n&R_s =\\frac{V}{I_G}-R_G.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1780,7 +1780,7 @@ export const physics2Course = {
         "Vôn kế mắc song song và có điện trở lớn.",
         "Chiết áp cân bằng đo suất điện động mà không lấy dòng từ nguồn cần đo ở điểm cân bằng."
       ],
-      "formula": "$$\n\\begin{aligned}\nR_A&\\to0,\\\\\nR_V&\\to\\infty,\\\\\nI_G&=0\\quad\\text{(cân bằng)}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R_A&\\to0,\\\\\n&R_V&\\to\\infty,\\\\\n&I_G =0\\quad\\text{(cân bằng)}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1791,7 +1791,7 @@ export const physics2Course = {
         "Điện tích liên tục nên tụ chưa có điện áp ngay khi đóng công tắc.",
         "Khi thời gian đủ dài, dòng bằng không và điện áp tụ bằng suất điện động nguồn."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\tau&=RC,\\\\\nq(t)&=C\\mathcal E(1-e^{-t/\\tau}),\\\\\ni(t)&=\\frac{\\mathcal E}{R}e^{-t/\\tau}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\tau =RC,\\\\\n&q(t) =C\\mathcal E(1-e^{-t/\\tau}),\\\\\n&i(t) =\\frac{\\mathcal E}{R}e^{-t/\\tau}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1802,7 +1802,7 @@ export const physics2Course = {
         "Dấu âm của dòng dùng chiều nạp làm chiều dương.",
         "Năng lượng giảm với thời gian đặc trưng RC/2, khác thời gian giảm điện tích RC."
       ],
-      "formula": "$$\n\\begin{aligned}\nq(t)&=Q_0e^{-t/\\tau},\\\\\ni(t)&=-\\frac{Q_0}{\\tau}e^{-t/\\tau},\\\\\nU(t)&=\\frac{Q_0^2}{2C}e^{-2t/\\tau}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&q(t) =Q_0e^{-t/\\tau},\\\\\n&i(t) =-\\frac{Q_0}{\\tau}e^{-t/\\tau},\\\\\n&U(t) =\\frac{Q_0^2}{2C}e^{-2t/\\tau}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1813,7 +1813,7 @@ export const physics2Course = {
         "Cầu chì và bộ ngắt bảo vệ mạch trước dòng quá mức.",
         "Dây bảo vệ và thiết bị ngắt do chênh dòng có chức năng khác bảo vệ quá dòng."
       ],
-      "formula": "$$\n\\begin{aligned}\nI&=I_1+I_2\\\\\n&\\quad+\\cdots+I_n,\\\\\nP&=VI,\\\\\n1\\,\\mathrm{kW\\cdot h}&=3.60\\,\\mathrm{MJ},\\\\\n1\\,\\mathrm{MJ}&=10^6\\,\\mathrm J.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&I =I_1+I_2\\\\\n&\\quad+\\cdots+I_n,\\\\\n&P =VI,\\\\\n&1\\,\\mathrm{kW\\cdot h} =3.60\\,\\mathrm{MJ},\\\\\n&1\\,\\mathrm{MJ} =10^6\\,\\mathrm J.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1835,7 +1835,7 @@ export const physics2Course = {
         "Vận tốc song song hoặc ngược song song trường cho lực bằng không.",
         "Lực từ không sinh công lên hạt vì vuông góc vận tốc tức thời."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec F&=q\\vec v\\times\\vec B,\\\\\nF&=|q|vB\\sin\\phi,\\\\\n\\vec F\\cdot\\vec v&=0.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec F =q\\vec v\\times\\vec B,\\\\\n&F =|q|vB\\sin\\phi,\\\\\n&\\vec F\\cdot\\vec v =0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1857,7 +1857,7 @@ export const physics2Course = {
         "Mặt kín dùng pháp tuyến hướng ra ngoài, mặt hở cần chọn một hướng nhất quán.",
         "Công thức BA cosφ dùng mặt phẳng và từ trường đều trên mặt."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\Phi_B&=\\int\\vec B\\cdot d\\vec A,\\\\\n\\Phi_B&=BA\\cos\\phi,\\\\\n1\\,\\mathrm{Wb}&=1\\,\\mathrm{T\\cdot m^2}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\Phi_B =\\int\\vec B\\cdot d\\vec A,\\\\\n&\\Phi_B =BA\\cos\\phi,\\\\\n&1\\,\\mathrm{Wb} =1\\,\\mathrm{T\\cdot m^2}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1868,7 +1868,7 @@ export const physics2Course = {
         "Thành phần song song trường giữ không đổi và tạo bước xoắn.",
         "Các công thức dùng khối lượng không đổi trong mô hình không tương đối tính."
       ],
-      "formula": "$$\n\\begin{aligned}\nR&=\\frac{mv_\\perp}{|q|B},\\\\\n\\omega&=\\frac{|q|B}{m},\\\\\nT&=\\frac{2\\pi m}{|q|B},\\\\\np&=v_\\parallel T.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R =\\frac{mv_\\perp}{|q|B},\\\\\n&\\omega =\\frac{|q|B}{m},\\\\\n&T =\\frac{2\\pi m}{|q|B},\\\\\n&p =v_\\parallel T.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1879,7 +1879,7 @@ export const physics2Course = {
         "Chỉ vận tốc có hướng và độ lớn phù hợp mới đi thẳng qua vùng chọn.",
         "Hạt nhanh hơn hoặc chậm hơn bị lệch theo các chiều khác nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nq\\vec E+q\\vec v\\times\\vec B&=0,\\\\\nv&=E/B.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&q\\vec E+q\\vec v\\times\\vec B =0,\\\\\n&v =E/B.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1890,7 +1890,7 @@ export const physics2Course = {
         "Trường phân tích bẻ quỹ đạo, bán kính phụ thuộc khối lượng trên độ lớn điện tích.",
         "Hai bán kính khác nhau đưa các đồng vị đến các vị trí khác nhau."
       ],
-      "formula": "$$\n\\begin{aligned}\nR&=\\frac{mv}{|q|B'},\\\\\n\\frac m{|q|}&=\\frac{BB'R}{E}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R =\\frac{mv}{|q|B'},\\\\\n&\\frac m{|q|} =\\frac{BB'R}{E}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1901,7 +1901,7 @@ export const physics2Course = {
         "Dây thẳng trong trường đều có thể dùng lực của cả đoạn.",
         "Dây cong hoặc trường không đều cần cộng vector lực từng phần tử."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec F&=I\\vec l\\times\\vec B,\\\\\nd\\vec F&=I\\,d\\vec l\\times\\vec B.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec F =I\\vec l\\times\\vec B,\\\\\n&d\\vec F =I\\,d\\vec l\\times\\vec B.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1912,7 +1912,7 @@ export const physics2Course = {
         "Quy tắc bàn tay phải cho hướng mômen từ theo chiều dòng.",
         "Cuộn N vòng cùng hình học và hướng làm mômen từ tăng N lần."
       ],
-      "formula": "$$\n\\begin{aligned}\n\\vec\\mu&=NI\\vec A,\\\\\n\\vec\\tau&=\\vec\\mu\\times\\vec B.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&\\vec\\mu =NI\\vec A,\\\\\n&\\vec\\tau =\\vec\\mu\\times\\vec B.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1923,7 +1923,7 @@ export const physics2Course = {
         "Cùng chiều là cân bằng bền, ngược chiều là cân bằng không bền.",
         "Trong trường không đều, vòng còn có thể chịu lực tổng hướng về hoặc ra xa vùng trường mạnh."
       ],
-      "formula": "$$\n\\begin{aligned}\nU&=-\\vec\\mu\\cdot\\vec B,\\\\\nU&=-\\mu B\\cos\\phi.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&U =-\\vec\\mu\\cdot\\vec B,\\\\\n&U =-\\mu B\\cos\\phi.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1934,7 +1934,7 @@ export const physics2Course = {
         "Suất phản điện động tăng theo tốc độ khi cấu hình và từ trường giữ nguyên.",
         "Rôto dừng làm suất phản điện động mất đi, nên dòng tăng mạnh trong mô hình nguồn và điện trở cố định."
       ],
-      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\mathcal E+Ir,\\\\\nP_{\\mathrm{in}}&=V_{ab}I,\\\\\nP_{\\mathrm{mech}}&=\\mathcal EI,\\\\\nP_r&=I^2r.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&V_{ab} =\\mathcal E+Ir,\\\\\n&P_{\\mathrm{in}} =V_{ab}I,\\\\\n&P_{\\mathrm{mech}} =\\mathcal EI,\\\\\n&P_r =I^2r.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -1945,7 +1945,7 @@ export const physics2Course = {
         "Ở cân bằng, lực điện ngang chống lại lực từ.",
         "Cực tính Hall cho dấu hạt tải, còn độ lớn giúp suy mật độ trong mô hình thích hợp."
       ],
-      "formula": "$$\n\\begin{aligned}\nE_z&=-v_xB_y,\\\\\nJ_x&=nqv_x,\\\\\nnq&=-\\frac{J_xB_y}{E_z}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&E_z =-v_xB_y,\\\\\n&J_x =nqv_x,\\\\\n&nq =-\\frac{J_xB_y}{E_z}.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -2026,7 +2026,7 @@ export const physics2Course = {
         "Bên ngoài, đường tích phân bao toàn bộ dòng.",
         "Độ lớn trường liên tục tại mặt trụ trong mô hình phân bố đều."
       ],
-      "formula": "$$\n\\begin{aligned}&B(r) = \\frac{\\mu_0 I r}{2\\pi R^2},\\quad r<R\\\\&B(r) = \\frac{\\mu_0 I}{2\\pi r},\\quad r\\ge R.\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}\n&B(r) = \\frac{\\mu_0 I r}{2\\pi R^2},\\quad r<R\\\\\n&B(r) = \\frac{\\mu_0 I}{2\\pi r},\\quad r\\ge R.\n\\end{aligned}\n$$"
     },
     {
       "note": "08-nguon-tu-truong",
@@ -2036,7 +2036,7 @@ export const physics2Course = {
         "Trong lõi xuyến, trường phụ thuộc bán kính tính từ trục xuyến.",
         "Các kết quả là gần đúng hình học và giả thiết môi trường không từ tính."
       ],
-      "formula": "$$\n\\begin{aligned}&B_{\\text{ống dây}} \\approx \\mu_0 nI\\\\&B_{\\text{xuyến}}(r) = \\frac{\\mu_0 NI}{2\\pi r}.\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}\n&B_{\\text{ống dây}} \\approx \\mu_0 nI\\\\\n&B_{\\text{xuyến}}(r) = \\frac{\\mu_0 NI}{2\\pi r}.\n\\end{aligned}\n$$"
     },
     {
       "note": "08-nguon-tu-truong",
@@ -2046,7 +2046,7 @@ export const physics2Course = {
         "Trong vật liệu tuyến tính đẳng hướng, độ từ thẩm tương đối liên hệ với độ cảm từ.",
         "Không dùng quan hệ tuyến tính như hằng số vật liệu sắt từ khi vật liệu bão hòa hoặc có từ trễ."
       ],
-      "formula": "$$\n\\begin{aligned}&\\vec B = \\vec B_0+\\mu_0\\vec M\\\\&\\mu = K_m\\mu_0\\\\&\\chi_m = K_m-1.\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}\n&\\vec B = \\vec B_0+\\mu_0\\vec M\\\\\n&\\mu = K_m\\mu_0\\\\\n&\\chi_m = K_m-1.\n\\end{aligned}\n$$"
     },
     {
       "note": "08-nguon-tu-truong",

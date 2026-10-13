@@ -23,7 +23,7 @@ Công lực điện bằng độ giảm thế năng, còn công lực ngoài khi
 
 $$
 \begin{aligned}
-U_{123}&=\frac{kq_1q_2}{r_{12}}\\
+&U_{123} = \frac{kq_1q_2}{r_{12}}\\
 &\quad+\frac{kq_1q_3}{r_{13}}\\
 &\quad+\frac{kq_2q_3}{r_{23}}.
 \end{aligned}

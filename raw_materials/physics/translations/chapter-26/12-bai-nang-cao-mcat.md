@@ -21,9 +21,9 @@ Thiết bị ba cực trong Hình P26.81 là transistor NPN. Nó tuân theo ba q
 
 $$
 \begin{aligned}
-I_E&=\frac{V_{in}-0{,}60}{100\,\Omega},\\
-V_{out}&=15{,}0\,\mathrm{V}-(1{,}00\,\mathrm{k\Omega})I_E\\
-&=21{,}0\,\mathrm{V}-10V_{in}.
+&I_E = \frac{V_{in}-0{,}60}{100\,\Omega},\\
+&V_{out} = 15{,}0\,\mathrm{V}-(1{,}00\,\mathrm{k\Omega})I_E\\
+&\quad =21{,}0\,\mathrm{V}-10V_{in}.
 \end{aligned}
 $$
 
@@ -49,8 +49,8 @@ Trong mạch Hình P26.82, công tắc $S$ đã đóng từ lâu. (a) Tìm đi�
 
 $$
 \begin{aligned}
-\tau_{nạp}&=4RC,\\
-\tau_{phóng}&=(R\parallel4R)C=\frac45RC.
+&\tau_{nạp} = 4RC,\\
+&\tau_{phóng} = (R\parallel4R)C=\frac45RC.
 \end{aligned}
 $$
 
@@ -87,14 +87,14 @@ Gợi ý: Vì mạng kéo dài vô hạn, phần mạng bên phải hai điểm 
 Gọi $x$ là điện trở nhìn vào mạng từ hai điểm $c,d$. Tự đồng dạng cho $x=R_2\parallel(2R_1+x)$, còn điện trở toàn phần là $R_T=2R_1+x$:
 
 $$
-\begin{gathered}
-xR_2+2R_1x+x^2\\
-=2R_1R_2+R_2x,\\
-x^2+2R_1x=2R_1R_2,\\
-D^2=R_1^2+2R_1R_2,\\
-x+R_1=D,\\
-R_T=2R_1+x=R_1+D.
-\end{gathered}
+\begin{aligned}
+&xR_2+2R_1x+x^2\\
+&\quad =2R_1R_2+R_2x,\\
+&x^2+2R_1x=2R_1R_2,\\
+&D^2=R_1^2+2R_1R_2,\\
+&x+R_1=D,\\
+&R_T=2R_1+x=R_1+D.
+\end{aligned}
 $$
 :::
 
@@ -137,12 +137,12 @@ $$
 
 $$
 \begin{aligned}
-R_L&=R_2\parallel R_T,\\
-\frac{V_{cd}}{V_{ab}}&=\frac{R_L}{2R_1+R_L}\\
-&=\frac{1}{1+2R_1/R_L},\\
-\frac{2R_1}{R_L}&=2R_1\left(\frac1{R_2}+\frac1{R_T}\right)\\
-&=\beta,\\
-\frac{V_{cd}}{V_{ab}}&=\frac{1}{1+\beta}.
+&R_L = R_2\parallel R_T,\\
+&\frac{V_{cd}}{V_{ab}} = \frac{R_L}{2R_1+R_L}\\
+&\quad =\frac{1}{1+2R_1/R_L},\\
+&\frac{2R_1}{R_L} = 2R_1\left(\frac1{R_2}+\frac1{R_T}\right)\\
+&\quad =\beta,\\
+&\frac{V_{cd}}{V_{ab}} = \frac{1}{1+\beta}.
 \end{aligned}
 $$
 
@@ -160,10 +160,10 @@ Khi $R_1=R_2=R$, bài 26.83 cho $R_T=(1+\sqrt3)R$, nên $\beta=2(R_T+R)/R_T=2{,}
 
 $$
 \begin{aligned}
-\frac{V_{2000}}{V_0}&=(1+\beta)^{-2000}\\
-&\approx3{,}4\times10^{-4},\\
-1-\frac{V_{2000}}{V_0}&\approx0{,}99966\\
-&=99{,}966\%.
+&\frac{V_{2000}}{V_0} = (1+\beta)^{-2000}\\
+&\quad \approx3{,}4\times10^{-4},\\
+&1-\frac{V_{2000}}{V_0} \approx 0{,}99966\\
+&\quad =99{,}966\%.
 \end{aligned}
 $$
 
@@ -171,10 +171,10 @@ $$
 
 $$
 \begin{aligned}
-\frac{V_{2000}}{V_0}&=(1+\beta)^{-2000}\\
-&\approx0{,}883,\\
-1-\frac{V_{2000}}{V_0}&\approx0{,}117\\
-&=11{,}7\%.
+&\frac{V_{2000}}{V_0} = (1+\beta)^{-2000}\\
+&\quad \approx0{,}883,\\
+&1-\frac{V_{2000}}{V_0} \approx 0{,}117\\
+&\quad =11{,}7\%.
 \end{aligned}
 $$
 
@@ -199,9 +199,9 @@ Một kênh ion mở điển hình xuyên màng có điện trở $1\times10^{11
 
 $$
 \begin{aligned}
-\rho&=\frac{RA}{L}\\
-&=\frac{(1\times10^{11})\pi(0{,}3\times10^{-9})^2}{12\times10^{-9}}\\
-&=2{,}36\,\Omega\,\mathrm{m}.
+&\rho = \frac{RA}{L}\\
+&\quad =\frac{(1\times10^{11})\pi(0{,}3\times10^{-9})^2}{12\times10^{-9}}\\
+&\quad =2{,}36\,\Omega\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -223,11 +223,11 @@ Trong mô hình đơn giản của xung thần kinh, ion đi qua màng qua các 
 
 $$
 \begin{aligned}
-i_{\mathrm{ch}}&=0{,}050/(1\times10^{11})\\
-&=5{,}0\times10^{-13}\,\mathrm{A},\\
-n&=\frac{5\times10^{-3}\,\mathrm{A/cm^2}}{5\times10^{-13}\,\mathrm{A}}\\
-&=1\times10^{10}\,\mathrm{cm^{-2}}\\
-&=100\,\mathrm{\mu m^{-2}}.
+&i_{\mathrm{ch}} = 0{,}050/(1\times10^{11})\\
+&\quad =5{,}0\times10^{-13}\,\mathrm{A},\\
+&n = \frac{5\times10^{-3}\,\mathrm{A/cm^2}}{5\times10^{-13}\,\mathrm{A}}\\
+&\quad =1\times10^{10}\,\mathrm{cm^{-2}}\\
+&\quad =100\,\mathrm{\mu m^{-2}}.
 \end{aligned}
 $$
 
@@ -249,9 +249,9 @@ Màng tế bào ở nhiều sinh vật có điện dung trên đơn vị diện 
 
 $$
 \begin{aligned}
-\tau&=\frac{C_A}{G_A}\\
-&=\frac{1\times10^{-6}}{0{,}1}\\
-&=1\times10^{-5}\,\mathrm{s}.
+&\tau = \frac{C_A}{G_A}\\
+&\quad =\frac{1\times10^{-6}}{0{,}1}\\
+&\quad =1\times10^{-5}\,\mathrm{s}.
 \end{aligned}
 $$
 

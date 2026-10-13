@@ -51,9 +51,9 @@ $$
 Ta khai triển hàm mục tiêu:
 $$
 \begin{aligned}
-f(w) &= \frac{1}{2} \left[ (1w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] \\
-&= \frac{1}{2} \left[ (w^2 - 2w + 1) + (4w^2 - 8w + 4) + (9w^2 - 12w + 4) \right] \\
-&= \frac{1}{2} \left( 14w^2 - 22w + 9 \right) = 7w^2 - 11w + \frac{9}{2}.
+&f(w) = \frac{1}{2} \left[ (1w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right]\\
+&\quad = \frac{1}{2} \left[ (w^2 - 2w + 1) + (4w^2 - 8w + 4) + (9w^2 - 12w + 4) \right]\\
+&\quad = \frac{1}{2} \left( 14w^2 - 22w + 9 \right) = 7w^2 - 11w + \frac{9}{2}.
 \end{aligned}
 $$
 

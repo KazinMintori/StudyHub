@@ -72,9 +72,9 @@ Tổng quát, 1/C_s bằng tổng các nghịch đảo 1/Cᵢ, từ i = 1 đến
 
 $$
 \begin{aligned}
-U&=\frac{Q^2}{2C},\\
-&=\frac12 CV^2,\\
-&=\frac12 QV.
+&U = \frac{Q^2}{2C},\\
+&\quad =\frac12 CV^2,\\
+&\quad =\frac12 QV.
 \end{aligned}
 $$
 
@@ -85,10 +85,10 @@ Với điện môi tuyến tính lấp đầy khe và điện tích tự do gi�
 
 $$
 \begin{aligned}
-C&=KC_0,\\
-E&=E_0/K,\\
-V&=V_0/K,\\
-Q_i&=Q(1-1/K).
+&C = KC_0,\\
+&E = E_0/K,\\
+&V = V_0/K,\\
+&Q_i = Q(1-1/K).
 \end{aligned}
 $$
 
@@ -123,9 +123,9 @@ Không thay ε₀ bằng ε trong mọi bài toán mà bỏ qua hình học các
 
 $$
 \begin{aligned}
-V_{\max}&=E_{\mathrm{bd}}d,\\
-Q_{\max}&=CV_{\max},\\
-U_{\max}&=\frac12 CV_{\max}^2.
+&V_{\max} = E_{\mathrm{bd}}d,\\
+&Q_{\max} = CV_{\max},\\
+&U_{\max} = \frac12 CV_{\max}^2.
 \end{aligned}
 $$
 
@@ -138,10 +138,10 @@ E_bd ký hiệu ngưỡng đánh thủng. Nếu chọn làm việc ở một ph�
 
 $$
 \begin{aligned}
-U&=\frac12 CV^2,\\
-C&=\frac{\varepsilon_0 A}{d},\\
-V&=Ed,\\
-U&=\frac12\varepsilon_0 E^2Ad.
+&U = \frac12 CV^2,\\
+&C = \frac{\varepsilon_0 A}{d},\\
+&V = Ed,\\
+&U = \frac12\varepsilon_0 E^2Ad.
 \end{aligned}
 $$
 

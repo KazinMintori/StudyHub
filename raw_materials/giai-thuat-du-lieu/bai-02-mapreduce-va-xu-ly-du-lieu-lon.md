@@ -501,11 +501,10 @@ Giảm 20% **lượng truyền**, nhưng Map phải cộng thêm. Muốn biết 
 Với các pha nối tiếp, không chồng lấp, không lỗi:
 
 $$
-T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền và nhóm}} + T_{\text{Reduce}}
-$$
-
-$$
-S_P = \frac{T_1}{T_P}
+\begin{aligned}
+    &T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền và nhóm}} + T_{\text{Reduce}}\\
+    &S_P = \frac{T_1}{T_P}
+\end{aligned}
 $$
 
 Ví dụ slide ($P = 4$): $T_P = 1 + 4 + 3 + 2 = 10$ s; $T_1 = 24$ s → $S_4 = 2{,}4$. Có lợi về thời gian khi $T_P < T_1$. So sánh phải cùng đầu vào, cùng đầu ra, cùng phạm vi đo.

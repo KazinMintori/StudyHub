@@ -177,9 +177,12 @@ $$P=\{x: Ax\preceq b,\ Cx=d\}$$
 
 ### 2.3 Quả cầu chuẩn và Ellipsoid
 
-$$B(x_c,r)=\{x:\|x-x_c\|_2\le r\} = \{x_c+ru: \|u\|_2\le1\}$$
-
-$$E=\{x:(x-x_c)^TP^{-1}(x-x_c)\le1\},\quad P=P^T\succ0$$
+$$
+\begin{aligned}
+    &B(x_c,r)=\{x:\|x-x_c\|_2\le r\} = \{x_c+ru: \|u\|_2\le1\}\\
+    &E=\{x:(x-x_c)^TP^{-1}(x-x_c)\le1\},\quad P=P^T\succ0
+\end{aligned}
+$$
 
 **Hai công thức ellipsoid khớp nhau ra sao?** Với $A$ khả nghịch và $P=AA^T$, đặt $x=x_c+Au$:
 

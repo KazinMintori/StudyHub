@@ -332,10 +332,10 @@ Trả lời từng câu hỏi:
    - Ta xét tỷ lệ tham gia ban nhạc có điều kiện theo từng năm học:
      $$
      \begin{aligned}
-     P(\text{band} \mid \text{frosh}) &= \frac{2}{5} = 0.40 \text{ (hay } 40\%), \\
-     P(\text{band} \mid \text{soph}) &= \frac{8}{20} = 0.40 \text{ (hay } 40\%), \\
-     P(\text{band} \mid \text{junior}) &= \frac{2}{5} = 0.40 \text{ (hay } 40\%), \\
-     P(\text{band} \mid \text{senior}) &= \frac{12}{30} = 0.40 \text{ (hay } 40\%).
+     &P(\text{band} \mid \text{frosh}) = \frac{2}{5} = 0.40 \text{ (hay } 40\%),\\
+     &P(\text{band} \mid \text{soph}) = \frac{8}{20} = 0.40 \text{ (hay } 40\%),\\
+     &P(\text{band} \mid \text{junior}) = \frac{2}{5} = 0.40 \text{ (hay } 40\%),\\
+     &P(\text{band} \mid \text{senior}) = \frac{12}{30} = 0.40 \text{ (hay } 40\%).
      \end{aligned}
      $$
    - Nhận xét: Tỷ lệ tham gia ban nhạc ở cả bốn năm học đều bằng nhau tuyệt đối ($40\%$). 

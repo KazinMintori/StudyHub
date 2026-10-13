@@ -10,8 +10,8 @@ Tụ điện gồm hai vật dẫn ngăn cách bởi chất cách điện. Khi n
 
 $$
 \begin{aligned}
-C&=\frac{Q}{V_{ab}},\\
-1\,\mathrm F&=1\,\mathrm{C/V}.
+&C = \frac{Q}{V_{ab}},\\
+&1\,\mathrm F = 1\,\mathrm{C/V}.
 \end{aligned}
 $$
 
@@ -38,8 +38,8 @@ Với n tụ, vế phải là tổng các nghịch đảo điện dung, từ t�
 
 $$
 \begin{aligned}
-C_{\mathrm{eq}}&=C_1+C_2+C_3,\\
-C_{\mathrm{eq}}&=\sum_{i=1}^{n}C_i.
+&C_{\mathrm{eq}} = C_1+C_2+C_3,\\
+&C_{\mathrm{eq}} = \sum_{i=1}^{n}C_i.
 \end{aligned}
 $$
 
@@ -62,9 +62,9 @@ Công cần thiết để nạp một tụ có điện dung không đổi từ t
 
 $$
 \begin{aligned}
-U&=\frac{Q^2}{2C},\\
-&=\frac12 CV^2,\\
-&=\frac12 QV.
+&U = \frac{Q^2}{2C},\\
+&\quad =\frac12 CV^2,\\
+&\quad =\frac12 QV.
 \end{aligned}
 $$
 
@@ -84,9 +84,9 @@ Khi một điện môi tuyến tính, đồng nhất lấp đầy khoảng giữ
 
 $$
 \begin{aligned}
-C&=KC_0,\\
-&=\frac{K\varepsilon_0 A}{d},\\
-&=\frac{\varepsilon A}{d}.
+&C = KC_0,\\
+&\quad =\frac{K\varepsilon_0 A}{d},\\
+&\quad =\frac{\varepsilon A}{d}.
 \end{aligned}
 $$
 
@@ -98,8 +98,8 @@ Mật độ năng lượng trong điện môi tuyến tính là:
 
 $$
 \begin{aligned}
-u&=\frac12 K\varepsilon_0 E^2,\\
-&=\frac12\varepsilon E^2.
+&u = \frac12 K\varepsilon_0 E^2,\\
+&\quad =\frac12\varepsilon E^2.
 \end{aligned}
 $$
 

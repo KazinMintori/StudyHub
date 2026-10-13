@@ -15,9 +15,9 @@ Khi hàm mục tiêu và mọi hàm ràng buộc đều affine, bài toán đư�
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^Tx + d\\
-\text{subject to}\quad & Gx \preceq h,\\
-& Ax = b,
+&\text{minimize}\quad c^Tx + d\\
+&\text{subject to}\quad Gx \preceq h,\\
+&\phantom{\text{subject to}\quad } Ax = b,
 \end{aligned}
 $$
 
@@ -64,10 +64,10 @@ Hai bước là đủ. Bước thứ nhất thêm [biến bù](./bai-toan-tuong-
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^Tx^+ - c^Tx^- + d\\
-\text{subject to}\quad & Gx^+ - Gx^- + s = h,\\
-& Ax^+ - Ax^- = b,\\
-& x^+ \succeq 0,\quad x^- \succeq 0,\quad s \succeq 0,
+&\text{minimize}\quad c^Tx^+ - c^Tx^- + d\\
+&\text{subject to}\quad Gx^+ - Gx^- + s = h,\\
+&\phantom{\text{subject to}\quad } Ax^+ - Ax^- = b,\\
+&\phantom{\text{subject to}\quad } x^+ \succeq 0,\quad x^- \succeq 0,\quad s \succeq 0,
 \end{aligned}
 $$
 
@@ -77,10 +77,10 @@ Hãy làm một ví dụ tự đặt. Xét bài toán cực tiểu $x_1 - 2x_2$ 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & u - v - 2x_2\\
-\text{subject to}\quad & u - v + x_2 + s_1 = 4,\\
-& -u + v + x_2 + s_2 = 2,\\
-& u,\ v,\ x_2,\ s_1,\ s_2 \ge 0 .
+&\text{minimize}\quad u - v - 2x_2\\
+&\text{subject to}\quad u - v + x_2 + s_1 = 4,\\
+&\phantom{\text{subject to}\quad } -u + v + x_2 + s_2 = 2,\\
+&\phantom{\text{subject to}\quad } u,\ v,\ x_2,\ s_1,\ s_2 \ge 0 .
 \end{aligned}
 $$
 

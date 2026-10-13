@@ -51,9 +51,7 @@ Với vật rắn quay quanh một trục đối xứng cố định, mômen đ�
   'dinh-luat-biot-savart': String.raw`Phần tử dòng điện tạo từ trường tại điểm quan sát theo hướng vuông góc với cả hướng dòng và hướng nối từ phần tử đến điểm đó:
 
 $$
-\begin{aligned}
-d\vec B&=\frac{\mu_0}{4\pi}\frac{I\,d\vec l\times\hat r}{r^2}.
-\end{aligned}
+d\vec B = \frac{\mu_0}{4\pi}\frac{I\,d\vec l\times\hat r}{r^2}.
 $$
 
 Để tìm trường của cả dây, cộng vector đóng góp trên toàn chiều dài. Định luật phù hợp với phân bố dòng ổn định trong mô hình từ tĩnh.`+ref,

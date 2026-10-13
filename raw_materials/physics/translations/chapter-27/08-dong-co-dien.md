@@ -49,8 +49,8 @@ Suất phản điện động phụ thuộc tốc độ quay. Với từ trườ
 
 $$
 \begin{aligned}
-V_{ab}I&=\mathcal EI+I^2r,\\
-P_{\mathrm{in}}&=P_{\mathrm{mech}}+P_r.
+&V_{ab}I = \mathcal EI+I^2r,\\
+&P_{\mathrm{in}} = P_{\mathrm{mech}}+P_r.
 \end{aligned}
 $$
 
@@ -70,9 +70,9 @@ Dùng phương trình điện áp động cơ để tìm $\mathcal E$. Công su�
 
 $$
 \begin{aligned}
-\mathcal E&=V_{ab}-Ir\\
-&=120-(4{,}00)(2{,}00)\\
-&=112\,\mathrm V.
+&\mathcal E = V_{ab}-Ir\\
+&\quad =120-(4{,}00)(2{,}00)\\
+&\quad =112\,\mathrm V.
 \end{aligned}
 $$
 
@@ -80,9 +80,9 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{in}}&=V_{ab}I\\
-&=(120)(4{,}00)\\
-&=480\,\mathrm W.
+&P_{\mathrm{in}} = V_{ab}I\\
+&\quad =(120)(4{,}00)\\
+&\quad =480\,\mathrm W.
 \end{aligned}
 $$
 
@@ -90,9 +90,9 @@ $$
 
 $$
 \begin{aligned}
-P_r&=I^2r\\
-&=(4{,}00)^2(2{,}00)\\
-&=32\,\mathrm W.
+&P_r = I^2r\\
+&\quad =(4{,}00)^2(2{,}00)\\
+&\quad =32\,\mathrm W.
 \end{aligned}
 $$
 
@@ -100,8 +100,8 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{mech}}&=480-32\\
-&=448\,\mathrm W.
+&P_{\mathrm{mech}} = 480-32\\
+&\quad =448\,\mathrm W.
 \end{aligned}
 $$
 
@@ -109,9 +109,9 @@ $$
 
 $$
 \begin{aligned}
-\eta&=\frac{P_{\mathrm{mech}}}{P_{\mathrm{in}}}\\
-&=448/480\\
-&\approx0{,}93=93\%.
+&\eta = \frac{P_{\mathrm{mech}}}{P_{\mathrm{in}}}\\
+&\quad =448/480\\
+&\quad \approx0{,}93=93\%.
 \end{aligned}
 $$
 
@@ -119,12 +119,12 @@ $$
 
 $$
 \begin{aligned}
-I_{\mathrm{stall}}&=V_{ab}/r\\
-&=120/2{,}00\\
-&=60\,\mathrm A,\\
-P_{r,\mathrm{stall}}&=I_{\mathrm{stall}}^2r\\
-&=(60)^2(2{,}00)\\
-&=7200\,\mathrm W.
+&I_{\mathrm{stall}} = V_{ab}/r\\
+&\quad =120/2{,}00\\
+&\quad =60\,\mathrm A,\\
+&P_{r,\mathrm{stall}} = I_{\mathrm{stall}}^2r\\
+&\quad =(60)^2(2{,}00)\\
+&\quad =7200\,\mathrm W.
 \end{aligned}
 $$
 

@@ -21,10 +21,10 @@ Electron điện tích −e = $-1.60\times10^{-19}$ C nghỉ cách tâm hạt nh
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoai}}&=C(1/r_1-1/r_2)\\
-&=1.51\times10^{-16}\,\mathrm J,\\
-K_3&=C(1/r_3-1/r_2)\\
-&=2.32\times10^{-15}\,\mathrm J.
+&W_{\mathrm{ngoai}} = C(1/r_1-1/r_2)\\
+&\quad =1.51\times10^{-16}\,\mathrm J,\\
+&K_3 = C(1/r_3-1/r_2)\\
+&\quad =2.32\times10^{-15}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -46,9 +46,9 @@ Proton có m = $1.67\times10^{-27}$ kg, +e = $1.60\times10^{-19}$ C được b�
 
 $$
 \begin{aligned}
-U_d&=\frac12mv_0^2=5.22\times10^{-15}\,\mathrm J,\\
-Q&=U_dd/(ke)\\
-&=+1.92\times10^{-18}\,\mathrm C.
+&U_d = \frac12mv_0^2=5.22\times10^{-15}\,\mathrm J,\\
+&Q = U_dd/(ke)\\
+&\quad =+1.92\times10^{-18}\,\mathrm C.
 \end{aligned}
 $$
 
@@ -70,10 +70,10 @@ Nguồn q₁ = +e cố định ở y = 0, q₂ = −e ở y = a. (a) Tìm công 
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoai}}&=-\frac{ke^2}{2a}+\frac{ke^2}{3a}\\
-&=-\frac{ke^2}{6a},\\
-U_{\mathrm{sys}}&=-\frac{ke^2}{a}+W_{\mathrm{ngoai}}\\
-&=-\frac{7ke^2}{6a}.
+&W_{\mathrm{ngoai}} = -\frac{ke^2}{2a}+\frac{ke^2}{3a}\\
+&\quad =-\frac{ke^2}{6a},\\
+&U_{\mathrm{sys}} = -\frac{ke^2}{a}+W_{\mathrm{ngoai}}\\
+&\quad =-\frac{7ke^2}{6a}.
 \end{aligned}
 $$
 
@@ -95,10 +95,10 @@ Nguồn q₁ = +5,00 nC cố định tại gốc. Cần công ngoài $8.10\times
 
 $$
 \begin{aligned}
-q_2&=\frac{W(0.0400)}{kq_1}\\
-&=+7.21\,\mathrm{nC},\\
-W_3&=kq_3\left(\frac{q_1}{0.0300}+\frac{q_2}{0.0500}\right)\\
-&=5.59\times10^{-6}\,\mathrm J.
+&q_2 = \frac{W(0.0400)}{kq_1}\\
+&\quad =+7.21\,\mathrm{nC},\\
+&W_3 = kq_3\left(\frac{q_1}{0.0300}+\frac{q_2}{0.0500}\right)\\
+&\quad =5.59\times10^{-6}\,\mathrm J.
 \end{aligned}
 $$
 :::
@@ -154,8 +154,8 @@ Vₐ = +133 V, Vᵦ = −133 V. Do đó:
 
 $$
 \begin{aligned}
-v_a&=\sqrt{v_b^2+\frac{2e(V_b-V_a)}{m_p}}\\
-&=1.98\times10^5\,\mathrm{m/s}.
+&v_a = \sqrt{v_b^2+\frac{2e(V_b-V_a)}{m_p}}\\
+&\quad =1.98\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -177,9 +177,9 @@ Cầu cách điện đều trong thể tích có điện tích dương Q, bán k
 
 $$
 \begin{aligned}
-\Delta V&=V(0)-V(R)\\
-&=\int_0^R\frac{kQr}{R^3}dr\\
-&=\frac{kQ}{2R}.
+&\Delta V = V(0)-V(R)\\
+&\quad =\int_0^R\frac{kQr}{R^3}dr\\
+&\quad =\frac{kQ}{2R}.
 \end{aligned}
 $$
 
@@ -203,12 +203,12 @@ Cầu dẫn bán kính R mang q dương. Tìm công ngoài để đưa điện t
 
 $$
 \begin{aligned}
-W_a&=\frac{kqq_0}{R}(1/3-1/5)\\
-&=\frac{2kqq_0}{15R},\\
-W_b&=\frac{kqq_0}{R}(1/7-1/2)\\
-&=-\frac{5kqq_0}{14R},\\
-W_c&=\frac{kqq_0}{R}(1-1/4)\\
-&=\frac{3kqq_0}{4R}.
+&W_a = \frac{kqq_0}{R}(1/3-1/5)\\
+&\quad =\frac{2kqq_0}{15R},\\
+&W_b = \frac{kqq_0}{R}(1/7-1/2)\\
+&\quad =-\frac{5kqq_0}{14R},\\
+&W_c = \frac{kqq_0}{R}(1-1/4)\\
+&\quad =\frac{3kqq_0}{4R}.
 \end{aligned}
 $$
 :::
@@ -246,13 +246,13 @@ Vòng đều mang +5,00 nC, bán kính 2,50 cm. Hạt q = +3,00 nC, m = $4.00\ti
 
 $$
 \begin{aligned}
-U(x)&=\frac{kQq}{\sqrt{x^2+a^2}},\\
-U(0.0800)&=1.61\times10^{-6}\,\mathrm J,\\
-U(0)&=5.39\times10^{-6}\,\mathrm J,\\
-K(0)&=\frac12mv_0^2+U(0.0800)\\
+&U(x) = \frac{kQq}{\sqrt{x^2+a^2}},\\
+&U(0.0800) = 1.61\times10^{-6}\,\mathrm J,\\
+&U(0) = 5.39\times10^{-6}\,\mathrm J,\\
+&K(0) = \frac12mv_0^2+U(0.0800)\\
 &\quad-U(0)\\
-&=3.42\times10^{-6}\,\mathrm J,\\
-v(0)&=41.3\,\mathrm{m/s}.
+&\quad =3.42\times10^{-6}\,\mathrm J,\\
+&v(0) = 41.3\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -274,9 +274,9 @@ Kết quả động năng dương cho biết hạt vượt được rào thế n
 
 $$
 \begin{aligned}
-dq&=(Q/L)dx,\\
-V(0)&=\frac{kQ}{L}\int_L^{2L}\frac{dx}{x}\\
-&=\frac{kQ}{L}\ln2.
+&dq = (Q/L)dx,\\
+&V(0) = \frac{kQ}{L}\int_L^{2L}\frac{dx}{x}\\
+&\quad =\frac{kQ}{L}\ln2.
 \end{aligned}
 $$
 :::
@@ -302,10 +302,10 @@ $$
 
 $$
 \begin{aligned}
-V(L)&=\frac{kQ}{2a}\int_{-a}^{a}\frac{dx'}{L-x'}\\
-&=\frac{kQ}{2a}\ln\frac{L+a}{L-a},\\
-U(L)&=qV(L),\\
-W_{\mathrm{ngoai}}&=\frac{kQq}{2a}\ln\frac{L+a}{L-a}.
+&V(L) = \frac{kQ}{2a}\int_{-a}^{a}\frac{dx'}{L-x'}\\
+&\quad =\frac{kQ}{2a}\ln\frac{L+a}{L-a},\\
+&U(L) = qV(L),\\
+&W_{\mathrm{ngoai}} = \frac{kQq}{2a}\ln\frac{L+a}{L-a}.
 \end{aligned}
 $$
 

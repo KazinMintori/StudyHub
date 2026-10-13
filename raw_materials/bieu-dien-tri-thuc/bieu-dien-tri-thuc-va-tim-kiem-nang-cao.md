@@ -194,11 +194,10 @@ Kết quả: $S \to A \to B \to C \to G$, chi phí $= 7$ — **đúng bằng t�
 Gọi $C^*$ là chi phí tối ưu thật. Giả sử A\* mở rộng đỉnh đích $B$ không tối ưu trước đỉnh đích tối ưu $A$. Khi đó tồn tại một đỉnh $n$ trên đường đi tối ưu tới $A$ còn nằm trong hàng đợi. Ta có:
 
 $$
-f(n) = g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}
-$$
-
-$$
-f(A) = g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
+\begin{aligned}
+    &f(n) = g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}\\
+    &f(A) = g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
+\end{aligned}
 $$
 
 Suy ra $f(n) \le f(A) \le f(B)$, nghĩa là $n$ (và mọi tổ tiên của $A$) luôn được mở rộng **trước** $B$ → $A$ chắc chắn được mở rộng trước $B$ → mâu thuẫn với giả thiết. Vậy A\* trên cây luôn trả về lời giải tối ưu nếu $h$ chấp nhận được. $\blacksquare$

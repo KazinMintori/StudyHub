@@ -47,9 +47,9 @@ Kỳ vọng, phương sai và độ lệch chuẩn của một bước đi đơn
 
 $$
 \begin{aligned}
-E(X) &= (-1) \times 0.5 + 1 \times 0.5 = 0 \\
-\text{Var}(X) &= E(X^2) - [E(X)]^2 = \left[(-1)^2 \times 0.5 + 1^2 \times 0.5\right] - 0^2 = 1 \\
-\text{SD}(X) &= \sqrt{\text{Var}(X)} = 1
+&E(X) = (-1) \times 0.5 + 1 \times 0.5 = 0\\
+&\text{Var}(X) = E(X^2) - [E(X)]^2 = \left[(-1)^2 \times 0.5 + 1^2 \times 0.5\right] - 0^2 = 1\\
+&\text{SD}(X) = \sqrt{\text{Var}(X)} = 1
 \end{aligned}
 $$
 
@@ -181,9 +181,9 @@ Vì mỗi vé trong hộp có phân phối xác suất xác định, ta tính đ
 
 $$
 \begin{aligned}
-E(X_1) &= \sum_x x \cdot P(X_1 = x) \\
-&= 0 \times 0.2 + 1 \times 0.3 + 2 \times 0.1 + 3 \times 0.2 + 4 \times 0.2 \\
-&= 0 + 0.3 + 0.2 + 0.6 + 0.8 = 1.9
+&E(X_1) = \sum_x x \cdot P(X_1 = x)\\
+&\quad = 0 \times 0.2 + 1 \times 0.3 + 2 \times 0.1 + 3 \times 0.2 + 4 \times 0.2\\
+&\quad = 0 + 0.3 + 0.2 + 0.6 + 0.8 = 1.9
 \end{aligned}
 $$
 
@@ -197,11 +197,11 @@ Phương sai của một lần rút đơn lẻ:
 
 $$
 \begin{aligned}
-\text{Var}(X_1) &= \sum_x (x - 1.9)^2 \cdot P(X_1 = x) \\
-&= (0 - 1.9)^2 \times 0.2 + (1 - 1.9)^2 \times 0.3 + (2 - 1.9)^2 \times 0.1 \\
+&\text{Var}(X_1) = \sum_x (x - 1.9)^2 \cdot P(X_1 = x)\\
+&\quad = (0 - 1.9)^2 \times 0.2 + (1 - 1.9)^2 \times 0.3 + (2 - 1.9)^2 \times 0.1\\
 &\quad + (3 - 1.9)^2 \times 0.2 + (4 - 1.9)^2 \times 0.2 \\
-&= 3.61 \times 0.2 + 0.81 \times 0.3 + 0.01 \times 0.1 + 1.21 \times 0.2 + 4.41 \times 0.2 \\
-&= 0.722 + 0.243 + 0.001 + 0.242 + 0.882 = 2.09
+&\quad = 3.61 \times 0.2 + 0.81 \times 0.3 + 0.01 \times 0.1 + 1.21 \times 0.2 + 4.41 \times 0.2\\
+&\quad = 0.722 + 0.243 + 0.001 + 0.242 + 0.882 = 2.09
 \end{aligned}
 $$
 
@@ -507,17 +507,17 @@ Thực hiện lấy tổng của 100 biến ngẫu nhiên độc lập cùng ph�
   $X \sim \text{Binomial}(n_0 = 10, p = 0.2)$.
   $$
   \begin{aligned}
-  E(X) &= n_0 p = 10 \times 0.2 = 2 \\
-  \text{Var}(X) &= n_0 p (1 - p) = 10 \times 0.2 \times 0.8 = 1.6 \\
-  \text{SD}(X) &= \sqrt{1.6} \approx 1.2649
+  &E(X) = n_0 p = 10 \times 0.2 = 2\\
+  &\text{Var}(X) = n_0 p (1 - p) = 10 \times 0.2 \times 0.8 = 1.6\\
+  &\text{SD}(X) = \sqrt{1.6} \approx 1.2649
   \end{aligned}
   $$
   Tổng của 100 biến ngẫu nhiên $X$ độc lập:
   $$
   \begin{aligned}
-  E(S_{X, 100}) &= 100 \times E(X) = 100 \times 2 = 200 \\
-  \text{Var}(S_{X, 100}) &= 100 \times \text{Var}(X) = 100 \times 1.6 = 160 \\
-  \text{SE}(S_{X, 100}) &= \sqrt{160} = 4\sqrt{10} \approx 12.65
+  &E(S_{X, 100}) = 100 \times E(X) = 100 \times 2 = 200\\
+  &\text{Var}(S_{X, 100}) = 100 \times \text{Var}(X) = 100 \times 1.6 = 160\\
+  &\text{SE}(S_{X, 100}) = \sqrt{160} = 4\sqrt{10} \approx 12.65
   \end{aligned}
   $$
 
@@ -530,17 +530,17 @@ Thực hiện lấy tổng của 100 biến ngẫu nhiên độc lập cùng ph�
   Phương sai của một lần rút:
   $$
   \begin{aligned}
-  \text{Var}(Y) &= \frac{(0 - 3)^2 + (2 - 3)^2 + (3 - 3)^2 + (4 - 3)^2 + (6 - 3)^2}{5} \\
-  &= \frac{9 + 1 + 0 + 1 + 9}{5} = \frac{20}{5} = 4 \\
-  \text{SD}(Y) &= \sqrt{4} = 2
+  &\text{Var}(Y) = \frac{(0 - 3)^2 + (2 - 3)^2 + (3 - 3)^2 + (4 - 3)^2 + (6 - 3)^2}{5}\\
+  &\quad = \frac{9 + 1 + 0 + 1 + 9}{5} = \frac{20}{5} = 4\\
+  &\text{SD}(Y) = \sqrt{4} = 2
   \end{aligned}
   $$
   Tổng của 100 biến ngẫu nhiên $Y$ độc lập:
   $$
   \begin{aligned}
-  E(S_{Y, 100}) &= 100 \times E(Y) = 100 \times 3 = 300 \\
-  \text{Var}(S_{Y, 100}) &= 100 \times \text{Var}(Y) = 100 \times 4 = 400 \\
-  \text{SE}(S_{Y, 100}) &= \sqrt{100} \times \text{SD}(Y) = 10 \times 2 = 20
+  &E(S_{Y, 100}) = 100 \times E(Y) = 100 \times 3 = 300\\
+  &\text{Var}(S_{Y, 100}) = 100 \times \text{Var}(Y) = 100 \times 4 = 400\\
+  &\text{SE}(S_{Y, 100}) = \sqrt{100} \times \text{SD}(Y) = 10 \times 2 = 20
   \end{aligned}
   $$
 
@@ -571,8 +571,8 @@ $$
 Phương sai của chiếc hộp:
 $$
 \begin{aligned}
-\sigma^2 &= \frac{(-10 - 5)^2 + (0 - 5)^2 + (5 - 5)^2 + (10 - 5)^2 + (20 - 5)^2}{5} \\
-&= \frac{225 + 25 + 0 + 25 + 225}{5} = \frac{500}{5} = 100
+&\sigma^2 = \frac{(-10 - 5)^2 + (0 - 5)^2 + (5 - 5)^2 + (10 - 5)^2 + (20 - 5)^2}{5}\\
+&\quad = \frac{225 + 25 + 0 + 25 + 225}{5} = \frac{500}{5} = 100
 \end{aligned}
 $$
 Độ lệch chuẩn của chiếc hộp: $\sigma = \sqrt{100} = 10$.
@@ -580,16 +580,16 @@ $$
 Với $n = 100$ lần rút có hoàn lại:
 $$
 \begin{aligned}
-E(S_{100}) &= n\mu = 100 \times 5 = 500 \\
-\text{SE}(S_{100}) &= \sqrt{n}\sigma = \sqrt{100} \times 10 = 10 \times 10 = 100
+&E(S_{100}) = n\mu = 100 \times 5 = 500\\
+&\text{SE}(S_{100}) = \sqrt{n}\sigma = \sqrt{100} \times 10 = 10 \times 10 = 100
 \end{aligned}
 $$
 
 **2. Kỳ vọng và sai số chuẩn của trung bình mẫu $\bar{X}_{100}$:**
 $$
 \begin{aligned}
-E(\bar{X}_{100}) &= \mu = 5 \\
-\text{SE}(\bar{X}_{100}) &= \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{100}} = \frac{10}{10} = 1
+&E(\bar{X}_{100}) = \mu = 5\\
+&\text{SE}(\bar{X}_{100}) = \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{100}} = \frac{10}{10} = 1
 \end{aligned}
 $$
 
@@ -630,8 +630,8 @@ Một con xúc xắc cân đối có các mặt mang giá trị từ 1 đến 6.
 Trung bình và phương sai của một lần đổ:
 $$
 \begin{aligned}
-\mu &= \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3.5 \\
-\sigma^2 &= \frac{1}{6} \sum_{i=1}^6 (i - 3.5)^2 = \frac{35}{12} \approx 2.9167 \implies \sigma \approx 1.7078
+&\mu = \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3.5\\
+&\sigma^2 = \frac{1}{6} \sum_{i=1}^6 (i - 3.5)^2 = \frac{35}{12} \approx 2.9167 \implies \sigma \approx 1.7078
 \end{aligned}
 $$
 

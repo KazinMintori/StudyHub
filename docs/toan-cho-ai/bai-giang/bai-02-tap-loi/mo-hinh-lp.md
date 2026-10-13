@@ -31,8 +31,8 @@ Vậy hình cầu nằm trong nửa không gian thứ $i$ khi và chỉ khi $a_i
 
 $$
 \begin{aligned}
-\text{maximize}\quad & r\\
-\text{subject to}\quad & a_i^Tx_c + r\|a_i\|_2 \le b_i, \quad i = 1, \ldots, m .
+&\text{maximize}\quad r\\
+&\text{subject to}\quad a_i^Tx_c + r\|a_i\|_2 \le b_i, \quad i = 1, \ldots, m .
 \end{aligned}
 $$
 
@@ -62,8 +62,8 @@ như [chủ đề về phép toán giữ tính lồi](../bai-01-nhap-mon-toi-uu/
 
 $$
 \begin{aligned}
-\text{minimize}\quad & t\\
-\text{subject to}\quad & a_i^Tx + b_i \le t, \quad i = 1, \ldots, m .
+&\text{minimize}\quad t\\
+&\text{subject to}\quad a_i^Tx + b_i \le t, \quad i = 1, \ldots, m .
 \end{aligned}
 $$
 

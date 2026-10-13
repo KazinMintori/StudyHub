@@ -8,8 +8,7 @@ Mật độ dòng điện $\vec J$ trong vật dẫn phụ thuộc vào điện 
 
 $$
 \begin{aligned}
-\rho&=\frac EJ.
-\end{aligned}
+&\rho = \frac EJ.\end{aligned}
 \tag{25.5}
 $$
 
@@ -19,9 +18,9 @@ Từ đơn vị của $E$ và $J$:
 
 $$
 \begin{aligned}
-[\rho]&=\frac{\mathrm{V/m}}{\mathrm{A/m^2}}\\
-&=\frac{\mathrm{V\cdot m}}{\mathrm A}\\
-&=\Omega\cdot\mathrm m.
+&[\rho] = \frac{\mathrm{V/m}}{\mathrm{A/m^2}}\\
+&\quad =\frac{\mathrm{V\cdot m}}{\mathrm A}\\
+&\quad =\Omega\cdot\mathrm m.
 \end{aligned}
 $$
 
@@ -60,8 +59,8 @@ Bảng sau cho một số giá trị điện trở suất đại diện ở $20^
 
 $$
 \begin{aligned}
-\sigma&=\frac1\rho,\\
-[\sigma]&=(\Omega\cdot\mathrm m)^{-1}=\mathrm{S/m}.
+&\sigma = \frac1\rho,\\
+&[\sigma] = (\Omega\cdot\mathrm m)^{-1}=\mathrm{S/m}.
 \end{aligned}
 $$
 
@@ -87,8 +86,7 @@ Trong một khoảng nhiệt độ nhỏ, thường đến độ chênh khoảng
 
 $$
 \begin{aligned}
-\rho(T)&=\rho_0\left[1+\alpha(T-T_0)\right].
-\end{aligned}
+&\rho(T) = \rho_0\left[1+\alpha(T-T_0)\right].\end{aligned}
 \tag{25.6}
 $$
 

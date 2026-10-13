@@ -23,8 +23,8 @@ Lý do rất đơn giản: Hiệu của hai nghiệm nằm trong hạch của $A
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(Fz + x_0)\\
-\text{subject to}\quad & f_i(Fz + x_0) \le 0, \quad i = 1, \ldots, m,
+&\text{minimize}\quad f_0(Fz + x_0)\\
+&\text{subject to}\quad f_i(Fz + x_0) \le 0, \quad i = 1, \ldots, m,
 \end{aligned}
 $$
 
@@ -78,9 +78,9 @@ Chiều ngược lại cũng hữu ích. Khi một hàm có dạng $f_i(A_ix + b
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(y_0)\\
-\text{subject to}\quad & f_i(y_i) \le 0, \quad i = 1, \ldots, m,\\
-& y_i = A_ix + b_i, \quad i = 0, \ldots, m .
+&\text{minimize}\quad f_0(y_0)\\
+&\text{subject to}\quad f_i(y_i) \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } y_i = A_ix + b_i, \quad i = 0, \ldots, m .
 \end{aligned}
 $$
 

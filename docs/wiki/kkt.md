@@ -16,8 +16,8 @@ Với bài toán $\min_x f_0(x)$ có $m$ ràng buộc $f_i(x)\le0$, đẳng th�
 Với $m$ ràng buộc bất đẳng thức, điều kiện dừng cộng một vector cho mỗi ràng buộc:
 
 $\begin{aligned}
-0={}&\nabla f_0(x)+\lambda_1\nabla f_1(x)\\
-&+\cdots+\lambda_m\nabla f_m(x)+A^T\nu.
+&0={} \nabla f_0(x)+\lambda_1\nabla f_1(x)\\
+&\quad +\cdots+\lambda_m\nabla f_m(x)+A^T\nu.
 \end{aligned}$
 
 Viết gọn:

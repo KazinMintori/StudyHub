@@ -17,8 +17,8 @@ Từ trường được tạo bởi điện tích chuyển động và dòng đi
 
 $$
 \begin{aligned}
-\vec F_B&=q\vec v\times\vec B,\\
-F_B&=|q|vB\sin\phi.
+&\vec F_B = q\vec v\times\vec B,\\
+&F_B = |q|vB\sin\phi.
 \end{aligned}
 $$
 

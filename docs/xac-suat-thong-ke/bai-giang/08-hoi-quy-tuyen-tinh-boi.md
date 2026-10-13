@@ -29,8 +29,8 @@ $$\hat{y} = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_p x_p$$
 Khai triển tường minh bằng ký hiệu tổng dồn:
 
 $$\begin{aligned}
-\hat{y} &= b_0 + \sum_{j=1}^p b_j x_j \\
-&= b_0 + b_1 x_1 + b_2 x_2 + \dots + b_p x_p
+&\hat{y} = b_0 + \sum_{j=1}^p b_j x_j\\
+&\quad = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_p x_p
 \end{aligned}$$
 
 trong đó:
@@ -136,15 +136,15 @@ $$\widehat{\text{price}} = -15.97 + 2.87 \times \text{food} - 1.46 \times D_{\te
 
 1. **Với các nhà hàng ở bờ Tây ($D_{\text{west}} = 1$)**:
    $$\begin{aligned}
-   \widehat{\text{price}} &= -15.97 + 2.87 \times \text{food} - 1.46 \times 1 \\
-   &= (-15.97 - 1.46) + 2.87 \times \text{food} \\
-   &= -17.43 + 2.87 \times \text{food}
+   &\widehat{\text{price}} = -15.97 + 2.87 \times \text{food} - 1.46 \times 1\\
+   &\quad = (-15.97 - 1.46) + 2.87 \times \text{food}\\
+   &\quad = -17.43 + 2.87 \times \text{food}
    \end{aligned}$$
 
 2. **Với các nhà hàng ở bờ Đông ($D_{\text{west}} = 0$)**:
    $$\begin{aligned}
-   \widehat{\text{price}} &= -15.97 + 2.87 \times \text{food} - 1.46 \times 0 \\
-   &= -15.97 + 2.87 \times \text{food}
+   &\widehat{\text{price}} = -15.97 + 2.87 \times \text{food} - 1.46 \times 0\\
+   &\quad = -15.97 + 2.87 \times \text{food}
    \end{aligned}$$
 
 <div style="text-align: center; margin: 16px 0;">
@@ -273,20 +273,20 @@ $$\hat{y} = 15.2 - 0.45 x_1 - 1.80 D_{\text{herbi}} + 0.60 D_{\text{omni}}$$
 1. **Viết phương trình hồi quy cho từng nhóm động vật**:
    - **Nhóm ăn thịt (`carni`)**: Đây là mức cơ sở, $D_{\text{herbi}} = 0$ và $D_{\text{omni}} = 0$:
      $$\begin{aligned}
-     \hat{y}_{\text{carni}} &= 15.2 - 0.45 x_1 - 1.80(0) + 0.60(0) \\
-     &= 15.2 - 0.45 x_1
+     &\hat{y}_{\text{carni}} = 15.2 - 0.45 x_1 - 1.80(0) + 0.60(0)\\
+     &\quad = 15.2 - 0.45 x_1
      \end{aligned}$$
    - **Nhóm ăn cỏ (`herbi`)**: $D_{\text{herbi}} = 1$ và $D_{\text{omni}} = 0$:
      $$\begin{aligned}
-     \hat{y}_{\text{herbi}} &= 15.2 - 0.45 x_1 - 1.80(1) + 0.60(0) \\
-     &= (15.2 - 1.80) - 0.45 x_1 \\
-     &= 13.4 - 0.45 x_1
+     &\hat{y}_{\text{herbi}} = 15.2 - 0.45 x_1 - 1.80(1) + 0.60(0)\\
+     &\quad = (15.2 - 1.80) - 0.45 x_1\\
+     &\quad = 13.4 - 0.45 x_1
      \end{aligned}$$
    - **Nhóm ăn tạp (`omni`)**: $D_{\text{herbi}} = 0$ và $D_{\text{omni}} = 1$:
      $$\begin{aligned}
-     \hat{y}_{\text{omni}} &= 15.2 - 0.45 x_1 - 1.80(0) + 0.60(1) \\
-     &= (15.2 + 0.60) - 0.45 x_1 \\
-     &= 15.8 - 0.45 x_1
+     &\hat{y}_{\text{omni}} = 15.2 - 0.45 x_1 - 1.80(0) + 0.60(1)\\
+     &\quad = (15.2 + 0.60) - 0.45 x_1\\
+     &\quad = 15.8 - 0.45 x_1
      \end{aligned}$$
 
 2. **Mối quan hệ hình học**:
@@ -337,15 +337,15 @@ Một chuyên gia kinh tế lao động nghiên cứu mức lương khởi đi�
 3. **Tính giá trị dự báo và phần dư**:
    - Thay $x_1 = 3.5$ và $x_2 = 4$ vào Mô hình B:
      $$\begin{aligned}
-     \hat{y} &= 6.0 + 1.1(3.5) + 3.2(4) \\
-     &= 6.0 + 3.85 + 12.8 \\
-     &= 22.65 \text{ triệu đồng/tháng}
+     &\hat{y} = 6.0 + 1.1(3.5) + 3.2(4)\\
+     &\quad = 6.0 + 3.85 + 12.8\\
+     &\quad = 22.65 \text{ triệu đồng/tháng}
      \end{aligned}$$
    - Tính phần dư:
      $$\begin{aligned}
-     \hat{e} &= y - \hat{y} \\
-     &= 28.0 - 22.65 \\
-     &= +5.35 \text{ triệu đồng/tháng}
+     &\hat{e} = y - \hat{y}\\
+     &\quad = 28.0 - 22.65\\
+     &\quad = +5.35 \text{ triệu đồng/tháng}
      \end{aligned}$$
    - **Kết luận**: Phần dư mang dấu dương ($\hat{e} = +5.35 > 0$), chứng tỏ sinh viên này có mức lương thực tế **vượt trội hơn hẳn so với mức kỳ vọng chung** của mô hình đối với một người có cùng mức GPA và số lượng dự án tương đương.
 :::
@@ -380,9 +380,9 @@ $$\hat{y} = 1.2 + 0.85 x_1 + 0.04 x_2 + 2.10 D_{\text{mall}}$$
 2. **Dự báo doanh thu cho cửa hàng A**:
    - Cửa hàng A có $x_1 = 2$, $x_2 = 50$, $D_{\text{mall}} = 1$:
      $$\begin{aligned}
-     \hat{y}_A &= 1.2 + 0.85(2) + 0.04(50) + 2.10(1) \\
-     &= 1.2 + 1.70 + 2.00 + 2.10 \\
-     &= 7.00 \text{ trăm triệu đồng} = 700 \text{ triệu đồng/tháng}
+     &\hat{y}_A = 1.2 + 0.85(2) + 0.04(50) + 2.10(1)\\
+     &\quad = 1.2 + 1.70 + 2.00 + 2.10\\
+     &\quad = 7.00 \text{ trăm triệu đồng} = 700 \text{ triệu đồng/tháng}
      \end{aligned}$$
 
 3. **Tính diện tích cần mở rộng**:

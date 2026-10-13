@@ -37,8 +37,8 @@ Luật De Morgan dùng để biến đổi phủ định của hội và tuyển
 
 $$
 \begin{aligned}
-\neg (p \land q) &\equiv \neg p \lor \neg q \\
-\neg (p \lor q) &\equiv \neg p \land \neg q
+&\neg (p \land q) \equiv \neg p \lor \neg q\\
+&\neg (p \lor q) \equiv \neg p \land \neg q
 \end{aligned}
 $$
 
@@ -60,8 +60,8 @@ Khi đưa phép phủ định qua lượng từ, ta hoán đổi giữa lượng
 
 $$
 \begin{aligned}
-\neg \forall x P(x) &\equiv \exists x \neg P(x) \\
-\neg \exists x P(x) &\equiv \forall x \neg P(x)
+&\neg \forall x P(x) \equiv \exists x \neg P(x)\\
+&\neg \exists x P(x) \equiv \forall x \neg P(x)
 \end{aligned}
 $$
 

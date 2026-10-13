@@ -17,8 +17,8 @@ Một nguồn cấp riêng duy trì dòng I qua dây chiết áp đồng nhất.
 
 $$
 \begin{aligned}
-R_L&=\rho L/A,\\
-V_L&=IR_L.
+&R_L = \rho L/A,\\
+&V_L = IR_L.
 \end{aligned}
 $$
 

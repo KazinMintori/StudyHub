@@ -98,8 +98,8 @@ Phương pháp gia tốc Nesterov cập nhật tham số qua hai bước lặp:
 
 $$
 \begin{aligned}
-y_k &= x_k + \frac{k-1}{k+2} (x_k - x_{k-1}), \\
-x_{k+1} &= y_k - s \nabla f(y_k).
+&y_k = x_k + \frac{k-1}{k+2} (x_k - x_{k-1}),\\
+&x_{k+1} = y_k - s \nabla f(y_k).
 \end{aligned}
 $$
 

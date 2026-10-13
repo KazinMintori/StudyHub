@@ -30,8 +30,8 @@ Nhân chứng then chốt của bên công tố là Giáo sư Sir Roy Meadow, m�
 - Vì gia đình Clark có hai đứa con tử vong liên tiếp, Meadow thực hiện phép nhân trực tiếp:
 $$
 \begin{aligned}
-\frac{1}{8.543} \times \frac{1}{8.543} &\approx \frac{1}{72.982.849} \\
-&\approx \frac{1}{73\text{ triệu}}
+&\frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{72.982.849}\\
+&\quad \approx \frac{1}{73\text{ triệu}}
 \end{aligned}
 $$
 Meadow tuyên bố trước tòa rằng xác suất hai cái chết tự nhiên xảy ra trong cùng một gia đình là 1 trên 73 triệu. Con số chấn động này khiến bồi thẩm đoàn tin rằng khả năng hai đứa trẻ chết tự nhiên gần như là con số không, và Sally Clark bị kết tội. Phải mất hơn 3 năm ngồi tù trong đau khổ tột cùng, Hiệp hội Thống kê Hoàng gia Anh (Royal Statistical Society - RSS) mới chính thức lên tiếng can thiệp, vạch trần hai sai lầm toán học nghiêm trọng của bên công tố:
@@ -223,7 +223,7 @@ $$
 Quy tắc nhân có thể mở rộng tự nhiên cho một chuỗi tuần tự $k$ biến cố $A_1, A_2, \dots, A_k$:
 $$
 \begin{aligned}
-P(A_1 \cap A_2 \cap \dots \cap A_k) &= P(A_1) \cdot P(A_2 \mid A_1) \cdot P(A_3 \mid A_1 \cap A_2) \\
+&P(A_1 \cap A_2 \cap \dots \cap A_k) = P(A_1) \cdot P(A_2 \mid A_1) \cdot P(A_3 \mid A_1 \cap A_2)\\
 &\quad \cdots P(A_k \mid A_1 \cap A_2 \cap \dots \cap A_{k-1})
 \end{aligned}
 $$
@@ -311,9 +311,9 @@ Tính xác suất để cả Alex và Emi cùng được chọn vào ban đại 
   Cặp (Alex, Emi) được chọn nếu rút được Alex trước rồi Emi sau, HOẶC Emi trước rồi Alex sau:
   $$
   \begin{aligned}
-  P(\text{Alex trước} \cap \text{Emi sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
-  P(\text{Emi trước} \cap \text{Alex sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
-  P(\text{Alex và Emi}) &= \frac{1}{20} + \frac{1}{20} = \frac{2}{20} = \frac{1}{10}
+  &P(\text{Alex trước} \cap \text{Emi sau}) = \frac{1}{5} \times \frac{1}{4} = \frac{1}{20}\\
+  &P(\text{Emi trước} \cap \text{Alex sau}) = \frac{1}{5} \times \frac{1}{4} = \frac{1}{20}\\
+  &P(\text{Alex và Emi}) = \frac{1}{20} + \frac{1}{20} = \frac{2}{20} = \frac{1}{10}
   \end{aligned}
   $$
 
@@ -375,9 +375,9 @@ $$
 Áp dụng đúng quy tắc nhân xác suất có điều kiện:
 $$
 \begin{aligned}
-P(S_1 \cap S_2) &= P(S_1) \cdot P(S_2 \mid S_1) \\
-&= \frac{1}{8.543} \times \frac{1}{60} \\
-&= \frac{1}{512.580} \approx \frac{1}{513\text{ nghìn}}
+&P(S_1 \cap S_2) = P(S_1) \cdot P(S_2 \mid S_1)\\
+&\quad = \frac{1}{8.543} \times \frac{1}{60}\\
+&\quad = \frac{1}{512.580} \approx \frac{1}{513\text{ nghìn}}
 \end{aligned}
 $$
 Con số xác suất thực tế cao hơn con số mà bác sĩ Meadow khai trước tòa tới:
@@ -415,9 +415,9 @@ $$
 Theo Định lý Bayes, tỷ số khả dĩ hậu nghiệm (Posterior Odds) giữa vô tội và có tội là:
 $$
 \begin{aligned}
-\frac{P(I \mid E)}{P(M \mid E)} &= \frac{P(E \mid I)}{P(E \mid M)} \times \frac{P(I)}{P(M)} \\
-&\approx \frac{1/513.000}{1} \times \frac{1}{1/100.000.000} \\
-&= \frac{100.000.000}{513.000} \approx 195
+&\frac{P(I \mid E)}{P(M \mid E)} = \frac{P(E \mid I)}{P(E \mid M)} \times \frac{P(I)}{P(M)}\\
+&\quad \approx \frac{1/513.000}{1} \times \frac{1}{1/100.000.000}\\
+&\quad = \frac{100.000.000}{513.000} \approx 195
 \end{aligned}
 $$
 Nói cách khác, khi đứng trước hiện trường hai đứa trẻ qua đời, xác suất người mẹ vô tội và các bé chết vì bệnh lý tự nhiên cao gấp gần **200 lần** so với xác suất người mẹ là kẻ giết người hàng loạt! 
@@ -443,9 +443,9 @@ $$
 Áp dụng quy tắc biến cố bù:
 $$
 \begin{aligned}
-P(A) &= 1 - P(A^c) \\
-&= 1 - \left(\frac{5}{6}\right)^4 \\
-&= 1 - \frac{625}{1.296} = \frac{671}{1.296} \approx 0{,}5177
+&P(A) = 1 - P(A^c)\\
+&\quad = 1 - \left(\frac{5}{6}\right)^4\\
+&\quad = 1 - \frac{625}{1.296} = \frac{671}{1.296} \approx 0{,}5177
 \end{aligned}
 $$
 Vì $P(A) \approx 51{,}77\% > 50\%$, De Méré **có lợi thế** về lâu dài khi đặt cược vào trò chơi này.
@@ -463,9 +463,9 @@ $$
 Áp dụng quy tắc biến cố bù:
 $$
 \begin{aligned}
-P(B) &= 1 - P(B^c) \\
-&= 1 - \left(\frac{35}{36}\right)^{24} \\
-&\approx 1 - 0{,}5086 = 0{,}4914
+&P(B) = 1 - P(B^c)\\
+&\quad = 1 - \left(\frac{35}{36}\right)^{24}\\
+&\quad \approx 1 - 0{,}5086 = 0{,}4914
 \end{aligned}
 $$
 Vì $P(B) \approx 49{,}14\% < 50\%$, De Méré **chắc chắn sẽ thua lỗ** khi chơi lâu dài!
@@ -577,9 +577,9 @@ Một bài báo y khoa công bố xác suất một đứa trẻ sơ sinh tử v
 Áp dụng quy tắc nhân xác suất có điều kiện:
 $$
 \begin{aligned}
-P(S_1 \cap S_2) &= P(S_1) \cdot P(S_2 \mid S_1) \\
-&= \frac{1}{8.543} \times \frac{1}{60} \\
-&= \frac{1}{512.580} \approx 1{,}95 \times 10^{-6}
+&P(S_1 \cap S_2) = P(S_1) \cdot P(S_2 \mid S_1)\\
+&\quad = \frac{1}{8.543} \times \frac{1}{60}\\
+&\quad = \frac{1}{512.580} \approx 1{,}95 \times 10^{-6}
 \end{aligned}
 $$
 Xác suất thực tế cao hơn khoảng 142 lần so với con số 1 trên 73 triệu mà bên công tố đưa ra.
@@ -590,20 +590,20 @@ Vì phần lớn các bà mẹ không phải kẻ sát nhân, ta có $P(I) = 1 -
 Theo công thức xác suất đầy đủ:
 $$
 \begin{aligned}
-P(E) &= P(I) \cdot P(E \mid I) + P(M) \cdot P(E \mid M) \\
-&= 1 \times \frac{1}{512.580} + 10^{-8} \times 1 \\
-&= \frac{1}{512.580} + \frac{1}{100.000.000} \\
-&\approx 1{,}9509 \times 10^{-6} + 10^{-8} \\
-&= 1{,}9609 \times 10^{-6}
+&P(E) = P(I) \cdot P(E \mid I) + P(M) \cdot P(E \mid M)\\
+&\quad = 1 \times \frac{1}{512.580} + 10^{-8} \times 1\\
+&\quad = \frac{1}{512.580} + \frac{1}{100.000.000}\\
+&\quad \approx 1{,}9509 \times 10^{-6} + 10^{-8}\\
+&\quad = 1{,}9609 \times 10^{-6}
 \end{aligned}
 $$
 Áp dụng Định lý Bayes:
 $$
 \begin{aligned}
-P(I \mid E) &= \frac{P(I) \cdot P(E \mid I)}{P(E)} \\
-&= \frac{\frac{1}{512.580}}{\frac{1}{512.580} + 10^{-8}} \\
-&= \frac{1{,}9509 \times 10^{-6}}{1{,}9609 \times 10^{-6}} \\
-&\approx 0{,}9949 \approx 99{,}49\%
+&P(I \mid E) = \frac{P(I) \cdot P(E \mid I)}{P(E)}\\
+&\quad = \frac{\frac{1}{512.580}}{\frac{1}{512.580} + 10^{-8}}\\
+&\quad = \frac{1{,}9509 \times 10^{-6}}{1{,}9609 \times 10^{-6}}\\
+&\quad \approx 0{,}9949 \approx 99{,}49\%
 \end{aligned}
 $$
 Kết luận: Khi đã biết biến cố đau lòng là cả hai đứa trẻ qua đời, xác suất người mẹ vô tội vẫn lên tới hơn $99{,}49\%$. Việc kết tội một người mẹ chỉ dựa trên xác suất tự nhiên hiếm gặp mà không có bất kỳ bằng chứng pháp y nào là một sai lầm pháp đình nghiêm trọng.
@@ -675,8 +675,8 @@ Trong tập $\{1, 2, \dots, 9\}$ có 4 số chẵn $\{2, 4, 6, 8\}$ và 5 số l
 Ta so sánh tích $P(A) \times P(B)$ với $P(A \cap B)$:
 $$
 \begin{aligned}
-P(A) \times P(B) &= \frac{13}{18} \times \frac{13}{18} = \frac{169}{324} \approx 0{,}5216 \\
-P(A \cap B) &= \frac{17}{36} = \frac{153}{324} \approx 0{,}4722
+&P(A) \times P(B) = \frac{13}{18} \times \frac{13}{18} = \frac{169}{324} \approx 0{,}5216\\
+&P(A \cap B) = \frac{17}{36} = \frac{153}{324} \approx 0{,}4722
 \end{aligned}
 $$
 Vì:
@@ -718,9 +718,9 @@ $$
 Do đó, xác suất đội $A$ vô địch sau đúng 5 trận là:
 $$
 \begin{aligned}
-P(\text{Vô địch ở trận 5}) &= \binom{4}{3} p^4 (1-p) \\
-&= 4 \times \left(\frac{2}{3}\right)^4 \times \left(1 - \frac{2}{3}\right) \\
-&= 4 \times \frac{16}{81} \times \frac{1}{3} = \frac{64}{243} \approx 0{,}2634 \approx 26{,}34\%
+&P(\text{Vô địch ở trận 5}) = \binom{4}{3} p^4 (1-p)\\
+&\quad = 4 \times \left(\frac{2}{3}\right)^4 \times \left(1 - \frac{2}{3}\right)\\
+&\quad = 4 \times \frac{16}{81} \times \frac{1}{3} = \frac{64}{243} \approx 0{,}2634 \approx 26{,}34\%
 \end{aligned}
 $$
 

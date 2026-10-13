@@ -29,9 +29,9 @@ chính là [nón chuẩn](../bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md) của
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f^Tx\\
-\text{subject to}\quad & \|A_ix + b_i\|_2 \le c_i^Tx + d_i, \quad i = 1, \ldots, m,\\
-& Fx = g .
+&\text{minimize}\quad f^Tx\\
+&\text{subject to}\quad \|A_ix + b_i\|_2 \le c_i^Tx + d_i, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } Fx = g .
 \end{aligned}
 $$
 
@@ -57,8 +57,8 @@ trong đó đẳng thức cuối là bất đẳng thức Cauchy–Schwarz, đ�
 
 $$
 \begin{aligned}
-\text{minimize}\quad & c^Tx\\
-\text{subject to}\quad & \bar a_i^Tx + \|P_i^Tx\|_2 \le b_i, \quad i = 1, \ldots, m .
+&\text{minimize}\quad c^Tx\\
+&\text{subject to}\quad \bar a_i^Tx + \|P_i^Tx\|_2 \le b_i, \quad i = 1, \ldots, m .
 \end{aligned}
 $$
 

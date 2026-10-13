@@ -35,9 +35,9 @@ Một **quy hoạch hình học** ở dạng chuẩn là bài toán
 
 $$
 \begin{aligned}
-\text{minimize}\quad & f_0(x)\\
-\text{subject to}\quad & f_i(x) \le 1, \quad i = 1, \ldots, m,\\
-& h_i(x) = 1, \quad i = 1, \ldots, p,
+&\text{minimize}\quad f_0(x)\\
+&\text{subject to}\quad f_i(x) \le 1, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } h_i(x) = 1, \quad i = 1, \ldots, p,
 \end{aligned}
 $$
 
@@ -47,10 +47,10 @@ Nhiều ràng buộc trông khác dạng chuẩn vẫn đưa về được nhờ
 
 $$
 \begin{aligned}
-\text{minimize}\quad & x^{-1}y\\
-\text{subject to}\quad & 2x^{-1} \le 1,\quad \tfrac13 x \le 1,\\
-& x^2y^{-1/2} + 3y^{1/2}z^{-1} \le 1,\\
-& xy^{-1}z^{-2} = 1 .
+&\text{minimize}\quad x^{-1}y\\
+&\text{subject to}\quad 2x^{-1} \le 1,\quad \tfrac13 x \le 1,\\
+&\phantom{\text{subject to}\quad } x^2y^{-1/2} + 3y^{1/2}z^{-1} \le 1,\\
+&\phantom{\text{subject to}\quad } xy^{-1}z^{-2} = 1 .
 \end{aligned}
 $$
 
@@ -66,9 +66,9 @@ hàm mũ của một hàm affine, và một posynomial trở thành tổng các 
 
 $$
 \begin{aligned}
-\text{minimize}\quad & \log\sum_{k=1}^{K_0} e^{a_{0k}^Ty + b_{0k}}\\
-\text{subject to}\quad & \log\sum_{k=1}^{K_i} e^{a_{ik}^Ty + b_{ik}} \le 0, \quad i = 1, \ldots, m,\\
-& g_i^Ty + h_i = 0, \quad i = 1, \ldots, p .
+&\text{minimize}\quad \log\sum_{k=1}^{K_0} e^{a_{0k}^Ty + b_{0k}}\\
+&\text{subject to}\quad \log\sum_{k=1}^{K_i} e^{a_{ik}^Ty + b_{ik}} \le 0, \quad i = 1, \ldots, m,\\
+&\phantom{\text{subject to}\quad } g_i^Ty + h_i = 0, \quad i = 1, \ldots, p .
 \end{aligned}
 $$
 

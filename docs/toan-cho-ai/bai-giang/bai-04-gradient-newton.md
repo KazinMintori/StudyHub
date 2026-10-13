@@ -272,9 +272,9 @@ Trong thực tế tính toán, ta không bao giờ tính ma trận nghịch đ�
 
 $$
 \begin{aligned}
-\min_x \quad & f_0(x) \\
-\text{sao cho} \quad & f_i(x) \le 0, \quad i = 1, \dots, m, \\
-& A x = b.
+&\min_x \quad f_0(x)\\
+&\text{sao cho}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&\phantom{\text{subject to}\quad } A x = b.
 \end{aligned}
 $$
 
@@ -291,8 +291,8 @@ Gradient và Hessian của hàm chắn logarit:
 
 $$
 \begin{aligned}
-\nabla \phi(x) &= \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla f_i(x), \\
-\nabla^2 \phi(x) &= \sum_{i=1}^m \frac{1}{f_i(x)^2} \nabla f_i(x) \nabla f_i(x)^T + \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla^2 f_i(x).
+&\nabla \phi(x) = \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla f_i(x),\\
+&\nabla^2 \phi(x) = \sum_{i=1}^m \frac{1}{f_i(x)^2} \nabla f_i(x) \nabla f_i(x)^T + \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla^2 f_i(x).
 \end{aligned}
 $$
 
@@ -642,8 +642,8 @@ Xét điểm khởi tạo $s^0 = 0{,}25$.
    - Mức giảm thực tế sau một bước lặp:
      $$
      \begin{aligned}
-     \varphi(s^0) - \varphi(s^1) &= \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right) \\
-     &= -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
+     &\varphi(s^0) - \varphi(s^1) = \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right)\\
+     &\quad = -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
      \end{aligned}
      $$
    
@@ -659,8 +659,8 @@ Xét điểm khởi tạo $s^0 = 0{,}25$.
 Xét bài toán tối ưu có ràng buộc đẳng thức:
 $$
 \begin{aligned}
-\min_{x \in \mathbb{R}^3} \quad & f(x) = \frac{1}{2}(x_1^2 + 2x_2^2 + 3x_3^2) \\
-\text{sao cho} \quad & x_1 + x_2 + x_3 = 1.
+&\min_{x \in \mathbb{R}^3} \quad f(x) = \frac{1}{2}(x_1^2 + 2x_2^2 + 3x_3^2)\\
+&\text{sao cho}\quad x_1 + x_2 + x_3 = 1.
 \end{aligned}
 $$
 1. Phương pháp Newton-KKT: Thiết lập hệ phương trình KKT bậc nhất cho bước lặp Newton $\Delta x$ và nhân tử đối ngẫu $w$. Giải hệ phương trình trực tiếp để tìm nghiệm tối ưu $x^*$ từ điểm xuất phát khả thi $x^0 = (1, 0, 0)^T$.
@@ -682,9 +682,9 @@ $$
    Khai triển hệ phương trình:
    $$
    \begin{aligned}
-   \Delta x_1 + w &= -1 \implies \Delta x_1 = -1 - w, \\
-   2\Delta x_2 + w &= 0 \implies \Delta x_2 = -\frac{w}{2}, \\
-   3\Delta x_3 + w &= 0 \implies \Delta x_3 = -\frac{w}{3}.
+   &\Delta x_1 + w = -1 \implies \Delta x_1 = -1 - w,\\
+   &2\Delta x_2 + w = 0 \implies \Delta x_2 = -\frac{w}{2},\\
+   &3\Delta x_3 + w = 0 \implies \Delta x_3 = -\frac{w}{3}.
    \end{aligned}
    $$
    Thay vào ràng buộc bảo toàn tính khả thi $A \Delta x = \Delta x_1 + \Delta x_2 + \Delta x_3 = 0$:
@@ -705,9 +705,9 @@ $$
    Thay $x_1 = 1 - x_2 - x_3$ vào hàm mục tiêu:
    $$
    \begin{aligned}
-   \tilde{f}(x_2, x_3) &= \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2 \\
-   &= \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2 \\
-   &= \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
+   &\tilde{f}(x_2, x_3) = \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2\\
+   &\quad = \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2\\
+   &\quad = \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
    \end{aligned}
    $$
    Gradient và Hessian rút gọn:

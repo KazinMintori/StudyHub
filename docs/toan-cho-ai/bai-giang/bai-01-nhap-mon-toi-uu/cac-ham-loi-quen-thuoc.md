@@ -85,8 +85,8 @@ Với mọi vector hướng $v \in \mathbb{R}^n$, dạng toàn phương tương 
 
 $$
 \begin{aligned}
-v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n p_i v_i^2 - \Big(\sum_{i=1}^n p_i v_i\Big)^2 \\
-&= \sum_{i=1}^n p_i \Big(v_i - \sum_{j=1}^n p_j v_j\Big)^2 \ge 0 .
+&v^T \nabla^2 f(x)\, v = \sum_{i=1}^n p_i v_i^2 - \Big(\sum_{i=1}^n p_i v_i\Big)^2\\
+&\quad = \sum_{i=1}^n p_i \Big(v_i - \sum_{j=1}^n p_j v_j\Big)^2 \ge 0 .
 \end{aligned}
 $$
 

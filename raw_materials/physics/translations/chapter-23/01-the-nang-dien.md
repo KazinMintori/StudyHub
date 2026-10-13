@@ -8,8 +8,8 @@ Khi lực $\vec F$ tác dụng lên hạt đi từ a đến b, công được t�
 
 $$
 \begin{aligned}
-W_{a\to b}&=\int_a^b\vec F\cdot d\vec\ell\\
-&=\int_a^bF\cos\varphi\,d\ell
+&W_{a\to b} = \int_a^b\vec F\cdot d\vec\ell\\
+&\quad =\int_a^bF\cos\varphi\,d\ell
 \end{aligned}
 \tag{23.1}
 $$
@@ -18,8 +18,8 @@ Góc φ là góc giữa lực và dịch chuyển nhỏ tại điểm đang xét
 
 $$
 \begin{aligned}
-W_{a\to b}&=U_a-U_b\\
-&=-\Delta U.
+&W_{a\to b} = U_a-U_b\\
+&\quad =-\Delta U.
 \end{aligned}
 \tag{23.2}
 $$
@@ -43,8 +43,8 @@ Hai bản kim loại song song lớn tạo trường đều hướng xuống, đ
 
 $$
 \begin{aligned}
-W_{a\to b}&=Fd\\
-&=q_0Ed
+&W_{a\to b} = Fd\\
+&\quad =q_0Ed
 \end{aligned}
 \tag{23.4}
 $$
@@ -62,9 +62,9 @@ Mốc U = 0 được chọn tại y = 0. Vì vậy:
 
 $$
 \begin{aligned}
-W_{a\to b}&=-\Delta U\\
-&=-q_0E(y_b-y_a)\\
-&=q_0E(y_a-y_b)
+&W_{a\to b} = -\Delta U\\
+&\quad =-q_0E(y_b-y_a)\\
+&\quad =q_0E(y_a-y_b)
 \end{aligned}
 \tag{23.6}
 $$
@@ -92,8 +92,8 @@ Hai điện tích cùng dấu cho Fᵣ dương, lực đẩy. Hai điện tích 
 
 $$
 \begin{aligned}
-W_{a\to b}&=kqq_0\int_{r_a}^{r_b}\frac{dr}{r^2}\\
-&=kqq_0\left(\frac1{r_a}-\frac1{r_b}\right)
+&W_{a\to b} = kqq_0\int_{r_a}^{r_b}\frac{dr}{r^2}\\
+&\quad =kqq_0\left(\frac1{r_a}-\frac1{r_b}\right)
 \end{aligned}
 \tag{23.8}
 $$
@@ -130,16 +130,16 @@ Positron, phản hạt của electron, có khối lượng $m=9.11\times10^{-31}
 
 $$
 \begin{aligned}
-K_a&=\frac12mv_a^2\\
-&=4.10\times10^{-18}\,\mathrm J,\\
-U_a&=\frac{kqq_0}{r_a}\\
-&=4.61\times10^{-18}\,\mathrm J,\\
-U_b&=\frac{kqq_0}{r_b}\\
-&=2.30\times10^{-18}\,\mathrm J,\\
-K_b&=K_a+U_a-U_b\\
-&=6.41\times10^{-18}\,\mathrm J,\\
-v_b&=\sqrt{\frac{2K_b}{m}}\\
-&\approx3.8\times10^6\,\mathrm{m/s}.
+&K_a = \frac12mv_a^2\\
+&\quad =4.10\times10^{-18}\,\mathrm J,\\
+&U_a = \frac{kqq_0}{r_a}\\
+&\quad =4.61\times10^{-18}\,\mathrm J,\\
+&U_b = \frac{kqq_0}{r_b}\\
+&\quad =2.30\times10^{-18}\,\mathrm J,\\
+&K_b = K_a+U_a-U_b\\
+&\quad =6.41\times10^{-18}\,\mathrm J,\\
+&v_b = \sqrt{\frac{2K_b}{m}}\\
+&\quad \approx3.8\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -147,9 +147,9 @@ $$
 
 $$
 \begin{aligned}
-K_\infty&=K_a+U_a\\
-&=8.71\times10^{-18}\,\mathrm J,\\
-v_\infty&\approx4.4\times10^6\,\mathrm{m/s}.
+&K_\infty = K_a+U_a\\
+&\quad =8.71\times10^{-18}\,\mathrm J,\\
+&v_\infty \approx 4.4\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -159,8 +159,8 @@ Hạt đến khoảng cách lớn nhất r_d thì vận tốc và động năng 
 
 $$
 \begin{aligned}
--\frac{k(2e)e}{r_d}&=K_a+U_a,\\
-r_d&\approx9.0\times10^{-10}\,\mathrm m.
+&-\frac{k(2e)e}{r_d} = K_a+U_a,\\
+&r_d \approx 9.0\times10^{-10}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -179,7 +179,7 @@ Nếu trường do q₁,q₂,q₃,... tạo ra, công tổng lên q₀ bằng t�
 
 $$
 \begin{aligned}
-U&=kq_0\frac{q_1}{r_1}
+&U =kq_0\frac{q_1}{r_1}
 +kq_0\frac{q_2}{r_2}\\
 &\quad+\cdots+kq_0\frac{q_n}{r_n}.
 \end{aligned}
@@ -244,8 +244,8 @@ Hai nguồn cố định trên trục x, q₁ = −e tại x = 0 và q₂ = +e t
 
 $$
 \begin{aligned}
-W_{\mathrm{ngoai}}&=ke\left(\frac{-e}{2a}+\frac e a\right)\\
-&=\frac{ke^2}{2a}.
+&W_{\mathrm{ngoai}} = ke\left(\frac{-e}{2a}+\frac e a\right)\\
+&\quad =\frac{ke^2}{2a}.
 \end{aligned}
 $$
 
@@ -255,8 +255,8 @@ Kết quả dương. Khi đưa q₃ vào từ phía +x, lực đẩy của ngu�
 
 $$
 \begin{aligned}
-U&=-\frac{ke^2}{a}-\frac{ke^2}{2a}+\frac{ke^2}{a}\\
-&=-\frac{ke^2}{2a}.
+&U = -\frac{ke^2}{a}-\frac{ke^2}{2a}+\frac{ke^2}{a}\\
+&\quad =-\frac{ke^2}{2a}.
 \end{aligned}
 $$
 

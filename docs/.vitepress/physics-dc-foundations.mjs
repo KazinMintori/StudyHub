@@ -16,10 +16,10 @@ Với n điện trở dương, khai triển trước khi dùng ký hiệu tổng
 
 $$
 \begin{aligned}
-R_s&=R_1+R_2+\cdots+R_n,\\
-R_s&=\sum_{j=1}^{n}R_j,\\
-\frac1{R_p}&=\frac1{R_1}+\frac1{R_2}+\cdots+\frac1{R_n},\\
-\frac1{R_p}&=\sum_{j=1}^{n}\frac1{R_j}.
+&R_s = R_1+R_2+\cdots+R_n,\\
+&R_s = \sum_{j=1}^{n}R_j,\\
+&\frac1{R_p} = \frac1{R_1}+\frac1{R_2}+\cdots+\frac1{R_n},\\
+&\frac1{R_p} = \sum_{j=1}^{n}\frac1{R_j}.
 \end{aligned}
 $$
 
@@ -28,8 +28,8 @@ Chỉ số j chạy từ 1 đến n qua các điện trở của tổ hợp. R_s
 
 $$
 \begin{aligned}
-\widetilde I_1+\widetilde I_2+\cdots+\widetilde I_m&=0,\\
-\sum_{j=1}^{m}\widetilde I_j&=0.
+&\widetilde I_1+\widetilde I_2+\cdots+\widetilde I_m = 0,\\
+&\sum_{j=1}^{m}\widetilde I_j = 0.
 \end{aligned}
 $$
 
@@ -59,8 +59,8 @@ $$
 
 $$
 \begin{aligned}
-I_GR_G&=(I-I_G)R_{\mathrm{sh}},\\
-R_{\mathrm{sh}}&=\frac{I_GR_G}{I-I_G}.
+&I_GR_G = (I-I_G)R_{\mathrm{sh}},\\
+&R_{\mathrm{sh}} = \frac{I_GR_G}{I-I_G}.
 \end{aligned}
 $$
 
@@ -71,8 +71,8 @@ $$
 
 $$
 \begin{aligned}
-R_G+R_s&=V/I_G,\\
-R_s&=\frac V{I_G}-R_G.
+&R_G+R_s = V/I_G,\\
+&R_s = \frac V{I_G}-R_G.
 \end{aligned}
 $$
 
@@ -81,8 +81,8 @@ Vôn kế lý tưởng có điện trở vô hạn. Nó đo điện áp nhưng k
 
 $$
 \begin{aligned}
-R_L&=\rho L/A,\\
-V_L&=IR_L.
+&R_L = \rho L/A,\\
+&V_L = IR_L.
 \end{aligned}
 $$
 
@@ -97,9 +97,9 @@ Nguồn cần đo không cấp dòng ở cân bằng, nên không có sụt áp 
 
 $$
 \begin{aligned}
-\frac{dq}{dt}&=\frac{\mathcal E}{R}-\frac q{RC},\\
-q(t)&=C\mathcal E(1-e^{-t/(RC)}),\\
-i(t)&=\frac{\mathcal E}{R}e^{-t/(RC)}.
+&\frac{dq}{dt} = \frac{\mathcal E}{R}-\frac q{RC},\\
+&q(t) = C\mathcal E(1-e^{-t/(RC)}),\\
+&i(t) = \frac{\mathcal E}{R}e^{-t/(RC)}.
 \end{aligned}
 $$
 
@@ -109,8 +109,8 @@ Ngắt nguồn rồi cho tụ có điện tích Q₀ phóng qua R:
 
 $$
 \begin{aligned}
-q(t)&=Q_0e^{-t/(RC)},\\
-i(t)&=-\frac{Q_0}{RC}e^{-t/(RC)}.
+&q(t) = Q_0e^{-t/(RC)},\\
+&i(t) = -\frac{Q_0}{RC}e^{-t/(RC)}.
 \end{aligned}
 $$
 
@@ -123,8 +123,8 @@ Nếu muốn đại lượng giảm còn một phần f, với 0 < f < 1:
 
 $$
 \begin{aligned}
-f&=e^{-t/\tau},\\
-t&=-\tau\ln f.
+&f = e^{-t/\tau},\\
+&t = -\tau\ln f.
 \end{aligned}
 $$
 
