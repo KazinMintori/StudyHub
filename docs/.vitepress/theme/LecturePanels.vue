@@ -88,8 +88,7 @@ watch(() => lesson.value?.slug, load)
           <button class="study-button" :disabled="index === slides.length - 1" @click="next(1)">Thẻ sau</button>
         </nav>
       </template>
-      <p v-else-if="course.id === 'vat-ly-2'" class="empty-state">Bộ thẻ ôn tập đang được biên soạn.</p>
-      <p v-else class="empty-state">Slides not available because the Creator too lazy</p>
+      <p v-else class="empty-state">Bộ thẻ ôn tập đang được biên soạn.</p>
     </section>
 
     <section v-else-if="part === 'cheatsheet'" class="lecture-cheatsheet" aria-label="Cheatsheet tra cứu nhanh của bài giảng">

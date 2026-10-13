@@ -1,6 +1,7 @@
 import { physics1Course, physics2Course } from './physics-courses.mjs'
 import { dataProcessingCourse } from './data-processing-course.mjs'
 import { mathAiCourse } from './math-ai-course.mjs'
+import { xacSuatThongKeCourse } from './xac-suat-thong-ke-course.mjs'
 const lesson = (slug, title, prerequisites, status = 'ready') => ({ slug, title, prerequisites, status })
 const slide = (title, bullets, note, formula = '', example = '') => ({ title, bullets, note, formula, example })
 
@@ -43,40 +44,7 @@ export const courseCatalog = [
     slides: [], illustration: 'search'
   },
   mathAiCourse,
-  {
-    id: 'xac-suat-thong-ke', code: '03', name: 'Xác suất thống kê', short: 'Xác suất thống kê', current: true,
-    description: 'Phân biệt các phát biểu từ dữ liệu, rồi học xác suất có điều kiện, phân phối, kỳ vọng và biến thiên.',
-    foundations: ['tap-hop', 'khong-gian-mau', 'to-hop', 'xac-suat-co-dieu-kien', 'doc-lap', 'bien-ngau-nhien', 'ky-vong', 'phuong-sai', 'tich-phan', 'mau-tong-the'],
-    parts: [
-      {
-        title: 'Mở đầu. Câu hỏi và dữ liệu',
-        description: 'Phân biệt mô tả dữ liệu, suy rộng thống kê, kết luận nhân quả và dự đoán.',
-        lessons: ['00-hieu-the-gioi-bang-du-lieu']
-      },
-      {
-        title: 'Phần 1. Cơ sở xác suất và định lý Bayes',
-        description: 'Không gian mẫu, xác suất có điều kiện, tính độc lập và cập nhật niềm tin Bayes.',
-        lessons: ['01-xac-suat-va-bayes']
-      },
-      {
-        title: 'Phần 2. Biến ngẫu nhiên và quy luật phân phối',
-        description: 'Biến ngẫu nhiên rời rạc, liên tục, hàm mật độ PDF và hàm phân phối tích lũy CDF.',
-        lessons: ['02-bien-ngau-nhien']
-      },
-      {
-        title: 'Phần 3. Các đặc trưng số và thống kê mẫu',
-        description: 'Kỳ vọng, phương sai, hiệp phương sai và ước lượng tham số từ mẫu dữ liệu.',
-        lessons: ['03-ky-vong-phuong-sai']
-      }
-    ],
-    lessons: [
-      { ...lesson('00-hieu-the-gioi-bang-du-lieu', 'Hiểu thế giới bằng dữ liệu', []), supportingConcepts: ['thong-ke-mo-ta', 'suy-rong-thong-ke', 'mau-tong-the', 'ket-luan-nhan-qua', 'du-doan-thong-ke'] },
-      lesson('01-xac-suat-va-bayes', 'Xác suất có điều kiện & Bayes', ['tap-hop', 'khong-gian-mau', 'xac-suat-co-dieu-kien', 'doc-lap']),
-      lesson('02-bien-ngau-nhien', 'Biến ngẫu nhiên & phân phối', ['bien-ngau-nhien', 'to-hop', 'tich-phan']),
-      lesson('03-ky-vong-phuong-sai', 'Kỳ vọng, phương sai & mẫu dữ liệu', ['ky-vong', 'phuong-sai', 'mau-tong-the'])
-    ],
-    slides: [], illustration: 'bayes'
-  },
+  xacSuatThongKeCourse,
   dataProcessingCourse,
   physics1Course,
   physics2Course,

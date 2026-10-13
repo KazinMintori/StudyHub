@@ -252,21 +252,113 @@ export const readingMetadata = {
     "words": 3467,
     "minutes": 15
   },
-  "xac-suat-thong-ke/00-hieu-the-gioi-bang-du-lieu": {
-    "words": 2548,
+  "xac-suat-thong-ke/01-hieu-the-gioi-bang-du-lieu": {
+    "words": 3410,
     "minutes": 15
   },
-  "xac-suat-thong-ke/01-xac-suat-va-bayes": {
-    "words": 2648,
+  "xac-suat-thong-ke/02-phan-loai-du-lieu": {
+    "words": 3903,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/03-tom-tat-du-lieu-dinh-tinh": {
+    "words": 4329,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/04-tom-tat-du-lieu-dinh-luong": {
+    "words": 3259,
     "minutes": 15
   },
-  "xac-suat-thong-ke/02-bien-ngau-nhien": {
-    "words": 1651,
-    "minutes": 10
+  "xac-suat-thong-ke/05-ngu-phap-do-hoa": {
+    "words": 3805,
+    "minutes": 20
   },
-  "xac-suat-thong-ke/03-ky-vong-phuong-sai": {
-    "words": 569,
+  "xac-suat-thong-ke/06-phan-tich-co-dieu-kien": {
+    "words": 3748,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/07-tom-tat-lien-he-bien-so": {
+    "words": 3892,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/08-hoi-quy-tuyen-tinh-boi": {
+    "words": 3701,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/09-co-so-xac-suat": {
+    "words": 1162,
     "minutes": 5
+  },
+  "xac-suat-thong-ke/10-tinh-toan-xac-suat": {
+    "words": 6258,
+    "minutes": 30
+  },
+  "xac-suat-thong-ke/11-phan-phoi-xac-suat": {
+    "words": 4604,
+    "minutes": 25
+  },
+  "xac-suat-thong-ke/12-bien-ngau-nhien": {
+    "words": 2635,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/13-ky-vong-va-sai-so-chuan": {
+    "words": 2770,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/14-phan-phoi-lien-tuc-va-xap-xi-chuan": {
+    "words": 4416,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/15-tu-mau-den-tong-the": {
+    "words": 4140,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/16-khoang-tin-cay": {
+    "words": 3277,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/17-phuong-phap-bootstrapping": {
+    "words": 4151,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/18-kiem-dinh-gia-thuyet-1": {
+    "words": 3881,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/19-kiem-dinh-gia-thuyet-2": {
+    "words": 3712,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/20-sai-lech-do-thiet-ke": {
+    "words": 3829,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/21-dinh-nghia-nhan-qua": {
+    "words": 5323,
+    "minutes": 25
+  },
+  "xac-suat-thong-ke/22-thi-nghiem-ngau-nhien": {
+    "words": 2696,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/23-tac-dong-nhan-qua-nghien-cuu-quan-sat": {
+    "words": 4474,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/24-phuong-phap-binh-phuong-be-nhat": {
+    "words": 3728,
+    "minutes": 20
+  },
+  "xac-suat-thong-ke/25-danh-gia-va-cai-thien-du-doan": {
+    "words": 3467,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/26-hien-tuong-qua-khop": {
+    "words": 4984,
+    "minutes": 25
+  },
+  "xac-suat-thong-ke/27-hoi-quy-logistic": {
+    "words": 2802,
+    "minutes": 15
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
     "words": 4131,
@@ -540,9 +632,65 @@ export const readingMetadata = {
     "words": 26676,
     "minutes": 135
   },
+  "vat-ly-2/06-mach-dien-mot-chieu/noi-tiep-song-song": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/06-mach-dien-mot-chieu/kirchhoff": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/06-mach-dien-mot-chieu/dung-cu-do": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/06-mach-dien-mot-chieu/mach-rc": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/06-mach-dien-mot-chieu/phan-phoi-dien": {
+    "words": 20,
+    "minutes": 3
+  },
   "vat-ly-2/07-tu-truong-luc-tu": {
     "words": 20670,
     "minutes": 105
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/tu-tinh": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/tu-truong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/duong-suc-tu-thong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/chuyen-dong-hat": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/ung-dung-hat": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/luc-len-day": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/vong-day-mo-men": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/dong-co-dien": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/07-tu-truong-luc-tu/hall": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/08-nguon-tu-truong": {
     "words": 167,
@@ -655,61 +803,5 @@ export const readingMetadata = {
   "discrete-math/graph-theory": {
     "words": 501,
     "minutes": 5
-  },
-  "vat-ly-2/06-mach-dien-mot-chieu/noi-tiep-song-song": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/06-mach-dien-mot-chieu/kirchhoff": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/06-mach-dien-mot-chieu/dung-cu-do": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/06-mach-dien-mot-chieu/mach-rc": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/06-mach-dien-mot-chieu/phan-phoi-dien": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/tu-tinh": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/tu-truong": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/duong-suc-tu-thong": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/chuyen-dong-hat": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/ung-dung-hat": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/luc-len-day": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/vong-day-mo-men": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/dong-co-dien": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/07-tu-truong-luc-tu/hall": {
-    "words": 20,
-    "minutes": 3
   }
 }
