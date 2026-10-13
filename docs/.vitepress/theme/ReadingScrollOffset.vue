@@ -36,14 +36,18 @@ onMounted(() => {
   // On a statically rendered deep link, VitePress can calculate the initial
   // offset before hydration. Correct a covered heading once the chrome exists.
   const initialHash = window.location.hash
-  nextTick(() => requestAnimationFrame(() => {
+  nextTick(async () => {
+    await document.fonts.ready
+    requestAnimationFrame(() => requestAnimationFrame(() => {
     if (disposed || window.location.hash !== initialHash || !initialHash) return
     let target
     try { target = document.getElementById(decodeURIComponent(initialHash.slice(1))) } catch { return }
     if (!target?.matches('h2, h3, h4')) return
+    measure()
     const top = target.getBoundingClientRect().top
     if (top >= 0 && top < height.value) window.scrollTo({ top: window.scrollY + top - height.value, behavior: 'instant' })
-  }))
+    }))
+  })
 })
 onContentUpdated(async () => {
   await nextTick()
