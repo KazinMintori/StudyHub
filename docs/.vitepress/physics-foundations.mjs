@@ -1,3 +1,4 @@
+import {sourcesConcepts,sourcesWikiDetails,sourcesWikiConnections} from './physics-sources-foundations.mjs'
 import {magneticConcepts,magneticWikiDetails,magneticWikiConnections} from './physics-magnetic-foundations.mjs'
 import {dcConcepts,dcWikiDetails,dcWikiConnections} from './physics-dc-foundations.mjs'
 import {currentConcepts,currentWikiDetails,currentWikiConnections} from './physics-current-foundations.mjs'
@@ -7,6 +8,7 @@ import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiCo
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...sourcesConcepts,
   ...magneticConcepts,
   ...dcConcepts,
   ...currentConcepts,
@@ -318,6 +320,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...sourcesWikiDetails,
   ...magneticWikiDetails,
   ...dcWikiDetails,
   ...currentWikiDetails,
@@ -352,6 +355,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...sourcesWikiConnections,
   ...magneticWikiConnections,
   ...dcWikiConnections,
   ...currentWikiConnections,

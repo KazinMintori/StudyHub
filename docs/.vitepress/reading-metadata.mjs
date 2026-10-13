@@ -693,8 +693,8 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/08-nguon-tu-truong": {
-    "words": 167,
-    "minutes": 5
+    "words": 12351,
+    "minutes": 60
   },
   "vat-ly-2/09-cam-ung-dien-tu": {
     "words": 148,
@@ -803,5 +803,37 @@ export const readingMetadata = {
   "discrete-math/graph-theory": {
     "words": 501,
     "minutes": 5
+  },
+  "vat-ly-2/08-nguon-tu-truong/dien-tich-chuyen-dong-tu-truong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/tu-truong-biot-savart": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/tu-truong-day-thang": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/luc-tu-hai-day": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/tu-truong-vong-day": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/dinh-luat-ampere": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/ung-dung-ampere": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/08-nguon-tu-truong/vat-lieu-tu": {
+    "words": 20,
+    "minutes": 3
   }
 }

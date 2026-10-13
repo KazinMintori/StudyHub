@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" role="img">
+<title>Ống dây có lõi thép: Trường dòng ngoài, từ hóa và trường tổng cùng hướng</title>
+<defs><marker id="arrow28" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7z" fill="context-stroke"/></marker></defs>
+<style>text{font:15px sans-serif;fill:#172f49}.vector{fill:none;stroke-width:2.5;marker-end:url(#arrow28)}</style>
+<rect x="37" y="55" width="268" height="114" rx="18" fill="#e7ece2" stroke="#53753c" stroke-width="1.5"/>
+<g fill="none" stroke="#754591" stroke-width="1.5">
+<ellipse cx="51" cy="112" rx="9" ry="75"/><ellipse cx="77" cy="112" rx="9" ry="75"/><ellipse cx="103" cy="112" rx="9" ry="75"/><ellipse cx="129" cy="112" rx="9" ry="75"/><ellipse cx="155" cy="112" rx="9" ry="75"/><ellipse cx="181" cy="112" rx="9" ry="75"/><ellipse cx="207" cy="112" rx="9" ry="75"/><ellipse cx="233" cy="112" rx="9" ry="75"/><ellipse cx="259" cy="112" rx="9" ry="75"/><ellipse cx="285" cy="112" rx="9" ry="75"/>
+</g>
+<rect x="89" y="59" width="167" height="105" fill="#e7ece2"/>
+<path class="vector" d="M107 79H232" stroke="#2b5d95"/><text x="80" y="84">B₀</text>
+<path class="vector" d="M107 111H232" stroke="#53753c"/><text x="80" y="116">M</text>
+<path class="vector" d="M107 143H232" stroke="#a85024"/><text x="80" y="148">B</text>
+<text x="120" y="23">Ống dây có lõi thép</text>
+<text x="38" y="211">Các mũi tên chỉ biểu diễn chiều vector.</text>
+</svg>

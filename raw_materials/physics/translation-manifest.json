@@ -2775,24 +2775,145 @@
           "page": 937
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "28.1",
-        "28.2",
-        "28.3",
-        "28.4",
-        "28.5",
-        "28.6",
-        "28.7",
-        "28.8",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-28/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.1",
+          "file": "raw_materials/physics/translations/chapter-28/01-dien-tich-chuyen-dong.md",
+          "destination": "topic:dien-tich-chuyen-dong-tu-truong",
+          "printedPages": [
+            918,
+            921
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.2",
+          "file": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
+          "destination": "topic:tu-truong-biot-savart",
+          "printedPages": [
+            921,
+            923
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.3",
+          "file": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
+          "destination": "topic:tu-truong-day-thang",
+          "printedPages": [
+            923,
+            926
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.4",
+          "file": "raw_materials/physics/translations/chapter-28/04-luc-hai-day.md",
+          "destination": "topic:luc-tu-hai-day",
+          "printedPages": [
+            926,
+            927
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.5",
+          "file": "raw_materials/physics/translations/chapter-28/05-vong-day-tron.md",
+          "destination": "topic:tu-truong-vong-day",
+          "printedPages": [
+            927,
+            930
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.6",
+          "file": "raw_materials/physics/translations/chapter-28/06-dinh-luat-ampere.md",
+          "destination": "topic:dinh-luat-ampere",
+          "printedPages": [
+            930,
+            933
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.7",
+          "file": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+          "destination": "topic:ung-dung-ampere",
+          "printedPages": [
+            933,
+            937
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "28.8",
+          "file": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+          "destination": "topic:vat-lieu-tu",
+          "printedPages": [
+            937,
+            941
+          ],
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-28/09-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "10-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-28/10-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "11-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-28/11-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-tap-01-30",
+          "file": "raw_materials/physics/translations/chapter-28/12-bai-tap-01-30.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-31-60",
+          "file": "raw_materials/physics/translations/chapter-28/13-bai-tap-31-60.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "14-bai-tong-hop-61-75",
+          "file": "raw_materials/physics/translations/chapter-28/14-bai-tong-hop-61-75.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "15-nang-cao-mcat",
+          "file": "raw_materials/physics/translations/chapter-28/15-nang-cao-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        },
+        {
+          "sourceUnit": "16-dap-so",
+          "file": "raw_materials/physics/translations/chapter-28/16-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-and-reviewed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-28-review.json"
     },
     {
       "chapter": 29,

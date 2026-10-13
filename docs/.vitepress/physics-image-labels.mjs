@@ -1,3 +1,6 @@
+import {physics28ExerciseImageAnnotations} from './physics28-exercise-image-annotations.mjs'
+import {physics28TheoryBImageAnnotations} from './physics28-theory-b-image-annotations.mjs'
+import {physics28TheoryAImageAnnotations} from './physics28-theory-a-image-annotations.mjs'
 import {physics27TheoryImageAnnotations} from './physics27-theory-image-annotations.mjs'
 import {physics27ExerciseImageAnnotations} from './physics27-exercise-image-annotations.mjs'
 import {physics26TheoryImageAnnotations} from './physics26-theory-image-annotations.mjs'
@@ -104,4 +107,7 @@ const originalLabels={
  'young-24/hinh-24-22':[['Mặt Gauss','Gaussian surface'],['Điện môi','Dielectric'],['Vật dẫn','Conductor'],['Hình nhìn cạnh','Side view'],['Hình phối cảnh','Perspective view']],
  ...capacitanceImageAnnotations,...physics25ImageAnnotations
 }
-export const physicsImageLabels={...originalLabels,...physics21ImageAnnotations,...physics22ImageAnnotations,...physics23ImageAnnotations,...physics24ImageAnnotations}
+export const physicsImageLabels={
+ ...physics28ExerciseImageAnnotations,
+ ...physics28TheoryBImageAnnotations,
+ ...physics28TheoryAImageAnnotations,...originalLabels,...physics21ImageAnnotations,...physics22ImageAnnotations,...physics23ImageAnnotations,...physics24ImageAnnotations}

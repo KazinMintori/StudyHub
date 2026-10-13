@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import {mathTextPlugin} from './math-text-plugin.mjs'
 import {mathSegments,renderMathText} from '../docs/.vitepress/math-text.mjs'
 const plugin=mathTextPlugin(),rendered={},missing=[]
-const modules=['physics-motion-course','physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations','physics-capacitance-course','physics-capacitance-foundations','physics-current-course','physics-current-foundations','physics-dc-course','physics-dc-foundations','physics-magnetic-course','physics-magnetic-foundations']
+const modules=['physics-motion-course','physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations','physics-capacitance-course','physics-capacitance-foundations','physics-current-course','physics-current-foundations','physics-dc-course','physics-dc-foundations','physics-magnetic-course','physics-magnetic-foundations','physics-sources-course','physics-sources-foundations']
 for(const name of modules){
  const path=`docs/.vitepress/${name}.mjs`,source=await readFile(path,'utf8')
  const transformed=plugin.transform(source,path.replaceAll('\\','/'))
@@ -16,6 +16,7 @@ function inspect(value,path){
  if(typeof value==='string'){
   for(const segment of mathSegments(value))if(segment.startsWith('$')){
    references++
+   assert(!/\\&(?:frac|dfrac|tfrac|vec|mu|pi|quad|mathrm|text|sqrt|ge|le|approx|sum|int|oint)(?![A-Za-z])/.test(segment),'Escaped ampersand must not replace a TeX command: '+path)
    if(!rendered[segment])missing.push({path,segment})
    else assert(renderMathText(segment,rendered).includes('<mjx-container'),path)
   }

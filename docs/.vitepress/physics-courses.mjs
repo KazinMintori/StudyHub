@@ -1022,14 +1022,93 @@ export const physics2Course = {
       "title": "Nguồn của từ trường",
       "prerequisites": [
         "vector",
-        "tich-phan",
+        "tich-co-huong",
+        "dien-tich",
         "dong-dien",
-        "tu-truong"
+        "dien-truong",
+        "dinh-luat-gauss",
+        "tu-truong",
+        "luc-tu-tren-dien-tich",
+        "momen-tu",
+        "momen-dong-luong",
+        "tich-phan"
       ],
-      "supportingConcepts": [],
-      "status": "draft",
+      "supportingConcepts": [
+        "dinh-luat-biot-savart",
+        "dinh-luat-ampere",
+        "do-tu-hoa",
+        "do-tu-tham",
+        "do-cam-tu",
+        "thuan-tu",
+        "nghich-tu",
+        "sat-tu",
+        "bao-hoa-tu",
+        "tu-tre",
+        "tu-hoa-du",
+        "luc-khu-tu",
+        "hien-tuong-curie",
+        "ong-day-dien",
+        "ong-day-hinh-xuyen"
+      ],
+      "status": "ready",
       "number": 8,
-      "sourceChapter": 28
+      "sourceChapter": 28,
+      "topicGroups": [
+        {
+          "title": "Từ trường do dòng điện tạo ra",
+          "topics": [
+            {
+              "slug": "dien-tich-chuyen-dong-tu-truong",
+              "title": "Từ trường do điện tích chuyển động",
+              "question": "Một điện tích chuyển động tạo từ trường phụ thuộc vận tốc và vị trí ra sao?",
+              "source": "28.1"
+            },
+            {
+              "slug": "tu-truong-biot-savart",
+              "title": "Định luật Biot–Savart",
+              "question": "Mỗi phần tử dòng điện đóng góp vào từ trường tại điểm khảo sát như thế nào?",
+              "source": "28.2"
+            },
+            {
+              "slug": "tu-truong-day-thang",
+              "title": "Từ trường của dây dẫn thẳng",
+              "question": "Đối xứng trụ cho biết độ lớn và chiều trường quanh dây ra sao?",
+              "source": "28.3"
+            },
+            {
+              "slug": "luc-tu-hai-day",
+              "title": "Lực giữa hai dây dẫn song song",
+              "question": "Vì sao hai dòng cùng chiều hút nhau còn hai dòng ngược chiều đẩy nhau?",
+              "source": "28.4"
+            },
+            {
+              "slug": "tu-truong-vong-day",
+              "title": "Từ trường trên trục vòng dây",
+              "question": "Các phần tử đối xứng của vòng dây tổng hợp trường trên trục thế nào?",
+              "source": "28.5"
+            },
+            {
+              "slug": "dinh-luat-ampere",
+              "title": "Định luật Ampere",
+              "question": "Tích phân đường kín liên hệ với dòng điện bao quanh như thế nào?",
+              "source": "28.6"
+            },
+            {
+              "slug": "ung-dung-ampere",
+              "title": "Ứng dụng định luật Ampere",
+              "question": "Đối xứng nào cho phép tìm trường trong dây trụ, ống dây và xuyến?",
+              "source": "28.7"
+            },
+            {
+              "slug": "vat-lieu-tu",
+              "title": "Vật liệu từ",
+              "question": "Từ hóa, độ cảm từ và từ trễ mô tả phản ứng của vật liệu ra sao?",
+              "source": "28.8"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "09-cam-ung-dien-tu",
@@ -1868,6 +1947,116 @@ export const physics2Course = {
       ],
       "formula": "$$\n\\begin{aligned}\nE_z&=-v_xB_y,\\\\\nJ_x&=nqv_x,\\\\\nnq&=-\\frac{J_xB_y}{E_z}.\n\\end{aligned}\n$$",
       "example": ""
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Điện tích chuyển động tạo từ trường",
+      "bullets": [
+        "Từ trường tại điểm khảo sát phụ thuộc vị trí tương đối đến điện tích.",
+        "Biểu thức dùng điện tích chuyển động đều với tốc độ nhỏ so với tốc độ ánh sáng.",
+        "Chiều vuông góc với vận tốc và phương nối đến điểm."
+      ],
+      "formula": "$$\n\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{q\\vec v\\times\\hat r}{r^2}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Biot–Savart cộng trường của các phần tử dòng",
+      "bullets": [
+        "Mỗi phần tử dòng đóng góp một vector từ trường tại điểm khảo sát.",
+        "Độ lớn giảm theo bình phương khoảng cách và phụ thuộc góc giữa phần tử dòng với phương nối đến điểm.",
+        "Chiều xác định bằng tích có hướng theo quy tắc bàn tay phải."
+      ],
+      "formula": "$$\nd\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Dây thẳng dài có trường giảm theo khoảng cách",
+      "bullets": [
+        "Đối xứng trụ làm đường sức là các đường tròn đồng tâm.",
+        "Chiều trường xác định bởi chiều dòng điện.",
+        "Kết quả áp dụng cho dây thẳng đủ dài so với khoảng cách đang xét."
+      ],
+      "formula": "$$\nB=\\frac{\\mu_0 I}{2\\pi r}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Hai dây song song hút hoặc đẩy tùy chiều dòng",
+      "bullets": [
+        "Mỗi dây nằm trong trường do dây kia tạo ra.",
+        "Dòng cùng chiều gây lực hút, dòng ngược chiều gây lực đẩy.",
+        "Lực trên một đơn vị chiều dài tỉ lệ tích hai dòng và nghịch với khoảng cách."
+      ],
+      "formula": "$$\n\\frac{F}{L}=\\frac{\\mu_0 I_1 I_2}{2\\pi d}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Trường trên trục vòng dây có hai thành phần đối xứng",
+      "bullets": [
+        "Các thành phần ngang triệt tiêu từng cặp.",
+        "Các thành phần dọc trục cùng chiều và cộng lại.",
+        "Tại tâm một vòng bán kính a, biểu thức rút gọn tương ứng."
+      ],
+      "formula": "$$\nB_x=\\frac{\\mu_0 I a^2}{2(a^2+x^2)^{3/2}}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Đoạn dây hữu hạn cho trường theo hai góc đầu mút",
+      "bullets": [
+        "Biot–Savart tích phân dọc đoạn dây thẳng hữu hạn.",
+        "Các góc được đo từ phương vuông góc với dây qua điểm quan sát.",
+        "Giới hạn dây rất dài khôi phục biểu thức dây thẳng vô hạn."
+      ],
+      "formula": "$$\nB=\\frac{\\mu_0 I}{4\\pi a}(\\sin\\theta_1+\\sin\\theta_2)\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Định luật Ampere tính tích phân theo dòng bao",
+      "bullets": [
+        "Dòng xuyên qua mặt được giới hạn bởi đường kín được cộng đại số.",
+        "Chiều dương gắn với chiều đi trên đường bằng quy tắc bàn tay phải.",
+        "Định luật dạng này dùng cho từ tĩnh, không bao gồm số hạng điện trường biến thiên."
+      ],
+      "formula": "$$\n\\oint\\vec B\\cdot d\\vec l=\\mu_0 I_{\\mathrm{encl}}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Dây trụ có dòng đều cho trường tuyến tính bên trong",
+      "bullets": [
+        "Bên trong, dòng bao tỉ lệ diện tích tiết diện được bao.",
+        "Bên ngoài, đường tích phân bao toàn bộ dòng.",
+        "Độ lớn trường liên tục tại mặt trụ trong mô hình phân bố đều."
+      ],
+      "formula": "$$\n\\begin{aligned}&B(r) = \\frac{\\mu_0 I r}{2\\pi R^2},\\quad r<R\\\\&B(r) = \\frac{\\mu_0 I}{2\\pi r},\\quad r\\ge R.\\end{aligned}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Ống dây dài và xuyến tập trung trường nhờ đối xứng",
+      "bullets": [
+        "Ở vùng giữa ống dây dài, trường gần đều và bên ngoài nhỏ.",
+        "Trong lõi xuyến, trường phụ thuộc bán kính tính từ trục xuyến.",
+        "Các kết quả là gần đúng hình học và giả thiết môi trường không từ tính."
+      ],
+      "formula": "$$\n\\begin{aligned}&B_{\\text{ống dây}} \\approx \\mu_0 nI\\\\&B_{\\text{xuyến}}(r) = \\frac{\\mu_0 NI}{2\\pi r}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Độ từ hóa bổ sung vào trường do dòng ngoài",
+      "bullets": [
+        "Độ từ hóa là mômen từ trên một đơn vị thể tích.",
+        "Trong vật liệu tuyến tính đẳng hướng, độ từ thẩm tương đối liên hệ với độ cảm từ.",
+        "Không dùng quan hệ tuyến tính như hằng số vật liệu sắt từ khi vật liệu bão hòa hoặc có từ trễ."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\vec B = \\vec B_0+\\mu_0\\vec M\\\\&\\mu = K_m\\mu_0\\\\&\\chi_m = K_m-1.\\end{aligned}\n$$"
+    },
+    {
+      "note": "08-nguon-tu-truong",
+      "title": "Vật liệu sắt từ có bão hòa và từ trễ",
+      "bullets": [
+        "Các miền từ có thể đổi kích thước và hướng khi tăng trường ngoài.",
+        "Sau khi bỏ trường, từ hóa dư có thể còn lại.",
+        "Vòng trễ phụ thuộc lịch sử từ hóa nên không mô tả bằng một độ từ thẩm cố định."
+      ],
+      "formula": ""
     }
   ],
   "illustration": "field",
