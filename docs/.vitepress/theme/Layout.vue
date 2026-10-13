@@ -1,5 +1,5 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme-without-fonts'
+import DefaultTheme, { useSidebar } from 'vitepress/theme-without-fonts'
 import DiagramLightbox from './DiagramLightbox.vue'
 import LessonActions from './LessonActions.vue'
 import CourseNav from './CourseNav.vue'
@@ -13,12 +13,17 @@ import BuyMeCoffee from './BuyMeCoffee.vue'
 import WelcomeScreen from './WelcomeScreen.vue'
 import SiteIntroduction from './SiteIntroduction.vue'
 import { useData, useRoute, withBase } from 'vitepress'
-import { onMounted, onUnmounted, watch, ref, nextTick } from 'vue'
+import { computed, onMounted, onUnmounted, watch, ref, nextTick } from 'vue'
+import { courseCatalog } from '../course-catalog.mjs'
 import { lecturePart, syncLecturePart } from './lecture-state'
 
 const { Layout } = DefaultTheme
 const welcomeScreen = ref(null)
-const { frontmatter } = useData(), route = useRoute()
+const { hasSidebar } = useSidebar()
+// Keep the desktop preference across courses, independently of the mobile drawer.
+const desktopSidebarCollapsed = ref(false)
+const { frontmatter, page } = useData(), route = useRoute()
+const hasCourseSidebar = computed(() => hasSidebar.value && courseCatalog.some(course => page.value.relativePath.startsWith(`${course.id}/`)))
 function openSearch() { document.querySelector('.DocSearch-Button')?.click() }
 function syncLink(event) {
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -43,7 +48,21 @@ watch(() => route.path, syncLecturePart)
 </script>
 
 <template>
-  <Layout :class="{ 'lecture-layout': frontmatter.section === 'lecture' || frontmatter.section === 'topic', 'topic-layout': frontmatter.section === 'topic', 'physics-layout': ['vat-ly-1', 'vat-ly-2'].includes(frontmatter.course), 'lecture-reading-plain': frontmatter.section === 'lecture' && frontmatter.readingStyle === 'plain', 'lecture-slides-layout': frontmatter.section === 'lecture' && lecturePart === 'slides', 'lecture-alt': frontmatter.section === 'lecture' && lecturePart !== 'notes', 'has-chapter-exercises': frontmatter.hasChapterExercises, 'lecture-exercises-layout': frontmatter.hasChapterExercises && lecturePart === 'bai-tap' }">
+  <Layout :class="{ 'sidebar-collapsed': hasCourseSidebar && desktopSidebarCollapsed, 'lecture-layout': frontmatter.section === 'lecture' || frontmatter.section === 'topic', 'topic-layout': frontmatter.section === 'topic', 'physics-layout': ['vat-ly-1', 'vat-ly-2'].includes(frontmatter.course), 'lecture-reading-plain': frontmatter.section === 'lecture' && frontmatter.readingStyle === 'plain', 'lecture-slides-layout': frontmatter.section === 'lecture' && lecturePart === 'slides', 'lecture-alt': frontmatter.section === 'lecture' && lecturePart !== 'notes', 'has-chapter-exercises': frontmatter.hasChapterExercises, 'lecture-exercises-layout': frontmatter.hasChapterExercises && lecturePart === 'bai-tap' }">
+    <template #layout-top>
+      <button
+        v-if="hasCourseSidebar"
+        class="course-sidebar-toggle"
+        type="button"
+        aria-controls="VPSidebarNav"
+        :aria-expanded="!desktopSidebarCollapsed"
+        :aria-label="desktopSidebarCollapsed ? 'Mở danh sách bài giảng' : 'Thu danh sách bài giảng'"
+        :title="desktopSidebarCollapsed ? 'Mở danh sách bài giảng' : 'Thu danh sách bài giảng'"
+        @click="desktopSidebarCollapsed = !desktopSidebarCollapsed"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+      </button>
+    </template>
     <template #not-found><main class="course-shell"><h1>Trang này không tồn tại</h1><p>Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
       <LectureHeader v-if="frontmatter.section === 'lecture'" />

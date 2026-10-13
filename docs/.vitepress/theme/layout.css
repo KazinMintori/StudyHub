@@ -2,6 +2,42 @@
 .VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
 .VPNavBar .VPNavBarSearch { display: none !important; }
 .VPNavBar .content-body { background: var(--paper); }
+.course-sidebar-toggle { display: none; }
+@media (min-width: 960px) {
+  .course-sidebar-toggle {
+    position: fixed;
+    z-index: calc(var(--vp-z-index-nav) + 1);
+    top: calc(var(--vp-layout-top-height, 0px) + (var(--vp-nav-height) - 44px) / 2);
+    left: calc(var(--vp-sidebar-width) - 60px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .course-sidebar-toggle:hover { background: var(--tim-soft); color: var(--tim); }
+  .course-sidebar-toggle:focus-visible { outline: 2px solid var(--tim); outline-offset: 2px; }
+  .Layout.sidebar-collapsed .VPNavBar { background: var(--paper); }
+  /* Hide the whole navigation from both the screen and keyboard tab order. */
+  .Layout.sidebar-collapsed .VPSidebar { display: none; }
+  .Layout.sidebar-collapsed .VPContent.has-sidebar { padding-inline: 0; }
+  .Layout.sidebar-collapsed .VPLocalNav.has-sidebar { padding-left: 0; }
+  .Layout.sidebar-collapsed .VPLocalNav .container { max-width: calc(780px + 64px); margin-inline: auto; }
+  .Layout.sidebar-collapsed .VPDoc.has-sidebar .container { max-width: 1184px; justify-content: center; }
+  .Layout.sidebar-collapsed .VPDoc.has-sidebar .content-container { margin-inline: auto; }
+  .Layout.sidebar-collapsed .VPContent.has-sidebar ~ .site-introduction { margin-inline: 0; }
+}
+@media (min-width: 1440px) {
+  .course-sidebar-toggle { left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) - 60px); }
+}
+@media print {
+  .course-sidebar-toggle { display: none !important; }
+}
 .VPHome { padding-bottom: 0; margin-bottom: 0; }
 .study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }
 .site-footer { max-width: 1184px; margin: var(--space-6) auto 0; padding: var(--space-5) var(--space-6); border-top: 1px solid var(--rule); display: flex; justify-content: center; align-items: center; gap: var(--space-5); flex-wrap: wrap; font-size: var(--fs-small); color: var(--ink-3); }
