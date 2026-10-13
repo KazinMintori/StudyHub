@@ -34,4 +34,4 @@ onBeforeUnmount(recordHeading)
 onUnmounted(() => { cancelAnimationFrame(frame); window.removeEventListener('scroll', scroll); window.removeEventListener('pagehide', recordHeading) })
 watch(() => route.path, load)
 </script>
-<template><section v-if="readable" v-show="part === 'notes'" class="lesson-actions"><nav aria-label="Sau bài học"><a v-if="nextLesson" class="text-link" :href="studyLink(lecturePath(course.id, nextLesson.slug))">Tiếp: {{ nextLesson.title }}</a><a class="text-link" :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện của môn</a></nav><p v-if="storageMessage" role="status">{{ storageMessage }}</p></section></template>
+<template><section v-if="readable && (nextLesson || storageMessage)" v-show="part === 'notes'" class="lesson-actions"><nav v-if="nextLesson" aria-label="Sau bài học"><a class="text-link" :href="studyLink(lecturePath(course.id, nextLesson.slug))">Tiếp: {{ nextLesson.title }}</a></nav><p v-if="storageMessage" role="status">{{ storageMessage }}</p></section></template>

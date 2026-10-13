@@ -6,14 +6,20 @@ Từ thông đo mức độ từ trường xuyên qua một diện tích có đ�
 Với mặt hữu hạn $S$, cộng các phần tử từ thông trên toàn mặt:
 
 $$
-\Phi_B = \int_S \vec B\cdot d\vec A = \int_S B\cos\phi\,dA.
+\begin{aligned}
+\Phi_B&=\int_S \vec B\cdot d\vec A\\
+&=\int_S B\cos\phi\,dA.
+\end{aligned}
 \tag{29.1}
 $$
 
 Nếu $\vec B$ đều trên một mặt phẳng diện tích $A$, tích phân rút gọn thành tích vô hướng giữa $\vec B$ và véc-tơ diện tích $\vec A$:
 
 $$
-\Phi_B=\vec B\cdot\vec A=BA\cos\phi.
+\begin{aligned}
+\Phi_B&=\vec B\cdot\vec A\\
+&=BA\cos\phi.
+\end{aligned}
 \tag{29.2}
 $$
 
@@ -53,24 +59,31 @@ Một vòng dây dẫn đứng yên nằm trong vùng có từ trường đều 
 Đổi diện tích sang đơn vị SI:
 
 $$
-A=120\,\mathrm{cm^2}=0{,}012\,\mathrm{m^2}.
+\begin{aligned}
+A&=120\,\mathrm{cm^2}\\
+&=0{,}012\,\mathrm{m^2}.
+\end{aligned}
 $$
 
 Vì $\phi=0$, ta có $\Phi_B=BA$. Do $A$ không đổi:
 
 $$
-\frac{d\Phi_B}{dt}=A\frac{dB}{dt}
-=(0{,}012)(0{,}020)
-=2{,}4\times10^{-4}\,\mathrm{Wb/s}.
+\begin{aligned}
+\frac{d\Phi_B}{dt}&=A\frac{dB}{dt}\\
+&=(0{,}012)(0{,}020)\\
+&=2{,}4\times10^{-4}\,\mathrm{Wb/s}.
+\end{aligned}
 $$
 
 Độ lớn suất điện động cảm ứng là $2{,}4\times10^{-4}\,\mathrm V=0{,}24\,\mathrm{mV}$. Dấu của $\mathcal E$ theo lựa chọn véc-tơ diện tích sẽ là âm vì từ thông dương đang tăng. Dòng điện có độ lớn:
 
 $$
-I=\frac{|\mathcal E|}{R}
-=\frac{2{,}4\times10^{-4}}{5{,}0}
-=4{,}8\times10^{-5}\,\mathrm A
-=0{,}048\,\mathrm{mA}.
+\begin{aligned}
+I&=\frac{|\mathcal E|}{R}\\
+&=\frac{2{,}4\times10^{-4}}{5{,}0}\\
+&=4{,}8\times10^{-5}\,\mathrm A\\
+&=0{,}048\,\mathrm{mA}.
+\end{aligned}
 $$
 
 Đổi sang vòng cách điện không làm đổi suất điện động, vì định luật Faraday không chứa điện trở. Điện trở rất lớn làm dòng nhỏ hơn. Với chất cách điện lý tưởng có điện trở vô hạn, dòng bằng không dù suất điện động vẫn tồn tại.
@@ -81,7 +94,7 @@ $$
 
 **Thiết lập:** Tìm nguyên nhân làm từ thông đổi. Đó có thể là từ trường biến thiên, dây dẫn chuyển động, diện tích mạch thay đổi hoặc mạch xoay đổi hướng. Chọn hướng véc-tơ diện tích vuông góc với mặt và cố định lựa chọn ấy trong toàn bài.
 
-**Thực hiện:** Nếu từ trường đều, dùng Eq. (29.2). Nếu không đều, dùng tích phân Eq. (29.1). Tính tốc độ thay đổi từ thông rồi dùng Eq. (29.3), hoặc Eq. (29.4) nếu có $N$ vòng. Nếu biết điện trở, tìm độ lớn dòng bằng $I=|\mathcal E|/R$.
+**Thực hiện:** Nếu từ trường đều, dùng công thức (29.2). Nếu không đều, dùng tích phân công thức (29.1). Tính tốc độ thay đổi từ thông rồi dùng công thức (29.3), hoặc công thức (29.4) nếu có $N$ vòng. Nếu biết điện trở, tìm độ lớn dòng bằng $I=|\mathcal E|/R$.
 
 **Đánh giá:** Kiểm tra đơn vị, dấu từ thông, dấu suất điện động và chiều dòng theo lựa chọn véc-tơ diện tích.
 
@@ -90,15 +103,16 @@ $$
 Một cuộn dây tròn có $500$ vòng và bán kính $4{,}00\,\mathrm{cm}$. Cuộn nằm trong từ trường đều. Từ trường tạo góc $60^\circ$ với mặt phẳng cuộn và giảm với tốc độ $0{,}200\,\mathrm{T/s}$. Hãy tìm độ lớn và chiều suất điện động cảm ứng.
 
 ![Hình 29.7: Cuộn dây nghiêng trong từ trường, với góc đề bài đo từ mặt phẳng cuộn.](../img/young-29/hinh-29-07.png)
-**Hướng đi hợp lý:** Đổi bán kính sang mét. Từ trường tạo góc $60^\circ$ với mặt phẳng, nên tạo góc $30^\circ$ với véc-tơ diện tích. Dùng Eq. (29.4), chú ý $dB/dt<0$.
+**Hướng đi hợp lý:** Đổi bán kính sang mét. Từ trường tạo góc $60^\circ$ với mặt phẳng, nên tạo góc $30^\circ$ với véc-tơ diện tích. Dùng công thức (29.4), chú ý $dB/dt<0$.
 
 Diện tích mỗi vòng là $A=\pi(0{,}0400\,\mathrm m)^2$. Vì $B$ đều và hướng cuộn không đổi:
 
 $$
 \begin{aligned}
-&\mathcal E = -N\frac{dB}{dt}A\cos30^\circ\\
-&\quad = -500(-0{,}200)\pi(0{,}0400)^2\cos30^\circ\\
-&\quad = +0{,}435\,\mathrm V.
+\mathcal E&=-N\frac{dB}{dt}A\cos30^\circ\\
+&=-500(-0{,}200)\\
+&\quad\times\pi(0{,}0400)^2\cos30^\circ\\
+&=+0{,}435\,\mathrm V.
 \end{aligned}
 $$
 
@@ -108,12 +122,13 @@ $$
 
 Một khung dây diện tích $A$ quay đều với tốc độ góc $\omega$ trong từ trường đều, không đổi, có độ lớn $B$. Tại $t=0$, góc giữa $\vec B$ và véc-tơ diện tích bằng không. Hãy tìm suất điện động cảm ứng theo thời gian.
 
-**Hướng đi hợp lý:** Khi quay đều, góc giữa $\vec B$ và véc-tơ diện tích là $\phi=\omega t$. Tính từ thông bằng Eq. (29.2), sau đó lấy đạo hàm.
+**Hướng đi hợp lý:** Khi quay đều, góc giữa $\vec B$ và véc-tơ diện tích là $\phi=\omega t$. Tính từ thông bằng công thức (29.2), sau đó lấy đạo hàm.
 
 $$
 \begin{aligned}
-&\Phi_B(t) = BA\cos(\omega t),\\
-&\mathcal E(t) = -\frac{d\Phi_B}{dt} = \omega BA\sin(\omega t).
+\Phi_B(t)&=BA\cos(\omega t),\\
+\mathcal E(t)&=-\frac{d\Phi_B}{dt}\\
+&=\omega BA\sin(\omega t).
 \end{aligned}
 $$
 
@@ -137,16 +152,19 @@ Xét động cơ có cuộn vuông $500$ vòng, cạnh $10{,}0\,\mathrm{cm}$, đ
 Suất điện động tức thời có biên độ $\mathcal E_0=N\omega BA$. Trung bình của $|\sin\omega t|$ trên nửa chu kỳ là:
 
 $$
-\langle|\sin\omega t|\rangle = \frac{\int_0^{\pi/\omega}\sin(\omega t)\,dt}{\pi/\omega} = \frac{2}{\pi}.
+\begin{aligned}
+\langle|\sin\omega t|\rangle&=\frac{\int_0^{\pi/\omega}\sin(\omega t)\,dt}{\pi/\omega}\\
+&=\frac{2}{\pi}.
+\end{aligned}
 $$
 
 Do đó $\mathcal E_{\mathrm{av}}=2N\omega BA/\pi$, suy ra:
 
 $$
 \begin{aligned}
-&\omega = \frac{\pi\mathcal E_{\mathrm{av}}}{2NBA}\\
-&\quad = \frac{\pi(112)}{2(500)(0{,}200)(0{,}100)^2}\\
-&\quad = 176\,\mathrm{rad/s}.
+\omega&=\frac{\pi\mathcal E_{\mathrm{av}}}{2NBA}\\
+&=\frac{\pi(112)}{2(500)(0{,}200)(0{,}100)^2}\\
+&=176\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -161,9 +179,9 @@ Một thanh kim loại dài $L$ trượt sang phải với tốc độ không đ
 
 $$
 \begin{aligned}
-&\mathcal E = -\frac{d\Phi_B}{dt}\\
-&\quad = -B\frac{dA}{dt}\\
-&\quad = -BLv.
+\mathcal E&=-\frac{d\Phi_B}{dt}\\
+&=-B\frac{dA}{dt}\\
+&=-BLv.
 \end{aligned}
 $$
 
@@ -182,19 +200,21 @@ $$
 Công suất điện chuyển thành nhiệt trong mạch là:
 
 $$
-P_{\mathrm{nhiệt}}=I^2R
-=\frac{B^2L^2v^2}{R}.
+\begin{aligned}
+P_{\mathrm{nhiệt}}&=I^2R\\
+&=\frac{B^2L^2v^2}{R}.
+\end{aligned}
 $$
 
 Lực từ có độ lớn $F=ILB=B^2L^2v/R$ và hướng sang trái, ngược với thanh đang đi sang phải. Người kéo phải tác dụng lực cùng chiều chuyển động, nên:
 
 $$
-P_{\mathrm{ngoài}}=Fv
-=\frac{B^2L^2v^2}{R}
-=P_{\mathrm{nhiệt}}.
+\begin{aligned}
+P_{\mathrm{ngoài}}&=Fv\\
+&=\frac{B^2L^2v^2}{R}\\
+&=P_{\mathrm{nhiệt}}.
+\end{aligned}
 $$
-
-Với $B=0{,}60\,\mathrm T$, $L=0{,}10\,\mathrm m$, $v=2{,}5\,\mathrm{m/s}$ và $R=0{,}030\,\Omega$, ta được $|\mathcal E|=0{,}15\,\mathrm V$, $I=5{,}0\,\mathrm A$, $F=0{,}30\,\mathrm N$ và hai công suất đều bằng $0{,}75\,\mathrm W$.
 
 ![Hình 29.12: Lực từ trên thanh trượt hướng ngược chiều chuyển động.](../img/young-29/hinh-29-12.png)
 Máy phát không tạo điện năng từ hư không. Năng lượng điện và nhiệt trong mạch đến từ công cơ học cần thiết để kéo thanh. Khi bỏ qua ma sát, tốc độ truyền cơ năng bằng tốc độ chuyển hóa thành nhiệt trong điện trở.
@@ -204,6 +224,8 @@ Dường như lực từ lên thanh đang chuyển động sinh công âm, đi�
 ### Tự kiểm tra Mục 29.2
 
 Một cuộn dây tròn bị bóp thành hình oval trong từ trường đều hướng vào trang. (a) Khi đang bóp, suất điện động theo chiều kim đồng hồ, ngược chiều kim đồng hồ hay bằng không? (b) Sau khi cuộn đã giữ nguyên hình oval, suất điện động theo chiều kim đồng hồ, ngược chiều kim đồng hồ hay bằng không?
+
+![Tự kiểm 29.2: Bóp vòng dây tròn thành hình oval làm giảm diện tích trong từ trường đều hướng vào mặt hình.](../img/young-29/hinh-tu-kiem29-2.png)
 
 <details>
 <summary>Đáp án</summary>

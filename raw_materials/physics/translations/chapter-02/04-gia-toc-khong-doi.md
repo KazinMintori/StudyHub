@@ -17,11 +17,17 @@ Trên Hình 2.15, sau những khoảng thời gian bằng nhau $\Delta t$, vận
 
 Vì gia tốc $a_x$ là hằng số không đổi trên toàn bộ hành trình, giá trị gia tốc trung bình trên bất kỳ khoảng thời gian nào cũng bằng chính gia tốc tức thời $a_x$:
 
-$$a_x = \frac{v_{2x} - v_{1x}}{t_2 - t_1}.\tag{2.7}$$
+$$
+a_x = \frac{v_{2x} - v_{1x}}{t_2 - t_1}.
+\tag{2.7}
+$$
 
 Chọn thời điểm ban đầu $t_1 = 0$ với vận tốc ban đầu $v_{1x} = v_{0x}$, và thời điểm khảo sát lúc sau $t_2 = t$ với vận tốc tương ứng $v_{2x} = v_x$:
 
-$$v_x = v_{0x} + a_xt.\tag{2.8}$$
+$$
+v_x = v_{0x} + a_xt.
+\tag{2.8}
+$$
 
 Phương trình (2.8) biểu thị quy luật tuyến tính: Vận tốc lúc sau bằng vận tốc ban đầu cộng với lượng biến thiên tích lũy $a_xt$. Trên đồ thị vận tốc – thời gian ($v_x-t$), phương trình này là một **đường thẳng** có hệ số góc bằng $a_x$ và tung độ gốc bằng $v_{0x}$ (Hình 2.17).
 
@@ -33,19 +39,34 @@ Phương trình (2.8) biểu thị quy luật tuyến tính: Vận tốc lúc sa
 
 Để tìm vị trí $x(t)$, ta xuất phát từ định nghĩa vận tốc trung bình:
 
-$$v_{\mathrm{av}-x} = \frac{x - x_0}{t}.\tag{2.9}$$
+$$
+v_{\mathrm{av}-x} = \frac{x - x_0}{t}.
+\tag{2.9}
+$$
 
 Chỉ riêng trong trường hợp đặc biệt khi gia tốc không đổi (vận tốc biến thiên hoàn toàn tuyến tính theo thời gian), vận tốc trung bình trong khoảng từ $0$ đến $t$ bằng đúng **trung bình cộng của vận tốc đầu và vận tốc cuối**:
 
-$$v_{\mathrm{av}-x} = \frac{v_{0x} + v_x}{2}.\tag{2.10}$$
+$$
+v_{\mathrm{av}-x} = \frac{v_{0x} + v_x}{2}.
+\tag{2.10}
+$$
 
 Thay biểu thức $v_x = v_{0x} + a_xt$ từ (2.8) vào (2.10):
 
-$$v_{\mathrm{av}-x} = \frac{v_{0x} + (v_{0x} + a_xt)}{2} = v_{0x} + \frac{1}{2}a_xt.\tag{2.11}$$
+$$
+\begin{aligned}
+v_{\mathrm{av}-x} &= \frac{v_{0x} + (v_{0x} + a_xt)}{2}\\
+&= v_{0x} + \frac{1}{2}a_xt.
+\end{aligned}
+\tag{2.11}
+$$
 
 Đồng nhất (2.9) với (2.11), ta rút ra phương trình tọa độ vị trí:
 
-$$x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2.\tag{2.12}$$
+$$
+x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2.
+\tag{2.12}
+$$
 
 Phương trình (2.12) là một hàm số bậc hai của thời gian $t$. Trên đồ thị vị trí – thời gian ($x-t$), đường biểu diễn là một **nhánh parabol** (Hình 2.18 và Hình 2.19):
 - Nếu $a_x > 0$: Parabol có bề lõm quay lên trên.
@@ -68,19 +89,35 @@ Tổng diện tích chính là $x - x_0 = v_{0x}t + \frac{1}{2}a_xt^2$, hoàn to
 
 Trong vô số bài toán thực tế, đề bài cho biết quãng đường và vận tốc nhưng không hề đề cập đến thời gian $t$. Để thiết lập mối liên hệ trực tiếp không phụ thuộc thời gian, ta rút $t = \frac{v_x - v_{0x}}{a_x}$ từ (2.8) rồi thế vào (2.12):
 
-$$x - x_0 = v_{0x}\left(\frac{v_x - v_{0x}}{a_x}\right) + \frac{1}{2}a_x\left(\frac{v_x - v_{0x}}{a_x}\right)^2.$$
+$$
+\begin{aligned}
+x - x_0 &= v_{0x}\left(\frac{v_x - v_{0x}}{a_x}\right)\\
+&\quad + \frac{1}{2}a_x\left(\frac{v_x - v_{0x}}{a_x}\right)^2.
+\end{aligned}
+$$
 
 Nhân cả hai vế với $2a_x$ và khai triển hằng đẳng thức:
 
-$$2a_x(x - x_0) = 2v_{0x}v_x - 2v_{0x}^2 + v_x^2 - 2v_{0x}v_x + v_{0x}^2 = v_x^2 - v_{0x}^2.$$
+$$
+\begin{aligned}
+2a_x(x - x_0) &= 2v_{0x}v_x - 2v_{0x}^2 + v_x^2 - 2v_{0x}v_x + v_{0x}^2\\
+&= v_x^2 - v_{0x}^2.
+\end{aligned}
+$$
 
 Ta thu được hệ thức độc lập với thời gian kinh điển:
 
-$$v_x^2 = v_{0x}^2 + 2a_x(x - x_0).\tag{2.13}$$
+$$
+v_x^2 = v_{0x}^2 + 2a_x(x - x_0).
+\tag{2.13}
+$$
 
 Một hệ thức bổ trợ hữu ích khác nhận được khi ghép (2.9) và (2.10):
 
-$$x - x_0 = \left(\frac{v_{0x} + v_x}{2}\right)t.\tag{2.14}$$
+$$
+x - x_0 = \left(\frac{v_{0x} + v_x}{2}\right)t.
+\tag{2.14}
+$$
 
 ### Bảng 2.5 — Bộ 4 phương trình chuyển động thẳng biến đổi đều
 
@@ -108,7 +145,12 @@ Khi đọc đề bài, hãy tự hỏi: **Đại lượng nào đề bài KHÔNG
 
 1. **Vật lý an toàn giao thông — Khoảng cách phanh tỷ lệ với bình phương vận tốc:**
    Khi một chiếc xe đang chạy với vận tốc ban đầu $v_0$ và tài xế đạp phanh khẩn cấp tạo gia tốc hãm $a_x = -a$ (không đổi), xe dừng lại hoàn toàn khi $v_x = 0$. Áp dụng hệ thức (2.13):
-   $$0^2 = v_0^2 + 2(-a)d \implies d = \frac{v_0^2}{2a}.$$
+   $$
+\begin{aligned}
+0^2 &= v_0^2 + 2(-a)d\\
+&\implies d = \frac{v_0^2}{2a}.
+\end{aligned}
+$$
    Khoảng cách dừng xe $d$ **tỷ lệ thuận với bình phương vận tốc đầu ($v_0^2$)**!
    - Nếu bạn chạy xe ở tốc độ $50\,\mathrm{km/h}$, khoảng cách phanh mất khoảng $14\,\mathrm m$.
    - Nếu bạn tăng tốc lên gấp đôi ($100\,\mathrm{km/h}$), khoảng cách phanh không phải tăng gấp đôi mà tăng vọt lên **gấp bốn lần ($56\,\mathrm m$)**!
@@ -142,20 +184,59 @@ Dữ kiện đã biết:
 Áp dụng trực tiếp phương trình vị trí (2.12) và phương trình vận tốc (2.8) tại $t = 2.0\,\mathrm s$:
 $$
 \begin{aligned}
-    &x(2.0\,\mathrm s) = x_0 + v_{0x}t + \frac{1}{2}a_xt^2 = 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2 = 5.0 + 30.0 + 8.0 = 43.0\,\mathrm m.\\
-    &v_x(2.0\,\mathrm s) = v_{0x} + a_xt = 15.0 + (4.0)(2.0) = 15.0 + 8.0 = 23.0\,\mathrm{m/s}.
+x(2.0\,\mathrm s) &= x_0 + v_{0x}t + \frac{1}{2}a_xt^2\\
+&= 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2\\
+&= 5.0 + 30.0 + 8.0\\
+&= 43.0\,\mathrm m.\\
+v_x(2.0\,\mathrm s) &= v_{0x} + a_xt\\
+&= 15.0 + (4.0)(2.0)\\
+&= 15.0 + 8.0\\
+&= 23.0\,\mathrm{m/s}.
 \end{aligned}
 $$
 
 **Thực thi câu (b):**
 Ở câu này, ta cần tìm vị trí $x$ khi biết $v_x = 25.0\,\mathrm{m/s}$, không cần biết thời gian $t$. Áp dụng ngay hệ thức độc lập thời gian (2.13):
-$$v_x^2 = v_{0x}^2 + 2a_x(x - x_0) \implies x = x_0 + \frac{v_x^2 - v_{0x}^2}{2a_x}.$$
+$$
+\begin{aligned}
+v_x^2 &= v_{0x}^2 + 2a_x(x - x_0)\\
+&\implies x = x_0 + \frac{v_x^2 - v_{0x}^2}{2a_x}.
+\end{aligned}
+$$
 
 Thay số:
-$$x = 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})} = 5.0 + \frac{625 - 225}{8.0} = 5.0 + \frac{400}{8.0} = 5.0 + 50.0 = 55.0\,\mathrm m.$$
+$$
+\begin{aligned}
+x &= 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})}\\
+&= 5.0 + \frac{625 - 225}{8.0}\\
+&= 5.0 + \frac{400}{8.0}\\
+&= 5.0 + 50.0\\
+&= 55.0\,\mathrm m.
+\end{aligned}
+$$
 
 **Đánh giá:** 
-Kiểm tra lại: Thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25\,\mathrm{m/s}$ là $t = \frac{v_x - v_{0x}}{a_x} = \frac{25 - 15}{4.0} = 2.5\,\mathrm s$. Thế $t = 2.5\,\mathrm s$ vào (2.12): $x = 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2 = 5.0 + 37.5 + 12.5 = 55.0\,\mathrm m$. Kết quả hoàn toàn trùng khớp, nhưng hệ thức (2.13) giúp ta giải quyết bài toán chỉ trong một dòng duy nhất!
+Kiểm tra lại: Thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25\,\mathrm{m/s}$ là:
+
+$$
+\begin{aligned}
+t &= \frac{v_x - v_{0x}}{a_x}\\
+&= \frac{25 - 15}{4.0}\\
+&= 2.5\,\mathrm s.
+\end{aligned}
+$$
+
+Thế $t = 2.5\,\mathrm s$ vào (2.12):
+
+$$
+\begin{aligned}
+x &= 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2\\
+&= 5.0 + 37.5 + 12.5\\
+&= 55.0\,\mathrm m.
+\end{aligned}
+$$
+
+Kết quả hoàn toàn trùng khớp, nhưng hệ thức (2.13) giúp ta giải quyết bài toán chỉ trong một dòng duy nhất!
 :::
 
 ---
@@ -181,23 +262,44 @@ Cả hai xe đều xuất phát từ $x_0 = 0$:
 
 **Thực thi câu (a):**
 Hai xe gặp nhau (cảnh sát đuổi kịp ô tô) khi và chỉ khi **chúng có cùng tọa độ vị trí**:
-$$x_P(t) = x_O(t) \iff \frac{1}{2}a_{Px}t^2 = v_{O0x}t \iff t\left(\frac{1}{2}a_{Px}t - v_{O0x}\right) = 0.$$
+$$
+\begin{aligned}
+x_P(t) &= x_O(t)\\
+&\iff \frac{1}{2}a_{Px}t^2 = v_{O0x}t\\
+&\iff t\left(\frac{1}{2}a_{Px}t - v_{O0x}\right) = 0.
+\end{aligned}
+$$
 
 Phương trình cho hai nghiệm:
 1. $t = 0$: Thời điểm ban đầu khi chiếc ô tô vượt qua xe cảnh sát tại vạch xuất phát.
 2. Thời điểm cảnh sát đuổi kịp:
-   $$t = \frac{2v_{O0x}}{a_{Px}} = \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}} = 10.0\,\mathrm s.$$
+   $$
+\begin{aligned}
+t &= \frac{2v_{O0x}}{a_{Px}}\\
+&= \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}}\\
+&= 10.0\,\mathrm s.
+\end{aligned}
+$$
 
 **Thực thi câu (b):**
 Vận tốc của xe cảnh sát tại thời điểm $t = 10.0\,\mathrm s$:
-$$v_{Px} = v_{P0x} + a_{Px}t = 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s) = 30.0\,\mathrm{m/s}\quad (108\,\mathrm{km/h}).$$
+$$
+\begin{aligned}
+v_{Px} &= v_{P0x} + a_{Px}t\\
+&= 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)\\
+&= 30.0\,\mathrm{m/s}\quad (108\,\mathrm{km/h}).
+\end{aligned}
+$$
 
 **Thực thi câu (c):**
 Quãng đường mỗi xe đi được:
 $$
 \begin{aligned}
-    &x_O = (15.0\,\mathrm{m/s})(10.0\,\mathrm s) = 150\,\mathrm m,\\
-    &x_P = \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 = 1.5 \times 100 = 150\,\mathrm m.
+x_O &= (15.0\,\mathrm{m/s})(10.0\,\mathrm s)\\
+&= 150\,\mathrm m,\\
+x_P &= \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2\\
+&= 1.5 \times 100\\
+&= 150\,\mathrm m.
 \end{aligned}
 $$
 

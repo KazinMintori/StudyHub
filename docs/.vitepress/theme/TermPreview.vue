@@ -93,7 +93,7 @@ async function show(link, { persist = false } = {}) {
 }
 
 function over(event) {
-  if (pinned.value || event.pointerType === 'touch') return
+  if (pinned.value || event.pointerType === 'touch' || window.innerWidth < 640) return
   const link = event.target.closest?.('button.study-term')
   if (link) show(link)
 }
@@ -108,7 +108,9 @@ function out(event) {
 function focusIn(event) {
   if (pinned.value || suppressFocus) return
   const link = event.target.closest?.('button.study-term')
-  if (link) show(link)
+  // Touch focus fires before click. A bottom-sheet tooltip at that point can
+  // cover the tapped button and prevent the click from pinning the note.
+  if (link?.matches(':focus-visible')) show(link)
 }
 
 function focusOut(event) {

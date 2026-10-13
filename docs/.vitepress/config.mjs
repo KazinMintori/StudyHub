@@ -19,6 +19,7 @@ export default withMermaid(defineConfig({
   buildConcurrency: 1,
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   ignoreDeadLinks: true, lastUpdated: true,
+  scrollOffset: { selector: '.reading-scroll-offset', padding: 0 },
   head:[
     ['link',{rel:'icon',href:`${base}favicon.svg`}],
     ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
@@ -98,8 +99,7 @@ export default withMermaid(defineConfig({
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
         {text: course.name, items:[
           {text:'Tổng quan môn học',link:`/${course.id}/`},
-          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : []),
-          ...(!course.review && course.id === 'xac-suat-thong-ke' ? [{text:'Toàn bộ Notes và Slides',link:'/xac-suat-thong-ke/tai-lieu-day-du'}] : [])
+          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : [])
         ]},
         ...(course.review ? [
           {text:'Ôn luyện',collapsed:false,items:[

@@ -417,7 +417,7 @@ export const readingMetadata = {
     "minutes": 5
   },
   "vat-ly-1/02-chuyen-dong-thang": {
-    "words": 24774,
+    "words": 24827,
     "minutes": 125
   },
   "vat-ly-1/03-chuyen-dong-khong-gian": {
@@ -525,7 +525,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/03-dinh-luat-gauss": {
-    "words": 16058,
+    "words": 16059,
     "minutes": 80
   },
   "vat-ly-2/03-dinh-luat-gauss/dien-tich-dien-thong": {
@@ -549,7 +549,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/02-dien-the": {
-    "words": 21150,
+    "words": 21153,
     "minutes": 105
   },
   "vat-ly-2/02-dien-the/the-nang-dien": {
@@ -573,7 +573,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/04-tu-dien-dien-moi": {
-    "words": 22248,
+    "words": 22249,
     "minutes": 110
   },
   "vat-ly-2/04-tu-dien-dien-moi/tu-dien-dien-dung": {
@@ -601,7 +601,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/05-dong-dien-dien-tro": {
-    "words": 25091,
+    "words": 25092,
     "minutes": 125
   },
   "vat-ly-2/05-dong-dien-dien-tro/dong-dien": {
@@ -693,7 +693,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/08-nguon-tu-truong": {
-    "words": 12350,
+    "words": 12352,
     "minutes": 60
   },
   "vat-ly-2/08-nguon-tu-truong/dien-tich-chuyen-dong-tu-truong": {

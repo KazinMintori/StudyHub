@@ -18,9 +18,10 @@ Chọn một đường tròn làm đường tích phân của định luật Amp
 
 $$
 \begin{aligned}
-&q = Cv\\
-&\quad = \frac{\varepsilon A}{d}(Ed) \\
-&\quad = \varepsilon EA=\varepsilon\Phi_E.
+q&=Cv\\
+&=\frac{\varepsilon A}{d}(Ed)\\
+&=\varepsilon EA\\
+&=\varepsilon\Phi_E.
 \end{aligned}
 \tag{29.12}
 $$
@@ -29,8 +30,8 @@ Tốc độ tăng điện tích chính là dòng dẫn $i_C=dq/dt$. Lấy đạo
 
 $$
 \begin{aligned}
-&i_C = \frac{dq}{dt} \\
-&\quad =\varepsilon\frac{d\Phi_E}{dt}.
+i_C&=\frac{dq}{dt}\\
+&=\varepsilon\frac{d\Phi_E}{dt}.
 \end{aligned}
 \tag{29.13}
 $$
@@ -46,8 +47,8 @@ Thông lượng điện biến thiên trong khe tụ đóng vai trò tương đ�
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec\ell = \mu_0(i_C)_{\mathrm{encl}}\\
-&\quad+\mu_0(i_D)_{\mathrm{encl}}.
+\oint\vec B\cdot d\vec\ell&=\mu_0(i_C)_{\mathrm{encl}}\\
++\mu_0(i_D)_{\mathrm{encl}}.
 \end{aligned}
 \tag{29.15}
 $$
@@ -71,8 +72,9 @@ Dòng dịch có ý nghĩa vật lý hay chỉ là cách sửa công thức? Xé
 
 $$
 \begin{aligned}
-&2\pi rB = \mu_0\frac{r^2}{R^2}i_C,\\
-&B = \frac{\mu_0}{2\pi}\frac{r}{R^2}i_C.\end{aligned}
+2\pi rB&=\mu_0\frac{r^2}{R^2}i_C,\\
+B&=\frac{\mu_0}{2\pi}\frac{r}{R^2}i_C.
+\end{aligned}
 \tag{29.17}
 $$
 
@@ -109,8 +111,9 @@ $$
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec\ell \\
-&\quad =\mu_0(i_C)_{\mathrm{encl}}+\mu_0\varepsilon_0\left(\frac{d\Phi_E}{dt}\right)_{\mathrm{encl}}.
+&\oint\vec B\cdot d\vec\ell\\
+&\quad=\mu_0(i_C)_{\mathrm{encl}}\\
+&\quad+\mu_0\varepsilon_0\left(\frac{d\Phi_E}{dt}\right)_{\mathrm{encl}}.
 \end{aligned}
 \tag{29.21}
 $$
@@ -125,15 +128,23 @@ Phần tĩnh bảo toàn nên tích phân đường kín của nó bằng không
 
 ### Tính đối xứng và sóng điện từ
 
-Trong không gian trống không có điện tích và dòng dẫn, hai phương trình Gauss cùng có thông lượng bằng không. Hai phương trình tích phân đường cũng có dạng đối xứng: từ trường biến thiên sinh điện trường, còn điện trường biến thiên sinh từ trường. Viết thông lượng tường minh, ta được:
+Trong không gian trống không có điện tích và dòng dẫn, hai phương trình Gauss cùng có thông lượng bằng không. Hai phương trình tích phân đường cũng có dạng đối xứng: Từ trường biến thiên sinh điện trường, còn điện trường biến thiên sinh từ trường. Viết thông lượng tường minh, ta được:
 
 $$
 \begin{aligned}
-    &\oint\vec E\cdot d\vec\ell = -\frac{d}{dt}\\
-    &\qquad\left(\int\vec B\cdot d\vec A\right).\\
-    &\oint\vec B\cdot d\vec\ell = \mu_0\varepsilon_0\frac{d}{dt}\\
-    &\qquad\int\vec E\cdot d\vec A.
+&\oint\vec E\cdot d\vec\ell\\
+&\quad=-\frac{d}{dt}\int_S\vec B\cdot d\vec A.
 \end{aligned}
+\tag{29.22}
+$$
+
+$$
+\begin{aligned}
+&\oint\vec B\cdot d\vec\ell\\
+&\quad=\mu_0\varepsilon_0\\
+&\qquad\times\frac{d}{dt}\int_S\vec E\cdot d\vec A.
+\end{aligned}
+\tag{29.23}
 $$
 
 Một trường biến thiên có thể sinh trường kia ở vùng lân cận. Hai trường biến thiên lan truyền qua không gian, kể cả nơi không có vật chất, tạo thành sóng điện từ. Ánh sáng, sóng radio và truyền hình, hồng ngoại, tử ngoại và tia X là các dạng sóng điện từ.

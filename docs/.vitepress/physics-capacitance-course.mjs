@@ -51,12 +51,24 @@ export const capacitanceCheatsheet={summary:'Định nghĩa, tính chất và c�
   {name:'Định nghĩa điện dung',formulaRows:[
    {label:'Điện dung của hai vật dẫn mang ±Q',formula:d(String.raw`C=\frac{Q}{V_{ab}}`)},
    {label:'Đơn vị SI',formula:d(String.raw`1\,\mathrm F=1\,\mathrm{C/V}`)}
+  ],variables:[
+   String.raw`$C$: Điện dung của tụ điện gồm hai vật dẫn mang điện tích đối xứng ($\mathrm{F}$ - Farad)`,
+   String.raw`$Q$: Độ lớn điện tích trên mỗi bản tụ ($\mathrm{C}$)`,
+   String.raw`$V_{ab}$: Hiệu điện thế giữa bản dương và bản âm ($V_a - V_b$) ($\mathrm{V}$)`,
+   String.raw`$1\,\mathrm{F}$: Đơn vị điện dung Farad ($1\,\mathrm{F} = 1\,\mathrm{C/V}$)`
   ],description:'Q là độ lớn điện tích trên một bản, V_ab là điện thế bản dương trừ điện thế bản âm. Tỉ số không đổi khi hình học và đáp ứng điện môi tuyến tính giữ nguyên.'},
   {name:'Tụ phẳng, tụ cầu và tụ trụ',formulaRows:[
    {label:'Hai bản phẳng, chân không',formula:d(String.raw`C_0=\frac{\varepsilon_0 A}{d}`)},
    {label:'Hai mặt cầu đồng tâm, a < b',formula:d(String.raw`C_0=4\pi\varepsilon_0\frac{ab}{b-a}`)},
    {label:'Cầu cô lập bán kính R, mốc ở vô hạn',formula:d(String.raw`C_0=4\pi\varepsilon_0 R`)},
    {label:'Hai trụ đồng trục dài L, a < b',formula:d(String.raw`C_0=\frac{2\pi\varepsilon_0L}{\ln(b/a)}`)}
+  ],variables:[
+   String.raw`$C_0$: Điện dung của tụ điện khi khe giữa hai bản là chân không ($\mathrm{F}$)`,
+   String.raw`$A$: Diện tích đối diện của mỗi bản tụ phẳng ($\mathrm{m^2}$)`,
+   String.raw`$d$: Khoảng cách giữa hai bản tụ phẳng ($\mathrm{m}$)`,
+   String.raw`$a, b$: Bán kính của mặt dẫn bên trong và bên ngoài ($a < b$) ($\mathrm{m}$)`,
+   String.raw`$R$: Bán kính của quả cầu dẫn cô lập trong không gian ($\mathrm{m}$)`,
+   String.raw`$L$: Chiều dài của hai ống dẫn hình trụ đồng trục ($L \gg b$) ($\mathrm{m}$)`
   ],description:'Tụ phẳng bỏ hiệu ứng mép khi d nhỏ so với kích thước bản. Tụ trụ bỏ hiệu ứng ở hai đầu khi chiều dài đủ lớn. a,b là bán kính hai mặt dẫn đối diện. Điện môi đồng nhất lấp toàn khe làm mỗi điện dung tăng K lần.'}]},
  {id:'network',title:'Mạng tụ',items:[
   {name:'Nối tiếp',formula:d(String.raw`\begin{aligned}
@@ -64,69 +76,127 @@ export const capacitanceCheatsheet={summary:'Định nghĩa, tính chất và c�
 &\frac1{C_s} = \sum_{i=1}^{n}\frac1{C_i},\\
 &V = V_1+V_2+\cdots+V_n,\\
 &Q_1 = Q_2=\cdots=Q_n.
-\end{aligned}`),description:'Chỉ số i chạy từ 1 đến n. Quy tắc cùng độ lớn điện tích dùng cho các nút trung gian trung hòa, cô lập. Điện dung tương đương nhỏ hơn từng điện dung thành phần dương.'},
+\end{aligned}`),variables:[
+   String.raw`$C_s$: Điện dung tương đương của bộ tụ ghép nối tiếp ($\mathrm{F}$)`,
+   String.raw`$C_i$: Điện dung của tụ điện thành phần thứ $i$ ($\mathrm{F}$)`,
+   String.raw`$V$: Hiệu điện thế tổng đặt vào hai đầu bộ tụ nối tiếp ($\mathrm{V}$)`,
+   String.raw`$V_i$: Hiệu điện thế trên từng tụ thành phần ($\mathrm{V}$)`,
+   String.raw`$Q_i$: Độ lớn điện tích tích lũy trên mỗi tụ thành phần ($\mathrm{C}$)`
+  ],description:'Chỉ số i chạy từ 1 đến n. Quy tắc cùng độ lớn điện tích dùng cho các nút trung gian trung hòa, cô lập. Điện dung tương đương nhỏ hơn từng điện dung thành phần dương.'},
   {name:'Song song',formula:d(String.raw`\begin{aligned}
 &C_p = C_1+C_2+C_3,\\
 &C_p = \sum_{i=1}^{n}C_i,\\
 &Q = Q_1+Q_2+\cdots+Q_n,\\
 &V_1 = V_2=\cdots=V_n.
-\end{aligned}`),description:'Chỉ số i chạy từ 1 đến n. Các tụ nối cùng hai nút. Q là tổng điện tích trên các bản nối cùng một cực, không phải tổng đại số điện tích cả hai phía của mạng.'},
+\end{aligned}`),variables:[
+   String.raw`$C_p$: Điện dung tương đương của bộ tụ ghép song song ($\mathrm{F}$)`,
+   String.raw`$Q$: Tổng điện tích trên các bản cùng cực của bộ tụ song song ($\mathrm{C}$)`,
+   String.raw`$V$: Hiệu điện thế chung giữa hai nút của các nhánh song song ($\mathrm{V}$)`
+  ],description:'Chỉ số i chạy từ 1 đến n. Các tụ nối cùng hai nút. Q là tổng điện tích trên các bản nối cùng một cực, không phải tổng đại số điện tích cả hai phía của mạng.'},
   {name:'Hai tụ',formulaRows:[
    {label:'Điện dung nối tiếp',formula:d(String.raw`C_s=\frac{C_1C_2}{C_1+C_2}`)},
    {label:'Điện dung song song',formula:d(String.raw`C_p=C_1+C_2`)}
+  ],variables:[
+   String.raw`$C_s$: Điện dung tương đương khi mắc nối tiếp hai tụ điện $C_1$ và $C_2$ ($\mathrm{F}$)`,
+   String.raw`$C_p$: Điện dung tương đương khi mắc song song hai tụ điện $C_1$ và $C_2$ ($\mathrm{F}$)`
   ],description:'C₁,C₂ dương. Trong chuỗi có nút giữa trung hòa, điện áp tỉ lệ nghịch điện dung và điện tích trên hai tụ có cùng độ lớn.'}]},
  {id:'energy',title:'Năng lượng và lực',items:[
   {name:'Tụ tuyến tính',formulaRows:[
    {label:'Theo điện tích và điện dung',formula:d(String.raw`U=\frac{Q^2}{2C}`)},
-   {label:'Theo điện áp và điện dung',formula:d(String.raw`U=\frac12 CV^2`)},
-   {label:'Theo điện tích và điện áp',formula:d(String.raw`U=\frac12 QV`)}
-  ],description:'Các công thức biểu diễn cùng một năng lượng. Công nạp thuận nghịch từ trạng thái không tích điện bằng U. Khi nối lại các tụ đã nạp, điện tích của từng nhóm vật dẫn cô lập được bảo toàn, còn năng lượng điện trường có thể chuyển sang nhiệt và bức xạ.'},
+   {label:'Theo điện dung và điện áp',formula:d(String.raw`U=\tfrac12 CV^2`)},
+   {label:'Theo điện tích và điện áp',formula:d(String.raw`U=\tfrac12 QV`)}
+  ],variables:[
+   String.raw`$U$: Năng lượng tĩnh điện tích lũy trong tụ điện ($\mathrm{J}$)`,
+   String.raw`$Q$: Điện tích của bản tụ điện ($\mathrm{C}$)`,
+   String.raw`$C$: Điện dung của tụ điện ($\mathrm{F}$)`,
+   String.raw`$V$: Hiệu điện thế giữa hai bản tụ điện ($\mathrm{V}$)`
+  ],description:'Ba công thức cho cùng kết quả khi quan hệ Q = CV tuyến tính. Năng lượng tính bằng joule.'},
   {name:'Mật độ năng lượng',formulaRows:[
-   {label:'Chân không',formula:d(String.raw`u_0=\frac12\varepsilon_0 E^2`)},
-   {label:'Điện môi tuyến tính đẳng hướng',formula:d(String.raw`u=\frac12\varepsilon E^2`)},
-   {label:'Năng lượng trong một vùng không gian',formula:d(String.raw`U=\int_{\mathcal V}u\,d\mathcal V`)}
-  ],description:'u đo bằng J/m³. E là trường thực tại từng điểm. Với trường đều trong khe tụ phẳng, U = uAd.'},
+   {label:'Trong chân không',formula:d(String.raw`u_0=\tfrac12\varepsilon_0 E^2`)},
+   {label:'Trong điện môi tuyến tính',formula:d(String.raw`u=\tfrac12\varepsilon E^2`)},
+   {label:'Theo hằng số điện môi',formula:d(String.raw`u=\tfrac12 K\varepsilon_0 E^2`)}
+  ],variables:[
+   String.raw`$u_0$: Mật độ năng lượng điện trường trong chân không ($\mathrm{J/m^3}$)`,
+   String.raw`$u$: Mật độ năng lượng điện trường trong chất điện môi ($\mathrm{J/m^3}$)`,
+   String.raw`$E$: Cường độ điện trường thực tế tại vị trí khảo sát ($\mathrm{V/m}$ hoặc $\mathrm{N/C}$)`,
+   String.raw`$\varepsilon$: Độ điện thẩm tuyệt đối của chất điện môi ($\mathrm{F/m}$)`,
+   String.raw`$K$: Hằng số điện môi tương đối (Không có đơn vị)`
+  ],description:'Mật độ năng lượng đo bằng J/m³. Trường thực tế trong điện môi đã bao gồm tác dụng của điện tích liên kết.'},
   {name:'Lực hút giữa hai bản tụ phẳng',formulaRows:[
-   {label:'Độ lớn lực hút, bỏ hiệu ứng mép',formula:d(String.raw`F=\frac{Q^2}{2\varepsilon A}`)},
-   {label:'Áp suất điện lên bản',formula:d(String.raw`\frac{F}{A}=\frac12\varepsilon E^2`)}
-  ],description:'Điện môi đồng nhất tuyến tính lấp toàn khe, hai bản đối diện có cùng diện tích A. E là trường tổng trong khe, còn lực lên một bản do trường của bản kia gây ra.'}]},
+   {label:'Theo điện tích',formula:d(String.raw`F=\frac{Q^2}{2\varepsilon_0 A}`)},
+   {label:'Theo điện trường trong khe',formula:d(String.raw`F=\tfrac12\varepsilon_0 E^2 A`)}
+  ],variables:[
+   String.raw`$F$: Độ lớn lực hút tĩnh điện giữa hai bản tụ phẳng mang điện trái dấu ($\mathrm{N}$)`,
+   String.raw`$Q$: Độ lớn điện tích trên mỗi bản tụ phẳng ($\mathrm{C}$)`,
+   String.raw`$A$: Diện tích đối diện của bản tụ phẳng ($\mathrm{m^2}$)`,
+   String.raw`$E$: Cường độ điện trường trong khe giữa hai bản tụ phẳng ($\mathrm{V/m}$)`
+  ],description:'Hệ số 1/2 xuất hiện vì mỗi bản chỉ nằm trong trường do bản kia tạo ra, bằng E/2. Giữ Q cố định, lực không đổi theo khoảng cách khi bỏ hiệu ứng mép.'}]},
  {id:'dielectric',title:'Điện môi và giới hạn cách điện',items:[
   {name:'Hằng số điện môi và độ điện thẩm',formula:d(String.raw`\begin{aligned}
 &K = C/C_0,\\
-&\varepsilon = K\varepsilon_0,\\
-&C = \varepsilon A/d.
-\end{aligned}`),description:'K không có đơn vị, ε có đơn vị F/m. Quan hệ C = KC₀ cần điện môi tuyến tính đồng nhất lấp toàn vùng giữa các vật dẫn. Công thức cuối dùng cho tụ phẳng bỏ hiệu ứng mép.'},
+&\varepsilon = K\varepsilon_0.
+\end{aligned}`),variables:[
+   String.raw`$K$: Hằng số điện môi tương đối của chất cách điện ($K \ge 1$) (Không có đơn vị)`,
+   String.raw`$C$: Điện dung của tụ khi lấp đầy chất điện môi ($\mathrm{F}$)`,
+   String.raw`$C_0$: Điện dung của tụ khi ở trong chân không ($\mathrm{F}$)`,
+   String.raw`$\varepsilon$: Độ điện thẩm của môi trường điện môi ($\mathrm{F/m}$)`
+  ],description:'K không có đơn vị, K ≥ 1. Chân không có K = 1. ε₀ là hằng số điện.'},
   {name:'Tụ cô lập, điện môi lấp toàn khe',formula:d(String.raw`\begin{aligned}
 &Q = Q_0,\\
-&E = E_0/K,\\
 &V = V_0/K,\\
+&E = E_0/K,\\
 &U = U_0/K.
-\end{aligned}`),description:'Các bản đã ngắt nguồn và không rò điện. Hình học giữ nguyên, C = KC₀.'},
+\end{aligned}`),variables:[
+   String.raw`$Q$: Điện tích tự do trên bản tụ cô lập ($Q = Q_0$) ($\mathrm{C}$)`,
+   String.raw`$V$: Hiệu điện thế giữa hai bản sau khi chèn điện môi ($\mathrm{V}$)`,
+   String.raw`$V_0$: Hiệu điện thế ban đầu khi chưa có điện môi ($\mathrm{V}$)`,
+   String.raw`$E$: Điện trường sau khi chèn điện môi ($\mathrm{V/m}$)`,
+   String.raw`$E_0$: Điện trường ban đầu trong chân không ($\mathrm{V/m}$)`,
+   String.raw`$U$: Năng lượng tĩnh điện sau khi chèn điện môi ($U = U_0/K$) ($\mathrm{J}$)`
+  ],description:'Không có dòng điện ra vào các bản nên điện tích tự do giữ nguyên. Thế năng giảm do lực hút của tụ kéo tấm điện môi vào khe.'},
   {name:'Tụ giữ nối nguồn điện áp',formula:d(String.raw`\begin{aligned}
 &V = V_0,\\
-&E = E_0,\\
 &Q = KQ_0,\\
+&E = E_0,\\
 &U = KU_0.
-\end{aligned}`),description:'Nguồn lý tưởng giữ điện áp. Điện môi lấp toàn khe, hình học giữ nguyên. E = V/d áp dụng vùng gần đều của tụ phẳng.'},
+\end{aligned}`),variables:[
+   String.raw`$V$: Hiệu điện thế hai bản tụ được giữ cố định bởi nguồn điện ($V = V_0$) ($\mathrm{V}$)`,
+   String.raw`$Q$: Điện tích tự do sau khi chèn điện môi ($Q = KQ_0$) ($\mathrm{C}$)`,
+   String.raw`$U$: Năng lượng tích trữ sau khi chèn điện môi ($U = KU_0$) ($\mathrm{J}$)`
+  ],description:'Nguồn lý tưởng duy trì điện áp. Điện tích và năng lượng tăng K lần. Nguồn cung cấp năng lượng gấp đôi phần năng lượng tăng thêm của tụ.'},
   {name:'Điện tích liên kết trên mặt',formula:d(String.raw`\begin{aligned}
-&Q_i = Q(1-1/K),\\
-&\sigma_i = \sigma(1-1/K).
-\end{aligned}`),description:'Các ký hiệu là độ lớn trong mô hình hai bản phẳng. Q và σ là điện tích tự do và mật độ tự do thực sau khi thêm điện môi. Mặt điện môi gần bản dương có điện tích liên kết âm, mặt còn lại mang dương.'},
-  {name:'Độ bền điện môi',formula:d(String.raw`\begin{aligned}
-&E <E_{\mathrm{bd}},\\
-&V_{\max} = E_{\mathrm{bd}}d.
-\end{aligned}`),description:'E_bd là ngưỡng đánh thủng, đo bằng V/m. Công thức điện áp dùng trường đều. Hằng số điện môi K và độ bền điện môi là hai đại lượng khác nhau.'}]},
- {id:'gauss',title:'Gauss và mô hình phân tử',items:[
+&\sigma_i = \sigma(1-1/K),\\
+&Q_i = Q(1-1/K).
+\end{aligned}`),variables:[
+   String.raw`$\sigma_i$: Mật độ mặt của điện tích cảm ứng liên kết trên bề mặt điện môi ($\mathrm{C/m^2}$)`,
+   String.raw`$\sigma$: Mật độ mặt của điện tích tự do trên bản cực dẫn điện ($\mathrm{C/m^2}$)`,
+   String.raw`$Q_i$: Tổng điện tích cảm ứng liên kết xuất hiện trên bề mặt điện môi ($\mathrm{C}$)`,
+   String.raw`$Q$: Tổng điện tích tự do trên bản cực tụ điện ($\mathrm{C}$)`
+  ],description:'σ là mật độ điện tích tự do trên bản dẫn, σᵢ là mật độ điện tích liên kết trên mặt điện môi. Điện môi tuyến tính đồng nhất trong trường đều.'},
+  {name:'Độ bền điện môi',formula:d(String.raw`E_{\mathrm{max}}=\frac{V_{\mathrm{max}}}{d}`),variables:[
+   String.raw`$E_{\mathrm{max}}$: Độ bền điện môi, tức điện trường đánh thủng cực đại của chất cách điện ($\mathrm{V/m}$)`,
+   String.raw`$V_{\mathrm{max}}$: Hiệu điện thế cực đại đặt vào tụ trước khi bị đánh thủng ($\mathrm{V}$)`,
+   String.raw`$d$: Khoảng cách giữa hai bản tụ phẳng ($\mathrm{m}$)`
+  ],description:'V_max là điện áp đánh thủng, E_max là độ bền điện môi của vật liệu. Tụ phẳng trường đều.'}]},
+ {id:'gauss-bound',title:'Gauss và mô hình phân tử',items:[
   {name:'Gauss viết theo điện tích tự do',formulaRows:[
-   {label:'Dạng có K',formula:d(String.raw`\oint_S K\vec E\cdot d\vec A=\frac{Q_{\mathrm{free}}}{\varepsilon_0}`)},
-   {label:'Dạng có độ điện thẩm',formula:d(String.raw`\oint_S\varepsilon\vec E\cdot d\vec A=Q_{\mathrm{free}}`)}
-  ],description:'S kín, vector diện tích hướng ra ngoài. Điện trường là trường thực, vế phải chỉ đếm điện tích tự do. Giữ K hoặc ε trong tích phân nếu chúng thay đổi trên mặt.'},
-  {name:'Gauss viết theo toàn bộ điện tích',formula:d(String.raw`\begin{aligned}
-&\oint_S\vec E\cdot d\vec A = \frac{Q_{\mathrm{total}}}{\varepsilon_0},\\
-&Q_{\mathrm{total}} = Q_{\mathrm{free}}+Q_{\mathrm{bound}}.
-\end{aligned}`),description:'Điện tích liên kết được cộng với dấu. Không đồng thời dùng ε thay ε₀ và cộng điện tích liên kết ở vế phải của dạng cải biên.'},
+   {label:'Dạng tích phân',formula:d(String.raw`\oint_S K\vec E\cdot d\vec A=\frac{Q_{\mathrm{free},\mathrm{encl}}}{\varepsilon_0}`)},
+   {label:'Điện môi đồng nhất phủ toàn mặt',formula:d(String.raw`\oint_S \vec E\cdot d\vec A=\frac{Q_{\mathrm{free},\mathrm{encl}}}{K\varepsilon_0}`)}
+  ],variables:[
+   String.raw`$K$: Hằng số điện môi của môi trường xuyên qua mặt Gauss (Không có đơn vị)`,
+   String.raw`$\vec E$: Vector cường độ điện trường thực tế tại điểm lấy tích phân ($\mathrm{V/m}$)`,
+   String.raw`$Q_{\mathrm{free},\mathrm{encl}}$: Tổng điện tích tự do được bao bởi mặt kín Gauss ($\mathrm{C}$)`
+  ],description:'Điện tích liên kết đã được gộp vào vế trái qua K. Không cộng lại điện tích liên kết vào vế phải khi dùng dạng này.'},
+  {name:'Gauss viết theo toàn bộ điện tích',formula:d(String.raw`\oint_S\vec E\cdot d\vec A=\frac{Q_{\mathrm{free}}+Q_{\mathrm{bound}}}{\varepsilon_0}`),variables:[
+   String.raw`$Q_{\mathrm{free}}$: Tổng đại số điện tích tự do bên trong mặt kín ($\mathrm{C}$)`,
+   String.raw`$Q_{\mathrm{bound}}$: Tổng đại số điện tích cảm ứng liên kết phân cực bên trong mặt kín ($\mathrm{C}$)`
+  ],description:'Dạng Gauss gốc của chương 22. Điện trường E là trường thực tế tạo bởi cả hai loại điện tích.'},
   {name:'Lưỡng cực phân tử trong trường',formula:d(String.raw`\begin{aligned}
 &\vec\tau = \vec p\times\vec E,\\
 &U = -\vec p\cdot\vec E.
-\end{aligned}`),description:'Mômen lưỡng cực hướng từ điện tích âm sang điện tích dương. Phân tử phân cực có lưỡng cực thường trực, phân tử không phân cực có thể bị cảm ứng lưỡng cực. Chuyển động nhiệt cản sự định hướng.'}]}
+\end{aligned}`),variables:[
+   String.raw`$\vec\tau$: Vector mômen lực làm quay phân tử phân cực ($\mathrm{N\cdot m}$)`,
+   String.raw`$\vec p$: Vector mômen lưỡng cực điện của phân tử chất điện môi ($\mathrm{C\cdot m}$)`,
+   String.raw`$U$: Thế năng định hướng của lưỡng cực phân tử trong điện trường ($\mathrm{J}$)`
+  ],description:'Mômen lực quay các lưỡng cực về hướng trường ngoài. Nhiệt độ chống lại sự định hướng có trật tự.'}]}
 ]}

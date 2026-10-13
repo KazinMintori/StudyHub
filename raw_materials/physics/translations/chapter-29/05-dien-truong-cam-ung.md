@@ -5,7 +5,10 @@ Khi dây dẫn chuyển động trong từ trường, lực từ lên các đi�
 Xét một ống dây dài, mảnh có tiết diện $A$ và mật độ vòng dây $n$, được một vòng dây dẫn tròn bao quanh ở giữa. Dòng điện $I$ trong ống dây tạo từ trường dọc trục, có độ lớn $B=\mu_0nI$. Ta bỏ qua từ trường nhỏ bên ngoài ống dây và chọn vectơ diện tích của vòng dây cùng chiều với từ trường. Từ thông qua vòng là $\Phi_B=BA=\mu_0nIA$. Khi dòng điện thay đổi, từ thông cũng thay đổi, nên định luật Faraday cho:
 
 $$
-\mathcal{E} = -\frac{d\Phi_B}{dt} = -\mu_0nA\frac{dI}{dt}.
+\begin{aligned}
+\mathcal{E}&=-\frac{d\Phi_B}{dt}\\
+&=-\mu_0nA\frac{dI}{dt}.
+\end{aligned}
 \tag{29.8}
 $$
 
@@ -46,17 +49,22 @@ Vòng dây và ống dây đồng trục. Đối xứng khiến điện trườn
 
 $$
 \begin{aligned}
-&A = 4{,}0\,\mathrm{cm^2}=4{,}0\times10^{-4}\,\mathrm{m^2},\\
-&r = 2{,}0\,\mathrm{cm}=2{,}0\times10^{-2}\,\mathrm{m}.\end{aligned}
+A&=4{,}0\,\mathrm{cm^2}\\
+&=4{,}0\times10^{-4}\,\mathrm{m^2},\\
+r&=2{,}0\,\mathrm{cm}\\
+&=2{,}0\times10^{-2}\,\mathrm{m}.
+\end{aligned}
 $$
 
 Với $\mu_0=4\pi\times10^{-7}\,\mathrm{Wb/(A\,m)}$, ta có:
 
 $$
 \begin{aligned}
-&\mathcal{E} = -\mu_0nA\frac{dI}{dt}\\
-&\quad = -(4\pi\times10^{-7})(500) \times (4{,}0\times10^{-4})(100)\,\mathrm V\\
-&\quad = -2{,}513\times10^{-5}\,\mathrm V \approx -25\,\mu\mathrm V.
+\mathcal{E}&=-\mu_0nA\frac{dI}{dt}\\
+&=-(4\pi\times10^{-7})(500)\\
+&\quad\times(4{,}0\times10^{-4})(100)\,\mathrm V\\
+&=-2{,}513\times10^{-5}\,\mathrm V\\
+&\approx-25\,\mu\mathrm V.
 \end{aligned}
 $$
 
@@ -64,9 +72,9 @@ $$
 
 $$
 \begin{aligned}
-&E = \frac{|\mathcal E|}{2\pi r}\\
-&\quad = \frac{25\times10^{-6}}{2\pi(2{,}0\times10^{-2})}\,\mathrm{V/m}\\
-&\quad = 2{,}0\times10^{-4}\,\mathrm{V/m}.
+E&=\frac{|\mathcal E|}{2\pi r}\\
+&=\frac{25\times10^{-6}}{2\pi(2{,}0\times10^{-2})}\,\mathrm{V/m}\\
+&=2{,}0\times10^{-4}\,\mathrm{V/m}.
 \end{aligned}
 $$
 

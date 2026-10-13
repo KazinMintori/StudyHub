@@ -10,14 +10,21 @@ Xét thanh dẫn dài $L$ chuyển động sang phải với tốc độ không 
 Sự phân bố điện tích tạo ra điện trường $\vec E$ bên trong thanh, hướng từ $a$ về $b$. Điện tích tiếp tục tách ra cho đến khi lực điện hướng xuống cân bằng lực từ hướng lên:
 
 $$
-qE=qvB,
-\qquad E=vB.
+\begin{aligned}
+qE&=qvB,
+\qquad E\\
+&=vB.
+\end{aligned}
 $$
 
 Độ chênh điện thế giữa hai đầu thanh bằng độ lớn điện trường nhân với chiều dài thanh. Do đó:
 
 $$
-V_{ab}=V_a-V_b=EL=vBL.
+\begin{aligned}
+V_{ab}&=V_a-V_b\\
+&=EL\\
+&=vBL.
+\end{aligned}
 \tag{29.5}
 $$
 
@@ -54,35 +61,40 @@ $$
 $$
 
 ![Hình 29.16: Suất điện động toàn vòng bằng tích phân đóng góp của các phần tử dây.](../img/young-29/hinh-29-16.png)
-Biểu thức tích phân này tương đương định luật Faraday đối với vòng dẫn đang chuyển động. Khi từ trường tại mỗi điểm không đổi theo thời gian, tốc độ thay đổi từ thông qua vòng bằng số đối của tích phân trong Eq. (29.7). Nếu vật dẫn đứng yên nhưng từ trường thay đổi theo thời gian, không thể chỉ dùng biểu thức suất điện động chuyển động này. Khi ấy phải dùng định luật Faraday dạng $\mathcal E=-d\Phi_B/dt$.
+Biểu thức tích phân này tương đương định luật Faraday đối với vòng dẫn đang chuyển động. Khi từ trường tại mỗi điểm không đổi theo thời gian, tốc độ thay đổi từ thông qua vòng bằng số đối của tích phân trong công thức (29.7). Nếu vật dẫn đứng yên nhưng từ trường thay đổi theo thời gian, không thể chỉ dùng biểu thức suất điện động chuyển động này. Khi ấy phải dùng định luật Faraday dạng $\mathcal E=-d\Phi_B/dt$.
 
 ### Ví dụ 29.9. Suất điện động chuyển động trong máy phát thanh trượt
 
 Thanh trượt trong Hình 29.15 dài $0{,}10\,\mathrm m$, chuyển động với tốc độ $2{,}5\,\mathrm{m/s}$ trong từ trường đều $0{,}60\,\mathrm T$. Điện trở toàn mạch là $0{,}030\,\Omega$. Hãy tìm suất điện động, dòng điện và lực từ tác dụng lên thanh.
 
-**Hướng đi hợp lý:** Dùng Eq. (29.6) để tìm suất điện động. Sau đó dùng định luật Ohm để tìm dòng. Chiều dòng trong thanh đã được xác định từ phân cực ở hai đầu. Dùng lực từ lên đoạn dây mang dòng để tìm lực và kiểm tra chiều bằng định luật Lenz.
+**Hướng đi hợp lý:** Dùng công thức (29.6) để tìm suất điện động. Sau đó dùng định luật Ohm để tìm dòng. Chiều dòng trong thanh đã được xác định từ phân cực ở hai đầu. Dùng lực từ lên đoạn dây mang dòng để tìm lực và kiểm tra chiều bằng định luật Lenz.
 
 $$
 \begin{aligned}
-&\mathcal E = vBL\\
-&\quad =(2{,}5)(0{,}60)(0{,}10)\\
-&\quad =0{,}15\,\mathrm V.
+\mathcal E&=vBL\\
+&=(2{,}5)(0{,}60)(0{,}10)\\
+&=0{,}15\,\mathrm V.
 \end{aligned}
 $$
 
 Dòng điện có độ lớn:
 
 $$
-I=\frac{\mathcal E}{R}
-=\frac{0{,}15}{0{,}030}
-=5{,}0\,\mathrm A.
+\begin{aligned}
+I&=\frac{\mathcal E}{R}\\
+&=\frac{0{,}15}{0{,}030}\\
+&=5{,}0\,\mathrm A.
+\end{aligned}
 $$
 
 Chiều dòng trong thanh từ $b$ lên $a$. Theo $\vec F=I\vec L\times\vec B$, lực từ hướng sang trái, ngược chiều chuyển động. Vì $\vec L$ vuông góc với $\vec B$, độ lớn lực là:
 
 $$
-F=ILB=(5{,}0)(0{,}10)(0{,}60)
-=0{,}30\,\mathrm N.
+\begin{aligned}
+F&=ILB\\
+&=(5{,}0)(0{,}10)(0{,}60)\\
+&=0{,}30\,\mathrm N.
+\end{aligned}
 $$
 
 Lực cản từ phù hợp với định luật Lenz: Nó chống lại sự tăng diện tích và từ thông gây ra dòng cảm ứng.
@@ -97,16 +109,18 @@ Một đĩa dẫn điện bán kính $R$ nằm trong mặt phẳng $xy$ và quay
 Tại bán kính $r$, tốc độ tiếp tuyến là $v=\omega r$. Véc-tơ $\vec v$ vuông góc với $\vec B$, nên lực từ trên một đơn vị điện tích có độ lớn $vB=\omega rB$ và hướng xuyên tâm. Chọn phần tử $d\vec\ell$ hướng từ tâm ra vành, khi đó:
 
 $$
-d\mathcal E=(\vec v\times\vec B)\cdot d\vec\ell
-=\omega Br\,dr.
+\begin{aligned}
+d\mathcal E&=(\vec v\times\vec B)\cdot d\vec\ell\\
+&=\omega Br\,dr.
+\end{aligned}
 $$
 
 Cộng các đoạn từ $r=0$ đến $r=R$:
 
 $$
 \begin{aligned}
-&\mathcal E = \int_0^R\omega Br\,dr\\
-&\quad =\frac{1}{2}\omega BR^2.
+\mathcal E&=\int_0^R\omega Br\,dr\\
+&=\frac{1}{2}\omega BR^2.
 \end{aligned}
 $$
 

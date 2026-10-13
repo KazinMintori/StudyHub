@@ -82,8 +82,9 @@ $$
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec\ell \\
-&\quad =\mu_0(i_C)_{\mathrm{encl}}+\mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
+&\oint\vec B\cdot d\vec\ell\\
+&\quad=\mu_0(i_C)_{\mathrm{encl}}\\
+&\quad+\mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
 \end{aligned}
 $$
 

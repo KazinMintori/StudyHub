@@ -28,7 +28,6 @@ watch(() => frontmatter.value.course, () => { if (typeof window !== 'undefined')
     <h1>{{ course.name }}</h1>
     <p class="course-description">{{ course.description }}</p>
     <div class="course-meta">
-      <a v-if="course.id === 'xac-suat-thong-ke'" :href="studyLink('/xac-suat-thong-ke/tai-lieu-day-du')">Toàn bộ Notes và Slides</a>
       <span>{{ lessons.length }} bài giảng</span>
       <a :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện</a>
       <a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a>

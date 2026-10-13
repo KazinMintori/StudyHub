@@ -12,6 +12,7 @@ import WikiFooter from './WikiFooter.vue'
 import BuyMeCoffee from './BuyMeCoffee.vue'
 import WelcomeScreen from './WelcomeScreen.vue'
 import SiteIntroduction from './SiteIntroduction.vue'
+import ReadingScrollOffset from './ReadingScrollOffset.vue'
 import { useData, useRoute, withBase } from 'vitepress'
 import { computed, onMounted, onUnmounted, watch, ref, nextTick } from 'vue'
 import { courseCatalog } from '../course-catalog.mjs'
@@ -67,6 +68,7 @@ watch(() => route.path, syncLecturePart)
 
 <template>
   <Layout :class="{ 'sidebar-collapsed': hasCourseSidebar && desktopSidebarCollapsed, 'lecture-layout': frontmatter.section === 'lecture' || frontmatter.section === 'topic', 'topic-layout': frontmatter.section === 'topic', 'physics-layout': ['vat-ly-1', 'vat-ly-2'].includes(frontmatter.course), 'lecture-reading-plain': frontmatter.section === 'lecture' && frontmatter.readingStyle === 'plain', 'lecture-slides-layout': frontmatter.section === 'lecture' && lecturePart === 'slides', 'lecture-alt': frontmatter.section === 'lecture' && lecturePart !== 'notes', 'has-chapter-exercises': frontmatter.hasChapterExercises, 'lecture-exercises-layout': frontmatter.hasChapterExercises && lecturePart === 'bai-tap' }">
+    <template #layout-top><ReadingScrollOffset /></template>
     <template #nav-bar-content-before>
       <button
         v-if="hasCourseSidebar"

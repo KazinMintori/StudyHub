@@ -26,19 +26,24 @@ $$
 A=\pi(0{,}0240)^2\,\mathrm{m^2}.
 $$
 
-(a) Dấu từ thông được quyết định bởi chiều từ trường so với vector diện tích:
+(a) Dấu từ thông được quyết định bởi chiều từ trường so với vector diện tích. Đặt $t_1=0$ và $t_2=2{,}00\,\mathrm s$:
 
 $$
 \begin{aligned}
-&\Phi_B(0) = 0{,}140A = 2{,}53\times10^{-4}\,\mathrm{Wb},\\
-&\Phi_B(2{,}00\,\mathrm s) = -0{,}110A = -1{,}99\times10^{-4}\,\mathrm{Wb}.
+&\Phi_B(t_1)=0{,}140A\\
+&\quad=2{,}53\times10^{-4}\,\mathrm{Wb},\\
+&\Phi_B(t_2)=-0{,}110A\\
+&\quad=-1{,}99\times10^{-4}\,\mathrm{Wb}.
 \end{aligned}
 $$
 
 (b) Từ thông giảm từ giá trị dương đến giá trị âm. Do đó
 
 $$
-|\mathcal E| = A\frac{0{,}140+0{,}110}{2{,}00} = 2{,}26\times10^{-4}\,\mathrm V.
+\begin{aligned}
+|\mathcal E|&=A\frac{0{,}140+0{,}110}{2{,}00}\\
+&=2{,}26\times10^{-4}\,\mathrm V.
+\end{aligned}
 $$
 :::
 
@@ -64,13 +69,19 @@ Tìm độ lớn của (a) suất điện động cảm ứng và (b) dòng đi�
 (a) Diện tích mỗi vòng là $A=\pi(0{,}0500)^2\,\mathrm{m^2}$. Góc và diện tích không đổi nên
 
 $$
-|\mathcal E| = NA\cos20{,}0^\circ\left|\frac{dB}{dt}\right| = 1{,}01\times10^{-2}\,\mathrm V.
+\begin{aligned}
+|\mathcal E|&=NA\cos20{,}0^\circ\left|\frac{dB}{dt}\right|\\
+&=1{,}01\times10^{-2}\,\mathrm V.
+\end{aligned}
 $$
 
 (b) Dòng cảm ứng có độ lớn
 
 $$
-I = \frac{|\mathcal E|}{14{,}5\,\Omega} = 6{,}95\times10^{-4}\,\mathrm A.
+\begin{aligned}
+I&=\frac{|\mathcal E|}{14{,}5\,\Omega}\\
+&=6{,}95\times10^{-4}\,\mathrm A.
+\end{aligned}
 $$
 :::
 
@@ -79,8 +90,8 @@ Một cuộn dây vuông cạnh $4{,}00\,\mathrm{cm}$, gồm 875 vòng, nằm tr
 
 $$
 \begin{aligned}
-&\vec B(0) = (0{,}200\,\mathrm T)\hat{\imath}\\
-&\quad +(0{,}150\,\mathrm T)\hat{k}
+\vec B(0)&=(0{,}200\,\mathrm T)\hat{\imath}\\
++(0{,}150\,\mathrm T)\hat{k}
 \end{aligned}
 $$
 
@@ -88,8 +99,8 @@ $$
 
 $$
 \begin{aligned}
-&\vec B(3{,}00\,\mathrm s) = (0{,}300\,\mathrm T)\hat{\imath}\\
-&\quad -(0{,}200\,\mathrm T)\hat{k}.
+\vec B(3{,}00\,\mathrm s)&=(0{,}300\,\mathrm T)\hat{\imath}\\
+-(0{,}200\,\mathrm T)\hat{k}.
 \end{aligned}
 $$
 
@@ -105,12 +116,13 @@ Tại $t=2{,}00\,\mathrm s$, tìm (a) độ lớn suất điện động cảm �
 - Dùng định luật Faraday với thành phần $B_z$. Tốc độ biến thiên không đổi nên suất điện động không phụ thuộc thời điểm trong khoảng đang xét.
 - Dùng định luật Lenz để xác định chiều dòng tạo từ trường cảm ứng theo $+z$, chống lại sự giảm của $B_z$.
 
-(a) Ta có
+(a) Thành phần $B_z$ thay đổi một lượng $-0{,}200-0{,}150=-0{,}350\,\mathrm T$. Ta có
 
 $$
 \begin{aligned}
-&\frac{dB_z}{dt} = \frac{-0{,}200-0{,}150}{3{,}00}\,\mathrm{T/s},\\
-&\mathcal E = -NA\frac{dB_z}{dt} = 0{,}163\,\mathrm V.
+\frac{dB_z}{dt}&=\frac{-0{,}350}{3{,}00}\,\mathrm{T/s},\\
+\mathcal E&=-NA\frac{dB_z}{dt}\\
+&=0{,}163\,\mathrm V.
 \end{aligned}
 $$
 
@@ -142,7 +154,10 @@ với $\omega>0$ và $B_0$ là biên độ dương.
 (a) Suất điện động là
 
 $$
-\mathcal E = -N\frac{d\Phi_B}{dt} = -\omega NAB_0\cos\omega t.
+\begin{aligned}
+\mathcal E&=-N\frac{d\Phi_B}{dt}\\
+&=-\omega NAB_0\cos\omega t.
+\end{aligned}
 $$
 
 (b) Tại $t=0$, suất điện động âm nên dòng chạy theo chiều kim đồng hồ. Tại $t=\pi/\omega$, suất điện động dương nên dòng chạy ngược chiều kim đồng hồ. Ở cả hai thời điểm, từ trường tức thời bằng không nhưng tốc độ biến thiên từ trường khác không.
@@ -171,13 +186,20 @@ Một thanh dẫn cô lập dài $8{,}00\,\mathrm{cm}$ đặt song song trục $
 (a) Suất điện động có độ lớn
 
 $$
-|\mathcal E| = (3{,}90)(0{,}600)(0{,}0800)\,\mathrm V = 0{,}187\,\mathrm V.
+\begin{aligned}
+|\mathcal E|&=(3{,}90)(0{,}600)\\
+&\quad\times(0{,}0800)\,\mathrm V\\
+&=0{,}187\,\mathrm V.
+\end{aligned}
 $$
 
 (b) Tích có hướng $\vec v\times\vec B$ hướng theo $-x$. Điện trường cân bằng hướng theo $+x$ và có độ lớn
 
 $$
-E=vB=2{,}34\,\mathrm{V/m}.
+\begin{aligned}
+E&=vB\\
+&=2{,}34\,\mathrm{V/m}.
+\end{aligned}
 $$
 :::
 
@@ -197,8 +219,9 @@ Ta có
 
 $$
 \begin{aligned}
-&|\mathcal E| = 0{,}0180\,\mathrm V,\\
-&I = \frac{0{,}0180}{0{,}0200}\,\mathrm A = 0{,}900\,\mathrm A.
+|\mathcal E|&=0{,}0180\,\mathrm V,\\
+I&=\frac{0{,}0180}{0{,}0200}\,\mathrm A\\
+&=0{,}900\,\mathrm A.
 \end{aligned}
 $$
 
@@ -210,8 +233,8 @@ Một thanh dẫn cô lập dài $8{,}00\,\mathrm{cm}$ song song trục $x$. T�
 
 $$
 \begin{aligned}
-&\vec v = (1{,}50\,\mathrm{m/s})\hat{\imath}\\
-&\quad +(2{,}00\,\mathrm{m/s})\hat{\jmath}
+\vec v&=(1{,}50\,\mathrm{m/s})\hat{\imath}\\
++(2{,}00\,\mathrm{m/s})\hat{\jmath}
 \end{aligned}
 $$
 
@@ -219,8 +242,8 @@ trong từ trường đều
 
 $$
 \begin{aligned}
-&\vec B = -(0{,}120\,\mathrm T)\hat{\imath}\\
-&\quad +(0{,}150\,\mathrm T)\hat{k}.
+\vec B&=-(0{,}120\,\mathrm T)\hat{\imath}\\
++(0{,}150\,\mathrm T)\hat{k}.
 \end{aligned}
 $$
 
@@ -237,20 +260,23 @@ $$
 - Dùng tích phân của $\vec v\times\vec B$ dọc thanh. Chỉ thành phần theo $x$ góp vào suất điện động giữa hai đầu.
 - Xác định đầu điện thế cao bằng chiều lực từ lên điện tích dương, hoặc bằng điện trường cân bằng $\vec E=-\vec v\times\vec B$.
 
-Tích có hướng cho
+Tích có hướng có các thành phần
 
 $$
 \begin{aligned}
-&\vec v\times\vec B = (0{,}300\,\mathrm{V/m})\hat{\imath}\\
-&\quad -(0{,}225\,\mathrm{V/m})\hat{\jmath}\\
-&\quad +(0{,}240\,\mathrm{V/m})\hat{k}.
+(\vec v\times\vec B)_x&=0{,}300\,\mathrm{V/m},\\
+(\vec v\times\vec B)_y&=-0{,}225\,\mathrm{V/m},\\
+(\vec v\times\vec B)_z&=0{,}240\,\mathrm{V/m}.
 \end{aligned}
 $$
 
 (a) Thành phần dọc thanh không đổi nên
 
 $$
-|\mathcal E| = (0{,}300)(0{,}0800)\,\mathrm V = 2{,}40\times10^{-2}\,\mathrm V.
+\begin{aligned}
+|\mathcal E|&=(0{,}300)(0{,}0800)\,\mathrm V\\
+&=2{,}40\times10^{-2}\,\mathrm V.
+\end{aligned}
 $$
 
 (b) Lực từ lên điện tích dương có thành phần theo $+x$, hướng về đầu $b$. Điện tích dương dồn về đầu này, nên $V_b>V_a$. Hiệu điện thế là $V_b-V_a=0{,}0240\,\mathrm V$.
@@ -270,8 +296,9 @@ Lực từ tác dụng lên thanh trong máy phát thanh trượt có độ lớ
 
 $$
 \begin{aligned}
-&F_B = \frac{B^2L^2v}{R},\\
-&v = \frac{F_BR}{B^2L^2} = 4{,}12\,\mathrm{m/s}.
+F_B&=\frac{B^2L^2v}{R},\\
+v&=\frac{F_BR}{B^2L^2}\\
+&=4{,}12\,\mathrm{m/s}.
 \end{aligned}
 $$
 :::
@@ -300,15 +327,19 @@ Một ống dây dài có tiết diện $3{,}00\,\mathrm{cm^2}$. Dòng điện q
 
 $$
 \begin{aligned}
-&|\mathcal E| = \mu_0nA_s\left|\frac{dI}{dt}\right|,\\
-&n = \frac{|\mathcal E|}{\mu_0A_s|dI/dt|} = 1{,}81\times10^3\,\mathrm{m^{-1}}.
+|\mathcal E|&=\mu_0nA_s\left|\frac{dI}{dt}\right|,\\
+n&=\frac{|\mathcal E|}{\mu_0A_s|dI/dt|}\\
+&=1{,}81\times10^3\,\mathrm{m^{-1}}.
 \end{aligned}
 $$
 
 (b) Trên vòng dây,
 
 $$
-E = \frac{15{,}0\times10^{-6}}{2\pi(0{,}0310)}\,\mathrm{V/m} = 7{,}70\times10^{-5}\,\mathrm{V/m}.
+\begin{aligned}
+E&=\frac{15{,}0\times10^{-6}}{2\pi(0{,}0310)}\,\mathrm{V/m}\\
+&=7{,}70\times10^{-5}\,\mathrm{V/m}.
+\end{aligned}
 $$
 :::
 
@@ -326,8 +357,9 @@ Một vòng dây tròn bán kính $0{,}360\,\mathrm{cm}$ nằm trong mặt phẳ
 
 $$
 \begin{aligned}
-&2\pi rE = \pi r^2\left|\frac{dB}{dt}\right|,\\
-&E = \frac r2\left|\frac{dB}{dt}\right| = 2{,}70\times10^{-5}\,\mathrm{V/m}.
+2\pi rE&=\pi r^2\left|\frac{dB}{dt}\right|,\\
+E&=\frac r2\left|\frac{dB}{dt}\right|\\
+&=2{,}70\times10^{-5}\,\mathrm{V/m}.
 \end{aligned}
 $$
 :::
@@ -360,8 +392,9 @@ Với quy ước trên,
 
 $$
 \begin{aligned}
-&2\pi rE_y = -\mu_0nA_s\frac{dI}{dt},\\
-&\frac{dI}{dt} = -\frac{2\pi rE_y}{\mu_0nA_s}.\end{aligned}
+2\pi rE_y&=-\mu_0nA_s\frac{dI}{dt},\\
+\frac{dI}{dt}&=-\frac{2\pi rE_y}{\mu_0nA_s}.
+\end{aligned}
 $$
 
 (a) Khi $E_y>0$,
@@ -401,14 +434,18 @@ Một vòng dây điện trở $0{,}600\,\Omega$ bao quanh ống, song song các
 
 $$
 \begin{aligned}
-&\frac{dI}{dt} = (1{,}20\,\mathrm{A/s^2})t,\\
-&\left.\frac{dI}{dt}\right|_{13{,}9\,\mathrm s} = 16{,}68\,\mathrm{A/s}.\end{aligned}
+\frac{dI}{dt}&=(1{,}20\,\mathrm{A/s^2})t,\\
+\left.\frac{dI}{dt}\right|_{13{,}9\,\mathrm s}&=16{,}68\,\mathrm{A/s}.
+\end{aligned}
 $$
 
 Do đó độ lớn dòng trong vòng bao quanh là
 
 $$
-I_{\mathrm{c}} = \frac{\mu_0nA_s}{R}\left|\frac{dI}{dt}\right| = 5{,}52\times10^{-6}\,\mathrm A.
+\begin{aligned}
+I_{\mathrm{c}}&=\frac{\mu_0nA_s}{R}\left|\frac{dI}{dt}\right|\\
+&=5{,}52\times10^{-6}\,\mathrm A.
+\end{aligned}
 $$
 
 Chiều dòng cảm ứng tạo từ trường ngược chiều từ trường của ống, vì từ trường trong ống đang tăng.
@@ -456,24 +493,30 @@ Nếu $h$ là chiều cao phần vòng còn trong vùng trường thì $dh/dt=-v
 
 $$
 \begin{aligned}
-&|\mathcal E| = \left|B s\frac{dh}{dt}\right| = Bsv,\\
-&I = \frac{Bsv}{R}.
+|\mathcal E|&=\left|B s\frac{dh}{dt}\right|\\
+&=Bsv,\\
+I&=\frac{Bsv}{R}.
 \end{aligned}
 $$
 
 Hai cạnh bên có cùng chiều dài nằm trong trường và chịu hai lực ngang ngược chiều, nên tổng hai lực bằng không. Lực từ tổng theo phương thẳng đứng bằng lực lên cạnh trên:
 
 $$
-F_B = IBs = \frac{B^2s^2v}{R}.
+\begin{aligned}
+F_B&=IBs\\
+&=\frac{B^2s^2v}{R}.
+\end{aligned}
 $$
 
 Tiết diện dây, điện trở vòng và khối lượng vòng là
 
 $$
 \begin{aligned}
-&A_w = \frac{\pi d^2}{4},\\
-&R = \rho_R\frac{4s}{A_w} = \frac{16\rho_Rs}{\pi d^2},\\
-&m = \rho_m(4s)A_w = \rho_m\pi d^2s.
+A_w&=\frac{\pi d^2}{4},\\
+R&=\rho_R\frac{4s}{A_w}\\
+&=\frac{16\rho_Rs}{\pi d^2},\\
+m&=\rho_m(4s)A_w\\
+&=\rho_m\pi d^2s.
 \end{aligned}
 $$
 
@@ -481,8 +524,9 @@ Tại tốc độ giới hạn,
 
 $$
 \begin{aligned}
-&\frac{B^2s^2v_{\mathrm{gh}}}{R} = mg,\\
-&v_{\mathrm{gh}} = \frac{mgR}{B^2s^2} = \frac{16\rho_m\rho_Rg}{B^2}.
+\frac{B^2s^2v_{\mathrm{gh}}}{R}&=mg,\\
+v_{\mathrm{gh}}&=\frac{mgR}{B^2s^2}\\
+&=\frac{16\rho_m\rho_Rg}{B^2}.
 \end{aligned}
 $$
 

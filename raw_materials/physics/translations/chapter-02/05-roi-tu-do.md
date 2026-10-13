@@ -20,7 +20,13 @@ Các phép đo đạc chính xác xác nhận rằng vận tốc của quả bó
 
 Gia tốc không đổi của một vật rơi tự do được gọi là **gia tốc trọng trường**, ký hiệu độ lớn là $g$. Tại các vị trí gần mặt đất, trong tính toán học thuật và kỹ thuật người ta thường sử dụng giá trị chuẩn:
 
-$$g \approx 9.80\,\mathrm{m/s^2} = 980\,\mathrm{cm/s^2} \approx 32.2\,\mathrm{ft/s^2}.$$
+$$
+\begin{aligned}
+g &\approx 9.80\,\mathrm{m/s^2}\\
+&= 980\,\mathrm{cm/s^2}\\
+&\approx 32.2\,\mathrm{ft/s^2}.
+\end{aligned}
+$$
 
 Cần lưu ý rằng giá trị thực tế của $g$ phụ thuộc nhẹ vào vĩ độ địa lý và độ cao so với mực nước biển (do Trái Đất hơi dẹt ở hai cực và lực quán tính ly tâm của chuyển động tự quay). Ở xích đạo $g \approx 9.78\,\mathrm{m/s^2}$, trong khi ở hai cực $g \approx 9.83\,\mathrm{m/s^2}$. Tại Hà Nội, gia tốc trọng trường xấp xỉ $9.787\,\mathrm{m/s^2}$. Khi không đòi hỏi độ chính xác cao hơn hai chữ số có nghĩa, ta lấy gọn $g = 9.8\,\mathrm{m/s^2}$ (hoặc tính nhẩm nhanh với $g \approx 10\,\mathrm{m/s^2}$). Trên bề mặt Mặt Trăng, do khối lượng Mặt Trăng nhỏ hơn nhiều, $g_{\text{Moon}} \approx 1.6\,\mathrm{m/s^2}$ (khoảng $1/6$ Trái Đất). Trên bề mặt Mặt Trời, trường hấp dẫn khổng lồ tạo nên $g_{\text{Sun}} \approx 270\,\mathrm{m/s^2}$.
 
@@ -43,7 +49,9 @@ Bạn có thể tự đo thời gian phản xạ của não bộ mình hoặc b�
 
 Nếu điểm bạn kẹp được cách vạch số 0 một khoảng rơi $d$, vì thước rơi tự do từ trạng thái nghỉ ($v_0 = 0$), ta có $d = \frac{1}{2}gt^2$. Từ đó, thời gian phản xạ thần kinh của bạn được tính ngay bằng:
 
-$$t_{\text{phản xạ}} = \sqrt{\frac{2d}{g}}.$$
+$$
+t_{\text{phản xạ}} = \sqrt{\frac{2d}{g}}.
+$$
 
 Nếu bạn kẹp được ở vạch $d = 10\,\mathrm{cm} = 0.10\,\mathrm{m}$, thời gian phản xạ của bạn xấp xỉ $\sqrt{2 \times 0.10 / 9.8} \approx 0.14\,\mathrm{s}$ — một phản xạ vô cùng xuất sắc của một vận động viên! Nếu khoảng rơi là $20\,\mathrm{cm}$, thời gian là khoảng $0.20\,\mathrm{s}$ (mức trung bình của người bình thường).
 
@@ -71,8 +79,12 @@ Các phương trình chuyển động của đồng xu là:
 
 $$
 \begin{aligned}
-    &y = y_0 + v_{0y}t + \frac{1}{2}a_y t^2 = -\frac{1}{2}gt^2 = -(4.9\,\mathrm{m/s^2})t^2,\\
-    &v_y = v_{0y} + a_y t = -gt = -(9.8\,\mathrm{m/s^2})t.
+y &= y_0 + v_{0y}t + \frac{1}{2}a_y t^2\\
+&= -\frac{1}{2}gt^2\\
+&= -(4.9\,\mathrm{m/s^2})t^2,\\
+v_y &= v_{0y} + a_y t\\
+&= -gt\\
+&= -(9.8\,\mathrm{m/s^2})t.
 \end{aligned}
 $$
 
@@ -80,8 +92,10 @@ $$
 - Tại $t_1 = 1.0\,\mathrm s$:
   $$
 \begin{aligned}
-    &y_1 = -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2 = -4.9\,\mathrm m,\\
-    &v_{1y} = -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s) = -9.8\,\mathrm{m/s}.
+y_1 &= -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2\\
+&= -4.9\,\mathrm m,\\
+v_{1y} &= -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s)\\
+&= -9.8\,\mathrm{m/s}.
 \end{aligned}
 $$
   Đồng xu ở dưới vị trí thả $4.9\,\mathrm m$ và đang lao xuống với tốc độ $9.8\,\mathrm{m/s}$.
@@ -89,8 +103,10 @@ $$
 - Tại $t_2 = 2.0\,\mathrm s$:
   $$
 \begin{aligned}
-    &y_2 = -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2 \approx -20\,\mathrm m,\\
-    &v_{2y} = -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s) \approx -20\,\mathrm{m/s}.
+y_2 &= -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2\\
+&\approx -20\,\mathrm m,\\
+v_{2y} &= -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s)\\
+&\approx -20\,\mathrm{m/s}.
 \end{aligned}
 $$
   Sau khoảng thời gian gấp đôi, quãng đường rơi đã tăng gấp 4 lần ($2^2 = 4$).
@@ -98,8 +114,10 @@ $$
 - Tại $t_3 = 3.0\,\mathrm s$:
   $$
 \begin{aligned}
-    &y_3 = -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2 \approx -44\,\mathrm m,\\
-    &v_{3y} = -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s) \approx -29\,\mathrm{m/s}.
+y_3 &= -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2\\
+&\approx -44\,\mathrm m,\\
+v_{3y} &= -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s)\\
+&\approx -29\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -135,8 +153,9 @@ Phương trình tọa độ và vận tốc theo thời gian:
 
 $$
 \begin{aligned}
-    &y = (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2 = (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2,\\
-    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})t.
+y &= (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2\\
+&= (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2,\\
+v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})t.
 \end{aligned}
 $$
 
@@ -146,8 +165,10 @@ $$
 - Tại $t = 1.00\,\mathrm s$:
   $$
 \begin{aligned}
-    &y = (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2 = +10.1\,\mathrm m,\\
-    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s) = +5.20\,\mathrm{m/s}.
+y &= (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2\\
+&= +10.1\,\mathrm m,\\
+v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s)\\
+&= +5.20\,\mathrm{m/s}.
 \end{aligned}
 $$
   Tọa độ $y > 0$ và $v_y > 0$: Quả bóng đang ở vị trí cao hơn lan can $10.1\,\mathrm m$ và vẫn đang tiếp tục bay lên, nhưng tốc độ đã giảm đi đáng kể so với lúc ném.
@@ -155,8 +176,12 @@ $$
 - Tại $t = 4.00\,\mathrm s$:
   $$
 \begin{aligned}
-    &y = (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2 = 60.0 - 78.4 = -18.4\,\mathrm m,\\
-    &v_y = 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s) = 15.0 - 39.2 = -24.2\,\mathrm{m/s}.
+y &= (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2\\
+&= 60.0 - 78.4\\
+&= -18.4\,\mathrm m,\\
+v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s)\\
+&= 15.0 - 39.2\\
+&= -24.2\,\mathrm{m/s}.
 \end{aligned}
 $$
   Tọa độ $y < 0$ và $v_y < 0$: Bóng đã vượt qua đỉnh cao nhất, rơi qua mép lan can và hiện đang ở dưới mức lan can $18.4\,\mathrm m$, lao thẳng xuống dưới với tốc độ $24.2\,\mathrm{m/s}$.
@@ -164,27 +189,58 @@ $$
 **(b) Vận tốc khi bóng ở độ cao $y = +5.00\,\mathrm m$ phía trên lan can:**
 Vì câu hỏi không đề cập đến thời gian, cách tiếp cận tối ưu là sử dụng hệ thức độc lập thời gian Torricelli:
 
-$$v_y^2 = v_{0y}^2 + 2a_y(y - y_0) = (15.0\,\mathrm{m/s})^2 - 2(9.80\,\mathrm{m/s^2})(5.00\,\mathrm m) = 225 - 98.0 = 127\,\mathrm{m^2/s^2}.$$
+$$
+\begin{aligned}
+v_y^2 &= v_{0y}^2 + 2a_y(y - y_0)\\
+&= (15.0\,\mathrm{m/s})^2 - 2(9.80\,\mathrm{m/s^2})(5.00\,\mathrm m)\\
+&= 225 - 98.0\\
+&= 127\,\mathrm{m^2/s^2}.
+\end{aligned}
+$$
 
 Lấy căn bậc hai, ta thu được hai nghiệm đối xứng:
 
-$$v_y = \pm \sqrt{127\,\mathrm{m^2/s^2}} \approx \pm 11.3\,\mathrm{m/s}.$$
+$$
+\begin{aligned}
+v_y &= \pm \sqrt{127\,\mathrm{m^2/s^2}}\\
+&\approx \pm 11.3\,\mathrm{m/s}.
+\end{aligned}
+$$
 
 Dấu cộng tương ứng với lúc bóng đang bay lên qua vị trí $5.00\,\mathrm m$, và dấu trừ tương ứng với lúc bóng rơi trở lại qua vị trí đó. Tốc độ của bóng ở cả hai lượt đều bằng nhau ($11.3\,\mathrm{m/s}$). Tính đối xứng này là một đặc trưng cơ bản của rơi tự do khi không có lực cản môi trường.
 
 **(c) Độ cao cực đại mà bóng đạt được:**
 Tại đỉnh quỹ đạo, quả bóng đổi chiều chuyển động nên vận tốc tức thời bằng 0: $v_y = 0$. Áp dụng hệ thức Torricelli:
 
-$$0 = v_{0y}^2 - 2g y_{\max} \implies y_{\max} = \frac{v_{0y}^2}{2g} = \frac{(15.0\,\mathrm{m/s})^2}{2(9.80\,\mathrm{m/s^2})} = \frac{225}{19.6} \approx +11.5\,\mathrm m.$$
+$$
+\begin{aligned}
+0 &= v_{0y}^2 - 2g y_{\max}\\
+&\implies y_{\max} = \frac{v_{0y}^2}{2g}\\
+&= \frac{(15.0\,\mathrm{m/s})^2}{2(9.80\,\mathrm{m/s^2})}\\
+&= \frac{225}{19.6}\\
+&\approx +11.5\,\mathrm m.
+\end{aligned}
+$$
 
 Thời gian để vật lên tới độ cao cực đại là:
 
-$$t_{\text{đỉnh}} = \frac{v_{0y}}{g} = \frac{15.0\,\mathrm{m/s}}{9.80\,\mathrm{m/s^2}} \approx 1.53\,\mathrm s.$$
+$$
+\begin{aligned}
+t_{\text{đỉnh}} &= \frac{v_{0y}}{g}\\
+&= \frac{15.0\,\mathrm{m/s}}{9.80\,\mathrm{m/s^2}}\\
+&\approx 1.53\,\mathrm s.
+\end{aligned}
+$$
 
 **(d) Gia tốc tại đỉnh cao nhất:**
 Như đã phân tích ở phần lý thuyết, tại điểm cao nhất khi $v_y = 0$, gia tốc của quả bóng **vẫn không đổi**:
 
-$$a_y = -g = -9.80\,\mathrm{m/s^2}.$$
+$$
+\begin{aligned}
+a_y &= -g\\
+&= -9.80\,\mathrm{m/s^2}.
+\end{aligned}
+$$
 
 Trọng lực không hề biến mất tại đỉnh quỹ đạo, và tốc độ biến thiên của vận tốc vẫn liên tục giữ nguyên $9.80\,\mathrm{m/s^2}$ hướng xuống.
 :::
@@ -208,24 +264,42 @@ Sau khi ném quả bóng ở Ví dụ 2.7, sau bao lâu bóng sẽ rơi xuống 
 Vị trí thấp hơn lan can $5.00\,\mathrm m$ ứng với tọa độ $y = -5.00\,\mathrm m$.
 Phương trình vị trí của quả bóng là:
 
-$$y = y_0 + v_{0y}t - \frac{1}{2}gt^2.$$
+$$
+y = y_0 + v_{0y}t - \frac{1}{2}gt^2.
+$$
 
 Thay các giá trị số vào:
 
-$$-5.00\,\mathrm m = 0 + (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2.$$
+$$
+-5.00\,\mathrm m = 0 + (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2.
+$$
 
 Chuyển vế để đưa về dạng phương trình bậc hai chính tắc $At^2 + Bt + C = 0$:
 
-$$(4.90\,\mathrm{m/s^2})t^2 - (15.0\,\mathrm{m/s})t - 5.00\,\mathrm m = 0.$$
+$$
+(4.90\,\mathrm{m/s^2})t^2 - (15.0\,\mathrm{m/s})t - 5.00\,\mathrm m = 0.
+$$
 
 **Giải phương trình:**
 Áp dụng công thức nghiệm tổng quát $t = \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}$:
 
-$$t = \frac{15.0 \pm \sqrt{(-15.0)^2 - 4(4.90)(-5.00)}}{2(4.90)} = \frac{15.0 \pm \sqrt{225 + 98.0}}{9.80} = \frac{15.0 \pm \sqrt{323}}{9.80} \approx \frac{15.0 \pm 17.97}{9.80}.$$
+$$
+\begin{aligned}
+t &= \frac{15.0 \pm \sqrt{(-15.0)^2 - 4(4.90)(-5.00)}}{2(4.90)}\\
+&= \frac{15.0 \pm \sqrt{225 + 98.0}}{9.80}\\
+&= \frac{15.0 \pm \sqrt{323}}{9.80}\\
+&\approx \frac{15.0 \pm 17.97}{9.80}.
+\end{aligned}
+$$
 
 Phương trình cho hai nghiệm toán học:
 
-$$t_1 \approx +3.36\,\mathrm s \quad \text{và} \quad t_2 \approx -0.30\,\mathrm s.$$
+$$
+\begin{aligned}
+t_1 &\approx +3.36\,\mathrm s \quad \text{và} \quad t_2\\
+&\approx -0.30\,\mathrm s.
+\end{aligned}
+$$
 
 **Đánh giá bản chất vật lý của các nghiệm:**
 Toán học không biết đến thời điểm bắt đầu ném bóng ($t = 0$), nó giải phương trình với giả định chuyển động parabol này đã tồn tại vĩnh viễn từ quá khứ vô tận.
@@ -251,11 +325,15 @@ Một quả bóng được ném thẳng đứng lên cao từ mặt đất với
 ::: solution Lời giải & Phân tích
 **(a) Chọn (iii): $4h$.**
 Tại độ cao cực đại, vận tốc triệt tiêu ($v = 0$). Từ hệ thức Torricelli $0 - v_0^2 = -2gh$, ta có độ cao cực đại tỷ lệ với bình phương vận tốc đầu:
-$$h = \frac{v_0^2}{2g}.$$
+$$
+h = \frac{v_0^2}{2g}.
+$$
 Do đó, khi nhân đôi vận tốc ban đầu ($v_0 \to 2v_0$), độ cao cực đại sẽ tăng gấp $2^2 = 4$ lần, tức là đạt $4h$.
 
 **(b) Chọn (v): $2t$.**
 Tại đỉnh cao nhất, $v = v_0 - gt = 0$, suy ra thời gian bay lên tới đỉnh tỷ lệ bậc nhất với vận tốc ban đầu:
-$$t = \frac{v_0}{g}.$$
+$$
+t = \frac{v_0}{g}.
+$$
 Do đó, khi vận tốc đầu tăng gấp đôi, thời gian bay lên đỉnh cũng tăng đúng 2 lần, tức là $2t$.
 :::
