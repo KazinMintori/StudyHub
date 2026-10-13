@@ -8,12 +8,15 @@ import {potentialConcepts} from '../docs/.vitepress/physics-potential-foundation
 import {capacitanceConcepts} from '../docs/.vitepress/physics-capacitance-foundations.mjs'
 import {currentConcepts} from '../docs/.vitepress/physics-current-foundations.mjs'
 import {dcConcepts} from '../docs/.vitepress/physics-dc-foundations.mjs'
+import {magneticConcepts} from '../docs/.vitepress/physics-magnetic-foundations.mjs'
+import {physics1Course,physics2Course} from '../docs/.vitepress/physics-courses.mjs'
 const preview=await startPhysicsPreview()
 const browser=await puppeteer.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'})
 const page=await browser.newPage(),results=[],errors=[]
 page.on('pageerror',error=>errors.push(error.message))
 await page.evaluateOnNewDocument(()=>sessionStorage.setItem('studyhub_welcome_seen','1'))
-const ids=Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts,...dcConcepts})
+const readyConcepts=[physics1Course,physics2Course].flatMap(course=>course.lessons.filter(lesson=>lesson.status==='ready').flatMap(lesson=>[...(lesson.prerequisites||[]),...(lesson.supportingConcepts||[])]))
+const ids=[...new Set([...Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts,...dcConcepts,...magneticConcepts}),...readyConcepts])]
 try{
  for(const width of [320,375,1440]){
   await page.setViewport({width,height:900})

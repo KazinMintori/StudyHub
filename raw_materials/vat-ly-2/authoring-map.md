@@ -64,9 +64,15 @@ Có tám Slides, Cheatsheet gồm sáu nhóm định nghĩa, tính chất và c�
 
 Tab Bài tập có 88 bài đánh số, 21 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 122 lời giải có Tóm tắt đề bài, Hướng đi dạng gạch đầu dòng và bước giải chi tiết. Chương có tám Slides, Cheatsheet sáu nhóm chỉ gồm định nghĩa, tính chất và công thức, cùng tám Wiki mới. Chín bộ Python và 39 kiểm thử skill đã qua. Bản build cuối exit 0, có 72 lượt kiểm tra các tab và chủ đề ở 320, 360, 375, 1440 px, 53 lần chuyển kích thước và 102 lượt Wiki. Không có tràn công thức hoặc lỗi JavaScript. Nội dung và hiển thị chương đã được kiểm tra, sẵn sàng push.
 
-## Các chương 27–44
+## Chương 27
 
-Tiếp tục theo thứ tự điện dung và điện môi, dòng điện, mạch điện, từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
+Đã tích hợp lời mở, chín mục lý thuyết, 12 ví dụ, 30 công thức đánh số và 41 hình đánh số. Bộ 90 ảnh nguồn gồm 56 ảnh lý thuyết, ứng dụng, tóm tắt và tự kiểm tra cùng 34 ảnh cuối chương. Có bốn đồ thị hoặc sơ đồ lời giải. Các lượt rà độc lập đã sửa dấu, đơn vị, thành phần vector, mô hình mạch và mép ảnh. Mục 27.6 giữ hình tự kiểm tra với hai cách mắc pin và giải thích hạt tải âm hoặc hỗn hợp.
+
+Tab Bài tập có 85 bài đánh số, 18 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 116 khung lời giải chi tiết. Chương có 12 Slides, Cheatsheet chín nhóm chỉ gồm định nghĩa, tính chất và công thức, mười Wiki mới và mục từ trường mở rộng. Mười ba bộ Python và 39 kiểm thử skill đã qua. Lượt trình duyệt ban đầu có 104 lượt kiểm tra ở 320, 360, 375, 1440 px, 60 lần đổi kích thước trực tiếp và 135 lượt Wiki, không có tràn công thức hoặc lỗi JavaScript. Trạng thái bản build cuối và xuất bản được ghi riêng trong `../physics/chapter-27-review.json`.
+
+## Các chương 28–44
+
+Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 
 ## Rà toàn bộ bài giảng
 

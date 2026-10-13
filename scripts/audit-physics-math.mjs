@@ -27,7 +27,7 @@ function walk(value,name){
  else if(Array.isArray(value))value.forEach((v,i)=>walk(v,`${name}[${i}]`))
  else if(value&&typeof value==='object')for(const [k,v]of Object.entries(value))walk(v,`${name}.${k}`)
 }
-for(const name of ['physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations','physics-capacitance-course','physics-capacitance-foundations','physics-current-course','physics-current-foundations','physics-dc-course','physics-dc-foundations'])walk(await import(`../docs/.vitepress/${name}.mjs`),name)
+for(const name of ['physics-electrostatics-course','physics-electrostatics-foundations','physics-gauss-course','physics-gauss-foundations','physics-potential-course','physics-potential-foundations','physics-capacitance-course','physics-capacitance-foundations','physics-current-course','physics-current-foundations','physics-dc-course','physics-dc-foundations','physics-magnetic-course','physics-magnetic-foundations'])walk(await import(`../docs/.vitepress/${name}.mjs`),name)
 await mkdir('qa/physics',{recursive:true})
 await writeFile('qa/physics/math-audit.json',JSON.stringify({display,inline,findings},null,2)+'\n')
 console.log(JSON.stringify({display,inline,invalid:findings.filter(f=>f.invalid).length,wide:findings.filter(f=>f.widthEx>(f.kind==='inline'?38:34)).length},null,2))

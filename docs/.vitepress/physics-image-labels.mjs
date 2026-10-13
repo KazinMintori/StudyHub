@@ -1,3 +1,5 @@
+import {physics27TheoryImageAnnotations} from './physics27-theory-image-annotations.mjs'
+import {physics27ExerciseImageAnnotations} from './physics27-exercise-image-annotations.mjs'
 import {physics26TheoryImageAnnotations} from './physics26-theory-image-annotations.mjs'
 import {physics26ExerciseImageAnnotations} from './physics26-exercise-image-annotations.mjs'
 import {physics25ImageAnnotations} from './physics25-image-annotations.mjs'
@@ -8,6 +10,8 @@ import {physics21ImageAnnotations} from './physics21-image-annotations.mjs'
 import {physics22ImageAnnotations} from './physics22-image-annotations.mjs'
 import {physics23ImageAnnotations,physics24ImageAnnotations} from './physics23-24-image-annotations.mjs'
 const originalLabels={
+ ...physics27TheoryImageAnnotations,
+ ...physics27ExerciseImageAnnotations,
  ...physics26TheoryImageAnnotations,
  ...physics26ExerciseImageAnnotations,
  'young-26/hinh-26-27':[],

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 230" role="img">
+<title>Lực từ trên từng cạnh của khung dây có bản lề</title>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7z" fill="context-stroke"/></marker></defs>
+<style>text{font:14px sans-serif;fill:#172f49}.arrow{fill:none;stroke-width:2;marker-end:url(#arrow)}</style>
+<path d="M65 60H245V175H65Z" fill="none" stroke="#172f49" stroke-width="2"/>
+<path class="arrow" d="M65 152V125M115 60H160M245 90V115M190 175H145" stroke="#7d478f"/>
+<path class="arrow" d="M112 30H220" stroke="#2b5d95"/><text x="156" y="22">B</text>
+<text x="51" y="52">b</text><text x="251" y="52">c</text><text x="51" y="195">a</text><text x="251" y="195">d</text>
+<text x="12" y="103">Bản lề</text>
+<text x="54" y="116" style="font-size:26px;fill:#a85024">⊗</text>
+<text x="234" y="144" style="font-size:26px;fill:#a85024">⊙</text>
+<text x="91" y="90">F_bc = 0</text><text x="91" y="165">F_da = 0</text>
+<text x="39" y="216">F_ab = F_cd = 1,20 N</text></svg>

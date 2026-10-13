@@ -36,7 +36,13 @@ export default withMermaid(defineConfig({
           .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
           .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
           .replace(/^[ \t]*::: exercise(?:[\t ]+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: solution(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Lời giải${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: solution(?:[\t ]+(.*))?$/gm, (_, title) => {
+            const label = title?.trim()
+            const heading = label && /^Lời giải\b/i.test(label)
+              ? label
+              : `Lời giải${label ? `: ${label}` : ''}`
+            return `::: details ${heading}`
+          })
           .replace(/^[ \t]*::: derivation(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
           .replace(/^[ \t]*::: hint(?:[\t ]+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`)
           .replace(/^[ \t]*::: note(?:[\t ]+(.*))?$/gm, (_, title) => `::: info${title ? ` ${title}` : ''}`)

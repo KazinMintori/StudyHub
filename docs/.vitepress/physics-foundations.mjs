@@ -1,3 +1,4 @@
+import {magneticConcepts,magneticWikiDetails,magneticWikiConnections} from './physics-magnetic-foundations.mjs'
 import {dcConcepts,dcWikiDetails,dcWikiConnections} from './physics-dc-foundations.mjs'
 import {currentConcepts,currentWikiDetails,currentWikiConnections} from './physics-current-foundations.mjs'
 import {capacitanceConcepts,capacitanceWikiDetails,capacitanceWikiConnections} from './physics-capacitance-foundations.mjs'
@@ -6,6 +7,7 @@ import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiCo
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...magneticConcepts,
   ...dcConcepts,
   ...currentConcepts,
   ...capacitanceConcepts,
@@ -125,19 +127,6 @@ export const physicsConcepts = {
     "use": "Tính tương tác điện, thông lượng và quan hệ với điện thế.",
     "question": "Đổi dấu điện tích thử có đổi chiều điện trường nguồn không?",
     "answer": "Không nếu điện tích thử không làm thay đổi phân bố nguồn."
-  },
-  "tu-truong": {
-    "name": "Từ trường",
-    "aliases": [
-      "Từ trường",
-      "từ trường",
-      "cảm ứng từ"
-    ],
-    "definition": "Từ trường là vector $\\mathbf B$ tạo phần lực Lorentz $q\\mathbf v\\times\\mathbf B$ lên điện tích chuyển động. Đơn vị là tesla; lực này vuông góc vận tốc.",
-    "example": "Điện tích bay vuông góc trường đều có thể chuyển động tròn mà tốc độ không đổi.",
-    "use": "Tính lực lên hạt, dây và khung dòng điện.",
-    "question": "Lực từ riêng có làm tăng động năng của hạt không?",
-    "answer": "Không. Tích vô hướng lực từ với vận tốc bằng không."
   },
   "cam-ung-dien-tu": {
     "name": "Cảm ứng điện từ",
@@ -329,6 +318,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...magneticWikiDetails,
   ...dcWikiDetails,
   ...currentWikiDetails,
   ...capacitanceWikiDetails,
@@ -345,7 +335,6 @@ export const physicsWikiDetails = {
   "noi-nang": "Với quy ước nhiệt hệ nhận dương và công hệ thực hiện dương, $\\Delta U=Q-W$. Nếu dùng quy ước công nhận vào hệ, dấu công trong phương trình đổi; phải ghi quy ước trước.\n\nMột chu trình có $\\Delta U=0$ nhưng vẫn có thể nhận nhiệt ròng và sinh công ròng. Đẳng nhiệt khí lý tưởng có nội năng không đổi, còn chất thực cần xét phương trình nội năng phù hợp.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 19. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "entropy-nhiet-dong": "Để tính biến thiên entropy của quá trình không thuận nghịch, chọn một đường thuận nghịch tưởng tượng nối cùng hai trạng thái rồi tích phân. Không thay nhiệt thực vào $\\int\\delta Q/T$ nếu thiếu điều kiện thuận nghịch.\n\n$S=k_B\\ln\\Omega$ liên hệ với số trạng thái vi mô trong mô hình thống kê phù hợp. Định nghĩa này khác entropy thông tin dù hai lĩnh vực có quan hệ hình thức.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 20. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "dien-truong": "Đơn vị điện trường là newton trên coulomb, tương đương volt trên mét. Điện trường nhiều nguồn cộng vector tại cùng điểm. Trong tĩnh điện, $\\mathbf E=-\\nabla V$.\n\nĐường sức biểu diễn hướng trường, không phải quỹ đạo bắt buộc của hạt có vận tốc ban đầu. Điện trường cảm ứng có thể không là gradient của điện thế tĩnh đơn trị.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 21. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
-  "tu-truong": "Hướng lực dùng bàn tay phải cho điện tích dương rồi đảo chiều với điện tích âm. Từ thông qua mặt là $\\Phi_B=\\int\\mathbf B\\cdot d\\mathbf A$. Thông lượng mặt kín bằng không không bắt buộc từ trường bằng không từng điểm.\n\nDòng ổn định tạo trường theo Biot–Savart; điện trường biến thiên cũng góp nguồn trong Ampère–Maxwell. Không nhầm từ trường với lực từ, vì lực còn phụ thuộc điện tích và vận tốc.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "cam-ung-dien-tu": "Cuộn N vòng cùng từ thông có $\\mathcal E=-N\\,d\\Phi_B/dt$. Từ thông có thể đổi do trường, diện tích hoặc góc. Vòng không kín có thể có suất điện động nhưng chưa có dòng vòng.\n\nMạch chuyển động cần xét cả điện trường và lực từ trên điện tích theo vận tốc dây. Năng lượng cảm ứng đến từ tác nhân đổi trường hoặc tác nhân thực hiện công chuyển động.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 29. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "tu-cam": "Điện áp cuộn theo quy ước thụ động là $v_L=L\\,di/dt$ và năng lượng $U_B=Li^2/2$. Dòng không thể nhảy tức thời nếu L khác không và điện áp hữu hạn.\n\nHỗ cảm là liên kết giữa hai mạch, khác tự cảm của một mạch. L và M có thể phụ thuộc trạng thái vật liệu từ; công thức hệ số không đổi cần miền tuyến tính phù hợp.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 30. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "pha-song": "Trong sóng điều hòa, $k=2\\pi/\\lambda$ và $\\omega=2\\pi f$. Theo dõi một pha cố định giúp xác định hướng truyền: $kx-\\omega t$ truyền theo chiều x dương khi các tham số dương.\n\nCác pha bằng nhau sai khác số nguyên lần một vòng là tương đương. Khi truyền trong nhiều môi trường, cần đường quang hoặc thời gian truyền, không chỉ chiều dài hình học.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 15. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
@@ -363,6 +352,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...magneticWikiConnections,
   ...dcWikiConnections,
   ...currentWikiConnections,
   ...capacitanceWikiConnections,
@@ -414,11 +404,6 @@ export const physicsWikiConnections = {
     "dien-tich",
     "dien-the",
     "thong-luong"
-  ],
-  "tu-truong": [
-    "dong-dien",
-    "cam-ung-dien-tu",
-    "vector"
   ],
   "cam-ung-dien-tu": [
     "tu-truong",

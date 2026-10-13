@@ -918,16 +918,104 @@ export const physics2Course = {
       "title": "Từ trường và lực từ",
       "prerequisites": [
         "vector",
+        "tich-co-huong",
+        "dien-tich",
         "dong-dien",
-        "luc"
+        "luc",
+        "momen-luc",
+        "momen-quan-tinh",
+        "cong-nang-luong",
+        "dao-ham",
+        "tich-phan"
       ],
       "supportingConcepts": [
         "tu-truong",
-        "momen-luc"
+        "luc-tu-tren-dien-tich",
+        "duong-suc-tu",
+        "tu-thong",
+        "chuyen-dong-hat-trong-tu-truong",
+        "bo-chon-van-toc",
+        "khoi-pho",
+        "momen-tu",
+        "luong-cuc-tu",
+        "suat-phan-dien-dong",
+        "hieu-ung-hall"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 7,
-      "sourceChapter": 27
+      "sourceChapter": 27,
+      "topicGroups": [
+        {
+          "title": "Từ trường và cách biểu diễn",
+          "topics": [
+            {
+              "slug": "tu-tinh",
+              "title": "Từ tính",
+              "question": "Vì sao nam châm có hai cực và tương tác từ gắn với điện tích chuyển động?",
+              "source": "27.1"
+            },
+            {
+              "slug": "tu-truong",
+              "title": "Từ trường",
+              "question": "Vận tốc và dấu điện tích quyết định lực từ như thế nào?",
+              "source": "27.2"
+            },
+            {
+              "slug": "duong-suc-tu-thong",
+              "title": "Đường sức từ và từ thông",
+              "question": "Bản đồ đường sức và từ thông cho biết những gì về từ trường?",
+              "source": "27.3"
+            }
+          ]
+        },
+        {
+          "title": "Chuyển động của hạt mang điện",
+          "topics": [
+            {
+              "slug": "chuyen-dong-hat",
+              "title": "Chuyển động trong từ trường",
+              "question": "Khi nào hạt đi theo đường tròn hoặc đường xoắn ốc?",
+              "source": "27.4"
+            },
+            {
+              "slug": "ung-dung-hat",
+              "title": "Ứng dụng chuyển động của hạt",
+              "question": "Trường chéo nhau chọn vận tốc và phân biệt khối lượng hạt ra sao?",
+              "source": "27.5"
+            }
+          ]
+        },
+        {
+          "title": "Dòng điện, vòng dây và thiết bị",
+          "topics": [
+            {
+              "slug": "luc-len-day",
+              "title": "Lực từ lên dây dẫn",
+              "question": "Lực vi mô lên hạt tải trở thành lực lên cả dây như thế nào?",
+              "source": "27.6"
+            },
+            {
+              "slug": "vong-day-mo-men",
+              "title": "Lực và mômen lên vòng dây",
+              "question": "Vì sao tổng lực có thể bằng không nhưng vòng vẫn quay?",
+              "source": "27.7"
+            },
+            {
+              "slug": "dong-co-dien",
+              "title": "Động cơ điện một chiều",
+              "question": "Cổ góp và suất phản điện động quyết định chiều quay và công suất ra sao?",
+              "source": "27.8"
+            },
+            {
+              "slug": "hall",
+              "title": "Hiệu ứng Hall",
+              "question": "Điện áp ngang giúp suy dấu và mật độ hạt tải như thế nào?",
+              "source": "27.9"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "08-nguon-tu-truong",
@@ -1647,6 +1735,138 @@ export const physics2Course = {
         "Dây bảo vệ và thiết bị ngắt do chênh dòng có chức năng khác bảo vệ quá dòng."
       ],
       "formula": "$$\n\\begin{aligned}\nI&=I_1+I_2\\\\\n&\\quad+\\cdots+I_n,\\\\\nP&=VI,\\\\\n1\\,\\mathrm{kW\\cdot h}&=3.60\\,\\mathrm{MJ},\\\\\n1\\,\\mathrm{MJ}&=10^6\\,\\mathrm J.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Từ tính gắn với các điện tích chuyển động",
+      "bullets": [
+        "Hai cực cùng tên đẩy nhau, hai cực khác tên hút nhau.",
+        "Chia một nam châm thành các phần tạo các nam châm nhỏ có hai cực.",
+        "Dòng điện tạo từ trường, còn từ trường tác dụng lên điện tích đang chuyển động."
+      ],
+      "formula": "",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Lực từ có hướng vuông góc vận tốc và trường",
+      "bullets": [
+        "Dấu điện tích quyết định chiều lực so với tích có hướng.",
+        "Vận tốc song song hoặc ngược song song trường cho lực bằng không.",
+        "Lực từ không sinh công lên hạt vì vuông góc vận tốc tức thời."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\vec F&=q\\vec v\\times\\vec B,\\\\\nF&=|q|vB\\sin\\phi,\\\\\n\\vec F\\cdot\\vec v&=0.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Đường sức từ biểu diễn trường và không chỉ hướng lực",
+      "bullets": [
+        "Tiếp tuyến của đường sức cho hướng từ trường tại điểm ấy.",
+        "Mật độ đường trong cùng bản đồ biểu thị tương đối độ mạnh của trường.",
+        "Đường sức không có nguồn hoặc điểm tận cùng. Các bản đồ nam châm khép qua cả bên trong nam châm."
+      ],
+      "formula": "$$\n\\oint\\vec B\\cdot d\\vec A=0\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Dấu từ thông phụ thuộc pháp tuyến đã chọn",
+      "bullets": [
+        "Thành phần vuông góc mặt đóng góp vào từ thông.",
+        "Mặt kín dùng pháp tuyến hướng ra ngoài, mặt hở cần chọn một hướng nhất quán.",
+        "Công thức BA cosφ dùng mặt phẳng và từ trường đều trên mặt."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\Phi_B&=\\int\\vec B\\cdot d\\vec A,\\\\\n\\Phi_B&=BA\\cos\\phi,\\\\\n1\\,\\mathrm{Wb}&=1\\,\\mathrm{T\\cdot m^2}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Từ trường đều bẻ hướng hạt mà không đổi tốc độ",
+      "bullets": [
+        "Vận tốc vuông góc trường cho quỹ đạo tròn.",
+        "Thành phần song song trường giữ không đổi và tạo bước xoắn.",
+        "Các công thức dùng khối lượng không đổi trong mô hình không tương đối tính."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR&=\\frac{mv_\\perp}{|q|B},\\\\\n\\omega&=\\frac{|q|B}{m},\\\\\nT&=\\frac{2\\pi m}{|q|B},\\\\\np&=v_\\parallel T.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Bộ chọn vận tốc cân bằng hai lực",
+      "bullets": [
+        "Điện trường và từ trường được bố trí chéo nhau.",
+        "Chỉ vận tốc có hướng và độ lớn phù hợp mới đi thẳng qua vùng chọn.",
+        "Hạt nhanh hơn hoặc chậm hơn bị lệch theo các chiều khác nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}\nq\\vec E+q\\vec v\\times\\vec B&=0,\\\\\nv&=E/B.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Khối phổ dùng bán kính quỹ đạo để phân biệt hạt",
+      "bullets": [
+        "Sau bộ chọn vận tốc, các hạt có cùng tốc độ.",
+        "Trường phân tích bẻ quỹ đạo, bán kính phụ thuộc khối lượng trên độ lớn điện tích.",
+        "Hai bán kính khác nhau đưa các đồng vị đến các vị trí khác nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}\nR&=\\frac{mv}{|q|B'},\\\\\n\\frac m{|q|}&=\\frac{BB'R}{E}.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Dòng điện trong dây chịu tổng lực của các hạt tải",
+      "bullets": [
+        "Vector chiều dài của dây hướng theo dòng quy ước.",
+        "Dây thẳng trong trường đều có thể dùng lực của cả đoạn.",
+        "Dây cong hoặc trường không đều cần cộng vector lực từng phần tử."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\vec F&=I\\vec l\\times\\vec B,\\\\\nd\\vec F&=I\\,d\\vec l\\times\\vec B.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Vòng dây trong trường đều có thể chịu mômen",
+      "bullets": [
+        "Các lực trên vòng kín triệt tiêu tổng, nhưng các đường tác dụng khác nhau có thể tạo mômen.",
+        "Quy tắc bàn tay phải cho hướng mômen từ theo chiều dòng.",
+        "Cuộn N vòng cùng hình học và hướng làm mômen từ tăng N lần."
+      ],
+      "formula": "$$\n\\begin{aligned}\n\\vec\\mu&=NI\\vec A,\\\\\n\\vec\\tau&=\\vec\\mu\\times\\vec B.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Năng lượng thấp nhất khi mômen từ cùng hướng trường",
+      "bullets": [
+        "Góc được tính giữa mômen từ và từ trường.",
+        "Cùng chiều là cân bằng bền, ngược chiều là cân bằng không bền.",
+        "Trong trường không đều, vòng còn có thể chịu lực tổng hướng về hoặc ra xa vùng trường mạnh."
+      ],
+      "formula": "$$\n\\begin{aligned}\nU&=-\\vec\\mu\\cdot\\vec B,\\\\\nU&=-\\mu B\\cos\\phi.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Động cơ chuyển điện năng thành cơ năng",
+      "bullets": [
+        "Cổ góp đổi chiều dòng trong vòng sau nửa vòng quay để duy trì chiều mômen.",
+        "Suất phản điện động tăng theo tốc độ khi cấu hình và từ trường giữ nguyên.",
+        "Rôto dừng làm suất phản điện động mất đi, nên dòng tăng mạnh trong mô hình nguồn và điện trở cố định."
+      ],
+      "formula": "$$\n\\begin{aligned}\nV_{ab}&=\\mathcal E+Ir,\\\\\nP_{\\mathrm{in}}&=V_{ab}I,\\\\\nP_{\\mathrm{mech}}&=\\mathcal EI,\\\\\nP_r&=I^2r.\n\\end{aligned}\n$$",
+      "example": ""
+    },
+    {
+      "note": "07-tu-truong-luc-tu",
+      "title": "Hiệu ứng Hall tách điện tích theo phương ngang",
+      "bullets": [
+        "Lực từ dồn hạt tải về một mép và tạo điện trường ngang.",
+        "Ở cân bằng, lực điện ngang chống lại lực từ.",
+        "Cực tính Hall cho dấu hạt tải, còn độ lớn giúp suy mật độ trong mô hình thích hợp."
+      ],
+      "formula": "$$\n\\begin{aligned}\nE_z&=-v_xB_y,\\\\\nJ_x&=nqv_x,\\\\\nnq&=-\\frac{J_xB_y}{E_z}.\n\\end{aligned}\n$$",
       "example": ""
     }
   ],

@@ -3,30 +3,44 @@ course: vat-ly-2
 lecture: 07-tu-truong-luc-tu
 section: lecture
 title: "Từ trường và lực từ"
-prerequisites: ["vector","dong-dien","luc"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Từ trường và lực từ."
+prerequisites: ["vector","tich-co-huong","dien-tich","dong-dien","luc","momen-luc","momen-quan-tinh","cong-nang-luong","dao-ham","tich-phan"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Lực từ, từ thông, quỹ đạo hạt, lực và mômen lên vòng dây, động cơ điện và hiệu ứng Hall."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 27.1 — Magnetism (từ trang 878).
-- 27.2 — Magnetic Field (từ trang 880).
-- 27.3 — Magnetic Field Lines and Magnetic Flux (từ trang 884).
-- 27.4 — Motion of Charged Particles in a Magnetic Field (từ trang 888).
-- 27.5 — Applications of Motion of Charged Particles (từ trang 891).
-- 27.6 — Magnetic Force on a Current-Carrying Conductor (từ trang 893).
-- 27.7 — Force and Torque on a Current Loop (từ trang 897).
-- 27.8 — The Direct-Current Motor (từ trang 902).
-- 27.9 — The Hall Effect (từ trang 904).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/10-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27, trang 878–917.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Từ trường và lực từ">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/11-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/12-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/13-bai-tap-01-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/14-bai-tap-31-60.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/15-bai-tong-hop-61-80.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/16-bai-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-27/17-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, chương 27, trang 907–917 và phụ lục đáp số A-17.
+
+</div>

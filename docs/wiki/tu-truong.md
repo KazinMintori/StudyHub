@@ -7,38 +7,55 @@ next: false
 
 # Từ trường
 
-Từ trường là vector $\mathbf B$ tạo phần lực Lorentz $q\mathbf v\times\mathbf B$ lên điện tích chuyển động. Đơn vị là tesla; lực này vuông góc vận tốc.
+Từ trường là trường vector mô tả tương tác từ. Điện tích chuyển động hoặc dòng điện tạo từ trường. Hạt mang điện q, chuyển động với vận tốc v trong trường B, chịu lực từ $\vec F=q\vec v\times\vec B$. Đơn vị SI là tesla.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Hướng lực dùng bàn tay phải cho điện tích dương rồi đảo chiều với điện tích âm. Từ thông qua mặt là $\Phi_B=\int\mathbf B\cdot d\mathbf A$. Thông lượng mặt kín bằng không không bắt buộc từ trường bằng không từng điểm.
+Từ trường được tạo bởi điện tích chuyển động và dòng điện. Ở đây ta xét phản ứng của hạt khi đã biết trường. Quy luật nguồn của trường được xét ở các chương tiếp theo.
 
-Dòng ổn định tạo trường theo Biot–Savart; điện trường biến thiên cũng góp nguồn trong Ampère–Maxwell. Không nhầm từ trường với lực từ, vì lực còn phụ thuộc điện tích và vận tốc.
+$$
+\begin{aligned}
+\vec F_B&=q\vec v\times\vec B,\\
+F_B&=|q|vB\sin\phi.
+\end{aligned}
+$$
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+φ là góc giữa hai vector. Điện tích dương chịu lực theo tích có hướng, điện tích âm chịu lực ngược hướng. Không suy lực chỉ từ hướng B. Nếu có cả điện trường, tổng lực điện từ là:
+
+$$
+\vec F=q\vec E+q\vec v\times\vec B.
+$$
+
+Đơn vị tesla bằng N/(A·m). Một gauss bằng 10⁻⁴ tesla. Đường sức biểu diễn hướng và độ mạnh tương đối của trường, còn từ thông đo thành phần xuyên qua một mặt theo pháp tuyến.
 
 ## Ví dụ
 
-Điện tích bay vuông góc trường đều có thể chuyển động tròn mà tốc độ không đổi.
+Proton có tốc độ 300 km/s tạo góc 30° với từ trường 2,0 T chịu lực có độ lớn 4,8×10⁻¹⁴ N. Với cùng vận tốc và từ trường, electron chịu lực cùng độ lớn nhưng ngược chiều.
 
 ## Khi nào cần dùng?
 
-Tính lực lên hạt, dây và khung dòng điện.
+Tính lực lên hạt tải, dây dẫn và vòng dây, phân tích quỹ đạo và hoạt động của thiết bị từ.
 
 ## Câu hỏi ôn lại
 
-Lực từ riêng có làm tăng động năng của hạt không?
+Có từ trường tại một điểm thì một hạt mang điện ở đó có luôn chịu lực từ không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Tích vô hướng lực từ với vận tốc bằng không.
+Không. Lực bằng không nếu hạt đứng yên hoặc vận tốc song song hay ngược song song với trường. Hướng và độ lớn lực phụ thuộc cả điện tích lẫn vận tốc.
 
 </details>
 
 ## Thuật ngữ liên quan
 
+- [Lực từ lên điện tích](./luc-tu-tren-dien-tich.md)
+- [Đường sức từ](./duong-suc-tu.md)
+- [Từ thông](./tu-thong.md)
+- [Tích có hướng](./tich-co-huong.md)
 - [Dòng điện](./dong-dien.md)
-- [Cảm ứng điện từ](./cam-ung-dien-tu.md)
-- [Vector](./vector.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 27, trang 878–907.

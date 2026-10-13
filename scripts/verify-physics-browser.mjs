@@ -103,6 +103,8 @@ try{
    assert(await page.$eval('.lecture-notes-content',e=>getComputedStyle(e).display==='none'))
    const first=await page.$('.lecture-exercises-content details')
    assert(first)
+   const solutionHeadings=await page.$$eval('.lecture-exercises-content details summary',es=>es.map(e=>e.textContent.trim()))
+   assert(solutionHeadings.every(title=>!/^Lời giải:\s*Lời giải\b/i.test(title)),'Solution heading must not duplicate its label')
    // Notes inspection only opens visible/hidden SSR details, so restore the
    // default collapsed exercise state before testing the click.
    await page.evaluate(()=>document.querySelectorAll('.lecture-exercises-content details').forEach(e=>e.open=false))
@@ -127,7 +129,10 @@ try{
      for(let index=0;index<slideData.length;index++){
       assert.equal(await page.$eval('.course-slide h2',e=>e.textContent),slideData[index].title)
       await inspect(`${width}/chapter${chapter}/slide-${index+1}`)
-      if(index+1<slideData.length)await page.click('.slide-controls button:last-child')
+      if(index+1<slideData.length){
+       await page.click('.slide-controls button:last-child')
+       await page.waitForFunction(title=>document.querySelector('.course-slide h2')?.textContent===title,{},slideData[index+1].title)
+      }
      }
      assert(await page.$eval('.slide-controls button:last-child',e=>e.disabled))
     }
