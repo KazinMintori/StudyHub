@@ -215,7 +215,7 @@ Ngược lại, nếu tỷ lệ có điều kiện giữ nguyên không đổi t
 **Hình 3.4:** Đối chiếu trực quan: Dữ liệu thực tế có mối liên hệ (trái) và dữ liệu độc lập không có liên hệ (phải).
 
 - **Biểu đồ bên phải (Không có liên hệ)**: Khi nhìn từ trái sang phải qua ba hòn đảo Biscoe, Dream và Torgersen, cơ cấu phân bố các loài giống hệt nhau ở mọi cột: Luôn có đúng $50\%$ Gentoo, $33\%$ Chinstrap và $17\%$ Adelie. Biết một cá thể sống ở hòn đảo nào hoàn toàn không cung cấp thêm thông tin để đoán biết loài của nó.
-- **Biểu đồ bên trái (Dữ liệu thực tế)**: Cơ cấu phân bố biến đổi hoàn toàn: Ở Biscoe thì Gentoo chiếm đa số ($73\%$) và Chinstrap hoàn toàn vắng bóng; ở Dream thì Gentoo biến mất và Chinstrap chiếm ưu thế ($55.3\%$); còn ở Torgersen thì $100\%$ là Adelie. Điều này khẳng định giữa loài chim cánh cụt và địa bàn sinh sống có một **mối liên hệ thống kê vô cùng chặt chẽ**.
+- **Biểu đồ bên trái (Dữ liệu thực tế)**: Cơ cấu phân bố biến đổi hoàn toàn: Ở đảo Biscoe thì loài Gentoo chiếm đa số ($73\%$) và Chinstrap hoàn toàn vắng bóng. Trong khi đó, ở đảo Dream thì loài Gentoo biến mất và Chinstrap chiếm ưu thế ($55.3\%$), còn ở đảo Torgersen thì toàn bộ $100\%$ là loài Adelie. Điều này khẳng định giữa loài chim cánh cụt và địa bàn sinh sống có một **mối liên hệ thống kê mật thiết**.
 
 ---
 
@@ -252,7 +252,7 @@ Dù tử số (sản lượng tái tạo) tăng trưởng thực tế, nhưng m�
    - Tỷ lệ biên (Marginal): Số quan sát ở một mức đơn lẻ chia cho toàn bộ tập dữ liệu.
    - Tỷ lệ có điều kiện (Conditional): Số quan sát ở một tổ hợp mức chia cho tổng số quan sát của biến điều kiện.
 3. **Biểu đồ thanh chuẩn hóa**: Luôn biểu diễn các tỷ lệ có điều kiện. Việc lựa chọn biến số nào để điều kiện hóa sẽ quyết định thông điệp và khả năng trả lời các câu hỏi thực tế.
-4. **Mối liên hệ thống kê (Association)**: Tồn tại khi tỷ lệ có điều kiện biến thiên giữa các mức của biến điều kiện; độc lập khi tỷ lệ này không đổi.
+4. **Mối liên hệ thống kê (Association)**: Xuất hiện khi tỷ lệ có điều kiện biến thiên rõ rệt giữa các mức của biến điều kiện, trái lại hai biến được coi là độc lập khi tỷ lệ này giữ nguyên không đổi.
 
 ---
 

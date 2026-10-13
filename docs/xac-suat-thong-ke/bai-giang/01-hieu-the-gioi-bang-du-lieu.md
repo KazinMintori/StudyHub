@@ -147,6 +147,8 @@ Ký hiệu `[1]` ở đầu dòng kết quả biểu thị rằng phần tử xu
 
 - Andrew Bray et al., *Understanding the World with Data – Stat 20*, Department of Statistics, University of California, Berkeley.
 - Joseph K. Blitzstein và Jessica Hwang, *Introduction to Probability*, ấn bản 2, Chapman & Hall/CRC Press.
+- David Freedman, Robert Pisani, Roger Purves, *Statistics*, ấn bản 4, W. W. Norton & Company.
+- University of California, Berkeley, *STAT 20 Worksheet 01: Understanding the World with Data*.
 
 </div>
 
@@ -234,11 +236,6 @@ Phân tích chi tiết:
   - Phép ngẫu nhiên hóa giúp cân bằng năng lực học tập, kiến thức tích lũy và tâm lý thi cử giữa hai nhóm sinh viên nhận đề A và đề B.
   - Nhờ đó, giáo sư loại trừ được biến gây nhiễu (chẳng hạn như sinh viên giỏi vô tình chọn phải một đề cụ thể), đảm bảo rằng sự chênh lệch điểm trung bình thực sự bắt nguồn từ bản chất định dạng câu hỏi tự luận ngắn.
 :::
-
-## Tài liệu tham khảo
-
-- University of California, Berkeley, *STAT 20 Worksheet 01: Understanding the World with Data*.
-- Hugh D. Young và Roger A. Freedman, *University Physics with Modern Physics*, ấn bản 15, Pearson.
 
 </div>
 

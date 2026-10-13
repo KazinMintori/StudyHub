@@ -245,7 +245,7 @@ Sau khi đã áp dụng phương pháp lấy mẫu ngẫu nhiên đơn giản (S
 
 ::: details Lời giải chi tiết
 **1. Tâm đối xứng của phân phối chọn mẫu:**
-Tâm đối xứng của phân phối chọn mẫu trong cả hai phương án là **hoàn toàn giống nhau** và đều bằng đúng tham số thực $\mu$ của tổng thể. Lý do là cả hai phương án đều sử dụng lấy mẫu ngẫu nhiên đơn giản (SRS), mà trong SRS thì trung bình mẫu là một ước lượng không chệch (unbiased estimator) của trung bình tổng thể: $E(\bar{X}) = \mu$ với mọi kích thước mẫu $n \ge 1$.
+Tâm đối xứng của phân phối chọn mẫu trong cả hai phương án là **hoàn toàn giống nhau** và đều bằng đúng tham số thực $\mu$ của tổng thể. Lý do là cả hai phương án đều sử dụng lấy mẫu ngẫu nhiên đơn giản (SRS), mà trong SRS thì trung bình mẫu là một ước lượng không chệch (unbiased estimator) của trung bình tổng thể, thỏa mãn $E(\bar{X}) = \mu$ với mọi kích thước mẫu $n \ge 1$.
 
 **2. So sánh độ biến thiên:**
 Theo quy luật căn bậc hai cho trung bình mẫu, sai số chuẩn tỉ lệ nghịch với căn bậc hai của cỡ mẫu:

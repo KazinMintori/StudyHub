@@ -127,7 +127,7 @@ Mọi hiện tượng ngẫu nhiên quen thuộc đều có thể quy về mô h
 </p>
 <p align="center"><em>Hình 14.5: Đổ xúc xắc được mô hình hóa bằng việc rút vé từ hộp $\{1, 2, 3, 4, 5, 6\}$.</em></p>
 
-- **Quay Roulette Las Vegas**: Bàn quay kiểu Mỹ có tổng cộng 38 ô: 18 ô màu Đỏ, 18 ô màu Đen và 2 ô màu Xanh lá (số 0 và 00). Giả sử ta đặt cược 1 USD vào màu Đỏ: Nếu bóng lăn vào ô Đỏ, ta nhận lại 1 USD cược và thêm 1 USD tiền thắng (lãi ròng $+1$ USD); nếu bóng lăn vào ô Đen hoặc Xanh, ta mất 1 USD tiền cược (lãi ròng $-1$ USD).
+- **Quay Roulette Las Vegas**: Bàn quay kiểu Mỹ có tổng cộng 38 ô: 18 ô màu Đỏ, 18 ô màu Đen và 2 ô màu Xanh lá (số 0 và 00). Giả sử ta đặt cược 1 USD vào màu Đỏ: Nếu bóng lăn vào ô Đỏ, ta nhận lại 1 USD cược và thêm 1 USD tiền thắng (lãi ròng $+1$ USD), ngược lại nếu bóng lăn vào ô Đen hoặc Xanh, ta mất 1 USD tiền cược (lãi ròng $-1$ USD).
 
 <p align="center">
   <img src="./img/stat20-14/roulette-us.jpg" alt="Bàn quay Roulette kiểu Mỹ" width="180" style="display: inline-block; margin-right: 15px;" />
@@ -241,7 +241,7 @@ $$
 E(\bar{X}) = E\left(\frac{S_n}{n}\right) = \frac{1}{n} E(S_n) = \frac{1}{n} [n \cdot E(X_1)] = E(X_1)
 $$
 
-Kỳ vọng của trung bình mẫu không phụ thuộc vào cỡ mẫu $n$; nó luôn luôn bằng đúng kỳ vọng của một quan sát đơn lẻ.
+Kỳ vọng của trung bình mẫu không phụ thuộc vào cỡ mẫu $n$, mà luôn luôn bằng đúng kỳ vọng của một quan sát đơn lẻ.
 
 Phương sai của trung bình mẫu:
 
@@ -479,7 +479,7 @@ Trong môi trường phân tích dữ liệu, ta không cần tra bảng số th
 3. **Quy luật căn bậc hai**:
    - Đối với tổng: $E(S_n) = n\mu$, $\text{SE}(S_n) = \sqrt{n}\sigma$.
    - Đối với trung bình: $E(\bar{X}) = \mu$, $\text{SE}(\bar{X}) = \frac{\sigma}{\sqrt{n}}$.
-4. **Biến ngẫu nhiên liên tục**: Được định nghĩa bởi hàm mật độ xác suất $f(x) \ge 0$ với $\int_{-\infty}^\infty f(x) dx = 1$. Xác suất tại một điểm luôn bằng 0; xác suất trên khoảng bằng tích phân diện tích.
+4. **Biến ngẫu nhiên liên tục**: Được định nghĩa bởi hàm mật độ xác suất $f(x) \ge 0$ với $\int_{-\infty}^\infty f(x) dx = 1$. Xác suất tại một điểm luôn bằng 0, trong khi xác suất trên một khoảng bằng tích phân diện tích.
 5. **Quy tắc 68-95-99.7**: Trong phân phối chuẩn, khoảng $\pm 1\sigma, \pm 2\sigma, \pm 3\sigma$ lần lượt chứa xấp xỉ $68\%, 95\%, 99.7\%$ tổng khối lượng xác suất.
 6. **Định lý Giới hạn Trung tâm (CLT)**: Tổng và trung bình của các biến ngẫu nhiên IID tiệm cận phân phối chuẩn khi cỡ mẫu $n$ đủ lớn, bất kể hình dạng phân phối ban đầu của từng biến đơn lẻ.
 

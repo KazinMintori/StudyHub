@@ -58,7 +58,7 @@ $$\text{TSS} = \text{SSR} + \text{RSS}$$
 
 ### Định nghĩa Hệ số xác định $R^2$
 
-- **Khái niệm**: $R^2$ là tỉ lệ phần trăm tổng biến thiên của biến phản hồi $y$ được giải thích bởi mô hình hồi quy:
+- **Khái niệm**: Hệ số $R^2$ là tỉ lệ phần trăm tổng biến thiên của biến phản hồi $y$ được giải thích bởi mô hình hồi quy:
   $$R^2 = \frac{\text{SSR}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}$$
 
 ### Các tính chất toán học của $R^2$

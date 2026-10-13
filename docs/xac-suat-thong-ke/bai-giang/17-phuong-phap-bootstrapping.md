@@ -68,7 +68,7 @@ Quan sát kỹ Bước 2 trong Hình 17.2:
 - Điểm đặc trưng cốt tử của việc rút thăm có hoàn lại: Một cá thể có thể được chọn nhiều lần (`Gus` xuất hiện 2 lần), trong khi một số cá thể khác có thể hoàn toàn không được chọn (`Luz` vắng mặt).
 - Nhờ có cơ chế hoàn lại, mẫu Bootstrap mới có cơ hội tạo ra tổ hợp dữ liệu khác biệt so với mẫu gốc, từ đó tạo ra giá trị thống kê Bootstrap mới $\hat{p}^*_1 = 1/5 = 0.2$.
 
-*(Lưu ý sư phạm: Mẫu $n = 5$ ở đây chỉ dùng để minh họa cơ chế; trong ứng dụng thực tế, cỡ mẫu phải đủ lớn thì mẫu mới mang tính đại diện cho tổng thể).*
+*(Lưu ý sư phạm: Mẫu $n = 5$ ở đây chỉ dùng để minh họa cơ chế, trong khi ở ứng dụng thực tế, cỡ mẫu phải đủ lớn thì mẫu mới mang tính đại diện cho tổng thể).*
 
 ---
 
@@ -92,7 +92,7 @@ Cụ thể, đối với **khoảng tin cậy 95%** ($\alpha = 0.05$):
 
 Ưu điểm tuyệt đối của phương pháp phân vị:
 - Hoàn toàn không cần công thức giải tích tính sai số chuẩn.
-- Không cần giả định phân phối có dạng đối xứng hay dạng chuông chuẩn tắc; nếu phân phối Bootstrap bị lệch, khoảng tin cậy sẽ tự động thích ứng và bị lệch theo một cách tự nhiên.
+- Không cần giả định phân phối có dạng đối xứng hay dạng chuông chuẩn tắc, do đó nếu phân phối Bootstrap bị lệch, khoảng tin cậy sẽ tự động thích ứng và bị lệch theo một cách tự nhiên.
 
 ---
 
@@ -187,7 +187,7 @@ Về số lượng lần tái lấy mẫu: Trong thực hành nghiên cứu chuy
 
 ## Tóm tắt kiến thức cốt lõi
 
-1. **Ý tưởng cốt lõi**: Phân phối thực nghiệm của mẫu đại diện đóng vai trò xấp xỉ phân phối tổng thể; việc tái lấy mẫu có hoàn lại từ mẫu đóng vai trò mô phỏng việc lấy mẫu từ tổng thể.
+1. **Ý tưởng cốt lõi**: Phân phối thực nghiệm của mẫu đại diện đóng vai trò xấp xỉ phân phối tổng thể, trong khi việc tái lấy mẫu có hoàn lại từ mẫu đóng vai trò mô phỏng việc lấy mẫu từ tổng thể.
 2. **Quy tắc tái lấy mẫu**: Mẫu Bootstrap bắt buộc phải được rút **có hoàn lại** và **có cùng kích thước $n$** với mẫu dữ liệu ban đầu.
 3. **Phương pháp phân vị**: Khoảng tin cậy $95\%$ Bootstrap được thiết lập trực tiếp bằng hai phân vị $2.5\%$ và $97.5\%$ của phân phối các thống kê Bootstrap.
 4. **Ứng dụng vượt trội**: Áp dụng hiệu quả cho các đại lượng thống kê phức tạp (hệ số hồi quy, trung vị, tỉ số) mà không đòi hỏi giả thiết phân phối chuẩn.

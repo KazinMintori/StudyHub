@@ -12,7 +12,7 @@ description: "Mở rộng mô hình tuyến tính lên nhiều chiều: Hồi qu
 
 <div class="lecture-notes-content">
 
-Trong bài học trước, ta đã làm quen với mô hình tuyến tính đơn: Một phương trình đường thẳng mô tả mối liên hệ giữa một biến giải thích duy nhất và một biến phản hồi. Tuy nhiên, các hiện tượng kinh tế, xã hội và khoa học trong thực tế hiếm khi vận hành đơn giản như vậy. Một hiện tượng thường chịu sự tác động đồng thời của nhiều yếu tố đa dạng: Giá nhà không chỉ phụ thuộc vào diện tích mà còn vào vị trí, số phòng ngủ và năm xây dựng; mức lương của một kỹ sư không chỉ dựa vào số năm kinh nghiệm mà còn phụ thuộc vào trình độ học vấn, chứng chỉ nghề nghiệp và quy mô doanh nghiệp.
+Trong bài học trước, ta đã làm quen với mô hình tuyến tính đơn: Một phương trình đường thẳng mô tả mối liên hệ giữa một biến giải thích duy nhất và một biến phản hồi. Tuy nhiên, các hiện tượng kinh tế, xã hội và khoa học trong thực tế hiếm khi vận hành đơn giản như vậy. Một hiện tượng thường chịu sự tác động đồng thời của nhiều yếu tố đa dạng: Giá nhà không chỉ phụ thuộc vào diện tích mà còn vào vị trí, số phòng ngủ và năm xây dựng. Tương tự, mức lương của một kỹ sư không chỉ dựa vào số năm kinh nghiệm mà còn phụ thuộc vào trình độ học vấn, chứng chỉ nghề nghiệp và quy mô doanh nghiệp.
 
 Khi dữ liệu mở rộng sang nhiều chiều, hệ thống thị giác của con người gặp phải rào cản sinh học: Ta không thể vẽ đồ thị trực quan vượt quá 3 chiều không gian. Để phân tích và định lượng các mối quan hệ đa chiều phức tạp đó, thống kê học cung cấp một công cụ mạnh mẽ: **Mô hình Hồi quy tuyến tính bội (Multiple Linear Regression)**.
 

@@ -123,7 +123,7 @@ Chúng ta chỉ có duy nhất một bức tranh ở giữa: **Một mẫu dữ 
 <p align="center">
   <img src="./img/stat20-16/triptych-sample-only.jpg" alt="Thực tế nghiên cứu: Ta chỉ quan sát được duy nhất mẫu dữ liệu" width="480" />
 </p>
-<p align="center"><em>Hình 16.6: Thực tế nghiên cứu khoa học: Tổng thể và Phân phối chọn mẫu đều là những thực thể ẩn giấu; ta chỉ nắm giữ duy nhất một mẫu dữ liệu thực nghiệm.</em></p>
+<p align="center"><em>Hình 16.6: Thực tế nghiên cứu khoa học: Tổng thể và Phân phối chọn mẫu đều là những thực thể ẩn giấu, trong khi ta chỉ nắm giữ duy nhất một mẫu dữ liệu thực nghiệm.</em></p>
 
 Làm thế nào để suy diễn về tham số tổng thể $\mu$ và định lượng sai số chuẩn $\text{SE}$ khi chỉ có duy nhất một mẫu?
 
@@ -274,8 +274,8 @@ $$
 
 ::: info Bài tập 1: Ước lượng Thời gian Bay bằng Khoảng tin cậy 95%
 Một nhà phân tích dữ liệu hàng không rút ngẫu nhiên một mẫu gồm $n = 30$ chuyến bay từ cơ sở dữ liệu các chuyến bay khởi hành từ New York và thu được kết quả tóm tắt sau:
-- Trung bình thời gian bay trong mẫu: $\bar{x} = 118.0$ phút.
-- Độ lệch chuẩn trong mẫu: $s = 81.5$ phút.
+- Trung bình thời gian bay trong mẫu: Đạt $\bar{x} = 118.0$ phút.
+- Độ lệch chuẩn trong mẫu: Đạt $s = 81.5$ phút.
 
 1. Tính sai số chuẩn ước lượng $\widehat{\text{SE}}(\bar{x})$ của trung bình thời gian bay.
 2. Xây dựng khoảng tin cậy 95% cho thời gian bay trung bình của toàn bộ các chuyến bay.

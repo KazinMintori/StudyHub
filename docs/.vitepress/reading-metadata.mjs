@@ -253,23 +253,23 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xac-suat-thong-ke/01-hieu-the-gioi-bang-du-lieu": {
-    "words": 3368,
+    "words": 3362,
     "minutes": 15
   },
   "xac-suat-thong-ke/02-phan-loai-du-lieu": {
-    "words": 3853,
+    "words": 3855,
     "minutes": 20
   },
   "xac-suat-thong-ke/03-tom-tat-du-lieu-dinh-tinh": {
-    "words": 4329,
+    "words": 4349,
     "minutes": 20
   },
   "xac-suat-thong-ke/04-tom-tat-du-lieu-dinh-luong": {
-    "words": 3259,
+    "words": 3266,
     "minutes": 15
   },
   "xac-suat-thong-ke/05-ngu-phap-do-hoa": {
-    "words": 3805,
+    "words": 3760,
     "minutes": 20
   },
   "xac-suat-thong-ke/06-phan-tich-co-dieu-kien": {
@@ -281,19 +281,19 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xac-suat-thong-ke/08-hoi-quy-tuyen-tinh-boi": {
-    "words": 3701,
+    "words": 3703,
     "minutes": 20
   },
   "xac-suat-thong-ke/09-co-so-xac-suat": {
-    "words": 1162,
+    "words": 1103,
     "minutes": 5
   },
   "xac-suat-thong-ke/10-tinh-toan-xac-suat": {
-    "words": 6258,
+    "words": 6269,
     "minutes": 30
   },
   "xac-suat-thong-ke/11-phan-phoi-xac-suat": {
-    "words": 4604,
+    "words": 4608,
     "minutes": 25
   },
   "xac-suat-thong-ke/12-bien-ngau-nhien": {
@@ -305,27 +305,27 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xac-suat-thong-ke/14-phan-phoi-lien-tuc-va-xap-xi-chuan": {
-    "words": 4416,
+    "words": 4418,
     "minutes": 20
   },
   "xac-suat-thong-ke/15-tu-mau-den-tong-the": {
-    "words": 4140,
+    "words": 4142,
     "minutes": 20
   },
   "xac-suat-thong-ke/16-khoang-tin-cay": {
-    "words": 3277,
+    "words": 3281,
     "minutes": 15
   },
   "xac-suat-thong-ke/17-phuong-phap-bootstrapping": {
-    "words": 4151,
+    "words": 4157,
     "minutes": 20
   },
   "xac-suat-thong-ke/18-kiem-dinh-gia-thuyet-1": {
-    "words": 3881,
+    "words": 3883,
     "minutes": 20
   },
   "xac-suat-thong-ke/19-kiem-dinh-gia-thuyet-2": {
-    "words": 3712,
+    "words": 3724,
     "minutes": 20
   },
   "xac-suat-thong-ke/20-sai-lech-do-thiet-ke": {
@@ -333,11 +333,11 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xac-suat-thong-ke/21-dinh-nghia-nhan-qua": {
-    "words": 5323,
+    "words": 5325,
     "minutes": 25
   },
   "xac-suat-thong-ke/22-thi-nghiem-ngau-nhien": {
-    "words": 2696,
+    "words": 2702,
     "minutes": 15
   },
   "xac-suat-thong-ke/23-tac-dong-nhan-qua-nghien-cuu-quan-sat": {
@@ -349,11 +349,11 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xac-suat-thong-ke/25-danh-gia-va-cai-thien-du-doan": {
-    "words": 3467,
+    "words": 3469,
     "minutes": 15
   },
   "xac-suat-thong-ke/26-hien-tuong-qua-khop": {
-    "words": 4983,
+    "words": 4986,
     "minutes": 25
   },
   "xac-suat-thong-ke/27-hoi-quy-logistic": {

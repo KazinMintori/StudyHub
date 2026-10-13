@@ -17,8 +17,8 @@ description: "Biểu đồ histogram, density plot, violin plot, box plot; các 
 “$29{,}551$ từ in trên các trang giấy.”
 
 Cả bốn câu trên đều là những cách tóm tắt vở kịch bất hủ *Hamlet* của Shakespeare. Không câu nào sai, nhưng mỗi câu lại tập trung vào một khía cạnh hoàn toàn khác biệt. Việc tóm tắt một đối tượng phức tạp như *Hamlet* luôn đòi hỏi sự chọn lọc khắt khe: Ta giảm thiểu $29{,}551$ từ xuống còn một câu đơn lẻ. Tóm tắt không chỉ là lược bỏ thông tin mà còn là việc đưa ra quyết định sáng suốt về những gì cần giữ lại:
-- **Những gì nên đưa vào bản tóm tắt**: Các đặc tính liên quan trực tiếp đến câu hỏi nghiên cứu hoặc phát biểu ta đang bảo vệ; các đặc trưng chạm đúng vào sự quan tâm của người tiếp nhận.
-- **Những gì nên lược bỏ**: Các chi tiết gây xao nhãng, vụn vặt hoặc có nguy cơ làm sai lệch bản chất; các thông tin trùng lặp.
+- **Những gì nên đưa vào bản tóm tắt**: Các đặc tính liên quan trực tiếp đến câu hỏi nghiên cứu hoặc phát biểu ta đang bảo vệ, đồng thời phản ánh đúng các đặc trưng chạm vào sự quan tâm của người tiếp nhận.
+- **Những gì nên lược bỏ**: Các chi tiết gây xao nhãng, vụn vặt hoặc có nguy cơ làm sai lệch bản chất, cũng như các thông tin trùng lặp.
 
 Quy tắc chọn lọc này là kim chỉ nam xuyên suốt khi ta xây dựng các bản tóm tắt dữ liệu định lượng bằng đồ thị, lời văn và các đại lượng thống kê.
 
@@ -92,7 +92,7 @@ Hãy hình dung ta đặt một sợi mì spaghetti đã luộc chín uốn lư�
 
 Trên biểu đồ mật độ:
 - Trục tung biểu thị đại lượng gọi là **mật độ (density)**. Diện tích tích phân dưới toàn bộ đường cong luôn được chuẩn hóa bằng đúng $1.0$.
-- Giá trị tuyệt đối trên trục tung ít khi mang ý nghĩa trực tiếp; thông tin giá trị nhất là **tỷ lệ diện tích tương đối**: Vùng đường cong có mật độ cao gấp đôi vùng khác chứa số lượng quan sát nhiều gấp khoảng hai lần.
+- Giá trị tuyệt đối trên trục tung ít khi mang ý nghĩa trực tiếp, mà thông tin giá trị nhất là **tỷ lệ diện tích tương đối**: Vùng đường cong có mật độ cao gấp đôi vùng khác chứa số lượng quan sát nhiều gấp khoảng hai lần.
 - Tham số điều chỉnh độ mịn của đường cong được gọi là **độ rộng băng thông (Bandwidth)**:
 
 <div style="text-align: center; margin: 16px 0;">
@@ -157,7 +157,7 @@ Chẳng hạn, phân phối chiều dài mỏ của $16$ con chim Adelie là đ�
 
 ### 2.2. Độ lệch (Skewness)
 Mô tả hành vi kéo dài của các đuôi phân phối về hai phía:
-- **Lệch phải (Right-skewed / Positive skew)**: Đuôi bên phải kéo dài ra xa; đa số dữ liệu tập trung ở vùng giá trị thấp, trong khi có một số ít giá trị cực lớn kéo dài về bên phải.
+- **Lệch phải (Right-skewed / Positive skew)**: Đuôi bên phải kéo dài ra xa. Phần lớn dữ liệu tập trung ở vùng giá trị thấp, trong khi có một số ít giá trị cực lớn kéo dài về bên phải.
 - **Đối xứng (Symmetric)**: Hai đuôi cân bằng đối xứng qua tâm phân phối.
 - **Lệch trái (Left-skewed / Negative skew)**: Đuôi bên trái kéo dài ra xa về vùng giá trị thấp.
 

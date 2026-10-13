@@ -207,7 +207,7 @@ $$
 
 ## 5. Các họ phân phối xác suất rời rạc chuẩn mực
 
-Một **họ phân phối xác suất** thường được xác định bởi một hoặc nhiều **tham số** (Parameters). Tham số là các hằng số đặc trưng; khi biết giá trị cụ thể của tham số, ta hoàn toàn xác định được phân phối xác suất của biến ngẫu nhiên đó.
+Một **họ phân phối xác suất** thường được xác định bởi một hoặc nhiều **tham số** (Parameters). Tham số là các hằng số đặc trưng, và khi biết giá trị cụ thể của tham số, ta hoàn toàn xác định được phân phối xác suất của biến ngẫu nhiên đó.
 
 ### 1. Phân phối Đều rời rạc (Discrete Uniform Distribution)
 
@@ -344,8 +344,8 @@ Phép xấp xỉ này giúp đơn giản hóa việc tính toán các giai thừ
 ## 7. Tổng kết bài học
 
 1. **Phân phối xác suất**: Mô tả cách thức phân bổ $100\%$ xác suất cho toàn bộ các giá trị khả dĩ rời rạc, thỏa mãn $P(X = x) \ge 0$ và $\sum P(X = x) = 1$.
-2. **Biểu đồ xác suất lý thuyết vs Thực nghiệm**: Biểu đồ lý thuyết phản ánh mô hình toán học tiên nghiệm; biểu đồ thực nghiệm phản ánh dữ liệu mẫu. Theo Định luật số lớn, biểu đồ thực nghiệm sẽ tiệm cận về biểu đồ lý thuyết khi số lần lặp lại thí nghiệm đủ lớn.
-3. **Quy tắc tổ hợp**: Chọn không hoàn lại có thứ tự là Chỉnh hợp $P(n, k) = \frac{n!}{(n-k)!}$; chọn không hoàn lại không xét thứ tự là Tổ hợp $\binom{n}{k} = \frac{n!}{k!(n-k)!}$.
+2. **Biểu đồ xác suất lý thuyết vs Thực nghiệm**: Biểu đồ lý thuyết phản ánh mô hình toán học tiên nghiệm, trong khi biểu đồ thực nghiệm phản ánh dữ liệu mẫu. Theo Định luật số lớn, biểu đồ thực nghiệm sẽ tiệm cận về biểu đồ lý thuyết khi số lần lặp lại thí nghiệm đủ lớn.
+3. **Quy tắc tổ hợp**: Chọn không hoàn lại có thứ tự là Chỉnh hợp $P(n, k) = \frac{n!}{(n-k)!}$, còn chọn không hoàn lại không xét thứ tự là Tổ hợp $\binom{n}{k} = \frac{n!}{k!(n-k)!}$.
 4. **Phân phối Nhị thức**: Mô tả số thành công trong $n$ phép thử độc lập có hoàn lại, $P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$.
 5. **Phân phối Siêu bội**: Mô tả số thành công khi rút $n$ phần tử không hoàn lại từ tổng thể hữu hạn $N$, $P(X = k) = \frac{\binom{G}{k}\binom{N-G}{n-k}}{\binom{N}{n}}$.
 

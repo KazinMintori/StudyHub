@@ -64,7 +64,7 @@ Sự trùng khớp này tạo nên một mối liên hệ chặt chẽ giữa s�
 
 Hãy đặt mình vào vị trí của luật sư bào chữa và giả định rằng: Gilbert hoàn toàn vô tội, và các ca tử vong xảy ra trong bệnh viện hoàn toàn không liên quan gì đến việc Gilbert có mặt trong ca trực hay không.
 
-Nếu giả định này là đúng, tỉ lệ các ca trực có bệnh nhân tử vong khi có mặt Gilbert và khi không có mặt Gilbert về nguyên tắc phải tương đương nhau. Dẫu vậy, ta không thể kỳ vọng hai tỉ lệ này bằng nhau một cách tuyệt đối; do yếu tố may rủi ngẫu nhiên, tỉ lệ tử vong trong các ca của Gilbert hoàn toàn có thể nhỉnh hơn đôi chút.
+Nếu giả định này là đúng, tỉ lệ các ca trực có bệnh nhân tử vong khi có mặt Gilbert và khi không có mặt Gilbert về nguyên tắc phải tương đương nhau. Dẫu vậy, ta không thể kỳ vọng hai tỉ lệ này bằng nhau một cách tuyệt đối. Do yếu tố may rủi ngẫu nhiên, tỉ lệ tử vong trong các ca của Gilbert hoàn toàn có thể nhỉnh hơn đôi chút.
 
 Dữ liệu ghi nhận từ $1{,}641$ ca trực được tổng hợp như sau:
 
@@ -186,7 +186,7 @@ Hãy nhớ lại nguyên tắc xét xử tại tòa án:
 - Phiên tòa bắt đầu bằng nguyên tắc suy đoán vô tội ($H_0$: Bị cáo vô tội).
 - Bên công tố đưa ra các chứng cứ phạm tội.
 - Nếu chứng cứ không đủ thuyết phục ($p$-value lớn), bồi thẩm đoàn sẽ tuyên án **"Không đủ bằng chứng kết tội" (Not guilty)**, tuyệt đối không ai tuyên án **"Bị cáo vô tội" (Innocent)**!
-- Việc không tìm thấy bằng chứng phạm tội hoàn toàn không đồng nghĩa với việc bị cáo thực sự trong sạch; điều đó có thể đơn giản là vì công tố viên chưa tìm thấy đủ chứng cứ.
+- Việc không tìm thấy bằng chứng phạm tội hoàn toàn không đồng nghĩa với việc bị cáo thực sự trong sạch, mà điều đó có thể đơn giản là vì công tố viên chưa tìm thấy đủ chứng cứ.
 
 ### Ngộ nhận 3: "$p$-value là xác suất của toàn bộ tập dữ liệu" (SAI!)
 
@@ -219,8 +219,8 @@ Ngưỡng nghi ngờ tâm lý của con người xuất hiện chính xác khi x
    - Xác định Thống kê kiểm định.
    - Xây dựng Phân phối dưới giả thuyết không (Null Distribution) bằng mô phỏng hoán vị hoặc giải tích.
    - Tính giá trị $p$-value và đưa ra kết luận.
-3. **Ý nghĩa $p$-value**: $P(\text{Cực đoan hơn} \mid H_0 \text{ đúng})$. Nếu $p\text{-value} \le \alpha$ (thường là $0.05$), bác bỏ $H_0$; nếu $p\text{-value} > \alpha$, chưa đủ bằng chứng bác bỏ $H_0$.
-4. **Hậu phác vụ án Gilbert**: Mặc dù kiểm định thống kê loại trừ hoàn toàn yếu tố may rủi, thống kê không chứng minh trực tiếp Gilbert là kẻ giết người (có thể có biến ẩn khác như tình trạng bệnh nhân ca đêm nặng hơn). Do đó, chứng cứ thống kê không được trình bày trực tiếp cho bồi thẩm đoàn để tránh gây thiên lệch tâm lý; Gilbert sau đó bị kết án dựa trên các chứng cứ độc chất học và dấu vết thực thể khác.
+3. **Ý nghĩa $p$-value**: $P(\text{Cực đoan hơn} \mid H_0 \text{ đúng})$. Nếu $p\text{-value} \le \alpha$ (thường là $0.05$), bác bỏ $H_0$, còn nếu $p\text{-value} > \alpha$, chưa đủ bằng chứng bác bỏ $H_0$.
+4. **Hậu phác vụ án Gilbert**: Mặc dù kiểm định thống kê loại trừ hoàn toàn yếu tố may rủi, thống kê không chứng minh trực tiếp Gilbert là kẻ giết người (có thể có biến ẩn khác như tình trạng bệnh nhân ca đêm nặng hơn). Do đó, chứng cứ thống kê không được trình bày trực tiếp cho bồi thẩm đoàn để tránh gây thiên lệch tâm lý. Sau đó, Gilbert bị kết án dựa trên các chứng cứ độc chất học và dấu vết thực thể khác.
 
 </div>
 

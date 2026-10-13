@@ -18,7 +18,7 @@ Hãy quan sát dữ liệu thực nghiệm về mối liên hệ giữa số gi�
 
 ![Hình 26.1: So sánh hai mô hình dự báo điểm thi theo số giờ học](./img/stat20-26/unnamed-chunk-1-1.png)
 
-*Hình 26.1: Dữ liệu điểm thi toán theo số giờ ôn tập. Đường màu xanh là mô hình hồi quy tuyến tính đơn giản; đường màu đỏ là mô hình đa thức bậc cao lượn sóng uốn éo qua từng điểm dữ liệu.*
+*Hình 26.1: Dữ liệu điểm thi toán theo số giờ ôn tập. Đường màu xanh là mô hình hồi quy tuyến tính đơn giản, trong khi đường màu đỏ là mô hình đa thức bậc cao lượn sóng đi qua từng điểm dữ liệu.*
 
 Quan sát Hình 26.1 và đặt ra các câu hỏi bản chất sau:
 
@@ -129,7 +129,7 @@ Sơ đồ phân chia ngẫu nhiên $80\% - 20\%$ trên một bảng dữ liệu 
 | 9 | 95 | 8.2 | 20 | 1.00 | **Tập huấn luyện (Train)** |
 | 10 | 70 | 3.5 | 10 | 0.85 | **Tập huấn luyện (Train)** |
 
-*Bảng 26.1: Minh họa phân chia tập dữ liệu theo tỷ lệ 8:2. Tám quan sát được phân bổ vào tập Train để huấn luyện hệ số; hai quan sát được giữ lại làm tập Test.*
+*Bảng 26.1: Minh họa phân chia tập dữ liệu theo tỷ lệ 8:2. Tám quan sát được phân bổ vào tập Train để huấn luyện hệ số, còn hai quan sát được giữ lại làm tập Test.*
 
 ### Các nguyên tắc phân chia dữ liệu thực nghiệm:
 - **Tỷ lệ phân chia thông dụng**: Thông thường là $80\% - 20\%$ hoặc $70\% - 30\%$. Với các tập dữ liệu lớn hàng trăm nghìn dòng, tỷ lệ tập test có thể chỉ cần $10\%$ hoặc thậm chí $5\%$.
@@ -155,7 +155,7 @@ $$
 $$
 
 ### Căn bậc hai sai số toàn phương trung bình (RMSE)
-Vì MSE tính theo bình phương sai số, đơn vị đo lường của nó bị lũy thừa hai (ví dụ: $\text{điểm}^2$ hoặc $\text{USD}^2$), gây khó khăn cho việc giải thích trực giác.
+Vì MSE tính theo bình phương sai số, đơn vị đo lường của nó bị lũy thừa hai (chẳng hạn như $\text{điểm}^2$ hoặc $\text{USD}^2$), gây khó khăn cho việc giải thích trực giác.
 
 Do đó, người ta sử dụng **RMSE (Root Mean Squared Error)** bằng cách lấy căn bậc hai của MSE:
 

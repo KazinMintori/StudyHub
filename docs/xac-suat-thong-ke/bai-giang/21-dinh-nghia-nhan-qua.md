@@ -253,7 +253,7 @@ Xét tình huống đội hành quyết được mô tả trong bài giảng:
   $$J \longrightarrow C \rightrightarrows \begin{matrix} S_1 \\ S_2 \end{matrix} \rightrightarrows D$$
 - Giải thích:
   - Nút $J$ (Quan tòa) truyền tín hiệu trực tiếp đến nút $C$ (Đại úy): $C = J$.
-  - Nút $C$ truyền tín hiệu song song đến hai nút $S_1$ và $S_2$: $S_1 = C$ và $S_2 = C$.
+  - Nút $C$ truyền tín hiệu song song đến hai nút $S_1$ và $S_2$: Quy tắc $S_1 = C$ và $S_2 = C$.
   - Hai nút $S_1$ và $S_2$ cùng hội tụ về nút kết cục $D$ (Tử vong): $D = S_1 \lor S_2$ (hàm logic OR).
 
 **2. Phân tích phản thực tế của người lính số 1 trong tình huống ban đầu:**
@@ -284,7 +284,7 @@ Một công ty công nghệ thử nghiệm hai giao diện thanh toán: Giao di�
 
 **Yêu cầu:**
 1. Hãy tính hiệu ứng can thiệp cá thể $\tau_i = Y_i(1) - Y_i(0)$ cho từng khách hàng và tính Hiệu ứng can thiệp trung bình thực sự ($\text{ATE}$) của việc chuyển từ giao diện A sang giao diện B. Giao diện B giúp tiết kiệm thời gian trung bình bao nhiêu giây?
-2. Giả sử trong thực tế, khách hàng tự do lựa chọn giao diện: Khách hàng 1 và 2 (vốn am hiểu công nghệ) chọn giao diện B; trong khi Khách hàng 3 và 4 (người lớn tuổi, ít dùng ứng dụng) chọn giao diện A. Hãy lập bảng dữ liệu quan sát thực tế và tính toán ước lượng hiệu ứng can thiệp ngây thơ $\hat{\text{ATE}}_{\text{ngây thơ}} = \bar{Y}_{\text{nhóm B}} - \bar{Y}_{\text{nhóm A}}$.
+2. Giả sử trong thực tế, khách hàng tự do lựa chọn giao diện: Khách hàng 1 và 2 (vốn am hiểu công nghệ) chọn giao diện B, trong khi Khách hàng 3 và 4 (người lớn tuổi, ít dùng ứng dụng) chọn giao diện A. Hãy lập bảng dữ liệu quan sát thực tế và tính toán ước lượng hiệu ứng can thiệp ngây thơ $\hat{\text{ATE}}_{\text{ngây thơ}} = \bar{Y}_{\text{nhóm B}} - \bar{Y}_{\text{nhóm A}}$.
 3. So sánh giá trị ước lượng ngây thơ với ATE thực sự và giải thích nguyên nhân gây ra sự sai lệch.
 
 ::: details Lời giải chi tiết

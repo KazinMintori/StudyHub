@@ -90,7 +90,7 @@ Trong bảng dữ liệu này, chuyên ngành học, điểm GPA tích lũy và 
 - **Định nghĩa**: Một hiệp biến được gọi là **cân bằng** nếu phân phối thực nghiệm của nó ở nhóm can thiệp tương đồng với phân phối thực nghiệm của nó ở nhóm đối chứng.
 - Nếu phân phối giữa hai nhóm có sự khác biệt rõ rệt, ta nói hiệp biến đó bị **mất cân bằng** (Imbalanced).
 
-Tại sao sự cân bằng hiệp biến lại đóng vai trò sinh tử? Sinh viên có điểm GPA tích lũy cao thường là những người có năng lực tự học tốt; họ nhiều khả năng sẽ hiểu bài sâu sắc bất kể tài liệu được trình bày dưới dạng PDF hay trang web. Nếu bằng một sự ngẫu nhiên nào đó, nhóm PDF tập trung nhiều sinh viên có GPA cao hơn nhóm trang web, thì kết quả hiểu bài vượt trội của nhóm PDF có thể bắt nguồn từ chính năng lực GPA chứ không phải do định dạng tệp.
+Tại sao sự cân bằng hiệp biến lại đóng vai trò sinh tử? Sinh viên có điểm GPA tích lũy cao thường là những người có năng lực tự học tốt, do đó họ nhiều khả năng sẽ hiểu bài sâu sắc bất kể tài liệu được trình bày dưới dạng PDF hay trang web. Nếu bằng một sự ngẫu nhiên nào đó, nhóm PDF tập trung nhiều sinh viên có GPA cao hơn nhóm trang web, thì kết quả hiểu bài vượt trội của nhóm PDF có thể bắt nguồn từ chính năng lực GPA chứ không phải do định dạng tệp.
 
 Cơ chế phân nhóm ngẫu nhiên đảm bảo rằng, trên trung bình, **mọi hiệp biến (dù đo lường được hay tiềm ẩn chưa đo lường được) đều sẽ tự động cân bằng giữa hai nhóm**.
 
@@ -193,8 +193,8 @@ Kết quả mô phỏng trên Hình 22.2 cho thấy giá trị $p\text{-value} =
 ### Bài tập 1: Tính toán SMD và đánh giá cân bằng trong thử nghiệm A/B Testing
 
 Một công ty thương mại điện tử triển khai thử nghiệm A/B để đánh giá tác động của thuật toán gợi ý sản phẩm mới ($T=1$) so với thuật toán cũ ($T=0$) lên doanh thu mua hàng của người dùng. Trước khi kích hoạt thuật toán, nhóm kỹ sư dữ liệu đo lường hiệp biến $x$ là **Số đơn hàng đã mua trong 6 tháng qua** của người dùng ở hai nhóm:
-- Nhóm can thiệp (Thuật toán mới): $n_T = 100$ người dùng, có số đơn hàng trung bình $\bar{x}_T = 8.5$ đơn, độ lệch chuẩn mẫu $s_T = 3.2$ đơn.
-- Nhóm đối chứng (Thuật toán cũ): $n_C = 100$ người dùng, có số đơn hàng trung bình $\bar{x}_C = 8.1$ đơn, độ lệch chuẩn mẫu $s_C = 2.8$ đơn.
+- Nhóm can thiệp (Thuật toán mới): Quy mô $n_T = 100$ người dùng, có số đơn hàng trung bình $\bar{x}_T = 8.5$ đơn, độ lệch chuẩn mẫu $s_T = 3.2$ đơn.
+- Nhóm đối chứng (Thuật toán cũ): Quy mô $n_C = 100$ người dùng, có số đơn hàng trung bình $\bar{x}_C = 8.1$ đơn, độ lệch chuẩn mẫu $s_C = 2.8$ đơn.
 
 **Yêu cầu:**
 1. Hãy tính độ lệch chuẩn gộp $s_{\text{pooled}}$ và Chênh lệch trung bình chuẩn hóa $\text{SMD}(x)$.
@@ -241,8 +241,8 @@ Một hãng dược phẩm tiến hành thử nghiệm lâm sàng ngẫu nhiên 
 - **Làm mù đôi**: Cả bệnh nhân và đội ngũ y bác sĩ trực tiếp thăm khám đều không biết mã định danh thuốc của bệnh nhân. Kỹ thuật này ngăn ngừa cả hiệu ứng giả dược từ người bệnh lẫn sự thiên vị vô thức trong hành vi chẩn đoán và chăm sóc của nhân viên y tế.
 
 **3. Nguy cơ khi bác sĩ không được làm mù:**
-- **Thiên lệch trong chăm sóc (Performance Bias)**: Bác sĩ khi biết bệnh nhân dùng giả dược có thể có xu hướng dặn dò kỹ lưỡng hơn, khuyên bệnh nhân đeo khẩu trang cẩn thận hơn hoặc kê thêm các biện pháp hỗ trợ khác vì lo sợ bệnh nhân không khỏi; hoặc ngược lại, dành nhiều sự quan tâm và ân cần hơn cho nhóm dùng thuốc thật.
-- **Thiên lệch trong đo lường kết cục (Detection / Measurement Bias)**: Khi bệnh nhân mô tả các triệu chứng còn mơ hồ (ví dụ: *"Hôm nay tôi thấy đỡ ngạt mũi một chút"*), nếu bác sĩ biết người này dùng thuốc thật, họ có xu hướng ghi nhận kết quả theo hướng tích cực; nếu biết dùng giả dược, họ có thể ghi nhận là triệu chứng chưa cải thiện rõ rệt. Những thiên lệch vô thức này sẽ bóp méo hoàn toàn tính khách quan của dữ liệu thử nghiệm.
+- **Thiên lệch trong chăm sóc (Performance Bias)**: Bác sĩ khi biết bệnh nhân dùng giả dược có thể có xu hướng dặn dò kỹ lưỡng hơn, khuyên bệnh nhân đeo khẩu trang cẩn thận hơn hoặc kê thêm các biện pháp hỗ trợ khác vì lo sợ bệnh nhân không khỏi, hoặc ngược lại, dành nhiều sự quan tâm và ân cần hơn cho nhóm dùng thuốc thật.
+- **Thiên lệch trong đo lường kết cục (Detection / Measurement Bias)**: Khi bệnh nhân mô tả các triệu chứng còn mơ hồ (ví dụ: *"Hôm nay tôi thấy đỡ ngạt mũi một chút"*), nếu bác sĩ biết người này dùng thuốc thật, họ có xu hướng ghi nhận kết quả theo hướng tích cực, còn nếu biết dùng giả dược, họ có thể ghi nhận là triệu chứng chưa cải thiện rõ rệt. Những thiên lệch vô thức này sẽ bóp méo hoàn toàn tính khách quan của dữ liệu thử nghiệm.
 :::
 
 ---

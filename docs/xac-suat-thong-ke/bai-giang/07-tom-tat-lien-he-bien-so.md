@@ -249,11 +249,11 @@ $$\begin{aligned}
   <img src="./img/stat20-07/residual-california.png" alt="Minh họa hình học phần dư của bang California bằng đoạn thẳng đứng màu đỏ nối từ đường hồi quy xuống điểm dữ liệu." style="max-width: 480px; width: 100%; border-radius: 8px;" />
 </div>
 
-**Hình 7.5:** Minh họa hình học của phần dư: Đường đứt nét nằm ngang biểu diễn giá trị dự báo $\hat{y} = 84.71\%$; đoạn thẳng đứng màu đỏ biểu diễn phần dư $\hat{e} = -3.61\%$ nối từ đường hồi quy xuống điểm dữ liệu thực tế của California.
+**Hình 7.5:** Minh họa hình học của phần dư: Đường đứt nét nằm ngang biểu diễn giá trị dự báo $\hat{y} = 84.71\%$, trong khi đoạn thẳng đứng màu đỏ biểu diễn phần dư $\hat{e} = -3.61\%$ nối từ đường hồi quy xuống điểm dữ liệu thực tế của California.
 
 ### Ý nghĩa thống kê của dấu phần dư
 
-Phần dư mở ra một công cụ đánh giá cá thể cực kỳ sâu sắc:
+Phần dư mở ra một công cụ đánh giá cá thể sâu sắc:
 - **Phần dư âm ($\hat{e}_i < 0$)**: Điểm quan sát nằm phía dưới đường hồi quy. Giá trị thực tế thấp hơn mức kỳ vọng đối với các bang có cùng tỷ lệ nghèo (Underperforming). California có tỷ lệ tốt nghiệp thấp hơn $3.61$ điểm phần trăm so với mức kỳ vọng chung của một bang có tỷ lệ nghèo $12.8\%$.
 - **Phần dư dương ($\hat{e}_i > 0$)**: Điểm quan sát nằm phía trên đường hồi quy. Giá trị thực tế vượt trội hơn mức kỳ vọng của mô hình (Outperforming).
 - Nếu bảng dữ liệu có $n$ quan sát, ta sẽ tính được chính xác $n$ phần dư tương ứng. Một mô hình bình phương tối thiểu chuẩn mực luôn có tổng các phần dư bằng 0:

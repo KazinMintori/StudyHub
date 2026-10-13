@@ -285,7 +285,7 @@ Ví dụ trực quan này làm sáng tỏ quy tắc cốt lõi: Dù dữ liệu 
 
 ## 7. Tổng kết
 
-1. **Dữ liệu và biến số**: Dữ liệu là tập hợp các thông tin thực nghiệm; biến số là đặc trưng đo lường được trên từng đối tượng và biến thiên giữa các đối tượng.
+1. **Dữ liệu và biến số**: Dữ liệu là tập hợp các thông tin thực nghiệm, đồng thời biến số là đặc trưng đo lường được trên từng đối tượng và biến thiên giữa các đối tượng.
 2. **Hệ thống phân loại dữ liệu**:
    - Biến định lượng gồm liên tục (nhiệt độ, kích thước mỏ) và rời rạc (nhân khẩu, số đếm).
    - Biến định tính gồm thứ bậc (mức độ hài lòng) và danh nghĩa (loài sinh vật, chuyên ngành).

@@ -19,11 +19,11 @@ Trong đời sống xã hội và khoa học thực nghiệm, việc ước lư�
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.1: Sally Clark trước cổng tòa án sau phiên phúc thẩm minh oan năm 2003.</p>
 </div>
 
-Vào tháng 11 năm 1999, Sally Clark bị tòa án kết án tù chung thân vì tội danh sát hại hai người con trai sơ sinh của mình. Người con đầu lòng, Christopher, qua đời khi mới 11 tuần tuổi vào năm 1996; người con thứ hai, Harry, qua đời khi 8 tuần tuổi vào tháng 1 năm 1998. Cả hai bé đều được kết luận sơ bộ là nạn nhân của hội chứng đột tử ở trẻ sơ sinh (Sudden Infant Death Syndrome – SIDS). Khi đứa trẻ thứ hai qua đời trong cũi, cảnh sát đã bắt giữ người mẹ với cáo buộc giết người.
+Vào tháng 11 năm 1999, Sally Clark bị tòa án kết án tù chung thân vì tội danh sát hại hai người con trai sơ sinh của mình. Người con đầu lòng, Christopher, qua đời khi mới 11 tuần tuổi vào năm 1996, và người con thứ hai, Harry, qua đời khi 8 tuần tuổi vào tháng 1 năm 1998. Cả hai bé đều được kết luận sơ bộ là nạn nhân của hội chứng đột tử ở trẻ sơ sinh (Sudden Infant Death Syndrome – SIDS). Khi đứa trẻ thứ hai qua đời trong cũi, cảnh sát đã bắt giữ người mẹ với cáo buộc giết người.
 
 Nhân chứng then chốt của bên công tố là Giáo sư Sir Roy Meadow, một bác sĩ nhi khoa danh tiếng thời bấy giờ. Trước bồi thẩm đoàn, ông đã trích dẫn một câu cách ngôn do chính mình đặt ra, sau này được gọi là "Quy luật Meadow" (Meadow's Law):
 
-> *"Một cái chết đột tử ở trẻ sơ sinh là bi kịch; hai cái chết là đáng ngờ; và ba cái chết là giết người cho đến khi chứng minh được điều ngược lại."*
+> *"Một cái chết đột tử ở trẻ sơ sinh là bi kịch, hai cái chết là đáng ngờ, và ba cái chết là giết người cho đến khi chứng minh được điều ngược lại."*
 
 Để thuyết phục bồi thẩm đoàn, bác sĩ Meadow đã đưa ra một phép tính số học ngắn gọn:
 - Theo các báo cáo thống kê dịch tễ học tại Anh, xác suất một đứa trẻ sơ sinh trong một gia đình khá giả, không hút thuốc như gia đình Clark tử vong vì SIDS là khoảng 1 trên 8.543.
@@ -265,7 +265,7 @@ Nếu $P(A \cap B) \neq P(A) \cdot P(B)$, hai biến cố được gọi là **p
 $$
 \text{Kiểm tra đẳng thức: } P(A \cap B) \stackrel{?}{=} P(A) \times P(B)
 $$
-Nếu đẳng thức thỏa mãn, hai biến cố độc lập; nếu không bằng nhau, chúng phụ thuộc.
+Nếu đẳng thức thỏa mãn, hai biến cố độc lập, trái lại nếu không bằng nhau, chúng là hai biến cố phụ thuộc.
 
 ### Các ví dụ so sánh trực quan
 
@@ -535,7 +535,7 @@ Thay công thức nhân xác suất $P(A \cap B) = P(A) \cdot P(B \mid A)$ vào,
    - Trường hợp độc lập: $P(A \cap B) = P(A) \cdot P(B)$.
 4. **Kiểm tra tính độc lập**: Hai biến cố độc lập khi và chỉ khi $P(A \cap B) = P(A) \cdot P(B)$ hoặc $P(B \mid A) = P(B)$.
 5. **Độc lập khác Xung khắc**: Hai biến cố có xác suất dương nếu xung khắc nhau thì chắc chắn phụ thuộc vào nhau.
-6. **Rút thăm**: Rút có hoàn lại tương ứng với các biến cố độc lập; rút không hoàn lại dẫn đến các biến cố phụ thuộc.
+6. **Rút thăm**: Rút có hoàn lại tương ứng với các biến cố độc lập, trong khi rút không hoàn lại dẫn đến các biến cố phụ thuộc.
 
 ---
 
@@ -617,7 +617,7 @@ Một chiếc hộp chứa 9 tấm thẻ được đánh số từ 1 đến 9: $
 
 Định nghĩa hai biến cố sau:
 - $A$: Biến cố "Có ít nhất một tấm thẻ rút được mang số chẵn".
-- $B$: Biến cố "Có ít nhất một tấm thẻ rút được mang số nguyên tố" (Lưu ý: Số 1 không phải là số nguyên tố; các số nguyên tố trong hộp là $\{2, 3, 5, 7\}$).
+- $B$: Biến cố "Có ít nhất một tấm thẻ rút được mang số nguyên tố" (Lưu ý: Số 1 không phải là số nguyên tố, cụ thể các số nguyên tố trong hộp là $\{2, 3, 5, 7\}$).
 
 1. Giả sử hai tấm thẻ rút ra được mang số 3 và số 9. Trong các biến cố sau đây, biến cố nào xảy ra và biến cố nào không xảy ra: $A$, $B$, $A \cap B$, $A \cap B^c$, $A^c \cap B$?
 2. Tính xác suất $P(A)$, $P(B)$ và xác suất phần giao $P(A \cap B)$.

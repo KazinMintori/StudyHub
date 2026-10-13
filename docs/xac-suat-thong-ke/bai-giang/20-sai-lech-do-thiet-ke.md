@@ -64,14 +64,14 @@ Ngược lại, nếu ta muốn hạ thấp sai lầm loại II (tức là kiên
 
 Ngưỡng xác suất dùng để đưa ra phán quyết bác bỏ $H_0$ được gọi là **mức ý nghĩa** (Significance level), ký hiệu là $\alpha$. Khi $p\text{-value} < \alpha$, ta tuyên bố kết quả quan sát được có ý nghĩa thống kê (statistically significant) và bác bỏ $H_0$.
 
-Theo quy ước truyền thống do Ronald Fisher đề xuất vào thập niên 1920, giá trị $\alpha = 0.05$ thường được chọn làm mặc định. Tuy nhiên, mức ý nghĩa này hoàn toàn không phải là một hằng số bất biến của tự nhiên; nó phải được cân nhắc và điều chỉnh linh hoạt tùy thuộc vào tổn thất thực tế của từng loại sai lầm:
+Theo quy ước truyền thống do Ronald Fisher đề xuất vào thập niên 1920, giá trị $\alpha = 0.05$ thường được chọn làm mặc định. Tuy nhiên, mức ý nghĩa này hoàn toàn không phải là một hằng số bất biến của tự nhiên, mà cần được cân nhắc và điều chỉnh linh hoạt tùy thuộc vào tổn thất thực tế của từng loại sai lầm:
 
 - **Khi nào nên chọn mức ý nghĩa rất nhỏ ($\alpha = 0.01$ hoặc $\alpha = 0.001$)?**
-  - Khi cái giá phải trả của sai lầm loại I là cực kỳ đắt đỏ hoặc gây nguy hiểm tính mạng.
+  - Khi cái giá phải trả của sai lầm loại I là đắt đỏ hoặc gây nguy hiểm tính mạng.
   - Ví dụ: Cấp phép một loại thuốc mới có độc tính cao hoặc triển khai dự án đầu tư hàng chục tỷ đô la có nguy cơ phá sản. Khi đó, ta đòi hỏi bằng chứng ủng hộ $H_A$ phải vượt trội hoàn toàn trước khi quyết định bác bỏ $H_0$.
 - **Khi nào có thể chấp nhận mức ý nghĩa nới lỏng hơn ($\alpha = 0.10$)?**
   - Khi cái giá phải trả của sai lầm loại II nghiêm trọng hơn nhiều so với sai lầm loại I.
-  - Ví dụ: Hệ thống sàng lọc chẩn đoán sớm ung thư giai đoạn đầu hoặc cảnh báo rò rỉ khí độc trong hầm mỏ. Nếu báo động nhầm (sai lầm loại I), cơ sở chỉ mất chi phí xét nghiệm lại; nhưng nếu bỏ sót một ca bệnh hiểm nghèo hoặc bỏ sót rò rỉ khí độc (sai lầm loại II), hậu quả sẽ là tử vong. Do đó, ta sẵn sàng chấp nhận mức $\alpha$ cao hơn để tối đa hóa độ nhạy phát hiện.
+  - Ví dụ: Hệ thống sàng lọc chẩn đoán sớm ung thư giai đoạn đầu hoặc cảnh báo rò rỉ khí độc trong hầm mỏ. Nếu báo động nhầm (sai lầm loại I), cơ sở chỉ mất chi phí xét nghiệm lại, trái lại nếu bỏ sót một ca bệnh hiểm nghèo hoặc bỏ sót rò rỉ khí độc (sai lầm loại II), hậu quả sẽ là tử vong. Do đó, ta sẵn sàng chấp nhận mức $\alpha$ cao hơn để tối đa hóa độ nhạy phát hiện.
 
 ---
 

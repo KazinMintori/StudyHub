@@ -1,4 +1,4 @@
-﻿---
+---
 course: xac-suat-thong-ke
 lecture: 09-co-so-xac-suat
 section: lecture
@@ -14,7 +14,7 @@ description: "Nền tảng lý thuyết xác suất: Phép thử ngẫu nhiên, 
 
 Trong hai phần học trước, ta đã làm chủ các kỹ thuật tóm tắt dữ liệu: Từ các bảng số liệu thực nghiệm thu thập được, ta vẽ biểu đồ, tính trung bình, độ lệch chuẩn, hệ số tương quan và khớp mô hình hồi quy. Tất cả những thao tác đó được gọi chung là **Thống kê mô tả (Descriptive Statistics)**: Ta mô tả chính xác những gì đã quan sát được trong mẫu dữ liệu hiện có.
 
-Tuy nhiên, mục tiêu tối thượng của khoa học dữ liệu không chỉ dừng lại ở việc mô tả quá khứ. Ta muốn dùng dữ liệu mẫu để **suy rộng (Generalization)** ra toàn bộ quần thể lớn hơn: Từ kết quả khảo sát 1,000 cử tri để dự đoán kết quả bầu cử tổng thống; từ thử nghiệm lâm sàng trên 500 bệnh nhân để đánh giá hiệu quả của một loại vaccine mới cho hàng triệu người.
+Tuy nhiên, mục tiêu tối thượng của khoa học dữ liệu không chỉ dừng lại ở việc mô tả quá khứ. Ta muốn dùng dữ liệu mẫu để **suy rộng (Generalization)** ra toàn bộ quần thể lớn hơn: Từ kết quả khảo sát 1,000 cử tri để dự đoán kết quả bầu cử tổng thống, hoặc từ thử nghiệm lâm sàng trên 500 bệnh nhân để đánh giá hiệu quả của một loại vaccine mới cho hàng triệu người.
 
 <div style="text-align: center; margin: 16px 0;">
   <img src="./img/stat20-09/538-pollster-ranking-snippet.png" alt="Bảng xếp hạng độ chính xác lịch sử và phương pháp luận của các tổ chức thăm dò dư luận trên trang FiveThirtyEight." style="max-width: 600px; width: 100%; border-radius: 8px;" />

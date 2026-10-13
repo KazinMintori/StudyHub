@@ -1,4 +1,4 @@
-﻿---
+---
 course: xac-suat-thong-ke
 lecture: 05-ngu-phap-do-hoa
 section: lecture
@@ -106,7 +106,7 @@ Bảng các thuộc tính thẩm mỹ (Aesthetic Attributes) phổ biến nhất
 | **`fill`** | Màu tô đầy bên trong hình khối (thanh bar, diện tích) | Định tính |
 | **`size`** | Độ lớn kích thước của điểm hoặc độ dày đường nét | Định lượng |
 | **`shape`** | Hình dạng của điểm biểu diễn (tròn, vuông, tam giác) | Định tính danh nghĩa (dưới 6 mức) |
-| **`alpha`** | Độ trong suốt của điểm (từ $0$: trong suốt đến $1$: mờ đục) | Định lượng hoặc giải quyết đè điểm (overplotting) |
+| **`alpha`** | Độ trong suốt của điểm (từ $0$ là trong suốt hoàn toàn đến $1$ là mờ đục) | Định lượng hoặc giải quyết đè điểm (overplotting) |
 
 ---
 

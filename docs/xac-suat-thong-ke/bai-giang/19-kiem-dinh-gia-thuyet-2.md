@@ -59,7 +59,7 @@ Bảng phân phối xác suất theo Luật Benford:
 
 Chữ số $1$ xuất hiện phổ biến nhất (chiếm tới gần một phần ba), tần suất giảm dần đều cho tới chữ số $9$ (chỉ chiếm khoảng $4.6\%$).
 
-Nhiều nhà phân tích cho rằng: Nếu một cuộc bầu cử diễn ra công bằng, chữ số đầu tiên của số phiếu bầu tại hàng trăm đô thị sẽ tuân theo Luật Benford; hành vi gian lận (như nhồi thêm phiếu giả) sẽ làm sai lệch phân phối này.
+Nhiều nhà phân tích cho rằng: Nếu một cuộc bầu cử diễn ra công bằng, chữ số đầu tiên của số phiếu bầu tại hàng trăm đô thị sẽ tuân theo Luật Benford, trong khi hành vi gian lận (như nhồi thêm phiếu giả) sẽ làm sai lệch phân phối này.
 
 <p align="center">
   <img src="./img/stat20-19/unnamed-chunk-1-1.png" alt="Phân phối Luật Benford so với dữ liệu thực tế của Karroubi" width="700" />
@@ -94,7 +94,7 @@ Mô phỏng máy tính tạo ra 9 mẫu ngẫu nhiên độc lập được minh
 </p>
 <p align="center"><em>Hình 19.3: Chín phân phối thực nghiệm mô phỏng từ việc rút 366 vé có hoàn lại từ hộp Benford.</em></p>
 
-Biến thiên ngẫu nhiên luôn tồn tại: Mẫu thứ 6 có nhiều số 3 bất thường; mẫu thứ 5 tình cờ có số lượng chữ số 7 tăng vọt giống như dữ liệu thực tế của Karroubi. 
+Biến thiên ngẫu nhiên luôn tồn tại: Mẫu thứ 6 có nhiều số 3 bất thường, còn mẫu thứ 5 tình cờ có số lượng chữ số 7 tăng vọt giống như dữ liệu thực tế của Karroubi. 
 
 Làm thế nào để đo lường chính xác xem mẫu thực tế của Karroubi khác biệt với Luật Benford ở mức độ nào?
 
@@ -122,7 +122,7 @@ $$
 ### Tính toán trên dữ liệu của Karroubi
 
 Với tổng số $n = 366$ đô thị:
-- Chữ số 1: Quan sát được $O_1 = 125$ lần; kỳ vọng $E_1 = 366 \times 0.301 = 110.17$ lần $\implies \frac{(125 - 110.17)^2}{110.17} \approx 1.998$.
+- Chữ số 1: Quan sát được $O_1 = 125$ lần, với kỳ vọng $E_1 = 366 \times 0.301 = 110.17$ lần $\implies \frac{(125 - 110.17)^2}{110.17} \approx 1.998$.
 - Lặp lại cho toàn bộ 9 chữ số và cộng dồn lại:
   $$
   \chi^2_{\text{quan sát}} \approx 28.08
@@ -207,7 +207,7 @@ Khi thực hiện trên hàng nghìn người thuộc nhiều nền văn hóa v�
 ## Tóm tắt kiến thức cốt lõi
 
 1. **Mô hình hộp cho nhiều tỉ lệ**: Khi $H_0$ quy định tỉ lệ xuất hiện của nhiều nhóm danh mục, ta tạo một chiếc hộp với số lượng vé tương ứng với các tỉ lệ lý thuyết và rút ngẫu nhiên có hoàn lại để tạo phân phối Null.
-2. **Khoảng cách Chi bình phương**: $\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}$ là thước đo khoảng cách chuẩn hóa giữa phân phối thực tế quan sát và phân phối kỳ vọng lý thuyết.
+2. **Khoảng cách Chi bình phương**: Đây là thước đo khoảng cách chuẩn hóa giữa phân phối thực tế quan sát và phân phối kỳ vọng lý thuyết, xác định bởi công thức $\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}$.
 3. **Quy tắc đuôi**: Phép thử Chi bình phương luôn tính $p$-value trên đuôi bên phải của phân phối Null.
 4. **Cảnh báo về giải thích**: Bác bỏ $H_0$ chỉ chứng minh dữ liệu không phù hợp với mô hình lý thuyết, không tự động chứng minh kết luận nguyên nhân - kết quả nếu mô hình lý thuyết chưa phản ánh đúng thực tế.
 
@@ -281,13 +281,13 @@ Theo Luật Benford:
 
 **2. Thiết kế mô hình hộp rút thăm:**
 - Chuẩn bị một chiếc hộp gồm $1{,}000$ tấm vé đánh số từ 1 đến 9:
-  - 301 vé ghi số 1; 176 vé ghi số 2; 125 vé ghi số 3; 97 vé ghi số 4; 79 vé ghi số 5; 67 vé ghi số 6; 58 vé ghi số 7; 51 vé ghi số 8; và 46 vé ghi số 9.
+  - 301 vé ghi số 1, 176 vé ghi số 2, 125 vé ghi số 3, 97 vé ghi số 4, 79 vé ghi số 5, 67 vé ghi số 6, 58 vé ghi số 7, 51 vé ghi số 8 và 46 vé ghi số 9.
 - Mỗi lần mô phỏng, rút ngẫu nhiên có hoàn lại $n = 200$ tấm vé từ chiếc hộp này.
 
 **3. Kết luận của thanh tra viên:**
 - Giá trị $\chi^2 = 5.4$ nằm hoàn toàn trong vùng dao động thông thường của phân phối Null ($[2.1, 14.5]$).
 - Giá trị $p$-value sẽ khá lớn (chắc chắn lớn hơn $0.05$).
-- Kết luận: **Chưa có đủ bằng chứng thống kê để bác bỏ giả thuyết không $H_0$**. Dữ liệu hóa đơn của công ty hoàn toàn tương thích với Luật Benford; không có dấu hiệu bất thường về mặt tần suất chữ số đầu tiên.
+- Kết luận: **Chưa có đủ bằng chứng thống kê để bác bỏ giả thuyết không $H_0$**. Dữ liệu hóa đơn của công ty hoàn toàn tương thích với Luật Benford, đồng thời không có dấu hiệu bất thường về mặt tần suất chữ số đầu tiên.
 :::
 
 ---
