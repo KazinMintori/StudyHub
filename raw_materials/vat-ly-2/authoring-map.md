@@ -76,7 +76,13 @@ Tab Bài tập có 85 bài đánh số, 18 câu thảo luận, 12 bài biến th
 
 Tab Bài tập có 83 bài đánh số, 20 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 116 khung lời giải chi tiết. Có 11 Slides, Cheatsheet chín nhóm chỉ gồm định nghĩa, tính chất và công thức, cùng 16 Wiki mới. Chín bộ Python, kiểm tra cấu trúc toàn site và 39 kiểm thử skill đã qua. Bản build cuối exit 0. Kiểm tra chương có 96 lượt ở 320, 360, 375, 1440 px, cùng 243 lượt Wiki và 67 lượt đổi kích thước, không có tràn công thức hoặc lỗi JavaScript. Hồ sơ đối chiếu ghi riêng các sai lệch đáp án và lỗi nhận diện ký tự, không đưa câu chuyện kiểm chứng vào trang học.
 
-## Các chương 29–44
+## Chương 29
+
+Đã hoàn tất tám mục lý thuyết, 11 ví dụ, 24 công thức đánh số và 28 hình đánh số. Bộ tài sản có 79 ảnh PNG cùng sáu sơ đồ hoặc đồ thị lời giải. Các nhãn tiếng Anh có chú thích tiếng Việt dưới hình. Các đồ thị khớp dữ liệu sử dụng toàn bộ điểm đo.
+
+Tab Bài tập có 74 bài đánh số, 21 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 108 khung lời giải chi tiết. Có 12 Slides, Cheatsheet tám nhóm chỉ gồm định nghĩa, tính chất và công thức, 15 Wiki mới và một mục Wiki được mở rộng. Bảy bộ Python, kiểm tra cấu trúc toàn site và 39 kiểm thử skill đã qua. Bản build cuối exit 0. Toàn bộ chín chương Vật lý 2 đã soạn có 724 lượt kiểm tra ở 320, 360, 375, 1440 px, 74 lần đổi kích thước trực tiếp và 291 lượt Wiki, không có lỗi JavaScript hoặc tràn công thức. Hồ sơ riêng ghi các sai lệch đáp số và các sửa chữa định dạng của những chương trước.
+
+## Các chương 30–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

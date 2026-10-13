@@ -40,12 +40,13 @@ $$
 Ở đây φ là góc giữa trường và pháp tuyến đã chọn, không phải góc giữa trường và mặt phẳng. Các dạng tương đương là:
 
 $$
-\begin{aligned}
-    &\Phi_E=E_\perp A.
-\tag{22.2}\\
-    &\Phi_E=\vec E\cdot\vec A.
+\Phi_E=E_\perp A.
+\tag{22.2}
+$$
+
+$$
+\Phi_E=\vec E\cdot\vec A.
 \tag{22.3}
-\end{aligned}
 $$
 
 Diện tích lớn hơn có nhiều đường sức xuyên qua hơn. Với cùng diện tích và hướng, trường mạnh hơn cũng có nhiều đường sức hơn. Đây là cách hình dung điện thông, không phải phép đếm số đường sức có ý nghĩa tuyệt đối.

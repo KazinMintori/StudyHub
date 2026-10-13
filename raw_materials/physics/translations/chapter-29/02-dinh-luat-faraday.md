@@ -40,12 +40,26 @@ $$
 Dấu trừ cho biết chiều suất điện động theo quy ước hướng diện tích. Nếu từ thông dương đang tăng thì suất điện động âm. Nếu từ thông dương đang giảm thì suất điện động dương. Chưa thể đổi dấu thành chiều quay cho đến khi đã chọn hướng véc-tơ diện tích, rồi dùng quy tắc bàn tay phải.
 
 ![Hình 29.6: Dấu từ thông và chiều suất điện động khi từ thông tăng hoặc giảm.](../img/young-29/hinh-29-06.png)
-Nếu cuộn có $N$ vòng giống nhau và từ thông qua mỗi vòng biến thiên cùng tốc độ, tổng suất điện động bằng $N$ lần suất điện động của một vòng:
+Nếu cuộn có $N$ vòng giống nhau và từ thông qua mỗi vòng biến thiên cùng tốc độ, tổng suất điện động bằng $N$ lần suất điện động của một vòng. Chẳng hạn, hai vòng nối tiếp có tổng suất điện động bằng suất điện động vòng thứ nhất cộng suất điện động vòng thứ hai. Với $N$ vòng, sự cộng ấy viết thành
+
+$$
+\begin{aligned}
+\mathcal E_{\mathrm{tổng}}
+&=\mathcal E_1+\mathcal E_2+\dots+\mathcal E_N\\
+&=-N\frac{d\Phi_B}{dt}.
+\end{aligned}
+$$
+
+Ở đây $N$ là số nguyên dương và $\Phi_B$ là từ thông qua một vòng. Do đó:
 
 $$
 \mathcal E=-N\frac{d\Phi_B}{dt}.
 \tag{29.4}
 $$
+
+Định luật Faraday phụ thuộc sự thay đổi từ thông, không phụ thuộc riêng giá trị từ thông. Từ thông có thể rất lớn nhưng không đổi, khi ấy suất điện động bằng không. Từ thông cũng có thể bằng không tại một thời điểm nhưng đang biến đổi, khi ấy suất điện động khác không.
+
+Không chỉ biến thiên độ lớn từ trường mới gây cảm ứng. Mạch có thể dịch chuyển trong từ trường không đều hoặc thay đổi hình dạng trong từ trường không đổi. Cả ba cơ chế đều phải được xét thông qua tốc độ biến thiên từ thông.
 
 Đơn vị của từ thông là weber, với $1\,\mathrm{Wb}=1\,\mathrm{T\,m^2}$. Do đó tốc độ biến thiên từ thông có đơn vị volt, $1\,\mathrm V=1\,\mathrm{Wb/s}$.
 
@@ -135,9 +149,9 @@ $$
 Suất điện động biến thiên hình sin. Khi mặt cuộn vuông góc với $\vec B$, từ thông đạt cực đại hoặc cực tiểu và tốc độ biến thiên của nó bằng không, nên $\mathcal E=0$. Khi mặt cuộn song song với $\vec B$, từ thông bằng không nhưng đổi nhanh nhất, nên độ lớn suất điện động đạt cực đại. Kết quả chỉ phụ thuộc diện tích, không phụ thuộc hình dạng cụ thể của cuộn.
 
 ![Hình 29.8: Cuộn dây quay tạo suất điện động xoay chiều và đồ thị theo thời gian.](../img/young-29/hinh-29-08.png)
-Trong alternator, vòng trượt quay cùng cuộn dây và trượt trên các chổi tiếp xúc đứng yên. Điện áp đổi dấu tuần hoàn nên dòng điện trong mạch ngoài là dòng xoay chiều. Có thể tăng biên độ suất điện động bằng cách tăng tốc độ quay, tăng độ lớn từ trường, tăng diện tích cuộn hoặc tăng số vòng.
+Trong máy phát điện xoay chiều (alternator), vòng trượt quay cùng cuộn dây và trượt trên các chổi tiếp xúc đứng yên. Điện áp đổi dấu tuần hoàn nên dòng điện trong mạch ngoài là dòng xoay chiều. Có thể tăng biên độ suất điện động bằng cách tăng tốc độ quay, tăng độ lớn từ trường, tăng diện tích cuộn hoặc tăng số vòng.
 
-![Hình 29.9: Phần ứng nhiều vòng trong alternator thương mại.](../img/young-29/hinh-29-09.png)
+![Hình 29.9: Phần ứng nhiều vòng trong máy phát điện xoay chiều thương mại.](../img/young-29/hinh-29-09.png)
 Alternator trên ô tô cấp điện cho hệ thống đánh lửa, đèn và thiết bị giải trí. Trong nhiều thiết kế, cuộn dây đứng yên còn nam châm điện quay. Máy phát ở nhà máy điện cũng dựa trên sự biến thiên từ thông qua cuộn dây.
 
 ### Ví dụ 29.4. Máy phát một chiều và suất phản điện động của động cơ

@@ -11,9 +11,8 @@ Sự phân bố điện tích tạo ra điện trường $\vec E$ bên trong tha
 
 $$
 \begin{aligned}
-qE&=qvB,
-\qquad E\\
-&=vB.
+qE&=qvB,\\
+E&=vB.
 \end{aligned}
 $$
 
@@ -47,7 +46,9 @@ Có thể tìm chiều cảm ứng bằng định luật Lenz ngay cả khi than
 
 ### Suất điện động chuyển động trong trường hợp tổng quát
 
-Nếu vật dẫn có hình dạng bất kỳ chuyển động trong từ trường bất kỳ, mỗi phần tử dây $d\vec\ell$ đóng góp một suất điện động bằng thành phần lực từ trên một đơn vị điện tích dọc theo phần tử ấy. Với véc-tơ vận tốc $\vec v$ của phần tử và từ trường tại chính vị trí đó:
+Xét vật dẫn có hình dạng bất kỳ chuyển động trong từ trường có thể không đều. Trong phần này, từ trường tại mỗi điểm được giả thiết không biến đổi theo thời gian. Mỗi phần tử dây $d\vec\ell$ đóng góp một suất điện động bằng thành phần lực từ trên một đơn vị điện tích dọc theo phần tử ấy.
+
+Với vector vận tốc $\vec v$ của phần tử và từ trường tại chính vị trí đó:
 
 $$
 d\mathcal E=(\vec v\times\vec B)\cdot d\vec\ell.
@@ -59,6 +60,10 @@ $$
 \mathcal E=\oint (\vec v\times\vec B)\cdot d\vec\ell.
 \tag{29.7}
 $$
+
+Trong điều kiện từ trường không đổi theo thời gian, tốc độ biến thiên từ thông qua vòng chuyển động bằng số đối của tích phân ở (29.7). Vì vậy biểu thức này tương đương với định luật Faraday, dù hình thức hai công thức khác nhau.
+
+Nếu dây đứng yên trong từ trường biến thiên, mọi phần tử có $\vec v=0$ và (29.7) không mô tả được suất điện động cảm ứng. Khi đó phải dùng định luật Faraday với đạo hàm từ thông. Không thể coi biểu thức suất điện động do chuyển động là công thức thay thế cho mọi hiện tượng cảm ứng.
 
 ![Hình 29.16: Suất điện động toàn vòng bằng tích phân đóng góp của các phần tử dây.](../img/young-29/hinh-29-16.png)
 Biểu thức tích phân này tương đương định luật Faraday đối với vòng dẫn đang chuyển động. Khi từ trường tại mỗi điểm không đổi theo thời gian, tốc độ thay đổi từ thông qua vòng bằng số đối của tích phân trong công thức (29.7). Nếu vật dẫn đứng yên nhưng từ trường thay đổi theo thời gian, không thể chỉ dùng biểu thức suất điện động chuyển động này. Khi ấy phải dùng định luật Faraday dạng $\mathcal E=-d\Phi_B/dt$.
@@ -101,7 +106,7 @@ Lực cản từ phù hợp với định luật Lenz: Nó chống lại sự t�
 
 ### Ví dụ 29.10. Đĩa Faraday
 
-Một đĩa dẫn điện bán kính $R$ nằm trong mặt phẳng $xy$ và quay đều với tốc độ góc $\omega$ quanh trục $z$. Từ trường đều, không đổi và song song trục quay. Hãy tìm suất điện động giữa tâm đĩa và vành ngoài.
+Một đĩa dẫn điện bán kính $R$ nằm trong mặt phẳng $xy$ và quay đều với vector vận tốc góc theo chiều $+z$, có độ lớn $\omega$. Từ trường đều, không đổi và hướng theo $+z$. Hãy tìm suất điện động giữa tâm đĩa và vành ngoài.
 
 ![Hình 29.17: Đĩa dẫn quay trong từ trường tạo suất điện động giữa tâm và vành.](../img/young-29/hinh-29-17.png)
 **Hướng đi hợp lý:** Mỗi điểm trên đĩa chuyển động với tốc độ phụ thuộc khoảng cách $r$ đến trục. Chia đường bán kính từ tâm đến vành thành các đoạn nhỏ $dr$. Tính suất điện động trên từng đoạn rồi tích phân.

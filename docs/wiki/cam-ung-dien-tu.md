@@ -7,38 +7,42 @@ next: false
 
 # Cảm ứng điện từ
 
-Cảm ứng điện từ là sự xuất hiện suất điện động liên hệ với biến thiên từ thông của mạch. Faraday cho độ lớn và dấu; Lenz cho chiều chống biến thiên gây ra đáp ứng.
+Cảm ứng điện từ là sự xuất hiện suất điện động do từ thông qua mạch biến thiên. Sự thay đổi có thể đến từ trường biến thiên, chuyển động của mạch hoặc biến dạng mạch. Mạch kín có thể có dòng cảm ứng, còn mạch hở vẫn có thể có suất điện động.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Cuộn N vòng cùng từ thông có $\mathcal E=-N\,d\Phi_B/dt$. Từ thông có thể đổi do trường, diện tích hoặc góc. Vòng không kín có thể có suất điện động nhưng chưa có dòng vòng.
+Cần phân biệt ba đại lượng: Từ thông, suất điện động và dòng điện. Từ thông là thông lượng từ trường qua mặt có định hướng. Suất điện động là công của lực tạo nguồn trên một đơn vị điện tích quanh mạch. Dòng còn phụ thuộc đường dẫn kín và điện trở.
 
-Mạch chuyển động cần xét cả điện trường và lực từ trên điện tích theo vận tốc dây. Năng lượng cảm ứng đến từ tác nhân đổi trường hoặc tác nhân thực hiện công chuyển động.
+Một vòng có thể đứng yên mà vẫn cảm ứng khi trường biến thiên. Một vòng cũng có thể chuyển động trong trường không đổi nhưng không có suất điện động tổng nếu từ thông giữ nguyên. Trường hợp vòng chữ nhật tịnh tiến hoàn toàn trong từ trường đều minh họa sự triệt tiêu giữa các cạnh.
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 29. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Nguồn năng lượng điện đến từ cơ năng của tác nhân chuyển động hoặc nguồn làm trường biến thiên. Cảm ứng không tạo năng lượng từ hư không.
 
 ## Ví dụ
 
-Khi từ thông qua vòng kín tăng, dòng cảm ứng tạo từ trường chống sự tăng đó.
+Đưa nam châm lại gần cuộn dây nối điện kế làm kim lệch trong thời gian từ thông biến đổi. Giữ nam châm đứng yên không duy trì dòng ấy.
 
 ## Khi nào cần dùng?
 
-Phân tích máy phát, vòng dây chuyển động và điện trường cảm ứng.
+Phân tích máy phát, cuộn thu, lực hãm từ và tín hiệu điện do trường biến thiên.
 
 ## Câu hỏi ôn lại
 
-Lenz có luôn yêu cầu trường cảm ứng ngược trường ban đầu không?
+Có bắt buộc nam châm hoặc mạch phải chuyển động mới có cảm ứng không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Nó chống sự biến thiên; khi từ thông giảm, trường cảm ứng có thể cùng hướng trường ban đầu.
+Không. Hai cuộn đứng yên vẫn có thể cảm ứng khi dòng nguồn biến thiên.
 
 </details>
 
 ## Thuật ngữ liên quan
 
-- [Từ trường](./tu-truong.md)
-- [Thông lượng](./thong-luong.md)
-- [Tự cảm](./tu-cam.md)
+- [Từ thông](./tu-thong.md)
+- [Định luật Faraday](./dinh-luat-faraday.md)
+- [Định luật Lenz](./dinh-luat-lenz.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 29, trang 953–977.

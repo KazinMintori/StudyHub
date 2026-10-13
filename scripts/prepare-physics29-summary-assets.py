@@ -7,7 +7,7 @@ OUT=ROOT/'docs/vat-ly-2/bai-giang/img/young-29'
 FIGURES={
     'mo-dau-29':(953,(0,0,430,246)),
     'tom-tat-faraday':(977,(488,91,615,178)),
-    'tom-tat-lenz':(977,(488,192,578,257)),
+    'tom-tat-lenz':(977,(488,192,578,265)),
     'tom-tat-chuyen-dong':(977,(484,276,592,337)),
     'tom-tat-dien-truong':(977,(487,385,590,442)),
     'hinh-bridge29-28':(978,(340,621,563,734)),

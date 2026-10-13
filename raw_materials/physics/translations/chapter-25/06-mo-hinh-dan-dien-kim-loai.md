@@ -21,12 +21,13 @@ Tốc độ do chuyển động ngẫu nhiên cỡ $10^6$ m/s, còn tốc độ 
 Để nối mô hình với các đại lượng đo được, dùng định nghĩa điện trở suất và mật độ dòng điện:
 
 $$
-\begin{aligned}
-    &\rho=\frac EJ.
-\tag{25.21}\\
-    &\vec J=nq\vec v_d.
+\rho=\frac EJ.
+\tag{25.21}
+$$
+
+$$
+\vec J=nq\vec v_d.
 \tag{25.22}
-\end{aligned}
 $$
 
 n là số electron tự do trong một đơn vị thể tích và q = −e là điện tích mỗi electron.

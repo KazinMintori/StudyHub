@@ -38,6 +38,7 @@ async function go(path){
  const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:45000})
  assert([200,304].includes(response.status()),`${path}: HTTP ${response.status()}`)
  await page.waitForSelector('.lecture-tabs, .topic-header',{timeout:30000})
+ await page.waitForFunction(()=>Boolean(document.querySelector('#app')?.__vue_app__),{timeout:30000})
  await page.evaluate(()=>document.fonts.ready)
  const sources=await page.$$eval('.vp-doc img',es=>es.map(e=>e.src))
  await Promise.all([...new Set(sources)].filter(src=>!verifiedImages.has(src)).map(async src=>{
@@ -101,22 +102,25 @@ try{
       &&getComputedStyle(exercises).display!=='none'
    })
    assert(await page.$eval('.lecture-notes-content',e=>getComputedStyle(e).display==='none'))
-   const first=await page.$('.lecture-exercises-content details')
-   assert(first)
+   assert(await page.$('.lecture-exercises-content details'))
    const solutionHeadings=await page.$$eval('.lecture-exercises-content details summary',es=>es.map(e=>e.textContent.trim()))
    assert(solutionHeadings.every(title=>!/^Lời giải:\s*Lời giải\b/i.test(title)),'Solution heading must not duplicate its label')
    // Notes inspection only opens visible/hidden SSR details, so restore the
    // default collapsed exercise state before testing the click.
-   await page.evaluate(()=>document.querySelectorAll('.lecture-exercises-content details').forEach(e=>e.open=false))
-   assert.equal(await first.evaluate(e=>e.open),false)
-   await first.$eval('summary',e=>e.click())
-   assert.equal(await first.evaluate(e=>e.open),true)
-   const body=await first.evaluate(e=>e.textContent)
+   const body=await page.evaluate(()=>{
+    document.querySelectorAll('.lecture-exercises-content details').forEach(e=>e.open=false)
+    const first=document.querySelector('.lecture-exercises-content details')
+    if(!first||first.open)throw new Error('Expected the first solution to be collapsed')
+    first.querySelector('summary').click()
+    if(!first.open)throw new Error('Clicking the solution summary must expand it')
+    return first.textContent
+   })
    assert(body.includes('Tóm tắt đề bài:')&&body.includes('Hướng đi:'),body.slice(0,100))
    await inspect(`${width}/chapter${chapter}/exercises`)
    if(width===375)await page.screenshot({path:`qa/physics/browser/chapter${chapter}-exercises-mobile.png`,fullPage:false})
    await page.reload({waitUntil:'domcontentloaded'})
    await page.waitForSelector('.lecture-tabs')
+   await page.waitForFunction(()=>Boolean(document.querySelector('#app')?.__vue_app__),{timeout:30000})
    assert.equal(new URL(page.url()).hash,'#bai-tap')
    assert(await page.$eval('.lecture-exercises-content',e=>getComputedStyle(e).display!=='none'))
    for(const part of ['cheatsheet','kien-thuc-can-co','slides']){

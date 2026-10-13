@@ -528,7 +528,8 @@ Trên mặt bên, khoảng cách đến tâm là $\sqrt{R^2+z^2}$ và thành ph�
 
 $$
 \begin{aligned}
-&\Phi_{\mathrm{side}} = 2\pi kQR^2 \int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}}\\
+&\Phi_{\mathrm{side}} = 2\pi kQR^2\\
+&\quad\times\int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}}\\
 &\quad =\frac Q{\varepsilon_0} \frac{L}{\sqrt{L^2+4R^2}}.
 \end{aligned}
 $$

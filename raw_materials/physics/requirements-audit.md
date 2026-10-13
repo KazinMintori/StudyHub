@@ -33,7 +33,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 26 | Mạch điện một chiều | 88/88 | 122 | Đủ theo hồ sơ |
 | vat-ly-2 | 27 | Từ trường và lực từ | 85/85 | 116 | Đủ theo hồ sơ |
 | vat-ly-2 | 28 | Nguồn của từ trường | 83/83 | 116 | Đủ theo hồ sơ |
-| vat-ly-2 | 29 | Cảm ứng điện từ | 0/74 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 29 | Cảm ứng điện từ | 74/74 | 108 | Đủ theo hồ sơ |
 | vat-ly-2 | 30 | Điện cảm | 0/75 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 31 | Dòng điện xoay chiều | 0/72 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 32 | Sóng điện từ | 0/56 | 0 | Còn thiếu hoặc chưa rà xong |

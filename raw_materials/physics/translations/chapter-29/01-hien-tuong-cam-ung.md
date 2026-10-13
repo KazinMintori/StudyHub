@@ -4,7 +4,7 @@ Một máy phát điện không cần nối với pin để làm xuất hiện d
 
 ### Nam châm và cuộn dây
 
-Nối một cuộn dây với điện kế galvanometer. Khi nam châm đặt gần cuộn dây nhưng đứng yên, kim điện kế không lệch. Không có nguồn suất điện động nào trong mạch nên dòng điện bằng không. Khi đưa nam châm lại gần hoặc kéo nam châm ra xa, kim chỉ dòng điện trong lúc nam châm chuyển động. Giữ nam châm đứng yên rồi di chuyển cuộn dây cũng tạo ra dòng điện trong thời gian chuyển động.
+Nối một cuộn dây với điện kế (galvanometer). Khi nam châm đặt gần cuộn dây nhưng đứng yên, kim điện kế không lệch. Không có nguồn suất điện động nào trong mạch nên dòng điện bằng không. Khi đưa nam châm lại gần hoặc kéo nam châm ra xa, kim chỉ dòng điện trong lúc nam châm chuyển động. Giữ nam châm đứng yên rồi di chuyển cuộn dây cũng tạo ra dòng điện trong thời gian chuyển động.
 
 Ta gọi dòng điện ấy là **dòng cảm ứng**. Suất điện động làm dòng điện cảm ứng xuất hiện được gọi là **suất điện động cảm ứng**.
 

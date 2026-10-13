@@ -1,5 +1,6 @@
 """Recompute numerical results used in the chapter 29 theory drafts."""
 import math
+import numpy as np
 
 # Example 29.1: changing B through one loop, then Ohm's law.
 area_291 = 120e-4
@@ -48,8 +49,22 @@ assert math.isclose(force_296, 0.30, rel_tol=1e-12)
 R = 0.37
 omega, B = 12.3, 0.80
 integral = 0.5 * omega * B * R**2
-antiderivative_at_R = 0.5 * omega * B * R**2
-assert math.isclose(integral, antiderivative_at_R, rel_tol=1e-15)
+r_mid=(np.arange(100000)+0.5)*R/100000
+quadrature=float(np.sum(omega*B*r_mid)*(R/100000))
+assert math.isclose(integral, quadrature, rel_tol=1e-12)
+
+# Differentiate the rotating-coil flux numerically at a nonstationary phase.
+time=.071;delta=1e-7
+flux=lambda t:.017*.20*math.cos(12.3*t)
+derivative=(flux(time+delta)-flux(time-delta))/(2*delta)
+emf_exact=12.3*.20*.017*math.sin(12.3*time)
+assert math.isclose(-derivative,emf_exact,rel_tol=1e-8)
+
+# Average the rectified sine by numerical quadrature rather than substituting
+# its closed-form mean into the same expression twice.
+phase=(np.arange(100000)+.5)*math.pi/100000
+rectified_mean=float(np.mean(np.sin(phase)))
+assert math.isclose(rectified_mean,2/math.pi,rel_tol=1e-10)
 
 print(f"29.1 emf={emf_291:.8g} V, current={current_291:.8g} A")
 print(f"29.2 emf={emf_292:.6f} V")

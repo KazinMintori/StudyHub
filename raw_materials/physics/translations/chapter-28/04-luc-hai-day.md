@@ -53,7 +53,8 @@ Hình 28.10: Hai dây siêu dẫn mang các dòng điện bằng nhau và ngư�
 $$
 \begin{aligned}
 &\frac{F}{L} = \frac{\mu_0 I^2}{2\pi r}\\
-&\quad =\frac{2\times10^{-7}}{4{,}5\times10^{-3}}\times(2{,}25\times10^8)\,\mathrm{N/m}\\
+&\quad =\frac{2\times10^{-7}}{4{,}5\times10^{-3}}\\
+&\qquad\times(2{,}25\times10^8)\,\mathrm{N/m}\\
 &\quad =\frac{4{,}5\times10^1\,\mathrm N}{4{,}5\times10^{-3}\,\mathrm m}\\
 &\quad =1{,}0\times10^4\,\mathrm{N/m}.
 \end{aligned}

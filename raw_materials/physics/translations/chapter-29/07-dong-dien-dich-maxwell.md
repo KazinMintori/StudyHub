@@ -1,6 +1,6 @@
 ## 29.7 Dòng điện dịch và phương trình Maxwell
 
-Từ trường biến thiên sinh điện trường. Chiều ngược lại cũng đúng: điện trường biến thiên sinh từ trường. Mối liên hệ này giải thích sự tồn tại của sóng điện từ, bao gồm sóng radio, tia gamma, ánh sáng nhìn thấy và các dạng bức xạ khác.
+Từ trường biến thiên sinh điện trường. Chiều ngược lại cũng đúng: Điện trường biến thiên sinh từ trường. Mối liên hệ này giải thích sự tồn tại của sóng điện từ, bao gồm sóng radio, tia gamma, ánh sáng nhìn thấy và các dạng bức xạ khác.
 
 ### Mở rộng định luật Ampère
 
@@ -64,7 +64,7 @@ $$
 
 Dòng dịch cũng mở rộng cách hiểu quy tắc nút Kirchhoff. Tại bản tụ, dòng dẫn đi vào bản nhưng không có dòng dẫn đi ra. Khi tính dòng dịch đi ra khỏi phía bên kia, dòng tổng quát vẫn liên tục, nên có thể nói dòng điện đi qua tụ.
 
-![Hình29.22: Tụ đang nạp với hai mặt căng cùng đường biên, mặt phẳng cắt dòng dẫn còn mặt cong chứa dòng dịch](../img/young-29/hinh-29-22.png)
+![Hình 29.22: Tụ đang nạp với hai mặt căng cùng đường biên, mặt phẳng cắt dòng dẫn còn mặt cong chứa dòng dịch](../img/young-29/hinh-29-22.png)
 
 ### Dòng dịch tạo từ trường
 
@@ -80,7 +80,7 @@ $$
 
 Từ trường giữa hai bản bằng không trên trục và tăng tuyến tính theo khoảng cách $r$. Ở ngoài mép bản, trường giống trường do một dây dẫn liên tục tạo ra. Đo đạc xác nhận từ trường giữa hai bản có thật và phù hợp với dự đoán này. Dòng dịch vì thế thể hiện một nguồn từ trường thực.
 
-![Hình29.23: Tụ tròn đang nạp với dòng dịch giữa hai bản và từ trường bao quanh trục](../img/young-29/hinh-29-23.png)
+![Hình 29.23: Tụ tròn đang nạp với dòng dịch giữa hai bản và từ trường bao quanh trục](../img/young-29/hinh-29-23.png)
 
 ### Bốn phương trình Maxwell
 
@@ -149,7 +149,7 @@ $$
 
 Một trường biến thiên có thể sinh trường kia ở vùng lân cận. Hai trường biến thiên lan truyền qua không gian, kể cả nơi không có vật chất, tạo thành sóng điện từ. Ánh sáng, sóng radio và truyền hình, hồng ngoại, tử ngoại và tia X là các dạng sóng điện từ.
 
-Từ phương trình Maxwell có thể suy ra định luật Coulomb từ định luật Gauss và định luật Biot–Savart từ định luật Ampère. Ghép thêm lực Lorentz tác dụng lên điện tích $q$ chuyển động với vận tốc $\vec v$:
+Trong giới hạn tĩnh điện với điều kiện biên thích hợp, định luật Gauss cho điện trường dẫn đến định luật Coulomb. Với dòng điện ổn định và các điều kiện biên tương ứng, dạng từ tĩnh của định luật Ampère cùng định luật Gauss cho từ trường dẫn đến biểu thức Biot–Savart. Ghép thêm lực Lorentz tác dụng lên điện tích $q$ chuyển động với vận tốc $\vec v$:
 
 $$
 \vec F=q(\vec E+\vec v\times\vec B).
@@ -158,7 +158,7 @@ $$
 
 Như vậy, bộ Maxwell cùng lực Lorentz chứa các quan hệ cơ bản giữa trường điện từ, nguồn của trường và lực lên điện tích. Nếu có đơn cực từ, phương trình Gauss cho từ trường sẽ có điện tích từ ở vế phải và định luật Faraday sẽ có thêm dòng đơn cực từ. Hiện chưa tìm thấy đơn cực từ. Độ cô đọng và sức khái quát của tổng hợp Maxwell thường được đặt bên cạnh các định luật Newton và nhiệt động lực học, cũng như các tổng hợp lớn của vật lý hiện đại.
 
-![Hình29.24: Bốn phương trình Maxwell trong không gian trống, thông lượng mặt kín bằng không và tích phân đường đối xứng của hai trường](../img/young-29/hinh-29-24.png)
+![Hình 29.24: Bốn phương trình Maxwell trong không gian trống, thông lượng mặt kín bằng không và tích phân đường đối xứng của hai trường](../img/young-29/hinh-29-24.png)
 
 ### Tự kiểm 29.7
 

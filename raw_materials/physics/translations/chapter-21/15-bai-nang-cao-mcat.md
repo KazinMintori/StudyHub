@@ -192,8 +192,9 @@ Các giá trị hai phía mỗi điểm nối bằng nhau. (f) Nhân phương tr
 
 $$
 \begin{aligned}
-&\frac d{dt}\left(\frac12I\\
-&dot\theta^2+U\right) = 0.
+&I\dot\theta\ddot\theta+U'(\theta)\dot\theta=0,\\
+&K=\frac12I\dot\theta^2,\\
+&\frac d{dt}(K+U)=0.
 \end{aligned}
 $$
 

@@ -1,3 +1,4 @@
+import {inductionConcepts,inductionWikiDetails,inductionWikiConnections} from './physics-induction-foundations.mjs'
 import {sourcesConcepts,sourcesWikiDetails,sourcesWikiConnections} from './physics-sources-foundations.mjs'
 import {magneticConcepts,magneticWikiDetails,magneticWikiConnections} from './physics-magnetic-foundations.mjs'
 import {dcConcepts,dcWikiDetails,dcWikiConnections} from './physics-dc-foundations.mjs'
@@ -314,7 +315,8 @@ export const physicsConcepts = {
     "use": "Tính số hạt còn lại, hoạt độ và năng lượng phản ứng.",
     "question": "Có biết chính xác khi nào một hạt nhân riêng sẽ phân rã từ chu kỳ bán rã không?",
     "answer": "Không. Chu kỳ bán rã mô tả xác suất và thống kê, không lịch phân rã của từng hạt."
-  }
+  },
+  ...inductionConcepts,
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -351,7 +353,8 @@ export const physicsWikiDetails = {
   "spin-luong-tu": "Với electron, $s=1/2$, $m_s=\\pm1/2$ và thành phần $S_z=m_s\\hbar$. Độ lớn mômen spin liên hệ $\\sqrt{s(s+1)}\\hbar$, khác chỉ độ lớn thành phần trên trục.\n\nKhông thể nói mọi thành phần spin theo các trục đều sắc nét trong cùng một trạng thái. Phân biệt spin với mômen động lượng orbital do cấu trúc không gian của hàm sóng.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "nguyen-ly-pauli": "Nguyên lý loại trừ áp dụng cho fermion giống nhau; electron là fermion. Các boson không tuân cùng quy tắc chiếm trạng thái này.\n\nVới lớp chính n, các orbital được đếm qua những giá trị orbital và thành phần cho tối đa $2n^2$ electron. Việc đếm số trạng thái không tự xác định thứ tự năng lượng của nguyên tử nhiều electron.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   "vung-nang-luong": "Độ dẫn phụ thuộc cả cấu trúc vùng, mức điền trạng thái và các cơ chế tán xạ. Không chỉ so khoảng cấm mà bỏ mật độ hạt tải hoặc nhiệt độ.\n\nPha tạp tạo các mức chất cho hoặc nhận và điều chỉnh hạt tải. Lỗ trống là mô tả hiệu dụng của trạng thái thiếu electron trong vùng gần đầy, không phải một proton chuyển động trong tinh thể.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 42. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
-  "phan-ra-phong-xa": "$N(t)=N_0e^{-\\lambda_dt}$, $T_{1/2}=\\ln2/\\lambda_d$ và hoạt độ $\\mathcal A=\\lambda_dN$. Đơn vị becquerel dùng thời gian tính bằng giây.\n\nHoạt độ không phải liều hấp thụ. Phân rã alpha, beta và gamma cần xét loại hạt phát ra và những định luật bảo toàn phù hợp; phát gamma thuần túy không đổi số proton và neutron.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 43. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương."
+  "phan-ra-phong-xa": "$N(t)=N_0e^{-\\lambda_dt}$, $T_{1/2}=\\ln2/\\lambda_d$ và hoạt độ $\\mathcal A=\\lambda_dN$. Đơn vị becquerel dùng thời gian tính bằng giây.\n\nHoạt độ không phải liều hấp thụ. Phân rã alpha, beta và gamma cần xét loại hạt phát ra và những định luật bảo toàn phù hợp; phát gamma thuần túy không đổi số proton và neutron.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 43. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
+  ...inductionWikiDetails,
 }
 
 export const physicsWikiConnections = {
@@ -477,5 +480,6 @@ export const physicsWikiConnections = {
     "photon",
     "thuyet-tuong-doi-hep",
     "cong-nang-luong"
-  ]
+  ],
+  ...inductionWikiConnections,
 }

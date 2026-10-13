@@ -190,7 +190,7 @@ export const magneticCheatsheet={summary:'Định nghĩa, tính chất và công
    String.raw`$U$: Thế năng tĩnh từ của lưỡng cực trong từ trường đều ($\mathrm{J}$)`,
    String.raw`$\mu$: Độ lớn mômen từ của lưỡng cực ($\mathrm{A\cdot m^2}$)`
   ],description:'φ = 0 (μ cùng hướng B): U_min = −μB, cân bằng bền. φ = π (μ ngược hướng B): U_max = +μB, cân bằng không bền.'},
-  {name:'Công khi đổi hướng',formula:d(String.raw`W_{\mathrm{ngoai}}=U_2-U_1=-\mu B(\cos\phi_2-\cos\phi_1)`),variables:[
+  {name:'Công khi đổi hướng',formula:d(String.raw`\begin{aligned}&W_{\mathrm{ngoai}}=U_2-U_1\\&\quad=-\mu B(\cos\phi_2-\cos\phi_1).\end{aligned}`),variables:[
    String.raw`$W_{\mathrm{ngoai}}$: Ngoại công cần thực hiện để quay chậm lưỡng cực từ góc $\phi_1$ sang $\phi_2$ ($\mathrm{J}$)`
   ],description:'Công của ngoại lực làm quay lưỡng cực chậm từ góc φ₁ sang φ₂.'}]},
  {id:'dc-motor',title:'Động cơ điện một chiều',items:[

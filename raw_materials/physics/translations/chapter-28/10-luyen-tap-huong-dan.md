@@ -394,12 +394,14 @@ $$
 \end{aligned}
 $$
 
-(b)
+(b) Đặt $r_1=0{,}0600\,\mathrm m$ và $r_2=0{,}0800\,\mathrm m$ lần lượt là bán kính trong và ngoài. Khi đó:
 
 $$
 \begin{aligned}
-&B_{\max} = \frac{\mu_0NI}{2\pi r_{\mathrm{trong}}} = 2{,}33\times10^{-3}\,\mathrm T,\\
-&B_{\min} = \frac{\mu_0NI}{2\pi r_{\mathrm{ngoài}}} = 1{,}75\times10^{-3}\,\mathrm T.
+&B_{\max}=\frac{\mu_0NI}{2\pi r_1}\\
+&\quad=2{,}33\times10^{-3}\,\mathrm T,\\
+&B_{\min}=\frac{\mu_0NI}{2\pi r_2}\\
+&\quad=1{,}75\times10^{-3}\,\mathrm T.
 \end{aligned}
 $$
 :::

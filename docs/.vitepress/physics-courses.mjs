@@ -1114,17 +1114,96 @@ export const physics2Course = {
       "slug": "09-cam-ung-dien-tu",
       "title": "Cảm ứng điện từ",
       "prerequisites": [
-        "thong-luong",
-        "tu-truong",
+        "vector",
+        "tich-vo-huong",
+        "tich-co-huong",
         "dao-ham",
-        "dong-dien"
+        "tich-phan",
+        "dien-truong-bao-toan",
+        "suat-dien-dong",
+        "luc-tu-tren-dien-tich",
+        "momen-tu",
+        "dien-dung",
+        "ong-day-dien",
+        "dinh-luat-ampere"
       ],
       "supportingConcepts": [
-        "cam-ung-dien-tu"
+        "tu-thong",
+        "cam-ung-dien-tu",
+        "dinh-luat-faraday",
+        "dinh-luat-lenz",
+        "suat-dien-dong-chuyen-dong",
+        "dien-truong-cam-ung",
+        "dong-dien-foucault",
+        "dong-dien-dich",
+        "phuong-trinh-maxwell",
+        "sieu-dan",
+        "nhiet-do-toi-han-sieu-dan",
+        "tu-truong-toi-han-sieu-dan",
+        "hieu-ung-meissner",
+        "sieu-dan-loai-i",
+        "sieu-dan-loai-ii",
+        "dao-dong-tat-dan"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 9,
-      "sourceChapter": 29
+      "sourceChapter": 29,
+      "topicGroups": [
+        {
+          "title": "Cảm ứng, trường biến thiên và vật liệu siêu dẫn",
+          "topics": [
+            {
+              "slug": "thi-nghiem-cam-ung",
+              "title": "Thí nghiệm cảm ứng",
+              "question": "Những thay đổi nào làm cuộn dây xuất hiện dòng điện?",
+              "source": "29.1"
+            },
+            {
+              "slug": "dinh-luat-faraday",
+              "title": "Định luật Faraday",
+              "question": "Tốc độ biến thiên từ thông quyết định suất điện động ra sao?",
+              "source": "29.2"
+            },
+            {
+              "slug": "dinh-luat-lenz",
+              "title": "Định luật Lenz",
+              "question": "Dòng cảm ứng chống lại sự thay đổi nào?",
+              "source": "29.3"
+            },
+            {
+              "slug": "suat-dien-dong-chuyen-dong",
+              "title": "Suất điện động do chuyển động",
+              "question": "Lực từ phân bố lại điện tích trong vật dẫn chuyển động thế nào?",
+              "source": "29.4"
+            },
+            {
+              "slug": "dien-truong-cam-ung",
+              "title": "Điện trường cảm ứng",
+              "question": "Điều gì đẩy điện tích trong vòng dây đứng yên khi từ thông biến thiên?",
+              "source": "29.5"
+            },
+            {
+              "slug": "dong-dien-foucault",
+              "title": "Dòng điện Fu-cô",
+              "question": "Dòng điện khép kín trong khối kim loại tạo lực hãm và nhiệt thế nào?",
+              "source": "29.6"
+            },
+            {
+              "slug": "dong-dien-dich-maxwell",
+              "title": "Dòng điện dịch và phương trình Maxwell",
+              "question": "Điện trường biến thiên bổ sung nguồn từ trường như thế nào?",
+              "source": "29.7"
+            },
+            {
+              "slug": "sieu-dan",
+              "title": "Siêu dẫn",
+              "question": "Trạng thái không điện trở còn có những tính chất từ nào?",
+              "source": "29.8"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "10-tu-cam",
@@ -1780,7 +1859,7 @@ export const physics2Course = {
         "Vôn kế mắc song song và có điện trở lớn.",
         "Chiết áp cân bằng đo suất điện động mà không lấy dòng từ nguồn cần đo ở điểm cân bằng."
       ],
-      "formula": "$$\n\\begin{aligned}\n&R_A&\\to0,\\\\\n&R_V&\\to\\infty,\\\\\n&I_G =0\\quad\\text{(cân bằng)}.\n\\end{aligned}\n$$",
+      "formula": "$$\n\\begin{aligned}\n&R_A \\to0,\\\\\n&R_V \\to\\infty,\\\\\n&I_G = 0.\n\\end{aligned}\n$$",
       "example": ""
     },
     {
@@ -2057,6 +2136,126 @@ export const physics2Course = {
         "Vòng trễ phụ thuộc lịch sử từ hóa nên không mô tả bằng một độ từ thẩm cố định."
       ],
       "formula": ""
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Biến thiên từ thông là điều kiện gây cảm ứng",
+      "bullets": [
+        "Nam châm đứng yên gần cuộn dây không gây dòng cảm ứng ổn định.",
+        "Chuyển động tương đối, biến đổi dòng nguồn hoặc đổi hình dạng cuộn đều có thể làm từ thông biến thiên.",
+        "Suất điện động phụ thuộc tốc độ thay đổi, không phụ thuộc riêng giá trị từ thông."
+      ],
+      "formula": "$$\n\\Phi_B=\\int_S\\vec B\\cdot d\\vec A\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Faraday gắn suất điện động với đạo hàm từ thông",
+      "bullets": [
+        "Chiều dương quanh vòng được gắn với pháp tuyến bằng quy tắc bàn tay phải.",
+        "N vòng nối tiếp có cùng từ thông cho suất điện động gấp N lần.",
+        "Mạch hở có thể có suất điện động dù không có dòng vòng."
+      ],
+      "formula": "$$\n\\mathcal E=-N\\frac{d\\Phi_B}{dt}\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Dấu của Faraday phải đi cùng pháp tuyến đã chọn",
+      "bullets": [
+        "Từ thông dương tăng cho suất điện động âm.",
+        "Từ thông dương giảm cho suất điện động dương.",
+        "Chỉ sau khi chọn pháp tuyến mới đổi dấu thành chiều chạy quanh vòng."
+      ],
+      "formula": "$$\n\\Phi_B=BA\\cos\\phi\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Cuộn quay tạo suất điện động hình sin",
+      "bullets": [
+        "Pháp tuyến quay đều làm góc với trường thay đổi tuyến tính theo thời gian.",
+        "Suất điện động cực đại khi từ thông đi qua không.",
+        "Cổ góp đổi nối điện mỗi nửa vòng để đầu ra giữ cùng dấu."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\Phi_B=BA\\cos\\omega t\\\\&\\mathcal E=N\\omega BA\\sin\\omega t.\\end{aligned}\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Lenz chống biến thiên từ thông",
+      "bullets": [
+        "Trường ngoài tăng thì dòng cảm ứng tạo trường ngược chiều trong vùng xét.",
+        "Trường ngoài giảm thì dòng cảm ứng có thể tạo trường cùng chiều.",
+        "Lực từ cản chuyển động sinh dòng, phù hợp bảo toàn năng lượng."
+      ],
+      "formula": ""
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Thanh chuyển động tách điện tích bằng lực từ",
+      "bullets": [
+        "Điện tích dương chịu lực theo tích có hướng của vận tốc với từ trường.",
+        "Trong thanh cô lập, điện trường tăng đến khi cân bằng lực từ.",
+        "Công thức tích vBL cần thanh, vận tốc và trường vuông góc từng đôi."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\vec E=-\\vec v\\times\\vec B\\\\&|\\mathcal E|=vBL.\\end{aligned}\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Suất điện động chuyển động cần tích phân theo từng phần tử",
+      "bullets": [
+        "Vận tốc và trường được lấy tại mỗi phần tử của vật dẫn.",
+        "Biểu thức này mô tả phần suất điện động do vật dẫn chuyển động.",
+        "Dây đứng yên trong từ trường biến thiên cần xét điện trường cảm ứng."
+      ],
+      "formula": "$$\n\\mathcal E=\\oint(\\vec v\\times\\vec B)\\cdot d\\vec\\ell\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Điện trường cảm ứng có tuần hoàn khác không",
+      "bullets": [
+        "Đường tích phân được giữ cố định trong dạng Faraday cho điện trường.",
+        "Điện trường này không bảo toàn và tồn tại cả khi không có dây dẫn.",
+        "Đối xứng trụ làm điện trường tiếp tuyến với các đường tròn đồng tâm."
+      ],
+      "formula": "$$\n\\oint\\vec E\\cdot d\\vec\\ell=-\\frac{d\\Phi_B}{dt}\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Dòng Fu-cô có thể hãm, nung nóng và tạo tín hiệu dò",
+      "bullets": [
+        "Các đường dòng khép kín trong chính khối vật dẫn.",
+        "Lực hãm chuyển cơ năng thành nhiệt.",
+        "Dòng Fu-cô trong lõi biến áp gây tổn hao cần giảm bằng cấu tạo lõi."
+      ],
+      "formula": ""
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Dòng điện dịch làm Ampere nhất quán khi nạp tụ",
+      "bullets": [
+        "Hai mặt cùng đường biên phải cho cùng tích phân từ trường.",
+        "Dòng dẫn trong dây bằng dòng dịch tổng trong khe của tụ lý tưởng đang nạp.",
+        "Dòng dịch không đồng nhất với dòng dẫn xuyên điện môi."
+      ],
+      "formula": "$$\n\\begin{aligned}&i_D=\\varepsilon\\frac{d\\Phi_E}{dt}\\\\&\\oint\\vec B\\cdot d\\vec\\ell\\\\&\\quad=\\mu_0(i_C+i_D)_{\\mathrm{encl}}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Maxwell liên hệ điện trường, từ trường và nguồn",
+      "bullets": [
+        "Hai định luật Gauss liên hệ thông lượng qua mặt kín với các nguồn.",
+        "Faraday và Ampere–Maxwell liên hệ tuần hoàn với các trường biến thiên.",
+        "Kết hợp lực Lorentz cho biết tác dụng của trường lên điện tích."
+      ],
+      "formula": "$$\n\\vec F=q(\\vec E+\\vec v\\times\\vec B)\n$$"
+    },
+    {
+      "note": "09-cam-ung-dien-tu",
+      "title": "Siêu dẫn bao gồm cả điện trở bằng không và hiệu ứng Meissner",
+      "bullets": [
+        "Chuyển pha cần nhiệt độ và trường ngoài phù hợp.",
+        "Meissner đẩy từ thông khỏi khối vật liệu trong trạng thái được xét.",
+        "Loại II có hai trường tới hạn, với miền hỗn hợp giữa hai ngưỡng."
+      ],
+      "formula": "$$\nB_{c1}<B_0<B_{c2}\n$$"
     }
   ],
   "illustration": "field",

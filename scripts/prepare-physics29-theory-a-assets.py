@@ -5,7 +5,8 @@ The crop rectangles are page coordinates in points, with a margin added by the
 script so labels, arrowheads, and captions near each illustration remain visible.
 """
 from pathlib import Path
-import fitz
+import pymupdf as fitz
+from PIL import Image, ImageChops, ImageDraw
 
 SOURCE = Path("raw_materials/physics/source/young-freedman-15.pdf")
 OUTPUT = Path("docs/vat-ly-2/bai-giang/img/young-29")
@@ -33,7 +34,7 @@ CROPS = {
     "hinh-29-14": (984, 83, 87, 578, 246),
     "hinh-29-15": (985, 454, 139, 616, 432),
     "hinh-29-16": (986, 34, 153, 199, 354),
-    "hinh-29-17": (987, 88, 114, 328, 317),
+    "hinh-29-17": (987, 88, 104, 328, 317),
 }
 
 MARGIN = 3
@@ -49,6 +50,18 @@ def main():
         rect &= page.rect
         pix = page.get_pixmap(matrix=fitz.Matrix(SCALE, SCALE), clip=rect, alpha=False)
         pix.save(OUTPUT / f"{stem}.png")
+        path=OUTPUT/f"{stem}.png"
+        image=Image.open(path).convert('RGB')
+        if stem == 'hinh-29-17':
+            # The preceding caption ends in the top-left corner of this clip.
+            # Remove only that prose; keep the y-axis label at PDF x=167.5.
+            mask_right=round((146-rect.x0)*SCALE)
+            mask_bottom=round((106-rect.y0)*SCALE)
+            ImageDraw.Draw(image).rectangle((0,0,mask_right,mask_bottom),fill='white')
+        bounds=ImageChops.difference(image,Image.new('RGB',image.size,'white')).getbbox()
+        if bounds:
+            left,top,right,bottom=bounds
+            image.crop((max(0,left-12),max(0,top-12),min(image.width,right+12),min(image.height,bottom+12))).save(path,optimize=True)
         print(f"{stem}: PDF p.{page_number}, crop={tuple(round(v, 1) for v in rect)}")
     print(f"Wrote {len(CROPS)} crops to {OUTPUT}")
 

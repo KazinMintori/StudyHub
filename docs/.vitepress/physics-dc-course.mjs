@@ -30,7 +30,7 @@ export const dcSlides=[
  {note,title:'Dụng cụ thực làm thay đổi đại lượng đang đo',bullets:['Ampe kế mắc nối tiếp và có điện trở nhỏ.','Vôn kế mắc song song và có điện trở lớn.','Chiết áp cân bằng đo suất điện động mà không lấy dòng từ nguồn cần đo ở điểm cân bằng.'],formula:d(String.raw`\begin{aligned}
 &R_A \to0,\\
 &R_V \to\infty,\\
-&I_G = 0\quad\text{(cân bằng)}.
+&I_G = 0.
 \end{aligned}`),example:''},
  {note,title:'Nạp tụ qua điện trở là quá trình tiến dần đến cân bằng',bullets:['Tụ ban đầu chưa tích điện, nguồn và điện trở không đổi.','Điện tích liên tục nên tụ chưa có điện áp ngay khi đóng công tắc.','Khi thời gian đủ dài, dòng bằng không và điện áp tụ bằng suất điện động nguồn.'],formula:d(String.raw`\begin{aligned}
 &\tau = RC,\\
@@ -101,7 +101,8 @@ export const dcCheatsheet={summary:'Định nghĩa, tính chất và công thứ
    String.raw`$m$: Số lượng các nhánh rẽ quy tụ tại nút khảo sát (Không có đơn vị)`
   ],description:'Dòng vào mang dấu dương, dòng ra mang dấu âm (hoặc ngược lại). Tổng đại số các dòng điện tại một nút bằng không.'},
   {name:'Quy tắc vòng',formula:d(String.raw`\begin{aligned}
-&\Delta V_1+\Delta V_2+\cdots+\Delta V_k = 0,\\
+&\Delta V_1+\Delta V_2\\
+&\quad+\cdots+\Delta V_k = 0,\\
 &\sum_{j=1}^{k}\Delta V_j = 0.
 \end{aligned}`),variables:[
    String.raw`$\Delta V_j$: Độ biến thiên điện thế dọc theo đoạn mạch thứ $j$ trong vòng kín ($\mathrm{V}$)`,
@@ -156,8 +157,10 @@ export const dcCheatsheet={summary:'Định nghĩa, tính chất và công thứ
   ],description:'q(0) = 0, tụ ban đầu chưa tích điện. i(0) = ℰ/R, vC(0) = 0. Sau thời gian dài: q → Cℰ, i → 0, vC → ℰ.'},
   {name:'Điều kiện đầu, cuối và hằng số thời gian',formula:d(String.raw`\begin{aligned}
 &\tau = RC,\\
-&q(\tau) = (1-e^{-1})Q_{\mathrm{max}}\approx 0.632\,Q_{\mathrm{max}},\\
-&i(\tau) = e^{-1}I_0\approx 0.368\,I_0.
+&q(\tau) = (1-e^{-1})Q_{\mathrm{max}}\\
+&\quad\approx 0.632\,Q_{\mathrm{max}},\\
+&i(\tau) = e^{-1}I_0\\
+&\quad\approx 0.368\,I_0.
 \end{aligned}`),variables:[
    String.raw`$\tau$: Hằng số thời gian đặc trưng cho tốc độ nạp tụ ($\mathrm{s}$)`,
    String.raw`$R$: Điện trở mạch nạp ($\Omega$)`,
@@ -200,7 +203,8 @@ export const dcCheatsheet={summary:'Định nghĩa, tính chất và công thứ
   ],description:'Các thiết bị trong mạng điện gia đình mắc song song để hoạt động độc lập ở cùng điện áp định mức.'},
   {name:'Công suất nhiệt và đơn vị kilowatt-giờ',formula:d(String.raw`\begin{aligned}
 &P = VI = I^2R = \frac{V^2}{R},\\
-&1\,\mathrm{kW\cdot h} = 3.60\times 10^6\,\mathrm J = 3.60\,\mathrm{MJ}.
+&1\,\mathrm{kW\cdot h} = 3.60\times 10^6\,\mathrm J\\
+&\quad= 3.60\,\mathrm{MJ}.
 \end{aligned}`),variables:[
    String.raw`$P$: Công suất tiêu thụ của thiết bị điện ($\mathrm{W}$ hoặc $\mathrm{kW}$)`,
    String.raw`$V$: Điện áp làm việc của mạng điện ($\mathrm{V}$)`,

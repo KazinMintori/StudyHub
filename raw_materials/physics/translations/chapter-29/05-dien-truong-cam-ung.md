@@ -30,7 +30,7 @@ $$
 
 Dạng $\mathcal{E}=-d\Phi_B/dt$ dùng được cả khi mạch chuyển động. Dạng tích phân điện trường trong (29.10) được dùng cho đường tích phân đứng yên.
 
-Với vòng dây tròn bán kính $r$, đối xứng trụ cho biết $\vec E$ tiếp tuyến với vòng và có cùng độ lớn tại mọi điểm. Nếu điện trường hướng xuyên tâm thì định luật Gauss đòi hỏi có điện tích thuần bên trong vòng, trong khi không có điện tích như vậy. Vì thế tích phân đường có độ lớn $2\pi rE$, suy ra:
+Với đường tròn bán kính $r$ đồng trục ống dây, điện trường cảm ứng có thành phần tiếp tuyến cùng độ lớn tại mọi điểm nhờ đối xứng trụ. Thành phần xuyên tâm, nếu xét thêm, không góp vào tích phân đường trên vòng tròn. Trong mô hình không có điện tích bên trong và trường không kỳ dị trên trục, cũng có thể dùng định luật Gauss với một mặt trụ kín đồng trục để loại thành phần xuyên tâm đối xứng. Ký hiệu độ lớn thành phần tiếp tuyến là $E$. Khi đó tuần hoàn điện trường có độ lớn $2\pi rE$, nên:
 
 $$
 E=\frac{1}{2\pi r}\left|\frac{d\Phi_B}{dt}\right|.
@@ -78,13 +78,15 @@ E&=\frac{|\mathcal E|}{2\pi r}\\
 \end{aligned}
 $$
 
-Trong hình, từ thông hướng vào mặt trang đang tăng. Theo quy ước chiều dương của hình, suất điện động âm nên dòng cảm ứng chạy ngược chiều kim đồng hồ. Có thể suy ra cùng chiều bằng định luật Lenz: dòng cảm ứng tạo từ trường chống lại phần từ thông đang tăng.
+Trong hình, từ thông hướng vào mặt trang đang tăng. Theo quy ước chiều dương của hình, suất điện động âm nên dòng cảm ứng chạy ngược chiều kim đồng hồ. Có thể suy ra cùng chiều bằng định luật Lenz: Dòng cảm ứng tạo từ trường chống lại phần từ thông đang tăng.
 
-![Hình29.18: Ống dây có dòng điện tăng tạo từ thông biến thiên qua vòng dây đồng trục, gây điện trường cảm ứng và dòng điện đo bằng galvanometer](../img/young-29/hinh-29-18.png)
+![Hình 29.18: Ống dây có dòng điện tăng tạo từ thông biến thiên qua vòng dây đồng trục, gây điện trường cảm ứng và dòng điện đo bằng điện kế](../img/young-29/hinh-29-18.png)
 
-Điện trường cảm ứng có nhiều ứng dụng. Khi xe điện giảm tốc, bánh xe vẫn quay động cơ theo chiều máy phát, tạo dòng nạp lại pin. Trục khuỷu của động cơ piston trên máy bay quay nam châm, làm xuất hiện suất điện động trong cuộn dây bên cạnh và tạo tia lửa đốt nhiên liệu. Pickup của guitar điện cảm ứng dòng trong cuộn dây đứng yên khi dây đàn sắt từ rung. Máy phát điện xoay chiều trên ô tô cũng dùng nam châm quay để tạo dòng trong các cuộn dây đứng yên.
+Điện trường cảm ứng có nhiều ứng dụng. Khi xe điện giảm tốc, bánh xe vẫn quay động cơ theo chiều máy phát, tạo dòng nạp lại pin. Trục khuỷu của động cơ piston trên máy bay quay nam châm, làm xuất hiện suất điện động trong cuộn dây bên cạnh và tạo tia lửa đốt nhiên liệu. Cơ chế này giúp động cơ tiếp tục chạy khi các hệ thống điện khác của máy bay hỏng.
 
-![Hình29.19: Xe điện nạp pin khi giảm tốc và cuộn đánh lửa trong máy bay động cơ piston](../img/young-29/hinh-29-19.png)
+Bộ thu tín hiệu của guitar điện cảm ứng dòng trong cuộn dây đứng yên khi dây đàn sắt từ rung. Máy phát điện xoay chiều trên ô tô cũng dùng nam châm quay để tạo dòng trong các cuộn dây đứng yên.
+
+![Hình 29.19: Xe điện nạp pin khi giảm tốc và cuộn đánh lửa trong máy bay động cơ piston](../img/young-29/hinh-29-19.png)
 
 ### Tự kiểm 29.5
 

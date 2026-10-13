@@ -3,29 +3,44 @@ course: vat-ly-2
 lecture: 09-cam-ung-dien-tu
 section: lecture
 title: "Cảm ứng điện từ"
-prerequisites: ["thong-luong","tu-truong","dao-ham","dong-dien"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Cảm ứng điện từ."
+prerequisites: ["vector","tich-vo-huong","tich-co-huong","dao-ham","tich-phan","dien-truong-bao-toan","suat-dien-dong","luc-tu-tren-dien-tich","momen-tu","dien-dung","ong-day-dien","dinh-luat-ampere"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Cảm ứng điện từ, Faraday, Lenz, suất điện động chuyển động, điện trường cảm ứng, dòng Fu-cô, Maxwell và siêu dẫn."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 29.1 — Induction Experiments (từ trang 954).
-- 29.2 — Faraday’s Law (từ trang 955).
-- 29.3 — Lenz’s Law (từ trang 962).
-- 29.4 — Motional emf (từ trang 965).
-- 29.5 — Induced Electric Fields (từ trang 967).
-- 29.6 — Eddy Currents (từ trang 969).
-- 29.7 — Displacement Current and Maxwell’s Equations (từ trang 970).
-- 29.8 — Superconductivity (từ trang 975).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/09-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 29, trang 953–987.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Cảm ứng điện từ">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/10-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/11-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/12-bai-tap-01-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/13-bai-tap-31-60.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/14-bai-tong-hop-61-66.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/15-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-29/16-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, chương 29, trang 978–987 và phụ lục đáp số A-18.
+
+</div>

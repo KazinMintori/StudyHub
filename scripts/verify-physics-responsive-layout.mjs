@@ -45,7 +45,7 @@ async function inspect(label){
  results.push({label,...data})
 }
 try{
- for(const [course,slug] of [['vat-ly-2','02-dien-the'],['vat-ly-1','02-chuyen-dong-thang'],['vat-ly-2','03-dinh-luat-gauss'],['vat-ly-2','01-dien-truong-coulomb'],['vat-ly-2','04-tu-dien-dien-moi'],['vat-ly-2','05-dong-dien-dien-tro'],['vat-ly-2','06-mach-dien-mot-chieu'],['vat-ly-2','07-tu-truong-luc-tu'],['vat-ly-2','08-nguon-tu-truong']]){
+ for(const [course,slug] of [['vat-ly-2','02-dien-the'],['vat-ly-1','02-chuyen-dong-thang'],['vat-ly-2','03-dinh-luat-gauss'],['vat-ly-2','01-dien-truong-coulomb'],['vat-ly-2','04-tu-dien-dien-moi'],['vat-ly-2','05-dong-dien-dien-tro'],['vat-ly-2','06-mach-dien-mot-chieu'],['vat-ly-2','07-tu-truong-luc-tu'],['vat-ly-2','08-nguon-tu-truong'],['vat-ly-2','09-cam-ung-dien-tu']]){
   await page.setViewport({width:1440,height:1100})
   await page.goto(`${base}/${course}/bai-giang/${slug}.html#cheatsheet`,{waitUntil:'domcontentloaded',timeout:45000})
   await page.waitForSelector('.lecture-cheatsheet .cheatsheet-card')

@@ -729,8 +729,8 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/09-cam-ung-dien-tu": {
-    "words": 148,
-    "minutes": 5
+    "words": 10871,
+    "minutes": 55
   },
   "vat-ly-2/10-tu-cam": {
     "words": 134,
@@ -835,5 +835,37 @@ export const readingMetadata = {
   "discrete-math/graph-theory": {
     "words": 501,
     "minutes": 5
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/thi-nghiem-cam-ung": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-faraday": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-lenz": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/suat-dien-dong-chuyen-dong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dien-truong-cam-ung": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-foucault": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-dich-maxwell": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/sieu-dan": {
+    "words": 20,
+    "minutes": 3
   }
 }
