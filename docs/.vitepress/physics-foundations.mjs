@@ -1,3 +1,4 @@
+import {acConcepts,acWikiDetails,acWikiConnections} from './physics-ac-foundations.mjs'
 import {inductanceConcepts,inductanceWikiDetails,inductanceWikiConnections} from './physics-inductance-foundations.mjs'
 import {inductionConcepts,inductionWikiDetails,inductionWikiConnections} from './physics-induction-foundations.mjs'
 import {sourcesConcepts,sourcesWikiDetails,sourcesWikiConnections} from './physics-sources-foundations.mjs'
@@ -319,6 +320,7 @@ export const physicsConcepts = {
   },
   ...inductionConcepts,
   ...inductanceConcepts,
+  ...acConcepts,
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -358,6 +360,7 @@ export const physicsWikiDetails = {
   "phan-ra-phong-xa": "$N(t)=N_0e^{-\\lambda_dt}$, $T_{1/2}=\\ln2/\\lambda_d$ và hoạt độ $\\mathcal A=\\lambda_dN$. Đơn vị becquerel dùng thời gian tính bằng giây.\n\nHoạt độ không phải liều hấp thụ. Phân rã alpha, beta và gamma cần xét loại hạt phát ra và những định luật bảo toàn phù hợp; phát gamma thuần túy không đổi số proton và neutron.\n\nNguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 43. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.",
   ...inductionWikiDetails,
   ...inductanceWikiDetails,
+  ...acWikiDetails,
 }
 
 export const physicsWikiConnections = {
@@ -486,4 +489,5 @@ export const physicsWikiConnections = {
   ],
   ...inductionWikiConnections,
   ...inductanceWikiConnections,
+  ...acWikiConnections,
 }

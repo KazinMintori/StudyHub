@@ -90,7 +90,15 @@ Tab Bài tập có 75 bài đánh số, 16 câu thảo luận, 12 bài biến th
 
 Hai đầu ra Antigravity được giữ trong worktree riêng sau lỗi cầu nối và timeout. Codex đối chiếu, sửa và tự kiểm tra các bản sao trước khi tích hợp. Hồ sơ riêng ghi giả thiết xung ở 30.53 và dấu hỗ cảm ở 30.69, cùng các lỗi nhận diện tiền tố micro.
 
-## Các chương 31–44
+## Chương 31
+
+Đã hoàn tất sáu mục lý thuyết, chín ví dụ, 37 công thức đánh số và 24 hình đánh số. Có 48 PNG trích trực tiếp, đối chiếu pixel với PDF, cùng năm SVG lời giải. Chú thích tiếng Việt và diễn giải nhãn tiếng Anh nằm dưới từng hình.
+
+Tab Bài tập có 72 bài đánh số, 19 câu thảo luận, 12 bài luyện tập hướng dẫn và một bài cầu nối, với 104 hộp lời giải. Có 11 Slides, sáu nhóm Cheatsheet với 21 mục chỉ gồm định nghĩa, tính chất và công thức, cùng 10 Wiki mới. Các dữ kiện thiếu hoặc sai lệch đáp số được xử lý trong hồ sơ riêng, không điều chỉnh mô hình để khớp đáp số.
+
+Các bộ Python, kiểm tra cấu trúc toàn site, 39 kiểm thử skill và bảy kiểm thử bộ hiển thị toán đã qua. Có 135 lượt kiểm tra giao diện ở 320, 360, 375 và 1440 px, cùng bảy lần đổi bề rộng trực tiếp. Không có tràn công thức hoặc lỗi JavaScript. Build toàn bộ và triển khai được giao cho GitHub Actions. Trạng thái xuất bản được ghi riêng.
+
+## Các chương 32–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

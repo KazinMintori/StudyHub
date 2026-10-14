@@ -14,7 +14,7 @@ onContentUpdated(async () => {
 })
 function openSidebar() { document.querySelector('.VPLocalNav .menu')?.click() }
 function closeOutline() { if (mobileOutline.value) mobileOutline.value.open = false }
-const lectureLabel = lesson => lesson.kind === 'review' ? 'Ôn luyện' : `Lecture ${String(lesson.number ?? 0).padStart(2, '0')}`
+const lectureLabel = lesson => lesson.kind === 'review' ? 'Ôn luyện' : `Bài ${String(lesson.number ?? 0).padStart(2, '0')}`
 </script>
 
 <template>

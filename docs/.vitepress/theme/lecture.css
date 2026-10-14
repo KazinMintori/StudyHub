@@ -36,14 +36,14 @@
   overflow: visible !important;
   padding-inline: 0;
 }
-.Layout.has-chapter-exercises .cheatsheet-card,
-.Layout.has-chapter-exercises .cheatsheet-item,
-.Layout.has-chapter-exercises .item-formula { min-width: 0; }
-.Layout.has-chapter-exercises .item-formula { overflow: visible; }
+.Layout .cheatsheet-card,
+.Layout .cheatsheet-item,
+.Layout .item-formula { min-width: 0; }
+.Layout .item-formula { overflow: visible; }
 @media (max-width: 767px) {
-  .Layout.has-chapter-exercises .cheatsheet-grid { grid-template-columns: minmax(0, 1fr); }
-  .Layout.has-chapter-exercises .cheatsheet-card { padding: var(--space-3); }
-  .Layout.has-chapter-exercises .item-formula { padding: var(--space-2); }
+  .Layout .cheatsheet-grid { grid-template-columns: minmax(0, 1fr); }
+  .Layout .cheatsheet-card { padding: var(--space-3); }
+  .Layout .item-formula { padding: var(--space-2); }
 }
 .Layout.has-chapter-exercises .lecture-exercises-content details {
   border: 1px solid var(--rule);

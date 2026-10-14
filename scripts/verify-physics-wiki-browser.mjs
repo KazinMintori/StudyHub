@@ -1,3 +1,4 @@
+import {acConcepts} from '../docs/.vitepress/physics-ac-foundations.mjs'
 import {inductanceConcepts} from '../docs/.vitepress/physics-inductance-foundations.mjs'
 import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
@@ -19,11 +20,12 @@ const page=await browser.newPage(),results=[],errors=[]
 page.on('pageerror',error=>errors.push(error.message))
 await page.evaluateOnNewDocument(()=>sessionStorage.setItem('studyhub_welcome_seen','1'))
 const readyConcepts=[physics1Course,physics2Course].flatMap(course=>course.lessons.filter(lesson=>lesson.status==='ready').flatMap(lesson=>[...(lesson.prerequisites||[]),...(lesson.supportingConcepts||[])]))
-const ids=[...new Set([...Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts,...dcConcepts,...magneticConcepts,...sourcesConcepts,...inductionConcepts,...inductanceConcepts}),...readyConcepts])]
+const ids=[...new Set([...Object.keys({...electrostaticsConcepts,...gaussConcepts,...potentialConcepts,...capacitanceConcepts,...currentConcepts,...dcConcepts,...magneticConcepts,...sourcesConcepts,...inductionConcepts,...inductanceConcepts,...acConcepts}),...readyConcepts])]
 try{
- for(const width of [320,375,1440]){
+ for(const width of (process.env.QA_WIDTHS||'320,375,1440').split(',').map(Number)){
   await page.setViewport({width,height:900})
   for(const id of ids){
+   console.log('Inspecting Wiki',width,id)
    const response=await page.goto(`${preview.url}/wiki/${id}.html`,{waitUntil:'domcontentloaded',timeout:45000})
    assert.equal(response.status(),200,id)
    await page.waitForSelector('.vp-doc h1')
@@ -45,5 +47,5 @@ try{
  await writeFile('qa/physics/wiki/browser-results.json',JSON.stringify({checks:results.length,errors,failed},null,2)+'\n')
  assert.deepEqual(errors,[])
  assert.deepEqual(failed,[])
- console.log('Passed',results.length,'Physics Wiki views at 320, 375 and 1440 px.')
+ console.log('Passed',results.length,'Physics Wiki views at configured widths.')
 }finally{await browser.close();await preview.close()}

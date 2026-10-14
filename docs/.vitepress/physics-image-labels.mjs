@@ -1,3 +1,5 @@
+import {physics31ExerciseImageAnnotations} from './physics31-exercise-image-annotations.mjs'
+import {physics31TheoryImageAnnotations} from './physics31-theory-image-annotations.mjs'
 import {physics30ExerciseImageAnnotations} from './physics30-exercise-image-annotations.mjs'
 import {physics30TheoryAImageAnnotations} from './physics30-theory-a-image-annotations.mjs'
 import {physics30TheoryBImageAnnotations} from './physics30-theory-b-image-annotations.mjs'
@@ -116,6 +118,8 @@ const originalLabels={
 }
 export const physicsImageLabels={
  ...physics30ExerciseImageAnnotations,...physics30TheoryAImageAnnotations,...physics30TheoryBImageAnnotations,
+ ...physics31TheoryImageAnnotations,
+ ...physics31ExerciseImageAnnotations,
  ...physics28ExerciseImageAnnotations,
  ...physics28TheoryBImageAnnotations,
  ...physics28TheoryAImageAnnotations,...originalLabels,...physics21ImageAnnotations,...physics22ImageAnnotations,...physics23ImageAnnotations,...physics24ImageAnnotations,  ...physics29TheoryAImageAnnotations,

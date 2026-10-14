@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="656.39952pt" height="512.39952pt" viewBox="0 0 656.39952 512.39952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 512.39952
+L 656.39952 512.39952
+L 656.39952 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 101.151149 90.874793
+L 414.321647 90.874793
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 6"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 54.175575 90.874793
+L 101.151149 90.874793
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 101.151149 129.59673
+L 414.321647 129.59673
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 6"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 461.297221 129.59673
+L 414.321647 129.59673
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 101.151149 168.318667
+L 414.321647 168.318667
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 6"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 54.175575 168.318667
+L 101.151149 168.318667
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 101.151149 207.040604
+L 414.321647 207.040604
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 6"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 461.297221 207.040604
+L 414.321647 207.040604
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 101.151149 245.762541
+L 414.321647 245.762541
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 6"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 54.175575 245.762541
+L 101.151149 245.762541
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 101.151149 284.484479
+L 414.321647 284.484479
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 6"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 461.297221 284.484479
+L 414.321647 284.484479
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 101.151149 323.206416
+L 414.321647 323.206416
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 6"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 54.175575 323.206416
+L 101.151149 323.206416
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 101.151149 361.928353
+L 414.321647 361.928353
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 6"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 461.297221 361.928353
+L 414.321647 361.928353
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 101.151149 400.65029
+L 414.321647 400.65029
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 6"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 54.175575 400.65029
+L 101.151149 400.65029
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 101.151149 439.372227
+L 414.321647 439.372227
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 6"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 461.297221 439.372227
+L 414.321647 439.372227
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 54.175575 400.65029
+L 54.175575 90.874793
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #236aac; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 461.297221 439.372227
+L 461.297221 129.59673
+" clip-path="url(#p3be16c3f70)" style="fill: none; stroke: #b24758; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="116.044052" transform="rotate(-0 492.614271 116.044052)">Khe 1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="154.765989" transform="rotate(-0 492.614271 154.765989)">Khe 2</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="193.487926" transform="rotate(-0 492.614271 193.487926)">Khe 3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="232.209863" transform="rotate(-0 492.614271 232.209863)">Khe 4</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="270.931801" transform="rotate(-0 492.614271 270.931801)">Khe 5</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="309.653738" transform="rotate(-0 492.614271 309.653738)">Khe 6</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="348.375675" transform="rotate(-0 492.614271 348.375675)">Khe 7</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="387.097612" transform="rotate(-0 492.614271 387.097612)">Khe 8</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="492.614271" y="425.819549" transform="rotate(-0 492.614271 425.819549)">Khe 9</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #236aac" x="30.687787" y="52.152856" transform="rotate(-0 30.687787 52.152856)">Nhóm A: Năm bản</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b24758" x="351.687547" y="52.152856" transform="rotate(-0 351.687547 52.152856)">Nhóm B: Năm bản</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="101.151149" y="485.838551" transform="rotate(-0 101.151149 485.838551)">Mỗi khe đối diện có khoảng cách g/2</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle" x="328.19976" y="19.0475" transform="rotate(-0 328.19976 19.0475)">Mười bản đan xen tạo chín khe chịu cùng hiệu điện thế</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3be16c3f70">
+   <rect x="7.2" y="25.0475" width="641.99952" height="480.15202"/>
+  </clipPath>
+ </defs>
+</svg>

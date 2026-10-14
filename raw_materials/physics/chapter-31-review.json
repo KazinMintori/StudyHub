@@ -1,0 +1,59 @@
+{
+  "chapter": 31,
+  "status": "content-complete",
+  "theorySections": 6,
+  "examples": 9,
+  "equations": 37,
+  "numberedFigures": 24,
+  "sourceFigureAssets": 48,
+  "solutionDiagrams": 5,
+  "exercises": 72,
+  "discussionQuestions": 19,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 104,
+  "slides": 11,
+  "strictCheatsheetSections": 6,
+  "strictCheatsheetItems": 21,
+  "newWikiTerms": 10,
+  "numericEvidence": "qa/physics/chapter31/numeric-checks.json",
+  "sourceReview": [
+    "raw_materials/physics/reviews/ch31-theory-source-review.md",
+    "raw_materials/physics/reviews/ch31-final-source-review.md"
+  ],
+  "sourceImageIntegrity": "qa/physics/chapter31/source-image-integrity.json",
+  "sourceClarifications": [
+    "Example31.2 uses250 microamperes, not250 milliamperes.",
+    "VP31.3.4 has insufficient independent data for capacitance and capacitor voltage; do not invent a condition.",
+    "VP31.7.4 retains printed capacitance0.440microfarads, giving negative phase andR=103.100233ohms.",
+    "31.40 retainsV=30V as source amplitude; voltmeters read rms.",
+    "31.44 remains an open measurement problem with stated idealizations; load current alone is not magnetizing current.",
+    "31.53 has ten alternating plates and nine opposing gaps; no adjustment to fit the inconsistent appendix.",
+    "31.14 includes correctly calculated instantaneous voltages at20ms with an explicit current phase origin.",
+    "31.16 and31.28 retain both admissible voltage signs. 31.57 retains both positive frequency roots.",
+    "31.65 distinguishes exact minus3.0dB from nominal half-power. 31.66 uses1.00microhenry.",
+    "31.68 states positive component conditions, finite-peak conditions and the singular lossless resonance."
+  ],
+  "delegationReview": "Both chapter31 AGY tasks exhausted three calls. Original worktrees and final snapshots were preserved. Codex reviewed and corrected the scoped output, retaining every source prompt and original figure.",
+  "renderReview": "passed",
+  "publication": "ready-for-push",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "renderEvidence": {
+    "chapterViews": 135,
+    "liveViewportTransitions": 7,
+    "mathOverflows": 0,
+    "javascriptErrors": 0,
+    "sourceDisplayExpressions": 721,
+    "sourceInlineExpressions": 2541,
+    "scope": "Chapter31 Notes, all104 collapsed solutions,11 slides, six Cheatsheet groups, six topics and ten Wiki pages. Private dev selector included the two Physics courses only.",
+    "fullBuild": "Delegated to GitHub Actions; no local full build after the policy update.",
+    "skillTests": 39,
+    "renderUnitTests": 7,
+    "report": "qa/physics/chapter31/full-browser/results.json"
+  }
+}

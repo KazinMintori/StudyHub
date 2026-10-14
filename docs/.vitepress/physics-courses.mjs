@@ -1285,19 +1285,82 @@ export const physics2Course = {
       "hasChapterExercises": true
     },
     {
-      "slug": "11-dong-dien-xoay-chieu",
-      "title": "Dòng điện xoay chiều",
-      "prerequisites": [
-        "tu-cam",
-        "dien-dung",
-        "dien-tro",
-        "pha-song"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 11,
-      "sourceChapter": 31
-    },
+        "slug": "11-dong-dien-xoay-chieu",
+        "title": "Dòng điện xoay chiều",
+        "prerequisites": [
+          "dao-ham",
+          "tich-phan",
+          "dao-dong-dieu-hoa",
+          "dien-tro",
+          "dien-dung",
+          "cuon-cam",
+          "quy-tac-kirchhoff",
+          "dinh-luat-faraday",
+          "ho-cam",
+          "dong-dien-dich",
+          "dien-ke",
+          "tu-tre"
+        ],
+        "supportingConcepts": [
+          "dong-dien-xoay-chieu",
+          "vector-pha",
+          "gia-tri-hieu-dung",
+          "cam-khang",
+          "dung-khang",
+          "tro-khang",
+          "goc-pha-mach-dien",
+          "he-so-cong-suat",
+          "cong-huong-dien",
+          "may-bien-ap"
+        ],
+        "status": "ready",
+        "number": 11,
+        "sourceChapter": 31,
+        "topicGroups": [
+          {
+            "title": "Pha, đáp ứng và năng lượng của mạch xoay chiều",
+            "topics": [
+              {
+                "slug": "gian-do-pha-hieu-dung",
+                "title": "Giản đồ pha và giá trị hiệu dụng",
+                "question": "Một vector quay biểu diễn dòng hình sin và giá trị hiệu dụng ra sao?",
+                "source": "31.1"
+              },
+              {
+                "slug": "dien-tro-dien-khang",
+                "title": "Điện trở và điện kháng",
+                "question": "Vì sao điện trở, cuộn cảm và tụ có quan hệ pha khác nhau?",
+                "source": "31.2"
+              },
+              {
+                "slug": "mach-rlc-noi-tiep",
+                "title": "Mạch RLC nối tiếp có nguồn",
+                "question": "Cộng các điện áp lệch pha để tìm trở kháng như thế nào?",
+                "source": "31.3"
+              },
+              {
+                "slug": "cong-suat-xoay-chieu",
+                "title": "Công suất và hệ số công suất",
+                "question": "Điện áp và dòng lệch pha làm công suất trung bình thay đổi ra sao?",
+                "source": "31.4"
+              },
+              {
+                "slug": "cong-huong",
+                "title": "Cộng hưởng trong mạch xoay chiều",
+                "question": "Tần số nào cho dòng lớn nhất và điện trở làm đổi đỉnh thế nào?",
+                "source": "31.5"
+              },
+              {
+                "slug": "may-bien-ap",
+                "title": "Máy biến áp",
+                "question": "Hai cuộn ghép từ đổi điện áp, dòng và điện trở nhìn từ nguồn ra sao?",
+                "source": "31.6"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "12-song-dien-tu",
       "title": "Sóng điện từ",
@@ -2428,6 +2491,116 @@ export const physics2Course = {
         "Trên ngưỡng, nghiệm là tổng hai hàm mũ thực suy giảm."
       ],
       "formula": "$$\n\\begin{aligned}&R_{\\mathrm{th}}=2\\sqrt{\\frac LC}\\\\&R<R_{\\mathrm{th}}\\\\&R=R_{\\mathrm{th}}\\\\&R>R_{\\mathrm{th}}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Vector pha biến dao động hình sin thành hình chiếu",
+      "bullets": [
+        "Độ dài vector bằng biên độ và tốc độ quay bằng tần số góc.",
+        "Hình chiếu ngang cho giá trị tức thời khi dùng cosin.",
+        "Vector pha biểu diễn biên độ và pha, không chỉ một hướng vật lý trong không gian."
+      ],
+      "formula": "$$\n\\begin{aligned}&i=I\\cos\\omega t\\\\&\\omega=2\\pi f.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Trung bình, trung bình chỉnh lưu và hiệu dụng khác nhau",
+      "bullets": [
+        "Dòng hình sin có trung bình bằng không qua một số nguyên chu kỳ.",
+        "Chỉnh lưu toàn sóng giữ dấu dòng qua điện kế cùng chiều.",
+        "Giá trị hiệu dụng được lấy bằng căn của trung bình bình phương."
+      ],
+      "formula": "$$\n\\begin{aligned}&I_{\\mathrm{rav}}=\\frac2\\pi I\\\\&I_{\\mathrm{rms}}=\\frac I{\\sqrt2}\\\\&V_{\\mathrm{rms}}=\\frac V{\\sqrt2}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Điện trở giữ điện áp và dòng cùng pha",
+      "bullets": [
+        "Định luật Ohm liên hệ các giá trị tức thời trên điện trở thuần.",
+        "Các cực đại, cực tiểu và điểm bằng không xuất hiện cùng lúc.",
+        "Tỉ số biên độ cũng bằng điện trở."
+      ],
+      "formula": "$$\n\\begin{aligned}&v_R=iR\\\\&V_R=IR.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Cuộn cảm làm điện áp sớm dòng một phần tư chu kỳ",
+      "bullets": [
+        "Điện áp cuộn theo quy ước thụ động phụ thuộc đạo hàm dòng.",
+        "Cảm kháng tăng theo tần số và điện cảm.",
+        "Quan hệ giữa biên độ không thay thế được quan hệ tức thời."
+      ],
+      "formula": "$$\n\\begin{aligned}&v_L=L\\frac{di}{dt}\\\\&X_L=\\omega L\\\\&V_L=IX_L.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Tụ làm điện áp trễ dòng một phần tư chu kỳ",
+      "bullets": [
+        "Dòng là điện dung nhân tốc độ thay đổi điện áp.",
+        "Dung kháng giảm khi tần số hoặc điện dung tăng.",
+        "Dòng dẫn không xuyên qua điện môi, nhưng dòng điện dịch duy trì sự liên tục."
+      ],
+      "formula": "$$\n\\begin{aligned}&i=C\\frac{dv_C}{dt}\\\\&X_C=\\frac1{\\omega C}\\\\&V_C=IX_C.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "RLC nối tiếp cần cộng vector điện áp",
+      "bullets": [
+        "Dòng tức thời như nhau trên mọi phần tử nối tiếp.",
+        "Điện áp cuộn cảm và tụ ngược pha, nên điện kháng tổng là hiệu hai điện kháng.",
+        "Biên độ nguồn là độ lớn tổng vector, còn các điện áp tức thời cộng đại số."
+      ],
+      "formula": "$$\n\\begin{aligned}&X=X_L-X_C\\\\&Z=\\sqrt{R^2+X^2}\\\\&V=IZ.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Góc pha phụ thuộc dấu điện kháng tổng",
+      "bullets": [
+        "Chọn dòng làm mốc, góc pha dương nghĩa điện áp nguồn sớm dòng.",
+        "Cảm kháng lớn hơn dung kháng cho góc dương, còn dung kháng lớn hơn cho góc âm.",
+        "Các tỉ số điện áp và dòng giữ nguyên khi đồng loạt dùng hiệu dụng."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\tan\\phi=\\frac{X_L-X_C}{R}\\\\&v=V\\cos(\\omega t+\\phi)\\\\&V_{\\mathrm{rms}}=I_{\\mathrm{rms}}Z.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Công suất trung bình nhận thành phần điện áp cùng pha",
+      "bullets": [
+        "Điện trở tiêu tán năng lượng theo cả hai chiều dòng.",
+        "Cuộn cảm và tụ lý tưởng nhận rồi trả năng lượng, với công suất trung bình bằng không.",
+        "Trong RLC nối tiếp, toàn bộ công suất nhận ròng được tiêu tán trên điện trở."
+      ],
+      "formula": "$$\n\\begin{aligned}&p=vi\\\\&P_{\\mathrm{av}}=\\frac12VI\\cos\\phi\\\\&\\quad=V_{\\mathrm{rms}}I_{\\mathrm{rms}}\\cos\\phi.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Hệ số công suất thấp làm dòng đường dây lớn hơn",
+      "bullets": [
+        "Với cùng điện áp và công suất trung bình, hệ số công suất nhỏ đòi hỏi dòng lớn.",
+        "Dòng lớn tăng tổn hao nhiệt trên đường dây.",
+        "Tụ song song có thể bù thành phần dòng trễ của tải cảm."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\cos\\phi=\\frac RZ\\\\&I_{\\mathrm{rms}}=\\frac{P_{\\mathrm{av}}}{V_{\\mathrm{rms}}\\cos\\phi}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Cộng hưởng dòng xảy ra khi hai điện kháng bằng nhau",
+      "bullets": [
+        "Giữ biên độ nguồn cố định và R dương, dòng lớn nhất khi trở kháng nhỏ nhất.",
+        "Tại cộng hưởng, điện áp cuộn và tụ triệt tiêu tức thời, còn nguồn cùng pha dòng.",
+        "Điện trở nhỏ tạo đỉnh cao và hẹp hơn, còn vị trí đỉnh do L,C quyết định."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\omega_0=\\frac1{\\sqrt{LC}}\\\\&X_L=X_C\\\\&Z_{\\min}=R\\\\&I_{\\max}=\\frac VR.\\end{aligned}\n$$"
+    },
+    {
+      "note": "11-dong-dien-xoay-chieu",
+      "title": "Máy biến áp đổi điện áp và dòng, giữ công suất lý tưởng",
+      "bullets": [
+        "Hai cuộn cùng nhận từ thông biến thiên trong lõi.",
+        "Tỉ số điện áp bằng tỉ số số vòng khi bỏ qua sụt áp và từ thông rò.",
+        "Với tải thuần trở và dòng từ hóa được bỏ qua, tăng áp đi kèm giảm dòng."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{nhìn}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",
