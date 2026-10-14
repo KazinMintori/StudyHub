@@ -106,20 +106,24 @@ Nguồn suất điện động không tạo ra cùng một dòng điện cho m�
 
 Sơ đồ dùng các ký hiệu chuẩn để biểu diễn dây dẫn, điện trở, nguồn và dụng cụ đo. Dây nối lý tưởng có điện trở không đáng kể nên hai đầu dây cùng điện thế. Trong ký hiệu nguồn, vạch dài hơn biểu diễn cực dương, thường là đầu có điện thế cao hơn. Điện trở trong có thể đặt ở hai phía của nguồn trên sơ đồ vì chúng mắc nối tiếp cùng nguồn.
 
-**Bảng 25.4. Ký hiệu sơ đồ mạch**
+**Bảng 25.4: Ký hiệu quy ước trong sơ đồ mạch điện**
 
-| Phần tử mạch | Ký hiệu thường dùng | Ý nghĩa hoặc điều kiện lý tưởng |
-| --- | --- | --- |
-| Dây dẫn | Đoạn nối thẳng | Điện trở không đáng kể |
-| Điện trở | Đường gấp khúc | Phần tử có điện trở $R$ |
-| Nguồn suất điện động | Hai vạch song song không bằng nhau | Vạch dài là cực dương |
-| Nguồn có điện trở trong | Nguồn nối tiếp $r$ | $r$ thuộc tính nội tại của nguồn |
-| Vôn kế | Vòng tròn có chữ V | Đo hiệu điện thế, điện trở lý tưởng vô hạn |
-| Ampe kế | Vòng tròn có chữ A | Đo dòng điện, điện trở lý tưởng bằng không |
+| Phần tử mạch | Ký hiệu sơ đồ | Mô tả và điều kiện lý tưởng |
+| :--- | :---: | :--- |
+| **Dây dẫn** | ![Ký hiệu dây dẫn](../img/young-25/ky-hieu-day-dan.png) | Dây nối kim loại có điện trở không đáng kể ($R \approx 0$). Hai đầu dây có cùng điện thế. |
+| **Điện trở** | ![Ký hiệu điện trở](../img/young-25/ky-hieu-dien-tro.png) | Phần tử tiêu tán năng lượng có điện trở $R$, tuân theo định luật Ohm ($V = IR$). |
+| **Nguồn suất điện động** | ![Ký hiệu nguồn suất điện động](../img/young-25/ky-hieu-nguon-dien.png) | Nguồn lý tưởng duy trì suất điện động $\mathcal{E}$. Vạch dài biểu diễn cực dương ($+$), vạch ngắn dày biểu diễn cực âm. |
+| **Nguồn có điện trở trong** | ![Ký hiệu nguồn có điện trở trong](../img/young-25/ky-hieu-nguon-co-dien-tro-trong.png) | Nguồn thực gồm suất điện động $\mathcal{E}$ ghép nối tiếp với điện trở trong $r$ thuộc bản chất vật lý của nguồn. |
+| **Vôn kế** | ![Ký hiệu vôn kế](../img/young-25/ky-hieu-von-ke.png) | Dụng cụ đo hiệu điện thế. Điện trở vôn kế lý tưởng vô hạn ($R_V \to \infty$). |
+| **Ampe kế** | ![Ký hiệu ampe kế](../img/young-25/ky-hieu-ampe-ke.png) | Dụng cụ đo cường độ dòng điện. Điện trở ampe kế lý tưởng bằng không ($R_A = 0$). |
 
 Vôn kế lý tưởng mắc giữa hai điểm cần đo và không hút dòng vì điện trở vô hạn. Ampe kế lý tưởng đặt nối tiếp nhánh cần đo và không làm giảm dòng vì điện trở bằng không.
 
 Để đo hiệu điện thế mà không làm thay đổi đáng kể mạch, mắc vôn kế song song với hai điểm cần đo. Vôn kế lý tưởng có điện trở vô hạn nên không cho dòng điện đi qua. Để đo dòng điện của một nhánh, mắc ampe kế nối tiếp nhánh đó. Ampe kế lý tưởng có điện trở bằng không nên không tạo sụt áp.
+
+![Hình 25.15b: Nguyên tắc mắc vôn kế và ampe kế trong mạch điện](../img/young-25/hinh-cach-mac-von-ke-ampe-ke.png)
+
+**Hình 25.15b:** Quy chuẩn mắc dụng cụ đo trong mạch điện. Ở sơ đồ (a), vôn kế lý tưởng mắc song song giữa hai điểm $a$ và $b$ có điện trở vô cùng lớn ($R_V \to \infty$) nên không cho dòng điện đi qua ($I_V = 0$), giữ nguyên vẹn dòng điện $I$ qua điện trở tải $R$, đồng thời ampe kế mắc nối tiếp có điện trở bằng không ($R_A = 0$) nên không gây sụt áp. Ở sơ đồ (b), nếu mắc sai quy chuẩn bằng cách đặt vôn kế nối tiếp, điện trở vô hạn của vôn kế sẽ chặn đứng dòng điện trong toàn bộ vòng mạch ($I = 0$).
 
 #### Ứng dụng sinh học: Cá đuối điện
 
