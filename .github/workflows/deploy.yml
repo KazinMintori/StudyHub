@@ -47,6 +47,9 @@ jobs:
         with:
           enablement: true
 
+      - name: Show build runner memory
+        run: free -h
+
       - name: Build with VitePress
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
