@@ -36,9 +36,16 @@ Vui lòng tuân theo hướng dẫn chi tiết tại [AGENTS.md](./AGENTS.md).
 - **Viết hoa sau dấu hai chấm (`:`)**: Cứ sau dấu `:` trong văn xuôi, tiêu đề, đề mục, danh sách hoặc chú thích hình ảnh/bảng biểu, từ tiếp theo bắt buộc phải viết hoa chữ cái đầu (ví dụ: `Ví dụ: Xét...`, `Lưu ý: Đây là...`, `- **Khái niệm**: Là...`, `Hình 1.1: Đồ thị...`). Tuyệt đối không để chữ cái đầu sau dấu `:` ở dạng chữ thường.
 - **Khái niệm Wiki liên ngành (Cross-Disciplinary Wiki Scope)**: Môn học mặc định ưu tiên tìm kiếm và hiển thị định nghĩa khái niệm trong phạm vi chuyên môn của môn đó. Tuy nhiên, nếu một định luật/khái niệm thuần túy xuất phát từ lĩnh vực khoa học khác (ví dụ: *Định luật Snell* là quang học/vật lý xuất hiện trong bài toán tối ưu của Toán cho AI), cho phép liên kết và hiển thị định nghĩa từ lĩnh vực gốc tương ứng qua fallback scope trong `courseWikiScopes`.
 
-### Lệnh kiểm thử tiêu chuẩn:
+### Lệnh kiểm thử tiêu chuẩn trên máy cục bộ (Local):
+> [!NOTE]
+> **Ủy thác build cho GitHub Actions**: Tuyệt đối không tự ý chạy `npm run ci:build` trên máy local của người dùng (tránh nghẽn CPU và ngốn 15+ GB RAM do render 779+ trang). Khâu build toàn cục do GitHub Actions tự động thực hiện trên đám mây khi push lên `main`.
+
 ```sh
-npm run ci:build
+# 1. Kiểm tra bài giảng vừa sửa (siêu tốc, tốn rất ít RAM):
+node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs <môn>/<bài>
+# Hoặc kiểm tra toàn diện:
 node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
+
+# 2. Chạy bộ kiểm thử tự động của skill:
 python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 ```

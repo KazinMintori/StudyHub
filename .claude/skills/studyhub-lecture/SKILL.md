@@ -107,12 +107,13 @@ Tạo task list cho các bước dưới đây; bước cuối luôn là kiểm 
 ```sh
 node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs <course-id>/<slug>
 python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py --format text docs/<course-id>/bai-giang/<slug>.md docs/<course-id>/bai-giang/<slug>/*.md
-npm run ci:build
+# Lưu ý: Khâu "npm run ci:build" toàn cục đã được ủy thác hoàn toàn cho GitHub Actions khi push lên main.
+# Trên máy local, chỉ cần chạy check_lecture.mjs và dùng "npm run dev" nếu cần xem trực quan nhanh.
 ```
 
 - `check_lecture.mjs`: Frontmatter ↔ catalog, prerequisites ↔ concepts/wikiGroups/wikiDetails/Wiki, slide của bài, đường dẫn hình và link tương đối, container đóng/mở, H1 thừa, LaTeX lọt vào chuỗi slide hay concepts. Với bài nhiều lớp, kiểm thêm mọi trang chủ đề, file thừa, mô phỏng không tồn tại, và công thức inline rộng quá 38ex (tràn ngang trên điện thoại). Ký tự điều khiển giữa dòng và công thức inline bị cắt sang dòng sau, hai dấu vết của TeX ghi qua chuỗi không raw, cũng bị báo. Với `--all`, mọi thuật ngữ trong concepts đều được kiểm, kể cả thuật ngữ chỉ xuất hiện qua liên kết tự động, và ký hiệu toán Unicode như ℓ₁, Bᵀ, ‖x‖ nằm ngoài $…$ là lỗi `CONCEPT_UNICODE_MATH`. Lỗi (exit 1) phải sửa; cảnh báo phải đọc.
 - `review_teaching_text.py`: Chỉ vị trí câu cần xem lại (cụm gượng, đánh giá thay giải thích, từ ngữ kiểu văn máy, tần suất không căn cứ, trích dẫn cần kiểm, in đậm dày, câu quá tải, chuỗi câu cụt, đoạn dài thiếu từ nối, mũi tên thay câu, khuôn câu hỏi lặp, lời giải "nghĩ thành tiếng" tự sửa giữa chừng). "Vô cùng" theo nghĩa toán học, như "tiến ra vô cùng", không bị tính là từ đánh giá. Truyền cả chương một lượt để thấy khuôn lặp giữa các trang. Không phải điểm “giống người”; thiếu cảnh báo không có nghĩa đạt.
-- Build phải exit 0. Nếu có trình duyệt, mở trang đã build và xem cả ba tab, công thức, Mermaid, hình ở bề rộng điện thoại. Nếu không xem được, nói rõ “chưa kiểm tra hiển thị”.
+- Xác nhận kiểm tra: `check_lecture.mjs` phải exit 0. Khâu build tĩnh toàn cục được GitHub Actions thực thi tự động. Nếu có trình duyệt, mở máy chủ dev `npm run dev` để xem bài giảng, công thức, Mermaid, hình ở bề rộng điện thoại. Nếu không xem được, nói rõ “chưa kiểm tra hiển thị”.
 - Bài lớn hoặc quan trọng: Nhờ một lượt rà độc lập (agent khác chưa thấy quá trình soạn) đọc Notes như sinh viên và đối chiếu nguồn, nếu người dùng cho phép dùng thêm agent.
 
 ### F. Bàn giao
