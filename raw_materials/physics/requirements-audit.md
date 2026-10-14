@@ -36,7 +36,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 29 | Cảm ứng điện từ | 74/74 | 108 | Đủ theo hồ sơ |
 | vat-ly-2 | 30 | Điện cảm | 75/75 | 104 | Đủ theo hồ sơ |
 | vat-ly-2 | 31 | Dòng điện xoay chiều | 72/72 | 103 | Đủ theo hồ sơ |
-| vat-ly-2 | 32 | Sóng điện từ | 0/56 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 32 | Sóng điện từ | 56/56 | 82 | Đủ theo hồ sơ |
 | vat-ly-2 | 33 | Bản chất và sự truyền ánh sáng | 0/64 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 34 | Quang hình học | 0/111 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 35 | Giao thoa | 0/60 | 0 | Còn thiếu hoặc chưa rà xong |

@@ -98,7 +98,15 @@ Tab Bài tập có 72 bài đánh số, 19 câu thảo luận, 12 bài luyện t
 
 Các bộ Python, kiểm tra cấu trúc toàn site, 39 kiểm thử skill và bảy kiểm thử bộ hiển thị toán đã qua. Có 135 lượt kiểm tra giao diện ở 320, 360, 375 và 1440 px, cùng bảy lần đổi bề rộng trực tiếp. Không có tràn công thức hoặc lỗi JavaScript. Build toàn bộ và triển khai được giao cho GitHub Actions. Trạng thái xuất bản được ghi riêng.
 
-## Các chương 32–44
+## Chương 32
+
+Đã hoàn tất năm mục lý thuyết, bảy ví dụ, 39 công thức đánh số và 24 hình đánh số. Có 37 PNG trích trực tiếp, gồm các hình ứng dụng thị giác tử ngoại, kính thiên văn và phẫu thuật laser, cùng một SVG lời giải dùng đủ mười điểm đo. Chú thích tiếng Việt và giải nghĩa nhãn tiếng Anh nằm dưới hình.
+
+Tab Bài tập có 56 bài đánh số, 13 câu thảo luận, 12 bài luyện tập hướng dẫn và một bài cầu nối, với 82 lời giải gập. Có 10 Slides, sáu nhóm Cheatsheet với 16 mục định nghĩa, tính chất và công thức, cùng 10 Wiki mới. Toàn bộ trang cuối và phần tiếp nối câu MCAT đã được kiểm kê. Những sai lệch đáp số và điều kiện mô hình được ghi trong hồ sơ riêng.
+
+Các bộ Python, kiểm tra cấu trúc toàn site, 39 kiểm thử skill và bảy kiểm thử bộ hiển thị toán đã qua. Có 127 lượt kiểm tra ở 320, 360, 375, 1440 px, gồm bảy lần đổi bề rộng trực tiếp. Không có tràn công thức hoặc lỗi JavaScript. Build và triển khai chỉ chạy trên GitHub Actions.
+
+## Các chương 33–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

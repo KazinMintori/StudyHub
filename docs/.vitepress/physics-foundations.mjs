@@ -1,3 +1,4 @@
+import {emWaveConcepts,emWaveWikiDetails,emWaveWikiConnections} from './physics-emwave-foundations.mjs'
 import {acConcepts,acWikiDetails,acWikiConnections} from './physics-ac-foundations.mjs'
 import {inductanceConcepts,inductanceWikiDetails,inductanceWikiConnections} from './physics-inductance-foundations.mjs'
 import {inductionConcepts,inductionWikiDetails,inductionWikiConnections} from './physics-induction-foundations.mjs'
@@ -321,6 +322,7 @@ export const physicsConcepts = {
   ...inductionConcepts,
   ...inductanceConcepts,
   ...acConcepts,
+  ...emWaveConcepts,
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -361,6 +363,7 @@ export const physicsWikiDetails = {
   ...inductionWikiDetails,
   ...inductanceWikiDetails,
   ...acWikiDetails,
+  ...emWaveWikiDetails,
 }
 
 export const physicsWikiConnections = {
@@ -490,4 +493,5 @@ export const physicsWikiConnections = {
   ...inductionWikiConnections,
   ...inductanceWikiConnections,
   ...acWikiConnections,
+  ...emWaveWikiConnections,
 }

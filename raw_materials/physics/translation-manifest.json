@@ -3454,21 +3454,115 @@
           "page": 1066
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "32.1",
-        "32.2",
-        "32.3",
-        "32.4",
-        "32.5",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-32/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "32.1",
+          "file": "raw_materials/physics/translations/chapter-32/01-maxwell-song-dien-tu.md",
+          "destination": "topic:maxwell-song-dien-tu",
+          "printedPages": [
+            1048,
+            1052
+          ],
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "32.2",
+          "file": "raw_materials/physics/translations/chapter-32/02-song-phang-van-toc-anh-sang.md",
+          "destination": "topic:song-phang-van-toc-anh-sang",
+          "printedPages": [
+            1052,
+            1057
+          ],
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "32.3",
+          "file": "raw_materials/physics/translations/chapter-32/03-song-hinh-sin.md",
+          "destination": "topic:song-hinh-sin",
+          "printedPages": [
+            1057,
+            1061
+          ],
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "32.4",
+          "file": "raw_materials/physics/translations/chapter-32/04-nang-luong-dong-luong.md",
+          "destination": "topic:nang-luong-dong-luong",
+          "printedPages": [
+            1061,
+            1066
+          ],
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "32.5",
+          "file": "raw_materials/physics/translations/chapter-32/05-song-dung-dien-tu.md",
+          "destination": "topic:song-dung-dien-tu",
+          "printedPages": [
+            1066,
+            1069
+          ],
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-32/09-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "10-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-32/10-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "11-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-32/11-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "12-bai-tap-01-29",
+          "file": "raw_materials/physics/translations/chapter-32/12-bai-tap-01-29.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "13-bai-tap-30-48",
+          "file": "raw_materials/physics/translations/chapter-32/13-bai-tap-30-48.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "14-bai-tap-49-53",
+          "file": "raw_materials/physics/translations/chapter-32/14-bai-tap-49-53.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "15-mcat",
+          "file": "raw_materials/physics/translations/chapter-32/15-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        },
+        {
+          "sourceUnit": "16-dap-so",
+          "file": "raw_materials/physics/translations/chapter-32/16-dap-so.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed-render-verified"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-32-review.json"
     },
     {
       "chapter": 33,

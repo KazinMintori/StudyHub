@@ -1362,21 +1362,78 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "12-song-dien-tu",
-      "title": "Sóng điện từ",
-      "prerequisites": [
-        "dien-truong",
-        "tu-truong",
-        "song",
-        "thong-luong"
-      ],
-      "supportingConcepts": [
-        "pha-song"
-      ],
-      "status": "draft",
-      "number": 12,
-      "sourceChapter": 32
-    },
+        "slug": "12-song-dien-tu",
+        "title": "Sóng điện từ",
+        "prerequisites": [
+          "dao-ham",
+          "dao-ham-rieng",
+          "tich-phan",
+          "tich-co-huong",
+          "dao-dong-dieu-hoa",
+          "song",
+          "pha-song",
+          "dong-luong-vat-ly",
+          "cong-nang-luong",
+          "dien-truong",
+          "tu-truong",
+          "thong-luong",
+          "dinh-luat-faraday",
+          "dong-dien-dich"
+        ],
+        "supportingConcepts": [
+          "song-dien-tu",
+          "song-dien-tu-phang",
+          "phan-cuc-thang",
+          "vector-poynting",
+          "cuong-do-buc-xa",
+          "ap-suat-buc-xa",
+          "dong-luong-dien-tu",
+          "song-dung-dien-tu",
+          "hoc-cong-huong-dien-tu",
+          "pho-dien-tu"
+        ],
+        "status": "ready",
+        "number": 12,
+        "sourceChapter": 32,
+        "topicGroups": [
+          {
+            "title": "Trường, năng lượng và sự phản xạ của sóng điện từ",
+            "topics": [
+              {
+                "slug": "maxwell-song-dien-tu",
+                "title": "Maxwell và nguồn sóng điện từ",
+                "question": "Vì sao hai trường biến thiên có thể truyền trong chân không?",
+                "source": "32.1"
+              },
+              {
+                "slug": "song-phang-van-toc-anh-sang",
+                "title": "Sóng phẳng và tốc độ ánh sáng",
+                "question": "Các phương trình trường quyết định tốc độ và hướng truyền như thế nào?",
+                "source": "32.2"
+              },
+              {
+                "slug": "song-hinh-sin",
+                "title": "Sóng hình sin và môi trường vật chất",
+                "question": "Biên độ, pha, bước sóng và vật liệu liên hệ ra sao?",
+                "source": "32.3"
+              },
+              {
+                "slug": "nang-luong-dong-luong",
+                "title": "Năng lượng, động lượng và áp suất bức xạ",
+                "question": "Sóng mang công suất và tạo lực lên vật nhận như thế nào?",
+                "source": "32.4"
+              },
+              {
+                "slug": "song-dung-dien-tu",
+                "title": "Sóng đứng và hốc cộng hưởng",
+                "question": "Phản xạ tạo nút, bụng và các tần số riêng nào?",
+                "source": "32.5"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "13-truyen-anh-sang",
       "title": "Bản chất và sự truyền ánh sáng",
@@ -2601,6 +2658,106 @@ export const physics2Course = {
         "Với tải thuần trở và dòng từ hóa được bỏ qua, tăng áp đi kèm giảm dòng."
       ],
       "formula": "$$\n\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{nhìn}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Trường biến thiên liên hệ hai phía của điện từ",
+      "bullets": [
+        "Faraday liên hệ từ thông biến thiên với điện trường có lưu thông.",
+        "Ampère–Maxwell kể cả dòng điện dịch khi điện trường biến thiên.",
+        "Điện tích chuyển động có gia tốc có thể phát bức xạ. Sóng truyền được qua chân không."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\oint\\vec E\\cdot d\\vec l=-\\frac{d\\Phi_B}{dt}\\\\&\\oint\\vec B\\cdot d\\vec l\\\\&=\\mu_0\\left(i_C+\\varepsilon_0\\frac{d\\Phi_E}{dt}\\right).\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Một sóng phẳng chạy có hai trường ngang",
+      "bullets": [
+        "Các trường đồng đều trên mỗi mặt phẳng vuông góc hướng truyền.",
+        "Điện trường, từ trường và hướng truyền tạo bộ ba vuông góc.",
+        "Tích có hướng của hai trường xác định hướng dòng năng lượng."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\vec E\\cdot\\vec B=0\\\\&E=cB\\\\&\\vec S=\\frac1{\\mu_0}\\vec E\\times\\vec B.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Tốc độ ánh sáng xuất hiện từ hằng số điện và từ",
+      "bullets": [
+        "Faraday và Ampère–Maxwell cùng phải thỏa cho một mặt sóng.",
+        "Hai quan hệ biên độ quyết định tốc độ trong chân không.",
+        "Trường biến thiên không truyền tức thời."
+      ],
+      "formula": "$$\n\\begin{aligned}&E=cB\\\\&B=\\varepsilon_0\\mu_0cE\\\\&c=\\frac1{\\sqrt{\\varepsilon_0\\mu_0}}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Hàm sóng giữ cả dấu pha và hướng trường",
+      "bullets": [
+        "Pha kx−ωt truyền theo+x, còn kx+ωt truyền theo−x.",
+        "Khi đổi hướng truyền, phải đổi quan hệ hướng giữa E và B.",
+        "Trong sóng chạy hình sin, hai trường cùng pha."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\omega=ck\\\\&k=2\\pi/\\lambda\\\\&f=c/\\lambda\\\\&E_{\\max}=cB_{\\max}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Phổ điện từ là một họ sóng với nhiều thang bước sóng",
+      "bullets": [
+        "Radio, vi ba, hồng ngoại, ánh sáng nhìn thấy, tử ngoại, tia X và gamma cùng có bản chất điện từ.",
+        "Tần số và bước sóng thay đổi, nhưng tốc độ chân không là c.",
+        "Phân cực mô tả hướng dao động ngang của điện trường."
+      ],
+      "formula": "$$\nf\\lambda=c.\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Vật liệu đổi tốc độ và bước sóng",
+      "bullets": [
+        "Tại mặt phân cách đứng yên, tần số được giữ.",
+        "Hằng số vật liệu phải xét ở tần số của sóng.",
+        "Công thức dưới dùng mô hình tuyến tính, đồng nhất, đẳng hướng, không tán sắc và không tổn hao."
+      ],
+      "formula": "$$\n\\begin{aligned}&v=\\frac c{\\sqrt{\\varepsilon_r\\mu_r}}\\\\&\\lambda=v/f\\\\&n=c/v\\\\&E_{\\max}=vB_{\\max}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Cường độ liên hệ công suất với biên độ trường",
+      "bullets": [
+        "Vector Poynting cho dòng năng lượng tức thời theo hướng.",
+        "Cường độ sóng chạy là độ lớn vector Poynting sau khi lấy trung bình.",
+        "Biên độ phải bình phương. Giá trị hiệu dụng đã chứa hệ số trung bình của sóng hình sin."
+      ],
+      "formula": "$$\n\\begin{aligned}&I=|\\langle\\vec S\\rangle|\\\\&I=\\frac12\\varepsilon_0cE_{\\max}^2\\\\&I=\\frac c{2\\mu_0}B_{\\max}^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Động lượng của ánh sáng tạo áp suất",
+      "bullets": [
+        "Hấp thụ nhận động lượng tới, còn phản xạ ngược chiều nhận gấp đôi.",
+        "Các công thức áp suất này xét sóng tới vuông góc.",
+        "Công suất có thể đáng kể trong khi lực rất nhỏ vì chia cho tốc độ ánh sáng."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\vec g=\\vec S/c^2\\\\&p_{\\mathrm a}=I/c\\\\&p_{\\mathrm r}=2I/c\\\\&F=pA.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Sóng đứng vẫn chứa năng lượng dù dòng trung bình triệt tiêu",
+      "bullets": [
+        "Hai sóng chạy bằng nhau đi ngược chiều tạo sóng đứng.",
+        "Hai trường vuông pha theo thời gian, nút điện là bụng từ và ngược lại.",
+        "Trung bình vector Poynting bằng không. Trung bình độ lớn của nó có thể khác không."
+      ],
+      "formula": "$$\n\\begin{aligned}&S_x=S_0\\sin(2kx)\\sin(2\\omega t)\\\\&\\langle S_x\\rangle=0\\\\&S_0=E_{\\max}B_{\\max}/\\mu_0.\\end{aligned}\n$$"
+    },
+    {
+      "note": "12-song-dien-tu",
+      "title": "Hai tường dẫn chọn các mode của hốc",
+      "bullets": [
+        "Hai tường là nút điện trường tiếp tuyến trong mô hình dẫn lý tưởng.",
+        "Mỗi nửa bước sóng chứa một bụng điện trường.",
+        "Đo khoảng cách bụng và biết tần số cho phép suy tốc độ."
+      ],
+      "formula": "$$\n\\begin{aligned}&L=n\\lambda_n/2\\\\&\\lambda_n=2L/n\\\\&f_n=nc/(2L)\\\\&n=1,2,3,\\ldots.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",
