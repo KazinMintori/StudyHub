@@ -12,7 +12,7 @@ Baseline HEAD: abe13ca3edc03eadb72e28e54d3409e31dfa2d66 on main.
 Existing dirty physics chapter-02/chapter-30 files and all raw_materials are protected.
 Physics chat: Soạn bài Vật lý đại cương 1 và 2, active on chapter 30.
 Preserve qa/physics/chapter30, full-source, all QA scripts/reports/snapshots and the two physics30 AGY worktrees.
-AGY receives isolated worktrees under qa/refactor-worktrees, created by the collaboration MCP bridge from the committed plan baseline. Codex remains in the primary checkout.
+AGY receives isolated worktrees under C:/Users/Ai/.codex/worktrees/studyhub-refactor-20261014, created by the collaboration MCP bridge from the committed plan baseline. Codex remains in the primary checkout.
 
 ## Shared architecture
 
