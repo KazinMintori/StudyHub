@@ -82,7 +82,15 @@ Tab Bài tập có 83 bài đánh số, 20 câu thảo luận, 12 bài biến th
 
 Tab Bài tập có 74 bài đánh số, 21 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 108 khung lời giải chi tiết. Có 12 Slides, Cheatsheet tám nhóm chỉ gồm định nghĩa, tính chất và công thức, 15 Wiki mới và một mục Wiki được mở rộng. Bảy bộ Python, kiểm tra cấu trúc toàn site và 39 kiểm thử skill đã qua. Bản build cuối exit 0. Toàn bộ chín chương Vật lý 2 đã soạn có 724 lượt kiểm tra ở 320, 360, 375, 1440 px, 74 lần đổi kích thước trực tiếp và 291 lượt Wiki, không có lỗi JavaScript hoặc tràn công thức. Hồ sơ riêng ghi các sai lệch đáp số và các sửa chữa định dạng của những chương trước.
 
-## Các chương 30–44
+## Chương 30
+
+Đã hoàn tất sáu mục lý thuyết, 10 ví dụ, 29 công thức đánh số và 17 hình đánh số. Có 44 ảnh PNG với chú thích tiếng Việt và sáu đồ thị lời giải. Các đồ thị ở bài 30.59 dùng đủ tám cặp dữ liệu, còn đồ thị nguồn 30.67 và 30.68 có lần lượt 18 và 13 điểm được đối chiếu.
+
+Tab Bài tập có 75 bài đánh số, 16 câu thảo luận, 12 bài biến thể và một bài cầu nối, với 104 khung lời giải chi tiết. Có 11 Slides, Cheatsheet sáu nhóm chỉ gồm định nghĩa, tính chất và công thức, 11 Wiki mới cùng mục tự cảm mở rộng. Năm bộ Python, kiểm tra cấu trúc toàn site và 39 kiểm thử skill đã qua. Bản build cuối exit 0. Toàn bộ mười chương Vật lý 2 đã soạn có 812 lượt kiểm tra ở 320, 360, 375, 1440 px, 81 lần đổi kích thước trực tiếp và 330 lượt Wiki, không có lỗi JavaScript hoặc tràn công thức.
+
+Hai đầu ra Antigravity được giữ trong worktree riêng sau lỗi cầu nối và timeout. Codex đối chiếu, sửa và tự kiểm tra các bản sao trước khi tích hợp. Hồ sơ riêng ghi giả thiết xung ở 30.53 và dấu hỗ cảm ở 30.69, cùng các lỗi nhận diện tiền tố micro.
+
+## Các chương 31–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

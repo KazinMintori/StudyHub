@@ -3,27 +3,44 @@ course: vat-ly-2
 lecture: 10-tu-cam
 section: lecture
 title: "Điện cảm"
-prerequisites: ["cam-ung-dien-tu","dien-dung","dien-tro","dao-ham"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Điện cảm."
+prerequisites: ["dao-ham","tich-phan","dao-dong-dieu-hoa","dao-dong-tat-dan","dien-dung","mat-do-nang-luong-dien-truong","quy-tac-kirchhoff","ong-day-dien","do-tu-tham","dinh-luat-faraday","dinh-luat-lenz","dien-truong-bao-toan"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Hỗ cảm, tự cảm, năng lượng từ trường, mạch RL, LC và RLC, cùng lời giải chi tiết phần cuối chương."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 30.1 — Mutual Inductance (từ trang 988).
-- 30.2 — Self-Inductance and Inductors (từ trang 992).
-- 30.3 — Magnetic-Field Energy (từ trang 995).
-- 30.4 — The R-L Circuit (từ trang 998).
-- 30.5 — The L-C Circuit (từ trang 1002).
-- 30.6 — The L-R-C Series Circuit (từ trang 1007).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/09-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 30, trang 988–1017.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Điện cảm">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/10-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/11-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/12-bai-tap-01-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/13-bai-tap-31-60.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/14-bai-tong-hop-61-68.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/15-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-30/16-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, chương 30, trang 1010–1017 và phụ lục đáp số A-18.
+
+</div>

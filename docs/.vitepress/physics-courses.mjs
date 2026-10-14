@@ -1209,18 +1209,80 @@ export const physics2Course = {
       "slug": "10-tu-cam",
       "title": "Điện cảm",
       "prerequisites": [
-        "cam-ung-dien-tu",
+        "dao-ham",
+        "tich-phan",
+        "dao-dong-dieu-hoa",
+        "dao-dong-tat-dan",
         "dien-dung",
-        "dien-tro",
-        "dao-ham"
+        "mat-do-nang-luong-dien-truong",
+        "quy-tac-kirchhoff",
+        "ong-day-dien",
+        "do-tu-tham",
+        "dinh-luat-faraday",
+        "dinh-luat-lenz",
+        "dien-truong-bao-toan"
       ],
       "supportingConcepts": [
+        "tu-thong-moc-vong",
+        "ho-cam",
         "tu-cam",
-        "dao-dong-dieu-hoa"
+        "cuon-cam",
+        "nang-luong-tu-truong",
+        "mat-do-nang-luong-tu-truong",
+        "mach-rl",
+        "hang-so-thoi-gian-rl",
+        "mach-lc",
+        "mach-rlc",
+        "tat-dan-toi-han",
+        "qua-tat-dan"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 10,
-      "sourceChapter": 30
+      "sourceChapter": 30,
+      "topicGroups": [
+        {
+          "title": "Điện cảm, năng lượng và quá trình chuyển tiếp",
+          "topics": [
+            {
+              "slug": "ho-cam",
+              "title": "Hỗ cảm",
+              "question": "Dòng ở một cuộn tạo suất điện động trong cuộn khác như thế nào?",
+              "source": "30.1"
+            },
+            {
+              "slug": "tu-cam-cuon-cam",
+              "title": "Tự cảm và cuộn cảm",
+              "question": "Vì sao điện áp cuộn phụ thuộc tốc độ biến thiên dòng?",
+              "source": "30.2"
+            },
+            {
+              "slug": "nang-luong-tu-truong",
+              "title": "Năng lượng từ trường",
+              "question": "Công để thiết lập dòng được tích trữ ở đâu?",
+              "source": "30.3"
+            },
+            {
+              "slug": "mach-rl",
+              "title": "Mạch RL",
+              "question": "Dòng tăng và giảm theo quy luật nào khi chuyển công tắc?",
+              "source": "30.4"
+            },
+            {
+              "slug": "mach-lc",
+              "title": "Mạch LC",
+              "question": "Vì sao tụ và cuộn tạo dao động điện?",
+              "source": "30.5"
+            },
+            {
+              "slug": "mach-rlc",
+              "title": "Mạch RLC nối tiếp",
+              "question": "Điện trở quyết định dao động hay suy giảm không dao động ra sao?",
+              "source": "30.6"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "11-dong-dien-xoay-chieu",
@@ -2256,6 +2318,116 @@ export const physics2Course = {
         "Loại II có hai trường tới hạn, với miền hỗn hợp giữa hai ngưỡng."
       ],
       "formula": "$$\nB_{c1}<B_0<B_{c2}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Hỗ cảm liên hệ hai mạch qua từ thông",
+      "bullets": [
+        "Dòng biến thiên ở cuộn nguồn làm từ thông qua cuộn nhận thay đổi.",
+        "Từ thông trong định nghĩa là trung bình một vòng, còn từ thông móc vòng có tính số vòng.",
+        "Hỗ cảm không đổi cần hình học cố định và môi trường từ tuyến tính."
+      ],
+      "formula": "$$\n\\begin{aligned}&N_2\\Phi_{B2}=Mi_1\\\\&\\mathcal E_2=-M\\frac{di_1}{dt}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Đổi vai hai cuộn vẫn cho cùng hỗ cảm",
+      "bullets": [
+        "Trong mô hình môi trường từ tuyến tính thuận nghịch, M12 bằng M21.",
+        "Từ thông một vòng ở hai cuộn không nhất thiết bằng nhau.",
+        "Dòng không đổi không tạo suất điện động hỗ cảm trong cấu hình cố định."
+      ],
+      "formula": "$$\n\\begin{aligned}&M=\\frac{N_2\\Phi_{B2}}{i_1}\\\\&\\quad=\\frac{N_1\\Phi_{B1}}{i_2}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Tự cảm chống sự thay đổi dòng",
+      "bullets": [
+        "Mạch mang dòng biến thiên tạo suất điện động qua biến thiên từ thông của chính nó.",
+        "Dấu Lenz chống biến thiên dòng, không nhất thiết chống chiều dòng.",
+        "Hệ số L là hằng trong mô hình cuộn tuyến tính, hình học cố định."
+      ],
+      "formula": "$$\n\\begin{aligned}&L=\\frac{N\\Phi_B}{i}\\\\&\\mathcal E_L=-L\\frac{di}{dt}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Dấu điện áp cuộn phải đi với chiều dòng",
+      "bullets": [
+        "Điện áp thụ động là điện thế đầu dòng đi vào trừ điện thế đầu dòng đi ra.",
+        "Dòng dương tăng làm cuộn nhận năng lượng, còn dòng dương giảm làm cuộn nhả năng lượng.",
+        "Với điện áp hữu hạn và L khác không, dòng cuộn liên tục khi chuyển mạch."
+      ],
+      "formula": "$$\nv_L=L\\frac{di}{dt}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Năng lượng cuộn nằm trong từ trường",
+      "bullets": [
+        "Tích phân công suất nạp cuộn cho năng lượng tỷ lệ bình phương dòng.",
+        "Công thức mật độ trong vật liệu cần độ từ thẩm không đổi.",
+        "Dòng đổi dấu nhưng giữ độ lớn không làm năng lượng từ trường đổi."
+      ],
+      "formula": "$$\n\\begin{aligned}&U_B=\\frac12Li^2\\\\&u_B=\\frac{B^2}{2\\mu}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Dòng RL tăng về giá trị do điện trở quyết định",
+      "bullets": [
+        "Cuộn ban đầu không dòng nhận toàn bộ điện áp nguồn ngay sau đóng.",
+        "Hằng số thời gian quyết định tốc độ tăng, còn dòng cuối không phụ thuộc L.",
+        "Sau một hằng số thời gian, dòng đạt khoảng 63,2% giá trị cuối."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\tau=\\frac LR\\\\&I_\\infty=\\frac{\\mathcal E}{R}\\\\&i=I_\\infty(1-e^{-t/\\tau}).\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Tách nguồn làm dòng giảm liên tục",
+      "bullets": [
+        "Dòng ngay sau chuyển bằng dòng ngay trước chuyển.",
+        "Cuộn cấp năng lượng từ trường cho điện trở trong vòng kín.",
+        "Năng lượng giảm với hệ số mũ gấp đôi hệ số của dòng."
+      ],
+      "formula": "$$\n\\begin{aligned}&i=I_0e^{-t/\\tau}\\\\&U_B=U_0e^{-2t/\\tau}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "LC trao đổi năng lượng giữa tụ và cuộn",
+      "bullets": [
+        "Dòng không dừng khi tụ vừa hết điện tích, nên tụ tiếp tục được nạp với cực tính ngược.",
+        "Trong mạch lý tưởng, tổng năng lượng không đổi.",
+        "Quy ước i bằng đạo hàm q đòi hỏi dòng dương đi vào bản có điện tích q."
+      ],
+      "formula": "$$\n\\begin{aligned}&Lq''+\\frac qC=0\\\\&\\omega_0=\\frac1{\\sqrt{LC}}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Dòng và điện tích LC lệch pha một phần tư chu kỳ",
+      "bullets": [
+        "Biên độ và pha được xác định bởi điện tích và dòng ban đầu.",
+        "Tại cực đại điện tích, dòng bằng không. Khi điện tích bằng không, độ lớn dòng cực đại.",
+        "Điện tích âm cho biết bản tụ đã chọn có cực tính ngược với ban đầu."
+      ],
+      "formula": "$$\n\\begin{aligned}&q=Q\\cos(\\omega_0t+\\phi)\\\\&i=-\\omega_0Q\\sin(\\omega_0t+\\phi).\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "RLC cần đồng thời xét pha và suy giảm biên độ",
+      "bullets": [
+        "Điện trở tiêu tán năng lượng và làm tần số dưới tắt dần giảm.",
+        "Dòng đầu bằng không không cho phép tự đặt pha cosin bằng không khi R khác không.",
+        "Hệ số suy giảm biên độ là R trên 2L."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\alpha=\\frac{R}{2L}\\\\&\\omega_d=\\sqrt{\\frac1{LC}-\\alpha^2}\\\\&q=Ae^{-\\alpha t}\\cos(\\omega_dt+\\phi).\\end{aligned}\n$$"
+    },
+    {
+      "note": "10-tu-cam",
+      "title": "Ngưỡng điện trở phân biệt ba chế độ",
+      "bullets": [
+        "Dưới ngưỡng tới hạn, hệ có dao động tắt dần.",
+        "Tại ngưỡng, nghiệm tới hạn không còn phần dao động hình sin.",
+        "Trên ngưỡng, nghiệm là tổng hai hàm mũ thực suy giảm."
+      ],
+      "formula": "$$\n\\begin{aligned}&R_{\\mathrm{th}}=2\\sqrt{\\frac LC}\\\\&R<R_{\\mathrm{th}}\\\\&R=R_{\\mathrm{th}}\\\\&R>R_{\\mathrm{th}}.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",

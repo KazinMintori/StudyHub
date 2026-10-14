@@ -733,8 +733,8 @@ export const readingMetadata = {
     "minutes": 55
   },
   "vat-ly-2/10-tu-cam": {
-    "words": 134,
-    "minutes": 5
+    "words": 15033,
+    "minutes": 75
   },
   "vat-ly-2/11-dong-dien-xoay-chieu": {
     "words": 137,
@@ -865,6 +865,30 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/09-cam-ung-dien-tu/sieu-dan": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/ho-cam": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/tu-cam-cuon-cam": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/nang-luong-tu-truong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-rl": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-lc": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-rlc": {
     "words": 20,
     "minutes": 3
   }

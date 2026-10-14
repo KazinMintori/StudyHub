@@ -7,38 +7,51 @@ next: false
 
 # Tự cảm
 
-Tự cảm là đáp ứng cảm ứng của mạch khi chính dòng mạch biến thiên. Trong mô hình tuyến tính, $\mathcal E_L=-L\,di/dt$, với L đo bằng henry.
+Tự cảm L là hệ số liên hệ dòng với từ thông móc vòng do chính dòng ấy tạo ra: $N\Phi_B=Li$. Với L không đổi, suất điện động tự cảm là $\mathcal E_L=-L\,di/dt$.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Điện áp cuộn theo quy ước thụ động là $v_L=L\,di/dt$ và năng lượng $U_B=Li^2/2$. Dòng không thể nhảy tức thời nếu L khác không và điện áp hữu hạn.
+Dòng tạo từ thông qua chính mạch, nên sự thay đổi dòng gây suất điện động trong mạch ấy. Giữ hình học và môi trường tuyến tính để viết $\Lambda=Li$. Nếu L hằng, Faraday cho $\mathcal E_L=-L\,di/dt$.
 
-Hỗ cảm là liên kết giữa hai mạch, khác tự cảm của một mạch. L và M có thể phụ thuộc trạng thái vật liệu từ; công thức hệ số không đổi cần miền tuyến tính phù hợp.
+Điện áp đầu cuộn theo quy ước thụ động có dấu đối với suất điện động tự cảm đi dọc chiều dòng:
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 30. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+$$
+\begin{aligned}
+v_{ab}&=V_a-V_b\\
+&=L\frac{di}{dt}.
+\end{aligned}
+$$
+
+Dòng dương đi từ a đến b. Khi nó tăng, đầu a cao thế hơn b. Khi nó giảm, đầu b cao thế hơn a và cuộn nhả năng lượng. Cuộn thực có thể được mô hình bằng điện trở dây quấn nối tiếp tự cảm. Khi ấy điện áp tổng còn chứa số hạng Ri.
+
+Tự cảm không chống dòng không đổi. Nó liên hệ với năng lượng của từ trường và chống thay đổi dòng. Nếu L phụ thuộc thời gian hoặc từ hóa phi tuyến, không được lấy L ra ngoài đạo hàm mà thiếu điều kiện.
 
 ## Ví dụ
 
-Dòng giảm qua cuộn khiến suất điện động tự cảm có xu hướng giữ dòng theo chiều đang có.
+Cuộn $L=20\,\mathrm{mH}$ có dòng tăng $3\,\mathrm{A/s}$ tạo suất điện động tự cảm độ lớn $60\,\mathrm{mV}$.
 
 ## Khi nào cần dùng?
 
-Tính quá trình RL, dao động LC và năng lượng từ trường.
+Tính điện áp, năng lượng và quá trình chuyển tiếp của mạch có cuộn.
 
 ## Câu hỏi ôn lại
 
-Suất điện động tự cảm luôn ngược dòng đang có không?
+Dòng lớn nhưng không đổi có suất điện động tự cảm trong cuộn tuyến tính cố định không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Nó chống thay đổi dòng, nên phụ thuộc dấu đạo hàm dòng.
+Không. Suất điện động phụ thuộc tốc độ biến thiên dòng.
 
 </details>
 
 ## Thuật ngữ liên quan
 
-- [Cảm ứng điện từ](./cam-ung-dien-tu.md)
-- [Dòng điện](./dong-dien.md)
-- [Điện dung](./dien-dung.md)
+- [Cuộn cảm](./cuon-cam.md)
+- [Hỗ cảm](./ho-cam.md)
+- [Năng lượng từ trường](./nang-luong-tu-truong.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, chương 30, trang 988–1009.
