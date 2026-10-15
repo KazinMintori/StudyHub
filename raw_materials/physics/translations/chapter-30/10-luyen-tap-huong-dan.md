@@ -24,8 +24,8 @@ Một ống dây dài, gọi là cuộn 1, được bao quanh ở giữa bởi c
 
 $$
 \begin{aligned}
-M&=\frac{1{,}30\times10^{-4}}{2{,}00}\\
-&=6{,}50\times10^{-5}\,\mathrm H.
+M &= \frac{1{,}30\times10^{-4}}{2{,}00} \\
+&= 6{,}50\times10^{-5}\,\mathrm H.
 \end{aligned}
 $$
 
@@ -33,8 +33,8 @@ $$
 
 $$
 \begin{aligned}
-N_2\Phi_{B2}&=Mi_1\\
-&=1{,}56\times10^{-3}\,\mathrm{Wb}.
+N_2\Phi_{B2} &= Mi_1 \\
+&= 1{,}56\times10^{-3}\,\mathrm{Wb}.
 \end{aligned}
 $$
 
@@ -57,9 +57,9 @@ Với $|\mathcal E_2|=M|di_1/dt|$, ta được
 
 $$
 \begin{aligned}
-|\mathcal E_{2a}|&=3{,}36\times10^{-4}\,\mathrm V,\\
-|\mathcal E_{2b}|&=0,\\
-|\mathcal E_{2c}|&=1{,}44\times10^{-4}\,\mathrm V.
+|\mathcal E_{2a}| &= 3{,}36\times10^{-4}\,\mathrm V, \\
+|\mathcal E_{2b}| &= 0, \\
+|\mathcal E_{2c}| &= 1{,}44\times10^{-4}\,\mathrm V.
 \end{aligned}
 $$
 
@@ -80,9 +80,9 @@ Một ống dây hình xuyến có tự cảm $76{,}0\,\mu\mathrm H$ và 465 vò
 
 $$
 \begin{aligned}
-\Phi_B&=\frac{Li}{N}\\
-&=1{,}96\times10^{-6}\,\mathrm{Wb},\\
-|\mathcal E_L|&=4{,}18\times10^{-3}\,\mathrm V.
+\Phi_B &= \frac{Li}{N} \\
+&= 1{,}96\times10^{-6}\,\mathrm{Wb}, \\
+|\mathcal E_L| &= 4{,}18\times10^{-3}\,\mathrm V.
 \end{aligned}
 $$
 
@@ -109,8 +109,8 @@ $$
 
 $$
 \begin{aligned}
-L&=\frac{3{,}70\times10^{-3}}{145}\\
-&=25{,}5\,\mu\mathrm H.
+L &= \frac{3{,}70\times10^{-3}}{145} \\
+&= 25{,}5\,\mu\mathrm H.
 \end{aligned}
 $$
 
@@ -118,9 +118,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{di}{dt}&=(450\,\mathrm{A/s^2})t,\\
-\left.\frac{di}{dt}\right|_{2{,}00\,\mathrm s}
-&=900\,\mathrm{A/s}.
+\frac{di}{dt} &= (450\,\mathrm{A/s^2})t, \\
+\left.\frac{di}{dt}\right|_{2{,}00\,\mathrm s} &= 900\,\mathrm{A/s}.
 \end{aligned}
 $$
 
@@ -147,10 +146,10 @@ Trong mạch Hình 30.11, $L=4{,}90\,\mathrm{mH}$ và $\mathcal E=24{,}0\,\mathr
 
 $$
 \begin{aligned}
-0{,}750&=1-e^{-Rt/L},\\
-\frac{Rt}{L}&=\ln4,\\
-R&=\frac{L\ln4}{t}\\
-&=84{,}9\,\Omega.
+0{,}750 &= 1-e^{-Rt/L}, \\
+\frac{Rt}{L} &= \ln4, \\
+R &= \frac{L\ln4}{t} \\
+&= 84{,}9\,\Omega.
 \end{aligned}
 $$
 
@@ -178,9 +177,9 @@ Với $\tau=L/R$, các biểu thức là
 
 $$
 \begin{aligned}
-i&=\frac{\mathcal E}{R}(1-e^{-t/\tau}),\\
-\frac{di}{dt}&=\frac{\mathcal E}{L}e^{-t/\tau},\\
-U_B&=\frac12Li^2.
+i &= \frac{\mathcal E}{R}(1-e^{-t/\tau}), \\
+\frac{di}{dt} &= \frac{\mathcal E}{L}e^{-t/\tau}, \\
+U_B &= \frac12Li^2.
 \end{aligned}
 $$
 
@@ -188,9 +187,9 @@ Thay dữ kiện, ta được
 
 $$
 \begin{aligned}
-i&=0{,}190\,\mathrm A,\\
-\frac{di}{dt}&=+229\,\mathrm{A/s},\\
-U_B&=6{,}79\times10^{-4}\,\mathrm J.
+i &= 0{,}190\,\mathrm A, \\
+\frac{di}{dt} &= +229\,\mathrm{A/s}, \\
+U_B &= 6{,}79\times10^{-4}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -211,9 +210,9 @@ Giữ các giá trị $\mathcal E$, $R$, $L$ của bài VP30.7.2. Lần này $S_
 
 $$
 \begin{aligned}
-i&=I_0e^{-Rt/L},\\
-\frac{di}{dt}&=-\frac RL i,\\
-U_B&=\frac12Li^2.
+i &= I_0e^{-Rt/L}, \\
+\frac{di}{dt} &= -\frac RL i, \\
+U_B &= \frac12Li^2.
 \end{aligned}
 $$
 
@@ -221,9 +220,9 @@ Tại thời điểm yêu cầu,
 
 $$
 \begin{aligned}
-i&=0{,}476\,\mathrm A,\\
-\frac{di}{dt}&=-229\,\mathrm{A/s},\\
-U_B&=4{,}26\times10^{-3}\,\mathrm J.
+i &= 0{,}476\,\mathrm A, \\
+\frac{di}{dt} &= -229\,\mathrm{A/s}, \\
+U_B &= 4{,}26\times10^{-3}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -252,8 +251,8 @@ Vì $v_R=\mathcal E/2$, dòng và tốc độ tăng tại đó là
 
 $$
 \begin{aligned}
-i&=\frac{\mathcal E}{2R},\\
-\frac{di}{dt}&=\frac{\mathcal E}{2L}.
+i &= \frac{\mathcal E}{2R}, \\
+\frac{di}{dt} &= \frac{\mathcal E}{2L}.
 \end{aligned}
 $$
 
@@ -280,11 +279,11 @@ Mạch LC của Hình 30.15 có $L=25{,}0\,\mu\mathrm H$, dao động với tầ
 
 $$
 \begin{aligned}
-\omega&=2\pi f,\\
-C&=\frac1{L(2\pi f)^2}\\
-&=5{,}12\times10^{-3}\,\mathrm F,\\
-I_{\max}&=2\pi fQ\\
-&=14{,}0\,\mathrm A.
+\omega &= 2\pi f, \\
+C &= \frac1{L(2\pi f)^2} \\
+&= 5{,}12\times10^{-3}\,\mathrm F, \\
+I_{\max} &= 2\pi fQ \\
+&= 14{,}0\,\mathrm A.
 \end{aligned}
 $$
 
@@ -305,11 +304,11 @@ Một mạch LC gồm cuộn $30{,}0\,\mu\mathrm H$ và tụ $655\,\mu\mathrm F$
 
 $$
 \begin{aligned}
-t_0&=\frac{\pi}{2\omega}\\
-&=\frac\pi2\sqrt{LC}\\
-&=2{,}20\times10^{-4}\,\mathrm s,\\
-|i(t_0)|&=\omega Q\\
-&=2{,}85\,\mathrm A.
+t_0 &= \frac{\pi}{2\omega} \\
+&= \frac\pi2\sqrt{LC} \\
+&= 2{,}20\times10^{-4}\,\mathrm s, \\
+|i(t_0)| &= \omega Q \\
+&= 2{,}85\,\mathrm A.
 \end{aligned}
 $$
 
@@ -330,12 +329,12 @@ Tổng năng lượng điện trường và từ trường trong một mạch LC
 
 $$
 \begin{aligned}
-C&=\frac{q^2}{2U_E}\\
-&=35{,}1\,\mu\mathrm F,\\
-L&=\frac{2U_B}{i^2}\\
-&=0{,}0125\,\mathrm H,\\
-\omega&=\frac1{\sqrt{LC}}\\
-&=1{,}51\times10^3\,\mathrm{rad/s}.
+C &= \frac{q^2}{2U_E} \\
+&= 35{,}1\,\mu\mathrm F, \\
+L &= \frac{2U_B}{i^2} \\
+&= 0{,}0125\,\mathrm H, \\
+\omega &= \frac1{\sqrt{LC}} \\
+&= 1{,}51\times10^3\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -356,10 +355,10 @@ Một mạch RLC nối tiếp có $L=42{,}0\,\mathrm{mH}$, điện dung $C$ và 
 
 $$
 \begin{aligned}
-C&=\frac1{L\omega_0^2}\\
-&=61{,}1\,\mu\mathrm F,\\
-\frac{R}{2L}&=\sqrt{\omega_0^2-\omega_d^2},\\
-R&=49{,}4\,\Omega.
+C &= \frac1{L\omega_0^2} \\
+&= 61{,}1\,\mu\mathrm F, \\
+\frac{R}{2L} &= \sqrt{\omega_0^2-\omega_d^2}, \\
+R &= 49{,}4\,\Omega.
 \end{aligned}
 $$
 
@@ -390,8 +389,8 @@ Tổng năng lượng không đổi là
 
 $$
 \begin{aligned}
-U&=\frac{q_0^2}{2C}+\frac12Li_0^2\\
-&=7{,}68\times10^{-8}\,\mathrm J.
+U &= \frac{q_0^2}{2C}+\frac12Li_0^2 \\
+&= 7{,}68\times10^{-8}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -419,11 +418,11 @@ $$
 
 $$
 \begin{aligned}
-U_B&=\frac U4\\
-&=1{,}92\times10^{-8}\,\mathrm J,\\
-U_E&=\frac{3U}{4},\\
-|v_C|&=\sqrt{\frac{2U_E}{C}}\\
-&=21{,}5\,\mathrm{mV}.
+U_B &= \frac U4 \\
+&= 1{,}92\times10^{-8}\,\mathrm J, \\
+U_E &= \frac{3U}{4}, \\
+|v_C| &= \sqrt{\frac{2U_E}{C}} \\
+&= 21{,}5\,\mathrm{mV}.
 \end{aligned}
 $$
 

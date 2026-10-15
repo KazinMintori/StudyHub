@@ -273,8 +273,8 @@ Chứng minh rằng đơn vị $\mathrm{A\,m^2}$ và $\mathrm{J/T}$ của mômen
 
 $$
 \begin{aligned}
-&\frac{\mathrm J}{\mathrm T} = \frac{\mathrm{N\,m}}{\mathrm{N/(A\,m)}}\\
-&\quad =\mathrm{A\,m^2}.
+\frac{\mathrm J}{\mathrm T} &= \frac{\mathrm{N\,m}}{\mathrm{N/(A\,m)}} \\
+&= \mathrm{A\,m^2}.
 \end{aligned}
 $$
 :::

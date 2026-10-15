@@ -23,8 +23,8 @@ Một sóng điện từ hình sin trong chân không có biên độ từ trư�
 
 $$
 \begin{aligned}
-E_{\max}&=cB_{\max}\\
-&=1{,}29\times10^6\,\mathrm{V/m}.
+E_{\max} &= cB_{\max} \\
+&= 1{,}29\times10^6\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -32,10 +32,10 @@ $$
 
 $$
 \begin{aligned}
-\lambda&=\frac{2\pi}{k}\\
-&=2{,}51\times10^{-6}\,\mathrm m,\\
-f&=\frac c\lambda\\
-&=1{,}19\times10^{14}\,\mathrm{Hz}.
+\lambda &= \frac{2\pi}{k} \\
+&= 2{,}51\times10^{-6}\,\mathrm m, \\
+f &= \frac c\lambda \\
+&= 1{,}19\times10^{14}\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -54,9 +54,9 @@ Sóng truyền theo chiều dương trục $z$.
 
 $$
 \begin{aligned}
-\vec E(y,t)&=\hat{\mathbf x}E_{\max}\cos\theta,\\
-E_{\max}&=2{,}45\times10^6\,\mathrm{V/m},\\
-k&=6{,}50\times10^6\,\mathrm{rad/m}.
+\vec E(y,t) &= \hat{\mathbf x}E_{\max}\cos\theta, \\
+E_{\max} &= 2{,}45\times10^6\,\mathrm{V/m}, \\
+k &= 6{,}50\times10^6\,\mathrm{rad/m}.
 \end{aligned}
 $$
 
@@ -76,10 +76,10 @@ $$
 
 $$
 \begin{aligned}
-\lambda&=\frac{2\pi}{k}\\
-&=9{,}67\times10^{-7}\,\mathrm m,\\
-\omega&=ck\\
-&=1{,}95\times10^{15}\,\mathrm{rad/s}.
+\lambda &= \frac{2\pi}{k} \\
+&= 9{,}67\times10^{-7}\,\mathrm m, \\
+\omega &= ck \\
+&= 1{,}95\times10^{15}\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -89,10 +89,9 @@ $$
 
 $$
 \begin{aligned}
-B_{\max}&=\frac{E_{\max}}c\\
-&=8{,}17\times10^{-3}\,\mathrm T,\\
-\vec B(y,t)&=-\hat{\mathbf z}B_{\max}\\
-&\quad\times\cos(ky-\omega t).
+B_{\max} &= \frac{E_{\max}}c \\
+&= 8{,}17\times10^{-3}\,\mathrm T, \\
+\vec B(y,t) &= -\hat{\mathbf z}B_{\max} \times\cos(ky-\omega t).
 \end{aligned}
 $$
 
@@ -118,8 +117,8 @@ Tìm độ lớn và hướng của (a) từ trường tại $x=0$, $t=0$, (b) �
 
 $$
 \begin{aligned}
-E_y(x,t)&=E_{\max}\cos\theta,\\
-B_z(x,t)&=\frac{E_{\max}}c\cos\theta.
+E_y(x,t) &= E_{\max}\cos\theta, \\
+B_z(x,t) &= \frac{E_{\max}}c\cos\theta.
 \end{aligned}
 $$
 
@@ -129,8 +128,8 @@ Hướng $+z$ của từ trường tại gốc bảo đảm $\vec E\times\vec B$
 
 $$
 \begin{aligned}
-B_z(0,0)&=\frac{E_{\max}}c\\
-&=0{,}0140\,\mathrm T.
+B_z(0,0) &= \frac{E_{\max}}c \\
+&= 0{,}0140\,\mathrm T.
 \end{aligned}
 $$
 
@@ -140,10 +139,10 @@ Từ trường có độ lớn $0{,}0140\,\mathrm T$ và hướng theo $+z$.
 
 $$
 \begin{aligned}
-kx&=2\pi\frac{1{,}85}{2{,}94}\\
-&=3{,}9537\,\mathrm{rad},\\
-E_y&=E_{\max}\cos(kx)\\
-&=-2{,}89\times10^6\,\mathrm{V/m}.
+kx &= 2\pi\frac{1{,}85}{2{,}94} \\
+&= 3{,}9537\,\mathrm{rad}, \\
+E_y &= E_{\max}\cos(kx) \\
+&= -2{,}89\times10^6\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -153,8 +152,8 @@ $$
 
 $$
 \begin{aligned}
-B_z&=\frac{E_y}c\\
-&=-9{,}63\times10^{-3}\,\mathrm T.
+B_z &= \frac{E_y}c \\
+&= -9{,}63\times10^{-3}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -180,9 +179,9 @@ Tìm (a) tần số trong chân không, (b) tần số trong vật liệu, (c) v
 
 $$
 \begin{aligned}
-f_0&=\frac c{\lambda_0}\\
-&=4{,}72\times10^{14}\,\mathrm{Hz},\\
-f_{\mathrm m}&=f_0.
+f_0 &= \frac c{\lambda_0} \\
+&= 4{,}72\times10^{14}\,\mathrm{Hz}, \\
+f_{\mathrm m} &= f_0.
 \end{aligned}
 $$
 
@@ -190,8 +189,8 @@ $$
 
 $$
 \begin{aligned}
-v&=f_0\lambda_{\mathrm m}\\
-&=1{,}64\times10^8\,\mathrm{m/s}.
+v &= f_0\lambda_{\mathrm m} \\
+&= 1{,}64\times10^8\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -199,9 +198,9 @@ $$
 
 $$
 \begin{aligned}
-\varepsilon_r&=\left(\frac cv\right)^2\\
-&=\left(\frac{\lambda_0}{\lambda_{\mathrm m}}\right)^2\\
-&=3{,}35.
+\varepsilon_r &= \left(\frac cv\right)^2 \\
+&= \left(\frac{\lambda_0}{\lambda_{\mathrm m}}\right)^2 \\
+&= 3{,}35.
 \end{aligned}
 $$
 
@@ -231,11 +230,11 @@ Một sóng điện từ không hình sin có điện trường và từ trườ
 
 $$
 \begin{aligned}
-S&=\frac{E^2}{\mu_0c},\\
-E&=\sqrt{\mu_0cS}\\
-&=64{,}4\,\mathrm{V/m},\\
-B&=\frac Ec\\
-&=2{,}15\times10^{-7}\,\mathrm T.
+S &= \frac{E^2}{\mu_0c}, \\
+E &= \sqrt{\mu_0cS} \\
+&= 64{,}4\,\mathrm{V/m}, \\
+B &= \frac Ec \\
+&= 2{,}15\times10^{-7}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -243,8 +242,8 @@ $$
 
 $$
 \begin{aligned}
-u&=\frac Sc\\
-&=3{,}67\times10^{-8}\,\mathrm{J/m^3}.
+u &= \frac Sc \\
+&= 3{,}67\times10^{-8}\,\mathrm{J/m^3}.
 \end{aligned}
 $$
 
@@ -256,8 +255,8 @@ Một sóng hình sin trong chân không có hai trường:
 
 $$
 \begin{aligned}
-E_y&=E_{\max}\cos(kx-\omega t),\\
-B_z&=B_{\max}\cos(kx-\omega t).
+E_y &= E_{\max}\cos(kx-\omega t), \\
+B_z &= B_{\max}\cos(kx-\omega t).
 \end{aligned}
 $$
 
@@ -317,10 +316,10 @@ Một đài trên mặt đất phát sóng vô tuyến hình sin đều theo m�
 
 $$
 \begin{aligned}
-B_{\max}&=\frac{E_{\max}}c\\
-&=1{,}20\times10^{-9}\,\mathrm T,\\
-I&=\frac12\varepsilon_0cE_{\max}^2\\
-&=1{,}72\times10^{-4}\,\mathrm{W/m^2}.
+B_{\max} &= \frac{E_{\max}}c \\
+&= 1{,}20\times10^{-9}\,\mathrm T, \\
+I &= \frac12\varepsilon_0cE_{\max}^2 \\
+&= 1{,}72\times10^{-4}\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -328,8 +327,8 @@ $$
 
 $$
 \begin{aligned}
-P&=I(2\pi r^2)\\
-&=1{,}69\times10^5\,\mathrm W.
+P &= I(2\pi r^2) \\
+&= 1{,}69\times10^5\,\mathrm W.
 \end{aligned}
 $$
 
@@ -354,10 +353,10 @@ Mặt Trời phát ánh sáng đều theo mọi hướng, được mô hình hó
 
 $$
 \begin{aligned}
-E_{\max}&=\sqrt{\frac{2I}{\varepsilon_0c}}\\
-&=1{,}01\times10^3\,\mathrm{V/m},\\
-B_{\max}&=\frac{E_{\max}}c\\
-&=3{,}38\times10^{-6}\,\mathrm T.
+E_{\max} &= \sqrt{\frac{2I}{\varepsilon_0c}} \\
+&= 1{,}01\times10^3\,\mathrm{V/m}, \\
+B_{\max} &= \frac{E_{\max}}c \\
+&= 3{,}38\times10^{-6}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -365,8 +364,8 @@ $$
 
 $$
 \begin{aligned}
-P&=4\pi r^2I\\
-&=3{,}85\times10^{26}\,\mathrm W.
+P &= 4\pi r^2I \\
+&= 3{,}85\times10^{26}\,\mathrm W.
 \end{aligned}
 $$
 :::
@@ -380,10 +379,8 @@ Xét sóng đứng:
 
 $$
 \begin{aligned}
-E_y(x,t)&=-2E_{\max}\sin(kx)\\
-&\quad\times\sin(\omega t),\\
-B_z(x,t)&=-2B_{\max}\cos(kx)\\
-&\quad\times\cos(\omega t).
+E_y(x,t) &= -2E_{\max}\sin(kx) \times\sin(\omega t), \\
+B_z(x,t) &= -2B_{\max}\cos(kx) \times\cos(\omega t).
 \end{aligned}
 $$
 
@@ -402,9 +399,8 @@ $$
 
 $$
 \begin{aligned}
-S_x&=4S_0\sin(kx)\cos(kx)\\
-&\quad\times\sin(\omega t)\cos(\omega t)\\
-&=S_0\sin(2kx)\sin(2\omega t).
+S_x &= 4S_0\sin(kx)\cos(kx) \times\sin(\omega t)\cos(\omega t) \\
+&= S_0\sin(2kx)\sin(2\omega t).
 \end{aligned}
 $$
 
@@ -418,9 +414,9 @@ Tại $x=\lambda/8$, ta có $\sin(2kx)=1$. Do đó:
 
 $$
 \begin{aligned}
-\text{(b)}\quad\vec S&=\vec0,\\
-\text{(c)}\quad\vec S&=\frac{\sqrt3}{2}S_0\hat{\mathbf x},\\
-\text{(d)}\quad\vec S&=-S_0\hat{\mathbf x}.
+\text{(b)}\quad\vec S &= \vec0, \\
+\text{(c)}\quad\vec S &= \frac{\sqrt3}{2}S_0\hat{\mathbf x}, \\
+\text{(d)}\quad\vec S &= -S_0\hat{\mathbf x}.
 \end{aligned}
 $$
 
@@ -446,10 +442,10 @@ Trong một sóng đứng điện từ phân cực thẳng, biên độ từ tr�
 
 $$
 \begin{aligned}
-\lambda&=4(3{,}60\,\mathrm{mm})\\
-&=14{,}4\,\mathrm{mm},\\
-f&=\frac c\lambda\\
-&=2{,}08\times10^{10}\,\mathrm{Hz}.
+\lambda &= 4(3{,}60\,\mathrm{mm}) \\
+&= 14{,}4\,\mathrm{mm}, \\
+f &= \frac c\lambda \\
+&= 2{,}08\times10^{10}\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -457,8 +453,8 @@ $$
 
 $$
 \begin{aligned}
-E_{\mathrm{bụng}}&=cB_{\mathrm{tường}}\\
-&=36{,}0\,\mathrm{V/m}.
+E_{\mathrm{bụng}} &= cB_{\mathrm{tường}} \\
+&= 36{,}0\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -556,8 +552,8 @@ Cường độ sóng tại anten:
 
 $$
 \begin{aligned}
-I&=\frac{P}{4\pi r^2}\\
-&=7{,}00\times10^{-4}\,\mathrm{W/m^2}.
+I &= \frac{P}{4\pi r^2} \\
+&= 7{,}00\times10^{-4}\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -565,8 +561,8 @@ Biên độ từ trường:
 
 $$
 \begin{aligned}
-B_{\max}&=\sqrt{\frac{2\mu_0I}{c}}\\
-&=2{,}42\times10^{-9}\,\mathrm T.
+B_{\max} &= \sqrt{\frac{2\mu_0I}{c}} \\
+&= 2{,}42\times10^{-9}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -580,9 +576,9 @@ Chọn gốc pha tại anten để $B_z=B_{\max}\cos(\omega t)$. Trong gần đ�
 
 $$
 \begin{aligned}
-\Phi_B(t)&=AB_{\max}\cos(\omega t),\\
-\mathcal E(t)&=-\frac{d\Phi_B}{dt}\\
-&=A\omega B_{\max}\sin(\omega t).
+\Phi_B(t) &= AB_{\max}\cos(\omega t), \\
+\mathcal E(t) &= -\frac{d\Phi_B}{dt} \\
+&= A\omega B_{\max}\sin(\omega t).
 \end{aligned}
 $$
 
@@ -590,9 +586,9 @@ Biên độ cần tìm:
 
 $$
 \begin{aligned}
-\mathcal E_{\max}&=A(2\pi f)B_{\max}\\
-&=3{,}68\times10^{-2}\,\mathrm V\\
-&=36{,}8\,\mathrm{mV}.
+\mathcal E_{\max} &= A(2\pi f)B_{\max} \\
+&= 3{,}68\times10^{-2}\,\mathrm V \\
+&= 36{,}8\,\mathrm{mV}.
 \end{aligned}
 $$
 

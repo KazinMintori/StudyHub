@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "12-song-dien-tu",
+  "route": "/vat-ly-2/bai-giang/12-song-dien-tu",
+  "notes": "docs/vat-ly-2/bai-giang/12-song-dien-tu.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dien-truong",
+    "tu-truong",
+    "song",
+    "thong-luong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

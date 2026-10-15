@@ -68,8 +68,8 @@ Khi $K$ là nón chính quy, nón đối ngẫu $K^*$ cũng sinh ra một quan h
 
 $$
 \begin{aligned}
-    &x \preceq_K y \iff \lambda^T x \le \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0,\\
-    &x \prec_K y \iff \lambda^T x < \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \ \lambda \ne 0.
+x \preceq_K y &\iff \lambda^T x \le \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \\
+x \prec_K y &\iff \lambda^T x < \lambda^T y, \quad \forall \lambda \succeq_{K^*} 0, \ \lambda \ne 0.
 \end{aligned}
 $$
 

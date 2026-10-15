@@ -40,8 +40,8 @@ Góc $\theta$ đo từ đường trung trực hai nguồn. Vì vậy, các hư�
 
 $$
 \begin{aligned}
-d\sin\theta_{\max}&=m\lambda,\\
-d\sin\theta_{\min}&=(m+1/2)\lambda.
+d\sin\theta_{\max} &= m\lambda, \\
+d\sin\theta_{\min} &= (m+1/2)\lambda.
 \end{aligned}
 $$
 
@@ -79,8 +79,8 @@ Với nguồn đồng pha:
 
 $$
 \begin{aligned}
-\phi&=\frac{2\pi}{\lambda}(r_2-r_1),\\
-k&=\frac{2\pi}{\lambda}.
+\phi &= \frac{2\pi}{\lambda}(r_2-r_1), \\
+k &= \frac{2\pi}{\lambda}.
 \end{aligned}
 $$
 
@@ -116,8 +116,8 @@ Gương dịch một khoảng $y$ làm đường đi hai lượt đổi $2y$. N�
 
 $$
 \begin{aligned}
-2y&=N\lambda,\\
-\lambda&=\frac{2y}{N}.
+2y &= N\lambda, \\
+\lambda &= \frac{2y}{N}.
 \end{aligned}
 $$
 

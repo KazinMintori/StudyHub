@@ -22,10 +22,10 @@ $q_1=+4.00\,\mathrm{nC}$ ở $x=0$, $q_2=-1.20\,\mathrm{nC}$ ở $x=6.00\,\mathr
 
 $$
 \begin{aligned}
-&F_{1x} = -\frac{k(8.00\times10^{-18})}{0.0400^2},\\
-&F_{2x} = -\frac{k(2.40\times10^{-18})}{0.0200^2},\\
-&F_x = F_{1x}+F_{2x}\\
-&\quad =-98.9\,\mu\mathrm N.
+F_{1x} &= -\frac{k(8.00\times10^{-18})}{0.0400^2}, \\
+F_{2x} &= -\frac{k(2.40\times10^{-18})}{0.0200^2}, \\
+F_x &= F_{1x}+F_{2x} \\
+&= -98.9\,\mu\mathrm N.
 \end{aligned}
 $$
 :::
@@ -46,12 +46,12 @@ $q_1=+3.60\,\mathrm{nC}$ ở $x=0$, điện tích chưa biết $q_2$ ở $x=-4.0
 
 $$
 \begin{aligned}
-&F_1 = k\frac{(3.60)(2.00)10^{-18}}{0.0400^2}\\
-&\quad =40.5\,\mu\mathrm N,\\
-&F_2 = 54.0-F_1\\
-&\quad =13.6\,\mu\mathrm N,\\
-&q_2 = \frac{F_2(0.0800)^2}{k(2.00\times10^{-9})}\\
-&\quad =+4.82\,\mathrm{nC}.
+F_1 &= k\frac{(3.60)(2.00)10^{-18}}{0.0400^2} \\
+&= 40.5\,\mu\mathrm N, \\
+F_2 &= 54.0-F_1 \\
+&= 13.6\,\mu\mathrm N, \\
+q_2 &= \frac{F_2(0.0800)^2}{k(2.00\times10^{-9})} \\
+&= +4.82\,\mathrm{nC}.
 \end{aligned}
 $$
 
@@ -76,8 +76,8 @@ Khoảng cách mỗi nguồn đến điểm thử là 0,250 m:
 
 $$
 \begin{aligned}
-&F_y = 2\frac{k(6.00)(2.50)10^{-18}}{0.250^2}\frac{0.200}{0.250}\\
-&\quad =+3.45\,\mu\mathrm N.
+F_y &= 2\frac{k(6.00)(2.50)10^{-18}}{0.250^2}\frac{0.200}{0.250} \\
+&= +3.45\,\mu\mathrm N.
 \end{aligned}
 $$
 :::
@@ -98,10 +98,9 @@ Một mảnh nhựa nhỏ có $q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)
 
 $$
 \begin{aligned}
-&r_1 = \sqrt{0.250^2+0.200^2},\\
-&F_x = k(1.50)(4.00)10^{-18}\\
-&\quad\times\left(\frac1{0.250^2}-\frac{0.250}{r_1^3}\right),\\
-&F_y = k(1.50)(4.00)10^{-18}\frac{0.200}{r_1^3}.
+r_1 &= \sqrt{0.250^2+0.200^2}, \\
+F_x &= k(1.50)(4.00)10^{-18} \left(\frac1{0.250^2}-\frac{0.250}{r_1^3}\right), \\
+F_y &= k(1.50)(4.00)10^{-18}\frac{0.200}{r_1^3}.
 \end{aligned}
 $$
 
@@ -130,8 +129,8 @@ $q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)$ và $q_2=-5.00\,\mathrm{nC}$
 
 $$
 \begin{aligned}
-&E_y = -\frac{k(4+5)10^{-9}}{0.100^2}\\
-&\quad =-8.09\times10^3\,\mathrm{N/C}.
+E_y &= -\frac{k(4+5)10^{-9}}{0.100^2} \\
+&= -8.09\times10^3\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -139,9 +138,8 @@ $$
 
 $$
 \begin{aligned}
-&E_y = \frac{k(4.00\times10^{-9})}{0.200^2}\\
-&\quad-\frac{k(5.00\times10^{-9})}{0.400^2}\\
-&\quad =618\,\mathrm{N/C}.
+E_y &= \frac{k(4.00\times10^{-9})}{0.200^2} -\frac{k(5.00\times10^{-9})}{0.400^2} \\
+&= 618\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -164,12 +162,12 @@ $q_1=+1.80\,\mathrm{nC}$ tại $x=0$, nguồn chưa biết $q_2$ tại $x=+4.00\
 
 $$
 \begin{aligned}
-&E_1 = k(1.80\times10^{-9})/0.0200^2\\
-&\quad =4.05\times10^4\,\mathrm{N/C},\\
-&E_2 = 6.75\times10^4-E_1\\
-&\quad =2.70\times10^4\,\mathrm{N/C},\\
-&q_2 = -E_2(0.0200)^2/k\\
-&\quad =-1.20\,\mathrm{nC}.
+E_1 &= k(1.80\times10^{-9})/0.0200^2 \\
+&= 4.05\times10^4\,\mathrm{N/C}, \\
+E_2 &= 6.75\times10^4-E_1 \\
+&= 2.70\times10^4\,\mathrm{N/C}, \\
+q_2 &= -E_2(0.0200)^2/k \\
+&= -1.20\,\mathrm{nC}.
 \end{aligned}
 $$
 :::
@@ -190,9 +188,9 @@ Mô hình đơn giản của nguyên tử hydrogen gồm nguồn $+e$ tại tâm
 
 $$
 \begin{aligned}
-&E_p = ke/a^2,\\
-&E_{\mathrm{ring}} = ke/(2^{3/2}a^2),\\
-&E = \frac{ke}{a^2}\left(1-\frac1{2\sqrt2}\right).
+E_p &= ke/a^2, \\
+E_{\mathrm{ring}} &= ke/(2^{3/2}a^2), \\
+E &= \frac{ke}{a^2}\left(1-\frac1{2\sqrt2}\right).
 \end{aligned}
 $$
 
@@ -215,12 +213,12 @@ Hệ số ngoặc dương, nên tổng hướng ra xa proton.
 
 $$
 \begin{aligned}
-&dq = (Q/L)\,dx,\\
-&dE_x = -\frac{kQ}{Lx^2}\,dx,\\
-&dE_y = 0,\\
-&E_x = -\frac{kQ}{L}\int_L^{2L}x^{-2}\,dx\\
-&\quad =-\frac{kQ}{2L^2},\\
-&E_y = 0.
+dq &= (Q/L)\,dx, \\
+dE_x &= -\frac{kQ}{Lx^2}\,dx, \\
+dE_y &= 0, \\
+E_x &= -\frac{kQ}{L}\int_L^{2L}x^{-2}\,dx \\
+&= -\frac{kQ}{2L^2}, \\
+E_y &= 0.
 \end{aligned}
 $$
 :::
@@ -242,11 +240,11 @@ Phân tử nước có mômen lưỡng cực $6.13\times10^{-30}\,\mathrm{C\,m}$
 
 $$
 \begin{aligned}
-&pE = (6.13)(3.00)10^{-25}\,\mathrm{N\,m},\\
-&\tau = pE\sin50.0^\circ\\
-&\quad =1.41\times10^{-24}\,\mathrm{N\,m},\\
-&U = -pE\cos50.0^\circ\\
-&\quad =-1.18\times10^{-24}\,\mathrm J.
+pE &= (6.13)(3.00)10^{-25}\,\mathrm{N\,m}, \\
+\tau &= pE\sin50.0^\circ \\
+&= 1.41\times10^{-24}\,\mathrm{N\,m}, \\
+U &= -pE\cos50.0^\circ \\
+&= -1.18\times10^{-24}\,\mathrm J.
 \end{aligned}
 $$
 :::
@@ -267,8 +265,8 @@ Lưỡng cực trong trường đều $8.50\times10^4\,\mathrm{N/C}$ có hai đi
 
 $$
 \begin{aligned}
-&q = \frac{6.60\times10^{-26}}{(1.10\times10^{-10})(8.50\times10^4)}\\
-&\quad =7.06\times10^{-21}\,\mathrm C.
+q &= \frac{6.60\times10^{-26}}{(1.10\times10^{-10})(8.50\times10^4)} \\
+&= 7.06\times10^{-21}\,\mathrm C.
 \end{aligned}
 $$
 :::
@@ -289,9 +287,9 @@ $$
 
 $$
 \begin{aligned}
-&p = \frac{W}{2E}\\
-&\quad =\frac{4.60\times10^{-25}}{2(1.20\times10^5)}\\
-&\quad =1.92\times10^{-30}\,\mathrm{C\,m}.
+p &= \frac{W}{2E} \\
+&= \frac{4.60\times10^{-25}}{2(1.20\times10^5)} \\
+&= 1.92\times10^{-30}\,\mathrm{C\,m}.
 \end{aligned}
 $$
 :::
@@ -312,10 +310,10 @@ Phân tử ion KBr gồm ion kali có $+e=1.60\times10^{-19}\,\mathrm C$ và ion
 
 $$
 \begin{aligned}
-&d = p/e\\
-&\quad =2.19\times10^{-10}\,\mathrm m,\\
-&r = (2kp/E)^{1/3}\\
-&\quad =1.99\times10^{-8}\,\mathrm m.
+d &= p/e \\
+&= 2.19\times10^{-10}\,\mathrm m, \\
+r &= (2kp/E)^{1/3} \\
+&= 1.99\times10^{-8}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -345,13 +343,13 @@ Tài nguyên học tập đa phương tiện và bài tập được giao của 
 
 $$
 \begin{aligned}
-&dq = \frac Q\pi d\theta,\\
-&dE_x = -\frac{kQ}{\pi a^2}\cos\theta\,d\theta,\\
-&dE_y = -\frac{kQ}{\pi a^2}\sin\theta\,d\theta,\\
-&E_x = -\frac{kQ}{\pi a^2}\int_0^\pi\cos\theta\,d\theta\\
-&\quad =0,\\
-&E_y = -\frac{kQ}{\pi a^2}\int_0^\pi\sin\theta\,d\theta\\
-&\quad =-\frac{2kQ}{\pi a^2}.
+dq &= \frac Q\pi d\theta, \\
+dE_x &= -\frac{kQ}{\pi a^2}\cos\theta\,d\theta, \\
+dE_y &= -\frac{kQ}{\pi a^2}\sin\theta\,d\theta, \\
+E_x &= -\frac{kQ}{\pi a^2}\int_0^\pi\cos\theta\,d\theta \\
+&= 0, \\
+E_y &= -\frac{kQ}{\pi a^2}\int_0^\pi\sin\theta\,d\theta \\
+&= -\frac{2kQ}{\pi a^2}.
 \end{aligned}
 $$
 

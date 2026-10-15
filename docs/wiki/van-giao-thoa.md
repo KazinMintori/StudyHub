@@ -16,7 +16,7 @@ Vân giao thoa là miền cực đại hoặc cực tiểu cường độ do cá
 Với hai chùm kết hợp cùng phương phân cực:
 
 $$
-\begin{aligned}I&=I_1+I_2\\&\quad+2\sqrt{I_1I_2}\cos\phi.\end{aligned}
+I =I_1+I_2\\ \quad+2\sqrt{I_1I_2}\cos\phi.
 $$
 
 Cực đại ứng với cùng pha, cực tiểu ứng với ngược pha. Khi $I_1=I_2$, cực tiểu bằng không. Cường độ tăng ở vân sáng được bù bởi sự giảm ở vùng khác. Chồng chất phân bố lại dòng năng lượng, không tạo thêm năng lượng. Các miền đứng yên của hệ vân hai nguồn lan truyền không tự động biến toàn trường thành sóng đứng.

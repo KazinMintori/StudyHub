@@ -27,8 +27,8 @@ Lagrangian bổ sung các ràng buộc vào mục tiêu với trọng số:
 
 $$
 \begin{aligned}
-&L(x,\mu,\lambda) = f(x)+\mu_1f_1(x)+\cdots+\mu_mf_m(x)+\lambda_1h_1(x)+\cdots+\lambda_ph_p(x)\\
-&\quad =f(x)+\sum_{i=1}^{m}\mu_i f_i(x)+\sum_{j=1}^{p}\lambda_j h_j(x).
+L(x,\mu,\lambda) &= f(x)+\mu_1f_1(x)+\cdots+\mu_mf_m(x)+\lambda_1h_1(x)+\cdots+\lambda_ph_p(x) \\
+&= f(x)+\sum_{i=1}^{m}\mu_i f_i(x)+\sum_{j=1}^{p}\lambda_j h_j(x).
 \end{aligned}
 $$
 
@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{aligned}
-&\nabla h_1(x),\ldots,\nabla h_p(x),\\
+&\nabla h_1(x),\ldots,\nabla h_p(x), \\
 &\{\nabla f_i(x):i\in J(x)\}
 \end{aligned}
 $$
@@ -63,10 +63,8 @@ Nếu $x^\star$ là cực tiểu địa phương và LICQ thỏa tại đó, t�
 
 $$
 \begin{aligned}
-&0 = \nabla_x L(x^\star,\mu,\lambda)\\
-&\quad =\nabla f(x^\star)\\
-&\quad+\sum_{i=1}^{m}\mu_i\nabla f_i(x^\star)\\
-&\quad+\sum_{j=1}^{p}\lambda_j\nabla h_j(x^\star).
+0 &= \nabla_x L(x^\star, \mu, \lambda) \\
+&= \nabla f(x^\star) + \sum_{i=1}^m \mu_i \nabla f_i(x^\star) + \sum_{j=1}^p \lambda_j \nabla h_j(x^\star).
 \end{aligned}
 $$
 
@@ -95,9 +93,9 @@ Cho $y$ khả thi bất kỳ. Ta có
 
 $$
 \begin{aligned}
-&f(y) \ge L(y,\mu,\lambda)\\
-&\quad \ge L(x^\star,\mu,\lambda)\\
-&\quad =f(x^\star).
+f(y) &\ge L(y,\mu,\lambda) \\
+&\ge L(x^\star,\mu,\lambda) \\
+&= f(x^\star).
 \end{aligned}
 $$
 

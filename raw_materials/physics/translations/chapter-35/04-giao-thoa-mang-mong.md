@@ -25,10 +25,7 @@ Kết quả thực nghiệm này chỉ ra rằng: Một trong hai sóng phản x
 Sự dịch pha này được suy ra trực tiếp từ hệ phương trình Maxwell và bản chất sóng điện từ của ánh sáng. Khi một sóng ánh sáng có biên độ điện trường $E_i$ lan truyền trong môi trường quang học có chiết suất $n_a$ và tới vuông góc với mặt phân cách của môi trường quang học thứ hai có chiết suất $n_b$, biên độ $E_r$ của sóng phản xạ được xác định bởi:
 
 $$
-\begin{aligned}
-E_r = \frac{n_a - n_b}{n_a + n_b} E_i
-\end{aligned}
-\tag{35.16}
+E_r = \frac{n_a - n_b}{n_a + n_b} E_i \tag{35.16}
 $$
 
 Kết quả ở phương trình (35.16) cho thấy: Biên độ tới và biên độ phản xạ có cùng dấu khi $n_a > n_b$, và mang dấu trái nhau khi $n_a < n_b$. Vì biên độ thực tế luôn là một đại lượng không âm, dấu âm biểu thị sóng phản xạ đã trải qua một sự dịch pha nửa chu kỳ ($\pi\text{ rad}$).
@@ -49,18 +46,11 @@ Xét màng mỏng có bề dày $t$, ánh sáng chiếu tới gần như vuông 
 Nếu cả hai sóng phản xạ từ hai bề mặt đều không bị đổi pha, hoặc cả hai sóng đều bị đổi pha nửa chu kỳ (không có độ lệch pha tương đối do phản xạ), điều kiện giao thoa là:
 
 $$
-\begin{aligned}
-2t = m\lambda
-\end{aligned}
-\tag{35.17a}
+2t = m\lambda \tag{35.17a}
 $$
 
 $$
-\begin{aligned}
-&2t\\
-&=\left(m+\tfrac12\right)\lambda
-\end{aligned}
-\tag{35.17b}
+2t =\left(m+\tfrac12\right)\lambda \tag{35.17b}
 $$
 
 Trong đó, phương trình (35.17 a) ứng với phản xạ tăng cường (vân sáng) và phương trình (35.17 b) ứng với phản xạ triệt tiêu (vân tối), với số nguyên $m = 0, 1, 2, \dots$
@@ -68,18 +58,11 @@ Trong đó, phương trình (35.17 a) ứng với phản xạ tăng cường (v�
 Ngược lại, nếu chỉ có duy nhất một trong hai sóng phản xạ bị đổi pha nửa chu kỳ (tồn tại độ lệch pha tương đối nửa chu kỳ do phản xạ), các điều kiện trên sẽ hoán đổi cho nhau:
 
 $$
-\begin{aligned}
-&2t\\
-&=\left(m+\tfrac12\right)\lambda
-\end{aligned}
-\tag{35.18a}
+2t =\left(m+\tfrac12\right)\lambda \tag{35.18a}
 $$
 
 $$
-\begin{aligned}
-2t = m\lambda
-\end{aligned}
-\tag{35.18b}
+2t = m\lambda \tag{35.18b}
 $$
 
 Trong đó, phương trình (35.18 a) là điều kiện giao thoa tăng cường và phương trình (35.18 b) là điều kiện giao thoa triệt tiêu, với số nguyên $m = 0, 1, 2, \dots$
@@ -125,33 +108,25 @@ Sóng phản xạ tại mặt trên của nêm không khí (đi từ thủy tinh
 Điều kiện giao thoa triệt tiêu (vân tối) theo phương trình (35.18 b) là:
 
 $$
-\begin{aligned}
 2t = m\lambda_0
-\end{aligned}
 $$
 
 với số nguyên $m = 0, 1, 2, \dots$ Từ hai tam giác đồng dạng trong Hình 35.15, bề dày $t$ của nêm không khí tại khoảng cách $x$ tính từ đường tiếp xúc tỷ lệ thuận với $x$:
 
 $$
-\begin{aligned}
 \frac{t}{x} = \frac{h}{l}
-\end{aligned}
 $$
 
 Kết hợp hệ thức này với điều kiện vân tối:
 
 $$
-\begin{aligned}
 2x\frac{h}{l} = m\lambda_0
-\end{aligned}
 $$
 
 Suy ra vị trí của vân tối thứ $m$:
 
 $$
-\begin{aligned}
 x = m \frac{l\lambda_0}{2h}
-\end{aligned}
 $$
 
 Khoảng cách giữa hai vân tối liên tiếp (khoảng vân $\Delta x$) tương ứng với hiệu số giữa hai bậc $m$ kế tiếp:
@@ -159,8 +134,7 @@ Khoảng cách giữa hai vân tối liên tiếp (khoảng vân $\Delta x$) tư
 $$
 \begin{aligned}
 \Delta x &= \frac{l\lambda_0}{2h} \\
-&=\frac{0{,}100(500)}{2(0{,}0200)}\\
-&\quad\times10^{-6}\,\mathrm m \\
+&= \frac{0{,}100(500)}{2(0{,}0200)} \times10^{-6}\,\mathrm m \\
 &= 1{,}25\text{ mm}
 \end{aligned}
 $$
@@ -308,9 +282,7 @@ Hiện tượng giao thoa màng mỏng là nguyên lý cốt lõi của các l�
 Một lớp màng mỏng trong suốt có chiết suất nhỏ hơn chiết suất của thủy tinh nhưng lớn hơn chiết suất của không khí được phủ lên bề mặt thấu kính (Hình 35.18):
 
 $$
-\begin{aligned}
 n_g>n_f>n_a
-\end{aligned}
 $$
 
 Ở đây, $n_g,n_f,n_a$ lần lượt là chiết suất thủy tinh, màng phủ và không khí.
@@ -342,8 +314,8 @@ $$
 \begin{aligned}
 \lambda &= \frac{\lambda_0}{n} \\
 &= \frac{550\text{ nm}}{1{,}38} \\
-&=398{,}55\,\mathrm{nm}\\
-&\approx400\,\mathrm{nm}
+&= 398{,}55\,\mathrm{nm} \\
+&\approx 400\,\mathrm{nm}
 \end{aligned}
 $$
 
@@ -352,9 +324,9 @@ Bề dày yêu cầu của lớp phủ là:
 $$
 \begin{aligned}
 t &= \frac{\lambda}{4} \\
-&=\frac{550}{4(1{,}38)}\,\mathrm{nm}\\
-&=99{,}638\,\mathrm{nm}\\
-&\approx100\,\mathrm{nm}
+&= \frac{550}{4(1{,}38)}\,\mathrm{nm} \\
+&= 99{,}638\,\mathrm{nm} \\
+&\approx 100\,\mathrm{nm}
 \end{aligned}
 $$
 
@@ -400,9 +372,7 @@ Một lớp benzen mỏng ($n = 1{,}501$) nằm trên bề mặt một tấm tin
 **Giải thích**: Benzen có chiết suất lớn hơn không khí ($1{,}501 > 1{,}000$), do đó ánh sáng phản xạ tại mặt trên của benzen bị đổi pha nửa chu kỳ. Tinh thể fluorit có chiết suất nhỏ hơn benzen ($1{,}434 < 1{,}501$), nên ánh sáng phản xạ tại mặt phân cách giữa benzen và fluorit không bị đổi pha. Vì chỉ có một sóng phản xạ bị đổi pha, điều kiện phản xạ tăng cường (cực đại hóa độ sáng phản xạ) tuân theo phương trình (35.18 a):
 
 $$
-\begin{aligned}
 2t = \left(m + \frac{1}{2}\right)\lambda
-\end{aligned}
 $$
 
 Biểu diễn bề dày $t$ theo bậc giao thoa:

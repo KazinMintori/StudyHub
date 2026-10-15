@@ -17,9 +17,9 @@ Với cuộn lý tưởng, bỏ qua điện trở dây quấn, nhưng giữ tự
 
 $$
 \begin{aligned}
-p_L&=v_Li\\
-&=Li\frac{di}{dt}\\
-&=\frac{d}{dt}\left(\frac12Li^2\right).
+p_L &= v_Li \\
+&= Li\frac{di}{dt} \\
+&= \frac{d}{dt}\left(\frac12Li^2\right).
 \end{aligned}
 $$
 

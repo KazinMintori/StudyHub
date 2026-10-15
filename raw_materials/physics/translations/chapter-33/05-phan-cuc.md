@@ -14,9 +14,9 @@ Chẳng hạn, sóng hình sin truyền theo $+x$ với điện trường dọc 
 
 $$
 \begin{aligned}
-\vec E&=\hat y E_{\max}\cos\psi,\\
-\vec B&=\hat z B_{\max}\cos\psi,\\
-\psi&=kx-\omega t.
+\vec E &= \hat y E_{\max}\cos\psi, \\
+\vec B &= \hat z B_{\max}\cos\psi, \\
+\psi &= kx-\omega t.
 \end{aligned}
 $$
 
@@ -51,9 +51,7 @@ Kính phân cực lý tưởng là một mô hình lý tưởng hóa cho $100\%$
 Khi ánh sáng tự nhiên có cường độ $I_0$ chiếu vuông góc vào một kính lọc phân cực lý tưởng như Hình 33.23, cường độ $I$ của ánh sáng truyền qua đúng bằng một nửa cường độ ban đầu:
 
 $$
-\begin{aligned}
 I = \frac{1}{2} I_0
-\end{aligned}
 $$
 
 Kết quả này xuất phát từ việc lấy trung bình góc của mọi thành phần dao động ngẫu nhiên: Thành phần điện trường song song với trục phân cực là $E_\parallel = E \cos \theta$. Vì cường độ tỷ lệ thuận với bình phương biên độ điện trường, tỷ số cường độ bằng giá trị trung bình của $\cos^2 \theta$ trên toàn bộ dải góc từ $0$ đến $2\pi$:
@@ -84,9 +82,7 @@ Ta phân tích vector điện trường $\vec{E}$ thành hai thành phần vuôn
 Kính phân tích chỉ cho thành phần song song $E_\parallel$ truyền qua và hấp thụ hoàn toàn thành phần vuông góc. Vì cường độ ánh sáng tỷ lệ thuận với bình phương biên độ điện trường ($I \propto E^2$), cường độ ánh sáng $I$ sau khi đi qua kính phân tích được xác định bởi:
 
 $$
-\begin{aligned}
-I = I_{\max} \cos^2 \phi
-\end{aligned} \tag{33.7}
+I = I_{\max} \cos^2 \phi \tag{33.7}
 $$
 
 Hệ thức (33.7) được gọi là định luật Malus, do Étienne-Louis Malus phát hiện bằng thực nghiệm vào năm 1809. Định luật Malus chỉ áp dụng khi ánh sáng tới kính phân tích đã được phân cực thẳng:
@@ -127,17 +123,13 @@ Bài toán này liên quan đến một kính phân cực (tấm lọc phân c�
 Ánh sáng tới ban đầu là ánh sáng không phân cực, do đó cường độ của ánh sáng phân cực thẳng truyền qua kính phân cực thứ nhất là:
 
 $$
-\begin{aligned}
 I_1 = \frac{1}{2} I_0
-\end{aligned}
 $$
 
 Theo Hệ thức (33.7) với góc $\phi = 30^\circ$, kính phân cực thứ hai làm giảm cường độ đi một thừa số tiếp theo là:
 
 $$
-\begin{aligned}
 \cos^2(30^\circ) = \frac{3}{4}
-\end{aligned}
 $$
 
 Như vậy, cường độ ánh sáng truyền qua kính phân cực thứ hai là:
@@ -178,9 +170,7 @@ Năm 1812, David Brewster đã phát hiện bằng thực nghiệm rằng: Khi g
 Khi tia phản xạ và tia khúc xạ vuông góc nhau, góc khúc xạ $\theta_b$ phụ với góc phân cực $\theta_p$:
 
 $$
-\begin{aligned}
 \theta_b = 90^\circ - \theta_p
-\end{aligned}
 $$
 
 Áp dụng định luật khúc xạ ánh sáng (định luật Snell) tại mặt phân cách:
@@ -196,9 +186,7 @@ $$
 Chia cả hai vế cho $\cos \theta_p$ và sắp xếp lại, ta thu được định luật Brewster:
 
 $$
-\begin{aligned}
-\tan \theta_p = \frac{n_b}{n_a}
-\end{aligned} \tag{33.8}
+\tan \theta_p = \frac{n_b}{n_a} \tag{33.8}
 $$
 
 Góc $\theta_p$ được gọi là góc Brewster. Mặc dù ban đầu được khám phá bằng thực nghiệm, định luật Brewster hoàn toàn có thể rút ra từ hệ phương trình Maxwell. Cụ thể, khi các điện tích trong môi trường thứ hai dao động theo phương của tia phản xạ dự kiến, chúng không thể bức xạ sóng điện từ dọc theo trục dao động của chính mình. Do đó, thành phần phản xạ nằm trong mặt phẳng tới triệt tiêu hoàn toàn.
@@ -326,15 +314,11 @@ Ngoài phân cực thẳng, sóng điện từ còn có thể ở trạng thái 
 Hình 33.29 minh họa tình huống tương tự đối với sóng điện từ. Hai sóng hình sin có cùng biên độ, phân cực theo trục $y$ và $z$, lệch pha nhau một phần tư chu kỳ được chồng chập với nhau. Kết quả là một sóng mà vector $\vec{E}$ tại mỗi điểm có độ lớn không đổi nhưng quay đều quanh phương truyền sóng:
 
 $$
-\begin{aligned}
-E_y &= E_{\max} \cos(kx - \omega t)
-\end{aligned}
+E_y = E_{\max} \cos(kx - \omega t)
 $$
 
 $$
-\begin{aligned}
-E_z &= E_{\max} \sin(kx - \omega t)
-\end{aligned}
+E_z = E_{\max} \sin(kx - \omega t)
 $$
 
 Độ lớn của vector điện trường tổng cộng tại một điểm bất kỳ là:
@@ -375,9 +359,9 @@ Trong mô hình bản trễ pha lý tưởng, chùm tròn có hai thành phần 
 
 $$
 \begin{aligned}
-\delta_{\rm in}&=\frac\pi2,\\
-\Delta\delta&=\pm\frac\pi2,\\
-\delta_{\rm out}&=0\ \text{hoặc}\ \pi.
+\delta_{\rm in} &= \frac\pi2, \\
+\Delta\delta &= \pm\frac\pi2, \\
+\delta_{\rm out} &= 0\ \text{hoặc}\ \pi.
 \end{aligned}
 $$
 

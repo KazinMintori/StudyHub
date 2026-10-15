@@ -16,7 +16,7 @@ Giao thoa kế Michelson chia một chùm thành hai nhánh vuông góc, phản 
 Với độ dịch gương d trong không khí và N chu kỳ vân đi qua một điểm:
 
 $$
-\begin{aligned}2|d|&=N\lambda_0\\|d|&=\frac{N\lambda_0}{2}.\end{aligned}
+2|d| =N\lambda_0\\|d| =\frac{N\lambda_0}{2}.
 $$
 
 Tấm chia chùm vừa phản xạ vừa truyền qua. Tấm bù giúp hai nhánh đi qua những bề dày thủy tinh tương ứng, đặc biệt khi dùng phổ rộng. Nếu đặt bản trong suốt dài L chiết suất n trên một nhánh và thay không khí, quang trình đi–về tăng $2(n-1)L$. Khi n hoặc L đổi, đếm số chu kỳ vân để suy ra biến thiên ấy.

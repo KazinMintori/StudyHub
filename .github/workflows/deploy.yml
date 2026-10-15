@@ -42,6 +42,17 @@ jobs:
       - name: Verify embedded probability library
         run: node scripts/verify-probability-embeds.mjs
 
+      - name: Verify architecture and current content model
+        run: |
+          npm run content:index
+          npm run verify:architecture
+          node scripts/verification/verify-content-model.mjs
+
+      - name: Verify feature rules and rendering
+        run: |
+          npm run test:features
+          npm test
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

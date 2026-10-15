@@ -100,18 +100,18 @@ Một hệ thống LSH chia ma trận chữ ký MinHash gồm $n = 100$ hàng th
 2. Với $s = 0.8, b = 20, r = 5$:
    $$
 \begin{aligned}
-    &s^r = (0.8)^5 = 0.32768\\
-    &P(0.8) = 1 - (1 - 0.32768)^{20}\\
-    &\quad = 1 - (0.67232)^{20} \approx 1 - 0.00035 = 0.99965 \quad (99.965\%).
+s^r &= (0.8)^5 = 0.32768 \\
+P(0.8) &= 1 - (1 - 0.32768)^{20} \\
+&= 1 - (0.67232)^{20} \approx 1 - 0.00035 = 0.99965 \quad (99.965\%).
 \end{aligned}
 $$
 
 3. Với $s = 0.2, b = 20, r = 5$:
    $$
 \begin{aligned}
-    &s^r = (0.2)^5 = 0.00032\\
-    &P(0.2) = 1 - (1 - 0.00032)^{20}\\
-    &\quad \approx 1 - (1 - 20 \times 0.00032) = 20 \times 0.00032 = 0.00638 \quad (0.64\%).
+s^r &= (0.2)^5 = 0.00032 \\
+P(0.2) &= 1 - (1 - 0.00032)^{20} \\
+&\approx 1 - (1 - 20 \times 0.00032) = 20 \times 0.00032 = 0.00638 \quad (0.64\%).
 \end{aligned}
 $$
 
@@ -173,12 +173,12 @@ $$A = \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix}$$
    $$A^T A = \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix} \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix} = \begin{bmatrix} 13 & 12 \\ 12 & 13 \end{bmatrix}$$
    Phương trình đặc trưng:
    $$
-   \begin{aligned}
-   &\det(A^T A - \lambda I) = (13 - \lambda)^2 - 12^2\\
-   &\quad = (13 - \lambda - 12)(13 - \lambda + 12)\\
-   &\quad = (1 - \lambda)(25 - \lambda) = 0.
-   \end{aligned}
-   $$
+\begin{aligned}
+\det(A^T A - \lambda I) &= (13 - \lambda)^2 - 12^2 \\
+&= (13 - \lambda - 12)(13 - \lambda + 12) \\
+&= (1 - \lambda)(25 - \lambda) = 0.
+\end{aligned}
+$$
    Suy ra $\lambda_1 = 25, \lambda_2 = 1$.
    Vector riêng trực chuẩn:
    - Với $\lambda_1 = 25$: $v_1 = \frac{1}{\sqrt{2}} [1, 1]^T$.

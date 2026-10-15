@@ -32,18 +32,20 @@ Mỗi bài học trên StudyHub là một thực thể hoàn chỉnh, tích hợ
 
 ```text
 StudyHub/
-├── docs/                      # Nội dung bài giảng và tài liệu VitePress
-│   ├── .vitepress/            # Cấu hình VitePress, theme và dữ liệu catalog
-│   │   ├── course-catalog.mjs # Quản lý danh mục môn học, bài giảng và Slides
-│   │   ├── cheatsheets.mjs    # Dữ liệu bảng tra cứu và công thức Cheatsheet
-│   │   ├── concepts.mjs       # Danh mục các khái niệm nền tảng
-│   │   └── theme/             # Giao diện người dùng (Vue 3 components, CSS tokens)
-│   ├── wiki/                  # Hệ thống bách khoa thuật ngữ độc lập
-│   └── <môn-học>/             # Các môn học trong chương trình
-│       └── bai-giang/         # Các bài giảng chi tiết dạng Markdown
-├── scripts/                   # Bộ script kiểm tra, kiểm định chất lượng và đồng bộ
-└── .agents/skills/            # Kỹ năng và công cụ hỗ trợ biên soạn bài giảng
+├── src/
+│   ├── app/                  # Ghép giao diện và stylesheet
+│   ├── features/             # Chức năng, mỗi vùng có components/controllers/services
+│   ├── core/                 # Lưu trữ, đường dẫn, toán và sơ đồ dùng chung
+│   ├── config/               # Cấu hình tương tác
+│   └── content/courses/      # Mỗi môn và mỗi bài có module riêng
+├── config/                   # Cấu hình build và giữ sản phẩm sinh
+├── docs/                     # Markdown công khai, giữ nguyên URL
+│   └── .vitepress/           # Adapter VitePress và các điểm truy cập tương thích
+├── raw_materials/            # Nguồn biên soạn và đoạn được include trực tiếp
+└── scripts/                  # Đồng bộ nội dung, kiểm chứng và bảo trì
 ```
+
+Xem [ARCHITECTURE.md](ARCHITECTURE.md) để tìm nơi sửa từng chức năng, ranh giới giữa controller và service, cùng cấu trúc dữ liệu của từng bài giảng.
 
 ---
 
@@ -68,7 +70,7 @@ Sau khi chạy lệnh, truy cập `http://localhost:5173` trên trình duyệt. 
 ### Đóng gói & Xem trước bản tĩnh
 
 ```sh
-# Đồng bộ dữ liệu môn học và đóng gói website tĩnh vào dist/
+# Đồng bộ dữ liệu môn học và build vào docs/.vitepress/dist/
 npm run build
 
 # Xem trước bản đóng gói
@@ -78,8 +80,10 @@ npm run preview
 Để chạy thử bản tĩnh bằng máy chủ HTTP đơn giản:
 
 ```sh
-python -m http.server 8080 --directory dist
+python -m http.server 8080 --directory docs/.vitepress/dist
 ```
+
+`npm run build` chỉ tạo một bản website. Khi cần thêm bản chuyển giao trong `dist/`, chạy `npm run export:static`. Đo dung lượng bằng `npm run audit:storage`.
 
 Mỗi khi có commit được đẩy lên nhánh `main`, quy trình GitHub Actions sẽ tự động kiểm tra, chạy `npm run ci:build` và xuất bản website lên GitHub Pages.
 
@@ -99,11 +103,17 @@ node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
 # 3. Chạy bộ bài kiểm thử tự động của skill biên soạn
 python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
 
-# 4. Kiểm tra toàn diện môn học, liên kết và mô phỏng
-node scripts/verify-courses.mjs
+# 4. Kiểm tra cấu trúc, mô hình và quy tắc xử lý
+npm run verify:architecture
+node scripts/verification/verify-content-model.mjs
+npm test
+npm run test:features
 
-# 5. Kiểm tra tính tương thích giao diện trên nhiều kích thước màn hình
-node scripts/verify-ui.mjs
+# 5. Chạy preview trên cổng 5183, rồi kiểm tra bằng terminal khác
+npm run preview -- --port 5183
+# PowerShell trong terminal kiểm tra:
+# $env:QA_URL = "http://127.0.0.1:5183"
+# npm run verify:refactor
 ```
 
 ---

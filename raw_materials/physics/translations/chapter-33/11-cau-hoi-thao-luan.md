@@ -16,8 +16,8 @@ Gọi $L$ là độ dài đường truyền trong một lớp không khí đư�
 
 $$
 \begin{aligned}
-\Delta t&=\frac L{c/n}-\frac Lc\\
-&=\frac{(n-1)L}{c}.
+\Delta t &= \frac L{c/n}-\frac Lc \\
+&= \frac{(n-1)L}{c}.
 \end{aligned}
 $$
 
@@ -59,8 +59,8 @@ Chu kỳ $T=1/f$ vì vậy cũng giữ nguyên. Tuy nhiên, tốc độ trong ha
 
 $$
 \begin{aligned}
-\lambda_a&=\frac{v_a}{f},\\
-\lambda_b&=\frac{v_b}{f}.
+\lambda_a &= \frac{v_a}{f}, \\
+\lambda_b &= \frac{v_b}{f}.
 \end{aligned}
 $$
 
@@ -118,8 +118,8 @@ Hãy đề xuất các thí nghiệm đơn giản để đo tốc độ ánh sá
 
 $$
 \begin{aligned}
-n&=\frac{\sin\theta_a}{\sin\theta_b},\\
-v&=\frac cn.
+n &= \frac{\sin\theta_a}{\sin\theta_b}, \\
+v &= \frac cn.
 \end{aligned}
 $$
 
@@ -127,8 +127,8 @@ $$
 
 $$
 \begin{aligned}
-n\sin\theta_{\mathrm{crit}}&=1,\\
-v&=c\sin\theta_{\mathrm{crit}}.
+n\sin\theta_{\mathrm{crit}} &= 1, \\
+v &= c\sin\theta_{\mathrm{crit}}.
 \end{aligned}
 $$
 
@@ -136,8 +136,8 @@ $$
 
 $$
 \begin{aligned}
-n&=\tan\theta_p,\\
-v&=\frac c{\tan\theta_p}.
+n &= \tan\theta_p, \\
+v &= \frac c{\tan\theta_p}.
 \end{aligned}
 $$
 
@@ -216,10 +216,7 @@ Tại mặt phân cách giữa hai môi trường, góc khúc xạ phụ thuộc
 Ngược lại, Snell cho:
 
 $$
-\begin{aligned}
-n_a(\lambda)\sin\theta_a
-&=n_b(\lambda)\sin\theta_b.
-\end{aligned}
+n_a(\lambda)\sin\theta_a &=n_b(\lambda)\sin\theta_b.
 $$
 
 Nếu tỉ số hai chiết suất thay đổi theo bước sóng, góc khúc xạ cũng thay đổi. Đó là cơ sở của sự tách màu do tán sắc.
@@ -293,9 +290,9 @@ Chọn trục $z$ thẳng đứng và $x$ nằm ngang, vuông góc hướng xe c
 
 $$
 \begin{aligned}
-\hat u_+&=\frac{\hat x+\hat z}{\sqrt2},\\
-\hat u_-&=\frac{-\hat x+\hat z}{\sqrt2},\\
-\hat u_+\cdot\hat u_-&=0.
+\hat u_+ &= \frac{\hat x+\hat z}{\sqrt2}, \\
+\hat u_- &= \frac{-\hat x+\hat z}{\sqrt2}, \\
+\hat u_+\cdot\hat u_- &= 0.
 \end{aligned}
 $$
 
@@ -355,8 +352,8 @@ Gọi góc giữa kính chèn và kính đầu là $\phi$. Góc giữa kính ch�
 
 $$
 \begin{aligned}
-I&=\frac{I_0}2\cos^2\phi\sin^2\phi\\
-&=\frac{I_0}8\sin^2 2\phi.
+I &= \frac{I_0}2\cos^2\phi\sin^2\phi \\
+&= \frac{I_0}8\sin^2 2\phi.
 \end{aligned}
 $$
 

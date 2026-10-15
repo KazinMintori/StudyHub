@@ -195,8 +195,8 @@ Gọi $C^*$ là chi phí tối ưu thật. Giả sử A\* mở rộng đỉnh đ
 
 $$
 \begin{aligned}
-    &f(n) = g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}\\
-    &f(A) = g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
+    f(n) &= g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}\\
+    f(A) &= g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
 \end{aligned}
 $$
 

@@ -17,9 +17,9 @@ Hạt nhân vàng bán kính $7.3\times10^{-15}$ m, điện tích +79e. Hạt α
 
 $$
 \begin{aligned}
-&r_{\min} = 2.73\times10^{-14}\,\mathrm m,\\
-&2e|\Delta V| = \frac{k(79e)(2e)}{r_{\min}},\\
-&|\Delta V| = 4.2\times10^6\,\mathrm V.
+r_{\min} &= 2.73\times10^{-14}\,\mathrm m, \\
+2e|\Delta V| &= \frac{k(79e)(2e)}{r_{\min}}, \\
+|\Delta V| &= 4.2\times10^6\,\mathrm V.
 \end{aligned}
 $$
 
@@ -44,10 +44,10 @@ Proton và hạt α thả từ nghỉ khi cách 0,225 nm. Hạt α có khối l�
 
 $$
 \begin{aligned}
-&U_0 = \frac12m_pv_p^2+\frac12(4m_p)(v_p/4)^2,\\
-&v_p = \sqrt{8U_0/(5m_p)}\\
-&\quad =4.43\times10^4\,\mathrm{m/s},\\
-&v_\alpha = 1.11\times10^4\,\mathrm{m/s}.
+U_0 &= \frac12m_pv_p^2+\frac12(4m_p)(v_p/4)^2, \\
+v_p &= \sqrt{8U_0/(5m_p)} \\
+&= 4.43\times10^4\,\mathrm{m/s}, \\
+v_\alpha &= 1.11\times10^4\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -69,11 +69,11 @@ Hạt +7,60 nC trong trường đều hướng trái còn chịu một lực kh�
 
 $$
 \begin{aligned}
-&W_e = \Delta K-W_{\mathrm{other}}\\
-&\quad =-2.15\times10^{-5}\,\mathrm J,\\
-&V_{\mathrm{dau}}-V_{\mathrm{cuoi}} = W_e/q\\
-&\quad =-2.83\,\mathrm{kV},\\
-&E = 35.4\,\mathrm{kV/m}.
+W_e &= \Delta K-W_{\mathrm{other}} \\
+&= -2.15\times10^{-5}\,\mathrm J, \\
+V_{\mathrm{dau}}-V_{\mathrm{cuoi}} &= W_e/q \\
+&= -2.83\,\mathrm{kV}, \\
+E &= 35.4\,\mathrm{kV/m}.
 \end{aligned}
 $$
 
@@ -95,11 +95,11 @@ Hai nguồn bằng nhau q = +5,00 µC ở hai đỉnh đối diện hình vuông
 
 $$
 \begin{aligned}
-&F_A = \sqrt2\frac{kq|q_0|}{a^2}=29.8\,\mathrm N,\\
-&F_B = 0,\\
-&V_A = 2kq/a,\\
-&V_B = 2\sqrt2kq/a,\\
-&W_e = q_0(V_A-V_B)=+1.40\,\mathrm J.
+F_A &= \sqrt2\frac{kq|q_0|}{a^2}=29.8\,\mathrm N, \\
+F_B &= 0, \\
+V_A &= 2kq/a, \\
+V_B &= 2\sqrt2kq/a, \\
+W_e &= q_0(V_A-V_B)=+1.40\,\mathrm J.
 \end{aligned}
 $$
 
@@ -123,11 +123,11 @@ Diode chân không có catôt âm và anôt dương là những điện cực tr
 
 $$
 \begin{aligned}
-&C = 240/d^{4/3}\\
-&\quad =7.85\times10^4\,\mathrm{V/m^{4/3}},\\
-&E_x(x) = -\frac43Cx^{1/3},\\
-&|F(d/2)| = e\frac43C(d/2)^{1/3}\\
-&\quad =3.13\times10^{-15}\,\mathrm N.
+C &= 240/d^{4/3} \\
+&= 7.85\times10^4\,\mathrm{V/m^{4/3}}, \\
+E_x(x) &= -\frac43Cx^{1/3}, \\
+|F(d/2)| &= e\frac43C(d/2)^{1/3} \\
+&= 3.13\times10^{-15}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -172,9 +172,8 @@ Có 12 cặp cạnh cách d, 12 cặp chéo mặt cách √2d và 4 cặp chéo 
 
 $$
 \begin{aligned}
-&U =\frac{kq^2}{d}
-\left(-12+\frac{12}{\sqrt2}-\frac4{\sqrt3}\right)\\
-&\quad \approx-5.82\frac{kq^2}{d}.
+U &= \frac{kq^2}{d} \left(-12+\frac{12}{\sqrt2}-\frac4{\sqrt3}\right) \\
+&\approx -5.82\frac{kq^2}{d}.
 \end{aligned}
 $$
 
@@ -197,9 +196,9 @@ Dây tải điện dân dụng trên cột có điện thế cực đại cỡ 2
 
 $$
 \begin{aligned}
-&\lambda = \frac{22000}{2k\ln(8/0.02)}\\
-&\quad \approx2.0\times10^{-7}\,\mathrm{C/m},\\
-&E(h) \approx 4.6\times10^2\,\mathrm{V/m}.
+\lambda &= \frac{22000}{2k\ln(8/0.02)} \\
+&\approx 2.0\times10^{-7}\,\mathrm{C/m}, \\
+E(h) &\approx 4.6\times10^2\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -223,9 +222,9 @@ Cầu nhỏ m = 1,50 g, q = $8.90\times10^{-6}$ C treo giữa hai bản cách đ
 
 $$
 \begin{aligned}
-&E = mg\tan\theta/q,\\
-&|\Delta V| = mgd\tan\theta/q\\
-&\quad \approx47.7\,\mathrm V.
+E &= mg\tan\theta/q, \\
+|\Delta V| &= mgd\tan\theta/q \\
+&\approx 47.7\,\mathrm V.
 \end{aligned}
 $$
 
@@ -268,8 +267,8 @@ Trụ kim loại dài bán kính a nằm đồng trục trong ống kim loại d
 
 $$
 \begin{aligned}
-&E_r = -dV/dr=2k\lambda/r\\
-&\quad =\frac{V_{ab}}{\ln(b/a)}\frac1r.
+E_r &= -dV/dr=2k\lambda/r \\
+&= \frac{V_{ab}}{\ln(b/a)}\frac1r.
 \end{aligned}
 $$
 
@@ -293,8 +292,8 @@ Bức xạ ion hóa không khí dọc đường đi. Trong bộ đếm Geiger, d
 
 $$
 \begin{aligned}
-&V_{ab} = E(r)r\ln(b/a)\\
-&\quad =1.16\times10^3\,\mathrm V.
+V_{ab} &= E(r)r\ln(b/a) \\
+&= 1.16\times10^3\,\mathrm V.
 \end{aligned}
 $$
 
@@ -319,18 +318,18 @@ Trong Hình P23.63, electron có tốc độ đầu $6.50\times10^6$ m/s đi gi�
 
 $$
 \begin{aligned}
-&|F| = e(22.0/0.0200)\\
-&\quad =1.76\times10^{-16}\,\mathrm N,\\
-&|a_y| = |F|/m_e\\
-&\quad =1.93\times10^{14}\,\mathrm{m/s^2},\\
-&t_1 = L/v_0,\\
-&|y_1| = \frac12|a_y|t_1^2\\
-&\quad =0.824\,\mathrm{cm},\\
-&|v_{y1}| = |a_y|t_1,\\
-&\theta = \arctan(|v_{y1}|/v_0)\\
-&\quad =15.4^\circ,\\
-&|y_S| = |y_1|+|v_{y1}|D/v_0\\
-&\quad =4.12\,\mathrm{cm}.
+|F| &= e(22.0/0.0200) \\
+&= 1.76\times10^{-16}\,\mathrm N, \\
+|a_y| &= |F|/m_e \\
+&= 1.93\times10^{14}\,\mathrm{m/s^2}, \\
+t_1 &= L/v_0, \\
+|y_1| &= \frac12|a_y|t_1^2 \\
+&= 0.824\,\mathrm{cm}, \\
+|v_{y1}| &= |a_y|t_1, \\
+\theta &= \arctan(|v_{y1}|/v_0) \\
+&= 15.4^\circ, \\
+|y_S| &= |y_1|+|v_{y1}|D/v_0 \\
+&= 4.12\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -354,8 +353,8 @@ Hai bản lệch hướng của máy hiện sóng là bản kim loại vuông c�
 
 $$
 \begin{aligned}
-&v = \sqrt{2e|\Delta V|/m_e}\\
-&\quad \approx3.0\times10^6\,\mathrm{m/s}.
+v &= \sqrt{2e|\Delta V|/m_e} \\
+&\approx 3.0\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -397,10 +396,10 @@ Một dạng bộ lọc bụi dùng ống kim loại đứng rỗng và dây m�
 
 $$
 \begin{aligned}
-&V(x) = 2\pi k\sigma\int_0^R\frac{r\,dr}{\sqrt{x^2+r^2}}\\
-&\quad =\frac{\sigma}{2\varepsilon_0} (\sqrt{x^2+R^2}-x),\\
-&E_x = -dV/dx\\
-&\quad =\frac{\sigma}{2\varepsilon_0} \left(1-\frac{x}{\sqrt{x^2+R^2}}\right).
+V(x) &= 2\pi k\sigma\int_0^R\frac{r\,dr}{\sqrt{x^2+r^2}} \\
+&= \frac{\sigma}{2\varepsilon_0} (\sqrt{x^2+R^2}-x), \\
+E_x &= -dV/dx \\
+&= \frac{\sigma}{2\varepsilon_0} \left(1-\frac{x}{\sqrt{x^2+R^2}}\right).
 \end{aligned}
 $$
 
@@ -422,12 +421,12 @@ Cầu đặc R có tổng Q đều trong thể tích. Tìm năng lượng để 
 
 $$
 \begin{aligned}
-&q(r) = \frac{4\pi\rho r^3}{3},\\
-&dq = 4\pi\rho r^2dr,\\
-&dU = \frac{kq(r)}r\,dq\\
-&\quad =\frac{16\pi^2k\rho^2}{3}r^4dr,\\
-&U = \frac{16\pi^2k\rho^2R^5}{15}\\
-&\quad =\frac{3kQ^2}{5R}.
+q(r) &= \frac{4\pi\rho r^3}{3}, \\
+dq &= 4\pi\rho r^2dr, \\
+dU &= \frac{kq(r)}r\,dq \\
+&= \frac{16\pi^2k\rho^2}{3}r^4dr, \\
+U &= \frac{16\pi^2k\rho^2R^5}{15} \\
+&= \frac{3kQ^2}{5R}.
 \end{aligned}
 $$
 
@@ -449,8 +448,8 @@ Thanh cách điện mảnh uốn thành nửa vòng bán kính a, điện tích 
 
 $$
 \begin{aligned}
-&V = \frac{k}{a}\int dq\\
-&\quad =\frac{kQ}{a}.
+V &= \frac{k}{a}\int dq \\
+&= \frac{kQ}{a}.
 \end{aligned}
 $$
 
@@ -472,8 +471,8 @@ Cầu cách điện R = 5,00 cm có Q = +4,00 µC đều trong thể tích. Tìm
 
 $$
 \begin{aligned}
-&V(0)-V(R) = \frac{kQ}{2R}\\
-&\quad =+360\,\mathrm{kV}.
+V(0)-V(R) &= \frac{kQ}{2R} \\
+&= +360\,\mathrm{kV}.
 \end{aligned}
 $$
 :::
@@ -495,10 +494,10 @@ $$
 
 $$
 \begin{aligned}
-&R' = 2^{1/3}R=0.819\,\mathrm{mm},\\
-&q' = 2q,\\
-&V' = kq'/R'=2^{2/3}V\\
-&\quad =-79.0\,\mathrm V.
+R' &= 2^{1/3}R=0.819\,\mathrm{mm}, \\
+q' &= 2q, \\
+V' &= kq'/R'=2^{2/3}V \\
+&= -79.0\,\mathrm V.
 \end{aligned}
 $$
 

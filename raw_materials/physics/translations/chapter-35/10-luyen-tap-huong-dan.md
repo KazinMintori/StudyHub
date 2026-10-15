@@ -19,10 +19,9 @@ Trong thí nghiệm hai khe như Hình 35.7, hai khe cách $0{,}180\,\mathrm{mm}
 
 $$
 \begin{aligned}
-\lambda&=\frac{y_2d}{2R}\\
-&=\frac{11{,}4\times0{,}180}{2(1{,}50)}\\
-&\quad\times10^{-6}\,\mathrm m\\
-&=684\,\mathrm{nm}.
+\lambda &= \frac{y_2d}{2R} \\
+&= \frac{11{,}4\times0{,}180}{2(1{,}50)} \times10^{-6}\,\mathrm m \\
+&= 684\,\mathrm{nm}.
 \end{aligned}
 $$
 
@@ -51,8 +50,8 @@ Hai ăng-ten vô tuyến thẳng đứng giống nhau cách $0{,}810\,\mathrm{km
 
 $$
 \begin{aligned}
-\lambda&=\frac{3{,}00\times10^8}{1{,}05\times10^6}\\
-&=285{,}714\,\mathrm m.
+\lambda &= \frac{3{,}00\times10^8}{1{,}05\times10^6} \\
+&= 285{,}714\,\mathrm m.
 \end{aligned}
 $$
 
@@ -90,9 +89,9 @@ Laser đỏ bước sóng $685\,\mathrm{nm}$ chiếu vào hai khe gần nhau. M�
 
 $$
 \begin{aligned}
-d&=\frac{3\lambda R}{y_3}\\
-&=0{,}471639\,\mathrm{mm}\\
-&\approx0{,}472\,\mathrm{mm}.
+d &= \frac{3\lambda R}{y_3} \\
+&= 0{,}471639\,\mathrm{mm} \\
+&\approx 0{,}472\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -100,8 +99,8 @@ $$
 
 $$
 \begin{aligned}
-y_{3,\rm green}&=y_{3,\rm red}\frac{515}{685}\\
-&=6{,}88\,\mathrm{mm}.
+y_{3,\rm green} &= y_{3,\rm red}\frac{515}{685} \\
+&= 6{,}88\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -125,8 +124,8 @@ Hai khe cách $0{,}370\,\mathrm{mm}$. Hướng từ hai khe tới vân sáng b�
 
 $$
 \begin{aligned}
-\lambda&=\frac{d\sin0{,}407^\circ}{4}\\
-&=657\,\mathrm{nm}.
+\lambda &= \frac{d\sin0{,}407^\circ}{4} \\
+&= 657\,\mathrm{nm}.
 \end{aligned}
 $$
 
@@ -134,9 +133,8 @@ $$
 
 $$
 \begin{aligned}
-\theta_{\rm dark}
-&=\arcsin\left(\frac{2{,}5\lambda}d\right)\\
-&=0{,}254^\circ.
+\theta_{\rm dark} &= \arcsin\left(\frac{2{,}5\lambda}d\right) \\
+&= 0{,}254^\circ.
 \end{aligned}
 $$
 :::
@@ -158,8 +156,8 @@ Hai ăng-ten giống nhau cách $13{,}0\,\mathrm m$, phát cùng pha ở $59{,}3
 
 $$
 \begin{aligned}
-\lambda&=\frac cf=5{,}05902\,\mathrm m,\\
-I(\theta)&=I_0\cos^2\left(\frac{\pi d\sin\theta}{\lambda}\right).
+\lambda &= \frac cf=5{,}05902\,\mathrm m, \\
+I(\theta) &= I_0\cos^2\left(\frac{\pi d\sin\theta}{\lambda}\right).
 \end{aligned}
 $$
 
@@ -173,9 +171,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{\pi d\sin\theta}{\lambda}&=\frac\pi4,\\
-\theta&=\arcsin\left(\frac{\lambda}{4d}\right)\\
-&=5{,}58^\circ.
+\frac{\pi d\sin\theta}{\lambda} &= \frac\pi4, \\
+\theta &= \arcsin\left(\frac{\lambda}{4d}\right) \\
+&= 5{,}58^\circ.
 \end{aligned}
 $$
 
@@ -199,9 +197,9 @@ Thí nghiệm hai khe dùng laser $655\,\mathrm{nm}$, khoảng khe $0{,}230\,\ma
 
 $$
 \begin{aligned}
-&I(y)=I_0\cos^2\left(\frac{\pi dy}{\lambda R}\right),\\
-&I(6{,}50\,\mathrm{mm})\\
-&\quad=0{,}0173\,\mathrm{W/m^2}.
+I(y) &= I_0\cos^2\left(\frac{\pi dy}{\lambda R}\right), \\
+&I(6{,}50\,\mathrm{mm}) \\
+&= 0{,}0173\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -209,9 +207,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{\pi dy}{\lambda R}&=\frac\pi3,\\
-y&=\frac{\lambda R}{3d}\\
-&=1{,}66\,\mathrm{mm}.
+\frac{\pi dy}{\lambda R} &= \frac\pi3, \\
+y &= \frac{\lambda R}{3d} \\
+&= 1{,}66\,\mathrm{mm}.
 \end{aligned}
 $$
 :::
@@ -239,9 +237,9 @@ Vì $0<\alpha<\pi/2$:
 
 $$
 \begin{aligned}
-\alpha&=\arccos\sqrt{\frac{0{,}0303}{0{,}0540}},\\
-\lambda&=\frac{\pi d\sin6^\circ}{\alpha}\\
-&=3{,}63\,\mathrm m.
+\alpha &= \arccos\sqrt{\frac{0{,}0303}{0{,}0540}}, \\
+\lambda &= \frac{\pi d\sin6^\circ}{\alpha} \\
+&= 3{,}63\,\mathrm m.
 \end{aligned}
 $$
 
@@ -249,9 +247,8 @@ $$
 
 $$
 \begin{aligned}
-&I(12^\circ)=I_0\\
-&\quad\times\cos^2\left(\frac{\pi d\sin12^\circ}{\lambda}\right)\\
-&=9{,}14\times10^{-4}\,\mathrm{W/m^2}.
+I(12^\circ) &= I_0\cos^2\left(\frac{\pi d\sin12^\circ}{\lambda}\right) \\
+&= 9{,}14\times10^{-4}\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -278,8 +275,8 @@ Tìm (a) bước sóng laser, (b) khoảng từ tâm tới điểm gần nhất 
 
 $$
 \begin{aligned}
-\alpha_1&=\arccos(0{,}300),\\
-\alpha_2&=\pi-\alpha_1.
+\alpha_1 &= \arccos(0{,}300), \\
+\alpha_2 &= \pi-\alpha_1.
 \end{aligned}
 $$
 
@@ -294,8 +291,8 @@ Cả hai nghiệm đều thỏa vị trí và cường độ đã cho. Muốn ch
 
 $$
 \begin{aligned}
-\beta&=\arccos\sqrt{0{,}300},\\
-y_{\rm nearest}&=\frac{\beta\lambda R}{\pi d}.
+\beta &= \arccos\sqrt{0{,}300}, \\
+y_{\rm nearest} &= \frac{\beta\lambda R}{\pi d}.
 \end{aligned}
 $$
 
@@ -324,10 +321,10 @@ Hai lam kính giống nhau, chiết suất $1{,}50$, dài $8{,}00\,\mathrm{cm}$ 
 
 $$
 \begin{aligned}
-\Delta x&=\frac{\lambda_0L}{2nh},\\
-h&=\frac{\lambda_0L}{2\Delta x}\\
-&=17{,}4\,\mu\mathrm m\\
-&=0{,}0174\,\mathrm{mm}.
+\Delta x &= \frac{\lambda_0L}{2nh}, \\
+h &= \frac{\lambda_0L}{2\Delta x} \\
+&= 17{,}4\,\mu\mathrm m \\
+&= 0{,}0174\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -335,8 +332,8 @@ $$
 
 $$
 \begin{aligned}
-\Delta x_{\rm ethanol}&=\frac{1{,}30}{1{,}36}\\
-&=0{,}956\,\mathrm{mm}.
+\Delta x_{\rm ethanol} &= \frac{1{,}30}{1{,}36} \\
+&= 0{,}956\,\mathrm{mm}.
 \end{aligned}
 $$
 :::
@@ -359,8 +356,8 @@ Một lam kính mỏng phẳng, chiết suất $1{,}50$, nằm trên bàn. Lam k
 
 $$
 \begin{aligned}
-\lambda_{0,\max}&=\frac{2nt}{m+1/2},\\
-\lambda_{0,\min}&=\frac{2nt}{m}.
+\lambda_{0,\max} &= \frac{2nt}{m+1/2}, \\
+\lambda_{0,\min} &= \frac{2nt}{m}.
 \end{aligned}
 $$
 
@@ -458,8 +455,8 @@ Ta có:
 
 $$
 \begin{aligned}
-2nt&=2(1{,}45)(380)\\
-&=1102\,\mathrm{nm}.
+2nt &= 2(1{,}45)(380) \\
+&= 1102\,\mathrm{nm}.
 \end{aligned}
 $$
 
@@ -480,8 +477,8 @@ Dải tím là một màu phản xạ được tăng cường, đồng thời ng
 
 $$
 \begin{aligned}
-\lambda_0&=\frac{1102}{m}\,\mathrm{nm},\\
-m&=1,2,3,\ldots
+\lambda_0 &= \frac{1102}{m}\,\mathrm{nm}, \\
+m &= 1,2,3,\ldots
 \end{aligned}
 $$
 

@@ -46,10 +46,9 @@ Lấy tích phân hai vế từ thời điểm $t_1$ (ứng với vận tốc $v
 
 $$
 \begin{aligned}
-v_{2x} - v_{1x} &= \int_{v_{1x}}^{v_{2x}} dv_x\\
- &= \int_{t_1}^{t_2} a_x\, dt.
-\end{aligned}
-\tag{2.15}
+v_{2x} - v_{1x} &= \int_{v_{1x}}^{v_{2x}} dv_x \\
+&= \int_{t_1}^{t_2} a_x\, dt.
+\end{aligned} \tag{2.15}
 $$
 
 Ý nghĩa hình học trực quan của công thức (2.15) là: **Độ biến thiên vận tốc $\Delta v_x = v_{2x} - v_{1x}$ giữa hai thời điểm đúng bằng diện tích hình thang cong giới hạn bởi đường cong $a_x(t)$ và trục hoành thời gian từ $t_1$ đến $t_2$** (với phần diện tích nằm phía trên trục hoành mang dấu dương, phần nằm phía dưới mang dấu âm).
@@ -64,10 +63,9 @@ Tích phân hai vế từ thời điểm $t_1$ (tọa độ $x_1$) đến thời
 
 $$
 \begin{aligned}
-x_2 - x_1 &= \int_{x_1}^{x_2} dx\\
- &= \int_{t_1}^{t_2} v_x\, dt.
-\end{aligned}
-\tag{2.16}
+x_2 - x_1 &= \int_{x_1}^{x_2} dx \\
+&= \int_{t_1}^{t_2} v_x\, dt.
+\end{aligned} \tag{2.16}
 $$
 
 **Độ dời $\Delta x = x_2 - x_1$ của chất điểm chính là diện tích hình thang cong giới hạn bởi đồ thị vận tốc $v_x(t)$ và trục hoành thời gian từ $t_1$ đến $t_2$**.
@@ -90,7 +88,7 @@ $$
 Nếu gia tốc là hằng số ($a_x = \text{const}$), từ (2.17) ta có ngay:
 $$
 \begin{aligned}
-v_x(t) &= v_{0x} + a_x \int_0^t dt'\\
+v_x(t) &= v_{0x} + a_x \int_0^t dt' \\
 &= v_{0x} + a_x t.
 \end{aligned}
 $$
@@ -99,7 +97,7 @@ Kết quả này khôi phục chính xác phương trình (2.8). Thế vào (2.1
 
 $$
 \begin{aligned}
-x(t) &= x_0 + \int_0^t (v_{0x} + a_x t')\, dt'\\
+x(t) &= x_0 + \int_0^t (v_{0x} + a_x t')\, dt' \\
 &= x_0 + v_{0x}t + \frac{1}{2}a_x t^2.
 \end{aligned}
 $$
@@ -139,10 +137,10 @@ Các điều kiện ban đầu đã cho:
 
 $$
 \begin{aligned}
-v_x(t) &= v_{0x} + \int_0^t a_x(t')\, dt'\\
- &= 10.0 + \int_0^t (2.0 - 0.10t')\, dt'\\
- &= 10.0 + 2.0t - \frac{1}{2}(0.10)t^2\\
- &= 10.0 + 2.0t - 0.050t^2 \quad (\text{m/s}).
+v_x(t) &= v_{0x} + \int_0^t a_x(t')\, dt' \\
+&= 10.0 + \int_0^t (2.0 - 0.10t')\, dt' \\
+&= 10.0 + 2.0t - \frac{1}{2}(0.10)t^2 \\
+&= 10.0 + 2.0t - 0.050t^2 \quad (\text{m/s}).
 \end{aligned}
 $$
 
@@ -150,10 +148,10 @@ Tiếp tục lấy tích phân hàm vận tốc theo công thức (2.18) để t
 
 $$
 \begin{aligned}
-x(t) &= x_0 + \int_0^t v_x(t')\, dt'\\
- &= 50.0 + \int_0^t (10.0 + 2.0t' - 0.050{t'}^2)\, dt'\\
- &= 50.0 + 10.0t + \frac{1}{2}(2.0)t^2 - \frac{1}{3}(0.050)t^3\\
- &= 50.0 + 10.0t + 1.0t^2 - \frac{1}{60}t^3 \quad (\text{m}).
+x(t) &= x_0 + \int_0^t v_x(t')\, dt' \\
+&= 50.0 + \int_0^t (10.0 + 2.0t' - 0.050{t'}^2)\, dt' \\
+&= 50.0 + 10.0t + \frac{1}{2}(2.0)t^2 - \frac{1}{3}(0.050)t^3 \\
+&= 50.0 + 10.0t + 1.0t^2 - \frac{1}{60}t^3 \quad (\text{m}).
 \end{aligned}
 $$
 
@@ -162,9 +160,9 @@ Một hàm số đạt cực trị khi đạo hàm của nó triệt tiêu. Vì 
 
 $$
 \begin{aligned}
-a_x(t) &= 2.0\,\mathrm{m/s^2} - (0.10\,\mathrm{m/s^3})t\\
-&= 0\\
-&\implies t = \frac{2.0\,\mathrm{m/s^2}}{0.10\,\mathrm{m/s^3}}\\
+a_x(t) &= 2.0\,\mathrm{m/s^2} - (0.10\,\mathrm{m/s^3})t \\
+&= 0 \\
+\implies t &= \frac{2.0\,\mathrm{m/s^2}}{0.10\,\mathrm{m/s^3}} \\
 &= 20.0\,\mathrm s.
 \end{aligned}
 $$
@@ -176,8 +174,8 @@ Thay $t = 20.0\,\mathrm s$ vào biểu thức vận tốc $v_x(t)$:
 
 $$
 \begin{aligned}
-v_{\max-x} &= 10.0 + 2.0(20.0) - 0.050(20.0)^2\\
-&= 10.0 + 40.0 - 20.0\\
+v_{\max-x} &= 10.0 + 2.0(20.0) - 0.050(20.0)^2 \\
+&= 10.0 + 40.0 - 20.0 \\
 &= 30.0\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -189,10 +187,9 @@ Thay $t = 20.0\,\mathrm s$ vào biểu thức vị trí $x(t)$:
 
 $$
 \begin{aligned}
-x(20.0\,\mathrm s) &= 50.0 + 10.0(20.0)\\
-&\quad + 1.0(20.0)^2 - \frac{1}{60}(20.0)^3\\
- &= 50.0 + 200.0 + 400.0 - \frac{8000}{60}\\
- &= 650.0 - 133.3\\
+x(20.0\,\mathrm s) &= 50.0 + 10.0(20.0) + 1.0(20.0)^2 - \frac{1}{60}(20.0)^3 \\
+&= 50.0 + 200.0 + 400.0 - \frac{8000}{60} \\
+&= 650.0 - 133.3 \\
 &\approx 517\,\mathrm m.
 \end{aligned}
 $$
@@ -212,8 +209,8 @@ Xe dừng lại khi $v_x = 0$, tức là:
 
 $$
 \begin{aligned}
-10.0 + 2.0t - 0.050t^2 &= 0\\
-&\iff t^2 - 40t - 200 = 0.
+10.0 + 2.0t - 0.050t^2 &= 0 \\
+\iff t^2 - 40t - 200 &= 0.
 \end{aligned}
 $$
 
@@ -221,7 +218,7 @@ Phương trình cho nghiệm dương:
 
 $$
 \begin{aligned}
-t &= 20 + \sqrt{600}\\
+t &= 20 + \sqrt{600} \\
 &\approx 44.5\,\mathrm s.
 \end{aligned}
 $$

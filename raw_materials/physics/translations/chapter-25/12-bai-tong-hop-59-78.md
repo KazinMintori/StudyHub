@@ -28,9 +28,9 @@ Diện tích tiết diện là $A(x)=\pi r(x)^2$, nên
 
 $$
 \begin{aligned}
-&R = \int_0^h dR\\
-&\quad =\frac{\rho}{\pi}\int_0^h \frac{dx}{\left(r_1+\frac{r_2-r_1}{h}x\right)^2}\\
-&\quad =\frac{\rho h}{\pi r_1r_2}.
+R &= \int_0^h dR \\
+&= \frac{\rho}{\pi}\int_0^h \frac{dx}{\left(r_1+\frac{r_2-r_1}{h}x\right)^2} \\
+&= \frac{\rho h}{\pi r_1r_2}.
 \end{aligned}
 $$
 
@@ -70,8 +70,8 @@ $$
 
 $$
 \begin{aligned}
-&R = \int_a^b\frac{\rho\,dr}{4\pi r^2}\\
-&\quad =\frac{\rho}{4\pi}\left(\frac1a-\frac1b\right).
+R &= \int_a^b\frac{\rho\,dr}{4\pi r^2} \\
+&= \frac{\rho}{4\pi}\left(\frac1a-\frac1b\right).
 \end{aligned}
 $$
 
@@ -79,9 +79,9 @@ $$
 
 $$
 \begin{aligned}
-&J(r) = \frac{I}{4\pi r^2}\\
-&\quad =\frac{V_{ab}}{4\pi Rr^2}\\
-&\quad =\frac{V_{ab}ab}{\rho(b-a)r^2}.
+J(r) &= \frac{I}{4\pi r^2} \\
+&= \frac{V_{ab}}{4\pi Rr^2} \\
+&= \frac{V_{ab}ab}{\rho(b-a)r^2}.
 \end{aligned}
 $$
 
@@ -113,8 +113,8 @@ Ta có
 
 $$
 \begin{aligned}
-&8{,}40 = \mathcal E-(1{,}50)r,\\
-&10{,}20 = \mathcal E+(3{,}50)r.
+8{,}40 &= \mathcal E-(1{,}50)r, \\
+10{,}20 &= \mathcal E+(3{,}50)r.
 \end{aligned}
 $$
 
@@ -129,8 +129,8 @@ Suy ra
 
 $$
 \begin{aligned}
-&\mathcal E = 8{,}40+(1{,}50)(0{,}360)\\
-&\quad =8{,}94\,\mathrm V.
+\mathcal E &= 8{,}40+(1{,}50)(0{,}360) \\
+&= 8{,}94\,\mathrm V.
 \end{aligned}
 $$
 :::
@@ -162,8 +162,8 @@ $$
 
 $$
 \begin{aligned}
-&V_a-V_d = 6I+V_{bc}+9I\\
-&\quad =6{,}58\,\mathrm V.
+V_a-V_d &= 6I+V_{bc}+9I \\
+&= 6{,}58\,\mathrm V.
 \end{aligned}
 $$
 
@@ -180,8 +180,8 @@ $$
 
 $$
 \begin{aligned}
-&I' = \frac{8{,}00-4{,}00-10{,}30}{24{,}5}\\
-&\quad =-0{,}257\,\mathrm A.
+I' &= \frac{8{,}00-4{,}00-10{,}30}{24{,}5} \\
+&= -0{,}257\,\mathrm A.
 \end{aligned}
 $$
 
@@ -189,8 +189,8 @@ Dấu âm cho biết dòng thực chạy ngược chiều đã chọn. Điện �
 
 $$
 \begin{aligned}
-&V'_{bc} = 4{,}00+(0{,}50)I'\\
-&\quad =3{,}87\,\mathrm V.
+V'_{bc} &= 4{,}00+(0{,}50)I' \\
+&= 3{,}87\,\mathrm V.
 \end{aligned}
 $$
 :::
@@ -213,8 +213,8 @@ Diện tích tiết diện:
 
 $$
 \begin{aligned}
-&A = \pi(0{,}050)^2\\
-&\quad =7{,}85\times10^{-3}\,\mathrm{m^2}.
+A &= \pi(0{,}050)^2 \\
+&= 7{,}85\times10^{-3}\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -222,8 +222,8 @@ $$
 
 $$
 \begin{aligned}
-&R = \frac{(5{,}0)(1{,}6)}{7{,}85\times10^{-3}}\\
-&\quad \approx1{,}02\times10^3\,\Omega.
+R &= \frac{(5{,}0)(1{,}6)}{7{,}85\times10^{-3}} \\
+&\approx 1{,}02\times10^3\,\Omega.
 \end{aligned}
 $$
 
@@ -257,8 +257,8 @@ $$
 
 $$
 \begin{aligned}
-&r_{\min} = \frac{14\,000}{0{,}00100}-10\,000\\
-&\quad =1{,}399\times10^7\,\Omega.
+r_{\min} &= \frac{14\,000}{0{,}00100}-10\,000 \\
+&= 1{,}399\times10^7\,\Omega.
 \end{aligned}
 $$
 
@@ -297,11 +297,11 @@ Một dây cáp đồng hình trụ dài 1,50 km mắc vào hiệu điện thế
 
 $$
 \begin{aligned}
-&R = \frac{V^2}{P}=537{,}8\,\Omega,\\
-&A = \frac{\rho L}{R}=4{,}80\times10^{-8}\,\mathrm{m^2},\\
-&d = 2\sqrt{\frac A\pi}=2{,}47\times10^{-4}\,\mathrm m\\
-&\quad =0{,}247\,\mathrm{mm},\\
-&E = \frac VL=0{,}147\,\mathrm{V/m}.
+R &= \frac{V^2}{P}=537{,}8\,\Omega, \\
+A &= \frac{\rho L}{R}=4{,}80\times10^{-8}\,\mathrm{m^2}, \\
+d &= 2\sqrt{\frac A\pi}=2{,}47\times10^{-4}\,\mathrm m \\
+&= 0{,}247\,\mathrm{mm}, \\
+E &= \frac VL=0{,}147\,\mathrm{V/m}.
 \end{aligned}
 $$
 :::
@@ -327,9 +327,9 @@ $b=(8{,}50-2{,}25)\times10^{-8}/(1{,}50)^2$.
 
 $$
 \begin{aligned}
-&R = \frac1A\int_0^L(a+bx^2)\,dx\\
-&\quad =\frac{L}{A}\left(\rho_0+\frac{\rho_L-\rho_0}{3}\right)\\
-&\quad \approx1{,}71\times10^{-4}\,\Omega.
+R &= \frac1A\int_0^L(a+bx^2)\,dx \\
+&= \frac{L}{A}\left(\rho_0+\frac{\rho_L-\rho_0}{3}\right) \\
+&\approx 1{,}71\times10^{-4}\,\Omega.
 \end{aligned}
 $$
 
@@ -337,8 +337,8 @@ $$
 
 $$
 \begin{aligned}
-&E_{\mathrm{mid}} = \frac{\rho(L/2)I}{A}\\
-&\quad \approx1{,}76\times10^{-4}\,\mathrm{V/m}.
+E_{\mathrm{mid}} &= \frac{\rho(L/2)I}{A} \\
+&\approx 1{,}76\times10^{-4}\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -346,10 +346,10 @@ $$
 
 $$
 \begin{aligned}
-&R_{\mathrm{trái}} = \frac1A\int_0^{L/2}(a+bx^2)\,dx\\
-&\quad \approx5{,}47\times10^{-5}\,\Omega,\\
-&R_{\mathrm{phải}} = R-R_{\mathrm{trái}}\\
-&\quad \approx1{,}16\times10^{-4}\,\Omega.
+R_{\mathrm{trái}} &= \frac1A\int_0^{L/2}(a+bx^2)\,dx \\
+&\approx 5{,}47\times10^{-5}\,\Omega, \\
+R_{\mathrm{phải}} &= R-R_{\mathrm{trái}} \\
+&\approx 1{,}16\times10^{-4}\,\Omega.
 \end{aligned}
 $$
 
@@ -373,8 +373,8 @@ $$
 
 $$
 \begin{aligned}
-&C_1 = 11{,}00+8{,}06\\
-&\quad \approx19{,}06.
+C_1 &= 11{,}00+8{,}06 \\
+&\approx 19{,}06.
 \end{aligned}
 $$
 
@@ -384,8 +384,8 @@ Bóng sợi đốt cần $\lceil4380/750\rceil=6$ bóng. Chúng dùng $0{,}100\t
 
 $$
 \begin{aligned}
-&C_2 = 6(0{,}75)+35{,}04\\
-&\quad =39{,}54.
+C_2 &= 6(0{,}75)+35{,}04 \\
+&= 39{,}54.
 \end{aligned}
 $$
 
@@ -430,8 +430,8 @@ Suy ra $\rho_s=R_s\pi r^2/L=1{,}48\,\Omega\mathrm m$, nên $s=s_0/\rho_s\approx4
 
 $$
 \begin{aligned}
-&C = \frac{K\varepsilon_0\pi r^2}{L}\\
-&\quad \approx1{,}86\times10^{-10}\,\mathrm F.
+C &= \frac{K\varepsilon_0\pi r^2}{L} \\
+&\approx 1{,}86\times10^{-10}\,\mathrm F.
 \end{aligned}
 $$
 
@@ -467,9 +467,9 @@ Xét mạch Hình P25.70. Pin có suất điện động 72,0 V và điện tr�
 
 $$
 \begin{aligned}
-&Q_2 = C_2V\\
-&\quad =(6{,}00\,\mathrm{mF})(6{,}00\,\mathrm V)\\
-&\quad =36{,}0\,\mathrm{mC}.
+Q_2 &= C_2V \\
+&= (6{,}00\,\mathrm{mF})(6{,}00\,\mathrm V) \\
+&= 36{,}0\,\mathrm{mC}.
 \end{aligned}
 $$
 
@@ -496,9 +496,9 @@ Ta có $V_C=36{,}0\,\mathrm{mC}/9{,}00\,\mathrm{mF}=4{,}00$ V. Dòng ổn địn
 
 $$
 \begin{aligned}
-&\mathcal E = V_C+IR_2\\
-&\quad =4{,}00+(0{,}667)(4{,}00)\\
-&\quad =6{,}67\,\mathrm V.
+\mathcal E &= V_C+IR_2 \\
+&= 4{,}00+(0{,}667)(4{,}00) \\
+&= 6{,}67\,\mathrm V.
 \end{aligned}
 $$
 :::
@@ -524,8 +524,8 @@ Khi $V_{ab}=28{,}8$ V:
 
 $$
 \begin{aligned}
-&I = \frac{36{,}0-28{,}8}{2{,}0}=3{,}6\,\mathrm A,\\
-&R = \frac{28{,}8}{3{,}6}=8{,}0\,\Omega.
+I &= \frac{36{,}0-28{,}8}{2{,}0}=3{,}6\,\mathrm A, \\
+R &= \frac{28{,}8}{3{,}6}=8{,}0\,\Omega.
 \end{aligned}
 $$
 :::
@@ -566,9 +566,9 @@ Các điểm đánh dấu là dữ liệu đã cho. Đường cong nét đứt l
 
 $$
 \begin{aligned}
-&P_B = \frac{V^2}{R}\\
-&\quad =\frac{(4{,}00)^2}{3{,}88}\\
-&\quad =4{,}12\,\mathrm W.
+P_B &= \frac{V^2}{R} \\
+&= \frac{(4{,}00)^2}{3{,}88} \\
+&= 4{,}12\,\mathrm W.
 \end{aligned}
 $$
 :::
@@ -631,8 +631,8 @@ do đó $c=V/\ln(b/a)$.
 
 $$
 \begin{aligned}
-&R = \frac{\rho}{2\pi L}\int_a^b\frac{dr}{r}\\
-&\quad =\frac{\rho}{2\pi L}\ln\left(\frac{b}{a}\right).
+R &= \frac{\rho}{2\pi L}\int_a^b\frac{dr}{r} \\
+&= \frac{\rho}{2\pi L}\ln\left(\frac{b}{a}\right).
 \end{aligned}
 $$
 
@@ -640,9 +640,9 @@ $$
 
 $$
 \begin{aligned}
-&\rho = \frac{2\pi LR}{\ln(b/a)}\\
-&\quad =\frac{2\pi(0{,}0100)(6800)}{\ln 2}\\
-&\quad \approx616\,\Omega\mathrm m.
+\rho &= \frac{2\pi LR}{\ln(b/a)} \\
+&= \frac{2\pi(0{,}0100)(6800)}{\ln 2} \\
+&\approx 616\,\Omega\mathrm m.
 \end{aligned}
 $$
 :::
@@ -693,10 +693,9 @@ Nghiệm dương là $I\approx0{,}720$ A. (c) Điện trở nóng là $R=120/I\a
 
 $$
 \begin{aligned}
-&R = \frac{\rho_0}{A}\int_0^L e^{-x/L}\,dx\\
-&\quad =\frac{\rho_0L}{A}(1-e^{-1}),\\
-&I =\frac{V_0}{R}
-=\frac{V_0A}{\rho_0L(1-e^{-1})}.
+R &= \frac{\rho_0}{A}\int_0^L e^{-x/L}\,dx \\
+&= \frac{\rho_0L}{A}(1-e^{-1}), \\
+I &= \frac{V_0}{R} =\frac{V_0A}{\rho_0L(1-e^{-1})}.
 \end{aligned}
 $$
 
@@ -704,8 +703,8 @@ $$
 
 $$
 \begin{aligned}
-&E(x) = \frac{\rho_0I}{A}e^{-x/L}\\
-&\quad =\frac{V_0e^{-x/L}}{L(1-e^{-1})}.
+E(x) &= \frac{\rho_0I}{A}e^{-x/L} \\
+&= \frac{V_0e^{-x/L}}{L(1-e^{-1})}.
 \end{aligned}
 $$
 
@@ -713,8 +712,8 @@ $$
 
 $$
 \begin{aligned}
-&V(x) = \int_x^L E(s)\,ds\\
-&\quad =V_0\frac{e^{-x/L}-e^{-1}}{1-e^{-1}}.
+V(x) &= \int_x^L E(s)\,ds \\
+&= V_0\frac{e^{-x/L}-e^{-1}}{1-e^{-1}}.
 \end{aligned}
 $$
 
@@ -760,9 +759,9 @@ $$
 
 $$
 \begin{aligned}
-&P(2\,\Omega) = 227{,}6\,\mathrm W,\\
-&P(4\,\Omega) = 256\,\mathrm W,\\
-&P(6\,\Omega) = 245{,}8\,\mathrm W.
+P(2\,\Omega) &= 227{,}6\,\mathrm W, \\
+P(4\,\Omega) &= 256\,\mathrm W, \\
+P(6\,\Omega) &= 245{,}8\,\mathrm W.
 \end{aligned}
 $$
 

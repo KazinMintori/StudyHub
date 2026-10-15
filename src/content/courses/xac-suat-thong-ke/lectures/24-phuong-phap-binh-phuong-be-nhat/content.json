@@ -1,0 +1,57 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "24-phuong-phap-binh-phuong-be-nhat",
+  "route": "/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/24-phuong-phap-binh-phuong-be-nhat/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "du-doan-thong-ke"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 171,
+      "title": "Bài tập tự luyện"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 173,
+      "title": "Bài tập 1: Nhận diện và phân loại bài toán dự báo trong thực tế"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 206,
+      "title": "Bài tập 2: Tính toán giải tích OLS và kiểm chứng các tính chất hình học"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 274,
+      "title": "Bài tập 3: Mô phỏng thuật toán Gradient Descent cho bài toán tối ưu RSS"
+    }
+  ],
+  "solutions": [],
+  "assets": [
+    {
+      "reference": "./img/stat20-24/claims-only.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 19,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-24/claims-only.png"
+    },
+    {
+      "reference": "./img/stat20-24/nyt-inflation.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 24,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-24/nyt-inflation.png"
+    },
+    {
+      "reference": "./img/stat20-24/method-of-least-squares-thumbnail.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
+      "line": 85,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-24/method-of-least-squares-thumbnail.png"
+    }
+  ]
+}

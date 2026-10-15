@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "20-ham-song-schrodinger",
+  "route": "/vat-ly-2/bai-giang/20-ham-song-schrodinger",
+  "notes": "docs/vat-ly-2/bai-giang/20-ham-song-schrodinger.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "tich-phan",
+    "dao-ham",
+    "photon"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

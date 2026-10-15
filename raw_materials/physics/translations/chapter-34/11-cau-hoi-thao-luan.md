@@ -199,8 +199,8 @@ Với $f>0$:
 
 $$
 \begin{aligned}
-s\to f^-&\implies s'\to-\infty,\\
-s\to f^+&\implies s'\to+\infty.
+s\to f^- &\implies s'\to-\infty, \\
+s\to f^+ &\implies s'\to+\infty.
 \end{aligned}
 $$
 
@@ -225,8 +225,8 @@ Với nước có chiết suất xấp xỉ $4/3$ và không khí có chiết su
 
 $$
 \begin{aligned}
-\Delta d_{\rm app}&=\frac34\Delta d\\
-&=1{,}50\,\mathrm m.
+\Delta d_{\rm app} &= \frac34\Delta d \\
+&= 1{,}50\,\mathrm m.
 \end{aligned}
 $$
 
@@ -283,8 +283,8 @@ Vì sao tiêu cự của một thấu kính đơn phụ thuộc màu, tức bư�
 
 $$
 \begin{aligned}
-\frac1f&=\left(\frac{n_l}{n_m}-1\right)G,\\
-G&=\frac1{R_1}-\frac1{R_2}.
+\frac1f &= \left(\frac{n_l}{n_m}-1\right)G, \\
+G &= \frac1{R_1}-\frac1{R_2}.
 \end{aligned}
 $$
 
@@ -326,9 +326,9 @@ Bọt là phần tử phân kỳ. Nếu gần đúng như thấu kính mỏng ha
 
 $$
 \begin{aligned}
-\frac1{f_{\rm thin}}&=\left(\frac1{4/3}-1\right)\frac2R\\
-&=-\frac1{2R},\\
-f_{\rm thin}&=-2R.
+\frac1{f_{\rm thin}} &= \left(\frac1{4/3}-1\right)\frac2R \\
+&= -\frac1{2R}, \\
+f_{\rm thin} &= -2R.
 \end{aligned}
 $$
 
@@ -338,8 +338,8 @@ Một bọt hình cầu có chiều dày $2R$, nên phép coi mỏng không chí
 
 $$
 \begin{aligned}
-\frac1{s'_1}&=\frac{1-4/3}{R},\\
-s'_1&=-3R.
+\frac1{s'_1} &= \frac{1-4/3}{R}, \\
+s'_1 &= -3R.
 \end{aligned}
 $$
 
@@ -347,9 +347,8 @@ Khoảng vật của mặt sau là $s_2=2R-(-3R)=5R$. Tại mặt sau, bán kín
 
 $$
 \begin{aligned}
-\frac1{5R}+\frac{4/3}{s'_2}
-&=\frac{4/3-1}{-R},\\
-s'_2&=-2{,}5R.
+\frac1{5R}+\frac{4/3}{s'_2} &= \frac{4/3-1}{-R}, \\
+s'_2 &= -2{,}5R.
 \end{aligned}
 $$
 

@@ -19,8 +19,8 @@ Hai bản tụ phẳng trong chân không cách 3,70 mm, diện tích mỗi bả
 
 $$
 \begin{aligned}
-&C = \varepsilon_0A/d=6.58\,\mathrm{nF},\\
-&V = \sigma d/\varepsilon_0=5.85\,\mathrm{kV}.
+C &= \varepsilon_0A/d=6.58\,\mathrm{nF}, \\
+V &= \sigma d/\varepsilon_0=5.85\,\mathrm{kV}.
 \end{aligned}
 $$
 :::
@@ -40,9 +40,9 @@ Một mẫu tụ phẳng chân không được ghi điện dung 8,30 nF. Tháo t
 
 $$
 \begin{aligned}
-&d = \varepsilon_0A/C=4.80\,\mathrm{mm},\\
-&Q = CV=2.49\times10^{-5}\,\mathrm C,\\
-&E = V/d=6.25\times10^5\,\mathrm{V/m}.
+d &= \varepsilon_0A/C=4.80\,\mathrm{mm}, \\
+Q &= CV=2.49\times10^{-5}\,\mathrm C, \\
+E &= V/d=6.25\times10^5\,\mathrm{V/m}.
 \end{aligned}
 $$
 :::
@@ -62,13 +62,13 @@ Tụ cầu chân không có điện dung 125 pF. Bán kính trong của vỏ ngo
 
 $$
 \begin{aligned}
-&\frac1{r_a} = \frac1{r_b}+\frac{4\pi\varepsilon_0}{C},\\
-&r_a = 8.33\,\mathrm{cm},\\
-&Q = CV=4.44\times10^{-8}\,\mathrm C,\\
-&\sigma_a = Q/(4\pi r_a^2)\\
-&\quad =+5.09\times10^{-7}\,\mathrm{C/m^2},\\
-&\sigma_b = -Q/(4\pi r_b^2)\\
-&\quad =-4.36\times10^{-7}\,\mathrm{C/m^2}.
+\frac1{r_a} &= \frac1{r_b}+\frac{4\pi\varepsilon_0}{C}, \\
+r_a &= 8.33\,\mathrm{cm}, \\
+Q &= CV=4.44\times10^{-8}\,\mathrm C, \\
+\sigma_a &= Q/(4\pi r_a^2) \\
+&= +5.09\times10^{-7}\,\mathrm{C/m^2}, \\
+\sigma_b &= -Q/(4\pi r_b^2) \\
+&= -4.36\times10^{-7}\,\mathrm{C/m^2}.
 \end{aligned}
 $$
 :::
@@ -88,9 +88,9 @@ Tụ trụ chân không có điện dung trên chiều dài 69,0 pF/m. (a) Tìm 
 
 $$
 \begin{aligned}
-&r_b/r_a = \exp(2\pi\varepsilon_0/c)\\
-&\quad =2.24,\\
-&V_{ab} = \lambda/c=125\,\mathrm V.
+r_b/r_a &= \exp(2\pi\varepsilon_0/c) \\
+&= 2.24, \\
+V_{ab} &= \lambda/c=125\,\mathrm V.
 \end{aligned}
 $$
 
@@ -117,10 +117,10 @@ Với hai tụ nối tiếp, điện dung nhóm là C₁C₂/(C₁ + C₂). Do �
 
 $$
 \begin{aligned}
-&C_a = (1/C_1+1/C_2+1/C_3)^{-1},\\
-&C_b = C_1+C_2+C_3,\\
-&C_c = \frac{(C_1+C_2)C_3}{C_1+C_2+C_3},\\
-&C_d = \frac{C_1C_2}{C_1+C_2}+C_3.
+C_a &= (1/C_1+1/C_2+1/C_3)^{-1}, \\
+C_b &= C_1+C_2+C_3, \\
+C_c &= \frac{(C_1+C_2)C_3}{C_1+C_2+C_3}, \\
+C_d &= \frac{C_1C_2}{C_1+C_2}+C_3.
 \end{aligned}
 $$
 
@@ -158,9 +158,9 @@ Hai tụ C₁ = 1,50 µF, C₂ = 4,00 µF được ghép. (a) Điện áp cả m
 
 $$
 \begin{aligned}
-&C_s = C_1C_2/(C_1+C_2)\\
-&\quad =1.09\,\mathrm{\mu F},\\
-&C_p = C_1+C_2=5.50\,\mathrm{\mu F}.
+C_s &= C_1C_2/(C_1+C_2) \\
+&= 1.09\,\mathrm{\mu F}, \\
+C_p &= C_1+C_2=5.50\,\mathrm{\mu F}.
 \end{aligned}
 $$
 
@@ -182,10 +182,10 @@ Tụ phẳng chân không có khe 1,40 mm, diện tích mỗi bản 2,45 m² và
 
 $$
 \begin{aligned}
-&\sigma = \frac{Q}{A}=5.10\times10^{-6}\,\mathrm{C/m^2},\\
-&E = \frac{\sigma}{\varepsilon_0}=5.76\times10^5\,\mathrm{V/m},\\
-&u = \frac{1}{2}\varepsilon_0E^2=1.47\,\mathrm{J/m^3},\\
-&U = uAd=5.04\times10^{-3}\,\mathrm J.
+\sigma &= \frac{Q}{A}=5.10\times10^{-6}\,\mathrm{C/m^2}, \\
+E &= \frac{\sigma}{\varepsilon_0}=5.76\times10^5\,\mathrm{V/m}, \\
+u &= \frac{1}{2}\varepsilon_0E^2=1.47\,\mathrm{J/m^3}, \\
+U &= uAd=5.04\times10^{-3}\,\mathrm J.
 \end{aligned}
 $$
 :::
@@ -207,11 +207,11 @@ Tụ phẳng ban đầu chân không có mỗi bản diện tích 0,460 m², khe
 
 $$
 \begin{aligned}
-&C_0 = \frac{\varepsilon_0A}{d}=1.36\,\mathrm{nF},\\
-&Q = C_0V_0=5.43\,\mathrm{\mu C},\\
-&K = \frac{V_0}{V}=1.60,\\
-&C = KC_0=2.17\,\mathrm{nF},\\
-&Q_i = Q(1-1/K)=2.04\,\mathrm{\mu C}.
+C_0 &= \frac{\varepsilon_0A}{d}=1.36\,\mathrm{nF}, \\
+Q &= C_0V_0=5.43\,\mathrm{\mu C}, \\
+K &= \frac{V_0}{V}=1.60, \\
+C &= KC_0=2.17\,\mathrm{nF}, \\
+Q_i &= Q(1-1/K)=2.04\,\mathrm{\mu C}.
 \end{aligned}
 $$
 :::
@@ -232,11 +232,11 @@ Tụ phẳng chân không có mỗi bản 1,20 m², khe 4,50 mm. Nối nguồn 3
 
 $$
 \begin{aligned}
-&C_0 = 2.36\,\mathrm{nF},\\
-&Q_0 = 8.26\,\mathrm{\mu C},\\
-&C = KC_0=5.90\,\mathrm{nF},\\
-&Q = CV=20.7\,\mathrm{\mu C},\\
-&Q_i = Q(1-1/K)=12.4\,\mathrm{\mu C}.
+C_0 &= 2.36\,\mathrm{nF}, \\
+Q_0 &= 8.26\,\mathrm{\mu C}, \\
+C &= KC_0=5.90\,\mathrm{nF}, \\
+Q &= CV=20.7\,\mathrm{\mu C}, \\
+Q_i &= Q(1-1/K)=12.4\,\mathrm{\mu C}.
 \end{aligned}
 $$
 :::
@@ -256,9 +256,9 @@ Tụ phẳng chân không có C₀ = 4,50 µF, được nạp đến 2,80 kV r�
 
 $$
 \begin{aligned}
-&Q = C_0V_0=0.0126\,\mathrm C,\\
-&U_0 = \frac{1}{2}QV_0=17.6\,\mathrm J,\\
-&U = \frac{1}{2}QV=7.56\,\mathrm J.
+Q &= C_0V_0=0.0126\,\mathrm C, \\
+U_0 &= \frac{1}{2}QV_0=17.6\,\mathrm J, \\
+U &= \frac{1}{2}QV=7.56\,\mathrm J.
 \end{aligned}
 $$
 
@@ -280,8 +280,8 @@ Tụ phẳng chân không có C₀ = 5,60 µF, được nối nguồn 1,50 kV. G
 
 $$
 \begin{aligned}
-&U_0 = \frac{1}{2}C_0V^2=6.30\,\mathrm J,\\
-&U = \frac{1}{2}KC_0V^2=18.0\,\mathrm J.
+U_0 &= \frac{1}{2}C_0V^2=6.30\,\mathrm J, \\
+U &= \frac{1}{2}KC_0V^2=18.0\,\mathrm J.
 \end{aligned}
 $$
 :::
@@ -313,9 +313,9 @@ $$
 
 $$
 \begin{aligned}
-&U = \int_R^\infty u(r)4\pi r^2dr\\
-&\quad =\frac{Q^2}{8\pi\varepsilon_0} \int_R^\infty\frac{dr}{r^2}\\
-&\quad =\frac{Q^2}{8\pi\varepsilon_0R}.
+U &= \int_R^\infty u(r)4\pi r^2dr \\
+&= \frac{Q^2}{8\pi\varepsilon_0} \int_R^\infty\frac{dr}{r^2} \\
+&= \frac{Q^2}{8\pi\varepsilon_0R}.
 \end{aligned}
 $$
 
@@ -323,10 +323,10 @@ $$
 
 $$
 \begin{aligned}
-&C = \frac{Q^2}{2U}\\
-&\quad =4\pi\varepsilon_0R,\\
-&V(R)-V(\infty) = \frac{Q}{C}\\
-&\quad =\frac{kQ}{R}.
+C &= \frac{Q^2}{2U} \\
+&= 4\pi\varepsilon_0R, \\
+V(R)-V(\infty) &= \frac{Q}{C} \\
+&= \frac{kQ}{R}.
 \end{aligned}
 $$
 

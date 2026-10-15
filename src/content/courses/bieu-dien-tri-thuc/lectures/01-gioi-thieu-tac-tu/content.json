@@ -1,0 +1,18 @@
+{
+  "course": "bieu-dien-tri-thuc",
+  "lecture": "01-gioi-thieu-tac-tu",
+  "route": "/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu",
+  "notes": "docs/bieu-dien-tri-thuc/bai-giang/01-gioi-thieu-tac-tu.md",
+  "topics": [],
+  "slides": "src/content/courses/bieu-dien-tri-thuc/lectures/01-gioi-thieu-tac-tu/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "trang-thai",
+    "menh-de"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

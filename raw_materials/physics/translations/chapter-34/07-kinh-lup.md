@@ -9,9 +9,7 @@ Kích thước biểu kiến của một vật thể được cảm nhận trự
 Khi muốn quan sát kỹ các chi tiết tinh vi của một vật nhỏ (chẳng hạn: Một con côn trùng nhỏ hay một tinh thể khoáng vật), phản xạ tự nhiên là đưa vật lại gần mắt để tăng góc trông $\theta$, qua đó mở rộng kích thước ảnh trên võng mạc. Tuy nhiên, mắt người không thể điều tiết để hội tụ rõ nét các vật đặt gần hơn điểm cực cận. Do đó, góc trông lớn nhất mà mắt trần có thể nhìn rõ đạt được khi vật đặt đúng tại điểm cực cận (với người bình thường quy ước khoảng cách chuẩn là $25\text{ cm}$):
 
 $$
-\begin{aligned}
 \theta \approx \tan \theta = \frac{y}{25\text{ cm}}
-\end{aligned}
 $$
 
 Để nhìn vật với góc trông lớn hơn mà mắt vẫn có thể lấy nét rõ ràng, người ta sử dụng một thấu kính hội tụ có tiêu cự ngắn $f$, gọi là **kính lúp** (magnifier hay simple magnifier).
@@ -21,9 +19,7 @@ Khi đặt vật bên trong khoảng tiêu cự của kính lúp, thấu kính h
 Trạng thái quan sát thoải mái và không gây mỏi mắt nhất là khi ảnh ảo được tạo ra ở vô cực ($s' = -\infty$). Khi đó, cơ thể mi của mắt hoàn toàn thư giãn (mắt ở trạng thái không điều tiết hay ngắm chừng ở vô cực). Để ảnh ảo nằm ở vô cực, vật bắt buộc phải được đặt đúng tại tiêu điểm vật thứ nhất $F_1$ của kính lúp ($s = f$). Khi đó, chùm tia ló ra khỏi kính lúp là chùm tia song song, chắn tại mắt một góc trông $\theta'$:
 
 $$
-\begin{aligned}
 \theta' \approx \tan \theta' = \frac{y}{f}
-\end{aligned}
 $$
 
 ### Độ bội giác góc
@@ -31,10 +27,7 @@ $$
 Tác dụng phóng đại của kính lúp được định lượng bằng **độ bội giác góc** (angular magnification), ký hiệu là $M$. Đại lượng này định nghĩa bằng tỷ số giữa góc trông $\theta'$ khi nhìn qua kính lúp và góc trông cực đại $\theta$ khi nhìn bằng mắt trần ở cự ly cực cận $25\text{ cm}$:
 
 $$
-\begin{aligned}
-M = \frac{\theta'}{\theta}
-\end{aligned}
-\tag{34.21}
+M = \frac{\theta'}{\theta} \tag{34.21}
 $$
 
 Trong gần đúng góc nhỏ (thỏa mãn với hầu hết trường hợp quan sát cận trục), thay các góc bằng tang tương ứng:
@@ -44,8 +37,7 @@ $$
 M &= \frac{\theta'}{\theta} \\
 &= \frac{y/f}{y / (25\text{ cm})} \\
 &= \frac{25\text{ cm}}{f}
-\end{aligned}
-\tag{34.22}
+\end{aligned} \tag{34.22}
 $$
 
 Phương trình (34.22) cho thấy: Tiêu cự $f$ của kính lúp càng ngắn thì độ bội giác góc $M$ càng lớn. Chẳng hạn: Một kính lúp có tiêu cự $f = 5\text{ cm}$ sẽ đem lại độ bội giác góc là $M = (25\text{ cm}) / (5\text{ cm}) = 5\times$, nghĩa là ảnh của vật trên võng mạc lớn gấp 5 lần so với khi nhìn vật bằng mắt trần ở cự ly cực cận $25\text{ cm}$.

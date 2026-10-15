@@ -203,25 +203,31 @@ $$\bar{y} = \frac{2 + 3 + 5 + 7 + 8}{5} = \frac{25}{5} = 5.0$$
 
 **2. Tính các thành phần tổng bình phương:**
 - **Tổng biến thiên toàn phần (TSS)**:
-  $$\begin{aligned}
-  &\text{TSS} = \sum_{i=1}^5 (y_i - \bar{y})^2\\
-  &\quad = (2 - 5)^2 + (3 - 5)^2 + (5 - 5)^2 + (7 - 5)^2 + (8 - 5)^2\\
-  &\quad = (-3)^2 + (-2)^2 + 0^2 + (+2)^2 + (+3)^2\\
-  &\quad = 9 + 4 + 0 + 4 + 9 = 26.0
-  \end{aligned}$$
+  $$
+\begin{aligned}
+\text{TSS} &= \sum_{i=1}^5 (y_i - \bar{y})^2 \\
+&= (2 - 5)^2 + (3 - 5)^2 + (5 - 5)^2 + (7 - 5)^2 + (8 - 5)^2 \\
+&= (-3)^2 + (-2)^2 + 0^2 + (+2)^2 + (+3)^2 \\
+&= 9 + 4 + 0 + 4 + 9 = 26.0
+\end{aligned}
+$$
 - **Tổng bình phương phần dư (RSS)**:
-  $$\begin{aligned}
-  &\text{RSS} = \sum_{i=1}^5 e_i^2 = \sum_{i=1}^5 (y_i - \hat{y}_i)^2\\
-  &\quad = (+0.2)^2 + (-0.4)^2 + (0.0)^2 + (+0.4)^2 + (-0.2)^2\\
-  &\quad = 0.04 + 0.16 + 0.00 + 0.16 + 0.04 = 0.40
-  \end{aligned}$$
+  $$
+\begin{aligned}
+\text{RSS} &= \sum_{i=1}^5 e_i^2 = \sum_{i=1}^5 (y_i - \hat{y}_i)^2 \\
+&= (+0.2)^2 + (-0.4)^2 + (0.0)^2 + (+0.4)^2 + (-0.2)^2 \\
+&= 0.04 + 0.16 + 0.00 + 0.16 + 0.04 = 0.40
+\end{aligned}
+$$
 - **Tổng bình phương do hồi quy giải thích (SSR)**:
-  $$\begin{aligned}
-  &\text{SSR} = \sum_{i=1}^5 (\hat{y}_i - \bar{y})^2\\
-  &\quad = (1.8 - 5.0)^2 + (3.4 - 5.0)^2 + (5.0 - 5.0)^2 + (6.6 - 5.0)^2 + (8.2 - 5.0)^2\\
-  &\quad = (-3.2)^2 + (-1.6)^2 + 0^2 + (+1.6)^2 + (+3.2)^2\\
-  &\quad = 10.24 + 2.56 + 0.00 + 2.56 + 10.24 = 25.60
-  \end{aligned}$$
+  $$
+\begin{aligned}
+\text{SSR} &= \sum_{i=1}^5 (\hat{y}_i - \bar{y})^2 \\
+&= (1.8 - 5.0)^2 + (3.4 - 5.0)^2 + (5.0 - 5.0)^2 + (6.6 - 5.0)^2 + (8.2 - 5.0)^2 \\
+&= (-3.2)^2 + (-1.6)^2 + 0^2 + (+1.6)^2 + (+3.2)^2 \\
+&= 10.24 + 2.56 + 0.00 + 2.56 + 10.24 = 25.60
+\end{aligned}
+$$
 - **Kiểm chứng hệ thức phân rã**:
   $$\text{SSR} + \text{RSS} = 25.60 + 0.40 = 26.0 = \text{TSS}$$
   Hệ thức phân rã phương sai hoàn toàn chính xác.
@@ -256,15 +262,15 @@ $$\ln(y) = 2.30 + 0.08 x$$
 - Với người có $x^* = 5$ năm kinh nghiệm:
   $$
 \begin{aligned}
-    &\ln(\hat{y}) = 2.30 + 0.08(5) = 2.30 + 0.40 = 2.70\\
-    &\hat{y} = e^{2.70} \approx 14.88 \text{ triệu VNĐ/tháng}
+\ln(\hat{y}) &= 2.30 + 0.08(5) = 2.30 + 0.40 = 2.70 \\
+\hat{y} &= e^{2.70} \approx 14.88 \text{ triệu VNĐ/tháng}
 \end{aligned}
 $$
 - Với người có $x^* = 10$ năm kinh nghiệm:
   $$
 \begin{aligned}
-    &\ln(\hat{y}) = 2.30 + 0.08(10) = 2.30 + 0.80 = 3.10\\
-    &\hat{y} = e^{3.10} \approx 22.20 \text{ triệu VNĐ/tháng}
+\ln(\hat{y}) &= 2.30 + 0.08(10) = 2.30 + 0.80 = 3.10 \\
+\hat{y} &= e^{3.10} \approx 22.20 \text{ triệu VNĐ/tháng}
 \end{aligned}
 $$
 

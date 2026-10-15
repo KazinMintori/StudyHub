@@ -14,9 +14,9 @@ Khai triển hai vector trong hệ trục vuông góc:
 
 $$
 \begin{aligned}
-&\vec E = E_x\hat{\mathbf i}+E_y\hat{\mathbf j}+E_z\hat{\mathbf k},\\
-&d\vec\ell = dx\hat{\mathbf i}+dy\hat{\mathbf j}+dz\hat{\mathbf k},\\
-&-dV = E_xdx+E_ydy+E_zdz.
+\vec E &= E_x\hat{\mathbf i}+E_y\hat{\mathbf j}+E_z\hat{\mathbf k}, \\
+d\vec\ell &= dx\hat{\mathbf i}+dy\hat{\mathbf j}+dz\hat{\mathbf k}, \\
+-dV &= E_xdx+E_ydy+E_zdz.
 \end{aligned}
 $$
 
@@ -24,33 +24,22 @@ Nếu chỉ dịch chuyển theo x, giữ y,z không đổi, thì −dV = Eₓdx
 
 $$
 \begin{aligned}
-&E_x = -\frac{\partial V}{\partial x},\\
-&E_y = -\frac{\partial V}{\partial y},\\
-&E_z = -\frac{\partial V}{\partial z}.
-\end{aligned}
-\tag{23.19}
+E_x &= -\frac{\partial V}{\partial x}, \\
+E_y &= -\frac{\partial V}{\partial y}, \\
+E_z &= -\frac{\partial V}{\partial z}.
+\end{aligned} \tag{23.19}
 $$
 
 Các đạo hàm có đơn vị V/m, khớp đơn vị trường. Dạng vector là:
 
 $$
-\begin{aligned}
-&\vec E = -\hat{\mathbf i}\frac{\partial V}{\partial x}\\
-&\quad-\hat{\mathbf j}\frac{\partial V}{\partial y}\\
-&\quad-\hat{\mathbf k}\frac{\partial V}{\partial z}.
-\end{aligned}
-\tag{23.20}
+\vec E = -\hat{\mathbf i}\frac{\partial V}{\partial x} -\hat{\mathbf j}\frac{\partial V}{\partial y} -\hat{\mathbf k}\frac{\partial V}{\partial z}. \tag{23.20}
 $$
 
 Với hàm f bất kỳ, định nghĩa gradient bằng ba thành phần đạo hàm riêng:
 
 $$
-\begin{aligned}
-&\nabla f = \hat{\mathbf i}\frac{\partial f}{\partial x}\\
-&\quad+\hat{\mathbf j}\frac{\partial f}{\partial y}\\
-&\quad+\hat{\mathbf k}\frac{\partial f}{\partial z}.
-\end{aligned}
-\tag{23.21}
+\nabla f = \hat{\mathbf i}\frac{\partial f}{\partial x} +\hat{\mathbf j}\frac{\partial f}{\partial y} +\hat{\mathbf k}\frac{\partial f}{\partial z}. \tag{23.21}
 $$
 
 Ký hiệu ∇ được đọc là grad hoặc del. Hệ thức trường–điện thế viết ngắn thành:
@@ -86,9 +75,9 @@ Trong mô hình tế bào nghỉ, điện thế bên trong thấp hơn bên ngo�
 
 $$
 \begin{aligned}
-&E_r = -\frac{d}{dr}\left(\frac{kq}{r}\right)\\
-&\quad =\frac{kq}{r^2},\\
-&\vec E = \frac{kq}{r^2}\hat{\mathbf r}.
+E_r &= -\frac{d}{dr}\left(\frac{kq}{r}\right) \\
+&= \frac{kq}{r^2}, \\
+\vec E &= \frac{kq}{r^2}\hat{\mathbf r}.
 \end{aligned}
 $$
 
@@ -98,9 +87,9 @@ Kết quả trùng trường Coulomb (21.7), kể cả dấu của q.
 
 $$
 \begin{aligned}
-&\frac{\partial V}{\partial x} = -\frac{kqx}{r^3},\\
-&\frac{\partial V}{\partial y} = -\frac{kqy}{r^3},\\
-&\frac{\partial V}{\partial z} = -\frac{kqz}{r^3}.
+\frac{\partial V}{\partial x} &= -\frac{kqx}{r^3}, \\
+\frac{\partial V}{\partial y} &= -\frac{kqy}{r^3}, \\
+\frac{\partial V}{\partial z} &= -\frac{kqz}{r^3}.
 \end{aligned}
 $$
 
@@ -108,9 +97,8 @@ Thay vào gradient và nhận $\hat{\mathbf r}=\frac{x\hat{\mathbf i}+y\hat{\mat
 
 $$
 \begin{aligned}
-&\vec E =\frac{kq}{r^3}
-(x\hat{\mathbf i}+y\hat{\mathbf j}+z\hat{\mathbf k})\\
-&\quad =\frac{kq}{r^2}\hat{\mathbf r}.
+\vec E &= \frac{kq}{r^3} (x\hat{\mathbf i}+y\hat{\mathbf j}+z\hat{\mathbf k}) \\
+&= \frac{kq}{r^2}\hat{\mathbf r}.
 \end{aligned}
 $$
 
@@ -126,8 +114,8 @@ Vòng bán kính a mang Q có điện thế trên trục x là $V(x)=\frac{kQ}{\
 
 $$
 \begin{aligned}
-&E_x = -\frac{d}{dx}\left[kQ(x^2+a^2)^{-1/2}\right]\\
-&\quad =\frac{kQx}{(x^2+a^2)^{3/2}}.
+E_x &= -\frac{d}{dx}\left[kQ(x^2+a^2)^{-1/2}\right] \\
+&= \frac{kQx}{(x^2+a^2)^{3/2}}.
 \end{aligned}
 $$
 
@@ -143,9 +131,9 @@ Trong vùng có $V=A+Bx+Cy^3+Dxy$, với A,B,C,D dương, những phát biểu n
 
 $$
 \begin{aligned}
-&E_x = -(B+Dy),\\
-&E_y = -(3Cy^2+Dx),\\
-&E_z = 0.
+E_x &= -(B+Dy), \\
+E_y &= -(3Cy^2+Dx), \\
+E_z &= 0.
 \end{aligned}
 $$
 

@@ -19,8 +19,8 @@ Dòng tạo từ thông qua chính mạch, nên sự thay đổi dòng gây su�
 
 $$
 \begin{aligned}
-v_{ab}&=V_a-V_b\\
-&=L\frac{di}{dt}.
+v_{ab} &= V_a-V_b \\
+&= L\frac{di}{dt}.
 \end{aligned}
 $$
 

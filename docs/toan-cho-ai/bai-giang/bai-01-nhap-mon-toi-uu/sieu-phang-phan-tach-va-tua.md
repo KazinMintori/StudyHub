@@ -15,11 +15,11 @@ Xét trực giác hình học: Khi đặt hai vật thể lồi không giao nhau
 
 > **Định lý.** Cho $C$ và $D$ là hai tập hợp lồi khác rỗng, rời nhau trong $\mathbb{R}^n$ ($C \cap D = \varnothing$). Khi đó tồn tại vector pháp tuyến $a \ne 0$ và số thực $b$ sao cho:
 > $$
-> \begin{aligned}
-&> a^T x \le b, \quad \forall x \in C,\\
-&> a^T x \ge b, \quad \forall x \in D.
-> \end{aligned}
-> $$
+\begin{aligned}
+> a^T x &\le b, \quad \forall x \in C, \\
+> a^T x &\ge b, \quad \forall x \in D. >
+\end{aligned}
+$$
 
 Nói cách khác, dạng affine $a^T x - b$ không dương trên toàn bộ tập $C$ và không âm trên toàn bộ tập $D$. Siêu phẳng $\mathcal{H} = \{x \in \mathbb{R}^n \mid a^T x = b\}$ được gọi là **siêu phẳng phân tách** (separating hyperplane) của $C$ và $D$: Hai tập hợp nằm về hai phía đối diện của siêu phẳng, có thể tiếp xúc với siêu phẳng nhưng không bao giờ cắt xuyên qua.
 
@@ -44,8 +44,8 @@ là một số dương ngặt, và tồn tại hai điểm $c \in C$, $d \in D$ 
 
 $$
 \begin{aligned}
-&f(x) = a^T x - b\\
-&\quad = (d - c)^T \left(x - \tfrac12(d + c)\right).
+f(x) &= a^T x - b \\
+&= (d - c)^T \left(x - \tfrac12(d + c)\right).
 \end{aligned}
 $$
 
@@ -77,8 +77,8 @@ Chẳng hạn trong $\mathbb{R}^2$, xét hai tập hợp:
 
 $$
 \begin{aligned}
-&C = \{(x_1, x_2) \mid x_2 \le 0\},\\
-&D = \{(x_1, x_2) \mid x_1 > 0, \ x_1 x_2 \ge 1\}.
+C &= \{(x_1, x_2) \mid x_2 \le 0\}, \\
+D &= \{(x_1, x_2) \mid x_1 > 0, \ x_1 x_2 \ge 1\}.
 \end{aligned}
 $$
 
@@ -98,8 +98,8 @@ Ta có ứng dụng trực tiếp vào giải quyết hệ bất đẳng thức 
 
 $$
 \begin{aligned}
-&\lambda \ne 0, \quad \lambda \succeq 0,\\
-&A^T \lambda = 0, \quad \lambda^T b \le 0 .
+&\lambda \ne 0, \quad \lambda \succeq 0, \\
+A^T \lambda &= 0, \quad \lambda^T b \le 0 .
 \end{aligned}
 $$
 

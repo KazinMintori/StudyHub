@@ -7,17 +7,13 @@
 Để làm sáng tỏ cơ chế phản xạ toàn phần, xét một nguồn sáng điểm đặt trong môi trường $a$ có chiết suất $n_a$, phát ra các tia sáng truyền tới mặt phân cách với môi trường $b$ có chiết suất $n_b$ như biểu diễn ở Hình 33.13a. Điều kiện tiên quyết đầu tiên là ánh sáng phải truyền từ môi trường chiết quang hơn sang môi trường chiết quang kém hơn, tức là:
 
 $$
-\begin{aligned}
-n_a &> n_b
-\end{aligned}
+n_a > n_b
 $$
 
 Theo định luật khúc xạ Snell:
 
 $$
-\begin{aligned}
-\sin \theta_b &= \frac{n_a}{n_b} \sin \theta_a
-\end{aligned}
+\sin \theta_b = \frac{n_a}{n_b} \sin \theta_a
 $$
 
 Vì tỷ số $n_a / n_b > 1$, giá trị $\sin \theta_b$ luôn lớn hơn $\sin \theta_a$, đồng nghĩa với việc góc khúc xạ $\theta_b$ luôn lớn hơn góc tới $\theta_a$ ($\theta_b > \theta_a$). Tia khúc xạ luôn lệch ra xa pháp tuyến hơn so với tia tới:
@@ -33,10 +29,7 @@ Vì tỷ số $n_a / n_b > 1$, giá trị $\sin \theta_b$ luôn lớn hơn $\sin
 Ta xác định góc tới giới hạn $\theta_{\text{crit}}$ bằng cách thay $\theta_b = 90^\circ$ ($\sin \theta_b = 1$) vào định luật Snell:
 
 $$
-\begin{aligned}
-\sin \theta_{\text{crit}} &= \frac{n_b}{n_a}
-\end{aligned}
-\tag{33.6}
+\sin \theta_{\text{crit}} = \frac{n_b}{n_a} \tag{33.6}
 $$
 
 Như vậy, hai điều kiện cần và đủ để xảy ra hiện tượng phản xạ toàn phần là:
@@ -55,7 +48,7 @@ Xét khối thủy tinh có chiết suất $n = 1{,}52$ đặt trong không khí
 $$
 \begin{aligned}
 \sin \theta_{\text{crit}} &= \frac{1{,}00}{1{,}52} \approx 0{,}658 \\
-\implies \theta_{\text{crit}} &\approx 41{,}1^\circ
+&\implies \theta_{\text{crit}} \approx 41{,}1^\circ
 \end{aligned}
 $$
 
@@ -93,7 +86,7 @@ $$
 \begin{aligned}
 \sin \theta_{\text{crit}} &= \frac{1{,}00}{2{,}417} \\
 &\approx 0{,}4137 \\
-\implies \theta_{\text{crit}} &\approx 24{,}4^\circ
+&\implies \theta_{\text{crit}} \approx 24{,}4^\circ
 \end{aligned}
 $$
 

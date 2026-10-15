@@ -6,10 +6,9 @@
 
 $$
 \begin{aligned}
-&V = \frac{U}{q_0},\\
-&U = q_0V.
-\end{aligned}
-\tag{23.12}
+V &= \frac{U}{q_0}, \\
+U &= q_0V.
+\end{aligned} \tag{23.12}
 $$
 
 Thế năng và điện tích đều là số vô hướng, nên điện thế cũng là số vô hướng. Đơn vị SI là volt, đặt theo tên Alessandro Volta (1745–1827):
@@ -26,10 +25,9 @@ Chia hệ thức công của lực điện cho q₀:
 
 $$
 \begin{aligned}
-&\frac{W_{a\to b}}{q_0} = -\frac{U_b-U_a}{q_0}\\
-&\quad =V_a-V_b
-\end{aligned}
-\tag{23.13}
+\frac{W_{a\to b}}{q_0} &= -\frac{U_b-U_a}{q_0} \\
+&= V_a-V_b
+\end{aligned} \tag{23.13}
 $$
 
 Hiệu $V_a-V_b$ là **điện thế của a so với b**, ký hiệu $V_{ab}$. Thứ tự chỉ số quyết định dấu. Nói “hiệu điện thế giữa a và b” mà không nêu điểm được lấy làm mốc có thể gây nhầm. Trong mạch điện, đại lượng ấy thường gọi là điện áp.
@@ -56,11 +54,7 @@ Mốc V = 0 chọn ở vô hạn. Nguồn q dương tạo điện thế dương 
 Với hai nguồn, điện thế là $\frac{kq_1}{r_1}+\frac{kq_2}{r_2}$. Với n nguồn:
 
 $$
-\begin{aligned}
-&V =k\frac{q_1}{r_1}
-+k\frac{q_2}{r_2}\\
-&\quad+\cdots+k\frac{q_n}{r_n}.
-\end{aligned}
+V =k\frac{q_1}{r_1} +k\frac{q_2}{r_2} +\cdots+k\frac{q_n}{r_n}.
 $$
 
 Với chỉ số i chạy từ 1 đến n, viết gọn thành:
@@ -87,11 +81,10 @@ Khi điện trường đã biết hoặc dễ tìm bằng Gauss, có thể dùng
 
 $$
 \begin{aligned}
-&W_{a\to b} = q_0\int_a^b\vec E\cdot d\vec\ell\\
-&V_a-V_b = \int_a^b\vec E\cdot d\vec\ell\\
-&\quad =\int_a^bE_\parallel\,d\ell
-\end{aligned}
-\tag{23.17}
+W_{a\to b} &= q_0\int_a^b\vec E\cdot d\vec\ell \\
+V_a-V_b &= \int_a^b\vec E\cdot d\vec\ell \\
+&= \int_a^bE_\parallel\,d\ell
+\end{aligned} \tag{23.17}
 $$
 
 Tích phân không phụ thuộc đường đi trong điện trường tĩnh. Nếu tích phân từ a đến b dương, trường sinh công dương lên điện tích thử dương, thế năng của nó giảm và Vᵦ thấp hơn Vₐ.
@@ -141,9 +134,9 @@ Hạt mang điện Ne có biến thiên thế năng tính bằng eV bằng N l�
 
 $$
 \begin{aligned}
-&\Delta U = (2e)(1000\,\mathrm V)\\
-&\quad =3.204\times10^{-16}\,\mathrm J\\
-&\quad =2000\,\mathrm{eV}.
+\Delta U &= (2e)(1000\,\mathrm V) \\
+&= 3.204\times10^{-16}\,\mathrm J \\
+&= 2000\,\mathrm{eV}.
 \end{aligned}
 $$
 
@@ -164,12 +157,12 @@ Proton mang $+e=1.602\times10^{-19}$ C đi thẳng d = 0,50 m từ a đến b tr
 
 $$
 \begin{aligned}
-&F = eE=2.4\times10^{-12}\,\mathrm N,\\
-&W = Fd=1.2\times10^{-12}\,\mathrm J\\
-&\quad =7.5\,\mathrm{MeV},\\
-&V_a-V_b = \frac{W}{e}\\
-&\quad =7.5\times10^6\,\mathrm V\\
-&\quad =7.5\,\mathrm{MV}.
+F &= eE=2.4\times10^{-12}\,\mathrm N, \\
+W &= Fd=1.2\times10^{-12}\,\mathrm J \\
+&= 7.5\,\mathrm{MeV}, \\
+V_a-V_b &= \frac{W}{e} \\
+&= 7.5\times10^6\,\mathrm V \\
+&= 7.5\,\mathrm{MV}.
 \end{aligned}
 $$
 
@@ -187,11 +180,10 @@ Hai nguồn +12 nC và −12 nC cách 10,0 cm. Điểm a nằm giữa, cách ngu
 
 $$
 \begin{aligned}
-&V_a = k\frac{12\times10^{-9}}{0.060}\\
-&\quad-k\frac{12\times10^{-9}}{0.040}\\
-&\quad =-900\,\mathrm V,\\
-&V_b \approx 1930\,\mathrm V,\\
-&V_c = 0.
+V_a &= k\frac{12\times10^{-9}}{0.060} -k\frac{12\times10^{-9}}{0.040} \\
+&= -900\,\mathrm V, \\
+V_b &\approx 1930\,\mathrm V, \\
+V_c &= 0.
 \end{aligned}
 $$
 
@@ -207,10 +199,10 @@ $$
 
 $$
 \begin{aligned}
-&U_a = (4.0\times10^{-9})(-900)\\
-&\quad =-3.6\times10^{-6}\,\mathrm J,\\
-&U_b \approx 7.7\times10^{-6}\,\mathrm J,\\
-&U_c = 0.
+U_a &= (4.0\times10^{-9})(-900) \\
+&= -3.6\times10^{-6}\,\mathrm J, \\
+U_b &\approx 7.7\times10^{-6}\,\mathrm J, \\
+U_c &= 0.
 \end{aligned}
 $$
 
@@ -230,9 +222,9 @@ Dùng tích phân điện trường để tìm điện thế cách nguồn đi�
 
 $$
 \begin{aligned}
-&V(r) = \int_r^\infty\frac{kq}{s^2}ds\\
-&\quad =\left[-\frac{kq}{s}\right]_r^\infty\\
-&\quad =\frac{kq}{r}.
+V(r) &= \int_r^\infty\frac{kq}{s^2}ds \\
+&= \left[-\frac{kq}{s}\right]_r^\infty \\
+&= \frac{kq}{r}.
 \end{aligned}
 $$
 
@@ -250,8 +242,8 @@ Hạt bụi có $m=5.0\times10^{-9}$ kg, tức 5,0 µg, mang q₀ = +2,0 nC, b�
 
 $$
 \begin{aligned}
-&q_0V_a = \frac12mv^2+q_0V_b,\\
-&v = \sqrt{\frac{2q_0(V_a-V_b)}m}.
+q_0V_a &= \frac12mv^2+q_0V_b, \\
+v &= \sqrt{\frac{2q_0(V_a-V_b)}m}.
 \end{aligned}
 $$
 

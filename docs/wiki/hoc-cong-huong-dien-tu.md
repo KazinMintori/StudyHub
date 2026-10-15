@@ -16,7 +16,7 @@ Một hốc một chiều giữa hai tường dẫn lý tưởng cách nhau L c�
 Hai tường dẫn lý tưởng đặt tại x=0 và x=L phải là nút điện trường tiếp tuyến. Mode cơ bản chứa một nửa bước sóng, mode hai chứa hai nửa bước sóng, rồi mới tổng quát:
 
 $$
-\begin{aligned}&\lambda_1=2L,\quad f_1=c/(2L)\\&\lambda_2=L,\quad f_2=c/L\\&\lambda_n=2L/n\\&f_n=nc/(2L)\\&n=1,2,3,\ldots.\end{aligned}
+\lambda_1=2L,\quad f_1=c/(2L)\\ \lambda_2=L,\quad f_2=c/L\\ \lambda_n=2L/n\\ f_n=nc/(2L)\\ n=1,2,3,\ldots.
 $$
 
 Trong mode n, các nút điện trường nằm tại xj=jL/n, với j=0,1,...,n. Hai tường là nút, còn mỗi khoảng giữa hai nút có một bụng. Hốc ba chiều có hệ mode phong phú hơn mô hình một chiều này.

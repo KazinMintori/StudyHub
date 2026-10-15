@@ -19,8 +19,8 @@ Nếu $f$ lồi thì mọi tập mức dưới đều lồi, với mọi $\alpha
 
 $$
 \begin{aligned}
-&f(\theta x + (1-\theta) y) \le \theta f(x) + (1-\theta) f(y)\\
-&\quad \le \theta\alpha + (1 - \theta)\alpha = \alpha .
+f(\theta x + (1-\theta) y) &\le \theta f(x) + (1-\theta) f(y) \\
+&\le \theta\alpha + (1 - \theta)\alpha = \alpha .
 \end{aligned}
 $$
 
@@ -48,8 +48,8 @@ Hai chiều đều ngắn. Nếu $f$ lồi và $(x, t), (y, s)$ thuộc epigraph
 
 $$
 \begin{aligned}
-&f(\theta x + (1-\theta) y) \le \theta f(x) + (1-\theta) f(y)\\
-&\quad \le \theta t + (1-\theta) s,
+f(\theta x + (1-\theta) y) &\le \theta f(x) + (1-\theta) f(y) \\
+&\le \theta t + (1-\theta) s,
 \end{aligned}
 $$
 
@@ -135,8 +135,8 @@ Với hàm lõm, Jensen đảo chiều: $\mathbf{E}\, g(X) \le g(\mathbf{E}\,X)$
 
 $$
 \begin{aligned}
-&\log p(x) = \log \mathbf{E}_{z \sim q}\left[\frac{p(x, z)}{q(z)}\right]\\
-&\quad \ge \mathbf{E}_{z \sim q}\left[\log \frac{p(x, z)}{q(z)}\right].
+\log p(x) &= \log \mathbf{E}_{z \sim q}\left[\frac{p(x, z)}{q(z)}\right] \\
+&\ge \mathbf{E}_{z \sim q}\left[\log \frac{p(x, z)}{q(z)}\right].
 \end{aligned}
 $$
 

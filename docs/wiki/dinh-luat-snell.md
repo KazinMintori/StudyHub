@@ -17,8 +17,8 @@ Gọi a là môi trường chứa tia tới, b là môi trường chứa tia kh�
 
 $$
 \begin{aligned}
-n_a\sin\theta_a&=n_b\sin\theta_b,\\
-\frac{\sin\theta_a}{\sin\theta_b}&=\frac{v_a}{v_b}.
+n_a\sin\theta_a &= n_b\sin\theta_b, \\
+\frac{\sin\theta_a}{\sin\theta_b} &= \frac{v_a}{v_b}.
 \end{aligned}
 $$
 

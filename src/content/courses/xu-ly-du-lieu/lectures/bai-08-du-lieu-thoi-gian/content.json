@@ -1,0 +1,18 @@
+{
+  "course": "xu-ly-du-lieu",
+  "lecture": "bai-08-du-lieu-thoi-gian",
+  "route": "/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian",
+  "notes": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+  "topics": [],
+  "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-08-du-lieu-thoi-gian/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "chi-muc",
+    "gia-tri-thieu"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

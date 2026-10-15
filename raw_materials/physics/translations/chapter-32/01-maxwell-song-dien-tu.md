@@ -17,32 +17,19 @@ Trong nỗ lực làm sáng tỏ bản chất của kết quả này, năm 1865,
 Đồng thời, Maxwell nhận thấy rằng toàn bộ các định luật nền tảng của điện từ học có thể được phát biểu cô đọng thông qua bốn phương trình, ngày nay mang tên hệ phương trình Maxwell. Bốn phương trình này bao gồm: (1) Định luật Gauss cho điện trường, (2) Định luật Gauss cho từ trường khẳng định sự không tồn tại của đơn cực từ, (3) Định luật cảm ứng Faraday, và (4) Định luật Ampere mở rộng có dòng điện dịch:
 
 $$
-\begin{aligned}
-\oint \vec{E} \cdot d\vec{A} &= \frac{Q_{\text{encl}}}{\epsilon_0},
-\end{aligned}
-\tag{29.18}
+\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{encl}}}{\epsilon_0}, \tag{29.18}
 $$
 
 $$
-\begin{aligned}
-\oint \vec{B} \cdot d\vec{A} &= 0,
-\end{aligned}
-\tag{29.19}
+\oint \vec{B} \cdot d\vec{A} = 0, \tag{29.19}
 $$
 
 $$
-\begin{aligned}
-\oint \vec{E} \cdot d\vec{l} &= -\frac{d\Phi_B}{dt},
-\end{aligned}
-\tag{29.20}
+\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}, \tag{29.20}
 $$
 
 $$
-\begin{aligned}
-\oint \vec{B} \cdot d\vec{l} &= \mu_0 \big( i_{\text{C}} \\
-&\quad + \epsilon_0 \frac{d\Phi_E}{dt} \big)_{\text{encl}}.
-\end{aligned}
-\tag{29.21}
+\oint \vec{B} \cdot d\vec{l} &= \mu_0 \big( i_{\text{C}} + \epsilon_0 \frac{d\Phi_E}{dt} \big)_{\text{encl}}. \tag{29.21}
 $$
 
 Các tích phân Gauss được lấy trên mặt kín, với pháp tuyến hướng ra ngoài. $Q_{\text{encl}}$ là điện tích bên trong mặt đó. Hai tích phân lưu thông được lấy trên đường kín, với chiều đường và pháp tuyến mặt căng tuân quy tắc bàn tay phải. $\Phi_E$ và $\Phi_B$ là thông lượng qua mặt căng, còn $i_{\mathrm C}$ là dòng dẫn xuyên mặt.
@@ -53,10 +40,8 @@ Nếu hằng số vật liệu thay đổi theo vị trí, chúng phải nằm b
 
 $$
 \begin{aligned}
-&\oint\epsilon\vec E\cdot d\vec A=Q_{\mathrm f},\\
-&\oint\frac{\vec B}{\mu}\cdot d\vec l\\
-&=i_{\mathrm f}
- +\frac{d}{dt}\int\epsilon\vec E\cdot d\vec A.
+\oint\epsilon\vec E\cdot d\vec A &= Q_{\mathrm f}, \\
+\oint\frac{\vec B}{\mu}\cdot d\vec l &= i_{\mathrm f} +\frac{d}{dt}\int\epsilon\vec E\cdot d\vec A.
 \end{aligned}
 $$
 
@@ -89,9 +74,7 @@ Tiếp nối phát hiện của Hertz, Guglielmo Marconi cùng nhiều nhà phá
 Thang sóng điện từ bao trùm toàn bộ các sóng điện từ ở mọi tần số và bước sóng có thể có trong tự nhiên. Mặc dù có sự khác biệt rất lớn về cách thức tạo ra và ứng dụng thực tiễn, toàn bộ các bức xạ này đều có chung bản chất sóng điện từ và lan truyền trong chân không với cùng một tốc độ $c = 299\,792\,458\,\mathrm{m/s}$. Các sóng điện từ khác nhau về tần số $f$ và bước sóng $\lambda$, nhưng mối quan hệ nền tảng trong chân không luôn được thỏa mãn:
 
 $$
-\begin{aligned}
-c &= \lambda f.
-\end{aligned}
+c = \lambda f.
 $$
 
 ![Hình 32.4: Thang sóng điện từ biểu diễn trên trục logarit đối với tần số và bước sóng. Ranh giới phân chia giữa các dải sóng mang tính quy ước tương đối.](../img/young-32/hinh-32-04.png)

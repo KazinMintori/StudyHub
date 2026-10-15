@@ -157,3 +157,12 @@ description: "<Phạm vi bài trong một câu.>"
 - Công thức trong Notes và Wiki dùng `$…$`; chữ tiếng Việt nằm ngoài công thức.
 - Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
 - Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.
+- **Chuẩn mực toán học & Quy tắc ngắt dòng (Math Standards & Line-Breaking Rules)**:
+  - Tuyệt đối không để phát sinh thanh cuộn ngang (scrollbar) trên bất kỳ công thức nào, ở mọi kích thước màn hình và trong mọi khung hộp (`::: info`, `::: details`).
+  - **Chỉ ngắt dòng tại dấu quan hệ, cấm nhảy xuống dòng khi chưa đến dấu bằng**:
+    - Với công thức dài hoặc chuỗi biến đổi nhiều bước: Chỉ được bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt dòng bằng `\\` tại dấu bằng ($=$), bất đẳng thức ($\le, \ge, <, >$), xấp xỉ ($\approx$) hoặc suy luận ($\implies, \iff$) và căn lề bằng `&=`, `&\le`, v.v.
+    - **Tuyệt đối CẤM nhảy xuống dòng khi chưa đến dấu bằng**: Cấm ngắt dòng giữa chừng tại các toán tử cộng, trừ ($+$, $-$) hay nhân, chia ($\times, \cdot$) làm rớt số hạng xuống dòng tiếp theo kiểu $\dots + R_2 \\ + R_3$. Mọi số hạng trong cùng một vế của biểu thức phải nằm liền mạch trên cùng một dòng.
+    - **Cấm ngắt dòng ngay sau dấu bằng**: Tuyệt đối không viết `A = \\ B`, không ngắt dòng đẩy toàn bộ vế phải xuống dưới.
+  - **Không lạm dụng `aligned` bẻ gãy công thức ngắn**:
+    - Nếu một công thức hoặc phương trình vừa vặn trên một dòng (ví dụ: $R_{\mathrm{eq}} = R_1 + R_2 + R_3$ hay $\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}$ hay $R_{\mathrm{eq}} = \frac{R_1 R_2}{R_1 + R_2}$): Bắt buộc giữ nguyên trên 1 dòng đơn giản trong `$$...$$`. Tuyệt đối không bọc vào `\begin{aligned}` rồi ngắt vụn thành các dòng ngắn cụt cỡn ở giữa trang.
+    - Chỉ dùng `\begin{aligned}` khi có chuỗi biến đổi nhiều bước qua dấu bằng hoặc hệ nhiều phương trình.

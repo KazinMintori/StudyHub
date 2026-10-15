@@ -25,8 +25,8 @@ Với hai hạt, mômen tổng là tổng hai vector mômen. Với hệ gồm n 
 
 $$
 \begin{aligned}
-&\vec L_{\mathrm{tổng}} = \vec L_1+\vec L_2+\cdots+\vec L_n,\\
-&\vec L_i = \vec r_i\times\vec p_i.
+\vec L_{\mathrm{tổng}} &= \vec L_1+\vec L_2+\cdots+\vec L_n, \\
+\vec L_i &= \vec r_i\times\vec p_i.
 \end{aligned}
 $$
 

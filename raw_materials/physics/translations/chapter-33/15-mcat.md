@@ -25,9 +25,9 @@ Với biên độ điện trường $E$:
 
 $$
 \begin{aligned}
-E_H&=E\cos45^\circ,\\
-E_V&=E\sin45^\circ,\\
-I_H&=I_V=\frac I2.
+E_H &= E\cos45^\circ, \\
+E_V &= E\sin45^\circ, \\
+I_H &= I_V=\frac I2.
 \end{aligned}
 $$
 
@@ -77,9 +77,8 @@ Gọi $\phi$ là góc giữa hai trục kính:
 
 $$
 \begin{aligned}
-I_2&=\frac{I_0}2\cos^2\phi,\\
-I_2=\frac{I_0}2
-&\implies\cos^2\phi=1.
+I_2 &= \frac{I_0}2\cos^2\phi, \\
+I_2 &= \frac{I_0}2 \implies\cos^2\phi=1.
 \end{aligned}
 $$
 

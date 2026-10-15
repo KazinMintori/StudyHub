@@ -288,11 +288,11 @@ Chi phí tính toán của các thao tác đại số cơ bản:
 Hệ phương trình có ma trận hệ số là ma trận tam giác (dưới hoặc trên) là khối cấu trúc cơ bản nhất của mọi thuật toán đại số tuyến tính số học:
 1. **Thế tiến (Forward substitution)** cho hệ tam giác dưới $L y = b$ (với $L_{ii} \ne 0$):
    $$
-   \begin{aligned}
-   &y_1 = \frac{b_1}{L_{11}},\\
-   &y_i = \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad i = 2, \dots, n.
-   \end{aligned}
-   $$
+\begin{aligned}
+y_1 &= \frac{b_1}{L_{11}}, \\
+y_i &= \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad i = 2, \dots, n.
+\end{aligned}
+$$
    Số phép tính cần thực hiện là $\sum_{i=1}^n (2i - 1) = n^2$ flops.
 2. **Thế lùi (Back substitution)** cho hệ tam giác trên $U x = y$: Hoàn toàn tương tự, giải từ $x_n$ ngược lên $x_1$ với chi phí đúng $n^2$ flops.
 
@@ -449,8 +449,8 @@ Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **L
 
 $$
 \begin{aligned}
-&L(w) = p(b \mid w) = \prod_{i=1}^m p(b_i \mid w)\\
-&\quad = \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
+L(w) &= p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) \\
+&= \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
 \end{aligned}
 $$
 

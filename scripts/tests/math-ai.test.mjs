@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { mix, optimizerTrace, dualCertificate, solveSmallLP, bellmanTrace } from '../../docs/.vitepress/theme/math-ai.mjs'
+import { mix, optimizerTrace, dualCertificate, solveSmallLP, bellmanTrace } from '../../src/features/labs/services/math-ai.mjs'
 const near=(a,b,tolerance=1e-9)=>assert(Math.abs(a-b)<=tolerance,`${a} != ${b}`)
 
 test('Affine segment endpoints, midpoint, extrapolation and the chord gap',()=>{

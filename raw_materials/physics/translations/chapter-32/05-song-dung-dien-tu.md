@@ -10,10 +10,8 @@ Xét sóng tới phân cực theo trục $y$, truyền theo chiều âm trục $
 
 $$
 \begin{aligned}
-E_{y,\text{inc}} &= E_{\max} \\
-&\quad \times \cos(kx + \omega t), \\
-B_{z,\text{inc}} &= -B_{\max} \\
-&\quad \times \cos(kx + \omega t)
+E_{y,\text{inc}} &= E_{\max} \times \cos(kx + \omega t), \\
+B_{z,\text{inc}} &= -B_{\max} \times \cos(kx + \omega t)
 \end{aligned}
 $$
 
@@ -21,10 +19,8 @@ Sóng phản xạ do dòng cảm ứng trên mặt phẳng $x = 0$ phát ra truy
 
 $$
 \begin{aligned}
-E_{y,\text{ref}} &= -E_{\max} \\
-&\quad \times \cos(kx - \omega t), \\
-B_{z,\text{ref}} &= -B_{\max} \\
-&\quad \times \cos(kx - \omega t)
+E_{y,\text{ref}} &= -E_{\max} \times \cos(kx - \omega t), \\
+B_{z,\text{ref}} &= -B_{\max} \times \cos(kx - \omega t)
 \end{aligned}
 $$
 
@@ -32,10 +28,8 @@ Dấu trừ trước biên độ điện trường phản xạ đảm bảo rằ
 
 $$
 \begin{aligned}
-E_y(0, t) &= E_{y,\text{inc}}(0, t) \\
-&\quad + E_{y,\text{ref}}(0, t) \\
-&= E_{\max} \cos(\omega t) \\
-&\quad - E_{\max} \cos(-\omega t) \\
+E_y(0, t) &= E_{y,\text{inc}}(0, t) + E_{y,\text{ref}}(0, t) \\
+&= E_{\max} \cos(\omega t) - E_{\max} \cos(-\omega t) \\
 &= 0
 \end{aligned}
 $$
@@ -55,40 +49,27 @@ $$
 
 $$
 \begin{aligned}
-&\cos(A + B) - \cos(A - B) \\
-&\quad = -2 \sin A \sin B, \\
-&\cos(A + B) + \cos(A - B) \\
-&\quad = 2 \cos A \cos B
+\cos(A + B) - \cos(A - B) &= -2 \sin A \sin B, \\
+\cos(A + B) + \cos(A - B) &= 2 \cos A \cos B
 \end{aligned}
 $$
 
 Ta thu được phương trình của điện trường trong sóng dừng điện từ:
 
 $$
-\begin{aligned}
-E_y(x, t) &= -2E_{\max} \\
-&\quad \times \sin kx \sin \omega t
-\end{aligned}
-\tag{32.34}
+E_y(x, t) &= -2E_{\max} \times \sin kx \sin \omega t \tag{32.34}
 $$
 
 Phương trình của từ trường trong sóng dừng điện từ là:
 
 $$
-\begin{aligned}
-B_z(x, t) &= -2B_{\max} \\
-&\quad \times \cos kx \cos \omega t
-\end{aligned}
-\tag{32.35}
+B_z(x, t) &= -2B_{\max} \times \cos kx \cos \omega t \tag{32.35}
 $$
 
 Biểu thức của điện trường cho thấy tại các mặt phẳng vuông góc với trục $x$ mà $\sin kx = 0$, điện trường luôn triệt tiêu ở mọi thời điểm. Điều kiện $\sin kx = 0$ tương ứng với $kx = 0, \pi, 2\pi, \dots$ Vì số sóng $k = 2\pi/\lambda$, tọa độ của các mặt phẳng nút điện trường là:
 
 $$
-\begin{aligned}
-x &= 0, \frac{\lambda}{2}, \lambda, \frac{3\lambda}{2}, \dots
-\end{aligned}
-\tag{32.36}
+x = 0, \frac{\lambda}{2}, \lambda, \frac{3\lambda}{2}, \dots \tag{32.36}
 $$
 
 Các mặt phẳng này được gọi là mặt phẳng nút của điện trường $\vec{E}$. Nằm xen kẽ chính giữa hai mặt phẳng nút liên tiếp là các mặt phẳng mà $\sin kx = \pm 1$. Tại đó, độ lớn điện trường đạt giá trị cực đại $2E_{\max}$ hai lần trong mỗi chu kỳ dao động. Đó là các mặt phẳng bụng của điện trường.
@@ -96,10 +77,7 @@ Các mặt phẳng này được gọi là mặt phẳng nút của điện trư
 Đối với từ trường, điều kiện để từ trường triệt tiêu tại mọi thời điểm là $\cos kx = 0$, tức $kx = \pi/2, 3\pi/2, 5\pi/2, \dots$ Do đó, tọa độ các mặt phẳng nút của từ trường $\vec{B}$ là:
 
 $$
-\begin{aligned}
-x &= \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4}, \dots
-\end{aligned}
-\tag{32.37}
+x = \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4}, \dots \tag{32.37}
 $$
 
 Các mặt phẳng bụng của từ trường nằm chính giữa các mặt phẳng nút của nó, đặc biệt là ngay tại bề mặt vật dẫn $x = 0$.
@@ -119,19 +97,13 @@ Xét một hộp cộng hưởng giới hạn bởi hai mặt phẳng dẫn đi�
 Vì cả hai thành kim loại đều là vật dẫn lý tưởng, điện trường tiếp tuyến bắt buộc phải triệt tiêu tại cả hai biên $x = 0$ và $x = L$. Điều kiện $E_y(L, t) = 0$ đòi hỏi $\sin k L = 0$, tức là $k L = n\pi$ với $n = 1, 2, 3, \dots$ Khoảng cách $L$ giữa hai thành phải bằng một số nguyên lần nửa bước sóng:
 
 $$
-\begin{aligned}
-L &= n \frac{\lambda}{2}
-\end{aligned}
+L = n \frac{\lambda}{2}
 $$
 
 Hệ thống chỉ cho phép các mode dao động riêng với các bước sóng gián đoạn:
 
 $$
-\begin{aligned}
-\lambda_n &= \frac{2L}{n} \\
-&\quad (n = 1, 2, 3, \dots)
-\end{aligned}
-\tag{32.38}
+\lambda_n = \frac{2L}{n} \quad (n = 1, 2, 3, \dots) \tag{32.38}
 $$
 
 Các tần số dao động riêng tương ứng là:
@@ -140,9 +112,7 @@ $$
 \begin{aligned}
 f_n &= \frac{c}{\lambda_n} \\
 &= n \frac{c}{2L} \\
-&\quad (n = 1, 2, 3, \dots)
-\end{aligned}
-\tag{32.39}
+\end{aligned} \tag{32.39}
 $$
 
 Mỗi mode sóng riêng đặc trưng bởi một tần số, một dạng phân bố trường và một hệ thống nút bụng xác định. Bằng cách đo khoảng cách giữa các vị trí nút, người ta xác định được bước sóng. Khi biết trước tần số, việc đo đạc này cho phép tính chính xác tốc độ lan truyền của sóng điện từ. Hertz đã dùng phương pháp này vào những năm 1880 trong các thí nghiệm khảo sát sóng điện từ.
@@ -163,23 +133,15 @@ Thay các hàm sóng vào biểu thức vector Poynting:
 $$
 \begin{aligned}
 \vec{S}(x, t) &= \frac{1}{\mu_0} \vec{E} \times \vec{B} \\
-&= \frac{1}{\mu_0} [-\hat{\jmath} 2 E_{\max}] \\
-&\quad \times [\sin kx \sin \omega t] \\
-&\quad \times [-\hat{k} 2 B_{\max}] \\
-&\quad \times [\cos kx \cos \omega t] \\
-&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \\
-&\quad \times (2 \sin kx \cos kx) \\
-&\quad \times (2 \sin \omega t \cos \omega t)
+&= \frac{1}{\mu_0} [-\hat{\jmath} 2 E_{\max}] \times [\sin kx \sin \omega t] \times [-\hat{k} 2 B_{\max}] \times [\cos kx \cos \omega t] \\
+&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \times (2 \sin kx \cos kx) \times (2 \sin \omega t \cos \omega t)
 \end{aligned}
 $$
 
 Áp dụng hệ thức $\sin 2A = 2 \sin A \cos A$:
 
 $$
-\begin{aligned}
-S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \\
-&\quad \times \sin 2kx \sin 2\omega t
-\end{aligned}
+S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \times \sin 2kx \sin 2\omega t
 $$
 
 Giá trị trung bình theo thời gian của hàm sin trong một hoặc nhiều chu kỳ nguyên vẹn luôn bằng không: $\langle \sin 2\omega t \rangle = 0$. Do đó, vector Poynting trung bình theo thời gian bằng không tại mọi điểm: $\langle \vec{S}(x, t) \rangle = \vec{0}$, kéo theo cường độ bức xạ triệt tiêu:

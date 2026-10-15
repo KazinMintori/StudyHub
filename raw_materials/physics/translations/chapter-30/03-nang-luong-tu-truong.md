@@ -9,26 +9,19 @@ Ta hãy tính tổng năng lượng $U$ mà nguồn điện bên ngoài cần cu
 Tại một thời điểm bất kỳ trong quá trình nạp dòng, giả sử cường độ dòng điện tức thời là $i$ và dòng điện đang tăng với tốc độ $di/dt > 0$. Hiệu điện thế giữa hai đầu cực $a$ và $b$ của cuộn cảm ở thời điểm này là $V_{ab} = L \frac{di}{dt}$. Công suất tức thời $P$ mà nguồn điện bên ngoài cung cấp cho cuộn cảm được xác định bởi:
 
 $$
-\begin{aligned}
-P &= V_{ab} i = L i \frac{di}{dt}
-\end{aligned}
+P = V_{ab} i = L i \frac{di}{dt}
 $$
 
 Trong một khoảng thời gian vô cùng nhỏ $dt$, phần năng lượng $dU$ truyền vào cuộn cảm là $dU = P dt$, tức là:
 
 $$
-\begin{aligned}
-dU &= L i\, di
-\end{aligned}
+dU = L i\, di
 $$
 
 Tổng năng lượng $U$ cung cấp cho cuộn cảm trong toàn bộ quá trình dòng điện tăng từ giá trị ban đầu $i = 0$ đến giá trị cuối cùng $i = I$ chính là tích phân:
 
 $$
-\begin{aligned}
-U &= \int_0^I L i\, di = \frac{1}{2} L I^2
-\end{aligned}
-\tag{30.9}
+U = \int_0^I L i\, di = \frac{1}{2} L I^2 \tag{30.9}
 $$
 
 Sau khi dòng điện đã đạt đến giá trị ổn định $I$, đạo hàm $di/dt = 0$, công suất cung cấp triệt tiêu và không còn năng lượng nào được nạp thêm vào cuộn cảm nữa. Khi trong mạch không có dòng điện ($I = 0$), năng lượng tích trữ bằng không.
@@ -58,26 +51,19 @@ $$
 Vì toàn bộ năng lượng này phân bố đều trong thể tích lõi $V = 2\pi r A$, năng lượng trên một đơn vị thể tích, gọi là **mật độ năng lượng từ trường** $u = U / V$, có biểu thức:
 
 $$
-\begin{aligned}
-u &= \frac{U}{2\pi r A} = \frac{1}{2} \mu_0 \frac{N^2 I^2}{(2\pi r)^2}
-\end{aligned}
+u = \frac{U}{2\pi r A} = \frac{1}{2} \mu_0 \frac{N^2 I^2}{(2\pi r)^2}
 $$
 
 Mặt khác, cảm ứng từ $B$ bên trong lòng ống xuyến được xác định bởi $B = \frac{\mu_0 N I}{2\pi r}$, kéo theo tỉ số:
 
 $$
-\begin{aligned}
-\frac{N I}{2\pi r} &= \frac{B}{\mu_0}
-\end{aligned}
+\frac{N I}{2\pi r} = \frac{B}{\mu_0}
 $$
 
 Thay hệ thức này vào biểu thức của mật độ năng lượng $u$, ta thu được công thức tổng quát cho mật độ năng lượng từ trường trong chân không:
 
 $$
-\begin{aligned}
-u &= \frac{B^2}{2\mu_0}
-\end{aligned}
-\tag{30.10}
+u = \frac{B^2}{2\mu_0} \tag{30.10}
 $$
 
 Phương trình (30.10) là biểu thức tương ứng của từ trường đối với công thức mật độ năng lượng của điện trường trong chân không $u = \frac{1}{2} \epsilon_0 E^2$ đã học ở Chương 24. Chẳng hạn, trong máy chụp cộng hưởng từ (MRI) có từ trường mạnh $B = 1{,}5\text{ T}$, mật độ năng lượng từ trường trong chân không đạt giá trị:
@@ -93,10 +79,7 @@ $$
 Với vật liệu từ tuyến tính có độ từ thẩm không đổi $\mu=K_m\mu_0$, thay $\mu_0$ bằng $\mu$ trong biểu thức mật độ năng lượng:
 
 $$
-\begin{aligned}
-u &= \frac{B^2}{2\mu}
-\end{aligned}
-\tag{30.11}
+u = \frac{B^2}{2\mu} \tag{30.11}
 $$
 
 Phương trình (30.11) vừa được dẫn ra từ mô hình cụ thể của ống dây hình xuyến. Tuy nhiên, các phân tích điện động lực học tổng quát khẳng định rằng biểu thức này luôn nghiệm đúng cho mọi cấu hình từ trường bất kỳ trong chân không cũng như trong môi trường vật chất tuyến tính.
@@ -124,8 +107,7 @@ Ta đã biết lượng năng lượng cần tích trữ $U$ và cường độ 
 $$
 \begin{aligned}
 U &= 1{,}00\text{ kW}\cdot\text{h} \\
-&= (1{,}00 \times 10^3\text{ W}) \\
-&\quad \times (3600\text{ s}) \\
+&= (1{,}00 \times 10^3\text{ W}) \times (3600\text{ s}) \\
 &= 3{,}60 \times 10^6\text{ J}
 \end{aligned}
 $$
@@ -133,9 +115,7 @@ $$
 Từ phương trình (30.9) xác định năng lượng tích trữ trong cuộn cảm:
 
 $$
-\begin{aligned}
-U &= \frac{1}{2} L I^2 \implies L = \frac{2U}{I^2}
-\end{aligned}
+U = \frac{1}{2} L I^2 \implies L = \frac{2U}{I^2}
 $$
 
 Thay các giá trị số vào biểu thức:

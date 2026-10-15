@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "21-cau-truc-nguyen-tu",
+  "route": "/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu",
+  "notes": "docs/vat-ly-2/bai-giang/21-cau-truc-nguyen-tu.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "ham-song-luong-tu",
+    "photon",
+    "tu-truong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

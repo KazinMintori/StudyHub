@@ -68,9 +68,8 @@ Lấy tích phân hai vế từ thời điểm ban đầu $t' = 0$ (khi $i' = 0$
 
 $$
 \begin{aligned}
-&\int_0^i \frac{di'}{i' - (\mathcal E/R)} \\
-&\quad = -\frac{R}{L}\int_0^t dt' \\
-&\quad = -\frac{R}{L}t
+\int_0^i \frac{di'}{i' - (\mathcal E/R)} &= -\frac{R}{L}\int_0^t dt' \\
+&= -\frac{R}{L}t
 \end{aligned}
 $$
 
@@ -78,9 +77,8 @@ Thực hiện tích phân ở vế trái:
 
 $$
 \begin{aligned}
-&\ln \frac{i - \mathcal E/R}{-\mathcal E/R} \\
-&\quad = \ln\left(1 - \frac{iR}{\mathcal E}\right) \\
-&\quad = -\frac{R}{L}t
+\ln \frac{i - \mathcal E/R}{-\mathcal E/R} &= \ln\left(1 - \frac{iR}{\mathcal E}\right) \\
+&= -\frac{R}{L}t
 \end{aligned}
 $$
 
@@ -96,8 +94,7 @@ $$
 \begin{aligned}
 i(t) &= \frac{\mathcal E}{R}\left(1 - e^{-(R/L)t}\right) \\
 &= I\left(1 - e^{-(R/L)t}\right)
-\end{aligned}
-\tag{30.14}
+\end{aligned} \tag{30.14}
 $$
 
 Đạo hàm phương trình (30.14) theo thời gian cho ta tốc độ tăng dòng điện tại mọi thời điểm:
@@ -124,12 +121,12 @@ Ta có thể kiểm tra thứ nguyên của $\tau$: Vì đơn vị của độ t
 - Sau khoảng thời gian $t = \tau$, dòng điện trong mạch đạt giá trị:
 
   $$
-  \begin{aligned}
-  i(\tau) &= I(1 - e^{-1}) \\
-  &\approx I(1 - 0{,}368) \\
-  &= 0{,}632 I
-  \end{aligned}
-  $$
+\begin{aligned}
+i(\tau) &= I(1 - e^{-1}) \\
+&\approx I(1 - 0{,}368) \\
+&= 0{,}632 I
+\end{aligned}
+$$
 
   Tức là dòng điện tăng đến khoảng $63{,}2\%$ giá trị cực đại cuối cùng.
 - Sau khoảng thời gian $t = 2\tau$, dòng điện đạt $I(1 - e^{-2}) \approx 86{,}5\% I$.
@@ -232,12 +229,12 @@ Bài toán khảo sát quá trình tăng dòng điện trong mạch R-L. Cườn
 1. Khi dòng điện đã đạt trạng thái ổn định, cuộn cảm không còn cản trở dòng điện:
 
    $$
-   \begin{aligned}
-   \mathcal E &= IR \\
-   &= (0{,}036\text{ A})(175\ \Omega) \\
-   &= 6{,}3\text{ V}
-   \end{aligned}
-   $$
+\begin{aligned}
+\mathcal E &= IR \\
+&= (0{,}036\text{ A})(175\ \Omega) \\
+&= 6{,}3\text{ V}
+\end{aligned}
+$$
 
 2. Từ phương trình tăng dòng $i = (\mathcal E/R)(1 - e^{-(R/L)t})$, ta biến đổi để giải $L$:
 
@@ -248,43 +245,42 @@ Bài toán khảo sát quá trình tăng dòng điện trong mạch R-L. Cườn
    Lấy logarit tự nhiên hai vế:
 
    $$
-   \begin{aligned}
-   &\ln\left(1 - \frac{iR}{\mathcal E}\right) = -\frac{Rt}{L} \\
-   &L = \frac{-Rt}{\ln(1 - iR/\mathcal E)}
-   \end{aligned}
-   $$
+\begin{aligned}
+\ln &\left(1 - \frac{iR}{\mathcal E}\right) = -\frac{Rt}{L} \\
+L &= \frac{-Rt}{\ln(1 - iR/\mathcal E)}
+\end{aligned}
+$$
 
    Thay các giá trị số vào biểu thức:
    $$
-   \begin{aligned}
-   &1 - \frac{iR}{\mathcal E} \\
-   &= 1 - \frac{0{,}8575\text{ V}}{6{,}3\text{ V}} \\
-   &= 1 - 0{,}13611 \\
-   &= 0{,}86389
-   \end{aligned}
-   $$
+\begin{aligned}
+1 - \frac{iR}{\mathcal E} &= 1 - \frac{0{,}8575\text{ V}}{6{,}3\text{ V}} \\
+&= 1 - 0{,}13611 \\
+&= 0{,}86389
+\end{aligned}
+$$
 
    Từ đó tính được độ tự cảm $L$:
    $$
-   \begin{aligned}
-   L &= \frac{-(175\ \Omega)(58\ \mu\text{s})}{\ln(0{,}86389)} \\
-   &= \frac{-0{,}01015}{-0{,}14631} \\
-   &\approx 0{,}06937\text{ H} \\
-   &\approx 69\text{ mH}
-   \end{aligned}
-   $$
+\begin{aligned}
+L &= \frac{-(175\ \Omega)(58\ \mu\text{s})}{\ln(0{,}86389)} \\
+&= \frac{-0{,}01015}{-0{,}14631} \\
+&\approx 0{,}06937\text{ H} \\
+&\approx 69\text{ mH}
+\end{aligned}
+$$
 
 Giá trị vừa tính là tự cảm nhỏ nhất để dòng không vượt ngưỡng ở thời điểm yêu cầu. Một tự cảm lớn hơn cũng làm dòng tăng chậm hơn nếu các tham số khác giữ nguyên.
 
 3. Dùng tự cảm đã làm tròn $69\,\mathrm{mH}$, hằng số thời gian là:
 
    $$
-   \begin{aligned}
-   \tau &= \frac{L}{R} \\
-   &= \frac{69 \times 10^{-3}\text{ H}}{175\ \Omega} \\
-   &\approx 3{,}9 \times 10^{-4}\text{ s} = 390\ \mu\text{s}
-   \end{aligned}
-   $$
+\begin{aligned}
+\tau &= \frac{L}{R} \\
+&= \frac{69 \times 10^{-3}\text{ H}}{175\ \Omega} \\
+&\approx 3{,}9 \times 10^{-4}\text{ s} = 390\ \mu\text{s}
+\end{aligned}
+$$
 
 **Đánh giá:**
 Khoảng thời gian $58\ \mu\text{s}$ nhỏ hơn nhiều so với hằng số thời gian $\tau = 390\ \mu\text{s}$. Trong $58\ \mu\text{s}$, dòng điện chỉ tăng từ 0 lên $4{,}9\text{ mA}$, chiếm một phần nhỏ so với dòng ổn định $36\text{ mA}$. Sau một hằng số thời gian $\tau = 390\ \mu\text{s}$, dòng điện đạt khoảng $(1 - 1/e)I \approx 0{,}632 \times 36\text{ mA} = 23\text{ mA}$. Cuộn cảm đóng vai trò làm chậm tốc độ tăng của dòng điện trong mạch, bảo vệ các linh kiện nhạy cảm.
@@ -303,10 +299,10 @@ Với $\tau=L/R$,
 
 $$
 \begin{aligned}
-i(t)&=I_0e^{-t/\tau},\\
-U(t)&=\frac12Li(t)^2\\
-&=U_0e^{-2t/\tau},\\
-U_0&=\frac12LI_0^2.
+i(t) &= I_0e^{-t/\tau}, \\
+U(t) &= \frac12Li(t)^2 \\
+&= U_0e^{-2t/\tau}, \\
+U_0 &= \frac12LI_0^2.
 \end{aligned}
 $$
 
@@ -314,11 +310,10 @@ Tại $t=2{,}3\tau$,
 
 $$
 \begin{aligned}
-\frac{U(t)}{U_0}&=e^{-4{,}6}\\
-&\approx0{,}010,\\
-\frac{U_{\mathrm{tỏa}}}{U_0}
-&=1-e^{-4{,}6}\\
-&\approx0{,}990.
+\frac{U(t)}{U_0} &= e^{-4{,}6} \\
+&\approx 0{,}010, \\
+\frac{U_{\mathrm{tỏa}}}{U_0} &= 1-e^{-4{,}6} \\
+&\approx 0{,}990.
 \end{aligned}
 $$
 
@@ -329,12 +324,12 @@ Dùng các giá trị làm tròn của Ví dụ 30.6, $L=69\,\mathrm{mH}$, $I_0=
 
 $$
 \begin{aligned}
-U_0&=\frac12LI_0^2\\
-&\approx4{,}5\times10^{-5}\,\mathrm J,\\
-U_{\mathrm{tỏa}}&\approx0{,}990U_0\\
-&\approx4{,}4\times10^{-5}\,\mathrm J,\\
-t&=2{,}3\tau\\
-&\approx0{,}90\,\mathrm{ms}.
+U_0 &= \frac12LI_0^2 \\
+&\approx 4{,}5\times10^{-5}\,\mathrm J, \\
+U_{\mathrm{tỏa}} &\approx 0{,}990U_0 \\
+&\approx 4{,}4\times10^{-5}\,\mathrm J, \\
+t &= 2{,}3\tau \\
+&\approx 0{,}90\,\mathrm{ms}.
 \end{aligned}
 $$
 

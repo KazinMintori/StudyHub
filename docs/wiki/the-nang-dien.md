@@ -22,11 +22,7 @@ $$
 Công lực điện bằng độ giảm thế năng, còn công lực ngoài khi di chuyển chậm bằng độ tăng thế năng. Với ba nguồn phải đếm ba cặp khác nhau:
 
 $$
-\begin{aligned}
-&U_{123} = \frac{kq_1q_2}{r_{12}}\\
-&\quad+\frac{kq_1q_3}{r_{13}}\\
-&\quad+\frac{kq_2q_3}{r_{23}}.
-\end{aligned}
+U_{123} = \frac{kq_1q_2}{r_{12}} + \frac{kq_1q_3}{r_{13}} + \frac{kq_2q_3}{r_{23}}.
 $$
 
 Điện thế V thuộc phân bố nguồn, còn thế năng của điện tích thử còn phụ thuộc q₀ qua U = q₀V. Vì vậy hạt âm đi về thế cao có thể giảm thế năng.

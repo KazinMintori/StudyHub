@@ -31,8 +31,8 @@ $$
 
 $$
 \begin{aligned}
-&dQ = \sigma\,2\pi R\,dx\\
-&\quad =\frac QW\,dx.
+dQ &= \sigma\,2\pi R\,dx \\
+&= \frac QW\,dx.
 \end{aligned}
 $$
 
@@ -40,8 +40,8 @@ Với chu kỳ $T=2\pi/\omega$, dòng vi phân là:
 
 $$
 \begin{aligned}
-&dI = \frac{dQ}{T}\\
-&\quad =\frac{Q\omega}{2\pi W}\,dx.
+dI &= \frac{dQ}{T} \\
+&= \frac{Q\omega}{2\pi W}\,dx.
 \end{aligned}
 $$
 
@@ -49,9 +49,8 @@ $$
 
 $$
 \begin{aligned}
-&d\vec B = \frac{\mu_0R^2\,dI}{2(x^2+R^2)^{3/2}}\hat i\\
-&\quad =\frac{\mu_0Q\omega R^2}{4\pi W}\\
-&\quad\times\frac{dx}{(x^2+R^2)^{3/2}}\hat i.
+d\vec B &= \frac{\mu_0R^2\,dI}{2(x^2+R^2)^{3/2}}\hat i \\
+&= \frac{\mu_0Q\omega R^2}{4\pi W} \times\frac{dx}{(x^2+R^2)^{3/2}}\hat i.
 \end{aligned}
 $$
 
@@ -61,9 +60,8 @@ $$
 
 $$
 \begin{aligned}
-&B_x(O)=\frac{\mu_0Q\omega R^2}{4\pi W}\mathcal K,\\
-&\mathcal K=\int_{-W/2}^{W/2}
-\frac{dx}{(x^2+R^2)^{3/2}}.
+B_x(O) &= \frac{\mu_0Q\omega R^2}{4\pi W}\mathcal K, \\
+\mathcal K &= \int_{-W/2}^{W/2} \frac{dx}{(x^2+R^2)^{3/2}}.
 \end{aligned}
 $$
 
@@ -77,9 +75,8 @@ Tích phân $\mathcal K$ bằng $F(W/2)-F(-W/2)$. Sau khi thay hai cận, ta đ�
 
 $$
 \begin{aligned}
-&B_x(O)=\frac{\mu_0Q\omega}{4\pi}\\
-&\quad\times\left[R^2+(W/2)^2\right]^{-1/2},\\
-&\vec B(O)=B_x(O)\hat i.
+B_x(O) &= \frac{\mu_0Q\omega}{4\pi}\left[R^2+(W/2)^2\right]^{-1/2}, \\
+\vec B(O) &= B_x(O)\hat i.
 \end{aligned}
 $$
 :::
@@ -89,8 +86,8 @@ Khi một phân bố điện tích rắn, có tổng điện tích $Q$ và khố
 
 $$
 \begin{aligned}
-&\vec M_{\mathrm{từ}} = \gamma\vec L,\\
-&\gamma = g\frac{Q}{2M}.
+\vec M_{\mathrm{từ}} &= \gamma\vec L, \\
+\gamma &= g\frac{Q}{2M}.
 \end{aligned}
 $$
 
@@ -124,9 +121,9 @@ $\gamma$ là tỉ số hồi chuyển từ, còn $g$ là hệ số không có đ
 
 $$
 \begin{aligned}
-&\sigma = \frac{Q}{4\pi R^2},\\
-&dA_{\mathrm{dải}} = 2\pi R^2\sin\theta\,d\theta,\\
-&dQ = \frac Q2\sin\theta\,d\theta.
+\sigma &= \frac{Q}{4\pi R^2}, \\
+dA_{\mathrm{dải}} &= 2\pi R^2\sin\theta\,d\theta, \\
+dQ &= \frac Q2\sin\theta\,d\theta.
 \end{aligned}
 $$
 
@@ -146,10 +143,10 @@ $$
 
 $$
 \begin{aligned}
-&\mathcal I = \int_0^\pi\sin^3\theta\,d\theta,\\
-&\mathcal I = \int_{-1}^{1}(1-u^2)\,du\\
-&\quad =\left[u-\frac{u^3}{3}\right]_{-1}^{1}\\
-&\quad =\frac43,
+\mathcal I &= \int_0^\pi\sin^3\theta\,d\theta, \\
+\mathcal I &= \int_{-1}^{1}(1-u^2)\,du \\
+&= \left[u-\frac{u^3}{3}\right]_{-1}^{1} \\
+&= \frac43,
 \end{aligned}
 $$
 
@@ -163,9 +160,9 @@ $$
 
 $$
 \begin{aligned}
-&I_z = \frac{MR^2}{2}\int_0^\pi\sin^3\theta\,d\theta\\
-&\quad =\frac23MR^2,\\
-&L = I_z\omega=\frac23MR^2\omega.
+I_z &= \frac{MR^2}{2}\int_0^\pi\sin^3\theta\,d\theta \\
+&= \frac23MR^2, \\
+L &= I_z\omega=\frac23MR^2\omega.
 \end{aligned}
 $$
 
@@ -226,28 +223,24 @@ $$
 
 $$
 \begin{aligned}
-&\vec r = -x\hat i-R\cos\phi\hat j\\
-&\quad-R\sin\phi\hat k,\\
-&r = \sqrt{x^2+R^2}.
+\vec r &= -x\hat i-R\cos\phi\hat j -R\sin\phi\hat k, \\
+r &= \sqrt{x^2+R^2}.
 \end{aligned}
 $$
 
 (c) Chọn $\vec\omega=\omega\hat i$. Từ tích có hướng của vận tốc góc và vector vị trí:
 
 $$
-\begin{aligned}
-&\vec v = -\omega R\sin\phi\hat j\\
-&\quad+\omega R\cos\phi\hat k.
-\end{aligned}
+\vec v = -\omega R\sin\phi\hat j +\omega R\cos\phi\hat k.
 $$
 
 (d) Tính từng thành phần thay vì suy chiều từ một vị trí riêng:
 
 $$
 \begin{aligned}
-&(\vec v\times\hat r)_x = \frac{\omega R^2}{\sqrt{x^2+R^2}},\\
-&(\vec v\times\hat r)_y = -\frac{\omega xR\cos\phi}{\sqrt{x^2+R^2}},\\
-&(\vec v\times\hat r)_z = -\frac{\omega xR\sin\phi}{\sqrt{x^2+R^2}}.
+(\vec v\times\hat r)_x &= \frac{\omega R^2}{\sqrt{x^2+R^2}}, \\
+(\vec v\times\hat r)_y &= -\frac{\omega xR\cos\phi}{\sqrt{x^2+R^2}}, \\
+(\vec v\times\hat r)_z &= -\frac{\omega xR\sin\phi}{\sqrt{x^2+R^2}}.
 \end{aligned}
 $$
 
@@ -255,15 +248,9 @@ $$
 
 $$
 \begin{aligned}
-&B_x=\frac{\mu_0\sigma\omega R^3}{4\pi}\\
-&\quad\times\iint_D
-\frac{d\phi\,dx}{r(x)^3},\\
-&B_y=-\frac{\mu_0\sigma\omega R^2}{4\pi}\\
-&\quad\times\iint_D
-\frac{x\cos\phi\,d\phi\,dx}{r(x)^3},\\
-&B_z=-\frac{\mu_0\sigma\omega R^2}{4\pi}\\
-&\quad\times\iint_D
-\frac{x\sin\phi\,d\phi\,dx}{r(x)^3}.
+B_x &= \frac{\mu_0\sigma\omega R^3}{4\pi} \times\iint_D \frac{d\phi\,dx}{r(x)^3}, \\
+B_y &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \times\iint_D \frac{x\cos\phi\,d\phi\,dx}{r(x)^3}, \\
+B_z &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \times\iint_D \frac{x\sin\phi\,d\phi\,dx}{r(x)^3}.
 \end{aligned}
 $$
 
@@ -271,12 +258,9 @@ Các tích phân góc của $\cos\phi$ và $\sin\phi$ đều bằng không, nên
 
 $$
 \begin{aligned}
-&B_x = \frac{\mu_0\sigma\omega R^3}{2}\\
-&\quad\times\int_{-W/2}^{W/2}\frac{dx}{r(x)^3}\\
-&\quad =\frac{\mu_0\sigma\omega RW}{2}\\
-&\quad\times\left[R^2+(W/2)^2\right]^{-1/2}\\
-&\quad =\frac{\mu_0Q\omega}{4\pi}\\
-&\quad\times\left[R^2+(W/2)^2\right]^{-1/2}.
+B_x &= \frac{\mu_0\sigma\omega R^3}{2} \times\int_{-W/2}^{W/2}\frac{dx}{r(x)^3} \\
+&= \frac{\mu_0\sigma\omega RW}{2}\left[R^2+(W/2)^2\right]^{-1/2} \\
+&= \frac{\mu_0Q\omega}{4\pi}\left[R^2+(W/2)^2\right]^{-1/2}.
 \end{aligned}
 $$
 
@@ -284,9 +268,8 @@ $$
 
 $$
 \begin{aligned}
-&B_x(O)=\frac{\mu_0Q\omega}{4\pi}\\
-&\quad\times\left[R^2+(W/2)^2\right]^{-1/2},\\
-&\vec B(O)=B_x(O)\hat i.
+B_x(O) &= \frac{\mu_0Q\omega}{4\pi}\left[R^2+(W/2)^2\right]^{-1/2}, \\
+\vec B(O) &= B_x(O)\hat i.
 \end{aligned}
 $$
 :::
@@ -321,8 +304,8 @@ trong đó $R$ là tổng điện trở mạch.
 
 $$
 \begin{aligned}
-&I(t) = \frac{Q_0}{RC}e^{-t/(RC)},\\
-&\frac{F(t)}{L} = \frac{\mu_0I(t)^2}{2\pi d}.
+I(t) &= \frac{Q_0}{RC}e^{-t/(RC)}, \\
+\frac{F(t)}{L} &= \frac{\mu_0I(t)^2}{2\pi d}.
 \end{aligned}
 $$
 
@@ -330,9 +313,8 @@ Với đoạn dây dài $L$, khối lượng là $\lambda L$. Xung lực cho:
 
 $$
 \begin{aligned}
-&\lambda L v_0 = \int_0^\infty F(t)\,dt,\\
-&v_0 =\frac{\mu_0}{2\pi\lambda d}
-\int_0^\infty I(t)^2\,dt.
+\lambda L v_0 &= \int_0^\infty F(t)\,dt, \\
+v_0 &= \frac{\mu_0}{2\pi\lambda d} \int_0^\infty I(t)^2\,dt.
 \end{aligned}
 $$
 
@@ -340,11 +322,10 @@ Gọi $S$ là tích phân bình phương dòng theo thời gian. Ta tính riêng
 
 $$
 \begin{aligned}
-&S = \int_0^\infty I(t)^2\,dt,\\
-&S = \frac{Q_0^2}{R^2C^2}\\
-&\quad\times\int_0^\infty e^{-2t/(RC)}\,dt\\
-&\quad =\frac{Q_0^2}{R^2C^2}\frac{RC}{2}\\
-&\quad =\frac{Q_0^2}{2RC}.
+S &= \int_0^\infty I(t)^2\,dt, \\
+S &= \frac{Q_0^2}{R^2C^2} \times\int_0^\infty e^{-2t/(RC)}\,dt \\
+&= \frac{Q_0^2}{R^2C^2}\frac{RC}{2} \\
+&= \frac{Q_0^2}{2RC}.
 \end{aligned}
 $$
 
@@ -358,10 +339,9 @@ $$
 
 $$
 \begin{aligned}
-&\frac12\lambda Lv_0^2 = \lambda Lgh,\\
-&h = \frac{v_0^2}{2g}\\
-&\quad =\frac1{2g}\\
-&\quad\times\left(\frac{\mu_0Q_0^2}{4\pi\lambda RCd}\right)^2.
+\frac12\lambda Lv_0^2 &= \lambda Lgh, \\
+h &= \frac{v_0^2}{2g} \\
+&= \frac1{2g}\left(\frac{\mu_0Q_0^2}{4\pi\lambda RCd}\right)^2.
 \end{aligned}
 $$
 
@@ -427,9 +407,9 @@ Mật độ vòng và số vòng của ống là:
 
 $$
 \begin{aligned}
-&n = \frac1{1{,}0\times10^{-3}}\\
-&\quad =1{,}0\times10^3\,\mathrm{m^{-1}},\\
-&N = nL=400.
+n &= \frac1{1{,}0\times10^{-3}} \\
+&= 1{,}0\times10^3\,\mathrm{m^{-1}}, \\
+N &= nL=400.
 \end{aligned}
 $$
 
@@ -437,9 +417,9 @@ Dòng điện cần có:
 
 $$
 \begin{aligned}
-&I = \frac B{\mu_0n}\\
-&\quad =0{,}119\,\mathrm A\\
-&\quad \approx0{,}12\,\mathrm A.
+I &= \frac B{\mu_0n} \\
+&= 0{,}119\,\mathrm A \\
+&\approx 0{,}12\,\mathrm A.
 \end{aligned}
 $$
 
@@ -468,9 +448,9 @@ Ta có:
 
 $$
 \begin{aligned}
-&n_{\mathrm{mới}} = n_{\mathrm{cũ}},\\
-&B_{\mathrm{mới}} = \mu_0nI=B_{\mathrm{cũ}},\\
-&\tau_{\max,\mathrm{mới}} = \tau_{\max,\mathrm{cũ}}.
+n_{\mathrm{mới}} &= n_{\mathrm{cũ}}, \\
+B_{\mathrm{mới}} &= \mu_0nI=B_{\mathrm{cũ}}, \\
+\tau_{\max,\mathrm{mới}} &= \tau_{\max,\mathrm{cũ}}.
 \end{aligned}
 $$
 
@@ -498,18 +478,15 @@ Lấy ống dây ra khỏi hộp che chắn và đặt ở nơi trường Trái 
 Với góc $\alpha$ giữa hai trường:
 
 $$
-\begin{aligned}
-&B^2 = B_s^2+B_T^2\\
-&\quad+2B_sB_T\cos\alpha.
-\end{aligned}
+B^2 = B_s^2+B_T^2 +2B_sB_T\cos\alpha.
 $$
 
 Vì $-1\le\cos\alpha\le1$:
 
 $$
 \begin{aligned}
-&B_{\min} = B_s-B_T=100\,\mu\mathrm T,\\
-&B_{\max} = B_s+B_T=200\,\mu\mathrm T.
+B_{\min} &= B_s-B_T=100\,\mu\mathrm T, \\
+B_{\max} &= B_s+B_T=200\,\mu\mathrm T.
 \end{aligned}
 $$
 

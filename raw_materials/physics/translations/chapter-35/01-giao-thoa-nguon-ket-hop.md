@@ -27,10 +27,7 @@ Xét một điểm $P$ bất kỳ trong vùng giao thoa. Gọi $r_1$ là khoản
 Khi hai sóng tới điểm $P$, nếu đỉnh của sóng từ nguồn $S_1$ gặp đúng đỉnh của sóng từ nguồn $S_2$, dao động tại $P$ sẽ có biên độ cực đại. Hiện tượng hai sóng chồng chất làm tăng cường lẫn nhau được gọi là **giao thoa tăng cường** (constructive interference). Điều kiện để hai sóng phát ra cùng pha gặp nhau cùng pha tại $P$ là hiệu khoảng cách phải bằng một số nguyên lần bước sóng:
 
 $$
-\begin{aligned}
-r_2 - r_1 &= m \lambda
-\end{aligned}
-\tag{35.1}
+r_2 - r_1 = m \lambda \tag{35.1}
 $$
 
 Trong đó: Giá trị $m = 0, \pm 1, \pm 2, \dots$ là các số nguyên.
@@ -41,10 +38,7 @@ Trong đó: Giá trị $m = 0, \pm 1, \pm 2, \dots$ là các số nguyên.
 Trái lại, nếu đỉnh của sóng từ nguồn này gặp đúng đáy của sóng từ nguồn kia, hai sóng triệt giảm lẫn nhau. Chúng khử nhau hoàn toàn nếu hai biên độ tại điểm đó bằng nhau. Hiện tượng này được gọi là **giao thoa triệt tiêu** (destructive interference). Điều kiện để hai sóng phát ra cùng pha gặp nhau ngược pha tại $P$ là hiệu đường đi phải bằng một số bán nguyên lần bước sóng:
 
 $$
-\begin{aligned}
-r_2 - r_1 &= \left(m + \frac{1}{2}\right) \lambda
-\end{aligned}
-\tag{35.2}
+r_2 - r_1 = \left(m + \frac{1}{2}\right) \lambda \tag{35.2}
 $$
 
 Trong đó: Giá trị $m = 0, \pm 1, \pm 2, \dots$ là các số nguyên.
@@ -96,9 +90,7 @@ Giải thích:
 Tại mọi điểm $P$ nằm trên phần dương của trục $y$ phía trên nguồn $S_1$, tia truyền sóng từ nguồn $S_2$ và nguồn $S_1$ tới $P$ đều nằm cùng trên một đường thẳng dọc theo trục $y$. Do đó, khoảng cách $r_2$ từ $S_2$ tới $P$ luôn lớn hơn khoảng cách $r_1$ từ $S_1$ tới $P$ một đoạn đúng bằng khoảng cách giữa hai nguồn:
 
 $$
-\begin{aligned}
-r_2 - r_1 &= 4\lambda
-\end{aligned}
+r_2 - r_1 = 4\lambda
 $$
 
 Hệ thức này thỏa mãn phương trình (35.1) với giá trị nguyên $m = 4$. Vì vậy, toàn bộ các điểm trên trục $y$ ở phía trên nguồn $S_1$ đều thuộc về một đường cực đại giao thoa.

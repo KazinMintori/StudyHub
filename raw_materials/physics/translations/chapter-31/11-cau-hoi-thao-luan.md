@@ -259,15 +259,11 @@ Hệ số công suất của một mạch xoay chiều RLC mắc nối tiếp c�
 Hệ số công suất của mạch xoay chiều RLC nối tiếp được xác định bởi:
 
 $$
-\begin{aligned}
-\cos\phi &= \frac{R}{Z},
-\end{aligned}
+\cos\phi = \frac{R}{Z},
 $$
 
 $$
-\begin{aligned}
-Z &= \sqrt{R^2 + X_{\mathrm d}^2},
-\end{aligned}
+Z = \sqrt{R^2 + X_{\mathrm d}^2},
 $$
 
 với hiệu điện kháng $X_{\mathrm d} = X_L - X_C$.
@@ -313,10 +309,7 @@ Trong một mạch điện xoay chiều RLC mắc nối tiếp, điện áp tứ
 Theo định luật Kirchhoff, tại mỗi thời điểm tức thời $t$, tổng đại số điện áp trên từng phần tử nối tiếp luôn bằng điện áp tức thời của nguồn:
 
 $$
-\begin{aligned}
-v(t) &= v_R(t) + v_L(t)\\
-&\quad + v_C(t).
-\end{aligned}
+v(t) &= v_R(t) + v_L(t) + v_C(t).
 $$
 
 (a) Đối với tụ điện và cuộn cảm: Điện áp tức thời trên tụ điện hoặc trên cuộn cảm hoàn toàn có thể vượt quá điện áp tức thời của nguồn.
@@ -324,24 +317,17 @@ $$
 Nguyên nhân là điện áp tức thời trên cuộn cảm $v_L(t)$ và điện áp tức thời trên tụ điện $v_C(t)$ dao động ngược pha nhau $180^\circ$ ($\pi\,\mathrm{rad}$). Đặt dòng điện trong mạch là $i(t) = I\cos(\omega t)$, ta có:
 
 $$
-\begin{aligned}
-v_L(t) &= -V_L \sin(\omega t),
-\end{aligned}
+v_L(t) = -V_L \sin(\omega t),
 $$
 
 $$
-\begin{aligned}
-v_C(t) &= V_C \sin(\omega t).
-\end{aligned}
+v_C(t) = V_C \sin(\omega t).
 $$
 
 Tổng tức thời của chúng là:
 
 $$
-\begin{aligned}
-v_L(t) &+ v_C(t)\\
-&= (V_C - V_L)\sin(\omega t).
-\end{aligned}
+v_L(t) &+ v_C(t) = (V_C - V_L)\sin(\omega t).
 $$
 
 Tại những thời điểm điện áp nguồn bằng không ($v(t) = 0$), nếu dòng điện trong mạch khác không thì các điện áp tức thời $v_L(t)$ và $v_C(t)$ vẫn khác không và có thể có độ lớn rất lớn. Khi đó $|v_L(t)| > |v(t)| = 0$ và $|v_C(t)| > |v(t)| = 0$. Đặc biệt, chỉ khi mạch ở trạng thái cộng hưởng chính xác ($X_L = X_C$), biên độ điện áp trên cuộn cảm và trên tụ điện mới bằng nhau, $V_L = V_C$. Nếu ở tần số này mà cảm kháng lớn hơn nhiều so với điện trở ($X_L = X_C \gg R$), biên độ điện áp $V_L$ và $V_C$ có thể lớn gấp nhiều lần biên độ nguồn $V$.
@@ -355,8 +341,7 @@ Tổng tức thời thỏa mãn định luật Kirchhoff:
 
 $$
 \begin{aligned}
-&v_R(t) + v_L(t) + v_C(t)\\
-&= 24\,\mathrm V - 36\,\mathrm V + 12\,\mathrm V\\
+v_R(t) + v_L(t) + v_C(t) &= 24\,\mathrm V - 36\,\mathrm V + 12\,\mathrm V \\
 &= 0\,\mathrm V = v(t).
 \end{aligned}
 $$
@@ -367,7 +352,7 @@ Tuy nhiên, nếu xét về mặt biên độ đỉnh theo thời gian, biên đ
 
 $$
 \begin{aligned}
-V_R &= I R\\
+V_R &= I R \\
 &= \frac{V R}{Z} \le V.
 \end{aligned}
 $$
@@ -399,15 +384,11 @@ $$
 Hệ số công suất tương ứng là:
 
 $$
-\begin{aligned}
-\cos\phi &= \frac{R}{Z},
-\end{aligned}
+\cos\phi = \frac{R}{Z},
 $$
 
 $$
-\begin{aligned}
-Z &= \sqrt{R^2 + X_{\mathrm d}^2},
-\end{aligned}
+Z = \sqrt{R^2 + X_{\mathrm d}^2},
 $$
 
 với $X_{\mathrm d} = X_L - X_C$.
@@ -417,15 +398,11 @@ Vì mạch hoạt động ở tần số cách xa tần số cộng hưởng, hi
 Cảm kháng chiếm ưu thế ($X_L \gg X_C$), do đó $X_L - X_C > 0$. Khi $R \to 0$, ta có:
 
 $$
-\begin{aligned}
-\tan\phi &\to +\infty
-\end{aligned}
+\tan\phi \to +\infty
 $$
 
 $$
-\begin{aligned}
-\implies \phi &\approx +90^\circ = +\frac{\pi}{2}\,\mathrm{rad}.
-\end{aligned}
+\implies \phi \approx +90^\circ = +\frac{\pi}{2}\,\mathrm{rad}.
 $$
 
 Điện áp nguồn sớm pha xấp xỉ $90^\circ$ so với dòng điện trong mạch. Mạch mang tính cảm kháng vượt trội.
@@ -435,15 +412,11 @@ $$
 Dung kháng chiếm ưu thế ($X_C \gg X_L$), do đó $X_L - X_C < 0$. Khi $R \to 0$, ta có:
 
 $$
-\begin{aligned}
-\tan\phi &\to -\infty
-\end{aligned}
+\tan\phi \to -\infty
 $$
 
 $$
-\begin{aligned}
-\implies \phi &\approx -90^\circ = -\frac{\pi}{2}\,\mathrm{rad}.
-\end{aligned}
+\implies \phi \approx -90^\circ = -\frac{\pi}{2}\,\mathrm{rad}.
 $$
 
 Điện áp nguồn trễ pha xấp xỉ $90^\circ$ so với dòng điện trong mạch. Mạch mang tính dung kháng vượt trội.
@@ -474,7 +447,7 @@ Hiện tượng này bắt nguồn từ hai yếu tố vật lý kết hợp. (a
 
 $$
 \begin{aligned}
-V &= V_{\mathrm{rms}}\sqrt{2}\\
+V &= V_{\mathrm{rms}}\sqrt{2} \\
 &\approx 120\times1{,}414 \approx 170\,\mathrm V.
 \end{aligned}
 $$
@@ -484,15 +457,11 @@ $$
 Cường độ dòng điện hiệu dụng chạy qua mạch nối tiếp phụ thuộc vào trở kháng toàn mạch:
 
 $$
-\begin{aligned}
-I_{\mathrm{rms}} &= \frac{V_{\mathrm{rms}}}{Z},
-\end{aligned}
+I_{\mathrm{rms}} = \frac{V_{\mathrm{rms}}}{Z},
 $$
 
 $$
-\begin{aligned}
-Z &= \sqrt{R^2 + X_{\mathrm d}^2},
-\end{aligned}
+Z = \sqrt{R^2 + X_{\mathrm d}^2},
 $$
 
 với $X_{\mathrm d} = \omega L - 1/(\omega C)$.
@@ -513,7 +482,7 @@ $$
 
 $$
 \begin{aligned}
-V_{C,\mathrm{rms}} &= I_{\mathrm{rms,max}} X_C\\
+V_{C,\mathrm{rms}} &= I_{\mathrm{rms,max}} X_C \\
 &= V_{\mathrm{rms}} \frac{X_C}{R} = Q V_{\mathrm{rms}}.
 \end{aligned}
 $$
@@ -559,8 +528,8 @@ Với điện áp hiệu dụng $V_{\mathrm{rms}}$ của nguồn không đổi, 
 
 $$
 \begin{aligned}
-I_{\mathrm{rms}} &= \frac{V_{\mathrm{rms}}}{Z}\\
-&= \frac{V_{\mathrm{rms}}}{\sqrt{R^2 + (\omega L)^2}}\\
+I_{\mathrm{rms}} &= \frac{V_{\mathrm{rms}}}{Z} \\
+&= \frac{V_{\mathrm{rms}}}{\sqrt{R^2 + (\omega L)^2}} \\
 &< \frac{V_{\mathrm{rms}}}{R}.
 \end{aligned}
 $$
@@ -715,8 +684,7 @@ Ta so sánh $(X_L - X_C)^2$ với $X_C^2$:
 
 $$
 \begin{aligned}
-&(X_L - X_C)^2 - X_C^2\\
-&= X_L^2 - 2X_L X_C\\
+(X_L - X_C)^2 - X_C^2 &= X_L^2 - 2X_L X_C \\
 &= X_L(X_L - 2X_C).
 \end{aligned}
 $$
@@ -737,8 +705,7 @@ Ta so sánh $(X_L - X_C)^2$ với $X_L^2$:
 
 $$
 \begin{aligned}
-&(X_L - X_C)^2 - X_L^2\\
-&= X_C^2 - 2X_L X_C\\
+(X_L - X_C)^2 - X_L^2 &= X_C^2 - 2X_L X_C \\
 &= X_C(X_C - 2X_L).
 \end{aligned}
 $$
@@ -777,15 +744,11 @@ $$
 Độ sáng của bóng đèn phụ thuộc vào công suất tỏa nhiệt $P = I_{\mathrm{rms}}^2 R = (V_{\mathrm{rms}}/Z)^2 R$. Do điện áp nguồn và điện trở đèn không đổi, để độ sáng bóng đèn không thay đổi thì cường độ dòng điện hiệu dụng phải giữ nguyên, tương đương với điều kiện trở kháng toàn mạch không đổi:
 
 $$
-\begin{aligned}
-Z &= Z'
-\end{aligned}
+Z = Z'
 $$
 
 $$
-\begin{aligned}
-\iff \sqrt{R^2 + X_{\mathrm d}^2} &= R,
-\end{aligned}
+\iff \sqrt{R^2 + X_{\mathrm d}^2} = R,
 $$
 
 với $X_{\mathrm d} = X_L - X_C$.
@@ -793,15 +756,11 @@ với $X_{\mathrm d} = X_L - X_C$.
 Bình phương hai vế và rút gọn, ta thu được
 
 $$
-\begin{aligned}
-(X_L - X_C)^2 &= 0
-\end{aligned}
+(X_L - X_C)^2 = 0
 $$
 
 $$
-\begin{aligned}
-\iff X_L &= X_C.
-\end{aligned}
+\iff X_L = X_C.
 $$
 
 Điều này đồng nghĩa với việc tần số góc của nguồn điện phải bằng chính xác tần số góc cộng hưởng riêng của hệ:
@@ -848,7 +807,7 @@ Do đó, ở trạng thái dừng không có bất kỳ điện áp hay dòng đ
 
 $$
 \begin{aligned}
-I_{\mathrm{rms}} &\approx \frac{V_{\mathrm{rms}}}{\sqrt{R_{\mathrm{cu}}^2 + X_L^2}}\\
+I_{\mathrm{rms}} &\approx \frac{V_{\mathrm{rms}}}{\sqrt{R_{\mathrm{cu}}^2 + X_L^2}} \\
 &\approx \frac{V_{\mathrm{rms}}}{X_L}.
 \end{aligned}
 $$
@@ -893,15 +852,11 @@ Một máy biến áp lý tưởng có $N_1$ vòng dây ở cuộn sơ cấp và
 (a) Biến đổi của biên độ điện áp ở cuộn thứ cấp: Đối với máy biến áp lý tưởng, tỉ số giữa biên độ điện áp hai cuộn dây bằng tỉ số số vòng dây tương ứng:
 
 $$
-\begin{aligned}
-\frac{V_2}{V_1} &= \frac{N_2}{N_1}
-\end{aligned}
+\frac{V_2}{V_1} = \frac{N_2}{N_1}
 $$
 
 $$
-\begin{aligned}
-\implies V_2 &= \left(\frac{N_2}{N_1}\right) V_1.
-\end{aligned}
+\implies V_2 = \left(\frac{N_2}{N_1}\right) V_1.
 $$
 
 Khi giữ nguyên số vòng dây sơ cấp $N_1$ và biên độ điện áp sơ cấp $V_1$, việc tăng gấp đôi số vòng dây thứ cấp ($N_2' = 2 N_2$) sẽ làm biên độ điện áp ở cuộn thứ cấp thay đổi theo:
@@ -918,9 +873,9 @@ Xét tải thuần trở $R$ mắc cố định vào mạch thứ cấp. Theo đ
 
 $$
 \begin{aligned}
-R_{\mathrm{eff}} &= \frac{V_1}{I_1}\\
-&= \frac{V_2 / (N_2/N_1)}{I_2 (N_2/N_1)}\\
-&= \left(\frac{N_1}{N_2}\right)^2 \frac{V_2}{I_2}\\
+R_{\mathrm{eff}} &= \frac{V_1}{I_1} \\
+&= \frac{V_2 / (N_2/N_1)}{I_2 (N_2/N_1)} \\
+&= \left(\frac{N_1}{N_2}\right)^2 \frac{V_2}{I_2} \\
 &= \left(\frac{N_1}{N_2}\right)^2 R.
 \end{aligned}
 $$
@@ -929,8 +884,8 @@ Khi số vòng dây thứ cấp tăng gấp đôi thành $N_2' = 2 N_2$, điện
 
 $$
 \begin{aligned}
-R_{\mathrm{eff}}' &= \left(\frac{N_1}{2 N_2}\right)^2 R\\
-&= \frac{1}{4}\left(\frac{N_1}{N_2}\right)^2 R\\
+R_{\mathrm{eff}}' &= \left(\frac{N_1}{2 N_2}\right)^2 R \\
+&= \frac{1}{4}\left(\frac{N_1}{N_2}\right)^2 R \\
 &= \frac{1}{4} R_{\mathrm{eff}}.
 \end{aligned}
 $$
@@ -971,7 +926,7 @@ Khi thay các thông số mới vào:
 
 $$
 \begin{aligned}
-\omega_0' &= \frac{1}{\sqrt{L' C'}}\\
+\omega_0' &= \frac{1}{\sqrt{L' C'}} \\
 &= \frac{1}{\sqrt{(2L)(2C)}} = \frac{\omega_0}{2}.
 \end{aligned}
 $$
@@ -982,7 +937,7 @@ Tần số góc cộng hưởng thay đổi theo thừa số $1/2$, tức là gi
 
 $$
 \begin{aligned}
-X_L' &= \omega L'\\
+X_L' &= \omega L' \\
 &= 2\omega L = 2 X_L.
 \end{aligned}
 $$
@@ -993,7 +948,7 @@ Cảm kháng thay đổi theo thừa số $2$, tức là tăng gấp đôi.
 
 $$
 \begin{aligned}
-X_C' &= \frac{1}{\omega(2C)}\\
+X_C' &= \frac{1}{\omega(2C)} \\
 &= \frac{1}{2\omega C} = \frac{1}{2} X_C.
 \end{aligned}
 $$
@@ -1012,7 +967,7 @@ Trở kháng mới của mạch là:
 
 $$
 \begin{aligned}
-Z' &= \sqrt{(R')^2 + X_{\mathrm{new}}^2}\\
+Z' &= \sqrt{(R')^2 + X_{\mathrm{new}}^2} \\
 &= \sqrt{4R^2 + X_{\mathrm{new}}^2},
 \end{aligned}
 $$
@@ -1021,7 +976,7 @@ với $X_{\mathrm{new}} = 2 X_L - X_C / 2$. Để trở kháng tăng gấp đôi
 
 $$
 \begin{aligned}
-&4R^2 + \left(2 X_L - \frac{X_C}{2}\right)^2\\
+4R^2 + &\left(2 X_L - \frac{X_C}{2}\right)^2 \\
 &= 4\left[R^2 + (X_L - X_C)^2\right].
 \end{aligned}
 $$
@@ -1030,7 +985,7 @@ Triệt tiêu $4R^2$ ở cả hai vế:
 
 $$
 \begin{aligned}
-&\left(2 X_L - \frac{X_C}{2}\right)^2\\
+&\left(2 X_L - \frac{X_C}{2}\right)^2 \\
 &= 4(X_L - X_C)^2.
 \end{aligned}
 $$
@@ -1038,24 +993,17 @@ $$
 Khai triển hai vế:
 
 $$
-\begin{aligned}
-&4 X_L^2 - 2 X_L X_C + \frac{1}{4} X_C^2\\
-&= 4 X_L^2 - 8 X_L X_C + 4 X_C^2.
-\end{aligned}
+4 X_L^2 - 2 X_L X_C + \frac{1}{4} X_C^2 = 4 X_L^2 - 8 X_L X_C + 4 X_C^2.
 $$
 
 Rút gọn các số hạng $4 X_L^2$:
 
 $$
-\begin{aligned}
-6 X_L X_C &= \frac{15}{4} X_C^2
-\end{aligned}
+6 X_L X_C = \frac{15}{4} X_C^2
 $$
 
 $$
-\begin{aligned}
-\iff \frac{X_L}{X_C} &= \frac{5}{8}.
-\end{aligned}
+\iff \frac{X_L}{X_C} = \frac{5}{8}.
 $$
 
 Do đó đẳng thức $Z' = 2Z$ chỉ xảy ra tại tần số thỏa mãn tỉ số cảm kháng và dung kháng $X_L / X_C = 5/8$. Đối với một tần số bất kỳ nói chung, trở kháng toàn mạch không tăng gấp đôi ($Z' \ne 2Z$). Đặc biệt, nếu mạch ban đầu ở trạng thái cộng hưởng tại tần số nguồn cố định ($X_L = X_C \ne 0$), thì các giá trị cảm kháng và dung kháng ban đầu đều khác không. Khi tăng gấp đôi các thông số ở cùng tần số nguồn đó, mạch mới có $X_L' = 2X_L$ và $X_C' = X_C / 2 = X_L / 2$, dẫn đến hiệu điện kháng mới là $X_L' - X_C' = \frac{3}{2}X_L \ne 0$. Mạch mới không còn ở trạng thái cộng hưởng và $Z' = \sqrt{4R^2 + \frac{9}{4}X_L^2} > 2R = 2Z$.
@@ -1096,7 +1044,7 @@ Tần số góc cộng hưởng mới của mạch sẽ là
 
 $$
 \begin{aligned}
-\omega_0' &= \frac{1}{\sqrt{L' C'}}\\
+\omega_0' &= \frac{1}{\sqrt{L' C'}} \\
 &= \frac{1}{\sqrt{(k L)(k C)}} = \frac{\omega_0}{k}.
 \end{aligned}
 $$
@@ -1104,15 +1052,11 @@ $$
 Theo yêu cầu đề bài, tần số góc cộng hưởng mới phải tăng gấp đôi so với giá trị ban đầu, tức là
 
 $$
-\begin{aligned}
-\omega_0' &= 2 \omega_0
-\end{aligned}
+\omega_0' = 2 \omega_0
 $$
 
 $$
-\begin{aligned}
-\iff \frac{\omega_0}{k} &= 2 \omega_0.
-\end{aligned}
+\iff \frac{\omega_0}{k} = 2 \omega_0.
 $$
 
 Suy ra giá trị của thừa số tỉ lệ là

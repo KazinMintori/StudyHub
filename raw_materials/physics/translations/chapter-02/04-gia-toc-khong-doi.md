@@ -55,10 +55,9 @@ Thay biểu thức $v_x = v_{0x} + a_xt$ từ (2.8) vào (2.10):
 
 $$
 \begin{aligned}
-v_{\mathrm{av}-x} &= \frac{v_{0x} + (v_{0x} + a_xt)}{2}\\
+v_{\mathrm{av}-x} &= \frac{v_{0x} + (v_{0x} + a_xt)}{2} \\
 &= v_{0x} + \frac{1}{2}a_xt.
-\end{aligned}
-\tag{2.11}
+\end{aligned} \tag{2.11}
 $$
 
 Đồng nhất (2.9) với (2.11), ta rút ra phương trình tọa độ vị trí:
@@ -90,17 +89,14 @@ Tổng diện tích chính là $x - x_0 = v_{0x}t + \frac{1}{2}a_xt^2$, hoàn to
 Trong vô số bài toán thực tế, đề bài cho biết quãng đường và vận tốc nhưng không hề đề cập đến thời gian $t$. Để thiết lập mối liên hệ trực tiếp không phụ thuộc thời gian, ta rút $t = \frac{v_x - v_{0x}}{a_x}$ từ (2.8) rồi thế vào (2.12):
 
 $$
-\begin{aligned}
-x - x_0 &= v_{0x}\left(\frac{v_x - v_{0x}}{a_x}\right)\\
-&\quad + \frac{1}{2}a_x\left(\frac{v_x - v_{0x}}{a_x}\right)^2.
-\end{aligned}
+x - x_0 = v_{0x}\left(\frac{v_x - v_{0x}}{a_x}\right) + \frac{1}{2}a_x\left(\frac{v_x - v_{0x}}{a_x}\right)^2.
 $$
 
 Nhân cả hai vế với $2a_x$ và khai triển hằng đẳng thức:
 
 $$
 \begin{aligned}
-2a_x(x - x_0) &= 2v_{0x}v_x - 2v_{0x}^2 + v_x^2 - 2v_{0x}v_x + v_{0x}^2\\
+2a_x(x - x_0) &= 2v_{0x}v_x - 2v_{0x}^2 + v_x^2 - 2v_{0x}v_x + v_{0x}^2 \\
 &= v_x^2 - v_{0x}^2.
 \end{aligned}
 $$
@@ -148,8 +144,8 @@ Khi đọc đề bài, hãy tự hỏi: **Đại lượng nào đề bài KHÔNG
 
 $$
 \begin{aligned}
-0^2 &= v_0^2 + 2(-a)d\\
-&\implies d = \frac{v_0^2}{2a}.
+0^2 &= v_0^2 + 2(-a)d \\
+\implies d &= \frac{v_0^2}{2a}.
 \end{aligned}
 $$
    Khoảng cách dừng xe $d$ **tỷ lệ thuận với bình phương vận tốc đầu ($v_0^2$)**!
@@ -185,13 +181,13 @@ Dữ kiện đã biết:
 Áp dụng trực tiếp phương trình vị trí (2.12) và phương trình vận tốc (2.8) tại $t = 2.0\,\mathrm s$:
 $$
 \begin{aligned}
-x(2.0\,\mathrm s) &= x_0 + v_{0x}t + \frac{1}{2}a_xt^2\\
-&= 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2\\
-&= 5.0 + 30.0 + 8.0\\
-&= 43.0\,\mathrm m.\\
-v_x(2.0\,\mathrm s) &= v_{0x} + a_xt\\
-&= 15.0 + (4.0)(2.0)\\
-&= 15.0 + 8.0\\
+x(2.0\,\mathrm s) &= x_0 + v_{0x}t + \frac{1}{2}a_xt^2 \\
+&= 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2 \\
+&= 5.0 + 30.0 + 8.0 \\
+&= 43.0\,\mathrm m. \\
+v_x(2.0\,\mathrm s) &= v_{0x} + a_xt \\
+&= 15.0 + (4.0)(2.0) \\
+&= 15.0 + 8.0 \\
 &= 23.0\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -200,18 +196,18 @@ $$
 Ở câu này, ta cần tìm vị trí $x$ khi biết $v_x = 25.0\,\mathrm{m/s}$, không cần biết thời gian $t$. Áp dụng ngay hệ thức độc lập thời gian (2.13):
 $$
 \begin{aligned}
-v_x^2 &= v_{0x}^2 + 2a_x(x - x_0)\\
-&\implies x = x_0 + \frac{v_x^2 - v_{0x}^2}{2a_x}.
+v_x^2 &= v_{0x}^2 + 2a_x(x - x_0) \\
+\implies x &= x_0 + \frac{v_x^2 - v_{0x}^2}{2a_x}.
 \end{aligned}
 $$
 
 Thay số:
 $$
 \begin{aligned}
-x &= 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})}\\
-&= 5.0 + \frac{625 - 225}{8.0}\\
-&= 5.0 + \frac{400}{8.0}\\
-&= 5.0 + 50.0\\
+x &= 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})} \\
+&= 5.0 + \frac{625 - 225}{8.0} \\
+&= 5.0 + \frac{400}{8.0} \\
+&= 5.0 + 50.0 \\
 &= 55.0\,\mathrm m.
 \end{aligned}
 $$
@@ -221,8 +217,8 @@ Kiểm tra lại: Thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25
 
 $$
 \begin{aligned}
-t &= \frac{v_x - v_{0x}}{a_x}\\
-&= \frac{25 - 15}{4.0}\\
+t &= \frac{v_x - v_{0x}}{a_x} \\
+&= \frac{25 - 15}{4.0} \\
 &= 2.5\,\mathrm s.
 \end{aligned}
 $$
@@ -231,8 +227,8 @@ Thế $t = 2.5\,\mathrm s$ vào (2.12):
 
 $$
 \begin{aligned}
-x &= 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2\\
-&= 5.0 + 37.5 + 12.5\\
+x &= 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2 \\
+&= 5.0 + 37.5 + 12.5 \\
 &= 55.0\,\mathrm m.
 \end{aligned}
 $$
@@ -265,9 +261,9 @@ Cả hai xe đều xuất phát từ $x_0 = 0$:
 Hai xe gặp nhau (cảnh sát đuổi kịp ô tô) khi và chỉ khi **chúng có cùng tọa độ vị trí**:
 $$
 \begin{aligned}
-x_P(t) &= x_O(t)\\
-&\iff \frac{1}{2}a_{Px}t^2 = v_{O0x}t\\
-&\iff t\left(\frac{1}{2}a_{Px}t - v_{O0x}\right) = 0.
+x_P(t) &= x_O(t) \\
+\iff \frac{1}{2}a_{Px}t^2 &= v_{O0x}t \\
+\iff t\left(\frac{1}{2}a_{Px}t - v_{O0x}\right) &= 0.
 \end{aligned}
 $$
 
@@ -277,8 +273,8 @@ Phương trình cho hai nghiệm:
 
 $$
 \begin{aligned}
-t &= \frac{2v_{O0x}}{a_{Px}}\\
-&= \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}}\\
+t &= \frac{2v_{O0x}}{a_{Px}} \\
+&= \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}} \\
 &= 10.0\,\mathrm s.
 \end{aligned}
 $$
@@ -287,8 +283,8 @@ $$
 Vận tốc của xe cảnh sát tại thời điểm $t = 10.0\,\mathrm s$:
 $$
 \begin{aligned}
-v_{Px} &= v_{P0x} + a_{Px}t\\
-&= 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)\\
+v_{Px} &= v_{P0x} + a_{Px}t \\
+&= 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s) \\
 &= 30.0\,\mathrm{m/s}\quad (108\,\mathrm{km/h}).
 \end{aligned}
 $$
@@ -297,10 +293,10 @@ $$
 Quãng đường mỗi xe đi được:
 $$
 \begin{aligned}
-x_O &= (15.0\,\mathrm{m/s})(10.0\,\mathrm s)\\
-&= 150\,\mathrm m,\\
-x_P &= \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2\\
-&= 1.5 \times 100\\
+x_O &= (15.0\,\mathrm{m/s})(10.0\,\mathrm s) \\
+&= 150\,\mathrm m, \\
+x_P &= \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 \\
+&= 1.5 \times 100 \\
 &= 150\,\mathrm m.
 \end{aligned}
 $$

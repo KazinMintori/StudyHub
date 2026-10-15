@@ -23,9 +23,9 @@ Câu hỏi mở đầu chọn (iii). Với bài tổng hợp hydrogen, đặt u 
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}} = Qe^{-2u}(1+2u+2u^2),\\
-&E = kQ_{\mathrm{trong}}/r^2,\\
-&E/E_p = e^{-2u}(1+2u+2u^2).
+Q_{\mathrm{trong}} &= Qe^{-2u}(1+2u+2u^2), \\
+E &= kQ_{\mathrm{trong}}/r^2, \\
+E/E_p &= e^{-2u}(1+2u+2u^2).
 \end{aligned}
 $$
 
@@ -93,8 +93,8 @@ Với Bài 22.61, đặt $\eta=L/\sqrt{L^2+4R^2}$:
 
 $$
 \begin{aligned}
-&\Phi_{\mathrm{side}} = Q\eta/\varepsilon_0,\\
-&\Phi_{\mathrm{base}} = Q(1-\eta)/(2\varepsilon_0).
+\Phi_{\mathrm{side}} &= Q\eta/\varepsilon_0, \\
+\Phi_{\mathrm{base}} &= Q(1-\eta)/(2\varepsilon_0).
 \end{aligned}
 $$
 :::

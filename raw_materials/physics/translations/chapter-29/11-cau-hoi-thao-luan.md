@@ -43,10 +43,8 @@ Trong mô hình ấy,
 
 $$
 \begin{aligned}
-\tau_{\mathrm{cản}}
-&=\frac{\omega B^2A^2}{R}\sin^2\phi,\\
-\langle P\rangle
-&=\frac{\omega^2B^2A^2}{2R}.
+\tau_{\mathrm{cản}} &= \frac{\omega B^2A^2}{R}\sin^2\phi, \\
+\langle P\rangle &= \frac{\omega^2B^2A^2}{2R}.
 \end{aligned}
 $$
 
@@ -86,11 +84,10 @@ Chứng tỏ trong công thức (29.6), nếu $v$ đo bằng mét trên giây, $
 
 $$
 \begin{aligned}
-1\,\mathrm T&=1\,\frac{\mathrm N}{\mathrm{A\,m}},\\
-[vBL]&=\frac{\mathrm m}{\mathrm s}
-\frac{\mathrm N}{\mathrm{A\,m}}\mathrm m\\
-&=\frac{\mathrm{N\,m}}{\mathrm{A\,s}}\\
-&=\frac{\mathrm J}{\mathrm C}=\mathrm V.
+1\,\mathrm T &= 1\,\frac{\mathrm N}{\mathrm{A\,m}}, \\
+[vBL] &= \frac{\mathrm m}{\mathrm s} \frac{\mathrm N}{\mathrm{A\,m}}\mathrm m \\
+&= \frac{\mathrm{N\,m}}{\mathrm{A\,s}} \\
+&= \frac{\mathrm J}{\mathrm C}=\mathrm V.
 \end{aligned}
 $$
 :::
@@ -249,9 +246,9 @@ Một vòng kim loại có mặt phẳng vuông góc từ trường đều đang
 
 $$
 \begin{aligned}
-|\mathcal E|&=\pi r^2\left|\frac{dB}{dt}\right|,\\
-E&=\frac{|\mathcal E|}{2\pi r}\\
-&=\frac r2\left|\frac{dB}{dt}\right|.
+|\mathcal E| &= \pi r^2\left|\frac{dB}{dt}\right|, \\
+E &= \frac{|\mathcal E|}{2\pi r} \\
+&= \frac r2\left|\frac{dB}{dt}\right|.
 \end{aligned}
 $$
 
@@ -321,8 +318,8 @@ Có. Khi điện trường trong vật dẫn vừa khác không vừa biến thi
 
 $$
 \begin{aligned}
-\vec J_C&=\sigma\vec E,\\
-\vec J_D&=\varepsilon\frac{\partial\vec E}{\partial t}.
+\vec J_C &= \sigma\vec E, \\
+\vec J_D &= \varepsilon\frac{\partial\vec E}{\partial t}.
 \end{aligned}
 $$
 

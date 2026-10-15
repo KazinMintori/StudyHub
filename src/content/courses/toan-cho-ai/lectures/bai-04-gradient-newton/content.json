@@ -1,0 +1,206 @@
+{
+  "course": "toan-cho-ai",
+  "lecture": "bai-04-gradient-newton",
+  "route": "/toan-cho-ai/bai-giang/bai-04-gradient-newton",
+  "notes": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+  "topics": [
+    {
+      "slug": "phuong-phap-pha-1-va-khoi-tao",
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md"
+    },
+    {
+      "slug": "do-phuc-tap-va-bat-dang-thuc-tong-quat",
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md"
+    },
+    {
+      "slug": "phuong-phap-primal-dual",
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md"
+    }
+  ],
+  "slides": "src/content/courses/toan-cho-ai/lectures/bai-04-gradient-newton/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "gradient",
+    "hessian",
+    "ma-tran-psd",
+    "he-phuong-trinh",
+    "kkt"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 355,
+      "title": "1. Hướng dốc nhất theo chuẩn L1 và chuẩn cực đại L-infinity"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 384,
+      "title": "2. Đường trung tâm và Khoảng cách đối ngẫu của Quy hoạch Tuyến tính"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 420,
+      "title": "3. Tính số bước lặp ngoài của Thuật toán Hàm chắn"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 437,
+      "title": "4. Thuật toán tìm kiếm đường thẳng quay lui Armijo trên hàm bậc hai lệch tỉ lệ"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 517,
+      "title": "5. Hướng giảm dốc nhất theo chuẩn metric Hessian và nguồn gốc phương pháp Newton"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 585,
+      "title": "6. Bước lặp Newton, đại lượng Newton Decrement và mức giảm mô hình xấp xỉ"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 658,
+      "title": "7. Phương pháp Newton khả thi và khử ràng buộc đẳng thức affine"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 726,
+      "title": "8. Tính tự điều chỉnh (Self-concordance) và cận sai số tối ưu độc lập hệ tọa độ"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 89,
+      "title": "1. Khởi tạo Pha I cơ bản cho hệ bất đẳng thức tuyến tính"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 143,
+      "title": "2. Phát hiện mâu thuẫn bằng phương pháp Sum of Infeasibilities"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 178,
+      "title": "3. Cơ chế kích hoạt dừng sớm trong Pha I"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 134,
+      "title": "1. Tính số bước lặp ngoài trong Quy hoạch tuyến tính"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 167,
+      "title": "2. Kiểm chứng tính tự tương hợp của hàm chắn nón Lorentz"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 209,
+      "title": "3. Đánh đổi giữa lặp trong và lặp ngoài khi chọn tham số $\\mu$"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 286,
+      "title": "Bài tập 1: Hệ phương trình Primal-Dual cho Quy hoạch Tuyến tính (LP)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 368,
+      "title": "Bài tập 2: Tính Xác Định Dương của Hệ KKT Rút Gọn trong Quy hoạch Toàn phương (QP)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 428,
+      "title": "Bài tập 3: Mô Phỏng Một Bước Lặp Primal-Dual Trực Quan"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 360,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 393,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 424,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 452,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 528,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 597,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 670,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton.md",
+      "line": 739,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 103,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 150,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.md",
+      "line": 185,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 141,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 174,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md",
+      "line": 216,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 300,
+      "title": "Lời giải chi tiết:"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 381,
+      "title": "Lời giải chi tiết:"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.md",
+      "line": 443,
+      "title": "Lời giải chi tiết:"
+    }
+  ],
+  "assets": []
+}

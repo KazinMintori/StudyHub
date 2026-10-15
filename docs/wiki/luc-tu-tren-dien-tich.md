@@ -19,8 +19,8 @@ Vì vuông góc vận tốc, công suất tức thời của riêng lực từ b
 
 $$
 \begin{aligned}
-&P_B = \vec F_B\cdot\vec v=0,\\
-&dW_B = \vec F_B\cdot d\vec r=0.
+P_B &= \vec F_B\cdot\vec v=0, \\
+dW_B &= \vec F_B\cdot d\vec r=0.
 \end{aligned}
 $$
 

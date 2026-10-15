@@ -24,7 +24,7 @@ Lấy căn không âm sau khi lấy trung bình. Định nghĩa tương tự áp
 Với $i=I\cos\omega t$, khai triển góc đôi:
 
 $$
-\begin{aligned}&\cos^2\omega t=\frac12\\&\quad+\frac12\cos2\omega t.\end{aligned}
+\cos^2\omega t=\frac12\\ \quad+\frac12\cos2\omega t.
 $$
 
 Trung bình cosin qua chu kỳ bằng không, nên $I_{\mathrm{rms}}=I/\sqrt2$. Trung bình chỉnh lưu toàn sóng lại bằng $2I/\pi$. Không thay hai giá trị này cho nhau.

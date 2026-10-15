@@ -1,0 +1,55 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "19-kiem-dinh-gia-thuyet-2",
+  "route": "/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/19-kiem-dinh-gia-thuyet-2/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "mau-tong-the",
+    "suy-rong-thong-ke"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 218,
+      "title": "Bài tập rèn luyện"
+    }
+  ],
+  "solutions": [],
+  "assets": [
+    {
+      "reference": "./img/stat20-19/4-candidates.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 34,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-19/4-candidates.png"
+    },
+    {
+      "reference": "./img/stat20-19/unnamed-chunk-1-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 65,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-19/unnamed-chunk-1-1.png"
+    },
+    {
+      "reference": "./img/stat20-19/unnamed-chunk-2-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 93,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-19/unnamed-chunk-2-1.png"
+    },
+    {
+      "reference": "./img/stat20-19/unnamed-chunk-6-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 140,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-19/unnamed-chunk-6-1.png"
+    },
+    {
+      "reference": "./img/stat20-19/bouba-kiki.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/19-kiem-dinh-gia-thuyet-2.md",
+      "line": 193,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-19/bouba-kiki.svg"
+    }
+  ]
+}

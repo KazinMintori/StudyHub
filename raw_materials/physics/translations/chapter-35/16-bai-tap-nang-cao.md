@@ -25,20 +25,15 @@ $$
 (a) Trường tổng:
 
 $$
-\begin{aligned}
-E_{\rm net}(t)&=E\cos\omega t\\
-&\quad+E\cos(\omega t+\phi)\\
-&\quad+E\cos(\omega t-\phi).
-\end{aligned}
+E_{\rm net}(t)&=E\cos\omega t +E\cos(\omega t+\phi) +E\cos(\omega t-\phi).
 $$
 
 Hai số hạng ngoài cộng lại thành $2E\cos\omega t\cos\phi$, nên:
 
 $$
 \begin{aligned}
-&E_{\rm net}(t)\\
-&\quad=E(1+2\cos\phi)\cos\omega t,\\
-&E_P=E|1+2\cos\phi|.
+E_{\rm net}(t) &= E(1+2\cos\phi)\cos\omega t, \\
+E_P &= E|1+2\cos\phi|.
 \end{aligned}
 $$
 
@@ -53,10 +48,7 @@ $$
 (c) Đạo hàm theo pha:
 
 $$
-\begin{aligned}
-&\frac{\mathrm d(I/I_0)}{\mathrm d\phi}\\
-&=-\frac49(1+2\cos\phi)\sin\phi.
-\end{aligned}
+\frac{\mathrm d(I/I_0)}{\mathrm d\phi} =-\frac49(1+2\cos\phi)\sin\phi.
 $$
 
 Các điểm dừng có $\sin\phi=0$ hoặc $1+2\cos\phi=0$. Bội chẵn của $\pi$ cho cực đại tuyệt đối. Bội lẻ:
@@ -81,8 +73,8 @@ $$
 
 $$
 \begin{aligned}
-|y_{\rm lesser}|&\approx\frac{\lambda R}{2d}\\
-&=1{,}625\,\mathrm{mm}.
+|y_{\rm lesser}| &\approx \frac{\lambda R}{2d} \\
+&= 1{,}625\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -116,9 +108,9 @@ Gọi quang lộ dư hai lượt là $\Delta$:
 
 $$
 \begin{aligned}
-&\Delta=2(n-1)L,\\
-&\frac{\mathrm d\Delta}{\mathrm dT}\\
-&=2L\left[\frac{\mathrm dn}{\mathrm dT}+(n-1)\alpha\right].
+\Delta &= 2(n-1)L, \\
+&\frac{\mathrm d\Delta}{\mathrm dT} \\
+&= 2L\left[\frac{\mathrm dn}{\mathrm dT}+(n-1)\alpha\right].
 \end{aligned}
 $$
 
@@ -126,11 +118,9 @@ Do đó, ở gần nhiệt độ ban đầu:
 
 $$
 \begin{aligned}
-&\frac{\mathrm dN}{\mathrm dt}\\
-&=\frac{2L}{\lambda}\left[\frac{\mathrm dn}{\mathrm dT}+(n-1)\alpha\right]\\
-&\quad\times\frac{\mathrm dT}{\mathrm dt}\\
-&=13{,}956\,\mathrm{min^{-1}}\\
-&\approx14{,}0\ \text{vân/phút}.
+\frac{\mathrm dN}{\mathrm dt} &= \frac{2L}{\lambda}\left[\frac{\mathrm dn}{\mathrm dT}+(n-1)\alpha\right] \times\frac{\mathrm dT}{\mathrm dt} \\
+&= 13{,}956\,\mathrm{min^{-1}} \\
+&\approx 14{,}0\ \text{vân/phút}.
 \end{aligned}
 $$
 
@@ -159,9 +149,9 @@ Lưỡng lăng kính Fresnel có hai góc lăng kính $A$ rất nhỏ. Khe ngu�
 
 $$
 \begin{aligned}
-r_1+r_2&=A,\\
-i&\approx nr_1,\\
-e&\approx nr_2.
+r_1+r_2 &= A, \\
+i &\approx nr_1, \\
+e &\approx nr_2.
 \end{aligned}
 $$
 
@@ -169,8 +159,8 @@ $$
 
 $$
 \begin{aligned}
-\delta&=i+e-A\\
-&\approx(n-1)A.
+\delta &= i+e-A \\
+&\approx (n-1)A.
 \end{aligned}
 $$
 
@@ -184,10 +174,10 @@ $$
 
 $$
 \begin{aligned}
-d&=0{,}700\,\mathrm{mm},\\
-R&=a+b=2{,}20\,\mathrm m,\\
-\Delta y&=\frac{\lambda R}d\\
-&=1{,}57\,\mathrm{mm}.
+d &= 0{,}700\,\mathrm{mm}, \\
+R &= a+b=2{,}20\,\mathrm m, \\
+\Delta y &= \frac{\lambda R}d \\
+&= 1{,}57\,\mathrm{mm}.
 \end{aligned}
 $$
 

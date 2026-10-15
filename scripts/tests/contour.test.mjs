@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { contourSegments } from '../../docs/.vitepress/theme/contour.mjs'
+import { contourSegments } from '../../src/features/labs/services/contour.mjs'
 
 test('Contour of a circle stays on the circle', () => {
   const segs = contourSegments(([x, y]) => x * x + y * y, { x0: -2, x1: 2, y0: -2, y1: 2, n: 80 }, 1)

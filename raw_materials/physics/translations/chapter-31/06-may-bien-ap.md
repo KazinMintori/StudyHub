@@ -28,9 +28,9 @@ Hai suất điện động, với chiều quấn và quy ước dấu thống nh
 
 $$
 \begin{aligned}
-\mathcal E_1&=-N_1\frac{d\Phi_B}{dt},\\
-\mathcal E_2&=-N_2\frac{d\Phi_B}{dt}.\tag{31.33}
-\end{aligned}
+\mathcal E_1 &= -N_1\frac{d\Phi_B}{dt}, \\
+\mathcal E_2 &= -N_2\frac{d\Phi_B}{dt}.\tag{31.33}
+\end{aligned} \tag{31.33}
 $$
 
 Suất điện động trên mỗi vòng bằng nhau. Tại những thời điểm $\mathcal E_1\ne0$:
@@ -93,8 +93,8 @@ Tăng áp đi kèm giảm dòng, còn hạ áp đi kèm tăng dòng. Máy biến
 
 $$
 \begin{aligned}
-I_1&=n\frac{nV_1}{R}\\
-&=\frac{n^2V_1}{R}.
+I_1 &= n\frac{nV_1}{R} \\
+&= \frac{n^2V_1}{R}.
 \end{aligned}
 $$
 
@@ -102,9 +102,9 @@ Suy ra
 
 $$
 \begin{aligned}
-\frac{V_1}{I_1}&=\frac R{n^2},\\
-n&=\frac{N_2}{N_1}.\tag{31.37}
-\end{aligned}
+\frac{V_1}{I_1} &= \frac R{n^2}, \\
+n &= \frac{N_2}{N_1}.\tag{31.37}
+\end{aligned} \tag{31.37}
 $$
 
 Nguồn sơ cấp đáp ứng như đang nối trực tiếp với điện trở tải chia cho bình phương tỉ số số vòng. Vì vậy máy biến áp còn chuyển đổi điện trở, hay tổng quát hơn là trở kháng mà nguồn nhìn thấy.
@@ -148,8 +148,8 @@ Một máy pha cà phê công suất 960 W được thiết kế cho đường �
 
 $$
 \begin{aligned}
-\frac{N_2}{N_1}&=\frac{V_2}{V_1}\\
-&=\frac{240}{120}=2.
+\frac{N_2}{N_1} &= \frac{V_2}{V_1} \\
+&= \frac{240}{120}=2.
 \end{aligned}
 $$
 
@@ -159,9 +159,9 @@ Thứ cấp nối máy pha cần số vòng gấp đôi sơ cấp nối đườn
 
 $$
 \begin{aligned}
-I_1&=\frac{P_{\mathrm{av}}}{V_1}\\
-&=\frac{960\,\mathrm W}{120\,\mathrm V}\\
-&=8{,}0\,\mathrm A.
+I_1 &= \frac{P_{\mathrm{av}}}{V_1} \\
+&= \frac{960\,\mathrm W}{120\,\mathrm V} \\
+&= 8{,}0\,\mathrm A.
 \end{aligned}
 $$
 
@@ -181,9 +181,9 @@ Từ quan hệ chuyển đổi điện trở:
 
 $$
 \begin{aligned}
-R&=\left(\frac{N_2}{N_1}\right)^2\frac{V_1}{I_1}\\
-&=2^2(15\,\Omega)\\
-&=60\,\Omega.
+R &= \left(\frac{N_2}{N_1}\right)^2\frac{V_1}{I_1} \\
+&= 2^2(15\,\Omega) \\
+&= 60\,\Omega.
 \end{aligned}
 $$
 
@@ -204,10 +204,10 @@ Dùng $N_2=N_1V_2/V_1$. Số vòng tương ứng là
 
 $$
 \begin{aligned}
-N_{2,\mathrm{(i)}}&=50,\\
-N_{2,\mathrm{(ii)}}&=2000,\\
-N_{2,\mathrm{(iii)}}&=25,\\
-N_{2,\mathrm{(iv)}}&=500.
+N_{2,\mathrm{(i)}} &= 50, \\
+N_{2,\mathrm{(ii)}} &= 2000, \\
+N_{2,\mathrm{(iii)}} &= 25, \\
+N_{2,\mathrm{(iv)}} &= 500.
 \end{aligned}
 $$
 

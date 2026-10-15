@@ -36,8 +36,8 @@ Suy ra
 
 $$
 \begin{aligned}
-\vec v&=-\omega r\sin\theta\hat{\imath}\\
-&=-(1{,}257\,\mathrm{m/s})\sin\theta\hat{\imath}.
+\vec v &= -\omega r\sin\theta\hat{\imath} \\
+&= -(1{,}257\,\mathrm{m/s})\sin\theta\hat{\imath}.
 \end{aligned}
 $$
 
@@ -59,12 +59,10 @@ $$
 
 $$
 \begin{aligned}
-&\mathcal E=\int_0^{\theta_0}
-(\vec v\times\vec B)\cdot d\vec\ell\\
-&=-\omega Br^2\int_0^{\theta_0}
-\sin\theta\cos\theta\,d\theta\\
-&=-\frac12\omega Br^2\sin^260^\circ\\
-&=-0{,}0471\,\mathrm V.
+\mathcal E &= \int_0^{\theta_0} (\vec v\times\vec B)\cdot d\vec\ell \\
+&= -\omega Br^2\int_0^{\theta_0} \sin\theta\cos\theta\,d\theta \\
+&= -\frac12\omega Br^2\sin^260^\circ \\
+&= -0{,}0471\,\mathrm V.
 \end{aligned}
 $$
 
@@ -113,8 +111,8 @@ với $\eta$ có đơn vị $\mathrm{V/(m\,s^2)}$.
 
 $$
 \begin{aligned}
-i_D&=\varepsilon_0\pi r^2\frac{dE}{dt}\\
-&=2\pi\varepsilon_0\eta tr^2.
+i_D &= \varepsilon_0\pi r^2\frac{dE}{dt} \\
+&= 2\pi\varepsilon_0\eta tr^2.
 \end{aligned}
 $$
 
@@ -122,8 +120,8 @@ $$
 
 $$
 \begin{aligned}
-2\pi rB&=\mu_0i_D,\\
-B(r,t)&=\mu_0\varepsilon_0\eta tr.
+2\pi rB &= \mu_0i_D, \\
+B(r,t) &= \mu_0\varepsilon_0\eta tr.
 \end{aligned}
 $$
 
@@ -131,8 +129,8 @@ $$
 
 $$
 \begin{aligned}
-|\Phi_B|&=b\int_0^aB(r,t)\,dr\\
-&=\frac12\mu_0\varepsilon_0\eta tba^2.
+|\Phi_B| &= b\int_0^aB(r,t)\,dr \\
+&= \frac12\mu_0\varepsilon_0\eta tba^2.
 \end{aligned}
 $$
 
@@ -140,8 +138,8 @@ $$
 
 $$
 \begin{aligned}
-|\mathcal E|&=\frac12\mu_0\varepsilon_0\eta ba^2,\\
-I&=\frac{\mu_0\varepsilon_0\eta ba^2}{2R}.
+|\mathcal E| &= \frac12\mu_0\varepsilon_0\eta ba^2, \\
+I &= \frac{\mu_0\varepsilon_0\eta ba^2}{2R}.
 \end{aligned}
 $$
 
@@ -181,8 +179,8 @@ Thanh kim loại dài $L$, khối lượng $m$, điện trở $R$ trượt khôn
 
 $$
 \begin{aligned}
-|\mathcal E|&=BLv\cos\phi,\\
-I&=\frac{BLv\cos\phi}{R}.
+|\mathcal E| &= BLv\cos\phi, \\
+I &= \frac{BLv\cos\phi}{R}.
 \end{aligned}
 $$
 
@@ -190,8 +188,8 @@ Thành phần lực từ chống chuyển động xuống dốc là $IBL\cos\phi
 
 $$
 \begin{aligned}
-mg\sin\phi&=IBL\cos\phi,\\
-v_{\mathrm{gh}}&=\frac{Rmg\sin\phi}{B^2L^2\cos^2\phi}.
+mg\sin\phi &= IBL\cos\phi, \\
+v_{\mathrm{gh}} &= \frac{Rmg\sin\phi}{B^2L^2\cos^2\phi}.
 \end{aligned}
 $$
 
@@ -205,9 +203,8 @@ $$
 
 $$
 \begin{aligned}
-&P_{\mathrm{nhiệt}}\\
-&=I_{\mathrm{gh}}^2R\\
-&=\frac{Rm^2g^2\tan^2\phi}{B^2L^2}.
+P_{\mathrm{nhiệt}} &= I_{\mathrm{gh}}^2R \\
+&= \frac{Rm^2g^2\tan^2\phi}{B^2L^2}.
 \end{aligned}
 $$
 
@@ -215,8 +212,8 @@ $$
 
 $$
 \begin{aligned}
-P_g&=mgv_{\mathrm{gh}}\sin\phi\\
-&=\frac{Rm^2g^2\tan^2\phi}{B^2L^2}.
+P_g &= mgv_{\mathrm{gh}}\sin\phi \\
+&= \frac{Rm^2g^2\tan^2\phi}{B^2L^2}.
 \end{aligned}
 $$
 
@@ -249,8 +246,8 @@ Một vòng dây vuông cạnh $L$, tổng khối lượng $m$, điện trở t�
 
 $$
 \begin{aligned}
-|\mathcal E|&=BL^2\omega\sin\phi,\\
-I&=\frac{BL^2\omega\sin\phi}{R}.
+|\mathcal E| &= BL^2\omega\sin\phi, \\
+I &= \frac{BL^2\omega\sin\phi}{R}.
 \end{aligned}
 $$
 
@@ -258,19 +255,15 @@ Mômen từ hướng theo $+x$, chống quay xuống, có độ lớn
 
 $$
 \begin{aligned}
-&\tau_B\\
-&=IL^2B\sin\phi\\
-&=\frac{B^2L^4\omega\sin^2\phi}{R}.
+\tau_B &= IL^2B\sin\phi \\
+&= \frac{B^2L^4\omega\sin^2\phi}{R}.
 \end{aligned}
 $$
 
 Đặt mômen đại số theo chiều quay xuống là
 
 $$
-\begin{aligned}
-&\tau_\phi=\frac{mgL}{2}\cos\phi\\
-&\quad-\frac{B^2L^4\omega}{R}\sin^2\phi.
-\end{aligned}
+\tau_\phi=\frac{mgL}{2}\cos\phi -\frac{B^2L^4\omega}{R}\sin^2\phi.
 $$
 
 Vector tổng bằng $-\tau_\phi\hat{\imath}$, độ lớn $|\tau_\phi|$. Nếu $\tau_\phi<0$, mômen tổng quay ngược chiều chuyển động hiện thời.
@@ -279,9 +272,8 @@ Vector tổng bằng $-\tau_\phi\hat{\imath}$, độ lớn $|\tau_\phi|$. Nếu 
 
 $$
 \begin{aligned}
-&J_x=0+\frac m4L^2\\
-&\quad+2\left(\frac13\frac m4L^2\right)\\
-&\quad=\frac5{12}mL^2.
+J_x &= 0+\frac m4L^2 +2 \left(\frac13\frac m4L^2\right) \\
+&= \frac5{12}mL^2.
 \end{aligned}
 $$
 
@@ -289,9 +281,8 @@ Do đó
 
 $$
 \begin{aligned}
-\ddot\phi&=\frac{\tau_\phi}{J_x}\\
-&=\frac{6g}{5L}\cos\phi\\
-&\quad-\frac{12B^2L^2}{5mR}\omega\sin^2\phi.
+\ddot\phi &= \frac{\tau_\phi}{J_x} \\
+&= \frac{6g}{5L}\cos\phi -\frac{12B^2L^2}{5mR}\omega\sin^2\phi.
 \end{aligned}
 $$
 

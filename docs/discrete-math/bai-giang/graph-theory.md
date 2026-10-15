@@ -24,8 +24,8 @@ Trong một đơn đồ thị vô hướng hữu hạn $G=(V,E)$, gọi các đ�
 
 $$
 \begin{aligned}
-&\sum_{v\in V}\deg(v) = \deg(v_1) + \deg(v_2) + \dots + \deg(v_n)\\
-&\quad = 2|E|.
+\sum_{v\in V}\deg(v) &= \deg(v_1) + \deg(v_2) + \dots + \deg(v_n) \\
+&= 2|E|.
 \end{aligned}
 $$
 

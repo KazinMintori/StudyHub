@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir, writeFile, unlink } from 'node:fs/promises'
-import { electricField, fieldLines } from '../docs/.vitepress/theme/electric-field.mjs'
+import { electricField, fieldLines } from '../src/features/labs/services/electric-field.mjs'
 
 // Run with npm run dev in another terminal; QA_URL can use a different dev port.
 // Run this before the production build so its temporary page stays out of the build.

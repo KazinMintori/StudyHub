@@ -22,11 +22,7 @@ Tích vô hướng $u\cdot v$ là tổng các tích thành phần tương ứng.
 Tích vô hướng của hai vector được tính theo từng thành phần:
 
 $$
-\begin{aligned}
-&(1,2)\cdot(3,4) = 1\cdot3\\
-&\quad+2\cdot4\\
-&\quad =11.
-\end{aligned}
+(1,2)\cdot(3,4) = 1\cdot3 + 2\cdot4 = 11.
 $$
 
 ## Khi nào cần dùng?

@@ -19,10 +19,10 @@ Với điện môi tuyến tính lấp đầy khe và điện tích tự do gi�
 
 $$
 \begin{aligned}
-&C = KC_0,\\
-&E = E_0/K,\\
-&V = V_0/K,\\
-&Q_i = Q(1-1/K).
+C &= KC_0, \\
+E &= E_0/K, \\
+V &= V_0/K, \\
+Q_i &= Q(1-1/K).
 \end{aligned}
 $$
 

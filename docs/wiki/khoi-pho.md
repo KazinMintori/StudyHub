@@ -17,9 +17,9 @@ Một cấu hình khối phổ dùng bộ chọn vận tốc với trường E, 
 
 $$
 \begin{aligned}
-&v = E/B,\\
-&R = \frac{mv}{|q|B'},\\
-&\frac m{|q|} = \frac{BB'R}{E}.
+v &= E/B, \\
+R &= \frac{mv}{|q|B'}, \\
+\frac m{|q|} &= \frac{BB'R}{E}.
 \end{aligned}
 $$
 

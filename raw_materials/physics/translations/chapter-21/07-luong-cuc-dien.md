@@ -27,9 +27,7 @@ Ta xét hai câu hỏi: Trường ngoài gây lực và mômen lực nào lên l
 Nhưng hai lực không cùng đường tác dụng. Gọi $\varphi$ là góc giữa trục lưỡng cực và trường. So với tâm, cánh tay đòn của mỗi lực là $(d/2)\sin\varphi$. Mỗi mômen có độ lớn $(qE)(d/2)\sin\varphi$, cùng làm lưỡng cực quay theo một chiều. Tổng độ lớn là:
 
 $$
-\begin{aligned}
-&\tau = (qE)d\sin\varphi.\end{aligned}
-\tag{21.13}
+\tau = (qE)d\sin\varphi. \tag{21.13}
 $$
 
 Khoảng cách vuông góc giữa hai đường tác dụng là $d\sin\varphi$.
@@ -52,17 +50,13 @@ Ký hiệu p còn được dùng cho động lượng hoặc áp suất ở ng�
 Theo định nghĩa đó:
 
 $$
-\begin{aligned}
-&\tau = pE\sin\varphi.\end{aligned}
-\tag{21.15}
+\tau = pE\sin\varphi. \tag{21.15}
 $$
 
 Vì $\varphi$ là góc giữa $\vec p$ và $\vec E$, biểu thức vector là tích có hướng:
 
 $$
-\begin{aligned}
-&\vec\tau = \vec p\times\vec E.\end{aligned}
-\tag{21.16}
+\vec\tau = \vec p\times\vec E. \tag{21.16}
 $$
 
 Quy tắc bàn tay phải cho hướng vào hình ở Hình 21.31. Mômen lớn nhất khi hai vector vuông góc, bằng không khi song song hoặc ngược chiều. Mômen có xu hướng quay $\vec p$ về cùng chiều $\vec E$. Vị trí $\varphi=0$ là cân bằng bền, còn $\varphi=\pi$ là cân bằng không bền. Mômen này cũng giải thích vì sao hạt cỏ bị phân cực quay để nằm theo trường.
@@ -72,16 +66,15 @@ Quy tắc bàn tay phải cho hướng vào hình ở Hình 21.31. Mômen lớn 
 Khi lưỡng cực đổi hướng, mômen của trường thực hiện công và làm thế năng thay đổi. Công trên góc quay nhỏ là $dW=\tau\,d\varphi$. Vì mômen làm góc $\varphi$ giảm, thành phần mômen theo chiều tăng góc là $-pE\sin\varphi$:
 
 $$
-\begin{aligned}
-&dW = -pE\sin\varphi\,d\varphi.\end{aligned}
+dW = -pE\sin\varphi\,d\varphi.
 $$
 
 Công khi quay từ $\varphi_1$ đến $\varphi_2$:
 
 $$
 \begin{aligned}
-&W = \int_{\varphi_1}^{\varphi_2}(-pE\sin\varphi)\,d\varphi\\
-&\quad =pE\cos\varphi_2-pE\cos\varphi_1.
+W &= \int_{\varphi_1}^{\varphi_2}(-pE\sin\varphi)\,d\varphi \\
+&= pE\cos\varphi_2-pE\cos\varphi_1.
 \end{aligned}
 $$
 
@@ -95,9 +88,7 @@ $$
 Đó là âm của tích vô hướng:
 
 $$
-\begin{aligned}
-&U = -\vec p\cdot\vec E.\end{aligned}
-\tag{21.18}
+U = -\vec p\cdot\vec E. \tag{21.18}
 $$
 
 Thế năng nhỏ nhất là $-pE$ khi cùng chiều, lớn nhất là $+pE$ khi ngược chiều và bằng không khi vuông góc. Có thể chọn một mốc khác, nhưng mốc này cho biểu thức gọn. Hạt cỏ định hướng theo trường cũng có thể được hiểu là đi đến cấu hình thế năng nhỏ nhất.
@@ -121,8 +112,8 @@ Lưỡng cực ở Hình 21.32 nằm trong điện trường đều có độ l�
 
 $$
 \begin{aligned}
-&p = (1.6)(0.125)10^{-28}\,\mathrm{C\,m}\\
-&\quad =2.0\times10^{-29}\,\mathrm{C\,m}.
+p &= (1.6)(0.125)10^{-28}\,\mathrm{C\,m} \\
+&= 2.0\times10^{-29}\,\mathrm{C\,m}.
 \end{aligned}
 $$
 
@@ -132,10 +123,9 @@ Hướng $\vec p$ là từ âm đến dương, như hình.
 
 $$
 \begin{aligned}
-&\tau = pE\sin145^\circ\\
-&\quad =(2.0\times10^{-29})(5.0\times10^5)\\
-&\quad\times\sin145^\circ\,\mathrm{N\,m}\\
-&\quad =5.7\times10^{-24}\,\mathrm{N\,m}.
+\tau &= pE\sin145^\circ \\
+&= (2.0\times10^{-29})(5.0\times10^5) \times\sin145^\circ\,\mathrm{N\,m} \\
+&= 5.7\times10^{-24}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -145,10 +135,9 @@ Quy tắc bàn tay phải cho hướng ra khỏi mặt hình, tương ứng quay
 
 $$
 \begin{aligned}
-&U = -pE\cos145^\circ\\
-&\quad =-(2.0\times10^{-29})(5.0\times10^5)\\
-&\quad\times\cos145^\circ\,\mathrm J\\
-&\quad =8.2\times10^{-24}\,\mathrm J.
+U &= -pE\cos145^\circ \\
+&= -(2.0\times10^{-29})(5.0\times10^5) \times\cos145^\circ\,\mathrm J \\
+&= 8.2\times10^{-24}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -178,27 +167,23 @@ Lưỡng cực có tâm tại gốc, $\vec p$ hướng $+y$. Tìm biểu thức 
 
 $$
 \begin{aligned}
-&E_y = \frac{kq}{(y-d/2)^2}\\
-&\quad-\frac{kq}{(y+d/2)^2}\\
-&\quad =\frac{kq}{y^2}\left(1-\frac d{2y}\right)^{-2}\\
-&\quad-\frac{kq}{y^2}\left(1+\frac d{2y}\right)^{-2}.
+E_y &= \frac{kq}{(y-d/2)^2} -\frac{kq}{(y+d/2)^2} \\
+&= \frac{kq}{y^2}\left(1-\frac d{2y}\right)^{-2} \\
+-\frac{kq}{y^2} &\left(1+\frac d{2y}\right)^{-2}.
 \end{aligned}
 $$
 
 **Thực hiện gần đúng.** Với $|u|<1$, khai triển bắt đầu bằng:
 
 $$
-\begin{aligned}
-&(1+u)^n = 1+nu\\
-&\quad+\frac{n(n-1)}2u^2+\cdots.
-\end{aligned}
+(1+u)^n = 1+nu +\frac{n(n-1)}2u^2+\cdots.
 $$
 
 Đặt $n=-2$ và giữ hai số hạng đầu vì $d/(2y)$ rất nhỏ:
 
 $$
 \begin{aligned}
-&\left(1-\frac d{2y}\right)^{-2} \approx 1+\frac dy,\\
+&\left(1-\frac d{2y}\right)^{-2} \approx 1+\frac dy, \\
 &\left(1+\frac d{2y}\right)^{-2} \approx 1-\frac dy.
 \end{aligned}
 $$
@@ -207,9 +192,9 @@ Do đó:
 
 $$
 \begin{aligned}
-&E_y \approx \frac{kq}{y^2}\left[1+\frac dy-\left(1-\frac dy\right)\right]\\
-&\quad =\frac{2kqd}{y^3}\\
-&\quad =\frac{p}{2\pi\varepsilon_0y^3}.
+E_y &\approx \frac{kq}{y^2}\left[1+\frac dy-\left(1-\frac dy\right)\right] \\
+&= \frac{2kqd}{y^3} \\
+&= \frac{p}{2\pi\varepsilon_0y^3}.
 \end{aligned}
 $$
 

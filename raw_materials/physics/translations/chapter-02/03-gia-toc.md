@@ -105,8 +105,8 @@ Dùng công thức gia tốc trung bình (2.4) và đạo hàm gia tốc tức t
 **(a)** Vận tốc tại hai thời điểm:
 $$
 \begin{aligned}
-    &v_{1x} = 60.0 + 0.50(1.0)^2 = 60.5\,\mathrm{m/s},\\
-    &v_{2x} = 60.0 + 0.50(3.0)^2 = 60.0 + 0.50(9.0) = 64.5\,\mathrm{m/s}.
+v_{1x} &= 60.0 + 0.50(1.0)^2 = 60.5\,\mathrm{m/s}, \\
+v_{2x} &= 60.0 + 0.50(3.0)^2 = 60.0 + 0.50(9.0) = 64.5\,\mathrm{m/s}.
 \end{aligned}
 $$
 Độ biến thiên vận tốc:

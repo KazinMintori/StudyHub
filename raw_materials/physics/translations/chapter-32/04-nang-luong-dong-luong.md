@@ -5,10 +5,7 @@ Sóng điện từ mang theo năng lượng trong quá trình lan truyền. Ánh
 Từ biểu thức mật độ năng lượng của điện trường và từ trường trong chân không, mật độ năng lượng tổng cộng $u$ tại vùng không gian có điện trường $\vec{E}$ và từ trường $\vec{B}$ được xác định bởi:
 
 $$
-\begin{aligned}
-u &= \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0} B^2
-\end{aligned}
-\tag{32.23}
+u = \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0} B^2 \tag{32.23}
 $$
 
 Đối với một sóng phẳng chạy lan truyền trong chân không, độ lớn điện trường và từ trường liên hệ với nhau qua tốc độ ánh sáng $c$:
@@ -17,28 +14,23 @@ $$
 \begin{aligned}
 B &= \frac{E}{c} \\
 &= \sqrt{\epsilon_0 \mu_0} E
-\end{aligned}
-\tag{32.24}
+\end{aligned} \tag{32.24}
 $$
 
 Thay hệ thức này vào biểu thức mật độ năng lượng:
 
 $$
 \begin{aligned}
-u &= \frac{1}{2}\epsilon_0 E^2 \\
-&\quad + \frac{1}{2\mu_0} (\sqrt{\epsilon_0 \mu_0} E)^2 \\
+u &= \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0} (\sqrt{\epsilon_0 \mu_0} E)^2 \\
 &= \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2}\epsilon_0 E^2 \\
 &= \epsilon_0 E^2
-\end{aligned}
-\tag{32.25}
+\end{aligned} \tag{32.25}
 $$
 
 Mặt khác, vì $E = cB = B/\sqrt{\epsilon_0 \mu_0}$, ta cũng có thể viết:
 
 $$
-\begin{aligned}
-u &= \frac{B^2}{\mu_0}
-\end{aligned}
+u = \frac{B^2}{\mu_0}
 $$
 
 Kết quả này cho thấy một tính chất quan trọng: Đối với một sóng phẳng chạy trong chân không, mật độ năng lượng của thành phần điện trường bằng đúng mật độ năng lượng của thành phần từ trường tại cùng một vị trí: $u_E = u_B = \frac{1}{2}\epsilon_0 E^2 = B^2/(2\mu_0)$. Tuy nhiên, điều này không đúng cho trường điện từ tổng quát hoặc sóng dừng, nơi điện trường và từ trường có thể có biên độ độc lập hoặc lệch pha nhau. Do độ lớn $E$ biến thiên theo vị trí và thời gian, mật độ năng lượng $u$ của sóng điện từ cũng phụ thuộc vào tọa độ không gian và thời gian.
@@ -64,8 +56,7 @@ $$
 \begin{aligned}
 S &= \frac{1}{A} \frac{dU}{dt} \\
 &= \epsilon_0 c E^2
-\end{aligned}
-\tag{32.26}
+\end{aligned} \tag{32.26}
 $$
 
 Sử dụng hệ thức $c = 1/\sqrt{\epsilon_0 \mu_0}$ và $B = E/c$, ta biến đổi được các dạng biểu diễn tương đương của $S$ trong chân không:
@@ -75,8 +66,7 @@ $$
 S &= \frac{EB}{\mu_0} \\
 &= \sqrt{\frac{\epsilon_0}{\mu_0}} E^2 \\
 &= \frac{c B^2}{\mu_0}
-\end{aligned}
-\tag{32.27}
+\end{aligned} \tag{32.27}
 $$
 
 Đơn vị SI của $S$ là joule trên giây trên mét vuông ($\mathrm{J/(s\cdot m^2)}$), tương đương watt trên mét vuông ($\mathrm{W/m^2}$).
@@ -84,10 +74,7 @@ $$
 Để biểu diễn đồng thời cả độ lớn và hướng truyền của dòng năng lượng, nhà vật lý người Anh John Poynting đã đưa ra khái niệm vector Poynting $\vec{S}$:
 
 $$
-\begin{aligned}
-\vec{S} &= \frac{1}{\mu_0} \vec{E} \times \vec{B}
-\end{aligned}
-\tag{32.28}
+\vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B} \tag{32.28}
 $$
 
 Đối với sóng phẳng lan truyền theo một chiều trong chân không, điện trường $\vec{E}$ và từ trường $\vec{B}$ vuông góc với nhau và vuông góc với phương truyền sóng, do đó tích có hướng $\vec{E} \times \vec{B}$ chỉ đúng theo chiều lan truyền của sóng. Độ lớn của $\vec{S}$ chính là $S = EB/\mu_0$, đặc trưng cho thông lượng năng lượng tức thời trên một đơn vị diện tích vuông góc với tia sóng.
@@ -97,9 +84,7 @@ $$
 Công suất thuần $P$ đi ra khỏi một mặt kín bằng tích phân của vector Poynting trên mặt đó. Vector diện tích hướng ra ngoài, nên dòng năng lượng đi vào đóng góp với dấu âm:
 
 $$
-\begin{aligned}
-P &= \oint \vec{S} \cdot d\vec{A}
-\end{aligned}
+P = \oint \vec{S} \cdot d\vec{A}
 $$
 
 ### Cường độ của sóng điện từ hình sin
@@ -108,10 +93,8 @@ Với sóng điện từ hình sin lan truyền theo chiều dương trục $x$ 
 
 $$
 \begin{aligned}
-\vec{E}(x, t) &= \hat{\jmath} E_{\max} \\
-&\quad \times \cos(kx - \omega t), \\
-\vec{B}(x, t) &= \hat{k} B_{\max} \\
-&\quad \times \cos(kx - \omega t)
+\vec{E}(x, t) &= \hat{\jmath} E_{\max} \times \cos(kx - \omega t), \\
+\vec{B}(x, t) &= \hat{k} B_{\max} \times \cos(kx - \omega t)
 \end{aligned}
 $$
 
@@ -120,11 +103,8 @@ Thay hai biểu thức này vào định nghĩa vector Poynting:
 $$
 \begin{aligned}
 \vec{S}(x, t) &= \frac{1}{\mu_0} \vec{E} \times \vec{B} \\
-&= \frac{1}{\mu_0} [\hat{\jmath} E_{\max}] \\
-&\quad \times [\hat{k} B_{\max}] \\
-&\quad \times \cos^2(kx - \omega t) \\
-&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \\
-&\quad \times \cos^2(kx - \omega t)
+&= \frac{1}{\mu_0} [\hat{\jmath} E_{\max}] \times [\hat{k} B_{\max}] \times \cos^2(kx - \omega t) \\
+&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \times \cos^2(kx - \omega t)
 \end{aligned}
 $$
 
@@ -132,10 +112,8 @@ Vì $\hat{\jmath} \times \hat{k} = \hat{\imath}$ và $\cos^2(kx - \omega t) \ge 
 
 $$
 \begin{aligned}
-S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \\
-&\quad \times \cos^2 \Phi \\
-&= \frac{E_{\max} B_{\max}}{2\mu_0} \\
-&\quad \times [1 + \cos 2\Phi]
+S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \times \cos^2 \Phi \\
+&= \frac{E_{\max} B_{\max}}{2\mu_0} \times [1 + \cos 2\Phi]
 \end{aligned}
 $$
 
@@ -143,12 +121,11 @@ Cường độ bức xạ $I$ của sóng được định nghĩa là độ lớ
 
 $$
 \begin{aligned}
-I = S_{\text{av}} &= \frac{E_{\max} B_{\max}}{2\mu_0} \\
+I &= S_{\text{av}} = \frac{E_{\max} B_{\max}}{2\mu_0} \\
 &= \frac{E_{\max}^2}{2\mu_0 c} \\
 &= \frac{1}{2} \sqrt{\frac{\epsilon_0}{\mu_0}} E_{\max}^2 \\
 &= \frac{1}{2} \epsilon_0 c E_{\max}^2
-\end{aligned}
-\tag{32.29}
+\end{aligned} \tag{32.29}
 $$
 
 Như vậy, cường độ sóng hình sin bằng một nửa giá trị cực đại tức thời của vector Poynting. Đối với sóng truyền theo chiều âm trục $x$, vector Poynting hướng dọc theo $-x$, nhưng độ lớn và cường độ trung bình vẫn có dạng giống hệt.
@@ -173,8 +150,7 @@ $$
 \begin{aligned}
 \frac{dp}{dV} &= \frac{EB}{\mu_0 c^2} \\
 &= \frac{S}{c^2}
-\end{aligned}
-\tag{32.30}
+\end{aligned} \tag{32.30}
 $$
 
 Động lượng này là đặc tính nội tại của trường điện từ, không gắn liền với khối lượng nghỉ của các hạt vật chất theo cơ học cổ điển thông thường.
@@ -185,8 +161,7 @@ $$
 \begin{aligned}
 \frac{1}{A} \frac{dp}{dt} &= \frac{S}{c} \\
 &= \frac{EB}{\mu_0 c}
-\end{aligned}
-\tag{32.31}
+\end{aligned} \tag{32.31}
 $$
 
 Xét sóng tới vuông góc với bề mặt nhận. Theo định luật II Newton, tốc độ truyền động lượng $dp/dt$ cho một bề mặt hấp thụ hoàn toàn chính là lực tác dụng lên bề mặt đó. Lực trung bình tác dụng lên một đơn vị diện tích được gọi là áp suất bức xạ, ký hiệu là $p_{\text{rad}}$. Chỉ số rad phân biệt áp suất với động lượng $p$:
@@ -197,8 +172,7 @@ $$
 \begin{aligned}
 p_{\text{rad}} &= \frac{S_{\text{av}}}{c} \\
 &= \frac{I}{c}
-\end{aligned}
-\tag{32.32}
+\end{aligned} \tag{32.32}
 $$
 
 Nếu bề mặt phản xạ lý tưởng, sóng bị dội ngược trở lại theo phương cũ. Độ biến thiên động lượng của sóng tăng gấp đôi, kéo theo áp suất bức xạ tác dụng lên bề mặt phản xạ cũng tăng gấp đôi:
@@ -207,8 +181,7 @@ $$
 \begin{aligned}
 p_{\text{rad}} &= \frac{2 S_{\text{av}}}{c} \\
 &= \frac{2I}{c}
-\end{aligned}
-\tag{32.33}
+\end{aligned} \tag{32.33}
 $$
 
 Chẳng hạn, chùm bức xạ Mặt Trời trực tiếp chiếu tới tầng trên của khí quyển Trái Đất có cường độ trung bình vào khoảng $1{,}4\,\mathrm{kW/m^2}$. Áp suất bức xạ tác dụng lên bề mặt hấp thụ hoàn toàn là:
@@ -249,8 +222,7 @@ Với $\epsilon_0 = 8{,}85 \times 10^{-12}\,\mathrm{C^2/(N\cdot m^2)}$ và $E = 
 $$
 \begin{aligned}
 u &= \epsilon_0 E^2 \\
-&= (8{,}85 \times 10^{-12}) \\
-&\quad \times (100)^2 \\
+&= (8{,}85 \times 10^{-12}) \times (100)^2 \\
 &= 8{,}85 \times 10^{-8}\,\mathrm{J/m^3}
 \end{aligned}
 $$
@@ -270,8 +242,7 @@ $$
 $$
 \begin{aligned}
 S &= \epsilon_0 c E^2 \\
-&= (8{,}85 \times 10^{-12}) \\
-&\quad \times (3{,}00 \times 10^8)(100)^2 \\
+&= (8{,}85 \times 10^{-12}) \times (3{,}00 \times 10^8)(100)^2 \\
 &= 26{,}5\,\mathrm{W/m^2}
 \end{aligned}
 $$
@@ -313,9 +284,7 @@ Vì $I = S_{\text{av}} = E_{\max}^2 / (2\mu_0 c)$, biên độ điện trường
 $$
 \begin{aligned}
 E_{\max} &= \sqrt{2\mu_0 c S_{\text{av}}} \\
-&= [2 (4\pi \times 10^{-7}) \\
-&\quad \times (3{,}00 \times 10^8) \\
-&\quad \times (7{,}96 \times 10^{-7})]^{1/2} \\
+&= [2 (4\pi \times 10^{-7}) \times (3{,}00 \times 10^8) \times (7{,}96 \times 10^{-7})]^{1/2} \\
 &= 2{,}45 \times 10^{-2}\,\mathrm{V/m}
 \end{aligned}
 $$
@@ -347,8 +316,7 @@ Công suất trung bình hấp thụ bởi các tấm pin:
 $$
 \begin{aligned}
 P &= I A \\
-&= (1{,}4 \times 10^3\,\mathrm{W/m^2}) \\
-&\quad \times (4{,}0\,\mathrm{m^2}) \\
+&= (1{,}4 \times 10^3\,\mathrm{W/m^2}) \times (4{,}0\,\mathrm{m^2}) \\
 &= 5{,}6 \times 10^3\,\mathrm{W} \\
 &= 5{,}6\,\mathrm{kW}
 \end{aligned}
@@ -369,8 +337,7 @@ Lực áp suất bức xạ tổng cộng tác dụng lên toàn bộ diện tí
 $$
 \begin{aligned}
 F &= p_{\text{rad}} A \\
-&= (4{,}7 \times 10^{-6}\,\mathrm{N/m^2}) \\
-&\quad \times (4{,}0\,\mathrm{m^2}) \\
+&= (4{,}7 \times 10^{-6}\,\mathrm{N/m^2}) \times (4{,}0\,\mathrm{m^2}) \\
 &= 1{,}9 \times 10^{-5}\,\mathrm{N}
 \end{aligned}
 $$

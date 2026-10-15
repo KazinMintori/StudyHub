@@ -16,34 +16,28 @@ Với vận tốc trôi $\vec{v}_d$, lực từ lên một hạt tải điện l
 
 $$
 \begin{aligned}
-    &\vec{F}_{\mathrm{hạt}} = q\,\vec{v}_d\times\vec{B}.\\
-    &F = (nA\ell)(qv_dB)\\
-    &\quad =(nqv_dA)(\ell B).
+\vec{F}_{\mathrm{hạt}} &= q\,\vec{v}_d\times\vec{B}. \\
+F &= (nA\ell)(qv_dB) \\
+&= (nqv_dA)(\ell B).
 \end{aligned}
 $$
 
 Mật độ dòng điện có độ lớn $J=nqv_d$, còn dòng điện qua tiết diện là $I=JA$. Thay vào biểu thức trên, ta được $F=I\ell B$ khi dây vuông góc với từ trường.
 
 $$
-\begin{aligned}
-&F = I\ell B.\end{aligned}
-\tag{27.17}
+F = I\ell B. \tag{27.17}
 $$
 
 Nếu góc giữa dây dẫn và từ trường là $\phi$, chỉ thành phần từ trường vuông góc với dây mới gây lực. Thành phần ấy có độ lớn $B\sin\phi$, vì vậy:
 
 $$
-\begin{aligned}
-&F = I\ell B\sin\phi.\end{aligned}
-\tag{27.18}
+F = I\ell B\sin\phi. \tag{27.18}
 $$
 
 Để xác định chiều lực, biểu diễn đoạn dây bằng véc-tơ $\vec{\ell}$ cùng hướng với dòng điện quy ước. Khi đó quy tắc bàn tay phải cho tích có hướng:
 
 $$
-\begin{aligned}
-&\vec{F} = I\,\vec{\ell}\times\vec{B}.\end{aligned}
-\tag{27.19}
+\vec{F} = I\,\vec{\ell}\times\vec{B}. \tag{27.19}
 $$
 
 Phép suy ra này có thể bắt đầu từ hạt tải dương, nhưng kết quả không phụ thuộc vào dấu điện tích. Với hạt tải âm, vận tốc trôi ngược chiều dòng điện quy ước và điện tích $q$ mang dấu âm. Vì vậy, tích $q\vec{v}_d$ vẫn cùng chiều dòng điện. Hạt tải dương cũng cho tích này cùng chiều dòng điện. Khi cả hai loại hạt cùng tham gia, lực từ của chúng cùng chiều nên cộng lại. Lực tổng vẫn được xác định bởi $I\vec{\ell}\times\vec{B}$.
@@ -63,17 +57,15 @@ Hình 27.27: Véc-tơ chiều dài dây $\vec{\ell}$ trỏ theo dòng điện qu
 Một dây cong có thể xem như ghép từ những đoạn rất ngắn, mỗi đoạn gần như thẳng. Nếu $d\vec{\ell}$ là véc-tơ tiếp tuyến cùng chiều dòng điện trên đoạn ấy, lực vi phân là:
 
 $$
-\begin{aligned}
-&d\vec{F} = I\,d\vec{\ell}\times\vec{B}.\end{aligned}
-\tag{27.20}
+d\vec{F} = I\,d\vec{\ell}\times\vec{B}. \tag{27.20}
 $$
 
 Tổng lực được tính bằng cách cộng lực của mọi đoạn dọc theo dây:
 
 $$
 \begin{aligned}
-&\vec{F} = \int d\vec{F}\\
-&\quad =I\int d\vec{\ell}\times\vec{B}.
+\vec{F} &= \int d\vec{F} \\
+&= I\int d\vec{\ell}\times\vec{B}.
 \end{aligned}
 $$
 
@@ -99,9 +91,9 @@ Chọn trục $x$ hướng đông, $y$ hướng bắc và $z$ hướng lên. Dò
 
 $$
 \begin{aligned}
-&F = I\ell B\sin45^\circ\\
-&\quad =(50{,}0)(1{,}00)(1{,}20)\sin45^\circ\\
-&\quad =42{,}4\,\mathrm{N}.
+F &= I\ell B\sin45^\circ \\
+&= (50{,}0)(1{,}00)(1{,}20)\sin45^\circ \\
+&= 42{,}4\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -111,12 +103,12 @@ Có thể kiểm tra chiều lực bằng cách viết đầy đủ véc-tơ t�
 
 $$
 \begin{aligned}
-    &\vec{B} = 1{,}20(\cos45^\circ\,\hat{\imath}+\sin45^\circ\,\hat{\jmath}),\\
-    &\vec{F} = I\vec{\ell}\times\vec{B}\\
-    &\quad =42{,}4\,\hat{k}\,\mathrm{N}.\\
-    &F_{\max} = I\ell B\\
-    &\quad =(50{,}0)(1{,}00)(1{,}20)\\
-    &\quad =60{,}0\,\mathrm{N}.
+\vec{B} &= 1{,}20(\cos45^\circ\,\hat{\imath}+\sin45^\circ\,\hat{\jmath}), \\
+\vec{F} &= I\vec{\ell}\times\vec{B} \\
+&= 42{,}4\,\hat{k}\,\mathrm{N}. \\
+F_{\max} &= I\ell B \\
+&= (50{,}0)(1{,}00)(1{,}20) \\
+&= 60{,}0\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -136,18 +128,17 @@ Trên cung, chia dây thành phần tử nhỏ có độ dài $d\ell=R\,d\theta$
 
 $$
 \begin{aligned}
-&F_{2x} = IRB\int_0^\pi\cos\theta\,d\theta\\
-&\quad =0,\\
-&F_{2y} = IRB\int_0^\pi\sin\theta\,d\theta\\
-&\quad =2IRB.
+F_{2x} &= IRB\int_0^\pi\cos\theta\,d\theta \\
+&= 0, \\
+F_{2y} &= IRB\int_0^\pi\sin\theta\,d\theta \\
+&= 2IRB.
 \end{aligned}
 $$
 
 Vì vậy lực tổng hợp hướng lên và có độ lớn:
 
 $$
-\begin{aligned}
-&\vec{F} = IB(2R+L)\,\hat{\jmath}.\end{aligned}
+\vec{F} = IB(2R+L)\,\hat{\jmath}.
 $$
 
 Phần cung tạo lực tương đương với một đoạn thẳng dài $2R$ nối hai đầu cung theo trục $x$. Hai lực thành phần ngang của các nửa cung đối xứng triệt tiêu, còn hai thành phần thẳng đứng cộng lại.

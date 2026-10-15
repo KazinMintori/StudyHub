@@ -20,9 +20,9 @@
 
 $$
 \begin{aligned}
-\frac1f&=\frac1s+\frac1{s'},\\
-f&=\frac{ss'}{s+s'}\\
-&=14{,}5\,\mathrm{cm}.
+\frac1f &= \frac1s+\frac1{s'}, \\
+f &= \frac{ss'}{s+s'} \\
+&= 14{,}5\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -30,9 +30,9 @@ $$
 
 $$
 \begin{aligned}
-R&=2f=29{,}0\,\mathrm{cm},\\
-m&=-\frac{450}{15{,}0}\\
-&=-30{,}0.
+R &= 2f=29{,}0\,\mathrm{cm}, \\
+m &= -\frac{450}{15{,}0} \\
+&= -30{,}0.
 \end{aligned}
 $$
 
@@ -53,8 +53,8 @@ Gương cầu lõm có bán kính cong $37{,}0\,\mathrm{cm}$. Tìm khoảng ản
 
 $$
 \begin{aligned}
-s'&=\frac{fs}{s-f},\\
-m&=-\frac{s'}s.
+s' &= \frac{fs}{s-f}, \\
+m &= -\frac{s'}s.
 \end{aligned}
 $$
 
@@ -62,9 +62,9 @@ Chẳng hạn với câu (a):
 
 $$
 \begin{aligned}
-s'&=\frac{18{,}5\times11{,}0}{11{,}0-18{,}5}\,\mathrm{cm}\\
-&=-27{,}1\,\mathrm{cm},\\
-m&=+2{,}47.
+s' &= \frac{18{,}5\times11{,}0}{11{,}0-18{,}5}\,\mathrm{cm} \\
+&= -27{,}1\,\mathrm{cm}, \\
+m &= +2{,}47.
 \end{aligned}
 $$
 
@@ -99,9 +99,9 @@ Một gương cầu có bán kính cong $-44{,}0\,\mathrm{cm}$. Khi nhìn mắt 
 
 $$
 \begin{aligned}
-\frac1s&=\frac1f-\frac1{s'}\\
-&=-\frac1{22{,}0}+\frac1{18{,}0},\\
-s&=99{,}0\,\mathrm{cm}.
+\frac1s &= \frac1f-\frac1{s'} \\
+&= -\frac1{22{,}0}+\frac1{18{,}0}, \\
+s &= 99{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -109,8 +109,8 @@ $$
 
 $$
 \begin{aligned}
-m&=-\frac{-18{,}0}{99{,}0}\\
-&=+0{,}182.
+m &= -\frac{-18{,}0}{99{,}0} \\
+&= +0{,}182.
 \end{aligned}
 $$
 
@@ -131,8 +131,8 @@ Gương cầu lồi có bán kính cong $-37{,}0\,\mathrm{cm}$. Tìm khoảng �
 
 $$
 \begin{aligned}
-s'&=\frac{fs}{s-f},\\
-m&=-\frac{s'}s.
+s' &= \frac{fs}{s-f}, \\
+m &= -\frac{s'}s.
 \end{aligned}
 $$
 
@@ -140,9 +140,9 @@ Với câu (a):
 
 $$
 \begin{aligned}
-s'&=\frac{-18{,}5\times11{,}0}{11{,}0+18{,}5}\,\mathrm{cm}\\
-&=-6{,}90\,\mathrm{cm},\\
-m&=+0{,}627.
+s' &= \frac{-18{,}5\times11{,}0}{11{,}0+18{,}5}\,\mathrm{cm} \\
+&= -6{,}90\,\mathrm{cm}, \\
+m &= +0{,}627.
 \end{aligned}
 $$
 
@@ -173,10 +173,10 @@ Hai mặt của thấu kính mỏng hai mặt lồi có bán kính cong bằng n
 
 $$
 \begin{aligned}
-\frac1f&=(n-1)\left(\frac1{R_1}-\frac1{R_2}\right)\\
-&=\frac{2(n-1)}R,\\
-R&=2(n-1)f\\
-&=39{,}0\,\mathrm{cm}.
+\frac1f &= (n-1)\left(\frac1{R_1}-\frac1{R_2}\right) \\
+&= \frac{2(n-1)}R, \\
+R &= 2(n-1)f \\
+&= 39{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -203,9 +203,9 @@ Mặt thấu kính hướng về vật là mặt lồi có bán kính $15{,}0\,\
 
 $$
 \begin{aligned}
-\frac1f&=0{,}55\left(\frac1{15{,}0}-\frac1{25{,}0}\right)\\
-&=0{,}0146667\,\mathrm{cm^{-1}},\\
-f&=+68{,}2\,\mathrm{cm}.
+\frac1f &= 0{,}55\left(\frac1{15{,}0}-\frac1{25{,}0}\right) \\
+&= 0{,}0146667\,\mathrm{cm^{-1}}, \\
+f &= +68{,}2\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -232,9 +232,9 @@ Mặt thấu kính hướng về vật là mặt lồi có bán kính $25{,}0\,\
 
 $$
 \begin{aligned}
-\frac1f&=0{,}55\left(\frac1{25{,}0}-\frac1{15{,}0}\right)\\
-&=-0{,}0146667\,\mathrm{cm^{-1}},\\
-f&=-68{,}2\,\mathrm{cm}.
+\frac1f &= 0{,}55\left(\frac1{25{,}0}-\frac1{15{,}0}\right) \\
+&= -0{,}0146667\,\mathrm{cm^{-1}}, \\
+f &= -68{,}2\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -257,9 +257,9 @@ Thiết kế một thấu kính thủy tinh có chiết suất $1{,}70$. Mặt t
 
 $$
 \begin{aligned}
-\frac1{R_2}&=\frac1{R_1}-\frac1{(n-1)f}\\
-&=\frac1{28{,}0}-\frac1{0{,}70\times14{,}0},\\
-R_2&=-15{,}1\,\mathrm{cm}.
+\frac1{R_2} &= \frac1{R_1}-\frac1{(n-1)f} \\
+&= \frac1{28{,}0}-\frac1{0{,}70\times14{,}0}, \\
+R_2 &= -15{,}1\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -286,10 +286,10 @@ $$
 
 $$
 \begin{aligned}
-\frac1{s'}&=\frac1{25{,}0}-\frac1{15{,}0},\\
-s'&=-37{,}5\,\mathrm{cm},\\
-m&=-\frac{-37{,}5}{15{,}0}\\
-&=+2{,}50.
+\frac1{s'} &= \frac1{25{,}0}-\frac1{15{,}0}, \\
+s' &= -37{,}5\,\mathrm{cm}, \\
+m &= -\frac{-37{,}5}{15{,}0} \\
+&= +2{,}50.
 \end{aligned}
 $$
 
@@ -312,10 +312,10 @@ $$
 
 $$
 \begin{aligned}
-f&=\frac{ss'}{s+s'}\\
-&=+16{,}8\,\mathrm{cm},\\
-m&=-\frac{42{,}0}{28{,}0}\\
-&=-1{,}50.
+f &= \frac{ss'}{s+s'} \\
+&= +16{,}8\,\mathrm{cm}, \\
+m &= -\frac{42{,}0}{28{,}0} \\
+&= -1{,}50.
 \end{aligned}
 $$
 
@@ -338,8 +338,8 @@ Thấu kính hội tụ. Ảnh thật, ngược chiều và lớn gấp 1,50 l�
 
 $$
 \begin{aligned}
--\frac{s'}s&=-1,\\
-s'&=+48{,}0\,\mathrm{cm}.
+-\frac{s'}s &= -1, \\
+s' &= +48{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -347,8 +347,8 @@ $$
 
 $$
 \begin{aligned}
-\frac1f&=\frac1{48{,}0}+\frac1{48{,}0},\\
-f&=+24{,}0\,\mathrm{cm}.
+\frac1f &= \frac1{48{,}0}+\frac1{48{,}0}, \\
+f &= +24{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -373,9 +373,9 @@ Một cửa ra vào có thấu kính lỗ nhìn cho góc nhìn rộng ra ngoài.
 
 $$
 \begin{aligned}
-m&=\frac{4{,}00}{20{,}0}=+0{,}200,\\
-s'&=-ms\\
-&=-50{,}0\,\mathrm{cm}.
+m &= \frac{4{,}00}{20{,}0}=+0{,}200, \\
+s' &= -ms \\
+&= -50{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -385,8 +385,8 @@ $$
 
 $$
 \begin{aligned}
-\frac1f&=\frac1{250}-\frac1{50{,}0},\\
-f&=-62{,}5\,\mathrm{cm}.
+\frac1f &= \frac1{250}-\frac1{50{,}0}, \\
+f &= -62{,}5\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -419,9 +419,9 @@ Gọi $x_j$ là tọa độ đỉnh mặt thứ $j$, còn $X_j$ là tọa độ 
 
 $$
 \begin{aligned}
-\frac{n_a}{s_j}+\frac{n_b}{s'_j}&=\Phi_j,\\
-s'_j&=\frac{n_b}{\Phi_j-n_a/s_j},\\
-X_j&=x_j+s'_j.
+\frac{n_a}{s_j}+\frac{n_b}{s'_j} &= \Phi_j, \\
+s'_j &= \frac{n_b}{\Phi_j-n_a/s_j}, \\
+X_j &= x_j+s'_j.
 \end{aligned}
 $$
 
@@ -444,9 +444,9 @@ Tương tự, $s_3=x_3-X_2$ và $s_4=x_4-X_3$. Ta luôn giữ các tọa độ t
 
 $$
 \begin{aligned}
-\frac{1{,}50}{s'_1}&=\frac{1{,}50-1}{4{,}00},\\
-s'_1&=+12{,}0\,\mathrm{cm},\\
-X_1&=12{,}0\,\mathrm{cm}.
+\frac{1{,}50}{s'_1} &= \frac{1{,}50-1}{4{,}00}, \\
+s'_1 &= +12{,}0\,\mathrm{cm}, \\
+X_1 &= 12{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -454,11 +454,10 @@ $$
 
 $$
 \begin{aligned}
-\frac1{s'_2}&=\frac{1-1{,}50}{3{,}40}\\
-&\quad-\frac{1{,}50}{-11{,}4},\\
-s'_2&=-64{,}6\,\mathrm{cm},\\
-X_2&=0{,}600-64{,}6\\
-&=-64{,}0\,\mathrm{cm}.
+\frac1{s'_2} &= \frac{1-1{,}50}{3{,}40} -\frac{1{,}50}{-11{,}4}, \\
+s'_2 &= -64{,}6\,\mathrm{cm}, \\
+X_2 &= 0{,}600-64{,}6 \\
+&= -64{,}0\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -480,10 +479,9 @@ Khoảng ảnh của mặt cuối là âm. Tia ra phân kỳ, có đường kéo
 
 $$
 \begin{aligned}
-\frac{1{,}37}{s'_2}&=\frac{1{,}37-1{,}50}{3{,}40}\\
-&\quad-\frac{1{,}50}{-11{,}4},\\
-s'_2&=+14{,}67695\,\mathrm{cm},\\
-X_2&=15{,}27695\,\mathrm{cm}.
+\frac{1{,}37}{s'_2} &= \frac{1{,}37-1{,}50}{3{,}40} -\frac{1{,}50}{-11{,}4}, \\
+s'_2 &= +14{,}67695\,\mathrm{cm}, \\
+X_2 &= 15{,}27695\,\mathrm{cm}.
 \end{aligned}
 $$
 

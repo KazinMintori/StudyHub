@@ -30,9 +30,9 @@ Cáp quang có lõi trụ mảnh đường kính $d$, chiết suất $n_1$, và 
 
 $$
 \begin{aligned}
-\sin\theta&=\frac{cb}{ca}\\
-&=\frac{R_i}{R_o}\\
-&=\frac{R-d/2}{R+d/2}.
+\sin\theta &= \frac{cb}{ca} \\
+&= \frac{R_i}{R_o} \\
+&= \frac{R-d/2}{R+d/2}.
 \end{aligned}
 $$
 
@@ -40,9 +40,9 @@ $$
 
 $$
 \begin{aligned}
-R-d/2&=\eta(R+d/2),\\
-(n_1-n_2)R&=\frac{(n_1+n_2)d}{2},\\
-R_{\rm crit}&=\frac{(n_1+n_2)d}{2(n_1-n_2)}.
+R-d/2 &= \eta(R+d/2), \\
+(n_1-n_2)R &= \frac{(n_1+n_2)d}{2}, \\
+R_{\rm crit} &= \frac{(n_1+n_2)d}{2(n_1-n_2)}.
 \end{aligned}
 $$
 
@@ -52,9 +52,9 @@ Tăng $R$ làm góc tới tăng, nên điều kiện giữ tia là $R\ge R_{\rm 
 
 $$
 \begin{aligned}
-d&=50{,}0\times10^{-6}\,\mathrm m,\\
-R_{\rm crit}&=0{,}02065357\,\mathrm m\\
-&=2{,}07\,\mathrm{cm}.
+d &= 50{,}0\times10^{-6}\,\mathrm m, \\
+R_{\rm crit} &= 0{,}02065357\,\mathrm m \\
+&= 2{,}07\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -62,9 +62,9 @@ $$
 
 $$
 \begin{aligned}
-\cos\alpha&=\frac{R_i}{R_o}\\
-&=\frac{n_2}{n_1},\\
-\alpha&=3{,}985198^\circ.
+\cos\alpha &= \frac{R_i}{R_o} \\
+&= \frac{n_2}{n_1}, \\
+\alpha &= 3{,}985198^\circ.
 \end{aligned}
 $$
 
@@ -72,8 +72,8 @@ Giữa hai lần phản xạ liên tiếp, tia đi quãng đường $\ell$, còn
 
 $$
 \begin{aligned}
-\ell&=2R_o\sin\alpha,\\
-s&=2R\alpha.
+\ell &= 2R_o\sin\alpha, \\
+s &= 2R\alpha.
 \end{aligned}
 $$
 
@@ -81,10 +81,9 @@ Trong biểu thức độ dài cung, $\alpha$ phải tính bằng radian. Từ $
 
 $$
 \begin{aligned}
-\chi=\frac\ell s
-&=\frac{2\sin\alpha}{(1+\cos\alpha)\alpha}\\
-&=\frac{\tan(\alpha/2)}{\alpha/2}\\
-&=1{,}0004033513.
+\chi &= \frac\ell s =\frac{2\sin\alpha}{(1+\cos\alpha)\alpha} \\
+&= \frac{\tan(\alpha/2)}{\alpha/2} \\
+&= 1{,}0004033513.
 \end{aligned}
 $$
 
@@ -92,9 +91,9 @@ Với chiều dài đường giữa lõi $L=1000\,\mathrm m$:
 
 $$
 \begin{aligned}
-L_{\rm tia}&=\chi L,\\
-\Delta L&=(\chi-1)L\\
-&=0{,}403\,\mathrm m.
+L_{\rm tia} &= \chi L, \\
+\Delta L &= (\chi-1)L \\
+&= 0{,}403\,\mathrm m.
 \end{aligned}
 $$
 
@@ -104,10 +103,10 @@ Tia đi thêm khoảng $40\,\mathrm{cm}$. Kết quả này ứng với hình h�
 
 $$
 \begin{aligned}
-\Delta t&=\frac{n_1\chi L}{c}-\frac Lc\\
-&=\frac{L(n_1\chi-1)}c\\
-&=1{,}49\times10^{-6}\,\mathrm s\\
-&=1{,}49\,\mathrm{\mu s}.
+\Delta t &= \frac{n_1\chi L}{c}-\frac Lc \\
+&= \frac{L(n_1\chi-1)}c \\
+&= 1{,}49\times10^{-6}\,\mathrm s \\
+&= 1{,}49\,\mathrm{\mu s}.
 \end{aligned}
 $$
 :::
@@ -148,8 +147,8 @@ Có thể dùng công thức đạo hàm của hàm arcsin để xét điều ki
 
 $$
 \begin{aligned}
-\theta_a^B&=r,\\
-\theta_a^C&=r.
+\theta_a^B &= r, \\
+\theta_a^C &= r.
 \end{aligned}
 $$
 
@@ -159,8 +158,8 @@ Snell tại $A$ cho $\sin i=n\sin r$. Tại $C$, quan hệ ngược lại cho $\
 
 $$
 \begin{aligned}
-\Delta&=2(i-r)+(\pi-2r)\\
-&=\pi+2i-4r.
+\Delta &= 2(i-r)+(\pi-2r) \\
+&= \pi+2i-4r.
 \end{aligned}
 $$
 
@@ -168,9 +167,9 @@ $$
 
 $$
 \begin{aligned}
-r&=\arcsin\!\left(\frac{\sin i}{n}\right),\\
-\Delta(i)&=\pi+2i\\
-&\quad-4\arcsin\!\left(\frac{\sin i}{n}\right).
+r &= \arcsin\!\left(\frac{\sin i}{n}\right), \\
+\Delta(i) &= \pi+2i \\
+-4\arcsin\! &\left(\frac{\sin i}{n}\right).
 \end{aligned}
 $$
 
@@ -178,8 +177,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{dr}{di}&=\frac{\cos i}{n\cos r},\\
-\frac{d\Delta}{di}&=2-\frac{4\cos i}{n\cos r}.
+\frac{dr}{di} &= \frac{\cos i}{n\cos r}, \\
+\frac{d\Delta}{di} &= 2-\frac{4\cos i}{n\cos r}.
 \end{aligned}
 $$
 
@@ -187,9 +186,9 @@ $$
 
 $$
 \begin{aligned}
-n^2\cos^2r&=4\cos^2i,\\
-n^2-\sin^2i&=4\cos^2i,\\
-n^2-1&=3\cos^2i.
+n^2\cos^2r &= 4\cos^2i, \\
+n^2-\sin^2i &= 4\cos^2i, \\
+n^2-1 &= 3\cos^2i.
 \end{aligned}
 $$
 
@@ -232,9 +231,9 @@ Cầu vồng bậc hai được tạo bởi tia trải qua hai lần phản xạ
 
 $$
 \begin{aligned}
-\Delta&=2(i-r)+2(\pi-2r)\\
-&=2\pi+2i-6r,\\
-r&=\arcsin\!\left(\frac{\sin i}{n}\right).
+\Delta &= 2(i-r)+2(\pi-2r) \\
+&= 2\pi+2i-6r, \\
+r &= \arcsin\!\left(\frac{\sin i}{n}\right).
 \end{aligned}
 $$
 
@@ -243,9 +242,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-\frac{d\Delta}{di}&=2-\frac{6\cos i}{n\cos r}.
-\end{aligned}
+\frac{d\Delta}{di} =2-\frac{6\cos i}{n\cos r}.
 $$
 
 Đạo hàm bằng 0 khi $n\cos r=3\cos i$.
@@ -254,9 +251,9 @@ Bình phương và dùng Snell:
 
 $$
 \begin{aligned}
-n^2-\sin^2i&=9\cos^2i,\\
-n^2-1&=8\cos^2i,\\
-\cos^2\theta_2&=\frac{n^2-1}{8}.
+n^2-\sin^2i &= 9\cos^2i, \\
+n^2-1 &= 8\cos^2i, \\
+\cos^2\theta_2 &= \frac{n^2-1}{8}.
 \end{aligned}
 $$
 

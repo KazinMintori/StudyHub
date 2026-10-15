@@ -237,8 +237,8 @@ Vì đây là bài toán cực tiểu, mọi điểm khả thi đều có giá t
 
 $$
 \begin{aligned}
-&p^\star \le f_0(x),\\
-&f_0(x) \le p^\star + \varepsilon.
+p^\star &\le f_0(x), \\
+f_0(x) &\le p^\star + \varepsilon.
 \end{aligned}
 $$
 

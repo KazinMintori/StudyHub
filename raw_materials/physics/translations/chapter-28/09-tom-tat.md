@@ -58,9 +58,7 @@ Dòng cùng chiều làm hai dây hút nhau. Dòng ngược chiều làm chúng 
 Với vòng tròn bán kính $a$, trường tại điểm trên trục cách tâm $x$ chỉ còn thành phần theo trục. Các thành phần ngang của những phần tử đối diện triệt tiêu. Trường trên trục và trường ở tâm cuộn $N$ vòng là:
 
 $$
-\begin{aligned}
- &B_x = \frac{\mu_0Ia^2}{2(x^2+a^2)^{3/2}}.\end{aligned}
-\tag{28.15}
+B_x = \frac{\mu_0Ia^2}{2(x^2+a^2)^{3/2}}. \tag{28.15}
 $$
 
 Tại tâm của cuộn $N$ vòng, kết quả là $B_x(0)=\mu_0NI/(2a)$ (28.17).

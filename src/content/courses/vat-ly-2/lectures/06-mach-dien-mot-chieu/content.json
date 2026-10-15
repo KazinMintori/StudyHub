@@ -1,0 +1,2039 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "06-mach-dien-mot-chieu",
+  "route": "/vat-ly-2/bai-giang/06-mach-dien-mot-chieu",
+  "notes": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu.md",
+  "topics": [
+    {
+      "slug": "noi-tiep-song-song",
+      "source": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu/noi-tiep-song-song.md"
+    },
+    {
+      "slug": "kirchhoff",
+      "source": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu/kirchhoff.md"
+    },
+    {
+      "slug": "dung-cu-do",
+      "source": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu/dung-cu-do.md"
+    },
+    {
+      "slug": "mach-rc",
+      "source": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu/mach-rc.md"
+    },
+    {
+      "slug": "phan-phoi-dien",
+      "source": "docs/vat-ly-2/bai-giang/06-mach-dien-mot-chieu/phan-phoi-dien.md"
+    }
+  ],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dong-dien",
+    "dien-tro",
+    "dien-the",
+    "suat-dien-dong",
+    "dien-dung",
+    "cong-nang-luong",
+    "dao-ham",
+    "tich-phan"
+  ],
+  "fragments": [
+    "raw_materials/physics/translations/chapter-26/00-mo-dau.md",
+    "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+    "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+    "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+    "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+    "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+    "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+    "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+    "raw_materials/physics/translations/chapter-26/13-dap-so.md",
+    "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+    "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+    "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+    "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md"
+  ],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "raw_materials/physics/translations/chapter-26/00-mo-dau.md",
+      "line": 13,
+      "title": "Câu hỏi mở đầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 3,
+      "title": "Bài tập biến đổi gắn với ví dụ trọng tâm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 9,
+      "title": "VP26.2.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 76,
+      "title": "VP26.2.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 131,
+      "title": "VP26.2.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 170,
+      "title": "VP26.2.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 244,
+      "title": "VP26.7.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 311,
+      "title": "VP26.7.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 363,
+      "title": "VP26.7.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 437,
+      "title": "VP26.7.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 488,
+      "title": "VP26.13.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 528,
+      "title": "VP26.13.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 573,
+      "title": "VP26.13.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 619,
+      "title": "VP26.13.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 670,
+      "title": "Bài cầu nối 26.27"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 5,
+      "title": "Q26.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 29,
+      "title": "Q26.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 54,
+      "title": "Q26.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 78,
+      "title": "Q26.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 99,
+      "title": "Q26.5"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 130,
+      "title": "Q26.6"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 163,
+      "title": "Q26.7"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 182,
+      "title": "Q26.8"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 201,
+      "title": "Q26.9"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 220,
+      "title": "Q26.10"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 239,
+      "title": "Q26.11"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 254,
+      "title": "Q26.12"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 275,
+      "title": "Q26.13"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 290,
+      "title": "Q26.14"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 309,
+      "title": "Q26.15"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 324,
+      "title": "Q26.16"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 343,
+      "title": "Q26.17"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 358,
+      "title": "Q26.18"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 377,
+      "title": "Q26.19"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 400,
+      "title": "Q26.20"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 415,
+      "title": "Q26.21"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1,
+      "title": "Bài tập cuối chương 26: Bài 26.1–26.32"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 5,
+      "title": "26.1 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 30,
+      "title": "26.2 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 57,
+      "title": "26.3 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 93,
+      "title": "26.4 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 122,
+      "title": "26.5 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 181,
+      "title": "26.6 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 229,
+      "title": "26.7 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 256,
+      "title": "26.8 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 278,
+      "title": "26.9 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 317,
+      "title": "26.10 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 365,
+      "title": "26.11 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 399,
+      "title": "26.12 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 431,
+      "title": "26.13 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 470,
+      "title": "26.14 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 508,
+      "title": "26.15 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 567,
+      "title": "26.16 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 595,
+      "title": "26.17 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 620,
+      "title": "26.18 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 663,
+      "title": "26.19 •• CP"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 698,
+      "title": "26.20 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 741,
+      "title": "26.21 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 784,
+      "title": "26.22 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 814,
+      "title": "26.23 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 847,
+      "title": "26.24 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 891,
+      "title": "26.25 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 921,
+      "title": "26.26 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 973,
+      "title": "26.27 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1011,
+      "title": "26.28 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1038,
+      "title": "26.29 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1070,
+      "title": "26.30 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1098,
+      "title": "26.31 •"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1138,
+      "title": "26.32 ••"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 3,
+      "title": "Bài tập 26.33–26.60"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 7,
+      "title": "26.33"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 59,
+      "title": "26.34"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 104,
+      "title": "26.35"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 155,
+      "title": "26.36"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 179,
+      "title": "26.37"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 204,
+      "title": "26.38"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 251,
+      "title": "26.39"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 290,
+      "title": "26.40"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 341,
+      "title": "26.41"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 370,
+      "title": "26.42"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 409,
+      "title": "26.43"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 434,
+      "title": "26.44"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 454,
+      "title": "26.45"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 500,
+      "title": "26.46"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 525,
+      "title": "26.47"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 572,
+      "title": "26.48"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 597,
+      "title": "26.49"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 645,
+      "title": "26.50"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 681,
+      "title": "26.51"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 706,
+      "title": "26.52"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 753,
+      "title": "26.53"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 798,
+      "title": "26.54"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 835,
+      "title": "26.55"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 875,
+      "title": "26.56"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 905,
+      "title": "26.57"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 974,
+      "title": "26.58"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1013,
+      "title": "26.59"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1058,
+      "title": "26.60"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 3,
+      "title": "Bài tập tổng hợp 26.61–26.80"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 5,
+      "title": "26.61"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 38,
+      "title": "26.62"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 70,
+      "title": "26.63"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 121,
+      "title": "26.64"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 155,
+      "title": "26.65"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 199,
+      "title": "26.66"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 226,
+      "title": "26.67"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 256,
+      "title": "26.68"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 277,
+      "title": "26.69"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 306,
+      "title": "26.70"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 323,
+      "title": "26.71"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 357,
+      "title": "26.72"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 379,
+      "title": "26.73"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 403,
+      "title": "26.74"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 426,
+      "title": "26.75"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 449,
+      "title": "26.76"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 475,
+      "title": "26.77"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 497,
+      "title": "26.78"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 525,
+      "title": "26.79"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 559,
+      "title": "26.80"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 3,
+      "title": "Bài tập nâng cao 26.81–26.88"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 5,
+      "title": "Bài tập thử thách"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 7,
+      "title": "26.81"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 33,
+      "title": "26.82"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 66,
+      "title": "26.83"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 101,
+      "title": "26.84"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 121,
+      "title": "26.85"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 183,
+      "title": "Bài tập theo đoạn đọc MCAT"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 187,
+      "title": "26.86"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 211,
+      "title": "26.87"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 237,
+      "title": "26.88"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 120,
+      "title": "Kiểm tra hiểu mục 26.5"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 15,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 82,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 137,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 176,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 250,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 317,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 369,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 443,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 492,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 532,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 577,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 623,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 676,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 9,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 33,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 58,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 86,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 107,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 138,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 171,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 190,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 209,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 228,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 243,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 262,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 279,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 298,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 313,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 332,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 347,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 366,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 381,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 404,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 419,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 12,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 37,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 62,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 98,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 129,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 188,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 236,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 261,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 283,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 322,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 372,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 406,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 438,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 477,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 515,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 574,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 602,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 627,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 670,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 705,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 746,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 791,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 821,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 854,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 898,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 928,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 980,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1018,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1045,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1077,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1105,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1145,
+      "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 12,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 68,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 109,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 160,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 184,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 213,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 256,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 297,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 350,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 375,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 414,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 439,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 463,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 505,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 534,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 577,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 606,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 650,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 686,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 711,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 758,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 807,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 844,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 884,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 914,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 983,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1022,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1067,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 10,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 45,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 77,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 128,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 160,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 206,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 233,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 261,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 284,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 313,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 330,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 362,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 386,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 410,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 433,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 454,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 480,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 504,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 530,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 564,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 14,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 40,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 79,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 108,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 128,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 192,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 216,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 242,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/13-dap-so.md",
+      "line": 5,
+      "title": "Luyện tập có hướng dẫn và bài cầu nối"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/13-dap-so.md",
+      "line": 37,
+      "title": "Các bài lẻ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 124,
+      "title": "Lời giải"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/young-26/mo-chuong.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/00-mo-dau.md",
+      "line": 5,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/mo-chuong.png"
+    },
+    {
+      "reference": "img/young-26/tom-tat-noi-tiep-song-song.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+      "line": 7,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/tom-tat-noi-tiep-song-song.png"
+    },
+    {
+      "reference": "img/young-26/tom-tat-kirchhoff.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+      "line": 27,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/tom-tat-kirchhoff.png"
+    },
+    {
+      "reference": "img/young-26/tom-tat-dung-cu-do.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+      "line": 56,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/tom-tat-dung-cu-do.png"
+    },
+    {
+      "reference": "img/young-26/tom-tat-mach-rc.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+      "line": 66,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/tom-tat-mach-rc.png"
+    },
+    {
+      "reference": "img/young-26/tom-tat-phan-phoi-dien.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/06-tom-tat.md",
+      "line": 96,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/tom-tat-phan-phoi-dien.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 12,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-01.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 79,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-01.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 134,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-01.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 173,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-01.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 247,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-10.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 314,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-06.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 366,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-12.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-09.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 440,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-09.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-27.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/07-luyen-tap-huong-dan.md",
+      "line": 673,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-27.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-04.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 81,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-04.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 102,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-05.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 133,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-06.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-07.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 166,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-07.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-08.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 185,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-08.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-09.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 204,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-09.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 223,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-10.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 257,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-12.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 293,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-14.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 327,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-16.png"
+    },
+    {
+      "reference": "img/young-26/hinh-q26-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/08-cau-hoi-thao-luan.md",
+      "line": 361,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-q26-18.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 8,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-01.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-02.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 33,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-02.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 125,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-05.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 184,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-06.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-07.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 232,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-07.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 368,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-11.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 402,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-11.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-13.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 434,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-13.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 473,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-14.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-15.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 511,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-15.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 570,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-16.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-17.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 598,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-17.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 623,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-18.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-19.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 666,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-19.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 701,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-20.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-22.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 787,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-22.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-23.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 817,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-23.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-24.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 850,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-24.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-25.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 894,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-25.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-26.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 924,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-26.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-26.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 976,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-26.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-26.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1014,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-26.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-29.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1041,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-29.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-30.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1073,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-30.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-31.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1101,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-31.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-32.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/09-bai-tap-01-32.md",
+      "line": 1141,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-32.png"
+    },
+    {
+      "reference": "img/young-26/hinh-giai26-33-ampe-ke.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 22,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-giai26-33-ampe-ke.svg"
+    },
+    {
+      "reference": "img/young-26/hinh-giai26-33-von-ke.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 42,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-giai26-33-von-ke.svg"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-34.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 62,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-34.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 207,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-20.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 293,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-20.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-41.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 344,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-41.png"
+    },
+    {
+      "reference": "img/young-26/hinh-giai26-42-dien-tich.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 400,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-giai26-42-dien-tich.svg"
+    },
+    {
+      "reference": "img/young-26/hinh-giai26-42-dong-dien.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 404,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-giai26-42-dong-dien.svg"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-45.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 457,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-45.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-47.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 528,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-47.png"
+    },
+    {
+      "reference": "img/young-26/hinh-e26-49.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 600,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-e26-49.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-54.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 801,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-54.png"
+    },
+    {
+      "reference": "img/young-26/hinh-26-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 838,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-06.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-56.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 878,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-56.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-57.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 908,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-57.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-58.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 977,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-58.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-59.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1016,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-59.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-60.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/10-bai-tap-33-60.md",
+      "line": 1061,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-60.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-62.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 42,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-62.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-63.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 74,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-63.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-64.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 125,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-64.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-66.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 203,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-66.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-67.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 230,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-67.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-69.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 281,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-69.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-70.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 310,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-70.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-71.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 327,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-71.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-73.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 383,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-73.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-74.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 407,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-74.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-75.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 430,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-75.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-78.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 501,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-78.png"
+    },
+    {
+      "reference": "img/young-26/hinh-giai26-79-dien-tich-dong-dien.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/11-bai-tong-hop-61-80.md",
+      "line": 537,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-giai26-79-dien-tich-dong-dien.svg"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-81.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 11,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-81.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-82.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 37,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-82.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-83.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 76,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-83.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-84.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 105,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-84.png"
+    },
+    {
+      "reference": "img/young-26/hinh-p26-83.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/12-bai-nang-cao-mcat.md",
+      "line": 125,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-p26-83.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 7,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-01.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-02.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 62,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-02.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-03.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 177,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-03.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-04.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 237,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-04.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 335,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-05.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 7,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-06.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-07.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 53,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-07.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-08.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 65,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-08.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-09.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 87,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-09.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 108,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-10.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 196,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-11.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 338,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-12.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-13.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-13.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 13,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-14.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-15.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 33,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-15.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 136,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-16.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-17.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 249,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-17.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 257,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-18.png"
+    },
+    {
+      "reference": "../img/young-26/ung-dung-dien-co.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 263,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/ung-dung-dien-co.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-19.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 267,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-19.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-20.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-21.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 91,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-21.png"
+    },
+    {
+      "reference": "../img/young-26/ung-dung-may-tao-nhip-tim.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 108,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/ung-dung-may-tao-nhip-tim.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-22.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 161,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-22.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-23.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 165,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-23.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-24.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-24.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-25.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 43,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-25.png"
+    },
+    {
+      "reference": "../img/young-26/hinh-26-26.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 57,
+      "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-26.png"
+    }
+  ]
+}

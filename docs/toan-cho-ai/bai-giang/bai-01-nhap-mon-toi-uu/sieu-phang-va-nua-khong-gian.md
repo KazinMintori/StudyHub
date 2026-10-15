@@ -104,8 +104,8 @@ Nửa không gian là một tập lồi nhưng không phải là một tập aff
 
 $$
 \begin{aligned}
-&a^T (\theta x_1 + (1 - \theta) x_2) = \theta a^T x_1 + (1 - \theta) a^T x_2\\
-&\quad \le \theta b + (1 - \theta) b = b
+a^T (\theta x_1 + (1 - \theta) x_2) &= \theta a^T x_1 + (1 - \theta) a^T x_2 \\
+&\le \theta b + (1 - \theta) b = b
 \end{aligned}
 $$
 

@@ -16,10 +16,10 @@ Trên đường tròn đồng tâm, $\vec B$ tiếp tuyến với đường đi 
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec l = \oint B\,dl\\
-&\quad =B(2\pi r)\\
-&\quad =\frac{\mu_0I}{2\pi r}(2\pi r)\\
-&\quad =\mu_0I.
+\oint\vec B\cdot d\vec l &= \oint B\,dl \\
+&= B(2\pi r) \\
+&= \frac{\mu_0I}{2\pi r}(2\pi r) \\
+&= \mu_0I.
 \end{aligned}
 $$
 
@@ -33,8 +33,8 @@ Gọi bán kính hai cung là $r_1$ và $r_2$. Trên cung thứ nhất, đóng g
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec l = \mu_0I-\mu_0I\\
-&\quad =0.
+\oint\vec B\cdot d\vec l &= \mu_0I-\mu_0I \\
+&= 0.
 \end{aligned}
 $$
 
@@ -54,8 +54,8 @@ Từ hình học, $dl\cos\phi=r\,d\theta$, với $d\theta$ là góc có đỉnh 
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec l = \oint\frac{\mu_0I}{2\pi r}(r\,d\theta)\\
-&\quad =\frac{\mu_0I}{2\pi}\oint d\theta.
+\oint\vec B\cdot d\vec l &= \oint\frac{\mu_0I}{2\pi r}(r\,d\theta) \\
+&= \frac{\mu_0I}{2\pi}\oint d\theta.
 \end{aligned}
 $$
 

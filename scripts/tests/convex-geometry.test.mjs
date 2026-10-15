@@ -5,7 +5,7 @@ import {
   eigSym2, isPsd2, isPd2, fromEigen, sqrtPsd2, matVec2, ellipseBoundary, pNorm, pBallBoundary,
   segmentOutside, separateDisks, closestPolygons, polygonsIntersect, perspective, perspectiveWeight,
   minimalIndices, minimumIndex, weightedMinimizers, dualOfPlanarCone, inDualCone, dot, sub, norm2
-} from '../../docs/.vitepress/theme/convex-geometry.mjs'
+} from '../../src/features/labs/services/convex-geometry.mjs'
 
 const near = (a, b, tolerance = 1e-9) => assert(Math.abs(a - b) <= tolerance, `${a} != ${b}`)
 const nearVec = (u, v, tolerance = 1e-9) => u.forEach((x, i) => near(x, v[i], tolerance))

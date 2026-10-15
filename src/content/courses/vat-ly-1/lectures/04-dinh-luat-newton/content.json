@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "04-dinh-luat-newton",
+  "route": "/vat-ly-1/bai-giang/04-dinh-luat-newton",
+  "notes": "docs/vat-ly-1/bai-giang/04-dinh-luat-newton.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "vector",
+    "dao-ham",
+    "don-vi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

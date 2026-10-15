@@ -292,11 +292,13 @@ Hãy vận dụng kiến thức về không gian mẫu và quy tắc biến cố
    - Xác suất của biến cố đối:
      $$P(A^c) = \frac{625}{1{,}296} \approx 0.482253$$
    - Xác suất thắng ở Trò chơi 1:
-     $$\begin{aligned}
-     &P(A) = 1 - P(A^c)\\
-     &\quad = 1 - \frac{625}{1{,}296}\\
-     &\quad = \frac{671}{1{,}296} \approx 0.517747 \text{ (51.77\%)}
-     \end{aligned}$$
+     $$
+\begin{aligned}
+P(A) &= 1 - P(A^c) \\
+&= 1 - \frac{625}{1{,}296} \\
+&= \frac{671}{1{,}296} \approx 0.517747 \text{ (51.77\%)}
+\end{aligned}
+$$
 
 2. **Phân tích Trò chơi 2**:
    - Khi gieo một cặp xúc xắc, có $6 \times 6 = 36$ kết quả khả dĩ, trong đó chỉ có duy nhất 1 kết quả là cặp $(6, 6)$.
@@ -305,10 +307,12 @@ Hãy vận dụng kiến thức về không gian mẫu và quy tắc biến cố
    - Xác suất của biến cố đối:
      $$P(B^c) = \left(\frac{35}{36}\right)^{24} \approx 0.508596$$
    - Xác suất thắng ở Trò chơi 2:
-     $$\begin{aligned}
-     &P(B) = 1 - P(B^c)\\
-     &\quad = 1 - 0.508596 \approx 0.491404 \text{ (49.14\%)}
-     \end{aligned}$$
+     $$
+\begin{aligned}
+P(B) &= 1 - P(B^c) \\
+&= 1 - 0.508596 \approx 0.491404 \text{ (49.14\%)}
+\end{aligned}
+$$
 
 3. **Kết luận sư phạm & Sai lầm của De Méré**:
    - So sánh với ngưỡng $0.5$:
@@ -410,15 +414,19 @@ Giả sử ta chọn ngẫu nhiên đồng khả năng một cá thể chim cán
    - Do tính vét cạn và xung khắc, $G^c$ chính là biến cố chọn được Adelie hoặc Chinstrap:
      $$G^c = A \cup C$$
    - Áp dụng Quy tắc cộng biến cố xung khắc:
-     $$\begin{aligned}
-     &P(G^c) = P(A \cup C) = P(A) + P(C)\\
-     &\quad = \frac{152}{344} + \frac{68}{344} = \frac{220}{344} = \frac{55}{86} \approx 0.63953
-     \end{aligned}$$
+     $$
+\begin{aligned}
+P(G^c) &= P(A \cup C) = P(A) + P(C) \\
+&= \frac{152}{344} + \frac{68}{344} = \frac{220}{344} = \frac{55}{86} \approx 0.63953
+\end{aligned}
+$$
    - Áp dụng Quy tắc biến cố đối:
-     $$\begin{aligned}
-     &P(G) = 1 - P(G^c)\\
-     &\quad = 1 - \frac{220}{344} = \frac{124}{344} = \frac{31}{86} \approx 0.36047 \text{ (36.05\%)}
-     \end{aligned}$$
+     $$
+\begin{aligned}
+P(G) &= 1 - P(G^c) \\
+&= 1 - \frac{220}{344} = \frac{124}{344} = \frac{31}{86} \approx 0.36047 \text{ (36.05\%)}
+\end{aligned}
+$$
    - Kết quả thu được hoàn toàn trùng khớp với việc tính trực tiếp $\frac{124}{344}$.
 :::
 

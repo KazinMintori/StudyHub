@@ -70,20 +70,15 @@ Gọi σ là độ lớn mật độ điện tích tự do trên bản tụ, σ�
 
 $$
 \begin{aligned}
-&E_0 = \sigma/\varepsilon_0,\\
-&E = \sigma_t/\varepsilon_0.
-\end{aligned}
-\tag{24.15}
+E_0 &= \sigma/\varepsilon_0, \\
+E &= \sigma_t/\varepsilon_0.
+\end{aligned} \tag{24.15}
 $$
 
 Thế E = E₀/K vào quan hệ thứ hai, nhân $\varepsilon_0$ rồi giải theo σᵢ:
 
 $$
-\begin{aligned}
-&\sigma_i = \sigma\\
-&\quad-\sigma/K.
-\end{aligned}
-\tag{24.16}
+\sigma_i = \sigma -\sigma/K. \tag{24.16}
 $$
 
 K rất lớn làm σᵢ gần bằng σ. Hai phần trường gần bù nhau, nên trường và điện áp nhỏ hơn nhiều giá trị chân không. Với K hữu hạn, sự bù không hoàn toàn như trong vật liệu dẫn cân bằng.
@@ -108,21 +103,19 @@ $$
 
 $$
 \begin{aligned}
-&C = KC_0\\
-&\quad =K\varepsilon_0A/d\\
-&\quad =\varepsilon A/d.
-\end{aligned}
-\tag{24.19}
+C &= KC_0 \\
+&= K\varepsilon_0A/d \\
+&= \varepsilon A/d.
+\end{aligned} \tag{24.19}
 $$
 
 Lặp phép suy mật độ năng lượng với điện môi tuyến tính cho:
 
 $$
 \begin{aligned}
-&u = \frac12K\varepsilon_0E^2\\
-&\quad =\frac12\varepsilon E^2.
-\end{aligned}
-\tag{24.20}
+u &= \frac12K\varepsilon_0E^2 \\
+&= \frac12\varepsilon E^2.
+\end{aligned} \tag{24.20}
 $$
 
 K = 1 trả lại kết quả chân không, nên $\varepsilon_0$ còn được gọi là độ điện thẩm chân không. ε và $\varepsilon_0$ có cùng đơn vị vì K là số thuần.
@@ -150,16 +143,16 @@ Tụ phẳng có diện tích mỗi bản 2000 cm² = 0,200 m², khe 1,00 cm = 0
 
 $$
 \begin{aligned}
-&C_0 = \varepsilon_0A/d=177\,\mathrm{pF},\\
-&Q = C_0V_0=0.531\,\mathrm{\mu C},\\
-&C = Q/V=531\,\mathrm{pF},\\
-&K = C/C_0=V_0/V=3.00,\\
-&\varepsilon = K\varepsilon_0\\
-&\quad =2.66\times10^{-11}\,\mathrm{F/m},\\
-&Q_i = Q(1-1/K)\\
-&\quad =3.54\times10^{-7}\,\mathrm C,\\
-&E_0 = V_0/d=3.00\times10^5\,\mathrm{V/m},\\
-&E = V/d=1.00\times10^5\,\mathrm{V/m}.
+C_0 &= \varepsilon_0A/d=177\,\mathrm{pF}, \\
+Q &= C_0V_0=0.531\,\mathrm{\mu C}, \\
+C &= Q/V=531\,\mathrm{pF}, \\
+K &= C/C_0=V_0/V=3.00, \\
+\varepsilon &= K\varepsilon_0 \\
+&= 2.66\times10^{-11}\,\mathrm{F/m}, \\
+Q_i &= Q(1-1/K) \\
+&= 3.54\times10^{-7}\,\mathrm C, \\
+E_0 &= V_0/d=3.00\times10^5\,\mathrm{V/m}, \\
+E &= V/d=1.00\times10^5\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -167,9 +160,9 @@ $$
 
 $$
 \begin{aligned}
-&E = Q/(\varepsilon A),\\
-&E = (Q-Q_i)/(\varepsilon_0A),\\
-&E = E_0/K.
+E &= Q/(\varepsilon A), \\
+E &= (Q-Q_i)/(\varepsilon_0A), \\
+E &= E_0/K.
 \end{aligned}
 $$
 
@@ -185,14 +178,14 @@ Tìm năng lượng và mật độ năng lượng của tụ ở Ví dụ 24.10
 
 $$
 \begin{aligned}
-&U_0 = C_0V_0^2/2\\
-&\quad =7.97\times10^{-4}\,\mathrm J,\\
-&U = CV^2/2\\
-&\quad =2.66\times10^{-4}\,\mathrm J,\\
-&u_0 = \varepsilon_0E_0^2/2\\
-&\quad =0.398\,\mathrm{J/m^3},\\
-&u = \varepsilon E^2/2\\
-&\quad =0.133\,\mathrm{J/m^3}.
+U_0 &= C_0V_0^2/2 \\
+&= 7.97\times10^{-4}\,\mathrm J, \\
+U &= CV^2/2 \\
+&= 2.66\times10^{-4}\,\mathrm J, \\
+u_0 &= \varepsilon_0E_0^2/2 \\
+&= 0.398\,\mathrm{J/m^3}, \\
+u &= \varepsilon E^2/2 \\
+&= 0.133\,\mathrm{J/m^3}.
 \end{aligned}
 $$
 

@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "18-thuyet-dong-hoc-chat-khi",
+  "route": "/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi",
+  "notes": "docs/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "nhiet-do-tuyet-doi",
+    "cong-nang-luong",
+    "ky-vong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

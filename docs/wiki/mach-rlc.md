@@ -19,9 +19,8 @@ Trong miền dưới tắt dần, đặt $\alpha=R/(2L)$ và $\omega_d=\sqrt{1/(
 
 $$
 \begin{aligned}
-q(0)&=A\cos\phi,\\
-i(0)&=-\alpha q(0)\\
-&\quad-\omega_dA\sin\phi.
+q(0) &= A\cos\phi, \\
+i(0) &= -\alpha q(0) - \omega_dA\sin\phi.
 \end{aligned}
 $$
 

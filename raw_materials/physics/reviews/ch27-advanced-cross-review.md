@@ -25,8 +25,8 @@ Với dòng hướng về bản lề P và trường hướng vào trang, mômen
 
 $$
 \begin{aligned}
-    &\tau_B = \frac{IBL^2}{2} = 0{,}023328\ \mathrm{N\,m}\\
-    &\tau_g = mg\frac{L}{2}\cos 53^\circ = 0{,}04451\ \mathrm{N\,m}
+\tau_B &= \frac{IBL^2}{2} = 0{,}023328\ \mathrm{N\,m} \\
+\tau_g &= mg\frac{L}{2}\cos 53^\circ = 0{,}04451\ \mathrm{N\,m}
 \end{aligned}
 $$
 

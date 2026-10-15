@@ -10,10 +10,10 @@ Giữ biên độ điện áp nguồn $V$ không đổi và thay đổi tần s�
 
 $$
 \begin{aligned}
-I&=\frac VZ,\\
-Z&=\sqrt{R^2+(X_L-X_C)^2},\\
-X_L&=\omega L,\\
-X_C&=\frac1{\omega C}.
+I &= \frac VZ, \\
+Z &= \sqrt{R^2+(X_L-X_C)^2}, \\
+X_L &= \omega L, \\
+X_C &= \frac1{\omega C}.
 \end{aligned}
 $$
 
@@ -29,8 +29,8 @@ Gọi $\omega_0$ là tần số góc cộng hưởng. Điều kiện hai điện
 
 $$
 \begin{aligned}
-\omega_0L&=\frac1{\omega_0C},\\
-\omega_0^2LC&=1.
+\omega_0L &= \frac1{\omega_0C}, \\
+\omega_0^2LC &= 1.
 \end{aligned}
 $$
 
@@ -56,9 +56,9 @@ Vì vậy chúng không chỉ có cùng độ lớn mà còn triệt tiêu tại
 
 $$
 \begin{aligned}
-v_L+v_C&=0,\\
-v_{bd}&=0,\\
-v_R&=v.
+v_L+v_C &= 0, \\
+v_{bd} &= 0, \\
+v_R &= v.
 \end{aligned}
 $$
 
@@ -103,11 +103,11 @@ Tìm (a) tần số cộng hưởng, (b) cảm kháng, dung kháng và trở kh�
 
 $$
 \begin{aligned}
-\omega_0&=\frac1{\sqrt{LC}}\\
-&=5{,}0\times10^6\,\mathrm{rad/s},\\
-f_0&=\frac{\omega_0}{2\pi}\\
-&\approx8{,}0\times10^5\,\mathrm{Hz}\\
-&=800\,\mathrm{kHz}.
+\omega_0 &= \frac1{\sqrt{LC}} \\
+&= 5{,}0\times10^6\,\mathrm{rad/s}, \\
+f_0 &= \frac{\omega_0}{2\pi} \\
+&\approx 8{,}0\times10^5\,\mathrm{Hz} \\
+&= 800\,\mathrm{kHz}.
 \end{aligned}
 $$
 
@@ -117,8 +117,8 @@ $$
 
 $$
 \begin{aligned}
-X_L&=\omega_0L=2000\,\Omega,\\
-X_C&=\frac1{\omega_0C}=2000\,\Omega.
+X_L &= \omega_0L=2000\,\Omega, \\
+X_C &= \frac1{\omega_0C}=2000\,\Omega.
 \end{aligned}
 $$
 
@@ -128,9 +128,9 @@ Chúng bằng nhau, nên $Z=R=500\,\Omega$.
 
 $$
 \begin{aligned}
-I_{\mathrm{rms}}&=\frac{V_{\mathrm{rms}}}{R}\\
-&=\frac{1{,}0\,\mathrm V}{500\,\Omega}\\
-&=2{,}0\,\mathrm{mA}.
+I_{\mathrm{rms}} &= \frac{V_{\mathrm{rms}}}{R} \\
+&= \frac{1{,}0\,\mathrm V}{500\,\Omega} \\
+&= 2{,}0\,\mathrm{mA}.
 \end{aligned}
 $$
 
@@ -138,9 +138,9 @@ $$
 
 $$
 \begin{aligned}
-V_{R,\mathrm{rms}}&=I_{\mathrm{rms}}R=1{,}0\,\mathrm V,\\
-V_{L,\mathrm{rms}}&=I_{\mathrm{rms}}X_L=4{,}0\,\mathrm V,\\
-V_{C,\mathrm{rms}}&=I_{\mathrm{rms}}X_C=4{,}0\,\mathrm V.
+V_{R,\mathrm{rms}} &= I_{\mathrm{rms}}R=1{,}0\,\mathrm V, \\
+V_{L,\mathrm{rms}} &= I_{\mathrm{rms}}X_L=4{,}0\,\mathrm V, \\
+V_{C,\mathrm{rms}} &= I_{\mathrm{rms}}X_C=4{,}0\,\mathrm V.
 \end{aligned}
 $$
 

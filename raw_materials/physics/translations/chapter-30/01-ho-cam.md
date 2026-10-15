@@ -13,36 +13,25 @@ Xét hai cuộn dây dẫn đặt gần nhau như minh họa ở Hình 30.1. M�
 Khi dòng điện $i_1$ biến thiên theo thời gian, từ thông $\Phi_{B2}$ cũng thay đổi tương ứng. Theo định luật cảm ứng Faraday, sự biến thiên từ thông này làm xuất hiện trong cuộn dây 2 một suất điện động cảm ứng $\mathcal{E}_2$:
 
 $$
-\begin{aligned}
-\mathcal{E}_2 &= -N_2 \frac{d\Phi_{B2}}{dt}
-\end{aligned}
-\tag{30.1}
+\mathcal{E}_2 = -N_2 \frac{d\Phi_{B2}}{dt} \tag{30.1}
 $$
 
 Trong chân không hoặc trong môi trường không có vật liệu từ tính phi tuyến, cảm ứng từ $\vec{B}$ tại mỗi điểm tỉ lệ thuận với dòng điện $i_1$ sinh ra nó. Kéo theo đó, từ thông $\Phi_{B2}$ qua mỗi vòng của cuộn 2 cũng tỉ lệ thuận với $i_1$. Đại lượng $N_2 \Phi_{B2}$ được gọi là **từ thông móc vòng** qua toàn bộ cuộn dây 2. Ta biểu diễn mối quan hệ tỉ lệ này bằng phương trình:
 
 $$
-\begin{aligned}
-N_2 \Phi_{B2} &= M_{21} i_1
-\end{aligned}
-\tag{30.2}
+N_2 \Phi_{B2} = M_{21} i_1 \tag{30.2}
 $$
 
 Hệ số $M_{21}$ được gọi là **hỗ cảm** của cuộn 2 đối với cuộn 1. Giữ vị trí, hướng các cuộn và độ từ thẩm không đổi để $M_{21}$ không phụ thuộc thời gian. Lấy đạo hàm (30.2), ta được:
 
 $$
-\begin{aligned}
-N_2 \frac{d\Phi_{B2}}{dt} &= M_{21} \frac{di_1}{dt}
-\end{aligned}
+N_2 \frac{d\Phi_{B2}}{dt} = M_{21} \frac{di_1}{dt}
 $$
 
 Kết hợp với định luật Faraday ở phương trình (30.1), ta thu được biểu thức của suất điện động cảm ứng trong cuộn 2:
 
 $$
-\begin{aligned}
-\mathcal{E}_2 &= -M_{21} \frac{di_1}{dt}
-\end{aligned}
-\tag{30.3}
+\mathcal{E}_2 = -M_{21} \frac{di_1}{dt} \tag{30.3}
 $$
 
 Phương trình này chỉ rõ: Suất điện động cảm ứng xuất hiện trong cuộn 2 tỉ lệ thuận với tốc độ biến thiên của dòng điện trong cuộn 1, chứ không phụ thuộc vào độ lớn tức thời của dòng điện đó.
@@ -52,25 +41,19 @@ Phương trình này chỉ rõ: Suất điện động cảm ứng xuất hiện
 Bây giờ, ta đảo ngược vai trò của hai cuộn dây. Giả sử ta cho một dòng điện biến thiên $i_2$ chạy qua cuộn dây 2. Dòng điện này tạo ra một từ trường biến thiên, làm xuất hiện từ thông $\Phi_{B1}$ qua mỗi vòng của cuộn dây 1. Lập luận hoàn toàn tương tự, từ thông móc vòng qua cuộn 1 tỉ lệ với $i_2$ theo hệ số hỗ cảm $M_{12}$:
 
 $$
-\begin{aligned}
-N_1 \Phi_{B1} &= M_{12} i_2
-\end{aligned}
+N_1 \Phi_{B1} = M_{12} i_2
 $$
 
 Khi đó, suất điện động cảm ứng xuất hiện trong cuộn 1 là:
 
 $$
-\begin{aligned}
-\mathcal{E}_1 &= -M_{12} \frac{di_2}{dt}
-\end{aligned}
+\mathcal{E}_1 = -M_{12} \frac{di_2}{dt}
 $$
 
 Từ các định luật điện từ tổng quát, người ta chứng minh được rằng đối với hai cuộn dây bất kỳ đặt trong chân không hoặc trong môi trường vật chất có độ từ thẩm không đổi, hai hệ số hỗ cảm $M_{12}$ và $M_{21}$ luôn luôn bằng nhau:
 
 $$
-\begin{aligned}
-M_{12} &= M_{21} = M
-\end{aligned}
+M_{12} = M_{21} = M
 $$
 
 Tính chất đối xứng này luôn nghiệm đúng, bất kể hai cuộn dây có hình dạng, kích thước hoặc số vòng dây khác nhau đến mức nào. Vì vậy, ta chỉ cần dùng một ký hiệu chung $M$ cho hệ số hỗ cảm giữa hai cuộn dây. Khi đó, các suất điện động hỗ cảm trong hai cuộn được viết là:
@@ -79,17 +62,13 @@ $$
 \begin{aligned}
 \mathcal{E}_2 &= -M \frac{di_1}{dt} \\
 \mathcal{E}_1 &= -M \frac{di_2}{dt}
-\end{aligned}
-\tag{30.4}
+\end{aligned} \tag{30.4}
 $$
 
 Dấu âm trong các phương trình (30.4) thể hiện nội dung của định luật Lenz: Chiều của suất điện động cảm ứng luôn chống lại sự biến thiên của dòng điện đã sinh ra nó. Từ định nghĩa trên, ta có biểu thức đối xứng của hệ số hỗ cảm $M$:
 
 $$
-\begin{aligned}
-M &= \frac{N_2 \Phi_{B2}}{i_1} = \frac{N_1 \Phi_{B1}}{i_2}
-\end{aligned}
-\tag{30.5}
+M = \frac{N_2 \Phi_{B2}}{i_1} = \frac{N_1 \Phi_{B1}}{i_2} \tag{30.5}
 $$
 
 Lưu ý: Đẳng thức (30.5) không đồng nghĩa với việc hai từ thông $\Phi_{B1}$ và $\Phi_{B2}$ bằng nhau. Hai cuộn dây có thể có cấu hình hình học và số vòng dây rất khác nhau, nhưng tích số giữa số vòng dây và từ thông trên mỗi đơn vị dòng điện của hai cuộn thì luôn bằng nhau.
@@ -134,9 +113,7 @@ Xét một mô hình máy phát cao áp dạng cuộn Tesla: Ống dây dài 1 c
 Ống dây 1 có chiều dài $l$ lớn hơn nhiều so với bán kính tiết diện, cho phép ta áp dụng mô hình ống dây dài lý tưởng. Khi đó, từ trường bên ngoài ống dây coi như bằng không, còn từ trường bên trong phân bố đều trên toàn bộ tiết diện và có độ lớn xác định theo công thức:
 
 $$
-\begin{aligned}
-B_1 &= \mu_0 \frac{N_1}{l} i_1
-\end{aligned}
+B_1 = \mu_0 \frac{N_1}{l} i_1
 $$
 
 Vì cuộn dây 2 ôm quanh phần giữa của ống dây 1, toàn bộ từ thông sinh ra bởi dòng điện $i_1$ bên trong tiết diện $A$ của ống dây 1 đều đi qua mỗi vòng của cuộn dây 2.
@@ -145,17 +122,13 @@ Vì cuộn dây 2 ôm quanh phần giữa của ống dây 1, toàn bộ từ th
 Từ thông qua mỗi vòng của cuộn dây 2 là:
 
 $$
-\begin{aligned}
-\Phi_{B2} &= B_1 A = \mu_0 \frac{N_1 A}{l} i_1
-\end{aligned}
+\Phi_{B2} = B_1 A = \mu_0 \frac{N_1 A}{l} i_1
 $$
 
 Áp dụng định nghĩa hệ số hỗ cảm từ phương trình (30.5):
 
 $$
-\begin{aligned}
-M &= \frac{N_2 \Phi_{B2}}{i_1} = \frac{\mu_0 A N_1 N_2}{l}
-\end{aligned}
+M = \frac{N_2 \Phi_{B2}}{i_1} = \frac{\mu_0 A N_1 N_2}{l}
 $$
 
 Biểu thức cho thấy $M$ tỉ lệ với tích số vòng $N_1N_2$, đồng thời phụ thuộc hình học và môi trường đã cố định. Trong mô hình tuyến tính này, $M$ không phụ thuộc độ lớn dòng. Thay các giá trị số vào biểu thức:
@@ -163,9 +136,7 @@ Biểu thức cho thấy $M$ tỉ lệ với tích số vòng $N_1N_2$, đồng 
 $$
 \begin{aligned}
 M &= \frac{\mu_0 A N_1 N_2}{l} \\
-&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{0{,}50\text{ m}} \\
-&\quad \times (1{,}0 \times 10^{-3}\text{ m}^2) \\
-&\quad \times (1000)(10) \\
+&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{0{,}50\text{ m}} \times (1{,}0 \times 10^{-3}\text{ m}^2) \times (1000)(10) \\
 &= 2{,}513 \times 10^{-5}\text{ H} \\
 &\approx 25\ \mu\text{H}
 \end{aligned}
@@ -187,8 +158,7 @@ Ta đã biết hệ số hỗ cảm của hệ cuộn dây là $M = 25\ \mu\text
 
 $$
 \begin{aligned}
-i_2 &= (2{,}0 \times 10^6\text{ A/s}) \\
-&\quad \times (3{,}0 \times 10^{-6}\text{ s}) \\
+i_2 &= (2{,}0 \times 10^6\text{ A/s}) \times (3{,}0 \times 10^{-6}\text{ s}) \\
 &= 6{,}0\text{ A}
 \end{aligned}
 $$
@@ -207,9 +177,7 @@ Thay các giá trị $M = 25 \times 10^{-6}\text{ H}$, $i_2 = 6{,}0\text{ A}$ v�
 $$
 \begin{aligned}
 \Phi_{B1} &= \frac{M i_2}{N_1} \\
-&= \frac{1}{1000} \\
-&\quad \times (25 \times 10^{-6}\text{ H}) \\
-&\quad \times (6{,}0\text{ A}) \\
+&= \frac{1}{1000} \times (25 \times 10^{-6}\text{ H}) \times (6{,}0\text{ A}) \\
 &= 1{,}5 \times 10^{-7}\text{ Wb}
 \end{aligned}
 $$
@@ -219,9 +187,7 @@ $$
 2. Tốc độ biến thiên của dòng điện trong cuộn 2 là hằng số:
 
 $$
-\begin{aligned}
-\frac{di_2}{dt} &= 2{,}0 \times 10^6\text{ A/s}
-\end{aligned}
+\frac{di_2}{dt} = 2{,}0 \times 10^6\text{ A/s}
 $$
 
 Suất điện động cảm ứng xuất hiện trong ống dây 1 được xác định theo phương trình (30.4):
@@ -229,8 +195,7 @@ Suất điện động cảm ứng xuất hiện trong ống dây 1 được xá
 $$
 \begin{aligned}
 \mathcal{E}_1 &= -M \frac{di_2}{dt} \\
-&= -(25 \times 10^{-6}\text{ H}) \\
-&\quad \times (2{,}0 \times 10^6\text{ A/s}) \\
+&= -(25 \times 10^{-6}\text{ H}) \times (2{,}0 \times 10^6\text{ A/s}) \\
 &= -50\text{ V}
 \end{aligned}
 $$

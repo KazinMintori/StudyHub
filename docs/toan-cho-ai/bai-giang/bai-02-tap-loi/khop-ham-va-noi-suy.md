@@ -229,11 +229,11 @@ Cho 3 điểm dữ liệu một chiều: $(0, 1)$, $(1, 0)$, và $(3, 2)$.
 
 3. **Xây dựng hàm lồi nội suy**:
    $$
-   \begin{aligned}
-   &f_{\text{interp}}(x) = \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\}\\
-   &\quad = \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
-   \end{aligned}
-   $$
+\begin{aligned}
+f_{\text{interp}}(x) &= \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\} \\
+&= \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
+\end{aligned}
+$$
    Kiểm tra tại các điểm mút:
    - $f_{\text{interp}}(0) = \max\{1, 0, -1\} = 1 = y_0$.
    - $f_{\text{interp}}(1) = \max\{0, 0, 0\} = 0 = y_1$.

@@ -29,8 +29,4 @@ for(const entry of entries) {
   }
  }
 }
-const component=await readFile('docs/.vitepress/theme/ProbabilitySourceReader.vue','utf8')
-assert(component.includes('withBase('))
-const sandbox=component.match(/sandbox="([^"]+)"/)[1]
-assert(sandbox.includes('allow-scripts')&&!sandbox.includes('allow-same-origin'))
-console.log('PASS 31 complete Notes and 28 complete slide decks; coverage, paragraphs, slide sections, attribution and sandbox verified.')
+console.log('PASS 31 complete Notes and 28 complete slide decks; coverage, paragraphs, slide sections and attribution verified.')

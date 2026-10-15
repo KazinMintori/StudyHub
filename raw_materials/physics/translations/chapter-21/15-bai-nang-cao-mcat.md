@@ -6,8 +6,7 @@
 Hai thanh mảnh dài L, mỗi thanh có điện tích tổng $+Q$, song song và cách a. Thanh thứ nhất từ gốc lên trục y dương, thanh thứ hai có đầu dưới trên trục x dương. (a) Giải thích vì sao thành phần y của tổng lực lên thanh thứ hai bằng không. (b) Tìm thành phần x của lực nhỏ $dF_2$ lên đoạn $dy_2$ ở $y_2$ do thanh thứ nhất. Bước này cần tích phân trên các phần $dy_1$ của thanh thứ nhất. (c) Tích phân $dF_{2x}$ trên thanh thứ hai để tìm tổng lực $\vec F_2$. (d) Chứng tỏ khi $a\gg L$:
 
 $$
-\begin{aligned}
-&\vec F_2\approx\frac{Q^2}{4\pi\varepsilon_0a^2}\hat{\mathbf i}.\end{aligned}
+\vec F_2\approx\frac{Q^2}{4\pi\varepsilon_0a^2}\hat{\mathbf i}.
 $$
 
 (e) Tìm công bên ngoài để đưa thanh thứ hai từ rất xa đến $x=a$, giữ thanh thứ nhất ở $x=0$. Công này là thế năng cấu hình. (f) Với $L=50.0\,\mathrm{cm}$, $a=10.0\,\mathrm{cm}$, $Q=10.0\,\mu\mathrm C$ và khối lượng mỗi thanh $m=500\,\mathrm g$, nếu thả hai thanh, tốc độ tương đối cuối cùng khi chúng xa nhau là bao nhiêu?
@@ -29,10 +28,7 @@ $$
 (b) Với $\lambda=Q/L$:
 
 $$
-\begin{aligned}
-&dF_{2x} = k\lambda^2a\,dy_2\\
-&\quad\times\int_0^L\frac{dy_1}{[a^2+(y_2-y_1)^2]^{3/2}}.
-\end{aligned}
+dF_{2x} = k\lambda^2a\,dy_2 \times\int_0^L\frac{dy_1}{[a^2+(y_2-y_1)^2]^{3/2}}.
 $$
 
 Giữ y₂ cố định rồi đặt u = y₂ − y₁, nên du = −dy₁. Khi y₁ chạy từ 0 đến L, u chạy từ y₂ đến y₂ − L. Đổi chiều cận loại dấu trừ:
@@ -51,8 +47,8 @@ Thật vậy, lấy đạo hàm u/√(a² + u²) cho a²/(a² + u²)^(3/2). Chia
 
 $$
 \begin{aligned}
-&I(y_2) = G(y_2)-G(y_2-L)\\
-&\quad =\frac1{a^2}\left(\frac{y_2}{r_0}+\frac{L-y_2}{r_L}\right).
+I(y_2) &= G(y_2)-G(y_2-L) \\
+&= \frac1{a^2}\left(\frac{y_2}{r_0}+\frac{L-y_2}{r_L}\right).
 \end{aligned}
 $$
 
@@ -66,9 +62,9 @@ $$
 
 $$
 \begin{aligned}
-&J = \int_0^L\frac{y\,dy}{\sqrt{a^2+y^2}}\\
-&\quad =\left[\sqrt{a^2+y^2}\right]_0^L\\
-&\quad =\sqrt{a^2+L^2}-a.
+J &= \int_0^L\frac{y\,dy}{\sqrt{a^2+y^2}} \\
+&= \left[\sqrt{a^2+y^2}\right]_0^L \\
+&= \sqrt{a^2+L^2}-a.
 \end{aligned}
 $$
 
@@ -76,8 +72,8 @@ Do đó:
 
 $$
 \begin{aligned}
-&F_{2x} = \frac{2k\lambda^2}{a}J\\
-&\quad =\frac{2kQ^2}{L^2}\frac{J}{a}.
+F_{2x} &= \frac{2k\lambda^2}{a}J \\
+&= \frac{2kQ^2}{L^2}\frac{J}{a}.
 \end{aligned}
 $$
 
@@ -85,11 +81,11 @@ $$
 
 $$
 \begin{aligned}
-&\sqrt{a^2+L^2} = a\sqrt{1+\eta^2}\\
-&\quad \approx a\left(1+\frac12\eta^2\right),\\
-&J = a\left(\sqrt{1+\eta^2}-1\right)\\
-&\quad \approx\frac{a\eta^2}{2}\\
-&\quad =\frac{L^2}{2a}.
+\sqrt{a^2+L^2} &= a\sqrt{1+\eta^2} \\
+&\approx a\left(1+\frac12\eta^2\right), \\
+J &= a\left(\sqrt{1+\eta^2}-1\right) \\
+&\approx \frac{a\eta^2}{2} \\
+&= \frac{L^2}{2a}.
 \end{aligned}
 $$
 
@@ -97,8 +93,8 @@ Thay J vào biểu thức lực:
 
 $$
 \begin{aligned}
-&F_{2x} = \frac{2kQ^2J}{L^2a}\\
-&\quad \approx\frac{kQ^2}{a^2}.
+F_{2x} &= \frac{2kQ^2J}{L^2a} \\
+&\approx \frac{kQ^2}{a^2}.
 \end{aligned}
 $$
 
@@ -113,10 +109,7 @@ $$
 Thay biểu thức lực ở (c). Phần cần tích phân là √(s² + L²)/s − 1. Một nguyên hàm là:
 
 $$
-\begin{aligned}
-&H(s) = \sqrt{s^2+L^2}-s\\
-&\quad-L\ln\frac{L+\sqrt{s^2+L^2}}s.
-\end{aligned}
+H(s) = \sqrt{s^2+L^2}-s -L\ln\frac{L+\sqrt{s^2+L^2}}s.
 $$
 
 Lấy đạo hàm H cho đúng √(s² + L²)/s − 1. Khi s tiến ra vô hạn, √(s² + L²) − s tiến về không và logarit cũng tiến về không. Vì vậy H(∞) = 0. Thế hai cận vào tích phân:
@@ -128,20 +121,13 @@ $$
 Thế s = a vào H rồi đổi dấu từng số hạng, ta được:
 
 $$
-\begin{aligned}
-&-H(a) = L\ln\frac{L+\sqrt{a^2+L^2}}a\\
-&\quad+a-\sqrt{a^2+L^2}.
-\end{aligned}
+-H(a) = L\ln\frac{L+\sqrt{a^2+L^2}}a +a-\sqrt{a^2+L^2}.
 $$
 
 Nhân từng số hạng với hệ số 2kQ²/L² cho kết quả:
 
 $$
-\begin{aligned}
-&U(a) = \frac{2kQ^2L}{L^2}\ln\frac{L+\sqrt{a^2+L^2}}a\\
-&\quad+\frac{2kQ^2a}{L^2}\\
-&\quad-\frac{2kQ^2}{L^2}\sqrt{a^2+L^2}.
-\end{aligned}
+U(a) = \frac{2kQ^2L}{L^2}\ln\frac{L+\sqrt{a^2+L^2}}a +\frac{2kQ^2a}{L^2} -\frac{2kQ^2}{L^2}\sqrt{a^2+L^2}.
 $$
 
 (f) Hai thanh có cùng khối lượng, từ nghỉ nên động lượng tổng bằng không. Mỗi thanh có tốc độ v ngược chiều nhau; $mv^2=U(a)$ và tốc độ tương đối $v_{\mathrm{rel}}=2v$. Thế dữ kiện cho U = 5,37 J, nên $v_{\mathrm{rel}}=2\sqrt{U/0.500}=6.55$ m/s.
@@ -192,9 +178,9 @@ Các giá trị hai phía mỗi điểm nối bằng nhau. (f) Nhân phương tr
 
 $$
 \begin{aligned}
-&I\dot\theta\ddot\theta+U'(\theta)\dot\theta=0,\\
-&K=\frac12I\dot\theta^2,\\
-&\frac d{dt}(K+U)=0.
+I\dot\theta\ddot\theta+U'(\theta)\dot\theta &= 0, \\
+K &= \frac12I\dot\theta^2, \\
+\frac d{dt}(K+U) &= 0.
 \end{aligned}
 $$
 
@@ -202,8 +188,8 @@ $$
 
 $$
 \begin{aligned}
-&\omega_n = \sqrt{\frac{4nQaE}{I}}\\
-&\quad =\sqrt{\frac{2nQE}{Ma}}.
+\omega_n &= \sqrt{\frac{4nQaE}{I}} \\
+&= \sqrt{\frac{2nQE}{Ma}}.
 \end{aligned}
 $$
 :::
@@ -230,11 +216,11 @@ Với $F_1=k|q_1q_3|/0.0400^2$ và $F_2=k|q_2q_3|/0.0300^2$, cân bằng đứng
 
 $$
 \begin{aligned}
-&F_2 = \frac34F_1,\\
-&q_2 = \frac34|q_1|\left(\frac{0.0300}{0.0400}\right)^2\\
-&\quad =+0.844\,\mu\mathrm C,\\
-&F = \frac45F_1+\frac35F_2\\
-&\quad =56.2\,\mathrm N.
+F_2 &= \frac34F_1, \\
+q_2 &= \frac34|q_1|\left(\frac{0.0300}{0.0400}\right)^2 \\
+&= +0.844\,\mu\mathrm C, \\
+F &= \frac45F_1+\frac35F_2 \\
+&= 56.2\,\mathrm N.
 \end{aligned}
 $$
 :::
@@ -258,17 +244,15 @@ Hai nguồn như Hình P21.96. $|q_1|=3.00\,\mu\mathrm C$, chưa biết dấu $q
 Chọn gốc tại q₁, q₂ tại x = 0,130 m. Khi đó $x_P=0.050^2/0.130$, $y_P=(0.050)(0.120)/0.130$. Điều kiện thành phần ngang bằng không:
 
 $$
-\begin{aligned}
-&\frac{|q_1|x_P}{0.050^3} = \frac{|q_2|(0.130-x_P)}{0.120^3}.\end{aligned}
+\frac{|q_1|x_P}{0.050^3} = \frac{|q_2|(0.130-x_P)}{0.120^3}.
 $$
 
 Cho $q_1=-3.00$ µC, suy ra $q_2=-7.20$ µC. Thành phần đứng:
 
 $$
 \begin{aligned}
-&E_y = -\frac{ky_P|q_1|}{0.050^3}\\
-&\quad-\frac{ky_P|q_2|}{0.120^3}\\
-&\quad =-1.17\times10^7\,\mathrm{N/C}.
+E_y &= -\frac{ky_P|q_1|}{0.050^3} -\frac{ky_P|q_2|}{0.120^3} \\
+&= -1.17\times10^7\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -279,17 +263,13 @@ Bốn sơ đồ dấu được tạo bằng việc đảo riêng từng vector; 
 Hai thanh mảnh dài L nằm trên trục x. Thanh thứ nhất từ $x=a/2$ đến $x=a/2+L$, thanh thứ hai từ $x=-a/2$ đến $x=-a/2-L$. Mỗi thanh có điện tích dương đều Q. (a) Tính trường do thanh thứ hai tại các điểm trục x dương. (b) Chứng tỏ độ lớn lực giữa hai thanh là:
 
 $$
-\begin{aligned}
-&F = \frac{Q^2}{4\pi\varepsilon_0L^2}\ln\left[\frac{(a+L)^2}{a(a+2L)}\right].\end{aligned}
+F = \frac{Q^2}{4\pi\varepsilon_0L^2}\ln\left[\frac{(a+L)^2}{a(a+2L)}\right].
 $$
 
 (c) Khi $a\gg L$, chứng tỏ lực trở thành $Q^2/(4\pi\varepsilon_0a^2)$ và giải thích. Gợi ý: Dùng khai triển với $|z|\ll1$:
 
 $$
-\begin{aligned}
-&\ln(1+z) = z-\frac12z^2\\
-&\quad+\frac13z^3-\cdots.
-\end{aligned}
+\ln(1+z) = z-\frac12z^2 +\frac13z^3-\cdots.
 $$
 
 Giữ mọi khai triển ít nhất đến bậc $L^2/a^2$.
@@ -311,9 +291,9 @@ Gọi u đo từ đầu gần của thanh trái về phía trái, 0 ≤ u ≤ L.
 
 $$
 \begin{aligned}
-&E_x(x) = \frac{kQ}{L}\int_0^L\frac{du}{(c+u)^2}\\
-&\quad =\frac{kQ}{L}\left[-\frac1{c+u}\right]_0^L\\
-&\quad =\frac{kQ}{L}\left(\frac1c-\frac1{c+L}\right).
+E_x(x) &= \frac{kQ}{L}\int_0^L\frac{du}{(c+u)^2} \\
+&= \frac{kQ}{L}\left[-\frac1{c+u}\right]_0^L \\
+&= \frac{kQ}{L}\left(\frac1c-\frac1{c+L}\right).
 \end{aligned}
 $$
 
@@ -321,9 +301,8 @@ Thay lại c = x + a/2:
 
 $$
 \begin{aligned}
-&E_x(x) = \frac{kQ}{L(x+a/2)}\\
-&\quad-\frac{kQ}{L(x+a/2+L)},\\
-&E_y = 0.
+E_x(x) &= \frac{kQ}{L(x+a/2)} -\frac{kQ}{L(x+a/2+L)}, \\
+E_y &= 0.
 \end{aligned}
 $$
 
@@ -339,8 +318,8 @@ $$
 
 $$
 \begin{aligned}
-&J(a/2+L) = \ln\frac{a+L}{a+2L},\\
-&J(a/2) = \ln\frac a{a+L}.
+J(a/2+L) &= \ln\frac{a+L}{a+2L}, \\
+J(a/2) &= \ln\frac a{a+L}.
 \end{aligned}
 $$
 
@@ -348,9 +327,9 @@ Lấy giá trị trên trừ giá trị dưới, rồi dùng hiệu hai logarit 
 
 $$
 \begin{aligned}
-&F = \frac QL\int_{a/2}^{a/2+L}E_x(x)\,dx\\
-&\quad =\frac{kQ^2}{L^2}[J(a/2+L)-J(a/2)]\\
-&\quad =\frac{kQ^2}{L^2}\ln\frac{(a+L)^2}{a(a+2L)}.
+F &= \frac QL\int_{a/2}^{a/2+L}E_x(x)\,dx \\
+&= \frac{kQ^2}{L^2}[J(a/2+L)-J(a/2)] \\
+&= \frac{kQ^2}{L^2}\ln\frac{(a+L)^2}{a(a+2L)}.
 \end{aligned}
 $$
 
@@ -380,8 +359,7 @@ Một con ong có điện tích bằng giá trị trung bình trên. Điện tí
 - Chia độ lớn điện tích cho e để đếm số thiếu.
 
 $$
-\begin{aligned}
-&N = \frac{30\times10^{-12}}{1.602\times10^{-19}}\approx1.9\times10^8.\end{aligned}
+N = \frac{30\times10^{-12}}{1.602\times10^{-19}}\approx1.9\times10^8.
 $$
 
 Chọn (a).
@@ -448,8 +426,7 @@ Trong thí nghiệm tiếp theo, đặt $+40\,\mathrm{pC}$ ở tâm hoa nhân t�
 - Chiều dài cuống không đi vào khoảng cách từ ong đến điện tích tâm đã cho.
 
 $$
-\begin{aligned}
-&E = \frac{k(40\times10^{-12})}{0.15^2}\approx16\,\mathrm{N/C}.\end{aligned}
+E = \frac{k(40\times10^{-12})}{0.15^2}\approx16\,\mathrm{N/C}.
 $$
 
 Chọn (b).

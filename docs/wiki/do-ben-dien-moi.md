@@ -17,9 +17,9 @@ next: false
 
 $$
 \begin{aligned}
-&V_{\max} = E_{\mathrm{bd}}d,\\
-&Q_{\max} = CV_{\max},\\
-&U_{\max} = \frac12 CV_{\max}^2.
+V_{\max} &= E_{\mathrm{bd}}d, \\
+Q_{\max} &= CV_{\max}, \\
+U_{\max} &= \frac12 CV_{\max}^2.
 \end{aligned}
 $$
 

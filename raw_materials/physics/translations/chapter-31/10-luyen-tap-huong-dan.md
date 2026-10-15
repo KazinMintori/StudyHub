@@ -24,10 +24,9 @@ Cuộn cảm $L=2{,}50\,\mathrm{mH}$ thuộc mạch đài dẫn đường vô tu
 
 $$
 \begin{aligned}
-X_L&=2\pi fL\\
-&=2\pi(108\times10^6)\\
-&\quad\times(2{,}50\times10^{-3})\,\Omega\\
-&\approx1{,}70\times10^6\,\Omega.
+X_L &= 2\pi fL \\
+&= 2\pi(108\times10^6) \times(2{,}50\times10^{-3})\,\Omega \\
+&\approx 1{,}70\times10^6\,\Omega.
 \end{aligned}
 $$
 
@@ -35,9 +34,9 @@ $$
 
 $$
 \begin{aligned}
-I&=\frac{V_L}{X_L}\\
-&\approx2{,}48\times10^{-3}\,\mathrm A\\
-&=2{,}48\,\mathrm{mA}.
+I &= \frac{V_L}{X_L} \\
+&\approx 2{,}48\times10^{-3}\,\mathrm A \\
+&= 2{,}48\,\mathrm{mA}.
 \end{aligned}
 $$
 
@@ -48,8 +47,8 @@ $$
 
 $$
 \begin{aligned}
-i(t)&=(2{,}40\,\mathrm{mA})\cos\theta,\\
-\theta&=(1{,}75\times10^3\,\mathrm{rad/s})t.
+i(t) &= (2{,}40\,\mathrm{mA})\cos\theta, \\
+\theta &= (1{,}75\times10^3\,\mathrm{rad/s})t.
 \end{aligned}
 $$
 
@@ -71,9 +70,9 @@ Tìm (a) điện áp điện trở theo thời gian, (b) dung kháng, (c) điệ
 
 $$
 \begin{aligned}
-V_R&=IR\\
-&=(2{,}40\times10^{-3})(125)\,\mathrm V\\
-&=0{,}300\,\mathrm V.
+V_R &= IR \\
+&= (2{,}40\times10^{-3})(125)\,\mathrm V \\
+&= 0{,}300\,\mathrm V.
 \end{aligned}
 $$
 
@@ -83,8 +82,8 @@ Do đó $v_R=(0{,}300\,\mathrm V)\cos\theta$.
 
 $$
 \begin{aligned}
-X_C&=\frac1{\omega C}\\
-&\approx81{,}6\,\Omega.
+X_C &= \frac1{\omega C} \\
+&\approx 81{,}6\,\Omega.
 \end{aligned}
 $$
 
@@ -92,8 +91,8 @@ $$
 
 $$
 \begin{aligned}
-v_C&=V_C\cos(\theta-\pi/2),\\
-V_C&=0{,}196\,\mathrm V.
+v_C &= V_C\cos(\theta-\pi/2), \\
+V_C &= 0{,}196\,\mathrm V.
 \end{aligned}
 $$
 
@@ -121,8 +120,8 @@ Trong cả hai biểu thức, $\theta$ có cùng định nghĩa như đề bài.
 
 $$
 \begin{aligned}
-f&=\frac1{2\pi RC}\\
-&\approx128\,\mathrm{Hz}.
+f &= \frac1{2\pi RC} \\
+&\approx 128\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -130,8 +129,8 @@ $$
 
 $$
 \begin{aligned}
-V_R&=IR=0{,}620\,\mathrm V,\\
-V_C&=IX_C=0{,}620\,\mathrm V.
+V_R &= IR=0{,}620\,\mathrm V, \\
+V_C &= IX_C=0{,}620\,\mathrm V.
 \end{aligned}
 $$
 
@@ -159,8 +158,8 @@ Tìm (a) biên độ dòng, (b) dòng tại 3,50 ms, (c) điện áp cực đạ
 
 $$
 \begin{aligned}
-I&=\frac{2{,}45\,\mathrm V}{116\,\Omega}\\
-&\approx0{,}0211\,\mathrm A.
+I &= \frac{2{,}45\,\mathrm V}{116\,\Omega} \\
+&\approx 0{,}0211\,\mathrm A.
 \end{aligned}
 $$
 
@@ -174,8 +173,8 @@ Suy ra
 
 $$
 \begin{aligned}
-i&=I\cos(17{,}85)\\
-&\approx0{,}0114\,\mathrm A.
+i &= I\cos(17{,}85) \\
+&\approx 0{,}0114\,\mathrm A.
 \end{aligned}
 $$
 
@@ -183,8 +182,8 @@ $$
 
 $$
 \begin{aligned}
-V_C&=\frac I{\omega C},\\
-C&=\frac I{\omega V_C}.
+V_C &= \frac I{\omega C}, \\
+C &= \frac I{\omega V_C}.
 \end{aligned}
 $$
 
@@ -218,9 +217,9 @@ Tìm (a) tần số nguồn, (b) trở kháng, (c) biên độ dòng, (d) góc p
 
 $$
 \begin{aligned}
-\omega&=\frac RL\\
-&\approx5{,}67\times10^3\,\mathrm{rad/s},\\
-f&=\frac{\omega}{2\pi}\approx902\,\mathrm{Hz}.
+\omega &= \frac RL \\
+&\approx 5{,}67\times10^3\,\mathrm{rad/s}, \\
+f &= \frac{\omega}{2\pi}\approx902\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -228,8 +227,8 @@ $$
 
 $$
 \begin{aligned}
-Z&=\sqrt{R^2+(X_L-X_C)^2}\\
-&\approx316\,\Omega.
+Z &= \sqrt{R^2+(X_L-X_C)^2} \\
+&\approx 316\,\Omega.
 \end{aligned}
 $$
 
@@ -239,8 +238,8 @@ $$
 
 $$
 \begin{aligned}
-\phi&=\arctan\frac{X_L-X_C}{R}\\
-&\approx-36{,}1^\circ.
+\phi &= \arctan\frac{X_L-X_C}{R} \\
+&\approx -36{,}1^\circ.
 \end{aligned}
 $$
 
@@ -268,8 +267,8 @@ Hai điện kháng:
 
 $$
 \begin{aligned}
-X_L&=\omega L=35{,}1\,\Omega,\\
-X_C&=\frac1{\omega C}\approx309\,\Omega.
+X_L &= \omega L=35{,}1\,\Omega, \\
+X_C &= \frac1{\omega C}\approx309\,\Omega.
 \end{aligned}
 $$
 
@@ -277,8 +276,8 @@ $$
 
 $$
 \begin{aligned}
-R&=\sqrt{Z^2-(X_L-X_C)^2}\\
-&\approx387\,\Omega.
+R &= \sqrt{Z^2-(X_L-X_C)^2} \\
+&\approx 387\,\Omega.
 \end{aligned}
 $$
 
@@ -288,9 +287,9 @@ $$
 
 $$
 \begin{aligned}
-V_R&=IR\approx16{,}3\,\mathrm V,\\
-V_L&=IX_L\approx1{,}48\,\mathrm V,\\
-V_C&=IX_C\approx13{,}0\,\mathrm V.
+V_R &= IR\approx16{,}3\,\mathrm V, \\
+V_L &= IX_L\approx1{,}48\,\mathrm V, \\
+V_C &= IX_C\approx13{,}0\,\mathrm V.
 \end{aligned}
 $$
 
@@ -315,8 +314,8 @@ Mạch RLC nối tiếp có $\omega=1{,}20\times10^4\,\mathrm{rad/s}$, $C=0{,}96
 
 $$
 \begin{aligned}
-X_L-X_C&=R\tan15{,}0^\circ\\
-&\approx17{,}4\,\Omega.
+X_L-X_C &= R\tan15{,}0^\circ \\
+&\approx 17{,}4\,\Omega.
 \end{aligned}
 $$
 
@@ -330,9 +329,9 @@ Vì vậy
 
 $$
 \begin{aligned}
-X_L&=X_C+(X_L-X_C),\\
-L&=\frac{X_L}{\omega}\\
-&\approx8{,}65\,\mathrm{mH}.
+X_L &= X_C+(X_L-X_C), \\
+L &= \frac{X_L}{\omega} \\
+&\approx 8{,}65\,\mathrm{mH}.
 \end{aligned}
 $$
 
@@ -359,9 +358,9 @@ Với điện trở, cuộn cảm và tụ, tìm (a) các biên độ điện á
 
 $$
 \begin{aligned}
-V_R&=IR=11{,}4\,\mathrm V,\\
-V_L&=I\omega L=6{,}24\,\mathrm V,\\
-V_C&=\frac I{\omega C}\approx34{,}1\,\mathrm V.
+V_R &= IR=11{,}4\,\mathrm V, \\
+V_L &= I\omega L=6{,}24\,\mathrm V, \\
+V_C &= \frac I{\omega C}\approx34{,}1\,\mathrm V.
 \end{aligned}
 $$
 
@@ -375,9 +374,9 @@ $$
 
 $$
 \begin{aligned}
-v_R&=V_R\cos\theta\approx-8{,}71\,\mathrm V,\\
-v_L&=-V_L\sin\theta\approx-4{,}03\,\mathrm V,\\
-v_C&=V_C\sin\theta\approx22{,}0\,\mathrm V.
+v_R &= V_R\cos\theta\approx-8{,}71\,\mathrm V, \\
+v_L &= -V_L\sin\theta\approx-4{,}03\,\mathrm V, \\
+v_C &= V_C\sin\theta\approx22{,}0\,\mathrm V.
 \end{aligned}
 $$
 
@@ -407,8 +406,8 @@ Lò nướng bánh lấy dòng hiệu dụng 3,95 A từ ổ điện có điện
 
 $$
 \begin{aligned}
-P_{\mathrm{av}}&=V_{\mathrm{rms}}I_{\mathrm{rms}}\\
-&=474\,\mathrm W.
+P_{\mathrm{av}} &= V_{\mathrm{rms}}I_{\mathrm{rms}} \\
+&= 474\,\mathrm W.
 \end{aligned}
 $$
 
@@ -443,8 +442,8 @@ Tìm (a) hai điện kháng, (b) góc pha, (c) hệ số công suất.
 
 $$
 \begin{aligned}
-X_L&=\omega L\approx107\,\Omega,\\
-X_C&=\frac1{\omega C}\approx699\,\Omega.
+X_L &= \omega L\approx107\,\Omega, \\
+X_C &= \frac1{\omega C}\approx699\,\Omega.
 \end{aligned}
 $$
 
@@ -452,8 +451,8 @@ $$
 
 $$
 \begin{aligned}
-\phi&=\arctan\frac{X_L-X_C}{R}\\
-&\approx-65{,}1^\circ.
+\phi &= \arctan\frac{X_L-X_C}{R} \\
+&\approx -65{,}1^\circ.
 \end{aligned}
 $$
 
@@ -479,8 +478,8 @@ Với mạch ở VP31.7.2, tìm (a) trở kháng, (b) biên độ dòng, (c) cô
 
 $$
 \begin{aligned}
-Z&=\sqrt{R^2+(X_L-X_C)^2}\\
-&\approx653\,\Omega.
+Z &= \sqrt{R^2+(X_L-X_C)^2} \\
+&\approx 653\,\Omega.
 \end{aligned}
 $$
 
@@ -490,8 +489,8 @@ $$
 
 $$
 \begin{aligned}
-P_R&=\frac12I^2R\\
-&\approx0{,}395\,\mathrm W.
+P_R &= \frac12I^2R \\
+&\approx 0{,}395\,\mathrm W.
 \end{aligned}
 $$
 
@@ -518,8 +517,8 @@ Tìm (a) cảm kháng và dung kháng, (b) góc pha, (c) điện trở.
 
 $$
 \begin{aligned}
-X_L&=\omega L=97{,}5\,\Omega,\\
-X_C&=\frac1{\omega C}\approx175\,\Omega.
+X_L &= \omega L=97{,}5\,\Omega, \\
+X_C &= \frac1{\omega C}\approx175\,\Omega.
 \end{aligned}
 $$
 
@@ -527,8 +526,8 @@ $$
 
 $$
 \begin{aligned}
-\phi&=-\arccos(0{,}800)\\
-&\approx-36{,}9^\circ.
+\phi &= -\arccos(0{,}800) \\
+&\approx -36{,}9^\circ.
 \end{aligned}
 $$
 
@@ -536,8 +535,8 @@ $$
 
 $$
 \begin{aligned}
-R&=\frac{X_L-X_C}{\tan\phi}\\
-&\approx103\,\Omega.
+R &= \frac{X_L-X_C}{\tan\phi} \\
+&\approx 103\,\Omega.
 \end{aligned}
 $$
 
@@ -585,8 +584,8 @@ $$
 
 $$
 \begin{aligned}
-\omega L-\frac1{\omega C}&=\pm A,\\
-L\omega^2\mp A\omega-\frac1C&=0.
+\omega L-\frac1{\omega C} &= \pm A, \\
+L\omega^2\mp A\omega-\frac1C &= 0.
 \end{aligned}
 $$
 
@@ -594,8 +593,8 @@ Mỗi phương trình có một nghiệm dương. Hai nghiệm cần lấy:
 
 $$
 \begin{aligned}
-\omega_-&=\frac{-A+\sqrt{A^2+4L/C}}{2L},\\
-\omega_+&=\frac{A+\sqrt{A^2+4L/C}}{2L}.
+\omega_- &= \frac{-A+\sqrt{A^2+4L/C}}{2L}, \\
+\omega_+ &= \frac{A+\sqrt{A^2+4L/C}}{2L}.
 \end{aligned}
 $$
 
@@ -603,8 +602,8 @@ Thế các đại lượng SI:
 
 $$
 \begin{aligned}
-\omega_-&\approx8{,}35\times10^4\,\mathrm{rad/s},\\
-\omega_+&\approx3{,}19\times10^5\,\mathrm{rad/s}.
+\omega_- &\approx 8{,}35\times10^4\,\mathrm{rad/s}, \\
+\omega_+ &\approx 3{,}19\times10^5\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -612,8 +611,8 @@ $$
 
 $$
 \begin{aligned}
-V&=\sqrt2V_{\mathrm{rms}}\\
-&\approx49{,}5\,\mathrm V.
+V &= \sqrt2V_{\mathrm{rms}} \\
+&\approx 49{,}5\,\mathrm V.
 \end{aligned}
 $$
 
@@ -621,8 +620,8 @@ $$
 
 $$
 \begin{aligned}
-I&=\frac V{3R}\approx0{,}132\,\mathrm A,\\
-V_R&=IR\approx16{,}5\,\mathrm V.
+I &= \frac V{3R}\approx0{,}132\,\mathrm A, \\
+V_R &= IR\approx16{,}5\,\mathrm V.
 \end{aligned}
 $$
 
@@ -630,10 +629,10 @@ Tại $\omega_-$:
 
 $$
 \begin{aligned}
-X_L&\approx125{,}3\,\Omega,\\
-X_C&\approx478{,}9\,\Omega,\\
-V_L&\approx16{,}5\,\mathrm V,\\
-V_C&\approx63{,}2\,\mathrm V.
+X_L &\approx 125{,}3\,\Omega, \\
+X_C &\approx 478{,}9\,\Omega, \\
+V_L &\approx 16{,}5\,\mathrm V, \\
+V_C &\approx 63{,}2\,\mathrm V.
 \end{aligned}
 $$
 
@@ -641,10 +640,10 @@ Tại $\omega_+$, hai điện kháng đổi vai:
 
 $$
 \begin{aligned}
-X_L&\approx478{,}9\,\Omega,\\
-X_C&\approx125{,}3\,\Omega,\\
-V_L&\approx63{,}2\,\mathrm V,\\
-V_C&\approx16{,}5\,\mathrm V.
+X_L &\approx 478{,}9\,\Omega, \\
+X_C &\approx 125{,}3\,\Omega, \\
+V_L &\approx 63{,}2\,\mathrm V, \\
+V_C &\approx 16{,}5\,\mathrm V.
 \end{aligned}
 $$
 

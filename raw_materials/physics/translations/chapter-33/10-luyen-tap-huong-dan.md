@@ -26,9 +26,9 @@ $$
 
 $$
 \begin{aligned}
-n_a\sin\theta_a&=n_b\sin\theta_b,\\
-\sin\theta_b&=\frac{\sin70{,}0^\circ}{1{,}80},\\
-\theta_b&=31{,}5^\circ.
+n_a\sin\theta_a &= n_b\sin\theta_b, \\
+\sin\theta_b &= \frac{\sin70{,}0^\circ}{1{,}80}, \\
+\theta_b &= 31{,}5^\circ.
 \end{aligned}
 $$
 
@@ -51,9 +51,9 @@ Tia sáng trong nước có chiết suất $1{,}33$ tới một khối thủy ti
 
 $$
 \begin{aligned}
-n_g&=n_w\frac{\sin\theta_w}{\sin\theta_g}\\
-&=1{,}33\frac{\sin55{,}0^\circ}{\sin37{,}0^\circ}\\
-&=1{,}81.
+n_g &= n_w\frac{\sin\theta_w}{\sin\theta_g} \\
+&= 1{,}33\frac{\sin55{,}0^\circ}{\sin37{,}0^\circ} \\
+&= 1{,}81.
 \end{aligned}
 $$
 
@@ -61,8 +61,8 @@ $$
 
 $$
 \begin{aligned}
-v_g&=\frac c{n_g}\\
-&=1{,}66\times10^8\,\mathrm{m/s}.
+v_g &= \frac c{n_g} \\
+&= 1{,}66\times10^8\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -95,8 +95,8 @@ $$
 
 $$
 \begin{aligned}
-\sin\theta_b&=\frac{\sin35{,}0^\circ}{1{,}25},\\
-\theta_b&=27{,}3^\circ.
+\sin\theta_b &= \frac{\sin35{,}0^\circ}{1{,}25}, \\
+\theta_b &= 27{,}3^\circ.
 \end{aligned}
 $$
 
@@ -104,9 +104,9 @@ $$
 
 $$
 \begin{aligned}
-f_{\mathrm{khí}}&=\frac c{\lambda_{\mathrm{khí}}}\\
-&=4{,}72\times10^{14}\,\mathrm{Hz},\\
-f_{\mathrm{lỏng}}&=f_{\mathrm{khí}}.
+f_{\mathrm{khí}} &= \frac c{\lambda_{\mathrm{khí}}} \\
+&= 4{,}72\times10^{14}\,\mathrm{Hz}, \\
+f_{\mathrm{lỏng}} &= f_{\mathrm{khí}}.
 \end{aligned}
 $$
 
@@ -131,9 +131,8 @@ Tìm (a) góc tới trong ethanol và (b) tỉ số bước sóng trong nước 
 
 $$
 \begin{aligned}
-\sin\theta_{\mathrm e}
-&=\frac{n_{\mathrm i}}{n_{\mathrm e}}\sin85{,}0^\circ,\\
-\theta_{\mathrm e}&=73{,}5^\circ.
+\sin\theta_{\mathrm e} &= \frac{n_{\mathrm i}}{n_{\mathrm e}}\sin85{,}0^\circ, \\
+\theta_{\mathrm e} &= 73{,}5^\circ.
 \end{aligned}
 $$
 
@@ -141,11 +140,10 @@ $$
 
 $$
 \begin{aligned}
-\frac{\lambda_{\mathrm i}}{\lambda_{\mathrm e}}
-&=\frac{v_{\mathrm i}}{v_{\mathrm e}}\\
-&=\frac{n_{\mathrm e}}{n_{\mathrm i}}\\
-&=\frac{1{,}36}{1{,}309}\\
-&=1{,}04.
+\frac{\lambda_{\mathrm i}}{\lambda_{\mathrm e}} &= \frac{v_{\mathrm i}}{v_{\mathrm e}} \\
+&= \frac{n_{\mathrm e}}{n_{\mathrm i}} \\
+&= \frac{1{,}36}{1{,}309} \\
+&= 1{,}04.
 \end{aligned}
 $$
 
@@ -170,9 +168,9 @@ Một chùm laser đã phân cực có cường độ $255\,\mathrm{W/m^2}$ tớ
 
 $$
 \begin{aligned}
-I&=I_0\cos^2\phi\\
-&=255\cos^2 15{,}0^\circ\\
-&=238\,\mathrm{W/m^2}.
+I &= I_0\cos^2\phi \\
+&= 255\cos^2 15{,}0^\circ \\
+&= 238\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 :::
@@ -201,10 +199,10 @@ $$
 
 $$
 \begin{aligned}
-I_2&=I_1\cos^2\phi,\\
-\cos^2\phi&=\frac{19{,}0}{27{,}0},\\
-\phi&=\arccos\sqrt{\frac{19}{27}}\\
-&=33{,}0^\circ.
+I_2 &= I_1\cos^2\phi, \\
+\cos^2\phi &= \frac{19{,}0}{27{,}0}, \\
+\phi &= \arccos\sqrt{\frac{19}{27}} \\
+&= 33{,}0^\circ.
 \end{aligned}
 $$
 
@@ -229,8 +227,8 @@ Tìm cường độ (a) sau kính thứ nhất, (b) sau kính thứ hai và (c) 
 
 $$
 \begin{aligned}
-I_1&=60{,}0\cos^2 25{,}0^\circ\\
-&=49{,}3\,\mathrm{W/m^2}.
+I_1 &= 60{,}0\cos^2 25{,}0^\circ \\
+&= 49{,}3\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -238,9 +236,9 @@ $$
 
 $$
 \begin{aligned}
-I_2&=I_1\cos^2(50{,}0^\circ-25{,}0^\circ)\\
-&=60{,}0\cos^4 25{,}0^\circ\\
-&=40{,}5\,\mathrm{W/m^2}.
+I_2 &= I_1\cos^2(50{,}0^\circ-25{,}0^\circ) \\
+&= 60{,}0\cos^4 25{,}0^\circ \\
+&= 40{,}5\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -248,8 +246,8 @@ $$
 
 $$
 \begin{aligned}
-I_2'&=60{,}0\cos^2 50{,}0^\circ\\
-&=24{,}8\,\mathrm{W/m^2}.
+I_2' &= 60{,}0\cos^2 50{,}0^\circ \\
+&= 24{,}8\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -271,9 +269,9 @@ Hai chùm sáng cùng có cường độ $I_0$ chiếu đồng thời vào một
 
 $$
 \begin{aligned}
-I_{\mathrm{ra}}&=\frac{I_0}2+I_0\cos^2 30^\circ\\
-&=\frac{I_0}2+\frac{3I_0}4\\
-&=\frac{5I_0}4.
+I_{\mathrm{ra}} &= \frac{I_0}2+I_0\cos^2 30^\circ \\
+&= \frac{I_0}2+\frac{3I_0}4 \\
+&= \frac{5I_0}4.
 \end{aligned}
 $$
 
@@ -300,8 +298,8 @@ Kết quả lớn hơn $I_0$ nhưng nhỏ hơn tổng cường độ tới $2I_0
 
 $$
 \begin{aligned}
-\tan\theta_p&=\frac{n_b}{n_a}=1{,}73,\\
-\theta_p&=60{,}0^\circ.
+\tan\theta_p &= \frac{n_b}{n_a}=1{,}73, \\
+\theta_p &= 60{,}0^\circ.
 \end{aligned}
 $$
 
@@ -322,9 +320,9 @@ Một chùm không phân cực trong không khí tới thủy tinh. Chùm phản
 
 $$
 \begin{aligned}
-n_g&=\tan57{,}0^\circ=1{,}54,\\
-\theta_b&=90^\circ-\theta_p\\
-&=33{,}0^\circ.
+n_g &= \tan57{,}0^\circ=1{,}54, \\
+\theta_b &= 90^\circ-\theta_p \\
+&= 33{,}0^\circ.
 \end{aligned}
 $$
 
@@ -349,9 +347,9 @@ Chùm đã phân cực trong không khí tới thủy tinh flint đặc có chi�
 
 $$
 \begin{aligned}
-\theta_p&=\arctan\frac{n_g}{n_a}\\
-&=\arctan1{,}66\\
-&=58{,}9^\circ.
+\theta_p &= \arctan\frac{n_g}{n_a} \\
+&= \arctan1{,}66 \\
+&= 58{,}9^\circ.
 \end{aligned}
 $$
 
@@ -382,9 +380,9 @@ $$
 
 $$
 \begin{aligned}
-\tan\theta_p&=\frac{n_w}{n_g},\\
-n_g&=\frac{1{,}33}{\tan36{,}5^\circ}\\
-&=1{,}80.
+\tan\theta_p &= \frac{n_w}{n_g}, \\
+n_g &= \frac{1{,}33}{\tan36{,}5^\circ} \\
+&= 1{,}80.
 \end{aligned}
 $$
 
@@ -424,9 +422,9 @@ Tại ngưỡng $59{,}2^\circ$:
 
 $$
 \begin{aligned}
-\sin\theta_{\mathrm{crit}}&=\frac{n_w}{n_g},\\
-n_g&=\frac{1{,}333}{\sin59{,}2^\circ}\\
-&\approx1{,}552.
+\sin\theta_{\mathrm{crit}} &= \frac{n_w}{n_g}, \\
+n_g &= \frac{1{,}333}{\sin59{,}2^\circ} \\
+&\approx 1{,}552.
 \end{aligned}
 $$
 
@@ -436,9 +434,9 @@ Tốc độ trong thủy tinh:
 
 $$
 \begin{aligned}
-v_g&=\frac c{n_g}\\
-&=\frac{c\sin59{,}2^\circ}{1{,}333}\\
-&=1{,}93\times10^8\,\mathrm{m/s}.
+v_g &= \frac c{n_g} \\
+&= \frac{c\sin59{,}2^\circ}{1{,}333} \\
+&= 1{,}93\times10^8\,\mathrm{m/s}.
 \end{aligned}
 $$
 

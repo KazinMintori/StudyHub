@@ -51,8 +51,8 @@ Góc $\theta$ được đo bằng radian. (b) Để thu sóng $1180\,\mathrm{kHz
 
 $$
 \begin{aligned}
-I&=\frac{V_{\mathrm{in}}}{\sqrt{R^2+(\omega L)^2}},\\
-\phi&=\arctan x.
+I &= \frac{V_{\mathrm{in}}}{\sqrt{R^2+(\omega L)^2}}, \\
+\phi &= \arctan x.
 \end{aligned}
 $$
 

@@ -25,10 +25,10 @@ Với bài tổng hợp về cầu dẫn, mật độ năng lượng trong vật
 
 $$
 \begin{aligned}
-&u(r) = \frac{Q^2}{32\pi^2\varepsilon_0 r^4},\\
-&U = \frac{Q^2}{8\pi\varepsilon_0 R},\\
-&W_{\mathrm{charge}} = U,\\
-&C = 4\pi\varepsilon_0 R.
+u(r) &= \frac{Q^2}{32\pi^2\varepsilon_0 r^4}, \\
+U &= \frac{Q^2}{8\pi\varepsilon_0 R}, \\
+W_{\mathrm{charge}} &= U, \\
+C &= 4\pi\varepsilon_0 R.
 \end{aligned}
 $$
 :::
@@ -80,8 +80,8 @@ Với Bài 24.63, lực ép có độ lớn và hệ số ép lần lượt là:
 
 $$
 \begin{aligned}
-&F = \frac{Q^2}{2A\varepsilon_0 K},\\
-&s = \frac{d_0}{2A^2\varepsilon_0 YK}.
+F &= \frac{Q^2}{2A\varepsilon_0 K}, \\
+s &= \frac{d_0}{2A^2\varepsilon_0 YK}.
 \end{aligned}
 $$
 
@@ -89,10 +89,10 @@ Với Bài 24.65, khi khoảng cách tức thời là z và nguồn giữ điệ
 
 $$
 \begin{aligned}
-&F(z) = \frac{\pi\varepsilon_0 r^2V^2}{2z^2},\\
-&W_{d\to2d} = \frac{\pi\varepsilon_0 r^2V^2}{4d},\\
-&U_i = \frac{\pi\varepsilon_0 r^2V^2}{2d},\\
-&U_f = \frac{\pi\varepsilon_0 r^2V^2}{4d}.
+F(z) &= \frac{\pi\varepsilon_0 r^2V^2}{2z^2}, \\
+W_{d\to2d} &= \frac{\pi\varepsilon_0 r^2V^2}{4d}, \\
+U_i &= \frac{\pi\varepsilon_0 r^2V^2}{2d}, \\
+U_f &= \frac{\pi\varepsilon_0 r^2V^2}{4d}.
 \end{aligned}
 $$
 

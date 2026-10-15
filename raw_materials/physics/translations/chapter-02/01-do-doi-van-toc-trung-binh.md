@@ -38,9 +38,9 @@ Ngược lại, nếu một chiếc xe cứu hộ chạy lùi hoặc di chuyển
 
 $$
 \begin{aligned}
-    &\Delta x = x_2 - x_1 = 19\,\mathrm m - 277\,\mathrm m = -258\,\mathrm m,\\
-    &\Delta t = 25.0\,\mathrm s - 16.0\,\mathrm s = 9.0\,\mathrm s,\\
-    &v_{\mathrm{av}-x} = \frac{\Delta x}{\Delta t} = \frac{-258\,\mathrm m}{9.0\,\mathrm s} \approx -29\,\mathrm{m/s}.
+\Delta x &= x_2 - x_1 = 19\,\mathrm m - 277\,\mathrm m = -258\,\mathrm m, \\
+\Delta t &= 25.0\,\mathrm s - 16.0\,\mathrm s = 9.0\,\mathrm s, \\
+v_{\mathrm{av}-x} &= \frac{\Delta x}{\Delta t} = \frac{-258\,\mathrm m}{9.0\,\mathrm s} \approx -29\,\mathrm{m/s}.
 \end{aligned}
 $$
 

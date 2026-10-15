@@ -17,8 +17,8 @@ Công suất nạp cuộn lý tưởng là $p=Li\,di/dt$. Tích phân từ dòng
 
 $$
 \begin{aligned}
-U_B&=\int_0^i Lu\,du\\
-&=\frac12Li^2.
+U_B &= \int_0^i Lu\,du \\
+&= \frac12Li^2.
 \end{aligned}
 $$
 

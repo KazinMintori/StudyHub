@@ -17,9 +17,9 @@ Với hai vòng, từ thông móc vòng là tổng có dấu của từ thông q
 
 $$
 \begin{aligned}
-\Lambda&=\Phi_1+\Phi_2+\dots+\Phi_N\\
-&=\sum_{k=1}^{N}\Phi_k\\
-&=N\overline\Phi.
+\Lambda &= \Phi_1+\Phi_2+\dots+\Phi_N \\
+&= \sum_{k=1}^{N}\Phi_k \\
+&= N\overline\Phi.
 \end{aligned}
 $$
 

@@ -10,10 +10,10 @@ Xem nguồn là tập các điện tích $q_1,q_2,q_3,\ldots$. Điều này phù
 
 $$
 \begin{aligned}
-&\vec F_0 = \vec F_1+\vec F_2+\vec F_3\\
-&\quad =q_0\vec E_1+q_0\vec E_2+q_0\vec E_3,\\
-&\vec E = \frac{\vec F_0}{q_0}\\
-&\quad =\vec E_1+\vec E_2+\vec E_3.
+\vec F_0 &= \vec F_1+\vec F_2+\vec F_3 \\
+&= q_0\vec E_1+q_0\vec E_2+q_0\vec E_3, \\
+\vec E &= \frac{\vec F_0}{q_0} \\
+&= \vec E_1+\vec E_2+\vec E_3.
 \end{aligned}
 $$
 
@@ -21,8 +21,8 @@ Với $n$ nguồn, cộng tất cả những vector trường tại **cùng đi�
 
 $$
 \begin{aligned}
-&\vec E = \vec E_1+\vec E_2+\cdots+\vec E_n\\
-&\quad =\sum_{i=1}^{n}\vec E_i.
+\vec E &= \vec E_1+\vec E_2+\cdots+\vec E_n \\
+&= \sum_{i=1}^{n}\vec E_i.
 \end{aligned}
 $$
 
@@ -36,12 +36,12 @@ Với điện tích trên đường, trên mặt và trong thể tích, ta dùng
 
 $$
 \begin{aligned}
-&\lambda = \frac{dq}{d\ell},\\
-&[\lambda] = \mathrm{C/m},\\
-&\sigma = \frac{dq}{dA},\\
-&[\sigma] = \mathrm{C/m^2},\\
-&\rho = \frac{dq}{dV},\\
-&[\rho] = \mathrm{C/m^3}.
+\lambda &= \frac{dq}{d\ell}, \\
+[\lambda] &= \mathrm{C/m}, \\
+\sigma &= \frac{dq}{dA}, \\
+[\sigma] &= \mathrm{C/m^2}, \\
+\rho &= \frac{dq}{dV}, \\
+[\rho] &= \mathrm{C/m^3}.
 \end{aligned}
 $$
 
@@ -72,8 +72,8 @@ Hai điện tích $q_1=+12\,\mathrm{nC}$ và $q_2=-12\,\mathrm{nC}$ cách $0.100
 
 $$
 \begin{aligned}
-&E_{1a} = 9.0\times10^9\frac{12\times10^{-9}}{(0.060)^2}\,\mathrm{N/C}\\
-&\quad =3.0\times10^4\,\mathrm{N/C}.
+E_{1a} &= 9.0\times10^9\frac{12\times10^{-9}}{(0.060)^2}\,\mathrm{N/C} \\
+&= 3.0\times10^4\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -88,26 +88,24 @@ Tính tương tự cho các khoảng cách còn lại:
 (a) Tại a, cả hai trường hướng sang phải:
 
 $$
-\begin{aligned}
-&\vec E_a = (9.8\times10^4\,\mathrm{N/C})\hat{\mathbf i}.\end{aligned}
+\vec E_a = (9.8\times10^4\,\mathrm{N/C})\hat{\mathbf i}.
 $$
 
 (b) Tại b, trường nguồn dương hướng trái, trường nguồn âm hướng phải:
 
 $$
-\begin{aligned}
-&\vec E_b = (-6.2\times10^4\,\mathrm{N/C})\hat{\mathbf i}.\end{aligned}
+\vec E_b = (-6.2\times10^4\,\mathrm{N/C})\hat{\mathbf i}.
 $$
 
 (c) Tại c, hai thành phần ngang bằng nhau, còn hai thành phần đứng đối nhau:
 
 $$
 \begin{aligned}
-&E_{1cx} = E_{2cx}\\
-&\quad =(6.39\times10^3)\frac5{13}\,\mathrm{N/C}\\
-&\quad =2.46\times10^3\,\mathrm{N/C},\\
-&E_{cy} = 0,\\
-&\vec E_c = (4.9\times10^3\,\mathrm{N/C})\hat{\mathbf i}.
+E_{1cx} &= E_{2cx} \\
+&= (6.39\times10^3)\frac5{13}\,\mathrm{N/C} \\
+&= 2.46\times10^3\,\mathrm{N/C}, \\
+E_{cy} &= 0, \\
+\vec E_c &= (4.9\times10^3\,\mathrm{N/C})\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -115,8 +113,8 @@ $$
 
 $$
 \begin{aligned}
-&\hat{\mathbf r}_1 = \cos\alpha\hat{\mathbf i}+\sin\alpha\hat{\mathbf j},\\
-&\hat{\mathbf r}_2 = -\cos\alpha\hat{\mathbf i}+\sin\alpha\hat{\mathbf j}.
+\hat{\mathbf r}_1 &= \cos\alpha\hat{\mathbf i}+\sin\alpha\hat{\mathbf j}, \\
+\hat{\mathbf r}_2 &= -\cos\alpha\hat{\mathbf i}+\sin\alpha\hat{\mathbf j}.
 \end{aligned}
 $$
 
@@ -124,12 +122,11 @@ Vì $q_2=-q_1$ và hai khoảng cách bằng nhau:
 
 $$
 \begin{aligned}
-&\vec E_c = \frac{k}{r^2}(q_1\hat{\mathbf r}_1+q_2\hat{\mathbf r}_2)\\
-&\quad =\frac{kq_1}{r^2}(\hat{\mathbf r}_1-\hat{\mathbf r}_2)\\
-&\quad =\frac{2kq_1}{r^2}\cos\alpha\hat{\mathbf i}\\
-&\quad =\frac{2(9.0\times10^9)(12\times10^{-9})}{(0.13)^2}\\
-&\quad\times\frac5{13}\,\mathrm{N/C}\,\hat{\mathbf i}\\
-&\quad \approx(4.9\times10^3\,\mathrm{N/C})\hat{\mathbf i}.
+\vec E_c &= \frac{k}{r^2}(q_1\hat{\mathbf r}_1+q_2\hat{\mathbf r}_2) \\
+&= \frac{kq_1}{r^2}(\hat{\mathbf r}_1-\hat{\mathbf r}_2) \\
+&= \frac{2kq_1}{r^2}\cos\alpha\hat{\mathbf i} \\
+&= \frac{2(9.0\times10^9)(12\times10^{-9})}{(0.13)^2} \times\frac5{13}\,\mathrm{N/C}\,\hat{\mathbf i} \\
+&\approx (4.9\times10^3\,\mathrm{N/C})\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -151,8 +148,8 @@ Mật độ dài và điện tích phần nhỏ là:
 
 $$
 \begin{aligned}
-&\lambda = \frac{Q}{2\pi a},\\
-&dQ = \lambda\,ds.
+\lambda &= \frac{Q}{2\pi a}, \\
+dQ &= \lambda\,ds.
 \end{aligned}
 $$
 
@@ -160,10 +157,10 @@ $$
 
 $$
 \begin{aligned}
-&dE = k\frac{dQ}{x^2+a^2},\\
-&\cos\alpha = \frac{x}{\sqrt{x^2+a^2}},\\
-&dE_x = dE\cos\alpha\\
-&\quad =\frac{k\lambda x}{(x^2+a^2)^{3/2}}\,ds.
+dE &= k\frac{dQ}{x^2+a^2}, \\
+\cos\alpha &= \frac{x}{\sqrt{x^2+a^2}}, \\
+dE_x &= dE\cos\alpha \\
+&= \frac{k\lambda x}{(x^2+a^2)^{3/2}}\,ds.
 \end{aligned}
 $$
 
@@ -171,17 +168,15 @@ Tích phân phủ chu vi từ $s=0$ đến $2\pi a$. Hệ số ngoài $ds$ khôn
 
 $$
 \begin{aligned}
-&E_x = \frac{k\lambda x}{(x^2+a^2)^{3/2}}\int_0^{2\pi a}ds\\
-&\quad =\frac{k\lambda x(2\pi a)}{(x^2+a^2)^{3/2}}.
+E_x &= \frac{k\lambda x}{(x^2+a^2)^{3/2}}\int_0^{2\pi a}ds \\
+&= \frac{k\lambda x(2\pi a)}{(x^2+a^2)^{3/2}}.
 \end{aligned}
 $$
 
 Thay $\lambda(2\pi a)=Q$:
 
 $$
-\begin{aligned}
-&E_x = \frac{kQx}{(x^2+a^2)^{3/2}},\\
-\end{aligned}
+E_x = \frac{kQx}{(x^2+a^2)^{3/2}},
 $$
 
 Điện trường chỉ có thành phần dọc trục:
@@ -194,8 +189,7 @@ $$
 **Đánh giá.** Ở tâm $x=0$, trường bằng không vì các cặp đối diện triệt tiêu. Ở rất xa theo chiều $+x$, với $x\gg a$, mẫu gần bằng $x^3$, nên:
 
 $$
-\begin{aligned}
-&\vec E\approx k\frac{Q}{x^2}\hat{\mathbf i}.\end{aligned}
+\vec E\approx k\frac{Q}{x^2}\hat{\mathbf i}.
 $$
 
 Vòng nhỏ so với khoảng cách tạo trường gần như điện tích điểm Q. Quy trình tổng quát là tìm thành phần của từng phần nhỏ rồi tích phân trên toàn nguồn. Ví dụ có bài biến thể ở phần cuối chương.
@@ -214,10 +208,10 @@ Vòng nhỏ so với khoảng cách tạo trường gần như điện tích đi
 
 $$
 \begin{aligned}
-&r = \sqrt{x^2+y^2},\\
-&dE = \frac{kQ}{2a}\frac{dy}{x^2+y^2},\\
-&dE_x = \frac{kQ}{2a}\frac{x\,dy}{(x^2+y^2)^{3/2}},\\
-&dE_y = -\frac{kQ}{2a}\frac{y\,dy}{(x^2+y^2)^{3/2}}.
+r &= \sqrt{x^2+y^2}, \\
+dE &= \frac{kQ}{2a}\frac{dy}{x^2+y^2}, \\
+dE_x &= \frac{kQ}{2a}\frac{x\,dy}{(x^2+y^2)^{3/2}}, \\
+dE_y &= -\frac{kQ}{2a}\frac{y\,dy}{(x^2+y^2)^{3/2}}.
 \end{aligned}
 $$
 
@@ -225,9 +219,9 @@ Cộng toàn đoạn bằng tích phân từ $-a$ đến $a$. Nguyên hàm thàn
 
 $$
 \begin{aligned}
-&E_x = \frac{kQ}{2a}\int_{-a}^{a}\frac{x\,dy}{(x^2+y^2)^{3/2}}\\
-&\quad =\frac{kQ}{2a}\left[\frac{y}{x\sqrt{x^2+y^2}}\right]_{-a}^{a}\\
-&\quad =\frac{kQ}{x\sqrt{x^2+a^2}}.
+E_x &= \frac{kQ}{2a}\int_{-a}^{a}\frac{x\,dy}{(x^2+y^2)^{3/2}} \\
+&= \frac{kQ}{2a}\left[\frac{y}{x\sqrt{x^2+y^2}}\right]_{-a}^{a} \\
+&= \frac{kQ}{x\sqrt{x^2+a^2}}.
 \end{aligned}
 $$
 
@@ -235,16 +229,15 @@ Hàm dưới tích phân đứng là hàm lẻ trên khoảng đối xứng, nê
 
 $$
 \begin{aligned}
-&E_y = -\frac{kQ}{2a}\int_{-a}^{a}\frac{y\,dy}{(x^2+y^2)^{3/2}}\\
-&\quad =0.
+E_y &= -\frac{kQ}{2a}\int_{-a}^{a}\frac{y\,dy}{(x^2+y^2)^{3/2}} \\
+&= 0.
 \end{aligned}
 $$
 
 Kết quả vector là:
 
 $$
-\begin{aligned}
-&E_x = \frac{kQ}{x\sqrt{x^2+a^2}}.\end{aligned}
+E_x = \frac{kQ}{x\sqrt{x^2+a^2}}.
 $$
 
 Do thành phần đứng triệt tiêu, vector trường là:
@@ -261,10 +254,7 @@ Trường ra xa đoạn nếu mật độ dương, và hướng về đoạn n�
 Để xét đoạn rất dài, viết kết quả theo mật độ dài:
 
 $$
-\begin{aligned}
-&E_x = \frac{2k\lambda}{x}\\
-&\quad\times(1+x^2/a^2)^{-1/2}.
-\end{aligned}
+E_x = \frac{2k\lambda}{x} \times(1+x^2/a^2)^{-1/2}.
 $$
 
 Vector trường vẫn dọc trục x:
@@ -277,8 +267,7 @@ $$
 Khi $a\gg x$, bỏ $x^2/a^2$ so với 1, được trường dây dài vô hạn. Tại điểm cách dây một khoảng vuông góc r:
 
 $$
-\begin{aligned}
-&E = \frac{|\lambda|}{2\pi\varepsilon_0r}.\end{aligned}
+E = \frac{|\lambda|}{2\pi\varepsilon_0r}.
 $$
 
 Trường giảm như $1/r$, chậm hơn trường điện tích điểm giảm như $1/r^2$. Không có dây vô hạn thật, nhưng nếu điểm khảo sát gần phần giữa của dây dài, công thức này rất gần kết quả hữu hạn. Khi r bằng $1\%$ chiều dài toàn dây, chênh lệch nhỏ hơn $0.02\%$. Ví dụ có bài biến thể ở phần cuối chương.
@@ -296,23 +285,21 @@ Trường giảm như $1/r$, chậm hơn trường điện tích điểm giảm 
 **Thực hiện.** Thay điện tích phần vòng và bán kính r vào (21.8):
 
 $$
-\begin{aligned}
-&dE_x = k\frac{2\pi\sigma rx\,dr}{(x^2+r^2)^{3/2}}.\end{aligned}
+dE_x = k\frac{2\pi\sigma rx\,dr}{(x^2+r^2)^{3/2}}.
 $$
 
 Tích phân bán kính từ 0 đến R, không từ $-R$ đến R vì mỗi vòng đã phủ toàn chu vi:
 
 $$
-\begin{aligned}
-&E_x = \frac{\sigma x}{4\varepsilon_0}\int_0^R\frac{2r\,dr}{(x^2+r^2)^{3/2}}.\end{aligned}
+E_x = \frac{\sigma x}{4\varepsilon_0}\int_0^R\frac{2r\,dr}{(x^2+r^2)^{3/2}}.
 $$
 
 Đặt $u=x^2+r^2$, $du=2r\,dr$. Cận mới là $x^2$ và $x^2+R^2$:
 
 $$
 \begin{aligned}
-&E_x = \frac{\sigma x}{4\varepsilon_0}\int_{x^2}^{x^2+R^2}u^{-3/2}\,du\\
-&\quad =\frac{\sigma x}{2\varepsilon_0}\left(\frac1x-\frac1{\sqrt{x^2+R^2}}\right).
+E_x &= \frac{\sigma x}{4\varepsilon_0}\int_{x^2}^{x^2+R^2}u^{-3/2}\,du \\
+&= \frac{\sigma x}{2\varepsilon_0}\left(\frac1x-\frac1{\sqrt{x^2+R^2}}\right).
 \end{aligned}
 $$
 
@@ -332,9 +319,7 @@ $$
 **Đánh giá.** Khi $R\gg x$, số hạng trừ rất nhỏ:
 
 $$
-\begin{aligned}
-&E\approx\frac{\sigma}{2\varepsilon_0}.\end{aligned}
-\tag{21.12}
+E\approx\frac{\sigma}{2\varepsilon_0}. \tag{21.12}
 $$
 
 Giới hạn mặt phẳng vô hạn không phụ thuộc khoảng cách đến mặt. Trường vuông góc mặt và hướng ra xa nếu mật độ dương. Với điểm phía bên kia, hướng đảo sang phía bên kia. Mật độ âm làm trường hai phía hướng về mặt. Mặt thật có thể dùng gần đúng này nếu kích thước lớn hơn nhiều khoảng cách từ điểm khảo sát đến mặt.
@@ -354,8 +339,7 @@ Hai mặt phẳng vô hạn song song cách nhau d, có mật độ mặt $+\sig
 **Thực hiện.** Trường mặt dương hướng ra xa mặt, còn trường mặt âm hướng về mặt. Giữa hai mặt, hai trường cùng hướng từ dương đến âm:
 
 $$
-\begin{aligned}
-&\vec E = \frac{\sigma}{\varepsilon_0}\hat{\mathbf j}.\end{aligned}
+\vec E = \frac{\sigma}{\varepsilon_0}\hat{\mathbf j}.
 $$
 
 Ở phía trên mặt âm hoặc phía dưới mặt dương, hai trường bằng nhau và ngược chiều, nên tổng trường bằng không.

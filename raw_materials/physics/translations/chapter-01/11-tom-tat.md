@@ -48,8 +48,8 @@ $\vec A\cdot\vec B$ là đại lượng vô hướng. Có thể tính bằng đ�
 
 $$
 \begin{aligned}
-    &\vec A\cdot\vec B=AB\cos\varphi=|\vec A|\,|\vec B|\cos\varphi,\\
-    &\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.
+\vec A\cdot\vec B &= AB\cos\varphi=|\vec A|\,|\vec B|\cos\varphi, \\
+\vec A\cdot\vec B &= A_xB_x+A_yB_y+A_zB_z.
 \end{aligned}
 $$
 
@@ -61,10 +61,10 @@ $\vec C=\vec A\times\vec B$ là một vector thứ ba. Độ lớn phụ thuộc
 
 $$
 \begin{aligned}
-    &C=AB\sin\varphi,\\
-    &C_x = A_yB_z-A_zB_y,\\
-    &C_y = A_zB_x-A_xB_z,\\
-    &C_z = A_xB_y-A_yB_x.
+C &= AB\sin\varphi, \\
+C_x &= A_yB_z-A_zB_y, \\
+C_y &= A_zB_x-A_xB_z, \\
+C_z &= A_xB_y-A_yB_x.
 \end{aligned}
 $$
 

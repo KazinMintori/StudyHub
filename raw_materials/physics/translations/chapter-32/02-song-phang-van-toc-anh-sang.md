@@ -25,10 +25,7 @@ Nếu điện trường $\vec{E}$ hoặc từ trường $\vec{B}$ có một thà
 Phương trình Maxwell thứ ba là định luật cảm ứng Faraday:
 
 $$
-\begin{aligned}
-\oint \vec{E} \cdot d\vec{l} &= -\frac{d\Phi_B}{dt}.
-\end{aligned}
-\tag{32.1}
+\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}. \tag{32.1}
 $$
 
 Để kiểm tra định luật này, ta chọn một đường cong kín hình chữ nhật $efgh$ nằm trong mặt phẳng song song với mặt phẳng $xy$ như quan sát ở Hình 32.7a.
@@ -42,10 +39,7 @@ Khung chữ nhật có chiều cao $a$ dọc theo trục $y$ và chiều rộng 
 - Trên cạnh $gh$: Vector $\vec{E}$ hướng theo chiều $+y$ trong khi vector vi phân dịch chuyển $d\vec{l}$ hướng ngược lại theo chiều $-y$. Do đó tích phân đường cho kết quả:
 
 $$
-\begin{aligned}
-\oint \vec{E} \cdot d\vec{l} &= -Ea.
-\end{aligned}
-\tag{32.2}
+\oint \vec{E} \cdot d\vec{l} = -Ea. \tag{32.2}
 $$
 
 Vế trái của định luật Faraday khác không, kéo theo vế phải cũng phải khác không. Điều này đòi hỏi từ thông qua khung chữ nhật $efgh$ phải biến thiên theo thời gian. Muốn có từ thông gửi qua một khung nằm trong mặt phẳng $xy$, từ trường $\vec{B}$ bắt buộc phải có thành phần vuông góc với mặt phẳng này, tức là có thành phần theo trục $z$.
@@ -53,19 +47,13 @@ Vế trái của định luật Faraday khác không, kéo theo vế phải cũn
 Trong khoảng thời gian $dt$, mặt sóng chuyển động với vận tốc $c$ sẽ tiến sang phải một quãng đường $c\,dt$, quét thêm một diện tích $a(c\,dt)$ của khung chữ nhật. Lượng từ thông gửi qua khung tăng thêm một lượng $d\Phi_B = B(ac\,dt)$, kéo theo tốc độ biến thiên của từ thông:
 
 $$
-\begin{aligned}
-\frac{d\Phi_B}{dt} &= Bac.
-\end{aligned}
-\tag{32.3}
+\frac{d\Phi_B}{dt} = Bac. \tag{32.3}
 $$
 
 Thay các biểu thức (32.2) và (32.3) vào định luật Faraday (32.1), ta thu được $-Ea = -Bac$, suy ra mối liên hệ nền tảng:
 
 $$
-\begin{aligned}
-E &= cB.
-\end{aligned}
-\tag{32.4}
+E = cB. \tag{32.4}
 $$
 
 Phương trình (32.4) khẳng định rằng: Sóng điện từ chỉ thỏa mãn định luật Faraday khi vận tốc truyền sóng $c$ cùng độ lớn của điện trường $E$ và từ trường $B$ liên hệ chặt chẽ với nhau qua hệ thức $E = cB$. Nếu ta giả sử từ trường $\vec{B}$ hướng theo chiều âm trục $z$ ($-z$), vế phải của phương trình sẽ đổi dấu và dẫn tới $E = -cB$, điều này vô nghiệm vì các độ lớn $E$, $B$ và $c$ đều là các số thực dương. Đồng thời, bất kỳ thành phần nào của từ trường dọc theo trục $y$ (song song với $\vec{E}$) đều không tạo ra từ thông qua khung $efgh$ và không tham gia vào cấu trúc sóng truyền đi.
@@ -75,10 +63,7 @@ Phương trình (32.4) khẳng định rằng: Sóng điện từ chỉ thỏa m
 Phương trình Maxwell thứ tư là định luật Ampere mở rộng. Khi xét sóng truyền trong chân không không có dòng điện dẫn ($i_{\text{C}} = 0$), định luật có dạng:
 
 $$
-\begin{aligned}
-\oint \vec{B} \cdot d\vec{l} &= \mu_0 \epsilon_0 \frac{d\Phi_E}{dt}.
-\end{aligned}
-\tag{32.5}
+\oint \vec{B} \cdot d\vec{l} = \mu_0 \epsilon_0 \frac{d\Phi_E}{dt}. \tag{32.5}
 $$
 
 Để kiểm tra định luật Ampere, ta đặt một khung chữ nhật $efgh$ nằm trong mặt phẳng song song với mặt phẳng $xz$ có chiều cao $a$ dọc theo trục $z$ và chiều rộng $\Delta x$ dọc theo trục $x$.
@@ -90,28 +75,19 @@ Chọn vector pháp tuyến diện tích $d\vec{A}$ hướng theo chiều $+y$. 
 Hoàn toàn tương tự, chỉ có cạnh $gh$ nơi từ trường $\vec{B}$ và vector dịch chuyển $d\vec{l}$ cùng hướng song song với trục $+z$ đóng góp vào tích phân đường:
 
 $$
-\begin{aligned}
-\oint \vec{B} \cdot d\vec{l} &= Ba.
-\end{aligned}
-\tag{32.6}
+\oint \vec{B} \cdot d\vec{l} = Ba. \tag{32.6}
 $$
 
 Trong khoảng thời gian $dt$, diện tích vùng có điện trường quét qua khung tăng thêm $a(c\,dt)$, do đó điện thông qua khung tăng một lượng $d\Phi_E = E(ac\,dt)$. Tốc độ biến thiên của điện thông là:
 
 $$
-\begin{aligned}
-\frac{d\Phi_E}{dt} &= Eac.
-\end{aligned}
-\tag{32.7}
+\frac{d\Phi_E}{dt} = Eac. \tag{32.7}
 $$
 
 Thay các kết quả (32.6) và (32.7) vào định luật Ampere (32.5), ta được $Ba = \mu_0 \epsilon_0 Eac$, rút gọn cho ta:
 
 $$
-\begin{aligned}
-B &= \epsilon_0 \mu_0 c E.
-\end{aligned}
-\tag{32.8}
+B = \epsilon_0 \mu_0 c E. \tag{32.8}
 $$
 
 ### Vận tốc của sóng điện từ trong chân không
@@ -128,19 +104,16 @@ $$
 Vì độ lớn từ trường $B$ khác không, phương trình đòi hỏi $\epsilon_0 \mu_0 c^2 = 1$, kéo theo công thức xác định vận tốc ánh sáng trong chân không:
 
 $$
-\begin{aligned}
-c &= \frac{1}{\sqrt{\epsilon_0 \mu_0}}.
-\end{aligned}
-\tag{32.9}
+c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}. \tag{32.9}
 $$
 
 Thay các giá trị bằng số của hằng số điện và hằng số từ:
 
 $$
 \begin{aligned}
-\epsilon_0&=8{,}854\times10^{-12}\,\mathrm{F/m},\\
-\mu_0&=4\pi\times10^{-7}\,\mathrm{H/m}\\
-&\approx1{,}257\times10^{-6}\,\mathrm{H/m}.
+\epsilon_0 &= 8{,}854\times10^{-12}\,\mathrm{F/m}, \\
+\mu_0 &= 4\pi\times10^{-7}\,\mathrm{H/m} \\
+&\approx 1{,}257\times10^{-6}\,\mathrm{H/m}.
 \end{aligned}
 $$
 
@@ -148,10 +121,9 @@ Vận tốc ánh sáng tính được là:
 
 $$
 \begin{aligned}
-&\epsilon_0\mu_0\\
-&\approx1{,}113\times10^{-17}\,\mathrm{s^2/m^2},\\
-&c=1/\sqrt{\epsilon_0\mu_0}\\
-&\approx2{,}998\times10^8\,\mathrm{m/s}.
+\epsilon_0\mu_0 &\approx 1{,}113\times10^{-17}\,\mathrm{s^2/m^2}, \\
+c &= 1/\sqrt{\epsilon_0\mu_0} \\
+&\approx 2{,}998\times10^8\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -176,11 +148,7 @@ Từ việc phân tích cấu hình sóng phẳng ở trên, ta đúc kết các
 Phương trình sóng (32.9) có thể được thiết lập một cách tổng quát và chặt chẽ hơn bằng phép tính vi phân. Trong cơ học sóng (mục 15.3), li độ dao động $y(x,t)$ của một sóng cơ lan truyền dọc theo trục $x$ với vận tốc $v$ phải thỏa mãn phương trình vi phân đạo hàm riêng:
 
 $$
-\begin{aligned}
-\frac{\partial^2 y(x,t)}{\partial x^2} &= \frac{1}{v^2} \\
-&\quad \times \frac{\partial^2 y(x,t)}{\partial t^2}.
-\end{aligned}
-\tag{32.10}
+\frac{\partial^2 y(x,t)}{\partial x^2} = \frac{1}{v^2} \times \frac{\partial^2 y(x,t)}{\partial t^2}. \tag{32.10}
 $$
 
 Để thiết lập phương trình tương ứng cho sóng điện từ, ta xét điện trường $E_y(x,t)$ và từ trường $B_z(x,t)$ biến thiên liên tục theo cả tọa độ $x$ và thời gian $t$.
@@ -193,17 +161,13 @@ Tích phân lưu thông của điện trường dọc theo chu vi khung là:
 
 $$
 \begin{aligned}
-E_{\mathrm L}&=E_y(x,t),\\
-E_{\mathrm R}&=E_y(x+\Delta x,t).
+E_{\mathrm L} &= E_y(x,t), \\
+E_{\mathrm R} &= E_y(x+\Delta x,t).
 \end{aligned}
 $$
 
 $$
-\begin{aligned}
-\oint\vec E\cdot d\vec l
-&=a(E_{\mathrm R}-E_{\mathrm L}).
-\end{aligned}
-\tag{32.11}
+\oint\vec E\cdot d\vec l &=a(E_{\mathrm R}-E_{\mathrm L}). \tag{32.11}
 $$
 
 Các chỉ số L và R biểu thị cạnh trái và cạnh phải của khung. Từ thông qua khung là $\Phi_B \approx B_z(x,t) a \Delta x$. Khi lấy đạo hàm theo thời gian, Faraday cho $a(E_{\mathrm R}-E_{\mathrm L})=-a\Delta x\,\partial B_z/\partial t$. Chia cho $a\Delta x$, ta có:
@@ -216,10 +180,7 @@ $$
 Cho $\Delta x\to0$, thương ở vế trái tiến tới đạo hàm theo $x$, nên ta thu được phương trình đạo hàm riêng liên hệ giữa tốc độ biến thiên không gian của điện trường và tốc độ biến thiên thời gian của từ trường:
 
 $$
-\begin{aligned}
-\frac{\partial E_y}{\partial x} &= -\frac{\partial B_z}{\partial t}.
-\end{aligned}
-\tag{32.12}
+\frac{\partial E_y}{\partial x} = -\frac{\partial B_z}{\partial t}. \tag{32.12}
 $$
 
 Hoàn toàn tương tự, áp dụng định luật Ampere mở rộng trong chân không cho một khung chữ nhật hẹp song song với mặt phẳng $xz$:
@@ -230,35 +191,25 @@ Tích phân lưu thông của từ trường dọc theo chu vi khung là:
 
 $$
 \begin{aligned}
-B_{\mathrm L}&=B_z(x,t),\\
-B_{\mathrm R}&=B_z(x+\Delta x,t).
+B_{\mathrm L} &= B_z(x,t), \\
+B_{\mathrm R} &= B_z(x+\Delta x,t).
 \end{aligned}
 $$
 
 $$
-\begin{aligned}
-\oint\vec B\cdot d\vec l
-&=-a(B_{\mathrm R}-B_{\mathrm L}).
-\end{aligned}
-\tag{32.13}
+\oint\vec B\cdot d\vec l &=-a(B_{\mathrm R}-B_{\mathrm L}). \tag{32.13}
 $$
 
 Tốc độ biến thiên điện thông qua khung là $d\Phi_E/dt \approx (\partial E_y/\partial t) a \Delta x$. Ampère–Maxwell cho $-a(B_{\mathrm R}-B_{\mathrm L})=\epsilon_0\mu_0a\Delta x\,\partial E_y/\partial t$. Chia cho $a\Delta x$ và cho $\Delta x\to0$, ta thu được phương trình đạo hàm riêng thứ hai:
 
 $$
-\begin{aligned}
--\frac{\partial B_z}{\partial x} &= \epsilon_0 \mu_0 \\
-&\quad \times \frac{\partial E_y}{\partial t}.
-\end{aligned}
-\tag{32.14}
+-\frac{\partial B_z}{\partial x} &= \epsilon_0 \mu_0 \times \frac{\partial E_y}{\partial t}. \tag{32.14}
 $$
 
 Bây giờ ta thực hiện bước kết hợp quyết định: Lấy đạo hàm riêng theo $x$ đối với cả hai vế của phương trình (32.12), và lấy đạo hàm riêng theo $t$ đối với cả hai vế của phương trình (32.14):
 
 $$
-\begin{aligned}
-\frac{\partial^2 E_y}{\partial x^2} &= -\frac{\partial^2 B_z}{\partial x \partial t},
-\end{aligned}
+\frac{\partial^2 E_y}{\partial x^2} = -\frac{\partial^2 B_z}{\partial x \partial t},
 $$
 
 $$
@@ -272,11 +223,7 @@ $$
 Trong miền các trường có đạo hàm bậc hai liên tục, thứ tự lấy đạo hàm riêng không làm thay đổi giá trị đạo hàm hỗn hợp ($\partial^2 B_z / \partial x \partial t$ bằng $\partial^2 B_z / \partial t \partial x$), ta khử được từ trường $B_z$ và thu được phương trình vi phân truyền sóng thuần túy của điện trường:
 
 $$
-\begin{aligned}
-\frac{\partial^2 E_y}{\partial x^2} &= \epsilon_0 \mu_0 \\
-&\quad \times \frac{\partial^2 E_y}{\partial t^2}.
-\end{aligned}
-\tag{32.15}
+\frac{\partial^2 E_y}{\partial x^2} = \epsilon_0 \mu_0 \times \frac{\partial^2 E_y}{\partial t^2}. \tag{32.15}
 $$
 
 Phương trình (32.15) có dạng toán học trùng khớp hoàn toàn với phương trình sóng tổng quát (32.10). Bằng cách so sánh hệ số trước đạo hàm bậc hai theo thời gian, ta tìm được vận tốc truyền sóng:
@@ -291,10 +238,7 @@ $$
 Bằng cách hoàn toàn tương tự, nếu lấy đạo hàm riêng (32.12) theo $t$ và lấy đạo hàm riêng (32.14) theo $x$, ta khử được điện trường $E_y$ và chứng minh được rằng từ trường $B_z$ cũng thỏa mãn phương trình vi phân sóng tương đương:
 
 $$
-\begin{aligned}
-\frac{\partial^2 B_z}{\partial x^2} &= \epsilon_0 \mu_0 \\
-&\quad \times \frac{\partial^2 B_z}{\partial t^2}.
-\end{aligned}
+\frac{\partial^2 B_z}{\partial x^2} = \epsilon_0 \mu_0 \times \frac{\partial^2 B_z}{\partial t^2}.
 $$
 
 Như vậy, cả hai thành phần trường của sóng điện từ đều tuân theo cùng một phương trình truyền sóng với vận tốc truyền sóng trong chân không đúng bằng tốc độ ánh sáng.

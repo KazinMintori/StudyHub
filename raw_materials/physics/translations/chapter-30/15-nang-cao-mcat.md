@@ -23,8 +23,8 @@ Một ống dây dài có $N_1$ vòng, bán kính $b$, bao quanh ống dây đ�
 
 $$
 \begin{aligned}
-B_{\mathrm{trong}}&=\frac{\mu_0I}{\ell}(N_1-N_2),\\
-\Phi_2&=B_{\mathrm{trong}}\pi a^2.
+B_{\mathrm{trong}} &= \frac{\mu_0I}{\ell}(N_1-N_2), \\
+\Phi_2 &= B_{\mathrm{trong}}\pi a^2.
 \end{aligned}
 $$
 
@@ -32,9 +32,8 @@ $$
 
 $$
 \begin{aligned}
-\Phi_1&=B_{\mathrm{trong}}\pi a^2\\
-&\quad+\frac{\mu_0N_1I}{\ell}\pi(b^2-a^2)\\
-&=\frac{\mu_0I\pi}{\ell}(N_1b^2-N_2a^2).
+\Phi_1 &= B_{\mathrm{trong}}\pi a^2 +\frac{\mu_0N_1I}{\ell}\pi(b^2-a^2) \\
+&= \frac{\mu_0I\pi}{\ell}(N_1b^2-N_2a^2).
 \end{aligned}
 $$
 
@@ -42,9 +41,9 @@ $$
 
 $$
 \begin{aligned}
-L_1&=\kappa N_1^2b^2,\\
-L_2&=\kappa N_2^2a^2,\\
-M&=\kappa N_1N_2a^2.
+L_1 &= \kappa N_1^2b^2, \\
+L_2 &= \kappa N_2^2a^2, \\
+M &= \kappa N_1N_2a^2.
 \end{aligned}
 $$
 
@@ -52,10 +51,8 @@ Trong cấu hình đối nhau, tự cảm nối tiếp là
 
 $$
 \begin{aligned}
-L_-&=L_1+L_2-2M\\
-&=\kappa N_1^2b^2\\
-&\quad+\kappa N_2^2a^2\\
-&\quad-2\kappa N_1N_2a^2.
+L_- &= L_1+L_2-2M \\
+&= \kappa N_1^2b^2 +\kappa N_2^2a^2 -2\kappa N_1N_2a^2.
 \end{aligned}
 $$
 
@@ -65,10 +62,10 @@ Cũng có thể suy từ $LI=N_1\Phi_1-N_2\Phi_2$. Dấu trừ xuất hiện vì
 
 $$
 \begin{aligned}
-U_a&=\frac{B_{\mathrm{trong}}^2}{2\mu_0}\pi a^2\ell,\\
-U_b&=\frac{B_{\mathrm{vành}}^2}{2\mu_0}\pi(b^2-a^2)\ell,\\
-B_{\mathrm{vành}}&=\frac{\mu_0N_1I}{\ell},\\
-L_-&=\frac{2(U_a+U_b)}{I^2}.
+U_a &= \frac{B_{\mathrm{trong}}^2}{2\mu_0}\pi a^2\ell, \\
+U_b &= \frac{B_{\mathrm{vành}}^2}{2\mu_0}\pi(b^2-a^2)\ell, \\
+B_{\mathrm{vành}} &= \frac{\mu_0N_1I}{\ell}, \\
+L_- &= \frac{2(U_a+U_b)}{I^2}.
 \end{aligned}
 $$
 
@@ -78,10 +75,8 @@ Kết quả trùng biểu thức hỗ cảm ở trên và luôn không âm.
 
 $$
 \begin{aligned}
-L_+&=L_1+L_2+2M\\
-&=\kappa N_1^2b^2\\
-&\quad+\kappa N_2^2a^2\\
-&\quad+2\kappa N_1N_2a^2.
+L_+ &= L_1+L_2+2M \\
+&= \kappa N_1^2b^2 +\kappa N_2^2a^2 +2\kappa N_1N_2a^2.
 \end{aligned}
 $$
 
@@ -89,8 +84,8 @@ $$
 
 $$
 \begin{aligned}
-L_-&=8{,}93\,\mathrm{mH},\\
-L_+&=16{,}0\,\mathrm{mH}.
+L_- &= 8{,}93\,\mathrm{mH}, \\
+L_+ &= 16{,}0\,\mathrm{mH}.
 \end{aligned}
 $$
 
@@ -120,9 +115,9 @@ Bốn mặt bên của bồn có chiều rộng $W$, chiều cao $D$. Mức ch�
 
 $$
 \begin{aligned}
-L&=L_0[(1-f)+K_mf]\\
-&=L_0+f(L_f-L_0),\\
-d&=D\frac{L-L_0}{L_f-L_0}.
+L &= L_0[(1-f)+K_mf] \\
+&= L_0+f(L_f-L_0), \\
+d &= D\frac{L-L_0}{L_f-L_0}.
 \end{aligned}
 $$
 
@@ -167,8 +162,8 @@ Trong Hình P30.71, đóng $S$ tại $t=0$. Nhánh cuộn có dòng $i_1$, nhán
 
 $$
 \begin{aligned}
-L\frac{di_1}{dt}+R_1i_1&=\mathcal E,\\
-R_2\frac{dq_2}{dt}+\frac{q_2}{C}&=\mathcal E.
+L\frac{di_1}{dt}+R_1i_1 &= \mathcal E, \\
+R_2\frac{dq_2}{dt}+\frac{q_2}{C} &= \mathcal E.
 \end{aligned}
 $$
 
@@ -176,10 +171,10 @@ Tích phân với $i_1(0)=0$ và $q_2(0)=0$ cho
 
 $$
 \begin{aligned}
-i_1(t)&=\frac{\mathcal E}{R_1}(1-e^{-t/\tau_L}),\\
-q_2(t)&=\mathcal EC(1-e^{-t/\tau_C}),\\
-i_2(t)&=\frac{dq_2}{dt}\\
-&=\frac{\mathcal E}{R_2}e^{-t/\tau_C}.
+i_1(t) &= \frac{\mathcal E}{R_1}(1-e^{-t/\tau_L}), \\
+q_2(t) &= \mathcal EC(1-e^{-t/\tau_C}), \\
+i_2(t) &= \frac{dq_2}{dt} \\
+&= \frac{\mathcal E}{R_2}e^{-t/\tau_C}.
 \end{aligned}
 $$
 
@@ -190,19 +185,15 @@ $$
 (d) Phương trình hai dòng bằng nhau là
 
 $$
-\begin{aligned}
-&1{,}92(1-e^{-t/0{,}32})\\
-&\qquad=0{,}00960e^{-t/0{,}10}.
-\end{aligned}
+1{,}92(1-e^{-t/0{,}32}) \qquad=0{,}00960e^{-t/0{,}10}.
 $$
 
 Các thời gian trong số mũ được tính bằng giây. Ở thời gian rất ngắn,
 
 $$
 \begin{aligned}
-i_1&\approx(6{,}00\,\mathrm{A/s})t,\\
-i_2&\approx0{,}00960\,\mathrm A\\
-&\quad-(0{,}0960\,\mathrm{A/s})t.
+i_1 &\approx (6{,}00\,\mathrm{A/s})t, \\
+i_2 &\approx 0{,}00960\,\mathrm A -(0{,}0960\,\mathrm{A/s})t.
 \end{aligned}
 $$
 
@@ -218,9 +209,9 @@ $$
 
 $$
 \begin{aligned}
-1-e^{-t_2/0{,}32}&\approx\frac12,\\
-t_2&\approx0{,}32\ln2\,\mathrm s\\
-&\approx0{,}22\,\mathrm s.
+1-e^{-t_2/0{,}32} &\approx \frac12, \\
+t_2 &\approx 0{,}32\ln2\,\mathrm s \\
+&\approx 0{,}22\,\mathrm s.
 \end{aligned}
 $$
 
@@ -253,8 +244,8 @@ Nam châm MRI điển hình trong bài đọc có khoảng bao nhiêu vòng dây
 
 $$
 \begin{aligned}
-N&=\sqrt{\frac{L\ell}{\mu_0\pi r^2}}\\
-&\approx3{,}0\times10^3.
+N &= \sqrt{\frac{L\ell}{\mu_0\pi r^2}} \\
+&\approx 3{,}0\times10^3.
 \end{aligned}
 $$
 
@@ -277,9 +268,9 @@ Nếu một phần nam châm mất siêu dẫn và điện trở đột ngột t
 
 $$
 \begin{aligned}
-t_{1/2}&=\frac LR\ln2\\
-&\approx610\,\mathrm s\\
-&\approx10\,\mathrm{min}.
+t_{1/2} &= \frac LR\ln2 \\
+&\approx 610\,\mathrm s \\
+&\approx 10\,\mathrm{min}.
 \end{aligned}
 $$
 
@@ -302,8 +293,8 @@ Nếu quench tiếp diễn, heli sôi đi và ngày càng nhiều phần nam ch�
 
 $$
 \begin{aligned}
-A(t)&=\frac1L\int_0^tR(s)\,ds,\\
-\frac{i(t)}{I_0}&=e^{-A(t)}.
+A(t) &= \frac1L\int_0^tR(s)\,ds, \\
+\frac{i(t)}{I_0} &= e^{-A(t)}.
 \end{aligned}
 $$
 
@@ -326,10 +317,10 @@ Nếu toàn bộ năng lượng từ trường trong nam châm chuyển thành n
 
 $$
 \begin{aligned}
-U_B&=\frac12LI^2\\
-&\approx1{,}24\times10^6\,\mathrm J,\\
-m&=\frac{U_B}{\mathcal L_v}\\
-&\approx59\,\mathrm{kg}.
+U_B &= \frac12LI^2 \\
+&\approx 1{,}24\times10^6\,\mathrm J, \\
+m &= \frac{U_B}{\mathcal L_v} \\
+&\approx 59\,\mathrm{kg}.
 \end{aligned}
 $$
 

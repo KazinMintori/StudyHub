@@ -1,0 +1,15 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "01-don-vi-vector",
+  "route": "/vat-ly-1/bai-giang/01-don-vi-vector",
+  "notes": "docs/vat-ly-1/bai-giang/01-don-vi-vector.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

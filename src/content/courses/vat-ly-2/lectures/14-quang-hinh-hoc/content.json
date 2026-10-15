@@ -1,0 +1,18 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "14-quang-hinh-hoc",
+  "route": "/vat-ly-2/bai-giang/14-quang-hinh-hoc",
+  "notes": "docs/vat-ly-2/bai-giang/14-quang-hinh-hoc.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "chiet-suat",
+    "don-vi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

@@ -20,9 +20,9 @@ Bộ sạc điện thoại thông thường cung cấp hiệu điện thế $5{,
 
 $$
 \begin{aligned}
-&R' = \frac{\rho}{A}\\
-&\quad =\frac{1{,}72\times10^{-8}}{2{,}00\times10^{-7}}\\
-&\quad =0{,}0860\,\Omega/\mathrm{m}.
+R' &= \frac{\rho}{A} \\
+&= \frac{1{,}72\times10^{-8}}{2{,}00\times10^{-7}} \\
+&= 0{,}0860\,\Omega/\mathrm{m}.
 \end{aligned}
 $$
 
@@ -51,12 +51,8 @@ Vậy chiều dài cáp một chiều xấp xỉ $5{,}8\,\mathrm{m}$ theo giả 
 
 $$
 \begin{aligned}
-&\frac{V_L-14}{1}\\
-&\quad +\frac{V_L}{2}\\
-&\quad +(V_L-V_R)=0,\\
-&\frac{V_R-14}{2}\\
-&\quad +V_R\\
-&\quad +(V_R-V_L)=0.
+\frac{V_L-14}{1} +\frac{V_L}{2} +(V_L-V_R) &= 0, \\
+\frac{V_R-14}{2} +V_R +(V_R-V_L) &= 0.
 \end{aligned}
 $$
 
@@ -87,9 +83,8 @@ Xét mạch ở Hình P26.63. (a) Suất điện động $\mathcal E$ của ngu�
 
 $$
 \begin{aligned}
-&\frac{1}{R_{AB}} = \frac{1}{30}+\frac{1}{60}\\
-&\quad +\frac{1}{60}+\frac{1}{30},\\
-&R_{AB} = 10{,}0\,\mathrm{\Omega}.
+\frac{1}{R_{AB}} &= \frac{1}{30}+\frac{1}{60} +\frac{1}{60}+\frac{1}{30}, \\
+R_{AB} &= 10{,}0\,\mathrm{\Omega}.
 \end{aligned}
 $$
 
@@ -105,9 +100,8 @@ Chọn chiều dòng từ phải sang trái ở các nhánh dưới. Khi đó d�
 
 $$
 \begin{aligned}
-&\mathcal E = V_D-V_L\\
-&\quad-15I_{15}\\
-&\quad =-108{,}75\,\mathrm{V}.
+\mathcal E &= V_D-V_L -15I_{15} \\
+&= -108{,}75\,\mathrm{V}.
 \end{aligned}
 $$
 
@@ -134,8 +128,8 @@ Trong mạch Hình P26.64, $\mathcal E=24{,}0\,\mathrm{V}$, $R_1=6{,}00\,\Omega$
 
 $$
 \begin{aligned}
-&V_1 = \mathcal E\frac{R_1R_2/(R_1+R_2)}{R_3+R_1R_2/(R_1+R_2)}\\
-&\quad =\mathcal E\frac{R_1R_2}{R_1R_2+R_3R_1+R_3R_2}.
+V_1 &= \mathcal E\frac{R_1R_2/(R_1+R_2)}{R_3+R_1R_2/(R_1+R_2)} \\
+&= \mathcal E\frac{R_1R_2}{R_1R_2+R_3R_1+R_3R_2}.
 \end{aligned}
 $$
 
@@ -143,9 +137,9 @@ $$
 
 $$
 \begin{aligned}
-&D = R_1(R_2+R_3)+R_2R_3,\\
-&K = \mathcal E R_1^2R_3,\\
-&\frac{dV_1}{dR_2} = \frac{K}{D^2}>0.
+D &= R_1(R_2+R_3)+R_2R_3, \\
+K &= \mathcal E R_1^2R_3, \\
+\frac{dV_1}{dR_2} &= \frac{K}{D^2}>0.
 \end{aligned}
 $$
 
@@ -188,8 +182,8 @@ Giá điện là $0{,}12\,\mathrm{USD/kWh}$. Chi phí tháng:
 
 $$
 \begin{aligned}
-&K_{\mathrm{month}} = 30(0{,}12)U_{\mathrm{day}}\\
-&\quad =3{,}60U_{\mathrm{day}}\,\mathrm{USD}.
+K_{\mathrm{month}} &= 30(0{,}12)U_{\mathrm{day}} \\
+&= 3{,}60U_{\mathrm{day}}\,\mathrm{USD}.
 \end{aligned}
 $$
 
@@ -214,9 +208,8 @@ Trong mạch Hình P26.66, mỗi điện trở có công suất tối đa $2{,}0
 
 $$
 \begin{aligned}
-&R_{eq} = 25+30+6{,}383\\
-&\quad +40+25\\
-&\quad =126{,}383\,\Omega.
+R_{eq} &= 25+30+6{,}383 +40+25 \\
+&= 126{,}383\,\Omega.
 \end{aligned}
 $$
 
@@ -241,12 +234,8 @@ Khi hở, $V_a=36(3)/(6+3)=12\,\mathrm{V}$ và $V_b=36(6)/(3+6)=24\,\mathrm{V}$,
 
 $$
 \begin{aligned}
-&\frac{V_a-36}{6}\\
-&\quad +\frac{V_a}{3}\\
-&\quad +\frac{V_a-V_b}{3}=0,\\
-&\frac{V_b-36}{3}\\
-&\quad +\frac{V_b}{6}\\
-&\quad +\frac{V_b-V_a}{3}=0.
+\frac{V_a-36}{6} +\frac{V_a}{3} +\frac{V_a-V_b}{3} &= 0, \\
+\frac{V_b-36}{3} +\frac{V_b}{6} +\frac{V_b-V_a}{3} &= 0.
 \end{aligned}
 $$
 
@@ -267,9 +256,9 @@ Ba điện trở giống nhau mắc nối tiếp tiêu tán tổng công suất 
 
 $$
 \begin{aligned}
-&\frac{P_{song\ song}}{P_{noi\ tiep}} = \frac{3R}{R/3}=9,\\
-&P_{song\ song} = 9(45{,}0\,\mathrm{W})\\
-&\quad =405\,\mathrm{W}.
+\frac{P_{song\ song}}{P_{noi\ tiep}} &= \frac{3R}{R/3}=9, \\
+P_{song\ song} &= 9(45{,}0\,\mathrm{W}) \\
+&= 405\,\mathrm{W}.
 \end{aligned}
 $$
 :::
@@ -290,15 +279,15 @@ Hai bản tụ có diện tích $A$, cách nhau $d$, được lấp đầy bởi
 
 $$
 \begin{aligned}
-    &\tau=RC=K\epsilon_0\rho=239\,\mathrm{s}.\\
-    &C = K\epsilon_0A/d\\
-    &\quad =2{,}57\times10^{-10}\,\mathrm{F},\\
-    &q_0 = C\mathcal E\\
-    &\quad =1{,}29\,\mathrm{nC},\\
-    &t_{1/2} = \tau\ln2\\
-    &\quad =166\,\mathrm{s},\\
-    &i(t_{1/2}) = q_0/(2\tau)\\
-    &\quad =2{,}70\,\mathrm{pA}.
+\tau &= RC=K\epsilon_0\rho=239\,\mathrm{s}. \\
+C &= K\epsilon_0A/d \\
+&= 2{,}57\times10^{-10}\,\mathrm{F}, \\
+q_0 &= C\mathcal E \\
+&= 1{,}29\,\mathrm{nC}, \\
+t_{1/2} &= \tau\ln2 \\
+&= 166\,\mathrm{s}, \\
+i(t_{1/2}) &= q_0/(2\tau) \\
+&= 2{,}70\,\mathrm{pA}.
 \end{aligned}
 $$
 :::
@@ -338,8 +327,8 @@ Diện tích là $A=4{,}00\times10^{-4}\,\mathrm{m^2}$ và khoảng cách $d=3{,
 
 $$
 \begin{aligned}
-&U = \frac12(12C_0)(10/12)^2\\
-&\quad =4{,}92\times10^{-12}\,\mathrm{J}.
+U &= \frac12(12C_0)(10/12)^2 \\
+&= 4{,}92\times10^{-12}\,\mathrm{J}.
 \end{aligned}
 $$
 
@@ -347,9 +336,9 @@ Sau thời gian dài, năng lượng là $\tfrac12(12C_0)(10)^2=7{,}08\times10^{
 
 $$
 \begin{aligned}
-&U_R = \int_0^\infty RI^2\,dt\\
-&\quad =\frac12(12C_0)(10-10/12)^2\\
-&\quad =5{,}95\times10^{-10}\,\mathrm{J}.
+U_R &= \int_0^\infty RI^2\,dt \\
+&= \frac12(12C_0)(10-10/12)^2 \\
+&= 5{,}95\times10^{-10}\,\mathrm{J}.
 \end{aligned}
 $$
 :::
@@ -368,10 +357,10 @@ Tụ $6{,}00\,\mathrm{\mu F}$ ban đầu chưa nạp, mắc nối tiếp với �
 
 $$
 \begin{aligned}
-&V_C = 50{,}0-(7{,}746)(5{,}00)\\
-&\quad =11{,}27\,\mathrm{V},\\
-&U_C = \frac12CV_C^2\\
-&\quad =3{,}81\times10^{-4}\,\mathrm{J}.
+V_C &= 50{,}0-(7{,}746)(5{,}00) \\
+&= 11{,}27\,\mathrm{V}, \\
+U_C &= \frac12CV_C^2 \\
+&= 3{,}81\times10^{-4}\,\mathrm{J}.
 \end{aligned}
 $$
 :::
@@ -392,8 +381,8 @@ Nút $a$ trong Hình P26.73 được giữ ở điện thế $400\,\mathrm{V}$ s
 
 $$
 \begin{aligned}
-&R_L = (200\,\mathrm{k\Omega})\parallel R_V,\\
-&V_b = 400\frac{R_L}{100\,\mathrm{k\Omega}+R_L}.
+R_L &= (200\,\mathrm{k\Omega})\parallel R_V, \\
+V_b &= 400\frac{R_L}{100\,\mathrm{k\Omega}+R_L}.
 \end{aligned}
 $$
 
@@ -416,9 +405,9 @@ Mạch cầu Wheatstone ở Hình P26.74 dùng các điện trở $M,N,P$ đã b
 
 $$
 \begin{aligned}
-&\frac{N}{M} = \frac{P}{X},\\
-&X = \frac{MP}{N}\\
-&\quad =1{,}897\times10^3\,\Omega.
+\frac{N}{M} &= \frac{P}{X}, \\
+X &= \frac{MP}{N} \\
+&= 1{,}897\times10^3\,\Omega.
 \end{aligned}
 $$
 :::
@@ -460,14 +449,14 @@ trong đó điện dung tính bằng $\mathrm{\mu F}$ và điện tích bằng $
 
 $$
 \begin{aligned}
-&V_0 = Q_0/C\\
-&\quad =1{,}494\,\mathrm{V},\\
-&U_0 = Q_0^2/(2C)\\
-&\quad =5{,}15\,\mathrm{\mu J},\\
-&P(0^+) = V_0^2/R\\
-&\quad =2{,}62\,\mathrm{mW},\\
-&P(U_0/2) = P(0^+)/2\\
-&\quad =1{,}31\,\mathrm{mW}.
+V_0 &= Q_0/C \\
+&= 1{,}494\,\mathrm{V}, \\
+U_0 &= Q_0^2/(2C) \\
+&= 5{,}15\,\mathrm{\mu J}, \\
+P(0^+) &= V_0^2/R \\
+&= 2{,}62\,\mathrm{mW}, \\
+P(U_0/2) &= P(0^+)/2 \\
+&= 1{,}31\,\mathrm{mW}.
 \end{aligned}
 $$
 :::
@@ -486,10 +475,10 @@ Tụ chưa nạp mắc nối tiếp với điện trở và nguồn lý tưởng
 
 $$
 \begin{aligned}
-&R = \frac{110}{6{,}5\times10^{-5}}\\
-&\quad =1{,}69\,\mathrm{M\Omega},\\
-&C = \frac{5{,}2}{R}\\
-&\quad =3{,}07\,\mathrm{\mu F}.
+R &= \frac{110}{6{,}5\times10^{-5}} \\
+&= 1{,}69\,\mathrm{M\Omega}, \\
+C &= \frac{5{,}2}{R} \\
+&= 3{,}07\,\mathrm{\mu F}.
 \end{aligned}
 $$
 :::
@@ -514,8 +503,8 @@ Mạch trong Hình 26.22a có $R=196\,\Omega$. Đóng công tắc tại $t=0$ v�
 
 $$
 \begin{aligned}
-&q = (1{,}56\,\mathrm{ms})(0{,}0500\,\mathrm{A})\\
-&\quad =7{,}81\times10^{-5}\,\mathrm{C}.
+q &= (1{,}56\,\mathrm{ms})(0{,}0500\,\mathrm{A}) \\
+&= 7{,}81\times10^{-5}\,\mathrm{C}.
 \end{aligned}
 $$
 
@@ -548,8 +537,8 @@ Suy ra $R=249{,}5\,\Omega$ và $\mathcal E=15{,}98\,\mathrm{V}$. Với $V_C=10{,
 
 $$
 \begin{aligned}
-&t = -RC\ln\left(1-\frac{10{,}0}{15{,}98}\right)\\
-&\quad =1{,}23\,\mathrm{ms}.
+t &= -RC\ln\left(1-\frac{10{,}0}{15{,}98}\right) \\
+&= 1{,}23\,\mathrm{ms}.
 \end{aligned}
 $$
 

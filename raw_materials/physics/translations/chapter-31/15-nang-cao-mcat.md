@@ -29,7 +29,7 @@ Biên độ dòng điện chạy trong mạch:
 
 $$
 \begin{aligned}
-I &= \frac{V_{\mathrm{in}}}{Z}\\
+I &= \frac{V_{\mathrm{in}}}{Z} \\
 &= \frac{V_{\mathrm{in}}}{\sqrt{R^2 + X^2}}.
 \end{aligned}
 $$
@@ -38,8 +38,8 @@ $$
 
 $$
 \begin{aligned}
-V_{\mathrm{out}} &= I X_C\\
-&= \frac{I}{\omega C}\\
+V_{\mathrm{out}} &= I X_C \\
+&= \frac{I}{\omega C} \\
 &= \frac{V_{\mathrm{in}}}{\omega C Z}.
 \end{aligned}
 $$
@@ -47,10 +47,7 @@ $$
 Đặt $D = \omega C Z$. Khi đưa $\omega C$ vào trong căn thức:
 
 $$
-\begin{aligned}
-D^2 &= (\omega C R)^2\\
-&\quad + (\omega^2 L C - 1)^2.
-\end{aligned}
+D^2 &= (\omega C R)^2 + (\omega^2 L C - 1)^2.
 $$
 
 Biên độ điện áp đầu ra trên hai bản tụ điện là $V_{\mathrm{out}} = V_{\mathrm{in}} / D$:
@@ -62,36 +59,28 @@ $$
 (b) Dòng điện trong mạch có dạng $i(t) = I\cos(\omega t - \phi)$, trong đó góc lệch pha của dòng điện so với điện áp nguồn thỏa mãn:
 
 $$
-\begin{aligned}
-\tan\phi &= \frac{X}{R},
-\end{aligned}
+\tan\phi = \frac{X}{R},
 $$
 
 $$
-\begin{aligned}
-\phi &= \arctan\left(\frac{X}{R}\right).
-\end{aligned}
+\phi = \arctan\left(\frac{X}{R}\right).
 $$
 
 Điện áp tức thời trên hai bản tụ điện trễ pha $\pi/2\,\mathrm{rad}$ ($90^\circ$) so với dòng điện chạy qua nó:
 
 $$
-\begin{aligned}
-v_{\mathrm{out}}(t) &= V_{\mathrm{out}} \cos(\omega t + \theta),
-\end{aligned}
+v_{\mathrm{out}}(t) = V_{\mathrm{out}} \cos(\omega t + \theta),
 $$
 
 $$
-\begin{aligned}
-\theta &= -\phi - \frac{\pi}{2}.
-\end{aligned}
+\theta = -\phi - \frac{\pi}{2}.
 $$
 
 Đồng nhất pha dao động:
 
 $$
 \begin{aligned}
-\theta &= -\phi - \frac{\pi}{2}\\
+\theta &= -\phi - \frac{\pi}{2} \\
 &= -\arctan\left(\frac{X}{R}\right) - \frac{\pi}{2}.
 \end{aligned}
 $$
@@ -102,7 +91,7 @@ Góc pha của điện áp đầu ra khi đó là:
 
 $$
 \begin{aligned}
-\theta &= -0 - \frac{\pi}{2}\\
+\theta &= -0 - \frac{\pi}{2} \\
 &= -\frac{\pi}{2}\,\mathrm{rad} = -90^\circ.
 \end{aligned}
 $$
@@ -115,8 +104,8 @@ Tần số góc cộng hưởng:
 
 $$
 \begin{aligned}
-\omega_0 &= 2\pi f\\
-&= 2\pi \times (1{,}00\times 10^5\,\mathrm{Hz})\\
+\omega_0 &= 2\pi f \\
+&= 2\pi \times (1{,}00\times 10^5\,\mathrm{Hz}) \\
 &\approx 6{,}2832\times 10^5\,\mathrm{rad/s}.
 \end{aligned}
 $$
@@ -127,8 +116,8 @@ Với $\omega_0^2 \approx 3{,}9478\times 10^{11}\,\mathrm{rad^2/s^2}$:
 
 $$
 \begin{aligned}
-C &= \frac{1}{\omega_0^2 L}\\
-&\approx 2{,}533\times 10^{-6}\,\mathrm F\\
+C &= \frac{1}{\omega_0^2 L} \\
+&\approx 2{,}533\times 10^{-6}\,\mathrm F \\
 &= 2{,}533\,\mu\mathrm F.
 \end{aligned}
 $$
@@ -137,7 +126,7 @@ $$
 
 $$
 \begin{aligned}
-I &= \frac{V_{\mathrm{in}}}{R}\\
+I &= \frac{V_{\mathrm{in}}}{R} \\
 &= 0{,}100\,\mathrm A.
 \end{aligned}
 $$
@@ -148,9 +137,9 @@ Với $X_C = \omega_0 L \approx 0{,}62832\,\Omega$:
 
 $$
 \begin{aligned}
-V_{\mathrm{out}} &= I X_C = I (\omega_0 L)\\
-&= 0{,}100 \times 0{,}62832\\
-&\approx 0{,}06283\,\mathrm V\\
+V_{\mathrm{out}} &= I X_C = I (\omega_0 L) \\
+&= 0{,}100 \times 0{,}62832 \\
+&\approx 0{,}06283\,\mathrm V \\
 &= 62{,}83\,\mathrm{mV}.
 \end{aligned}
 $$
@@ -162,9 +151,8 @@ Trong một mạch điện RLC nối tiếp, dòng điện tức thời được
 
 $$
 \begin{aligned}
-p_R(t) &= V_R I\cos^2(\omega t)\\
-&= \frac{1}{2}V_R I\\
-&\quad \times [1 + \cos(2\omega t)].
+p_R(t) &= V_R I\cos^2(\omega t) \\
+&= \frac{1}{2}V_R I \times [1 + \cos(2\omega t)].
 \end{aligned}
 $$
 
@@ -174,8 +162,7 @@ Biểu thức này cho giá trị công suất trung bình bằng bao nhiêu?
 
 $$
 \begin{aligned}
-p_L(t) &= -V_L I \sin(\omega t)\\
-&\quad \times \cos(\omega t)\\
+p_L(t) &= -V_L I \sin(\omega t) \times \cos(\omega t) \\
 &= -\frac{1}{2}V_L I\sin(2\omega t).
 \end{aligned}
 $$
@@ -186,7 +173,7 @@ Biểu thức này cho giá trị công suất trung bình bằng bao nhiêu?
 
 $$
 \begin{aligned}
-p_C(t) &= V_C I\sin(\omega t)\cos(\omega t)\\
+p_C(t) &= V_C I\sin(\omega t)\cos(\omega t) \\
 &= \frac{1}{2}V_C I\sin(2\omega t).
 \end{aligned}
 $$
@@ -197,8 +184,7 @@ Biểu thức này cho giá trị công suất trung bình bằng bao nhiêu?
 
 $$
 \begin{aligned}
-p(t) &= V I\cos(\omega t)\\
-&\quad \times [\cos\phi\cos(\omega t)\\
+p(t) &= V I\cos(\omega t) \times [\cos\phi\cos(\omega t) \\
 &\qquad - \sin\phi\sin(\omega t)].
 \end{aligned}
 $$
@@ -226,12 +212,10 @@ Công suất tức thời cung cấp cho điện trở:
 
 $$
 \begin{aligned}
-p_R(t) &= v_R(t) i(t)\\
-&= V_R \cos(\omega t)\\
-&\quad \times I \cos(\omega t)\\
-&= V_R I \cos^2(\omega t)\\
-&= \frac{1}{2}V_R I\\
-&\quad \times [1 + \cos(2\omega t)].
+p_R(t) &= v_R(t) i(t) \\
+&= V_R \cos(\omega t) \times I \cos(\omega t) \\
+&= V_R I \cos^2(\omega t) \\
+&= \frac{1}{2}V_R I \times [1 + \cos(2\omega t)].
 \end{aligned}
 $$
 
@@ -245,7 +229,7 @@ $$
 
 $$
 \begin{aligned}
-v_L(t) &= V_L \cos\left(\omega t + \frac{\pi}{2}\right)\\
+v_L(t) &= V_L \cos\left(\omega t + \frac{\pi}{2}\right) \\
 &= -V_L \sin(\omega t).
 \end{aligned}
 $$
@@ -254,9 +238,8 @@ Công suất tức thời cung cấp cho cuộn cảm:
 
 $$
 \begin{aligned}
-p_L(t) &= v_L(t) i(t)\\
-&= -V_L \sin(\omega t)\\
-&\quad \times I \cos(\omega t)\\
+p_L(t) &= v_L(t) i(t) \\
+&= -V_L \sin(\omega t) \times I \cos(\omega t) \\
 &= -\frac{1}{2}V_L I \sin(2\omega t).
 \end{aligned}
 $$
@@ -271,7 +254,7 @@ $$
 
 $$
 \begin{aligned}
-v_C(t) &= V_C \cos\left(\omega t - \frac{\pi}{2}\right)\\
+v_C(t) &= V_C \cos\left(\omega t - \frac{\pi}{2}\right) \\
 &= V_C \sin(\omega t).
 \end{aligned}
 $$
@@ -280,9 +263,8 @@ Công suất tức thời cung cấp cho tụ điện:
 
 $$
 \begin{aligned}
-p_C(t) &= v_C(t) i(t)\\
-&= V_C \sin(\omega t)\\
-&\quad \times I \cos(\omega t)\\
+p_C(t) &= v_C(t) i(t) \\
+&= V_C \sin(\omega t) \times I \cos(\omega t) \\
 &= \frac{1}{2}V_C I \sin(2\omega t).
 \end{aligned}
 $$
@@ -297,12 +279,8 @@ $$
 
 $$
 \begin{aligned}
-&p_R(t) + p_L(t) + p_C(t)\\
-&= V_R I \cos^2(\omega t)\\
-&\quad - (V_L - V_C) I\\
-&\qquad \times \sin(\omega t)\cos(\omega t)\\
-&= I \cos(\omega t)\\
-&\quad \times [V_R \cos(\omega t)\\
+p_R(t) + p_L(t) + p_C(t) &= V_R I \cos^2(\omega t) - (V_L - V_C) I \\
+\qquad \times \sin(\omega t)\cos(\omega t) &= I \cos(\omega t) \times [V_R \cos(\omega t) \\
 &\qquad - (V_L - V_C)\sin(\omega t)].
 \end{aligned}
 $$
@@ -310,29 +288,20 @@ $$
 Mặt khác, theo giản đồ vectơ Fresnel của mạch nối tiếp, các hình chiếu của vectơ điện áp nguồn $\vec V$ lên phương cùng pha và vuông pha với dòng điện lần lượt là:
 
 $$
-\begin{aligned}
-V \cos\phi &= V_R,
-\end{aligned}
+V \cos\phi = V_R,
 $$
 
 $$
-\begin{aligned}
-V \sin\phi &= V_L - V_C.
-\end{aligned}
+V \sin\phi = V_L - V_C.
 $$
 
 Thay các hệ thức này vào biểu thức trên:
 
 $$
 \begin{aligned}
-&p_R(t) + p_L(t) + p_C(t)\\
-&= I \cos(\omega t)\\
-&\quad \times [V\cos\phi \cos(\omega t)\\
-&\qquad - V\sin\phi \sin(\omega t)]\\
-&= V I \cos(\omega t)\\
-&\quad \times [\cos\phi \cos(\omega t)\\
-&\qquad - \sin\phi \sin(\omega t)]\\
-&= p(t).
+p_R(t) + p_L(t) + p_C(t) &= I \cos(\omega t) \times [V\cos\phi \cos(\omega t) \\
+\qquad - V\sin\phi \sin(\omega t)] &= V I \cos(\omega t) \times [\cos\phi \cos(\omega t) \\
+\qquad - \sin\phi \sin(\omega t)] &= p(t).
 \end{aligned}
 $$
 
@@ -361,7 +330,7 @@ Với $X = \omega L - \frac{1}{\omega C}$:
 
 $$
 \begin{aligned}
-V_R(\omega) &= I(\omega)R\\
+V_R(\omega) &= I(\omega)R \\
 &= \frac{V R}{\sqrt{R^2 + X^2}}.
 \end{aligned}
 $$
@@ -369,15 +338,11 @@ $$
 Vì tử số là hằng số, $V_R(\omega)$ đạt cực đại khi và chỉ khi mẫu số đạt cực tiểu. Điều này xảy ra khi thành phần phản kháng triệt tiêu:
 
 $$
-\begin{aligned}
-\omega L - \frac{1}{\omega C} &= 0,
-\end{aligned}
+\omega L - \frac{1}{\omega C} = 0,
 $$
 
 $$
-\begin{aligned}
-\omega_R &= \frac{1}{\sqrt{LC}} = \omega_0.
-\end{aligned}
+\omega_R = \frac{1}{\sqrt{LC}} = \omega_0.
 $$
 
 Biên độ điện áp trên điện trở đạt cực đại đúng tại tần số góc cộng hưởng tự nhiên $\omega_0$. Khi đó $V_{R,\mathrm{max}} = V$.
@@ -388,7 +353,7 @@ Với $X = \omega L - \frac{1}{\omega C}$:
 
 $$
 \begin{aligned}
-V_L(\omega) &= \omega L I(\omega)\\
+V_L(\omega) &= \omega L I(\omega) \\
 &= \frac{V \omega L}{\sqrt{R^2 + X^2}}.
 \end{aligned}
 $$
@@ -403,11 +368,8 @@ với hàm số bậc hai dưới căn thức:
 
 $$
 \begin{aligned}
-f(u) &= R^2 u\\
-&\quad + \left(L - \frac{u}{C}\right)^2\\
-&= \frac{1}{C^2} u^2\\
-&\quad + \left(R^2 - \frac{2L}{C}\right)u\\
-&\quad + L^2.
+f(u) &= R^2 u + \left(L - \frac{u}{C}\right)^2 \\
+&= \frac{1}{C^2} u^2 + \left(R^2 - \frac{2L}{C}\right)u + L^2.
 \end{aligned}
 $$
 
@@ -415,9 +377,9 @@ $$
 
 $$
 \begin{aligned}
-u^* &= -\frac{b}{2a}\\
-&= \frac{\frac{2L}{C} - R^2}{\frac{2}{C^2}}\\
-&= LC - \frac{R^2 C^2}{2}\\
+u^* &= -\frac{b}{2a} \\
+&= \frac{\frac{2L}{C} - R^2}{\frac{2}{C^2}} \\
+&= LC - \frac{R^2 C^2}{2} \\
 &= LC \left(1 - \frac{R^2 C}{2L}\right).
 \end{aligned}
 $$
@@ -426,7 +388,7 @@ $$
 
 $$
 \begin{aligned}
-u^* > 0 &\iff 1 - \frac{R^2 C}{2L} > 0\\
+u^* > 0 &\iff 1 - \frac{R^2 C}{2L} > 0 \\
 &\iff \frac{R^2 C}{L} < 2.
 \end{aligned}
 $$
@@ -435,8 +397,8 @@ Khi thỏa mãn điều kiện $0 < \frac{R^2 C}{L} < 2$, tần số góc để 
 
 $$
 \begin{aligned}
-\omega_L &= \frac{1}{\sqrt{u^*}}\\
-&= \frac{1}{\sqrt{LC \left(1 - \frac{R^2 C}{2L}\right)}}\\
+\omega_L &= \frac{1}{\sqrt{u^*}} \\
+&= \frac{1}{\sqrt{LC \left(1 - \frac{R^2 C}{2L}\right)}} \\
 &= \frac{\omega_0}{\sqrt{1 - \frac{R^2 C}{2L}}}.
 \end{aligned}
 $$
@@ -451,7 +413,7 @@ Với $X = \omega L - \frac{1}{\omega C}$:
 
 $$
 \begin{aligned}
-V_C(\omega) &= \frac{I(\omega)}{\omega C}\\
+V_C(\omega) &= \frac{I(\omega)}{\omega C} \\
 &= \frac{V}{\omega C \sqrt{R^2 + X^2}}.
 \end{aligned}
 $$
@@ -466,11 +428,8 @@ với tam thức bậc hai dưới căn thức:
 
 $$
 \begin{aligned}
-g(w) &= R^2 w\\
-&\quad + \left(w L - \frac{1}{C}\right)^2\\
-&= L^2 w^2\\
-&\quad + \left(R^2 - \frac{2L}{C}\right)w\\
-&\quad + \frac{1}{C^2}.
+g(w) &= R^2 w + \left(w L - \frac{1}{C}\right)^2 \\
+&= L^2 w^2 + \left(R^2 - \frac{2L}{C}\right)w + \frac{1}{C^2}.
 \end{aligned}
 $$
 
@@ -478,9 +437,9 @@ Hệ số của $w^2$ là $L^2 > 0$, parabol quay bề lõm lên trên và đạ
 
 $$
 \begin{aligned}
-w^* &= -\frac{b}{2a}\\
-&= \frac{\frac{2L}{C} - R^2}{2L^2}\\
-&= \frac{1}{LC} - \frac{R^2}{2L^2}\\
+w^* &= -\frac{b}{2a} \\
+&= \frac{\frac{2L}{C} - R^2}{2L^2} \\
+&= \frac{1}{LC} - \frac{R^2}{2L^2} \\
 &= \frac{1}{LC}\left(1 - \frac{R^2 C}{2L}\right).
 \end{aligned}
 $$
@@ -488,23 +447,19 @@ $$
 Để tồn tại tần số góc hữu hạn $\omega_C > 0$, ta cũng cần điều kiện $w^* > 0$, tức là:
 
 $$
-\begin{aligned}
-1 - \frac{R^2 C}{2L} &> 0
-\end{aligned}
+1 - \frac{R^2 C}{2L} > 0
 $$
 
 $$
-\begin{aligned}
-\iff \frac{R^2 C}{L} &< 2.
-\end{aligned}
+\iff \frac{R^2 C}{L} < 2.
 $$
 
 Khi điều kiện $0 < \frac{R^2 C}{L} < 2$ được thỏa mãn, tần số góc để biên độ điện áp tụ điện đạt cực đại là:
 
 $$
 \begin{aligned}
-\omega_C &= \sqrt{w^*}\\
-&= \sqrt{\frac{1}{LC}\left(1 - \frac{R^2 C}{2L}\right)}\\
+\omega_C &= \sqrt{w^*} \\
+&= \sqrt{\frac{1}{LC}\left(1 - \frac{R^2 C}{2L}\right)} \\
 &= \omega_0 \sqrt{1 - \frac{R^2 C}{2L}}.
 \end{aligned}
 $$
@@ -513,8 +468,7 @@ Nhận xét: Vì $\sqrt{1 - \frac{R^2 C}{2L}} < 1$, ta luôn có $\omega_C < \om
 
 $$
 \begin{aligned}
-\omega_C \omega_L &= \left(\omega_0 \sqrt{1 - \frac{R^2 C}{2L}}\right)\\
-&\quad \times \left(\frac{\omega_0}{\sqrt{1 - \frac{R^2 C}{2L}}}\right)\\
+\omega_C \omega_L &= \left(\omega_0 \sqrt{1 - \frac{R^2 C}{2L}}\right) \left(\frac{\omega_0}{\sqrt{1 - \frac{R^2 C}{2L}}}\right) \\
 &= \omega_0^2.
 \end{aligned}
 $$
@@ -601,8 +555,8 @@ Bán kính của quả cầu bạch kim:
 
 $$
 \begin{aligned}
-a &= \frac{D}{2} = \frac{20\,\mu\mathrm m}{2}\\
-&= 10\,\mu\mathrm m\\
+a &= \frac{D}{2} = \frac{20\,\mu\mathrm m}{2} \\
+&= 10\,\mu\mathrm m \\
 &= 1{,}0\times 10^{-3}\,\mathrm{cm}.
 \end{aligned}
 $$
@@ -611,7 +565,7 @@ $$
 
 $$
 \begin{aligned}
-R_A &\approx \frac{\rho}{10a}\\
+R_A &\approx \frac{\rho}{10a} \\
 &= 10^4\,\Omega.
 \end{aligned}
 $$
@@ -620,8 +574,8 @@ Tần số góc dao động của điện cực:
 
 $$
 \begin{aligned}
-\omega &= 2\pi f\\
-&= 2\pi \times \left(\frac{5000}{\pi}\,\mathrm{Hz}\right)\\
+\omega &= 2\pi f \\
+&= 2\pi \times \left(\frac{5000}{\pi}\,\mathrm{Hz}\right) \\
 &= 10^4\,\mathrm{rad/s}.
 \end{aligned}
 $$
@@ -630,7 +584,7 @@ Dung kháng của điện cực ở tần số này:
 
 $$
 \begin{aligned}
-X_C &= \frac{1}{\omega C}\\
+X_C &= \frac{1}{\omega C} \\
 &= 10^4\,\Omega.
 \end{aligned}
 $$
@@ -639,8 +593,8 @@ Trở kháng toàn phần của điện cực:
 
 $$
 \begin{aligned}
-Z &= \sqrt{R_A^2 + X_C^2}\\
-&= 10^4 \sqrt{2}\,\Omega\\
+Z &= \sqrt{R_A^2 + X_C^2} \\
+&= 10^4 \sqrt{2}\,\Omega \\
 &= \sqrt{2}\times 10^4\,\Omega.
 \end{aligned}
 $$
@@ -673,8 +627,8 @@ Biên độ của điện áp xoay chiều hình sin:
 
 $$
 \begin{aligned}
-V_0 &= V_{\mathrm{rms}}\sqrt{2}\\
-&= 1{,}5\,\mathrm{nV} \times \sqrt{2}\\
+V_0 &= V_{\mathrm{rms}}\sqrt{2} \\
+&= 1{,}5\,\mathrm{nV} \times \sqrt{2} \\
 &\approx 2{,}12\,\mathrm{nV}.
 \end{aligned}
 $$
@@ -685,8 +639,8 @@ Hiệu điện thế giữa hai điểm cực biên tương ứng với độ ch
 
 $$
 \begin{aligned}
-\Delta V &= V_0 - (-V_0) = 2V_0\\
-&= 2 \times 2{,}12\,\mathrm{nV}\\
+\Delta V &= V_0 - (-V_0) = 2V_0 \\
+&= 2 \times 2{,}12\,\mathrm{nV} \\
 &\approx 4{,}2\,\mathrm{nV}.
 \end{aligned}
 $$
@@ -728,7 +682,7 @@ Khi đó, trở kháng toàn phần của điện cực tiến tới:
 
 $$
 \begin{aligned}
-\lim_{\omega \to \infty} Z &= \sqrt{R_A^2 + 0}\\
+\lim_{\omega \to \infty} Z &= \sqrt{R_A^2 + 0} \\
 &= R_A = 10^4\,\Omega > 0.
 \end{aligned}
 $$

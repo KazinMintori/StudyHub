@@ -16,7 +16,7 @@ Kính thiên văn dùng vật kính tạo ảnh thật của vật rất xa rồ
 Kính khúc xạ với vật và ảnh cuối ở vô cực:
 
 $$
-\begin{aligned}M&=-f_1/f_2\\L&=f_1+f_2.\end{aligned}
+M =-f_1/f_2\\L =f_1+f_2.
 $$
 
 Gương vật kính không có quang sai sắc do truyền qua vật liệu. Có thể nâng đỡ mặt sau và chọn mặt phản xạ không cầu. Gương phụ đưa chùm tới thiết bị quan sát mà hạn chế chắn chùm tới. Kính Galilei dùng thị kính phân kỳ và cho ảnh cùng chiều.

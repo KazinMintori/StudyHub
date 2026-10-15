@@ -14,9 +14,9 @@ Với điện trở thuần $R$, định luật Ohm áp dụng tại từng th�
 
 $$
 \begin{aligned}
-v_R&=iR\\
-&=IR\cos\omega t.\tag{31.6}
-\end{aligned}
+v_R &= iR \\
+&= IR\cos\omega t.\tag{31.6}
+\end{aligned} \tag{31.6}
 $$
 
 Biên độ điện áp là
@@ -67,9 +67,9 @@ Lấy đạo hàm dòng hình sin:
 
 $$
 \begin{aligned}
-v_L&=L\frac d{dt}(I\cos\omega t)\\
-&=-I\omega L\sin\omega t.\tag{31.9}
-\end{aligned}
+v_L &= L\frac d{dt}(I\cos\omega t) \\
+&= -I\omega L\sin\omega t.\tag{31.9}
+\end{aligned} \tag{31.9}
 $$
 
 Điện áp lớn nhất về độ lớn khi đồ thị dòng dốc nhất. Điện áp bằng không khi dòng ở cực đại hoặc cực tiểu. Các đỉnh điện áp xuất hiện trước các đỉnh dòng một phần tư chu kỳ.
@@ -131,10 +131,10 @@ Một cuộn cảm thuần trong máy thu cần biên độ dòng $250\,\mu\math
 
 $$
 \begin{aligned}
-X_L&=\frac{V_L}{I}\\
-&=\frac{3{,}60\,\mathrm V}{250\times10^{-6}\,\mathrm A}\\
-&=1{,}44\times10^4\,\Omega\\
-&=14{,}4\,\mathrm{k\Omega}.
+X_L &= \frac{V_L}{I} \\
+&= \frac{3{,}60\,\mathrm V}{250\times10^{-6}\,\mathrm A} \\
+&= 1{,}44\times10^4\,\Omega \\
+&= 14{,}4\,\mathrm{k\Omega}.
 \end{aligned}
 $$
 
@@ -142,9 +142,9 @@ $$
 
 $$
 \begin{aligned}
-L&=\frac{X_L}{2\pi f}\\
-&\approx1{,}43\times10^{-3}\,\mathrm H\\
-&=1{,}43\,\mathrm{mH}.
+L &= \frac{X_L}{2\pi f} \\
+&\approx 1{,}43\times10^{-3}\,\mathrm H \\
+&= 1{,}43\,\mathrm{mH}.
 \end{aligned}
 $$
 
@@ -159,8 +159,8 @@ Nối tụ có điện dung $C$ với nguồn. Gọi $q$ là điện tích bản
 
 $$
 \begin{aligned}
-i&=\frac{dq}{dt},\\
-i&=I\cos\omega t.
+i &= \frac{dq}{dt}, \\
+i &= I\cos\omega t.
 \end{aligned}
 $$
 
@@ -235,8 +235,8 @@ Dung kháng giảm khi điện dung hoặc tần số tăng. Vì vậy tụ hạ
 
 $$
 \begin{aligned}
-v_R&=(1{,}20\,\mathrm V)\cos\theta,\\
-\theta&=(2500\,\mathrm{rad/s})t.
+v_R &= (1{,}20\,\mathrm V)\cos\theta, \\
+\theta &= (2500\,\mathrm{rad/s})t.
 \end{aligned}
 $$
 
@@ -252,9 +252,9 @@ Tìm (a) biểu thức dòng trong mạch, (b) dung kháng, (c) biểu thức đ
 
 $$
 \begin{aligned}
-I&=\frac{V_R}{R}\\
-&=\frac{1{,}20\,\mathrm V}{200\,\Omega}\\
-&=6{,}0\times10^{-3}\,\mathrm A.
+I &= \frac{V_R}{R} \\
+&= \frac{1{,}20\,\mathrm V}{200\,\Omega} \\
+&= 6{,}0\times10^{-3}\,\mathrm A.
 \end{aligned}
 $$
 
@@ -268,9 +268,9 @@ $$
 
 $$
 \begin{aligned}
-X_C&=\frac1{\omega C}\\
-&=\frac1{2500(5{,}0\times10^{-6})}\,\Omega\\
-&=80\,\Omega.
+X_C &= \frac1{\omega C} \\
+&= \frac1{2500(5{,}0\times10^{-6})}\,\Omega \\
+&= 80\,\Omega.
 \end{aligned}
 $$
 
@@ -278,9 +278,9 @@ $$
 
 $$
 \begin{aligned}
-V_C&=IX_C\\
-&=(6{,}0\times10^{-3})(80)\,\mathrm V\\
-&=0{,}48\,\mathrm V.
+V_C &= IX_C \\
+&= (6{,}0\times10^{-3})(80)\,\mathrm V \\
+&= 0{,}48\,\mathrm V.
 \end{aligned}
 $$
 
@@ -288,8 +288,8 @@ $$
 
 $$
 \begin{aligned}
-v_C&=(0{,}48\,\mathrm V)\cos\theta,\\
-\theta&=(2500\,\mathrm{rad/s})t-\frac\pi2.
+v_C &= (0{,}48\,\mathrm V)\cos\theta, \\
+\theta &= (2500\,\mathrm{rad/s})t-\frac\pi2.
 \end{aligned}
 $$
 

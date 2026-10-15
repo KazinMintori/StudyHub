@@ -17,8 +17,8 @@ Trong các môi trường có tán sắc chuẩn, ánh sáng có bước sóng d
 
 $$
 \begin{aligned}
-v_{\text{đỏ}} &> v_{\text{tím}}, \\
-n_{\text{đỏ}} &< n_{\text{tím}}
+&v_{\text{đỏ}} > v_{\text{tím}}, \\
+&n_{\text{đỏ}} < n_{\text{tím}}
 \end{aligned}
 $$
 

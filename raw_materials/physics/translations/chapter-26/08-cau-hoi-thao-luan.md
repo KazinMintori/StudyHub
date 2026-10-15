@@ -18,8 +18,8 @@ Trong các bóng đèn $120\,\mathrm V$, dây tóc của bóng $60\,\mathrm W$ h
 
 $$
 \begin{aligned}
-&R_{60} = \frac{(120\,\mathrm V)^2}{60\,\mathrm W}=240\,\Omega,\\
-&R_{120} = \frac{(120\,\mathrm V)^2}{120\,\mathrm W}=120\,\Omega.
+R_{60} &= \frac{(120\,\mathrm V)^2}{60\,\mathrm W}=240\,\Omega, \\
+R_{120} &= \frac{(120\,\mathrm V)^2}{120\,\mathrm W}=120\,\Omega.
 \end{aligned}
 $$
 
@@ -42,9 +42,9 @@ Hai bóng đèn $120\,\mathrm V$, một bóng $25\,\mathrm W$ và một bóng $2
 
 $$
 \begin{aligned}
-&I = \frac{240\,\mathrm V}{576\,\Omega+72\,\Omega}\approx0{,}370\,\mathrm A,\\
-&V_{25} = I(576\,\Omega)\approx213\,\mathrm V,\\
-&V_{200} = I(72\,\Omega)\approx26{,}7\,\mathrm V.
+I &= \frac{240\,\mathrm V}{576\,\Omega+72\,\Omega}\approx0{,}370\,\mathrm A, \\
+V_{25} &= I(576\,\Omega)\approx213\,\mathrm V, \\
+V_{200} &= I(72\,\Omega)\approx26{,}7\,\mathrm V.
 \end{aligned}
 $$
 
@@ -388,9 +388,9 @@ Hãy xác minh tích $RC$, hằng số thời gian của mạch, có đơn vị 
 
 $$
 \begin{aligned}
-&\Omega\cdot\mathrm F = \frac{\mathrm V}{\mathrm A}\cdot\frac{\mathrm C}{\mathrm V}\\
-&\quad =\frac{\mathrm C}{\mathrm A}\\
-&\quad =\mathrm s.
+\Omega\cdot\mathrm F &= \frac{\mathrm V}{\mathrm A}\cdot\frac{\mathrm C}{\mathrm V} \\
+&= \frac{\mathrm C}{\mathrm A} \\
+&= \mathrm s.
 \end{aligned}
 $$
 

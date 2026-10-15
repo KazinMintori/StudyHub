@@ -17,10 +17,10 @@ Mật độ năng lượng điện trường là năng lượng trên một đơ
 
 $$
 \begin{aligned}
-&U = \frac12 CV^2,\\
-&C = \frac{\varepsilon_0 A}{d},\\
-&V = Ed,\\
-&U = \frac12\varepsilon_0 E^2Ad.
+U &= \frac12 CV^2, \\
+C &= \frac{\varepsilon_0 A}{d}, \\
+V &= Ed, \\
+U &= \frac12\varepsilon_0 E^2Ad.
 \end{aligned}
 $$
 

@@ -19,9 +19,9 @@ Với tụ phẳng có điện thẩm không đổi,
 
 $$
 \begin{aligned}
-q&=\varepsilon\Phi_E,\\
-i_C&=\frac{dq}{dt},\\
-i_D&=\varepsilon\frac{d\Phi_E}{dt}.
+q &= \varepsilon\Phi_E, \\
+i_C &= \frac{dq}{dt}, \\
+i_D &= \varepsilon\frac{d\Phi_E}{dt}.
 \end{aligned}
 $$
 

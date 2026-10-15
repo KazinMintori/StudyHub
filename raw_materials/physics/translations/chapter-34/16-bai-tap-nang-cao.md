@@ -7,8 +7,8 @@ Gương cầu có quang sai cầu vì các tia song song trục nhưng đi xa tr
 
 $$
 \begin{aligned}
-\tan(\theta-\pi/2)&=-\cot\theta,\\
-\cot(2\theta)&=\frac{\cot^2\theta-1}{2\cot\theta}.
+\tan(\theta-\pi/2) &= -\cot\theta, \\
+\cot(2\theta) &= \frac{\cot^2\theta-1}{2\cot\theta}.
 \end{aligned}
 $$
 
@@ -56,11 +56,11 @@ Góc $\alpha$ được dùng có dấu trong phép tính tiếp theo.
 
 $$
 \begin{aligned}
-\tan\alpha&=-\cot(2\phi)\\
-&=\frac{\tan^2\phi-1}{2\tan\phi}\\
-&=\frac{4a^2r^2-1}{4ar},\\
-b&=r\tan\alpha\\
-&=ar^2-\frac1{4a}.
+\tan\alpha &= -\cot(2\phi) \\
+&= \frac{\tan^2\phi-1}{2\tan\phi} \\
+&= \frac{4a^2r^2-1}{4ar}, \\
+b &= r\tan\alpha \\
+&= ar^2-\frac1{4a}.
 \end{aligned}
 $$
 
@@ -70,8 +70,8 @@ Khi $b$ tính ra âm, đường tia cắt trục phía trên điểm tới. Khô
 
 $$
 \begin{aligned}
-f&=ar^2-b\\
-&=\frac1{4a}.
+f &= ar^2-b \\
+&= \frac1{4a}.
 \end{aligned}
 $$
 
@@ -95,9 +95,9 @@ Kết quả không phụ thuộc $r$, nên mọi tia của chùm song song trụ
 
 $$
 \begin{aligned}
-s'&=\frac{fs}{s-f},\\
-D(s)&=s+\frac{fs}{s-f},\\
-\frac{dD}{ds}&=1-\frac{f^2}{(s-f)^2}.
+s' &= \frac{fs}{s-f}, \\
+D(s) &= s+\frac{fs}{s-f}, \\
+\frac{dD}{ds} &= 1-\frac{f^2}{(s-f)^2}.
 \end{aligned}
 $$
 
@@ -147,8 +147,8 @@ $$
 
 $$
 \begin{aligned}
-x'&=\frac{20s}{s-20},\\
-y'&=-\frac{x'}s\,y.
+x' &= \frac{20s}{s-20}, \\
+y' &= -\frac{x'}s\,y.
 \end{aligned}
 $$
 
@@ -166,11 +166,11 @@ Kết quả tọa độ ảnh, tính bằng centimet:
 
 $$
 \begin{aligned}
-\Delta x'&=7{,}63151\,\mathrm{cm},\\
-\Delta y'&=-15{,}2630\,\mathrm{cm},\\
-\ell'&=\sqrt{(\Delta x')^2+(\Delta y')^2}\\
-&=17{,}0646\,\mathrm{cm}\\
-&\approx17{,}1\,\mathrm{cm}.
+\Delta x' &= 7{,}63151\,\mathrm{cm}, \\
+\Delta y' &= -15{,}2630\,\mathrm{cm}, \\
+\ell' &= \sqrt{(\Delta x')^2+(\Delta y')^2} \\
+&= 17{,}0646\,\mathrm{cm} \\
+&\approx 17{,}1\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -208,9 +208,8 @@ Kính có chiết suất $1{,}62$, đặt cách mắt $2{,}00\,\mathrm{cm}$ như
 
 $$
 \begin{aligned}
-\frac{0{,}40}{R}&=\frac1{40{,}0}\\
-&\quad+\frac{1{,}40}{2{,}60},\\
-R&=0{,}709898\,\mathrm{cm}.
+\frac{0{,}40}{R} &= \frac1{40{,}0} +\frac{1{,}40}{2{,}60}, \\
+R &= 0{,}709898\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -218,9 +217,8 @@ Gọi $s_e$ là khoảng vật có dấu đối với giác mạc dưới nướ
 
 $$
 \begin{aligned}
-\frac{1{,}333}{s_e}&=\frac{1{,}40-1{,}333}{R}\\
-&\quad-\frac{1{,}40}{2{,}60},\\
-s_e&=-3{,}00170\,\mathrm{cm}.
+\frac{1{,}333}{s_e} &= \frac{1{,}40-1{,}333}{R} -\frac{1{,}40}{2{,}60}, \\
+s_e &= -3{,}00170\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -228,8 +226,8 @@ Dấu âm cho biết tia vào giác mạc cần đang hội tụ về một đi�
 
 $$
 \begin{aligned}
-f_w&=2{,}00+3{,}00170\\
-&=5{,}00170\,\mathrm{cm}.
+f_w &= 2{,}00+3{,}00170 \\
+&= 5{,}00170\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -237,11 +235,10 @@ Gọi $n_g=1{,}62$, $n_w=1{,}333$. Với cùng hai mặt kính:
 
 $$
 \begin{aligned}
-f_a&=f_w\frac{n_g/n_w-1}{n_g-1}\\
-&=5{,}00170\\
-&\quad\times\frac{1{,}62/1{,}333-1}{0{,}62}\\
-&=+1{,}73691\,\mathrm{cm}\\
-&\approx+1{,}74\,\mathrm{cm}.
+f_a &= f_w\frac{n_g/n_w-1}{n_g-1} \\
+&= 5{,}00170 \times\frac{1{,}62/1{,}333-1}{0{,}62} \\
+&= +1{,}73691\,\mathrm{cm} \\
+&\approx +1{,}74\,\mathrm{cm}.
 \end{aligned}
 $$
 

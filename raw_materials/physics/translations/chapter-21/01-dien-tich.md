@@ -54,12 +54,9 @@ Các giá trị khối lượng cùng độ bất định được sử dụng t
 
 $$
 \begin{aligned}
-&m_e = 9.10938356(11)\\
-&\quad\times10^{-31}\,\mathrm{kg},\\
-&m_p = 1.672621898(21)\\
-&\quad\times10^{-27}\,\mathrm{kg},\\
-&m_n = 1.674927471(21)\\
-&\quad\times10^{-27}\,\mathrm{kg}.
+m_e &= 9.10938356(11) \times10^{-31}\,\mathrm{kg}, \\
+m_p &= 1.672621898(21) \times10^{-27}\,\mathrm{kg}, \\
+m_n &= 1.674927471(21) \times10^{-27}\,\mathrm{kg}.
 \end{aligned}
 $$
 

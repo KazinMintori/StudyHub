@@ -22,7 +22,7 @@ $$
 Nếu $i=I\cos\omega t$:
 
 $$
-\begin{aligned}&v_L=-I\omega L\sin\omega t\\&\quad=I\omega L\cos(\omega t+\pi/2).\end{aligned}
+v_L=-I\omega L\sin\omega t\\ \quad=I\omega L\cos(\omega t+\pi/2).
 $$
 
 Điện áp sớm dòng một phần tư chu kỳ. Biên độ $V_L=I\omega L$, nên cảm kháng $X_L=\omega L$ đo bằng ôm. $L$ đo bằng henry, $\omega$ bằng radian trên giây.

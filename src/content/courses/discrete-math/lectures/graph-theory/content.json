@@ -1,0 +1,18 @@
+{
+  "course": "discrete-math",
+  "lecture": "graph-theory",
+  "route": "/discrete-math/bai-giang/graph-theory",
+  "notes": "docs/discrete-math/bai-giang/graph-theory.md",
+  "topics": [],
+  "slides": "src/content/courses/discrete-math/lectures/graph-theory/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "do-thi",
+    "cay"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

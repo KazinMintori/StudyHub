@@ -65,11 +65,8 @@ $$
 
 $$
 \begin{aligned}
-&763.0\,\frac{\mathrm{mi}}{\mathrm h} =\left(763.0\,\frac{\mathrm{mi}}{\mathrm h}\right)
-  \left(\frac{1.609\,\mathrm{km}}{1\,\mathrm{mi}}\right)\\
-&\quad\times\left(\frac{1000\,\mathrm m}{1\,\mathrm{km}}\right)
-  \left(\frac{1\,\mathrm h}{3600\,\mathrm s}\right)\\
-&\quad \approx341.0\,\mathrm{m/s}.
+763.0\,\frac{\mathrm{mi}}{\mathrm h} &= \left(763.0\,\frac{\mathrm{mi}}{\mathrm h}\right) \left(\frac{1.609\,\mathrm{km}}{1\,\mathrm{mi}}\right) \left(\frac{1000\,\mathrm m}{1\,\mathrm{km}}\right) \left(\frac{1\,\mathrm h}{3600\,\mathrm s}\right) \\
+&\approx 341.0\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -93,9 +90,9 @@ Vì thể tích là tích của ba độ dài, hệ số đổi độ dài cũng
 
 $$
 \begin{aligned}
-&1.84\,\mathrm{in^3} =(1.84\,\mathrm{in^3}) \left(\frac{2.54\,\mathrm{cm}}{1\,\mathrm{in}}\right)^3\\
-&\quad =(1.84)(2.54)^3 \frac{\mathrm{in^3\,cm^3}}{\mathrm{in^3}}\\
-&\quad \approx30.2\,\mathrm{cm^3}.
+1.84\,\mathrm{in^3} &= (1.84\,\mathrm{in^3}) \left(\frac{2.54\,\mathrm{cm}}{1\,\mathrm{in}}\right)^3 \\
+&= (1.84)(2.54)^3 \frac{\mathrm{in^3\,cm^3}}{\mathrm{in^3}} \\
+&\approx 30.2\,\mathrm{cm^3}.
 \end{aligned}
 $$
 
@@ -103,10 +100,10 @@ Tiếp đó, $1\,\mathrm m=100\,\mathrm{cm}$ cho:
 
 $$
 \begin{aligned}
-&30.2\,\mathrm{cm^3} =(30.2\,\mathrm{cm^3}) \left(\frac{1\,\mathrm m}{100\,\mathrm{cm}}\right)^3\\
-&\quad =(30.2)\left(\frac1{100}\right)^3 \frac{\mathrm{cm^3\,m^3}}{\mathrm{cm^3}}\\
-&\quad =30.2\times10^{-6}\,\mathrm{m^3}\\
-&\quad =3.02\times10^{-5}\,\mathrm{m^3}.
+30.2\,\mathrm{cm^3} &= (30.2\,\mathrm{cm^3}) \left(\frac{1\,\mathrm m}{100\,\mathrm{cm}}\right)^3 \\
+&= (30.2)\left(\frac1{100}\right)^3 \frac{\mathrm{cm^3\,m^3}}{\mathrm{cm^3}} \\
+&= 30.2\times10^{-6}\,\mathrm{m^3} \\
+&= 3.02\times10^{-5}\,\mathrm{m^3}.
 \end{aligned}
 $$
 

@@ -42,8 +42,8 @@ Quả cầu dẫn đặc bán kính R mang điện tích tổng dương q. Tìm 
 
 $$
 \begin{aligned}
-&E(4\pi r^2) = \frac{q}{\varepsilon_0},\\
-&E = \frac{kq}{r^2}.
+E(4\pi r^2) &= \frac{q}{\varepsilon_0}, \\
+E &= \frac{kq}{r^2}.
 \end{aligned}
 $$
 
@@ -73,8 +73,8 @@ Dây mảnh dài vô hạn có mật độ điện tích dài dương λ. Dùng 
 
 $$
 \begin{aligned}
-&E(2\pi r\ell) = \frac{\lambda\ell}{\varepsilon_0},\\
-&E = \frac{\lambda}{2\pi\varepsilon_0r}.
+E(2\pi r\ell) &= \frac{\lambda\ell}{\varepsilon_0}, \\
+E &= \frac{\lambda}{2\pi\varepsilon_0r}.
 \end{aligned}
 $$
 
@@ -98,8 +98,8 @@ Mặt phẳng mỏng vô hạn có mật độ điện tích mặt dương σ. T
 
 $$
 \begin{aligned}
-&2EA = \frac{\sigma A}{\varepsilon_0},\\
-&E = \frac{\sigma}{2\varepsilon_0}.
+2EA &= \frac{\sigma A}{\varepsilon_0}, \\
+E &= \frac{\sigma}{2\varepsilon_0}.
 \end{aligned}
 $$
 
@@ -123,8 +123,8 @@ Chọn mặt trụ S₁ có một đáy nằm trong vật liệu bản dương v
 
 $$
 \begin{aligned}
-&EA = \frac{\sigma A}{\varepsilon_0},\\
-&E = \frac{\sigma}{\varepsilon_0}.
+EA &= \frac{\sigma A}{\varepsilon_0}, \\
+E &= \frac{\sigma}{\varepsilon_0}.
 \end{aligned}
 $$
 
@@ -146,9 +146,9 @@ Trường hướng từ bản dương sang bản âm. Mặt S₄ cho cùng kết
 
 $$
 \begin{aligned}
-&\rho = \frac{Q}{\frac{4}{3}\pi R^3},\\
-&Q_{\mathrm{trong}} = \rho\frac{4\pi r^3}{3}\\
-&\quad =Q\frac{r^3}{R^3}.
+\rho &= \frac{Q}{\frac{4}{3}\pi R^3}, \\
+Q_{\mathrm{trong}} &= \rho\frac{4\pi r^3}{3} \\
+&= Q\frac{r^3}{R^3}.
 \end{aligned}
 $$
 
@@ -156,8 +156,8 @@ Do đó:
 
 $$
 \begin{aligned}
-&4\pi r^2E = \frac Q{\varepsilon_0}\frac{r^3}{R^3},\\
-&E = k\frac{Qr}{R^3}.
+4\pi r^2E &= \frac Q{\varepsilon_0}\frac{r^3}{R^3}, \\
+E &= k\frac{Qr}{R^3}.
 \end{aligned}
 $$
 
@@ -167,8 +167,8 @@ Trường tăng tuyến tính từ không tại tâm đến $\frac{kQ}{R^2}$ ở
 
 $$
 \begin{aligned}
-&4\pi r^2E = \frac{Q}{\varepsilon_0},\\
-&E = \frac{kQ}{r^2}.
+4\pi r^2E &= \frac{Q}{\varepsilon_0}, \\
+E &= \frac{kQ}{r^2}.
 \end{aligned}
 $$
 
@@ -190,9 +190,9 @@ Vỏ cầu mỏng bán kính 0,250 m có điện tích chưa biết phân bố �
 
 $$
 \begin{aligned}
-&q = -4\pi\varepsilon_0r^2E\\
-&\quad =-1.80\times10^{-9}\,\mathrm C\\
-&\quad =-1.80\,\mathrm{nC}.
+q &= -4\pi\varepsilon_0r^2E \\
+&= -1.80\times10^{-9}\,\mathrm C \\
+&= -1.80\,\mathrm{nC}.
 \end{aligned}
 $$
 

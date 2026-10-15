@@ -55,8 +55,22 @@ const lessonTopics = lesson => (lessonTopicsFn ? lessonTopicsFn(lesson)
   : (lesson?.topicGroups || []).flatMap((group, groupIndex) => (group.topics || []).map(topic => ({ ...topic, group: group.title, groupIndex }))))
 
 let illustrationTypes = null
+async function componentFile(name) {
+  const candidates = [
+    `docs/.vitepress/theme/${name}.vue`,
+    `src/features/labs/components/${name}.vue`,
+    `src/features/illustrations/components/${name}.vue`,
+    `src/features/lecture/components/${name}.vue`,
+    `src/core/math/components/${name}.vue`
+  ]
+  for (const candidate of candidates) {
+    const file = path.join(root, candidate)
+    if (await exists(file)) return file
+  }
+  return null
+}
 try {
-  const vue = await readFile(path.join(root, 'docs/.vitepress/theme/CodeIllustration.vue'), 'utf8')
+  const vue = await readFile(await componentFile('CodeIllustration'), 'utf8')
   illustrationTypes = new Set([...vue.matchAll(/type\s*===?\s*'([\w-]+)'/g)].map(m => m[1]))
 } catch { /* component có thể không tồn tại trong repo thử */ }
 
@@ -84,8 +98,8 @@ const LATEX = /\\[a-zA-Z]+|\$[^$]+\$/
 const MARKUP = /\*\*[^*]+\*\*|\$[^$]+\$|\\[a-zA-Z]+/
 let rendersMathText = false
 try {
-  const panels = await readFile(path.join(root, 'docs/.vitepress/theme/LecturePanels.vue'), 'utf8')
-  rendersMathText = panels.includes('<MathText') && await exists(path.join(root, 'docs/.vitepress/theme/MathText.vue'))
+  const panels = await readFile(await componentFile('LecturePanels'), 'utf8')
+  rendersMathText = panels.includes('<MathText') && !!await componentFile('MathText')
 } catch { /* Older repositories and test fixtures still use plain text. */ }
 const outsideMath = value => value.replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g, '')
 function checkMathText(value, where, field) {
@@ -172,7 +186,7 @@ async function checkBody({ source, front, rel, file, where, smallSvgs }) {
       if (illustrationTypes && !illustrationTypes.has(m[1])) add('error', `${rel}:${n}`, 'ILLUSTRATION_TYPE', `CodeIllustration type="${m[1]}" chưa được hỗ trợ (có: ${[...illustrationTypes].join(', ')}).`)
     // Mô phỏng tương tác: theme/index.js đăng ký mọi file theme/*Lab.vue theo tên file.
     for (const m of raw.matchAll(/<([A-Z]\w*Lab)\b/g))
-      if (!await exists(path.join(root, 'docs/.vitepress/theme', `${m[1]}.vue`))) add('error', `${rel}:${n}`, 'LAB_MISSING', `Không có component docs/.vitepress/theme/${m[1]}.vue.`)
+      if (!await componentFile(m[1])) add('error', `${rel}:${n}`, 'LAB_MISSING', `Không có component ${m[1]}.vue trong thư mục theme hoặc feature labs.`)
     for (const m of raw.matchAll(/\]\(\/wiki\/([\w-]+)(?:\.md|\.html)?(?:#[^)]*)?\)/g))
       if (!concepts[m[1]]) add('error', `${rel}:${n}`, 'WIKI_LINK_BROKEN', `Link tới /wiki/${m[1]} nhưng không có thuật ngữ này.`)
     for (const m of raw.matchAll(/\]\(\/([\w-]+)\/bai-giang\/([\w-]+?)(?:\.md|\.html)?(?:#[^)]*)?\)/g)) {

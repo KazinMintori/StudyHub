@@ -10,11 +10,19 @@
     "sync:courses": "node scripts/sync-courses.mjs",
     "ci:build": "node scripts/build/build-site.mjs",
     "dev": "vitepress dev docs",
-    "build": "node scripts/sync-courses.mjs && node --max-old-space-size=6144 ./node_modules/vitepress/bin/vitepress.js build docs && node scripts/export-static.mjs",
+    "build": "npm run ci:build",
     "preview": "vitepress preview docs",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "node scripts/sync-courses.mjs && node --max-old-space-size=6144 ./node_modules/vitepress/bin/vitepress.js build docs && node scripts/export-static.mjs",
-    "docs:preview": "vitepress preview docs"
+    "docs:build": "npm run ci:build",
+    "docs:preview": "vitepress preview docs",
+    "export:static": "node scripts/export-static.mjs",
+    "content:index": "node scripts/content/sync-content-index.mjs",
+    "audit:storage": "node scripts/maintenance/audit-storage.mjs",
+    "clean:generated": "node scripts/maintenance/clean-generated.mjs",
+    "test": "node --test scripts/tests/*.test.mjs",
+    "verify:architecture": "node scripts/verification/verify-architecture.mjs",
+    "verify:refactor": "node scripts/verification/verify-refactor-browser.mjs",
+    "test:features": "node --test src/features/navigation/services/*.test.mjs src/features/study-progress/__tests__/*.test.js src/core/storage/__tests__/*.test.js src/features/study-tools/tests/*.test.mjs src/features/wiki/services/*.test.mjs"
   },
   "keywords": [
     "uet",

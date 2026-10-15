@@ -24,11 +24,11 @@ Mắt của động vật lưỡng cư như ếch có giác mạc phẳng hơn n
 
 $$
 \begin{aligned}
-f&=\left(\frac1{10}+\frac1{0{,}80}\right)^{-1}\\
-&=0{,}740741\,\mathrm{cm},\\
-s'_{\rm new}&=\left(\frac1f-\frac1{15}\right)^{-1}\\
-&=0{,}779221\,\mathrm{cm},\\
-\Delta s'&=-0{,}0207792\,\mathrm{cm}.
+f &= \left(\frac1{10}+\frac1{0{,}80}\right)^{-1} \\
+&= 0{,}740741\,\mathrm{cm}, \\
+s'_{\rm new} &= \left(\frac1f-\frac1{15}\right)^{-1} \\
+&= 0{,}779221\,\mathrm{cm}, \\
+\Delta s' &= -0{,}0207792\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -54,9 +54,9 @@ Con ếch cận thị điển hình trong đoạn đọc nhìn rõ xa nhất tro
 
 $$
 \begin{aligned}
-f&=\frac1P=-\frac16\,\mathrm m,\\
-d_{\rm far}&=|f|\\
-&=16{,}7\,\mathrm{cm}.
+f &= \frac1P=-\frac16\,\mathrm m, \\
+d_{\rm far} &= |f| \\
+&= 16{,}7\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -108,8 +108,8 @@ Nếu làm hai lần, lần lượt với kính $-9\,\mathrm D$ và $-15\,\mathr
 
 $$
 \begin{aligned}
-s'&=-\frac{qs}{s+q},\\
-|s'|&=\frac{qs}{s+q}.
+s' &= -\frac{qs}{s+q}, \\
+|s'| &= \frac{qs}{s+q}.
 \end{aligned}
 $$
 

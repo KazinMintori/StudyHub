@@ -11,11 +11,7 @@ Hình 28.1: Từ trường vuông góc với mặt phẳng chứa vận tốc v�
 Thực nghiệm cho thấy độ lớn từ trường tỉ lệ với độ lớn điện tích $|q|$, tốc độ $v$, $\sin\phi$ và nghịch đảo bình phương khoảng cách $r$. Vì vậy, từ trường bằng không trên đường thẳng song song với vận tốc, nơi $\sin\phi=0$. Ở cùng khoảng cách, từ trường lớn nhất trên mặt phẳng vuông góc với vận tốc, nơi $\sin\phi=1$.
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0}{4\pi}\\
-&\quad\times\frac{|q|v\sin\phi}{r^2}.
-\end{aligned}
-\tag{28.1}
+B = \frac{\mu_0}{4\pi} \times\frac{|q|v\sin\phi}{r^2}. \tag{28.1}
 $$
 
 Hằng số $\mu_0$ được gọi là **hằng số từ** và đọc là “mu không”. Thừa số $4\pi$ trong mẫu được chọn phù hợp với cách viết định luật Coulomb và sẽ xuất hiện tự nhiên khi xét các nguồn có đối xứng.
@@ -23,11 +19,7 @@ Hằng số $\mu_0$ được gọi là **hằng số từ** và đọc là “mu
 Độ lớn của công thức trên chưa cho biết chiều của $\vec B$. Tích có hướng gói cả độ lớn lẫn hướng vào một biểu thức. Véc-tơ $\vec v\times\hat r$ vuông góc với mặt phẳng chứa $\vec v$ và $\vec r$. Nếu $q$ dương, chiều được xác định bằng quy tắc bàn tay phải. Nếu $q$ âm, dấu của $q$ đảo chiều từ trường.
 
 $$
-\begin{aligned}
-&\vec B = \frac{\mu_0 q}{4\pi r^2}\\
-&\quad\times\left(\vec v\times\hat r\right).
-\end{aligned}
-\tag{28.2}
+\vec B = \frac{\mu_0 q}{4\pi r^2} \left(\vec v \times \hat r\right). \tag{28.2}
 $$
 
 Các đường sức từ của điện tích dương chuyển động là những đường tròn có trục song song với $\vec v$. Chúng nằm trong các mặt phẳng vuông góc với vận tốc. Để xác định chiều, đặt ngón cái bàn tay phải theo $\vec v$. Các ngón tay khum lại theo chiều đường sức từ. Với điện tích âm, chiều của cả $\vec B$ lẫn đường sức đảo ngược.
@@ -38,22 +30,18 @@ Các đường sức từ của điện tích dương chuyển động là nhữ
 
 $$
 \begin{aligned}
-&1\,\mathrm T = 1\,\frac{\mathrm{N\,s}}{\mathrm{C\,m}}\\
-&\quad =1\,\frac{\mathrm N}{\mathrm{A\,m}}.
-\end{aligned}
-\tag{28.3}
+1\,\mathrm T &= 1\,\frac{\mathrm{N\,s}}{\mathrm{C\,m}} \\
+&= 1\,\frac{\mathrm N}{\mathrm{A\,m}}.
+\end{aligned} \tag{28.3}
 $$
 
 Từ các đơn vị này, đơn vị của $\mu_0$ có thể viết theo nhiều cách tương đương. Giá trị số của hằng số trong SI là:
 
 $$
 \begin{aligned}
-&\mu_0 \approx 1{,}25663706\times10^{-6}\\
-&\quad\times\frac{\mathrm{N\,s^2}}{\mathrm{C^2}}\\
-&\quad =1{,}25663706\times10^{-6}\\
-&\quad\times\frac{\mathrm{Wb}}{\mathrm{A\,m}}\\
-&\quad \approx4\pi\times10^{-7}\\
-&\quad\times\frac{\mathrm{T\,m}}{\mathrm A}.
+\mu_0 &\approx 1{,}25663706\times10^{-6} \times\frac{\mathrm{N\,s^2}}{\mathrm{C^2}} \\
+&= 1{,}25663706\times10^{-6} \times\frac{\mathrm{Wb}}{\mathrm{A\,m}} \\
+&\approx 4\pi\times10^{-7} \times\frac{\mathrm{T\,m}}{\mathrm A}.
 \end{aligned}
 $$
 
@@ -61,10 +49,9 @@ Hằng số điện $\varepsilon_0$ và hằng số từ liên hệ với tốc 
 
 $$
 \begin{aligned}
-&c = \frac{1}{\sqrt{\varepsilon_0\mu_0}}\\
-&\quad =2{,}998\times10^8\,\mathrm{m/s}.
-\end{aligned}
-\tag{28.4}
+c &= \frac{1}{\sqrt{\varepsilon_0\mu_0}} \\
+&= 2{,}998\times10^8\,\mathrm{m/s}.
+\end{aligned} \tag{28.4}
 $$
 
 Sự liên hệ này cho thấy điện trường và từ trường có quan hệ sâu sắc trong bản chất của ánh sáng. Ta sẽ trở lại chủ đề ấy khi học sóng điện từ.
@@ -79,10 +66,7 @@ Hình 28.2: Lực điện và lực từ giữa hai proton đang chuyển độn
 Định luật Coulomb cho lực điện có độ lớn:
 
 $$
-\begin{aligned}
-&F_E = \frac{1}{4\pi\varepsilon_0}\\
-&\quad\times\frac{q^2}{r^2}.
-\end{aligned}
+F_E = \frac{1}{4\pi\varepsilon_0} \times\frac{q^2}{r^2}.
 $$
 
 Hai proton cùng dấu nên đẩy nhau. Lực điện lên proton trên hướng theo $+y$.
@@ -91,10 +75,8 @@ Proton dưới có $\vec v=v\hat{\imath}$, còn $\hat r=\hat{\jmath}$ hướng t
 
 $$
 \begin{aligned}
-&\vec B = \frac{\mu_0 q}{4\pi r^2}\\
-&\quad\times v\\
-&\quad\times\left(\hat{\imath}\times\hat{\jmath}\right)\\
-&\quad =\frac{\mu_0 qv}{4\pi r^2}\,\hat{k}.
+\vec B &= \frac{\mu_0 qv}{4\pi r^2} \left(\hat{\imath}\times\hat{\jmath}\right) \\
+&= \frac{\mu_0 qv}{4\pi r^2}\,\hat{k}.
 \end{aligned}
 $$
 
@@ -102,8 +84,8 @@ Proton trên chuyển động với $-v\hat{\imath}$. Lực từ lên nó là:
 
 $$
 \begin{aligned}
-&\vec F_B = q\left(-v\hat{\imath}\right)\times\vec B\\
-&\quad =\frac{\mu_0 q^2v^2}{4\pi r^2}\,\hat{\jmath}.
+\vec F_B &= q\left(-v\hat{\imath}\right)\times\vec B \\
+&= \frac{\mu_0 q^2v^2}{4\pi r^2}\,\hat{\jmath}.
 \end{aligned}
 $$
 
@@ -111,10 +93,9 @@ Lực từ cũng hướng theo $+y$, nên tương tác từ trong tình huống 
 
 $$
 \begin{aligned}
-&\frac{F_B}{F_E} = \frac{\mu_0q^2v^2}{4\pi r^2}\\
-&\quad\times\frac{4\pi\varepsilon_0r^2}{q^2}\\
-&\quad =\varepsilon_0\mu_0v^2\\
-&\quad =\frac{v^2}{c^2}.
+\frac{F_B}{F_E} &= \frac{\mu_0q^2v^2}{4\pi r^2} \times\frac{4\pi\varepsilon_0r^2}{q^2} \\
+&= \varepsilon_0\mu_0v^2 \\
+&= \frac{v^2}{c^2}.
 \end{aligned}
 $$
 

@@ -16,7 +16,7 @@ Vector Poynting biểu thị mật độ dòng năng lượng điện từ tức
 Trong chân không, hướng và độ lớn dòng năng lượng được ghép trong một vector. Mặt tích phân có pháp tuyến được chọn trước. Tích vô hướng dương cho công suất đi theo pháp tuyến, âm cho công suất đi ngược.
 
 $$
-\begin{aligned}&\vec S=\frac1{\mu_0}\vec E\times\vec B\\&P=\int_A\vec S\cdot d\vec A.\end{aligned}
+\vec S=\frac1{\mu_0}\vec E\times\vec B\\ P=\int_A\vec S\cdot d\vec A.
 $$
 
 Vector này không chỉ áp dụng cho ánh sáng hay sóng chạy. Dây dẫn mang dòng một chiều có năng lượng trường đi vào qua mặt bên. Trong vật liệu, dạng tổng quát là $\vec S=\vec E\times\vec H$. Việc dùng $\vec B/\mu$ thay $\vec H$ cần mô hình vật liệu phù hợp.

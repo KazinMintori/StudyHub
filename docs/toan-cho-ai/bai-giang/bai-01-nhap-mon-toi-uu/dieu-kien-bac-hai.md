@@ -40,8 +40,8 @@ với $\{q_1, q_2, \dots, q_n\}$ là hệ vector riêng trực chuẩn ứng v�
 
 $$
 \begin{aligned}
-&v^T \nabla^2 f(x)\, v = \sum_{i=1}^n \lambda_i \,(q_i^T v)^2 = \lambda_1 (q_1^T v)^2 + \dots + \lambda_n (q_n^T v)^2,\\
-&\sum_{i=1}^n (q_i^T v)^2 = (q_1^T v)^2 + \dots + (q_n^T v)^2 = \|v\|_2^2 = 1 .
+v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n \lambda_i \,(q_i^T v)^2 = \lambda_1 (q_1^T v)^2 + \dots + \lambda_n (q_n^T v)^2, \\
+\sum_{i=1}^n (q_i^T v)^2 &= (q_1^T v)^2 + \dots + (q_n^T v)^2 = \|v\|_2^2 = 1 .
 \end{aligned}
 $$
 

@@ -2,6 +2,17 @@
 
 Đọc trước khi tạo hoặc sửa bất kỳ file nào của website. Mọi mục dưới đây được rút từ mã nguồn hiện tại của repo (`docs/.vitepress/*.mjs`, `scripts/sync-courses.mjs`, `scripts/verify-courses.mjs`). Nếu mã đổi, mã thắng tài liệu này; sửa lại tài liệu.
 
+
+## Cấu trúc sau refactor ngày 14/10/2026
+
+- Bảy môn ngoài Vật lý có dữ liệu chính tại `src/content/courses/<course-id>/course.mjs`. Mỗi bài có `lectures/<slug>/lesson.mjs` và `slides.mjs`. Các file `docs/.vitepress/course-catalog.mjs`, `math-ai-course.mjs`, `data-processing-course.mjs`, `xac-suat-thong-ke-course.mjs` chỉ re-export để tương thích, không đặt một bản dữ liệu thứ hai vào đó.
+- Notes và URL vẫn giữ nguyên trong `docs/<course-id>/bai-giang/`. File `content.json` của từng bài chỉ rõ nguồn Notes, chủ đề, ví dụ, bài tập và lời giải theo đường dẫn và dòng. Chỉ mục được sinh bằng `npm run content:index` và trong bước đồng bộ, không sửa trực tiếp.
+- Hai môn Vật lý đang biên soạn tiếp tục dùng các module `physics-*.mjs` hiện có. Adapter trong `src/content/courses/vat-ly-*/` đọc trực tiếp các module này. Giữ nguyên nguồn include trong `raw_materials/`.
+- Khi thêm bài ngoài Vật lý, tạo `lesson.mjs`, `slides.mjs` của bài và thêm import vào `course.mjs` của môn. Cập nhật `parts` tại đó. Các yêu cầu về slug, title, trạng thái và tiên quyết ở những mục dưới vẫn áp dụng.
+- Component Lab nằm trong `src/features/labs/components/`, MathText ở `src/core/math/components/`, các panel bài giảng ở `src/features/lecture/`. Điểm vào VitePress tiếp tục nằm trong `docs/.vitepress/theme/`.
+- `npm run build` và `npm run ci:build` cùng tạo đầu ra `docs/.vitepress/dist/`. Chỉ `npm run export:static` mới tạo thêm `dist/`. Không còn xuất website vào thư mục gốc.
+- Chi tiết ranh giới controller, service, core và config nằm trong `ARCHITECTURE.md` tại gốc repo. Những ví dụ `lesson(...)` và `slide(...)` dưới đây mô tả cấu trúc dữ liệu cũ, các module mới khai báo object trực tiếp với cùng trường.
+
 ## 1. Một bài giảng = bốn phần trên cùng một trang
 
 Trang `/<môn>/bai-giang/<slug>.html` có bốn tab, địa chỉ `#notes`, `#slides`, `#cheatsheet`, `#kien-thuc-can-co`:
@@ -147,9 +158,15 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Dấu cộng, trừ, nhân, chia và bằng thuộc cùng một biểu thức toán với các toán hạng để bộ hiển thị căn theo trục toán và đặt khoảng cách. Không ghép ma trận MathML với dấu phép toán bằng font văn bản; dùng một `mrow` chung. Trong code giữ `+`, `-`, `*`, `/`, `=` theo ngôn ngữ lập trình; trong toán dùng `\cdot`, `\times` hoặc phân số khi phù hợp, không thay mọi dấu bằng một quy tắc chung.
 - Màu lấy từ `docs/.vitepress/theme/tokens.css`. SVG nội tuyến dùng biến token; SVG tĩnh dùng bảng màu sáng và đặt trên giấy trắng khi tối.
 - Chữ SVG tối thiểu 14 đơn vị; chữ trong hình không dưới 12 đơn vị.
-- **Chuẩn mực toán học & Chống tràn (No Scrollbars)**:
+- **Chuẩn mực toán học & Quy tắc ngắt dòng (Math Standards & Line-Breaking Rules)**:
   - Tuyệt đối không để phát sinh thanh cuộn ngang (scrollbar) trên bất kỳ công thức nào, ở mọi kích thước màn hình và trong mọi khung hộp (`::: info`, `::: details`).
-  - Mọi công thức hiển thị (`$$...$$`) dài hoặc nhiều bước biến đổi phải chủ động bẻ dòng bằng môi trường `\begin{aligned}...\end{aligned}`. Ngắt dòng bằng `\\` tại các dấu quan hệ ($=$, $\le$, $\ge$, $\approx$, $\implies$) hoặc phép toán ($+$, $-$) và căn lề bằng `&`. Không viết chuỗi đẳng thức trải dài trên một dòng đơn.
+  - **Chỉ ngắt dòng tại dấu quan hệ, cấm nhảy xuống dòng khi chưa đến dấu bằng**:
+    - Với công thức dài hoặc chuỗi biến đổi nhiều bước: Chỉ được bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt dòng bằng `\\` tại dấu bằng ($=$), bất đẳng thức ($\le, \ge, <, >$), xấp xỉ ($\approx$) hoặc suy luận ($\implies, \iff$) và căn lề bằng `&=`, `&\le`, v.v.
+    - **Tuyệt đối CẤM nhảy xuống dòng khi chưa đến dấu bằng**: Cấm ngắt dòng giữa chừng tại các toán tử cộng, trừ ($+$, $-$) hay nhân, chia ($\times, \cdot$) làm rớt số hạng xuống dòng tiếp theo kiểu $\dots + R_2 \\ + R_3$. Mọi số hạng trong cùng một vế của biểu thức phải nằm liền mạch trên cùng một dòng.
+    - **Cấm ngắt dòng ngay sau dấu bằng**: Tuyệt đối không viết `A = \\ B`, không ngắt dòng đẩy toàn bộ vế phải xuống dưới.
+  - **Không lạm dụng `aligned` bẻ gãy công thức ngắn**:
+    - Nếu một công thức hoặc phương trình vừa vặn trên một dòng (ví dụ: $R_{\mathrm{eq}} = R_1 + R_2 + R_3$ hay $\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}$ hay $R_{\mathrm{eq}} = \frac{R_1 R_2}{R_1 + R_2}$): Bắt buộc giữ nguyên trên 1 dòng đơn giản trong `$$...$$`. Tuyệt đối không bọc vào `\begin{aligned}` rồi ngắt vụn thành các dòng ngắn cụt cỡn ở giữa trang.
+    - Chỉ dùng `\begin{aligned}` khi có chuỗi biến đổi nhiều bước qua dấu bằng hoặc hệ nhiều phương trình.
   - Tách hoàn toàn văn xuôi, nhận xét ra ngoài khối TeX. Không nhét văn xuôi dài vào `\text{...}` bên trong công thức.
   - Cặp dấu `$$` mở và đóng phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
   - Công thức inline (`$...$`): Giới hạn chiều rộng không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.

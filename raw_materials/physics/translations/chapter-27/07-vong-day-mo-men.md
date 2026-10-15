@@ -23,8 +23,8 @@ Các cạnh dài $b$ hợp với từ trường góc $90^\circ-\phi$, nên lực
 
 $$
 \begin{aligned}
-&F' = IbB\sin(90^\circ-\phi)\\
-&\quad =IbB\cos\phi.
+F' &= IbB\sin(90^\circ-\phi) \\
+&= IbB\cos\phi.
 \end{aligned}
 $$
 
@@ -32,10 +32,9 @@ Các lực trên từng cặp cạnh triệt tiêu theo véc-tơ. Vì thế tổ
 
 $$
 \begin{aligned}
-&\tau = 2F\left(\frac{b}{2}\sin\phi\right)\\
-&\quad =(IaB)(b\sin\phi).
-\end{aligned}
-\tag{27.22}
+\tau &= 2F\left(\frac{b}{2}\sin\phi\right) \\
+&= (IaB)(b\sin\phi).
+\end{aligned} \tag{27.22}
 $$
 
 Ở đây $A=ab$ là diện tích vòng dây. Vì vậy:
@@ -52,9 +51,7 @@ $$
 Tích của dòng điện với diện tích vòng được gọi là độ lớn mômen lưỡng cực từ:
 
 $$
-\begin{aligned}
-&\mu = IA.\end{aligned}
-\tag{27.24}
+\mu = IA. \tag{27.24}
 $$
 
 Véc-tơ $\vec{\mu}$ vuông góc mặt vòng. Chiều của nó được xác định bằng quy tắc bàn tay phải: Khum các ngón theo chiều dòng điện, ngón cái duỗi ra chỉ chiều $\vec{\mu}$. Đây cũng là chiều véc-tơ diện tích $\vec{A}$, nên $\vec{\mu}=I\vec{A}$.
@@ -62,17 +59,13 @@ Véc-tơ $\vec{\mu}$ vuông góc mặt vòng. Chiều của nó được xác đ
 Với góc $\phi$ giữa $\vec{\mu}$ và $\vec{B}$, độ lớn mômen lực là:
 
 $$
-\begin{aligned}
-&\tau = \mu B\sin\phi.\end{aligned}
-\tag{27.25}
+\tau = \mu B\sin\phi. \tag{27.25}
 $$
 
 Chiều mômen được cho bởi tích có hướng:
 
 $$
-\begin{aligned}
-&\vec{\tau} = \vec{\mu}\times\vec{B}.\end{aligned}
-\tag{27.26}
+\vec{\tau} = \vec{\mu}\times\vec{B}. \tag{27.26}
 $$
 
 Mômen luôn làm $\vec{\mu}$ quay về cùng hướng với $\vec{B}$. Ở trạng thái cân bằng bền, hai véc-tơ song song. Khi ngược song song, vòng ở cân bằng không bền. Công thức này tương tự mômen lực $\vec{p}\times\vec{E}$ lên lưỡng cực điện.
@@ -87,10 +80,9 @@ Khi mômen từ đổi hướng trong từ trường, từ trường sinh công.
 
 $$
 \begin{aligned}
-&U = -\vec{\mu}\cdot\vec{B}\\
-&\quad =-\mu B\cos\phi.
-\end{aligned}
-\tag{27.27}
+U &= -\vec{\mu}\cdot\vec{B} \\
+&= -\mu B\cos\phi.
+\end{aligned} \tag{27.27}
 $$
 
 Theo chiều tăng của $\phi$, thành phần mômen lực là $\tau_\phi=-\mu B\sin\phi$. Trong một dịch chuyển góc vi phân, công của từ trường là $dW=\tau_\phi\,d\phi$, còn biến thiên năng lượng thế là $dU=-dW$. Do đó $dU=\mu B\sin\phi\,d\phi$, suy ra biểu thức trên khi chọn $U=0$ tại $\phi=90^\circ$.
@@ -109,10 +101,9 @@ Với cuộn gồm $N$ vòng sát nhau, mỗi vòng đóng góp cùng chiều. M
 
 $$
 \begin{aligned}
-&\mu = NIA,\\
-&\tau = NIAB\sin\phi.
-\end{aligned}
-\tag{27.28}
+\mu &= NIA, \\
+\tau &= NIAB\sin\phi.
+\end{aligned} \tag{27.28}
 $$
 
 Lực tổng hợp và năng lượng thế của cuộn nhiều vòng cũng bằng $N$ lần giá trị trên mỗi vòng.
@@ -155,9 +146,9 @@ Diện tích một vòng là $A=\pi r^2$. Mômen từ của cả cuộn là:
 
 $$
 \begin{aligned}
-&\mu = NIA\\
-&\quad =30(5{,}00)\pi(0{,}0500)^2\\
-&\quad =1{,}18\,\mathrm{A\,m^2}.
+\mu &= NIA \\
+&= 30(5{,}00)\pi(0{,}0500)^2 \\
+&= 1{,}18\,\mathrm{A\,m^2}.
 \end{aligned}
 $$
 
@@ -165,9 +156,9 @@ Theo quy tắc bàn tay phải, $\vec{\mu}$ hướng lên, vuông góc với $\v
 
 $$
 \begin{aligned}
-&\tau = \mu B\sin90^\circ\\
-&\quad =(1{,}18)(1{,}20)\\
-&\quad =1{,}41\,\mathrm{N\,m}.
+\tau &= \mu B\sin90^\circ \\
+&= (1{,}18)(1{,}20) \\
+&= 1{,}41\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -179,9 +170,9 @@ Nếu cuộn ở trên quay đến vị trí $\vec{\mu}$ song song $\vec{B}$, g�
 
 $$
 \begin{aligned}
-&\Delta U = U_f-U_i\\
-&\quad =-\mu B(\cos0^\circ-\cos90^\circ)\\
-&\quad =-1{,}41\,\mathrm{J}.
+\Delta U &= U_f-U_i \\
+&= -\mu B(\cos0^\circ-\cos90^\circ) \\
+&= -1{,}41\,\mathrm{J}.
 \end{aligned}
 $$
 

@@ -29,43 +29,31 @@ Hai tia khúc xạ này cắt nhau tại điểm $Q'$, chính là ảnh của $Q
 Quan sát hai tam giác vuông $OPQ$ và $OP'Q'$, ta thấy chúng đồng dạng vì có chung góc đối đỉnh tại $O$. Do đó:
 
 $$
-\begin{aligned}
-\frac{y}{s} &= -\frac{y'}{s'}
-\end{aligned}
+\frac{y}{s} = -\frac{y'}{s'}
 $$
 
 Dấu âm xuất hiện vì ảnh $P'Q'$ nằm ở phía dưới trục quang ($y' < 0$). Suy ra độ phóng đại ngang:
 
 $$
-\begin{aligned}
-\frac{y'}{y} &= -\frac{s'}{s}
-\end{aligned}
-\tag{34.14}
+\frac{y'}{y} = -\frac{s'}{s} \tag{34.14}
 $$
 
 Tiếp tục xét cặp tam giác vuông đồng dạng thứ hai là $OAF_2$ và $P'Q'F_2$. Nhận xét rằng đoạn thẳng $OA$ có độ cao bằng đúng chiều cao vật $y$ ($OA = y$), và đoạn thẳng $P'F_2$ có độ dài hình học là $s' - f$. Tỷ số đồng dạng cho ta:
 
 $$
-\begin{aligned}
-\frac{y}{f} &= -\frac{y'}{s' - f}
-\end{aligned}
+\frac{y}{f} = -\frac{y'}{s' - f}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-\frac{y'}{y} &= -\frac{s' - f}{f}
-\end{aligned}
-\tag{34.15}
+\frac{y'}{y} = -\frac{s' - f}{f} \tag{34.15}
 $$
 
 Đồng nhất hai biểu thức của tỷ số $y'/y$:
 
 $$
-\begin{aligned}
--\frac{s'}{s} &= -\frac{s' - f}{f}
-\end{aligned}
+-\frac{s'}{s} = -\frac{s' - f}{f}
 $$
 
 Chia cả hai vế cho $s'$ và đổi dấu:
@@ -80,10 +68,7 @@ $$
 Chuyển số hạng $1/s'$ sang vế trái, ta thu được **phương trình thấu kính mỏng**:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{1}{f}
-\end{aligned}
-\tag{34.16}
+\frac{1}{s} + \frac{1}{s'} = \frac{1}{f} \tag{34.16}
 $$
 
 Và công thức tính **độ phóng đại ngang**:
@@ -92,8 +77,7 @@ $$
 \begin{aligned}
 m &= \frac{y'}{y} \\
 &= -\frac{s'}{s}
-\end{aligned}
-\tag{34.17}
+\end{aligned} \tag{34.17}
 $$
 
 ![Hình 34.30: Ảnh thật tạo bởi thấu kính hội tụ bị đảo ngược nhưng không bị đảo trước - sau. Ngón tay cái của ảnh P′R′ và của vật PR đều chỉ cùng một hướng. Hình ảnh bị lộn ngược tương đương với phép quay 180 độ quanh trục quang.](../img/young-34/hinh-34-30.png)
@@ -132,49 +116,37 @@ Gọi $R_1$ là bán kính cong của bề mặt thứ nhất và $R_2$ là bán
 Tại mặt khúc xạ thứ nhất: Một vật điểm $P$ đặt cách đỉnh thứ nhất một khoảng $s_1$ tạo ra ảnh trung gian $P'$ tại khoảng cách $s_1'$ tuân theo phương trình (34.11):
 
 $$
-\begin{aligned}
-\frac{n_a}{s_1} + \frac{n_b}{s_1'} &= \frac{n_b - n_a}{R_1}
-\end{aligned}
+\frac{n_a}{s_1} + \frac{n_b}{s_1'} = \frac{n_b - n_a}{R_1}
 $$
 
 Ảnh trung gian $P'$ đóng vai trò là vật đối với mặt khúc xạ thứ hai. Khoảng cách từ đỉnh thứ hai tới $P'$ là $s_2$. Nếu thấu kính có bề dày là $t$, từ hình vẽ ta thấy:
 
 $$
-\begin{aligned}
-s_2 &= -s_1' + t
-\end{aligned}
+s_2 = -s_1' + t
 $$
 
 Đối với thấu kính mỏng, bề dày $t$ là không đáng kể so với các khoảng cách quang học ($t \to 0$), do đó:
 
 $$
-\begin{aligned}
-s_2 &= -s_1'
-\end{aligned}
+s_2 = -s_1'
 $$
 
 Áp dụng phương trình khúc xạ tại mặt thứ hai, với môi trường tới là vật liệu thấu kính ($n_b$) và môi trường ra là môi trường thứ ba ($n_c$):
 
 $$
-\begin{aligned}
-\frac{n_b}{s_2} + \frac{n_c}{s_2'} &= \frac{n_c - n_b}{R_2}
-\end{aligned}
+\frac{n_b}{s_2} + \frac{n_c}{s_2'} = \frac{n_c - n_b}{R_2}
 $$
 
 Thay $s_2 = -s_1'$ vào:
 
 $$
-\begin{aligned}
-\frac{n_b}{-s_1'} + \frac{n_c}{s_2'} &= \frac{n_c - n_b}{R_2}
-\end{aligned}
+\frac{n_b}{-s_1'} + \frac{n_c}{s_2'} = \frac{n_c - n_b}{R_2}
 $$
 
 Xét trường hợp phổ biến nhất khi thấu kính có chiết suất $n$ đặt trong không khí ($n_a = n_c = 1{,}00$ và $n_b = n$). Khi đó hai phương trình trở thành:
 
 $$
-\begin{aligned}
-\frac{1}{s_1} + \frac{n}{s_1'} &= \frac{n - 1}{R_1}
-\end{aligned}
+\frac{1}{s_1} + \frac{n}{s_1'} = \frac{n - 1}{R_1}
 $$
 
 $$
@@ -187,21 +159,13 @@ $$
 Cộng từng vế hai phương trình này, số hạng chứa ảnh trung gian $n/s_1'$ triệt tiêu hoàn toàn:
 
 $$
-\begin{aligned}
-\frac{1}{s_1} + \frac{1}{s_2'} &= (n - 1) \\
-&\quad \cdot \left(\frac{1}{R_1} - \frac{1}{R_2}\right)
-\end{aligned}
-\tag{34.18}
+\frac{1}{s_1} + \frac{1}{s_2'} = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right). \tag{34.18}
 $$
 
 Gọi $s_1 = s$ là khoảng cách từ vật ban đầu tới thấu kính và $s_2' = s'$ là khoảng cách từ ảnh cuối cùng tới thấu kính. So sánh phương trình (34.18) với phương trình thấu kính mỏng (34.16), ta rút ra **công thức chế tạo thấu kính** (Lensmaker's Equation):
 
 $$
-\begin{aligned}
-\frac{1}{f} &= (n - 1) \\
-&\quad \cdot \left(\frac{1}{R_1} - \frac{1}{R_2}\right)
-\end{aligned}
-\tag{34.19}
+\frac{1}{f} = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right). \tag{34.19}
 $$
 
 ![Hình 34.34: Các mắt kính này thỏa mãn gần đúng thấu kính mỏng: Bề dày của chúng rất nhỏ so với khoảng cách vật và khoảng cách ảnh.](../img/young-34/hinh-34-34.png)
@@ -220,9 +184,7 @@ $$
 Vì $s_2 = -s_1'$ và $n_a = n_c = 1$, biểu thức rút gọn thành công thức quen thuộc:
 
 $$
-\begin{aligned}
-m &= -\frac{s'}{s}
-\end{aligned}
+m = -\frac{s'}{s}
 $$
 
 ### Ví dụ 34.8: Xác định tiêu cự của thấu kính
@@ -238,37 +200,25 @@ $$
 (a) Thấu kính ở Hình 34.35 là thấu kính hai mặt lồi: Tâm cong của mặt thứ nhất ($C_1$) nằm ở phía ánh sáng ra của thấu kính, do đó $R_1$ mang giá trị dương. Tâm cong của mặt thứ hai ($C_2$) nằm ở phía ánh sáng tới, do đó $R_2$ mang giá trị âm. Vì vậy, ta có $R_1 = +10\,\mathrm{cm}$ và $R_2 = -10\,\mathrm{cm}$. Áp dụng phương trình (34.19):
 
 $$
-\begin{aligned}
-\frac{1}{f} &= (1{,}52 - 1) \\
-&\quad \cdot \left(\frac{1}{+10\,\mathrm{cm}}\right. \\
-&\qquad \left. - \frac{1}{-10\,\mathrm{cm}}\right)
-\end{aligned}
+\frac{1}{f} = (1{,}52 - 1)\left(\frac{1}{+10\,\mathrm{cm}} - \frac{1}{-10\,\mathrm{cm}}\right)
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-f &= +9{,}6\,\mathrm{cm}
-\end{aligned}
+f = +9{,}6\,\mathrm{cm}
 $$
 
 (b) Thấu kính ở Hình 34.31 là thấu kính hai mặt lõm: Tâm cong của mặt thứ nhất nằm ở phía ánh sáng tới, do đó $R_1$ mang giá trị âm. Tâm cong của mặt thứ hai nằm ở phía ánh sáng ra, do đó $R_2$ mang giá trị dương. Vì vậy, trong trường hợp này ta có $R_1 = -10\,\mathrm{cm}$ và $R_2 = +10\,\mathrm{cm}$. Tiếp tục sử dụng phương trình (34.19):
 
 $$
-\begin{aligned}
-\frac{1}{f} &= (1{,}52 - 1) \\
-&\quad \cdot \left(\frac{1}{-10\,\mathrm{cm}}\right. \\
-&\qquad \left. - \frac{1}{+10\,\mathrm{cm}}\right)
-\end{aligned}
+\frac{1}{f} = (1{,}52 - 1)\left(\frac{1}{-10\,\mathrm{cm}} - \frac{1}{+10\,\mathrm{cm}}\right)
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-f &= -9{,}6\,\mathrm{cm}
-\end{aligned}
+f = -9{,}6\,\mathrm{cm}
 $$
 
 **Đánh giá**: Ở phần (a), tiêu cự mang giá trị dương, do đó đây là một thấu kính hội tụ. Kết quả này hoàn toàn hợp lý vì thấu kính dày hơn ở phần giữa so với phần mép. Ở phần (b), tiêu cự mang giá trị âm, do đó đây là một thấu kính phân kỳ. Kết luận này cũng hoàn toàn phù hợp vì thấu kính dày hơn ở phần mép so với phần giữa.
@@ -323,65 +273,49 @@ Tính toán khoảng cách ảnh từ phương trình (34.16):
 (a) Khi $s = 50\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-\frac{1}{50\,\mathrm{cm}} + \frac{1}{s'} &= \frac{1}{20\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{50\,\mathrm{cm}} + \frac{1}{s'} = \frac{1}{20\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= +33{,}3\,\mathrm{cm}
-\end{aligned}
+s' = +33{,}3\,\mathrm{cm}
 $$
 
 (b) Khi $s = 20\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-\frac{1}{20\,\mathrm{cm}} + \frac{1}{s'} &= \frac{1}{20\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{20\,\mathrm{cm}} + \frac{1}{s'} = \frac{1}{20\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s' &\to \pm\infty
-\end{aligned}
+s' \to \pm\infty
 $$
 
 (c) Khi $s = 15\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-\frac{1}{15\,\mathrm{cm}} + \frac{1}{s'} &= \frac{1}{20\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{15\,\mathrm{cm}} + \frac{1}{s'} = \frac{1}{20\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= -60\,\mathrm{cm}
-\end{aligned}
+s' = -60\,\mathrm{cm}
 $$
 
 (d) Khi $s = -40\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-\frac{1}{-40\,\mathrm{cm}} + \frac{1}{s'} &= \frac{1}{20\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{-40\,\mathrm{cm}} + \frac{1}{s'} = \frac{1}{20\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= +13{,}3\,\mathrm{cm}
-\end{aligned}
+s' = +13{,}3\,\mathrm{cm}
 $$
 
 Các kết quả đồ thị khá sát với các giá trị tính toán này, ngoại trừ phần (c). Độ chính xác của sơ đồ ở Hình 34.37e bị hạn chế do các tia sáng kéo dài về phía sau có phương gần như song song với nhau.
@@ -495,17 +429,13 @@ Hai thấu kính hội tụ $A$ và $B$ có tiêu cự lần lượt là $8{,}0\
 Trước tiên ta tìm vị trí và kích thước của ảnh thứ nhất $I$. Áp dụng phương trình (34.16), $1/s + 1/s' = 1/f$, cho thấu kính $A$:
 
 $$
-\begin{aligned}
-\frac{1}{12{,}0\,\mathrm{cm}} + \frac{1}{s'_{I, A}} &= \frac{1}{8{,}0\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{12{,}0\,\mathrm{cm}} + \frac{1}{s'_{I, A}} = \frac{1}{8{,}0\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s'_{I, A} &= +24{,}0\,\mathrm{cm}
-\end{aligned}
+s'_{I, A} = +24{,}0\,\mathrm{cm}
 $$
 
 Ảnh $I$ nằm cách thấu kính $A$ một khoảng $24{,}0\,\mathrm{cm}$ về bên phải. Độ phóng đại ngang của thấu kính $A$ là:
@@ -531,17 +461,13 @@ $$
 về bên trái thấu kính $B$, do đó khoảng cách vật đối với thấu kính $B$ là $+12{,}0\,\mathrm{cm}$. Áp dụng phương trình (34.16) cho thấu kính $B$:
 
 $$
-\begin{aligned}
-\frac{1}{12{,}0\,\mathrm{cm}} + \frac{1}{s'_{I', B}} &= \frac{1}{6{,}0\,\mathrm{cm}}
-\end{aligned}
+\frac{1}{12{,}0\,\mathrm{cm}} + \frac{1}{s'_{I', B}} = \frac{1}{6{,}0\,\mathrm{cm}}
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-s'_{I', B} &= +12{,}0\,\mathrm{cm}
-\end{aligned}
+s'_{I', B} = +12{,}0\,\mathrm{cm}
 $$
 
 Ảnh cuối cùng $I'$ nằm cách thấu kính $B$ một khoảng $12{,}0\,\mathrm{cm}$ về bên phải. Độ phóng đại do thấu kính $B$ tạo ra là:

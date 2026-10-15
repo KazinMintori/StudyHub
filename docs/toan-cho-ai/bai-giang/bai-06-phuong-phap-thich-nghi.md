@@ -103,10 +103,10 @@ Khởi tạo $m_0 = 0$, $v_0 = 0$, tại mỗi bước $t = 1, 2, \ldots$:
 
 $$
 \begin{aligned}
-&m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t,\\
-&v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t \odot g_t,\\
-&\widehat m_t = \frac{m_t}{1 - \beta_1^t}, \qquad \widehat v_t = \frac{v_t}{1 - \beta_2^t},\\
-&\theta_{t+1} = \theta_t - \eta \frac{\widehat m_t}{\sqrt{\widehat v_t} + \varepsilon}.
+m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t, \\
+v_t &= \beta_2 v_{t-1} + (1 - \beta_2) g_t \odot g_t, \\
+\widehat m_t &= \frac{m_t}{1 - \beta_1^t}, \qquad \widehat v_t = \frac{v_t}{1 - \beta_2^t}, \\
+\theta_{t+1} &= \theta_t - \eta \frac{\widehat m_t}{\sqrt{\widehat v_t} + \varepsilon}.
 \end{aligned}
 $$
 
@@ -176,11 +176,11 @@ Với ma trận $H$ đối xứng dương xác định ($H \succ 0$), khởi t�
 
 $$
 \begin{aligned}
-&\alpha_k = \frac{r_k^T r_k}{p_k^T H p_k},\\
-&z_{k+1} = z_k + \alpha_k p_k,\\
-&r_{k+1} = r_k - \alpha_k H p_k,\\
-&\gamma_k = \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k},\\
-&p_{k+1} = r_{k+1} + \gamma_k p_k.
+\alpha_k &= \frac{r_k^T r_k}{p_k^T H p_k}, \\
+z_{k+1} &= z_k + \alpha_k p_k, \\
+r_{k+1} &= r_k - \alpha_k H p_k, \\
+\gamma_k &= \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k}, \\
+p_{k+1} &= r_{k+1} + \gamma_k p_k.
 \end{aligned}
 $$
 
@@ -269,8 +269,8 @@ Hãy tính toán các trạng thái $m_1, v_1, \widehat m_1, \widehat v_1$ và x
 - Hiệu chỉnh chệch:
   $$
 \begin{aligned}
-    &\widehat m_1 = \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3.\\
-    &\widehat v_1 = \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
+\widehat m_1 &= \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3. \\
+\widehat v_1 &= \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
 \end{aligned}
 $$
 - Bước cập nhật:
@@ -325,11 +325,11 @@ với $\beta_1 = 0{,}9$, $\beta_2 = 0{,}999$.
 2. **Kỳ vọng toán học và cơ chế hiệu chỉnh**:
    Lấy kỳ vọng toán học hai vế với giả thiết $\mathbb{E}[g_i] = \mu$:
    $$
-   \begin{aligned}
-   &\mathbb{E}[m_t] = (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i]\\
-   &\quad = (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
-   \end{aligned}
-   $$
+\begin{aligned}
+\mathbb{E}[m_t] &= (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i] \\
+&= (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
+\end{aligned}
+$$
    Tổng cấp số nhân với công bội $\beta_1$:
    $$
    \sum_{i=1}^t \beta_1^{t - i} = 1 + \beta_1 + \beta_1^2 + \dots + \beta_1^{t-1} = \frac{1 - \beta_1^t}{1 - \beta_1}.
@@ -393,11 +393,11 @@ Xét bài toán tối ưu với một tham số có gradient không đổi tại
 2. **Động lực học của RMSProp**:
    Khai triển đệ quy với $g_i^2 = c^2$:
    $$
-   \begin{aligned}
-   &v_t = (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i}\\
-   &\quad = (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right) = (1 - \beta^t) c^2.
-   \end{aligned}
-   $$
+\begin{aligned}
+v_t &= (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i} \\
+&= (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right) = (1 - \beta^t) c^2.
+\end{aligned}
+$$
    Khi $t \to \infty$, vì $\beta \in (0, 1)$, số hạng $\beta^t \to 0$. Do đó:
    $$
    \lim_{t \to \infty} v_t = c^2.

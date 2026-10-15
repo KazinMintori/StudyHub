@@ -10,9 +10,9 @@ Với biên độ dòng $I$ và biên độ điện áp $V$ hình sin:
 
 $$
 \begin{aligned}
-I_{\mathrm{rav}}&=\frac2\pi I\approx0{,}637I,\\
-I_{\mathrm{rms}}&=\frac I{\sqrt2},\\
-V_{\mathrm{rms}}&=\frac V{\sqrt2}.
+I_{\mathrm{rav}} &= \frac2\pi I\approx0{,}637I, \\
+I_{\mathrm{rms}} &= \frac I{\sqrt2}, \\
+V_{\mathrm{rms}} &= \frac V{\sqrt2}.
 \end{aligned}
 $$
 
@@ -24,8 +24,8 @@ Chọn dòng làm mốc pha:
 
 $$
 \begin{aligned}
-i&=I\cos\omega t,\\
-v&=V\cos(\omega t+\phi).
+i &= I\cos\omega t, \\
+v &= V\cos(\omega t+\phi).
 \end{aligned}
 $$
 
@@ -41,9 +41,9 @@ Góc dương nghĩa điện áp sớm dòng. Góc âm nghĩa điện áp trễ d
 
 $$
 \begin{aligned}
-V_R&=IR,\\
-V_L&=IX_L,\qquad X_L=\omega L,\\
-V_C&=IX_C,\qquad X_C=\frac1{\omega C}.
+V_R &= IR, \\
+V_L &= IX_L,\qquad X_L=\omega L, \\
+V_C &= IX_C,\qquad X_C=\frac1{\omega C}.
 \end{aligned}
 $$
 
@@ -57,9 +57,9 @@ Với điện kháng tổng $X=X_L-X_C$:
 
 $$
 \begin{aligned}
-Z&=\sqrt{R^2+X^2},\\
-V&=IZ,\\
-\tan\phi&=\frac XR.
+Z &= \sqrt{R^2+X^2}, \\
+V &= IZ, \\
+\tan\phi &= \frac XR.
 \end{aligned}
 $$
 
@@ -71,9 +71,9 @@ $$
 
 $$
 \begin{aligned}
-p&=vi,\\
-P_{\mathrm{av}}&=\frac12VI\cos\phi\\
-&=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.
+p &= vi, \\
+P_{\mathrm{av}} &= \frac12VI\cos\phi \\
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.
 \end{aligned}
 $$
 
@@ -99,8 +99,8 @@ Với máy lý tưởng và mô hình tải thuần trở:
 
 $$
 \begin{aligned}
-\frac{V_2}{V_1}&=\frac{N_2}{N_1},\\
-V_1I_1&=V_2I_2.
+\frac{V_2}{V_1} &= \frac{N_2}{N_1}, \\
+V_1I_1 &= V_2I_2.
 \end{aligned}
 $$
 

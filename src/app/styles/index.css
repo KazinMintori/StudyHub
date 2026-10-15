@@ -1,0 +1,13 @@
+/* Compatibility entry point. */
+@import '../../core/styles/fonts.css';
+@import '../../../docs/.vitepress/theme/tokens.css';
+@import '../../core/styles/base.css';
+@import './layout.css';
+@import './components.css';
+@import './home.css';
+@import './course.css';
+@import './lecture.css';
+@import './topic.css';
+@import './labs.css';
+@import './wiki.css';
+@import './workspace.css';

@@ -19,8 +19,8 @@ Với đường tròn bán kính $r<R$,
 
 $$
 \begin{aligned}
-2\pi rE&=\pi r^2\frac{dB}{dt},\\
-F&=qE=\frac{qr}{2}\frac{dB}{dt}.
+2\pi rE &= \pi r^2\frac{dB}{dt}, \\
+F &= qE=\frac{qr}{2}\frac{dB}{dt}.
 \end{aligned}
 $$
 
@@ -56,9 +56,9 @@ Thanh khối lượng $M=1{,}20\,\mathrm{kg}$, điện trở $R=0{,}500\,\Omega$
 
 $$
 \begin{aligned}
-&M\ddot x+b\dot x+kx=0,\\
-&b=\frac{B^2W^2}{R}\\
-&=0{,}320\,\mathrm{kg/s}.
+M\ddot x+b\dot x+kx &= 0, \\
+b &= \frac{B^2W^2}{R} \\
+&= 0{,}320\,\mathrm{kg/s}.
 \end{aligned}
 $$
 
@@ -66,29 +66,23 @@ $$
 
 $$
 \begin{aligned}
-\alpha&=0{,}1333\,\mathrm{s^{-1}},\\
-\omega_d&=\sqrt{\omega_0^2-\alpha^2}\\
-&=8{,}659\,\mathrm{rad/s},\\
-f&=\frac{\omega_d}{2\pi}=1{,}38\,\mathrm{Hz}.
+\alpha &= 0{,}1333\,\mathrm{s^{-1}}, \\
+\omega_d &= \sqrt{\omega_0^2-\alpha^2} \\
+&= 8{,}659\,\mathrm{rad/s}, \\
+f &= \frac{\omega_d}{2\pi}=1{,}38\,\mathrm{Hz}.
 \end{aligned}
 $$
 
 (c) Nghiệm đúng điều kiện ban đầu là
 
 $$
-\begin{aligned}
-&x(t)=x_0e^{-\alpha t}\cos\omega_dt\\
-&\quad+x_0e^{-\alpha t}\frac{\alpha}{\omega_d}\sin\omega_dt.
-\end{aligned}
+x(t)=x_0e^{-\alpha t}\cos\omega_dt +x_0e^{-\alpha t}\frac{\alpha}{\omega_d}\sin\omega_dt.
 $$
 
 Viết tổng trong ngoặc thành một cosin có pha, hệ số biên độ tại thời gian $t$ là
 
 $$
-\begin{aligned}
-&A(t)=x_0e^{-\alpha t}\\
-&\quad\times\sqrt{1+\left(\frac\alpha{\omega_d}\right)^2}.
-\end{aligned}
+A(t) = x_0e^{-\alpha t}\sqrt{1+\left(\frac\alpha{\omega_d}\right)^2}.
 $$
 
 Tại $5{,}00\,\mathrm s$, $A=0{,}05135\,\mathrm m\approx5{,}13\,\mathrm{cm}$. Vì cản yếu, xấp xỉ $A\approx x_0e^{-\alpha t}$ cho cùng kết quả ở ba chữ số có nghĩa.
@@ -97,8 +91,8 @@ Tại $5{,}00\,\mathrm s$, $A=0{,}05135\,\mathrm m\approx5{,}13\,\mathrm{cm}$. V
 
 $$
 \begin{aligned}
-\omega_dt_1&=\frac\pi2+\arctan\frac\alpha{\omega_d},\\
-t_1&=0{,}18318\,\mathrm s.
+\omega_dt_1 &= \frac\pi2+\arctan\frac\alpha{\omega_d}, \\
+t_1 &= 0{,}18318\,\mathrm s.
 \end{aligned}
 $$
 
@@ -113,9 +107,8 @@ Do đó $|\dot x(t_1)|=0{,}845\,\mathrm{m/s}$ và
 
 $$
 \begin{aligned}
-&I(t_1)\\
-&=\frac{BW|\dot x(t_1)|}{R}\\
-&=0{,}676\,\mathrm A.
+I(t_1) &= \frac{BW|\dot x(t_1)|}{R} \\
+&= 0{,}676\,\mathrm A.
 \end{aligned}
 $$
 
@@ -142,8 +135,8 @@ Khi nào dòng dịch bằng $21\,\mu\mathrm A$?
 
 $$
 \begin{aligned}
-i_D&=\varepsilon\frac{d\Phi_E}{dt}\\
-&=\varepsilon(2{,}4\times10^4\,\mathrm{V\,m/s^3})t^2.
+i_D &= \varepsilon\frac{d\Phi_E}{dt} \\
+&= \varepsilon(2{,}4\times10^4\,\mathrm{V\,m/s^3})t^2.
 \end{aligned}
 $$
 
@@ -233,8 +226,8 @@ Khớp đường $a=sv+c$ cho toàn bộ sáu điểm trong SI được
 
 $$
 \begin{aligned}
-s&=0{,}30714\,\mathrm{s^{-1}},\\
-c&=2{,}14\times10^{-4}\,\mathrm{m/s^2}.
+s &= 0{,}30714\,\mathrm{s^{-1}}, \\
+c &= 2{,}14\times10^{-4}\,\mathrm{m/s^2}.
 \end{aligned}
 $$
 
@@ -254,10 +247,9 @@ $$
 
 $$
 \begin{aligned}
-&t\\
-&=\frac{\ln(v_0/v)}s\\
-&=\frac{\ln2}s\\
-&=2{,}26\,\mathrm s.
+t &= \frac{\ln(v_0/v)}s \\
+&= \frac{\ln2}s \\
+&= 2{,}26\,\mathrm s.
 \end{aligned}
 $$
 :::
@@ -297,8 +289,8 @@ $$
 
 $$
 \begin{aligned}
-s&=5{,}20\,\mathrm{N\,s/m},\\
-c&=-0{,}0020\,\mathrm N.
+s &= 5{,}20\,\mathrm{N\,s/m}, \\
+c &= -0{,}0020\,\mathrm N.
 \end{aligned}
 $$
 
@@ -318,8 +310,8 @@ $$
 
 $$
 \begin{aligned}
-P&=I^2R=Fv\\
-&=sv^2=1{,}30\times10^{-2}\,\mathrm W.
+P &= I^2R=Fv \\
+&= sv^2=1{,}30\times10^{-2}\,\mathrm W.
 \end{aligned}
 $$
 :::

@@ -17,8 +17,8 @@ Với hàm một biến khả vi, đạo hàm là độ dốc tiếp tuyến. Đ
 
 $$
 \begin{aligned}
-&f(x) = f(x_0)+f'(c_1)(x-x_0),\\
-&f(x) = f(x_0)+f'(x_0)(x-x_0)+\frac12f''(c_2)(x-x_0)^2.
+f(x) &= f(x_0)+f'(c_1)(x-x_0), \\
+f(x) &= f(x_0)+f'(x_0)(x-x_0)+\frac12f''(c_2)(x-x_0)^2.
 \end{aligned}
 $$
 
@@ -32,8 +32,8 @@ Qua hai điểm khác nhau $x,y\in\mathbb R^n$, đường thẳng có biểu di�
 
 $$
 \begin{aligned}
-&z(t) = x+t(y-x)\\
-&\quad =(1-t)x+ty,\quad t\in\mathbb R.
+z(t) &= x+t(y-x) \\
+&= (1-t)x+ty,\quad t\in\mathbb R.
 \end{aligned}
 $$
 
@@ -69,8 +69,8 @@ Từ hai điểm có thể mở rộng tới $k$ điểm $x_1,\ldots,x_k\in D$. 
 
 $$
 \begin{aligned}
-&\alpha_i \ge 0,\quad i=1,\ldots,k,\\
-&\sum_{i=1}^{k}\alpha_i = \alpha_1+\cdots+\alpha_k=1.
+\alpha_i &\ge 0,\quad i=1,\ldots,k, \\
+\sum_{i=1}^{k}\alpha_i &= \alpha_1+\cdots+\alpha_k=1.
 \end{aligned}
 $$
 
@@ -106,10 +106,10 @@ Giả sử các $f_i$ lồi và các $h_j$ affine. Với hai điểm khả thi $
 
 $$
 \begin{aligned}
-&f_i(z) \le (1-t)f_i(x)+tf_i(y)\\
-&\quad \le0,\\
-&h_j(z) = (1-t)h_j(x)+th_j(y)\\
-&\quad =0.
+f_i(z) &\le (1-t)f_i(x)+tf_i(y) \\
+&\le 0, \\
+h_j(z) &= (1-t)h_j(x)+th_j(y) \\
+&= 0.
 \end{aligned}
 $$
 
@@ -126,8 +126,8 @@ Tính lồi của miền cho $z\in D$. Tối ưu địa phương và tính lồi
 
 $$
 \begin{aligned}
-&f(x) \le f(z)\\
-&\quad \le(1-t)f(x)+tf(y).
+f(x) &\le f(z) \\
+&\le (1-t)f(x)+tf(y).
 \end{aligned}
 $$
 

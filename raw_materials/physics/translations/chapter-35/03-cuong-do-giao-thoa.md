@@ -9,15 +9,11 @@
 Điện trường tức thời do từng khe tạo ra tại điểm $P$ có thể viết dưới dạng:
 
 $$
-\begin{aligned}
-E_1(t) &= E \cos(\omega t + \phi)
-\end{aligned}
+E_1(t) = E \cos(\omega t + \phi)
 $$
 
 $$
-\begin{aligned}
-E_2(t) &= E \cos \omega t
-\end{aligned}
+E_2(t) = E \cos \omega t
 $$
 
 Trong đó: Ký hiệu $\phi$ là độ lệch pha giữa hai sóng khi truyền tới điểm $P$.
@@ -32,8 +28,7 @@ Hình chiếu của từng vectơ pha lên trục ngang cho điện trường t�
 
 $$
 \begin{aligned}
-E_P^2 &= E^2 + E^2 \\
-&\quad - 2 E^2 \cos(\pi - \phi) \\
+E_P^2 &= E^2 + E^2 - 2 E^2 \cos(\pi - \phi) \\
 &= 2 E^2 (1 + \cos \phi)
 \end{aligned}
 $$
@@ -41,18 +36,13 @@ $$
 Áp dụng công thức lượng giác hạ bậc $1 + \cos\phi = 2\cos^2(\phi/2)$, ta thu được biểu thức bình phương biên độ điện trường tổng hợp:
 
 $$
-\begin{aligned}
-E_P^2 &= 4 E^2 \cos^2\frac{\phi}{2}
-\end{aligned}
+E_P^2 = 4 E^2 \cos^2\frac{\phi}{2}
 $$
 
 Lấy căn bậc hai, biên độ của điện trường tổng hợp tại điểm $P$ là:
 
 $$
-\begin{aligned}
-E_P &= 2 E \left|\cos\frac{\phi}{2}\right|
-\end{aligned}
-\tag{35.7}
+E_P = 2 E \left|\cos\frac{\phi}{2}\right| \tag{35.7}
 $$
 
 ### Biểu thức cường độ ánh sáng
@@ -61,29 +51,23 @@ Cường độ ánh sáng $I$ là mật độ thông lượng năng lượng tru
 
 $$
 \begin{aligned}
-I &= S_{\rm av}\\
-&=\frac{E_P^2}{2\mu_0c}\\
-&=\frac12\sqrt{\frac{\epsilon_0}{\mu_0}}E_P^2\\
-&=\frac12\epsilon_0cE_P^2
-\end{aligned}
-\tag{35.8}
+I &= S_{\rm av} \\
+&= \frac{E_P^2}{2\mu_0c} \\
+&= \frac12\sqrt{\frac{\epsilon_0}{\mu_0}}E_P^2 \\
+&= \frac12\epsilon_0cE_P^2
+\end{aligned} \tag{35.8}
 $$
 
 Thay biểu thức $E_P^2$ từ phương trình (35.7) vào phương trình (35.8):
 
 $$
-\begin{aligned}
-I &= 2 \epsilon_0 c E^2 \cos^2\frac{\phi}{2}
-\end{aligned}
-\tag{35.9}
+I = 2 \epsilon_0 c E^2 \cos^2\frac{\phi}{2} \tag{35.9}
 $$
 
 Khi hai sóng tới cùng pha ($\phi = 0, \pm 2\pi, \pm 4\pi, \dots$), hàm cosin đạt độ lớn bằng $1$, và cường độ đạt giá trị cực đại $I_0$:
 
 $$
-\begin{aligned}
-I_0 &= 2 \epsilon_0 c E^2
-\end{aligned}
+I_0 = 2 \epsilon_0 c E^2
 $$
 
 Nhận xét: Cường độ của sóng do một nguồn đơn lẻ phát ra truyền tới $P$ là $I_1 = \frac{1}{2}\epsilon_0 c E^2$. Như vậy, cực đại giao thoa có cường độ $I_0 = 4 I_1$, lớn gấp bốn lần cường độ của từng nguồn riêng lẻ.
@@ -91,10 +75,7 @@ Nhận xét: Cường độ của sóng do một nguồn đơn lẻ phát ra tru
 Thay $I_0$ vào phương trình (35.9), ta thu được công thức tổng quát xác định cường độ ánh sáng theo độ lệch pha:
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2\frac{\phi}{2}
-\end{aligned}
-\tag{35.10}
+I = I_0 \cos^2\frac{\phi}{2} \tag{35.10}
 $$
 
 ### Liên hệ giữa độ lệch pha và hiệu đường đi
@@ -102,9 +83,7 @@ $$
 Độ lệch pha $\phi$ giữa hai sóng xuất phát cùng pha tỉ lệ thuận với hiệu khoảng cách truyền sóng $r_2 - r_1$. Một bước sóng $\lambda$ tương ứng với góc pha $2\pi\,\mathrm{rad}$. Do đó ta có tỉ lệ:
 
 $$
-\begin{aligned}
-\frac{\phi}{2\pi} &= \frac{r_2 - r_1}{\lambda}
-\end{aligned}
+\frac{\phi}{2\pi} = \frac{r_2 - r_1}{\lambda}
 $$
 
 Suy ra biểu thức của độ lệch pha:
@@ -113,8 +92,7 @@ $$
 \begin{aligned}
 \phi &= \frac{2\pi}{\lambda} (r_2 - r_1) \\
 &= k (r_2 - r_1)
-\end{aligned}
-\tag{35.11}
+\end{aligned} \tag{35.11}
 $$
 
 Trong đó: Đại lượng $k = \frac{2\pi}{\lambda}$ là **số sóng** (wave number).
@@ -125,8 +103,7 @@ $$
 \begin{aligned}
 \lambda &= \frac{\lambda_0}{n} \\
 k &= n k_0
-\end{aligned}
-\tag{35.12}
+\end{aligned} \tag{35.12}
 $$
 
 Khi điểm $P$ nằm ở khoảng cách rất xa hai khe so với khoảng cách giữa hai khe ($R \gg d$), theo phương trình (35.3) hiệu đường đi là $r_2 - r_1 = d\sin\theta$. Khi đó độ lệch pha trở thành:
@@ -135,8 +112,7 @@ $$
 \begin{aligned}
 \phi &= k d \sin \theta \\
 &= \frac{2\pi d}{\lambda} \sin \theta
-\end{aligned}
-\tag{35.13}
+\end{aligned} \tag{35.13}
 $$
 
 Thay phương trình (35.13) vào phương trình (35.10), ta thu được biểu thức cường độ ánh sáng phụ thuộc vào góc lệch $\theta$:
@@ -145,8 +121,7 @@ $$
 \begin{aligned}
 I &= I_0 \cos^2\left(\frac{1}{2} k d \sin \theta\right) \\
 &= I_0 \cos^2\left(\frac{\pi d}{\lambda} \sin \theta\right)
-\end{aligned}
-\tag{35.14}
+\end{aligned} \tag{35.14}
 $$
 
 Cường độ đạt cực đại $I = I_0$ khi biểu thức trong dấu cosin bằng $m\pi$, tức là $\frac{\pi d}{\lambda}\sin\theta = m\pi \implies d\sin\theta = m\lambda$. Kết quả này hoàn toàn trùng khớp với điều kiện vân sáng ở phương trình (35.4).
@@ -159,8 +134,7 @@ $$
 \begin{aligned}
 I &= I_0 \cos^2\left(\frac{k d y}{2 R}\right) \\
 &= I_0 \cos^2\left(\frac{\pi d y}{\lambda R}\right)
-\end{aligned}
-\tag{35.15}
+\end{aligned} \tag{35.15}
 $$
 
 ![Hình 35.10: Đồ thị phân bố cường độ trong hệ vân giao thoa từ hai khe hẹp giống nhau theo công thức (35.15). Trục hoành biểu diễn đồng thời tọa độ y trên màn, hiệu đường đi d sin θ, và độ lệch pha φ. Các đỉnh cực đại có cường độ bằng I 0 xuất hiện khi φ là bội số chẵn của π. Các cực tiểu có cường độ bằng không xuất hiện khi φ là bội số lẻ của π.](../img/young-35/hinh-35-10.png)
@@ -215,26 +189,19 @@ $$
 Khi đó phương trình cường độ (35.14) trở thành:
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2\left(\frac{\pi d}{\lambda} \sin \theta\right)
-\end{aligned}
+I = I_0 \cos^2\left(\frac{\pi d}{\lambda} \sin \theta\right)
 $$
 
 Với $d/\lambda = 2{,}00$, hàm cường độ trở thành:
 
 $$
-\begin{aligned}
-I &= I_0 \\
-&\quad \times \cos^2[(2{,}00\pi\,\mathrm{rad}) \sin \theta]
-\end{aligned}
+I &= I_0 \times \cos^2[(2{,}00\pi\,\mathrm{rad}) \sin \theta]
 $$
 
 (a) Khi $\theta = 4{,}0^\circ$:
 
 $$
-\begin{aligned}
-\sin 4{,}0^\circ &\approx 0{,}06976
-\end{aligned}
+\sin 4{,}0^\circ \approx 0{,}06976
 $$
 
 Góc pha trong hàm cosin là:
@@ -267,9 +234,7 @@ $$
 (b) Cường độ $I = I_0/2$ khi hàm cosin nhận giá trị $\pm \frac{1}{\sqrt{2}}$. Góc nhỏ nhất thỏa mãn điều kiện này tương ứng với:
 
 $$
-\begin{aligned}
-(2{,}00\pi\,\mathrm{rad}) \sin \theta &= \pm \frac{\pi}{4}\,\mathrm{rad}
-\end{aligned}
+(2{,}00\pi\,\mathrm{rad}) \sin \theta = \pm \frac{\pi}{4}\,\mathrm{rad}
 $$
 
 Suy ra:
@@ -284,27 +249,19 @@ $$
 Lấy hàm sin ngược, ta tìm được các góc:
 
 $$
-\begin{aligned}
-\theta &= \pm 7{,}2^\circ
-\end{aligned}
+\theta = \pm 7{,}2^\circ
 $$
 
 (c) Cường độ hoàn toàn triệt tiêu ($I = 0$) khi biểu thức trong hàm cosin bằng một số bán nguyên lần của $\pi$:
 
 $$
-\begin{aligned}
-2{,}00\pi \sin \theta &= \pm \frac{\pi}{2}, \\
-&\quad \pm \frac{3\pi}{2}, \dots
-\end{aligned}
+2{,}00\pi \sin \theta = \pm \frac{\pi}{2}, \pm \frac{3\pi}{2}, \dots
 $$
 
 Chia cả hai vế cho $2{,}00\pi$:
 
 $$
-\begin{aligned}
-\sin \theta &= \pm 0{,}250, \\
-&\quad \pm 0{,}750, \dots
-\end{aligned}
+\sin \theta = \pm 0{,}250, \pm 0{,}750, \dots
 $$
 
 Vì giá trị của hàm sin không thể vượt quá $1$, các nghiệm lớn hơn $1$ không có ý nghĩa vật lý. Ta nhận được hai cặp góc triệt tiêu:
@@ -318,29 +275,19 @@ Vì giá trị của hàm sin không thể vượt quá $1$, các nghiệm lớn
 Điều kiện ở câu (b) để $I = I_0/2$, tức là $(2{,}00\pi\,\mathrm{rad})\sin\theta = \pm \frac{\pi}{4}\,\mathrm{rad}$, trên thực tế còn được thỏa mãn bởi các nghiệm khác của phương trình lượng giác:
 
 $$
-\begin{aligned}
-2{,}00\pi \sin\theta &= \pm \frac{3\pi}{4}, \\
-&\quad \pm \frac{5\pi}{4}, \\
-&\quad \pm \frac{7\pi}{4}
-\end{aligned}
+2{,}00\pi \sin\theta = \pm \frac{3\pi}{4}, \pm \frac{5\pi}{4}, \pm \frac{7\pi}{4}
 $$
 
 Tương ứng với các giá trị:
 
 $$
-\begin{aligned}
-\sin\theta &= \pm 0{,}375, \\
-&\quad \pm 0{,}625, \\
-&\quad \pm 0{,}875
-\end{aligned}
+\sin\theta = \pm 0{,}375, \pm 0{,}625, \pm 0{,}875
 $$
 
 Từ đó cho các góc phương vị khác:
 
 $$
-\begin{aligned}
-\theta &= \pm 22{,}0^\circ, \pm 38{,}7^\circ, \pm 61{,}0^\circ
-\end{aligned}
+\theta = \pm 22{,}0^\circ, \pm 38{,}7^\circ, \pm 61{,}0^\circ
 $$
 
 Chúng ta có thể dễ dàng kiểm tra lại các giá trị này bằng cách thay ngược vào hàm cosin. Tuy nhiên, đưa những góc này vào phần đáp số của câu (b) là không chuẩn xác, bởi vì đề bài yêu cầu tìm góc gần phương $\theta = 0^\circ$ nhất mà tại đó cường độ bằng $I_0/2$. Những góc bổ sung này ứng với các búp sóng phụ ở hai bên sườn.
@@ -366,55 +313,51 @@ Giải thích:
 Đối với các trường hợp (i) và (iii), ta biết bước sóng $\lambda$ và hiệu đường đi $d\sin\theta = r_2 - r_1$. Do đó ta áp dụng phương trình (35.14):
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2\left(\frac{\pi d \sin \theta}{\lambda}\right)
-\end{aligned}
+I = I_0 \cos^2\left(\frac{\pi d \sin \theta}{\lambda}\right)
 $$
 
 Đối với các trường hợp (ii) và (iv), ta biết trực tiếp độ lệch pha $\phi$. Do đó ta áp dụng phương trình (35.10):
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2\frac{\phi}{2}
-\end{aligned}
+I = I_0 \cos^2\frac{\phi}{2}
 $$
 
 Tính toán cụ thể cho từng trường hợp:
 - Điểm (i): Vì hiệu đường đi $\Delta r = 4{,}00 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 0{,}800$:
   $$
-  \begin{aligned}
-  I &= I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \\
-  &\approx 0{,}655 I_0
-  \end{aligned}
-  $$
+\begin{aligned}
+I &= I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \\
+&\approx 0{,}655 I_0
+\end{aligned}
+$$
 - Điểm (ii):
   $$
-  \begin{aligned}
-  I &= I_0 \cos^2\left(\frac{4{,}00\,\mathrm{rad}}{2}\right) \\
-  &= I_0 \cos^2(2{,}00\,\mathrm{rad}) \\
-  &\approx 0{,}173 I_0
-  \end{aligned}
-  $$
+\begin{aligned}
+I &= I_0 \cos^2\left(\frac{4{,}00\,\mathrm{rad}}{2}\right) \\
+&= I_0 \cos^2(2{,}00\,\mathrm{rad}) \\
+&\approx 0{,}173 I_0
+\end{aligned}
+$$
 - Điểm (iii): Vì hiệu đường đi $\Delta r = 7{,}50 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 1{,}50$:
   $$
-  \begin{aligned}
-  I &= I_0 \cos^2(1{,}50\pi\,\mathrm{rad}) \\
-  &= 0
-  \end{aligned}
-  $$
+\begin{aligned}
+I &= I_0 \cos^2(1{,}50\pi\,\mathrm{rad}) \\
+&= 0
+\end{aligned}
+$$
 - Điểm (iv):
   $$
-  \begin{aligned}
-  I &= I_0 \cos^2\left(\frac{2{,}00\,\mathrm{rad}}{2}\right) \\
-  &= I_0 \cos^2(1{,}00\,\mathrm{rad}) \\
-  &\approx 0{,}292 I_0
-  \end{aligned}
-  $$
+\begin{aligned}
+I &= I_0 \cos^2\left(\frac{2{,}00\,\mathrm{rad}}{2}\right) \\
+&= I_0 \cos^2(1{,}00\,\mathrm{rad}) \\
+&\approx 0{,}292 I_0
+\end{aligned}
+$$
 
 So sánh các giá trị cường độ:
 $$
 \begin{aligned}
-0{,}655 I_0 &> 0{,}292 I_0 \\
+&0{,}655 I_0 > 0{,}292 I_0 \\
 &> 0{,}173 I_0 > 0
 \end{aligned}
 $$

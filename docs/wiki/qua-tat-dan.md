@@ -17,10 +17,10 @@ Với $R^2>4L/C$, đặt các hệ số
 
 $$
 \begin{aligned}
-\alpha&=\frac{R}{2L},\\
-\delta&=\sqrt{\alpha^2-\frac1{LC}},\\
-\alpha_1&=\alpha-\delta,\\
-\alpha_2&=\alpha+\delta.
+\alpha &= \frac{R}{2L}, \\
+\delta &= \sqrt{\alpha^2-\frac1{LC}}, \\
+\alpha_1 &= \alpha-\delta, \\
+\alpha_2 &= \alpha+\delta.
 \end{aligned}
 $$
 

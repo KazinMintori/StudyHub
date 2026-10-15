@@ -37,9 +37,8 @@ Từ suất điện động bằng tốc độ biến thiên từ thông, ta có
 
 $$
 \begin{aligned}
-1\,\frac{\mathrm{Wb}}{\mathrm A}
-&=1\,\frac{\mathrm V\cdot\mathrm s}{\mathrm A}\\
-&=1\,\Omega\cdot\mathrm s.
+1\,\frac{\mathrm{Wb}}{\mathrm A} &= 1\,\frac{\mathrm V\cdot\mathrm s}{\mathrm A} \\
+&= 1\,\Omega\cdot\mathrm s.
 \end{aligned}
 $$
 
@@ -97,8 +96,8 @@ Khi mắc nối tiếp, dòng qua hai cuộn bằng nhau. Từ thông móc vòng
 
 $$
 \begin{aligned}
-L_{\mathrm{nt},+}&=2L+2M,\\
-L_{\mathrm{nt},-}&=2L-2M.
+L_{\mathrm{nt},+} &= 2L+2M, \\
+L_{\mathrm{nt},-} &= 2L-2M.
 \end{aligned}
 $$
 
@@ -106,8 +105,8 @@ Dấu cộng ứng với hai trường hỗ trợ nhau. Dấu trừ ứng với 
 
 $$
 \begin{aligned}
-L_{\mathrm{ss},+}&=\frac{L+M}{2},\\
-L_{\mathrm{ss},-}&=\frac{L-M}{2}.
+L_{\mathrm{ss},+} &= \frac{L+M}{2}, \\
+L_{\mathrm{ss},-} &= \frac{L-M}{2}.
 \end{aligned}
 $$
 
@@ -174,8 +173,8 @@ Khi giữ $I$ và hình học ống dây, phải thay độ lớn trường tư�
 
 $$
 \begin{aligned}
-u_B&=\frac{(\mu nI)^2}{2\mu}\\
-&=\frac12\mu n^2I^2.
+u_B &= \frac{(\mu nI)^2}{2\mu} \\
+&= \frac12\mu n^2I^2.
 \end{aligned}
 $$
 
@@ -327,9 +326,9 @@ Tiêu chí chính xác là
 
 $$
 \begin{aligned}
-R^2&<\frac{4L}{C}:\quad\omega_d>0,\\
-R^2&=\frac{4L}{C},\\
-R^2&>\frac{4L}{C}.
+&R^2 <\frac{4L}{C}:\quad\omega_d>0, \\
+R^2 &= \frac{4L}{C}, \\
+&R^2 >\frac{4L}{C}.
 \end{aligned}
 $$
 

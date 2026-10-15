@@ -24,7 +24,7 @@ $N_1,N_2$ là số vòng. $V_1,V_2$ cùng là biên độ hoặc cùng hiệu d�
 Với tải thuần trở, máy không tổn hao và bỏ qua dòng từ hóa:
 
 $$
-\begin{aligned}&V_1I_1=V_2I_2\\&I_2/I_1=N_1/N_2.\end{aligned}
+V_1I_1=V_2I_2\\ I_2/I_1=N_1/N_2.
 $$
 
 Điện trở tải R nhìn từ sơ cấp:

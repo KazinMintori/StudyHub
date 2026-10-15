@@ -1,0 +1,61 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "15-tu-mau-den-tong-the",
+  "route": "/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/15-tu-mau-den-tong-the/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "mau-tong-the",
+    "suy-rong-thong-ke"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 209,
+      "title": "Bài tập rèn luyện"
+    }
+  ],
+  "solutions": [],
+  "assets": [
+    {
+      "reference": "./img/stat20-15/generalization.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 20,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/generalization.png"
+    },
+    {
+      "reference": "./img/stat20-15/pimentel-sm.jpeg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 42,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/pimentel-sm.jpeg"
+    },
+    {
+      "reference": "./img/stat20-15/unnamed-chunk-1-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 61,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/unnamed-chunk-1-1.png"
+    },
+    {
+      "reference": "./img/stat20-15/bullseye.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 85,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/bullseye.png"
+    },
+    {
+      "reference": "./img/stat20-15/unnamed-chunk-3-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 167,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/unnamed-chunk-3-1.png"
+    },
+    {
+      "reference": "./img/stat20-15/unnamed-chunk-7-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/15-tu-mau-den-tong-the.md",
+      "line": 186,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-15/unnamed-chunk-7-1.png"
+    }
+  ]
+}

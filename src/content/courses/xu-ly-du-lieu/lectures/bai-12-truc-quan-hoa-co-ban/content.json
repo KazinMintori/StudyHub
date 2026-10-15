@@ -1,0 +1,18 @@
+{
+  "course": "xu-ly-du-lieu",
+  "lecture": "bai-12-truc-quan-hoa-co-ban",
+  "route": "/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban",
+  "notes": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+  "topics": [],
+  "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-12-truc-quan-hoa-co-ban/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "gia-tri-thieu",
+    "thong-ke-mo-ta"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

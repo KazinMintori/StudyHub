@@ -6,10 +6,9 @@ Xét một ống dây dài, mảnh có tiết diện $A$ và mật độ vòng d
 
 $$
 \begin{aligned}
-\mathcal{E}&=-\frac{d\Phi_B}{dt}\\
-&=-\mu_0nA\frac{dI}{dt}.
-\end{aligned}
-\tag{29.8}
+\mathcal{E} &= -\frac{d\Phi_B}{dt} \\
+&= -\mu_0nA\frac{dI}{dt}.
+\end{aligned} \tag{29.8}
 $$
 
 Nếu điện trở toàn vòng là $R$, dòng cảm ứng tức thời có độ lớn và dấu theo quy ước của suất điện động: $I'=\mathcal{E}/R$. Vòng dây nằm ngoài vùng có từ trường, vì vậy lực từ không thể làm điện tích chạy quanh vòng. Ta phải kết luận rằng từ thông biến thiên tạo ra một điện trường cảm ứng trong dây.
@@ -49,10 +48,10 @@ Vòng dây và ống dây đồng trục. Đối xứng khiến điện trườn
 
 $$
 \begin{aligned}
-A&=4{,}0\,\mathrm{cm^2}\\
-&=4{,}0\times10^{-4}\,\mathrm{m^2},\\
-r&=2{,}0\,\mathrm{cm}\\
-&=2{,}0\times10^{-2}\,\mathrm{m}.
+A &= 4{,}0\,\mathrm{cm^2} \\
+&= 4{,}0\times10^{-4}\,\mathrm{m^2}, \\
+r &= 2{,}0\,\mathrm{cm} \\
+&= 2{,}0\times10^{-2}\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -60,11 +59,10 @@ Với $\mu_0=4\pi\times10^{-7}\,\mathrm{Wb/(A\,m)}$, ta có:
 
 $$
 \begin{aligned}
-\mathcal{E}&=-\mu_0nA\frac{dI}{dt}\\
-&=-(4\pi\times10^{-7})(500)\\
-&\quad\times(4{,}0\times10^{-4})(100)\,\mathrm V\\
-&=-2{,}513\times10^{-5}\,\mathrm V\\
-&\approx-25\,\mu\mathrm V.
+\mathcal{E} &= -\mu_0nA\frac{dI}{dt} \\
+&= -(4\pi\times10^{-7})(500) \times(4{,}0\times10^{-4})(100)\,\mathrm V \\
+&= -2{,}513\times10^{-5}\,\mathrm V \\
+&\approx -25\,\mu\mathrm V.
 \end{aligned}
 $$
 
@@ -72,9 +70,9 @@ $$
 
 $$
 \begin{aligned}
-E&=\frac{|\mathcal E|}{2\pi r}\\
-&=\frac{25\times10^{-6}}{2\pi(2{,}0\times10^{-2})}\,\mathrm{V/m}\\
-&=2{,}0\times10^{-4}\,\mathrm{V/m}.
+E &= \frac{|\mathcal E|}{2\pi r} \\
+&= \frac{25\times10^{-6}}{2\pi(2{,}0\times10^{-2})}\,\mathrm{V/m} \\
+&= 2{,}0\times10^{-4}\,\mathrm{V/m}.
 \end{aligned}
 $$
 

@@ -18,9 +18,15 @@ Vui lòng tuân theo hướng dẫn chi tiết tại [AGENTS.md](./AGENTS.md).
 - **Cấm lối viết "nghĩ thành tiếng" trong lời giải**: Lời giải bài tập phải là văn bản sư phạm mẫu mực, lập luận mạch lạc, chắc chắn và dứt khoát. Nghiêm cấm đưa vào các câu nháp tự độc thoại kiểu AI: *“Khoan đã, hãy xem lại…”*, *“À không, thay vào đó…”*, *“Ý tôi là…”*, *“Thử lại nào…”*, *“Nhầm rồi…”*.
 - **Không bịa đặt tần suất lỗi sinh viên hoặc "bẫy thi cử"**: Tuyệt đối không đưa ra khẳng định cảm tính về sai sót của người học: Cấm các câu *“Sinh viên rất hay nhầm…”*, *“Lỗi phổ biến nhất là…”*, *“Đa số sinh viên đều mắc…”*, *“Bẫy thi cử cực kỳ phổ biến…”*. Hãy nêu trực diện hai cách hiểu đối lập hoặc trường hợp dễ sơ suất.
 
-### Quy tắc định dạng toán học & Chống thanh cuộn (No Math Scrollbars):
+### Quy tắc định dạng toán học & Quy tắc ngắt dòng (Math Standards & Line-Breaking Rules):
 - **Không scrollbar**: Tuyệt đối không để công thức xuất hiện thanh cuộn ngang trên cả desktop và mobile.
-- **Bẻ dòng công thức dài**: Mọi biểu thức hoặc chuỗi biến đổi dài phải bẻ dòng bằng `\begin{aligned}...\end{aligned}`, ngắt tại dấu bằng ($=$), bất đẳng thức ($\le, \ge, \approx, \implies$) hoặc toán tử ($+, -$) bằng `\\` và căn lề bằng `&`.
+- **Chỉ ngắt dòng tại dấu quan hệ, cấm nhảy xuống dòng khi chưa đến dấu bằng**:
+  - Với công thức dài hoặc chuỗi biến đổi nhiều bước: Chỉ được bẻ dòng tại dấu bằng ($=$), dấu bất đẳng thức ($\le, \ge, <, >$), dấu xấp xỉ ($\approx$) hoặc dấu suy luận ($\implies, \iff$) bằng `\\` và căn lề bằng `&=`, `&\le`, v.v.
+  - **Tuyệt đối CẤM nhảy xuống dòng khi chưa đến dấu bằng**: Cấm ngắt dòng giữa chừng tại các toán tử cộng, trừ ($+$, $-$) hay nhân, chia ($\times, \cdot$) làm rớt số hạng xuống dòng tiếp theo kiểu $\dots + R_2 \\ + R_3$. Mọi số hạng trong cùng một vế của biểu thức phải nằm liền mạch trên cùng một dòng.
+  - **Cấm ngắt dòng ngay sau dấu bằng**: Tuyệt đối không viết `A = \\ B`, không ngắt dòng đẩy toàn bộ vế phải xuống dưới.
+- **Không lạm dụng `aligned` bẻ gãy công thức ngắn**:
+  - Nếu một công thức hoặc phương trình vừa vặn trên một dòng (ví dụ: $R_{\mathrm{eq}} = R_1 + R_2 + R_3$ hay $\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}$ hay $R_{\mathrm{eq}} = \frac{R_1 R_2}{R_1 + R_2}$): Bắt buộc giữ nguyên trên 1 dòng đơn giản trong `$$...$$`. Tuyệt đối không bọc vào `\begin{aligned}` rồi ngắt vụn thành các dòng ngắn cụt cỡn ở giữa trang.
+  - Chỉ dùng `\begin{aligned}` khi có chuỗi biến đổi nhiều bước qua dấu bằng hoặc hệ nhiều phương trình.
 - **Khai triển tường minh trước khi viết tắt**: Mọi công thức dùng ký hiệu dồn ($\sum, \prod, \dots$) phải được khai triển tường minh ít nhất một lần (ví dụ $\sum_{i=1}^k \theta_i = \theta_1 + \dots + \theta_k = 1$ với $\theta_i \ge 0$), nêu rõ miền chỉ số, trực giác bản chất và trường hợp cơ sở $k=2$.
 - **Tách văn xuôi khỏi Math**: Không nhét văn xuôi nhận xét vào trong khối toán LaTeX bằng `\text{...}`.
 - **Giới hạn inline**: Công thức nội dòng `$…$` tối đa 38ex. Quá dài phải chuyển sang khối `$$...$$` riêng.

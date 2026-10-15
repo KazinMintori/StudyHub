@@ -60,9 +60,9 @@ Nếu có $n$ electron tự do trong một đơn vị thể tích, mật độ d
 
 $$
 \begin{aligned}
-&\vec J = nq\left(\frac{q\tau}{m}\vec E\right)\\
-&\quad =\frac{nq^2\tau}{m}\vec E\\
-&\quad =\frac{ne^2\tau}{m}\vec E.
+\vec J &= nq\left(\frac{q\tau}{m}\vec E\right) \\
+&= \frac{nq^2\tau}{m}\vec E \\
+&= \frac{ne^2\tau}{m}\vec E.
 \end{aligned}
 $$
 
@@ -103,11 +103,11 @@ $$
 
 $$
 \begin{aligned}
-&e^2 = 2{,}56\times10^{-38}\,\mathrm{C^2},\\
-&ne^2 = 2{,}176\times10^{-9}\,\mathrm{C^2/m^3},\\
-&ne^2\rho = 3{,}74272\times10^{-17}\,\mathrm{kg/s},\\
-&\tau = \frac{9{,}11\times10^{-31}}{3{,}74272\times10^{-17}}\,\mathrm s\\
-&\quad \approx2{,}4\times10^{-14}\,\mathrm s.
+e^2 &= 2{,}56\times10^{-38}\,\mathrm{C^2}, \\
+ne^2 &= 2{,}176\times10^{-9}\,\mathrm{C^2/m^3}, \\
+ne^2\rho &= 3{,}74272\times10^{-17}\,\mathrm{kg/s}, \\
+\tau &= \frac{9{,}11\times10^{-31}}{3{,}74272\times10^{-17}}\,\mathrm s \\
+&\approx 2{,}4\times10^{-14}\,\mathrm s.
 \end{aligned}
 $$
 

@@ -54,12 +54,11 @@ Trong biểu thức $dB_x$, các đại lượng $I$, $a$, $x$ và $r$ không đ
 
 $$
 \begin{aligned}
-&B_x = \oint dB_x\\
-&\quad =\frac{\mu_0 I a}{4\pi(x^2+a^2)^{3/2}}\oint dl\\
-&\quad =\frac{\mu_0 I a}{4\pi(x^2+a^2)^{3/2}}(2\pi a)\\
-&\quad =\frac{\mu_0 I a^2}{2(x^2+a^2)^{3/2}}.
-\end{aligned}
-\tag{28.15}
+B_x &= \oint dB_x \\
+&= \frac{\mu_0 I a}{4\pi(x^2+a^2)^{3/2}}\oint dl \\
+&= \frac{\mu_0 I a}{4\pi(x^2+a^2)^{3/2}}(2\pi a) \\
+&= \frac{\mu_0 I a^2}{2(x^2+a^2)^{3/2}}.
+\end{aligned} \tag{28.15}
 $$
 
 Chiều của $\vec B$ được xác định bằng quy tắc bàn tay phải. Khum các ngón theo chiều dòng điện trên vòng. Ngón cái duỗi ra chỉ chiều trường trên trục.
@@ -119,10 +118,10 @@ Cuộn dây có $N=100$ vòng tròn, bán kính $a=0{,}60\,\mathrm m$, mang dòn
 
 $$
 \begin{aligned}
-&B_x = \frac{\mu_0NIa^2}{2(x^2+a^2)^{3/2}}\\
-&\quad =2\pi\times10^{-7}\frac{180}{(1{,}00)^{3/2}}\\
-&\quad =1{,}13\times10^{-4}\,\mathrm T\\
-&\quad \approx1{,}1\times10^{-4}\,\mathrm T.
+B_x &= \frac{\mu_0NIa^2}{2(x^2+a^2)^{3/2}} \\
+&= 2\pi\times10^{-7}\frac{180}{(1{,}00)^{3/2}} \\
+&= 1{,}13\times10^{-4}\,\mathrm T \\
+&\approx 1{,}1\times10^{-4}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -137,11 +136,11 @@ $$
 
 $$
 \begin{aligned}
-&\frac{a^3}{(x^2+a^2)^{3/2}} = \frac18\\
-&(x^2+a^2)^{3/2} = 8a^3\\
-&x^2+a^2 = 4a^2\\
-&x = \pm\sqrt3\,a\\
-&\quad =\pm1{,}04\,\mathrm m.
+\frac{a^3}{(x^2+a^2)^{3/2}} &= \frac18 \\
+(x^2+a^2)^{3/2} &= 8a^3 \\
+x^2+a^2 &= 4a^2 \\
+x &= \pm\sqrt3\,a \\
+&= \pm1{,}04\,\mathrm m.
 \end{aligned}
 $$
 
@@ -151,10 +150,10 @@ Mômen từ của cuộn là:
 
 $$
 \begin{aligned}
-&\mu = NIA=N I\pi a^2\\
-&\quad =100(5{,}0)\pi(0{,}60)^2\\
-&\quad =5{,}65\times10^2\,\mathrm{A\,m^2}\\
-&\quad \approx5{,}7\times10^2\,\mathrm{A\,m^2}.
+\mu &= NIA=N I\pi a^2 \\
+&= 100(5{,}0)\pi(0{,}60)^2 \\
+&= 5{,}65\times10^2\,\mathrm{A\,m^2} \\
+&\approx 5{,}7\times10^2\,\mathrm{A\,m^2}.
 \end{aligned}
 $$
 

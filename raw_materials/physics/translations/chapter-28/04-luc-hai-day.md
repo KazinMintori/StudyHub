@@ -9,16 +9,13 @@ Hình 28.9: Từ trường của dây dưới tác dụng lực lên dây trên.
 Hai dây thẳng dài, song song, cách nhau khoảng $r$, mang dòng điện lần lượt là $I$ và $I'$. Từ trường do dây dưới tạo ra tại vị trí dây trên có độ lớn:
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0 I}{2\pi r}.\end{aligned}
-\tag{28.11}
+B = \frac{\mu_0 I}{2\pi r}. \tag{28.11}
 $$
 
 Xét đoạn dài $L$ của dây trên. Dòng điện $I'$ trong dây chịu lực $F=I'LB$ vì từ trường vuông góc với dây. Thay độ lớn $B$ vừa tìm được, lực trên một đơn vị chiều dài là:
 
 $$
-\begin{aligned}
-&\frac{F}{L} = \frac{\mu_0 I I'}{2\pi r}.\end{aligned}
+\frac{F}{L} = \frac{\mu_0 I I'}{2\pi r}.
 $$
 
 Quy tắc bàn tay phải cho thấy dây trên bị kéo xuống, về phía dây dưới. Dây dưới cũng bị kéo lên, nên hai dây hút nhau khi dòng điện cùng chiều. Nếu đảo chiều một trong hai dòng điện, cả hai lực đổi chiều và hai dây đẩy nhau.
@@ -31,9 +28,8 @@ Thay giá trị cũ của $\mu_0$ vào phương trình (28.11), lực trên mộ
 
 $$
 \begin{aligned}
-&\frac{F}{L} = \frac{\mu_0}{2\pi}\\
-&\quad\times\frac{(1\,\mathrm A)(1\,\mathrm A)}{1\,\mathrm m}\\
-&\quad =2\times10^{-7}\,\mathrm{N/m}.
+\frac{F}{L} &= \frac{\mu_0}{2\pi} \times\frac{(1\,\mathrm A)(1\,\mathrm A)}{1\,\mathrm m} \\
+&= 2\times10^{-7}\,\mathrm{N/m}.
 \end{aligned}
 $$
 
@@ -52,11 +48,11 @@ Hình 28.10: Hai dây siêu dẫn mang các dòng điện bằng nhau và ngư�
 
 $$
 \begin{aligned}
-&\frac{F}{L} = \frac{\mu_0 I^2}{2\pi r}\\
-&\quad =\frac{2\times10^{-7}}{4{,}5\times10^{-3}}\\
-&\qquad\times(2{,}25\times10^8)\,\mathrm{N/m}\\
-&\quad =\frac{4{,}5\times10^1\,\mathrm N}{4{,}5\times10^{-3}\,\mathrm m}\\
-&\quad =1{,}0\times10^4\,\mathrm{N/m}.
+\frac{F}{L} &= \frac{\mu_0 I^2}{2\pi r} \\
+&= \frac{2\times10^{-7}}{4{,}5\times10^{-3}} \\
+&\qquad\times(2{,}25\times10^8)\,\mathrm{N/m} \\
+&= \frac{4{,}5\times10^1\,\mathrm N}{4{,}5\times10^{-3}\,\mathrm m} \\
+&= 1{,}0\times10^4\,\mathrm{N/m}.
 \end{aligned}
 $$
 

@@ -26,10 +26,8 @@ Sóng điện từ phẳng hình sin lan truyền trong chân không theo chiề
 
 $$
 \begin{aligned}
-\vec{E}(x, t) &= \hat{\jmath} E_{\max} \\
-&\quad \times \cos(kx - \omega t), \\
-\vec{B}(x, t) &= \hat{k} B_{\max} \\
-&\quad \times \cos(kx - \omega t), \\
+\vec{E}(x, t) &= \hat{\jmath} E_{\max} \times \cos(kx - \omega t), \\
+\vec{B}(x, t) &= \hat{k} B_{\max} \times \cos(kx - \omega t), \\
 E_{\max} &= c B_{\max}
 \end{aligned}
 $$
@@ -59,9 +57,7 @@ Trong đó $K = \epsilon/\epsilon_0$ là hằng số điện môi và $K_{\mathr
 Tốc độ truyền năng lượng trên một đơn vị diện tích của sóng điện từ trong chân không được biểu diễn bởi vector Poynting $\vec{S}$:
 
 $$
-\begin{aligned}
-\vec{S} &= \frac{1}{\mu_0} \vec{E} \times \vec{B}
-\end{aligned}
+\vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B}
 $$
 
 Cường độ bức xạ $I$ là độ lớn của vector Poynting trung bình theo thời gian: $I = |\langle \vec{S} \rangle| = S_{\text{av}}$. Đối với sóng hình sin:
@@ -113,10 +109,8 @@ Nếu đặt một bề mặt dẫn điện lý tưởng tại vị trí $x = 0$
 
 $$
 \begin{aligned}
-E_y(x, t) &= -2E_{\max} \\
-&\quad \times \sin kx \sin \omega t, \\
-B_z(x, t) &= -2B_{\max} \\
-&\quad \times \cos kx \cos \omega t
+E_y(x, t) &= -2E_{\max} \times \sin kx \sin \omega t, \\
+B_z(x, t) &= -2B_{\max} \times \cos kx \cos \omega t
 \end{aligned}
 $$
 
@@ -133,7 +127,6 @@ Trong hộp cộng hưởng hai thành dẫn song song cách nhau khoảng cách
 $$
 \begin{aligned}
 \lambda_n &= \frac{2L}{n}, \\
-f_n &= n \frac{c}{2L} \\
-&\quad (n = 1, 2, 3, \dots)
+f_n &= n \frac{c}{2L} \quad (n = 1, 2, 3, \dots)
 \end{aligned}
 $$

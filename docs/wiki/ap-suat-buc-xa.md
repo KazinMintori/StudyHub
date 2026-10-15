@@ -16,7 +16,7 @@ next: false
 Năng lượng bức xạ $U$ trong chùm chạy một hướng mang động lượng $U/c$. Hấp thụ nhận động lượng tới, còn phản xạ đảo chiều sóng nên vật nhận nhận hai lần động lượng đó.
 
 $$
-\begin{aligned}&p_{\mathrm a}=I/c\\&p_{\mathrm r}=2I/c\\&F=pA.\end{aligned}
+p_{\mathrm a}=I/c\\ p_{\mathrm r}=2I/c\\ F=pA.
 $$
 
 Hai công thức đầu xét mặt nhận vuông góc tia tới, hấp thụ hoặc phản xạ hoàn toàn. Mặt xiên cần chiếu động lượng và diện tích thích hợp. Với truyền qua hoặc phản xạ một phần, lực phải tính từ hiệu dòng động lượng trước và sau tương tác.

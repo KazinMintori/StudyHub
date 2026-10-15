@@ -6,6 +6,7 @@ Thumbs.db
 docs/.vitepress/cache
 docs/.vitepress/dist
 docs/.vitepress/.temp
+docs/.vitepress/.studyhub-build.lock
 dist/
 /assets/
 .static-export.json

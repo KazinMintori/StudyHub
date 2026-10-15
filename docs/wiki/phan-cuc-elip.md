@@ -14,7 +14,7 @@ Trong phân cực elip, đầu vectơ điện trường tại một điểm vạ
 ## Giải thích kỹ thuật
 
 $$
-\begin{aligned}E_y&=A\cos\psi,\\E_z&=B\cos(\psi+\delta).\end{aligned}
+E_y =A\cos\psi,\\E_z =B\cos(\psi+\delta).
 $$
 
 Khi A và B khác không và sin của độ lệch pha khác không, quỹ tích là elip không suy biến. Khi độ lệch pha là bội nguyên của pi, quỹ tích suy biến thành đường thẳng dù hai biên độ có thể khác nhau.

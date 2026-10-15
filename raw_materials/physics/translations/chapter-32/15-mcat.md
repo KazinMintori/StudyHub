@@ -36,8 +36,8 @@ Biên độ giới hạn:
 
 $$
 \begin{aligned}
-E_{\max}&=\frac{350}{0{,}060}\,\mathrm{V/m}\\
-&=5{,}83\times10^3\,\mathrm{V/m}.
+E_{\max} &= \frac{350}{0{,}060}\,\mathrm{V/m} \\
+&= 5{,}83\times10^3\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -45,9 +45,9 @@ Cường độ tương ứng:
 
 $$
 \begin{aligned}
-I&=\frac12\varepsilon_0cE_{\max}^2\\
-&\approx4{,}51\times10^4\,\mathrm{W/m^2}\\
-&\approx45\,\mathrm{kW/m^2}.
+I &= \frac12\varepsilon_0cE_{\max}^2 \\
+&\approx 4{,}51\times10^4\,\mathrm{W/m^2} \\
+&\approx 45\,\mathrm{kW/m^2}.
 \end{aligned}
 $$
 
@@ -75,11 +75,9 @@ Khi $f_k'=2f_k$:
 
 $$
 \begin{aligned}
-E_{\max}'&=\frac{350}{2f_k}
- =\frac{E_{\max}}2,\\
-\frac{I'}I
-&=\left(\frac{E_{\max}'}{E_{\max}}\right)^2\\
-&=\frac14.
+E_{\max}' &= \frac{350}{2f_k} =\frac{E_{\max}}2, \\
+\frac{I'}I &= \left(\frac{E_{\max}'}{E_{\max}}\right)^2 \\
+&= \frac14.
 \end{aligned}
 $$
 
@@ -113,10 +111,8 @@ $$
 
 $$
 \begin{aligned}
-I_E&=\frac12\varepsilon_0c
- \left(\frac{350}{f_k}\right)^2,\\
-I_B&=\frac{c}{2\mu_0}
- \left(\frac5{f_k}\right)^2.
+I_E &= \frac12\varepsilon_0c \left(\frac{350}{f_k}\right)^2, \\
+I_B &= \frac{c}{2\mu_0} \left(\frac5{f_k}\right)^2.
 \end{aligned}
 $$
 
@@ -124,9 +120,8 @@ Vì $1/(\varepsilon_0\mu_0)=c^2$:
 
 $$
 \begin{aligned}
-\frac{I_B}{I_E}
-&=c^2\left(\frac5{350}\right)^2\\
-&\approx1{,}84\times10^{13}>1.
+\frac{I_B}{I_E} &= c^2\left(\frac5{350}\right)^2 \\
+&\approx 1{,}84\times10^{13}>1.
 \end{aligned}
 $$
 

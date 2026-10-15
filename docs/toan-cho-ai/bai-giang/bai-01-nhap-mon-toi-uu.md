@@ -154,11 +154,11 @@ flowchart TD
      Ta có $\|m\|_2 = 0 \ne 1$, suy ra $m \notin C_2$.
    - $C_3$ là tập lồi vì là một siêu phẳng (tập affine). Với mọi $x, y \in C_3$ và $\theta \in [0, 1]$, tổ hợp lồi thỏa mãn:
      $$
-     \begin{aligned}
-     &(\theta x_1 + (1-\theta)y_1) + (\theta x_2 + (1-\theta)y_2) = \theta(x_1 + x_2) + (1-\theta)(y_1 + y_2)\\
-     &\quad = \theta(1) + (1-\theta)(1) = 1.
-     \end{aligned}
-     $$
+\begin{aligned}
+(\theta x_1 + (1-\theta)y_1) + (\theta x_2 + (1-\theta)y_2) &= \theta(x_1 + x_2) + (1-\theta)(y_1 + y_2) \\
+&= \theta(1) + (1-\theta)(1) = 1.
+\end{aligned}
+$$
 
 2. **Ba cấp độ bảo đảm**:
    - **Bảo đảm tồn tại nghiệm (Existence)**: Dựa trên Định lý Weierstrass: Hàm mục tiêu liên tục trên miền khả thi đóng và bị chặn (compact) khác rỗng thì luôn đạt giá trị nhỏ nhất toàn cục.
@@ -287,8 +287,8 @@ $$
 1. **Tính đạo hàm và chứng minh lồi ngặt**:
    $$
 \begin{aligned}
-    &L'(w) = 2 \cdot \frac{-e^{-w}}{1 + e^{-w}} = -\frac{2}{1 + e^w} < 0 \quad \forall w \in \mathbb{R}.\\
-    &L''(w) = -2 \cdot \frac{-(e^w)}{(1 + e^w)^2} = \frac{2e^w}{(1 + e^w)^2} > 0 \quad \forall w \in \mathbb{R}.
+L'(w) &= 2 \cdot \frac{-e^{-w}}{1 + e^{-w}} = -\frac{2}{1 + e^w} < 0 \quad \forall w \in \mathbb{R}. \\
+L''(w) &= -2 \cdot \frac{-(e^w)}{(1 + e^w)^2} = \frac{2e^w}{(1 + e^w)^2} > 0 \quad \forall w \in \mathbb{R}.
 \end{aligned}
 $$
    Vì $L''(w) > 0$ với mọi $w \in \mathbb{R}$, hàm mất mát $L(w)$ lồi ngặt (strictly convex) trên toàn trục số.

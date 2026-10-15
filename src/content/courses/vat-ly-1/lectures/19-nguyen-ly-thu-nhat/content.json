@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "19-nguyen-ly-thu-nhat",
+  "route": "/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat",
+  "notes": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "khi-ly-tuong",
+    "tich-phan",
+    "nhiet-do-tuyet-doi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

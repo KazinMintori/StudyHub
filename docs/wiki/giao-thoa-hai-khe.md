@@ -16,7 +16,7 @@ Hai khe hẹp được chiếu kết hợp tạo hai chùm chồng lên nhau. V�
 Gọi d là khoảng hai khe và R là khoảng từ mặt phẳng khe tới màn. Với $R\gg d$, hiệu đường đi gần bằng $d\sin\theta$. Nếu còn có $|y|\ll R$, thì $\sin\theta\approx y/R$.
 
 $$
-\begin{aligned}y_m&\approx\frac{m\lambda R}{d}\\\Delta y&\approx\frac{\lambda R}{d}.\end{aligned}
+y_m \approx\frac{m\lambda R}{d}\\\Delta y \approx\frac{\lambda R}{d}.
 $$
 
 Công thức vị trí sáng này giả thiết hai khe đồng pha. Bậc m là số nguyên. Vân tối nằm giữa các vân sáng trong mô hình hai biên độ bằng nhau. Bề rộng hữu hạn của mỗi khe còn làm cường độ toàn hệ biến thiên theo bao nhiễu xạ.

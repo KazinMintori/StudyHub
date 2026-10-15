@@ -64,8 +64,8 @@ $$
 
 $$
 \begin{aligned}
-&\nabla_x L(x^*, \nu^*) = x^* + A^T \nu^* = 0 \implies x^* = -A^T \nu^*,\\
-&\nabla_\nu L(x^*, \nu^*) = A x^* - b = 0.
+\nabla_x L(x^*, \nu^*) &= x^* + A^T \nu^* = 0 \implies x^* = -A^T \nu^*, \\
+\nabla_\nu L(x^*, \nu^*) &= A x^* - b = 0.
 \end{aligned}
 $$
 
@@ -138,11 +138,11 @@ Thế phân tích $A = L_1 Q_1^T$ vào công thức nghiệm chuẩn nhỏ nhấ
 
 $$
 \begin{aligned}
-&x_{\text{ln}} = A^T (A A^T)^{-1} b\\
-&\quad = (Q_1 L_1^T) \left( (L_1 Q_1^T)(Q_1 L_1^T) \right)^{-1} b\\
-&\quad = Q_1 L_1^T (L_1 L_1^T)^{-1} b\\
-&\quad = Q_1 L_1^T (L_1^T)^{-1} L_1^{-1} b\\
-&\quad = Q_1 L_1^{-1} b.
+x_{\text{ln}} &= A^T (A A^T)^{-1} b \\
+&= (Q_1 L_1^T) \left( (L_1 Q_1^T)(Q_1 L_1^T) \right)^{-1} b \\
+&= Q_1 L_1^T (L_1 L_1^T)^{-1} b \\
+&= Q_1 L_1^T (L_1^T)^{-1} L_1^{-1} b \\
+&= Q_1 L_1^{-1} b.
 \end{aligned}
 $$
 

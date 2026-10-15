@@ -1,0 +1,18 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "07-the-nang-bao-toan-co-nang",
+  "route": "/vat-ly-1/bai-giang/07-the-nang-bao-toan-co-nang",
+  "notes": "docs/vat-ly-1/bai-giang/07-the-nang-bao-toan-co-nang.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "cong-nang-luong",
+    "dao-ham"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

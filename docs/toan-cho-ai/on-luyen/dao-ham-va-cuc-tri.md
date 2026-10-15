@@ -86,9 +86,9 @@ Cho $f(x,y,z)=x^2+xy+xz$. Khi lấy đạo hàm theo $x$, hai biến còn lại 
 
 $$
 \begin{aligned}
-&f_x = 2x+y+z,\\
-&f_y = x,\\
-&f_z = x.
+f_x &= 2x+y+z, \\
+f_y &= x, \\
+f_z &= x.
 \end{aligned}
 $$
 

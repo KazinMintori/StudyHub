@@ -19,9 +19,7 @@ Mặt Trăng, Mặt Trời, các hành tinh và ngôi sao ở xa đến mức á
 Tần số dao động $f$, bước sóng $\lambda$ và vận tốc truyền sóng $c$ của mọi sóng tuần hoàn trong chân không liên hệ với nhau qua hệ thức quen thuộc:
 
 $$
-\begin{aligned}
-c &= \lambda f.
-\end{aligned}
+c = \lambda f.
 $$
 
 Chẳng hạn, đối với sóng vô tuyến của đài phát thanh điều tần (FM) ở tần số $f = 10^8\,\mathrm{Hz}$ ($100\,\mathrm{MHz}$), bước sóng trong chân không được xác định trực tiếp:
@@ -49,9 +47,7 @@ Hình 32.13 chỉ vẽ các vector $\vec{E}$ và $\vec{B}$ tại các điểm n�
 Ta có thể mô tả sóng điện từ bằng các hàm sóng tương tự như sóng trên dây đàn hồi. Phương trình sóng đối với một sóng ngang truyền theo chiều $+x$ có dạng:
 
 $$
-\begin{aligned}
-y(x,t) &= A \cos(kx - \omega t),
-\end{aligned}
+y(x,t) = A \cos(kx - \omega t),
 $$
 
 trong đó $A$ là biên độ dao động, $\omega = 2\pi f$ là tần số góc, và $k = 2\pi/\lambda$ là số sóng.
@@ -60,23 +56,19 @@ Gọi $E_y(x,t)$ và $B_z(x,t)$ là giá trị tức thời của thành phần 
 
 $$
 \begin{aligned}
-&E_y(x,t)\\
-&= E_{\max} \cos(kx - \omega t), \\
-&B_z(x,t)\\
-&= B_{\max} \cos(kx - \omega t).
-\end{aligned}
-\tag{32.16}$$
+E_y(x,t) &= E_{\max} \cos(kx - \omega t), \\
+B_z(x,t) &= B_{\max} \cos(kx - \omega t).
+\end{aligned} \tag{32.16}
+$$
 
 Biểu diễn dưới dạng vector đầy đủ:
 
 $$
 \begin{aligned}
-&\vec{E}(x,t)\\
-&= \hat{j} E_{\max} \cos(kx - \omega t), \\
-&\vec{B}(x,t)\\
-&= \hat{k} B_{\max} \cos(kx - \omega t).
-\end{aligned}
-\tag{32.17}$$
+\vec{E}(x,t) &= \hat{j} E_{\max} \cos(kx - \omega t), \\
+\vec{B}(x,t) &= \hat{k} B_{\max} \cos(kx - \omega t).
+\end{aligned} \tag{32.17}
+$$
 
 ::: warning Phân biệt hai ý nghĩa của ký hiệu k
 Trong các phương trình (32.17) xuất hiện hai ký hiệu $k$ mang bản chất vật lý hoàn toàn khác nhau: Vector đơn vị $\hat{k}$ chỉ hướng dương của trục tọa độ $z$, còn đại lượng vô hướng $k = 2\pi/\lambda$ là số sóng đo bằng radian trên mét ($\mathrm{rad/m}$). Tuyệt đối không được nhầm lẫn giữa hai ký hiệu này.
@@ -85,10 +77,7 @@ Trong các phương trình (32.17) xuất hiện hai ký hiệu $k$ mang bản c
 Các đường hình sin trên Hình 32.13 thể hiện hình ảnh của các trường tại thời điểm ban đầu $t = 0$. Khi sóng truyền sang phải với vận tốc $c$, các phương trình (32.16) và (32.17) chỉ ra rằng tại bất kỳ vị trí cố định nào, $\vec{E}$ và $\vec{B}$ luôn dao động điều hòa đồng pha. Căn cứ theo phương trình (32.4), biên độ của hai trường liên hệ với nhau qua hệ thức:
 
 $$
-\begin{aligned}
-E_{\max} &= c B_{\max}.
-\end{aligned}
-\tag{32.18}
+E_{\max} = c B_{\max}. \tag{32.18}
 $$
 
 Mối quan hệ về pha và biên độ này cũng là điều kiện bắt buộc để các hàm sóng $E_y(x,t)$ và $B_z(x,t)$ thỏa mãn hệ hai phương trình đạo hàm riêng (32.12) và (32.14) suy ra từ định luật Faraday và định luật Ampere.
@@ -103,12 +92,10 @@ Tại những điểm điện trường $\vec{E}$ hướng theo chiều dương 
 
 $$
 \begin{aligned}
-&\vec{E}(x,t)\\
-&= \hat{j} E_{\max} \cos(kx + \omega t), \\
-&\vec{B}(x,t)\\
-&= -\hat{k} B_{\max} \cos(kx + \omega t).
-\end{aligned}
-\tag{32.19}$$
+\vec{E}(x,t) &= \hat{j} E_{\max} \cos(kx + \omega t), \\
+\vec{B}(x,t) &= -\hat{k} B_{\max} \cos(kx + \omega t).
+\end{aligned} \tag{32.19}
+$$
 
 Dấu cộng trước số hạng $\omega t$ trong đối số của hàm cosin chỉ rõ rằng sóng đang lan truyền theo chiều âm của trục tọa độ $x$.
 
@@ -139,19 +126,15 @@ Phương trình (32.19) mô tả một sóng truyền theo chiều âm trục $x
 Tại những điểm điện trường $\vec{E}$ hướng theo chiều dương trục $z$ (vector đơn vị $\hat{k}$), để tích có hướng $\vec{E} \times \vec{B}$ chỉ theo chiều âm trục $x$ ($-\hat{i}$), từ trường $\vec{B}$ bắt buộc phải hướng theo chiều dương trục $y$ (vector đơn vị $\hat{j}$), bởi vì:
 
 $$
-\begin{aligned}
-\hat{k} \times \hat{j} &= -\hat{i}.
-\end{aligned}
+\hat{k} \times \hat{j} = -\hat{i}.
 $$
 
 Vì sóng truyền theo chiều âm trục $x$, đối số của hàm điều hòa phải chứa dấu cộng: $kx + \omega t$. Do đó, dạng tổng quát của cặp hàm sóng là:
 
 $$
 \begin{aligned}
-&\vec E(x,t)\\
-&=\hat{k}E_{\max}\cos(kx+\omega t),\\
-&\vec B(x,t)\\
-&=\hat{j}B_{\max}\cos(kx+\omega t).
+\vec E(x,t) &= \hat{k}E_{\max}\cos(kx+\omega t), \\
+\vec B(x,t) &= \hat{j}B_{\max}\cos(kx+\omega t).
 \end{aligned}
 $$
 
@@ -183,10 +166,9 @@ Tần số góc $\omega$ của sóng là:
 
 $$
 \begin{aligned}
-\omega&=ck\\
-&=(3{,}00\times10^8)\\
-&\quad\times(5{,}93\times10^5)\,\mathrm{rad/s}\\
-&=1{,}78\times10^{14}\,\mathrm{rad/s}.
+\omega &= ck \\
+&= (3{,}00\times10^8) \times(5{,}93\times10^5)\,\mathrm{rad/s} \\
+&= 1{,}78\times10^{14}\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -194,18 +176,13 @@ Thay các giá trị biên độ, số sóng và tần số góc vào hàm sóng
 
 $$
 \begin{aligned}
-\theta&=(5{,}93\times10^5)x\\
-&\quad+(1{,}78\times10^{14})t,\\
-&\vec E(x,t)\\
-&=\hat{k}(1{,}5\times10^6\,\mathrm{V/m})\cos\theta.
+\theta &= (5{,}93\times10^5)x +(1{,}78\times10^{14})t, \\
+\vec E(x,t) &= \hat{k}(1{,}5\times10^6\,\mathrm{V/m})\cos\theta.
 \end{aligned}
 $$
 
 $$
-\begin{aligned}
-&\vec B(x,t)\\
-&=\hat{j}(5{,}0\times10^{-3}\,\mathrm T)\cos\theta.
-\end{aligned}
+\vec B(x,t) =\hat{j}(5{,}0\times10^{-3}\,\mathrm T)\cos\theta.
 $$
 
 #### Đánh giá kết quả
@@ -221,17 +198,13 @@ Cho đến thời điểm này, toàn bộ khảo sát của chúng ta đều đ
 Trong chất điện môi, vận tốc lan truyền của sóng điện từ thay đổi và được ký hiệu là $v$ thay vì $c$. Định luật cảm ứng Faraday vẫn giữ nguyên dạng, nhưng vận tốc $c$ trong hệ thức $E = cB$ được thay thế bởi $v$. Trong định luật Ampere, thông lượng điện trường cảm ứng được liên hệ qua độ điện thẩm $\epsilon$ của môi trường:
 
 $$
-\begin{aligned}
-\epsilon \frac{d\Phi_E}{dt} &= K \epsilon_0 \frac{d\Phi_E}{dt},
-\end{aligned}
+\epsilon \frac{d\Phi_E}{dt} = K \epsilon_0 \frac{d\Phi_E}{dt},
 $$
 
 trong đó $K$ là hằng số điện môi (độ điện thẩm tỉ đối) và $\epsilon = K \epsilon_0$ là độ điện thẩm của chất điện môi. Đồng thời, hằng số từ $\mu_0$ trong định luật Ampere được thay thế bằng độ từ thẩm của môi trường:
 
 $$
-\begin{aligned}
-\mu &= K_{\text{m}} \mu_0,
-\end{aligned}
+\mu = K_{\text{m}} \mu_0,
 $$
 
 trong đó $K_{\text{m}}$ là độ từ thẩm tỉ đối của môi trường. Khi đó, các phương trình (32.4) và (32.8) được viết lại tương ứng cho môi trường điện môi:
@@ -240,8 +213,7 @@ $$
 \begin{aligned}
 E &= vB, \\
 B &= \epsilon \mu v E.
-\end{aligned}
-\tag{32.20}
+\end{aligned} \tag{32.20}
 $$
 
 Thực hiện các bước biến đổi hoàn toàn tương tự như trường hợp chân không, ta rút ra vận tốc lan truyền của sóng điện từ trong môi trường điện môi:
@@ -251,8 +223,7 @@ $$
 v &= \frac{1}{\sqrt{\epsilon \mu}} \\
 &= \frac{1}{\sqrt{K K_{\text{m}}}} \frac{1}{\sqrt{\epsilon_0 \mu_0}} \\
 &= \frac{c}{\sqrt{K K_{\text{m}}}}.
-\end{aligned}
-\tag{32.21}
+\end{aligned} \tag{32.21}
 $$
 
 Đối với hầu hết các chất điện môi thông thường (ngoại trừ các vật liệu sắt từ cách điện), độ từ thẩm tỉ đối $K_{\text{m}}$ xấp xỉ bằng $1{,}00$. Khi $K_{\text{m}} \approx 1$, vận tốc sóng trở thành $v = c/\sqrt{K}$. Với các chất điện môi không từ tính đang xét có $K>1$, tốc độ pha bằng $c/\sqrt K$ và nhỏ hơn $c$. Không mở rộng kết luận này cho mọi vật liệu ở mọi tần số.
@@ -260,10 +231,7 @@ $$
 Tỉ số giữa vận tốc ánh sáng trong chân không $c$ và vận tốc ánh sáng trong môi trường $v$ được định nghĩa là **chiết suất** $n$ của môi trường đó trong quang học:
 
 $$
-\begin{aligned}
-n &= \frac{c}{v} = \sqrt{K K_{\text{m}}} \approx \sqrt{K}.
-\end{aligned}
-\tag{32.22}
+n = \frac{c}{v} = \sqrt{K K_{\text{m}}} \approx \sqrt{K}. \tag{32.22}
 $$
 
 ![Hình 32.16: Hằng số điện môi K của nước đối với ánh sáng nhìn thấy xấp xỉ bằng 1,8. Vận tốc ánh sáng nhìn thấy trong nước chậm hơn trong chân không theo tỉ lệ 1/căn(K) = 1/căn(1,8) xấp xỉ 0,75.](../img/young-32/hinh-32-16.png)
@@ -291,7 +259,7 @@ $$
 \lambda_0 &= \frac{c}{f} \\
 &= \frac{3{,}00\times10^8}{5{,}09\times10^{14}}\,\mathrm m \\
 &= 5{,}89 \times 10^{-7}\,\mathrm{m} \\
-&=589\,\mathrm{nm}.
+&= 589\,\mathrm{nm}.
 \end{aligned}
 $$
 
@@ -312,7 +280,7 @@ $$
 \lambda_{\mathrm d} &= \frac{v_{\mathrm d}}{f} \\
 &= \frac{1{,}24\times10^8}{5{,}09\times10^{14}}\,\mathrm m \\
 &= 2{,}44 \times 10^{-7}\,\mathrm{m} \\
-&=244\,\mathrm{nm}.
+&= 244\,\mathrm{nm}.
 \end{aligned}
 $$
 
@@ -347,7 +315,7 @@ $$
 \lambda_{\mathrm f} &= \frac{v_{\mathrm f}}{f} \\
 &= \frac{3{,}00\times10^6}{90{,}0\times10^6}\,\mathrm m \\
 &= 3{,}33 \times 10^{-2}\,\mathrm{m} \\
-&=3{,}33\,\mathrm{cm}.
+&= 3{,}33\,\mathrm{cm}.
 \end{aligned}
 $$
 

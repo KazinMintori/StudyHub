@@ -18,9 +18,7 @@ Hệ thống quang học của máy ảnh gồm các khối chức năng chính:
 - **Cơ chế lấy nét (focusing)**: Để ảnh của vật hiện rõ nét trên bề mặt cảm biến, mặt phẳng ảnh phải trùng khớp chính xác với mặt phẳng cảm biến. Từ công thức thấu kính mỏng:
 
 $$
-\begin{aligned}
 \frac{1}{s} + \frac{1}{s'} = \frac{1}{f}
-\end{aligned}
 $$
 
 Khi vật ở rất xa ($s \to \infty$), khoảng cách ảnh bằng đúng tiêu cự ($s' = f$). Khi vật dịch chuyển lại gần máy ảnh hơn ($s$ giảm), khoảng cách ảnh $s'$ bắt buộc phải tăng lên. Vì khoảng cách từ thấu kính đến cảm biến không cố định sẵn cho mọi tình huống, người chụp hoặc động cơ lấy nét tự động phải dịch chuyển vật kính ra xa cảm biến hơn khi chụp vật ở gần, và đưa vật kính lại gần cảm biến hơn khi chụp vật ở xa.
@@ -47,10 +45,7 @@ Hình 34.41 minh họa ba bức ảnh chụp trên phim 35 mm (kích thước v�
 Khả năng thu nhận ánh sáng của một ống kính máy ảnh được biểu diễn qua tỷ số giữa tiêu cự $f$ và đường kính hiệu dụng $D$ của lỗ mở màn chắn, gọi là **chỉ số f** (ký hiệu là $N$ hay f-number) của ống kính:
 
 $$
-\begin{aligned}
-N = \frac{f}{D}
-\end{aligned}
-\tag{34.20}
+N = \frac{f}{D} \tag{34.20}
 $$
 
 Chẳng hạn: Một ống kính có tiêu cự $f = 50\text{ mm}$ và đường kính khẩu độ $D = 25\text{ mm}$ có chỉ số f là $N = 50 / 25 = 2$, và được ký hiệu là khẩu độ $f/2$. Ký hiệu này vừa nêu rõ chỉ số f vừa biểu thị đường kính mở bằng $D = f / 2$.
@@ -58,10 +53,7 @@ Chẳng hạn: Một ống kính có tiêu cự $f = 50\text{ mm}$ và đường
 Cường độ sáng (năng lượng ánh sáng trên một đơn vị diện tích trong một đơn vị thời gian) hội tụ lên bề mặt cảm biến tỷ lệ thuận với diện tích thu sáng của lỗ mở, tức tỷ lệ với $D^2$. Đồng thời, kích thước ngang và kích thước dọc của ảnh đều tỷ lệ thuận với khoảng cách ảnh $s'$, và đối với vật ở xa thì $s' \approx f$. Do đó, diện tích mà năng lượng ánh sáng phân bố lên trên cảm biến tỷ lệ với $f^2$. Kết hợp hai yếu tố này, cường độ sáng $I$ trên cảm biến tỷ lệ với đại lượng $(D/f)^2$, tức tỷ lệ nghịch với bình phương của chỉ số f $N$:
 
 $$
-\begin{aligned}
-I &\propto \frac{D^2}{f^2} \\
-&= \frac{1}{N^2}
-\end{aligned}
+I &\propto \frac{D^2}{f^2} = \frac{1}{N^2}
 $$
 
 ![Ống kính máy ảnh với màn chắn khẩu độ điều chỉnh được. Chỉ số f càng lớn thì khẩu độ mở càng nhỏ.](../img/young-34/hinh-34-42.png)
@@ -69,11 +61,7 @@ $$
 Đối với một ống kính có màn chắn thay đổi được, nếu ta tăng đường kính $D$ lên $\sqrt{2}$ lần thì chỉ số f $N$ sẽ giảm đi $\sqrt{2}$ lần, làm diện tích lỗ mở tăng gấp đôi và cường độ sáng tới cảm biến tăng gấp đôi. Do đó, các nấc chỉ số f trên vành ống kính (thường gọi là các nấc f-stop) được quy chuẩn theo một chuỗi cấp số nhân với công bội danh định $\sqrt{2} \approx 1{,}414$:
 
 $$
-\begin{aligned}
-&f/1{,}4 \quad f/2 \quad f/2{,}8 \\
-&f/4 \quad f/5{,}6 \quad f/8 \\
-&f/11 \quad f/16 \quad f/22
-\end{aligned}
+f/1{,}4 \quad f/2 \quad f/2{,}8 f/4 \quad f/5{,}6 \quad f/8 f/11 \quad f/16 \quad f/22
 $$
 
 Chỉ số f càng lớn thì khẩu độ mở càng nhỏ, dẫn đến ánh sáng tới cảm biến càng yếu (Hình 34.42). Mỗi nấc dịch chuyển sang phải làm giảm cường độ sáng đi một nửa, trong khi mỗi nấc dịch chuyển sang trái làm tăng cường độ sáng lên gấp đôi.
@@ -81,10 +69,7 @@ Chỉ số f càng lớn thì khẩu độ mở càng nhỏ, dẫn đến ánh s
 Tổng lượng phơi sáng $H$ (quang lượng trên một đơn vị diện tích bề mặt cảm biến) tỷ lệ thuận với cả diện tích khẩu độ và khoảng thời gian mở màn trập $\Delta t$:
 
 $$
-\begin{aligned}
-H &\propto I \Delta t \\
-&\propto \frac{\Delta t}{N^2}
-\end{aligned}
+H &\propto I \Delta t \propto \frac{\Delta t}{N^2}
 $$
 
 Vì các giá trị f-stop chuẩn như $5{,}6$ là số làm tròn danh định của $4\sqrt{2} \approx 5{,}657$, các cặp cài đặt $(f/4, 1/500\text{ s})$, $(f/5{,}6, 1/250\text{ s})$ và $(f/8, 1/125\text{ s})$ tương đương nhau về mặt danh định (xấp xỉ gần đúng) về độ phơi sáng trên cảm biến.
@@ -159,8 +144,7 @@ Nếu thời gian phơi sáng tại khẩu độ $f/2{,}8$ là $1/1000\text{ s}$
 
 $$
 \begin{aligned}
-\Delta t_{f/22} &\approx \left(\frac{22}{2{,}8}\right)^2 \\
-&\quad \times \frac{1}{1000}\text{ s} \\
+\Delta t_{f/22} &\approx \left(\frac{22}{2{,}8}\right)^2 \times \frac{1}{1000}\text{ s} \\
 &\approx 0{,}062\text{ s} \\
 &\approx \frac{1}{16}\text{ s}
 \end{aligned}

@@ -15,18 +15,13 @@ Hệ quang học của kính hiển vi gồm hai khối thấu kính chính:
 - **Độ phóng đại ngang của vật kính**: Theo định nghĩa độ phóng đại ngang của thấu kính, ta có:
 
 $$
-\begin{aligned}
-m_1 = -\frac{s_1'}{s_1}
-\end{aligned}
-\tag{34.23}
+m_1 = -\frac{s_1'}{s_1} \tag{34.23}
 $$
 
 Vì khoảng cách vật $s_1$ chỉ lớn hơn tiêu cự $f_1$ một chút ($s_1 \approx f_1$), ta có thể viết công thức gần đúng:
 
 $$
-\begin{aligned}
 m_1 \approx -\frac{s_1'}{f_1}
-\end{aligned}
 $$
 
 Dấu âm biểu thị ảnh thật $I$ bị lộn ngược so với vật $O$.
@@ -40,9 +35,7 @@ Thị kính hội tụ nhận vật thật trong tiêu cự và tạo ảnh ảo
 - Khi mắt ngắm chừng ở vô cực để quan sát trong trạng thái thư giãn không điều tiết, ảnh $I$ nằm gần như trùng với tiêu điểm $F_2$. Thị kính tạo ra một ảnh ảo phóng đại $I'$ ở vô cực (vẫn ngược chiều so với vật ban đầu). Độ bội giác góc của thị kính tính theo phương trình (34.22) là:
 
 $$
-\begin{aligned}
 M_2 = \frac{25\text{ cm}}{f_2}
-\end{aligned}
 $$
 
 - **Độ bội giác góc tổng cộng của kính hiển vi**: Độ bội giác góc toàn phần $M$ của kính hiển vi bằng tích của độ phóng đại ngang $m_1$ của vật kính với độ bội giác góc $M_2$ của thị kính:
@@ -52,8 +45,7 @@ $$
 |M| &= |m_1| M_2 \\
 &\approx \frac{s_1'}{f_1} \frac{25\text{ cm}}{f_2} \\
 &= \frac{(25\text{ cm}) s_1'}{f_1 f_2}
-\end{aligned}
-\tag{34.24}
+\end{aligned} \tag{34.24}
 $$
 
 Trong phương trình (34.24), các đại lượng $s_1'$, $f_1$ và $f_2$ đều được đo bằng đơn vị xentimét. Công thức ghi độ lớn bội giác, như thường dùng khi mô tả kính hiển vi. Nếu giữ dấu của chiều ảnh, bội giác toàn hệ mang dấu âm vì ảnh cuối ngược chiều vật đầu.
@@ -74,9 +66,7 @@ Hình 34.53 mô tả cấu hình của một kính thiên văn khúc xạ (refra
 - **Chiều dài của kính thiên văn**: Khoảng cách giữa vật kính và thị kính trong trạng thái ngắm chừng ở vô cực bằng tổng hai tiêu cự:
 
 $$
-\begin{aligned}
 L = f_1 + f_2
-\end{aligned}
 $$
 
 Để xác định độ bội giác góc $M$ của kính thiên văn, xét một tia sáng đi qua tiêu điểm vật thứ nhất $F_1$ của vật kính và tiêu điểm ảnh thứ hai $F_2'$ của thị kính (đường màu đỏ trong Hình 34.53):
@@ -98,8 +88,7 @@ $$
 M &= \frac{\theta'}{\theta} \\
 &= \frac{y'/f_2}{-y'/f_1} \\
 &= -\frac{f_1}{f_2}
-\end{aligned}
-\tag{34.25}
+\end{aligned} \tag{34.25}
 $$
 
 Phương trình (34.25) khẳng định: Độ bội giác góc của kính thiên văn bằng tỷ số giữa tiêu cự vật kính $f_1$ và tiêu cự thị kính $f_2$. Dấu âm chỉ ra rằng ảnh ảo cuối cùng bị lộn ngược so với vật thể.

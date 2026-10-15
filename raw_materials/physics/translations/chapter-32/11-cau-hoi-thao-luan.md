@@ -116,8 +116,8 @@ Khi $v_y>0$, tích $\vec v\times\vec B$ có thành phần theo $+x$. Vì vậy �
 
 $$
 \begin{aligned}
-F_x&=qv_yB,\\
-F_y&=q(E-v_xB).
+F_x &= qv_yB, \\
+F_y &= q(E-v_xB).
 \end{aligned}
 $$
 
@@ -174,8 +174,8 @@ Gọi biên độ mới là $B'$:
 
 $$
 \begin{aligned}
-\frac{2I}{I}&=\frac{(B')^2}{B^2},\\
-B'&=\sqrt2\,B.
+\frac{2I}{I} &= \frac{(B')^2}{B^2}, \\
+B' &= \sqrt2\,B.
 \end{aligned}
 $$
 
@@ -200,8 +200,8 @@ Trong gần đúng mômen từ của kim không đổi trong một chu kỳ:
 
 $$
 \begin{aligned}
-\langle\vec B_{\mathrm{laser}}\rangle&=\vec0,\\
-\langle\vec\tau_{\mathrm{laser}}\rangle&=\vec0.
+\langle\vec B_{\mathrm{laser}}\rangle &= \vec0, \\
+\langle\vec\tau_{\mathrm{laser}}\rangle &= \vec0.
 \end{aligned}
 $$
 
@@ -267,10 +267,10 @@ Tại khoảng cách mới:
 
 $$
 \begin{aligned}
-I(2R)&=\frac{I(R)}4,\\
-p'&=\frac{I(2R)}c\\
-&=\frac{I(R)}{4c}\\
-&=\frac p8.
+I(2R) &= \frac{I(R)}4, \\
+p' &= \frac{I(2R)}c \\
+&= \frac{I(R)}{4c} \\
+&= \frac p8.
 \end{aligned}
 $$
 

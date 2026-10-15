@@ -1,6 +1,6 @@
 # StudyHub architecture refactor
 
-Status: READY_FOR_AGY
+Status: IMPLEMENTED_AND_VERIFIED
 Created: 2026-10-14
 Project: C:/Users/Ai/Documents/StudyHub
 Task risk class: Code changes
@@ -39,3 +39,7 @@ Workers do not run full builds concurrently. Codex integrates only reviewed owne
 ## Lifecycle
 
 One initial AGY call and at most two bounded corrections per worker. Stop on timeout, unknown status, forbidden mutations or authentication errors. Preserve uncertain worktrees. Review git status, diff --check and file boundaries before integrating. Archive/remove successful worktrees only after verified integration.
+
+## Verified result
+
+The three workers produced owned code but their MCP runner failed when returning output. Codex audited stable file hashes, ownership and diffs, completed integration manually, and preserved the worktrees. Full build and an isolated final build exited 0. Verification passed 108 feature tests, 24 source tests, 39 skill tests, 25 static browser checks and all lecture checks. All 779 previously published Markdown routes remain present. The isolated verification website was removed after success. Reports and cleanup manifests are under output/project-audit-2026-10-14, with the architecture guide at ARCHITECTURE.md.

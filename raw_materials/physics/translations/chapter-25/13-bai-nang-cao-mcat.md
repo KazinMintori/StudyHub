@@ -62,9 +62,9 @@ Với điện trở suất không đổi, $A=\rho L/R$, do đó
 
 $$
 \begin{aligned}
-&\frac{A_{13}}{A_5} = \frac{13/102}{5/9}\\
-&\quad =\frac{13}{5}\frac{9}{102}\\
-&\quad \approx 0{,}229.
+\frac{A_{13}}{A_5} &= \frac{13/102}{5/9} \\
+&= \frac{13}{5}\frac{9}{102} \\
+&\approx 0{,}229.
 \end{aligned}
 $$
 
@@ -86,8 +86,8 @@ Trong thí nghiệm này, nguồn điện là pin 9 V. Dòng điện lớn nhấ
 
 $$
 \begin{aligned}
-&I_{\max} = \frac{9\,\mathrm V}{9\times10^9\,\Omega}\\
-&\quad =1{,}0\times10^{-9}\,\mathrm A.
+I_{\max} &= \frac{9\,\mathrm V}{9\times10^9\,\Omega} \\
+&= 1{,}0\times10^{-9}\,\mathrm A.
 \end{aligned}
 $$
 

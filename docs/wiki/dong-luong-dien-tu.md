@@ -16,7 +16,7 @@ Trường điện từ có động lượng. Trong chân không, mật độ đ�
 Trong chân không, mật độ động lượng trường tỉ lệ vector Poynting. Đơn vị của g là kg trên mét vuông trên giây, vì đó là động lượng chia thể tích.
 
 $$
-\begin{aligned}&\vec g=\vec S/c^2\\&p_{\mathrm{chùm}}=U/c\\&F_{\mathrm{phản\,lực}}=P/c.\end{aligned}
+\vec g=\vec S/c^2\\ p_{\mathrm{chùm}}=U/c\\ F_{\mathrm{phản\,lực}}=P/c.
 $$
 
 Động lượng trung bình của hai chùm bằng nhau đi ngược chiều triệt tiêu. Năng lượng của chúng cùng dương nên không triệt tiêu theo cách đó. Động lượng trong vật liệu cần xét cả môi trường, không thay c bằng tốc độ pha một cách máy móc trong mọi biểu thức chân không.

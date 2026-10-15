@@ -21,7 +21,7 @@ là hướng giảm theo đạo hàm bậc nhất. Vì
 
 $$
 \begin{aligned}
-&f(x+td) = f(x)+t\nabla f(x)^Td+o(t),\\
+f(x+td) &= f(x)+t\nabla f(x)^Td+o(t), \\
 &\frac{o(t)}t \to0\quad(t\to0^+),
 \end{aligned}
 $$
@@ -81,9 +81,9 @@ Xét
 
 $$
 \begin{aligned}
-&f(x,y) = x^2+2y^2,\\
-&x_0 = (2,1),\\
-&\alpha = 0.1,\quad\beta=0.5.
+f(x,y) &= x^2+2y^2, \\
+x_0 &= (2,1), \\
+\alpha &= 0.1,\quad\beta=0.5.
 \end{aligned}
 $$
 
@@ -144,8 +144,8 @@ Taylor bậc hai tại điểm hiện tại tạo mô hình theo dịch chuyển
 
 $$
 \begin{aligned}
-&q(d) = f(x)+\nabla f(x)^Td+\frac12d^THd,\\
-&H = \nabla^2f(x).
+q(d) &= f(x)+\nabla f(x)^Td+\frac12d^THd, \\
+H &= \nabla^2f(x).
 \end{aligned}
 $$
 

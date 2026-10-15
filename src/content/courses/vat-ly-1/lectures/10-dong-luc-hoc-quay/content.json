@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "10-dong-luc-hoc-quay",
+  "route": "/vat-ly-1/bai-giang/10-dong-luc-hoc-quay",
+  "notes": "docs/vat-ly-1/bai-giang/10-dong-luc-hoc-quay.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "vector",
+    "tich-vo-huong",
+    "momen-quan-tinh",
+    "cong-nang-luong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

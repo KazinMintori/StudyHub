@@ -73,20 +73,15 @@ Nghiệm của phương trình vi phân tuyến tính thuần nhất bậc hai (
 Khi điện trở thuần thỏa mãn điều kiện $R^2 < 4L/C$, nghiệm tổng quát của phương trình (30.27) có dạng:
 
 $$
-\begin{aligned}
-q(t) &= A e^{-(R/2L)t} \\
-&\quad \times \cos(\omega' t + \phi)
-\end{aligned}
-\tag{30.28}
+q(t) &= A e^{-(R/2L)t} \times \cos(\omega' t + \phi) \tag{30.28}
 $$
 
 Các hằng số $A$ và $\phi$ được xác định từ điện tích và dòng ban đầu. $A$ là hệ số của bao biên độ ở mốc đầu, không nhất thiết bằng $q(0)$. Với $\alpha=R/(2L)$,
 
 $$
 \begin{aligned}
-q(0)&=A\cos\phi,\\
-i(0)&=-\alpha q(0)\\
-&\quad-\omega'A\sin\phi.
+q(0) &= A\cos\phi, \\
+i(0) &= -\alpha q(0) -\omega'A\sin\phi.
 \end{aligned}
 $$
 
@@ -104,9 +99,8 @@ $$
 
 $$
 \begin{aligned}
-q''&=-2\alpha q'\\
-&\quad-(\alpha^2+\omega'^2)q,\\
-\alpha^2+\omega'^2&=\frac1{LC}.
+q'' &= -2\alpha q' -(\alpha^2+\omega'^2)q, \\
+\alpha^2+\omega'^2 &= \frac1{LC}.
 \end{aligned}
 $$
 
@@ -148,10 +142,10 @@ $$
 
 $$
 \begin{aligned}
-\gamma&=\frac{R}{2L},\\
-\delta&=\sqrt{\gamma^2-\frac1{LC}},\\
-\alpha_1&=\gamma-\delta,\\
-\alpha_2&=\gamma+\delta.
+\gamma &= \frac{R}{2L}, \\
+\delta &= \sqrt{\gamma^2-\frac1{LC}}, \\
+\alpha_1 &= \gamma-\delta, \\
+\alpha_2 &= \gamma+\delta.
 \end{aligned}
 $$
 
@@ -195,17 +189,13 @@ $$
 Thiết lập đẳng thức $\omega' = \omega/2$ từ hai biểu thức trên:
 
 $$
-\begin{aligned}
-\sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} &= \frac{1}{2}\sqrt{\frac{1}{LC}}
-\end{aligned}
+\sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} = \frac{1}{2}\sqrt{\frac{1}{LC}}
 $$
 
 Bình phương cả hai vế của phương trình:
 
 $$
-\begin{aligned}
-\frac{1}{LC} - \frac{R^2}{4L^2} &= \frac{1}{4LC}
-\end{aligned}
+\frac{1}{LC} - \frac{R^2}{4L^2} = \frac{1}{4LC}
 $$
 
 Chuyển các số hạng và cô lập số hạng chứa điện trở $R$:
@@ -220,9 +210,7 @@ $$
 Nhân cả hai vế với $4L^2$:
 
 $$
-\begin{aligned}
-R^2 &= 4L^2 \times \frac{3}{4LC} = \frac{3L}{C}
-\end{aligned}
+R^2 = 4L^2 \times \frac{3}{4LC} = \frac{3L}{C}
 $$
 
 Lấy căn bậc hai hai vế, ta tìm được giá trị điện trở thuần cần tìm:
@@ -281,29 +269,29 @@ Bây giờ ta tính giá trị của đại lượng $4L/C$ cho từng trường
 
 - **Trường hợp (i)**: Với $L = 3{,}0\ \mu\text{H}$ và $C = 6{,}0\ \mu\text{F}$:
   $$
-  \begin{aligned}
-  \frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{6{,}0\ \mu\text{F}} \\
-  &= 2{,}0\ \Omega^2
-  \end{aligned}
-  $$
+\begin{aligned}
+\frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{6{,}0\ \mu\text{F}} \\
+&= 2{,}0\ \Omega^2
+\end{aligned}
+$$
   Vì $R^2 = 4{,}0\ \Omega^2 > 4L/C = 2{,}0\ \Omega^2$, mạch rơi vào **chế độ quá tắt dần (Overdamped)**. Điện tích trên tụ giảm dần về không mà không dao động. Do đó trường hợp (i) thỏa mãn.
 
 - **Trường hợp (ii)**: Với $L = 6{,}0\ \mu\text{H}$ và $C = 3{,}0\ \mu\text{F}$:
   $$
-  \begin{aligned}
-  \frac{4L}{C} &= \frac{4(6{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
-  &= 8{,}0\ \Omega^2
-  \end{aligned}
-  $$
+\begin{aligned}
+\frac{4L}{C} &= \frac{4(6{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
+&= 8{,}0\ \Omega^2
+\end{aligned}
+$$
   Vì $R^2 = 4{,}0\ \Omega^2 < 4L/C = 8{,}0\ \Omega^2$, mạch rơi vào **chế độ dao động tắt dần (Underdamped)**. Điện tích trên tụ vẫn dao động đổi chiều quanh vị trí cân bằng với biên độ giảm dần. Do đó trường hợp (ii) không thỏa mãn.
 
 - **Trường hợp (iii)**: Với $L = 3{,}0\ \mu\text{H}$ và $C = 3{,}0\ \mu\text{F}$:
   $$
-  \begin{aligned}
-  \frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
-  &= 4{,}0\ \Omega^2
-  \end{aligned}
-  $$
+\begin{aligned}
+\frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
+&= 4{,}0\ \Omega^2
+\end{aligned}
+$$
   Vì $R^2 = 4{,}0\ \Omega^2 = 4L/C$, mạch rơi vào **chế độ tắt dần tới hạn (Critically damped)**. Điện tích trên tụ giảm nhanh về không mà không đổi chiều dao động. Do đó trường hợp (iii) thỏa mãn.
 
 Kết luận: Các bộ thông số (i) và (iii) làm cho điện tích trên tụ điện không dao động.

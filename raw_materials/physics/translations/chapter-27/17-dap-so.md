@@ -76,8 +76,8 @@ Với 27.73, dòng điện ngưỡng và độ cao sau nửa vòng quay là:
 
 $$
 \begin{aligned}
-&I_{\min} = \frac{Mg}{2WNB},\\
-&h_{\mathrm{top}} = R(1+\pi/2).
+I_{\min} &= \frac{Mg}{2WNB}, \\
+h_{\mathrm{top}} &= R(1+\pi/2).
 \end{aligned}
 $$
 
@@ -85,8 +85,8 @@ Trong chặng $0\le h\le R$:
 
 $$
 \begin{aligned}
-&\tau = Mg(s-1)\sqrt{h(2R-h)},\\
-&U = (1-s)Mgh.
+\tau &= Mg(s-1)\sqrt{h(2R-h)}, \\
+U &= (1-s)Mgh.
 \end{aligned}
 $$
 
@@ -94,9 +94,8 @@ Trong chặng $R\le h\le h_{\mathrm{top}}$, đặt $\theta=h/R-1$:
 
 $$
 \begin{aligned}
-&\tau = MgR(s\cos\theta-1),\\
-&U = MgR[1+\theta\\
-&\quad-s(1+\sin\theta)].
+\tau &= MgR(s\cos\theta-1), \\
+U &= MgR[1+\theta -s(1+\sin\theta)].
 \end{aligned}
 $$
 

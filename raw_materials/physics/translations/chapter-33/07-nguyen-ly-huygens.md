@@ -44,17 +44,13 @@ Xét hai tam giác vuông $\triangle APO$ (vuông tại $P$) và $\triangle OQA$
 Do đó, hai tam giác vuông bằng nhau theo trường hợp cạnh huyền và cạnh góc vuông:
 
 $$
-\begin{aligned}
 \triangle APO \cong \triangle OQA
-\end{aligned}
 $$
 
 Hai tam giác bằng nhau kéo theo hai góc tương ứng bằng nhau:
 
 $$
-\begin{aligned}
 \theta_a = \theta_r
-\end{aligned}
 $$
 
 Định luật phản xạ ánh sáng đã được chứng minh trọn vẹn từ nguyên lý sóng của Huygens.
@@ -93,9 +89,7 @@ $$
 Lập tỷ số giữa $\sin \theta_a$ và $\sin \theta_b$, đại lượng cạnh huyền chung $AO$ và thời gian $t$ triệt tiêu:
 
 $$
-\begin{aligned}
 \frac{\sin \theta_a}{\sin \theta_b} = \frac{v_a}{v_b}
-\end{aligned}
 $$
 
 Theo định nghĩa chiết suất của môi trường quang học, $v_a = c / n_a$ và $v_b = c / n_b$. Thay vào tỷ số trên:
@@ -111,9 +105,7 @@ $$
 Nhân chéo cả hai vế của Hệ thức (33.9), ta thu được dạng quen thuộc của định luật Snell:
 
 $$
-\begin{aligned}
 n_a \sin \theta_a = n_b \sin \theta_b
-\end{aligned}
 $$
 
 Kết quả từ nguyên lý Huygens làm sáng tỏ cơ chế khúc xạ: Khi ánh sáng đi vào môi trường có tốc độ nhỏ hơn ($v_b < v_a$, tức $n_b > n_a$), phần mặt sóng vào trước tiến chậm hơn. Do đó, tia tới xiên lệch gần pháp tuyến hơn.
@@ -163,8 +155,8 @@ Khi truyền từ môi trường có tốc độ lớn sang môi trường có t
 $$
 \begin{aligned}
 \frac{\sin \theta_a}{\sin \theta_b} &= \frac{v_a}{v_b} > 1 \\
-\implies \sin \theta_b &< \sin \theta_a \\
-\implies \theta_b &< \theta_a
+&\implies \sin \theta_b < \sin \theta_a \\
+&\implies \theta_b < \theta_a
 \end{aligned}
 $$
 

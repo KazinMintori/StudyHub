@@ -23,9 +23,7 @@ Trong mô hình tán xạ đơn lẻ lý tưởng, ánh sáng tán xạ ở góc
 Khi chùm ánh sáng ban đầu truyền qua khí quyển, cường độ của nó suy giảm dần do năng lượng chuyển hóa vào ánh sáng tán xạ. Phân tích chi tiết quá trình tán xạ cho thấy: Cường độ ánh sáng do các phân tử không khí tán xạ tăng tỷ lệ thuận với lũy thừa bậc bốn của tần số, tức là tỷ lệ nghịch với lũy thừa bậc bốn của bước sóng:
 
 $$
-\begin{aligned}
 I_{\text{scatter}} \propto f^4 \propto \frac{1}{\lambda^4}
-\end{aligned}
 $$
 
 Tỷ số cường độ tán xạ giữa hai đầu dải quang phổ khả kiến là:

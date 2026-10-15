@@ -88,7 +88,7 @@ Nguyên nhân toán học nằm ở bài toán tối ưu bình phương bé nh�
 
 $$
 \begin{aligned}
-&\text{RSS}_{\text{train}}(\text{Bậc } d+1) \le \text{RSS}_{\text{train}}(\text{Bậc } d)\\
+\text{RSS}_{\text{train}}(\text{Bậc } d+1) &\le \text{RSS}_{\text{train}}(\text{Bậc } d) \\
 &\implies R^2_{\text{train}}(\text{Bậc } d+1) \ge R^2_{\text{train}}(\text{Bậc } d)
 \end{aligned}
 $$
@@ -175,8 +175,8 @@ Sai số dự báo kỳ vọng trên một điểm dữ liệu mới $x_0$ với
 
 $$
 \begin{aligned}
-&\mathbb{E}\left[(y_0 - \hat{f}(x_0))^2\right] \\
-&\quad = \underbrace{\left[\text{Bias}(\hat{f}(x_0))\right]^2}_{\text{Độ chệch bình phương}} + \underbrace{\text{Var}(\hat{f}(x_0))}_{\text{Phương sai mô hình}} + \underbrace{\sigma^2}_{\text{Nhiễu không thể giảm}}
+\mathbb{E} &\left[(y_0 - \hat{f}(x_0))^2\right] \\
+&= \underbrace{\left[\text{Bias}(\hat{f}(x_0))\right]^2}_{\text{Độ chệch bình phương}} + \underbrace{\text{Var}(\hat{f}(x_0))}_{\text{Phương sai mô hình}} + \underbrace{\sigma^2}_{\text{Nhiễu không thể giảm}}
 \end{aligned}
 $$
 
@@ -350,8 +350,8 @@ Với **Mô hình 1** ($\hat{y} = 1.8x + 1.0$):
 Tổng bình phương phần dư và sai số trung bình tập huấn luyện:
 $$
 \begin{aligned}
-    &\text{RSS}_{\text{train}} = 0.04 + 0.36 + 0.36 + 0.04 = 0.80\\
-    &\text{MSE}_{\text{train}}(\text{Mô hình 1}) = \frac{0.80}{4} = 0.20
+\text{RSS}_{\text{train}} &= 0.04 + 0.36 + 0.36 + 0.04 = 0.80 \\
+\text{MSE}_{\text{train}}(\text{Mô hình 1}) &= \frac{0.80}{4} = 0.20
 \end{aligned}
 $$
 
@@ -381,8 +381,8 @@ Với **Mô hình 1** ($\hat{y} = 1.8x + 1.0$):
 Sai số kiểm thử của Mô hình 1:
 $$
 \begin{aligned}
-    &\text{MSE}_{\text{test}}(\text{Mô hình 1}) = \frac{0.01 + 0.01}{2} = 0.01\\
-    &\text{RMSE}_{\text{test}}(\text{Mô hình 1}) = \sqrt{0.01} = 0.10
+\text{MSE}_{\text{test}}(\text{Mô hình 1}) &= \frac{0.01 + 0.01}{2} = 0.01 \\
+\text{RMSE}_{\text{test}}(\text{Mô hình 1}) &= \sqrt{0.01} = 0.10
 \end{aligned}
 $$
 
@@ -401,8 +401,8 @@ Với **Mô hình 2** (Đa thức bậc 3):
 Sai số kiểm thử của Mô hình 2:
 $$
 \begin{aligned}
-    &\text{MSE}_{\text{test}}(\text{Mô hình 2}) = \frac{6.25 + 6.25}{2} = 6.25\\
-    &\text{RMSE}_{\text{test}}(\text{Mô hình 2}) = \sqrt{6.25} = 2.50
+\text{MSE}_{\text{test}}(\text{Mô hình 2}) &= \frac{6.25 + 6.25}{2} = 6.25 \\
+\text{RMSE}_{\text{test}}(\text{Mô hình 2}) &= \sqrt{6.25} = 2.50
 \end{aligned}
 $$
 

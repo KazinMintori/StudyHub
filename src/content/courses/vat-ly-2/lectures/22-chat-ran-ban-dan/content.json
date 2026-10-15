@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "22-chat-ran-ban-dan",
+  "route": "/vat-ly-2/bai-giang/22-chat-ran-ban-dan",
+  "notes": "docs/vat-ly-2/bai-giang/22-chat-ran-ban-dan.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "ham-song-luong-tu",
+    "nguyen-ly-pauli",
+    "nhiet-do-tuyet-doi",
+    "dong-dien"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

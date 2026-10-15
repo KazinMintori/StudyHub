@@ -61,8 +61,8 @@ Dạng này thường tiện khi xét dòng điện. Từ phương trình lực,
 
 $$
 \begin{aligned}
-&1\,\mathrm{T} = 1\,\frac{\mathrm{N}}{\mathrm{A}\,\mathrm{m}},\\
-&1\,\mathrm{G} = 10^{-4}\,\mathrm{T}.
+1\,\mathrm{T} &= 1\,\frac{\mathrm{N}}{\mathrm{A}\,\mathrm{m}}, \\
+1\,\mathrm{G} &= 10^{-4}\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -122,10 +122,9 @@ Một chùm proton, mỗi proton có điện tích $q=1{,}6\times10^{-19}\,\math
 
 $$
 \begin{aligned}
-&F = |q|vB\sin\phi\\
-&\quad =(1{,}6)(3{,}0)(2{,}0)\\
-&\quad\times10^{-14}\sin30^\circ\,\mathrm N\\
-&\quad =4{,}8\times10^{-14}\,\mathrm{N}.
+F &= |q|vB\sin\phi \\
+&= (1{,}6)(3{,}0)(2{,}0) \times10^{-14}\sin30^\circ\,\mathrm N \\
+&= 4{,}8\times10^{-14}\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -135,10 +134,9 @@ Vậy lực có độ lớn $4{,}8\times10^{-14}\,\mathrm{N}$ và hướng theo 
 
 $$
 \begin{aligned}
-&\vec{v} = v\sin30^\circ\,\hat{\imath}\\
-&\quad+v\cos30^\circ\,\hat{k},\\
-&v_x = 1{,}5\times10^5\,\mathrm{m/s},\\
-&v_z = 2{,}60\times10^5\,\mathrm{m/s}.
+\vec{v} &= v\sin30^\circ\,\hat{\imath} +v\cos30^\circ\,\hat{k}, \\
+v_x &= 1{,}5\times10^5\,\mathrm{m/s}, \\
+v_z &= 2{,}60\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -146,12 +144,10 @@ Vì $\vec{B}=2{,}0\,\hat{k}\,\mathrm{T}$, chỉ thành phần vận tốc theo $
 
 $$
 \begin{aligned}
-&\vec{F} = q\,\vec{v}\times\vec{B}\\
-&\quad =qv_xB\,(\hat{\imath}\times\hat{k})\\
-&\quad+qv_zB\,(\hat{k}\times\hat{k})\\
-&\quad =-(1{,}6)(1{,}5)(2{,}0)\\
-&\quad\times10^{-14}\,\hat{\jmath}\,\mathrm N\\
-&\quad =-4{,}8\times10^{-14}\,\hat{\jmath}\quad\mathrm{N}.
+\vec{F} &= q\,\vec{v}\times\vec{B} \\
+&= qv_xB\,(\hat{\imath}\times\hat{k}) +qv_zB\,(\hat{k}\times\hat{k}) \\
+&= -(1{,}6)(1{,}5)(2{,}0) \times10^{-14}\,\hat{\jmath}\,\mathrm N \\
+&= -4{,}8\times10^{-14}\,\hat{\jmath}\quad\mathrm{N}.
 \end{aligned}
 $$
 

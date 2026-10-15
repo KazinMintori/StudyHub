@@ -28,10 +28,7 @@ $$
 Nếu thả từ nghỉ tại x₀, nghiệm phải giữ cả hai điều kiện ban đầu:
 
 $$
-\begin{aligned}
-&x(t)=x_0e^{-\alpha t}\cos\omega_dt\\
-&\quad+x_0e^{-\alpha t}\frac\alpha{\omega_d}\sin\omega_dt.
-\end{aligned}
+x(t) = x_0e^{-\alpha t}\left(\cos\omega_dt + \frac\alpha{\omega_d}\sin\omega_dt\right).
 $$
 
 Trong thanh trượt nối lò xo, b=B²W²/R. Mất mát cơ năng bằng công suất nhiệt I²R trong mạch. Khi b²≥4mk, không dùng công thức dao động hình sin của miền tắt dần yếu.

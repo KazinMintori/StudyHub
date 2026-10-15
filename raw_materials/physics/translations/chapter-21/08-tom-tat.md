@@ -19,8 +19,7 @@ Vật dẫn cho điện tích dễ chuyển động, còn vật cách điện th
 Lực giữa hai điện tích điểm cách r có độ lớn:
 
 $$
-\begin{aligned}
-&F = \frac{|q_1q_2|}{4\pi\varepsilon_0r^2}.\end{aligned}
+F = \frac{|q_1q_2|}{4\pi\varepsilon_0r^2}.
 $$
 
 Đơn vị điện tích là coulomb. Hệ số dùng trong SI gần bằng $8.988\times10^9\,\mathrm{N\,m^2/C^2}$. Lực dọc đường nối hai điện tích, đẩy với cùng dấu và hút với trái dấu. Hai lực trên hai hạt bằng nhau và ngược chiều. Với nhiều nguồn, cộng từng lực theo vector. Xem Ví dụ 21.1–21.4.
@@ -32,15 +31,13 @@ $$
 Điện trường là lực trên một đơn vị điện tích thử:
 
 $$
-\begin{aligned}
-&\vec E = \frac{\vec F_0}{q_0}.\end{aligned}
+\vec E = \frac{\vec F_0}{q_0}.
 $$
 
 Trường nguồn điểm là:
 
 $$
-\begin{aligned}
-&\vec E = \frac{q}{4\pi\varepsilon_0r^2}\hat{\mathbf r}.\end{aligned}
+\vec E = \frac{q}{4\pi\varepsilon_0r^2}\hat{\mathbf r}.
 $$
 
 Nguồn dương cho trường ra xa, nguồn âm cho trường hướng vào. Đơn vị là $\mathrm{N/C}$. Xem Ví dụ 21.5–21.7.
@@ -65,10 +62,10 @@ Hai điện tích $+q$ và $-q$ cách d tạo mômen lưỡng cực có độ l�
 
 $$
 \begin{aligned}
-&\vec F_{\mathrm{tong}} = 0,\\
-&\vec\tau = \vec p\times\vec E,\\
-&\tau = pE\sin\varphi,\\
-&U = -\vec p\cdot\vec E.
+\vec F_{\mathrm{tong}} &= 0, \\
+\vec\tau &= \vec p\times\vec E, \\
+\tau &= pE\sin\varphi, \\
+U &= -\vec p\cdot\vec E.
 \end{aligned}
 $$
 

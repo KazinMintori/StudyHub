@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "18-photon",
+  "route": "/vat-ly-2/bai-giang/18-photon",
+  "notes": "docs/vat-ly-2/bai-giang/18-photon.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "thuyet-tuong-doi-hep",
+    "cong-nang-luong",
+    "song"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

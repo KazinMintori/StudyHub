@@ -28,11 +28,7 @@ $$
 $$
 
 $$
-\begin{aligned}
-&\oint\vec B\cdot d\vec\ell\\
-&\quad=\mu_0(i_C)_{\mathrm{encl}}\\
-&\quad+\mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
-\end{aligned}
+\oint\vec B\cdot d\vec\ell = \mu_0(i_C)_{\mathrm{encl}} + \mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
 $$
 
 Dòng và thông lượng ở phương trình cuối tính trên cùng mặt căng. Các phương trình dùng điện trường tổng. Trong chân không không có nguồn, trường biến thiên vẫn liên hệ với trường kia và có thể lan truyền thành sóng điện từ.

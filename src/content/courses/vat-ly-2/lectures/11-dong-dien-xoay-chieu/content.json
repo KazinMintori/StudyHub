@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "11-dong-dien-xoay-chieu",
+  "route": "/vat-ly-2/bai-giang/11-dong-dien-xoay-chieu",
+  "notes": "docs/vat-ly-2/bai-giang/11-dong-dien-xoay-chieu.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "tu-cam",
+    "dien-dung",
+    "dien-tro",
+    "pha-song"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

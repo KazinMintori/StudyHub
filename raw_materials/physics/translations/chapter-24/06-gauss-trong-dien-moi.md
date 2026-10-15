@@ -57,9 +57,9 @@ Tụ cầu ở Ví dụ 24.3 có hai bán kính rₐ,rᵦ. Lấp toàn khe bằn
 
 $$
 \begin{aligned}
-&KE(4\pi r^2) = Q/\varepsilon_0,\\
-&E(r) = \frac{Q}{4\pi K\varepsilon_0r^2}\\
-&\quad =\frac{Q}{4\pi\varepsilon r^2}.
+KE(4\pi r^2) &= Q/\varepsilon_0, \\
+E(r) &= \frac{Q}{4\pi K\varepsilon_0r^2} \\
+&= \frac{Q}{4\pi\varepsilon r^2}.
 \end{aligned}
 $$
 
@@ -67,11 +67,10 @@ So với chân không ở cùng Q, trường bằng 1/K giá trị ban đầu, n
 
 $$
 \begin{aligned}
-&V_{ab} =\frac{Q}{4\pi\varepsilon}
-\left(\frac1{r_a}-\frac1{r_b}\right),\\
-&C = Q/V_{ab}\\
-&\quad =4\pi K\varepsilon_0\frac{r_ar_b}{r_b-r_a}\\
-&\quad =4\pi\varepsilon\frac{r_ar_b}{r_b-r_a}.
+V_{ab} &= \frac{Q}{4\pi\varepsilon} \left(\frac1{r_a}-\frac1{r_b}\right), \\
+C &= Q/V_{ab} \\
+&= 4\pi K\varepsilon_0\frac{r_ar_b}{r_b-r_a} \\
+&= 4\pi\varepsilon\frac{r_ar_b}{r_b-r_a}.
 \end{aligned}
 $$
 

@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { leastSquaresLine, l1Line, chebyshevLine, lossL1, lossL2, lossLinf, residuals } from '../../docs/.vitepress/theme/fitting.mjs'
+import { leastSquaresLine, l1Line, chebyshevLine, lossL1, lossL2, lossLinf, residuals } from '../../src/features/labs/services/fitting.mjs'
 const near = (a, b, tolerance = 1e-9) => assert(Math.abs(a - b) <= tolerance, `${a} != ${b}`)
 
 test('Least squares solves the normal equations and leaves residuals orthogonal to the columns', () => {

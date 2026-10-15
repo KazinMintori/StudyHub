@@ -17,10 +17,10 @@ Lực từ đẩy hạt tải về mép và tạo điện trường ngang. Ở t
 
 $$
 \begin{aligned}
-&qE_z+qv_xB_y = 0,\\
-&E_z = -v_xB_y,\\
-&J_x = nqv_x,\\
-&nq = -\frac{J_xB_y}{E_z}.
+qE_z+qv_xB_y &= 0, \\
+E_z &= -v_xB_y, \\
+J_x &= nqv_x, \\
+nq &= -\frac{J_xB_y}{E_z}.
 \end{aligned}
 $$
 

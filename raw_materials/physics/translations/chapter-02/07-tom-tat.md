@@ -50,10 +50,10 @@ Khi gia tốc không đổi, ta có hệ bốn phương trình động học kin
 
 $$
 \begin{aligned}
-    &v_x = v_{0x} + a_x t,\qquad\text{(2.8)}\\
-    &x = x_0 + v_{0x}t + \frac{1}{2}a_x t^2,\qquad\text{(2.12)}\\
-    &v_x^2 = v_{0x}^2 + 2a_x(x - x_0),\qquad\text{(2.13)}\\
-    &x - x_0 = \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}
+v_x &= v_{0x} + a_x t,\qquad\text{(2.8)} \\
+x &= x_0 + v_{0x}t + \frac{1}{2}a_x t^2,\qquad\text{(2.12)} \\
+v_x^2 &= v_{0x}^2 + 2a_x(x - x_0),\qquad\text{(2.13)} \\
+x - x_0 &= \frac{1}{2}(v_{0x} + v_x)t.\qquad\text{(2.14)}
 \end{aligned}
 $$
 
@@ -86,8 +86,8 @@ Khi gia tốc phụ thuộc vào thời gian $a_x = a_x(t)$, ta tìm lại vận
 
 $$
 \begin{aligned}
-    &v_x(t) = v_{0x} + \int_0^t a_x(t')\, dt',\qquad\text{(2.17)}\\
-    &x(t) = x_0 + \int_0^t v_x(t')\, dt'.\qquad\text{(2.18)}
+v_x(t) &= v_{0x} + \int_0^t a_x(t')\, dt',\qquad\text{(2.17)} \\
+x(t) &= x_0 + \int_0^t v_x(t')\, dt'.\qquad\text{(2.18)}
 \end{aligned}
 $$
 

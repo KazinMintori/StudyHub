@@ -57,8 +57,7 @@ $F_x=+0.452\,\mu\mathrm N$, $F_y=+0.329\,\mu\mathrm N$.
 (a)
 
 $$
-\begin{aligned}
-&E = \frac{e}{4\pi\varepsilon_0a^2}\left(1-\frac1{2\sqrt2}\right).\end{aligned}
+E = \frac{e}{4\pi\varepsilon_0a^2}\left(1-\frac1{2\sqrt2}\right).
 $$
 
 (b) Trường hướng ra xa proton.
@@ -73,9 +72,9 @@ $$
 
 $$
 \begin{aligned}
-&dE_x = -\frac{dq}{4\pi\varepsilon_0x^2}\\
-&\quad =-\frac{Q\,dx}{4\pi\varepsilon_0Lx^2},\\
-&dE_y = 0.
+dE_x &= -\frac{dq}{4\pi\varepsilon_0x^2} \\
+&= -\frac{Q\,dx}{4\pi\varepsilon_0Lx^2}, \\
+dE_y &= 0.
 \end{aligned}
 $$
 
@@ -110,8 +109,7 @@ $1.92\times10^{-30}\,\mathrm{C\,m}$.
 <details><summary>Bài tổng hợp: Nửa vòng tích điện</summary>
 
 $$
-\begin{aligned}
-&\vec E = -\frac{2kQ}{\pi a^2}\hat{\mathbf j}.\end{aligned}
+\vec E = -\frac{2kQ}{\pi a^2}\hat{\mathbf j}.
 $$
 
 Trường hướng $-y$.

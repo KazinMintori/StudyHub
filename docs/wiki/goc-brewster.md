@@ -14,7 +14,7 @@ Với hai điện môi trong suốt, không từ tính và có chiết suất kh
 ## Giải thích kỹ thuật
 
 $$
-\begin{aligned}\tan\theta_p&=n_b/n_a,\\\theta_p+\theta_b&=\pi/2.\end{aligned}
+\tan\theta_p =n_b/n_a,\\\theta_p+\theta_b =\pi/2.
 $$
 
 Ký hiệu p chỉ điện trường nằm trong mặt phẳng tới, còn s chỉ phương vuông góc mặt đó. Tại Brewster, hệ số phản xạ p bằng không. Với ánh sáng tới chưa phân cực, phần phản xạ còn lại vì thế phân cực s.

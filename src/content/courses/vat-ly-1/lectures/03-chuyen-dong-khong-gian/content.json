@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "03-chuyen-dong-khong-gian",
+  "route": "/vat-ly-1/bai-giang/03-chuyen-dong-khong-gian",
+  "notes": "docs/vat-ly-1/bai-giang/03-chuyen-dong-khong-gian.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "vector",
+    "dao-ham",
+    "don-vi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

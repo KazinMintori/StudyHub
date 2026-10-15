@@ -41,9 +41,9 @@ $$
 
 $$
 \begin{aligned}
-&\theta x^2 + (1-\theta)y^2 - \theta^2 x^2 - 2\theta(1-\theta)xy - (1-\theta)^2 y^2 \\
-&\quad = \theta(1-\theta)\big(x^2 - 2xy + y^2\big) \\
-&\quad = \theta(1-\theta)(x - y)^2.
+\theta x^2 + (1-\theta)y^2 - \big(\theta x + (1-\theta)y\big)^2 &= \theta x^2 + (1-\theta)y^2 - \theta^2 x^2 - 2\theta(1-\theta)xy - (1-\theta)^2 y^2 \\
+&= \theta(1-\theta)(x^2 - 2xy + y^2) \\
+&= \theta(1-\theta)(x - y)^2.
 \end{aligned}
 $$
 
@@ -156,8 +156,8 @@ Với mọi $x, y \in \mathbb{R}$ và mọi hệ số $\theta \in [0, 1]$, áp d
 
 $$
 \begin{aligned}
-&|\theta x + (1-\theta)y| \le |\theta x| + |(1-\theta)y|\\
-&\quad = \theta|x| + (1-\theta)|y|,
+|\theta x + (1-\theta)y| &\le |\theta x| + |(1-\theta)y| \\
+&= \theta|x| + (1-\theta)|y|,
 \end{aligned}
 $$
 

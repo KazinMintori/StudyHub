@@ -1,0 +1,22 @@
+{
+  "course": "bieu-dien-tri-thuc",
+  "lecture": "02-tim-kiem-mu",
+  "route": "/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu",
+  "notes": "docs/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.md",
+  "topics": [],
+  "slides": "src/content/courses/bieu-dien-tri-thuc/lectures/02-tim-kiem-mu/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "do-thi",
+    "trang-thai",
+    "hang-doi",
+    "ngan-xep",
+    "hang-doi-uu-tien",
+    "do-phuc-tap"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

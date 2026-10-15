@@ -3,25 +3,19 @@
 Khi nhiều điện tích chuyển động, mỗi điện tích góp một phần vào từ trường tổng. Vì từ trường là véc-tơ, ta cộng các đóng góp theo quy tắc cộng véc-tơ. Với hai nguồn:
 
 $$
-\begin{aligned}
-&\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.\end{aligned}
-\tag{28.5}
+\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2. \tag{28.5}
 $$
 
 Với $N$ nguồn, cách viết tường minh là:
 
 $$
-\begin{aligned}
-&\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2\\
-&\quad+\cdots+\vec B_N.
-\end{aligned}
+\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2 +\cdots+\vec B_N.
 $$
 
 Ta dùng nguyên lý chồng chất để tính từ trường do một đoạn rất ngắn của dây dẫn mang dòng điện tạo ra. Gọi $A$ là diện tích tiết diện dây, $d\ell$ là độ dài đoạn dây, $n$ là mật độ hạt tải điện và $q$ là điện tích của mỗi hạt. Đoạn dây có thể tích $A\,d\ell$, nên số hạt tải trong đoạn ấy là $nA\,d\ell$. Nếu các hạt cùng trôi với tốc độ $v_d$, độ lớn điện tích chuyển động tương đương là:
 
 $$
-\begin{aligned}
-&|dQ| = n|q|A\,d\ell.\end{aligned}
+|dQ| = n|q|A\,d\ell.
 $$
 
 Các vận tốc nhiệt ngẫu nhiên phân bố theo nhiều hướng nên đóng góp từ trường của chúng triệt tiêu trung bình. Phần từ trường còn lại tương ứng với chuyển động có hướng của các hạt tải.
@@ -34,22 +28,15 @@ Hình 28.3: Từ trường của phần tử dòng điện có dạng tương t�
 
 $$
 \begin{aligned}
-&dB = \frac{\mu_0}{4\pi}\\
-&\quad\times\frac{|dQ|v_d\sin\phi}{r^2}\\
-&\quad =\frac{\mu_0}{4\pi}\\
-&\quad\times n|q|A v_d\\
-&\quad\times\frac{d\ell\sin\phi}{r^2}.
+dB &= \frac{\mu_0}{4\pi} \times\frac{|dQ|v_d\sin\phi}{r^2} \\
+&= \frac{\mu_0}{4\pi} \times n|q|A v_d \times\frac{d\ell\sin\phi}{r^2}.
 \end{aligned}
 $$
 
 Dòng điện là lượng điện tích quy ước đi qua tiết diện trong một đơn vị thời gian. Với các hạt tải có cùng tốc độ trôi, độ lớn dòng điện là $I=n|q|v_dA$. Thay tích này vào biểu thức trên, ta được định luật Biot–Savart ở dạng độ lớn:
 
 $$
-\begin{aligned}
-&dB = \frac{\mu_0 I}{4\pi}\\
-&\quad\times d\ell\\
-&\quad\times\frac{\sin\phi}{r^2}.
-\end{aligned}
+dB = \frac{\mu_0 I}{4\pi} \times d\ell \times\frac{\sin\phi}{r^2}.
 $$
 
 Véc-tơ dòng điện luôn chỉ theo chiều dòng điện quy ước. Với hạt tải âm, vận tốc trôi ngược chiều dòng điện nhưng điện tích $q$ cũng mang dấu âm, nên $q\vec v_d$ vẫn cùng chiều dòng điện. Vì thế, biểu thức dùng $I\,d\vec\ell$ mô tả đúng hướng từ trường dù dòng điện do electron hay ion dương tạo ra.
@@ -57,11 +44,7 @@ Véc-tơ dòng điện luôn chỉ theo chiều dòng điện quy ước. Với 
 Gọi $\hat r$ là véc-tơ đơn vị hướng từ phần tử dòng điện đến điểm đo. Hướng của từ trường được xác định bằng tích có hướng $d\vec\ell\times\hat r$. Từ trường vuông góc với mặt phẳng chứa phần tử dây và đường nối phần tử dây với điểm đo.
 
 $$
-\begin{aligned}
-&d\vec B = \frac{\mu_0 I}{4\pi r^2}\\
-&\quad\times\left(d\vec\ell\times\hat r\right).
-\end{aligned}
-\tag{28.6}
+d\vec B = \frac{\mu_0 I}{4\pi r^2} \left(d\vec\ell \times \hat r\right). \tag{28.6}
 $$
 
 Các đường sức của phần tử dòng điện là những vòng tròn nằm trong các mặt phẳng vuông góc với $d\vec\ell$. Ngón cái bàn tay phải chỉ theo chiều dòng điện, các ngón tay khum theo chiều đường sức từ. Khi quan sát một mạch hoàn chỉnh, ta không thể tách riêng một phần tử dòng điện để đo. Ta kiểm tra định luật bằng cách tính trường của cả mạch rồi so sánh với phép đo.
@@ -74,11 +57,9 @@ Nếu đặt vật liệu gần dây dẫn, sự từ hóa của vật liệu c�
 
 $$
 \begin{aligned}
-&\vec B = \frac{\mu_0 I}{4\pi}\\
-&\quad\times\int_{\text{dây}}\\
+\vec B &= \frac{\mu_0 I}{4\pi} \times\int_{\text{dây}} \\
 &\qquad\frac{d\vec\ell\times\hat r}{r^2}.
-\end{aligned}
-\tag{28.7}
+\end{aligned} \tag{28.7}
 $$
 
 Tích phân này là phép cộng liên tục các đóng góp trên toàn bộ dây. Nếu các véc-tơ $d\vec B$ cùng hướng, ta có thể cộng độ lớn. Nếu hướng khác nhau, phải phân tích thành phần rồi cộng theo từng trục.
@@ -114,28 +95,24 @@ Trong hình, dòng điện quy ước hướng theo $-x$, nên $d\vec\ell=-d\ell
 
 $$
 \begin{aligned}
-&\vec B_1 = \frac{\mu_0 I}{4\pi r^2}\\
-&\quad\times\left(d\vec\ell\times\hat r_1\right)\\
-&\quad =-\frac{\mu_0 I d\ell}{4\pi r^2}\,\hat k.
+\vec B_1 &= \frac{\mu_0 I}{4\pi r^2} \left(d\vec\ell\times\hat r_1\right) \\
+&= -\frac{\mu_0 I d\ell}{4\pi r^2}\,\hat k.
 \end{aligned}
 $$
 
 Thay $\mu_0/(4\pi)=1{,}0\times10^{-7}\,\mathrm{T\,m/A}$, $d\ell=1{,}0\times10^{-2}\,\mathrm m$ và $r=1{,}2\,\mathrm m$:
 
 $$
-\begin{aligned}
-&\vec B_1 = -8{,}7\times10^{-8}\,\hat k\,\mathrm T.\end{aligned}
+\vec B_1 = -8{,}7\times10^{-8}\,\hat k\,\mathrm T.
 $$
 
 Tại $P_2$, véc-tơ đơn vị là $\hat r_2=-\cos30^\circ\,\hat\imath+\sin30^\circ\,\hat\jmath$. Khi tính tích có hướng, thành phần theo $x$ triệt tiêu, còn thành phần theo $y$ tạo hướng $-z$:
 
 $$
 \begin{aligned}
-&\vec B_2 = \frac{\mu_0 I}{4\pi r^2}\\
-&\quad\times\left[-d\ell\,\hat\imath\times\hat r_2\right]\\
-&\quad =-\frac{\mu_0 I d\ell\sin30^\circ}{4\pi r^2}\\
-&\quad\times\hat k\\
-&\quad =-4{,}3\times10^{-8}\,\hat k\,\mathrm T.
+\vec B_2 &= \frac{\mu_0 I}{4\pi r^2} \left[-d\ell\,\hat\imath\times\hat r_2\right] \\
+&= -\frac{\mu_0 I d\ell\sin30^\circ}{4\pi r^2} \times\hat k \\
+&= -4{,}3\times10^{-8}\,\hat k\,\mathrm T.
 \end{aligned}
 $$
 

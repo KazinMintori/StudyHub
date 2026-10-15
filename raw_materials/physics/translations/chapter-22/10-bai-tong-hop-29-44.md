@@ -17,10 +17,10 @@ Tại t = 0, proton cách mặt phẳng cách điện rất lớn 0,360 m và ba
 
 $$
 \begin{aligned}
-&v_\parallel = v_0,\\
-&v_\perp = \frac{e\sigma t}{2m_p\varepsilon_0},\\
-&v = \sqrt{v_0^2+v_\perp^2}\\
-&\quad =1.16\times10^3\,\mathrm{m/s}.
+v_\parallel &= v_0, \\
+v_\perp &= \frac{e\sigma t}{2m_p\varepsilon_0}, \\
+v &= \sqrt{v_0^2+v_\perp^2} \\
+&= 1.16\times10^3\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -42,8 +42,8 @@ Vật rất nhỏ có $m=8.20\times10^{-9}$ kg, $q=+6.50\times10^{-9}$ C đượ
 
 $$
 \begin{aligned}
-&\frac12mv_0^2 = \frac{q\sigma}{2\varepsilon_0}(0.300),\\
-&v_0 = 39.8\,\mathrm{m/s}.
+\frac12mv_0^2 &= \frac{q\sigma}{2\varepsilon_0}(0.300), \\
+v_0 &= 39.8\,\mathrm{m/s}.
 \end{aligned}
 $$
 :::
@@ -65,8 +65,8 @@ Cầu nhỏ có $m=4.00\times10^{-6}$ kg, $q=5.00\times10^{-8}$ C treo gần m�
 
 $$
 \begin{aligned}
-&\tan\theta = \frac{q|\sigma|}{2mg\varepsilon_0},\\
-&\theta = 10.2^\circ.
+\tan\theta &= \frac{q|\sigma|}{2mg\varepsilon_0}, \\
+\theta &= 10.2^\circ.
 \end{aligned}
 $$
 
@@ -94,8 +94,8 @@ Theo thứ tự S₁–S₆, điện thông tính bằng N m²/C là **0, +0,081
 
 $$
 \begin{aligned}
-&\Phi_E = -0.0540\,\mathrm{N\,m^2/C},\\
-&Q = -4.78\times10^{-13}\,\mathrm C.
+\Phi_E &= -0.0540\,\mathrm{N\,m^2/C}, \\
+Q &= -4.78\times10^{-13}\,\mathrm C.
 \end{aligned}
 $$
 :::
@@ -119,8 +119,8 @@ Trường trong Hình P22.33 luôn song song trục x, với Eᵧ = E_z = 0 và 
 
 $$
 \begin{aligned}
-&A(125-E_{x,\mathrm{opp}}) = Q/\varepsilon_0,\\
-&E_{x,\mathrm{opp}} = +577\,\mathrm{N/C}.
+A(125-E_{x,\mathrm{opp}}) &= Q/\varepsilon_0, \\
+E_{x,\mathrm{opp}} &= +577\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -142,9 +142,9 @@ Trong một vùng, trường hướng z và có độ lớn $E=964x$, với hệ
 
 $$
 \begin{aligned}
-&\Phi_E = \int_0^L964xL\,dx\\
-&\quad =\frac{964L^3}{2}\\
-&\quad =20.7\,\mathrm{N\,m^2/C}.
+\Phi_E &= \int_0^L964xL\,dx \\
+&= \frac{964L^3}{2} \\
+&= 20.7\,\mathrm{N\,m^2/C}.
 \end{aligned}
 $$
 
@@ -183,9 +183,9 @@ Dây dài mang mật độ đều +50,0 µC/m chạy song song và cách mặt t
 
 $$
 \begin{aligned}
-&d = \frac{\lambda}{\pi|\sigma|}=0.159\,\mathrm m,\\
-&z_1 = h+d=0.259\,\mathrm m,\\
-&z_2 = h-d=-0.0592\,\mathrm m.
+d &= \frac{\lambda}{\pi|\sigma|}=0.159\,\mathrm m, \\
+z_1 &= h+d=0.259\,\mathrm m, \\
+z_2 &= h-d=-0.0592\,\mathrm m.
 \end{aligned}
 $$
 
@@ -250,9 +250,9 @@ Trụ cách điện đặc rất dài bán kính R có mật độ thể tích d
 
 $$
 \begin{aligned}
-&E_{\mathrm{trong}} = \frac{\rho r}{2\varepsilon_0},\\
-&E_{\mathrm{ngoai}} = \frac{\lambda}{2\pi\varepsilon_0r}\\
-&\quad =\frac{\rho R^2}{2\varepsilon_0r}.
+E_{\mathrm{trong}} &= \frac{\rho r}{2\varepsilon_0}, \\
+E_{\mathrm{ngoai}} &= \frac{\lambda}{2\pi\varepsilon_0r} \\
+&= \frac{\rho R^2}{2\varepsilon_0r}.
 \end{aligned}
 $$
 
@@ -320,8 +320,8 @@ Trong hốc, E = kQ/r² hướng ra. Trong vật liệu, E = 0. Ngoài vỏ, E =
 
 $$
 \begin{aligned}
-&\sigma_a = -Q/(4\pi a^2),\\
-&\sigma_b = -2Q/(4\pi b^2).
+\sigma_a &= -Q/(4\pi a^2), \\
+\sigma_b &= -2Q/(4\pi b^2).
 \end{aligned}
 $$
 

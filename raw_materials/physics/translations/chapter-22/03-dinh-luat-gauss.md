@@ -20,12 +20,10 @@ Mọi vector diện tích đều hướng ra ngoài và cùng chiều trường.
 
 $$
 \begin{aligned}
-&\Phi_E = EA\\
-&\quad =\frac{q}{4\pi\varepsilon_0R^2}\\
-&\quad\times(4\pi R^2)\\
-&\quad =\frac q{\varepsilon_0}.
-\end{aligned}
-\tag{22.6}
+\Phi_E &= EA \\
+&= \frac{q}{4\pi\varepsilon_0R^2} \times(4\pi R^2) \\
+&= \frac q{\varepsilon_0}.
+\end{aligned} \tag{22.6}
 $$
 
 Điện thông không phụ thuộc bán kính cầu, mà chỉ phụ thuộc điện tích được bao. Mỗi đường sức xuyên qua mặt cầu nhỏ cũng xuyên qua mặt cầu lớn đồng tâm.
@@ -46,10 +44,9 @@ Trường xuyên tâm có độ lớn E tại vị trí đang xét. Điện thô
 
 $$
 \begin{aligned}
-&\Phi_E = \oint\vec E\cdot d\vec A\\
-&\quad =\frac{q}{\varepsilon_0}.
-\end{aligned}
-\tag{22.7}
+\Phi_E &= \oint\vec E\cdot d\vec A \\
+&= \frac{q}{\varepsilon_0}.
+\end{aligned} \tag{22.7}
 $$
 
 Vòng tròn trên dấu tích phân nhắc rằng phép tích phân đi trên **toàn một mặt kín**. Các vector diện tích luôn hướng ra ngoài. Nơi trường hướng ra, tích vô hướng dương. Nơi trường hướng vào, tích vô hướng âm.
@@ -74,8 +71,8 @@ Xét trước hai điện tích được bao. Trường tổng là $\vec E_1+\ve
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}} = q_1+q_2+\cdots+q_n\\
-&\quad =\sum_{i=1}^{n}q_i.
+Q_{\mathrm{trong}} &= q_1+q_2+\cdots+q_n \\
+&= \sum_{i=1}^{n}q_i.
 \end{aligned}
 $$
 
@@ -85,22 +82,20 @@ Chỉ số i chạy qua từng điện tích nằm bên trong mặt, từ 1 đ�
 
 $$
 \begin{aligned}
-&\Phi_E = \oint\vec E\cdot d\vec A\\
-&\quad =\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
-\end{aligned}
-\tag{22.8}
+\Phi_E &= \oint\vec E\cdot d\vec A \\
+&= \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
+\end{aligned} \tag{22.8}
 $$
 
 Các cách viết tương đương là:
 
 $$
 \begin{aligned}
-&\Phi_E = \oint E\cos\varphi\,dA\\
-&\quad =\oint E_\perp\,dA\\
-&\quad =\oint\vec E\cdot d\vec A\\
-&\quad =\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
-\end{aligned}
-\tag{22.9}
+\Phi_E &= \oint E\cos\varphi\,dA \\
+&= \oint E_\perp\,dA \\
+&= \oint\vec E\cdot d\vec A \\
+&= \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
+\end{aligned} \tag{22.9}
 $$
 
 Mặt kín được dùng trong định luật gọi là **mặt Gauss**. Đây là mặt tưởng tượng, không cần trùng với bất kỳ vật thể hay bề mặt vật liệu nào.
@@ -128,10 +123,10 @@ Mặt A bao điện tích dương, B bao điện tích âm, C bao cả hai, còn
 
 $$
 \begin{aligned}
-&\Phi_{EA} = +\frac{q}{\varepsilon_0},\\
-&\Phi_{EB} = -\frac{q}{\varepsilon_0},\\
-&\Phi_{EC} = \frac{q-q}{\varepsilon_0}=0,\\
-&\Phi_{ED} = 0.
+\Phi_{EA} &= +\frac{q}{\varepsilon_0}, \\
+\Phi_{EB} &= -\frac{q}{\varepsilon_0}, \\
+\Phi_{EC} &= \frac{q-q}{\varepsilon_0}=0, \\
+\Phi_{ED} &= 0.
 \end{aligned}
 $$
 
@@ -149,11 +144,11 @@ Các điện tích được bao, tính bằng µC, là:
 
 $$
 \begin{aligned}
-&Q_1 = 0,\\
-&Q_2 = 9+5-7=7,\\
-&Q_3 = 9+1-10=0,\\
-&Q_4 = 8-7=1,\\
-&Q_5 = 8-7-10+1+9+5=6.
+Q_1 &= 0, \\
+Q_2 &= 9+5-7=7, \\
+Q_3 &= 9+1-10=0, \\
+Q_4 &= 8-7=1, \\
+Q_5 &= 8-7-10+1+9+5=6.
 \end{aligned}
 $$
 

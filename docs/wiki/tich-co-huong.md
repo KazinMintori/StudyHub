@@ -17,9 +17,9 @@ Với hệ cơ sở trực chuẩn thuận tay phải, các thành phần là:
 
 $$
 \begin{aligned}
-&C_x = A_yB_z-A_zB_y,\\
-&C_y = A_zB_x-A_xB_z,\\
-&C_z = A_xB_y-A_yB_x.
+C_x &= A_yB_z-A_zB_y, \\
+C_y &= A_zB_x-A_xB_z, \\
+C_z &= A_xB_y-A_yB_x.
 \end{aligned}
 $$
 

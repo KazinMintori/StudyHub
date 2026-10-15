@@ -179,8 +179,8 @@ $$P=\{x: Ax\preceq b,\ Cx=d\}$$
 
 $$
 \begin{aligned}
-    &B(x_c,r)=\{x:\|x-x_c\|_2\le r\} = \{x_c+ru: \|u\|_2\le1\}\\
-    &E=\{x:(x-x_c)^TP^{-1}(x-x_c)\le1\},\quad P=P^T\succ0
+    B(x_c,r) &= \{x:\|x-x_c\|_2\le r\} = \{x_c+ru: \|u\|_2\le1\}\\
+    E &= \{x:(x-x_c)^TP^{-1}(x-x_c)\le1\},\quad P=P^T\succ0
 \end{aligned}
 $$
 

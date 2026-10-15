@@ -14,7 +14,7 @@ next: false
 ## Giải thích kỹ thuật
 
 $$
-\begin{aligned}|\Delta\phi|&=\pi/2,\\d_{\min}&=\frac{\lambda_0}{4|n_1-n_2|}.\end{aligned}
+|\Delta\phi| =\pi/2,\\d_{\min} =\frac{\lambda_0}{4|n_1-n_2|}.
 $$
 
 Bản trễ pha một phần tư chu kỳ ở một bước sóng không nhất thiết giữ đúng độ trễ đó ở mọi bước sóng. Hai chiết suất và chiều dày đều quyết định trạng thái ra.

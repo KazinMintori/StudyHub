@@ -29,26 +29,19 @@ Khi khoảng cách $L_1$ và $L_2$ có độ chênh lệch nhỏ, ảnh ảo c�
 Giả sử góc nghiêng giữa gương $M_2$ và ảnh ảo của $M_1$ được hiệu chỉnh vừa đủ để quan sát thấy 5 hoặc 6 vân giao thoa thẳng đứng nằm trong thị trường quan sát của kính ngắm. Khi ta dịch chuyển gương $M_2$ từ từ tiến lên hoặc lùi lại một khoảng cách bằng nửa bước sóng ($\lambda / 2$), hiệu quang trình giữa tia 1 và tia 2 sẽ biến thiên một lượng đúng bằng một bước sóng ($\lambda$):
 
 $$
-\begin{aligned}
 \Delta d = 2 \times \frac{\lambda}{2} = \lambda
-\end{aligned}
 $$
 
 Sự thay đổi quang trình này làm cho toàn bộ hệ vân dịch chuyển sang trái hoặc sang phải một khoảng đúng bằng khoảng cách giữa hai vân kế tiếp (khoảng vân). Nếu quan sát vị trí các vân qua một kính ngắm có dây chữ thập ở thị kính và đếm được $m$ vân lần lượt dịch chuyển đi qua vạch dấu chữ thập khi gương $M_2$ dịch chuyển một đoạn $y$, ta có hệ thức:
 
 $$
-\begin{aligned}
-y = m \frac{\lambda}{2}
-\end{aligned}
-\tag{35.19}
+y = m \frac{\lambda}{2} \tag{35.19}
 $$
 
 Từ hệ thức này, bước sóng của chùm sáng đơn sắc được xác định trực tiếp:
 
 $$
-\begin{aligned}
 \lambda = \frac{2y}{m}
-\end{aligned}
 $$
 
 Khi số lượng vân đếm được $m$ lên tới hàng nghìn vân, độ dịch chuyển $y$ đủ lớn để có thể đo lường một cách chuẩn xác bằng thước vi sai cơ học thông thường, cho phép đo bước sóng $\lambda$ với độ chính xác rất cao. Ngược lại, nếu bước sóng $\lambda$ đã được biết trước từ nguồn chuẩn, người ta có thể đo độ dịch chuyển khoảng cách $y$ cực nhỏ bằng thao tác đơn giản là đếm số lượng vân giao thoa dịch chuyển. Bằng phương pháp này, việc đo lường các khoảng cách có độ lớn tương đương với bước sóng ánh sáng trở nên hết sức thuận tiện và chuẩn xác.

@@ -17,11 +17,11 @@ Tách vận tốc thành các thành phần song song và vuông góc từ trư�
 
 $$
 \begin{aligned}
-&|q|v_\perp B = mv_\perp^2/R,\\
-&R = \frac{mv_\perp}{|q|B},\\
-&\omega = |q|B/m,\\
-&T = \frac{2\pi m}{|q|B},\\
-&p = v_\parallel T.
+|q|v_\perp B &= mv_\perp^2/R, \\
+R &= \frac{mv_\perp}{|q|B}, \\
+\omega &= |q|B/m, \\
+T &= \frac{2\pi m}{|q|B}, \\
+p &= v_\parallel T.
 \end{aligned}
 $$
 

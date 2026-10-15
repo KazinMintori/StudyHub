@@ -1,13 +1,2 @@
-/* Compatibility entry point. */
-@import './fonts.css';
-@import './tokens.css';
-@import './base.css';
-@import './layout.css';
-@import './components.css';
-@import './home.css';
-@import './course.css';
-@import './lecture.css';
-@import './topic.css';
-@import './labs.css';
-@import './wiki.css';
-@import './workspace.css';
+/* Compatibility stylesheet entry. */
+@import '../../../src/app/styles/index.css';

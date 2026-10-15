@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "06-cong-dong-nang",
+  "route": "/vat-ly-1/bai-giang/06-cong-dong-nang",
+  "notes": "docs/vat-ly-1/bai-giang/06-cong-dong-nang.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "tich-vo-huong",
+    "tich-phan",
+    "luc"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

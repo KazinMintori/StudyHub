@@ -1,0 +1,91 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "14-phan-phoi-lien-tuc-va-xap-xi-chuan",
+  "route": "/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/14-phan-phoi-lien-tuc-va-xap-xi-chuan/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "tich-phan",
+    "bien-ngau-nhien"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 490,
+      "title": "Bài tập rèn luyện"
+    }
+  ],
+  "solutions": [],
+  "assets": [
+    {
+      "reference": "./img/stat20-14/drunkard-walk-drawing.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 20,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/drunkard-walk-drawing.png"
+    },
+    {
+      "reference": "./img/stat20-14/unnamed-chunk-2-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 29,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-2-1.png"
+    },
+    {
+      "reference": "./img/stat20-14/unnamed-chunk-3-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 69,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-3-1.png"
+    },
+    {
+      "reference": "./img/stat20-14/box-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 96,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/box-1.png"
+    },
+    {
+      "reference": "./img/stat20-14/die.jpeg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 126,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/die.jpeg"
+    },
+    {
+      "reference": "./img/stat20-14/roulette-us.jpg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 133,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/roulette-us.jpg"
+    },
+    {
+      "reference": "./img/stat20-14/roulette-bet.jpeg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 134,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/roulette-bet.jpeg"
+    },
+    {
+      "reference": "./img/stat20-14/unnamed-chunk-8-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 276,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-8-1.png"
+    },
+    {
+      "reference": "./img/stat20-14/unnamed-chunk-8-2.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 277,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-8-2.png"
+    },
+    {
+      "reference": "./img/stat20-14/unif-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 357,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unif-1.png"
+    },
+    {
+      "reference": "./img/stat20-14/unnamed-chunk-10-1.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
+      "line": 388,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-10-1.png"
+    }
+  ]
+}

@@ -51,8 +51,8 @@ Với hai nguồn khác không và r hữu hạn, U khác không. Với ba ngu�
 
 $$
 \begin{aligned}
-&U = \frac{kq^2}{2a}-\frac{kq^2}{4a}-\frac{kq^2}{4a}\\
-&\quad =0.
+U &= \frac{kq^2}{2a}-\frac{kq^2}{4a}-\frac{kq^2}{4a} \\
+&= 0.
 \end{aligned}
 $$
 
@@ -274,8 +274,8 @@ Nạp cầu dẫn bằng cách đưa từng lượng điện tích dương nhỏ
 
 $$
 \begin{aligned}
-&W = \int_0^Q\frac{kq}{R}dq\\
-&\quad =\frac{kQ^2}{2R}.
+W &= \int_0^Q\frac{kq}{R}dq \\
+&= \frac{kQ^2}{2R}.
 \end{aligned}
 $$
 

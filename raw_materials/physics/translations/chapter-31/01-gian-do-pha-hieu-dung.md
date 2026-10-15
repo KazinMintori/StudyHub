@@ -58,12 +58,12 @@ Dòng chỉnh lưu vẫn biến thiên về độ lớn. **Dòng trung bình sau
 
 $$
 \begin{aligned}
-I_{\mathrm{rav}}&=\frac1T\int_0^T|i(t)|\,dt\\
-&=\frac{I}{2\pi}\int_0^{2\pi}|\cos\theta|\,d\theta\\
-&=\frac{I}{2\pi}\,4\\
-&=\frac2\pi I\\
-&\approx0{,}637I.\tag{31.3}
-\end{aligned}
+I_{\mathrm{rav}} &= \frac1T\int_0^T|i(t)|\,dt \\
+&= \frac{I}{2\pi}\int_0^{2\pi}|\cos\theta|\,d\theta \\
+&= \frac{I}{2\pi}\,4 \\
+&= \frac2\pi I \\
+&\approx 0{,}637I.\tag{31.3}
+\end{aligned} \tag{31.3}
 $$
 
 Ở bước tích phân, bốn phần tư chu kỳ có cùng diện tích. Hệ số $2/\pi$ cũng là trung bình của $|\sin\theta|$ trên một chu kỳ. Độ lệch điện kế tỉ lệ với dòng trung bình sau chỉnh lưu. Thang đo có thể được hiệu chuẩn để chỉ biên độ, trung bình chỉnh lưu hoặc giá trị hiệu dụng.
@@ -83,23 +83,15 @@ Ngay khi $i$ âm, bình phương $i^2$ vẫn không âm. Giá trị hiệu dụn
 Với dòng hình sin ở (31.2), dùng công thức góc đôi để khai triển:
 
 $$
-\begin{aligned}
-i^2&=I^2\cos^2\omega t.
-\end{aligned}
+i^2 =I^2\cos^2\omega t.
 $$
 
 $$
-\begin{aligned}
-\cos^2\omega t&=\frac12\\
-&\quad+\frac12\cos2\omega t.
-\end{aligned}
+\cos^2\omega t&=\frac12 +\frac12\cos2\omega t.
 $$
 
 $$
-\begin{aligned}
-i^2&=\frac12I^2\\
-&\quad+\frac12I^2\cos2\omega t.
-\end{aligned}
+i^2&=\frac12I^2 +\frac12I^2\cos2\omega t.
 $$
 
 Trung bình của cosin trên một số nguyên chu kỳ bằng không. Do đó trung bình bình phương là $I^2/2$, suy ra
@@ -124,8 +116,8 @@ Với nguồn 120 V hiệu dụng:
 
 $$
 \begin{aligned}
-V&=\sqrt2V_{\mathrm{rms}}\\
-&\approx170\,\mathrm V.
+V &= \sqrt2V_{\mathrm{rms}} \\
+&\approx 170\,\mathrm V.
 \end{aligned}
 $$
 
@@ -144,9 +136,9 @@ Nhãn phía sau máy tính ghi máy lấy dòng 2,7 A từ đường điện 120
 
 $$
 \begin{aligned}
-\overline{i^2}&=I_{\mathrm{rms}}^2\\
-&=(2{,}7\,\mathrm A)^2\\
-&\approx7{,}3\,\mathrm{A^2}.
+\overline{i^2} &= I_{\mathrm{rms}}^2 \\
+&= (2{,}7\,\mathrm A)^2 \\
+&\approx 7{,}3\,\mathrm{A^2}.
 \end{aligned}
 $$
 
@@ -154,8 +146,8 @@ $$
 
 $$
 \begin{aligned}
-I&=\sqrt2I_{\mathrm{rms}}\\
-&\approx3{,}8\,\mathrm A.
+I &= \sqrt2I_{\mathrm{rms}} \\
+&\approx 3{,}8\,\mathrm A.
 \end{aligned}
 $$
 

@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "11-can-bang-dan-hoi",
+  "route": "/vat-ly-1/bai-giang/11-can-bang-dan-hoi",
+  "notes": "docs/vat-ly-1/bai-giang/11-can-bang-dan-hoi.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "luc",
+    "momen-luc",
+    "don-vi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

@@ -17,9 +17,9 @@ Ta định nghĩa một **bài toán tối ưu lồi ở dạng chuẩn** là b�
 
 $$
 \begin{aligned}
-&\text{cực tiểu} \quad f_0(x)\\
-&\text{với điều kiện} \quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
-& a_i^T x = b_i, \quad i = 1, \dots, p,
+&\quad \text{cực tiểu} \quad f_0(x) \\
+\text{với điều kiện} \quad f_i(x) &\le 0, \quad i = 1, \dots, m, \\
+a_i^T x &= b_i, \quad i = 1, \dots, p,
 \end{aligned}
 $$
 

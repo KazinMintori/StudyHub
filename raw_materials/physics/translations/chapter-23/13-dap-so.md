@@ -80,11 +80,11 @@ Với Bài 23.41, chọn vỏ ngoài V = 0. Ba vùng điện thế là:
 
 $$
 \begin{aligned}
-&V(r) = kq(1/r_a-1/r_b),\\
-&\qquad r\le r_a,\\
-&V(r) = kq(1/r-1/r_b),\\
-&\qquad r_a\le r\le r_b,\\
-&V(r) = 0,\quad r\ge r_b.
+V(r) &= kq(1/r_a-1/r_b), \\
+\qquad r &\le r_a, \\
+V(r) &= kq(1/r-1/r_b), \\
+\qquad r_a &\le r\le r_b, \\
+V(r) &= 0,\quad r\ge r_b.
 \end{aligned}
 $$
 
@@ -110,8 +110,8 @@ Với Bài 23.71:
 
 $$
 \begin{aligned}
-&V_P = \frac{kQ}{a}\ln\frac{x+a}x,\\
-&V_R = \frac{kQ}{a}\ln\frac{a+\sqrt{a^2+y^2}}y.
+V_P &= \frac{kQ}{a}\ln\frac{x+a}x, \\
+V_R &= \frac{kQ}{a}\ln\frac{a+\sqrt{a^2+y^2}}y.
 \end{aligned}
 $$
 :::

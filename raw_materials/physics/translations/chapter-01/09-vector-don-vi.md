@@ -18,13 +18,13 @@ Dùng vector đơn vị, phép cộng hai vector được viết thành:
 
 $$
 \begin{aligned}
-&\vec A = A_x\hat{\mathbf i}+A_y\hat{\mathbf j},\\
-&\vec B = B_x\hat{\mathbf i}+B_y\hat{\mathbf j},\\
-&\vec R = \vec A+\vec B\\
-&\quad =(A_x\hat{\mathbf i}+A_y\hat{\mathbf j}) +(B_x\hat{\mathbf i}+B_y\hat{\mathbf j})\\
-&\quad =(A_x+B_x)\hat{\mathbf i}+(A_y+B_y)\hat{\mathbf j}\\
-&\quad =R_x\hat{\mathbf i}+R_y\hat{\mathbf j}.
-\end{aligned}\tag{1.13}
+\vec A &= A_x\hat{\mathbf i}+A_y\hat{\mathbf j}, \\
+\vec B &= B_x\hat{\mathbf i}+B_y\hat{\mathbf j}, \\
+\vec R &= \vec A+\vec B \\
+&= (A_x\hat{\mathbf i}+A_y\hat{\mathbf j}) +(B_x\hat{\mathbf i}+B_y\hat{\mathbf j}) \\
+&= (A_x+B_x)\hat{\mathbf i}+(A_y+B_y)\hat{\mathbf j} \\
+&= R_x\hat{\mathbf i}+R_y\hat{\mathbf j}.
+\end{aligned} \tag{1.13}
 $$
 
 Công thức (1.13) diễn đạt nội dung hai phương trình thành phần (1.9) bằng một phương trình vector duy nhất.
@@ -33,12 +33,10 @@ Nếu các vector không cùng nằm trong mặt phẳng $xy$, cần thêm thàn
 
 $$
 \begin{aligned}
-    &\vec A = A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k},\\
-    &\vec B = B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k}.\\
-    &\vec R =(A_x+B_x)\hat{\mathbf i}
- +(A_y+B_y)\hat{\mathbf j}
- +(A_z+B_z)\hat{\mathbf k}\\
-    &\quad =R_x\hat{\mathbf i}+R_y\hat{\mathbf j}+R_z\hat{\mathbf k}.
+\vec A &= A_x\hat{\mathbf i}+A_y\hat{\mathbf j}+A_z\hat{\mathbf k}, \\
+\vec B &= B_x\hat{\mathbf i}+B_y\hat{\mathbf j}+B_z\hat{\mathbf k}. \\
+\vec R &= (A_x+B_x)\hat{\mathbf i} +(A_y+B_y)\hat{\mathbf j} +(A_z+B_z)\hat{\mathbf k} \\
+&= R_x\hat{\mathbf i}+R_y\hat{\mathbf j}+R_z\hat{\mathbf k}.
 \end{aligned}
 $$
 
@@ -53,8 +51,8 @@ Cho hai độ dời:
 
 $$
 \begin{aligned}
-&\vec D = (6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m,\\
-&\vec E = (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m.
+\vec D &= (6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m, \\
+\vec E &= (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 
@@ -68,9 +66,9 @@ Tìm độ lớn của $2\vec D-\vec E$.
 
 $$
 \begin{aligned}
-&\vec F = 2(6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m - (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m\\
-&\quad =[(12.00-4.00)\hat{\mathbf i} +(6.00+5.00)\hat{\mathbf j} +(-2.00-8.00)\hat{\mathbf k}]\,\mathrm m\\
-&\quad =(8.00\hat{\mathbf i}+11.00\hat{\mathbf j}-10.00\hat{\mathbf k})\,\mathrm m.
+\vec F &= 2(6.00\hat{\mathbf i}+3.00\hat{\mathbf j}-1.00\hat{\mathbf k})\,\mathrm m - (4.00\hat{\mathbf i}-5.00\hat{\mathbf j}+8.00\hat{\mathbf k})\,\mathrm m \\
+&= [(12.00-4.00)\hat{\mathbf i} +(6.00+5.00)\hat{\mathbf j} +(-2.00-8.00)\hat{\mathbf k}]\,\mathrm m \\
+&= (8.00\hat{\mathbf i}+11.00\hat{\mathbf j}-10.00\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 
@@ -78,9 +76,9 @@ Theo (1.11):
 
 $$
 \begin{aligned}
-&F = \sqrt{F_x^2+F_y^2+F_z^2}\\
-&\quad =\sqrt{(8.00\,\mathrm m)^2+(11.00\,\mathrm m)^2+(-10.00\,\mathrm m)^2}\\
-&\quad \approx16.9\,\mathrm m.
+F &= \sqrt{F_x^2+F_y^2+F_z^2} \\
+&= \sqrt{(8.00\,\mathrm m)^2+(11.00\,\mathrm m)^2+(-10.00\,\mathrm m)^2} \\
+&\approx 16.9\,\mathrm m.
 \end{aligned}
 $$
 
@@ -96,10 +94,10 @@ Sắp xếp các vector sau theo độ lớn giảm dần:
 
 $$
 \begin{aligned}
-&\text{(i)}\quad\vec A = (3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-&\text{(ii)}\quad\vec B = (-3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-&\text{(iii)}\quad\vec C = (3\hat{\mathbf i}-5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m,\\
-&\text{(iv)}\quad\vec D = (3\hat{\mathbf i}+5\hat{\mathbf j}+2\hat{\mathbf k})\,\mathrm m.
+\text{(i)}\quad\vec A &= (3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m, \\
+\text{(ii)}\quad\vec B &= (-3\hat{\mathbf i}+5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m, \\
+\text{(iii)}\quad\vec C &= (3\hat{\mathbf i}-5\hat{\mathbf j}-2\hat{\mathbf k})\,\mathrm m, \\
+\text{(iv)}\quad\vec D &= (3\hat{\mathbf i}+5\hat{\mathbf j}+2\hat{\mathbf k})\,\mathrm m.
 \end{aligned}
 $$
 :::

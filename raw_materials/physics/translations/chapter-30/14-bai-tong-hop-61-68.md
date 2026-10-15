@@ -37,10 +37,10 @@ Sau mở, nó đi qua $R_2$ từ $a$ đến $c$, qua cuộn từ $c$ đến $d$,
 
 $$
 \begin{aligned}
-v_{ab}&=-I_0R_1=-96{,}0\,\mathrm V,\\
-L\frac{di}{dt}&=-(R_1+R_2)i,\\
-v_{cd}&=-(R_1+R_2)I_0\\
-&=-156\,\mathrm V.
+v_{ab} &= -I_0R_1=-96{,}0\,\mathrm V, \\
+L\frac{di}{dt} &= -(R_1+R_2)i, \\
+v_{cd} &= -(R_1+R_2)I_0 \\
+&= -156\,\mathrm V.
 \end{aligned}
 $$
 
@@ -68,10 +68,10 @@ Dùng mạch Hình P30.61 với $\mathcal E=60{,}0\,\mathrm V$, $R_1=40{,}0\,\Om
 
 $$
 \begin{aligned}
-i_1&=\frac{60{,}0}{40{,}0}=1{,}50\,\mathrm A,\\
-v_L&=L\frac{di_2}{dt}=15{,}0\,\mathrm V,\\
-i_2&=\frac{60{,}0-15{,}0}{25{,}0}\\
-&=1{,}80\,\mathrm A.
+i_1 &= \frac{60{,}0}{40{,}0}=1{,}50\,\mathrm A, \\
+v_L &= L\frac{di_2}{dt}=15{,}0\,\mathrm V, \\
+i_2 &= \frac{60{,}0-15{,}0}{25{,}0} \\
+&= 1{,}80\,\mathrm A.
 \end{aligned}
 $$
 
@@ -103,8 +103,8 @@ Trong Hình P30.63, $\mathcal E=36{,}0\,\mathrm V$, $R_0=50{,}0\,\Omega$, $R=150
 
 $$
 \begin{aligned}
-\tau&=\frac{L}{R_0+R}=0{,}0200\,\mathrm s,\\
-x(t)&=e^{-t/\tau}.
+\tau &= \frac{L}{R_0+R}=0{,}0200\,\mathrm s, \\
+x(t) &= e^{-t/\tau}.
 \end{aligned}
 $$
 
@@ -112,11 +112,10 @@ Các hàm cần tìm là
 
 $$
 \begin{aligned}
-I_\infty&=0{,}180\,\mathrm A,\\
-i_0(t)&=I_\infty[1-x(t)],\\
-v_{ac}(t)&=(9{,}00\,\mathrm V)[1-x(t)],\\
-v_{cb}(t)&=27{,}0\,\mathrm V\\
-&\quad+(9{,}00\,\mathrm V)x(t).
+I_\infty &= 0{,}180\,\mathrm A, \\
+i_0(t) &= I_\infty[1-x(t)], \\
+v_{ac}(t) &= (9{,}00\,\mathrm V)[1-x(t)], \\
+v_{cb}(t) &= 27{,}0\,\mathrm V +(9{,}00\,\mathrm V)x(t).
 \end{aligned}
 $$
 
@@ -144,9 +143,9 @@ Chọn các dòng qua $R$ và $S_2$ dương từ $c$ về $b$. Trong toàn bộ 
 
 $$
 \begin{aligned}
-v_{ac}&=36{,}0\,\mathrm V,\\
-v_{cb}&=0,\\
-i_{R_0}&=0{,}720\,\mathrm A.
+v_{ac} &= 36{,}0\,\mathrm V, \\
+v_{cb} &= 0, \\
+i_{R_0} &= 0{,}720\,\mathrm A.
 \end{aligned}
 $$
 
@@ -158,9 +157,9 @@ $$
 
 $$
 \begin{aligned}
-\tau_d&=\frac LR=0{,}0267\,\mathrm s,\\
-i_R(t)&=(0{,}180\,\mathrm A)e^{-t/\tau_d},\\
-i_{S_2}(t)&=0{,}720\,\mathrm A-i_R(t).
+\tau_d &= \frac LR=0{,}0267\,\mathrm s, \\
+i_R(t) &= (0{,}180\,\mathrm A)e^{-t/\tau_d}, \\
+i_{S_2}(t) &= 0{,}720\,\mathrm A-i_R(t).
 \end{aligned}
 $$
 
@@ -188,11 +187,9 @@ Ban đầu $i_1=25{,}0/(40{,}0+15{,}0)\,\mathrm A$. Ở trạng thái cuối,
 
 $$
 \begin{aligned}
-\frac1{R_p}&=\frac1{5{,}0\,\Omega}
-+\frac1{10{,}0\,\Omega}\\
-&\quad+\frac1{15{,}0\,\Omega},\\
-i_1&=\frac{25{,}0\,\mathrm V}{40{,}0\,\Omega+R_p},\\
-v_p&=i_1R_p.
+\frac1{R_p} &= \frac1{5{,}0\,\Omega} +\frac1{10{,}0\,\Omega} +\frac1{15{,}0\,\Omega}, \\
+i_1 &= \frac{25{,}0\,\mathrm V}{40{,}0\,\Omega+R_p}, \\
+v_p &= i_1R_p.
 \end{aligned}
 $$
 
@@ -233,9 +230,9 @@ $$
 
 $$
 \begin{aligned}
-L_*&=20{,}0\,\mathrm{mH},\\
-C_*&=\frac{C_1C_2}{C_1+C_2}\\
-&=14{,}6\,\mu\mathrm F.
+L_* &= 20{,}0\,\mathrm{mH}, \\
+C_* &= \frac{C_1C_2}{C_1+C_2} \\
+&= 14{,}6\,\mu\mathrm F.
 \end{aligned}
 $$
 
@@ -243,10 +240,10 @@ Khi dòng trở về không lần đầu,
 
 $$
 \begin{aligned}
-Q_{\max}&=I_0\sqrt{L_*C_*}\\
-&=324\,\mu\mathrm C,\\
-t_{\max}&=\frac\pi2\sqrt{L_*C_*}\\
-&=8{,}48\times10^{-4}\,\mathrm s.
+Q_{\max} &= I_0\sqrt{L_*C_*} \\
+&= 324\,\mu\mathrm C, \\
+t_{\max} &= \frac\pi2\sqrt{L_*C_*} \\
+&= 8{,}48\times10^{-4}\,\mathrm s.
 \end{aligned}
 $$
 
@@ -274,9 +271,9 @@ Một ống dây chưa biết $L$ mắc nối tiếp điện trở $10{,}0\,\Ome
 
 $$
 \begin{aligned}
-I_\infty&=\frac{\mathcal E}{R+R_L},\\
-\tau&=\frac{L}{R+R_L},\\
-i(t)&=I_\infty(1-e^{-t/\tau}).
+I_\infty &= \frac{\mathcal E}{R+R_L}, \\
+\tau &= \frac{L}{R+R_L}, \\
+i(t) &= I_\infty(1-e^{-t/\tau}).
 \end{aligned}
 $$
 
@@ -284,8 +281,8 @@ $$
 
 $$
 \begin{aligned}
-v_L(t)&=\mathcal E-Ri(t)\\
-&=R_LI_\infty+RI_\infty e^{-t/\tau}.
+v_L(t) &= \mathcal E-Ri(t) \\
+&= R_LI_\infty+RI_\infty e^{-t/\tau}.
 \end{aligned}
 $$
 
@@ -293,11 +290,11 @@ $$
 
 $$
 \begin{aligned}
-v_{R,\infty}&=50{,}0-20{,}0\\
-&=30{,}0\,\mathrm V,\\
-I_\infty&=\frac{30{,}0}{10{,}0}=3{,}00\,\mathrm A,\\
-R_L&=\frac{20{,}0}{3{,}00}\\
-&=6{,}67\,\Omega.
+v_{R,\infty} &= 50{,}0-20{,}0 \\
+&= 30{,}0\,\mathrm V, \\
+I_\infty &= \frac{30{,}0}{10{,}0}=3{,}00\,\mathrm A, \\
+R_L &= \frac{20{,}0}{3{,}00} \\
+&= 6{,}67\,\Omega.
 \end{aligned}
 $$
 
@@ -305,8 +302,8 @@ $$
 
 $$
 \begin{aligned}
-v_L(\tau)&=20{,}0+\frac{30{,}0}{e}\\
-&\approx31{,}0\,\mathrm V.
+v_L(\tau) &= 20{,}0+\frac{30{,}0}{e} \\
+&\approx 31{,}0\,\mathrm V.
 \end{aligned}
 $$
 
@@ -314,8 +311,8 @@ $$
 
 $$
 \begin{aligned}
-L&=(R+R_L)\tau\\
-&\approx4{,}0\times10^{-2}\,\mathrm H.
+L &= (R+R_L)\tau \\
+&\approx 4{,}0\times10^{-2}\,\mathrm H.
 \end{aligned}
 $$
 
@@ -347,9 +344,9 @@ Một ống dây chưa biết điện trở và tự cảm mắc nối tiếp đ
 
 $$
 \begin{aligned}
-v_R(t)&=\mathcal E(1-e^{-t/\tau}),\\
-v_R(\tau)&=\mathcal E(1-e^{-1})\\
-&=15{,}8\,\mathrm V.
+v_R(t) &= \mathcal E(1-e^{-t/\tau}), \\
+v_R(\tau) &= \mathcal E(1-e^{-1}) \\
+&= 15{,}8\,\mathrm V.
 \end{aligned}
 $$
 
@@ -363,8 +360,8 @@ $$
 
 $$
 \begin{aligned}
-U_{B,\infty}&=\frac12LI_\infty^2\\
-&\approx5{,}00\times10^{-2}\,\mathrm J.
+U_{B,\infty} &= \frac12LI_\infty^2 \\
+&\approx 5{,}00\times10^{-2}\,\mathrm J.
 \end{aligned}
 $$
 

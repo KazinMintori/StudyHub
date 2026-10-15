@@ -16,8 +16,8 @@ Với điện trở thuần, dòng và điện áp cùng pha. Nhân hai giá tr�
 
 $$
 \begin{aligned}
-p_R&=VI\cos^2\omega t\\
-&=i^2R.
+p_R &= VI\cos^2\omega t \\
+&= i^2R.
 \end{aligned}
 $$
 
@@ -35,19 +35,19 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{av}}&=\frac V{\sqrt2}\frac I{\sqrt2}\\
-&=V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.28}
-\end{aligned}
+P_{\mathrm{av}} &= \frac V{\sqrt2}\frac I{\sqrt2} \\
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.28}
+\end{aligned} \tag{31.28}
 $$
 
 Vì điện trở thuần có $V_{\mathrm{rms}}=I_{\mathrm{rms}}R$:
 
 $$
 \begin{aligned}
-P_{\mathrm{av}}&=I_{\mathrm{rms}}^2R\\
-&=\frac{V_{\mathrm{rms}}^2}{R}\\
-&=V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.29}
-\end{aligned}
+P_{\mathrm{av}} &= I_{\mathrm{rms}}^2R \\
+&= \frac{V_{\mathrm{rms}}^2}{R} \\
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.29}
+\end{aligned} \tag{31.29}
 $$
 
 Các dạng này giống công thức một chiều nhưng dùng giá trị hiệu dụng. Chúng áp dụng trực tiếp cho điện trở thuần. Với mạch có độ lệch pha giữa dòng và điện áp nguồn, phải xét thêm hệ số công suất.
@@ -72,8 +72,8 @@ Năng lượng trao đổi trong từng phần của chu kỳ không bằng khô
 
 $$
 \begin{aligned}
-v&=V\cos(\omega t+\phi),\\
-i&=I\cos\omega t.
+v &= V\cos(\omega t+\phi), \\
+i &= I\cos\omega t.
 \end{aligned}
 $$
 
@@ -86,29 +86,22 @@ $$
 Để lấy trung bình, khai triển công thức cosin tổng:
 
 $$
-\begin{aligned}
-\cos(\omega t+\phi)
-&=\cos\omega t\cos\phi\\
-&\quad-\sin\omega t\sin\phi.
-\end{aligned}
+\cos(\omega t+\phi) &=\cos\omega t\cos\phi -\sin\omega t\sin\phi.
 $$
 
 Suy ra
 
 $$
-\begin{aligned}
-p&=VI\cos\phi\cos^2\omega t\\
-&\quad-VI\sin\phi\sin\omega t\cos\omega t.
-\end{aligned}
+p&=VI\cos\phi\cos^2\omega t -VI\sin\phi\sin\omega t\cos\omega t.
 $$
 
 Trên một chu kỳ, trung bình $\cos^2\omega t$ bằng $1/2$. Vì tích sin với cos bằng một nửa $\sin2\omega t$, trung bình số hạng thứ hai bằng không. Do đó
 
 $$
 \begin{aligned}
-P_{\mathrm{av}}&=\frac12VI\cos\phi\\
-&=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.\tag{31.31}
-\end{aligned}
+P_{\mathrm{av}} &= \frac12VI\cos\phi \\
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.\tag{31.31}
+\end{aligned} \tag{31.31}
 $$
 
 Trong mạch thụ động có điện trở và có dòng khác không, phần công suất dương nhận vào lớn hơn phần âm trả lại, nên công suất trung bình dương. Khi mạch chỉ chứa phần tử tích trữ lý tưởng, hai phần cân bằng.
@@ -127,9 +120,9 @@ Với RLC nối tiếp:
 
 $$
 \begin{aligned}
-\cos\phi&=\frac{V_R}{V}\\
-&=\frac{IR}{IZ}\\
-&=\frac RZ.
+\cos\phi &= \frac{V_R}{V} \\
+&= \frac{IR}{IZ} \\
+&= \frac RZ.
 \end{aligned}
 $$
 
@@ -155,9 +148,9 @@ Máy sấy được ghi 1500 W tại điện áp 120 V. Xem máy như điện tr
 
 $$
 \begin{aligned}
-R&=\frac{V_{\mathrm{rms}}^2}{P_{\mathrm{av}}}\\
-&=\frac{(120\,\mathrm V)^2}{1500\,\mathrm W}\\
-&=9{,}6\,\Omega.
+R &= \frac{V_{\mathrm{rms}}^2}{P_{\mathrm{av}}} \\
+&= \frac{(120\,\mathrm V)^2}{1500\,\mathrm W} \\
+&= 9{,}6\,\Omega.
 \end{aligned}
 $$
 
@@ -165,9 +158,9 @@ $$
 
 $$
 \begin{aligned}
-I_{\mathrm{rms}}&=\frac{P_{\mathrm{av}}}{V_{\mathrm{rms}}}\\
-&=\frac{1500\,\mathrm W}{120\,\mathrm V}\\
-&=12{,}5\,\mathrm A.
+I_{\mathrm{rms}} &= \frac{P_{\mathrm{av}}}{V_{\mathrm{rms}}} \\
+&= \frac{1500\,\mathrm W}{120\,\mathrm V} \\
+&= 12{,}5\,\mathrm A.
 \end{aligned}
 $$
 
@@ -175,9 +168,9 @@ $$
 
 $$
 \begin{aligned}
-p_{\max}&=VI\\
-&=2P_{\mathrm{av}}\\
-&=3000\,\mathrm W.
+p_{\max} &= VI \\
+&= 2P_{\mathrm{av}} \\
+&= 3000\,\mathrm W.
 \end{aligned}
 $$
 
@@ -203,9 +196,9 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{av}}&=\frac12VI\cos\phi\\
-&=\frac12(50)(0{,}10)(0{,}60)\,\mathrm W\\
-&=1{,}5\,\mathrm W.
+P_{\mathrm{av}} &= \frac12VI\cos\phi \\
+&= \frac12(50)(0{,}10)(0{,}60)\,\mathrm W \\
+&= 1{,}5\,\mathrm W.
 \end{aligned}
 $$
 
@@ -215,9 +208,9 @@ Công suất trung bình trên điện trở cũng là 1,5 W. Công suất trung
 
 $$
 \begin{aligned}
-P_R&=\frac12I^2R\\
-&=\frac12(0{,}10)^2(300)\,\mathrm W\\
-&=1{,}5\,\mathrm W.
+P_R &= \frac12I^2R \\
+&= \frac12(0{,}10)^2(300)\,\mathrm W \\
+&= 1{,}5\,\mathrm W.
 \end{aligned}
 $$
 

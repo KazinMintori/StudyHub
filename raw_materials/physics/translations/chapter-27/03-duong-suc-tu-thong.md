@@ -42,32 +42,29 @@ Góc dùng trong công thức là góc với pháp tuyến, không phải góc v
 
 $$
 \begin{aligned}
-&d\Phi_B = B_\perp\,dA\\
-&\quad =B\cos\phi\,dA\\
-&\quad =\vec B\cdot d\vec A.
-\end{aligned}
-\tag{27.5}
+d\Phi_B &= B_\perp\,dA \\
+&= B\cos\phi\,dA \\
+&= \vec B\cdot d\vec A.
+\end{aligned} \tag{27.5}
 $$
 
 Khi thành phần vuông góc biến thiên trên mặt, cộng đóng góp của tất cả phần tử bằng tích phân mặt:
 
 $$
 \begin{aligned}
-&\Phi_B = \int B_\perp\,dA\\
-&\quad =\int B\cos\phi\,dA\\
-&\quad =\int\vec B\cdot d\vec A.
-\end{aligned}
-\tag{27.6}
+\Phi_B &= \int B_\perp\,dA \\
+&= \int B\cos\phi\,dA \\
+&= \int\vec B\cdot d\vec A.
+\end{aligned} \tag{27.6}
 $$
 
 Từ thông là đại lượng vô hướng. Với mặt phẳng diện tích $A$ trong từ trường đều, $B_\perp$ và $\phi$ không đổi trên mặt, nên:
 
 $$
 \begin{aligned}
-&\Phi_B = B_\perp A\\
-&\quad =BA\cos\phi.
-\end{aligned}
-\tag{27.7}
+\Phi_B &= B_\perp A \\
+&= BA\cos\phi.
+\end{aligned} \tag{27.7}
 $$
 
 Nếu từ trường vuông góc mặt và cùng chiều vector diện tích, $\phi=0$ và $\Phi_B=BA$. Khái niệm này sẽ được dùng khi xét cảm ứng điện từ ở Chương 29.
@@ -76,9 +73,9 @@ Nếu từ trường vuông góc mặt và cùng chiều vector diện tích, $\
 
 $$
 \begin{aligned}
-&1\,\mathrm{Wb} = 1\,\mathrm{T\cdot m^2},\\
-&1\,\mathrm T = 1\,\mathrm{N/(A\cdot m)},\\
-&1\,\mathrm{Wb} = 1\,\mathrm{N\cdot m/A}.
+1\,\mathrm{Wb} &= 1\,\mathrm{T\cdot m^2}, \\
+1\,\mathrm T &= 1\,\mathrm{N/(A\cdot m)}, \\
+1\,\mathrm{Wb} &= 1\,\mathrm{N\cdot m/A}.
 \end{aligned}
 $$
 
@@ -128,10 +125,10 @@ Hai pháp tuyến có thể cho $\phi=60^\circ$ hoặc $120^\circ$. Trường h�
 
 $$
 \begin{aligned}
-&A = 3{,}0\times10^{-4}\,\mathrm{m^2},\\
-&B = \frac{\Phi_B}{A\cos\phi}\\
-&\quad =\frac{0{,}90\times10^{-3}}{(3{,}0\times10^{-4})\cos60^\circ}\\
-&\quad =6{,}0\,\mathrm T.
+A &= 3{,}0\times10^{-4}\,\mathrm{m^2}, \\
+B &= \frac{\Phi_B}{A\cos\phi} \\
+&= \frac{0{,}90\times10^{-3}}{(3{,}0\times10^{-4})\cos60^\circ} \\
+&= 6{,}0\,\mathrm T.
 \end{aligned}
 $$
 

@@ -80,10 +80,10 @@ Ta chứng minh $B$ là tập lồi: Lấy hai điểm tùy ý $x_1, x_2 \in B$ 
 
 $$
 \begin{aligned}
-&\|\theta x_1 + (1 - \theta) x_2\|_2 \le \|\theta x_1\|_2 + \|(1 - \theta) x_2\|_2\\
-&\quad = |\theta|\, \|x_1\|_2 + |1 - \theta|\, \|x_2\|_2\\
-&\quad = \theta \|x_1\|_2 + (1 - \theta) \|x_2\|_2\\
-&\quad \le \theta(1) + (1 - \theta)(1) = 1
+\|\theta x_1 + (1 - \theta) x_2\|_2 &\le \|\theta x_1\|_2 + \|(1 - \theta) x_2\|_2 \\
+&= |\theta|\, \|x_1\|_2 + |1 - \theta|\, \|x_2\|_2 \\
+&= \theta \|x_1\|_2 + (1 - \theta) \|x_2\|_2 \\
+&\le \theta(1) + (1 - \theta)(1) = 1
 \end{aligned}
 $$
 
@@ -326,11 +326,11 @@ Trong không gian mặt phẳng $\mathbb{R}^2$, hãy chứng minh tập hợp l�
 ::: solution
 1. **Tập $S_1$ là tập lồi**: Đây là quả cầu đóng đơn vị theo chuẩn $\ell_1$. Lấy hai điểm $x, y \in S_1$ và $\theta \in [0, 1]$. Áp dụng bất đẳng thức tam giác cho từng tọa độ:
    $$
-   \begin{aligned}
-   &|\theta x_1 + (1 - \theta) y_1| + |\theta x_2 + (1 - \theta) y_2| \le \theta(|x_1| + |x_2|) + (1 - \theta)(|y_1| + |y_2|)\\
-   &\quad \le \theta(1) + (1 - \theta)(1) = 1
-   \end{aligned}
-   $$
+\begin{aligned}
+|\theta x_1 + (1 - \theta) y_1| + |\theta x_2 + (1 - \theta) y_2| &\le \theta(|x_1| + |x_2|) + (1 - \theta)(|y_1| + |y_2|) \\
+&\le \theta(1) + (1 - \theta)(1) = 1
+\end{aligned}
+$$
    Do đó tổ hợp lồi thuộc $S_1$.
 2. **Tập $S_2$ là tập lồi**: Lấy $x, y \in S_2$ thỏa $x_2 \ge x_1^2$ và $y_2 \ge y_1^2$. Với $\theta \in [0, 1]$:
    $$
@@ -361,22 +361,22 @@ $$
 ::: solution
 1. Tính từng thành phần tọa độ của $u$:
    $$
-   \begin{aligned}
-   &u_1 = 0.5(0.5) + 0.25(0.1) + 0.25(0.2) = 0.325\\
-   &u_2 = 0.5(0.3) + 0.25(0.1) + 0.25(0.6) = 0.325\\
-   &u_3 = 0.5(0.2) + 0.25(0.8) + 0.25(0.2) = 0.350
-   \end{aligned}
-   $$
+\begin{aligned}
+u_1 &= 0.5(0.5) + 0.25(0.1) + 0.25(0.2) = 0.325 \\
+u_2 &= 0.5(0.3) + 0.25(0.1) + 0.25(0.6) = 0.325 \\
+u_3 &= 0.5(0.2) + 0.25(0.8) + 0.25(0.2) = 0.350
+\end{aligned}
+$$
    
    Kiểm tra: Các thành phần đều không âm ($u_i \ge 0$) và tổng bằng $0.325 + 0.325 + 0.350 = 1$. Do đó $u$ là một phân phối xác suất hợp lệ.
 2. Để tìm $\alpha, \beta, \gamma$, ta thiết lập hệ phương trình tuyến tính:
    $$
-   \begin{aligned}
-   &0.5 \alpha + 0.1 \beta + 0.2 \gamma = \frac{1}{3}\\
-   &0.3 \alpha + 0.1 \beta + 0.6 \gamma = \frac{1}{3}\\
-   &\alpha + \beta + \gamma = 1
-   \end{aligned}
-   $$
+\begin{aligned}
+0.5 \alpha + 0.1 \beta + 0.2 \gamma &= \frac{1}{3} \\
+0.3 \alpha + 0.1 \beta + 0.6 \gamma &= \frac{1}{3} \\
+\alpha + \beta + \gamma &= 1
+\end{aligned}
+$$
    Lấy phương trình thứ nhất trừ phương trình thứ hai:
    $$
    (0.5 - 0.3)\alpha + (0.1 - 0.1)\beta + (0.2 - 0.6)\gamma = 0 \iff 0.2 \alpha - 0.4 \gamma = 0 \iff \alpha = 2\gamma

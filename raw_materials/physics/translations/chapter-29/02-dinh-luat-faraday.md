@@ -7,20 +7,18 @@ Với mặt hữu hạn $S$, cộng các phần tử từ thông trên toàn m�
 
 $$
 \begin{aligned}
-\Phi_B&=\int_S \vec B\cdot d\vec A\\
-&=\int_S B\cos\phi\,dA.
-\end{aligned}
-\tag{29.1}
+\Phi_B &= \int_S \vec B\cdot d\vec A \\
+&= \int_S B\cos\phi\,dA.
+\end{aligned} \tag{29.1}
 $$
 
 Nếu $\vec B$ đều trên một mặt phẳng diện tích $A$, tích phân rút gọn thành tích vô hướng giữa $\vec B$ và véc-tơ diện tích $\vec A$:
 
 $$
 \begin{aligned}
-\Phi_B&=\vec B\cdot\vec A\\
-&=BA\cos\phi.
-\end{aligned}
-\tag{29.2}
+\Phi_B &= \vec B\cdot\vec A \\
+&= BA\cos\phi.
+\end{aligned} \tag{29.2}
 $$
 
 Góc $\phi$ nằm giữa véc-tơ từ trường và véc-tơ diện tích, không phải giữa từ trường với mặt phẳng. Mặt hướng thẳng vào từ trường có $\phi=0$ và từ thông $BA$. Khi mặt nghiêng, từ thông bằng $BA\cos\phi$. Khi mặt song song với đường sức, véc-tơ diện tích vuông góc với $\vec B$, nên $\phi=90^\circ$ và từ thông bằng không.
@@ -44,9 +42,8 @@ Nếu cuộn có $N$ vòng giống nhau và từ thông qua mỗi vòng biến t
 
 $$
 \begin{aligned}
-\mathcal E_{\mathrm{tổng}}
-&=\mathcal E_1+\mathcal E_2+\dots+\mathcal E_N\\
-&=-N\frac{d\Phi_B}{dt}.
+\mathcal E_{\mathrm{tổng}} &= \mathcal E_1+\mathcal E_2+\dots+\mathcal E_N \\
+&= -N\frac{d\Phi_B}{dt}.
 \end{aligned}
 $$
 
@@ -74,8 +71,8 @@ Một vòng dây dẫn đứng yên nằm trong vùng có từ trường đều 
 
 $$
 \begin{aligned}
-A&=120\,\mathrm{cm^2}\\
-&=0{,}012\,\mathrm{m^2}.
+A &= 120\,\mathrm{cm^2} \\
+&= 0{,}012\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -83,9 +80,9 @@ Vì $\phi=0$, ta có $\Phi_B=BA$. Do $A$ không đổi:
 
 $$
 \begin{aligned}
-\frac{d\Phi_B}{dt}&=A\frac{dB}{dt}\\
-&=(0{,}012)(0{,}020)\\
-&=2{,}4\times10^{-4}\,\mathrm{Wb/s}.
+\frac{d\Phi_B}{dt} &= A\frac{dB}{dt} \\
+&= (0{,}012)(0{,}020) \\
+&= 2{,}4\times10^{-4}\,\mathrm{Wb/s}.
 \end{aligned}
 $$
 
@@ -93,10 +90,10 @@ $$
 
 $$
 \begin{aligned}
-I&=\frac{|\mathcal E|}{R}\\
-&=\frac{2{,}4\times10^{-4}}{5{,}0}\\
-&=4{,}8\times10^{-5}\,\mathrm A\\
-&=0{,}048\,\mathrm{mA}.
+I &= \frac{|\mathcal E|}{R} \\
+&= \frac{2{,}4\times10^{-4}}{5{,}0} \\
+&= 4{,}8\times10^{-5}\,\mathrm A \\
+&= 0{,}048\,\mathrm{mA}.
 \end{aligned}
 $$
 
@@ -123,10 +120,9 @@ Diện tích mỗi vòng là $A=\pi(0{,}0400\,\mathrm m)^2$. Vì $B$ đều và 
 
 $$
 \begin{aligned}
-\mathcal E&=-N\frac{dB}{dt}A\cos30^\circ\\
-&=-500(-0{,}200)\\
-&\quad\times\pi(0{,}0400)^2\cos30^\circ\\
-&=+0{,}435\,\mathrm V.
+\mathcal E &= -N\frac{dB}{dt}A\cos30^\circ \\
+&= -500(-0{,}200) \times\pi(0{,}0400)^2\cos30^\circ \\
+&= +0{,}435\,\mathrm V.
 \end{aligned}
 $$
 
@@ -140,9 +136,9 @@ Một khung dây diện tích $A$ quay đều với tốc độ góc $\omega$ tr
 
 $$
 \begin{aligned}
-\Phi_B(t)&=BA\cos(\omega t),\\
-\mathcal E(t)&=-\frac{d\Phi_B}{dt}\\
-&=\omega BA\sin(\omega t).
+\Phi_B(t) &= BA\cos(\omega t), \\
+\mathcal E(t) &= -\frac{d\Phi_B}{dt} \\
+&= \omega BA\sin(\omega t).
 \end{aligned}
 $$
 
@@ -167,8 +163,8 @@ Suất điện động tức thời có biên độ $\mathcal E_0=N\omega BA$. T
 
 $$
 \begin{aligned}
-\langle|\sin\omega t|\rangle&=\frac{\int_0^{\pi/\omega}\sin(\omega t)\,dt}{\pi/\omega}\\
-&=\frac{2}{\pi}.
+\langle|\sin\omega t|\rangle &= \frac{\int_0^{\pi/\omega}\sin(\omega t)\,dt}{\pi/\omega} \\
+&= \frac{2}{\pi}.
 \end{aligned}
 $$
 
@@ -176,9 +172,9 @@ Do đó $\mathcal E_{\mathrm{av}}=2N\omega BA/\pi$, suy ra:
 
 $$
 \begin{aligned}
-\omega&=\frac{\pi\mathcal E_{\mathrm{av}}}{2NBA}\\
-&=\frac{\pi(112)}{2(500)(0{,}200)(0{,}100)^2}\\
-&=176\,\mathrm{rad/s}.
+\omega &= \frac{\pi\mathcal E_{\mathrm{av}}}{2NBA} \\
+&= \frac{\pi(112)}{2(500)(0{,}200)(0{,}100)^2} \\
+&= 176\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
@@ -193,9 +189,9 @@ Một thanh kim loại dài $L$ trượt sang phải với tốc độ không đ
 
 $$
 \begin{aligned}
-\mathcal E&=-\frac{d\Phi_B}{dt}\\
-&=-B\frac{dA}{dt}\\
-&=-BLv.
+\mathcal E &= -\frac{d\Phi_B}{dt} \\
+&= -B\frac{dA}{dt} \\
+&= -BLv.
 \end{aligned}
 $$
 
@@ -215,8 +211,8 @@ Công suất điện chuyển thành nhiệt trong mạch là:
 
 $$
 \begin{aligned}
-P_{\mathrm{nhiệt}}&=I^2R\\
-&=\frac{B^2L^2v^2}{R}.
+P_{\mathrm{nhiệt}} &= I^2R \\
+&= \frac{B^2L^2v^2}{R}.
 \end{aligned}
 $$
 
@@ -224,9 +220,9 @@ Lực từ có độ lớn $F=ILB=B^2L^2v/R$ và hướng sang trái, ngược v
 
 $$
 \begin{aligned}
-P_{\mathrm{ngoài}}&=Fv\\
-&=\frac{B^2L^2v^2}{R}\\
-&=P_{\mathrm{nhiệt}}.
+P_{\mathrm{ngoài}} &= Fv \\
+&= \frac{B^2L^2v^2}{R} \\
+&= P_{\mathrm{nhiệt}}.
 \end{aligned}
 $$
 

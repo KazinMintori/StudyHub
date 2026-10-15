@@ -511,8 +511,8 @@ Với các pha nối tiếp, không chồng lấp, không lỗi:
 
 $$
 \begin{aligned}
-    &T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền và nhóm}} + T_{\text{Reduce}}\\
-    &S_P = \frac{T_1}{T_P}
+T_P &= T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền và nhóm}} + T_{\text{Reduce}} \\
+S_P &= \frac{T_1}{T_P}
 \end{aligned}
 $$
 

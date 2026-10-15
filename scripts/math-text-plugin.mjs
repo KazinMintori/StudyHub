@@ -15,7 +15,9 @@ export function mathTextPlugin() {
     load(source) { if (source === id) return 'export const renderedMath = {}' },
     transform(source, file) {
       // Course content can live in dedicated modules, including new subjects and cheatsheets.
-      if (!/[/\\](?:concepts|course-catalog|math-labels|cheatsheets|[\w-]+-(?:course|courses|foundations))\.mjs$/.test(file)) return
+      const courseContent = /[/\\]src[/\\]content[/\\]courses[/\\].*\.mjs$/.test(file)
+      const cheatsheetService = /[/\\]src[/\\]features[/\\]lecture[/\\]services[/\\]cheatsheet-service\.mjs$/.test(file)
+      if (!courseContent && !cheatsheetService && !/[/\\](?:concepts|course-catalog|math-labels|cheatsheets|[\w-]+-(?:course|courses|foundations))\.mjs$/.test(file)) return
       const expressions = new Set()
       // Read string values from syntax, including raw templates and the small
       // pure string helpers used to wrap display formulas. Never execute a module.

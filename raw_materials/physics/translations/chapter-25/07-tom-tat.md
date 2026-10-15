@@ -10,9 +10,9 @@ Dòng điện là điện lượng đi qua một diện tích xác định trong
 
 $$
 \begin{aligned}
-&I = \frac{dQ}{dt},\\
-&I = n|q|v_dA,\\
-&\vec J = nq\vec v_d.
+I &= \frac{dQ}{dt}, \\
+I &= n|q|v_dA, \\
+\vec J &= nq\vec v_d.
 \end{aligned}
 $$
 
@@ -44,8 +44,8 @@ Hiệu điện thế qua một mẫu vật liệu tuân theo Ohm tỉ lệ với
 
 $$
 \begin{aligned}
-&V = IR,\\
-&1\,\Omega = 1\,\mathrm{V/A}.
+V &= IR, \\
+1\,\Omega &= 1\,\mathrm{V/A}.
 \end{aligned}
 $$
 
@@ -85,9 +85,9 @@ $$
 
 $$
 \begin{aligned}
-&P = V_{ab}I,\\
-&\quad =I^2R,\\
-&\quad =\frac{V_{ab}^2}{R}.
+P &= V_{ab}I, \\
+&= I^2R, \\
+&= \frac{V_{ab}^2}{R}.
 \end{aligned}
 $$
 

@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "19-song-vat-chat",
+  "route": "/vat-ly-2/bai-giang/19-song-vat-chat",
+  "notes": "docs/vat-ly-2/bai-giang/19-song-vat-chat.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "photon",
+    "dong-luong-vat-ly",
+    "thuyet-tuong-doi-hep"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

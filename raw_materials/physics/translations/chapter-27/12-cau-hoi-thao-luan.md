@@ -225,9 +225,9 @@ Lấy $B_{\mathrm{TĐ}}\approx5\times10^{-5}\,\mathrm{T}$ và cột dài khoản
 
 $$
 \begin{aligned}
-&F_{\max} = ILB_{\mathrm{TĐ}}\\
-&\quad =(10^5)(10)(5\times10^{-5})\\
-&\quad \approx50\,\mathrm{N}.
+F_{\max} &= ILB_{\mathrm{TĐ}} \\
+&= (10^5)(10)(5\times10^{-5}) \\
+&\approx 50\,\mathrm{N}.
 \end{aligned}
 $$
 

@@ -20,8 +20,8 @@ Bốn nguồn giống nhau Q đặt tại các đỉnh hình vuông cạnh L. (a
 
 $$
 \begin{aligned}
-&F = \sqrt2F_0+F_0/2\\
-&\quad =\frac{kQ^2}{L^2}\left(\sqrt2+\frac12\right).
+F &= \sqrt2F_0+F_0/2 \\
+&= \frac{kQ^2}{L^2}\left(\sqrt2+\frac12\right).
 \end{aligned}
 $$
 
@@ -51,10 +51,10 @@ Nguồn $2.50\,\mu\mathrm C$ ở gốc và nguồn $-3.50\,\mu\mathrm C$ ở $x=
 
 $$
 \begin{aligned}
-&2.50/r^2 = 3.50/(r+0.600)^2,\\
-&\frac{r+0.600}{r} = \sqrt{3.50/2.50},\\
-&x = -\frac{0.600}{\sqrt{3.50/2.50}-1}\\
-&\quad =-3.27\,\mathrm m.
+2.50/r^2 &= 3.50/(r+0.600)^2, \\
+\frac{r+0.600}{r} &= \sqrt{3.50/2.50}, \\
+x &= -\frac{0.600}{\sqrt{3.50/2.50}-1} \\
+&= -3.27\,\mathrm m.
 \end{aligned}
 $$
 :::
@@ -76,11 +76,10 @@ $q_1=+5.00\,\mathrm{nC}$ tại gốc và $q_2=-2.00\,\mathrm{nC}$ tại $x=4.00\
 
 $$
 \begin{aligned}
-&F_x = \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac45\\
-&\quad =8.63\times10^{-5}\,\mathrm N,\\
-&F_y = \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac35\\
-&\quad-\frac{k(2.00)(6.00)10^{-18}}{0.0300^2}\\
-&\quad =-5.52\times10^{-5}\,\mathrm N.
+F_x &= \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac45 \\
+&= 8.63\times10^{-5}\,\mathrm N, \\
+F_y &= \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac35 -\frac{k(2.00)(6.00)10^{-18}}{0.0300^2} \\
+&= -5.52\times10^{-5}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -91,8 +90,7 @@ $$
 Hai cầu giống nhau khối lượng m treo bằng dây lụa dài L như Hình P21.60, có điện tích $q_1=q_2=q$. Bán kính cầu rất nhỏ so với khoảng cách nên coi là điểm. Chứng tỏ khi góc $\theta$ nhỏ, khoảng cách cân bằng là:
 
 $$
-\begin{aligned}
-&d = \left(\frac{q^2L}{2\pi\varepsilon_0mg}\right)^{1/3}.\end{aligned}
+d = \left(\frac{q^2L}{2\pi\varepsilon_0mg}\right)^{1/3}.
 $$
 
 Gợi ý: Với góc nhỏ, $\tan\theta\approx\sin\theta$.
@@ -112,10 +110,10 @@ Gợi ý: Với góc nhỏ, $\tan\theta\approx\sin\theta$.
 
 $$
 \begin{aligned}
-&\tan\theta = \frac{kq^2}{mgd^2},\\
-&\frac d{2L} \approx \tan\theta,\\
-&d^3 = \frac{2kq^2L}{mg},\\
-&d = \left(\frac{q^2L}{2\pi\varepsilon_0mg}\right)^{1/3}.
+\tan\theta &= \frac{kq^2}{mgd^2}, \\
+\frac d{2L} &\approx \tan\theta, \\
+d^3 &= \frac{2kq^2L}{mg}, \\
+d &= \left(\frac{q^2L}{2\pi\varepsilon_0mg}\right)^{1/3}.
 \end{aligned}
 $$
 
@@ -140,18 +138,15 @@ Hai cầu nhỏ $m=15.0\,\mathrm g$ treo từ cùng điểm bằng dây lụa $L
 
 $$
 \begin{aligned}
-&q^2 = \frac{mg(2L\sin\theta)^2\tan\theta}{k},\\
-&|q| = 2.80\,\mu\mathrm C.
+q^2 &= \frac{mg(2L\sin\theta)^2\tan\theta}{k}, \\
+|q| &= 2.80\,\mu\mathrm C.
 \end{aligned}
 $$
 
 Sơ đồ mỗi cầu gồm mg xuống, T dọc dây lên và lực điện ngang ra ngoài. Giữ q, m không đổi khi thay L:
 
 $$
-\begin{aligned}
-&\sin^2\theta_2\tan\theta_2 = \frac{L_1^2}{L_2^2}\\
-&\quad\times\sin^2\theta_1\tan\theta_1.
-\end{aligned}
+\sin^2\theta_2\tan\theta_2 = \frac{L_1^2}{L_2^2} \times\sin^2\theta_1\tan\theta_1.
 $$
 
 Thế $L_1/L_2=2$ và giải phương trình đơn điệu trên $(0,\pi/2)$ cho $\theta_2\approx39.5^\circ$.
@@ -175,8 +170,8 @@ Ví dụ, nếu trường hướng thẳng xuống, gia tốc xuống là $g+qE/
 
 $$
 \begin{aligned}
-&E = \frac mq\left[\frac{v_f^2-v_0^2}{2h}-g\right]\\
-&\quad =770\,\mathrm{N/C}.
+E &= \frac mq\left[\frac{v_f^2-v_0^2}{2h}-g\right] \\
+&= 770\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -184,9 +179,9 @@ Nếu trường nằm ngang hướng đông, thời gian rơi là $t=\sqrt{2h/g}
 
 $$
 \begin{aligned}
-&v_{xf} = \sqrt{v_f^2-2gh},\\
-&E = \frac{m(v_{xf}-v_0)}{qt}\\
-&\quad =468\,\mathrm{N/C}.
+v_{xf} &= \sqrt{v_f^2-2gh}, \\
+E &= \frac{m(v_{xf}-v_0)}{qt} \\
+&= 468\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -212,8 +207,8 @@ Quả cầu nhựa $12.3\,\mathrm g$ được buộc bằng dây rất nhẹ dà
 
 $$
 \begin{aligned}
-&E = \frac{(0.0123)(9.8)\tan17.4^\circ}{1.11\times10^{-6}}\\
-&\quad =3.41\times10^4\,\mathrm{N/C}.
+E &= \frac{(0.0123)(9.8)\tan17.4^\circ}{1.11\times10^{-6}} \\
+&= 3.41\times10^4\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -236,8 +231,8 @@ Cầu nhỏ dương q, khối lượng m được thả từ nghỉ trong trư�
 
 $$
 \begin{aligned}
-&t = \sqrt{\frac{2d}{a}}\\
-&\quad =\sqrt{\frac{2md}{qE-mg}}.
+t &= \sqrt{\frac{2d}{a}} \\
+&= \sqrt{\frac{2md}{qE-mg}}.
 \end{aligned}
 $$
 
@@ -260,10 +255,10 @@ Cọ bóng bay lên tóc làm electron chuyển sang bóng, khiến bóng âm. G
 
 $$
 \begin{aligned}
-&q_{\min} = \sqrt{mgd^2/k}\\
-&\quad \approx1.0\,\mathrm{nC},\\
-&N = 10q_{\min}/e\\
-&\quad \sim6\times10^{10}.
+q_{\min} &= \sqrt{mgd^2/k} \\
+&\approx 1.0\,\mathrm{nC}, \\
+N &= 10q_{\min}/e \\
+&\sim 6\times10^{10}.
 \end{aligned}
 $$
 
@@ -287,12 +282,12 @@ Một xu Mỹ nặng $2.5\,\mathrm g$ gồm $97.5\%$ kẽm và $2.5\%$ đồng. 
 
 $$
 \begin{aligned}
-&N_e = 30\,\frac{2.5}{65.38}N_A\\
-&\quad \approx6.9\times10^{23},\\
-&Q_e = -N_ee\\
-&\quad \approx-1.1\times10^5\,\mathrm C,\\
-&F = \frac{kQ_e^2}{(0.02)^2}\\
-&\quad \approx2.8\times10^{23}\,\mathrm N.
+N_e &= 30\,\frac{2.5}{65.38}N_A \\
+&\approx 6.9\times10^{23}, \\
+Q_e &= -N_ee \\
+&\approx -1.1\times10^5\,\mathrm C, \\
+F &= \frac{kQ_e^2}{(0.02)^2} \\
+&\approx 2.8\times10^{23}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -315,9 +310,9 @@ Hai hạt có $q_1=0.500\,\mathrm{nC}$ và $q_2=8.00\,\mathrm{nC}$ cách $1.20\,
 
 $$
 \begin{aligned}
-&\frac{0.500}{x^2} = \frac{8.00}{(1.20-x)^2},\\
-&1.20-x = 4x,\\
-&x = 0.240\,\mathrm m.
+\frac{0.500}{x^2} &= \frac{8.00}{(1.20-x)^2}, \\
+1.20-x &= 4x, \\
+x &= 0.240\,\mathrm m.
 \end{aligned}
 $$
 :::
@@ -337,8 +332,7 @@ Nguồn $-3.00\,\mathrm{nC}$ ở $x=1.20\,\mathrm m$, nguồn Q ở $x=-0.600\,\
 - Nguồn Q phải bổ sung trường để đạt thành phần mục tiêu ±45,0 N/C.
 
 $$
-\begin{aligned}
-&Q = \frac{(E_*-18.7)(0.600)^2}{k}.\end{aligned}
+Q = \frac{(E_*-18.7)(0.600)^2}{k}.
 $$
 
 Ở đây $E_*$ là thành phần trường mục tiêu. (a) Với $E_*=+45.0$ N/C, $Q=+1.05$ nC. (b) Với $E_*=-45.0$ N/C, $Q=-2.55$ nC. Dấu đã được suy ra bằng trường có dấu, không lấy giá trị tuyệt đối trước khi cộng.
@@ -360,10 +354,10 @@ $+Q$ ở gốc, $+4Q$ trên trục x cách gốc d. Điện tích thứ ba q ph�
 
 $$
 \begin{aligned}
-&Q/x^2 = 4Q/(d-x)^2,\\
-&x = d/3,\\
-&\frac{kQ|q|}{(d/3)^2} = \frac{4kQ^2}{d^2},\\
-&q = -4Q/9.
+Q/x^2 &= 4Q/(d-x)^2, \\
+x &= d/3, \\
+\frac{kQ|q|}{(d/3)^2} &= \frac{4kQ^2}{d^2}, \\
+q &= -4Q/9.
 \end{aligned}
 $$
 
@@ -386,11 +380,10 @@ Nguồn $-3.00\,\mathrm{nC}$ ở gốc, nguồn $2.00\,\mathrm{nC}$ ở $(0,4.00
 
 $$
 \begin{aligned}
-&F_x = -\frac35\frac{k(3.00)(5.00)10^{-18}}{0.0500^2}\\
-&\quad+\frac{k(2.00)(5.00)10^{-18}}{0.0300^2}\\
-&\quad =6.75\times10^{-5}\,\mathrm N,\\
-&F_y = -\frac45\frac{k(3.00)(5.00)10^{-18}}{0.0500^2}\\
-&\quad =-4.31\times10^{-5}\,\mathrm N.
+F_x &= -\frac35\frac{k(3.00)(5.00)10^{-18}}{0.0500^2} +\frac{k(2.00)(5.00)10^{-18}}{0.0300^2} \\
+&= 6.75\times10^{-5}\,\mathrm N, \\
+F_y &= -\frac45\frac{k(3.00)(5.00)10^{-18}}{0.0500^2} \\
+&= -4.31\times10^{-5}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -418,8 +411,7 @@ Ba nguồn điểm giống nhau q ở ba đỉnh hình vuông cạnh L. Tìm đ�
 (b) Hai lực cạnh có độ lớn $3kq^2/L^2$, lực chéo bằng nửa giá trị đó:
 
 $$
-\begin{aligned}
-&F = \frac{3kq^2}{L^2}\left(\sqrt2+\frac12\right).\end{aligned}
+F = \frac{3kq^2}{L^2}\left(\sqrt2+\frac12\right).
 $$
 
 Hướng về tâm hình vuông.
@@ -449,9 +441,9 @@ Góc mỗi lực có thành phần đứng bằng $0.0225/0.0300$ lần độ l�
 
 $$
 \begin{aligned}
-&ma = 2\frac{k|Q|q_1}{r^2}\frac{0.0225}{r},\\
-&q_1 = +6.18\times10^{-8}\,\mathrm C,\\
-&q_2 = -6.18\times10^{-8}\,\mathrm C.
+ma &= 2\frac{k|Q|q_1}{r^2}\frac{0.0225}{r}, \\
+q_1 &= +6.18\times10^{-8}\,\mathrm C, \\
+q_2 &= -6.18\times10^{-8}\,\mathrm C.
 \end{aligned}
 $$
 :::
@@ -473,11 +465,11 @@ Tưởng tượng hai túi proton, mỗi túi $1.0\,\mathrm g$, đặt ở hai c
 
 $$
 \begin{aligned}
-&N = m/m_p\approx6.0\times10^{23},\\
-&F_g = Gm^2/(2R_E)^2\\
-&\quad \approx4.1\times10^{-31}\,\mathrm N,\\
-&F_e = k(Ne)^2/(2R_E)^2\\
-&\quad \approx5.1\times10^5\,\mathrm N.
+N &= m/m_p\approx6.0\times10^{23}, \\
+F_g &= Gm^2/(2R_E)^2 \\
+&\approx 4.1\times10^{-31}\,\mathrm N, \\
+F_e &= k(Ne)^2/(2R_E)^2 \\
+&\approx 5.1\times10^5\,\mathrm N.
 \end{aligned}
 $$
 
@@ -503,9 +495,9 @@ Hai cầu rất nhỏ $6.80\,\mathrm{mg}$ có điện tích cùng độ lớn $7
 
 $$
 \begin{aligned}
-&d = 2L\sin29.0^\circ,\\
-&qE = mg\tan29.0^\circ+kq^2/d^2,\\
-&E = 2.96\times10^3\,\mathrm{N/C}.
+d &= 2L\sin29.0^\circ, \\
+qE &= mg\tan29.0^\circ+kq^2/d^2, \\
+E &= 2.96\times10^3\,\mathrm{N/C}.
 \end{aligned}
 $$
 :::
@@ -526,8 +518,8 @@ Trong mô hình nguyên tử hydrogen, electron chuyển động tròn bán kín
 
 $$
 \begin{aligned}
-&v = \sqrt{\frac{ke^2}{m_er}}\\
-&\quad =2.19\times10^6\,\mathrm{m/s}.
+v &= \sqrt{\frac{ke^2}{m_er}} \\
+&= 2.19\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 :::
@@ -548,11 +540,9 @@ $$
 
 $$
 \begin{aligned}
-&F_z(z) = \frac{Q\sigma}{2\varepsilon_0}\\
-&\quad-\frac{Q\sigma z}{2\varepsilon_0\sqrt{z^2+R^2}}\\
-&\quad-Mg,\\
-&\frac h{\sqrt{h^2+R^2}} = 1-\omega,\\
-&h = \frac{R(1-\omega)}{\sqrt{\omega(2-\omega)}}.
+F_z(z) &= \frac{Q\sigma}{2\varepsilon_0} -\frac{Q\sigma z}{2\varepsilon_0\sqrt{z^2+R^2}} -Mg, \\
+\frac h{\sqrt{h^2+R^2}} &= 1-\omega, \\
+h &= \frac{R(1-\omega)}{\sqrt{\omega(2-\omega)}}.
 \end{aligned}
 $$
 
@@ -575,11 +565,11 @@ Proton được phóng vào trường đều hướng thẳng đứng lên có �
 
 $$
 \begin{aligned}
-&v_{0x} = v_0\cos\alpha,\\
-&v_{0y} = -v_0\sin\alpha,\\
-&h_{\max} = \frac{mv_0^2\sin^2\alpha}{2eE},\\
-&t_{\mathrm{ret}} = \frac{2mv_0\sin\alpha}{eE},\\
-&d = \frac{mv_0^2\sin2\alpha}{eE}.
+v_{0x} &= v_0\cos\alpha, \\
+v_{0y} &= -v_0\sin\alpha, \\
+h_{\max} &= \frac{mv_0^2\sin^2\alpha}{2eE}, \\
+t_{\mathrm{ret}} &= \frac{2mv_0\sin\alpha}{eE}, \\
+d &= \frac{mv_0^2\sin2\alpha}{eE}.
 \end{aligned}
 $$
 
@@ -605,12 +595,12 @@ Vật nhỏ khối lượng m, điện tích q, tốc độ đầu $5.00\times10
 
 $$
 \begin{aligned}
-&t_1 = L/v_0,\\
-&t_2 = D/v_0,\\
-&d = \frac12at_1^2+(at_1)t_2,\\
-&a = qE/m,\\
-&q/m = \frac{2dv_0^2}{EL(L+2D)}\\
-&\quad =2.18\times10^3\,\mathrm{C/kg}.
+t_1 &= L/v_0, \\
+t_2 &= D/v_0, \\
+d &= \frac12at_1^2+(at_1)t_2, \\
+a &= qE/m, \\
+q/m &= \frac{2dv_0^2}{EL(L+2D)} \\
+&= 2.18\times10^3\,\mathrm{C/kg}.
 \end{aligned}
 $$
 
@@ -636,9 +626,9 @@ Q dương phân bố đều trên trục x từ 0 đến a. Nguồn dương q t�
 
 $$
 \begin{aligned}
-&E_x = \frac{kQ}{a}\int_0^a\frac{d\xi}{(x-\xi)^2}\\
-&\quad =\frac{kQ}{a}\left(\frac1{x-a}-\frac1x\right),\\
-&E_y = 0.
+E_x &= \frac{kQ}{a}\int_0^a\frac{d\xi}{(x-\xi)^2} \\
+&= \frac{kQ}{a}\left(\frac1{x-a}-\frac1x\right), \\
+E_y &= 0.
 \end{aligned}
 $$
 
@@ -646,8 +636,8 @@ Tại x = a + r:
 
 $$
 \begin{aligned}
-&\vec F = \frac{kQq}{a}\left(\frac1r-\frac1{r+a}\right)\hat{\mathbf i}\\
-&\quad =\frac{kQq}{r(r+a)}\hat{\mathbf i}.
+\vec F &= \frac{kQq}{a}\left(\frac1r-\frac1{r+a}\right)\hat{\mathbf i} \\
+&= \frac{kQq}{r(r+a)}\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -659,8 +649,8 @@ Q dương phân bố đều trên trục y từ 0 đến a. Nguồn điểm $-q$
 
 $$
 \begin{aligned}
-&F_x \approx -\frac{Qq}{4\pi\varepsilon_0x^2},\\
-&F_y \approx +\frac{Qqa}{8\pi\varepsilon_0x^3}.
+F_x &\approx -\frac{Qq}{4\pi\varepsilon_0x^2}, \\
+F_y &\approx +\frac{Qqa}{8\pi\varepsilon_0x^3}.
 \end{aligned}
 $$
 
@@ -681,10 +671,10 @@ Giải thích kết quả.
 
 $$
 \begin{aligned}
-&E_x = \frac{kQ}{a}\int_0^a\frac{x\,dy}{(x^2+y^2)^{3/2}}\\
-&\quad =\frac{kQ}{x\sqrt{x^2+a^2}},\\
-&E_y = -\frac{kQ}{a}\int_0^a\frac{y\,dy}{(x^2+y^2)^{3/2}}\\
-&\quad =-\frac{kQ}{a}\left(\frac1x-\frac1{\sqrt{x^2+a^2}}\right).
+E_x &= \frac{kQ}{a}\int_0^a\frac{x\,dy}{(x^2+y^2)^{3/2}} \\
+&= \frac{kQ}{x\sqrt{x^2+a^2}}, \\
+E_y &= -\frac{kQ}{a}\int_0^a\frac{y\,dy}{(x^2+y^2)^{3/2}} \\
+&= -\frac{kQ}{a}\left(\frac1x-\frac1{\sqrt{x^2+a^2}}\right).
 \end{aligned}
 $$
 
@@ -692,8 +682,8 @@ Do đó $F_x=-qE_x<0$, $F_y=-qE_y>0$. Khi x ≫ a, dùng $(1+a^2/x^2)^{-1/2}\app
 
 $$
 \begin{aligned}
-&F_x\approx-kQq/x^2,\\
-&F_y\approx kQqa/(2x^3).
+F_x &\approx -kQq/x^2, \\
+F_y &\approx kQqa/(2x^3).
 \end{aligned}
 $$
 

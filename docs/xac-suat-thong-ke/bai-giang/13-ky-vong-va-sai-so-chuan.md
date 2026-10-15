@@ -49,8 +49,8 @@ Nếu ta tưởng tượng biểu đồ xác suất lý thuyết (Probability Hi
 Gọi $X$ là số chấm xuất hiện khi gieo một con xúc xắc cân bằng ($X \sim \text{Uniform}(6)$). Vì 6 mặt đồng khả năng ($f(x) = 1/6$):
 $$
 \begin{aligned}
-&E(X) = 1 \times \frac{1}{6} + 2 \times \frac{1}{6} + 3 \times \frac{1}{6} + 4 \times \frac{1}{6} + 5 \times \frac{1}{6} + 6 \times \frac{1}{6}\\
-&\quad = \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = \frac{21}{6} = 3{,}5
+E(X) &= 1 \times \frac{1}{6} + 2 \times \frac{1}{6} + 3 \times \frac{1}{6} + 4 \times \frac{1}{6} + 5 \times \frac{1}{6} + 6 \times \frac{1}{6} \\
+&= \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = \frac{21}{6} = 3{,}5
 \end{aligned}
 $$
 Tổng quát cho biến ngẫu nhiên đều rời rạc trên $\{1, 2, \dots, n\}$:
@@ -70,8 +70,8 @@ Bảng phân phối xác suất:
 Tính kỳ vọng của con xúc xắc lệch:
 $$
 \begin{aligned}
-&E(X) = 1(0{,}1) + 2(0{,}3) + 3(0{,}1) + 4(0{,}2) + 5(0{,}1) + 6(0{,}2)\\
-&\quad = 0{,}1 + 0{,}6 + 0{,}3 + 0{,}8 + 0{,}5 + 1{,}2 = 3{,}5
+E(X) &= 1(0{,}1) + 2(0{,}3) + 3(0{,}1) + 4(0{,}2) + 5(0{,}1) + 6(0{,}2) \\
+&= 0{,}1 + 0{,}6 + 0{,}3 + 0{,}8 + 0{,}5 + 1{,}2 = 3{,}5
 \end{aligned}
 $$
 
@@ -165,9 +165,9 @@ $$
 Áp dụng tính cộng tính của kỳ vọng:
 $$
 \begin{aligned}
-&E(X) = E(X_1 + X_2 + \dots + X_n)\\
-&\quad = E(X_1) + E(X_2) + \dots + E(X_n)\\
-&\quad = \underbrace{p + p + \dots + p}_{n \text{ số hạng}} = n p
+E(X) &= E(X_1 + X_2 + \dots + X_n) \\
+&= E(X_1) + E(X_2) + \dots + E(X_n) \\
+&= \underbrace{p + p + \dots + p}_{n \text{ số hạng}} = n p
 \end{aligned}
 $$
 Trực giác đời thường: Nếu tung 100 lần một đồng xu cân bằng ($p = 0{,}5$), ta kỳ vọng nhận được $100 \times 0{,}5 = 50$ mặt ngửa.
@@ -183,9 +183,9 @@ Kỳ vọng chỉ đơn giản bằng cỡ mẫu $n$ nhân với tỷ lệ thàn
 Bằng cách khai triển định nghĩa và chuỗi Maclaurin của hàm số mũ $e^\lambda = \sum_{j=0}^\infty \frac{\lambda^j}{j!}$:
 $$
 \begin{aligned}
-&E(X) = \sum_{k=0}^\infty k \cdot e^{-\lambda} \frac{\lambda^k}{k!}\\
-&\quad = e^{-\lambda} \lambda \sum_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!}\\
-&\quad = e^{-\lambda} \lambda \cdot e^{\lambda} = \lambda
+E(X) &= \sum_{k=0}^\infty k \cdot e^{-\lambda} \frac{\lambda^k}{k!} \\
+&= e^{-\lambda} \lambda \sum_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!} \\
+&= e^{-\lambda} \lambda \cdot e^{\lambda} = \lambda
 \end{aligned}
 $$
 Kỳ vọng của biến ngẫu nhiên Poisson bằng đúng tham số tốc độ $\lambda$.
@@ -219,10 +219,10 @@ $$
 Thay vì tính hiệu $(x - \mu)$ ở từng giá trị, ta luôn sử dụng công thức rút gọn:
 $$
 \begin{aligned}
-&\text{Var}(X) = E\left(X^2 - 2\mu X + \mu^2\right)\\
-&\quad = E(X^2) - 2\mu E(X) + \mu^2\\
-&\quad = E(X^2) - 2\mu^2 + \mu^2\\
-&\quad = E(X^2) - \mu^2 = E(X^2) - [E(X)]^2
+\text{Var}(X) &= E\left(X^2 - 2\mu X + \mu^2\right) \\
+&= E(X^2) - 2\mu E(X) + \mu^2 \\
+&= E(X^2) - 2\mu^2 + \mu^2 \\
+&= E(X^2) - \mu^2 = E(X^2) - [E(X)]^2
 \end{aligned}
 $$
 
@@ -246,8 +246,8 @@ $$
 Khi nhân biến ngẫu nhiên với hằng số $c$, độ phân tán bị phóng đại lên theo bình phương:
 $$
 \begin{aligned}
-&\text{Var}(c X) = c^2 \cdot \text{Var}(X)\\
-&\text{SD}(c X) = |c| \cdot \text{SD}(X)
+\text{Var}(c X) &= c^2 \cdot \text{Var}(X) \\
+\text{SD}(c X) &= |c| \cdot \text{SD}(X)
 \end{aligned}
 $$
 
@@ -255,8 +255,8 @@ $$
 Nếu cộng thêm một hằng số $c$ vào biến ngẫu nhiên, toàn bộ phân phối chỉ bị dịch chuyển vị trí trên trục số mà không hề bị co giãn:
 $$
 \begin{aligned}
-&\text{Var}(X + c) = \text{Var}(X)\\
-&\text{SD}(X + c) = \text{SD}(X)
+\text{Var}(X + c) &= \text{Var}(X) \\
+\text{SD}(X + c) &= \text{SD}(X)
 \end{aligned}
 $$
 
@@ -264,8 +264,8 @@ $$
 Nếu hai biến ngẫu nhiên $X$ và $Y$ **độc lập thống kê** với nhau:
 $$
 \begin{aligned}
-&\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)\\
-&\text{Var}(X - Y) = \text{Var}(X) + \text{Var}(Y)
+\text{Var}(X + Y) &= \text{Var}(X) + \text{Var}(Y) \\
+\text{Var}(X - Y) &= \text{Var}(X) + \text{Var}(Y)
 \end{aligned}
 $$
 
@@ -381,8 +381,8 @@ Quy đồng mẫu số chung các xác suất về 12:
 Áp dụng định nghĩa kỳ vọng:
 $$
 \begin{aligned}
-&E(T) = 3 \times \frac{4}{12} + 4 \times \frac{3}{12} + 5 \times \frac{5}{12}\\
-&\quad = \frac{12 + 12 + 25}{12} = \frac{49}{12} \approx 4{,}0833
+E(T) &= 3 \times \frac{4}{12} + 4 \times \frac{3}{12} + 5 \times \frac{5}{12} \\
+&= \frac{12 + 12 + 25}{12} = \frac{49}{12} \approx 4{,}0833
 \end{aligned}
 $$
 
@@ -395,8 +395,8 @@ Trong hộp có tổng cộng 12 tấm thẻ:
 Áp dụng định nghĩa kỳ vọng:
 $$
 \begin{aligned}
-&E(U) = 3 \times \frac{3}{12} + 4 \times \frac{4}{12} + 5 \times \frac{5}{12}\\
-&\quad = \frac{9 + 16 + 25}{12} = \frac{50}{12} = \frac{25}{6} \approx 4{,}1667
+E(U) &= 3 \times \frac{3}{12} + 4 \times \frac{4}{12} + 5 \times \frac{5}{12} \\
+&= \frac{9 + 16 + 25}{12} = \frac{50}{12} = \frac{25}{6} \approx 4{,}1667
 \end{aligned}
 $$
 
@@ -488,8 +488,8 @@ $$
 - Phương sai và độ lệch chuẩn:
 $$
 \begin{aligned}
-&\text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{2}{3} - 0^2 = \frac{2}{3} \approx 0{,}6667\\
-&\text{SD}(X) = \sqrt{\frac{2}{3}} \approx 0{,}8165
+\text{Var}(X) &= E(X^2) - [E(X)]^2 = \frac{2}{3} - 0^2 = \frac{2}{3} \approx 0{,}6667 \\
+\text{SD}(X) &= \sqrt{\frac{2}{3}} \approx 0{,}8165
 \end{aligned}
 $$
 
@@ -510,8 +510,8 @@ Bảng phân phối xác suất của $Y$:
 Thực chất $Y \sim \text{Bernoulli}(p = 2/3)$. Do đó:
 $$
 \begin{aligned}
-&E(Y) = p = \frac{2}{3} \approx 0{,}6667\\
-&\text{Var}(Y) = p(1 - p) = \frac{2}{3} \times \left(1 - \frac{2}{3}\right) = \frac{2}{3} \times \frac{1}{3} = \frac{2}{9} \approx 0{,}2222
+E(Y) &= p = \frac{2}{3} \approx 0{,}6667 \\
+\text{Var}(Y) &= p(1 - p) = \frac{2}{3} \times \left(1 - \frac{2}{3}\right) = \frac{2}{3} \times \frac{1}{3} = \frac{2}{9} \approx 0{,}2222
 \end{aligned}
 $$
 
@@ -524,8 +524,8 @@ Ta xác định giá trị của $W$ theo từng trường hợp của $X$:
 Áp dụng công thức tính kỳ vọng của hàm $g(X) = \min(X, 0{,}5)$:
 $$
 \begin{aligned}
-&E(W) = (-1) \times \frac{1}{3} + 0 \times \frac{1}{3} + 0{,}5 \times \frac{1}{3}\\
-&\quad = \frac{-1 + 0 + 0{,}5}{3} = \frac{-0{,}5}{3} = -\frac{1}{6} \approx -0{,}1667
+E(W) &= (-1) \times \frac{1}{3} + 0 \times \frac{1}{3} + 0{,}5 \times \frac{1}{3} \\
+&= \frac{-1 + 0 + 0{,}5}{3} = \frac{-0{,}5}{3} = -\frac{1}{6} \approx -0{,}1667
 \end{aligned}
 $$
 :::

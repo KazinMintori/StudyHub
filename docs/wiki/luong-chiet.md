@@ -14,7 +14,7 @@ Vật liệu lưỡng chiết có chiết suất khác nhau cho hai phương ph�
 ## Giải thích kỹ thuật
 
 $$
-\begin{aligned}\Delta\phi&=\frac{2\pi}{\lambda_0}(n_1-n_2)d.\end{aligned}
+\Delta\phi =\frac{2\pi}{\lambda_0}(n_1-n_2)d.
 $$
 
 Hai thành phần đi qua cùng chiều dày d với số sóng khác nhau nên tích lũy pha khác nhau. Công thức xét hai trục riêng thích hợp, truyền qua bản đồng nhất và dùng bước sóng chân không.

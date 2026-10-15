@@ -28,17 +28,13 @@ Tại bề mặt phân cách phẳng nhẵn giữa hai môi trường quang họ
 Định luật phản xạ phát biểu rằng: Góc phản xạ $\theta_r$ luôn bằng góc tới $\theta_a$:
 
 $$
-\begin{aligned}
-\theta_r = \theta_a
-\end{aligned} \tag{33.2}
+\theta_r = \theta_a \tag{33.2}
 $$
 
 Định luật khúc xạ (định luật Snell) thiết lập mối liên hệ giữa góc tới $\theta_a$ trong môi trường $a$ và góc khúc xạ $\theta_b$ trong môi trường $b$:
 
 $$
-\begin{aligned}
-n_a \sin \theta_a = n_b \sin \theta_b
-\end{aligned} \tag{33.4}
+n_a \sin \theta_a = n_b \sin \theta_b \tag{33.4}
 $$
 
 ### Phản xạ toàn phần
@@ -50,9 +46,7 @@ Khi ánh sáng truyền từ môi trường có chiết suất lớn sang môi t
 Khi góc tới đạt tới góc giới hạn phản xạ toàn phần $\theta_{\text{crit}}$, góc khúc xạ đạt tới $90^\circ$ và tia khúc xạ đi là là sát mặt phân cách:
 
 $$
-\begin{aligned}
-\sin \theta_{\text{crit}} = \frac{n_b}{n_a}
-\end{aligned} \tag{33.6}
+\sin \theta_{\text{crit}} = \frac{n_b}{n_a} \tag{33.6}
 $$
 
 Nếu góc tới lớn hơn góc giới hạn ($\theta_a > \theta_{\text{crit}}$), toàn bộ năng lượng ánh sáng bị phản xạ trở lại môi trường thứ nhất, không có tia khúc xạ chạy mang công suất pháp tuyến ra môi trường thứ hai.
@@ -66,9 +60,7 @@ Phương phân cực của sóng điện từ phân cực thẳng là phương d
 Khi ánh sáng phân cực thẳng có cường độ cực đại $I_{\max}$ chiếu tới một kính phân tích có trục phân cực nghiêng góc $\phi$ so với phương phân cực của chùm tia tới, cường độ $I$ của ánh sáng truyền qua tuân theo định luật Malus:
 
 $$
-\begin{aligned}
-I = I_{\max} \cos^2 \phi
-\end{aligned} \tag{33.7}
+I = I_{\max} \cos^2 \phi \tag{33.7}
 $$
 
 ### Phân cực do phản xạ và Định luật Brewster
@@ -80,9 +72,7 @@ Với hai điện môi trong suốt, không từ tính, có chiết suất khác
 Định luật Brewster phát biểu rằng: Khi góc tới đúng bằng góc phân cực $\theta_p$, ánh sáng phản xạ bị phân cực thẳng hoàn toàn $100\%$ theo phương vuông góc với mặt phẳng tới (song song với bề mặt phản xạ). Góc phân cực được xác định bởi:
 
 $$
-\begin{aligned}
-\tan \theta_p = \frac{n_b}{n_a}
-\end{aligned} \tag{33.8}
+\tan \theta_p = \frac{n_b}{n_a} \tag{33.8}
 $$
 
 Tại góc tới này, tia phản xạ và tia khúc xạ tạo với nhau một góc vuông $90^\circ$, đồng nghĩa với $\theta_p + \theta_b = 90^\circ$.

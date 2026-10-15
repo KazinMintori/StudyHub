@@ -177,8 +177,8 @@ Vì tổng $k$ hệ số bằng $1$ và $k \ge 3$, không thể xảy ra trườ
 Bây giờ, ta áp dụng kỹ thuật phân rã gom nhóm đại số:
 $$
 \begin{aligned}
-&y = \sum_{i=1}^{k-1} \theta_i x_i + \theta_k x_k\\
-  &\quad = (1 - \theta_k) \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i + \theta_k x_k .
+y &= \sum_{i=1}^{k-1} \theta_i x_i + \theta_k x_k \\
+&= (1 - \theta_k) \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i + \theta_k x_k .
 \end{aligned}
 $$
 
@@ -286,9 +286,9 @@ Một cách nhìn đại số tương đương là biến đổi tổ hợp affi
 
 $$
 \begin{aligned}
-&\sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k\\
-&\quad = (1 - \theta_2 - \cdots - \theta_k) x_1 + \theta_2 x_2 + \cdots + \theta_k x_k\\
-&\quad = x_1 + \theta_2 (x_2 - x_1) + \theta_3 (x_3 - x_1) + \cdots + \theta_k (x_k - x_1).
+\sum_{i=1}^k \theta_i x_i &= \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
+&= (1 - \theta_2 - \cdots - \theta_k) x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
+&= x_1 + \theta_2 (x_2 - x_1) + \theta_3 (x_3 - x_1) + \cdots + \theta_k (x_k - x_1).
 \end{aligned}
 $$
 
@@ -315,16 +315,16 @@ Từ các ví dụ về điểm, đường thẳng, mặt phẳng, ta nhận th�
 Theo định nghĩa của tập $V$, vì $v_1, v_2 \in V$ nên tồn tại hai điểm $x_1, x_2 \in C$ sao cho:
 $$
 \begin{aligned}
-    &v_1 = x_1 - x_0 \implies x_1 = v_1 + x_0 \in C,\\
-    &v_2 = x_2 - x_0 \implies x_2 = v_2 + x_0 \in C.
+v_1 &= x_1 - x_0 \implies x_1 = v_1 + x_0 \in C, \\
+v_2 &= x_2 - x_0 \implies x_2 = v_2 + x_0 \in C.
 \end{aligned}
 $$
 
 Xét biểu thức tịnh tiến của tổ hợp cần kiểm tra:
 $$
 \begin{aligned}
-&(\alpha v_1 + \beta v_2) + x_0 = \alpha (x_1 - x_0) + \beta (x_2 - x_0) + x_0\\
-&\quad = \alpha x_1 + \beta x_2 + (1 - \alpha - \beta) x_0 .
+(\alpha v_1 + \beta v_2) + x_0 &= \alpha (x_1 - x_0) + \beta (x_2 - x_0) + x_0 \\
+&= \alpha x_1 + \beta x_2 + (1 - \alpha - \beta) x_0 .
 \end{aligned}
 $$
 
@@ -401,9 +401,9 @@ Lấy hai nghiệm tùy ý $x_1, x_2 \in C$, tức $Ax_1 = b$ và $Ax_2 = b$. V�
 
 $$
 \begin{aligned}
-&A\big(\theta x_1 + (1-\theta)x_2\big) = \theta A x_1 + (1-\theta) A x_2\\
-&\quad = \theta b + (1-\theta) b\\
-&\quad = \big(\theta + (1-\theta)\big) b = 1 \cdot b = b .
+A\big(\theta x_1 + (1-\theta)x_2\big) &= \theta A x_1 + (1-\theta) A x_2 \\
+&= \theta b + (1-\theta) b \\
+&= \big(\theta + (1-\theta)\big) b = 1 \cdot b = b .
 \end{aligned}
 $$
 
@@ -545,10 +545,10 @@ Bao affine đóng vai trò là "không gian nền tự nhiên" của một tập
 
 $$
 \begin{aligned}
-&f\left(\sum_{i=1}^k \theta_i x_i\right) = A\left(\sum_{i=1}^k \theta_i x_i\right) + b\\
-&\quad = \sum_{i=1}^k \theta_i A x_i + 1 \cdot b\\
-&\quad = \sum_{i=1}^k \theta_i A x_i + \left(\sum_{i=1}^k \theta_i\right) b\\
-&\quad = \sum_{i=1}^k \theta_i (A x_i + b) = \sum_{i=1}^k \theta_i f(x_i).
+f &\left(\sum_{i=1}^k \theta_i x_i\right) = A\left(\sum_{i=1}^k \theta_i x_i\right) + b \\
+&= \sum_{i=1}^k \theta_i A x_i + 1 \cdot b \\
+&= \sum_{i=1}^k \theta_i A x_i + \left(\sum_{i=1}^k \theta_i\right) b \\
+&= \sum_{i=1}^k \theta_i (A x_i + b) = \sum_{i=1}^k \theta_i f(x_i).
 \end{aligned}
 $$
 

@@ -23,98 +23,69 @@ Một tia sáng thứ hai xuất phát từ $P$ đập vào mặt cầu tại đ
 Trong tam giác $PBC$, góc ngoài tại đỉnh $B$ là góc tới $\theta_a$:
 
 $$
-\begin{aligned}
-\theta_a &= \alpha + \phi
-\end{aligned}
-\tag{34.8}
+\theta_a = \alpha + \phi \tag{34.8}
 $$
 
 Trong tam giác $P'BC$, góc ngoài tại đỉnh $C$ là góc $\phi$:
 
 $$
-\begin{aligned}
-\phi &= \beta + \theta_b
-\end{aligned}
+\phi = \beta + \theta_b
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-\theta_b &= \phi - \beta
-\end{aligned}
-\tag{34.9}
+\theta_b = \phi - \beta \tag{34.9}
 $$
 
 Theo định luật khúc xạ ánh sáng (định luật Snell):
 
 $$
-\begin{aligned}
-n_a \sin \theta_a &= n_b \sin \theta_b
-\end{aligned}
+n_a \sin \theta_a = n_b \sin \theta_b
 $$
 
 Trong giới hạn gần đúng cận trục, góc $\alpha$ rất nhỏ, kéo theo các góc $\beta$, $\phi$, $\theta_a$ và $\theta_b$ đều rất nhỏ. Khi đó ta có thể xấp xỉ $\sin \theta_a \approx \theta_a$ và $\sin \theta_b \approx \theta_b$. Định luật Snell trở thành:
 
 $$
-\begin{aligned}
-n_a \theta_a &\approx n_b \theta_b
-\end{aligned}
+n_a \theta_a \approx n_b \theta_b
 $$
 
 Thay các biểu thức của $\theta_a$ và $\theta_b$ từ phương trình (34.8) và (34.9) vào:
 
 $$
-\begin{aligned}
-n_a (\alpha + \phi) &= n_b (\phi - \beta)
-\end{aligned}
+n_a (\alpha + \phi) = n_b (\phi - \beta)
 $$
 
 Khai triển và sắp xếp lại các số hạng:
 
 $$
-\begin{aligned}
-n_a \alpha + n_b \beta &= (n_b - n_a)\phi
-\end{aligned}
-\tag{34.10}
+n_a \alpha + n_b \beta = (n_b - n_a)\phi \tag{34.10}
 $$
 
 Gọi $h$ là khoảng cách từ điểm tới $B$ hạ vuông góc xuống trục quang. Trong gần đúng cận trục, khoảng cách từ chân đường vuông góc này đến đỉnh $V$ là không đáng kể, do đó ta có các xấp xỉ tang góc theo radian:
 
 $$
-\begin{aligned}
-\alpha &\approx \frac{h}{s}
-\end{aligned}
+\alpha \approx \frac{h}{s}
 $$
 
 $$
-\begin{aligned}
-\beta &\approx \frac{h}{s'}
-\end{aligned}
+\beta \approx \frac{h}{s'}
 $$
 
 $$
-\begin{aligned}
-\phi &\approx \frac{h}{R}
-\end{aligned}
+\phi \approx \frac{h}{R}
 $$
 
 Thay các góc này vào phương trình (34.10):
 
 $$
-\begin{aligned}
-&n_a \frac{h}{s} + n_b \frac{h}{s'} \\
-&= (n_b - n_a)\frac{h}{R}
-\end{aligned}
+n_a \frac{h}{s} + n_b \frac{h}{s'} = (n_b - n_a)\frac{h}{R}
 $$
 
 Triệt tiêu đại lượng $h$ ở cả hai vế, ta nhận được **phương trình tạo ảnh qua mặt cầu khúc xạ**:
 
 $$
-\begin{aligned}
-\frac{n_a}{s} + \frac{n_b}{s'} &= \frac{n_b - n_a}{R}
-\end{aligned}
-\tag{34.11}
+\frac{n_a}{s} + \frac{n_b}{s'} = \frac{n_b - n_a}{R} \tag{34.11}
 $$
 
 Biểu thức này không chứa góc $\alpha$. Do đó, trong gần đúng cận trục, mọi tia sáng xuất phát từ vật điểm $P$ sau khi khúc xạ đều hội tụ chính xác tại cùng một ảnh điểm $P'$.
@@ -141,17 +112,13 @@ Xét một vật phẳng nhỏ có chiều cao $y$ đặt vuông góc với tr�
 Theo định luật Snell:
 
 $$
-\begin{aligned}
-n_a \sin \theta_a &= n_b \sin \theta_b
-\end{aligned}
+n_a \sin \theta_a = n_b \sin \theta_b
 $$
 
 Trong gần đúng góc nhỏ:
 
 $$
-\begin{aligned}
-n_a \theta_a &\approx n_b \theta_b
-\end{aligned}
+n_a \theta_a \approx n_b \theta_b
 $$
 
 Quan sát hai tam giác vuông ở hai phía đỉnh $V$:
@@ -161,9 +128,7 @@ Quan sát hai tam giác vuông ở hai phía đỉnh $V$:
 Thay vào định luật Snell:
 
 $$
-\begin{aligned}
-n_a \left(\frac{y}{s}\right) &= -n_b \left(\frac{y'}{s'}\right)
-\end{aligned}
+n_a \left(\frac{y}{s}\right) = -n_b \left(\frac{y'}{s'}\right)
 $$
 
 Suy ra tỷ số kích thước ảnh trên kích thước vật:
@@ -172,8 +137,7 @@ $$
 \begin{aligned}
 m &= \frac{y'}{y} \\
 &= -\frac{n_a s'}{n_b s}
-\end{aligned}
-\tag{34.12}
+\end{aligned} \tag{34.12}
 $$
 
 Độ phóng đại ngang $m$ cho biết:
@@ -189,26 +153,19 @@ Hiện tượng khúc xạ qua mặt cong giải thích việc người làm vư
 Mặt phân cách phẳng giữa hai môi trường là trường hợp giới hạn đặc biệt của mặt cầu khi bán kính cong tiến tới vô cực ($R \to \infty$). Thay $R = \infty$ vào phương trình (34.11), vế phải bằng không:
 
 $$
-\begin{aligned}
-\frac{n_a}{s} + \frac{n_b}{s'} &= 0
-\end{aligned}
+\frac{n_a}{s} + \frac{n_b}{s'} = 0
 $$
 
 Biến đổi tìm khoảng cách ảnh:
 
 $$
-\begin{aligned}
-\frac{n_b}{s'} &= -\frac{n_a}{s}
-\end{aligned}
+\frac{n_b}{s'} = -\frac{n_a}{s}
 $$
 
 Dẫn tới hệ thức tạo ảnh qua **mặt phân cách phẳng**:
 
 $$
-\begin{aligned}
-s' &= -\frac{n_b}{n_a} s
-\end{aligned}
-\tag{34.13}
+s' = -\frac{n_b}{n_a} s \tag{34.13}
 $$
 
 Thay hệ thức này vào công thức độ phóng đại ngang (34.12):
@@ -239,17 +196,14 @@ Một thanh thủy tinh hình trụ đặc có chiết suất $n_b = 1{,}52$ đ�
 **Thực hiện**: Áp dụng phương trình (34.11):
 
 $$
-\begin{aligned}
-\frac{n_a}{s} + \frac{n_b}{s'} &= \frac{n_b - n_a}{R}
-\end{aligned}
+\frac{n_a}{s} + \frac{n_b}{s'} = \frac{n_b - n_a}{R}
 $$
 
 Thay các giá trị số vào:
 
 $$
 \begin{aligned}
-&\frac{1{,}00}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} \\
-&= \frac{1{,}52 - 1{,}00}{+2{,}00\,\mathrm{cm}} \\
+\frac{1{,}00}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} &= \frac{1{,}52 - 1{,}00}{+2{,}00\,\mathrm{cm}} \\
 &= \frac{0{,}52}{2{,}00\,\mathrm{cm}} \\
 &= 0{,}260\,\mathrm{cm}^{-1}
 \end{aligned}
@@ -259,8 +213,7 @@ Chuyển vế:
 
 $$
 \begin{aligned}
-\frac{1{,}52}{s'} &= 0{,}260\,\mathrm{cm}^{-1} \\
-&\quad - 0{,}125\,\mathrm{cm}^{-1} \\
+\frac{1{,}52}{s'} &= 0{,}260\,\mathrm{cm}^{-1} - 0{,}125\,\mathrm{cm}^{-1} \\
 &= 0{,}135\,\mathrm{cm}^{-1}
 \end{aligned}
 $$
@@ -307,17 +260,14 @@ Xét lại thanh thủy tinh trong Ví dụ 34.5 ($n_b = 1{,}52, R = +2{,}00\,\m
 **Thực hiện**: Áp dụng phương trình tạo ảnh:
 
 $$
-\begin{aligned}
-\frac{n_a}{s} + \frac{n_b}{s'} &= \frac{n_b - n_a}{R}
-\end{aligned}
+\frac{n_a}{s} + \frac{n_b}{s'} = \frac{n_b - n_a}{R}
 $$
 
 Thay số:
 
 $$
 \begin{aligned}
-&\frac{1{,}33}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} \\
-&= \frac{1{,}52 - 1{,}33}{+2{,}00\,\mathrm{cm}} \\
+\frac{1{,}33}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} &= \frac{1{,}52 - 1{,}33}{+2{,}00\,\mathrm{cm}} \\
 &= \frac{0{,}19}{2{,}00\,\mathrm{cm}} \\
 &= 0{,}0950\,\mathrm{cm}^{-1}
 \end{aligned}
@@ -327,8 +277,7 @@ Chuyển vế:
 
 $$
 \begin{aligned}
-\frac{1{,}52}{s'} &= 0{,}0950\,\mathrm{cm}^{-1} \\
-&\quad - 0{,}16625\,\mathrm{cm}^{-1} \\
+\frac{1{,}52}{s'} &= 0{,}0950\,\mathrm{cm}^{-1} - 0{,}16625\,\mathrm{cm}^{-1} \\
 &= -0{,}07125\,\mathrm{cm}^{-1}
 \end{aligned}
 $$
@@ -385,17 +334,13 @@ Dấu âm khẳng định đây là ảnh ảo nằm ở phía ánh sáng tới,
 Độ sâu biểu kiến mà mắt nhìn thấy là khoảng cách hình học từ ảnh ảo tới mặt nước:
 
 $$
-\begin{aligned}
-d' &= |s'| = 1{,}50\,\mathrm{m}
-\end{aligned}
+d' = |s'| = 1{,}50\,\mathrm{m}
 $$
 
 Độ phóng đại ngang của ảnh:
 
 $$
-\begin{aligned}
-m &= +1{,}00
-\end{aligned}
+m = +1{,}00
 $$
 
 ![Hình 34.27: Hình ảnh chiếc ống hút cắm nghiêng trong cốc nước minh họa hiện tượng độ sâu biểu kiến. Phần ngập nước trông như bị nâng lên gần mặt thoáng hơn, nhưng kích thước bề ngang của ống hút không hề bị biến dạng vì độ phóng đại ngang bằng đúng 1.](../img/young-34/hinh-34-27.png)

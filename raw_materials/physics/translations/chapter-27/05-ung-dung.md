@@ -35,20 +35,18 @@ Trong ống thủy tinh được hút chân không cao, electron phát ra từ c
 
 $$
 \begin{aligned}
-&\frac{1}{2}mv^2 = eV,\\
-&v = \sqrt{\frac{2eV}{m}}.
-\end{aligned}
-\tag{27.14}
+\frac{1}{2}mv^2 &= eV, \\
+v &= \sqrt{\frac{2eV}{m}}.
+\end{aligned} \tag{27.14}
 $$
 
 Electron đi giữa hai bản $P$ và $P'$, sau đó đập vào màn hình phủ chất phát quang. Điểm va chạm phát sáng nên vị trí chùm có thể quan sát được. Khi tốc độ thỏa điều kiện của bộ chọn vận tốc, electron đi thẳng qua hai bản. Kết hợp phương trình (27.13) với (27.14), ta được
 
 $$
 \begin{aligned}
-&\frac{E}{B} = \sqrt{\frac{2eV}{m}},\\
-&\frac{e}{m} = \frac{E^2}{2VB^2}.
-\end{aligned}
-\tag{27.15}
+\frac{E}{B} &= \sqrt{\frac{2eV}{m}}, \\
+\frac{e}{m} &= \frac{E^2}{2VB^2}.
+\end{aligned} \tag{27.15}
 $$
 
 Các đại lượng ở vế phải đều đo được, nên phép đo cho tỉ số $e/m$. Phép đo này không xác định riêng $e$ hoặc $m$. Thomson nhận thấy giá trị $e/m$ không phụ thuộc vật liệu catốt, lượng khí còn lại trong ống hay các chi tiết khác của thí nghiệm. Tính độc lập đó cho thấy các hạt trong chùm, nay gọi là electron, là thành phần chung của mọi vật chất. Vì vậy, Thomson được ghi nhận là người đầu tiên phát hiện một hạt hạ nguyên tử.
@@ -56,10 +54,7 @@ Các đại lượng ở vế phải đều đo được, nên phép đo cho t�
 Giá trị độ chính xác cao được nêu cho tỉ số điện tích trên khối lượng là
 
 $$
-\begin{aligned}
-&\frac{e}{m} = 1{,}758820024(11)\\
-&\quad\times10^{11}\,\mathrm{C/kg}.
-\end{aligned}
+\frac{e}{m} = 1{,}758820024(11) \times10^{11}\,\mathrm{C/kg}.
 $$
 
 Mười lăm năm sau thí nghiệm của Thomson, nhà vật lý Hoa Kỳ Robert Millikan đo chính xác điện tích electron. Kết hợp điện tích ấy với tỉ số $e/m$, ta suy ra khối lượng electron. Giá trị khối lượng được nêu là
@@ -99,10 +94,10 @@ Với $e/m=1{,}76\times10^{11}\,\mathrm{C/kg}$ và $V=150\,\mathrm{V}$, biểu t
 
 $$
 \begin{aligned}
-&v = \sqrt{2(e/m)V}\\
-&\quad =\sqrt{5{,}28\times10^{13}\,\mathrm{m^2/s^2}}\\
-&\quad =7{,}27\times10^6\,\mathrm{m/s}\\
-&\quad =0{,}024c.
+v &= \sqrt{2(e/m)V} \\
+&= \sqrt{5{,}28\times10^{13}\,\mathrm{m^2/s^2}} \\
+&= 7{,}27\times10^6\,\mathrm{m/s} \\
+&= 0{,}024c.
 \end{aligned}
 $$
 
@@ -110,9 +105,9 @@ $$
 
 $$
 \begin{aligned}
-&B = \frac{E}{v}\\
-&\quad =\frac{6{,}0\times10^6\,\mathrm{N/C}}{7{,}27\times10^6\,\mathrm{m/s}}\\
-&\quad =0{,}83\,\mathrm{T}.
+B &= \frac{E}{v} \\
+&= \frac{6{,}0\times10^6\,\mathrm{N/C}}{7{,}27\times10^6\,\mathrm{m/s}} \\
+&= 0{,}83\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -134,9 +129,9 @@ Không khí thường chứa rất ít heli, vì vậy heli được phun gần 
 
 $$
 \begin{aligned}
-&R = \frac{10{,}16\,\mathrm{cm}}{2}\\
-&\quad =5{,}08\,\mathrm{cm}\\
-&\quad =5{,}08\times10^{-2}\,\mathrm{m}.
+R &= \frac{10{,}16\,\mathrm{cm}}{2} \\
+&= 5{,}08\,\mathrm{cm} \\
+&= 5{,}08\times10^{-2}\,\mathrm{m}.
 \end{aligned}
 $$
 
@@ -144,9 +139,9 @@ Thay các đại lượng vào tử số cho $mv=6{,}65\times10^{-22}\,\mathrm{k
 
 $$
 \begin{aligned}
-&B' = \frac{mv}{|q|R}\\
-&\quad =\frac{6{,}65\times10^{-22}\,\mathrm{kg\,m/s}}{8{,}128\times10^{-21}\,\mathrm{C\,m}}\\
-&\quad =0{,}0818\,\mathrm{T}.
+B' &= \frac{mv}{|q|R} \\
+&= \frac{6{,}65\times10^{-22}\,\mathrm{kg\,m/s}}{8{,}128\times10^{-21}\,\mathrm{C\,m}} \\
+&= 0{,}0818\,\mathrm{T}.
 \end{aligned}
 $$
 

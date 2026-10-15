@@ -11,8 +11,8 @@ Sự phân bố điện tích tạo ra điện trường $\vec E$ bên trong tha
 
 $$
 \begin{aligned}
-qE&=qvB,\\
-E&=vB.
+qE &= qvB, \\
+E &= vB.
 \end{aligned}
 $$
 
@@ -20,11 +20,10 @@ $$
 
 $$
 \begin{aligned}
-V_{ab}&=V_a-V_b\\
-&=EL\\
-&=vBL.
-\end{aligned}
-\tag{29.5}
+V_{ab} &= V_a-V_b \\
+&= EL \\
+&= vBL.
+\end{aligned} \tag{29.5}
 $$
 
 Đầu $a$ có điện thế cao hơn đầu $b$. Hiệu điện thế này tồn tại ngay cả khi thanh chưa nối thành mạch kín. Thanh chuyển động riêng lẻ đã có suất điện động, giống như một pin vẫn có suất điện động khi hai cực chưa nối với mạch ngoài.
@@ -76,9 +75,9 @@ Thanh trượt trong Hình 29.15 dài $0{,}10\,\mathrm m$, chuyển động vớ
 
 $$
 \begin{aligned}
-\mathcal E&=vBL\\
-&=(2{,}5)(0{,}60)(0{,}10)\\
-&=0{,}15\,\mathrm V.
+\mathcal E &= vBL \\
+&= (2{,}5)(0{,}60)(0{,}10) \\
+&= 0{,}15\,\mathrm V.
 \end{aligned}
 $$
 
@@ -86,9 +85,9 @@ Dòng điện có độ lớn:
 
 $$
 \begin{aligned}
-I&=\frac{\mathcal E}{R}\\
-&=\frac{0{,}15}{0{,}030}\\
-&=5{,}0\,\mathrm A.
+I &= \frac{\mathcal E}{R} \\
+&= \frac{0{,}15}{0{,}030} \\
+&= 5{,}0\,\mathrm A.
 \end{aligned}
 $$
 
@@ -96,9 +95,9 @@ Chiều dòng trong thanh từ $b$ lên $a$. Theo $\vec F=I\vec L\times\vec B$, 
 
 $$
 \begin{aligned}
-F&=ILB\\
-&=(5{,}0)(0{,}10)(0{,}60)\\
-&=0{,}30\,\mathrm N.
+F &= ILB \\
+&= (5{,}0)(0{,}10)(0{,}60) \\
+&= 0{,}30\,\mathrm N.
 \end{aligned}
 $$
 
@@ -115,8 +114,8 @@ Tại bán kính $r$, tốc độ tiếp tuyến là $v=\omega r$. Véc-tơ $\ve
 
 $$
 \begin{aligned}
-d\mathcal E&=(\vec v\times\vec B)\cdot d\vec\ell\\
-&=\omega Br\,dr.
+d\mathcal E &= (\vec v\times\vec B)\cdot d\vec\ell \\
+&= \omega Br\,dr.
 \end{aligned}
 $$
 
@@ -124,8 +123,8 @@ Cộng các đoạn từ $r=0$ đến $r=R$:
 
 $$
 \begin{aligned}
-\mathcal E&=\int_0^R\omega Br\,dr\\
-&=\frac{1}{2}\omega BR^2.
+\mathcal E &= \int_0^R\omega Br\,dr \\
+&= \frac{1}{2}\omega BR^2.
 \end{aligned}
 $$
 

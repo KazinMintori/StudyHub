@@ -1,21 +1,21 @@
+import { buildThemeConfig } from '../../src/features/course/services/build-navigation.mjs'
+import { configureStudyMarkdown } from '../../scripts/build/markdown-presentation.mjs'
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { courseCatalog } from './course-catalog.mjs'
 import { wikiGroups } from './wiki-content.mjs'
 import { concepts } from './concepts.mjs'
-import { termLinks } from './term-links.mjs'
 import { readFileSync, mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
-import { staticMathPlugin } from '../../scripts/static-math-plugin.mjs'
-import { physicsImageLabels } from './physics-image-labels.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
 
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
+  srcExclude: ['agy-plans/**'],
   buildConcurrency: 1,
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   ignoreDeadLinks: true, lastUpdated: true,
@@ -28,55 +28,12 @@ export default withMermaid(defineConfig({
   markdown:{
     math:true,
     lineNumbers:false,
-    config:md=>{
-      md.use(staticMathPlugin)
-      md.core.ruler.before('block', 'normalize_custom_containers', state => {
-        state.src = state.src
-          .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
-          // A container title ends on the same line; never consume the next paragraph.
-          .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: exercise(?:[\t ]+(.*))?$/gm, (_, title) => `::: warning Bài tập${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: solution(?:[\t ]+(.*))?$/gm, (_, title) => {
-            const label = title?.trim()
-            const heading = label && /^Lời giải\b/i.test(label)
-              ? label
-              : `Lời giải${label ? `: ${label}` : ''}`
-            return `::: details ${heading}`
-          })
-          .replace(/^[ \t]*::: derivation(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Khai triển chi tiết${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: hint(?:[\t ]+(.*))?$/gm, (_, title) => `::: tip Gợi ý${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: note(?:[\t ]+(.*))?$/gm, (_, title) => `::: info${title ? ` ${title}` : ''}`)
-          .replace(/^[ \t]*:::[ \t]*$/gm, ':::');
-      });
-      md.use(termLinks,base)
-      // Only standalone images become figures; escape alt text before inserting captions.
-      md.core.ruler.after('inline', 'study_image_captions', state => {
-        for (let i = 1; i < state.tokens.length - 1; i++) {
-          const token = state.tokens[i]
-          if (token.type !== 'inline' || state.tokens[i-1].type !== 'paragraph_open') continue
-          const children = token.children?.filter(child => child.type !== 'text' || child.content.trim()) || []
-          if (children.length !== 1 || children[0].type !== 'image') continue
-          const image = children[0]
-          const caption = image.content
-          state.tokens[i-1].tag = 'figure'
-          state.tokens[i-1].attrSet('class', 'lecture-figure')
-          state.tokens[i+1].tag = 'figure'
-          if (caption) {
-            const token = new state.Token('html_inline', '', 0)
-            const key=image.attrGet('src')?.match(/(young-\d+\/[^/.]+)\.(?:png|svg)$/)?.[1]
-            const pairs=physicsImageLabels[key]||[]
-            const labels=pairs.map(([vi,en])=>`<li>${md.utils.escapeHtml(vi)} (${md.utils.escapeHtml(en)})</li>`).join('')
-            token.content = `<figcaption>${md.utils.escapeHtml(caption)}${labels?`<div class="figure-labels"><span>Chú thích:</span><ul class="figure-label-list">${labels}</ul></div>`:''}</figcaption>`
-            state.tokens[i].children.push(token)
-          }
-        }
-      })
-    }
+    config:md => configureStudyMarkdown(md, { base })
   },
   mermaid:{theme:'base',themeVariables:{fontSize:'15px',fontFamily:'Be Vietnam Pro, sans-serif',primaryColor:colorToken('tim-soft'),primaryBorderColor:colorToken('tim'),primaryTextColor:colorToken('ink')},flowchart:{htmlLabels:true,padding:18,curve:'basis'}},
   appearance:true,
   vite:{
+    server:{watch:{ignored:['**/.vitepress/dist/**','**/.vitepress/.temp/**']}},
     build:{
       chunkSizeWarningLimit: 2000,
       rollupOptions:{
@@ -85,55 +42,8 @@ export default withMermaid(defineConfig({
       }
     },
     plugins:[mathTextPlugin(),{name:'ensure-dist-chunks-dir',apply:'build',generateBundle(outputOptions){if(outputOptions.dir){mkdirSync(resolve(outputOptions.dir,'assets/chunks'),{recursive:true})}}}],
-    resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('./theme/StudyMermaid.vue',import.meta.url))}},
+    resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('../../src/core/diagrams/components/StudyMermaid.vue',import.meta.url))}},
     optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}
   },
-  themeConfig:{
-    sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
-    siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
-    nav:[
-      {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
-      {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
-    ],
-    sidebar:{
-      ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
-        {text: course.name, items:[
-          {text:'Tổng quan môn học',link:`/${course.id}/`},
-          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : [])
-        ]},
-        ...(course.review ? [
-          {text:'Ôn luyện',collapsed:false,items:[
-            {text:'Tổng quan ôn luyện',link:`/${course.id}/on-luyen`},
-            ...course.review.topicGroups.map(group=>({text:group.title,collapsed:true,items:group.topics.map(topic=>({text:topic.title,link:`/${course.id}/on-luyen/${topic.slug}`}))}))
-          ]},
-          {text:'Bài tập ôn luyện',items:[{text:'Bài tập',link:`/${course.id}/bai-tap`}]}
-        ] : []),
-        ...(course.parts ? course.parts.map(part=>({
-          text: part.title,
-          collapsed: false,
-          items: part.lessons.map(slug => {
-            const lesson = course.lessons.find(l => l.slug === slug)
-            if (!lesson) return null
-            const topics = (lesson.topicGroups || []).flatMap(group => group.topics)
-            return {
-              text: (course.id==='toan-cho-ai'?`Lecture ${String(lesson.number).padStart(2,'0')}. `:'') + lesson.title + (lesson.status==='draft'?' (đang biên soạn)':''),
-              link: `/${course.id}/bai-giang/${lesson.slug}`,
-              // Chương có trang chủ đề: Liệt kê các chủ đề theo thứ tự đọc, thu gọn khi không ở trong chương.
-              ...(topics.length ? { collapsed: true, items: topics.map((topic, i) => ({ text: `${i + 1}. ${topic.title}`, link: `/${course.id}/bai-giang/${lesson.slug}/${topic.slug}` })) } : {})
-            }
-          }).filter(Boolean)
-        })) : [
-          {text:'Bài giảng',items:course.lessons.map(lesson=>({text:lesson.title+(lesson.status==='draft'?' (đang biên soạn)':''),link:`/${course.id}/bai-giang/${lesson.slug}`}))}
-        ]),
-        {text:'Tra cứu',items:[{text:'Wiki thuật ngữ',link:'/wiki/'},{text:'Góc học tập',link:'/goc-hoc-tap'}]}
-      ]])),
-      '/wiki/':[
-        {text:'Wiki học tập',items:[{text:'Tất cả thuật ngữ',link:'/wiki/'}]},
-        ...wikiGroups.map(group=>({text:group.name,collapsed:true,items:group.ids.map(id=>({text:concepts[id].name,link:`/wiki/${id}`}))}))
-      ],
-      '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'},{text:'Đóng góp nội dung',link:'/guide/contribute'}]}]
-    },
-    outline:{level:2,label:'Mục lục'},
-    docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
-  }
+  themeConfig:buildThemeConfig({ courseCatalog, wikiGroups, concepts })
 }))

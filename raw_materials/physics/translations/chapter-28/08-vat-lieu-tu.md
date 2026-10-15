@@ -12,8 +12,8 @@ Mô hình electron có khối lượng $m$, điện tích $-e$, chuyển động
 
 $$
 \begin{aligned}
-&I = \frac{e}{T}\\
-&\quad =\frac{ev}{2\pi r}.
+I &= \frac{e}{T} \\
+&= \frac{ev}{2\pi r}.
 \end{aligned}
 $$
 
@@ -21,11 +21,10 @@ Diện tích quỹ đạo là $A=\pi r^2$. Vì độ lớn mômen từ của m�
 
 $$
 \begin{aligned}
-&\mu = IA\\
-&\quad =\frac{ev}{2\pi r}(\pi r^2)\\
-&\quad =\frac{evr}{2}.
-\end{aligned}
-\tag{28.25}
+\mu &= IA \\
+&= \frac{ev}{2\pi r}(\pi r^2) \\
+&= \frac{evr}{2}.
+\end{aligned} \tag{28.25}
 $$
 
 Độ lớn mômen động lượng quỹ đạo là $L=mvr$. Thay $vr=L/m$ vào biểu thức trên:
@@ -43,12 +42,11 @@ Thay đơn vị mômen động lượng $L=h/(2\pi)$ vào (28.26), ta có đơn 
 
 $$
 \begin{aligned}
-&\mu_B = \frac{e}{2m}\frac{h}{2\pi}\\
-&\quad =\frac{eh}{4\pi m}\\
-&\quad =9{,}274\times10^{-24}\,\mathrm{A\,m^2}\\
-&\quad =9{,}274\times10^{-24}\,\mathrm{J/T}.
-\end{aligned}
-\tag{28.27}
+\mu_B &= \frac{e}{2m}\frac{h}{2\pi} \\
+&= \frac{eh}{4\pi m} \\
+&= 9{,}274\times10^{-24}\,\mathrm{A\,m^2} \\
+&= 9{,}274\times10^{-24}\,\mathrm{J/T}.
+\end{aligned} \tag{28.27}
 $$
 
 Hai cách ghi đơn vị tương đương vì năng lượng của mômen từ trong trường có dạng $U=-\vec\mu\cdot\vec B$. Electron còn có mômen động lượng spin nội tại, không bắt nguồn từ chuyển động quỹ đạo. Có thể hình dung cổ điển như vật quay quanh trục, nhưng spin không phải sự quay cơ học của một quả cầu mang điện. Mômen từ spin có độ lớn xấp xỉ $1{,}001\mu_B$.
@@ -131,9 +129,9 @@ Năng lượng tương tác là $U=-\vec\mu\cdot\vec B$. Độ lớn cực đạ
 
 $$
 \begin{aligned}
-&|U|_{\max} = \mu_BB\\
-&\quad =1{,}39\times10^{-23}\,\mathrm J\\
-&\quad =8{,}68\times10^{-5}\,\mathrm{eV}.
+|U|_{\max} &= \mu_BB \\
+&= 1{,}39\times10^{-23}\,\mathrm J \\
+&= 8{,}68\times10^{-5}\,\mathrm{eV}.
 \end{aligned}
 $$
 
@@ -141,10 +139,10 @@ $$
 
 $$
 \begin{aligned}
-&K = \frac32kT\\
-&\quad =\frac32(4{,}142\times10^{-21}\,\mathrm J)\\
-&\quad =6{,}21\times10^{-21}\,\mathrm J\\
-&\quad =3{,}88\times10^{-2}\,\mathrm{eV}.
+K &= \frac32kT \\
+&= \frac32(4{,}142\times10^{-21}\,\mathrm J) \\
+&= 6{,}21\times10^{-21}\,\mathrm J \\
+&= 3{,}88\times10^{-2}\,\mathrm{eV}.
 \end{aligned}
 $$
 
@@ -152,9 +150,9 @@ Tỉ số hai năng lượng là:
 
 $$
 \begin{aligned}
-&\frac{|U|_{\max}}{K} = \frac{1{,}39}{6{,}21}\times10^{-2}\\
-&\quad =2{,}24\times10^{-3}\\
-&\quad \approx0{,}2\%.
+\frac{|U|_{\max}}{K} &= \frac{1{,}39}{6{,}21}\times10^{-2} \\
+&= 2{,}24\times10^{-3} \\
+&\approx 0{,}2\%.
 \end{aligned}
 $$
 
@@ -213,10 +211,10 @@ Nam châm hình lập phương có độ từ hóa $M=8\times10^5\,\mathrm{A/m}$
 
 $$
 \begin{aligned}
-&\mu_{\mathrm{total}} = MV\\
-&\quad =(8\times10^5)(8\times10^{-6})\\
-&\quad =6{,}4\,\mathrm{A\,m^2}\\
-&\quad \approx6\,\mathrm{A\,m^2}
+\mu_{\mathrm{total}} &= MV \\
+&= (8\times10^5)(8\times10^{-6}) \\
+&= 6{,}4\,\mathrm{A\,m^2} \\
+&\approx 6\,\mathrm{A\,m^2}
 \end{aligned}
 $$
 
@@ -226,11 +224,11 @@ $$
 
 $$
 \begin{aligned}
-&B \approx \frac{\mu_0\mu_{\mathrm{total}}}{2\pi x^3}\\
-&\quad =\frac{(4\pi\times10^{-7})(6{,}4)}{2\pi(0{,}10)^3}\\
-&\quad =1{,}28\times10^{-3}\,\mathrm T\\
-&\quad \approx1\times10^{-3}\,\mathrm T\\
-&\quad =10\,\mathrm G.
+B &\approx \frac{\mu_0\mu_{\mathrm{total}}}{2\pi x^3} \\
+&= \frac{(4\pi\times10^{-7})(6{,}4)}{2\pi(0{,}10)^3} \\
+&= 1{,}28\times10^{-3}\,\mathrm T \\
+&\approx 1\times10^{-3}\,\mathrm T \\
+&= 10\,\mathrm G.
 \end{aligned}
 $$
 

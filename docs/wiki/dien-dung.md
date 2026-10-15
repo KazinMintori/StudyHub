@@ -43,9 +43,9 @@ Tổng quát, 1/C_s bằng tổng các nghịch đảo 1/Cᵢ, từ i = 1 đến
 
 $$
 \begin{aligned}
-&U = \frac{Q^2}{2C},\\
-&\quad =\frac12 CV^2,\\
-&\quad =\frac12 QV.
+U &= \frac{Q^2}{2C}, \\
+&= \frac12 CV^2, \\
+&= \frac12 QV.
 \end{aligned}
 $$
 

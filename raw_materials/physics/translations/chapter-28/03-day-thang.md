@@ -14,38 +14,31 @@ Góc $\phi$ giữa dòng điện và hướng từ phần tử đến $P$ thỏa
 
 $$
 \begin{aligned}
-&dB =\frac{\mu_0 I}{4\pi}\,\frac{dy\sin\phi}{r^2}\\
-&\quad =\frac{\mu_0 I}{4\pi}\,\frac{x\,dy}{(x^2+y^2)^{3/2}}.
-\end{aligned}
-\tag{28.8}
+dB &= \frac{\mu_0 I}{4\pi}\,\frac{dy\sin\phi}{r^2} \\
+&= \frac{\mu_0 I}{4\pi}\,\frac{x\,dy}{(x^2+y^2)^{3/2}}.
+\end{aligned} \tag{28.8}
 $$
 
 Quy tắc bàn tay phải cho thấy mọi $d\vec B$ tại điểm P đều hướng vào mặt phẳng hình. Vì vậy, ta có thể cộng các độ lớn bằng tích phân theo $y$ từ đầu dưới $-a$ đến đầu trên $a$:
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0 I}{4\pi}\\
-&\quad\times\int_{-a}^{a}\frac{x\,dy}{(x^2+y^2)^{3/2}}.
-\end{aligned}
+B = \frac{\mu_0 I}{4\pi} \times\int_{-a}^{a}\frac{x\,dy}{(x^2+y^2)^{3/2}}.
 $$
 
 Với $x>0$, đặt $u=y/x$, nên $dy=x\,du$. Để tách phần biến thiên khỏi biểu thức dài, đặt $f(y)=x/(x^2+y^2)^{3/2}$ và $g(u)=1/(1+u^2)^{3/2}$. Nguyên hàm của $g(u)/x$ là $G(u)=u/[x\sqrt{1+u^2}]$. Khi đổi biến và thế hai cận, ta được:
 
 $$
 \begin{aligned}
-&\mathcal I = \int_{-a}^{a}f(y)\,dy,\\
-&\mathcal I = G(a/x)-G(-a/x),\\
-&\mathcal I = \frac{2a}{x\sqrt{x^2+a^2}}.
+\mathcal I &= \int_{-a}^{a}f(y)\,dy, \\
+\mathcal I &= G(a/x)-G(-a/x), \\
+\mathcal I &= \frac{2a}{x\sqrt{x^2+a^2}}.
 \end{aligned}
 $$
 
 Thế kết quả tích phân vào biểu thức của $B$, ta được từ trường tại điểm nằm trên đường trung trực:
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0 I}{4\pi}\\
-&\quad\times\frac{2a}{x\sqrt{x^2+a^2}}.
-\end{aligned}
+B = \frac{\mu_0 I}{4\pi} \times\frac{2a}{x\sqrt{x^2+a^2}}.
 $$
 
 ### Giới hạn dây rất dài và đường sức từ
@@ -53,16 +46,13 @@ $$
 Nếu chiều dài dây lớn hơn nhiều khoảng cách đến điểm đo, thì $a\gg x$ và $\sqrt{x^2+a^2}\approx a$. Trong giới hạn $a\to\infty$, phương trình (28.8) trở thành:
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0 I}{2\pi x}.\end{aligned}
-\tag{28.9}
+B = \frac{\mu_0 I}{2\pi x}. \tag{28.9}
 $$
 
 Đối xứng trục cho biết từ trường có cùng độ lớn tại mọi điểm trên một đường tròn tâm nằm trên dây, trong mặt phẳng vuông góc với dây. Ở bán kính tổng quát $r$, từ trường quanh dây thẳng dài là:
 
 $$
-\begin{aligned}
-&B = \frac{\mu_0 I}{2\pi r}.\end{aligned}
+B = \frac{\mu_0 I}{2\pi r}.
 $$
 
 Các đường sức là những đường tròn đồng tâm với dây. Chiều của chúng được xác định bằng quy tắc bàn tay phải: Ngón cái chỉ theo chiều dòng điện, các ngón tay khum quanh dây theo chiều đường sức.
@@ -74,9 +64,7 @@ Hình 28.6: Từ trường quanh dây dẫn dài có các đường sức tròn,
 Đường sức điện của điện tích đường tỏa ra hoặc hướng vào điện tích. Trái lại, đường sức từ do dòng điện luôn khép kín. Điều đó phù hợp với định luật Gauss cho từ trường, theo đó tổng từ thông qua mọi mặt kín bằng không:
 
 $$
-\begin{aligned}
-&\oiint_S\vec B\cdot d\vec A = 0.\end{aligned}
-\tag{28.10}
+\oiint_S\vec B\cdot d\vec A = 0. \tag{28.10}
 $$
 
 Mọi đường sức từ đi vào mặt kín đều phải đi ra khỏi mặt ấy. Từ trường không có điểm bắt đầu hay kết thúc như đường sức của điện tích đơn lẻ.
@@ -88,12 +76,11 @@ Một dây dẫn thẳng, dài mang dòng $I=1{,}0\,\mathrm A$. Tại điểm c�
 
 $$
 \begin{aligned}
-&r = \frac{\mu_0 I}{2\pi B}\\
-&\quad =\frac{\mu_0}{2\pi}\,\frac{I}{B}\\
-&\quad =(2\times10^{-7}\,\mathrm{T\,m/A})\\
-&\quad\times(2\times10^4\,\mathrm{A/T})\\
-&\quad =4{,}0\times10^{-3}\,\mathrm m\\
-&\quad =4{,}0\,\mathrm{mm}.
+r &= \frac{\mu_0 I}{2\pi B} \\
+&= \frac{\mu_0}{2\pi}\,\frac{I}{B} \\
+&= (2\times10^{-7}\,\mathrm{T\,m/A}) \times(2\times10^4\,\mathrm{A/T}) \\
+&= 4{,}0\times10^{-3}\,\mathrm m \\
+&= 4{,}0\,\mathrm{mm}.
 \end{aligned}
 $$
 
@@ -111,8 +98,7 @@ Hình 28.7: Hai dây mang dòng điện bằng nhau nhưng ngược chiều. Đ�
 Xét hai dây thẳng, song song, mỗi dây mang dòng có độ lớn $I$ nhưng ngược chiều. Theo nguyên lý chồng chất, tại một điểm, ta cộng véc-tơ từ trường do dây 1 và dây 2 tạo ra:
 
 $$
-\begin{aligned}
-&\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.\end{aligned}
+\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.
 $$
 
 Chọn gốc tọa độ tại trung điểm hai dây, đặt dây 1 tại $x=-d$ và dây 2 tại $x=+d$. Dòng điện ở dây 1 hướng ra khỏi trang giấy, còn dòng ở dây 2 hướng vào trang giấy. Các khoảng cách đến từng dây cùng quy tắc bàn tay phải xác định độ lớn và dấu của thành phần từ trường theo $y$.
@@ -121,9 +107,9 @@ Chọn gốc tọa độ tại trung điểm hai dây, đặt dây 1 tại $x=-d
 
 $$
 \begin{aligned}
-&\vec B_1 = -\frac{\mu_0 I}{4\pi d}\,\hat\jmath,\\
-&\vec B_2 = \frac{\mu_0 I}{8\pi d}\,\hat\jmath,\\
-&\vec B_{\mathrm{tổng}}(P_1) = -\frac{\mu_0 I}{8\pi d}\,\hat\jmath.
+\vec B_1 &= -\frac{\mu_0 I}{4\pi d}\,\hat\jmath, \\
+\vec B_2 &= \frac{\mu_0 I}{8\pi d}\,\hat\jmath, \\
+\vec B_{\mathrm{tổng}}(P_1) &= -\frac{\mu_0 I}{8\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 
@@ -131,9 +117,9 @@ $$
 
 $$
 \begin{aligned}
-&\vec B_1 = \frac{\mu_0 I}{2\pi d}\,\hat\jmath,\\
-&\vec B_2 = \frac{\mu_0 I}{2\pi d}\,\hat\jmath,\\
-&\vec B_{\mathrm{tổng}}(P_2) = \frac{\mu_0 I}{\pi d}\,\hat\jmath.
+\vec B_1 &= \frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
+\vec B_2 &= \frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
+\vec B_{\mathrm{tổng}}(P_2) &= \frac{\mu_0 I}{\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 
@@ -141,9 +127,9 @@ $$
 
 $$
 \begin{aligned}
-&\vec B_1 = \frac{\mu_0 I}{6\pi d}\,\hat\jmath,\\
-&\vec B_2 = -\frac{\mu_0 I}{2\pi d}\,\hat\jmath,\\
-&\vec B_{\mathrm{tổng}}(P_3) = -\frac{\mu_0 I}{3\pi d}\,\hat\jmath.
+\vec B_1 &= \frac{\mu_0 I}{6\pi d}\,\hat\jmath, \\
+\vec B_2 &= -\frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
+\vec B_{\mathrm{tổng}}(P_3) &= -\frac{\mu_0 I}{3\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 
@@ -153,9 +139,9 @@ $$
 
 $$
 \begin{aligned}
-&C = \frac{1}{x+d}-\frac{1}{x-d},\\
-&\vec B(x) = \frac{\mu_0 I}{2\pi}C\,\hat\jmath,\\
-&\vec B(x) = -\frac{\mu_0 I d}{\pi(x^2-d^2)}\,\hat\jmath.
+C &= \frac{1}{x+d}-\frac{1}{x-d}, \\
+\vec B(x) &= \frac{\mu_0 I}{2\pi}C\,\hat\jmath, \\
+\vec B(x) &= -\frac{\mu_0 I d}{\pi(x^2-d^2)}\,\hat\jmath.
 \end{aligned}
 $$
 

@@ -1,0 +1,18 @@
+{
+  "course": "dsa",
+  "lecture": "complexity",
+  "route": "/dsa/bai-giang/complexity",
+  "notes": "docs/dsa/bai-giang/complexity.md",
+  "topics": [],
+  "slides": "src/content/courses/dsa/lectures/complexity/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "do-phuc-tap",
+    "quy-nap"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

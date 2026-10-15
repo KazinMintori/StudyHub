@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "23-vat-ly-hat-nhan",
+  "route": "/vat-ly-2/bai-giang/23-vat-ly-hat-nhan",
+  "notes": "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "photon",
+    "thuyet-tuong-doi-hep",
+    "cong-nang-luong",
+    "dao-ham"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

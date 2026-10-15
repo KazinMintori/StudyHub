@@ -25,9 +25,7 @@ Laser được dùng trong vi phẫu thuật và trong đầu đọc DVD, Blu-ra
 Bất kể phát ra từ nguồn nào, bức xạ điện từ luôn lan truyền trong chân không với cùng một tốc độ chính xác $c$. Tốc độ này được định nghĩa là:
 
 $$
-\begin{aligned}
-c &= 299\,792\,458\,\mathrm{m/s}
-\end{aligned}
+c = 299\,792\,458\,\mathrm{m/s}
 $$
 
 Giá trị này lấy tròn bằng $3{,}00 \times 10^8\,\mathrm{m/s}$ khi cần ba chữ số có nghĩa. Khoảng thời gian của một giây được định nghĩa bằng đồng hồ nguyên tử cesium, do đó một mét được định nghĩa chính xác là quãng đường mà ánh sáng truyền được trong chân không trong khoảng thời gian bằng $1 / 299\,792\,458\,\mathrm{s}$.

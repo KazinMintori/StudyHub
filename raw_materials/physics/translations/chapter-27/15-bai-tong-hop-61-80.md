@@ -21,9 +21,9 @@
 
 $$
 \begin{aligned}
-&\vec F = I(R,-R,0)\times(0,0,B)\\
-&\quad =(-IRB,-IRB,0)\\
-&\quad =(-0{,}800\,\hat i-0{,}800\,\hat j)\,\mathrm{N}.
+\vec F &= I(R,-R,0)\times(0,0,B) \\
+&= (-IRB,-IRB,0) \\
+&= (-0{,}800\,\hat i-0{,}800\,\hat j)\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -31,8 +31,8 @@ $$
 
 $$
 \begin{aligned}
-&F = \sqrt{2}(0{,}800\,\mathrm{N})\\
-&\quad =1{,}13\,\mathrm{N}.
+F &= \sqrt{2}(0{,}800\,\mathrm{N}) \\
+&= 1{,}13\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -42,9 +42,9 @@ Lực hướng theo đường phân giác xuống dưới và sang trái, tức 
 
 $$
 \begin{aligned}
-&\vec F = I(R,-R,0)\times(B,0,0)\\
-&\quad =IRB\,\hat k\\
-&\quad =0{,}800\,\hat k\,\mathrm{N}.
+\vec F &= I(R,-R,0)\times(B,0,0) \\
+&= IRB\,\hat k \\
+&= 0{,}800\,\hat k\,\mathrm{N}.
 \end{aligned}
 $$
 
@@ -73,9 +73,9 @@ Quạt trần dùng động cơ điện có nam châm vĩnh cửu đứng yên (
 
 $$
 \begin{aligned}
-&d = \frac{\pi D}{36}\\
-&\quad =1{,}31\times10^{-2}\,\mathrm{m}\\
-&\quad =1{,}31\,\mathrm{cm}.
+d &= \frac{\pi D}{36} \\
+&= 1{,}31\times10^{-2}\,\mathrm{m} \\
+&= 1{,}31\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -93,8 +93,8 @@ Khi đó
 
 $$
 \begin{aligned}
-&N = \frac{\mu}{IA}\\
-&\quad \approx1{,}38\times10^4\text{ vòng}.
+N &= \frac{\mu}{IA} \\
+&\approx 1{,}38\times10^4\text{ vòng}.
 \end{aligned}
 $$
 
@@ -114,8 +114,8 @@ Gần mặt đất, từ trường Trái Đất thường có độ lớn $0{,}5
 
 $$
 \begin{aligned}
-&A = \pi(d/2)^2\\
-&\quad =1{,}96\times10^{-5}\,\mathrm{m^2}.
+A &= \pi(d/2)^2 \\
+&= 1{,}96\times10^{-5}\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -130,8 +130,8 @@ $$
 
 $$
 \begin{aligned}
-&I = \frac{\rho Ag}{B_h}\\
-&\quad =4{,}82\times10^4\,\mathrm{A}.
+I &= \frac{\rho Ag}{B_h} \\
+&= 4{,}82\times10^4\,\mathrm{A}.
 \end{aligned}
 $$
 
@@ -141,8 +141,8 @@ $$
 
 $$
 \begin{aligned}
-&B_{\min} = \frac{\rho Ag}{900\,\mathrm{A}}\\
-&\quad =1{,}90\times10^{-3}\,\mathrm{T}.
+B_{\min} &= \frac{\rho Ag}{900\,\mathrm{A}} \\
+&= 1{,}90\times10^{-3}\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -150,8 +150,8 @@ $$
 
 $$
 \begin{aligned}
-&m_{\mathrm{tải}} = \frac{1{,}00-0{,}171}{9{,}80}\\
-&\quad =0{,}0846\,\mathrm{kg}.
+m_{\mathrm{tải}} &= \frac{1{,}00-0{,}171}{9{,}80} \\
+&= 0{,}0846\,\mathrm{kg}.
 \end{aligned}
 $$
 :::
@@ -174,18 +174,15 @@ Khung dây chữ nhật trong hình P27.64 quay quanh trục $y$ và mang dòng 
 
 $$
 \begin{aligned}
-&A = (0{,}0800)(0{,}0600)\\
-&\quad =4{,}80\times10^{-3}\,\mathrm{m^2}.
+A &= (0{,}0800)(0{,}0600) \\
+&= 4{,}80\times10^{-3}\,\mathrm{m^2}.
 \end{aligned}
 $$
 
 Do đó $\mu=0{,}0720\,\mathrm{A\,m^2}$. Theo chiều dòng điện trong hình, thành phần pháp tuyến là
 
 $$
-\begin{aligned}
-&\vec\mu = \mu\sin30^\circ\,\hat i\\
-&\quad-\mu\cos30^\circ\,\hat k.
-\end{aligned}
+\vec\mu = \mu\sin30^\circ\,\hat i -\mu\cos30^\circ\,\hat k.
 $$
 
 Vì vậy từ trường tạo mômen $0{,}0299\,\mathrm{N\,m}$ theo $-y$ khi $\vec B$ hướng $+x$, và $0{,}0173\,\mathrm{N\,m}$ theo $+y$ khi $\vec B$ hướng $-z$.
@@ -215,8 +212,8 @@ Khung dây trong hình P27.65 có khối lượng dây $0{,}15\,\mathrm{g/cm}$, 
 
 $$
 \begin{aligned}
-&m = (0{,}015\,\mathrm{kg/m})(0{,}28\,\mathrm{m})\\
-&\quad =4{,}20\times10^{-3}\,\mathrm{kg}.
+m &= (0{,}015\,\mathrm{kg/m})(0{,}28\,\mathrm{m}) \\
+&= 4{,}20\times10^{-3}\,\mathrm{kg}.
 \end{aligned}
 $$
 
@@ -224,8 +221,8 @@ Diện tích khung là
 
 $$
 \begin{aligned}
-&A = (0{,}08)(0{,}06)\\
-&\quad =4{,}8\times10^{-3}\,\mathrm{m^2}.
+A &= (0{,}08)(0{,}06) \\
+&= 4{,}8\times10^{-3}\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -235,9 +232,9 @@ Tại góc $\theta=30^\circ$, cánh tay đòn của trọng lực bằng $(0{,}0
 
 $$
 \begin{aligned}
-&\tau_g = mg\frac{0{,}08}{2}\sin\theta,\\
-&\tau_B = IAB\cos\theta,\\
-&IAB\cos\theta = mg\frac{0{,}08}{2}\sin\theta.
+\tau_g &= mg\frac{0{,}08}{2}\sin\theta, \\
+\tau_B &= IAB\cos\theta, \\
+IAB\cos\theta &= mg\frac{0{,}08}{2}\sin\theta.
 \end{aligned}
 $$
 
@@ -245,8 +242,8 @@ Chia hai vế cho $IA\cos\theta$ cho:
 
 $$
 \begin{aligned}
-&B = \frac{mg(0{,}08/2)\tan30^\circ}{IA}\\
-&\quad =2{,}41\times10^{-2}\,\mathrm{T}.
+B &= \frac{mg(0{,}08/2)\tan30^\circ}{IA} \\
+&= 2{,}41\times10^{-2}\,\mathrm{T}.
 \end{aligned}
 $$
 
@@ -277,8 +274,8 @@ Mômen vi phân quanh $a$ là
 
 $$
 \begin{aligned}
-&d\vec\tau = x\hat i\times d\vec F\\
-&\quad =IBx\,dx\,\hat k.
+d\vec\tau &= x\hat i\times d\vec F \\
+&= IBx\,dx\,\hat k.
 \end{aligned}
 $$
 
@@ -286,8 +283,8 @@ $$
 
 $$
 \begin{aligned}
-&\vec\tau = IB\hat k\int_0^L x\,dx\\
-&\quad =\frac{1}{2}IBL^2\hat k.
+\vec\tau &= IB\hat k\int_0^L x\,dx \\
+&= \frac{1}{2}IBL^2\hat k.
 \end{aligned}
 $$
 
@@ -355,11 +352,9 @@ Mục 27.7 chỉ ra rằng lực tổng lên vòng dây có dòng điện bằng
 
 $$
 \begin{aligned}
-&F = NI(B\sin60^\circ)(\pi D)\\
-&\quad =(50)(0{,}950)\\
-&\quad\times(0{,}220\sin60^\circ)\\
-&\quad\times\pi(0{,}0156)\\
-&\quad =0{,}444\,\mathrm{N}.
+F &= NI(B\sin60^\circ)(\pi D) \\
+&= (50)(0{,}950) \times(0{,}220\sin60^\circ) \times\pi(0{,}0156) \\
+&= 0{,}444\,\mathrm{N}.
 \end{aligned}
 $$
 :::
@@ -382,9 +377,9 @@ Thanh đồng chất có khối lượng $0{,}0120\,\mathrm{kg}$, dài $30{,}0\,
 
 $$
 \begin{aligned}
-&mg\frac{L}{2}\cos\theta = IB\frac{L^2}{2}\\
-&I = \frac{mg\cos\theta}{BL}\\
-&\quad =2{,}26\,\mathrm{A}.
+mg\frac{L}{2}\cos\theta &= IB\frac{L^2}{2} \\
+I &= \frac{mg\cos\theta}{BL} \\
+&= 2{,}26\,\mathrm{A}.
 \end{aligned}
 $$
 
@@ -397,10 +392,7 @@ Trọng lực làm thanh quay theo chiều kim đồng hồ. Với $\vec B$ hư�
 Trong mục 27.7 đã chỉ ra rằng lực tổng trên vòng dây có dòng điện bằng không trong từ trường đều. Nếu $\vec B$ không đều thì sao? Hình P27.71 là một vòng dây vuông nằm trong mặt phẳng $xy$, có các đỉnh $(0,0)$, $(0,L)$, $(L,0)$ và $(L,L)$, mang dòng điện không đổi $I$ theo chiều kim đồng hồ. Từ trường không có thành phần $x$, nhưng có các thành phần $y$ và $z$:
 
 $$
-\begin{aligned}
-&\vec B = \frac{B_0z}{L}\hat j\\
-&\quad+\frac{B_0y}{L}\hat k.
-\end{aligned}
+\vec B = \frac{B_0z}{L}\hat j +\frac{B_0y}{L}\hat k.
 $$
 
 trong đó $B_0$ là hằng số dương. (a) Phác họa đường sức từ trong mặt phẳng $yz$. (b) Dùng cách tích phân phương trình (27.20), tìm độ lớn và hướng lực từ trên từng cạnh. (c) Tìm độ lớn và hướng lực từ tổng lên vòng dây.
@@ -431,9 +423,8 @@ Trên cạnh dưới $y=0$, trường bằng không, nên lực bằng không. T
 
 $$
 \begin{aligned}
-&\vec F_{\mathrm{top}} = IB_0\int_0^L dx\\
-&\quad\times(\hat i\times\hat k)\\
-&\quad =-IB_0L\hat j.
+\vec F_{\mathrm{top}} &= IB_0\int_0^L dx \times(\hat i\times\hat k) \\
+&= -IB_0L\hat j.
 \end{aligned}
 $$
 
@@ -441,9 +432,8 @@ Trên cạnh trái $x=0$, dòng theo $+y$:
 
 $$
 \begin{aligned}
-&\vec F_{\mathrm{left}} = \frac{IB_0}{L}\int_0^L y\,dy\\
-&\quad\times(\hat j\times\hat k)\\
-&\quad =\frac12IB_0L\hat i.
+\vec F_{\mathrm{left}} &= \frac{IB_0}{L}\int_0^L y\,dy \times(\hat j\times\hat k) \\
+&= \frac12IB_0L\hat i.
 \end{aligned}
 $$
 
@@ -451,9 +441,8 @@ Trên cạnh phải $x=L$, tích phân theo chiều dòng đi từ $y=L$ xuống
 
 $$
 \begin{aligned}
-&\vec F_{\mathrm{right}} = \frac{IB_0}{L}\int_L^0 y\,dy\\
-&\quad\times(\hat j\times\hat k)\\
-&\quad =-\frac12IB_0L\hat i.
+\vec F_{\mathrm{right}} &= \frac{IB_0}{L}\int_L^0 y\,dy \times(\hat j\times\hat k) \\
+&= -\frac12IB_0L\hat i.
 \end{aligned}
 $$
 
@@ -486,8 +475,8 @@ $$
 
 $$
 \begin{aligned}
-&\tau_B = \frac12 IBL^2\\
-&\quad =2{,}33\times10^{-2}\,\mathrm{N\,m}.
+\tau_B &= \frac12 IBL^2 \\
+&= 2{,}33\times10^{-2}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -495,8 +484,8 @@ Mômen trọng lực có độ lớn
 
 $$
 \begin{aligned}
-&\tau_g = mg\frac L2\cos\theta\\
-&\quad =4{,}45\times10^{-2}\,\mathrm{N\,m}.
+\tau_g &= mg\frac L2\cos\theta \\
+&= 4{,}45\times10^{-2}\,\mathrm{N\,m}.
 \end{aligned}
 $$
 
@@ -504,12 +493,12 @@ Lực căng tác dụng ngang ở đầu thanh, nên cánh tay đòn là $L\sin\
 
 $$
 \begin{aligned}
-&\tau_g = mg\frac L2\cos\theta\\
-&\quad =0{,}0446\,\mathrm{N\cdot m},\\
-&\tau_B = \frac12IBL^2\\
-&\quad =0{,}0233\,\mathrm{N\cdot m},\\
-&T = \frac{\tau_g+\tau_B}{L\sin\theta}\\
-&\quad =0{,}472\,\mathrm N.
+\tau_g &= mg\frac L2\cos\theta \\
+&= 0{,}0446\,\mathrm{N\cdot m}, \\
+\tau_B &= \frac12IBL^2 \\
+&= 0{,}0233\,\mathrm{N\cdot m}, \\
+T &= \frac{\tau_g+\tau_B}{L\sin\theta} \\
+&= 0{,}472\,\mathrm N.
 \end{aligned}
 $$
 :::
@@ -560,8 +549,8 @@ $$
 
 $$
 \begin{aligned}
-&\theta = \frac hR-1,\\
-&\tau_{\mathrm{net}} = MgR(s\cos\theta-1).
+\theta &= \frac hR-1, \\
+\tau_{\mathrm{net}} &= MgR(s\cos\theta-1).
 \end{aligned}
 $$
 
@@ -575,11 +564,9 @@ $$
 
 $$
 \begin{aligned}
-&\theta = \frac hR-1,\\
-&U(h) = Mgh\\
-&\quad-MgRs\\
-&\quad-MgRs\sin\theta,\\
-&\quad R\le h\le h_{\mathrm{top}}.
+\theta &= \frac hR-1, \\
+U(h) &= Mgh -MgRs -MgRs\sin\theta, \\
+R &\le h\le h_{\mathrm{top}}.
 \end{aligned}
 $$
 
@@ -588,17 +575,13 @@ Hai nhánh thế năng trùng nhau tại $h=R$, nên thế năng liên tục ở
 (g) Cân bằng ở chặng sau thỏa $\tau_{\mathrm{net}}=0$, vì thế $\cos\theta=1/s$. Với $s>1$, nghiệm là $\theta=\arccos(1/s)$. Đạo hàm mômen theo góc tại nghiệm âm, nên cân bằng bền. Độ cao cân bằng:
 
 $$
-\begin{aligned}
-&h = R\left[1+\arccos\left(\frac{1}{s}\right)\right].\end{aligned}
+h = R\left[1+\arccos\left(\frac{1}{s}\right)\right].
 $$
 
 (h) Thay $h_{\mathrm{top}}=R(1+\pi/2)$ vào thế năng:
 
 $$
-\begin{aligned}
-&U(h_{\mathrm{top}}) = MgR\left(1+\frac{\pi}{2}\right)\\
-&\quad-2sMgR.
-\end{aligned}
+U(h_{\mathrm{top}}) = MgR\left(1+\frac{\pi}{2}\right) -2sMgR.
 $$
 
 Vật quay quá nửa vòng khi $U(h_{\mathrm{top}})>0$, tức là $s<\frac12(1+\pi/2)$.
@@ -628,8 +611,8 @@ $$
 
 $$
 \begin{aligned}
-&\frac{d^2v_y}{dt^2} = -\omega\frac{dv_x}{dt}\\
-&\quad =-\omega^2v_y.
+\frac{d^2v_y}{dt^2} &= -\omega\frac{dv_x}{dt} \\
+&= -\omega^2v_y.
 \end{aligned}
 $$
 
@@ -649,8 +632,8 @@ $$
 
 $$
 \begin{aligned}
-&x(t) = \frac{g}{\omega}t-\frac{g}{\omega^2}\sin(\omega t),\\
-&y(t) = \frac{g}{\omega^2}[1-\cos(\omega t)].
+x(t) &= \frac{g}{\omega}t-\frac{g}{\omega^2}\sin(\omega t), \\
+y(t) &= \frac{g}{\omega^2}[1-\cos(\omega t)].
 \end{aligned}
 $$
 
@@ -664,8 +647,8 @@ Vì vậy:
 
 $$
 \begin{aligned}
-&y_{\max} = 5{,}10\times10^{-4}\,\mathrm{m}\\
-&\quad =0{,}510\,\mathrm{mm}.
+y_{\max} &= 5{,}10\times10^{-4}\,\mathrm{m} \\
+&= 0{,}510\,\mathrm{mm}.
 \end{aligned}
 $$
 :::
@@ -692,8 +675,8 @@ Tích có hướng cho các thành phần:
 
 $$
 \begin{aligned}
-&\tau_x = IAB_y=4D,\\
-&\tau_y = -IAB_x=-3D.
+\tau_x &= IAB_y=4D, \\
+\tau_y &= -IAB_x=-3D.
 \end{aligned}
 $$
 
@@ -701,17 +684,15 @@ $$
 
 $$
 \begin{aligned}
-&B_z^2 = (13C)^2-(3C)^2\\
-&\quad-(4C)^2\\
-&\quad =144C^2.
+B_z^2 &= (13C)^2-(3C)^2 -(4C)^2 \\
+&= 144C^2.
 \end{aligned}
 $$
 
 Vì $U=IAB_z<0$, phải chọn $B_z=-12C$.
 
 $$
-\begin{aligned}
-&\vec B = \frac{D}{IA}(3\hat i+4\hat j-12\hat k).\end{aligned}
+\vec B = \frac{D}{IA}(3\hat i+4\hat j-12\hat k).
 $$
 
 :::
@@ -751,8 +732,8 @@ $$
 
 $$
 \begin{aligned}
-&\frac qm = \frac{2}{B^2\,\mathrm{slope}}\\
-&\quad =7{,}96\times10^6\,\mathrm{C/kg}.
+\frac qm &= \frac{2}{B^2\,\mathrm{slope}} \\
+&= 7{,}96\times10^6\,\mathrm{C/kg}.
 \end{aligned}
 $$
 
@@ -760,8 +741,8 @@ $$
 
 $$
 \begin{aligned}
-&v = \sqrt{2(q/m)V}\\
-&\quad =5{,}64\times10^5\,\mathrm{m/s}.
+v &= \sqrt{2(q/m)V} \\
+&= 5{,}64\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -796,8 +777,8 @@ $$
 
 $$
 \begin{aligned}
-&m = \frac{2eB^2}{\mathrm{slope}}\\
-&\quad =1{,}85\times10^{-28}\,\mathrm{kg}.
+m &= \frac{2eB^2}{\mathrm{slope}} \\
+&= 1{,}85\times10^{-28}\,\mathrm{kg}.
 \end{aligned}
 $$
 
@@ -805,10 +786,9 @@ $$
 
 $$
 \begin{aligned}
-&V_{\mathrm{bản}} = Ed\\
-&\quad =(2{,}00\times10^5)\\
-&\quad\times(6{,}00\times10^{-3})\\
-&\quad =1{,}20\times10^3\,\mathrm{V}.
+V_{\mathrm{bản}} &= Ed \\
+&= (2{,}00\times10^5) \times(6{,}00\times10^{-3}) \\
+&= 1{,}20\times10^3\,\mathrm{V}.
 \end{aligned}
 $$
 
@@ -816,9 +796,9 @@ $$
 
 $$
 \begin{aligned}
-&v = \sqrt{\frac{2eV}{m}}\\
-&\quad =\frac{\sqrt{8{,}0\times10^{10}}}{0{,}340}\\
-&\quad =8{,}32\times10^5\,\mathrm{m/s}.
+v &= \sqrt{\frac{2eV}{m}} \\
+&= \frac{\sqrt{8{,}0\times10^{10}}}{0{,}340} \\
+&= 8{,}32\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 :::
@@ -843,8 +823,8 @@ Bạn là kỹ thuật viên kiểm tra máy gia tốc hạt kiểu cyclotron. M
 
 $$
 \begin{aligned}
-&\frac qm = 2\pi(7{,}67\times10^6)\\
-&\quad =4{,}82\times10^7\,\mathrm{C/kg}.
+\frac qm &= 2\pi(7{,}67\times10^6) \\
+&= 4{,}82\times10^7\,\mathrm{C/kg}.
 \end{aligned}
 $$
 
@@ -852,8 +832,8 @@ Khối lượng hạt alpha là
 
 $$
 \begin{aligned}
-&m_\alpha = \frac{2e}{q/m}\\
-&\quad =6{,}65\times10^{-27}\,\mathrm{kg}.
+m_\alpha &= \frac{2e}{q/m} \\
+&= 6{,}65\times10^{-27}\,\mathrm{kg}.
 \end{aligned}
 $$
 
@@ -861,10 +841,10 @@ $$
 
 $$
 \begin{aligned}
-&f_p = \frac{eB}{2\pi m_p}\\
-&\quad =4{,}57\times10^6\,\mathrm{Hz},\\
-&f_e = \frac{eB}{2\pi m_e}\\
-&\quad =8{,}41\times10^9\,\mathrm{Hz}.
+f_p &= \frac{eB}{2\pi m_p} \\
+&= 4{,}57\times10^6\,\mathrm{Hz}, \\
+f_e &= \frac{eB}{2\pi m_e} \\
+&= 8{,}41\times10^9\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -872,8 +852,8 @@ Tần số alpha là
 
 $$
 \begin{aligned}
-&f_\alpha = \frac{(q/m)_\alpha B}{2\pi}\\
-&\quad =2{,}30\times10^6\,\mathrm{Hz}.
+f_\alpha &= \frac{(q/m)_\alpha B}{2\pi} \\
+&= 2{,}30\times10^6\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -912,8 +892,8 @@ $$
 
 $$
 \begin{aligned}
-&M = \frac{4\pi}{3}\sigma\omega R^4\\
-&\quad =\frac{Q\omega R^2}{3}.
+M &= \frac{4\pi}{3}\sigma\omega R^4 \\
+&= \frac{Q\omega R^2}{3}.
 \end{aligned}
 $$
 
@@ -923,9 +903,8 @@ Vì $\vec\Omega=\omega\hat k$, ta có $\vec M=(QR^2/3)\vec\Omega$.
 
 $$
 \begin{aligned}
-&\vec\tau = \vec M\times\vec B\\
-&\quad =\frac{Q\omega R^2B}{3}\\
-&\quad\times(\sin\alpha\hat j-\cos\alpha\hat i).
+\vec\tau &= \vec M\times\vec B \\
+&= \frac{Q\omega R^2B}{3} \times(\sin\alpha\hat j-\cos\alpha\hat i).
 \end{aligned}
 $$
 :::
@@ -949,10 +928,10 @@ Một electron từ gió Mặt Trời bay tới từ quyển Trái Đất tại 
 
 $$
 \begin{aligned}
-&v_\parallel = v\cos80^\circ\\
-&\quad =6{,}95\times10^4\,\mathrm{m/s},\\
-&v_\perp = v\sin80^\circ\\
-&\quad =3{,}94\times10^5\,\mathrm{m/s}.
+v_\parallel &= v\cos80^\circ \\
+&= 6{,}95\times10^4\,\mathrm{m/s}, \\
+v_\perp &= v\sin80^\circ \\
+&= 3{,}94\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -960,8 +939,8 @@ $$
 
 $$
 \begin{aligned}
-&r = \frac{m_ev_\perp}{eB}\\
-&\quad \approx0{,}150\,\mathrm m.
+r &= \frac{m_ev_\perp}{eB} \\
+&\approx 0{,}150\,\mathrm m.
 \end{aligned}
 $$
 
@@ -973,8 +952,8 @@ $$
 
 $$
 \begin{aligned}
-&f = \frac{eB}{2\pi m_e}\\
-&\quad \approx4{,}19\times10^5\,\mathrm{Hz}.
+f &= \frac{eB}{2\pi m_e} \\
+&\approx 4{,}19\times10^5\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -982,10 +961,10 @@ $$
 
 $$
 \begin{aligned}
-&W_E = eE\Delta s\\
-&\quad =3{,}20\times10^{-16}\,\mathrm J,\\
-&v_f = \sqrt{v_i^2+\frac{2W_E}{m_e}}\\
-&\quad \approx2{,}65\times10^7\,\mathrm{m/s}.
+W_E &= eE\Delta s \\
+&= 3{,}20\times10^{-16}\,\mathrm J, \\
+v_f &= \sqrt{v_i^2+\frac{2W_E}{m_e}} \\
+&\approx 2{,}65\times10^7\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -993,8 +972,8 @@ $$
 
 $$
 \begin{aligned}
-&\frac{K_f}{K_i} = 1+\frac{W_E}{\tfrac12m_ev_i^2}\\
-&\quad \approx4{,}39\times10^3.
+\frac{K_f}{K_i} &= 1+\frac{W_E}{\tfrac12m_ev_i^2} \\
+&\approx 4{,}39\times10^3.
 \end{aligned}
 $$
 

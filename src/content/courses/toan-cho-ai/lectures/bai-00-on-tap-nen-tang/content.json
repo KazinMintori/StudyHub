@@ -1,0 +1,96 @@
+{
+  "course": "toan-cho-ai",
+  "lecture": "bai-00-on-tap-nen-tang",
+  "route": "/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang",
+  "notes": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+  "topics": [
+    {
+      "slug": "he-thieu-xac-dinh-va-giai-tich-ma-tran",
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md"
+    }
+  ],
+  "slides": "src/content/courses/toan-cho-ai/lectures/bai-00-on-tap-nen-tang/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "ham-so",
+    "dao-ham",
+    "tap-hop"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 489,
+      "title": "1. Kiểm tra tính xác định dương và Phần bù Schur cho ma trận khối"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 527,
+      "title": "2. Thực hiện phân tích Cholesky và Giải hệ phương trình chuẩn tắc"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 563,
+      "title": "3. Phân tích SVD và Độ co giãn của ma trận dữ liệu"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 591,
+      "title": "4. So sánh chi phí Flops và Thuật toán Khử khối Schur cho Hệ KKT"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 250,
+      "title": "Bài tập 1: Tính Nghiệm Chuẩn Nhỏ Nhất và Kiểm Tra Tính Trực Giao"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 309,
+      "title": "Bài tập 2: Cập Nhật Nghịch Đảo Ma Trận Bằng Công Thức Sherman-Morrison"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 367,
+      "title": "Bài tập 3: Tối Đa Hóa Entropy Ma Trận Hiệp Phương Sai (Maximum Entropy Covariance)"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 499,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 535,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 568,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
+      "line": 604,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 262,
+      "title": "Lời giải chi tiết:"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 322,
+      "title": "Lời giải chi tiết:"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.md",
+      "line": 384,
+      "title": "Lời giải chi tiết:"
+    }
+  ],
+  "assets": []
+}

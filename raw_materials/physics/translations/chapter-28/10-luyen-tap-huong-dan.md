@@ -30,8 +30,8 @@ Một proton có điện tích $+1{,}60\times10^{-19}\,\mathrm C$ ở gốc tọ
 
 $$
 \begin{aligned}
-&\vec B = 10^{-7}\frac{qv}{r^2}\hat k\\
-&\quad =3{,}20\times10^{-15}\,\hat k\,\mathrm T.
+\vec B &= 10^{-7}\frac{qv}{r^2}\hat k \\
+&= 3{,}20\times10^{-15}\,\hat k\,\mathrm T.
 \end{aligned}
 $$
 
@@ -68,8 +68,8 @@ Một proton có điện tích $+1{,}60\times10^{-19}\,\mathrm C$ và một elec
 
 $$
 \begin{aligned}
-&F = \frac{\mu_0}{4\pi}\frac{e^2v^2}{d^2}\\
-&\quad =1{,}13\times10^{-28}\,\mathrm N.
+F &= \frac{\mu_0}{4\pi}\frac{e^2v^2}{d^2} \\
+&= 1{,}13\times10^{-28}\,\mathrm N.
 \end{aligned}
 $$
 
@@ -100,9 +100,9 @@ $$
 
 $$
 \begin{aligned}
-&B = 10^{-7}\frac{I\,d l\sin\theta}{r^2}\\
-&\quad =\frac{7{,}20\times10^{-10}}{25{,}0}\\
-&\quad =2{,}88\times10^{-11}\,\mathrm T.
+B &= 10^{-7}\frac{I\,d l\sin\theta}{r^2} \\
+&= \frac{7{,}20\times10^{-10}}{25{,}0} \\
+&= 2{,}88\times10^{-11}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -133,8 +133,8 @@ Vì $(-\hat i)\times\hat j=-\hat k$ và electron mang điện âm, lực hướn
 
 $$
 \begin{aligned}
-&\vec F = |q|vB\,\hat k\\
-&\quad =9{,}83\times10^{-23}\,\hat k\,\mathrm N.
+\vec F &= |q|vB\,\hat k \\
+&= 9{,}83\times10^{-23}\,\hat k\,\mathrm N.
 \end{aligned}
 $$
 :::
@@ -158,8 +158,8 @@ Một dây dẫn thẳng dài phải mang dòng điện bao nhiêu để từ tr
 
 $$
 \begin{aligned}
-&I = \frac{2\pi rB}{\mu_0}\\
-&\quad =2{,}24\,\mathrm A.
+I &= \frac{2\pi rB}{\mu_0} \\
+&= 2{,}24\,\mathrm A.
 \end{aligned}
 $$
 :::
@@ -221,8 +221,8 @@ Một dây thẳng dài mang dòng $2{,}00\,\mathrm A$. Dây thứ hai giống h
 
 $$
 \begin{aligned}
-&|2{,}00-I_2| = 3{,}00\\
-&I_2 = 5{,}00\,\mathrm A.
+|2{,}00-I_2| &= 3{,}00 \\
+I_2 &= 5{,}00\,\mathrm A.
 \end{aligned}
 $$
 
@@ -232,8 +232,8 @@ Nghiệm âm tương ứng với dòng ngược chiều, không thuộc trườn
 
 $$
 \begin{aligned}
-&2{,}00+I_2 = 3{,}00\\
-&I_2 = 1{,}00\,\mathrm A.
+2{,}00+I_2 &= 3{,}00 \\
+I_2 &= 1{,}00\,\mathrm A.
 \end{aligned}
 $$
 :::
@@ -253,8 +253,8 @@ Hai dây siêu dẫn thẳng song song cách nhau $0{,}900\,\mathrm m$, đều t
 
 $$
 \begin{aligned}
-&I_2 = \frac{(F/L)2\pi r}{\mu_0 I_1}\\
-&\quad =3{,}29\times10^4\,\mathrm A.
+I_2 &= \frac{(F/L)2\pi r}{\mu_0 I_1} \\
+&= 3{,}29\times10^4\,\mathrm A.
 \end{aligned}
 $$
 
@@ -289,8 +289,8 @@ Một dây dẫn hình trụ đặc bán kính $4{,}50\,\mathrm{cm}$ mang dòng 
 
 $$
 \begin{aligned}
-&B = \frac{\mu_0 I r}{2\pi R^2}\\
-&\quad =4{,}94\times10^{-6}\,\mathrm T.
+B &= \frac{\mu_0 I r}{2\pi R^2} \\
+&= 4{,}94\times10^{-6}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -327,8 +327,8 @@ Trong vật liệu, diện tích vành khăn được bao là:
 
 $$
 \begin{aligned}
-&A_{\mathrm{encl}} = \pi(r^2-R_1^2),\\
-&I_{\mathrm{encl}} = J A_{\mathrm{encl}}.
+A_{\mathrm{encl}} &= \pi(r^2-R_1^2), \\
+I_{\mathrm{encl}} &= J A_{\mathrm{encl}}.
 \end{aligned}
 $$
 
@@ -336,8 +336,8 @@ Từ định luật Ampere:
 
 $$
 \begin{aligned}
-&B = \frac{\mu_0 I_{\mathrm{encl}}}{2\pi r}\\
-&\quad =\frac{\mu_0 J A_{\mathrm{encl}}}{2\pi r}.
+B &= \frac{\mu_0 I_{\mathrm{encl}}}{2\pi r} \\
+&= \frac{\mu_0 J A_{\mathrm{encl}}}{2\pi r}.
 \end{aligned}
 $$
 
@@ -365,8 +365,8 @@ Một ống dây rất dài, quấn sít, có $8{,}00\times10^3$ vòng trên m�
 
 $$
 \begin{aligned}
-&I = \frac{B}{\mu_0n}\\
-&\quad =3{,}18\,\mathrm A.
+I &= \frac{B}{\mu_0n} \\
+&= 3{,}18\,\mathrm A.
 \end{aligned}
 $$
 :::
@@ -389,8 +389,8 @@ Một dây đồng mang dòng $0{,}840\,\mathrm A$ được quấn quanh lõi h�
 
 $$
 \begin{aligned}
-&N = \frac{2\pi rB}{\mu_0 I}\\
-&\quad \approx833\text{ vòng}.
+N &= \frac{2\pi rB}{\mu_0 I} \\
+&\approx 833\text{ vòng}.
 \end{aligned}
 $$
 
@@ -398,10 +398,10 @@ $$
 
 $$
 \begin{aligned}
-&B_{\max}=\frac{\mu_0NI}{2\pi r_1}\\
-&\quad=2{,}33\times10^{-3}\,\mathrm T,\\
-&B_{\min}=\frac{\mu_0NI}{2\pi r_2}\\
-&\quad=1{,}75\times10^{-3}\,\mathrm T.
+B_{\max} &= \frac{\mu_0NI}{2\pi r_1} \\
+&= 2{,}33\times10^{-3}\,\mathrm T, \\
+B_{\min} &= \frac{\mu_0NI}{2\pi r_2} \\
+&= 1{,}75\times10^{-3}\,\mathrm T.
 \end{aligned}
 $$
 :::
@@ -466,10 +466,10 @@ Tích phân trên toàn đĩa:
 
 $$
 \begin{aligned}
-&B = \int_0^a dB\\
-&\quad =\mu_0\pi n\sigma\int_0^a dr\\
-&\quad =\mu_0\pi n\sigma a\\
-&\quad =\frac{\mu_0 nQ}{a}.
+B &= \int_0^a dB \\
+&= \mu_0\pi n\sigma\int_0^a dr \\
+&= \mu_0\pi n\sigma a \\
+&= \frac{\mu_0 nQ}{a}.
 \end{aligned}
 $$
 

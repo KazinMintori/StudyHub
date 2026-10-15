@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "12-co-hoc-chat-luu",
+  "route": "/vat-ly-1/bai-giang/12-co-hoc-chat-luu",
+  "notes": "docs/vat-ly-1/bai-giang/12-co-hoc-chat-luu.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "luc",
+    "cong-nang-luong",
+    "don-vi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

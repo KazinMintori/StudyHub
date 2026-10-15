@@ -30,8 +30,8 @@ Với hạt tải dương trong Hình 27.41b, điện trường cân bằng hư�
 
 $$
 \begin{aligned}
-&qE_z+qv_dB_y = 0,\\
-&E_z = -v_dB_y.
+qE_z+qv_dB_y &= 0, \\
+E_z &= -v_dB_y.
 \end{aligned}
 $$
 
@@ -66,11 +66,10 @@ Mật độ dòng:
 
 $$
 \begin{aligned}
-&A = (2{,}0\times10^{-3})\\
-&\quad\times(1{,}50\times10^{-2})\,\mathrm{m^2}\\
-&\quad =3{,}0\times10^{-5}\,\mathrm{m^2},\\
-&J_x = I/A\\
-&\quad =2{,}5\times10^6\,\mathrm{A/m^2}.
+A &= (2{,}0\times10^{-3}) \times(1{,}50\times10^{-2})\,\mathrm{m^2} \\
+&= 3{,}0\times10^{-5}\,\mathrm{m^2}, \\
+J_x &= I/A \\
+&= 2{,}5\times10^6\,\mathrm{A/m^2}.
 \end{aligned}
 $$
 
@@ -78,8 +77,8 @@ $$
 
 $$
 \begin{aligned}
-&E_z = \frac{0{,}81\times10^{-6}}{1{,}50\times10^{-2}}\\
-&\quad =5{,}4\times10^{-5}\,\mathrm{V/m}.
+E_z &= \frac{0{,}81\times10^{-6}}{1{,}50\times10^{-2}} \\
+&= 5{,}4\times10^{-5}\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -87,9 +86,9 @@ Mật độ electron:
 
 $$
 \begin{aligned}
-&n = -\frac{J_xB_y}{qE_z}\\
-&\quad =\frac{(2{,}5\times10^6)(0{,}40)}{(1{,}60\times10^{-19})(5{,}4\times10^{-5})}\\
-&\quad \approx1{,}16\times10^{29}\,\mathrm{m^{-3}}.
+n &= -\frac{J_xB_y}{qE_z} \\
+&= \frac{(2{,}5\times10^6)(0{,}40)}{(1{,}60\times10^{-19})(5{,}4\times10^{-5})} \\
+&\approx 1{,}16\times10^{29}\,\mathrm{m^{-3}}.
 \end{aligned}
 $$
 

@@ -14,9 +14,9 @@ Một thí nghiệm hai khe được lắp đặt và hiện vân trên màn. Sa
 
 $$
 \begin{aligned}
-\lambda_w&=\frac{\lambda_0}{n_w},\\
-\Delta y_w&=\frac{\lambda_0R}{n_wd}\\
-&=\frac{\Delta y_a}{n_w}.
+\lambda_w &= \frac{\lambda_0}{n_w}, \\
+\Delta y_w &= \frac{\lambda_0R}{n_wd} \\
+&= \frac{\Delta y_a}{n_w}.
 \end{aligned}
 $$
 
@@ -54,8 +54,8 @@ Có thể dùng hai loa phát âm đơn tần từ cùng máy phát, rồi di ch
 
 $$
 \begin{aligned}
-u_m&=\frac{m\lambda}{d},\\
-y_m&=\frac{Ru_m}{\sqrt{1-u_m^2}}.
+u_m &= \frac{m\lambda}{d}, \\
+y_m &= \frac{Ru_m}{\sqrt{1-u_m^2}}.
 \end{aligned}
 $$
 
@@ -113,8 +113,8 @@ Các đường cùng pha và ngược pha theo hiệu đường đi giữ vị t
 
 $$
 \begin{aligned}
-A_{\max}&=A+\frac A2=\frac{3A}{2},\\
-A_{\min}&=\left|A-\frac A2\right|=\frac A2.
+A_{\max} &= A+\frac A2=\frac{3A}{2}, \\
+A_{\min} &= \left|A-\frac A2\right|=\frac A2.
 \end{aligned}
 $$
 
@@ -233,10 +233,7 @@ Khi dùng nguyên lý chồng chất để tính cường độ giao thoa, có t
 Với hai sóng cùng tần số, cùng phương phân cực:
 
 $$
-\begin{aligned}
-I&=I_1+I_2\\
-&\quad+2\sqrt{I_1I_2}\cos\phi.
-\end{aligned}
+I&=I_1+I_2 +2\sqrt{I_1I_2}\cos\phi.
 $$
 
 Chỉ khi số hạng chéo bằng 0 hoặc trung bình bằng 0 mới có $I=I_1+I_2$. Nếu bỏ số hạng chéo cho nguồn kết hợp, sẽ bỏ chính sự tăng cường và triệt giảm tạo hệ vân.

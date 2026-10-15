@@ -16,7 +16,7 @@ RLC nối tiếp cộng hưởng dòng khi cảm kháng bằng dung kháng. Vớ
 Giữ biên độ nguồn và thay tần số. RLC nối tiếp với $R,L,C$ dương có biên độ dòng $V/Z$. Trở kháng nhỏ nhất khi hai điện kháng bằng nhau:
 
 $$
-\begin{aligned}&\omega_0L=\frac1{\omega_0C}\\&\omega_0=\frac1{\sqrt{LC}}\\&Z_{\min}=R.\end{aligned}
+\omega_0L=\frac1{\omega_0C}\\ \omega_0=\frac1{\sqrt{LC}}\\ Z_{\min}=R.
 $$
 
 Nguồn cùng pha dòng tại cộng hưởng. Điện áp cuộn và tụ cùng biên độ, ngược pha nên tổng tức thời bằng không. Từng điện áp có thể lớn hơn điện áp nguồn.

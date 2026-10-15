@@ -30,11 +30,11 @@ $$
 
 $$
 \begin{aligned}
-\vec E&=\hat{\mathbf z}\frac{\rho I}{\pi a^2},\\
-\vec B&=\hat{\boldsymbol\phi}\frac{\mu_0I}{2\pi a},\\
-\vec S&=-\hat{\mathbf r}\frac{\rho I^2}{2\pi^2a^3},\\
-P_{\mathrm{vào}}&=\frac{\rho I^2\ell}{\pi a^2}\\
-&=I^2R_{\mathrm{dây}}.
+\vec E &= \hat{\mathbf z}\frac{\rho I}{\pi a^2}, \\
+\vec B &= \hat{\boldsymbol\phi}\frac{\mu_0I}{2\pi a}, \\
+\vec S &= -\hat{\mathbf r}\frac{\rho I^2}{2\pi^2a^3}, \\
+P_{\mathrm{vào}} &= \frac{\rho I^2\ell}{\pi a^2} \\
+&= I^2R_{\mathrm{dây}}.
 \end{aligned}
 $$
 
@@ -44,10 +44,10 @@ $$
 
 $$
 \begin{aligned}
-F_g&=\frac{GM}{r^2}\frac{4\pi\rho R^3}{3},\\
-F_{\mathrm{rad}}&=\frac{LR^2}{4cr^2},\\
-R_*&=\frac{3L}{16\pi cGM\rho}\\
-&\approx0{,}195\,\mu\mathrm m.
+F_g &= \frac{GM}{r^2}\frac{4\pi\rho R^3}{3}, \\
+F_{\mathrm{rad}} &= \frac{LR^2}{4cr^2}, \\
+R_* &= \frac{3L}{16\pi cGM\rho} \\
+&\approx 0{,}195\,\mu\mathrm m.
 \end{aligned}
 $$
 

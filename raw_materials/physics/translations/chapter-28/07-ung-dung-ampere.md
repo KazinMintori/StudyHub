@@ -25,9 +25,9 @@ Xét dây thẳng dài mang dòng $I$. Đối xứng trụ cho biết các đư�
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec l = B\oint dl\\
-&\quad =B(2\pi r)\\
-&\quad =\mu_0I.
+\oint\vec B\cdot d\vec l &= B\oint dl \\
+&= B(2\pi r) \\
+&= \mu_0I.
 \end{aligned}
 $$
 
@@ -46,8 +46,8 @@ Tìm trường do dây thẳng dài mang dòng $I$ bằng định luật Ampere.
 
 $$
 \begin{aligned}
-&B(2\pi r) = \mu_0I,\\
-&B = \frac{\mu_0I}{2\pi r}.
+B(2\pi r) &= \mu_0I, \\
+B &= \frac{\mu_0I}{2\pi r}.
 \end{aligned}
 $$
 
@@ -79,10 +79,9 @@ $$
 
 $$
 \begin{aligned}
-&B(2\pi r) = \mu_0I\frac{r^2}{R^2},\\
-&B(r) = \frac{\mu_0Ir}{2\pi R^2},\qquad r<R.
-\end{aligned}
-\tag{28.21}
+B(2\pi r) &= \mu_0I\frac{r^2}{R^2}, \\
+B(r) &= \frac{\mu_0Ir}{2\pi R^2},\qquad r<R.
+\end{aligned} \tag{28.21}
 $$
 
 Trường tăng tuyến tính theo $r$ từ tâm đến bề mặt.
@@ -93,10 +92,9 @@ Trường tăng tuyến tính theo $r$ từ tâm đến bề mặt.
 
 $$
 \begin{aligned}
-&B(2\pi r) = \mu_0I,\\
-&B(r) = \frac{\mu_0I}{2\pi r},\qquad r>R.
-\end{aligned}
-\tag{28.22}
+B(2\pi r) &= \mu_0I, \\
+B(r) &= \frac{\mu_0I}{2\pi r},\qquad r>R.
+\end{aligned} \tag{28.22}
 $$
 
 Ở ngoài dây, trường giống trường của một dây thẳng mang toàn bộ dòng $I$ dọc theo trục. Kết quả này không phụ thuộc bán kính dây hay cách dòng phân bố theo bán kính, miễn phân bố vẫn có đối xứng trụ. Tại bề mặt, hai biểu thức khớp nhau:
@@ -149,10 +147,9 @@ Trong chiều dài $L$ có $nL$ vòng, mỗi vòng xuyên qua mặt chữ nhật
 
 $$
 \begin{aligned}
-&BL = \mu_0nLI,\\
-&B = \mu_0nI.
-\end{aligned}
-\tag{28.23}
+BL &= \mu_0nLI, \\
+B &= \mu_0nI.
+\end{aligned} \tag{28.23}
 $$
 
 Cạnh trong không cần nằm trên trục. Kết quả vì vậy cho thấy trường ở vùng giữa gần như đồng đều trên toàn tiết diện. Trên trục, trường đạt giá trị lớn nhất ở tâm. Với ống dây rất dài, độ lớn ở mỗi đầu bằng một nửa giá trị tại tâm. Với ống dây hữu hạn, đây là xấp xỉ, như đường biểu diễn cho một ống dây dài bốn lần đường kính.
@@ -177,10 +174,9 @@ Một ống dây hình xuyến được quấn sít với $N$ vòng mang dòng $
 
 $$
 \begin{aligned}
-&B(2\pi r) = \mu_0NI,\\
-&B(r) = \frac{\mu_0NI}{2\pi r}.
-\end{aligned}
-\tag{28.24}
+B(2\pi r) &= \mu_0NI, \\
+B(r) &= \frac{\mu_0NI}{2\pi r}.
+\end{aligned} \tag{28.24}
 $$
 
 Chiều trường theo quy tắc bàn tay phải gắn với chiều tích phân và chiều dòng trong các vòng. Trường trong lõi không đồng đều trên toàn tiết diện vì phụ thuộc khoảng cách $r$ đến trục xuyến. Nếu bề dày lõi nhỏ so với bán kính trung bình, có thể xem $r$ gần như không đổi. Khi đó $B\approx\mu_0nI$, với $n=N/(2\pi r)$ là số vòng trên một đơn vị chiều dài dọc lõi.

@@ -36,8 +36,8 @@ $$
 
 $$
 \begin{aligned}
-&L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x)\\
-&\quad = f_0(x) + \lambda_1 f_1(x) + \dots + \lambda_m f_m(x) + \nu_1 h_1(x) + \dots + \nu_p h_p(x),
+L(x, \lambda, \nu) &= f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \\
+&= f_0(x) + \lambda_1 f_1(x) + \dots + \lambda_m f_m(x) + \nu_1 h_1(x) + \dots + \nu_p h_p(x),
 \end{aligned}
 $$
 
@@ -55,8 +55,8 @@ Cộng tất cả các thành phần lại, với mọi điểm khả thi $\wide
 
 $$
 \begin{aligned}
-&L(\widetilde x, \lambda, \nu) = f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0}\\
-&\quad \le f_0(\widetilde x).
+L(\widetilde x, \lambda, \nu) &= f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0} \\
+&\le f_0(\widetilde x).
 \end{aligned}
 $$
 
@@ -66,8 +66,8 @@ Từ quan sát cốt lõi này, ta định nghĩa **hàm đối ngẫu Lagrange*
 
 $$
 \begin{aligned}
-&g(\lambda, \nu) = \inf_{x \in \mathcal{D}} L(x, \lambda, \nu)\\
-&\quad = \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
+g(\lambda, \nu) &= \inf_{x \in \mathcal{D}} L(x, \lambda, \nu) \\
+&= \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
 \end{aligned}
 $$
 
@@ -113,9 +113,9 @@ $$
 
 $$
 \begin{aligned}
-&g(\lambda) = \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right)\\
-&\quad = \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right)\\
-&\quad = \lambda - \frac{\lambda^2}{4}.
+g(\lambda) &= \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right) \\
+&= \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right) \\
+&= \lambda - \frac{\lambda^2}{4}.
 \end{aligned}
 $$
 
@@ -162,10 +162,10 @@ Ta kiểm chứng điều này bằng định nghĩa hàm lõm: Với hai bộ n
 
 $$
 \begin{aligned}
-&g(\theta u + (1 - \theta) v) = \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v)\\
-&\quad = \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right]\\
-&\quad \ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v)\\
-&\quad = \theta g(u) + (1 - \theta) g(v).
+g(\theta u + (1 - \theta) v) &= \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v) \\
+&= \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right] \\
+&\ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v) \\
+&= \theta g(u) + (1 - \theta) g(v).
 \end{aligned}
 $$
 
@@ -234,11 +234,11 @@ $$
    $$
    Thay vào:
    $$
-   \begin{aligned}
-   &f^*(y) = \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right)\\
-   &\quad = \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
-   \end{aligned}
-   $$
+\begin{aligned}
+f^*(y) &= \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right) \\
+&= \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
+\end{aligned}
+$$
 
 4. **Hàm Log-Sum-Exp**: Xét $f(x) = \log\left(\sum_{i=1}^n e^{x_i}\right)$.
    Hàm liên hợp của hàm này liên quan chặt chẽ đến entropy của phân phối xác suất:
@@ -257,8 +257,8 @@ Hàm Lagrangian với $\lambda \succeq 0$ và $\nu \in \mathbb{R}^p$:
 
 $$
 \begin{aligned}
-&L(x, \lambda, \nu) = f_0(x) + \lambda^T (A x - b) + \nu^T (C x - d)\\
-&\quad = -b^T \lambda - d^T \nu + f_0(x) + (A^T \lambda + C^T \nu)^T x.
+L(x, \lambda, \nu) &= f_0(x) + \lambda^T (A x - b) + \nu^T (C x - d) \\
+&= -b^T \lambda - d^T \nu + f_0(x) + (A^T \lambda + C^T \nu)^T x.
 \end{aligned}
 $$
 
@@ -266,9 +266,9 @@ Lấy cận dưới đúng theo $x$:
 
 $$
 \begin{aligned}
-&g(\lambda, \nu) = -b^T \lambda - d^T \nu + \inf_x \left[ f_0(x) - (-A^T \lambda - C^T \nu)^T x \right]\\
-&\quad = -b^T \lambda - d^T \nu - \sup_x \left[ (-A^T \lambda - C^T \nu)^T x - f_0(x) \right]\\
-&\quad = -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu).
+g(\lambda, \nu) &= -b^T \lambda - d^T \nu + \inf_x \left[ f_0(x) - (-A^T \lambda - C^T \nu)^T x \right] \\
+&= -b^T \lambda - d^T \nu - \sup_x \left[ (-A^T \lambda - C^T \nu)^T x - f_0(x) \right] \\
+&= -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu).
 \end{aligned}
 $$
 
@@ -769,11 +769,11 @@ $$
 
 2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$:
    $$
-   \begin{aligned}
-   &L(x, \lambda, \nu) = c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2)\\
-   &\quad = -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
-   \end{aligned}
-   $$
+\begin{aligned}
+L(x, \lambda, \nu) &= c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2) \\
+&= -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
+\end{aligned}
+$$
    trong đó $a_i$ là cột thứ $i$ của ma trận $A$.
 
    Để $L(x, \lambda, \nu)$ bị chặn dưới theo $x$, hệ số của $x_i^2$ bắt buộc phải không âm, tức $-\nu_i \ge 0 \implies \nu_i \le 0$.
@@ -960,11 +960,11 @@ $$
    - Bù trừ (Complementary slackness): $\lambda_1 x_1 = 0$, $\lambda_2 x_2 = 0$.
    - Triệt tiêu đạo hàm:
      $$
-     \begin{aligned}
-     &\frac{\partial L}{\partial x_1} = 2x_1 - \lambda_1 + \nu = 0,\\
-     &\frac{\partial L}{\partial x_2} = 2x_2 - \lambda_2 + \nu = 0.
-     \end{aligned}
-     $$
+\begin{aligned}
+\frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
+\frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
+\end{aligned}
+$$
    
    Xét ứng viên đối xứng $x_1^* = 0{,}5 > 0$ và $x_2^* = 0{,}5 > 0$.
    Theo điều kiện bù trừ, vì $x_1^* > 0$ và $x_2^* > 0$, bắt buộc:
@@ -1126,12 +1126,12 @@ $$
 2. **Hàm Lagrangian và hàm đối ngẫu**:
    Hàm Lagrangian với $\lambda \ge 0$:
    $$
-   \begin{aligned}
-   &L(x, \lambda) = x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2)\\
-   &\quad = \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2}\\
-   &\quad = \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
-   \end{aligned}
-   $$
+\begin{aligned}
+L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
+&= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
+&= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
+\end{aligned}
+$$
    Cực tiểu theo $x$ đạt được tại $x_1(\lambda) = x_2(\lambda) = \frac{\lambda}{2}$.
    Hàm đối ngẫu Lagrange:
    $$

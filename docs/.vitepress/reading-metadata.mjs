@@ -693,7 +693,7 @@ export const readingMetadata = {
     "minutes": 3
   },
   "vat-ly-2/08-nguon-tu-truong": {
-    "words": 12352,
+    "words": 12362,
     "minutes": 60
   },
   "vat-ly-2/08-nguon-tu-truong/dien-tich-chuyen-dong-tu-truong": {
@@ -732,9 +732,65 @@ export const readingMetadata = {
     "words": 10871,
     "minutes": 55
   },
+  "vat-ly-2/09-cam-ung-dien-tu/thi-nghiem-cam-ung": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-faraday": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-lenz": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/suat-dien-dong-chuyen-dong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dien-truong-cam-ung": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-foucault": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-dich-maxwell": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/09-cam-ung-dien-tu/sieu-dan": {
+    "words": 20,
+    "minutes": 3
+  },
   "vat-ly-2/10-tu-cam": {
     "words": 15033,
     "minutes": 75
+  },
+  "vat-ly-2/10-tu-cam/ho-cam": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/tu-cam-cuon-cam": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/nang-luong-tu-truong": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-rl": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-lc": {
+    "words": 20,
+    "minutes": 3
+  },
+  "vat-ly-2/10-tu-cam/mach-rlc": {
+    "words": 20,
+    "minutes": 3
   },
   "vat-ly-2/11-dong-dien-xoay-chieu": {
     "words": 137,
@@ -835,61 +891,5 @@ export const readingMetadata = {
   "discrete-math/graph-theory": {
     "words": 501,
     "minutes": 5
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/thi-nghiem-cam-ung": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-faraday": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/dinh-luat-lenz": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/suat-dien-dong-chuyen-dong": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/dien-truong-cam-ung": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-foucault": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/dong-dien-dich-maxwell": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/09-cam-ung-dien-tu/sieu-dan": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/ho-cam": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/tu-cam-cuon-cam": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/nang-luong-tu-truong": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/mach-rl": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/mach-lc": {
-    "words": 20,
-    "minutes": 3
-  },
-  "vat-ly-2/10-tu-cam/mach-rlc": {
-    "words": 20,
-    "minutes": 3
   }
 }

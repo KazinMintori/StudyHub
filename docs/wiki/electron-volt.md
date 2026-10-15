@@ -10,10 +10,7 @@ next: False
 Electron-volt, ký hiệu eV, là đơn vị năng lượng. Nó bằng độ lớn năng lượng mà một điện tích có độ lớn e nhận khi đi qua hiệu điện thế có độ lớn 1 V.
 
 $$
-\begin{aligned}
-&1\,\mathrm{eV} = 1.602176634\\
-&\quad\times10^{-19}\,\mathrm J.
-\end{aligned}
+1\,\mathrm{eV} = 1.602176634\times10^{-19}\,\mathrm J.
 $$
 
 <WikiUsage />
@@ -24,11 +21,10 @@ $$
 
 $$
 \begin{aligned}
-&1\,\mathrm{eV} = 1.602176634\\
-&\quad\times10^{-19}\,\mathrm J,\\
-&1\,\mathrm{keV} = 10^3\,\mathrm{eV},\\
-&1\,\mathrm{MeV} = 10^6\,\mathrm{eV},\\
-&1\,\mathrm{GeV} = 10^9\,\mathrm{eV}.
+1\,\mathrm{eV} &= 1.602176634\times10^{-19}\,\mathrm J, \\
+1\,\mathrm{keV} &= 10^3\,\mathrm{eV}, \\
+1\,\mathrm{MeV} &= 10^6\,\mathrm{eV}, \\
+1\,\mathrm{GeV} &= 10^9\,\mathrm{eV}.
 \end{aligned}
 $$
 

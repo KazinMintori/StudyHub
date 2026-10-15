@@ -90,9 +90,9 @@ Nếu giá trị tối ưu của bài toán bằng 0 ($\mathbf{1}^T s^* = 0$), t
 Xét hệ bất đẳng thức tuyến tính gồm 3 ràng buộc trên mặt phẳng $\mathbb{R}^2$:
 $$
 \begin{aligned}
-&f_1(x) = x_1 + x_2 - 2 \le 0,\\
-&f_2(x) = -x_1 + x_2 - 2 \le 0,\\
-&f_3(x) = -x_2 - 1 \le 0.
+f_1(x) &= x_1 + x_2 - 2 \le 0, \\
+f_2(x) &= -x_1 + x_2 - 2 \le 0, \\
+f_3(x) &= -x_2 - 1 \le 0.
 \end{aligned}
 $$
 1. Chọn điểm khởi đầu $x^{(0)} = (2, 2)^T$. Xác định giá trị biến bù ban đầu $s^{(0)}$ tối thiểu để cặp $(x^{(0)}, s^{(0)})$ khả thi ngặt với bài toán Pha I.

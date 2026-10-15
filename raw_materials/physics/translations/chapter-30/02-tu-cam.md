@@ -11,10 +11,7 @@ Khi có dòng điện chạy trong một mạch, dòng điện này tạo ra m�
 Xét một mạch điện kín gồm một cuộn dây có $N$ vòng dây mang dòng điện $i$ như minh họa ở Hình 30.4. Dòng điện này tạo ra một từ trường, và từ trường này gửi qua mỗi vòng dây một từ thông $\Phi_B$. Tương tự như định nghĩa hệ số hỗ cảm ở phương trình (30.5), ta định nghĩa **độ tự cảm** $L$ của mạch điện là tỉ số giữa từ thông móc vòng và cường độ dòng điện:
 
 $$
-\begin{aligned}
-L &= \frac{N\Phi_B}{i}
-\end{aligned}
-\tag{30.6}
+L = \frac{N\Phi_B}{i} \tag{30.6}
 $$
 
 Khi không nhầm lẫn với hỗ cảm $M$, đại lượng $L$ cũng được gọi là điện cảm của cuộn dây. Đơn vị của tự cảm giống đơn vị hỗ cảm, tức henry ($\text{H}$):
@@ -31,26 +28,19 @@ $$
 Từ phương trình (30.6), ta viết lại từ thông móc vòng dưới dạng $N\Phi_B = Li$. Khi hình học cố định và môi trường tuyến tính có độ từ thẩm không đổi, $L$ là hằng số. Lấy đạo hàm hai vế theo thời gian $t$, ta được:
 
 $$
-\begin{aligned}
-N \frac{d\Phi_B}{dt} &= L \frac{di}{dt}
-\end{aligned}
+N \frac{d\Phi_B}{dt} = L \frac{di}{dt}
 $$
 
 Theo định luật cảm ứng Faraday, suất điện động tự cảm $\mathcal{E}$ xuất hiện trong cuộn dây có biểu thức:
 
 $$
-\begin{aligned}
-\mathcal{E} &= -N \frac{d\Phi_B}{dt}
-\end{aligned}
+\mathcal{E} = -N \frac{d\Phi_B}{dt}
 $$
 
 Kết hợp hai hệ thức trên, ta thu được phương trình cơ bản của suất điện động tự cảm:
 
 $$
-\begin{aligned}
-\mathcal{E} &= -L \frac{di}{dt}
-\end{aligned}
-\tag{30.7}
+\mathcal{E} = -L \frac{di}{dt} \tag{30.7}
 $$
 
 Dấu âm trong phương trình (30.7) là sự thể hiện trực tiếp của định luật Lenz:
@@ -119,10 +109,7 @@ $$
 Kết hợp với $\vec E_c=-\vec E_n$ bên trong cuộn, ta nhận được hiệu điện thế hai đầu:
 
 $$
-\begin{aligned}
-V_{ab} &= V_a - V_b = L \frac{di}{dt}
-\end{aligned}
-\tag{30.8}
+V_{ab} = V_a - V_b = L \frac{di}{dt} \tag{30.8}
 $$
 
 Phương trình (30.8) cho thấy hiệu điện thế hai đầu cuộn cảm lý tưởng phụ thuộc tốc độ biến thiên dòng. Chiều dương của dòng được chọn từ $a$ sang $b$.
@@ -159,9 +146,7 @@ Xét một ống dây hình xuyến có bán kính trung bình $r$, diện tích
 Từ trường của ống dây hình xuyến chỉ tập trung bên trong lõi, từ trường ở không gian bên ngoài bằng không. Tại khoảng cách $r$ tính từ trục đối xứng của xuyến, cảm ứng từ $B$ được xác định theo định luật Ampere:
 
 $$
-\begin{aligned}
-B &= \frac{\mu_0 N i}{2\pi r}
-\end{aligned}
+B = \frac{\mu_0 N i}{2\pi r}
 $$
 
 Vì tiết diện $A$ có kích thước nhỏ so với $r$, ta có thể xem cảm ứng từ $B$ phân bố đều trên toàn bộ diện tích tiết diện $A$.
@@ -170,17 +155,13 @@ Vì tiết diện $A$ có kích thước nhỏ so với $r$, ta có thể xem c�
 Từ thông qua mỗi vòng dây của ống xuyến là:
 
 $$
-\begin{aligned}
-\Phi_B &= BA = \frac{\mu_0 N i A}{2\pi r}
-\end{aligned}
+\Phi_B = BA = \frac{\mu_0 N i A}{2\pi r}
 $$
 
 Từ thông này đi qua toàn bộ $N$ vòng dây của ống xuyến. Áp dụng định nghĩa độ tự cảm từ phương trình (30.6):
 
 $$
-\begin{aligned}
-L &= \frac{N \Phi_B}{i} = \frac{\mu_0 N^2 A}{2\pi r}
-\end{aligned}
+L = \frac{N \Phi_B}{i} = \frac{\mu_0 N^2 A}{2\pi r}
 $$
 
 Biểu thức này cho thấy độ tự cảm của ống xuyến tỉ lệ thuận với bình phương số vòng dây $N^2$, tỉ lệ thuận với diện tích tiết diện $A$ và tỉ lệ nghịch với chu vi trung bình $2\pi r$. Thay các số liệu cụ thể vào:
@@ -188,9 +169,7 @@ Biểu thức này cho thấy độ tự cảm của ống xuyến tỉ lệ thu
 $$
 \begin{aligned}
 L &= \frac{\mu_0 N^2 A}{2\pi r} \\
-&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{2\pi(0{,}10\text{ m})} \\
-&\quad \times (200)^2 \\
-&\quad \times (5{,}0 \times 10^{-4}\text{ m}^2) \\
+&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{2\pi(0{,}10\text{ m})} \times (200)^2 \times (5{,}0 \times 10^{-4}\text{ m}^2) \\
 &= 4{,}0 \times 10^{-5}\text{ H} \\
 &= 40\ \mu\text{H}
 \end{aligned}
@@ -220,8 +199,7 @@ $$
 $$
 \begin{aligned}
 |\mathcal{E}| &= L \left|\frac{di}{dt}\right| \\
-&= (40 \times 10^{-6}\text{ H}) \\
-&\quad \times (2{,}0 \times 10^6\text{ A/s}) \\
+&= (40 \times 10^{-6}\text{ H}) \times (2{,}0 \times 10^6\text{ A/s}) \\
 &= 80\text{ V}
 \end{aligned}
 $$
@@ -248,9 +226,7 @@ Thứ tự sắp xếp đúng từ dương lớn nhất đến âm nhỏ nhất 
 Theo phương trình (30.8), hiệu điện thế giữa hai đầu cực của cuộn cảm lý tưởng khi dòng điện đi từ cực $a$ sang cực $b$ được tính theo công thức:
 
 $$
-\begin{aligned}
-V_{ab} &= L \frac{di}{dt}
-\end{aligned}
+V_{ab} = L \frac{di}{dt}
 $$
 
 Ta lần lượt tính giá trị $V_{ab}$ cho từng trường hợp:
@@ -259,8 +235,7 @@ Ta lần lượt tính giá trị $V_{ab}$ cho từng trường hợp:
 
 $$
 \begin{aligned}
-V_{ab} &= (2{,}0 \times 10^{-6}\text{ H}) \\
-&\quad \times (2{,}0\text{ A/s}) \\
+V_{ab} &= (2{,}0 \times 10^{-6}\text{ H}) \times (2{,}0\text{ A/s}) \\
 &= 4{,}0\ \mu\text{V}
 \end{aligned}
 $$
@@ -269,8 +244,7 @@ $$
 
 $$
 \begin{aligned}
-V_{ab} &= (4{,}0 \times 10^{-6}\text{ H}) \\
-&\quad \times (-1{,}5\text{ A/s}) \\
+V_{ab} &= (4{,}0 \times 10^{-6}\text{ H}) \times (-1{,}5\text{ A/s}) \\
 &= -6{,}0\ \mu\text{V}
 \end{aligned}
 $$
@@ -281,8 +255,7 @@ $$
 
 $$
 \begin{aligned}
-V_{ab} &= (1{,}0 \times 10^{-6}\text{ H}) \\
-&\quad \times (16\text{ A/s}) \\
+V_{ab} &= (1{,}0 \times 10^{-6}\text{ H}) \times (16\text{ A/s}) \\
 &= 16\ \mu\text{V}
 \end{aligned}
 $$

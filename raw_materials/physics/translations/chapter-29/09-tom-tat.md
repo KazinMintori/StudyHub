@@ -81,11 +81,7 @@ $$
 Định luật Ampere có dòng điện dịch, công thức (29.21):
 
 $$
-\begin{aligned}
-&\oint\vec B\cdot d\vec\ell\\
-&\quad=\mu_0(i_C)_{\mathrm{encl}}\\
-&\quad+\mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
-\end{aligned}
+\oint\vec B\cdot d\vec\ell =\mu_0(i_C)_{\mathrm{encl}} +\mu_0\varepsilon_0\frac{d\Phi_E}{dt}.
 $$
 
 Trong phương trình cuối, dòng dẫn và tốc độ biến thiên thông lượng đều được tính qua cùng một mặt. Bộ phương trình này tạo cơ sở cho việc xác định điện trường và từ trường từ nguồn của chúng.

@@ -7,9 +7,7 @@ Mật độ dòng điện $\vec J$ trong vật dẫn phụ thuộc vào điện 
 Điện trở suất $\rho$ của vật liệu được định nghĩa bằng tỉ số giữa độ lớn điện trường trong vật liệu và độ lớn mật độ dòng điện do điện trường gây ra:
 
 $$
-\begin{aligned}
-&\rho = \frac EJ.\end{aligned}
-\tag{25.5}
+\rho = \frac EJ. \tag{25.5}
 $$
 
 Điện trở suất càng lớn thì cần điện trường càng mạnh để tạo cùng một mật độ dòng điện. Với điện trường đã cho, điện trở suất lớn cũng tạo mật độ dòng nhỏ hơn.
@@ -18,9 +16,9 @@ Từ đơn vị của $E$ và $J$:
 
 $$
 \begin{aligned}
-&[\rho] = \frac{\mathrm{V/m}}{\mathrm{A/m^2}}\\
-&\quad =\frac{\mathrm{V\cdot m}}{\mathrm A}\\
-&\quad =\Omega\cdot\mathrm m.
+[\rho] &= \frac{\mathrm{V/m}}{\mathrm{A/m^2}} \\
+&= \frac{\mathrm{V\cdot m}}{\mathrm A} \\
+&= \Omega\cdot\mathrm m.
 \end{aligned}
 $$
 
@@ -59,8 +57,8 @@ Bảng sau cho một số giá trị điện trở suất đại diện ở $20^
 
 $$
 \begin{aligned}
-&\sigma = \frac1\rho,\\
-&[\sigma] = (\Omega\cdot\mathrm m)^{-1}=\mathrm{S/m}.
+\sigma &= \frac1\rho, \\
+[\sigma] &= (\Omega\cdot\mathrm m)^{-1}=\mathrm{S/m}.
 \end{aligned}
 $$
 
@@ -85,9 +83,7 @@ Có thể hình dung mối quan hệ này qua dòng chất lỏng qua một bộ
 Trong một khoảng nhiệt độ nhỏ, thường đến độ chênh khoảng $100^\circ\mathrm C$, điện trở suất của kim loại có thể được xấp xỉ tuyến tính:
 
 $$
-\begin{aligned}
-&\rho(T) = \rho_0\left[1+\alpha(T-T_0)\right].\end{aligned}
-\tag{25.6}
+\rho(T) = \rho_0\left[1+\alpha(T-T_0)\right]. \tag{25.6}
 $$
 
 Trong đó $\rho_0$ là điện trở suất tại nhiệt độ tham chiếu $T_0$, còn $\alpha$ là hệ số nhiệt điện trở suất. $T_0$ thường được chọn là $0^\circ\mathrm C$ hoặc $20^\circ\mathrm C$, còn $T$ có thể cao hơn hoặc thấp hơn $T_0$. Hiệu nhiệt độ có cùng độ lớn khi tính bằng kelvin hoặc độ Celsius. Hợp kim manganin gần như không đổi điện trở suất theo nhiệt độ.

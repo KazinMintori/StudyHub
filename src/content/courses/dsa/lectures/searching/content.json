@@ -1,0 +1,18 @@
+{
+  "course": "dsa",
+  "lecture": "searching",
+  "route": "/dsa/bai-giang/searching",
+  "notes": "docs/dsa/bai-giang/searching.md",
+  "topics": [],
+  "slides": "src/content/courses/dsa/lectures/searching/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "mang",
+    "do-phuc-tap"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

@@ -62,10 +62,12 @@ Tuy nhiên, việc chỉ dừng lại ở đánh giá trực quan bằng mắt t
 
 Cho một mẫu gồm $n$ quan sát cặp $(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$. Hệ số tương quan Pearson $r$ được định nghĩa bằng tích trung bình của các điểm chuẩn hóa ($z$-scores):
 
-$$\begin{aligned}
-&r = \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right)\\
-&\quad = \frac{1}{n-1} \sum_{i=1}^n z_{x, i} z_{y, i}
-\end{aligned}$$
+$$
+\begin{aligned}
+r &= \frac{1}{n-1} \sum_{i=1}^n \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right) \\
+&= \frac{1}{n-1} \sum_{i=1}^n z_{x, i} z_{y, i}
+\end{aligned}
+$$
 
 Khai triển tường minh biểu thức cộng dồn trên:
 
@@ -76,10 +78,12 @@ $$
 trong đó:
 - $\bar{x}, \bar{y}$ lần lượt là giá trị trung bình mẫu của biến $x$ và biến $y$.
 - $s_x, s_y$ lần lượt là độ lệch chuẩn mẫu của biến $x$ và biến $y$:
-  $$\begin{aligned}
-  &s_x = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2}\\
-  &s_y = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y})^2}
-  \end{aligned}$$
+  $$
+\begin{aligned}
+s_x &= \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2} \\
+s_y &= \sqrt{\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar{y})^2}
+\end{aligned}
+$$
 - $z_{x, i} = \frac{x_i - \bar{x}}{s_x}$ và $z_{y, i} = \frac{y_i - \bar{y}}{s_y}$ là độ lệch chuẩn hóa của điểm dữ liệu thứ $i$ so với trung bình.
 
 ### Trực giác hình học về các góc phần tư
@@ -165,10 +169,12 @@ trong đó:
 
 Đường thẳng bình phương tối thiểu có các hệ số được tính toán trực tiếp từ các đại lượng thống kê mẫu quen thuộc:
 
-$$\begin{aligned}
-&b_1 = r \frac{s_y}{s_x}\\
-&b_0 = \bar{y} - b_1 \bar{x}
-\end{aligned}$$
+$$
+\begin{aligned}
+b_1 &= r \frac{s_y}{s_x} \\
+b_0 &= \bar{y} - b_1 \bar{x}
+\end{aligned}
+$$
 
 <div style="text-align: center; margin: 16px 0;">
   <img src="./img/stat20-07/least-squares-line.png" alt="Đường hồi quy bình phương tối thiểu khớp chính xác trên biểu đồ phân tán thực tế." style="max-width: 420px; width: 100%; border-radius: 8px;" />
@@ -231,19 +237,23 @@ Hãy xét dòng dữ liệu của bang California:
 
 Thay giá trị $x = 12.8$ vào phương trình đường thẳng hồi quy để tìm giá trị dự báo:
 
-$$\begin{aligned}
-&\hat{y} = 96.2022 - 0.8979 \times 12.8\\
-&\quad = 96.2022 - 11.49312\\
-&\quad = 84.70908 \approx 84.71\%
-\end{aligned}$$
+$$
+\begin{aligned}
+\hat{y} &= 96.2022 - 0.8979 \times 12.8 \\
+&= 96.2022 - 11.49312 \\
+&= 84.70908 \approx 84.71\%
+\end{aligned}
+$$
 
 Từ đó, ta tính được phần dư của California:
 
-$$\begin{aligned}
-&\hat{e}_{\text{CA}} = y - \hat{y}\\
-&\quad = 81.1 - 84.70908\\
-&\quad = -3.60908 \approx -3.61\%
-\end{aligned}$$
+$$
+\begin{aligned}
+\hat{e}_{\text{CA}} &= y - \hat{y} \\
+&= 81.1 - 84.70908 \\
+&= -3.60908 \approx -3.61\%
+\end{aligned}
+$$
 
 <div style="text-align: center; margin: 16px 0;">
   <img src="./img/stat20-07/residual-california.png" alt="Minh họa hình học phần dư của bang California bằng đoạn thẳng đứng màu đỏ nối từ đường hồi quy xuống điểm dữ liệu." style="max-width: 480px; width: 100%; border-radius: 8px;" />
@@ -305,17 +315,17 @@ Một nhóm nghiên cứu thu thập dữ liệu về số giờ ôn tập mỗi
    - Với biến $x$:
      $$
 \begin{aligned}
-    &\bar{x} = \frac{1 + 2 + 3 + 4 + 5}{5} = \frac{15}{5} = 3.0\\
-    &\sum_{i=1}^5 (x_i - \bar{x})^2 = (1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2 = 4 + 1 + 0 + 1 + 4 = 10\\
-    &s_x = \sqrt{\frac{10}{5-1}} = \sqrt{\frac{10}{4}} = \sqrt{2.5} \approx 1.5811
+\bar{x} &= \frac{1 + 2 + 3 + 4 + 5}{5} = \frac{15}{5} = 3.0 \\
+\sum_{i=1}^5 (x_i - \bar{x})^2 &= (1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2 = 4 + 1 + 0 + 1 + 4 = 10 \\
+s_x &= \sqrt{\frac{10}{5-1}} = \sqrt{\frac{10}{4}} = \sqrt{2.5} \approx 1.5811
 \end{aligned}
 $$
    - Với biến $y$:
      $$
 \begin{aligned}
-    &\bar{y} = \frac{2 + 3 + 5 + 6 + 9}{5} = \frac{25}{5} = 5.0\\
-    &\sum_{i=1}^5 (y_i - \bar{y})^2 = (2-5)^2 + (3-5)^2 + (5-5)^2 + (6-5)^2 + (9-5)^2 = 9 + 4 + 0 + 1 + 16 = 30\\
-    &s_y = \sqrt{\frac{30}{5-1}} = \sqrt{\frac{30}{4}} = \sqrt{7.5} \approx 2.7386
+\bar{y} &= \frac{2 + 3 + 5 + 6 + 9}{5} = \frac{25}{5} = 5.0 \\
+\sum_{i=1}^5 (y_i - \bar{y})^2 &= (2-5)^2 + (3-5)^2 + (5-5)^2 + (6-5)^2 + (9-5)^2 = 9 + 4 + 0 + 1 + 16 = 30 \\
+s_y &= \sqrt{\frac{30}{5-1}} = \sqrt{\frac{30}{4}} = \sqrt{7.5} \approx 2.7386
 \end{aligned}
 $$
 
@@ -331,10 +341,12 @@ $$
 | 5 | 5 | 9 | $+1.2649$ | $+1.4606$ | $+1.8475$ |
 
    - Tổng các tích chuẩn hóa:
-     $$\begin{aligned}
-     &\sum_{i=1}^5 z_{x, i} z_{y, i} = 1.3856 + 0.4619 + 0.0000 + 0.2309 + 1.8475\\
-     &\quad = 3.9259
-     \end{aligned}$$
+     $$
+\begin{aligned}
+\sum_{i=1}^5 z_{x, i} z_{y, i} &= 1.3856 + 0.4619 + 0.0000 + 0.2309 + 1.8475 \\
+&= 3.9259
+\end{aligned}
+$$
    - Tính hệ số tương quan $r$:
      $$r = \frac{1}{5-1} \times 3.9259 = \frac{3.9259}{4} \approx 0.9815$$
    - **Phân tích dấu**: Cả 4 sinh viên lệch khỏi trung bình đều có tích $z_{x, i} z_{y, i} > 0$ (sinh viên 1, 2 rơi vào góc phần tư III; sinh viên 4, 5 rơi vào góc phần tư I). Tất cả các số hạng đều mang dấu dương, tạo nên hệ số tương quan đồng biến mạnh mẽ đạt $r \approx 0.9815$.
@@ -342,11 +354,13 @@ $$
 3. **Tính bất biến khi đổi đơn vị đo**:
    - Xét phép biến đổi $x'_i = 60 x_i$ và $y'_i = 10 y_i$.
    - Vì phép nhân với hằng số dương $a > 0$ làm trung bình tăng $a$ lần và độ lệch chuẩn tăng $a$ lần:
-     $$\begin{aligned}
-     &z_{x', i} = \frac{x'_i - \bar{x}'}{s_{x'}}\\
-     &\quad = \frac{60 x_i - 60 \bar{x}}{60 s_x}\\
-     &\quad = \frac{x_i - \bar{x}}{s_x} = z_{x, i}
-     \end{aligned}$$
+     $$
+\begin{aligned}
+z_{x', i} &= \frac{x'_i - \bar{x}'}{s_{x'}} \\
+&= \frac{60 x_i - 60 \bar{x}}{60 s_x} \\
+&= \frac{x_i - \bar{x}}{s_x} = z_{x, i}
+\end{aligned}
+$$
    - Tương tự, $z_{y', i} = z_{y, i}$.
    - Do điểm chuẩn hóa không hề thay đổi, hệ số tương quan mới hoàn toàn giữ nguyên:
      $$r(x', y') = r(x, y) \approx 0.9815$$
@@ -373,18 +387,22 @@ Sử dụng dữ liệu và các thống kê tóm tắt đã tính toán từ B�
 ::: solution Lời giải chi tiết Bài tập 2
 1. **Xác định các hệ số hồi quy**:
    - Hệ số độ dốc:
-     $$\begin{aligned}
-     &b_1 = r \frac{s_y}{s_x}\\
-     &\quad = 0.9815 \times \frac{\sqrt{7.5}}{\sqrt{2.5}}\\
-     &\quad = 0.9815 \times \sqrt{3} \approx 1.7000
-     \end{aligned}$$
+     $$
+\begin{aligned}
+b_1 &= r \frac{s_y}{s_x} \\
+&= 0.9815 \times \frac{\sqrt{7.5}}{\sqrt{2.5}} \\
+&= 0.9815 \times \sqrt{3} \approx 1.7000
+\end{aligned}
+$$
      *(Lưu ý: Ta cũng có thể tính chính xác qua hiệp phương sai: $b_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2} = \frac{17}{10} = 1.7$).*
    - Hệ số chặn:
-     $$\begin{aligned}
-     &b_0 = \bar{y} - b_1 \bar{x}\\
-     &\quad = 5.0 - 1.7 \times 3.0\\
-     &\quad = 5.0 - 5.1 = -0.1
-     \end{aligned}$$
+     $$
+\begin{aligned}
+b_0 &= \bar{y} - b_1 \bar{x} \\
+&= 5.0 - 1.7 \times 3.0 \\
+&= 5.0 - 5.1 = -0.1
+\end{aligned}
+$$
    - Phương trình hồi quy bình phương tối thiểu:
      $$\hat{y} = -0.1 + 1.7 x$$
 
@@ -393,11 +411,13 @@ Sử dụng dữ liệu và các thống kê tóm tắt đã tính toán từ B�
 
 3. **Chứng minh đường hồi quy luôn đi qua $(\bar{x}, \bar{y})$**:
    - Khi $x = \bar{x}$, giá trị dự báo từ mô hình là:
-     $$\begin{aligned}
-     &\hat{y} = b_0 + b_1 \bar{x}\\
-     &\quad = (\bar{y} - b_1 \bar{x}) + b_1 \bar{x}\\
-     &\quad = \bar{y}
-     \end{aligned}$$
+     $$
+\begin{aligned}
+\hat{y} &= b_0 + b_1 \bar{x} \\
+&= (\bar{y} - b_1 \bar{x}) + b_1 \bar{x} \\
+&= \bar{y}
+\end{aligned}
+$$
    - Như vậy, tọa độ $(\bar{x}, \bar{y})$ luôn thỏa mãn phương trình đường thẳng hồi quy với mọi bộ dữ liệu.
 
 4. **Tính toán giá trị dự báo và phần dư**:
@@ -440,10 +460,12 @@ Sử dụng dữ liệu và các thống kê tóm tắt đã tính toán từ B�
      - $\bar{x} = \frac{-2 - 1 + 0 + 1 + 2}{5} = 0$.
      - $\bar{y} = \frac{4 + 1 + 0 + 1 + 4}{5} = 2$.
      - Tính tổng tích sai lệch:
-       $$\begin{aligned}
-       &\sum_{i=1}^5 (x_i - \bar{x})(y_i - \bar{y}) = (-2)(4-2) + (-1)(1-2) + (0)(0-2) + (1)(1-2) + (2)(4-2)\\
-       &\quad = (-4) + (+1) + 0 + (-1) + (+4) = 0
-       \end{aligned}$$
+       $$
+\begin{aligned}
+\sum_{i=1}^5 (x_i - \bar{x})(y_i - \bar{y}) &= (-2)(4-2) + (-1)(1-2) + (0)(0-2) + (1)(1-2) + (2)(4-2) \\
+&= (-4) + (+1) + 0 + (-1) + (+4) = 0
+\end{aligned}
+$$
      - Do tổng tử số bằng 0, ta có $r = 0$.
    - **Giải thích bản chất**: Hệ số Pearson $r$ chỉ có năng lực đo lường **mức độ bám vào một đường thẳng**. Đồ thị của hàm $y = x^2$ là một đường cong đối xứng hình chữ U: Nhánh bên trái nghịch biến ($r < 0$) triệt tiêu hoàn toàn nhánh bên phải đồng biến ($r > 0$). Do đó, $r = 0$ chỉ khẳng định không có tương quan tuyến tính, tuyệt đối không đồng nghĩa với việc hai biến độc lập hay không có mối liên hệ.
 

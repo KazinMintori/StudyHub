@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "17-thuyet-tuong-doi",
+  "route": "/vat-ly-2/bai-giang/17-thuyet-tuong-doi",
+  "notes": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "vector",
+    "dong-luong-vat-ly",
+    "cong-nang-luong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

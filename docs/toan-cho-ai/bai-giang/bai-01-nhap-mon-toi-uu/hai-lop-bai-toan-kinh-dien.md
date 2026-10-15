@@ -228,11 +228,11 @@ Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4
 Với bốn số liệu $1, 3, 4, 12$, xét bài toán tìm hằng số $c$ theo hai tiêu chuẩn khác nhau:
 1. Cực tiểu hóa tổng sai số tuyệt đối theo chuẩn $\ell_1$:
    $$
-   \begin{aligned}
-   &f(c) = \sum_{i=1}^4 |c - b_i|\\
-   &\quad = |c - 1| + |c - 3| + |c - 4| + |c - 12|.
-   \end{aligned}
-   $$
+\begin{aligned}
+f(c) &= \sum_{i=1}^4 |c - b_i| \\
+&= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+\end{aligned}
+$$
 2. Cực tiểu hóa sai số lớn nhất theo chuẩn $\ell_\infty$: $\max_{i=1,\dots,4} |c - b_i|$.
 
 Hãy tìm nghiệm tối ưu trong từng trường hợp và so sánh với nghiệm bình phương tối thiểu ở Bài 1.
@@ -248,10 +248,7 @@ Với chuẩn $\ell_1$, ghép các cặp đối xứng từ ngoài vào trong v�
 Hàm mục tiêu cần cực tiểu hóa là:
 
 $$
-\begin{aligned}
-&f(c) = |c - 1| + |c - 3|\\
-&\quad + |c - 4| + |c - 12|.
-\end{aligned}
+f(c) = |c - 1| + |c - 3| + |c - 4| + |c - 12|.
 $$
 
 Ta áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$ bằng cách ghép các cặp số đối xứng từ ngoài vào trong:
@@ -259,11 +256,7 @@ Ta áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$ bằng các
 **Xét cặp ngoài cùng**: Đổi dấu số hạng thứ hai và áp dụng bất đẳng thức tam giác:
 
 $$
-\begin{aligned}
-&|c - 1| + |c - 12| = |c - 1| + |12 - c|\\
-&\quad \ge |(c - 1) + (12 - c)|\\
-&\quad = 11.
-\end{aligned}
+|c - 1| + |c - 12| = |c - 1| + |12 - c| \ge |(c - 1) + (12 - c)| = 11.
 $$
 
 Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
@@ -271,11 +264,7 @@ Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
 **Xét cặp bên trong**: Thực hiện tương tự cho hai số hạng ở giữa:
 
 $$
-\begin{aligned}
-&|c - 3| + |c - 4| = |c - 3| + |4 - c|\\
-&\quad \ge |(c - 3) + (4 - c)|\\
-&\quad = 1.
-\end{aligned}
+|c - 3| + |c - 4| = |c - 3| + |4 - c| \ge |(c - 3) + (4 - c)| = 1.
 $$
 
 Dấu bằng xảy ra khi $(c - 3)(4 - c) \ge 0$, tức là $3 \le c \le 4$.
@@ -313,9 +302,9 @@ $$
 
 $$
 \begin{aligned}
-&\max(|c - 1|, |12 - c|) \ge \frac{|c - 1| + |12 - c|}{2}\\
-&\quad \ge \frac{|(c - 1) + (12 - c)|}{2}\\
-&\quad = \frac{11}{2} = 5.5.
+\max(|c - 1|, |12 - c|) &\ge \frac{|c - 1| + |12 - c|}{2} \\
+&\ge \frac{|(c - 1) + (12 - c)|}{2} \\
+&= \frac{11}{2} = 5.5.
 \end{aligned}
 $$
 

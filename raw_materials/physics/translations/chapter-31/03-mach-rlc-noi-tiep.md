@@ -18,10 +18,10 @@ Trong Hình 31.13a, điện áp nguồn và điện áp ba phần tử được 
 
 $$
 \begin{aligned}
-v&=v_{ad},\\
-v_R&=v_{ab},\\
-v_L&=v_{bc},\\
-v_C&=v_{cd}.
+v &= v_{ad}, \\
+v_R &= v_{ab}, \\
+v_L &= v_{bc}, \\
+v_C &= v_{cd}.
 \end{aligned}
 $$
 
@@ -35,9 +35,9 @@ Ba vector pha điện áp có độ dài
 
 $$
 \begin{aligned}
-V_R&=IR,\\
-V_L&=IX_L,\\
-V_C&=IX_C.
+V_R &= IR, \\
+V_L &= IX_L, \\
+V_C &= IX_C.
 \end{aligned}
 $$
 
@@ -49,9 +49,8 @@ Hình chiếu của tổng các vector bằng tổng hình chiếu của từng 
 
 $$
 \begin{aligned}
-V^2&=V_R^2+(V_L-V_C)^2,\\
-&=I^2R^2\\
-&\quad+I^2(X_L-X_C)^2.
+V^2 &= V_R^2+(V_L-V_C)^2, \\
+&= I^2R^2 +I^2(X_L-X_C)^2.
 \end{aligned}
 $$
 
@@ -87,9 +86,9 @@ Khi đó biểu thức đầy đủ là
 
 $$
 \begin{aligned}
-Z&=\sqrt{R^2+X^2},\\
-X&=\omega L-\frac1{\omega C}.\tag{31.23}
-\end{aligned}
+Z &= \sqrt{R^2+X^2}, \\
+X &= \omega L-\frac1{\omega C}.\tag{31.23}
+\end{aligned} \tag{31.23}
 $$
 
 Với cùng biên độ nguồn $V$, dòng $I=V/Z$ thay đổi theo tần số. Trong các nhánh song song chịu cùng điện áp, nhánh có trở kháng nhỏ hơn có biên độ dòng lớn hơn.
@@ -104,10 +103,10 @@ Góc $\phi$ trong giản đồ là góc của điện áp nguồn so với dòng
 
 $$
 \begin{aligned}
-\tan\phi&=\frac{V_L-V_C}{V_R}\\
-&=\frac{X_L-X_C}{R}\\
-&=\frac{\omega L-1/(\omega C)}R.\tag{31.24}
-\end{aligned}
+\tan\phi &= \frac{V_L-V_C}{V_R} \\
+&= \frac{X_L-X_C}{R} \\
+&= \frac{\omega L-1/(\omega C)}R.\tag{31.24}
+\end{aligned} \tag{31.24}
 $$
 
 Với $R>0$, chọn góc trong khoảng từ $-\pi/2$ đến $\pi/2$. Nếu dòng là $I\cos\omega t$, điện áp nguồn là
@@ -148,9 +147,9 @@ Tương tự:
 
 $$
 \begin{aligned}
-V_{R,\mathrm{rms}}&=I_{\mathrm{rms}}R,\\
-V_{L,\mathrm{rms}}&=I_{\mathrm{rms}}X_L,\\
-V_{C,\mathrm{rms}}&=I_{\mathrm{rms}}X_C.
+V_{R,\mathrm{rms}} &= I_{\mathrm{rms}}R, \\
+V_{L,\mathrm{rms}} &= I_{\mathrm{rms}}X_L, \\
+V_{C,\mathrm{rms}} &= I_{\mathrm{rms}}X_C.
 \end{aligned}
 $$
 
@@ -176,8 +175,8 @@ Tìm $X_L$, $X_C$, $Z$, biên độ dòng, góc pha và biên độ điện áp 
 
 $$
 \begin{aligned}
-X_L&=\omega L=600\,\Omega,\\
-X_C&=\frac1{\omega C}=200\,\Omega.
+X_L &= \omega L=600\,\Omega, \\
+X_C &= \frac1{\omega C}=200\,\Omega.
 \end{aligned}
 $$
 
@@ -185,9 +184,9 @@ Trở kháng:
 
 $$
 \begin{aligned}
-Z&=\sqrt{R^2+(X_L-X_C)^2}\\
-&=\sqrt{300^2+400^2}\,\Omega\\
-&=500\,\Omega.
+Z &= \sqrt{R^2+(X_L-X_C)^2} \\
+&= \sqrt{300^2+400^2}\,\Omega \\
+&= 500\,\Omega.
 \end{aligned}
 $$
 
@@ -201,8 +200,8 @@ Góc pha:
 
 $$
 \begin{aligned}
-\phi&=\arctan\frac{400}{300}\\
-&\approx53^\circ.
+\phi &= \arctan\frac{400}{300} \\
+&\approx 53^\circ.
 \end{aligned}
 $$
 
@@ -210,9 +209,9 @@ $$
 
 $$
 \begin{aligned}
-V_R&=IR=30\,\mathrm V,\\
-V_L&=IX_L=60\,\mathrm V,\\
-V_C&=IX_C=20\,\mathrm V.
+V_R &= IR=30\,\mathrm V, \\
+V_L &= IX_L=60\,\mathrm V, \\
+V_C &= IX_C=20\,\mathrm V.
 \end{aligned}
 $$
 
@@ -230,9 +229,9 @@ Với mạch ở Ví dụ 31.4, tìm biểu thức theo thời gian của dòng,
 
 $$
 \begin{aligned}
-T&=\frac{2\pi}{\omega}\\
-&\approx6{,}3\times10^{-4}\,\mathrm s\\
-&=0{,}63\,\mathrm{ms}.
+T &= \frac{2\pi}{\omega} \\
+&\approx 6{,}3\times10^{-4}\,\mathrm s \\
+&= 0{,}63\,\mathrm{ms}.
 \end{aligned}
 $$
 
@@ -240,8 +239,8 @@ $$
 
 $$
 \begin{aligned}
-i&=(0{,}10\,\mathrm A)\cos\theta,\\
-v_R&=(30\,\mathrm V)\cos\theta.
+i &= (0{,}10\,\mathrm A)\cos\theta, \\
+v_R &= (30\,\mathrm V)\cos\theta.
 \end{aligned}
 $$
 
@@ -249,8 +248,8 @@ $$
 
 $$
 \begin{aligned}
-v_L&=(60\,\mathrm V)\cos(\theta+\pi/2)\\
-&=-(60\,\mathrm V)\sin\theta.
+v_L &= (60\,\mathrm V)\cos(\theta+\pi/2) \\
+&= -(60\,\mathrm V)\sin\theta.
 \end{aligned}
 $$
 
@@ -258,8 +257,8 @@ $$
 
 $$
 \begin{aligned}
-v_C&=(20\,\mathrm V)\cos(\theta-\pi/2)\\
-&=(20\,\mathrm V)\sin\theta.
+v_C &= (20\,\mathrm V)\cos(\theta-\pi/2) \\
+&= (20\,\mathrm V)\sin\theta.
 \end{aligned}
 $$
 
@@ -275,9 +274,8 @@ $$
 
 $$
 \begin{aligned}
-v&=(30\,\mathrm V)\cos\theta\\
-&\quad-(40\,\mathrm V)\sin\theta\\
-&=v_R+v_L+v_C.
+v &= (30\,\mathrm V)\cos\theta -(40\,\mathrm V)\sin\theta \\
+&= v_R+v_L+v_C.
 \end{aligned}
 $$
 
@@ -296,10 +294,10 @@ Thứ tự là (iv), (ii), (i), (iii). Các biên độ:
 
 $$
 \begin{aligned}
-I_{\mathrm{(iv)}}&=\frac{50}{200}\,\mathrm A=0{,}25\,\mathrm A,\\
-I_{\mathrm{(ii)}}&=\frac{50}{300}\,\mathrm A\approx0{,}17\,\mathrm A,\\
-I_{\mathrm{(i)}}&=\frac{50}{500}\,\mathrm A=0{,}10\,\mathrm A,\\
-I_{\mathrm{(iii)}}&=\frac{50}{600}\,\mathrm A\approx0{,}083\,\mathrm A.
+I_{\mathrm{(iv)}} &= \frac{50}{200}\,\mathrm A=0{,}25\,\mathrm A, \\
+I_{\mathrm{(ii)}} &= \frac{50}{300}\,\mathrm A\approx0{,}17\,\mathrm A, \\
+I_{\mathrm{(i)}} &= \frac{50}{500}\,\mathrm A=0{,}10\,\mathrm A, \\
+I_{\mathrm{(iii)}} &= \frac{50}{600}\,\mathrm A\approx0{,}083\,\mathrm A.
 \end{aligned}
 $$
 

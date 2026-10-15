@@ -19,8 +19,8 @@ Khoảng cách giữa hai dây là:
 
 $$
 \begin{aligned}
-&d = 2l\sin\theta\\
-&\quad =8{,}36\times10^{-3}\,\mathrm m.
+d &= 2l\sin\theta \\
+&= 8{,}36\times10^{-3}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -28,9 +28,9 @@ Xét một đoạn dây dài $L$. Lực từ hướng ngang, trọng lực hư�
 
 $$
 \begin{aligned}
-&T\sin\theta = F_B,\\
-&T\cos\theta = \lambda Lg,\\
-&\frac{F_B}{L} = \lambda g\tan\theta.
+T\sin\theta &= F_B, \\
+T\cos\theta &= \lambda Lg, \\
+\frac{F_B}{L} &= \lambda g\tan\theta.
 \end{aligned}
 $$
 
@@ -44,8 +44,8 @@ Suy ra:
 
 $$
 \begin{aligned}
-&I = \sqrt{\frac{2\pi d\lambda g\tan\theta}{\mu_0}}\\
-&\quad =23{,}2\,\mathrm A.
+I &= \sqrt{\frac{2\pi d\lambda g\tan\theta}{\mu_0}} \\
+&= 23{,}2\,\mathrm A.
 \end{aligned}
 $$
 
@@ -71,9 +71,9 @@ Với cung góc $\alpha$, tích phân Biot–Savart cho:
 
 $$
 \begin{aligned}
-&B_{\mathrm{cung}} = \frac{\mu_0I}{4\pi R}\alpha,\\
-&\alpha = \pi,\\
-&B_{\mathrm{bán\ nguyệt}} = \frac{\mu_0I}{4R}.
+B_{\mathrm{cung}} &= \frac{\mu_0I}{4\pi R}\alpha, \\
+\alpha &= \pi, \\
+B_{\mathrm{bán\ nguyệt}} &= \frac{\mu_0I}{4R}.
 \end{aligned}
 $$
 
@@ -119,10 +119,10 @@ Bán kính trụ là $a=5{,}00\,\mathrm{cm}$, hằng số $\beta=600\,\mathrm{A/
 
 $$
 \begin{aligned}
-&I_0 = \int_0^a J(s)\,2\pi s\,ds\\
-&\quad =2\pi\beta\int_0^a e^{(s-a)/\delta}\,ds\\
-&\quad =2\pi\beta\delta(1-e^{-a/\delta})\\
-&\quad =81{,}5\,\mathrm A.
+I_0 &= \int_0^a J(s)\,2\pi s\,ds \\
+&= 2\pi\beta\int_0^a e^{(s-a)/\delta}\,ds \\
+&= 2\pi\beta\delta(1-e^{-a/\delta}) \\
+&= 81{,}5\,\mathrm A.
 \end{aligned}
 $$
 
@@ -132,8 +132,8 @@ Thừa số $1/s$ trong mật độ triệt tiêu với thừa số $s$ của di
 
 $$
 \begin{aligned}
-&B(2\pi r) = \mu_0I_0,\\
-&\vec B(r) = \frac{\mu_0I_0}{2\pi r}\hat\phi.
+B(2\pi r) &= \mu_0I_0, \\
+\vec B(r) &= \frac{\mu_0I_0}{2\pi r}\hat\phi.
 \end{aligned}
 $$
 
@@ -143,9 +143,8 @@ Vector đơn vị $\hat\phi$ chỉ chiều đi quanh trục theo quy tắc bàn 
 
 $$
 \begin{aligned}
-&I(r) = 2\pi\beta\delta\\
-&\quad\times\left(e^{(r-a)/\delta}-e^{-a/\delta}\right),\\
-&I(r) = I_0\frac{e^{r/\delta}-1}{e^{a/\delta}-1}.
+I(r) &= 2\pi\beta\delta \left(e^{(r-a)/\delta}-e^{-a/\delta}\right), \\
+I(r) &= I_0\frac{e^{r/\delta}-1}{e^{a/\delta}-1}.
 \end{aligned}
 $$
 
@@ -162,9 +161,9 @@ Hai biểu thức trong và ngoài cho cùng giá trị tại $r=a$. Tại đún
 
 $$
 \begin{aligned}
-&B(\delta) = 1{,}75\times10^{-4}\,\mathrm T,\\
-&B(a) = 3{,}26\times10^{-4}\,\mathrm T,\\
-&B(2a) = 1{,}63\times10^{-4}\,\mathrm T.
+B(\delta) &= 1{,}75\times10^{-4}\,\mathrm T, \\
+B(a) &= 3{,}26\times10^{-4}\,\mathrm T, \\
+B(2a) &= 1{,}63\times10^{-4}\,\mathrm T.
 \end{aligned}
 $$
 :::
@@ -188,9 +187,8 @@ Chọn chiều ra khỏi trang giấy là dương. Trường của cung ngoài d
 
 $$
 \begin{aligned}
-&B_z =\frac{\mu_0I\alpha}{4\pi}
-\left(\frac1b-\frac1a\right)\\
-&\quad =-4{,}19\times10^{-6}\,\mathrm T.
+B_z &= \frac{\mu_0I\alpha}{4\pi} \left(\frac1b-\frac1a\right) \\
+&= -4{,}19\times10^{-6}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -216,9 +214,9 @@ Dây thẳng dài, tiết diện tròn bán kính $R$, mang tổng dòng $I$. M�
 
 $$
 \begin{aligned}
-&I = \int_0^R\alpha s\,2\pi s\,ds\\
-&\quad =\frac{2\pi\alpha R^3}{3},\\
-&\alpha = \frac{3I}{2\pi R^3}.
+I &= \int_0^R\alpha s\,2\pi s\,ds \\
+&= \frac{2\pi\alpha R^3}{3}, \\
+\alpha &= \frac{3I}{2\pi R^3}.
 \end{aligned}
 $$
 
@@ -226,9 +224,9 @@ $$
 
 $$
 \begin{aligned}
-&I(r) = \frac{2\pi\alpha r^3}{3}\\
-&\quad =I\left(\frac rR\right)^3,\\
-&B(r) = \frac{\mu_0Ir^2}{2\pi R^3}.
+I(r) &= \frac{2\pi\alpha r^3}{3} \\
+&= I\left(\frac rR\right)^3, \\
+B(r) &= \frac{\mu_0Ir^2}{2\pi R^3}.
 \end{aligned}
 $$
 
@@ -260,9 +258,9 @@ Gọi $s\ge0$ là khoảng cách từ góc dây xuống phần tử đang xét. 
 
 $$
 \begin{aligned}
-&B =\frac{\mu_0I}{4\pi} \int_0^\infty\frac{a\,ds}{(a^2+s^2)^{3/2}}\\
-&\quad =\frac{\mu_0I}{4\pi} \left[\frac{s}{a\sqrt{a^2+s^2}}\right]_0^\infty\\
-&\quad =\frac{\mu_0I}{4\pi a}.
+B &= \frac{\mu_0I}{4\pi} \int_0^\infty\frac{a\,ds}{(a^2+s^2)^{3/2}} \\
+&= \frac{\mu_0I}{4\pi} \left[\frac{s}{a\sqrt{a^2+s^2}}\right]_0^\infty \\
+&= \frac{\mu_0I}{4\pi a}.
 \end{aligned}
 $$
 
@@ -301,9 +299,9 @@ Trong trụ, biểu thức áp dụng với $r\le a$. Ngoài trụ, $\vec J=0$.
 
 $$
 \begin{aligned}
-&I_{\mathrm{tổng}} = \frac{4I_0}{a^2} \int_0^a\left(s-\frac{s^3}{a^2}\right)ds\\
-&\quad =\frac{4I_0}{a^2} \left(\frac{a^2}{2}-\frac{a^2}{4}\right)\\
-&\quad =I_0.
+I_{\mathrm{tổng}} &= \frac{4I_0}{a^2} \int_0^a\left(s-\frac{s^3}{a^2}\right)ds \\
+&= \frac{4I_0}{a^2} \left(\frac{a^2}{2}-\frac{a^2}{4}\right) \\
+&= I_0.
 \end{aligned}
 $$
 
@@ -317,9 +315,8 @@ $$
 
 $$
 \begin{aligned}
-&I(r) =\frac{4I_0}{a^2}
-\left(\frac{r^2}{2}-\frac{r^4}{4a^2}\right)\\
-&\quad =I_0\left(\frac{2r^2}{a^2}-\frac{r^4}{a^4}\right).
+I(r) &= \frac{4I_0}{a^2} \left(\frac{r^2}{2}-\frac{r^4}{4a^2}\right) \\
+&= I_0\left(\frac{2r^2}{a^2}-\frac{r^4}{a^4}\right).
 \end{aligned}
 $$
 
@@ -327,8 +324,8 @@ $$
 
 $$
 \begin{aligned}
-&B(r) = \frac{\mu_0I(r)}{2\pi r}\\
-&\quad =\frac{\mu_0I_0r}{2\pi a^2} \left(2-\frac{r^2}{a^2}\right).
+B(r) &= \frac{\mu_0I(r)}{2\pi r} \\
+&= \frac{\mu_0I_0r}{2\pi a^2} \left(2-\frac{r^2}{a^2}\right).
 \end{aligned}
 $$
 
@@ -360,8 +357,8 @@ Với điểm nằm phía trên dây, dòng từ trái sang phải tạo trườ
 
 $$
 \begin{aligned}
-&\frac{\mu_0I_1}{2\pi D} = \frac{\mu_0I_2}{2R},\\
-&I_1 = \frac{\pi D}{R}I_2.
+\frac{\mu_0I_1}{2\pi D} &= \frac{\mu_0I_2}{2R}, \\
+I_1 &= \frac{\pi D}{R}I_2.
 \end{aligned}
 $$
 :::
@@ -385,10 +382,10 @@ Chọn hình chữ nhật có hai cạnh dài $l$ song song $x$, một cạnh �
 
 $$
 \begin{aligned}
-&\oint\vec B\cdot d\vec l = 2Bl,\\
-&I_{\mathrm{bao}} = nlI,\\
-&2Bl = \mu_0nlI,\\
-&B = \frac{\mu_0nI}{2}.
+\oint\vec B\cdot d\vec l &= 2Bl, \\
+I_{\mathrm{bao}} &= nlI, \\
+2Bl &= \mu_0nlI, \\
+B &= \frac{\mu_0nI}{2}.
 \end{aligned}
 $$
 
@@ -396,8 +393,8 @@ Quy tắc bàn tay phải cho trường phía trên hướng $+x$, phía dưới
 
 $$
 \begin{aligned}
-&\vec B(z=-a) = -\frac{\mu_0nI}{2}\hat i,\\
-&\vec B(z=+a) = +\frac{\mu_0nI}{2}\hat i.
+\vec B(z &= -a) = -\frac{\mu_0nI}{2}\hat i, \\
+\vec B(z &= +a) = +\frac{\mu_0nI}{2}\hat i.
 \end{aligned}
 $$
 
@@ -429,9 +426,9 @@ Do đó:
 
 $$
 \begin{aligned}
-&B_P = 0,\\
-&B_R = 2B_0=\mu_0nI,\\
-&B_S = 0.
+B_P &= 0, \\
+B_R &= 2B_0=\mu_0nI, \\
+B_S &= 0.
 \end{aligned}
 $$
 
@@ -472,9 +469,9 @@ $$
 
 $$
 \begin{aligned}
-&\sigma_1 = \frac{Q_1}{2\pi R_1H},\\
-&K = \sigma_1R_1\omega_1\\
-&\quad =\frac{Q_1\omega_1}{2\pi H}.
+\sigma_1 &= \frac{Q_1}{2\pi R_1H}, \\
+K &= \sigma_1R_1\omega_1 \\
+&= \frac{Q_1\omega_1}{2\pi H}.
 \end{aligned}
 $$
 
@@ -482,8 +479,8 @@ Trong mô hình bỏ qua hiệu ứng mép và trường ngoài, tích phân d�
 
 $$
 \begin{aligned}
-&BH = \mu_0I_{\mathrm{bao}},\\
-&B = \frac{\mu_0|Q_1|\omega_1}{2\pi H}.
+BH &= \mu_0I_{\mathrm{bao}}, \\
+B &= \frac{\mu_0|Q_1|\omega_1}{2\pi H}.
 \end{aligned}
 $$
 
@@ -493,9 +490,8 @@ Trường dọc trục trụ. Chiều được xác định từ chiều chuyể
 
 $$
 \begin{aligned}
-&\tau = \mu B\sin\theta\\
-&\quad =\frac{\mu_0|Q_1Q_2|R_2^2}{8\pi H}\\
-&\quad\times\omega_1\omega_2\sin\theta.
+\tau &= \mu B\sin\theta \\
+&= \frac{\mu_0|Q_1Q_2|R_2^2}{8\pi H} \times\omega_1\omega_2\sin\theta.
 \end{aligned}
 $$
 
@@ -548,8 +544,8 @@ Khi đổi milliampere sang ampere, số vòng cuộn 2 là:
 
 $$
 \begin{aligned}
-&N_2 = \frac{16{,}00-8{,}00}{0{,}00500-0{,}00200}\\
-&\quad \approx2{,}67\times10^3.
+N_2 &= \frac{16{,}00-8{,}00}{0{,}00500-0{,}00200} \\
+&\approx 2{,}67\times10^3.
 \end{aligned}
 $$
 
@@ -557,9 +553,9 @@ Dùng điểm thứ nhất để tìm cuộn 1:
 
 $$
 \begin{aligned}
-&N_1I_1 = 8{,}00-N_2(0{,}00200)\\
-&\quad \approx2{,}67\,\mathrm A,\\
-&N_1 \approx 1{,}33\times10^3.
+N_1I_1 &= 8{,}00-N_2(0{,}00200) \\
+&\approx 2{,}67\,\mathrm A, \\
+N_1 &\approx 1{,}33\times10^3.
 \end{aligned}
 $$
 
@@ -569,9 +565,8 @@ Các số vòng là ước lượng từ đường thẳng trên đồ thị.
 
 $$
 \begin{aligned}
-&B_z =\frac{\mu_0}{L}
-\left(N_1I_1-N_2I_2\right)\\
-&\quad =-3{,}35\times10^{-5}\,\mathrm T.
+B_z &= \frac{\mu_0}{L} \left(N_1I_1-N_2I_2\right) \\
+&= -3{,}35\times10^{-5}\,\mathrm T.
 \end{aligned}
 $$
 
@@ -627,8 +622,8 @@ Vì thế đồ thị có hệ số góc dương và tung độ gốc âm.
 
 $$
 \begin{aligned}
-&s \approx 1{,}298\times10^{-5}\,\mathrm{T\,m},\\
-&c \approx -1{,}191\times10^{-2}\,\mathrm m.
+s &\approx 1{,}298\times10^{-5}\,\mathrm{T\,m}, \\
+c &\approx -1{,}191\times10^{-2}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -636,10 +631,10 @@ So sánh với biểu thức lý thuyết:
 
 $$
 \begin{aligned}
-&I = \frac{2\pi s}{\mu_0}\\
-&\quad \approx64{,}9\,\mathrm A,\\
-&R = -c\\
-&\quad \approx1{,}19\,\mathrm{cm}.
+I &= \frac{2\pi s}{\mu_0} \\
+&\approx 64{,}9\,\mathrm A, \\
+R &= -c \\
+&\approx 1{,}19\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -671,9 +666,9 @@ Khi $I=8{,}05\,\mathrm A$, mỗi lò xo giãn $x=0{,}40\,\mathrm{cm}$. Khi $I=13
 
 $$
 \begin{aligned}
-&2kx = \frac{\mu_0I^2L}{2\pi(l_0+x)},\\
-&kx(l_0+x) = \alpha I^2,\\
-&\alpha = \frac{\mu_0L}{4\pi}.
+2kx &= \frac{\mu_0I^2L}{2\pi(l_0+x)}, \\
+kx(l_0+x) &= \alpha I^2, \\
+\alpha &= \frac{\mu_0L}{4\pi}.
 \end{aligned}
 $$
 
@@ -681,8 +676,8 @@ $$
 
 $$
 \begin{aligned}
-&kl_0+kx_1 = \frac{\alpha I_1^2}{x_1},\\
-&kl_0+kx_2 = \frac{\alpha I_2^2}{x_2}.
+kl_0+kx_1 &= \frac{\alpha I_1^2}{x_1}, \\
+kl_0+kx_2 &= \frac{\alpha I_2^2}{x_2}.
 \end{aligned}
 $$
 
@@ -690,11 +685,10 @@ Lấy phương trình thứ hai trừ phương trình thứ nhất:
 
 $$
 \begin{aligned}
-&k = \frac{\alpha}{x_2-x_1}\\
-&\quad\times\left(\frac{I_2^2}{x_2}-\frac{I_1^2}{x_1}\right)\\
-&\quad =6{,}56\times10^{-2}\,\mathrm{N/m},\\
-&l_0 = \frac{\alpha I_1^2}{kx_1}-x_1\\
-&\quad =8{,}34\times10^{-3}\,\mathrm m.
+k &= \frac{\alpha}{x_2-x_1} \left(\frac{I_2^2}{x_2}-\frac{I_1^2}{x_1}\right) \\
+&= 6{,}56\times10^{-2}\,\mathrm{N/m}, \\
+l_0 &= \frac{\alpha I_1^2}{kx_1}-x_1 \\
+&= 8{,}34\times10^{-3}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -710,9 +704,9 @@ Chọn nghiệm dương vì lò xo giãn:
 
 $$
 \begin{aligned}
-&x = \frac{-l_0+\sqrt{l_0^2+4\alpha I^2/k}}2\\
-&\quad =7{,}10\times10^{-3}\,\mathrm m\\
-&\quad \approx0{,}71\,\mathrm{cm}.
+x &= \frac{-l_0+\sqrt{l_0^2+4\alpha I^2/k}}2 \\
+&= 7{,}10\times10^{-3}\,\mathrm m \\
+&\approx 0{,}71\,\mathrm{cm}.
 \end{aligned}
 $$
 
@@ -720,8 +714,8 @@ $$
 
 $$
 \begin{aligned}
-&I = \sqrt{\frac{kx(l_0+x)}{\alpha}}\\
-&\quad =15{,}5\,\mathrm A.
+I &= \sqrt{\frac{kx(l_0+x)}{\alpha}} \\
+&= 15{,}5\,\mathrm A.
 \end{aligned}
 $$
 :::
@@ -764,8 +758,8 @@ $$
 
 $$
 \begin{aligned}
-&\sigma = \rho n^{-1/3}\\
-&\quad =q n^{2/3}.
+\sigma &= \rho n^{-1/3} \\
+&= q n^{2/3}.
 \end{aligned}
 $$
 
@@ -773,8 +767,8 @@ $$
 
 $$
 \begin{aligned}
-&B_R(2\pi R) = \mu_0nqv\pi R^2,\\
-&\vec B_R = \frac{\mu_0nqvR}{2}\hat\phi.
+B_R(2\pi R) &= \mu_0nqv\pi R^2, \\
+\vec B_R &= \frac{\mu_0nqvR}{2}\hat\phi.
 \end{aligned}
 $$
 
@@ -794,11 +788,11 @@ $$
 
 $$
 \begin{aligned}
-&F_{\mathrm{ép}} = \int_0^{2\pi}\sigma vRLB_R\,d\phi\\
-&\quad =2\pi RL\sigma vB_R,\\
-&p = \frac{F_{\mathrm{ép}}}{2\pi RL}\\
-&\quad =\sigma vB_R\\
-&\quad =\frac{\mu_0}{2}n^{5/3}q^2Rv^2.
+F_{\mathrm{ép}} &= \int_0^{2\pi}\sigma vRLB_R\,d\phi \\
+&= 2\pi RL\sigma vB_R, \\
+p &= \frac{F_{\mathrm{ép}}}{2\pi RL} \\
+&= \sigma vB_R \\
+&= \frac{\mu_0}{2}n^{5/3}q^2Rv^2.
 \end{aligned}
 $$
 
@@ -808,10 +802,10 @@ $$
 
 $$
 \begin{aligned}
-&n = 8{,}0\times10^{22}\,\mathrm{m^{-3}},\\
-&R = 0{,}020\,\mathrm m,\\
-&p = 1{,}91\times10^{-5}\,\mathrm{Pa}\\
-&\quad \approx1{,}9\times10^{-5}\,\mathrm{Pa}.
+n &= 8{,}0\times10^{22}\,\mathrm{m^{-3}}, \\
+R &= 0{,}020\,\mathrm m, \\
+p &= 1{,}91\times10^{-5}\,\mathrm{Pa} \\
+&\approx 1{,}9\times10^{-5}\,\mathrm{Pa}.
 \end{aligned}
 $$
 :::

@@ -19,9 +19,9 @@ Các công suất tương ứng là:
 
 $$
 \begin{aligned}
-&P_{\mathcal E} = \mathcal EI,\\
-&P_r = I^2r,\\
-&P_{\mathrm{ra}} = \mathcal EI-I^2r.
+P_{\mathcal E} &= \mathcal EI, \\
+P_r &= I^2r, \\
+P_{\mathrm{ra}} &= \mathcal EI-I^2r.
 \end{aligned}
 $$
 

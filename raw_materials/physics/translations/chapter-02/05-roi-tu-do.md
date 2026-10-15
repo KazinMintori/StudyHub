@@ -22,8 +22,8 @@ Gia tốc không đổi của một vật rơi tự do được gọi là **gia 
 
 $$
 \begin{aligned}
-g &\approx 9.80\,\mathrm{m/s^2}\\
-&= 980\,\mathrm{cm/s^2}\\
+g &\approx 9.80\,\mathrm{m/s^2} \\
+&= 980\,\mathrm{cm/s^2} \\
 &\approx 32.2\,\mathrm{ft/s^2}.
 \end{aligned}
 $$
@@ -79,11 +79,11 @@ Các phương trình chuyển động của đồng xu là:
 
 $$
 \begin{aligned}
-y &= y_0 + v_{0y}t + \frac{1}{2}a_y t^2\\
-&= -\frac{1}{2}gt^2\\
-&= -(4.9\,\mathrm{m/s^2})t^2,\\
-v_y &= v_{0y} + a_y t\\
-&= -gt\\
+y &= y_0 + v_{0y}t + \frac{1}{2}a_y t^2 \\
+&= -\frac{1}{2}gt^2 \\
+&= -(4.9\,\mathrm{m/s^2})t^2, \\
+v_y &= v_{0y} + a_y t \\
+&= -gt \\
 &= -(9.8\,\mathrm{m/s^2})t.
 \end{aligned}
 $$
@@ -93,9 +93,9 @@ $$
 
 $$
 \begin{aligned}
-y_1 &= -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2\\
-&= -4.9\,\mathrm m,\\
-v_{1y} &= -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s)\\
+y_1 &= -(4.9\,\mathrm{m/s^2})(1.0\,\mathrm s)^2 \\
+&= -4.9\,\mathrm m, \\
+v_{1y} &= -(9.8\,\mathrm{m/s^2})(1.0\,\mathrm s) \\
 &= -9.8\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -105,9 +105,9 @@ $$
 
 $$
 \begin{aligned}
-y_2 &= -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2\\
-&\approx -20\,\mathrm m,\\
-v_{2y} &= -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s)\\
+y_2 &= -(4.9\,\mathrm{m/s^2})(2.0\,\mathrm s)^2 \\
+&\approx -20\,\mathrm m, \\
+v_{2y} &= -(9.8\,\mathrm{m/s^2})(2.0\,\mathrm s) \\
 &\approx -20\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -117,9 +117,9 @@ $$
 
 $$
 \begin{aligned}
-y_3 &= -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2\\
-&\approx -44\,\mathrm m,\\
-v_{3y} &= -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s)\\
+y_3 &= -(4.9\,\mathrm{m/s^2})(3.0\,\mathrm s)^2 \\
+&\approx -44\,\mathrm m, \\
+v_{3y} &= -(9.8\,\mathrm{m/s^2})(3.0\,\mathrm s) \\
 &\approx -29\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -156,8 +156,8 @@ Phương trình tọa độ và vận tốc theo thời gian:
 
 $$
 \begin{aligned}
-y &= (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2\\
-&= (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2,\\
+y &= (15.0\,\mathrm{m/s})t - \frac{1}{2}(9.80\,\mathrm{m/s^2})t^2 \\
+&= (15.0\,\mathrm{m/s})t - (4.90\,\mathrm{m/s^2})t^2, \\
 v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})t.
 \end{aligned}
 $$
@@ -169,9 +169,9 @@ $$
 
 $$
 \begin{aligned}
-y &= (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2\\
-&= +10.1\,\mathrm m,\\
-v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s)\\
+y &= (15.0\,\mathrm{m/s})(1.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(1.00\,\mathrm s)^2 \\
+&= +10.1\,\mathrm m, \\
+v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(1.00\,\mathrm s) \\
 &= +5.20\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -181,11 +181,11 @@ $$
 
 $$
 \begin{aligned}
-y &= (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2\\
-&= 60.0 - 78.4\\
-&= -18.4\,\mathrm m,\\
-v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s)\\
-&= 15.0 - 39.2\\
+y &= (15.0\,\mathrm{m/s})(4.00\,\mathrm s) - (4.90\,\mathrm{m/s^2})(4.00\,\mathrm s)^2 \\
+&= 60.0 - 78.4 \\
+&= -18.4\,\mathrm m, \\
+v_y &= 15.0\,\mathrm{m/s} - (9.80\,\mathrm{m/s^2})(4.00\,\mathrm s) \\
+&= 15.0 - 39.2 \\
 &= -24.2\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -196,9 +196,9 @@ Vì câu hỏi không đề cập đến thời gian, cách tiếp cận tối �
 
 $$
 \begin{aligned}
-v_y^2 &= v_{0y}^2 + 2a_y(y - y_0)\\
-&= (15.0\,\mathrm{m/s})^2 - 2(9.80\,\mathrm{m/s^2})(5.00\,\mathrm m)\\
-&= 225 - 98.0\\
+v_y^2 &= v_{0y}^2 + 2a_y(y - y_0) \\
+&= (15.0\,\mathrm{m/s})^2 - 2(9.80\,\mathrm{m/s^2})(5.00\,\mathrm m) \\
+&= 225 - 98.0 \\
 &= 127\,\mathrm{m^2/s^2}.
 \end{aligned}
 $$
@@ -207,7 +207,7 @@ Lấy căn bậc hai, ta thu được hai nghiệm đối xứng:
 
 $$
 \begin{aligned}
-v_y &= \pm \sqrt{127\,\mathrm{m^2/s^2}}\\
+v_y &= \pm \sqrt{127\,\mathrm{m^2/s^2}} \\
 &\approx \pm 11.3\,\mathrm{m/s}.
 \end{aligned}
 $$
@@ -219,10 +219,10 @@ Tại đỉnh quỹ đạo, quả bóng đổi chiều chuyển động nên v�
 
 $$
 \begin{aligned}
-0 &= v_{0y}^2 - 2g y_{\max}\\
-&\implies y_{\max} = \frac{v_{0y}^2}{2g}\\
-&= \frac{(15.0\,\mathrm{m/s})^2}{2(9.80\,\mathrm{m/s^2})}\\
-&= \frac{225}{19.6}\\
+0 &= v_{0y}^2 - 2g y_{\max} \\
+\implies y_{\max} &= \frac{v_{0y}^2}{2g} \\
+&= \frac{(15.0\,\mathrm{m/s})^2}{2(9.80\,\mathrm{m/s^2})} \\
+&= \frac{225}{19.6} \\
 &\approx +11.5\,\mathrm m.
 \end{aligned}
 $$
@@ -231,8 +231,8 @@ Thời gian để vật lên tới độ cao cực đại là:
 
 $$
 \begin{aligned}
-t_{\text{đỉnh}} &= \frac{v_{0y}}{g}\\
-&= \frac{15.0\,\mathrm{m/s}}{9.80\,\mathrm{m/s^2}}\\
+t_{\text{đỉnh}} &= \frac{v_{0y}}{g} \\
+&= \frac{15.0\,\mathrm{m/s}}{9.80\,\mathrm{m/s^2}} \\
 &\approx 1.53\,\mathrm s.
 \end{aligned}
 $$
@@ -242,7 +242,7 @@ Như đã phân tích ở phần lý thuyết, tại điểm cao nhất khi $v_y
 
 $$
 \begin{aligned}
-a_y &= -g\\
+a_y &= -g \\
 &= -9.80\,\mathrm{m/s^2}.
 \end{aligned}
 $$
@@ -290,9 +290,9 @@ $$
 
 $$
 \begin{aligned}
-t &= \frac{15.0 \pm \sqrt{(-15.0)^2 - 4(4.90)(-5.00)}}{2(4.90)}\\
-&= \frac{15.0 \pm \sqrt{225 + 98.0}}{9.80}\\
-&= \frac{15.0 \pm \sqrt{323}}{9.80}\\
+t &= \frac{15.0 \pm \sqrt{(-15.0)^2 - 4(4.90)(-5.00)}}{2(4.90)} \\
+&= \frac{15.0 \pm \sqrt{225 + 98.0}}{9.80} \\
+&= \frac{15.0 \pm \sqrt{323}}{9.80} \\
 &\approx \frac{15.0 \pm 17.97}{9.80}.
 \end{aligned}
 $$
@@ -301,7 +301,7 @@ Phương trình cho hai nghiệm toán học:
 
 $$
 \begin{aligned}
-t_1 &\approx +3.36\,\mathrm s \quad \text{và} \quad t_2\\
+t_1 &\approx +3.36\,\mathrm s \quad \text{và} \quad t_2 \\
 &\approx -0.30\,\mathrm s.
 \end{aligned}
 $$

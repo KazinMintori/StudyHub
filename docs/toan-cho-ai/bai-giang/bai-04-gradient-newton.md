@@ -291,8 +291,8 @@ Gradient và Hessian của hàm chắn logarit:
 
 $$
 \begin{aligned}
-&\nabla \phi(x) = \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla f_i(x),\\
-&\nabla^2 \phi(x) = \sum_{i=1}^m \frac{1}{f_i(x)^2} \nabla f_i(x) \nabla f_i(x)^T + \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla^2 f_i(x).
+\nabla \phi(x) &= \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla f_i(x), \\
+\nabla^2 \phi(x) &= \sum_{i=1}^m \frac{1}{f_i(x)^2} \nabla f_i(x) \nabla f_i(x)^T + \sum_{i=1}^m \frac{1}{-f_i(x)} \nabla^2 f_i(x).
 \end{aligned}
 $$
 
@@ -641,11 +641,11 @@ Xét điểm khởi tạo $s^0 = 0{,}25$.
      $$
    - Mức giảm thực tế sau một bước lặp:
      $$
-     \begin{aligned}
-     &\varphi(s^0) - \varphi(s^1) = \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right)\\
-     &\quad = -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
-     \end{aligned}
-     $$
+\begin{aligned}
+\varphi(s^0) - \varphi(s^1) &= \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right) \\
+&= -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
+\end{aligned}
+$$
    
    **Phân biệt ba đại lượng**:
    - Mức giảm dự đoán $\frac{1}{2}\lambda^2 = 0{,}28125$: Dựa trên mô hình parabol thuần túy.
@@ -681,12 +681,12 @@ $$
    $$
    Khai triển hệ phương trình:
    $$
-   \begin{aligned}
-   &\Delta x_1 + w = -1 \implies \Delta x_1 = -1 - w,\\
-   &2\Delta x_2 + w = 0 \implies \Delta x_2 = -\frac{w}{2},\\
-   &3\Delta x_3 + w = 0 \implies \Delta x_3 = -\frac{w}{3}.
-   \end{aligned}
-   $$
+\begin{aligned}
+\Delta x_1 + w &= -1 \implies \Delta x_1 = -1 - w, \\
+2\Delta x_2 + w &= 0 \implies \Delta x_2 = -\frac{w}{2}, \\
+3\Delta x_3 + w &= 0 \implies \Delta x_3 = -\frac{w}{3}.
+\end{aligned}
+$$
    Thay vào ràng buộc bảo toàn tính khả thi $A \Delta x = \Delta x_1 + \Delta x_2 + \Delta x_3 = 0$:
    $$
    (-1 - w) - \frac{w}{2} - \frac{w}{3} = 0 \iff -1 - w\left(1 + \frac{1}{2} + \frac{1}{3}\right) = 0 \iff w\left(\frac{11}{6}\right) = -1 \implies w = -\frac{6}{11}.
@@ -704,12 +704,12 @@ $$
 2. **Phương pháp khử biến (Elimination)**:
    Thay $x_1 = 1 - x_2 - x_3$ vào hàm mục tiêu:
    $$
-   \begin{aligned}
-   &\tilde{f}(x_2, x_3) = \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2\\
-   &\quad = \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2\\
-   &\quad = \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
-   \end{aligned}
-   $$
+\begin{aligned}
+\tilde{f}(x_2, x_3) &= \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2 \\
+&= \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2 \\
+&= \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
+\end{aligned}
+$$
    Gradient và Hessian rút gọn:
    $$
    \nabla \tilde{f} = \begin{bmatrix} 3x_2 + x_3 - 1 \\ x_2 + 4x_3 - 1 \end{bmatrix}, \qquad \tilde{H} = \begin{bmatrix} 3 & 1 \\ 1 & 4 \end{bmatrix}.

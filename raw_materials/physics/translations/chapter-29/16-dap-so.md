@@ -50,9 +50,9 @@ $$
 
 $$
 \begin{aligned}
-d\Phi_B&=\frac{\mu_0iL}{2\pi r}\,dr,\\
-\Phi_B&=\frac{\mu_0iL}{2\pi}\ln\frac ba,\\
-\mathcal E&=-\frac{\mu_0L}{2\pi}\ln\frac ba\frac{di}{dt}.
+d\Phi_B &= \frac{\mu_0iL}{2\pi r}\,dr, \\
+\Phi_B &= \frac{\mu_0iL}{2\pi}\ln\frac ba, \\
+\mathcal E &= -\frac{\mu_0L}{2\pi}\ln\frac ba\frac{di}{dt}.
 \end{aligned}
 $$
 
@@ -218,10 +218,9 @@ $5{,}0\,\mathrm s$.
 
 $$
 \begin{aligned}
-&\vec v=-\omega r\sin\theta\hat{\imath},\\
-&\vec v\times\vec B=-\omega rB\sin\theta\hat{\jmath},\\
-&d\vec\ell=r\cos\theta\hat{\jmath}\,d\theta\\
-&\quad-r\sin\theta\hat{k}\,d\theta.
+\vec v &= -\omega r\sin\theta\hat{\imath}, \\
+\vec v\times\vec B &= -\omega rB\sin\theta\hat{\jmath}, \\
+d\vec\ell &= r\cos\theta\hat{\jmath}\,d\theta -r\sin\theta\hat{k}\,d\theta.
 \end{aligned}
 $$
 
@@ -233,8 +232,8 @@ $$
 
 $$
 \begin{aligned}
-v_{\mathrm{gh}}&=\frac{Rmg\sin\phi}{B^2L^2\cos^2\phi},\\
-I_{\mathrm{gh}}&=\frac{mg\tan\phi}{BL}.
+v_{\mathrm{gh}} &= \frac{Rmg\sin\phi}{B^2L^2\cos^2\phi}, \\
+I_{\mathrm{gh}} &= \frac{mg\tan\phi}{BL}.
 \end{aligned}
 $$
 

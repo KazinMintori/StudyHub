@@ -21,8 +21,8 @@
 
 $$
 \begin{aligned}
-&\frac{I_2}{I_1} = \frac{R+r}{2R+r},\\
-&\frac{P_2}{P_1} = 2\left(\frac{R+r}{2R+r}\right)^2.
+\frac{I_2}{I_1} &= \frac{R+r}{2R+r}, \\
+\frac{P_2}{P_1} &= 2\left(\frac{R+r}{2R+r}\right)^2.
 \end{aligned}
 $$
 
@@ -87,8 +87,8 @@ Với Bài 25.75, a và b là bán kính mặt trong và ngoài, L là chiều d
 
 $$
 \begin{aligned}
-&E_r = -\frac{V}{r\ln(b/a)},\\
-&R = \frac{\rho}{2\pi L}\ln\frac ba.
+E_r &= -\frac{V}{r\ln(b/a)}, \\
+R &= \frac{\rho}{2\pi L}\ln\frac ba.
 \end{aligned}
 $$
 
@@ -96,10 +96,10 @@ Với Bài 25.77, đặt s = 1 − e⁻¹, một số không có đơn vị. V�
 
 $$
 \begin{aligned}
-&R = \frac{\rho_0Ls}{A},\\
-&I = \frac{V_0A}{\rho_0Ls},\\
-&E(x) = \frac{V_0e^{-x/L}}{Ls},\\
-&V(x) = \frac{V_0}{s}(e^{-x/L}-e^{-1}).
+R &= \frac{\rho_0Ls}{A}, \\
+I &= \frac{V_0A}{\rho_0Ls}, \\
+E(x) &= \frac{V_0e^{-x/L}}{Ls}, \\
+V(x) &= \frac{V_0}{s}(e^{-x/L}-e^{-1}).
 \end{aligned}
 $$
 :::

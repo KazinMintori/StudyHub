@@ -19,10 +19,10 @@ Với n điện trở dương, khai triển trước khi dùng ký hiệu tổng
 
 $$
 \begin{aligned}
-&R_s = R_1+R_2+\cdots+R_n,\\
-&R_s = \sum_{j=1}^{n}R_j,\\
-&\frac1{R_p} = \frac1{R_1}+\frac1{R_2}+\cdots+\frac1{R_n},\\
-&\frac1{R_p} = \sum_{j=1}^{n}\frac1{R_j}.
+R_s &= R_1+R_2+\cdots+R_n, \\
+R_s &= \sum_{j=1}^{n}R_j, \\
+\frac1{R_p} &= \frac1{R_1}+\frac1{R_2}+\cdots+\frac1{R_n}, \\
+\frac1{R_p} &= \sum_{j=1}^{n}\frac1{R_j}.
 \end{aligned}
 $$
 

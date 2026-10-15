@@ -17,8 +17,8 @@ Trong từ trường đều, lưỡng cực chịu mômen:
 
 $$
 \begin{aligned}
-&\vec\tau = \vec\mu\times\vec B,\\
-&\tau = \mu B\sin\phi.
+\vec\tau &= \vec\mu\times\vec B, \\
+\tau &= \mu B\sin\phi.
 \end{aligned}
 $$
 

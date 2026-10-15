@@ -1,0 +1,19 @@
+{
+  "course": "bieu-dien-tri-thuc",
+  "lecture": "16-mang-bayes",
+  "route": "/bieu-dien-tri-thuc/bai-giang/16-mang-bayes",
+  "notes": "docs/bieu-dien-tri-thuc/bai-giang/16-mang-bayes.md",
+  "topics": [],
+  "slides": "src/content/courses/bieu-dien-tri-thuc/lectures/16-mang-bayes/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "xac-suat-co-dieu-kien",
+    "doc-lap",
+    "do-thi"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

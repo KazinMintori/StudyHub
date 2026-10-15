@@ -47,9 +47,8 @@ Chọn (c), cụ thể đổi pha tương đối thêm nửa chu kỳ:
 
 $$
 \begin{aligned}
-&\cos^2(\phi/2)\\
-&\quad\longrightarrow\cos^2\left(\frac{\phi+\pi}{2}\right)\\
-&\quad=\sin^2(\phi/2).
+\cos^2(\phi/2) \longrightarrow\cos^2 &\left(\frac{\phi+\pi}{2}\right) \\
+&= \sin^2(\phi/2).
 \end{aligned}
 $$
 
@@ -76,10 +75,10 @@ $$
 
 $$
 \begin{aligned}
-\frac\lambda2&=0{,}34\,\mathrm m,\\
-\lambda&=0{,}68\,\mathrm m,\\
-f&=\frac{340}{0{,}68}\\
-&=500\,\mathrm{Hz}.
+\frac\lambda2 &= 0{,}34\,\mathrm m, \\
+\lambda &= 0{,}68\,\mathrm m, \\
+f &= \frac{340}{0{,}68} \\
+&= 500\,\mathrm{Hz}.
 \end{aligned}
 $$
 
@@ -108,8 +107,8 @@ Với các nguồn đồng pha ban đầu, ở cực đại cũ:
 
 $$
 \begin{aligned}
-\phi_{\rm old}&=2\pi m,\\
-\phi_{\rm new}&=\pi m.
+\phi_{\rm old} &= 2\pi m, \\
+\phi_{\rm new} &= \pi m.
 \end{aligned}
 $$
 

@@ -10,8 +10,7 @@ $$
 \begin{aligned}
 \mathcal E_2 &= -M\frac{di_1}{dt} \\
 \mathcal E_1 &= -M\frac{di_2}{dt}
-\end{aligned}
-\tag{30.4}
+\end{aligned} \tag{30.4}
 $$
 
 Khi hình học và độ từ thẩm không đổi trong mô hình tuyến tính, $M$ là hằng số và đối xứng giữa hai mạch. Nếu hai mạch có số vòng $N_1,N_2$, hỗ cảm liên hệ với từ thông trung bình mỗi vòng:

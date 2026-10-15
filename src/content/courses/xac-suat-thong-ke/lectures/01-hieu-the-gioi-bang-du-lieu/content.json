@@ -1,0 +1,95 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "01-hieu-the-gioi-bang-du-lieu",
+  "route": "/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/01-hieu-the-gioi-bang-du-lieu/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 32,
+      "title": "Ví dụ về mô tả dữ liệu"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 50,
+      "title": "Ví dụ về suy rộng thống kê"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 62,
+      "title": "Ví dụ về kết luận nhân quả"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 76,
+      "title": "Ví dụ về dự đoán"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 90,
+      "title": "Tính toán tỷ lệ mẫu"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 159,
+      "title": "Bài tập rèn luyện tư duy phân loại phát biểu"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 161,
+      "title": "Bài tập 1: Tính năng định giá trên sàn đấu giá trực tuyến"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 180,
+      "title": "Bài tập 2: Khảo sát cử tri của tổ chức Morning Consult"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 201,
+      "title": "Bài tập 3: Bảng điều khiển thử nghiệm lâm sàng của hãng dược phẩm"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 219,
+      "title": "Bài tập 4: Thí nghiệm hai phiên bản đề thi của giáo sư sinh học"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 171,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 192,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 211,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 229,
+      "title": "Lời giải chi tiết"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "./img/stat20-01/claims.png",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.md",
+      "line": 22,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-01/claims.png"
+    }
+  ]
+}

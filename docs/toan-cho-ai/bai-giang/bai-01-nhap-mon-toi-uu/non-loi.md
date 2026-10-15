@@ -205,11 +205,11 @@ Ta kiểm tra hai vector truy vấn $b = (4, 7)$ và $b' = (4, -1)$:
 1. **Khảo sát vector $b = (4, 7)$**:
    Thiết lập hệ phương trình $\theta_1(2, 1) + \theta_2(1, 3) = (4, 7)$:
    $$
-   \begin{aligned}
-   &2\theta_1 + \theta_2 = 4\\
-   &\theta_1 + 3\theta_2 = 7
-   \end{aligned}
-   $$
+\begin{aligned}
+2\theta_1 + \theta_2 &= 4 \\
+\theta_1 + 3\theta_2 &= 7
+\end{aligned}
+$$
    Nhân phương trình thứ hai với 2 rồi trừ đi phương trình thứ nhất:
    $$
    2(\theta_1 + 3\theta_2) - (2\theta_1 + \theta_2) = 14 - 4 \iff 5\theta_2 = 10 \iff \theta_2 = 2
@@ -219,11 +219,11 @@ Ta kiểm tra hai vector truy vấn $b = (4, 7)$ và $b' = (4, -1)$:
 2. **Khảo sát vector $b' = (4, -1)$**:
    Thiết lập hệ phương trình:
    $$
-   \begin{aligned}
-   &2\theta_1 + \theta_2 = 4\\
-   &\theta_1 + 3\theta_2 = -1
-   \end{aligned}
-   $$
+\begin{aligned}
+2\theta_1 + \theta_2 &= 4 \\
+\theta_1 + 3\theta_2 &= -1
+\end{aligned}
+$$
    Nhân phương trình thứ hai với 2 rồi trừ phương trình thứ nhất:
    $$
    5\theta_2 = -2 - 4 = -6 \iff \theta_2 = -\frac{6}{5} = -1.2
@@ -362,12 +362,12 @@ $$
 1. **Khảo sát vector $b = (3, 1, 2)$**:
    Thiết lập hệ phương trình $\theta_1 a_1 + \theta_2 a_2 + \theta_3 a_3 = b$:
    $$
-   \begin{aligned}
-   &\theta_1 + \theta_3 = 3\\
-   &\theta_2 + \theta_3 = 1\\
-   &\theta_1 + \theta_2 = 2
-   \end{aligned}
-   $$
+\begin{aligned}
+\theta_1 + \theta_3 &= 3 \\
+\theta_2 + \theta_3 &= 1 \\
+\theta_1 + \theta_2 &= 2
+\end{aligned}
+$$
    Cộng cả ba phương trình lại với nhau:
    $$
    2(\theta_1 + \theta_2 + \theta_3) = 3 + 1 + 2 = 6 \implies \theta_1 + \theta_2 + \theta_3 = 3
@@ -381,12 +381,12 @@ $$
 2. **Khảo sát vector $b' = (2, 0, 0)$**:
    Thiết lập hệ phương trình:
    $$
-   \begin{aligned}
-   &\theta_1 + \theta_3 = 2\\
-   &\theta_2 + \theta_3 = 0\\
-   &\theta_1 + \theta_2 = 0
-   \end{aligned}
-   $$
+\begin{aligned}
+\theta_1 + \theta_3 &= 2 \\
+\theta_2 + \theta_3 &= 0 \\
+\theta_1 + \theta_2 &= 0
+\end{aligned}
+$$
    Cộng cả ba phương trình:
    $$
    2(\theta_1 + \theta_2 + \theta_3) = 2 \implies \theta_1 + \theta_2 + \theta_3 = 1

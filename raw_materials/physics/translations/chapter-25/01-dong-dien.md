@@ -9,8 +9,7 @@ Trong trạng thái tĩnh điện, điện trường bên trong vật dẫn bằ
 Nếu thiết lập một điện trường không đổi bên trong vật dẫn, mỗi hạt mang điện chịu lực điện không đổi:
 
 $$
-\begin{aligned}
-&\vec F = q\vec E.\end{aligned}
+\vec F = q\vec E.
 $$
 
 Trong chân không, lực không đổi làm hạt gia tốc đều theo hướng của lực. Trong vật dẫn, hạt thường xuyên va chạm với các ion nặng gần như đứng yên. Mỗi va chạm làm hướng chuyển động thay đổi ngẫu nhiên. Vì vậy, ngoài chuyển động hỗn loạn, các hạt còn có một chuyển động trôi rất chậm theo hướng lực điện. Vận tốc trung bình có hướng của chuyển động tập thể này gọi là vận tốc trôi $\vec v_d$. Chuyển động trôi tạo nên dòng điện.
@@ -36,9 +35,7 @@ Trong cả hai trường hợp, ta quy ước chiều dòng điện là chiều 
 Xét một phần vật dẫn có tiết diện $A$. Nếu điện tích thuần $dQ$ đi qua tiết diện trong khoảng thời gian $dt$, cường độ dòng điện qua tiết diện được định nghĩa là tốc độ truyền điện tích:
 
 $$
-\begin{aligned}
-&I = \frac{dQ}{dt}.\end{aligned}
-\tag{25.1}
+I = \frac{dQ}{dt}. \tag{25.1}
 $$
 
 Dòng điện $I$ là đại lượng vô hướng, không phải véc-tơ. Dù ta nói dòng điện có chiều, một véc-tơ đơn lẻ không thể mô tả đầy đủ dòng điện chạy dọc một dây cong. Ta thường mô tả chiều bằng lời, chẳng hạn dòng chạy theo chiều kim đồng hồ, hoặc chọn một chiều dọc dây làm chiều dương. Khi dòng thực chạy ngược chiều đã chọn, giá trị $I$ mang dấu âm.
@@ -46,18 +43,17 @@ Dòng điện $I$ là đại lượng vô hướng, không phải véc-tơ. Dù 
 Đơn vị SI của dòng điện là ampe:
 
 $$
-\begin{aligned}
-&1\,\mathrm A = 1\,\mathrm{C/s}.\end{aligned}
+1\,\mathrm A = 1\,\mathrm{C/s}.
 $$
 
 Đơn vị được đặt theo tên nhà khoa học Pháp André-Marie Ampère (1775–1836). Đèn pin cỡ D thường có dòng điện khoảng $0{,}5$–$1\,\mathrm A$, còn dây dẫn của mô-tơ khởi động ô tô có thể mang dòng khoảng $200\,\mathrm A$. Dòng trong mạch radio và tivi thường được ghi bằng miliampe hoặc microampe. Mạch máy tính có thể dùng nanoampe hoặc picoampe:
 
 $$
 \begin{aligned}
-&1\,\mathrm{mA} = 10^{-3}\,\mathrm A,\\
-&1\,\mathrm{\mu A} = 10^{-6}\,\mathrm A,\\
-&1\,\mathrm{nA} = 10^{-9}\,\mathrm A,\\
-&1\,\mathrm{pA} = 10^{-12}\,\mathrm A.
+1\,\mathrm{mA} &= 10^{-3}\,\mathrm A, \\
+1\,\mathrm{\mu A} &= 10^{-6}\,\mathrm A, \\
+1\,\mathrm{nA} &= 10^{-9}\,\mathrm A, \\
+1\,\mathrm{pA} &= 10^{-12}\,\mathrm A.
 \end{aligned}
 $$
 
@@ -69,8 +65,8 @@ Khối trụ có thể tích $Av_d dt$, nên chứa $nAv_d dt$ hạt. Nếu mỗ
 
 $$
 \begin{aligned}
-&dQ = q(nAv_d dt)\\
-&\quad =nqv_dA\,dt.
+dQ &= q(nAv_d dt) \\
+&= nqv_dA\,dt.
 \end{aligned}
 $$
 
@@ -78,8 +74,8 @@ Thay vào định nghĩa dòng điện, ta được:
 
 $$
 \begin{aligned}
-&I = \frac{dQ}{dt}\\
-&\quad =nqv_dA.
+I &= \frac{dQ}{dt} \\
+&= nqv_dA.
 \end{aligned}
 $$
 
@@ -87,8 +83,8 @@ Mật độ dòng điện $J$ là dòng điện trên một đơn vị diện t�
 
 $$
 \begin{aligned}
-&J = \frac IA\\
-&\quad =nqv_d.
+J &= \frac IA \\
+&= nqv_d.
 \end{aligned}
 $$
 
@@ -96,10 +92,10 @@ $$
 
 $$
 \begin{aligned}
-    &I = \frac{dQ}{dt}\\
-    &\quad =n|q|v_dA.\\
-    &J = \frac IA\\
-    &\quad =n|q|v_d.
+I &= \frac{dQ}{dt} \\
+&= n|q|v_dA. \\
+J &= \frac IA \\
+&= n|q|v_d.
 \end{aligned}
 $$
 
@@ -108,9 +104,7 @@ Do đó độ lớn dòng điện qua tiết diện bằng tích của mật đ�
 Mật độ dòng điện véc-tơ $\vec J$ giữ cả thông tin về hướng chuyển động trôi. Với một loại hạt tải:
 
 $$
-\begin{aligned}
-&\vec J = nq\vec v_d.\end{aligned}
-\tag{25.4}
+\vec J = nq\vec v_d. \tag{25.4}
 $$
 
 Ở đây không lấy trị tuyệt đối của $q$. Nếu $q>0$, $\vec v_d$ cùng chiều điện trường. Nếu $q<0$, $\vec v_d$ ngược chiều điện trường. Trong cả hai trường hợp, $\vec J$ cùng chiều điện trường, còn $J$ ở công thức độ lớn phía trên là độ lớn của véc-tơ $\vec J$.
@@ -122,8 +116,7 @@ Mật độ dòng điện $\vec J$ là véc-tơ, còn dòng điện $I$ là vô 
 Nếu vật dẫn có nhiều loại hạt tải, dòng tổng là tổng đóng góp của từng loại. Chẳng hạn, với hai loại hạt:
 
 $$
-\begin{aligned}
-&\vec J = n_1q_1\vec v_{d1}+n_2q_2\vec v_{d2}+\cdots.\end{aligned}
+\vec J = n_1q_1\vec v_{d1}+n_2q_2\vec v_{d2}+\cdots.
 $$
 
 Trong dung dịch natri clorua, ion natri dương và ion clorua âm đều góp phần vào dòng điện. Các ion trái dấu chuyển động theo hai chiều đối nhau, nhưng đóng góp của chúng vào dòng điện quy ước có thể cùng chiều. Dòng tổng được tìm bằng cách cộng dòng do từng loại hạt tải.
@@ -149,9 +142,9 @@ Một dây đồng cỡ 18 gauge, thường dùng cho dây đèn, có đường 
 
 $$
 \begin{aligned}
-&A = \frac{\pi d^2}{4}\\
-&\quad =\frac{\pi(1{,}02\times10^{-3}\,\mathrm m)^2}{4}\\
-&\quad =8{,}17\times10^{-7}\,\mathrm{m^2}.
+A &= \frac{\pi d^2}{4} \\
+&= \frac{\pi(1{,}02\times10^{-3}\,\mathrm m)^2}{4} \\
+&= 8{,}17\times10^{-7}\,\mathrm{m^2}.
 \end{aligned}
 $$
 
@@ -159,9 +152,9 @@ Vậy độ lớn mật độ dòng điện:
 
 $$
 \begin{aligned}
-&J = \frac IA\\
-&\quad =\frac{1{,}67\,\mathrm A}{8{,}17\times10^{-7}\,\mathrm{m^2}}\\
-&\quad =2{,}04\times10^6\,\mathrm{A/m^2}.
+J &= \frac IA \\
+&= \frac{1{,}67\,\mathrm A}{8{,}17\times10^{-7}\,\mathrm{m^2}} \\
+&= 2{,}04\times10^6\,\mathrm{A/m^2}.
 \end{aligned}
 $$
 
@@ -169,9 +162,9 @@ Tốc độ trôi của electron dùng độ lớn điện tích nguyên tố $|
 
 $$
 \begin{aligned}
-&n|q| = (8{,}5)(1{,}60)\times10^9\\
-&\quad =13{,}6\times10^9\\
-&\quad =1{,}36\times10^{10}\,\mathrm{C/m^3}.
+n|q| &= (8{,}5)(1{,}60)\times10^9 \\
+&= 13{,}6\times10^9 \\
+&= 1{,}36\times10^{10}\,\mathrm{C/m^3}.
 \end{aligned}
 $$
 
@@ -179,9 +172,9 @@ Thay tích này vào $v_d=J/(n|q|)$:
 
 $$
 \begin{aligned}
-&v_d = \frac{2{,}04\times10^6}{1{,}36\times10^{10}}\,\mathrm{m/s}\\
-&\quad =1{,}5\times10^{-4}\,\mathrm{m/s}\\
-&\quad =0{,}15\,\mathrm{mm/s}.
+v_d &= \frac{2{,}04\times10^6}{1{,}36\times10^{10}}\,\mathrm{m/s} \\
+&= 1{,}5\times10^{-4}\,\mathrm{m/s} \\
+&= 0{,}15\,\mathrm{mm/s}.
 \end{aligned}
 $$
 

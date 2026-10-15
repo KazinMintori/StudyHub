@@ -72,9 +72,7 @@ Một dạng tật khúc xạ thường gặp khác là **tật loạn thị (as
 Trong thực hành nhãn khoa và đo kính thuốc, khả năng bẻ cong tia sáng của một thấu kính được biểu diễn bằng **độ tụ** (power), ký hiệu là $P$, định nghĩa bằng nghịch đảo tiêu cự tính theo đơn vị mét:
 
 $$
-\begin{aligned}
 P = \frac{1}{f}
-\end{aligned}
 $$
 
 Đơn vị đo của độ tụ là đi-ốp (diopter, ký hiệu $\text{D}$), với $1\text{ D} = 1\text{ m}^{-1}$. Thấu kính hội tụ có tiêu cự dương nên có độ tụ dương (ví dụ: $f = +0{,}5\text{ m} \implies P = +2{,}0\text{ D}$). Thấu kính phân kỳ có tiêu cự âm nên có độ tụ âm (ví dụ: $f = -0{,}25\text{ m} \implies P = -4{,}0\text{ D}$). Đơn thuốc đo kính mắt loạn thị sẽ bao gồm độ tụ cầu, độ tụ trụ và góc định hướng trục của thấu kính trụ.
@@ -102,8 +100,7 @@ Hình 34.49 mô tả tình huống quang học. Kính áp tròng đặt sát nga
 $$
 \begin{aligned}
 \frac{1}{f} &= \frac{1}{s} + \frac{1}{s'} \\
-&= \frac{1}{+25\text{ cm}} \\
-&\quad + \frac{1}{-100\text{ cm}} \\
+&= \frac{1}{+25\text{ cm}} + \frac{1}{-100\text{ cm}} \\
 &= \frac{3}{100\text{ cm}}
 \end{aligned}
 $$

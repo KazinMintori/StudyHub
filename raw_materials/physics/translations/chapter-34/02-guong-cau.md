@@ -19,25 +19,19 @@ Xét một vật điểm $P$ nằm trên trục quang, cách đỉnh gương $V$
 Trong tam giác $PBC$, góc $\phi$ là góc ngoài tại đỉnh $C$, do đó ta có:
 
 $$
-\begin{aligned}
-\phi &= \alpha + \theta
-\end{aligned}
+\phi = \alpha + \theta
 $$
 
 Suy ra:
 
 $$
-\begin{aligned}
-\theta &= \phi - \alpha
-\end{aligned}
+\theta = \phi - \alpha
 $$
 
 Hoàn toàn tương tự, xét tam giác $P'BC$, góc $\beta$ là góc ngoài tại đỉnh $P'$, nên ta có:
 
 $$
-\begin{aligned}
-\beta &= \phi + \theta
-\end{aligned}
+\beta = \phi + \theta
 $$
 
 Thay biểu thức của $\theta$ từ hệ thức trên vào, ta thu được:
@@ -52,50 +46,35 @@ $$
 Chuyển vế, ta tìm được mối quan hệ góc cơ bản:
 
 $$
-\begin{aligned}
-\alpha + \beta &= 2\phi
-\end{aligned}
-\tag{34.3}
+\alpha + \beta = 2\phi \tag{34.3}
 $$
 
 Gọi $h$ là khoảng cách từ điểm tới $B$ hạ vuông góc xuống trục quang, và $d$ là khoảng cách từ chân đường vuông góc này tới đỉnh gương $V$. Nhận xét rằng $s$, $s'$ và $R$ đều là các độ dài hình học dương, ta có thể viết biểu thức tang của các góc:
 
 $$
-\begin{aligned}
-\tan \alpha &= \frac{h}{s - d}
-\end{aligned}
+\tan \alpha = \frac{h}{s - d}
 $$
 
 $$
-\begin{aligned}
-\tan \beta &= \frac{h}{s' - d}
-\end{aligned}
+\tan \beta = \frac{h}{s' - d}
 $$
 
 $$
-\begin{aligned}
-\tan \phi &= \frac{h}{R - d}
-\end{aligned}
+\tan \phi = \frac{h}{R - d}
 $$
 
 Các phương trình lượng giác này phụ thuộc vào điểm tới $B$ cụ thể. Tuy nhiên, nếu góc $\alpha$ rất nhỏ, góc tới $\theta$ cũng nhỏ, kéo theo các góc $\beta$ và $\phi$ đều rất nhỏ. Khi đó điểm tới $B$ nằm rất gần đỉnh gương $V$, khoảng cách $d$ trở nên không đáng kể so với $s$, $s'$ và $R$ ($d \approx 0$). Đồng thời ta có thể áp dụng gần đúng góc nhỏ theo radian:
 
 $$
-\begin{aligned}
-\tan \alpha &\approx \alpha \approx \frac{h}{s}
-\end{aligned}
+\tan \alpha \approx \alpha \approx \frac{h}{s}
 $$
 
 $$
-\begin{aligned}
-\tan \beta &\approx \beta \approx \frac{h}{s'}
-\end{aligned}
+\tan \beta \approx \beta \approx \frac{h}{s'}
 $$
 
 $$
-\begin{aligned}
-\tan \phi &\approx \phi \approx \frac{h}{R}
-\end{aligned}
+\tan \phi \approx \phi \approx \frac{h}{R}
 $$
 
 Các tia sáng tạo các góc nhỏ với trục quang và truyền đi gần trục quang được gọi là **tia cận trục** (paraxial rays), và phép đơn giản hóa này được gọi là **gần đúng cận trục** (paraxial approximation).
@@ -103,18 +82,13 @@ Các tia sáng tạo các góc nhỏ với trục quang và truyền đi gần t
 Thay các gần đúng góc này vào phương trình (34.3):
 
 $$
-\begin{aligned}
-\frac{h}{s} + \frac{h}{s'} &= \frac{2h}{R}
-\end{aligned}
+\frac{h}{s} + \frac{h}{s'} = \frac{2h}{R}
 $$
 
 Triệt tiêu đại lượng $h$ ở cả hai vế, ta thu được **phương trình tạo ảnh của gương cầu**:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{2}{R}
-\end{aligned}
-\tag{34.4}
+\frac{1}{s} + \frac{1}{s'} = \frac{2}{R} \tag{34.4}
 $$
 
 Phương trình (34.4) hoàn toàn không chứa góc $\alpha$. Điều này mang ý nghĩa vật lý cốt lõi: Trong giới hạn gần đúng cận trục, mọi tia sáng xuất phát từ vật điểm $P$ sau khi phản xạ trên mặt gương cầu đều hội tụ tại cùng một ảnh điểm duy nhất $P'$.
@@ -130,17 +104,13 @@ Phương trình (34.4) hoàn toàn không chứa góc $\alpha$. Điều này man
 Đối với gương cầu lõm, tâm cong $C$ nằm cùng phía với chùm tia phản xạ truyền ra, do đó $R > 0$. Đối với mặt gương phẳng, bề mặt không có độ cong, tương ứng với bán kính cong vô cùng lớn ($R = \infty$). Khi đó phương trình (34.4) trở thành:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= 0
-\end{aligned}
+\frac{1}{s} + \frac{1}{s'} = 0
 $$
 
 Kéo theo:
 
 $$
-\begin{aligned}
-s' &= -s
-\end{aligned}
+s' = -s
 $$
 
 Kết quả này hoàn toàn trùng khớp với định luật tạo ảnh của gương phẳng.
@@ -158,26 +128,19 @@ Nếu chùm tia sáng tới mở rộng và góc $\alpha$ không còn nhỏ, g�
 Khi một vật điểm nằm ở rất xa gương, khoảng cách vật tiến tới vô cực ($s \to \infty$). Các tia sáng tới xuất phát từ vật đi tới gương sẽ là một chùm tia song song với trục quang. Theo phương trình (34.4):
 
 $$
-\begin{aligned}
-\frac{1}{\infty} + \frac{1}{s'} &= \frac{2}{R}
-\end{aligned}
+\frac{1}{\infty} + \frac{1}{s'} = \frac{2}{R}
 $$
 
 Suy ra khoảng cách ảnh tương ứng:
 
 $$
-\begin{aligned}
-s' &= \frac{R}{2}
-\end{aligned}
+s' = \frac{R}{2}
 $$
 
 Điểm hội tụ của chùm tia tới song song này được gọi là **tiêu điểm** (focal point), ký hiệu là $F$. Khoảng cách từ đỉnh gương tới tiêu điểm được gọi là **tiêu cự** (focal length), ký hiệu là $f$. Ta có hệ thức liên hệ trực tiếp giữa tiêu cự và bán kính cong:
 
 $$
-\begin{aligned}
-f &= \frac{R}{2}
-\end{aligned}
-\tag{34.5}
+f = \frac{R}{2} \tag{34.5}
 $$
 
 ![Hình 34.13: Khái niệm tiêu điểm F và tiêu cự f của gương cầu lõm. (a) Chùm tia tới song song với trục quang sau phản xạ hội tụ tại tiêu điểm F, nằm cách đỉnh gương một khoảng f = R/2. (b) Ngược lại, một nguồn sáng đặt tại tiêu điểm F sẽ tạo ra chùm tia phản xạ song song với trục quang.](../img/young-34/hinh-34-13.png)
@@ -185,10 +148,7 @@ $$
 Nhờ tính thuận nghịch của chiều truyền ánh sáng, nếu ta đặt một vật điểm tại đúng tiêu điểm $F$ ($s = f = R/2$), các tia phản xạ sẽ trở thành một chùm tia song song với trục quang ($s' \to \infty$). Thay hệ thức $f = R/2$ vào phương trình (34.4), ta có thể viết phương trình tạo ảnh của gương cầu dưới dạng quen thuộc:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{1}{f}
-\end{aligned}
-\tag{34.6}
+\frac{1}{s} + \frac{1}{s'} = \frac{1}{f} \tag{34.6}
 $$
 
 ### Kích thước ảnh và độ phóng đại ngang
@@ -200,17 +160,13 @@ Xét một vật phẳng nhỏ có chiều cao $y$ đặt vuông góc với tr�
 Độ phóng đại ngang (lateral magnification) $m$ được định nghĩa là tỷ số giữa kích thước ảnh $y'$ và kích thước vật $y$:
 
 $$
-\begin{aligned}
-m &= \frac{y'}{y}
-\end{aligned}
+m = \frac{y'}{y}
 $$
 
 Quan sát hai tam giác vuông $PVQ$ và $P'VQ'$ ở Hình 34.14, ta thấy chúng đồng dạng vì có chung góc nhọn $\theta$. Do đó ta có tỷ số cạnh:
 
 $$
-\begin{aligned}
-\frac{y}{s} &= -\frac{y'}{s'}
-\end{aligned}
+\frac{y}{s} = -\frac{y'}{s'}
 $$
 
 Dấu âm xuất hiện vì vật và ảnh nằm ở hai phía đối diện của trục quang: Khi vật hướng lên trên trục quang ($y > 0$), ảnh hướng xuống dưới trục quang ($y' < 0$). Từ đó ta thu được công thức tính **độ phóng đại ngang**:
@@ -219,8 +175,7 @@ $$
 \begin{aligned}
 m &= \frac{y'}{y} \\
 &= -\frac{s'}{s}
-\end{aligned}
-\tag{34.7}
+\end{aligned} \tag{34.7}
 $$
 
 Ý nghĩa của độ phóng đại ngang $m$:
@@ -266,19 +221,15 @@ Các dữ kiện đã cho:
 (a) Áp dụng phương trình tạo ảnh của gương cầu:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{2}{R}
-\end{aligned}
+\frac{1}{s} + \frac{1}{s'} = \frac{2}{R}
 $$
 
 Thay số:
 
 $$
 \begin{aligned}
-\frac{1}{10{,}0\,\mathrm{cm}} \\
-{}+ \frac{1}{300\,\mathrm{cm}} &= \frac{2}{R} \\
-0{,}100\,\mathrm{cm}^{-1} \\
-{}+ 0{,}00333\,\mathrm{cm}^{-1} &= \frac{2}{R} \\
+\frac{1}{10{,}0\,\mathrm{cm}} {}+ \frac{1}{300\,\mathrm{cm}} &= \frac{2}{R} \\
+0{,}100\,\mathrm{cm}^{-1} {}+ 0{,}00333\,\mathrm{cm}^{-1} &= \frac{2}{R} \\
 0{,}10333\,\mathrm{cm}^{-1} &= \frac{2}{R}
 \end{aligned}
 $$
@@ -357,15 +308,11 @@ Vì các tia phản xạ thực tế phân kỳ ra xa nhau và chỉ có đườ
 Bằng các bước chứng minh hình học hoàn toàn tương tự như gương cầu lõm, với việc tuân thủ chặt chẽ quy tắc dấu ($s > 0, s' < 0, R < 0$), ta chứng minh được rằng phương trình tạo ảnh (34.4) và công thức độ phóng đại ngang (34.7) hoàn toàn nghiệm đúng đối với gương cầu lồi:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{2}{R} = \frac{1}{f}
-\end{aligned}
+\frac{1}{s} + \frac{1}{s'} = \frac{2}{R} = \frac{1}{f}
 $$
 
 $$
-\begin{aligned}
-m &= -\frac{s'}{s}
-\end{aligned}
+m = -\frac{s'}{s}
 $$
 
 ### Tiêu điểm ảo của gương cầu lồi
@@ -396,9 +343,7 @@ Ta giải phương trình tạo ảnh của gương cầu để tìm khoảng c�
 Áp dụng phương trình tạo ảnh:
 
 $$
-\begin{aligned}
-\frac{1}{s} + \frac{1}{s'} &= \frac{1}{f}
-\end{aligned}
+\frac{1}{s} + \frac{1}{s'} = \frac{1}{f}
 $$
 
 Biến đổi tìm khoảng cách ảnh $s'$:
@@ -406,10 +351,8 @@ Biến đổi tìm khoảng cách ảnh $s'$:
 $$
 \begin{aligned}
 \frac{1}{s'} &= \frac{1}{f} - \frac{1}{s} \\
-&= \frac{1}{-1{,}80\,\mathrm{cm}} \\
-&\quad - \frac{1}{75{,}0\,\mathrm{cm}} \\
-&= -0{,}5556\,\mathrm{cm}^{-1} \\
-&\quad - 0{,}0133\,\mathrm{cm}^{-1} \\
+&= \frac{1}{-1{,}80\,\mathrm{cm}} - \frac{1}{75{,}0\,\mathrm{cm}} \\
+&= -0{,}5556\,\mathrm{cm}^{-1} - 0{,}0133\,\mathrm{cm}^{-1} \\
 &= -0{,}5689\,\mathrm{cm}^{-1}
 \end{aligned}
 $$
@@ -510,9 +453,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= +15\,\mathrm{cm}
-\end{aligned}
+s' = +15\,\mathrm{cm}
 $$
 
 Độ phóng đại ngang:
@@ -539,9 +480,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= +20\,\mathrm{cm}
-\end{aligned}
+s' = +20\,\mathrm{cm}
 $$
 
 Độ phóng đại ngang:
@@ -567,9 +506,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-s' &\to \pm\infty
-\end{aligned}
+s' \to \pm\infty
 $$
 
 Các tia phản xạ song song với nhau. Ảnh ở xa vô cực.
@@ -586,9 +523,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-s' &= -10\,\mathrm{cm}
-\end{aligned}
+s' = -10\,\mathrm{cm}
 $$
 
 Độ phóng đại ngang:

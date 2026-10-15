@@ -47,9 +47,9 @@ Gương phẳng:
 
 $$
 \begin{aligned}
-\frac1s+\frac1{s'}&=0,\\
-s'&=-s,\\
-m&=-\frac{s'}s=1.
+\frac1s+\frac1{s'} &= 0, \\
+s' &= -s, \\
+m &= -\frac{s'}s=1.
 \end{aligned}
 $$
 
@@ -57,9 +57,9 @@ Gương cầu:
 
 $$
 \begin{aligned}
-\frac1s+\frac1{s'}&=\frac2R\\
-&=\frac1f,\\
-m&=-\frac{s'}s.
+\frac1s+\frac1{s'} &= \frac2R \\
+&= \frac1f, \\
+m &= -\frac{s'}s.
 \end{aligned}
 $$
 
@@ -67,9 +67,9 @@ Mặt khúc xạ phẳng, từ chiết suất $n_a$ sang $n_b$:
 
 $$
 \begin{aligned}
-\frac{n_a}s+\frac{n_b}{s'}&=0,\\
-s'&=-\frac{n_b}{n_a}s,\\
-m&=-\frac{n_as'}{n_bs}=1.
+\frac{n_a}s+\frac{n_b}{s'} &= 0, \\
+s' &= -\frac{n_b}{n_a}s, \\
+m &= -\frac{n_as'}{n_bs}=1.
 \end{aligned}
 $$
 
@@ -77,8 +77,8 @@ Mặt khúc xạ cầu:
 
 $$
 \begin{aligned}
-\frac{n_a}s+\frac{n_b}{s'}&=\frac{n_b-n_a}R,\\
-m&=-\frac{n_as'}{n_bs}.
+\frac{n_a}s+\frac{n_b}{s'} &= \frac{n_b-n_a}R, \\
+m &= -\frac{n_as'}{n_bs}.
 \end{aligned}
 $$
 
@@ -94,8 +94,8 @@ Trong cùng một môi trường ở hai phía, phương trình vật–ảnh c�
 
 $$
 \begin{aligned}
-\frac1s+\frac1{s'}&=\frac1f,\\
-m&=-\frac{s'}s.
+\frac1s+\frac1{s'} &= \frac1f, \\
+m &= -\frac{s'}s.
 \end{aligned}
 $$
 
@@ -137,8 +137,8 @@ Kính lúp tạo ảnh ảo có góc trông lớn hơn góc của vật khi nhì
 
 $$
 \begin{aligned}
-M&=\frac{\theta'}\theta,\\
-M&=\frac{25\,\mathrm{cm}}f.
+M &= \frac{\theta'}\theta, \\
+M &= \frac{25\,\mathrm{cm}}f.
 \end{aligned}
 $$
 
@@ -162,8 +162,8 @@ Kính thiên văn cũng cho quan sát ảnh của vật kính qua thị kính, n
 
 $$
 \begin{aligned}
-M&=-\frac{f_1}{f_2},\\
-L&=f_1+f_2.
+M &= -\frac{f_1}{f_2}, \\
+L &= f_1+f_2.
 \end{aligned}
 $$
 

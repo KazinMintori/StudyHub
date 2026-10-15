@@ -25,19 +25,13 @@ Trong thực tế thí nghiệm, khoảng cách từ hai khe tới màn $R$ (th�
 Hạ đoạn thẳng từ $S_1$ vuông góc với tia truyền từ $S_2$, ta nhận thấy hiệu đường đi giữa hai sóng chính là cạnh góc vuông của tam giác vuông:
 
 $$
-\begin{aligned}
-r_2 - r_1 &= d \sin \theta
-\end{aligned}
-\tag{35.3}
+r_2 - r_1 = d \sin \theta \tag{35.3}
 $$
 
 Để xuất hiện giao thoa tăng cường (tạo thành vân sáng), hiệu đường đi phải bằng một số nguyên lần bước sóng:
 
 $$
-\begin{aligned}
-d \sin \theta &= m \lambda
-\end{aligned}
-\tag{35.4}
+d \sin \theta = m \lambda \tag{35.4}
 $$
 
 Trong đó: Số nguyên $m = 0, \pm 1, \pm 2, \dots$ được gọi là **bậc giao thoa** (fringe order).
@@ -48,10 +42,7 @@ Trong đó: Số nguyên $m = 0, \pm 1, \pm 2, \dots$ được gọi là **bậc
 Để xuất hiện giao thoa triệt tiêu (tạo thành vân tối), hiệu đường đi phải bằng một số bán nguyên lần bước sóng:
 
 $$
-\begin{aligned}
-d \sin \theta &= \left(m + \frac{1}{2}\right) \lambda
-\end{aligned}
-\tag{35.5}
+d \sin \theta = \left(m + \frac{1}{2}\right) \lambda \tag{35.5}
 $$
 
 Trong đó: Số nguyên $m = 0, \pm 1, \pm 2, \dots$ xác định các dải tối liền kề.
@@ -61,26 +52,19 @@ Trong đó: Số nguyên $m = 0, \pm 1, \pm 2, \dots$ xác định các dải t�
 Gọi $y$ là khoảng cách từ điểm $P$ trên màn đến vân sáng trung tâm tại gốc tọa độ $O$. Từ tam giác vuông giữa khe và màn, ta có quan hệ lượng giác:
 
 $$
-\begin{aligned}
-y &= R \tan \theta
-\end{aligned}
+y = R \tan \theta
 $$
 
 Khi góc lệch $\theta$ rất nhỏ ($\theta \ll 1\,\mathrm{rad}$), ta có thể áp dụng phép gần đúng góc nhỏ:
 
 $$
-\begin{aligned}
-\sin \theta &\approx \tan \theta \approx \frac{y}{R}
-\end{aligned}
+\sin \theta \approx \tan \theta \approx \frac{y}{R}
 $$
 
 Thay gần đúng này vào phương trình (35.4), ta tìm được tọa độ của vân sáng bậc $m$ trên màn phẳng:
 
 $$
-\begin{aligned}
-y_m &= R \frac{m \lambda}{d}
-\end{aligned}
-\tag{35.6}
+y_m = R \frac{m \lambda}{d} \tag{35.6}
 $$
 
 Khoảng cách giữa hai vân sáng liền kề bất kỳ, hay còn gọi là **khoảng vân** $\Delta y$, được xác định bởi:
@@ -95,9 +79,7 @@ $$
 Tương tự, tọa độ của các vân tối trên màn phẳng được xác định từ phương trình (35.5):
 
 $$
-\begin{aligned}
-y &= R \frac{(m + 1/2) \lambda}{d}
-\end{aligned}
+y = R \frac{(m + 1/2) \lambda}{d}
 $$
 
 Thí nghiệm Young cho phép đo trực tiếp bước sóng ánh sáng bằng cách đo $R,d$ và vị trí vân. Khoảng vân tỉ lệ nghịch khoảng khe. Đưa hai khe gần nhau làm hệ vân giãn ra, còn tăng khoảng khe làm các vân xích lại.
@@ -130,9 +112,7 @@ Các dữ kiện đã cho:
 Từ phương trình (35.6), ta biến đổi để biểu diễn bước sóng $\lambda$:
 
 $$
-\begin{aligned}
-\lambda &= \frac{y_m d}{m R}
-\end{aligned}
+\lambda = \frac{y_m d}{m R}
 $$
 
 Thay tích số $y_3 d = 1{,}898 \times 10^{-6}\,\mathrm{m}^2$ (với $y_3 = 9{,}49 \times 10^{-3}\,\mathrm{m}$ và $d = 0{,}200 \times 10^{-3}\,\mathrm{m}$):

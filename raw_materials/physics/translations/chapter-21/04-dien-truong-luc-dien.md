@@ -21,17 +21,13 @@ Muốn khảo sát trường tại một điểm, đặt một vật mang điệ
 Điện trường là đại lượng vector vì lực điện là vector. Định nghĩa tại một điểm là:
 
 $$
-\begin{aligned}
-&\vec E = \frac{\vec F_0}{q_0}.\end{aligned}
-\tag{21.3}
+\vec E = \frac{\vec F_0}{q_0}. \tag{21.3}
 $$
 
 Đơn vị SI của độ lớn điện trường là newton trên coulomb, $\mathrm{N/C}$. Nếu biết trường tại điểm đặt điện tích điểm, lực là:
 
 $$
-\begin{aligned}
-&\vec F_0 = q_0\vec E.\end{aligned}
-\tag{21.4}
+\vec F_0 = q_0\vec E. \tag{21.4}
 $$
 
 Nếu $q_0>0$, lực cùng chiều trường. Nếu $q_0<0$, lực ngược chiều trường.
@@ -45,9 +41,7 @@ Nếu $q_0>0$, lực cùng chiều trường. Nếu $q_0<0$, lực ngược chi�
 Ta đã quen hệ thức lực hấp dẫn lên khối lượng thử $m_0$:
 
 $$
-\begin{aligned}
-&\vec F_g = m_0\vec g.\end{aligned}
-\tag{21.5}
+\vec F_g = m_0\vec g. \tag{21.5}
 $$
 
 Chia cho $m_0$ cho $\vec g=\vec F_g/m_0$, tức lực hấp dẫn trên một đơn vị khối lượng. Có thể xem $\vec g$ là trường hấp dẫn do Trái Đất tạo, rồi trường ấy gây lực lên khối lượng thử. Trường hấp dẫn không phụ thuộc khối lượng thử, tương tự điện trường của nguồn không phụ thuộc điện tích thử.
@@ -63,17 +57,13 @@ Gọi S là điểm đặt điện tích nguồn $q$, còn P là điểm cần t
 Độ lớn lực lên điện tích thử tại P là $F_0=\frac{k|qq_0|}{r^2}$. Chia cho độ lớn điện tích thử cho:
 
 $$
-\begin{aligned}
-&E = k\frac{|q|}{r^2}.\end{aligned}
-\tag{21.6}
+E = k\frac{|q|}{r^2}. \tag{21.6}
 $$
 
 Biểu thức vector giữ cả dấu nguồn:
 
 $$
-\begin{aligned}
-&\vec E = k\frac{q}{r^2}\hat{\mathbf r}.\end{aligned}
-\tag{21.7}
+\vec E = k\frac{q}{r^2}\hat{\mathbf r}. \tag{21.7}
 $$
 
 Trường hướng ra xa nguồn dương, cùng chiều $\hat{\mathbf r}$, và hướng về nguồn âm, ngược chiều $\hat{\mathbf r}$.
@@ -111,8 +101,8 @@ Tìm độ lớn trường tại điểm cách điện tích $q=4.0\,\mathrm{nC}
 
 $$
 \begin{aligned}
-&E = 9.0\times10^9\frac{4.0\times10^{-9}}{(2.0)^2}\,\mathrm{N/C}\\
-&\quad =9.0\,\mathrm{N/C}.
+E &= 9.0\times10^9\frac{4.0\times10^{-9}}{(2.0)^2}\,\mathrm{N/C} \\
+&= 9.0\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -130,10 +120,10 @@ Nguồn $q=-8.0\,\mathrm{nC}$ đặt tại gốc. Tìm vector điện trường 
 
 $$
 \begin{aligned}
-&r = \sqrt{(1.2)^2+(-1.6)^2}\,\mathrm m\\
-&\quad =2.0\,\mathrm m,\\
-&\hat{\mathbf r} = \frac{(1.2\,\mathrm m)\hat{\mathbf i}+(-1.6\,\mathrm m)\hat{\mathbf j}}{2.0\,\mathrm m}\\
-&\quad =0.60\hat{\mathbf i}-0.80\hat{\mathbf j}.
+r &= \sqrt{(1.2)^2+(-1.6)^2}\,\mathrm m \\
+&= 2.0\,\mathrm m, \\
+\hat{\mathbf r} &= \frac{(1.2\,\mathrm m)\hat{\mathbf i}+(-1.6\,\mathrm m)\hat{\mathbf j}}{2.0\,\mathrm m} \\
+&= 0.60\hat{\mathbf i}-0.80\hat{\mathbf j}.
 \end{aligned}
 $$
 
@@ -141,8 +131,8 @@ $$
 
 $$
 \begin{aligned}
-&\frac{kq}{r^2} = 9.0\times10^9\frac{-8.0\times10^{-9}}{(2.0)^2}\,\mathrm{N/C}\\
-&\quad =-18\,\mathrm{N/C}.
+\frac{kq}{r^2} &= 9.0\times10^9\frac{-8.0\times10^{-9}}{(2.0)^2}\,\mathrm{N/C} \\
+&= -18\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -150,9 +140,8 @@ Nhân với vector đơn vị:
 
 $$
 \begin{aligned}
-&\vec E = (-18\,\mathrm{N/C})(0.60\hat{\mathbf i}-0.80\hat{\mathbf j})\\
-&\quad \approx(-11\,\mathrm{N/C})\hat{\mathbf i}\\
-&\quad+(14\,\mathrm{N/C})\hat{\mathbf j}.
+\vec E &= (-18\,\mathrm{N/C})(0.60\hat{\mathbf i}-0.80\hat{\mathbf j}) \\
+&\approx (-11\,\mathrm{N/C})\hat{\mathbf i} +(14\,\mathrm{N/C})\hat{\mathbf j}.
 \end{aligned}
 $$
 
@@ -176,10 +165,9 @@ Hai bản dẫn song song cách $1.0\,\mathrm{cm}$ nối với pin $100\,\mathrm
 
 $$
 \begin{aligned}
-&a_y = \frac{F_y}{m}=-\frac{eE}{m}\\
-&\quad =-\frac{(1.60)(1.00)}{9.11}\\
-&\quad\times10^{16}\,\mathrm{m/s^2}\\
-&\quad =-1.76\times10^{15}\,\mathrm{m/s^2}.
+a_y &= \frac{F_y}{m}=-\frac{eE}{m} \\
+&= -\frac{(1.60)(1.00)}{9.11} \times10^{16}\,\mathrm{m/s^2} \\
+&= -1.76\times10^{15}\,\mathrm{m/s^2}.
 \end{aligned}
 $$
 
@@ -187,9 +175,9 @@ $$
 
 $$
 \begin{aligned}
-&|v_y| = \sqrt{2a_yy}\\
-&\quad =\sqrt{2(-1.76)(-1.0)10^{13}}\,\mathrm{m/s}\\
-&\quad =5.9\times10^6\,\mathrm{m/s}.
+|v_y| &= \sqrt{2a_yy} \\
+&= \sqrt{2(-1.76)(-1.0)10^{13}}\,\mathrm{m/s} \\
+&= 5.9\times10^6\,\mathrm{m/s}.
 \end{aligned}
 $$
 
@@ -197,10 +185,9 @@ Vận tốc hướng xuống nên $v_y=-5.9\times10^6\,\mathrm{m/s}$. Động n�
 
 $$
 \begin{aligned}
-&K = \frac12mv^2\\
-&\quad =\frac12(9.11)(5.9)^2\\
-&\quad\times10^{-19}\,\mathrm J\\
-&\quad \approx1.6\times10^{-17}\,\mathrm J.
+K &= \frac12mv^2 \\
+&= \frac12(9.11)(5.9)^2 \times10^{-19}\,\mathrm J \\
+&\approx 1.6\times10^{-17}\,\mathrm J.
 \end{aligned}
 $$
 
@@ -208,9 +195,9 @@ $$
 
 $$
 \begin{aligned}
-&t = \frac{v_y-v_{0y}}{a_y}\\
-&\quad =\frac{-5.9\times10^6}{-1.76\times10^{15}}\,\mathrm s\\
-&\quad =3.4\times10^{-9}\,\mathrm s.
+t &= \frac{v_y-v_{0y}}{a_y} \\
+&= \frac{-5.9\times10^6}{-1.76\times10^{15}}\,\mathrm s \\
+&= 3.4\times10^{-9}\,\mathrm s.
 \end{aligned}
 $$
 

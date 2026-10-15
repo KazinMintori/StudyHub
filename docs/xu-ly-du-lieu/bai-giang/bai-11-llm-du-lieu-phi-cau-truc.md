@@ -99,10 +99,10 @@ Khi đối chiếu nhãn dự đoán của mô hình với nhãn chuẩn của c
 Các công thức đo lường cốt lõi:
 $$
 \begin{aligned}
-    &\text{Độ chính xác tổng thể (Accuracy)} = \frac{\text{Số mẫu dự đoán đúng}}{\text{Tổng số mẫu thử nghiệm}}\\
-    &\text{Độ chuẩn xác (Precision)} = \frac{TP}{TP + FP}\\
-    &\text{Độ bao phủ hay Độ nhạy (Recall)} = \frac{TP}{TP + FN}\\
-    &\text{Điểm F1 điều hòa} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\text{Độ chính xác tổng thể (Accuracy)} &= \frac{\text{Số mẫu dự đoán đúng}}{\text{Tổng số mẫu thử nghiệm}} \\
+\text{Độ chuẩn xác (Precision)} &= \frac{TP}{TP + FP} \\
+\text{Độ bao phủ hay Độ nhạy (Recall)} &= \frac{TP}{TP + FN} \\
+\text{Điểm F1 điều hòa} &= 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \end{aligned}
 $$
 

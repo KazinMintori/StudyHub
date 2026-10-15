@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "09-dong-hoc-vat-ran",
+  "route": "/vat-ly-1/bai-giang/09-dong-hoc-vat-ran",
+  "notes": "docs/vat-ly-1/bai-giang/09-dong-hoc-vat-ran.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dao-ham",
+    "tich-phan",
+    "cong-nang-luong"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

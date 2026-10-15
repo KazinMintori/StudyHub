@@ -19,8 +19,8 @@ Với thanh đồng nhất dài L, tiết diện A, hai đầu giữ ở nhiệt
 
 $$
 \begin{aligned}
-&H = \frac{dQ}{dt},\\
-&H = \frac{kA(T_H-T_C)}{L}.
+H &= \frac{dQ}{dt}, \\
+H &= \frac{kA(T_H-T_C)}{L}.
 \end{aligned}
 $$
 

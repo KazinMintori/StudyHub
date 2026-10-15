@@ -271,24 +271,24 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
 3. **Tìm nghiệm giải tích**:
    Phần dư tại từng điểm quan sát có dạng:
    $$
-   \begin{aligned}
-   &r_1 = -2a + b - (-2) = b - 2(a - 1),\\
-   &r_2 = -a + b - (-1) = b - (a - 1),\\
-   &r_3 = b - 3,\\
-   &r_4 = a + b - 1 = b + (a - 1),\\
-   &r_5 = 2a + b - 2 = b + 2(a - 1).
-   \end{aligned}
-   $$
+\begin{aligned}
+r_1 &= -2a + b - (-2) = b - 2(a - 1), \\
+r_2 &= -a + b - (-1) = b - (a - 1), \\
+r_3 &= b - 3, \\
+r_4 &= a + b - 1 = b + (a - 1), \\
+r_5 &= 2a + b - 2 = b + 2(a - 1).
+\end{aligned}
+$$
    Đặt độ lệch hệ số góc $d = a - 1$.
    
    - **Xét bài toán L1**: Dùng bất đẳng thức tam giác cho từng cặp điểm đối xứng:
      $$
-     \begin{aligned}
-     &|b - d| + |b + d| \ge |(b - d) + (b + d)| = 2|b|,\\
-     &|b - 2d| + |b + 2d| \ge |(b - 2d) + (b + 2d)| = 2|b|,\\
-     &|b - 3| \ge 3 - |b|.
-     \end{aligned}
-     $$
+\begin{aligned}
+|b - d| + |b + d| &\ge |(b - d) + (b + d)| = 2|b|, \\
+|b - 2d| + |b + 2d| &\ge |(b - 2d) + (b + 2d)| = 2|b|, \\
+|b - 3| &\ge 3 - |b|.
+\end{aligned}
+$$
      Cộng các vế lại:
      $$
      \sum_{i=1}^5 |r_i| \ge 2|b| + 2|b| + 3 - |b| = 3 + 3|b| \ge 3.
@@ -341,13 +341,13 @@ $$
    $$
    Hàm mất mát bình phương được khai triển:
    $$
-   \begin{aligned}
-   &E(w) = w^T (X^T X) w - 2 (X^T y)^T w + y^T y\\
-   &\quad = 10a^2 + 5b^2 - 20a - 6b + 19\\
-   &\quad = 10(a^2 - 2a + 1) + 5\left(b^2 - \frac{6}{5}b + \frac{9}{25}\right) + 19 - 10 - \frac{9}{5}\\
-   &\quad = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
-   \end{aligned}
-   $$
+\begin{aligned}
+E(w) &= w^T (X^T X) w - 2 (X^T y)^T w + y^T y \\
+&= 10a^2 + 5b^2 - 20a - 6b + 19 \\
+&= 10(a^2 - 2a + 1) + 5\left(b^2 - \frac{6}{5}b + \frac{9}{25}\right) + 19 - 10 - \frac{9}{5} \\
+&= 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
+\end{aligned}
+$$
    Dạng chuẩn QP $\frac{1}{2} w^T P w + q^T w + r_0$ có:
    $$
    P = \begin{bmatrix} 20 & 0 \\ 0 & 10 \end{bmatrix}, \qquad q = \begin{bmatrix} -20 \\ -6 \end{bmatrix}, \qquad r_0 = 19.
@@ -377,12 +377,12 @@ $$
    $$
    Tính toán mất mát khớp dữ liệu $E$ tại nghiệm Ridge:
    $$
-   \begin{aligned}
-   &E(w_{\text{Ridge}}^*) = 10\left(\frac{2}{3} - 1\right)^2 + 5\left(\frac{3}{10} - \frac{6}{10}\right)^2 + \frac{36}{5}\\
-   &\quad = 10\left(\frac{1}{9}\right) + 5\left(\frac{9}{100}\right) + \frac{36}{5}\\
-   &\quad = \frac{10}{9} + \frac{9}{20} + \frac{36}{5} = \frac{200 + 81 + 1296}{180} = \frac{1577}{180} \approx 8{,}76.
-   \end{aligned}
-   $$
+\begin{aligned}
+E(w_{\text{Ridge}}^*) &= 10\left(\frac{2}{3} - 1\right)^2 + 5\left(\frac{3}{10} - \frac{6}{10}\right)^2 + \frac{36}{5} \\
+&= 10\left(\frac{1}{9}\right) + 5\left(\frac{9}{100}\right) + \frac{36}{5} \\
+&= \frac{10}{9} + \frac{9}{20} + \frac{36}{5} = \frac{200 + 81 + 1296}{180} = \frac{1577}{180} \approx 8{,}76.
+\end{aligned}
+$$
    So sánh: Mất mát $E$ tăng từ $7{,}2$ lên $8{,}76$ (kém khớp dữ liệu hơn), nhưng bình phương độ dài tham số giảm rõ rệt:
    $$
    \|w_{\text{OLS}}^*\|_2^2 = 1^2 + 0{,}6^2 = 1{,}36, \qquad \|w_{\text{Ridge}}^*\|_2^2 = \left(\frac{2}{3}\right)^2 + \left(\frac{3}{10}\right)^2 = \frac{4}{9} + \frac{9}{100} = \frac{481}{900} \approx 0{,}534.

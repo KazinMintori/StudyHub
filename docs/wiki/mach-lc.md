@@ -17,9 +17,9 @@ Chọn q là điện tích trên một bản tụ và i dương đi vào bản �
 
 $$
 \begin{aligned}
-q&=Q\cos(\omega_0t+\phi),\\
-i&=-\omega_0Q\sin(\omega_0t+\phi),\\
-\omega_0&=\frac1{\sqrt{LC}}.
+q &= Q\cos(\omega_0t+\phi), \\
+i &= -\omega_0Q\sin(\omega_0t+\phi), \\
+\omega_0 &= \frac1{\sqrt{LC}}.
 \end{aligned}
 $$
 

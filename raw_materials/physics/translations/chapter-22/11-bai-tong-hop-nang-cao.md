@@ -19,10 +19,9 @@ Vỏ cầu cách điện có bán kính trong a, ngoài b. Trong vật liệu, m
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}} = 4\pi\alpha\int_a^r s\,ds\\
-&\quad =2\pi\alpha(r^2-a^2),\\
-&E_r =\frac{\alpha}{2\varepsilon_0}
-\left(1-\frac{a^2}{r^2}\right).
+Q_{\mathrm{trong}} &= 4\pi\alpha\int_a^r s\,ds \\
+&= 2\pi\alpha(r^2-a^2), \\
+E_r &= \frac{\alpha}{2\varepsilon_0} \left(1-\frac{a^2}{r^2}\right).
 \end{aligned}
 $$
 
@@ -53,9 +52,9 @@ Trong mô hình Thomson đầu thế kỷ XX, electron âm nằm trong một kh�
 
 $$
 \begin{aligned}
-&\vec E = \frac{ke}{R^3}\vec r,\\
-&\vec F = -\frac{ke^2}{R^3}\vec r,\\
-&f = \frac1{2\pi}\sqrt{\frac{ke^2}{mR^3}}.
+\vec E &= \frac{ke}{R^3}\vec r, \\
+\vec F &= -\frac{ke^2}{R^3}\vec r, \\
+f &= \frac1{2\pi}\sqrt{\frac{ke^2}{mR^3}}.
 \end{aligned}
 $$
 
@@ -63,8 +62,8 @@ $$
 
 $$
 \begin{aligned}
-&R = \left(\frac{ke^2}{4\pi^2m_ef^2}\right)^{1/3}\\
-&\quad =3.13\times10^{-10}\,\mathrm m.
+R &= \left(\frac{ke^2}{4\pi^2m_ef^2}\right)^{1/3} \\
+&= 3.13\times10^{-10}\,\mathrm m.
 \end{aligned}
 $$
 
@@ -86,10 +85,9 @@ Phân bố cầu đối xứng có $\rho(r)=\rho_0(1-r/R)$ khi 0 ≤ r ≤ R, b�
 
 $$
 \begin{aligned}
-&F(r) = \int_0^r s^2\,ds\\
-&\quad-\frac1R\int_0^r s^3\,ds\\
-&\quad =\frac{r^3}{3}-\frac{r^4}{4R},\\
-&Q_{\mathrm{trong}}(r) = 4\pi\rho_0F(r).
+F(r) &= \int_0^r s^2\,ds -\frac1R\int_0^r s^3\,ds \\
+&= \frac{r^3}{3}-\frac{r^4}{4R}, \\
+Q_{\mathrm{trong}}(r) &= 4\pi\rho_0F(r).
 \end{aligned}
 $$
 
@@ -103,8 +101,8 @@ Trường ngoài là kQ/r², hướng ra. Đạo hàm theo u bằng hệ số d�
 
 $$
 \begin{aligned}
-&r_{\max} = 2R/3,\\
-&E_{\max} = \frac{4kQ}{3R^2}.
+r_{\max} &= 2R/3, \\
+E_{\max} &= \frac{4kQ}{3R^2}.
 \end{aligned}
 $$
 
@@ -144,12 +142,10 @@ Trụ cách điện rất dài bán kính R có mật độ dương $\rho(r)=\al
 
 $$
 \begin{aligned}
-&\lambda_{\mathrm{trong}}(r) =2\pi\alpha
-\int_0^r\left(s-\frac{s^2}{R}\right)ds,\\
-&E_{\mathrm{trong}} =\frac{\alpha}{\varepsilon_0}
-\left(\frac r2-\frac{r^2}{3R}\right),\\
-&\lambda_{\mathrm{tong}} = \pi\alpha R^2/3,\\
-&E_{\mathrm{ngoai}} = \frac{\alpha R^2}{6\varepsilon_0r}.
+\lambda_{\mathrm{trong}}(r) &= 2\pi\alpha \int_0^r\left(s-\frac{s^2}{R}\right)ds, \\
+E_{\mathrm{trong}} &= \frac{\alpha}{\varepsilon_0} \left(\frac r2-\frac{r^2}{3R}\right), \\
+\lambda_{\mathrm{tong}} &= \pi\alpha R^2/3, \\
+E_{\mathrm{ngoai}} &= \frac{\alpha R^2}{6\varepsilon_0r}.
 \end{aligned}
 $$
 
@@ -171,11 +167,10 @@ Cầu cách điện đặc bán kính R có mật độ $\rho(r)=\rho_0(1-r/R)>0
 
 $$
 \begin{aligned}
-&E_{\mathrm{trong}} =\frac{\rho_0}{\varepsilon_0}
-\left(\frac r3-\frac{r^2}{4R}\right),\\
-&Q_{\mathrm{tong}} = \pi\rho_0R^3/3,\\
-&E_{\mathrm{ngoai}} = \frac{\rho_0R^3}{12\varepsilon_0r^2},\\
-&r_{\max} = 2R/3.
+E_{\mathrm{trong}} &= \frac{\rho_0}{\varepsilon_0} \left(\frac r3-\frac{r^2}{4R}\right), \\
+Q_{\mathrm{tong}} &= \pi\rho_0R^3/3, \\
+E_{\mathrm{ngoai}} &= \frac{\rho_0R^3}{12\varepsilon_0r^2}, \\
+r_{\max} &= 2R/3.
 \end{aligned}
 $$
 
@@ -220,12 +215,10 @@ Mật độ cầu đối xứng là $\rho(r)=\rho_0[1-4r/(3R)]$ khi r ≤ R và 
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}}(r) =\frac{4\pi\rho_0}{3}
-\left(r^3-\frac{r^4}{R}\right),\\
-&Q_{\mathrm{tong}} = 0,\\
-&E_{\mathrm{ngoai}} = 0,\\
-&E_{\mathrm{trong}} =\frac{\rho_0r}{3\varepsilon_0}
-\left(1-\frac rR\right).
+Q_{\mathrm{trong}}(r) &= \frac{4\pi\rho_0}{3} \left(r^3-\frac{r^4}{R}\right), \\
+Q_{\mathrm{tong}} &= 0, \\
+E_{\mathrm{ngoai}} &= 0, \\
+E_{\mathrm{trong}} &= \frac{\rho_0r}{3\varepsilon_0} \left(1-\frac rR\right).
 \end{aligned}
 $$
 
@@ -253,10 +246,10 @@ Trong cầu trường hướng ra, dù mật độ ở phần ngoài âm. Lấy 
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}} = \frac43\pi\rho s^3,\\
-&E_s(4\pi s^2) = Q_{\mathrm{trong}}/\varepsilon_0,\\
-&\vec E = \frac{\rho\vec s}{3\varepsilon_0}\\
-&\quad =\frac{\rho(\vec r-\vec b)}{3\varepsilon_0}.
+Q_{\mathrm{trong}} &= \frac43\pi\rho s^3, \\
+E_s(4\pi s^2) &= Q_{\mathrm{trong}}/\varepsilon_0, \\
+\vec E &= \frac{\rho\vec s}{3\varepsilon_0} \\
+&= \frac{\rho(\vec r-\vec b)}{3\varepsilon_0}.
 \end{aligned}
 $$
 
@@ -264,9 +257,8 @@ Thành phần E_s giữ dấu của ρ. (b) Cộng trường của cầu lớn +
 
 $$
 \begin{aligned}
-&\vec E =\frac{\rho\vec r}{3\varepsilon_0}
--\frac{\rho(\vec r-\vec b)}{3\varepsilon_0}\\
-&\quad =\frac{\rho\vec b}{3\varepsilon_0}.
+\vec E &= \frac{\rho\vec r}{3\varepsilon_0} -\frac{\rho(\vec r-\vec b)}{3\varepsilon_0} \\
+&= \frac{\rho\vec b}{3\varepsilon_0}.
 \end{aligned}
 $$
 
@@ -292,9 +284,9 @@ Trụ cách điện đặc rất dài bán kính R có hốc trụ xuyên dọc,
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}} = \rho\pi s^2\ell,\\
-&E_s(2\pi s\ell) = Q_{\mathrm{trong}}/\varepsilon_0,\\
-&E_s = \rho s/(2\varepsilon_0).
+Q_{\mathrm{trong}} &= \rho\pi s^2\ell, \\
+E_s(2\pi s\ell) &= Q_{\mathrm{trong}}/\varepsilon_0, \\
+E_s &= \rho s/(2\varepsilon_0).
 \end{aligned}
 $$
 
@@ -302,9 +294,8 @@ $$
 
 $$
 \begin{aligned}
-&\vec E =\frac{\rho\vec r_\perp}{2\varepsilon_0}
--\frac{\rho(\vec r_\perp-\vec b)}{2\varepsilon_0}\\
-&\quad =\frac{\rho\vec b}{2\varepsilon_0}.
+\vec E &= \frac{\rho\vec r_\perp}{2\varepsilon_0} -\frac{\rho(\vec r_\perp-\vec b)}{2\varepsilon_0} \\
+&= \frac{\rho\vec b}{2\varepsilon_0}.
 \end{aligned}
 $$
 
@@ -345,12 +336,12 @@ Gọi cᵢ = Eᵢrᵢ với bộ A và dᵢ = Eᵢrᵢ² với bộ B, i chạy 
 
 $$
 \begin{aligned}
-&\bar c = \frac{c_1+c_2+\cdots+c_7}{7}\\
-&\quad =\frac17\sum_{i=1}^{7}c_i\\
-&\quad =2695.57\,\mathrm{N\,m/C},\\
-&\bar d = \frac{d_1+d_2+\cdots+d_7}{7}\\
-&\quad =\frac17\sum_{i=1}^{7}d_i\\
-&\quad =54.0971\,\mathrm{N\,m^2/C}.
+\bar c &= \frac{c_1+c_2+\cdots+c_7}{7} \\
+&= \frac17\sum_{i=1}^{7}c_i \\
+&= 2695.57\,\mathrm{N\,m/C}, \\
+\bar d &= \frac{d_1+d_2+\cdots+d_7}{7} \\
+&= \frac17\sum_{i=1}^{7}d_i \\
+&= 54.0971\,\mathrm{N\,m^2/C}.
 \end{aligned}
 $$
 
@@ -358,10 +349,10 @@ Các giá trị này là hệ số gần hằng của hai dạng đồ thị. D�
 
 $$
 \begin{aligned}
-&\lambda = \frac{\bar c}{2k}\approx1.50\times10^{-7}\,\mathrm{C/m},\\
-&Q = \frac{\bar d}{k},\\
-&\rho = \frac{3Q}{4\pi R^3}\\
-&\quad \approx2.81\times10^{-3}\,\mathrm{C/m^3}.
+\lambda &= \frac{\bar c}{2k}\approx1.50\times10^{-7}\,\mathrm{C/m}, \\
+Q &= \frac{\bar d}{k}, \\
+\rho &= \frac{3Q}{4\pi R^3} \\
+&\approx 2.81\times10^{-3}\,\mathrm{C/m^3}.
 \end{aligned}
 $$
 
@@ -385,8 +376,8 @@ $$
 
 $$
 \begin{aligned}
-&|\rho| = 3\varepsilon_0\frac{7.5\times10^4}{0.010}\\
-&\quad \approx2.0\times10^{-4}\,\mathrm{C/m^3}.
+|\rho| &= 3\varepsilon_0\frac{7.5\times10^4}{0.010} \\
+&\approx 2.0\times10^{-4}\,\mathrm{C/m^3}.
 \end{aligned}
 $$
 
@@ -414,10 +405,7 @@ Cầu bán kính R = 6,00 mm có mật độ không đều theo Hình P22.57. T�
 (iv) Điện tích tổng tỷ lệ với:
 
 $$
-\begin{aligned}
-&10(2^3) +4(4^3-2^3)\\
-&\quad -2(6^3-4^3)=0.
-\end{aligned}
+10(2^3) +4(4^3-2^3) -2(6^3-4^3)=0.
 $$
 
 Vì thế trường ở 7 mm bằng không. Các số trong phép so cuối dùng cùng đơn vị mm và µC/m³, nên chỉ dùng để xác nhận tổng bằng không. Khi tính giá trị trường, đã đổi sang SI.
@@ -440,9 +428,9 @@ Khi ong mật bay, không khí lấy bớt electron khỏi lông, làm ong dươ
 
 $$
 \begin{aligned}
-&E \approx kQ/d^2=1.08\,\mathrm{N/C},\\
-&|q_{\mathrm{dust}}| \approx F/E\\
-&\quad =9.3\times10^{-12}\,\mathrm C.
+E &\approx kQ/d^2=1.08\,\mathrm{N/C}, \\
+|q_{\mathrm{dust}}| &\approx F/E \\
+&= 9.3\times10^{-12}\,\mathrm C.
 \end{aligned}
 $$
 
@@ -464,11 +452,10 @@ Trụ cách điện rất dài bán kính $R_c$ có mật độ $\rho(r)=(1-r/R_
 
 $$
 \begin{aligned}
-&\lambda =2\pi\rho_0\int_0^{R_c}
-\left(r-\frac{r^2}{R_c}\right)dr\\
-&\quad =\pi\rho_0R_c^2/3,\\
-&\frac{Mv^2}{R_o} = \frac{Q\lambda}{2\pi\varepsilon_0R_o},\\
-&T = 2\pi R_o\sqrt{\frac{2\pi\varepsilon_0M}{Q\lambda}}.
+\lambda &= 2\pi\rho_0\int_0^{R_c} \left(r-\frac{r^2}{R_c}\right)dr \\
+&= \pi\rho_0R_c^2/3, \\
+\frac{Mv^2}{R_o} &= \frac{Q\lambda}{2\pi\varepsilon_0R_o}, \\
+T &= 2\pi R_o\sqrt{\frac{2\pi\varepsilon_0M}{Q\lambda}}.
 \end{aligned}
 $$
 
@@ -493,9 +480,9 @@ Tốc độ không phụ thuộc bán kính quỹ đạo trong mô hình này, n
 
 $$
 \begin{aligned}
-&F_\perp = \int E_\perp\,dq\\
-&\quad =\sigma\int E_\perp\,dA\\
-&\quad =\sigma\Phi_E.
+F_\perp &= \int E_\perp\,dq \\
+&= \sigma\int E_\perp\,dA \\
+&= \sigma\Phi_E.
 \end{aligned}
 $$
 
@@ -528,9 +515,8 @@ Trên mặt bên, khoảng cách đến tâm là $\sqrt{R^2+z^2}$ và thành ph�
 
 $$
 \begin{aligned}
-&\Phi_{\mathrm{side}} = 2\pi kQR^2\\
-&\quad\times\int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}}\\
-&\quad =\frac Q{\varepsilon_0} \frac{L}{\sqrt{L^2+4R^2}}.
+\Phi_{\mathrm{side}} &= 2\pi kQR^2 \times\int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}} \\
+&= \frac Q{\varepsilon_0} \frac{L}{\sqrt{L^2+4R^2}}.
 \end{aligned}
 $$
 
@@ -538,9 +524,8 @@ $$
 
 $$
 \begin{aligned}
-&\Phi_{\mathrm{top}} =\frac{Q}{2\varepsilon_0}
-\left(1-\frac{L}{\sqrt{L^2+4R^2}}\right),\\
-&\Phi_{\mathrm{bot}} = \Phi_{\mathrm{top}}.
+\Phi_{\mathrm{top}} &= \frac{Q}{2\varepsilon_0} \left(1-\frac{L}{\sqrt{L^2+4R^2}}\right), \\
+\Phi_{\mathrm{bot}} &= \Phi_{\mathrm{top}}.
 \end{aligned}
 $$
 
@@ -571,10 +556,10 @@ Hằng số α dương có đơn vị C/m³. (a) Tìm α theo Q,R. (b) Dùng Gau
 
 $$
 \begin{aligned}
-&Q_1 = \frac{3\pi\alpha R^3}{32},\\
-&Q_2 = \frac{47\pi\alpha R^3}{120},\\
-&Q = \frac{233\pi\alpha R^3}{480},\\
-&\alpha = \frac{480Q}{233\pi R^3}.
+Q_1 &= \frac{3\pi\alpha R^3}{32}, \\
+Q_2 &= \frac{47\pi\alpha R^3}{120}, \\
+Q &= \frac{233\pi\alpha R^3}{480}, \\
+\alpha &= \frac{480Q}{233\pi R^3}.
 \end{aligned}
 $$
 
@@ -588,10 +573,10 @@ Với 1/2 ≤ u ≤ 1:
 
 $$
 \begin{aligned}
-&f(u) = 640u^3-384u^5-23,\\
-&g(u) = 640u-384u^3-\frac{23}{u^2},\\
-&Q_{\mathrm{trong}} = \frac{Q}{233}f(u),\\
-&E_2 = \frac{kQ}{233R^2}g(u).
+f(u) &= 640u^3-384u^5-23, \\
+g(u) &= 640u-384u^3-\frac{23}{u^2}, \\
+Q_{\mathrm{trong}} &= \frac{Q}{233}f(u), \\
+E_2 &= \frac{kQ}{233R^2}g(u).
 \end{aligned}
 $$
 
@@ -643,8 +628,8 @@ Chọn (a).
 
 $$
 \begin{aligned}
-&E(R^+) = 10^6(25/2.5)^2\\
-&\quad =10^8\,\mathrm{N/C}.
+E(R^+) &= 10^6(25/2.5)^2 \\
+&= 10^8\,\mathrm{N/C}.
 \end{aligned}
 $$
 

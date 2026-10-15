@@ -16,7 +16,7 @@ Dòng xoay chiều thay đổi chiều theo thời gian. Trong mô hình hình s
 Chọn chiều dương để dòng có dấu. Dòng xoay chiều đổi dấu theo thời gian. Trong mô hình hình sin:
 
 $$
-\begin{aligned}&i=I\cos\omega t\\&\omega=2\pi f.\end{aligned}
+i=I\cos\omega t\\ \omega=2\pi f.
 $$
 
 $I$ là biên độ không âm, đo bằng ampe. Tần số $f$ đo bằng hertz, $\omega$ bằng radian trên giây. Biên độ không phải dòng tại mọi thời điểm.

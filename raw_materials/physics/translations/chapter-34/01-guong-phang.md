@@ -51,10 +51,7 @@ Với gương, tia tới và tia ra ở cùng một phía. Với mặt khúc x�
 Trong cấu hình gương phẳng đang xét, vật thật ở phía tới nên $s>0$. Ảnh ảo ở phía sau gương, đối diện phía tia ra, nên $s'<0$. Hai khoảng cách có độ lớn bằng nhau nhưng trái dấu:
 
 $$
-\begin{aligned}
-s&=-s'.
-\end{aligned}
-\tag{34.1}
+s =-s'. \tag{34.1}
 $$
 
 Với mặt phẳng, bán kính cong có độ lớn vô hạn nên chưa cần dùng quy tắc thứ ba. Quy tắc ấy sẽ quyết định dấu ở các mặt cầu trong những mục sau. Các hệ quy ước khác có thể dùng dấu khác, vì vậy phải giữ nhất quán quy ước cùng phương trình tương ứng.
@@ -68,10 +65,7 @@ Xét mũi tên $PQ$ song song mặt gương, cao $y$. Dựng ảnh cho từng đ
 Hai tam giác $PQV$ và $P'Q'V$ bằng nhau, nên chiều cao ảnh $y'$ bằng $y$. Định nghĩa **độ phóng đại ngang**:
 
 $$
-\begin{aligned}
-m&=\frac{y'}{y}.
-\end{aligned}
-\tag{34.2}
+m =\frac{y'}{y}. \tag{34.2}
 $$
 
 Với gương phẳng, $m=+1$. Ảnh có cùng kích thước với vật. Khi hai mũi tên ngang cùng hướng, $y$ và $y'$ cùng dấu, ảnh được gọi là cùng chiều và $m>0$. Khi hai mũi tên ngược hướng, chúng trái dấu, ảnh ngược chiều và $m<0$.
@@ -111,19 +105,13 @@ Nếu đổi thứ tự, gương 1 dùng $P'_2$ làm vật. Trong cấu hình ha
 Đặt hai vết gương dọc các trục tọa độ vuông góc. Một phép phản xạ đổi dấu tọa độ vuông góc gương ngang, còn phép kia đổi dấu tọa độ vuông góc gương đứng:
 
 $$
-\begin{aligned}
-(x,y)&\longmapsto(x,-y)\\
-&\longmapsto(-x,-y).
-\end{aligned}
+(x,y)&\longmapsto(x,-y) \longmapsto(-x,-y).
 $$
 
 Đổi thứ tự:
 
 $$
-\begin{aligned}
-(x,y)&\longmapsto(-x,y)\\
-&\longmapsto(-x,-y).
-\end{aligned}
+(x,y)&\longmapsto(-x,y) \longmapsto(-x,-y).
 $$
 
 Hai tọa độ đổi dấu độc lập nên kết quả giống nhau. Kết luận về cùng điểm này dùng cấu hình hai gương vuông góc, không suy rộng cho mọi cặp mặt quang học.
@@ -148,8 +136,8 @@ Chọn (iv). Nếu bạn cách gương khoảng $s$, ảnh ở phía sau gương
 
 $$
 \begin{aligned}
-\frac{ds}{dt}&=-v,\\
-\frac{dD}{dt}&=2\frac{ds}{dt}=-2v.
+\frac{ds}{dt} &= -v, \\
+\frac{dD}{dt} &= 2\frac{ds}{dt}=-2v.
 \end{aligned}
 $$
 

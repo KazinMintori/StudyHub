@@ -31,8 +31,8 @@ Miền khả thi $D$ gồm tất cả các điểm thỏa đồng thời các r�
 
 $$
 \begin{aligned}
-&x^\star \in D,\\
-&f(x^\star) \le f(x),\quad\forall x\in D.
+&x^\star \in D, \\
+f(x^\star) &\le f(x),\quad\forall x\in D.
 \end{aligned}
 $$
 
@@ -46,7 +46,7 @@ Trong quy hoạch nguyên, biến phải có tọa độ nguyên, nên miền đ
 
 $$
 \begin{aligned}
-&\mathcal D = \{(x_1,y_1),\ldots,(x_N,y_N)\},\\
+\mathcal D &= \{(x_1,y_1),\ldots,(x_N,y_N)\}, \\
 &x_i \in \mathbb R^d,\quad y_i\in\mathbb R^k.
 \end{aligned}
 $$
@@ -57,8 +57,8 @@ Hàm mất mát $\ell$ nhận dự đoán và đầu ra đích, rồi đo mức 
 
 $$
 \begin{aligned}
-&\ell(u,v) = \|u-v\|_2,\\
-&\ell(u,v)^2 = (u_1-v_1)^2+\cdots+(u_k-v_k)^2.
+\ell(u,v) &= \|u-v\|_2, \\
+\ell(u,v)^2 &= (u_1-v_1)^2+\cdots+(u_k-v_k)^2.
 \end{aligned}
 $$
 
@@ -66,8 +66,8 @@ $$
 
 $$
 \begin{aligned}
-&L(a,\mathcal D) = \frac{\ell_1(a)+\cdots+\ell_N(a)}{N}\\
-&\quad =\frac1N\sum_{i=1}^{N}\ell(f_a(x_i),y_i).
+L(a,\mathcal D) &= \frac{\ell_1(a)+\cdots+\ell_N(a)}{N} \\
+&= \frac1N\sum_{i=1}^{N}\ell(f_a(x_i),y_i).
 \end{aligned}
 $$
 
@@ -79,9 +79,9 @@ Xét $k=1$. Mô hình tuyến tính có hệ số chặn được viết
 
 $$
 \begin{aligned}
-&a = (a_0,a_1,\ldots,a_d)^T,\\
-&f_a(x) = a_0+a_1x_1+\cdots+a_dx_d\\
-&\quad =a_0+\sum_{j=1}^{d}a_jx_j.
+a &= (a_0,a_1,\ldots,a_d)^T, \\
+f_a(x) &= a_0+a_1x_1+\cdots+a_dx_d \\
+&= a_0+\sum_{j=1}^{d}a_jx_j.
 \end{aligned}
 $$
 
@@ -91,8 +91,8 @@ Chọn mất mát bình phương $\ell(u,v)=(u-v)^2$. Đặt sai số dự đoá
 
 $$
 \begin{aligned}
-&r_i = a_0+\sum_{j=1}^{d}a_jx_{ij}-y_i,\\
-&L(a,\mathcal D) = \frac1N\sum_{i=1}^{N}r_i^2.
+r_i &= a_0+\sum_{j=1}^{d}a_jx_{ij}-y_i, \\
+L(a,\mathcal D) &= \frac1N\sum_{i=1}^{N}r_i^2.
 \end{aligned}
 $$
 
@@ -121,9 +121,9 @@ $$
 
 $$
 \begin{aligned}
-&L(a,\mathcal D) = \frac{r_1^2+\cdots+r_N^2}{N}\\
-&\quad =\frac1N\sum_{i=1}^{N}r_i^2\\
-&\quad =\frac1N\|Xa-y\|_2^2.
+L(a,\mathcal D) &= \frac{r_1^2+\cdots+r_N^2}{N} \\
+&= \frac1N\sum_{i=1}^{N}r_i^2 \\
+&= \frac1N\|Xa-y\|_2^2.
 \end{aligned}
 $$
 

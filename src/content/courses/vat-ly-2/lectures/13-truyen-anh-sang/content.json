@@ -1,0 +1,19 @@
+{
+  "course": "vat-ly-2",
+  "lecture": "13-truyen-anh-sang",
+  "route": "/vat-ly-2/bai-giang/13-truyen-anh-sang",
+  "notes": "docs/vat-ly-2/bai-giang/13-truyen-anh-sang.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "song",
+    "pha-song",
+    "vector"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

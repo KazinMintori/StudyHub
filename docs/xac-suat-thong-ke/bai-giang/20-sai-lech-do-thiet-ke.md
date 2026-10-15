@@ -107,10 +107,12 @@ Con số $+13\%$ thoạt nhìn có vẻ là một tín hiệu khả quan. Nhưng
 
 Vì thuốc có thể vừa có tiềm năng cứu mạng vừa có nguy cơ gây xuất huyết dẫn đến tử vong, ta bắt buộc phải mở rộng nhận thức đối với cả hai chiều biến thiên:
 
-$$\begin{aligned}
-&H_0 : p_T - p_C = 0 \quad (\text{Thuốc không làm thay đổi tỉ lệ sống sót})\\
+$$
+\begin{aligned}
+H_0 : p_T - p_C &= 0 \quad (\text{Thuốc không làm thay đổi tỉ lệ sống sót}) \\
 &H_A : p_T - p_C \neq 0 \quad (\text{Thuốc có tác động làm thay đổi tỉ lệ sống sót})
-\end{aligned}$$
+\end{aligned}
+$$
 
 Nếu giả thuyết không $H_0$ là đúng, nhãn dán "Có dùng thuốc" hay "Không dùng thuốc" không có bất kỳ ý nghĩa sinh học nào. Ta có thể mô phỏng phân phối giả thuyết không bằng cách xáo trộn ngẫu nhiên (permutation) $90$ hồ sơ bệnh nhân (gồm 25 người sống và 65 người chết) vào hai nhóm kích thước 40 và 50, lặp lại $1{,}000$ lần.
 
@@ -290,10 +292,12 @@ Một nhóm nghiên cứu muốn đánh giá một loại thuốc mới nhằm g
 **1. Phát biểu giả thuyết và lý do mặc định kiểm định hai phía:**
 - Đặt $\mu_T$ là nồng độ LDL trung bình của nhóm dùng thuốc và $\mu_C$ là của nhóm đối chứng.
 - Giả thuyết kiểm định hai phía:
-  $$\begin{aligned}
-  &H_0 : \mu_T - \mu_C = 0 \quad (\text{Thuốc không làm thay đổi nồng độ LDL})\\
-  &H_A : \mu_T - \mu_C \neq 0 \quad (\text{Thuốc làm thay đổi nồng độ LDL})
-  \end{aligned}$$
+  $$
+\begin{aligned}
+H_0 : \mu_T - \mu_C &= 0 \quad (\text{Thuốc không làm thay đổi nồng độ LDL}) \\
+&H_A : \mu_T - \mu_C \neq 0 \quad (\text{Thuốc làm thay đổi nồng độ LDL})
+\end{aligned}
+$$
 - Lý do kiểm định hai phía là chuẩn mực: Mọi loại dược phẩm đều tiềm ẩn tác dụng phụ khôn lường. Thuốc mới có thể giúp giảm cholesterol, nhưng cũng hoàn toàn có khả năng gây rối loạn chuyển hóa khiến cholesterol tăng cao đột biến. Nhà khoa học cần duy trì thái độ khách quan và cởi mở với dữ liệu ở cả hai chiều biến thiên, không được thiên kiến chỉ đón nhận chiều kết quả mong đợi.
 
 **2. Phân tích sai lầm phương pháp luận khi đổi kiểm định sau khi thấy dữ liệu:**

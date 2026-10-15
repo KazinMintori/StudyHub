@@ -73,8 +73,8 @@ Ta dùng công thức độ dời (2.1), vận tốc trung bình (2.2) và đạ
 **(a)** Tọa độ của báo tại hai thời điểm:
 $$
 \begin{aligned}
-    &x(1.0\,\mathrm s) = 20 + 5.0(1.0)^2 = 25.0\,\mathrm m,\\
-    &x(2.0\,\mathrm s) = 20 + 5.0(2.0)^2 = 20 + 5.0(4.0) = 40.0\,\mathrm m.
+x(1.0\,\mathrm s) &= 20 + 5.0(1.0)^2 = 25.0\,\mathrm m, \\
+x(2.0\,\mathrm s) &= 20 + 5.0(2.0)^2 = 20 + 5.0(4.0) = 40.0\,\mathrm m.
 \end{aligned}
 $$
 Độ dời của báo là:

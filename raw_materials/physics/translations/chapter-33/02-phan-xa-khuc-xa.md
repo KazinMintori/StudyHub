@@ -22,10 +22,7 @@ Tính chất của chùm sáng phản xạ phụ thuộc quyết định vào đ
 Trong các môi trường trong suốt thông thường đang xét, tốc độ pha $v$ nhỏ hơn tốc độ ánh sáng $c$ trong chân không. Tỷ số giữa tốc độ ánh sáng trong chân không và tốc độ ánh sáng trong môi trường được định nghĩa là **chiết suất** (index of refraction) $n$ của môi trường đó:
 
 $$
-\begin{aligned}
-n &= \frac{c}{v}
-\end{aligned}
-\tag{33.1}
+n = \frac{c}{v} \tag{33.1}
 $$
 
 Với các vật liệu trong suốt thông thường ở miền bước sóng đang xét, tốc độ pha nhỏ hơn $c$ nên $n>1$. Đối với chân không, $n = 1$ theo đúng định nghĩa. Đối với không khí ở điều kiện chuẩn nhiệt độ và áp suất, chiết suất xấp xỉ $1{,}0003$, và trong hầu hết các bài toán thực hành ta có thể lấy $n \approx 1{,}00$.
@@ -38,28 +35,19 @@ Các khảo sát thực nghiệm chi tiết về hiện tượng phản xạ và
 2. **Định luật phản xạ**: Góc phản xạ $\theta_r$ luôn bằng góc tới $\theta_a$ đối với mọi bước sóng và đối với bất kỳ cặp môi trường nào:
 
 $$
-\begin{aligned}
-\theta_r &= \theta_a
-\end{aligned}
-\tag{33.2}
+\theta_r = \theta_a \tag{33.2}
 $$
 
 3. **Định luật khúc xạ (Định luật Snell)**: Đối với ánh sáng đơn sắc và đối với một cặp môi trường xác định $a$ và $b$, tỷ số giữa sin của góc tới $\theta_a$ và sin của góc khúc xạ $\theta_b$ bằng tỷ số nghịch đảo của hai chiết suất:
 
 $$
-\begin{aligned}
-\frac{\sin \theta_a}{\sin \theta_b} &= \frac{n_b}{n_a}
-\end{aligned}
-\tag{33.3}
+\frac{\sin \theta_a}{\sin \theta_b} = \frac{n_b}{n_a} \tag{33.3}
 $$
 
 Hệ thức này thường được viết gọn gàng dưới dạng đối xứng:
 
 $$
-\begin{aligned}
-n_a \sin \theta_a &= n_b \sin \theta_b
-\end{aligned}
-\tag{33.4}
+n_a \sin \theta_a = n_b \sin \theta_b \tag{33.4}
 $$
 
 > [!IMPORTANT]
@@ -153,18 +141,13 @@ Thứ nhất, tại mặt phân cách đứng yên trong mô hình tuyến tính
 Thứ hai, **bước sóng $\lambda$ của ánh sáng trong môi trường thay đổi**: Vì vận tốc truyền sóng trong môi trường là $v = \lambda f$, và tần số $f$ được giữ cố định bằng tần số trong chân không $f = c/\lambda_0$, ta có hệ thức:
 
 $$
-\begin{aligned}
-f &= \frac{c}{\lambda_0} = \frac{v}{\lambda}
-\end{aligned}
+f = \frac{c}{\lambda_0} = \frac{v}{\lambda}
 $$
 
 Kết hợp với định nghĩa chiết suất $n = c/v$, ta rút ra bước sóng $\lambda$ của ánh sáng trong môi trường có chiết suất $n$:
 
 $$
-\begin{aligned}
-\lambda &= \frac{\lambda_0}{n}
-\end{aligned}
-\tag{33.5}
+\lambda = \frac{\lambda_0}{n} \tag{33.5}
 $$
 
 Trong đó $\lambda_0$ là bước sóng của ánh sáng đó trong chân không. Khi ánh sáng truyền vào môi trường có chiết suất lớn hơn ($n_b > n_a$), tốc độ truyền sóng giảm xuống, khiến các mặt sóng bị "nén lại" và bước sóng $\lambda$ ngắn đi. Ngược lại, khi truyền vào môi trường có chiết suất nhỏ hơn ($n_b < n_a$), tốc độ sóng tăng lên, các mặt sóng bị "dãn ra" và bước sóng $\lambda$ dài hơn.
@@ -195,17 +178,13 @@ Trong Hình 33.11, môi trường $a$ là nước ($n_a = 1{,}33$) và môi trư
 **Lời giải**: Theo định luật phản xạ, góc phản xạ bằng góc tới:
 
 $$
-\begin{aligned}
-\theta_r &= \theta_a = 60{,}0^\circ
-\end{aligned}
+\theta_r = \theta_a = 60{,}0^\circ
 $$
 
 Để tìm góc khúc xạ $\theta_b$, ta áp dụng định luật Snell:
 
 $$
-\begin{aligned}
-n_a \sin \theta_a &= n_b \sin \theta_b
-\end{aligned}
+n_a \sin \theta_a = n_b \sin \theta_b
 $$
 
 Biến đổi tìm $\sin \theta_b$:
@@ -221,9 +200,7 @@ $$
 Lấy hàm ngược arcsin:
 
 $$
-\begin{aligned}
-\theta_b &= \arcsin(0{,}758) = 49{,}3^\circ
-\end{aligned}
+\theta_b = \arcsin(0{,}758) = 49{,}3^\circ
 $$
 
 **Đánh giá**: Môi trường thứ hai có chiết suất lớn hơn môi trường đầu ($n_b > n_a$), do đó tia khúc xạ lệch lại gần pháp tuyến hơn so với tia tới và $\theta_b < \theta_a$ ($49{,}3^\circ < 60{,}0^\circ$). Kết quả phù hợp hoàn toàn với dự đoán định tính.
@@ -298,9 +275,7 @@ Hai gương phẳng đặt vuông góc với nhau tại $O$. Một tia sáng tru
 Vì hai gương vuông góc với nhau ($90^\circ$), trong tam giác vuông $PQR$, góc tới tại gương 2 là:
 
 $$
-\begin{aligned}
-\theta_2 &= 90^\circ - \theta_1
-\end{aligned}
+\theta_2 = 90^\circ - \theta_1
 $$
 
 Theo định luật phản xạ, góc phản xạ tại gương 2 cũng bằng $90^\circ - \theta_1$.

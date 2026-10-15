@@ -18,11 +18,11 @@ Hệ nút mở (sáu nút vòng ngoài, lấy $V_{BL}=0$) là:
 
 $$
 \begin{aligned}
-&\frac{V_{TL}-V_a}{2}+V_{TL}-V_{TR}-12 = 0,\\
-&\frac{V_a-V_{TL}}{2}+\frac{V_a}{2} = 0,\\
-&V_{TR}-V_{TL}+12+V_{TR}-V_{MR} = 0,\\
-&V_{MR}-V_{TR}+\frac{V_{MR}-V_{BR}}{2} = 0,\\
-&\frac{V_{BR}-V_{MR}}{2}+V_{BR}+8 = 0.
+\frac{V_{TL}-V_a}{2}+V_{TL}-V_{TR}-12 &= 0, \\
+\frac{V_a-V_{TL}}{2}+\frac{V_a}{2} &= 0, \\
+V_{TR}-V_{TL}+12+V_{TR}-V_{MR} &= 0, \\
+V_{MR}-V_{TR}+\frac{V_{MR}-V_{BR}}{2} &= 0, \\
+\frac{V_{BR}-V_{MR}}{2}+V_{BR}+8 &= 0.
 \end{aligned}
 $$
 
@@ -51,11 +51,11 @@ Các phương trình MNA cho P26.57(b), lấy BL làm mốc và biểu diễn c�
 
 $$
 \begin{aligned}
-&\frac{V_{TL}-V_A}{2}+V_{TL}-V_{TR}-12 = 0,\\
-&\frac{V_A-V_{TL}}{2}+\frac{V_A}{2}+\frac{V_A-V_{MR}-10}{4} = 0,\\
-&V_{TR}-V_{TL}+12+V_{TR}-V_{MR} = 0,\\
-&V_{MR}-V_{TR}+\frac{V_{MR}-V_{BR}}{2}+\frac{V_{MR}-V_A+10}{4} = 0,\\
-&\frac{V_{BR}-V_{MR}}{2}+V_{BR}+8 = 0.
+\frac{V_{TL}-V_A}{2}+V_{TL}-V_{TR}-12 &= 0, \\
+\frac{V_A-V_{TL}}{2}+\frac{V_A}{2}+\frac{V_A-V_{MR}-10}{4} &= 0, \\
+V_{TR}-V_{TL}+12+V_{TR}-V_{MR} &= 0, \\
+V_{MR}-V_{TR}+\frac{V_{MR}-V_{BR}}{2}+\frac{V_{MR}-V_A+10}{4} &= 0, \\
+\frac{V_{BR}-V_{MR}}{2}+V_{BR}+8 &= 0.
 \end{aligned}
 $$
 

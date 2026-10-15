@@ -1,0 +1,20 @@
+{
+  "course": "vat-ly-1",
+  "lecture": "20-nguyen-ly-thu-hai-entropy",
+  "route": "/vat-ly-1/bai-giang/20-nguyen-ly-thu-hai-entropy",
+  "notes": "docs/vat-ly-1/bai-giang/20-nguyen-ly-thu-hai-entropy.md",
+  "topics": [],
+  "slides": "docs/.vitepress/physics-courses.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "noi-nang",
+    "khi-ly-tuong",
+    "nhiet-do-tuyet-doi",
+    "tich-phan"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [],
+  "solutions": [],
+  "assets": []
+}

@@ -101,9 +101,9 @@ Nguồn q = −4,00 nC cách dây mảnh dài vô hạn 9,00 cm. Dây có mật 
 
 $$
 \begin{aligned}
-&F = \frac{|q|\lambda}{2\pi\varepsilon_0r}\\
-&\quad =2.40\times10^{-6}\,\mathrm N\\
-&\quad =2.40\,\mu\mathrm N.
+F &= \frac{|q|\lambda}{2\pi\varepsilon_0r} \\
+&= 2.40\times10^{-6}\,\mathrm N \\
+&= 2.40\,\mu\mathrm N.
 \end{aligned}
 $$
 :::
@@ -123,8 +123,8 @@ Nguồn q = +1,80 nC cách mặt phẳng cách điện mỏng vô hạn 8,00 cm,
 
 $$
 \begin{aligned}
-&\sigma = 2\varepsilon_0\frac{kq}{r^2}\\
-&\quad =+1.79\times10^{-7}\,\mathrm{C/m^2}.
+\sigma &= 2\varepsilon_0\frac{kq}{r^2} \\
+&= +1.79\times10^{-7}\,\mathrm{C/m^2}.
 \end{aligned}
 $$
 :::
@@ -144,8 +144,8 @@ Hai bản dẫn lớn song song mang điện tích trái dấu và cùng độ l
 
 $$
 \begin{aligned}
-&|\sigma| = \frac{\varepsilon_0F}{q}\\
-&\quad =5{,}41\times10^{-8}\,\mathrm{C/m^2}.
+|\sigma| &= \frac{\varepsilon_0F}{q} \\
+&= 5{,}41\times10^{-8}\,\mathrm{C/m^2}.
 \end{aligned}
 $$
 :::
@@ -217,8 +217,8 @@ Cầu dẫn bán kính ngoài 0,330 m có hốc cầu đồng tâm bán kính 0,
 
 $$
 \begin{aligned}
-&E = \frac{k(4.00\times10^{-9})}{0.120^2}\\
-&\quad =2.50\times10^3\,\mathrm{N/C}.
+E &= \frac{k(4.00\times10^{-9})}{0.120^2} \\
+&= 2.50\times10^3\,\mathrm{N/C}.
 \end{aligned}
 $$
 
@@ -255,17 +255,15 @@ Bán kính Bohr $a_0=5.29\times10^{-11}$ m. (a) Tìm điện tích tổng của 
 
 $$
 \begin{aligned}
-&Q_{\mathrm{trong}}(r) = Q+4\pi\int_0^r\rho(s)s^2ds\\
-&\quad =Q-\frac{4Q}{a_0^3}\\
-&\quad\times\int_0^r s^2e^{-2s/a_0}ds.
+Q_{\mathrm{trong}}(r) &= Q+4\pi\int_0^r\rho(s)s^2ds \\
+&= Q-\frac{4Q}{a_0^3} \times\int_0^r s^2e^{-2s/a_0}ds.
 \end{aligned}
 $$
 
 Đặt x = 2s/a₀, cận trên X = 2r/a₀. Khi đó:
 
 $$
-\begin{aligned}
-&Q_{\mathrm{trong}} = Q-\frac Q2\int_0^X x^2e^{-x}dx.\end{aligned}
+Q_{\mathrm{trong}} = Q-\frac Q2\int_0^X x^2e^{-x}dx.
 $$
 
 Hai lần tích phân từng phần lần lượt hạ x² xuống 2x rồi xuống hằng số, cho nguyên hàm:
