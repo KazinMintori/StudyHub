@@ -1,27 +1,48 @@
 ---
-course: vat-ly-2
-lecture: 18-photon
-section: lecture
+course: "vat-ly-2"
+lecture: "18-photon"
+section: "lecture"
 title: "Photon: Tính hạt của sóng ánh sáng"
-prerequisites: ["thuyet-tuong-doi-hep","cong-nang-luong","song"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Photon: Tính hạt của sóng ánh sáng."
+prerequisites: ["cong-nang-luong","dong-luong-vat-ly","electron-volt","song","song-dien-tu","nhieu-xa-khe-don","dong-luong-tuong-doi","nang-luong-nghi"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Photon, quang điện, phát tia X, Compton, tạo cặp, lưỡng tính sóng–hạt và bất định."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 38.1 — Light Absorbed as Photons: The Photoelectric Effect (từ trang 1253).
-- 38.2 — Light Emitted as Photons: X-Ray Production (từ trang 1259).
-- 38.3 — Light Scattered as Photons: Compton Scattering and Pair Production (từ trang 1262).
-- 38.4 — Wave–Particle Duality, Probability, and Uncertainty (từ trang 1265).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/05-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 38, trang 1253–1278.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Photon">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/06-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/07-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/08-bai-tap-01-12.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/09-bai-tap-13-23.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/10-bai-tap-24-31.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/11-bai-tap-32-37.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/12-bai-tap-nang-cao.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-38/13-mcat.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 38, trang 1273–1278.
+
+</div>

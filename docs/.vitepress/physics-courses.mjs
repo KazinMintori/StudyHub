@@ -1860,20 +1860,75 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "18-photon",
-      "title": "Photon: Tính hạt của sóng ánh sáng",
-      "prerequisites": [
-        "thuyet-tuong-doi-hep",
-        "cong-nang-luong",
-        "song"
-      ],
-      "supportingConcepts": [
-        "photon"
-      ],
-      "status": "draft",
-      "number": 18,
-      "sourceChapter": 38
-    },
+        "slug": "18-photon",
+        "title": "Photon: Tính hạt của sóng ánh sáng",
+        "prerequisites": [
+          "cong-nang-luong",
+          "dong-luong-vat-ly",
+          "electron-volt",
+          "song",
+          "song-dien-tu",
+          "nhieu-xa-khe-don",
+          "dong-luong-tuong-doi",
+          "nang-luong-nghi"
+        ],
+        "supportingConcepts": [
+          "photon",
+          "hang-so-planck",
+          "hieu-ung-quang-dien",
+          "cong-thoat",
+          "the-ham-quang-dien",
+          "quang-dan",
+          "buc-xa-ham",
+          "tan-xa-compton",
+          "tao-cap-electron-positron",
+          "huy-cap-electron-positron",
+          "luong-tinh-song-hat",
+          "xac-suat-photon",
+          "bat-dinh-vi-tri-dong-luong",
+          "bat-dinh-nang-luong-thoi-gian"
+        ],
+        "status": "ready",
+        "number": 18,
+        "sourceChapter": 38,
+        "topicGroups": [
+          {
+            "title": "Hấp thụ và phát photon",
+            "topics": [
+              {
+                "slug": "quang-dien",
+                "title": "Hiệu ứng quang điện và photon",
+                "question": "Vì sao tăng cường độ không thay được tần số ngưỡng?",
+                "source": "38.1"
+              },
+              {
+                "slug": "phat-tia-x",
+                "title": "Phát tia X và bức xạ hãm",
+                "question": "Điện áp gia tốc giới hạn bước sóng tia X như thế nào?",
+                "source": "38.2"
+              }
+            ]
+          },
+          {
+            "title": "Tán xạ, xác suất và bất định",
+            "topics": [
+              {
+                "slug": "compton-tao-cap",
+                "title": "Compton, tạo cặp và hủy cặp",
+                "question": "Photon chuyển năng lượng và động lượng cho vật chất bằng cách nào?",
+                "source": "38.3"
+              },
+              {
+                "slug": "luong-tinh-bat-dinh",
+                "title": "Lưỡng tính sóng–hạt và nguyên lý bất định",
+                "question": "Vì sao các sự kiện photon riêng lẻ tạo nên phân bố nhiễu xạ?",
+                "source": "38.4"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "19-song-vat-chat",
       "title": "Tính sóng của hạt",
@@ -3671,6 +3726,126 @@ export const physics2Course = {
         "Định vị vệ tinh cần hiệu chỉnh cả chuyển động lẫn hấp dẫn."
       ],
       "formula": "$$\nE_0=mc^2.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Tần số quyết định năng lượng từng photon",
+      "bullets": [
+        "Photon có năng lượng và động lượng dù khối lượng nghỉ bằng không.",
+        "Cường độ cùng tần số tăng nghĩa là số photon tăng.",
+        "Sóng vô tuyến và tia gamma đều tuân theo hệ thức photon."
+      ],
+      "formula": "$$\n\\begin{aligned}E&=hf\\\\p&=h/\\lambda.\\end{aligned}\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Thế hãm đo động năng cực đại",
+      "bullets": [
+        "Điện áp ngược làm cản electron quang điện.",
+        "Tại ngưỡng tắt dòng, ngay cả electron nhanh nhất cũng không đến được anôt.",
+        "V₀ là độ lớn dương của thế hãm."
+      ],
+      "formula": "$$\nK_{\\max}=eV_0.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Ngưỡng quang điện phụ thuộc vật liệu",
+      "bullets": [
+        "Một photon truyền trọn năng lượng cho một electron trong mô hình đang xét.",
+        "Công thoát lớn hơn làm động năng cực đại nhỏ hơn ở cùng tần số.",
+        "Tăng cường độ dưới ngưỡng không thay thế năng lượng còn thiếu của từng photon."
+      ],
+      "formula": "$$\n\\begin{aligned}K_{\\max}&=hf-\\phi\\\\f_0&=\\phi/h.\\end{aligned}\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Đường thẳng thế hãm cho công thoát và hằng số Planck",
+      "bullets": [
+        "Đổi bước sóng sang tần số trước khi dựng đồ thị.",
+        "Độ dốc bằng h/e và tung độ gốc bằng −φ/e.",
+        "Công thoát nhạy với tạp chất bề mặt."
+      ],
+      "formula": "$$\nV_0=(h/e)f-\\phi/e.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Bước sóng ngắn nhất của tia X do điện áp quyết định",
+      "bullets": [
+        "Electron được gia tốc rồi phát bức xạ hãm khi gặp bia.",
+        "Photon mạnh nhất nhận toàn bộ động năng của một electron.",
+        "Tăng tốc độ electron tới ở cùng điện áp làm tăng cường độ mà không đổi bước sóng cắt."
+      ],
+      "formula": "$$\n\\lambda_{\\min}=hc/(eV_{AC}).\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Compton cần bảo toàn cả năng lượng lẫn động lượng",
+      "bullets": [
+        "Công thức chuẩn xét electron tự do ban đầu đứng yên.",
+        "Photon cuối có thể đổi hướng và truyền năng lượng cho electron.",
+        "Phổ có thành phần dịch và không dịch liên quan mức liên kết của electron."
+      ],
+      "formula": "$$\n\\lambda'-\\lambda=\\frac h{mc}(1-\\cos\\varphi).\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Tạo cặp một photon cần một vật nhận giật lùi",
+      "bullets": [
+        "Tổng năng lượng nghỉ của cặp bằng 2mc².",
+        "Một photon tự do trong chân không không thể tự tạo cặp này.",
+        "Bảo toàn động lượng làm ngưỡng thực với bia hữu hạn cao hơn mốc năng lượng nghỉ."
+      ],
+      "formula": "$$\nE_\\gamma\\ge2mc^2.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Hủy cặp hai photon đối xứng trong hệ khối tâm",
+      "bullets": [
+        "Electron và positron có động lượng ban đầu đối nhau.",
+        "Hai photon cuối cùng năng lượng và bay ngược chiều.",
+        "Năng lượng mỗi photon gồm cả phần năng lượng nghỉ và động năng của một hạt ban đầu."
+      ],
+      "formula": "$$\nE_\\gamma=\\gamma mc^2.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Các photon riêng lẻ vẫn tạo phân bố nhiễu xạ",
+      "bullets": [
+        "Mỗi photon tạo một sự kiện phát hiện riêng lẻ.",
+        "Sau nhiều sự kiện, cường độ cho phân bố xác suất.",
+        "Vân tối lý tưởng có xác suất phát hiện bằng không."
+      ],
+      "formula": "$$\na\\sin\\theta=m\\lambda.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Giới hạn bất định không phải lỗi dụng cụ",
+      "bullets": [
+        "Định xứ photon qua khe làm phân bố động lượng ngang rộng ra.",
+        "Quan hệ xét vị trí và động lượng liên hợp của cùng trạng thái.",
+        "Tăng độ tinh vi của thiết bị không loại bỏ giới hạn này."
+      ],
+      "formula": "$$\n\\Delta x\\,\\Delta p_x\\ge\\hbar/2.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Sóng có động lượng xác định trải rộng trong không gian",
+      "bullets": [
+        "Sóng sin đơn sắc kéo dài có số sóng xác định.",
+        "Chồng các thành phần khác nhau tạo miền biên độ tập trung hơn.",
+        "Phân bố động lượng rộng hơn đi cùng định xứ tốt hơn."
+      ],
+      "formula": "$$\np_x=\\hbar k.\n$$"
+    },
+    {
+      "note": "18-photon",
+      "title": "Xung ánh sáng ngắn đòi hỏi phổ rộng",
+      "bullets": [
+        "Năng lượng và tần số của photon liên hệ qua h.",
+        "Thời gian xung ngắn không đồng nghĩa chu kỳ sóng ngắn.",
+        "Ý nghĩa của độ rộng năng lượng và thời gian phải được xác định khi dùng bất định."
+      ],
+      "formula": "$$\n\\Delta t\\,\\Delta E\\ge\\hbar/2.\n$$"
     }
   ],
   "illustration": "field",

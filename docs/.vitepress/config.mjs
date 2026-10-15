@@ -9,6 +9,7 @@ import { readFileSync, mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
+import { generateFontPreloads } from '../../scripts/build/font-preloads.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
@@ -25,6 +26,9 @@ export default withMermaid(defineConfig({
     ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
     ['meta',{name:'theme-color',content:colorToken('paper')}]
   ],
+  transformHead(context) {
+    return generateFontPreloads(context)
+  },
   markdown:{
     math:true,
     lineNumbers:false,

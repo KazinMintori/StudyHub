@@ -159,3 +159,9 @@ Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm,
 ## Rà toàn bộ bài giảng
 
 `../physics/requirements-audit.md` và `../../qa/physics/requirements-audit.json` rà 44 bài của cả hai môn. Kết quả tổng thể hiện vẫn **chưa hoàn tất**. Các bài được rà theo nội dung nguồn, vị trí bài tập, khung lời giải, Cheatsheet, Slides, Wiki và trạng thái kiểm tra giao diện. Kiểm tra cấu trúc tự động không thay thế đọc đối chiếu từng trang.
+
+## Chương 38
+
+Đã hoàn tất bốn chủ đề về photon, 7 ví dụ, 4 câu tự kiểm, 24 số công thức (25 nhãn vì 38.19 có a/b) và 19 hình lý thuyết. Có 29 ảnh nguồn giữ nguyên pixel, gồm ảnh mở đầu, ứng dụng, tổng kết và bài tập. Tab Bài tập chứa 45 bài đánh số, 17 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 75 lời giải gập có Tóm tắt và Hướng đi. Có 12 slides, 7 nhóm Cheatsheet với 21 mục và 13 Wiki mới.
+
+Bảy bộ Python, đối chiếu pixel, cấu trúc toàn bộ môn và 143 lượt giao diện đã qua. Bản sửa tải ảnh/font có kiểm tra riêng trên chương này và Mạch điện một chiều. Chỉ GitHub Actions thực hiện build toàn cục. Các sửa sai nhận dạng và điều kiện vật lý được ghi trong hồ sơ rà soát riêng.

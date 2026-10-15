@@ -1,0 +1,84 @@
+{
+  "chapter": 38,
+  "source": "Young & Freedman, University Physics with Modern Physics, 15th edition",
+  "sourceSHA256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+  "items": [
+    {
+      "unit": "38.1",
+      "finding": "Recovered theory omitted the0.01Pa vacuum condition, the assumption ignoring differences of electrode materials, and the tanning/melanin application.",
+      "resolution": "All three restored after direct page comparison. Removed an unsupported numerical1ns latency bound and the unsupported identification of the measured cathode as a specific oxide."
+    },
+    {
+      "unit": "38.4 and Figure38.16",
+      "finding": "Recovered text described28 photons and a fourth million-photon panel.",
+      "resolution": "Image and text now agree on exactly three panels:21,1000,10000 photons."
+    },
+    {
+      "unit": "38.12–38.17",
+      "finding": "Slit-width estimates and momentum-spread estimates are not automatically standard deviations.",
+      "resolution": "The rough slit derivation is separated from the standard-deviation inequality. Approximation signs are retained in small-angle/rough-width steps. No false derivation of the exact hbar/2 constant from an aperture width."
+    },
+    {
+      "unit": "38.4 central maximum",
+      "finding": "The source gives85 percent as the fraction in the central maximum. Integration of the ideal one-dimensional Fraunhofer sinc-squared distribution gives0.90282333358.",
+      "resolution": "Both the rough85-percent description and the more precise90-percent ideal-model result are explained. Neither fraction enters the uncertainty derivation."
+    },
+    {
+      "unit": "38.4 self-check",
+      "finding": "Recovered text called3lambda/(2a) the exact first secondary maximum.",
+      "resolution": "It is the nonzero-intensity choice among the stated approximate diffraction minima. The unsupported exact-maximum claim is removed."
+    },
+    {
+      "unit": "38.7",
+      "finding": "A relative spectral width is not a sharp interval within which all photon frequencies are guaranteed to lie.",
+      "resolution": "The5.3-percent width is described under the example's pulse convention, not as a hard spectral cutoff. Photon count is an estimated mean."
+    },
+    {
+      "unit": "VP38.7.4",
+      "finding": "Text extraction misreads the final microjoule label as millijoule.",
+      "resolution": "The actual page image and calculation agree on1.91microjoule. This is an OCR issue, not a printed-unit error."
+    },
+    {
+      "unit": "38.13",
+      "finding": "The proposed0.100nm to0.110nm change exceeds the maximum free-electron Compton shift.",
+      "resolution": "An energy-difference candidate is distinguished from the impossibility of the stated single free-electron scattering event."
+    },
+    {
+      "unit": "38.22",
+      "finding": "The uncertainty lower bound is not the first-minimum diffraction width.",
+      "resolution": "Both quantities are calculated and distinguished, including the caution about treating a hard slit width as a position standard deviation."
+    },
+    {
+      "unit": "38.25",
+      "finding": "OCR misreads450microseconds and2.0micrograms as milliseconds and milligrams.",
+      "resolution": "Page image read directly. Calculation uses450e-6seconds and2.0e-9kilograms."
+    },
+    {
+      "unit": "38.38",
+      "finding": "Literal switch labels in FigureP38.38 place a on the accelerating polarity and b on the retarding polarity, opposite to the intended sequence.",
+      "resolution": "Figure unchanged. Literal polarity is identified first. Quantitative answers are conditional on using the intended retarding/accelerating branches, equivalent to swapping switch names in the text. Kirchhoff residual checked."
+    },
+    {
+      "unit": "38.39",
+      "finding": "Pair creation needs target recoil, including target rest energy and momentum conservation.",
+      "resolution": "Exact recoil derived before low-speed expansion. No finite-energy stationary-target solution asserted."
+    },
+    {
+      "unit": "38.40",
+      "finding": "The CO2 laser wavelength is10.6micrometers, not millimeters.",
+      "resolution": "Direct image reading, exact inverse-Compton expression and final electron momentum sign checked."
+    },
+    {
+      "unit": "Q38.9–Q38.10",
+      "finding": "Fixed power, fixed photon flux, emission latency and statistical waiting time are different constraints.",
+      "resolution": "Each constraint is explicit. No blanket claim that increasing frequency leaves saturation current unchanged under every condition."
+    }
+  ],
+  "evidence": [
+    "qa/physics/chapter38/theory-parent-numeric.json",
+    "qa/physics/chapter38/source-image-pixel-checks.json",
+    "qa/physics/chapter38/full-browser/results.json",
+    "raw_materials/physics/verify_chapter38_01_23.py",
+    "raw_materials/physics/verify_chapter38_24_45.py"
+  ]
+}
