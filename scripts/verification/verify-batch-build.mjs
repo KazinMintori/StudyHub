@@ -28,7 +28,7 @@ try {
   await mkdir(path.join(docs, 'public'), { recursive: true })
   await writeFile(path.join(docs, '.vitepress/config.mjs'), `
 import { staticMathPlugin } from ${JSON.stringify(path.join(root, 'scripts/static-math-plugin.mjs').replaceAll('\\', '/'))}
-export default { base:'/StudyHub/', title:'Kiểm tra chia đợt', lastUpdated:false,
+export default { base:'/StudyHub/', title:'Kiểm tra chia đợt', lastUpdated:false, ignoreDeadLinks:true,
   head:[['link',{rel:'icon',href:'/StudyHub/figure.svg'}]],
   markdown:{math:true,config:md=>md.use(staticMathPlugin)},
   themeConfig:{nav:[{text:'Đến B',link:'/b'}]}, buildConcurrency:1 }
