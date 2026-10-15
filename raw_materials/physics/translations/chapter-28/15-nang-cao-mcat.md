@@ -30,19 +30,13 @@ $$
 (b) Dải rộng $dx$ có điện tích:
 
 $$
-\begin{aligned}
-dQ &= \sigma\,2\pi R\,dx \\
-&= \frac QW\,dx.
-\end{aligned}
+dQ = \sigma\,2\pi R\,dx = \frac QW\,dx.
 $$
 
 Với chu kỳ $T=2\pi/\omega$, dòng vi phân là:
 
 $$
-\begin{aligned}
-dI &= \frac{dQ}{T} \\
-&= \frac{Q\omega}{2\pi W}\,dx.
-\end{aligned}
+dI = \frac{dQ}{T} = \frac{Q\omega}{2\pi W}\,dx.
 $$
 
 (c) Vòng nằm cách gốc một khoảng $|x|$. Trường trên trục do vòng ấy là:

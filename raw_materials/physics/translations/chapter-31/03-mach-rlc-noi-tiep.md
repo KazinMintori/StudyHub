@@ -48,10 +48,7 @@ Hình chiếu của tổng các vector bằng tổng hình chiếu của từng 
 Áp dụng định lý Pythagoras:
 
 $$
-\begin{aligned}
-V^2 &= V_R^2+(V_L-V_C)^2, \\
-&= I^2R^2 +I^2(X_L-X_C)^2.
-\end{aligned}
+V^2 = V_R^2+(V_L-V_C)^2, = I^2R^2 +I^2(X_L-X_C)^2.
 $$
 
 Vì $I$ và $V$ là các biên độ không âm:
@@ -199,10 +196,7 @@ $$
 Góc pha:
 
 $$
-\begin{aligned}
-\phi &= \arctan\frac{400}{300} \\
-&\approx 53^\circ.
-\end{aligned}
+\phi = \arctan\frac{400}{300} \approx 53^\circ.
 $$
 
 Điện áp trên các phần tử:

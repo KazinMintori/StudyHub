@@ -217,10 +217,7 @@ $$
 Phương trình cho nghiệm dương:
 
 $$
-\begin{aligned}
-t &= 20 + \sqrt{600} \\
-&\approx 44.5\,\mathrm s.
-\end{aligned}
+t = 20 + \sqrt{600} \approx 44.5\,\mathrm s.
 $$
 
 Vậy tại thời điểm $44.5\,\mathrm s$, chiếc xe sẽ tạm dừng lại trước khi bắt đầu lùi về sau!

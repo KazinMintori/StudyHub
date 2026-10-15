@@ -627,10 +627,7 @@ Chọn (a).
 - Khoảng cách từ 25 m xuống 2,5 m giảm mười lần, nên trường tăng một trăm lần.
 
 $$
-\begin{aligned}
-E(R^+) &= 10^6(25/2.5)^2 \\
-&= 10^8\,\mathrm{N/C}.
-\end{aligned}
+E(R^+) = 10^6(25/2.5)^2 = 10^8\,\mathrm{N/C}.
 $$
 
 Chọn (d).

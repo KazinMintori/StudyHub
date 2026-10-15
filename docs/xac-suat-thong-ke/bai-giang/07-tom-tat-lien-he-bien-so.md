@@ -315,17 +315,17 @@ Một nhóm nghiên cứu thu thập dữ liệu về số giờ ôn tập mỗi
    - Với biến $x$:
      $$
 \begin{aligned}
-\bar{x} &= \frac{1 + 2 + 3 + 4 + 5}{5} = \frac{15}{5} = 3.0 \\
-\sum_{i=1}^5 (x_i - \bar{x})^2 &= (1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2 = 4 + 1 + 0 + 1 + 4 = 10 \\
-s_x &= \sqrt{\frac{10}{5-1}} = \sqrt{\frac{10}{4}} = \sqrt{2.5} \approx 1.5811
+\bar{x} &= \frac{1 + 2 + 3 + 4 + 5}{5} = 3.0, \\
+\sum_{i=1}^5 (x_i - \bar{x})^2 &= (-2)^2 + (-1)^2 + 0^2 + 1^2 + 2^2 = 10, \\
+s_x &= \sqrt{\frac{10}{4}} = \sqrt{2.5} \approx 1.5811.
 \end{aligned}
 $$
    - Với biến $y$:
      $$
 \begin{aligned}
-\bar{y} &= \frac{2 + 3 + 5 + 6 + 9}{5} = \frac{25}{5} = 5.0 \\
-\sum_{i=1}^5 (y_i - \bar{y})^2 &= (2-5)^2 + (3-5)^2 + (5-5)^2 + (6-5)^2 + (9-5)^2 = 9 + 4 + 0 + 1 + 16 = 30 \\
-s_y &= \sqrt{\frac{30}{5-1}} = \sqrt{\frac{30}{4}} = \sqrt{7.5} \approx 2.7386
+\bar{y} &= \frac{2 + 3 + 5 + 6 + 9}{5} = 5.0, \\
+\sum_{i=1}^5 (y_i - \bar{y})^2 &= (-3)^2 + (-2)^2 + 0^2 + 1^2 + 4^2 = 30, \\
+s_y &= \sqrt{\frac{30}{4}} = \sqrt{7.5} \approx 2.7386.
 \end{aligned}
 $$
 
@@ -341,12 +341,10 @@ $$
 | 5 | 5 | 9 | $+1.2649$ | $+1.4606$ | $+1.8475$ |
 
    - Tổng các tích chuẩn hóa:
-     $$
-\begin{aligned}
-\sum_{i=1}^5 z_{x, i} z_{y, i} &= 1.3856 + 0.4619 + 0.0000 + 0.2309 + 1.8475 \\
-&= 3.9259
-\end{aligned}
-$$
+
+
+\sum_{i=1}^5 z_{x, i} z_{y, i} = 1.3856 + 0.4619 + 0.0000 + 0.2309 + 1.8475 = 3.9259.
+
    - Tính hệ số tương quan $r$:
      $$r = \frac{1}{5-1} \times 3.9259 = \frac{3.9259}{4} \approx 0.9815$$
    - **Phân tích dấu**: Cả 4 sinh viên lệch khỏi trung bình đều có tích $z_{x, i} z_{y, i} > 0$ (sinh viên 1, 2 rơi vào góc phần tư III; sinh viên 4, 5 rơi vào góc phần tư I). Tất cả các số hạng đều mang dấu dương, tạo nên hệ số tương quan đồng biến mạnh mẽ đạt $r \approx 0.9815$.
@@ -354,13 +352,10 @@ $$
 3. **Tính bất biến khi đổi đơn vị đo**:
    - Xét phép biến đổi $x'_i = 60 x_i$ và $y'_i = 10 y_i$.
    - Vì phép nhân với hằng số dương $a > 0$ làm trung bình tăng $a$ lần và độ lệch chuẩn tăng $a$ lần:
-     $$
-\begin{aligned}
-z_{x', i} &= \frac{x'_i - \bar{x}'}{s_{x'}} \\
-&= \frac{60 x_i - 60 \bar{x}}{60 s_x} \\
-&= \frac{x_i - \bar{x}}{s_x} = z_{x, i}
-\end{aligned}
-$$
+
+
+z_{x', i} = \frac{x'_i - \bar{x}'}{s_{x'}} = \frac{60(x_i - \bar{x})}{60 s_x} = \frac{x_i - \bar{x}}{s_x} = z_{x, i}.
+
    - Tương tự, $z_{y', i} = z_{y, i}$.
    - Do điểm chuẩn hóa không hề thay đổi, hệ số tương quan mới hoàn toàn giữ nguyên:
      $$r(x', y') = r(x, y) \approx 0.9815$$
@@ -387,22 +382,16 @@ Sử dụng dữ liệu và các thống kê tóm tắt đã tính toán từ B�
 ::: solution Lời giải chi tiết Bài tập 2
 1. **Xác định các hệ số hồi quy**:
    - Hệ số độ dốc:
-     $$
-\begin{aligned}
-b_1 &= r \frac{s_y}{s_x} \\
-&= 0.9815 \times \frac{\sqrt{7.5}}{\sqrt{2.5}} \\
-&= 0.9815 \times \sqrt{3} \approx 1.7000
-\end{aligned}
-$$
+
+
+b_1 = r \frac{s_y}{s_x} = 0.9815 \times \sqrt{\frac{7.5}{2.5}} = 0.9815 \times \sqrt{3} \approx 1.7000.
+
      *(Lưu ý: Ta cũng có thể tính chính xác qua hiệp phương sai: $b_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2} = \frac{17}{10} = 1.7$).*
    - Hệ số chặn:
-     $$
-\begin{aligned}
-b_0 &= \bar{y} - b_1 \bar{x} \\
-&= 5.0 - 1.7 \times 3.0 \\
-&= 5.0 - 5.1 = -0.1
-\end{aligned}
-$$
+
+
+b_0 = \bar{y} - b_1 \bar{x} = 5.0 - 1.7 \times 3.0 = -0.1.
+
    - Phương trình hồi quy bình phương tối thiểu:
      $$\hat{y} = -0.1 + 1.7 x$$
 
@@ -411,13 +400,10 @@ $$
 
 3. **Chứng minh đường hồi quy luôn đi qua $(\bar{x}, \bar{y})$**:
    - Khi $x = \bar{x}$, giá trị dự báo từ mô hình là:
-     $$
-\begin{aligned}
-\hat{y} &= b_0 + b_1 \bar{x} \\
-&= (\bar{y} - b_1 \bar{x}) + b_1 \bar{x} \\
-&= \bar{y}
-\end{aligned}
-$$
+
+
+\hat{y} = b_0 + b_1 \bar{x} = (\bar{y} - b_1 \bar{x}) + b_1 \bar{x} = \bar{y}.
+
    - Như vậy, tọa độ $(\bar{x}, \bar{y})$ luôn thỏa mãn phương trình đường thẳng hồi quy với mọi bộ dữ liệu.
 
 4. **Tính toán giá trị dự báo và phần dư**:
@@ -462,8 +448,8 @@ $$
      - Tính tổng tích sai lệch:
        $$
 \begin{aligned}
-\sum_{i=1}^5 (x_i - \bar{x})(y_i - \bar{y}) &= (-2)(4-2) + (-1)(1-2) + (0)(0-2) + (1)(1-2) + (2)(4-2) \\
-&= (-4) + (+1) + 0 + (-1) + (+4) = 0
+\sum_{i=1}^5 (x_i - \bar{x})(y_i - \bar{y}) &= (-2)(2) + (-1)(-1) + 0 + (1)(-1) + (2)(2) \\
+&= -4 + 1 + 0 - 1 + 4 = 0.
 \end{aligned}
 $$
      - Do tổng tử số bằng 0, ta có $r = 0$.

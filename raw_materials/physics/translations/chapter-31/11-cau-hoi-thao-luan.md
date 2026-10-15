@@ -351,10 +351,7 @@ Tại thời điểm này, $|v_R(t)| = 24\,\mathrm V > |v(t)| = 0\,\mathrm V$. N
 Tuy nhiên, nếu xét về mặt biên độ đỉnh theo thời gian, biên độ điện áp trên điện trở thuần luôn bị chặn trên bởi biên độ nguồn:
 
 $$
-\begin{aligned}
-V_R &= I R \\
-&= \frac{V R}{Z} \le V.
-\end{aligned}
+V_R = I R = \frac{V R}{Z} \le V.
 $$
 
 với $Z = \sqrt{R^2 + (X_L - X_C)^2} \ge R$.
@@ -683,10 +680,7 @@ $$
 Ta so sánh $(X_L - X_C)^2$ với $X_C^2$:
 
 $$
-\begin{aligned}
-(X_L - X_C)^2 - X_C^2 &= X_L^2 - 2X_L X_C \\
-&= X_L(X_L - 2X_C).
-\end{aligned}
+(X_L - X_C)^2 - X_C^2 = X_L^2 - 2X_L X_C = X_L(X_L - 2X_C).
 $$
 
 - Nếu ban đầu $X_L > 2X_C$: Ta có $Z_0 > Z_1$. Khi tháo cuộn cảm, trở kháng mạch giảm, dòng điện tăng lên và bóng đèn sẽ sáng hơn.
@@ -704,10 +698,7 @@ $$
 Ta so sánh $(X_L - X_C)^2$ với $X_L^2$:
 
 $$
-\begin{aligned}
-(X_L - X_C)^2 - X_L^2 &= X_C^2 - 2X_L X_C \\
-&= X_C(X_C - 2X_L).
-\end{aligned}
+(X_L - X_C)^2 - X_L^2 = X_C^2 - 2X_L X_C = X_C(X_C - 2X_L).
 $$
 
 - Nếu ban đầu $X_C > 2X_L$: Trở kháng giảm ($Z_2 < Z_0$), dòng điện tăng và bóng đèn sáng hơn.
@@ -936,10 +927,7 @@ Tần số góc cộng hưởng thay đổi theo thừa số $1/2$, tức là gi
 (b) Cảm kháng ở tần số góc $\omega$ cho trước của nguồn:
 
 $$
-\begin{aligned}
-X_L' &= \omega L' \\
-&= 2\omega L = 2 X_L.
-\end{aligned}
+X_L' = \omega L' = 2\omega L = 2 X_L.
 $$
 
 Cảm kháng thay đổi theo thừa số $2$, tức là tăng gấp đôi.
@@ -984,10 +972,7 @@ $$
 Triệt tiêu $4R^2$ ở cả hai vế:
 
 $$
-\begin{aligned}
-&\left(2 X_L - \frac{X_C}{2}\right)^2 \\
-&= 4(X_L - X_C)^2.
-\end{aligned}
+ \le ft(2 X_L - \frac{X_C}{2}\right)^2 = 4(X_L - X_C)^2.
 $$
 
 Khai triển hai vế:

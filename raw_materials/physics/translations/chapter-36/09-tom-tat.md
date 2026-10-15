@@ -39,10 +39,7 @@ Tại tâm, lấy giới hạn để được $I=I_0$. Các công thức đượ
 Cách tử gồm rất nhiều khe hẹp song song, cách tâm đều nhau một khoảng d. Với ánh sáng tới vuông góc, các cực đại chính thỏa cùng điều kiện vị trí như giao thoa hai nguồn:
 
 $$
-\begin{aligned}
-d\sin\theta_m&=m\lambda,\\
-m&=0,\pm1,\pm2,\ldots.
-\end{aligned}
+d\sin\theta_m = m\lambda, \quad m = 0, \pm 1, \pm 2, \ldots.
 $$
 
 Các cực đại của cách tử hẹp và sắc hơn nhiều. Nhờ đó, góc cực đại và bước sóng được xác định chính xác hơn, như trong Ví dụ 36.4.
@@ -54,10 +51,7 @@ Các cực đại của cách tử hẹp và sắc hơn nhiều. Nhờ đó, gó
 Tinh thể đóng vai trò một cách tử ba chiều khi bước sóng tia X cùng cỡ khoảng cách giữa các nguyên tử. Với một họ mặt mạng cách nhau d, tia tới và tia tán xạ hợp với mặt mạng những góc bằng nhau. Điều kiện tăng cường Bragg là:
 
 $$
-\begin{aligned}
-2d\sin\theta&=m\lambda,\\
-m&=1,2,3,\ldots.
-\end{aligned}
+2d\sin\theta = m\lambda, \quad m = 1, 2, 3, \ldots.
 $$
 
 Góc $\theta$ được đo với mặt mạng, không phải pháp tuyến. Ví dụ 36.5 minh họa cách dùng cực đại để tìm khoảng mặt mạng.

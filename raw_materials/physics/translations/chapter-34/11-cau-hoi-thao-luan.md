@@ -224,10 +224,7 @@ Trong tình huống Ví dụ 34.7, một mũi tên thẳng đứng cao $2{,}00\,
 Với nước có chiết suất xấp xỉ $4/3$ và không khí có chiết suất 1, các độ sâu trong gần đúng góc nhỏ thu về hệ số $3/4$. Vì vậy độ chênh độ sâu giữa hai đầu mũi tên trở thành:
 
 $$
-\begin{aligned}
-\Delta d_{\rm app} &= \frac34\Delta d \\
-&= 1{,}50\,\mathrm m.
-\end{aligned}
+\Delta d_{\rm app} = \frac34\Delta d = 1{,}50\,\mathrm m.
 $$
 
 Hệ thức $m=1$ nói kích thước ngang, song song mặt phân cách, không đổi. Nó không áp dụng cho chiều dài dọc pháp tuyến này. Vì hai đại lượng phóng đại khác nhau, không có mâu thuẫn.

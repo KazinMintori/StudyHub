@@ -128,10 +128,7 @@ $$
 Suy ra
 
 $$
-\begin{aligned}
-\mathcal E &= 8{,}40+(1{,}50)(0{,}360) \\
-&= 8{,}94\,\mathrm V.
-\end{aligned}
+\mathcal E = 8{,}40+(1{,}50)(0{,}360) = 8{,}94\,\mathrm V.
 $$
 :::
 
@@ -161,10 +158,7 @@ $$
 Đi từ a đến d qua điện trở 6 Ω, điện trở trong 0,50 Ω, pin 4 V và điện trở 9 Ω:
 
 $$
-\begin{aligned}
-V_a-V_d &= 6I+V_{bc}+9I \\
-&= 6{,}58\,\mathrm V.
-\end{aligned}
+V_a-V_d = 6I+V_{bc}+9I = 6{,}58\,\mathrm V.
 $$
 
 Vậy $V_{ad}=+6{,}58$ V.
@@ -179,19 +173,13 @@ $$
 (c) Tổng điện trở mới là $24{,}5\,\Omega$. Dòng theo chiều kim đồng hồ:
 
 $$
-\begin{aligned}
-I' &= \frac{8{,}00-4{,}00-10{,}30}{24{,}5} \\
-&= -0{,}257\,\mathrm A.
-\end{aligned}
+I' = \frac{8{,}00-4{,}00-10{,}30}{24{,}5} = -0{,}257\,\mathrm A.
 $$
 
 Dấu âm cho biết dòng thực chạy ngược chiều đã chọn. Điện áp pin 4 V khi đó là
 
 $$
-\begin{aligned}
-V'_{bc} &= 4{,}00+(0{,}50)I' \\
-&= 3{,}87\,\mathrm V.
-\end{aligned}
+V'_{bc} = 4{,}00+(0{,}50)I' = 3{,}87\,\mathrm V.
 $$
 :::
 
@@ -212,10 +200,7 @@ $$
 Diện tích tiết diện:
 
 $$
-\begin{aligned}
-A &= \pi(0{,}050)^2 \\
-&= 7{,}85\times10^{-3}\,\mathrm{m^2}.
-\end{aligned}
+A = \pi(0{,}050)^2 = 7{,}85\times10^{-3}\,\mathrm{m^2}.
 $$
 
 (a)
@@ -372,10 +357,7 @@ $$
 (a) Bóng compact dùng $0{,}023\times4380=100{,}74$ kWh. Tiền điện tương ứng là $100{,}74\times0{,}080\approx8{,}06$ USD. Tổng chi phí:
 
 $$
-\begin{aligned}
-C_1 &= 11{,}00+8{,}06 \\
-&\approx 19{,}06.
-\end{aligned}
+C_1 = 11{,}00+8{,}06 \approx 19{,}06.
 $$
 
 Chi phí này là 19,06 USD.
@@ -383,10 +365,7 @@ Chi phí này là 19,06 USD.
 Bóng sợi đốt cần $\lceil4380/750\rceil=6$ bóng. Chúng dùng $0{,}100\times4380=438$ kWh, tương ứng tiền điện $438\times0{,}080=35{,}04$ USD. Tổng chi phí:
 
 $$
-\begin{aligned}
-C_2 &= 6(0{,}75)+35{,}04 \\
-&= 39{,}54.
-\end{aligned}
+C_2 = 6(0{,}75)+35{,}04 = 39{,}54.
 $$
 
 Chi phí này là 39,54 USD.
@@ -711,10 +690,7 @@ $$
 Điện trường hướng theo chiều +x. (c) Vì $E_x=-dV/dx$ và $V(L)=0$:
 
 $$
-\begin{aligned}
-V(x) &= \int_x^L E(s)\,ds \\
-&= V_0\frac{e^{-x/L}-e^{-1}}{1-e^{-1}}.
-\end{aligned}
+V(x) = \int_x^L E(s)\,ds = V_0\frac{e^{-x/L}-e^{-1}}{1-e^{-1}}.
 $$
 
 (d) Cả $\rho(x)$ và E(x) giảm theo hàm mũ từ trái sang phải. Điện thế giảm đơn điệu từ $V_0$ ở x=0 về 0 ở x=L, theo cùng dạng hàm mũ đã tích phân.

@@ -254,10 +254,7 @@ $$
 Mômen từ hướng theo $+x$, chống quay xuống, có độ lớn
 
 $$
-\begin{aligned}
-\tau_B &= IL^2B\sin\phi \\
-&= \frac{B^2L^4\omega\sin^2\phi}{R}.
-\end{aligned}
+\tau_B = IL^2B\sin\phi = \frac{B^2L^4\omega\sin^2\phi}{R}.
 $$
 
 Đặt mômen đại số theo chiều quay xuống là

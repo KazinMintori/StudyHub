@@ -122,10 +122,7 @@ Năng lượng đầu xấp xỉ 0,058 J, cuối xấp xỉ 0,038 J theo độ c
 **Xác định và thiết lập.** Mật độ cần đạt là 1,00 J/m³. Giải (24.11) theo E:
 
 $$
-\begin{aligned}
-E &= \sqrt{2u/\varepsilon_0} \\
-&= 4.75\times10^5\,\mathrm{V/m}.
-\end{aligned}
+E = \sqrt{2u/\varepsilon_0} = 4.75\times10^5\,\mathrm{V/m}.
 $$
 
 Tăng E gấp 10 làm E² gấp 100, nên mật độ cuối là 100 J/m³.

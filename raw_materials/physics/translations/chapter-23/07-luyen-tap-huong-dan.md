@@ -176,11 +176,7 @@ Cầu cách điện đều trong thể tích có điện tích dương Q, bán k
 - Trường hướng ra nên điện thế giảm theo chiều ấy.
 
 $$
-\begin{aligned}
-\Delta V &= V(0)-V(R) \\
-&= \int_0^R\frac{kQr}{R^3}dr \\
-&= \frac{kQ}{2R}.
-\end{aligned}
+\Delta V = V(0)-V(R) = \int_0^R\frac{kQr}{R^3}dr = \frac{kQ}{2R}.
 $$
 
 Tâm có điện thế cao hơn mặt.

@@ -42,10 +42,10 @@ $$
 \begin{aligned}
 \nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &= 0, \\
 -\lambda_i f_i(x) &= \eta, \quad i = 1, \dots, m, \\
-A x &= b, \\
-f_i(x) < 0, \quad \lambda_i > 0, \quad i = 1, \dots, m.
+A x &= b,
 \end{aligned}
 $$
+với điều kiện $f_i(x) < 0$ và $\lambda_i > 0$ cho mọi $i = 1, \dots, m$.
 
 Khi $\eta \to 0$ (tương đương $t \to \infty$), nghiệm $(x^*(\eta), \lambda^*(\eta), \nu^*(\eta))$ của hệ phương trình trên sẽ hội tụ chính xác về nghiệm tối ưu $(x^*, \lambda^*, \nu^*)$ của bài toán gốc. Tập hợp các nghiệm $(x^*(\eta), \lambda^*(\eta), \nu^*(\eta))$ khi $\eta > 0$ thay đổi quét nên **đường trung tâm nguyên thủy - đối ngẫu** (Primal-Dual Central Path).
 

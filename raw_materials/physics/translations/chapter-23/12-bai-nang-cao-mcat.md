@@ -99,10 +99,7 @@ $$
 Với d₀ = 1 fm, κ ≈ $2.31\times10^{17}$ N/m. Ở cân bằng, κd₀² = ke²/d₀, nên:
 
 $$
-\begin{aligned}
-U(d_0) &= \frac{3ke^2}{2d_0} \\
-&= 2.16\,\mathrm{MeV}.
-\end{aligned}
+U(d_0) = \frac{3ke^2}{2d_0} = 2.16\,\mathrm{MeV}.
 $$
 
 Nếu toàn năng lượng lưu trong hệ chuyển thành động năng hai proton, $m_pv^2=U(d_0)$ cho v = $1.44\times10^7$ m/s mỗi proton. Đây là điều kiện năng lượng cần nêu cho mô hình tan rã này. Nếu chỉ bỏ lực lò xo và phần năng lượng đàn hồi bị mang ra ngoài khi đứt, chỉ còn năng lượng điện ke²/d₀ truyền thành động năng, cho tốc độ khoảng $1.17\times10^7$ m/s. Không thể chọn giữa hai cách phân bố năng lượng chỉ từ việc nói lực lò xo biến mất.

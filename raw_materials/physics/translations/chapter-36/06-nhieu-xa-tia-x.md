@@ -46,10 +46,7 @@ Như vậy, góc tới phải bằng góc phản xạ (tán xạ) đối với m
 Tiếp theo, ta xét sự giao thoa giữa các sóng tán xạ phát ra từ các hàng nguyên tử song song liên tiếp (Hình 36.22c). Hai tia sáng phản xạ từ hai hàng kế tiếp cách nhau khoảng $d$ sẽ có hiệu quang trình là tổng độ dài đoạn đường đi thêm trước và sau khi chạm vào hàng thứ hai:
 
 $$
-\begin{aligned}
-\Delta r_2 &= d \sin\theta + d \sin\theta\\
-&= 2d \sin\theta
-\end{aligned}
+\Delta r_2 = d \sin\theta + d \sin\theta = 2d \sin\theta
 $$
 
 Để sóng từ mọi hàng nguyên tử tăng cường lẫn nhau, hiệu quang trình này phải bằng một số nguyên lần bước sóng. Ta thu được **điều kiện Bragg** (Bragg condition), để vinh danh những người tiên phong trong lĩnh vực nhiễu xạ tia X là Sir William Bragg và con trai Laurence Bragg:
@@ -149,10 +146,7 @@ $$
 Với bậc hai ($m = 2$), ta nhận được:
 
 $$
-\begin{aligned}
-\sin\theta &= 2 \times 0{,}566\\
-&= 1{,}132 > 1
-\end{aligned}
+\sin\theta = 2 \times 0{,}566 = 1{,}132 > 1
 $$
 
 Vì hàm số sin không thể vượt quá 1 đối với góc thực, phương trình hoàn toàn vô nghiệm với mọi $m \ge 2$. Do đó, đối với họ mặt phẳng tinh thể này, không tồn tại bất kỳ góc tới nào khác cho cực đại giao thoa.

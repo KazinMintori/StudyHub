@@ -42,11 +42,7 @@ $$
 Tổng quát, 1/C_s bằng tổng các nghịch đảo 1/Cᵢ, từ i = 1 đến i = n. Năng lượng của một tụ tuyến tính là:
 
 $$
-\begin{aligned}
-U &= \frac{Q^2}{2C}, \\
-&= \frac12 CV^2, \\
-&= \frac12 QV.
-\end{aligned}
+U = \frac{Q^2}{2C} = \frac12 CV^2 = \frac12 QV.
 $$
 
 Khi hình học hoặc vật liệu thay đổi, phải xác định tụ cô lập hay còn nối nguồn. Tụ cô lập giữ điện tích tự do, còn nguồn lý tưởng giữ điện áp và trao đổi điện tích với các bản.

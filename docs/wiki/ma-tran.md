@@ -16,10 +16,7 @@ Ma trận là bảng số có hàng và cột. Kích thước $m \times  n$ ngh�
 Với ma trận $A$ có $m$ hàng, $n$ cột và vector $x$ có $n$ thành phần, phép nhân $y=Ax$ tạo vector $y$ có $m$ thành phần. Hàng thứ $i$ được tính bằng
 
 $$
-\begin{aligned}
-y_i &= A_{i1}x_1+A_{i2}x_2+\cdots+A_{in}x_n \\
-&= \sum_{j=1}^n A_{ij}x_j.
-\end{aligned}
+y_i = A_{i1}x_1+A_{i2}x_2+\cdots+A_{in}x_n = \sum_{j=1}^n A_{ij}x_j.
 $$
 
 $i$ chọn hàng của $A$. $j$ chạy qua các cột, từ 1 đến $n$. Các tích trong một hàng được cộng lại để cho một thành phần của $y$.

@@ -145,10 +145,7 @@ $$
 (c) Biên độ là
 
 $$
-\begin{aligned}
-I &= \sqrt2I_{\mathrm{rms}} \\
-&\approx 3{,}8\,\mathrm A.
-\end{aligned}
+I = \sqrt2I_{\mathrm{rms}} \approx 3{,}8\,\mathrm A.
 $$
 
 ![Hình 31.6: Đồ thị dòng i có trung bình bằng không, trong khi bình phương dòng có trung bình dương và xác định giá trị hiệu dụng.](../img/young-31/hinh-31-06.png)

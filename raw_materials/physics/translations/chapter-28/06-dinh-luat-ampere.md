@@ -32,10 +32,7 @@ Nếu đường kín không bao dây, tích phân vẫn có thể bằng không 
 Gọi bán kính hai cung là $r_1$ và $r_2$. Trên cung thứ nhất, đóng góp là $B_1(2\pi r_1)=\mu_0I$. Trên cung đi ngược chiều trường, đóng góp là $-B_2(2\pi r_2)=-\mu_0I$. Vì hai đoạn thẳng vuông góc với trường, tổng tích phân bằng:
 
 $$
-\begin{aligned}
-\oint\vec B\cdot d\vec l &= \mu_0I-\mu_0I \\
-&= 0.
-\end{aligned}
+\oint\vec B\cdot d\vec l = \mu_0I-\mu_0I = 0.
 $$
 
 ### Vì sao dạng tổng quát không phụ thuộc hình dạng đường đi

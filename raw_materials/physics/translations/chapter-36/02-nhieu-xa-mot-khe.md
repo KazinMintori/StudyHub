@@ -93,19 +93,13 @@ Trong đó: Phương trình (36.3) là một hệ thức xấp xỉ chỉ có hi
 Khoảng cách giữa hai vân tối bậc một ($m = -1$ và $m = +1$) ở hai bên dải sáng trung tâm là:
 
 $$
-\begin{aligned}
-\Delta y_0 &= y_1 - y_{-1}\\
-&= 2 x \frac{\lambda}{a}
-\end{aligned}
+\Delta y_0 = y_1 - y_{-1} = 2 x \frac{\lambda}{a}
 $$
 
 Trong khi đó, khoảng cách giữa hai vân tối liền kề bất kỳ ở vùng ngoài dải trung tâm là:
 
 $$
-\begin{aligned}
-\Delta y &= y_{m+1} - y_m\\
-&= x \frac{\lambda}{a}
-\end{aligned}
+\Delta y = y_{m+1} - y_m = x \frac{\lambda}{a}
 $$
 
 Như vậy, dải sáng cực đại trung tâm có bề rộng gấp đúng hai lần bề rộng của các dải sáng phụ.
@@ -169,10 +163,7 @@ $$
 Khoảng cách giữa hai vân tối bậc hai nằm đối xứng ở hai phía của cực đại trung tâm là:
 
 $$
-\begin{aligned}
-2 y_2 &= 2 \times (32\,\mathrm{mm})\\
-&= 64\,\mathrm{mm}
-\end{aligned}
+2 y_2 = 2 \times (32\,\mathrm{mm}) = 64\,\mathrm{mm}
 $$
 
 Hoàn toàn tương tự, với vân tối bậc $m$ bất kỳ, khoảng cách giữa hai cực tiểu bậc $m$ đối xứng hai bên là $2 y_m = m \times (32\,\mathrm{mm})$.

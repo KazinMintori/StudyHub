@@ -181,11 +181,7 @@ $$
 Kiểm tra bằng định nghĩa điện trở:
 
 $$
-\begin{aligned}
-R &= \frac{V}{I} \\
-&= \frac{1.758}{1.67} \\
-&= 1.05269\,\Omega.
-\end{aligned}
+R = \frac{V}{I} = \frac{1.758}{1.67} = 1.05269\,\Omega.
 $$
 
 Hai cách tính khớp nhau trong độ chính xác của dữ kiện. Với vật liệu không Ohm, $R=V/I$ vẫn là định nghĩa tại điểm hoạt động ấy, nhưng giá trị có thể đổi khi thay đổi $V$ hoặc $I$. Khi đó $\rho$ cũng có thể phụ thuộc điện trường.

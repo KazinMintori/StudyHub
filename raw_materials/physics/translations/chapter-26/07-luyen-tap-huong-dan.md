@@ -117,10 +117,7 @@ $$
 Do $R_2$, $R_3$ nối tiếp, cùng dòng $2{,}18\,\mathrm A$ chạy qua mỗi điện trở. Dòng pin bằng tổng hai dòng nhánh:
 
 $$
-\begin{aligned}
-I_{\mathrm{pin}} &= I_1+I_{23} \\
-&= 8{,}18\,\mathrm A.
-\end{aligned}
+I_{\mathrm{pin}} = I_1+I_{23} = 8{,}18\,\mathrm A.
 $$
 
 **Đánh giá:** Quy tắc nút tại điểm phân nhánh cho $8{,}18\,\mathrm A=6{,}00\,\mathrm A+2{,}18\,\mathrm A$. Trong nhánh nối tiếp, dòng qua $R_2$ và $R_3$ bằng nhau.
@@ -156,10 +153,7 @@ $$
 Do đó:
 
 $$
-\begin{aligned}
-P_{\mathrm{pin}} &= P_1+P_2+P_3 \\
-&= 54{,}6\,\mathrm W.
-\end{aligned}
+P_{\mathrm{pin}} = P_1+P_2+P_3 = 54{,}6\,\mathrm W.
 $$
 
 **Đánh giá:** Công suất ba nhánh cộng lại bằng công suất nguồn cấp. Nhánh có điện trở lớn nhất nhận công suất nhỏ nhất khi hiệu điện thế trên các nhánh bằng nhau.
@@ -323,10 +317,7 @@ Hình 26.6a biểu diễn hai pin có suất điện động $\mathcal E_1$, $\m
 **Thực hiện:** Dòng qua $R$ bằng tổng dòng đi vào nút $a$:
 
 $$
-\begin{aligned}
-I_R &= I_1+I_2 \\
-&= 1{,}55\,\mathrm A.
-\end{aligned}
+I_R = I_1+I_2 = 1{,}55\,\mathrm A.
 $$
 
 Điện áp trên $R$:
@@ -773,10 +764,7 @@ $$
 Tại $t=\tau/2$, $U=U_0/e$, nên:
 
 $$
-\begin{aligned}
-\frac{dU}{dt} &= -\frac{2U_0}{e\tau} \\
-&= -7{,}43\,\mathrm{mW},
-\end{aligned}
+\frac{dU}{dt} = -\frac{2U_0}{e\tau} = -7{,}43\,\mathrm{mW},
 $$
 
 đúng bằng kết quả tính từ công suất tiêu tán. Ban đầu cũng có $-2U_0/\tau=-20{,}2\,\mathrm{mW}$, khớp câu (b).

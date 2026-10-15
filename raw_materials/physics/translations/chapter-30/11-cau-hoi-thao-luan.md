@@ -172,10 +172,7 @@ Nếu $B$ giống nhau, vật liệu có độ từ thẩm lớn hơn có mật 
 Khi giữ $I$ và hình học ống dây, phải thay độ lớn trường tương ứng:
 
 $$
-\begin{aligned}
-u_B &= \frac{(\mu nI)^2}{2\mu} \\
-&= \frac12\mu n^2I^2.
-\end{aligned}
+u_B = \frac{(\mu nI)^2}{2\mu} = \frac12\mu n^2I^2.
 $$
 
 Trong mô hình đó, năng lượng tăng theo $\mu$, phù hợp với $U_B=LI^2/2$ và $L\propto\mu$. Không thể giữ $B$ cố định trong một công thức rồi diễn giải kết quả như thể đã giữ $I$ cố định. Với lõi sắt từ có quan hệ từ hóa phi tuyến hoặc từ trễ, biểu thức dùng một độ từ thẩm hằng cần được thay bằng mô hình vật liệu thích hợp.

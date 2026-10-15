@@ -24,11 +24,7 @@ Hình 28.16: Dòng chạy ra khỏi mặt giấy tạo trường ngược chiề
 Xét dây thẳng dài mang dòng $I$. Đối xứng trụ cho biết các đường sức là đường tròn đồng tâm. Trên đường tròn bán kính $r$, trường tiếp tuyến và có độ lớn không đổi. Chọn chiều tích phân cùng chiều trường để dòng bao là dương:
 
 $$
-\begin{aligned}
-\oint\vec B\cdot d\vec l &= B\oint dl \\
-&= B(2\pi r) \\
-&= \mu_0I.
-\end{aligned}
+\oint\vec B\cdot d\vec l = B\oint dl = B(2\pi r) = \mu_0I.
 $$
 
 Do đó:

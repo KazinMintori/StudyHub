@@ -108,10 +108,7 @@ $$
 (c):
 
 $$
-\begin{aligned}
-m &= -\frac{-18{,}0}{99{,}0} \\
-&= +0{,}182.
-\end{aligned}
+m = -\frac{-18{,}0}{99{,}0} = +0{,}182.
 $$
 
 Ảnh ảo, cùng chiều và nhỏ hơn mắt. Kết quả phù hợp gương lồi nhìn một vật thật.

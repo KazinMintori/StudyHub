@@ -71,10 +71,7 @@ $$
 (b) Thay bậc hai:
 
 $$
-\begin{aligned}
-\theta_2 &= \arcsin(2\lambda/a)\\
-&= 0{,}3491^\circ.
-\end{aligned}
+\theta_2 = \arcsin(2\lambda/a) = 0{,}3491^\circ.
 $$
 
 Hai phía màn có các góc đối nhau, cùng độ lớn trên.
@@ -130,10 +127,7 @@ Trong thí nghiệm nhiễu xạ khe đơn, khe rộng $0{,}185\,\mathrm{mm}$ v�
 (a):
 
 $$
-\begin{aligned}
-\theta_1 &= \arcsin(\lambda/a)\\
-&= 0{,}178391^\circ.
-\end{aligned}
+\theta_1 = \arcsin(\lambda/a) = 0{,}178391^\circ.
 $$
 
 (b) Tại $\theta=0{,}0891957^\circ$:
@@ -214,10 +208,7 @@ Vậy cách tử có khoảng $651$ khe trên mỗi milimet.
 (b):
 
 $$
-\begin{aligned}
-\theta_2 &= \arcsin(2\sin24{,}0^\circ)\\
-&= 54{,}4^\circ.
-\end{aligned}
+\theta_2 = \arcsin(2\sin24{,}0^\circ) = 54{,}4^\circ.
 $$
 
 Với bậc ba, biểu thức hình thức cho $\sin\theta_3=1{,}22021>1$. Không có cực đại bậc ba.
@@ -238,19 +229,13 @@ Các mặt mạng của một tinh thể cách nhau $0{,}165\,\mathrm{nm}$. Chi�
 (a) Với $m=1$:
 
 $$
-\begin{aligned}
-\theta_1 &= \arcsin\frac{0{,}124}{2(0{,}165)}\\
-&= 22{,}1^\circ.
-\end{aligned}
+\theta_1 = \arcsin\frac{0{,}124}{2(0{,}165)} = 22{,}1^\circ.
 $$
 
 (b) Bậc hai cho:
 
 $$
-\begin{aligned}
-\theta_2 &= \arcsin\frac{2(0{,}124)}{2(0{,}165)}\\
-&= 48{,}7^\circ.
-\end{aligned}
+\theta_2 = \arcsin\frac{2(0{,}124)}{2(0{,}165)} = 48{,}7^\circ.
 $$
 
 Từ bậc ba trở lên, giá trị sin yêu cầu vượt một. Vì vậy chỉ còn một cực đại mạnh ở góc lớn hơn là $48{,}7^\circ$.
@@ -357,10 +342,7 @@ $$
 Khoảng vật lớn nhất là:
 
 $$
-\begin{aligned}
-u_{\max} &= \frac{s}{\tan\theta}\\
-&\approx 466\,\mathrm m.
-\end{aligned}
+u_{\max} = \frac{s}{\tan\theta} \approx 466\,\mathrm m.
 $$
 
 (b) Gọi v là khoảng ảnh. Với thấu kính mỏng:
@@ -403,11 +385,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-N &= \frac fD\\
-&= 15{,}9658\\
-&\approx 16{,}0.
-\end{aligned}
+N = \frac fD = 15{,}9658 \approx 16{,}0.
 $$
 
 Ống kính đang làm việc ở khoảng khẩu độ $f/16$.
@@ -447,10 +425,7 @@ $$
 (b) Ở bước sóng $1400\,\mathrm{nm}$:
 
 $$
-\begin{aligned}
-L_{\max} &= 74{,}2681\,\mathrm{ly}\\
-&\approx 74\,\mathrm{ly}.
-\end{aligned}
+L_{\max} = 74{,}2681\,\mathrm{ly} \approx 74\,\mathrm{ly}.
 $$
 
 Bước sóng dài hơn làm giảm khoảng quan sát tối đa. Đây là giới hạn hình học do nhiễu xạ, chưa phải bảo đảm có thể tách tín hiệu hành tinh khỏi ánh sáng sao sáng hơn nhiều.
@@ -482,10 +457,7 @@ $$
 Lấy độ lớn góc bậc một:
 
 $$
-\begin{aligned}
-\lambda_R &= d\sin23{,}41^\circ\\
-&= 690{,}011\,\mathrm{nm}.
-\end{aligned}
+\lambda_R = d\sin23{,}41^\circ = 690{,}011\,\mathrm{nm}.
 $$
 
 Đặt $q=\lambda_R/\lambda_S$ và $\beta=v/c$. Quan hệ Doppler theo quy ước chiều đang dùng là:

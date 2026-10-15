@@ -38,19 +38,13 @@ $$
 Thời gian đi cung là
 
 $$
-\begin{aligned}
-t_1 &= \frac{R\phi}{v_0} \\
-&= 1{,}72\times10^{-6}\,\mathrm{s}.
-\end{aligned}
+t_1 = \frac{R\phi}{v_0} = 1{,}72\times10^{-6}\,\mathrm{s}.
 $$
 
 (c)
 
 $$
-\begin{aligned}
-\Delta x_1 &= R(1-\cos\phi) \\
-&= 6{,}08\times10^{-3}\,\mathrm{m}.
-\end{aligned}
+\Delta x_1 = R(1-\cos\phi) = 6{,}08\times10^{-3}\,\mathrm{m}.
 $$
 
 (d) Trong vùng không có từ trường, quỹ đạo tiếp tuyến tại điểm thoát có hệ số góc $\tan\phi$. Do đó
@@ -185,19 +179,13 @@ Từ trường lớn dùng trong MRI có thể tạo lực lên các dòng đi�
 **Lời giải.** Tiết diện dây thần kinh là $A=1{,}77\times10^{-6}\,\mathrm{m^2}$. Điện trở đoạn dây:
 
 $$
-\begin{aligned}
-R &= \frac{\rho L}{A} \\
-&= 3{,}40\times10^2\,\Omega.
-\end{aligned}
+R = \frac{\rho L}{A} = 3{,}40\times10^2\,\Omega.
 $$
 
 Dòng điện là $I=V/R=2{,}94\times10^{-4}\,\mathrm{A}$. Vì đề yêu cầu lực cực đại, lấy dòng vuông góc với trường:
 
 $$
-\begin{aligned}
-F_{\max} &= ILB \\
-&= 5{,}88\times10^{-7}\,\mathrm{N}.
-\end{aligned}
+F_{\max} = ILB = 5{,}88\times10^{-7}\,\mathrm{N}.
 $$
 
 Chọn (a), $6\times10^{-7}\,\mathrm{N}$.

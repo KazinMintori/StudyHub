@@ -50,10 +50,7 @@ Có thể bố trí hai nguồn điểm cách nhau hữu hạn để thế năng
 Với hai nguồn khác không và r hữu hạn, U khác không. Với ba nguồn, có thể. Đặt +q tại x = 0 và x = 2a, đặt −q/4 tại x = a. Thế năng tổng là:
 
 $$
-\begin{aligned}
-U &= \frac{kq^2}{2a}-\frac{kq^2}{4a}-\frac{kq^2}{4a} \\
-&= 0.
-\end{aligned}
+U = \frac{kq^2}{2a}-\frac{kq^2}{4a}-\frac{kq^2}{4a} = 0.
 $$
 
 Các cặp vẫn có năng lượng tương tác khác không, nhưng tổng bằng không.
@@ -273,10 +270,7 @@ Nạp cầu dẫn bằng cách đưa từng lượng điện tích dương nhỏ
 - Công đưa thêm dq chậm từ vô hạn là V(q)dq, nên phải tích phân từ 0 đến Q.
 
 $$
-\begin{aligned}
-W &= \int_0^Q\frac{kq}{R}dq \\
-&= \frac{kQ^2}{2R}.
-\end{aligned}
+W = \int_0^Q\frac{kq}{R}dq = \frac{kQ^2}{2R}.
 $$
 
 Đúng, với cùng R và cùng môi trường trong mô hình. Không được lấy điện thế cuối kQ/R nhân toàn Q, vì lúc đầu điện thế còn thấp.

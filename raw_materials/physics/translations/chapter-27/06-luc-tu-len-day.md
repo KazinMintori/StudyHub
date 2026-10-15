@@ -63,10 +63,7 @@ $$
 Tổng lực được tính bằng cách cộng lực của mọi đoạn dọc theo dây:
 
 $$
-\begin{aligned}
-\vec{F} &= \int d\vec{F} \\
-&= I\int d\vec{\ell}\times\vec{B}.
-\end{aligned}
+\vec{F} = \int d\vec{F} = I\int d\vec{\ell}\times\vec{B}.
 $$
 
 Tích phân này là tích phân đường. Nó tính đến việc hướng của dây thay đổi liên tục. Vì vậy không thể lấy một hướng dòng điện duy nhất rồi áp dụng công thức dây thẳng cho toàn bộ một dây cong.

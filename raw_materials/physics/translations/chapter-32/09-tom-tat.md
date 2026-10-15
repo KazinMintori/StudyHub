@@ -75,10 +75,7 @@ $$
 Sóng điện từ cũng mang động lượng. Tốc độ truyền động lượng trên một đơn vị diện tích là:
 
 $$
-\begin{aligned}
-\frac{1}{A} \frac{dp}{dt} &= \frac{S}{c} \\
-&= \frac{EB}{\mu_0 c}
-\end{aligned}
+\frac{1}{A} \frac{dp}{dt} = \frac{S}{c} = \frac{EB}{\mu_0 c}
 $$
 
 ![Tổng kết 32.3: Năng lượng điện từ truyền qua tiết diện A trong thời gian dt được xác định bởi vector Poynting S.](img/young-32/tom-tat-32-03.png)

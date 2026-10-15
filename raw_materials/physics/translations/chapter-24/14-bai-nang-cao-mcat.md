@@ -21,19 +21,13 @@ Bạn khảo sát một tụ điện phẳng chứa không khí. Tụ được n
 (a) Dữ liệu ứng với thí nghiệm giữ tụ nối với nguồn. Thật vậy, khi $V$ không đổi:
 
 $$
-\begin{aligned}
-U &= \frac12CV^2 \\
-&= \frac{\varepsilon_0AV^2}{2d}.
-\end{aligned}
+U = \frac12CV^2 = \frac{\varepsilon_0AV^2}{2d}.
 $$
 
 Vì vậy $U$ tuyến tính theo $1/d$. Nếu tụ bị ngắt khỏi nguồn, Q không đổi và:
 
 $$
-\begin{aligned}
-U &= \frac{Q^2}{2C} \\
-&= \frac{Q^2d}{2\varepsilon_0A}.
-\end{aligned}
+U = \frac{Q^2}{2C} = \frac{Q^2d}{2\varepsilon_0A}.
 $$
 
 nên $U$ tuyến tính theo d, không phải theo $1/d$.
@@ -227,10 +221,7 @@ $$
 (b) Khi V không đổi, $U=\frac{1}{2}CV^2$, vì vậy:
 
 $$
-\begin{aligned}
-dU &= \frac12V^2dC \\
-&= +\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
-\end{aligned}
+dU = \frac12V^2dC = +\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
 $$
 
 (c) Trước khi ngắt nguồn, điện tích có độ lớn $Q=C(x)V$, tức:
@@ -242,10 +233,7 @@ $$
 Sau khi ngắt, $Q$ giữ nguyên. Vi phân $U=Q^2/(2C)$ theo $C$ cho $dU=-Q^2dC/(2C^2)$. Vì $Q/C=V$ ở trạng thái ngay trước khi dịch tấm:
 
 $$
-\begin{aligned}
-dU &= -\frac12V^2dC \\
-&= -\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
-\end{aligned}
+dU = -\frac12V^2dC = -\frac{(K-1)\varepsilon_0V^2L}{2D}\,dx.
 $$
 
 (d) Nếu xem độ tăng năng lượng ở câu (b) là công cơ học chống lại lực điện, thì $dU=-Fdx$ cho $F$ âm, tức lực đẩy tấm ra ngoài. Câu (c) cho $dU<0$, nên $F=-dU/dx>0$, tức lực kéo tấm vào trong. Hai suy luận trái nhau vì ở câu (b), pin vẫn trao đổi năng lượng với tụ.
@@ -253,28 +241,19 @@ $$
 (e) Khi tấm đi vào, điện dung tăng một lượng $dC$ và điện tích từ pin tăng $dQ=VdC$. Công pin truyền cho hệ tụ là:
 
 $$
-\begin{aligned}
-dW_{\mathrm{pin}} &= VdQ \\
-&= V^2dC.
-\end{aligned}
+dW_{\mathrm{pin}} = VdQ = V^2dC.
 $$
 
 Phần năng lượng điện trường chỉ tăng $dU=V^2dC/2$. Bảo toàn năng lượng cho công cơ học ngoài:
 
 $$
-\begin{aligned}
-dW_{\mathrm{ext}} &= dU-dW_{\mathrm{pin}} \\
-&= -\frac12V^2dC.
-\end{aligned}
+dW_{\mathrm{ext}} = dU-dW_{\mathrm{pin}} = -\frac12V^2dC.
 $$
 
 Do $dW_{\mathrm{ext}}=-Fdx$, lực điện hướng vào trong. Độ lớn của lực là:
 
 $$
-\begin{aligned}
-F &= \frac12V^2\frac{dC}{dx} \\
-&= \frac{(K-1)\varepsilon_0V^2L}{2D}.
-\end{aligned}
+F = \frac12V^2\frac{dC}{dx} = \frac{(K-1)\varepsilon_0V^2L}{2D}.
 $$
 
 Lực không đổi theo x trong mô hình bỏ qua hiệu ứng mép.
@@ -356,10 +335,7 @@ $$
 Tổng số mol Na⁺ đi vào là:
 
 $$
-\begin{aligned}
-\Delta n &= (\Delta n/A)A \\
-&= 1{,}2566\times10^{-15}\,\mathrm{mol}.
-\end{aligned}
+\Delta n = (\Delta n/A)A = 1{,}2566\times10^{-15}\,\mathrm{mol}.
 $$
 
 Do đó:

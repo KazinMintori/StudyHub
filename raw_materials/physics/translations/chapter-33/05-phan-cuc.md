@@ -238,10 +238,7 @@ $$
 Góc khúc xạ tương ứng trong không khí là:
 
 $$
-\begin{aligned}
-\theta_b' &= 90{,}0^\circ - 36{,}9^\circ \\
-&= 53{,}1^\circ
-\end{aligned}
+\theta_b' = 90{,}0^\circ - 36{,}9^\circ = 53{,}1^\circ
 $$
 
 **Đánh giá:**
@@ -258,19 +255,13 @@ $$
 Từ đó suy ra:
 
 $$
-\begin{aligned}
-\theta_b &= \arcsin(0{,}601) \\
-&= 36{,}9^\circ
-\end{aligned}
+\theta_b = \arcsin(0{,}601) = 36{,}9^\circ
 $$
 
 Hai góc phân cực tìm được ở câu (a) và (c) có tổng bằng đúng $90^\circ$:
 
 $$
-\begin{aligned}
-\theta_p + \theta_p' &= 53{,}1^\circ + 36{,}9^\circ \\
-&= 90{,}0^\circ
-\end{aligned}
+\theta_p + \theta_p' = 53{,}1^\circ + 36{,}9^\circ = 90{,}0^\circ
 $$
 
 Vì sao hai góc Brewster khi đảo chiều truyền lại phụ nhau?
@@ -324,10 +315,7 @@ $$
 Độ lớn của vector điện trường tổng cộng tại một điểm bất kỳ là:
 
 $$
-\begin{aligned}
-|\vec{E}| &= \sqrt{E_y^2 + E_z^2} \\
-&= E_{\max}
-\end{aligned}
+|\vec{E}| = \sqrt{E_y^2 + E_z^2} = E_{\max}
 $$
 
 Vì $\cos^2(kx - \omega t) + \sin^2(kx - \omega t) = 1$ tại mọi thời điểm, độ lớn của vector điện trường tổng cộng luôn bằng $E_{\max}$.

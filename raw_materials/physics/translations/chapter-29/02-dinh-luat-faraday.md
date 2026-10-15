@@ -70,10 +70,7 @@ Một vòng dây dẫn đứng yên nằm trong vùng có từ trường đều 
 Đổi diện tích sang đơn vị SI:
 
 $$
-\begin{aligned}
-A &= 120\,\mathrm{cm^2} \\
-&= 0{,}012\,\mathrm{m^2}.
-\end{aligned}
+A = 120\,\mathrm{cm^2} = 0{,}012\,\mathrm{m^2}.
 $$
 
 Vì $\phi=0$, ta có $\Phi_B=BA$. Do $A$ không đổi:
@@ -188,11 +185,7 @@ Một thanh kim loại dài $L$ trượt sang phải với tốc độ không đ
 **Hướng đi hợp lý:** Từ trường không đổi và vuông góc mặt mạch, nên $\Phi_B=BA$. Trong khoảng $dt$, thanh dịch chuyển $v\,dt$ và diện tích tăng $dA=L v\,dt$. Lấy đạo hàm từ thông rồi dùng quy ước dấu đã chọn.
 
 $$
-\begin{aligned}
-\mathcal E &= -\frac{d\Phi_B}{dt} \\
-&= -B\frac{dA}{dt} \\
-&= -BLv.
-\end{aligned}
+\mathcal E = -\frac{d\Phi_B}{dt} = -B\frac{dA}{dt} = -BLv.
 $$
 
 Dấu âm cho biết suất điện động ngược chiều dương đã chọn. Vì véc-tơ diện tích hướng vào trang, chiều dương theo quy tắc bàn tay phải là chiều kim đồng hồ. Do đó dòng cảm ứng chạy ngược chiều kim đồng hồ. Khi $v$ không đổi, suất điện động không đổi và thiết bị tạo dòng một chiều. Nếu thanh trượt rời khỏi ray chữ U thì mạch hở và dòng dừng.
@@ -210,10 +203,7 @@ $$
 Công suất điện chuyển thành nhiệt trong mạch là:
 
 $$
-\begin{aligned}
-P_{\mathrm{nhiệt}} &= I^2R \\
-&= \frac{B^2L^2v^2}{R}.
-\end{aligned}
+P_{\mathrm{nhiệt}} = I^2R = \frac{B^2L^2v^2}{R}.
 $$
 
 Lực từ có độ lớn $F=ILB=B^2L^2v/R$ và hướng sang trái, ngược với thanh đang đi sang phải. Người kéo phải tác dụng lực cùng chiều chuyển động, nên:

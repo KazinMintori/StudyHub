@@ -163,10 +163,7 @@ Giả sử ta khảo sát ngẫu nhiên $n = 10$ cử tri (lấy mẫu có hoàn
 - Gọi $X$ là số cử tri ủng hộ Schiff trong 10 người, ta có $X \sim \text{Bin}(10, 0{,}25)$.
 - Biến cố cần tìm là $\{X > 2\}$. Sử dụng quy tắc biến cố đối:
 $$
-\begin{aligned}
-P(X > 2) &= 1 - P(X \le 2) \\
-&= 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
-\end{aligned}
+P(X > 2) = 1 - P(X \le 2) = 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
 $$
 - Tính từng xác suất thành phần:
 $$
@@ -515,10 +512,7 @@ $$
 **Câu 3: Xác suất có nhiều hơn 2 khách hàng ($X > 2$)**:
 Sử dụng biến cố bù:
 $$
-\begin{aligned}
-P(X > 2) &= 1 - P(X \le 2) \\
-&= 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
-\end{aligned}
+P(X > 2) = 1 - P(X \le 2) = 1 - [P(X = 0) + P(X = 1) + P(X = 2)]
 $$
 Tính các thành phần còn lại:
 $$

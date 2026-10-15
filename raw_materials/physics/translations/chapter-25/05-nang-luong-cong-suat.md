@@ -116,11 +116,7 @@ $$
 Công suất tỏa nhiệt trong pin:
 
 $$
-\begin{aligned}
-P_r &= I^2r \\
-&= (2\,\mathrm A)^2(2\,\Omega) \\
-&= 8\,\mathrm W.
-\end{aligned}
+P_r = I^2r = (2\,\mathrm A)^2(2\,\Omega) = 8\,\mathrm W.
 $$
 
 Vậy công suất điện ra của pin là $24-8=16$ W. Điện trở ngoài nhận:
@@ -160,11 +156,7 @@ $$
 Điện áp trên tải:
 
 $$
-\begin{aligned}
-V_{ab} &= IR \\
-&= (1{,}2\,\mathrm A)(8\,\Omega) \\
-&= 9{,}6\,\mathrm V.
-\end{aligned}
+V_{ab} = IR = (1{,}2\,\mathrm A)(8\,\Omega) = 9{,}6\,\mathrm V.
 $$
 
 Do đó:

@@ -303,10 +303,7 @@ $$
 Do đó $F_x=-2{,}52\times10^{-3}\,\mathrm{N}$, $F_y=-4{,}20\times10^{-3}\,\mathrm{N}$ và $F_z=0$. Độ lớn là:
 
 $$
-\begin{aligned}
-F &= \sqrt{F_x^2+F_y^2} \\
-&= 4{,}90\times10^{-3}\,\mathrm{N}.
-\end{aligned}
+F = \sqrt{F_x^2+F_y^2} = 4{,}90\times10^{-3}\,\mathrm{N}.
 $$
 :::
 

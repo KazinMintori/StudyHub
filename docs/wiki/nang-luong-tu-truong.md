@@ -16,10 +16,7 @@ Từ trường có năng lượng. Với cuộn tuyến tính tự cảm không 
 Công suất nạp cuộn lý tưởng là $p=Li\,di/dt$. Tích phân từ dòng không đến i cho
 
 $$
-\begin{aligned}
-U_B &= \int_0^i Lu\,du \\
-&= \frac12Li^2.
-\end{aligned}
+U_B = \int_0^i Lu\,du = \frac12Li^2.
 $$
 
 Biến tích phân u là giá trị dòng chạy từ 0 đến i. Công thức đòi hỏi L không đổi. Năng lượng không âm với L dương và không đổi khi đảo dấu dòng.

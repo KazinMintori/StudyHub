@@ -132,10 +132,7 @@ $$
 Vì $(-\hat i)\times\hat j=-\hat k$ và electron mang điện âm, lực hướng $+z$:
 
 $$
-\begin{aligned}
-\vec F &= |q|vB\,\hat k \\
-&= 9{,}83\times10^{-23}\,\hat k\,\mathrm N.
-\end{aligned}
+\vec F = |q|vB\,\hat k = 9{,}83\times10^{-23}\,\hat k\,\mathrm N.
 $$
 :::
 
@@ -157,10 +154,7 @@ Một dây dẫn thẳng dài phải mang dòng điện bao nhiêu để từ tr
 **Các bước giải:**
 
 $$
-\begin{aligned}
-I &= \frac{2\pi rB}{\mu_0} \\
-&= 2{,}24\,\mathrm A.
-\end{aligned}
+I = \frac{2\pi rB}{\mu_0} = 2{,}24\,\mathrm A.
 $$
 :::
 
@@ -288,10 +282,7 @@ Một dây dẫn hình trụ đặc bán kính $4{,}50\,\mathrm{cm}$ mang dòng 
 (a) $r<R$:
 
 $$
-\begin{aligned}
-B &= \frac{\mu_0 I r}{2\pi R^2} \\
-&= 4{,}94\times10^{-6}\,\mathrm T.
-\end{aligned}
+B = \frac{\mu_0 I r}{2\pi R^2} = 4{,}94\times10^{-6}\,\mathrm T.
 $$
 
 (b) Tại mặt dây, $B=\mu_0I/(2\pi R)=8{,}89\times10^{-6}\,\mathrm T$.
@@ -364,10 +355,7 @@ Một ống dây rất dài, quấn sít, có $8{,}00\times10^3$ vòng trên m�
 **Các bước giải:**
 
 $$
-\begin{aligned}
-I &= \frac{B}{\mu_0n} \\
-&= 3{,}18\,\mathrm A.
-\end{aligned}
+I = \frac{B}{\mu_0n} = 3{,}18\,\mathrm A.
 $$
 :::
 

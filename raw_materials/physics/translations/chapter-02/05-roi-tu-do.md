@@ -241,10 +241,7 @@ $$
 Như đã phân tích ở phần lý thuyết, tại điểm cao nhất khi $v_y = 0$, gia tốc của quả bóng **vẫn không đổi**:
 
 $$
-\begin{aligned}
-a_y &= -g \\
-&= -9.80\,\mathrm{m/s^2}.
-\end{aligned}
+a_y = -g = -9.80\,\mathrm{m/s^2}.
 $$
 
 Trọng lực không hề biến mất tại đỉnh quỹ đạo, và tốc độ biến thiên của vận tốc vẫn liên tục giữ nguyên $9.80\,\mathrm{m/s^2}$ hướng xuống.

@@ -60,10 +60,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-v_g &= \frac c{n_g} \\
-&= 1{,}66\times10^8\,\mathrm{m/s}.
-\end{aligned}
+v_g = \frac c{n_g} = 1{,}66\times10^8\,\mathrm{m/s}.
 $$
 
 Góc khúc xạ nhỏ hơn góc tới, nên chiết suất thủy tinh lớn hơn chiết suất nước. Tốc độ trong thủy tinh vì vậy nhỏ hơn trong nước.
@@ -167,11 +164,7 @@ Một chùm laser đã phân cực có cường độ $255\,\mathrm{W/m^2}$ tớ
 - Không lấy thêm hệ số $1/2$, vì chùm tới không phải ánh sáng không phân cực.
 
 $$
-\begin{aligned}
-I &= I_0\cos^2\phi \\
-&= 255\cos^2 15{,}0^\circ \\
-&= 238\,\mathrm{W/m^2}.
-\end{aligned}
+I = I_0\cos^2\phi = 255\cos^2 15{,}0^\circ = 238\,\mathrm{W/m^2}.
 $$
 :::
 
@@ -226,10 +219,7 @@ Tìm cường độ (a) sau kính thứ nhất, (b) sau kính thứ hai và (c) 
 (a):
 
 $$
-\begin{aligned}
-I_1 &= 60{,}0\cos^2 25{,}0^\circ \\
-&= 49{,}3\,\mathrm{W/m^2}.
-\end{aligned}
+I_1 = 60{,}0\cos^2 25{,}0^\circ = 49{,}3\,\mathrm{W/m^2}.
 $$
 
 (b):
@@ -245,10 +235,7 @@ $$
 (c):
 
 $$
-\begin{aligned}
-I_2' &= 60{,}0\cos^2 50{,}0^\circ \\
-&= 24{,}8\,\mathrm{W/m^2}.
-\end{aligned}
+I_2' = 60{,}0\cos^2 50{,}0^\circ = 24{,}8\,\mathrm{W/m^2}.
 $$
 
 Kính thứ nhất làm giảm cường độ nhưng đồng thời đổi phương phân cực, nên hai tình huống không chỉ khác nhau ở số kính.
@@ -346,11 +333,7 @@ Chùm đã phân cực trong không khí tới thủy tinh flint đặc có chi�
 (b) Có. Với phân cực trong mặt phẳng tới:
 
 $$
-\begin{aligned}
-\theta_p &= \arctan\frac{n_g}{n_a} \\
-&= \arctan1{,}66 \\
-&= 58{,}9^\circ.
-\end{aligned}
+\theta_p = \arctan\frac{n_g}{n_a} = \arctan1{,}66 = 58{,}9^\circ.
 $$
 
 Tại góc này, chùm tới không chứa thành phần vuông góc mặt phẳng tới. Thành phần còn lại không bị phản xạ, nên cường độ phản xạ bằng không trong mô hình mặt phân cách lý tưởng.

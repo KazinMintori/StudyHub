@@ -99,10 +99,7 @@ $$
 Chọn chiều dòng từ phải sang trái ở các nhánh dưới. Khi đó dòng điện trở $20{,}0\,\Omega$ là $I_{20}=(V_D-V_L)/20=-2{,}25\,\mathrm{A}$, tức dòng thực tế hướng sang phải. KCL tại $D$ cho dòng nhánh $15{,}0\,\Omega$ là $I_{15}=2{,}00-I_{20}=4{,}25\,\mathrm{A}$ từ phải sang trái. KVL trong nhánh đó:
 
 $$
-\begin{aligned}
-\mathcal E &= V_D-V_L -15I_{15} \\
-&= -108{,}75\,\mathrm{V}.
-\end{aligned}
+\mathcal E = V_D-V_L -15I_{15} = -108{,}75\,\mathrm{V}.
 $$
 
 Vậy nguồn cần có độ lớn $108{,}75\,\mathrm{V}$ với cực tính ngược chiều hình vẽ. Dòng qua nhánh $10+20\,\Omega$ là $20/30=0{,}667\,\mathrm{A}$. Phần (b):
@@ -207,10 +204,7 @@ Trong mạch Hình P26.66, mỗi điện trở có công suất tối đa $2{,}0
 Điện trở tương đương nhóm giữa là $6{,}383\,\Omega$. Toàn mạch:
 
 $$
-\begin{aligned}
-R_{eq} &= 25+30+6{,}383 +40+25 \\
-&= 126{,}383\,\Omega.
-\end{aligned}
+R_{eq} = 25+30+6{,}383 +40+25 = 126{,}383\,\Omega.
 $$
 
 Dòng qua điện trở $40\,\Omega$ lớn nhất về công suất trên mỗi linh kiện. Đặt $I=\sqrt{2/40}=0{,}2236\,\mathrm{A}$ để điện trở này vừa đạt giới hạn. Khi đó $\mathcal E_{max}=IR_{eq}=28{,}3\,\mathrm{V}$. Mỗi điện trở $50\,\Omega$ tiêu tán $0{,}625\,\mathrm{W}$. Hai điện trở nối tiếp $25,30\,\Omega$ tiêu tán $1{,}25$ và $1{,}50\,\mathrm{W}$. Các nhánh song song giữa tiêu tán lần lượt khoảng $0{,}082$, $0{,}136$ và $0{,}102\,\mathrm{W}$.
@@ -326,10 +320,7 @@ Mạch RC được mắc như Hình P26.71. Tụ có hai bản vuông $2{,}00\,\
 Diện tích là $A=4{,}00\times10^{-4}\,\mathrm{m^2}$ và khoảng cách $d=3{,}00\times10^{-3}\,\mathrm{m}$. Điện dung ban đầu $C_0=1{,}18\times10^{-12}\,\mathrm{F}$. (a) $Q_0=C_0(10{,}0\,\mathrm{V})=1{,}18\times10^{-11}\,\mathrm{C}$. (b) Ngay sau khi trượt, $V_C=10/12=0{,}833\,\mathrm{V}$, vì vậy dòng theo chiều mũi tên là $I=(10-0{,}833)/10=0{,}917\,\mathrm{A}$. (c) Năng lượng tụ ngay sau đó:
 
 $$
-\begin{aligned}
-U &= \frac12(12C_0)(10/12)^2 \\
-&= 4{,}92\times10^{-12}\,\mathrm{J}.
-\end{aligned}
+U = \frac12(12C_0)(10/12)^2 = 4{,}92\times10^{-12}\,\mathrm{J}.
 $$
 
 Sau thời gian dài, năng lượng là $\tfrac12(12C_0)(10)^2=7{,}08\times10^{-10}\,\mathrm{J}$, nên (d) phần tăng là $7{,}03\times10^{-10}\,\mathrm{J}$. (e) Điện tích cuối tăng từ $10C_0$ lên $120C_0$, nên pin cấp $1{,}30\times10^{-9}\,\mathrm{J}$. (f) Dòng giảm mũ từ $I_0=0{,}917\,\mathrm{A}$, do đó năng lượng nhiệt:

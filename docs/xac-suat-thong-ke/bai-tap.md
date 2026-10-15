@@ -58,7 +58,7 @@ $$
 5. Tính xác suất:
    $$
 \begin{aligned}
-P(1 &\le X \le 2) = F(2) - F(1) = 1 - \left( \frac{3}{4}(1) - \frac{1}{16} \right) \\
+P(1 \le X \le 2) &= F(2) - F(1) = 1 - \left( \frac{3}{4}(1) - \frac{1}{16} \right) \\
 &= 1 - \frac{11}{16} = \frac{5}{16} = 0.3125.
 \end{aligned}
 $$
@@ -93,7 +93,7 @@ $$
 3. Tổng thời gian $S_{100}$ xấp xỉ phân phối chuẩn với kỳ vọng $E[S_{100}] = n\mu = 100 \times 120 = 12000$ và độ lệch chuẩn $\sigma_S = \sigma \sqrt{n} = 30 \times 10 = 300$:
    $$
 \begin{aligned}
-P(11400 &\le S_{100} \le 12600) = P\left(\frac{11400 - 12000}{300} \le Z \le \frac{12600 - 12000}{300}\right) \\
+P(11400 \le S_{100} \le 12600) &= P\left(\frac{11400 - 12000}{300} \le Z \le \frac{12600 - 12000}{300}\right) \\
 &= P(-2 \le Z \le 2) = 2\Phi(2) - 1 \\
 &= 2(0.9772) - 1 = 0.9544 \quad (95.44\%).
 \end{aligned}

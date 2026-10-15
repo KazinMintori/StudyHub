@@ -271,10 +271,7 @@ Nếu q là bội của N thì $\phi$ là bội của $2\pi$. Tất cả vectơ 
 (b) Trong khoảng pha từ 0 đến $2\pi$, các cực tiểu nằm ở:
 
 $$
-\begin{aligned}
-\phi_q&=\frac{2\pi q}N,\\
-q&=1,2,\ldots,N-1.
-\end{aligned}
+\phi_q = \frac{2\pi q}{N}, \quad q = 1, 2, \dots, N-1.
 $$
 
 Có đúng $N-1$ giá trị. Khoảng pha giữa hai cực đại chính khác có cùng cách đếm sau khi cộng một bội của $2\pi$.

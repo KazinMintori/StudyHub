@@ -37,10 +37,7 @@ $$
 Thay biểu thức của $\theta$ từ hệ thức trên vào, ta thu được:
 
 $$
-\begin{aligned}
-\beta &= \phi + (\phi - \alpha) \\
-&= 2\phi - \alpha
-\end{aligned}
+\beta = \phi + (\phi - \alpha) = 2\phi - \alpha
 $$
 
 Chuyển vế, ta tìm được mối quan hệ góc cơ bản:
@@ -266,11 +263,7 @@ $$
 Chiều cao của ảnh là:
 
 $$
-\begin{aligned}
-y' &= m y \\
-&= (-30{,}0)(0{,}500\,\mathrm{cm}) \\
-&= -15{,}0\,\mathrm{cm}
-\end{aligned}
+y' = m y = (-30{,}0)(0{,}500\,\mathrm{cm}) = -15{,}0\,\mathrm{cm}
 $$
 
 **Đánh giá**: Giá trị âm của $m$ và $y'$ khẳng định ảnh tạo thành là ảnh ngược chiều so với vật. Chiều cao độ lớn của ảnh là $15{,}0\,\mathrm{cm}$, lớn gấp 30 lần kích thước vật ban đầu. Bán kính cong $R$ và tiêu cự $f$ đều mang dấu dương, hoàn toàn phù hợp với tính chất của gương cầu lõm.
@@ -486,10 +479,7 @@ $$
 Độ phóng đại ngang:
 
 $$
-\begin{aligned}
-m &= -\frac{20\,\mathrm{cm}}{20\,\mathrm{cm}} \\
-&= -1{,}0
-\end{aligned}
+m = -\frac{20\,\mathrm{cm}}{20\,\mathrm{cm}} = -1{,}0
 $$
 
 Ảnh là ảnh thật, ngược chiều, có kích thước bằng đúng vật và nằm đối xứng ngay tại tâm cong $C$.
@@ -529,10 +519,7 @@ $$
 Độ phóng đại ngang:
 
 $$
-\begin{aligned}
-m &= -\frac{-10\,\mathrm{cm}}{5\,\mathrm{cm}} \\
-&= +2{,}0
-\end{aligned}
+m = -\frac{-10\,\mathrm{cm}}{5\,\mathrm{cm}} = +2{,}0
 $$
 
 Ảnh là ảnh ảo ($s' < 0$), cùng chiều ($m > 0$), lớn gấp 2 lần vật và nằm ở phía sau mặt gương $10\,\mathrm{cm}$.

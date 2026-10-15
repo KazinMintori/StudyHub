@@ -243,10 +243,7 @@ Nam châm MRI điển hình trong bài đọc có khoảng bao nhiêu vòng dây
 - Dòng 750 A không cần để tìm số vòng từ hình học và tự cảm trong mô hình tuyến tính.
 
 $$
-\begin{aligned}
-N &= \sqrt{\frac{L\ell}{\mu_0\pi r^2}} \\
-&\approx 3{,}0\times10^3.
-\end{aligned}
+N = \sqrt{\frac{L\ell}{\mu_0\pi r^2}} \approx 3{,}0\times10^3.
 $$
 
 Chọn (b).

@@ -22,10 +22,7 @@ Một sóng điện từ hình sin trong chân không có biên độ từ trư�
 (a) Biên độ điện trường:
 
 $$
-\begin{aligned}
-E_{\max} &= cB_{\max} \\
-&= 1{,}29\times10^6\,\mathrm{V/m}.
-\end{aligned}
+E_{\max} = cB_{\max} = 1{,}29\times10^6\,\mathrm{V/m}.
 $$
 
 (b), (c) Bước sóng và tần số:
@@ -127,10 +124,7 @@ Hướng $+z$ của từ trường tại gốc bảo đảm $\vec E\times\vec B$
 (a):
 
 $$
-\begin{aligned}
-B_z(0,0) &= \frac{E_{\max}}c \\
-&= 0{,}0140\,\mathrm T.
-\end{aligned}
+B_z(0,0) = \frac{E_{\max}}c = 0{,}0140\,\mathrm T.
 $$
 
 Từ trường có độ lớn $0{,}0140\,\mathrm T$ và hướng theo $+z$.
@@ -151,10 +145,7 @@ $$
 (c):
 
 $$
-\begin{aligned}
-B_z &= \frac{E_y}c \\
-&= -9{,}63\times10^{-3}\,\mathrm T.
-\end{aligned}
+B_z = \frac{E_y}c = -9{,}63\times10^{-3}\,\mathrm T.
 $$
 
 Từ trường có độ lớn $9{,}63\,\mathrm{mT}$ và hướng theo $-z$. Hai vector cùng đảo dấu nên tích có hướng vẫn hướng theo $+x$.
@@ -188,10 +179,7 @@ $$
 (c):
 
 $$
-\begin{aligned}
-v &= f_0\lambda_{\mathrm m} \\
-&= 1{,}64\times10^8\,\mathrm{m/s}.
-\end{aligned}
+v = f_0\lambda_{\mathrm m} = 1{,}64\times10^8\,\mathrm{m/s}.
 $$
 
 (d) Vì $\mu_r=1$:
@@ -241,10 +229,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-u &= \frac Sc \\
-&= 3{,}67\times10^{-8}\,\mathrm{J/m^3}.
-\end{aligned}
+u = \frac Sc = 3{,}67\times10^{-8}\,\mathrm{J/m^3}.
 $$
 
 Điện trường và từ trường đóng góp bằng nhau vào $u$.
@@ -326,10 +311,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-P &= I(2\pi r^2) \\
-&= 1{,}69\times10^5\,\mathrm W.
-\end{aligned}
+P = I(2\pi r^2) = 1{,}69\times10^5\,\mathrm W.
 $$
 
 Nếu thay bán cầu bằng mặt cầu thì công suất sẽ bị nhân sai thêm hai lần.
@@ -363,10 +345,7 @@ $$
 (b):
 
 $$
-\begin{aligned}
-P &= 4\pi r^2I \\
-&= 3{,}85\times10^{26}\,\mathrm W.
-\end{aligned}
+P = 4\pi r^2I = 3{,}85\times10^{26}\,\mathrm W.
 $$
 :::
 
@@ -452,10 +431,7 @@ $$
 (c) Ở nút từ trường đầu tiên, điện trường đạt bụng. Biên độ này là $2E_{\max}$, trong khi biên độ từ trường tại tường là $2B_{\max}$. Tỉ số vẫn bằng $c$:
 
 $$
-\begin{aligned}
-E_{\mathrm{bụng}} &= cB_{\mathrm{tường}} \\
-&= 36{,}0\,\mathrm{V/m}.
-\end{aligned}
+E_{\mathrm{bụng}} = cB_{\mathrm{tường}} = 36{,}0\,\mathrm{V/m}.
 $$
 
 Đây là quan hệ giữa hai biên độ tại hai vị trí khác nhau. Không áp dụng $E=cB$ cho hai giá trị tức thời tại cùng điểm của sóng đứng.
@@ -551,10 +527,7 @@ Tìm biên độ suất điện động cảm ứng trong vòng dây.
 Cường độ sóng tại anten:
 
 $$
-\begin{aligned}
-I &= \frac{P}{4\pi r^2} \\
-&= 7{,}00\times10^{-4}\,\mathrm{W/m^2}.
-\end{aligned}
+I = \frac{P}{4\pi r^2} = 7{,}00\times10^{-4}\,\mathrm{W/m^2}.
 $$
 
 Biên độ từ trường:

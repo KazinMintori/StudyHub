@@ -94,11 +94,7 @@ $$
 Chiều dòng trong thanh từ $b$ lên $a$. Theo $\vec F=I\vec L\times\vec B$, lực từ hướng sang trái, ngược chiều chuyển động. Vì $\vec L$ vuông góc với $\vec B$, độ lớn lực là:
 
 $$
-\begin{aligned}
-F &= ILB \\
-&= (5{,}0)(0{,}10)(0{,}60) \\
-&= 0{,}30\,\mathrm N.
-\end{aligned}
+F = ILB = (5{,}0)(0{,}10)(0{,}60) = 0{,}30\,\mathrm N.
 $$
 
 Lực cản từ phù hợp với định luật Lenz: Nó chống lại sự tăng diện tích và từ thông gây ra dòng cảm ứng.
@@ -122,10 +118,7 @@ $$
 Cộng các đoạn từ $r=0$ đến $r=R$:
 
 $$
-\begin{aligned}
-\mathcal E &= \int_0^R\omega Br\,dr \\
-&= \frac{1}{2}\omega BR^2.
-\end{aligned}
+\mathcal E = \int_0^R\omega Br\,dr = \frac{1}{2}\omega BR^2.
 $$
 
 Có thể khép kín mạch bằng hai chổi tiếp xúc cố định trên đĩa và trục dẫn điện. Thiết bị này gọi là đĩa Faraday hay máy phát đồng cực. Nó tạo suất điện động không đổi theo thời gian và dòng một chiều. Dấu của suất điện động giữa tâm và vành phụ thuộc chiều quay và hướng từ trường.

@@ -204,11 +204,7 @@ Danh sách mở rộng xuất hiện thêm các loài thú có khối lượng t
 Về mặt toán học tập hợp: Gọi $A$ là tập các loài có $\text{log\_bodywt} > 12$ ($|A| = 9$), và $B$ là tập các loài có $\text{sleep\_total} < 5$ ($|B| = 11$). Ta có công thức lực lượng tập hợp:
 
 $$
-\begin{aligned}
-|A \cup B| &= |A| + |B| - |A \cap B| \\
-&= 9 + 11 - 8 \\
-&= 12
-\end{aligned}
+|A \cup B| = |A| + |B| - |A \cap B| = 9 + 11 - 8 = 12
 $$
 
 Phép giao luôn là tập con của phép hợp, do đó số hàng trả về từ điều kiện `&` không bao giờ vượt quá số hàng trả về từ điều kiện `|`.
@@ -517,10 +513,7 @@ Kết quả này hé lộ một góc nhìn sinh thái học sâu sắc: Các lo�
    - Khi áp dụng hàm `mean()`:
 
 $$
-\begin{aligned}
-\bar{x}_{\text{logic}} &= \frac{0 + 1 + 0}{3} \\
-&= \frac{1}{3} \approx 0.333
-\end{aligned}
+\bar{x}_{\text{logic}} = \frac{0 + 1 + 0}{3} = \frac{1}{3} \approx 0.333
 $$
 
    - **Ý nghĩa thống kê**: Giá trị này đại diện cho tỷ lệ phần trăm các phần tử trong vector thỏa mãn điều kiện là `"orange"` (đạt $33.33\%$).

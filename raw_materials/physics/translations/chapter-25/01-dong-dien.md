@@ -64,28 +64,19 @@ Giả sử vật dẫn có tiết diện $A$, điện trường hướng từ tr
 Khối trụ có thể tích $Av_d dt$, nên chứa $nAv_d dt$ hạt. Nếu mỗi hạt mang điện tích $q$, lượng điện tích đi qua đầu trụ là:
 
 $$
-\begin{aligned}
-dQ &= q(nAv_d dt) \\
-&= nqv_dA\,dt.
-\end{aligned}
+dQ = q(nAv_d dt) = nqv_dA\,dt.
 $$
 
 Thay vào định nghĩa dòng điện, ta được:
 
 $$
-\begin{aligned}
-I &= \frac{dQ}{dt} \\
-&= nqv_dA.
-\end{aligned}
+I = \frac{dQ}{dt} = nqv_dA.
 $$
 
 Mật độ dòng điện $J$ là dòng điện trên một đơn vị diện tích tiết diện:
 
 $$
-\begin{aligned}
-J &= \frac IA \\
-&= nqv_d.
-\end{aligned}
+J = \frac IA = nqv_d.
 $$
 
 Đơn vị của mật độ dòng điện là ampe trên mét vuông, $\mathrm{A/m^2}$. Nếu hạt tải điện âm, vận tốc trôi ngược chiều điện trường. Dòng điện quy ước và mật độ dòng điện vẫn cùng chiều điện trường, nên công thức độ lớn dùng độ lớn điện tích $|q|$:

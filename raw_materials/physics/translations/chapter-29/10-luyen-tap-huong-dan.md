@@ -148,10 +148,7 @@ với $\omega>0$ và $B_0$ là biên độ dương.
 (a) Suất điện động là
 
 $$
-\begin{aligned}
-\mathcal E &= -N\frac{d\Phi_B}{dt} \\
-&= -\omega NAB_0\cos\omega t.
-\end{aligned}
+\mathcal E = -N\frac{d\Phi_B}{dt} = -\omega NAB_0\cos\omega t.
 $$
 
 (b) Tại $t=0$, suất điện động âm nên dòng chạy theo chiều kim đồng hồ. Tại $t=\pi/\omega$, suất điện động dương nên dòng chạy ngược chiều kim đồng hồ. Ở cả hai thời điểm, từ trường tức thời bằng không nhưng tốc độ biến thiên từ trường khác không.
@@ -189,10 +186,7 @@ $$
 (b) Tích có hướng $\vec v\times\vec B$ hướng theo $-x$. Điện trường cân bằng hướng theo $+x$ và có độ lớn
 
 $$
-\begin{aligned}
-E &= vB \\
-&= 2{,}34\,\mathrm{V/m}.
-\end{aligned}
+E = vB = 2{,}34\,\mathrm{V/m}.
 $$
 :::
 
@@ -489,10 +483,7 @@ $$
 Hai cạnh bên có cùng chiều dài nằm trong trường và chịu hai lực ngang ngược chiều, nên tổng hai lực bằng không. Lực từ tổng theo phương thẳng đứng bằng lực lên cạnh trên:
 
 $$
-\begin{aligned}
-F_B &= IBs \\
-&= \frac{B^2s^2v}{R}.
-\end{aligned}
+F_B = IBs = \frac{B^2s^2v}{R}.
 $$
 
 Tiết diện dây, điện trở vòng và khối lượng vòng là

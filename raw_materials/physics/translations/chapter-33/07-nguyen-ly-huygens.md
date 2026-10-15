@@ -71,19 +71,13 @@ Xét một mặt sóng phẳng biểu diễn bởi đoạn thẳng $AA'$ truyề
 - Tam giác $\triangle AOQ$ vuông tại $Q$, có cạnh đối $OQ = v_a t$ và cạnh huyền $AO$:
 
 $$
-\begin{aligned}
-\sin \theta_a &= \frac{OQ}{AO} \\
-&= \frac{v_a t}{AO}
-\end{aligned}
+\sin \theta_a = \frac{OQ}{AO} = \frac{v_a t}{AO}
 $$
 
 - Tam giác $\triangle AOB$ vuông tại $B$, có cạnh đối $AB = v_b t$ và cạnh huyền chung $AO$:
 
 $$
-\begin{aligned}
-\sin \theta_b &= \frac{AB}{AO} \\
-&= \frac{v_b t}{AO}
-\end{aligned}
+\sin \theta_b = \frac{AB}{AO} = \frac{v_b t}{AO}
 $$
 
 Lập tỷ số giữa $\sin \theta_a$ và $\sin \theta_b$, đại lượng cạnh huyền chung $AO$ và thời gian $t$ triệt tiêu:

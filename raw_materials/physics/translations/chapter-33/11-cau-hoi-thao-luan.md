@@ -15,10 +15,7 @@
 Gọi $L$ là độ dài đường truyền trong một lớp không khí được coi đồng nhất. Thời gian truyền qua lớp đó tăng thêm:
 
 $$
-\begin{aligned}
-\Delta t &= \frac L{c/n}-\frac Lc \\
-&= \frac{(n-1)L}{c}.
-\end{aligned}
+\Delta t = \frac L{c/n}-\frac Lc = \frac{(n-1)L}{c}.
 $$
 
 Chiết suất không khí rất gần 1. Hơn nữa, đoạn đường trong khí quyển nhỏ hơn nhiều khoảng cách từ Mặt Trời tới Trái Đất. Vì vậy độ trễ này rất nhỏ so với khoảng 8 phút truyền qua không gian. Khí quyển vẫn làm đổi hướng tia, nên độ trễ thời gian nhỏ không có nghĩa tác dụng khúc xạ có thể bỏ qua trong việc xác định vị trí biểu kiến.
@@ -351,10 +348,7 @@ Khi nằm nghiêng, kính quay cùng đầu. Trục truyền có thể trở nê
 Gọi góc giữa kính chèn và kính đầu là $\phi$. Góc giữa kính chèn và kính cuối là $90^\circ-\phi$. Ta có:
 
 $$
-\begin{aligned}
-I &= \frac{I_0}2\cos^2\phi\sin^2\phi \\
-&= \frac{I_0}8\sin^2 2\phi.
-\end{aligned}
+I = \frac{I_0}2\cos^2\phi\sin^2\phi = \frac{I_0}8\sin^2 2\phi.
 $$
 
 Với $\phi$ khác $0^\circ$ và $90^\circ$, có ánh sáng truyền qua. Giá trị lớn nhất là $I_0/8$ tại góc trung gian $45^\circ$.

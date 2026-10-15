@@ -125,10 +125,7 @@ $$
 (e) Tại trạng thái cộng hưởng, biên độ dòng điện đạt giá trị cực đại:
 
 $$
-\begin{aligned}
-I &= \frac{V_{\mathrm{in}}}{R} \\
-&= 0{,}100\,\mathrm A.
-\end{aligned}
+I = \frac{V_{\mathrm{in}}}{R} = 0{,}100\,\mathrm A.
 $$
 
 Biên độ điện áp đầu ra trên tụ điện:
@@ -329,10 +326,7 @@ Xét $R>0$, $L>0$, $C>0$ và $\omega>0$. Với $R=0$, trạng thái cưỡng b�
 Với $X = \omega L - \frac{1}{\omega C}$:
 
 $$
-\begin{aligned}
-V_R(\omega) &= I(\omega)R \\
-&= \frac{V R}{\sqrt{R^2 + X^2}}.
-\end{aligned}
+V_R(\omega) = I(\omega)R = \frac{V R}{\sqrt{R^2 + X^2}}.
 $$
 
 Vì tử số là hằng số, $V_R(\omega)$ đạt cực đại khi và chỉ khi mẫu số đạt cực tiểu. Điều này xảy ra khi thành phần phản kháng triệt tiêu:
@@ -583,10 +577,7 @@ $$
 Dung kháng của điện cực ở tần số này:
 
 $$
-\begin{aligned}
-X_C &= \frac{1}{\omega C} \\
-&= 10^4\,\Omega.
-\end{aligned}
+X_C = \frac{1}{\omega C} = 10^4\,\Omega.
 $$
 
 Trở kháng toàn phần của điện cực:

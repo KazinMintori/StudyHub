@@ -137,10 +137,10 @@ Tung một đồng xu 3 lần liên tiếp, có $2^3 = 8$ kết quả đồng kh
 Phân phối xác suất của $K$:
 $$
 \begin{aligned}
-P(K &= 0) = P(\{TTT\}) = \frac{1}{8} = 0{,}125 \\
-P(K &= 1) = P(\{HTT, THT, TTH\}) = \frac{3}{8} = 0{,}375 \\
-P(K &= 2) = P(\{HHT, HTH, THH\}) = \frac{3}{8} = 0{,}375 \\
-P(K &= 3) = P(\{HHH\}) = \frac{1}{8} = 0{,}125
+P(K = 0) &= P(\{TTT\}) = \frac{1}{8} = 0{,}125 \\
+P(K = 1) &= P(\{HTT, THT, TTH\}) = \frac{3}{8} = 0{,}375 \\
+P(K = 2) &= P(\{HHT, HTH, THH\}) = \frac{3}{8} = 0{,}375 \\
+P(K = 3) &= P(\{HHH\}) = \frac{1}{8} = 0{,}125
 \end{aligned}
 $$
 
@@ -517,7 +517,7 @@ Bảng phân phối xác suất:
 Sử dụng quy tắc biến cố đối:
 $$
 \begin{aligned}
-P(Y &\ge 1) = 1 - P(Y = 0) \\
+P(Y \ge 1) &= 1 - P(Y = 0) \\
 &= 1 - 0{,}4096 = 0{,}5904 \quad (59{,}04\%)
 \end{aligned}
 $$
@@ -526,7 +526,7 @@ $$
 Khi $n = 10, p = 0{,}20$:
 $$
 \begin{aligned}
-P(Y &= 2) = \binom{10}{2} (0{,}2)^2 (0{,}8)^8 \\
+P(Y = 2) &= \binom{10}{2} (0{,}2)^2 (0{,}8)^8 \\
 &= \frac{10 \times 9}{2} \times 0{,}04 \times 0{,}16777216 \\
 &= 45 \times 0{,}04 \times 0{,}16777216 \\
 &= 1{,}8 \times 0{,}16777216 \approx 0{,}3019899 \approx 30{,}20\%

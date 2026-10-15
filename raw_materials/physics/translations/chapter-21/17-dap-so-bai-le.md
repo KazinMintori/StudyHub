@@ -96,10 +96,7 @@ $$
 **Bài 21.83:**
 
 $$
-\begin{aligned}
-E_x &= E_y \\
-&= \frac{Q}{2\pi^2\varepsilon_0a^2}.
-\end{aligned}
+E_x = E_y = \frac{Q}{2\pi^2\varepsilon_0a^2}.
 $$
 
 **Bài 21.85:** (a) $6.25\times10^4\,\mathrm{N/C}$, hướng $225^\circ$ ngược chiều kim đồng hồ từ trục hướng phải tại P. (b) $1.00\times10^{-14}\,\mathrm N$, ngược hướng trường.

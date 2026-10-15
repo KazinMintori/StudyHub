@@ -11,10 +11,7 @@ Hình 26.1 minh họa bốn cách mắc ba điện trở $R_1$, $R_2$ và $R_3$ 
 Với bất kỳ tổ hợp điện trở nào, ta có thể thay cả tổ hợp bằng một điện trở duy nhất sao cho dòng điện tổng và hiệu điện thế hai đầu vẫn như cũ. Điện trở duy nhất ấy gọi là **điện trở tương đương** $R_{\mathrm{eq}}$. Nếu mạng điện nằm giữa hai đầu $a$ và $b$, có hiệu điện thế $V_{ab}$ và dòng điện tổng $I$, thì
 
 $$
-\begin{aligned}
-V_{ab} &= IR_{\mathrm{eq}}, \\
-R_{\mathrm{eq}} &= \frac{V_{ab}}{I}.
-\end{aligned}
+V_{ab} = IR_{\mathrm{eq}}, \quad R_{\mathrm{eq}} = \frac{V_{ab}}{I}.
 $$
 
 Để tìm $R_{\mathrm{eq}}$, ta đặt hiệu điện thế $V_{ab}$ lên mạng điện thật, tính dòng điện tương ứng $I$, rồi lấy tỉ số $V_{ab}/I$.
@@ -24,21 +21,13 @@ $$
 Trong Hình 26.1a, dòng điện $I$ như nhau qua cả ba điện trở. Định luật Ôm cho từng điện trở:
 
 $$
-\begin{aligned}
-V_{ax} &= IR_1, \\
-V_{xy} &= IR_2, \\
-V_{yb} &= IR_3.
-\end{aligned}
+V_{ax} = IR_1, \quad V_{xy} = IR_2, \quad V_{yb} = IR_3.
 $$
 
 Hiệu điện thế trên từng điện trở không nhất thiết bằng nhau, trừ trường hợp đặc biệt các điện trở bằng nhau. Hiệu điện thế giữa hai đầu toàn bộ tổ hợp bằng tổng các độ giảm thế thành phần:
 
 $$
-\begin{aligned}
-V_{ab} &= V_{ax}+V_{xy}+V_{yb} \\
-&= IR_1+IR_2+IR_3 \\
-&= I(R_1+R_2+R_3).
-\end{aligned}
+V_{ab} = V_{ax}+V_{xy}+V_{yb} = IR_1+IR_2+IR_3 = I(R_1+R_2+R_3).
 $$
 
 Chia hai vế cho dòng điện chung $I$ và dùng định nghĩa điện trở tương đương, ta được
@@ -70,20 +59,13 @@ Trong Hình 26.1b, dòng điện qua mỗi điện trở có thể khác nhau. T
 Gọi các dòng điện qua ba điện trở lần lượt là $I_1$, $I_2$ và $I_3$. Từ định luật Ôm:
 
 $$
-\begin{aligned}
-I_1 &= \frac{V_{ab}}{R_1}, \\
-I_2 &= \frac{V_{ab}}{R_2}, \\
-I_3 &= \frac{V_{ab}}{R_3}.
-\end{aligned}
+I_1 = \frac{V_{ab}}{R_1}, \quad I_2 = \frac{V_{ab}}{R_2}, \quad I_3 = \frac{V_{ab}}{R_3}.
 $$
 
 Điện tích không tích tụ tại điểm $a$ cũng không biến mất khỏi đó. Bởi vậy, dòng tổng bằng tổng các dòng phân nhánh:
 
 $$
-\begin{aligned}
-I &= I_1+I_2+I_3 \\
-&= \frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2} +\frac{V_{ab}}{R_3}.
-\end{aligned}
+I = I_1+I_2+I_3 = \frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2} +\frac{V_{ab}}{R_3}.
 $$
 
 Theo định nghĩa điện trở tương đương, $I/V_{ab}=1/R_{\mathrm{eq}}$. Do đó,
@@ -95,10 +77,7 @@ $$
 Với $n$ điện trở mắc song song, ta khai triển ba số hạng đầu trước khi viết gọn bằng ký hiệu tổng:
 
 $$
-\begin{aligned}
-\frac{1}{R_{\mathrm{eq}}} &= \frac{1}{R_1}+\frac{1}{R_2} +\frac{1}{R_3}+\cdots+\frac{1}{R_n} \\
-&= \sum_{i=1}^{n}\frac{1}{R_i}.
-\end{aligned}
+\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1}+\frac{1}{R_2} +\frac{1}{R_3}+\cdots+\frac{1}{R_n} = \sum_{i=1}^{n}\frac{1}{R_i}.
 $$
 
 Điện trở tương đương song song luôn nhỏ hơn từng điện trở nhánh. Mỗi nhánh thêm vào tạo thêm một đường cho điện tích chuyển động, làm tổng dòng tăng khi hiệu điện thế không đổi.
@@ -110,10 +89,7 @@ $$
 Với hai điện trở song song, quy tắc trên cho
 
 $$
-\begin{aligned}
-\frac{1}{R_{\mathrm{eq}}} &= \frac{1}{R_1} +\frac{1}{R_2} \\
-&= \frac{R_1+R_2}{R_1R_2}.
-\end{aligned}
+\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} +\frac{1}{R_2} = \frac{R_1+R_2}{R_1R_2}.
 $$
 
 Suy ra công thức tích trên tổng:
@@ -171,11 +147,7 @@ Mạng gồm ba điện trở, trong đó $6\,\Omega$ song song với $3\,\Omega
 Từ (26.2), điện trở tương đương của cặp $6\,\Omega$ và $3\,\Omega$ là
 
 $$
-\begin{aligned}
-\frac{1}{R_{6\parallel3}} &= \frac{1}{6\,\Omega} +\frac{1}{3\,\Omega} \\
-&= \frac{1}{2\,\Omega}, \\
-R_{6\parallel3} &= 2\,\Omega.
-\end{aligned}
+\frac{1}{R_{6\parallel3}} = \frac{1}{6\,\Omega} +\frac{1}{3\,\Omega} = \frac{1}{2\,\Omega} \implies R_{6\parallel3} = 2\,\Omega.
 $$
 
 Cặp tương đương này nối tiếp với điện trở $4\,\Omega$, nên
@@ -199,10 +171,7 @@ $$
 Hai điện trở song song cùng chịu hiệu điện thế này. Do đó,
 
 $$
-\begin{aligned}
-I_{6\,\Omega} &= \frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A, \\
-I_{3\,\Omega} &= \frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
-\end{aligned}
+I_{6\,\Omega} = \frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A, \quad I_{3\,\Omega} = \frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
 $$
 
 #### Đánh giá
@@ -242,31 +211,19 @@ $$
 Vì hai điện trở bằng nhau, hiệu điện thế trên từng bóng cũng bằng nhau:
 
 $$
-\begin{aligned}
-V_{ab} &= V_{bc} = IR \\
-&= (2\,\mathrm A)(2\,\Omega) \\
-&= 4\,\mathrm V.
-\end{aligned}
+V_{ab} = V_{bc} = IR = (2\,\mathrm A)(2\,\Omega) = 4\,\mathrm V.
 $$
 
 Công suất mỗi bóng là
 
 $$
-\begin{aligned}
-P &= I^2R \\
-&= (2\,\mathrm A)^2(2\,\Omega) \\
-&= 8\,\mathrm W.
-\end{aligned}
+P = I^2R = (2\,\mathrm A)^2(2\,\Omega) = 8\,\mathrm W.
 $$
 
 Có thể kiểm tra công suất bằng hiệu điện thế trên bóng:
 
 $$
-\begin{aligned}
-P &= \frac{V^2}{R} \\
-&= \frac{(4\,\mathrm V)^2}{2\,\Omega} \\
-&= 8\,\mathrm W.
-\end{aligned}
+P = \frac{V^2}{R} = \frac{(4\,\mathrm V)^2}{2\,\Omega} = 8\,\mathrm W.
 $$
 
 Tổng công suất cấp cho hai bóng là
@@ -284,21 +241,13 @@ $$
 Công suất mỗi bóng là
 
 $$
-\begin{aligned}
-P &= I^2R \\
-&= (4\,\mathrm A)^2(2\,\Omega) \\
-&= 32\,\mathrm W.
-\end{aligned}
+P = I^2R = (4\,\mathrm A)^2(2\,\Omega) = 32\,\mathrm W.
 $$
 
 Kiểm tra theo hiệu điện thế:
 
 $$
-\begin{aligned}
-P &= \frac{V^2}{R} \\
-&= \frac{(8\,\mathrm V)^2}{2\,\Omega} \\
-&= 32\,\mathrm W.
-\end{aligned}
+P = \frac{V^2}{R} = \frac{(8\,\mathrm V)^2}{2\,\Omega} = 32\,\mathrm W.
 $$
 
 Tổng công suất của hai bóng là

@@ -61,11 +61,7 @@ Xem Ví dụ 24.5–24.6.
 Công cần thiết để nạp một tụ có điện dung không đổi từ trạng thái không tích điện đến điện tích Q bằng năng lượng điện trường được tích trữ:
 
 $$
-\begin{aligned}
-U &= \frac{Q^2}{2C}, \\
-&= \frac12 CV^2, \\
-&= \frac12 QV.
-\end{aligned}
+U = \frac{Q^2}{2C}, = \frac12 CV^2, = \frac12 QV.
 $$
 
 Trong chân không, mật độ năng lượng, tức năng lượng trên một đơn vị thể tích, là:
@@ -97,10 +93,7 @@ Nếu ngắt nguồn trước khi đưa điện môi vào, điện tích tự do
 Mật độ năng lượng trong điện môi tuyến tính là:
 
 $$
-\begin{aligned}
-u &= \frac12 K\varepsilon_0 E^2, \\
-&= \frac12\varepsilon E^2.
-\end{aligned}
+u = \frac12 K\varepsilon_0 E^2, = \frac12\varepsilon E^2.
 $$
 
 Ở đây E là điện trường thực bên trong vật liệu. Xem Ví dụ 24.11.

@@ -17,10 +17,7 @@ Hai bản ở nút c chỉ nối với nhau và tổng điện tích của nút 
 Đặt V₁ = V_ac, V₂ = V_cb và V = V_ab. Khi đó V₁ = Q/C₁, V₂ = Q/C₂, còn điện áp hai đầu là tổng hai điện áp:
 
 $$
-\begin{aligned}
-V &= V_1+V_2 \\
-&= Q(1/C_1+1/C_2).
-\end{aligned}
+V = V_1+V_2 = Q(1/C_1+1/C_2).
 $$
 
 Chia hai vế cho cùng điện tích Q khác không:

@@ -95,10 +95,7 @@ $$
 Để sóng điện từ tồn tại và thỏa mãn đồng thời cả định luật Faraday lẫn định luật Ampere, cả hai hệ thức (32.4) và (32.8) phải cùng được thỏa mãn. Thay biểu thức $E = cB$ từ (32.4) vào (32.8), ta có:
 
 $$
-\begin{aligned}
-B &= \epsilon_0 \mu_0 c(cB) \\
-&= \epsilon_0\mu_0c^2B.
-\end{aligned}
+B = \epsilon_0 \mu_0 c(cB) = \epsilon_0\mu_0c^2B.
 $$
 
 Vì độ lớn từ trường $B$ khác không, phương trình đòi hỏi $\epsilon_0 \mu_0 c^2 = 1$, kéo theo công thức xác định vận tốc ánh sáng trong chân không:

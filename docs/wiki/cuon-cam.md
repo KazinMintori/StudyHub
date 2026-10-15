@@ -16,11 +16,7 @@ Cuộn cảm là phần tử được chế tạo để có tự cảm xác đ�
 Với cuộn lý tưởng, bỏ qua điện trở dây quấn, nhưng giữ tự cảm. Nguồn ngoài phải cấp công để tăng năng lượng từ trường. Với dòng dương,
 
 $$
-\begin{aligned}
-p_L &= v_Li \\
-&= Li\frac{di}{dt} \\
-&= \frac{d}{dt}\left(\frac12Li^2\right).
-\end{aligned}
+p_L = v_Li = Li\frac{di}{dt} = \frac{d}{dt}\left(\frac12Li^2\right).
 $$
 
 Công suất dương nghĩa cuộn nhận năng lượng, âm nghĩa cuộn trả năng lượng. Dấu này không được suy chỉ từ dấu dòng, mà cần cả điện áp.

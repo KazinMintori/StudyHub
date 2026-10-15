@@ -22,10 +22,7 @@ $$
 Các cạnh dài $b$ hợp với từ trường góc $90^\circ-\phi$, nên lực trên mỗi cạnh có độ lớn:
 
 $$
-\begin{aligned}
-F' &= IbB\sin(90^\circ-\phi) \\
-&= IbB\cos\phi.
-\end{aligned}
+F' = IbB\sin(90^\circ-\phi) = IbB\cos\phi.
 $$
 
 Các lực trên từng cặp cạnh triệt tiêu theo véc-tơ. Vì thế tổng lực lên vòng bằng không. Tuy nhiên, hai lực trên cạnh dài $a$ có cánh tay đòn $\tfrac{b}{2}\sin\phi$ đối với trục qua tâm, nên mômen tổng có độ lớn:

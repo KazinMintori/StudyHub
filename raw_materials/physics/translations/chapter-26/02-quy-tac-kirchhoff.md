@@ -246,10 +246,7 @@ $$
 Đi theo nhánh bên phải từ $a$ đến $b$:
 
 $$
-\begin{aligned}
-V_{ba} &= 12\,\mathrm V-(3\,\mathrm A)(2\,\Omega) \\
-&= 6\,\mathrm V.
-\end{aligned}
+V_{ba} = 12\,\mathrm V-(3\,\mathrm A)(2\,\Omega) = 6\,\mathrm V.
 $$
 
 Đi theo nhánh giữa:
@@ -413,10 +410,7 @@ Trong mạch ở Ví dụ 26.6 và Hình 26.12, tìm hiệu điện thế $V_{ab
 Đường ngắn nhất đi qua điện trở $1\,\Omega$ ở giữa mạng. Ví dụ 26.6 cho $I_3=-1\,\mathrm A$, nghĩa là dòng thực qua điện trở này chạy từ phải sang trái. Khi đi từ $b$ đến $a$, ta đi cùng chiều dòng thực nên điện thế giảm $1\,\mathrm V$:
 
 $$
-\begin{aligned}
-V_{ab} &= -(1\,\mathrm A)(1\,\Omega) \\
-&= -1\,\mathrm V.
-\end{aligned}
+V_{ab} = -(1\,\mathrm A)(1\,\Omega) = -1\,\mathrm V.
 $$
 
 Điện thế tại $a$ thấp hơn tại $b$ $1\,\mathrm V$.

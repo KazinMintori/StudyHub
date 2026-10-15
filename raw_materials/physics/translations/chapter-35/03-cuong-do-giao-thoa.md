@@ -216,10 +216,7 @@ $$
 Thay vào biểu thức cường độ:
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2(0{,}4383\,\mathrm{rad}) \\
-&\approx 0{,}82 I_0
-\end{aligned}
+I = I_0 \cos^2(0{,}4383\,\mathrm{rad}) \approx 0{,}82 I_0
 $$
 
 Thay số $I_0 = 0{,}020\,\mathrm{W/m^2}$:
@@ -240,10 +237,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-\sin \theta &= \pm \frac{1}{8{,}00} \\
-&= \pm 0{,}125
-\end{aligned}
+\sin \theta = \pm \frac{1}{8{,}00} = \pm 0{,}125
 $$
 
 Lấy hàm sin ngược, ta tìm được các góc:
@@ -327,10 +321,7 @@ Tính toán cụ thể cho từng trường hợp:
 - Điểm (i): Vì hiệu đường đi $\Delta r = 4{,}00 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 0{,}800$:
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \\
-&\approx 0{,}655 I_0
-\end{aligned}
+I = I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \approx 0{,}655 I_0
 $$
 
 - Điểm (ii):
@@ -346,10 +337,7 @@ $$
 - Điểm (iii): Vì hiệu đường đi $\Delta r = 7{,}50 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 1{,}50$:
 
 $$
-\begin{aligned}
-I &= I_0 \cos^2(1{,}50\pi\,\mathrm{rad}) \\
-&= 0
-\end{aligned}
+I = I_0 \cos^2(1{,}50\pi\,\mathrm{rad}) = 0
 $$
 
 - Điểm (iv):

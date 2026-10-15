@@ -168,11 +168,7 @@ Sóng dừng điện từ được thiết lập trong một hộp cộng hưở
 (a) Bước sóng và tần số của mode cơ bản $n = 1$:
 
 $$
-\begin{aligned}
-\lambda_1 &= 2L \\
-&= 2(1{,}50\,\mathrm{cm}) \\
-&= 3{,}00\,\mathrm{cm}
-\end{aligned}
+\lambda_1 = 2L = 2(1{,}50\,\mathrm{cm}) = 3{,}00\,\mathrm{cm}
 $$
 
 Tần số dao động tương ứng:

@@ -374,10 +374,7 @@ $$
 Suy ra khoảng cách ảnh từ mặt trước của giọt sương:
 
 $$
-\begin{aligned}
-s' &= \frac{1{,}33}{0{,}33} R \\
-&\approx 4{,}0 R
-\end{aligned}
+s' = \frac{1{,}33}{0{,}33} R \approx 4{,}0 R
 $$
 
 Điểm hội tụ của chùm tia sáng cách bề mặt trước của giọt nước một khoảng bằng $4{,}0 R$. Tuy nhiên, vì giọt sương chỉ là một phần hình cầu, khoảng cách từ mặt trước đến mặt sau tiếp xúc với phiến lá tối đa chỉ bằng đường kính hình cầu $2 R$.

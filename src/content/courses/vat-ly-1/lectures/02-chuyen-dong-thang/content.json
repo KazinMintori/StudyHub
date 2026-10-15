@@ -92,12 +92,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
-      "line": 263,
+      "line": 260,
       "title": "Bài toán"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
-      "line": 321,
+      "line": 318,
       "title": "Câu hỏi kiểm tra"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 232,
+      "line": 229,
       "title": "Câu hỏi kiểm tra"
     },
     {
@@ -824,12 +824,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
-      "line": 267,
+      "line": 264,
       "title": "Lời giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
-      "line": 330,
+      "line": 327,
       "title": "Lời giải & Phân tích"
     },
     {
@@ -839,7 +839,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 239,
+      "line": 236,
       "title": "Lời giải & Phân tích"
     }
   ],
@@ -1009,7 +1009,7 @@
     {
       "reference": "img/young-02/hinh-2-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
-      "line": 253,
+      "line": 250,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-25.png"
     },
     {

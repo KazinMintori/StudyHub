@@ -230,10 +230,7 @@ Cầu nhỏ dương q, khối lượng m được thả từ nghỉ trong trư�
 - Định luật Newton cho $a=(qE-mg)/m$, rồi động học với vận tốc đầu bằng không.
 
 $$
-\begin{aligned}
-t &= \sqrt{\frac{2d}{a}} \\
-&= \sqrt{\frac{2md}{qE-mg}}.
-\end{aligned}
+t = \sqrt{\frac{2d}{a}} = \sqrt{\frac{2md}{qE-mg}}.
 $$
 
 Điều kiện $qE>mg$ chính là điều kiện cầu gia tốc lên. Nếu bằng nhau, cầu từ nghỉ không đi lên.
@@ -517,10 +514,7 @@ Trong mô hình nguyên tử hydrogen, electron chuyển động tròn bán kín
 - Không cộng thêm một “lực hướng tâm” khác vào Coulomb.
 
 $$
-\begin{aligned}
-v &= \sqrt{\frac{ke^2}{m_er}} \\
-&= 2.19\times10^6\,\mathrm{m/s}.
-\end{aligned}
+v = \sqrt{\frac{ke^2}{m_er}} = 2.19\times10^6\,\mathrm{m/s}.
 $$
 :::
 

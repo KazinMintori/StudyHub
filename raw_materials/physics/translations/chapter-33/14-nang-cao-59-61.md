@@ -157,10 +157,7 @@ Snell tại $A$ cho $\sin i=n\sin r$. Tại $C$, quan hệ ngược lại cho $\
 (b) Mỗi lần khúc xạ làm tia đổi hướng $i-r$. Một lần phản xạ nội làm tia đổi hướng $\pi-2r$. Tổng cộng:
 
 $$
-\begin{aligned}
-\Delta &= 2(i-r)+(\pi-2r) \\
-&= \pi+2i-4r.
-\end{aligned}
+\Delta = 2(i-r)+(\pi-2r) = \pi+2i-4r.
 $$
 
 (c):

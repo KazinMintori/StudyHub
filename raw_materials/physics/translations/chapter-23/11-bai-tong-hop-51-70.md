@@ -266,10 +266,7 @@ Trụ kim loại dài bán kính a nằm đồng trục trong ống kim loại d
 (a) Với r < a, V = 2kλ ln(b/a). Trong khe, V(r) = 2kλ ln(b/r). Ngoài b, V = 0. (b) V_ab = 2kλ ln(b/a). (c)
 
 $$
-\begin{aligned}
-E_r &= -dV/dr=2k\lambda/r \\
-&= \frac{V_{ab}}{\ln(b/a)}\frac1r.
-\end{aligned}
+E_r = -dV/dr = 2k\lambda/r = \frac{V_{ab}}{\ln(b/a)}\frac1r.
 $$
 
 (d) V_ab giữ nguyên. Mặt trong ống vẫn cần −λ để trường trong vật liệu bằng không, còn mặt ngoài có +λ khi ống trung hòa. Trường ngoài thay đổi nhưng hiệu giữa hai trụ không đổi.
@@ -291,10 +288,7 @@ Bức xạ ion hóa không khí dọc đường đi. Trong bộ đếm Geiger, d
 - Chuyển bán kính dây micro sang mét, không nhầm thành millimét.
 
 $$
-\begin{aligned}
-V_{ab} &= E(r)r\ln(b/a) \\
-&= 1.16\times10^3\,\mathrm V.
-\end{aligned}
+V_{ab} = E(r)r\ln(b/a) = 1.16\times10^3\,\mathrm V.
 $$
 
 Dây phải cao thế hơn ống để electron chuyển động về dây, ngược chiều trường.
@@ -352,10 +346,7 @@ Hai bản lệch hướng của máy hiện sóng là bản kim loại vuông c�
 (a) Hai bản mang điện tích khoảng ±40 pC. (b) E ≈ $5.0\times10^3$ V/m. (c)
 
 $$
-\begin{aligned}
-v &= \sqrt{2e|\Delta V|/m_e} \\
-&\approx 3.0\times10^6\,\mathrm{m/s}.
-\end{aligned}
+v = \sqrt{2e|\Delta V|/m_e} \approx 3.0\times10^6\,\mathrm{m/s}.
 $$
 
 Số chữ số được giới hạn bởi kích thước ước lượng của bản.
@@ -447,10 +438,7 @@ Thanh cách điện mảnh uốn thành nửa vòng bán kính a, điện tích 
 - Vì khoảng cách không đổi, đưa 1/a ra ngoài tích phân.
 
 $$
-\begin{aligned}
-V &= \frac{k}{a}\int dq \\
-&= \frac{kQ}{a}.
-\end{aligned}
+V = \frac{k}{a}\int dq = \frac{kQ}{a}.
 $$
 
 Không cần chiếu theo góc như khi tìm vector trường của nửa vòng.
@@ -470,10 +458,7 @@ Cầu cách điện R = 5,00 cm có Q = +4,00 µC đều trong thể tích. Tìm
 - Trường ra nên tâm cao thế hơn.
 
 $$
-\begin{aligned}
-V(0)-V(R) &= \frac{kQ}{2R} \\
-&= +360\,\mathrm{kV}.
-\end{aligned}
+V(0)-V(R) = \frac{kQ}{2R} = +360\,\mathrm{kV}.
 $$
 :::
 

@@ -32,10 +32,7 @@ $$
 (b) Từ thông móc vòng bằng
 
 $$
-\begin{aligned}
-N_2\Phi_{B2} &= Mi_1 \\
-&= 1{,}56\times10^{-3}\,\mathrm{Wb}.
-\end{aligned}
+N_2\Phi_{B2} = Mi_1 = 1{,}56\times10^{-3}\,\mathrm{Wb}.
 $$
 
 Đây là tổng từ thông tính trên tất cả các vòng. Không thể suy ra từ thông riêng một vòng nếu chưa biết $N_2$.
@@ -108,10 +105,7 @@ $$
 (a) Tự cảm bằng
 
 $$
-\begin{aligned}
-L &= \frac{3{,}70\times10^{-3}}{145} \\
-&= 25{,}5\,\mu\mathrm H.
-\end{aligned}
+L = \frac{3{,}70\times10^{-3}}{145} = 25{,}5\,\mu\mathrm H.
 $$
 
 (b) Tốc độ tăng dòng tại 2,00 s là

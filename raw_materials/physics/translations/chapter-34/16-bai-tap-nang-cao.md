@@ -69,10 +69,7 @@ Khi $b$ tính ra âm, đường tia cắt trục phía trên điểm tới. Khô
 (f) Tung độ tiêu điểm:
 
 $$
-\begin{aligned}
-f &= ar^2-b \\
-&= \frac1{4a}.
-\end{aligned}
+f = ar^2-b = \frac1{4a}.
 $$
 
 Kết quả không phụ thuộc $r$, nên mọi tia của chùm song song trục đều đi qua cùng tiêu điểm. Tia đúng trên trục là trường hợp giới hạn đối xứng. Kết luận này chính xác cho gương parabol và chùm song song trục, không cần xấp xỉ góc nhỏ.
@@ -225,10 +222,7 @@ $$
 Dấu âm cho biết tia vào giác mạc cần đang hội tụ về một điểm sau giác mạc khoảng $3{,}00\,\mathrm{cm}$. Kính cách mắt $2{,}00\,\mathrm{cm}$ về trước nên phải hội tụ chùm song song ở khoảng:
 
 $$
-\begin{aligned}
-f_w &= 2{,}00+3{,}00170 \\
-&= 5{,}00170\,\mathrm{cm}.
-\end{aligned}
+f_w = 2{,}00+3{,}00170 = 5{,}00170\,\mathrm{cm}.
 $$
 
 Gọi $n_g=1{,}62$, $n_w=1{,}333$. Với cùng hai mặt kính:

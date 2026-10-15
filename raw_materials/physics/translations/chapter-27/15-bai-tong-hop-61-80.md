@@ -30,10 +30,7 @@ $$
 Độ lớn lực là
 
 $$
-\begin{aligned}
-F &= \sqrt{2}(0{,}800\,\mathrm{N}) \\
-&= 1{,}13\,\mathrm{N}.
-\end{aligned}
+F = \sqrt{2}(0{,}800\,\mathrm{N}) = 1{,}13\,\mathrm{N}.
 $$
 
 Lực hướng theo đường phân giác xuống dưới và sang trái, tức chiều $-x,-y$.
@@ -113,10 +110,7 @@ Gần mặt đất, từ trường Trái Đất thường có độ lớn $0{,}5
 **Tóm tắt đề bài:** $B_{\oplus}=0{,}50\,\mathrm{G}$ nghiêng $45^\circ$, $d=5{,}0\,\mathrm{mm}$, $\rho=8900\,\mathrm{kg/m^3}$. Diện tích tiết diện thanh là
 
 $$
-\begin{aligned}
-A &= \pi(d/2)^2 \\
-&= 1{,}96\times10^{-5}\,\mathrm{m^2}.
-\end{aligned}
+A = \pi(d/2)^2 = 1{,}96\times10^{-5}\,\mathrm{m^2}.
 $$
 
 **Hướng đi:**
@@ -129,10 +123,7 @@ $$
 (a) Điều kiện cân bằng là $ILB_h=\rho ALg$, vì vậy
 
 $$
-\begin{aligned}
-I &= \frac{\rho Ag}{B_h} \\
-&= 4{,}82\times10^4\,\mathrm{A}.
-\end{aligned}
+I = \frac{\rho Ag}{B_h} = 4{,}82\times10^4\,\mathrm{A}.
 $$
 
 (b) Dòng cần thiết lớn hơn nhiều so với $900\,\mathrm{A}$, do đó thiết bị không khả thi với từ trường Trái Đất.
@@ -173,10 +164,7 @@ Khung dây chữ nhật trong hình P27.64 quay quanh trục $y$ và mang dòng 
 **Lời giải.** Diện tích là
 
 $$
-\begin{aligned}
-A &= (0{,}0800)(0{,}0600) \\
-&= 4{,}80\times10^{-3}\,\mathrm{m^2}.
-\end{aligned}
+A = (0{,}0800)(0{,}0600) = 4{,}80\times10^{-3}\,\mathrm{m^2}.
 $$
 
 Do đó $\mu=0{,}0720\,\mathrm{A\,m^2}$. Theo chiều dòng điện trong hình, thành phần pháp tuyến là
@@ -220,10 +208,7 @@ $$
 Diện tích khung là
 
 $$
-\begin{aligned}
-A &= (0{,}08)(0{,}06) \\
-&= 4{,}8\times10^{-3}\,\mathrm{m^2}.
-\end{aligned}
+A = (0{,}08)(0{,}06) = 4{,}8\times10^{-3}\,\mathrm{m^2}.
 $$
 
 Do đó $\mu=IA=0{,}0394\,\mathrm{A\,m^2}$.
@@ -273,19 +258,13 @@ $$
 Mômen vi phân quanh $a$ là
 
 $$
-\begin{aligned}
-d\vec\tau &= x\hat i\times d\vec F \\
-&= IBx\,dx\,\hat k.
-\end{aligned}
+d\vec\tau = x\hat i\times d\vec F = IBx\,dx\,\hat k.
 $$
 
 (b) Tích phân:
 
 $$
-\begin{aligned}
-\vec\tau &= IB\hat k\int_0^L x\,dx \\
-&= \frac{1}{2}IBL^2\hat k.
-\end{aligned}
+\vec\tau = IB\hat k\int_0^L x\,dx = \frac{1}{2}IBL^2\hat k.
 $$
 
 (c) Tổng lực từ có độ lớn $F=IBL$. Đặt lực tại trung điểm thì cánh tay đòn là $L/2$, do đó $\tau=F(L/2)=IBL^2/2$, trùng với kết quả tích phân.
@@ -474,10 +453,7 @@ $$
 **Lời giải.** Mômen từ là
 
 $$
-\begin{aligned}
-\tau_B &= \frac12 IBL^2 \\
-&= 2{,}33\times10^{-2}\,\mathrm{N\,m}.
-\end{aligned}
+\tau_B = \frac12 IBL^2 = 2{,}33\times10^{-2}\,\mathrm{N\,m}.
 $$
 
 Mômen trọng lực có độ lớn
@@ -610,10 +586,7 @@ $$
 (b) Lấy đạo hàm phương trình thứ hai rồi dùng phương trình của $dv_x/dt$:
 
 $$
-\begin{aligned}
-\frac{d^2v_y}{dt^2} &= -\omega\frac{dv_x}{dt} \\
-&= -\omega^2v_y.
-\end{aligned}
+\frac{d^2v_y}{dt^2} = -\omega\frac{dv_x}{dt} = -\omega^2v_y.
 $$
 
 (c) Điều kiện $v_y(0)=0$ và $v_y'(0)=g$ cho
@@ -683,10 +656,7 @@ $$
 Đặt $C=D/(IA)$, suy ra $B_x=3C$, $B_y=4C$. Dùng độ lớn trường đã cho:
 
 $$
-\begin{aligned}
-B_z^2 &= (13C)^2-(3C)^2 -(4C)^2 \\
-&= 144C^2.
-\end{aligned}
+B_z^2 = (13C)^2-(3C)^2 -(4C)^2 = 144C^2.
 $$
 
 Vì $U=IAB_z<0$, phải chọn $B_z=-12C$.
@@ -740,10 +710,7 @@ $$
 (c) Tốc độ ion là
 
 $$
-\begin{aligned}
-v &= \sqrt{2(q/m)V} \\
-&= 5{,}64\times10^5\,\mathrm{m/s}.
-\end{aligned}
+v = \sqrt{2(q/m)V} = 5{,}64\times10^5\,\mathrm{m/s}.
 $$
 
 (d) Vì $R\propto1/\sqrt q$ ở cùng $V,B,m$, nên $R_2=0{,}212/\sqrt2=0{,}150\,\mathrm{m}$.
@@ -831,10 +798,7 @@ $$
 Khối lượng hạt alpha là
 
 $$
-\begin{aligned}
-m_\alpha &= \frac{2e}{q/m} \\
-&= 6{,}65\times10^{-27}\,\mathrm{kg}.
-\end{aligned}
+m_\alpha = \frac{2e}{q/m} = 6{,}65\times10^{-27}\,\mathrm{kg}.
 $$
 
 (b) Tần số cyclotron của proton và electron lần lượt là
@@ -891,10 +855,7 @@ $$
 (d) Dùng $\int_0^\pi\sin^3\theta\,d\theta=4/3$:
 
 $$
-\begin{aligned}
-M &= \frac{4\pi}{3}\sigma\omega R^4 \\
-&= \frac{Q\omega R^2}{3}.
-\end{aligned}
+M = \frac{4\pi}{3}\sigma\omega R^4 = \frac{Q\omega R^2}{3}.
 $$
 
 Vì $\vec\Omega=\omega\hat k$, ta có $\vec M=(QR^2/3)\vec\Omega$.
@@ -938,10 +899,7 @@ $$
 (a) Bán kính quỹ đạo xoắn dùng thành phần vuông góc:
 
 $$
-\begin{aligned}
-r &= \frac{m_ev_\perp}{eB} \\
-&\approx 0{,}150\,\mathrm m.
-\end{aligned}
+r = \frac{m_ev_\perp}{eB} \approx 0{,}150\,\mathrm m.
 $$
 
 (b) Electron tiến về bề mặt dọc từ trường với tốc độ $v_\parallel\approx69{,}5\,\mathrm{km/s}$. Tốc độ toàn phần vẫn là $400\,\mathrm{km/s}$ vì lực từ không sinh công. Hai đại lượng này khác nhau.
@@ -951,10 +909,7 @@ $$
 (d) Tần số:
 
 $$
-\begin{aligned}
-f &= \frac{eB}{2\pi m_e} \\
-&\approx 4{,}19\times10^5\,\mathrm{Hz}.
-\end{aligned}
+f = \frac{eB}{2\pi m_e} \approx 4{,}19\times10^5\,\mathrm{Hz}.
 $$
 
 (e) Điện trường hướng bắc, còn độ dời $100\,\mathrm{km}$ hướng nam. Electron chịu lực điện hướng nam, nên công dương:

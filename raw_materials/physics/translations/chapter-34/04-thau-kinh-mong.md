@@ -59,10 +59,7 @@ $$
 Chia cả hai vế cho $s'$ và đổi dấu:
 
 $$
-\begin{aligned}
-\frac{1}{s} &= \frac{s' - f}{s' f} \\
-&= \frac{1}{f} - \frac{1}{s'}
-\end{aligned}
+\frac{1}{s} = \frac{s' - f}{s' f} = \frac{1}{f} - \frac{1}{s'}
 $$
 
 Chuyển số hạng $1/s'$ sang vế trái, ta thu được **phương trình thấu kính mỏng**:
@@ -325,37 +322,25 @@ Từ phương trình (34.17), độ phóng đại ngang tương ứng ở từng
 (a) Đối với $s = 50\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-m &= -\frac{33{,}3\,\mathrm{cm}}{50\,\mathrm{cm}} \\
-&= -\frac{2}{3}
-\end{aligned}
+m = -\frac{33{,}3\,\mathrm{cm}}{50\,\mathrm{cm}} = -\frac{2}{3}
 $$
 
 (b) Đối với $s = 20\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-m &= -\frac{\pm\infty}{20\,\mathrm{cm}} \\
-&= \pm\infty
-\end{aligned}
+m = -\frac{\pm\infty}{20\,\mathrm{cm}} = \pm\infty
 $$
 
 (c) Đối với $s = 15\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-m &= -\frac{-60\,\mathrm{cm}}{15\,\mathrm{cm}} \\
-&= +4
-\end{aligned}
+m = -\frac{-60\,\mathrm{cm}}{15\,\mathrm{cm}} = +4
 $$
 
 (d) Đối với $s = -40\,\mathrm{cm}$:
 
 $$
-\begin{aligned}
-m &= -\frac{13{,}3\,\mathrm{cm}}{-40\,\mathrm{cm}} \\
-&= +\frac{1}{3}
-\end{aligned}
+m = -\frac{13{,}3\,\mathrm{cm}}{-40\,\mathrm{cm}} = +\frac{1}{3}
 $$
 
 **Đánh giá**: Khoảng cách ảnh $s'$ mang giá trị dương ở phần (a) và (d), nhưng mang giá trị âm ở phần (c). Điều này hoàn toàn hợp lý: Ảnh là ảnh thật ở phần (a) và (d), nhưng là ảnh ảo ở phần (c). Các tia sáng ló ra khỏi thấu kính ở phần (b) là chùm tia song song và không bao giờ hội tụ, do đó ảnh có thể xem như nằm ở $+\infty$ hoặc $-\infty$.
@@ -391,11 +376,7 @@ $$
 Suy ra:
 
 $$
-\begin{aligned}
-s &= -2 f \\
-&= -2(-20{,}0\,\mathrm{cm}) \\
-&= 40{,}0\,\mathrm{cm}
-\end{aligned}
+s = -2 f = -2(-20{,}0\,\mathrm{cm}) = 40{,}0\,\mathrm{cm}
 $$
 
 Vật cần được đặt cách thấu kính một khoảng $40{,}0\,\mathrm{cm}$. Khoảng cách ảnh sẽ là:
@@ -441,10 +422,7 @@ $$
 Ảnh $I$ nằm cách thấu kính $A$ một khoảng $24{,}0\,\mathrm{cm}$ về bên phải. Độ phóng đại ngang của thấu kính $A$ là:
 
 $$
-\begin{aligned}
-m_A &= -\frac{24{,}0\,\mathrm{cm}}{12{,}0\,\mathrm{cm}} \\
-&= -2{,}00
-\end{aligned}
+m_A = -\frac{24{,}0\,\mathrm{cm}}{12{,}0\,\mathrm{cm}} = -2{,}00
 $$
 
 Do đó ảnh $I$ bị ngược chiều và cao gấp đôi vật $O$.
@@ -473,30 +451,19 @@ $$
 Ảnh cuối cùng $I'$ nằm cách thấu kính $B$ một khoảng $12{,}0\,\mathrm{cm}$ về bên phải. Độ phóng đại do thấu kính $B$ tạo ra là:
 
 $$
-\begin{aligned}
-m_B &= -\frac{12{,}0\,\mathrm{cm}}{12{,}0\,\mathrm{cm}} \\
-&= -1{,}00
-\end{aligned}
+m_B = -\frac{12{,}0\,\mathrm{cm}}{12{,}0\,\mathrm{cm}} = -1{,}00
 $$
 
 **Đánh giá**: Giá trị của $m_B$ cho thấy ảnh cuối cùng $I'$ có độ lớn bằng đúng ảnh thứ nhất $I$ nhưng có chiều ngược lại. Độ phóng đại tổng cộng của cả hệ thống là:
 
 $$
-\begin{aligned}
-M &= m_A m_B \\
-&= (-2{,}00)(-1{,}00) \\
-&= +2{,}00
-\end{aligned}
+M = m_A m_B = (-2{,}00)(-1{,}00) = +2{,}00
 $$
 
 Vì vậy ảnh cuối cùng $I'$ có chiều cao:
 
 $$
-\begin{aligned}
-y' &= M y \\
-&= (+2{,}00)(8{,}0\,\mathrm{cm}) \\
-&= 16\,\mathrm{cm}
-\end{aligned}
+y' = M y = (+2{,}00)(8{,}0\,\mathrm{cm}) = 16\,\mathrm{cm}
 $$
 
 và có cùng chiều với vật $O$ ban đầu, hoàn toàn phù hợp với những gì biểu diễn trên Hình 34.39.

@@ -11,10 +11,7 @@ Hình 28.26: Mô hình quỹ đạo cổ điển cho thấy mômen từ quỹ đ
 Mô hình electron có khối lượng $m$, điện tích $-e$, chuyển động trên quỹ đạo tròn bán kính $r$ với tốc độ $v$ chỉ là cách hình dung sơ lược về dòng điện vi mô. Thời gian đi hết một vòng là $T=2\pi r/v$, nên độ lớn dòng điện tương đương là điện tích đi qua một điểm trong một chu kỳ:
 
 $$
-\begin{aligned}
-I &= \frac{e}{T} \\
-&= \frac{ev}{2\pi r}.
-\end{aligned}
+I = \frac{e}{T} = \frac{ev}{2\pi r}.
 $$
 
 Diện tích quỹ đạo là $A=\pi r^2$. Vì độ lớn mômen từ của một vòng dòng điện bằng $IA$, ta được:

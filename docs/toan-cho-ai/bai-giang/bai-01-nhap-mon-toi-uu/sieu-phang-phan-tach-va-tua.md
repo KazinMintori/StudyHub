@@ -43,10 +43,7 @@ là một số dương ngặt, và tồn tại hai điểm $c \in C$, $d \in D$ 
 **Dựng siêu phẳng phân tách.** Chọn vector pháp tuyến $a = d - c$ và hệ số tự do $b = \tfrac{\|d\|_2^2 - \|c\|_2^2}{2}$. Hàm affine tương ứng nhận biểu diễn:
 
 $$
-\begin{aligned}
-f(x) &= a^T x - b \\
-&= (d - c)^T \left(x - \tfrac12(d + c)\right).
-\end{aligned}
+f(x) = a^T x - b = (d - c)^T \left(x - \tfrac12(d + c)\right).
 $$
 
 Về hình học, siêu phẳng $f(x) = 0$ vuông góc với đoạn thẳng $[c, d]$ và đi qua chính xác trung điểm $\tfrac{1}{2}(c + d)$, tức là **siêu phẳng trung trực** của đoạn thẳng nối hai điểm gần nhất.

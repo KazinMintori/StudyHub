@@ -67,8 +67,8 @@ Giả sử $f,f_i$ lồi và $h_j$ affine. Slater yêu cầu một điểm $\bar
 
 $$
 \begin{aligned}
-f_i(\bar x) <0,\quad i &= 1,\ldots,m, \\
-h_j(\bar x) &= 0,\quad j=1,\ldots,p.
+f_i(\bar x) &< 0, \quad i = 1, \dots, m, \\
+h_j(\bar x) &= 0, \quad j = 1, \dots, p.
 \end{aligned}
 $$
 
@@ -120,10 +120,7 @@ $$
 Hai tọa độ cực tiểu Lagrangian đều bằng $s/2$. Do đó
 
 $$
-\begin{aligned}
-g(s) &= s-\frac{s^2}{2} \\
-&= \frac12-\frac{(s-1)^2}{2}.
-\end{aligned}
+g(s) = s-\frac{s^2}{2} = \frac12-\frac{(s-1)^2}{2}.
 $$
 
 Đối ngẫu đạt $d^\star=1/2$ tại $s^\star=1$. Thu hồi nghiệm $x^\star=(1/2,1/2)$, có $p^\star=1/2$. Điểm $(1,1)$ thỏa nghiêm ràng buộc nên Slater áp dụng.
@@ -138,10 +135,7 @@ Trong ví dụ hai biến, hãy viết một đẳng thức hoàn thành bình p
 Ta có
 
 $$
-\begin{aligned}
-L(x_1,x_2,1) &= (x_1-1/2)^2+(x_2-1/2)^2+1/2 \\
-&\ge 1/2.
-\end{aligned}
+L(x_1,x_2,1) = (x_1-1/2)^2+(x_2-1/2)^2+1/2 \ge 1/2.
 $$
 
 Tại điểm khả thi, $L\le f$. Vì vậy $f\ge1/2$. Điểm $(1/2,1/2)$ đạt cận nên tối ưu.

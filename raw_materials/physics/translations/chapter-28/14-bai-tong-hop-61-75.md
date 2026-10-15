@@ -18,10 +18,7 @@ Hai dây dài, song song được treo bằng các dây treo dài $4{,}00\,\math
 Khoảng cách giữa hai dây là:
 
 $$
-\begin{aligned}
-d &= 2l\sin\theta \\
-&= 8{,}36\times10^{-3}\,\mathrm m.
-\end{aligned}
+d = 2l\sin\theta = 8{,}36\times10^{-3}\,\mathrm m.
 $$
 
 Xét một đoạn dây dài $L$. Lực từ hướng ngang, trọng lực hướng xuống và lực căng có hướng dọc dây treo. Hai phương trình cân bằng cho:
@@ -393,8 +390,8 @@ Quy tắc bàn tay phải cho trường phía trên hướng $+x$, phía dưới
 
 $$
 \begin{aligned}
-\vec B(z &= -a) = -\frac{\mu_0nI}{2}\hat i, \\
-\vec B(z &= +a) = +\frac{\mu_0nI}{2}\hat i.
+\vec B(z = -a) &= -\frac{\mu_0nI}{2}\hat i, \\
+\vec B(z = +a) &= +\frac{\mu_0nI}{2}\hat i.
 \end{aligned}
 $$
 
@@ -713,10 +710,7 @@ $$
 (c) Khi $x=0{,}0100\,\mathrm m$, dòng điện là:
 
 $$
-\begin{aligned}
-I &= \sqrt{\frac{kx(l_0+x)}{\alpha}} \\
-&= 15{,}5\,\mathrm A.
-\end{aligned}
+I = \sqrt{\frac{kx(l_0+x)}{\alpha}} = 15{,}5\,\mathrm A.
 $$
 :::
 
@@ -757,10 +751,7 @@ $$
 (b) Mật độ mặt của lớp bề mặt:
 
 $$
-\begin{aligned}
-\sigma &= \rho n^{-1/3} \\
-&= q n^{2/3}.
-\end{aligned}
+\sigma = \rho n^{-1/3} = q n^{2/3}.
 $$
 
 (c) Chọn dòng dọc $+z$. Dòng trong tiết diện trụ bằng $J\pi R^2=nqv\pi R^2$. Do đó:

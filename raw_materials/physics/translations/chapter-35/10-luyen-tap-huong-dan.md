@@ -123,10 +123,7 @@ Hai khe cách $0{,}370\,\mathrm{mm}$. Hướng từ hai khe tới vân sáng b�
 (a):
 
 $$
-\begin{aligned}
-\lambda &= \frac{d\sin0{,}407^\circ}{4} \\
-&= 657\,\mathrm{nm}.
-\end{aligned}
+\lambda = \frac{d\sin0{,}407^\circ}{4} = 657\,\mathrm{nm}.
 $$
 
 (b):
@@ -454,10 +451,7 @@ Tàu chở dầu làm tràn lượng lớn dầu chiết suất $1{,}45$ lên bi
 Ta có:
 
 $$
-\begin{aligned}
-2nt &= 2(1{,}45)(380) \\
-&= 1102\,\mathrm{nm}.
-\end{aligned}
+2nt = 2(1{,}45)(380) = 1102\,\mathrm{nm}.
 $$
 
 (a) Cực đại phản xạ:

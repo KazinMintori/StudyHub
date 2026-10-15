@@ -15,10 +15,7 @@ Quy ước $p>0$ khi phần tử nhận năng lượng và $p<0$ khi phần tử
 Với điện trở thuần, dòng và điện áp cùng pha. Nhân hai giá trị tức thời:
 
 $$
-\begin{aligned}
-p_R &= VI\cos^2\omega t \\
-&= i^2R.
-\end{aligned}
+p_R = VI\cos^2\omega t = i^2R.
 $$
 
 Dòng và điện áp cùng dương hoặc cùng âm, nên tích không âm. Điện trở nhận năng lượng theo cả hai chiều dòng, nhưng công suất thay đổi theo thời gian và bằng không khi dòng bằng không.
@@ -167,11 +164,7 @@ $$
 (c) Vì $\phi=0$, công suất là $p=VI\cos^2\omega t$. Giá trị lớn nhất:
 
 $$
-\begin{aligned}
-p_{\max} &= VI \\
-&= 2P_{\mathrm{av}} \\
-&= 3000\,\mathrm W.
-\end{aligned}
+p_{\max} = VI = 2P_{\mathrm{av}} = 3000\,\mathrm W.
 $$
 
 **Đánh giá:** Quan hệ $I_{\mathrm{rms}}=V_{\mathrm{rms}}/R$ cũng cho 12,5 A. Công suất cực đại gấp đôi công suất trung bình của tải thuần trở hình sin này.

@@ -31,10 +31,7 @@ Trong nhiều biến, gradient gom các đạo hàm riêng. Nếu $f\in C^2$, He
 Qua hai điểm khác nhau $x,y\in\mathbb R^n$, đường thẳng có biểu diễn
 
 $$
-\begin{aligned}
-z(t) &= x+t(y-x) \\
-&= (1-t)x+ty,\quad t\in\mathbb R.
-\end{aligned}
+z(t) = x+t(y-x) = (1-t)x+ty, \quad t\in\mathbb R.
 $$
 
 Giới hạn $0\le t\le1$ tạo đoạn nối hai điểm. Tại $t=0$ ta ở $x$, tại $t=1$ ta ở $y$. Hai trọng số không âm và cộng thành 1, nên điểm tổ hợp không vượt ra ngoài hai đầu mút.
@@ -125,10 +122,7 @@ Cho $x$ là cực tiểu địa phương và $y\in D$ bất kỳ. Nếu $y=x$ th
 Tính lồi của miền cho $z\in D$. Tối ưu địa phương và tính lồi của hàm lần lượt cho
 
 $$
-\begin{aligned}
-f(x) &\le f(z) \\
-&\le (1-t)f(x)+tf(y).
-\end{aligned}
+f(x) \le f(z) \le (1-t)f(x)+tf(y).
 $$
 
 Trừ $(1-t)f(x)$ rồi chia cho $t>0$ được $f(x)\le f(y)$. Vì $y$ tùy ý, $x$ tối ưu toàn cục. Lập luận không giả sử trước kết luận cần chứng minh.

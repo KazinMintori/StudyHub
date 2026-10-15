@@ -167,10 +167,7 @@ Hai điện tích trái dấu nên $q_2$ bị hút về $q_1$, tức sang trái.
 (b) Đổi thứ tự hai điện tích không làm đổi tích độ lớn:
 
 $$
-\begin{aligned}
-F_{2\to1} &= F_{1\to2} \\
-&= 0.019\,\mathrm N.
-\end{aligned}
+F_{2\to1} = F_{1\to2} = 0.019\,\mathrm N.
 $$
 
 Lực lên $q_1$ hướng sang phải, về $q_2$.

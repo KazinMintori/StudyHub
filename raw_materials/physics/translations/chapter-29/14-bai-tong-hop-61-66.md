@@ -106,10 +106,7 @@ $$
 Do đó $|\dot x(t_1)|=0{,}845\,\mathrm{m/s}$ và
 
 $$
-\begin{aligned}
-I(t_1) &= \frac{BW|\dot x(t_1)|}{R} \\
-&= 0{,}676\,\mathrm A.
-\end{aligned}
+I(t_1) = \frac{BW|\dot x(t_1)|}{R} = 0{,}676\,\mathrm A.
 $$
 
 (e) Thanh đang đi về phía trái. Với trường vào trang, lực từ lên điện tích dương hướng xuống dọc thanh. Dòng trong thanh chạy từ trên xuống.
@@ -246,11 +243,7 @@ $$
 (d) Dùng mô hình vật lý $dv/dt=-sv$, tốc độ giảm theo $v=v_0e^{-st}$. Vì thế
 
 $$
-\begin{aligned}
-t &= \frac{\ln(v_0/v)}s \\
-&= \frac{\ln2}s \\
-&= 2{,}26\,\mathrm s.
-\end{aligned}
+t = \frac{\ln(v_0/v)}s = \frac{\ln2}s = 2{,}26\,\mathrm s.
 $$
 :::
 
@@ -309,9 +302,6 @@ $$
 (d) Với $v=0{,}0500\,\mathrm{m/s}$,
 
 $$
-\begin{aligned}
-P &= I^2R=Fv \\
-&= sv^2=1{,}30\times10^{-2}\,\mathrm W.
-\end{aligned}
+P = I^2R = Fv = sv^2 = 1{,}30\times10^{-2}\,\mathrm W.
 $$
 :::

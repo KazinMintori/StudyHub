@@ -84,11 +84,7 @@ $$
 Điện trở luôn nhận năng lượng điện rồi chuyển hóa thành dạng khác. Ba biểu thức tương đương cho công suất trên điện trở là:
 
 $$
-\begin{aligned}
-P &= V_{ab}I, \\
-&= I^2R, \\
-&= \frac{V_{ab}^2}{R}.
-\end{aligned}
+P = V_{ab}I, = I^2R, = \frac{V_{ab}^2}{R}.
 $$
 
 Xem Ví dụ 25.8–25.10.

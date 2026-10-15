@@ -52,10 +52,7 @@ Vật dẫn có hốc mang tổng điện tích +7 nC. Trong hốc có nguồn �
 Trường trên mặt Gauss bằng không. Điện tích nguồn là q = −5 nC, nên điện tích mặt trong phải bằng −q = +5 nC để tổng được bao bằng không. Vật dẫn có tổng +7 nC, vì vậy mặt ngoài còn:
 
 $$
-\begin{aligned}
-Q_{\mathrm{ngoai}} &= (+7)-(+5) \\
-&= +2\,\mathrm{nC}.
-\end{aligned}
+Q_{\mathrm{ngoai}} = (+7)-(+5) = +2\,\mathrm{nC}.
 $$
 
 Không có điện tích dư trong khối vật liệu. Điện tích thành hốc có **độ lớn bằng và dấu trái với** tổng nguồn nằm trong hốc. Các bài biến thể nằm ở phần luyện tập cuối chương.

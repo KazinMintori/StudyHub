@@ -81,10 +81,7 @@ Do đó $v_R=(0{,}300\,\mathrm V)\cos\theta$.
 (b) Dung kháng:
 
 $$
-\begin{aligned}
-X_C &= \frac1{\omega C} \\
-&\approx 81{,}6\,\Omega.
-\end{aligned}
+X_C = \frac1{\omega C} \approx 81{,}6\,\Omega.
 $$
 
 (c) Biên độ $V_C=IX_C\approx0{,}196\,\mathrm V$. Điện áp:
@@ -119,10 +116,7 @@ Trong cả hai biểu thức, $\theta$ có cùng định nghĩa như đề bài.
 (a)
 
 $$
-\begin{aligned}
-f &= \frac1{2\pi RC} \\
-&\approx 128\,\mathrm{Hz}.
-\end{aligned}
+f = \frac1{2\pi RC} \approx 128\,\mathrm{Hz}.
 $$
 
 (b) Vì $X_C=R$, hai biên độ bằng nhau:
@@ -172,10 +166,7 @@ $$
 Suy ra
 
 $$
-\begin{aligned}
-i &= I\cos(17{,}85) \\
-&\approx 0{,}0114\,\mathrm A.
-\end{aligned}
+i = I\cos(17{,}85) \approx 0{,}0114\,\mathrm A.
 $$
 
 (c), (d) Dữ kiện chưa xác định riêng biên độ điện áp tụ và điện dung. Ta chỉ có quan hệ
@@ -226,10 +217,7 @@ $$
 (b) Hai điện kháng là $X_L=255\,\Omega$ và $X_C\approx441\,\Omega$. Do đó
 
 $$
-\begin{aligned}
-Z &= \sqrt{R^2+(X_L-X_C)^2} \\
-&\approx 316\,\Omega.
-\end{aligned}
+Z = \sqrt{R^2+(X_L-X_C)^2} \approx 316\,\Omega.
 $$
 
 (c) $I=V/Z\approx0{,}174\,\mathrm A$.
@@ -237,10 +225,7 @@ $$
 (d)
 
 $$
-\begin{aligned}
-\phi &= \arctan\frac{X_L-X_C}{R} \\
-&\approx -36{,}1^\circ.
-\end{aligned}
+\phi = \arctan\frac{X_L-X_C}{R} \approx -36{,}1^\circ.
 $$
 
 (e) Góc âm cho biết điện áp nguồn trễ dòng. Dung kháng lớn hơn cảm kháng, phù hợp kết luận này.
@@ -275,10 +260,7 @@ $$
 (a)
 
 $$
-\begin{aligned}
-R &= \sqrt{Z^2-(X_L-X_C)^2} \\
-&\approx 387\,\Omega.
-\end{aligned}
+R = \sqrt{Z^2-(X_L-X_C)^2} \approx 387\,\Omega.
 $$
 
 (b) $I=V/Z\approx0{,}0422\,\mathrm A$.
@@ -313,10 +295,7 @@ Mạch RLC nối tiếp có $\omega=1{,}20\times10^4\,\mathrm{rad/s}$, $C=0{,}96
 (a)
 
 $$
-\begin{aligned}
-X_L-X_C &= R\tan15{,}0^\circ \\
-&\approx 17{,}4\,\Omega.
-\end{aligned}
+X_L-X_C = R\tan15{,}0^\circ \approx 17{,}4\,\Omega.
 $$
 
 (b) Dung kháng:
@@ -450,10 +429,7 @@ $$
 (b)
 
 $$
-\begin{aligned}
-\phi &= \arctan\frac{X_L-X_C}{R} \\
-&\approx -65{,}1^\circ.
-\end{aligned}
+\phi = \arctan\frac{X_L-X_C}{R} \approx -65{,}1^\circ.
 $$
 
 (c) $\cos\phi\approx0{,}421$. Góc âm nghĩa điện áp nguồn trễ dòng.
@@ -477,10 +453,7 @@ Với mạch ở VP31.7.2, tìm (a) trở kháng, (b) biên độ dòng, (c) cô
 (a)
 
 $$
-\begin{aligned}
-Z &= \sqrt{R^2+(X_L-X_C)^2} \\
-&\approx 653\,\Omega.
-\end{aligned}
+Z = \sqrt{R^2+(X_L-X_C)^2} \approx 653\,\Omega.
 $$
 
 (b) $I=V/Z\approx0{,}0536\,\mathrm A$.
@@ -488,10 +461,7 @@ $$
 (c)
 
 $$
-\begin{aligned}
-P_R &= \frac12I^2R \\
-&\approx 0{,}395\,\mathrm W.
-\end{aligned}
+P_R = \frac12I^2R \approx 0{,}395\,\mathrm W.
 $$
 
 :::
@@ -525,19 +495,13 @@ $$
 (b) Dung kháng lớn hơn cảm kháng, nên góc âm:
 
 $$
-\begin{aligned}
-\phi &= -\arccos(0{,}800) \\
-&\approx -36{,}9^\circ.
-\end{aligned}
+\phi = -\arccos(0{,}800) \approx -36{,}9^\circ.
 $$
 
 (c)
 
 $$
-\begin{aligned}
-R &= \frac{X_L-X_C}{\tan\phi} \\
-&\approx 103\,\Omega.
-\end{aligned}
+R = \frac{X_L-X_C}{\tan\phi} \approx 103\,\Omega.
 $$
 
 Cả tử và mẫu đều âm, nên điện trở nhận được dương. Dùng giá trị chưa làm tròn của hai điện kháng khi thế số.
@@ -610,10 +574,7 @@ $$
 (b) Biên độ nguồn:
 
 $$
-\begin{aligned}
-V &= \sqrt2V_{\mathrm{rms}} \\
-&\approx 49{,}5\,\mathrm V.
-\end{aligned}
+V = \sqrt2V_{\mathrm{rms}} \approx 49{,}5\,\mathrm V.
 $$
 
 Ở cả hai tần số, $Z=375\,\Omega$ nên

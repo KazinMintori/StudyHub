@@ -158,10 +158,7 @@ $$
 Độ lệch của mỗi nửa:
 
 $$
-\begin{aligned}
-\delta &= i+e-A \\
-&\approx (n-1)A.
-\end{aligned}
+\delta = i+e-A \approx (n-1)A.
 $$
 
 Hai nửa lệch theo hai phía đối nhau. Khi kéo dài ngược về mặt phẳng nguồn, mỗi ảnh lệch ngang khoảng $a\delta$, nên:

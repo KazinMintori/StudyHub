@@ -48,10 +48,7 @@ $$
 (c) Mở lớn nhất tại $T/2=1{,}50\,\mathrm s$. Khi đó:
 
 $$
-\begin{aligned}
-a&=vT=3\lambda\\
-&=1{,}596\,\mu\mathrm m.
-\end{aligned}
+a = vT = 3\lambda = 1{,}596\,\mu\mathrm m.
 $$
 
 (d) Các đốm bậc chín nằm ở hướng có $\sin\theta_9=9\lambda/d$. Muốn chúng trùng cực tiểu đầu, độ mở phải thỏa:
@@ -84,10 +81,7 @@ $$
 (f):
 
 $$
-\begin{aligned}
-\theta_{\pm1}&=\pm\arcsin(\lambda/d)\\
-&=\pm2{,}87^\circ.
-\end{aligned}
+\theta_{\pm1} = \pm\arcsin(\lambda/d) = \pm2{,}87^\circ.
 $$
 
 Các kết quả dùng số bậc và điều kiện vân khuyết ở mép. Trong cùng mô hình bao nhiễu xạ, các đốm ở một giây không thật sự có cường độ xấp xỉ bằng nhau. Chẳng hạn, bậc chín chỉ có khoảng $0{,}0119$ lần cường độ tâm. Độ cách góc cũng chỉ gần đều, vì điều kiện đều theo sin góc chứ không theo chính góc.
@@ -139,10 +133,7 @@ Dấu của $\phi$ gắn với chiều đánh số khe và góc có dấu. Đả
 Đặt $q=e^{i\phi}$. Tổng hữu hạn được khai triển trước khi viết gọn:
 
 $$
-\begin{aligned}
-S_N&=1+q+\cdots+q^{N-1}\\
-&=\sum_{n=0}^{N-1}q^n.
-\end{aligned}
+S_N = 1+q+\cdots+q^{N-1} = \sum_{n = 0}^{N-1}q^n.
 $$
 
 Biểu thức trường phức là $E_0e^{i\delta}S_N$.

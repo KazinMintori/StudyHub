@@ -70,10 +70,7 @@ $$
 Khoảng cách giữa hai vân sáng liền kề bất kỳ, hay còn gọi là **khoảng vân** $\Delta y$, được xác định bởi:
 
 $$
-\begin{aligned}
-\Delta y &= y_{m+1} - y_m \\
-&= \frac{R \lambda}{d}
-\end{aligned}
+\Delta y = y_{m+1} - y_m = \frac{R \lambda}{d}
 $$
 
 Tương tự, tọa độ của các vân tối trên màn phẳng được xác định từ phương trình (35.5):
@@ -171,10 +168,7 @@ Các giá trị $|m| \ge 3$ cho $|\sin\theta| > 1$, là điều không thể x�
 **Đánh giá**: Ta có thể kiểm tra kết quả bằng cách tính các góc có cường độ cực tiểu theo phương trình (35.5):
 
 $$
-\begin{aligned}
-\sin \theta &= \frac{(m + 1/2)\lambda}{d} \\
-&= \frac{m + 1/2}{2}
-\end{aligned}
+\sin \theta = \frac{(m + 1/2)\lambda}{d} = \frac{m + 1/2}{2}
 $$
 
 Với $m = -2, -1, 0, 1$, ta tính được các góc cực tiểu:

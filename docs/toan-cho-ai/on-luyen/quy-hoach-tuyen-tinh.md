@@ -54,11 +54,7 @@ Miền $D$ là tam giác có ba đỉnh $O=(0,0)$, $A=(1,0)$ và $B=(0,1)$. Các
 Có thể chứng minh mà không cần hình. Từ $y\le1-x$ và $x\ge0$,
 
 $$
-\begin{aligned}
-x-y &\ge x-(1-x) \\
-&= 2x-1 \\
-&\ge -1.
-\end{aligned}
+x-y \ge x-(1-x) = 2x-1 \ge -1.
 $$
 
 Điểm $(0,1)$ khả thi và đạt $-1$, nên đó là nghiệm tối ưu duy nhất. Cách dùng cận dưới rồi tìm điểm đạt cận sẽ xuất hiện trở lại trong đối ngẫu.
@@ -88,11 +84,7 @@ Hình chữ nhật $[0,4]\times[0,3]$ bị đường $x+y=6$ cắt góc trên b�
 Vậy giá trị tối ưu là $-16$ tại $(4,2)$. Một chứng nhận ngắn là
 
 $$
-\begin{aligned}
-3x+2y &= x+2(x+y) \\
-&\le 4+2\cdot6 \\
-&= 16.
-\end{aligned}
+3x+2y = x+2(x+y) \le 4+2\cdot6 = 16.
 $$
 
 Đẳng thức đòi hỏi đồng thời $x=4$ và $x+y=6$, nên nghiệm duy nhất là $(4,2)$. Ta đã phối hợp hai ràng buộc bằng các hệ số không âm để tạo một cận cho mục tiêu.

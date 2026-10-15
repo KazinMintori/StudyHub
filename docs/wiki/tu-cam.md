@@ -18,10 +18,7 @@ Dòng tạo từ thông qua chính mạch, nên sự thay đổi dòng gây su�
 Điện áp đầu cuộn theo quy ước thụ động có dấu đối với suất điện động tự cảm đi dọc chiều dòng:
 
 $$
-\begin{aligned}
-v_{ab} &= V_a-V_b \\
-&= L\frac{di}{dt}.
-\end{aligned}
+v_{ab} = V_a-V_b = L\frac{di}{dt}.
 $$
 
 Dòng dương đi từ a đến b. Khi nó tăng, đầu a cao thế hơn b. Khi nó giảm, đầu b cao thế hơn a và cuộn nhả năng lượng. Cuộn thực có thể được mô hình bằng điện trở dây quấn nối tiếp tự cảm. Khi ấy điện áp tổng còn chứa số hạng Ri.

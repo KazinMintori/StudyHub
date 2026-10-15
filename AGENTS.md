@@ -80,6 +80,10 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
    - **Không lạm dụng `aligned` bẻ gãy công thức ngắn**:
      - Nếu một công thức hoặc phương trình vừa vặn trên một dòng (ví dụ: $R_{\mathrm{eq}} = R_1 + R_2 + R_3$ hay $\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}$ hay $R_{\mathrm{eq}} = \frac{R_1 R_2}{R_1 + R_2}$): Bắt buộc giữ nguyên trên 1 dòng đơn giản trong `$$...$$`. Tuyệt đối không bọc vào `\begin{aligned}` rồi ngắt vụn thành các dòng ngắn cụt cỡn ở giữa trang.
      - Chỉ dùng `\begin{aligned}` khi có chuỗi biến đổi nhiều bước qua dấu bằng hoặc hệ nhiều phương trình.
+    - **Căn lề dấu bằng thẳng hàng (Aligned Equals Signs)**:
+      - Trong môi trường `\begin{aligned}`, dấu bằng ở các dòng phải thẳng hàng nhau bằng cách đặt `&` ngay trước dấu bằng hoặc dấu quan hệ (`&=`, `&\le`, `&\ge`, `&\approx`, v.v.).
+      - Tuyệt đối không đặt dấu `&` bên trong dấu ngoặc đơn (ví dụ: Cấm viết `P(Y &= 2)` hay `P(1 &\le X)` mà phải viết `P(Y = 2) &= ...` hay `P(1 \le X) &= ...`).
+      - Không đặt `&` sau dấu bằng (như `= &`), và không để sót dòng có dấu bằng mà thiếu ký hiệu `&` gây lệch cột.
    - Tuyệt đối không nhét văn xuôi, câu nhận xét dài vào trong TeX bằng `\text{...}`. Văn xuôi phân tích phải viết ở đoạn văn bên ngoài khối toán.
    - Dấu mở `$$` và đóng `$$` phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
    - Công thức inline (`$...$`): Không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.

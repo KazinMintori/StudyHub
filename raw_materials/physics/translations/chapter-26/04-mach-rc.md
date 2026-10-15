@@ -130,21 +130,13 @@ $$
 **(b) Phần điện tích cuối cùng đã đạt được.**
 
 $$
-\begin{aligned}
-\frac{q}{Q_f} &= 1-e^{-t/\tau} \\
-&= 1-e^{-46/10} \\
-&\approx 0{,}99.
-\end{aligned}
+\frac{q}{Q_f} = 1-e^{-t/\tau} = 1-e^{-46/10} \approx 0{,}99.
 $$
 
 **(c) Phần dòng điện ban đầu còn lại.**
 
 $$
-\begin{aligned}
-\frac{i}{I_0} &= e^{-t/\tau} \\
-&= e^{-46/10} \\
-&\approx 0{,}010.
-\end{aligned}
+\frac{i}{I_0} = e^{-t/\tau} = e^{-46/10} \approx 0{,}010.
 $$
 
 **Đánh giá:** Sau $4{,}6$ hằng số thời gian, tụ đạt khoảng $99\%$ điện tích cuối cùng, trong khi dòng nạp chỉ còn khoảng $1{,}0\%$ giá trị ban đầu. Giảm điện trở sẽ làm giảm $\tau$ và nạp tụ nhanh hơn.
@@ -247,10 +239,7 @@ Phương trình nói rằng công suất nguồn chia thành công suất nhiệ
 Tổng điện tích chuyển từ nguồn sang tụ trong suốt quá trình nạp là:
 
 $$
-\begin{aligned}
-\int_0^\infty i\,dt &= Q_f \\
-&= C\mathcal E.
-\end{aligned}
+\int_0^\infty i\,dt = Q_f = C\mathcal E.
 $$
 
 Do đó, tổng năng lượng nguồn cung cấp bằng $\mathcal E Q_f=C\mathcal E^2$. Năng lượng cuối cùng lưu trong tụ là:
@@ -308,10 +297,7 @@ Năng lượng ban đầu của tụ bằng $Q_0^2/(2C)$. Sau một hằng số 
 Sau một hằng số thời gian:
 
 $$
-\begin{aligned}
-\frac{q}{Q_0} &= e^{-t/(RC)} \\
-&= e^{-1}.
-\end{aligned}
+\frac{q}{Q_0} = e^{-t/(RC)} = e^{-1}.
 $$
 
 Vì $U=q^2/(2C)$, phần năng lượng còn lại là:

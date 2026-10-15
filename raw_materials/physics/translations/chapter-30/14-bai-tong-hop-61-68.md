@@ -280,10 +280,7 @@ $$
 Điện áp trên toàn ống dây là
 
 $$
-\begin{aligned}
-v_L(t) &= \mathcal E-Ri(t) \\
-&= R_LI_\infty+RI_\infty e^{-t/\tau}.
-\end{aligned}
+v_L(t) = \mathcal E-Ri(t) = R_LI_\infty+RI_\infty e^{-t/\tau}.
 $$
 
 (b)–(d) Ngay sau đóng, dòng bằng không nên $\mathcal E=v_L(0)=50{,}0\,\mathrm V$. Khi ổn định,
@@ -301,19 +298,13 @@ $$
 (e) Khi $t=\tau$, điện áp bằng
 
 $$
-\begin{aligned}
-v_L(\tau) &= 20{,}0+\frac{30{,}0}{e} \\
-&\approx 31{,}0\,\mathrm V.
-\end{aligned}
+v_L(\tau) = 20{,}0+\frac{30{,}0}{e} \approx 31{,}0\,\mathrm V.
 $$
 
 Đọc đồ thị ở mức đó cho $\tau\approx2{,}4\,\mathrm{ms}$. Do đó
 
 $$
-\begin{aligned}
-L &= (R+R_L)\tau \\
-&\approx 4{,}0\times10^{-2}\,\mathrm H.
-\end{aligned}
+L = (R+R_L)\tau \approx 4{,}0\times10^{-2}\,\mathrm H.
 $$
 
 ![Lời giải 30.67: Các điểm điện áp đọc từ đồ thị phù hợp với mô hình suy giảm về 20 V và hằng số thời gian xấp xỉ 2,4 ms.](img/young-30/hinh-giai30-67.svg)
