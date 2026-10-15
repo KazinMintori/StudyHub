@@ -40,13 +40,14 @@ const count=ref(0)
 </script>
 <button id="counter" @click="count++">{{ count }}</button>
 `
-  for (const [name, target] of [['index', 'b'], ['a', 'c'], ['b', 'a'], ['c', 'a']]) {
+  for (const [name, target] of [['index', 'b'], ['a', 'b'], ['b', 'a'], ['C', 'a']]) {
     await writeFile(path.join(docs, name + '.md'), `# Trang ${name}\n\n[Chuyển trang](/${target})\n\n$$\nE=mc^2\n$$\n\n<details><summary>Lời giải</summary><p>Điện thế bằng công trên điện tích.</p></details>\n\n![Hình: Tọa độ và năng lượng](/figure.svg)\n\n${interactive}`)
   }
   await writeFile(path.join(docs, 'public/figure.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"><text x="1" y="15">Energy</text></svg>')
   await writeFile(path.join(docs, 'public/embedded.html'), '<p>Tài liệu nhúng</p>')
   const plan = await planBuild(await resolveConfig(docs, 'build', 'production'), { maxPages: 2 })
   if (plan.batches.length !== 2) throw new Error('Fixture must have two batches')
+  if (plan.batches.findIndex(batch => batch.pages.includes('a.md')) === plan.batches.findIndex(batch => batch.pages.includes('b.md'))) throw new Error('Navigation must cross batch boundaries')
   const planFile = path.join(fixture, 'plan.json')
   await writeFile(planFile, JSON.stringify(plan))
   const state = { pageMap: {}, files: new Map(), icons: new Set() }
@@ -70,8 +71,8 @@ const count=ref(0)
   await page.click('#counter')
   await page.waitForFunction(() => document.querySelector('#counter').textContent === '1')
   await page.evaluate(() => { window.fixtureNavigationMarker = 'same-document' })
-  await page.click('.vp-doc a[href$="/c.html"]')
-  await page.waitForFunction(() => location.pathname.endsWith('/c.html') && document.querySelector('.vp-doc h1')?.textContent.includes('Trang c'))
+  await page.click('.vp-doc a[href$="/b.html"]')
+  await page.waitForFunction(() => location.pathname.endsWith('/b.html') && document.querySelector('.vp-doc h1')?.textContent.includes('Trang b'))
   if (await page.evaluate(() => window.fixtureNavigationMarker) !== 'same-document') throw new Error('Cross-batch navigation reloaded the document')
   await page.waitForSelector('.static-math svg')
   await page.click('#counter')

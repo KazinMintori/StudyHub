@@ -53,6 +53,14 @@ export async function mergeBatch(source, target, state) {
 export async function finalizeBatches(target, plan, state) {
   const pageMap = Object.fromEntries(Object.entries(state.pageMap).sort(([a], [b]) => a.localeCompare(b, 'en')))
   const rendered = new Set(['404.html'])
+  const chunks = new Set()
+  for (const file of state.files.keys()) {
+    if (!file.startsWith(plan.assetsDir + '/')) continue
+    const match = file.slice(plan.assetsDir.length + 1).match(/^(.*\.md)\.([^.]+)(\.lean)?\.js$/)
+    // VitePress lowercases map keys but preserves source filename case in its
+    // emitted chunks. Hash strings remain case-sensitive.
+    if (match) chunks.add(match[1].toLowerCase() + '\0' + match[2] + (match[3] || ''))
+  }
   for (const page of plan.pages) {
     const alias = plan.rewrites[page] || page
     const html = alias.replace(/\.md$/, '.html')
@@ -62,7 +70,7 @@ export async function finalizeBatches(target, plan, state) {
   for (const [key, hash] of Object.entries(pageMap)) {
     for (const suffix of ['.js', '.lean.js']) {
       const file = `${plan.assetsDir}/${key}.${hash}${suffix}`
-      if (!state.files.has(file)) throw new Error(`Missing page chunk: ${file}`)
+      if (!chunks.has(key + '\0' + hash + (suffix === '.lean.js' ? '.lean' : ''))) throw new Error(`Missing page chunk: ${file}`)
     }
   }
   for (const file of rendered) {

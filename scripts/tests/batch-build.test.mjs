@@ -83,6 +83,20 @@ test('merge rejects a differing shared asset rather than overwriting it', async 
   assert.equal(await readFile(path.join(target, 'shared.js'), 'utf8'), 'first')
 }))
 
+test('lowercase route map verifies mixed-case filenames without changing hash case', async () => temporary(async folder => {
+  const source = path.join(folder, 'source'), target = path.join(folder, 'merged')
+  await mkdir(path.join(source, 'assets'), { recursive:true })
+  await writeFile(path.join(source, 'hashmap.json'), JSON.stringify({ 'practice-readme.md':'AbC' }))
+  await writeFile(path.join(source, 'practice-README.html'), metadata({ 'practice-readme.md':'AbC' }))
+  for (const suffix of ['.js','.lean.js']) await writeFile(path.join(source, 'assets/practice-README.md.AbC' + suffix), 'export default 1')
+  const state = { pageMap:{}, files:new Map(), icons:new Set() }
+  await mergeBatch(source, target, state)
+  const plan = { pages:['practice-README.md'], rewrites:{}, assetsDir:'assets' }
+  await finalizeBatches(target, plan, state)
+  state.pageMap['practice-readme.md'] = 'abc'
+  await assert.rejects(finalizeBatches(target, plan, state), /Missing page chunk/)
+}))
+
 test('full build refuses local execution before creating a lock or syncing', () => {
   const result = spawnSync(process.execPath, ['scripts/build/build-site.mjs'], {
     encoding: 'utf8', env: { ...process.env, GITHUB_ACTIONS: 'false' }
