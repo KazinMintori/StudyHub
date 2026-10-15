@@ -195,7 +195,7 @@ $$
 Với $d/\lambda = 2{,}00$, hàm cường độ trở thành:
 
 $$
-I &= I_0 \times \cos^2[(2{,}00\pi\,\mathrm{rad}) \sin \theta]
+I = I_0 \cos^2[(2{,}00\pi\,\mathrm{rad}) \sin \theta]
 $$
 
 (a) Khi $\theta = 4{,}0^\circ$:
@@ -323,30 +323,38 @@ I = I_0 \cos^2\frac{\phi}{2}
 $$
 
 Tính toán cụ thể cho từng trường hợp:
+
 - Điểm (i): Vì hiệu đường đi $\Delta r = 4{,}00 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 0{,}800$:
-  $$
+
+$$
 \begin{aligned}
 I &= I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \\
 &\approx 0{,}655 I_0
 \end{aligned}
 $$
+
 - Điểm (ii):
-  $$
+
+$$
 \begin{aligned}
 I &= I_0 \cos^2\left(\frac{4{,}00\,\mathrm{rad}}{2}\right) \\
 &= I_0 \cos^2(2{,}00\,\mathrm{rad}) \\
 &\approx 0{,}173 I_0
 \end{aligned}
 $$
+
 - Điểm (iii): Vì hiệu đường đi $\Delta r = 7{,}50 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 1{,}50$:
-  $$
+
+$$
 \begin{aligned}
 I &= I_0 \cos^2(1{,}50\pi\,\mathrm{rad}) \\
 &= 0
 \end{aligned}
 $$
+
 - Điểm (iv):
-  $$
+
+$$
 \begin{aligned}
 I &= I_0 \cos^2\left(\frac{2{,}00\,\mathrm{rad}}{2}\right) \\
 &= I_0 \cos^2(1{,}00\,\mathrm{rad}) \\
@@ -355,11 +363,9 @@ I &= I_0 \cos^2\left(\frac{2{,}00\,\mathrm{rad}}{2}\right) \\
 $$
 
 So sánh các giá trị cường độ:
+
 $$
-\begin{aligned}
-&0{,}655 I_0 > 0{,}292 I_0 \\
-&> 0{,}173 I_0 > 0
-\end{aligned}
+0{,}655 I_0 > 0{,}292 I_0 > 0{,}173 I_0 > 0
 $$
 
 Do đó thứ tự cường độ giảm dần là (i), (iv), (ii), (iii).

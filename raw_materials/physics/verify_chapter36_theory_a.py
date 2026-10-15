@@ -66,7 +66,7 @@ def verify_calculations():
     print(f"  Ex 36.1: OK (a = {a_1*1e3:.2f} mm, ratio = {ratio_1:.4f}, 2y2 = {two_y2*1e3:.0f} mm)")
 
     # TYU 36.1
-    print("  TYU 36.1: Fabricated sound check removed per source Young & Freedman 15th ed scope (actual scope: TYU 36.2-36.4)")
+    print("  TYU36.1: Source continuation on PDF1207 restored, sound diffracts around an edge.")
 
     # TYU 36.2
     # Ratios lambda / a:
@@ -130,12 +130,14 @@ def verify_calculations():
     # TYU 36.3
     a_tyu3 = 0.0100e-3
     lam_blue = 500e-9
-    lam_ir = 10.0e-6
-    lam_micro = 20.0e-3
+    lam_ir = 10.6e-6
+    lam_micro = 1.00e-3
     assert lam_blue < a_tyu3
-    assert lam_ir == a_tyu3
+    assert lam_ir > a_tyu3
+    lam_uv = 50.0e-9
+    assert lam_uv < a_tyu3
     assert lam_micro > a_tyu3
-    print("  TYU 36.3: OK (No diffraction minima when lambda >= a -> (ii) 10.0 um and (iii) 20.0 mm)")
+    print("  TYU 36.3: OK (No diffraction minima when lambda > a -> (ii) 10.6 um and (iii) 1.00 mm; (i) and(iv) have minima)")
 
     # TYU 36.4
     # d = 2.5 a => mi = 2.5 md = (5/2) md
@@ -153,7 +155,7 @@ def verify_images():
     expected_images = {
         "hinh-36-01.png": (1206, (36, 85, 195, 258)),
         "hinh-36-02.png": (1206, (210, 560, 575, 735)),
-        "hinh-36-03.png": (1207, (75, 588, 460, 745)),
+        "hinh-36-03.png": (1207, (75, 588, 575, 745)),
         "hinh-36-04.png": (1208, (38, 74, 575, 226)),
         "hinh-36-05.png": (1208, (210, 545, 575, 742)),
         "hinh-36-06.png": (1209, (455, 420, 580, 565)),

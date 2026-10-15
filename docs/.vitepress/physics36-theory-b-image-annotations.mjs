@@ -1,4 +1,4 @@
-export const physics36TheoryBImageAnnotations = {
+export const physics36TheoryBImageAnnotations={
   "young-36/hinh-36-16": [],
   "young-36/hinh-36-17": [],
   "young-36/hinh-36-18": [],
@@ -220,4 +220,4 @@ export const physics36TheoryBImageAnnotations = {
     ]
   ],
   "young-36/hinh-36-30": []
-};
+}

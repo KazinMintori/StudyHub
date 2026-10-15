@@ -1,4 +1,4 @@
-export const physics36TheoryAImageAnnotations = {
+export const physics36TheoryAImageAnnotations={
   "young-36/hinh-36-01": [
     [
       "Quang hình học dự đoán tình huống này sẽ tạo ra một ranh giới sắc nét giữa vùng được chiếu sáng và bóng tối hoàn toàn.",
@@ -174,7 +174,7 @@ export const physics36TheoryAImageAnnotations = {
       "At the center of the diffraction pattern (point O), the phasors from all strips within the slit are in phase."
     ],
     [
-      "Giản đồ vectơ pha tại một điểm hơi lệch khỏi tâm hệ vân; β = tổng độ lệch pha giữa vectơ pha đầu tiên và vectơ pha cuối cùng.",
+      "Giản đồ vectơ pha tại một điểm hơi lệch khỏi tâm hệ vân. Β = tổng độ lệch pha giữa vectơ pha đầu tiên và vectơ pha cuối cùng.",
       "Phasor diagram at a point slightly off the center of the pattern; β = total phase difference between the first and last phasors."
     ],
     [
@@ -212,7 +212,7 @@ export const physics36TheoryAImageAnnotations = {
       "Calculated intensity"
     ],
     [
-      "“Đường bao” của hàm cường độ",
+      "Chú giải: “Đường bao” của hàm cường độ",
       "“Envelope” of intensity function"
     ],
     [
@@ -258,4 +258,4 @@ export const physics36TheoryAImageAnnotations = {
       "N = 16: with 16 slits, the maxima are even taller and narrower, with more intervening minima."
     ]
   ]
-};
+}

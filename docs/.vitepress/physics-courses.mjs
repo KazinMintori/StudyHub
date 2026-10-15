@@ -1676,20 +1676,92 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "16-nhieu-xa",
-      "title": "Nhiễu xạ",
-      "prerequisites": [
-        "giao-thoa-song",
-        "pha-song",
-        "chiet-suat"
-      ],
-      "supportingConcepts": [
-        "nhieu-xa-anh-sang"
-      ],
-      "status": "draft",
-      "number": 16,
-      "sourceChapter": 36
-    },
+        "slug": "16-nhieu-xa",
+        "title": "Nhiễu xạ",
+        "prerequisites": [
+          "mat-song",
+          "nguyen-ly-huygens",
+          "nguon-ket-hop",
+          "hieu-duong-di",
+          "vector-pha",
+          "thau-kinh-mong",
+          "chiet-suat",
+          "tan-sac"
+        ],
+        "supportingConcepts": [
+          "nhieu-xa-fresnel",
+          "nhieu-xa-fraunhofer",
+          "nhieu-xa-khe-don",
+          "ham-sinc-nhieu-xa",
+          "bao-nhieu-xa",
+          "bac-khuyet",
+          "cach-tu-nhieu-xa",
+          "nang-suat-phan-giai-pho",
+          "dieu-kien-bragg",
+          "dia-airy",
+          "tieu-chuan-rayleigh",
+          "anh-toan-ky"
+        ],
+        "status": "ready",
+        "number": 16,
+        "sourceChapter": 36,
+        "topicGroups": [
+          {
+            "title": "Từ khẩu độ tới cấu trúc và hình ảnh",
+            "topics": [
+              {
+                "slug": "nhieu-xa-fresnel-fraunhofer",
+                "title": "Nhiễu xạ Fresnel và Fraunhofer",
+                "question": "Khi nào cần xét độ cong mặt sóng?",
+                "source": "36.1"
+              },
+              {
+                "slug": "nhieu-xa-mot-khe",
+                "title": "Nhiễu xạ qua một khe",
+                "question": "Vì sao một khe vẫn tạo được các vân tối?",
+                "source": "36.2"
+              },
+              {
+                "slug": "cuong-do-nhieu-xa-mot-khe",
+                "title": "Cường độ nhiễu xạ một khe",
+                "question": "Tổng các sóng từ toàn khe cho phân bố cường độ nào?",
+                "source": "36.3"
+              },
+              {
+                "slug": "nhieu-khe",
+                "title": "Hệ nhiều khe",
+                "question": "Bao nhiễu xạ và pha giữa các khe phối hợp thế nào?",
+                "source": "36.4"
+              },
+              {
+                "slug": "cach-tu-nhieu-xa",
+                "title": "Cách tử nhiễu xạ",
+                "question": "Vì sao nhiều khe giúp đo và phân giải bước sóng?",
+                "source": "36.5"
+              },
+              {
+                "slug": "nhieu-xa-tia-x",
+                "title": "Nhiễu xạ tia X",
+                "question": "Góc Bragg cho biết khoảng mặt mạng ra sao?",
+                "source": "36.6"
+              },
+              {
+                "slug": "khau-do-tron-phan-giai",
+                "title": "Khẩu độ tròn và phân giải",
+                "question": "Vì sao phóng to ảnh chưa chắc thấy thêm chi tiết?",
+                "source": "36.7"
+              },
+              {
+                "slug": "anh-toan-ky",
+                "title": "Ảnh toàn ký",
+                "question": "Ghi hệ vân như thế nào để tái tạo mặt sóng ba chiều?",
+                "source": "36.8"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "17-thuyet-tuong-doi",
       "title": "Thuyết tương đối",
@@ -3287,6 +3359,116 @@ export const physics2Course = {
         "Biết bước sóng có thể đo khoảng cách bằng đếm vân, hoặc dùng độ dời đã biết để suy bước sóng."
       ],
       "formula": "$$\n\\begin{aligned}2y&=N\\lambda\\\\\\lambda&=2y/N.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Nhiễu xạ là chồng chất các phần mặt sóng",
+      "bullets": [
+        "Mỗi phần của khẩu độ đóng góp một sóng thứ cấp.",
+        "Fraunhofer dùng các hướng gần song song ở miền xa hoặc tiêu diện.",
+        "Fresnel cần giữ độ cong mặt sóng khi hình học còn ở miền gần."
+      ],
+      "formula": "$$\nE_P=E_1+E_2.\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Cực tiểu khe đơn cần triệt tiêu toàn khe",
+      "bullets": [
+        "Hai nửa khe có thể ghép thành các cặp ngược pha ở cực tiểu đầu.",
+        "Bậc không khác không phân biệt cực tiểu với tâm cực đại.",
+        "Khe càng hẹp, góc mở trung tâm càng lớn."
+      ],
+      "formula": "$$\n\\begin{aligned}a\\sin\\theta_m&=m\\lambda\\\\m&=\\pm1,\\pm2,\\ldots.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Cường độ khe đơn không giảm tuyến tính",
+      "bullets": [
+        "Đối số là nửa độ lệch pha giữa hai mép khe.",
+        "Tại tâm, dùng giới hạn để được cường độ cực đại.",
+        "Các cực đại phụ được tìm từ phương trình tang bằng đối số."
+      ],
+      "formula": "$$\n\\begin{aligned}\\gamma&=\\pi a\\sin\\theta/\\lambda\\\\I&=I_0(\\sin\\gamma/\\gamma)^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Vị trí trên màn cần phân biệt sin và tang",
+      "bullets": [
+        "Điều kiện pha dùng sin của góc.",
+        "Tọa độ trên màn phẳng dùng tang của góc.",
+        "Công thức bề rộng tỉ lệ nghịch khe cần góc nhỏ."
+      ],
+      "formula": "$$\n\\begin{aligned}y_m&=R\\tan\\theta_m\\\\y_m&\\approx Rm\\lambda/a.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Vân giao thoa nằm trong bao nhiễu xạ",
+      "bullets": [
+        "Khoảng tâm khe quyết định nhịp của thừa số giao thoa.",
+        "Bề rộng mỗi khe quyết định bao nhiễu xạ.",
+        "Một bậc bị khuyết khi cực đại giao thoa trùng cực tiểu của bao."
+      ],
+      "formula": "$$\n\\begin{aligned}d\\sin\\theta&=m_i\\lambda\\\\a\\sin\\theta&=m_d\\lambda\\\\m_i&=(d/a)m_d.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Nhiều khe cho cực đại chính hẹp",
+      "bullets": [
+        "Vị trí cực đại chính giữ cùng điều kiện pha giữa các khe kề nhau.",
+        "Có N trừ một cực tiểu giữa hai cực đại chính.",
+        "Bề rộng theo pha tỉ lệ nghịch số khe khi các đóng góp cùng biên độ."
+      ],
+      "formula": "$$\n\\begin{aligned}I_{\\max}&=N^2I_s\\\\\\Delta\\phi&=4\\pi/N.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Cách tử tách bước sóng theo góc",
+      "bullets": [
+        "Ở tới vuông góc, cực đại có hiệu đường đi nguyên bước sóng.",
+        "Bước sóng dài hơn lệch nhiều hơn trên cùng phía và cùng bậc.",
+        "Bậc cao có thể chồng phổ với những bậc khác."
+      ],
+      "formula": "$$\nd\\sin\\theta_m=m\\lambda.\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Năng suất phân giải phổ phụ thuộc số khe",
+      "bullets": [
+        "Hai vạch vừa phân giải khi đỉnh một vạch trùng cực tiểu đầu của vạch kia.",
+        "Số khe được chiếu sáng và bậc phổ cùng làm tăng độ phân giải.",
+        "Điều kiện góc tồn tại vẫn giới hạn các bậc dùng được."
+      ],
+      "formula": "$$\n\\mathcal R=\\lambda/\\Delta\\lambda=mN.\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Bragg dùng góc với mặt mạng",
+      "bullets": [
+        "Các nguyên tử trong mỗi mặt tán xạ kết hợp theo hướng phản xạ.",
+        "Hai mặt mạng liên tiếp tạo thêm cả đường vào và đường ra.",
+        "Dùng bước sóng trong môi trường của mạng tán xạ."
+      ],
+      "formula": "$$\n\\begin{aligned}2d\\sin\\theta&=m\\lambda\\\\m&=1,2,3,\\ldots.\\end{aligned}\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Khẩu độ tròn tạo đĩa Airy và giới hạn chi tiết",
+      "bullets": [
+        "Một vật điểm cho ảnh có bề rộng hữu hạn.",
+        "Tiêu chuẩn Rayleigh so độ tách hai ảnh với vòng tối đầu.",
+        "Khẩu độ lớn hơn và bước sóng ngắn hơn giảm giới hạn góc."
+      ],
+      "formula": "$$\n\\sin\\theta_R=1{,}22\\lambda/D.\n$$"
+    },
+    {
+      "note": "16-nhieu-xa",
+      "title": "Ảnh toàn ký tái tạo sóng hội tụ và phân kỳ",
+      "bullets": [
+        "Chùm vật và chùm chuẩn cùng ghi hệ vân trên phim.",
+        "Chiếu chùm thích hợp lên bản ghi có thể tạo ảnh thật và ảnh ảo.",
+        "Quan hệ pha và độ ổn định cơ học phải được giữ trong lúc ghi."
+      ],
+      "formula": "$$\n\\begin{aligned}b_m-b_0&=m\\lambda\\\\r_m^2&=2m\\lambda b_0+m^2\\lambda^2.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",

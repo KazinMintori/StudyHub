@@ -27,17 +27,19 @@ Một bạn học cho rằng bề rộng cực đại trung tâm của nhiễu x
 - Dùng $w=2R\tan\theta_1$ với $\sin\theta_1=\lambda/a$ để kiểm tra giới hạn của gần đúng.
 - Đọc mức tiệm cận của aw ở a lớn để suy $\lambda\approx aw/(2R)$.
 
-(a) Theo thứ tự tăng của a, các tích aw, tính theo $10^{-6}\,\mathrm{m^2}$, là:
+(a) Tính đủ chín tích aw:
 
-$$
-\begin{aligned}
-aw&=2{,}0904,\ 1{,}9019,\\
-&\quad1{,}7992,\ 1{,}6198,\\
-&\quad1{,}5912,\ 1{,}5600,\\
-&\quad1{,}5600,\ 1{,}5600,\\
-&\quad1{,}5600.
-\end{aligned}
-$$
+| a ($\mu\mathrm m$) | aw ($10^{-6}\,\mathrm{m^2}$) |
+| --- | --- |
+| 0,78 | 2,0904 |
+| 0,91 | 1,9019 |
+| 1,04 | 1,7992 |
+| 1,82 | 1,6198 |
+| 3,12 | 1,5912 |
+| 5,20 | 1,5600 |
+| 7,80 | 1,5600 |
+| 10,40 | 1,5600 |
+| 15,60 | 1,5600 |
 
 ![Lời giải 36.62: Đồ thị dùng đủ chín cặp đo, cho thấy tích aw tiến tới một giá trị không đổi ở khe rộng hơn.](img/young-36/loi-giai-36-62.svg)
 

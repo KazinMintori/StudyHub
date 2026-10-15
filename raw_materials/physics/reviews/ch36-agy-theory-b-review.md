@@ -1,3 +1,5 @@
+> Kiểm định cuối của Codex: Đây là báo cáo tự nhận của Antigravity, không phải chứng nhận nghiệm thu. Lượt cuối kết thúc bằng lỗi bridge NoneType. Codex đã phát hiện và sửa thêm các lỗi nguồn, câu hỏi, hình và trình bày. Bản tích hợp được kiểm độc lập trong `ch36-final-source-review.md` và `../chapter-36-review.json`.
+
 > Ghi chú kiểm định của Codex: Báo cáo rà soát và kiểm thử nghiệm thu chính thức của đợt phân công cuối cùng (Call 3/3 - FINAL corrective call) cho nhiệm vụ `physics36-agy-b`. Toàn bộ 10 hạng mục chấn chỉnh độ chuẩn xác nguồn đã được khắc phục triệt để và xác minh bằng bộ kiểm thử tự động `verify_chapter36_theory_b.py`, khớp chuẩn bit-exact với tệp PDF gốc và tuân thủ tuyệt đối phạm vi 23 tệp được phân công sở hữu độc quyền.
 
 # Báo cáo rà soát và kiểm thử: Chapter 36 Theory B (Call 3/3 - Final Report)

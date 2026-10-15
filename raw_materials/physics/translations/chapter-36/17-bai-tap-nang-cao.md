@@ -100,12 +100,17 @@ Xét N khe cách tâm đều nhau một khoảng d, phát kết hợp đồng ph
 
 $$
 \begin{aligned}
-E_P(t)&=E_0\cos\delta\\
-&\quad+E_0\cos(\delta+\phi)\\
-&\quad+E_0\cos(\delta+2\phi)\\
-&\quad+\cdots\\
-&\quad+E_0\cos\psi_N.
+E_1&=E_0\cos\delta,\\
+E_2&=E_0\cos(\delta+\phi),\\
+E_3&=E_0\cos(\delta+2\phi),\\
+E_N&=E_0\cos\psi_N.
 \end{aligned}
+$$
+
+Các số hạng ở giữa tiếp tục theo cùng quy luật. Trường tổng được khai triển là:
+
+$$
+E_P=E_1+E_2+\cdots+E_N.
 $$
 
 (b) Với $e^{iz}=\cos z+i\sin z$ và $i^2=-1$, chứng minh trường trên là phần thực của tổng phức gồm các số hạng $E_0e^{i(\delta+n\phi)}$, với n từ 0 đến $N-1$.
@@ -135,8 +140,7 @@ Dấu của $\phi$ gắn với chiều đánh số khe và góc có dấu. Đả
 
 $$
 \begin{aligned}
-S_N&=1+q+q^2\\
-&\quad+\cdots+q^{N-1}\\
+S_N&=1+q+\cdots+q^{N-1}\\
 &=\sum_{n=0}^{N-1}q^n.
 \end{aligned}
 $$
@@ -158,8 +162,9 @@ Dùng đồng nhất thức $e^{ix}-e^{-ix}=2i\sin x$, ta viết:
 
 $$
 \begin{aligned}
-S_N&=\frac{\sin(N\phi/2)}{\sin(\phi/2)}\\
-&\quad\times e^{i(N-1)\phi/2}.
+A_N&=\frac{\sin(N\phi/2)}{\sin(\phi/2)},\\
+\eta&=(N-1)\phi/2,\\
+S_N&=A_Ne^{i\eta}.
 \end{aligned}
 $$
 
@@ -221,10 +226,7 @@ Bề rộng tỉ lệ thuận với $1/N$, tức tỉ lệ nghịch với N. C�
 (c) Tử số bằng không khi:
 
 $$
-\begin{aligned}
-\phi&=\frac{2\pi q}{N},\\
-q&\in\mathbb Z.
-\end{aligned}
+\phi=\frac{2\pi q}{N}, q\in\mathbb Z.
 $$
 
 Nếu q không là bội của N, mẫu khác không và I bằng không. Nếu q là bội của N thì cả tử và mẫu cùng bằng không, nhưng giới hạn thuộc cực đại chính ở câu (a).

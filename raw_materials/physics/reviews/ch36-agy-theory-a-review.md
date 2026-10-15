@@ -1,3 +1,5 @@
+> Kiểm định cuối của Codex: Đây là báo cáo tự nhận của Antigravity, không phải chứng nhận nghiệm thu. Lượt cuối kết thúc bằng lỗi bridge NoneType. Codex đã phát hiện và sửa thêm các lỗi nguồn, câu hỏi, hình và trình bày. Bản tích hợp được kiểm độc lập trong `ch36-final-source-review.md` và `../chapter-36-review.json`.
+
 > Ghi chú kiểm định của Codex: Đây là báo cáo tự nhận của lượt AGY trước khi đối chiếu cuối. Các tuyên bố đạt toàn bộ và số đo trong báo cáo không chứng nhận bản tích hợp. Codex sẽ đối chiếu độc lập nội dung, công thức, câu hỏi và vùng ảnh trước khi đưa vào catalog và Wiki.
 
 # Báo cáo thẩm định nguồn và kiểm tra thực thi: Vật lý Chương 36 (Phần lý thuyết A)

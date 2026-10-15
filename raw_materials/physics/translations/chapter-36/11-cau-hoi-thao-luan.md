@@ -164,10 +164,7 @@ Khi giọt nhỏ, mỗi dải màu bị trải rộng đáng kể do tính chấ
 Lấy bước sóng đại diện $550\,\mathrm{nm}$ và độ tách màu cỡ $2^\circ$ để ước lượng. Khi độ trải rộng đạt cấp độ này:
 
 $$
-\begin{aligned}
-D&\sim\frac{1{,}22\lambda}{\sin2^\circ}\\
-&\sim19\,\mu\mathrm m.
-\end{aligned}
+D\sim\frac{1{,}22\lambda}{\sin2^\circ} \sim19\,\mu\mathrm m.
 $$
 
 Vì vậy, đường kính cỡ vài chục micromet có thể làm các màu trộn mạnh. Con số này là ước lượng theo thang nhiễu xạ với những giả thiết vừa nêu, không phải một ngưỡng sắc nét cho mọi phân bố kích thước giọt.
@@ -262,8 +259,7 @@ Với N khe, tổng cần xét được khai triển rõ là:
 
 $$
 \begin{aligned}
-\mathbf E_P&=\mathbf E_1+\mathbf E_2\\
-&\quad+\cdots+\mathbf E_N\\
+\mathbf E_P&=\mathbf E_1+\mathbf E_2 +\cdots+\mathbf E_N\\
 &=\sum_{j=1}^{N}\mathbf E_j.
 \end{aligned}
 $$

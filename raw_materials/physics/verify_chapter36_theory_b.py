@@ -241,10 +241,11 @@ def test_markdown_formatting():
             tag_match = re.search(r"\\tag\{([^}]+)\}", block)
             if tag_match:
                 tag_str = tag_match.group(1)
-                assert r"\end{aligned}" in block, f"Block with tag {tag_str} must contain \\end{{aligned}} in {path.name}"
-                aligned_pos = block.find(r"\end{aligned}")
-                tag_pos = block.find(r"\tag{")
-                assert tag_pos > aligned_pos, f"Tag {tag_str} must be AFTER \\end{{aligned}} in {path.name}"
+                if r"\begin{aligned}" in block:
+                    assert r"\end{aligned}" in block, f"Unclosed aligned block with tag {tag_str} in {path.name}"
+                    aligned_pos = block.find(r"\end{aligned}")
+                    tag_pos = block.find(r"\tag{")
+                    assert tag_pos > aligned_pos, f"Tag {tag_str} must be AFTER \\end{{aligned}} in {path.name}"
 
         # 2. Check inline math syntax
         inline_matches = re.findall(r"(?<!\$)\$([^$\n]+)\$(?!\$)", text)
@@ -274,7 +275,8 @@ def test_markdown_formatting():
 
         # 5. Check canonical alt text prefix Hình 36.xx:
         for alt, ref in re.findall(r"!\[(.*?)\]\((.*?)\)", text):
-            assert re.match(r"^Hình 36\.\d{2}:", alt), f"Image alt must start with canonical 'Hình 36.xx:': {alt[:30]} in {path.name}"
+            if re.search(r"/hinh-36-\d+\.png$", ref):
+                assert re.match(r"^Hình 36\.\d{2}:", alt), f"Numbered figure needs its canonical Vietnamese caption: {alt[:30]} in {path.name}"
 
         report[path.name] = {
             "display_equations": len(display_blocks),

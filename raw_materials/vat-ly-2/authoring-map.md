@@ -134,7 +134,15 @@ Các phép tính Python, kiểm tra pixel và kiểm tra hiển thị toàn bộ
 
 Các worktree Antigravity được giữ sau lỗi bridge hoặc trạng thái chạy kéo dài. Codex tự đối chiếu, sửa và kiểm chứng bản tích hợp. Không dùng subagent GPT hoặc gọi quá ba lượt cho mỗi tác vụ.
 
-## Các chương 36–44
+## Chương 36
+
+Đã hoàn tất tám mục lý thuyết, sáu ví dụ, bảy câu tự kiểm, 21 công thức đánh số và 30 hình đánh số. Có 42 PNG giữ nguyên vùng PDF và chín SVG hỗ trợ lời giải. Các hình mép dao, nhiễu xạ nhiều khe, mạng tinh thể và hai ảnh toàn ký được rà đủ các phần.
+
+Tab Bài tập chứa 71 bài đánh số, 19 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, với 103 hộp lời giải chi tiết. Có 11 Slides, bảy nhóm Cheatsheet với 18 mục và 12 Wiki mới. Các bảng chín cặp và bốn cặp dữ liệu được giữ đầy đủ. Mọi phép tính đã kiểm bằng Python.
+
+Đã áp dụng quy tắc công thức mới chỉ ngắt tại dấu quan hệ, giữ trọn vế và không dùng aligned cho phương trình ngắn. Có 151 lượt kiểm giao diện và tám lượt kiểm nguồn bổ sung ở 320–1440 px, không có tràn công thức hay lỗi JavaScript. Hai tác vụ Antigravity kết thúc sau ba lượt với lỗi bridge. Codex tự kiểm, sửa và giữ hồ sơ đối chiếu. Trạng thái xuất bản được ghi riêng. Build chỉ trên GitHub Actions.
+
+## Các chương 37–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

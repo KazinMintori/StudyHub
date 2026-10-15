@@ -295,18 +295,22 @@ Xét một nhóm gồm 5 người: Alex, Emi, Fred, Max và Nan. Ta chọn ngẫ
 </div>
 
 Tính xác suất để cả Alex và Emi cùng được chọn vào ban đại diện:
-- **Cách 1: Đếm tổ hợp**:
-  Số cách chọn 2 người bất kỳ từ 5 người là:
-  $$
-  \binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10 \text{ cặp phân biệt}
-  $$
+
+- **Cách 1: Đếm tổ hợp**: Số cách chọn 2 người bất kỳ từ 5 người là:
+
+$$
+\binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10 \text{ cặp phân biệt}
+$$
+
   Cặp (Alex, Emi) là 1 trong 10 cặp đồng khả năng đó, do đó xác suất là:
-  $$
-  P(\text{Alex và Emi}) = \frac{1}{10} = 0{,}10
-  $$
-- **Cách 2: Áp dụng quy tắc nhân và cộng**:
-  Cặp (Alex, Emi) được chọn nếu rút được Alex trước rồi Emi sau, HOẶC Emi trước rồi Alex sau:
-  $$
+
+$$
+P(\text{Alex và Emi}) = \frac{1}{10} = 0{,}10
+$$
+
+- **Cách 2: Áp dụng quy tắc nhân và cộng**: Cặp (Alex, Emi) được chọn nếu rút được Alex trước rồi Emi sau, hoặc Emi trước rồi Alex sau:
+
+$$
 \begin{aligned}
 P(\text{Alex trước} \cap \text{Emi sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
 P(\text{Emi trước} \cap \text{Alex sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
@@ -324,14 +328,19 @@ Xét Hộp 1 chứa các tấm thẻ có cả màu sắc (Đỏ/Xanh) và con s�
 </div>
 
 Hỏi biến cố "Màu sắc" và "Con số" có độc lập với nhau hay không?
+
 - Ta tính xác suất rút được thẻ số 3 khi biết thẻ đó màu đỏ:
+
 $$
 P(\text{Số 3} \mid \text{Đỏ}) = \frac{1}{3}
 $$
+
 - Tuy nhiên, trong số các thẻ màu xanh, hoàn toàn không có thẻ số 3 nào:
+
 $$
 P(\text{Số 3} \mid \text{Xanh}) = 0
 $$
+
 Vì $P(\text{Số 3} \mid \text{Đỏ}) \neq P(\text{Số 3} \mid \text{Xanh})$, màu sắc và con số trong Hộp 1 là hai đặc tính **phụ thuộc**. Chỉ cần một cặp giá trị vi phạm đẳng thức thì toàn bộ hai biến phân loại đó không thể độc lập.
 
 Tiếp tục xét hai hộp chứa các thẻ mang hai chữ số:

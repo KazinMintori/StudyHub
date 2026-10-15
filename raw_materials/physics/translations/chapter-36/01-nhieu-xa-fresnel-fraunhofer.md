@@ -20,13 +20,13 @@ Ta có thể áp dụng nguyên lý Huygens để phân tích các hệ vân nhi
 
 Nhiễu xạ đôi khi được miêu tả trực quan là “sự bẻ cong của ánh sáng quanh vật cản”. Tuy nhiên, quá trình vật lý gây ra nhiễu xạ luôn hiện diện trong sự lan truyền của mọi sóng. Bất kỳ khi nào một phần của mặt sóng bị cắt bớt bởi một vật cản, ta đều quan sát thấy các hiệu ứng nhiễu xạ xuất hiện do sự giao thoa của những phần mặt sóng còn lại.
 
-Các dụng cụ quang học trong thực tế luôn chỉ tiếp nhận một phần hữu hạn của mặt sóng ánh sáng. Chẳng hạn: Kính thiên văn chỉ thu nhận phần mặt sóng lọt qua thấu kính vật kính hoặc gương cầu; mắt người chỉ thu nhận phần sóng đi qua đồng tử. Vì vậy, hiện tượng nhiễu xạ giữ vai trò quyết định trong việc giới hạn độ phân giải của hầu hết mọi hệ thống quang học.
+Các dụng cụ quang học trong thực tế luôn chỉ tiếp nhận một phần hữu hạn của mặt sóng ánh sáng. Chẳng hạn: Kính thiên văn chỉ thu nhận phần mặt sóng lọt qua thấu kính vật kính hoặc gương cầu. Mắt người chỉ thu nhận phần sóng đi qua đồng tử. Vì vậy, hiện tượng nhiễu xạ giữ vai trò quyết định trong việc giới hạn độ phân giải của hầu hết mọi hệ thống quang học.
 
 ### Phân loại nhiễu xạ: Nhiễu xạ Fresnel và nhiễu xạ Fraunhofer
 
 Tùy thuộc vào khoảng cách tương đối giữa nguồn sáng, vật cản và màn quan sát, người ta phân chia hiện tượng nhiễu xạ thành hai trường hợp:
 
-Trong Hình 36.1, cả nguồn sáng điểm và màn quan sát đều ở tương đối gần vật cản tạo nên hệ vân nhiễu xạ. Tình huống này được gọi là **nhiễu xạ trường gần** hay **nhiễu xạ Fresnel**, đặt theo tên của nhà khoa học Pháp Augustin Jean Fresnel (1788–1827), phát âm là “Freh-nell”. Khi nguồn hoặc màn ở cự ly tương đối gần, các mặt sóng tới vật cản và mặt sóng truyền tới màn đều có độ cong đáng kể (mặt cầu hoặc mặt trụ). Việc tính toán biên độ sóng tổng hợp tại một điểm trên màn đòi hỏi phải xét cả độ cong của mặt sóng và độ lệch pha phức tạp giữa các tia sáng không song song.
+Trong Hình 36.1, nguồn sáng điểm và màn quan sát đều ở tương đối gần vật cản tạo nên hệ vân nhiễu xạ. Tình huống này được gọi là **nhiễu xạ trường gần** hay **nhiễu xạ Fresnel**, đặt theo tên của nhà khoa học Pháp Augustin Jean Fresnel (1788–1827), phát âm là “Freh-nell”. Khi nguồn hoặc màn tương đối gần, độ cong mặt sóng liên quan không thể bỏ qua. Mặt sóng có thể là mặt cầu hoặc mặt trụ, tùy hình học nguồn. Việc tính toán biên độ sóng tổng hợp tại một điểm trên màn đòi hỏi phải xét cả độ cong của mặt sóng và độ lệch pha phức tạp giữa các tia sáng không song song.
 
 Trái lại, ta dùng thuật ngữ **nhiễu xạ Fraunhofer** (đặt theo tên của nhà vật lý Đức Joseph von Fraunhofer, 1787–1826) cho các tình huống mà nguồn sáng, vật cản và màn quan sát ở đủ xa nhau để ta có thể coi mọi đường truyền từ nguồn tới vật cản là song song với nhau, và cũng có thể coi mọi đường truyền từ vật cản tới một điểm xác định trên màn là song song với nhau. Trong các phần tiếp theo của chương này, chúng ta sẽ giới hạn phạm vi khảo sát ở hiện tượng nhiễu xạ Fraunhofer, vốn đơn giản hơn nhiều để phân tích chi tiết so với nhiễu xạ Fresnel.
 
@@ -37,3 +37,13 @@ Giữa hiện tượng giao thoa và hiện tượng nhiễu xạ không có s�
 - Thuật ngữ nhiễu xạ thường được dùng khi xét sự phân bố liên tục của các sóng thứ cấp Huygens trên toàn bộ diện tích của một lỗ mở, hoặc từ một số lượng rất lớn các nguồn hay các khe hẹp.
 
 Cả hiện tượng giao thoa và nhiễu xạ đều là hệ quả tất yếu của nguyên lý chồng chất sóng và nguyên lý Huygens.
+
+### Câu hỏi tự kiểm tra 36.1
+
+Sóng âm có thể nhiễu xạ quanh một mép vật cản không?
+
+<details><summary>Xem đáp án và giải thích</summary>
+
+Có. Khi nghe một người đang đứng khuất sau góc tường, ta nhận các sóng âm đã nhiễu xạ quanh mép. Nếu âm không có nhiễu xạ hoặc phản xạ, ta chỉ nghe được những vật phát âm nằm trong đường nhìn thẳng.
+
+</details>

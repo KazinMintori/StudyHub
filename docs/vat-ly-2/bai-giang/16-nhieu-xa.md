@@ -3,29 +3,50 @@ course: vat-ly-2
 lecture: 16-nhieu-xa
 section: lecture
 title: "Nhiễu xạ"
-prerequisites: ["giao-thoa-song","pha-song","chiet-suat"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Nhiễu xạ."
+prerequisites: ["mat-song","nguyen-ly-huygens","nguon-ket-hop","hieu-duong-di","vector-pha","thau-kinh-mong","chiet-suat","tan-sac"]
+lessonStatus: ready
+hasChapterExercises: true
+description: "Nhiễu xạ Fresnel và Fraunhofer, khe đơn, nhiều khe, cách tử, tia X, khẩu độ tròn và ảnh toàn ký."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 36.1 — Fresnel and Fraunhofer Diffraction (từ trang 1185).
-- 36.2 — Diffraction from a Single Slit (từ trang 1187).
-- 36.3 — Intensity in the Single-Slit Pattern (từ trang 1190).
-- 36.4 — Multiple Slits (từ trang 1194).
-- 36.5 — The Diffraction Grating (từ trang 1196).
-- 36.6 — X-Ray Diffraction (từ trang 1200).
-- 36.7 — Circular Apertures and Resolving Power (từ trang 1203).
-- 36.8 — Holography (từ trang 1206).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/09-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 36, trang 1185–1216.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Nhiễu xạ">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/10-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/11-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/12-bai-tap-01-17.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/13-bai-tap-18-31.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/14-bai-tap-32-44.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/15-bai-tap-45-61.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/16-bai-tap-du-lieu.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/17-bai-tap-nang-cao.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/18-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-36/19-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 36, trang 1208–1216.
+
+</div>

@@ -1,4 +1,4 @@
-﻿---
+---
 course: xac-suat-thong-ke
 lecture: 06-phan-tich-co-dieu-kien
 section: lecture
@@ -276,24 +276,27 @@ TRUE * FALSE
 Nhờ biểu diễn số học nhị phân, ta có hai công thức tính toán thống kê cực kỳ tiện lợi:
 
 1. **Đếm số lượng quan sát thỏa mãn điều kiện**: Áp dụng hàm `sum()` trên biểu thức điều kiện:
-   $$
+
+$$
 \begin{aligned}
 n_{\text{thỏa}} &= \sum_{i=1}^n \mathbf{1}_{\{x_i \in E\}} \\
 &= \mathbf{1}_{\{x_1 \in E\}} + \mathbf{1}_{\{x_2 \in E\}} + \dots + \mathbf{1}_{\{x_n \in E\}}
 \end{aligned}
 $$
+
    với hàm chỉ thị $\mathbf{1}_{\{E\}}$ nhận giá trị $1$ nếu biến cố xảy ra và $0$ nếu không xảy ra.
    
    Chẳng hạn: `sum(a < 5)` cho kết quả là $1 + 1 + 0 + 0 = 2$.
 
 2. **Tính tỷ lệ (Proportion) thỏa mãn điều kiện**: Áp dụng hàm tính trung bình `mean()` trên biểu thức điều kiện:
-   $$
+
+$$
 \begin{aligned}
 p &= \frac{1}{n} \sum_{i=1}^n \mathbf{1}_{\{x_i \in E\}} \\
 &= \frac{\mathbf{1}_{\{x_1 \in E\}} + \mathbf{1}_{\{x_2 \in E\}} + \dots + \mathbf{1}_{\{x_n \in E\}}}{n}
 \end{aligned}
 $$
-   
+
    Chẳng hạn: `mean(a < 5)` cho kết quả là $\frac{2}{4} = 0.5$ ($50\%$).
 
 Đây là một kỹ thuật tóm tắt dữ liệu kinh điển: Hàm `mean()` khi tác động lên một vector logic không tính trung bình số học thông thường, mà tính chính xác **tỷ lệ phần trăm các trường hợp đạt điều kiện**.
@@ -512,12 +515,14 @@ Kết quả này hé lộ một góc nhìn sinh thái học sâu sắc: Các lo�
      ```
    - Kiểu dữ liệu của kết quả: Kiểu Logic (`logical`).
    - Khi áp dụng hàm `mean()`:
-     $$
+
+$$
 \begin{aligned}
 \bar{x}_{\text{logic}} &= \frac{0 + 1 + 0}{3} \\
 &= \frac{1}{3} \approx 0.333
 \end{aligned}
 $$
+
    - **Ý nghĩa thống kê**: Giá trị này đại diện cho tỷ lệ phần trăm các phần tử trong vector thỏa mãn điều kiện là `"orange"` (đạt $33.33\%$).
 
 2. **Phân tích lỗi đường ống và cách khắc phục**:
@@ -571,8 +576,7 @@ $$
    - Gọi $E_2$ là biến cố sinh viên có điểm kỹ năng lập trình dưới 3 (`coding_score < 3`).
    - Lệnh A tương ứng với phép giao hai điều kiện: $E_A = E_1 \cap E_2$.
    - Lệnh B tương ứng với phép hợp hai điều kiện: $E_B = E_1 \cup E_2$.
-   - Vì phép giao luôn là tập con của phép hợp ($E_1 \cap E_2 \subseteq E_1 \cup E_2$), ta luôn có:
-     $$N_A \le N_B$$
+   - Vì phép giao luôn là tập con của phép hợp ($E_1 \cap E_2 \subseteq E_1 \cup E_2$), ta luôn có: $N_A \le N_B$.
    - **Điều kiện để $N_A = N_B$**:
      - Đẳng thức $N_A = N_B$ chỉ xảy ra khi và chỉ khi hai tập hợp trùng khớp hoàn toàn ($E_1 = E_2$).
      - Nghĩa là mọi sinh viên năm nhất đều có điểm lập trình dưới 3, và đồng thời mọi sinh viên có điểm lập trình dưới 3 đều là sinh viên năm nhất. Nếu có bất kỳ một sinh viên năm nhất nào có điểm $\ge 3$, hoặc có bất kỳ sinh viên khóa trên nào có điểm $< 3$, thì chắc chắn $N_A < N_B$.

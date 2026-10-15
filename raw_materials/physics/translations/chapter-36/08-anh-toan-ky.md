@@ -4,7 +4,7 @@
 
 Kỹ thuật toàn ảnh (holography) là một phương pháp ghi nhận và tái tạo lại hình ảnh của một vật thể nhờ vận dụng các hiện tượng giao thoa. Khác với các hình ảnh hai chiều được ghi lại bởi một bức ảnh thông thường hay hệ thống truyền hình, một hình ảnh toàn ký là một hình ảnh ba chiều thực sự. Hình ảnh này có thể được quan sát từ các hướng khác nhau để thấy các mặt khác nhau và từ các khoảng cách khác nhau để thấy sự thay đổi thị sai. Nếu bạn chưa từng thấy một bức ảnh toàn ký, bạn khó có thể tin được điều đó là khả thi!
 
-![Hình 36.28: (a) Ảnh toàn ký là bản ghi trên phim của hệ vân giao thoa hình thành giữa ánh sáng từ nguồn kết hợp và ánh sáng tán xạ từ vật thể. (b) Các hình ảnh được hình thành khi ánh sáng được chiếu qua ảnh toàn ký. Người quan sát nhìn thấy ảnh ảo hình thành phía sau ảnh toàn ký.](../img/young-36/hinh-36-28.png)
+![Hình 36.28: Phần (a): Ảnh toàn ký là bản ghi trên phim của hệ vân giao thoa hình thành giữa ánh sáng từ nguồn kết hợp và ánh sáng tán xạ từ vật thể. (b) Các hình ảnh được hình thành khi ánh sáng được chiếu qua ảnh toàn ký. Người quan sát nhìn thấy ảnh ảo hình thành phía sau ảnh toàn ký.](../img/young-36/hinh-36-28.png)
 
 Hình 36.28a minh họa quy trình cơ bản để tạo một bức ảnh toàn ký. Ta chiếu sáng vật thể cần chụp toàn ảnh bằng ánh sáng đơn sắc, và đặt một tấm phim ảnh sao cho phim vừa nhận ánh sáng tán xạ từ vật thể, vừa nhận ánh sáng trực tiếp từ nguồn sáng. Trong thực tế, nguồn sáng bắt buộc phải là laser, vì những lý do sẽ được thảo luận ở phần sau. Sự giao thoa giữa ánh sáng trực tiếp và ánh sáng tán xạ tạo thành một hệ vân giao thoa phức tạp được ghi lại trên phim.
 
@@ -12,13 +12,13 @@ Hình 36.28a minh họa quy trình cơ bản để tạo một bức ảnh toàn
 
 ### Kỹ thuật toàn ảnh và các hệ vân giao thoa
 
-Việc phân tích toán học toàn diện kỹ thuật toàn ảnh nằm ngoài phạm vi cuốn sách này, nhưng chúng ta có thể hiểu sâu hơn về quá trình này bằng cách khảo sát cách một điểm sáng đơn lẻ được ghi và tạo ảnh. Xét hệ vân giao thoa được hình thành trên một tấm phim âm bản bằng sự chồng chập của một sóng phẳng tới và một sóng cầu, như trong Hình 36.29a. Sóng cầu phát ra từ một nguồn điểm $P$ ở khoảng cách $b_0$ so với tấm phim; $P$ trên thực tế có thể là một vật thể rất nhỏ tán xạ một phần sóng phẳng tới. Ta giả thiết hai sóng là đơn sắc và kết hợp, đồng thời hệ thức pha thỏa mãn điều kiện giao thoa tăng cường tại điểm $O$ trên hình vẽ. Khi đó, giao thoa tăng cường cũng sẽ xảy ra tại bất kỳ điểm $Q$ nào trên phim có khoảng cách tới $P$ lớn hơn khoảng cách từ $O$ tới $P$ một số nguyên lần bước sóng. Nghĩa là, nếu $b_m - b_0 = m\lambda$, với $m$ là một số nguyên, thì sẽ xuất hiện giao thoa tăng cường. Các điểm thỏa mãn điều kiện này tạo thành các đường tròn trên phim có tâm tại $O$, với bán kính $r_m$ được xác định bởi:
+Ta khảo sát cách một điểm sáng được ghi và tái tạo để thấy cơ chế của ảnh toàn ký. Phép phân tích này mở những bước chính, còn lý thuyết toàn diện nằm ngoài phạm vi đang xét. Xét hệ vân giao thoa được hình thành trên một tấm phim âm bản bằng sự chồng chập của một sóng phẳng tới và một sóng cầu, như trong Hình 36.29a. Sóng cầu phát ra từ một nguồn điểm $P$ ở khoảng cách $b_0$ so với tấm phim; $P$ trên thực tế có thể là một vật thể rất nhỏ tán xạ một phần sóng phẳng tới. Ta giả thiết hai sóng là đơn sắc và kết hợp, đồng thời hệ thức pha thỏa mãn điều kiện giao thoa tăng cường tại điểm $O$ trên hình vẽ. Khi đó, giao thoa tăng cường cũng sẽ xảy ra tại bất kỳ điểm $Q$ nào trên phim có khoảng cách tới $P$ lớn hơn khoảng cách từ $O$ tới $P$ một số nguyên lần bước sóng. Nghĩa là, nếu $b_m - b_0 = m\lambda$, với $m$ là một số nguyên, thì sẽ xuất hiện giao thoa tăng cường. Các điểm thỏa mãn điều kiện này tạo thành các đường tròn trên phim có tâm tại $O$, với bán kính $r_m$ được xác định bởi:
 
-![Hình 36.29: (a) Sự giao thoa tăng cường của sóng phẳng và sóng cầu xảy ra trong mặt phẳng của tấm phim tại mỗi điểm Q mà khoảng cách bm từ P lớn hơn khoảng cách b0 từ P đến O một số nguyên lần bước sóng mλ. Đối với điểm Q minh họa, m = 2. (b) Khi một sóng phẳng chiếu vào bản dương bản trong suốt của tấm phim đã tráng, sóng nhiễu xạ gồm một sóng hội tụ tại P' rồi lại phân kỳ, và một sóng phân kỳ dường như xuất phát từ P. Các sóng này lần lượt tạo thành ảnh thật và ảnh ảo.](../img/young-36/hinh-36-29.png)
+![Hình 36.29: Phần (a): Sự giao thoa tăng cường của sóng phẳng và sóng cầu xảy ra trong mặt phẳng của tấm phim tại mỗi điểm Q mà khoảng cách bm từ P lớn hơn khoảng cách b0 từ P đến O một số nguyên lần bước sóng mλ. Đối với điểm Q minh họa, m = 2. (b) Khi một sóng phẳng chiếu vào bản dương bản trong suốt của tấm phim đã tráng, sóng nhiễu xạ gồm một sóng hội tụ tại P' rồi lại phân kỳ, và một sóng phân kỳ dường như xuất phát từ P. Các sóng này lần lượt tạo thành ảnh thật và ảnh ảo.](../img/young-36/hinh-36-29.png)
 
 $$
 \begin{aligned}
-b_m - b_0 &= \sqrt{b_0^2 + r_m^2} - b_0 \\
+b_m - b_0 &= \sqrt{b_0^2 + r_m^2} - b_0\\
 &= m\lambda
 \end{aligned}
 \tag{36.20}
@@ -29,17 +29,13 @@ với $m = 1, 2, 3, \dots$ là các số nguyên dương.
 Giải phương trình này theo $r_m^2$, ta nhận được:
 
 $$
-\begin{aligned}
-r_m^2 &= \lambda(2m b_0 + m^2\lambda)
-\end{aligned}
+r_m^2 = \lambda(2m b_0 + m^2\lambda)
 $$
 
 Thông thường, khoảng cách từ vật tới phim $b_0$ lớn hơn rất nhiều so với bước sóng $\lambda$, và ở vùng gần trục quang (điều kiện cận trục) ta có $m\lambda \ll b_0$, nên số hạng thứ hai $m^2\lambda$ trong ngoặc có thể bỏ qua một cách an toàn so với $2m b_0$:
 
 $$
-\begin{aligned}
-r_m &= \sqrt{2m\lambda b_0}
-\end{aligned}
+r_m = \sqrt{2m\lambda b_0}
 \tag{36.21}
 $$
 

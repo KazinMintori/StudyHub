@@ -24,7 +24,7 @@ Trong giới hạn khi số dải $N \to \infty$ và bề rộng mỗi dải ti�
 
 $$
 \begin{aligned}
-E_0 &= R \beta \\
+E_0 &= R \beta\\
 R &= \frac{E_0}{\beta}
 \end{aligned}
 $$
@@ -33,8 +33,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{E_P}{2} &= R \sin\frac{\beta}{2} \\
-E_P &= 2 R \sin\frac{\beta}{2} \\
+\frac{E_P}{2} &= R \sin\frac{\beta}{2}\\
+E_P &= 2 R \sin\frac{\beta}{2}\\
 &= 2 \left(\frac{E_0}{\beta}\right) \sin\frac{\beta}{2}
 \end{aligned}
 $$
@@ -42,9 +42,7 @@ $$
 Rút gọn biểu thức, ta nhận được phương trình cho điện trường tổng hợp tại góc $\theta$:
 
 $$
-\begin{aligned}
-E_P &= E_0 \frac{\sin(\beta/2)}{\beta/2}
-\end{aligned}
+E_P = E_0 \frac{\sin(\beta/2)}{\beta/2}
 \tag{36.4}
 $$
 
@@ -53,31 +51,25 @@ Trong đó: Biên độ dao động điện trường thực tế luôn luôn l�
 Vì cường độ sáng tỷ lệ thuận với bình phương biên độ điện trường, gọi $I_0$ là cường độ sáng tại tâm cực đại chính ($\beta = 0$), ta có **hàm phân bố cường độ sáng của nhiễu xạ một khe**:
 
 $$
-\begin{aligned}
-I &= I_0 \left[\frac{\sin(\beta/2)}{\beta/2}\right]^2
-\end{aligned}
+I = I_0 \left[\frac{\sin(\beta/2)}{\beta/2}\right]^2
 \tag{36.5}
 $$
 
 Để liên hệ góc pha $\beta$ với góc lệch $\theta$, ta quan sát Hình 36.5: Hiệu đường đi giữa hai tia sáng phát ra từ hai mép ngoài cùng của khe có bề rộng $a$ là $\Delta r = a\sin\theta$. Vì độ lệch pha bằng $\frac{2\pi}{\lambda}$ nhân với hiệu đường đi, ta có:
 
 $$
-\begin{aligned}
-\beta &= \frac{2\pi}{\lambda} a \sin\theta
-\end{aligned}
+\beta = \frac{2\pi}{\lambda} a \sin\theta
 \tag{36.6}
 $$
 
 Thay $\frac{\beta}{2} = \frac{\pi a}{\lambda}\sin\theta$ vào phương trình (36.5), ta thu được biểu thức cường độ sáng theo góc $\theta$:
 
 $$
-\begin{aligned}
-I &= I_0 \left[\frac{\sin\left(\frac{\pi a}{\lambda}\sin\theta\right)}{\frac{\pi a}{\lambda}\sin\theta}\right]^2
-\end{aligned}
+I = I_0 \left[\frac{\sin\left(\frac{\pi a}{\lambda}\sin\theta\right)}{\frac{\pi a}{\lambda}\sin\theta}\right]^2
 \tag{36.7}
 $$
 
-![Hình 36.9: (a) Đồ thị phân bố cường độ sáng theo góc lệch θ trong nhiễu xạ một khe. Các giá trị m = ±1, ±2, ±3 đánh dấu vị trí các cực tiểu theo phương trình (36.8). Phần lớn năng lượng tập trung tại đỉnh cực đại trung tâm giữa m = -1 và m = 1. (b) Ảnh chụp sóng nước truyền qua một khe hẹp thể hiện hiện tượng nhiễu xạ tương tự như sóng ánh sáng: Chỉ có các gợn sóng nhiễu xạ nằm trong vùng cực đại trung tâm là quan sát rõ, các sóng ở góc lớn hơn có biên độ quá nhỏ.](../img/young-36/hinh-36-09.png)
+![Hình 36.9: Phần (a): Đồ thị phân bố cường độ sáng theo góc lệch θ trong nhiễu xạ một khe. Các giá trị m = ±1, ±2, ±3 đánh dấu vị trí các cực tiểu theo phương trình (36.8). Phần lớn năng lượng tập trung tại đỉnh cực đại trung tâm giữa m = -1 và m = 1. (b) Ảnh chụp sóng nước truyền qua một khe hẹp thể hiện hiện tượng nhiễu xạ tương tự như sóng ánh sáng: Chỉ có các gợn sóng nhiễu xạ nằm trong vùng cực đại trung tâm là quan sát rõ, các sóng ở góc lớn hơn có biên độ quá nhỏ.](../img/young-36/hinh-36-09.png)
 
 ### Xác định vị trí các cực tiểu và cực đại cường độ
 
@@ -86,8 +78,8 @@ Từ phương trình (36.5), cường độ $I = 0$ khi tử số triệt tiêu:
 
 $$
 \begin{aligned}
-\sin\frac{\beta}{2} &= 0 \\
-\frac{\beta}{2} &= m\pi \\
+\sin\frac{\beta}{2} &= 0\\
+\frac{\beta}{2} &= m\pi\\
 \beta &= 2m\pi
 \end{aligned}
 $$
@@ -96,8 +88,8 @@ Trong đó: Giá trị $m = \pm 1, \pm 2, \pm 3, \dots$ là các số nguyên kh
 
 $$
 \begin{aligned}
-\frac{2\pi}{\lambda} a \sin\theta &= 2m\pi \\
-a \sin\theta &= m \lambda \\
+\frac{2\pi}{\lambda} a \sin\theta &= 2m\pi\\
+a \sin\theta &= m \lambda\\
 \sin\theta&=\frac{m\lambda}{a}
 \end{aligned}
 \tag{36.8}
@@ -107,7 +99,7 @@ Tại $\beta = 0$ (tức $\theta = 0$), biểu thức có dạng vô định $0/
 
 $$
 \begin{aligned}
-\lim_{\beta \to 0} \frac{\sin(\beta/2)}{\beta/2} &= 1 \\
+\lim_{\beta \to 0} \frac{\sin(\beta/2)}{\beta/2} &= 1\\
 &\implies I = I_0
 \end{aligned}
 $$
@@ -119,7 +111,7 @@ Lấy đạo hàm của phương trình (36.5) theo $\beta$ và cho bằng khôn
 
 $$
 \begin{aligned}
-\frac{dI}{d\beta} &= 0 \\
+\frac{dI}{d\beta} &= 0\\
 &\implies \tan\frac{\beta}{2} = \frac{\beta}{2}
 \end{aligned}
 $$
@@ -131,18 +123,14 @@ Phương trình siêu việt này phải được giải bằng phương pháp s
 Vị trí các cực đại phụ gần sát với các số lẻ lần của $\pi$ với $m = 1, 2, 3, \dots$:
 
 $$
-\begin{aligned}
-\beta &\approx \pm (2m + 1)\pi
-\end{aligned}
+\beta \approx \pm (2m + 1)\pi
 \tag{36.9}
 $$
 
 Thay các giá trị xấp xỉ từ phương trình (36.9) vào phương trình (36.5), ta thu được chuỗi cường độ xấp xỉ của các cực đại phụ:
 
 $$
-\begin{aligned}
-I_m &\approx \frac{I_0}{\left(m + \frac{1}{2}\right)^2 \pi^2}
-\end{aligned}
+I_m \approx \frac{I_0}{\left(m + \frac{1}{2}\right)^2 \pi^2}
 \tag{36.10}
 $$
 
@@ -157,9 +145,7 @@ Cường độ các cực đại phụ giảm đi rất nhanh khi ra xa tâm. Ng
 Trong xấp xỉ góc nhỏ, vị trí góc của cực tiểu đầu tiên ($\beta/2 = \pi$) là:
 
 $$
-\begin{aligned}
-\theta_1 &= \frac{\lambda}{a}
-\end{aligned}
+\theta_1 = \frac{\lambda}{a}
 \tag{36.11}
 $$
 
@@ -194,17 +180,15 @@ Bài toán cho biết độ lệch pha $\beta$ giữa hai sóng phát ra từ ha
 (a) Tính giá trị hàm tại $\beta/2 = 33\,\mathrm{rad}$:
 
 $$
-\begin{aligned}
-\frac{\beta}{2} &= 33\,\mathrm{rad}
-\end{aligned}
+\frac{\beta}{2} = 33\,\mathrm{rad}
 $$
 
 Thay vào phương trình (36.5):
 
 $$
 \begin{aligned}
-I &= I_0 \left[\frac{\sin(33\,\mathrm{rad})}{33\,\mathrm{rad}}\right]^2 \\
-&= I_0 \left(\frac{0{,}9999}{33}\right)^2 \\
+I &= I_0 \left[\frac{\sin(33\,\mathrm{rad})}{33\,\mathrm{rad}}\right]^2\\
+&= I_0 \left(\frac{0{,}9999}{33}\right)^2\\
 &= 9{,}2 \times 10^{-4} I_0
 \end{aligned}
 $$
@@ -213,9 +197,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{a}{\lambda} &= \frac{\beta}{2\pi \sin\theta} \\
-&= \frac{66\,\mathrm{rad}}{(2\pi\,\mathrm{rad})\sin 7{,}0^\circ} \\
-&= \frac{66}{2\pi \times 0{,}12187} \\
+\frac{a}{\lambda} &= \frac{\beta}{2\pi \sin\theta}\\
+&= \frac{66\,\mathrm{rad}}{(2\pi\,\mathrm{rad})\sin 7{,}0^\circ}\\
+&= \frac{66}{2\pi \times 0{,}12187}\\
 &\approx 86
 \end{aligned}
 $$
@@ -224,8 +208,8 @@ Nếu dùng ánh sáng có bước sóng $\lambda = 550\,\mathrm{nm}$, bề rộ
 
 $$
 \begin{aligned}
-a &= 86 \times (550 \times 10^{-9}\,\mathrm{m}) \\
-&= 4{,}7 \times 10^{-5}\,\mathrm{m} \\
+a &= 86 \times (550 \times 10^{-9}\,\mathrm{m})\\
+&= 4{,}7 \times 10^{-5}\,\mathrm{m}\\
 &= 0{,}047\,\mathrm{mm}
 \end{aligned}
 $$
@@ -261,8 +245,8 @@ Góc nghiêng $\theta$ thỏa mãn:
 
 $$
 \begin{aligned}
-\tan\theta &= \frac{y}{x} \\
-&= \frac{3{,}0 \times 10^{-3}\,\mathrm{m}}{6{,}0\,\mathrm{m}} \\
+\tan\theta &= \frac{y}{x}\\
+&= \frac{3{,}0 \times 10^{-3}\,\mathrm{m}}{6{,}0\,\mathrm{m}}\\
 &= 5{,}0 \times 10^{-4}
 \end{aligned}
 $$
@@ -271,10 +255,9 @@ Vì $\tan\theta$ rất nhỏ, ta có $\sin\theta \approx \tan\theta = 5{,}0 \tim
 
 $$
 \begin{aligned}
-\frac{\beta}{2} &= \frac{\pi a \sin\theta}{\lambda} \\
-&= \frac{\pi (2{,}4 \times 10^{-4}\,\mathrm{m})}{6{,}33 \times 10^{-7}\,\mathrm{m}} \\
-&\quad \times (5{,}0 \times 10^{-4}) \\
-&= 0{,}5955 \\
+\frac{\beta}{2} &= \frac{\pi a \sin\theta}{\lambda}\\
+&=\frac{\pi(2{,}4)(5{,}0)}{6{,}33}\times10^{-1}\\
+&= 0{,}5955\\
 &\approx 0{,}60\,\mathrm{rad}
 \end{aligned}
 $$
@@ -283,9 +266,9 @@ Thay vào phương trình tính cường độ (36.7):
 
 $$
 \begin{aligned}
-I &= I_0 \left(\frac{\sin 0{,}60}{0{,}60}\right)^2 \\
-&= I_0 \left(\frac{0{,}5646}{0{,}60}\right)^2 \\
-&= 0{,}8856 I_0 \\
+I &= I_0 \left(\frac{\sin 0{,}60}{0{,}60}\right)^2\\
+&= I_0 \left(\frac{0{,}5646}{0{,}60}\right)^2\\
+&= 0{,}8856 I_0\\
 &\approx 0{,}89 I_0
 \end{aligned}
 $$

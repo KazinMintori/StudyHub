@@ -40,7 +40,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 33 | Bản chất và sự truyền ánh sáng | 64/64 | 102 | Đủ theo hồ sơ |
 | vat-ly-2 | 34 | Quang hình học | 111/111 | 148 | Đủ theo hồ sơ |
 | vat-ly-2 | 35 | Giao thoa | 60/60 | 61 | Đủ theo hồ sơ |
-| vat-ly-2 | 36 | Nhiễu xạ | 0/71 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 36 | Nhiễu xạ | 71/71 | 103 | Đủ theo hồ sơ |
 | vat-ly-2 | 37 | Thuyết tương đối | 0/74 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 38 | Photon: Tính hạt của sóng ánh sáng | 0/45 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 39 | Tính sóng của hạt | 0/91 | 0 | Còn thiếu hoặc chưa rà xong |

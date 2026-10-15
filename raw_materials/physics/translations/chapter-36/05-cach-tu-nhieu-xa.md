@@ -1,6 +1,6 @@
 ## 36.5 Cách tử nhiễu xạ
 
-### Bản chất và cấu tạo của cách tử nhiễu xạ
+### Cách tử có những khe hoặc rãnh như thế nào?
 
 Chúng ta vừa thấy rằng việc tăng số lượng khe trong một thí nghiệm giao thoa (trong khi vẫn giữ nguyên khoảng cách giữa các khe kề nhau) tạo ra các hình ảnh giao thoa mà ở đó các cực đại nằm ở cùng vị trí, nhưng hẹp dần một cách rõ rệt so với thí nghiệm hai khe. Vì các cực đại này quá hẹp, vị trí góc của chúng, và do đó bước sóng ánh sáng, có thể được đo lường với độ chính xác rất cao. Hiệu ứng này mang lại nhiều ứng dụng thực tiễn quan trọng.
 
@@ -8,12 +8,12 @@ Một dãy gồm một số lượng rất lớn các khe song song, tất cả 
 
 ![Hình 36.16: Một phần của cách tử nhiễu xạ truyền qua với khoảng cách giữa tâm hai khe liên tiếp là d.](../img/young-36/hinh-36-16.png)
 
-Trên Hình 36.16, đoạn $GG'$ là mặt cắt ngang của một cách tử truyền qua (transmission grating); các khe vuông góc với mặt phẳng trang giấy và hình ảnh giao thoa được tạo thành bởi ánh sáng truyền qua các khe. Sơ đồ chỉ biểu diễn sáu khe, trong khi một cách tử thực tế có thể chứa tới vài nghìn khe. Khoảng cách $d$ giữa tâm của hai khe liên tiếp kề nhau được gọi là chu kỳ cách tử (grating spacing). Một chùm sóng phẳng đơn sắc chiếu vuông góc vào cách tử từ phía bên trái. Chúng ta giả định điều kiện trường xa (nhiễu xạ Fraunhofer), tức là hình ảnh được hình thành trên một màn quan sát đặt đủ xa để mọi tia sáng phát ra từ cách tử truyền tới một điểm xác định trên màn đều có thể coi là song song với nhau. Một cách tử thông dụng dùng cho ánh sáng nhìn thấy ($\lambda$ từ $400\text{ nm}$ đến $700\text{ nm}$) thường có khoảng $1000\text{ khe}$ trên mỗi milimet; giá trị của $d$ là nghịch đảo của số khe trên một đơn vị chiều dài, nên $d$ vào cỡ:
+Trên Hình 36.16, đoạn $GG'$ là mặt cắt ngang của một cách tử truyền qua (transmission grating). Các khe vuông góc với mặt phẳng trang giấy và hình ảnh giao thoa được tạo thành bởi ánh sáng truyền qua các khe. Sơ đồ chỉ biểu diễn sáu khe, trong khi một cách tử thực tế có thể chứa tới vài nghìn khe. Khoảng cách $d$ giữa tâm của hai khe liên tiếp kề nhau được gọi là chu kỳ cách tử (grating spacing). Một chùm sóng phẳng đơn sắc chiếu vuông góc vào cách tử từ phía bên trái. Chúng ta giả định điều kiện trường xa (nhiễu xạ Fraunhofer), tức là hình ảnh được hình thành trên một màn quan sát đặt đủ xa để mọi tia sáng phát ra từ cách tử truyền tới một điểm xác định trên màn đều có thể coi là song song với nhau. Một cách tử thông dụng dùng cho ánh sáng nhìn thấy ($\lambda$ từ $400\text{ nm}$ đến $700\text{ nm}$) thường có khoảng $1000\text{ khe}$ trên mỗi milimet. Giá trị của $d$ là nghịch đảo của số khe trên một đơn vị chiều dài, nên $d$ vào cỡ:
 
 $$
 \begin{aligned}
-d &= \frac{1}{1000\text{ mm}^{-1}} \\
-&= 10^{-3}\text{ mm} \\
+d &= \frac{1}{1000\text{ mm}^{-1}}\\
+&= 10^{-3}\text{ mm}\\
 &= 1000\text{ nm}
 \end{aligned}
 $$
@@ -25,9 +25,7 @@ $$
 Xét chùm tia sáng song song đơn sắc bước sóng $\lambda$ chiếu vuông góc với bề mặt cách tử. Theo nguyên lý Huygens, mỗi khe hẹp hoạt động như một nguồn phát sóng thứ cấp cùng pha. Để các sóng phát ra từ mọi khe giao thoa tăng cường tại một điểm ở rất xa (hoặc trên tiêu diện của một thấu kính hội tụ), hiệu quang trình giữa hai khe kế tiếp phải bằng một số nguyên lần bước sóng:
 
 $$
-\begin{aligned}
-\Delta r &= d \sin\theta = m\lambda
-\end{aligned}
+\Delta r = d \sin\theta = m\lambda
 \tag{36.13}
 $$
 
@@ -36,16 +34,14 @@ với $m = 0, \pm 1, \pm 2, \dots$ là bậc của cực đại giao thoa (order
 Để thấy rõ bản chất giao thoa nhiều nguồn, ta khai triển tường minh độ lệch pha giữa hai khe liên tiếp. Độ lệch pha $\phi$ giữa sóng xuất phát từ hai khe kề nhau dưới góc lệch $\theta$ được xác định bởi:
 
 $$
-\begin{aligned}
-\phi &= \frac{2\pi}{\lambda} d \sin\theta
-\end{aligned}
+\phi = \frac{2\pi}{\lambda} d \sin\theta
 $$
 
 Khi có $N$ khe hẹp, biên độ dao động tổng hợp $E$ là sự chồng chập của $N$ dao động điều hòa cùng biên độ $E_0$ với độ lệch pha không đổi $\phi$:
 
 $$
 \begin{aligned}
-E &= E_1 + E_2 + \dots + E_N \\
+E &= E_1 + E_2 + \dots + E_N\\
 &= \sum_{n=0}^{N-1} E_0 \cos(\omega t + n\phi)
 \end{aligned}
 $$
@@ -53,12 +49,10 @@ $$
 Tại các góc thỏa mãn $\phi = 2\pi m$, tất cả các vector quay đều cùng hướng, biên độ điện trường tổng hợp đạt cực đại $E_{\text{max}} = N E_0$, kéo theo cường độ sáng cực đại tỷ lệ với $N^2$:
 
 $$
-\begin{aligned}
-I_{\text{max}} &= N^2 I_0
-\end{aligned}
+I_{\text{max}} = N^2 I_0
 $$
 
-Giữa hai cực đại chính kế tiếp có $N - 1$ cực tiểu (nơi cường độ bằng không) và $N - 2$ cực đại phụ mờ nhạt. Khi $N$ rất lớn (hàng trăm đến hàng nghìn khe), bề rộng góc của các cực đại chính trở nên vô cùng hẹp: Cực tiểu đầu tiên liền kề cực đại chính xuất hiện khi độ lệch pha tăng thêm một lượng $\Delta\phi = 2\pi / N$, tương ứng với sự biến thiên góc rất nhỏ $\Delta\theta \approx \lambda / (N d \cos\theta)$. Do đó, các cực đại chính trở thành những vạch sáng đơn sắc mảnh, sắc nét và tách biệt nhau rõ ràng trên màn quan sát.
+Giữa hai cực đại chính kế tiếp có $N - 1$ cực tiểu (nơi cường độ bằng không) và $N - 2$ cực đại phụ mờ nhạt. Khi $N$ rất lớn (hàng trăm đến hàng nghìn khe), bề rộng góc của các cực đại chính trở nên rất hẹp: Cực tiểu đầu tiên liền kề cực đại chính xuất hiện khi độ lệch pha tăng thêm một lượng $\Delta\phi = 2\pi / N$, tương ứng với sự biến thiên góc rất nhỏ $\Delta\theta \approx \lambda / (N d \cos\theta)$. Do đó, các cực đại chính trở thành những vạch sáng đơn sắc mảnh, sắc nét và tách biệt nhau rõ ràng trên màn quan sát.
 
 Các vạch ứng với $m = \pm 1$ được gọi là vạch quang phổ bậc một, $m = \pm 2$ là vạch quang phổ bậc hai. Nếu chiếu ánh sáng trắng vào cách tử, vạch trung tâm ứng với $m = 0$ vẫn là ánh sáng trắng không bị tán sắc ($\theta = 0$ với mọi bước sóng). Tuy nhiên, tại các bậc $m \neq 0$, do $\sin\theta \propto \lambda$, các bước sóng dài hơn (ánh sáng đỏ) sẽ bị lệch nhiều hơn các bước sóng ngắn (ánh sáng tím). Kết quả là ánh sáng trắng bị phân tách thành một dải quang phổ liên tục nhiều màu sắc trải dài từ tím sang đỏ.
 
@@ -83,8 +77,8 @@ b) Quang phổ bậc một và quang phổ bậc hai có chồng lấn lên nhau
 
 $$
 \begin{aligned}
-d &= \frac{1}{600\text{ vạch/mm}} \\
-&= \frac{10^{-3}\text{ m}}{600} \\
+d &= \frac{1}{600\text{ vạch/mm}}\\
+&= \frac{10^{-3}\text{ m}}{600}\\
 &\approx 1{,}67 \times 10^{-6}\text{ m}
 \end{aligned}
 $$
@@ -92,9 +86,7 @@ $$
 Góc nhiễu xạ ứng với mỗi bước sóng được rút ra từ Phương trình (36.13):
 
 $$
-\begin{aligned}
-\theta &= \arcsin\left(\frac{m\lambda}{d}\right)
-\end{aligned}
+\theta = \arcsin\left(\frac{m\lambda}{d}\right)
 $$
 
 **Thực hiện**:
@@ -103,16 +95,16 @@ a) Với quang phổ bậc một ($m = 1$), góc lệch của tia tím ($\lambda
 
 $$
 \begin{aligned}
-\sin\theta_{v1} &= \frac{380 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
-&= 0{,}2275 \\
+\sin\theta_{v1} &= \frac{380 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
+&= 0{,}2275\\
 \theta_{v1} &= 13{,}2^{\circ}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\sin\theta_{r1} &= \frac{750 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
-&= 0{,}4491 \\
+\sin\theta_{r1} &= \frac{750 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
+&= 0{,}4491\\
 \theta_{r1} &= 26{,}7^{\circ}
 \end{aligned}
 $$
@@ -125,16 +117,16 @@ Với ánh sáng tím ($\lambda_v = 380\text{ nm}$):
 
 $$
 \begin{aligned}
-\sin\theta_{v2} &= \frac{760 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
-&= 0{,}4551 \\
+\sin\theta_{v2} &= \frac{760 \times 10^{-9}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
+&= 0{,}4551\\
 \theta_{v2} &= 27{,}1^{\circ}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\sin\theta_{v3} &= \frac{1{,}14 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
-&= 0{,}6826 \\
+\sin\theta_{v3} &= \frac{1{,}14 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
+&= 0{,}6826\\
 \theta_{v3} &= 43{,}0^{\circ}
 \end{aligned}
 $$
@@ -143,25 +135,27 @@ Với ánh sáng đỏ ($\lambda_r = 750\text{ nm}$):
 
 $$
 \begin{aligned}
-\sin\theta_{r2} &= \frac{1{,}50 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
-&= 0{,}8982 \\
+\sin\theta_{r2} &= \frac{1{,}50 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
+&= 0{,}8982\\
 \theta_{r2} &= 63{,}9^{\circ}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\sin\theta_{r3} &= \frac{2{,}25 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}} \\
+\sin\theta_{r3} &= \frac{2{,}25 \times 10^{-6}\text{ m}}{1{,}67 \times 10^{-6}\text{ m}}\\
 &= 1{,}35 > 1
 \end{aligned}
 $$
 
-Giá trị $\sin\theta_{r3} > 1$ cho thấy quang phổ bậc ba không thể mở rộng tới bước sóng $750\text{ nm}$; quang phổ bậc ba bị chặn tại $\theta = 90^{\circ}$, ứng với bước sóng giới hạn:
+Giá trị $\sin\theta_{r3} > 1$ cho thấy quang phổ bậc ba không thể mở rộng tới bước sóng $750\text{ nm}$. Quang phổ bậc ba bị chặn tại $\theta = 90^{\circ}$. Bạn có thể tìm bước sóng giới hạn tại hướng này không?
+
+Với góc biên ấy, điều kiện cách tử cho:
 
 $$
 \begin{aligned}
-\lambda_{\text{cut}} &= \frac{d}{3} \\
-&= \frac{1{,}67 \times 10^{-6}\text{ m}}{3} \\
+\lambda_{\text{cut}} &= \frac{d}{3}\\
+&= \frac{1{,}67 \times 10^{-6}\text{ m}}{3}\\
 &\approx 557\text{ nm}
 \end{aligned}
 $$
@@ -175,7 +169,7 @@ Các kết luận này không phụ thuộc vào chu kỳ cách tử $d$. Thật
 
 **Đánh giá**: Nguyên nhân bản chất khiến quang phổ bậc một và bậc hai của ánh sáng nhìn thấy không chồng lấn là mắt người chỉ nhạy với một dải bước sóng tương đối hẹp (tỷ số giữa bước sóng dài nhất và ngắn nhất xấp xỉ $750 / 380 \approx 1{,}97 < 2$). Nếu mắt người có thể cảm nhận được dải bước sóng rộng hơn, chẳng hạn từ $380\text{ nm}$ đến $900\text{ nm}$ (lan sang vùng cận hồng ngoại), thì $\sin\theta_{r1} = 900 / d$, lớn hơn giá trị $\sin\theta_{v2} = 760 / d$ (do $2 \times 380 = 760$), khi đó hai bậc đầu tiên chắc chắn sẽ chồng lấn lên nhau.
 
-**Khái niệm cốt lõi**: Góc lệch của các cực đại chính trong cách tử nhiễu xạ được xác định đồng thời bởi chu kỳ cách tử và bước sóng ánh sáng. Công thức góc giống hệt thí nghiệm giao thoa hai khe, nhưng các vạch cực đại của cách tử hẹp và sắc nét hơn rất nhiều nhờ sự can thiệp của số lượng khe cực lớn.
+**Khái niệm cốt lõi**: Góc lệch của các cực đại chính trong cách tử nhiễu xạ được xác định đồng thời bởi chu kỳ cách tử và bước sóng ánh sáng. Công thức góc giống hệt thí nghiệm giao thoa hai khe, nhưng các vạch cực đại của cách tử hẹp và sắc nét hơn rất nhiều nhờ sự chồng chất của rất nhiều khe.
 :::
 
 ### Máy quang phổ cách tử
@@ -203,9 +197,7 @@ Quy trình hoạt động của thiết bị gồm sáu bước liên kết:
 Trong quang phổ học, việc phân biệt hai bước sóng rất gần nhau $\lambda$ và $\lambda + \Delta\lambda$ là vô cùng quan trọng. Hiệu bước sóng nhỏ nhất $\Delta\lambda$ mà một máy quang phổ có thể phân biệt được mô tả thông qua **năng suất phân giải phổ** (chromatic resolving power) $R$, được định nghĩa là:
 
 $$
-\begin{aligned}
-R &= \frac{\lambda}{\Delta\lambda}
-\end{aligned}
+R = \frac{\lambda}{\Delta\lambda}
 \tag{36.14}
 $$
 
@@ -213,7 +205,7 @@ Chẳng hạn, khi các nguyên tử natri bị kích thích nhiệt, chúng ph�
 
 $$
 \begin{aligned}
-R &= \frac{\lambda}{\Delta\lambda} \\
+R &= \frac{\lambda}{\Delta\lambda}\\
 &= \frac{589{,}00\text{ nm}}{0{,}59\text{ nm}} = 1000
 \end{aligned}
 $$
@@ -225,16 +217,14 @@ $$
 Theo phân tích ở phần trước, cực đại bậc $m$ xuất hiện khi độ lệch pha giữa hai khe liên tiếp là $\phi = 2\pi m$. Cực tiểu đầu tiên bên cạnh cực đại này xuất hiện khi độ lệch pha là $\phi = 2\pi m + 2\pi / N$, trong đó $N$ là số lượng khe. Độ lệch pha còn được xác định bởi $\phi = (2\pi d \sin\theta) / \lambda$, do đó khoảng góc $d\theta$ tương ứng với độ tăng pha nhỏ $d\phi$ có thể nhận được từ vi phân của phương trình này:
 
 $$
-\begin{aligned}
-d\phi &= \frac{2\pi d \cos\theta d\theta}{\lambda}
-\end{aligned}
+d\phi = \frac{2\pi d \cos\theta d\theta}{\lambda}
 $$
 
 Khi $d\phi = 2\pi / N$, lượng này tương ứng với khoảng góc $d\theta$ giữa cực đại và cực tiểu liền kề đầu tiên. Do đó $d\theta$ được xác định bởi:
 
 $$
 \begin{aligned}
-\frac{2\pi}{N} &= \frac{2\pi d \cos\theta d\theta}{\lambda} \\
+\frac{2\pi}{N} &= \frac{2\pi d \cos\theta d\theta}{\lambda}\\
 d \cos\theta d\theta &= \frac{\lambda}{N}
 \end{aligned}
 $$
@@ -242,16 +232,14 @@ $$
 Bây giờ ta cần tìm khoảng cách góc $d\theta$ giữa các cực đại của hai bước sóng hơi khác nhau. Vị trí của các cực đại này tuân theo $d \sin\theta = m\lambda$, và vi phân của phương trình này cho:
 
 $$
-\begin{aligned}
-d \cos\theta d\theta &= m d\lambda
-\end{aligned}
+d \cos\theta d\theta = m d\lambda
 $$
 
 Theo tiêu chuẩn phân giải của chúng ta, giới hạn phân giải đạt được khi hai khoảng cách góc này bằng nhau. Cân bằng hai biểu thức của đại lượng $(d \cos\theta d\theta)$, ta nhận được:
 
 $$
 \begin{aligned}
-\frac{\lambda}{N} &= m d\lambda \\
+\frac{\lambda}{N} &= m d\lambda\\
 \frac{\lambda}{d\lambda} &= Nm
 \end{aligned}
 $$
@@ -259,19 +247,19 @@ $$
 Nếu $\Delta\lambda$ nhỏ, ta có thể thay $d\lambda$ bằng $\Delta\lambda$, và năng suất phân giải phổ $R$ là:
 
 $$
-\begin{aligned}
-R &= \frac{\lambda}{\Delta\lambda} = Nm
-\end{aligned}
+R = \frac{\lambda}{\Delta\lambda} = Nm
 \tag{36.15}
 $$
 
-Số lượng khe $N$ càng lớn thì độ phân giải càng tốt; ngoài ra, bậc $m$ của cực đại hình ảnh nhiễu xạ càng cao thì độ phân giải cũng càng tốt.
+Số lượng khe $N$ càng lớn thì độ phân giải càng tốt. Ngoài ra, bậc $m$ của cực đại hình ảnh nhiễu xạ càng cao thì độ phân giải cũng càng tốt.
 
 ::: warning Cảnh báo: Phân biệt các cách dùng ký hiệu d
 Cần lưu ý không nhầm lẫn giữa chu kỳ cách tử $d$ (khoảng cách giữa các khe) với ký hiệu vi phân "$d$" trong khoảng góc $d\theta$ hoặc trong độ tăng lệch pha $d\phi$!
 :::
 
 ::: tip Ứng dụng sinh học: Phát hiện ADN bằng hiện tượng nhiễu xạ
+![Ứng dụng: Mẫu dung dịch ADN được đưa vào phép đo hấp thụ ánh sáng.](../img/young-36/ung-dung-36-adn.png)
+
 Cách tử nhiễu xạ được sử dụng trong một thiết bị phòng thí nghiệm phổ biến là máy quang phổ kế (spectrophotometer). Ánh sáng chiếu qua cách tử nhiễu xạ được phân tách thành các bước sóng thành phần. Một khe hẹp được dùng để chặn lại tất cả ngoại trừ một dải bước sóng rất hẹp, tạo ra chùm sáng gần như đơn sắc hoàn hảo. Thiết bị sau đó đo lượng ánh sáng bị hấp thụ bởi một dung dịch chứa các phân tử sinh học. Chẳng hạn, ống mẫu chứa dung dịch ADN vốn trong suốt với ánh sáng nhìn thấy, nhưng hấp thụ rất mạnh ánh sáng tử ngoại có bước sóng chính xác $260\text{ nm}$. Do đó, bằng cách rọi sáng mẫu bằng ánh sáng $260\text{ nm}$ và đo lượng ánh sáng bị hấp thụ, chúng ta có thể xác định nồng độ ADN trong dung dịch.
 :::
 
@@ -292,7 +280,7 @@ Như đã mô tả trong lý thuyết, năng suất phân giải phổ cần thi
 
 $$
 \begin{aligned}
-N &= \frac{R}{m} \\
+N &= \frac{R}{m}\\
 &= \frac{1000}{4} = 250\text{ khe}
 \end{aligned}
 $$

@@ -1,18 +1,18 @@
 ## 36.6 Nhiễu xạ tia X
 
-### Bản chất sóng của tia X và cấu trúc tinh thể
+### Vì sao tinh thể có thể nhiễu xạ tia X?
 
 Tia X được phát hiện bởi Wilhelm Röntgen (1845–1923) vào năm 1895. Các phép đo sơ khởi thời kỳ đó cho thấy tia X là sóng điện từ có bước sóng cực ngắn, vào khoảng $10^{-10}\text{ m} = 0{,}1\text{ nm}$. Cùng thời điểm đó, các nhà khoa học bắt đầu hình thành giả thuyết rằng trong chất rắn kết tinh, các nguyên tử được sắp xếp theo một trật tự tuần hoàn đều đặn trong không gian ba chiều, với khoảng cách giữa các nguyên tử lân cận cũng vào cỡ $10^{-10}\text{ m}$.
 
 Tổng hợp hai ý tưởng trên, Max von Laue (1879–1960) đã đề xuất vào năm 1912 rằng một tinh thể rắn có thể hoạt động như một cách tử nhiễu xạ ba chiều đối với tia X. Khi chùm tia X chiếu qua tinh thể, các nguyên tử đóng vai trò là các tâm tán xạ, hấp thụ năng lượng sóng tới rồi tái phát xạ sóng thứ cấp ra xung quanh. Các sóng tán xạ này sẽ giao thoa với nhau tương tự như sóng phát ra từ các khe của một cách tử.
 
-![Hình 36.20: (a) Thí nghiệm nhiễu xạ tia X. (b) Ảnh nhiễu xạ (hay ảnh Laue) được hình thành do sự tán xạ phụ thuộc phương của tia X từ một lát mỏng tinh thể beryl.](../img/young-36/hinh-36-20.png)
+![Hình 36.20: Phần (a): Thí nghiệm nhiễu xạ tia X. (b) Ảnh nhiễu xạ (hay ảnh Laue) được hình thành do sự tán xạ phụ thuộc phương của tia X từ một lát mỏng tinh thể beryl.](../img/young-36/hinh-36-20.png)
 
 Các thí nghiệm nhiễu xạ tia X đầu tiên được tiến hành vào năm 1912 bởi Friedrich, Knipping và von Laue (Hình 36.20a). Chùm tia X hẹp sau khi đi qua màn chắn chì được chiếu xuyên qua một lát mỏng tinh thể beryl và đập vào tấm phim ảnh đặt phía sau. Kết quả thu được trên phim là một hệ các chấm sáng đối xứng rõ nét bao quanh điểm xuyên thẳng trung tâm, được gọi là ảnh nhiễu xạ Laue (Hình 36.20b). Thí nghiệm này là bằng chứng thực nghiệm quyết định xác nhận hai kết luận mang tính nền tảng:
 - Tia X thực sự có bản chất sóng.
 - Các nguyên tử trong mạng tinh thể được xếp đặt theo một cấu trúc không gian tuần hoàn trật tự (Hình 36.21).
 
-![Hình 36.21: Mô hình sắp xếp của các ion natri (xanh lục) và clo (xám) trong một tinh thể natri clorua (NaCl). Khoảng cách giữa các nguyên tử liền kề là 0,282 nm.](../img/young-36/hinh-36-21.png)
+![Hình 36.21: Mô hình sắp xếp của các ion chloride màu xanh lục và ion natri màu vàng trong tinh thể NaCl. Khoảng cách giữa các nguyên tử liền kề là 0,282 nm. Các đám mây electron thực tế chồng lấp nhẹ.](../img/young-36/hinh-36-21.png)
 
 Kể từ thời điểm đó, nhiễu xạ tia X đã trở thành một công cụ nghiên cứu vô giá trong việc đo lường chính xác bước sóng tia X cũng như giải mã cấu trúc phân tử của chất rắn, chất lỏng và các đại phân tử sinh học phức tạp.
 
@@ -24,19 +24,19 @@ Kể từ thời điểm đó, nhiễu xạ tia X đã trở thành một công 
 
 Dưới tác dụng của điện trường sóng tới, các đám mây electron của mỗi nguyên tử dao động điều hòa, hoạt động như những anten lưỡng cực điện phát xạ sóng thứ cấp cùng tần số ra mọi hướng.
 
+Mô hình này cũng có thể được hình dung bằng bể sóng nước có một dãy cọc nhỏ đặt theo mạng. Hệ vân là tổng các sóng tán xạ từ mọi tâm. Khác hệ khe được chiếu vuông góc, các tâm tán xạ không nhất thiết phát cùng pha vì khoảng cách từ nguồn tới từng tâm khác nhau. Do đó, phải tính cả đường từ nguồn tới tâm và đường từ tâm tới điểm quan sát.
+
 Trước hết, ta xét sự tán xạ từ các nguyên tử trong cùng một hàng ngang (Hình 36.22b). Gọi $\theta_a$ là góc giữa tia tới và hàng nguyên tử, và $\theta_r$ là góc giữa tia tán xạ và hàng nguyên tử. Hiệu quang trình giữa hai sóng phát ra từ hai nguyên tử kề nhau có khoảng cách $a$ là:
 
 $$
-\begin{aligned}
-\Delta r_1 &= a \cos\theta_a - a \cos\theta_r
-\end{aligned}
+\Delta r_1 = a \cos\theta_a - a \cos\theta_r
 $$
 
 Để sóng từ mọi nguyên tử trong cùng một hàng luôn tới người quan sát cùng pha tại mọi bậc, hiệu quang trình này phải bằng không đối với trường hợp phản xạ gương:
 
 $$
 \begin{aligned}
-a \cos\theta_a &= a \cos\theta_r \\
+a \cos\theta_a &= a \cos\theta_r\\
 \theta_a &= \theta_r = \theta
 \end{aligned}
 $$
@@ -47,7 +47,7 @@ Tiếp theo, ta xét sự giao thoa giữa các sóng tán xạ phát ra từ c�
 
 $$
 \begin{aligned}
-\Delta r_2 &= d \sin\theta + d \sin\theta \\
+\Delta r_2 &= d \sin\theta + d \sin\theta\\
 &= 2d \sin\theta
 \end{aligned}
 $$
@@ -55,24 +55,22 @@ $$
 Để sóng từ mọi hàng nguyên tử tăng cường lẫn nhau, hiệu quang trình này phải bằng một số nguyên lần bước sóng. Ta thu được **điều kiện Bragg** (Bragg condition), để vinh danh những người tiên phong trong lĩnh vực nhiễu xạ tia X là Sir William Bragg và con trai Laurence Bragg:
 
 $$
-\begin{aligned}
-2d \sin\theta &= m\lambda
-\end{aligned}
+2d \sin\theta = m\lambda
 \tag{36.16}
 $$
 
 với $m = 1, 2, 3, \dots$ là bậc phản xạ.
 
-Tại các hướng thỏa mãn Phương trình (36.16), trên màn quan sát sẽ xuất hiện một cực đại giao thoa có cường độ rất mạnh. Vì $\sin\theta \le 1$, điều kiện để tồn tại cực đại bậc $m$ là:
+Tại các hướng thỏa mãn Phương trình (36.16), trên màn quan sát sẽ xuất hiện một cực đại giao thoa có cường độ lớn. Vì $\sin\theta \le 1$, điều kiện để tồn tại cực đại bậc $m$ là:
 
 $$
 \begin{aligned}
-m\lambda &\le 2d \\
+m\lambda &\le 2d\\
 \lambda &\le \frac{2d}{m}
 \end{aligned}
 $$
 
-Chẳng hạn, đối với tinh thể muối ăn NaCl, khoảng cách giữa các lớp nguyên tử chỉ là $d = 0{,}282\text{ nm}$. Để quan sát được cực đại bậc một ($m = 1$), bước sóng chiếu vào phải thỏa mãn $\lambda \le 2d = 0{,}564\text{ nm}$; với bậc hai ($m = 2$) cần $\lambda \le 0{,}282\text{ nm}$; với bậc ba ($m = 3$) cần $\lambda \le 0{,}188\text{ nm}$. Các giá trị này đều nằm trọn vẹn trong dải bước sóng của tia X, giải thích lý do vì sao ánh sáng nhìn thấy (bước sóng từ $380\text{ nm}$ đến $750\text{ nm}$) hoàn toàn không thể tạo ra hiện tượng nhiễu xạ trên mạng tinh thể.
+Chẳng hạn, đối với tinh thể muối ăn NaCl, khoảng cách giữa các lớp nguyên tử chỉ là $d = 0{,}282\text{ nm}$. Để quan sát được cực đại bậc một ($m = 1$), bước sóng chiếu vào phải thỏa mãn $\lambda \le 2d = 0{,}564\text{ nm}$. Với bậc hai ($m = 2$) cần $\lambda \le 0{,}282\text{ nm}$. Với bậc ba ($m = 3$) cần $\lambda \le 0{,}188\text{ nm}$. Các giá trị này đều nằm trọn vẹn trong dải bước sóng của tia X, giải thích lý do vì sao ánh sáng nhìn thấy (bước sóng từ $380\text{ nm}$ đến $750\text{ nm}$) hoàn toàn không thể tạo ra hiện tượng nhiễu xạ trên mạng tinh thể.
 
 ::: warning Cảnh báo: Góc tán xạ và hiệu quang trình trong điều kiện Bragg
 Trong Phương trình (36.16), góc $\theta$ được quy ước đo so với mặt phẳng của tinh thể (mặt phẳng nguyên tử), chứ không phải so với pháp tuyến như trong quang hình học truyền thống hay cách tử khe. Đồng thời, hiệu quang trình trong điều kiện Bragg là $2d \sin\theta$, chứa thừa số 2 do tia sáng phải đi vào và đi ra qua khoảng cách giữa hai lớp mạng, khác với $d \sin\theta$ trong công thức cách tử khe đơn thuần.
@@ -97,6 +95,8 @@ Xét một mạng tinh thể lập phương đơn giản có hằng số mạng 
 
 ![Hình 36.24: Nhà khoa học người Anh Rosalind Franklin đã chụp bức ảnh nhiễu xạ tia X đột phá này của ADN vào năm 1953. Các dải sẫm màu sắp xếp theo hình chữ X đã cung cấp bằng chứng đầu tiên về cấu trúc xoắn của phân tử ADN.](../img/young-36/hinh-36-24.png)
 
+Với tinh thể có cấu trúc và khoảng nguyên tử đã biết, ta dùng hệ vân để tìm bước sóng tia X. Trong tinh thể đơn giản như natri clorua, khoảng nguyên tử có thể được suy từ khối lượng riêng và hằng số Avogadro. Sau khi biết bước sóng, ta dùng nhiễu xạ để khảo sát tinh thể chưa biết cấu trúc.
+
 Nhiễu xạ tia X là công cụ thực nghiệm quan trọng nhất trong việc nghiên cứu cấu trúc tinh thể của chất rắn. Nhiễu xạ tia X cũng đóng vai trò quan trọng trong các nghiên cứu về cấu trúc của chất lỏng và các phân tử hữu cơ. Kỹ thuật này từng là một trong những công cụ thực nghiệm chính trong việc tìm ra cấu trúc chuỗi xoắn kép của ADN (Hình 36.24) và các bước tiến tiếp theo trong di truyền học phân tử.
 
 ::: info Ví dụ 36.5: Nhiễu xạ tia X
@@ -111,17 +111,13 @@ b) Có thể quan sát thấy cực đại giao thoa nào khác từ họ mặt 
 **Chuẩn bị**: Theo điều kiện Bragg trong Phương trình (36.16), ta có hệ thức:
 
 $$
-\begin{aligned}
-2d \sin\theta &= m\lambda
-\end{aligned}
+2d \sin\theta = m\lambda
 $$
 
 Ở câu a, với cực đại đầu tiên ứng với $m = 1$, ta rút ra biểu thức tính khoảng cách $d$:
 
 $$
-\begin{aligned}
-d &= \frac{\lambda}{2 \sin\theta}
-\end{aligned}
+d = \frac{\lambda}{2 \sin\theta}
 $$
 
 Ở câu b, ta tính giá trị $\sin\theta$ ứng với các bậc $m \ge 2$ để kiểm tra tính khả dĩ hình học.
@@ -132,8 +128,8 @@ a) Thay các số liệu $\lambda = 0{,}154\text{ nm}$ và $\theta = 34{,}5^{\ci
 
 $$
 \begin{aligned}
-d &= \frac{1 \times 0{,}154\text{ nm}}{2 \sin 34{,}5^{\circ}} \\
-&= \frac{0{,}154\text{ nm}}{2 \times 0{,}5664} \\
+d &= \frac{1 \times 0{,}154\text{ nm}}{2 \sin 34{,}5^{\circ}}\\
+&= \frac{0{,}154\text{ nm}}{2 \times 0{,}5664}\\
 &\approx 0{,}136\text{ nm}
 \end{aligned}
 $$
@@ -144,8 +140,8 @@ b) Để kiểm tra các cực đại ở bậc cao hơn, ta giải Phương tr�
 
 $$
 \begin{aligned}
-\sin\theta &= \frac{m\lambda}{2d} \\
-&= \frac{m(0{,}154\text{ nm})}{2(0{,}136\text{ nm})} \\
+\sin\theta &= \frac{m\lambda}{2d}\\
+&= \frac{m(0{,}154\text{ nm})}{2(0{,}136\text{ nm})}\\
 &= m \times 0{,}566
 \end{aligned}
 $$
@@ -154,7 +150,7 @@ Với bậc hai ($m = 2$), ta nhận được:
 
 $$
 \begin{aligned}
-\sin\theta &= 2 \times 0{,}566 \\
+\sin\theta &= 2 \times 0{,}566\\
 &= 1{,}132 > 1
 \end{aligned}
 $$
@@ -165,8 +161,8 @@ Vì hàm số sin không thể vượt quá 1 đối với góc thực, phương
 
 $$
 \begin{aligned}
-\lambda &\le \frac{2d}{3} \\
-&= \frac{2(0{,}136\text{ nm})}{3} \\
+\lambda &\le \frac{2d}{3}\\
+&= \frac{2(0{,}136\text{ nm})}{3}\\
 &\approx 0{,}0907\text{ nm}
 \end{aligned}
 $$
@@ -190,7 +186,7 @@ Vị trí góc của cực đại giao thoa bậc $m$ được xác định bở
 
 $$
 \begin{aligned}
-2d \sin\theta &= m\lambda \\
+2d \sin\theta &= m\lambda\\
 m &= \frac{2d \sin\theta}{\lambda}
 \end{aligned}
 $$
@@ -199,8 +195,8 @@ Vì giá trị lớn nhất của hàm sin là $\sin\theta \le 1$, bậc cực �
 
 $$
 \begin{aligned}
-m &\le \frac{2d}{\lambda} \\
-&= \frac{2(0{,}200\text{ nm})}{0{,}0900\text{ nm}} \\
+m &\le \frac{2d}{\lambda}\\
+&= \frac{2(0{,}200\text{ nm})}{0{,}0900\text{ nm}}\\
 &\approx 4{,}44
 \end{aligned}
 $$

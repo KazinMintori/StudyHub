@@ -2,13 +2,15 @@
 
 Xét hiện tượng nhiễu xạ xảy ra khi một chùm ánh sáng đơn sắc có các mặt sóng phẳng (chùm tia song song) truyền qua một khe hẹp dài có bề rộng $a$. Ta quy ước phương vuông góc với chiều dài của khe là bề rộng, dù trên hình vẽ phương này có thể là phương thẳng đứng.
 
-![Hình 36.3: (a) Bóng của một khe hẹp nằm ngang theo dự đoán của quang hình học: Chùm tia truyền thẳng chỉ tạo ra một dải sáng duy nhất có cùng kích thước với khe. (b) Hiện tượng thực tế quan sát được: Chùm ánh sáng bị loe rộng theo phương thẳng đứng sau khi qua khe, tạo nên một hệ vân nhiễu xạ gồm dải sáng trung tâm rất rộng xen kẽ với các dải tối và sáng phụ hai bên.](../img/young-36/hinh-36-03.png)
+![Hình 36.3: Phần (a): Bóng của một khe hẹp nằm ngang theo dự đoán của quang hình học: Chùm tia truyền thẳng chỉ tạo ra một dải sáng duy nhất có cùng kích thước với khe. (b) Hiện tượng thực tế quan sát được: Chùm ánh sáng bị loe rộng theo phương thẳng đứng sau khi qua khe, tạo nên một hệ vân nhiễu xạ gồm dải sáng trung tâm rất rộng xen kẽ với các dải tối và sáng phụ hai bên.](../img/young-36/hinh-36-03.png)
 
 Theo mô hình quang hình học, chùm sáng truyền qua khe sẽ giữ nguyên tiết diện của khe hẹp như Hình 36.3a. Trong thực tế, chùm sáng bị loe rộng ra sau khi đi qua khe như Hình 36.3b. Hệ vân nhiễu xạ gồm có:
 - Một **dải sáng cực đại trung tâm** (central bright fringe) rất rộng, có bề rộng lớn hơn rất nhiều so với bề rộng hình học của khe.
 - Khoảng $85\%$ tổng năng lượng của chùm sáng truyền qua khe tập trung tại dải sáng cực đại trung tâm này.
 - Hai bên dải sáng trung tâm là các dải tối và dải sáng phụ xen kẽ, có cường độ sáng giảm đi rất nhanh khi càng ra xa tâm.
 - Bề rộng của toàn bộ hệ vân tỷ lệ nghịch với bề rộng của khe: Khe càng hẹp thì chùm sáng bị loe rộng ra càng lớn.
+
+Sự lan rộng theo phương ngang của chùm trong Hình 36.3(b) không đáng kể vì chiều ngang của khe lớn hơn nhiều bề rộng hẹp đang xét.
 
 Trong thực tế, bạn có thể tự mình quan sát hệ vân nhiễu xạ tương tự bằng cách nhìn vào một nguồn sáng điểm ở xa, chẳng hạn một ngọn đèn đường ban đêm, qua một khe hẹp tạo bởi hai ngón tay cái khép sát trước mắt. Khi đó, võng mạc của mắt đóng vai trò là màn quan sát.
 
@@ -21,6 +23,8 @@ Trong thực tế, bạn có thể tự mình quan sát hệ vân nhiễu xạ t
 - Ta tưởng tượng chia bề rộng của khe thành vô số dải hẹp song song có bề rộng bằng nhau, dọc theo chiều dài của khe như Hình 36.4a. Mỗi dải hẹp này là một nguồn phát sóng thứ cấp Huygens.
 - Để đơn giản hóa phép tính, ta xét điều kiện nhiễu xạ Fraunhofer như Hình 36.4c và Hình 36.4d, trong đó màn quan sát đặt rất xa khe hoặc đặt tại tiêu diện của thấu kính hội tụ. Nhờ đó, các tia sáng xuất phát từ các vị trí khác nhau trên khe truyền tới cùng một điểm $P$ trên màn có thể coi là song song với nhau, nghiêng một góc $\theta$ so với trục quang học ban đầu.
 
+Các phần sóng từ các dải khác nhau đi qua thấu kính dường như có thể nhận thêm những độ dịch pha khác nhau. Tuy nhiên, có thể chứng minh rằng phần dịch pha thêm của các đường truyền liên quan bằng nhau. Vì vậy thấu kính không làm thay đổi quan hệ pha cần dùng trong phép dựng Fraunhofer này.
+
 ![Hình 36.5: Mặt cắt bên của khe hẹp nằm ngang. Khi khoảng cách x từ khe tới màn lớn hơn rất nhiều so với bề rộng a của khe, các tia sóng từ các điểm cách nhau một đoạn a/2 có thể coi là song song với nhau. (a) Sơ đồ quang học tổng thể xác định vị trí điểm P trên màn qua tọa độ y và góc lệch θ. (b) Phóng to nửa trên của khe, cho thấy hiệu đường đi giữa hai tia sáng phát ra từ hai mép của nửa khe là (a/2)sin θ.](../img/young-36/hinh-36-05.png)
 
 Trước hết, ta xét điều kiện để xuất hiện vân tối đầu tiên ($m = 1$):
@@ -28,25 +32,19 @@ Trước hết, ta xét điều kiện để xuất hiện vân tối đầu ti�
 - Xét một dải sóng nằm ở mép trên cùng của khe và một dải sóng nằm ở chính giữa khe (cách dải trên một đoạn $a/2$) như Hình 36.5b. Hiệu đường đi của hai sóng này tới điểm $P$ là:
 
 $$
-\begin{aligned}
-\Delta r &= \frac{a}{2} \sin\theta
-\end{aligned}
+\Delta r = \frac{a}{2} \sin\theta
 $$
 
 - Nếu hiệu đường đi này bằng đúng một nửa bước sóng ($\lambda/2$), hai sóng sẽ tới $P$ ngược pha nhau và triệt tiêu lẫn nhau hoàn toàn:
 
 $$
-\begin{aligned}
-\frac{a}{2} \sin\theta &= \frac{\lambda}{2}
-\end{aligned}
+\frac{a}{2} \sin\theta = \frac{\lambda}{2}
 $$
 
 - Tương tự, dải sóng nằm ngay dưới dải thứ nhất cũng sẽ bị dải nằm ngay dưới dải giữa triệt tiêu. Cứ như vậy, mỗi dải sóng ở nửa trên của khe đều tìm được một dải sóng tương ứng ở nửa dưới cách nó đúng $a/2$ để triệt tiêu hoàn toàn dao động tại $P$. Do đó, toàn bộ ánh sáng phát ra từ khe đều bị triệt tiêu tại $P$, tạo thành **vân tối đầu tiên**:
 
 $$
-\begin{aligned}
-\sin\theta &= \pm \frac{\lambda}{a}
-\end{aligned}
+\sin\theta = \pm \frac{\lambda}{a}
 \tag{36.1}
 $$
 
@@ -57,9 +55,7 @@ Dấu cộng hoặc trừ thể hiện tính đối xứng của hệ vân ở p
 - Tổng quát hóa cho số nguyên $m$ bất kỳ, **điều kiện xuất hiện vân tối trong nhiễu xạ một khe** là:
 
 $$
-\begin{aligned}
-\sin\theta &= \frac{m\lambda}{a}
-\end{aligned}
+\sin\theta = \frac{m\lambda}{a}
 \tag{36.2}
 $$
 
@@ -74,25 +70,19 @@ Trong đó: Giá trị $m = \pm 1, \pm 2, \pm 3, \dots$ là các số nguyên kh
 Trong thực tế với ánh sáng nhìn thấy, bước sóng $\lambda$ cỡ $500\,\mathrm{nm} = 5 \times 10^{-7}\,\mathrm{m}$, thường nhỏ hơn rất nhiều so với bề rộng khe $a$ (thường cỡ $10^{-4}\,\mathrm{m}$). Vì vậy góc $\theta$ rất nhỏ, cho phép áp dụng xấp xỉ góc nhỏ $\sin\theta \approx \theta$ (với $\theta$ tính bằng radian):
 
 $$
-\begin{aligned}
-\theta &= \frac{m\lambda}{a}
-\end{aligned}
+\theta = \frac{m\lambda}{a}
 $$
 
 Gọi $x$ là khoảng cách từ khe tới màn quan sát, và $y_m$ là khoảng cách từ tâm dải sáng trung tâm tới vân tối thứ $m$ trên màn:
 
 $$
-\begin{aligned}
-\tan\theta &= \frac{y_m}{x} \approx \theta
-\end{aligned}
+\tan\theta = \frac{y_m}{x} \approx \theta
 $$
 
 Từ đó, ta tìm được vị trí khoảng cách của vân tối thứ $m$ trên màn quan sát:
 
 $$
-\begin{aligned}
-y_m &= x \frac{m\lambda}{a}
-\end{aligned}
+y_m = x \frac{m\lambda}{a}
 \tag{36.3}
 $$
 
@@ -104,7 +94,7 @@ Khoảng cách giữa hai vân tối bậc một ($m = -1$ và $m = +1$) ở hai
 
 $$
 \begin{aligned}
-\Delta y_0 &= y_1 - y_{-1} \\
+\Delta y_0 &= y_1 - y_{-1}\\
 &= 2 x \frac{\lambda}{a}
 \end{aligned}
 $$
@@ -113,7 +103,7 @@ Trong khi đó, khoảng cách giữa hai vân tối liền kề bất kỳ ở 
 
 $$
 \begin{aligned}
-\Delta y &= y_{m+1} - y_m \\
+\Delta y &= y_{m+1} - y_m\\
 &= x \frac{\lambda}{a}
 \end{aligned}
 $$
@@ -133,7 +123,7 @@ Bài toán yêu cầu xác định bề rộng $a$ của khe hẹp từ khoảng
 - Bước sóng ánh sáng: $\lambda = 633\,\mathrm{nm} = 633 \times 10^{-9}\,\mathrm{m}$.
 - Khoảng cách từ khe tới màn: $x = 6{,}0\,\mathrm{m}$.
 - Khoảng cách giữa hai vân tối bậc một hai bên: $2 y_1 = 32\,\mathrm{mm} = 32 \times 10^{-3}\,\mathrm{m}$.
-- Khoảng cách từ tâm tới vân tối bậc một ($m = 1$): $y_1 = \frac{32\,\mathrm{mm}}{2} = 16\,\mathrm{mm}$ (tương đương $16 \times 10^{-3}\,\mathrm{m}$).
+- Khoảng cách từ tâm tới vân tối bậc một ($m = 1$) là $y_1 = \frac{32\,\mathrm{mm}}{2} = 16\,\mathrm{mm}$ (tương đương $16 \times 10^{-3}\,\mathrm{m}$).
 - Vì khoảng cách trên màn $y_1 \ll x$ ($16\,\mathrm{mm} \ll 6{,}0\,\mathrm{m}$), góc $\theta$ rất nhỏ, ta áp dụng phương trình (36.3) với $m = 1$.
 
 **Thực hiện**:
@@ -141,9 +131,9 @@ Từ phương trình (36.3), rút ra biểu thức tính bề rộng khe $a$:
 
 $$
 \begin{aligned}
-a &= \frac{x \lambda}{y_1} \\
-&= \frac{6{,}0 \times 633 \times 10^{-9}}{16 \times 10^{-3}}\,\mathrm{m} \\
-&= 2{,}37 \times 10^{-4}\,\mathrm{m} \\
+a &= \frac{x \lambda}{y_1}\\
+&= \frac{6{,}0 \times 633 \times 10^{-9}}{16 \times 10^{-3}}\,\mathrm{m}\\
+&= 2{,}37 \times 10^{-4}\,\mathrm{m}\\
 &\approx 0{,}24\,\mathrm{mm}
 \end{aligned}
 $$
@@ -153,7 +143,7 @@ Góc $\theta$ chỉ nhỏ khi bước sóng rất bé so với bề rộng khe. 
 
 $$
 \begin{aligned}
-\frac{\lambda}{a} &= \frac{6{,}33 \times 10^{-7}\,\mathrm{m}}{2{,}4 \times 10^{-4}\,\mathrm{m}} \\
+\frac{\lambda}{a} &= \frac{6{,}33 \times 10^{-7}\,\mathrm{m}}{2{,}4 \times 10^{-4}\,\mathrm{m}}\\
 &\approx 0{,}0026
 \end{aligned}
 $$
@@ -168,10 +158,10 @@ Từ phương trình (36.3), trong xấp xỉ góc nhỏ, vị trí trên màn c
 
 $$
 \begin{aligned}
-y_2 &= x \frac{2\lambda}{a} \\
-&= 2 \left(x \frac{\lambda}{a}\right) \\
-&= 2 y_1 \\
-&= 2 \times (16\,\mathrm{mm}) \\
+y_2 &= x \frac{2\lambda}{a}\\
+&= 2 \left(x \frac{\lambda}{a}\right)\\
+&= 2 y_1\\
+&= 2 \times (16\,\mathrm{mm})\\
 &= 32\,\mathrm{mm}
 \end{aligned}
 $$
@@ -180,7 +170,7 @@ Khoảng cách giữa hai vân tối bậc hai nằm đối xứng ở hai phía
 
 $$
 \begin{aligned}
-2 y_2 &= 2 \times (32\,\mathrm{mm}) \\
+2 y_2 &= 2 \times (32\,\mathrm{mm})\\
 &= 64\,\mathrm{mm}
 \end{aligned}
 $$
@@ -202,7 +192,7 @@ Hãy sắp xếp các thí nghiệm nhiễu xạ một khe sau đây theo thứ 
 
 <details><summary>Xem đáp án và giải thích</summary>
 
-Thứ tự giảm dần: (ii), (i) và (iv) bằng nhau, (iii).
+Thứ tự giảm dần là (ii), rồi (i) và (iv) bằng nhau, cuối cùng là (iii).
 
 Giải thích:
 

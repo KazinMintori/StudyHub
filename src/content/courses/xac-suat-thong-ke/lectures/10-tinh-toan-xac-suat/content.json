@@ -16,22 +16,22 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 550,
+      "line": 559,
       "title": "Bài tập rèn luyện tư duy xác suất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 556,
+      "line": 565,
       "title": "Bài tập 1: Phân tích xác suất và ngụy biện công tố viên trong vụ án Sally Clark"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 611,
+      "line": 620,
       "title": "Bài tập 2: Mô hình hộp rút thăm không hoàn lại và kiểm tra tính độc lập"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 688,
+      "line": 697,
       "title": "Bài tập 3: Mô hình hóa chuỗi trận chung kết thể thao (Best-of-7 Series)"
     }
   ],
@@ -88,25 +88,25 @@
     {
       "reference": "./img/stat20-10/indep-box.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 322,
+      "line": 326,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/indep-box.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 340,
+      "line": 349,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number-cond.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 345,
+      "line": 354,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number-cond.jpeg"
     },
     {
       "reference": "./img/stat20-10/incl-excl.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 511,
+      "line": 520,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/incl-excl.png"
     }
   ]

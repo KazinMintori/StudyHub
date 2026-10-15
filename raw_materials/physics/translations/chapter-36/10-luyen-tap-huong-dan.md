@@ -25,8 +25,8 @@ Do đó:
 
 $$
 \begin{aligned}
-R &= \frac{14{,}0\times10^{-3}}{\tan\theta_2}\,\mathrm m \\
-&= 2{,}71314\,\mathrm m \\
+R &= \frac{14{,}0\times10^{-3}}{\tan\theta_2}\,\mathrm m\\
+&= 2{,}71314\,\mathrm m\\
 &\approx 2{,}71\,\mathrm m.
 \end{aligned}
 $$
@@ -35,9 +35,9 @@ $$
 
 $$
 \begin{aligned}
-\sin\theta'_2 &= \frac{2\lambda'}a, \\
-W' &= 2R\tan\theta'_2 \\
-&= 22{,}7906\,\mathrm{mm} \\
+\sin\theta'_2 &= \frac{2\lambda'}a,\\
+W' &= 2R\tan\theta'_2\\
+&= 22{,}7906\,\mathrm{mm}\\
 &\approx 22{,}8\,\mathrm{mm}.
 \end{aligned}
 $$
@@ -61,9 +61,9 @@ Chiếu laser vào khe rộng $0{,}221\,\mathrm{mm}$. Trên màn cách khe $5{,}
 
 $$
 \begin{aligned}
-\theta_3 &= \arctan(y_3/R), \\
-\lambda &= \frac{a\sin\theta_3}{3} \\
-&= 673{,}285\,\mathrm{nm} \\
+\theta_3 &= \arctan(y_3/R),\\
+\lambda &= \frac{a\sin\theta_3}{3}\\
+&= 673{,}285\,\mathrm{nm}\\
 &\approx 673\,\mathrm{nm}.
 \end{aligned}
 $$
@@ -72,7 +72,7 @@ $$
 
 $$
 \begin{aligned}
-\theta_2 &= \arcsin(2\lambda/a) \\
+\theta_2 &= \arcsin(2\lambda/a)\\
 &= 0{,}3491^\circ.
 \end{aligned}
 $$
@@ -96,8 +96,8 @@ Tại một điểm của hệ vân nhiễu xạ khe đơn, các sóng thứ c�
 
 $$
 \begin{aligned}
-\sin\theta &= \frac{\beta\lambda}{2\pi a}, \\
-\theta &= 0{,}69579^\circ \\
+\sin\theta &= \frac{\beta\lambda}{2\pi a},\\
+\theta &= 0{,}69579^\circ\\
 &\approx 0{,}696^\circ.
 \end{aligned}
 $$
@@ -106,8 +106,8 @@ $$
 
 $$
 \begin{aligned}
-\alpha &= 17{,}5\,\mathrm{rad}, \\
-\frac I{I_0} &= \left(\frac{\sin17{,}5}{17{,}5}\right)^2 \\
+\alpha &= 17{,}5\,\mathrm{rad},\\
+\frac I{I_0} &= \left(\frac{\sin17{,}5}{17{,}5}\right)^2\\
 &= 0{,}00310807.
 \end{aligned}
 $$
@@ -131,7 +131,7 @@ Trong thí nghiệm nhiễu xạ khe đơn, khe rộng $0{,}185\,\mathrm{mm}$ v�
 
 $$
 \begin{aligned}
-\theta_1 &= \arcsin(\lambda/a) \\
+\theta_1 &= \arcsin(\lambda/a)\\
 &= 0{,}178391^\circ.
 \end{aligned}
 $$
@@ -140,8 +140,8 @@ $$
 
 $$
 \begin{aligned}
-\alpha &= \frac{\pi a}{\lambda}\sin(\theta_1/2), \\
-\frac I{I_0} &= \left(\frac{\sin\alpha}{\alpha}\right)^2 \\
+\alpha &= \frac{\pi a}{\lambda}\sin(\theta_1/2),\\
+\frac I{I_0} &= \left(\frac{\sin\alpha}{\alpha}\right)^2\\
 &= 0{,}405284.
 \end{aligned}
 $$
@@ -167,9 +167,9 @@ Laser tới vuông góc một cách tử truyền qua có $825$ khe trên mỗi 
 
 $$
 \begin{aligned}
-d &= \frac{10^{-3}}{825}\,\mathrm m, \\
-\lambda &= \frac{d\sin41{,}0^\circ}{2} \\
-&= 397{,}612\,\mathrm{nm} \\
+d &= \frac{10^{-3}}{825}\,\mathrm m,\\
+\lambda &= \frac{d\sin41{,}0^\circ}{2}\\
+&= 397{,}612\,\mathrm{nm}\\
 &\approx 398\,\mathrm{nm}.
 \end{aligned}
 $$
@@ -178,9 +178,9 @@ $$
 
 $$
 \begin{aligned}
-\theta_1 &= \arcsin(\lambda/d) \\
-&= 19{,}1^\circ, \\
-\theta_3 &= \arcsin(3\lambda/d) \\
+\theta_1 &= \arcsin(\lambda/d)\\
+&= 19{,}1^\circ,\\
+\theta_3 &= \arcsin(3\lambda/d)\\
 &= 79{,}8^\circ.
 \end{aligned}
 $$
@@ -204,7 +204,7 @@ Cực đại bậc một của cách tử nhiễu xạ ở góc $24{,}0^\circ$ s
 
 $$
 \begin{aligned}
-\frac1d &= \frac{\sin24{,}0^\circ}{625\times10^{-9}}\,\mathrm{m^{-1}} \\
+\frac1d &= \frac{\sin24{,}0^\circ}{625\times10^{-9}}\,\mathrm{m^{-1}}\\
 &= 650{,}779\,\mathrm{mm^{-1}}.
 \end{aligned}
 $$
@@ -215,7 +215,7 @@ Vậy cách tử có khoảng $651$ khe trên mỗi milimet.
 
 $$
 \begin{aligned}
-\theta_2 &= \arcsin(2\sin24{,}0^\circ) \\
+\theta_2 &= \arcsin(2\sin24{,}0^\circ)\\
 &= 54{,}4^\circ.
 \end{aligned}
 $$
@@ -239,7 +239,7 @@ Các mặt mạng của một tinh thể cách nhau $0{,}165\,\mathrm{nm}$. Chi�
 
 $$
 \begin{aligned}
-\theta_1 &= \arcsin\frac{0{,}124}{2(0{,}165)} \\
+\theta_1 &= \arcsin\frac{0{,}124}{2(0{,}165)}\\
 &= 22{,}1^\circ.
 \end{aligned}
 $$
@@ -248,7 +248,7 @@ $$
 
 $$
 \begin{aligned}
-\theta_2 &= \arcsin\frac{2(0{,}124)}{2(0{,}165)} \\
+\theta_2 &= \arcsin\frac{2(0{,}124)}{2(0{,}165)}\\
 &= 48{,}7^\circ.
 \end{aligned}
 $$
@@ -272,8 +272,8 @@ Trong thí nghiệm nhiễu xạ tia X, chỉ có một cực đại giao thoa m
 
 $$
 \begin{aligned}
-\lambda &= 2(0{,}158)\sin36{,}0^\circ\,\mathrm{nm} \\
-&= 0{,}185740\,\mathrm{nm} \\
+\lambda &= 2(0{,}158)\sin36{,}0^\circ\,\mathrm{nm}\\
+&= 0{,}185740\,\mathrm{nm}\\
 &\approx 0{,}186\,\mathrm{nm}.
 \end{aligned}
 $$
@@ -284,8 +284,8 @@ Tỉ số $2d/\lambda\approx1{,}70$ xác nhận không có bậc hai.
 
 $$
 \begin{aligned}
-\lambda' &= \frac{2d\sin88{,}0^\circ}{3} \\
-&= 0{,}105269\,\mathrm{nm} \\
+\lambda' &= \frac{2d\sin88{,}0^\circ}{3}\\
+&= 0{,}105269\,\mathrm{nm}\\
 &\approx 0{,}105\,\mathrm{nm}.
 \end{aligned}
 $$
@@ -311,8 +311,8 @@ Bạn muốn khảo sát bức xạ vô tuyến từ Mặt Trời ở bước s�
 
 $$
 \begin{aligned}
-D_{\min} &= \frac{1{,}22\lambda}{\sin\theta} \\
-&= 230{,}444\,\mathrm m \\
+D_{\min} &= \frac{1{,}22\lambda}{\sin\theta}\\
+&= 230{,}444\,\mathrm m\\
 &\approx 230\,\mathrm m.
 \end{aligned}
 $$
@@ -321,8 +321,8 @@ $$
 
 $$
 \begin{aligned}
-\theta' &= \arcsin\frac{1{,}22\lambda'}D \\
-&= 1{,}11706\times10^{-3}\,\mathrm{rad} \\
+\theta' &= \arcsin\frac{1{,}22\lambda'}D\\
+&= 1{,}11706\times10^{-3}\,\mathrm{rad}\\
 &\approx 0{,}0640^\circ.
 \end{aligned}
 $$
@@ -347,9 +347,9 @@ Góc phân giải lớn hơn nghĩa là hai chi tiết phải xa nhau hơn theo 
 
 $$
 \begin{aligned}
-D &= \frac{0{,}250}{4{,}0}\,\mathrm m \\
-&= 0{,}0625\,\mathrm m, \\
-\sin\theta &= \frac{1{,}22\lambda}D, \\
+D &= \frac{0{,}250}{4{,}0}\,\mathrm m\\
+&= 0{,}0625\,\mathrm m,\\
+\sin\theta &= \frac{1{,}22\lambda}D,\\
 \theta &\approx 1{,}0736\times10^{-5}\,\mathrm{rad}.
 \end{aligned}
 $$
@@ -358,7 +358,7 @@ Khoảng vật lớn nhất là:
 
 $$
 \begin{aligned}
-u_{\max} &= \frac{s}{\tan\theta} \\
+u_{\max} &= \frac{s}{\tan\theta}\\
 &\approx 466\,\mathrm m.
 \end{aligned}
 $$
@@ -367,9 +367,9 @@ $$
 
 $$
 \begin{aligned}
-v &= \frac{fu}{u-f}, \\
-s' &= \frac vu s \\
-&\approx 2{,}685\,\mu\mathrm m \\
+v &= \frac{fu}{u-f},\\
+s' &= \frac vu s\\
+&\approx 2{,}685\,\mu\mathrm m\\
 &\approx 2{,}7\,\mu\mathrm m.
 \end{aligned}
 $$
@@ -393,9 +393,9 @@ Một nguồn sáng điểm ở xa, chẳng hạn một ngôi sao, phát ánh s�
 
 $$
 \begin{aligned}
-\theta_1 &= \arctan(\rho/f), \\
-D &= \frac{1{,}22\lambda}{\sin\theta_1} \\
-&= 8{,}45558\,\mathrm{mm} \\
+\theta_1 &= \arctan(\rho/f),\\
+D &= \frac{1{,}22\lambda}{\sin\theta_1}\\
+&= 8{,}45558\,\mathrm{mm}\\
 &\approx 8{,}46\,\mathrm{mm}.
 \end{aligned}
 $$
@@ -404,8 +404,8 @@ $$
 
 $$
 \begin{aligned}
-N &= \frac fD \\
-&= 15{,}9658 \\
+N &= \frac fD\\
+&= 15{,}9658\\
 &\approx 16{,}0.
 \end{aligned}
 $$
@@ -429,8 +429,8 @@ Với cùng đường kính gương:
 
 $$
 \begin{aligned}
-\theta &= \arcsin\frac{1{,}22\lambda}D, \\
-L_{\max} &= \frac{s}{\tan\theta} \\
+\theta &= \arcsin\frac{1{,}22\lambda}D,\\
+L_{\max} &= \frac{s}{\tan\theta}\\
 &\approx \frac{sD}{1{,}22\lambda}.
 \end{aligned}
 $$
@@ -439,7 +439,7 @@ $$
 
 $$
 \begin{aligned}
-L_{\max} &= 150{,}689\,\mathrm{ly} \\
+L_{\max} &= 150{,}689\,\mathrm{ly}\\
 &\approx 1{,}5\times10^2\,\mathrm{ly}.
 \end{aligned}
 $$
@@ -448,7 +448,7 @@ $$
 
 $$
 \begin{aligned}
-L_{\max} &= 74{,}2681\,\mathrm{ly} \\
+L_{\max} &= 74{,}2681\,\mathrm{ly}\\
 &\approx 74\,\mathrm{ly}.
 \end{aligned}
 $$
@@ -483,7 +483,7 @@ Lấy độ lớn góc bậc một:
 
 $$
 \begin{aligned}
-\lambda_R &= d\sin23{,}41^\circ \\
+\lambda_R &= d\sin23{,}41^\circ\\
 &= 690{,}011\,\mathrm{nm}.
 \end{aligned}
 $$
@@ -492,8 +492,8 @@ $$
 
 $$
 \begin{aligned}
-q &= \sqrt{\frac{1+\beta}{1-\beta}}, \\
-q^2(1-\beta) &= 1+\beta, \\
+q &= \sqrt{\frac{1+\beta}{1-\beta}},\\
+q^2(1-\beta) &= 1+\beta,\\
 \beta &= \frac{q^2-1}{q^2+1}.
 \end{aligned}
 $$
@@ -502,8 +502,8 @@ Thay $\lambda_S=656{,}3\,\mathrm{nm}$:
 
 $$
 \begin{aligned}
-q &= 1{,}0513645, \\
-\beta &= 0{,}0500470, \\
+q &= 1{,}0513645,\\
+\beta &= 0{,}0500470,\\
 v &\approx 1{,}50\times10^7\,\mathrm{m/s}.
 \end{aligned}
 $$
