@@ -364,7 +364,7 @@ Một dây đồng mang dòng $0{,}840\,\mathrm A$ được quấn quanh lõi h�
 :::
 
 ::: solution Lời giải chi tiết
-**Tóm tắt đề bài:** $I=0{,}840\,\mathrm A$, $r=0{,}0700\,\mathrm m$, $B=2{,}00\times10^{-3}\,\mathrm T$, $r_{\mathrm{trong}}=0{,}0600\,\mathrm m$, $r_{\mathrm{ngoài}}=0{,}0800\,\mathrm m$.
+**Tóm tắt đề bài:** $I=0{,}840\,\mathrm A$, $r=0{,}0700\,\mathrm m$, $B=2{,}00\times10^{-3}\,\mathrm T$, $r_{\mathrm{trong}}=0{,}0600\,\mathrm m$, $r_{\mathrm{ext}}=0{,}0800\,\mathrm m$.
 
 **Hướng đi:**
 
@@ -378,7 +378,7 @@ Một dây đồng mang dòng $0{,}840\,\mathrm A$ được quấn quanh lõi h�
 $$
 \begin{aligned}
 N &= \frac{2\pi rB}{\mu_0 I} \\
-&\approx 833\text{ vòng}.
+&\approx 833\text{ turns}.
 \end{aligned}
 $$
 

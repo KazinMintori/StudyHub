@@ -2650,7 +2650,7 @@ export const physics2Course = {
         "Trong lõi xuyến, trường phụ thuộc bán kính tính từ trục xuyến.",
         "Các kết quả là gần đúng hình học và giả thiết môi trường không từ tính."
       ],
-      "formula": "$$\n\\begin{aligned}\n&B_{\\text{ống dây}} \\approx \\mu_0 nI\\\\\n&B_{\\text{xuyến}}(r) = \\frac{\\mu_0 NI}{2\\pi r}.\n\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}\n&B_{\\mathrm{solenoid}} \\approx \\mu_0 nI\\\\\n&B_{\\mathrm{toroid}}(r) = \\frac{\\mu_0 NI}{2\\pi r}.\n\\end{aligned}\n$$"
     },
     {
       "note": "08-nguon-tu-truong",
@@ -3010,7 +3010,7 @@ export const physics2Course = {
         "Tỉ số điện áp bằng tỉ số số vòng khi bỏ qua sụt áp và từ thông rò.",
         "Với tải thuần trở và dòng từ hóa được bỏ qua, tăng áp đi kèm giảm dòng."
       ],
-      "formula": "$$\n\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{nhìn}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{eq}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}\n$$"
     },
     {
       "note": "12-song-dien-tu",
@@ -3150,7 +3150,7 @@ export const physics2Course = {
         "Ở miền tán sắc chuẩn, tia tím thường có chiết suất lớn hơn tia đỏ.",
         "Qua lăng kính, hai lần khúc xạ tách các màu vì góc lệch phụ thuộc chiết suất."
       ],
-      "formula": "$$\n\\begin{aligned}&n=n(\\lambda_0)\\\\&n_{\\rm tím}>n_{\\rm đỏ}\\\\&v_{\\rm tím}<v_{\\rm đỏ}.\\end{aligned}\n$$"
+      "formula": "$$\n\\begin{aligned}&n=n(\\lambda_0)\\\\&n_{\\mathrm{violet}}>n_{\\mathrm{red}}\\\\&v_{\\mathrm{violet}}<v_{\\mathrm{red}}.\\end{aligned}\n$$"
     },
     {
       "note": "13-truyen-anh-sang",

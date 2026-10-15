@@ -220,7 +220,7 @@ $$
 > **Bổ đề Phần bù Schur**:
 > 1. Ma trận khối $M$ dương xác định ($M \succ 0$) khi và chỉ khi:
 >    $$
->    A \succ 0 \quad \text{và} \quad C - B^T A^{-1} B \succ 0.
+>    A \succ 0 , \quad C - B^T A^{-1} B \succ 0.
 >    $$
 > 2. Nếu $A \succ 0$, ma trận khối $M$ nửa xác định dương ($M \succeq 0$) khi và chỉ khi:
 >    $$

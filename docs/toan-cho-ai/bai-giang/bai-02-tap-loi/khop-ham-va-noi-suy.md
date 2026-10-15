@@ -25,9 +25,9 @@ Mặc dù các hàm cơ sở $f_j(x)$ có thể phi tuyến đối với biến 
 
 $$
 \begin{aligned}
-&f(x) = a(x)^T \theta \quad \text{với } a(x) = \begin{bmatrix} f_1(x)\\ &\vdots\\ &f_k(x) \end{bmatrix},\\
-&f'(x) = a'(x)^T \theta \quad \text{với } a'(x) = \begin{bmatrix} f'_1(x)\\ &\vdots\\ &f'_k(x) \end{bmatrix},\\
-&f''(x) = a''(x)^T \theta \quad \text{với } a''(x) = \begin{bmatrix} f''_1(x)\\ &\vdots\\ &f''_k(x) \end{bmatrix}.
+&f(x) = a(x)^T \theta , \quad a(x) = \begin{bmatrix} f_1(x)\\ &\vdots\\ &f_k(x) \end{bmatrix},\\
+&f'(x) = a'(x)^T \theta , \quad a'(x) = \begin{bmatrix} f'_1(x)\\ &\vdots\\ &f'_k(x) \end{bmatrix},\\
+&f''(x) = a''(x)^T \theta , \quad a''(x) = \begin{bmatrix} f''_1(x)\\ &\vdots\\ &f''_k(x) \end{bmatrix}.
 \end{aligned}
 $$
 
@@ -139,7 +139,7 @@ Cho tập dữ liệu gồm 4 điểm trên đoạn $[-1, 1]$: $(-1, -2)$, $(-0{
    $$
    Để $f'(x) \ge 0$ với mọi $x \in \mathbb{R}$, tam thức bậc hai này phải có hệ số bậc hai dương và biệt thức $\Delta'$ không dương:
    $$
-   \theta_3 > 0 \quad \text{và} \quad \Delta' = \theta_2^2 - 3\theta_1 \theta_3 \le 0.
+   \theta_3 > 0 , \quad \Delta' = \theta_2^2 - 3\theta_1 \theta_3 \le 0.
    $$
    (Trường hợp suy biến: Nếu $\theta_3 = 0$, ta cần $\theta_2 = 0$ và $\theta_1 \ge 0$).
    Ràng buộc $\theta_2^2 - 3\theta_1 \theta_3 \le 0$ có thể biểu diễn qua nón bậc hai xoay (Rotated Second-Order Cone): $2(\sqrt{3/2}\theta_1)(\sqrt{3/2}\theta_3) \ge \theta_2^2$.

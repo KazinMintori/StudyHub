@@ -77,7 +77,7 @@ $$
 Phép bình phương hợp lệ vì cả hai vế không âm. Hàm $\phi_t$ là hàm toàn phương với hệ số của $\|x\|^2$ bằng $1 - t^2 > 0$, nên lồi, và nó không tăng theo $t$. Tập $\{\phi_t \le 0\}$ là một hình tròn, giới hạn bởi một đường tròn Apollonius:
 
 $$
-\text{tâm}\ \ \frac{a - t^2 b}{1 - t^2}, \qquad \text{bán kính}\ \ \frac{t\,\|a - b\|_2}{1 - t^2}.
+\text{center: }\frac{a - t^2 b}{1 - t^2}, \qquad \text{radius: }\frac{t\,\|a - b\|_2}{1 - t^2}.
 $$
 
 Hàm tỉ số này thật sự không lồi. Đi dọc một tia xuất phát từ $a$, tỉ số tăng từ 0 và tiến dần tới 1 khi điểm đi ra xa, mà một hàm lồi bị chặn trên dọc một tia thì không thể tăng. Chẳng hạn với $a = (0, 0)$ và $b = (4, 0)$, ở độ cao $x_2 = 8$ trên trục tung tỉ số là khoảng 0.894, ở độ cao 100 là khoảng 0.999, còn ở độ cao 54, trung điểm của hai vị trí ấy, tỉ số là khoảng 0.997, cao hơn trung bình 0.947 của hai đầu. Đồ thị vượt lên trên dây cung.
@@ -109,7 +109,7 @@ Giá trị đúng là $p^\star = \sqrt5 - 2 \approx 0.2361$, đạt tại $x^\st
 Với hàm mục tiêu tựa lồi khả vi trên miền khả thi lồi $X$, ta có điều kiện đủ sau: Nếu $x \in X$ và
 
 $$
-\nabla f_0(x)^T(y - x) > 0 \quad \text{với mọi } y \in X \setminus \{x\},
+\nabla f_0(x)^T(y - x) > 0 \quad \forall y \in X \setminus \{x\},
 $$
 
 thì $x$ tối ưu. So với [điều kiện tối ưu của bài toán lồi](../bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md), có hai khác biệt. Điều kiện này chỉ đủ chứ không cần, và nó đòi hỏi bất đẳng thức chặt, nên gradient phải khác 0. Ví dụ $x^3$ cho thấy vì sao: Tại $x = 0$ gradient bằng 0, mọi bất đẳng thức không chặt đều thỏa, nhưng điểm ấy không tối ưu.

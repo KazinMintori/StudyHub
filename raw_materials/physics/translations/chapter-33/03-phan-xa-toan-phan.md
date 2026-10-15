@@ -111,7 +111,7 @@ Tuy nhiên, khi nước tràn vào ngập bề mặt lăng kính, môi trường
 
 $$
 \begin{aligned}
-\theta_{\text{crit, nước}} &= \arcsin\left(\frac{1{,}33}{1{,}52}\right) \\
+\\theta_{\mathrm{crit,water}} &= \arcsin\left(\frac{1{,}33}{1{,}52}\right) \\
 &= \arcsin(0{,}875) \\
 &\approx 61{,}0^\circ
 \end{aligned}

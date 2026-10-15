@@ -17,8 +17,8 @@ Trong các môi trường có tán sắc chuẩn, ánh sáng có bước sóng d
 
 $$
 \begin{aligned}
-&v_{\text{đỏ}} > v_{\text{tím}}, \\
-&n_{\text{đỏ}} < n_{\text{tím}}
+&v_{\mathrm{red}} > v_{\mathrm{violet}}, \\
+&n_{\mathrm{red}} < n_{\mathrm{violet}}
 \end{aligned}
 $$
 
@@ -29,11 +29,11 @@ Chùm ánh sáng trắng hẹp tới xiên một lăng kính trong suốt trải
 ![Hình 33.18: Sự tán sắc ánh sáng qua lăng kính. Chùm ánh sáng trắng bị phân tách thành dải màu quang phổ biến thiên liên tục từ đỏ đến tím. Ánh sáng tím bị lệch nhiều nhất và ánh sáng đỏ bị lệch ít nhất.](../img/young-33/hinh-33-18.png)
 
 
-Góc lệch $\delta$ của tia sáng qua lăng kính phụ thuộc trực tiếp vào chiết suất $n$: Chiết suất $n$ càng lớn thì góc lệch càng lớn. Vì chiết suất của thủy tinh đối với ánh sáng tím lớn hơn so với ánh sáng đỏ ($n_{\text{tím}} > n_{\text{đỏ}}$), tia tím bị bẻ cong lệch về phía đáy lăng kính nhiều nhất, trong khi tia đỏ bị bẻ cong ít nhất.
+Góc lệch $\delta$ của tia sáng qua lăng kính phụ thuộc trực tiếp vào chiết suất $n$: Chiết suất $n$ càng lớn thì góc lệch càng lớn. Vì chiết suất của thủy tinh đối với ánh sáng tím lớn hơn so với ánh sáng đỏ ($n_{\mathrm{violet}} > n_{\mathrm{red}}$), tia tím bị bẻ cong lệch về phía đáy lăng kính nhiều nhất, trong khi tia đỏ bị bẻ cong ít nhất.
 
-Kết quả là khi ló ra khỏi lăng kính, chùm sáng trắng ban đầu bị xòe rộng thành một dải ánh sáng nhiều màu sắc biến thiên liên tục từ đỏ, da cam, vàng, lục, lam đến tím, gọi là **quang phổ** (spectrum). Mức độ tán sắc của lăng kính phụ thuộc vào độ chênh lệch giữa chiết suất đối với ánh sáng tím và chiết suất đối với ánh sáng đỏ ($n_{\text{tím}} - n_{\text{đỏ}}$).
+Kết quả là khi ló ra khỏi lăng kính, chùm sáng trắng ban đầu bị xòe rộng thành một dải ánh sáng nhiều màu sắc biến thiên liên tục từ đỏ, da cam, vàng, lục, lam đến tím, gọi là **quang phổ** (spectrum). Mức độ tán sắc của lăng kính phụ thuộc vào độ chênh lệch giữa chiết suất đối với ánh sáng tím và chiết suất đối với ánh sáng đỏ ($n_{\mathrm{violet}} - n_{\mathrm{red}}$).
 
-Quan sát đồ thị ở Hình 33.17 cho thấy: Đối với fluorit, độ chênh lệch giữa $n_{\text{tím}}$ và $n_{\text{đỏ}}$ rất nhỏ, do đó fluorit có độ tán sắc thấp. Trái lại, thủy tinh flint silicat có độ chênh lệch chiết suất lớn hơn nhiều, đem lại độ tán sắc mạnh và là vật liệu lý tưởng để chế tạo các lăng kính quang phổ.
+Quan sát đồ thị ở Hình 33.17 cho thấy: Đối với fluorit, độ chênh lệch giữa $n_{\mathrm{violet}}$ và $n_{\mathrm{red}}$ rất nhỏ, do đó fluorit có độ tán sắc thấp. Trái lại, thủy tinh flint silicat có độ chênh lệch chiết suất lớn hơn nhiều, đem lại độ tán sắc mạnh và là vật liệu lý tưởng để chế tạo các lăng kính quang phổ.
 
 Bên cạnh chiết suất rất cao ($n = 2{,}417$), kim cương còn có độ tán sắc đặc biệt lớn. Ánh sáng trắng khi đi vào viên kim cương không chỉ bị phản xạ toàn phần nhiều lần mà còn bị phân tách thành các thành phần đơn sắc rực rỡ trước khi thoát ra mặt trên, tạo nên màu sắc lấp lánh của viên đá quý. Đá quý tổng hợp strontium titanate ($\mathrm{SrTiO_3}$) có độ tán sắc lớn gấp khoảng tám lần so với kim cương. Một loại tinh thể nhân tạo khác là rutil ($\mathrm{TiO_2}$) cũng có chiết suất và độ tán sắc rất cao.
 
@@ -59,7 +59,7 @@ Góc cực đại $\Delta$ phụ thuộc vào chiết suất của nước, mà 
 - Đối với ánh sáng đỏ ($n \approx 1{,}330$), góc lệch cực đại là $\Delta = 42{,}5^\circ$.
 - Đối với ánh sáng tím ($n \approx 1{,}342$), góc lệch cực đại là $\Delta = 40{,}8^\circ$.
 
-Vì góc lệch cực đại của ánh sáng đỏ lớn hơn góc lệch của ánh sáng tím ($\Delta_{\text{đỏ}} > \Delta_{\text{tím}}$), người quan sát nhìn thấy dải màu đỏ nằm ở vòng ngoài cùng (trên cao hơn) và dải màu tím nằm ở vòng trong cùng (thấp hơn) của cầu vồng bậc một (Hình 33.19d).
+Vì góc lệch cực đại của ánh sáng đỏ lớn hơn góc lệch của ánh sáng tím ($\Delta_{\mathrm{red}} > \Delta_{\mathrm{violet}}$), người quan sát nhìn thấy dải màu đỏ nằm ở vòng ngoài cùng (trên cao hơn) và dải màu tím nằm ở vòng trong cùng (thấp hơn) của cầu vồng bậc một (Hình 33.19d).
 
 #### 2. Cầu vồng bậc hai (Secondary Rainbow)
 
@@ -72,4 +72,4 @@ Hơn nữa, lần phản xạ nội thứ hai làm đảo ngược hoàn toàn t
 - Đối với ánh sáng đỏ, góc lệch cực đại là $\Delta = 50{,}1^\circ$.
 - Đối với ánh sáng tím, góc lệch cực đại là $\Delta = 53{,}2^\circ$.
 
-Ở cầu vồng bậc hai, góc của ánh sáng tím lớn hơn góc của ánh sáng đỏ ($\Delta_{\text{tím}} > \Delta_{\text{đỏ}}$). Do đó, thứ tự dải màu trong cầu vồng bậc hai bị đảo ngược so với cầu vồng bậc một: Dải màu tím nằm ở vòng ngoài cùng phía trên, trong khi dải màu đỏ nằm ở vòng trong cùng phía dưới. Vùng bầu trời nằm giữa cầu vồng bậc một và cầu vồng bậc hai trông tối hơn vì không có tia sáng nào phản xạ một lần hay hai lần thoát ra trong dải góc từ $42{,}5^\circ$ đến $50{,}1^\circ$.
+Ở cầu vồng bậc hai, góc của ánh sáng tím lớn hơn góc của ánh sáng đỏ ($\Delta_{\mathrm{violet}} > \Delta_{\mathrm{red}}$). Do đó, thứ tự dải màu trong cầu vồng bậc hai bị đảo ngược so với cầu vồng bậc một: Dải màu tím nằm ở vòng ngoài cùng phía trên, trong khi dải màu đỏ nằm ở vòng trong cùng phía dưới. Vùng bầu trời nằm giữa cầu vồng bậc một và cầu vồng bậc hai trông tối hơn vì không có tia sáng nào phản xạ một lần hay hai lần thoát ra trong dải góc từ $42{,}5^\circ$ đến $50{,}1^\circ$.

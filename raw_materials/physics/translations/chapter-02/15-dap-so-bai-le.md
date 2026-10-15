@@ -25,7 +25,7 @@ Bảng dưới đây tổng hợp đáp số định lượng của các bài t�
 | **2.33** | $1.67\,\mathrm s$. |
 | **2.35** | **(a)** $33.5\,\mathrm m$; **(b)** $15.8\,\mathrm{m/s}$. |
 | **2.37** | **(a)** Vận tốc hướng lên, gia tốc hướng xuống, tốc độ giảm; **(b)** Vận tốc hướng xuống, gia tốc hướng xuống, tốc độ tăng. |
-| **2.39** | **(a)** $t_{\text{phản xạ}} = \sqrt{2d/g}$; **(b)** $0.190\,\mathrm s$. |
+| **2.39** | **(a)** $t_{\mathrm{react}} = \sqrt{2d/g}$; **(b)** $0.190\,\mathrm s$. |
 | **2.41** | **(a)** $646\,\mathrm m$; **(b)** $16.4\,\mathrm s$, $112\,\mathrm{m/s}$. |
 | **2.43** | $15.9\,\mathrm m$. |
 | **2.45** | $0.0868\,\mathrm{m/s^2}$. |

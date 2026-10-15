@@ -17,7 +17,7 @@ Chiều cao của bạn tính bằng centimét là bao nhiêu? Trọng lượng 
 :::
 
 ::: exercise Q1.4
-Viện Tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ, NIST, lưu giữ một số bản sao chính xác của mẫu kilôgam quốc tế. Dù được làm sạch cẩn thận, khi so sánh với mẫu quốc tế khoảng mười năm một lần, các mẫu chuẩn quốc gia này có vẻ tăng khối lượng với tốc độ trung bình khoảng $1\,\mu\mathrm{g/năm}$. Sự tăng biểu kiến ấy có đáng quan tâm không? Giải thích.
+Viện Tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ, NIST, lưu giữ một số bản sao chính xác của mẫu kilôgam quốc tế. Dù được làm sạch cẩn thận, khi so sánh với mẫu quốc tế khoảng mười năm một lần, các mẫu chuẩn quốc gia này có vẻ tăng khối lượng với tốc độ trung bình khoảng $1\,\mu\mathrm{g/year}$. Sự tăng biểu kiến ấy có đáng quan tâm không? Giải thích.
 :::
 
 ::: exercise Q1.5

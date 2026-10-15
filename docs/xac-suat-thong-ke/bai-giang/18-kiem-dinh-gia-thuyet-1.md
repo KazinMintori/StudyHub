@@ -149,7 +149,7 @@ $$
 
 Trong vụ án Gilbert, thống kê kiểm định là hiệu hai tỉ lệ mẫu:
 $$
-\text{Thống kê quan sát} = \hat{p}_{\text{gilbert}} - \hat{p}_{\text{no\_gilbert}} = 0.131
+\text{Observed statistic} = \hat{p}_{\text{gilbert}} - \hat{p}_{\text{no\_gilbert}} = 0.131
 $$
 
 ### 4. Giá trị $p$-value
@@ -157,7 +157,7 @@ $$
 ::: info Định nghĩa chuẩn xác: Giá trị $p$-value
 **$p$-value** là xác suất để quan sát được một giá trị thống kê kiểm định cực đoan bằng hoặc hơn giá trị thực tế quan sát được từ dữ liệu mẫu, **dưới điều kiện giả định rằng giả thuyết không $H_0$ là đúng**:
 $$
-p\text{-value} = P\left(\text{Thống kê kiểm định} \ge \text{Giá trị quan sát} \;\middle|\; H_0 \text{ đúng}\right)
+p\text{-value} = P\left(\text{Test statistic} \ge \text{Observed value} \;\middle|\; H_0 \text{ is true}\right)
 $$
 :::
 
@@ -176,8 +176,8 @@ $p$-value được mệnh danh là công cụ được sử dụng nhiều nhấ
 ### Ngộ nhận 1: "$p$-value là xác suất để giả thuyết không $H_0$ là đúng" (SAI HOÀN TOÀN!)
 
 Đây là lỗi tư duy phổ biến nhất:
-- Về mặt toán học: $p$-value là xác suất có điều kiện $P(\text{Dữ liệu cực đoan} \mid H_0 \text{ đúng})$.
-- Nó hoàn toàn khác với xác suất ngược $P(H_0 \text{ đúng} \mid \text{Dữ liệu})$.
+- Về mặt toán học: $p$-value là xác suất có điều kiện $P(\text{Extreme data} \mid H_0 \text{ is true})$.
+- Nó hoàn toàn khác với xác suất ngược $P(H_0 \text{ is true} \mid \text{Data})$.
 - Toàn bộ phân phối Null chỉ được tạo ra khi ta **đã giả định $H_0$ đúng $100\%$ ngay từ đầu**. Một lập luận xuất phát từ tiền đề rằng $H_0$ đúng không bao giờ có thể quay lại tính ra xác suất để chính tiền đề đó đúng được.
 
 ### Ngộ nhận 2: "$p$-value lớn chứng minh rằng giả thuyết không $H_0$ là đúng" (SAI HOÀN TOÀN!)
@@ -219,7 +219,7 @@ Ngưỡng nghi ngờ tâm lý của con người xuất hiện chính xác khi x
    - Xác định Thống kê kiểm định.
    - Xây dựng Phân phối dưới giả thuyết không (Null Distribution) bằng mô phỏng hoán vị hoặc giải tích.
    - Tính giá trị $p$-value và đưa ra kết luận.
-3. **Ý nghĩa $p$-value**: $P(\text{Cực đoan hơn} \mid H_0 \text{ đúng})$. Nếu $p\text{-value} \le \alpha$ (thường là $0.05$), bác bỏ $H_0$, còn nếu $p\text{-value} > \alpha$, chưa đủ bằng chứng bác bỏ $H_0$.
+3. **Ý nghĩa $p$-value**: $P(\text{More extreme} \mid H_0 \text{ is true})$. Nếu $p\text{-value} \le \alpha$ (thường là $0.05$), bác bỏ $H_0$, còn nếu $p\text{-value} > \alpha$, chưa đủ bằng chứng bác bỏ $H_0$.
 4. **Hậu phác vụ án Gilbert**: Mặc dù kiểm định thống kê loại trừ hoàn toàn yếu tố may rủi, thống kê không chứng minh trực tiếp Gilbert là kẻ giết người (có thể có biến ẩn khác như tình trạng bệnh nhân ca đêm nặng hơn). Do đó, chứng cứ thống kê không được trình bày trực tiếp cho bồi thẩm đoàn để tránh gây thiên lệch tâm lý. Sau đó, Gilbert bị kết án dựa trên các chứng cứ độc chất học và dấu vết thực thể khác.
 
 </div>
@@ -247,15 +247,15 @@ Trong các tuyên bố nghiên cứu khoa học dưới đây, hãy xác định
 
 2. **Là Giả thuyết Đối ($H_A$)**:
    - Nội dung: Tuyên bố có sự thay đổi (khác biệt) về chiều dài ngà trung bình qua thời gian.
-   - Phát biểu tham số: $H_A: \mu_{\text{hiện tại}} \ne \mu_{\text{100 năm trước}}$.
+   - Phát biểu tham số: $H_A: \\mu_{\mathrm{current}} \ne \\mu_{\mathrm{past}}$.
 
 3. **Là Giả thuyết Không ($H_0$)**:
    - Nội dung: Tuyên bố nguy cơ (tỉ lệ rủi ro) dị tật giữa hai nhóm phụ nữ là ngang bằng nhau.
-   - Phát biểu tham số: $H_0: p_{\text{folic}} - p_{\text{không folic}} = 0$.
+   - Phát biểu tham số: $H_0: p_{\mathrm{folic}} - p_{\mathrm{no\_folic}} = 0$.
 
 4. **Là Giả thuyết Đối ($H_A$)**:
    - Nội dung: Tuyên bố có mối liên hệ phụ thuộc (khác biệt về cân nặng trung bình giữa các mức độ tiêu thụ caffeine).
-   - Phát biểu tham số: $H_A: \mu_{\text{caffeine}} \ne \mu_{\text{không caffeine}}$.
+   - Phát biểu tham số: $H_A: \\mu_{\mathrm{caffeine}} \ne \\mu_{\mathrm{no\_caffeine}}$.
 
 5. **Là Giả thuyết Không ($H_0$)**:
    - Nội dung: Tuyên bố xác suất tai nạn là như nhau dù có dùng điện thoại hay không.

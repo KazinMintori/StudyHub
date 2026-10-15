@@ -160,14 +160,14 @@ Nhờ tính tuyến tính của kỳ vọng, ta có thể suy ra kỳ vọng c�
 ### 1. Phân phối Nhị thức: $X \sim \text{Bin}(n, p)$
 Một biến ngẫu nhiên nhị thức $X$ thực chất là tổng của $n$ biến ngẫu nhiên chỉ báo Bernoulli độc lập:
 $$
-X = X_1 + X_2 + \dots + X_n, \quad \text{với } X_i \sim \text{Bernoulli}(p)
+X = X_1 + X_2 + \dots + X_n, \quad \text{with } X_i \sim \text{Bernoulli}(p)
 $$
 Áp dụng tính cộng tính của kỳ vọng:
 $$
 \begin{aligned}
 E(X) &= E(X_1 + X_2 + \dots + X_n) \\
 &= E(X_1) + E(X_2) + \dots + E(X_n) \\
-&= \underbrace{p + p + \dots + p}_{n \text{ số hạng}} = n p
+&= \underbrace{p + p + \dots + p}_{n \text{ terms}} = n p
 \end{aligned}
 $$
 Trực giác đời thường: Nếu tung 100 lần một đồng xu cân bằng ($p = 0{,}5$), ta kỳ vọng nhận được $100 \times 0{,}5 = 50$ mặt ngửa.
@@ -353,15 +353,15 @@ Các bài tập dưới đây giúp bạn rèn luyện kỹ năng tính toán k�
 Cho biến ngẫu nhiên $T$ có hàm khối lượng xác suất được cho bởi:
 $$
 T = \begin{cases}
-3, & \text{với xác suất } 1/3 \\
-4, & \text{với xác suất } 1/4 \\
-5, & \text{với xác suất } 5/12
+3, & \text{with prob } 1/3 \\
+4, & \text{with prob } 1/4 \\
+5, & \text{with prob } 5/12
 \end{cases}
 $$
 
 Xét một chiếc hộp chứa 12 tấm thẻ ghi các số sau:
 $$
-\text{Hộp } U = \{\fbox{3}, \fbox{3}, \fbox{3}, \fbox{4}, \fbox{4}, \fbox{4}, \fbox{4}, \fbox{5}, \fbox{5}, \fbox{5}, \fbox{5}, \fbox{5}\}
+\text{Box } U = \{\fbox{3}, \fbox{3}, \fbox{3}, \fbox{4}, \fbox{4}, \fbox{4}, \fbox{4}, \fbox{5}, \fbox{5}, \fbox{5}, \fbox{5}, \fbox{5}\}
 $$
 (gồm 3 thẻ mang số 3, 4 thẻ mang số 4, và 5 thẻ mang số 5).
 
@@ -436,11 +436,11 @@ $$
 **Câu 2: Tính các đặc trưng số của $V$**:
 Với $X \sim \text{Poisson}(\lambda = 2)$, theo tính chất của phân phối Poisson:
 $$
-E(X) = 2 \quad \text{và} \quad \text{Var}(X) = 2
+E(X) = 2 , \quad \text{Var}(X) = 2
 $$
 - Áp dụng tính chất kỳ vọng khi cộng hằng số:
 $$
-E(V) = E(X + 1) = E(X) + 1 = 2 + 1 = 3 \text{ sinh viên}
+E(V) = E(X + 1) = E(X) + 1 = 2 + 1 = 3 \text{ students}
 $$
 - Áp dụng tính chất phương sai khi cộng hằng số (tịnh tiến không làm thay đổi độ biến thiên):
 $$
@@ -448,17 +448,17 @@ $$
 $$
 - Độ lệch chuẩn của $V$:
 $$
-\text{SD}(V) = \sqrt{\text{Var}(V)} = \sqrt{2} \approx 1{,}414 \text{ sinh viên}
+\text{SD}(V) = \sqrt{\text{Var}(V)} = \sqrt{2} \approx 1{,}414 \text{ students}
 $$
 
 **Câu 3: Đặc trưng số của thời gian $T = 15 V$**:
 - Kỳ vọng thời gian giải đáp:
 $$
-E(T) = E(15 V) = 15 \cdot E(V) = 15 \times 3 = 45 \text{ phút}
+E(T) = E(15 V) = 15 \cdot E(V) = 15 \times 3 = 45 \text{ min}
 $$
 - Độ lệch chuẩn của thời gian giải đáp:
 $$
-\text{SD}(T) = \text{SD}(15 V) = 15 \cdot \text{SD}(V) = 15 \times \sqrt{2} \approx 21{,}21 \text{ phút}
+\text{SD}(T) = \text{SD}(15 V) = 15 \cdot \text{SD}(V) = 15 \times \sqrt{2} \approx 21{,}21 \text{ min}
 $$
 :::
 

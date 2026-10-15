@@ -14,7 +14,7 @@ Khi điều chỉnh một mô hình dự đoán, điều gì được thay đổ
 Một quyết định nhiều thành phần được biểu diễn bằng vector cột
 
 $$
-x=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix}
+x=\begin{bmatrix}x_1\\x_2\\vdots\\x_n\end{bmatrix}
 \in\mathbb R^n.
 $$
 

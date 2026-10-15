@@ -205,7 +205,7 @@ Bảng `student` lưu thông tin sinh viên, còn `takes` lưu các lượt đă
 
 ![Hồ sơ sinh viên ghép với từng lượt đăng ký cùng mã để trả sinh viên kèm môn đã đăng ký](img/lec-01/ung-dung-noi-bang.svg)
 
-Trong nguồn, `student` có 5000 bản ghi trong 100 khối và `takes` có 10.000 bản ghi trong 400 khối. Ví dụ ở Bài 15 dùng bộ nhớ $M_{\rm khối}=20$ khối. Cả hai bảng đều vượt bộ nhớ. Quét bảng đăng ký lại cho từng sinh viên sẽ đọc nhiều lần cùng dữ liệu. Các phương pháp nối cần tái sử dụng khối mà vẫn trả đủ các cặp. Nguồn: DSC Chương 15, trang chiếu 24 cho quy mô, 28 cho nối theo khối và 40 cho ví dụ bộ nhớ và kịch bản bộ nhớ của Bài 15.
+Trong nguồn, `student` có 5000 bản ghi trong 100 khối và `takes` có 10.000 bản ghi trong 400 khối. Ví dụ ở Bài 15 dùng bộ nhớ $M_{\mathrm{block}} = 20$ khối. Cả hai bảng đều vượt bộ nhớ. Quét bảng đăng ký lại cho từng sinh viên sẽ đọc nhiều lần cùng dữ liệu. Các phương pháp nối cần tái sử dụng khối mà vẫn trả đủ các cặp. Nguồn: DSC Chương 15, trang chiếu 24 cho quy mô, 28 cho nối theo khối và 40 cho ví dụ bộ nhớ và kịch bản bộ nhớ của Bài 15.
 
 ::: tip Tự kiểm tra
 Phân biệt điều phải giữ khi lấy mẫu theo người dùng, khôi phục văn bản, lọc ứng viên vùng và trả các cặp trùng mã. Mỗi đầu ra đặt một điều kiện đúng khác nhau.

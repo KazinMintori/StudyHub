@@ -109,8 +109,8 @@ Vì thuốc có thể vừa có tiềm năng cứu mạng vừa có nguy cơ gâ
 
 $$
 \begin{aligned}
-H_0 : p_T - p_C &= 0 \quad (\text{Thuốc không làm thay đổi tỉ lệ sống sót}) \\
-&H_A : p_T - p_C \neq 0 \quad (\text{Thuốc có tác động làm thay đổi tỉ lệ sống sót})
+H_0 : p_T - p_C &= 0 \quad (\text{No effect on survival}) \\
+&H_A : p_T - p_C \neq 0 \quad (\text{Effect on survival})
 \end{aligned}
 $$
 
@@ -150,7 +150,7 @@ Quan sát Hình 20.3:
 1. Nếu chênh lệch mẫu rơi vào vùng dương, nhà nghiên cứu chọn đuôi phải với mức ý nghĩa $5\%$.
 2. Nếu chênh lệch mẫu rơi vào vùng âm, nhà nghiên cứu lại chọn đuôi trái với mức ý nghĩa $5\%$.
 3. Tổng xác suất bác bỏ nhầm $H_0$ khi $H_0$ thực sự đúng trên thực tế sẽ là:
-   $$\alpha_{\text{thực tế}} = 5\% + 5\% = 10\%$$
+   $$\\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%$$
 
 > [!CAUTION] Bài học phương pháp luận tối thượng:
 > Việc "đổi phe" hoặc chọn giả thuyết một phía sau khi đã nhìn thấy dữ liệu sẽ làm **tăng gấp đôi xác suất mắc sai lầm loại I** so với mức công bố danh nghĩa ($\alpha = 0.05$). Giả thuyết nghiên cứu và chiều kiểm định bắt buộc phải được xác định và đóng băng trước khi tiếp xúc với dữ liệu (Pre-registration).
@@ -169,7 +169,7 @@ Khi lập kế hoạch cho một nghiên cứu thực nghiệm, các nhà khoa h
 
 - **Định nghĩa**: Lực kiểm định là xác suất bác bỏ thành công giả thuyết không $H_0$ khi giả thuyết đối $H_A$ thực sự đúng.
 - **Mối liên hệ toán học**: Vì sai lầm loại II có xác suất là $\beta$ (bỏ sót $H_A$ khi $H_A$ đúng), nên lực kiểm định chính là biến cố bù của sai lầm loại II:
-  $$\text{Power} = 1 - \beta = P(\text{Bác bỏ } H_0 \mid H_A \text{ đúng})$$
+  $$\text{Power} = 1 - \beta = P(\text{Reject } H_0 \mid H_A \text{ is true})$$
 
 ### Ba yếu tố quyết định lực kiểm định
 
@@ -197,11 +197,11 @@ Khi phân tích dữ liệu hiện đại, đặc biệt trong thời đại Big
 
 Giả sử ta thực hiện $m$ phép thử độc lập và trong thực tế toàn bộ $m$ giả thuyết không $H_0$ đều đúng (tức hoàn toàn không có gen nào liên quan đến bệnh):
 - Xác suất một phép thử đưa ra kết luận đúng (không bác bỏ $H_0$) là:
-  $$P(\text{Đúng}) = 1 - \alpha = 1 - 0.05 = 0.95$$
+  $$P(\text{Correct}) = 1 - \alpha = 1 - 0.05 = 0.95$$
 - Xác suất để **cả $m$ phép thử đều không mắc sai lầm** là:
-  $$P(\text{Cả } m \text{ phép thử đều đúng}) = (1 - \alpha)^m = 0.95^m$$
+  $$P(\text{All } m \text{ tests correct}) = (1 - \alpha)^m = 0.95^m$$
 - Do đó, xác suất để có **ít nhất một kết luận dương tính giả** (Family-Wise Error Rate - FWER) là:
-  $$P(\text{Ít nhất một sai lầm loại I}) = 1 - (1 - \alpha)^m = 1 - 0.95^m$$
+  $$P(\text{At least one Type I error}) = 1 - (1 - \alpha)^m = 1 - 0.95^m$$
 
 Hãy nhìn vào bảng số liệu dưới đây:
 
@@ -218,7 +218,7 @@ Chỉ với 20 phép thử độc lập hoàn toàn ngẫu nhiên, xác suất b
 
 ### Giải pháp: Hiệu chỉnh Bonferroni (Bonferroni Correction)
 
-Để kiểm soát tỉ lệ sai lầm loại I tích lũy trên toàn bộ họ phép thử ở mức mong muốn $\alpha_{\text{mục tiêu}}$ (ví dụ $0.05$), giải pháp cổ điển và khắt khe nhất là chia nhỏ ngưỡng ý nghĩa cho số lượng phép thử $m$:
+Để kiểm soát tỉ lệ sai lầm loại I tích lũy trên toàn bộ họ phép thử ở mức mong muốn $\\alpha_{\mathrm{target}}$ (ví dụ $0.05$), giải pháp cổ điển và khắt khe nhất là chia nhỏ ngưỡng ý nghĩa cho số lượng phép thử $m$:
 
 $$\alpha_{\text{Bonferroni}} = \frac{\alpha}{m}$$
 
@@ -274,7 +274,7 @@ Một tập đoàn sản xuất pin xe điện thiết lập quy trình kiểm t
 
 **3. Lực kiểm định và giải pháp cải thiện:**
 - Lực kiểm định là xác suất hệ thống phát hiện chính xác và bác bỏ lô pin khi lô pin đó thực sự bị lỗi nguy hiểm:
-  $$\text{Power} = 1 - \beta = P(\text{Bác bỏ } H_0 \mid \text{Lô pin lỗi})$$
+  $$\text{Power} = 1 - \beta = P(\text{Reject } H_0 \mid \text{Defective})$$
 - Để tăng lực kiểm định ($1 - \beta \uparrow$) mà **không phải đánh đổi bằng việc tăng sai lầm loại I ($\alpha$)**, phương án duy nhất là **thu thập thêm thông tin bằng cách tăng cỡ mẫu kiểm tra $n$** (ví dụ: Tăng số lượng cell pin được quét cảm biến trong mỗi lô hoặc tăng thời lượng đo chu kỳ nạp xả mô phỏng).
 :::
 
@@ -286,7 +286,7 @@ Một nhóm nghiên cứu muốn đánh giá một loại thuốc mới nhằm g
 
 **Yêu cầu:**
 1. Hãy phát biểu giả thuyết không $H_0$ và giả thuyết đối $H_A$ cho kiểm định hai phía. Tại sao trong y học, kiểm định hai phía luôn được khuyến nghị làm chuẩn mực ban đầu?
-2. Giả sử sau khi thu thập dữ liệu trên 100 bệnh nhân, nhóm nghiên cứu nhận thấy nồng độ LDL trung bình ở nhóm dùng thuốc giảm nhiều hơn nhóm đối chứng. Một thành viên đề xuất: *"Dữ liệu thực tế rõ ràng cho thấy thuốc làm giảm cholesterol, vậy ta hãy đổi sang kiểm định một phía với $H_A: \mu_{\text{thuốc}} < \mu_{\text{đối chứng}}$ để thu được $p\text{-value}$ nhỏ hơn một nửa, giúp bài báo dễ được nghiệm thu hơn."* Hãy phân tích sai lầm phương pháp luận của đề xuất trên và giải thích tại sao hành vi này làm nhân đôi xác suất sai lầm loại I.
+2. Giả sử sau khi thu thập dữ liệu trên 100 bệnh nhân, nhóm nghiên cứu nhận thấy nồng độ LDL trung bình ở nhóm dùng thuốc giảm nhiều hơn nhóm đối chứng. Một thành viên đề xuất: *"Dữ liệu thực tế rõ ràng cho thấy thuốc làm giảm cholesterol, vậy ta hãy đổi sang kiểm định một phía với $H_A: \\mu_{\mathrm{drug}} < \\mu_{\mathrm{control}}$ để thu được $p\text{-value}$ nhỏ hơn một nửa, giúp bài báo dễ được nghiệm thu hơn."* Hãy phân tích sai lầm phương pháp luận của đề xuất trên và giải thích tại sao hành vi này làm nhân đôi xác suất sai lầm loại I.
 
 ::: details Lời giải chi tiết
 **1. Phát biểu giả thuyết và lý do mặc định kiểm định hai phía:**
@@ -294,8 +294,8 @@ Một nhóm nghiên cứu muốn đánh giá một loại thuốc mới nhằm g
 - Giả thuyết kiểm định hai phía:
   $$
 \begin{aligned}
-H_0 : \mu_T - \mu_C &= 0 \quad (\text{Thuốc không làm thay đổi nồng độ LDL}) \\
-&H_A : \mu_T - \mu_C \neq 0 \quad (\text{Thuốc làm thay đổi nồng độ LDL})
+H_0 : \mu_T - \mu_C &= 0 \quad (\text{No effect on LDL}) \\
+&H_A : \mu_T - \mu_C \neq 0 \quad (\text{Effect on LDL})
 \end{aligned}
 $$
 - Lý do kiểm định hai phía là chuẩn mực: Mọi loại dược phẩm đều tiềm ẩn tác dụng phụ khôn lường. Thuốc mới có thể giúp giảm cholesterol, nhưng cũng hoàn toàn có khả năng gây rối loạn chuyển hóa khiến cholesterol tăng cao đột biến. Nhà khoa học cần duy trì thái độ khách quan và cởi mở với dữ liệu ở cả hai chiều biến thiên, không được thiên kiến chỉ đón nhận chiều kết quả mong đợi.
@@ -308,7 +308,7 @@ $$
     - Nếu dữ liệu rơi vào chiều ngược lại $\bar{X}_T - \bar{X}_C > 0$, họ lại dùng kiểm định một phía đuôi phải với mức ý nghĩa $5\%$.
   - Dưới giả thuyết không $H_0$ đúng (thuốc hoàn toàn vô tác dụng), xác suất để dữ liệu rơi vào vùng bác bỏ ở đuôi trái là $5\%$, và rơi vào vùng bác bỏ ở đuôi phải cũng là $5\%$.
   - Vì hai biến cố này xung khắc nhau, tổng xác suất để nhà nghiên cứu bác bỏ nhầm $H_0$ là:
-    $$\alpha_{\text{thực tế}} = 5\% + 5\% = 10\%$$
+    $$\\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%$$
 - Kết luận: Việc đổi sang kiểm định một phía sau khi xem dữ liệu đã làm xác suất dương tính giả thực tế tăng gấp đôi so với mức $\alpha = 0.05$ công bố danh nghĩa, vi phạm nghiêm trọng tính minh bạch của phương pháp khoa học.
 :::
 
@@ -327,17 +327,17 @@ Trong một công trình nghiên cứu di truyền học ung thư, các nhà kho
 ::: details Lời giải chi tiết
 **1. Tính xác suất xuất hiện ít nhất một dương tính giả:**
 - Với mỗi gen thứ $i$, vì $H_{0, i}$ đúng, xác suất kiểm định đưa ra kết luận chính xác (không bác bỏ $H_{0, i}$) với mức $\alpha = 0.05$ là:
-  $$P(\text{Đúng trên gen } i) = 1 - \alpha = 1 - 0.05 = 0.95$$
+  $$P(\text{Correct on gene } i) = 1 - \alpha = 1 - 0.05 = 0.95$$
 - Do 50 phép thử được giả định là độc lập, xác suất để cả 50 phép thử đều đưa ra kết luận chính xác (không có bất kỳ sai lầm loại I nào) là:
-  $$P(\text{Cả 50 phép thử đều đúng}) = (0.95)^{50} \approx 0.0769 \quad (7.69\%)$$
+  $$P(\text{All 50 tests correct}) = (0.95)^{50} \approx 0.0769 \quad (7.69\%)$$
 - Do đó, xác suất để có ít nhất một gen bị kết luận sai là có liên quan đến ung thư (xuất hiện ít nhất một dương tính giả) là:
-  $$P(\text{Ít nhất một sai lầm loại I}) = 1 - (0.95)^{50} \approx 1 - 0.0769 = 0.9231 \quad (92.31\%)$$
+  $$P(\text{At least one Type I error}) = 1 - (0.95)^{50} \approx 1 - 0.0769 = 0.9231 \quad (92.31\%)$$
 - Nhận xét: Dù không có bất kỳ gen nào thực sự gây bệnh, nghiên cứu vẫn có tới $92.31\%$ xác suất đưa ra ít nhất một kết luận sai lầm mang tính giật gân nếu không có biện pháp hiệu chỉnh.
 
 **2. Hiệu chỉnh Bonferroni:**
-- **Nguyên lý**: Để đảm bảo xác suất xuất hiện ít nhất một sai lầm loại I trên toàn bộ họ 50 phép thử không vượt quá ngưỡng trần $\alpha_{\text{tổng}} = 0.05$, phương pháp Bonferroni chia đều ngưỡng ý nghĩa cho tổng số lượng phép thử $m$:
-  $$\alpha_{\text{Bonferroni}} = \frac{\alpha_{\text{tổng}}}{m}$$
-- **Áp dụng số học**: Với $m = 50$ và $\alpha_{\text{tổng}} = 0.05$:
+- **Nguyên lý**: Để đảm bảo xác suất xuất hiện ít nhất một sai lầm loại I trên toàn bộ họ 50 phép thử không vượt quá ngưỡng trần $\\alpha_{\mathrm{total}} = 0.05$, phương pháp Bonferroni chia đều ngưỡng ý nghĩa cho tổng số lượng phép thử $m$:
+  $$\alpha_{\text{Bonferroni}} = \frac{\\alpha_{\mathrm{total}}}{m}$$
+- **Áp dụng số học**: Với $m = 50$ và $\\alpha_{\mathrm{total}} = 0.05$:
   $$\alpha_{\text{Bonferroni}} = \frac{0.05}{50} = 0.001$$
 - Kết luận: Một gen chỉ được tuyên bố là có ý nghĩa thống kê nếu giá trị $p\text{-value}$ riêng lẻ của nó nhỏ hơn $0.001$. Kỹ thuật này giúp loại bỏ gần như toàn bộ các phát hiện giả mạo phát sinh từ việc kiểm định đồng thời nhiều biến số.
 :::

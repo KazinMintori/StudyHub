@@ -21,7 +21,7 @@ Xét bài toán tối ưu chuẩn tắc với biến vector $x \in \mathbb{R}^n$
 $$
 \begin{aligned}
 &\min_{x} \quad f_0(x)\\
-&\text{sao cho}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&\text{s.t.}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
 &\phantom{\text{subject to}\quad } h_j(x) = 0, \quad j = 1, \dots, p.
 \end{aligned}
 $$
@@ -94,7 +94,7 @@ trong đó $p^*$ là giá trị tối ưu toàn cục của bài toán gốc.
 Để nắm bắt trực giác tính toán, ta xét bài toán tối ưu một chiều:
 
 $$
-\min_{x \in \mathbb{R}} \quad f_0(x) = (x - 2)^2 \quad \text{sao cho} \quad x \le 1.
+\min_{x \in \mathbb{R}} \quad f_0(x) = (x - 2)^2 \quad \text{s.t.} \quad x \le 1.
 $$
 
 Đưa ràng buộc về dạng chuẩn tắc: $f_1(x) = x - 1 \le 0$. Hàm Lagrangian với nhân tử $\lambda \ge 0$ là:
@@ -243,14 +243,14 @@ $$
 4. **Hàm Log-Sum-Exp**: Xét $f(x) = \log\left(\sum_{i=1}^n e^{x_i}\right)$.
    Hàm liên hợp của hàm này liên quan chặt chẽ đến entropy của phân phối xác suất:
    $$
-   f^*(y) = \begin{cases} \sum_{i=1}^n y_i \log y_i & \text{nếu } y \succeq 0 \text{ và } \sum_{i=1}^n y_i = 1, \\ +\infty & \text{ngược lại.} \end{cases}
+   f^*(y) = \begin{cases} \sum_{i=1}^n y_i \log y_i & \text{if } y \succeq 0 \text{ and } \sum_{i=1}^n y_i = 1, \\ +\infty & \text{otherwise.} \end{cases}
    $$
 
 ### 4.4. Mối liên hệ mật thiết giữa Hàm liên hợp và Đối ngẫu Lagrange
 Xét bài toán tối ưu với ràng buộc tuyến tính:
 
 $$
-\min_x \quad f_0(x) \quad \text{sao cho} \quad A x \le b, \quad C x = d.
+\min_x \quad f_0(x) \quad \text{s.t.} \quad A x \le b, \quad C x = d.
 $$
 
 Hàm Lagrangian với $\lambda \succeq 0$ và $\nu \in \mathbb{R}^p$:
@@ -437,7 +437,7 @@ Hãy quan sát:
 Do đó, ta có biểu diễn hàm mục tiêu gốc:
 
 $$
-\sup_{\lambda \succeq 0} L(x, \lambda) = \begin{cases} f_0(x) & \text{nếu } x \text{ khả thi,} \\ +\infty & \text{nếu } x \text{ vi phạm ràng buộc.} \end{cases}
+\sup_{\lambda \succeq 0} L(x, \lambda) = \begin{cases} f_0(x), & x \text{ feasible}, \\ +\infty, & x \text{ infeasible}. \end{cases}
 $$
 
 Bài toán tối ưu gốc tương đương với bài toán Min-Max:
@@ -512,7 +512,7 @@ Giả sử các hàm mục tiêu và ràng buộc đều khả vi. Hệ điều 
 Xét bài toán Quy hoạch toàn phương với ràng buộc đẳng thức affine:
 
 $$
-\min_{x \in \mathbb{R}^n} \quad \frac{1}{2} x^T P x + q^T x \quad \text{sao cho} \quad A x = b,
+\min_{x \in \mathbb{R}^n} \quad \frac{1}{2} x^T P x + q^T x \quad \text{s.t.} \quad A x = b,
 $$
 
 với ma trận $P \in \mathbb{S}_+^n$ bán xác định dương và $A \in \mathbb{R}^{p \times n}$ có các hàng độc lập tuyến tính.
@@ -547,7 +547,7 @@ Xét bài toán tối ưu bị nhiễu bởi vector thông số tài nguyên $u 
 $$
 \begin{aligned}
 &p^*(u, v) = \min_{x} \quad f_0(x)\\
-&\text{sao cho}\quad f_i(x) \le u_i, \quad i = 1, \dots, m,\\
+&\text{s.t.}\quad f_i(x) \le u_i, \quad i = 1, \dots, m,\\
 &\phantom{\text{subject to}\quad } h_j(x) = v_j, \quad j = 1, \dots, p.
 \end{aligned}
 $$
@@ -586,7 +586,7 @@ $$
 Biến đổi vế trái: $\lambda^T (A x) = (A^T \lambda)^T x = 0^T x = 0$.
 Do đó: $0 \le b^T \lambda$. Điều này mâu thuẫn trực tiếp với điều kiện $b^T \lambda < 0$ của Hệ 2. Sự mâu thuẫn chứng minh hai hệ không thể đồng thời có nghiệm.
 
-Vector $\lambda$ ở Hệ 2 chính là **chứng chỉ vô nghiệm** của Hệ 1: Nó tạo ra một tổ hợp tuyến tính không âm của các hàng ma trận $A$ triệt tiêu hoàn toàn thành vector 0, trong khi tổ hợp tương ứng của vế phải $b$ lại cho ra một số âm ngặt, tạo thành mệnh đề vô lý $0 \le \text{số âm}$.
+Vector $\lambda$ ở Hệ 2 chính là **chứng chỉ vô nghiệm** của Hệ 1: Nó tạo ra một tổ hợp tuyến tính không âm của các hàng ma trận $A$ triệt tiêu hoàn toàn thành vector 0, trong khi tổ hợp tương ứng của vế phải $b$ lại cho ra một số âm ngặt, tạo thành mệnh đề vô lý $0 \le \text{negative}$.
 
 ---
 
@@ -600,7 +600,7 @@ Xét bài toán tối ưu với biến $x \in \mathbb{R}^n$:
 $$
 \begin{aligned}
 &\min_{x \in \mathbb{R}^n} \quad f_0(x) = x^T A_0 x + 2 b_0^T x + c_0\\
-&\text{sao cho}\quad f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
+&\text{s.t.}\quad f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
 \end{aligned}
 $$
 
@@ -627,7 +627,7 @@ Sử dụng Bổ đề phần bù Schur, bài toán đối ngẫu Lagrange $\max
 $$
 \begin{aligned}
 &\max_{\lambda \ge 0, \, \gamma \in \mathbb{R}} \quad \gamma\\
-&\text{sao cho}\quad \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1\\ &(b_0 + \lambda b_1)^T c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
+&\text{s.t.}\quad \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1\\ &(b_0 + \lambda b_1)^T c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
 \end{aligned}
 $$
 
@@ -645,7 +645,7 @@ Mặc dù hàm số phi tuyến và phi lồi, sự tương tác đồng thời 
 Vì tập ảnh $\mathcal{A}$ là một tập lồi, tập trên (epigraph) tương ứng $\mathcal{A} + \mathbb{R}_+^2$ cũng là tập lồi.
 Khi tồn tại điểm Slater ngặt $\bar{x}$ sao cho $f_1(\bar{x}) < 0$, ta có thể áp dụng Định lý siêu phẳng tách để kẻ một tiếp tuyến phân tách điểm tối ưu $(0, p^*)$ khỏi tập lồi này. Pháp tuyến của siêu phẳng tách chính là nhân tử Lagrange tối ưu $\lambda^* \ge 0$, và sự tồn tại của tiếp tuyến bảo đảm rằng:
 $$
-p^* = d^* \quad (\text{Khe hở đối ngẫu bằng 0}).
+p^* = d^* \quad (\text{Zero duality gap}).
 $$
 
 ### 13.3. Bổ đề S-procedure
@@ -660,7 +660,7 @@ $$
 Giả sử tồn tại điểm $\bar{x}$ sao cho $F_1(\bar{x}) < 0$ (điều kiện Slater).
 Mệnh đề kéo theo trên tương đương với việc bài toán tối ưu sau có giá trị tối ưu không âm:
 $$
-\min_{x} \quad -F_0(x) \quad \text{sao cho} \quad F_1(x) \le 0.
+\min_{x} \quad -F_0(x) \quad \text{s.t.} \quad F_1(x) \le 0.
 $$
 Áp dụng đối ngẫu mạnh, giá trị tối ưu của bài toán trên lớn hơn hoặc bằng 0 khi và chỉ khi bài toán đối ngẫu của nó khả thi với giá trị không âm.
 
@@ -746,14 +746,14 @@ Bằng cách giải bài toán LMI này, ta có được một chứng nhận an
      $$
    Do đó:
    $$
-   f^*(y_1, y_2) = \begin{cases} y_1 \log y_1 + y_2 \log y_2 & \text{nếu } y_1 \ge 0, y_2 \ge 0 \text{ và } y_1 + y_2 = 1, \\ +\infty & \text{ngược lại.} \end{cases}
+   f^*(y_1, y_2) = \begin{cases} y_1 \log y_1 + y_2 \log y_2 & \text{if } y_1 \ge 0, y_2 \ge 0 \text{ and } y_1 + y_2 = 1, \\ +\infty & \text{otherwise.} \end{cases}
    $$
 :::
 
 ::: exercise 2. Nới lỏng Đối ngẫu Lagrange cho Quy hoạch Số nguyên Boolean (Boolean LP)
 Xét bài toán quy hoạch số nguyên nhị phân:
 $$
-\min_{x \in \mathbb{R}^n} \quad c^T x \quad \text{sao cho} \quad A x \preceq b, \quad x_i \in \{0, 1\}, \quad i = 1, \dots, n.
+\min_{x \in \mathbb{R}^n} \quad c^T x \quad \text{s.t.} \quad A x \preceq b, \quad x_i \in \{0, 1\}, \quad i = 1, \dots, n.
 $$
 1. Hãy viết lại ràng buộc $x_i \in \{0, 1\}$ dưới dạng đẳng thức toàn phương liên tục.
 2. Thiết lập hàm Lagrangian và xây dựng bài toán đối ngẫu Lagrange.
@@ -764,7 +764,7 @@ $$
 1. Điều kiện $x_i \in \{0, 1\}$ tương đương với phương trình bậc hai: $x_i(1 - x_i) = 0$, tức là $x_i - x_i^2 = 0$ với mọi $i = 1, \dots, n$.
    Bài toán trở thành:
    $$
-   \min_x \quad c^T x \quad \text{sao cho} \quad A x - b \preceq 0, \quad x_i - x_i^2 = 0, \quad i = 1, \dots, n.
+   \min_x \quad c^T x \quad \text{s.t.} \quad A x - b \preceq 0, \quad x_i - x_i^2 = 0, \quad i = 1, \dots, n.
    $$
 
 2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$:
@@ -781,7 +781,7 @@ $$
      Giá trị cực tiểu theo $x_i$ là $-\frac{(c_i + a_i^T \lambda + \nu_i)^2}{4 \nu_i}$.
    - Hàm đối ngẫu thu được:
      $$
-     g(\lambda, \nu) = -b^T \lambda - \sum_{i=1}^n \frac{(c_i + a_i^T \lambda + \nu_i)^2}{4 \nu_i} \quad \text{với } \nu \prec 0, \, \lambda \succeq 0.
+     g(\lambda, \nu) = -b^T \lambda - \sum_{i=1}^n \frac{(c_i + a_i^T \lambda + \nu_i)^2}{4 \nu_i} , \quad \nu \prec 0, \, \lambda \succeq 0.
      $$
 
 3. Bài toán đối ngẫu Lagrange:
@@ -811,7 +811,7 @@ Xét trò chơi ma trận hai người có tổng bằng 0 với ma trận thư�
    $$
    Bài toán trở thành bài toán quy hoạch tuyến tính:
    $$
-   \min_{p, t} \quad t \quad \text{sao cho} \quad A^T p \preceq t \mathbf{1}, \quad \mathbf{1}^T p = 1, \quad p \succeq 0.
+   \min_{p, t} \quad t \quad \text{s.t.} \quad A^T p \preceq t \mathbf{1}, \quad \mathbf{1}^T p = 1, \quad p \succeq 0.
    $$
 
 2. Thiết lập bài toán đối ngẫu của bài toán LP trên:
@@ -824,7 +824,7 @@ Xét trò chơi ma trận hai người có tổng bằng 0 với ma trận thư�
    Cận dưới theo $p \succeq 0$ hữu hạn khi và chỉ khi $A q - s \mathbf{1} \succeq 0 \iff A q \succeq s \mathbf{1}$.
    Bài toán đối ngẫu là:
    $$
-   \max_{q, s} \quad s \quad \text{sao cho} \quad A q \succeq s \mathbf{1}, \quad \mathbf{1}^T q = 1, \quad q \succeq 0,
+   \max_{q, s} \quad s \quad \text{s.t.} \quad A q \succeq s \mathbf{1}, \quad \mathbf{1}^T q = 1, \quad q \succeq 0,
    $$
    tương đương với:
    $$
@@ -854,7 +854,7 @@ $$
 
 2. Theo Bổ đề Farkas, để chứng minh hệ $A x \le b$ vô nghiệm, ta cần tìm vector $\lambda = (\lambda_1, \lambda_2, \lambda_3)^T \ge 0$ thỏa mãn:
    $$
-   A^T \lambda = 0 \quad \text{và} \quad b^T \lambda < 0.
+   A^T \lambda = 0 , \quad b^T \lambda < 0.
    $$
    Khai triển hệ phương trình $A^T \lambda = 0$:
    $$
@@ -917,7 +917,7 @@ Xét bài toán tối ưu lồi với hai biến quyết định $x = (x_1, x_2)
 $$
 \begin{aligned}
 &\min_{x} \quad x_1^2 + x_2^2\\
-&\text{sao cho}\quad x_1 + x_2 = 1,\\
+&\text{s.t.}\quad x_1 + x_2 = 1,\\
 &\phantom{\text{subject to}\quad } x_1 \ge 0, \quad x_2 \ge 0.
 \end{aligned}
 $$
@@ -983,7 +983,7 @@ $$
 ::: exercise 7. Giới hạn của định lý đối ngẫu và sự không đạt nghiệm đối ngẫu khi vi phạm Slater
 Xét bài toán tối ưu một biến sau:
 $$
-\min_{x \in \mathbb{R}} x \quad \text{sao cho} \quad x^2 \le 0.
+\min_{x \in \mathbb{R}} x \quad \text{s.t.} \quad x^2 \le 0.
 $$
 1. Xác định tập khả thi, nghiệm tối ưu gốc $x^*$ và giá trị tối ưu $p^*$. Kiểm tra xem bài toán có thỏa mãn điều kiện Slater không.
 2. Thiết lập hàm Lagrangian và tính hàm đối ngẫu Lagrange $g(\lambda)$ trong hai trường hợp $\lambda = 0$ và $\lambda > 0$.
@@ -1040,7 +1040,7 @@ $$
 ::: exercise 8. Ứng dụng KKT và phân tích độ nhạy trong hồi quy tham số
 Xét bài toán ước lượng một tham số trọng số $w \in \mathbb{R}$ với ngân sách chặn độ lớn $\tau > 0$:
 $$
-\min_{w \in \mathbb{R}} \frac{1}{2}(w - 3)^2 \quad \text{sao cho} \quad w^2 \le \tau.
+\min_{w \in \mathbb{R}} \frac{1}{2}(w - 3)^2 \quad \text{s.t.} \quad w^2 \le \tau.
 $$
 1. Khi $\tau = 1$, thiết lập hệ điều kiện KKT. Giải tất cả các nhánh suy ra từ điều kiện bù trừ và loại bỏ các nghiệm ngoại lai để tìm $(w^*, \lambda^*)$.
 2. Tổng quát hóa cho tham số $\tau > 0$ tùy ý: Tìm nghiệm tối ưu $w^*(\tau)$, nhân tử đối ngẫu $\lambda^*(\tau)$, và hàm giá trị tối ưu $p^*(\tau)$ theo hai trường hợp $0 < \tau < 9$ và $\tau \ge 9$.
@@ -1108,7 +1108,7 @@ $$
 ::: exercise 9. Giải tích đối ngẫu hai chiều và chứng nhận khoảng cách đối ngẫu bằng 0
 Xét bài toán tìm vector có bình phương độ dài nhỏ nhất thỏa mãn tổng các tọa độ đạt yêu cầu:
 $$
-\min_{x \in \mathbb{R}^2} (x_1^2 + x_2^2) \quad \text{sao cho} \quad x_1 + x_2 \ge 1.
+\min_{x \in \mathbb{R}^2} (x_1^2 + x_2^2) \quad \text{s.t.} \quad x_1 + x_2 \ge 1.
 $$
 1. Kiểm tra tính lồi, điều kiện Slater và tính hữu hạn của giá trị tối ưu gốc $p^*$.
 2. Thiết lập hàm Lagrangian và tính tường minh hàm đối ngẫu Lagrange $g(\lambda)$ trên miền $\lambda \ge 0$.

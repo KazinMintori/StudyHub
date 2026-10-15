@@ -431,7 +431,7 @@ $$
 (c) Ở nút từ trường đầu tiên, điện trường đạt bụng. Biên độ này là $2E_{\max}$, trong khi biên độ từ trường tại tường là $2B_{\max}$. Tỉ số vẫn bằng $c$:
 
 $$
-E_{\mathrm{bụng}} = cB_{\mathrm{tường}} = 36{,}0\,\mathrm{V/m}.
+E_{\mathrm{max}} = cB_{\mathrm{wall}} = 36{,}0\,\mathrm{V/m}.
 $$
 
 Đây là quan hệ giữa hai biên độ tại hai vị trí khác nhau. Không áp dụng $E=cB$ cho hai giá trị tức thời tại cùng điểm của sóng đứng.

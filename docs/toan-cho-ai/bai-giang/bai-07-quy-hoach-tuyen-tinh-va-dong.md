@@ -56,7 +56,7 @@ Trực giác hình học: Các đường đồng mức của hàm mục tiêu tu
 Để đưa bài toán vào máy tính giải bằng thuật toán Simplex hoặc các phương pháp điểm trong, ta đưa bài toán LP về **dạng chuẩn (Standard Form)**:
 
 $$
-\min_{x} \quad c^T x \qquad \text{sao cho} \quad A x = b, \quad x \succeq 0.
+\min_{x} \quad c^T x \qquad \text{s.t.} \quad A x = b, \quad x \succeq 0.
 $$
 
 ### 2.1. Quy tắc chuyển đổi về dạng chuẩn
@@ -74,7 +74,7 @@ $$
 Áp dụng vào bài toán ở Mục 1, ta thêm hai biến bù $s_1, s_2 \ge 0$ cho hai ràng buộc tài nguyên:
 
 $$
-\min (-3x - 2y) \qquad \text{sao cho} \quad \begin{cases} x + y + s_1 = 4 \\ x + s_2 = 2 \end{cases}, \quad x, y, s_1, s_2 \ge 0.
+\min (-3x - 2y) \qquad \text{s.t.} \quad \begin{cases} x + y + s_1 = 4 \\ x + s_2 = 2 \end{cases}, \quad x, y, s_1, s_2 \ge 0.
 $$
 
 Biến bù $s_1, s_2$ đo lường chính xác lượng tài nguyên còn dư thừa chưa dùng hết. Tại nghiệm tối ưu $(x, y) = (2, 2)$, ta có $s_1 = 4 - (2+2) = 0$ và $s_2 = 2 - 2 = 0$. Cả hai ràng buộc đều hoạt động hết công suất (active/binding).
@@ -123,7 +123,7 @@ Ta chuyển đổi bài toán này về bài toán Quy hoạch tuyến tính (LP
 $$
 \begin{aligned}
 &\min_{x, t} \quad \sum_{i=1}^m t_i = \mathbf{1}^T t\\
-&\text{sao cho}\quad -t_i \le a_i^T x - b_i \le t_i, \quad i = 1, \dots, m.
+&\text{s.t.}\quad -t_i \le a_i^T x - b_i \le t_i, \quad i = 1, \dots, m.
 \end{aligned}
 $$
 
@@ -142,7 +142,7 @@ Chuyển đổi về bài toán LP bằng cách đưa vào một biến vô hư�
 $$
 \begin{aligned}
 &\min_{x, t} \quad t\\
-&\text{sao cho}\quad -t \mathbf{1} \preceq A x - b \preceq t \mathbf{1}.
+&\text{s.t.}\quad -t \mathbf{1} \preceq A x - b \preceq t \mathbf{1}.
 \end{aligned}
 $$
 
@@ -152,7 +152,7 @@ $$
 Xét bài toán tìm nghiệm của hệ phương trình thiếu định $A x = b$ ($m < n$) có độ lớn nhỏ nhất:
 
 $$
-\min_x \quad \|x\| \quad \text{sao cho} \quad A x = b.
+\min_x \quad \|x\| \quad \text{s.t.} \quad A x = b.
 $$
 
 - **Khi dùng chuẩn $L_2$**: Nghiệm giải tích tường minh được cho bởi giả nghịch đảo Moore–Penrose:
@@ -179,7 +179,7 @@ Bài toán tìm quả cầu nội tiếp lớn nhất trở thành bài toán Qu
 $$
 \begin{aligned}
 &\max_{x_c, r} \quad r\\
-&\text{sao cho}\quad a_i^T x_c + r \|a_i\|_2 \le b_i, \quad i = 1, \dots, m,\\
+&\text{s.t.}\quad a_i^T x_c + r \|a_i\|_2 \le b_i, \quad i = 1, \dots, m,\\
 &\phantom{\text{subject to}\quad } r \ge 0.
 \end{aligned}
 $$
@@ -190,7 +190,7 @@ Tâm Chebyshev $x_c$ đóng vai trò là "điểm trung tâm đại diện" sâu
 Cho hai tập điểm dữ liệu $\{x_1, \dots, x_N\}$ với nhãn $y_i \in \{+1, -1\}$. Ta muốn tìm siêu phẳng $a^T x - b = 0$ phân tách hai lớp dữ liệu sao cho khoảng cách (lề - margin) giữa hai lớp là lớn nhất:
 
 $$
-\min_{a, b} \quad \frac{1}{2} \|a\|_2^2 \quad \text{sao cho} \quad y_i (a^T x_i - b) \ge 1, \quad i = 1, \dots, N.
+\min_{a, b} \quad \frac{1}{2} \|a\|_2^2 \quad \text{s.t.} \quad y_i (a^T x_i - b) \ge 1, \quad i = 1, \dots, N.
 $$
 
 Đây là bài toán Quy hoạch toàn phương lồi (QP). Bài toán đối ngẫu Lagrange của nó dẫn tới biểu diễn theo nhân tử $\alpha_i \ge 0$, mở đường cho kỹ thuật Kernel Trick trong học máy.
@@ -269,13 +269,13 @@ $$
 
 Chuỗi tổng triệt tiêu hoàn toàn các thế năng trung gian, để lại:
 $$
-v_S - v_T = v_S \le \text{Tổng chi phí của đường đi}.
+v_S - v_T = v_S \le \text{Total cost of path}.
 $$
 
 Đại lượng $v_S$ là một cận dưới hợp lệ cho chi phí của **mọi đường đi từ $S$ tới $T$**. Để tìm đường đi ngắn nhất, ta tối đa hóa cận dưới này:
 
 $$
-\max \quad v_S \qquad \text{sao cho} \quad v_u - v_v \le c_{uv} \quad \forall (u \to v) \in \mathcal{E}, \quad v_T = 0.
+\max \quad v_S \qquad \text{s.t.} \quad v_u - v_v \le c_{uv} \quad \forall (u \to v) \in \mathcal{E}, \quad v_T = 0.
 $$
 
 Giải bài toán LP này với đồ thị mẫu ở Mục 7, nghiệm tối ưu tìm được chính là:
@@ -304,7 +304,7 @@ $$
    $$
    \begin{aligned}
    &\min_{x_1, x_2, t_1, t_2, t_3} \quad t_1 + t_2 + t_3\\
-   &\text{sao cho}\quad -(t_1) \le x_1 + 2 x_2 - 3 \le t_1,\\
+   &\text{s.t.}\quad -(t_1) \le x_1 + 2 x_2 - 3 \le t_1,\\
    &\phantom{\text{subject to}\quad } -(t_2) \le 2 x_1 + x_2 - 1 \le t_2,\\
    &\phantom{\text{subject to}\quad } -(t_3) \le x_1 - x_2 \le t_3,\\
    &\phantom{\text{subject to}\quad } t_1, t_2, t_3 \ge 0.
@@ -317,7 +317,7 @@ $$
    $$
    \begin{aligned}
    &\min_{x_1, x_2, t} \quad t\\
-   &\text{sao cho}\quad -t \le x_1 + 2 x_2 - 3 \le t,\\
+   &\text{s.t.}\quad -t \le x_1 + 2 x_2 - 3 \le t,\\
    &\phantom{\text{subject to}\quad } -t \le 2 x_1 + x_2 - 1 \le t,\\
    &\phantom{\text{subject to}\quad } -t \le x_1 - x_2 \le t,\\
    &\phantom{\text{subject to}\quad } t \ge 0.
@@ -345,7 +345,7 @@ $$
    $$
    \begin{aligned}
    &\max_{x_1, x_2, r} \quad r\\
-   &\text{sao cho}\quad -x_1 + r(1) \le 0 \iff x_1 \ge r,\\
+   &\text{s.t.}\quad -x_1 + r(1) \le 0 \iff x_1 \ge r,\\
    &\phantom{\text{subject to}\quad } -x_2 + r(1) \le 0 \iff x_2 \ge r,\\
    &\phantom{\text{subject to}\quad } x_1 + x_2 + r \sqrt{2} \le 1,\\
    &\phantom{\text{subject to}\quad } r \ge 0.

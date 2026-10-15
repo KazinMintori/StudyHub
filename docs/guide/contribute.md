@@ -51,7 +51,7 @@ $$
 $$
 ```
 
-Trong các chuỗi JavaScript của catalog và `concepts.mjs`, escape mỗi dấu gạch chéo ngược: `"$\\frac{a}{b}$"`. Tên, aliases và tiêu đề vẫn viết bằng chữ. Các chuỗi hiển thị qua `MathText` hỗ trợ văn bản và công thức, không hỗ trợ Markdown hay HTML. Công thức dài có vùng cuộn riêng trên điện thoại.
+Trong các chuỗi JavaScript của catalog và `concepts.mjs`, escape mỗi dấu gạch chéo ngược: `"$\frac{a}{b}$"`. Tên, aliases và tiêu đề vẫn viết bằng chữ. Các chuỗi hiển thị qua `MathText` hỗ trợ văn bản và công thức, không hỗ trợ Markdown hay HTML. Công thức dài có vùng cuộn riêng trên điện thoại.
 
 Khi giới thiệu một ký hiệu viết gọn, hãy viết dạng đầy đủ trước ít nhất một lần, chẳng hạn $a_1+\cdots+a_n$ rồi mới dùng $\sum_{i=1}^n a_i$. Nêu rõ $i$ chạy từ đâu đến đâu và một số hạng có nghĩa gì trong bài. Với tổng theo tập, như $\sum_{v\in V}$, giải thích tập chỉ số là các đỉnh. Với $\prod$, viết rõ các thừa số trước khi thu gọn. Chỉ bỏ cận để viết $\sum_i$ sau khi đã xác định phạm vi trong chính trang hoặc phần kiến thức đã dẫn.
 

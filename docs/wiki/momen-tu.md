@@ -30,7 +30,7 @@ $$
 \end{aligned}
 $$
 
-j chạy từ 1 đến N qua các vòng. Nếu hướng hoặc diện tích các vòng khác nhau, cần cộng vector thực thay vì nhân N. Mômen từ có đơn vị $\\mathrm{A\\cdot m^2}$, mômen lực có đơn vị N·m.
+j chạy từ 1 đến N qua các vòng. Nếu hướng hoặc diện tích các vòng khác nhau, cần cộng vector thực thay vì nhân N. Mômen từ có đơn vị $\mathrm{A\cdot m^2}$, mômen lực có đơn vị N·m.
 
 ## Ví dụ
 

@@ -136,7 +136,7 @@ $$
 $$
 \begin{aligned}
 E_p &= ke/a^2, \\
-E_{\mathrm{vòng}} &= ke/(2^{3/2}a^2), \\
+E_{\mathrm{turns}} &= ke/(2^{3/2}a^2), \\
 E &= \frac{ke}{a^2}\left(1-\frac1{2\sqrt2}\right).
 \end{aligned}
 $$

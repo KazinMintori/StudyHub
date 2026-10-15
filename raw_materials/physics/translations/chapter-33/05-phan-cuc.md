@@ -349,7 +349,7 @@ $$
 \begin{aligned}
 \delta_{\rm in} &= \frac\pi2, \\
 \Delta\delta &= \pm\frac\pi2, \\
-\delta_{\rm out} &= 0\ \text{hoặc}\ \pi.
+\delta_{\rm out} &= 0\ \text{or}\ \pi.
 \end{aligned}
 $$
 

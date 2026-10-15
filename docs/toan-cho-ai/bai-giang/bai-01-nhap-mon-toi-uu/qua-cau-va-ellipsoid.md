@@ -172,7 +172,7 @@ Trong mặt phẳng $\mathbb{R}^2$, thể tích chính là diện tích hình el
 Công thức trên chỉ ra rằng đại lượng $\det P$ phản ánh trực tiếp bình phương thể tích của ellipsoid. Để tối ưu hóa kích thước ellipsoid (chẳng hạn bài toán tìm ellipsoid bao có thể tích nhỏ nhất chứa một tập điểm cho trước, gọi là bài toán Loewner-John), người ta thường tối thiểu hóa hàm mục tiêu:
 
 $$
-\log \operatorname{vol}(\mathcal{E}) = \frac{1}{2} \log \det P + \text{hằng số} .
+\log \operatorname{vol}(\mathcal{E}) = \frac{1}{2} \log \det P + \text{const} .
 $$
 
 Hàm $\log \det P^{-1}$ hoặc $-\log \det P$ là một hàm lồi trên nón các ma trận xác định dương, tạo tiền đề cho các thuật toán tối ưu lồi hiệu quả trong hình học tính toán.

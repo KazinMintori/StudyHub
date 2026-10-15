@@ -221,7 +221,7 @@ Bước sóng quyết định trong hiện tượng giao thoa màng mỏng là b
 Giả sử phiến kính phía trên trong Ví dụ 35.4 được làm bằng chất dẻo có chiết suất $n = 1{,}40$, khoảng nêm giữa hai phiến kính được lấp đầy bằng mỡ silicon có chiết suất $n = 1{,}50$, và phiến kính phía dưới làm bằng thủy tinh flint nặng có chiết suất $n = 1{,}60$. Hãy xác định khoảng cách giữa các vân và tính chất của vân tại đường tiếp xúc.
 
 #### Nhận dạng bài toán
-Hình học của hệ vẫn hoàn toàn tương tự Hình 35.15, nhưng trật tự chiết suất đã thay đổi: $n_{\text{chất dẻo}} < n_{\text{mỡ}} < n_{\text{thủy tinh}}$.
+Hình học của hệ vẫn hoàn toàn tương tự Hình 35.15, nhưng trật tự chiết suất đã thay đổi: $n_{\mathrm{plastic}} < n_{\mathrm{fat}} < n_{\mathrm{glass}}$.
 
 #### Chuẩn bị
 Sự đổi pha nửa chu kỳ diễn ra tại cả hai bề mặt phản xạ: Tại mặt trên (từ chất dẻo sang mỡ) và tại mặt dưới (từ mỡ sang thủy tinh). Do cả hai sóng đều bị đổi pha nửa chu kỳ, độ lệch pha tương đối giữa chúng bằng 0. Vì vậy, ta phải dùng phương trình (35.17 b) để xác định vị trí các vân tối.
@@ -302,7 +302,7 @@ Trái lại, nếu phủ một lớp màng có chiết suất lớn hơn chiết
 Một vật liệu phủ thấu kính phổ biến là magie florua ($MgF_2$), có chiết suất $n = 1{,}38$. Bề dày của lớp phủ khử phản xạ cần bằng bao nhiêu đối với ánh sáng có bước sóng $550\text{ nm}$ khi phủ lên thấu kính thủy tinh có chiết suất $n = 1{,}52$?
 
 #### Nhận dạng bài toán
-Lớp phủ này có chiết suất trung gian $n_{\text{không khí}} < n_{\text{màng}} < n_{\text{thủy tinh}}$ đúng như Hình 35.18. Bề dày lớp phủ phải bằng một phần tư bước sóng của ánh sáng đó trong lớp phủ.
+Lớp phủ này có chiết suất trung gian $n_{\mathrm{air}} < n_{\mathrm{film}} < n_{\mathrm{glass}}$ đúng như Hình 35.18. Bề dày lớp phủ phải bằng một phần tư bước sóng của ánh sáng đó trong lớp phủ.
 
 #### Chuẩn bị
 Bước sóng trong không khí là $\lambda_0 = 550\text{ nm}$. Bước sóng của ánh sáng trong lớp phủ magie florua là $\lambda = \lambda_0 / n$. Bề dày tối thiểu của lớp phủ là $t = \lambda / 4$.

@@ -43,7 +43,7 @@ Trong mô hình ấy,
 
 $$
 \begin{aligned}
-\tau_{\mathrm{cản}} &= \frac{\omega B^2A^2}{R}\sin^2\phi, \\
+\\tau_{\mathrm{drag}} &= \frac{\omega B^2A^2}{R}\sin^2\phi, \\
 \langle P\rangle &= \frac{\omega^2B^2A^2}{2R}.
 \end{aligned}
 $$

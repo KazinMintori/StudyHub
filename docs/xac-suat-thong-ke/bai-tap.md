@@ -13,7 +13,7 @@ Tài liệu cung cấp hệ thống bài tập môn Xác suất thống kê dàn
 
 ### Bài 1.1: Hàm mật độ xác suất và tính toán kỳ vọng, phương sai
 Cho biến ngẫu nhiên liên tục $X$ có hàm mật độ xác suất (PDF) như sau:
-$$f(x) = \begin{cases} c(4 - x^2) & \text{với } 0 \le x \le 2 \\ 0 & \text{với } x \text{ khác} \end{cases}$$
+$$f(x) = \begin{cases} c(4 - x^2) & 0 \le x \le 2 \\ 0 & \text{otherwise} \end{cases}$$
 
 1. Tìm hằng số chuẩn hóa $c$ để $f(x)$ là một hàm mật độ xác suất hợp lệ.
 2. Tìm hàm phân phối tích lũy $F(x) = P(X \le x)$.
@@ -145,7 +145,7 @@ Với mức ý nghĩa $\alpha = 0.05$, hãy kiểm định tuyên bố của cô
 
 #### Lời giải gợi ý
 1. Thiết lập giả thuyết:
-   $$H_0: \mu = 45 \quad \text{vs} \quad H_1: \mu > 45 \quad (\text{kiểm định phía phải})$$
+   $$H_0: \mu = 45 \quad \text{vs} \quad H_1: \mu > 45 \quad (\text{right-tailed test})$$
 
 2. Thống kê kiểm định $t$:
    $$t_{\text{obs}} = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} = \frac{48 - 45}{6 / \sqrt{16}} = \frac{3}{6 / 4} = \frac{3}{1.5} = 2.0$$

@@ -100,18 +100,18 @@ Tổng dòng qua dây cấp là tổng dòng của ba nhánh:
 
 $$
 \begin{aligned}
-I_{\mathrm{tổng}} &= I_1+I_2+I_3 \\
+I_{\mathrm{tot}} &= I_1+I_2+I_3 \\
 &= 15+10{,}83+0{,}83 \\
 &\approx 26{,}7\,\mathrm A.
 \end{aligned}
 $$
 
-Vì tổng dòng vượt mức $20\,\mathrm A$ của mạch, bộ ngắt sẽ tác động. Có thể kiểm tra bằng công suất tổng: $P_{\mathrm{tổng}}=1800+1300+100=3200\,\mathrm W$, do đó $I_{\mathrm{tổng}}=P_{\mathrm{tổng}}/120\,\mathrm V\approx26{,}7\,\mathrm A$. Một phép kiểm tra khác dùng điện trở tương đương của ba tải mắc song song:
+Vì tổng dòng vượt mức $20\,\mathrm A$ của mạch, bộ ngắt sẽ tác động. Có thể kiểm tra bằng công suất tổng: $P_{\mathrm{tot}}=1800+1300+100=3200\,\mathrm W$, do đó $I_{\mathrm{tot}}=P_{\mathrm{tot}}/120\,\mathrm V\approx26{,}7\,\mathrm A$. Một phép kiểm tra khác dùng điện trở tương đương của ba tải mắc song song:
 
 $$
 \begin{aligned}
-\frac{1}{R_{\mathrm{tđ}}} &= \frac{1}{8\,\Omega}+\frac{1}{11\,\Omega}+\frac{1}{144\,\Omega}, \\
-I_{\mathrm{tổng}} &= \frac{120\,\mathrm V}{R_{\mathrm{tđ}}}\approx26{,}7\,\mathrm A.
+\frac{1}{R_{\mathrm{eq}}} &= \frac{1}{8\,\Omega}+\frac{1}{11\,\Omega}+\frac{1}{144\,\Omega}, \\
+I_{\mathrm{tot}} &= \frac{120\,\mathrm V}{R_{\mathrm{eq}}}\approx26{,}7\,\mathrm A.
 \end{aligned}
 $$
 

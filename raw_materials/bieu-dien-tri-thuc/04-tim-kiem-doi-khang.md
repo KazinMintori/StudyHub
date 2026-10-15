@@ -19,9 +19,9 @@ Hai người chơi cờ ca-rô: Bạn (MAX) luôn muốn điểm số cao nhất
 $$
 \text{Minimax}(s) =
 \begin{cases}
-\text{Utility}(s) & \text{nếu } s \text{ là trạng thái kết thúc} \\
-\max_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MAX} \\
-\min_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MIN}
+\text{Utility}(s) & s \in \text{Terminal} \\
+\max_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{Player}(s) = \text{MAX} \\
+\min_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{Player}(s) = \text{MIN}
 \end{cases}
 $$
 
@@ -58,7 +58,7 @@ flowchart TD
 **Tính ngược từ đáy lên:**
 - $C_1=\max(3,5)=5$; $\ C_2=\max(6,9)=9$; $\ B_1=\min(5,9)=5$
 - $C_3=\max(1,2)=2$; $\ C_4=\max(0,-1)=0$; $\ B_2=\min(2,0)=0$
-- $\text{Gốc}=\max(B_1,B_2)=\max(5,0)=\mathbf{5}$ → chọn nhánh **B1**
+- $\text{Root} =\max(B_1,B_2)=\max(5,0)=\mathbf{5}$ → chọn nhánh **B1**
 
 ### Code C++
 

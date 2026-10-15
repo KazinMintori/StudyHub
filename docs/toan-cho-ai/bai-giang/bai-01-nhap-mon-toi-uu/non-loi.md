@@ -241,7 +241,7 @@ Trong lý thuyết thứ tự và đối ngẫu, người ta quan tâm tới hai
 
 > **Định nghĩa.** Một nón lồi $K$ được gọi là **nhọn** (pointed) nếu nó không chứa bất kỳ đường thẳng đầy đủ nào đi qua gốc tọa độ. Nói theo ngôn ngữ đại số:
 > $$
-> x \in K \quad \text{và} \quad -x \in K \implies x = 0
+> x \in K , \quad -x \in K \implies x = 0
 > $$
 > nghĩa là $K \cap (-K) = \{0\}$.
 

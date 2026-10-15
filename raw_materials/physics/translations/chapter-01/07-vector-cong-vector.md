@@ -124,7 +124,7 @@ Theo định nghĩa tang:
 
 $$
 \tan\varphi
-=\frac{\text{cạnh đối}}{\text{cạnh kề}}
+=\frac{\text{opp}}{\text{adj}}
 =\frac{2.00\,\mathrm{km}}{1.00\,\mathrm{km}}
 =2.00.
 $$

@@ -153,17 +153,17 @@ ty_le_tho = (df["price"] < 50000).mean()
 ```
 - Phép toán `(df["price"] < 50000)` biến các dòng có giá trị `NaN` thành `False`.
 - Hàm `.mean()` trên mảng Boolean sẽ tính tổng số phần tử `True` chia cho **tổng số dòng của toàn bộ bảng (bao gồm cả các dòng bị thiếu giá)**.
-- Mẫu số ở đây là: $\text{Mẫu số} = N_{\text{toàn bộ}}$.
+- Mẫu số ở đây là: $\text{Denominator} = N_{\mathrm{total}}$.
 
 ### Cách 2: Tỷ lệ sạch (*Net Share*)
 ```python
 gia_hop_le = df["price"].dropna()
 ty_le_sach = (gia_hop_le < 50000).mean()
 ```
-- Mẫu số ở đây chỉ bao gồm các dòng thực sự có dữ liệu giá hợp lệ: $\text{Mẫu số} = N_{\text{hợp lệ}}$.
+- Mẫu số ở đây chỉ bao gồm các dòng thực sự có dữ liệu giá hợp lệ: $\text{Denominator} = N_{\mathrm{valid}}$.
 
 ### Bài học phương pháp luận:
-Vì $N_{\text{toàn bộ}} \ge N_{\text{hợp lệ}}$, tỷ lệ thô luôn nhỏ hơn hoặc bằng tỷ lệ sạch ($\text{ty\_le\_tho} \le \text{ty\_le\_sach}$). Khi trình bày báo cáo cho các nhà đầu tư, người phân tích dữ liệu trung thực bắt buộc phải **nêu rõ mẫu số được sử dụng**, và đồng thời báo cáo số lượng các dòng bị thiếu dữ liệu (`n_missing`) để người ra quyết định đánh giá được mức độ rủi ro thông tin.
+Vì $N_{\mathrm{total}} \ge N_{\mathrm{valid}}$, tỷ lệ thô luôn nhỏ hơn hoặc bằng tỷ lệ sạch ($\text{ty\_le\_tho} \le \text{ty\_le\_sach}$). Khi trình bày báo cáo cho các nhà đầu tư, người phân tích dữ liệu trung thực bắt buộc phải **nêu rõ mẫu số được sử dụng**, và đồng thời báo cáo số lượng các dòng bị thiếu dữ liệu (`n_missing`) để người ra quyết định đánh giá được mức độ rủi ro thông tin.
 
 ---
 

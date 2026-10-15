@@ -205,7 +205,7 @@ $$\hat{y} = 96.2022 - 0.8979 x$$
 1. **Hệ số độ dốc $b_1 = -0.8979$**:
    - Cho biết mức thay đổi kỳ vọng của biến $y$ khi biến $x$ tăng thêm $1$ đơn vị đo lường.
    - Cụ thể trong bài toán: Cứ khi tỷ lệ nghèo đói của một bang tăng thêm $1$ điểm phần trăm, tỷ lệ tốt nghiệp trung học bình quân của bang đó có xu hướng **giảm đi khoảng $0.90$ điểm phần trăm**.
-   - **Phân biệt $b_1$ và $r$**: Hệ số tương quan $r$ là đại lượng phi thứ nguyên, trong khi độ dốc $b_1$ luôn mang đơn vị cụ thể là $\frac{\text{đơn vị của } y}{\text{đơn vị của } x}$.
+   - **Phân biệt $b_1$ và $r$**: Hệ số tương quan $r$ là đại lượng phi thứ nguyên, trong khi độ dốc $b_1$ luôn mang đơn vị cụ thể là $\frac{\mathrm{unit}(y)}{\mathrm{unit}(x)}$.
 2. **Hệ số chặn $b_0 = 96.2022$**:
    - Cho biết giá trị dự báo của biến $y$ khi biến $x$ nhận giá trị bằng $0$.
    - Trong mô hình này, nếu một bang có tỷ lệ nghèo đói bằng $0\%$ thì tỷ lệ tốt nghiệp được dự báo đạt $96.2\%$.

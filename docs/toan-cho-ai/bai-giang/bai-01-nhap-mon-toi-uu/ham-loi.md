@@ -81,8 +81,8 @@ Trong mô phỏng 2D trên: Với hàm yên ngựa $f(x_1, x_2) = x_1^2 - x_2^2$
 
 $$
 \tilde f(x) = \begin{cases} 
-f(x), & \text{nếu } x \in \operatorname{dom} f, \\ 
-+\infty, & \text{nếu } x \notin \operatorname{dom} f. 
+f(x), & \text{if } x \in \operatorname{dom} f, \\ 
++\infty, & \text{if } x \notin \operatorname{dom} f. 
 \end{cases}
 $$
 
@@ -92,8 +92,8 @@ Một ứng dụng nền tảng của kỹ thuật này là **hàm chỉ thị**
 
 $$
 I_C(x) = \begin{cases} 
-0, & \text{nếu } x \in C, \\ 
-+\infty, & \text{nếu } x \notin C. 
+0, & \text{if } x \in C, \\ 
++\infty, & \text{if } x \notin C. 
 \end{cases}
 $$
 

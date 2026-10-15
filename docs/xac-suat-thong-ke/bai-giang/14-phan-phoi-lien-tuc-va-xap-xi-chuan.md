@@ -38,8 +38,8 @@ Mô hình bước đi ngẫu nhiên có ứng dụng sâu rộng trong vật lý
 
 $$
 X = \begin{cases}
--1, & \text{với xác suất } 0.5 \\
-+1, & \text{với xác suất } 0.5
+-1, & \text{with prob } 0.5 \\
++1, & \text{with prob } 0.5
 \end{cases}
 $$
 
@@ -348,7 +348,7 @@ Hàm mật độ xác suất có dạng hình chữ nhật nằm ngang:
 $$
 f(x) = \begin{cases}
 1, & 0 \le x \le 1 \\
-0, & x < 0 \text{ hoặc } x > 1
+0, & x < 0 \text{ or } x > 1
 \end{cases}
 $$
 
@@ -360,7 +360,7 @@ $$
 Vì hàm mật độ là một đường thẳng nằm ngang có chiều cao bằng $1$, diện tích trên bất kỳ khoảng con $(a, b) \subseteq [0, 1]$ đơn giản bằng diện tích hình chữ nhật:
 
 $$
-P(a \le X \le b) = \text{chiều cao} \times \text{độ rộng} = 1 \times (b - a) = b - a
+P(a \le X \le b) = \text{height} \times \text{width} = 1 \times (b - a) = b - a
 $$
 
 Hàm phân phối tích lũy CDF của $U(0, 1)$ là hàm tuyến tính:
@@ -634,7 +634,7 @@ $$
 \end{aligned}
 $$
 
-Để tối thiểu hóa tiền phạt kỳ vọng, dự đoán tối ưu của người chơi là chọn đúng giá trị kỳ vọng của tổng: $\text{Dự đoán} = E(S_n) = n\mu$.
+Để tối thiểu hóa tiền phạt kỳ vọng, dự đoán tối ưu của người chơi là chọn đúng giá trị kỳ vọng của tổng: $\text{Prediction} = E(S_n) = n\mu$.
 Khi đó, độ sai lệch thực tế trung bình giữa tổng quan sát và dự đoán được đo lường chính xác bằng sai số chuẩn $\text{SE}(S_n)$.
 
 Theo quy luật căn bậc hai cho tổng:
@@ -643,11 +643,11 @@ $$
 $$
 - Khi $n = 50$:
   $$
-  \text{SE}(S_{50}) = \sqrt{50} \times 1.7078 \approx 7.071 \times 1.7078 \approx 12.08 \text{ nút}
+  \text{SE}(S_{50}) = \sqrt{50} \times 1.7078 \approx 7.071 \times 1.7078 \approx 12.08 \text{ nodes}
   $$
 - Khi $n = 100$:
   $$
-  \text{SE}(S_{100}) = \sqrt{100} \times 1.7078 = 10 \times 1.7078 \approx 17.08 \text{ nút}
+  \text{SE}(S_{100}) = \sqrt{100} \times 1.7078 = 10 \times 1.7078 \approx 17.08 \text{ nodes}
   $$
 
 Vì $\text{SE}(S_{50}) < \text{SE}(S_{100})$, độ biến thiên của tổng ở 50 lần đổ nhỏ hơn nhiều so với 100 lần đổ. Do đó, người chơi **nên chọn $n = 50$ lần đổ** để chịu mức phạt kỳ vọng thấp hơn đáng kể (khoảng 12 USD so với 17 USD).

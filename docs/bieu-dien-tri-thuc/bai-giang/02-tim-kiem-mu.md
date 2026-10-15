@@ -130,7 +130,7 @@ Quy ước thứ tự duyệt khi có nhiều lựa chọn: Ưu tiên đỉnh th
 Đường đi tìm được qua BFS: $S \to A \to C \to G$ (độ dài 3 bước nhảy).
 Tổng chi phí thực tế:
 $$
-\text{Chi phí} = 1 + 5 + 3 = 9 > 7
+\text{Cost} = 1 + 5 + 3 = 9 > 7
 $$
 
 ### Đào sâu bản chất: Tại sao BFS tìm ra đường đi đắt hơn?
@@ -172,7 +172,7 @@ flowchart TD
 Giả sử tại đỉnh $S$, ta thử nhánh $B$ trước $A$:
 DFS sẽ lao thẳng: $S \to B \to C \to G$. Ngay khi chạm đích $G$, thuật toán công bố kết quả:
 $$
-\text{Chi phí} = 4 + 1 + 3 = 8
+\text{Cost} = 4 + 1 + 3 = 8
 $$
 Kết quả này phụ thuộc hoàn toàn vào thứ tự nhánh được chọn khi cài đặt. Nếu ta thử $A$ trước, DFS lại có thể đi theo $S \to A \to C \to G$ ($=9$) hoặc $S \to A \to B \to C \to G$ ($=7$).
 
@@ -238,7 +238,7 @@ flowchart TD
 
 Kết quả đường đi:
 $$
-S \to A \to B \to C \to G, \quad \text{Tổng chi phí} = 7 \quad (\text{Tối ưu tuyệt đối!})
+S \to A \to B \to C \to G, \quad \text{Cost} = 7 \quad (\text{Optimal})
 $$
 
 ### Quy tắc vàng khi cài đặt UCS: Điều kiện dừng chuẩn xác

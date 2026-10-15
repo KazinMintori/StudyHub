@@ -105,7 +105,7 @@ Tương tự như cách ta mở rộng tổ hợp affine từ hai điểm sang n
 > $$
 > trong đó các trọng số $\theta_1, \dots, \theta_k$ thỏa mãn đồng thời hai điều kiện:
 > $$
-> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 \quad \text{và} \quad \theta_i \ge 0, \quad \forall i = 1, \dots, k
+> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 , \quad \theta_i \ge 0, \quad \forall i = 1, \dots, k
 > $$
 
 ### Trực giác vật lý: Phép pha trộn thành phần
@@ -115,13 +115,13 @@ So với tổ hợp affine, tổ hợp lồi bổ sung thêm đúng một điề
 Hai ràng buộc $\sum_{i=1}^k \theta_i = 1$ và $\theta_i \ge 0$ chính là các tiên đề định nghĩa một **phân phối xác suất rời rạc** trên $k$ điểm. Về mặt vật lý và đời sống thường ngày, tổ hợp lồi mô tả chính xác một **phép pha trộn tỷ lệ** (mixture), trong đó mỗi $\theta_i$ là tỷ lệ phần trăm đóng góp của thành phần $x_i$:
 
 $$
-\underbrace{\sum_{i=1}^k \theta_i x_i}_{\text{kết quả pha trộn}} \quad \text{với} \quad \underbrace{\sum_{i=1}^k \theta_i = 1}_{\text{tổng tỷ lệ bằng } 100\%} \quad \text{và} \quad \underbrace{\theta_i \ge 0}_{\text{không có trọng số âm}}
+\underbrace{\sum_{i=1}^k \theta_i x_i}_{\text{blend}} \quad \text{with} \quad \underbrace{\sum_{i=1}^k \theta_i = 1}_{\text{weights sum to } 1} , \quad \underbrace{\theta_i \ge 0}_{\text{nonnegative}}
 $$
 
-Chẳng hạn khi một barista pha một tách cà phê sữa gồm 30% cà phê nguyên chất ($x_{\text{cà phê}}$) và 70% sữa tươi ($x_{\text{sữa}}$), đặc tính hương vị của ly nước thu được chính là tổ hợp lồi:
+Chẳng hạn khi một barista pha một tách cà phê sữa gồm 30% cà phê nguyên chất ($x_{\text{coffee}}$) và 70% sữa tươi ($x_{\text{milk}}$), đặc tính hương vị của ly nước thu được chính là tổ hợp lồi:
 
 $$
-x_{\text{thức uống}} = 0.3\, x_{\text{cà phê}} + 0.7\, x_{\text{sữa}}
+x_{\text{drink}} = 0.3\, x_{\text{coffee}} + 0.7\, x_{\text{milk}}
 $$
 
 Vì các trọng số đều không âm và có tổng bằng 1, hương vị thu được không bao giờ vượt ra ngoài phổ hương vị vốn có của hai nguyên liệu ban đầu.
@@ -139,7 +139,7 @@ Chiều đảo là hiển nhiên vì đoạn thẳng nối hai điểm chính l�
 - **Giả thiết quy nạp**: Giả sử khẳng định đúng với mọi tổ hợp lồi của $k - 1$ điểm thuộc $C$.
 - **Bước quy nạp**: Xét một tổ hợp lồi của $k$ điểm:
   $$
-  y = \sum_{i=1}^k \theta_i x_i, \quad \text{với } \sum_{i=1}^k \theta_i = 1 \text{ và } \theta_i \ge 0
+  y = \sum_{i=1}^k \theta_i x_i, , \quad \sum_{i=1}^k \theta_i = 1 \text{ and } \theta_i \ge 0
   $$
   Nếu $\theta_k = 1$, thì các hệ số còn lại $\theta_1 = \dots = \theta_{k-1} = 0$, suy ra $y = x_k \in C$.
   Nếu $\theta_k < 1$, ta có $1 - \theta_k > 0$. Ta tách số hạng thứ $k$ ra ngoài và viết lại $y$ dưới dạng:
@@ -403,7 +403,7 @@ $$
 :::
 
 ::: exercise 3. Chứng minh bao lồi là giao của mọi tập lồi chứa tập hợp ban đầu
-Cho tập hợp $S \subseteq \mathbb{R}^n$. Gọi $\mathcal{F} = \{B \subseteq \mathbb{R}^n \mid B \text{ lồi và } S \subseteq B\}$ là họ tất cả các tập lồi chứa $S$. Chứng minh rằng:
+Cho tập hợp $S \subseteq \mathbb{R}^n$. Gọi $\mathcal{F} = \{B \subseteq \mathbb{R}^n \mid B \text{ convex and } S \subseteq B\}$ là họ tất cả các tập lồi chứa $S$. Chứng minh rằng:
 $$
 \operatorname{conv} S = \bigcap_{B \in \mathcal{F}} B
 $$

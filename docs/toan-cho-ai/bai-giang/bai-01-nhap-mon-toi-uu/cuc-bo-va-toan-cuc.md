@@ -17,8 +17,8 @@ Ta định nghĩa một **bài toán tối ưu lồi ở dạng chuẩn** là b�
 
 $$
 \begin{aligned}
-&\quad \text{cực tiểu} \quad f_0(x) \\
-\text{với điều kiện} \quad f_i(x) &\le 0, \quad i = 1, \dots, m, \\
+&\quad \text{minimize} \quad f_0(x) \\
+\text{subject to} \quad f_i(x) &\le 0, \quad i = 1, \dots, m, \\
 a_i^T x &= b_i, \quad i = 1, \dots, p,
 \end{aligned}
 $$
@@ -35,7 +35,7 @@ Ba yêu cầu này bảo đảm miền khả thi là một tập lồi. Miền k
 
 ## 2. Tập nghiệm của bài toán lồi
 
-Gọi $p^\star$ là giá trị tối ưu. Tập nghiệm tối ưu là $\{x \text{ khả thi} : f_0(x) \le p^\star\}$, giao của miền khả thi với một tập mức dưới của $f_0$. Cả hai đều lồi, nên **tập nghiệm tối ưu của một bài toán lồi là tập lồi**. Lập luận y hệt cho tập các điểm $\varepsilon$-tối ưu $\{x \text{ khả thi} : f_0(x) \le p^\star + \varepsilon\}$.
+Gọi $p^\star$ là giá trị tối ưu. Tập nghiệm tối ưu là $\{x \in \mathcal{X} : f_0(x) \le p^\star\}$, giao của miền khả thi với một tập mức dưới của $f_0$. Cả hai đều lồi, nên **tập nghiệm tối ưu của một bài toán lồi là tập lồi**. Lập luận y hệt cho tập các điểm $\varepsilon$-tối ưu $\{x \in \mathcal{X} : f_0(x) \le p^\star + \varepsilon\}$.
 
 Hệ quả cụ thể: Một bài toán lồi có thể không có nghiệm, có đúng một nghiệm, hoặc có vô số nghiệm, nhưng **không bao giờ có đúng hai nghiệm**, hay bất kỳ số hữu hạn nào lớn hơn 1. Nếu có hai nghiệm thì cả đoạn thẳng nối chúng đều là nghiệm. Hiện tượng này đã xuất hiện hai lần trong các bài trước: Ở chủ đề về hai dạng bài toán kinh điển, quy hoạch tuyến tính có thể đạt tối ưu trên cả một cạnh của đa giác khả thi. Ở chủ đề điều kiện bậc hai, bình phương tối thiểu với hai đặc trưng cộng tuyến có cả một đường thẳng nghiệm. Nếu hàm mục tiêu lồi nghiêm ngặt, tập nghiệm có nhiều nhất một điểm.
 
@@ -43,7 +43,7 @@ Ngược lại, hàm $0.25x^4 - x^2 + 0.3x$ có hai điểm cực tiểu cục b
 
 ## 3. Cực tiểu cục bộ là cực tiểu toàn cục
 
-> **Định nghĩa.** Điểm khả thi $x$ là **cực tiểu cục bộ** nếu có $R > 0$ sao cho $f_0(x) \le f_0(z)$ với mọi điểm khả thi $z$ thỏa $\|z - x\|_2 \le R$.
+> **Định nghĩa.** Điểm khả thi $x$ là **cực tiểu cục bộ** nếu có $R > 0$ sao cho $f_0(x) \le f_0(z)$ với mọi điểm khả thi $z$ thỏa $\|\\|z - x\\|_2 \le R|\\|z - x\\|_2 \le R$.
 
 > **Định lý.** Trong một bài toán tối ưu lồi, mọi điểm cực tiểu cục bộ đều là cực tiểu toàn cục.
 
@@ -55,7 +55,7 @@ $$
 
 Hai tính lồi lần lượt được dùng ở hai bước:
 
-1. **Miền khả thi lồi**, nên $z$, nằm trên đoạn nối hai điểm khả thi $x$ và $y$, cũng khả thi. Vì $\|z - x\|_2 = R/2 < R$, điểm $z$ nằm trong lân cận của $x$.
+1. **Miền khả thi lồi**, nên $z$, nằm trên đoạn nối hai điểm khả thi $x$ và $y$, cũng khả thi. Vì $\|\\|z - x\\|_2 \le R|_2 = R/2 < R$, điểm $z$ nằm trong lân cận của $x$.
 2. **Hàm mục tiêu lồi**, nên $f_0(z) \le (1 - \theta) f_0(x) + \theta f_0(y)$. Vì $f_0(y) < f_0(x)$ và $\theta > 0$, vế phải nhỏ hơn hẳn $f_0(x)$.
 
 Vậy $z$ là một điểm khả thi trong lân cận của $x$ với $f_0(z) < f_0(x)$, trái với giả thiết $x$ là cực tiểu cục bộ. Không thể có $y$ như vậy, và $x$ là cực tiểu toàn cục. $\square$
@@ -84,7 +84,7 @@ Mọi phương pháp tối ưu lặp, từ phương pháp gradient tới phươn
 
 <details><summary>Xem lời giải thích</summary>
 
-Chọn khoảng cách đúng $R$ vẫn hoàn toàn hợp lệ, vì định nghĩa cực tiểu cục bộ ở đây sử dụng điều kiện $\|z - x\|_2 \le R$ (bao gồm cả biên). Việc chọn $R/2$ là một kỹ thuật chặt chẽ nhằm bảo đảm $z$ nằm hẳn bên trong hình cầu mở của lân cận, tránh phụ thuộc vào việc định nghĩa dùng bất đẳng thức ngặt hay không. Trái lại, việc chọn ngay $z = y$ sẽ không mang lại kết quả: Điểm $y$ nằm ngoài lân cận bán kính $R$, do đó $f_0(y) < f_0(x)$ không hề mâu thuẫn với tính tối ưu cục bộ tại $x$. Toàn bộ vẻ đẹp và sức mạnh của phép chứng minh nằm ở chỗ: Tính lồi **kéo thông tin từ điểm $y$ ở rất xa về một điểm $z$ nằm ngay sát trong lân cận**.
+Chọn khoảng cách đúng $R$ vẫn hoàn toàn hợp lệ, vì định nghĩa cực tiểu cục bộ ở đây sử dụng điều kiện $\|\\|z - x\\|_2 \le R|\\|z - x\\|_2 \le R$ (bao gồm cả biên). Việc chọn $R/2$ là một kỹ thuật chặt chẽ nhằm bảo đảm $z$ nằm hẳn bên trong hình cầu mở của lân cận, tránh phụ thuộc vào việc định nghĩa dùng bất đẳng thức ngặt hay không. Trái lại, việc chọn ngay $z = y$ sẽ không mang lại kết quả: Điểm $y$ nằm ngoài lân cận bán kính $R$, do đó $f_0(y) < f_0(x)$ không hề mâu thuẫn với tính tối ưu cục bộ tại $x$. Toàn bộ vẻ đẹp và sức mạnh của phép chứng minh nằm ở chỗ: Tính lồi **kéo thông tin từ điểm $y$ ở rất xa về một điểm $z$ nằm ngay sát trong lân cận**.
 
 </details>
 

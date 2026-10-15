@@ -312,7 +312,7 @@ $$
 \begin{aligned}
 \frac{U(t)}{U_0} &= e^{-4{,}6} \\
 &\approx 0{,}010, \\
-\frac{U_{\mathrm{tỏa}}}{U_0} &= 1-e^{-4{,}6} \\
+\frac{U_{\mathrm{diss}}}{U_0} &= 1-e^{-4{,}6} \\
 &\approx 0{,}990.
 \end{aligned}
 $$
@@ -326,7 +326,7 @@ $$
 \begin{aligned}
 U_0 &= \frac12LI_0^2 \\
 &\approx 4{,}5\times10^{-5}\,\mathrm J, \\
-U_{\mathrm{tỏa}} &\approx 0{,}990U_0 \\
+U_{\mathrm{diss}} &\approx 0{,}990U_0 \\
 &\approx 4{,}4\times10^{-5}\,\mathrm J, \\
 t &= 2{,}3\tau \\
 &\approx 0{,}90\,\mathrm{ms}.

@@ -7,7 +7,7 @@ next: false
 
 # Nón đối ngẫu
 
-Nón đối ngẫu của tập K là $K^* = \{y : y^T x \ge 0 \text{ với mọi } x \in K\}$, gồm các vector tạo góc không quá $90^\circ$ với mọi phần tử của K. Nó luôn là một nón lồi đóng, kể cả khi K không lồi.
+Nón đối ngẫu của tập K là $K^* = \{y : y^T x \ge 0, \, \forall x \in K\}$, gồm các vector tạo góc không quá $90^\circ$ với mọi phần tử của K. Nó luôn là một nón lồi đóng, kể cả khi K không lồi.
 
 <WikiUsage />
 

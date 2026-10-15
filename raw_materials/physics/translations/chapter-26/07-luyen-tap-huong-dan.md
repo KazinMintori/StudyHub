@@ -252,7 +252,7 @@ Trong mạch ở Hình 26.10a, đảo pin $4\,\mathrm V$ sao cho cực dương n
 
 $$
 \begin{aligned}
-\mathcal E_{\mathrm{tổng}} &= 12\,\mathrm V+4\,\mathrm V \\
+\mathcal E_{\mathrm{tot}} &= 12\,\mathrm V+4\,\mathrm V \\
 &= 16\,\mathrm V.
 \end{aligned}
 $$
@@ -261,7 +261,7 @@ Tổng điện trở của vòng:
 
 $$
 \begin{aligned}
-R_{\mathrm{tổng}} &= 2+3+4+7 \\
+R_{\mathrm{tot}} &= 2+3+4+7 \\
 &= 2\,\Omega+3\,\Omega+4\,\Omega+7\,\Omega \\
 &= 16\,\Omega.
 \end{aligned}
@@ -271,7 +271,7 @@ Vì vậy dòng điện là:
 
 $$
 \begin{aligned}
-I &= \frac{\mathcal E_{\mathrm{tổng}}}{R_{\mathrm{tổng}}} \\
+I &= \frac{\mathcal E_{\mathrm{tot}}}{R_{\mathrm{tot}}} \\
 &= 1{,}00\,\mathrm A.
 \end{aligned}
 $$

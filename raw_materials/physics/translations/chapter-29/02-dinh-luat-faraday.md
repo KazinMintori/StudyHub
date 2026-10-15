@@ -42,7 +42,7 @@ Nếu cuộn có $N$ vòng giống nhau và từ thông qua mỗi vòng biến t
 
 $$
 \begin{aligned}
-\mathcal E_{\mathrm{tổng}} &= \mathcal E_1+\mathcal E_2+\dots+\mathcal E_N \\
+\mathcal E_{\mathrm{tot}} &= \mathcal E_1+\mathcal E_2+\dots+\mathcal E_N \\
 &= -N\frac{d\Phi_B}{dt}.
 \end{aligned}
 $$
@@ -203,16 +203,16 @@ $$
 Công suất điện chuyển thành nhiệt trong mạch là:
 
 $$
-P_{\mathrm{nhiệt}} = I^2R = \frac{B^2L^2v^2}{R}.
+P_{\mathrm{th}} = I^2R = \frac{B^2L^2v^2}{R}.
 $$
 
 Lực từ có độ lớn $F=ILB=B^2L^2v/R$ và hướng sang trái, ngược với thanh đang đi sang phải. Người kéo phải tác dụng lực cùng chiều chuyển động, nên:
 
 $$
 \begin{aligned}
-P_{\mathrm{ngoài}} &= Fv \\
+P_{\mathrm{ext}} &= Fv \\
 &= \frac{B^2L^2v^2}{R} \\
-&= P_{\mathrm{nhiệt}}.
+&= P_{\mathrm{th}}.
 \end{aligned}
 $$
 

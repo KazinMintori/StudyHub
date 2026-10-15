@@ -275,7 +275,7 @@ Nhờ biểu diễn số học nhị phân, ta có hai công thức tính toán 
 
 $$
 \begin{aligned}
-n_{\text{thỏa}} &= \sum_{i=1}^n \mathbf{1}_{\{x_i \in E\}} \\
+n_{\mathrm{match}} &= \sum_{i=1}^n \mathbf{1}_{\{x_i \in E\}} \\
 &= \mathbf{1}_{\{x_1 \in E\}} + \mathbf{1}_{\{x_2 \in E\}} + \dots + \mathbf{1}_{\{x_n \in E\}}
 \end{aligned}
 $$

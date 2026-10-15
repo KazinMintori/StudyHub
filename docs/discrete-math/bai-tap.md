@@ -61,7 +61,7 @@ $$
 
 ### Bài 2.1: Quan hệ tương đương và Lớp tương đương
 Xét tập hợp các số nguyên $\mathbb{Z}$. Định nghĩa quan hệ hai ngôi $R$ trên $\mathbb{Z}$ như sau:
-$$a \, R \, b \iff a \equiv b \pmod 5 \quad (a - b \text{ chia hết cho } 5)$$
+$$a \, R \, b \iff a \equiv b \pmod 5 \quad (5 \mid (a - b))$$
 
 1. Chứng minh rằng $R$ là một quan hệ tương đương (thỏa mãn 3 tính chất: Phản xạ, đối xứng và bắc cầu).
 2. Xác định các lớp tương đương rời nhau phân hoạch tập $\mathbb{Z}$. Chỉ ra các phần tử tiêu biểu.
@@ -91,7 +91,7 @@ $$
 
 ### Bài 3.1: Giải hệ thức truy hồi tuyến tính thuần nhất
 Cho dãy số $(a_n)$ thỏa mãn hệ thức truy hồi tuyến tính cấp 2:
-$$a_n = 5a_{n-1} - 6a_{n-2} \quad \text{với mọi } n \ge 2$$
+$$a_n = 5a_{n-1} - 6a_{n-2}, \quad \forall n \ge 2$$
 với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 
 1. Viết phương trình đặc trưng của hệ thức truy hồi.

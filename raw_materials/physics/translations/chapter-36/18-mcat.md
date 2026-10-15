@@ -90,7 +90,7 @@ Chọn (a). Tỉ số hai khoảng mặt mạng là:
 
 $$
 \begin{aligned}
-\frac{d_{\rm đáy}}{d_{\rm trên}}&=\frac{\sin37^\circ}{\sin41^\circ}\\
+\frac{d_{\mathrm{bot}}}{d_{\mathrm{top}}}&=\frac{\sin37^\circ}{\sin41^\circ}\\
 &=0{,}917318.
 \end{aligned}
 $$

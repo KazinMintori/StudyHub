@@ -91,7 +91,7 @@ Khi đó
 $$
 \begin{aligned}
 N &= \frac{\mu}{IA} \\
-&\approx 1{,}38\times10^4\text{ vòng}.
+&\approx 1{,}38\times10^4\text{ turns}.
 \end{aligned}
 $$
 
@@ -141,7 +141,7 @@ $$
 
 $$
 \begin{aligned}
-m_{\mathrm{tải}} &= \frac{1{,}00-0{,}171}{9{,}80} \\
+m_{\mathrm{load}} &= \frac{1{,}00-0{,}171}{9{,}80} \\
 &= 0{,}0846\,\mathrm{kg}.
 \end{aligned}
 $$
@@ -730,7 +730,7 @@ Hình P27.77 là đồ thị $E^2$ theo $V$. (a) Giải thích vì sao các đi�
 **Hướng đi:**
 - Bộ chọn vận tốc thỏa $qE=qvB$, còn năng lượng gia tốc cho $qV=mv^2/2$.
 - Khử $v$ để liên hệ $E^2$ với $V$. Hệ số góc cho $m$.
-- Dùng $V_{\mathrm{bản}}=Ed$ ở câu (c), rồi năng lượng gia tốc ở câu (d).
+- Dùng $V_{\mathrm{plate}}=Ed$ ở câu (c), rồi năng lượng gia tốc ở câu (d).
 
 **Lời giải.** Từ hai điều kiện:
 
@@ -753,7 +753,7 @@ $$
 
 $$
 \begin{aligned}
-V_{\mathrm{bản}} &= Ed \\
+V_{\mathrm{plate}} &= Ed \\
 &= (2{,}00\times10^5) \times(6{,}00\times10^{-3}) \\
 &= 1{,}20\times10^3\,\mathrm{V}.
 \end{aligned}

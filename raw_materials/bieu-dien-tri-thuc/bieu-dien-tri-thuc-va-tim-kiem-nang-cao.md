@@ -195,8 +195,8 @@ Gọi $C^*$ là chi phí tối ưu thật. Giả sử A\* mở rộng đỉnh đ
 
 $$
 \begin{aligned}
-    f(n) &= g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}\\
-    f(A) &= g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
+    f(n) &= g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \\qquad (\text{since } h \text{ is admissible})\\
+    f(A) &= g(A) \le g(B) \le f(B) \\qquad (\text{since } h(B)=0 \text{ at goal, } g(A)=C^* \le g(B))
 \end{aligned}
 $$
 
@@ -299,7 +299,7 @@ $$
 $$
 h(n) \le c(n,a,n') + h(n')
 $$
-và $h(\text{đích}) = 0$.
+và $h(\mathrm{goal}) = 0$.
 
 **Quan hệ:** *Nhất quán $\Rightarrow$ Chấp nhận được* (chiều ngược lại không đúng). Vì consistent nên $f(n) = g(n)+h(n)$ **không bao giờ giảm** dọc theo một đường đi — đây chính là lý do A\* trên **đồ thị** (có tập đóng, không mở rộng lại) chỉ tối ưu khi $h$ nhất quán.
 
@@ -446,9 +446,9 @@ Hai người chơi cờ ca-rô: Bạn (MAX) luôn muốn điểm số cao nhất
 $$
 \text{Minimax}(s) =
 \begin{cases}
-\text{Utility}(s) & \text{nếu } s \text{ là trạng thái kết thúc} \\
-\max_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MAX} \\
-\min_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{nếu đến lượt MIN}
+\text{Utility}(s) & s \in \text{Terminal} \\
+\max_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{Player}(s) = \text{MAX} \\
+\min_{a \in Actions(s)} \text{Minimax}(\text{Result}(s,a)) & \text{Player}(s) = \text{MIN}
 \end{cases}
 $$
 
@@ -485,7 +485,7 @@ flowchart TD
 **Tính ngược từ đáy lên:**
 - $C_1 = \max(3,5) = 5$; $\quad C_2 = \max(6,9) = 9$; $\quad B_1 = \min(5,9) = 5$
 - $C_3 = \max(1,2) = 2$; $\quad C_4 = \max(0,-1) = 0$; $\quad B_2 = \min(2,0) = 0$
-- $\text{Gốc} = \max(B_1, B_2) = \max(5, 0) = \mathbf{5}$ → chọn nhánh **B1**
+- $\text{Root} = \max(B_1, B_2) = \max(5, 0) = \mathbf{5}$ → chọn nhánh **B1**
 
 ### 5.2 Code C++
 

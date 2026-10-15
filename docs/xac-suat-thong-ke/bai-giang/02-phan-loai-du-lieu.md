@@ -227,7 +227,7 @@ Trong một bức ảnh màu tiêu chuẩn:
 - Nếu bức ảnh có kích thước $1520 \times 1012$ điểm ảnh, dữ liệu thực tế lưu trữ trong máy tính là một mảng ba chiều gồm:
 
 $$
-1520 \times 1012 \times 3 = 4{,}614{,}720 \text{ giá trị số nguyên.}
+1520 \times 1012 \times 3 = 4{,}614{,}720 \text{ integers.}
 $$
 
 ### 6.2. Ảnh thang xám (Grayscale)
@@ -250,7 +250,7 @@ Nếu chuyển đổi bức ảnh trên sang dạng ảnh thang xám, mỗi đi�
 Số lượng giá trị cần lưu trữ cho bức ảnh thang xám đầy đủ là:
 
 $$
-1520 \times 1012 \times 1 = 1{,}538{,}240 \text{ giá trị.}
+1520 \times 1012 \times 1 = 1{,}538{,}240 \text{ values.}
 $$
 
 ### 6.3. Đưa dữ liệu hình ảnh vào một Data Frame
@@ -402,14 +402,14 @@ Phân tích cấu trúc Data Frame:
 3. **Số lượng cột**:
    - Số lượng điểm ảnh của mỗi bức ảnh là:
      $$
-     64 \times 64 = 4096 \text{ điểm ảnh.}
+     64 \times 64 = 4096 \text{ pixels.}
      $$
      Mỗi điểm ảnh tương ứng với một biến số đo cường độ sáng (từ $\text{pixel}_1$ đến $\text{pixel}_{4096}$).
    - Thông tin vĩ độ tâm ảnh: $1$ biến số.
    - Phân loại mật độ rừng: $1$ biến số.
    - Tổng số cột của Data Frame là:
      $$
-     4096 + 1 + 1 = 4098 \text{ cột.}
+     4096 + 1 + 1 = 4098 \text{ columns.}
      $$
    - Kích thước hoàn chỉnh của Data Frame là $500 \times 4098$.
 4. **Phân loại các biến số**:

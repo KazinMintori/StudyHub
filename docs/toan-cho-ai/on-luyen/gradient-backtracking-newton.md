@@ -133,7 +133,7 @@ $$
 Nếu mỗi trục có $m$ lựa chọn, tổng số điểm là tích
 
 $$
-\underbrace{m\cdot m\cdots m}_{n\text{ thừa số}}=m^n.
+\underbrace{m\cdot m\cdots m}_{n\text{ factors}}=m^n.
 $$
 
 Chỉ hai lựa chọn trên mỗi trục đã tạo $2^{64}$ điểm khi có 64 chiều và $2^{100}$ điểm khi có 100 chiều. Giá trị chính xác lần lượt là 18446744073709551616 và 1267650600228229401496703205376. Đây là sự bùng nổ số tổ hợp theo số chiều mà hình lưới trên bảng minh họa. Các phương pháp dùng đạo hàm khai thác cấu trúc cục bộ để tránh liệt kê toàn bộ lưới.

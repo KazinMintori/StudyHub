@@ -37,7 +37,7 @@ Với hai vòng nối tiếp có cùng từ thông, cộng hai suất điện đ
 
 $$
 \begin{aligned}
-&\mathcal E_{\mathrm{tổng}}
+&\mathcal E_{\mathrm{tot}}
 =\mathcal E_1+\mathcal E_2+\dots+\mathcal E_N\\
 &\quad=-N\frac{d\Phi_B}{dt}.
 \end{aligned}

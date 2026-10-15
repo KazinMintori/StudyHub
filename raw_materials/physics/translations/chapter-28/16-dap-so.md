@@ -88,7 +88,7 @@ Các bảng sau liệt kê đáp số theo từng tiểu mục. Bài 28.57 là b
 | 28.69 | (a) Bên dưới: $B=\mu_0nI/2$ theo $-x$. (b) bên trên: $B=\mu_0nI/2$ theo $+x$. |
 | 28.71 | (a) Dòng bao $Q_1\omega_1/(2\pi)$. (b) $B=\mu_0Q_1\omega_1/(2\pi H)$ theo $+z$. (c) $\tau=\mu B\sin\theta$ với mômen từ đĩa đã cho trong đề. (d) $L=MR_2^2\omega_2/2$. |
 | 28.73 | (a) Với $x=(2,4,6,8,10)\,\mathrm{cm}$, các tích $Bx$ là 8,12, 10,00, 10,86, 11,28 và 11,60, tính bằng $10^{-6}\,\mathrm{T\,m}$, không cố định. (b) đồ thị $x$ theo $1/B$ gần tuyến tính. (c) $I=64{,}9\,\mathrm A$, $R=1{,}19\,\mathrm{cm}$. |
-| 28.75 | (a) $\rho=nq$. (b) $\sigma=n^{2/3}q$. (c) $B=\mu_0nqvR/2$ theo $\hat\phi$. (d) $dI_{\mathrm{mặt}}=n^{2/3}qvR\,d\phi$. (e) lực dải: $dF=dI_{\mathrm{mặt}}LB$. (f) $p_{\mathrm{ép}}=\mu_0n^{5/3}q^2v^2R/2$. (g) $1{,}9\times10^{-5}\,\mathrm{Pa}$. |
+| 28.75 | (a) $\rho=nq$. (b) $\sigma=n^{2/3}q$. (c) $B=\mu_0nqvR/2$ theo $\hat\phi$. (d) $dI_{\mathrm{face}}=n^{2/3}qvR\,d\phi$. (e) lực dải: $dF=dI_{\mathrm{face}}LB$. (f) $p_{\mathrm{comp}}=\mu_0n^{5/3}q^2v^2R/2$. (g) $1{,}9\times10^{-5}\,\mathrm{Pa}$. |
 | 28.77 | (a) $dI=(Q\omega/4\pi)\sin\theta\,d\theta$. (b) $d\mu=(Q\omega R^2/4)\sin^3\theta\,d\theta$. (c) $\mu=Q\omega R^2/3$ theo $+z$. (d) $L=2MR^2\omega/3$. (e) $\gamma=Q/(2M)$. (f) $g=1$. |
 | 28.79 | (a) $v_0=\mu_0Q_0^2/(4\pi\lambda RCd)$. (b) mỗi dây dâng $h=v_0^2/(2g)$. |
 

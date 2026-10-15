@@ -1022,7 +1022,7 @@ $$
 Giả sử ta thay đổi cả độ tự cảm và điện dung theo cùng một thừa số tỉ lệ dương $k$, nghĩa là
 
 $$
-L' = k L \quad \text{và} \quad C' = k C.
+L' = k L \quad \text{and} \quad C' = k C.
 $$
 
 Tần số góc cộng hưởng mới của mạch sẽ là

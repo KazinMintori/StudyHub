@@ -221,7 +221,7 @@ $$
 Giả sử do nhầm lẫn nhập liệu hoặc hiện tượng cực đoan, giá trị $6$ bị thay thế bằng $-200$. Số trung bình mới sẽ trở thành:
 
 $$
-\bar{x}_{\text{mới}} = \frac{93 - 6 + (-200)}{11} = \frac{-113}{11} \approx -10.27.
+\bar{x}_{\mathrm{new}} = \frac{93 - 6 + (-200)}{11} = \frac{-113}{11} \approx -10.27.
 $$
 
 Chỉ vì một giá trị ngoại lai duy nhất, số trung bình đã lao dốc xuống $-10.27$, một con số hoàn toàn không còn đại diện cho bất kỳ giá trị nào trong số $10$ quan sát còn lại!
@@ -382,8 +382,8 @@ Dấu trị tuyệt đối $|x_i - \bar{x}|$ giữ cho các độ lệch luôn d
 
 ::: exercise Bài tập 1: Quyết định dịch vụ giao đồ ăn và ý nghĩa của độ phân tán
 Tại khu đô thị đại học, có hai ứng dụng giao đồ ăn mới cùng hoạt động là Oski Eats và Cal Cravings. Một sinh viên thống kê thu thập thời gian giao hàng thực tế của hai ứng dụng qua $100$ đơn hàng và ghi nhận các tham số sau:
-- **Oski Eats**: Thời gian giao hàng trung bình là $\bar{x}_1 = 29\text{ phút}$, với độ lệch chuẩn $s_1 = 1.5\text{ phút}$. Dữ liệu phân bố đối xứng và dao động trong khoảng từ $26$ đến $32$ phút.
-- **Cal Cravings**: Thời gian giao hàng trung bình là $\bar{x}_2 = 27\text{ phút}$, với độ lệch chuẩn $s_2 = 12.0\text{ phút}$. Dữ liệu phân bố lệch phải và dao động từ $10$ phút đến tận $65$ phút.
+- **Oski Eats**: Thời gian giao hàng trung bình là $\bar{x}_1 = 29\text{ min}$, với độ lệch chuẩn $s_1 = 1.5\text{ min}$. Dữ liệu phân bố đối xứng và dao động trong khoảng từ $26$ đến $32$ phút.
+- **Cal Cravings**: Thời gian giao hàng trung bình là $\bar{x}_2 = 27\text{ min}$, với độ lệch chuẩn $s_2 = 12.0\text{ min}$. Dữ liệu phân bố lệch phải và dao động từ $10$ phút đến tận $65$ phút.
 
 Hãy trả lời các câu hỏi sau:
 1. Nếu chỉ nhìn vào số trung bình, người tiêu dùng sẽ chọn dịch vụ nào?
@@ -398,12 +398,12 @@ Hãy trả lời các câu hỏi sau:
 
 ::: solution Lời giải chi tiết Bài tập 1
 1. **Lựa chọn theo số trung bình**:
-   - Nếu chỉ nhìn vào số trung bình, người tiêu dùng sẽ chọn **Cal Cravings** vì $\bar{x}_2 = 27\text{ phút} < \bar{x}_1 = 29\text{ phút}$ (nhanh hơn trung bình 2 phút).
+   - Nếu chỉ nhìn vào số trung bình, người tiêu dùng sẽ chọn **Cal Cravings** vì $\bar{x}_2 = 27\text{ min} < \bar{x}_1 = 29\text{ min}$ (nhanh hơn trung bình 2 phút).
 
 2. **Quyết định khi có giới hạn thời gian 35 phút**:
    - Ta bắt buộc phải chọn **Oski Eats**.
-   - Căn cứ: Oski Eats có độ phân tán cực nhỏ ($s_1 = 1.5\text{ phút}$, tối đa chỉ $32\text{ phút}$). Do đó thời gian giao hàng được bảo đảm gần như chắc chắn sẽ hoàn tất trước mốc $35$ phút.
-   - Ngược lại, Cal Cravings có độ biến thiên rất lớn ($s_2 = 12\text{ phút}$, kéo dài tới $65\text{ phút}$). Khoảng thời gian $35$ phút chỉ cách số trung bình $27$ phút một khoảng $8\text{ phút} < 1 \times s_2$. Xác suất đơn hàng đến sau $35$ phút là rất cao, dẫn tới rủi ro bị trễ giờ thi.
+   - Căn cứ: Oski Eats có độ phân tán cực nhỏ ($s_1 = 1.5\text{ min}$, tối đa chỉ $32\text{ min}$). Do đó thời gian giao hàng được bảo đảm gần như chắc chắn sẽ hoàn tất trước mốc $35$ phút.
+   - Ngược lại, Cal Cravings có độ biến thiên rất lớn ($s_2 = 12\text{ min}$, kéo dài tới $65\text{ min}$). Khoảng thời gian $35$ phút chỉ cách số trung bình $27$ phút một khoảng $8\text{ min} < 1 \times s_2$. Xác suất đơn hàng đến sau $35$ phút là rất cao, dẫn tới rủi ro bị trễ giờ thi.
    - Bài học: Độ phân tán đo lường **mức độ tin cậy và khả năng dự báo** của một quá trình thực tế.
 
 3. **Khi nào nên chọn Cal Cravings**:
@@ -420,7 +420,7 @@ y = (12, 15, 16, 18, 20, 22, 25, 28, 30).
 $$
 
 1. Hãy tính số trung bình $\bar{y}$, trung vị $M$, và khoảng tứ phân vị $\text{IQR}$ của tập dữ liệu này.
-2. Giả sử phát sinh một giao dịch sai sót hệ thống khiến giá trị cuối cùng $30$ bị ghi nhầm thành $3000$. Hãy tính lại các giá trị $\bar{y}_{\text{mới}}$, $M_{\text{mới}}$ và $\text{IQR}_{\text{mới}}$.
+2. Giả sử phát sinh một giao dịch sai sót hệ thống khiến giá trị cuối cùng $30$ bị ghi nhầm thành $3000$. Hãy tính lại các giá trị $\bar{y}_{\mathrm{new}}$, $M_{\mathrm{new}}$ và $\mathrm{IQR}_{\mathrm{new}}$.
 3. So sánh mức độ biến động phần trăm của từng đại lượng thống kê và rút ra kết luận về tính bền vững (robustness).
 :::
 
@@ -449,10 +449,10 @@ $$
 2. **Dữ liệu sau khi có ngoại lai ($30 \to 3000$)**:
    - Dãy số mới: $(12, 15, 16, 18, 20, 22, 25, 28, 3000)$.
    - Tổng mới: $\sum y_i = 186 - 30 + 3000 = 3156$.
-   - Số trung bình mới: $\bar{y}_{\text{mới}} = 3156 / 9 \approx 350.67$.
-   - Số trung vị mới: Phần tử thứ $5$ vẫn là $M_{\text{mới}} = 20$.
+   - Số trung bình mới: $\bar{y}_{\mathrm{new}} = 3156 / 9 \approx 350.67$.
+   - Số trung vị mới: Phần tử thứ $5$ vẫn là $M_{\mathrm{new}} = 20$.
    - Tứ phân vị mới: Nửa dưới giữ nguyên nên $Q_1 = 15.5$, nửa trên gồm $(22, 25, 28, 3000)$ cho $Q_3 = 26.5$.
-   - Khoảng tứ phân vị mới: $\text{IQR}_{\text{mới}} = 26.5 - 15.5 = 11.0$.
+   - Khoảng tứ phân vị mới: $\mathrm{IQR}_{\mathrm{new}} = 26.5 - 15.5 = 11.0$.
 3. **So sánh mức độ biến động**:
    - Số trung bình: Tăng từ $20.67$ lên $350.67$ (tăng gần $1600\%$).
    - Số trung vị và IQR: Biến động đúng $0\%$ (hoàn toàn không đổi).
@@ -462,9 +462,9 @@ $$
 ---
 
 ::: exercise Bài tập 3: Đọc hiểu phân phối hai đỉnh (Bimodal Distribution)
-Một bác sĩ nghiên cứu thời gian nằm viện (tính theo ngày) của $200$ bệnh nhân điều trị nội trú tại một khoa cấp cứu. Khi vẽ biểu đồ Histogram và Density Plot, đồ thị xuất hiện hai đỉnh nhô cao rõ rệt: Đỉnh thứ nhất ở mốc $2.5\text{ ngày}$ và đỉnh thứ hai ở mốc $14.0\text{ ngày}$.
+Một bác sĩ nghiên cứu thời gian nằm viện (tính theo ngày) của $200$ bệnh nhân điều trị nội trú tại một khoa cấp cứu. Khi vẽ biểu đồ Histogram và Density Plot, đồ thị xuất hiện hai đỉnh nhô cao rõ rệt: Đỉnh thứ nhất ở mốc $2.5\text{ days}$ và đỉnh thứ hai ở mốc $14.0\text{ days}$.
 1. Phân phối này thuộc loại đơn mốt, hai mốt hay đa mốt?
-2. Bác sĩ tính ra thời gian nằm viện trung bình là $\bar{x} = 8.2\text{ ngày}$. Con số $8.2\text{ ngày}$ này có phản ánh tốt thời gian nằm viện của một bệnh nhân điển hình hay không? Tại sao?
+2. Bác sĩ tính ra thời gian nằm viện trung bình là $\bar{x} = 8.2\text{ days}$. Con số $8.2\text{ days}$ này có phản ánh tốt thời gian nằm viện của một bệnh nhân điển hình hay không? Tại sao?
 3. Hãy đề xuất một giả thuyết lâm sàng để giải thích nguyên nhân xuất hiện hai đỉnh phân phối trên.
 :::
 
@@ -477,7 +477,7 @@ Một bác sĩ nghiên cứu thời gian nằm viện (tính theo ngày) của $
 1. **Phân loại**:
    - Phân phối có hai đỉnh rõ rệt nên đây là **phân phối hai mốt (Bimodal Distribution)**.
 
-2. **Đánh giá giá trị trung bình $\bar{x} = 8.2\text{ ngày}$**:
+2. **Đánh giá giá trị trung bình $\bar{x} = 8.2\text{ days}$**:
    - Con số $8.2$ ngày **hoàn toàn không phản ánh một bệnh nhân điển hình**.
    - Lý do: Mốc $8.2$ ngày rơi đúng vào “vùng thung lũng” trũng thấp nằm giữa hai đỉnh. Trên thực tế, hầu như rất ít bệnh nhân xuất viện vào khoảng ngày thứ 8. Đa số bệnh nhân hoặc là ra viện rất sớm (quanh 2–3 ngày), hoặc phải ở lại điều trị rất lâu (quanh 14 ngày). Việc dùng một con số trung bình duy nhất cho phân phối hai đỉnh sẽ che giấu đi sự thật lâm sàng.
 

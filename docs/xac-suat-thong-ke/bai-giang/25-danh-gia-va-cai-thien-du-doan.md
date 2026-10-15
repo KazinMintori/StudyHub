@@ -263,14 +263,14 @@ $$\ln(y) = 2.30 + 0.08 x$$
   $$
 \begin{aligned}
 \ln(\hat{y}) &= 2.30 + 0.08(5) = 2.30 + 0.40 = 2.70 \\
-\hat{y} &= e^{2.70} \approx 14.88 \text{ triệu VNĐ/tháng}
+\hat{y} &= e^{2.70} \approx 14.88 \text{ million VND/month}
 \end{aligned}
 $$
 - Với người có $x^* = 10$ năm kinh nghiệm:
   $$
 \begin{aligned}
 \ln(\hat{y}) &= 2.30 + 0.08(10) = 2.30 + 0.80 = 3.10 \\
-\hat{y} &= e^{3.10} \approx 22.20 \text{ triệu VNĐ/tháng}
+\hat{y} &= e^{3.10} \approx 22.20 \text{ million VND/month}
 \end{aligned}
 $$
 

@@ -120,7 +120,7 @@ $$
 \begin{aligned}
 \frac{\mathrm dN}{\mathrm dt} &= \frac{2L}{\lambda}\left[\frac{\mathrm dn}{\mathrm dT}+(n-1)\alpha\right] \times\frac{\mathrm dT}{\mathrm dt} \\
 &= 13{,}956\,\mathrm{min^{-1}} \\
-&\approx 14{,}0\ \text{vân/phút}.
+&\approx 14{,}0\ \text{ fringes/min}.
 \end{aligned}
 $$
 

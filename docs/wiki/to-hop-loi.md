@@ -24,7 +24,7 @@ $$\sum_{i=1}^k \lambda_i = \lambda_1 + \lambda_2 + \cdots + \lambda_k = 1 \quad 
 Về mặt bản chất, đây là một **phép bình quân gia quyền** hay **pha trộn tỉ lệ phần trăm** (tổng bằng 100% và không có thành phần âm):
 
 $$
-\underbrace{\sum_{i=1}^k \lambda_i x_i}_{\text{điểm pha trộn}} \quad \text{với} \quad \underbrace{\sum_{i=1}^k \lambda_i = 1}_{\text{tổng tỉ lệ bằng } 1} \quad \text{và} \quad \underbrace{\lambda_i \ge 0}_{\text{trọng số không âm}}
+z = \sum_{i=1}^k \lambda_i x_i, \qquad \sum_{i=1}^k \lambda_i = 1, \qquad \lambda_i \ge 0 \quad (\forall i = 1, \dots, k)
 $$
 
 Chỉ số $i$ chạy từ 1 đến $k$, qua các điểm đã chọn. Khi phạm vi ngữ cảnh đã hoàn toàn rõ ràng, tài liệu có thể viết vắn tắt là $\sum_i \lambda_i = 1$ (hoặc dùng ký hiệu $\theta_i$ thay cho $\lambda_i$). 

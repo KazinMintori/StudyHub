@@ -30,7 +30,7 @@ $$
 Điện trở tải R nhìn từ sơ cấp:
 
 $$
-R_{\mathrm{nhìn}}=R(N_1/N_2)^2.
+R_{\mathrm{eq}}=R(N_1/N_2)^2.
 $$
 
 Máy thực có tổn hao điện trở cuộn, từ trễ và dòng Fu-cô. Lõi từ mềm và lá cách điện giảm tổn hao. Dòng một chiều không đổi không duy trì từ thông biến thiên, nên không tạo tác dụng biến áp ổn định theo cơ chế này.

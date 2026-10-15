@@ -112,7 +112,7 @@ Biến giả là một biến số nhị phân nhận giá trị $1$ nếu quan 
 
 Hệ thống thống kê tự động chọn một mức làm **Mức cơ sở (Reference level)** và tạo biến giả cho các mức còn lại. Vì chữ cái `east` đứng trước `west` trong bảng chữ cái tiếng Anh, R mặc định chọn `east` làm mức cơ sở và tạo ra biến giả `geowest`:
 
-$$D_{\text{west}} = \begin{cases} 1 & \text{nếu nhà hàng ở bờ Tây (west)} \\ 0 & \text{nếu nhà hàng ở bờ Đông (east)} \end{cases}$$
+$$D_{\text{west}} = \begin{cases} 1 & \text{if West} \\ 0 & \text{if East} \end{cases}$$
 
 Khớp mô hình hồi quy trong R:
 
@@ -307,10 +307,10 @@ $$
 
 3. **So sánh chênh lệch thời gian ngủ khi kiểm soát khối lượng cơ thể**:
    - Giữa loài ăn cỏ và loài ăn thịt:
-     $$\hat{y}_{\text{herbi}} - \hat{y}_{\text{carni}} = -1.80 \text{ giờ}$$
+     $$\hat{y}_{\text{herbi}} - \hat{y}_{\text{carni}} = -1.80 \text{ h}$$
      Khi có cùng khối lượng cơ thể, loài ăn cỏ dự kiến ngủ **ít hơn $1.80$ giờ mỗi ngày** so với loài ăn thịt.
    - Giữa loài ăn cỏ và loài ăn tạp:
-     $$\hat{y}_{\text{herbi}} - \hat{y}_{\text{omni}} = 13.4 - 15.8 = -2.40 \text{ giờ}$$
+     $$\hat{y}_{\text{herbi}} - \hat{y}_{\text{omni}} = 13.4 - 15.8 = -2.40 \text{ h}$$
      Khi có cùng khối lượng cơ thể, loài ăn cỏ dự kiến ngủ **ít hơn $2.40$ giờ mỗi ngày** so với loài ăn tạp.
 :::
 
@@ -352,7 +352,7 @@ Một chuyên gia kinh tế lao động nghiên cứu mức lương khởi đi�
 \begin{aligned}
 \hat{y} &= 6.0 + 1.1(3.5) + 3.2(4) \\
 &= 6.0 + 3.85 + 12.8 \\
-&= 22.65 \text{ triệu đồng/tháng}
+&= 22.65 \text{ million VND/month}
 \end{aligned}
 $$
    - Tính phần dư:
@@ -360,7 +360,7 @@ $$
 \begin{aligned}
 \hat{e} &= y - \hat{y} \\
 &= 28.0 - 22.65 \\
-&= +5.35 \text{ triệu đồng/tháng}
+&= +5.35 \text{ million VND/month}
 \end{aligned}
 $$
    - **Kết luận**: Phần dư mang dấu dương ($\hat{e} = +5.35 > 0$), chứng tỏ sinh viên này có mức lương thực tế **vượt trội hơn hẳn so với mức kỳ vọng chung** của mô hình đối với một người có cùng mức GPA và số lượng dự án tương đương.
@@ -399,7 +399,7 @@ $$\hat{y} = 1.2 + 0.85 x_1 + 0.04 x_2 + 2.10 D_{\text{mall}}$$
 \begin{aligned}
 \hat{y}_A &= 1.2 + 0.85(2) + 0.04(50) + 2.10(1) \\
 &= 1.2 + 1.70 + 2.00 + 2.10 \\
-&= 7.00 \text{ trăm triệu đồng} = 700 \text{ triệu đồng/tháng}
+&= 7.00 \text{ hundred million VND} = 700 \text{ million VND/month}
 \end{aligned}
 $$
 
@@ -409,7 +409,7 @@ $$
    - Để $\Delta \hat{y} = 1.7$ trăm triệu đồng:
      $$\Delta x_1 = \frac{\Delta \hat{y}}{b_1} = \frac{1.7}{0.85} = 2.0$$
    - Vì đơn vị của $x_1$ là $100\text{ m}^2$, mức tăng diện tích cần thiết là:
-     $$\Delta \text{Diện tích} = 2.0 \times 100\text{ m}^2 = 200\text{ m}^2$$
+     $$\Delta \mathrm{Area} = 2.0 \times 100\text{ m}^2 = 200\text{ m}^2$$
    - **Kết luận**: Cửa hàng cần mở rộng thêm đúng $200\text{ m}^2$ diện tích sàn kinh doanh.
 :::
 

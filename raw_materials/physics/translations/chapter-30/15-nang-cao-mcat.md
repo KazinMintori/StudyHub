@@ -23,8 +23,8 @@ Một ống dây dài có $N_1$ vòng, bán kính $b$, bao quanh ống dây đ�
 
 $$
 \begin{aligned}
-B_{\mathrm{trong}} &= \frac{\mu_0I}{\ell}(N_1-N_2), \\
-\Phi_2 &= B_{\mathrm{trong}}\pi a^2.
+B_{\mathrm{in}} &= \frac{\mu_0I}{\ell}(N_1-N_2), \\
+\Phi_2 &= B_{\mathrm{in}}\pi a^2.
 \end{aligned}
 $$
 
@@ -32,7 +32,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi_1 &= B_{\mathrm{trong}}\pi a^2 +\frac{\mu_0N_1I}{\ell}\pi(b^2-a^2) \\
+\Phi_1 &= B_{\mathrm{in}}\pi a^2 +\frac{\mu_0N_1I}{\ell}\pi(b^2-a^2) \\
 &= \frac{\mu_0I\pi}{\ell}(N_1b^2-N_2a^2).
 \end{aligned}
 $$
@@ -62,9 +62,9 @@ Cũng có thể suy từ $LI=N_1\Phi_1-N_2\Phi_2$. Dấu trừ xuất hiện vì
 
 $$
 \begin{aligned}
-U_a &= \frac{B_{\mathrm{trong}}^2}{2\mu_0}\pi a^2\ell, \\
-U_b &= \frac{B_{\mathrm{vành}}^2}{2\mu_0}\pi(b^2-a^2)\ell, \\
-B_{\mathrm{vành}} &= \frac{\mu_0N_1I}{\ell}, \\
+U_a &= \frac{B_{\mathrm{in}}^2}{2\mu_0}\pi a^2\ell, \\
+U_b &= \frac{B_{\mathrm{ring}}^2}{2\mu_0}\pi(b^2-a^2)\ell, \\
+B_{\mathrm{ring}} &= \frac{\mu_0N_1I}{\ell}, \\
 L_- &= \frac{2(U_a+U_b)}{I^2}.
 \end{aligned}
 $$

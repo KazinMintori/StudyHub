@@ -215,9 +215,9 @@ $$
 \begin{aligned}
 I &= 24.0/(18.0+1.30) \\
 &= 1.24\,\mathrm A, \\
-P_{\mathrm{hóa}} &= \mathcal EI=29.8\,\mathrm W, \\
+P_{\mathrm{chem}} &= \mathcal EI=29.8\,\mathrm W, \\
 P_r &= I^2r=2.01\,\mathrm W, \\
-P_{\mathrm{ra}} &= \mathcal EI-I^2r=27.8\,\mathrm W, \\
+P_{\mathrm{out}} &= \mathcal EI-I^2r=27.8\,\mathrm W, \\
 P_R &= I^2R=27.8\,\mathrm W.
 \end{aligned}
 $$
@@ -241,7 +241,7 @@ Nối pin có suất điện động 9,00 V với điện trở 12,0 Ω thì cô
 $$
 \begin{aligned}
 I &= \sqrt{6.54/12.0}=0.738\,\mathrm A, \\
-P_{\mathrm{ra}} &= 6.54\,\mathrm W, \\
+P_{\mathrm{out}} &= 6.54\,\mathrm W, \\
 V_{ab} &= IR \\
 &= 8.86\,\mathrm V, \\
 r &= (9.00-V_{ab})/I \\
@@ -271,7 +271,7 @@ r &= (12.0-11.52)/0.720 \\
 &= 0.667\,\Omega, \\
 P_R &= I^2R \\
 &= 8.29\,\mathrm W, \\
-P_{\mathrm{hóa}} &= \mathcal EI \\
+P_{\mathrm{chem}} &= \mathcal EI \\
 &= 8.64\,\mathrm W, \\
 P_r &= I^2r \\
 &= 0.346\,\mathrm W.

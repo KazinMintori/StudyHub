@@ -125,7 +125,7 @@ Với tổng số $n = 366$ đô thị:
 - Chữ số 1: Quan sát được $O_1 = 125$ lần, với kỳ vọng $E_1 = 366 \times 0.301 = 110.17$ lần $\implies \frac{(125 - 110.17)^2}{110.17} \approx 1.998$.
 - Lặp lại cho toàn bộ 9 chữ số và cộng dồn lại:
   $$
-  \chi^2_{\text{quan sát}} \approx 28.08
+  \chi^2_{\mathrm{obs}} \approx 28.08
   $$
 
 Khoảng cách tính được là $28.08$. Nhưng con số $28.08$ này là lớn hay nhỏ? Liệu may rủi ngẫu nhiên có thể sinh ra một khoảng cách lớn như $28.08$ hay không?
@@ -147,7 +147,7 @@ Bức tranh phân phối Null chỉ rõ:
 - Trong toàn bộ $5{,}000$ lần rút ngẫu nhiên, **không có bất kỳ lần nào** khoảng cách $\chi^2$ đạt tới con số $28.08$.
 - Do đó:
   $$
-  p\text{-value} = P\left(\chi^2 \ge 28.08 \;\middle|\; H_0 \text{ đúng}\right) \approx 0
+  p\text{-value} = P\left(\chi^2 \ge 28.08 \;\middle|\; H_0 \text{ is true}\right) \approx 0
   $$
 
 Dữ liệu phiếu bầu của Karroubi **hoàn toàn không tương thích với Luật Benford**.
@@ -310,9 +310,9 @@ Gọi $p$ là xác suất một người lựa chọn tên "Kiki" cho hình sắ
 Dưới $H_0$, số sinh viên chọn Kiki $X$ tuân theo phân phối nhị thức $\text{Binomial}(n = 80, p = 0.5)$:
 $$
 \begin{aligned}
-E(X) &= n p = 80 \times 0.5 = 40 \text{ người} \\
+E(X) &= n p = 80 \times 0.5 = 40 \text{ people} \\
 \text{Var}(X) &= n p (1 - p) = 80 \times 0.5 \times 0.5 = 20 \\
-\text{SD}(X) &= \sqrt{20} \approx 4.472 \text{ người}
+\text{SD}(X) &= \sqrt{20} \approx 4.472 \text{ people}
 \end{aligned}
 $$
 

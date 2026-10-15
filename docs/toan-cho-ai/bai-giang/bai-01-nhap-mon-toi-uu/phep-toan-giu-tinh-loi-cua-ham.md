@@ -45,7 +45,7 @@ Lập luận bằng epigraph không phụ thuộc vào số lượng hàm hữu 
 **Mọi hàm lồi đều là supremum của các hàm affine**: Tính chất trên gợi mở một phương pháp chứng minh tính lồi tổng quát: Biểu diễn hàm số dưới dạng supremum của một họ hàm affine. Thực tế, trừ một số trường hợp suy biến biên, mọi hàm lồi đều có thể biểu diễn theo cách này. Cụ thể, với hàm lồi $f$ có $\operatorname{dom} f = \mathbb{R}^n$:
 
 $$
-f(x) = \sup\{\, g(x) : g \text{ affine},\ g(z) \le f(z) \text{ với mọi } z \,\}.
+f(x) = \sup\{\, g(x) : g \text{ affine},\ g(z) \le f(z) , \quad \forall z \,\}.
 $$
 
 Lý do: Tại mỗi $x$, epigraph lồi có một siêu phẳng tựa tại $(x, f(x))$, và siêu phẳng đó không thể thẳng đứng, nên nó là đồ thị của một hàm affine nằm dưới $f$ và chạm $f$ tại $x$. Khi $f$ khả vi, đó chính là tiếp tuyến. Hàm lồi là **bao trên** của các tiếp tuyến của nó.

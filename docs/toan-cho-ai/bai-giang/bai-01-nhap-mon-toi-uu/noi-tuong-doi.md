@@ -47,7 +47,7 @@ Mô phỏng dưới đây trực quan hóa hiện tượng này. Quả cầu m�
 
 > **Định nghĩa.** **Nội tương đối** của tập $C$, ký hiệu $\operatorname{relint} C$, là tập hợp
 > $$
-> \operatorname{relint} C = \{x \in C \mid B(x, r) \cap \operatorname{aff} C \subseteq C \text{ với một bán kính } r > 0 \text{ nào đó}\} .
+> \operatorname{relint} C = \{x \in C \mid \exists r > 0 : B(x, r) \cap \operatorname{aff} C \subseteq C\} .
 > $$
 
 So với định nghĩa điểm trong thông thường, điểm khác biệt duy nhất nằm ở chỗ quả cầu $B(x, r)$ được thay bằng phần giao $B(x, r) \cap \operatorname{aff} C$. Quay lại hình ảnh tờ giấy trong $\mathbb{R}^3$, phần giao này chính là một hình tròn phẳng nằm trọn trên mặt phẳng của tờ giấy. Bài toán kiểm tra điểm trong trở thành: "Liệu có tồn tại một hình tròn phẳng nhỏ quanh $x$ nằm trọn trên tờ giấy hay không?". Cách đặt vấn đề này đem lại câu trả lời hoàn toàn ăn khớp với trực giác ban đầu.

@@ -170,8 +170,8 @@ Xét một mẫu số liệu giá gồm $n$ quan sát: $x_1, x_2, \dots, x_n$.
   $$\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$$
 - **Giá trị trung vị (*Median*)**: Là giá trị nằm ở vị trí chính giữa khi mẫu số liệu đã được sắp xếp tăng dần:
   $$\operatorname{Median} = \begin{cases} 
-  x_{((n+1)/2)} & \text{khi } n \text{ lẻ} \\
-  \frac{x_{(n/2)} + x_{(n/2 + 1)}}{2} & \text{khi } n \text{ chẵn}
+  x_{((n+1)/2)} & \text{if } n \text{ is odd} \\
+  \frac{x_{(n/2)} + x_{(n/2 + 1)}}{2} & \text{if } n \text{ is even}
   \end{cases}$$
 
 ### Bản chất sư phạm: Sức đề kháng trước ngoại lai (*Robustness*)

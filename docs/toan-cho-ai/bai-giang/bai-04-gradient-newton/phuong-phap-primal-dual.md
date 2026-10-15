@@ -304,9 +304,9 @@ với $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) =
    Hệ điều kiện KKT bị xáo trộn:
    $$
 \begin{aligned}
-c - s + A^T \nu &= 0 \quad (\text{Khả thi đối ngẫu}), \\
-X S \mathbf{1} &= \eta \mathbf{1} \quad (\text{Bù trừ trung tâm}), \\
-A x &= b \quad (\text{Khả thi nguyên thủy}), \\
+c - s + A^T \nu &= 0 \quad (\text{Dual feasible}), \\
+X S \mathbf{1} &= \eta \mathbf{1} \quad (\text{Centering}), \\
+A x &= b \quad (\text{Primal feasible}), \\
 &x > 0, \quad s > 0,
 \end{aligned}
 $$
@@ -408,7 +408,7 @@ với $P \in \mathbb{S}_+^n$ và $G \in \mathbb{R}^{m \times n}$.
 
    Bây giờ, giả sử $v^T H_{\text{eff}} v = 0$. Vì cả hai số hạng đều không âm, đẳng thức xảy ra khi và chỉ khi:
    $$
-   v^T P v = 0 \quad \text{và} \quad w^T D w = 0.
+   v^T P v = 0 , \quad w^T D w = 0.
    $$
 
    - Do $P \succeq 0$, điều kiện $v^T P v = 0$ kéo theo $P v = 0$, tức là $v \in \ker(P)$.

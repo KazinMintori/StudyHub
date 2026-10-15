@@ -83,7 +83,7 @@ Vế phải chính là **độ phân kỳ Kullback–Leibler** $D_{\mathrm{kl}}(
 Khi $u = p$ và $v = q$ là hai phân phối xác suất rời rạc, tức $\sum_{i=1}^n p_i = \sum_{i=1}^n q_i = 1$, các số hạng $-p_i + q_i$ triệt tiêu lẫn nhau khi lấy tổng, dẫn tới công thức quen thuộc $D_{\mathrm{kl}}(p, q) = \sum_{i=1}^n p_i \log (p_i / q_i)$. Biểu diễn lại theo entropy chéo:
 
 $$
-\underbrace{-\sum_{i=1}^n p_i \log q_i}_{\text{entropy chéo}} = \underbrace{-\sum_{i=1}^n p_i \log p_i}_{\text{entropy}} + D_{\mathrm{kl}}(p, q).
+\underbrace{-\sum_{i=1}^n p_i \log q_i}_{\text{cross-entropy}} = \underbrace{-\sum_{i=1}^n p_i \log p_i}_{\text{entropy}} + D_{\mathrm{kl}}(p, q).
 $$
 
 Như vậy, với dữ liệu có phân phối thực tế $p$ cố định, entropy chéo luôn lớn hơn hoặc bằng entropy của chính phân phối đó, và đạt cực tiểu khi và chỉ khi $q = p$. Đó là lý do hàm mất mát entropy chéo có xu hướng kéo phân phối dự đoán của mô hình tiệm cận về phân phối thực nghiệm của dữ liệu. Với hai phân phối $p = (0.5, 0.3, 0.2)$ và $q = (0.4, 0.4, 0.2)$, entropy chéo xấp xỉ $1.0549$, entropy xấp xỉ $1.0297$, và hiệu số giữa chúng bằng đúng $D_{\mathrm{kl}}(p, q) \approx 0.0253$.

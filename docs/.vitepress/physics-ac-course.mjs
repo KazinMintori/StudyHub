@@ -64,7 +64,7 @@ export const acSlides=[
   'Hai cuộn cùng nhận từ thông biến thiên trong lõi.',
   'Tỉ số điện áp bằng tỉ số số vòng khi bỏ qua sụt áp và từ thông rò.',
   'Với tải thuần trở và dòng từ hóa được bỏ qua, tăng áp đi kèm giảm dòng.'
- ],display('\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{nhìn}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}'))
+ ],display('\\begin{aligned}&\\frac{V_2}{V_1}=\\frac{N_2}{N_1}\\\\&V_1I_1=V_2I_2\\\\&R_{\\mathrm{eq}}=R\\left(\\frac{N_1}{N_2}\\right)^2.\\end{aligned}'))
 ]
 export const acCheatsheet={title:'Cheatsheet: Dòng điện xoay chiều',lead:'Định nghĩa, tính chất và công thức của đại lượng hình sin, điện kháng, trở kháng, công suất, cộng hưởng và máy biến áp.',sections:[
  {id:'phasor-rms',title:'Đại lượng hình sin và hiệu dụng',items:[
@@ -98,6 +98,6 @@ export const acCheatsheet={title:'Cheatsheet: Dòng điện xoay chiều',lead:'
  {id:'transformer',title:'Máy biến áp lý tưởng',items:[
   {name:'Faraday và tỉ số vòng',formula:display('\\begin{aligned}&\\mathcal E_1=-N_1\\frac{d\\Phi_B}{dt}\\\\&\\mathcal E_2=-N_2\\frac{d\\Phi_B}{dt}\\\\&V_2/V_1=N_2/N_1.\\end{aligned}'),description:'Cùng từ thông mỗi vòng, bỏ qua điện trở cuộn và từ thông rò. Điện áp cùng là biên độ hoặc cùng là hiệu dụng.',variables:['$N_1,N_2$: Số vòng sơ cấp, thứ cấp (không thứ nguyên).','$\\Phi_B$: Từ thông mỗi vòng ($\\mathrm{Wb}$).','$\\mathcal E_1,\\mathcal E_2$: Suất điện động ($\\mathrm V$).']},
   {name:'Dòng và công suất',formula:display('\\begin{aligned}&V_1I_1=V_2I_2\\\\&I_2/I_1=N_1/N_2.\\end{aligned}'),description:'Máy không tổn hao, bỏ qua dòng từ hóa không tải, tải thuần trở. Tăng áp giảm dòng, tần số không đổi.',variables:['$V_1,V_2$: Điện áp sơ cấp, thứ cấp ($\\mathrm V$).','$I_1,I_2$: Dòng sơ cấp, thứ cấp ($\\mathrm A$).']},
-  {name:'Điện trở nhìn từ sơ cấp',formula:display('\\begin{aligned}&R_{\\mathrm{nhìn}}=V_1/I_1\\\\&\\quad=R(N_1/N_2)^2.\\end{aligned}'),description:'R là điện trở tải ở thứ cấp, máy lý tưởng.',variables:['$R_{\\mathrm{nhìn}}$: Điện trở tải quy đổi về sơ cấp ($\\Omega$).']}
+  {name:'Điện trở nhìn từ sơ cấp',formula:display('\\begin{aligned}&R_{\\mathrm{eq}}=V_1/I_1\\\\&\\quad=R(N_1/N_2)^2.\\end{aligned}'),description:'R là điện trở tải ở thứ cấp, máy lý tưởng.',variables:['$R_{\\mathrm{eq}}$: Điện trở tải quy đổi về sơ cấp ($\\Omega$).']}
  ]}
 ]}

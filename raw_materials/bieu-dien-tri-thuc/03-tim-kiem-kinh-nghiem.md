@@ -157,8 +157,8 @@ Gọi $C^*$ là chi phí tối ưu thật. Giả sử A\* mở rộng đỉnh đ
 
 $$
 \begin{aligned}
-    f(n) &= g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \qquad \text{(vì } h \text{ chấp nhận được)}\\
-    f(A) &= g(A) \le g(B) \le f(B) \qquad \text{(vì } h(B)=0 \text{ tại đích, } g(A)=C^* \le g(B))
+    f(n) &= g(n) + h(n) \le g(n) + h^*(n) = g^*(A) = f(A) \\qquad (\text{since } h \text{ is admissible})\\
+    f(A) &= g(A) \le g(B) \le f(B) \\qquad (\text{since } h(B)=0 \text{ at goal, } g(A)=C^* \le g(B))
 \end{aligned}
 $$
 
@@ -249,7 +249,7 @@ vector<int> aStarSearch(int start, int goal,
 
 **Admissible:** với mọi đỉnh $n$: $\quad 0 \le h(n) \le h^*(n)$ ($h^*(n)$ = chi phí thật rẻ nhất từ $n$ tới đích).
 
-**Consistent:** với mọi đỉnh $n$, đỉnh con $n'$ qua hành động chi phí $c(n,a,n')$: $\quad h(n) \le c(n,a,n') + h(n')$, và $h(\text{đích})=0$.
+**Consistent:** với mọi đỉnh $n$, đỉnh con $n'$ qua hành động chi phí $c(n,a,n')$: $\quad h(n) \le c(n,a,n') + h(n')$, và $h(\mathrm{goal})=0$.
 
 **Quan hệ:** *Nhất quán $\Rightarrow$ Chấp nhận được* (chiều ngược lại không đúng). Vì consistent nên $f(n)=g(n)+h(n)$ **không bao giờ giảm** dọc theo một đường đi — đây là lý do A\* trên **đồ thị** (có tập đóng, không mở lại) chỉ tối ưu khi $h$ nhất quán.
 

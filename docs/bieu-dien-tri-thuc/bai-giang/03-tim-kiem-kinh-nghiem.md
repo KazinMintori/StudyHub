@@ -47,7 +47,7 @@ flowchart TD
 
 Lời giải tối ưu thực tế đã biết:
 $$
-S \to A \to B \to C \to G, \quad \text{Tổng chi phí thực tế } C^* = 1 + 2 + 1 + 3 = 7
+S \to A \to B \to C \to G, \quad \text{Cost } C^* = 1 + 2 + 1 + 3 = 7
 $$
 
 Trong Chương 2:
@@ -96,7 +96,7 @@ flowchart TD
 
 Kết quả đường đi do Greedy tìm được:
 $$
-S \to B \to C \to G, \quad \text{Tổng chi phí} = 4 + 1 + 3 = 8 > 7
+S \to B \to C \to G, \quad \text{Cost} = 4 + 1 + 3 = 8 > 7
 $$
 
 Đỉnh $A$ có $h(A) = 4$ không bao giờ được chạm tới, dù đoạn đường qua $A$ có chi phí thực tế chỉ là $1+2 = 3$, rẻ hơn nhiều so với đi thẳng sang $B$ tốn $4$.
@@ -142,9 +142,9 @@ A\* sử dụng hàng đợi ưu tiên sắp xếp tăng dần theo giá trị $
 | Lượt | Đỉnh lấy ra | $g$ | $h$ | $f=g+h$ | Hàng đợi ưu tiên sau khi cập nhật | Tập Closed |
 |:---:|:---:|:---:|:---:|:---:|:---|:---|
 | 1 | **S** | $0$ | $5$ | $5$ | $A(g=1, f=5)$, $B(g=4, f=7)$ | $\{S\}$ |
-| 2 | **A** | $1$ | $4$ | $5$ | Đến $B$ qua $A$: $g=1+2=3, f=3+3=6$ (tốt hơn $f=7$ cũ).<br/>Đến $C$ qua $A$: $g=1+5=6, f=6+2=8$.<br/>Hàng đợi: $B(g=3, f=6)$, $B_{cũ}(f=7)$, $C(g=6, f=8)$ | $\{S, A\}$ |
-| 3 | **B** | $3$ | $3$ | $6$ | Đến $C$ qua $B$: $g=3+1=4, f=4+2=6$ (tốt hơn $f=8$ cũ).<br/>Hàng đợi: $C(g=4, f=6)$, $B_{cũ}(f=7)$, $C_{cũ}(f=8)$ | $\{S, A, B\}$ |
-| 4 | **C** | $4$ | $2$ | $6$ | Đến $G$ qua $C$: $g=4+3=7, f=7+0=7$.<br/>Hàng đợi: $G(g=7, f=7)$, $B_{cũ}(f=7)$, $C_{cũ}(f=8)$ | $\{S, A, B, C\}$ |
+| 2 | **A** | $1$ | $4$ | $5$ | Đến $B$ qua $A$: $g=1+2=3, f=3+3=6$ (tốt hơn $f=7$ cũ).<br/>Đến $C$ qua $A$: $g=1+5=6, f=6+2=8$.<br/>Hàng đợi: $B(g=3, f=6)$, $B_{\mathrm{old}}(f=7)$, $C(g=6, f=8)$ | $\{S, A\}$ |
+| 3 | **B** | $3$ | $3$ | $6$ | Đến $C$ qua $B$: $g=3+1=4, f=4+2=6$ (tốt hơn $f=8$ cũ).<br/>Hàng đợi: $C(g=4, f=6)$, $B_{\mathrm{old}}(f=7)$, $C_{\mathrm{old}}(f=8)$ | $\{S, A, B\}$ |
+| 4 | **C** | $4$ | $2$ | $6$ | Đến $G$ qua $C$: $g=4+3=7, f=7+0=7$.<br/>Hàng đợi: $G(g=7, f=7)$, $B_{\mathrm{old}}(f=7)$, $C_{\mathrm{old}}(f=8)$ | $\{S, A, B, C\}$ |
 | 5 | **G** | $7$ | $0$ | $7$ | Lấy $G$ ra khỏi hàng đợi $\to$ **DỪNG TÌM KIẾM** | $\{S, A, B, C, G\}$ |
 
 ```mermaid
@@ -176,7 +176,7 @@ Một hàm Heuristic $h(n)$ được gọi là **chấp nhận được (admissi
 $$
 0 \le h(n) \le h^*(n), \quad \forall n
 $$
-Trong đó $h^*(n)$ là chi phí thực tế rẻ nhất từ nút $n$ về đích. Tại đích, bắt buộc $h(\text{đích}) = 0$.
+Trong đó $h^*(n)$ là chi phí thực tế rẻ nhất từ nút $n$ về đích. Tại đích, bắt buộc $h(\mathrm{goal}) = 0$.
 
 > **Ẩn dụ sư phạm:** Hàm heuristic chấp nhận được giống như một người dẫn đường luôn giữ thái độ **lạc quan có căn cứ**. Người đó có thể ước lượng con đường phía trước ngắn hơn thực tế một chút, nhưng tuyệt đối không bao giờ dọa bạn rằng con đường đó dài hơn sự thật. Chính sự lạc quan này ngăn cản việc một đường đi tiềm năng tốt bị bỏ rơi.
 
@@ -233,7 +233,7 @@ Hệ quả toán học then chốt:
 #### Cạm bẫy thực tế: Khi heuristic chấp nhận được nhưng KHÔNG nhất quán
 Xét ví dụ: Nếu ta cố tình sửa $h(A) = 6$ (vẫn chấp nhận được vì chi phí thật từ $A$ tới $G$ là $6$), nhưng tại cạnh $A \to B$ có chi phí $2$:
 $$
-h(A) = 6 > 2 + h(B) = 2 + 3 = 5 \quad (\text{Vi phạm tính nhất quán!})
+h(A) = 6 > 2 + h(B) = 2 + 3 = 5 \quad (\text{Inconsistent})
 $$
 Nếu cài đặt đồ thị thông thường (đã vào Closed là bỏ qua), đỉnh $B$ sẽ bị mở rộng từ $S$ trước với $g=4, f=7$. Sau đó khi $A$ mở rộng và tìm ra đường tới $B$ tốt hơn với $g=3$, vì $B$ đã nằm trong Closed nên đường đi ưu việt này bị vứt bỏ! A\* sẽ trả về chi phí $8$ thay vì $7$.
 

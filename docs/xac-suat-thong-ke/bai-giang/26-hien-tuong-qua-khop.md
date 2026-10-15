@@ -88,8 +88,8 @@ Nguyên nhân toán học nằm ở bài toán tối ưu bình phương bé nh�
 
 $$
 \begin{aligned}
-\text{RSS}_{\text{train}}(\text{Bậc } d+1) &\le \text{RSS}_{\text{train}}(\text{Bậc } d) \\
-&\implies R^2_{\text{train}}(\text{Bậc } d+1) \ge R^2_{\text{train}}(\text{Bậc } d)
+\text{RSS}_{\text{train}}(\text{Degree } d+1) &\le \text{RSS}_{\text{train}}(\text{Degree } d) \\
+&\implies R^2_{\text{train}}(\text{Degree } d+1) \ge R^2_{\text{train}}(\text{Degree } d)
 \end{aligned}
 $$
 
@@ -155,7 +155,7 @@ $$
 $$
 
 ### Căn bậc hai sai số toàn phương trung bình (RMSE)
-Vì MSE tính theo bình phương sai số, đơn vị đo lường của nó bị lũy thừa hai (chẳng hạn như $\text{điểm}^2$ hoặc $\text{USD}^2$), gây khó khăn cho việc giải thích trực giác.
+Vì MSE tính theo bình phương sai số, đơn vị đo lường của nó bị lũy thừa hai (chẳng hạn như $\text{points}^2$ hoặc $\text{USD}^2$), gây khó khăn cho việc giải thích trực giác.
 
 Do đó, người ta sử dụng **RMSE (Root Mean Squared Error)** bằng cách lấy căn bậc hai của MSE:
 
@@ -163,7 +163,7 @@ $$
 \text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
 $$
 
-Tương tự như mối quan hệ giữa độ lệch chuẩn và phương sai, RMSE đưa sai số về cùng đơn vị đo lường tự nhiên của biến mục tiêu ban đầu. Ví dụ: Nếu $\text{RMSE} = 3.5\text{ điểm}$, ta có thể hiểu trực giác rằng các dự báo của mô hình trung bình lệch khoảng $3.5$ điểm so với kết quả thi thực tế.
+Tương tự như mối quan hệ giữa độ lệch chuẩn và phương sai, RMSE đưa sai số về cùng đơn vị đo lường tự nhiên của biến mục tiêu ban đầu. Ví dụ: Nếu $\text{RMSE} = 3.5\text{ points}$, ta có thể hiểu trực giác rằng các dự báo của mô hình trung bình lệch khoảng $3.5$ điểm so với kết quả thi thực tế.
 
 ---
 
@@ -176,7 +176,7 @@ Sai số dự báo kỳ vọng trên một điểm dữ liệu mới $x_0$ với
 $$
 \begin{aligned}
 \mathbb{E} &\left[(y_0 - \hat{f}(x_0))^2\right] \\
-&= \underbrace{\left[\text{Bias}(\hat{f}(x_0))\right]^2}_{\text{Độ chệch bình phương}} + \underbrace{\text{Var}(\hat{f}(x_0))}_{\text{Phương sai mô hình}} + \underbrace{\sigma^2}_{\text{Nhiễu không thể giảm}}
+&= \underbrace{\left[\text{Bias}(\hat{f}(x_0))\right]^2}_{\text{Squared Bias}} + \underbrace{\text{Var}(\hat{f}(x_0))}_{\text{Model Variance}} + \underbrace{\sigma^2}_{\text{Irreducible Noise}}
 \end{aligned}
 $$
 
@@ -351,7 +351,7 @@ Tổng bình phương phần dư và sai số trung bình tập huấn luyện:
 $$
 \begin{aligned}
 \text{RSS}_{\text{train}} &= 0.04 + 0.36 + 0.36 + 0.04 = 0.80 \\
-\text{MSE}_{\text{train}}(\text{Mô hình 1}) &= \frac{0.80}{4} = 0.20
+\text{MSE}_{\text{train}}(\text{Model 1}) &= \frac{0.80}{4} = 0.20
 \end{aligned}
 $$
 
@@ -363,7 +363,7 @@ Với **Mô hình 2** ($\hat{y} = -\frac{2}{3}x^3 + 5x^2 - \frac{28}{3}x + 8$):
 
 Vì đa thức bậc 3 đi qua chính xác cả 4 điểm dữ liệu huấn luyện, ta có:
 $$
-\text{MSE}_{\text{train}}(\text{Mô hình 2}) = 0.00
+\text{MSE}_{\text{train}}(\text{Model 2}) = 0.00
 $$
 
 Trên tập huấn luyện, Mô hình 2 khớp hoàn hảo tuyệt đối ($100\%$).
@@ -381,8 +381,8 @@ Với **Mô hình 1** ($\hat{y} = 1.8x + 1.0$):
 Sai số kiểm thử của Mô hình 1:
 $$
 \begin{aligned}
-\text{MSE}_{\text{test}}(\text{Mô hình 1}) &= \frac{0.01 + 0.01}{2} = 0.01 \\
-\text{RMSE}_{\text{test}}(\text{Mô hình 1}) &= \sqrt{0.01} = 0.10
+\text{MSE}_{\text{test}}(\text{Model 1}) &= \frac{0.01 + 0.01}{2} = 0.01 \\
+\text{RMSE}_{\text{test}}(\text{Model 1}) &= \sqrt{0.01} = 0.10
 \end{aligned}
 $$
 
@@ -401,8 +401,8 @@ Với **Mô hình 2** (Đa thức bậc 3):
 Sai số kiểm thử của Mô hình 2:
 $$
 \begin{aligned}
-\text{MSE}_{\text{test}}(\text{Mô hình 2}) &= \frac{6.25 + 6.25}{2} = 6.25 \\
-\text{RMSE}_{\text{test}}(\text{Mô hình 2}) &= \sqrt{6.25} = 2.50
+\text{MSE}_{\text{test}}(\text{Model 2}) &= \frac{6.25 + 6.25}{2} = 6.25 \\
+\text{RMSE}_{\text{test}}(\text{Model 2}) &= \sqrt{6.25} = 2.50
 \end{aligned}
 $$
 

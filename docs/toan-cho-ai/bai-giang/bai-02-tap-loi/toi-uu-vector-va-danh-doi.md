@@ -28,7 +28,7 @@ với $f_0 : \mathbb{R}^n \to \mathbb{R}^q$ nhận giá trị vector và $K \sub
 Đối tượng trung tâm là **tập các giá trị đạt được**
 
 $$
-\mathcal{O} = \{f_0(x) : X \text{ khả thi}\} \subseteq \mathbb{R}^q .
+\mathcal{O} = \{f_0(x) : x \in \mathcal{X}\} \subseteq \mathbb{R}^q .
 $$
 
 ## 2. Điểm tối ưu và điểm Pareto
@@ -42,7 +42,7 @@ Thường thì $\mathcal{O}$ không có phần tử nhỏ nhất, và ta dùng k
 Cách tiêu chuẩn để tìm điểm Pareto là chọn một vector trọng số $\lambda \succ_{K^*} 0$, tức dương ngặt theo [nón đối ngẫu](../bai-01-nhap-mon-toi-uu/non-doi-ngau.md), và giải bài toán thông thường
 
 $$
-\text{minimize}\quad \lambda^Tf_0(x) \qquad \text{subject to các ràng buộc cũ.}
+\text{minimize}\quad \lambda^Tf_0(x) \qquad \text{subject to original constraints.}
 $$
 
 Mọi nghiệm của bài toán này là một điểm Pareto. Lời chứng minh ngắn: Nếu $x$ không Pareto, có $y$ khả thi với $f_0(y) \preceq_K f_0(x)$ và $f_0(y) \ne f_0(x)$. Khi đó $f_0(x) - f_0(y)$ thuộc $K$ và khác 0, nên $\lambda^T(f_0(x) - f_0(y)) > 0$ vì $\lambda$ dương ngặt theo nón đối ngẫu. Vậy $\lambda^Tf_0(y) < \lambda^Tf_0(x)$, mâu thuẫn với việc $x$ là nghiệm.
@@ -95,7 +95,7 @@ Với $\lambda = (1, 0)$, ta chỉ cực tiểu $\|Ax - b\|_2^2$, bỏ qua $\|x\
 
 </details>
 
-**Câu 2.** Trong mô phỏng, đường tựa $F_1 + \mu F_2 = \text{hằng số}$ chạm đám mây giá trị đạt được đúng tại điểm Pareto, và cả đám mây nằm về một phía của nó. Hãy chứng minh điều này từ định nghĩa của $x(\mu)$.
+**Câu 2.** Trong mô phỏng, đường tựa $F_1 + \mu F_2 = \text{const}$ chạm đám mây giá trị đạt được đúng tại điểm Pareto, và cả đám mây nằm về một phía của nó. Hãy chứng minh điều này từ định nghĩa của $x(\mu)$.
 
 <details><summary>Xem lời giải thích</summary>
 

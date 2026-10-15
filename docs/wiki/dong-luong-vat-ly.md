@@ -13,7 +13,7 @@ next: false
 
 ## Giải thích kỹ thuật
 
-Chọn hệ trước khi phân biệt nội lực với ngoại lực. Quan hệ $\Delta\mathbf P=\int\mathbf F_{\mathrm{ngoài}}dt$ cần xét các thành phần vector trong cùng hệ quán tính. Trong va chạm ngắn, có thể bỏ xung lượng ngoài dù ngoại lực không bằng không từng thời điểm, nếu xung lượng đó nhỏ so với trao đổi giữa các vật.
+Chọn hệ trước khi phân biệt nội lực với ngoại lực. Quan hệ $\Delta\mathbf P=\int\mathbf F_{\mathrm{ext}}dt$ cần xét các thành phần vector trong cùng hệ quán tính. Trong va chạm ngắn, có thể bỏ xung lượng ngoài dù ngoại lực không bằng không từng thời điểm, nếu xung lượng đó nhỏ so với trao đổi giữa các vật.
 
 Ở vận tốc gần tốc độ ánh sáng, dùng $\mathbf p=\gamma m\mathbf v$ thay cho biểu thức Newton. “Momentum” trong tối ưu hóa là một thuật toán khác; đây là đại lượng cơ học.
 

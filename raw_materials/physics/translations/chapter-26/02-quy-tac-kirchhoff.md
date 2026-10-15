@@ -277,19 +277,19 @@ Công suất của suất điện động cấp cho mạch là $P=\mathcal EI$. 
 Công suất do suất điện động của bộ nguồn tạo ra là
 
 $$
-P_{\mathrm{nguồn}}=(12\,\mathrm V)(3\,\mathrm A)=36\,\mathrm W.
+P_{\mathrm{source}}=(12\,\mathrm V)(3\,\mathrm A)=36\,\mathrm W.
 $$
 
 Điện trở trong $r$ của bộ nguồn tỏa nhiệt công suất
 
 $$
-P_{r,\mathrm{nguồn}}=(3\,\mathrm A)^2(2\,\Omega)=18\,\mathrm W.
+P_{r,\mathrm{source}}=(3\,\mathrm A)^2(2\,\Omega)=18\,\mathrm W.
 $$
 
 Vì thế công suất thuần bộ nguồn cấp ra là $36\,\mathrm W-18\,\mathrm W=18\,\mathrm W$. Ta cũng có thể dùng điện áp hai đầu bộ nguồn $V_{ba}=6\,\mathrm V$:
 
 $$
-P_{\mathrm{thuần}}=(6\,\mathrm V)(3\,\mathrm A)=18\,\mathrm W.
+P_{\mathrm{net}}=(6\,\mathrm V)(3\,\mathrm A)=18\,\mathrm W.
 $$
 
 Công suất của suất điện động $\mathcal E$ trong pin đang được nạp là
@@ -307,7 +307,7 @@ $$
 Do đó, tổng công suất nhận vào của pin là $1\,\mathrm W+|-5\,\mathrm W|=6\,\mathrm W$. Trong đó, $5\,\mathrm W$ làm tăng năng lượng lưu trữ của pin và $1\,\mathrm W$ tỏa nhiệt ở điện trở trong. Bóng đèn tỏa nhiệt công suất
 
 $$
-P_{\mathrm{đèn}}=(2\,\mathrm A)^2(3\,\Omega)=12\,\mathrm W.
+P_{\mathrm{lamp}}=(2\,\mathrm A)^2(3\,\Omega)=12\,\mathrm W.
 $$
 
 #### Đánh giá

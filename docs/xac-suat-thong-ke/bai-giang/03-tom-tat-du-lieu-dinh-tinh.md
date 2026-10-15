@@ -116,7 +116,7 @@ Là tỷ lệ các quan sát cùng thỏa mãn đồng thời một tổ hợp m
 ::: example Ví dụ về tỷ lệ đồng thời
 Tỷ lệ cá thể vừa thuộc loài Adelie vừa cư trú trên đảo Biscoe:
 $$
-P(\text{Adelie và Biscoe}) = \frac{44}{333} \approx 0.132 \text{ (tức } 13.2\%).
+P(\text{Adelie} \cap \text{Biscoe}) = \frac{44}{333} \approx 0.132 \\ (13.2\%).
 $$
 :::
 
@@ -126,11 +126,11 @@ Là tỷ lệ các quan sát thuộc về một mức duy nhất của một bi�
 ::: example Ví dụ về tỷ lệ biên
 Tỷ lệ cá thể chim cánh cụt sống tại đảo Biscoe trong toàn bộ nghiên cứu:
 $$
-P(\text{Biscoe}) = \frac{44 + 0 + 119}{333} = \frac{163}{333} \approx 0.489 \text{ (tức } 48.9\%).
+P(\text{Biscoe}) = \frac{44 + 0 + 119}{333} = \frac{163}{333} \approx 0.489 \\ (48.9\%).
 $$
 Tương tự, tỷ lệ biên của loài Adelie là:
 $$
-P(\text{Adelie}) = \frac{44 + 55 + 47}{333} = \frac{146}{333} \approx 0.438 \text{ (tức } 43.8\%).
+P(\text{Adelie}) = \frac{44 + 55 + 47}{333} = \frac{146}{333} \approx 0.438 \\ (43.8\%).
 $$
 :::
 
@@ -140,11 +140,11 @@ Là tỷ lệ các quan sát thuộc về một mức của biến thứ nhất,
 ::: example Ví dụ về tỷ lệ có điều kiện
 Trong số các cá thể chim cánh cụt cư trú tại đảo Biscoe, tỷ lệ thuộc loài Gentoo là:
 $$
-P(\text{Gentoo} \mid \text{Biscoe}) = \frac{119}{163} \approx 0.730 \text{ (tức } 73.0\%).
+P(\text{Gentoo} \mid \text{Biscoe}) = \frac{119}{163} \approx 0.730 \\ (73.0\%).
 $$
 Phép tính này tương đương với việc lấy tỷ lệ đồng thời chia cho tỷ lệ biên:
 $$
-\frac{P(\text{Gentoo và Biscoe})}{P(\text{Biscoe})} = \frac{0.357}{0.489} \approx 0.730.
+\frac{P(\text{Gentoo} \cap \text{Biscoe})}{P(\text{Biscoe})} = \frac{0.357}{0.489} \approx 0.730.
 $$
 :::
 
@@ -164,11 +164,11 @@ Khi quan tâm đến cơ cấu thành phần thay vì số lượng tuyệt đ�
 <div style="display: flex; gap: 16px; margin: 16px 0; justify-content: center; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
     <img src="./img/stat20-03/bar-normalized-by-species.png" alt="Biểu đồ thanh chuẩn hóa theo loài: P(Đảo | Loài)." style="width: 100%; border-radius: 8px;" />
-    <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Chuẩn hóa theo Loài: $P(\text{Đảo} \mid \text{Loài})$.</p>
+    <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Chuẩn hóa theo Loài: $P(\text{Island} \mid \text{Species})$.</p>
   </div>
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
     <img src="./img/stat20-03/bar-normalized-by-island.png" alt="Biểu đồ thanh chuẩn hóa theo đảo: P(Loài | Đảo)." style="width: 100%; border-radius: 8px;" />
-    <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Chuẩn hóa theo Đảo: $P(\text{Loài} \mid \text{Đảo})$.</p>
+    <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Chuẩn hóa theo Đảo: $P(\text{Species} \mid \text{Island})$.</p>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ Biểu đồ này chứa đựng một nghịch lý thị giác dễ gây hiểu
 Nguyên nhân xuất phát từ công thức tính tỷ lệ:
 
 $$
-\text{Tỷ lệ năng lượng tái tạo} = \frac{\text{Sản lượng năng lượng tái tạo}}{\text{Tổng sản lượng năng lượng toàn cầu}}.
+\text{Renewable ratio} = \frac{\text{Renewable production}}{\text{Total global production}}.
 $$
 
 Dù tử số (sản lượng tái tạo) tăng trưởng thực tế, nhưng mẫu số (tổng nhu cầu năng lượng từ nhiên liệu hóa thạch) tăng với tốc độ nhanh hơn rất nhiều. Nếu người đọc chỉ nhìn vào con số phần trăm đang sụt giảm, họ sẽ ngộ nhận sai lầm rằng con người đang sử dụng ít năng lượng tái tạo hơn so với quá khứ.
@@ -306,21 +306,21 @@ Trả lời từng câu hỏi:
    - Đây là một **tỷ lệ biên (Marginal Proportion)** của biến trạng thái tham gia ban nhạc.
    - Phép tính:
      $$
-     P(\text{marching band}) = \frac{24}{60} = 0.40 \text{ (tức } 40.0\%).
+     P(\text{marching band}) = \frac{24}{60} = 0.40 \\ (40.0\%).
      $$
 
 2. **Tỷ lệ sinh viên năm thứ ba trong số những người tham gia ban nhạc**:
    - Đây là một **tỷ lệ có điều kiện (Conditional Proportion)** với biến điều kiện là tham gia ban nhạc.
    - Phép tính:
      $$
-     P(\text{junior} \mid \text{marching band}) = \frac{2}{24} = \frac{1}{12} \approx 0.0833 \text{ (tức } 8.33\%).
+     P(\text{junior} \mid \text{marching band}) = \frac{2}{24} = \frac{1}{12} \approx 0.0833 \\ (8.33\%).
      $$
 
 3. **Tỷ lệ sinh viên năm thứ hai không tham gia ban nhạc trong toàn lớp**:
    - Đây là một **tỷ lệ đồng thời (Joint Proportion)** giữa hai mức: Năm thứ hai và không tham gia ban nhạc.
    - Phép tính:
      $$
-     P(\text{sophomore và no marching band}) = \frac{12}{60} = 0.20 \text{ (tức } 20.0\%).
+     P(\text{sophomore} \cap \text{no marching band}) = \frac{12}{60} = 0.20 \\ (20.0\%).
      $$
 
 4. **Kích thước của Data Frame thô ban đầu**:
@@ -359,7 +359,7 @@ Một viện nghiên cứu xã hội học tiến hành khảo sát $N = 500$ c�
 ::: solution Lời giải chi tiết Bài tập 2
 1. **Lựa chọn biểu đồ**:
    - Ta cần sử dụng **Biểu đồ thanh xếp chồng chuẩn hóa (Normalized Stacked Bar Chart)** và **chuẩn hóa theo biến Khuynh hướng chính trị** (tức đặt biến khuynh hướng chính trị ở trục hoành).
-   - Khi đó, mỗi cột đại diện cho một đảng phái chính trị và có chiều cao $100\%$. Phân đoạn màu đại diện cho tỷ lệ cử tri có bằng đại học: $P(\text{Có bằng ĐH} \mid \text{Đảng Dân chủ})$ và $P(\text{Có bằng ĐH} \mid \text{Đảng Cộng hòa})$. So sánh chiều cao phân đoạn này giữa hai cột sẽ trả lời trực tiếp câu hỏi nghiên cứu.
+   - Khi đó, mỗi cột đại diện cho một đảng phái chính trị và có chiều cao $100\%$. Phân đoạn màu đại diện cho tỷ lệ cử tri có bằng đại học: $P(\text{College degree} \mid \text{Democrat})$ và $P(\text{College degree} \mid \text{Republican})$. So sánh chiều cao phân đoạn này giữa hai cột sẽ trả lời trực tiếp câu hỏi nghiên cứu.
 
 2. **Khả năng xác định nhóm đông nhất**:
    - Không thể xác định được nhóm nào đông nhất nếu chỉ nhìn vào biểu đồ chuẩn hóa này.
@@ -390,7 +390,7 @@ Xét tỷ lệ $P_t = \frac{R_t}{R_t + F_t} = \frac{1}{1 + \frac{F_t}{R_t}}$. Đ
      $$
    - Để tỷ lệ $P_t$ giảm theo thời gian, mẫu số $1 + \frac{F_t}{R_t}$ phải tăng lên, điều này tương đương với:
      $$
-     \frac{F_t}{R_t} \text{ phải là một hàm tăng theo thời gian } t.
+     \frac{F_t}{R_t} \text{ increases with time } t.
      $$
    - Lấy đạo hàm theo thời gian hoặc xét tốc độ tăng trưởng tương đối:
      $$

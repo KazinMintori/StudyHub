@@ -98,7 +98,7 @@ Hình 28.7: Hai dây mang dòng điện bằng nhau nhưng ngược chiều. Đ�
 Xét hai dây thẳng, song song, mỗi dây mang dòng có độ lớn $I$ nhưng ngược chiều. Theo nguyên lý chồng chất, tại một điểm, ta cộng véc-tơ từ trường do dây 1 và dây 2 tạo ra:
 
 $$
-\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2.
+\vec B_{\mathrm{tot}} = \vec B_1+\vec B_2.
 $$
 
 Chọn gốc tọa độ tại trung điểm hai dây, đặt dây 1 tại $x=-d$ và dây 2 tại $x=+d$. Dòng điện ở dây 1 hướng ra khỏi trang giấy, còn dòng ở dây 2 hướng vào trang giấy. Các khoảng cách đến từng dây cùng quy tắc bàn tay phải xác định độ lớn và dấu của thành phần từ trường theo $y$.
@@ -109,7 +109,7 @@ $$
 \begin{aligned}
 \vec B_1 &= -\frac{\mu_0 I}{4\pi d}\,\hat\jmath, \\
 \vec B_2 &= \frac{\mu_0 I}{8\pi d}\,\hat\jmath, \\
-\vec B_{\mathrm{tổng}}(P_1) &= -\frac{\mu_0 I}{8\pi d}\,\hat\jmath.
+\vec B_{\mathrm{tot}}(P_1) &= -\frac{\mu_0 I}{8\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 
@@ -119,7 +119,7 @@ $$
 \begin{aligned}
 \vec B_1 &= \frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
 \vec B_2 &= \frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
-\vec B_{\mathrm{tổng}}(P_2) &= \frac{\mu_0 I}{\pi d}\,\hat\jmath.
+\vec B_{\mathrm{tot}}(P_2) &= \frac{\mu_0 I}{\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 
@@ -129,7 +129,7 @@ $$
 \begin{aligned}
 \vec B_1 &= \frac{\mu_0 I}{6\pi d}\,\hat\jmath, \\
 \vec B_2 &= -\frac{\mu_0 I}{2\pi d}\,\hat\jmath, \\
-\vec B_{\mathrm{tổng}}(P_3) &= -\frac{\mu_0 I}{3\pi d}\,\hat\jmath.
+\vec B_{\mathrm{tot}}(P_3) &= -\frac{\mu_0 I}{3\pi d}\,\hat\jmath.
 \end{aligned}
 $$
 

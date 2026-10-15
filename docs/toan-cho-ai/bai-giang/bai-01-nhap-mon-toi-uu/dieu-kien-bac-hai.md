@@ -14,7 +14,7 @@ Nhưng Hessian còn cho biết nhiều hơn một câu trả lời có hoặc kh
 ## 1. Phát biểu
 
 > **Định lý.** Giả sử $f$ khả vi hai lần, nghĩa là $\operatorname{dom} f$ mở và Hessian $\nabla^2 f$ tồn tại tại mọi điểm của nó. Khi đó $f$ lồi khi và chỉ khi $\operatorname{dom} f$ lồi và
-> $$\nabla^2 f(x) \succeq 0 \quad \text{với mọi } x \in \operatorname{dom} f.$$
+> $$\nabla^2 f(x) \succeq 0 \quad \forall x \in \operatorname{dom} f.$$
 
 Với hàm một biến, điều kiện là $f''(x) \ge 0$ trên một khoảng, tức đạo hàm $f'$ không giảm. Điều kiện này không mới: Nó là tính đơn điệu của gradient ở chủ đề trước, phát biểu lại qua đạo hàm của đạo hàm. Dưới góc nhìn hình học, điều kiện $\nabla^2 f(x) \succeq 0$ phản ánh việc đồ thị hàm số luôn có **độ cong hướng lên** tại $x$. Tương tự, $f$ lõm khi và chỉ khi miền xác định lồi và $\nabla^2 f(x) \preceq 0$ tại mọi điểm.
 
@@ -115,7 +115,7 @@ Ngoài câu trả lời định tính lồi hay không, ma trận Hessian còn c
 **Lồi mạnh**: Ta định nghĩa hàm số $f$ là **lồi mạnh** (strongly convex) trên tập $S$ nếu tồn tại hằng số $m > 0$ sao cho:
 
 $$
-\nabla^2 f(x) \succeq mI \quad \text{với mọi } x \in S .
+\nabla^2 f(x) \succeq mI \quad \forall x \in S .
 $$
 
 Khai triển Taylor bậc hai kèm phần dư khi đó đem lại một hàm chặn dưới tốt hơn hẳn tiếp diện bậc nhất:

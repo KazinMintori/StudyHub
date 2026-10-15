@@ -193,7 +193,7 @@ Chọn (ii).
 
 Giải thích:
 
-Ánh sáng màu lam có bước sóng ngắn hơn ánh sáng màu đỏ ($\lambda_\text{lam} < \lambda_\text{đỏ}$).
+Ánh sáng màu lam có bước sóng ngắn hơn ánh sáng màu đỏ ($\lambda_\text{lam} < \lambda_\mathrm{red}$).
 
 Theo phương trình (35.6), khoảng cách từ vân trung tâm tới vân sáng bậc $m$ là $y_m = R \frac{m\lambda}{d}$, và khoảng vân giữa hai vân sáng liền kề là $\Delta y = \frac{R\lambda}{d}$. Khoảng vân này tỷ lệ thuận với bước sóng $\lambda$.
 

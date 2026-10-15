@@ -65,7 +65,7 @@ Lập bảng số liệu là một cách biểu diễn chính xác, nhưng để
 - Chiều cao của mỗi cột bằng đúng giá trị xác suất $P(X = x)$.
 - **Ý nghĩa diện tích**: Vì bề rộng mỗi cột bằng $1$, nên diện tích của mỗi cột bằng:
 $$
-\text{Diện tích} = \text{Chiều cao} \times \text{Bề rộng} = P(X = x) \times 1 = P(X = x)
+\text{Area} = \text{Height} \times \text{Width} = P(X = x) \times 1 = P(X = x)
 $$
 Tổng diện tích của tất cả các cột trên biểu đồ luôn bằng đúng $1$ (hoặc $100\%$).
 
@@ -159,7 +159,7 @@ Nếu một hành động gồm $n$ bước liên tiếp, trong đó:
 - Bước $n$ có $k_n$ cách thực hiện,
 thì tổng số kết quả khả dĩ của toàn bộ hành động là tích số:
 $$
-\text{Tổng số kết quả} = k_1 \times k_2 \times \dots \times k_n
+\text{Total outcomes} = k_1 \times k_2 \times \dots \times k_n
 $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
@@ -170,11 +170,11 @@ $$
 **Ví dụ**: Xét chiếc hộp chứa 5 chữ cái $\{\fbox{C}, \fbox{R}, \fbox{A}, \fbox{T}, \fbox{E}\}$.
 - Nếu rút 3 chữ cái **có hoàn lại**, mỗi vị trí đều có 5 lựa chọn:
 $$
-5 \times 5 \times 5 = 5^3 = 125 \text{ từ có thể tạo thành}
+5 \times 5 \times 5 = 5^3 = 125 \text{ words}
 $$
 - Nếu rút 3 chữ cái **không hoàn lại** và thứ tự rút có phân biệt: Vị trí đầu có 5 lựa chọn, vị trí hai còn 4, vị trí ba còn 3:
 $$
-5 \times 4 \times 3 = 60 \text{ từ phân biệt}
+5 \times 4 \times 3 = 60 \text{ distinct words}
 $$
 
 ### Chỉnh hợp (Permutations)
@@ -200,7 +200,7 @@ Ký hiệu $\binom{n}{k}$ được đọc là "$n$ chọn $k$" (n choose k).
 
 **Ví dụ**: Số cách chia 5 lá bài từ bộ bài tú lơ khơ 52 lá tiêu chuẩn là:
 $$
-\binom{52}{5} = \frac{52!}{5! \times 47!} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} = 2.598.960 \text{ cách}
+\binom{52}{5} = \frac{52!}{5! \times 47!} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} = 2.598.960 \text{ ways}
 $$
 
 ---
@@ -255,7 +255,7 @@ $$
 Công thức trên được cấu thành từ hai nhân tử mang ý nghĩa xác suất riêng biệt:
 1. **$p^k (1-p)^{n-k}$**: Là xác suất của **một chuỗi cụ thể** gồm đúng $k$ lần thành công ($S$) và $n-k$ lần thất bại ($F$) theo một thứ tự cố định (ví dụ: $k$ lần đầu thành công rồi $n-k$ lần sau thất bại: $SS\dots SFF\dots F$). Do các phép thử độc lập, xác suất của chuỗi cụ thể này bằng tích các xác suất thành phần:
 $$
-\underbrace{p \times p \times \dots \times p}_{k \text{ lần}} \times \underbrace{(1-p) \times (1-p) \times \dots \times (1-p)}_{n-k \text{ lần}} = p^k (1-p)^{n-k}
+\underbrace{p \times p \times \dots \times p}_{k \text{ times}} \times \underbrace{(1-p) \times (1-p) \times \dots \times (1-p)}_{n-k \text{ times}} = p^k (1-p)^{n-k}
 $$
 2. **$\binom{n}{k}$ (Hệ số nhị thức)**: Là **số lượng chuỗi phân biệt** có cùng $k$ lần thành công và $n-k$ lần thất bại. Trong $n$ vị trí của chuỗi, ta có $\binom{n}{k}$ cách chọn ra $k$ vị trí để đặt kết quả thành công.
 
@@ -331,7 +331,7 @@ Trong các cuộc điều tra xã hội học quy mô lớn (chẳng hạn khả
 
 Tuy nhiên, nếu kích thước tổng thể $N$ rất lớn so với cỡ mẫu $n$:
 $$
-\frac{n}{N} \le 0{,}05 \quad (\text{Cỡ mẫu chiếm không quá } 5\% \text{ tổng thể})
+\frac{n}{N} \le 0{,}05 \quad (\text{Sample size } \le 5\\% \text{ population})
 $$
 thì việc rút một vài cá nhân ra khỏi hàng triệu người làm thay đổi tỷ lệ tổng thể ở mức độ vô cùng nhỏ (không đáng kể). Khi đó:
 $$
@@ -504,7 +504,7 @@ $$
 
 Kiểm tra tổng xác suất:
 $$
-0{,}4096 + 0{,}4096 + 0{,}1536 + 0{,}0256 + 0{,}0016 = 1{,}0000 \quad (\text{Thỏa mãn chuẩn hóa})
+0{,}4096 + 0{,}4096 + 0{,}1536 + 0{,}0256 + 0{,}0016 = 1{,}0000 \quad (\text{Normalized})
 $$
 
 Bảng phân phối xác suất:

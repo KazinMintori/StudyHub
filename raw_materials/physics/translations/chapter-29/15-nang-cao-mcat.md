@@ -203,7 +203,7 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{nhiệt}} &= I_{\mathrm{gh}}^2R \\
+P_{\mathrm{th}} &= I_{\mathrm{gh}}^2R \\
 &= \frac{Rm^2g^2\tan^2\phi}{B^2L^2}.
 \end{aligned}
 $$
@@ -288,7 +288,7 @@ $$
 (d) Cơ năng không bảo toàn. Năng lượng mất đi chuyển thành nhiệt:
 
 $$
-\frac{dE_{\mathrm{cơ}}}{dt}=-I^2R.
+\frac{dE_{\mathrm{mech}}}{dt}=-I^2R.
 $$
 
 Nếu kể cả nhiệt trong mạch, tổng năng lượng vẫn bảo toàn.

@@ -12,7 +12,7 @@ description: "Định nghĩa biến ngẫu nhiên, phân loại rời rạc và 
 
 ## 1. Mở đầu: Cầu nối giữa không gian mẫu và trục số thực
 
-Trong các bài học trước, chúng ta đã tiếp cận lý thuyết xác suất thông qua các không gian mẫu $\Omega$ chứa đựng nhiều kết quả mang tính chất định tính: Mặt ngửa hay mặt sấp của đồng xu ($\{H, T\}$), màu sắc của những tấm thẻ trong hộp ($\{\text{Đỏ}, \text{Xanh}\}$), hoặc kết quả của một ca xét nghiệm y khoa ($\{\text{Dương tính}, \text{Âm tính}\}$).
+Trong các bài học trước, chúng ta đã tiếp cận lý thuyết xác suất thông qua các không gian mẫu $\Omega$ chứa đựng nhiều kết quả mang tính chất định tính: Mặt ngửa hay mặt sấp của đồng xu ($\{H, T\}$), màu sắc của những tấm thẻ trong hộp ($\{\text{Red}, \text{Blue}\}$), hoặc kết quả của một ca xét nghiệm y khoa ($\\{\text{Positive}, \text{Negative}\\}$).
 
 Tuy nhiên, trong phân tích dữ liệu hiện đại và suy rộng thống kê, các nhà khoa học không thể dừng lại ở việc liệt kê các nhãn định tính. Chúng ta cần tính toán số lượng, tính trung bình cộng, đo lường độ lệch chuẩn và thiết lập các mô hình dự báo. Để làm được điều đó, ta cần một cơ chế toán học chuyển đổi mọi kết quả ngẫu nhiên trừu tượng thành các con số thực cụ thể. Cơ chế đó được gọi là **biến ngẫu nhiên** (Random Variable).
 
@@ -78,7 +78,7 @@ Một người chơi đặt cược 1 USD vào ô màu Đỏ trong 6 vòng quay 
 
 Gọi $Y$ là **tiền thắng ròng** (Net Gain) của người chơi sau 6 vòng cược:
 $$
-Y = \text{Tổng tiền thắng} - \text{Tổng tiền thua}
+Y = \text{Total winnings} - \text{Total losses}
 $$
 Hỏi $Y$ có phải là một biến ngẫu nhiên không, và tập giá trị của nó là gì?
 - $Y$ chắc chắn là một biến ngẫu nhiên vì giá trị của nó phụ thuộc ngẫu nhiên vào kết quả của 6 vòng quay.
@@ -125,9 +125,9 @@ Ta có thể biểu diễn PMF dưới dạng bảng phân phối:
 Hoặc dưới dạng biểu thức hàm từng khúc gọn gàng:
 $$
 f(x) = \begin{cases}
-\frac{1}{8}, & \text{với } x \in \{0, 3\} \\
-\frac{3}{8}, & \text{với } x \in \{1, 2\} \\
-0, & \text{với mọi giá trị } x \text{ khác}
+\frac{1}{8}, & x \in \\{0, 3\\} \\
+\frac{3}{8}, & x \in \\{1, 2\\} \\
+0, & \text{otherwise}
 \end{cases}
 $$
 
@@ -141,7 +141,7 @@ $$
 f(x) = \begin{cases}
 p, & x = 1 \\
 1-p, & x = 0 \\
-0, & \text{khác}
+0, & \text{otherwise}
 \end{cases}
 $$
 
@@ -199,7 +199,7 @@ $$
 \begin{aligned}
 P(X = 0) &= \frac{\binom{500}{0} \times \binom{500}{10}}{\binom{1000}{10}} \\
 &= \frac{1 \times 245.778.230.575.800}{263.352.885.366.640.000} \\
-&\approx 0{,}000933 \quad (\text{khoảng } 9\text{ trên } 10.000)
+&\approx 0{,}000933 \quad (\approx 9 / 10{,}000)
 \end{aligned}
 $$
 Xác suất để điều này xảy ra do ngẫu nhiên thuần túy chưa đầy $0{,}1\%$. Đây là bằng chứng định lượng đanh thép trước tòa án bác bỏ lời ngụy biện của công ty.
@@ -286,7 +286,7 @@ $$
 1. **Tính đơn điệu không giảm**: Nếu $x_1 \le x_2$ thì $F(x_1) \le F(x_2)$.
 2. **Giới hạn ở vô cực**:
 $$
-\lim_{x \to -\infty} F(x) = 0 \quad \text{và} \quad \lim_{x \to +\infty} F(x) = 1
+\lim_{x \to -\infty} F(x) = 0 , \quad \lim_{x \to +\infty} F(x) = 1
 $$
 3. **Liên tục bên phải (Right-continuous)**: Tại mọi điểm $x$, giới hạn tiến từ bên phải bằng đúng giá trị hàm:
 $$

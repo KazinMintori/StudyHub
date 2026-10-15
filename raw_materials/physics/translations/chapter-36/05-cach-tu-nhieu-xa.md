@@ -67,7 +67,7 @@ Một ví dụ trực quan sinh động của cách tử phản xạ trong đờ
 ::: info Ví dụ 36.4: Bề rộng của quang phổ cách tử
 Dải bước sóng của quang phổ ánh sáng nhìn thấy trải dài từ khoảng $380\text{ nm}$ (ánh sáng tím) đến $750\text{ nm}$ (ánh sáng đỏ).
 
-a) Tìm giới hạn góc của quang phổ bậc một nhìn thấy được tạo bởi một cách tử phẳng có $600\text{ vạch/mm}$ khi chiếu ánh sáng trắng vuông góc với cách tử.
+a) Tìm giới hạn góc của quang phổ bậc một nhìn thấy được tạo bởi một cách tử phẳng có $600\text{ lines/mm}$ khi chiếu ánh sáng trắng vuông góc với cách tử.
 
 b) Quang phổ bậc một và quang phổ bậc hai có chồng lấn lên nhau không? Quang phổ bậc hai và quang phổ bậc ba thì sao? Các kết luận này có phụ thuộc vào chu kỳ cách tử không?
 
@@ -77,7 +77,7 @@ b) Quang phổ bậc một và quang phổ bậc hai có chồng lấn lên nhau
 
 $$
 \begin{aligned}
-d &= \frac{1}{600\text{ vạch/mm}}\\
+d &= \frac{1}{600\text{ lines/mm}}\\
 &= \frac{10^{-3}\text{ m}}{600}\\
 &\approx 1{,}67 \times 10^{-6}\text{ m}
 \end{aligned}

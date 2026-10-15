@@ -39,8 +39,8 @@ Trong đời sống, hai từ "vận tốc" và "tốc độ" thường bị dù
 
 ::: warning Tốc độ trung bình KHÔNG PHẢI là độ lớn của vận tốc trung bình!
 Đây là một cạm bẫy kinh điển:
-- Vận tốc trung bình $= \dfrac{\text{Độ dời}}{\text{Thời gian}} = \dfrac{\Delta x}{\Delta t}$.
-- Tốc độ trung bình $= \dfrac{\text{Tổng quãng đường}}{\text{Thời gian}} = \dfrac{s}{\Delta t}$.
+- Vận tốc trung bình $= \\dfrac{\Delta x}{\Delta t} = \dfrac{\Delta x}{\Delta t}$.
+- Tốc độ trung bình $= \\dfrac{s}{\Delta t} = \dfrac{s}{\Delta t}$.
 
 Năm 2009, kình ngư César Cielo lập kỷ lục thế giới bơi $100.0\,\mathrm m$ trong $46.91\,\mathrm s$. Trong bể bơi tiêu chuẩn dài $50\,\mathrm m$, anh bơi đi rồi bơi về, chạm thành bể đúng tại điểm xuất phát ban đầu. Độ dời tổng cộng $\Delta x = 0 \implies$ **vận tốc trung bình bằng đúng 0**! Trong khi đó, tổng quãng đường bơi là $100\,\mathrm m \implies$ **tốc độ trung bình là $100.0 / 46.91 \approx 2.132\,\mathrm{m/s}$**.
 :::
@@ -111,7 +111,7 @@ Trên đồ thị tọa độ – thời gian ($x-t$), khi khoảng thời gian 
 
 Đường cát tuyến nối $p_1p_2$ trong quá trình đó dần xoay và trở thành **đường tiếp tuyến** của đường cong tại điểm $p_1$ (Hình 2.7c).
 
-$$\text{Độ dốc của tiếp tuyến tại } p_1 = \left.\frac{dx}{dt}\right|_{t_1} = v_x(t_1).$$
+$$\text{Slope of tangent at } p_1 = \left.\frac{dx}{dt}\right|_{t_1} = v_x(t_1).$$
 
 ![Hình 2.7: Quá trình chuyển từ độ dốc cát tuyến sang độ dốc tiếp tuyến](img/young-02/hinh-2-7.png)
 
@@ -154,5 +154,5 @@ $$v_P > v_Q = v_S (= 0) > v_R.$$
 
 **(e) Tốc độ tức thời** là giá trị tuyệt đối của độ dốc ($|v_x|$). Quan sát hình vẽ, tại điểm R đường cong dốc đứng nhất (độ dốc âm rất dốc) $\implies |v_R|$ lớn nhất. Tiếp theo là P. Tại Q và S tốc độ triệt tiêu bằng 0.
 Thứ tự tốc độ:
-$$v_{\text{tốc độ, } R} > v_{\text{tốc độ, } P} > v_{\text{tốc độ, } Q} = v_{\text{tốc độ, } S} (= 0).$$
+$$v_{ R} > v_{ P} > v_{ Q} = v_{ S} (= 0).$$
 :::

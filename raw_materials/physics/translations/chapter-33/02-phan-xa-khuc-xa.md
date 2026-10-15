@@ -280,7 +280,7 @@ $$
 
 Theo định luật phản xạ, góc phản xạ tại gương 2 cũng bằng $90^\circ - \theta_1$.
 
-Độ đổi hướng của tia sáng tại mỗi lần phản xạ bằng $180^\circ - 2\theta_{\text{tới}}$. Tổng góc đổi hướng sau cả hai lần phản xạ là:
+Độ đổi hướng của tia sáng tại mỗi lần phản xạ bằng $180^\circ - 2\\theta_{\mathrm{inc}}$. Tổng góc đổi hướng sau cả hai lần phản xạ là:
 
 $$
 \begin{aligned}

@@ -126,7 +126,7 @@ $$
    $$
    \begin{aligned}
    &\min_{x, u, v} \quad u + 2v\\
-   &\text{sao cho}\quad u \ge x - 1, \quad u \ge 1 - x,\\
+   &\text{s.t.}\quad u \ge x - 1, \quad u \ge 1 - x,\\
    &\phantom{\text{subject to}\quad } v \ge x + 1, \quad v \ge -x - 1.
    \end{aligned}
    $$
@@ -178,7 +178,7 @@ Gọi $x_1, x_2 \ge 0$ lần lượt là khối lượng phân bón loại I và
    $$
    \begin{aligned}
    &\min_{x_1, x_2} \quad 3x_1 + 2x_2\\
-   &\text{sao cho}\quad 2x_1 + x_2 \ge 4,\\
+   &\text{s.t.}\quad 2x_1 + x_2 \ge 4,\\
    &\phantom{\text{subject to}\quad } x_1 + 2x_2 \ge 5,\\
    &\phantom{\text{subject to}\quad } x_1 \ge 0, \quad x_2 \ge 0.
    \end{aligned}
@@ -250,7 +250,7 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
      $$
      \begin{aligned}
      &\min_{w, t} \quad \sum_{i=1}^5 t_i\\
-     &\text{sao cho}\quad -t_i \le u_i a + b - y_i \le t_i, \quad \forall i = 1, \dots, 5.
+     &\text{s.t.}\quad -t_i \le u_i a + b - y_i \le t_i, \quad \forall i = 1, \dots, 5.
      \end{aligned}
      $$
      Bài toán có $7$ biến ($2$ biến mô hình và $5$ biến phụ) cùng $10$ ràng buộc bất đẳng thức tuyến tính.
@@ -258,7 +258,7 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
      $$
      \begin{aligned}
      &\min_{w, t} \quad t\\
-     &\text{sao cho}\quad -t \le u_i a + b - y_i \le t, \quad \forall i = 1, \dots, 5.
+     &\text{s.t.}\quad -t \le u_i a + b - y_i \le t, \quad \forall i = 1, \dots, 5.
      \end{aligned}
      $$
      Bài toán có $3$ biến và $10$ ràng buộc bất đẳng thức tuyến tính.
@@ -467,7 +467,7 @@ với hàm mất mát $E(w) = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \f
 ::: exercise 8. Giới hạn độ lớn hệ số và Quy hoạch toàn phương ràng buộc toàn phương (QCQP)
 Xét bài toán kiểm soát độ lớn tham số với trần cứng:
 $$
-\min_{w \in \mathbb{R}^2} E(w) \quad \text{sao cho} \quad \|w\|_2^2 \le R^2,
+\min_{w \in \mathbb{R}^2} E(w) \quad \text{s.t.} \quad \|w\|_2^2 \le R^2,
 $$
 trong đó $E(w)$ là hàm mất mát bình phương ở Bài 5, và bán kính được chọn là $R^2 = \frac{481}{900}$ (chính là bình phương độ dài của nghiệm Tikhonov với $\lambda = 5$ ở Bài 6).
 1. Nhận diện dạng bài toán (QCQP). Chứng minh bài toán là lồi bằng cách kiểm tra riêng hàm mục tiêu và hàm ràng buộc.
@@ -483,7 +483,7 @@ trong đó $E(w)$ là hàm mất mát bình phương ở Bài 5, và bán kính 
 2. **Chứng nhận nghiệm tối ưu qua bài toán phạt Tikhonov**:
    Ở Bài 6, ta đã chứng minh $w^* = (\frac{2}{3}, \frac{3}{10})$ là nghiệm cực tiểu toàn cục duy nhất của bài toán không ràng buộc:
    $$
-   \min_w \Big( E(w) + 5 \|w\|_2^2 \Big), \qquad \text{với giá trị nhỏ nhất} \quad J^* = \frac{343}{30}.
+   \min_w \Big( E(w) + 5 \|w\|_2^2 \Big), \qquad \text{with minimum value} \quad J^* = \frac{343}{30}.
    $$
    Kéo theo với mọi $w \in \mathbb{R}^2$:
    $$
@@ -531,7 +531,7 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
 1. **Bài toán thiết kế hộp kín**:
    - Dạng chuẩn GP:
      $$
-     \min_{a, b, c > 0} \quad 2ab + 2ac + 2bc \quad \text{sao cho} \quad \frac{abc}{27} = 1.
+     \min_{a, b, c > 0} \quad 2ab + 2ac + 2bc \quad \text{s.t.} \quad \frac{abc}{27} = 1.
      $$
      Hàm mục tiêu là một posynomial (tổng ba monomial), và ràng buộc đẳng thức là một monomial bằng 1. Đây đúng là dạng chuẩn của GP. Tuy nhiên theo biến gốc, tập khả thi $abc = 27$ không lồi (ví dụ: hai điểm $(1, 3, 9)$ và $(9, 3, 1)$ đều có tích 27, nhưng trung điểm $(5, 3, 5)$ có tích $75 \ne 27$). Hơn nữa ma trận Hessian của diện tích có các trị riêng âm trên miền dương, do đó hàm mục tiêu phi lồi theo biến gốc.
    - Đổi biến logarit: Đặt $A = \log a, B = \log b, C = \log c$. Khi đó $a = e^A, b = e^B, c = e^C$.
@@ -560,7 +560,7 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
      $$
      \begin{aligned}
      &\min_{p > 0, t > 0} \quad t^{-1}\\
-     &\text{sao cho}\quad S_1(p) \ge t \iff \frac{t(1 + \frac{1}{4}p_2)}{p_1} \le 1 \iff t p_1^{-1} + \frac{1}{4}t p_1^{-1} p_2 \le 1,\\
+     &\text{s.t.}\quad S_1(p) \ge t \iff \frac{t(1 + \frac{1}{4}p_2)}{p_1} \le 1 \iff t p_1^{-1} + \frac{1}{4}t p_1^{-1} p_2 \le 1,\\
      &\phantom{\text{subject to}\quad } S_2(p) \ge t \iff \frac{t(1 + \frac{3}{2}p_1)}{p_2} \le 1 \iff t p_2^{-1} + \frac{3}{2}t p_1 p_2^{-1} \le 1,\\
      &\phantom{\text{subject to}\quad } \frac{1}{6}p_1 + \frac{1}{6}p_2 \le 1.
      \end{aligned}
@@ -634,7 +634,7 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
    $$
    \begin{aligned}
    &\min_{\theta, \xi} \quad \sum_{i=1}^4 \xi_i\\
-   &\text{sao cho}\quad \xi_i \ge 1 - y_i(u_i - \theta), \quad \forall i = 1, \dots, 4,\\
+   &\text{s.t.}\quad \xi_i \ge 1 - y_i(u_i - \theta), \quad \forall i = 1, \dots, 4,\\
    &\phantom{\text{subject to}\quad } \xi_i \ge 0, \quad \forall i = 1, \dots, 4.
    \end{aligned}
    $$
@@ -668,7 +668,7 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
    - Dùng tổ hợp tuyến tính không âm để chứng minh $d^* = 4{,}5$. Thiết lập chuỗi bất đẳng thức kẹp cận cho giá trị tối ưu nguyên: $d^* \le p^* \le 5$.
 2. **Nới lỏng từ chuẩn không sang chuẩn một trong chọn đặc trưng**: Cho bài toán hồi quy thưa với ràng buộc số lượng đặc trưng:
    $$
-   \min_w \|Xw - y\|_2^2 \quad \text{sao cho} \quad \|w\|_0 \le k,
+   \min_w \|Xw - y\|_2^2 \quad \text{s.t.} \quad \|w\|_0 \le k,
    $$
    với $\|w\|_0$ là số lượng thành phần khác $0$ của $w$.
    - Chứng minh tập khả thi $\{w \in \mathbb{R}^d \mid \|w\|_0 \le k\}$ với $1 \le k < d$ không phải là tập lồi.
@@ -692,7 +692,7 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
      $$
      \begin{aligned}
      &\min_{x} \quad 2x_1 + 3x_2 + 4x_3\\
-     &\text{sao cho}\quad x_1 + x_3 \ge 1,\\
+     &\text{s.t.}\quad x_1 + x_3 \ge 1,\\
      &\phantom{\text{subject to}\quad } x_1 + x_2 \ge 1,\\
      &\phantom{\text{subject to}\quad } x_2 + x_3 \ge 1,\\
      &\phantom{\text{subject to}\quad } 0 \le x_i \le 1, \quad \forall i = 1, 2, 3.
@@ -705,7 +705,7 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
      Xét điểm đối xứng $x^R = (0{,}5; 0{,}5; 0{,}5)$: Điểm này hoàn toàn khả thi vì mọi tổng cặp đều bằng $0{,}5 + 0{,}5 = 1 \ge 1$ và $0 \le 0{,}5 \le 1$.
      Chi phí tại $x^R$ là:
      $$
-     2(0{,}5) + 3(0{,}5) + 4(0{,}5) = 4{,}5\,\text{triệu đồng}.
+     2(0{,}5) + 3(0{,}5) + 4(0{,}5) = 4{,}5\,\times 10^6\text{ VND}.
      $$
    
    - Chứng nhận cận dưới qua tổ hợp tuyến tính:

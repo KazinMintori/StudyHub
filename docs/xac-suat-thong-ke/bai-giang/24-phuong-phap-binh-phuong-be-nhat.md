@@ -56,7 +56,7 @@ Dựa trên bản chất của biến phản hồi $y$ trong phân loại dữ l
 | :--- | :--- | :--- |
 | **Bản chất biến phản hồi $y$** | **Biến định lượng liên tục** (Số thực) | **Biến định tính rời rạc** (Nhãn danh mục) |
 | **Mục tiêu dự đoán** | Dự đoán một giá trị số đo lường cụ thể | Dự đoán một nhãn danh mục hoặc xác suất thuộc nhóm |
-| **Ví dụ thực tế 1** | Dự báo chỉ số CPI hoặc tỉ lệ lạm phát ($y \in \mathbb{R}$) | Dự báo nền kinh tế có rơi vào suy thoái hay không ($y \in \{\text{Có}, \text{Không}\}$) |
+| **Ví dụ thực tế 1** | Dự báo chỉ số CPI hoặc tỉ lệ lạm phát ($y \in \mathbb{R}$) | Dự báo nền kinh tế có rơi vào suy thoái hay không ($y \in \\{\text{Yes}, \text{No}\\}$) |
 | **Ví dụ thực tế 2** | Dự báo giá bán của một căn nhà (triệu USD) | Dự báo thư điện tử là thư rác hay thư hợp lệ |
 | **Ví dụ thực tế 3** | Dự báo nhiệt độ ngày mai tại Hà Nội ($^\circ\text{C}$) | Xe tự hành phân loại vật thể phía trước là người đi bộ hay chướng ngại vật tĩnh |
 
@@ -189,7 +189,7 @@ Hãy phân loại các bài toán ứng dụng sau đây vào hai họ bài toá
 
 **2. Hệ thống cảm biến xe tự hành Waymo:**
 - **Loại bài toán**: Bài toán Phân loại (Classification).
-- **Biến phản hồi $y$**: Nhãn định tính nhị phân của vật cản ($y \in \{\text{Xe thật}, \text{Ảo ảnh phản chiếu}\}$).
+- **Biến phản hồi $y$**: Nhãn định tính nhị phân của vật cản ($y \in \\{\text{Real}, \text{Mirage}\\}$).
 - **Biến dự báo $x$**: Tọa độ phản xạ chùm tia lidar, mật độ điểm mây lidar, cường độ xung phản xạ, vector vận tốc chuyển động tương đối.
 
 **3. Dự báo lượng mưa của trung tâm khí tượng:**
@@ -199,7 +199,7 @@ Hãy phân loại các bài toán ứng dụng sau đây vào hai họ bài toá
 
 **4. Dự đoán xác nhận nhập học của hội đồng tuyển sinh:**
 - **Loại bài toán**: Bài toán Phân loại (Classification).
-- **Biến phản hồi $y$**: Trạng thái xác nhận nhập học của thí sinh ($y \in \{\text{Có nhập học}, \text{Không nhập học}\}$).
+- **Biến phản hồi $y$**: Trạng thái xác nhận nhập học của thí sinh ($y \in \\{\text{Enrolled}, \text{NotEnrolled}\\}$).
 - **Biến dự báo $x$**: Điểm thi chuẩn hóa ($x_1$), khoảng cách địa lý từ nhà đến trường ($x_2$, km), phân vị thu nhập gia đình ($x_3$).
 :::
 
@@ -226,9 +226,9 @@ Xét một tập dữ liệu nhỏ gồm $n = 5$ quan sát về thời gian ôn 
 ::: details Lời giải chi tiết
 **1. Tính trung bình mẫu:**
 - Trung bình của $x$:
-  $$\bar{x} = \frac{1 + 2 + 3 + 4 + 5}{5} = \frac{15}{5} = 3.0 \text{ giờ}$$
+  $$\bar{x} = \frac{1 + 2 + 3 + 4 + 5}{5} = \frac{15}{5} = 3.0 \text{ h}$$
 - Trung bình của $y$:
-  $$\bar{y} = \frac{2 + 3 + 5 + 7 + 8}{5} = \frac{25}{5} = 5.0 \text{ điểm}$$
+  $$\bar{y} = \frac{2 + 3 + 5 + 7 + 8}{5} = \frac{25}{5} = 5.0 \text{ points}$$
 
 **2. Tính toán hệ số góc $b_1$ và hệ số chặn $b_0$:**
 - Ta lập bảng tính các đại lượng độ lệch:
@@ -268,7 +268,7 @@ Xét một tập dữ liệu nhỏ gồm $n = 5$ quan sát về thời gian ôn 
 
 **4. Dự báo điểm số cho $x^* = 4.5$ giờ:**
 - Điểm dự báo:
-  $$\hat{y}^* = 0.2 + 1.6(4.5) = 0.2 + 7.2 = 7.4 \text{ điểm}$$
+  $$\hat{y}^* = 0.2 + 1.6(4.5) = 0.2 + 7.2 = 7.4 \text{ points}$$
 :::
 
 ---

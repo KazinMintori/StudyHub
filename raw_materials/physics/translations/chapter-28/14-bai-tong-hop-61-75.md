@@ -68,9 +68,9 @@ Với cung góc $\alpha$, tích phân Biot–Savart cho:
 
 $$
 \begin{aligned}
-B_{\mathrm{cung}} &= \frac{\mu_0I}{4\pi R}\alpha, \\
+B_{\mathrm{arc}} &= \frac{\mu_0I}{4\pi R}\alpha, \\
 \alpha &= \pi, \\
-B_{\mathrm{bán\ nguyệt}} &= \frac{\mu_0I}{4R}.
+B_{\mathrm{semicircle}} &= \frac{\mu_0I}{4R}.
 \end{aligned}
 $$
 
@@ -296,7 +296,7 @@ Trong trụ, biểu thức áp dụng với $r\le a$. Ngoài trụ, $\vec J=0$.
 
 $$
 \begin{aligned}
-I_{\mathrm{tổng}} &= \frac{4I_0}{a^2} \int_0^a\left(s-\frac{s^3}{a^2}\right)ds \\
+I_{\mathrm{tot}} &= \frac{4I_0}{a^2} \int_0^a\left(s-\frac{s^3}{a^2}\right)ds \\
 &= \frac{4I_0}{a^2} \left(\frac{a^2}{2}-\frac{a^2}{4}\right) \\
 &= I_0.
 \end{aligned}
@@ -766,7 +766,7 @@ $$
 (d) Dòng mặt trên một đơn vị bề rộng là $\sigma v$. Nhân với bề rộng dải:
 
 $$
-dI_{\mathrm{mặt}}=\sigma vR\,d\phi.
+dI_{\mathrm{face}}=\sigma vR\,d\phi.
 $$
 
 (e) Dải dài $L$ theo trục. Vì $\hat z\times\hat\phi=-\hat r$, lực hướng vào:
@@ -779,15 +779,15 @@ $$
 
 $$
 \begin{aligned}
-F_{\mathrm{ép}} &= \int_0^{2\pi}\sigma vRLB_R\,d\phi \\
+F_{\mathrm{comp}} &= \int_0^{2\pi}\sigma vRLB_R\,d\phi \\
 &= 2\pi RL\sigma vB_R, \\
-p &= \frac{F_{\mathrm{ép}}}{2\pi RL} \\
+p &= \frac{F_{\mathrm{comp}}}{2\pi RL} \\
 &= \sigma vB_R \\
 &= \frac{\mu_0}{2}n^{5/3}q^2Rv^2.
 \end{aligned}
 $$
 
-Ở đây $F_{\mathrm{ép}}$ là tổng độ lớn lực ép lên các phần thành trụ. Các hướng bán kính khác nhau triệt tiêu khi cộng vector lực, chứ không làm mất áp suất trên từng phần thành.
+Ở đây $F_{\mathrm{comp}}$ là tổng độ lớn lực ép lên các phần thành trụ. Các hướng bán kính khác nhau triệt tiêu khi cộng vector lực, chứ không làm mất áp suất trên từng phần thành.
 
 (g) Đổi mật độ sang đơn vị SI:
 

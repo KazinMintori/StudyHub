@@ -255,7 +255,7 @@ Một nguồn phát sóng hình sin đều theo mọi hướng. Sóng gây áp s
 **Hướng đi:**
 
 - Dùng $I\propto1/r^2$ vì công suất phân bố đều trên mặt cầu.
-- Dùng $p_{\mathrm{phản\,xạ}}=2I/c$ và $p_{\mathrm{hấp\,thụ}}=I/c$ vì phản xạ đảo động lượng còn hấp thụ nhận một lần động lượng tới.
+- Dùng $p_{\mathrm{refl}}=2I/c$ và $p_{\mathrm{abs}}=I/c$ vì phản xạ đảo động lượng còn hấp thụ nhận một lần động lượng tới.
 
 Tại khoảng cách ban đầu:
 

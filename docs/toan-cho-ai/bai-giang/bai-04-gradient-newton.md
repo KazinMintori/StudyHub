@@ -200,7 +200,7 @@ Lý thuyết tự tương hợp khẳng định rằng: Số bước lặp của
 Xét bài toán tối ưu với ràng buộc đẳng thức affine:
 
 $$
-\min_x \quad f(x) \quad \text{sao cho} \quad A x = b.
+\min_x \quad f(x) \quad \text{s.t.} \quad A x = b.
 $$
 
 ### 6.1. Phương pháp Khử biến (Elimination Method)
@@ -273,7 +273,7 @@ Trong thực tế tính toán, ta không bao giờ tính ma trận nghịch đ�
 $$
 \begin{aligned}
 &\min_x \quad f_0(x)\\
-&\text{sao cho}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&\text{s.t.}\quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
 &\phantom{\text{subject to}\quad } A x = b.
 \end{aligned}
 $$
@@ -300,7 +300,7 @@ $$
 Với mỗi tham số trọng số $t > 0$, ta xét bài toán tối ưu có ràng buộc đẳng thức:
 
 $$
-\min_x \quad t f_0(x) + \phi(x) \quad \text{sao cho} \quad A x = b.
+\min_x \quad t f_0(x) + \phi(x) \quad \text{s.t.} \quad A x = b.
 $$
 
 Nghiệm duy nhất của bài toán này được ký hiệu là $x^*(t)$. Tập hợp tất cả các điểm $\{x^*(t) \mid t > 0\}$ tạo thành một đường cong trơn trong không gian khả thi ngặt, được gọi là **đường trung tâm (central path)**.
@@ -384,7 +384,7 @@ Cho hàm số hai biến $f(x_1, x_2)$ có gradient tại điểm hiện tại l
 ::: exercise 2. Đường trung tâm và Khoảng cách đối ngẫu của Quy hoạch Tuyến tính
 Xét bài toán quy hoạch tuyến tính một biến:
 $$
-\min_{x \in \mathbb{R}} \quad c x \quad \text{sao cho} \quad x \ge 0 \quad (\text{tức } -x \le 0),
+\min_{x \in \mathbb{R}} \quad c x \quad \text{s.t.} \quad x \ge 0 \quad (\text{i.e., } -x \le 0),
 $$
 với hằng số $c > 0$.
 1. Thiết lập hàm chắn logarit $\phi(x)$ và bài toán tìm điểm trên đường trung tâm $x^*(t)$.
@@ -394,7 +394,7 @@ với hằng số $c > 0$.
 **Lời giải**:
 1. Ràng buộc chuẩn tắc: $f_1(x) = -x \le 0$. Hàm chắn logarit:
    $$
-   \phi(x) = -\log(-f_1(x)) = -\log(x) \quad \text{với } x > 0.
+   \phi(x) = -\log(-f_1(x)) = -\log(x) , \quad x > 0.
    $$
    Hàm mục tiêu trên đường trung tâm với tham số $t > 0$:
    $$
@@ -517,7 +517,7 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
 ::: exercise 5. Hướng giảm dốc nhất theo chuẩn metric Hessian và nguồn gốc phương pháp Newton
 Xét bài toán tìm hướng giảm dốc nhất dưới ràng buộc chuẩn ellipsoid do ma trận xác định dương $W \succ 0$ quy định:
 $$
-\min_{v \in \mathbb{R}^n} \quad g^T v \quad \text{sao cho} \quad v^T W v \le 1,
+\min_{v \in \mathbb{R}^n} \quad g^T v \quad \text{s.t.} \quad v^T W v \le 1,
 $$
 với vector gradient $g \ne 0$.
 1. Thiết lập hàm Lagrangian và hệ điều kiện KKT cho bài toán con trên. Chứng minh nhân tử Lagrange $\zeta > 0$, suy ra ràng buộc đạt dấu bằng trên biên ellipsoid.
@@ -660,7 +660,7 @@ Xét bài toán tối ưu có ràng buộc đẳng thức:
 $$
 \begin{aligned}
 &\min_{x \in \mathbb{R}^3} \quad f(x) = \frac{1}{2}(x_1^2 + 2x_2^2 + 3x_3^2)\\
-&\text{sao cho}\quad x_1 + x_2 + x_3 = 1.
+&\text{s.t.}\quad x_1 + x_2 + x_3 = 1.
 \end{aligned}
 $$
 1. Phương pháp Newton-KKT: Thiết lập hệ phương trình KKT bậc nhất cho bước lặp Newton $\Delta x$ và nhân tử đối ngẫu $w$. Giải hệ phương trình trực tiếp để tìm nghiệm tối ưu $x^*$ từ điểm xuất phát khả thi $x^0 = (1, 0, 0)^T$.

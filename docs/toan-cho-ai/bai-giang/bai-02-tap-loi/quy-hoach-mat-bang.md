@@ -70,7 +70,7 @@ $$
 &\text{minimize}\quad W H\\
 &\text{subject to}\quad w_i h_i \ge S_i, \quad i = 1, \dots, N,\\
 &\phantom{\text{subject to}\quad } \alpha_i \le h_i w_i^{-1} \le \beta_i, \quad i = 1, \dots, N,\\
-&\phantom{\text{subject to}\quad } \text{các ràng buộc đường phân cắt dọc và ngang.}
+&\phantom{\text{subject to}\quad } \text{slicing constraints.}
 \end{aligned}
 $$
 
@@ -115,7 +115,7 @@ $$
 &\text{minimize}\quad \sum_{i < j} C_{ij} (u_{ij} + v_{ij})\\
 &\text{subject to}\quad -u_{ij} \le x_i - x_j + \frac{w_i - w_j}{2} \le u_{ij},\\
 &\phantom{\text{subject to}\quad } -v_{ij} \le y_i - y_j + \frac{h_i - h_j}{2} \le v_{ij},\\
-&\phantom{\text{subject to}\quad } \text{các ràng buộc không chồng lấn affine trên } (x_i, y_i).
+&\phantom{\text{subject to}\quad } \text{affine non-overlapping constraints on } (x_i, y_i).
 \end{aligned}
 $$
 

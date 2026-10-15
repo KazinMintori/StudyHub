@@ -313,7 +313,7 @@ Kết quả: $y = (9, 8, 9, 11)^T$. Mỗi hàng nhận đóng góp từ **hai** 
 **Đặc tả.** Gọi $W_i$ là **tập** các từ trong $d_i$. Đầu ra:
 
 $$
-D = \left\lvert \bigcup_{i=1}^{n} W_i \right\rvert, \qquad D = 0 \text{ nếu mọi văn bản rỗng}
+D = \left\lvert \bigcup_{i=1}^{n} W_i \right\rvert, \qquad D = 0 \text{ if empty}
 $$
 
 **Ứng dụng:** $D$ là số chiều (số cột) của ma trận trang–từ ở mục 3.1 khi dùng toàn bộ từ vựng.
@@ -414,7 +414,7 @@ Trong phần này $P$ là **số máy**. Đừng nhầm với $p$ là số hàng
 Cộng $n$ số chia đều cho $P$ máy (khởi tạo tổng bằng phần tử đầu, nên nhóm $k$ phần tử tốn $k-1$ phép cộng):
 
 $$
-W_P = \underbrace{P\left(\frac{n}{P} - 1\right)}_{\text{cộng cục bộ}} + \underbrace{(P - 1)}_{\text{gộp}} = n - 1
+W_P = \underbrace{P\left(\frac{n}{P} - 1\right)}_{\text{local sum}} + \underbrace{(P - 1)}_{\text{merge}} = n - 1
 $$
 
 Với $n = 16$, $P = 4$: $4 \times 3 + 3 = 15$, đúng bằng khi cộng trên một máy. **Song song hóa không giảm tổng việc. Nó chia việc ra để giảm thời gian chờ.**
@@ -475,7 +475,7 @@ Một số slide (Stanford CS246) đếm tổng đọc/ghi thành $I + 2H + O$. 
 ### 4.5. Thời gian truyền: Mô hình độ trễ – băng thông
 
 $$
-T_{\text{truyền}} \approx \lambda + \frac{V}{B}
+T_{\mathrm{comm}} \approx \lambda + \frac{V}{B}
 $$
 
 | Ký hiệu | Ý nghĩa |
@@ -511,7 +511,7 @@ Với các pha nối tiếp, không chồng lấp, không lỗi:
 
 $$
 \begin{aligned}
-T_P &= T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền và nhóm}} + T_{\text{Reduce}} \\
+T_P &= T_{\mathrm{coord}} + T_{\text{Map}} + T_{\mathrm{shuffle}} + T_{\text{Reduce}} \\
 S_P &= \frac{T_1}{T_P}
 \end{aligned}
 $$
@@ -533,11 +533,11 @@ Dữ kiện: $P = 3$. Điều phối 1 s. Tải Map mỗi máy $2 s / 3 s / 5 s$
 | Bước | Tính | Kết quả |
 |---|---|---|
 | $T_{\text{Map}}$ | $\max(2, 3, 5)$ | 5 s |
-| $T_{\text{truyền}}$ | $120 / 40$ | 3 s |
+| $T_{\mathrm{comm}}$ | $120 / 40$ | 3 s |
 | $T_P$ | $1 + 5 + 3 + 2$ | 11 s |
 | $S_P$ | $22 / 11$ | 2 |
 | Có Combine: $T'_{\text{Map}}$ | $5 + 1$ | 6 s |
-| Có Combine: $T'_{\text{truyền}}$ | $40 / 40$ | 1 s |
+| Có Combine: $T'_{\mathrm{comm}}$ | $40 / 40$ | 1 s |
 | $T'_P$ | $1 + 6 + 1 + 2$ | 10 s (tiết kiệm 1 s) |
 | $S'_P$ | $22 / 10$ | 2,2 |
 
@@ -919,7 +919,7 @@ Dry-run 7: câu hỏi kiểm tra
 | Chi phí MMDS | $C = I + H$ |
 | Thời gian truyền | $T \approx \lambda + V/B$, dùng chung: $T \ge V/B$ |
 | Toàn công việc | $$
-T_P = T_{\text{điều phối}} + T_{\text{Map}} + T_{\text{truyền}} + T_{\text{Reduce}}
+T_P = T_{\mathrm{coord}} + T_{\text{Map}} + T_{\mathrm{comm}} + T_{\text{Reduce}}
 $$ |
 | Mức tăng tốc | $S_P = T_1 / T_P$ |
 | Từ khóa | khóa–giá trị, shuffle, combiner, InputSplit, cục bộ hóa, replication, Master, chạy lại, bản dự phòng |

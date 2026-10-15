@@ -150,7 +150,7 @@ $$
 Gọi $x_0$ là một điểm bất kỳ thuộc siêu phẳng ($a^T x_0 = b$). Điểm $x$ bất kỳ trong không gian có thể phân tích duy nhất thành tổng của hình chiếu vuông góc lên siêu phẳng và thành phần trực giao:
 
 $$
-x - x_0 = v_\parallel + v_\perp, \quad \text{với } v_\parallel \in a^\perp \text{ và } v_\perp = \lambda \frac{a}{\|a\|_2}
+x - x_0 = v_\parallel + v_\perp, , \quad v_\parallel \in a^\perp \text{ and } v_\perp = \lambda \frac{a}{\|a\|_2}
 $$
 
 Nhân vô hướng hai vế với vector đơn vị pháp tuyến $\tfrac{a}{\|a\|_2}$:
@@ -192,7 +192,7 @@ Xét lại siêu phẳng $3x_1 + 4x_2 = 10$ với $a = (3, 4)$, $b = 10$, $\|a\|
 Cho hai siêu phẳng song song có cùng vector pháp tuyến $a$:
 
 $$
-H_1 = \{x \mid a^T x = b_1\} \quad \text{và} \quad H_2 = \{x \mid a^T x = b_2\}
+H_1 = \{x \mid a^T x = b_1\} , \quad H_2 = \{x \mid a^T x = b_2\}
 $$
 
 Lấy một điểm $x_1 \in H_1$, khoảng cách có dấu từ $x_1$ tới $H_2$ là $\tfrac{a^T x_1 - b_2}{\|a\|_2} = \tfrac{b_1 - b_2}{\|a\|_2}$. Từ đó suy ra khoảng cách hình học giữa hai siêu phẳng song song là:
@@ -241,7 +241,7 @@ Một câu hỏi mang tính nền tảng cho lý thuyết đối ngẫu là: Khi
 > $$
 > khi và chỉ khi tồn tại một hằng số dương $\lambda > 0$ sao cho:
 > $$
-> \tilde{a} = \lambda a \quad \text{và} \quad \tilde{b} \ge \lambda b
+> \tilde{a} = \lambda a , \quad \tilde{b} \ge \lambda b
 > $$
 > Hai nửa không gian trùng nhau khi và chỉ khi $\tilde{a} = \lambda a$ và $\tilde{b} = \lambda b$ với $\lambda > 0$.
 
@@ -283,7 +283,7 @@ Như vậy $\tilde{a}^T x \le \tilde{b}$, chứng tỏ $x$ thuộc nửa không 
 Xét hai nửa không gian trong $\mathbb{R}^2$:
 
 $$
-H_1 = \{x \in \mathbb{R}^2 \mid 2x_1 + 3x_2 \le 6\} \quad \text{và} \quad H_2 = \{x \in \mathbb{R}^2 \mid 4x_1 + 6x_2 \le 15\}
+H_1 = \{x \in \mathbb{R}^2 \mid 2x_1 + 3x_2 \le 6\} , \quad H_2 = \{x \in \mathbb{R}^2 \mid 4x_1 + 6x_2 \le 15\}
 $$
 
 Ở đây ta có $a = (2, 3)$, $b = 6$ và $\tilde{a} = (4, 6)$, $\tilde{b} = 15$.
@@ -526,7 +526,7 @@ Hãy tìm:
 Tính khoảng cách hình học giữa hai siêu phẳng song song trong $\mathbb{R}^3$:
 
 $$
-H_1: 2x_1 + x_2 - 2x_3 = 4 \quad \text{và} \quad H_2: -4x_1 - 2x_2 + 4x_3 = 10
+H_1: 2x_1 + x_2 - 2x_3 = 4 , \quad H_2: -4x_1 - 2x_2 + 4x_3 = 10
 $$
 :::
 

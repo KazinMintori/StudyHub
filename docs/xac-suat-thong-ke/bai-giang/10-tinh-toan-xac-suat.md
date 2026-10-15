@@ -31,7 +31,7 @@ Nhân chứng then chốt của bên công tố là Giáo sư Sir Roy Meadow, m�
 $$
 \begin{aligned}
 \frac{1}{8.543} \times \frac{1}{8.543} &\approx \frac{1}{72.982.849} \\
-&\approx \frac{1}{73\text{ triệu}}
+&\approx \frac{1}{73\text{ million}}
 \end{aligned}
 $$
 Meadow tuyên bố trước tòa rằng xác suất hai cái chết tự nhiên xảy ra trong cùng một gia đình là 1 trên 73 triệu. Con số chấn động này khiến bồi thẩm đoàn tin rằng khả năng hai đứa trẻ chết tự nhiên gần như là con số không, và Sally Clark bị kết tội. Phải mất hơn 3 năm ngồi tù trong đau khổ tột cùng, Hiệp hội Thống kê Hoàng gia Anh (Royal Statistical Society - RSS) mới chính thức lên tiếng can thiệp, vạch trần hai sai lầm toán học nghiêm trọng của bên công tố:
@@ -79,7 +79,7 @@ A = \{RRB, RBR, BRR\} \implies |A| = 3
 $$
 Do đó:
 $$
-P(\text{chính xác 2 thẻ đỏ khi rút có hoàn lại}) = \frac{3}{8} = 0{,}375
+P(\text{exact 2 red with replacement}) = \frac{3}{8} = 0{,}375
 $$
 
 ### Phương thức 2: Rút không hoàn lại (Without Replacement)
@@ -106,7 +106,7 @@ $$
 $$
 Xác suất rút được đúng 2 thẻ đỏ lúc này là:
 $$
-P(\text{chính xác 2 thẻ đỏ khi rút không hoàn lại}) = \frac{3}{6} = \frac{1}{2} = 0{,}50
+P(\text{exact 2 red without replacement}) = \frac{3}{6} = \frac{1}{2} = 0{,}50
 $$
 
 ### So sánh phân phối xác suất số thẻ đỏ
@@ -260,7 +260,7 @@ Nếu $P(A \cap B) \neq P(A) \cdot P(B)$, hai biến cố được gọi là **p
 
 Để kiểm tra xem hai biến cố $A$ và $B$ có độc lập với nhau hay không, phương pháp tính toán nhanh nhất và tổng quát nhất là so sánh trực tiếp:
 $$
-\text{Kiểm tra đẳng thức: } P(A \cap B) \stackrel{?}{=} P(A) \times P(B)
+\text{Check: } P(A \cap B) \stackrel{?}{=} P(A) \times P(B)
 $$
 Nếu đẳng thức thỏa mãn, hai biến cố độc lập, trái lại nếu không bằng nhau, chúng là hai biến cố phụ thuộc.
 
@@ -299,22 +299,22 @@ Tính xác suất để cả Alex và Emi cùng được chọn vào ban đại 
 - **Cách 1: Đếm tổ hợp**: Số cách chọn 2 người bất kỳ từ 5 người là:
 
 $$
-\binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10 \text{ cặp phân biệt}
+\binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10 \text{ distinct pairs}
 $$
 
   Cặp (Alex, Emi) là 1 trong 10 cặp đồng khả năng đó, do đó xác suất là:
 
 $$
-P(\text{Alex và Emi}) = \frac{1}{10} = 0{,}10
+P(\text{Alex and Emi}) = \frac{1}{10} = 0{,}10
 $$
 
 - **Cách 2: Áp dụng quy tắc nhân và cộng**: Cặp (Alex, Emi) được chọn nếu rút được Alex trước rồi Emi sau, hoặc Emi trước rồi Alex sau:
 
 $$
 \begin{aligned}
-P(\text{Alex trước} \cap \text{Emi sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
-P(\text{Emi trước} \cap \text{Alex sau}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
-P(\text{Alex và Emi}) &= \frac{1}{20} + \frac{1}{20} = \frac{2}{20} = \frac{1}{10}
+P(\text{Alex first} \cap \text{Emi second}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
+P(\text{Emi first} \cap \text{Alex second}) &= \frac{1}{5} \times \frac{1}{4} = \frac{1}{20} \\
+P(\text{Alex and Emi}) &= \frac{1}{20} + \frac{1}{20} = \frac{2}{20} = \frac{1}{10}
 \end{aligned}
 $$
 
@@ -332,16 +332,16 @@ Hỏi biến cố "Màu sắc" và "Con số" có độc lập với nhau hay kh
 - Ta tính xác suất rút được thẻ số 3 khi biết thẻ đó màu đỏ:
 
 $$
-P(\text{Số 3} \mid \text{Đỏ}) = \frac{1}{3}
+P(\text{Card 3} \mid \text{Red}) = \frac{1}{3}
 $$
 
 - Tuy nhiên, trong số các thẻ màu xanh, hoàn toàn không có thẻ số 3 nào:
 
 $$
-P(\text{Số 3} \mid \text{Xanh}) = 0
+P(\text{Card 3} \mid \text{Blue}) = 0
 $$
 
-Vì $P(\text{Số 3} \mid \text{Đỏ}) \neq P(\text{Số 3} \mid \text{Xanh})$, màu sắc và con số trong Hộp 1 là hai đặc tính **phụ thuộc**. Chỉ cần một cặp giá trị vi phạm đẳng thức thì toàn bộ hai biến phân loại đó không thể độc lập.
+Vì $P(\text{Card 3} \mid \text{Red}) \neq P(\text{Card 3} \mid \text{Blue})$, màu sắc và con số trong Hộp 1 là hai đặc tính **phụ thuộc**. Chỉ cần một cặp giá trị vi phạm đẳng thức thì toàn bộ hai biến phân loại đó không thể độc lập.
 
 Tiếp tục xét hai hộp chứa các thẻ mang hai chữ số:
 
@@ -368,7 +368,7 @@ Bây giờ ta có đầy đủ công cụ xác suất để vạch trần thảm
 
 Bác sĩ Roy Meadow tuyên bố trước tòa rằng xác suất hai đứa trẻ chết vì SIDS là:
 $$
-P(S_1 \cap S_2) = P(S_1) \times P(S_2) = \frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{73\text{ triệu}}
+P(S_1 \cap S_2) = P(S_1) \times P(S_2) = \frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{73\text{ million}}
 $$
 Phép tính này ngầm giả định rằng hai cái chết là **độc lập**. Tuy nhiên, hai đứa trẻ là anh em ruột sinh ra trong cùng một gia đình:
 - Chúng chia sẻ 50% vốn gen di truyền từ cha mẹ. Nếu có một đột biến gen bẩm sinh làm tăng nguy cơ suy hô hấp hoặc rối loạn nhịp tim khi ngủ, cả hai đứa trẻ đều có khả năng mang đột biến đó.
@@ -383,12 +383,12 @@ $$
 \begin{aligned}
 P(S_1 \cap S_2) &= P(S_1) \cdot P(S_2 \mid S_1) \\
 &= \frac{1}{8.543} \times \frac{1}{60} \\
-&= \frac{1}{512.580} \approx \frac{1}{513\text{ nghìn}}
+&= \frac{1}{512.580} \approx \frac{1}{513\text{ thousand}}
 \end{aligned}
 $$
 Con số xác suất thực tế cao hơn con số mà bác sĩ Meadow khai trước tòa tới:
 $$
-\frac{72.982.849}{512.580} \approx 142{,}4\text{ lần}
+\frac{72.982.849}{512.580} \approx 142{,}4\text{ times}
 $$
 Hơn thế nữa, trong quá trình điều tra phúc thẩm, các tài liệu y khoa bị che giấu trước đó được phát hiện: Đứa con thứ hai của Sally Clark mang nồng độ vi khuẩn tụ cầu vàng (*Staphylococcus aureus*) cực cao trong dịch tủy não, cho thấy bé đã chết vì nhiễm trùng đường hô hấp cấp chứ không phải bị ngạt thở do mẹ sát hại.
 
@@ -400,13 +400,13 @@ Giả sử đặt:
 - $I$: Bị cáo vô tội (hai đứa trẻ chết tự nhiên vì SIDS hoặc bệnh lý).
 - $E$: Bằng chứng thực tế (hai đứa trẻ trong gia đình đã tử vong).
 
-Con số $1/73\text{ triệu}$ (hay kể cả con số chuẩn $1/513\text{ nghìn}$) là xác suất:
+Con số $1/73\text{ million}$ (hay kể cả con số chuẩn $1/513\text{ thousand}$) là xác suất:
 $$
-P(E \mid I) \quad (\text{Xác suất hai trẻ tử vong tự nhiên trong một gia đình bình thường})
+P(E \mid I) \quad (\text{Natural death of two infants})
 $$
 Thế nhưng, bồi thẩm đoàn và cơ quan công tố đã ngộ nhận rằng đây chính là:
 $$
-P(I \mid E) \quad (\text{Xác suất Sally Clark vô tội khi đã có hai con qua đời})
+P(I \mid E) \quad (\text{Innocence given two deaths})
 $$
 Đây là sự đánh tráo tai hại giữa $P(E \mid I)$ và $P(I \mid E)$.
 
@@ -576,7 +576,7 @@ Một bài báo y khoa công bố xác suất một đứa trẻ sơ sinh tử v
 
 ::: details Lời giải chi tiết
 **Câu 1: Nhận diện hai sai lầm cốt tử**:
-- Sai lầm 1 (Ngụy biện nhân xác suất): Phép nhân $\frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{73\text{ triệu}}$ giả định hai đứa trẻ sơ sinh trong cùng một gia đình là hoàn toàn độc lập về mặt thống kê. Trong thực tế, anh em ruột chia sẻ 50% vốn gen di truyền và cùng chung sống trong một môi trường, do đó giả định độc lập là hoàn toàn sai.
+- Sai lầm 1 (Ngụy biện nhân xác suất): Phép nhân $\frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{73\text{ million}}$ giả định hai đứa trẻ sơ sinh trong cùng một gia đình là hoàn toàn độc lập về mặt thống kê. Trong thực tế, anh em ruột chia sẻ 50% vốn gen di truyền và cùng chung sống trong một môi trường, do đó giả định độc lập là hoàn toàn sai.
 - Sai lầm 2 (Ngụy biện công tố viên - Prosecutor's Fallacy): Tuyên bố trên đã đánh tráo $P(E \mid I)$ với $P(I \mid E)$. Cho dù xác suất một biến cố tự nhiên xảy ra là rất nhỏ ($P(E \mid I) \ll 1$), điều đó hoàn toàn không đồng nghĩa với việc xác suất bị cáo vô tội là rất nhỏ ($P(I \mid E) \ll 1$), bởi vì hành vi người mẹ sát hại hai đứa con ruột cũng là một biến cố có xác suất tiên nghiệm cực kỳ hiếm ($P(M) \ll 1$).
 
 **Câu 2: Tính xác suất thực tế theo quy tắc nhân**:
@@ -709,7 +709,7 @@ Giả sử trong mỗi trận đấu độc lập, xác suất đội $A$ đánh
 Để thắng 4-0, đội $A$ phải thắng trận 1, trận 2, trận 3 và trận 4.
 Vì các trận đấu độc lập với nhau, áp dụng quy tắc nhân xác suất cho 4 biến cố độc lập:
 $$
-P(\text{Thắng 4-0}) = p^4 = \left(\frac{2}{3}\right)^4 = \frac{16}{81} \approx 0{,}1975 \approx 19{,}75\%
+P(\text{Sweep 4-0}) = p^4 = \left(\frac{2}{3}\right)^4 = \frac{16}{81} \approx 0{,}1975 \approx 19{,}75\%
 $$
 
 **Câu 2: Xác suất đội $A$ vô địch sau đúng 5 trận**:
@@ -724,7 +724,7 @@ $$
 Do đó, xác suất đội $A$ vô địch sau đúng 5 trận là:
 $$
 \begin{aligned}
-P(\text{Vô địch ở trận 5}) &= \binom{4}{3} p^4 (1-p) \\
+P(\text{Win in 5}) &= \binom{4}{3} p^4 (1-p) \\
 &= 4 \times \left(\frac{2}{3}\right)^4 \times \left(1 - \frac{2}{3}\right) \\
 &= 4 \times \frac{16}{81} \times \frac{1}{3} = \frac{64}{243} \approx 0{,}2634 \approx 26{,}34\%
 \end{aligned}

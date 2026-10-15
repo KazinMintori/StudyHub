@@ -125,7 +125,7 @@ P &= \frac{1}{f} \\
 \end{aligned}
 $$
 
-Người này cần đeo kính áp tròng hội tụ có độ tụ $+3{,}0\text{ đi-ốp}$.
+Người này cần đeo kính áp tròng hội tụ có độ tụ $+3{,}0\text{ diopters}$.
 
 #### Đánh giá
 Ở ví dụ này, kính áp tròng nằm áp sát bề mặt giác mạc nên khoảng cách vật đối với kính cũng chính là khoảng cách đối với mắt. Nếu thay kính áp tròng bằng kính gọng đeo cách mắt một khoảng khoảng $1{,}5\text{ cm}$ đến $2\text{ cm}$, khoảng cách vật và khoảng cách ảnh đối với kính sẽ thay đổi, dẫn đến độ tụ yêu cầu của kính gọng sẽ hơi khác biệt.
@@ -182,7 +182,7 @@ P &= \frac{1}{f} \\
 \end{aligned}
 $$
 
-Người này cần đeo kính gọng có độ tụ $-2{,}1\text{ đi-ốp}$.
+Người này cần đeo kính gọng có độ tụ $-2{,}1\text{ diopters}$.
 
 #### Đánh giá
 Nếu người này sử dụng kính áp tròng thay vì kính gọng để khắc phục tật cận thị này, tiêu cự yêu cầu sẽ là $f = -50\text{ cm}$ và độ tụ tương ứng là $-2{,}0\text{ D}$. Bạn có nhìn ra lý do tại sao không?

@@ -95,7 +95,7 @@ Nếu bạn viết `A + d`, phép tính sẽ **báo lỗi ngay lập tức**:
 
 ### 3.3. Bẫy Trừ Trung bình theo Hàng và Tham số `keepdims=True`
 Một bài toán chuẩn hóa dữ liệu kinh điển là trừ mỗi hàng của ma trận cho giá trị trung bình của chính hàng đó (*Row Centering*):
-$$\tilde{x}_{ij} = x_{ij} - \bar{x}_{i*} \quad \text{với } \bar{x}_{i*} = \frac{1}{N}\sum_{j=1}^N x_{ij}$$
+$$\tilde{x}_{ij} = x_{ij} - \bar{x}_{i*} \quad \text{where } \bar{x}_{i*} = \frac{1}{N}\sum_{j=1}^N x_{ij}$$
 
 Nếu viết:
 ```python

@@ -63,7 +63,7 @@ với các hằng số $\gamma > 0$ và $c > 0$ độc lập với kích thướ
 Đặc biệt, nếu ta chọn hệ số tăng tiệm cận $\mu = 1 + \frac{1}{\sqrt{\nu}}$, số bước Newton trong mỗi bước ngoài trở thành một hằng số $O(1)$. Nhân với số bước ngoài $N_{\text{outer}} = O(\sqrt{\nu} \log(1/\epsilon))$, ta thu được cận trên độ phức tạp toàn cục:
 
 $$
-N_{\text{total}} = O\left(\sqrt{\nu} \log\left(\frac{m}{t^{(0)} \epsilon}\right)\right) \text{ bước Newton.}
+N_{\text{total}} = O\left(\sqrt{\nu} \log\left(\frac{m}{t^{(0)} \epsilon}\right)\right) 
 $$
 
 Với bài toán có $m$ bất đẳng thức vô hướng, tham số tự tương hợp là $\nu = m$.
@@ -159,7 +159,7 @@ Một bài toán Quy hoạch tuyến tính (LP) có $m = 200$ ràng buộc bất
 3. **Khi thay đổi $\mu = 2$**:
    Số bước lặp ngoài mới:
    $$
-   N_{\text{outer}} = \left\lceil \frac{\ln(2 \times 10^8)}{\ln(2)} \right\rceil = \left\lceil \frac{19{,}1138}{0{,}6931} \right\rceil = \lceil 27{,}576 \rceil = 28 \text{ bước.}
+   N_{\text{outer}} = \left\lceil \frac{\ln(2 \times 10^8)}{\ln(2)} \right\rceil = \left\lceil \frac{19{,}1138}{0{,}6931} \right\rceil = \lceil 27{,}576 \rceil = 28 
    $$
    Số bước lặp ngoài tăng gấp khoảng 3 lần (từ 9 lên 28 bước). Tuy nhiên, mỗi bước ngoài với $\mu = 2$ lại đòi hỏi rất ít bước Newton bên trong vì điểm khởi đầu gần điểm định tâm mới hơn.
 :::

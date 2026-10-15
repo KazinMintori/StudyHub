@@ -13,7 +13,7 @@ Chủ đề cuối của chương trả lời câu hỏi mà một người họ
 
 ## 1. Huấn luyện là ước lượng hợp lý cực đại
 
-Rất nhiều hàm mất mát trong học máy không được chọn tùy tiện, mà sinh ra từ một mô hình xác suất. Giả sử dữ liệu tuân theo một phân phối $p_\theta$ phụ thuộc tham số $\theta$. **Ước lượng hợp lý cực đại** (Maximum Likelihood Estimation - MLE) chọn $\theta$ làm cực đại log-likelihood $l(\theta) = \log p_\theta(\text{dữ liệu})$. Theo nguyên lý tối ưu, bài toán ước lượng này là bài toán lồi khi log-likelihood $l(\theta)$ là một hàm lõm theo tham số $\theta$ và tập các ràng buộc đặt lên $\theta$ là tập lồi.
+Rất nhiều hàm mất mát trong học máy không được chọn tùy tiện, mà sinh ra từ một mô hình xác suất. Giả sử dữ liệu tuân theo một phân phối $p_\theta$ phụ thuộc tham số $\theta$. **Ước lượng hợp lý cực đại** (Maximum Likelihood Estimation - MLE) chọn $\theta$ làm cực đại log-likelihood $l(\theta) = \log p_\theta(\text{data})$. Theo nguyên lý tối ưu, bài toán ước lượng này là bài toán lồi khi log-likelihood $l(\theta)$ là một hàm lõm theo tham số $\theta$ và tập các ràng buộc đặt lên $\theta$ là tập lồi.
 
 Xét mô hình đo tuyến tính với $m$ quan sát: Phương trình $y_i = a_i^T x + v_i$ với $i = 1, \dots, m$, trong đó $x \in \mathbb{R}^n$ là vector tham số cần ước lượng và các thành phần nhiễu $v_i$ độc lập, cùng phân phối với hàm mật độ xác suất $p(v)$. Do tính độc lập, hàm hợp lý chung là tích các mật độ $\prod_{i=1}^m p(y_i - a_i^T x)$, dẫn đến log-likelihood có dạng tổng tường minh:
 

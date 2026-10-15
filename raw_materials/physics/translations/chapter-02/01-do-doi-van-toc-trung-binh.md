@@ -16,7 +16,7 @@ $$\Delta x = x_2 - x_1 = 277\,\mathrm m - 19\,\mathrm m = +258\,\mathrm m.\tag{2
 
 ::: warning Bản chất của ký hiệu biến thiên $\Delta$ (Delta)
 Ký hiệu $\Delta x$ không phải là tích của chữ cái $\Delta$ nhân với $x$. Trong toán học và vật lý, chữ cái Hy Lạp viết hoa $\Delta$ (delta) là một toán tử biểu thị **độ biến thiên**: Luôn lấy **giá trị lúc sau trừ đi giá trị lúc đầu**:
-$$\Delta (\text{đại lượng}) = (\text{giá trị cuối}) - (\text{giá trị đầu}).$$
+$$\Delta X = X_{\mathrm{final}} - X_{\mathrm{initial}}.$$
 Tương tự, $\Delta t = t_2 - t_1$ là khoảng thời gian trôi qua giữa hai sự kiện (luôn là số dương).
 :::
 
@@ -73,7 +73,7 @@ Cần phân biệt rõ: **Đường cong trên đồ thị $x-t$ không phải l
 Xét hai điểm $p_1(t_1, x_1)$ và $p_2(t_2, x_2)$ trên đường cong:
 - Đoạn thẳng nối $p_1$ và $p_2$ là một **cát tuyến** của đường cong đồ thị.
 - Độ dốc (*slope*) của cát tuyến này bằng độ tăng theo trục đứng chia cho độ tăng theo trục ngang:
-  $$\text{Độ dốc của cát tuyến } p_1p_2 = \frac{\Delta x}{\Delta t} = v_{\mathrm{av}-x}.$$
+  $$\text{Slope of secant } p_1p_2 = \frac{\Delta x}{\Delta t} = v_{\mathrm{av}-x}.$$
 
 Về mặt toán học: **Vận tốc trung bình trong khoảng thời gian từ $t_1$ đến $t_2$ chính là hệ số góc (độ dốc) của đường cát tuyến nối hai điểm tương ứng trên đồ thị tọa độ – thời gian ($x-t$)**. Đơn vị của độ dốc là mét chia giây ($\mathrm{m/s}$), hoàn toàn chuẩn xác với đơn vị của vận tốc.
 

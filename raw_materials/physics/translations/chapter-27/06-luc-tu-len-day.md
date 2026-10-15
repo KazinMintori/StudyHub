@@ -16,7 +16,7 @@ Với vận tốc trôi $\vec{v}_d$, lực từ lên một hạt tải điện l
 
 $$
 \begin{aligned}
-\vec{F}_{\mathrm{hạt}} &= q\,\vec{v}_d\times\vec{B}. \\
+\vec{F}_{\mathrm{particle}} &= q\,\vec{v}_d\times\vec{B}. \\
 F &= (nA\ell)(qv_dB) \\
 &= (nqv_dA)(\ell B).
 \end{aligned}

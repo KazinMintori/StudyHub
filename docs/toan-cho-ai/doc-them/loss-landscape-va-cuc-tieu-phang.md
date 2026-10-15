@@ -37,7 +37,7 @@ flowchart TD
 Giả sử một cách lý tưởng hóa rằng dấu của mỗi trị riêng có xác suất độc lập $50\%$ là âm hoặc dương. Khi đó:
 - Xác suất để một điểm dừng là cực tiểu địa phương là:
   $$
-  P(\text{Cực tiểu}) = \left(\frac{1}{2}\right)^n.
+  P(\text{Min}) = \left(\frac{1}{2}\right)^n.
   $$
 - Trong một mạng nơ-ron có $n = 10.000$ tham số, xác suất này là:
   $$
@@ -97,7 +97,7 @@ $$
 Khai triển Taylor bậc hai của hàm mất mát quanh nghiệm huấn luyện $\theta^*$:
 
 $$
-L(\theta^* + \epsilon) \approx L(\theta^*) + \underbrace{\nabla L(\theta^*)^T \epsilon}_{= 0 \text{ vì cực tiểu}} + \frac{1}{2} \epsilon^T \nabla^2 L(\theta^*) \epsilon.
+L(\theta^* + \epsilon) \approx L(\theta^*) + \underbrace{\nabla L(\theta^*)^T \epsilon}_{= 0 \\ (\text{at minimum})} + \frac{1}{2} \epsilon^T \nabla^2 L(\theta^*) \epsilon.
 $$
 
 Lượng suy giảm hiệu năng trên tập kiểm thử tỷ lệ thuận với dạng toàn phương của ma trận Hessian:

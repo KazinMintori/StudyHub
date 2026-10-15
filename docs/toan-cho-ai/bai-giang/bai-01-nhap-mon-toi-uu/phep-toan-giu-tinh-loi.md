@@ -124,7 +124,7 @@ Hình chiếu của một tập không lồi hoàn toàn có thể là một t�
 
 <details><summary>Xem lời giải thích</summary>
 
-Tập hợp mới sẽ không còn lồi. Việc thay lượng từ "với mọi" bằng "tồn tại" tương đương với việc chuyển từ phép **giao** các tập hợp sang phép **hợp** các tập hợp: Đặt $S_{\text{mới}} = \bigcup_{t} S_t$. Hợp của các tập lồi nói chung không phải là một tập lồi. Chẳng hạn với $m = 2$, hai vector $x = (3, 3)^T$ và $y = (3, -3)^T$ đều thuộc tập mới vì đa thức của chúng triệt tiêu tại các điểm biên tương ứng. Tuy nhiên trung điểm của chúng là $(3, 0)^T$ có giá trị đa thức $p(t) = 3\cos t \ge 1.5 > 1$ tại mọi điểm trên đoạn xét, do đó không thuộc tập hợp, phá vỡ tính lồi.
+Tập hợp mới sẽ không còn lồi. Việc thay lượng từ "với mọi" bằng "tồn tại" tương đương với việc chuyển từ phép **giao** các tập hợp sang phép **hợp** các tập hợp: Đặt $S_{\mathrm{new}} = \bigcup_{t} S_t$. Hợp của các tập lồi nói chung không phải là một tập lồi. Chẳng hạn với $m = 2$, hai vector $x = (3, 3)^T$ và $y = (3, -3)^T$ đều thuộc tập mới vì đa thức của chúng triệt tiêu tại các điểm biên tương ứng. Tuy nhiên trung điểm của chúng là $(3, 0)^T$ có giá trị đa thức $p(t) = 3\cos t \ge 1.5 > 1$ tại mọi điểm trên đoạn xét, do đó không thuộc tập hợp, phá vỡ tính lồi.
 
 </details>
 

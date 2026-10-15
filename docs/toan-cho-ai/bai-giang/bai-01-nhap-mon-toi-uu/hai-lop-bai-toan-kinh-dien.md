@@ -83,7 +83,7 @@ Các vector $c, a_1, \ldots, a_m \in \mathbb{R}^n$ và các số $b_1, \ldots, b
 
 ### 2.2 Bức tranh hình học: Đẩy một đường mức qua một đa giác
 
-Mỗi ràng buộc $a_i^T x \le b_i$ cắt không gian làm đôi và giữ lại một nửa. Miền khả thi là giao của các nửa đó, một **đa diện**, trong mặt phẳng là một đa giác lồi. Hàm mục tiêu $c^T x$ có các đường mức $c^T x = \text{hằng số}$ là những đường thẳng song song. Giải LP trong mặt phẳng giống như đẩy một chiếc thước kẻ theo hướng làm giá trị tốt lên, cho tới khi thước chỉ còn chạm đa giác ở mép. Chỗ chạm cuối cùng thường là một đỉnh, và cũng có thể là cả một cạnh nếu thước song song với cạnh ấy.
+Mỗi ràng buộc $a_i^T x \le b_i$ cắt không gian làm đôi và giữ lại một nửa. Miền khả thi là giao của các nửa đó, một **đa diện**, trong mặt phẳng là một đa giác lồi. Hàm mục tiêu $c^T x$ có các đường mức $c^T x = \text{const}$ là những đường thẳng song song. Giải LP trong mặt phẳng giống như đẩy một chiếc thước kẻ theo hướng làm giá trị tốt lên, cho tới khi thước chỉ còn chạm đa giác ở mép. Chỗ chạm cuối cùng thường là một đỉnh, và cũng có thể là cả một cạnh nếu thước song song với cạnh ấy.
 
 Mô phỏng dưới đây cho phép người học thay đổi hệ số của hàm mục tiêu $\max\ c_1 x + c_2 y$ trên đa giác $\{x + y \le 4,\ x \le 2,\ x \ge 0,\ y \ge 0\}$. Hãy xác định một cặp hệ số khiến nghiệm tối ưu không duy nhất.
 
@@ -165,14 +165,14 @@ Bài toán có hàm mục tiêu hoặc hàm ràng buộc không tuyến tính m�
 Mặc dù tối ưu phi lồi là một bài toán khó, lý thuyết và thuật toán tối ưu lồi không hề đứng ngoài cuộc. Ngược lại, tối ưu lồi đóng vai trò là "bộ khung xương sống" cung cấp bốn cơ chế trợ lực nền tảng cho tối ưu phi lồi:
 
 1. **Khởi tạo chất lượng cao cho tối ưu cục bộ (Convex initialization)**:
-   Hiệu năng của các phương pháp tối ưu cục bộ phụ thuộc quyết định vào điểm xuất phát ban đầu $x^{(0)}$. Thay vì gieo xúc xắc ngẫu nhiên trong không gian nhiều chiều, người ta thường xây dựng một **bài toán xấp xỉ lồi (convex surrogate)** bằng cách lược bỏ các ràng buộc phi tuyến phức tạp hoặc thay hàm mục tiêu bằng một hàm lồi gần đúng. Nghiệm tối ưu toàn cục $x^\star_{\mathrm{lồi}}$ của bài toán xấp xỉ này được dùng làm điểm xuất phát cho thuật toán tối ưu cục bộ phi lồi. Điểm khởi tạo này đưa thuật toán vào ngay thung lũng tiềm năng chứa nghiệm tốt, giúp hạ gradient hội tụ nhanh chóng và tránh được các bẫy cục bộ kém chất lượng.
+   Hiệu năng của các phương pháp tối ưu cục bộ phụ thuộc quyết định vào điểm xuất phát ban đầu $x^{(0)}$. Thay vì gieo xúc xắc ngẫu nhiên trong không gian nhiều chiều, người ta thường xây dựng một **bài toán xấp xỉ lồi (convex surrogate)** bằng cách lược bỏ các ràng buộc phi tuyến phức tạp hoặc thay hàm mục tiêu bằng một hàm lồi gần đúng. Nghiệm tối ưu toàn cục $x^\star_{\mathrm{convex}}$ của bài toán xấp xỉ này được dùng làm điểm xuất phát cho thuật toán tối ưu cục bộ phi lồi. Điểm khởi tạo này đưa thuật toán vào ngay thung lũng tiềm năng chứa nghiệm tốt, giúp hạ gradient hội tụ nhanh chóng và tránh được các bẫy cục bộ kém chất lượng.
 
 2. **Nới lỏng lồi và tính toán chặn dưới toàn cục (Convex relaxation & Global lower bounds)**:
    Bằng cách nới lỏng các ràng buộc rời rạc hoặc phi lồi thành các tập lồi chứa chúng (ví dụ: Ràng buộc nhị phân $x_i \in \{0, 1\}$ được nới lỏng thành đoạn lồi $x_i \in [0, 1]$, hoặc ràng buộc ma trận hạng một được nới lỏng thành nón ma trận nửa xác định dương trong SDP relaxation), ta thu được một bài toán tối ưu lồi nới lỏng. Do tập khả thi của bài toán lồi bao trọn tập khả thi của bài toán phi lồi, giá trị tối ưu của bài toán lồi luôn cung cấp một **ngưỡng chặn dưới toàn cục (global lower bound)** chắc chắn:
    $$
-   p^\star_{\mathrm{lồi}} \le p^\star_{\mathrm{phi\ lồi}} \le f_0(x_{\mathrm{khả\ thi}}).
+   p^\star_{\mathrm{convex}} \le p^\star_{\mathrm{nonconvex}} \le f_0(x_{\mathrm{feasible}}).
    $$
-   Với bất kỳ nghiệm khả thi $x_{\mathrm{khả\ thi}}$ nào tìm được, khoảng cách $f_0(x_{\mathrm{khả\ thi}}) - p^\star_{\mathrm{lồi}}$ mang lại một **chứng chỉ giới hạn khoảng cách nghiệm (suboptimality certificate)**: Ta biết chắc chắn giải pháp hiện tại chỉ kém nghiệm toàn cục lý tưởng nhiều nhất là bao nhiêu, mang lại sự tự tin kỹ thuật mà không cần phải giải bài toán phi lồi đầy đủ.
+   Với bất kỳ nghiệm khả thi $x_{\mathrm{feasible}}$ nào tìm được, khoảng cách $f_0(x_{\mathrm{feasible}}) - p^\star_{\mathrm{convex}}$ mang lại một **chứng chỉ giới hạn khoảng cách nghiệm (suboptimality certificate)**: Ta biết chắc chắn giải pháp hiện tại chỉ kém nghiệm toàn cục lý tưởng nhiều nhất là bao nhiêu, mang lại sự tự tin kỹ thuật mà không cần phải giải bài toán phi lồi đầy đủ.
 
 3. **Cắt tỉa trong thuật toán nhánh và cận (Branch-and-Bound algorithms)**:
    Trong các thuật toán tối ưu toàn cục chính xác, không gian tìm kiếm được phân nhánh đệ quy thành các miền con nhỏ hơn. Tại mỗi nút của cây tìm kiếm, thuật toán giải một bài toán tối ưu lồi nới lỏng để xác định chặn dưới của miền con đó. Nếu chặn dưới này lớn hơn giá trị của nghiệm khả thi tốt nhất đã tìm thấy ở các nhánh khác, toàn bộ nhánh con đó lập tức bị **cắt tỉa (pruned)** mà không cần kiểm tra tiếp. Khả năng giải cực nhanh và chắc chắn của tối ưu lồi chính là động cơ then chốt giúp loại bỏ hàng tỷ nhánh vô vọng, thu hẹp đột phá không gian tìm kiếm.

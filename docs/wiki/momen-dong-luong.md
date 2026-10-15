@@ -25,7 +25,7 @@ Với hai hạt, mômen tổng là tổng hai vector mômen. Với hệ gồm n 
 
 $$
 \begin{aligned}
-\vec L_{\mathrm{tổng}} &= \vec L_1+\vec L_2+\cdots+\vec L_n, \\
+\vec L_{\mathrm{tot}} &= \vec L_1+\vec L_2+\cdots+\vec L_n, \\
 \vec L_i &= \vec r_i\times\vec p_i.
 \end{aligned}
 $$
@@ -33,7 +33,7 @@ $$
 Chỉ số i chạy từ 1 đến n. Mômen lực ngoài quyết định tốc độ thay đổi mômen động lượng tổng khi các mômen lực nội triệt tiêu trong hệ đang xét:
 
 $$
-\vec\tau_{\mathrm{ngoài}}=\frac{d\vec L_{\mathrm{tổng}}}{dt}.
+\vec\tau_{\mathrm{ext}}=\frac{d\vec L_{\mathrm{tot}}}{dt}.
 $$
 
 Với vật rắn quay quanh một trục đối xứng cố định, mômen động lượng dọc trục có độ lớn $I\omega$. Không áp dụng quan hệ vector vô hướng này cho một trục quay bất kỳ mà chưa xét phân bố khối lượng.

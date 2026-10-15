@@ -28,7 +28,7 @@ Trí tuệ nhân tạo không chỉ dừng lại ở các thuật toán thám hi
 
 Trong Logic mệnh đề (Propositional Logic), đơn vị cơ bản nhất là một **mệnh đề nguyên tử**, tức một phát biểu chỉ có thể nhận giá trị Đúng ($\text{True}$) hoặc Sai ($\text{False}$), ví dụ:
 $$
-P: \text{“Trời đang mưa”}, \quad Q: \text{“Đường trơn”}
+P: \text{"Rain"}, \quad Q: \text{"WetStreet"}
 $$
 
 Logic mệnh đề rất thanh thoát khi kiểm tra các suy luận đơn giản thông qua bảng chân trị. Tuy nhiên, khi áp dụng vào trí tuệ nhân tạo, nó bộc lộ một **khiếm khuyết chí mạng**: **Logic mệnh đề coi mỗi sự thật như một chiếc "hộp đen" nguyên tử.** Nó không có cách nào nhìn vào cấu trúc bên trong chiếc hộp để biết sự thật đó đang nói về đối tượng nào, mang thuộc tính gì, hay có mối quan hệ ra sao với các thực thể khác.
@@ -153,7 +153,7 @@ Ký hiệu $\alpha\theta$ là biểu thức thu được sau khi thay thế đ�
 
 Thuật toán **Hợp nhất hóa (Unification)** nhận vào hai biểu thức logic $\alpha, \beta$ và tìm ra một phép thế $\theta$ sao cho:
 $$
-\text{Unify}(\alpha, \beta) = \theta \quad \text{thỏa mãn } \alpha\theta = \beta\theta
+\text{Unify}(\alpha, \beta) = \theta \quad \text{such that } \alpha\theta = \beta\theta
 $$
 
 ### Ví dụ hợp nhất hóa

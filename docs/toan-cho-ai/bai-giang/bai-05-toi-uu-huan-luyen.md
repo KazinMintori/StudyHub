@@ -120,7 +120,7 @@ Một **epoch** được định nghĩa là một chu trình hoàn chỉnh duy�
 Vì gradient lô nhỏ luôn chứa thành phần nhiễu ngẫu nhiên, thuật toán không thể hội tụ về điểm dừng nếu giữ nguyên tốc độ học cố định $\eta$. Để bảo đảm sự hội tụ tiệm cận, lịch trình giảm tốc độ học (learning rate schedule) phải thỏa mãn **điều kiện Robbins–Monro**:
 
 $$
-\sum_{t=1}^\infty \eta_t = \infty \quad \text{và} \quad \sum_{t=1}^\infty \eta_t^2 < \infty.
+\sum_{t=1}^\infty \eta_t = \infty , \quad \sum_{t=1}^\infty \eta_t^2 < \infty.
 $$
 
 Điều kiện thứ nhất bảo đảm bước đi đủ dài để đi tới nghiệm dù xuất phát từ bất kỳ đâu, trong khi điều kiện thứ hai bảo đảm phương sai tích lũy của nhiễu bị triệt tiêu dần khi tiệm cận nghiệm.
@@ -370,7 +370,7 @@ $$
 3. **Ý nghĩa của tỉ số tín hiệu trên nhiễu (SNR)**:
    Tín hiệu định hướng của gradient là vector kỳ vọng $\|\nabla f(\theta)\|_2$, trong khi độ lớn của nhiễu ngẫu nhiên được đo bằng độ lệch chuẩn:
    $$
-   \text{Độ lệch chuẩn nhiễu} = \sqrt{\operatorname{Tr}(\operatorname{Cov})} \propto \frac{\sigma}{\sqrt{m}}.
+   \text{Noise std} = \sqrt{\operatorname{Tr}(\operatorname{Cov})} \propto \frac{\sigma}{\sqrt{m}}.
    $$
    Tỉ số tín hiệu trên nhiễu tăng theo quy luật căn bậc hai $\sqrt{m}$:
    $$

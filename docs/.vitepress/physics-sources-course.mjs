@@ -23,7 +23,7 @@ export const sourcesSlides = [
   { note, title: 'Đoạn dây hữu hạn cho trường theo hai góc đầu mút', bullets: ['Biot–Savart tích phân dọc đoạn dây thẳng hữu hạn.', 'Các góc được đo từ phương vuông góc với dây qua điểm quan sát.', 'Giới hạn dây rất dài khôi phục biểu thức dây thẳng vô hạn.'], formula: display(String.raw`B=\frac{\mu_0 I}{4\pi a}(\sin\theta_1+\sin\theta_2)`) },
   { note, title: 'Định luật Ampere tính tích phân theo dòng bao', bullets: ['Dòng xuyên qua mặt được giới hạn bởi đường kín được cộng đại số.', 'Chiều dương gắn với chiều đi trên đường bằng quy tắc bàn tay phải.', 'Định luật dạng này dùng cho từ tĩnh, không bao gồm số hạng điện trường biến thiên.'], formula: display(String.raw`\oint\vec B\cdot d\vec l=\mu_0 I_{\mathrm{encl}}`) },
   { note, title: 'Dây trụ có dòng đều cho trường tuyến tính bên trong', bullets: ['Bên trong, dòng bao tỉ lệ diện tích tiết diện được bao.', 'Bên ngoài, đường tích phân bao toàn bộ dòng.', 'Độ lớn trường liên tục tại mặt trụ trong mô hình phân bố đều.'], formula: display(String.raw`\begin{aligned}&B(r) = \frac{\mu_0 I r}{2\pi R^2},\quad r<R\\&B(r) = \frac{\mu_0 I}{2\pi r},\quad r\ge R.\end{aligned}`) },
-  { note, title: 'Ống dây dài và xuyến tập trung trường nhờ đối xứng', bullets: ['Ở vùng giữa ống dây dài, trường gần đều và bên ngoài nhỏ.', 'Trong lõi xuyến, trường phụ thuộc bán kính tính từ trục xuyến.', 'Các kết quả là gần đúng hình học và giả thiết môi trường không từ tính.'], formula: display(String.raw`\begin{aligned}&B_{\text{ống dây}} \approx \mu_0 nI\\&B_{\text{xuyến}}(r) = \frac{\mu_0 NI}{2\pi r}.\end{aligned}`) },
+  { note, title: 'Ống dây dài và xuyến tập trung trường nhờ đối xứng', bullets: ['Ở vùng giữa ống dây dài, trường gần đều và bên ngoài nhỏ.', 'Trong lõi xuyến, trường phụ thuộc bán kính tính từ trục xuyến.', 'Các kết quả là gần đúng hình học và giả thiết môi trường không từ tính.'], formula: display(String.raw`\begin{aligned}&B_{\mathrm{solenoid}} \approx \mu_0 nI\\&B_{\mathrm{toroid}}(r) = \frac{\mu_0 NI}{2\pi r}.\end{aligned}`) },
   { note, title: 'Độ từ hóa bổ sung vào trường do dòng ngoài', bullets: ['Độ từ hóa là mômen từ trên một đơn vị thể tích.', 'Trong vật liệu tuyến tính đẳng hướng, độ từ thẩm tương đối liên hệ với độ cảm từ.', 'Không dùng quan hệ tuyến tính như hằng số vật liệu sắt từ khi vật liệu bão hòa hoặc có từ trễ.'], formula: display(String.raw`\begin{aligned}&\vec B = \vec B_0+\mu_0\vec M\\&\mu = K_m\mu_0\\&\chi_m = K_m-1.\end{aligned}`) },
   { note, title: 'Vật liệu sắt từ có bão hòa và từ trễ', bullets: ['Các miền từ có thể đổi kích thước và hướng khi tăng trường ngoài.', 'Sau khi bỏ trường, từ hóa dư có thể còn lại.', 'Vòng trễ phụ thuộc lịch sử từ hóa nên không mô tả bằng một độ từ thẩm cố định.'], formula: '' },
 ]
@@ -112,10 +112,10 @@ export const sourcesCheatsheet = {
         String.raw`$R$: Bán kính ngoài của khối hình trụ dẫn điện ($\mathrm{m}$)`,
         String.raw`$r$: Khoảng cách từ điểm khảo sát đến trục của hình trụ ($\mathrm{m}$)`
       ], description: 'Dây dài bán kính R, dòng I phân bố đều trên tiết diện.' },
-      { name: 'Ống dây dài và xuyến', formula: display(String.raw`\begin{aligned}&B_{\text{ống dây}} \approx \mu_0 nI\\&B_{\text{xuyến}}(r) = \frac{\mu_0 NI}{2\pi r}.\end{aligned}`), variables: [
-        String.raw`$B_{\text{ống dây}}$: Cảm ứng từ trong lòng ống dây hình trụ dài solenoid ($\mathrm{T}$)`,
+      { name: 'Ống dây dài và xuyến', formula: display(String.raw`\begin{aligned}&B_{\mathrm{solenoid}} \approx \mu_0 nI\\&B_{\mathrm{toroid}}(r) = \frac{\mu_0 NI}{2\pi r}.\end{aligned}`), variables: [
+        String.raw`$B_{\mathrm{solenoid}}$: Cảm ứng từ trong lòng ống dây hình trụ dài solenoid ($\mathrm{T}$)`,
         String.raw`$n$: Mật độ số vòng dây quấn trên 1 mét chiều dài ống ($n = N/L$) ($\mathrm{m^{-1}}$)`,
-        String.raw`$B_{\text{xuyến}}(r)$: Cảm ứng từ trong lòng cuộn dây hình xuyến toroid ($\mathrm{T}$)`,
+        String.raw`$B_{\mathrm{toroid}}(r)$: Cảm ứng từ trong lòng cuộn dây hình xuyến toroid ($\mathrm{T}$)`,
         String.raw`$N$: Tổng số vòng dây quấn quanh xuyến (Không có đơn vị)`,
         String.raw`$r$: Khoảng cách từ tâm đối xứng của hình xuyến đến điểm khảo sát trong lõi ($\mathrm{m}$)`
       ], description: 'Ống dây dài: vùng giữa. Xuyến lý tưởng: trường trong lõi.' },

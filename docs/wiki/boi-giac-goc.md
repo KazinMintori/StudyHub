@@ -16,7 +16,7 @@ Bội giác góc là tỉ số góc trông qua dụng cụ với góc trông tha
 Với góc nhỏ, kính lúp có vật ở tiêu điểm và ảnh ở vô cực:
 
 $$
-\theta \approx y/(25\,\mathrm{cm})\\\theta^\prime \approx y/f\\M =\theta^\prime/\theta\\ =(25\,\mathrm{cm})/f.
+\theta \approx y/(25\,\mathrm{cm})\\theta^\prime \approx y/f\\M =\theta^\prime/\theta\\ =(25\,\mathrm{cm})/f.
 $$
 
 Kích thước ảnh trên võng mạc phụ thuộc góc trông. Định nghĩa góc tham chiếu cần được giữ rõ khi chuyển từ kính lúp sang kính thiên văn, nơi vật đã ở rất xa.

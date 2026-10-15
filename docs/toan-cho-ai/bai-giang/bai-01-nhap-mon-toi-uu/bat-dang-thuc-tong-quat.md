@@ -89,8 +89,8 @@ Hai khái niệm này có biểu diễn hình học rất sáng sủa:
 
 $$
 \begin{aligned}
-x \text{ là phần tử nhỏ nhất} &\iff S \subseteq x + K, \\
-x \text{ là phần tử tối thiểu} &\iff (x - K) \cap S = \{x\}.
+x \text{ is the minimum element} &\iff S \subseteq x + K, \\
+x \text{ is a minimal element} &\iff (x - K) \cap S = \{x\}.
 \end{aligned}
 $$
 

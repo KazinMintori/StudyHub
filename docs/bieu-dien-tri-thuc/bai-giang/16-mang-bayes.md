@@ -57,7 +57,7 @@ $$
 
 Bảng này chứa tổng cộng:
 $$
-2^n - 1 \quad \text{tham số độc lập}
+2^n - 1 \quad (\text{independent parameters})
 $$
 
 Hãy thử làm một phép tính định lượng:

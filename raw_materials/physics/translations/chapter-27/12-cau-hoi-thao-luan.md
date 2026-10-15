@@ -221,11 +221,11 @@ Một sinh viên cho rằng khi sét đánh vào cột cờ kim loại, lực t�
 - Dùng một ước lượng bậc độ lớn cho từ trường Trái Đất và chiều dài cột.
 - Tính trường hợp lực cực đại để tạo cận trên cho tác dụng từ.
 
-Lấy $B_{\mathrm{TĐ}}\approx5\times10^{-5}\,\mathrm{T}$ và cột dài khoảng $10\,\mathrm{m}$. Với dòng lớn nhất $10^5\,\mathrm{A}$, ngay cả khi dòng vuông góc từ trường:
+Lấy $B_{\mathrm{Earth}}\approx5\times10^{-5}\,\mathrm{T}$ và cột dài khoảng $10\,\mathrm{m}$. Với dòng lớn nhất $10^5\,\mathrm{A}$, ngay cả khi dòng vuông góc từ trường:
 
 $$
 \begin{aligned}
-F_{\max} &= ILB_{\mathrm{TĐ}} \\
+F_{\max} &= ILB_{\mathrm{Earth}} \\
 &= (10^5)(10)(5\times10^{-5}) \\
 &\approx 50\,\mathrm{N}.
 \end{aligned}

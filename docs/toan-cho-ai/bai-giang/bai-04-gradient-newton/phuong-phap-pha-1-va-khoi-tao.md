@@ -186,7 +186,7 @@ Giả sử ta giải bài toán Pha I cơ bản bằng phương pháp giảm gra
 1. **Điều kiện dừng sớm**:
    Tại mỗi bước lặp $k$, sau khi cập nhật biến $(x^{(k)}, s^{(k)})$, thuật toán kiểm tra ngay điều kiện:
    $$
-   s^{(k)} < 0 \quad \text{hoặc} \quad \max_{i=1,\dots,m} f_i(x^{(k)}) < 0.
+   s^{(k)} < 0 \quad \text{or} \quad \max_{i=1,\dots,m} f_i(x^{(k)}) < 0.
    $$
    Nếu điều kiện này thỏa mãn, thuật toán lập tức phát tín hiệu dừng Pha I mà không cần chờ điều kiện hội tụ gradient.
 

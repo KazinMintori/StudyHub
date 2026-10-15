@@ -134,8 +134,8 @@ Sự khác biệt hình học giữa quả cầu $\ell_1$ và quả cầu $\ell_
 
 $$
 \begin{aligned}
-&\quad \text{Cực tiểu hóa:}\quad \|x - y\|_2^2 \\
-\text{Thỏa mãn:}\quad \|x\| &\le 1 .
+&\quad \text{minimize}\quad \|x - y\|_2^2 \\
+\text{subject to}\quad \|x\| &\le 1 .
 \end{aligned}
 $$
 

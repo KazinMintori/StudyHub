@@ -228,7 +228,7 @@ $$
 
 ### Cân bằng năng lượng trong mạch R-C
 
-Trong quá trình nạp, nguồn cung cấp công suất tức thời $P_{\mathrm{nguồn}}=\mathcal E i$. Điện trở tỏa nhiệt với công suất $P_R=i^2R$. Tốc độ tăng năng lượng điện trường của tụ là $P_C=i(q/C)$. Nhân phương trình vòng kín (26.9) với $i$, ta thu được:
+Trong quá trình nạp, nguồn cung cấp công suất tức thời $P_{\mathrm{source}}=\mathcal E i$. Điện trở tỏa nhiệt với công suất $P_R=i^2R$. Tốc độ tăng năng lượng điện trường của tụ là $P_C=i(q/C)$. Nhân phương trình vòng kín (26.9) với $i$, ta thu được:
 
 $$
 \mathcal E i = i^2R+i\frac{q}{C}. \tag{26.18}

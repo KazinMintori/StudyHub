@@ -65,7 +65,7 @@ Do đó, công suất điện pin đưa ra hai cực là:
 
 $$
 \begin{aligned}
-P_{\mathrm{ra}} &= V_{ab}I \\
+P_{\mathrm{out}} &= V_{ab}I \\
 &= \mathcal EI-I^2r.
 \end{aligned} \tag{25.19}
 $$
@@ -86,7 +86,7 @@ Công suất điện đi vào pin trở thành:
 
 $$
 \begin{aligned}
-P_{\mathrm{vào}} &= V_{ab}I \\
+P_{\mathrm{in}} &= V_{ab}I \\
 &= \mathcal EI+I^2r.
 \end{aligned} \tag{25.20}
 $$
@@ -145,9 +145,9 @@ Giữ pin có $\mathcal E=12$ V, $r=2$ Ω, nhưng thay điện trở ngoài 4 Ω
 
 $$
 \begin{aligned}
-R_{\mathrm{tđ}} &= 8\,\Omega+2\,\Omega \\
+R_{\mathrm{eq}} &= 8\,\Omega+2\,\Omega \\
 &= 10\,\Omega. \\
-I &= \frac{\mathcal E}{R_{\mathrm{tđ}}} \\
+I &= \frac{\mathcal E}{R_{\mathrm{eq}}} \\
 &= \frac{12\,\mathrm V}{10\,\Omega} \\
 &= 1{,}2\,\mathrm A.
 \end{aligned}

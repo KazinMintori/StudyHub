@@ -54,11 +54,11 @@ Sau đó, De Méré chuyển sang một trò chơi mới có tiền thưởng l�
 Quá bế tắc, De Méré đã viết thư gửi nhà toán học thiên tài Blaise Pascal vào năm 1654 để nhờ giải thích. Pascal cùng Pierre de Fermat đã tiến hành mổ xẻ bài toán và chỉ ra sai lầm nghiêm trọng trong suy luận của De Méré:
 
 1. **Ở Trò chơi 1**: Các lần xuất hiện mặt 6 ở các lượt gieo khác nhau **không phải là các biến cố xung khắc** (ta có thể đổ ra mặt 6 ở cả lượt thứ nhất lẫn lượt thứ hai). Phép cộng $1/6 + 1/6 + 1/6 + 1/6$ đã làm lặp lại nhiều lần các kết quả giao nhau. Xác suất thực tế phải được tính qua biến cố đối (không có lần nào ra mặt 6):
-   $$P(\text{Thắng 1}) = 1 - \left(\frac{5}{6}\right)^4 = 1 - \frac{625}{1296} = \frac{671}{1296} \approx 0.5177 > 0.5$$
+   $$P(\text{Win 1}) = 1 - \left(\frac{5}{6}\right)^4 = 1 - \frac{625}{1296} = \frac{671}{1296} \approx 0.5177 > 0.5$$
    Vì $51.77\% > 50\%$, De Méré thắng trong dài hạn là nhờ lợi thế nhỏ $1.77\%$, chứ không phải vì xác suất đạt tới $66.7\%$.
 
 2. **Ở Trò chơi 2**: Xác suất thực tế qua biến cố đối (không có lần nào ra cặp 6, 6 trong 24 lượt) là:
-   $$P(\text{Thắng 2}) = 1 - \left(\frac{35}{36}\right)^{24} \approx 1 - 0.5086 = 0.4914 < 0.5$$
+   $$P(\text{Win 2}) = 1 - \left(\frac{35}{36}\right)^{24} \approx 1 - 0.5086 = 0.4914 < 0.5$$
    Vì $49.14\% < 50\%$, xác suất thắng nhỏ hơn $50\%$, khiến De Méré chắc chắn phải chịu thua lỗ khi chơi dài hạn!
 
 Cuộc trao đổi thư từ lịch sử giữa Pascal và Fermat xung quanh Nghịch lý De Méré đã đặt nền móng khai sinh cho toàn bộ ngành Xác suất học hiện đại.
@@ -81,7 +81,7 @@ Là một hành động hoặc quá trình thực nghiệm mang tính chất ng�
 
 ### 2. Không gian mẫu (Sample Space / Outcome Space)
 Là tập hợp tất cả các kết quả có thể xảy ra của một phép thử ngẫu nhiên. Không gian mẫu thường được ký hiệu bằng chữ cái Hy Lạp in hoa $\Omega$ (Omega) hoặc chữ cái $S$.
-- Phép thử tung một đồng xu: $\Omega = \{\text{Ngửa (H)}, \text{Sấp (T)}\}$.
+- Phép thử tung một đồng xu: $\Omega = \\{\text{H}, \text{T}\\}$.
 - Phép thử gieo một con xúc xắc 6 mặt: $\Omega = \{1, 2, 3, 4, 5, 6\}$.
 - Phép thử tung đồng xu 2 lần liên tiếp: $\Omega = \{HH, HT, TH, TT\}$.
 
@@ -236,9 +236,9 @@ Một bàn quay Roulette chuẩn của Mỹ gồm 38 ô số phân bổ đều t
 
 Khi quả bóng kim loại dừng ngẫu nhiên tại một trong 38 ô:
 - Xác suất rơi vào ô màu đỏ:
-  $$P(\text{Đỏ}) = \frac{18}{38} = \frac{9}{19} \approx 0.4737 \text{ (47.37\%) }$$
+  $$P(\text{Red}) = \frac{18}{38} = \frac{9}{19} \approx 0.4737 \text{ (47.37\%) }$$
 - Xác suất không rơi vào ô màu đỏ:
-  $$P(\text{Không đỏ}) = 1 - P(\text{Đỏ}) = 1 - \frac{18}{38} = \frac{20}{38} \approx 0.5263 \text{ (52.63\%) }$$
+  $$P(\text{Not red}) = 1 - P(\text{Red}) = 1 - \frac{18}{38} = \frac{20}{38} \approx 0.5263 \text{ (52.63\%) }$$
 - Sự chênh lệch giữa $52.63\%$ và $47.37\%$ chính là **Lợi thế nhà cái (House Edge)**, đảm bảo sòng bạc luôn có lãi trong dài hạn.
 
 ---
@@ -284,7 +284,7 @@ Hãy vận dụng kiến thức về không gian mẫu và quy tắc biến cố
 ::: solution Lời giải chi tiết Bài tập 1
 1. **Phân tích Trò chơi 1**:
    - Số phần tử của không gian mẫu: Mỗi lần gieo có 6 kết quả, do đó gieo 4 lần liên tiếp có:
-     $$|\Omega_1| = 6 \times 6 \times 6 \times 6 = 6^4 = 1{,}296 \text{ kết quả đồng khả năng}$$
+     $$|\Omega_1| = 6 \times 6 \times 6 \times 6 = 6^4 = 1{,}296 \text{ equally likely outcomes}$$
    - Biến cố đối $A^c$ là: *"Cả 4 lần gieo đều không xuất hiện mặt 6"*.
    - Ở mỗi lần gieo, có 5 kết quả thuận lợi cho $A^c$ (các mặt $\{1, 2, 3, 4, 5\}$).
    - Số kết quả thuận lợi cho $A^c$ là:
@@ -395,7 +395,7 @@ Giả sử ta chọn ngẫu nhiên đồng khả năng một cá thể chim cán
 ::: solution Lời giải chi tiết Bài tập 3
 1. **Mô tả Mô hình Hộp (Box Model)**:
    - Phép thử chọn ngẫu nhiên tương đương với việc rút một tấm vé từ một chiếc hộp lớn chứa đúng $344$ tấm vé giống hệt nhau về hình thức, gồm:
-     $$\fbox{152 vé Adelie, 68 vé Chinstrap, 124 vé Gentoo}$$
+     $$\fbox{152 Adelie, 68 Chinstrap, 124 Gentoo}$$
    - Mỗi tấm vé có xác suất được rút đồng khả năng bằng $\frac{1}{344}$.
 
 2. **Tính xác suất các loài $A$ và $C$**:

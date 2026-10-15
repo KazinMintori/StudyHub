@@ -117,14 +117,14 @@ Khi đó, phân phối dữ liệu có **hai đỉnh nhọn ở hai đầu cực
 
 $$
 \begin{aligned}
-\text{Nhóm khóa lịch hoàn toàn: } X &= 0 \\
-\text{Nhóm kinh doanh quanh năm: } X &\approx 365
+\text{Group 1: } X &= 0 \\
+\text{Group 2: } X &\approx 365
 \end{aligned}
 $$
 
 Nếu người phân tích ngây thơ tính giá trị trung bình cộng:
 $$
-\bar{X} \approx \frac{0 \times N_1 + 365 \times N_2}{N_1 + N_2} \approx 180 \text{ ngày}
+\bar{X} \approx \frac{0 \times N_1 + 365 \times N_2}{N_1 + N_2} \approx 180\text{ days}
 $$
 Con số trung bình 180 ngày là một **con số ảo tưởng hoàn toàn vô nghĩa**. Trong thực tế, hầu như không có chủ nhà nào mở lịch nửa năm rồi đóng nửa năm. Việc chỉ báo cáo một con số trung bình đơn độc sẽ che giấu hoàn toàn bản chất phân hóa sâu sắc của hai nhóm hành vi kinh doanh. Một histogram với số khoảng đủ chi tiết là công cụ duy nhất phơi bày sự thật này.
 

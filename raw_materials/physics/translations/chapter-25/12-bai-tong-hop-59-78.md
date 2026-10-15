@@ -226,7 +226,7 @@ $$
 **Hướng đi:**
 
 - Tổng điện trở ban đầu là $10\,\mathrm{k}\Omega+2\,\mathrm{k}\Omega$.
-- Công suất trong cơ thể chỉ dùng điện trở cơ thể: $I^2R_{\mathrm{cơ thể}}$.
+- Công suất trong cơ thể chỉ dùng điện trở cơ thể: $I^2R_{\mathrm{body}}$.
 - Với giới hạn 1,00 mA, tổng điện trở ít nhất phải là $\mathcal E/I_{\max}$.
 
 (a)
@@ -236,7 +236,7 @@ I=\frac{14\,000}{10\,000+2\,000}
 =1{,}17\,\mathrm A.
 $$
 
-(b) $P_{\mathrm{cơ thể}}=I^2(10\,000)\approx1{,}36\times10^4$ W.
+(b) $P_{\mathrm{body}}=I^2(10\,000)\approx1{,}36\times10^4$ W.
 
 (c)
 
@@ -331,9 +331,9 @@ $$
 
 $$
 \begin{aligned}
-R_{\mathrm{trái}} &= \frac1A\int_0^{L/2}(a+bx^2)\,dx \\
+R_{\mathrm{left}} &= \frac1A\int_0^{L/2}(a+bx^2)\,dx \\
 &\approx 5{,}47\times10^{-5}\,\Omega, \\
-R_{\mathrm{phải}} &= R-R_{\mathrm{trái}} \\
+R_{\mathrm{right}} &= R-R_{\mathrm{left}} \\
 &\approx 1{,}16\times10^{-4}\,\Omega.
 \end{aligned}
 $$
@@ -576,7 +576,7 @@ Bài toán cho bảng giới hạn dòng điện của dây đồng bọc cách 
 
 - Dòng cực đại phụ thuộc khả năng tỏa nhiệt, vật liệu cách điện, điều kiện làm mát và quy định an toàn.
 - Chọn gauge nhỏ nhất về kích thước dây, tức gauge có số lớn nhất trong bảng thỏa dòng.
-- Dùng $R=\rho L/A$, $P_{\mathrm{dây}}=I^2R$, rồi tính chênh năng lượng và tiền điện.
+- Dùng $R=\rho L/A$, $P_{\mathrm{wire}}=I^2R$, rồi tính chênh năng lượng và tiền điện.
 
 (b) $I=4200/120=35{,}0$ A, nên gauge 8 là dây mảnh nhất cho phép. (c) Với đường kính $0{,}326$ cm, $A=\pi(0{,}00326/2)^2$. Dùng $\rho_{\mathrm{Cu}}=1{,}72\times10^{-8}\,\Omega\mathrm m$, ta được $R\approx0{,}0865\,\Omega$ và công suất hao phí xấp xỉ 106 W.
 

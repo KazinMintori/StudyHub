@@ -60,9 +60,9 @@ Tên đơn vị mới được tạo bằng cách ghép một tiền tố vào t
 
 $$
 \begin{aligned}
-1\text{ kilômét} &= 1\,\mathrm{km}=10^3\text{ mét}=10^3\,\mathrm m, \\
-1\text{ kilôgam} &= 1\,\mathrm{kg}=10^3\text{ gam}=10^3\,\mathrm g, \\
-1\text{ kilôwatt} &= 1\,\mathrm{kW}=10^3\text{ watt}=10^3\,\mathrm W.
+1\text{ km} &= 1\,\mathrm{km}=10^3\text{ m}=10^3\,\mathrm m, \\
+1\text{ kg} &= 1\,\mathrm{kg}=10^3\text{ g}=10^3\,\mathrm g, \\
+1\text{ kW} &= 1\,\mathrm{kW}=10^3\text{ W}=10^3\,\mathrm W.
 \end{aligned}
 $$
 
@@ -74,8 +74,8 @@ Sách cũng đề cập hệ đơn vị Anh, được sử dụng ở Hoa Kỳ v
 
 $$
 \begin{aligned}
-1\text{ inch} &= 2.54\,\mathrm{cm}\quad\text{(chính xác)}. \\
-1\text{ pound lực} &= 4.448221615260\,\mathrm N\quad\text{(chính xác)}.
+1\text{ inch} &= 2.54\,\mathrm{cm}\quad\text{(exact)}. \\
+1\text{ lbf} &= 4.448221615260\,\mathrm N\quad\text{(exact)}.
 \end{aligned}
 $$
 
@@ -87,17 +87,17 @@ Sách dùng SI cho mọi ví dụ và bài tập, nhưng đôi lúc ghi thêm gi
 
 | Đại lượng | Đơn vị và quy đổi | Cỡ điển hình được sách dùng để minh họa |
 | --- | --- | --- |
-| Độ dài | $1\text{ nanomét}=1\,\mathrm{nm}=10^{-9}\,\mathrm m$ | Vài lần kích thước nguyên tử lớn nhất. |
-| Độ dài | $1\text{ micromét}=1\,\mu\mathrm m=10^{-6}\,\mathrm m$ | Kích thước một số vi khuẩn và tế bào khác. |
-| Độ dài | $1\text{ milimét}=1\,\mathrm{mm}=10^{-3}\,\mathrm m$ | Đường kính đầu bút bi. |
-| Độ dài | $1\text{ centimét}=1\,\mathrm{cm}=10^{-2}\,\mathrm m$ | Đường kính ngón tay út. |
-| Độ dài | $1\text{ kilômét}=1\,\mathrm{km}=10^3\,\mathrm m$ | Quãng đường đi bộ trong khoảng $10$ phút. |
+| Độ dài | $1\text{ nm}=1\,\mathrm{nm}=10^{-9}\,\mathrm m$ | Vài lần kích thước nguyên tử lớn nhất. |
+| Độ dài | $1\mu\text{m}=1\,\mu\mathrm m=10^{-6}\,\mathrm m$ | Kích thước một số vi khuẩn và tế bào khác. |
+| Độ dài | $1\text{ mm}=1\,\mathrm{mm}=10^{-3}\,\mathrm m$ | Đường kính đầu bút bi. |
+| Độ dài | $1\text{ cm}=1\,\mathrm{cm}=10^{-2}\,\mathrm m$ | Đường kính ngón tay út. |
+| Độ dài | $1\text{ km}=1\,\mathrm{km}=10^3\,\mathrm m$ | Quãng đường đi bộ trong khoảng $10$ phút. |
 | Khối lượng | $1\text{ microgam}=1\,\mu\mathrm g=10^{-6}\,\mathrm g=10^{-9}\,\mathrm{kg}$ | Khối lượng một hạt bụi rất nhỏ. |
 | Khối lượng | $1\text{ miligam}=1\,\mathrm{mg}=10^{-3}\,\mathrm g=10^{-6}\,\mathrm{kg}$ | Khối lượng một hạt muối. |
-| Khối lượng | $1\text{ gam}=1\,\mathrm g=10^{-3}\,\mathrm{kg}$ | Khối lượng một chiếc kẹp giấy. |
-| Thời gian | $1\text{ nanôgiây}=1\,\mathrm{ns}=10^{-9}\,\mathrm s$ | Thời gian ánh sáng truyền khoảng $0.3\,\mathrm m$. |
-| Thời gian | $1\text{ microgiây}=1\,\mu\mathrm s=10^{-6}\,\mathrm s$ | Thời gian trạm vũ trụ dịch chuyển khoảng $8\,\mathrm{mm}$. |
-| Thời gian | $1\text{ miligiây}=1\,\mathrm{ms}=10^{-3}\,\mathrm s$ | Thời gian xe chạy ở tốc độ đường cao tốc đi khoảng $3\,\mathrm{cm}$. |
+| Khối lượng | $1\text{ g}=1\,\mathrm g=10^{-3}\,\mathrm{kg}$ | Khối lượng một chiếc kẹp giấy. |
+| Thời gian | $1\text{ ns}=1\,\mathrm{ns}=10^{-9}\,\mathrm s$ | Thời gian ánh sáng truyền khoảng $0.3\,\mathrm m$. |
+| Thời gian | $1\mu\text{s}=1\,\mu\mathrm s=10^{-6}\,\mathrm s$ | Thời gian trạm vũ trụ dịch chuyển khoảng $8\,\mathrm{mm}$. |
+| Thời gian | $1\text{ ms}=1\,\mathrm{ms}=10^{-3}\,\mathrm s$ | Thời gian xe chạy ở tốc độ đường cao tốc đi khoảng $3\,\mathrm{cm}$. |
 
 ### Hình 1.5 — Một số độ dài điển hình trong vũ trụ
 

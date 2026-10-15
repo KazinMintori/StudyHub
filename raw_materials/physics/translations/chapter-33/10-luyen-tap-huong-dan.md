@@ -84,7 +84,7 @@ Tìm (a) chiết suất chất lỏng, (b) góc khúc xạ, (c) tần số trong
 (a):
 
 $$
-n=\frac{\lambda_{\mathrm{khí}}}{\lambda_{\mathrm{lỏng}}}
+n=\frac{\lambda_{\mathrm{air}}}{\\lambda_{\mathrm{liq}}}
 =\frac{635}{508}=1{,}25.
 $$
 
@@ -101,9 +101,9 @@ $$
 
 $$
 \begin{aligned}
-f_{\mathrm{khí}} &= \frac c{\lambda_{\mathrm{khí}}} \\
+f_{\mathrm{air}} &= \frac c{\lambda_{\mathrm{air}}} \\
 &= 4{,}72\times10^{14}\,\mathrm{Hz}, \\
-f_{\mathrm{lỏng}} &= f_{\mathrm{khí}}.
+f_{\mathrm{liq}} &= f_{\mathrm{air}}.
 \end{aligned}
 $$
 
@@ -256,7 +256,7 @@ Hai chùm sáng cùng có cường độ $I_0$ chiếu đồng thời vào một
 
 $$
 \begin{aligned}
-I_{\mathrm{ra}} &= \frac{I_0}2+I_0\cos^2 30^\circ \\
+I_{\mathrm{out}} &= \frac{I_0}2+I_0\cos^2 30^\circ \\
 &= \frac{I_0}2+\frac{3I_0}4 \\
 &= \frac{5I_0}4.
 \end{aligned}

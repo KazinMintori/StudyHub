@@ -286,7 +286,7 @@ Một nhà phân tích dữ liệu hàng không rút ngẫu nhiên một mẫu g
 **1. Tính sai số chuẩn ước lượng:**
 Áp dụng công thức tính sai số chuẩn cho trung bình mẫu:
 $$
-\widehat{\text{SE}}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{81.5}{\sqrt{30}} \approx \frac{81.5}{5.4772} \approx 14.88 \text{ phút}
+\widehat{\text{SE}}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{81.5}{\sqrt{30}} \approx \frac{81.5}{5.4772} \approx 14.88 \text{ min}
 $$
 
 **2. Xây dựng khoảng tin cậy 95%:**
@@ -295,7 +295,7 @@ $$
 \begin{aligned}
 \text{CI}_{95\%} &= \left[ \bar{x} - 1.96 \cdot \widehat{\text{SE}}(\bar{x}), \; \bar{x} + 1.96 \cdot \widehat{\text{SE}}(\bar{x}) \right] \\
 &= [118.0 - 1.96(14.88), \; 118.0 + 1.96(14.88)] \\
-&= [118.0 - 29.16, \; 118.0 + 29.16] = [88.84, \; 147.16] \text{ phút}
+&= [118.0 - 29.16, \; 118.0 + 29.16] = [88.84, \; 147.16] \text{ min}
 \end{aligned}
 $$
 Kết luận: Ta tin tưởng 95% rằng thời gian bay trung bình của toàn bộ các chuyến bay nằm trong khoảng từ $88.84$ phút đến $147.16$ phút.
@@ -303,11 +303,11 @@ Kết luận: Ta tin tưởng 95% rằng thời gian bay trung bình của toàn
 **3. Xác định cỡ mẫu để tăng độ chính xác lên 3 lần:**
 Độ chính xác của ước lượng tỉ lệ nghịch với sai số chuẩn. Muốn độ chính xác tăng gấp 3 lần, sai số chuẩn mới phải bằng $1/3$ sai số chuẩn cũ:
 $$
-\text{SE}_{\text{mới}} = \frac{1}{3} \text{SE}_{\text{cũ}} \implies \frac{s}{\sqrt{n_{\text{mới}}}} = \frac{1}{3} \frac{s}{\sqrt{n_{\text{cũ}}}} \implies \sqrt{n_{\text{mới}}} = 3\sqrt{n_{\text{cũ}}}
+\mathrm{SE}_{\mathrm{new}} = \frac{1}{3} \mathrm{SE}_{\mathrm{old}} \implies \frac{s}{\sqrt{n_{\mathrm{new}}}} = \frac{1}{3} \frac{s}{\sqrt{n_{\mathrm{old}}}} \implies \sqrt{n_{\mathrm{new}}} = 3\sqrt{n_{\mathrm{old}}}
 $$
 Bình phương hai vế:
 $$
-n_{\text{mới}} = 3^2 \times n_{\text{cũ}} = 9 \times n_{\text{cũ}} = 9 \times 30 = 270 \text{ chuyến bay}
+n_{\mathrm{new}} = 3^2 \times n_{\mathrm{old}} = 9 \times n_{\mathrm{old}} = 9 \times 30 = 270 \text{ flights}
 $$
 Do đó, nhà phân tích cần khảo sát một mẫu gồm $270$ chuyến bay.
 :::
@@ -343,16 +343,16 @@ Vì độ lệch chuẩn $\sigma$ và cỡ mẫu $n = 100$ là như nhau, sai s�
 Bắt buộc phải áp dụng hệ số hiệu chỉnh tổng thể hữu hạn $\text{FPC} = \sqrt{\frac{N - n}{N - 1}}$:
 - Đối với Grimes ($N = 400$):
   $$
-  \text{FPC}_{\text{Grimes}} = \sqrt{\frac{400 - 100}{400 - 1}} = \sqrt{\frac{300}{399}} \approx \sqrt{0.7519} \approx 0.8671
+  \mathrm{FPC}_{\mathrm{Grimes}} = \sqrt{\frac{400 - 100}{400 - 1}} = \sqrt{\frac{300}{399}} \approx \sqrt{0.7519} \approx 0.8671
   $$
 - Đối với Tranquility ($N = 800$):
   $$
-  \text{FPC}_{\text{Tranq}} = \sqrt{\frac{800 - 100}{800 - 1}} = \sqrt{\frac{700}{799}} \approx \sqrt{0.8761} \approx 0.9360
+  \mathrm{FPC}_{\mathrm{Tranq}} = \sqrt{\frac{800 - 100}{800 - 1}} = \sqrt{\frac{700}{799}} \approx \sqrt{0.8761} \approx 0.9360
   $$
 
 So sánh độ rộng khoảng tin cậy:
 $$
-\frac{\text{Độ rộng}_{\text{Tranq}}}{\text{Độ rộng}_{\text{Grimes}}} = \frac{\text{FPC}_{\text{Tranq}}}{\text{FPC}_{\text{Grimes}}} = \frac{0.9360}{0.8671} \approx 1.0795 \approx 1.08
+\frac{\text{Width}_{\mathrm{Tranq}}}{\text{Width}_{\mathrm{Grimes}}} = \frac{\mathrm{FPC}_{\mathrm{Tranq}}}{\mathrm{FPC}_{\mathrm{Grimes}}} = \frac{0.9360}{0.8671} \approx 1.0795 \approx 1.08
 $$
 Khoảng tin cậy của Tranquility sẽ **rộng hơn khoảng 8% (gần 10%)** so với Grimes. Lý do là việc lấy mẫu $100$ hộ trên tổng số $400$ hộ ở Grimes đã giúp quan sát tới $1/4$ dân số, giúp triệt tiêu nhiều biến thiên chọn mẫu hơn so với khi lấy mẫu trên $800$ hộ.
 :::

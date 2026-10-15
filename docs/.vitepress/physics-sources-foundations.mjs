@@ -17,7 +17,7 @@ export const sourcesConcepts = {
   'tu-hoa-du': term(String.raw`Từ hóa dư`, [String.raw`từ dư`, String.raw`remanence`], String.raw`Từ hóa dư là độ từ hóa còn lại sau khi trường ngoài được giảm về không từ trạng thái đã từ hóa. Giá trị này thuộc nhánh từ hóa cụ thể và là một phần của vòng trễ.`, String.raw`Nam châm vĩnh cửu giữ từ hóa dư đáng kể sau khi ngắt trường kích từ.`, String.raw`Mô tả khả năng giữ từ của vật liệu.`, String.raw`Muốn khử từ dư cần làm gì?`, String.raw`Đặt trường ngược đủ lớn để đưa độ từ hóa về không.`),
   'luc-khu-tu': term(String.raw`Trường kháng từ`, [String.raw`trường khử từ`, String.raw`lực kháng từ`, String.raw`coercivity`], String.raw`Trường kháng từ là độ lớn trường ngược cần đặt để đưa độ từ hóa về không sau khi mẫu đã được từ hóa. Nó được đọc trên vòng trễ.`, String.raw`Vật liệu từ cứng có trường kháng từ lớn hơn vật liệu từ mềm trong so sánh vòng trễ.`, String.raw`Đánh giá khả năng chống mất từ của nam châm.`, String.raw`Vật liệu có trường kháng từ lớn có dễ bị khử từ hơn không?`, String.raw`Không. Cần trường ngược lớn hơn.`),
   'hien-tuong-curie': term(String.raw`Định luật Curie`, [String.raw`định luật Curie`, String.raw`định luật Curi`], String.raw`Trong miền áp dụng cho vật liệu thuận từ, độ từ hóa tuân theo $M=CB/T$, với $C$ là hằng số Curie và $T$ là nhiệt độ tuyệt đối. Ở cùng trường, tăng nhiệt độ làm giảm độ từ hóa.`, String.raw`Khi nhiệt độ tăng gấp đôi và trường giữ nguyên, mô hình Curie dự đoán độ từ hóa giảm còn một nửa.`, String.raw`Mô tả ảnh hưởng nhiệt độ lên đáp ứng thuận từ trong miền phù hợp.`, String.raw`Nhiệt độ trong định luật Curie phải là nhiệt độ Celsius hay tuyệt đối?`, String.raw`Nhiệt độ tuyệt đối, tính bằng kelvin.`),
-  'ong-day-dien': term(String.raw`Ống dây`, [String.raw`ống dây dài`, String.raw`solenoid`], String.raw`Ống dây là dây dẫn quấn nhiều vòng quanh một hình trụ. Với ống dây đủ dài, trường gần vùng giữa gần đều và có độ lớn $B\approx\mu_0 nI$ trong chân không hoặc môi trường gần đúng không từ tính.`, String.raw`Ống dây dài có $1000\,\mathrm{vòng/m}$, mang dòng $0{,}50\,\mathrm A$, tạo trường khoảng $0{,}628\,\mathrm{mT}$ gần tâm trong không khí.`, String.raw`Tạo trường gần đều trong cuộn cảm và nam châm điện.`, String.raw`Công thức ống dây dài có mô tả chính xác vùng đầu không?`, String.raw`Không. Hiệu ứng đầu làm trường giảm và không còn gần đều.`),
+  'ong-day-dien': term(String.raw`Ống dây`, [String.raw`ống dây dài`, String.raw`solenoid`], String.raw`Ống dây là dây dẫn quấn nhiều vòng quanh một hình trụ. Với ống dây đủ dài, trường gần vùng giữa gần đều và có độ lớn $B\approx\mu_0 nI$ trong chân không hoặc môi trường gần đúng không từ tính.`, String.raw`Ống dây dài có $1000\,\mathrm{turns/m}$, mang dòng $0{,}50\,\mathrm A$, tạo trường khoảng $0{,}628\,\mathrm{mT}$ gần tâm trong không khí.`, String.raw`Tạo trường gần đều trong cuộn cảm và nam châm điện.`, String.raw`Công thức ống dây dài có mô tả chính xác vùng đầu không?`, String.raw`Không. Hiệu ứng đầu làm trường giảm và không còn gần đều.`),
   'ong-day-hinh-xuyen': term(String.raw`Ống dây hình xuyến`, [String.raw`xuyến từ`, String.raw`toroid`], String.raw`Ống dây hình xuyến quấn quanh lõi dạng vòng. Trong mô hình lý tưởng có $N$ vòng, dòng $I$ và đường tròn Ampere bán kính $r$ trong lõi, trường có độ lớn $B(r)=\frac{\mu_0NI}{2\pi r}$.`, String.raw`Xuyến không có lõi từ với 500 vòng, dòng $0{,}20\,\mathrm A$, cho trường $0{,}400\,\mathrm{mT}$ tại bán kính $5{,}0\,\mathrm{cm}$. Ở bán kính gấp đôi trong cùng miền lõi, trường còn một nửa.`, String.raw`Tập trung từ thông trong lõi vòng kín.`, String.raw`Trường trong lõi xuyến có đều theo bán kính không?`, String.raw`Không. Độ lớn tỉ lệ nghịch với bán kính $r$.`),
 }
 
@@ -35,7 +35,7 @@ Với hai hạt, mômen tổng là tổng hai vector mômen. Với hệ gồm n 
 
 $$
 \begin{aligned}
-&\vec L_{\mathrm{tổng}} = \vec L_1+\vec L_2+\cdots+\vec L_n,\\
+&\vec L_{\mathrm{tot}} = \vec L_1+\vec L_2+\cdots+\vec L_n,\\
 &\vec L_i = \vec r_i\times\vec p_i.
 \end{aligned}
 $$
@@ -43,7 +43,7 @@ $$
 Chỉ số i chạy từ 1 đến n. Mômen lực ngoài quyết định tốc độ thay đổi mômen động lượng tổng khi các mômen lực nội triệt tiêu trong hệ đang xét:
 
 $$
-\vec\tau_{\mathrm{ngoài}}=\frac{d\vec L_{\mathrm{tổng}}}{dt}.
+\vec\tau_{\mathrm{ext}}=\frac{d\vec L_{\mathrm{tot}}}{dt}.
 $$
 
 Với vật rắn quay quanh một trục đối xứng cố định, mômen động lượng dọc trục có độ lớn $I\omega$. Không áp dụng quan hệ vector vô hướng này cho một trục quay bất kỳ mà chưa xét phân bố khối lượng.`+ref,

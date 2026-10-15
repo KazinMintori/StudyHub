@@ -34,7 +34,7 @@ Chúng ta tập trung vào lớp trò chơi kinh điển có đặc tính: **Hai
 
 "Tổng bằng không" nghĩa là lợi ích của người này chính là thiệt hại của người kia:
 $$
-\text{Lợi ích}(\text{MAX}) + \text{Lợi ích}(\text{MIN}) = 0
+\text{Utility}(\text{MAX}) + \text{Utility}(\text{MIN}) = 0
 $$
 
 Một trò chơi hình thức gồm 6 thành phần:
@@ -61,8 +61,8 @@ $$
 \text{Minimax}(s) =
 \begin{cases}
 \text{Utility}(s), & s \in \text{Terminal}, \\
-\displaystyle\max_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Lượt của MAX}, \\
-\displaystyle\min_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Lượt của MIN}.
+\displaystyle\max_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Player}(s) = \text{MAX}, \\
+\displaystyle\min_{a \in A(s)} \text{Minimax}(\text{Result}(s, a)), & \text{Player}(s) = \text{MIN}.
 \end{cases}
 $$
 

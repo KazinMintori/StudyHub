@@ -3,13 +3,13 @@
 Khi nhiều điện tích chuyển động, mỗi điện tích góp một phần vào từ trường tổng. Vì từ trường là véc-tơ, ta cộng các đóng góp theo quy tắc cộng véc-tơ. Với hai nguồn:
 
 $$
-\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2. \tag{28.5}
+\vec B_{\mathrm{tot}} = \vec B_1+\vec B_2. \tag{28.5}
 $$
 
 Với $N$ nguồn, cách viết tường minh là:
 
 $$
-\vec B_{\mathrm{tổng}} = \vec B_1+\vec B_2 +\cdots+\vec B_N.
+\vec B_{\mathrm{tot}} = \vec B_1+\vec B_2 +\cdots+\vec B_N.
 $$
 
 Ta dùng nguyên lý chồng chất để tính từ trường do một đoạn rất ngắn của dây dẫn mang dòng điện tạo ra. Gọi $A$ là diện tích tiết diện dây, $d\ell$ là độ dài đoạn dây, $n$ là mật độ hạt tải điện và $q$ là điện tích của mỗi hạt. Đoạn dây có thể tích $A\,d\ell$, nên số hạt tải trong đoạn ấy là $nA\,d\ell$. Nếu các hạt cùng trôi với tốc độ $v_d$, độ lớn điện tích chuyển động tương đương là:
@@ -57,7 +57,7 @@ Nếu đặt vật liệu gần dây dẫn, sự từ hóa của vật liệu c�
 
 $$
 \begin{aligned}
-\vec B &= \frac{\mu_0 I}{4\pi} \times\int_{\text{dây}} \\
+\vec B &= \frac{\mu_0 I}{4\pi} \times\int_{\mathrm{wire}} \\
 &\qquad\frac{d\vec\ell\times\hat r}{r^2}.
 \end{aligned} \tag{28.7}
 $$

@@ -113,7 +113,7 @@ $$
 Hàm liên hợp lồi:
 
 $$
-\psi^*(t) = \sup_{\lambda > 0} \left(\lambda t - \frac{\lambda^2}{2}\right) = \frac{t^2}{2} \quad (\text{đạt tại } \lambda^* = t).
+\psi^*(t) = \sup_{\lambda > 0} \left(\lambda t - \frac{\lambda^2}{2}\right) = \frac{t^2}{2} \quad (\lambda^* = t).
 $$
 
 Từ đó thu được cận đuôi Chernoff chuẩn mực cho phân phối Gauss:

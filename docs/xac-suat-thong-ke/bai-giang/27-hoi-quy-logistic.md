@@ -22,10 +22,10 @@ Trong các bài giảng trước, chúng ta đã xây dựng quy trình bốn b�
 Quy trình bốn bước này là nền tảng cốt lõi của khoa học dự báo hiện đại. Tuy nhiên, trong vô số bài toán thực tế, biến mục tiêu cần dự báo không phải là một đại lượng định lượng liên tục (như giá nhà, điểm thi hay nồng độ hóa chất), mà là một **biến định tính phân loại (Categorical Response)**.
 
 Đặc biệt phổ biến là bài toán **phân loại nhị phân (Binary Classification)**, trong đó biến mục tiêu chỉ nhận một trong hai trạng thái đối lập:
-- Y khoa: Bệnh nhân có mắc bệnh hiểm nghèo hay không ($1 = \text{Dương tính}, 0 = \text{Âm tính}$).
-- Tài chính: Giao dịch thẻ tín dụng là hợp lệ hay gian lận ($1 = \text{Gian lận}, 0 = \text{Hợp lệ}$).
-- Tiếp thị số: Khách hàng truy cập có bấm vào đường dẫn quảng cáo hay không ($1 = \text{Bấm}, 0 = \text{Không}$).
-- Công nghệ thông tin: Một bức thư điện tử gửi đến là thư rác hay thư thông thường ($1 = \text{Thư rác}, 0 = \text{Thư hợp lệ}$).
+- Y khoa: Bệnh nhân có mắc bệnh hiểm nghèo hay không ($1 = \text{Positive}, 0 = \text{Negative}$).
+- Tài chính: Giao dịch thẻ tín dụng là hợp lệ hay gian lận ($1 = \text{Fraud}, 0 = \text{Valid}$).
+- Tiếp thị số: Khách hàng truy cập có bấm vào đường dẫn quảng cáo hay không ($1 = \text{Clicked}, 0 = \text{NotClicked}$).
+- Công nghệ thông tin: Một bức thư điện tử gửi đến là thư rác hay thư thông thường ($1 = \text{Spam}, 0 = \text{Ham}$).
 
 ---
 
@@ -38,7 +38,7 @@ Xét tập dữ liệu thực nghiệm gồm $3,921$ bức thư điện tử đ�
 - $y = 0$: Bức thư là thư hợp lệ (thư thường).
 
 Cùng với biến mục tiêu là hàng loạt biến dự báo tiềm năng ghi nhận các đặc trưng cấu trúc của thư:
-- `to_multiple`: Thư có được gửi đồng thời cho nhiều người nhận hay không ($1 = \text{Có}, 0 = \text{Không}$).
+- `to_multiple`: Thư có được gửi đồng thời cho nhiều người nhận hay không ($1 = \text{Yes}, 0 = \text{No}$).
 - `cc`: Số lượng người được gửi kèm bản sao (CC).
 - `winner`: Nội dung thư có xuất hiện từ "winner" (người chiến thắng) hay không.
 - `num_char`: Tổng số ký tự trong bức thư (tính theo đơn vị nghìn ký tự).
@@ -188,7 +188,7 @@ Xét trường hợp một biến dự báo $x_1$:
 - Do đó, cơ hội ($\text{Odds}$) sẽ được nhân với một thừa số $e^{b_1}$:
 
 $$
-\text{Odds}_{\text{mới}} = \text{Odds}_{\text{cũ}} \times e^{b_1}
+\mathrm{Odds}_{\mathrm{new}} = \mathrm{Odds}_{\mathrm{old}} \times e^{b_1}
 $$
 
 Đại lượng $\text{OR} = e^{b_1}$ được gọi là **Tỷ số cơ hội (Odds Ratio)**:
@@ -205,8 +205,8 @@ Ta thiết lập một **ngưỡng quyết định (Decision Threshold)** $p^*$ 
 
 $$
 \hat{y}_i = \begin{cases}
-1 & \text{nếu } \hat{p}_i \ge p^* \\
-0 & \text{nếu } \hat{p}_i < p^*
+1, & \hat{p}_i \ge p^*, \\
+0, & \hat{p}_i < p^*.
 \end{cases}
 $$
 
@@ -230,9 +230,9 @@ Rõ ràng, **cái giá của sai lầm FP lớn hơn rất nhiều so với FN**
 ### Các thước đo đánh giá chất lượng mô hình:
 
 1. **Tỷ lệ phân loại sai (Misclassification Rate - MCR)**:
-   $$\text{MCR} = \frac{\text{FP} + \text{FN}}{\text{Tổng số quan sát}} = 1 - \text{Accuracy}$$
+   $$\text{MCR} = \frac{\text{FP} + \text{FN}}{N_{\mathrm{total}}} = 1 - \text{Accuracy}$$
 2. **Độ chính xác toàn phần (Accuracy)**:
-   $$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{Tổng số quan sát}}$$
+   $$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{N_{\mathrm{total}}}$$
 3. **Độ nhạy (Sensitivity hay Recall)**: Khả năng phát hiện đúng các trường hợp dương tính thực tế:
    $$\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$
 4. **Độ đặc hiệu (Specificity)**: Khả năng nhận diện đúng các trường hợp âm tính thực tế:
@@ -341,7 +341,7 @@ print(classification_report(y_test, y_pred))
 
 Một nhóm nghiên cứu huấn luyện mô hình hồi quy logistic để dự báo khả năng một bức thư điện tử là thư rác ($y = 1$) dựa trên hai biến:
 - $x_1$: Số lần xuất hiện ký hiệu tiền tệ trong thư.
-- $x_2$: Biến chỉ thị thư được gửi từ người quen trong danh bạ ($1 = \text{Người quen}, 0 = \text{Người lạ}$).
+- $x_2$: Biến chỉ thị thư được gửi từ người quen trong danh bạ ($1 = \text{Acquaintance}, 0 = \text{Stranger}$).
 
 Phương trình hàm logit ước lượng được là:
 $$
@@ -403,15 +403,15 @@ $$
 $$
 
 Trong đó:
-- $x_1$: Biến chỉ thị khách hàng có thu nhập ổn định ($1 = \text{Có}, 0 = \text{Không}$).
+- $x_1$: Biến chỉ thị khách hàng có thu nhập ổn định ($1 = \text{Yes}, 0 = \text{No}$).
 - $x_2$: Số lượng khoản vay quá hạn trong lịch sử tín dụng.
 
 Biết rằng $\ln(2) \approx 0.69315$ và $\ln(1.5) \approx 0.40546$.
 
 **Yêu cầu:**
 1. Tính Tỷ số cơ hội ($\text{OR}$) của biến $x_1$. Giải thích ý nghĩa thực tế của con số này đối với khả năng thanh toán nợ của khách hàng.
-2. Giả sử một khách hàng ban đầu có xác suất trả nợ đúng hạn là $p_{\text{cũ}} = 0.20$. Nếu khách hàng này có thêm nguồn thu nhập ổn định ($x_1$ chuyển từ $0$ lên $1$, các yếu tố khác không đổi), xác suất trả nợ đúng hạn mới $p_{\text{mới}}$ sẽ là bao nhiêu?
-3. Vì sao mức tăng của xác suất ($p_{\text{mới}} - p_{\text{cũ}}$) không bằng hằng số $b_1 = 0.69315$?
+2. Giả sử một khách hàng ban đầu có xác suất trả nợ đúng hạn là $p_{\mathrm{old}} = 0.20$. Nếu khách hàng này có thêm nguồn thu nhập ổn định ($x_1$ chuyển từ $0$ lên $1$, các yếu tố khác không đổi), xác suất trả nợ đúng hạn mới $p_{\mathrm{new}}$ sẽ là bao nhiêu?
+3. Vì sao mức tăng của xác suất ($p_{\mathrm{new}} - p_{\mathrm{old}}$) không bằng hằng số $b_1 = 0.69315$?
 
 ::: details Lời giải chi tiết
 **Bước 1: Tính toán và giải thích Tỷ số cơ hội của biến $x_1$**
@@ -424,20 +424,20 @@ $$
 **Ý nghĩa thực tế**:
 Giữ nguyên các yếu tố khác không đổi, một khách hàng có thu nhập ổn định sẽ có **cơ hội thanh toán nợ đúng hạn cao gấp 2 lần** (tăng $100\%$) so với một khách hàng không có thu nhập ổn định.
 
-**Bước 2: Tính toán xác suất mới $p_{\text{mới}}$**
+**Bước 2: Tính toán xác suất mới $p_{\mathrm{new}}$**
 
-Ban đầu, xác suất trả nợ của khách hàng là $p_{\text{cũ}} = 0.20$.
-- Tính cơ hội ban đầu ($\text{Odds}_{\text{cũ}}$):
+Ban đầu, xác suất trả nợ của khách hàng là $p_{\mathrm{old}} = 0.20$.
+- Tính cơ hội ban đầu ($\mathrm{Odds}_{\mathrm{old}}$):
   $$
-  \text{Odds}_{\text{cũ}} = \frac{p_{\text{cũ}}}{1 - p_{\text{cũ}}} = \frac{0.20}{1 - 0.20} = \frac{0.20}{0.80} = 0.25
+  \mathrm{Odds}_{\mathrm{old}} = \frac{p_{\mathrm{old}}}{1 - p_{\mathrm{old}}} = \frac{0.20}{1 - 0.20} = \frac{0.20}{0.80} = 0.25
   $$
 - Khi có thêm thu nhập ổn định, cơ hội mới nhân với $\text{OR}_1 = 2.0$:
   $$
-  \text{Odds}_{\text{mới}} = \text{Odds}_{\text{cũ}} \times 2.0 = 0.25 \times 2.0 = 0.50
+  \mathrm{Odds}_{\mathrm{new}} = \mathrm{Odds}_{\mathrm{old}} \times 2.0 = 0.25 \times 2.0 = 0.50
   $$
-- Chuyển đổi từ $\text{Odds}_{\text{mới}}$ về xác suất mới $p_{\text{mới}}$:
+- Chuyển đổi từ $\mathrm{Odds}_{\mathrm{new}}$ về xác suất mới $p_{\mathrm{new}}$:
   $$
-  p_{\text{mới}} = \frac{\text{Odds}_{\text{mới}}}{1 + \text{Odds}_{\text{mới}}} = \frac{0.50}{1 + 0.50} = \frac{0.50}{1.50} = \frac{1}{3} \approx 0.3333
+  p_{\mathrm{new}} = \frac{\mathrm{Odds}_{\mathrm{new}}}{1 + \mathrm{Odds}_{\mathrm{new}}} = \frac{0.50}{1 + 0.50} = \frac{0.50}{1.50} = \frac{1}{3} \approx 0.3333
   $$
 
 Như vậy, xác suất trả nợ tăng từ $20\%$ lên xấp xỉ $33.33\%$.
@@ -500,7 +500,7 @@ Với ngưỡng $p^* = 0.8$:
 
 Tại ngưỡng $p^* = 0.5$:
 - Tỷ lệ phân loại sai:
-  $$\text{MCR} = \frac{\text{FP} + \text{FN}}{\text{Tổng số}} = \frac{50 + 20}{1000} = \frac{70}{1000} = 7.0\%$$
+  $$\text{MCR} = \frac{\text{FP} + \text{FN}}{N_{\mathrm{total}}} = \frac{50 + 20}{1000} = \frac{70}{1000} = 7.0\%$$
 - Độ nhạy (Sensitivity):
   $$\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{80}{100} = 80.0\%$$
 - Độ đặc hiệu (Specificity):
@@ -508,7 +508,7 @@ Tại ngưỡng $p^* = 0.5$:
 
 Tại ngưỡng $p^* = 0.8$:
 - Tỷ lệ phân loại sai:
-  $$\text{MCR} = \frac{\text{FP} + \text{FN}}{\text{Tổng số}} = \frac{10 + 40}{1000} = \frac{50}{1000} = 5.0\%$$
+  $$\text{MCR} = \frac{\text{FP} + \text{FN}}{N_{\mathrm{total}}} = \frac{10 + 40}{1000} = \frac{50}{1000} = 5.0\%$$
 - Độ nhạy (Sensitivity):
   $$\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{60}{100} = 60.0\%$$
 - Độ đặc hiệu (Specificity):

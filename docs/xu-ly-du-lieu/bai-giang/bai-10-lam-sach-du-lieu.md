@@ -90,8 +90,8 @@ Giá trị ngoại lai (Outlier) là các điểm dữ liệu nằm cách biệt
 $$
 \begin{aligned}
 IQR &= Q_3 - Q_1 \\
-\text{Hàng rào dưới: } lo &= Q_1 - 1.5 \times IQR \\
-\text{Hàng rào trên: } hi &= Q_3 + 1.5 \times IQR
+\text{Lower fence: } lo &= Q_1 - 1.5 \times IQR \\
+\text{Upper fence: } hi &= Q_3 + 1.5 \times IQR
 \end{aligned}
 $$
 

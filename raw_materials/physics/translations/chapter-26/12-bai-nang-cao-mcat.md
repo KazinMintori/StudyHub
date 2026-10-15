@@ -49,8 +49,8 @@ Trong mạch Hình P26.82, công tắc $S$ đã đóng từ lâu. (a) Tìm đi�
 
 $$
 \begin{aligned}
-\tau_{nạp} &= 4RC, \\
-\tau_{phóng} &= (R\parallel4R)C=\frac45RC.
+\\tau_{\mathrm{charge}} &= 4RC, \\
+\\tau_{\mathrm{discharge}} &= (R\parallel4R)C=\frac45RC.
 \end{aligned}
 $$
 

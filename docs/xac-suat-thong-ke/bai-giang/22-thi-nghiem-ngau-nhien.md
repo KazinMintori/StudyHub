@@ -207,7 +207,7 @@ Một công ty thương mại điện tử triển khai thử nghiệm A/B để
   - $s_T^2 = (3.2)^2 = 10.24$
   - $s_C^2 = (2.8)^2 = 7.84$
 - Độ lệch chuẩn gộp:
-  $$s_{\text{pooled}} = \sqrt{\frac{s_T^2 + s_C^2}{2}} = \sqrt{\frac{10.24 + 7.84}{2}} = \sqrt{\frac{18.08}{2}} = \sqrt{9.04} \approx 3.0067 \text{ đơn}$$
+  $$s_{\text{pooled}} = \sqrt{\frac{s_T^2 + s_C^2}{2}} = \sqrt{\frac{10.24 + 7.84}{2}} = \sqrt{\frac{18.08}{2}} = \sqrt{9.04} \approx 3.0067 \text{ orders}$$
 - Chênh lệch trung bình chuẩn hóa:
   $$\text{SMD}(x) = \frac{\bar{x}_T - \bar{x}_C}{s_{\text{pooled}}} = \frac{8.5 - 8.1}{3.0067} = \frac{0.4}{3.0067} \approx +0.133$$
 

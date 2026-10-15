@@ -44,7 +44,7 @@ $$
 Ma trận $M \in \mathbb{S}_+^n$ là một ma trận đối xứng nửa xác định dương. Để vector tham số $x$ có thể ước lượng được (hệ xác định duy nhất), ma trận $M$ bắt buộc phải khả nghịch, tức là đối xứng xác định dương $M \succ 0$. Khi đó, ellipsoid tin cậy của sai số ước lượng $\hat{x} - x$ tại mức ý nghĩa thống kê tỷ lệ thuận với ma trận nghịch đảo:
 
 $$
-\mathcal{E}_{\text{sai số}} = \big\{ e \in \mathbb{R}^n \mid e^T M e \le 1 \big\}.
+\mathcal{E}_{\text{error}} = \big\{ e \in \mathbb{R}^n \mid e^T M e \le 1 \big\}.
 $$
 
 Mục tiêu của người thiết kế thí nghiệm là làm cho ma trận thông tin $M$ "càng lớn càng tốt" theo nghĩa nửa xác định dương, tương đương với việc thu nhỏ thể tích hoặc bán kính của ellipsoid sai số $M^{-1}$.
@@ -89,10 +89,10 @@ flowchart TD
 
 ### Tiêu chuẩn D-optimal (Determinant Criterion)
 
-Tiêu chuẩn $D$-optimal hướng tới việc thu nhỏ **thể tích** của ellipsoid tin cậy sai số. Thể tích của ellipsoid $\mathcal{E}_{\text{sai số}}$ tỷ lệ nghịch với căn bậc hai định thức của $M(\lambda)$:
+Tiêu chuẩn $D$-optimal hướng tới việc thu nhỏ **thể tích** của ellipsoid tin cậy sai số. Thể tích của ellipsoid $\mathcal{E}_{\text{error}}$ tỷ lệ nghịch với căn bậc hai định thức của $M(\lambda)$:
 
 $$
-\operatorname{Vol}(\mathcal{E}_{\text{sai số}}) \propto \frac{1}{\sqrt{\det M(\lambda)}} = \left( \det M(\lambda)^{-1} \right)^{1/2}.
+\operatorname{Vol}(\mathcal{E}_{\text{error}}) \propto \frac{1}{\sqrt{\det M(\lambda)}} = \left( \det M(\lambda)^{-1} \right)^{1/2}.
 $$
 
 Thu nhỏ thể tích tương đương với cực đại hóa định thức $\det M(\lambda)$, hay thuận tiện hơn là cực tiểu hóa hàm đối logarit định thức:
@@ -100,7 +100,7 @@ Thu nhỏ thể tích tương đương với cực đại hóa định thức $\
 $$
 \begin{aligned}
 &\min_{\lambda} \quad -\log \det M(\lambda)\\
-&\text{sao cho}\quad \sum_{i=1}^p \lambda_i = 1,\\
+&\text{s.t.}\quad \sum_{i=1}^p \lambda_i = 1,\\
 &\phantom{\text{subject to}\quad } \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$
@@ -120,7 +120,7 @@ Bỏ qua hằng số $\sigma^2$, bài toán được phát biểu thành:
 $$
 \begin{aligned}
 &\min_{\lambda} \quad \operatorname{tr}\left( M(\lambda)^{-1} \right)\\
-&\text{sao cho}\quad \sum_{i=1}^p \lambda_i = 1,\\
+&\text{s.t.}\quad \sum_{i=1}^p \lambda_i = 1,\\
 &\phantom{\text{subject to}\quad } \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$
@@ -130,7 +130,7 @@ Hàm số $f(X) = \operatorname{tr}(X^{-1})$ là hàm lồi trên $\mathbb{S}_{+
 $$
 \begin{aligned}
 &\min_{\lambda, u} \quad \sum_{j=1}^n u_j\\
-&\text{sao cho}\quad \begin{bmatrix} M(\lambda) & e_j\\ &e_j^T u_j \end{bmatrix} \succeq 0, \quad \forall j = 1, \dots, n,\\
+&\text{s.t.}\quad \begin{bmatrix} M(\lambda) & e_j\\ &e_j^T u_j \end{bmatrix} \succeq 0, \quad \forall j = 1, \dots, n,\\
 &\phantom{\text{subject to}\quad } \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p,
 \end{aligned}
 $$
@@ -146,7 +146,7 @@ Do đó, tiêu chuẩn $E$-optimal cực đại hóa trị riêng nhỏ nhất c
 $$
 \begin{aligned}
 &\max_{\lambda, t} \quad t\\
-&\text{sao cho}\quad M(\lambda) \succeq t I_n,\\
+&\text{s.t.}\quad M(\lambda) \succeq t I_n,\\
 &\phantom{\text{subject to}\quad } \sum_{i=1}^p \lambda_i = 1, \quad \lambda_i \ge 0, \quad \forall i = 1, \dots, p.
 \end{aligned}
 $$

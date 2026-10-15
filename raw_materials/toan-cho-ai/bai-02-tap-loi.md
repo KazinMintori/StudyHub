@@ -82,7 +82,7 @@ $$C \text{ affine} \iff p,q\in C,\ \theta\in\mathbb R \implies \theta p+(1-\thet
 
 ### 1.2 Tập lồi — không bỏ rơi đoạn nối
 
-$$C\subseteq\mathbb R^n \text{ lồi} \iff \forall p,q\in C,\ \forall\theta\in[0,1]:\ \theta p+(1-\theta)q\in C$$
+$$C\subseteq\mathbb R^n \text{ convex} \iff \forall p,q\in C,\ \forall\theta\in[0,1]:\ \theta p+(1-\theta)q\in C$$
 
 ::: tip Mẹo bác bỏ tính lồi nhanh nhất khi làm bài thi
 Chỉ cần tìm **một cặp điểm** trong tập và **một trọng số $\theta$** sao cho đoạn nối đi ra ngoài tập — không cần khảo sát toàn bộ tập.
@@ -125,7 +125,7 @@ $$\Delta_3=\{p\in\mathbb R^3: p_i\ge0,\ p_1+p_2+p_3=1\}=\operatorname{conv}\{e_1
 
 ### 1.4 Nón lồi — cho phép thay đổi cả quy mô
 
-$$x=\alpha p+\beta q,\quad \alpha,\beta\ge0 \quad(\text{không yêu cầu }\alpha+\beta=1)$$
+$$x=\alpha p+\beta q,\quad \alpha,\beta\ge0 \quad(\text{without }\alpha+\beta=1)$$
 
 Một tập không rỗng $K$ là **nón lồi** nếu nó chứa mọi tổ hợp nón của các điểm thuộc $K$. Ví dụ $p=(1,0), q=(1,1)$: $K=\operatorname{cone}\{p,q\}=\{(u,v):u\ge v\ge0\}$ — một **hình quạt** vô hạn mở ra từ gốc toạ độ.
 
@@ -263,7 +263,7 @@ Ràng buộc $\|x\|\le t$ trong không gian $(x,t)$ là một tập lồi — đ
 
 ### 2.6 Nón PSD (Positive Semidefinite) — khi "điểm" là một ma trận
 
-$$S^n_+=\{X\in S^n: z^TXz\ge0\ \forall z\in\mathbb R^n\}\quad (\text{ký hiệu } X\succeq0)$$
+$$S^n_+=\{X\in S^n: z^TXz\ge0\ \forall z\in\mathbb R^n\}\quad (\text{notation } X\succeq0)$$
 
 **Kiểm tra bằng giá trị riêng:** $X\succeq0 \iff \lambda_i(X)\ge0\ \forall i$ (và $X\succ0 \iff \lambda_i(X)>0\ \forall i$).
 
@@ -289,7 +289,7 @@ print(is_psd(X1))   # (True,  array([0., 2.]))
 print(is_psd(X2))   # (False, array([-1., 3.]))
 ```
 
-**Với ma trận $2\times2$**, $X=\begin{bmatrix}u&v\\v&w\end{bmatrix}$: $X\succeq0 \iff u\ge0 \text{ và } uw\ge v^2$ — chỉ kiểm tra đường chéo *hoặc* chỉ kiểm tra định thức đều **chưa đủ**, cần đúng cả hai điều kiện.
+**Với ma trận $2\times2$**, $X=\begin{bmatrix}u&v\\v&w\end{bmatrix}$: $X\succeq0 \iff u\ge0 \text{ and } uw\ge v^2$ — chỉ kiểm tra đường chéo *hoặc* chỉ kiểm tra định thức đều **chưa đủ**, cần đúng cả hai điều kiện.
 
 **Vì sao $S^n_+$ là một nón lồi?** Lấy $X,Y\succeq0$, $\alpha,\beta\ge0$: Với mọi $z$, $z^T(\alpha X+\beta Y)z=\alpha z^TXz+\beta z^TYz\ge0$ ⟹ $\alpha X+\beta Y\succeq0$.
 
@@ -435,7 +435,7 @@ Các quy tắc số học quen thuộc **vẫn đúng**: Cộng bất đẳng th
 "Minimum phải so sánh **thuận lợi với tất cả**; minimal chỉ cần **không bị lựa chọn khác trội hơn**." Và tuyệt đối không nhầm "minimal" với "cực tiểu địa phương" (local minimum) của một hàm số — đây là hai khái niệm hoàn toàn khác nhau (một cái về *thứ tự trên tập hợp*, một cái về *hàm số*).
 :::
 
-**Ví dụ chatbot — 5 cấu hình, mỗi cấu hình là một điểm $(thời gian, bộ nhớ)$, cả hai tiêu chí đều muốn nhỏ:**
+**Ví dụ chatbot — 5 cấu hình, mỗi cấu hình là một điểm (thời gian, bộ nhớ), cả hai tiêu chí đều muốn nhỏ:**
 
 | Cấu hình | Thời gian | Bộ nhớ | Tối thiểu? |
 |---|:---:|:---:|:---:|
@@ -579,7 +579,7 @@ Chiều ngược (từ "tối thiểu" suy ra "tồn tại trọng số tối ư
 
 ### 6.4 Ví dụ số: Đổi trọng số, đổi cấu hình tối ưu
 
-Chuẩn hoá $x=(\text{thời gian}/1\text{s}, \text{bộ nhớ}/1\text{GB})$:
+Chuẩn hoá $x=(\text{time}/1\text{s}, \text{memory}/1\text{GB})$:
 
 | Cấu hình | $x$ | $3x_1+x_2$ | $3x_1+2x_2$ | $x_1+3x_2$ |
 |---|---|:---:|:---:|:---:|

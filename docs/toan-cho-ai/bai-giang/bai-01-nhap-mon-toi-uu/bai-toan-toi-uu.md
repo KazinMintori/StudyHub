@@ -292,7 +292,7 @@ Trong bài toán tối ưu tổng quát, ta cần phân biệt rạch ròi hai c
 - **Tối ưu toàn cục (Global optimum)**: Điểm $x^\star \in \mathcal{X}$ thỏa mãn $f_0(x^\star) \le f_0(z)$ với **mọi** $z \in \mathcal{X}$.
 - **Tối ưu cục bộ (Local optimum)**: Điểm $x \in \mathcal{X}$ chỉ tốt hơn các phương án khả thi nằm trong một lân cận bán kính $R > 0$ quanh nó:
   $$
-  f_0(x) \le f_0(z) \qquad \forall z \in \mathcal{X} \text{ thỏa mãn } \|z - x\|_2 \le R.
+  f_0(x) \le f_0(z) \qquad \forall z \in \mathcal{X}, \quad \|z - x\|_2 \le R.
   $$
 
 Trong toàn bộ môn học này, khi dùng từ "nghiệm tối ưu" mà không kèm định ngữ, ta luôn mặc định hiểu là **nghiệm tối ưu toàn cục**.
@@ -482,7 +482,7 @@ Trở lại bài toán người cứu hộ ở Mục 1, nhưng giả sử đoạ
 ::: solution
 1. Bài toán dạng chuẩn tắc:
    $$
-   \min T(x) \qquad \text{thỏa mãn} \quad -x \le 0, \quad x - 45 \le 0.
+   \min T(x) \qquad \text{satisfying} \quad -x \le 0, \quad x - 45 \le 0.
    $$
    (Ràng buộc cũ $x \le 60$ trở thành ràng buộc thừa vì đã có $x \le 45$).
 2. Nghiệm tối ưu không ràng buộc $x \approx 52.6\text{ m}$ bị vi phạm vì nằm ngoài miền khả thi mới $[0, 45]$.
@@ -512,7 +512,7 @@ Xác định miền khả thi, giá trị tối ưu $p^\star$ và tập tối ư
 ::: exercise 3. Quy chuẩn hóa về dạng chuẩn tắc
 Đưa bài toán tối ưu sau về dạng chuẩn tắc:
 $$
-\max_{x_1, x_2} 5x_1 + 4x_2 \qquad \text{thỏa mãn} \quad x_1 + x_2 \le 6, \quad 2x_1 + x_2 \le 9, \quad x_1 \ge 0, \quad x_2 \ge 0.
+\max_{x_1, x_2} 5x_1 + 4x_2 \qquad \text{satisfying} \quad x_1 + x_2 \le 6, \quad 2x_1 + x_2 \le 9, \quad x_1 \ge 0, \quad x_2 \ge 0.
 $$
 :::
 ::: solution

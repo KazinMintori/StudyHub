@@ -228,8 +228,8 @@ Nếu q không là bội của N, mẫu khác không và I bằng không. Nếu 
 
 $$
 \begin{aligned}
-I_{\rm giữa}&\le I_0,\\
-\frac{I_{\rm giữa}}{I_{\max}}&\le\frac1{N^2}.
+I_{\mathrm{mid}}&\le I_0,\\
+\frac{I_{\mathrm{mid}}}{I_{\max}}&\le\frac1{N^2}.
 \end{aligned}
 $$
 

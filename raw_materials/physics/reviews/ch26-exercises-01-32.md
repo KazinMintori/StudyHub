@@ -12,7 +12,7 @@ Mỗi bài có một khối đề, một lời giải `detailed-solution:26.N`, 
 - Dùng MarkdownItMathJax3 để đo công thức trong tệp: 73 công thức hiển thị và 527 công thức nội dòng. Độ rộng lớn nhất lần lượt là 29,35 ex và 31,652 ex. Không có lỗi MathJax, công thức hiển thị nào vượt 30 ex hoặc công thức nội dòng nào vượt 38 ex.
 - Đã sửa lỗi quy chiếu điện áp ở E26.26. Giá trị $V=6{,}00\,\mathrm V$ là điện áp giữa hai thanh dẫn, còn $V_{ab}=-3{,}20\,\mathrm V$ là điện áp giữa hai nút a và b. Dòng nhánh dưới là $0{,}600\,\mathrm A$ từ trái sang phải. Trước khi sửa, lời giải nhầm $V$ với $V_{ab}$ và suy ra sai dấu dòng nhánh dưới. Các trường hợp đảo cực ở E26.27 và thay pin ở E26.28 đã được trình bày tách bạch giữa điện áp hai thanh và $V_{ab}$.
 - Đã sửa mô tả đường đi điện thế ở E26.32. Đi từ nút dưới lên nút trên qua pin là từ cực âm tới cực dương, nên suất điện động tạo độ tăng thế $25\,\mathrm V$. Kết quả $V_A-V_B=7{,}0\,\mathrm V$ và chiều dòng qua ampe kế được giữ nguyên.
-- Các số được kiểm lại gồm cả dòng nhánh, suất điện động, công suất, năng lượng và thời gian đun nước. Với E26.19, thời gian dùng $c_{\mathrm{nước}}=4186\,\mathrm{J/(kg\,K)}$ và giả thiết không thất thoát nhiệt, bỏ qua nhiệt dung bình và điện trở. Mọi kết quả khác giữ theo độ chính xác thích hợp với dữ kiện.
+- Các số được kiểm lại gồm cả dòng nhánh, suất điện động, công suất, năng lượng và thời gian đun nước. Với E26.19, thời gian dùng $c_{\mathrm{water}}=4186\,\mathrm{J/(kg\,K)}$ và giả thiết không thất thoát nhiệt, bỏ qua nhiệt dung bình và điện trở. Mọi kết quả khác giữ theo độ chính xác thích hợp với dữ kiện.
 
 ## Đối chiếu hình
 

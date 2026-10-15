@@ -111,7 +111,7 @@ $$x^\*=\frac{L}{4},\quad y^\*=\frac{L}{2},\quad S^\*_{\text{cn}}=\frac{L^2}{8}$$
 
 Với nửa hình tròn bán kính $r$: Chu vi cung tròn $L=\pi r \Rightarrow r = L/\pi$, diện tích:
 
-$$S_{\text{nửa tròn}} = \frac{\pi r^2}{2} = \frac{L^2}{2\pi}$$
+$$S_{\text{semicircle}} = \frac{\pi r^2}{2} = \frac{L^2}{2\pi}$$
 
 **Dry run so sánh số (L = 100 m):**
 
@@ -135,7 +135,7 @@ flowchart TD
 
 **Bất đẳng thức đẳng chu** (isoperimetric inequality — không chứng minh trong bài, dùng như một công cụ có sẵn [H4]): Với miền phẳng có biên kín dài $P$,
 
-$$4\pi \cdot (\text{diện tích miền}) \le P^2$$
+$$4\pi \cdot (\text{Area}) \le P^2$$
 
 Áp dụng cho miền kép: $4\pi(2S)\le (2L)^2 \Rightarrow S\le \dfrac{L^2}{2\pi}$. Nửa hình tròn đạt dấu bằng ở công thức Bước 2 ⟹ nó **là** nghiệm tối ưu toàn cục, không chỉ là "ứng viên tốt".
 
@@ -197,7 +197,7 @@ flowchart LR
 
 Vì phần dư tối ưu $r^\*=Ax^\*-b$ phải **vuông góc với mọi cột của A**:
 
-$$A^T(Ax^\*-b) = 0 \iff \underbrace{A^TAx = A^Tb}_{\text{hệ phương trình chuẩn}}$$
+$$A^T(Ax^\*-b) = 0 \iff \underbrace{A^TAx = A^Tb}_{\text{normal equations}}$$
 
 Nếu $\text{rank}(A)=n$ (hạng cột đầy đủ) thì $A^TA$ khả nghịch:
 
@@ -356,8 +356,8 @@ Tính chất của bài toán **không chỉ phụ thuộc cách nó được vi
 
 $$
 \begin{aligned}
-    &C \text{ lồi} \iff \theta x + (1-\theta)y \in C\quad \forall x,y\in C,\ \theta\in[0,1]\\
-    &f \text{ lồi trên miền lồi} \iff f(\theta x+(1-\theta)y)\le \theta f(x)+(1-\theta)f(y)
+    &C \text{ convex} \iff \theta x + (1-\theta)y \in C\quad \forall x,y\in C,\ \theta\in[0,1]\\
+    &f \text{ convex on convex set} \iff f(\theta x+(1-\theta)y)\le \theta f(x)+(1-\theta)f(y)
 \end{aligned}
 $$
 
@@ -505,7 +505,7 @@ Trước 1990: Ứng dụng chủ yếu trong **vận trù học**. Từ 1990: M
 
 Xét mô hình dự đoán $\hat y_i = ax_i+c$ và bài toán:
 
-$$\min_{a,c}\ \sum_{i=1}^k (ax_i+c-y_i)^2 + 0.1a^2 \quad\text{với } a\ge0,\ -2\le c\le2$$
+$$\min_{a,c}\ \sum_{i=1}^k (ax_i+c-y_i)^2 + 0.1a^2 \quad\text{for } a\ge0,\ -2\le c\le2$$
 
 **Yêu cầu:** Xác định biến/dữ liệu; giải thích mục tiêu và ràng buộc; kết luận bài toán có lồi không; cho biết có thể dùng ngay công thức LS không ràng buộc hay không.
 

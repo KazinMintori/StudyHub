@@ -50,7 +50,7 @@ Bạn có thể tự đo thời gian phản xạ của não bộ mình hoặc b�
 Nếu điểm bạn kẹp được cách vạch số 0 một khoảng rơi $d$, vì thước rơi tự do từ trạng thái nghỉ ($v_0 = 0$), ta có $d = \frac{1}{2}gt^2$. Từ đó, thời gian phản xạ thần kinh của bạn được tính ngay bằng:
 
 $$
-t_{\text{phản xạ}} = \sqrt{\frac{2d}{g}}.
+t_{\mathrm{react}} = \sqrt{\frac{2d}{g}}.
 $$
 
 Nếu bạn kẹp được ở vạch $d = 10\,\mathrm{cm} = 0.10\,\mathrm{m}$, thời gian phản xạ của bạn xấp xỉ $\sqrt{2 \times 0.10 / 9.8} \approx 0.14\,\mathrm{s}$ — một phản xạ vô cùng xuất sắc của một vận động viên! Nếu khoảng rơi là $20\,\mathrm{cm}$, thời gian là khoảng $0.20\,\mathrm{s}$ (mức trung bình của người bình thường).
@@ -231,7 +231,7 @@ Thời gian để vật lên tới độ cao cực đại là:
 
 $$
 \begin{aligned}
-t_{\text{đỉnh}} &= \frac{v_{0y}}{g} \\
+t_{\mathrm{peak}} &= \frac{v_{0y}}{g} \\
 &= \frac{15.0\,\mathrm{m/s}}{9.80\,\mathrm{m/s^2}} \\
 &\approx 1.53\,\mathrm s.
 \end{aligned}
@@ -298,7 +298,7 @@ Phương trình cho hai nghiệm toán học:
 
 $$
 \begin{aligned}
-t_1 &\approx +3.36\,\mathrm s \quad \text{và} \quad t_2 \\
+t_1 &\approx +3.36\,\mathrm s \quad \text{and} \quad t_2 \\
 &\approx -0.30\,\mathrm s.
 \end{aligned}
 $$

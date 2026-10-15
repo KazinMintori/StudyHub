@@ -240,7 +240,7 @@ Chứng minh trên chỉ nói thuật toán **trả đúng**. Nó không nói g�
 ### 3.9. Khối lượng tính toán
 
 $$
-\underbrace{\binom{N}{2} = \frac{N(N-1)}{2}}_{\text{số cặp}} \times \underbrace{O(L)}_{\text{chi phí một cặp}} = O(N^2 L)
+\underbrace{\binom{N}{2} = \frac{N(N-1)}{2}}_{\text{pairs}} \times \underbrace{O(L)}_{\text{cost per pair}} = O(N^2 L)
 $$
 
 Với $N = 10^6$ tài liệu: $\binom{10^6}{2} = 499\,999\,500\,000$ cặp, **gần 500 tỷ cặp**. Đây là phép đếm, không phải số đo thời gian.
@@ -382,7 +382,7 @@ Xác suất **bạn** trúng độc đắc gần như bằng 0. Nhưng xác su�
 **Một ngày cố định, hai người cố định cùng khách sạn:**
 
 $$
-p = \underbrace{q \cdot q}_{\text{cả hai đều đi}} \times \underbrace{\frac{1}{H}}_{\text{người thứ hai chọn trùng}} = \frac{q^2}{H} = \frac{10^{-4}}{10^5} = 10^{-9}
+p = \underbrace{q \cdot q}_{\text{both go}} \times \underbrace{\frac{1}{H}}_{\text{same hotel}} = \frac{q^2}{H} = \frac{10^{-4}}{10^5} = 10^{-9}
 $$
 
 **Hai ngày cố định khác nhau** (độc lập giữa các ngày):
@@ -398,7 +398,7 @@ Khách sạn **có thể khác nhau** giữa hai ngày; điều kiện chỉ là
 Một **phép thử** = một cặp người (không thứ tự) × một cặp ngày (không thứ tự):
 
 $$
-\text{Số phép thử} = \binom{P}{2} \binom{T}{2}
+N_{\mathrm{trials}} = \binom{P}{2} \binom{T}{2}
 $$
 
 ### 6.5. Kỳ vọng số biến cố trùng
@@ -608,7 +608,7 @@ Giỏ hàng: 0.00018981846904990663
 ```
 
 ::: info Vì sao dùng `Fraction`?
-Đặc tả yêu cầu phép kiểm $J \ge \tau$ **chính xác**. Với số thực dấu phẩy động, $3/8$ biểu diễn được chính xác nhưng $3/10$ thì không; tại đúng ngưỡng, sai số làm tròn có thể đổi quyết định. Phiên bản ma trận NumPy nhanh hơn nhiều nhưng chỉ dùng để quan sát; với ngưỡng biên, nên so sánh bằng số nguyên: $\text{giao} \cdot \text{mẫu}(\tau) \ge \text{tử}(\tau) \cdot \text{hợp}$.
+Đặc tả yêu cầu phép kiểm $J \ge \tau$ **chính xác**. Với số thực dấu phẩy động, $3/8$ biểu diễn được chính xác nhưng $3/10$ thì không; tại đúng ngưỡng, sai số làm tròn có thể đổi quyết định. Phiên bản ma trận NumPy nhanh hơn nhiều nhưng chỉ dùng để quan sát; với ngưỡng biên, nên so sánh bằng số nguyên: $\mathrm{intersection} \cdot \mathrm{den}(\\tau) \ge \mathrm{num}(\\tau) \cdot \mathrm{union}$.
 :::
 
 ---

@@ -137,7 +137,7 @@ Bản chất của môi trường quyết định trực tiếp việc bạn ph�
 ### 1. Tác tử phản xạ đơn giản (Simple Reflex Agent)
 Chỉ hành động dựa trên tri giác hiện tại, bỏ qua toàn bộ lịch sử. Sử dụng các luật điều kiện–hành động:
 $$
-\text{IF } \text{trước\_mặt\_có\_vật\_cản} \text{ THEN } \text{phanh\_lại}
+\text{IF } \text{obstacle\_detected} \text{ THEN } \text{brake}
 $$
 *Hạn chế:* Chỉ hoạt động được nếu môi trường là quan sát toàn phần. Trong môi trường quan sát một phần, tác tử dễ rơi vào vòng lặp vô hạn.
 

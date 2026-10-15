@@ -144,7 +144,7 @@ Do đó cực đại tại biên $R_2=24{,}0\,\Omega$. Khi đó $R_1\parallel R_
 :::
 
 ::: exercise 26.65
-(a) Hãy lập bảng ước tính năng lượng và chi phí điện trong nhà. Ghi các thiết bị điện, điện áp sử dụng (dùng $240\,\mathrm{V}$ cho bình nước nóng, sưởi chân tường và lò nướng, dùng $120\,\mathrm{V}$ cho thiết bị còn lại), dòng điện, số giờ dùng mỗi ngày, công suất $P=IV$ và điện năng ngày $U=PT$ tính bằng kilowatt-giờ. Cộng điện năng ngày. (b) Tính chi phí tháng bằng cách nhân tổng điện năng ngày với giá $0{,}12\,\$/\mathrm{kWh}$ rồi nhân $30$ ngày.
+(a) Hãy lập bảng ước tính năng lượng và chi phí điện trong nhà. Ghi các thiết bị điện, điện áp sử dụng (dùng $240\,\mathrm{V}$ cho bình nước nóng, sưởi chân tường và lò nướng, dùng $120\,\mathrm{V}$ cho thiết bị còn lại), dòng điện, số giờ dùng mỗi ngày, công suất $P=IV$ và điện năng ngày $U=PT$ tính bằng kilowatt-giờ. Cộng điện năng ngày. (b) Tính chi phí tháng bằng cách nhân tổng điện năng ngày với giá $0{,}12\,\mathrm{USD/kWh}$ rồi nhân $30$ ngày.
 :::
 
 <!-- detailed-solution:26.65 -->

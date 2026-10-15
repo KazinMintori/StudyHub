@@ -23,7 +23,7 @@ Kết quả giả thiết ống dây dài hơn nhiều đường kính và bỏ 
 
 ## Ví dụ
 
-Ống dây dài có $1000\,\mathrm{vòng/m}$, mang dòng $0{,}50\,\mathrm A$, tạo trường khoảng $0{,}628\,\mathrm{mT}$ gần tâm trong không khí.
+Ống dây dài có $1000\,\mathrm{turns/m}$, mang dòng $0{,}50\,\mathrm A$, tạo trường khoảng $0{,}628\,\mathrm{mT}$ gần tâm trong không khí.
 
 ## Khi nào cần dùng?
 

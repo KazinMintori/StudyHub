@@ -174,11 +174,11 @@ Giả sử trong một thế giới toàn tri, ta biết chính xác thời gian
 
 Từ bảng số liệu toàn tri này, ta tính toán các giá trị kỳ vọng thực sự:
 - Thời gian trung bình nếu tất cả cùng đi tàu điện:
-  $$\mathbb{E}[Y(1)] = \frac{28 + 32 + 55 + 40}{4} = \frac{155}{4} = 38.75 \text{ phút}$$
+  $$\mathbb{E}[Y(1)] = \frac{28 + 32 + 55 + 40}{4} = \frac{155}{4} = 38.75 \text{ min}$$
 - Thời gian trung bình nếu tất cả cùng đi xe hơi:
-  $$\mathbb{E}[Y(0)] = \frac{35 + 30 + 40 + 30}{4} = \frac{135}{4} = 33.75 \text{ phút}$$
+  $$\mathbb{E}[Y(0)] = \frac{35 + 30 + 40 + 30}{4} = \frac{135}{4} = 33.75 \text{ min}$$
 - **Hiệu ứng can thiệp trung bình thực sự (True ATE)**:
-  $$\text{ATE} = \mathbb{E}[Y(1)] - \mathbb{E}[Y(0)] = 38.75 - 33.75 = +5.0 \text{ phút}$$
+  $$\text{ATE} = \mathbb{E}[Y(1)] - \mathbb{E}[Y(0)] = 38.75 - 33.75 = +5.0 \text{ min}$$
 
 Kết luận khách quan: Trung bình trên 4 người này, **việc đi tàu điện ngầm làm thời gian di chuyển tăng thêm 5 phút so với lái xe hơi**.
 
@@ -198,14 +198,14 @@ Dữ liệu thực tế mà nhà phân tích thu thập được trong bảng kh
 | **Minh** | 30 | ? *(Phản thực tế)* | Xe hơi |
 
 Nếu một nhà phân tích thiếu kinh nghiệm thực hiện so sánh ngây thơ (Naive Comparison) giữa hai nhóm:
-- Thời gian trung bình của nhóm đi tàu điện: $\bar{Y}_{\text{Tàu}} = \frac{28 + 32}{2} = 30.0 \text{ phút}$.
-- Thời gian trung bình của nhóm lái xe hơi: $\bar{Y}_{\text{Xe}} = \frac{40 + 30}{2} = 35.0 \text{ phút}$.
+- Thời gian trung bình của nhóm đi tàu điện: $\bar{Y}_{\mathrm{train}} = \frac{28 + 32}{2} = 30.0 \text{ min}$.
+- Thời gian trung bình của nhóm lái xe hơi: $\bar{Y}_{\mathrm{bus}} = \frac{40 + 30}{2} = 35.0 \text{ min}$.
 - Ước lượng ngây thơ thu được:
-  $$\hat{\text{ATE}}_{\text{ngây thơ}} = \bar{Y}_{\text{Tàu}} - \bar{Y}_{\text{Xe}} = 30.0 - 35.0 = -5.0 \text{ phút}$$
+  $$\widehat{\mathrm{ATE}}_{\mathrm{naive}} = \bar{Y}_{\mathrm{train}} - \bar{Y}_{\mathrm{bus}} = 30.0 - 35.0 = -5.0 \text{ min}$$
 
 > [!CAUTION] Sự đảo ngược đáng kinh ngạc của dấu hiệu ứng:
 > - Hiệu ứng nhân quả thực sự: $\text{ATE} = +5.0$ phút (Tàu điện làm chậm hơn 5 phút).
-> - Ước lượng từ dữ liệu quan sát ngây thơ: $\hat{\text{ATE}}_{\text{ngây thơ}} = -5.0$ phút (Tàu điện làm nhanh hơn 5 phút!).
+> - Ước lượng từ dữ liệu quan sát ngây thơ: $\widehat{\mathrm{ATE}}_{\mathrm{naive}} = -5.0$ phút (Tàu điện làm nhanh hơn 5 phút!).
 >
 > Dấu của hiệu ứng đã bị đảo ngược hoàn toàn $180^\circ$! Nguyên nhân là do **Thiên lệch lựa chọn** (Selection Bias): Nhóm chọn đi tàu vốn dĩ sống ở vị trí thuận lợi hơn nhóm chọn đi xe hơi. Khoảng cách địa lý từ nhà đến ga tàu chính là một **biến gây nhiễu** (Confounder) làm sai lệch bản chất nhân quả của bài toán.
 
@@ -284,7 +284,7 @@ Một công ty công nghệ thử nghiệm hai giao diện thanh toán: Giao di�
 
 **Yêu cầu:**
 1. Hãy tính hiệu ứng can thiệp cá thể $\tau_i = Y_i(1) - Y_i(0)$ cho từng khách hàng và tính Hiệu ứng can thiệp trung bình thực sự ($\text{ATE}$) của việc chuyển từ giao diện A sang giao diện B. Giao diện B giúp tiết kiệm thời gian trung bình bao nhiêu giây?
-2. Giả sử trong thực tế, khách hàng tự do lựa chọn giao diện: Khách hàng 1 và 2 (vốn am hiểu công nghệ) chọn giao diện B, trong khi Khách hàng 3 và 4 (người lớn tuổi, ít dùng ứng dụng) chọn giao diện A. Hãy lập bảng dữ liệu quan sát thực tế và tính toán ước lượng hiệu ứng can thiệp ngây thơ $\hat{\text{ATE}}_{\text{ngây thơ}} = \bar{Y}_{\text{nhóm B}} - \bar{Y}_{\text{nhóm A}}$.
+2. Giả sử trong thực tế, khách hàng tự do lựa chọn giao diện: Khách hàng 1 và 2 (vốn am hiểu công nghệ) chọn giao diện B, trong khi Khách hàng 3 và 4 (người lớn tuổi, ít dùng ứng dụng) chọn giao diện A. Hãy lập bảng dữ liệu quan sát thực tế và tính toán ước lượng hiệu ứng can thiệp ngây thơ $\widehat{\mathrm{ATE}}_{\mathrm{naive}} = \bar{Y}_B - \bar{Y}_A$.
 3. So sánh giá trị ước lượng ngây thơ với ATE thực sự và giải thích nguyên nhân gây ra sự sai lệch.
 
 ::: details Lời giải chi tiết
@@ -295,13 +295,13 @@ Một công ty công nghệ thử nghiệm hai giao diện thanh toán: Giao di�
   - $\tau_3 = Y_3(1) - Y_3(0) = 55 - 60 = -5$ giây.
   - $\tau_4 = Y_4(1) - Y_4(0) = 65 - 70 = -5$ giây.
 - Hiệu ứng can thiệp trung bình thực sự:
-  $$\text{ATE} = \frac{\tau_1 + \tau_2 + \tau_3 + \tau_4}{4} = \frac{-15 + (-10) + (-5) + (-5)}{4} = \frac{-35}{4} = -8.75 \text{ giây}$$
+  $$\text{ATE} = \frac{\tau_1 + \tau_2 + \tau_3 + \tau_4}{4} = \frac{-15 + (-10) + (-5) + (-5)}{4} = \frac{-35}{4} = -8.75 \text{ s}$$
 - Hoặc tính thông qua kỳ vọng:
   $$
 \begin{aligned}
-\mathbb{E}[Y(1)] &= \frac{30 + 40 + 55 + 65}{4} = \frac{190}{4} = 47.5 \text{ giây} \\
-\mathbb{E}[Y(0)] &= \frac{45 + 50 + 60 + 70}{4} = \frac{225}{4} = 56.25 \text{ giây} \\
-\text{ATE} &= 47.5 - 56.25 = -8.75 \text{ giây}
+\mathbb{E}[Y(1)] &= \frac{30 + 40 + 55 + 65}{4} = \frac{190}{4} = 47.5 \text{ s} \\
+\mathbb{E}[Y(0)] &= \frac{45 + 50 + 60 + 70}{4} = \frac{225}{4} = 56.25 \text{ s} \\
+\text{ATE} &= 47.5 - 56.25 = -8.75 \text{ s}
 \end{aligned}
 $$
 - Kết luận: Giao diện B thực sự giúp khách hàng tiết kiệm trung bình $8.75$ giây so với giao diện A.
@@ -313,11 +313,11 @@ $$
   - Khách hàng 3: Quan sát $Y_3(0) = 60$ giây.
   - Khách hàng 4: Quan sát $Y_4(0) = 70$ giây.
 - Thời gian trung bình quan sát được ở nhóm dùng giao diện B:
-  $$\bar{Y}_B = \frac{30 + 40}{2} = 35.0 \text{ giây}$$
+  $$\bar{Y}_B = \frac{30 + 40}{2} = 35.0 \text{ s}$$
 - Thời gian trung bình quan sát được ở nhóm dùng giao diện A:
-  $$\bar{Y}_A = \frac{60 + 70}{2} = 65.0 \text{ giây}$$
+  $$\bar{Y}_A = \frac{60 + 70}{2} = 65.0 \text{ s}$$
 - Ước lượng ngây thơ:
-  $$\hat{\text{ATE}}_{\text{ngây thơ}} = \bar{Y}_B - \bar{Y}_A = 35.0 - 65.0 = -30.0 \text{ giây}$$
+  $$\widehat{\mathrm{ATE}}_{\mathrm{naive}} = \bar{Y}_B - \bar{Y}_A = 35.0 - 65.0 = -30.0 \text{ s}$$
 
 **3. So sánh và giải thích sai lệch:**
 - So sánh: Ước lượng ngây thơ cho rằng giao diện B giúp tiết kiệm tới $30.0$ giây, trong khi hiệu ứng thực sự chỉ là $8.75$ giây (bị phóng đại lên gấp hơn 3.4 lần!).

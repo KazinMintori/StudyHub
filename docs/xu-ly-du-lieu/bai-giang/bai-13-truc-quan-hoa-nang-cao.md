@@ -24,7 +24,7 @@ Biểu đồ hộp (Boxplot) do John Tukey đề xuất là công cụ mạnh m�
 
 Nhiều người lầm tưởng rằng hai đầu râu của boxplot luôn kéo dài tới đúng vị trí của hàng rào lý thuyết:
 $$
-\text{Hàng rào dưới: } Q_1 - 1.5 \times IQR \quad \text{và} \quad \text{Hàng rào trên: } Q_3 + 1.5 \times IQR
+\text{Lower fence: } Q_1 - 1.5 \times IQR , \quad \text{Upper fence: } Q_3 + 1.5 \times IQR
 $$
 với $IQR = Q_3 - Q_1$ là khoảng tứ phân vị.
 
@@ -117,7 +117,7 @@ Hãy xem xét diễn biến số lượng đánh giá của một thị trườn
 
 Nếu người vẽ biểu đồ muốn tạo cảm giác về một sự bùng nổ đột biến, họ sẽ cắt gọt trục thời gian chỉ lấy từ năm 2020 đến 2025:
 $$
-\text{Tốc độ tăng trưởng hiển thị} = \frac{700}{90} \approx 7.78 \text{ lần (tăng gần 800\%)}
+\text{Displayed growth} = \frac{700}{90} \approx 7.78 \times \\ (\approx 800\\%)
 $$
 và giật tít: *"Thị trường bùng nổ gấp 8 lần!"*.
 
@@ -127,7 +127,7 @@ Sự "bùng nổ" này là một ảo giác toán học. Năm 2020 là một nă
 
 Nếu so sánh năm 2025 với mốc bình thường trước dịch là năm 2019:
 $$
-\text{Tốc độ tăng trưởng thực chất} = \frac{700}{420} \approx 1.67 \text{ lần (tăng 67\% sau 6 năm)}
+\text{Actual growth} = \frac{700}{420} \approx 1.67 \times \\ (\approx 67\\%)
 $$
 Mức tăng 67% sau 6 năm (tương đương bình quân $\approx 8.9\%$ mỗi năm) là một tốc độ tăng trưởng lành mạnh, hoàn toàn không phải là "bùng nổ thần kỳ gấp 8 lần".
 
@@ -143,7 +143,7 @@ Mức tăng 67% sau 6 năm (tương đương bình quân $\approx 8.9\%$ mỗi n
 Nhà lý thuyết đồ họa Edward Tufte đã lượng hóa mức độ bóp méo thông tin của một biểu đồ thông qua chỉ số **Hệ số dối trá (Lie Factor)**:
 
 $$
-\text{Lie Factor} = \frac{\text{Tỷ lệ biến thiên đo được trên hình vẽ}}{\text{Tỷ lệ biến thiên thực tế trong dữ liệu}}
+\text{Lie Factor} = \frac{\text{Size of effect in graphic}}{\text{Size of effect in data}}
 $$
 
 - $\text{Lie Factor} = 1.0$: Biểu đồ phản ánh trung thực tuyệt đối dữ liệu.

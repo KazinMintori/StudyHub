@@ -14,7 +14,7 @@ Với bài toán lồi khả vi, câu trả lời là một bất đẳng thức
 ## 1. Tiêu chuẩn tối ưu
 
 > **Định lý.** Xét bài toán lồi với hàm mục tiêu $f_0$ khả vi và miền khả thi $X$. Điểm $x$ là nghiệm tối ưu khi và chỉ khi $x \in X$ và
-> $$\nabla f_0(x)^T (y - x) \ge 0 \quad \text{với mọi } y \in X.$$
+> $$\nabla f_0(x)^T (y - x) \ge 0 \quad \forall y \in X.$$
 
 Đọc từng phần của bất đẳng thức. Vector $y - x$ là hướng đi từ $x$ tới một điểm khả thi $y$. Đại lượng $\nabla f_0(x)^T (y - x)$ là đạo hàm theo hướng của $f_0$ khi bắt đầu đi theo hướng đó. Tiêu chuẩn nói: Tại nghiệm, **không có hướng khả thi nào làm $f_0$ giảm ngay từ bước đầu tiên**. Mọi hướng đi vào miền khả thi đều làm $f_0$ tăng, hoặc ít nhất là không giảm, theo xấp xỉ bậc nhất.
 
@@ -55,7 +55,7 @@ Ví dụ với $P = \operatorname{diag}(2, 0)$. Với $q = (-2, 0)$, $f_0 = x_1^
 Xét bài toán cực tiểu $f_0(x)$ với $Ax = b$ trong đó $A \in \mathbb{R}^{p \times n}$ và $b \in \mathbb{R}^p$. Mọi điểm khả thi có dạng $y = x + v$ với $v$ thuộc không gian không $\mathcal{N}(A)$. Tiêu chuẩn trở thành $\nabla f_0(x)^T v \ge 0$ với mọi $v \in \mathcal{N}(A)$. Nhưng nếu $v$ thuộc không gian con này thì $-v$ cũng vậy, nên bất đẳng thức đúng cho cả $v$ lẫn $-v$, nghĩa là $\nabla f_0(x)^T v = 0$. Gradient phải **vuông góc** với $\mathcal{N}(A)$, tức thuộc không gian hàng $\mathcal{R}(A^T)$. Viết thành công thức:
 
 $$
-Ax = b, \qquad \nabla f_0(x) + A^T \nu = 0 \iff \nabla f_0(x) + \sum_{i=1}^p \nu_i a_i = 0 \ \text{ với một vector } \nu \in \mathbb{R}^p,
+Ax = b, \qquad \nabla f_0(x) + A^T \nu = 0 \iff \nabla f_0(x) + \sum_{i=1}^p \nu_i a_i = 0 \quad (\exists \nu \in \mathbb{R}^p),
 $$
 
 với $a_i^T$ là hàng thứ $i$ của ma trận $A$. Ta vừa tìm lại điều kiện **nhân tử Lagrange** cổ điển, lần này chỉ bằng lập luận hình học. Vector $\nu$ là nhân tử Lagrange, và chương đối ngẫu sẽ cho nó một ý nghĩa sâu hơn.
@@ -75,7 +75,7 @@ $$
 Vì cả $x_i \ge 0$ lẫn $\big(\nabla f_0(x)\big)_i \ge 0$ với mọi $i = 1, \dots, n$, mỗi số hạng $x_i \big(\nabla f_0(x)\big)_i$ đều không âm. Để tổng của chúng không dương ($\le 0$), bắt buộc từng số hạng riêng lẻ phải triệt tiêu về 0. Ta đúc kết toàn bộ điều kiện thành hệ thức:
 
 $$
-x \succeq 0, \qquad \nabla f_0(x) \succeq 0, \qquad x_i \,\big(\nabla f_0(x)\big)_i = 0 \quad \text{với mọi } i = 1, \dots, n.
+x \succeq 0, \qquad \nabla f_0(x) \succeq 0, \qquad x_i \,\big(\nabla f_0(x)\big)_i = 0 \quad \forall i = 1, \dots, n.
 $$
 
 Điều kiện cuối gọi là **điều kiện bù**: Với mỗi $i = 1, \dots, n$, hoặc $x_i = 0$, hoặc đạo hàm riêng theo $x_i$ bằng 0. Đọc theo từng tọa độ: Nếu biến $x_i$ nằm hẳn trong miền ($x_i > 0$), nó được tự do dịch chuyển cả hai phía, nên đạo hàm theo nó phải bằng 0 như bài toán không ràng buộc. Nếu $x_i$ bị chặn ở biên 0, đạo hàm theo nó chỉ cần không âm: Hàm muốn $x_i$ giảm tiếp xuống dưới 0, nhưng ràng buộc không cho.
@@ -87,7 +87,7 @@ Ví dụ: Cực tiểu $(x_1 - 1)^2 + (x_2 + 2)^2$ với $x \succeq 0$. Không r
 Tiêu chuẩn tối ưu còn có một cách viết dẫn thẳng tới một thuật toán. Gọi $\Pi_X(z)$ là **phép chiếu Euclid** của $z$ lên tập lồi đóng $X$, tức điểm của $X$ gần $z$ nhất theo chuẩn Euclid. Phép chiếu là nghiệm của bài toán lồi cực tiểu $\tfrac12\|y - z\|_2^2$ trên $X$, nên theo chính tiêu chuẩn vừa học, $p = \Pi_X(z)$ khi và chỉ khi
 
 $$
-(p - z)^T (y - p) \ge 0 \quad \text{với mọi } y \in X .
+(p - z)^T (y - p) \ge 0 \quad \forall y \in X .
 $$
 
 Giờ lấy $z = x - t\nabla f_0(x)$ với $t > 0$. Điểm $x$ là hình chiếu của $z$ khi và chỉ khi $t\,\nabla f_0(x)^T (y - x) \ge 0$ với mọi $y \in X$, đúng là tiêu chuẩn tối ưu. Vậy:
@@ -118,7 +118,7 @@ Nếu $x$ nằm trong phần trong của $X$, mọi hướng $v$ đều khả th
 
 <details><summary>Xem lời giải thích</summary>
 
-Điều kiện $\nabla f_0(x) + \nu \mathbf{1} = 0$ nói mọi đạo hàm riêng bằng $-\nu$, nên $-\nu$ là chi phí biên chung. Khi tổng tăng thêm $\delta$ nhỏ, cách rẻ nhất là chia phần tăng sao cho chi phí biên vẫn bằng nhau, và chi phí tăng xấp xỉ $(\text{chi phí biên}) \times \delta = \tfrac{12}{11}\delta$. Kiểm tra chính xác: Nghiệm với tổng $s$ là $s \cdot (\tfrac{6}{11}, \tfrac{3}{11}, \tfrac{2}{11})$ và giá trị tối ưu là $\tfrac{6}{11}s^2$, có đạo hàm theo $s$ tại $s = 1$ bằng $\tfrac{12}{11}$. Nhân tử Lagrange đo **độ nhạy** của giá trị tối ưu theo vế phải của ràng buộc, và chương đối ngẫu sẽ chứng minh điều này tổng quát.
+Điều kiện $\nabla f_0(x) + \nu \mathbf{1} = 0$ nói mọi đạo hàm riêng bằng $-\nu$, nên $-\nu$ là chi phí biên chung. Khi tổng tăng thêm $\delta$ nhỏ, cách rẻ nhất là chia phần tăng sao cho chi phí biên vẫn bằng nhau, và chi phí tăng xấp xỉ $(\text{marginal cost}) \times \delta = \tfrac{12}{11}\delta$. Kiểm tra chính xác: Nghiệm với tổng $s$ là $s \cdot (\tfrac{6}{11}, \tfrac{3}{11}, \tfrac{2}{11})$ và giá trị tối ưu là $\tfrac{6}{11}s^2$, có đạo hàm theo $s$ tại $s = 1$ bằng $\tfrac{12}{11}$. Nhân tử Lagrange đo **độ nhạy** của giá trị tối ưu theo vế phải của ràng buộc, và chương đối ngẫu sẽ chứng minh điều này tổng quát.
 
 </details>
 

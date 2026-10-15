@@ -76,11 +76,11 @@ $$
 :::
 
 ::: exercise 28.77 ••• CALC
-Khi một phân bố điện tích rắn, có tổng điện tích $Q$ và khối lượng $M$, quay quanh một trục, mômen từ $\vec M_{\mathrm{từ}}$ tỉ lệ với mômen động lượng $\vec L$:
+Khi một phân bố điện tích rắn, có tổng điện tích $Q$ và khối lượng $M$, quay quanh một trục, mômen từ $\vec M_{\mathrm{mag}}$ tỉ lệ với mômen động lượng $\vec L$:
 
 $$
 \begin{aligned}
-\vec M_{\mathrm{từ}} &= \gamma\vec L, \\
+\vec M_{\mathrm{mag}} &= \gamma\vec L, \\
 \gamma &= g\frac{Q}{2M}.
 \end{aligned}
 $$
@@ -116,7 +116,7 @@ $\gamma$ là tỉ số hồi chuyển từ, còn $g$ là hệ số không có đ
 $$
 \begin{aligned}
 \sigma &= \frac{Q}{4\pi R^2}, \\
-dA_{\mathrm{dải}} &= 2\pi R^2\sin\theta\,d\theta, \\
+dA_{\mathrm{strip}} &= 2\pi R^2\sin\theta\,d\theta, \\
 dQ &= \frac Q2\sin\theta\,d\theta.
 \end{aligned}
 $$
@@ -147,7 +147,7 @@ $$
 trong đó đã đặt $u=\cos\theta$. Do đó:
 
 $$
-\vec M_{\mathrm{từ}}=\frac{Q\omega R^2}{3}\hat k.
+\vec M_{\mathrm{mag}}=\frac{Q\omega R^2}{3}\hat k.
 $$
 
 (d) Với khối lượng phân bố đều, một dải có $dm=(M/2)\sin\theta\,d\theta$. Khoảng cách dải đến trục bằng $R\sin\theta$. Vì vậy:
@@ -204,7 +204,7 @@ trong đó $\sigma$ là mật độ điện tích mặt tại chỗ, $\vec v$ l�
 **Hướng đi:**
 
 - Giữ vector khoảng cách theo chiều từ nguồn đến điểm đo, vì đảo nó sẽ đảo chiều tích có hướng.
-- Dùng $\vec v=\vec\omega\times\vec r_{\mathrm{vị\ trí}}$ để tìm vận tốc quay quanh $x$.
+- Dùng $\vec v=\vec\omega\times\vec r_{\mathrm{pos}}$ để tìm vận tốc quay quanh $x$.
 - Tích phân theo $\phi$ trước. Đối xứng làm các thành phần ngang trục triệt tiêu, chỉ còn thành phần $x$.
 
 (a) Mật độ điện tích mặt là:
@@ -442,9 +442,9 @@ Ta có:
 
 $$
 \begin{aligned}
-n_{\mathrm{mới}} &= n_{\mathrm{cũ}}, \\
-B_{\mathrm{mới}} &= \mu_0nI=B_{\mathrm{cũ}}, \\
-\tau_{\max,\mathrm{mới}} &= \tau_{\max,\mathrm{cũ}}.
+n_{\mathrm{new}} &= n_{\mathrm{old}}, \\
+B_{\mathrm{new}} &= \mu_0nI=B_{\mathrm{old}}, \\
+\\tau_{\\max,\mathrm{new}} &= \\tau_{\\max,\mathrm{old}}.
 \end{aligned}
 $$
 

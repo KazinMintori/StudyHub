@@ -142,7 +142,7 @@ Thay số:
 Tương tự như mối liên hệ giữa tọa độ và vận tốc:
 1. **Gia tốc trung bình** trong khoảng $\Delta t$ là **hệ số góc (độ dốc) của đường cát tuyến** nối hai điểm tương ứng trên đồ thị $v_x - t$ (Hình 2.12).
 2. **Gia tốc tức thời** tại thời điểm $t$ là **độ dốc của đường tiếp tuyến** với đồ thị $v_x - t$ tại thời điểm đó:
-   $$a_x = \text{Độ dốc tiếp tuyến của đồ thị } v_x - t.$$
+   $$a_x = \frac{dv_x}{dt} \quad (\text{Slope of } v_x - t).$$
 
 ![Hình 2.12: Gia tốc tức thời là độ dốc của tiếp tuyến trên đồ thị vận tốc - thời gian](img/young-02/hinh-2-12.png)
 

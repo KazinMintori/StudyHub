@@ -29,7 +29,7 @@ Bản nháp ban đầu nhân thêm $z_1$ trong tử và cho $3{,}70\times10^{25}
 
 ### P1 đã khắc phục — 27.56: Mạch có nhánh song song và phải tính trọng lực
 
-Hình P27.56 mắc điện trở $25\,\Omega$ nối tiếp với hai nhánh song song: điện trở cố định $10\,\Omega$ và thanh $10\,\Omega$. Do đó $R_{\mathrm{tổng}}=30\,\Omega$, dòng nguồn là $4{,}00\,\mathrm{A}$ và dòng qua thanh là $2{,}00\,\mathrm{A}$. Lực từ có độ lớn:
+Hình P27.56 mắc điện trở $25\,\Omega$ nối tiếp với hai nhánh song song: điện trở cố định $10\,\Omega$ và thanh $10\,\Omega$. Do đó $R_{\mathrm{tot}}=30\,\Omega$, dòng nguồn là $4{,}00\,\mathrm{A}$ và dòng qua thanh là $2{,}00\,\mathrm{A}$. Lực từ có độ lớn:
 
 $$
 F_B=ILB=(2{,}00)(0{,}850)(1{,}60)=2{,}72\,\mathrm{N}.
