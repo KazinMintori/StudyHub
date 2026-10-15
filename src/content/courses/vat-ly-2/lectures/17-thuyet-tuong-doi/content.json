@@ -3,17 +3,1410 @@
   "lecture": "17-thuyet-tuong-doi",
   "route": "/vat-ly-2/bai-giang/17-thuyet-tuong-doi",
   "notes": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi.md",
-  "topics": [],
+  "topics": [
+    {
+      "slug": "bat-bien-dinh-luat",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/bat-bien-dinh-luat.md"
+    },
+    {
+      "slug": "tinh-tuong-doi-dong-thoi",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/tinh-tuong-doi-dong-thoi.md"
+    },
+    {
+      "slug": "gian-thoi-gian",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/gian-thoi-gian.md"
+    },
+    {
+      "slug": "co-chieu-dai",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/co-chieu-dai.md"
+    },
+    {
+      "slug": "bien-doi-lorentz",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/bien-doi-lorentz.md"
+    },
+    {
+      "slug": "doppler-dien-tu",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/doppler-dien-tu.md"
+    },
+    {
+      "slug": "dong-luong-tuong-doi",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/dong-luong-tuong-doi.md"
+    },
+    {
+      "slug": "cong-nang-luong-tuong-doi",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/cong-nang-luong-tuong-doi.md"
+    },
+    {
+      "slug": "newton-va-tuong-doi-rong",
+      "source": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/newton-va-tuong-doi-rong.md"
+    }
+  ],
   "slides": "docs/.vitepress/physics-courses.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [
     "vector",
+    "van-toc-vat-ly",
     "dong-luong-vat-ly",
-    "cong-nang-luong"
+    "cong-nang-luong",
+    "song"
   ],
-  "fragments": [],
+  "fragments": [
+    "raw_materials/physics/translations/chapter-37/00-mo-dau.md",
+    "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+    "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+    "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+    "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+    "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+    "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+    "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+    "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+    "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+    "raw_materials/physics/translations/chapter-37/19-mcat.md",
+    "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+    "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+    "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+    "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+    "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+    "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+    "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+    "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+    "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md"
+  ],
   "examples": [],
-  "exercises": [],
-  "solutions": [],
-  "assets": []
+  "exercises": [
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 9,
+      "title": "VP37.5.1. Thời gian sống của meson K dương"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 44,
+      "title": "VP37.5.2. Hai bộ đếm thời gian trên Arrakis"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 77,
+      "title": "VP37.5.3. Chuyến bay từ Trái Đất đến Mặt Trời"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 117,
+      "title": "VP37.5.4. Tàu đi về phía Mặt Trăng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 161,
+      "title": "VP37.7.1. Pháo hoa và vụ nổ trong hai hệ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 209,
+      "title": "VP37.7.2. Hai sự kiện đồng thời đối với Kamala"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 255,
+      "title": "VP37.7.3. Tàu Nostromo, đầu dò và tàu trinh sát"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 296,
+      "title": "VP37.7.4. Hai tàu ở hai phía Trái Đất"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 339,
+      "title": "VP37.11.1. Proton chịu lực dọc và lực ngang"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 390,
+      "title": "VP37.11.2. Electron có năng lượng toàn phần đã biết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 437,
+      "title": "VP37.11.3. Electron có động lượng đã biết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 479,
+      "title": "VP37.11.4. Phân rã meson thành hai kaon"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 525,
+      "title": "Bài tập cầu nối. Hai chùm proton đối đầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 527,
+      "title": "Bài cầu nối 37. Hai cấu hình tạo cùng một va chạm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 3,
+      "title": "Q37.1. Đồng hồ và thước riêng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 28,
+      "title": "Q37.2. Tính đồng thời và quan hệ nhân quả"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 61,
+      "title": "Q37.3. Bóng đèn giữa phòng trong tên lửa"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 94,
+      "title": "Q37.4. Hai tin nhắn nhận cùng lúc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 123,
+      "title": "Q37.5. Tuổi thọ và khoảng cách du hành"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 150,
+      "title": "Q37.6. Khi nào chiếc đĩa bầu dục trở thành tròn?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 183,
+      "title": "Q37.7. Hai sự kiện trùng vị trí và thời điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 211,
+      "title": "Q37.8. Chiều dài toa tàu theo ba người"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 244,
+      "title": "Q37.9. Có giới hạn trên của động lượng và năng lượng không?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 267,
+      "title": "Q37.10. Hạt không khối lượng có cần tăng tốc từ trạng thái nghỉ?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 293,
+      "title": "Q37.11. Ánh sáng trong nước chuyển động"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 320,
+      "title": "Q37.12. Dịch bước sóng có mâu thuẫn với tốc độ ánh sáng không đổi?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 341,
+      "title": "Q37.13. Khí nóng có khối lượng lớn hơn khí lạnh không?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 368,
+      "title": "Q37.14. Vì sao cơ học Newton ra đời trước?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 389,
+      "title": "Q37.15. Nếu tốc độ ánh sáng chỉ bằng 10 mét mỗi giây"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 1,
+      "title": "Bài tập 37.1–37.13"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 5,
+      "title": "37.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 38,
+      "title": "37.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 71,
+      "title": "37.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 96,
+      "title": "37.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 125,
+      "title": "37.5"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 158,
+      "title": "37.6"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 204,
+      "title": "37.7"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 236,
+      "title": "37.8"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 270,
+      "title": "37.9"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 293,
+      "title": "37.10"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 318,
+      "title": "37.11"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 374,
+      "title": "37.12"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 412,
+      "title": "37.13"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 1,
+      "title": "Bài tập 37.14–37.24"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 5,
+      "title": "37.14"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 42,
+      "title": "37.15"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 77,
+      "title": "37.16"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 124,
+      "title": "37.17"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 156,
+      "title": "37.18"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 196,
+      "title": "37.19"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 227,
+      "title": "37.20"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 252,
+      "title": "37.21"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 285,
+      "title": "37.22"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 313,
+      "title": "37.23"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 351,
+      "title": "37.24"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 1,
+      "title": "Bài tập 37.25–37.39"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 5,
+      "title": "37.25"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 40,
+      "title": "37.26"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 70,
+      "title": "37.27"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 95,
+      "title": "37.28"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 135,
+      "title": "37.29"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 168,
+      "title": "37.30"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 208,
+      "title": "37.31"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 233,
+      "title": "37.32"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 270,
+      "title": "37.33"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 309,
+      "title": "37.34"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 346,
+      "title": "37.35"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 385,
+      "title": "37.36"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 419,
+      "title": "37.37"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 445,
+      "title": "37.38"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 493,
+      "title": "37.39"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 1,
+      "title": "Bài tập 37.40–37.54"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 3,
+      "title": "37.40"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 24,
+      "title": "37.41"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 51,
+      "title": "37.42"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 76,
+      "title": "37.43"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 101,
+      "title": "37.44"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 141,
+      "title": "37.45"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 183,
+      "title": "37.46"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 254,
+      "title": "37.47"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 292,
+      "title": "37.48"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 323,
+      "title": "37.49"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 352,
+      "title": "37.50"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 393,
+      "title": "37.51"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 429,
+      "title": "37.52"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 486,
+      "title": "37.53"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 526,
+      "title": "37.54"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 1,
+      "title": "Bài tập 37.55–37.62"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 3,
+      "title": "37.55"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 72,
+      "title": "37.56"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 124,
+      "title": "37.57"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 149,
+      "title": "37.58"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 183,
+      "title": "37.59"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 216,
+      "title": "37.60"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 282,
+      "title": "37.61"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 310,
+      "title": "37.62"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 1,
+      "title": "Bài tập dữ liệu và bài tập nâng cao"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 3,
+      "title": "37.63"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 67,
+      "title": "37.64"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 116,
+      "title": "37.65"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 165,
+      "title": "37.66"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 219,
+      "title": "37.67"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 287,
+      "title": "37.68"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 360,
+      "title": "37.69"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 428,
+      "title": "37.70"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 1,
+      "title": "Bài tập theo đoạn thông tin"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 9,
+      "title": "37.71"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 40,
+      "title": "37.72"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 71,
+      "title": "37.73"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 104,
+      "title": "37.74"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 17,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 52,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 85,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 125,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 169,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 217,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 263,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 304,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 345,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 396,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 443,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 487,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+      "line": 537,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 11,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 34,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 71,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 102,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 129,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 156,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 189,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 217,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 250,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 275,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 299,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 326,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 347,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 374,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 395,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 13,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 46,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 77,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 104,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 133,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 166,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 212,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 242,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 276,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 299,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 326,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 382,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 420,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 11,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 50,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 85,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 132,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 166,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 202,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 233,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 258,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 291,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 321,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 357,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 13,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 48,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 76,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 103,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 143,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 176,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 214,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 239,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 276,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 315,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 352,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 391,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 425,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 453,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+      "line": 499,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 9,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 32,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 57,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 82,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 109,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 149,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 193,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 262,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 298,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 331,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 358,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 401,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 439,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 494,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 532,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 15,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 80,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 130,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 155,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 189,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 226,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 288,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 318,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 21,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 79,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 133,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 180,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 231,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 299,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 374,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 460,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 21,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 52,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 82,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+      "line": 115,
+      "title": "Lời giải chi tiết"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/young-37/mo-dau-37.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/00-mo-dau.md",
+      "line": 5,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/mo-dau-37.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-bat-bien.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-bat-bien.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-thoi-gian.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 27,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-thoi-gian.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-chieu-dai.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 45,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-chieu-dai.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-lorentz.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 74,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-lorentz.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-doppler.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 92,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-doppler.png"
+    },
+    {
+      "reference": "img/young-37/tong-ket-37-nang-luong.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+      "line": 128,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/tong-ket-37-nang-luong.png"
+    },
+    {
+      "reference": "img/young-37/hinh-q37-3.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+      "line": 65,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-q37-3.png"
+    },
+    {
+      "reference": "img/young-37/hinh-37-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-05.png"
+    },
+    {
+      "reference": "img/young-37/hinh-e37-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+      "line": 160,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-e37-18.png"
+    },
+    {
+      "reference": "img/young-37/hinh-p37-41.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+      "line": 28,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-p37-41.png"
+    },
+    {
+      "reference": "img/young-37/hinh-p37-55.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+      "line": 7,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-p37-55.png"
+    },
+    {
+      "reference": "img/young-37/loi-giai-37-63.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 49,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/loi-giai-37-63.svg"
+    },
+    {
+      "reference": "img/young-37/loi-giai-37-65.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 151,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/loi-giai-37-65.svg"
+    },
+    {
+      "reference": "img/young-37/hinh-p37-67.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 223,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-p37-67.png"
+    },
+    {
+      "reference": "img/young-37/loi-giai-37-67.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 254,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/loi-giai-37-67.svg"
+    },
+    {
+      "reference": "img/young-37/hinh-p37-68.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+      "line": 291,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-p37-68.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+      "line": 13,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-01.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-02.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+      "line": 37,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-02.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-03.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+      "line": 55,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-03.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-04.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-04.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+      "line": 19,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-05.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 11,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-06.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-08.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 90,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-08.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-07.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 98,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-07.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-09.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 108,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-09.png"
+    },
+    {
+      "reference": "../img/young-37/ung-dung-37-sinh-doi.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 224,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/ung-dung-37-sinh-doi.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 18,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-10.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 81,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-11.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 89,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-12.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-13.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 127,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-13.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 155,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-14.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-15.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-15.png"
+    },
+    {
+      "reference": "../img/young-37/ung-dung-37-chay-tiep-suc.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 103,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/ung-dung-37-chay-tiep-suc.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 142,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-16.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-17.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+      "line": 9,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-17.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+      "line": 54,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-18.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-19.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+      "line": 64,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-19.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+      "line": 18,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-20.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-21.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 51,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-21.png"
+    },
+    {
+      "reference": "../img/young-37/ung-dung-37-nang-luong-hat-nhan.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 113,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/ung-dung-37-nang-luong-hat-nhan.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-22.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 180,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-22.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-23.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md",
+      "line": 21,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-23.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-24.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md",
+      "line": 31,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-24.png"
+    },
+    {
+      "reference": "../img/young-37/hinh-37-25.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md",
+      "line": 43,
+      "source": "docs/vat-ly-2/bai-giang/img/young-37/hinh-37-25.png"
+    }
+  ]
 }

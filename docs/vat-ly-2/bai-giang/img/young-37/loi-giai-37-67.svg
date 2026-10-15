@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="532.8pt" height="367.2pt" viewBox="0 0 532.8 367.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-15T19:57:22.569273</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 367.2
+L 532.8 367.2
+L 532.8 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 102.492 353.16
+L 430.308 353.16
+L 430.308 14.04
+L 102.492 14.04
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 385.092 324.9
+L 243.792 240.12
+L 133.578 56.43
+L 274.878 141.21
+z
+" clip-path="url(#p5cb18a684a)" style="fill: #ffea9c; stroke: #5743a1; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m35e4b0cbeb" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #24364b"/>
+    </defs>
+    <g clip-path="url(#p5cb18a684a)">
+     <use xlink:href="#m35e4b0cbeb" x="385.092" y="324.9" style="fill: #24364b; stroke: #24364b"/>
+     <use xlink:href="#m35e4b0cbeb" x="243.792" y="240.12" style="fill: #24364b; stroke: #24364b"/>
+     <use xlink:href="#m35e4b0cbeb" x="274.878" y="141.21" style="fill: #24364b; stroke: #24364b"/>
+     <use xlink:href="#m35e4b0cbeb" x="133.578" y="56.43" style="fill: #24364b; stroke: #24364b"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="392.092" y="319.9" transform="rotate(-0 392.092 319.9)">1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="250.792" y="235.12" transform="rotate(-0 250.792 235.12)">2</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="281.878" y="136.21" transform="rotate(-0 281.878 136.21)">3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="140.578" y="51.43" transform="rotate(-0 140.578 51.43)">4</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 93.190253 324.9
+Q 257.922953 324.9 421.53762 324.9
+" style="fill: none; stroke: #24364b; stroke-linecap: round"/>
+    <path d="M 416.33762 322.3
+L 421.53762 324.9
+L 416.33762 327.5
+" style="fill: none; stroke: #24364b; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 385.092 345.509671
+Q 385.092 183.602609 385.092 22.813582
+" style="fill: none; stroke: #24364b; stroke-linecap: round"/>
+    <path d="M 382.492 28.013582
+L 385.092 22.813582
+L 387.692 28.013582
+" style="fill: none; stroke: #24364b; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="414.4824" y="342.9864" transform="rotate(-0 414.4824 342.9864)">x′</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start" x="394.1352" y="40.0392" transform="rotate(-0 394.1352 40.0392)">ct′</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="125.1" y="36.648" transform="rotate(-0 125.1 36.648)">Miền các sự kiện đèn đang sáng</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5cb18a684a">
+   <rect x="102.492" y="14.04" width="327.816" height="339.12"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -142,7 +142,17 @@ Tab Bài tập chứa 71 bài đánh số, 19 câu thảo luận, 12 bài hướ
 
 Đã áp dụng quy tắc công thức mới chỉ ngắt tại dấu quan hệ, giữ trọn vế và không dùng aligned cho phương trình ngắn. Có 151 lượt kiểm giao diện và tám lượt kiểm nguồn bổ sung ở 320–1440 px, không có tràn công thức hay lỗi JavaScript. Hai tác vụ Antigravity kết thúc sau ba lượt với lỗi bridge. Codex tự kiểm, sửa và giữ hồ sơ đối chiếu. Trạng thái xuất bản được ghi riêng. Build chỉ trên GitHub Actions.
 
-## Các chương 37–44
+## Chương 37
+
+Đã hoàn tất chín mục lý thuyết, 11 ví dụ, bảy câu tự kiểm và 40 công thức đánh số. Có 25 hình lý thuyết, tổng cộng 41 PNG giữ nguyên vùng PDF và ba SVG hỗ trợ lời giải. Chú thích tiếng Việt giải nghĩa mỗi nhãn tiếng Anh một lần dưới ảnh.
+
+Tab Bài tập chứa 74 bài đánh số, 15 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, với 102 lời giải gập theo cấu trúc Tóm tắt đề bài, Hướng đi và các bước giải. Có 12 Slides, bảy nhóm Cheatsheet gồm 21 mục chỉ chứa định nghĩa, tính chất, điều kiện và công thức, cùng 14 Wiki mới.
+
+Tám bộ Python, kiểm tra pixel và 167 lượt kiểm tra trình duyệt ở 320–1440 px đã qua. Có bảy lần đổi bề rộng trực tiếp. Không phát hiện tràn công thức, MathML phụ trợ hiện ra, mã TeX chưa biên dịch hoặc lỗi JavaScript. Các sai khác nguồn, điều kiện mô hình và lỗi micro/milli được ghi trong hồ sơ đối chiếu riêng. Build chỉ trên GitHub Actions.
+
+Hai worktree Antigravity được giữ sau khi cầu nối trả về unknown/job not found. Ảnh và chú thích được lưu lại để kiểm tra. Codex tự soạn phần lý thuyết chưa có đầu ra, đối chiếu và xác minh bản tích hợp, không gọi thêm subagent GPT.
+
+## Các chương 38–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

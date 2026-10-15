@@ -1763,20 +1763,102 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "17-thuyet-tuong-doi",
-      "title": "Thuyết tương đối",
-      "prerequisites": [
-        "vector",
-        "dong-luong-vat-ly",
-        "cong-nang-luong"
-      ],
-      "supportingConcepts": [
-        "thuyet-tuong-doi-hep"
-      ],
-      "status": "draft",
-      "number": 17,
-      "sourceChapter": 37
-    },
+        "slug": "17-thuyet-tuong-doi",
+        "title": "Thuyết tương đối",
+        "prerequisites": [
+          "vector",
+          "van-toc-vat-ly",
+          "dong-luong-vat-ly",
+          "cong-nang-luong",
+          "song"
+        ],
+        "supportingConcepts": [
+          "he-quy-chieu-quan-tinh",
+          "su-kien-khong-thoi-gian",
+          "dong-thoi-tuong-doi",
+          "he-so-lorentz",
+          "thoi-gian-rieng",
+          "gian-thoi-gian",
+          "do-dai-rieng",
+          "co-chieu-dai-lorentz",
+          "bien-doi-lorentz",
+          "doppler-dien-tu",
+          "dong-luong-tuong-doi",
+          "nang-luong-nghi",
+          "nguyen-ly-tuong-ung",
+          "nguyen-ly-tuong-duong"
+        ],
+        "status": "ready",
+        "number": 17,
+        "sourceChapter": 37,
+        "topicGroups": [
+          {
+            "title": "Không gian, thời gian và phép đo",
+            "topics": [
+              {
+                "slug": "bat-bien-dinh-luat",
+                "title": "Tính bất biến của định luật vật lý",
+                "question": "Hai hệ quán tính có thể dùng những định luật khác nhau không?",
+                "source": "37.1"
+              },
+              {
+                "slug": "tinh-tuong-doi-dong-thoi",
+                "title": "Tính tương đối của đồng thời",
+                "question": "Vì sao hai sự kiện đồng thời trong một hệ lại không đồng thời trong hệ khác?",
+                "source": "37.2"
+              },
+              {
+                "slug": "gian-thoi-gian",
+                "title": "Giãn thời gian và thời gian riêng",
+                "question": "Đồng hồ chuyển động chạy chậm được xác định bằng phép đo nào?",
+                "source": "37.3"
+              },
+              {
+                "slug": "co-chieu-dai",
+                "title": "Co chiều dài và hình dạng quan sát",
+                "question": "Đo đồng thời hai đầu vật khác với chụp ảnh vật như thế nào?",
+                "source": "37.4"
+              },
+              {
+                "slug": "bien-doi-lorentz",
+                "title": "Biến đổi Lorentz",
+                "question": "Cùng một sự kiện và cùng một chuyển động có tọa độ nào trong hai hệ?",
+                "source": "37.5"
+              },
+              {
+                "slug": "doppler-dien-tu",
+                "title": "Doppler của sóng điện từ",
+                "question": "Tần số đổi thế nào trong khi tốc độ ánh sáng vẫn bằng c?",
+                "source": "37.6"
+              }
+            ]
+          },
+          {
+            "title": "Động lực học, năng lượng và hấp dẫn",
+            "topics": [
+              {
+                "slug": "dong-luong-tuong-doi",
+                "title": "Động lượng và lực tương đối tính",
+                "question": "Vì sao lực dọc và lực ngang cho các hệ số gia tốc khác nhau?",
+                "source": "37.7"
+              },
+              {
+                "slug": "cong-nang-luong-tuong-doi",
+                "title": "Công và năng lượng tương đối tính",
+                "question": "Động năng, năng lượng nghỉ và năng lượng toàn phần liên hệ thế nào?",
+                "source": "37.8"
+              },
+              {
+                "slug": "newton-va-tuong-doi-rong",
+                "title": "Cơ học Newton và thuyết tương đối rộng",
+                "question": "Nguyên lý tương ứng và nguyên lý tương đương nói gì?",
+                "source": "37.9"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "18-photon",
       "title": "Photon: Tính hạt của sóng ánh sáng",
@@ -3469,6 +3551,126 @@ export const physics2Course = {
         "Quan hệ pha và độ ổn định cơ học phải được giữ trong lúc ghi."
       ],
       "formula": "$$\n\\begin{aligned}b_m-b_0&=m\\lambda\\\\r_m^2&=2m\\lambda b_0+m^2\\lambda^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Hai tiên đề đặt giới hạn cho mô tả chuyển động",
+      "bullets": [
+        "Các định luật vật lý có cùng dạng trong mọi hệ quán tính.",
+        "Ánh sáng trong chân không có cùng tốc độ trong các hệ ấy.",
+        "Vận tốc nguồn không được cộng theo Galileo vào tốc độ ánh sáng."
+      ],
+      "formula": "$$\nc=299\\,792\\,458\\,\\mathrm{m/s}.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Đồng thời phụ thuộc hệ ở những vị trí khác nhau",
+      "bullets": [
+        "Hai hệ phải gán tọa độ cho cùng những sự kiện.",
+        "Đồng hồ được đồng bộ riêng trong từng hệ quán tính.",
+        "Hai sự kiện trùng cả vị trí và thời điểm vẫn trùng nhau trong mọi hệ."
+      ],
+      "formula": "$$\n\\begin{aligned}\\Delta t&=0\\\\\\Delta t'&=-\\gamma u\\Delta x/c^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Thời gian riêng gắn với hai sự kiện cùng vị trí",
+      "bullets": [
+        "Đồng hồ có mặt ở cả hai sự kiện đo thời gian riêng.",
+        "Trong hệ mà đồng hồ chuyển động, khoảng thời gian giữa cùng hai sự kiện dài hơn.",
+        "Thời gian sự kiện đã phân biệt với thời gian ánh sáng đến mắt."
+      ],
+      "formula": "$$\n\\begin{aligned}\\gamma&=1/\\sqrt{1-u^2/c^2}\\\\\\Delta t&=\\gamma\\Delta t_0.\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Chiều dài cần đo hai đầu đồng thời trong hệ đang xét",
+      "bullets": [
+        "Độ dài riêng thuộc hệ nghỉ của vật.",
+        "Chỉ kích thước dọc vận tốc tương đối bị co.",
+        "Ảnh nhìn thấy còn phụ thuộc thời gian truyền ánh sáng."
+      ],
+      "formula": "$$\nl=l_0/\\gamma.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Lorentz trộn tọa độ không gian với thời gian",
+      "bullets": [
+        "Hệ có dấu phẩy chuyển động theo chiều dương với tốc độ u.",
+        "Hai gốc trùng nhau tại thời điểm cả hai đồng hồ bằng không.",
+        "Đổi hệ ngược bằng cách đổi dấu u và hoán đổi dấu phẩy."
+      ],
+      "formula": "$$\n\\begin{aligned}x'&=\\gamma(x-ut)\\\\t'&=\\gamma(t-ux/c^2).\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Phép cộng vận tốc giữ ánh sáng ở tốc độ c",
+      "bullets": [
+        "Phân biệt vận tốc vật với vận tốc tương đối của hai hệ.",
+        "Chuyển động một chiều dùng cùng quy ước trục ở cả hai hệ.",
+        "Vật dưới tốc độ ánh sáng trong một hệ vẫn dưới giới hạn ấy trong hệ kia."
+      ],
+      "formula": "$$\nv'_x=\\frac{v_x-u}{1-uv_x/c^2}.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Doppler đổi tần số và bước sóng đồng thời",
+      "bullets": [
+        "Nguồn tiến lại gần cho tần số cao hơn trong cấu hình dọc đường nhìn.",
+        "Rời xa dùng dấu tốc độ ngược trong hệ số Doppler.",
+        "Công thức Doppler âm không thay thế công thức ánh sáng trong chân không."
+      ],
+      "formula": "$$\nf=f_0\\sqrt{\\frac{c+u}{c-u}}.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Động lượng có thêm hệ số Lorentz của hạt",
+      "bullets": [
+        "Khối lượng trong công thức là khối lượng nghỉ.",
+        "Động lượng cùng hướng vận tốc và trở về gần đúng Newton ở tốc độ nhỏ.",
+        "Ở gần c, động lượng tăng mạnh trong khi tốc độ chỉ tăng ít."
+      ],
+      "formula": "$$\n\\vec p=\\gamma m\\vec v.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Gia tốc không luôn cùng hướng hợp lực",
+      "bullets": [
+        "Lực dọc vận tốc làm đổi cả hệ số Lorentz và tốc độ.",
+        "Lực ngang vận tốc đổi hướng động lượng với hệ số khác.",
+        "Trong chuyển động tròn đều, lực hướng tâm không sinh công."
+      ],
+      "formula": "$$\n\\begin{aligned}F_\\parallel&=\\gamma^3ma_\\parallel\\\\F_\\perp&=\\gamma ma_\\perp.\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Động năng là phần năng lượng ngoài năng lượng nghỉ",
+      "bullets": [
+        "Không đồng nhất động năng với năng lượng toàn phần.",
+        "Năng lượng nghỉ vẫn có khi hạt đứng yên.",
+        "Giới hạn tốc độ nhỏ cho động năng Newton."
+      ],
+      "formula": "$$\n\\begin{aligned}K&=(\\gamma-1)mc^2\\\\E&=K+mc^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Tạo hạt phải bảo toàn cả năng lượng và động lượng",
+      "bullets": [
+        "Tổng khối lượng nghỉ riêng lẻ có thể thay đổi trong phản ứng.",
+        "Năng lượng toàn phần của hệ cô lập vẫn bảo toàn.",
+        "Hai chùm đối đầu giảm năng lượng dành cho chuyển động khối tâm."
+      ],
+      "formula": "$$\nE^2=(mc^2)^2+(pc)^2.\n$$"
+    },
+    {
+      "note": "17-thuyet-tuong-doi",
+      "title": "Hấp dẫn đòi hỏi mở rộng mô tả hệ quy chiếu",
+      "bullets": [
+        "Cơ học Newton là giới hạn tương ứng ở tốc độ nhỏ.",
+        "Nguyên lý tương đương so các phép thử cục bộ trong trọng trường và hệ gia tốc.",
+        "Định vị vệ tinh cần hiệu chỉnh cả chuyển động lẫn hấp dẫn."
+      ],
+      "formula": "$$\nE_0=mc^2.\n$$"
     }
   ],
   "illustration": "field",

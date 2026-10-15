@@ -1,32 +1,50 @@
 ---
-course: vat-ly-2
-lecture: 17-thuyet-tuong-doi
-section: lecture
+course: "vat-ly-2"
+lecture: "17-thuyet-tuong-doi"
+section: "lecture"
 title: "Thuyết tương đối"
-prerequisites: ["vector","dong-luong-vat-ly","cong-nang-luong"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Thuyết tương đối."
+prerequisites: ["vector","van-toc-vat-ly","dong-luong-vat-ly","cong-nang-luong","song"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Không thời gian, Lorentz, Doppler, động lượng, năng lượng và những ý niệm của thuyết tương đối rộng."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 37.1 — Invariance of Physical Laws (từ trang 1217).
-- 37.2 — Relativity of Simultaneity (từ trang 1220).
-- 37.3 — Relativity of Time Intervals (từ trang 1222).
-- 37.4 — Relativity of Length (từ trang 1227).
-- 37.5 — The Lorentz Transformations (từ trang 1231).
-- 37.6 — The Doppler Effect for Electromagnetic Waves (từ trang 1235).
-- 37.7 — Relativistic Momentum (từ trang 1237).
-- 37.8 — Relativistic Work and Energy (từ trang 1239).
-- 37.9 — Newtonian Mechanics and Relativity (từ trang 1243).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/10-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 37, trang 1217–1252.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Thuyết tương đối">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-37/19-mcat.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 37, trang 1245–1252.
+
+</div>

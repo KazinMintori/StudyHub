@@ -4360,25 +4360,167 @@
           "page": 1243
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "37.1",
-        "37.2",
-        "37.3",
-        "37.4",
-        "37.5",
-        "37.6",
-        "37.7",
-        "37.8",
-        "37.9",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-37/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.1",
+          "file": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+          "destination": "topic:bat-bien-dinh-luat",
+          "printedPages": [
+            1217,
+            1220
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.2",
+          "file": "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+          "destination": "topic:tinh-tuong-doi-dong-thoi",
+          "printedPages": [
+            1220,
+            1222
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.3",
+          "file": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+          "destination": "topic:gian-thoi-gian",
+          "printedPages": [
+            1222,
+            1227
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.4",
+          "file": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+          "destination": "topic:co-chieu-dai",
+          "printedPages": [
+            1227,
+            1231
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.5",
+          "file": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+          "destination": "topic:bien-doi-lorentz",
+          "printedPages": [
+            1231,
+            1235
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.6",
+          "file": "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+          "destination": "topic:doppler-dien-tu",
+          "printedPages": [
+            1235,
+            1236
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.7",
+          "file": "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+          "destination": "topic:dong-luong-tuong-doi",
+          "printedPages": [
+            1237,
+            1239
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.8",
+          "file": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+          "destination": "topic:cong-nang-luong-tuong-doi",
+          "printedPages": [
+            1239,
+            1242
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "37.9",
+          "file": "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md",
+          "destination": "topic:newton-va-tuong-doi-rong",
+          "printedPages": [
+            1243,
+            1244
+          ],
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-37/10-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "11-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "12-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-37/12-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-01-13",
+          "file": "raw_materials/physics/translations/chapter-37/13-bai-tap-01-13.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "14-bai-tap-14-24",
+          "file": "raw_materials/physics/translations/chapter-37/14-bai-tap-14-24.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "15-bai-tap-25-39",
+          "file": "raw_materials/physics/translations/chapter-37/15-bai-tap-25-39.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "16-bai-tap-40-54",
+          "file": "raw_materials/physics/translations/chapter-37/16-bai-tap-40-54.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "17-bai-tap-55-62",
+          "file": "raw_materials/physics/translations/chapter-37/17-bai-tap-55-62.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "18-bai-tap-du-lieu-nang-cao",
+          "file": "raw_materials/physics/translations/chapter-37/18-bai-tap-du-lieu-nang-cao.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        },
+        {
+          "sourceUnit": "19-mcat",
+          "file": "raw_materials/physics/translations/chapter-37/19-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-source-and-render-reviewed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-37-review.json"
     },
     {
       "chapter": 38,

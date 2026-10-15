@@ -1,0 +1,26 @@
+{
+  "chapter": 37,
+  "sourcePdf": "raw_materials/physics/source/young-freedman-15.pdf",
+  "printedPages": [1217,1252],
+  "clarifications": [
+    {"unit":"Opening","issue":"The source calls Einstein25 in1905. The narrative retains the1905 work and patent-office role without repeating this age."},
+    {"unit":"37.4,37.11,37.53 and examples37.1/37.6","issue":"Text extraction confuses micro with milli. Direct PDF page images confirm75.0microseconds in37.4,2.2microseconds in37.11,4.00microseconds in37.53 and microsecond values in37.6. Rendered glyphs govern calculations."},
+    {"unit":"37.6","issue":"The final phrase about the reading of a distant clock needs a simultaneity convention. The solution states the pilot-frame convention, yielding0.180s, and contrasts the0.500s event simultaneous in the other frame."},
+    {"unit":"37.7","issue":"A duration seen from far away does not by itself remove light-propagation/Doppler effects. The intended coordinate-time interpretation is stated explicitly."},
+    {"unit":"Example37.8","issue":"The source labels6.66e14Hz far ultraviolet. It corresponds to about450nm, visible light. Frequencies and velocity data are preserved, while the spectral classification is corrected."},
+    {"unit":"37.25","issue":"A numerical ratio of the two momenta needs equal rest masses, implicit in the prompt's Newtonian comparison. The assumption and the general unequal-mass factor are stated."},
+    {"unit":"37.30","issue":"Ton means2000lb, a short ton, not a metric tonne. Solar mass is obtained from the source astronomical-data table onPDF1553. The total-mass extrapolation is not a prediction of stellar lifetime."},
+    {"unit":"37.45,37.47,37.72","issue":"Historical relativistic mass denotesE/c^2. Each answer distinguishes that convention from invariant rest mass."},
+    {"unit":"37.46","issue":"Car rest length is an estimate requested by the prompt. The worked choice is4.50m and the general formulas retainL0."},
+    {"unit":"37.55","issue":"The prompt assumes invariant torque and contracts geometry while holding current unchanged. This is not an exact Lorentz transformation of a current loop. Conditional intended algebra is shown, then its limitation is stated. Correct transverse field transformations are given independently. A neutral rest-loop example gives the parallel torque ratio1/gamma when charge/current and the induced electric field are consistently transformed.","primarySupport":"https://www.feynmanlectures.caltech.edu/II_26.html"},
+    {"unit":"37.56","issue":"Zero total electromagnetic force remains zero, but separate electric/magnetic forces are frame dependent. Cross-product signs are verified numerically."},
+    {"unit":"37.60","issue":"Part(c) says Einstein's return inpart(a), but Einstein's return is specified inpart(b). The solution uses the stated1.80e8m/s return and retains all six tasks."},
+    {"unit":"37.62","issue":"Transverse Doppler f0/gamma refers to propagation perpendicular to source velocity at emission in the receiver frame. The source's instant-of-passing phrasing must not conflate emission and reception events. This distinction is explicit."},
+    {"unit":"37.63,37.65","issue":"All measured points are retained. Free-intercept least-squares fits determine slopes; zero-intercept physical-model fits are reported for comparison, without fabricating exact agreement."},
+    {"unit":"37.67","issue":"The source repeatsSprime where it meansS in the common-axis statement and labels the transformed diagramS where it meansSprime. The event table and both diagrams consistently useS for station andSprime for train."},
+    {"unit":"37.74","issue":"The question deliberately compares kinetic energy with rest mass, not rest energy. The dimensionally correct answer is(d); the260m/s result is separately identified as applying to a different rest-energy condition."},
+    {"unit":"Q37.5","issue":"The70-year lifespan is treated as an assumed comparison value, not a current demographic statistic."},
+    {"unit":"Q37.10","issue":"Neutrinos cannot all be classified as massless. The original proposition is evaluated and corrected, with primary evidence from the2015 Nobel Prize announcement.","primarySupport":"https://www.nobelprize.org/prizes/physics/2015/press-release/"},
+    {"unit":"Images","issue":"Exact PNG crops retain source artwork. Parent enlargedFigure37.13 to recover its cut tail and explanatory labels; exercise figures37.41 and37.67 were extended to retain bottom labels. One Vietnamese explanation per actual English label is registered under each image."}
+  ]
+}
