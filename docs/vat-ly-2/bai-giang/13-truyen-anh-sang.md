@@ -1,30 +1,46 @@
 ---
-course: vat-ly-2
-lecture: 13-truyen-anh-sang
-section: lecture
+course: "vat-ly-2"
+lecture: "13-truyen-anh-sang"
+section: "lecture"
 title: "Bản chất và sự truyền ánh sáng"
-prerequisites: ["song","pha-song","vector"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Bản chất và sự truyền ánh sáng."
+prerequisites: ["song","pha-song","vector","dao-ham","dao-dong-dieu-hoa","song-dien-tu","cuong-do-buc-xa"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Bản chất ánh sáng, phản xạ, khúc xạ, phản xạ toàn phần, tán sắc, phân cực, tán xạ và nguyên lý Huygens."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 33.1 — The Nature of Light (từ trang 1077).
-- 33.2 — Reflection and Refraction (từ trang 1079).
-- 33.3 — Total Internal Reflection (từ trang 1085).
-- 33.4 — Dispersion (từ trang 1088).
-- 33.5 — Polarization (từ trang 1090).
-- 33.6 — Scattering of Light (từ trang 1097).
-- 33.7 — Huygens’s Principle (từ trang 1099).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/09-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 33, trang 1077–1109.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Bản chất và sự truyền ánh sáng">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/10-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/11-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/12-bai-tap-01-35.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/13-bai-tap-36-58.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/14-nang-cao-59-61.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/15-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-33/16-dap-so.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 33, trang 1102–1109.
+
+</div>

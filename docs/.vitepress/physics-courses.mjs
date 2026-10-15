@@ -1435,20 +1435,90 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "13-truyen-anh-sang",
-      "title": "Bản chất và sự truyền ánh sáng",
-      "prerequisites": [
-        "song",
-        "pha-song",
-        "vector"
-      ],
-      "supportingConcepts": [
-        "chiet-suat"
-      ],
-      "status": "draft",
-      "number": 13,
-      "sourceChapter": 33
-    },
+        "slug": "13-truyen-anh-sang",
+        "title": "Bản chất và sự truyền ánh sáng",
+        "prerequisites": [
+          "song",
+          "pha-song",
+          "vector",
+          "dao-ham",
+          "dao-dong-dieu-hoa",
+          "song-dien-tu",
+          "cuong-do-buc-xa"
+        ],
+        "supportingConcepts": [
+          "chiet-suat",
+          "dinh-luat-snell",
+          "phan-cuc-thang",
+          "mat-song",
+          "tia-sang",
+          "phan-xa-guong",
+          "phan-xa-toan-phan",
+          "tan-sac",
+          "anh-sang-khong-phan-cuc",
+          "dinh-luat-malus",
+          "goc-brewster",
+          "phan-cuc-tron",
+          "phan-cuc-elip",
+          "luong-chiet",
+          "ban-phan-tu-buoc-song",
+          "tan-xa-rayleigh",
+          "nguyen-ly-huygens"
+        ],
+        "status": "ready",
+        "number": 13,
+        "sourceChapter": 33,
+        "topicGroups": [
+          {
+            "title": "Bản chất, đường truyền và trạng thái phân cực của ánh sáng",
+            "topics": [
+              {
+                "slug": "ban-chat-anh-sang",
+                "title": "Bản chất ánh sáng, mặt sóng và tia",
+                "question": "Khi nào dùng mô hình sóng, hạt hay tia để mô tả ánh sáng?",
+                "source": "33.1"
+              },
+              {
+                "slug": "phan-xa-khuc-xa",
+                "title": "Phản xạ, khúc xạ và bước sóng",
+                "question": "Tia đổi hướng như thế nào khi gặp một mặt phân cách?",
+                "source": "33.2"
+              },
+              {
+                "slug": "phan-xa-toan-phan",
+                "title": "Phản xạ toàn phần và dẫn sáng",
+                "question": "Điều kiện nào giữ ánh sáng trong lăng kính hoặc sợi quang?",
+                "source": "33.3"
+              },
+              {
+                "slug": "tan-sac",
+                "title": "Tán sắc, lăng kính và cầu vồng",
+                "question": "Vì sao các màu đi theo những hướng khác nhau?",
+                "source": "33.4"
+              },
+              {
+                "slug": "phan-cuc",
+                "title": "Phân cực và tương tác với vật liệu",
+                "question": "Phương dao động điện trường quyết định ánh sáng truyền qua và phản xạ ra sao?",
+                "source": "33.5"
+              },
+              {
+                "slug": "tan-xa-anh-sang",
+                "title": "Tán xạ và màu sắc bầu trời",
+                "question": "Vì sao trời xanh, mây trắng và Mặt Trời đỏ lúc gần chân trời?",
+                "source": "33.6"
+              },
+              {
+                "slug": "nguyen-ly-huygens",
+                "title": "Nguyên lý Huygens",
+                "question": "Có thể suy đường tia từ sự tiến của mặt sóng như thế nào?",
+                "source": "33.7"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "14-quang-hinh-hoc",
       "title": "Quang hình học",
@@ -2758,6 +2828,116 @@ export const physics2Course = {
         "Đo khoảng cách bụng và biết tần số cho phép suy tốc độ."
       ],
       "formula": "$$\n\\begin{aligned}&L=n\\lambda_n/2\\\\&\\lambda_n=2L/n\\\\&f_n=nc/(2L)\\\\&n=1,2,3,\\ldots.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Mô hình của ánh sáng phụ thuộc hiện tượng",
+      "bullets": [
+        "Ánh sáng là sóng điện từ. Sự truyền được mô tả bằng mô hình sóng.",
+        "Phát xạ và hấp thụ bộc lộ tính chất hạt. Mô hình tia dùng trong quang hình học.",
+        "Mặt sóng có cùng pha. Trong môi trường đồng nhất đẳng hướng, tia thẳng và vuông góc mặt sóng."
+      ],
+      "formula": "$$\n\\begin{aligned}&c=299\\,792\\,458\\,\\mathrm{m/s}\\\\&v=c/n\\\\&\\lambda=\\lambda_0/n.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Phản xạ và khúc xạ dùng góc với pháp tuyến",
+      "bullets": [
+        "Tia tới, phản xạ, khúc xạ và pháp tuyến cùng nằm trong mặt phẳng tới.",
+        "Mặt nhẵn tạo phản xạ gương, còn mặt nhám phân bố ánh sáng ra nhiều hướng.",
+        "Tại mặt phân cách đứng yên, tần số không đổi. Đi vào chiết suất lớn hơn làm góc khúc xạ nhỏ hơn nếu tới xiên."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\theta_r=\\theta_a\\\\&n_a\\sin\\theta_a=n_b\\sin\\theta_b\\\\&f_a=f_b.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Phản xạ toàn phần cần đúng cả môi trường và góc",
+      "bullets": [
+        "Chỉ có ngưỡng khi ánh sáng đi từ chiết suất lớn sang chiết suất nhỏ.",
+        "Tại ngưỡng, tia khúc xạ có hướng dọc mặt phân cách.",
+        "Lăng kính và sợi quang dẫn sáng nhờ các lần phản xạ thỏa điều kiện. Uốn quá gắt có thể làm tia rò ra."
+      ],
+      "formula": "$$\n\\begin{aligned}&n_a>n_b\\\\&\\sin\\theta_c=n_b/n_a\\\\&\\theta_a>\\theta_c.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Tán sắc biến ánh sáng trắng thành các hướng màu",
+      "bullets": [
+        "Trong vật liệu, chiết suất có thể phụ thuộc bước sóng chân không.",
+        "Ở miền tán sắc chuẩn, tia tím thường có chiết suất lớn hơn tia đỏ.",
+        "Qua lăng kính, hai lần khúc xạ tách các màu vì góc lệch phụ thuộc chiết suất."
+      ],
+      "formula": "$$\n\\begin{aligned}&n=n(\\lambda_0)\\\\&n_{\\rm tím}>n_{\\rm đỏ}\\\\&v_{\\rm tím}<v_{\\rm đỏ}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Cầu vồng là vành tập trung tia quanh điểm đối nhật",
+      "bullets": [
+        "Cầu vồng bậc một có hai lần khúc xạ và một lần phản xạ nội.",
+        "Đỏ ở vòng ngoài khoảng 42,5 độ, tím ở vòng trong khoảng 40,8 độ.",
+        "Bậc hai có hai phản xạ nội, mờ hơn và đảo thứ tự màu. Bán kính góc đỏ khoảng 50,1 độ, tím khoảng 53,2 độ."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\Delta_1=\\pi+2i-4r\\\\&\\Delta_2=2\\pi+2i-6r\\\\&\\sin i=n\\sin r.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Kính phân cực truyền một phép chiếu điện trường",
+      "bullets": [
+        "Phương phân cực được định nghĩa bằng điện trường, vuông góc hướng truyền.",
+        "Kính lý tưởng truyền thành phần dọc trục và chặn thành phần vuông góc.",
+        "Malus áp dụng cho ánh sáng tới đã phân cực thẳng. Ánh sáng chưa phân cực qua kính đầu còn một nửa cường độ."
+      ],
+      "formula": "$$\n\\begin{aligned}&E_{\\rm out}=E_{\\rm in}\\cos\\phi\\\\&I_{\\rm out}=I_{\\rm in}\\cos^2\\phi.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Brewster gắn phân cực với hình học phản xạ",
+      "bullets": [
+        "Ở góc Brewster, tia phản xạ và tia khúc xạ vuông góc.",
+        "Thành phần p nằm trong mặt phẳng tới không phản xạ. Thành phần s vẫn có thể phản xạ.",
+        "Với chùm tự nhiên, ánh sáng phản xạ vì thế phân cực s. Dùng mô hình điện môi trong suốt không từ tính."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\tan\\theta_p=n_b/n_a\\\\&\\theta_p+\\theta_b=90^\\circ.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Pha tương đối phân biệt thẳng, tròn và elip",
+      "bullets": [
+        "Hai thành phần vuông góc cùng pha hoặc ngược pha tạo phân cực thẳng.",
+        "Bằng biên độ và lệch pha một phần tư chu kỳ tạo phân cực tròn.",
+        "Các trường hợp không suy biến còn lại tạo elip. Lưỡng chiết làm hai thành phần tích lũy pha khác nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}&E_y=A\\cos\\psi\\\\&E_z=B\\cos(\\psi+\\delta)\\\\&|\\delta|=\\pi/2,\\quad A=B.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Bản trễ pha cần cả chiều dày và hướng trục",
+      "bullets": [
+        "Hai phương riêng có hai chiết suất, nên độ trễ pha phụ thuộc chiều dày.",
+        "Bản phần tư sóng đổi thẳng thành tròn khi hai thành phần tới bằng biên độ.",
+        "Quang đàn hồi dùng lưỡng chiết do ứng suất. Kính ba chiều và màn hình tinh thể lỏng điều khiển trạng thái phân cực."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\Delta\\phi=\\frac{2\\pi(n_1-n_2)d}{\\lambda_0}\\\\&d_{\\min}=\\frac{\\lambda_0}{4|n_1-n_2|}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Tán xạ làm đổi màu và trạng thái phân cực",
+      "bullets": [
+        "Điện trường tới làm điện tích phân tử dao động rồi bức xạ theo các hướng khác.",
+        "Bước sóng ngắn bị tán xạ mạnh hơn trong mô hình Rayleigh. Chùm trực tiếp đi xa vì thế thiên về đỏ.",
+        "Ở góc 90 độ, tán xạ một lần lý tưởng có thể phân cực hoàn toàn. Tán xạ nhiều lần trong mây không giữ kết luận đơn giản ấy."
+      ],
+      "formula": "$$\nI_{\\rm sc}\\propto1/\\lambda^4.\n$$"
+    },
+    {
+      "note": "13-truyen-anh-sang",
+      "title": "Huygens dựng mặt sóng trước khi suy đường tia",
+      "bullets": [
+        "Mỗi điểm trên mặt sóng là nguồn sóng thứ cấp. Dùng cùng một khoảng thời gian để dựng mặt mới.",
+        "Các bán kính bằng nhau trong cùng môi trường cho góc phản xạ bằng góc tới.",
+        "Hai tốc độ khác nhau tại mặt phân cách làm mặt sóng quay, dẫn đến Snell. Biến đổi tốc độ theo độ cao tạo đường tia cong và ảo ảnh."
+      ],
+      "formula": "$$\n\\begin{aligned}&r_a=v_at,\\quad r_b=v_bt\\\\&\\frac{\\sin\\theta_a}{\\sin\\theta_b}=\\frac{v_a}{v_b}\\\\&n_a\\sin\\theta_a=n_b\\sin\\theta_b.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",

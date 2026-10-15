@@ -106,7 +106,17 @@ Tab Bài tập có 56 bài đánh số, 13 câu thảo luận, 12 bài luyện t
 
 Các bộ Python, kiểm tra cấu trúc toàn site, 39 kiểm thử skill và bảy kiểm thử bộ hiển thị toán đã qua. Có 127 lượt kiểm tra ở 320, 360, 375, 1440 px, gồm bảy lần đổi bề rộng trực tiếp. Không có tràn công thức hoặc lỗi JavaScript. Build và triển khai chỉ chạy trên GitHub Actions.
 
-## Các chương 33–44
+## Chương 33
+
+Đã hoàn tất bảy mục lý thuyết, sáu ví dụ, chín công thức đánh số và 37 hình đánh số, gồm hình cầu nối. Bộ 76 PNG giữ nguyên vùng ảnh PDF, có đối chiếu pixel và chú thích tiếng Việt. Hai ảnh kính phân cực được giữ thành hai vùng gốc riêng, hình cá trong câu tự kiểm được bổ sung, các mũi tên ở lăng kính và thanh dẫn sáng được giữ đủ.
+
+Tab Bài tập có 64 bài đánh số, 25 câu thảo luận, 12 bài luyện tập hướng dẫn và một bài cầu nối, với 102 lời giải gập. Có 11 Slides, tám nhóm Cheatsheet với 17 mục, 14 Wiki mới và mục Snell được sửa. Các bất nhất về góc quay, tâm sai, điều kiện phản xạ, đơn vị và số liệu đồ thị được xử lý theo giả thiết rõ ràng. Bài dữ liệu phân cực dùng đủ 19 điểm đo.
+
+Kiểm tra cấu trúc, các bộ Python, 39 kiểm thử skill và kiểm tra 13.878 công thức của toàn repo đã qua. Có 159 lượt kiểm tra hiển thị ở 320, 360, 375 và 1440 px, gồm bảy lần đổi bề rộng trực tiếp, không phát hiện tràn công thức hoặc lỗi JavaScript. Build và triển khai chỉ chạy trên GitHub Actions. Trạng thái xuất bản được ghi riêng.
+
+Hai tác vụ Antigravity đều dừng ở ba lượt sau lỗi cầu nối. Worktree và bản sao được giữ lại. Codex đã tự đọc đối chiếu, sửa và kiểm tra đầu ra trước khi tích hợp.
+
+## Các chương 34–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

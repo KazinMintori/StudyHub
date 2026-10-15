@@ -1,50 +1,54 @@
 ---
 title: "Định luật Snell"
-wikiTerm: dinh-luat-snell
+wikiTerm: "dinh-luat-snell"
 prev: false
 next: false
 ---
 
 # Định luật Snell
 
-Định luật Snell mô tả sự đổi hướng của tia sóng khi truyền qua mặt phân cách phẳng giữa hai môi trường có vận tốc truyền sóng khác nhau, biểu diễn bởi hệ thức $\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}$ hoặc $n_1\sin\theta_1 = n_2\sin\theta_2$.
+Định luật Snell liên hệ các góc tại mặt phân cách hai môi trường đẳng hướng: $n_a\sin\theta_a=n_b\sin\theta_b$. Các góc đều đo với pháp tuyến, còn chiết suất là tỉ số tốc độ ánh sáng chân không với tốc độ pha trong vật liệu.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Định luật khúc xạ Snell (Snell's Law) là một trong những định luật nền tảng nhất của quang hình học và lý thuyết sóng. Trong đó:
-- $\theta_1$ và $\theta_2$ là góc giữa phương truyền tia sóng và pháp tuyến của mặt phân cách lần lượt trong môi trường 1 và môi trường 2.
-- $v_1, v_2$ là vận tốc pha của sóng trong hai môi trường.
-- $n_1, n_2$ là chiết suất tuyệt đối của môi trường ($n = c / v$).
+Gọi a là môi trường chứa tia tới, b là môi trường chứa tia khúc xạ. Tia tới, tia khúc xạ và pháp tuyến tại điểm tới đồng phẳng. Với các góc đo từ pháp tuyến, định luật có dạng:
 
-Theo **Nguyên lý Fermat (Nguyên lý thời gian cực tiểu)**, tia sáng khi đi giữa hai điểm cố định sẽ luôn chọn quỹ đạo chuyển động sao cho thời gian truyền ánh sáng là nhỏ nhất:
 $$
-T(x) = \frac{d_1(x)}{v_1} + \frac{d_2(x)}{v_2}.
+\begin{aligned}
+n_a\sin\theta_a&=n_b\sin\theta_b,\\
+\frac{\sin\theta_a}{\sin\theta_b}&=\frac{v_a}{v_b}.
+\end{aligned}
 $$
-Bài toán tìm vị trí khúc xạ tối ưu trên mặt phân cách chính là một bài toán tối ưu hóa một biến lồi ngặt. Nghiệm của phương trình đạo hàm thời gian triệt tiêu $T'(x) = 0$ dẫn trực tiếp và tất yếu tới hệ thức $\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}$.
 
-## Ví dụ thực tế
+Dòng thứ hai dùng khi mẫu khác không. Với mặt phân cách đứng yên, tần số giữ nguyên. Đi từ môi trường nhanh sang môi trường chậm làm tia tới xiên lệch gần pháp tuyến.
 
-1. **Khúc xạ ánh sáng**: Khi chiếu một chùm sáng từ không khí ($n_1 \approx 1$) vào nước ($n_2 \approx 1.33$), tia sáng bị bẻ gãy lại gần đường pháp tuyến hơn vì vận tốc ánh sáng trong nước nhỏ hơn trong không khí.
-2. **Bài toán Người cứu hộ**: Người cứu hộ chạy trên bãi cát với vận tốc $5\text{ m/s}$ và bơi dưới nước với vận tốc $1.5\text{ m/s}$. Để đến vị trí người bị nạn nhanh nhất, góc tiếp bờ và góc bơi thỏa mãn đúng hệ thức Snell: $\frac{\sin\theta_1}{5} = \frac{\sin\theta_2}{1.5}$.
+Nguyên lý Huygens suy ra hệ thức này bằng cách dựng hai phần mặt sóng sau cùng một khoảng thời gian. Cũng có thể suy bằng nguyên lý Fermat về quang lộ dừng. Tính dừng không đồng nghĩa mọi hệ quang học đều có thời gian nhỏ nhất toàn cục.
+
+## Ví dụ
+
+Tia tới xiên từ không khí vào nước lệch gần pháp tuyến hơn vì tốc độ ánh sáng trong nước nhỏ hơn. Tới vuông góc thì tia không đổi hướng.
 
 ## Khi nào cần dùng?
 
-- Tính toán góc khúc xạ, thiết kế thấu kính quang học, sợi quang viễn thông (phản xạ toàn phần khi $\sin\theta_1 > n_2/n_1$).
-- Mô hình hóa bài toán tìm đường đi ngắn nhất / nhanh nhất qua nhiều môi trường có vận tốc di chuyển khác nhau trong tối ưu hóa và trí tuệ nhân tạo.
+Tính góc khúc xạ, đường tia qua nhiều mặt và điều kiện góc giới hạn.
 
 ## Câu hỏi ôn lại
 
-Khi tia sáng đi từ môi trường có chiết suất nhỏ sang môi trường có chiết suất lớn hơn, góc khúc xạ lớn hơn hay nhỏ hơn góc tới?
+Khi tia sóng đi từ môi trường nhanh sang môi trường chậm, góc khúc xạ tăng hay giảm so với góc tới?
 
 <details><summary>Xem đáp án</summary>
 
-Nhỏ hơn. Vì $n_2 > n_1$, từ $n_1\sin\theta_1 = n_2\sin\theta_2$ suy ra $\sin\theta_2 < \sin\theta_1 \implies \theta_2 < \theta_1$, tia sáng bị bẻ lệch về phía pháp tuyến.
+Giảm. Tia sóng bị bẻ gãy lệch về phía pháp tuyến.
 
 </details>
 
 ## Thuật ngữ liên quan
 
 - [Chiết suất](./chiet-suat.md)
-- [Sóng &amp; pha](./song.md)
+- [Sóng & pha](./song.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 33, trang 1077–1101.

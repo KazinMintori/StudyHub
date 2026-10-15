@@ -1,0 +1,49 @@
+{
+  "chapter": 33,
+  "status": "content-complete",
+  "theorySections": 7,
+  "examples": 6,
+  "equations": 9,
+  "numberedFigures": 37,
+  "sourceFigureAssets": 76,
+  "exercises": 64,
+  "discussionQuestions": 25,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 102,
+  "slides": 11,
+  "strictCheatsheetSections": 8,
+  "strictCheatsheetItems": 17,
+  "newWikiTerms": 14,
+  "revisedWikiTerms": [
+    "dinh-luat-snell"
+  ],
+  "numericEvidence": "qa/physics/chapter33/numeric-checks.json",
+  "sourceReview": [
+    "raw_materials/physics/reviews/ch33-final-source-review.md"
+  ],
+  "sourceImageIntegrity": "qa/physics/chapter33/source-image-checks.json",
+  "renderReview": "passed",
+  "publication": "ready-for-push",
+  "delegationReview": "A/B stopped at three calls each after final bridge NoneType errors. Worktrees and snapshots retained. Parent reviewed, repaired and verified copied output.",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "renderEvidence": {
+    "chapterViews": 159,
+    "liveViewportTransitions": 7,
+    "mathOverflows": 0,
+    "javascriptErrors": 0,
+    "sourceDisplayExpressions": 227,
+    "sourceInlineExpressions": 1239,
+    "scope": "All seven topics, Notes,102 collapsed end solutions,11 slides,eight Cheatsheet groups and15 Wiki entries.",
+    "fullBuild": "GitHub Actions only. No local full build.",
+    "skillTests": 39,
+    "mathRendererRegressionTests": 3,
+    "repositoryDistinctFormulaChecks": 13878,
+    "report": "qa/physics/chapter33/full-browser/results.json"
+  }
+}

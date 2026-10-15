@@ -20,7 +20,7 @@ def find(pattern):
  return sorted(values,key=lambda s:[int(x) for x in re.findall(r'\d+',s)])
 examples=find(r'EXAMPLE\s+('+prefix+r'\.\d+)\b')
 figures=find(r'Figure\s+('+prefix+r'\.\d+)\b')
-problemfigures=find(r'Figure\s+(P'+prefix+r'\.\d+)\b')
+problemfigures=find(r'Figure\s+([EP]'+prefix+r'\.\d+)\b')
 discussion=find(r'^\s*(Q'+prefix+r'\.\d+)\s')
 variation=find(r'^\s*(VP'+prefix+r'\.\d+\.\d+)\s')
 exercise_text=text.split('EXERCISES',1)[-1]
