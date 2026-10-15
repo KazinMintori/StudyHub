@@ -88,9 +88,9 @@ Trong đó: Giá trị $m = \pm 1, \pm 2, \pm 3, \dots$ là các số nguyên kh
 
 $$
 \begin{aligned}
-\frac{2\pi}{\lambda} a \sin\theta &= 2m\pi\\
-a \sin\theta &= m \lambda\\
-\sin\theta&=\frac{m\lambda}{a}
+&\frac{2\pi}{\lambda} a \sin\theta = 2m\pi, \\
+&a \sin\theta = m \lambda, \\
+&\sin\theta = \frac{m\lambda}{a}.
 \end{aligned}
 \tag{36.8}
 $$

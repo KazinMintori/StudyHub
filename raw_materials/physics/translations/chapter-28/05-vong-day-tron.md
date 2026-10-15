@@ -136,11 +136,10 @@ $$
 
 $$
 \begin{aligned}
-\frac{a^3}{(x^2+a^2)^{3/2}} &= \frac18 \\
-(x^2+a^2)^{3/2} &= 8a^3 \\
-x^2+a^2 &= 4a^2 \\
-x &= \pm\sqrt3\,a \\
-&= \pm1{,}04\,\mathrm m.
+&\frac{a^3}{(x^2+a^2)^{3/2}} = \frac18, \\
+&(x^2+a^2)^{3/2} = 8a^3, \\
+&x^2+a^2 = 4a^2, \\
+&x = \pm\sqrt3\,a = \pm1{,}04\,\mathrm m.
 \end{aligned}
 $$
 

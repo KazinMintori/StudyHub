@@ -84,6 +84,17 @@ python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
       - Trong môi trường `\begin{aligned}`, dấu bằng ở các dòng phải thẳng hàng nhau bằng cách đặt `&` ngay trước dấu bằng hoặc dấu quan hệ (`&=`, `&\le`, `&\ge`, `&\approx`, v.v.).
       - Tuyệt đối không đặt dấu `&` bên trong dấu ngoặc đơn (ví dụ: Cấm viết `P(Y &= 2)` hay `P(1 &\le X)` mà phải viết `P(Y = 2) &= ...` hay `P(1 \le X) &= ...`).
       - Không đặt `&` sau dấu bằng (như `= &`), và không để sót dòng có dấu bằng mà thiếu ký hiệu `&` gây lệch cột.
+    - **Căn lề hệ phương trình & Tránh thụt lề bất cân xứng (System of Equations & Flush-Left Alignment)**:
+      - Khi trình bày một hệ gồm nhiều phương trình độc lập (như hệ phương trình vòng/nút Kirchhoff, hệ điều kiện biên, tập hợp các đẳng thức trạng thái) mà vế trái (LHS) của các phương trình có độ dài chênh lệch lớn:
+        - **Tuyệt đối không căn lề máy móc bằng `&=` tại dấu bằng**: Việc đặt `&=` khiến TeX căn phải (right-align) toàn bộ vế trái theo phương trình dài nhất, làm các phương trình có vế trái ngắn bị đẩy thụt lùi sâu sang bên phải, tạo ra khoảng trống hẫng hụt kỳ dị ở đầu dòng và làm mất đi sự thẳng hàng tự nhiên của các phương trình.
+        - **Giải pháp chuẩn mực**: Đặt `&` ở ngay đầu mỗi dòng phương trình để căn lề đều cạnh trái (flush-left) cho toàn bộ hệ:
+          $$\begin{aligned}
+          &13\,\mathrm V = I_1(1\,\Omega) + (I_1-I_3)\,\Omega, \\
+          &13\,\mathrm V = I_2(1\,\Omega) + 2(I_2+I_3)\,\Omega, \\
+          &-I_1(1\,\Omega) - I_3(1\,\Omega) + I_2(1\,\Omega) = 0.
+          \end{aligned}$$
+          Tất cả các phương trình trong hệ sẽ xuất phát thẳng tắp từ cùng một mép lề trái, bố cục ngay ngắn, khoa học và thẩm mỹ.
+        - Với các bước suy luận đơn giản dạng $A = B \implies C = D$ (ví dụ: $78\,\mathrm V = I_1(13\,\Omega) \implies I_1 = 6\,\mathrm A$ hay $8\,\mathrm V = I(16\,\Omega) \implies I = 0{,}5\,\mathrm A$), giữ nguyên trên 1 dòng đơn giản trong `$$...$$`, không lạm dụng `\begin{aligned}` rồi ngắt thành hai dòng ngắn cụt cỡn làm lệch tâm.
    - Tuyệt đối không nhét văn xuôi, câu nhận xét dài vào trong TeX bằng `\text{...}`. Văn xuôi phân tích phải viết ở đoạn văn bên ngoài khối toán.
    - Dấu mở `$$` và đóng `$$` phải luôn nằm trên một dòng riêng biệt, không dính liền với nội dung công thức hay đoạn văn xuôi.
    - Công thức inline (`$...$`): Không vượt quá 38ex; nếu dài hoặc phức tạp, bắt buộc tách thành khối `$$...$$` riêng.

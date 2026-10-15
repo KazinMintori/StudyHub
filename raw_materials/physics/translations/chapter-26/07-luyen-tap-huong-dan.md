@@ -367,9 +367,9 @@ Trong mạch ở Hình 26.12, thay điện trở $2\,\Omega$ giữa hai điểm 
 
 $$
 \begin{aligned}
-13\,\mathrm V-I_1(1\,\Omega) -(I_1-I_3)(1\,\Omega) &= 0, \\
--I_2(1\,\Omega) -(I_2+I_3)(3\,\Omega)+13\,\mathrm V &= 0, \\
--I_1(1\,\Omega)-I_3(1\,\Omega) +I_2(1\,\Omega) &= 0.
+&13\,\mathrm V - I_1(1\,\Omega) - (I_1-I_3)(1\,\Omega) = 0, \\
+&-I_2(1\,\Omega) - (I_2+I_3)(3\,\Omega) + 13\,\mathrm V = 0, \\
+&-I_1(1\,\Omega) - I_3(1\,\Omega) + I_2(1\,\Omega) = 0.
 \end{aligned}
 $$
 

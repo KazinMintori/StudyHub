@@ -57,8 +57,8 @@ Tách biến rồi lấy tích phân từ trạng thái ban đầu $q=0$, $t=0$ 
 
 $$
 \begin{aligned}
-\int_0^q\frac{dq'}{q'-C\mathcal E} &= -\int_0^t\frac{dt'}{RC} \\
-\ln &\left(\frac{q-C\mathcal E}{-C\mathcal E}\right) = -\frac{t}{RC}.
+\int_0^q\frac{dq'}{q'-C\mathcal E} &= -\int_0^t\frac{dt'}{RC}, \\
+\ln\left(\frac{q-C\mathcal E}{-C\mathcal E}\right) &= -\frac{t}{RC}.
 \end{aligned}
 $$
 
@@ -168,8 +168,8 @@ Tách biến và lấy tích phân với điều kiện đầu $q(0)=Q_0$:
 
 $$
 \begin{aligned}
-\int_{Q_0}^{q}\frac{dq'}{q'} &= -\int_0^t\frac{dt'}{RC} \\
-\ln &\left(\frac{q}{Q_0}\right) = -\frac{t}{RC}.
+\int_{Q_0}^{q}\frac{dq'}{q'} &= -\int_0^t\frac{dt'}{RC}, \\
+\ln\left(\frac{q}{Q_0}\right) &= -\frac{t}{RC}.
 \end{aligned}
 $$
 

@@ -249,11 +249,7 @@ Ba điện trở giống nhau mắc nối tiếp tiêu tán tổng công suất 
 - Với hiệu điện thế không đổi, $P=V^2/R_{eq}$. Tỉ số hai công suất bằng tỉ số nghịch đảo điện trở tương đương.
 
 $$
-\begin{aligned}
-\frac{P_{song\ song}}{P_{noi\ tiep}} &= \frac{3R}{R/3}=9, \\
-P_{song\ song} &= 9(45{,}0\,\mathrm{W}) \\
-&= 405\,\mathrm{W}.
-\end{aligned}
+\frac{P_{\mathrm{song\,song}}}{P_{\mathrm{nối\,tiếp}}} = \frac{3R}{R/3} = 9 \implies P_{\mathrm{song\,song}} = 9(45{,}0\,\mathrm W) = 405\,\mathrm W.
 $$
 :::
 

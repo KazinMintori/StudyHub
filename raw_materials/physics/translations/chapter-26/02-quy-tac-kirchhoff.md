@@ -21,9 +21,9 @@ Chỉ số j chạy qua m nhánh nối với nút. $\widetilde I_j$ là dòng đ
 
 $$
 \begin{aligned}
-\widetilde I_1+\widetilde I_2+\widetilde I_3 &= 0, \\
-I_1+I_2-I_3 &= 0, \\
-I_1+I_2 &= I_3.
+&\widetilde I_1+\widetilde I_2+\widetilde I_3 = 0, \\
+&I_1+I_2-I_3 = 0, \\
+&I_1+I_2 = I_3.
 \end{aligned}
 $$
 
@@ -124,10 +124,7 @@ $$
 Thu gọn các hạng tử:
 
 $$
-\begin{aligned}
-8\,\mathrm V &= I(16\,\Omega), \\
-I &= 0{,}5\,\mathrm A.
-\end{aligned}
+8\,\mathrm V = I(16\,\Omega) \implies I = 0{,}5\,\mathrm A.
 $$
 
 Dòng điện tìm được dương, vì vậy chiều dòng điện thực đúng với chiều đã giả định.
@@ -200,29 +197,19 @@ Mạch có nhiều vòng và nút phân nhánh, nên cần dùng cả quy tắc 
 Áp dụng quy tắc nút tại $a$:
 
 $$
-\begin{aligned}
--I+1\,\mathrm A+2\,\mathrm A &= 0, \\
-I &= 3\,\mathrm A.
-\end{aligned}
+-I+1\,\mathrm A+2\,\mathrm A = 0 \implies I = 3\,\mathrm A.
 $$
 
 Áp dụng quy tắc vòng kín cho vòng ngoài (1):
 
 $$
-\begin{aligned}
-12\,\mathrm V-(3\,\mathrm A)r &= (2\,\mathrm A)(3\,\Omega) \\
-&= 6\,\mathrm V, \\
-r &= 2\,\Omega.
-\end{aligned}
+12\,\mathrm V-(3\,\mathrm A)r = (2\,\mathrm A)(3\,\Omega) = 6\,\mathrm V \implies r = 2\,\Omega.
 $$
 
 Áp dụng quy tắc vòng kín cho vòng bên trái (2):
 
 $$
-\begin{aligned}
--\mathcal E+(1\,\mathrm A)(1\,\Omega) -(2\,\mathrm A)(3\,\Omega) &= 0, \\
-\mathcal E &= -5\,\mathrm V.
-\end{aligned}
+-\mathcal E+(1\,\mathrm A)(1\,\Omega) -(2\,\mathrm A)(3\,\Omega) = 0 \implies \mathcal E = -5\,\mathrm V.
 $$
 
 Suất điện động thực có cực tính ngược với giả định ở Hình 26.11. Pin đang được nạp như ở Ví dụ 26.3.
@@ -336,9 +323,9 @@ Mạng này không phải tổ hợp nối tiếp hoặc song song đơn giản,
 
 $$
 \begin{aligned}
-13\,\mathrm V &= I_1(1\,\Omega) +(I_1-I_3)\,\Omega. \\
-13\,\mathrm V &= I_2(1\,\Omega) +2(I_2+I_3)\,\Omega. \\
--I_1(1\,\Omega) -I_3(1\,\Omega) +I_2(1\,\Omega) &= 0.
+&13\,\mathrm V = I_1(1\,\Omega) + (I_1-I_3)\,\Omega, \\
+&13\,\mathrm V = I_2(1\,\Omega) + 2(I_2+I_3)\,\Omega, \\
+&-I_1(1\,\Omega) - I_3(1\,\Omega) + I_2(1\,\Omega) = 0.
 \end{aligned}
 $$
 
@@ -346,18 +333,15 @@ Từ phương trình thứ ba, $I_2=I_1+I_3$. Thay vào phương trình thứ ha
 
 $$
 \begin{aligned}
-13\,\mathrm V &= I_1(2\,\Omega) -I_3(1\,\Omega). \\
-13\,\mathrm V &= I_1(3\,\Omega) +I_3(5\,\Omega).
+13\,\mathrm V &= I_1(2\,\Omega) - I_3(1\,\Omega), \\
+13\,\mathrm V &= I_1(3\,\Omega) + I_3(5\,\Omega).
 \end{aligned}
 $$
 
 Nhân phương trình đầu với $5$ rồi cộng phương trình sau, ta khử được $I_3$:
 
 $$
-\begin{aligned}
-78\,\mathrm V &= I_1(13\,\Omega), \\
-I_1 &= 6\,\mathrm A.
-\end{aligned}
+78\,\mathrm V = I_1(13\,\Omega) \implies I_1 = 6\,\mathrm A.
 $$
 
 Thay $I_1$ vào phương trình đầu thu gọn, ta được $I_3=-1\,\mathrm A$. Từ $I_2=I_1+I_3$, suy ra $I_2=5\,\mathrm A$. Dấu âm của $I_3$ cho biết dòng thực chạy ngược chiều giả định.

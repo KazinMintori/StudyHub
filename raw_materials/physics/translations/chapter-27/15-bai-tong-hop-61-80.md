@@ -1,4 +1,4 @@
-﻿## Bài tập tổng hợp chương 27: Bài 27.61–27.80
+## Bài tập tổng hợp chương 27: Bài 27.61–27.80
 
 ### Bài tập
 
@@ -355,11 +355,7 @@ Thanh đồng chất có khối lượng $0{,}0120\,\mathrm{kg}$, dài $30{,}0\,
 **Lời giải.** Cân bằng độ lớn mômen cho
 
 $$
-\begin{aligned}
-mg\frac{L}{2}\cos\theta &= IB\frac{L^2}{2} \\
-I &= \frac{mg\cos\theta}{BL} \\
-&= 2{,}26\,\mathrm{A}.
-\end{aligned}
+mg\frac{L}{2}\cos\theta = IB\frac{L^2}{2} \implies I = \frac{mg\cos\theta}{BL} = 2{,}26\,\mathrm A.
 $$
 
 Trọng lực làm thanh quay theo chiều kim đồng hồ. Với $\vec B$ hướng vào trang, dòng từ $a$ đến $b$ tạo mômen ngược chiều kim đồng hồ, nên dòng điện phải chạy từ $a$ đến $b$.

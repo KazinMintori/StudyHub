@@ -10,13 +10,16 @@ Khi một đoạn dây có dòng điện nằm trong từ trường, các hạt 
 
 Hình 27.25: Lực từ tác dụng lên một điện tích dương chuyển động bên trong dây dẫn mang dòng điện.
 
-Xét một đoạn dây thẳng dài $\ell$, có tiết diện $A$, đặt trong từ trường đều $\vec{B}$. Gọi $n$ là số hạt tải điện dương trong một đơn vị thể tích, $q$ là điện tích mỗi hạt và $v_d$ là tốc độ trôi. Nếu các hạt chuyển động vuông góc với từ trường, mỗi hạt chịu lực có độ lớn $qv_dB$. Đoạn dây có thể tích $A\ell$, nên chứa $nA\ell$ hạt tải điện. Tổng độ lớn lực từ lên các hạt trong đoạn dây là:
+Lực từ lên một hạt tải điện với vận tốc trôi $\vec{v}_d$ là:
 
-Với vận tốc trôi $\vec{v}_d$, lực từ lên một hạt tải điện là:
+$$
+\vec{F}_{\mathrm{particle}} = q\,\vec{v}_d\times\vec{B}.
+$$
+
+Tổng độ lớn lực từ lên toàn bộ các hạt trong đoạn dây là:
 
 $$
 \begin{aligned}
-\vec{F}_{\mathrm{particle}} &= q\,\vec{v}_d\times\vec{B}. \\
 F &= (nA\ell)(qv_dB) \\
 &= (nqv_dA)(\ell B).
 \end{aligned}

@@ -67,9 +67,9 @@ Mặt khúc xạ phẳng, từ chiết suất $n_a$ sang $n_b$:
 
 $$
 \begin{aligned}
-\frac{n_a}s+\frac{n_b}{s'} &= 0, \\
-s' &= -\frac{n_b}{n_a}s, \\
-m &= -\frac{n_as'}{n_bs}=1.
+&\frac{n_a}s+\frac{n_b}{s'} = 0, \\
+&s' = -\frac{n_b}{n_a}s, \\
+&m = -\frac{n_as'}{n_bs}=1.
 \end{aligned}
 $$
 
@@ -77,8 +77,8 @@ Mặt khúc xạ cầu:
 
 $$
 \begin{aligned}
-\frac{n_a}s+\frac{n_b}{s'} &= \frac{n_b-n_a}R, \\
-m &= -\frac{n_as'}{n_bs}.
+&\frac{n_a}s+\frac{n_b}{s'} = \frac{n_b-n_a}R, \\
+&m = -\frac{n_as'}{n_bs}.
 \end{aligned}
 $$
 
