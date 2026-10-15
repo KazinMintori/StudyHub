@@ -16,15 +16,14 @@ try:
         status = r.get('status')
         conclusion = r.get('conclusion')
         print(f"[{idx}] Run {run_id} ({commit_sha}: {commit_msg}) -> {status}/{conclusion}")
-        if conclusion == 'failure':
+        if idx == 0 or conclusion == 'failure':
             url = f'https://api.github.com/repos/KazinMintori/StudyHub/actions/runs/{run_id}/jobs'
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             with urllib.request.urlopen(req) as jresp:
                 jdata = json.loads(jresp.read().decode('utf-8'))
             for j in jdata.get('jobs', []):
-                print(f"    Job: {j.get('name')} -> {j.get('conclusion')}")
+                print(f"    Job: {j.get('name')} -> {j.get('status')} / {j.get('conclusion')}")
                 for s in j.get('steps', []):
-                    if s.get('conclusion') == 'failure':
-                        print(f"      Step {s.get('number')}: {s.get('name')} FAILED")
+                    print(f"      Step {s.get('number')}: {s.get('name')} -> {s.get('conclusion')}")
 except Exception as e:
     print('Error:', e)
