@@ -58,6 +58,11 @@ jobs:
         with:
           enablement: true
 
+      - name: Verify batched build integration
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: node scripts/verification/verify-batch-build.mjs
+
       - name: Show build runner memory
         run: free -h
 
