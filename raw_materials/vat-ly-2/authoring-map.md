@@ -165,3 +165,9 @@ Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm,
 Đã hoàn tất bốn chủ đề về photon, 7 ví dụ, 4 câu tự kiểm, 24 số công thức (25 nhãn vì 38.19 có a/b) và 19 hình lý thuyết. Có 29 ảnh nguồn giữ nguyên pixel, gồm ảnh mở đầu, ứng dụng, tổng kết và bài tập. Tab Bài tập chứa 45 bài đánh số, 17 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 75 lời giải gập có Tóm tắt và Hướng đi. Có 12 slides, 7 nhóm Cheatsheet với 21 mục và 13 Wiki mới.
 
 Bảy bộ Python, đối chiếu pixel, cấu trúc toàn bộ môn và 143 lượt giao diện đã qua. Bản sửa tải ảnh/font có kiểm tra riêng trên chương này và Mạch điện một chiều. Chỉ GitHub Actions thực hiện build toàn cục. Các sửa sai nhận dạng và điều kiện vật lý được ghi trong hồ sơ rà soát riêng.
+
+## Chương 39
+
+Đã hoàn tất sáu chủ đề về sóng vật chất, nguyên tử hạt nhân, mô hình Bohr, laser, bức xạ nhiệt và bất định. Có mười ví dụ, sáu câu tự kiểm, 30 công thức đánh số và 52 ảnh nguồn giữ nguyên vùng PDF. Tab Bài tập có 91 bài đánh số, 22 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, tổng cộng 126 hộp lời giải gập. Có 12 Slides, bảy nhóm Cheatsheet với 31 mục và 17 Wiki mới.
+
+Đã kiểm số bằng Python, đối chiếu pixel ảnh và thực hiện 182 lượt kiểm tra trình duyệt với phông thật. Các sửa sai dữ kiện, tiểu câu hỏi, micro giây, h/hbar, miền tương đối tính và mô hình bất định được ghi trong hồ sơ rà riêng. Chưa coi các báo cáo Antigravity không khớp nguồn là chứng cứ hoàn tất. Không dùng subagent GPT. Build toàn cục chỉ chạy trên GitHub Actions.

@@ -1,3 +1,8 @@
+import {physics39TheoryAImageAnnotations} from './physics39-theory-a-image-annotations.mjs'
+import {physics39ExerciseDImageAnnotations} from './physics39-exercise-d-image-annotations.mjs'
+import {physics39TheoryBImageAnnotations} from './physics39-theory-b-image-annotations.mjs'
+import {physics39ParentImageAnnotations} from './physics39-parent-image-annotations.mjs'
+import {physics39OpeningImageAnnotations} from './physics39-opening-image-annotations.mjs'
 import {physics38TheoryBImageAnnotations} from './physics38-theory-b-image-annotations.mjs'
 import {physics38TheoryAImageAnnotations} from './physics38-theory-a-image-annotations.mjs'
 import {physics38ExerciseImageAnnotations} from './physics38-exercise-image-annotations.mjs'
@@ -50,6 +55,11 @@ import {physics21ImageAnnotations} from './physics21-image-annotations.mjs'
 import {physics22ImageAnnotations} from './physics22-image-annotations.mjs'
 import {physics23ImageAnnotations,physics24ImageAnnotations} from './physics23-24-image-annotations.mjs'
 const originalLabels={
+ ...physics39ExerciseDImageAnnotations,
+ ...physics39TheoryAImageAnnotations,
+ ...physics39TheoryBImageAnnotations,
+ ...physics39ParentImageAnnotations,
+ ...physics39OpeningImageAnnotations,
  ...physics38TheoryBImageAnnotations,
  ...physics38TheoryAImageAnnotations,
  ...physics38ExerciseImageAnnotations,

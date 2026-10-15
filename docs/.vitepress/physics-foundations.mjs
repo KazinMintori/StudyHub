@@ -1,3 +1,4 @@
+import {matterWavesConcepts,matterWavesWikiDetails,matterWavesWikiConnections} from './physics-matter-waves-foundations.mjs'
 import {photonConcepts,photonWikiDetails,photonWikiConnections} from './physics-photon-foundations.mjs'
 import {relativityConcepts,relativityWikiDetails,relativityWikiConnections} from './physics-relativity-foundations.mjs'
 import {diffractionConcepts,diffractionWikiDetails,diffractionWikiConnections} from './physics-diffraction-foundations.mjs'
@@ -18,6 +19,7 @@ import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiCo
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...matterWavesConcepts,
   ...photonConcepts,
   ...relativityConcepts,
   ...diffractionConcepts,
@@ -340,6 +342,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...matterWavesWikiDetails,
   ...photonWikiDetails,
   ...relativityWikiDetails,
   ...diffractionWikiDetails,
@@ -385,6 +388,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...matterWavesWikiConnections,
   ...photonWikiConnections,
   ...relativityWikiConnections,
   ...diffractionWikiConnections,

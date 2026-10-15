@@ -1933,16 +1933,93 @@ export const physics2Course = {
       "slug": "19-song-vat-chat",
       "title": "Tính sóng của hạt",
       "prerequisites": [
-        "photon",
+        "cong-nang-luong",
         "dong-luong-vat-ly",
-        "thuyet-tuong-doi-hep"
+        "momen-dong-luong",
+        "song",
+        "nhieu-xa-anh-sang",
+        "electron-volt",
+        "photon",
+        "dong-luong-tuong-doi",
+        "nang-luong-nghi",
+        "nhiet-do-tuyet-doi"
       ],
       "supportingConcepts": [
-        "ham-song-luong-tu"
+        "buoc-song-de-broglie",
+        "nhieu-xa-electron",
+        "mo-hinh-hat-nhan-rutherford",
+        "pho-vach-nguyen-tu",
+        "muc-nang-luong-nguyen-tu",
+        "mo-hinh-bohr",
+        "so-luong-tu-chinh",
+        "nang-luong-ion-hoa",
+        "khoi-luong-rut-gon",
+        "phat-xa-kich-thich",
+        "dao-lon-mat-do",
+        "trang-thai-sieu-ben",
+        "vat-den",
+        "suat-phat-xa-pho",
+        "dinh-luat-wien",
+        "dinh-luat-planck",
+        "do-rong-vach-tu-nhien"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 19,
-      "sourceChapter": 39
+      "sourceChapter": 39,
+      "topicGroups": [
+        {
+          "title": "Tính sóng và cấu trúc nguyên tử",
+          "topics": [
+            {
+              "slug": "song-electron",
+              "title": "Sóng electron và kính hiển vi electron",
+              "question": "Làm thế nào đo được bước sóng của một hạt?",
+              "source": "39.1"
+            },
+            {
+              "slug": "nguyen-tu-hat-nhan-pho",
+              "title": "Hạt nhân nguyên tử và quang phổ",
+              "question": "Tán xạ và phổ ánh sáng cho biết gì về nguyên tử?",
+              "source": "39.2"
+            }
+          ]
+        },
+        {
+          "title": "Mức năng lượng và laser",
+          "topics": [
+            {
+              "slug": "muc-nang-luong-bohr",
+              "title": "Mức năng lượng và mô hình Bohr",
+              "question": "Vì sao chỉ có một số bước sóng được phát hoặc hấp thụ?",
+              "source": "39.3"
+            },
+            {
+              "slug": "laser",
+              "title": "Laser và phát xạ kích thích",
+              "question": "Làm thế nào tạo một chùm sáng kết hợp bằng nhiều nguyên tử?",
+              "source": "39.4"
+            }
+          ]
+        },
+        {
+          "title": "Phổ nhiệt và bất định",
+          "topics": [
+            {
+              "slug": "pho-lien-tuc",
+              "title": "Phổ liên tục và bức xạ vật đen",
+              "question": "Vì sao vật nóng phát một dải bước sóng và đổi màu khi nhiệt độ tăng?",
+              "source": "39.5"
+            },
+            {
+              "slug": "bat-dinh-vat-chat",
+              "title": "Nguyên lý bất định đối với vật chất",
+              "question": "Tính sóng thay đổi mô tả electron trong nguyên tử như thế nào?",
+              "source": "39.6"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "20-ham-song-schrodinger",
@@ -3846,6 +3923,126 @@ export const physics2Course = {
         "Ý nghĩa của độ rộng năng lượng và thời gian phải được xác định khi dùng bất định."
       ],
       "formula": "$$\n\\Delta t\\,\\Delta E\\ge\\hbar/2.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Động lượng quyết định bước sóng vật chất",
+      "bullets": [
+        "Electron, neutron và những hạt khác có thể nhiễu xạ.",
+        "Dùng động lượng phù hợp miền tốc độ.",
+        "Không thay quan hệ năng lượng của hạt có khối lượng bằng E=pc."
+      ],
+      "formula": "$$\n\\lambda=h/p.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Thí nghiệm nhiễu xạ nối hai mô tả",
+      "bullets": [
+        "Hiệu điện thế gia tốc xác định động năng electron.",
+        "Cực đại nhiễu xạ cho phép xác định bước sóng độc lập.",
+        "Sự phù hợp kiểm tra giả thuyết de Broglie."
+      ],
+      "formula": "$$\n\\lambda=h/\\sqrt{2meV_{ba}}.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Hạt nhân tập trung khối lượng và điện tích dương",
+      "bullets": [
+        "Phần lớn hạt alpha qua lá vàng chỉ lệch ít.",
+        "Một số lệch góc lớn đòi hỏi lực đẩy mạnh trong vùng rất nhỏ.",
+        "Bài toán trực diện với bia nặng dùng bảo toàn cơ năng."
+      ],
+      "formula": "$$\nK_0=qQ/(4\\pi\\epsilon_0r_{\\min}).\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Phổ vạch phản ánh mức năng lượng nguyên tử",
+      "bullets": [
+        "Phát photon làm nguyên tử chuyển xuống mức thấp.",
+        "Hấp thụ photon cần mức cuối phù hợp.",
+        "Phổ hấp thụ còn phụ thuộc các mức ban đầu có nguyên tử cư trú."
+      ],
+      "formula": "$$\nhf=E_i-E_f.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Quỹ đạo Bohr là một mô hình lượng tử hóa bán cổ điển",
+      "bullets": [
+        "Chỉ một số mômen động lượng và bán kính được phép trong mô hình.",
+        "Điều kiện vòng sóng cho cách diễn giải lượng tử hóa.",
+        "Nguyên lý bất định đặt giới hạn cho mô tả quỹ đạo xác định."
+      ],
+      "formula": "$$\n\\begin{aligned}L_n&=n\\hbar\\\\2\\pi r_n&=n\\lambda_n.\\end{aligned}\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Năng lượng liên kết âm với mốc ion hóa bằng không",
+      "bullets": [
+        "Động năng dương, thế năng âm và cơ năng âm.",
+        "Ion hóa cần cung cấp ít nhất độ lớn cơ năng ban đầu.",
+        "Photon chuyển mức mang chênh lệch cơ năng."
+      ],
+      "formula": "$$\nE_n=-hcR/n^2.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Hạt nhân chuyển động tạo hiệu chỉnh phổ",
+      "bullets": [
+        "Electron và hạt nhân cùng chuyển động quanh khối tâm.",
+        "Khối lượng rút gọn hiệu chỉnh các dự đoán của mô hình.",
+        "Đồng vị khác khối lượng hạt nhân có các vạch hơi lệch nhau."
+      ],
+      "formula": "$$\n\\mu=mM/(m+M).\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Laser cần phát xạ kích thích và đảo lộn mật độ",
+      "bullets": [
+        "Photon tới kích thích nguyên tử đã được kích thích.",
+        "Bơm giữ hệ ngoài cân bằng nhiệt.",
+        "Laser bốn mức đảo lộn giữa hai mức của chuyển mức laser, không đòi mức trên đông hơn mức cơ bản."
+      ],
+      "formula": "$$\nn_u>n_l.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Phổ vật đen cần hai đại lượng khác nhau",
+      "bullets": [
+        "Cường độ toàn phần là công suất trên diện tích.",
+        "Suất phát xạ phổ còn tính trên mỗi khoảng bước sóng.",
+        "Lấy tích phân phổ mới thu được cường độ toàn phần."
+      ],
+      "formula": "$$\nI=\\int_0^\\infty I(\\lambda)\\,d\\lambda.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Nhiệt độ tăng làm đỉnh phổ cao hơn và dịch về bước sóng ngắn",
+      "bullets": [
+        "Tổng công suất trên diện tích tăng theo lũy thừa bốn.",
+        "Vị trí đỉnh theo bước sóng tuân theo Wien.",
+        "Màu tổng hợp không chỉ là màu của bước sóng đỉnh."
+      ],
+      "formula": "$$\n\\begin{aligned}I&=\\sigma T^4\\\\\\lambda_mT&\\approx2{,}90\\times10^{-3}\\,\\mathrm{m\\,K}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Lượng tử hóa khắc phục tai biến tử ngoại",
+      "bullets": [
+        "Rayleigh dùng năng lượng trung bình kT cho mọi mode.",
+        "Khoảng năng lượng hf lớn làm trạng thái kích thích khó được cư trú.",
+        "Định luật Planck trở về giới hạn cổ điển ở bước sóng dài."
+      ],
+      "formula": "$$\nN_1/N_0=e^{-hf/(kT)}.\n$$"
+    },
+    {
+      "note": "19-song-vat-chat",
+      "title": "Vật chất có cùng các giới hạn bất định với photon",
+      "bullets": [
+        "Từng electron riêng lẻ vẫn tích lũy thành vân giao thoa.",
+        "Giam hạt trong vùng nhỏ hơn làm cận động lượng tăng.",
+        "Thời gian sống ngắn đi cùng thang độ rộng năng lượng lớn hơn."
+      ],
+      "formula": "$$\n\\begin{aligned}\\Delta x\\,\\Delta p_x&\\ge\\hbar/2\\\\\\Delta t\\,\\Delta E&\\ge\\hbar/2.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",

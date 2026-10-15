@@ -4698,22 +4698,143 @@
           "page": 1308
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "39.1",
-        "39.2",
-        "39.3",
-        "39.4",
-        "39.5",
-        "39.6",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-39/00-mo-dau.md",
+          "destination": "notes",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.1",
+          "file": "raw_materials/physics/translations/chapter-39/01-song-electron.md",
+          "destination": "topic:song-electron",
+          "printedPages": [
+            1279,
+            1285
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.2",
+          "file": "raw_materials/physics/translations/chapter-39/02-nguyen-tu-hat-nhan-pho.md",
+          "destination": "topic:nguyen-tu-hat-nhan-pho",
+          "printedPages": [
+            1285,
+            1289
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.3",
+          "file": "raw_materials/physics/translations/chapter-39/03-muc-nang-luong-bohr.md",
+          "destination": "topic:muc-nang-luong-bohr",
+          "printedPages": [
+            1290,
+            1300
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.4",
+          "file": "raw_materials/physics/translations/chapter-39/04-laser.md",
+          "destination": "topic:laser",
+          "printedPages": [
+            1300,
+            1302
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.5",
+          "file": "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
+          "destination": "topic:pho-lien-tuc",
+          "printedPages": [
+            1303,
+            1308
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "39.6",
+          "file": "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md",
+          "destination": "topic:bat-dinh-vat-chat",
+          "printedPages": [
+            1308,
+            1310
+          ],
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-39/17-tom-tat.md",
+          "destination": "notes",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "07-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-39/07-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "08-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-39/08-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "09-bai-tap-01-15",
+          "file": "raw_materials/physics/translations/chapter-39/09-bai-tap-01-15.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "10-bai-tap-16-30",
+          "file": "raw_materials/physics/translations/chapter-39/10-bai-tap-16-30.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "11-bai-tap-31-45",
+          "file": "raw_materials/physics/translations/chapter-39/11-bai-tap-31-45.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "12-bai-tap-46-60",
+          "file": "raw_materials/physics/translations/chapter-39/12-bai-tap-46-60.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-61-75",
+          "file": "raw_materials/physics/translations/chapter-39/13-bai-tap-61-75.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "14-bai-tap-76-87",
+          "file": "raw_materials/physics/translations/chapter-39/14-bai-tap-76-87.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "15-mcat",
+          "file": "raw_materials/physics/translations/chapter-39/15-mcat.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        },
+        {
+          "sourceUnit": "16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-39/16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-numeric-and-render-passed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-39-review.json"
     },
     {
       "chapter": 40,
