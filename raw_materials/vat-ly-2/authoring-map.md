@@ -124,7 +124,17 @@ Tab Bài tập có111bài đánh số,24câu thảo luận,12bài hướng dẫn
 
 Hai tác vụ Antigravity dừng ở ba lượt do lỗi bridge. Worktree và các bản sao được giữ, Codex tự đối chiếu và sửa bản tích hợp. Chi tiết và trạng thái phát hành trong hồ sơ chương34.
 
-## Các chương35–44
+## Chương 35
+
+Đã hoàn tất năm mục lý thuyết, bảy ví dụ, năm câu tự kiểm, 19 công thức đánh số với 21 nhãn và 19 hình đánh số. Có 37 PNG giữ nguyên vùng PDF cùng hai SVG bổ trợ lời giải. Các ảnh ứng dụng thính giác, cánh bướm và OCT được giữ cùng năm hình tổng kết.
+
+Tab Bài tập có 60 bài đánh số, 18 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, với 91 lời giải gập. Có 10 Slides, bảy nhóm Cheatsheet gồm 15 mục và 11 Wiki mới. Mỗi lời giải nêu dữ kiện, hướng đi có quan hệ cùng lý do và các bước giải.
+
+Các phép tính Python, kiểm tra pixel và kiểm tra hiển thị toàn bộ chương đã qua. Các giả thiết chưa xác định và sai lệch do làm tròn được trình bày rõ trong lời giải, với hồ sơ đối chiếu riêng. Không chạy build toàn bộ trên máy cục bộ.
+
+Các worktree Antigravity được giữ sau lỗi bridge hoặc trạng thái chạy kéo dài. Codex tự đối chiếu, sửa và kiểm chứng bản tích hợp. Không dùng subagent GPT hoặc gọi quá ba lượt cho mỗi tác vụ.
+
+## Các chương 36–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

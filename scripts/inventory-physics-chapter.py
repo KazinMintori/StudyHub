@@ -25,7 +25,7 @@ discussion=find(r'^\s*(Q'+prefix+r'\.\d+)\s')
 variation=find(r'^\s*(VP'+prefix+r'\.\d+\.\d+)\s')
 exercise_text=text.split('EXERCISES',1)[-1]
 exercises=set(re.findall(r'^\s*('+prefix+r'\.\d+)\s',exercise_text,re.M))
-exercises=sorted(exercises,key=lambda s:int(s.split('.')[1]))
+exercises=sorted((s for s in exercises if int(s.split('.')[1])>0),key=lambda s:int(s.split('.')[1]))
 report={'status':'full-page-range-inventory-only','chapter':args.chapter,'printedPages':[ch['printedStart'],ch['printedEnd']],'pdfPages':[ch['pdfStart'],ch['pdfEnd']],'examples':examples,'numberedFigures':figures,'exerciseFigures':problemfigures,'discussion':discussion,'guidedPractice':variation,'numberedExercises':exercises,'endSolutionsIncludingBridge':len(discussion)+len(variation)+len(exercises)+1,'nextPageStarts':next_text[:150],'humanSourceReviewRequired':True}
 out=root/f'qa/physics/chapter{args.chapter}/full-source-inventory.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(report,ensure_ascii=False,indent=2))

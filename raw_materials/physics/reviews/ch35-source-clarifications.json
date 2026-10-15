@@ -1,0 +1,110 @@
+{
+  "status": "source-and-independent-calculation-reviewed",
+  "items": [
+    {
+      "id": "VP35.3.4",
+      "issue": "Only0<phaseHalf<pi isgiven by pointbetweenadjacentbrightfringes. cos²=0.09 has two branches.",
+      "decision": "Preserve both wavelengths573.182nm/386.943nm and nearest30percentpositions8.21982mm/5.54903mm. To select573 requires pointbeforefirstdark, not stated."
+    },
+    {
+      "id": "VP35.6.3",
+      "issue": "Appendix reversal of constructive/destructive conflicts actual n_flint1.60,n_gap1or1.36,n_plastic1.40.",
+      "decision": "FirstgapreflectionnoPi,secondPi forbothcases. Airconstruct688nm,no dark;ethanolnoconstruct,dark467.84nm. SourcePDF1198 inspectedvisually toconfirmnumbers."
+    },
+    {
+      "id": "bridge",
+      "issue": "Appendix givesonly441nm,violet. Table32.1 definesvisible380–750nm, also contains734.667nm.",
+      "decision": "Preservebothmathematical reflectionmaxima735deepredand441violet. Transmitted551green. Relativeperceivedbrightnesscannotbefixedbyphasealone."
+    },
+    {
+      "id": "inventory35.0",
+      "issue": "Decimalmeasurement35.0 atlinestartwasmisclassifiedasexercise35.0.",
+      "decision": "Requirepositiveexerciseindex;actual60numbered+18Q+12VP+bridge=91."
+    },
+    {
+      "id": "35.3",
+      "issue": "At observerdistance17m with6mbaseline, exactpathdifference1.027756m isnotexactlylambda/2.",
+      "decision": "Near-destructive only;exacthalfλoccurs17.5m. Keepgeometrynotroundedfalseequality."
+    },
+    {
+      "id": "35.4",
+      "issue": "Sourceunit2.04micrometers visuallyconfirmed,OCRmm;coherentdoesnotaloneimplyinphase.",
+      "decision": "Numeric680/510/408,583/453nm requireinphase assumption, statephi0otherwise."
+    },
+    {
+      "id": "35.13",
+      "issue": "Sourceunit1.80micrometers visuallyconfirmed;OCRmm contradictsnon-smallanglehint.",
+      "decision": "Useexactsin/tangeometry, darkspacing12.638cm."
+    },
+    {
+      "id": "35.25",
+      "issue": "Geometricpathdifference differsopticalpathdifference.",
+      "decision": "Atfinalt1091.603nm,geometric2t2183.206nm=11in-filmwavelengths;optical2nt5720nm."
+    },
+    {
+      "id": "35.21",
+      "issue": "Rounded phase produces appendix0.404I0.",
+      "decision": "Use full phase from the given values: 0.406309I0."
+    },
+    {
+      "id": "35.38",
+      "issue": "Sound λ/d=0.86 is outside small-angle use.",
+      "decision": "Exact two-source geometry gives 3.374991m at20°C with344m/s; 1.72m small-angle estimate is invalid. A2kHz design uses separation0.2613769m for target1.75m."
+    },
+    {
+      "id": "35.43",
+      "issue": "Appendix coefficient6.8e-5 differs given582.4/588.5nm and150K.",
+      "decision": "Keep calculated6.9826e-5/K."
+    },
+    {
+      "id": "35.47",
+      "issue": "Visible interval380–750nm also contains the near-violet solution omitted in appendix.",
+      "decision": "Keep600,466.667,381.818nm, based on common path difference2100nm."
+    },
+    {
+      "id": "35.50",
+      "issue": "Graph has eight vector measurement markers.",
+      "decision": "Fit all eight markers, giving slope0.5441483mm², intercept−0.024783mm, wavelength604.609nm. Report about600nm at graph precision."
+    },
+    {
+      "id": "35.51",
+      "issue": "Three maxima are not explicitly stated consecutive.",
+      "decision": "State consecutive assumption for50MHz and237m. Otherwise keep family λ=6/k m,f=50k MHz,x=240−3/k m."
+    },
+    {
+      "id": "35.52",
+      "issue": "Wavelength values496/386nm are rounded and give noninteger order3.00909.",
+      "decision": "Use consecutive half-integer orders3.5/4.5, average optical path1736.5nm, thickness620.1786nm≈0.620µm and longest enhanced wavelength3473nm."
+    },
+    {
+      "id": "35.53",
+      "issue": "Prompt combines pressure nodes with constructive reflection, which are different conditions for rigid-wall pressure reflection.",
+      "decision": "Retain prompt and explicitly solve both conditions. Constructive threshold r=λ/2 and three positive air positions versus one helium position. True pressure-node threshold r=λ/4 with four positive air positions and one helium position. Negative distances require a different unprovided geometry."
+    },
+    {
+      "id": "35.55",
+      "issue": "Thermal expansion replaces an air segment, so optical excess is not2nL.",
+      "decision": "Differentiate2(n−1)L and retain changing index:13.955857 fringes per minute near initial temperature."
+    },
+    {
+      "id": "35.56",
+      "issue": "Fresnel-source image to screen has full distancea+b.",
+      "decision": "Use2.2m, not justb=2m; fringe spacing1.5714mm."
+    },
+    {
+      "id": "35.57",
+      "issue": "A finite sample of classroom positions does not uniquely identify whether all nodes disappeared.",
+      "decision": "Choice d is intended for removal of the two-source nodal pattern; state limitation of observing only finitely many listeners."
+    },
+    {
+      "id": "35.59",
+      "issue": "Frequency requires interpretation as first minimum after initial constructive position.",
+      "decision": "State first-minimum assumption before λ/2=0.34m and f500Hz."
+    },
+    {
+      "id": "35.7-rounding",
+      "issue": "550/1.38=398.55nm and thickness99.638nm, not exact400/100.",
+      "decision": "Keep accurate values then round100nm. UV276nm uses rounded thickness; exact designed thickness gives275nm."
+    }
+  ]
+}

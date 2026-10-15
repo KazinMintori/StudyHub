@@ -1,0 +1,49 @@
+{
+  "chapter": 35,
+  "status": "content-complete",
+  "theorySections": 5,
+  "examples": 7,
+  "selfChecks": 5,
+  "equations": 19,
+  "equationTags": 21,
+  "numberedFigures": 19,
+  "sourceFigureAssets": 37,
+  "supplementarySolutionSvgs": 2,
+  "exercises": 60,
+  "discussionQuestions": 18,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 91,
+  "slides": 10,
+  "strictCheatsheetSections": 7,
+  "strictCheatsheetItems": 15,
+  "newWikiTerms": 11,
+  "numericEvidence": "qa/physics/chapter35/numeric-checks.json",
+  "sourceReview": [
+    "raw_materials/physics/reviews/ch35-final-source-review.md"
+  ],
+  "sourceImageIntegrity": "qa/physics/chapter35/source-image-pixel-checks.json",
+  "renderReview": "passed",
+  "publication": "ready-for-push",
+  "delegationReview": "Both exact-authorized tasks used three calls and ended with bridge NoneType errors. Stable bounded snapshots and worktrees retained. Parent independently reviewed, repaired and verified the integrated root files. No fourth call or GPT subagent.",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "renderEvidence": {
+    "chapterViews": 131,
+    "liveViewportTransitions": 7,
+    "mathOverflows": 0,
+    "javascriptErrors": 0,
+    "sourceDisplayExpressions": 246,
+    "sourceInlineExpressions": 1191,
+    "supportDisplayExpressions": 33,
+    "supportInlineExpressions": 59,
+    "fullBuild": "GitHub Actions only. No local full build.",
+    "skillTests": 39,
+    "mathRendererRegressionTests": 8,
+    "report": "qa/physics/chapter35/full-browser/results.json"
+  }
+}

@@ -1609,20 +1609,72 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "15-giao-thoa",
-      "title": "Giao thoa",
-      "prerequisites": [
-        "song",
-        "pha-song",
-        "chiet-suat"
-      ],
-      "supportingConcepts": [
-        "giao-thoa-song"
-      ],
-      "status": "draft",
-      "number": 15,
-      "sourceChapter": 35
-    },
+        "slug": "15-giao-thoa",
+        "title": "Giao thoa",
+        "prerequisites": [
+          "song",
+          "pha-song",
+          "vector-pha",
+          "chiet-suat",
+          "phan-cuc-thang",
+          "cuong-do-buc-xa",
+          "don-vi"
+        ],
+        "supportingConcepts": [
+          "nguon-ket-hop",
+          "hieu-duong-di",
+          "giao-thoa-hai-khe",
+          "van-giao-thoa",
+          "doi-pha-phan-xa",
+          "quang-trinh",
+          "giao-thoa-mang-mong",
+          "nem-khong-khi",
+          "van-tron-newton",
+          "lop-phu-chong-phan-xa",
+          "giao-thoa-ke-michelson"
+        ],
+        "status": "ready",
+        "number": 15,
+        "sourceChapter": 35,
+        "topicGroups": [
+          {
+            "title": "Giao thoa từ nguồn kết hợp đến phép đo",
+            "topics": [
+              {
+                "slug": "giao-thoa-nguon-ket-hop",
+                "title": "Giao thoa và nguồn kết hợp",
+                "question": "Vì sao cùng tần số chưa đủ để giữ một hệ vân ổn định?",
+                "source": "35.1"
+              },
+              {
+                "slug": "giao-thoa-hai-nguon",
+                "title": "Giao thoa ánh sáng từ hai nguồn",
+                "question": "Hiệu đường đi quyết định hướng sáng và tối như thế nào?",
+                "source": "35.2"
+              },
+              {
+                "slug": "cuong-do-giao-thoa",
+                "title": "Cường độ trong hệ vân",
+                "question": "Cộng điện trường như thế nào để tính cường độ ở mọi điểm?",
+                "source": "35.3"
+              },
+              {
+                "slug": "giao-thoa-mang-mong",
+                "title": "Giao thoa ở màng mỏng",
+                "question": "Dấu pha phản xạ và đường đi trong màng phối hợp tạo màu ra sao?",
+                "source": "35.4"
+              },
+              {
+                "slug": "giao-thoa-ke-michelson",
+                "title": "Giao thoa kế Michelson",
+                "question": "Vì sao đếm vân có thể đo được dịch chuyển rất nhỏ?",
+                "source": "35.5"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "16-nhieu-xa",
       "title": "Nhiễu xạ",
@@ -3135,6 +3187,106 @@ export const physics2Course = {
         "Gương lõm làm vật kính tránh quang sai sắc. Các gương phụ đưa ảnh tới thiết bị quan sát hoặc cảm biến."
       ],
       "formula": "$$\n\\begin{aligned}M&=-f_1/f_2\\\\L&=f_1+f_2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Chồng chất cộng trường trước khi tính cường độ",
+      "bullets": [
+        "Mỗi điểm nhận tổng các đóng góp tức thời của những sóng chồng lên nhau.",
+        "Với ánh sáng, cộng các thành phần điện trường theo cùng phương.",
+        "Cường độ là trung bình của bình phương trường, nên có số hạng phụ thuộc pha."
+      ],
+      "formula": "$$\nE_{\\rm net}(t)=E_1(t)+E_2(t).\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Nguồn kết hợp giữ quan hệ pha ổn định",
+      "bullets": [
+        "Hai nguồn đơn sắc cùng tần số có pha tương đối không đổi là nguồn kết hợp.",
+        "Nguồn kết hợp có thể lệch pha ban đầu. Đồng pha là một trường hợp riêng.",
+        "Chia một nguồn thành hai đường giúp các thay đổi pha chung không phá pha tương đối."
+      ],
+      "formula": "$$\n\\phi=\\frac{2\\pi\\Delta r}{\\lambda}+\\phi_0.\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Hiệu đường đi chọn các đường cực trị",
+      "bullets": [
+        "Với hai nguồn đồng pha, hiệu đường đi nguyên bước sóng cho tăng cường.",
+        "Hiệu đường đi bán nguyên bước sóng cho triệt giảm.",
+        "Triệt tiêu hoàn toàn còn cần hai biên độ tại điểm xét bằng nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}\\Delta r_{\\max}&=m\\lambda\\\\\\Delta r_{\\min}&=(m+1/2)\\lambda\\\\m&\\in\\mathbb Z.\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Màn xa cho hiệu đường đi theo sin góc",
+      "bullets": [
+        "Khi khoảng quan sát lớn hơn nhiều khoảng nguồn, hai đường tia gần song song.",
+        "Góc đo với đường trung trực hai nguồn.",
+        "Miền của sin giới hạn những bậc sáng và tối có thể xuất hiện."
+      ],
+      "formula": "$$\n\\begin{aligned}\\Delta r&\\approx d\\sin\\theta\\\\|\\sin\\theta|&\\le1.\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Khoảng vân đều là gần đúng ở góc nhỏ",
+      "bullets": [
+        "Gần tâm có thể lấy sin và tang gần bằng góc theo radian.",
+        "Vị trí vân sáng tỉ lệ bậc, bước sóng và khoảng tới màn.",
+        "Ra xa tâm cần giữ riêng sin trong điều kiện pha và tang trong tọa độ màn."
+      ],
+      "formula": "$$\n\\begin{aligned}y_m&\\approx m\\lambda R/d\\\\\\Delta y&\\approx\\lambda R/d\\\\y&=R\\tan\\theta.\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Giản đồ pha cho biên độ tổng",
+      "bullets": [
+        "Hai vectơ pha cùng quay, có góc cố định bằng pha tương đối.",
+        "Biên độ tổng của hai sóng bằng nhau phụ thuộc cos của nửa pha.",
+        "Cường độ cực đại của cả hai nguồn bằng bốn lần cường độ một nguồn riêng."
+      ],
+      "formula": "$$\n\\begin{aligned}E_P&=2E|\\cos(\\phi/2)|\\\\I&=I_0\\cos^2(\\phi/2).\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Pha phản xạ cần xét ở từng mặt",
+      "bullets": [
+        "Phản xạ từ chiết suất nhỏ sang lớn đổi pha nửa chu kỳ.",
+        "Phản xạ theo chiều ngược lại không có lần đổi pha ấy trong mô hình tới vuông góc.",
+        "Hai lần đổi pha giống nhau không gây chênh pha tương đối."
+      ],
+      "formula": "$$\nr=\\frac{n_a-n_b}{n_a+n_b}.\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Màng mỏng phối hợp pha truyền và pha phản xạ",
+      "bullets": [
+        "Tia từ mặt dưới đi thêm hai lần bề dày màng ở gần pháp tuyến.",
+        "Dùng bước sóng chân không thì quang lộ thêm là hai lần chiết suất nhân bề dày.",
+        "Một lần đảo pha phản xạ tương đối làm các điều kiện sáng và tối đổi vai trò."
+      ],
+      "formula": "$$\n\\begin{aligned}\\phi&=4\\pi nt/\\lambda_0+\\phi_r\\\\\\phi_{\\max}&=2m\\pi\\\\\\phi_{\\min}&=(2m+1)\\pi.\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Bề dày biến thiên tạo các dạng vân",
+      "bullets": [
+        "Màng nêm có bề dày gần tuyến tính theo vị trí và tạo các vân thẳng.",
+        "Mặt cầu gần tiếp xúc mặt phẳng tạo các vòng Newton.",
+        "Các lớp phủ điều khiển phản xạ bằng quan hệ pha giữa các đường truyền."
+      ],
+      "formula": "$$\n\\begin{aligned}t(x)&\\approx\\alpha x\\\\t(r)&\\approx r^2/(2R_c).\\end{aligned}\n$$"
+    },
+    {
+      "note": "15-giao-thoa",
+      "title": "Michelson biến độ dời gương thành số vân",
+      "bullets": [
+        "Bộ chia chùm tạo hai đường rồi tái hợp. Bản bù cân bằng bề dày kính hai đường.",
+        "Gương dịch làm đường đi hai lượt thay đổi gấp đôi độ dời trong không khí.",
+        "Biết bước sóng có thể đo khoảng cách bằng đếm vân, hoặc dùng độ dời đã biết để suy bước sóng."
+      ],
+      "formula": "$$\n\\begin{aligned}2y&=N\\lambda\\\\\\lambda&=2y/N.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",

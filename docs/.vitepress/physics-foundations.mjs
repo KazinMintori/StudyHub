@@ -1,3 +1,4 @@
+import {interferenceConcepts,interferenceWikiDetails,interferenceWikiConnections} from './physics-interference-foundations.mjs'
 import {geometricOpticsConcepts,geometricOpticsWikiDetails,geometricOpticsWikiConnections} from './physics-geometric-optics-foundations.mjs'
 import {opticsConcepts,opticsWikiDetails,opticsWikiConnections} from './physics-optics-foundations.mjs'
 import {emWaveConcepts,emWaveWikiDetails,emWaveWikiConnections} from './physics-emwave-foundations.mjs'
@@ -14,6 +15,7 @@ import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiCo
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...interferenceConcepts,
   ...geometricOpticsConcepts,
   ...sourcesConcepts,
   ...magneticConcepts,
@@ -332,6 +334,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...interferenceWikiDetails,
   ...geometricOpticsWikiDetails,
   ...sourcesWikiDetails,
   ...magneticWikiDetails,
@@ -373,6 +376,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...interferenceWikiConnections,
   ...geometricOpticsWikiConnections,
   ...sourcesWikiConnections,
   ...magneticWikiConnections,

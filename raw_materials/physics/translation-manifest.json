@@ -3975,21 +3975,127 @@
           "page": 1175
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "35.1",
-        "35.2",
-        "35.3",
-        "35.4",
-        "35.5",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-35/00-mo-dau.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "35.1",
+          "file": "raw_materials/physics/translations/chapter-35/01-giao-thoa-nguon-ket-hop.md",
+          "destination": "topic:giao-thoa-nguon-ket-hop",
+          "printedPages": [
+            1160,
+            1162
+          ],
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "35.2",
+          "file": "raw_materials/physics/translations/chapter-35/02-giao-thoa-hai-nguon.md",
+          "destination": "topic:giao-thoa-hai-nguon",
+          "printedPages": [
+            1163,
+            1166
+          ],
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "35.3",
+          "file": "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md",
+          "destination": "topic:cuong-do-giao-thoa",
+          "printedPages": [
+            1166,
+            1169
+          ],
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "35.4",
+          "file": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+          "destination": "topic:giao-thoa-mang-mong",
+          "printedPages": [
+            1170,
+            1175
+          ],
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "35.5",
+          "file": "raw_materials/physics/translations/chapter-35/05-giao-thoa-ke-michelson.md",
+          "destination": "topic:giao-thoa-ke-michelson",
+          "printedPages": [
+            1175,
+            1176
+          ],
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-35/09-tom-tat.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "10-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-35/10-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "11-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-35/11-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "12-bai-tap-01-17",
+          "file": "raw_materials/physics/translations/chapter-35/12-bai-tap-01-17.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "13-bai-tap-18-31",
+          "file": "raw_materials/physics/translations/chapter-35/13-bai-tap-18-31.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "14-bai-tap-32-44",
+          "file": "raw_materials/physics/translations/chapter-35/14-bai-tap-32-44.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "15-bai-tap-45-53",
+          "file": "raw_materials/physics/translations/chapter-35/15-bai-tap-45-53.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "16-bai-tap-nang-cao",
+          "file": "raw_materials/physics/translations/chapter-35/16-bai-tap-nang-cao.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "17-mcat",
+          "file": "raw_materials/physics/translations/chapter-35/17-mcat.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "18-dap-so",
+          "file": "raw_materials/physics/translations/chapter-35/18-dap-so.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-35-review.json"
     },
     {
       "chapter": 36,
