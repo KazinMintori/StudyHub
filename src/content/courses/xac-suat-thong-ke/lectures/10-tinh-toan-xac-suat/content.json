@@ -16,22 +16,22 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 553,
+      "line": 550,
       "title": "Bài tập rèn luyện tư duy xác suất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 559,
+      "line": 556,
       "title": "Bài tập 1: Phân tích xác suất và ngụy biện công tố viên trong vụ án Sally Clark"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 614,
+      "line": 611,
       "title": "Bài tập 2: Mô hình hộp rút thăm không hoàn lại và kiểm tra tính độc lập"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 691,
+      "line": 688,
       "title": "Bài tập 3: Mô hình hóa chuỗi trận chung kết thể thao (Best-of-7 Series)"
     }
   ],
@@ -82,31 +82,31 @@
     {
       "reference": "./img/stat20-10/committee.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 296,
+      "line": 293,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/committee.jpeg"
     },
     {
       "reference": "./img/stat20-10/indep-box.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 325,
+      "line": 322,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/indep-box.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 343,
+      "line": 340,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number-cond.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 348,
+      "line": 345,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number-cond.jpeg"
     },
     {
       "reference": "./img/stat20-10/incl-excl.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 514,
+      "line": 511,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/incl-excl.png"
     }
   ]

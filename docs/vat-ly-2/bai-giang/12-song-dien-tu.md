@@ -1,10 +1,10 @@
 ---
-course: "vat-ly-2"
-lecture: "12-song-dien-tu"
-section: "lecture"
+course: vat-ly-2
+lecture: 12-song-dien-tu
+section: lecture
 title: "Sóng điện từ"
 prerequisites: ["dao-ham","dao-ham-rieng","tich-phan","tich-co-huong","dao-dong-dieu-hoa","song","pha-song","dong-luong-vat-ly","cong-nang-luong","dien-truong","tu-truong","thong-luong","dinh-luat-faraday","dong-dien-dich"]
-lessonStatus: "ready"
+lessonStatus: ready
 hasChapterExercises: true
 description: "Maxwell, sóng phẳng, sóng hình sin, năng lượng, động lượng, áp suất bức xạ và sóng đứng."
 ---

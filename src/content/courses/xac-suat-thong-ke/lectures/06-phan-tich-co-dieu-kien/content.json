@@ -12,34 +12,34 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 479,
+      "line": 485,
       "title": "Bài tập 1: Bản chất vector logic & Phân rã lỗi trong đường ống dữ liệu"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 531,
+      "line": 539,
       "title": "Bài tập 2: So sánh lực lượng tập hợp & Phân nhóm đa biến"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 580,
+      "line": 588,
       "title": "Bài tập 3: Thiết kế đường ống phân tích giấc ngủ động vật theo nhóm dinh dưỡng"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 500,
+      "line": 506,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 560,
+      "line": 568,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 601,
+      "line": 609,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -59,19 +59,19 @@
     {
       "reference": "./img/stat20-06/pipeline-2.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 302,
+      "line": 308,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/pipeline-2.png"
     },
     {
       "reference": "./img/stat20-06/line-christenings.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 388,
+      "line": 394,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/line-christenings.png"
     },
     {
       "reference": "./img/stat20-06/group-by.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 439,
+      "line": 445,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/group-by.png"
     }
   ]

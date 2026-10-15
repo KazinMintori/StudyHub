@@ -1,10 +1,10 @@
 ---
-course: "vat-ly-2"
-lecture: "14-quang-hinh-hoc"
-section: "lecture"
+course: vat-ly-2
+lecture: 14-quang-hinh-hoc
+section: lecture
 title: "Quang hình học"
 prerequisites: ["tia-sang","phan-xa-guong","chiet-suat","dinh-luat-snell","don-vi"]
-lessonStatus: "ready"
+lessonStatus: ready
 hasChapterExercises: true
 description: "Gương phẳng, gương cầu, khúc xạ tại mặt cầu, thấu kính mỏng, máy ảnh, mắt, kính lúp, kính hiển vi và kính thiên văn."
 ---

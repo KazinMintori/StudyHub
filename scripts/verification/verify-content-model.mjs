@@ -13,7 +13,7 @@ import { searchTrace,gradientTrace,bayesCounts,wordCountTrace } from '../../src/
 const ids=Object.keys(concepts)
 assert.equal(new Set(wikiGroups.flatMap(g=>g.ids)).size,ids.length)
 for(const id of ids){assert(wikiDetails[id]);assert(relatedConcepts(id).length);for(const other of relatedConcepts(id))assert(concepts[other]&&other!==id);assert((await readFile(`docs/wiki/${id}.md`,'utf8')).includes('## Giải thích kỹ thuật'))}
-for(const c of courseCatalog)for(const l of c.lessons){const source=await readFile(`docs/${c.id}/bai-giang/${l.slug}.md`,'utf8');assert(source.includes(`lecture: ${l.slug}`));assert(source.includes('section: lecture'));if(l.status==='ready' && c.slides.length)assert(lectureSlides(c,l).length)}
+for(const c of courseCatalog)for(const l of c.lessons){const source=await readFile(`docs/${c.id}/bai-giang/${l.slug}.md`,'utf8');assert(new RegExp(`lecture:\\s*["']?${l.slug}["']?`).test(source),`Missing lecture: ${l.slug} in docs/${c.id}/bai-giang/${l.slug}.md`);assert(/section:\s*["']?lecture["']?/.test(source),`Missing section: lecture in docs/${c.id}/bai-giang/${l.slug}.md`);if(l.status==='ready' && c.slides.length)assert(lectureSlides(c,l).length)}
 const md=new MarkdownIt().use(termLinks,'/Study_UET/')
 const rendered=md.render('Gradient và đạo hàm riêng. `gradient` [vector](https://example.com)',{relativePath:'toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md'})
 assert(rendered.includes('data-wiki="/wiki/gradient.html"'));assert(rendered.includes('aria-haspopup="dialog"'));assert(rendered.includes('<code>gradient</code>'))

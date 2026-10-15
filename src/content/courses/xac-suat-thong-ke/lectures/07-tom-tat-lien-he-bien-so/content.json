@@ -12,34 +12,34 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 281,
+      "line": 291,
       "title": "Bài tập 1: Tính toán chi tiết Hệ số Pearson & Kiểm tra tính bất biến đơn vị"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 357,
+      "line": 371,
       "title": "Bài tập 2: Khớp phương trình hồi quy & Phân tích phần dư"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 421,
+      "line": 441,
       "title": "Bài tập 3: Cạm bẫy trong diễn giải Tương quan & Điểm ngoại lai đòn bẩy"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 303,
+      "line": 313,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 373,
+      "line": 387,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 436,
+      "line": 456,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -59,19 +59,19 @@
     {
       "reference": "./img/stat20-07/handdrawn-line.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 147,
+      "line": 151,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-07/handdrawn-line.png"
     },
     {
       "reference": "./img/stat20-07/least-squares-line.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 174,
+      "line": 180,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-07/least-squares-line.png"
     },
     {
       "reference": "./img/stat20-07/residual-california.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/07-tom-tat-lien-he-bien-so.md",
-      "line": 249,
+      "line": 259,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-07/residual-california.png"
     }
   ]

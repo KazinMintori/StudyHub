@@ -14,22 +14,22 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
-      "line": 171,
+      "line": 173,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
-      "line": 173,
+      "line": 175,
       "title": "Bài tập 1: Nhận diện và phân loại bài toán dự báo trong thực tế"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
-      "line": 206,
+      "line": 208,
       "title": "Bài tập 2: Tính toán giải tích OLS và kiểm chứng các tính chất hình học"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/24-phuong-phap-binh-phuong-be-nhat.md",
-      "line": 274,
+      "line": 276,
       "title": "Bài tập 3: Mô phỏng thuật toán Gradient Descent cho bài toán tối ưu RSS"
     }
   ],

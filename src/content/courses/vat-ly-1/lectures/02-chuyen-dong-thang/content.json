@@ -67,17 +67,17 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 167,
+      "line": 163,
       "title": "Bài toán"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 247,
+      "line": 243,
       "title": "Bài toán"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 320,
+      "line": 316,
       "title": "Câu hỏi kiểm tra"
     },
     {
@@ -102,12 +102,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 115,
+      "line": 113,
       "title": "Bài toán"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 235,
+      "line": 232,
       "title": "Câu hỏi kiểm tra"
     },
     {
@@ -799,17 +799,17 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 176,
+      "line": 172,
       "title": "Hướng dẫn giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 257,
+      "line": 253,
       "title": "Hướng dẫn giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 326,
+      "line": 322,
       "title": "Lời giải"
     },
     {
@@ -834,12 +834,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 128,
+      "line": 126,
       "title": "Lời giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 242,
+      "line": 239,
       "title": "Lời giải & Phân tích"
     }
   ],
@@ -955,37 +955,37 @@
     {
       "reference": "img/young-02/hinh-2-18.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 76,
+      "line": 75,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-18.png"
     },
     {
       "reference": "img/young-02/hinh-2-19.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 78,
+      "line": 77,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-19.png"
     },
     {
       "reference": "img/young-02/ung-dung-gia-toc-lon.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 144,
+      "line": 140,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/ung-dung-gia-toc-lon.png"
     },
     {
       "reference": "img/young-02/hinh-2-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 174,
+      "line": 170,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-20.png"
     },
     {
       "reference": "img/young-02/hinh-2-21.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 255,
+      "line": 251,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-21.png"
     },
     {
       "reference": "img/young-02/cau-hoi-2-4.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
-      "line": 323,
+      "line": 319,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/cau-hoi-2-4.png"
     },
     {
@@ -1033,7 +1033,7 @@
     {
       "reference": "img/young-02/hinh-2-29.png",
       "declaredIn": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
-      "line": 203,
+      "line": 200,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-29.png"
     },
     {

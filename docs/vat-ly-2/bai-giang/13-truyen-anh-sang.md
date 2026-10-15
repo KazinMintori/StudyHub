@@ -1,10 +1,10 @@
 ---
-course: "vat-ly-2"
-lecture: "13-truyen-anh-sang"
-section: "lecture"
+course: vat-ly-2
+lecture: 13-truyen-anh-sang
+section: lecture
 title: "Bản chất và sự truyền ánh sáng"
 prerequisites: ["song","pha-song","vector","dao-ham","dao-dong-dieu-hoa","song-dien-tu","cuong-do-buc-xa"]
-lessonStatus: "ready"
+lessonStatus: ready
 hasChapterExercises: true
 description: "Bản chất ánh sáng, phản xạ, khúc xạ, phản xạ toàn phần, tán sắc, phân cực, tán xạ và nguyên lý Huygens."
 ---

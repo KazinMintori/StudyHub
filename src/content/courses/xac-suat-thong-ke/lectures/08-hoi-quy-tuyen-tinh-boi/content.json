@@ -12,34 +12,34 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 251,
+      "line": 257,
       "title": "Bài tập 1: Giải mã Biến giả Đa mức & Hệ phương trình Hồi quy song song"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 307,
+      "line": 319,
       "title": "Bài tập 2: Phân tích Cơ chế Biến gây nhiễu & Bóc tách Tác động"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 355,
+      "line": 371,
       "title": "Bài tập 3: Mô hình Hồi quy Doanh thu & Ứng dụng Quản trị Kinh doanh"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 272,
+      "line": 278,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 327,
+      "line": 339,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 374,
+      "line": 390,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -47,31 +47,31 @@
     {
       "reference": "./img/stat20-08/zagat-review.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 59,
+      "line": 61,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-08/zagat-review.png"
     },
     {
       "reference": "./img/stat20-08/zagat-scatter-geo.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 86,
+      "line": 88,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-08/zagat-scatter-geo.png"
     },
     {
       "reference": "./img/stat20-08/zagat-handdrawn.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 96,
+      "line": 98,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-08/zagat-handdrawn.png"
     },
     {
       "reference": "./img/stat20-08/zagat-parallel-lines.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 151,
+      "line": 157,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-08/zagat-parallel-lines.png"
     },
     {
       "reference": "./img/stat20-08/zagat-vertical-slice.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/08-hoi-quy-tuyen-tinh-boi.md",
-      "line": 157,
+      "line": 163,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-08/zagat-vertical-slice.png"
     }
   ]

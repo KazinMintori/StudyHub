@@ -15,7 +15,7 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
-      "line": 490,
+      "line": 489,
       "title": "Bài tập rèn luyện"
     }
   ],
@@ -66,25 +66,25 @@
     {
       "reference": "./img/stat20-14/unnamed-chunk-8-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
-      "line": 276,
+      "line": 275,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-8-1.png"
     },
     {
       "reference": "./img/stat20-14/unnamed-chunk-8-2.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
-      "line": 277,
+      "line": 276,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-8-2.png"
     },
     {
       "reference": "./img/stat20-14/unif-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
-      "line": 357,
+      "line": 356,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unif-1.png"
     },
     {
       "reference": "./img/stat20-14/unnamed-chunk-10-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/14-phan-phoi-lien-tuc-va-xap-xi-chuan.md",
-      "line": 388,
+      "line": 387,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-14/unnamed-chunk-10-1.png"
     }
   ]

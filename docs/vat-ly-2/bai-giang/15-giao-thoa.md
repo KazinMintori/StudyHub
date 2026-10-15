@@ -1,10 +1,10 @@
 ---
-course: "vat-ly-2"
-lecture: "15-giao-thoa"
-section: "lecture"
+course: vat-ly-2
+lecture: 15-giao-thoa
+section: lecture
 title: "Giao thoa"
 prerequisites: ["song","pha-song","vector-pha","chiet-suat","phan-cuc-thang","cuong-do-buc-xa","don-vi"]
-lessonStatus: "ready"
+lessonStatus: ready
 hasChapterExercises: true
 description: "Nguồn kết hợp, thí nghiệm Young, cường độ giao thoa, màng mỏng và giao thoa kế Michelson."
 ---

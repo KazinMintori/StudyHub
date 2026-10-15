@@ -1,10 +1,10 @@
 ---
-course: "vat-ly-2"
-lecture: "11-dong-dien-xoay-chieu"
-section: "lecture"
+course: vat-ly-2
+lecture: 11-dong-dien-xoay-chieu
+section: lecture
 title: "Dòng điện xoay chiều"
 prerequisites: ["dao-ham","tich-phan","dao-dong-dieu-hoa","dien-tro","dien-dung","cuon-cam","quy-tac-kirchhoff","dinh-luat-faraday","ho-cam","dong-dien-dich","dien-ke","tu-tre"]
-lessonStatus: "ready"
+lessonStatus: ready
 hasChapterExercises: true
 description: "Giản đồ pha, hiệu dụng, điện kháng, mạch RLC, công suất, cộng hưởng và máy biến áp."
 ---
