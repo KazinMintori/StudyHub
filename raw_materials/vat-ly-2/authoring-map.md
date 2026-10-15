@@ -116,7 +116,15 @@ Kiểm tra cấu trúc, các bộ Python, 39 kiểm thử skill và kiểm tra 1
 
 Hai tác vụ Antigravity đều dừng ở ba lượt sau lỗi cầu nối. Worktree và bản sao được giữ lại. Codex đã tự đọc đối chiếu, sửa và kiểm tra đầu ra trước khi tích hợp.
 
-## Các chương 34–44
+## Chương34
+
+Đã hoàn tất tám mục lý thuyết,14ví dụ,25công thức đánh số và54hình đánh số. Có81PNG giữ nguyên vùng PDF và17SVG bổ trợ lời giải. Các hình34.17,34.28,34.31,34.32 và34.41 được rà đủ các phần.
+
+Tab Bài tập có111bài đánh số,24câu thảo luận,12bài hướng dẫn và một bài cầu nối, với148lời giải gập. Có12Slides,10nhóm Cheatsheet với20mục định nghĩa, tính chất, công thức và17Wiki mới. Các phép tính Python và175lượt kiểm tra trình duyệt đã qua, gồm màn hình320–375px và đổi bề rộng trực tiếp. Build chỉ trên GitHub Actions.
+
+Hai tác vụ Antigravity dừng ở ba lượt do lỗi bridge. Worktree và các bản sao được giữ, Codex tự đối chiếu và sửa bản tích hợp. Chi tiết và trạng thái phát hành trong hồ sơ chương34.
+
+## Các chương35–44
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 

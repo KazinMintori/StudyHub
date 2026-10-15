@@ -3788,24 +3788,157 @@
           "page": 1143
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "34.1",
-        "34.2",
-        "34.3",
-        "34.4",
-        "34.5",
-        "34.6",
-        "34.7",
-        "34.8",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-34/00-mo-dau.md",
+          "destination": "notes",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.1",
+          "file": "raw_materials/physics/translations/chapter-34/01-guong-phang.md",
+          "destination": "topic:guong-phang",
+          "printedPages": [
+            1110,
+            1113
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.2",
+          "file": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+          "destination": "topic:guong-cau",
+          "printedPages": [
+            1114,
+            1122
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.3",
+          "file": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+          "destination": "topic:khuc-xa-mat-cau",
+          "printedPages": [
+            1122,
+            1126
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.4",
+          "file": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+          "destination": "topic:thau-kinh-mong",
+          "printedPages": [
+            1127,
+            1135
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.5",
+          "file": "raw_materials/physics/translations/chapter-34/05-may-anh.md",
+          "destination": "topic:may-anh",
+          "printedPages": [
+            1135,
+            1138
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.6",
+          "file": "raw_materials/physics/translations/chapter-34/06-mat.md",
+          "destination": "topic:mat",
+          "printedPages": [
+            1138,
+            1142
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.7",
+          "file": "raw_materials/physics/translations/chapter-34/07-kinh-lup.md",
+          "destination": "topic:kinh-lup",
+          "printedPages": [
+            1142,
+            1143
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "34.8",
+          "file": "raw_materials/physics/translations/chapter-34/08-kinh-hien-vi-thien-van.md",
+          "destination": "topic:kinh-hien-vi-thien-van",
+          "printedPages": [
+            1143,
+            1147
+          ],
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-34/09-tom-tat.md",
+          "destination": "notes",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "10-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-34/10-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "11-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-34/11-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "12-bai-tap-01-39",
+          "file": "raw_materials/physics/translations/chapter-34/12-bai-tap-01-39.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "13-bai-tap-40-65",
+          "file": "raw_materials/physics/translations/chapter-34/13-bai-tap-40-65.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "14-bai-tap-66-83",
+          "file": "raw_materials/physics/translations/chapter-34/14-bai-tap-66-83.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "15-bai-tap-84-103",
+          "file": "raw_materials/physics/translations/chapter-34/15-bai-tap-84-103.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "16-bai-tap-nang-cao",
+          "file": "raw_materials/physics/translations/chapter-34/16-bai-tap-nang-cao.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "17-mcat",
+          "file": "raw_materials/physics/translations/chapter-34/17-mcat.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        },
+        {
+          "sourceUnit": "18-dap-so",
+          "file": "raw_materials/physics/translations/chapter-34/18-dap-so.md",
+          "destination": "bai-tap",
+          "status": "complete"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-34-review.json"
     },
     {
       "chapter": 35,

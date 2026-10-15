@@ -1,3 +1,4 @@
+import {geometricOpticsCheatsheet} from './physics-geometric-optics-course.mjs'
 import {opticsCheatsheet} from './physics-optics-course.mjs'
 import {emWaveCheatsheet} from './physics-emwave-course.mjs'
 import {acCheatsheet} from './physics-ac-course.mjs'
@@ -16,7 +17,7 @@ import { potentialCheatsheet } from './physics-potential-course.mjs'
 import { capacitanceCheatsheet } from './physics-capacitance-course.mjs'
 import { mathAiReviewCheatsheet } from './math-ai-review-course.mjs'
 
-export const cheatsheets = { 'vat-ly-2/13-truyen-anh-sang': opticsCheatsheet, 'vat-ly-2/12-song-dien-tu': emWaveCheatsheet, 'vat-ly-2/11-dong-dien-xoay-chieu': acCheatsheet, 'vat-ly-2/10-tu-cam': inductanceCheatsheet, 'vat-ly-2/09-cam-ung-dien-tu': inductionCheatsheet, 'vat-ly-2/08-nguon-tu-truong': sourcesCheatsheet, 'vat-ly-2/07-tu-truong-luc-tu': magneticCheatsheet, 'vat-ly-2/06-mach-dien-mot-chieu': dcCheatsheet, 'vat-ly-2/05-dong-dien-dien-tro': currentCheatsheet, 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet,
+export const cheatsheets = { 'vat-ly-2/14-quang-hinh-hoc': geometricOpticsCheatsheet, 'vat-ly-2/13-truyen-anh-sang': opticsCheatsheet, 'vat-ly-2/12-song-dien-tu': emWaveCheatsheet, 'vat-ly-2/11-dong-dien-xoay-chieu': acCheatsheet, 'vat-ly-2/10-tu-cam': inductanceCheatsheet, 'vat-ly-2/09-cam-ung-dien-tu': inductionCheatsheet, 'vat-ly-2/08-nguon-tu-truong': sourcesCheatsheet, 'vat-ly-2/07-tu-truong-luc-tu': magneticCheatsheet, 'vat-ly-2/06-mach-dien-mot-chieu': dcCheatsheet, 'vat-ly-2/05-dong-dien-dien-tro': currentCheatsheet, 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet,
 }
 
 export function getLectureCheatsheet(course, lesson) {

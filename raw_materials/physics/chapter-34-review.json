@@ -1,0 +1,47 @@
+{
+  "chapter": 34,
+  "status": "content-complete",
+  "theorySections": 8,
+  "examples": 14,
+  "equations": 25,
+  "numberedFigures": 54,
+  "sourceFigureAssets": 81,
+  "supplementarySolutionSvgs": 17,
+  "exercises": 111,
+  "discussionQuestions": 24,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 148,
+  "slides": 12,
+  "strictCheatsheetSections": 10,
+  "strictCheatsheetItems": 20,
+  "newWikiTerms": 17,
+  "numericEvidence": "qa/physics/chapter34/numeric-checks.json",
+  "sourceReview": [
+    "raw_materials/physics/reviews/ch34-final-source-review.md"
+  ],
+  "sourceImageIntegrity": "qa/physics/chapter34/source-image-checks.json",
+  "renderReview": "passed",
+  "publication": "ready-for-push",
+  "delegationReview": "A/B used three calls each; final bridge NoneType errors. Worktrees and snapshots retained. Parent reviewed and repaired root candidates.",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "renderEvidence": {
+    "chapterViews": 175,
+    "liveViewportTransitions": 7,
+    "mathOverflows": 0,
+    "javascriptErrors": 0,
+    "sourceDisplayExpressions": 403,
+    "sourceInlineExpressions": 2231,
+    "scope": "Eight theory topics,Notes,148collapsedend solutions,12slides,10Cheatgroups,17Wiki.",
+    "fullBuild": "GitHub Actions only. No local full build.",
+    "skillTests": 39,
+    "mathRendererRegressionTests": 3,
+    "repositoryDistinctFormulaChecks": 13917,
+    "report": "qa/physics/chapter34/full-browser/results.json"
+  }
+}

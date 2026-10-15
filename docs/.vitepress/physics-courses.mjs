@@ -1520,17 +1520,94 @@ export const physics2Course = {
         "hasChapterExercises": true
       },
     {
-      "slug": "14-quang-hinh-hoc",
-      "title": "Quang hình học",
-      "prerequisites": [
-        "chiet-suat",
-        "don-vi"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 14,
-      "sourceChapter": 34
-    },
+        "slug": "14-quang-hinh-hoc",
+        "title": "Quang hình học",
+        "prerequisites": [
+          "tia-sang",
+          "phan-xa-guong",
+          "chiet-suat",
+          "dinh-luat-snell",
+          "don-vi"
+        ],
+        "supportingConcepts": [
+          "vat-anh-quang-hoc",
+          "quy-uoc-dau-quang-hoc",
+          "tia-can-truc",
+          "guong-cau",
+          "tieu-diem-quang-hoc",
+          "phong-dai-ngang",
+          "khuc-xa-mat-cau",
+          "thau-kinh-mong",
+          "cong-thuc-che-tao-thau-kinh",
+          "quang-sai-cau",
+          "chi-so-f",
+          "do-tu-thau-kinh",
+          "dieu-tiet-mat",
+          "tat-khuc-xa",
+          "boi-giac-goc",
+          "kinh-hien-vi",
+          "kinh-thien-van"
+        ],
+        "status": "ready",
+        "number": 14,
+        "sourceChapter": 34,
+        "topicGroups": [
+          {
+            "title": "Tạo ảnh và dụng cụ quang học",
+            "topics": [
+              {
+                "slug": "guong-phang",
+                "title": "Vật, ảnh và gương phẳng",
+                "question": "Ảnh nằm ở đâu khi các tia phản xạ chỉ có vẻ xuất phát từ một điểm?",
+                "source": "34.1"
+              },
+              {
+                "slug": "guong-cau",
+                "title": "Gương cầu và phép dựng ảnh",
+                "question": "Độ cong của gương quyết định vị trí, chiều và kích thước ảnh như thế nào?",
+                "source": "34.2"
+              },
+              {
+                "slug": "khuc-xa-mat-cau",
+                "title": "Khúc xạ tại mặt cầu và độ sâu biểu kiến",
+                "question": "Vì sao một mặt khúc xạ có thể hội tụ tia hoặc làm vật có vẻ ở gần hơn?",
+                "source": "34.3"
+              },
+              {
+                "slug": "thau-kinh-mong",
+                "title": "Thấu kính mỏng và hệ nhiều kính",
+                "question": "Hai mặt khúc xạ phối hợp tạo ảnh ra sao, và khi nào ảnh trước trở thành vật ảo?",
+                "source": "34.4"
+              },
+              {
+                "slug": "may-anh",
+                "title": "Máy ảnh, khẩu độ và ống kính zoom",
+                "question": "Tiêu cự, khẩu độ và màn trập điều khiển khung hình cùng độ phơi sáng như thế nào?",
+                "source": "34.5"
+              },
+              {
+                "slug": "mat",
+                "title": "Mắt, điều tiết và kính hiệu chỉnh",
+                "question": "Vì sao ảnh phải nằm trên võng mạc và kính bổ trợ tạo ảnh ở đâu?",
+                "source": "34.6"
+              },
+              {
+                "slug": "kinh-lup",
+                "title": "Kính lúp và bội giác góc",
+                "question": "Ảnh ở vô cực vẫn có góc trông hữu hạn như thế nào?",
+                "source": "34.7"
+              },
+              {
+                "slug": "kinh-hien-vi-thien-van",
+                "title": "Kính hiển vi và kính thiên văn",
+                "question": "Vì sao vật kính hiển vi cần tiêu cự ngắn, còn vật kính thiên văn cần tiêu cự dài?",
+                "source": "34.8"
+              }
+            ]
+          }
+        ],
+        "hasChapterExercises": true
+      },
     {
       "slug": "15-giao-thoa",
       "title": "Giao thoa",
@@ -2938,6 +3015,126 @@ export const physics2Course = {
         "Hai tốc độ khác nhau tại mặt phân cách làm mặt sóng quay, dẫn đến Snell. Biến đổi tốc độ theo độ cao tạo đường tia cong và ảo ảnh."
       ],
       "formula": "$$\n\\begin{aligned}&r_a=v_at,\\quad r_b=v_bt\\\\&\\frac{\\sin\\theta_a}{\\sin\\theta_b}=\\frac{v_a}{v_b}\\\\&n_a\\sin\\theta_a=n_b\\sin\\theta_b.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Ảnh thật và ảnh ảo được phân biệt bằng đường tia",
+      "bullets": [
+        "Ảnh thật là nơi các tia đi ra hội tụ. Ảnh ảo là giao điểm của các đường kéo dài ngược chiều.",
+        "Khoảng vật dương ở phía ánh sáng tới, khoảng ảnh dương ở phía ánh sáng ra.",
+        "Gương phẳng tạo ảnh ảo đối xứng qua mặt gương của một vật thật."
+      ],
+      "formula": "$$\n\\begin{aligned}s^\\prime&=-s\\\\m&=y^\\prime/y=1.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Gần đúng cận trục cho một ảnh điểm xác định",
+      "bullets": [
+        "Các tia gần trục tạo góc nhỏ. Có thể thay sin và tan bằng góc tính bằng radian.",
+        "Các tia biên của gương cầu không cùng hội tụ với tia cận trục, gây quang sai cầu.",
+        "Gương parabol hội tụ chính xác chùm song song trục tại một tiêu điểm."
+      ],
+      "formula": "$$\n\\sin\\theta\\approx\\tan\\theta\\approx\\theta.\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Gương cầu dùng bán kính và tiêu cự có dấu",
+      "bullets": [
+        "Gương lõm có tiêu cự dương, còn gương lồi có tiêu cự âm.",
+        "Vật thật trong tiêu cự gương lõm tạo ảnh ảo phóng đại cùng chiều.",
+        "Gương lồi tạo ảnh ảo cùng chiều và thu nhỏ của vật thật."
+      ],
+      "formula": "$$\n\\begin{aligned}f&=R/2\\\\\\frac1s+\\frac1{s^\\prime}&=\\frac1f\\\\m&=-s^\\prime/s.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Mặt khúc xạ phụ thuộc độ chênh chiết suất",
+      "bullets": [
+        "Tâm cong ở phía ánh sáng đi ra cho bán kính dương.",
+        "Khoảng ảnh dương biểu thị hội tụ thật trong môi trường sau mặt phân cách.",
+        "Mặt phẳng là giới hạn bán kính vô cực và giữ nguyên kích thước ngang của ảnh cận trục."
+      ],
+      "formula": "$$\n\\begin{aligned}\\frac{n_a}s+\\frac{n_b}{s^\\prime}&=\\frac{n_b-n_a}R\\\\m&=-\\frac{n_as^\\prime}{n_bs}.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Hai mặt thấu kính phối hợp thành một tiêu cự",
+      "bullets": [
+        "Kính mỏng cho phép bỏ qua bề dày so với khoảng vật và ảnh.",
+        "Kính trong không khí có tiêu cự xác định bởi chiết suất và hai bán kính có dấu.",
+        "Hai tiêu cự ở hai phía bằng nhau khi hai môi trường ngoài giống nhau."
+      ],
+      "formula": "$$\n\\begin{aligned}&\\frac1f=(n-1)\\\\&\\quad\\times\\left(\\frac1{R_1}-\\frac1{R_2}\\right)\\\\&\\frac1s+\\frac1{s^\\prime}=\\frac1f.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Hệ nhiều phần tử cần đổi mốc ở từng bước",
+      "bullets": [
+        "Tìm ảnh của phần tử đầu trước khi xét phần tử sau.",
+        "Ảnh dự kiến nằm sau kính thứ hai là vật ảo của kính đó.",
+        "Phóng đại toàn hệ là tích các phóng đại có dấu, nên hai lần đảo chiều có thể cho ảnh cuối cùng chiều."
+      ],
+      "formula": "$$\n\\begin{aligned}s_2&=d-s^\\prime_1\\\\m&=m_1m_2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Tiêu cự máy ảnh quyết định kích thước ảnh và góc trông",
+      "bullets": [
+        "Tiêu cự dài cho ảnh lớn và góc trông hẹp trên cùng bề mặt ghi nhận.",
+        "Vật ở gần hơn cần khoảng kính–cảm biến lớn hơn để ảnh nét.",
+        "Ống kính zoom thay đổi tiêu cự bằng chuyển động tương đối của các nhóm kính."
+      ],
+      "formula": "$$\n\\begin{aligned}s^\\prime&=\\frac{fs}{s-f}\\\\m&=-s^\\prime/s.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Chỉ số f nối khẩu độ với độ phơi sáng",
+      "bullets": [
+        "Chỉ số f bằng tiêu cự chia đường kính khẩu độ.",
+        "Cùng cảnh và điều kiện quang học, cường độ ảnh tỉ lệ nghịch bình phương chỉ số f.",
+        "Mỗi nấc khẩu danh định đổi cường độ khoảng hai lần. Giữ độ phơi sáng cần bù bằng thời gian."
+      ],
+      "formula": "$$\n\\begin{aligned}N&=f/D\\\\I&\\propto1/N^2\\\\H&\\propto\\Delta t/N^2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Mắt điều tiết tiêu cự để giữ ảnh trên võng mạc",
+      "bullets": [
+        "Giác mạc gây phần lớn khúc xạ vì độ chênh chiết suất với không khí lớn.",
+        "Cơ thể mi co làm thể thủy tinh cong hơn, giảm tiêu cự khi nhìn gần.",
+        "Kính phân kỳ hiệu chỉnh nhìn xa của mắt cận, kính hội tụ hỗ trợ nhìn gần khi cần ảnh ảo xa hơn."
+      ],
+      "formula": "$$\nP=1/f.\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Bội giác góc khác độ phóng đại ngang",
+      "bullets": [
+        "Kích thước góc quyết định kích thước ảnh trên võng mạc.",
+        "Kính lúp cho vật ở tiêu điểm để ảnh ở vô cực và mắt không cần điều tiết.",
+        "So với nhìn trực tiếp ở khoảng quy ước 25cm, bội giác tăng khi tiêu cự kính lúp giảm."
+      ],
+      "formula": "$$\n\\begin{aligned}M&=\\theta^\\prime/\\theta\\\\M&=\\frac{25\\,\\mathrm{cm}}f.\\end{aligned}\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Kính hiển vi phóng đại qua hai giai đoạn",
+      "bullets": [
+        "Vật kính tiêu cự ngắn tạo ảnh thật phóng đại và ngược chiều.",
+        "Thị kính dùng ảnh trung gian làm vật cho kính lúp. Ảnh cuối vẫn ngược chiều vật đầu.",
+        "Công thức gần đúng dùng vật gần tiêu điểm vật kính và ảnh cuối ở vô cực."
+      ],
+      "formula": "$$\n|M|\\approx\\frac{(25\\,\\mathrm{cm})s^\\prime_1}{f_1f_2}.\n$$"
+    },
+    {
+      "note": "14-quang-hinh-hoc",
+      "title": "Kính thiên văn tăng góc trông của vật rất xa",
+      "bullets": [
+        "Vật kính tạo ảnh thật thu nhỏ của thiên thể, rồi thị kính phóng đại góc của ảnh đó.",
+        "Hai kính hội tụ ngắm chừng ở vô cực cách nhau tổng hai tiêu cự.",
+        "Gương lõm làm vật kính tránh quang sai sắc. Các gương phụ đưa ảnh tới thiết bị quan sát hoặc cảm biến."
+      ],
+      "formula": "$$\n\\begin{aligned}M&=-f_1/f_2\\\\L&=f_1+f_2.\\end{aligned}\n$$"
     }
   ],
   "illustration": "field",
