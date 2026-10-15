@@ -1,4 +1,3 @@
-import {physics37ParentImageAnnotations} from './physics37-parent-image-annotations.mjs'
 import {physics36TheoryBImageAnnotations} from './physics36-theory-b-image-annotations.mjs'
 import {physics36TheoryAImageAnnotations} from './physics36-theory-a-image-annotations.mjs'
 import {physics36ExerciseImageAnnotations} from './physics36-exercise-image-annotations.mjs'
@@ -43,7 +42,6 @@ import {physics21ImageAnnotations} from './physics21-image-annotations.mjs'
 import {physics22ImageAnnotations} from './physics22-image-annotations.mjs'
 import {physics23ImageAnnotations,physics24ImageAnnotations} from './physics23-24-image-annotations.mjs'
 const originalLabels={
- ...physics37ParentImageAnnotations,
  ...physics36TheoryBImageAnnotations,
  ...physics36TheoryAImageAnnotations,
  ...physics36ExerciseImageAnnotations,
