@@ -19,8 +19,34 @@ const labs = import.meta.glob('../features/labs/components/*Lab.vue')
 export default {
   extends: DefaultTheme,
   Layout,
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
     for (const [name, component] of Object.entries({ CourseOverview, OldCourseLink, CodeIllustration, WikiIndex, LegacyCourseRoute, WikiUsage, TopicMap, DataDiagram, NotebookExecution })) app.component(name, component)
     for (const [file, load] of Object.entries(labs)) app.component(file.split('/').at(-1).replace(/\.vue$/, ''), defineAsyncComponent(load))
+
+    if (typeof window !== 'undefined' && router) {
+      const normalizePath = (path) => path.replace(/(?:^|\/)index(?:\.html)?$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/'
+      const shouldNavigateNatively = (to) => {
+        try {
+          const target = new URL(to, window.location.href)
+          return normalizePath(target.pathname) !== normalizePath(window.location.pathname)
+        } catch {
+          return false
+        }
+      }
+      router.onBeforeRouteChange = (to) => {
+        if (shouldNavigateNatively(to)) {
+          const target = new URL(to, window.location.href)
+          window.location.href = target.href
+          return false
+        }
+      }
+      router.onBeforePageLoad = (to) => {
+        if (shouldNavigateNatively(to)) {
+          const target = new URL(to, window.location.href)
+          window.location.href = target.href
+          return false
+        }
+      }
+    }
   }
 }
