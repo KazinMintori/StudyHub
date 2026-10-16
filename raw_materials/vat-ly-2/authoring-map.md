@@ -197,3 +197,19 @@ Tác vụ chính tự rà và sửa các bản Antigravity sau khi cầu nối m
 Tab Bài tập có 58 bài đánh số, 24 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 95 lời giải gập. Có 12 Slides, bảy nhóm Cheatsheet với 42 mục chỉ chứa định nghĩa, tính chất và công thức, cùng 20 mục Wiki được liên kết, gồm 19 trang mới.
 
 Sáu bộ Python và 212 lượt trình duyệt theo các nhóm nội dung đã qua. Các sửa dữ kiện, hệ số quay phân tử, điều kiện mô hình bán dẫn, tiểu câu hỏi, vùng cắt hình và ngắt dòng được ghi trong hồ sơ rà cuối chương. Bản chụp Antigravity và các log lỗi trước khi sửa được giữ. Chương 43–44 và phần lớn Vật lý 1 còn cần hoàn thiện. Build toàn cục và triển khai chỉ chạy trên GitHub Actions, trang công khai được kiểm riêng sau khi push.
+
+## Chương 43
+
+Đã hoàn tất tám chủ đề vật lý hạt nhân, 13 ví dụ, tám câu tự kiểm, 24 nhãn công thức và 18 hình lý thuyết. Có 30 PNG giữ nguyên vùng PDF và 16 SVG bổ trợ. Tab Bài tập có 77 bài đánh số, 20 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, tổng cộng 110 lời giải gập.
+
+Có 12 Slides, bảy nhóm Cheatsheet với 44 mục chỉ chứa định nghĩa, tính chất và công thức, cùng 21 thuật ngữ được liên kết, gồm 20 Wiki mới. Số học được tính lại bằng Python, các ảnh được so sánh RGB và có 218 trường hợp trình duyệt theo nhóm tại 320–1440 px. Các sửa đơn vị micro, khối lượng, RBE, năng lượng beta, dữ liệu hồi quy và chuỗi phân rã được ghi trong hồ sơ rà riêng.
+
+## Chương 44
+
+Đã hoàn tất bảy chủ đề vật lý hạt và vũ trụ học, 12 ví dụ, bảy câu tự kiểm, 22 nhãn công thức và 24 hình lý thuyết. Có 38 PNG giữ nguyên vùng PDF và 16 SVG bổ trợ. Tab Bài tập có 59 bài đánh số, 13 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, tổng cộng 85 lời giải gập.
+
+Có 12 Slides, sáu nhóm Cheatsheet với 42 mục chỉ chứa định nghĩa, tính chất và công thức, cùng 22 Wiki mới. Có 212 trường hợp trình duyệt theo nhóm tại 320–1440 px. Giữ đủ lịch sử vũ trụ hai trang, các bảng hạt, dấu phản hạt trong đề, bài va chạm tổng quát và bài cầu nối. Các kết luận phụ thuộc mô hình được nêu rõ điều kiện.
+
+Hai chương có 195 lời giải cuối chương. Phép đo toàn bộ kiểm 1246 công thức hiển thị và 6798 công thức nội dòng, không còn lỗi trong bộ dò. 39 kiểm thử skill và 55 kiểm thử kho mã đã đạt. Đối chiếu mã bài cuối chương trên cả 24 chương Vật lý 2 không còn thiếu bài đánh số, câu thảo luận hay luyện tập hướng dẫn. Chương 35 dùng mã Q và VP có khoảng trắng, đã sửa bộ rà để đếm đúng 91 lời giải. Hồ sơ chương 33 đã được liên kết lại vào danh mục nguồn sau khi kiểm bằng chứng rà và trình duyệt đã có.
+
+Build toàn cục và triển khai chỉ chạy trên GitHub Actions. Trang công khai được kiểm riêng sau khi push. Các worktree và bản chụp Antigravity lỗi hoặc mất trạng thái được giữ, không gọi lượt thứ tư và không dùng subagent GPT. Phần lớn Vật lý đại cương 1 vẫn còn cần tiếp tục.

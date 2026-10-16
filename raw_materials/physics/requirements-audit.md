@@ -39,7 +39,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 32 | Sóng điện từ | 56/56 | 82 | Đủ theo hồ sơ |
 | vat-ly-2 | 33 | Bản chất và sự truyền ánh sáng | 64/64 | 102 | Đủ theo hồ sơ |
 | vat-ly-2 | 34 | Quang hình học | 111/111 | 148 | Đủ theo hồ sơ |
-| vat-ly-2 | 35 | Giao thoa | 60/60 | 61 | Đủ theo hồ sơ |
+| vat-ly-2 | 35 | Giao thoa | 60/60 | 91 | Đủ theo hồ sơ |
 | vat-ly-2 | 36 | Nhiễu xạ | 71/71 | 103 | Đủ theo hồ sơ |
 | vat-ly-2 | 37 | Thuyết tương đối | 74/74 | 102 | Đủ theo hồ sơ |
 | vat-ly-2 | 38 | Photon: Tính hạt của sóng ánh sáng | 45/45 | 75 | Đủ theo hồ sơ |
@@ -47,8 +47,8 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 40 | Cơ học lượng tử I: Hàm sóng | 70/70 | 110 | Đủ theo hồ sơ |
 | vat-ly-2 | 41 | Cơ học lượng tử II: Cấu trúc nguyên tử | 73/73 | 111 | Đủ theo hồ sơ |
 | vat-ly-2 | 42 | Phân tử và vật chất ngưng tụ | 58/58 | 95 | Đủ theo hồ sơ |
-| vat-ly-2 | 43 | Vật lý hạt nhân | 0/77 | 0 | Còn thiếu hoặc chưa rà xong |
-| vat-ly-2 | 44 | Vật lý hạt và vũ trụ học | 0/59 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 43 | Vật lý hạt nhân | 77/77 | 110 | Đủ theo hồ sơ |
+| vat-ly-2 | 44 | Vật lý hạt và vũ trụ học | 59/59 | 85 | Đủ theo hồ sơ |
 
 ## Kết luận
 

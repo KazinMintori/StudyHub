@@ -1,0 +1,40 @@
+{
+  "chapter": 43,
+  "status": "content-complete",
+  "theorySections": 8,
+  "examples": 13,
+  "selfChecks": 8,
+  "equationTags": 24,
+  "numberedFigures": 18,
+  "sourceFigureAssets": 30,
+  "supplementarySolutionSvgs": 16,
+  "exercises": 77,
+  "discussionQuestions": 20,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 110,
+  "slides": 12,
+  "strictCheatsheetSections": 7,
+  "strictCheatsheetItems": 44,
+  "foundationTerms": 21,
+  "newWikiTerms": 20,
+  "numericEvidence": "qa/physics/chapter43/numeric-checks.json",
+  "sourceReview": "raw_materials/physics/reviews/ch43-final-source-review.md",
+  "sourceImageIntegrity": "qa/physics/chapter43/all-final-source-pixels.json",
+  "renderReview": "passed",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "browserChecks": 218,
+  "skillTests": 39,
+  "repositoryTests": 55,
+  "publication": "ready-for-push",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "Full combined exercise page is reviewed separately after GitHub deployment.",
+    "Most Physics1 chapters remain unfinished."
+  ]
+}

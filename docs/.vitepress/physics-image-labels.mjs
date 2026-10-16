@@ -1,3 +1,13 @@
+import {physics43ExercisesCImageAnnotations} from './physics43-exercises-c-image-annotations.mjs'
+import {physics43ExercisesDImageAnnotations} from './physics43-exercises-d-image-annotations.mjs'
+import {physics44ExercisesCImageAnnotations} from './physics44-exercises-c-image-annotations.mjs'
+import {physics44ExercisesDImageAnnotations} from './physics44-exercises-d-image-annotations.mjs'
+import {physics44ParentImageAnnotations} from './physics44-parent-image-annotations.mjs'
+import {physics44TheoryAImageAnnotations} from './physics44-theory-a-image-annotations.mjs'
+import {physics44TheoryBImageAnnotations} from './physics44-theory-b-image-annotations.mjs'
+import {physics43ParentImageAnnotations} from './physics43-parent-image-annotations.mjs'
+import {physics43TheoryAImageAnnotations} from './physics43-theory-a-image-annotations.mjs'
+import {physics43TheoryBImageAnnotations} from './physics43-theory-b-image-annotations.mjs'
 import {physics42ParentImageAnnotations} from './physics42-parent-image-annotations.mjs'
 import {physics42TheoryAImageAnnotations} from './physics42-theory-a-image-annotations.mjs'
 import {physics42TheoryBImageAnnotations} from './physics42-theory-b-image-annotations.mjs'
@@ -199,6 +209,12 @@ const originalLabels={
  ...capacitanceImageAnnotations,...physics25ImageAnnotations
 }
 export const physicsImageLabels={
+ ...physics43ExercisesCImageAnnotations,...physics43ExercisesDImageAnnotations,
+ ...physics44ExercisesCImageAnnotations,...physics44ExercisesDImageAnnotations,
+ ...physics44ParentImageAnnotations,
+ ...physics44TheoryAImageAnnotations,...physics44TheoryBImageAnnotations,
+ ...physics43ParentImageAnnotations,
+ ...physics43TheoryAImageAnnotations,...physics43TheoryBImageAnnotations,
  ...physics42ParentImageAnnotations,...physics42TheoryAImageAnnotations,...physics42TheoryBImageAnnotations,...physics42ExercisesCImageAnnotations,...physics42ExercisesDImageAnnotations,
  ...physics40ExercisesCImageAnnotations,
  ...physics40ExercisesDImageAnnotations,

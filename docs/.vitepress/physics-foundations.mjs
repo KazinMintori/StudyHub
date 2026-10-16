@@ -1,3 +1,5 @@
+import {particlesCosmologyConcepts,particlesCosmologyWikiDetails,particlesCosmologyWikiConnections} from './physics-particles-cosmology-foundations.mjs'
+import {nuclearConcepts,nuclearWikiDetails,nuclearWikiConnections} from './physics-nuclear-foundations.mjs'
 import {moleculesConcepts,moleculesWikiDetails,moleculesWikiConnections} from './physics-molecules-foundations.mjs'
 import {atomicStructureConcepts,atomicStructureWikiDetails,atomicStructureWikiConnections} from './physics-atomic-structure-foundations.mjs'
 import {quantumWaveConcepts,quantumWaveWikiDetails,quantumWaveWikiConnections} from './physics-quantum-wave-foundations.mjs'
@@ -343,6 +345,8 @@ export const physicsConcepts = {
   ...quantumWaveConcepts,
   ...atomicStructureConcepts,
   ...moleculesConcepts,
+  ...nuclearConcepts,
+  ...particlesCosmologyConcepts,
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -394,6 +398,8 @@ export const physicsWikiDetails = {
   ...quantumWaveWikiDetails,
   ...atomicStructureWikiDetails,
   ...moleculesWikiDetails,
+  ...nuclearWikiDetails,
+  ...particlesCosmologyWikiDetails,
 }
 
 export const physicsWikiConnections = {
@@ -534,4 +540,6 @@ export const physicsWikiConnections = {
   ...quantumWaveWikiConnections,
   ...atomicStructureWikiConnections,
   ...moleculesWikiConnections,
+  ...nuclearWikiConnections,
+  ...particlesCosmologyWikiConnections,
 }

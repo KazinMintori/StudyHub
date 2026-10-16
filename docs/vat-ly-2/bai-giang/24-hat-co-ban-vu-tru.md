@@ -1,30 +1,46 @@
 ---
-course: vat-ly-2
-lecture: 24-hat-co-ban-vu-tru
-section: lecture
+course: "vat-ly-2"
+lecture: "24-hat-co-ban-vu-tru"
+section: "lecture"
 title: "Vật lý hạt và vũ trụ học"
-prerequisites: ["thuyet-tuong-doi-hep","photon","phan-ra-phong-xa","nhiet-do-tuyet-doi"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Vật lý hạt và vũ trụ học: Hạt cơ bản, mô hình chuẩn, quarks và sự hình thành vũ trụ."
+prerequisites: ["thuyet-tuong-doi-hep","photon","phan-ra-phong-xa","nhiet-do-tuyet-doi","dong-luong-vat-ly","chuyen-dong-hat-trong-tu-truong","spin-luong-tu","nguyen-ly-pauli","dao-ham","tich-phan"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Phản hạt, máy gia tốc, tương tác, quark, mô hình chuẩn, vũ trụ giãn nở và lịch sử vũ trụ sơ khai."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 44.1. Lịch sử khám phá các hạt cơ bản.
-- 44.2. Máy gia tốc hạt và thiết bị ghi nhận.
-- 44.3. Các hạt và bốn tương tác cơ bản.
-- 44.4. Quarks và Gluons.
-- 44.5. Mô hình Chuẩn và các lý thuyết mở rộng.
-- 44.6. Vũ trụ giãn nở và định luật Hubble.
-- 44.7. Khởi nguyên thời gian và thuyết Big Bang.
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 44, trang 1483–1524.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Vật lý hạt và vũ trụ học">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/09-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/10-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/11-bai-tap-01-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/12-bai-tap-31-45.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/13-bai-tap-46-56.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/15-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-44/16-bai-tap-cau-noi.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 44, trang 1520–1524.
+
+</div>

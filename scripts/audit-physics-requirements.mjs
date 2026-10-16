@@ -11,7 +11,7 @@ const exists=async f=>{try{await access(f);return true}catch{return false}}
 async function expand(file,seen=new Set()) {
  if(seen.has(file))return ''
  seen.add(file)
- let text=await readFile(file,'utf8')
+ let text=(await readFile(file,'utf8')).replace(/^::: exercise (Q|VP)\s+(?=\d+\.)/gm,'::: exercise $1')
  for(const m of [...text.matchAll(/<!--@include:\s*([^>]+?)\s*-->/g)]) {
   const f=path.normalize(path.join(path.dirname(file),m[1]))
   text=text.replace(m[0],await exists(f)?await expand(f,seen):'MISSING_INCLUDE:'+f)
@@ -70,6 +70,10 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const malformed=solutionBlocks.filter(m=>!m.body.includes('**Tóm tắt đề bài:**')||!m.body.includes('**Hướng đi:**')||!/^\s*- /m.test(m.body)).map(m=>m.id)
  const unsolved=prompts.filter(n=>!solutionBlocks.some(m=>m.id===`${ch.chapter}.${n}`))
  const allPromptIds=[...promptBlocks.map(p=>p[1].replace(/^Bài (?=\d)/,'')),...htmlPrompts.map(p=>p[1]==='Bài tập cầu nối'?`Bài cầu nối ${ch.chapter}`:p[1])]
+ const sourceDiscussionIds=[...new Set([...source.matchAll(new RegExp(`\\bQ\\s*${ch.chapter}\\.\\d+\\b`,'g'))].map(m=>m[0].replace(/\s+/g,'')))]
+ const sourceVariationIds=[...new Set([...source.matchAll(new RegExp(`\\bVP\\s*${ch.chapter}\\.\\d+\\.\\d+\\b`,'g'))].map(m=>m[0].replace(/\s+/g,'')))]
+ const missingDiscussionIds=sourceDiscussionIds.filter(id=>!allPromptIds.includes(id))
+ const missingVariationIds=sourceVariationIds.filter(id=>!allPromptIds.includes(id))
  const unsolvedPromptIds=allPromptIds.filter(id=>!solutionBlocks.some(s=>s.id===id||s.aliases?.includes(id)))
  const outsideExercises=main.split('<div class="lecture-exercises-content"')[0]
  const misplaced=new RegExp(`^(?:::: exercise |### )(?:Q|VP)?${ch.chapter}\\.\\d`,'m').test(outsideExercises)
@@ -83,6 +87,8 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  const review=ch.completionReview&&await exists(ch.completionReview)?JSON.parse(await readFile(ch.completionReview,'utf8')):null
  const status={sourceComplete:ch.status==='complete'&&ch.pendingSourceUnits.length===0,
   endExercisesPresent:expectedExercises>0&&missing.length===0,
+  endDiscussionQuestionsPresent:missingDiscussionIds.length===0,
+  guidedPracticePresent:missingVariationIds.length===0,
   separateExerciseTab:lesson.hasChapterExercises===true&&!misplaced,
   exerciseSolutionFormat:prompts.length>0&&unsolved.length===0&&unsolvedPromptIds.length===0&&malformed.length===0,
   cheatsheetOnlyDefinitionsPropertiesFormulas:Boolean(sheet)&&!sheetExtra,
@@ -93,7 +99,7 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
   renderedMobileReview:review?.renderReview==='passed'}
  rows.push({course:course.id,chapter:ch.chapter,slug:lesson.slug,title:lesson.title,
   expectedExercises,exercisePrompts:prompts.length,detailedSolutions:solutionBlocks.length,
-  missingExerciseNumbers:missing,unsolvedExerciseNumbers:unsolved,unsolvedPromptIds,malformedSolutions:malformed,
+  missingExerciseNumbers:missing,missingDiscussionIds,missingVariationIds,unsolvedExerciseNumbers:unsolved,unsolvedPromptIds,malformedSolutions:malformed,
   missingWiki:badWiki,forbiddenPhrases:forbidden,pendingSourceUnits:ch.pendingSourceUnits,status})
 }
 const cheatIndex=lectureParts.findIndex(p=>p.id==='cheatsheet')

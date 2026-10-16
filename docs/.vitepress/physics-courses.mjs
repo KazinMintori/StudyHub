@@ -2320,14 +2320,100 @@ export const physics2Course = {
         "photon",
         "thuyet-tuong-doi-hep",
         "cong-nang-luong",
-        "dao-ham"
+        "dong-luong-vat-ly",
+        "spin-luong-tu",
+        "nguyen-ly-pauli",
+        "xuyen-ham-luong-tu",
+        "dao-ham",
+        "tich-phan"
       ],
       "supportingConcepts": [
-        "phan-ra-phong-xa"
+        "nuclide",
+        "dong-vi-hat-nhan",
+        "ban-kinh-hat-nhan",
+        "spin-hat-nhan",
+        "magneton-hat-nhan",
+        "nang-luong-lien-ket-hat-nhan",
+        "mo-hinh-giot-chat-long",
+        "mo-hinh-vo-hat-nhan",
+        "phan-ra-alpha",
+        "phan-ra-beta",
+        "bat-electron",
+        "phan-ra-gamma",
+        "phan-ra-phong-xa",
+        "hoat-do-phong-xa",
+        "chu-ky-ban-ra",
+        "thoi-gian-song-trung-binh",
+        "lieu-hap-thu-buc-xa",
+        "lieu-tuong-duong-buc-xa",
+        "nang-luong-phan-ung-hat-nhan",
+        "phan-hach-hat-nhan",
+        "nhiet-hach-hat-nhan"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 23,
-      "sourceChapter": 43
+      "sourceChapter": 43,
+      "topicGroups": [
+        {
+          "title": "Cấu trúc, liên kết và sự phân rã",
+          "topics": [
+            {
+              "slug": "tinh-chat-hat-nhan",
+              "title": "Các tính chất của hạt nhân",
+              "question": "Kích thước, khối lượng và mômen từ mô tả hạt nhân như thế nào?",
+              "source": "43.1"
+            },
+            {
+              "slug": "nang-luong-lien-ket",
+              "title": "Năng lượng liên kết và cấu trúc hạt nhân",
+              "question": "Độ hụt khối cho biết gì về năng lượng và độ bền liên kết?",
+              "source": "43.2"
+            },
+            {
+              "slug": "on-dinh-va-phong-xa",
+              "title": "Độ bền và các dạng phóng xạ",
+              "question": "Hạt nhân đổi thành phần và năng lượng qua những kênh nào?",
+              "source": "43.3"
+            },
+            {
+              "slug": "hoat-do-va-chu-ky-ban-ra",
+              "title": "Hoạt độ và chu kỳ bán rã",
+              "question": "Làm thế nào suy số hạt nhân và tuổi mẫu từ hoạt độ?",
+              "source": "43.4"
+            }
+          ]
+        },
+        {
+          "title": "Bức xạ và các phản ứng hạt nhân",
+          "topics": [
+            {
+              "slug": "tac-dung-sinh-hoc",
+              "title": "Tác dụng sinh học và ứng dụng của bức xạ",
+              "question": "Vì sao hoạt độ, liều hấp thụ và liều tương đương là các đại lượng khác nhau?",
+              "source": "43.5"
+            },
+            {
+              "slug": "phan-ung-hat-nhan",
+              "title": "Năng lượng và ngưỡng phản ứng hạt nhân",
+              "question": "Vì sao năng lượng phản ứng chưa đủ xác định ngưỡng trong phòng thí nghiệm?",
+              "source": "43.6"
+            },
+            {
+              "slug": "phan-hach",
+              "title": "Phân hạch và phản ứng dây chuyền",
+              "question": "Các neutron nối nhiều phản ứng phân hạch với nhau ra sao?",
+              "source": "43.7"
+            },
+            {
+              "slug": "nhiet-hach",
+              "title": "Nhiệt hạch và năng lượng của các sao",
+              "question": "Hai hạt nhân mang điện dương đến gần nhau và giải phóng năng lượng bằng cách nào?",
+              "source": "43.8"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "24-hat-co-ban-vu-tru",
@@ -2336,12 +2422,96 @@ export const physics2Course = {
         "thuyet-tuong-doi-hep",
         "photon",
         "phan-ra-phong-xa",
-        "nhiet-do-tuyet-doi"
+        "nhiet-do-tuyet-doi",
+        "dong-luong-vat-ly",
+        "chuyen-dong-hat-trong-tu-truong",
+        "spin-luong-tu",
+        "nguyen-ly-pauli",
+        "dao-ham",
+        "tich-phan"
       ],
-      "supportingConcepts": [],
-      "status": "draft",
+      "supportingConcepts": [
+        "phan-hat",
+        "hat-ao",
+        "va-cham-khoi-tam",
+        "lepton",
+        "hadron",
+        "baryon",
+        "meson",
+        "quark",
+        "gluon",
+        "so-baryon",
+        "do-la",
+        "mo-hinh-chuan-hat",
+        "truong-higgs",
+        "do-dich-chuyen-do",
+        "dinh-luat-hubble",
+        "mat-do-toi-han-vu-tru",
+        "vat-chat-toi",
+        "nang-luong-toi",
+        "buc-xa-nen-vu-tru",
+        "tong-hop-hat-nhan-so-khai",
+        "lam-phat-vu-tru",
+        "thang-planck"
+      ],
+      "status": "ready",
       "number": 24,
-      "sourceChapter": 44
+      "sourceChapter": 44,
+      "topicGroups": [
+        {
+          "title": "Hạt, tương tác và các mô hình cấu trúc",
+          "topics": [
+            {
+              "slug": "lich-su-hat-co-ban",
+              "title": "Các hạt cơ bản và quá trình khám phá",
+              "question": "Hạt mới và phản hạt đã thay đổi bức tranh về vật chất ra sao?",
+              "source": "44.1"
+            },
+            {
+              "slug": "may-gia-toc-va-detector",
+              "title": "Máy gia tốc và thiết bị ghi nhận hạt",
+              "question": "Năng lượng chùm tới trở thành năng lượng tạo hạt như thế nào?",
+              "source": "44.2"
+            },
+            {
+              "slug": "hat-va-tuong-tac",
+              "title": "Phân loại hạt và các tương tác",
+              "question": "Những đại lượng bảo toàn cho phép hoặc loại trừ một phản ứng ra sao?",
+              "source": "44.3"
+            },
+            {
+              "slug": "quark-va-gluon",
+              "title": "Quark, gluon và cấu trúc hadron",
+              "question": "Điện tích, số baryon và độ lạ xác định thành phần quark như thế nào?",
+              "source": "44.4"
+            },
+            {
+              "slug": "mo-hinh-chuan",
+              "title": "Mô hình chuẩn và các giới hạn",
+              "question": "Sự thống nhất điện yếu và trường Higgs giải thích những điều gì?",
+              "source": "44.5"
+            }
+          ]
+        },
+        {
+          "title": "Sự giãn nở và lịch sử vũ trụ",
+          "topics": [
+            {
+              "slug": "vu-tru-gian-no",
+              "title": "Vũ trụ giãn nở",
+              "question": "Dịch chuyển đỏ và phép đo khoảng cách cho biết gì về sự giãn nở?",
+              "source": "44.6"
+            },
+            {
+              "slug": "khoi-dau-thoi-gian",
+              "title": "Vũ trụ sơ khai và khởi đầu thời gian",
+              "question": "Vật lý hạt nối với bức xạ nền và sự hình thành nguyên tố ra sao?",
+              "source": "44.7"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     }
   ],
   "slides": [
@@ -4648,6 +4818,246 @@ export const physics2Course = {
       ],
       "formula": "",
       "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Hạt nhân có mật độ gần như không đổi",
+      "bullets": [
+        "Hạt nhân gồm Z proton và N neutron, với số khối A = Z + N.",
+        "Mô hình bán kính tỉ lệ căn bậc ba số khối dẫn đến thể tích gần tỉ lệ với số nucleon.",
+        "Đồng vị có cùng Z nhưng khác N. Khối lượng nguyên tử trung hòa còn gồm electron."
+      ],
+      "formula": "$$\nR=R_0A^{1/3}\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Mômen từ nối spin với cộng hưởng",
+      "bullets": [
+        "Thành phần mômen từ theo từ trường nhận các giá trị lượng tử hóa.",
+        "Hai hướng spin của proton có năng lượng khác nhau trong từ trường ngoài.",
+        "Photon cộng hưởng trao đổi đúng hiệu năng lượng giữa các mức."
+      ],
+      "formula": "$$\nU=-\\boldsymbol\\mu\\cdot\\mathbf B\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Năng lượng liên kết là phần giảm của năng lượng nghỉ",
+      "bullets": [
+        "Tách hoàn toàn hạt nhân liên kết thành các nucleon tự do cần cung cấp năng lượng.",
+        "Khi dùng khối lượng nguyên tử trung hòa, phải cân bằng số electron ở hai vế.",
+        "Năng lượng liên kết trung bình không đồng nhất với năng lượng tách một nucleon cụ thể."
+      ],
+      "formula": "$$\nE_B=\\Delta M c^2\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Các mô hình nhấn mạnh những tính chất khác nhau",
+      "bullets": [
+        "Mô hình giọt chất lỏng kể tương tác ngắn hạn, bề mặt, lực đẩy điện và sự ghép đôi.",
+        "Mô hình vỏ mô tả sự điền các trạng thái nucleon trong thế hiệu dụng.",
+        "Năng lượng liên kết lớn trên mỗi nucleon không bảo đảm mọi kênh biến đổi đều bị cấm."
+      ],
+      "formula": "",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Các kênh phân rã có dấu hiệu bảo toàn riêng",
+      "bullets": [
+        "Phát alpha làm giảm số khối bốn đơn vị và số proton hai đơn vị.",
+        "Beta trừ, beta cộng và bắt electron đổi một neutron hoặc proton trong hạt nhân.",
+        "Phát gamma thuần túy hạ mức năng lượng mà không đổi số proton và neutron."
+      ],
+      "formula": "",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Khối lượng nguyên tử quyết định ngưỡng beta",
+      "bullets": [
+        "Beta trừ có năng lượng khả dụng từ chênh lệch khối lượng nguyên tử mẹ và con.",
+        "Đặt ΔM là khối lượng nguyên tử mẹ trừ khối lượng nguyên tử con. Beta cộng còn cần ngân sách năng lượng nghỉ của hai electron.",
+        "Bắt electron có thể xảy ra khi beta cộng bị cấm về năng lượng."
+      ],
+      "formula": "$$\nQ_+=(\\Delta M-2m_e)c^2\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Hoạt độ là số phân rã trong một đơn vị thời gian",
+      "bullets": [
+        "Với một đồng vị, hằng số phân rã không đổi và không có nguồn bổ sung, số hạt nhân giảm theo hàm mũ.",
+        "Hoạt độ bằng hằng số phân rã nhân số hạt nhân còn lại.",
+        "Becquerel đo số phân rã mỗi giây, không đo năng lượng hấp thụ trong mô."
+      ],
+      "formula": "$$\n\\mathcal A=\\lambda N\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Chu kỳ bán rã và tuổi mẫu có vai trò khác nhau",
+      "bullets": [
+        "Chu kỳ bán rã mô tả thời gian giảm một nửa trong cùng mô hình suy giảm.",
+        "Thời gian sống trung bình là nghịch đảo hằng số phân rã.",
+        "Định tuổi cần hoạt độ ban đầu phù hợp và giả thiết về trao đổi đồng vị của mẫu."
+      ],
+      "formula": "$$\nt=\\lambda^{-1}\\ln(\\mathcal A_0/\\mathcal A)\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Năng lượng và loại bức xạ cùng ảnh hưởng tác dụng sinh học",
+      "bullets": [
+        "Liều hấp thụ là năng lượng truyền cho vật chất trên mỗi đơn vị khối lượng.",
+        "Liều tương đương còn kể hệ số hiệu quả sinh học trong mô hình đang dùng.",
+        "Khả năng xuyên sâu, đường phơi nhiễm và mô nhận bức xạ là những yếu tố cần phân biệt."
+      ],
+      "formula": "$$\nD=E_{\\rm abs}/m\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Ngưỡng phản ứng phải kể động lượng",
+      "bullets": [
+        "Q dương biểu thị phần giảm của tổng năng lượng nghỉ, còn Q âm cần năng lượng cung cấp.",
+        "Với bia đứng yên, một phần động năng thuộc chuyển động chung của khối tâm.",
+        "Hạt mang điện còn gặp hàng rào Coulomb. Xuyên ngầm phân biệt hàng rào cổ điển với một cấm đoán tuyệt đối."
+      ],
+      "formula": "$$\nK_{\\rm cm}=\\frac{M}{M+m}K\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Phân hạch có thể tạo phản ứng dây chuyền",
+      "bullets": [
+        "Các neutron sinh ra có thể kích thích những phân hạch tiếp theo.",
+        "Chất làm chậm và thanh điều khiển thực hiện các nhiệm vụ khác nhau.",
+        "Sản phẩm phân hạch tiếp tục phân rã sau khi dừng dây chuyền, nên vẫn sinh nhiệt."
+      ],
+      "formula": "$$\nP=\\dot N_f E_f\n$$",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Nhiệt hạch phụ thuộc năng lượng liên kết và hàng rào",
+      "bullets": [
+        "Ghép những hạt nhân đủ nhẹ có thể làm giảm tổng khối lượng nghỉ và giải phóng năng lượng.",
+        "Trong các sao, phân bố động năng và xuyên ngầm cùng tham gia quyết định xác suất phản ứng.",
+        "Chuỗi proton–proton tạo heli. Ghép hai hạt nhân bất kỳ không luôn là phản ứng tỏa năng lượng."
+      ],
+      "formula": "",
+      "note": "23-vat-ly-hat-nhan"
+    },
+    {
+      "title": "Phản hạt mở rộng khái niệm về vật chất",
+      "bullets": [
+        "Hạt và phản hạt tương ứng có cùng khối lượng, còn những điện tích thích hợp có dấu đối nhau.",
+        "Tạo cặp và hủy cặp phải đồng thời bảo toàn năng lượng và động lượng.",
+        "Một photon tự do không thể một mình tạo một cặp hạt tự do trong chân không."
+      ],
+      "formula": "$$\nE_{\\rm rest}=2m_ec^2\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Hạt ảo thuộc mô tả tương tác",
+      "bullets": [
+        "Hạt ảo là thành phần trung gian trong phép mô tả lượng tử, không phải một hạt tự do được quan sát riêng.",
+        "Bảo toàn năng lượng và động lượng vẫn được áp dụng.",
+        "Thế Yukawa có thang tầm tác dụng liên hệ với khối lượng hạt truyền tương tác trong mô hình hiệu dụng."
+      ],
+      "formula": "$$\nr_0\\sim\\frac{\\hbar}{mc}\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Cyclotron dùng chuyển động tròn trong từ trường",
+      "bullets": [
+        "Trong gần đúng phi tương đối tính, độ lớn điện tích và từ trường quyết định tần số quay.",
+        "Dấu điện tích quyết định chiều quay. Bán kính tăng khi động lượng tăng.",
+        "Khi hiệu ứng tương đối tính đáng kể, không thể giữ nguyên công thức tần số không phụ thuộc năng lượng."
+      ],
+      "formula": "$$\nf=\\frac{|q|B}{2\\pi m}\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Năng lượng khối tâm quyết định khả năng tạo hạt",
+      "bullets": [
+        "Một phần năng lượng trong thí nghiệm bia cố định gắn với chuyển động chung của hệ.",
+        "Hai chùm có động lượng bằng nhau và ngược hướng đưa hệ phòng thí nghiệm về hệ khối tâm.",
+        "Tại ngưỡng tạo các hạt có khối lượng, sản phẩm không còn động năng tương đối trong hệ khối tâm."
+      ],
+      "formula": "$$\nE_{\\rm cm}^2=E_{\\rm tot}^2-p_{\\rm tot}^2c^2\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Các quy tắc chọn lọc phải được xét đồng thời",
+      "bullets": [
+        "Điện tích và năng lượng đủ chưa bảo đảm phản ứng xảy ra.",
+        "Số baryon và số lepton được dùng cùng những điều kiện của mô hình phản ứng đang xét.",
+        "Độ lạ được bảo toàn trong tương tác mạnh và điện từ nhưng có thể thay đổi trong tương tác yếu."
+      ],
+      "formula": "",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Quark giải thích điện tích của hadron",
+      "bullets": [
+        "Trong mô hình thành phần hóa trị thông thường, baryon gồm ba quark và meson gồm quark với phản quark.",
+        "Điện tích, số baryon và các số lượng tử mùi được cộng đại số.",
+        "Proton có thành phần uud, còn neutron có thành phần udd."
+      ],
+      "formula": "",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Gluon và màu mô tả tương tác mạnh",
+      "bullets": [
+        "Màu là tên một điện tích lượng tử, khác màu sắc quang học.",
+        "Gluon truyền tương tác và có thể làm thay đổi trạng thái màu của quark.",
+        "Hadron quan sát được có cấu trúc trạng thái trung hòa màu phù hợp mô hình."
+      ],
+      "formula": "",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Mô hình chuẩn có phạm vi và giới hạn",
+      "bullets": [
+        "Quark, lepton và các hạt truyền tương tác tổ chức các phản ứng trong mô hình chuẩn.",
+        "Thống nhất điện yếu nối tương tác điện từ với tương tác yếu, còn trường Higgs có vai trò trong cơ chế tạo khối lượng.",
+        "Hấp dẫn lượng tử, vật chất tối và nhiều câu hỏi về vũ trụ vẫn cần những mô tả bổ sung."
+      ],
+      "formula": "",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Dịch chuyển đỏ là một tỉ số bước sóng",
+      "bullets": [
+        "So sánh cùng một vạch phổ ở nguồn và ở phép đo để xác định độ dịch chuyển đỏ.",
+        "Công thức Doppler tương đối tính thuộc mô hình chuyển động tương đối thích hợp.",
+        "Dịch chuyển đỏ vũ trụ còn gắn trực tiếp với sự thay đổi hệ số tỉ lệ trong khi photon truyền đi."
+      ],
+      "formula": "$$\n1+z=\\frac{\\lambda_o}{\\lambda_e}\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Định luật Hubble nối vận tốc lùi với khoảng cách",
+      "bullets": [
+        "Quan hệ Hubble tại một thời điểm cần nêu loại khoảng cách và miền mô hình.",
+        "Nghịch đảo Hubble cho một thang thời gian, không tự cho tuổi chính xác của mọi mô hình vũ trụ.",
+        "Mật độ tới hạn và các tham số thành phần giúp mô tả động lực giãn nở."
+      ],
+      "formula": "$$\nv=H_0r\n$$",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Vũ trụ sơ khai nguội đi khi giãn nở",
+      "bullets": [
+        "Những thời kỳ tương tác và tạo hạt được phân biệt bằng các thang nhiệt độ, năng lượng và thời gian.",
+        "Tổng hợp hạt nhân sơ khai tạo các nguyên tố nhẹ, khác với sự hình thành nguyên tử trung hòa muộn hơn.",
+        "Khi mật độ electron tự do giảm, photon có thể truyền xa và lưu lại thông tin về lần tán xạ cuối."
+      ],
+      "formula": "",
+      "note": "24-hat-co-ban-vu-tru"
+    },
+    {
+      "title": "Bức xạ nền nối nhiệt độ với sự giãn nở",
+      "bullets": [
+        "Bức xạ nền có phổ gần vật đen và bước sóng tăng theo hệ số tỉ lệ của vũ trụ.",
+        "Trong mô hình giãn nở đoạn nhiệt đang xét, nhiệt độ bức xạ giảm theo nghịch đảo hệ số tỉ lệ.",
+        "Các giả thuyết về lạm phát và bất đối xứng vật chất cần được phân biệt với các dữ kiện quan sát."
+      ],
+      "formula": "$$\nT\\propto a^{-1}\n$$",
+      "note": "24-hat-co-ban-vu-tru"
     }
   ],
   "illustration": "field",

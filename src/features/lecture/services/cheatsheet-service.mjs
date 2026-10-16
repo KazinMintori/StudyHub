@@ -1,3 +1,5 @@
+import {particlesCosmologyCheatsheet} from '../../../../docs/.vitepress/physics-particles-cosmology-course.mjs'
+import {nuclearCheatsheet} from '../../../../docs/.vitepress/physics-nuclear-course.mjs'
 import {moleculesCheatsheet} from '../../../../docs/.vitepress/physics-molecules-course.mjs'
 import {atomicStructureCheatsheet} from '../../../../docs/.vitepress/physics-atomic-structure-course.mjs'
 import {quantumWaveCheatsheet} from '../../../../docs/.vitepress/physics-quantum-wave-course.mjs'
@@ -30,6 +32,8 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-2/20-ham-song-schrodinger': quantumWaveCheatsheet,
   'vat-ly-2/21-cau-truc-nguyen-tu': atomicStructureCheatsheet,
   'vat-ly-2/22-chat-ran-ban-dan': moleculesCheatsheet,
+  'vat-ly-2/23-vat-ly-hat-nhan': nuclearCheatsheet,
+  'vat-ly-2/24-hat-co-ban-vu-tru': particlesCosmologyCheatsheet,
 }
 
 export function getLectureCheatsheet(course, lesson) {
