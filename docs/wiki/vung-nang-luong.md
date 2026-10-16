@@ -1,44 +1,48 @@
 ---
-title: "Vùng năng lượng trong chất rắn"
-wikiTerm: vung-nang-luong
+title: "Dải năng lượng trong chất rắn"
+wikiTerm: "vung-nang-luong"
 prev: false
 next: false
 ---
 
-# Vùng năng lượng trong chất rắn
+# Dải năng lượng trong chất rắn
 
-Vùng năng lượng là các miền mức được phép hình thành khi nhiều nguyên tử tương tác trong chất rắn. Vùng cấm là khoảng không có trạng thái electron khối được phép trong mô hình vùng đang xét.
+Tập rất nhiều mức năng lượng gần nhau của electron hình thành khi các trạng thái nguyên tử tương tác trong chất rắn.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Độ dẫn phụ thuộc cả cấu trúc vùng, mức điền trạng thái và các cơ chế tán xạ. Không chỉ so khoảng cấm mà bỏ mật độ hạt tải hoặc nhiệt độ.
+Khi các nguyên tử tiến gần, trạng thái electron ngoài mở rộng qua nhiều nguyên tử. Các mức riêng lẻ tách thành một tập mức rất dày.
 
-Pha tạp tạo các mức chất cho hoặc nhận và điều chỉnh hạt tải. Lỗ trống là mô tả hiệu dụng của trạng thái thiếu electron trong vùng gần đầy, không phải một proton chuyển động trong tinh thể.
+Dải đầy và dải điền một phần đáp ứng khác nhau vì nguyên lý Pauli giới hạn trạng thái cuối. Không thể xét riêng số electron mà bỏ trạng thái trống.
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 42. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Trong mô hình dải lý tưởng, vùng cấm ngăn các trạng thái electron khối. Pha tạp và bề mặt có thể tạo thêm trạng thái, nên cần nói rõ mô hình khi gọi một khoảng năng lượng là vùng cấm.
 
 ## Ví dụ
 
-Vùng được điền một phần có thể cho electron đáp ứng dòng điện, còn vùng đầy bị ngăn bởi một khoảng cấm cho đáp ứng khác.
+Một dải được điền một phần còn những trạng thái trống lân cận, cho phép electron thay đổi trạng thái dưới tác dụng điện trường.
 
 ## Khi nào cần dùng?
 
-Phân biệt kim loại, cách điện, bán dẫn và pha tạp.
+Phân biệt chất dẫn, chất cách điện, bán dẫn và ảnh hưởng của nhiệt hoặc ánh sáng.
 
 ## Câu hỏi ôn lại
 
-Bán dẫn loại n có nhất thiết tích điện tổng âm không?
+Chỉ biết độ rộng vùng cấm đã đủ xác định độ dẫn điện chưa?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Hạt tải và điện tích ion có thể bù nhau, giữ mẫu trung hòa.
+Chưa. Phải biết mức điền, mật độ hạt tải, nhiệt độ và khả năng chuyển động hoặc tán xạ của các hạt tải.
 
 </details>
 
 ## Thuật ngữ liên quan
 
+- [Vùng cấm năng lượng](./vung-cam-nang-luong.md)
 - [Nguyên lý loại trừ Pauli](./nguyen-ly-pauli.md)
-- [Hàm sóng lượng tử](./ham-song-luong-tu.md)
-- [Dòng điện](./dong-dien.md)
+- [Lỗ trống trong bán dẫn](./lo-trong-ban-dan.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 42, trang 1408–1433.

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <style>
+    .bg { fill: #ffffff; }
+    .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+    .label { font-family: system-ui, sans-serif; font-size: 14px; fill: #334155; }
+    .band-c { fill: #eff6ff; stroke: #3b82f6; stroke-width: 2; }
+    .band-v { fill: #f8fafc; stroke: #64748b; stroke-width: 2; }
+    .photon { stroke: #ea580c; stroke-width: 2; stroke-dasharray: 4,3; marker-end: url(#arrow-phot); }
+  </style>
+  <defs>
+    <marker id="arrow-phot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c" />
+    </marker>
+  </defs>
+  <rect width="600" height="360" class="bg" rx="8" />
+  <text x="300.0" y="28" class="title">Kích thích electron qua vùng cấm năng lượng E_g bằng photon</text>
+  <!-- Conduction Band -->
+  <rect x="150" y="60" width="300" height="70" class="band-c" rx="4" />
+  <text x="300" y="100" class="label" text-anchor="middle" font-weight="bold" fill="#1e40af">Vùng dẫn (Conduction Band - Trống tại 0 K)</text>
+  <!-- Valence Band -->
+  <rect x="150" y="220" width="300" height="70" class="band-v" rx="4" />
+  <text x="300" y="260" class="label" text-anchor="middle" font-weight="bold" fill="#334155">Vùng hóa trị (Valence Band - Đầy tại 0 K)</text>
+  <!-- Band gap Eg -->
+  <line x1="470" y1="130" x2="470" y2="220" stroke="#0f172a" stroke-width="2" />
+  <text x="490" y="180" class="label" font-weight="bold">Khe cấm E_g</text>
+  <!-- Excitation arrow -->
+  <line x1="250" y1="220" x2="250" y2="134" class="photon" />
+  <text x="180" y="175" class="label" fill="#ea580c" font-weight="bold">Photon hf ≥ E_g</text>
+</svg>

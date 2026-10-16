@@ -5254,24 +5254,151 @@
           "page": 1433
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "42.1",
-        "42.2",
-        "42.3",
-        "42.4",
-        "42.5",
-        "42.6",
-        "42.7",
-        "42.8",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-42/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.1",
+          "file": "raw_materials/physics/translations/chapter-42/01-lien-ket-phan-tu.md",
+          "destination": "topic:lien-ket-phan-tu",
+          "printedPages": [
+            1408,
+            1411
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.2",
+          "file": "raw_materials/physics/translations/chapter-42/02-pho-phan-tu.md",
+          "destination": "topic:pho-phan-tu",
+          "printedPages": [
+            1411,
+            1415
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.3",
+          "file": "raw_materials/physics/translations/chapter-42/03-cau-truc-chat-ran.md",
+          "destination": "topic:cau-truc-chat-ran",
+          "printedPages": [
+            1415,
+            1418
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.4",
+          "file": "raw_materials/physics/translations/chapter-42/04-dai-nang-luong.md",
+          "destination": "topic:dai-nang-luong",
+          "printedPages": [
+            1418,
+            1421
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.5",
+          "file": "raw_materials/physics/translations/chapter-42/05-mo-hinh-electron-tu-do.md",
+          "destination": "topic:mo-hinh-electron-tu-do",
+          "printedPages": [
+            1421,
+            1425
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.6",
+          "file": "raw_materials/physics/translations/chapter-42/06-chat-ban-dan.md",
+          "destination": "topic:chat-ban-dan",
+          "printedPages": [
+            1425,
+            1428
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.7",
+          "file": "raw_materials/physics/translations/chapter-42/07-thiet-bi-ban-dan.md",
+          "destination": "topic:thiet-bi-ban-dan",
+          "printedPages": [
+            1428,
+            1433
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "42.8",
+          "file": "raw_materials/physics/translations/chapter-42/08-sieu-dan.md",
+          "destination": "topic:sieu-dan",
+          "printedPages": [
+            1433,
+            1433
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-42/17-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-42/09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-42/10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tap-01-22",
+          "file": "raw_materials/physics/translations/chapter-42/11-bai-tap-01-22.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-tap-23-38",
+          "file": "raw_materials/physics/translations/chapter-42/12-bai-tap-23-38.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-39-50",
+          "file": "raw_materials/physics/translations/chapter-42/13-bai-tap-39-50.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "14-bai-tap-51-55",
+          "file": "raw_materials/physics/translations/chapter-42/14-bai-tap-51-55.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "15-mcat",
+          "file": "raw_materials/physics/translations/chapter-42/15-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-42/16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-42-review.json"
     },
     {
       "chapter": 43,

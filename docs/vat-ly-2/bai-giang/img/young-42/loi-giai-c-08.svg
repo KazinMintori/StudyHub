@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <style>
+    .bg { fill: #ffffff; }
+    .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+    .axis { stroke: #334155; stroke-width: 1.5; }
+    .limit { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 5,4; }
+    .curve-tot { fill: none; stroke: #0f172a; stroke-width: 2.5; }
+    .curve-el { fill: none; stroke: #2563eb; stroke-width: 2.5; }
+    .label { font-family: system-ui, sans-serif; font-size: 14px; fill: #334155; }
+  </style>
+  <rect width="600" height="360" class="bg" rx="8" />
+  <text x="300.0" y="28" class="title">Đóng góp của electron vào nhiệt dung kim loại C_V so với mạng tinh thể</text>
+  <line x1="80" y1="280" x2="540" y2="280" class="axis" />
+  <line x1="80" y1="50" x2="80" y2="280" class="axis" />
+  <line x1="80" y1="90" x2="540" y2="90" class="limit" />
+  <text x="90" y="85" class="label" fill="#64748b">Giới hạn mạng tinh thể 3R ≈ 24,9 J/(mol·K)</text>
+  <!-- Total Cv approaching 3R -->
+  <path d="M 80,280 Q 180,260 250,130 T 520,95" class="curve-tot" />
+  <text x="440" y="125" class="label" font-weight="bold">C_V tổng cộng</text>
+  <!-- Electron Cv linear with T, small slope -->
+  <line x1="80" y1="280" x2="520" y2="265" class="curve-el" />
+  <text x="360" y="255" class="label" fill="#2563eb" font-weight="bold">C_V,el = (π²/2)(kT/E_F)R (&lt; 1% ở 300 K)</text>
+  <text x="520" y="305" class="label">T (K)</text>
+  <text x="90" y="60" class="label">C_V</text>
+</svg>

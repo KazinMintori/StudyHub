@@ -46,12 +46,10 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 39 | Tính sóng của hạt | 91/91 | 126 | Đủ theo hồ sơ |
 | vat-ly-2 | 40 | Cơ học lượng tử I: Hàm sóng | 70/70 | 110 | Đủ theo hồ sơ |
 | vat-ly-2 | 41 | Cơ học lượng tử II: Cấu trúc nguyên tử | 73/73 | 111 | Đủ theo hồ sơ |
-| vat-ly-2 | 42 | Phân tử và vật chất ngưng tụ | 0/58 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 42 | Phân tử và vật chất ngưng tụ | 58/58 | 95 | Đủ theo hồ sơ |
 | vat-ly-2 | 43 | Vật lý hạt nhân | 0/77 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 44 | Vật lý hạt và vũ trụ học | 0/59 | 0 | Còn thiếu hoặc chưa rà xong |
 
 ## Kết luận
 
 Chưa thể xác nhận tất cả bài giảng đáp ứng toàn bộ yêu cầu. JSON đi kèm ghi riêng bài thiếu nội dung, bài tập, khung lời giải, Cheatsheet, Slides, Wiki và các bước rà chưa làm. Không chứng nhận đủ nội dung chỉ từ mục lục hoặc build thành công.
-
-Chương 41 có tám mục lý thuyết, 11 ví dụ, tám câu tự kiểm, 111 lời giải gập, 40 PNG giữ nguyên pixel, 20 SVG bổ trợ, 12 Slides, 39 mục Cheatsheet và 20 mục Wiki được liên kết. Sáu bộ Python, kiểm ảnh và 160 lượt trình duyệt chính đã qua. Chương 42–44 và phần lớn Vật lý 1 còn cần tiếp tục. Build toàn cục chỉ trên GitHub Actions.

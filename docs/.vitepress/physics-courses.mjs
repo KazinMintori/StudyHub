@@ -2216,17 +2216,102 @@ export const physics2Course = {
       "slug": "22-chat-ran-ban-dan",
       "title": "Phân tử và vật chất ngưng tụ",
       "prerequisites": [
-        "ham-song-luong-tu",
         "nguyen-ly-pauli",
+        "cau-hinh-electron",
+        "dao-dong-tu-dieu-hoa-luong-tu",
+        "ham-song-luong-tu",
+        "hat-trong-hop-ba-chieu",
+        "photon",
         "nhiet-do-tuyet-doi",
-        "dong-dien"
+        "tich-phan",
+        "dien-truong"
       ],
       "supportingConcepts": [
-        "vung-nang-luong"
+        "lien-ket-ion",
+        "lien-ket-cong-hoa-tri",
+        "lien-ket-van-der-waals",
+        "lien-ket-hydro",
+        "pho-quay-phan-tu",
+        "pho-dao-dong-phan-tu",
+        "mang-tinh-the",
+        "o-co-so-tinh-the",
+        "hang-so-madelung",
+        "vung-nang-luong",
+        "vung-cam-nang-luong",
+        "mo-hinh-electron-tu-do",
+        "mat-do-trang-thai-luong-tu",
+        "phan-bo-fermi-dirac",
+        "nang-luong-fermi",
+        "lo-trong-ban-dan",
+        "pha-tap-ban-dan",
+        "tiep-giap-p-n",
+        "diot-ban-dan",
+        "cap-cooper"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 22,
-      "sourceChapter": 42
+      "sourceChapter": 42,
+      "topicGroups": [
+        {
+          "title": "Liên kết, phổ và cấu trúc vật chất",
+          "topics": [
+            {
+              "slug": "lien-ket-phan-tu",
+              "title": "Các loại liên kết phân tử",
+              "question": "Điều gì giữ các nguyên tử thành phân tử?",
+              "source": "42.1"
+            },
+            {
+              "slug": "pho-phan-tu",
+              "title": "Phổ quay và dao động phân tử",
+              "question": "Photon cho biết gì về chuyển động của các hạt nhân?",
+              "source": "42.2"
+            },
+            {
+              "slug": "cau-truc-chat-ran",
+              "title": "Cấu trúc và liên kết trong chất rắn",
+              "question": "Mạng và nhóm cơ sở tạo cấu trúc tinh thể như thế nào?",
+              "source": "42.3"
+            },
+            {
+              "slug": "dai-nang-luong",
+              "title": "Dải năng lượng trong chất rắn",
+              "question": "Vì sao cùng có electron mà các vật liệu dẫn điện khác nhau?",
+              "source": "42.4"
+            }
+          ]
+        },
+        {
+          "title": "Electron, bán dẫn và siêu dẫn",
+          "topics": [
+            {
+              "slug": "mo-hinh-electron-tu-do",
+              "title": "Mô hình electron tự do",
+              "question": "Pauli quyết định sự điền trạng thái trong kim loại ra sao?",
+              "source": "42.5"
+            },
+            {
+              "slug": "chat-ban-dan",
+              "title": "Bán dẫn thuần và pha tạp",
+              "question": "Electron và lỗ trống hình thành bằng những cơ chế nào?",
+              "source": "42.6"
+            },
+            {
+              "slug": "thiet-bi-ban-dan",
+              "title": "Tiếp giáp và thiết bị bán dẫn",
+              "question": "Rào thế nội tạo đặc tuyến và khả năng điều khiển dòng như thế nào?",
+              "source": "42.7"
+            },
+            {
+              "slug": "sieu-dan",
+              "title": "Trạng thái siêu dẫn",
+              "question": "Vì sao trạng thái ghép cặp có thể dẫn tới điện trở bằng không?",
+              "source": "42.8"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "23-vat-ly-hat-nhan",
@@ -4443,6 +4528,126 @@ export const physics2Course = {
         "Qubit không cho phép đọc đồng thời mọi biên độ bằng một lần đo."
       ],
       "formula": "$$\n|\\psi\\rangle=a|0\\rangle+b|1\\rangle.\n$$"
+    },
+    {
+      "title": "Liên kết cần một cân bằng năng lượng",
+      "bullets": [
+        "Sự tạo ion có chi phí năng lượng, còn tương tác giữa ion trái dấu làm giảm năng lượng.",
+        "Lực đẩy ở khoảng cách ngắn ngăn các hạt nhân tiến sát vô hạn và tạo khoảng cách cân bằng.",
+        "Liên kết cộng hóa trị và các tương tác lưỡng cực có cơ chế phân bố electron khác nhau."
+      ],
+      "formula": "$$\nU(r)=\\frac{q_1q_2}{4\\pi\\varepsilon_0r}\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Phổ quay cho biết mômen quán tính",
+      "bullets": [
+        "Phân tử hai nguyên tử được xem như rotor cứng quanh khối tâm.",
+        "Khối lượng rút gọn và độ dài liên kết quyết định mômen quán tính.",
+        "Chuyển mức lưỡng cực quay có độ biến thiên số lượng tử bằng một đơn vị."
+      ],
+      "formula": "$$\nE_\\ell=\\frac{\\ell(\\ell+1)\\hbar^2}{2I}\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Dao động có năng lượng điểm không",
+      "bullets": [
+        "Gần khoảng cách cân bằng, thế năng có thể xấp xỉ bằng một parabol.",
+        "Số lượng tử dao động bắt đầu từ không nhưng năng lượng thấp nhất khác không.",
+        "Photon dao động–quay nhận hiệu năng lượng của cả hai dạng chuyển động."
+      ],
+      "formula": "$$\nE_n=(n+\\tfrac12)\\hbar\\omega\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Mạng tinh thể và nhóm cơ sở có vai trò khác nhau",
+      "bullets": [
+        "Mạng mô tả các phép tịnh tiến lặp lại cấu trúc.",
+        "Nhóm cơ sở quy định những nguyên tử đặt ở mỗi điểm mạng.",
+        "Liên kết ion, cộng hóa trị, phân tử và kim loại tạo các tính chất vật liệu khác nhau."
+      ],
+      "formula": "",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Trạng thái còn trống quyết định đáp ứng điện",
+      "bullets": [
+        "Tương tác giữa các nguyên tử tạo thành các dải mức năng lượng rất gần nhau.",
+        "Electron chỉ có thể chuyển sang một trạng thái được phép còn trống.",
+        "Dải điền một phần và vùng cấm phân biệt chất dẫn, bán dẫn và cách điện."
+      ],
+      "formula": "$$\nE_g=E_c-E_v\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Mật độ trạng thái đếm chỗ cho electron",
+      "bullets": [
+        "Mỗi trạng thái không gian trong hộp chứa tối đa hai electron ngược spin.",
+        "Trong mô hình ba chiều, số trạng thái trong một khoảng năng lượng được mô tả bởi g(E).",
+        "Phải phân biệt số trạng thái với số electron thực sự chiếm các trạng thái ấy."
+      ],
+      "formula": "$$\ndN=g(E)f(E)\\,dE\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Fermi–Dirac xác định xác suất chiếm",
+      "bullets": [
+        "Ở nhiệt độ dương, xác suất chiếm giảm liên tục theo năng lượng.",
+        "Tại mức Fermi, xác suất bằng một nửa.",
+        "Ở nhiệt độ thấp, các trạng thái sâu dưới mức Fermi gần như đầy và các trạng thái cao hơn gần như trống."
+      ],
+      "formula": "$$\nf(E)=\\frac1{e^{(E-E_F)/(kT)}+1}\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Không độ tuyệt đối vẫn còn động năng",
+      "bullets": [
+        "Nguyên lý Pauli buộc electron điền nhiều trạng thái không gian khác nhau.",
+        "Electron không cùng dồn vào trạng thái động năng thấp nhất.",
+        "Trong khí electron tự do ba chiều, động năng trung bình bằng ba phần năm năng lượng Fermi."
+      ],
+      "formula": "$$\n\\overline E=\\frac35E_{F0}\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Pha tạp thay đổi hạt tải chiếm ưu thế",
+      "bullets": [
+        "Tạp chất cho tạo electron dẫn và ion cho dương.",
+        "Tạp chất nhận tạo lỗ trống và ion nhận âm.",
+        "Pha tạp không đồng nghĩa toàn mẫu có điện tích tổng cộng khác không."
+      ],
+      "formula": "",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Tiếp giáp tạo một rào thế nội",
+      "bullets": [
+        "Khuếch tán và tái hợp để lại điện tích ion trong vùng nghèo.",
+        "Phân cực thuận giảm rào, còn phân cực nghịch tăng rào.",
+        "Đặc tuyến diode lý tưởng mô tả dòng trong miền chưa có đánh thủng."
+      ],
+      "formula": "$$\nI=I_s(e^{eV/(kT)}-1)\n$$",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Electron–lỗ trống nối quang học với điện học",
+      "bullets": [
+        "Tái hợp có thể tạo bức xạ trong diode phát quang.",
+        "Hấp thụ photon có thể tạo hạt tải trong quang diode hoặc pin mặt trời.",
+        "Transistor điều khiển dòng nhờ cấu trúc tiếp giáp hoặc điện trường cổng."
+      ],
+      "formula": "",
+      "note": "22-chat-ran-ban-dan"
+    },
+    {
+      "title": "Siêu dẫn là một trạng thái tập thể",
+      "bullets": [
+        "Trạng thái siêu dẫn tồn tại dưới những điều kiện tới hạn của nhiệt độ, từ trường và dòng điện.",
+        "Mô hình BCS mô tả sự ghép cặp electron nhờ tương tác hiệu dụng liên quan đến mạng.",
+        "Khe năng lượng và tính tập thể phân biệt siêu dẫn với việc chỉ giảm tán xạ thông thường."
+      ],
+      "formula": "",
+      "note": "22-chat-ran-ban-dan"
     }
   ],
   "illustration": "field",

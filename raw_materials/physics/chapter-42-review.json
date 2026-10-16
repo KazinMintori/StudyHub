@@ -1,0 +1,43 @@
+{
+  "chapter": 42,
+  "status": "content-complete",
+  "theorySections": 8,
+  "examples": 9,
+  "selfChecks": 7,
+  "equationNumbers": 25,
+  "equationTags": 25,
+  "numberedFigures": 36,
+  "sourceFigureAssets": 54,
+  "supplementarySolutionSvgs": 20,
+  "exercises": 58,
+  "discussionQuestions": 24,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 95,
+  "slides": 12,
+  "strictCheatsheetSections": 7,
+  "strictCheatsheetItems": 42,
+  "foundationTerms": 20,
+  "newWikiTerms": 19,
+  "numericEvidence": "qa/physics/chapter42/numeric-checks.json",
+  "sourceReview": "raw_materials/physics/reviews/ch42-final-source-review.md",
+  "sourceImageIntegrity": "qa/physics/chapter42/current-source-pixels.json",
+  "renderReview": "passed",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "browserChecks": 212,
+  "sourceDisplayExpressions": 648,
+  "sourceInlineExpressions": 3747,
+  "skillTests": 39,
+  "repositoryTests": 55,
+  "publication": "ready-for-push",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "Chapters43–44 and mostPhysics1 remain incomplete.",
+    "Local browser QA uses separate bounded fragments. The complete exercise page is checked after GitHub deployment."
+  ]
+}

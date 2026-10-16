@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <style>
+    .bg { fill: #ffffff; }
+    .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+    .label { font-family: system-ui, sans-serif; font-size: 14px; fill: #334155; }
+    .band-c { fill: #eff6ff; stroke: #3b82f6; stroke-width: 1.5; }
+    .band-v { fill: #f8fafc; stroke: #64748b; stroke-width: 1.5; }
+    .d-level { stroke: #d97706; stroke-width: 2; stroke-dasharray: 5,4; }
+    .a-level { stroke: #9333ea; stroke-width: 2; stroke-dasharray: 5,4; }
+  </style>
+  <rect width="600" height="360" class="bg" rx="8" />
+  <text x="300.0" y="28" class="title">Các mức tạp chất donor (loại n) và acceptor (loại p) trong vùng cấm</text>
+  <!-- Panel Left: n-type -->
+  <g transform="translate(60, 60)">
+    <text x="100" y="0" class="label" font-weight="bold" text-anchor="middle">Bán dẫn loại n (Donor)</text>
+    <rect x="0" y="20" width="200" height="50" class="band-c" rx="4" />
+    <text x="100" y="50" class="label" text-anchor="middle">Vùng dẫn E_c</text>
+    <line x1="0" y1="90" x2="200" y2="90" class="d-level" />
+    <text x="100" y="85" class="label" fill="#d97706" text-anchor="middle" font-weight="600">Mức donor E_D</text>
+    <rect x="0" y="160" width="200" height="50" class="band-v" rx="4" />
+    <text x="100" y="190" class="label" text-anchor="middle">Vùng hóa trị E_v</text>
+  </g>
+  <!-- Panel Right: p-type -->
+  <g transform="translate(340, 60)">
+    <text x="100" y="0" class="label" font-weight="bold" text-anchor="middle">Bán dẫn loại p (Acceptor)</text>
+    <rect x="0" y="20" width="200" height="50" class="band-c" rx="4" />
+    <text x="100" y="50" class="label" text-anchor="middle">Vùng dẫn E_c</text>
+    <line x1="0" y1="140" x2="200" y2="140" class="a-level" />
+    <text x="100" y="135" class="label" fill="#9333ea" text-anchor="middle" font-weight="600">Mức acceptor E_A</text>
+    <rect x="0" y="160" width="200" height="50" class="band-v" rx="4" />
+    <text x="100" y="190" class="label" text-anchor="middle">Vùng hóa trị E_v</text>
+  </g>
+</svg>

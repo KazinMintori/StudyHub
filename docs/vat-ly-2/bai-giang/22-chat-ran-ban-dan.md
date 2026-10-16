@@ -1,31 +1,48 @@
 ---
-course: vat-ly-2
-lecture: 22-chat-ran-ban-dan
-section: lecture
+course: "vat-ly-2"
+lecture: "22-chat-ran-ban-dan"
+section: "lecture"
 title: "Phân tử và vật chất ngưng tụ"
-prerequisites: ["ham-song-luong-tu","nguyen-ly-pauli","nhiet-do-tuyet-doi","dong-dien"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Phân tử và vật chất ngưng tụ."
+prerequisites: ["nguyen-ly-pauli","cau-hinh-electron","dao-dong-tu-dieu-hoa-luong-tu","ham-song-luong-tu","hat-trong-hop-ba-chieu","photon","nhiet-do-tuyet-doi","tich-phan","dien-truong"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Liên kết và phổ phân tử, cấu trúc tinh thể, dải năng lượng, electron tự do, bán dẫn và siêu dẫn."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 42.1 — Types of Molecular Bonds (từ trang 1408).
-- 42.2 — Molecular Spectra (từ trang 1411).
-- 42.3 — Structure of Solids (từ trang 1415).
-- 42.4 — Energy Bands (từ trang 1418).
-- 42.5 — Free-Electron Model of Metals (từ trang 1421).
-- 42.6 — Semiconductors (từ trang 1425).
-- 42.7 — Semiconductor Devices (từ trang 1428).
-- 42.8 — Superconductivity (từ trang 1433).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 42, trang 1408–1441.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Phân tử và vật chất ngưng tụ">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/09-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/10-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/11-bai-tap-01-22.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/12-bai-tap-23-38.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/13-bai-tap-39-50.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/14-bai-tap-51-55.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/15-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-42/16-bai-tap-cau-noi.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 42, trang 1434–1441.
+
+</div>

@@ -189,3 +189,11 @@ Tab Bài tập có 73 bài đánh số, 25 câu thảo luận, 12 bài biến th
 Sáu bộ Python, đối chiếu điểm ảnh và 160 lượt trình duyệt chính đã qua, gồm lý thuyết, thẻ ôn tập, Wiki và tám nhóm bài tập mở đủ lời giải tại 320–1440 px. Công thức được sửa trong nội dung, không thu nhỏ hay tạo thanh cuộn. Các sai khác số học, dữ kiện, giả thiết, tiểu câu hỏi và quy tắc chọn lọc được lưu trong hồ sơ riêng.
 
 Tác vụ chính tự rà và sửa các bản Antigravity sau khi cầu nối mất trạng thái hoặc báo lỗi, không nhận báo cáo tự chấm làm bằng chứng hoàn tất. Những bản chụp và worktree được giữ. Chương 42–44 và phần lớn Vật lý 1 còn cần tiếp tục. Build và triển khai toàn cục chỉ chạy trên GitHub Actions.
+
+## Chương 42
+
+Đã hoàn tất tám chủ đề về phân tử và vật chất ngưng tụ, chín ví dụ, bảy câu tự kiểm, 25 nhãn công thức và 36 hình lý thuyết. Có 54 PNG giữ nguyên điểm ảnh PDF và 20 SVG hỗ trợ lời giải. Các nhãn tiếng Anh được giải nghĩa một lần dưới mỗi hình.
+
+Tab Bài tập có 58 bài đánh số, 24 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 95 lời giải gập. Có 12 Slides, bảy nhóm Cheatsheet với 42 mục chỉ chứa định nghĩa, tính chất và công thức, cùng 20 mục Wiki được liên kết, gồm 19 trang mới.
+
+Sáu bộ Python và 212 lượt trình duyệt theo các nhóm nội dung đã qua. Các sửa dữ kiện, hệ số quay phân tử, điều kiện mô hình bán dẫn, tiểu câu hỏi, vùng cắt hình và ngắt dòng được ghi trong hồ sơ rà cuối chương. Bản chụp Antigravity và các log lỗi trước khi sửa được giữ. Chương 43–44 và phần lớn Vật lý 1 còn cần hoàn thiện. Build toàn cục và triển khai chỉ chạy trên GitHub Actions, trang công khai được kiểm riêng sau khi push.
