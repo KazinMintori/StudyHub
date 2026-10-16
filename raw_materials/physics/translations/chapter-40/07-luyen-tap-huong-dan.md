@@ -462,7 +462,15 @@ E_{1\text{-IDW}} = \frac{h^2}{8m_e L^2}.
 $$
 
 Suy ra:
-Tính mẫu số $\sqrt{8m_e E_{1\text{-IDW}}} \approx 8{,}275 \times 10^{-25}\,\mathrm{kg\cdot m/s}$:
+Ký hiệu $s$ là mẫu số trong công thức tính bề rộng:
+
+$$
+\begin{aligned}
+s&=\sqrt{8m_e E_{1\text{-IDW}}}\\
+&\approx8{,}275 \times 10^{-25}\,\mathrm{kg\cdot m/s}.
+\end{aligned}
+$$
+
 $$
 \begin{aligned}
 L &= \frac{h}{\sqrt{8m_e E_{1\text{-IDW}}}} \\
@@ -880,7 +888,15 @@ Một rào thế vuông cao $5{,}00\,\mathrm{eV}$ và có bề rộng $0{,}900\,
 **Lời giải chi tiết:**
 
 (a) Trường hợp $E = 4{,}00\,\mathrm{eV}$:
-- Độ hụt: $U_0 - E = 1{,}00\,\mathrm{eV} = 1{,}602 \times 10^{-19}\,\mathrm{J}$.
+- Độ hụt:
+
+$$
+\begin{aligned}
+U_0 - E&=1{,}00\,\mathrm{eV}\\
+&\approx1{,}602 \times 10^{-19}\,\mathrm{J}.
+\end{aligned}
+$$
+
 - Hệ số $\kappa$:
 Tính tử số:
 Đặt $q$ là tử số trong biểu thức của $\kappa$:
@@ -917,7 +933,15 @@ T_a &= 2{,}56 \times e^{-9{,}223} \\
 $$
 
 (b) Trường hợp $E = 4{,}30\,\mathrm{eV}$:
-- Độ hụt: $U_0 - E = 0{,}70\,\mathrm{eV} = 1{,}121 \times 10^{-19}\,\mathrm{J}$.
+- Độ hụt:
+
+$$
+\begin{aligned}
+U_0 - E&=0{,}70\,\mathrm{eV}\\
+&\approx1{,}121 \times 10^{-19}\,\mathrm{J}.
+\end{aligned}
+$$
+
 - Hệ số $\kappa$:
 Tính tử số:
 Đặt $q$ là tử số trong biểu thức của $\kappa$:
@@ -954,7 +978,15 @@ T_b &= 1{,}926 \times e^{-7{,}716} \\
 $$
 
 (c) Trường hợp $E = 4{,}60\,\mathrm{eV}$:
-- Độ hụt: $U_0 - E = 0{,}40\,\mathrm{eV} = 6{,}409 \times 10^{-20}\,\mathrm{J}$.
+- Độ hụt:
+
+$$
+\begin{aligned}
+U_0 - E&=0{,}40\,\mathrm{eV}\\
+&\approx6{,}409 \times 10^{-20}\,\mathrm{J}.
+\end{aligned}
+$$
+
 - Hệ số $\kappa$:
 Tính tử số:
 Đặt $q$ là tử số trong biểu thức của $\kappa$:
