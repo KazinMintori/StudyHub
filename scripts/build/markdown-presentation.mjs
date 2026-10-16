@@ -65,6 +65,22 @@ function updateTagState(content, tagState) {
   }
 }
 
+function renderFigureCaption(md, image, env) {
+  const children = image.children || []
+  const literalTypes = new Set(['text', 'html_inline', 'softbreak'])
+  // Image alt content is already tokenized. Render only its math tokens, while
+  // keeping all other caption content literal and HTML-escaped.
+  if (!children.some(child => child.type === 'math_inline')
+    || children.some(child => child.type !== 'math_inline' && !literalTypes.has(child.type))) {
+    return md.utils.escapeHtml(image.content)
+  }
+  return children.map(child => {
+    if (child.type === 'math_inline') return md.renderer.renderInline([child], md.options, env)
+    if (child.type === 'softbreak') return ' '
+    return md.utils.escapeHtml(child.content)
+  }).join('')
+}
+
 export function configureStudyMarkdown(md, { base }) {
       md.use(staticMathPlugin)
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
@@ -87,7 +103,7 @@ export function configureStudyMarkdown(md, { base }) {
           .replace(/^[ \t]*:::[ \t]*$/gm, ':::');
       });
       md.use(termLinks,base)
-      // Only standalone images become figures; escape alt text before inserting captions.
+      // Only standalone images become figures; captions allow math, with literal escaped prose.
       md.core.ruler.after('inline', 'study_image_captions', state => {
         for (let i = 1; i < state.tokens.length - 1; i++) {
           const token = state.tokens[i]
@@ -104,7 +120,7 @@ export function configureStudyMarkdown(md, { base }) {
             const key=image.attrGet('src')?.match(/(young-\d+\/[^/.]+)\.(?:png|svg)$/)?.[1]
             const pairs=physicsImageLabels[key]||[]
             const labels=pairs.map(([vi,en])=>`<li>${md.utils.escapeHtml(vi)} (${md.utils.escapeHtml(en)})</li>`).join('')
-            token.content = `<figcaption>${md.utils.escapeHtml(caption)}${labels?`<div class="figure-labels"><span>Chú thích:</span><ul class="figure-label-list">${labels}</ul></div>`:''}</figcaption>`
+            token.content = `<figcaption>${renderFigureCaption(md, image, state.env)}${labels?`<div class="figure-labels"><span>Chú thích:</span><ul class="figure-label-list">${labels}</ul></div>`:''}</figcaption>`
             state.tokens[i].children.push(token)
           }
         }

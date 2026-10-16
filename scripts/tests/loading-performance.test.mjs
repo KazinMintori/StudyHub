@@ -154,6 +154,28 @@ test('resets image count per document render', () => {
   assert(imgsB[1].includes('loading="lazy"'), 'Doc B second image lazy')
 })
 
+test('image captions render inline equations through the static math renderer', () => {
+  const md = createStudyMarkdown()
+  const html = md.render(String.raw`![Hình 1: Hình chiếu $L_z=2\hbar$ và độ lớn $L=\sqrt{6}\hbar$.](img.png)`)
+  const caption = html.match(/<figcaption>([\s\S]*?)<\/figcaption>/)?.[1]
+  assert(caption)
+  assert.equal((caption.match(/class="static-math"/g) || []).length, 2)
+  assert(caption.includes('v-html="'))
+  assert(caption.includes('data-mml-node='))
+  assert(!caption.includes('$L_z'))
+  assert(!caption.includes('$L='))
+})
+
+test('math captions still escape literal HTML and keep bilingual labels', () => {
+  const md = createStudyMarkdown()
+  const html = md.render(String.raw`![Hình 1: <script>alert(1)</script> và $x<y$.](young-24/hinh-24-1.png)`)
+  const caption = html.match(/<figcaption>([\s\S]*?)<\/figcaption>/)?.[1]
+  assert(caption.includes('&lt;script&gt;alert(1)&lt;/script&gt;'))
+  assert(!caption.includes('<script>'))
+  assert(caption.includes('class="static-math"'))
+  assert(caption.includes('figure-label-list'))
+})
+
 test('regression (1): preserves > inside quoted attributes and recognizes data-loading is not loading attribute', () => {
   const md = createStudyMarkdown()
 
