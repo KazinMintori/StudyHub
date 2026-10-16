@@ -31,14 +31,27 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  for(let p=ch.pdfStart;p<=ch.pdfEnd;p++)source+=await readFile(`qa/physics/full-source/pdf-${String(p).padStart(4,'0')}.txt`,'utf8')+'\n'
  const exercisesStart=source.search(/^EXERCISES\s*$/m)
  const endSource=exercisesStart>=0?source.slice(exercisesStart):source
- const sourceNumbers=[...endSource.matchAll(new RegExp(`^${ch.chapter}\\.(\\d+)\\s`,'gm'))].map(m=>Number(m[1])).filter(n=>n<=500)
+ // Extracted PDF columns may put a problem number in the middle of a line.
+ const sourceNumbers=[...endSource.matchAll(new RegExp(`(?<![\\w.])${ch.chapter}\\.(\\d{1,3})(?!\\d)`,'g'))].map(m=>Number(m[1])).filter(n=>n<=500)
  const expectedExercises=Math.max(0,...sourceNumbers)
  const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|\\.|$)`,'gm'))].map(m=>Number(m[1]))
- const missing=Array.from({length:expectedExercises},(_,i)=>i+1).filter(n=>!prompts.includes(n))
  const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)].map(m=>({id:m[1],body:m[2]}))
  // A valid collapsed solution does not require an invisible authoring marker.
  // Also inspect actual details containers following each numbered prompt.
  const exerciseText=main.includes('<div class="lecture-exercises-content"')?main.split('<div class="lecture-exercises-content"')[1]:all
+ const htmlPromptPattern=new RegExp(`^### ((?:Q|VP)?${ch.chapter}\\.\\d+(?:\\.\\d+)?|Bài tập cầu nối)(?=\\s|$)[^\\n]*\\n`,'gm')
+ const htmlPrompts=[...exerciseText.matchAll(htmlPromptPattern)]
+ for(let i=0;i<htmlPrompts.length;i++){
+  const prompt=htmlPrompts[i]
+  const id=prompt[1]==='Bài tập cầu nối'?`Bài cầu nối ${ch.chapter}`:prompt[1]
+  if(new RegExp(`^${ch.chapter}\\.\\d+$`).test(id)){
+   const number=Number(id.split('.')[1])
+   if(!prompts.includes(number))prompts.push(number)
+  }
+  const section=exerciseText.slice(prompt.index,htmlPrompts[i+1]?.index??exerciseText.length)
+  const detail=section.match(/<details(?:\s[^>]*)?>\s*<summary>[^<]*<\/summary>([\s\S]*?)<\/details>/)
+  if(detail&&!solutionBlocks.some(s=>s.id===id))solutionBlocks.push({id,body:detail[1]})
+ }
  const promptPattern=`^::: exercise ((?:Bài )?(?:Q|VP)?${ch.chapter}\\.\\d+(?:\\.\\d+)?|Bài (?:cầu nối|tổng hợp) ${ch.chapter}(?:\\.\\d+)?)\\b[^\\n]*\\n`
  const promptBlocks=[...exerciseText.matchAll(new RegExp(promptPattern,'gm'))]
  for(let i=0;i<promptBlocks.length;i++){
@@ -53,11 +66,13 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
    else solutionBlocks.push({id,body:detail[1]})
   }
  }
+ const missing=Array.from({length:expectedExercises},(_,i)=>i+1).filter(n=>!prompts.includes(n))
  const malformed=solutionBlocks.filter(m=>!m.body.includes('**Tóm tắt đề bài:**')||!m.body.includes('**Hướng đi:**')||!/^\s*- /m.test(m.body)).map(m=>m.id)
  const unsolved=prompts.filter(n=>!solutionBlocks.some(m=>m.id===`${ch.chapter}.${n}`))
- const unsolvedPromptIds=promptBlocks.map(p=>p[1].replace(/^Bài (?=\d)/,'')).filter(id=>!solutionBlocks.some(s=>s.id===id||s.aliases?.includes(id)))
+ const allPromptIds=[...promptBlocks.map(p=>p[1].replace(/^Bài (?=\d)/,'')),...htmlPrompts.map(p=>p[1]==='Bài tập cầu nối'?`Bài cầu nối ${ch.chapter}`:p[1])]
+ const unsolvedPromptIds=allPromptIds.filter(id=>!solutionBlocks.some(s=>s.id===id||s.aliases?.includes(id)))
  const outsideExercises=main.split('<div class="lecture-exercises-content"')[0]
- const misplaced=new RegExp(`^::: exercise (?:Q|VP)?${ch.chapter}\\.`,'m').test(outsideExercises)
+ const misplaced=new RegExp(`^(?:::: exercise |### )(?:Q|VP)?${ch.chapter}\\.\\d`,'m').test(outsideExercises)
  const prereqs=[...(lesson.prerequisites||[]),...(lesson.supportingConcepts||[])]
  const badWiki=[]
  for(const id of prereqs)if(!concepts[id]||!await exists(`docs/wiki/${id}.md`))badWiki.push(id)

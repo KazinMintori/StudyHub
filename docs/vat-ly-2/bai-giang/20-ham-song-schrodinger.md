@@ -4,7 +4,7 @@ lecture: "20-ham-song-schrodinger"
 section: "lecture"
 title: "Cơ học lượng tử I: Hàm sóng"
 prerequisites: ["dao-ham","dao-ham-rieng","tich-phan","song","dao-dong-dieu-hoa","cong-nang-luong","dong-luong-vat-ly","photon","buoc-song-de-broglie"]
-lessonStatus: "draft"
+lessonStatus: "ready"
 hasChapterExercises: true
 description: "Hàm sóng, phương trình Schrödinger một chiều, hạt trong hộp, giếng hữu hạn, xuyên hầm, dao động tử và phép đo."
 ---
@@ -27,11 +27,21 @@ Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chư�
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-40/07-luyen-tap-huong-dan.md-->
 
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/08-cau-hoi-thao-luan.md-->
+
 <!--@include: ../../../raw_materials/physics/translations/chapter-40/09-bai-tap-01-15.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-40/10-bai-tap-16-30.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-40/11-bai-tap-31-35.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/12-bai-tap-36-50.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/13-bai-tap-51-66.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/14-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/15-bai-tap-cau-noi.md-->
 
 ## Tài liệu tham khảo
 

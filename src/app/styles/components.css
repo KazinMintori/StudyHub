@@ -107,14 +107,15 @@ mjx-container:not([display=true])::-webkit-scrollbar,
   width: 0 !important;
 }
 
-/* Công thức block ($$...$$): căn giữa trang trọng, ẩn toàn bộ thanh cuộn giao diện */
+/* Công thức block phải được bẻ dòng tại nguồn, không tạo vùng cuộn hoặc cắt nét. */
 mjx-container[display=true],
 .vp-doc mjx-container[display=true],
 .math-text mjx-container[display=true],
 .slide-formula mjx-container[display=true] {
   display: block;
-  overflow-x: auto;
-  overflow-y: hidden !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   max-width: 100%;
   padding: var(--space-3) var(--space-2);
   margin: var(--space-5) 0;

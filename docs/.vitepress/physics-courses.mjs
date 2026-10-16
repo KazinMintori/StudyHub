@@ -2055,7 +2055,7 @@ export const physics2Course = {
         "cham-luong-tu",
         "kinh-hien-vi-quet-xuyen-ham"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 20,
       "sourceChapter": 40,
       "topicGroups": [

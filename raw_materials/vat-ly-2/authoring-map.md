@@ -152,7 +152,7 @@ Tám bộ Python, kiểm tra pixel và 167 lượt kiểm tra trình duyệt ở
 
 Hai worktree Antigravity được giữ sau khi cầu nối trả về unknown/job not found. Ảnh và chú thích được lưu lại để kiểm tra. Codex tự soạn phần lý thuyết chưa có đầu ra, đối chiếu và xác minh bản tích hợp, không gọi thêm subagent GPT.
 
-## Các chương 38–44
+## Phạm vi các chương tiếp theo
 
 Tiếp tục theo thứ tự nguồn từ trường, cảm ứng, điện cảm, dòng xoay chiều, sóng điện từ, quang học, tương đối, photon, sóng vật chất, lượng tử, nguyên tử, vật chất ngưng tụ, hạt nhân, hạt cơ bản và vũ trụ học. Mọi đơn vị nguồn còn thiếu được ghi trong `../physics/translation-manifest.json`. Không đánh dấu những chương này đã hoàn thành từ việc có mục lục.
 
@@ -171,3 +171,11 @@ Bảy bộ Python, đối chiếu pixel, cấu trúc toàn bộ môn và 143 lư
 Đã hoàn tất sáu chủ đề về sóng vật chất, nguyên tử hạt nhân, mô hình Bohr, laser, bức xạ nhiệt và bất định. Có mười ví dụ, sáu câu tự kiểm, 30 công thức đánh số và 52 ảnh nguồn giữ nguyên vùng PDF. Tab Bài tập có 91 bài đánh số, 22 câu thảo luận, 12 bài hướng dẫn và một bài cầu nối, tổng cộng 126 hộp lời giải gập. Có 12 Slides, bảy nhóm Cheatsheet với 31 mục và 17 Wiki mới.
 
 Đã kiểm số bằng Python, đối chiếu pixel ảnh và thực hiện 182 lượt kiểm tra trình duyệt với phông thật. Các sửa sai dữ kiện, tiểu câu hỏi, micro giây, h/hbar, miền tương đối tính và mô hình bất định được ghi trong hồ sơ rà riêng. Chưa coi các báo cáo Antigravity không khớp nguồn là chứng cứ hoàn tất. Không dùng subagent GPT. Build toàn cục chỉ chạy trên GitHub Actions.
+
+## Chương 40
+
+Đã hoàn tất sáu chủ đề về hàm sóng và cơ học lượng tử một chiều, tám ví dụ, sáu câu tự kiểm, 53 số công thức với 58 nhãn và 30 hình lý thuyết. Có 50 PNG giữ nguyên pixel PDF và bảy SVG bổ trợ lời giải. Mỗi ảnh có chú thích tiếng Việt và các nhãn tiếng Anh được giải nghĩa một lần.
+
+Tab Bài tập chứa 70 bài đánh số, 27 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 110 lời giải gập với Tóm tắt đề bài và Hướng đi có lý do. Có 12 Slides, bảy nhóm Cheatsheet gồm 31 mục và 18 mục Wiki được liên kết, trong đó 17 mục mới.
+
+Bảy bộ tính Python, kiểm tra toàn bộ ảnh và 140 lượt trình duyệt đã qua, gồm 12 lần thay đổi kích thước trực tiếp. Các sửa sai về giếng rất nông, động lượng, năng lượng cơ bản cổ điển, ghép vạch phổ, WKB và hệ số công thức được ghi trong hồ sơ đối chiếu riêng. Quy tắc CSS chung không còn tạo vùng cuộn toán trong Wiki. Chưa chứng nhận toàn bộ hai môn đã hoàn tất. Các chương 41–44 và phần lớn Vật lý 1 vẫn cần tiếp tục. Build toàn cục chỉ chạy trên GitHub Actions.

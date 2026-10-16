@@ -100,9 +100,9 @@ Trạng thái cơ bản được đánh số $n=0$, khác với quy ước $n=1$
 
 ![Hình 40.25: Sáu mức thấp nhất của dao động tử điều hòa. Mức thấp nhất có năng lượng ℏω/2 và mọi khoảng cách mức kề nhau đều bằng ℏω.](../img/young-40/hinh-40-25.png)
 
-### Ví dụ 40.8: Nguyên tử sodium dao động trong tinh thể
+### Ví dụ 40.8: Nguyên tử natri dao động trong tinh thể
 
-Một nguyên tử sodium khối lượng $3{,}82\times10^{-26}\,\mathrm{kg}$ dao động trong tinh thể. Thế năng tăng $0{,}0075\,\mathrm{eV}$ khi nguyên tử lệch khỏi vị trí cân bằng $0{,}014\,\mathrm{nm}$. Xem nguyên tử như một dao động tử điều hòa.
+Một nguyên tử natri khối lượng $3{,}82\times10^{-26}\,\mathrm{kg}$ dao động trong tinh thể. Thế năng tăng $0{,}0075\,\mathrm{eV}$ khi nguyên tử lệch khỏi vị trí cân bằng $0{,}014\,\mathrm{nm}$. Xem nguyên tử như một dao động tử điều hòa.
 
 (a) Tìm tần số góc theo mô tả Newton. (b) Tìm khoảng cách giữa hai mức dao động liền nhau, theo đơn vị electron-volt. (c) Tìm bước sóng photon phát ra khi chuyển xuống mức liền kề và xác định miền phổ.
 
@@ -307,7 +307,7 @@ Gần cực tiểu, một parabol có thể xấp xỉ tốt đường thế nă
 Một hệ lượng tử ban đầu ở trạng thái cơ bản hấp thụ một photon để lên trạng thái kích thích thứ nhất. Nó tiếp tục hấp thụ photon thứ hai để lên trạng thái kích thích thứ hai. Với hệ nào sau đây, photon thứ hai có bước sóng lớn hơn photon thứ nhất?
 
 1. Dao động tử điều hòa.
-2. Nguyên tử hydrogen.
+2. Nguyên tử hydro.
 3. Hạt trong hộp.
 
 <details><summary>Xem đáp án và giải thích</summary>
@@ -316,7 +316,7 @@ Chọn **2**.
 
 Dao động tử có các khoảng cách mức bằng nhau, nên hai photon có cùng năng lượng và cùng bước sóng.
 
-Với hydrogen, khoảng cách giữa các mức giảm khi số lượng tử tăng. Chuyển từ $n=2$ lên $n=3$ cần năng lượng nhỏ hơn chuyển từ $n=1$ lên $n=2$. Photon thứ hai vì thế có bước sóng dài hơn.
+Với hydro, khoảng cách giữa các mức giảm khi số lượng tử tăng. Chuyển từ $n=2$ lên $n=3$ cần năng lượng nhỏ hơn chuyển từ $n=1$ lên $n=2$. Photon thứ hai vì thế có bước sóng dài hơn.
 
 Với hạt trong hộp, $E_n$ tỉ lệ với $n^2$. Khoảng cách từ mức $n=2$ đến $n=3$ lớn hơn khoảng cách từ mức $n=1$ đến $n=2$. Photon thứ hai có bước sóng ngắn hơn.
 

@@ -70,8 +70,9 @@ chapterEntry.fragments=[
  ...topics.map(([topic,file,sourceUnit,start,end])=>({sourceUnit,file:raw+'/'+file,destination:'topic:'+topic,printedPages:[start,end]})),
  {sourceUnit:'chapter-summary',file:raw+'/16-tom-tat.md',destination:'notes'},
  ...presentEnd.map(file=>({sourceUnit:file.replace(/\.md$/,''),file:raw+'/'+file,destination:'bai-tap'}))
-].map(item=>({...item,status:complete?'authored-source-reviewed-render-pending':'authored-under-review'}))
-chapterEntry.status=complete?'content-complete':'authored-under-review'
-chapterEntry.pendingSourceUnits=complete?['final-source-image-and-browser-review']:endFiles.filter(file=>!presentEnd.includes(file)).map(file=>'end:'+file).concat('independent-source-numeric-and-browser-review')
+].map(item=>({...item,status:complete?'authored-source-reviewed':'authored-under-review'}))
+chapterEntry.status=complete?'complete':'authored-under-review'
+chapterEntry.pendingSourceUnits=complete?[]:endFiles.filter(file=>!presentEnd.includes(file)).map(file=>'end:'+file).concat('independent-source-numeric-and-browser-review')
+if(complete)chapterEntry.completionReview='raw_materials/physics/chapter-40-review.json'
 await writeFile(manifestPath,JSON.stringify(manifest,null,2)+'\n')
 console.log('Integrated chapter40: Six theory topics,12 slides; '+presentEnd.length+'/9 exercise fragments. Status='+lesson.status)

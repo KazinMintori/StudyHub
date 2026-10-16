@@ -5,16 +5,16 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 
 | Môn | Chương | Bài giảng | Đề cuối chương | Lời giải chi tiết | Nội dung nguồn |
 | --- | --- | --- | --- | --- | --- |
-| vat-ly-1 | 1 | Đơn vị, đại lượng vật lý và vector | 0/94 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-1 | 1 | Đơn vị, đại lượng vật lý và vector | 0/496 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 2 | Chuyển động trên đường thẳng | 92/92 | 0 | Đủ theo hồ sơ |
 | vat-ly-1 | 3 | Chuyển động trong hai hoặc ba chiều | 0/85 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 4 | Các định luật chuyển động của Newton | 0/60 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 5 | Áp dụng các định luật Newton | 0/118 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 6 | Công và động năng | 0/97 | 0 | Còn thiếu hoặc chưa rà xong |
-| vat-ly-1 | 7 | Thế năng và bảo toàn năng lượng | 0/84 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-1 | 7 | Thế năng và bảo toàn năng lượng | 0/99 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 8 | Động lượng, xung lượng và va chạm | 0/109 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 9 | Chuyển động quay của vật rắn | 0/95 | 0 | Còn thiếu hoặc chưa rà xong |
-| vat-ly-1 | 10 | Động lực học chuyển động quay | 0/97 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-1 | 10 | Động lực học chuyển động quay | 0/150 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 11 | Cân bằng và đàn hồi | 0/95 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 12 | Cơ học chất lưu | 0/92 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-1 | 13 | Hấp dẫn | 0/84 | 0 | Còn thiếu hoặc chưa rà xong |
@@ -44,7 +44,7 @@ Phạm vi: 20 chương Vật lý đại cương 1 và 24 chương Vật lý đ�
 | vat-ly-2 | 37 | Thuyết tương đối | 74/74 | 102 | Đủ theo hồ sơ |
 | vat-ly-2 | 38 | Photon: Tính hạt của sóng ánh sáng | 45/45 | 75 | Đủ theo hồ sơ |
 | vat-ly-2 | 39 | Tính sóng của hạt | 91/91 | 126 | Đủ theo hồ sơ |
-| vat-ly-2 | 40 | Cơ học lượng tử I: Hàm sóng | 0/64 | 0 | Còn thiếu hoặc chưa rà xong |
+| vat-ly-2 | 40 | Cơ học lượng tử I: Hàm sóng | 70/70 | 110 | Đủ theo hồ sơ |
 | vat-ly-2 | 41 | Cơ học lượng tử II: Cấu trúc nguyên tử | 0/73 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 42 | Phân tử và vật chất ngưng tụ | 0/58 | 0 | Còn thiếu hoặc chưa rà xong |
 | vat-ly-2 | 43 | Vật lý hạt nhân | 0/77 | 0 | Còn thiếu hoặc chưa rà xong |

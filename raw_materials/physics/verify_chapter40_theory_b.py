@@ -233,7 +233,7 @@ def verify_markdown_syntax():
             for alt, src in img_matches:
                 if not alt.strip():
                     report_error(f"{md_path.name}:{idx}: Empty alt text for image {src}")
-                if not alt.startswith("Hình 40."):
+                if "/hinh-40-" in src and not alt.startswith("Hình 40."):
                     report_error(f"{md_path.name}:{idx}: Image alt must start with 'Hình 40.': '{alt[:40]}'")
                 if "$" in alt:
                     report_error(f"{md_path.name}:{idx}: Literal TeX '$' found in image alt text: '{alt}'")

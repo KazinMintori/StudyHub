@@ -226,7 +226,7 @@ $$
 Đẳng thức này được gọi là **điều kiện chuẩn hóa** của hàm sóng. Sóng phẳng đơn sắc của hạt tự do ở phương trình (40.18) có mật độ xác suất không đổi $|A|^2$ trên toàn trục số, do đó tích phân trên toàn không gian phân kỳ tới vô hạn. Một sóng phẳng lý tưởng không thể chuẩn hóa được, phản ánh đúng nguyên lý bất định: Khi động lượng của hạt được xác định chính xác tuyệt đối ($\Delta p = 0$), vị trí của hạt hoàn toàn không xác định trên toàn vũ trụ ($\Delta x = \infty$).
 :::
 
-### Ví dụ 40.1: Hàm sóng hạt tự do định vị
+### Ví dụ 40.1: Giao thoa và vị trí của hạt tự do
 
 Xét hàm sóng $\Psi(x, t) = \Psi_1 + \Psi_2$ là sự chồng chập của hai hàm sóng hạt tự do dạng (40.18), trong đó $\Psi_1 = A e^{i(k_1 x - \omega_1 t)}$ và $\Psi_2 = A e^{i(k_2 x - \omega_2 t)}$. Cả hai số sóng $k_1$ và $k_2$ đều là các số thực dương và phân biệt ($k_1 \ne k_2$, giả sử $k_2 > k_1$).
 

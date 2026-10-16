@@ -26,11 +26,15 @@ async function inspect(file, parents = [], publishedFile = file) {
       const type = { example: examples, exercise: exercises, solution: solutions }[container[1]]
       type.push({ source: name, line: index + 1, title: container[2] || '' })
     }
-    const heading = line.match(/^#{2,6}\s+(Ví dụ|Bài tập|Lời giải)\b(.*)$/i)
+    const heading = line.match(/^#{2,6}\s+(Ví dụ|Bài tập|Lời giải)(?=\s|$)(.*)$/i)
     if (heading) {
       const type = /^Ví dụ/i.test(heading[1]) ? examples : /^Bài tập/i.test(heading[1]) ? exercises : solutions
       type.push({ source: name, line: index + 1, title: (heading[1] + heading[2]).trim() })
     }
+    const numberedPrompt = line.match(/^###\s+((?:Q|VP)?\d+\.\d+(?:\.\d+)?)(?=\s|$)(.*)$/)
+    if (numberedPrompt) exercises.push({ source: name, line: index + 1, title: (numberedPrompt[1] + numberedPrompt[2]).trim() })
+    const summary = line.match(/<summary>(.*?)<\/summary>/)
+    if (summary) solutions.push({ source: name, line: index + 1, title: summary[1].replace(/<[^>]+>/g, '').trim() })
     const references = [
       ...[...line.matchAll(/!\[[^\]]*\]\(<?([^\s)>]+)/g)].map(m => m[1]),
       ...[...line.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)/g)].map(m => m[1])

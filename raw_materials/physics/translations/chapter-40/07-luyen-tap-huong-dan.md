@@ -1,8 +1,8 @@
 ## Luyện tập hướng dẫn
 
-Phần này cung cấp lời giải chi tiết cho 12 bài tập thuộc mục Luyện tập hướng dẫn (Key Example Variation Problems) của Chương 40. Các bài toán tập trung vào ba chủ đề nền tảng: Giếng thế một chiều sâu vô hạn, giếng thế vuông hữu hạn và hiện tượng xuyên ngầm qua rào thế.
+Nhóm 12 bài sau luyện cách vận dụng hàm sóng và các mức năng lượng trong ba mô hình: Giếng thế vô hạn, giếng thế hữu hạn và xuyên hầm qua rào thế.
 
-Mọi biến đổi đều tuân thủ các hằng số vật lý tiêu chuẩn:
+Trong các phép tính, dùng những hằng số vật lý sau:
 - Hằng số Planck: $h = 6{,}626 \times 10^{-34}\,\mathrm{J\cdot s}$
 - Hằng số Planck rút gọn: $\hbar = \frac{h}{2\pi} = 1{,}055 \times 10^{-34}\,\mathrm{J\cdot s}$
 - Khối lượng electron: $m_e = 9{,}109 \times 10^{-31}\,\mathrm{kg}$
@@ -236,7 +236,7 @@ Một hàm sóng của một hạt có năng lượng $E$ trong giếng thế m�
 $$
 \psi(x) = A \cos(k x + \phi),
 $$
-trong đó số sóng $k$ được định nghĩa:
+Trong đó số sóng $k$ được định nghĩa:
 $$
 k = \frac{\sqrt{2mE}}{\hbar}.
 $$
@@ -250,7 +250,7 @@ $$
 **Tóm tắt đề bài:**
 - Hàm sóng đề xuất: $\psi(x) = A \cos(kx + \phi)$ với $k = \frac{\sqrt{2mE}}{\hbar}$.
 - Điều kiện thế: $U(x) = 0$ trong khoảng $0 < x < L$, và $U(x) = \infty$ tại $x \le 0$ hoặc $x \ge L$.
-- Cần chứng minh: $\psi(x)$ nghiệm đúng phương trình Schrödinger và xác định $\phi$ cùng các mức năng lượng dừng $E_n$.
+- Cần chứng minh: $\psi(x)$ Nghiệm đúng phương trình Schrödinger và xác định $\phi$ cùng các mức năng lượng dừng $E_n$.
 
 **Hướng đi:**
 - Lấy đạo hàm cấp hai theo biến tọa độ $x$, so sánh với phương trình Schrödinger độc lập với thời gian $-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + U(x)\psi = E\psi$.
@@ -308,7 +308,7 @@ $$
 $$
 kL = n\pi \implies k = \frac{n\pi}{L},
 $$
-với $n = 1, 2, 3, \dots$
+Với $n = 1, 2, 3, \dots$
 
 Thay trở lại định nghĩa của $k$:
 $$
@@ -321,8 +321,8 @@ E_n &= \frac{n^2 \pi^2 \hbar^2}{2mL^2} \\
 &= \frac{n^2 h^2}{8mL^2},
 \end{aligned}
 $$
-với $n = 1, 2, 3, \dots$
-Đây chính là biểu thức năng lượng lượng tử hóa chuẩn mực của hạt trong giếng thế một chiều sâu vô hạn.
+Với $n = 1, 2, 3, \dots$
+Đó là biểu thức năng lượng lượng tử hóa chuẩn mực của hạt trong giếng thế một chiều sâu vô hạn.
 
 </details>
 
