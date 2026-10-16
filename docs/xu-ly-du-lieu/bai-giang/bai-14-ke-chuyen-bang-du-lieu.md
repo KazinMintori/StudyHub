@@ -152,11 +152,11 @@ Một sai lầm rất phổ biến là việc đánh đồng giữa biến độ
 Giả sử tỷ lệ căn hộ bị hủy phòng giảm từ $5\%$ ở quý 1 xuống còn $4\%$ ở quý 2:
 - **Chênh lệch tuyệt đối (Điểm phần trăm - percentage points)**:
   $$
-  4\\% - 5\\% = -1\\% \quad (\text{-1 percentage point})
+  4\% - 5\% = -1\% \quad (\text{-1 percentage point})
   $$
 - **Biến động tương đối (Phần trăm - percentage)**:
   $$
-  \frac{4\\% - 5\\%}{5\\%} = \frac{-0.01}{0.05} = -0.20 = -20\\% \quad (\text{-20\\% relative})
+  \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\% \quad (\text{-20\% relative})
   $$
 
 Nếu người viết diễn đạt cẩu thả rằng *"tỷ lệ hủy phòng giảm 1%"*, người đọc trong ngành kiểm toán và tài chính có thể hiểu là giảm $1\%$ của mức $5\%$ ban đầu (tức là còn $5\% \times 0.99 = 4.95\%$). Hãy luôn ghi rõ cụm từ **điểm phần trăm** khi trừ hai giá trị tỷ lệ cho nhau.

@@ -15,7 +15,7 @@ export function staticMathPlugin(md) {
     return cache.get(key)
    }
    const numbered=rule==='math_block'&&/^vat-ly-[12]\//.test((env?.relativePath||'').replaceAll('\\','/'))
-     ? token.content.match(/\\tag\{([\d.]+)\}/) : null
+     ? token.content.match(/\\tag\{(\d+(?:\.\d+)*[a-zA-Z]?)\}/) : null
    if(numbered){
     const content=token.content
     let html

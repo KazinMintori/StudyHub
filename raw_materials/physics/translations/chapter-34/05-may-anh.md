@@ -53,7 +53,7 @@ Chẳng hạn: Một ống kính có tiêu cự $f = 50\text{ mm}$ và đường
 Cường độ sáng (năng lượng ánh sáng trên một đơn vị diện tích trong một đơn vị thời gian) hội tụ lên bề mặt cảm biến tỷ lệ thuận với diện tích thu sáng của lỗ mở, tức tỷ lệ với $D^2$. Đồng thời, kích thước ngang và kích thước dọc của ảnh đều tỷ lệ thuận với khoảng cách ảnh $s'$, và đối với vật ở xa thì $s' \approx f$. Do đó, diện tích mà năng lượng ánh sáng phân bố lên trên cảm biến tỷ lệ với $f^2$. Kết hợp hai yếu tố này, cường độ sáng $I$ trên cảm biến tỷ lệ với đại lượng $(D/f)^2$, tức tỷ lệ nghịch với bình phương của chỉ số f $N$:
 
 $$
-I &\propto \frac{D^2}{f^2} = \frac{1}{N^2}
+I \propto \frac{D^2}{f^2} = \frac{1}{N^2}
 $$
 
 ![Ống kính máy ảnh với màn chắn khẩu độ điều chỉnh được. Chỉ số f càng lớn thì khẩu độ mở càng nhỏ.](../img/young-34/hinh-34-42.png)
@@ -69,7 +69,7 @@ Chỉ số f càng lớn thì khẩu độ mở càng nhỏ, dẫn đến ánh s
 Tổng lượng phơi sáng $H$ (quang lượng trên một đơn vị diện tích bề mặt cảm biến) tỷ lệ thuận với cả diện tích khẩu độ và khoảng thời gian mở màn trập $\Delta t$:
 
 $$
-H &\propto I \Delta t \propto \frac{\Delta t}{N^2}
+H \propto I \Delta t \propto \frac{\Delta t}{N^2}
 $$
 
 Vì các giá trị f-stop chuẩn như $5{,}6$ là số làm tròn danh định của $4\sqrt{2} \approx 5{,}657$, các cặp cài đặt $(f/4, 1/500\text{ s})$, $(f/5{,}6, 1/250\text{ s})$ và $(f/8, 1/125\text{ s})$ tương đương nhau về mặt danh định (xấp xỉ gần đúng) về độ phơi sáng trên cảm biến.

@@ -87,11 +87,11 @@ i^2 =I^2\cos^2\omega t.
 $$
 
 $$
-\cos^2\omega t&=\frac12 +\frac12\cos2\omega t.
+\cos^2\omega t=\frac12 +\frac12\cos2\omega t.
 $$
 
 $$
-i^2&=\frac12I^2 +\frac12I^2\cos2\omega t.
+i^2=\frac12I^2 +\frac12I^2\cos2\omega t.
 $$
 
 Trung bình của cosin trên một số nguyên chu kỳ bằng không. Do đó trung bình bình phương là $I^2/2$, suy ra

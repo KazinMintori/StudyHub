@@ -25,7 +25,7 @@ $$
 (a) Trường tổng:
 
 $$
-E_{\rm net}(t)&=E\cos\omega t +E\cos(\omega t+\phi) +E\cos(\omega t-\phi).
+E_{\rm net}(t)=E\cos\omega t +E\cos(\omega t+\phi) +E\cos(\omega t-\phi).
 $$
 
 Hai số hạng ngoài cộng lại thành $2E\cos\omega t\cos\phi$, nên:

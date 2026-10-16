@@ -1,44 +1,48 @@
 ---
 title: "Hàm sóng lượng tử"
-wikiTerm: ham-song-luong-tu
+wikiTerm: "ham-song-luong-tu"
 prev: false
 next: false
 ---
 
 # Hàm sóng lượng tử
 
-Hàm sóng mô tả trạng thái lượng tử trong một biểu diễn. Với một hạt trong không gian, bình phương môđun hàm sóng cho mật độ xác suất tìm hạt.
+Hàm phức mô tả trạng thái của hệ trong một biểu diễn. Với một hạt một chiều, $|\Psi(x,t)|^2$ là mật độ xác suất vị trí khi trạng thái được chuẩn hóa.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Trong một chiều, $\int|\Psi|^2dx=1$ và $P(a\le x\le b)=\int_a^b|\Psi|^2dx$. Hàm sóng có thể phức; pha tương đối ảnh hưởng giao thoa dù pha tổng thể không đổi xác suất.
+Hàm sóng trong biểu diễn vị trí gán một biên độ phức cho mỗi tọa độ. Biên độ không phải là độ dịch chuyển của một môi trường cơ học. Những dự đoán quan sát được được rút ra bằng các quy tắc về toán tử và xác suất.
 
-Trạng thái dừng có pha thời gian nhưng mật độ xác suất giữ nguyên. Điều kiện biên của bài toán quyết định miền được phép và các mức năng lượng; không dùng cùng nghiệm cho hộp vô hạn và giếng hữu hạn.
+Trong một chiều, mật độ xác suất bằng $\rho=\Psi^*\Psi$. Nếu trạng thái chuẩn hóa được, tích phân mật độ trên toàn miền bằng một. Pha chung không đổi không làm thay đổi dự đoán, nhưng pha tương đối giữa các thành phần có thể tạo hoặc triệt giao thoa.
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 40. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Hàm sóng của một hạt có spin còn cần thông tin spin. Mô hình vô hướng ở đây dùng cho những tình huống một chiều chưa xét bậc tự do đó.
 
 ## Ví dụ
 
-Hàm sóng hộp một chiều có các nút nơi xác suất tìm hạt bằng không trong trạng thái đó.
+Hai hàm sóng khác nhau bởi một pha chung không đổi cho cùng phân bố xác suất vị trí.
 
 ## Khi nào cần dùng?
 
-Chuẩn hóa, tính xác suất và giải Schrödinger.
+Mô tả trạng thái, tính xác suất và xác định sự tiến triển theo phương trình Schrödinger.
 
 ## Câu hỏi ôn lại
 
-Có thể dùng trực tiếp hàm sóng làm xác suất không?
+Hàm sóng bằng số phức có khiến xác suất cũng là số phức không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Phải dùng bình phương môđun và tích phân trên miền cần xét.
+Không. Xác suất được tính từ bình phương môđun rồi tích phân trên miền, nên là số thực không âm.
 
 </details>
 
 ## Thuật ngữ liên quan
 
-- [Photon](./photon.md)
-- [Tích phân](./tich-phan.md)
-- [Nguyên lý loại trừ Pauli](./nguyen-ly-pauli.md)
+- [Mật độ xác suất lượng tử](./mat-do-xac-suat-luong-tu.md)
+- [Số phức trong hàm sóng](./so-phuc-trong-ham-song.md)
+- [Phương trình Schrödinger](./phuong-trinh-schrodinger.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 40, trang 1321–1350.

@@ -171,7 +171,7 @@ Nếu ta đổi mức cơ sở từ `east` sang `west` (đặt câu hỏi *"Nhà
 
 $$\widehat{\text{price}} = -17.43 + 2.87 \times \text{food} + 1.46 \times D_{\text{east}}$$
 
-Độ dốc của chất lượng đồ ăn hoàn toàn không đổi ($2.87$), nhưng hệ số của biến giả đổi dấu từ âm sang dương ($+1.46$), cho thấy việc ở bờ Đông làm giá tăng thêm $\$1.46$ so với bờ Tây.
+Độ dốc của chất lượng đồ ăn hoàn toàn không đổi ($2.87$), nhưng hệ số của biến giả đổi dấu từ âm sang dương ($+1.46$), cho thấy việc ở bờ Đông làm giá tăng thêm \$1.46 so với bờ Tây.
 
 ---
 
@@ -220,12 +220,12 @@ $$
 $$
 
 1. **Hệ số $b_{\text{food}} = 1.65$**:
-   - *Cách diễn giải chuẩn mực*: **Khi kiểm soát phong cách bài trí (`decor` giữ không đổi)**, cứ mỗi điểm tăng thêm trong chất lượng đồ ăn, giá bữa ăn dự kiến sẽ **tăng thêm $\$1.65$**.
-   - Nói cách khác: Nếu so sánh hai nhà hàng có không gian bài trí đẹp như nhau, nhà hàng có điểm đồ ăn cao hơn 1 điểm sẽ có giá đắt hơn trung bình $\$1.65$.
+   - *Cách diễn giải chuẩn mực*: **Khi kiểm soát phong cách bài trí (`decor` giữ không đổi)**, cứ mỗi điểm tăng thêm trong chất lượng đồ ăn, giá bữa ăn dự kiến sẽ **tăng thêm \$1.65**.
+   - Nói cách khác: Nếu so sánh hai nhà hàng có không gian bài trí đẹp như nhau, nhà hàng có điểm đồ ăn cao hơn 1 điểm sẽ có giá đắt hơn trung bình \$1.65.
 
 2. **Hệ số $b_{\text{decor}} = 1.88$**:
-   - *Cách diễn giải chuẩn mực*: **Khi kiểm soát chất lượng đồ ăn (`food` giữ không đổi)**, cứ mỗi điểm tăng thêm trong phong cách bài trí, giá bữa ăn dự kiến sẽ **tăng thêm $\$1.88$**.
-   - Bài học kinh tế thú vị: Tại Manhattan, việc đầu tư thêm một điểm bài trí không gian thậm chí còn đem lại mức tăng giá cao hơn (+$1.88$) so với việc cải thiện chất lượng món ăn (+$1.65$).
+   - *Cách diễn giải chuẩn mực*: **Khi kiểm soát chất lượng đồ ăn (`food` giữ không đổi)**, cứ mỗi điểm tăng thêm trong phong cách bài trí, giá bữa ăn dự kiến sẽ **tăng thêm \$1.88**.
+   - Bài học kinh tế thú vị: Tại Manhattan, việc đầu tư thêm một điểm bài trí không gian thậm chí còn đem lại mức tăng giá cao hơn (+\$1.88) so với việc cải thiện chất lượng món ăn (+\$1.65).
 
 ### So sánh với hồi quy đơn biến & Hiện tượng Biến gây nhiễu
 

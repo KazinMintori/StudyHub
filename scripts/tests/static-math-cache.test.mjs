@@ -34,6 +34,15 @@ test('numbered Physics equations share expressions and retain each tag',()=>{
  assert(a.includes('(31.1)')&&b.includes('(31.2)'))
  assert(!a.includes('\\tag'))
 })
+test('lettered Physics equation tags use the same separate label layout',()=>{
+ const {calls,render}=fixture(),env={relativePath:'vat-ly-2/bai-giang/test.md'}
+ const a=render('math_block','x=1\\tag{40.3a}',env)
+ const b=render('math_block','x=1\\tag{40.3b}',env)
+ assert.equal(calls.length,1)
+ assert(a.includes('static-math-numbered')&&b.includes('static-math-numbered'))
+ assert(a.includes('(40.3a)')&&b.includes('(40.3b)'))
+ assert(!a.includes('\\tag')&&!b.includes('\\tag'))
+})
 test('labelled expressions bypass the cache because references can change',()=>{
  const {calls,render}=fixture()
  for(let n=0;n<2;n++)render('math_block','x=1\\label{equation}')

@@ -4876,21 +4876,112 @@
           "page": 1347
         }
       ],
-      "status": "pending",
-      "fragments": [],
+      "status": "authored-under-review",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-40/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.1",
+          "file": "raw_materials/physics/translations/chapter-40/01-ham-song-schrodinger.md",
+          "destination": "topic:ham-song-schrodinger",
+          "printedPages": [
+            1321,
+            1331
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.2",
+          "file": "raw_materials/physics/translations/chapter-40/02-hat-trong-hop.md",
+          "destination": "topic:hat-trong-hop",
+          "printedPages": [
+            1331,
+            1336
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.3",
+          "file": "raw_materials/physics/translations/chapter-40/03-gieng-the.md",
+          "destination": "topic:gieng-the-huu-han",
+          "printedPages": [
+            1336,
+            1340
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.4",
+          "file": "raw_materials/physics/translations/chapter-40/04-hang-rao-xuyen-ham.md",
+          "destination": "topic:hang-rao-xuyen-ham",
+          "printedPages": [
+            1340,
+            1342
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.5",
+          "file": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
+          "destination": "topic:dao-dong-tu-dieu-hoa",
+          "printedPages": [
+            1343,
+            1347
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "40.6",
+          "file": "raw_materials/physics/translations/chapter-40/06-phep-do-luong-tu.md",
+          "destination": "topic:phep-do-luong-tu",
+          "printedPages": [
+            1347,
+            1350
+          ],
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-40/16-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "07-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-40/07-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "09-bai-tap-01-15",
+          "file": "raw_materials/physics/translations/chapter-40/09-bai-tap-01-15.md",
+          "destination": "bai-tap",
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "10-bai-tap-16-30",
+          "file": "raw_materials/physics/translations/chapter-40/10-bai-tap-16-30.md",
+          "destination": "bai-tap",
+          "status": "authored-under-review"
+        },
+        {
+          "sourceUnit": "11-bai-tap-31-35",
+          "file": "raw_materials/physics/translations/chapter-40/11-bai-tap-31-35.md",
+          "destination": "bai-tap",
+          "status": "authored-under-review"
+        }
+      ],
       "pendingSourceUnits": [
-        "chapter-opening",
-        "40.1",
-        "40.2",
-        "40.3",
-        "40.4",
-        "40.5",
-        "40.6",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
+        "end:08-cau-hoi-thao-luan.md",
+        "end:12-bai-tap-36-50.md",
+        "end:13-bai-tap-51-66.md",
+        "end:14-mcat.md",
+        "end:15-bai-tap-cau-noi.md",
+        "independent-source-numeric-and-browser-review"
       ]
     },
     {

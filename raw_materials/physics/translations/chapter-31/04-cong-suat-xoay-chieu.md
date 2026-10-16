@@ -83,13 +83,13 @@ $$
 Để lấy trung bình, khai triển công thức cosin tổng:
 
 $$
-\cos(\omega t+\phi) &=\cos\omega t\cos\phi -\sin\omega t\sin\phi.
+\cos(\omega t+\phi) =\cos\omega t\cos\phi -\sin\omega t\sin\phi.
 $$
 
 Suy ra
 
 $$
-p&=VI\cos\phi\cos^2\omega t -VI\sin\phi\sin\omega t\cos\omega t.
+p=VI\cos\phi\cos^2\omega t -VI\sin\phi\sin\omega t\cos\omega t.
 $$
 
 Trên một chu kỳ, trung bình $\cos^2\omega t$ bằng $1/2$. Vì tích sin với cos bằng một nửa $\sin2\omega t$, trung bình số hạng thứ hai bằng không. Do đó

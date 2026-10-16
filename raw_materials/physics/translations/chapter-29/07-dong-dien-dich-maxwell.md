@@ -44,7 +44,7 @@ $$
 Thông lượng điện biến thiên trong khe tụ đóng vai trò tương đương một dòng điện trong định luật Ampère. Ta cộng dòng dịch với dòng dẫn để được:
 
 $$
-\oint\vec B\cdot d\vec\ell&=\mu_0(i_C)_{\mathrm{encl}} +\mu_0(i_D)_{\mathrm{encl}}. \tag{29.15}
+\oint\vec B\cdot d\vec\ell=\mu_0(i_C)_{\mathrm{encl}} +\mu_0(i_D)_{\mathrm{encl}}. \tag{29.15}
 $$
 
 Với mặt phẳng, $i_D=0$. Với mặt cong qua khe tụ, $i_C=0$, còn dòng dịch bằng dòng dẫn của mặt phẳng. Vì vậy cả hai mặt cho cùng giá trị tích phân. Trong vật liệu từ, dạng này còn dùng được khi độ từ hóa tỉ lệ với trường ngoài, miễn là thay $\mu_0$ bằng $\mu$.
@@ -123,10 +123,7 @@ $$
 $$
 
 $$
-\begin{aligned}
-\oint\vec B\cdot d\vec\ell &= \mu_0\varepsilon_0 \\
-&\qquad\times\frac{d}{dt}\int_S\vec E\cdot d\vec A.
-\end{aligned} \tag{29.23}
+\oint\vec B\cdot d\vec\ell = \mu_0\varepsilon_0 \frac{d}{dt}\int_S\vec E\cdot d\vec A. \tag{29.23}
 $$
 
 Một trường biến thiên có thể sinh trường kia ở vùng lân cận. Hai trường biến thiên lan truyền qua không gian, kể cả nơi không có vật chất, tạo thành sóng điện từ. Ánh sáng, sóng radio và truyền hình, hồng ngoại, tử ngoại và tia X là các dạng sóng điện từ.

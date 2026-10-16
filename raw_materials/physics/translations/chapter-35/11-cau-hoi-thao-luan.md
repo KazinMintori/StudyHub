@@ -233,7 +233,7 @@ Khi dùng nguyên lý chồng chất để tính cường độ giao thoa, có t
 Với hai sóng cùng tần số, cùng phương phân cực:
 
 $$
-I&=I_1+I_2 +2\sqrt{I_1I_2}\cos\phi.
+I=I_1+I_2 +2\sqrt{I_1I_2}\cos\phi.
 $$
 
 Chỉ khi số hạng chéo bằng 0 hoặc trung bình bằng 0 mới có $I=I_1+I_2$. Nếu bỏ số hạng chéo cho nguồn kết hợp, sẽ bỏ chính sự tăng cường và triệt giảm tạo hệ vân.

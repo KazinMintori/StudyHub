@@ -2249,7 +2249,7 @@ print(f"Độ chính xác (Accuracy) trên tập hợp lệ: {dung}/{tong} = {ac
 
 #### Tình huống thực tế
 Bạn phụ trách xử lý 5,000 phản hồi đánh giá của khách hàng bằng mô hình ngôn ngữ lớn (LLM). Để đảm bảo tính chuyên nghiệp và kỷ luật kỹ thuật:
-1. **Dự toán ngân sách (FinOps)**: Trước khi kích hoạt đường ống xử lý, hãy viết hàm tính toán lượng token dự kiến cho prompt đầu vào và phản hồi đầu ra, tính tổng chi phí theo bảng giá API ($0.15\$$ / 1M input tokens, $0.60\$$ / 1M output tokens), và quy đổi sang VNĐ (tỷ giá 25,400 VNĐ/\$).
+1. **Dự toán ngân sách (FinOps)**: Trước khi kích hoạt đường ống xử lý, hãy viết hàm tính toán lượng token dự kiến cho prompt đầu vào và phản hồi đầu ra, tính tổng chi phí theo bảng giá API (\$0.15 / 1M input tokens, \$0.60 / 1M output tokens), và quy đổi sang VNĐ (tỷ giá 25,400 VNĐ/\$).
 2. **Hậu kiểm ngữ nghĩa tự động (Semantic Assertion)**: Mô hình trả về kết quả tuân thủ đúng Schema Pydantic, nhưng vẫn có thể chứa đựng các **mâu thuẫn ngữ nghĩa nội tại (Semantic Conflict)** mà schema không thể bắt được:
    - *Xung đột 1*: Khách hàng chấm điểm `rating >= 4` (hài lòng) nhưng LLM lại gán `sentiment = "negative"`.
    - *Xung đột 2*: Khách hàng chấm điểm `rating <= 2` (thất vọng) nhưng LLM lại gán `sentiment = "positive"`.

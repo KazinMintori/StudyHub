@@ -73,7 +73,7 @@ Nghiệm của phương trình vi phân tuyến tính thuần nhất bậc hai (
 Khi điện trở thuần thỏa mãn điều kiện $R^2 < 4L/C$, nghiệm tổng quát của phương trình (30.27) có dạng:
 
 $$
-q(t) &= A e^{-(R/2L)t} \times \cos(\omega' t + \phi) \tag{30.28}
+q(t) = A e^{-(R/2L)t} \times \cos(\omega' t + \phi) \tag{30.28}
 $$
 
 Các hằng số $A$ và $\phi$ được xác định từ điện tích và dòng ban đầu. $A$ là hệ số của bao biên độ ở mốc đầu, không nhất thiết bằng $q(0)$. Với $\alpha=R/(2L)$,

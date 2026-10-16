@@ -47,7 +47,7 @@ $$
 Đặt $D = \omega C Z$. Khi đưa $\omega C$ vào trong căn thức:
 
 $$
-D^2 &= (\omega C R)^2 + (\omega^2 L C - 1)^2.
+D^2 = (\omega C R)^2 + (\omega^2 L C - 1)^2.
 $$
 
 Biên độ điện áp đầu ra trên hai bản tụ điện là $V_{\mathrm{out}} = V_{\mathrm{in}} / D$:

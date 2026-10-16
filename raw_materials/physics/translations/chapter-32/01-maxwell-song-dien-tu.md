@@ -29,7 +29,7 @@ $$
 $$
 
 $$
-\oint \vec{B} \cdot d\vec{l} &= \mu_0 \big( i_{\text{C}} + \epsilon_0 \frac{d\Phi_E}{dt} \big)_{\text{encl}}. \tag{29.21}
+\oint \vec{B} \cdot d\vec{l} = \mu_0 \big( i_{\text{C}} + \epsilon_0 \frac{d\Phi_E}{dt} \big)_{\text{encl}}. \tag{29.21}
 $$
 
 Các tích phân Gauss được lấy trên mặt kín, với pháp tuyến hướng ra ngoài. $Q_{\text{encl}}$ là điện tích bên trong mặt đó. Hai tích phân lưu thông được lấy trên đường kín, với chiều đường và pháp tuyến mặt căng tuân quy tắc bàn tay phải. $\Phi_E$ và $\Phi_B$ là thông lượng qua mặt căng, còn $i_{\mathrm C}$ là dòng dẫn xuyên mặt.

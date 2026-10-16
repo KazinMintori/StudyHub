@@ -57,13 +57,13 @@ $$
 Ta thu được phương trình của điện trường trong sóng dừng điện từ:
 
 $$
-E_y(x, t) &= -2E_{\max} \times \sin kx \sin \omega t \tag{32.34}
+E_y(x, t) = -2E_{\max} \times \sin kx \sin \omega t \tag{32.34}
 $$
 
 Phương trình của từ trường trong sóng dừng điện từ là:
 
 $$
-B_z(x, t) &= -2B_{\max} \times \cos kx \cos \omega t \tag{32.35}
+B_z(x, t) = -2B_{\max} \times \cos kx \cos \omega t \tag{32.35}
 $$
 
 Biểu thức của điện trường cho thấy tại các mặt phẳng vuông góc với trục $x$ mà $\sin kx = 0$, điện trường luôn triệt tiêu ở mọi thời điểm. Điều kiện $\sin kx = 0$ tương ứng với $kx = 0, \pi, 2\pi, \dots$ Vì số sóng $k = 2\pi/\lambda$, tọa độ của các mặt phẳng nút điện trường là:
@@ -141,7 +141,7 @@ $$
 Áp dụng hệ thức $\sin 2A = 2 \sin A \cos A$:
 
 $$
-S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \times \sin 2kx \sin 2\omega t
+S_x(x, t) = \frac{E_{\max} B_{\max}}{\mu_0} \times \sin 2kx \sin 2\omega t
 $$
 
 Giá trị trung bình theo thời gian của hàm sin trong một hoặc nhiều chu kỳ nguyên vẹn luôn bằng không: $\langle \sin 2\omega t \rangle = 0$. Do đó, vector Poynting trung bình theo thời gian bằng không tại mọi điểm: $\langle \vec{S}(x, t) \rangle = \vec{0}$, kéo theo cường độ bức xạ triệt tiêu:

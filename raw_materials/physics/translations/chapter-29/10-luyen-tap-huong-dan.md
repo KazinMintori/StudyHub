@@ -89,13 +89,13 @@ $$
 Một cuộn dây vuông cạnh $4{,}00\,\mathrm{cm}$, gồm 875 vòng, nằm trong mặt phẳng $xy$. Từ trường đều biến đổi với tốc độ không đổi từ
 
 $$
-\vec B(0)&=(0{,}200\,\mathrm T)\hat{\imath} +(0{,}150\,\mathrm T)\hat{k}
+\vec B(0)=(0{,}200\,\mathrm T)\hat{\imath} +(0{,}150\,\mathrm T)\hat{k}
 $$
 
 đến
 
 $$
-\vec B(3{,}00\,\mathrm s)&=(0{,}300\,\mathrm T)\hat{\imath} -(0{,}200\,\mathrm T)\hat{k}.
+\vec B(3{,}00\,\mathrm s)=(0{,}300\,\mathrm T)\hat{\imath} -(0{,}200\,\mathrm T)\hat{k}.
 $$
 
 Tại $t=2{,}00\,\mathrm s$, tìm (a) độ lớn suất điện động cảm ứng và (b) chiều dòng điện khi nhìn từ một điểm trên trục $+z$.
@@ -219,13 +219,13 @@ Dòng điện chạy theo chiều kim đồng hồ. Trên thanh chuyển động
 Một thanh dẫn cô lập dài $8{,}00\,\mathrm{cm}$ song song trục $x$. Tại $t=0$, đầu $a$ ở gốc tọa độ, đầu $b$ ở $x=8{,}00\,\mathrm{cm}$, $y=z=0$. Thanh chuyển động với vận tốc không đổi
 
 $$
-\vec v&=(1{,}50\,\mathrm{m/s})\hat{\imath} +(2{,}00\,\mathrm{m/s})\hat{\jmath}
+\vec v=(1{,}50\,\mathrm{m/s})\hat{\imath} +(2{,}00\,\mathrm{m/s})\hat{\jmath}
 $$
 
 trong từ trường đều
 
 $$
-\vec B&=-(0{,}120\,\mathrm T)\hat{\imath} +(0{,}150\,\mathrm T)\hat{k}.
+\vec B=-(0{,}120\,\mathrm T)\hat{\imath} +(0{,}150\,\mathrm T)\hat{k}.
 $$
 
 (a) Tìm độ lớn suất điện động cảm ứng trong thanh.

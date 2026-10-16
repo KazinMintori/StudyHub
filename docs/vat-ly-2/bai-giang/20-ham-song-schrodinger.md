@@ -1,29 +1,40 @@
 ---
-course: vat-ly-2
-lecture: 20-ham-song-schrodinger
-section: lecture
+course: "vat-ly-2"
+lecture: "20-ham-song-schrodinger"
+section: "lecture"
 title: "Cơ học lượng tử I: Hàm sóng"
-prerequisites: ["tich-phan","dao-ham","photon"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Cơ học lượng tử I: Hàm sóng."
+prerequisites: ["dao-ham","dao-ham-rieng","tich-phan","song","dao-dong-dieu-hoa","cong-nang-luong","dong-luong-vat-ly","photon","buoc-song-de-broglie"]
+lessonStatus: "draft"
+hasChapterExercises: true
+description: "Hàm sóng, phương trình Schrödinger một chiều, hạt trong hộp, giếng hữu hạn, xuyên hầm, dao động tử và phép đo."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 40.1 — Wave Functions and the One-Dimensional Schrödinger Equation (từ trang 1321).
-- 40.2 — Particle in a Box (từ trang 1331).
-- 40.3 — Potential Wells (từ trang 1336).
-- 40.4 — Potential Barriers and Tunneling (từ trang 1340).
-- 40.5 — The Harmonic Oscillator (từ trang 1343).
-- 40.6 — Measurement in Quantum Mechanics (từ trang 1347).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/16-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 40, trang 1321–1359.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Hàm sóng">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/07-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/09-bai-tap-01-15.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/10-bai-tap-16-30.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-40/11-bai-tap-31-35.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 40, trang 1351–1359.
+
+</div>

@@ -2025,16 +2025,88 @@ export const physics2Course = {
       "slug": "20-ham-song-schrodinger",
       "title": "Cơ học lượng tử I: Hàm sóng",
       "prerequisites": [
-        "tich-phan",
         "dao-ham",
-        "photon"
+        "dao-ham-rieng",
+        "tich-phan",
+        "song",
+        "dao-dong-dieu-hoa",
+        "cong-nang-luong",
+        "dong-luong-vat-ly",
+        "photon",
+        "buoc-song-de-broglie"
       ],
       "supportingConcepts": [
-        "ham-song-luong-tu"
+        "ham-song-luong-tu",
+        "mat-do-xac-suat-luong-tu",
+        "chuan-hoa-ham-song",
+        "so-phuc-trong-ham-song",
+        "phuong-trinh-schrodinger",
+        "chong-chap-ham-song",
+        "goi-song-luong-tu",
+        "trang-thai-dung-luong-tu",
+        "dieu-kien-bien-ham-song",
+        "hat-trong-hop-luong-tu",
+        "gieng-the-huu-han",
+        "trang-thai-lien-ket-luong-tu",
+        "xuyen-ham-luong-tu",
+        "dao-dong-tu-dieu-hoa-luong-tu",
+        "nang-luong-diem-khong",
+        "phep-do-luong-tu",
+        "cham-luong-tu",
+        "kinh-hien-vi-quet-xuyen-ham"
       ],
       "status": "draft",
       "number": 20,
-      "sourceChapter": 40
+      "sourceChapter": 40,
+      "topicGroups": [
+        {
+          "title": "Hàm sóng và sự giam giữ",
+          "topics": [
+            {
+              "slug": "ham-song-schrodinger",
+              "title": "Hàm sóng và phương trình Schrödinger",
+              "question": "Biên độ phức mô tả trạng thái và xác suất như thế nào?",
+              "source": "40.1"
+            },
+            {
+              "slug": "hat-trong-hop",
+              "title": "Hạt trong hộp vô hạn",
+              "question": "Hai vách giới hạn các bước sóng và năng lượng ra sao?",
+              "source": "40.2"
+            },
+            {
+              "slug": "gieng-the-huu-han",
+              "title": "Giếng thế hữu hạn",
+              "question": "Điều gì thay đổi khi hàm sóng có thể thâm nhập ra ngoài giếng?",
+              "source": "40.3"
+            }
+          ]
+        },
+        {
+          "title": "Xuyên hầm, dao động và phép đo",
+          "topics": [
+            {
+              "slug": "hang-rao-xuyen-ham",
+              "title": "Hàng rào thế và xuyên hầm",
+              "question": "Hạt đi qua miền bị cấm cổ điển với xác suất nào?",
+              "source": "40.4"
+            },
+            {
+              "slug": "dao-dong-tu-dieu-hoa",
+              "title": "Dao động tử điều hòa",
+              "question": "Điều kiện ở vô cực chọn các mức dao động như thế nào?",
+              "source": "40.5"
+            },
+            {
+              "slug": "phep-do-luong-tu",
+              "title": "Phép đo trong cơ học lượng tử",
+              "question": "Kết quả đo liên hệ với trạng thái trước và sau phép đo ra sao?",
+              "source": "40.6"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "21-cau-truc-nguyen-tu",
@@ -4043,6 +4115,126 @@ export const physics2Course = {
         "Thời gian sống ngắn đi cùng thang độ rộng năng lượng lớn hơn."
       ],
       "formula": "$$\n\\begin{aligned}\\Delta x\\,\\Delta p_x&\\ge\\hbar/2\\\\\\Delta t\\,\\Delta E&\\ge\\hbar/2.\\end{aligned}\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Hàm sóng cho mật độ, tích phân cho xác suất",
+      "bullets": [
+        "Hàm sóng có thể phức.",
+        "Xác suất trên một khoảng là tích phân bình phương môđun.",
+        "Một điểm đơn lẻ của phân bố liên tục có xác suất bằng không."
+      ],
+      "formula": "$$\n\\rho=\\Psi^*\\Psi.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Chồng biên độ trước khi tính xác suất",
+      "bullets": [
+        "Tính tuyến tính cho phép chồng các nghiệm của cùng phương trình.",
+        "Pha tương đối tạo những số hạng giao thoa.",
+        "Một gói định xứ cần một phổ số sóng thích hợp."
+      ],
+      "formula": "$$\n\\Psi=C\\Psi_1+D\\Psi_2.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Sóng vật chất phi tương đối tính có tán sắc",
+      "bullets": [
+        "Tần số góc tỉ lệ bình phương số sóng.",
+        "Vận tốc pha khác vận tốc nhóm.",
+        "Gói sóng tự do có thể trải rộng theo thời gian."
+      ],
+      "formula": "$$\n\\omega=\\frac{\\hbar k^2}{2m}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Phương trình Schrödinger cần một mô hình cụ thể",
+      "bullets": [
+        "Hamiltonian chứa động năng và thế năng.",
+        "Miền và điều kiện biên là một phần của bài toán.",
+        "Một nghiệm phương trình vi phân chưa chắc là trạng thái vật lý."
+      ],
+      "formula": "$$\ni\\hbar\\frac{\\partial\\Psi}{\\partial t}=\\hat H\\Psi.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Trạng thái dừng có mật độ không đổi",
+      "bullets": [
+        "Thế năng không phụ thuộc thời gian.",
+        "Một trạng thái riêng năng lượng chỉ nhận pha chung theo thời gian.",
+        "Năng lượng xác định không bảo đảm động lượng xác định."
+      ],
+      "formula": "$$\n\\Psi(x,t)=\\psi(x)e^{-iEt/\\hbar}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Hai vách tạo lượng tử hóa trong hộp",
+      "bullets": [
+        "Hàm sóng bằng không tại hai đầu.",
+        "Số lượng tử bắt đầu từ một.",
+        "Khoảng cách mức tăng theo số lượng tử."
+      ],
+      "formula": "$$\nE_n=\\frac{n^2\\pi^2\\hbar^2}{2mL^2}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Chuẩn hóa bao gồm toàn miền",
+      "bullets": [
+        "Biên độ lượng tử được ràng buộc bởi xác suất toàn phần.",
+        "Nút có mật độ bằng không.",
+        "Các khoảng bằng nhau không nhất thiết đồng xác suất."
+      ],
+      "formula": "$$\n\\int_{-\\infty}^{\\infty}|\\psi|^2\\,dx=1.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Giếng hữu hạn có đuôi xác suất",
+      "bullets": [
+        "Nghiệm bên trong dao động, bên ngoài suy giảm.",
+        "Nối hàm và đạo hàm tại bước thế hữu hạn.",
+        "Liên kết yếu tạo đuôi dài và số mức liên kết là hữu hạn."
+      ],
+      "formula": "$$\n\\kappa=\\frac{\\sqrt{2m(U_0-E)}}{\\hbar}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Xuyên hầm nhạy với độ rộng hàng rào",
+      "bullets": [
+        "Truyền qua không đồng nghĩa tiêu hao cơ năng trong thế tĩnh.",
+        "Công thức gần đúng cần hệ số truyền rất nhỏ.",
+        "Sự phụ thuộc hàm mũ giải thích độ nhạy của STM."
+      ],
+      "formula": "$$\nT\\approx Ge^{-2\\kappa L}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Dao động tử có các mức cách đều",
+      "bullets": [
+        "Số lượng tử bắt đầu từ không.",
+        "Mức cơ bản cao hơn đáy parabol.",
+        "Gần cân bằng bền, một thế năng thực có thể gần parabol."
+      ],
+      "formula": "$$\nE_n=\\left(n+\\frac12\\right)\\hbar\\omega.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Gaussian cơ bản đạt giới hạn bất định",
+      "bullets": [
+        "Hàm sóng cơ bản không phải một hạt đứng yên ở tâm.",
+        "Độ lệch chuẩn khác biên độ cổ điển.",
+        "Hàm sóng còn kéo dài ra miền ngoài biên độ cổ điển."
+      ],
+      "formula": "$$\n\\Delta x\\,\\Delta p_x=\\frac{\\hbar}{2}.\n$$"
+    },
+    {
+      "note": "20-ham-song-schrodinger",
+      "title": "Kết quả từng lần khác trung bình thống kê",
+      "bullets": [
+        "Đo năng lượng của chồng chập cho một trong các mức được phép.",
+        "Xác suất phụ thuộc hệ số đã chuẩn hóa.",
+        "Một phép đo lý tưởng trên trạng thái riêng phù hợp có thể giữ nguyên trạng thái."
+      ],
+      "formula": "$$\n\\langle E\\rangle=|C|^2E_1+|D|^2E_2.\n$$"
     }
   ],
   "illustration": "field",

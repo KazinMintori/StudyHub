@@ -1,3 +1,4 @@
+import {quantumWaveCheatsheet} from '../../../../docs/.vitepress/physics-quantum-wave-course.mjs'
 import {matterWavesCheatsheet} from '../../../../docs/.vitepress/physics-matter-waves-course.mjs'
 import {photonCheatsheet} from '../../../../docs/.vitepress/physics-photon-course.mjs'
 import {relativityCheatsheet} from '../../../../docs/.vitepress/physics-relativity-course.mjs'
@@ -24,6 +25,7 @@ import { mathAiReviewCheatsheet } from '../../../content/courses/toan-cho-ai/lec
 
 export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/17-thuyet-tuong-doi': relativityCheatsheet, 'vat-ly-2/16-nhieu-xa': diffractionCheatsheet, 'vat-ly-2/15-giao-thoa': interferenceCheatsheet, 'vat-ly-2/14-quang-hinh-hoc': geometricOpticsCheatsheet, 'vat-ly-2/13-truyen-anh-sang': opticsCheatsheet, 'vat-ly-2/12-song-dien-tu': emWaveCheatsheet, 'vat-ly-2/11-dong-dien-xoay-chieu': acCheatsheet, 'vat-ly-2/10-tu-cam': inductanceCheatsheet, 'vat-ly-2/09-cam-ung-dien-tu': inductionCheatsheet, 'vat-ly-2/08-nguon-tu-truong': sourcesCheatsheet, 'vat-ly-2/07-tu-truong-luc-tu': magneticCheatsheet, 'vat-ly-2/06-mach-dien-mot-chieu': dcCheatsheet, 'vat-ly-2/05-dong-dien-dien-tro': currentCheatsheet, 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet,
   'vat-ly-2/19-song-vat-chat': matterWavesCheatsheet,
+  'vat-ly-2/20-ham-song-schrodinger': quantumWaveCheatsheet,
 }
 
 export function getLectureCheatsheet(course, lesson) {

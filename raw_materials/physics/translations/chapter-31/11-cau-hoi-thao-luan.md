@@ -309,7 +309,7 @@ Trong một mạch điện xoay chiều RLC mắc nối tiếp, điện áp tứ
 Theo định luật Kirchhoff, tại mỗi thời điểm tức thời $t$, tổng đại số điện áp trên từng phần tử nối tiếp luôn bằng điện áp tức thời của nguồn:
 
 $$
-v(t) &= v_R(t) + v_L(t) + v_C(t).
+v(t) = v_R(t) + v_L(t) + v_C(t).
 $$
 
 (a) Đối với tụ điện và cuộn cảm: Điện áp tức thời trên tụ điện hoặc trên cuộn cảm hoàn toàn có thể vượt quá điện áp tức thời của nguồn.
@@ -327,7 +327,7 @@ $$
 Tổng tức thời của chúng là:
 
 $$
-v_L(t) &+ v_C(t) = (V_C - V_L)\sin(\omega t).
+v_L(t) + v_C(t) = (V_C - V_L)\sin(\omega t).
 $$
 
 Tại những thời điểm điện áp nguồn bằng không ($v(t) = 0$), nếu dòng điện trong mạch khác không thì các điện áp tức thời $v_L(t)$ và $v_C(t)$ vẫn khác không và có thể có độ lớn rất lớn. Khi đó $|v_L(t)| > |v(t)| = 0$ và $|v_C(t)| > |v(t)| = 0$. Đặc biệt, chỉ khi mạch ở trạng thái cộng hưởng chính xác ($X_L = X_C$), biên độ điện áp trên cuộn cảm và trên tụ điện mới bằng nhau, $V_L = V_C$. Nếu ở tần số này mà cảm kháng lớn hơn nhiều so với điện trở ($X_L = X_C \gg R$), biên độ điện áp $V_L$ và $V_C$ có thể lớn gấp nhiều lần biên độ nguồn $V$.

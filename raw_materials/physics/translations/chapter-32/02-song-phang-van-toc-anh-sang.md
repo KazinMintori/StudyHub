@@ -164,7 +164,7 @@ E_{\mathrm R} &= E_y(x+\Delta x,t).
 $$
 
 $$
-\oint\vec E\cdot d\vec l &=a(E_{\mathrm R}-E_{\mathrm L}). \tag{32.11}
+\oint\vec E\cdot d\vec l =a(E_{\mathrm R}-E_{\mathrm L}). \tag{32.11}
 $$
 
 Các chỉ số L và R biểu thị cạnh trái và cạnh phải của khung. Từ thông qua khung là $\Phi_B \approx B_z(x,t) a \Delta x$. Khi lấy đạo hàm theo thời gian, Faraday cho $a(E_{\mathrm R}-E_{\mathrm L})=-a\Delta x\,\partial B_z/\partial t$. Chia cho $a\Delta x$, ta có:
@@ -194,13 +194,13 @@ B_{\mathrm R} &= B_z(x+\Delta x,t).
 $$
 
 $$
-\oint\vec B\cdot d\vec l &=-a(B_{\mathrm R}-B_{\mathrm L}). \tag{32.13}
+\oint\vec B\cdot d\vec l =-a(B_{\mathrm R}-B_{\mathrm L}). \tag{32.13}
 $$
 
 Tốc độ biến thiên điện thông qua khung là $d\Phi_E/dt \approx (\partial E_y/\partial t) a \Delta x$. Ampère–Maxwell cho $-a(B_{\mathrm R}-B_{\mathrm L})=\epsilon_0\mu_0a\Delta x\,\partial E_y/\partial t$. Chia cho $a\Delta x$ và cho $\Delta x\to0$, ta thu được phương trình đạo hàm riêng thứ hai:
 
 $$
--\frac{\partial B_z}{\partial x} &= \epsilon_0 \mu_0 \times \frac{\partial E_y}{\partial t}. \tag{32.14}
+-\frac{\partial B_z}{\partial x} = \epsilon_0 \mu_0 \times \frac{\partial E_y}{\partial t}. \tag{32.14}
 $$
 
 Bây giờ ta thực hiện bước kết hợp quyết định: Lấy đạo hàm riêng theo $x$ đối với cả hai vế của phương trình (32.12), và lấy đạo hàm riêng theo $t$ đối với cả hai vế của phương trình (32.14):

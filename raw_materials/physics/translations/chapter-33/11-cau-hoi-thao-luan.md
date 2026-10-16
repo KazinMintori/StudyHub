@@ -213,7 +213,7 @@ Tại mặt phân cách giữa hai môi trường, góc khúc xạ phụ thuộc
 Ngược lại, Snell cho:
 
 $$
-n_a(\lambda)\sin\theta_a &=n_b(\lambda)\sin\theta_b.
+n_a(\lambda)\sin\theta_a =n_b(\lambda)\sin\theta_b.
 $$
 
 Nếu tỉ số hai chiết suất thay đổi theo bước sóng, góc khúc xạ cũng thay đổi. Đó là cơ sở của sự tách màu do tán sắc.
