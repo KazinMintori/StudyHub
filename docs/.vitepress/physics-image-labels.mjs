@@ -1,3 +1,8 @@
+import {physics41ParentImageAnnotations} from './physics41-parent-image-annotations.mjs'
+import {physics41ExercisesCImageAnnotations} from './physics41-exercises-c-image-annotations.mjs'
+import {physics41ExercisesDImageAnnotations} from './physics41-exercises-d-image-annotations.mjs'
+import {physics41TheoryAImageAnnotations} from './physics41-theory-a-image-annotations.mjs'
+import {physics41TheoryBImageAnnotations} from './physics41-theory-b-image-annotations.mjs'
 import {physics40ParentImageAnnotations} from './physics40-parent-image-annotations.mjs'
 import {physics40ExercisesCImageAnnotations} from './physics40-exercises-c-image-annotations.mjs'
 import {physics40ExercisesDImageAnnotations} from './physics40-exercises-d-image-annotations.mjs'
@@ -191,6 +196,7 @@ const originalLabels={
 export const physicsImageLabels={
  ...physics40ExercisesCImageAnnotations,
  ...physics40ExercisesDImageAnnotations,
+ ...physics41ParentImageAnnotations,...physics41TheoryAImageAnnotations,...physics41TheoryBImageAnnotations,...physics41ExercisesCImageAnnotations,...physics41ExercisesDImageAnnotations,
  ...physics40ParentImageAnnotations,...physics40TheoryAImageAnnotations,...physics40TheoryBImageAnnotations,
  ...physics30ExerciseImageAnnotations,...physics30TheoryAImageAnnotations,...physics30TheoryBImageAnnotations,
  ...physics31TheoryImageAnnotations,

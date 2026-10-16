@@ -178,4 +178,14 @@ Bảy bộ Python, đối chiếu pixel, cấu trúc toàn bộ môn và 143 lư
 
 Tab Bài tập chứa 70 bài đánh số, 27 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 110 lời giải gập với Tóm tắt đề bài và Hướng đi có lý do. Có 12 Slides, bảy nhóm Cheatsheet gồm 31 mục và 18 mục Wiki được liên kết, trong đó 17 mục mới.
 
-Bảy bộ tính Python, kiểm tra toàn bộ ảnh và 140 lượt trình duyệt đã qua, gồm 12 lần thay đổi kích thước trực tiếp. Các sửa sai về giếng rất nông, động lượng, năng lượng cơ bản cổ điển, ghép vạch phổ, WKB và hệ số công thức được ghi trong hồ sơ đối chiếu riêng. Quy tắc CSS chung không còn tạo vùng cuộn toán trong Wiki. Chưa chứng nhận toàn bộ hai môn đã hoàn tất. Các chương 41–44 và phần lớn Vật lý 1 vẫn cần tiếp tục. Build toàn cục chỉ chạy trên GitHub Actions.
+Bảy bộ tính Python, kiểm tra toàn bộ ảnh và 140 lượt trình duyệt đã qua, gồm 12 lần thay đổi kích thước trực tiếp. Các sửa sai về giếng rất nông, động lượng, năng lượng cơ bản cổ điển, ghép vạch phổ, WKB và hệ số công thức được ghi trong hồ sơ đối chiếu riêng. Quy tắc CSS chung không còn tạo vùng cuộn toán trong Wiki. Chưa chứng nhận toàn bộ hai môn đã hoàn tất. Build toàn cục chỉ chạy trên GitHub Actions.
+
+## Chương 41
+
+Đã hoàn tất tám chủ đề về cấu trúc nguyên tử, 11 ví dụ, tám câu tự kiểm và 52 số công thức với 60 nhãn. Có 40 PNG giữ nguyên vùng PDF và 20 SVG bổ trợ lời giải. Chú thích tiếng Việt giải nghĩa các nhãn tiếng Anh một lần, giữ đủ các phần của hình.
+
+Tab Bài tập có 73 bài đánh số, 25 câu thảo luận, 12 bài biến thể và một bài cầu nối, tổng cộng 111 lời giải gập. Ví dụ giảng dạy và câu hỏi ngay trong lý thuyết vẫn ở Notes. Có 12 Slides, tám nhóm Cheatsheet với 39 mục chỉ chứa định nghĩa, tính chất và công thức, cùng 20 mục Wiki được liên kết, gồm 18 trang mới.
+
+Sáu bộ Python, đối chiếu điểm ảnh và 160 lượt trình duyệt chính đã qua, gồm lý thuyết, thẻ ôn tập, Wiki và tám nhóm bài tập mở đủ lời giải tại 320–1440 px. Công thức được sửa trong nội dung, không thu nhỏ hay tạo thanh cuộn. Các sai khác số học, dữ kiện, giả thiết, tiểu câu hỏi và quy tắc chọn lọc được lưu trong hồ sơ riêng.
+
+Tác vụ chính tự rà và sửa các bản Antigravity sau khi cầu nối mất trạng thái hoặc báo lỗi, không nhận báo cáo tự chấm làm bằng chứng hoàn tất. Những bản chụp và worktree được giữ. Chương 42–44 và phần lớn Vật lý 1 còn cần tiếp tục. Build và triển khai toàn cục chỉ chạy trên GitHub Actions.

@@ -5058,24 +5058,151 @@
           "page": 1395
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "41.1",
-        "41.2",
-        "41.3",
-        "41.4",
-        "41.5",
-        "41.6",
-        "41.7",
-        "41.8",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "chapter-opening",
+          "file": "raw_materials/physics/translations/chapter-41/00-mo-dau.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.1",
+          "file": "raw_materials/physics/translations/chapter-41/01-schrodinger-ba-chieu.md",
+          "destination": "topic:schrodinger-ba-chieu",
+          "printedPages": [
+            1360,
+            1362
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.2",
+          "file": "raw_materials/physics/translations/chapter-41/02-hop-ba-chieu.md",
+          "destination": "topic:hop-ba-chieu",
+          "printedPages": [
+            1362,
+            1367
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.3",
+          "file": "raw_materials/physics/translations/chapter-41/03-nguyen-tu-hydro.md",
+          "destination": "topic:nguyen-tu-hydro",
+          "printedPages": [
+            1367,
+            1375
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.4",
+          "file": "raw_materials/physics/translations/chapter-41/04-hieu-ung-zeeman.md",
+          "destination": "topic:hieu-ung-zeeman",
+          "printedPages": [
+            1375,
+            1378
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.5",
+          "file": "raw_materials/physics/translations/chapter-41/05-spin-electron.md",
+          "destination": "topic:spin-electron",
+          "printedPages": [
+            1378,
+            1385
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.6",
+          "file": "raw_materials/physics/translations/chapter-41/06-nguyen-tu-nhieu-electron.md",
+          "destination": "topic:nguyen-tu-nhieu-electron",
+          "printedPages": [
+            1385,
+            1392
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.7",
+          "file": "raw_materials/physics/translations/chapter-41/07-pho-tia-x.md",
+          "destination": "topic:pho-tia-x",
+          "printedPages": [
+            1392,
+            1395
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "41.8",
+          "file": "raw_materials/physics/translations/chapter-41/08-roi-luong-tu.md",
+          "destination": "topic:roi-luong-tu",
+          "printedPages": [
+            1395,
+            1398
+          ],
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "chapter-summary",
+          "file": "raw_materials/physics/translations/chapter-41/17-tom-tat.md",
+          "destination": "notes",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-41/09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-41/10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "11-bai-tap-01-22",
+          "file": "raw_materials/physics/translations/chapter-41/11-bai-tap-01-22.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "12-bai-tap-23-38",
+          "file": "raw_materials/physics/translations/chapter-41/12-bai-tap-23-38.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "13-bai-tap-39-54",
+          "file": "raw_materials/physics/translations/chapter-41/13-bai-tap-39-54.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "14-bai-tap-55-69",
+          "file": "raw_materials/physics/translations/chapter-41/14-bai-tap-55-69.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "15-mcat",
+          "file": "raw_materials/physics/translations/chapter-41/15-mcat.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        },
+        {
+          "sourceUnit": "16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-41/16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "authored-source-reviewed"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-41-review.json"
     },
     {
       "chapter": 42,

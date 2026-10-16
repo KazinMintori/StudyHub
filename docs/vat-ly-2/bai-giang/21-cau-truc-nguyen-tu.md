@@ -1,31 +1,48 @@
 ---
-course: vat-ly-2
-lecture: 21-cau-truc-nguyen-tu
-section: lecture
+course: "vat-ly-2"
+lecture: "21-cau-truc-nguyen-tu"
+section: "lecture"
 title: "Cơ học lượng tử II: Cấu trúc nguyên tử"
-prerequisites: ["ham-song-luong-tu","photon","tu-truong"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Cơ học lượng tử II: Cấu trúc nguyên tử."
+prerequisites: ["dao-ham-rieng","tich-phan","ham-song-luong-tu","phuong-trinh-schrodinger","hat-trong-hop-luong-tu","dao-dong-tu-dieu-hoa-luong-tu","phep-do-luong-tu","dinh-luat-gauss","luong-cuc-tu","song-dung-dien-tu","mo-hinh-bohr","photon"]
+lessonStatus: "ready"
+hasChapterExercises: true
+description: "Phương trình ba chiều, hộp lượng tử, hydro, Zeeman, spin, Pauli, phổ tia X và rối lượng tử."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 41.1 — The Schrödinger Equation in Three Dimensions (từ trang 1360).
-- 41.2 — Particle in a Three-Dimensional Box (từ trang 1362).
-- 41.3 — The Hydrogen Atom (từ trang 1367).
-- 41.4 — The Zeeman Effect (từ trang 1375).
-- 41.5 — Electron Spin (từ trang 1378).
-- 41.6 — Many-Electron Atoms and the Exclusion Principle (từ trang 1385).
-- 41.7 — X-Ray Spectra (từ trang 1392).
-- 41.8 — Quantum Entanglement (từ trang 1395).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41, trang 1360–1407.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Cấu trúc nguyên tử">
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/09-luyen-tap-huong-dan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/10-cau-hoi-thao-luan.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/11-bai-tap-01-22.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/12-bai-tap-23-38.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/13-bai-tap-39-54.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/14-bai-tap-55-69.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/15-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-41/16-bai-tap-cau-noi.md-->
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41, trang 1400–1407.
+
+</div>

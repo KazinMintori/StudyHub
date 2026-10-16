@@ -1,3 +1,4 @@
+import {atomicStructureConcepts,atomicStructureWikiDetails,atomicStructureWikiConnections} from './physics-atomic-structure-foundations.mjs'
 import {quantumWaveConcepts,quantumWaveWikiDetails,quantumWaveWikiConnections} from './physics-quantum-wave-foundations.mjs'
 import {matterWavesConcepts,matterWavesWikiDetails,matterWavesWikiConnections} from './physics-matter-waves-foundations.mjs'
 import {photonConcepts,photonWikiDetails,photonWikiConnections} from './physics-photon-foundations.mjs'
@@ -339,6 +340,7 @@ export const physicsConcepts = {
   ...emWaveConcepts,
   ...opticsConcepts,
   ...quantumWaveConcepts,
+  ...atomicStructureConcepts,
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -388,6 +390,7 @@ export const physicsWikiDetails = {
   ...emWaveWikiDetails,
   ...opticsWikiDetails,
   ...quantumWaveWikiDetails,
+  ...atomicStructureWikiDetails,
 }
 
 export const physicsWikiConnections = {
@@ -526,4 +529,5 @@ export const physicsWikiConnections = {
   ...emWaveWikiConnections,
   ...opticsWikiConnections,
   ...quantumWaveWikiConnections,
+  ...atomicStructureWikiConnections,
 }

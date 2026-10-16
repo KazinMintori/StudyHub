@@ -1,44 +1,54 @@
 ---
 title: "Spin lượng tử"
-wikiTerm: spin-luong-tu
+wikiTerm: "spin-luong-tu"
 prev: false
 next: false
 ---
 
 # Spin lượng tử
 
-Spin là mômen động lượng nội tại của hạt. Electron có số lượng tử spin một nửa và hai giá trị thành phần spin trên một trục đo.
+Mômen động lượng nội tại của hạt. Electron có số lượng tử spin bằng 1/2, nên phép đo hình chiếu cho một trong hai giá trị đối nhau.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Với electron, $s=1/2$, $m_s=\pm1/2$ và thành phần $S_z=m_s\hbar$. Độ lớn mômen spin liên hệ $\sqrt{s(s+1)}\hbar$, khác chỉ độ lớn thành phần trên trục.
+Spin là mômen động lượng nội tại của hạt. Với số lượng tử spin s, độ lớn và một hình chiếu có dạng:
 
-Không thể nói mọi thành phần spin theo các trục đều sắc nét trong cùng một trạng thái. Phân biệt spin với mômen động lượng orbital do cấu trúc không gian của hàm sóng.
+$$
+\begin{aligned}S&=\sqrt{s(s+1)}\,\hbar,\\S_z&=m_s\hbar.\end{aligned}
+$$
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Số m_s chạy từ −s đến s theo bước 1. Electron có s = 1/2, nên hai giá trị hình chiếu là cộng hoặc trừ $\hbar/2$. Độ lớn spin electron là $\sqrt3\hbar/2$, không bằng độ lớn một hình chiếu.
+
+Các trạng thái spin theo các trục đo khác nhau là những cơ sở khác nhau. Một trạng thái có hình chiếu z xác định không vì thế có đồng thời hình chiếu x xác định.
+
+Không mô tả spin như sự quay của một quả cầu vật chất electron. Khái niệm đó không giải thích đúng các trị riêng, phép đo và mômen từ nội tại.
 
 ## Ví dụ
 
-Hai electron trong cùng orbital có thể khác giá trị spin trên trục được chọn.
+Hai trạng thái có hình chiếu spin lên z bằng cộng hoặc trừ $\hbar/2$.
 
 ## Khi nào cần dùng?
 
-Mô tả cấu trúc nguyên tử, từ tính và nguyên lý Pauli.
+Phân tích Stern–Gerlach, cấu hình electron, cộng hưởng spin và phép đo trạng thái hai mức.
 
 ## Câu hỏi ôn lại
 
-Spin có phải quả cầu electron quay theo cơ học cổ điển không?
+Với electron, hai kết quả hình chiếu có nghĩa vector spin chỉ có thể nằm đúng trên hoặc dưới trục z không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Đó là thuộc tính lượng tử nội tại.
+Không. Hình chiếu có hai trị riêng nhưng độ lớn spin bằng $\sqrt3\hbar/2$. Mô hình vector cổ điển xác định mọi thành phần không áp dụng.
 
 </details>
 
 ## Thuật ngữ liên quan
 
-- [Hàm sóng lượng tử](./ham-song-luong-tu.md)
+- [Thí nghiệm Stern–Gerlach](./thi-nghiem-stern-gerlach.md)
 - [Nguyên lý loại trừ Pauli](./nguyen-ly-pauli.md)
-- [Từ trường](./tu-truong.md)
+- [Lượng tử hóa không gian](./luong-tu-hoa-khong-gian.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 41, trang 1360–1398.

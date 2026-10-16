@@ -2112,17 +2112,105 @@ export const physics2Course = {
       "slug": "21-cau-truc-nguyen-tu",
       "title": "Cơ học lượng tử II: Cấu trúc nguyên tử",
       "prerequisites": [
+        "dao-ham-rieng",
+        "tich-phan",
         "ham-song-luong-tu",
-        "photon",
-        "tu-truong"
+        "phuong-trinh-schrodinger",
+        "hat-trong-hop-luong-tu",
+        "dao-dong-tu-dieu-hoa-luong-tu",
+        "phep-do-luong-tu",
+        "dinh-luat-gauss",
+        "luong-cuc-tu",
+        "song-dung-dien-tu",
+        "mo-hinh-bohr",
+        "photon"
       ],
       "supportingConcepts": [
+        "phuong-trinh-schrodinger-ba-chieu",
+        "hat-trong-hop-ba-chieu",
+        "suy-bien-muc-nang-luong",
+        "so-luong-tu-nguyen-tu",
+        "orbital-nguyen-tu",
+        "phan-bo-xac-suat-ban-kinh",
+        "momen-dong-luong-quy-dao",
+        "luong-tu-hoa-khong-gian",
+        "hieu-ung-zeeman",
+        "magneton-bohr",
         "spin-luong-tu",
-        "nguyen-ly-pauli"
+        "thi-nghiem-stern-gerlach",
+        "tuong-tac-spin-quy-dao",
+        "nguyen-ly-pauli",
+        "cau-hinh-electron",
+        "che-chan-dien-tich-hat-nhan",
+        "pho-tia-x-dac-trung",
+        "dinh-luat-moseley",
+        "roi-luong-tu",
+        "qubit"
       ],
-      "status": "draft",
+      "status": "ready",
       "number": 21,
-      "sourceChapter": 41
+      "sourceChapter": 41,
+      "topicGroups": [
+        {
+          "title": "Trạng thái ba chiều và nguyên tử hydro",
+          "topics": [
+            {
+              "slug": "schrodinger-ba-chieu",
+              "title": "Phương trình Schrödinger trong ba chiều",
+              "question": "Động năng và xác suất mở rộng sang ba chiều như thế nào?",
+              "source": "41.1"
+            },
+            {
+              "slug": "hop-ba-chieu",
+              "title": "Hạt trong hộp ba chiều",
+              "question": "Điều kiện biên tạo các mức và suy biến ra sao?",
+              "source": "41.2"
+            },
+            {
+              "slug": "nguyen-tu-hydro",
+              "title": "Nguyên tử hydro và các số lượng tử",
+              "question": "Nghiệm Coulomb mô tả trạng thái nguyên tử bằng những số nào?",
+              "source": "41.3"
+            },
+            {
+              "slug": "hieu-ung-zeeman",
+              "title": "Mômen từ quỹ đạo và hiệu ứng Zeeman",
+              "question": "Vì sao từ trường làm tách các mức và vạch phổ?",
+              "source": "41.4"
+            }
+          ]
+        },
+        {
+          "title": "Spin, nhiều electron và thông tin lượng tử",
+          "topics": [
+            {
+              "slug": "spin-electron",
+              "title": "Spin electron và cấu trúc tinh tế",
+              "question": "Những kết quả nào đòi hỏi mômen động lượng nội tại?",
+              "source": "41.5"
+            },
+            {
+              "slug": "nguyen-tu-nhieu-electron",
+              "title": "Nguyên tử nhiều electron và Pauli",
+              "question": "Các electron lấp đầy trạng thái dưới những ràng buộc nào?",
+              "source": "41.6"
+            },
+            {
+              "slug": "pho-tia-x",
+              "title": "Phổ tia X đặc trưng",
+              "question": "Photon tia X cho biết gì về những mức nằm sâu trong nguyên tử?",
+              "source": "41.7"
+            },
+            {
+              "slug": "roi-luong-tu",
+              "title": "Rối lượng tử và qubit",
+              "question": "Khi nào trạng thái hai hạt không thể tách thành hai mô tả riêng?",
+              "source": "41.8"
+            }
+          ]
+        }
+      ],
+      "hasChapterExercises": true
     },
     {
       "slug": "22-chat-ran-ban-dan",
@@ -4235,6 +4323,126 @@ export const physics2Course = {
         "Một phép đo lý tưởng trên trạng thái riêng phù hợp có thể giữ nguyên trạng thái."
       ],
       "formula": "$$\n\\langle E\\rangle=|C|^2E_1+|D|^2E_2.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Ba chiều cần đủ ba phần động năng",
+      "bullets": [
+        "Hàm sóng phụ thuộc ba tọa độ.",
+        "Điều kiện biên là một phần của bài toán.",
+        "Xác suất được tính theo thể tích."
+      ],
+      "formula": "$$\n-\\frac{\\hbar^2}{2m}\\nabla^2\\psi+U\\psi=E\\psi.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Hộp có ba số lượng tử nguyên dương",
+      "bullets": [
+        "Nghiệm không gian là tích các sóng đứng.",
+        "Mỗi thành hộp là một mặt nút.",
+        "Số lượng tử bằng không làm toàn hàm bằng không."
+      ],
+      "formula": "$$\nE=E_x+E_y+E_z.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Một mức có thể chứa nhiều trạng thái",
+      "bullets": [
+        "Hoán đổi ba số lượng tử có thể giữ năng lượng.",
+        "Đếm trạng thái độc lập, không đếm lại pha chung.",
+        "Tách biệt suy biến không gian và spin."
+      ],
+      "formula": "$$\nN=n_x^2+n_y^2+n_z^2.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Hydro giữ phổ năng lượng nhưng đổi cách mô tả",
+      "bullets": [
+        "Phổ Coulomb phi tương đối tính trùng mô hình Bohr.",
+        "Orbital biểu diễn trạng thái, không phải quỹ đạo.",
+        "Khối lượng rút gọn kể chuyển động hạt nhân."
+      ],
+      "formula": "$$\nE_n=-\\frac{Z^2E_{\\rm H}}{n^2}.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Độ lớn mômen khác một hình chiếu",
+      "bullets": [
+        "$\\ell$ quyết định độ lớn mômen quỹ đạo.",
+        "$m_\\ell$ quyết định kết quả đo theo trục z.",
+        "Không gán đồng thời ba hình chiếu xác định."
+      ],
+      "formula": "$$\n\\begin{aligned}L&=\\sqrt{\\ell(\\ell+1)}\\,\\hbar,\\\\L_z&=m_\\ell\\hbar.\\end{aligned}\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Bán kính có thêm yếu tố thể tích",
+      "bullets": [
+        "Mật độ theo thể tích và theo bán kính khác nhau.",
+        "Vỏ cầu sát tâm có thể tích tiến về không.",
+        "Dạng 4π dùng cho hàm không phụ thuộc góc."
+      ],
+      "formula": "$$\nP_{1s}(r)=4\\pi r^2|\\psi_{1s}(r)|^2.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Từ trường làm dịch các mức quỹ đạo",
+      "bullets": [
+        "Điện tích electron âm quyết định dấu mômen từ.",
+        "Mức con có độ dịch phụ thuộc $m_\\ell$.",
+        "Vạch phổ còn bị ràng buộc bởi điều kiện chọn."
+      ],
+      "formula": "$$\nU=m_\\ell\\mu_{\\rm B}B.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Spin là mômen nội tại",
+      "bullets": [
+        "Stern–Gerlach cần gradient từ trường.",
+        "Hai hình chiếu spin không phải hai hướng vector cổ điển duy nhất.",
+        "Spin tạo đóng góp mômen từ riêng."
+      ],
+      "formula": "$$\nS_z=\\pm\\frac12\\hbar.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Tổng mômen phân biệt cấu trúc tinh tế",
+      "bullets": [
+        "Cộng mômen quỹ đạo với spin.",
+        "Với $\\ell$ bằng không chỉ có một giá trị j.",
+        "Tương tác spin–quỹ đạo góp phần tách mức."
+      ],
+      "formula": "$$\nj=\\ell\\pm\\frac12.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Pauli quyết định cách lấp đầy",
+      "bullets": [
+        "Electron trong cùng orbital phải khác spin.",
+        "Che chắn làm năng lượng phụ thuộc phân lớp.",
+        "Cấu hình electron nối cấu trúc vi mô với tính chất hóa học."
+      ],
+      "formula": "$$\nN_\\ell=2(2\\ell+1).\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Tia X đặc trưng khảo sát các mức sâu",
+      "bullets": [
+        "Cần một lỗ trống ở mức trong.",
+        "Photon mang hiệu năng lượng chuyển mức.",
+        "Họ vạch khác nhau có quan hệ tần số khác nhau."
+      ],
+      "formula": "$$\nE_\\gamma=E_i-E_f.\n$$"
+    },
+    {
+      "note": "21-cau-truc-nguyen-tu",
+      "title": "Rối liên quan đến trạng thái toàn hệ",
+      "bullets": [
+        "Trạng thái có thể không tách thành tích hai trạng thái riêng.",
+        "Từng kết quả đo vẫn có thể ngẫu nhiên.",
+        "Qubit không cho phép đọc đồng thời mọi biên độ bằng một lần đo."
+      ],
+      "formula": "$$\n|\\psi\\rangle=a|0\\rangle+b|1\\rangle.\n$$"
     }
   ],
   "illustration": "field",
