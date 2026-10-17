@@ -1,0 +1,38 @@
+{
+  "course": "xu-ly-du-lieu",
+  "date": "2026-10-18",
+  "mode": "Original Vietnamese instruction organized by Wes chapter topics, no book translation or close paraphrase",
+  "lessons": [
+    {"chapter":"1","group":"a","slug":"bai-01-tong-quan-cong-cu-chinh-sach-ai","title":"Công việc xử lý dữ liệu và môi trường Python","prerequisites":[]},
+    {"chapter":"2","group":"a","slug":"bai-02-python-co-ban","title":"Python, IPython và Jupyter Notebook","prerequisites":[]},
+    {"chapter":"3","group":"a","slug":"bai-03-cau-truc-du-lieu-ham-tep","title":"Cấu trúc dữ liệu, hàm và tệp","prerequisites":["bien-kieu","vong-lap"]},
+    {"chapter":"4","group":"a","slug":"bai-03-numpy","title":"Mảng NumPy và tính toán trên mảng","prerequisites":["list","ham-lap-trinh"]},
+    {"chapter":"5","group":"a","slug":"bai-04-lam-quen-pandas","title":"Series, DataFrame và chỉ mục trong pandas","prerequisites":["dictionary","mang"]},
+    {"chapter":"6","group":"b","slug":"bai-06-ket-noi-truy-xuat-du-lieu","title":"Nạp, lưu trữ và truy xuất dữ liệu","prerequisites":["dataframe","ham-lap-trinh"]},
+    {"chapter":"7","group":"b","slug":"bai-10-lam-sach-du-lieu","title":"Làm sạch, chuẩn bị và xử lý chuỗi","prerequisites":["dataframe"]},
+    {"chapter":"8","group":"b","slug":"bai-08-ghep-bang-chuyen-dang","title":"Chỉ mục phân cấp, ghép bảng và chuyển dạng","prerequisites":["dataframe","chi-muc"]},
+    {"chapter":"9","group":"b","slug":"bai-12-truc-quan-hoa-co-ban","title":"Trực quan hóa dữ liệu và đọc biểu đồ","prerequisites":["dataframe","thong-ke-mo-ta"]},
+    {"chapter":"10","group":"b","slug":"bai-10-tong-hop-theo-nhom","title":"Tổng hợp dữ liệu và phép toán theo nhóm","prerequisites":["dataframe","gia-tri-thieu"]},
+    {"chapter":"11","group":"c","slug":"bai-08-du-lieu-thoi-gian","title":"Chuỗi thời gian","prerequisites":["dataframe","chi-muc"]},
+    {"chapter":"12","group":"c","slug":"bai-12-mo-hinh-hoa","title":"Từ bảng dữ liệu đến mô hình thống kê và dự đoán","prerequisites":["dataframe","thong-ke-mo-ta"]},
+    {"chapter":"13","group":"c","slug":"bai-14-ke-chuyen-bang-du-lieu","title":"Các bài toán phân tích dữ liệu và kiểm tra kết luận","prerequisites":["dataframe","groupby"]},
+    {"chapter":"A","group":"c","slug":"phu-luc-a-numpy-nang-cao","title":"Phụ lục A: NumPy nâng cao","prerequisites":["mang","vector-hoa","broadcasting"]},
+    {"chapter":"B","group":"a","slug":"phu-luc-b-ipython","title":"Phụ lục B: Làm việc hiệu quả với IPython","prerequisites":["ham-lap-trinh"]}
+  ],
+  "iaiDestinations": {
+    "1":"Only technical environment setup in chapter 1; exclude all policy/admin/project sections and entire lecture-01 notebook",
+    "2":"Chapters 2 and 3",
+    "3":"Chapter 4 and appendix A; all six explicit exercises in chapter 4",
+    "4":"Chapter 5; CSV exercise can link forward to chapter 6",
+    "5":"Chapter 5 exercises 1-2, chapter 10 exercise 3, chapter 8 exercise 4",
+    "6":"Chapter 6; all three exercises",
+    "7":"Chapter 7; all three exercises",
+    "8":"Chapter 11; all three exercises",
+    "9":"Not linked in IAI public timetable. No inferred lecture.",
+    "10":"Chapter 7; all three exercises",
+    "11":"Optional technical text-to-table section in chapter 7; no standalone LLM course, no policy or product pricing",
+    "12":"Chapter 9",
+    "13":"Chapter 9; only directly related visualization additions",
+    "14":"Chapter 13; conclusion checking and aggregation bias, no oral exam/project material"
+  }
+}
