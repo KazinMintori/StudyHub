@@ -9,7 +9,7 @@
       "url": "https://wesmckinney.com/book/preliminaries.html",
       "resolvedUrl": "https://wesmckinney.com/book/preliminaries",
       "status": 200,
-      "sha256": "ac5ff96c649d80981bef48922efa955faf7ab9f32a2a18e2956bd37848379e8d",
+      "sha256": "94b5b94842b08f2a6fc8454e68559e45c4747385b9ee4c914c70f05732867846",
       "headings": [
         "1 Preliminaries",
         "1.1 What Is This Book About?",
@@ -38,7 +38,8 @@
         "Code Examples",
         "Data for Examples",
         "Import Conventions"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-02",
@@ -85,7 +86,8 @@
         "pass",
         "range",
         "2.4 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-03",
@@ -132,7 +134,8 @@
         "3.3 Files and the Operating System",
         "Bytes and Unicode with Files",
         "3.4 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-04",
@@ -167,7 +170,8 @@
         "4.7 Example: Random Walks",
         "Simulating Many Random Walks at Once",
         "4.8 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-05",
@@ -201,7 +205,8 @@
         "Correlation and Covariance",
         "Unique Values, Value Counts, and Membership",
         "5.4 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-06",
@@ -227,7 +232,8 @@
         "6.3 Interacting with Web APIs",
         "6.4 Interacting with Databases",
         "6.5 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-07",
@@ -237,7 +243,7 @@
       "url": "https://wesmckinney.com/book/data-cleaning.html",
       "resolvedUrl": "https://wesmckinney.com/book/data-cleaning",
       "status": 200,
-      "sha256": "ed4c1ff09dff3a340407b0090fac7597007e722743942deb58fb3b11ad293fb1",
+      "sha256": "73453f291c1c8eca2f4d9c2f1ebbc9b481bad0361d99d72935dfeebfd27ec826",
       "headings": [
         "7 Data Cleaning and Preparation",
         "7.1 Handling Missing Data",
@@ -265,7 +271,8 @@
         "Categorical Methods",
         "Creating dummy variables for modeling",
         "7.6 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-08",
@@ -292,7 +299,8 @@
         "Pivoting “Long” to “Wide” Format",
         "Pivoting “Wide” to “Long” Format",
         "8.4 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-09",
@@ -323,7 +331,8 @@
         "Facet Grids and Categorical Data",
         "9.3 Other Python Visualization Tools",
         "9.4 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-10",
@@ -356,7 +365,8 @@
         "10.5 Pivot Tables and Cross-Tabulation",
         "Cross-Tabulations: Crosstab",
         "10.6 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-11",
@@ -400,7 +410,8 @@
         "Binary Moving Window Functions",
         "User-Defined Moving Window Functions",
         "11.8 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-12",
@@ -422,7 +433,8 @@
         "Estimating Time Series Processes",
         "12.4 Introduction to scikit-learn",
         "12.5 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-13",
@@ -451,7 +463,8 @@
         "Bucketing Donation Amounts",
         "Donation Statistics by State",
         "13.6 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-0A",
@@ -494,7 +507,8 @@
         "HDF5 and Other Array Storage Options",
         "A.9 Performance Tips",
         "The Importance of Contiguous Memory"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "wes-0B",
@@ -533,7 +547,8 @@
         "B.7 Advanced IPython Features",
         "Profiles and Configuration",
         "B.8 Conclusion"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-01",
@@ -584,7 +599,8 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-02",
@@ -630,7 +646,8 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-03",
@@ -708,6 +725,32 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: đổi kiểu lúc nào?",
+          "anchor": "exercise-bytes"
+        },
+        {
+          "title": "Bài tập 2: thay vòng for bằng phép toán mảng",
+          "anchor": ""
+        },
+        {
+          "title": "Bài tập 3: tìm vị trí phần tử",
+          "anchor": ""
+        },
+        {
+          "title": "Bài tập 4: xác định các ô của view",
+          "anchor": ""
+        },
+        {
+          "title": "Bài tập 5: cộng theo hàng và cột",
+          "anchor": ""
+        },
+        {
+          "title": "Bài tập 6: sửa phép trừ",
+          "anchor": ""
+        }
       ]
     },
     {
@@ -769,6 +812,28 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: Chọn chỗ ở",
+          "anchor": "exercise-table"
+        },
+        {
+          "title": "Bài tập 2: Giá có giảm không?",
+          "anchor": "exercise-claim"
+        },
+        {
+          "title": "Bài tập 3: Lọc theo ngân sách",
+          "anchor": "exercise-selection"
+        },
+        {
+          "title": "Bài tập 4: Báo giá ba đêm",
+          "anchor": "exercise-assignment"
+        },
+        {
+          "title": "Bài tập 5: Giữ mã chỗ ở trong file",
+          "anchor": "exercise-save"
+        }
       ]
     },
     {
@@ -846,6 +911,24 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: Gán đúng phí",
+          "anchor": "exercise-alignment"
+        },
+        {
+          "title": "Bài tập 2: Miễn phí dọn dẹp",
+          "anchor": "exercise-apply"
+        },
+        {
+          "title": "Bài tập 3: Trung bình của cả hai khu",
+          "anchor": "exercise-count"
+        },
+        {
+          "title": "Bài tập 4: Ghép hai bảng",
+          "anchor": "exercise-merge"
+        }
       ]
     },
     {
@@ -895,6 +978,20 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: Đọc bảng giá",
+          "anchor": "exercise-file"
+        },
+        {
+          "title": "Bài tập 2: Lọc ngày nóng",
+          "anchor": "exercise-api"
+        },
+        {
+          "title": "Bài tập 3: Đếm giá thiếu",
+          "anchor": "exercise-sql"
+        }
       ]
     },
     {
@@ -943,6 +1040,20 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: Giá trung vị theo loại chỗ ở",
+          "anchor": "exercise-normalize"
+        },
+        {
+          "title": "Bài tập 2: Trích diện tích",
+          "anchor": "exercise-extract"
+        },
+        {
+          "title": "Bài tập 3: Thống kê tiện nghi",
+          "anchor": "exercise-amenity"
+        }
       ]
     },
     {
@@ -991,6 +1102,20 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: Tính số đêm lưu trú",
+          "anchor": "exercise-dates"
+        },
+        {
+          "title": "Bài tập 2: Trung bình mỗi ngày",
+          "anchor": "exercise-calendar"
+        },
+        {
+          "title": "Bài tập 3: Tìm tháng tăng mạnh",
+          "anchor": "exercise-comparison"
+        }
       ]
     },
     {
@@ -1066,6 +1191,20 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
+      ],
+      "exercises": [
+        {
+          "title": "Bài tập 1: So sánh giá giữa hai kỳ",
+          "anchor": "exercise-missing"
+        },
+        {
+          "title": "Bài tập 2: Giá tăng đồng loạt",
+          "anchor": "exercise-threshold"
+        },
+        {
+          "title": "Bài tập 3: Giữ giá cập nhật sau cùng",
+          "anchor": "exercise-duplicates"
+        }
       ]
     },
     {
@@ -1122,7 +1261,8 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-12",
@@ -1163,7 +1303,8 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-13",
@@ -1205,7 +1346,8 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm"
-      ]
+      ],
+      "exercises": []
     },
     {
       "id": "iai-14",
@@ -1248,6 +1390,989 @@
         "Làm việc với AI thì sao?",
         "Kiểm chứng thế nào?",
         "Đọc thêm và chuẩn bị vấn đáp"
+      ],
+      "exercises": []
+    }
+  ],
+  "notebooks": [
+    {
+      "id": "iai-notebook-lecture-02",
+      "lecture": 2,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-02.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-02.ipynb",
+      "status": 200,
+      "sha256": "de708c4bcde57ec5772bbab7245f68594b55289054bd9c851088ae9f7f6ac06d",
+      "headings": [
+        "Bài 2 · Python cơ bản cho xử lý dữ liệu",
+        "1. Dữ liệu demo: 8 bản ghi mô phỏng Airbnb",
+        "2. list / dict / set — mỗi kiểu giải quyết một việc khác nhau",
+        "3. Comprehension: lọc + biến đổi cả dãy",
+        "4. Hàm làm sạch — chịu được dữ liệu bẩn",
+        "5. Đọc & ghi file: CSV và JSON thủ công",
+        "6. Bài tập tại lớp",
+        "Bài 1 — Hàm `clean_nights`",
+        "Bài 2 — Comprehension",
+        "Bài 3 — Quy tắc QA đầu tiên của bạn",
+        "7. Bài tập về nhà",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-02",
+      "lecture": 2,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-02.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-02.ipynb",
+      "status": 200,
+      "sha256": "368ea7509d54aedcd5ef08bbaaf37a271569c09b7c9d1e2ac664a51028bde78d",
+      "headings": [
+        "Lab 2 · Python thuần trên dữ liệu thật",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Phần 0 · Khởi động (~10 phút)",
+        "Phần 1 · Khảo sát thị trường Airbnb Santiago (~60 phút)",
+        "Bước 1 · Tải và đọc dữ liệu",
+        "Bước 2 · Hàm làm sạch giá",
+        "Bước 3 · Áp hàm cho cả cột giá",
+        "Bước 4 · So sánh trung bình và trung vị",
+        "Bước 5 · Đếm phòng theo khu",
+        "Bước 6 · So sánh giá giữa các khu",
+        "Bước 7 · Phòng chưa từng có review",
+        "Bước 8 · Xuất báo cáo JSON",
+        "Phần 2 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · Bảng xếp hạng khu",
+        "Tự làm 2 · Dòng thời gian review (nâng cao)",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-03",
+      "lecture": 3,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-03.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-03.ipynb",
+      "status": 200,
+      "sha256": "9aff958131c41a3262876cc595ba3567a9abb6c322abbd377b8e41052260a86f",
+      "headings": [
+        "Bài 3 · NumPy và tư duy vector hoá",
+        "1. Cấu trúc của mảng NumPy",
+        "Mảng hai chiều",
+        "List và ndarray lưu gì?",
+        "Mảng tổ chức dữ liệu như thế nào?",
+        "Tính dung lượng từ cách lưu mảng",
+        "Vì sao mảng số tốn ít bộ nhớ?",
+        "Khi kết quả vượt giới hạn kiểu số",
+        "Số chữ số in ra và độ chính xác",
+        "Bài tập 1: đổi kiểu lúc nào?",
+        "So sánh số thực cần tính đến sai số",
+        "2. Phép tính được thực hiện ở đâu?",
+        "Nhân đôi các giá trị",
+        "Vòng lặp Python xử lý đối tượng",
+        "Phép nhân trên mảng và ufunc",
+        "Thông dịch và biên dịch",
+        "Dtype quyết định cách tính",
+        "Đọc, nhân, ghi trên vùng dữ liệu",
+        "Đọc các ô liền nhau tận dụng cache",
+        "SIMD: xử lý nhiều số cùng lúc",
+        "NumPy có chạy nhiều luồng không?",
+        "So sánh tốc độ tính toán",
+        "Bài tập 2: thay vòng for bằng phép toán mảng",
+        "Đọc thêm (tuỳ chọn): mảng trung gian",
+        "3. Chỉ mục và lát cắt",
+        "Chọn phần tử và lấy lát cắt",
+        "Lát cắt tạo một view",
+        "Hai tên có thể chỉ cùng một ô",
+        "Từ chỉ mục đến vị trí trong bộ nhớ",
+        "View có thể bỏ qua các ô",
+        "Bài tập 3: tìm vị trí phần tử",
+        "Bài tập 4: xác định các ô của view",
+        "Chuyển vị đổi cách đọc dữ liệu",
+        "Đổi shape có phải chuyển dữ liệu?",
+        "Kiểm tra bộ nhớ dùng chung",
+        "Đọc thêm: thuộc tính `.base`",
+        "Lọc phần tử bằng điều kiện",
+        "Đọc và gán bằng mask",
+        "Lọc bằng nhiều điều kiện",
+        "Chọn bằng hai mảng chỉ mục",
+        "Lặp và đổi thứ tự chỉ mục",
+        "Chọn các hàng và cột với np.ix_",
+        "Đọc và gán với np.ix_",
+        "Phân biệt view và bản sao",
+        "Đọc thêm: gán trực tiếp và lát cắt ngược",
+        "4. Broadcasting",
+        "Cộng vào từng cột",
+        "Viết phép cộng trên cả mảng",
+        "Cộng vào từng hàng",
+        "Quy tắc broadcasting",
+        "Giữ một cột để cộng theo hàng",
+        "Bài tập 5: cộng theo hàng và cột",
+        "5. Thống kê và lấy mẫu ngẫu nhiên",
+        "Mô tả mức giá chỗ ở",
+        "Giá trong khu vực chênh nhau bao nhiêu?",
+        "Tính trung bình theo hàng và cột",
+        "Trừ trung bình của từng hàng",
+        "Bài tập 6: sửa phép trừ",
+        "Lấy mẫu để kiểm tra dữ liệu",
+        "Diễn giải kết quả từ mẫu",
+        "Tự học: kiểm tra sai số theo độ lớn",
+        "Đọc thêm: stride bằng 0",
+        "Tự học với chương 4",
+        "Đọc thêm, không yêu cầu trên lớp: các bit của một số thực",
+        "Tra cứu thêm (tự học)",
+        "Phân vị (percentile)",
+        "Gieo xúc xắc",
+        "Sinh số và lấy mẫu",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-03",
+      "lecture": 3,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-03.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-03.ipynb",
+      "status": 200,
+      "sha256": "9efb19a8d0b2c4f7a47d2d482beef6fc6b96cfde747dcf000c7f5abd0db0429e",
+      "headings": [
+        "Lab 3 · NumPy và tư duy vector hoá",
+        "Cách làm và nộp bài",
+        "Dữ liệu dùng trong lab",
+        "Bài 1 · Đọc cấu trúc mảng",
+        "Bài 2 · Lát cắt và view",
+        "Bài 3 · View và bản sao",
+        "Bài 4 · Chọn phần tử",
+        "Bài 5 · Broadcasting",
+        "Bài 6 · Sửa phép tính theo hàng",
+        "Bài 7 · Đo thời gian",
+        "Bài 8 · Thống kê giá và lấy mẫu",
+        "Khai báo sử dụng AI",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-04",
+      "lecture": 4,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-04.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-04.ipynb",
+      "status": 200,
+      "sha256": "ec86d439b2a435d13f3042fd47158e748b54163013bf13d4a5c403f4015cdc26",
+      "headings": [
+        "Bài 4 · Làm quen với pandas",
+        "Mục tiêu bài học",
+        "Ghim pandas 3",
+        "Bài trước",
+        "Tổng quan",
+        "1. Bảng có nhãn",
+        "Ví dụ về bảng",
+        "Tạo bảng với DataFrame",
+        "Nhãn và kích thước của bảng",
+        "Mỗi cột là một Series",
+        "Tính toán trên Series",
+        "Mỗi cột có một dtype",
+        "Bài tập 1: Chọn chỗ ở",
+        "2. Đọc và hiểu dữ liệu",
+        "Đọc bảng Airbnb Santiago",
+        "Danh sách các cột",
+        "Xem trước vài dòng",
+        "Đếm giá trị thiếu",
+        "Bao nhiêu chỗ ở chưa có giá?",
+        "Giá điển hình là bao nhiêu?",
+        "Bài tập 2: Giá có giảm không?",
+        "3. Chọn hàng, chọn cột",
+        "Chọn một ô",
+        "Chọn nhiều hàng và cột",
+        "Giữ kết quả dạng bảng",
+        "Chọn các hàng liên tiếp",
+        "Tạo điều kiện chọn hàng",
+        "Dùng mask để lấy hàng",
+        "Ngoặc vuông và .loc",
+        "Kết hợp nhiều điều kiện",
+        "Bài tập 3: Lọc theo ngân sách",
+        "4. Tính toán và sửa bảng",
+        "Tạo cột tính giá tiền cho ba đêm",
+        "Sửa giá của một chỗ ở",
+        "Sửa Series lấy ra từ bảng",
+        "Hai lần ngoặc thì bảng không đổi",
+        "Giảm giá cho chỗ ở nguyên căn",
+        "Tính lại tiền sau khi sửa giá",
+        "Bài tập 4: Báo giá ba đêm",
+        "5. Kiểm tra và lưu",
+        "Xem những chỗ ở giá cao nhất",
+        "Tỷ lệ giá dưới 80 USD/đêm",
+        "Cùng câu hỏi trên bảng Santiago",
+        "Lưu bảng giá để dùng tiếp",
+        "Đọc lại file vừa lưu",
+        "Bài tập 5: Giữ mã chỗ ở trong file",
+        "Tự học theo giáo trình, chương 5",
+        "Mỗi loại chỗ ở có bao nhiêu dòng?",
+        "Chọn một trong nhiều loại",
+        "Kiểm tra toàn bảng",
+        "Cột nhãn phân loại và dtype `category`",
+        "Làm việc với AI thì sao?",
+        "Kiểm chứng thế nào?",
+        "Đọc thêm",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-04",
+      "lecture": 4,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-04.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-04.ipynb",
+      "status": 200,
+      "sha256": "460dcd4ea05cc28372861bf83558fbf64127654ce92e2bc9d133a432de46148f",
+      "headings": [
+        "Lab 4 · Lập hồ sơ một quận bằng pandas",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Phần 0 · Khởi động (~10 phút)",
+        "Phần 1 · Hồ sơ quận Ñuñoa (~65 phút)",
+        "Bước 1 · Thói quen 5 bước — chạy và đọc kết quả",
+        "Bước 2 · Cắt riêng quận Ñuñoa",
+        "Bước 3 · Lọc kết hợp trong quận",
+        "Bước 4 · Kiểm tra 5 chỗ ở có giá thấp nhất quận",
+        "Bước 5 · Sửa bảng bằng `.loc` và tính lại cột phụ thuộc",
+        "Bước 6 · So sánh Ñuñoa với thành phố và xem ảnh hưởng của NaN",
+        "Bước 7 · Cơ cấu loại phòng và mức thiếu — hoàn thiện hồ sơ",
+        "Bước 8 · Xuất hồ sơ ra file",
+        "Phần 2 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · Hồ sơ quận thứ hai",
+        "Tự làm 2 · Quận có giá thấp và nhiều lựa chọn",
+        "Tự làm 2 · AI là đề bài — vì sao bảng không đổi?",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-05",
+      "lecture": 5,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-05.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-05.ipynb",
+      "status": 200,
+      "sha256": "087d8b4af7c6d3418e41ffde2d40236914b526967695a12983b9a52344a46ce9",
+      "headings": [
+        "Bài 5 · Series & DataFrame chuyên sâu",
+        "Mục tiêu bài học",
+        "Bài trước",
+        "Tổng quan",
+        "1. Khớp dữ liệu theo nhãn",
+        "Tính chênh lệch giá",
+        "Trừ các giá có cùng nhãn",
+        "Khi một bên thiếu giá",
+        "Đưa mã chỗ ở vào chỉ mục",
+        "Gán cột cũng khớp theo nhãn",
+        "Bài tập 1: Gán đúng phí",
+        "2. Áp dụng hàm lên dữ liệu",
+        "Bảng chỗ ở và bảng mã phí",
+        "Tra phí theo loại chỗ ở",
+        "Viết hàm tính tiền một hàng",
+        "Gọi hàm cho từng hàng",
+        "Tính trực tiếp trên các cột",
+        "Tải lại bảng Santiago của Bài 4",
+        "So sánh tốc độ hai cách",
+        "Bài tập 2: Miễn phí dọn dẹp",
+        "Hai cách chia giá thành ba nhóm",
+        "Nếu cả thị trường tăng giá 20%",
+        "3. Tính theo nhóm",
+        "So sánh giá của hai khu vực",
+        "Tính trung bình từng khu",
+        "Đếm số giá dùng để tính",
+        "Đưa tên khu về cột 📖 Tự học",
+        "Giá nguyên căn ở Santiago",
+        "Bài tập 3: Trung bình của cả hai khu",
+        "Tách thêm theo loại chỗ ở",
+        "Bảng dạng dài và dạng rộng",
+        "Trừ giá cho trung bình của khu",
+        "Gắn trung bình khu vào từng hàng",
+        "Giữ lại các khu đủ lớn",
+        "So giá từng chỗ ở với khu của nó",
+        "Đổi đơn vị quan sát sang host",
+        "Dựng lại một cột của nhà cung cấp",
+        "4. Ghép bảng",
+        "Gộp hai lần thu thập",
+        "Bổ sung thông tin vùng",
+        "Giữ lại các chỗ ở chưa có vùng",
+        "Tìm hàng không ghép được",
+        "Khớp khoá mà thiếu thông tin",
+        "Chỉ lấy các chỗ ở ghép được vùng",
+        "Khi bảng tra cứu lặp khoá",
+        "Báo lỗi nếu bảng vùng lặp khu",
+        "Ghép bảng host trở lại bảng chỗ ở",
+        "Bài tập 4: Ghép hai bảng",
+        "5. Viết phân tích thành một chuỗi",
+        "Chạy lại một ô có đổi kết quả không?",
+        "Thêm cột mà không sửa bảng gốc",
+        "Đặt tên cho từng bước",
+        "Thêm cột, trả bảng mới",
+        "Ghép các bước thành một chuỗi",
+        "Tự học theo giáo trình",
+        "Xếp lại theo danh sách nhãn",
+        "Chỉ mục có thể lặp",
+        "Áp dụng hàm cho từng cột",
+        "Tra trung bình khu bằng map",
+        "Đưa loại chỗ ở thành cột bằng pivot_table",
+        "Làm việc với AI thì sao?",
+        "Kiểm chứng thế nào?",
+        "Đọc thêm",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-05",
+      "lecture": 5,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-05.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-05.ipynb",
+      "status": 200,
+      "sha256": "99964772ba32129e6bd07106158e9402c0a0cd3a81235f32901f62a1b12f69d3",
+      "headings": [
+        "Lab 5 · Phân khúc giá & host chuyên nghiệp (groupby, transform, merge)",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Phần 0 · Khởi động (~10 phút)",
+        "Phần 1 · Phân tích thị trường theo hai chiều (~55 phút)",
+        "Bước 1 · Sinh cột phân khúc bằng map với hàm",
+        "Bước 2 · agg đặt tên — thống kê ba phân khúc",
+        "Bước 3 · Host chuyên nghiệp",
+        "Bước 4 · transform — gắn quy mô quận vào từng dòng",
+        "Bước 5 · pivot_table — phân khúc × kiểu host",
+        "Bước 6 · merge bảng tra cứu + validate",
+        "Phần 2 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · Phòng đắt nhất từng quận",
+        "Tự làm 2 · Cơ cấu phân khúc theo quận",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-06",
+      "lecture": 6,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-06.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-06.ipynb",
+      "status": 200,
+      "sha256": "00603dec4ebc5e39e9afc49442508a1aac6ba63551502728d11eca93a46026ce",
+      "headings": [
+        "Bài 6 · Kết nối & truy xuất dữ liệu ngoài",
+        "Mục tiêu bài học",
+        "Chuẩn bị",
+        "1. Đọc và lưu file",
+        "CSV không lưu kiểu dữ liệu",
+        "Khai báo cách đọc",
+        "Bài tập 1: Đọc bảng giá",
+        "Lưu bảng để dùng lại",
+        "Lưu và đọc lại bằng pandas",
+        "Áp dụng cho dữ liệu Santiago",
+        "2. Lấy dữ liệu qua API",
+        "Tự động lấy dữ liệu từ dịch vụ",
+        "Trao đổi dữ liệu qua API",
+        "Ví dụ: lấy dự báo thời tiết",
+        "Gửi yêu cầu bằng Python",
+        "Đọc dữ liệu trong phản hồi",
+        "Chọn phần JSON để tạo bảng",
+        "Tạo bảng theo ngày",
+        "Áp dụng với phản hồi thật",
+        "Giữ lại bản dự báo đã lấy",
+        "Phân tích lại từ file",
+        "Bài tập 2: Lọc ngày nóng",
+        "3. SQL và DuckDB",
+        "Lấy kết quả từ cơ sở dữ liệu",
+        "Dùng DuckDB trong Python",
+        "Chọn chỗ ở có giá từ 100 USD/đêm",
+        "Tính giá trung bình từng khu",
+        "Lọc hàng và lọc nhóm",
+        "Bài tập 3: Đếm giá thiếu",
+        "Ghép thêm vùng",
+        "Truy vấn trực tiếp file Parquet",
+        "Chọn SQL hay pandas?",
+        "Làm việc với AI thì sao?",
+        "Đọc thêm",
+        "📖 Tự học",
+        "Đọc file nén và cột ngày",
+        "Đo kích thước và thời gian đọc file",
+        "Tổng hợp khi đọc từng khối",
+        "Xem DuckDB đọc những cột nào",
+        "API key và giới hạn truy cập",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-06",
+      "lecture": 6,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-06.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-06.ipynb",
+      "status": 200,
+      "sha256": "eaad09b6a4b7652b5bea259880393b1903f543ddfb0d5c86f4443f348e282c8a",
+      "headings": [
+        "Lab 6 · Dữ liệu ngoài: đọc đúng kiểu, Parquet, API lịch sử và DuckDB",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Phần 0 · Khởi động (~10 phút)",
+        "Phần 1 · Bảng đầy đủ 90 cột: đọc có chọn lọc và lưu Parquet (~25 phút)",
+        "Bước 1 · Đọc cả bảng và chỉ đọc 5 cột",
+        "Bước 2 · Lưu CSV và Parquet, đọc lại và so kiểu cột",
+        "Phần 2 · API lịch sử và số đánh giá theo ngày (~30 phút)",
+        "Bước 3 · Chọn tham số và gọi API",
+        "Bước 4 · Tạo bảng theo ngày và kiểm tra đơn vị",
+        "Bước 5 · Đếm đánh giá theo ngày",
+        "Bước 6 · Ghép hai nguồn và đo tương quan",
+        "Phần 3 · SQL với DuckDB (~30 phút)",
+        "Bước 7 · Đếm đánh giá theo năm và đối chiếu với lab 2",
+        "Bước 8 · `COUNT(*)` và `COUNT(cột)` trên file Parquet",
+        "Bước 9 · Ghép đánh giá với loại chỗ ở bằng `LEFT JOIN`",
+        "Bước 10 · Lọc nhóm bằng `HAVING`",
+        "Phần 4 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · So sánh với tháng 7",
+        "Tự làm 2 · Chỗ ở có nhiều đánh giá nhất",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-07",
+      "lecture": 7,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-07.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-07.ipynb",
+      "status": 200,
+      "sha256": "f5c23494965f90cf08b1a60d2c2c50fa3d9d37f0216b87be17eca01a68b55e0b",
+      "headings": [
+        "Bài 7 · Xử lý dữ liệu chuỗi",
+        "Mục tiêu bài học",
+        "Chuẩn bị",
+        "1. Chuẩn hoá và lọc chuỗi",
+        "Xử lý chuỗi với .str",
+        "Chuẩn hoá tên trước khi đếm",
+        "Lọc tên có từ khoá",
+        "Lọc chuỗi khi có giá trị thiếu",
+        "Đổi giá dạng chuỗi thành số",
+        "So sánh .str.replace với apply",
+        "Phân biệt giá thiếu và lỗi chuyển đổi",
+        "Bài tập 1: Giá trung vị theo loại chỗ ở",
+        "2. Trích xuất bằng biểu thức chính quy",
+        "Biểu thức chính quy (regex)",
+        "Các thành phần của mẫu regex",
+        "Lấy số phòng bằng extract",
+        "Tránh khớp nhầm bằng ranh giới từ",
+        "Chuyển kết quả trích xuất sang số",
+        "Kiểm tra mã bằng fullmatch",
+        "Bài tập 2: Trích diện tích",
+        "Trích số phòng từ dữ liệu Santiago",
+        "3. Tách danh sách trong một ô",
+        "Tách chuỗi bằng dấu phân cách",
+        "Đọc danh sách bằng json.loads",
+        "Tách tiện nghi thành từng hàng",
+        "Bỏ hàng có giá trị thiếu",
+        "Tính tỷ lệ chỗ ở có Wifi",
+        "Bài tập 3: Thống kê tiện nghi",
+        "Thống kê Wifi trong dữ liệu Santiago",
+        "Làm việc với AI thì sao?",
+        "📖 Tự học",
+        "Bảng tra thao tác chuỗi",
+        "Thêm ký hiệu regex",
+        "Giữ mọi lần khớp và số nguyên có giá trị thiếu",
+        "Ranh giới từ cũng loại tên đúng",
+        "`\\b`, `\\w` với ký tự ngoài ASCII",
+        "Kiểm cả định dạng giá",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-07",
+      "lecture": 7,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-07.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-07.ipynb",
+      "status": 200,
+      "sha256": "17de9f6264200ac9af9a5b22fb408c73133133d93212f5534716ea2ee49f3fb3",
+      "headings": [
+        "Lab 7 · Kiểm chứng quy tắc xử lý chuỗi",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Chuẩn bị",
+        "Phần 0 · Khởi động",
+        "Phần 1 · Đổi giá sang số và giữ lại lỗi chuyển đổi",
+        "Kiểm cả chuỗi, tránh chỉ đọc một phần",
+        "Phần 2 · Làm sạch và kiểm quy tắc trên đánh giá thật",
+        "Bước 1 · Khảo sát trước khi xử lý",
+        "Bước 2 · Thay đúng đoạn HTML đã biết",
+        "Bước 3 · Lấy từ đứng sau near hoặc cerca de",
+        "Phần 3 · Tính tiện nghi theo chỗ ở",
+        "Bước 4 · Đọc JSON rồi tách thành từng mục",
+        "Bước 5 · Giữ đúng mẫu số",
+        "Bước 6 · Phân biệt danh sách rỗng với dữ liệu thiếu",
+        "Phần 4 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · Kiểm một kết luận từ từ khoá",
+        "Tự làm 2 · Trích diện tích có thêm cách viết",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-07-regex",
+      "lecture": 7,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-07-regex.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-07-regex.ipynb",
+      "status": 200,
+      "sha256": "3db5e582a33689d838b16d09b494464296f8b6e400afba2f34914dc42bab46ea",
+      "headings": [
+        "Bài 7 · Bài tập thực hành regex",
+        "Cách làm",
+        "Lộ trình",
+        "Nguồn học tập",
+        "Quy ước chung",
+        "Câu 1. Trích dãy chữ số đầu tiên",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 2. Dấu chấm thường và ký tự đại diện",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 3. Chọn ký tự trong một tập",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 4. Kết hợp các khoảng ký tự",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 5. Giới hạn số lần lặp",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 6. Phân biệt không lần và ít nhất một lần",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 7. Ký tự tùy chọn và dấu hỏi thường",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 8. Yêu cầu có ký tự trắng phân cách",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 9. Trích tên tệp PDF bằng nhóm bắt",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 10. Trích số phòng với phép hoặc và ranh giới từ",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 11. Kiểm tra số nguyên và số thập phân đơn giản",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 12. Kiểm tra số có phân cách hàng nghìn và số mũ",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 13. Trích mã vùng điện thoại",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 14. Trích tên tài khoản email trước bộ lọc",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 15. Trích tên thẻ mở đầu tiên",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 16. Chọn tệp ảnh và trích phần mở rộng",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 17. Sửa mẫu cắt khoảng trắng bị tham lam",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 18. Trích dữ liệu từ dòng ngăn xếp lỗi",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 19. Trích giao thức, máy chủ và cổng URL",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích",
+        "Câu 20. Trích đường dẫn URL, loại truy vấn và đoạn neo",
+        "Đoạn văn đầu vào",
+        "Mã khởi đầu",
+        "Bộ test",
+        "Giải thích"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-08",
+      "lecture": 8,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-08.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-08.ipynb",
+      "status": 200,
+      "sha256": "4e804a683f57d43a4520177ff9c4aaf80acf48c4683148dec2f94542a3cbe435",
+      "headings": [
+        "Bài 8 · Xử lý dữ liệu thời gian",
+        "Mục tiêu bài học",
+        "Chuẩn bị",
+        "1. Đọc và tính toán với ngày giờ",
+        "Đổi chuỗi thành ngày giờ",
+        "Ngày và tháng có thể bị đảo",
+        "Ngày không hợp lệ và ngày bị thiếu",
+        "Lấy tháng và thứ trong tuần",
+        "Tính khoảng cách giữa hai ngày",
+        "Bài tập 1: Tính số đêm lưu trú",
+        "Đổi múi giờ 📖 Tự học",
+        "2. Tổng hợp theo thời gian",
+        "Dữ liệu đánh giá tại Santiago",
+        "Kiểm tra ngày vượt mốc chụp",
+        "Chọn dữ liệu theo năm và tháng",
+        "Gộp đánh giá theo tháng",
+        "Đếm số đánh giá từng tháng",
+        "Tháng cuối chưa trọn",
+        "Bài tập 2: Trung bình mỗi ngày",
+        "Tính trung bình theo cửa sổ trượt",
+        "Trung bình của sáu tháng gần nhất",
+        "3. So sánh giữa các kỳ",
+        "Đặt giá trị kỳ trước cạnh kỳ này",
+        "Thiếu một tháng thì shift bị lệch",
+        "Tính tỷ lệ thay đổi",
+        "So với tháng liền trước",
+        "So với cùng tháng năm trước",
+        "Chọn kỳ gốc để so sánh",
+        "Tổng hợp theo tháng qua nhiều năm",
+        "Phân bố đánh giá theo tháng",
+        "Bài tập 3: Tìm tháng tăng mạnh",
+        "Làm việc với AI thì sao?",
+        "Tự học · Múi giờ và cửa sổ theo khoảng thời gian",
+        "Gắn múi giờ và đổi múi giờ",
+        "Ba hàng khác với ba ngày",
+        "Chọn khoảng giờ bằng biên phải mở",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-08",
+      "lecture": 8,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-08.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-08.ipynb",
+      "status": 200,
+      "sha256": "b295ee1b67da3a54e60167bab96fda2f691ce2f9715df85ac43e166c5a3544dc",
+      "headings": [
+        "Lab 8 · Tính toán và so sánh theo thời gian",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Chuẩn bị",
+        "Phần 1 · Kiểm cách đọc ngày",
+        "Tính số đêm lưu trú",
+        "Xác định ngày không đọc được",
+        "Phần 2 · Tổng hợp đánh giá theo quý",
+        "Đọc đúng snapshot",
+        "Giới hạn phạm vi ngày",
+        "Chọn các quý đã kết thúc",
+        "Kiểm cách chọn kỳ cuối",
+        "Phần 3 · Cửa sổ trượt bảy ngày",
+        "Tìm giai đoạn có nhiều đánh giá",
+        "Xem khoảng thời gian vừa tính",
+        "Phần 4 · So cùng kỳ",
+        "So quý I qua hai năm",
+        "Đối chiếu với ngày gốc",
+        "Phần 5 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "So tháng 2 với tháng 1 theo số đánh giá mỗi ngày",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-10",
+      "lecture": 10,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-10.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-10.ipynb",
+      "status": 200,
+      "sha256": "64218afb3240c5fff3edddef424876edb9107b174651e8845a287838d2313322",
+      "headings": [
+        "Bài 10 · Làm sạch dữ liệu có cấu trúc",
+        "Mục tiêu bài học",
+        "Chuẩn bị",
+        "1. Giá trị thiếu",
+        "Dữ liệu dùng trong bài",
+        "Đếm giá trị thiếu theo cột",
+        "Chỗ ở nào thiếu điểm đánh giá?",
+        "Chỉ bỏ hàng thiếu cột cần dùng",
+        "Bài tập 1: So sánh giá giữa hai kỳ",
+        "Điền một giá trị quy ước",
+        "Điền bằng giá trị phổ biến nhất 📖 Tự học",
+        "Chọn trung bình hay trung vị?",
+        "Điền giá trị thiếu bằng trung vị",
+        "Điền theo nhóm tương tự",
+        "Điền số phòng ngủ theo sức chứa",
+        "Lấy giá trị đã biết trước hoặc sau 📖 Tự học",
+        "Điền riêng từng chỗ ở 📖 Tự học",
+        "Nội suy giữa hai giá trị đã biết 📖 Tự học",
+        "Nội suy theo khoảng thời gian 📖 Tự học",
+        "Chọn cách điền theo dữ liệu",
+        "Kiểm tra thống kê sau khi điền",
+        "Ghi lại ô đã được điền",
+        "Thử cách điền trên giá trị đã biết",
+        "2. Giá trị bất thường",
+        "Giá trị sai hay chỉ khác thường?",
+        "Kiểm tra miền giá trị",
+        "Đánh dấu giá trị sai trước khi thay",
+        "Độ lệch so với trung bình 📖 Tự học",
+        "Quan sát phân phối giá",
+        "Ngưỡng theo khoảng tứ phân vị",
+        "Tính ngưỡng riêng theo loại chỗ ở",
+        "Dùng ngưỡng nào cho mỗi hàng?",
+        "Xem lại một mức giá cao",
+        "Chọn cách xử lý giá trị bất thường",
+        "Chặn giá trị ở một ngưỡng",
+        "So sánh bỏ hàng và chặn giá",
+        "Bài tập 2: Giá tăng đồng loạt",
+        "3. Trùng lặp",
+        "Chọn khoá của bảng",
+        "Chuẩn hoá mã trước khi tìm trùng",
+        "Tìm tất cả hàng trùng khoá",
+        "Bỏ bản ghi nhập lặp",
+        "Tìm giá mâu thuẫn trong cùng khoá",
+        "Gộp các thông tin bổ sung 📖 Tự học",
+        "Bài tập 3: Giữ giá cập nhật sau cùng",
+        "Khi thời điểm cập nhật cũng trùng 📖 Tự học",
+        "Trùng lặp phát sinh khi ghép bảng",
+        "4. Bộ quy tắc kiểm tra dữ liệu",
+        "Kiểm tra cấu trúc đầu vào",
+        "Kiểm tra quan hệ giữa các cột 📖 Tự học",
+        "Kiểm tra mã có ở bảng liên quan",
+        "Đối chiếu số liệu giữa hai bảng",
+        "Mô tả quy tắc trước khi viết code",
+        "Chọn ngưỡng theo mục đích kiểm tra",
+        "Viết hàm trả về các cờ",
+        "Báo cáo số hàng bị gắn cờ",
+        "Một hàng có thể bị nhiều cờ",
+        "Lưu cả những hàng cần kiểm tra",
+        "Thử quy tắc trên dữ liệu nhỏ",
+        "Kiểm tra tác động của bước làm sạch",
+        "Làm việc với AI thì sao?",
+        "Kiểm chứng thế nào?",
+        "Đọc thêm",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-10",
+      "lecture": 10,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-10.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-10.ipynb",
+      "status": 200,
+      "sha256": "6ca4954f0e5fcf25b1a9bac925572b4722986f1f48ee0d936ed8e6f1d2e85589",
+      "headings": [
+        "Lab 10 · Kiểm tra và làm sạch dữ liệu",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Chuẩn bị",
+        "Phần 1 · Giá trị thiếu",
+        "Điền 0 khi có căn cứ",
+        "Điền giá theo nhóm",
+        "Phần 2 · Viết quy tắc kiểm tra giá",
+        "Phần 3 · Ngưỡng, bỏ hàng và chặn giá",
+        "Phần 4 · Trùng lặp",
+        "Bản nhập lặp hay hai đánh giá cùng ngày?",
+        "Phần 5 · Bộ quy tắc kiểm tra ngày và mã chỗ ở",
+        "Lưu báo cáo kiểm tra",
+        "Giữ các hàng cần đối chiếu",
+        "Phần 6 · Bài tự làm ✅ mở (làm sớm tại lớp hoặc làm tại nhà)",
+        "Tự làm 1 · Tách nhóm giá mâu thuẫn trước khi gộp",
+        "Tự làm 2 · Đối chiếu số đánh giá trong cùng phạm vi",
+        "Tự làm 3 · Đối chiếu số đánh giá trong 12 tháng",
+        "Tự làm 4 · Mốt, giá trị phía trước và nội suy",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-11",
+      "lecture": 11,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-11.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-11.ipynb",
+      "status": 200,
+      "sha256": "66483d8290b993e46b599975674a1788dd29b32b3efa40ddd3dda2aebe0d4927",
+      "headings": [
+        "Bài 11 · Xử lý dữ liệu phi cấu trúc bằng LLM",
+        "0. Chuẩn bị",
+        "Lấy khóa API (miễn phí, không cần thẻ)",
+        "Nếu không có khóa API",
+        "1. Dữ liệu minh hoạ: 24 đánh giá về chỗ ở",
+        "2. Phương pháp đối chứng không dùng LLM",
+        "3. Gọi LLM từ Python",
+        "Hạn chế của đầu ra tự do",
+        "4. Đầu ra có cấu trúc: yêu cầu LLM điền biểu mẫu",
+        "4a. Khai báo schema bằng Pydantic",
+        "4b. Bộ nhớ đệm: không gọi lại kết quả đã có",
+        "4c. Chuyển kết quả về DataFrame",
+        "5. Đánh giá: LLM cải thiện bao nhiêu so với phương pháp đối chứng?",
+        "5a. Bộ nhãn chuẩn gán tay (gold labels)",
+        "6. Bài tập tại lớp",
+        "Bài 1 — Mở rộng danh mục khía cạnh",
+        "Bài 2 — Viết thêm một quy tắc hậu kiểm",
+        "Bài 3 — Sửa prompt, đo lại",
+        "7. Bài tập về nhà",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-11",
+      "lecture": 11,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-11.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-11.ipynb",
+      "status": 200,
+      "sha256": "899f7dac601de83f8f1ce6707df2fd07d83b6e6884e6a207593abb420df85c87",
+      "headings": [
+        "Lab 11 · Kỷ luật đo lường cho LLM: schema, nhãn tay & hậu kiểm",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Phần 0 · Chọn mẫu & ước chi phí (~12 phút)",
+        "Phần 1 · Schema là tầng kiểm tra đầu tiên (~12 phút)",
+        "Phần 2 · Đánh giá đầu ra LLM bằng nhãn tay (~26 phút)",
+        "Bước 1 · Kiểm tra hàng loạt — schema phát hiện được gì?",
+        "Bước 2 · Độ chính xác của nhãn cảm xúc",
+        "Bước 3 · Nhìn vào chỗ sai — phân loại lỗi",
+        "Bước 4 · Hậu kiểm tự động",
+        "Bài tự làm ✅ mở · Chạy thật với khóa API của bạn",
+        "🧭 Hỗ trợ bài tập lớn (~30 phút — làm theo nhóm)",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-12",
+      "lecture": 12,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-12.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-12.ipynb",
+      "status": 200,
+      "sha256": "1c5fc8d02b0b64dc762d835ea6d271fa44eef4eab74c55de148e9a03597ee9d5",
+      "headings": [
+        "Bài 12 · Trực quan hoá cơ bản",
+        "1. Biểu đồ đường — diễn biến theo thời gian",
+        "2. Biểu đồ thanh ngang — so sánh nhóm",
+        "3. Histogram — hình dạng phân phối",
+        "4. Biểu đồ phân tán — cấu trúc theo vị trí",
+        "5. Xuất hình — PNG, SVG hay PDF?",
+        "6. Biểu đồ có thể gây hiểu sai như thế nào?",
+        "7. Bài tập tại lớp",
+        "Bài 1 — Từ nháp đến xuất bản",
+        "Bài 2 — So sánh hai mốc chụp trên cùng thang đo",
+        "Bài 3 — Chọn dạng cho 3 câu hỏi",
+        "8. Bài tập về nhà — Bốn hình đầu tiên cho bài tập lớn",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-12",
+      "lecture": 12,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-12.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-12.ipynb",
+      "status": 200,
+      "sha256": "42c36afd746f9fc00f6b200ff879e068c079c87221f7b12e80de1e180beacd3d",
+      "headings": [
+        "Lab 12 · Biểu đồ cho báo cáo và cách kiểm tra bằng `assert`",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Hình 1 · Biểu đồ đường — số đánh giá của một quận (~15 phút)",
+        "Hình 2 · Biểu đồ thanh ngang — tỷ lệ nguyên căn theo quận (~12 phút)",
+        "Hình 3 · Histogram — phân phối hai đỉnh (~10 phút)",
+        "Hình 4 · Sửa biểu đồ gây hiểu sai (~8 phút)",
+        "Bài tự làm ✅ mở",
+        "🧭 Hỗ trợ bài tập lớn (~30 phút — làm theo nhóm)",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-13",
+      "lecture": 13,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-13.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-13.ipynb",
+      "status": 200,
+      "sha256": "f72c92481ce9dda2fd1e5b8cc528b517ed0d697853a595e81860242ba04abb4f",
+      "headings": [
+        "Bài 13 · Trực quan hoá nâng cao và phản biện biểu đồ",
+        "1. seaborn — so sánh phân phối giữa các nhóm",
+        "2. Bản đồ choropleth",
+        "3. plotly express — xem chi tiết khi rê chuột",
+        "4. Phản biện ba biểu đồ lỗi",
+        "5. Bài tập tại lớp — hồ sơ lỗi và bản sửa",
+        "Bài 1 — Lập hồ sơ lỗi",
+        "Bài 2 — Sửa hình lỗi A",
+        "Bài 3 — Sửa hình lỗi B",
+        "Bài 4 — Sửa hình lỗi C",
+        "6. Bài tập về nhà — Choropleth cho thành phố của nhóm",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-13",
+      "lecture": 13,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-13.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-13.ipynb",
+      "status": 200,
+      "sha256": "f64df1dd57d16759552a9a291beb96e6d220310b540588902cd706c71873d44e",
+      "headings": [
+        "Lab 13 · seaborn, bản đồ số chỗ ở và phản biện cách chọn kỳ gốc",
+        "Cách làm việc trong bài lab",
+        "Mục tiêu",
+        "Bước 1 · Boxplot và hue: giá theo nhóm chủ nhà (~12 phút)",
+        "Bước 2 · Cặp bản đồ giá và số chỗ ở (~20 phút)",
+        "Bước 3 · Hồ sơ lỗi cho hình chọn kỳ gốc có lợi (~12 phút)",
+        "Bài tự làm ✅ mở",
+        "🧭 Hỗ trợ bài tập lớn (~30 phút — làm theo nhóm)",
+        "Tóm tắt bài lab"
+      ]
+    },
+    {
+      "id": "iai-notebook-lecture-14",
+      "lecture": 14,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lecture-14.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-14.ipynb",
+      "status": 200,
+      "sha256": "4071d0e7c9b5a94c96f1cc018c3e2d96b3c25fa2215484b905a30c2c63bc3884",
+      "headings": [
+        "Bài 14 · Kể chuyện bằng dữ liệu và thẩm định phân tích AI",
+        "Báo cáo cần thẩm định: thị trường Airbnb Santiago",
+        "KL1 — \"18.534 chỗ ở, 81% nguyên căn\"",
+        "KL2 — \"trung bình 118.200 CLP/đêm, du khách chuẩn bị ngân sách tương ứng\"",
+        "KL3 — \"tháng 6 giảm 28% so với tháng 5 → hạ nhiệt đáng lo ngại\"",
+        "KL4 — \"gần metro làm giảm giá cho thuê\"",
+        "KL5 — \"Lo Barnechea đắt nhất trong các quận ≥500 chỗ ở, 426.230 CLP\"",
+        "Tổng kết cuộc thẩm định",
+        "Bài tập tại lớp",
+        "Bài 1 — Viết đoạn mở đầu kim tự tháp",
+        "Bài 2 — Bẫy chọn kỳ gốc",
+        "Bài 3 — Kiểm tra nghịch lý Simpson",
+        "Bài tập về nhà — Thẩm định báo cáo của nhóm",
+        "Tóm tắt bài học"
+      ]
+    },
+    {
+      "id": "iai-notebook-lab-14",
+      "lecture": 14,
+      "url": "https://raw.githubusercontent.com/uet-iai-course/programming-for-data-processing/main/2627-1/notebooks/lab-14.ipynb",
+      "entryUrl": "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lab-14.ipynb",
+      "status": 200,
+      "sha256": "709b1b323fd62ccd8ace66f602a6c5e012c3b23311b0fa2cdb492db6e152d399",
+      "headings": [
+        "Lab 14 · Thực hành kể chuyện: kim tự tháp, lời đúng mức và thẩm định",
+        "Cách làm việc trong bài thực hành",
+        "Mục tiêu",
+        "Bước 1 · Xếp kim tự tháp (~10 phút)",
+        "Bước 2 · Lời đúng mức với số liệu (~10 phút)",
+        "Bước 3 · Tự tạo một nghịch lý Simpson (~12 phút)",
+        "Bước 4 · Thẩm định một kết luận mới (~15 phút)",
+        "Bài tự làm ✅ mở · Thẩm định chéo bản nháp của nhóm",
+        "🧭 Hỗ trợ bài tập lớn (~30 phút — làm theo nhóm)",
+        "Tóm tắt bài thực hành"
       ]
     }
   ],

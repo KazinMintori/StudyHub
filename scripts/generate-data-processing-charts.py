@@ -56,7 +56,7 @@ for ax in axes:
     ax.set_ylabel("Số sản phẩm")
 axes[0].set(ylim=(0, 112), title="Trục từ 0")
 axes[1].set(ylim=(97, 101), yticks=[97, 98, 99, 100, 101], title="Trục từ 97")
-fig.suptitle("Cùng dữ liệu: chênh lệch 2 sản phẩm", fontsize=16)
+fig.suptitle("Cùng dữ liệu: Chênh lệch 2 sản phẩm", fontsize=16)
 save(fig, "lec-13", "so-sanh-truc")
 
 data = pd.DataFrame({"nhom": ["A"] * 5 + ["B"] * 5, "gia": [10, 12, 14, 16, 100, 20, 22, 24, 26, 28]})

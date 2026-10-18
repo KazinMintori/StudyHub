@@ -1,0 +1,42 @@
+{
+  "course": "xu-ly-du-lieu",
+  "lecture": "bai-08-ghep-bang-chuyen-dang",
+  "route": "/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang",
+  "notes": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+  "topics": [],
+  "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-08-ghep-bang-chuyen-dang/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dataframe",
+    "chi-muc"
+  ],
+  "fragments": [
+    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md"
+  ],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 321,
+      "title": "Bài tập 1: Ghép trái khi khóa lặp ở cả hai bảng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md",
+      "line": 3,
+      "title": "Giữ số dòng và giải thích những giá trị không ghép được"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 342,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md",
+      "line": 7,
+      "title": ""
+    }
+  ],
+  "assets": []
+}

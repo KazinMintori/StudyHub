@@ -1,13 +1,11 @@
 export const lesson = {
   "slug": "bai-03-numpy",
-  "title": "NumPy & tư duy vector hóa",
+  "title": "Mảng NumPy và tính toán trên mảng",
   "prerequisites": [
-    "mang",
-    "chi-muc",
-    "con-tro",
-    "vector-hoa",
-    "broadcasting"
+    "list",
+    "ham-lap-trinh"
   ],
   "supportingConcepts": [],
-  "status": "ready"
+  "status": "ready",
+  "hasChapterExercises": true
 }

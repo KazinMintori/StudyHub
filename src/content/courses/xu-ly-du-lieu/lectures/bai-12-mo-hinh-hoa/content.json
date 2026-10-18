@@ -1,0 +1,50 @@
+{
+  "course": "xu-ly-du-lieu",
+  "lecture": "bai-12-mo-hinh-hoa",
+  "route": "/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa",
+  "notes": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+  "topics": [],
+  "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-12-mo-hinh-hoa/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dataframe",
+    "thong-ke-mo-ta"
+  ],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 364,
+      "title": "Bài tập 1: Đặc tả ma trận mô hình bằng Patsy"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 401,
+      "title": "Bài tập 2: Đọc hiểu và thẩm định bảng hồi quy statsmodels"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 430,
+      "title": "Bài tập 3: Khắc phục lỗi rò rỉ dữ liệu trong scikit-learn"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 370,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 405,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+      "line": 453,
+      "title": "Lời giải chi tiết"
+    }
+  ],
+  "assets": []
+}

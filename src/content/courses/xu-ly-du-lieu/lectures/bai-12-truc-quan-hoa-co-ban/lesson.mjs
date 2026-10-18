@@ -1,12 +1,14 @@
 export const lesson = {
   "slug": "bai-12-truc-quan-hoa-co-ban",
-  "title": "Trực quan hóa cơ bản",
+  "title": "Trực quan hóa dữ liệu và đọc biểu đồ",
   "prerequisites": [
-    "gia-tri-thieu",
+    "dataframe",
     "thong-ke-mo-ta"
   ],
   "supportingConcepts": [
-    "histogram"
+    "chi-muc",
+    "gia-tri-thieu"
   ],
-  "status": "ready"
+  "status": "ready",
+  "hasChapterExercises": true
 }

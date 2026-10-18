@@ -1,13 +1,11 @@
 export const lesson = {
   "slug": "bai-04-lam-quen-pandas",
-  "title": "Làm quen với pandas",
+  "title": "Series, DataFrame và chỉ mục trong pandas",
   "prerequisites": [
-    "chi-muc",
     "dictionary",
-    "gia-tri-thieu"
+    "mang"
   ],
-  "supportingConcepts": [
-    "dataframe"
-  ],
-  "status": "ready"
+  "supportingConcepts": [],
+  "status": "ready",
+  "hasChapterExercises": true
 }

@@ -7,12 +7,122 @@
   "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-12-truc-quan-hoa-co-ban/slides.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [
-    "gia-tri-thieu",
+    "dataframe",
     "thong-ke-mo-ta"
   ],
-  "fragments": [],
+  "fragments": [
+    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+    "raw_materials/xu-ly-du-lieu/practice/visual-reading.md"
+  ],
   "examples": [],
-  "exercises": [],
-  "solutions": [],
-  "assets": []
+  "exercises": [
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 5,
+      "title": "Tạo hình có thể chạy lại"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 76,
+      "title": "Đọc phân phối theo hai cách chia nhóm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 100,
+      "title": "Ghép ranh giới và giải thích giá trị thiếu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 134,
+      "title": "Sửa phạm vi thời gian và xem từng điểm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 11,
+      "title": "Tính tỷ trọng từ số lượng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 33,
+      "title": "Kiểm tra biên khoảng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 54,
+      "title": "Phân biệt chênh lệch và tỷ lệ"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 75,
+      "title": "Tính hộp, ngưỡng và râu"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 14,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 80,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 106,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
+      "line": 139,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 15,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 37,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 58,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 79,
+      "title": ""
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/lec-12/ban-theo-nhom.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 7,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-12/ban-theo-nhom.svg"
+    },
+    {
+      "reference": "img/lec-12/phan-phoi-gia.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 29,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-12/phan-phoi-gia.svg"
+    },
+    {
+      "reference": "img/lec-13/so-sanh-truc.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 50,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-13/so-sanh-truc.svg"
+    },
+    {
+      "reference": "img/lec-13/boxplot.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+      "line": 71,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-13/boxplot.svg"
+    }
+  ]
 }

@@ -1,14 +1,15 @@
 export const lesson = {
   "slug": "bai-14-ke-chuyen-bang-du-lieu",
-  "title": "Kể chuyện bằng dữ liệu & thẩm định phân tích AI",
+  "title": "Các bài toán phân tích dữ liệu và kiểm tra kết luận",
   "prerequisites": [
-    "gia-tri-thieu",
-    "thong-ke-mo-ta",
-    "ket-luan-nhan-qua",
-    "suy-rong-thong-ke"
-  ],
-  "supportingConcepts": [
+    "dataframe",
     "groupby"
   ],
-  "status": "ready"
+  "supportingConcepts": [
+    "thong-ke-mo-ta",
+    "suy-rong-thong-ke",
+    "ket-luan-nhan-qua"
+  ],
+  "status": "ready",
+  "hasChapterExercises": true
 }

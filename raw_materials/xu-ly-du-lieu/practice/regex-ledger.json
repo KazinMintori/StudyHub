@@ -1,0 +1,182 @@
+[
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 1. Trích dãy chữ số đầu tiên",
+    "chapter": "7",
+    "destinationHeading": "Regex 1. Trích dãy chữ số đầu tiên",
+    "status": "included",
+    "testCases": 13,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 2. Dấu chấm thường và ký tự đại diện",
+    "chapter": "7",
+    "destinationHeading": "Regex 2. Dấu chấm thường và ký tự đại diện",
+    "status": "included",
+    "testCases": 14,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 3. Chọn ký tự trong một tập",
+    "chapter": "7",
+    "destinationHeading": "Regex 3. Chọn ký tự trong một tập",
+    "status": "included",
+    "testCases": 13,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 4. Kết hợp các khoảng ký tự",
+    "chapter": "7",
+    "destinationHeading": "Regex 4. Kết hợp các khoảng ký tự",
+    "status": "included",
+    "testCases": 14,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 5. Giới hạn số lần lặp",
+    "chapter": "7",
+    "destinationHeading": "Regex 5. Giới hạn số lần lặp",
+    "status": "included",
+    "testCases": 13,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 6. Phân biệt không lần và ít nhất một lần",
+    "chapter": "7",
+    "destinationHeading": "Regex 6. Phân biệt không lần và ít nhất một lần",
+    "status": "included",
+    "testCases": 14,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 7. Ký tự tùy chọn và dấu hỏi thường",
+    "chapter": "7",
+    "destinationHeading": "Regex 7. Ký tự tùy chọn và dấu hỏi thường",
+    "status": "included",
+    "testCases": 15,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 8. Yêu cầu có ký tự trắng phân cách",
+    "chapter": "7",
+    "destinationHeading": "Regex 8. Yêu cầu có ký tự trắng phân cách",
+    "status": "included",
+    "testCases": 15,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 9. Trích tên tệp PDF bằng nhóm bắt",
+    "chapter": "7",
+    "destinationHeading": "Regex 9. Trích tên tệp PDF bằng nhóm bắt",
+    "status": "included",
+    "testCases": 14,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 10. Trích số phòng với phép hoặc và ranh giới từ",
+    "chapter": "7",
+    "destinationHeading": "Regex 10. Trích số phòng với phép hoặc và ranh giới từ",
+    "status": "included",
+    "testCases": 15,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 11. Kiểm tra số nguyên và số thập phân đơn giản",
+    "chapter": "7",
+    "destinationHeading": "Regex 11. Kiểm tra số nguyên và số thập phân đơn giản",
+    "status": "included",
+    "testCases": 18,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 12. Kiểm tra số có phân cách hàng nghìn và số mũ",
+    "chapter": "7",
+    "destinationHeading": "Regex 12. Kiểm tra số có phân cách hàng nghìn và số mũ",
+    "status": "included",
+    "testCases": 21,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 13. Trích mã vùng điện thoại",
+    "chapter": "7",
+    "destinationHeading": "Regex 13. Trích mã vùng điện thoại",
+    "status": "included",
+    "testCases": 19,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 14. Trích tên tài khoản email trước bộ lọc",
+    "chapter": "7",
+    "destinationHeading": "Regex 14. Trích tên tài khoản email trước bộ lọc",
+    "status": "included",
+    "testCases": 19,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 15. Trích tên thẻ mở đầu tiên",
+    "chapter": "7",
+    "destinationHeading": "Regex 15. Trích tên thẻ mở đầu tiên",
+    "status": "included",
+    "testCases": 20,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 16. Chọn tệp ảnh và trích phần mở rộng",
+    "chapter": "7",
+    "destinationHeading": "Regex 16. Chọn tệp ảnh và trích phần mở rộng",
+    "status": "included",
+    "testCases": 16,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 17. Sửa mẫu cắt khoảng trắng bị tham lam",
+    "chapter": "7",
+    "destinationHeading": "Regex 17. Sửa mẫu cắt khoảng trắng bị tham lam",
+    "status": "included",
+    "testCases": 16,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 18. Trích dữ liệu từ dòng ngăn xếp lỗi",
+    "chapter": "7",
+    "destinationHeading": "Regex 18. Trích dữ liệu từ dòng ngăn xếp lỗi",
+    "status": "included",
+    "testCases": 16,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 19. Trích giao thức, máy chủ và cổng URL",
+    "chapter": "7",
+    "destinationHeading": "Regex 19. Trích giao thức, máy chủ và cổng URL",
+    "status": "included",
+    "testCases": 18,
+    "passageTests": 1
+  },
+  {
+    "sourceNotebook": "lab-07-regex",
+    "sourceHeading": "Câu 20. Trích đường dẫn URL, loại truy vấn và đoạn neo",
+    "chapter": "7",
+    "destinationHeading": "Regex 20. Trích đường dẫn URL, loại truy vấn và đoạn neo",
+    "status": "included",
+    "testCases": 18,
+    "passageTests": 1
+  }
+]

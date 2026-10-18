@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: xu-ly-du-lieu
+redirectTo: "/xu-ly-du-lieu/bai-giang/bai-01-tong-quan-cong-cu-chinh-sach-ai.html#slides"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

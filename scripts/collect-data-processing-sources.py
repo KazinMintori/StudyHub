@@ -31,11 +31,34 @@ def collect(item):
     for node in main.select('script,style,nav'):
         node.decompose()
     headings = [n.get_text(' ', strip=True) for n in main.select('h1,h2,h3,h4')]
+    exercises = []
+    if item['source'] == 'iai':
+        for heading in main.select('h1,h2,h3,h4'):
+            title = heading.get_text(' ', strip=True)
+            if re.match(r'^Bài tập\s+\d+\s*:', title):
+                section = heading.find_parent('section')
+                exercises.append({'title': title, 'anchor': section.get('id', '') if section else ''})
     text = main.get_text('\n', strip=True)
     (CACHE / (item['id'] + '.txt')).write_text(text, encoding='utf-8')
     (CACHE / (item['id'] + '.html')).write_text(response.text, encoding='utf-8')
     return {**item, 'resolvedUrl': response.url, 'status': response.status_code,
-            'sha256': hashlib.sha256(response.content).hexdigest(), 'headings': headings}
+            'sha256': hashlib.sha256(response.content).hexdigest(), 'headings': headings,
+            'exercises': exercises}
+
+
+def notebook(item):
+    response = get(item['url'])
+    data = response.json()
+    cells = []
+    headings = []
+    for cell in data['cells']:
+        content = ''.join(cell.get('source', []))
+        cells.append(content if cell['cell_type'] == 'markdown' else '```python\n' + content + '\n```')
+        if cell['cell_type'] == 'markdown':
+            headings.extend(re.findall(r'^#{1,6}\s+(.+)', content, re.M))
+    (CACHE / (item['id'] + '.txt')).write_text('\n\n'.join(cells), encoding='utf-8')
+    return {**item, 'status': response.status_code, 'sha256': hashlib.sha256(response.content).hexdigest(),
+            'headings': headings}
 
 
 def main():
@@ -66,7 +89,24 @@ def main():
                       'title': a.get_text(' ', strip=True), 'url': url})
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         records = list(pool.map(collect, items))
+    notebooks = []
+    seen = set()
+    for a in iai.select('a[href]'):
+        match = re.search(r'/github/([^?]+\.ipynb)', a['href'])
+        if not match:
+            continue
+        raw = 'https://raw.githubusercontent.com/' + match[1].replace('/blob/', '/')
+        name = raw.rsplit('/', 1)[-1].removesuffix('.ipynb')
+        number = re.search(r'(?:lecture|lab)-(\d+)', name)
+        if not number or not 2 <= int(number[1]) <= 14 or raw in seen:
+            continue
+        seen.add(raw)
+        notebooks.append({'id': 'iai-notebook-' + name, 'lecture': int(number[1]),
+                          'url': raw, 'entryUrl': a['href']})
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        notebooks = list(pool.map(notebook, notebooks))
     inventory = {'checkedOn': '2026-10-18', 'records': records,
+                 'notebooks': notebooks,
                  'unlistedIaiLectures': sorted(set(range(1, 15)) - {r['lecture'] for r in records if r['source'] == 'iai'}),
                  'excludedNotebook': 'https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-01.ipynb',
                  'handling': 'Topic inventory only. Protected prose and figures are not published. Draft original teaching material.'}
@@ -74,7 +114,7 @@ def main():
     target.write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'wes': sum(r['source'] == 'wes' for r in records),
                       'iai': sum(r['source'] == 'iai' for r in records),
-                      'unlisted': inventory['unlistedIaiLectures'], 'cache': str(CACHE)}, ensure_ascii=False))
+                      'notebooks': len(notebooks), 'unlisted': inventory['unlistedIaiLectures'], 'cache': str(CACHE)}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

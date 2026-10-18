@@ -1,7 +1,7 @@
 ---
 layout: page
 search: false
-redirectTo: "/xu-ly-du-lieu/bai-giang/bai-05-series-dataframe-chuyen-sau.html"
+redirectTo: "/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.html"
 ---
 
 <OldCourseLink />

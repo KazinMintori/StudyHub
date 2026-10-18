@@ -2,228 +2,352 @@
 course: xu-ly-du-lieu
 lecture: bai-01-tong-quan-cong-cu-chinh-sach-ai
 section: lecture
-title: "Tổng quan xử lý dữ liệu & công cụ"
-prerequisites: ["bien-kieu", "list", "dictionary"]
+title: "Công việc xử lý dữ liệu và môi trường Python"
+prerequisites: []
 lessonStatus: ready
-description: "Vị trí của xử lý dữ liệu trong chuỗi giá trị, ngăn xếp Scientific Python, kiến trúc IPython Kernel và kỷ luật làm việc với AI."
+hasChapterExercises: true
+description: "Công việc xử lý dữ liệu, ngăn xếp Scientific Python, kiến trúc IPython Kernel, quản lý môi trường ảo và quy ước làm việc."
 ---
 
-## 1. Vị thế của Môn học trong Chuỗi giá trị Dữ liệu
 
-### 1.1. Hiện thực dữ liệu trong môi trường sản xuất
-Trong các bài giảng lý thuyết nhập môn hoặc trên các diễn đàn công nghệ, người ta thường ca ngợi sức mạnh của các thuật toán Học máy (*Machine Learning*), Trí tuệ Nhân tạo (*AI*) hay những mô hình dự báo phức tạp. Tuy nhiên, một ngộ nhận kinh điển của người mới bắt đầu là tưởng tượng rằng dữ liệu luôn có sẵn dưới dạng các bảng tính tinh tươm, các cột số học ngay ngắn và các nhãn phân loại chuẩn mực.
+<div class="lecture-notes-content">
 
-Thực tế ngành công nghiệp dữ liệu khắc nghiệt hơn rất nhiều. Dữ liệu thô (*raw data*) trong thế giới thực luôn mang trong mình những đặc tính:
-- **Phân mảnh và bất đồng bộ**: Một phần nằm trong tệp nhật ký máy chủ (server logs), một phần nằm ở cơ sở dữ liệu quan hệ SQL của bộ phận vận hành, một phần khác lại được gửi về dưới dạng chuỗi JSON lồng nhau từ các cổng thanh toán của đối tác.
-- **Nhiễu loạn và suy hao**: Các trường tiền tệ bị lẫn ký tự đơn vị đo lường (như `$`, `VNĐ`, dấu phẩy ngăn phần nghìn), các trường ngày tháng bị đảo lộn giữa định dạng Anh (`DD/MM/YYYY`) và định dạng Mỹ (`MM/DD/YYYY`), các bản ghi bị nhân đôi do mạng chập chờn khi người dùng bấm gửi nhiều lần.
-- **Xung đột ngữ nghĩa**: Cùng một trạng thái khách hàng rời bỏ dịch vụ, phòng kinh doanh định nghĩa là "sau 30 ngày không phát sinh đơn hàng", nhưng phòng tài chính lại quy ước là "đã gửi yêu cầu đóng tài khoản".
+## 1. Công việc xử lý dữ liệu trong thực tế
 
-### 1.2. Quy tắc $80/20$ của ngành Khoa học Dữ liệu
-Các cuộc khảo sát thực tế trên toàn cầu đối với các kỹ sư dữ liệu và nhà khoa học dữ liệu đều chỉ ra một tỷ lệ thực tế:
+### 1.1. Thực tế dữ liệu và các dạng dữ liệu phổ biến
+Bạn nhận hai tệp: Danh sách đơn hàng và bảng thanh toán. Cả hai cùng ghi doanh thu, nhưng tổng tiền không khớp. Trước khi cộng cột, ta cần xác định một hàng đại diện cho điều gì và hai bảng liên kết bằng khóa nào.
 
-<DataDiagram name="effort" />
+Trong các bài tập mẫu, người học thường tiếp cận dữ liệu dưới dạng các bảng số liệu sạch sẽ, ngay ngắn và đồng nhất. Tuy nhiên, trong môi trường sản xuất thực tế, dữ liệu thô hiếm khi ở trạng thái sẵn sàng cho mô hình hóa. Dữ liệu thực tế thường đối mặt với ba vấn đề:
+- **Phân mảnh và đa dạng nguồn**: Một phần dữ liệu nằm trong nhật ký máy chủ bán cấu trúc, một phần nằm trong cơ sở dữ liệu quan hệ SQL và một phần được truyền qua API dưới dạng JSON lồng nhau. Sự đa dạng này đòi hỏi nhiều kỹ thuật kết nối khác nhau.
+- **Nhiễu loạn và suy hao**: Các trường số học bị lẫn ký tự tiền tệ hoặc đơn vị đo lường, ngày tháng bị xung đột giữa các quy ước quốc tế, và nhiều bản ghi bị trùng lặp do lỗi kết nối mạng khi người dùng gửi yêu cầu nhiều lần.
+- **Xung đột định nghĩa nghiệp vụ**: Cùng một chỉ số kinh doanh, hai phòng ban có thể áp dụng hai công thức tính toán khác nhau, dẫn tới những con số vênh nhau nếu không được chuẩn hóa ngay từ tầng dữ liệu thô.
 
-Khoảng $80\%$ tổng thời lượng và công sức của một dự án được dành cho việc chuyển hóa dữ liệu từ dạng hỗn loạn ban đầu thành một cấu trúc đáng tin cậy. Chỉ có khoảng $20\%$ thời gian còn lại được dùng để áp dụng thuật toán mô hình hóa hoặc vẽ biểu đồ báo cáo. Nếu tầng xử lý dữ liệu nền tảng làm sai lệch giá trị, toàn bộ các mô hình học máy tinh vi nhất đặt ở tầng trên đều trở thành vô nghĩa theo nguyên lý bất biến: **Rác vào thì Rác ra (*Garbage In, Garbage Out*)**.
+Dữ liệu trong phân tích hiện đại thường phân bố ở bốn nhóm cấu trúc chính:
+1. **Dữ liệu dạng bảng (Tabular data)**: Cấu trúc phổ biến gồm các hàng biểu diễn cho từng quan sát và các cột mang tên nhãn cụ thể, trong đó mỗi cột có thể chứa một kiểu dữ liệu riêng biệt.
+2. **Dữ liệu chuỗi thời gian (Time series)**: Tập hợp các điểm dữ liệu được gắn nhãn thời gian cố định hoặc biến đổi, đòi hỏi các phép toán trượt cửa sổ, dịch chuyển thời gian và đổi tần suất lấy mẫu.
+3. **Mảng nhiều chiều và ma trận số học**: Cấu trúc số học đồng nhất nhiều chiều dùng trong xử lý hình ảnh, tín hiệu số, hoặc làm đầu vào cho các thuật toán học máy.
+4. **Các bảng liên kết (Relational tables)**: Nhiều bảng dữ liệu độc lập nhưng liên kết với nhau thông qua các trường khóa chung, cần các phép ghép nối (*join*, *merge*) để tạo thành tập dữ liệu phân tích hoàn chỉnh.
 
-Môn học **Lập trình xử lý dữ liệu** được thiết kế nhằm xây dựng cho sinh viên năng lực thực chiến cốt lõi này: Biến những luồng dữ liệu bẩn, phân tán thành những tài sản thông tin sạch sẽ, chuẩn mực và có thể kiểm chứng được bằng mã nguồn.
+### 1.2. Chu trình xử lý dữ liệu từ dữ liệu thô đến quyết định
+Quá trình phân tích dữ liệu là một chuỗi biến đổi khép kín gồm các bước: Thu thập, làm sạch, chuyển dạng, tổng hợp, trực quan hóa và kiểm tra kết luận.
 
----
+Trước khi mô hình hóa, ta cần kiểm tra dữ liệu có phù hợp với câu hỏi hay không. Một phép tính có thể chạy đúng nhưng trả lời sai câu hỏi nếu bảng bị lặp hàng, dùng nhầm đơn vị hoặc chọn khác tập quan sát. Vì vậy, làm sạch và kiểm chứng phải gắn với ý nghĩa của từng cột.
 
-## 2. Ngăn xếp Tính toán Khoa học Python (Scientific Python Stack)
-
-### 2.1. Python: Ngôn ngữ "keo dán" của Khoa học Máy tính
-Tại sao Python, một ngôn ngữ thông dịch (*interpreted language*) với tốc độ thực thi các vòng lặp thuần túy chậm hơn hàng chục lần so với C hay C++, lại trở thành ngôn ngữ thống trị tuyệt đối trong lĩnh vực dữ liệu và AI?
-
-Câu trả lời nằm ở vai trò **ngôn ngữ keo (*glue language*)**. Các nhà thiết kế hệ thống tính toán đã khéo léo kết hợp hai thế giới:
-1. **Tầng người dùng (Cú pháp bậc cao)**: Python cung cấp cú pháp sáng rõ, gần gũi với ngôn ngữ tự nhiên, cho phép nhà nghiên cứu và kỹ sư thử nghiệm ý tưởng nhanh chóng mà không phải bận tâm về việc quản lý con trỏ, cấp phát bộ nhớ thủ công hay biên dịch mã nguồn phức tạp.
-2. **Tầng tính toán hạt nhân (Hiệu năng C/Fortran/Rust)**: Bên dưới mui xe (*under the hood*), toàn bộ các thao tác tính toán nặng nề trên ma trận số học đều được giao phó cho các thư viện gốc viết bằng C, C++ hoặc Fortran (như BLAS, LAPACK, OpenBLAS).
-
-Khi ta thực hiện một phép nhân hai mảng trong Python, trình thông dịch Python chỉ đóng vai trò người điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, lập trình viên tận hưởng trọn vẹn cả hai ưu điểm: Sự linh hoạt trong phát triển mã nguồn và tốc độ tính toán xấp xỉ mã C gốc.
-
-### 2.2. Các trụ cột của Hệ sinh thái Dữ liệu Python
-
-Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa trên ngăn xếp phân tầng chặt chẽ:
-
-<DataDiagram name="python-stack" />
-
-- **NumPy (*Numerical Python*)**: Cung cấp cấu trúc mảng nhiều chiều đồng nhất `ndarray` và các hàm toán học vector hóa (*ufuncs*), là nền móng bộ nhớ của mọi thư viện khoa học trong Python.
-- **Pandas**: Xây dựng dựa trên NumPy, bổ sung cấu trúc dữ liệu bảng có nhãn hai chiều `DataFrame` và một chiều `Series`, cung cấp các công cụ đọc tệp, ghép bảng, xử lý giá trị khuyết thiếu và tổng hợp dữ liệu nâng cao.
-- **Matplotlib & Seaborn**: Cung cấp công cụ trực quan hóa trực giao, từ việc kiểm soát từng thành phần đồ họa theo hướng đối tượng đến các biểu đồ phân tích thống kê đa chiều.
+Mục tiêu của môn học là trang bị năng lực biến những tập dữ liệu thô hỗn loạn thành dữ liệu sạch, đáng tin cậy và có thể kiểm chứng được bằng mã nguồn minh bạch.
 
 ---
 
-## 3. Kiến trúc Môi trường Tính toán & IPython Kernel
+## 2. Vì sao chọn Python cho phân tích dữ liệu?
 
-### 3.1. Phân định bản chất: Tệp mã nguồn `.py` và Sổ tay tính toán `.ipynb`
-Bạn có thể viết cùng một phép tính trong tệp `.py` hoặc trong một ô của Jupyter Notebook. Khi chạy, cả hai đều có thể in ra cùng một kết quả. Điểm khác biệt nằm ở **những gì được lưu trong tệp**.
+### 2.1. Python trong vai trò ngôn ngữ điều phối và kết nối
+Python là một ngôn ngữ thông dịch (*interpreted language*). Tốc độ duyệt vòng lặp thuần túy của Python chậm hơn đáng kể so với các ngôn ngữ biên dịch như C hay C++. Dù vậy, Python được ứng dụng rộng rãi trong kỹ thuật dữ liệu nhờ khả năng đóng vai trò ngôn ngữ điều phối và kết nối các thành phần tính toán.
 
-- **Tệp `.py`** là văn bản chứa mã Python và chú thích. Khi chạy bằng lệnh `python tinh_toan.py`, các câu lệnh được thực hiện theo luồng điều khiển của chương trình. Kết quả in ra màn hình không tự được ghi ngược vào tệp mã nguồn. Định dạng này thuận tiện để tổ chức mô-đun, thư viện và các chương trình chạy tự động.
-- **Tệp `.ipynb`** là tài liệu JSON chứa danh sách các ô trong trường `cells`. Ô mã có trường `source` lưu mã, `execution_count` ghi số thứ tự thực thi và `outputs` lưu đầu ra. Notebook còn có siêu dữ liệu `metadata` cùng các trường phiên bản định dạng. Nhờ đó, người đọc có thể xem mã, lời giải thích và kết quả đã lưu trong cùng một tài liệu.
+Ngăn xếp tính toán khoa học kết hợp hai ưu thế:
+1. **Tầng tương tác bậc cao**: Python cung cấp cú pháp gần gũi với tư duy toán học và ngôn ngữ tự nhiên, giúp người phân tích diễn đạt ý tưởng nhanh chóng mà không cần bận tâm về việc quản lý con trỏ hay cấp phát bộ nhớ thủ công.
+2. **Tầng tính toán biên dịch**: Bên dưới giao diện lập trình, các thư viện như NumPy và SciPy ủy thác các phép toán ma trận nặng cho các thư viện biên dịch sẵn bằng C, Fortran hoặc C++ (như BLAS, LAPACK khi có sẵn).
 
-<DataDiagram name="notebook-file-formats" />
+Khi thực hiện phép tính trên một mảng dữ liệu, Python đóng vai trò điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, chương trình vừa giữ được sự linh hoạt trong phát triển mã nguồn, vừa đạt tốc độ tính toán của mã nhị phân tối ưu.
 
-Trong ví dụ này, `print()` tạo đầu ra văn bản thuộc luồng `stdout`. Với đồ thị, đầu ra có thể chứa dữ liệu ảnh hoặc các dạng hiển thị khác. Notebook có thể lớn và khó đối chiếu thay đổi trên Git khi chứa nhiều đầu ra. Kích thước đó phụ thuộc vào nội dung được lưu, không phải mọi tệp `.ipynb` đều nặng.
+### 2.2. Giải quyết bài toán hai ngôn ngữ (Two-Language Problem)
+Trước khi Python phổ biến trong khoa học dữ liệu, các tổ chức nghiên cứu thường đối mặt với bài toán hai ngôn ngữ:
+- Giai đoạn nghiên cứu mẫu thử (prototype) được thực hiện trên một ngôn ngữ chuyên sâu về thống kê hoặc toán học (như R, MATLAB, SAS).
+- Khi đưa vào vận hành, một số dự án phải chuyển một phần hoặc cả chương trình sang công cụ khác để đáp ứng yêu cầu về hiệu năng hay tích hợp.
 
-Hai tệp mẫu để xem cấu trúc đầy đủ: [Mã Python `tinh_toan.py`](/materials/xu-ly-du-lieu/lec01/tinh_toan.py) và [Notebook `tinh_toan.ipynb`](/materials/xu-ly-du-lieu/lec01/tinh_toan.ipynb). Mở tệp notebook bằng trình soạn thảo văn bản sẽ thấy cấu trúc JSON tương ứng với các trường trong minh họa.
+Quy trình hai bước này gây lãng phí nguồn lực kỹ thuật, dễ phát sinh lỗi chuyển đổi công thức và làm chậm tiến độ triển khai sản phẩm. Python thống nhất cả hai giai đoạn: Một nhà phân tích có thể xây dựng mô hình thử nghiệm trong sổ tay tương tác, và chính đoạn mã đó có thể được đóng gói trực tiếp vào dịch vụ vận hành thực tế.
 
-### 3.2. Kiến trúc tương tác ba tầng: Trình duyệt, Máy chủ và IPython Kernel
-Khi nhấn `Shift + Enter` trong Jupyter Notebook trên trình duyệt, mã không được thực thi ngay trong trang web. Yêu cầu chạy đi qua máy chủ để tới một tiến trình Python riêng, gọi là **kernel**. Ba thành phần và hai kênh trao đổi được ghép trong cùng một sơ đồ dưới đây.
+### 2.3. Ranh giới và giới hạn của Python
+Bên cạnh các ưu thế rõ rệt, người làm kỹ thuật dữ liệu cần nhận thức rõ những giới hạn của Python:
+- **Khóa thông dịch toàn cục (Global Interpreter Lock, GIL)**: Trong bản dựng CPython có bật GIL, tại một thời điểm chỉ một luồng được thực thi mã Python trong cùng trình thông dịch. Điều này không buộc luồng luôn nằm trên một lõi CPU. Một số thư viện có thể nhả GIL khi tính toán, còn bản dựng free-threaded có cơ chế khác. Vì vậy phải xác định môi trường và loại công việc trước khi chọn luồng hay tiến trình.
+- **Chi phí vòng lặp thông dịch**: Việc viết vòng lặp `for` duyệt qua từng phần tử trên tập dữ liệu lớn bằng Python thuần sẽ gây suy giảm hiệu năng đáng kể. Nhiều phép biến đổi quy mô lớn cần được chuyển thành phép toán vector hóa của NumPy, pandas, hoặc xử lý theo khối đệm.
+- **Giới hạn bộ nhớ RAM**: Khi nạp cả bảng vào pandas, dữ liệu và các kết quả trung gian cần bộ nhớ. Nếu không đủ RAM, chương trình có thể chậm do phân trang hoặc không cấp phát được dữ liệu. Đọc theo khối, chọn cột, đổi kiểu phù hợp hay truy vấn tại nơi lưu dữ liệu là những cách cần cân nhắc trước khi mở rộng công cụ.
 
-<DataDiagram name="jupyter" />
+---
 
-Cần phân biệt **tệp notebook trên đĩa** với **trạng thái tính toán trong RAM**. Lưu notebook có thể giữ lại mã và đầu ra đang hiển thị, nhưng không tự lưu toàn bộ các đối tượng Python đang tồn tại trong kernel. Sự khác biệt này giải thích vì sao một kết quả vẫn xuất hiện trên trang dù kernel vừa được khởi động lại.
+## 3. Ngăn xếp tính toán khoa học Python (Scientific Python Stack)
 
-### 3.3. Minh họa cơ chế chạy Cell và Chỉ số Thực thi `In [ ]`
-Nhãn bên cạnh một ô mã giúp nhận biết việc thực thi của ô đó:
+Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa trên ngăn xếp các thư viện chuyên biệt:
 
-- **`In [ ]`**: Ô không có số thứ tự thực thi đang hiển thị. Chỉ nhìn nhãn này không thể kết luận một tên biến có tồn tại trong kernel hay không, vì tên đó có thể đã được tạo bởi một ô khác.
-- **`In [*]`**: Ô đang chờ hoặc đang được xử lý. Kernel có thể đang tính toán, đọc dữ liệu hoặc chờ phản hồi mạng.
-- **`In [n]`**: Số thứ tự của lần thực thi gần nhất được ghi nhận cho ô. Nhãn này phản ánh thứ tự chạy, không phản ánh vị trí ô trên trang và cũng không bảo đảm lần chạy đã hoàn tất mà không có lỗi.
+1. **NumPy (*Numerical Python*)**: Là nền móng của hệ sinh thái tính toán số học. NumPy cung cấp đối tượng mảng đa chiều đồng nhất `ndarray`, các hàm toán học vector hóa (*ufuncs*), cùng các công cụ đại số tuyến tính và sinh số ngẫu nhiên.
+2. **pandas**: Thư viện xử lý dữ liệu dạng bảng. pandas cung cấp hai cấu trúc dữ liệu chính là `Series` (mảng một chiều có nhãn) và `DataFrame` (bảng hai chiều có nhãn hàng và cột). pandas sở hữu bộ công cụ phong phú để nạp tệp, làm sạch dữ liệu khuyết thiếu, nối bảng, chuyển đổi hình dạng và tổng hợp theo nhóm. Ngoài vùng đệm NumPy truyền thống, pandas hiện đại còn hỗ trợ các định dạng lưu trữ như PyArrow.
+3. **Matplotlib & Seaborn**: Bộ đôi trực quan hóa dữ liệu. Matplotlib kiểm soát chi tiết từng thành phần của trục tọa độ và hình vẽ, trong khi Seaborn cung cấp giao diện bậc cao để tạo các đồ thị thống kê trực quan.
+4. **IPython & Jupyter**: Cung cấp môi trường thực thi tương tác dòng lệnh và giao diện sổ tay nghiên cứu, hỗ trợ quy trình khám phá dữ liệu lặp đi lặp lại.
+5. **SciPy**: Mở rộng các thuật toán khoa học chuyên sâu dựa trên NumPy, bao gồm tối ưu hóa hàm số, tích phân số trị, xử lý tín hiệu và các phân phối xác suất thống kê.
+6. **scikit-learn & statsmodels**: Scikit-learn là bộ công cụ học máy phổ biến (phân loại, hồi quy, gom cụm), còn statsmodels tập trung vào các mô hình thống kê suy diễn cổ điển, kinh lượng học và kiểm định giả thuyết.
 
-Xét một phiên làm việc bắt đầu với kernel sạch. Tài liệu có ba ô, nhưng người dùng **chạy ô 1 trước, chạy ô 3 hai lần rồi mới chạy ô 2**. Hai góc nhìn dưới đây cùng mô tả phiên làm việc đó. Màu của mỗi ô được giữ nguyên để đối chiếu giữa vị trí trong tài liệu và lịch sử thực thi.
+---
 
-<NotebookExecution />
+## 4. Kiến trúc Môi trường Tính toán: Kịch bản Python và Sổ tay Jupyter
 
-Ô 2 in ra `20` vì lần chạy của nó xảy ra sau hai lần cộng thêm `5` ở ô 3. Nhãn `In [3]` cạnh ô 3 chỉ ghi lần chạy gần nhất của ô này. Lần chạy trước đó mang nhãn `In [2]` không còn hiện cạnh ô. Đầu ra của `print(x)` là dòng văn bản `20`, không mang nhãn `Out [4]`. Nhãn `Out [n]` thường đi với kết quả của một biểu thức được IPython hiển thị tự động.
+### 4.1. Phân biệt tệp mã nguồn `.py` và sổ tay `.ipynb`
+Người lập trình có thể thực thi cùng một biểu thức tính toán trong tệp kịch bản `.py` hoặc trong một ô của Jupyter Notebook. Điểm khác biệt cốt lõi nằm ở định dạng tệp và cách thức lưu trữ:
 
-Khi lưu notebook, các nhãn và đầu ra này có thể được giữ lại trong tệp. Khi mở lại tài liệu, hãy xác định kernel hiện tại đã chạy những ô nào trước khi dùng các nhãn đã lưu để suy luận về RAM.
+- **Tệp mã nguồn `.py`**: Là tệp văn bản thuần (*plain text*). Khi thực thi bằng lệnh `python chuong_trinh.py`, trình thông dịch đọc tuần tự các câu lệnh từ đầu đến cuối tệp. Đầu ra in ra màn hình hoặc tệp nhật ký, hoàn toàn không được ghi ngược vào tệp mã nguồn. Tệp `.py` là định dạng chuẩn để xây dựng các mô-đun, thư viện và đường ống xử lý tự động chạy ngầm.
+- **Sổ tay tính toán `.ipynb`**: Thực chất là một tệp văn bản chứa dữ liệu có cấu trúc theo định dạng JSON (*JavaScript Object Notation*). Cấu trúc tệp bao gồm:
+  - Trường `cells`: Danh sách các ô tính toán. Mỗi ô mã chứa nội dung mã (`source`), số thứ tự thực thi (`execution_count`), và toàn bộ kết quả đầu ra tương ứng (`outputs`). Đầu ra có thể là văn bản, bảng HTML, hoặc ảnh biểu đồ mã hóa Base64.
+  - Trường `metadata`: Thông tin về môi trường kernel, phiên bản ngôn ngữ và cấu hình hiển thị.
 
-### 3.4. Bẫy Không gian tên Toàn cục (Global Namespace Trap)
-Ví dụ vừa rồi cho thấy trạng thái của `x` phụ thuộc vào lịch sử thực thi. Các ô mã trong cùng một kernel sử dụng chung không gian tên. Biến, hàm và các đối tượng được tạo ra có thể tiếp tục được dùng ở những lần chạy sau cho đến khi bị thay đổi, bị xóa hoặc kernel kết thúc.
+Nhờ lưu trữ đồng thời cả mã lệnh lẫn kết quả đầu ra, tệp `.ipynb` cho phép người đọc xem trực tiếp biểu đồ và bảng kết quả mà không cần chạy lại toàn bộ mã nguồn.
 
-#### 1. Cơ chế trạng thái tích lũy trong RAM
-Mỗi lần chạy `x = x + 5`, Python lấy giá trị hiện tại của `x` để tính giá trị mới rồi gán lại. Vì vậy, chạy lặp một ô có thể làm kết quả thay đổi ngay cả khi nội dung ô vẫn giữ nguyên. Di chuyển ô hoặc sửa văn bản trên trang cũng không tự thực thi lại mã và không tự hoàn tác trạng thái trong RAM.
+### 4.2. Kiến trúc tương tác ba tầng của Jupyter
+Khi bạn thao tác trong Jupyter Notebook trên trình duyệt web, mã lệnh không được thực thi trực tiếp trên trang web đó. Kiến trúc vận hành của Jupyter gồm ba thành phần tách biệt:
 
-Khi gỡ lỗi, hãy lần theo thứ tự thực thi và các lệnh gán trước đó. Đọc từ trên xuống dưới chỉ phản ánh đúng quá trình tính toán khi các ô thực sự đã được chạy theo thứ tự ấy trên một trạng thái khởi đầu xác định.
+1. **Giao diện trình duyệt (Client)**: Tiếp nhận thao tác gõ mã của người dùng và hiển thị kết quả đầu ra.
+2. **Máy chủ Jupyter (Jupyter Server)**: Ứng dụng web đóng vai trò trung gian, quản lý các tệp sổ tay trên đĩa và điều phối các phiên làm việc.
+3. **Hạt nhân tính toán (IPython Kernel)**: Một tiến trình Python độc lập chạy ngầm trên hệ điều hành, chịu trách nhiệm thực thi các khối mã và duy trì trạng thái các biến trong bộ nhớ RAM.
 
-#### 2. Cạm bẫy biến ma (Ghost Variable Trap)
-Giả sử bạn chạy một ô tạo biến `du_lieu_tam = tai_bang()`, rồi dùng biến đó để vẽ biểu đồ. Sau đó, bạn xóa ô tạo biến khỏi tài liệu. **Xóa ô khỏi notebook không xóa biến đã được tạo trong kernel**, nên các ô còn lại vẫn có thể chạy trong phiên hiện tại.
+Khi người dùng nhấn tổ hợp phím `Shift + Enter`, trình duyệt gửi mã qua giao thức WebSocket tới Jupyter Server, sau đó máy chủ chuyển tiếp mã tới IPython Kernel qua thư viện ZeroMQ. Kernel thực thi xong sẽ gửi trả kết quả về trình duyệt để vẽ giao diện.
 
-Người nhận notebook sẽ gặp vấn đề khi chạy trên một kernel sạch. Nếu không còn câu lệnh tạo `du_lieu_tam`, lần sử dụng tên đó sẽ báo lỗi:
+### 4.3. Thứ tự thực thi `In [ ]`, trạng thái RAM và bẫy biến ma
+Cần phân biệt rạch ròi giữa **tệp notebook lưu trên đĩa** và **trạng thái tính toán trong RAM**:
 
+- Nhãn `In [ ]`: Ô chưa từng được thực thi kể từ khi khởi động kernel.
+- Nhãn `In [*]`: Ô đang trong trạng thái xử lý tính toán.
+- Nhãn `In [n]`: Số nguyên `n` phản ánh thứ tự thực thi của ô đó theo thời gian thực. Nhãn này không phản ánh vị trí hình học từ trên xuống dưới trên trang màn hình.
+
+Mọi ô mã trong cùng một sổ tay chia sẻ chung một không gian tên toàn cục (*global namespace*) trong RAM. Nếu bạn chạy một ô mã gán `x = 10`, sau đó chạy một ô mã khác tăng `x = x + 5` ba lần liên tiếp, giá trị của `x` trong RAM sẽ là $25$, bất kể các ô mã đó nằm ở vị trí nào trên trang.
+
+#### Cạm bẫy biến ma (Ghost Variable Trap)
+Giả sử bạn tạo một ô mã khai báo biến tạm:
+```python
+du_lieu_tam = [10, 20, 30]
+```
+Sau khi chạy ô mã này, biến `du_lieu_tam` đã nằm trong RAM của kernel. Bạn viết tiếp các ô mã bên dưới sử dụng biến này. Sau đó, bạn xóa ô khai báo `du_lieu_tam` khỏi giao diện notebook. Vì tiến trình kernel vẫn đang chạy, các ô bên dưới vẫn hoạt động bình thường trong phiên làm việc hiện tại của bạn.
+
+Tuy nhiên, khi gửi tệp `.ipynb` cho đồng nghiệp hoặc chạy trên hệ thống kiểm tra tự động, kernel mới được tạo ra từ đầu. Khi chạy tuần tự, chương trình sẽ lập tức sập với lỗi:
 ```text
 NameError: name 'du_lieu_tam' is not defined
 ```
 
-Để phát hiện sự phụ thuộc vào trạng thái cũ, trước khi nộp bài hoặc chia sẻ notebook, hãy dùng thao tác **Restart Kernel and Run All Cells** trong menu quản lý kernel. Thao tác này tạo lại trạng thái tính toán và chạy các ô theo thứ tự tài liệu. Nếu thiếu bước tạo biến, lỗi sẽ xuất hiện thay vì bị trạng thái của phiên trước che khuất. Khả năng tái lập kết quả còn phụ thuộc vào dữ liệu đầu vào, phiên bản thư viện và các nguồn ngẫu nhiên của chương trình.
+> [!IMPORTANT] Kỷ luật vàng khi làm việc với Notebook
+> Trước khi chia sẻ notebook, hãy thử khởi động lại kernel và chạy các ô từ trên xuống. Việc này giúp phát hiện phụ thuộc vào trạng thái cũ trong phiên. Muốn chạy lại cả phân tích, còn cần cùng dữ liệu, cấu hình, thư viện và các điều kiện ngẫu nhiên đã được ghi nhận.
 
 ---
 
-## 4. Quản trị Dự án Chuẩn mực: Môi trường ảo `venv` và Kiểm soát Phụ thuộc
+## 5. Quản trị môi trường làm việc với venv và pip
 
-Một kỹ sư dữ liệu chuyên nghiệp không bao giờ cài đặt thư viện bừa bãi vào môi trường Python gốc của hệ điều hành. Mỗi dự án nghiên cứu hoặc sản phẩm phân tích phải là một không gian độc lập và tự khép kín.
+### 5.1. Cơ chế cách ly gói thư viện và phòng tránh xung đột
+Khi cài đặt Python lên máy tính, hệ điều hành chỉ cung cấp một thư mục mặc định duy nhất để chứa các thư viện bên thứ ba, gọi là `site-packages`. Nếu người dùng cài đặt gói bằng lệnh `pip install <ten-goi>` mà không dùng môi trường ảo, các thư viện sẽ được chép đè vào thư mục dùng chung này.
 
-### 4.1. Vì sao người ta nghĩ ra Môi trường ảo (`venv`)?
-Để hiểu được giá trị của môi trường ảo, trước hết ta cần nắm được cách thức tổ chức mặc định của Python trên máy tính.
+Thiết kế dùng chung thư mục bộc lộ hai rủi ro:
+1. **Xung đột phụ thuộc giữa các dự án (Dependency Collision)**: Dự án cũ của bạn cần `pandas 1.5.3`, trong khi dự án mới yêu cầu `pandas 2.2.0`. Việc cài đè phiên bản mới sẽ làm gãy mã nguồn của dự án cũ do nhiều hàm đã bị thay đổi cú pháp hoặc loại bỏ.
+2. **Nguy cơ làm hỏng Python hệ thống**: Trên các hệ điều hành như Linux (Ubuntu, Debian) và macOS, nhiều tiến trình quản trị hệ thống phụ thuộc trực tiếp vào phiên bản Python của hệ thống. Cài đặt bừa bãi với quyền quản trị viên (`sudo pip install`) có thể phá vỡ các công cụ quản lý mạng và gói phần mềm của hệ điều hành.
 
-Khi bạn cài đặt Python lên hệ điều hành, hệ thống chỉ cung cấp một thư mục lưu trữ duy nhất dành cho các gói phần mềm bên thứ ba, thường mang tên `site-packages` nằm sâu trong thư mục cài đặt gốc. Mỗi khi bạn gõ lệnh `pip install <ten-goi>`, trình quản lý gói sẽ tải mã nguồn về và ghi thẳng vào thư mục dùng chung này. Nếu gói phần mềm đó đã tồn tại một phiên bản trước đó, lệnh cài đặt mới sẽ âm thầm ghi đè và xóa bỏ phiên bản cũ.
+Môi trường ảo (*virtual environment* hay `venv`) giải quyết vấn đề này bằng cách tạo ra một thư mục biệt lập cho từng dự án, chứa:
+- Bản sao hoặc liên kết biểu tượng (*symlink*) trỏ tới tệp thực thi `python`.
+- Thư mục `site-packages` riêng biệt, hoàn toàn cách ly với hệ điều hành và các dự án khác.
+- Các kịch bản kích hoạt (*activation scripts*) để tạm thời điều chỉnh biến môi trường hệ thống `PATH`.
 
-Cách thiết kế dùng chung một chiếc tủ đồ này nhanh chóng bộc lộ hạn chế khi một lập trình viên phải phụ trách nhiều dự án cùng lúc. Các kỹ sư nhận thấy rằng: Mỗi dự án phần mềm có chu kỳ phát triển, đối tác công nghệ và ràng buộc thư viện hoàn toàn khác nhau. Một dự án không thể bị phụ thuộc hoặc làm hỏng các dự án khác chỉ vì một bản nâng cấp thư viện.
-
-Môi trường ảo (*virtual environment* hay `venv`) ra đời như một **chiếc hộp cách ly (sandbox)** độc lập cho từng dự án. Về mặt bản chất kỹ thuật, `venv` thực chất chỉ là một thư mục con nằm ngay bên trong dự án của bạn (thường đặt tên là `.venv`), bao gồm:
-1. **Bản sao hoặc liên kết biểu tượng (*symlink*)**: Trỏ tới tệp thực thi `python` của hệ thống.
-2. **Thư mục `site-packages` riêng biệt**: Chứa toàn bộ các thư viện được cài đặt riêng cho dự án đó, hoàn toàn cách ly với phần còn lại của máy tính.
-3. **Các kịch bản kích hoạt (`activate`)**: Có nhiệm vụ tạm thời điều chỉnh biến môi trường hệ thống `$PATH`, ưu tiên trỏ các lệnh `python` và `pip` vào bên trong thư mục `.venv`.
-
-Khi bạn làm việc xong hoặc muốn dọn dẹp dự án, bạn chỉ cần xóa bỏ thư mục `.venv` đó là toàn bộ thư viện liên quan biến mất sạch sẽ, không để lại bất kỳ rác thải hay ảnh hưởng tiêu cực nào lên hệ điều hành.
-
-### 4.2. Ba tình huống thực tế hằng ngày nếu không sử dụng `venv`
-Nếu không duy trì kỷ luật tạo môi trường ảo, bạn sẽ thường xuyên đối mặt với ba tình huống trớ trêu sau đây trong công việc hằng ngày:
-
-#### 1. Bi kịch xung đột phiên bản giữa các dự án (Dependency Collision)
-- **Bối cảnh**: Bạn đang duy trì một hệ thống báo cáo bán hàng cho doanh nghiệp xây dựng từ năm ngoái (Dự án A), sử dụng thư viện `pandas` phiên bản cũ `1.5.3`. Sang học kỳ này, bạn bắt đầu làm đồ án môn Xử lý dữ liệu (Dự án B) cần sử dụng các tính năng tối ưu hóa kiểu dữ liệu chuỗi mới nhất của `pandas 2.2.0`.
-- **Diễn biến**: Do không dùng môi trường ảo, bạn mở terminal lên và gõ `pip install pandas==2.2.0`. Lệnh này lập tức gỡ bỏ bản 1.5.3 và chép đè bản 2.2.0 vào hệ thống máy tính.
-- **Hệ quả**: Dự án B chạy rất tốt, nhưng ngày hôm sau khi công ty yêu cầu bạn xuất báo cáo định kỳ cho Dự án A, chương trình Dự án A lập tức ném ra hàng loạt lỗi màu đỏ `ImportError` và gãy đổ chức năng vì nhiều cú pháp cũ đã bị loại bỏ ở phiên bản mới. Bạn rơi vào bẫy bế tắc: Nâng cấp mã nguồn Dự án A thì mất nhiều ngày kiểm thử lại toàn bộ hệ thống, trong khi hạ cấp phiên bản về `1.5.3` thì đồ án Dự án B không thể tiếp tục thực hiện.
-
-#### 2. Ô nhiễm và làm tê liệt Python của Hệ điều hành (Corrupting System Python)
-- **Bối cảnh**: Trên các hệ điều hành phổ biến dành cho lập trình viên như Ubuntu, Debian hay macOS, rất nhiều công cụ quản trị hệ thống cốt lõi (chẳng hạn công cụ cài đặt gói `apt`, trình quản lý mạng, các dịch vụ tường lửa hay tiện ích đồ họa) được viết và vận hành bằng chính phiên bản Python mặc định của hệ điều hành.
-- **Diễn biến**: Khi gặp thông báo lỗi thiếu quyền cài đặt thư viện, người mới học thường gõ thêm quyền quản trị viên tối cao: `sudo pip install <ten-goi>`.
-- **Hệ quả**: Trình quản lý gói `pip` với quyền root sẽ ghi đè các thư viện nền tảng của hệ điều hành bằng các phiên bản thử nghiệm của ngành khoa học dữ liệu. Sự bất tương thích này có thể khiến các công cụ quản lý hệ thống bị tê liệt, máy tính không thể cập nhật phần mềm, thậm chí mất hoàn toàn giao diện đồ họa khi khởi động lại máy. Đây là lý do các hệ điều hành hiện đại đã áp dụng tiêu chuẩn bảo vệ nghiêm ngặt (PEP 668), từ chối lệnh `pip install` ở môi trường ngoài và yêu cầu người dùng bắt buộc phải sử dụng môi trường ảo.
-
-#### 3. Mất khả năng đóng gói và tái lập môi trường ("Chạy trên máy tôi nhưng sập trên máy bạn")
-- **Bối cảnh**: Sau một thời gian học tập, máy tính của bạn đã được cài đặt tự do hàng trăm thư viện khác nhau phục vụ từ làm web, lập trình game, trí tuệ nhân tạo đến phân tích dữ liệu. Đến hạn nộp bài tập lớn, bạn gõ lệnh xuất danh sách phụ thuộc `pip freeze > requirements.txt` để gửi cho bạn cùng nhóm.
-- **Diễn biến**: Tệp văn bản sinh ra chứa một danh sách khổng lồ gồm hơn 180 thư viện với các phiên bản hỗn tạp, trong đó chứa cả những gói chỉ hoạt động trên một hệ điều hành nhất định hoặc đòi hỏi driver phần cứng đặc thù của riêng máy bạn.
-- **Hệ quả**: Khi giảng viên hoặc bạn cùng nhóm tải mã nguồn về và gõ `pip install -r requirements.txt`, quá trình cài đặt liên tục báo lỗi biên dịch, làm tràn bộ nhớ ổ đĩa hoặc cài đặt hàng loạt thư viện thừa thãi không liên quan. Nguy hiểm hơn, dự án có thể thiếu mất tính năng cốt lõi do bạn quên mất tên gói thư viện thực sự cần dùng.
-
-### 4.3. Quy trình thực hành chuẩn mực với `venv`
-Một quy trình làm việc chuyên nghiệp luôn bắt đầu bằng việc thiết lập môi trường biệt lập ngay khi khởi tạo dự án:
+### 5.2. Quy trình làm việc với `venv`, `requirements.txt` và `.python-version`
+Quy trình thiết lập môi trường cho một dự án dữ liệu gồm bốn bước:
 
 ```bash
-# Bước 1: Điều hướng vào thư mục dự án và khởi tạo môi trường ảo có tên .venv
+# Bước 1: Điều hướng vào thư mục dự án và khởi tạo môi trường ảo mang tên .venv
 python -m venv .venv
 
 # Bước 2: Kích hoạt môi trường ảo
-# Trên macOS / Linux:
-source .venv/bin/activate
-# Trên Windows PowerShell:
+# Trên hệ điều hành Windows PowerShell:
 .venv\Scripts\Activate.ps1
+# Trên hệ điều hành macOS / Linux:
+source .venv/bin/activate
 ```
 
-Khi kích hoạt thành công, dấu nhắc lệnh trên terminal sẽ hiển thị thêm tiền tố `(.venv)`, báo hiệu cho bạn biết mọi lệnh gọi `python` hay `pip` từ lúc này trở đi đều được gói gọn an toàn bên trong chiếc hộp cát của dự án.
+Kích hoạt môi trường thường thêm tiền tố `(.venv)` và ưu tiên đường dẫn chương trình của môi trường trong PATH. Hãy kiểm tra `python -c "import sys; print(sys.executable)"` và `python -m pip --version` để biết đúng trình thực thi đang dùng.
 
 ```bash
-# Bước 3: Cài đặt các thư viện cần thiết cho dự án
-pip install pandas numpy matplotlib
+# Bước 3: Cài đặt các gói thư viện cần thiết
+pip install numpy pandas matplotlib
 
 # Bước 4: Khóa danh sách phụ thuộc ra tệp cấu hình
 pip freeze > requirements.txt
 ```
 
-Khi một thành viên khác trong nhóm nghiên cứu nhận dự án hoặc khi triển khai lên máy chủ, họ chỉ cần thực hiện hai thao tác tái lập đơn giản:
-```bash
-# Tạo môi trường ảo sạch trên máy mới và kích hoạt
-python -m venv .venv
-source .venv/bin/activate  # Hoặc .venv\Scripts\Activate.ps1 trên Windows
+Tệp `requirements.txt` lưu trữ danh sách tên gói và phiên bản chính xác, ví dụ:
+```text
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+```
 
-# Cài đặt chính xác các phiên bản thư viện đã được khóa
+Một số công cụ như pyenv hoặc uv đọc `.python-version` để chọn phiên bản Python. Tệp này không tự điều khiển Python hay venv và không mặc nhiên có nghĩa là phiên bản tối thiểu. Khi nhận dự án, cần chọn trình thực thi phù hợp, tạo môi trường rồi cài các gói đã ghi nhận:
+```bash
 pip install -r requirements.txt
 ```
 
-Bên cạnh đó, tệp `.python-version` ghi rõ phiên bản Python chuẩn (ví dụ `3.12.8`) để các công cụ quản lý như `pyenv` hay `uv` tự động đồng bộ môi trường giữa các thành viên trong nhóm nghiên cứu.
-
-> [!TIP] Nguyên tắc vàng khi làm việc với Git
-> Thư mục `.venv` có thể chứa hàng chục nghìn tệp tin với dung lượng hàng trăm megabyte. Tuyệt đối **không bao giờ đưa thư mục `.venv` lên kho lưu trữ Git**.
->
-> Bạn chỉ cần thêm dòng chữ `.venv/` vào tệp `.gitignore`. Kho lưu trữ mã nguồn chỉ cần lưu trữ mã lệnh của bạn và tệp kê khai `requirements.txt`. Bất kỳ ai tải mã nguồn về đều có thể tự động dựng lại môi trường nguyên bản chỉ bằng một dòng lệnh.
+> [!TIP] Quy tắc quản lý phiên bản với Git
+> Thư mục `.venv` chứa nhiều tệp nhị phân và mã nguồn thư viện với dung lượng lớn. Không đưa thư mục `.venv` lên kho lưu trữ Git. Hãy thêm dòng `.venv/` vào tệp `.gitignore`. Kho lưu trữ chỉ cần lưu mã nguồn của bạn và tệp `requirements.txt`.
 
 ---
 
-## 5. Phương pháp luận Làm việc với Trí tuệ Nhân tạo (AI)
+### 5.3. Môi trường Conda
 
-Trong kỷ nguyên của các mô hình ngôn ngữ lớn (LLM), việc cấm đoán sử dụng AI là điều phi thực tế và đi ngược lại xu thế công nghệ. Tuy nhiên, ranh giới giữa một **kỹ sư làm chủ công cụ** và một **người phụ thuộc thụ động** nằm ở nhận thức về các quy ước ngầm.
+Conda là một lựa chọn khác để quản lý trình thực thi và các gói. Sau khi cài Miniconda hoặc một bản phân phối Conda phù hợp hệ điều hành, mở terminal được cấu hình cho Conda rồi tạo môi trường riêng:
 
-### 5.1. Nhận diện các lựa chọn quy ước ngầm của AI
-Khi bạn đưa cho AI một yêu cầu giản đơn: *"Hãy tính giá phòng trung bình của tập dữ liệu này"*, mô hình ngôn ngữ sẽ lập tức sinh ra một dòng mã như:
-```python
-avg_price = df["price"].mean()
+```bash
+conda create -n study-data python numpy pandas matplotlib jupyterlab
+conda activate study-data
+python -c "import sys; print(sys.executable)"
+conda env export --from-history > environment.yml
 ```
-Dòng mã này trông có vẻ hoàn hảo, nhưng thực chất AI vừa âm thầm chọn thay bạn hàng loạt quy ước nghiệp vụ quan trọng mà bạn không hề hay biết:
-1. **Xử lý giá trị khuyết thiếu**: Hàm `.mean()` của pandas mặc định bỏ qua các giá trị `NaN` (`skipna=True`). Nếu cột có tới $40\%$ dữ liệu bị thiếu và các ô bị thiếu đó đều thuộc về các căn hộ giá rẻ, kết quả trung bình thu được sẽ bị kéo lệch lên cao một cách sai lầm.
-2. **Hiện diện của ngoại lai**: Giá trị trung bình cộng (*Mean*) rất nhạy cảm với các điểm ngoại lai. Nếu có một căn biệt thự giá 500 triệu đồng/đêm, con số trung bình không còn đại diện cho mức giá phổ biến của thị trường (vốn phải dùng Trung vị - *Median*).
-3. **Mẫu số bằng không**: Nếu tập dữ liệu lọc ra bị rỗng, phép tính sẽ trả về `NaN` và có thể làm sập các khối tính toán tài chính phía sau.
 
-### 5.2. Nguyên tắc "Tự phác thảo trước khi hỏi" (Think First, Prompt Later)
-Quy trình làm việc chuẩn mực của một nhà phân tích khi cộng tác với trợ lý AI bao gồm 3 bước:
-1. **Tự phác thảo logic nghiệp vụ**: Xác định rõ ràng miền giá trị hợp lệ, cách ứng xử với giá trị rỗng, cấu trúc dữ liệu đầu vào và định dạng đầu ra kỳ vọng.
-2. **Chỉ định ngữ cảnh và ràng buộc cho AI**: Yêu cầu AI viết mã kèm theo các điều kiện biên tường minh.
-3. **Thẩm định và giải thích từng dòng**: Tuyệt đối không bao giờ tích hợp một đoạn mã vào hệ thống nếu bản thân bạn chưa thể giải thích cặn kẽ từng câu lệnh và các tác dụng phụ (*side effects*) của nó.
+Trên Windows có thể dùng terminal đi kèm bản phân phối. Trên macOS và Linux, cần terminal đã được khởi tạo cho Conda. Hãy theo hướng dẫn cài đặt hiện hành của bản phân phối thay vì dùng một tên bộ cài cố định.
+
+`venv` và Conda là hai cách tổ chức môi trường, không cần lồng chúng cho bài học này. Tệp môi trường ghi các yêu cầu đã chọn. Khi cần lặp lại chính xác một phân tích, còn phải ghi phiên bản và kiểm tra khả năng cài lại trên hệ thống đích.
+
+## 6. Quy ước nhập thư viện và tổ chức mã nguồn
+
+Cộng đồng phân tích dữ liệu đã thống nhất các quy ước viết tắt khi nhập các thư viện cốt lõi. Việc tuân thủ các bí danh chuẩn giúp mã nguồn dễ đọc, dễ bảo trì và tương thích với tài liệu kỹ thuật:
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+Các quy tắc thực hành tốt cần duy trì:
+- Gom toàn bộ các câu lệnh nhập thư viện (`import`) lên đầu tệp mã nguồn hoặc ô đầu tiên của sổ tay tính toán.
+- Tránh sử dụng cú pháp `from module import *` vì cách viết này làm ô nhiễm không gian tên, gây xung đột hàm và khiến người đọc không thể truy vết nguồn gốc của các phương thức.
+- Khi viết mã trong sổ tay tương tác, chia nhỏ logic thành các ô độc lập, mỗi ô giải quyết một bước biến đổi cụ thể và có chú thích rõ ràng.
 
 ---
 
-## 6. Hệ thống Bài tập Tự luyện {#bai-tap}
+## Tài liệu tham khảo
 
-Bài tập củng cố tri thức của bài học này được tích hợp xuyên suốt từng mục lý thuyết trong Notes. Để luyện tập thêm các bài toán thực hành chuyên sâu và làm quen với các tình huống thực tế, bạn có thể tham khảo chuyên trang Bài tập của môn học hoặc chuyển sang tab [**Bài tập**](#bai-tap) ở đầu trang.
+- Wes McKinney. *Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter*, tái bản lần 3. O'Reilly Media, 2022. Chương 1: Preliminaries.
+- Project Jupyter Documentation. *Jupyter and the Future of Interactive Computing*. https://docs.jupyter.org/
+- Python Software Foundation. *PEP 668 – Marking Python base environments as "externally managed"*. https://peps.python.org/pep-0668/
 
-::: tip Chuyển sang Tab Bài tập
-Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để tra cứu nhanh chuyên trang bài tập của môn học.
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập của chương">
+
+## 7. Bài tập thực hành
+
+::: exercise Bài tập 1: Theo dõi trạng thái kernel và thứ tự thực thi ô mã
+Một kỹ sư dữ liệu khởi động một phiên làm việc với IPython Kernel hoàn toàn mới và nhập ba ô mã sau vào notebook:
+
+- Ô 1:
+  ```python
+  x = 10
+  ```
+- Ô 2:
+  ```python
+  x = x - 3
+  ```
+- Ô 3:
+  ```python
+  x = x * 2 + 5
+  ```
+
+Kỹ sư này thực hiện chạy các ô mã theo trình tự sau: Chạy Ô 1 một lần, sau đó chạy Ô 3 hai lần liên tiếp, và cuối cùng chạy Ô 2 một lần.
+1. Xác định giá trị cuối cùng của biến `x` trong RAM sau khi kết thúc chuỗi thao tác trên.
+2. Giả sử sau đó kỹ sư xóa hoàn toàn Ô 1 khỏi giao diện notebook và chạy lại Ô 2 thêm một lần nữa. Lệnh này có báo lỗi không, và giá trị mới của `x` là bao nhiêu?
+3. Nếu khởi động lại kernel hoàn toàn (Restart Kernel) và chỉ chạy duy nhất Ô 2, điều gì sẽ xảy ra?
 :::
 
-## 7. Nguồn Tham khảo & Đọc thêm
+::: solution Lời giải
+1. Lần theo từng bước thực thi trong không gian tên toàn cục:
+   - Bước 1 (Ô 1): Khởi tạo biến `x = 10`.
+   - Bước 2 (Ô 3 lần thứ nhất): Tính `x = 10 * 2 + 5 = 25`. Giá trị của `x` trong RAM cập nhật thành $25$.
+   - Bước 3 (Ô 3 lần thứ hai): Tính `x = 25 * 2 + 5 = 55`. Giá trị của `x` cập nhật thành $55$.
+   - Bước 4 (Ô 2): Tính `x = 55 - 3 = 52`. Kết quả cuối cùng trong RAM là $52$.
+2. Xóa Ô 1 trên giao diện chỉ làm thay đổi văn bản của tệp tài liệu, hoàn toàn không xóa biến `x` đang thường trực trong tiến trình kernel. Khi chạy lại Ô 2, chương trình không báo lỗi và tiếp tục lấy giá trị hiện tại để tính toán: `x = 52 - 3 = 49`.
+3. Khi khởi động lại kernel, toàn bộ trạng thái trong RAM bị xóa sạch. Nếu chỉ bấm chạy Ô 2 mà chưa chạy Ô 1, biểu thức `x - 3` cố gắng truy xuất biến `x` chưa từng tồn tại trong không gian tên mới, dẫn đến lỗi:
+   ```text
+   NameError: name 'x' is not defined
+   ```
+   Hiện tượng này minh họa cạm bẫy biến ma khi các ô mã phụ thuộc vào trạng thái ẩn của các phiên chạy trước.
+:::
 
-- [Định dạng tệp notebook và các kiểu đầu ra (Jupyter nbformat)](https://nbformat.readthedocs.io/en/latest/format_description.html).
-- [WebSocket và kênh trao đổi với kernel (Jupyter Server)](https://jupyter-server.readthedocs.io/en/latest/developers/websocket-protocols.html).
+::: exercise Bài tập 2: Kiểm tra tính nhất quán của môi trường qua tập tin requirements.txt
+Cho nội dung tệp kê khai phụ thuộc `requirements.txt` như sau:
+```text
+pandas==2.2.0
+numpy>=1.26.0
+matplotlib==3.8.2
+scipy
+```
+Hãy viết một hàm Python `phan_tich_yeu_cau(dong_cau_hinh)` nhận vào một chuỗi cấu hình và trả về một tuple gồm `(ten_goi, toan_tu, phien_ban)`. Nếu gói không chỉ định phiên bản, toán tử và phiên bản nhận giá trị `None`. Áp dụng hàm trên cho từng dòng và in ra danh sách các gói có yêu cầu phiên bản cố định chính xác (`==`).
+:::
 
-- Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 1: Preliminaries](https://wesmckinney.com/book/preliminaries) và [Chương 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics).
-- Tài liệu chính thức về Hạt nhân tương tác: [IPython Architecture and Messaging Protocol](https://ipython.readthedocs.io/en/stable/development/messaging.html).
-- Hướng dẫn chuẩn hóa môi trường: [Python Virtual Environments (Real Python)](https://realpython.com/python-virtual-environments-a-primer/).
-- [Bài giảng tham khảo môn Xử lý dữ liệu (IAI UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html).
+::: solution Lời giải
+```python
+def phan_tich_yeu_cau(dong):
+    dong = dong.strip()
+    if not dong or dong.startswith("#"):
+        return None
+    for toan_tu in ["==", ">=", "<=", ">", "<"]:
+        if toan_tu in dong:
+            ten, phien_ban = dong.split(toan_tu, 1)
+            return ten.strip(), toan_tu, phien_ban.strip()
+    return dong.strip(), None, None
+
+du_lieu_req = [
+    "pandas==2.2.0",
+    "numpy>=1.26.0",
+    "matplotlib==3.8.2",
+    "scipy"
+]
+
+ket_qua = [phan_tich_yeu_cau(dong) for dong in du_lieu_req]
+cac_goi_co_dinh = [ten for ten, op, ver in ket_qua if op == "=="]
+
+print("Kết quả phân tích:", ket_qua)
+print("Các gói cố định phiên bản:", cac_goi_co_dinh)
+```
+
+Kết quả in ra:
+- `ket_qua`: `[('pandas', '==', '2.2.0'), ('numpy', '>=', '1.26.0'), ('matplotlib', '==', '3.8.2'), ('scipy', None, None)]`.
+- `cac_goi_co_dinh`: `['pandas', 'matplotlib']`.
+:::
+
+::: exercise Bài tập 3: Đo lường tỷ lệ dữ liệu khuyết thiếu và doanh thu hợp lệ
+Một hệ thống thu thập thông tin đơn hàng trả về danh sách các giao dịch thô như sau:
+```python
+giao_dich = [
+    {"id": "GD01", "so_tien": 150000},
+    {"id": "GD02", "so_tien": None},
+    {"id": "GD03", "so_tien": 200000},
+    {"id": "GD04", "so_tien": 0}
+]
+```
+1. Xác định số lượng giao dịch bị thiếu thông tin số tiền (`None`). Tính tỷ lệ phần trăm dữ liệu khuyết thiếu trên tổng số giao dịch.
+2. Tính tổng số tiền thu được và giá trị giao dịch trung bình trên các giao dịch hợp lệ (có số tiền xác định). Lưu ý: Giao dịch có `so_tien = 0` là một giao dịch hợp lệ có phát sinh giá trị bằng không, không phải giá trị thiếu.
+:::
+
+::: solution Lời giải
+```python
+giao_dich = [
+    {"id": "GD01", "so_tien": 150000},
+    {"id": "GD02", "so_tien": None},
+    {"id": "GD03", "so_tien": 200000},
+    {"id": "GD04", "so_tien": 0}
+]
+
+tong_so = len(giao_dich)
+giao_dich_thieu = [g for g in giao_dich if g["so_tien"] is None]
+so_thieu = len(giao_dich_thieu)
+ty_le_thieu = (so_thieu / tong_so) * 100
+
+gia_tri_hop_le = [g["so_tien"] for g in giao_dich if g["so_tien"] is not None]
+tong_doanh_thu = sum(gia_tri_hop_le)
+trung_binh = tong_doanh_thu / len(gia_tri_hop_le)
+
+print(f"Số lượng giao dịch thiếu: {so_thieu} ({ty_le_thieu:.1f}%)")
+print(f"Tổng doanh thu hợp lệ: {tong_doanh_thu:,} đ")
+print(f"Giá trị giao dịch trung bình: {trung_binh:,.2f} đ")
+```
+
+Kết quả:
+- Số lượng giao dịch thiếu: 1 giao dịch trên tổng số 4 bản ghi, chiếm tỷ lệ $25{,}0\%$.
+- Các giao dịch hợp lệ gồm `150000`, `200000` và `0`, tổng cộng có đúng 3 giao dịch hợp lệ.
+- Tổng doanh thu hợp lệ bằng $150\,000 + 200\,000 + 0 = 350\,000$ đồng.
+- Giá trị trung bình trên 3 giao dịch hợp lệ đạt $\frac{350\,000}{3} \approx 116\,666{,}67$ đồng.
+:::
+
+## Tài liệu tham khảo
+
+- Wes McKinney. *Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter*, tái bản lần 3. O'Reilly Media, 2022. Chương 1: Preliminaries.
+- Project Jupyter Documentation. *Jupyter and the Future of Interactive Computing*. https://docs.jupyter.org/
+- Python Software Foundation. *PEP 668 – Marking Python base environments as "externally managed"*. https://peps.python.org/pep-0668/
+
+</div>

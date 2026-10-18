@@ -1,0 +1,725 @@
+{
+  "group": "C",
+  "generatedAt": "2026-10-18T01:12:00+07:00",
+  "chapters": [
+    {
+      "chapter": 11,
+      "slug": "bai-08-du-lieu-thoi-gian",
+      "sourceUnits": [
+        {
+          "sourceHeading": "11 Time Series",
+          "destinationHeading": "Bài 8: Chuỗi thời gian (Time Series)",
+          "status": "covered",
+          "reason": "Giới thiệu toàn diện các nguyên lý và cấu trúc dữ liệu chuỗi thời gian trong pandas"
+        },
+        {
+          "sourceHeading": "11.1 Date and Time Data Types and Tools",
+          "destinationHeading": "## 1. Ba phạm trù thời gian: Mốc (Timestamp), Khoảng thời gian (Timedelta) và Kỳ (Period)",
+          "status": "covered",
+          "reason": "Phân biệt bản chất Timestamp, Timedelta, Period và datetime chuẩn Python"
+        },
+        {
+          "sourceHeading": "Converting Between String and Datetime",
+          "destinationHeading": "Chuyển đổi chuỗi sang mốc thời gian: Định dạng tường minh và errors=\"coerce\"",
+          "status": "covered",
+          "reason": "Hướng dẫn pd.to_datetime, format='%d/%m/%Y' và xử lý ngoại lệ bằng errors='coerce'"
+        },
+        {
+          "sourceHeading": "11.2 Time Series Basics",
+          "destinationHeading": "## 3. Chỉ mục thời gian DatetimeIndex và kỹ thuật cắt lát chuỗi ký tự",
+          "status": "covered",
+          "reason": "Sử dụng DatetimeIndex làm trục tọa độ, truy vấn theo nhãn chuỗi '2026', '2026-03'"
+        },
+        {
+          "sourceHeading": "Indexing, Selection, Subsetting",
+          "destinationHeading": "Cắt lát thời gian bằng chuỗi nhãn",
+          "status": "covered",
+          "reason": "Cắt lát linh hoạt theo năm, tháng và khoảng thời gian"
+        },
+        {
+          "sourceHeading": "Time Series with Duplicate Indices",
+          "destinationHeading": "Chỉ mục thời gian trùng lặp (Duplicate DatetimeIndex)",
+          "status": "covered",
+          "reason": "Kiểm tra is_monotonic_increasing, is_unique và gộp bản ghi cùng mốc bằng groupby"
+        },
+        {
+          "sourceHeading": "11.3 Date Ranges, Frequencies, and Shifting",
+          "destinationHeading": "## 4. Dải ngày, Tần số và Phép dịch chuyển dữ liệu",
+          "status": "covered",
+          "reason": "Sinh dải ngày bằng pd.date_range và các tần số chuẩn hiện đại D, ME, QE, YE"
+        },
+        {
+          "sourceHeading": "Generating Date Ranges",
+          "destinationHeading": "Sinh dải ngày bằng pd.date_range và mã tần số hiện đại",
+          "status": "covered",
+          "reason": "Tạo chuỗi thời gian đều đặn với periods và freq"
+        },
+        {
+          "sourceHeading": "Frequencies and Date Offsets",
+          "destinationHeading": "Lớp Date Offsets trong pandas.tseries.offsets",
+          "status": "covered",
+          "reason": "Dịch chuyển lịch bằng MonthEnd, Day, WeekOfMonth"
+        },
+        {
+          "sourceHeading": "Week of month dates",
+          "destinationHeading": "Tần số tuần trong tháng (WOM-3FRI)",
+          "status": "covered",
+          "reason": "Ví dụ cụ thể neo vào thứ Sáu tuần thứ 3 mỗi tháng"
+        },
+        {
+          "sourceHeading": "Shifting (Leading and Lagging) Data",
+          "destinationHeading": "Dịch chuỗi và Cạm bẫy thiếu tháng",
+          "status": "covered",
+          "reason": "Sử dụng shift(1) và asfreq('ME') để tránh bẫy lệch tháng khi dữ liệu gián đoạn"
+        },
+        {
+          "sourceHeading": "Shifting dates with offsets",
+          "destinationHeading": "Tịnh tiến nhãn thời gian bằng tham số freq",
+          "status": "covered",
+          "reason": "ts.shift(2, freq='ME') tịnh tiến trục thời gian giữ nguyên giá trị"
+        },
+        {
+          "sourceHeading": "11.4 Time Zone Handling",
+          "destinationHeading": "## 2. Quản trị múi giờ: Chưa gắn múi giờ (tz-naive) và đã gắn múi giờ (tz-aware)",
+          "status": "covered",
+          "reason": "Bản chất chưa gắn vs đã gắn múi giờ, chuẩn IANA và quy trình tz_localize rồi tz_convert"
+        },
+        {
+          "sourceHeading": "Time Zone Localization and Conversion",
+          "destinationHeading": "Quy trình chuyển đổi múi giờ chuẩn mực",
+          "status": "covered",
+          "reason": "Chuyển đổi giờ Hà Nội Asia/Ho_Chi_Minh sang UTC và London"
+        },
+        {
+          "sourceHeading": "Operations with Time Zone-Aware Timestamp Objects",
+          "destinationHeading": "Thao tác trên đối tượng Timestamp có nhận thức múi giờ",
+          "status": "covered",
+          "reason": "Số học thời gian và xử lý thời khắc chuyển đổi giờ mùa hè DST"
+        },
+        {
+          "sourceHeading": "Operations Between Different Time Zones",
+          "destinationHeading": "Phép toán giữa hai chuỗi có múi giờ khác nhau",
+          "status": "covered",
+          "reason": "pandas tự động quy đổi về UTC khi thực hiện phép tính giữa hai múi giờ khác nhau"
+        },
+        {
+          "sourceHeading": "11.5 Periods and Period Arithmetic",
+          "destinationHeading": "## 5. Kỳ thời gian (Period) và số học trên kỳ",
+          "status": "covered",
+          "reason": "Cấu trúc pd.Period đại diện cho khoảng thời gian hữu hạn gắn với nhịp lịch"
+        },
+        {
+          "sourceHeading": "Period Frequency Conversion",
+          "destinationHeading": "Chuyển đổi tần số chu kỳ",
+          "status": "covered",
+          "reason": "Phân rã năm sang ngày làm việc với asfreq('B', how='start') và how='end'"
+        },
+        {
+          "sourceHeading": "Quarterly Period Frequencies",
+          "destinationHeading": "Chu kỳ quý tài chính",
+          "status": "covered",
+          "reason": "Quý tài chính neo tháng kết thúc như Q-NOV"
+        },
+        {
+          "sourceHeading": "Converting Timestamps to Periods (and Back)",
+          "destinationHeading": "Chuyển đổi giữa Timestamp và Period",
+          "status": "covered",
+          "reason": "to_period('M') và to_timestamp(how='end')"
+        },
+        {
+          "sourceHeading": "Creating a PeriodIndex from Arrays",
+          "destinationHeading": "Tạo PeriodIndex từ mảng năm và quý",
+          "status": "covered",
+          "reason": "Sử dụng pd.PeriodIndex.from_fields(year=nam, quarter=quy, freq='Q')"
+        },
+        {
+          "sourceHeading": "11.6 Resampling and Frequency Conversion",
+          "destinationHeading": "## 6. Lấy mẫu lại (Resampling): Tần số, Biên đóng mở và Bẫy kỳ dang dở",
+          "status": "covered",
+          "reason": "Chuyển đổi tần số chuỗi thời gian như phép groupby trên trục thời gian"
+        },
+        {
+          "sourceHeading": "Downsampling",
+          "destinationHeading": "Lấy mẫu giảm tần số (Downsampling) và quy tắc biên closed, label",
+          "status": "covered",
+          "reason": "Quy chuẩn closed='right' và label='right' khi gộp theo tháng ME"
+        },
+        {
+          "sourceHeading": "Open-high-low-close (OHLC) resampling",
+          "destinationHeading": "Lấy mẫu OHLC trong phân tích tài chính",
+          "status": "covered",
+          "reason": "resample().ohlc() sinh 4 cột open, high, low, close"
+        },
+        {
+          "sourceHeading": "Upsampling and Interpolation",
+          "destinationHeading": "Lấy mẫu tăng tần số (Upsampling) và nội suy",
+          "status": "covered",
+          "reason": "asfreq('D') kết hợp ffill() và interpolate(method='linear')"
+        },
+        {
+          "sourceHeading": "Resampling with Periods",
+          "destinationHeading": "Lấy mẫu lại trên chỉ mục chu kỳ PeriodIndex",
+          "status": "covered",
+          "reason": "asfreq và resample trực tiếp trên PeriodIndex"
+        },
+        {
+          "sourceHeading": "Grouped Time Resampling",
+          "destinationHeading": "Lấy mẫu lại theo nhóm (Grouped Time Resampling)",
+          "status": "covered",
+          "reason": "df.groupby(['chi_nhanh', pd.Grouper(freq='ME')]).sum()"
+        },
+        {
+          "sourceHeading": "11.7 Moving Window Functions",
+          "destinationHeading": "## 7. Cửa sổ trượt (Moving window) và làm mượt dữ liệu",
+          "status": "covered",
+          "reason": "Phân tích xu hướng và làm mượt dao động ngẫu nhiên"
+        },
+        {
+          "sourceHeading": "Exponentially Weighted Functions",
+          "destinationHeading": "Cửa sổ làm mượt hàm mũ (ewm)",
+          "status": "covered",
+          "reason": "df.ewm(alpha=0.5, adjust=False).mean() tính trung bình trượt hàm mũ EMA"
+        },
+        {
+          "sourceHeading": "Binary Moving Window Functions",
+          "destinationHeading": "Hàm cửa sổ trượt hai chuỗi (Binary moving window)",
+          "status": "covered",
+          "reason": "s1.rolling(5).corr(s2) tính tương quan động giữa 2 chuỗi"
+        },
+        {
+          "sourceHeading": "User-Defined Moving Window Functions",
+          "destinationHeading": "Cửa sổ trượt tùy biến với rolling().apply()",
+          "status": "covered",
+          "reason": "Áp dụng hàm tính toán số học tùy biến trên từng khung trượt"
+        },
+        {
+          "sourceHeading": "11.8 Conclusion",
+          "destinationHeading": "## 9. Tổng kết",
+          "status": "excluded",
+          "reason": "Đoạn văn kết thúc mang tính thủ tục của sách gốc, được thay bằng bảng tổng hợp kiến thức sư phạm và bài tập kiểm thử độc lập của StudyHub"
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "slug": "bai-12-mo-hinh-hoa",
+      "sourceUnits": [
+        {
+          "sourceHeading": "12 Introduction to Modeling Libraries in Python",
+          "destinationHeading": "Bài 12: Từ bảng dữ liệu đến mô hình thống kê và dự đoán",
+          "status": "covered",
+          "reason": "Khái quát cầu nối giữa pandas và các thư viện mô hình hóa chuyên sâu"
+        },
+        {
+          "sourceHeading": "12.1 Interfacing Between pandas and Model Code",
+          "destinationHeading": "## 1. Cầu nối giữa pandas và mô hình: to_numpy() và One-Hot Encoding",
+          "status": "covered",
+          "reason": "Chuyển DataFrame sang ma trận số thuần nhất, xử lý drop_first=True tránh bẫy đa cộng tuyến"
+        },
+        {
+          "sourceHeading": "12.2 Creating Model Descriptions with Patsy",
+          "destinationHeading": "## 2. Ngôn ngữ công thức Patsy",
+          "status": "covered",
+          "reason": "Cú pháp dmatrices, cơ chế tự động bổ sung cột Intercept, loại bỏ bằng 0 hoặc -1"
+        },
+        {
+          "sourceHeading": "Data Transformations in Patsy Formulas",
+          "destinationHeading": "Biến đổi dữ liệu trong công thức Patsy",
+          "status": "covered",
+          "reason": "Áp dụng np.log(), standardise() và bọc toán tử số học bằng I()"
+        },
+        {
+          "sourceHeading": "Categorical Data and Patsy",
+          "destinationHeading": "Biến phân loại và mã hóa trong Patsy",
+          "status": "covered",
+          "reason": "Sử dụng C(variable) để mã hóa biến phân loại với mức cơ sở làm đối chứng"
+        },
+        {
+          "sourceHeading": "12.3 Introduction to statsmodels",
+          "destinationHeading": "## 3. Khám phá quan hệ thống kê với statsmodels",
+          "status": "covered",
+          "reason": "Mục tiêu suy diễn thống kê, kiểm định giả thiết và đánh giá ý nghĩa tham số"
+        },
+        {
+          "sourceHeading": "Estimating Linear Models",
+          "destinationHeading": "Hồi quy tuyến tính OLS với smf.ols",
+          "status": "covered",
+          "reason": "Ước lượng OLS, đọc bảng báo cáo summary(), phân tích R-squared, t-statistic, p-value"
+        },
+        {
+          "sourceHeading": "Estimating Time Series Processes",
+          "destinationHeading": "Mô hình hóa chuỗi thời gian: Tự hồi quy AutoReg",
+          "status": "covered",
+          "reason": "Ước lượng tham số trễ AR(1) bằng statsmodels.tsa.ar_model.AutoReg và dự báo chuỗi"
+        },
+        {
+          "sourceHeading": "12.4 Introduction to scikit-learn",
+          "destinationHeading": "## 4. Dự đoán và quy trình với scikit-learn",
+          "status": "covered",
+          "reason": "Quy chuẩn phân tách train_test_split, cạm bẫy rò rỉ dữ liệu Z-score và cấu trúc Pipeline"
+        },
+        {
+          "sourceHeading": "12.5 Conclusion",
+          "destinationHeading": "## 6. Tổng kết",
+          "status": "excluded",
+          "reason": "Đoạn văn kết thúc mang tính thủ tục của sách gốc, được thay bằng bảng tổng hợp sư phạm đối sánh pandas, Patsy, statsmodels, scikit-learn"
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "slug": "bai-14-ke-chuyen-bang-du-lieu",
+      "sourceUnits": [
+        {
+          "sourceHeading": "13 Data Analysis Examples",
+          "destinationHeading": "Bài 14: Các bài toán phân tích dữ liệu và kiểm tra kết luận",
+          "status": "covered",
+          "reason": "Tổng hợp kỹ thuật phân tích trên 5 dạng bài toán thực tế kết hợp phản biện dữ liệu"
+        },
+        {
+          "sourceHeading": "13.1 Bitly Data from 1.USA.gov",
+          "destinationHeading": "## 1. Bài toán 1: Nhật ký truy cập và phân loại tác tử theo múi giờ",
+          "status": "covered",
+          "reason": "Làm sạch nhãn múi giờ, trích xuất chuỗi tác tử User Agent và lập bảng chéo hệ điều hành"
+        },
+        {
+          "sourceHeading": "Counting Time Zones in Pure Python",
+          "destinationHeading": "Đếm tần suất và làm sạch giá trị khuyết",
+          "status": "covered",
+          "reason": "Phân biệt chuỗi rỗng và giá trị thiếu thực tế, điền Missing và Unknown"
+        },
+        {
+          "sourceHeading": "Counting Time Zones with pandas",
+          "destinationHeading": "Đếm tần suất và bảng phân bố hệ điều hành bằng pandas",
+          "status": "covered",
+          "reason": "Sử dụng value_counts() và crosstab/pivot_table để phân nhóm thiết bị"
+        },
+        {
+          "sourceHeading": "13.2 MovieLens 1M Dataset",
+          "destinationHeading": "## 2. Bài toán 2: Dữ liệu đánh giá phim MovieLens 1M",
+          "status": "covered",
+          "reason": "Hợp nhất 3 bảng ratings, users, movies và lập pivot_table điểm trung bình theo giới tính"
+        },
+        {
+          "sourceHeading": "Measuring Rating Disagreement",
+          "destinationHeading": "Đo lường mức độ bất đồng quan điểm",
+          "status": "covered",
+          "reason": "Tính chênh lệch thị hiếu diff = piv['F'] - piv['M'] và độ phân tán chuẩn std"
+        },
+        {
+          "sourceHeading": "13.3 US Baby Names 1880–2010",
+          "destinationHeading": "## 3. Bài toán 3: Phân tích xu hướng đặt tên, tính đa dạng và sự dịch chuyển âm cuối",
+          "status": "covered",
+          "reason": "Chuẩn hóa tỷ trọng, đo lường độ suy giảm tập trung tên gọi và phân tích chữ cái kết thúc"
+        },
+        {
+          "sourceHeading": "Analyzing Naming Trends",
+          "destinationHeading": "Chuẩn hóa tỷ trọng và phân tích xu hướng",
+          "status": "covered",
+          "reason": "Tính tỷ trọng phần trăm theo năm và giới tính để triệt tiêu biến động dân số"
+        },
+        {
+          "sourceHeading": "Measuring the increase in naming diversity",
+          "destinationHeading": "Đo lường sự gia tăng tính đa dạng tên gọi",
+          "status": "covered",
+          "reason": "Tính tổng tỷ trọng của Top 1000 tên phổ biến qua các thời kỳ lịch sử"
+        },
+        {
+          "sourceHeading": "The “last letter” revolution",
+          "destinationHeading": "Sự dịch chuyển của chữ cái kết thúc",
+          "status": "covered",
+          "reason": "Trích xuất ký tự cuối bằng str[-1] và lập bảng chuyển dịch phân bố âm cuối"
+        },
+        {
+          "sourceHeading": "Boy names that became girl names (and vice versa)",
+          "destinationHeading": "Chuyển dịch tên gọi giữa các nhóm giới tính",
+          "status": "covered",
+          "reason": "Theo dõi tỷ lệ giới tính của các tên lưỡng tính theo thời gian"
+        },
+        {
+          "sourceHeading": "13.4 USDA Food Database",
+          "destinationHeading": "## 4. Bài toán 4: Dữ liệu dinh dưỡng thực phẩm có cấu trúc phân cấp (USDA Food Database)",
+          "status": "covered",
+          "reason": "Bóc tách cấu trúc JSON lồng nhau, chuẩn hóa bảng con và gộp với thuộc tính gốc"
+        },
+        {
+          "sourceHeading": "13.5 2012 Federal Election Commission Database",
+          "destinationHeading": "## 5. Bài toán 5: Dữ liệu quyên góp bầu cử (FEC Database)",
+          "status": "covered",
+          "reason": "Làm sạch nhãn nghề nghiệp, gộp dữ liệu theo đảng phái và phân nhóm quy mô quyên góp"
+        },
+        {
+          "sourceHeading": "Donation Statistics by Occupation and Employer",
+          "destinationHeading": "Chuẩn hóa và gom nhóm nghề nghiệp",
+          "status": "covered",
+          "reason": "Ánh xạ chuỗi văn bản nghề nghiệp dị biệt về nhóm ngành quy chuẩn"
+        },
+        {
+          "sourceHeading": "Bucketing Donation Amounts",
+          "destinationHeading": "Phân khoảng giá trị quyên góp bằng pd.cut",
+          "status": "covered",
+          "reason": "Tạo các thang đo logarit (0, 100], (100, 1000] để quan sát cơ cấu nhà tài trợ"
+        },
+        {
+          "sourceHeading": "Donation Statistics by State",
+          "destinationHeading": "Tổng hợp quyên góp theo địa bàn",
+          "status": "covered",
+          "reason": "Tổng hợp dòng tiền ủng hộ theo từng ứng viên và vùng địa lý"
+        },
+        {
+          "sourceHeading": "13.6 Conclusion",
+          "destinationHeading": "## 9. Tổng kết",
+          "status": "excluded",
+          "reason": "Đoạn văn kết thúc mang tính thủ tục của sách gốc, được thay bằng bảng tổng hợp phương pháp luận và quy trình thẩm định 4 bước"
+        }
+      ]
+    },
+    {
+      "chapter": "A",
+      "slug": "phu-luc-a-numpy-nang-cao",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Appendix A — Advanced NumPy",
+          "destinationHeading": "Phụ lục A: NumPy nâng cao",
+          "status": "covered",
+          "reason": "Nền tảng kiến trúc mảng ndarray, quản lý bộ nhớ và tối ưu hóa hiệu năng chuyên sâu"
+        },
+        {
+          "sourceHeading": "A.1 ndarray Object Internals",
+          "destinationHeading": "## 1. Cấu trúc nội bộ của đối tượng ndarray và cây phả hệ kiểu dữ liệu",
+          "status": "covered",
+          "reason": "Phân tích 5 thành phần con trỏ dữ liệu, dtype, shape, strides và flags"
+        },
+        {
+          "sourceHeading": "NumPy Data Type Hierarchy",
+          "destinationHeading": "Hệ thống phân cấp kiểu dữ liệu (dtype hierarchy)",
+          "status": "covered",
+          "reason": "np.issubdtype kiểm tra quan hệ phân cấp kiểu số học"
+        },
+        {
+          "sourceHeading": "A.2 Advanced Array Manipulation",
+          "destinationHeading": "## 2. Thao tác mảng nâng cao: Trật tự bộ nhớ, Tạo hình và Cắt lát",
+          "status": "covered",
+          "reason": "Quy tắc C-order vs Fortran-order, bước nhảy strides và tính liên tục bộ nhớ"
+        },
+        {
+          "sourceHeading": "Reshaping Arrays",
+          "destinationHeading": "Đổi hình dạng mảng: View hay Bản sao độc lập?",
+          "status": "covered",
+          "reason": "Kiểm tra chia sẻ bộ nhớ bằng np.shares_memory khi gọi reshape"
+        },
+        {
+          "sourceHeading": "C Versus FORTRAN Order",
+          "destinationHeading": "Trật tự hàng (C) so với trật tự cột (Fortran)",
+          "status": "covered",
+          "reason": "Cơ chế sắp xếp byte bộ nhớ, strides và tương thích bộ nhớ đệm CPU"
+        },
+        {
+          "sourceHeading": "Concatenating and Splitting Arrays",
+          "destinationHeading": "Nối và tách mảng: concatenate, split, np.r_ và np.c_",
+          "status": "covered",
+          "reason": "Xếp chồng mảng theo hàng và cột an toàn"
+        },
+        {
+          "sourceHeading": "Stacking helpers: r_ and c_",
+          "destinationHeading": "Cú pháp tiện ích np.r_ và np.c_",
+          "status": "covered",
+          "reason": "Xếp chồng ma trận nhanh chóng"
+        },
+        {
+          "sourceHeading": "Repeating Elements: tile and repeat",
+          "destinationHeading": "Lặp lại phần tử: Phân biệt repeat và tile",
+          "status": "covered",
+          "reason": "repeat lặp từng phần tử liên tiếp, tile lặp toàn bộ khối mảng"
+        },
+        {
+          "sourceHeading": "Fancy Indexing Equivalents: take and put",
+          "destinationHeading": "Chỉ mục nâng cao tương đương: take và put",
+          "status": "covered",
+          "reason": "Trích xuất và gán giá trị theo trục chuyên biệt"
+        },
+        {
+          "sourceHeading": "A.3 Broadcasting",
+          "destinationHeading": "## 3. Bản chất toán học của cơ chế lan truyền (Broadcasting)",
+          "status": "covered",
+          "reason": "Quy tắc so khớp chiều từ phải sang trái và mở rộng ảo không tốn RAM"
+        },
+        {
+          "sourceHeading": "Broadcasting over Other Axes",
+          "destinationHeading": "Mở rộng trục bằng np.newaxis",
+          "status": "covered",
+          "reason": "Chèn trục kích thước 1 bằng np.newaxis hoặc None"
+        },
+        {
+          "sourceHeading": "Setting Array Values by Broadcasting",
+          "destinationHeading": "Gán giá trị đồng loạt bằng broadcasting",
+          "status": "covered",
+          "reason": "Gán vector con cho nhiều hàng ma trận"
+        },
+        {
+          "sourceHeading": "A.4 Advanced ufunc Usage",
+          "destinationHeading": "## 4. Phương thức của ufunc và Phân biệt hàm vector hóa",
+          "status": "covered",
+          "reason": "Các phương thức đặc biệt của ufunc C biên dịch sẵn"
+        },
+        {
+          "sourceHeading": "ufunc Instance Methods",
+          "destinationHeading": "Các phương thức thể hiện của ufunc",
+          "status": "covered",
+          "reason": "reduce, accumulate, reduceat, outer trên toán tử số học"
+        },
+        {
+          "sourceHeading": "Writing New ufuncs in Python",
+          "destinationHeading": "Phân biệt bản chất: np.vectorize / frompyfunc so với ufunc biên dịch sẵn",
+          "status": "covered",
+          "reason": "Vạch rõ bản chất bọc cú pháp của np.vectorize/frompyfunc không tăng tốc độ so với C"
+        },
+        {
+          "sourceHeading": "A.5 Structured and Record Arrays",
+          "destinationHeading": "## 5. Mảng cấu trúc (Structured Arrays) và Mảng bản ghi (Record Arrays)",
+          "status": "covered",
+          "reason": "Tổ chức dữ liệu bản ghi nhị phân đa trường với bộ nhớ liên tục"
+        },
+        {
+          "sourceHeading": "Nested Data Types and Multidimensional Fields",
+          "destinationHeading": "Trường dữ liệu lồng nhau và mảng đa chiều trong bản ghi",
+          "status": "covered",
+          "reason": "Định nghĩa trường tọa độ vector đa chiều bên trong cấu trúc"
+        },
+        {
+          "sourceHeading": "Why Use Structured Arrays?",
+          "destinationHeading": "Mảng bản ghi np.recarray và trường hợp sử dụng",
+          "status": "covered",
+          "reason": "Truy cập trường như thuộc tính và giao tiếp trực tiếp với file C/Fortran"
+        },
+        {
+          "sourceHeading": "A.6 More About Sorting",
+          "destinationHeading": "## 6. Sắp xếp nâng cao, Phân hoạch và Tìm kiếm",
+          "status": "covered",
+          "reason": "Các thuật toán sắp xếp chuyên sâu và tìm kiếm nhị phân trên mảng"
+        },
+        {
+          "sourceHeading": "Indirect Sorts: argsort and lexsort",
+          "destinationHeading": "Sắp xếp gián tiếp: argsort và lexsort",
+          "status": "covered",
+          "reason": "argsort trả về chỉ mục hoán vị, lexsort sắp xếp theo thứ tự ưu tiên đa khóa"
+        },
+        {
+          "sourceHeading": "Alternative Sort Algorithms",
+          "destinationHeading": "Thuật toán sắp xếp thay thế: quicksort, mergesort, heapsort",
+          "status": "covered",
+          "reason": "Lựa chọn mergesort để bảo đảm tính ổn định (stable sort)"
+        },
+        {
+          "sourceHeading": "Partially Sorting Arrays",
+          "destinationHeading": "Phân hoạch mảng bằng np.partition",
+          "status": "covered",
+          "reason": "Tìm k phần tử nhỏ nhất với độ phức tạp tuyến tính O(N)"
+        },
+        {
+          "sourceHeading": "numpy.searchsorted: Finding Elements in a Sorted Array",
+          "destinationHeading": "Tìm kiếm vị trí chèn bằng np.searchsorted",
+          "status": "covered",
+          "reason": "Tìm điểm chèn duy trì tính thứ tự và cơ chế nền tảng của pd.cut"
+        },
+        {
+          "sourceHeading": "A.7 Writing Fast NumPy Functions with Numba",
+          "destinationHeading": "## 7. Tăng tốc độ tính toán số học với Numba (Tùy chọn bổ trợ / Optional)",
+          "status": "covered",
+          "reason": "Biên dịch JIT trực tiếp mã Python sang mã máy LLVM đạt tốc độ ngang C"
+        },
+        {
+          "sourceHeading": "Creating Custom numpy.ufunc Objects with Numba",
+          "destinationHeading": "Tạo ufunc biên dịch nhanh với @numba.vectorize",
+          "status": "covered",
+          "reason": "Tạo ufunc C thực thụ bằng Numba chạy nhanh hơn hàng trăm lần so với np.vectorize"
+        },
+        {
+          "sourceHeading": "A.8 Advanced Array Input and Output",
+          "destinationHeading": "## 8. Tệp ánh xạ bộ nhớ (np.memmap) và tối ưu hóa tính liên tục",
+          "status": "covered",
+          "reason": "Làm việc với tập dữ liệu lớn vượt dung lượng RAM"
+        },
+        {
+          "sourceHeading": "Memory-Mapped Files",
+          "destinationHeading": "Ánh xạ bộ nhớ tệp tin với np.memmap",
+          "status": "covered",
+          "reason": "Đọc và ghi mảng khổng lồ trực tiếp trên đĩa mà không cần nạp toàn bộ vào RAM"
+        },
+        {
+          "sourceHeading": "HDF5 and Other Array Storage Options",
+          "destinationHeading": "Định dạng lưu trữ mảng lớn HDF5 và Zarr",
+          "status": "covered",
+          "reason": "Khái quát các định dạng lưu trữ phân cấp cho dữ liệu khoa học quy mô lớn"
+        },
+        {
+          "sourceHeading": "A.9 Performance Tips",
+          "destinationHeading": "Bí quyết tối ưu hiệu năng: Tận dụng Cache Line và Bộ nhớ liên tục",
+          "status": "covered",
+          "reason": "Ảnh hưởng sống còn của CPU cache lines khi duyệt mảng liên tục theo C-order vs lặp cột"
+        },
+        {
+          "sourceHeading": "The Importance of Contiguous Memory",
+          "destinationHeading": "Tính liên tục bộ nhớ và c_contiguous / f_contiguous",
+          "status": "covered",
+          "reason": "Tại sao mảng liên tục chạy nhanh hơn gấp nhiều lần mảng phân mảnh"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "sourceLecture": "iai-08",
+      "sourceExercise": "Bài tập 1: Tính số đêm lưu trú",
+      "destinationHeading": "::: exercise Bài tập 1: Tính toán khoảng thời gian lưu trú và bẫy tháng dang dở",
+      "status": "covered",
+      "reason": "Bảo toàn bài toán tính số đêm lưu trú giữa check-in và check-out, phân bổ tỷ lệ exposure và giải thích hiện tượng tháng dang dở"
+    },
+    {
+      "sourceLecture": "iai-08",
+      "sourceExercise": "Bài tập 2: Trung bình mỗi ngày",
+      "destinationHeading": "::: exercise Bài tập 2: Xử lý chuỗi gián đoạn và tính trung bình theo ngày thực tế",
+      "status": "covered",
+      "reason": "Bảo toàn bài toán số lượng đánh giá bị khuyết ngày, tái cấu trúc chuỗi liên tục bằng reindex và tính tỷ lệ trung bình chuẩn xác"
+    },
+    {
+      "sourceLecture": "iai-08",
+      "sourceExercise": "Bài tập 3: Tìm tháng tăng mạnh",
+      "destinationHeading": "::: exercise Bài tập 3: Phát hiện tháng tăng trưởng đột biến bằng cửa sổ trượt",
+      "status": "covered",
+      "reason": "Bảo toàn thuật toán lọc các tháng có lượng đánh giá tăng đột biến >= 50% so với trung bình trượt 3 tháng trước đó"
+    },
+    {
+      "sourceLecture": "iai-14",
+      "sourceExercise": "Nghịch lý Simpson: tổng thể nói ngược từng phần",
+      "destinationHeading": "::: exercise Bài tập 2: Thẩm định biến động doanh thu và nhận diện nghịch lý Simpson",
+      "status": "covered",
+      "reason": "Minh họa sâu sắc nghịch lý Simpson khi từng ngành hàng tăng 10% nhưng bình quân gộp giảm 67.6% do chuyển dịch cơ cấu mẫu"
+    },
+    {
+      "sourceLecture": "iai-14",
+      "sourceExercise": "Quy trình thẩm định bốn bước",
+      "destinationHeading": "## 7. Khung quy trình thẩm định dữ liệu 4 bước (Data audit framework)",
+      "status": "covered",
+      "reason": "Quy trình 4 bước thẩm định kết luận phân tích: Kiểm tra mẫu số, Tách phân nhóm Simpson, So sánh cùng kỳ, Đối chiếu giả định mô hình"
+    }
+  ],
+  "proseReview": {
+    "factualCorrections": [
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+        "finding": "Thay thuật ngữ thời gian ngây thơ/có nhận thức bằng chưa gắn/đã gắn múi giờ; Timedelta là khoảng thời gian, Period là kỳ; Binary moving window là cửa sổ trượt hai chuỗi; hạn chế phạm vi loại trừ mùa vụ.",
+        "before": "Phân biệt mốc thời gian \"ngây thơ\" (Timezone-Naive) và \"có nhận thức\" (Timezone-Aware) ... Cửa sổ trượt nhị phân (Binary Moving Windows) ... so sánh cùng kỳ ... loại bỏ hoàn toàn tính mùa vụ",
+        "after": "Phân biệt mốc thời gian chưa gắn múi giờ (Timezone-naive / tz-naive) và đã gắn múi giờ (Timezone-aware / tz-aware) ... Cửa sổ trượt hai chuỗi (Binary moving windows) ... so sánh cùng kỳ lịch qua các năm giúp đối chiếu các vị trí mùa tương ứng, tuy nhiên không bảo đảm loại bỏ toàn bộ các biến động mùa vụ phức tạp"
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+        "finding": "Đính chính NaN trong cột số không ép to_numpy thành object; drop_first chỉ cần cho mô hình tuyến tính có intercept; sai số chuẩn không phải giả thiết Gauss-Markov mà là giả thiết bổ sung cho suy diễn mẫu hữu hạn; khai triển tường minh SS_res/SS_tot; cú pháp tương tác Patsy (: vs *); mô phỏng AR(1) chân thực; phân biệt transformer vs predictor; rò rỉ dữ liệu không bảo đảm luôn tăng điểm ở mọi mẫu.",
+        "before": "Nếu cột dữ liệu số chứa giá trị thiếu (NaN), phương thức to_numpy() sẽ ép toàn bộ mảng về kiểu object ... Quy tắc sống còn: Luôn thiết lập drop_first=True ... Định lý Gauss-Markov: Sai số phải có phân phối chuẩn ... R^2 = 1 - SS_res / SS_tot ... Y = 10 + 0.5 * t + epsilon",
+        "after": "Trong NumPy và pandas, giá trị khuyết thiếu NaN trong mảng số thực là một giá trị chuẩn IEEE 754 (float64), do đó không làm ép mảng về kiểu object ... Tham số drop_first=True cần thiết đối với các mô hình tuyến tính có hệ số chặn (Intercept) để tránh bẫy biến giả ... Phân phối chuẩn của sai số không phải là giả thiết của định lý Gauss–Markov, mà là giả thiết bổ sung nhằm phục vụ suy diễn thống kê mẫu hữu hạn ... SS_res = sum(y_i - y_hat_i)^2 và SS_tot = sum(y_i - y_bar)^2 ... Y[t] = 0.5 + 0.7 * Y[t-1] + e[t]"
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+        "finding": "Mỗi dòng nhật ký là một yêu cầu HTTP chứ không tự động suy ra một người dùng duy nhất; kiểm tra chuỗi User-Agent chứa Windows là bộ phân loại heuristic; loại bỏ cụm từ hoa mỹ (bóc trần, triết lý nền tảng, thực chiến, toàn bộ hành trình).",
+        "before": "Toàn bộ hành trình vừa qua ... Làm chủ kỹ thuật thực chiến ... Bóc trần nghịch lý Simpson ... mỗi dòng là một bản ghi tương tác của người dùng ... phân tách người dùng máy tính Windows với các hệ điều hành khác",
+        "after": "Bài học này vận dụng các kỹ thuật xử lý dữ liệu vào 5 bài toán phân tích thực tế ... Mỗi dòng nhật ký ghi lại một sự kiện yêu cầu HTTP được gửi đến hệ thống, không tự động đại diện cho một người dùng duy nhất nếu chưa qua bước khử trùng lặp ... Việc kiểm tra chuỗi con \"Windows\" bằng str.contains(\"Windows\") là một bộ phân loại phỏng đoán (heuristic classifier) phục vụ việc phân nhóm sơ bộ các yêu cầu HTTP, không phải là cơ chế xác thực danh tính hệ điều hành thực tế của người dùng"
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/phu-luc-a-numpy-nang-cao.md",
+        "finding": "Phân biệt kiểu vô hướng (kế thừa np.generic) với đối tượng dtype; mảng cấu trúc có một kiểu phức hợp chung cho toàn mảng; ravel trả về view hay copy phụ thuộc bước nhảy và thứ tự duyệt; memmap không tự bảo đảm các thao tác tiếp theo tốn ít RAM; vectorize/frompyfunc không có cam kết tốc độ; gắn nhãn Numba là tùy chọn bổ trợ.",
+        "before": "np.generic: Gốc của mọi kiểu dữ liệu trong NumPy ... mảng cấu trúc cho phép các phần tử có kiểu dữ liệu khác nhau ... ravel() trả về View nếu mảng liên tục ... np.memmap giải quyết triệt để vấn đề này ... Tốc độ thực tế: np.vectorize hoàn toàn không cải thiện tốc độ",
+        "after": "Phân biệt rõ đối tượng mô tả kiểu (np.dtype) với kiểu vô hướng (NumPy scalar types kế thừa np.generic) ... mọi mảng ndarray (kể cả mảng cấu trúc) đều sở hữu duy nhất một kiểu dữ liệu chung (arr.dtype) dạng kiểu phức hợp (Compound dtype) ... ravel(order='C') trả về View nếu cấu trúc bước nhảy tương thích với thứ tự duyệt, ngược lại buộc phải tạo Copy ... memmap không tự động bảo đảm mọi phép toán tiếp theo đều tốn ít RAM ... np.vectorize và frompyfunc không có cam kết về tốc độ; phân biệt rõ vòng lặp đối tượng Python với ufunc số học; Numba được gắn nhãn (Tùy chọn bổ trợ / Optional)"
+      }
+    ],
+    "capitalizationAfterColons": [
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+        "excerpts": [
+          "Ví dụ: Hệ thống ghi nhận hai bản ghi nhật ký cùng lúc 08:00 tại hai thành phố Hà Nội và London.",
+          "Lưu ý: Thao tác tz_convert chỉ hợp lệ đối với đối tượng đã được gắn múi giờ.",
+          "- **Khái niệm**: Là mốc thời gian chưa có thông tin múi giờ..."
+        ]
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+        "excerpts": [
+          "Ví dụ: Biến quận gồm HoanKiem, DongDa, TayHo",
+          "Lưu ý: Tham số drop_first=True cần thiết đối với các mô hình tuyến tính có hệ số chặn (Intercept)...",
+          "- **Tương tác**: Biểu diễn bằng toán tử :..."
+        ]
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+        "excerpts": [
+          "Bước 1: Truy số (Number Tracing)...",
+          "Ví dụ: Xét bài toán quyên góp...",
+          "- **Bài học cốt lõi**: Khi phân tích biến động qua thời gian, bắt buộc phải kiểm tra cơ cấu tỷ trọng..."
+        ]
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/phu-luc-a-numpy-nang-cao.md",
+        "excerpts": [
+          "Khối siêu dữ liệu bao gồm bốn thuộc tính cốt lõi: Con trỏ trỏ đến địa chỉ...",
+          "Lưu ý: Numba là một thư viện bổ trợ độc lập...",
+          "- `data`: Con trỏ trỏ đến địa chỉ ô nhớ byte đầu tiên của mảng."
+        ]
+      }
+    ],
+    "noProseSemicolonsAndNoEmDashes": [
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+        "description": "Triệt tiêu toàn bộ dấu chấm phẩy (;) trong văn xuôi và bảng biểu; loại bỏ dấu gạch ngang dài (em dash — / --), thay bằng từ nối tiếng Việt hoặc ngoặc đơn."
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+        "description": "Thay dấu chấm phẩy trong văn xuôi bằng các liên từ chuẩn xác (và, trong khi, do đó); không sử dụng em dash trong các mệnh đề giải thích."
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+        "description": "Thay thế dấu chấm phẩy trong bảng tóm tắt và văn xuôi bằng câu đơn hoặc liên từ; loại bỏ em dash chêm xen giữa câu."
+      },
+      {
+        "file": "docs/xu-ly-du-lieu/bai-giang/phu-luc-a-numpy-nang-cao.md",
+        "description": "Chuyển các mệnh đề nối bằng dấu chấm phẩy sang từ nối tự nhiên; loại bỏ em dash trong các đoạn giải thích kỹ thuật."
+      }
+    ],
+    "verificationLimits": {
+      "pythonVerifier": "Chạy scripts/verify-data-course-c.py xác minh 75 khối mã Python trên môi trường NumPy 2.5.2 và pandas 3.0.5, tất cả đều đạt.",
+      "proseReviewScript": "Chạy review_teaching_text.py kiểm tra cú pháp, độ dài câu, in đậm, công thức LaTeX và cấu trúc bài giảng.",
+      "visualScrollbarCaveat": "Lưu ý phương pháp luận: Công cụ kiểm tra văn bản và lint tĩnh không thể chứng minh việc không xuất hiện thanh cuộn (scrollbar) trên giao diện người dùng nếu không có môi trường trình duyệt trực tiếp (browser render engine). Bài giảng kiểm soát độ dài công thức nội dòng dưới 38ex và ngắt dòng tường minh bằng aligned để bảo đảm hiển thị an toàn trên màn hình di động."
+    }
+  },
+  "tests": {
+    "executionScript": "python scripts/verify-data-course-c.py",
+    "numpyVersion": "2.5.2",
+    "pandasVersion": "3.0.5",
+    "totalPythonBlocksVerified": 75,
+    "status": "passed",
+    "unitBreakdown": [
+      {
+        "unit": "ch11",
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+        "blocks": 25,
+        "status": "passed"
+      },
+      {
+        "unit": "ch12",
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-12-mo-hinh-hoa.md",
+        "blocks": 13,
+        "status": "passed"
+      },
+      {
+        "unit": "ch13",
+        "file": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+        "blocks": 14,
+        "status": "passed"
+      },
+      {
+        "unit": "appA",
+        "file": "docs/xu-ly-du-lieu/bai-giang/phu-luc-a-numpy-nang-cao.md",
+        "blocks": 23,
+        "status": "passed"
+      }
+    ]
+  }
+}

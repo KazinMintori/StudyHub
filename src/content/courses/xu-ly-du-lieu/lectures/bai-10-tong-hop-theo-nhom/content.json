@@ -1,0 +1,73 @@
+{
+  "course": "xu-ly-du-lieu",
+  "lecture": "bai-10-tong-hop-theo-nhom",
+  "route": "/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom",
+  "notes": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+  "topics": [],
+  "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-10-tong-hop-theo-nhom/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "dataframe",
+    "gia-tri-thieu"
+  ],
+  "fragments": [
+    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md"
+  ],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 205,
+      "title": "Ví dụ 1: Điền giá trị khuyết thiếu bằng giá trị đặc thù của từng nhóm"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 217,
+      "title": "Ví dụ 2: Lấy mẫu ngẫu nhiên độc lập theo từng nhóm"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 224,
+      "title": "Ví dụ 3: Giá trị trung bình gia quyền theo nhóm (Group Weighted Average)"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 262,
+      "title": "Ví dụ 4: Ước lượng mô hình hồi quy tuyến tính theo từng nhóm"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 370,
+      "title": "Bài tập 1: Tính giá trung bình chung từ thống kê nhóm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
+      "line": 5,
+      "title": "Từ từng hàng đến bảng so sánh nhóm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
+      "line": 64,
+      "title": "Kiểm tra lại một kết quả từ groupby"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 381,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
+      "line": 16,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
+      "line": 68,
+      "title": ""
+    }
+  ],
+  "assets": []
+}

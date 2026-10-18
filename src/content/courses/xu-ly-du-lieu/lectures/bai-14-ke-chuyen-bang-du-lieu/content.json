@@ -7,14 +7,94 @@
   "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-14-ke-chuyen-bang-du-lieu/slides.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [
-    "gia-tri-thieu",
-    "thong-ke-mo-ta",
-    "ket-luan-nhan-qua",
-    "suy-rong-thong-ke"
+    "dataframe",
+    "groupby"
   ],
-  "fragments": [],
+  "fragments": [
+    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+    "raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md"
+  ],
   "examples": [],
-  "exercises": [],
-  "solutions": [],
-  "assets": []
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 420,
+      "title": "Bài tập 1: Đo lường mức độ bất đồng quan điểm trong đánh giá dịch vụ"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 461,
+      "title": "Bài tập 2: Thẩm định biến động doanh thu và nhận diện nghịch lý Simpson"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 5,
+      "title": "Tổ chức một đoạn báo cáo để người đọc đối chiếu được"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 37,
+      "title": "Sửa năm lời diễn giải"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 63,
+      "title": "Kiểm tra trọng số trước khi nói giá giảm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 84,
+      "title": "Tách số lượng đánh giá khỏi mức độ yêu thích"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md",
+      "line": 7,
+      "title": "Giải thích hai chiều biến động"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 436,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 473,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 16,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 47,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 67,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md",
+      "line": 88,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md",
+      "line": 11,
+      "title": ""
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/lec-14/co-cau-nhom.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md",
+      "line": 3,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-14/co-cau-nhom.svg"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 ---
 layout: page
 search: false
-redirectTo: "/xu-ly-du-lieu/bai-giang/bai-11-llm-du-lieu-phi-cau-truc.html"
+redirectTo: "/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.html"
 ---
 
 <OldCourseLink />

@@ -2,280 +2,523 @@
 course: xu-ly-du-lieu
 lecture: bai-14-ke-chuyen-bang-du-lieu
 section: lecture
-title: "Kể chuyện bằng dữ liệu & thẩm định phân tích AI"
-prerequisites: ["gia-tri-thieu", "thong-ke-mo-ta", "ket-luan-nhan-qua", "suy-rong-thong-ke"]
+title: "Các bài toán phân tích dữ liệu và kiểm tra kết luận"
+prerequisites: ["dataframe", "groupby"]
 lessonStatus: ready
-description: "Nghệ thuật kể chuyện bằng dữ liệu có trách nhiệm: Cấu trúc Kim tự tháp Minto, bóc trần nghịch lý Simpson, chuẩn hóa ngôn ngữ đo lường và quy trình thẩm định 4 bước đối với báo cáo do trí tuệ nhân tạo tạo ra."
+hasChapterExercises: true
+description: "Vận dụng tổng hợp kỹ thuật xử lý dữ liệu qua 5 bài toán thực tế: Nhật ký múi giờ, điểm phim và mức độ bất đồng, xu hướng đặt tên, dữ liệu dinh dưỡng phân cấp, quyên góp tài chính và quy trình thẩm định kết luận."
 ---
 
-Chúng ta bước vào bài giảng tổng kết của toàn bộ môn học. Hãy nhìn lại chuỗi hành trình kỹ nghệ dữ liệu mà bạn đã đi qua:
-- **Thu thập dữ liệu** (Bài 6): Đọc tệp CSV, kết nối cơ sở dữ liệu SQL và truy xuất qua API.
-- **Làm sạch và chuẩn hóa** (Bài 7 đến Bài 10): Xử lý chuỗi văn bản, phân tích dữ liệu chuỗi thời gian, xử lý giá trị khuyết thiếu và kiểm soát dữ liệu ngoại lai.
-- **Làm giàu dữ liệu bằng mô hình ngôn ngữ lớn (LLM)** (Bài 11): Trích xuất thông tin phi cấu trúc với định dạng JSON nghiêm ngặt và đo lường độ chính xác trên mẫu chuẩn.
-- **Trực quan hóa dữ liệu** (Bài 12 và Bài 13): Xây dựng biểu đồ phục vụ đúng câu hỏi nghiệp vụ, đọc thang đo trung thực và tránh các bẫy thị giác.
-- **Kể chuyện và thẩm định** (Bài 14 này): Đóng gói toàn bộ kết quả thành câu chuyện dữ liệu có sức thuyết phục và thẩm định độc lập các báo cáo do AI hỗ trợ viết.
 
-Triết lý nền tảng của bài học này rất giản dị nhưng sâu sắc: **Kết quả phân tích chỉ có giá trị khi người đọc hiểu được kết luận và kiểm chứng được bằng chứng**. Toàn bộ khối lượng công việc tính toán đồ sộ trước đó sẽ trở nên vô nghĩa nếu khâu cuối cùng bị gãy đổ: Khâu truyền tải thông điệp tới người ra quyết định và bảo vệ tính trung thực của các phát hiện khoa học.
+<div class="lecture-notes-content">
 
----
+Bài học này vận dụng các kỹ thuật xử lý dữ liệu vào 5 bài toán phân tích thực tế: Phân tích nhật ký truy cập web, đo lường mức độ bất đồng trong đánh giá phim, chuỗi thời gian tên khai sinh, dữ liệu dinh dưỡng phân cấp và hồ sơ tài chính quyên góp.
 
-## 1. Từ phân tích đến câu chuyện dữ liệu
-
-Khi bắt tay vào báo cáo kết quả cho ban điều hành, đối tác hay hội đồng bảo vệ, người mới làm dữ liệu thường mắc phải một sai lầm phổ biến: Kể lại toàn bộ nhật ký những gì mình đã làm. Người nghe không cần xem qua mọi biểu đồ bạn từng thử nghiệm, họ cần một câu trả lời dứt khoát có căn cứ khoa học.
-
-### Kết luận trước, chi tiết sau: Cấu trúc Kim tự tháp Minto
-
-Hãy quan sát sự đối lập giữa hai lối trình bày:
-- **Kể theo trình tự thời gian của người làm** (sai lầm kinh điển): *"Đầu tiên em tải dữ liệu về, sau đó em làm sạch được 17.688 dòng, rồi em thử vẽ biểu đồ phân tán nhưng không thấy rõ xu hướng, tiếp theo em đổi sang boxplot, cuối cùng em thấy giá trung vị ở Las Condes là 97 nghìn CLP."* Lối kể này khiến người nghe kiệt sức trước khi nắm bắt được thông điệp chính.
-- **Kể theo nhu cầu của người đọc** (chuẩn mực chuyên nghiệp): *"Las Condes là khu vực có giá thuê đắt nhất Santiago, cao hơn khoảng 65% so với mặt bằng chung toàn thành phố, căn cứ trên ba bằng chứng định lượng sau đây. Toàn bộ nhật ký làm sạch và mã nguồn kiểm định được trình bày chi tiết ở phần phụ lục."*
-
-Phương pháp luận **Kim tự tháp Minto (The Minto Pyramid Principle)** sắp xếp luồng giao tiếp theo cấu trúc từ trên xuống (Top-Down):
-
-<DataDiagram name="report-pyramid" />
-
-1. **Đỉnh kim tự tháp (Kết luận điều hành)**: Nêu ngay câu trả lời trực tiếp cho bài toán kinh doanh hoặc câu hỏi nghiên cứu.
-2. **Tầng thứ hai (Bằng chứng định lượng)**: Trình bày các con số then chốt và biểu đồ được chọn lọc để chứng minh cho kết luận ở đỉnh.
-3. **Tầng thứ ba (Phạm vi và Giới hạn)**: Chỉ rõ điều kiện biên để người đọc không áp dụng kết luận vào những bối cảnh ngoài dữ liệu.
-4. **Đáy kim tự tháp (Chi tiết phương pháp)**: Đặt toàn bộ chi tiết tiền xử lý, thuật toán và nhật ký kỹ thuật vào phần phụ lục phục vụ việc tái lập và kiểm toán độc lập.
-
-### Ba thành phần cốt lõi của một câu chuyện dữ liệu
-
-Mỗi mục lớn trong một bản báo cáo phân tích hoặc bài tập lớn hoàn chỉnh cần hội tụ đủ ba thành phần liên kết chặt chẽ:
-1. **Bối cảnh**: Trả lời câu hỏi ai hỏi, hỏi điều gì và vì sao câu hỏi này lại quan trọng ở thời điểm hiện tại.
-2. **Phát hiện**: Đưa ra phát hiện định lượng then chốt nào trả lời trực tiếp cho câu hỏi đó.
-3. **Hệ quả**: Chỉ rõ hàm ý hành động (doanh nghiệp nên làm gì tiếp theo) song song với các giới hạn khách quan của kết luận.
-
-Tương tự như quy tắc đặt tiêu đề biểu đồ ở Bài 12, **tiêu đề của mỗi mục lớn trong báo cáo phải là một câu khẳng định có hành động**, thay vì một nhãn danh mục vô hồn. Ví dụ, hãy đặt tiêu đề là *"Khu vực Las Condes có mức giá cao hơn 65% so với mặt bằng chung thành phố"*, thay vì chỉ ghi đơn điệu *"Phân tích giá theo khu vực"*.
-
-### Nghệ thuật sử dụng con số: Làm tròn có chủ đích
-
-Một người phân tích dữ liệu vụng về thường ném nguyên vẹn các con số từ màn hình máy tính vào bài viết, khiến người đọc bị quá tải nhận thức:
-- **Khó nhớ và gây phân tán**: *"Giá thuê trung vị toàn thành phố là 59.000 CLP/đêm, trong khi tại quận Las Condes là 97.460 CLP/đêm."*
-- **Dễ nhớ và đọng lại thông điệp**: *"Quận Las Condes có giá thuê cao hơn khoảng 65% so với mặt bằng chung toàn thành phố (khoảng 97 so với 59 nghìn CLP/đêm)."*
-
-Nguyên tắc vàng khi trình bày số liệu: **Bảng dữ liệu giữ độ chính xác tuyệt đối, nhưng câu văn xuôi nên chuyển tải thành tỷ lệ so sánh trực quan**. Những cụm từ như *"gấp đôi"*, *"khoảng một phần năm (20%)"*, hoặc *"chưa đến 1%"* giúp não bộ người tiếp nhận nắm bắt quy mô ngay lập tức mà không cần tự thực hiện phép chia nhẩm trong đầu.
-
-### Nêu rõ giới hạn giúp gia tăng độ tin cậy khoa học
-
-Nhiều người lầm tưởng rằng việc thừa nhận giới hạn sẽ làm giảm giá trị của bản phân tích. Thực tế hoàn toàn ngược lại: Một bản báo cáo tự nhận mình "chính xác tuyệt đối 100%" chỉ chứng minh người làm thiếu hiểu biết về sự bất định của dữ liệu thực tế.
-
-Trong suốt khóa học, chúng ta đã nhận diện hàng loạt giới hạn thực nghiệm:
-- **Số lượng đánh giá chỉ là một biến đại diện**: Số lượng đánh giá phản ánh lượng khách lưu trú với độ trễ nhất định, không phản ánh toàn bộ lượng khách thực tế (vì không phải ai cũng viết nhận xét) và càng không đại diện cho mức độ hài lòng nếu chưa xét tới điểm số.
-- **Kỳ khảo sát chưa trọn vẹn**: Dữ liệu ở thời điểm cuối kỳ khảo sát thường bị hụt số lượng do giao dịch đang diễn ra.
-- **Dữ liệu khuyết thiếu**: Có 846 chỗ ở bị thiếu giá thuê cần phải loại bỏ trong khâu kiểm soát chất lượng.
-- **Sai số của mô hình ngôn ngữ**: Nhãn trích xuất từ LLM có thể có tỷ lệ sai sót khoảng 10% trên các trường phức tạp.
-- **Bẫy diện tích trên biểu đồ bản đồ**: Các quận ngoại thành có diện tích rộng lớn dễ lấn át thị giác dù mật độ chỗ ở thực tế rất thưa thớt.
-
-Việc chủ động đặt các giới hạn này ngay cạnh kết luận giúp người ra quyết định đánh giá đúng ranh giới an toàn của thông tin. Với mỗi kết luận lớn, hãy luôn ghi rõ: **Nguồn dữ liệu gốc, cỡ mẫu quan sát hợp lệ, các giả định đã sử dụng và loại sai số có thể phát sinh**.
+Song song với các bước làm sạch và biến đổi dữ liệu, bài học tập trung vào phương pháp kiểm chứng kết luận phân tích: Nhận diện nghịch lý Simpson khi tổng hợp dữ liệu gộp, kiểm soát mẫu số và tỷ trọng nhóm, phân biệt tương quan với nhân quả, và áp dụng quy trình thẩm định 4 bước để đánh giá độ tin cậy của các phát biểu định lượng.
 
 ---
 
-## 2. Kể chuyện đúng mực và nhận diện các bẫy diễn giải
+## 1. Bài toán 1: Nhật ký truy cập và phân loại tác tử theo múi giờ
 
-Một báo cáo dữ liệu nguy hiểm nhất không phải là báo cáo tính toán sai số học, mà là báo cáo **"đúng số nhưng sai nghĩa"**. Dưới đây là bốn cái bẫy diễn giải kinh điển mà một kỹ sư dữ liệu bắt buộc phải tránh.
+Dữ liệu nhật ký máy chủ (server logs) thường được ghi nhận dưới dạng chuỗi JSON thô (như nhật ký dịch vụ rút gọn liên kết 1.usa.gov). Mỗi dòng nhật ký ghi lại một sự kiện yêu cầu HTTP được gửi đến hệ thống, không tự động đại diện cho một người dùng duy nhất nếu chưa qua bước khử trùng lặp theo định danh hoặc phiên làm việc.
 
-### Bẫy 1: Tương quan không đồng nghĩa với Nhân quả ($\text{Correlation} \ne \text{Causation}$)
+### Đọc, chuẩn hóa và xử lý giá trị khuyết thiếu
 
-Xét một phát hiện thực tế từ tập dữ liệu Santiago ở Bài 7: Các chỗ ở có tiêu đề chứa từ khóa *"metro"* có giá thuê rẻ hơn khoảng 11% so với các chỗ ở không nhắc đến từ này. 
+Một bản ghi nhật ký điển hình chứa trường múi giờ (`tz`) và thông tin chuỗi tác tử (`a`, user-agent string). Hai thách thức lớn nhất khi làm sạch cột múi giờ là sự phân biệt giữa giá trị khuyết hoàn toàn (`None` hoặc `NaN`) với chuỗi rỗng (`""`):
 
-Từ số liệu đó, liệu có thể tuyên bố: *"Vị trí gần ga metro làm giảm giá trị cho thuê căn hộ"*?
+```python
+import numpy as np
+import pandas as pd
 
-Tuyệt đối không! Việc vội vã quy kết quan hệ nhân quả ở đây bỏ qua các **biến gây nhiễu (confounding variables)**:
-- **Phân bố địa lý**: Các tuyến tàu điện ngầm mới mở thường chạy qua các quận vùng ven có quỹ đất rẻ, nơi mặt bằng giá thuê vốn đã thấp hơn khu vực lõi lịch sử.
-- **Cơ cấu loại phòng**: Những chỗ ở giá rẻ và phòng riêng thường tích cực quảng bá từ khóa *"metro"* trong tiêu đề để bù đắp cho diện tích khiêm tốn của mình, trong khi các căn biệt thự sang trọng tại các khu đồi yên tĩnh lại ưu tiên nhấn mạnh sự riêng tư và tầm nhìn cảnh quan.
+# Tập dữ liệu nhật ký mô phỏng nhỏ
+ban_ghi = [
+    {"tz": "Asia/Ho_Chi_Minh", "a": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"},
+    {"tz": "Asia/Ho_Chi_Minh", "a": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"},
+    {"tz": "America/New_York", "a": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"},
+    {"tz": "", "a": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64)"},
+    {"a": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"} # Không có trường tz
+]
 
-Dữ liệu quan sát thuần túy chỉ cho phép chúng ta khẳng định **hai yếu tố có mối liên hệ đi kèm**, hoàn toàn không cho phép khẳng định yếu tố này sinh ra yếu tố kia.
+df_nhat_ky = pd.DataFrame(ban_ghi)
 
-### Bẫy 2: Bẫy chọn kỳ gốc có lợi (Cherry-picking Baseline)
+# Chuẩn hóa giá trị thiếu: Phân biệt thiếu từ nguồn với chuỗi rỗng
+tz_sach = df_nhat_ky["tz"].fillna("Missing").replace({"": "Unknown"})
 
-Hãy xem xét phát biểu sau: *"Lượng đánh giá tại Santiago tăng trưởng bùng nổ 50 lần kể từ năm 2020!"*
+print("Tần suất phân bố múi giờ:")
+print(tz_sach.value_counts())
+```
 
-Về mặt số học thuần túy, con số 50 lần này hoàn toàn đúng dữ liệu: Người làm đã lấy số đánh giá của một tháng đỉnh cao gần đây chia cho số đánh giá của tháng 4 năm 2020 (khi đó chỉ ghi nhận 321 đánh giá vì toàn thành phố đang bị phong tỏa do đại dịch COVID-19).
+### Phân loại heuristic hệ điều hành từ chuỗi tác tử
 
-Tuy nhiên, nếu chọn kỳ gốc là mức trung bình hàng tháng của năm 2019 (giai đoạn trước đại dịch), mức tăng trưởng thực tế chỉ còn khoảng 8 lần. Mặt khác, nếu so sánh quy mô cả năm 2020 so với năm 2025 như đã tính ở Bài 13, mức tăng trưởng là khoảng 16 lần.
+Chuỗi tác tử người dùng (User-Agent string) phản ánh thông tin trình duyệt và môi trường do trình khách khai báo. Việc kiểm tra chuỗi con `"Windows"` bằng `str.contains("Windows")` là một bộ phân loại phỏng đoán (heuristic classifier) phục vụ việc phân nhóm sơ bộ các yêu cầu HTTP, không phải là cơ chế xác thực danh tính hệ điều hành thực tế của người dùng (chuỗi User-Agent có thể bị chỉnh sửa hoặc chứa nhiều thông tin phụ):
 
-Cùng một hiện tượng thực tế, nhưng việc cố tình chọn mốc đáy bất thường làm kỳ gốc có thể thổi phồng con số lên gấp nhiều lần. Vì vậy, người phân tích phải luôn **khai báo minh bạch kỳ gốc đã chọn và giải thích rõ căn cứ học thuật của việc lựa chọn đó**.
+```python
+# Phân loại sơ bộ yêu cầu từ môi trường Windows theo quy tắc heuristic
+df_nhat_ky["he_dieu_hanh"] = np.where(
+    df_nhat_ky["a"].fillna("").str.contains("Windows"),
+    "Windows",
+    "Khac"
+)
 
-### Bẫy 3: Nghịch lý Simpson: Sự đảo chiều giữa tổng thể và từng nhóm
+# Tổng hợp số lượng yêu cầu theo múi giờ và hệ điều hành suy đoán
+bang_he_dieu_hanh = df_nhat_ky.groupby(
+    [tz_sach, "he_dieu_hanh"]
+).size().unstack(fill_value=0)
 
-Hiện tượng nguy hiểm bậc nhất trong thống kê mô tả là **Nghịch lý Simpson (Simpson's Paradox)**: Một xu hướng tăng trưởng hay suy giảm xuất hiện đồng nhất trong từng nhóm thành phần riêng lẻ có thể bị **đảo ngược hoàn toàn** khi dữ liệu được gộp chung lại ở cấp độ toàn thị trường.
+print("Phân bố số lượng yêu cầu theo múi giờ và hệ điều hành:")
+print(bang_he_dieu_hanh)
+```
 
-#### Bản chất toán học của sự dịch chuyển cơ cấu trọng số
+---
 
-Giá trị trung bình gộp của một tổng thể gồm $k$ nhóm thành phần không phải là trung bình cộng giản đơn, mà là trung bình có trọng số phụ thuộc vào quy mô từng nhóm:
+## 2. Bài toán 2: Đánh giá phim và đo lường mức độ bất đồng quan điểm
+
+Trong hệ thống gợi ý và phân tích thị hiếu người tiêu dùng, dữ liệu thường được phân tán trên nhiều bảng quan hệ: Bảng người dùng (Users), bảng nội dung (Movies) và bảng nhật ký đánh giá (Ratings).
+
+### Hợp nhất dữ liệu và lập bảng xoay chiều
+
+Quy trình phân tích bắt đầu bằng việc ghép nối các bảng theo khóa ngoại bằng `pd.merge()`:
+
+```python
+ratings = pd.DataFrame({
+    "user_id": [1, 2, 3, 4, 1, 2, 3, 4],
+    "movie_id": [10, 10, 10, 10, 20, 20, 20, 20],
+    "rating": [5, 2, 4, 1, 4, 4, 3, 4]
+})
+users = pd.DataFrame({
+    "user_id": [1, 2, 3, 4],
+    "gender": ["F", "M", "F", "M"]
+})
+movies = pd.DataFrame({
+    "movie_id": [10, 20],
+    "title": ["Phim Hanh Dong A", "Phim Tam Ly B"]
+})
+
+# Hợp nhất ba bảng dữ liệu
+du_lieu_phim = ratings.merge(users, on="user_id").merge(movies, on="movie_id")
+
+# Lập bảng xoay chiều tính điểm trung bình theo giới tính
+bang_diem = du_lieu_phim.pivot_table(
+    index="title",
+    columns="gender",
+    values="rating",
+    aggfunc="mean"
+)
+print("Điểm đánh giá trung bình theo giới tính:")
+print(bang_diem)
+```
+
+### Đo lường mức độ bất đồng quan điểm
+
+Làm thế nào để phát hiện các tác phẩm gây tranh cãi trong cộng đồng? Ta sử dụng hai thước đo định lượng:
+1. **Chênh lệch thị hiếu giữa các nhóm**: Tính hiệu số điểm giữa khán giả nữ và nam (`diff = piv["F"] - piv["M"]`).
+2. **Độ phân tán của toàn bộ khán giả**: Tính độ lệch chuẩn (`std`) của điểm số cho từng bộ phim. Phim có độ lệch chuẩn cao là phim mà người xem chia rẽ sâu sắc (người chấm 1 sao, người chấm 5 sao), trong khi phim có độ lệch chuẩn thấp nhận được sự đồng thuận cao.
+
+```python
+# 1. Đo lường chênh lệch giới tính
+bang_diem["chenh_lech"] = bang_diem["F"] - bang_diem["M"]
+
+# 2. Đo lường độ phân tán bằng độ lệch chuẩn
+do_phan_tan = du_lieu_phim.groupby("title")["rating"].std()
+bang_diem["do_lech_chuan"] = do_phan_tan
+
+print("Bảng đo lường bất đồng quan điểm:")
+print(bang_diem[["chenh_lech", "do_lech_chuan"]])
+```
+
+---
+
+## 3. Bài toán 3: Phân tích xu hướng đặt tên, tính đa dạng và sự dịch chuyển âm cuối
+
+Tập dữ liệu đặt tên của cơ quan quản lý an sinh xã hội ghi nhận số lượng trẻ em sinh ra theo tên, giới tính và năm, kéo dài từ cuối thế kỷ 19 đến nay. Đây là ví dụ điển hình cho việc phân tích dữ liệu lịch sử dài hạn.
+
+### Chuẩn hóa tỷ trọng và phân tích xu hướng
+
+Tổng số trẻ sinh ra thay đổi mạnh qua từng thập kỷ do bùng nổ dân số. Do đó, so sánh số lượng tuyệt đối sẽ làm sai lệch nhận định. Thao tác cần thiết là tính **tỷ trọng phần trăm** của từng tên trong từng năm và từng giới tính:
+
+```python
+du_lieu_ten = pd.DataFrame({
+    "nam": [1880, 1880, 1950, 1950, 2010, 2010],
+    "ten": ["John", "Mary", "John", "Mary", "John", "Mary"],
+    "gioi_tinh": ["M", "F", "M", "F", "M", "F"],
+    "so_tre": [9655, 7065, 79428, 65482, 11498, 4073]
+})
+
+# Tính tỷ trọng trong từng nhóm năm và giới tính
+du_lieu_ten["ty_trong"] = du_lieu_ten.groupby(
+    ["nam", "gioi_tinh"]
+)["so_tre"].transform(lambda x: x / x.sum())
+
+print("Bảng tỷ trọng đặt tên:")
+print(du_lieu_ten)
+```
+
+### Đo lường tính đa dạng đặt tên
+
+Một câu hỏi xã hội học đáng quan tâm: Thị hiếu đặt tên của cha mẹ ngày càng phong phú hay ngày càng thu hẹp?
+Ta có thể đo lường tính đa dạng bằng cách tính **số lượng tên phổ biến nhất cần thiết để chiếm đủ 50% tổng số trẻ sinh ra trong năm**. Ở thế kỷ 19, chỉ cần vài chục tên đứng đầu đã chiếm tới một nửa số trẻ em. Đến thế kỷ 21, số lượng tên cần thiết đã tăng lên hàng trăm, phản ánh sự mở rộng về tính đa dạng khi lựa chọn tên gọi.
+
+### Sự dịch chuyển của chữ cái kết thúc
+
+Bằng cách trích xuất ký tự cuối cùng của chuỗi tên gọi bằng `str[-1]`, ta quan sát thấy sự thay đổi rõ rệt trong phân bố chữ cái kết thúc của tên con trai. Tỷ trọng các tên kết thúc bằng chữ cái `"n"` (như John, Ryan, Ethan) đã tăng từ khoảng 14% ở thế kỷ 19 lên hơn 35% trong những năm gần đây.
+
+```python
+du_lieu_ten["chu_cai_cuoi"] = du_lieu_ten["ten"].str[-1]
+bang_chu_cai = du_lieu_ten.pivot_table(
+    index="chu_cai_cuoi",
+    columns=["nam", "gioi_tinh"],
+    values="so_tre",
+    aggfunc="sum",
+    fill_value=0
+)
+print("Phân bố chữ cái kết thúc:")
+print(bang_chu_cai)
+```
+
+---
+
+## 4. Bài toán 4: Khai phá dữ liệu dinh dưỡng lồng nhau dạng JSON
+
+Cơ sở dữ liệu dinh dưỡng (như dữ liệu thành phần thực phẩm) thường được phân phối dưới dạng các cấu trúc JSON phân cấp sâu: Mỗi món ăn là một đối tượng chứa các trường định danh cơ bản, kèm theo một mảng con lồng nhau gồm hàng chục chỉ số vi chất dinh dưỡng.
+
+### Phẳng hóa dữ liệu phân cấp
+
+Để phân tích bằng các công cụ bảng, ta cần tách dữ liệu thành hai bảng liên kết:
+1. **Bảng món ăn**: Chứa thông tin chung (`id`, `ten_mon`, `nhom_thuc_pham`).
+2. **Bảng thành phần dinh dưỡng**: Chứa các dòng chi tiết liên kết qua khóa `id`.
+
+```python
+thuc_pham_raw = [
+    {
+        "id": 1001,
+        "ten": "Bo lat",
+        "nhom": "Sua",
+        "dinh_duong": [
+            {"chat": "protein", "luong": 0.85},
+            {"chat": "chat_beo", "luong": 81.11},
+            {"chat": "canxi", "luong": 24.0}
+        ]
+    },
+    {
+        "id": 1002,
+        "ten": "Trung ga",
+        "nhom": "Trung",
+        "dinh_duong": [
+            {"chat": "protein", "luong": 12.56},
+            {"chat": "chat_beo", "luong": 9.51},
+            {"chat": "canxi", "luong": 56.0}
+        ]
+    }
+]
+
+# Tách bảng thông tin món ăn
+df_thuc_pham = pd.DataFrame([
+    {"id": d["id"], "ten": d["ten"], "nhom": d["nhom"]}
+    for d in thuc_pham_raw
+])
+
+# Phẳng hóa mảng lồng nhau thành bảng dinh dưỡng chi tiết
+danh_sach_chat = []
+for d in thuc_pham_raw:
+    for n in d["dinh_duong"]:
+        danh_sach_chat.append({
+            "id": d["id"],
+            "chat": n["chat"],
+            "luong": n["luong"]
+        })
+df_dinh_duong = pd.DataFrame(danh_sach_chat)
+
+# Hợp nhất hai bảng để phục vụ phân tích
+bang_tong_hop = df_dinh_duong.merge(df_thuc_pham, on="id")
+print("Bảng dinh dưỡng phẳng hóa hoàn chỉnh:")
+print(bang_tong_hop)
+```
+
+### Truy vấn thực phẩm giàu vi chất theo nhóm
+
+Nhờ cấu trúc bảng phẳng, việc tìm kiếm thực phẩm có hàm lượng vi chất cao nhất theo từng nhóm trở nên trực diện thông qua `groupby` và `idxmax`:
+
+```python
+# Tìm món ăn giàu protein nhất trong từng nhóm
+protein_df = bang_tong_hop[bang_tong_hop["chat"] == "protein"]
+top_protein = protein_df.sort_values("luong", ascending=False)
+print("Thực phẩm giàu protein nhất:")
+print(top_protein[["ten", "nhom", "luong"]])
+```
+
+---
+
+## 5. Bài toán 5: Phân tích đóng góp tài chính và phân khoảng giá trị
+
+Hồ sơ quyên góp tài chính chính trị và xã hội thường có phân phối số tiền lệch phải rõ rệt: Đa số các khoản quyên góp có quy mô nhỏ (vài chục đến vài trăm nghìn đồng), trong khi tổng giá trị đóng góp chịu ảnh hưởng lớn từ các khoản tài trợ quy mô lớn của các nhà tài trợ.
+
+### Chuẩn hóa trường nghề nghiệp và cơ quan
+
+Dữ liệu tự khai báo thường chứa hàng trăm biến thể chính tả của cùng một nghề nghiệp (ví dụ: `"KS"`, `"Kỹ sư"`, `"ENGINEER"`). Kỹ thuật chuẩn hóa là xây dựng từ điển ánh xạ (`mapping dictionary`):
+
+```python
+df_quyen_gop = pd.DataFrame({
+    "nguoi_ung_ho": ["An", "Binh", "Chi", "Dung", "Em"],
+    "nghe_nghiep": ["Kỹ sư", "KS", "Bác sĩ", "GIAO VIEN", "Giáo viên"],
+    "ung_vien": ["UngVien_A", "UngVien_A", "UngVien_B", "UngVien_B", "UngVien_A"],
+    "so_tien": [50, 250, 1500, 75, 12000]
+})
+
+anh_xa_nghe = {
+    "Kỹ sư": "Kỹ thuật",
+    "KS": "Kỹ thuật",
+    "Bác sĩ": "Y tế",
+    "GIAO VIEN": "Giáo dục",
+    "Giáo viên": "Giáo dục"
+}
+df_quyen_gop["nghe_chuan"] = df_quyen_gop["nghe_nghiep"].map(anh_xa_nghe)
+```
+
+### Phân khoảng số tiền đóng góp với `pd.cut`
+
+Để quan sát cơ cấu nhà tài trợ, ta phân chia số tiền quyên góp thành các khoảng giá trị (buckets / bins) tăng theo cấp số nhân:
+
+```python
+cac_nguong = [0, 100, 1000, 10000, 100000]
+df_quyen_gop["khoang_tien"] = pd.cut(
+    df_quyen_gop["so_tien"],
+    bins=cac_nguong,
+    right=True
+)
+
+# Tổng hợp dòng tiền theo ứng viên và khoảng tiền đóng góp
+dong_tien_nhom = df_quyen_gop.groupby(
+    ["ung_vien", "khoang_tien"],
+    observed=False
+)["so_tien"].sum().unstack(fill_value=0)
+
+print("Phân bố dòng tiền quyên góp theo quy mô:")
+print(dong_tien_nhom)
+```
+
+Bảng tổng hợp này cho thấy ngay ứng viên nào nhận được sự ủng hộ rộng rãi từ các cử tri bình dân (chi phối ở khoảng dưới 100) và ứng viên nào phụ thuộc vào các khoản tài trợ quy mô lớn (chi phối ở khoảng trên 1.000).
+
+---
+
+## 6. Thiên lệch tổng hợp, nghịch lý Simpson và thẩm định kết luận
+
+Một báo cáo phân tích dữ liệu thất bại thường không phải do mã nguồn tính sai số học, mà do **người phân tích chọn sai thước đo và diễn giải sai bản chất của kết quả**.
+
+### Nghịch lý Simpson: Sự đảo chiều toán học khi gộp nhóm
+
+Một hiện tượng đáng chú ý trong phân tích dữ liệu là **nghịch lý Simpson (Simpson's Paradox)**: Xu hướng tăng trưởng hay suy giảm xuất hiện đồng nhất trong từng nhóm thành phần riêng lẻ có thể bị **đảo ngược hoàn toàn** khi dữ liệu được gộp chung lại ở cấp độ toàn bộ thị trường.
+
+#### Cơ cấu trọng số tác động như thế nào đến giá trị bình quân gộp?
+
+Với k nhóm, gọi $m_i$ là trung bình nhóm i và $w_i$ là tỷ trọng số quan sát của nhóm đó. Trung bình gộp M được khai triển thành:
 
 $$
-\begin{aligned}
-\bar{X}_{\mathrm{pooled}} &= \sum_{i=1}^k w_i \bar{X}_i \\
-&= w_1 \bar{X}_1 + w_2 \bar{X}_2 + \dots + w_k \bar{X}_k
-\end{aligned}
+M = w_1m_1+w_2m_2+\cdots+w_km_k.
 $$
 
-Trong đó $n_i$ là số quan sát của nhóm thứ $i$, tổng cỡ mẫu toàn thị trường là $N = \sum_{i=1}^k n_i = n_1 + n_2 + \dots + n_k$, và trọng số tỷ trọng của từng nhóm thỏa mãn:
+Viết gọn, $M=\sum_{i=1}^k w_im_i$. Nếu $n_i$ là số quan sát của nhóm i thì tổng số quan sát là:
+$$
+N = n_1+n_2+\cdots+n_k.
+$$
+Với N dương và các nhóm tách biệt bao phủ toàn bộ tập quan sát, trọng số là:
+$$
+w_i = \frac{n_i}{N} \ge 0.
+$$
 
 $$
-w_i = \frac{n_i}{N} \ge 0, \quad \sum_{i=1}^k w_i = w_1 + w_2 + \dots + w_k = 1
+w_1+w_2+\cdots+w_k = 1.
 $$
 
-Khi so sánh giữa hai kỳ khảo sát (ví dụ mốc chụp Tháng 9 năm 2025 so với Tháng 6 năm 2026), hãy quan sát bảng biến động thực tế sau:
+Ký hiệu tổng cho điều kiện cuối là $\sum_{i=1}^k w_i=1$.
 
-| Phân khúc chỗ ở | Giá trung vị T9/2025 | Giá trung vị T6/2026 | Biến động từng nhóm |
+Xét bảng minh họa với trung bình và số quan sát của từng nhóm:
+
+| Phân khúc chỗ ở | Giá trung bình kỳ 1 | Giá trung bình kỳ 2 | Biến động từng nhóm |
 | :--- | :---: | :---: | :---: |
-| **Căn hộ nguyên căn** | 60 nghìn CLP | 66 nghìn CLP | **Tăng +10%** |
-| **Phòng riêng** | 30 nghìn CLP | 33 nghìn CLP | **Tăng +10%** |
-| **Toàn bộ thị trường gộp chung** | 55 nghìn CLP | 52 nghìn CLP | **GIẢM -5.5%!** |
+| **Căn hộ nguyên căn** | 60 nghìn | 66 nghìn | **Tăng +10%** |
+| **Phòng riêng** | 30 nghìn | 33 nghìn | **Tăng +10%** |
+| Các quan sát gộp chung | 55 nghìn | 38,5 nghìn | Giảm 30% |
 
-Từng phân khúc riêng lẻ đều tăng giá thêm $10\%$, không có bất kỳ phân khúc nào giảm giá. Nhưng giá trung vị gộp của toàn bộ thị trường lại ghi nhận mức sụt giảm!
+Mỗi trung bình nhóm tăng 10%, nhưng trung bình gộp của tập quan sát giảm 30%. Không được thay các trung bình nhóm trong công thức bằng trung vị nhóm, vì trung vị gộp không được tính bằng phép bình quân có trọng số này.
 
-Nguyên nhân nằm ở **sự thay đổi cơ cấu mẫu giữa hai mốc chụp**: Ở mốc Tháng 6 năm 2026, số lượng phòng riêng giá rẻ tăng đột biến khiến tỷ trọng của nhóm này trong toàn bộ thị trường tăng vọt. Vì phòng riêng có mức giá nền thấp hơn căn hộ nguyên căn, sự gia tăng áp đảo về số lượng của chúng đã kéo tụt con số bình quân gộp chung của toàn thành phố.
+Nguyên nhân nằm ở **sự thay đổi cơ cấu mẫu giữa hai kỳ khảo sát**: Ở Kỳ 1, căn hộ nguyên căn đắt tiền chiếm đa số (10 căn hộ so với 2 phòng riêng). Sang Kỳ 2, số lượng phòng riêng giá rẻ tăng vọt (10 phòng riêng so với chỉ 2 căn hộ). Vì phòng riêng có mức giá nền thấp hơn nhiều so với căn hộ, sự gia tăng áp đảo về số lượng của chúng đã kéo tụt con số bình quân gộp chung của toàn thành phố.
 
-Bài học cốt lõi: **Khi phân tích biến động qua thời gian, bắt buộc phải kiểm tra cơ cấu tỷ trọng của các nhóm thành phần trước khi vội vã diễn giải một con số gộp chung**.
+**Bài học cốt lõi**: Khi phân tích biến động qua thời gian, bắt buộc phải kiểm tra cơ cấu tỷ trọng của các nhóm thành phần trước khi vội vã diễn giải một con số gộp chung.
 
-### Bẫy 4: Chuẩn mực ngôn từ: Diễn đạt đúng mức (Calibrated Language)
+### Bẫy chọn kỳ gốc có lợi và ngụy biện nhân quả
 
-Từ ngữ trong báo cáo khoa học chính là một phần của phép đo. Người làm dữ liệu phải biết kìm chế thói quen dùng những từ ngữ khoa trương, giật gân:
+- **Chọn kỳ gốc**: Nếu chọn một mốc thấp bất thường, tỷ lệ tăng đến kỳ cuối có thể lớn hơn nhiều so với khi chọn mốc khác. Cần nêu kỳ gốc và đối chiếu cả lịch sử, thay vì chỉ giữ đoạn có lợi cho lời kể.
+- **Tương quan và nhân quả**: Giá niêm yết của các căn hộ gần ga thấp hơn chưa chứng minh ga làm giảm giá. Hai nhóm có thể khác vị trí, diện tích hoặc chất lượng. Cần dữ liệu và thiết kế phân tích phù hợp để kiểm tra các cách giải thích đó.
 
-| Số liệu quan sát được | Diễn đạt quá mức (Phóng đại) | Diễn đạt đúng mức (Khoa học) | Phân tích lý do hiệu chỉnh |
-| :--- | :--- | :--- | :--- |
-| **+3.0% MoM** (T5/2026 so với T4/2026) | *"Bứt phá thần tốc trong tháng 5"* | *"Lượng đánh giá nhích nhẹ 3.0% so với tháng trước"* | Biến động 3.0% giữa hai tháng kế tiếp là dao động bình thường, không thể gọi là bứt phá thần tốc. |
-| **Hệ số tương quan $r = 0.2$** | *"Mối liên hệ mật thiết, chặt chẽ"* | *"Mối liên hệ tuyến tính yếu ($r = 0.2$)"* | Hệ số $r = 0.2$ chỉ phản ánh tương quan lỏng lẻo, chưa đủ cơ sở để khẳng định mối liên hệ chặt chẽ. |
-| **Cỡ mẫu $n = 30$** | *"Xu hướng rõ rệt của thị trường"* | *"Tín hiệu ban đầu trên cỡ mẫu nhỏ ($n = 30$)"* | Cỡ mẫu nhỏ dễ bị nhiễu ngẫu nhiên, chỉ mang tính chất phát hiện ban đầu. |
-| **+53.7% YoY** (T5/2026 so với T5/2025) | *"Thị trường bùng nổ thần kỳ lịch sử"* | *"Thị trường tăng trưởng mạnh mẽ 53.7% so với cùng kỳ"* | Dùng từ ngữ phản ánh đúng mức độ tăng trưởng, tránh các tính từ cảm tính như "thần kỳ". |
-| **Đúng 1 chỗ ở** đòi hỏi ở tối thiểu 730 đêm | *"Nhiều chủ nhà áp đặt quy định phi lý"* | *"Một trường hợp cá biệt đòi hỏi tối thiểu 730 đêm cần gắn cờ"* | Một quan sát đơn lẻ không thể quy chụp thành hiện tượng phổ biến của số đông. |
-| **Nhóm tiếng Tây Ban Nha chiếm 65.4%** (lọc từ khóa thô) | *"Chắc chắn 2/3 khách là người bản địa"* | *"Khoảng 65.4% nhận xét bằng tiếng Tây Ban Nha theo bộ lọc thô, cần kiểm chứng"* | Bộ lọc từ khóa có sai số; ngôn ngữ nhận xét không đồng nhất tuyệt đối với quốc tịch du khách. |
+### Phân biệt phần trăm (%) và điểm phần trăm (pp)
 
-Việc sử dụng các cụm từ chừng mực như *"thường"*, *"có thể"*, hoặc *"trong phạm vi tập dữ liệu này"* thể hiện đúng mức độ chắc chắn của bằng chứng thực nghiệm.
-
-#### Phân biệt rạch ròi giữa Phần trăm (%) và Điểm phần trăm (pp)
-
-Một sai lầm rất phổ biến là việc đánh đồng giữa biến động tương đối (phần trăm) và chênh lệch tuyệt đối (điểm phần trăm):
-Giả sử tỷ lệ căn hộ bị hủy phòng giảm từ $5\%$ ở quý 1 xuống còn $4\%$ ở quý 2:
-- **Chênh lệch tuyệt đối (Điểm phần trăm - percentage points)**:
+Giả sử tỷ lệ hủy phòng giảm từ $5\%$ ở quý 1 xuống còn $4\%$ ở quý 2:
+- **Chênh lệch tuyệt đối (Điểm phần trăm, percentage points, pp)**:
   $$
-  4\% - 5\% = -1\% \quad (\text{-1 percentage point})
+  4\%-5\% = -1\%.
   $$
-- **Biến động tương đối (Phần trăm - percentage)**:
+  Đây là mức giảm một điểm phần trăm.
+- **Biến động tương đối (Phần trăm, percentage, %)**:
   $$
-  \frac{4\% - 5\%}{5\%} = \frac{-0.01}{0.05} = -0.20 = -20\% \quad (\text{-20\% relative})
+  \begin{aligned}
+  g &= \frac{0{,}04-0{,}05}{0{,}05}, \\
+  &= -0{,}20 = -20\%.
+  \end{aligned}
   $$
 
-Nếu người viết diễn đạt cẩu thả rằng *"tỷ lệ hủy phòng giảm 1%"*, người đọc trong ngành kiểm toán và tài chính có thể hiểu là giảm $1\%$ của mức $5\%$ ban đầu (tức là còn $5\% \times 0.99 = 4.95\%$). Hãy luôn ghi rõ cụm từ **điểm phần trăm** khi trừ hai giá trị tỷ lệ cho nhau.
+Nếu diễn đạt rằng "tỷ lệ hủy phòng giảm 1%", người đọc trong giới kiểm toán và tài chính có thể hiểu là giảm $1\%$ của mức $5\%$ ban đầu (còn $4{,}95\%$). Hãy luôn ghi rõ cụm từ **điểm phần trăm** khi trừ hai giá trị tỷ lệ cho nhau.
 
 ---
 
-## 3. Quy trình thẩm định một bản phân tích do Trí tuệ Nhân tạo Viết
+## 7. Khung quy trình thẩm định dữ liệu 4 bước (Data audit framework)
 
-Trong thời đại hiện nay, việc sử dụng các mô hình trí tuệ nhân tạo để tóm tắt dữ liệu và viết báo cáo đã trở nên phổ biến. Tuy nhiên, AI thường có xu hướng tạo ra những văn bản mượt mà, ấn tượng nhưng lại tiềm ẩn nhiều ngụy biện phương pháp luận.
+Khi nhận được một bản báo cáo phân tích hoặc khi sử dụng trí tuệ nhân tạo để soạn thảo kết luận, người làm dữ liệu phải thực hiện quy trình thẩm định 4 bước:
 
-### Tình huống thực nghiệm: Báo cáo thị trường Santiago do AI tạo ra
+1. **Bước 1: Truy số (Number Tracing)**: Viết mã nguồn Python chạy lại từ bảng dữ liệu gốc để xác minh từng con số được nêu. Nếu con số là bịa đặt do ảo giác của mô hình, bác bỏ ngay lập tức.
+2. **Bước 2: Kiểm tra phương pháp (Methodological Audit)**: Đánh giá xem thước đo được chọn có phù hợp với phân phối của dữ liệu hay không. Phân phối có bị lệch do ngoại lai không? Kỳ thời gian khảo sát đã khép lại trọn vẹn chưa?
+3. **Bước 3: Kiểm tra diễn giải (Interpretive Scrutiny)**: Kiểm tra xem lời kết luận có vượt quá phạm vi bằng chứng không. Có đang nhầm lẫn giữa tương quan với nhân quả hay không?
+4. **Bước 4: Phán quyết chuyên gia (Expert Verdict)**: Đưa ra phán quyết chính thức cho từng kết luận độc lập (Giữ nguyên, Sửa đổi, hoặc Chưa thể kiểm chứng).
 
-Giả sử chúng ta yêu cầu một mô hình AI: *"Hãy viết một báo cáo thị trường ngắn, ấn tượng về thị trường Airbnb tại Santiago dựa trên dữ liệu thu thập được."*
+### Bảng tổng hợp phán quyết thẩm định mẫu
 
-Mô hình AI đưa ra năm kết luận sau:
-- **KL1**: Toàn thành phố có 18.534 chỗ ở, trong đó căn hộ nguyên căn chiếm tỷ trọng áp đảo 81%.
-- **KL2**: Giá thuê trung bình ở Santiago là 118.200 CLP/đêm (khoảng 3,3 triệu VNĐ), du khách cần chuẩn bị ngân sách tương ứng.
-- **KL3**: Lượng đánh giá trong tháng 6/2026 sụt giảm 28% so với tháng 5/2026, thị trường du lịch Santiago đang hạ nhiệt đáng lo ngại.
-- **KL4**: Chỗ ở có tiêu đề nhắc đến "metro" rẻ hơn khoảng 11%, chứng tỏ vị trí gần ga tàu điện ngầm làm giảm giá trị cho thuê.
-- **KL5**: Quận Lo Barnechea là khu vực đắt đỏ nhất thành phố với mức giá thuê trung bình đạt 426.230 CLP/đêm.
-
-Mọi con số trong năm kết luận trên khi tra cứu vào bảng dữ liệu đều hoàn toàn chính xác về mặt số học. Tuy nhiên, chuyên gia phân tích dữ liệu không thể dừng lại ở việc kiểm tra phép tính.
-
-### Khung quy trình thẩm định 4 bước (Data Audit Framework)
-
-Để đánh giá độc lập một bản báo cáo, chúng ta thực hiện quy trình thẩm định 4 bước:
-
-<DataDiagram name="claim-audit" />
-
-1. **Bước 1 · Truy số (Number Tracing)**: Viết mã nguồn Python chạy lại từ bảng dữ liệu gốc để xác minh từng con số được nêu. Nếu con số là bịa đặt do ảo giác của mô hình, bác bỏ ngay lập tức.
-2. **Bước 2 · Kiểm tra phương pháp (Methodological Audit)**: Đánh giá xem thước đo được chọn có phù hợp với phân phối của dữ liệu hay không. Có bị méo mó bởi ngoại lai không? Kỳ thời gian đã khép lại trọn vẹn chưa?
-3. **Bước 3 · Kiểm tra diễn giải (Interpretive Scrutiny)**: Kiểm tra xem lời kết luận có vượt quá phạm vi bằng chứng không. Có đang nhầm lẫn giữa tương quan và nhân quả hay không?
-4. **Bước 4 · Phán quyết chuyên gia (Expert Verdict)**: Đưa ra phán quyết chính thức cho từng kết luận độc lập và soạn thảo lại nội dung chuẩn xác.
-
-### Thẩm định chuyên sâu các kết luận tiêu biểu
-
-Hãy áp dụng quy trình 4 bước để mổ xẻ ba kết luận then chốt KL2, KL3 và KL4:
-
-#### Thẩm định KL2: "Giá trung bình 118.200 CLP/đêm"
-- **Truy số**: Tính toán `df['price'].mean()` cho ra kết quả đúng là 118.200 CLP. Bước 1 đạt.
-- **Kiểm phương pháp**: Phân phối giá thuê bị lệch phải nghiêm trọng bởi 177 giá trị ngoại lai cực lớn (Bài 10). Giá trị trung bình bị kéo vọt lên cao hơn 44% so với thực tế của đại đa số người dân, trong khi một nửa số chỗ ở trên thị trường có mức giá dưới 59.000 CLP. Việc khuyên du khách chuẩn bị ngân sách 118.200 CLP là hoàn toàn sai lệch thực tế.
-- **Phán quyết**: **Cần sửa đổi**. Số liệu đúng nhưng phương pháp chọn thước đo bị sai mục đích, do đó bắt buộc phải sử dụng giá trung vị (59.000 CLP) để đại diện cho mức giá điển hình.
-
-#### Thẩm định KL3: "Đánh giá tháng 6 giảm 28%, thị trường hạ nhiệt"
-- **Truy số**: Lượng đánh giá tháng 6/2026 giảm 28% so với tháng 5/2026 là đúng. Nhưng nếu so với cùng kỳ tháng 6/2025, lượng đánh giá thực tế vẫn tăng 6%. Bước 1 đạt.
-- **Kiểm phương pháp**: Mốc chụp dữ liệu được thực hiện vào ngày 29/06/2026, đồng nghĩa với việc tháng 6 chưa trọn vẹn. Người làm đã so sánh một tháng chưa đủ ngày với một tháng trọn vẹn (tháng 5). Hơn nữa, việc viết đánh giá thường có độ trễ lớn (thực tế dữ liệu cho thấy tháng 9/2025 đã nhận thêm 21% số lượt đánh giá sau 9 tháng bổ sung).
-- **Phán quyết**: **Chưa thể kiểm chứng**. Không thể kết luận thị trường hạ nhiệt chỉ dựa trên một mốc chụp có tháng chưa trọn vẹn, vì vậy cần chờ mốc chụp tiếp theo để có dữ liệu đầy đủ.
-
-#### Thẩm định KL4: "Gần metro làm giảm giá cho thuê"
-- **Truy số**: Mức chênh lệch quan sát được giữa hai nhóm đúng là 10.8%. Sau khi kiểm soát biến loại phòng, mức chênh lệch ở hai phân khúc phổ biến dao động khoảng 17% đến 18%. Bước 1 đạt.
-- **Kiểm diễn giải**: Tiêu đề có chứa từ khóa "metro" chỉ là tín hiệu tự khai do chủ nhà chủ động viết, không phải là thước đo khoảng cách vật lý chuẩn xác từ căn nhà đến ga tàu. Việc tuyên bố "vị trí gần metro làm giảm giá" là lỗi ngụy biện nhân quả nghiêm trọng.
-- **Phán quyết**: **Cần sửa đổi**. Chỉ được phép kết luận hai yếu tố có mối liên hệ đi kèm trong dữ liệu quan sát. Nếu muốn khẳng định về khoảng cách địa lý, bắt buộc phải sử dụng tọa độ GIS để đo khoảng cách thực tế.
-
-#### Thẩm định KL1 và KL5:
-- Đối với **KL1** (tổng số chỗ ở và tỷ lệ căn hộ nguyên căn) và **KL5** (quận Lo Barnechea có giá niêm yết cao nhất): Cả hai kết luận đều vượt qua trọn vẹn cả 4 bước thẩm định. Phán quyết là **Giữ nguyên**.
-
-### Bảng tổng hợp phán quyết thẩm định
-
-| Kết luận AI | Truy số | Kiểm phương pháp | Kiểm diễn giải | Phán quyết chuyên gia |
+| Kết luận cần thẩm định | Truy số | Kiểm phương pháp | Kiểm diễn giải | Phán quyết chuyên gia |
 | :--- | :---: | :---: | :---: | :--- |
-| **KL1** (18.5k chỗ ở, 81% nguyên căn) | Đạt | Đạt | Đạt | **Giữ nguyên** |
-| **KL2** (Giá trung bình 118.2k) | Đạt | Không đạt (Ngoại lai làm lệch) | Không đạt | **Sửa đổi**: Dùng giá trung vị 59.0k |
-| **KL3** (Tháng 6 giảm 28%, hạ nhiệt) | Đạt | Không đạt (Tháng chưa trọn) | Không đạt | **Chưa thể kiểm chứng**: Chờ mốc sau |
-| **KL4** (Metro làm giảm giá) | Đạt | Cần lưu ý (Đo gián tiếp) | Không đạt (Ngụy biện nhân quả) | **Sửa đổi**: Đổi thành "có liên hệ đi kèm" |
-| **KL5** (Lo Barnechea đắt nhất) | Đạt | Đạt | Đạt | **Giữ nguyên** |
+| **Giá thuê trung bình 118 nghìn** | Đạt | Không đạt (Ngoại lai làm lệch) | Không đạt | **Sửa đổi**: Bắt buộc dùng giá trung vị để đại diện. |
+| **Tháng 6 sụt giảm 28%, thị trường hạ nhiệt** | Đạt | Không đạt (Mốc chụp tháng chưa trọn) | Không đạt | **Chưa thể kiểm chứng**: Chờ mốc chụp đầy đủ. |
+| **Phòng gần tàu điện rẻ hơn, ga làm giảm giá** | Đạt | Cần lưu ý (Đo gián tiếp qua từ khóa) | Không đạt (Ngụy biện nhân quả) | **Sửa đổi**: Chỉ khẳng định hai yếu tố đi kèm. |
 
-### Triết lý sư phạm: "Số đúng chưa đủ"
-
-Bài học quan trọng nhất rút ra từ quá trình thẩm định trên: **Trong cả ba trường hợp có tì vết, các con số tính toán đều hoàn toàn chính xác, trong khi lỗi sai thực sự nằm ở phương pháp chọn thước đo và cách diễn giải bằng lời**.
-
-Vì vậy, việc thẩm định một báo cáo dữ liệu không thể dừng lại ở việc kiểm tra các phép cộng trừ nhân chia, mà phải kiểm tra xem lập luận có vững chắc và có đạo đức khoa học hay không. Việc xác nhận KL1 và KL5 đúng cũng là một kết quả thẩm định có giá trị khoa học cao.
-
-Quy trình thẩm định này gắn liền trực tiếp với **buổi vấn đáp bài tập lớn**: Hội đồng giảng viên sẽ đóng vai trò là bên thẩm định độc lập, rà soát sản phẩm của nhóm theo đúng 4 bước trên. Cách ôn tập tốt nhất cho nhóm sinh viên là tự thẩm định chéo báo cáo của nhau trước khi nộp, và ghi nhận trung thực những điểm AI làm sai vào tệp `AI_USAGE.md`.
+Bài học quan trọng nhất: **Trong cả ba trường hợp có tì vết, các con số tính toán đều hoàn toàn chính xác, trong khi lỗi sai thực sự nằm ở phương pháp chọn thước đo và cách diễn giải bằng lời**.
 
 ---
 
-## 4. Phương pháp luận làm việc và kiểm chứng Trí tuệ Nhân tạo
+## 9. Tổng kết
 
-Trí tuệ nhân tạo là một trợ lý đắc lực giúp gia tăng năng suất của kỹ sư dữ liệu, nhưng không thể thay thế tư duy phản biện của con người. Để làm việc hiệu quả với AI, chúng ta cần phân định rõ ràng thế mạnh và điểm yếu của công cụ này:
+| Chủ đề phân tích | Công cụ kỹ thuật chủ yếu | Bài học phương pháp luận cốt lõi |
+| :--- | :--- | :--- |
+| **Nhật ký máy chủ** | `fillna()`, `replace()`, `str.contains()` | Luôn phân biệt ô khuyết thiếu từ nguồn với chuỗi rỗng do hệ thống ghi nhận. |
+| **Đánh giá & Thị hiếu** | `pivot_table()`, `std()` | Độ lệch chuẩn phản ánh mức độ bất đồng quan điểm giữa các nhóm người dùng. |
+| **Xu hướng đặt tên** | `transform()`, `str[-1]` | Chuẩn hóa tỷ trọng trước khi so sánh chuỗi thời gian, đồng thời phân tích âm cuối để phát hiện quy luật. |
+| **Dữ liệu phân cấp** | `pd.json_normalize()`, tách bảng | Phẳng hóa dữ liệu JSON thành các bảng quan hệ liên kết bằng khóa duy nhất. |
+| **Dòng tiền & Đóng góp** | `pd.cut()`, `map()` | Phân khoảng số tiền tăng dần theo cấp số nhân để xử lý dữ liệu lệch phải. |
+| **Thẩm định kết luận** | Bốn bước: Truy số, Phương pháp, Diễn giải, Phán quyết | Luôn cảnh giác với nghịch lý Simpson. Số đúng chưa đủ, phương pháp và lập luận phải chuẩn xác. |
 
-### Những việc AI làm rất tốt:
-1. **Đề xuất dàn ý và cấu trúc**: Gợi ý khung logic Kim tự tháp Minto cho một bài toán kinh doanh mới.
-2. **Hỗ trợ biên tập và diễn đạt**: Giúp trau chuốt câu văn, sửa lỗi chính tả và chuyển đổi giữa các phong cách viết học thuật.
-3. **Chuyển ngữ kỹ thuật**: Dịch thuật các thuật ngữ chuyên ngành một cách tự nhiên và chính xác.
-4. **Gợi ý cách trình bày trực quan**: Đề xuất loại biểu đồ phù hợp dựa trên bảng chỉ số tóm tắt.
+## Tài liệu tham khảo
 
-### Những cái bẫy AI hay mắc phải:
-1. **Dùng đúng số nhưng diễn giải sai bản chất**: Như đã thấy ở các ví dụ KL2, KL3 và KL4 ở trên.
-2. **Phóng đại mức độ của kết quả**: Có xu hướng dùng những từ ngữ hoa mỹ, khẳng định quá mức để làm cho báo cáo nghe có vẻ ấn tượng.
-3. **Bịa đặt bối cảnh hoặc tài liệu trích dẫn**: Tạo ra các giả định nghiệp vụ không hề có trong tập dữ liệu gốc.
+1. Wes McKinney, *Python for Data Analysis*, 3rd Edition, Chapter 13: Data Analysis Examples. URL: [https://wesmckinney.com/book/data-analysis-examples](https://wesmckinney.com/book/data-analysis-examples).
+2. Viện Trí tuệ Nhân tạo, Trường Đại học Công nghệ, ĐHQGHN: *Giáo trình Lập trình xử lý dữ liệu (Bài 14: Kể chuyện bằng dữ liệu và thẩm định phân tích AI)*. Nội dung thẩm định và nghịch lý tổng hợp được chuyển thể theo giấy phép [CC BY-NC-SA 4.0](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+3. Edward H. Simpson, *The Interpretation of Interaction in Contingency Tables*, Journal of the Royal Statistical Society, 1951.
+4. Darrell Huff, *How to Lie with Statistics*, W. W. Norton & Company.
 
-### Nguyên tắc kiểm chứng tối thượng:
-Hãy áp dụng **quy trình thẩm định 4 bước** cho mọi đoạn văn bản hoặc kết luận do AI hỗ trợ soạn thảo. Người đứng tên trên bản báo cáo phải chịu trách nhiệm đạo đức và chuyên môn toàn diện cho từng con số, từng biểu đồ và từng mối quan hệ nhân quả được khẳng định trong bài viết.
+- IAI, [Lập trình xử lý dữ liệu, học liệu và notebook](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các đề thực hành đã được biên tập cách diễn đạt và bổ sung lời giải, giữ [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [Giấy phép học liệu](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
 
----
+</div>
 
-## 5. Hệ thống bài tập thực hành chuyên sâu (Hệ thống bài tập Lab 14) {#bai-tap}
+<div class="lecture-exercises-content" aria-label="Bài tập của chương">
 
-Toàn bộ hệ thống bài tập thực hành chuyên sâu và phòng Lab thực chiến của bài học này đã được tích hợp đầy đủ tại tab **Bài tập** ở đầu trang. Sau khi đọc xong phần lý thuyết, bạn hãy bấm chuyển sang tab [**Bài tập**](#bai-tap) để bắt đầu thực hành trên dữ liệu thực tế.
+## 8. Bài tập thực hành
 
-::: tip Chuyển sang Tab Bài tập
-Bấm vào tab **Bài tập** trên thanh điều hướng bài giảng ở đầu trang để mở phòng Lab tương tác với 2 hướng tiếp cận (Cơ bản & Nâng cao), phân tích giả thuyết và bộ kiểm chứng tự động `assert`.
+::: exercise Bài tập 1: Đo lường mức độ bất đồng quan điểm trong đánh giá dịch vụ
+Một chuỗi nhà hàng thu thập dữ liệu đánh giá của khách hàng về các chi nhánh, được lưu trong bảng sau:
+
+```python
+df_danh_gia = pd.DataFrame({
+    "chi_nhanh": ["A", "A", "A", "A", "B", "B", "B", "B"],
+    "khach_hang": ["K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8"],
+    "nhom_khach": ["Tre", "TrungNien", "Tre", "TrungNien", "Tre", "TrungNien", "Tre", "TrungNien"],
+    "diem": [5, 1, 5, 2, 4, 3, 4, 3]
+})
+```
+
+1. Tính điểm đánh giá trung bình của từng chi nhánh theo nhóm khách hàng bằng `pivot_table`.
+2. Tính độ lệch chuẩn của điểm số tại mỗi chi nhánh. Chi nhánh nào có sự phân hóa quan điểm mạnh mẽ hơn?
 :::
 
-## 6. Tổng kết và Đọc thêm
+::: solution Lời giải chi tiết
+Mã nguồn thực hiện:
 
-| Trụ cột kể chuyện | Khái niệm phương pháp luận | Bài học sư phạm & Đạo đức |
-| :--- | :--- | :--- |
-| **Kim tự tháp Minto** | Kết luận $\to$ Bằng chứng $\to$ Giới hạn $\to$ Phương pháp | Tôn trọng thời gian của người nghe; đưa thông điệp cốt lõi lên hàng đầu. |
-| **Nghịch lý Simpson** | $\bar{X} = \sum w_i \bar{X}_i$; cơ cấu $w_i$ dịch chuyển | Không bao giờ tin vào con số trung bình gộp khi cơ cấu tỷ trọng giữa hai kỳ thay đổi. |
-| **Ngôn ngữ đúng mức** | Phân biệt $\%$ và điểm phần trăm; tương quan vs nhân quả | Khiêm nhường trước số liệu; từ chối các tính từ giật gân, phóng đại. |
-| **Quy trình thẩm định 4 bước** | Truy số $\to$ Phương pháp $\to$ Diễn giải $\to$ Phán quyết | Trách nhiệm học thuật thuộc về con người; luôn kiểm toán độc lập các báo cáo do AI tạo. |
+```python
+# 1. Bảng xoay chiều điểm trung bình theo nhóm khách
+bang_pivot = df_danh_gia.pivot_table(
+    index="chi_nhanh",
+    columns="nhom_khach",
+    values="diem",
+    aggfunc="mean"
+)
+print("Điểm trung bình theo nhóm khách:")
+print(bang_pivot)
 
-### Tài liệu tham khảo học thuật
+# 2. Độ lệch chuẩn đo lường bất đồng quan điểm
+do_lech_chuan = df_danh_gia.groupby("chi_nhanh")["diem"].std()
+print("Độ lệch chuẩn điểm số của từng chi nhánh:")
+print(do_lech_chuan)
+```
 
-1. **Cole Nussbaumer Knaflic**, *Storytelling with Data: A Data Visualization Guide for Business Professionals*, Wiley, Chương 1–2, 7. Hướng dẫn kinh điển về việc định hình bối cảnh, chọn biểu đồ có chủ đích và loại bỏ các thành phần gây nhiễu thị giác.
-2. **Carl T. Bergstrom & Jevin D. West**, *Calling Bullshit: The Art of Skepticism in a Data-Driven World*, Random House. Phân tích sâu sắc về thiên lệch lựa chọn mẫu, ngụy biện tương quan và các bẫy trực quan hóa dữ liệu trong truyền thông hiện đại.
-3. **Barbara Minto**, *The Pyramid Principle: Logic in Writing and Thinking*, Financial Times / Prentice Hall. Nguyên lý tư duy logic và cấu trúc trình bày từ trên xuống cho người làm quản lý và tư vấn chiến lược.
-4. **Edward H. Simpson**, *The Interpretation of Interaction in Contingency Tables*, Journal of the Royal Statistical Society, 1951. Bài báo nền tảng phát hiện sự đảo chiều của trung bình gộp do biến động cơ cấu nhóm.
-5. **Judea Pearl & Dana Mackenzie**, *The Book of Why: The New Science of Cause and Effect*, Basic Books, 2018. Khung lý thuyết hiện đại phân biệt rõ ràng giữa mối liên hệ quan sát thuần túy và tác động can thiệp nhân quả.
-6. **Darrell Huff**, *How to Lie with Statistics*, W. W. Norton & Company. Cẩm nang vạch trần các thủ thuật làm sai lệch số liệu và biểu đồ trong thực tế đời sống.
-7. **Hệ thống bài giảng gốc**: [Khóa học Lập trình xử lý dữ liệu (UET)](https://courses.iaidev.com/programming-for-data-processing/2627-1/).
+Kết quả phân tích:
+- Tại chi nhánh A: Điểm trung bình của nhóm Khách Trẻ là 5,0 trong khi nhóm Trung Niên là 1,5. Độ lệch chuẩn đạt xấp xỉ 2,06. Chi nhánh A có sự bất đồng quan điểm sâu sắc giữa các thế hệ khách hàng.
+- Tại chi nhánh B: Điểm trung bình của hai nhóm lần lượt là 4,0 và 3,0, độ lệch chuẩn chỉ là xấp xỉ 0,58. Khách hàng tại chi nhánh B có mức độ đồng thuận cao về chất lượng dịch vụ.
+:::
+
+::: exercise Bài tập 2: Thẩm định biến động doanh thu và nhận diện nghịch lý Simpson
+Một công ty thương mại điện tử công bố bảng số liệu sau về giá trị đơn hàng trung bình giữa hai năm:
+
+```python
+# Năm 1: 100 đơn hàng điện tử (trung bình 200$), 20 đơn hàng sách (trung bình 20$)
+# Năm 2: 20 đơn hàng điện tử (trung bình 220$), 100 đơn hàng sách (trung bình 22$)
+```
+
+1. Tính giá trị đơn hàng trung bình của từng ngành hàng giữa hai năm. Mỗi ngành hàng tăng trưởng bao nhiêu phần trăm?
+2. Tính giá trị đơn hàng trung bình gộp của toàn bộ công ty trong từng năm. Chỉ ra hiện tượng nghịch lý Simpson và giải thích nguyên nhân bằng cơ cấu trọng số.
+:::
+
+::: solution Lời giải chi tiết
+Mã nguồn tính toán:
+
+```python
+# Năm 1
+tb_dt_nam1 = 200
+tb_sach_nam1 = 20
+tong_don_nam1 = 100 + 20
+tb_gop_nam1 = (100 * tb_dt_nam1 + 20 * tb_sach_nam1) / tong_don_nam1
+
+# Năm 2
+tb_dt_nam2 = 220
+tb_sach_nam2 = 22
+tong_don_nam2 = 20 + 100
+tb_gop_nam2 = (20 * tb_dt_nam2 + 100 * tb_sach_nam2) / tong_don_nam2
+
+print(f"Năm 1: Điện tử {tb_dt_nam1}$, Sách {tb_sach_nam1}$, Bình quân gộp: {tb_gop_nam1:.2f}$")
+print(f"Năm 2: Điện tử {tb_dt_nam2}$, Sách {tb_sach_nam2}$, Bình quân gộp: {tb_gop_nam2:.2f}$")
+
+tang_dt = (tb_dt_nam2 / tb_dt_nam1 - 1) * 100
+tang_sach = (tb_sach_nam2 / tb_sach_nam1 - 1) * 100
+tang_gop = (tb_gop_nam2 / tb_gop_nam1 - 1) * 100
+
+print(f"Tăng trưởng Điện tử: +{tang_dt:.1f}%")
+print(f"Tăng trưởng Sách: +{tang_sach:.1f}%")
+print(f"Tăng trưởng Bình quân gộp toàn công ty: {tang_gop:.1f}%")
+```
+
+Kết quả:
+- Ngành hàng Điện tử tăng trưởng: $+10{,}0\%$.
+- Ngành hàng Sách tăng trưởng: $+10{,}0\%$.
+- Bình quân gộp toàn công ty giảm từ $170{,}00$ USD xuống $55{,}00$ USD, tương đương giảm khoảng $67{,}6\%$.
+- Giải thích: Nghịch lý Simpson xuất hiện do cơ cấu đơn hàng đảo chiều mạnh mẽ. Năm 1, ngành điện tử giá trị cao chiếm $83{,}3\%$ tổng số đơn. Sang năm 2, ngành sách giá trị thấp chiếm tới $83{,}3\%$ tổng số đơn. Sự thay đổi trọng số phân bổ này đã kéo sụt con số trung bình gộp dù từng ngành hàng đều tăng giá.
+:::
+
+---
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-13.md-->
+
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md-->
+
+## Tài liệu tham khảo
+
+1. Wes McKinney, *Python for Data Analysis*, 3rd Edition, Chapter 13: Data Analysis Examples. URL: [https://wesmckinney.com/book/data-analysis-examples](https://wesmckinney.com/book/data-analysis-examples).
+2. Viện Trí tuệ Nhân tạo, Trường Đại học Công nghệ, ĐHQGHN: *Giáo trình Lập trình xử lý dữ liệu (Bài 14: Kể chuyện bằng dữ liệu và thẩm định phân tích AI)*. Nội dung thẩm định và nghịch lý tổng hợp được chuyển thể theo giấy phép [CC BY-NC-SA 4.0](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+3. Edward H. Simpson, *The Interpretation of Interaction in Contingency Tables*, Journal of the Royal Statistical Society, 1951.
+4. Darrell Huff, *How to Lie with Statistics*, W. W. Norton & Company.
+
+- IAI, [Lập trình xử lý dữ liệu, học liệu và notebook](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các đề thực hành đã được biên tập cách diễn đạt và bổ sung lời giải, giữ [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [Giấy phép học liệu](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+
+</div>

@@ -1,4 +1,10 @@
-# Nguồn Môn Học: Lập trình Xử lý Dữ liệu (Python Data Processing)
+# Nguồn và biên soạn môn Lập trình xử lý dữ liệu
+
+Trục biên soạn hiện hành gồm 13 chương và hai phụ lục của Wes McKinney. Xem `authoring-map.md` để biết ranh giới nguồn, `authoring-contract.json` để biết slug và tiên quyết, `source-inventory.json` để biết các trang đã truy cập. Các tệp `bai-*.md` cũ bên dưới chỉ là bản lưu của lần biên soạn trước, không quyết định nội dung xuất bản.
+
+Nội dung chính ở `docs/xu-ly-du-lieu/bai-giang/` và `src/content/courses/xu-ly-du-lieu/lectures/`. Bài giảng tiếng Việt được biên soạn độc lập, không dịch toàn văn hoặc sao chép lời văn được bảo hộ. IAI chỉ bổ sung kỹ thuật liên quan và bài tập phù hợp. Phần chuyển thể IAI giữ ghi công và [CC BY-NC-SA 4.0](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+
+`python scripts/collect-data-processing-sources.py` cập nhật kiểm kê. Văn bản đầy đủ chỉ được lưu trong thư mục tạm của hệ điều hành để đối chiếu, không đưa vào website. `node scripts/integrate-data-course.mjs` cập nhật catalog sau khi đã đủ bài giảng. Không build toàn site trên máy cục bộ.
 
 Thư mục lưu trữ nguồn tài liệu, ánh xạ chương trình và công cụ đối chiếu phục vụ biên soạn học phần Xử lý dữ liệu.
 

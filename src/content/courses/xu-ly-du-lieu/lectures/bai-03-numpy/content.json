@@ -7,15 +7,167 @@
   "slides": "src/content/courses/xu-ly-du-lieu/lectures/bai-03-numpy/slides.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [
-    "mang",
-    "chi-muc",
-    "con-tro",
-    "vector-hoa",
-    "broadcasting"
+    "list",
+    "ham-lap-trinh"
   ],
-  "fragments": [],
-  "examples": [],
-  "exercises": [],
-  "solutions": [],
+  "fragments": [
+    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md"
+  ],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 113,
+      "title": "Ví dụ dùng chung bộ nhớ (Sharing Memory - View)"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 126,
+      "title": "Ví dụ không dùng chung bộ nhớ (Non-Sharing Memory - Copy)"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 438,
+      "title": "Bài tập 1: Thời điểm đổi kiểu dữ liệu và tràn số nguyên"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 465,
+      "title": "Bài tập 2: Thay thế vòng lặp for bằng phép toán mảng vector hóa"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 497,
+      "title": "Bài tập 3: Xác định vị trí phần tử trong bộ nhớ từ Strides"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 535,
+      "title": "Bài tập 4: Xác định các ô của View và kiểm chứng bộ nhớ dùng chung"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 569,
+      "title": "Bài tập 5: Cộng theo hàng và cột bằng quy tắc phát sóng (Broadcasting)"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 612,
+      "title": "Bài tập 6: Sửa lỗi phép trừ trung bình hàng do hiểu sai Broadcasting"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 13,
+      "title": "Thực hành NumPy 1"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 32,
+      "title": "Thực hành NumPy 2"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 51,
+      "title": "Thực hành NumPy 3"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 76,
+      "title": "Thực hành NumPy 4"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 97,
+      "title": "Thực hành NumPy 5"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 116,
+      "title": "Thực hành NumPy 6"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 135,
+      "title": "Thực hành NumPy 7"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 169,
+      "title": "Thực hành NumPy 8"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 450,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 479,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 511,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 550,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 586,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 627,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 17,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 36,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 55,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 80,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 101,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 120,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 139,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md",
+      "line": 173,
+      "title": ""
+    }
+  ],
   "assets": []
 }

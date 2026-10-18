@@ -1,294 +1,172 @@
 {
+  "checkedOn": "2026-10-18",
   "mainReference": {
     "title": "Python for Data Analysis, 3rd edition",
     "author": "Wes McKinney",
     "url": "https://wesmckinney.com/book/"
   },
   "supplementaryCourse": "https://courses.iaidev.com/programming-for-data-processing/2627-1/",
+  "sourceHandling": "Original Vietnamese instruction organized by Wes chapter topics, no book translation or close paraphrase",
   "excluded": [
-    "course AI policies",
-    "grading and administrative rules",
-    "large course project"
+    "administrative course content",
+    "grading and oral examination",
+    "course project",
+    "AI closed/open policies",
+    "https://colab.research.google.com/github/uet-iai-course/programming-for-data-processing/blob/main/2627-1/notebooks/lecture-01.ipynb"
   ],
-  "sourceHandling": "references and topic map; no reproduction of protected prose or figures",
+  "unavailable": {
+    "iaiLecture9": "Not linked in the public timetable"
+  },
   "lessons": [
     {
+      "chapter": "1",
       "lesson": "bai-01-tong-quan-cong-cu-chinh-sach-ai",
-      "title": "Tổng quan xử lý dữ liệu & công cụ",
+      "title": "Công việc xử lý dữ liệu và môi trường Python",
       "primary": [
-        "https://wesmckinney.com/book/preliminaries",
+        "https://wesmckinney.com/book/preliminaries"
+      ],
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
+    },
+    {
+      "chapter": "2",
+      "lesson": "bai-02-python-co-ban",
+      "title": "Python, IPython và Jupyter Notebook",
+      "primary": [
         "https://wesmckinney.com/book/python-basics"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-01-tong-quan-va-chinh-sach-ai.html"
-      ],
-      "topics": [
-        "1. Câu hỏi đi trước phép tính",
-        "2. Một quy trình giữ được dấu vết",
-        "3. Chọn công cụ theo thao tác",
-        "4. Môi trường Python có thể dựng lại",
-        "5. Bài tập tự luyện",
-        "6. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
     },
     {
-      "lesson": "bai-02-python-co-ban",
-      "title": "Python cơ bản cho xử lý dữ liệu",
+      "chapter": "3",
+      "lesson": "bai-03-cau-truc-du-lieu-ham-tep",
+      "title": "Cấu trúc dữ liệu, hàm và tệp",
       "primary": [
-        "https://wesmckinney.com/book/python-basics",
         "https://wesmckinney.com/book/python-builtin"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-02-python-co-ban.html"
-      ],
-      "topics": [
-        "1. Cấu trúc dữ liệu quyết định cách tra cứu",
-        "2. Lọc và biến đổi là hai thao tác",
-        "3. Hàm và thứ tự xử lý",
-        "4. Gán tên và sao chép",
-        "5. Đọc và ghi dữ liệu văn bản",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
     },
     {
+      "chapter": "4",
       "lesson": "bai-03-numpy",
-      "title": "NumPy & tư duy vector hóa",
+      "title": "Mảng NumPy và tính toán trên mảng",
       "primary": [
-        "https://wesmckinney.com/book/numpy-basics",
-        "https://wesmckinney.com/book/advanced-numpy"
+        "https://wesmckinney.com/book/numpy-basics"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-03-numpy.html"
-      ],
-      "topics": [
-        "1. Đọc kích thước trước khi tính",
-        "2. Vector hóa và hàm trên từng phần tử",
-        "3. Broadcasting ghép các trục từ phải sang trái",
-        "4. Trục nào bị tổng hợp?",
-        "5. View, copy và số ngẫu nhiên",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
     },
     {
+      "chapter": "5",
       "lesson": "bai-04-lam-quen-pandas",
-      "title": "Làm quen với pandas",
+      "title": "Series, DataFrame và chỉ mục trong pandas",
       "primary": [
-        "https://wesmckinney.com/book/pandas-basics",
-        "https://wesmckinney.com/book/accessing-data"
+        "https://wesmckinney.com/book/pandas-basics"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-04-lam-quen-pandas.html"
-      ],
-      "topics": [
-        "1. Series và DataFrame",
-        "2. Kiểm tra trước khi phân tích",
-        "3. Chọn hàng, cột và điều kiện",
-        "4. Tạo cột và giữ ý nghĩa của dữ liệu thiếu",
-        "5. Từ CSV đến bảng",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
     },
     {
-      "lesson": "bai-05-series-dataframe-chuyen-sau",
-      "title": "Series & DataFrame chuyên sâu",
-      "primary": [
-        "https://wesmckinney.com/book/pandas-basics",
-        "https://wesmckinney.com/book/data-wrangling",
-        "https://wesmckinney.com/book/data-aggregation"
-      ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-05-series-dataframe-chuyen-sau.html"
-      ],
-      "topics": [
-        "1. Nhãn khác vị trí",
-        "2. Biến đổi cột và gán rõ đích",
-        "3. Tổng hợp rút gọn; transform giữ từng dòng",
-        "4. Nối bảng cần kiểm tra số lần khớp",
-        "5. Nối theo trục và chuyển dạng",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
-    },
-    {
+      "chapter": "6",
       "lesson": "bai-06-ket-noi-truy-xuat-du-lieu",
-      "title": "Đọc, lưu trữ & truy xuất dữ liệu",
+      "title": "Nạp, lưu trữ và truy xuất dữ liệu",
       "primary": [
         "https://wesmckinney.com/book/accessing-data"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-06-ket-noi-truy-xuat-du-lieu.html"
-      ],
-      "topics": [
-        "1. CSV và quy tắc đọc",
-        "2. Tệp lớn: giữ tổng và số lượng qua các khối",
-        "3. JSON và dữ liệu lồng nhau",
-        "4. SQL: lọc tại nơi dữ liệu được lưu",
-        "5. API có thể trả từng trang",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-b.json",
+      "verification": "scripts/verify-data-course-b.py"
     },
     {
-      "lesson": "bai-07-xu-ly-chuoi",
-      "title": "Xử lý dữ liệu chuỗi",
+      "chapter": "7",
+      "lesson": "bai-10-lam-sach-du-lieu",
+      "title": "Làm sạch, chuẩn bị và xử lý chuỗi",
       "primary": [
         "https://wesmckinney.com/book/data-cleaning"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-07-xu-ly-chuoi.html"
-      ],
-      "topics": [
-        "1. Chuẩn hóa từng bước",
-        "2. Chuỗi literal khác mẫu regex",
-        "3. Trích xuất mã và phát hiện dòng không hợp lệ",
-        "4. Đổi chuỗi tiền thành số",
-        "5. Tách trường và mã hóa danh mục",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-b.json",
+      "verification": "scripts/verify-data-course-b.py"
     },
     {
+      "chapter": "8",
+      "lesson": "bai-08-ghep-bang-chuyen-dang",
+      "title": "Chỉ mục phân cấp, ghép bảng và chuyển dạng",
+      "primary": [
+        "https://wesmckinney.com/book/data-wrangling"
+      ],
+      "coverage": "coverage-b.json",
+      "verification": "scripts/verify-data-course-b.py"
+    },
+    {
+      "chapter": "9",
+      "lesson": "bai-12-truc-quan-hoa-co-ban",
+      "title": "Trực quan hóa dữ liệu và đọc biểu đồ",
+      "primary": [
+        "https://wesmckinney.com/book/plotting-and-visualization"
+      ],
+      "coverage": "coverage-b.json",
+      "verification": "scripts/verify-data-course-b.py"
+    },
+    {
+      "chapter": "10",
+      "lesson": "bai-10-tong-hop-theo-nhom",
+      "title": "Tổng hợp dữ liệu và phép toán theo nhóm",
+      "primary": [
+        "https://wesmckinney.com/book/data-aggregation"
+      ],
+      "coverage": "coverage-b.json",
+      "verification": "scripts/verify-data-course-b.py"
+    },
+    {
+      "chapter": "11",
       "lesson": "bai-08-du-lieu-thoi-gian",
-      "title": "Xử lý dữ liệu thời gian",
+      "title": "Chuỗi thời gian",
       "primary": [
         "https://wesmckinney.com/book/time-series"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-08-du-lieu-thoi-gian.html"
-      ],
-      "topics": [
-        "1. Thời điểm, khoảng thời gian và kỳ",
-        "2. Gắn múi giờ và đổi múi giờ",
-        "3. Sắp xếp, chọn khoảng và tạo lịch đầy đủ",
-        "4. Dịch chuỗi và cửa sổ trượt",
-        "5. Bài tập tự luyện",
-        "6. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-c.json",
+      "verification": "scripts/verify-data-course-c.py"
     },
     {
-      "lesson": "bai-10-lam-sach-du-lieu",
-      "title": "Làm sạch dữ liệu có cấu trúc",
+      "chapter": "12",
+      "lesson": "bai-12-mo-hinh-hoa",
+      "title": "Từ bảng dữ liệu đến mô hình thống kê và dự đoán",
       "primary": [
-        "https://wesmckinney.com/book/data-cleaning"
+        "https://wesmckinney.com/book/modeling"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-10-lam-sach-du-lieu.html"
-      ],
-      "topics": [
-        "1. Quy tắc trước khi sửa",
-        "2. Giữ dấu vết của lỗi chuyển đổi",
-        "3. Thiếu không đồng nghĩa với không",
-        "4. Ngoại lai là dấu hiệu cần kiểm tra",
-        "5. Phân nhóm và kiểm tra sau làm sạch",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-c.json",
+      "verification": "scripts/verify-data-course-c.py"
     },
     {
-      "lesson": "bai-11-llm-du-lieu-phi-cau-truc",
-      "title": "Trích xuất dữ liệu văn bản bằng LLM",
-      "primary": [
-        "https://wesmckinney.com/book/accessing-data",
-        "https://wesmckinney.com/book/data-cleaning"
-      ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-11-llm-du-lieu-phi-cau-truc.html",
-        "https://ai.google.dev/gemini-api/docs/structured-output"
-      ],
-      "topics": [
-        "1. Định nghĩa nhiệm vụ trước khi gọi mô hình",
-        "2. Kiểm tra JSON và bằng chứng",
-        "3. Đo chất lượng trên dữ liệu đã gán nhãn",
-        "4. Thiết kế một lần xử lý có thể kiểm tra",
-        "5. Bài tập tự luyện",
-        "6. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py",
-      "primaryRole": "JSON and data-cleaning foundations; the book does not cover LLM extraction"
-    },
-    {
-      "lesson": "bai-12-truc-quan-hoa-co-ban",
-      "title": "Trực quan hóa cơ bản",
-      "primary": [
-        "https://wesmckinney.com/book/plotting-and-visualization"
-      ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-12-truc-quan-hoa-co-ban.html"
-      ],
-      "topics": [
-        "1. Câu hỏi quyết định loại biểu đồ",
-        "2. Figure chứa các Axes",
-        "3. Histogram và biên khoảng",
-        "4. Đường và scatter",
-        "5. Trước khi xuất hình",
-        "6. Bài tập tự luyện",
-        "7. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
-    },
-    {
-      "lesson": "bai-13-truc-quan-hoa-nang-cao",
-      "title": "Trực quan hóa nâng cao & đọc biểu đồ",
-      "primary": [
-        "https://wesmckinney.com/book/plotting-and-visualization"
-      ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-13-truc-quan-hoa-nang-cao.html"
-      ],
-      "topics": [
-        "1. Chênh lệch số và chênh lệch nhìn thấy",
-        "2. Boxplot tóm tắt điều gì?",
-        "3. Nhiều vùng vẽ cần cùng quy ước",
-        "4. Đọc cả dữ liệu phía sau hình",
-        "5. Bài tập tự luyện",
-        "6. Nguồn và đọc thêm"
-      ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
-    },
-    {
+      "chapter": "13",
       "lesson": "bai-14-ke-chuyen-bang-du-lieu",
-      "title": "Kể chuyện bằng dữ liệu & thẩm định phân tích AI",
+      "title": "Các bài toán phân tích dữ liệu và kiểm tra kết luận",
       "primary": [
-        "https://wesmckinney.com/book/data-analysis-examples",
-        "https://wesmckinney.com/book/data-aggregation"
+        "https://wesmckinney.com/book/data-analysis-examples"
       ],
-      "supplementary": [
-        "https://courses.iaidev.com/programming-for-data-processing/2627-1/lecture-14-ke-chuyen-bang-du-lieu.html"
+      "coverage": "coverage-c.json",
+      "verification": "scripts/verify-data-course-c.py"
+    },
+    {
+      "chapter": "A",
+      "lesson": "phu-luc-a-numpy-nang-cao",
+      "title": "Phụ lục A: NumPy nâng cao",
+      "primary": [
+        "https://wesmckinney.com/book/advanced-numpy"
       ],
-      "topics": [
-        "1. Cơ cấu nhóm thay đổi trung bình chung",
-        "2. Mẫu số là một phần của chỉ số",
-        "3. Thẩm định từ đầu vào tới kết luận",
-        "4. Trình bày một kết luận có thể đối chiếu",
-        "5. Bài tập tự luyện",
-        "6. Nguồn và đọc thêm"
+      "coverage": "coverage-c.json",
+      "verification": "scripts/verify-data-course-c.py"
+    },
+    {
+      "chapter": "B",
+      "lesson": "phu-luc-b-ipython",
+      "title": "Phụ lục B: Làm việc hiệu quả với IPython",
+      "primary": [
+        "https://wesmckinney.com/book/ipython"
       ],
-      "status": "original-studyhub-lesson",
-      "examples": "synthetic; checked by scripts/verify-data-processing.py"
+      "coverage": "coverage-a.json",
+      "verification": "scripts/verify-data-course-a.py"
     }
   ]
 }

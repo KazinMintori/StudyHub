@@ -1,14 +1,14 @@
 export const lesson = {
   "slug": "bai-10-lam-sach-du-lieu",
-  "title": "Làm sạch dữ liệu có cấu trúc",
+  "title": "Làm sạch, chuẩn bị và xử lý chuỗi",
   "prerequisites": [
-    "gia-tri-thieu",
-    "dictionary"
+    "dataframe"
   ],
   "supportingConcepts": [
-    "schema-du-lieu",
-    "ngoai-lai",
-    "khoang-tu-phan-vi"
+    "gia-tri-thieu",
+    "chi-muc",
+    "thong-ke-mo-ta"
   ],
-  "status": "ready"
+  "status": "ready",
+  "hasChapterExercises": true
 }

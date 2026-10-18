@@ -1,11 +1,8 @@
 export const lesson = {
   "slug": "bai-01-tong-quan-cong-cu-chinh-sach-ai",
-  "title": "Tổng quan xử lý dữ liệu & công cụ",
-  "prerequisites": [
-    "bien-kieu",
-    "list",
-    "dictionary"
-  ],
+  "title": "Công việc xử lý dữ liệu và môi trường Python",
+  "prerequisites": [],
   "supportingConcepts": [],
-  "status": "ready"
+  "status": "ready",
+  "hasChapterExercises": true
 }

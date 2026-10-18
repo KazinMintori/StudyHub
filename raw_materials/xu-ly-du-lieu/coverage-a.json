@@ -1,0 +1,497 @@
+{
+  "course": "xu-ly-du-lieu",
+  "group": "a",
+  "date": "2026-10-18",
+  "summary": "Báo cáo phạm vi bao phủ kỹ thuật toàn diện cho Nhóm A (Chương 1-5 và Phụ lục B) theo giáo trình Wes McKinney và bài tập IAI UET.",
+  "chapters": [
+    {
+      "chapter": "1",
+      "slug": "bai-01-tong-quan-cong-cu-chinh-sach-ai",
+      "title": "Công việc xử lý dữ liệu và môi trường Python",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes 1.1 What Is This Book About? / What Kinds of Data?",
+          "destinationHeading": "1. Bản chất của Công việc Xử lý Dữ liệu trong Thực tế / 1.1. Thực tế dữ liệu và các dạng dữ liệu phổ biến",
+          "status": "taught",
+          "reason": "Giảng giải bản chất phân mảnh, nhiễu và phân loại dữ liệu dạng bảng, chuỗi thời gian, ma trận."
+        },
+        {
+          "sourceHeading": "Wes 1.2 Why Python for Data Analysis? (Python as Glue, Solving Two-Language Problem)",
+          "destinationHeading": "2. Vì sao Chọn Python cho Xử lý Dữ liệu? / 2.1. Python là ngôn ngữ keo dán giải quyết bài toán hai ngôn ngữ",
+          "status": "taught",
+          "reason": "Phân tích kiến trúc Python kết nối C/Fortran để giải bài toán hai ngôn ngữ."
+        },
+        {
+          "sourceHeading": "Wes 1.2 Why Not Python?",
+          "destinationHeading": "2.2. Khi nào Python không phải lựa chọn tối ưu?",
+          "status": "taught",
+          "reason": "Phân tích hạn chế GIL, độ trễ bộ nhớ và các hệ thống phân tán."
+        },
+        {
+          "sourceHeading": "Wes 1.3 Essential Python Libraries (NumPy, pandas, matplotlib, IPython, SciPy, scikit-learn, statsmodels)",
+          "destinationHeading": "3. Ngăn xếp Thư viện Tính toán Khoa học Thiết yếu",
+          "status": "taught",
+          "reason": "Trình bày vai trò và tương tác giữa 6 trụ cột thư viện tính toán khoa học."
+        },
+        {
+          "sourceHeading": "Wes 1.4 Installation and Setup / Integrated Development Environments",
+          "destinationHeading": "4. Kiến trúc Môi trường Tính toán: Kịch bản Python và Sổ tay Jupyter",
+          "status": "taught",
+          "reason": "Phân biệt .py và .ipynb, kiến trúc ba tầng Jupyter Server, Kernel và Browser."
+        },
+        {
+          "sourceHeading": "Wes 1.4 Miniconda on Windows / GNU/Linux / macOS",
+          "destinationHeading": "5. Quản trị Môi trường Làm việc với venv và pip",
+          "status": "adapted",
+          "reason": "Tập trung vào giải pháp venv chuẩn hóa của Python và pip thay vì phân mảnh cài đặt theo từng hệ điều hành Miniconda."
+        },
+        {
+          "sourceHeading": "Wes 1.5 Community and Conferences",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Nội dung thông tin sự kiện hội nghị bên ngoài không mang tính chất kỹ thuật giáo trình."
+        },
+        {
+          "sourceHeading": "Wes 1.6 Navigating This Book / Import Conventions",
+          "destinationHeading": "4.3. Quy ước nhập thư viện chuẩn mực",
+          "status": "taught",
+          "reason": "Chuẩn hóa quy ước import np, pd, plt."
+        },
+        {
+          "sourceHeading": "IAI 01: 1. Môn này học gì? / Dữ liệu thật nhìn thế nào?",
+          "destinationHeading": "1. Bản chất của Công việc Xử lý Dữ liệu trong Thực tế",
+          "status": "taught",
+          "reason": "Quy trình từ dữ liệu thô đến quyết định và quy tắc 80/20."
+        },
+        {
+          "sourceHeading": "IAI 01: 2. Công cụ (VS Code + venv, requirements.txt, .python-version, Git)",
+          "destinationHeading": "5. Quản trị Môi trường Làm việc với venv và pip",
+          "status": "taught",
+          "reason": "Hướng dẫn khởi tạo môi trường ảo, khóa phiên bản với requirements.txt và .python-version."
+        },
+        {
+          "sourceHeading": "IAI 01: 3. Học và làm việc với AI",
+          "destinationHeading": "6. Nguyên tắc Phối hợp và Kiểm thử khi Sử dụng Trợ lý AI",
+          "status": "taught",
+          "reason": "Quy trình kiểm thử ba bước (xác lập giả định, đối chiếu miền giá trị, kiểm thử độc lập) khi dùng AI."
+        },
+        {
+          "sourceHeading": "IAI 01: 4. Vận hành môn học / Cơ cấu điểm / Bài tập lớn / Notebook bài 1",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Hành chính lớp học và notebook bài 1 loại bỏ hoàn toàn theo authoring contract."
+        }
+      ]
+    },
+    {
+      "chapter": "2",
+      "slug": "bai-02-python-co-ban",
+      "title": "Python, IPython và Jupyter Notebook",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes 2.1 The Python Interpreter",
+          "destinationHeading": "1. Trình Thông dịch Python và Môi trường IPython",
+          "status": "taught",
+          "reason": "Khởi chạy và vòng lặp REPL trong phân tích dữ liệu."
+        },
+        {
+          "sourceHeading": "Wes 2.2 IPython Basics (Shell, Notebook, Tab Completion, Introspection)",
+          "destinationHeading": "1.2. Bổ trợ phím Tab và Nội soi mã nguồn (Introspection)",
+          "status": "taught",
+          "reason": "Làm chủ phím Tab, dấu ? xem docstring, ?? xem mã nguồn, wildcard * tìm hàm."
+        },
+        {
+          "sourceHeading": "Wes 2.3 Python Language Basics / Language Semantics",
+          "destinationHeading": "2. Ngữ nghĩa Cốt lõi của Ngôn ngữ Python",
+          "status": "taught",
+          "reason": "Thụt lề, mọi thứ là đối tượng, tham chiếu động, kiểu mạnh, tính khả biến."
+        },
+        {
+          "sourceHeading": "Wes 2.3 Scalar Types (Numeric, Strings, Bytes, Unicode, Booleans, Type casting, None, Dates/times)",
+          "destinationHeading": "3. Các Kiểu Dữ liệu Vô hướng, Chuỗi và Thời gian",
+          "status": "taught",
+          "reason": "Phân biệt chuỗi Unicode và chuỗi Byte, định dạng f-string, kiểu None và module datetime."
+        },
+        {
+          "sourceHeading": "Wes 2.3 Control Flow (if/elif/else, for, while, pass, range)",
+          "destinationHeading": "4. Cấu trúc Điều khiển Luồng Thực thi",
+          "status": "taught",
+          "reason": "Lập trình luồng điều khiển, tối ưu range và cạm bẫy vòng lặp."
+        },
+        {
+          "sourceHeading": "Wes 2.4 Conclusion",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Tích hợp tự nhiên vào phần tóm tắt và bài tập."
+        },
+        {
+          "sourceHeading": "IAI 02: 1. Kiểu dữ liệu vô hướng, None, chuỗi",
+          "destinationHeading": "3. Các Kiểu Dữ liệu Vô hướng, Chuỗi và Thời gian",
+          "status": "taught",
+          "reason": "Định dạng số, None và chuyển đổi kiểu an toàn."
+        }
+      ]
+    },
+    {
+      "chapter": "3",
+      "slug": "bai-03-cau-truc-du-lieu-ham-tep",
+      "title": "Cấu trúc dữ liệu, hàm và tệp",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes 3.1 Data Structures and Sequences (Tuple, List, Dict, Set, Sequence functions, Comprehensions)",
+          "destinationHeading": "1. Cấu trúc Dữ liệu Tích hợp sẵn",
+          "status": "taught",
+          "reason": "Tuple bất biến, list slicing, dict tra cứu O(1), set băm và các comprehension lồng nhau."
+        },
+        {
+          "sourceHeading": "Wes 3.2 Functions (Namespaces, Scope, Functions as Objects, Lambda, Generators, Exception Handling)",
+          "destinationHeading": "2. Hàm và Kỹ thuật Lập trình Hàm",
+          "status": "taught",
+          "reason": "Không gian tên LEGB, hàm bậc cao, generator stream tiết kiệm RAM, khối try/except/else/finally."
+        },
+        {
+          "sourceHeading": "Wes 3.3 Files and the Operating System (Bytes and Unicode with Files)",
+          "destinationHeading": "3. Làm việc với Tệp và Hệ thống Tệp",
+          "status": "taught",
+          "reason": "Quản lý ngữ cảnh with open, chỉ định encoding UTF-8, CSV thủ công, JSON và đối tượng Path của pathlib."
+        },
+        {
+          "sourceHeading": "Wes 3.4 Conclusion",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Tích hợp tự nhiên vào tổng kết và bài tập thực hành."
+        },
+        {
+          "sourceHeading": "IAI 02: List/dict/set/comprehension/pipeline functions/file I/O",
+          "destinationHeading": "1. Cấu trúc Dữ liệu Tích hợp sẵn & 2. Hàm & 3. Tệp",
+          "status": "taught",
+          "reason": "Tách trọn vẹn toàn bộ phần cấu trúc dữ liệu, hàm và tệp ra khỏi chương 2 cũ để tạo bài giảng chuyên sâu."
+        }
+      ]
+    },
+    {
+      "chapter": "4",
+      "slug": "bai-03-numpy",
+      "title": "Mảng NumPy và tính toán trên mảng",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes 4.1 The NumPy ndarray (Creating, Dtypes, Arithmetic, Indexing/Slicing, Boolean, Fancy, Transpose)",
+          "destinationHeading": "1. Đối tượng Mảng Đa chiều ndarray",
+          "status": "taught",
+          "reason": "Cấu trúc đệm C-contiguous, dtype tràn số, lát cắt View vs Copy, giải thích cơ chế reshape với np.shares_memory, không khẳng định mảng luôn liên tục."
+        },
+        {
+          "sourceHeading": "Wes 4.2 Pseudorandom Number Generation",
+          "destinationHeading": "2. Bộ Sinh Số Giả Ngẫu nhiên (Pseudorandom Number Generation)",
+          "status": "taught",
+          "reason": "Phân biệt np.random cũ và Generator PCG64 mới (default_rng) cùng seed tái lập."
+        },
+        {
+          "sourceHeading": "Wes 4.3 Universal Functions (ufuncs)",
+          "destinationHeading": "3. Hàm Phổ quát (Universal Functions - ufuncs)",
+          "status": "taught",
+          "reason": "Cơ chế ufunc đơn phân, nhị phân, SIMD và thực thi mã C."
+        },
+        {
+          "sourceHeading": "Wes 4.4 Array-Oriented Programming (np.where, Math/Stat methods, Boolean methods, Sorting, Sets)",
+          "destinationHeading": "4. Lập trình Hướng Mảng (Array-Oriented Programming)",
+          "status": "taught",
+          "reason": "np.where rẽ nhánh vector, sum/mean/std theo trục, any/all, sort tại chỗ vs bản sao, unique/intersect1d/union1d."
+        },
+        {
+          "sourceHeading": "Wes 4.5 File Input and Output with Arrays (.npy, .npz)",
+          "destinationHeading": "5. Nhập Xuất Tệp Nhị phân với Mảng (.npy và .npz)",
+          "status": "taught",
+          "reason": "Lưu và nạp mảng đơn với np.save/np.load, lưu trữ nén nhiều mảng với np.savez_compressed."
+        },
+        {
+          "sourceHeading": "Wes 4.6 Linear Algebra (dot, @, inv, qr, svd)",
+          "destinationHeading": "6. Đại số Tuyến tính trên Mảng (Linear Algebra)",
+          "status": "taught",
+          "reason": "Tích vô hướng, ma trận nghịch đảo, giải hệ phương trình tuyến tính, phân rã QR và SVD."
+        },
+        {
+          "sourceHeading": "Wes 4.7 Example: Random Walks",
+          "destinationHeading": "7. Nghiên cứu Điển hình: Mô phỏng Bước đi Ngẫu nhiên (Random Walk)",
+          "status": "taught",
+          "reason": "Mô phỏng 10.000 bước đi ngẫu nhiên đồng thời qua np.random, cumsum và phát hiện điểm vượt ngưỡng."
+        },
+        {
+          "sourceHeading": "Wes 4.8 Conclusion",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Tích hợp tự nhiên vào tổng kết và bài tập thực hành."
+        },
+        {
+          "sourceHeading": "IAI 03: 1-5 (Cấu trúc bộ nhớ, ufunc, view/copy, broadcasting, thống kê)",
+          "destinationHeading": "Toàn bài giảng Chương 4",
+          "status": "taught",
+          "reason": "Bao phủ trọn vẹn lý thuyết tính toán mảng và tích hợp toàn bộ 6 bài tập IAI03."
+        }
+      ]
+    },
+    {
+      "chapter": "5",
+      "slug": "bai-04-lam-quen-pandas",
+      "title": "Series, DataFrame và chỉ mục trong pandas",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes 5.1 Introduction to pandas Data Structures (Series, DataFrame, Index)",
+          "destinationHeading": "1. Các Cấu trúc Dữ liệu Cốt lõi của pandas",
+          "status": "taught",
+          "reason": "Series, DataFrame, thuộc tính Index bất biến và nhãn hai chiều."
+        },
+        {
+          "sourceHeading": "Wes 5.2 Essential Functionality (Reindexing, Drop, loc/iloc, Alignment, Functions, Sorting)",
+          "destinationHeading": "2. Các Chức năng Thiết yếu của pandas",
+          "status": "taught",
+          "reason": "reindex, drop, loc/iloc, cạm bẫy gán chuỗi SettingWithCopyWarning, so khớp nhãn tự động, apply/applymap/map, sort_values/rank."
+        },
+        {
+          "sourceHeading": "Wes 5.3 Summarizing and Computing Descriptive Statistics",
+          "destinationHeading": "3. Tóm tắt và Tính toán Thống kê Mô tả",
+          "status": "taught",
+          "reason": "describe, cov, corr, value_counts, isin, xử lý dữ liệu khuyết thiếu bỏ qua NaN."
+        },
+        {
+          "sourceHeading": "Wes 5.4 Conclusion",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Tích hợp tự nhiên vào tổng kết và bài tập."
+        },
+        {
+          "sourceHeading": "IAI 04: Đọc dữ liệu, chọn hàng/cột, sửa bảng, kiểm tra toàn vẹn",
+          "destinationHeading": "4. Nạp dữ liệu, 5. Cạm bẫy biến đổi bảng, 6. Kiểm tra và xuất tệp",
+          "status": "taught",
+          "reason": "Phân tích bảng Inside Airbnb Santiago và toàn bộ 5 bài tập thực hành IAI04."
+        },
+        {
+          "sourceHeading": "IAI 05: Bài tập 1 (Gán đúng phí) & Bài tập 2 (Miễn phí dọn dẹp)",
+          "destinationHeading": "7. Bài tập Thực hành: Bài tập 6 & Bài tập 7",
+          "status": "taught",
+          "reason": "Gán cột khớp theo nhãn chỉ mục độc lập với thứ tự và áp dụng np.where tính chi phí có điều kiện."
+        }
+      ]
+    },
+    {
+      "chapter": "B",
+      "slug": "phu-luc-b-ipython",
+      "title": "Phụ lục B: Làm việc hiệu quả với IPython",
+      "sourceUnits": [
+        {
+          "sourceHeading": "Wes B.1 Terminal Keyboard Shortcuts",
+          "destinationHeading": "1. Phím tắt Bàn phím trên Dòng lệnh IPython",
+          "status": "taught",
+          "reason": "Phím tắt điều hướng Ctrl-A/E, xóa văn bản Ctrl-K/U, tìm kiếm lịch sử Ctrl-R."
+        },
+        {
+          "sourceHeading": "Wes B.2 About Magic Commands (%run, %paste, %cpaste, %who, %reset)",
+          "destinationHeading": "2. Hệ thống Lệnh Ma thuật (Magic Commands)",
+          "status": "taught",
+          "reason": "Phân biệt ma thuật dòng % và ma thuật khối %%, chạy tệp ngoài với %run, quản lý RAM với %whos và %reset."
+        },
+        {
+          "sourceHeading": "Wes B.3 Using the Command History (Searching, In/Out, _)",
+          "destinationHeading": "3. Khai thác Lịch sử Dòng lệnh và Biến Nhập/Xuất",
+          "status": "taught",
+          "reason": "Truy xuất danh sách In, từ điển Out, biến gạch dưới _ và __."
+        },
+        {
+          "sourceHeading": "Wes B.4 Interacting with the Operating System (Shell !, $, %bookmark, %cd, %env)",
+          "destinationHeading": "4. Tương tác với Hệ điều hành và Hệ vỏ Shell",
+          "status": "taught",
+          "reason": "Thực thi shell với !, truyền biến Python với $, bookmark thư mục và đọc biến môi trường."
+        },
+        {
+          "sourceHeading": "Wes B.5 Software Development Tools (Debugger %debug, %pdb, Timing %time/%timeit, Profiling %prun)",
+          "destinationHeading": "5. Công cụ Phát triển Phần mềm: Gỡ lỗi và Hồ sơ Hiệu năng",
+          "status": "taught",
+          "reason": "Gỡ lỗi tương tác sau sự cố với pdb/ipdb, đo lường thời gian thực thi với %timeit, phân tích hồ sơ hàm với %prun."
+        },
+        {
+          "sourceHeading": "Wes B.6 Tips for Productive Code Development (Reloading %autoreload, Code Design)",
+          "destinationHeading": "6. Kỹ thuật Tối ưu Quy trình Phát triển Mã nguồn",
+          "status": "taught",
+          "reason": "Tự động tải lại mã sửa đổi với %load_ext autoreload và %autoreload 2."
+        },
+        {
+          "sourceHeading": "Wes B.7 Advanced IPython Features (Profiles and Configuration)",
+          "destinationHeading": "7. Cấu hình Nâng cao và Hồ sơ Làm việc (Profiles & Configuration)",
+          "status": "taught",
+          "reason": "Tạo hồ sơ ipython profile create và tùy biến tệp khởi động ipython_config.py."
+        },
+        {
+          "sourceHeading": "Wes B.8 Conclusion",
+          "destinationHeading": "Không đưa vào",
+          "status": "excluded",
+          "reason": "Tích hợp tự nhiên vào tổng kết và bài tập thực hành."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 1: Đổi kiểu lúc nào?",
+      "destinationHeading": "Chương 4: Bài tập 1: Thời điểm đổi kiểu dữ liệu và tràn số nguyên"
+    },
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 2: Thay vòng for bằng phép toán mảng",
+      "destinationHeading": "Chương 4: Bài tập 2: Thay thế vòng lặp for bằng phép toán mảng vector hóa"
+    },
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 3: Tìm vị trí phần tử",
+      "destinationHeading": "Chương 4: Bài tập 3: Xác định vị trí phần tử trong bộ nhớ từ Strides"
+    },
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 4: Xác định các ô của view",
+      "destinationHeading": "Chương 4: Bài tập 4: Xác định các ô của View và kiểm chứng bộ nhớ dùng chung"
+    },
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 5: Cộng theo hàng và cột",
+      "destinationHeading": "Chương 4: Bài tập 5: Cộng theo hàng và cột bằng quy tắc phát sóng (Broadcasting)"
+    },
+    {
+      "sourceLecture": "IAI 03",
+      "sourceExercise": "Bài tập 6: Sửa phép trừ",
+      "destinationHeading": "Chương 4: Bài tập 6: Sửa lỗi phép trừ trung bình hàng do hiểu sai Broadcasting"
+    },
+    {
+      "sourceLecture": "IAI 04",
+      "sourceExercise": "Bài tập 1: Chọn chỗ ở",
+      "destinationHeading": "Chương 5: Bài tập 1: Chọn chỗ ở theo ngân sách và ngưỡng số đêm"
+    },
+    {
+      "sourceLecture": "IAI 04",
+      "sourceExercise": "Bài tập 2: Giá có giảm không?",
+      "destinationHeading": "Chương 5: Bài tập 2: Phân biệt biến động giá và thay đổi tập mẫu quan sát"
+    },
+    {
+      "sourceLecture": "IAI 04",
+      "sourceExercise": "Bài tập 3: Lọc theo ngân sách",
+      "destinationHeading": "Chương 5: Bài tập 3: Lọc dữ liệu theo ngân sách và điều kiện kết hợp"
+    },
+    {
+      "sourceLecture": "IAI 04",
+      "sourceExercise": "Bài tập 4: Báo giá ba đêm",
+      "destinationHeading": "Chương 5: Bài tập 4: Sửa giá phòng và cạm bẫy phụ thuộc cột"
+    },
+    {
+      "sourceLecture": "IAI 04",
+      "sourceExercise": "Bài tập 5: Giữ mã chỗ ở trong file",
+      "destinationHeading": "Chương 5: Bài tập 5: Bảo toàn mã định danh khi lưu trữ tệp CSV"
+    },
+    {
+      "sourceLecture": "IAI 05",
+      "sourceExercise": "Bài tập 1: Gán đúng phí",
+      "destinationHeading": "Chương 5: Bài tập 6: Gán cột khớp theo nhãn chỉ mục độc lập với thứ tự"
+    },
+    {
+      "sourceLecture": "IAI 05",
+      "sourceExercise": "Bài tập 2: Miễn phí dọn dẹp",
+      "destinationHeading": "Chương 5: Bài tập 7: Tính toán chi phí có điều kiện và miễn phí dọn dẹp"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 1: Thiết lập cấu trúc dự án và khóa phiên bản phụ thuộc",
+      "destinationHeading": "Chương 1: Bài tập 1: Thiết lập cấu trúc dự án và khóa phiên bản phụ thuộc"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 2: Tái hiện cạm bẫy ô nhớ Jupyter và cô lập môi trường",
+      "destinationHeading": "Chương 1: Bài tập 2: Tái hiện cạm bẫy ô nhớ Jupyter và cô lập môi trường"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 3: Kiểm chứng giải pháp hai ngôn ngữ với NumPy và Python thuần",
+      "destinationHeading": "Chương 1: Bài tập 3: Kiểm chứng giải pháp hai ngôn ngữ với NumPy và Python thuần"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 1: Kiểm soát tham chiếu động và tính khả biến của đối tượng",
+      "destinationHeading": "Chương 2: Bài tập 1: Kiểm soát tham chiếu động và tính khả biến của đối tượng"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 2: Khử lỗi mã hóa ký tự UTF-8 và xử lý chuỗi Byte",
+      "destinationHeading": "Chương 2: Bài tập 2: Khử lỗi mã hóa ký tự UTF-8 và xử lý chuỗi Byte"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 3: Tính toán khoảng thời gian và lọc dữ liệu với datetime",
+      "destinationHeading": "Chương 2: Bài tập 3: Tính toán khoảng thời gian và lọc dữ liệu với datetime"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 1: Pipeline làm sạch chuỗi bằng danh sách hàm bậc cao",
+      "destinationHeading": "Chương 3: Bài tập 1: Pipeline làm sạch chuỗi bằng danh sách hàm bậc cao"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 2: Xử lý tệp log dạng dòng với Generator và Exception Handling",
+      "destinationHeading": "Chương 3: Bài tập 2: Xử lý tệp log dạng dòng với Generator và Exception Handling"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 3: Gom nhóm dữ liệu và đếm tần suất với defaultdict",
+      "destinationHeading": "Chương 3: Bài tập 3: Gom nhóm dữ liệu và đếm tần suất với defaultdict"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 1: Đo lường và so sánh hiệu năng giữa thuật toán thuần và thư viện bằng %timeit",
+      "destinationHeading": "Phụ lục B: Bài tập 1: Đo lường và so sánh hiệu năng giữa thuật toán thuần và thư viện bằng %timeit"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 2: Tự động hóa trích xuất kết quả từ lịch sử In và Out",
+      "destinationHeading": "Phụ lục B: Bài tập 2: Tự động hóa trích xuất kết quả từ lịch sử In và Out"
+    },
+    {
+      "sourceLecture": "Mới biên soạn (Group A)",
+      "sourceExercise": "Bài tập 3: Mô phỏng phân tích hiệu năng từng dòng để xác định điểm nghẽn",
+      "destinationHeading": "Phụ lục B: Bài tập 3: Mô phỏng phân tích hiệu năng từng dòng để xác định điểm nghẽn"
+    }
+  ],
+  "proseReview": [
+    {
+      "aspect": "Khử văn phong dịch máy và calque thụ động",
+      "before": "Các file hợp đồng dữ liệu quy định cấu trúc trả về của API...",
+      "after": "Chuẩn giao tiếp dữ liệu (schema) quy định cấu trúc đối tượng trả về của API...",
+      "rationale": "Tuân thủ quy tắc 11 trong AGENTS.md, không dịch 'contract' thành 'hợp đồng' trong kỹ thuật phần mềm."
+    },
+    {
+      "aspect": "Chủ quyền bài giảng và văn phong học thuật",
+      "before": "Bài tập này lấy từ slide bài 3 của môn học, ví dụ do người soạn bổ sung...",
+      "after": "Bài giảng độc lập, cấu trúc bài học hoàn chỉnh, trích dẫn bản quyền chuẩn mực tại mục ## Tài liệu tham khảo theo giấy phép CC BY-NC-SA 4.0.",
+      "rationale": "Tuân thủ quy tắc 6, loại bỏ toàn bộ các câu phân bua thụ động, giữ vững tính chính danh của giảng viên."
+    },
+    {
+      "aspect": "Viết hoa chuẩn mực sau dấu hai chấm (:)",
+      "before": "Lưu ý: đây là bước chuyển trạng thái quan trọng...",
+      "after": "Lưu ý: Đây là bước chuyển trạng thái quan trọng...",
+      "rationale": "Tuân thủ quy tắc 12, mọi từ đầu tiên sau dấu hai chấm trong văn xuôi bắt buộc phải viết hoa."
+    },
+    {
+      "aspect": "Khai triển toán học tường minh",
+      "before": "Tổng độ lệch bình phương \\sum (x_i - \\bar{x})^2 được tính nhanh chóng.",
+      "after": "Khai triển rõ ràng: \\sum_{i=1}^n (x_i - \\bar{x})^2 = (x_1 - \\bar{x})^2 + \\dots + (x_n - \\bar{x})^2 với trực giác hình học trước khi dùng ký hiệu dồn.",
+      "rationale": "Tuân thủ quy tắc 9 trong AGENTS.md, khai triển tường minh ít nhất một lần khi giới thiệu công thức dồn."
+    },
+    {
+      "aspect": "Triệt tiêu scrollbar toán và chuẩn hóa ngắt dòng",
+      "before": "Đặt công thức dài trong aligned rồi bẻ dòng ngay sau dấu cộng: ... + R_2 \\\\ + R_3.",
+      "after": "Chỉ bẻ dòng tại dấu quan hệ (&=, &\\le), giữ nguyên biểu thức ngắn trên 1 dòng đơn, căn lề trái bằng & ở đầu dòng cho hệ phương trình.",
+      "rationale": "Tuân thủ quy tắc 8 và 14, triệt tiêu 100% thanh cuộn ngang và chống vỡ dòng toán học."
+    }
+  ],
+  "tests": {
+    "verifyScript": "python scripts/verify-data-course-a.py -> PASSED (6/6 checks passed: contract, math syntax, academic style/colons, technical coverage, numerical execution, coverage json structure)",
+    "nodeCheck": "node --check executed successfully with code 0 on all 12 owned .mjs files across Group A (6 lesson.mjs and 6 slides.mjs)",
+    "gitDiffCheck": "git diff --check -> PASSED (clean, no trailing whitespace, no merge conflicts)",
+    "gitStatus": "git status --short -> Clean tracking of only owned Group A notes, lectures, verification script, and coverage report"
+  }
+}
