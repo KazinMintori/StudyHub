@@ -42,132 +42,132 @@
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 222,
+      "line": 226,
       "title": "Bài tập 2: Phân biệt lỗi chuyển đổi ngày không hợp lệ với dữ liệu khuyết từ nguồn"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 224,
+      "line": 228,
       "title": "Phát hiện lỗi chuyển đổi ngày"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 336,
+      "line": 344,
       "title": "Bài tập 3: Loại bỏ dòng sau mốc chụp dữ liệu và thiết lập chỉ mục thời gian"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 338,
+      "line": 346,
       "title": "Thiết lập chỉ mục thời gian và loại bỏ mốc tương lai"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 512,
+      "line": 524,
       "title": "Bài tập 4: Cắt lát chuỗi thời gian bằng nhãn chuỗi và đối chiếu số lượng đánh giá"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 514,
+      "line": 526,
       "title": "Cắt lát theo nhãn năm"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 705,
+      "line": 721,
       "title": "Bài tập 5: Tổng hợp dữ liệu theo quý và nhận diện kỳ chưa trọn"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 707,
+      "line": 723,
       "title": "Tổng hợp theo quý và loại bỏ kỳ chưa trọn"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 922,
+      "line": 942,
       "title": "Bài tập 6: Kiểm tra quy tắc lọc kỳ chưa trọn tại các mốc thời gian biên"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 924,
+      "line": 944,
       "title": "Kiểm định mốc thời gian biên của kỳ"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1020,
+      "line": 1044,
       "title": "Bài tập 7: Xác định quý cao nhất toàn chuỗi và quý thấp nhất trong một giai đoạn"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1022,
+      "line": 1046,
       "title": "Tìm kiếm cực trị theo quý"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1280,
+      "line": 1308,
       "title": "Bài tập 8: Tổng hợp dữ liệu theo ngày và điền đầy đủ các ngày không có lượt đánh giá"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1282,
+      "line": 1310,
       "title": "Tổng hợp theo lịch ngày liên tục"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1488,
+      "line": 1520,
       "title": "Bài tập 9: Làm mượt chuỗi thời gian bằng cửa sổ trượt 7 ngày và nhận diện đỉnh điểm"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1490,
+      "line": 1522,
       "title": "Làm mượt bằng cửa sổ trượt"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1737,
+      "line": 1773,
       "title": "Bài tập 10: So sánh cùng kỳ theo quý và khắc phục lỗi lệch chu kỳ"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1739,
+      "line": 1775,
       "title": "So sánh cùng kỳ theo quý"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1987,
+      "line": 2027,
       "title": "Bài tập 11: So sánh theo tháng: So với kỳ liền trước và so với cùng kỳ năm trước"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1989,
+      "line": 2029,
       "title": "Tính toán hai hệ quy chiếu so sánh"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2219,
+      "line": 2263,
       "title": "Bài tập 12: Chuẩn hóa độ dài tháng và xử lý năm nhuận khi so sánh chu kỳ tháng"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2221,
+      "line": 2265,
       "title": "Điều chỉnh số ngày khác biệt của các tháng"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2462,
+      "line": 2510,
       "title": "Bài tập 13: Mở rộng 1: Điều tra ngày kỷ lục và vùng lân cận bằng chuỗi ngày"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2464,
+      "line": 2512,
       "title": "Điều tra ngày kỷ lục"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2697,
+      "line": 2749,
       "title": "Bài tập 14: Mở rộng 2: Tính khoảng cách thời gian từ lần đánh giá gần nhất"
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2699,
+      "line": 2751,
       "title": "Gắn cờ chỗ ở lâu chưa có đánh giá"
     }
   ],
@@ -194,67 +194,67 @@
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 230,
+      "line": 234,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 346,
+      "line": 354,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 520,
+      "line": 532,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 715,
+      "line": 731,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 936,
+      "line": 956,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1031,
+      "line": 1055,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1288,
+      "line": 1316,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1505,
+      "line": 1537,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1749,
+      "line": 1785,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2004,
+      "line": 2044,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2231,
+      "line": 2275,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2473,
+      "line": 2521,
       "title": ""
     },
     {
       "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 2710,
+      "line": 2762,
       "title": ""
     }
   ],
@@ -262,13 +262,13 @@
     {
       "reference": "img/labs/lab-08/rolling-7d-2025.svg",
       "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1618,
+      "line": 1650,
       "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-08/rolling-7d-2025.svg"
     },
     {
       "reference": "img/labs/lab-08/rolling-7d-2025.svg",
       "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
-      "line": 1731,
+      "line": 1763,
       "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-08/rolling-7d-2025.svg"
     }
   ]

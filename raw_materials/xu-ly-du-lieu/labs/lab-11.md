@@ -254,6 +254,10 @@ Kiểm số dòng đủ điều kiện trước khi lấy mẫu giúp báo lỗi
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Đã lấy 100 dòng, kiểm tra trùng khớp: True |
+#### So sánh cách dùng
+
+Cách 1 giúp quan sát bộ lọc văn bản và việc lấy mẫu có hạt giống cố định. Cách 2 bổ sung bước kiểm tra số dòng đủ điều kiện để báo rõ khi không thể lấy đủ mẫu. Cả hai đều phải công bố ngưỡng độ dài đã dùng.
+
 :::
 
 ---
@@ -360,6 +364,10 @@ Tính theo Series làm rõ tổng ký tự và số bản ghi thay vì tích lũ
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Tổng token = 2, Chi phí = $0.00000050 |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn muốn theo dõi chi tiết độ dài ký tự và lượng token ước tính của từng phản hồi để kiểm chứng. Cách 2 phù hợp khi cần tính tổng chi phí dự kiến cho toàn bộ tập dữ liệu bằng các phép toán cột của pandas.
+
 :::
 
 ---
@@ -480,6 +488,10 @@ Pydantic gom quy tắc cấu trúc vào một mô hình có thể dùng lại. `
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Chặn thành công nhãn ngoài danh mục. Chi tiết lỗi: Input should be 'positive', 'mixed' or 'negative' |
+#### So sánh cách dùng
+
+Kiểm từng trường trong Cách 1 giúp hiểu vì sao một phản hồi bị loại. Cách 2 gom các ràng buộc vào mô hình Pydantic để dùng lại và đọc lỗi kiểm tra. Với cả hai, đúng lược đồ chưa chứng minh nhãn cảm xúc đúng với câu nhận xét.
+
 :::
 
 ---
@@ -669,6 +681,10 @@ Báo cáo kiểm tra có thể giữ ID, trạng thái và thông tin lỗi cho 
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Ghi nhận 2 bản ghi lỗi với đầy đủ nhật ký kiểm toán. |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn chỉ cần tách nhanh các phản hồi hợp lệ để chuyển tiếp sang bước đánh giá mà không cần ghi nhận sâu lỗi. Cách 2 cần thiết khi phải lưu chi tiết mã lỗi và lý do không đạt chuẩn để phục vụ kiểm toán lời nhắc.
+
 :::
 
 ---
@@ -915,6 +931,10 @@ print(
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Xác nhận độ chính xác = 0.625, Sai lệch tại ID: [4, 9, 10] |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi dữ liệu ở dạng từ điển thuần túy và chỉ muốn tính nhanh tỷ lệ chính xác trên tập chung. Cách 2 trực quan hơn khi bạn cần đưa hai nguồn nhãn vào cùng một bảng để dễ quan sát và lọc các trường hợp gán sai.
+
 :::
 
 ---
@@ -1261,6 +1281,10 @@ Các từ khóa có thể gợi ý một loại lỗi để người đọc xem 
 | 3 |   4 Bỏ sót khía cạnh tiếng ồn do thiên lệch từ ngữ tích cực |
 | 4 |   9        Xung đột trọng số giữa các khía cạnh khen và chê |
 | 5 |  10                    Hiểu sai phủ định ngữ dụng (Litotes) |
+#### So sánh cách dùng
+
+Cách 1 thích hợp để đọc và giải thích từng trường hợp sai theo ngữ cảnh. Cách 2 dùng dấu hiệu từ khóa để chọn các câu cần xem lại. Kết quả sàng lọc này hỗ trợ việc đọc, không tự thay thế đánh giá ý nghĩa của câu.
+
 :::
 
 ---
@@ -1511,6 +1535,10 @@ Tách hàm kiểm từng phản hồi khỏi thao tác lọc cả đợt giúp d
 | Dòng output | Nội dung |
 | --- | --- |
 | 1 | Cách 2: Xác nhận danh sách mâu thuẫn trùng khớp: True |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi chỉ cần kiểm tra vài cặp mâu thuẫn đơn giản để đưa vào danh sách xem xét lại thủ công. Cách 2 phù hợp khi có bộ quy tắc phức tạp cần đóng gói thành hàm kiểm định riêng biệt để dễ bảo trì và mở rộng.
+
 :::
 
 ---
@@ -1925,6 +1953,10 @@ Gom các phép kiểm thành một hàm báo cáo giúp chạy lại cùng tiêu
 | 2 |                  Dot_chay  Tong_mau  Loi_schema Ty_le_schema Acc_hop_le Acc_toan_bo  So_mau_thuan Xu_ly_ID_10 |
 | 3 |      Run 1 (Mô phỏng gốc)        10           2        80.0%      62.5%       50.0%             2         Sai |
 | 4 | Run 2 (Cải tiến lời nhắc)        10           0       100.0%     100.0%      100.0%             0   Chính xác |
+#### So sánh cách dùng
+
+Cách 1 mở các phép so sánh trên hai đợt phản hồi mô phỏng để thấy rõ từng mẫu số. Cách 2 đóng gói cùng tiêu chí vào hàm báo cáo. Chênh lệch trong ví dụ chưa chứng minh một lời nhắc mới tốt hơn trên dữ liệu thực tế.
+
 :::
 
 ---

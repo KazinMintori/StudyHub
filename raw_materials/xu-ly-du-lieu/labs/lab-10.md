@@ -258,6 +258,10 @@ print("Kết quả điền khuyết Cách 2 (vector hóa): Khớp hoàn toàn")
 ```text
 Kết quả điền khuyết Cách 2 (vector hóa): Khớp hoàn toàn
 ```
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi muốn gán trực tiếp giá trị theo từng lát cắt điều kiện cụ thể trên cột đang xử lý cục bộ. Cách 2 phù hợp hơn khi muốn thể hiện quy tắc thay thế bằng phương thức hàm nhất quán và giữ nguyên vẹn mảng dữ liệu ban đầu.
+
 :::
 
 ---
@@ -420,6 +424,10 @@ print("Xác nhận Cách 2: Vector hóa thành công")
 ```text
 Xác nhận Cách 2: Vector hóa thành công
 ```
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi muốn xem trước bảng trung vị từng nhóm hoặc cần lưu từ điển quy tắc để áp dụng cho dữ liệu mới. Cách 2 thuận tiện hơn khi muốn điền giá trị đại diện trực tiếp trên bảng nguồn nhờ khả năng giữ nguyên chỉ mục của transform.
+
 :::
 
 ---
@@ -592,6 +600,10 @@ Biểu thức boolean theo cột thể hiện cùng bộ quy tắc cho toàn b�
 ```text
 Xác nhận Cách 2: Tương thích hoàn toàn
 ```
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi cần kiểm tra từng điều kiện riêng lẻ và theo dõi số bản ghi vi phạm sau mỗi phép so sánh. Cách 2 phù hợp khi bạn muốn gom các tiêu chí vào một từ điển tập trung để dễ bảo trì và xuất bảng kiểm toán.
+
 :::
 
 ---
@@ -837,6 +849,10 @@ print("Xác nhận Cách 2: Kết quả khớp tuyệt đối")
 ```text
 Xác nhận Cách 2: Kết quả khớp tuyệt đối
 ```
+#### So sánh cách dùng
+
+Cách 1 đặt ngưỡng và các phương án xử lý cạnh nhau để thấy số dòng, trung bình và trung vị thay đổi thế nào. Cách 2 mở rõ thao tác chặn bằng `clip`. Giá vượt P99 chỉ là dấu hiệu cần xem xét, chưa đủ để kết luận đó là lỗi.
+
 :::
 
 ---
@@ -1017,6 +1033,10 @@ Tách phép đếm trùng khỏi phép loại dòng để báo cáo được c�
 ```text
 Xác nhận Cách 2: Phân tích kích thước nhóm hoàn tất
 ```
+#### So sánh cách dùng
+
+Cách 1 thể hiện trực tiếp thao tác nhận diện và xử lý mã review bị lặp. Cách 2 giúp xem quy mô các nhóm lặp trước khi quyết định giữ dòng nào. Không dùng sự trùng ngày và mã chỗ ở làm bằng chứng duy nhất rằng hai review là một.
+
 :::
 
 ---
@@ -1370,6 +1390,10 @@ Các phép tổng hợp trên Series ngày tránh duyệt từng dòng trong Pyt
 ```text
 Xác nhận Cách 2: Kiểm tra miền thời gian và cờ hoàn tất
 ```
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi làm việc tương tác để xem nhanh mốc thời gian biên và kiểm tra sơ bộ độ bao phủ dữ liệu. Cách 2 phù hợp khi cần đóng gói các quy tắc kiểm tra vào một hàm dùng chung để tự động hóa khâu tiền xử lý.
+
 :::
 
 ---
@@ -1641,6 +1665,10 @@ Phép ghép có chỉ báo hoặc đối chiếu tập khóa làm rõ phía nào
 ```text
 Xác nhận Cách 2: Anti-join hoàn tất
 ```
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn chỉ cần đếm nhanh số lượng dòng đánh giá mang mã chỗ ở không tồn tại trong danh mục nguồn. Cách 2 hữu ích hơn khi cần giữ lại toàn bộ các cột thông tin của bản ghi mồ côi để truy vết nguyên nhân sai lệch khóa ngoại.
+
 :::
 
 ---
@@ -1908,6 +1936,10 @@ Nhóm theo cặp khóa rồi đếm kích thước giúp xem phân bố các nh�
 ```text
 Xác nhận Cách 2: Đối chiếu độ dài thành công
 ```
+#### So sánh cách dùng
+
+Cách 1 kiểm từng dòng có tham gia một cặp khóa lặp hay không. Cách 2 đếm qua kích thước nhóm để đối chiếu cùng đại lượng. Tổng số dòng tham gia nhóm lặp khác số dòng dư sau khi giữ một đại diện của mỗi nhóm.
+
 :::
 
 ---
@@ -2279,6 +2311,10 @@ Ghép bảng đếm theo ID rồi căn lại chỉ mục giữ cho kết quả �
 ```text
 Xác nhận Cách 2: Đối chiếu cột dẫn xuất thành công
 ```
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn muốn tạo một chuỗi đếm độc lập được căn chỉnh chuẩn xác theo chỉ mục của bảng danh mục để làm phép trừ. Cách 2 thuận tiện hơn khi muốn gắn thêm cột đối chiếu trực tiếp vào khung dữ liệu hiện có để tiện quan sát.
+
 :::
 
 ---
@@ -2671,6 +2707,10 @@ Tách mặt nạ thời gian, bảng đếm và phép đối chiếu giúp kiể
 ```text
 Xác nhận Cách 2: Đối chiếu LTM thành công
 ```
+#### So sánh cách dùng
+
+Cách 1 giúp tái hiện phép đếm từ mốc bắt đầu mà chưa chặn phía sau snapshot. Cách 2 dùng một khoảng ngày cố định. Khi có review mang ngày sau snapshot, hai quy tắc có thể cho số đếm khác nhau và cần được ghi rõ trong báo cáo.
+
 :::
 
 ---
@@ -3179,6 +3219,10 @@ Tạo DataFrame trực tiếp từ dữ liệu có cấu trúc giảm bước gh
 ```text
 Xác nhận Cách 2: Xuất báo cáo và tóm tắt cờ thành công
 ```
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi các chỉ số kiểm tra được thu thập rời rạc và bạn muốn chủ động ghép từng dòng theo thứ tự sẵn có. Cách 2 thích hợp khi dữ liệu đã có sẵn dạng từ điển và bạn muốn tạo ngay bảng tổng kết để xuất tệp CSV.
+
 :::
 
 ---
@@ -3371,6 +3415,10 @@ print("Xác nhận Cách 2: Tách nhóm mâu thuẫn vector hóa hoàn tất")
 ```text
 Xác nhận Cách 2: Tách nhóm mâu thuẫn vector hóa hoàn tất
 ```
+#### So sánh cách dùng
+
+Cách 1 mở từng nhóm chỗ ở và ngày để xem các mức giá mâu thuẫn. Cách 2 gắn cùng quy tắc kiểm lên bảng để lọc các dòng liên quan. Hãy giữ cả giá trị gốc và cờ mâu thuẫn trước khi quyết định cách gộp.
+
 :::
 
 ---
@@ -3588,6 +3636,10 @@ Các phương thức theo nhóm và chỉ mục giúp áp dụng quy tắc nhấ
 ```text
 Xác nhận Cách 2: Toàn bộ ba phương pháp điền khuyết hoàn tất
 ```
+#### So sánh cách dùng
+
+Cách 1 mở riêng từng thao tác điền mốt, lan truyền giá và nội suy. Cách 2 thể hiện các phép xử lý theo nhóm và chỉ mục. Cả hai vẫn cần giả thiết phù hợp, thứ tự thời gian đúng và giới hạn nhóm rõ ràng trước khi điền.
+
 :::
 
 ---

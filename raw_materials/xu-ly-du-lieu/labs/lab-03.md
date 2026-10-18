@@ -811,10 +811,10 @@ gia = np.array([[40, 50, 60], [60, 60, 60], [30, 60, 90]], dtype=np.float64)
 ```
 
 
-Khi viết dưới dạng ma trận toán học:
+Mảng `gia` tương ứng với ma trận $G$:
 
 $$
-\text{gia} = \begin{bmatrix}
+\mathbf{G} = \begin{bmatrix}
 40.0 & 50.0 & 60.0 \\
 60.0 & 60.0 & 60.0 \\
 30.0 & 60.0 & 90.0

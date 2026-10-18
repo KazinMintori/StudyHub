@@ -101,7 +101,7 @@ LISTINGS_DEMO = pd.DataFrame(
 ### Bài tập 1: Đọc chuỗi ngày tháng theo định dạng nguồn và tính số đêm lưu trú
 
 ::: exercise Tính số đêm lưu trú
-Cho một DataFrame `dat` chứa thông tin các lượt đặt phòng với hai cột chuỗi `vao` (ngày nhận phòng) và `ra` (ngày trả phòng) theo định dạng ngày tháng châu Âu `DD/MM/YYYY`. Trong dữ liệu có thể xuất hiện ngày không tồn tại trên lịch (ví dụ: ngày 31 tháng 6) hoặc giá trị khuyết (`None`).
+Cho một DataFrame `dat` chứa thông tin các lượt đặt phòng với hai cột chuỗi `vao` (ngày nhận phòng) và `ra` (ngày trả phòng) theo định dạng ngày tháng châu Âu `DD/MM/YYYY`. Trong dữ liệu có thể xuất hiện ngày không tồn tại trên lịch (chẳng hạn ngày 31 tháng 6) hoặc giá trị khuyết (`None`).
 
 Hãy viết hàm `calculate_stay_nights(dat: pd.DataFrame) -> pd.Series` thực hiện các thao tác:
 1. Chuyển đổi hai cột `vao` và `ra` sang kiểu dữ liệu ngày giờ (`datetime64[ns]`), áp dụng định dạng `%d/%m/%Y` và cơ chế ép kiểu an toàn `errors="coerce"`.
@@ -214,6 +214,10 @@ display(ket_qua_dem_c2)
 | D2 | 3 |
 | D3 | NaN |
 | D4 | NaN |
+#### So sánh cách dùng
+
+Cách 1 mở riêng bước chuyển đổi ngày vào và ngày ra, thuận tiện để quan sát cột nào chứa ngày sai. Cách 2 đặt cùng định dạng và quy tắc lỗi trong một lần cấu hình. Cả hai lời giải đều đang yêu cầu định dạng ngày/tháng/năm của đề.
+
 :::
 
 ---
@@ -328,6 +332,10 @@ Tách hai điều kiện thành những Series boolean có cùng chỉ mục gi�
 | D2 | False |
 | D3 | True |
 | D4 | False |
+#### So sánh cách dùng
+
+Cú pháp dùng `&` ở Cách 1 đặt hai điều kiện pandas cạnh nhau và cần ngoặc cho từng phép so sánh. Cách 2 gọi `np.logical_and` để thể hiện phép kết hợp bằng tên hàm. Hai cách phải giữ cùng chỉ mục và cùng quy tắc xử lý ngày thiếu.
+
 :::
 
 ---
@@ -504,6 +512,10 @@ Tách phần chuẩn bị ngày khỏi mặt nạ lọc giúp theo dõi từng b
 | 2019-01-01 00:00:00 | 100 |
 | 2019-01-01 00:00:00 | 101 |
 | 2019-01-01 00:00:00 | 102 |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi cần đếm chính xác số dòng bị loại và kiểm soát từng bước gán chỉ mục thời gian. Cách 2 thích hợp khi muốn tổ chức các bước lọc và sắp xếp thành chuỗi phương thức liền mạch, đồng thời tách riêng bản sao mới.
+
 :::
 
 ---
@@ -697,6 +709,10 @@ So sánh thuộc tính `.index.year` với năm cần tìm tạo mặt nạ cùn
 | Kết quả |
 | --- |
 | Năm 2019: 1317 dòng, Năm 2021: 952 dòng |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi chỉ mục đã là dạng thời gian và bạn chỉ cần cắt nhanh các bản ghi của một năm bằng nhãn chuỗi. Cách 2 thuận tiện hơn khi muốn kết hợp điều kiện năm với nhiều tiêu chí lọc khác trên cùng mặt nạ boolean.
+
 :::
 
 ---
@@ -914,6 +930,10 @@ Chuẩn hóa nhãn kỳ giúp so sánh mốc kết thúc quý với snapshot m�
 | 2025-12-31 00:00:00 | 528 |
 | 2026-03-31 00:00:00 | 904 |
 | 2026-06-30 00:00:00 | 746 |
+#### So sánh cách dùng
+
+Cách 1 giúp quan sát nhãn cuối quý và bước bỏ kỳ cuối trong bộ dữ liệu đã cho. Cách 2 đối chiếu kết thúc kỳ với snapshot để chọn các quý đã trọn vẹn. Khi thay dữ liệu, hãy kiểm độ phủ thời gian trước khi quyết định bỏ một quý.
+
 :::
 
 ---
@@ -1012,6 +1032,10 @@ display(
 | Kết quả |
 | --- |
 | Mốc 29/06: Còn 1 quý, Mốc 30/06: Còn 2 quý |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi dữ liệu chưa chắc chắn được sắp xếp tuần tự hoặc cần kết hợp thêm điều kiện lọc phụ. Cách 2 là lựa chọn trực diện khi chỉ mục ngày đã sắp thứ tự và bạn muốn lấy ngay đoạn lịch sử hợp lệ bằng phép cắt lát.
+
 :::
 
 ---
@@ -1272,6 +1296,10 @@ Việc gom nhãn và giá trị vào một dict giữ kết quả có tên trư�
 | quy_dinh | 2026-03-31 00:00:00 |
 | quy_day | 2020-06-30 00:00:00 |
 | gia_tri_day | 26 |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi cần tra cứu nhanh nhãn thời gian và giá trị cực trị qua từng lệnh đơn lẻ lúc khám phá. Cách 2 phù hợp hơn khi bạn muốn gom toàn bộ chỉ số vào một từ điển có cấu trúc rõ ràng để tiện xuất báo cáo.
+
 :::
 
 ---
@@ -1480,6 +1508,10 @@ Tổng hợp theo ngày rồi căn về cùng lịch cho phép so sánh các nă
 | 2025-12-29 00:00:00 | 7 |
 | 2025-12-30 00:00:00 | 5 |
 | 2025-12-31 00:00:00 | 5 |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn muốn tạo sẵn khung lịch dương đầy đủ để kiểm soát việc điền số 0 cho những ngày không có sự kiện. Cách 2 thuận tiện khi chuỗi thời gian cần được chuẩn hóa tần suất trực tiếp trong bước tổng hợp mà không cần tạo lịch rời.
+
 :::
 
 ---
@@ -1729,6 +1761,10 @@ Tách chuỗi làm mượt và thao tác tìm đỉnh giúp đối chiếu cả 
 | Đỉnh quá khứ: 2025-11-26 với giá trị 11.29 |
 
 ![Số đánh giá theo ngày năm 2025 và đường trung bình trượt 7 ngày](img/labs/lab-08/rolling-7d-2025.svg)
+#### So sánh cách dùng
+
+Cửa sổ đặt ở giữa trong Cách 1 thích hợp để mô tả lại lịch sử, vì mỗi điểm dùng cả những ngày phía sau. Chọn cửa sổ kết thúc tại ngày đang xét của Cách 2 khi chỉ được dùng dữ liệu đã có tại thời điểm tính.
+
 :::
 
 ---
@@ -1979,6 +2015,10 @@ Tách giá trị hiện tại và giá trị dịch bốn kỳ bằng `shift(4)`
 | 2025-09-30 00:00:00 | 0.227273 |
 | 2025-12-31 00:00:00 | 0.340102 |
 | 2026-03-31 00:00:00 | 0.521886 |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi muốn tính nhanh tỷ lệ thay đổi trên chuỗi quý liên tục bằng phương thức có sẵn của pandas. Cách 2 thích hợp khi cần kiểm tra chặt chẽ mẫu số bằng 0 hoặc muốn giữ riêng mức chênh lệch tuyệt đối trước khi chia.
+
 :::
 
 ---
@@ -2211,6 +2251,10 @@ display(f"Tháng 5/2026 so cùng kỳ: {kq_so_sanh_c2['so_cung_ky']:+.1f}%")
 | Kết quả |
 | --- |
 | Tháng 5/2026 so cùng kỳ: +57.1% |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn cần tra cứu chính xác một tháng cụ thể và kiểm tra tường minh sự tồn tại của các kỳ đối chiếu. Cách 2 phù hợp hơn khi muốn tính sẵn các chuỗi thay đổi trên toàn bộ lịch sử rồi mới trích xuất kết quả cần đọc.
+
 :::
 
 ---
@@ -2454,6 +2498,10 @@ Tính cả tỷ lệ theo tổng tháng lẫn tỷ lệ theo số đánh giá m�
 | Kết quả |
 | --- |
 | Chênh lệch theo ngày: -0.37% |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi chỉ cần tính nhanh chỉ số đánh giá trung bình mỗi ngày theo số ngày thực tế của từng tháng. Cách 2 phù hợp khi bạn muốn xây dựng bảng tổng hợp hoàn chỉnh gồm cả số lượng và tốc độ để đối chiếu nhiều khía cạnh.
+
 :::
 
 ---
@@ -2689,6 +2737,10 @@ Gom các dấu kiểm vào một báo cáo giúp giữ lại số dòng, ngày v
 | 2026-03-16 00:00:00 | 50 |
 | 2026-03-17 00:00:00 | 8 |
 | 2026-03-18 00:00:00 | 8 |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn chỉ cần xác định nhanh ngày đạt đỉnh kỷ lục và giá trị số đếm cao nhất trong chuỗi. Cách 2 cần thiết khi bạn muốn trích xuất các bản ghi gốc trong ngày đó nhằm kiểm tra dấu hiệu trùng lặp hoặc bất thường.
+
 :::
 
 ---
@@ -2880,6 +2932,10 @@ Tạo các mặt nạ riêng cho ngày thiếu, ngày sau snapshot và ngày đ�
 | 1 | Phòng riêng Bellas Artes | 535 | True |
 | 3 | Studio Recoleta | 586 | True |
 | 4 | Nhà cổ Brasil | NaN | True |
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi chỉ cần tính nhanh khoảng cách ngày giữa lần đánh giá cuối và mốc snapshot vào một cột số liệu. Cách 2 phù hợp hơn khi cần gắn cờ phân loại chi tiết để tách biệt giữa dữ liệu khuyết thiếu, mốc sai lệch và hồ sơ đã cũ.
+
 :::
 
 ---

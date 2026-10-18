@@ -127,6 +127,12 @@ print(calculate(8))
 
 
 class ExecutionTests(unittest.TestCase):
+    def test_windows_newlines_preserve_multiline_string_content(self):
+        code = 'value = """first\r\nsecond"""\r\nprint(repr(value))\r\n'
+        result = composer.execute_program(code)
+        self.assertTrue(result["passed"], result)
+        self.assertEqual(result["stdout"], repr("first\nsecond") + "\n")
+
     def test_processes_have_fresh_namespaces_and_working_directories(self):
         first = composer.execute_program('from pathlib import Path\nsecret = 7\nPath("state.txt").write_text("private")\nprint(secret)')
         self.assertTrue(first["passed"])

@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: IMPLEMENTED_AND_INDEPENDENTLY_VERIFIED
 
 # Sửa tiêu đề và viền bài tập
 
@@ -31,3 +31,16 @@ Chạy kiểm container và kiểm nhãn không lặp. Codex sẽ xem diff, ghé
 Quyền công cụ đầy đủ đã được người dùng cho phép trong đúng ba worktree
 -a, -b, -c và phạm vi soạn/rà môn này, tiếp tục xác nhận khi yêu cầu sửa
 nhãn/viền ngày 18/10/2026. `dangerously_skip_permissions=true`.
+
+## Kiểm nhận
+
+Antigravity viết helper, tích hợp renderer, CSS và kiểm hồi quy trong worktree
+B. Lời gọi `d7706fcd054c4cf7b0603e87dac738c4` hết thời gian sau 1200 giây,
+nhưng các file đã được tạo. Giữ worktree và phân loại lời gọi là timeout.
+Codex tự đọc diff, bổ sung xử lý tiền tố lặp trong nguồn và bỏ qua code fence,
+rồi chạy độc lập 50 ca container cùng bộ kiểm tiêu đề thực trên VitePress.
+
+Đã xem trực tiếp trang NumPy ở 360 và 1280 px. Các nhãn không còn lặp,
+viền bài tập bằng 0 px, viền cảnh báo thông thường vẫn là 3 px. Các ID bài,
+đề, lời giải và nội dung code được giữ. Dependency của B dùng junction
+node_modules tới main để kiểm tra, không cài thêm package.

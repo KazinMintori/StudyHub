@@ -34,7 +34,13 @@
 }
 .vp-doc .data-lab-set img { max-width: 100%; height: auto; }
 @media (max-width: 600px) {
-  .vp-doc .data-lab-set div[class*="language-"] > button.copy { opacity: 1; }
+  .vp-doc .data-lab-set div[class*="language-"] > button.copy { opacity: 1; top: 8px; }
+  .vp-doc .data-lab-set div[class*="language-"] > span.lang {
+    left: 16px;
+    right: auto;
+    top: 12px;
+  }
+  .vp-doc .data-lab-set div[class*="language-"] pre { padding-top: 64px; }
   .vp-doc .data-lab-set .study-data-table {
     display: block;
     overflow: visible;
@@ -169,6 +175,12 @@
   text-underline-offset: 4px;
 }
 .lecture-reading-plain .main > .vp-doc details > summary:hover { color: var(--ink); }
+/* Exercise custom blocks: remove yellow left border from warning while keeping semantic structure */
+.vp-doc .custom-block.warning.exercise,
+.vp-doc .custom-block.exercise {
+  border-left: 0;
+  padding-left: 0;
+}
 .lesson-actions { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-family: var(--font-ui); }
 .lesson-actions nav { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-5); }
 .lecture-slides > .eyebrow { font-size: 11px; letter-spacing: 1.6px; font-weight: 600; color: var(--ink-2); }

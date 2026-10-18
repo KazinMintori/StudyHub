@@ -310,6 +310,10 @@ Chuỗi phương thức gắn các bước lọc, đặt chỉ mục và tổng 
 | Kết quả |
 | --- |
 | Cách 2: Tổng số đánh giá = 391, độ dài chuỗi = 30 |
+#### So sánh cách dùng
+
+Cách 1 mở rõ bước lọc quận, tổng hợp tháng và bỏ kỳ cuối theo yêu cầu đã cho. Cách 2 gom việc lọc và tổng hợp thành chuỗi phương thức. Khi thay dữ liệu, vẫn phải đối chiếu snapshot thay vì mặc nhiên coi mọi tháng còn lại đều trọn vẹn.
+
 :::
 
 ---
@@ -530,6 +534,10 @@ display(
 | Kết quả |
 | --- |
 | Cách 2: Tháng cuối trọn vẹn = 2026-05-31, số lượt = 9 |
+#### So sánh cách dùng
+
+Cách 1 đặt bước kiểm tra snapshot gần thao tác tổng hợp để dễ đối chiếu mốc thời gian. Cách 2 làm rõ việc giữ các tháng đã hoàn tất. Chọn cách trình bày nào cũng phải phân biệt tháng chưa đủ ngày với tháng có số đánh giá thấp.
+
 :::
 
 ---
@@ -825,6 +833,10 @@ Gom thiết lập nhãn, nguồn và lưu hình trong một hàm giúp tạo l�
 | Cách 2: Đã lưu biểu đồ với 1 đường số liệu |
 
 ![Diễn biến số lượt đánh giá theo tháng tại quận Providencia](img/labs/lab-12/providencia-monthly-reviews.svg)
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi vẽ nhanh đồ thị đường đơn giản để khảo sát xu hướng chuỗi thời gian trong quá trình khám phá. Cách 2 cần thiết khi muốn chuẩn hóa lưới trục, nhãn ngày tháng và đóng gói hàm vẽ nhằm xuất hình ảnh sắc nét cho báo cáo.
+
 :::
 
 ---
@@ -1009,6 +1021,10 @@ Tạo cột boolean rồi dùng named aggregation giúp tên `n` và `pct` đi c
 | Kết quả |
 | --- |
 | Cách 2: Quận dẫn đầu tỷ lệ nguyên căn là Lo Barnechea (100.0%) |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi bạn cần viết hàm tổng hợp tùy biến để trực tiếp kiểm soát công thức tính tỷ lệ trên từng nhóm dữ liệu. Cách 2 thuận tiện hơn khi muốn dùng named aggregation để đặt tên cột rõ ràng và sắp xếp sẵn thứ tự cho biểu đồ thanh.
+
 :::
 
 ---
@@ -1247,6 +1263,10 @@ Thiết lập nhãn và lưu hình trong cùng hàm giữ biểu đồ tái lậ
 | Cách 2: Đã lưu biểu đồ với 5 nhãn giá trị số liệu |
 
 ![Tỷ lệ phòng nguyên căn tại các quận có từ 5 chỗ ở trở lên](img/labs/lab-12/entire-home-share-barh.svg)
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi muốn tạo nhanh biểu đồ thanh ngang với thang đo bắt đầu từ 0 để so sánh trung thực các nhóm. Cách 2 thích hợp khi cần trau chuốt đồ thị để xuất bản, phân tầng màu sắc nhấn mạnh và căn chỉnh lề để nhãn không bị tràn.
+
 :::
 
 ---
@@ -1485,6 +1505,10 @@ Hàm trả cả Axes và hai số đếm giúp kiểm đối chiếu hình với
 | Cách 2: Số thanh trên biểu đồ = 40 |
 
 ![Phân phối số ngày mở lịch trong năm tới](img/labs/lab-12/availability-365-hist.svg)
+#### So sánh cách dùng
+
+Cách 1 thuận tiện để dựng histogram và kiểm tổng tần suất trên số quan sát hợp lệ. Cách 2 trả thêm số đếm tại hai vùng biên cùng đối tượng Axes để đối chiếu bảng với hình. Cách chia khoảng vẫn phải được giữ rõ trong báo cáo.
+
 :::
 
 ---
@@ -1693,6 +1717,10 @@ Các mặt nạ theo cột giúp kiểm lại từng cận dưới và cận tr�
 | Kết quả |
 | --- |
 | Cách 2: Tỷ lệ hai cực = 11.67% khóa lịch và 21.67% mở quanh năm |
+#### So sánh cách dùng
+
+Cách 1 mở từng điều kiện chia nhóm và giữ số ô thiếu riêng. Cách 2 trình bày các nhóm bằng mặt nạ cột để đối chiếu số lượng với tỷ trọng. Khi chọn cách làm, cần giữ nguyên các cận và mẫu số, không đổi ngưỡng giữa hai lời giải.
+
 :::
 
 ---
@@ -1703,10 +1731,10 @@ Các mặt nạ theo cột giúp kiểm lại từng cận dưới và cận tr�
 ::: exercise Đo lường sự sai lệch khi cắt ngắn trục tung
 Một thủ thuật trình bày trực quan thường bị lạm dụng trong các báo cáo thiếu trung thực là cắt ngắn trục tung (truncated vertical axis). Bằng cách thiết lập giới hạn dưới của trục $y$ sát với giá trị nhỏ nhất của dữ liệu thay vì bắt đầu từ 0, chênh lệch thực tế nhỏ sẽ bị khuếch đại lên gấp nhiều lần, khiến mắt người đọc có cảm giác về một khoảng cách khổng lồ.
 
-Hãy viết hàm `visual_distortion_factor(data: pd.Series, y_min: float, y_max: float) -> dict` tính toán:
+Hãy viết hàm `visual_distortion_factor(data: pd.Series, y_min: float, y_max: float) -> dict` tính toán: Đặt $R_1$ là tỷ số giá trị và $R_2$ là tỷ số chiều cao hiển thị.
 1. Tỷ số giá trị thực tế giữa nhóm cao nhất và nhóm thấp nhất:
 $$
-R_{\text{thuc}} = \frac{v_{\max}}{v_{\min}}
+R_1 = \frac{v_{\max}}{v_{\min}}
 $$
 2. Chiều cao thị giác hiển thị của cột trên biểu đồ:
 $$
@@ -1714,11 +1742,11 @@ h = v - y_{\min}
 $$
 3. Tỷ số chiều cao trực quan trên biểu đồ:
 $$
-R_{\text{thi\_giac}} = \frac{v_{\max} - y_{\min}}{v_{\min} - y_{\min}}
+R_2 = \frac{v_{\max} - y_{\min}}{v_{\min} - y_{\min}}
 $$
 4. Hệ số phóng đại sai lệch thị giác (Visual Distortion Factor):
 $$
-D = \frac{R_{\text{thi\_giac}}}{R_{\text{thuc}}}
+D = \frac{R_2}{R_1}
 $$
 5. Thử nghiệm với chuỗi tỷ lệ ba quận `Santiago` ($65\%$), `Providencia` ($75\%$), `Las Condes` ($80\%$) khi bị cắt ngắn với $y_{\min} = 60\%$ và $y_{\max} = 85\%$.
 :::
@@ -1845,6 +1873,10 @@ display(f"Cách 2: Hệ số phóng đại thị giác = {kq_dist_c2['he_so']} l
 | Cách 2: Hệ số phóng đại thị giác = 3.25 lần |
 
 ![Biểu đồ cột bị cắt ngắn trục tung gây hiểu sai](img/labs/lab-12/misleading-truncated-bar.svg)
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi muốn minh họa từng bước cơ chế bóp méo thị giác do cắt trục tung trên một ví dụ cụ thể để giảng giải. Cách 2 phù hợp khi cần xây dựng hàm kiểm định tự động có kiểm tra điều kiện biên cho nhiều bộ số liệu.
+
 :::
 
 ---
@@ -1997,6 +2029,10 @@ Tạo Figure mới rồi đặt giới hạn, nhãn và lưu tệp trong hàm gi
 | Cách 2: Đã lưu biểu đồ với tiêu đề: 'Tỷ lệ phòng nguyên căn giữa các quận có sự tương đồng đáng kể' |
 
 ![Biểu đồ cột trung thực có trục tung xuất phát từ gốc 0](img/labs/lab-12/honest-zero-baseline-bar.svg)
+#### So sánh cách dùng
+
+Bạn nên chọn Cách 1 khi cần sửa nhanh biểu đồ thanh về gốc 0 để loại bỏ ấn tượng sai lệch cho người xem. Cách 2 phù hợp khi đại lượng là tỷ lệ phần trăm cần thang chuẩn 100% và đòi hỏi nhãn số chi tiết để kiểm chứng dữ liệu.
+
 :::
 
 ---
@@ -2313,6 +2349,10 @@ display(f"Cách 2: Trạng thái kiểm định toàn diện = {kiem_tra_c2['all
 | Kết quả |
 | --- |
 | Cách 2: Trạng thái kiểm định toàn diện = True |
+#### So sánh cách dùng
+
+Hãy chọn Cách 1 khi viết kiểm thử đơn vị cho một đồ thị cụ thể để xác minh nhanh cấu trúc của các trục. Cách 2 cần thiết khi muốn xây dựng bộ quy tắc kiểm định tái sử dụng nhằm tự động hóa đánh giá chất lượng nhiều biểu đồ.
+
 :::
 
 ---
@@ -2545,6 +2585,10 @@ Dùng `subplots` và các tùy chọn chia sẻ trục giúp thống nhất gi�
 | Cách 2: Giới hạn trục y dùng chung = (np.float64(0.0), np.float64(4.2)) |
 
 ![So sánh phân phối số ngày mở lịch giữa hai quận trên cùng thang đo](img/labs/lab-12/comparative-groups-distribution.svg)
+#### So sánh cách dùng
+
+Cả hai cách dùng `sharey=True` để giữ cùng thang tần suất. Cách 2 còn dùng chung lưới khoảng từ 0 đến 365 ngày, giúp một khoảng ngày mang cùng ý nghĩa ở cả hai hình. Chọn cách này khi cần đối chiếu trực tiếp hình dạng hai phân phối.
+
 :::
 
 ---

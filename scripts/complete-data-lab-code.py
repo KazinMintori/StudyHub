@@ -575,8 +575,8 @@ def execute_program(program: str, timeout: float = 60) -> dict:
     """Each call starts a fresh interpreter and a fresh working directory."""
     with tempfile.TemporaryDirectory(prefix="studyhub-method-") as temporary:
         working = Path(temporary)
-        (working / "program.py").write_text(program, encoding="utf-8")
-        (working / "runner.py").write_text(RUNNER, encoding="utf-8")
+        (working / "program.py").write_text(program, encoding="utf-8", newline="")
+        (working / "runner.py").write_text(RUNNER, encoding="utf-8", newline="")
         env = os.environ.copy()
         env.update(PYTHONIOENCODING="utf-8", MPLBACKEND="Agg")
         try:
@@ -639,7 +639,7 @@ def main(argv=None) -> int:
                       for _, program in programs] if (args.check or args.write) else []
         for index, (method, program) in enumerate(programs):
             name = f"{method.exercise}-method-{method.way}"
-            (output / f"{name}.py").write_text(program, encoding="utf-8")
+            (output / f"{name}.py").write_text(program, encoding="utf-8", newline="")
             record = {"exercise": method.exercise, "method": method.way, "line": method.line,
                       "configured": method.key in REGISTRY, "passed": True}
             if args.check or args.write:

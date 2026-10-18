@@ -6,9 +6,19 @@ import puppeteer from 'puppeteer'
 const base = process.env.QA_URL || 'http://127.0.0.1:5187'
 assert(/^http:\/\/127\.0\.0\.1:\d+$/.test(base), 'Use the local dev server')
 const root = fileURLToPath(new URL('../', import.meta.url))
+const requestedSlugs = process.env.QA_SLUGS?.split(',').filter(Boolean)
 const placement = JSON.parse(await readFile(new URL('../raw_materials/xu-ly-du-lieu/lab-placement.json', import.meta.url), 'utf8'))
+  .filter(chapter => !requestedSlugs || requestedSlugs.includes(chapter.slug))
+assert(placement.length > 0, 'No chapters selected for browser QA')
 const output = process.env.QA_OUTPUT || `${root}/qa/data-labs`
 await mkdir(output, { recursive: true })
+const expectedPrograms = new Map()
+for (const chapter of placement) {
+  for (const name of chapter.files) {
+    const source = (await readFile(new URL(`../raw_materials/xu-ly-du-lieu/labs/${name}`, import.meta.url), 'utf8')).replace(/\r\n/g, '\n')
+    expectedPrograms.set(name.replace(/\.md$/, ''), [...source.matchAll(/^```python[^\n]*\n(.*?)^```\s*$/gms)].map(match => match[1].trimEnd()))
+  }
+}
 const browser = await puppeteer.launch({ headless: true, executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe' })
 const report = { pages: [], failures: [], errors: [] }
 try {
@@ -33,6 +43,15 @@ try {
         images.forEach(image => { image.loading = 'eager' })
         await Promise.all(images.map(image => image.decode().catch(() => {})))
       })
+      const renderedPrograms = await page.$$eval('.data-lab-set', sets => sets.map(set => ({
+        id: set.dataset.lab,
+        programs: [...set.querySelectorAll('div[class*="language-python"] pre code')].map(code => code.textContent.trimEnd())
+      })))
+      for (const set of renderedPrograms) {
+        const expected = expectedPrograms.get(set.id)
+        assert.equal(set.programs.length, expected.length, `${set.id}: visible Python block count`)
+        set.programs.forEach((program, index) => assert(program === expected[index], `${set.id}: visible Python block ${index + 1} differs from source`))
+      }
       const result = await page.evaluate(() => {
         const visible = element => {
           const head = element.closest('thead')
