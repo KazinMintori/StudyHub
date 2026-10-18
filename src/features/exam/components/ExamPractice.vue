@@ -940,6 +940,7 @@ onUnmounted(() => {
 }
 
 .exam-question__id-tag {
+  display: none;
   font-size: 13px;
   font-weight: 500;
   color: var(--ep-ink-3);
@@ -947,7 +948,7 @@ onUnmounted(() => {
 }
 
 .exam-question__group-tag {
-  display: inline-block;
+  display: none;
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 4px;
