@@ -126,7 +126,7 @@
       "B1-060"
     ],
     "reviewed": 60,
-    "contentSha256": "bb4811a4a674a1436cd330e47c6e665af756fcf8ebbdde94d6485d60a01375d3"
+    "contentSha256": "fe1a8a3828b9e20b3a0eca5e1673264f50cc5ff64c2fc4b7b213ad3f6edd9ac7"
   },
   {
     "lesson": "02",
@@ -408,7 +408,7 @@
       "B3-MR12"
     ],
     "reviewed": 72,
-    "contentSha256": "6e5e8c1fd3c7d97704099804935ab28b4685ea917009b393a66bf4b33d53f3bf"
+    "contentSha256": "883967c82875142949d0bd22f384067cb09c9dd3d240a63ef646d0cf3744956c"
   },
   {
     "lesson": "04",
@@ -537,7 +537,7 @@
       "B4-060"
     ],
     "reviewed": 60,
-    "contentSha256": "ca9fd07692e0b1d18673711dac4f625d8d1e0b37e82f72ff0ec4cbf00e501c2a"
+    "contentSha256": "a8dc774c96ab90d988f2698d3827e2ff38c1182d08dab88b79e2fc20a88d09c2"
   },
   {
     "lesson": "05",
@@ -843,7 +843,7 @@
       "B6-MR12"
     ],
     "reviewed": 72,
-    "contentSha256": "c82ab1aa8b071c2faa75422caeb74bc32d34615d15ace5f979b52361a2d0ca46"
+    "contentSha256": "b60369ef78e451918704c44542135cc80e020e93d0defe8aba5fcccabb74cbd0"
   },
   {
     "lesson": "07",
@@ -1012,7 +1012,7 @@
       "B7-R20"
     ],
     "reviewed": 80,
-    "contentSha256": "9dae4c2e8e0adfc958baff14a85d38440de580057c0739870b396dbf48877559"
+    "contentSha256": "51202b8a64ccfa93b11c3e16fbbb26920e06fffef8644cdebf9d3a6f172aeebc"
   },
   {
     "lesson": "08",
@@ -1165,6 +1165,6 @@
       "B8-MR12"
     ],
     "reviewed": 72,
-    "contentSha256": "9c7c3ee36ddb321a8edfb6fe86da5436db06de507f5beaecc1a34c41e73acfbc"
+    "contentSha256": "edee87bccd00ad6e3ea73cf4b968516ee8720a39315dcd903d35105db6af2dd0"
   }
 ]

@@ -12,9 +12,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 123 15.0. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-001: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"123 15.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -28,9 +28,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [False, False, False, False, True, True]. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-002: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[False, False, False, False, True, True]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -44,9 +44,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi biểu thức list comprehension lọc các giá trị không âm và đổi đơn vị: Kết quả thu được danh sách `[1.2, 0.0, 2.4]`. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-003: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -60,9 +60,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 9. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-004: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"4 9\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -76,9 +76,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [2050.0, -5.0, None, 0.0]. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-005: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[2050.0, -5.0, None, 0.0]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -92,9 +92,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi với tệp giả lập note.txt (UTF-8, 'Dữ liệu'): F.closed là True sau khối with, text giữ chuỗi 'Dữ liệu'. Khớp đáp án D.",
-        "limitations": "Mô phỏng tệp văn bản trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-006: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"True Dữ liệu\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -108,9 +108,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi với tệp rev.csv và csv.DictReader: Lọc r['luot'] == '0' thu được 2 hàng (P2, P4), còn r['luot'] == 0 không khớp hàng nào vì giá trị đọc vào là chuỗi. Khớp đáp án B.",
-        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-007: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"0 2\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -119,9 +119,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [None, 0, 5].",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-008: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[None, 0, 5]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -130,9 +130,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến TypeError (float() argument must be a string or a real number, not 'NoneType').",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-009: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"TypeError\",\n    \"error\": \"float() argument must be a string or a real number, not 'NoneType'\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -141,9 +141,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 30.0.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-010: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"30.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -157,9 +157,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi cắt lát danh sách và tính tổng: Cắt lát `luot[1:4]` lấy các phần tử tại vị trí 1, 2, 3 gồm `[7, 5, 8]`, tổng tính được là `20`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-011: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -173,9 +173,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('A', 8), ('C', 6)]. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-012: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[('A', 8), ('C', 6)]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -189,9 +189,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án B.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B2-013: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -205,9 +205,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: -2 None. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-014: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"-2 None\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -221,9 +221,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi với dem.csv: Sắp xếp theo chuỗi so_dem tăng dần cho ra ['100', '20', '3', '8'], hai dòng đầu là C (20) và B (8). Khớp đáp án C.",
-        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-015: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"['C', 'B']\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -237,9 +237,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 5 None True 'null' False. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-016: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"5 None True 'null' False\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -253,9 +253,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi thao tác tạo thư mục trong thư mục tạm: Tham số `parents=True` hỗ trợ tạo các thư mục cha trung gian khi cần thiết, và `exist_ok=True` cho phép thực thi lặp lại mà không phát sinh lỗi khi thư mục đã tồn tại, đồng thời tệp `out/keep.txt` cũ vẫn được giữ nguyên vẹn. Khớp phương án B.",
-        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-017: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -264,9 +264,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: |An | 1,200|.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-018: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"|An   | 1,200|\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -275,9 +275,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 0 5.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-019: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"4 0 5\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -286,9 +286,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['A', 'B'].",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-020: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"['A', 'B']\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -302,9 +302,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 12,341 12340.75. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-021: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"12,341 12340.75\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -318,9 +318,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['A', 'B', 'C'] False. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-022: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"['A', 'B', 'C'] False\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -334,9 +334,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: P3 90. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-023: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"P3 90\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -350,9 +350,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi hàm `map` với đối số đầu là tên hàm `clean_price` và đối số thứ hai là danh sách chuỗi: Hàm chuyển đổi từng phần tử và `list()` thu được danh sách số thực `[2.0, 0.0, 5.0, 8.0]`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-024: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -366,9 +366,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi thao tác đọc ghi tệp trong thư mục tạm: Đọc nội dung ban đầu nhận chuỗi `cũ`, sau đó mở tệp với chế độ `w` ghi đè chuỗi `mới`, đọc lại nhận chuỗi `mới`. Lệnh `print(truoc, sau)` in ra `cũ mới`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-025: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"FileNotFoundError\",\n    \"error\": \"[Errno 2] No such file or directory: 'ghi_chu.txt'\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -382,9 +382,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi csv.DictWriter với fieldnames=['id', 'gia']: Header và hàng dữ liệu được ghi đúng, giá chứa dấu phẩy được bọc ngoặc kép. Khớp đáp án C.",
-        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-026: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -398,9 +398,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 5 50.0 25.0 140. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-027: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"5 50.0 25.0 140\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -409,9 +409,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [15, 16].",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-028: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[15, 16]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -420,9 +420,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [30.0, -3.0] 13.5.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-029: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[30.0, -3.0] 13.5\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -431,9 +431,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi tạo module cleaning.py và import: Hàm clean_price đổi '$45' thành 45.0, list comprehension tính trung bình ra 45.0. Khớp lời giải tự luận.",
-        "limitations": "Tạo module Python cục bộ trong thư mục tạm."
+        "method": "exact_in_memory_module_fixture_execution",
+        "evidence": "Đã tạo module cleaning trong bộ nhớ bằng đúng mã cleaning.py của đề, rồi chạy main.py trong namespace riêng. Kết quả là NameError vì tên cleaning chưa được khai báo trong namespace của main. Câu lệnh from cleaning import parse_price chỉ đưa parse_price vào namespace đó.",
+        "limitations": "Fixture module được cung cấp rõ ràng trong sys.modules, không sửa tệp hoặc cài gói. Lần chạy cũ thiếu module nên ModuleNotFoundError không phải bằng chứng cho đáp án. Bằng chứng mới nằm tại qa/data-exam-second-review/sol/supplemental-execution.json."
       }
     },
     {
@@ -447,9 +447,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4.0% 0.0%. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-031: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"4.0% 0.0%\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -463,9 +463,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi ghép cặp theo vị trí ban đầu rồi sắp xếp theo giá: Hàm `zip(ma, gia)` tạo các cặp tương ứng, sau đó sắp xếp tăng dần theo giá trị và lấy hai phần tử đầu tiên cho kết quả `[('P3', 10), ('P2', 20)]`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-032: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -479,9 +479,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [7, 9, 5, 1] [7, 3, 5, 1, 2]. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-033: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[7, 9, 5, 1] [7, 3, 5, 1, 2]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -495,9 +495,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 10.0 ['10']. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-034: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"10.0 ['10']\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -511,9 +511,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi ghi và đọc lại bao_cao.json với ensure_ascii=False: JSON lưu trực tiếp ký tự tiếng Việt có dấu, đọc lại in ra 'Đồi 3'. Khớp đáp án A.",
-        "limitations": "Mô phỏng tệp JSON trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-035: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"Đồi 3\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -527,9 +527,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: C. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-036: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"C\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -543,9 +543,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi Path('data/raw/HaNoi').parent: Trả về Path('data/raw'), glob('*.csv') chỉ tìm thấy 1 tệp tổng. Khớp đáp án D.",
-        "limitations": "Mô phỏng cây thư mục trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-037: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -554,9 +554,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B2-038: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -565,9 +565,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 30.0.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-039: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"30.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -576,9 +576,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi đọc p.csv với ô trống và giá 0: Bỏ qua ô trống, giữ giá 0.0 và 30.0, tính trung bình hai giá biết ra 15.0. Khớp lời giải tự luận.",
-        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-040: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"9\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -592,9 +592,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 3 9. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-041: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"4 3 9\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -608,9 +608,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['3', '8'] ['120', '3']. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-042: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"['3', '8'] ['120', '3']\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -624,9 +624,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: None. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-043: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"None\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -640,9 +640,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án C.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B2-044: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -656,9 +656,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 6. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-045: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"4 6\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -672,9 +672,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi phép lọc và kiểm tra điều kiện: Danh sách `chua` chỉ gồm hai bản ghi A và D đều có ngày trống nên biểu thức `assert` vượt qua thành công, tuy nhiên phép kiểm một chiều này bỏ sót bản ghi B có 1 lượt review nhưng ngày vẫn bị trống. Khớp phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-046: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -683,9 +683,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [-4, 8] 2.0.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-047: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[-4, 8] 2.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -694,9 +694,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi biểu thức lọc trên danh sách phòng: Thu được danh sách mã `['P2', 'P4']` và từ điển ánh xạ `{'P2': 0, 'P4': 50}`, loại bỏ chính xác các bản ghi có giá `None` hoặc giá âm.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-048: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -705,9 +705,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến TypeError ('>' not supported between instances of 'NoneType' and 'int').",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-049: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"TypeError\",\n    \"error\": \"'>' not supported between instances of 'NoneType' and 'int'\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -716,9 +716,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: True.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-050: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"True\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -732,9 +732,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án D.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B2-051: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -748,9 +748,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('A', 9), ('B', 2)] [('A', 9), ('C', 5)]. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-052: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[('A', 9), ('B', 2)] [('A', 9), ('C', 5)]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -764,9 +764,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [3, None, -2, 0]. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-053: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[3, None, -2, 0]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -780,9 +780,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi đọc gia.csv: Ô trống bị bỏ qua, giá '0' được chuyển thành 0.0, tổng ba giá hợp lệ [0.0, 15.0, 30.0] là 45.0, trung bình là 15.0. In ra '3 15.0'. Khớp đáp án C.",
-        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-054: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"3 15.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -796,9 +796,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('2025', 4), ('2026', 2)]. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-055: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[('2025', 4), ('2026', 2)]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -812,9 +812,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án A.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B2-056: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -823,9 +823,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ('P3', 90).",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-057: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"('P3', 90)\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -834,9 +834,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến AttributeError ('NoneType' object has no attribute 'replace').",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-058: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"AttributeError\",\n    \"error\": \"'NoneType' object has no attribute 'replace'\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -845,9 +845,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "mock_file_execution",
-        "evidence": "Thực thi kiểm chứng trong thư mục tạm: Ghi bản ghi bằng `csv.DictWriter` với `newline=\"\"`, khi đọc lại bằng `csv.DictReader` trường `nhan` vẫn giữ nguyên chuỗi `\"Nam, Bắc\"` nhờ cơ chế tự động bao dấu nháy kép của chuẩn CSV, và trường `gia` đọc được là chuỗi `\"0\"`.",
-        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-059: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -856,9 +856,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('2025', 1), ('2026', 2)].",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B2-060: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"[('2025', 1), ('2026', 2)]\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     }
   ]

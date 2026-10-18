@@ -92,7 +92,9 @@ for (let number = 1; number <= 8; number++) {
         for (const key of ['A','B','C','D']) assert(new RegExp(`<h3\\b[^>]*>\\s*Phương án ${key}\\s*</h3>`).test(output.answerHtml), `${question.id}/${key}: expanded explanation rendered as an actual section`)
         for (const section of sections) assert(section[2].trim().split(/\s+/).length >= 18, `${question.id}/${section[1]}: detailed reasoning rather than a label`)
         for (const option of output.options) {
-          assert(review.optionExplanations?.[option.key]?.trim(), `${question.id}/${option.key}: explanation`)
+          const brief = review.optionExplanations?.[option.key]?.trim()
+          assert(brief, `${question.id}/${option.key}: explanation`)
+          assert.equal((brief.match(/`/g) || []).length % 2, 0, `${question.id}/${option.key}: balanced inline-code delimiters`)
           assert(option.explanationHtml.trim(), `${question.id}/${option.key}: visible explanation`)
         }
       }
@@ -117,4 +119,4 @@ const navigation = buildThemeConfig({courseCatalog:[{id:'xu-ly-du-lieu',name:'D�
 assert.deepEqual(navigation.sidebar['/xu-ly-du-lieu/'][0].items.map(item=>item.text), ['Tổng quan môn học','Bài tập ôn luyện','Ôn thi'])
 const ordinary = buildThemeConfig({courseCatalog:[{id:'other',name:'Khác',lessons:[]}],wikiGroups:[],concepts:{}})
 assert(!ordinary.sidebar['/other/'][0].items.some(item=>item.text==='Ôn thi'))
-console.log(`PASS ${total} questions: ${quiz} quiz, ${essay} essays; all source files, IDs, choices and navigation${draft ? ' (review pending)' : ', verified keys and option explanations'}.`)
+console.log(`PASS ${total} questions: ${quiz} quiz, ${essay} essays; source coverage, IDs, choices and navigation${draft ? ' (review pending)' : ', reviewed-key consistency and explanation structure'}. This structural check does not prove every answer.`)

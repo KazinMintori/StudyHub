@@ -5,16 +5,16 @@
       "id": "B1-001",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Đảo ngược vai trò giữa loại trùng và nối bảng.",
-        "B": "Đúng: Lấy thêm dữ liệu là thu thập, loại trùng là làm sạch, nối các bảng là biến đổi. Các thao tác chuẩn bị này giúp chuyển dữ liệu thô thành thông tin sử dụng được.",
-        "C": "Sai: Lấy file mới không phải là làm sạch và loại trùng không phải là thu thập.",
-        "D": "Sai: Thao tác lấy file và nối bảng không tạo ra biểu đồ trực quan."
+        "A": "Sai: Phương án này đảo ngược thứ tự hai bước chuẩn bị: 'Xóa các bản ghi trùng' thuộc khâu làm sạch, còn 'nối bảng theo mã' thuộc khâu biến đổi.",
+        "B": "Đúng: Lấy thêm file giá là thu thập dữ liệu; xóa các bản ghi trùng là làm sạch dữ liệu (loại trùng); nối bảng giá với chỗ ở theo mã là biến đổi dữ liệu (ghép nối bảng). Thứ tự chuẩn là Thu thập → Làm sạch → Biến đổi.",
+        "C": "Sai: Lấy file mới là thu thập (không phải làm sạch); xóa các bản ghi trùng là làm sạch (không phải thu thập).",
+        "D": "Sai: Lấy file là thu thập (không phải biến đổi); các thao tác chuẩn bị dữ liệu này chưa tạo ra biểu đồ trực quan hóa."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo quy trình chuẩn bị dữ liệu: Thao tác lấy file mới tương ứng với bước thu thập, loại bỏ các dòng trùng lặp là bước làm sạch, và nối các bảng để tạo tập dữ liệu phân tích là bước biến đổi. Khớp phương án B.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật theo các giai đoạn chuẩn bị dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-001: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -28,9 +28,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python trong môi trường notebook, lệnh `print(\"Chao\")` in dòng chữ `Chao` ra luồng xuất chuẩn và biểu thức cuối `3 + 4` hiển thị kết quả `7`. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-002: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"Chao\\n7\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -44,9 +44,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Môi trường ảo (`venv`) được tạo từ Python 3.11.9 giữ nguyên trình thông dịch nền của phiên bản đó. Tệp `.python-version` tạo sau không làm thay đổi nhị phân của `venv` hiện có, và `pip freeze` chỉ ghi nhận các gói đã cài. Để dùng Python 3.12.3, bắt buộc tạo lại `venv` bằng đúng trình thông dịch đó. Khớp phương án C.",
-        "limitations": "Thẩm định bằng phân tích logic quản lý môi trường ảo theo quy tắc của Python."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-003: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -60,9 +60,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo giả thiết đề bài, nghĩa vụ khai báo áp dụng khi người học sử dụng AI hỗ trợ, không phụ thuộc vào tỷ lệ phần trăm mã nguồn được chỉnh sửa. Bản khai báo yêu cầu nêu rõ câu lệnh truy vấn (prompt), các điểm sai lệch và cách thức kiểm chứng độc lập. Khớp phương án A.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật theo giả thiết và quy ước của đề bài."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-004: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -76,9 +76,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Môi trường ảo (`venv`) đảm bảo cô lập các gói thư viện giữa các dự án khác nhau trên máy cục bộ, đồng thời công cụ VS Code hỗ trợ kiểm soát phiên bản local do người học làm chủ, còn Google Colab cung cấp môi trường thực hành đám mây cấu hình sẵn tiện lợi. Khớp phương án D.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật theo các công cụ lập trình dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-005: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -92,9 +92,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo quy định trong tình huống giả định của đề bài, chế độ sử dụng công cụ được quy định riêng cho từng hoạt động: Bài tập về nhà cho phép mở tài liệu và dùng AI có khai báo, trong khi thi vấn đáp là hoạt động đóng và cấm sử dụng AI. Việc khai báo ở bài về nhà không cấp quyền sử dụng AI trong buổi vấn đáp. Khớp phương án C.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật theo giả thiết và quy ước của đề bài."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-006: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -108,9 +108,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo quy trình 5 bước sử dụng AI có trách nhiệm: Tự phác thảo ý tưởng, hỏi AI có ngữ cảnh, đọc hiểu bản chất, kiểm chứng độc lập và khai báo minh bạch. Bạn Mai đã thực hiện hai bước đầu, cần tiếp tục đọc hiểu, kiểm chứng và khai báo đầy đủ. Khớp phương án D.",
-        "limitations": "Thẩm định bằng phân tích logic quy trình sử dụng AI theo bài giảng."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-007: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -119,9 +119,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi đoạn mã `tong = gia * 2` trong môi trường chưa định nghĩa biến `gia`, Python phát sinh lỗi ngoại lệ `NameError` với thông điệp `name 'gia' is not defined`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-008: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"NameError\",\n    \"error\": \"name 'gia' is not defined\"\n  },\n  {\n    \"block\": 2,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"NameError\",\n    \"error\": \"name 'tong' is not defined\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -130,9 +130,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Trong hệ thống Git, trạng thái `??` biểu thị tệp chưa được theo dõi (untracked), đồng thời người dùng cần thực hiện lệnh `git add` để đưa tệp vào khu vực chờ (staging) trước khi tạo commit lưu vết.",
-        "limitations": "Thẩm định bằng phân tích logic theo nguyên lý kiểm soát phiên bản của Git."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-009: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -141,25 +141,25 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Phân tích bộ ba tái lập môi trường: Cố định phiên bản Python nền, quản lý phụ thuộc thư viện qua `requirements.txt` với phiên bản đóng băng chính xác, và cô lập môi trường thực thi bằng `venv`.",
-        "limitations": "Thẩm định bằng phân tích logic học thuật về chuẩn tái lập khoa học dữ liệu."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-010: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-011",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Sai: Kernel không tự động quét thực thi trước các cell phía dưới khi người dùng chưa nhấn chạy.",
-        "B": "Sai: Thứ tự vị trí trong tệp không đồng nghĩa với thứ tự thực thi trong bộ nhớ kernel.",
-        "C": "Sai: Việc nhìn thấy code trên giao diện không chứng minh code đó đã chạy và tạo ra biến.",
-        "D": "Đúng: Phiên làm việc mới khởi tạo kernel ở trạng thái sạch chưa có biến. Mã nguồn chỉ tạo ra giá trị trong bộ nhớ khi cell tương ứng được thực thi, do đó cần chạy tuần tự từ cell định nghĩa biến trước khi sử dụng."
+        "A": "Sai: Giá thiếu chưa biết không được tự coi là 0 nếu chưa có quy ước có căn cứ.",
+        "B": "Sai: Giá $1 cần được kiểm tra nguồn và đơn vị, không thể xóa chỉ vì nhỏ.",
+        "C": "Sai: Biểu đồ không thay cho kiểm tra kiểu chuỗi, giá thiếu và giá trị bất thường.",
+        "D": "Đúng: Làm rõ định dạng, dữ liệu thiếu và giá lạ trước khi thống kê, diễn giải."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo cấu trúc phiên làm việc của Jupyter notebook: Khi bắt đầu phiên mới, kernel được khởi động sạch và chưa chứa bất kỳ biến nào, đồng thời các cell cần được thực thi tuần tự từ trên xuống dưới để tích lũy trạng thái bộ nhớ chính xác. Khớp phương án D.",
-        "limitations": "Thẩm định bằng phân tích logic mô hình thực thi kernel của Jupyter notebook."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-011: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -173,89 +173,89 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Mô phỏng chính xác thứ tự chạy cell B, A, B trong phiên sạch: Lần đầu chạy cell B (`print(x)`) phát sinh lỗi `NameError` do biến `x` chưa được định nghĩa, đồng thời sau đó chạy cell A (`x = 2`) gán giá trị 2 cho `x`, đồng thời lần sau chạy cell B in ra giá trị `2`. Kết quả khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi kiểm chứng quy trình chạy cell trên môi trường Python 3.14.7."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-012: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  },\n  {\n    \"block\": 2,\n    \"status\": \"returned\",\n    \"stdout\": \"2\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
       "id": "B1-013",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Cú pháp này không hợp lệ trong hệ sinh thái dòng lệnh Python tiêu chuẩn.",
-        "B": "Sai: Lệnh này dùng để lưu lại danh sách gói đã cài chứ không phải để cài đặt thêm gói mới.",
-        "C": "Đúng: Lệnh `pip install` là cú pháp chuẩn xác để cài đặt thêm gói thư viện vào môi trường ảo đang kích hoạt.",
-        "D": "Sai: Lệnh này dùng để gỡ bỏ gói thư viện khỏi môi trường chứ không phải để cài mới."
+        "A": "Sai: Lệnh gọi đường dẫn Python của B sẽ dùng B, dù A đang kích hoạt.",
+        "B": "Sai: Lệnh chạy qua đúng một interpreter được gọi đích danh, nên chỉ cài vào B.",
+        "C": "Đúng: `/du_an_B/.venv/bin/python -m pip` gọi đúng trình thông dịch của B để cài gói, dù A vẫn đang kích hoạt.",
+        "D": "Sai: Đường dẫn tuyệt đối tới Python trong venv vẫn dùng chính venv đó, không chuyển sang Python hệ thống."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Để cài đặt gói thư viện vào môi trường ảo, lệnh chuẩn là `pip install <tên_gói>`. Lệnh này tải và cài gói trực tiếp vào thư mục `site-packages` của môi trường ảo đang kích hoạt. Khớp phương án C.",
-        "limitations": "Thẩm định bằng kiến thức cú pháp chuẩn của công cụ pip trong Python."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-013: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-014",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Quy trình học tập chuẩn mực đòi hỏi người học tự suy nghĩ hướng tiếp cận trước, sử dụng AI làm trợ lý gợi ý có ngữ cảnh, sau đó tự tay kiểm chứng từng dòng mã và khai báo minh bạch theo quy định.",
-        "B": "Sai: Việc sao chép trực tiếp toàn bộ lời giải của AI mà không hiểu bản chất là vi phạm quy chế học tập.",
-        "C": "Sai: Chỉ dựa vào việc mã nguồn chạy không báo lỗi là chưa đủ để khẳng định kết quả xử lý dữ liệu đúng đắn về mặt logic học thuật.",
-        "D": "Sai: Tự ý bỏ qua bước kiểm chứng độc lập khiến kết quả dễ rơi vào bẫy ảo giác của các mô hình ngôn ngữ lớn."
+        "A": "Đúng: Quiz đóng cấm dùng AI dù chỉ xin một gợi ý.",
+        "B": "Sai: Không chép nguyên văn không làm thay đổi lệnh cấm AI trong quiz đóng.",
+        "C": "Sai: Khai báo sau quiz không cấp quyền dùng AI trong lúc làm bài.",
+        "D": "Sai: Hỏi khái niệm vẫn là dùng AI trong hoạt động đóng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo nguyên tắc sư phạm và liêm chính học thuật: Khi làm bài tập thực hành, người học cần tự tìm hiểu và phác thảo hướng giải quyết trước, sau đó mới dùng AI để gợi ý hoặc giải thích các điểm chưa rõ, và bắt buộc tự tay kiểm chứng lại tính đúng đắn của giải pháp. Khớp phương án A.",
-        "limitations": "Thẩm định theo hướng dẫn học tập có trách nhiệm của môn học."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-014: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-015",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Sai: Colab không lưu trữ vĩnh viễn tệp tạm thời trên máy ảo sau khi phiên làm việc bị ngắt kết nối.",
-        "B": "Sai: Cả hai môi trường đều hỗ trợ định dạng notebook `.ipynb` một cách hoàn chỉnh.",
-        "C": "Sai: VS Code cục bộ không bị phụ thuộc vào giới hạn thời gian thực thi (timeout) của dịch vụ đám mây công cộng.",
-        "D": "Đúng: Google Colab cung cấp môi trường đám mây có sẵn tài nguyên GPU và thư viện phổ biến nhưng chỉ duy trì phiên tạm thời, trong khi môi trường VS Code cục bộ giúp người học làm chủ hoàn toàn mã nguồn, dữ liệu và phiên bản phần mềm trên máy tính cá nhân."
+        "A": "Sai: `pip freeze` chỉ liệt kê gói đã cài, không tự thêm thư viện phổ biến.",
+        "B": "Sai: Danh sách phản ánh các gói hiện có, không lưu mọi phiên bản từng được cài.",
+        "C": "Sai: Venv thông thường không lấy gói từ Python hệ thống.",
+        "D": "Đúng: Các gói phụ thuộc đã cài trong venv cũng xuất hiện trong kết quả freeze."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "So sánh giữa Google Colab và VS Code cục bộ: Colab chạy trên hạ tầng đám mây được cấp phát tạm thời và tự động thu hồi tài nguyên sau khi kết thúc phiên, trong khi VS Code chạy trên máy cá nhân cho phép lưu trữ lâu dài và kiểm soát hoàn toàn phiên bản thư viện. Khớp phương án D.",
-        "limitations": "Thẩm định bằng phân tích đặc tính kỹ thuật của hai môi trường phát triển."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-015: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-016",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Nhãn hoạt động quy định rõ phạm vi công cụ được phép sử dụng: Chế độ mở cho phép tham khảo tài liệu và dùng AI có khai báo, còn chế độ đóng cấm hoàn toàn sự can thiệp của các công cụ hỗ trợ bên ngoài.",
-        "B": "Sai: Khai báo trung thực không làm thay đổi bản chất của một bài kiểm tra đã được quy định là chế độ đóng.",
-        "C": "Sai: Hoạt động đóng không cho phép bất kỳ mức độ hỗ trợ tự động nào từ các công cụ AI.",
-        "D": "Sai: Quy định về nhãn áp dụng bình đẳng cho mọi sinh viên trong cùng một đợt đánh giá."
+        "A": "Đúng: Chưa rõ nhãn thì cần hỏi giảng viên trước khi dùng AI.",
+        "B": "Sai: Khai báo và tự kiểm tra không xác nhận rằng việc dùng AI được phép.",
+        "C": "Sai: Làm ở nhà hoặc ít điểm không tự biến bài thành hoạt động mở.",
+        "D": "Sai: Viết lại bản nháp vẫn là đã dùng AI, nên cần xác nhận chế độ trước."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Trong các quy định học phần: Nhãn 'Mở' (Open) cho phép người học tham khảo tài liệu và sử dụng công cụ hỗ trợ kèm nghĩa vụ khai báo minh bạch, trong khi nhãn 'Đóng' (Closed) yêu cầu người học tự hoàn thành mà không có sự trợ giúp từ bên ngoài. Khớp phương án A.",
-        "limitations": "Thẩm định theo quy ước phân định hoạt động đánh giá của đề bài."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-016: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-017",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Việc hỏi lại chính AI đó không thể coi là phép kiểm chứng khách quan và độc lập.",
-        "B": "Sai: Mã nguồn chạy thành công không đồng nghĩa với việc các phép tính thống kê bên trong phản ánh đúng yêu cầu thực tế.",
-        "C": "Đúng: Kiểm chứng độc lập đòi hỏi người học tự tạo các tập dữ liệu thử nghiệm nhỏ có kết quả tính tay trước hoặc đối chiếu với các quy luật toán học để xác minh mã do AI sinh ra có hoạt động chính xác hay không.",
-        "D": "Sai: Chỉ kiểm tra kiểu dữ liệu đầu ra là chưa đủ để khẳng định tính đúng đắn của logic tính toán."
+        "A": "Sai: Tỷ trọng kiểm tra lớp và giữa kỳ bị hoán đổi.",
+        "B": "Sai: Phần vấn đáp thuộc BTL không làm phiên vấn đáp trở thành mở.",
+        "C": "Đúng: Lab mở, kiểm tra lớp và giữa kỳ đóng, BTL mở ở nhà nhưng vấn đáp đóng.",
+        "D": "Sai: Tỷ trọng các thành phần không khớp cơ cấu điểm của môn."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Kiểm chứng độc lập đầu ra của AI đòi hỏi người học phải tự thiết lập các bài kiểm tra mẫu nhỏ tính tay được hoặc đối chiếu với các bất biến logic, không lấy chính kết quả do AI sinh ra làm tiêu chuẩn kiểm chứng. Khớp phương án C.",
-        "limitations": "Thẩm định theo nguyên tắc kiểm thử phần mềm và xác minh dữ liệu."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-017: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -264,9 +264,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi thực hiện Restart Kernel, toàn bộ không gian tên và trạng thái biến trong bộ nhớ RAM của phiên bị xóa hoàn toàn, đồng thời các cell cần được thực thi lại từ đầu để tái lập các giá trị.",
-        "limitations": "Thẩm định theo nguyên lý quản lý tiến trình kernel của Jupyter notebook."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-018: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -275,9 +275,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Cấu trúc thư mục chuẩn mực gồm: `data/raw/` lưu dữ liệu gốc chỉ đọc, `data/processed/` lưu dữ liệu đã làm sạch, `notebooks/` cho thử nghiệm, `src/` cho mã nguồn tái sử dụng và `requirements.txt` cố định môi trường.",
-        "limitations": "Thẩm định theo chuẩn thực hành kỹ nghệ dữ liệu tái lập."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-019: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -286,121 +286,121 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Nêu rõ ba nội dung bắt buộc trong bản khai báo sử dụng AI: Mục đích sử dụng cụ thể, các điểm sai sót do AI tạo ra mà người học đã phát hiện, và quy trình kiểm chứng độc lập đã thực hiện.",
-        "limitations": "Thẩm định theo quy chuẩn liêm chính học thuật trong xử lý dữ liệu."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-020: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-021",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Thao tác này xóa trạng thái cũ trong bộ nhớ chứ không giữ lại các biến đã tính từ trước.",
-        "B": "Đúng: Lệnh khởi động lại kernel và chạy toàn bộ từ trên xuống dưới giúp kiểm tra tính liền mạch của dòng dữ liệu và đảm bảo kết quả có thể tái lập độc lập mà không phụ thuộc vào thứ tự thao tác thủ công.",
-        "C": "Sai: Thao tác này không có chức năng tự động sửa lỗi cú pháp trong mã nguồn.",
-        "D": "Sai: Lệnh này không can thiệp vào các tệp dữ liệu lưu trữ trên ổ cứng."
+        "A": "Sai: Tính số chỗ ở theo khu là phân tích/biến đổi, không phải làm sạch.",
+        "B": "Đúng: Biến đổi tạo thông tin, trực quan hóa kết quả, rồi truyền đạt khuyến nghị.",
+        "C": "Sai: Khuyến nghị được xây từ kết quả đã phân tích và trực quan, không đi trước biểu đồ.",
+        "D": "Sai: Cần biến đổi/tổng hợp trước khi trực quan hóa."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Lệnh 'Restart & Run All' khởi động lại kernel ở trạng thái sạch và thực thi tuần tự từ cell đầu đến cell cuối, giúp phát hiện sớm các lỗi phụ thuộc ẩn vào thứ tự chạy cell nhảy cóc. Khớp phương án B.",
-        "limitations": "Thẩm định theo quy trình kiểm thử khả năng tái lập của notebook."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-021: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-022",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Sai: Lệnh này không tự động tải hoặc cập nhật các gói lên phiên bản mới nhất.",
-        "B": "Sai: Tệp xuất ra chỉ chứa tên gói và phiên bản phần mềm, không đóng gói dữ liệu đầu vào của dự án.",
-        "C": "Sai: Lệnh này không xóa các gói thừa mà chỉ phản ánh trạng thái cài đặt hiện tại.",
-        "D": "Đúng: Lệnh `pip freeze > requirements.txt` xuất toàn bộ danh sách các gói thư viện kèm theo phiên bản chính xác đang có trong môi trường ảo, giúp người khác có thể tái lập chính xác môi trường làm việc thông qua lệnh cài đặt tương ứng."
+        "A": "Sai: Cell Markdown dành cho chữ; dấu `!` gọi lệnh hệ điều hành trong cell code.",
+        "B": "Sai: `.python-version` không làm lệnh `python --version` đổi phiên bản Colab.",
+        "C": "Sai: Lệnh chạy trong runtime Colab, không báo phiên bản Python máy cá nhân.",
+        "D": "Đúng: Viết hướng dẫn bằng Markdown và chạy `!python --version` trong cell code để xem Python của Colab."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Lệnh `pip freeze > requirements.txt` ghi lại danh sách toàn bộ các gói thư viện cùng phiên bản chính xác đang cài trong môi trường, phục vụ việc tái lập môi trường đồng nhất trên các máy khác. Khớp phương án D.",
-        "limitations": "Thẩm định theo chuẩn đóng gói phụ thuộc trong Python."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-022: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-023",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Cell Markdown không thực thi được mã nguồn Python như cell code.",
-        "B": "Sai: Cell code không hỗ trợ cú pháp định dạng văn bản nâng cao như Markdown.",
-        "C": "Đúng: Cell code có chức năng thực thi mã lệnh và hiển thị kết quả xử lý, trong khi cell Markdown đóng vai trò ghi chú, giải thích lý do xử lý và cấu trúc báo cáo một cách khoa học.",
-        "D": "Sai: Cả hai loại cell đều được lưu trữ chung trong cùng một tệp định dạng `.ipynb`."
+        "A": "Sai: `requirements.txt` ghim gói, không ghim phiên bản Python.",
+        "B": "Sai: `pip freeze` ghi danh sách gói hiện tại, không khôi phục môi trường cũ.",
+        "C": "Đúng: Chọn đúng phiên bản Python đã kiểm thử, tạo venv rồi cài requirements.",
+        "D": "Sai: Chỉ nêu Python mà không biết phiên bản đã kiểm thử thì chưa đủ để dựng môi trường tương ứng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Trong notebook, cell code dùng để viết và thực thi mã Python, còn cell Markdown dùng để trình bày văn bản, công thức toán học và giải thích ngữ cảnh phân tích dữ liệu. Khớp phương án C.",
-        "limitations": "Thẩm định theo chức năng của các loại cell trong Jupyter notebook."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-023: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-024",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Việc lưu tệp không tự động sắp xếp lại thứ tự thực thi của các cell trong bộ nhớ.",
-        "B": "Sai: Chạy nhảy cóc không làm tăng tốc độ xử lý tổng thể của chu trình dữ liệu.",
-        "C": "Đúng: Chạy cell theo thứ tự lộn xộn khiến các biến trong bộ nhớ phụ thuộc vào lịch sử thao tác của người dùng, dẫn đến việc notebook thất bại khi thực thi tuần tự trong môi trường kiểm thử sạch.",
-        "D": "Sai: Notebook không tự phát hiện và ngăn chặn được các thao tác chạy cell không tuần tự."
+        "A": "Sai: Khai báo AI không miễn trách nhiệm về độ đúng của phép tính.",
+        "B": "Sai: Sửa tệp khai báo không sửa được phép tính nhầm cột.",
+        "C": "Đúng: Bài vẫn bị đánh giá theo kết quả sai; khai báo đúng không bảo đảm độ chính xác.",
+        "D": "Sai: Sai số liệu tự nó không chứng minh có gian lận trong đánh giá đóng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Thói quen chạy cell nhảy cóc tạo ra trạng thái ẩn trong bộ nhớ, khiến notebook chạy đúng lúc thao tác thủ công nhưng sẽ báo lỗi khi chạy lại từ đầu bằng phiên sạch. Khớp phương án C.",
-        "limitations": "Thẩm định theo nguyên lý quản lý trạng thái của Jupyter notebook."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-024: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-025",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Mọi mã nguồn và dữ liệu công khai trên Internet đều chịu sự điều chỉnh của giấy phép bản quyền tương ứng, người học cần kiểm tra kỹ điều khoản về quyền sử dụng, tái phân phối và nghĩa vụ ghi nhận tác giả trước khi tích hợp vào dự án.",
-        "B": "Sai: Tải được tệp từ mạng không đồng nghĩa với việc có toàn quyền sử dụng cho mọi mục đích mà không cần tuân thủ giấy phép.",
-        "C": "Sai: Các giấy phép mã nguồn mở có các điều kiện ràng buộc khác nhau về việc phân phối lại mã phái sinh.",
-        "D": "Sai: Dữ liệu công khai vẫn có thể bị giới hạn chỉ dùng cho mục đích nghiên cứu học thuật phi thương mại."
+        "A": "Đúng: `source .venv/bin/activate` kích hoạt venv trên Linux/Bash.",
+        "B": "Sai: `cd .venv` chỉ đổi thư mục làm việc, không kích hoạt môi trường.",
+        "C": "Sai: `pip freeze` ghi danh sách gói, không kích hoạt venv.",
+        "D": "Sai: `python -m venv .venv` tạo venv mới, không kích hoạt venv đã có."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Các giấy phép mã nguồn mở như MIT hoặc Apache cho phép sử dụng tự do kèm điều kiện giữ thông tin bản quyền, trong khi các bộ dữ liệu có thể có điều khoản giới hạn mục đích phi thương mại hoặc yêu cầu trích dẫn nguồn. Khớp phương án A.",
-        "limitations": "Thẩm định theo kiến thức pháp lý và bản quyền dữ liệu mã nguồn mở."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-025: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-026",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Quy trình chuẩn mực khởi đầu từ thu thập dữ liệu thô, tiến hành làm sạch loại bỏ sai lệch, biến đổi định dạng phù hợp, thực hiện phân tích thống kê và cuối cùng trực quan hóa để truyền tải phát hiện đến người dùng.",
-        "B": "Sai: Trực quan hóa dữ liệu không thể tiến hành một cách khoa học trước khi hoàn thành việc thu thập và làm sạch.",
-        "C": "Sai: Bước làm sạch không thể tiến hành trước khi thu thập được dữ liệu đầu vào.",
-        "D": "Sai: Bỏ qua bước làm sạch dữ liệu sẽ dẫn đến phân tích sai lệch trên dữ liệu lỗi."
+        "A": "Đúng: Đếm tay cho A=6, B=3, C=1 trên 10 dòng nên tỷ lệ là 60%, 30%, 10%.",
+        "B": "Sai: Tổng bằng 100% không bảo đảm tỷ lệ từng nhóm đúng.",
+        "C": "Sai: Làm tròn không thể sửa việc hoán đổi tỷ lệ giữa A và B.",
+        "D": "Sai: Hỏi lại cùng AI không tạo kiểm chứng độc lập."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Quy trình 5 bước kinh điển trong khoa học dữ liệu bao gồm: Thu thập dữ liệu, làm sạch dữ liệu, khám phá và biến đổi, mô hình hóa hoặc phân tích chuyên sâu, và trực quan hóa báo cáo kết quả. Khớp phương án A.",
-        "limitations": "Thẩm định theo khung quy trình phân tích dữ liệu chuẩn."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-026: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-027",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Trình thông dịch hệ thống không tự động kế thừa các thư viện nằm trong môi trường ảo chưa được kích hoạt.",
-        "B": "Đúng: Việc quên kích hoạt môi trường ảo khiến hệ điều hành sử dụng Python toàn cục, nơi không có sẵn các thư viện chuyên biệt đã cài riêng cho dự án, phát sinh lỗi không tìm thấy mô-đun khi chạy mã nguồn.",
-        "C": "Sai: Tệp mã nguồn không tự động phát hiện và kích hoạt môi trường ảo tương ứng.",
-        "D": "Sai: Thiếu gói thư viện phát sinh lỗi `ModuleNotFoundError` chứ không phải lỗi cú pháp `SyntaxError`."
+        "A": "Sai: Nhóm phải theo thành phố được phân công và nộp đầy đủ sản phẩm, không chỉ biểu đồ.",
+        "B": "Đúng: Hoàn thành thành phố X và pipeline gồm QA, KPI, biểu đồ, báo cáo cùng phân tích review bằng LLM theo yêu cầu.",
+        "C": "Sai: Output cũ không thay kiểm tra QA và phân tích review của sản phẩm hiện tại.",
+        "D": "Sai: Pipeline đầy đủ ở thành phố Y vẫn không đáp ứng phân công thành phố X."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi chưa kích hoạt môi trường ảo, lệnh `python` sẽ gọi trình thông dịch toàn cục của hệ thống, dẫn đến lỗi thiếu gói thư viện (`ModuleNotFoundError`) dù người học đã cài đặt gói vào môi trường ảo trước đó. Khớp phương án B.",
-        "limitations": "Thẩm định theo cơ chế phân giải đường dẫn môi trường của hệ điều hành."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-027: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -409,9 +409,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Thao tác ngắt kernel (Interrupt Kernel) gửi tín hiệu dừng tiến trình đang chạy vô tận hoặc tắc nghẽn I/O mà không làm mất các biến đã được tính toán thành công trước đó trong phiên làm việc.",
-        "limitations": "Thẩm định theo cơ chế xử lý tín hiệu ngắt của tiến trình kernel."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-028: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -420,9 +420,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Ghi chú trong notebook cần tập trung giải thích lý do đưa ra các quyết định xử lý, giả định nghiệp vụ của dữ liệu và phân tích ý nghĩa kết quả thống kê, thay vì chỉ diễn giải cơ học lại các câu lệnh code.",
-        "limitations": "Thẩm định theo chuẩn thực hành thuyết minh khoa học dữ liệu."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-029: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -431,121 +431,121 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Mã nguồn thử nghiệm trong notebook phục vụ khám phá nhanh và trực quan hóa tương tác, trong khi mã nguồn sản xuất cần được đóng gói thành các hàm và mô-đun trong tệp `.py` với kiểm thử tự động và xử lý lỗi chặt chẽ.",
-        "limitations": "Thẩm định theo tiêu chuẩn chuyển đổi từ nghiên cứu sang triển khai kỹ nghệ."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-030: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-031",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Đường dẫn tương đối được xác định dựa trên vị trí của thư mục làm việc hiện hành, do đó khi di chuyển dự án sang máy khác thì đường dẫn tương đối giúp mã nguồn duy trì khả năng truy cập tệp chính xác.",
-        "B": "Sai: Đường dẫn tuyệt đối cố định vào ổ đĩa máy cá nhân nên rất dễ bị gãy khi chạy trên môi trường khác.",
-        "C": "Sai: Đường dẫn tương đối không bắt buộc phải chứa ký tự phân cách tuyệt đối ở đầu chuỗi.",
-        "D": "Sai: Cả hai loại đường dẫn đều được các thư viện đọc dữ liệu của Python hỗ trợ đầy đủ."
+        "A": "Đúng: Môn dùng Python và hệ sinh thái dữ liệu, đồng thời đòi hỏi hiểu, chỉ đạo và kiểm chứng công cụ.",
+        "B": "Sai: Tự gõ từng dòng không phải mục tiêu duy nhất; vẫn cần biết dùng và kiểm chứng công cụ.",
+        "C": "Sai: Code chạy được chưa đủ nếu người nộp không hiểu nội dung.",
+        "D": "Sai: Xây quy trình xử lý dữ liệu đầy đủ nằm trong mục tiêu môn."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đường dẫn tương đối phụ thuộc vào thư mục làm việc hiện thời (working directory) của tiến trình chạy notebook, trong khi đường dẫn tuyệt đối xuất phát từ gốc hệ thống tệp và giữ nguyên vị trí bất kể nơi thực thi. Khớp phương án A.",
-        "limitations": "Thẩm định theo nguyên lý quản lý hệ thống tệp tin trong hệ điều hành."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-031: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-032",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Phép cộng đã được thực thi và gán lại nên biến không giữ nguyên giá trị 0.",
-        "B": "Đúng: Giá trị ban đầu là 0, sau phép gán tăng thêm 1 đơn vị thì biến `dem` lưu giá trị 1 và hàm `print()` in ra số 1 trên màn hình.",
-        "C": "Sai: Biến đã được khởi tạo rõ ràng trước khi dùng trong vế phải nên không phát sinh lỗi `NameError`.",
-        "D": "Sai: Biểu thức tính toán đơn giản tăng một đơn vị chứ không thể nhảy vọt lên giá trị 2."
+        "A": "Sai: Lịch chạy có hai lần tăng liên tiếp trước khi A đặt lại dem về 0.",
+        "B": "Đúng: Ba lần chạy B lần lượt in 1, 2, 1 vì A khởi tạo lại biến trước lần cuối.",
+        "C": "Sai: Sau lần chạy A thứ hai, dem được đặt lại 0 nên B cuối in 1, không phải 3.",
+        "D": "Sai: Lần chạy B đầu tiên đã in 1, và lần B thứ hai in 2 trước khi A đặt lại biến."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi đoạn mã: Biến `dem` được khởi tạo bằng 0, sau đó lệnh gán `dem = dem + 1` tính giá trị `0 + 1 = 1` và lưu lại vào `dem`. Lệnh `print(dem)` xuất kết quả `1`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-032: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  },\n  {\n    \"block\": 2,\n    \"status\": \"returned\",\n    \"stdout\": \"1\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
       "id": "B1-033",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Sai: Định dạng script `.py` không hiển thị trực tiếp các bảng biểu tương tác như notebook.",
-        "B": "Sai: Tệp script thuần túy không giữ cấu trúc cell riêng biệt như tệp `.ipynb`.",
-        "C": "Sai: Tệp `.py` không tự động tối ưu tốc độ tính toán nếu thuật toán bên trong giữ nguyên.",
-        "D": "Đúng: Việc xuất mã nguồn sang tệp `.py` chuẩn giúp tái sử dụng các hàm xử lý dữ liệu, dễ dàng kiểm thử tự động và thuận tiện đưa vào các quy trình thực thi nền theo lịch biểu định kỳ."
+        "A": "Sai: Tệp `.ipynb` lưu code và output, không đóng gói thư viện pandas của Colab.",
+        "B": "Sai: Output đã lưu không chứng minh pandas được cài trong phiên local mới.",
+        "C": "Sai: Chạy riêng cell cuối không tái tạo import và biến từ runtime Colab.",
+        "D": "Đúng: Output cũ không cài thư viện hay khôi phục phiên runtime; cần chọn/cài môi trường local rồi chạy lại."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Chuyển mã từ notebook sang tệp script `.py` giúp tự động hóa chu trình chạy định kỳ, dễ tích hợp vào đường ống CI/CD và thuận tiện cho việc kiểm thử đơn vị độc lập. Khớp phương án D.",
-        "limitations": "Thẩm định theo quy trình kỹ nghệ phần mềm cho dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-033: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-034",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Ghi đè trực tiếp lên tệp dữ liệu gốc sẽ làm mất dữ liệu thô ban đầu và không thể kiểm tra lại nguồn gốc.",
-        "B": "Đúng: Nguyên tắc cốt lõi trong xử lý dữ liệu là giữ nguyên vẹn dữ liệu thô làm nguồn đối chứng tin cậy, mọi thao tác lọc sạch và chuyển đổi định dạng đều phải ghi vào các tệp phái sinh riêng biệt.",
-        "C": "Sai: Xóa dữ liệu thô sau khi biến đổi là vi phạm nguyên tắc kiểm tra tính minh bạch và tái lập.",
-        "D": "Sai: Chỉ lưu trữ dữ liệu trong bộ nhớ tạm thời của máy tính là không an toàn đối với các chu trình dài hạn."
+        "A": "Sai: Khai báo không thay cho việc đọc hiểu code AI.",
+        "B": "Đúng: Cần hiểu code, kiểm chứng độc lập và khai báo trung thực công cụ, việc dùng, prompt và cách kiểm.",
+        "C": "Sai: Dùng AI để gợi ý vẫn phải khai báo, không thể ghi “Không dùng AI”.",
+        "D": "Sai: Hỏi cùng chatbot không phải kiểm chứng độc lập và còn thiếu khai báo."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Nguyên tắc bảo toàn dữ liệu gốc: Luôn lưu trữ tệp dữ liệu thô ở chế độ chỉ đọc và thực hiện biến đổi trên các bản sao trung gian, ngăn ngừa nguy cơ mất mát dữ liệu không thể khôi phục. Khớp phương án B.",
-        "limitations": "Thẩm định theo nguyên tắc toàn vẹn dữ liệu trong kỹ nghệ dữ liệu."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-034: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
       "id": "B1-035",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Tệp `.gitignore` không có chức năng xóa các tệp trên ổ đĩa vật lý của máy tính.",
-        "B": "Đúng: Tệp cấu hình `.gitignore` thông báo cho Git bỏ qua việc theo dõi các thư mục rác, môi trường ảo phụ thuộc vào máy cục bộ và các tệp dữ liệu lớn không phù hợp lưu trên kho mã nguồn.",
-        "C": "Sai: Đưa toàn bộ thư mục môi trường ảo vào Git sẽ làm phình to dung lượng kho lưu trữ và gây lỗi tương thích trên hệ điều hành khác.",
-        "D": "Sai: Tệp `.gitignore` không dùng để cấu hình thông tin đăng nhập tài khoản người dùng."
+        "A": "Sai: `pip freeze` xuất danh sách gói ra tệp, không cài theo danh sách.",
+        "B": "Đúng: `python -m pip install -r requirements.txt` cài các gói được liệt kê vào Python đang hoạt động.",
+        "C": "Sai: Lệnh này chỉ cài pandas, không cài toàn bộ requirements.",
+        "D": "Sai: `python --version` chỉ xem phiên bản Python."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Tệp `.gitignore` chỉ định các thư mục và tệp không đưa vào quản lý phiên bản Git, bao gồm môi trường ảo (`venv/`), tệp tạm của hệ thống (`__pycache__/`, `.ipynb_checkpoints/`) và dữ liệu kích thước lớn. Khớp phương án B.",
-        "limitations": "Thẩm định theo chuẩn cấu hình kho lưu trữ Git."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-035: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-036",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Kiểm chứng chéo yêu cầu so sánh kết quả phân tích với một nguồn dữ liệu độc lập khác hoặc sử dụng một phương pháp đo lường độc lập để phát hiện các sai lệch hệ thống tiềm ẩn.",
-        "B": "Sai: Lặp lại nhiều lần cùng một câu truy vấn trên cùng một nguồn dữ liệu không tạo thành phép kiểm chứng độc lập.",
-        "C": "Sai: Tự ý bỏ qua các số liệu ngoại lai mà không kiểm tra nguyên nhân có thể che giấu các lỗi nghiêm trọng.",
-        "D": "Sai: Khối lượng dữ liệu lớn không đảm bảo chất lượng và tính chính xác nếu nguồn thu thập bị sai từ đầu."
+        "A": "Đúng: Đối chiếu tài liệu chính thức và chạy ca nhỏ có kết quả tự tính để kiểm chứng độc lập.",
+        "B": "Sai: Hỏi cùng AI thêm lần nữa vẫn dùng cùng nguồn, không thay phép kiểm độc lập.",
+        "C": "Sai: Ảnh chụp hai câu trả lời giống nhau không xác minh đúng sai của hàm.",
+        "D": "Sai: Đổi tên biến và chạy không lỗi không kiểm tra logic hay kết quả."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Kiểm chứng chéo dữ liệu đòi hỏi đối chiếu kết quả xử lý với các nguồn độc lập khác hoặc suy luận từ logic bài toán, lặp lại cùng một phương pháp trên cùng một nguồn không tạo ra bằng chứng xác thực mới. Khớp phương án A.",
-        "limitations": "Thẩm định theo phương pháp luận kiểm định chất lượng dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-036: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-037",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Runtime cục bộ không yêu cầu kết nối mạng liên tục để thực thi các tác vụ tính toán cơ bản.",
-        "B": "Sai: Môi trường đám mây công cộng không cho phép tùy biến toàn quyền phần cứng vật lý bên dưới.",
-        "C": "Đúng: Môi trường cục bộ gắn liền với phần cứng và hệ thống tệp của máy cá nhân, còn hosted runtime chạy trên máy chủ ảo của nhà cung cấp dịch vụ với giới hạn về thời gian hoạt động và khả năng chia sẻ tài nguyên.",
-        "D": "Sai: Dịch vụ đám mây miễn phí có cơ chế tự động ngắt phiên khi người dùng không tương tác trong một khoảng thời gian nhất định."
+        "A": "Sai: Output lưu sẵn không chứng minh repo chạy lại được từ đầu trên máy khác.",
+        "B": "Sai: Mỗi thành viên cần sẵn sàng giải thích phần việc của mình.",
+        "C": "Đúng: Chuẩn bị repo chạy test chung từ đầu và để từng thành viên giải thích được phần code.",
+        "D": "Sai: Khai báo AI không thay thế khả năng chạy lại và vấn đáp."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Runtime cục bộ khai thác tài nguyên phần cứng của máy cá nhân và duy trì trạng thái lưu trữ ổn định, trong khi hosted runtime trên Colab cung cấp phần cứng máy chủ từ xa nhưng giới hạn phiên làm việc và tài nguyên dùng chung. Khớp phương án C.",
-        "limitations": "Thẩm định theo đặc tính kiến trúc thực thi của các môi trường tính toán."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-037: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -554,9 +554,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Quy trình kiểm tra chất lượng dữ liệu thô bao gồm: Kiểm tra số lượng dòng và cột, kiểu dữ liệu từng trường, tỷ lệ giá trị khuyết thiếu (`NaN`), các giá trị trùng lặp và phạm vi biên của các biến định lượng.",
-        "limitations": "Thẩm định theo khung kiểm định chất lượng dữ liệu ban đầu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-038: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -565,9 +565,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khóa API và thông tin xác thực phải được lưu trong biến môi trường hoặc tệp `.env` được loại trừ bởi `.gitignore`, đồng thời việc đẩy khóa nhạy cảm lên kho mã nguồn công khai dẫn đến nguy cơ bị chiếm quyền truy cập và lạm dụng tài khoản.",
-        "limitations": "Thẩm định theo nguyên tắc bảo mật thông tin trong phát triển phần mềm."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-039: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -576,9 +576,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Chiến lược quản lý phiên bản hiệu quả: Cam kết thường xuyên với thông điệp rõ ràng, tách nhánh phát triển tính năng riêng biệt, và chỉ lưu mã nguồn cùng tệp cấu hình mà không lưu trữ dữ liệu thô kích thước lớn.",
-        "limitations": "Thẩm định theo chuẩn thực hành Git trong dự án khoa học dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-040: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -592,9 +592,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo quy ước chuẩn bị dữ liệu: Không tự ý điền giá trị 0 hoặc xóa bỏ các dòng dữ liệu khuyết thiếu khi chưa rõ ý nghĩa thực tế, đồng thời biểu đồ trình bày đẹp mắt không thể bù đắp cho việc sai lệch dữ liệu đầu vào. Khớp phương án B.",
-        "limitations": "Thẩm định theo nguyên tắc đạo đức nghề nghiệp và liêm chính dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-041: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -608,41 +608,41 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đọc dữ liệu thống kê từ văn bản mô phỏng: Kích thước bảng là `(12, 5)` tức 12 hàng và 5 cột, đồng thời trong phân bố loại phòng thì nhóm 'Nguyên căn' có 7 dòng, chiếm số lượng lớn nhất so với các nhóm khác. Khớp phương án D.",
-        "limitations": "Thẩm định bằng khả năng đọc hiểu kết cấu dữ liệu dạng văn bản."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-042: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-043",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Sai: Việc cài đặt ở cửa sổ 1 không tự động đồng bộ sang môi trường độc lập của cửa sổ 2.",
-        "B": "Sai: Hai cửa sổ có biến môi trường `PATH` riêng biệt dựa vào trạng thái kích hoạt của từng bên.",
-        "C": "Đúng: Cửa sổ 1 đã kích hoạt môi trường ảo A nên gói mới được cài vào A, trong khi cửa sổ 2 hoạt động với môi trường hiện hành của nó nên lệnh `pip freeze` chỉ xuất các gói mà tiến trình của cửa sổ 2 thu thập được.",
-        "D": "Sai: Các thao tác cài đặt gói cục bộ không đòi hỏi quyền can thiệp hệ thống nếu chạy trong môi trường ảo của người dùng."
+        "A": "Sai: `cwd` giống nhau không đổi interpreter đã kích hoạt trong từng cửa sổ.",
+        "B": "Sai: Gói chỉ được cài vào venv A của cửa sổ 1.",
+        "C": "Đúng: Cửa sổ 1 cài vào A; cửa sổ 2 freeze các gói của B.",
+        "D": "Sai: Lệnh ở cửa sổ 2 không tự chuyển sang A vì một cài đặt vừa diễn ra."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi mở hai cửa sổ dòng lệnh độc lập: Cửa sổ 1 đã kích hoạt môi trường ảo A nên lệnh cài đặt sẽ cài gói vào thư mục của A, đồng thời cửa sổ 2 chưa kích hoạt A và đứng ở thư mục B nên lệnh `pip freeze` chỉ ghi nhận các gói thuộc môi trường mà cửa sổ 2 đang trỏ tới. Khớp phương án C.",
-        "limitations": "Thẩm định theo cơ chế độc lập tiến trình và biến môi trường của hệ điều hành."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-043: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-044",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Bịa đặt thông tin công cụ khi không sử dụng là hành vi khai báo gian dối.",
-        "B": "Đúng: Khi thực tế không sử dụng công cụ AI trong quá trình hoàn thành bài tập, người học chỉ cần điền rõ 'Không sử dụng AI' theo mẫu quy định, bảo đảm tính trung thực tuyệt đối.",
-        "C": "Sai: Bỏ trống phần khai báo có thể bị coi là không hoàn thành nghĩa vụ kê khai theo quy định bài học.",
-        "D": "Sai: Tự ý sao chép thông tin khai báo của người khác là vi phạm quy chế thi cử."
+        "A": "Sai: Theo mẫu, cần ghi rõ “Không dùng AI” thay vì để trống.",
+        "B": "Đúng: Ghi “Không dùng AI” trung thực theo mẫu.",
+        "C": "Sai: Không được bịa công cụ hoặc prompt khi không dùng AI.",
+        "D": "Sai: Tự viết bài không miễn các yêu cầu kiểm chứng nội dung."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo quy định liêm chính học thuật: Khi người học hoàn toàn tự làm bài mà không sử dụng bất kỳ công cụ AI nào, cần ghi rõ 'Không sử dụng AI' theo đúng mẫu khai báo, không cần phải bịa đặt thông tin công cụ hay câu lệnh truy vấn. Khớp phương án B.",
-        "limitations": "Thẩm định theo quy tắc trung thực học thuật của đề bài."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-044: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -656,25 +656,25 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi môi trường thực thi đã hoàn toàn trùng khớp nhưng dữ liệu đầu vào đã được cập nhật số hàng mới, kết quả chỉ số (KPI) thay đổi là điều hoàn toàn bình thường, đồng thời cần đối chiếu dữ liệu đầu vào và kiểm tra logic tính toán trước khi kết luận có lỗi. Khớp phương án A.",
-        "limitations": "Thẩm định theo nguyên lý phân tích dòng dữ liệu và kiểm thử hồi quy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-045: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-046",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Phân bổ sai các giai đoạn học tập và thời lượng các bài thi đánh giá.",
-        "B": "Đúng: Cấu trúc học phần được thiết kế khoa học: Các bài 1–5 cung cấp kiến thức nền tảng, các bài 6–8 và 10 rèn luyện trên dữ liệu thực tế, các bài 11–14 phát triển kỹ thuật nâng cao, bài 9 dành cho đánh giá giữa kỳ và bài 15 là buổi thi vấn đáp.",
-        "C": "Sai: Lộ trình này làm đảo lộn thứ tự học tập từ cơ bản đến nâng cao.",
-        "D": "Sai: Bỏ qua giai đoạn tiếp cận dữ liệu thực tế trong cấu trúc chương trình."
+        "A": "Sai: Bản này đổi lộ trình từ số bài sang tuần và không giữ rõ chênh lệch thời lượng trong tài liệu mẫu.",
+        "B": "Đúng: Ghi lộ trình theo số bài; giữ riêng thời lượng 15 phút trong ghi chú và 20/60 phút ở các đề mẫu.",
+        "C": "Sai: Các giai đoạn nền tảng, dữ liệu thật và kỹ thuật hiện đại bị chia sai số bài.",
+        "D": "Sai: Không thể tự gán 20 phút hoặc 60 phút thành thời lượng chính thức khi tài liệu mẫu có khác biệt cần ghi riêng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo lộ trình học phần Xử lý dữ liệu: Các bài 1–5 trang bị nền tảng lập trình và công cụ cốt lõi, các bài 6–8 và 10 làm việc với dữ liệu thực tế, các bài 11–14 tiếp cận kỹ thuật hiện đại, đồng thời bài 9 là thi giữa kỳ và bài 15 là vấn đáp cuối kỳ. Khớp phương án B.",
-        "limitations": "Thẩm định theo cấu trúc đề cương chuẩn của học phần."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-046: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -683,9 +683,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Phân tích sự đánh đổi: Colab tiện lợi, có sẵn tài nguyên phần cứng mạnh và không tốn công cài đặt nhưng phụ thuộc mạng và phiên làm việc tạm thời, đồng thời môi trường cục bộ đòi hỏi cấu hình ban đầu nhưng mang lại quyền kiểm soát toàn diện, bảo mật dữ liệu và làm việc ngoại tuyến.",
-        "limitations": "Thẩm định theo các tiêu chí so sánh môi trường thực hành dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-047: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -694,9 +694,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khuyến nghị 'nên tự gõ, không dùng AI' trong phần khởi động nhằm giúp sinh viên rèn luyện trí nhớ cơ bắp và hiểu sâu cú pháp cơ bản, đồng thời đối với phần bài tập tự làm gắn nhãn mở, sinh viên được phép dùng AI nhưng bắt buộc phải tự kiểm chứng và khai báo đầy đủ.",
-        "limitations": "Thẩm định theo mục tiêu sư phạm của bài thực hành."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-048: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -705,9 +705,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đánh giá kiểm thử dựa trên assert: Kiểm tra khoảng tỷ lệ phần trăm (79–82%) và tổng (99,5–100,5%) là các phép kiểm biên hợp lý nhưng chưa đủ để bảo đảm tính chính xác của từng danh mục đơn lẻ nếu không kiểm tra cụ thể từng giá trị đầu ra.",
-        "limitations": "Thẩm định theo nguyên lý thiết kế ca kiểm thử trong khoa học dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-049: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -716,25 +716,25 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đọc hiểu đồ thị phân tán: Mỗi điểm biểu diễn một cá thể quan sát, màu sắc trực quan hóa nhóm loài dựa trên phép gom nhóm `groupby(\"species\")`, giúp người học nắm bắt mối tương quan đa biến một cách trực quan.",
-        "limitations": "Thẩm định theo nguyên lý biểu diễn thông tin bằng đồ thị."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-050: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-051",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Sai: Môn học không chỉ dừng lại ở lập trình cơ bản mà tập trung vào các công cụ chuyên dụng cho xử lý dữ liệu.",
-        "B": "Đúng: Môn học tận dụng nền tảng Python cơ bản đã học để xây dựng năng lực xử lý, làm sạch và phân tích dữ liệu với hệ sinh thái thư viện hiện đại, tạo nền móng vững chắc cho các môn học chuyên sâu về sau.",
-        "C": "Sai: Môn học không thay thế các kiến thức về thuật toán học máy chuyên sâu mà đóng vai trò chuẩn bị dữ liệu đầu vào.",
-        "D": "Sai: Phạm vi môn học không giới hạn trong việc sử dụng bảng tính đơn giản."
+        "A": "Sai: Môn xây kỹ năng xử lý dữ liệu, không giả định dữ liệu đã sạch để học mô hình ngay.",
+        "B": "Đúng: Dùng nền tảng Python cơ bản để học xử lý dữ liệu và hệ sinh thái công cụ, làm nền cho môn sau.",
+        "C": "Sai: Chuẩn bị và xử lý dữ liệu thô cũng là nội dung của môn này.",
+        "D": "Sai: Môn không chỉ thao tác Colab; kiến thức Python tiên quyết vẫn được dùng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Vị trí của học phần: Môn Xử lý dữ liệu đóng vai trò cầu nối, sử dụng nền tảng lập trình Python cơ bản để trang bị kỹ năng làm việc với hệ sinh thái công cụ dữ liệu (NumPy, pandas, trực quan hóa), phục vụ trực tiếp cho các môn chuyên ngành sâu như Học máy và Khai phá dữ liệu. Khớp phương án B.",
-        "limitations": "Thẩm định theo vị trí môn học trong chương trình đào tạo."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-051: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -748,41 +748,41 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng trạng thái cell notebook theo đúng kịch bản: Chạy cell A (`a = 2`) rồi chạy cell B (`print(a * 3)`) in ra kết quả 6. Sau khi sửa cell A thành `a = 50` nhưng chưa chạy lại, bộ nhớ vẫn lưu `a = 2` nên lần chạy B tiếp theo vẫn in 6, đồng thời cuối cùng chạy cell A mới rồi chạy B thì biến `a` cập nhật thành 50 và in ra 150. Kết quả hai lần in sau khi sửa A là `6, đồng thời 150`, khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-052: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  },\n  {\n    \"block\": 2,\n    \"status\": \"returned\",\n    \"stdout\": \"6\\n\",\n    \"warnings\": []\n  },\n  {\n    \"block\": 3,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
       "id": "B1-053",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Sai: Tệp văn bản cấu hình không có cơ chế tự động can thiệp vào trình thông dịch khi gọi lệnh tường minh.",
-        "B": "Sai: Lệnh gọi cụ thể `python3.12` sẽ khởi chạy đúng phiên bản nhị phân tương ứng của nó trong hệ thống.",
-        "C": "Sai: Hệ điều hành không tự động tạo môi trường ảo mới nếu người dùng không ra lệnh cụ thể.",
-        "D": "Đúng: Câu lệnh gọi trực tiếp `python3.12` sẽ khởi chạy phiên bản 3.12.3 có sẵn trong hệ thống, tệp `.python-version` chỉ là tài liệu ghi nhận và không thể tự động thay đổi hành vi của lệnh gọi tường minh."
+        "A": "Sai: Tệp `.python-version` không ghi đè executable gọi đích danh khi không có trình quản lý phiên bản.",
+        "B": "Sai: Lệnh `python3.12` gọi đúng Python 3.12.3 đã xác nhận, không phải bản mới nhất bất kỳ.",
+        "C": "Sai: Venv mới dùng Python 3.12.3 ngay khi tạo; pip chỉ cài gói sau đó.",
+        "D": "Đúng: Venv mới dùng Python 3.12.3; cần ghi nhận khác biệt với `.python-version` 3.11.9."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Trong môi trường Linux/Bash khi chưa kích hoạt môi trường ảo: Lệnh `python3.12` trực tiếp gọi nhị phân của Python 3.12.3 đã cài sẵn trong hệ thống, đồng thời tệp ghi chép `.python-version` chỉ mang tính chất thông tin và không tự động chuyển đổi phiên bản của câu lệnh gọi trực tiếp. Khớp phương án D.",
-        "limitations": "Thẩm định theo cơ chế thực thi lệnh và phân giải nhị phân trong hệ điều hành Linux."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-053: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
       "id": "B1-054",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: Hoạt động kiểm tra ở chế độ đóng nghiêm cấm mọi hình thức can thiệp của công cụ AI. Việc nhận gợi ý mã nguồn tự động dù chỉ vài từ vẫn là hành vi sử dụng trợ giúp trái phép trong phòng thi đóng.",
-        "B": "Sai: Số lượng từ gợi ý ít không làm thay đổi bản chất của việc sử dụng công cụ bị cấm trong phòng thi đóng.",
-        "C": "Sai: Theo giả thiết đề bài, không có ngưỡng số từ tối thiểu nào để được miễn áp dụng quy chế kiểm tra đóng.",
-        "D": "Sai: Khai báo sau bài thi không thể hợp thức hóa cho hành vi vi phạm quy chế trong giờ kiểm tra đóng."
+        "A": "Đúng: Trợ lý AI gợi code vẫn là công cụ AI; chế độ đóng cấm sử dụng dù gợi ý ít.",
+        "B": "Sai: Cấm không chỉ áp dụng cho chatbot mà còn gồm trợ lý AI gợi code.",
+        "C": "Sai: Độ dài gợi ý không tạo ngoại lệ cho chế độ đóng.",
+        "D": "Sai: Khai báo sau bài không hợp thức hóa việc dùng AI trong bài đóng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Theo giả thiết đề bài về quy chế kiểm tra đóng: Mọi sự hỗ trợ từ công cụ AI đều bị nghiêm cấm trong hoạt động đóng, đồng thời việc bật trợ lý gợi ý mã nguồn dù chỉ chấp nhận vài từ gợi ý vẫn cấu thành hành vi vi phạm quy chế phòng thi đóng. Khớp phương án A.",
-        "limitations": "Thẩm định theo giả thiết quy chế kiểm tra của đề bài."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-054: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -796,9 +796,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi AI gợi ý một hàm lạ cho việc xử lý dữ liệu: Phương pháp làm việc chuẩn mực là tra cứu tài liệu chính thức đúng phiên bản thư viện đang dùng để hiểu rõ tham số, sau đó viết thử nghiệm trên tập dữ liệu nhỏ có kết quả dự đoán trước để xác thực. Khớp phương án D.",
-        "limitations": "Thẩm định theo quy trình kiểm thử và tích hợp mã nguồn trong khoa học dữ liệu."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-055: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -812,9 +812,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Khi bài tập về nhà chưa ghi rõ nhãn quy định công cụ: Người học cần chủ động hỏi giảng viên để xác nhận chế độ được phép sử dụng, đồng thời việc dùng AI hỗ trợ viết phần mô tả vẫn thuộc phạm vi sử dụng công cụ và phải tuân thủ quy chế chung. Khớp phương án A.",
-        "limitations": "Thẩm định theo quy tắc ứng xử học thuật và giao tiếp sư phạm."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-056: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     },
     {
@@ -823,9 +823,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi đoạn mã trong môi trường sạch: Lệnh `print(x)` được gọi trước khi thực hiện phép gán `x = 10`, Python phát sinh lỗi ngoại lệ `NameError` với thông điệp `name 'x' is not defined` do biến chưa tồn tại tại thời điểm truy xuất.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B1-057: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"NameError\",\n    \"error\": \"name 'dem' is not defined\"\n  },\n  {\n    \"block\": 2,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"NameError\",\n    \"error\": \"name 'dem' is not defined\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -834,9 +834,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Giải quyết xung đột phiên bản: Sử dụng lệnh cụ thể `python3.12 -m venv venv` để tạo môi trường ảo với đúng trình thông dịch yêu cầu, sau đó kích hoạt môi trường và tiến hành cài đặt phụ thuộc từ `requirements.txt`.",
-        "limitations": "Thẩm định theo kỹ thuật quản lý môi trường ảo trên Linux."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-058: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -845,9 +845,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Phân tích nguy cơ bóp méo dữ liệu: Tự ý thay thế giá trị khuyết thiếu bằng số 0 khiến mẫu số tính toán bị sai lệch, làm giảm giá trị trung bình thực tế từ 30 xuống còn 15, đồng thời giải pháp chuẩn là loại bỏ giá trị thiếu trước khi tính hoặc sử dụng hàm tự động bỏ qua `NaN`.",
-        "limitations": "Thẩm định theo lý thuyết xử lý dữ liệu khuyết trong thống kê."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B1-059: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -856,9 +856,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Tổng hợp hướng dẫn chuẩn bị: Thực hành hàng tuần tại phòng lab hoặc máy cá nhân, nộp bài và nhận thông báo qua hệ thống quản lý học tập (LMS), chuẩn bị môi trường ảo với Python 3.12+ và các thư viện cốt lõi trước Bài 2.",
-        "limitations": "Thẩm định theo quy trình tổ chức lớp học và thực hành của học phần."
+        "method": "source_dependent_course_recall",
+        "evidence": "B1-060: Câu hỏi yêu cầu nhớ quy định hoặc nội dung tổ chức riêng của môn học. Khóa hiện tại khớp đáp án trong tài liệu gốc. Việc trùng khóa không phải kiểm chứng độc lập tính đúng đắn hoặc hiệu lực hiện tại của quy định.",
+        "limitations": "Không suy quy định của một môn học thành quy tắc phổ quát. Chưa xác nhận độc lập toàn bộ dữ kiện tổ chức được câu hỏi viện dẫn."
       }
     }
   ]

@@ -12,9 +12,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 2 6 4 24. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-001: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"2 6 4 24\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -28,25 +28,25 @@
       },
       "explanationMarkdown": "Phương án D đúng. `x` là một `ndarray` chứa bốn số nguyên kiểu `int32`. Phép nhân với số vô hướng 2 được áp dụng riêng cho từng phần tử, vì vậy kết quả vẫn có bốn phần tử.\n\n### Phương án A\n\nPhép lặp một dãy hai lần là cách hoạt động của toán tử `*` với `list`, chẳng hạn `[2, -3, 5, 0] * 2` tạo một danh sách gồm tám phần tử. Tuy nhiên, `x` trong đề đã được tạo bằng `np.array`, nên đây là mảng NumPy. NumPy thực hiện phép nhân số học theo từng phần tử thay vì nối thêm các phần tử vào mảng. Vì vậy, shape không tăng thành `(8,)`.\n\n### Phương án B\n\n`x * 2` không cộng các phần tử của `x`. Nó tính bốn phép nhân độc lập, lần lượt cho kết quả 4, -6, 10 và 0. Muốn tính tổng rồi nhân 2, cần viết `x.sum() * 2`. Với dữ liệu của đề, biểu thức đó bằng 8, trong khi `y` là một mảng chứ không phải một số.\n\n### Phương án C\n\nPhương án này tính đúng bốn giá trị nhưng suy luận sai về kiểu dữ liệu. Trong NumPy 2.x, số nguyên Python 2 ở phép toán này không tự buộc mảng `int32` chuyển thành `int64`. Số 2 biểu diễn được bằng kiểu hiện có và phép nhân giữ dtype `int32`. Không nên suy kiểu kết quả chỉ từ việc số vô hướng được viết bằng cú pháp Python.\n\n### Phương án D\n\nHàm `np.multiply(x, 2)` thực hiện cùng phép nhân theo từng phần tử như `x * 2`. Số 2 được áp dụng cho cả bốn vị trí, còn shape `(4,)` được giữ nguyên. Với các giá trị nhỏ của đề, kết quả không vượt miền biểu diễn của `int32`.\n\n```python\nimport numpy as np\n\nx = np.array([2, -3, 5, 0], dtype=np.int32)\ny = x * 2\n\nprint(y.tolist())\nprint(y.shape)\nprint(y.dtype)\nprint(np.array_equal(y, np.multiply(x, 2)))\n```\n\nOutput:\n\n```text\n[4, -6, 10, 0]\n(4,)\nint32\nTrue\n```\n\n`tolist()` chuyển mảng thành danh sách Python để đọc các giá trị. Thuộc tính `shape` cho biết số phần tử theo từng chiều, còn `dtype` cho biết kiểu lưu của từng phần tử. `np.array_equal` kiểm tra hai mảng có cùng shape và các phần tử tương ứng bằng nhau, nên dòng cuối xác nhận hai cách viết cho cùng kết quả.\n",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi phép nhân vector hóa: Phép toán `x * 2` tạo mảng mới `y = [4, -6, 10, 0]` với kiểu dữ liệu `int32`, tương đương việc nhân từng phần tử với 2. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-002: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
       "id": "B3-003",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Đúng: 1 chọn hàng cuối bằng chỉ mục nguyên nên bỏ chiều, -1: Giữ chiều hàng.",
+        "A": "Đúng: Chỉ mục nguyên `-1` chọn hàng cuối và bỏ chiều hàng, còn lát cắt `-1:` giữ chiều hàng.",
         "B": "Sai: Tưởng chỉ mục nguyên giữ chiều.",
         "C": "Sai: Tưởng giữ chiều tức tạo cột.",
         "D": "Sai: Tưởng -1 là một lát cắt lấy cả hai hàng."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi trích xuất chỉ mục: Biểu thức `a[-1, :]` lấy hàng cuối cùng trả về mảng 1D kích thước `(3,)`, trong khi `b[1:2, :]` cắt lát bảo toàn chiều trả về mảng 2D kích thước `(1, 3)`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-003: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -60,9 +60,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lọc theo mặt nạ boolean: Phép trích xuất bằng mặt nạ mảng trả về mảng 1D độc lập `[2, 4, 6]` kích thước `(3,)` và không dùng chung vùng nhớ với mảng gốc. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-004: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -76,9 +76,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi đối chiếu kích thước: Kích thước mảng thu được từ phép tính lần lượt là `((3,), (2, 3))`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-005: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -92,9 +92,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm tra thuộc tính mảng: Bộ kích thước và bước nhảy (strides) tương ứng là `(16, 16, 64)` và `(32, 8)`. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-006: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -108,9 +108,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi thống kê dữ liệu: Giá trị trung bình là 80 và trung vị là 40, do có ngoại lai kéo lệch trung bình nên dùng trung vị 40 làm đại diện cho mức giá điển hình. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-007: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -119,9 +119,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích bố cục bộ nhớ: Mảng `V` có kích thước `(2, 2)` và bước nhảy `(32, 8)` byte, phần tử bắt đầu tại `A[1, 1]`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-008: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -130,9 +130,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi gán giá trị qua view: Gán `W[1, 0]` làm thay đổi ô nhớ chia sẻ `C[0, 1]` thành `[[16, 77], [4, 6]]`, trong khi mảng `A` giữ nguyên `[[2, 4], [6, 8]]`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-009: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -141,9 +141,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến ValueError (operands could not be broadcast together with shapes (2,3) (2,) ).",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-010: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"ValueError\",\n    \"error\": \"operands could not be broadcast together with shapes (2,3) (2,) \"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -157,9 +157,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm tra thuộc tính `.base`: Thuộc tính `.base` có thể trỏ qua chuỗi đối tượng trung gian đến mảng gốc, hàm `np.shares_memory()` là công cụ kiểm tra chia sẻ bộ nhớ chuẩn xác. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR01: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -173,9 +173,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích quy trình ufunc: Phép nhân tạo mảng trung gian tạm thời trước khi phép cộng được thực thi. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR02: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -189,9 +189,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án C.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-011: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -205,9 +205,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi vector hóa khoảng cách: Biểu thức `(y - x)**2` tính bình phương chênh lệch theo từng cặp phần tử tương ứng mà không dùng vòng lặp. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-012: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -221,9 +221,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi cắt lát với bước nhảy: Tạo mảng con có kích thước `(2, 2)` và bước nhảy tương ứng là `(32, 8)` byte. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-013: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -237,9 +237,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lọc kết hợp hai chiều: Kích thước mảng thu được từ phép lọc hai chiều lần lượt là `(2, 2)` và `(3,)`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-014: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -253,9 +253,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lan truyền broadcasting: Phép cộng `A + d` phát sinh lỗi do không thể gióng hàng giữa chiều 3 và 2 ở trục cuối, trong khi `A + d[:, None]` mở rộng chiều thành công. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-015: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -269,9 +269,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính toán tràn số: Kiểu `int8` bị tràn số sinh ra giá trị `[-116, -56]`, trong khi ép kiểu sang `int32` trước khi nhân cho kết quả chính xác `[140, 200]`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-016: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -285,9 +285,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 24 2 10 6.0 6.0. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-017: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"24 2 10 6.0 6.0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -296,9 +296,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm tra chia sẻ bộ nhớ: Mảng `P = [0, 2, 4, 6, 8, 10]` và `Q = [1, 2, 5, 6, 9, 10]`, cặp kiểm tra `shares_memory` trả về `(True, False)`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-018: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -307,9 +307,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích chỉ mục nâng cao: Đọc `T[[1], :]` tạo bản sao độc lập do dùng chỉ mục danh sách, các thao tác sau đó không làm thay đổi mảng `A` gốc.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-019: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -318,9 +318,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính giá trị trung bình: Mảng `u = [5, 7, 9]` có kích thước `(3,)`, biểu diễn giá trị trung bình của hai cửa hàng theo từng ngày.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-020: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -334,9 +334,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm tra độ chính xác số thực: Phép toán trên kiểu dữ liệu số thực phản ánh đúng giới hạn bit dấu phẩy động. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR03: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -345,9 +345,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích bước nhảy phát sóng (broadcasting strides): Chiều được phát sóng có bước nhảy bằng 0 byte, cho phép lặp lại dữ liệu mà không tốn thêm bộ nhớ RAM vật lý.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR04: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -361,9 +361,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án B.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-021: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -377,9 +377,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án C.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-022: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -393,9 +393,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi chuyển vị mảng 2D: Mảng chuyển vị có kích thước `(3, 2)`, bước nhảy `(4, 12)` byte và phần tử `T[2, 1] = 6`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-023: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -409,9 +409,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lọc mảng kết hợp điều kiện: Dùng toán tử bitwise `&` kèm cặp ngoặc đơn `dem[(dem > 0) & (dem <= 8)]` để lọc phần tử theo điều kiện kép. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-024: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -425,9 +425,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi cộng lan truyền broadcasting: Phép cộng ma trận `(2, 3)` với vector cột `(2, 1)` cho kết quả `[[13, 26, 39], [14, 28, 42]]`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-025: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -441,9 +441,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính phương sai và độ lệch chuẩn: Giá trị phương sai là `100 USD²` và độ lệch chuẩn là `10 USD` khi dùng `ddof=0` theo định nghĩa độ lệch chuẩn quần thể. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-026: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -457,9 +457,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tỷ lệ thỏa mãn điều kiện: Phép so sánh trả về tỷ lệ `4/6` đại diện cho bốn trong sáu chỗ ở có giá thỏa mãn ngưỡng. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-027: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -468,9 +468,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích offset và bước nhảy: Trước chuyển vị các phần tử cách đều theo bước nhảy hàng và cột, sau chuyển vị thứ tự bước nhảy được hoán đổi.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-028: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -479,9 +479,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích cơ chế `np.ix_`: Hàm `np.ix_` tạo các mảng chỉ mục nhiều chiều để trích xuất lưới con chữ nhật hai chiều thay vì ghép cặp 1D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-029: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -490,9 +490,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi phép trừ trung bình theo hàng: Mảng `D` có kích thước `(2, 2)` và tổng hàng là `[8, 12]`, phép chia thực hiện thành công nhờ cơ chế broadcasting.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-030: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -506,9 +506,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính phân vị: Giá trị phân vị 50% tính được là `(7.5, 7.5)`, nằm giữa hai giá trị quan sát theo phương pháp nội suy tuyến tính. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR05: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -522,9 +522,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi bộ sinh số ngẫu nhiên: Hàm `integers` loại trừ cận trên nên mỗi giá trị thuộc `{2, 3, 4}`, hàm `random` trả về số thực thuộc khoảng `(0, 1)`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR06: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -538,9 +538,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tràn số nguyên `int8`: Phép cộng quá giới hạn 127 bị tràn số thành `-128`, trong khi mảng `c` ép kiểu sang `int16` bảo toàn kết quả chính xác `128`. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-031: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -554,9 +554,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án B.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-032: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -570,9 +570,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi biến đổi hình dạng: Kết quả trích xuất phần tử lần lượt là `[8, 3]` và `[5, 6]`. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-033: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -586,9 +586,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 10 0. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-034: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"10 0\\n\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -602,9 +602,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi nhân ma trận và lan truyền: Phần tử tính được có giá trị `32` và mảng kết quả có kích thước `(2, 3)`. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-035: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -618,9 +618,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi thống kê so sánh hai phân phối: Cả hai nhóm đều có giá trị trung bình bằng 40, nhưng độ lệch chuẩn của `X` là 0 còn của `Y` là 20. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-036: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -634,9 +634,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi sắp xếp theo chỉ mục `argsort`: Dùng `A[idx, :]` để sắp xếp lại các hàng của ma trận theo thứ tự chỉ mục đã sắp xếp. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-037: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -645,9 +645,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích đọc mảng theo C-order: Dãy phần tử được đọc theo thứ tự hàng, mảng con giữ nguyên thứ tự phần tử tương ứng.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-038: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -656,9 +656,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích tính độc lập của mặt nạ boolean: Mảng boolean `m` được tính toán một lần thành `[True, False, True]` và không tự động cập nhật khi mảng số liệu gốc thay đổi.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-039: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -667,9 +667,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi phép trừ broadcasting: Phép trừ ma trận `(2, 2)` với vector hàng `(2,)` khớp chiều cuối nên thực hiện được mà không báo lỗi.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-040: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -683,9 +683,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích tham số phân phối chuẩn: Giá trị 50 và 5 là các tham số kỳ vọng và độ lệch chuẩn của phân phối lý thuyết, khác với các thống kê mẫu cụ thể. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR07: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -694,9 +694,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính phương sai mẫu: Trung bình là 4, tổng bình phương độ lệch là 8, phương sai tương ứng là `8/3 USD²` khi `ddof=0`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR08: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -710,9 +710,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án A.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-041: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -726,9 +726,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án D.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-042: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -742,9 +742,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm tra kích thước: Chuyển vị mảng 1D vẫn giữ kích thước `(4,)`, hàm `reshape(1, 4)` tạo mảng `(1, 4)`, và `x[:, None]` tạo mảng cột `(4, 1)`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-043: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -758,9 +758,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi chỉ mục nâng cao và `np.ix_`: Chỉ mục mảng con tạo mảng 1D kích thước `(2,)`, trong khi `np.ix_` tạo mảng con 2D kích thước `(2, 2)` với phần tử `q[1, 1] = 17`. Khớp hoàn toàn với phương án C.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-044: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -774,9 +774,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi broadcasting cộng cột: Phép cộng `A + A[:, 0:1]` cộng cột đầu tiên vào tất cả các cột của ma trận `A`. Khớp hoàn toàn với phương án A.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-045: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -790,9 +790,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lấy mẫu không hoàn lại: Ba vị trí trích xuất hoàn toàn không trùng nhau, phản ánh đúng cơ chế chọn mẫu ngẫu nhiên không lặp lại vị trí. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-046: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -801,9 +801,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích tính tái lập của số ngẫu nhiên: Cùng giá trị hạt giống (seed) và cùng trình tự gọi hàm bảo đảm kết quả sinh số ngẫu nhiên hoàn toàn giống nhau giữa các lần chạy.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-047: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -812,9 +812,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích bước nhảy của lát cắt: Lát cắt lấy các phần tử cách nhật với bước nhảy 8 byte, mảng `R` dùng chung bộ nhớ với mảng gốc.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-048: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -823,9 +823,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích gán mảng và sao chép: Phép gán biến `B = A` chỉ tạo tên tham chiếu mới trỏ vào cùng đối tượng mảng trong bộ nhớ.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-049: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -834,9 +834,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính toán xác suất: Mẫu số tính tổng từng hàng có kích thước `(2, 1)`, phép chia broadcasting chuẩn hóa tổng mỗi hàng về 1.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-050: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -845,14 +845,14 @@
       "optionExplanations": {
         "A": "Sai: Giá trị/thứ tự đúng nhưng đọc advanced indexing tạo copy.",
         "B": "Sai: Stop=1 không được lấy, chỉ chọn 5,3.",
-        "C": "Sai: 1 được chuẩn hoá là chỉ mục 5, nên start và stop trùng nhau với bước âm, kết quả rỗng.",
+        "C": "Sai: Chỉ mục `-1` được chuẩn hóa thành vị trí 5, nên start và stop trùng nhau với bước âm và lát cắt rỗng.",
         "D": "Đúng: Chọn 5,3,1, view stride −8 byte, ô đầu ở x[5], không phải địa chỉ âm."
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi cắt lát bước âm: Cú pháp `x[5:0:-2]` trích xuất mảng theo chiều ngược lại với bước nhảy âm mà vẫn tạo ra view chia sẻ bộ nhớ. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR09: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -861,9 +861,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi cắt lát hai chiều bước âm: Lát cắt `A[1:, ::-2]` trích xuất các hàng và cột theo bước nhảy âm cho ra mảng con `[[7, 5], [11, 9]]`.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR10: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -877,9 +877,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi so sánh gần đúng: Hàm `np.isclose` với `atol=1e-8` và `rtol=0` cho kết quả `[True, False]`, hàm `np.allclose` trả về `False`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-051: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -893,9 +893,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án A.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-052: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -909,9 +909,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến ValueError (cannot reshape array of size 6 into shape (2,4)). Khớp với phân tích cơ chế của phương án C.",
-        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-053: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"raised\",\n    \"stdout\": \"\",\n    \"errorType\": \"ValueError\",\n    \"error\": \"cannot reshape array of size 6 into shape (2,4)\"\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -925,9 +925,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi chỉ mục mảng trùng lặp: Trích xuất bằng danh sách chỉ mục chứa số trùng lặp trả về mảng `[8, 3, 8]` có kích thước `(3,)` và bảo toàn đầy đủ các vị trí được chỉ định. Khớp hoàn toàn với phương án D.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-054: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -941,9 +941,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi tính tổng bảo toàn số chiều: Hàm `A.sum(axis=0, keepdims=True)` gộp theo hàng và giữ nguyên số chiều trả về mảng `[[3, 7, 11]]` kích thước `(1, 3)`. Khớp hoàn toàn với phương án B.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-055: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -957,9 +957,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án C.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-056: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -968,9 +968,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi phân tích tác động ngoại lai: Giá trị trung bình toàn bộ là 50 USD/đêm trong khi trung vị của mẫu là 25 USD/đêm, cho thấy ngoại lai 140 làm lệch giá trị trung bình.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-057: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -979,9 +979,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích điều kiện tạo view trong NumPy: Không thể tạo view chia sẻ bộ nhớ nếu các phần tử cần lấy không tuân theo quy luật bước nhảy (strides) đều đặn trong bộ nhớ.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-058: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -990,9 +990,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích chia sẻ bộ nhớ của lát cắt cơ bản: Mảng `y` là basic view với bước nhảy 8 byte, các phép gán trên `y` phản ánh trực tiếp vào mảng `x` gốc.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-059: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -1001,9 +1001,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Phân tích kiểm chứng tâm hóa dữ liệu: Đảo thứ tự cột không làm thay đổi giá trị trung bình của từng hàng, phép kiểm bất biến logic xác nhận tính đúng đắn.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-060: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     },
     {
@@ -1017,9 +1017,9 @@
       },
       "explanationMarkdown": "",
       "verification": {
-        "method": "reasoning_audit",
-        "evidence": "Đối chiếu đặc tả mảng nhiều chiều ndarray và cơ chế bộ nhớ C/Fortran của NumPy. Khớp phương án B.",
-        "limitations": "Thẩm định theo chuẩn kỹ thuật thư viện NumPy."
+        "method": "reasoning_review_without_recorded_prompt_execution",
+        "evidence": "B3-MR11: Báo cáo thực thi không ghi nhận khối Python chạy được cho câu này. Việc đánh giá dựa trên đọc giả thiết, lựa chọn và lời giải, không được ghi nhận như một phép thử code đã đạt.",
+        "limitations": "Các thao tác shell, cấu hình môi trường, định dạng dữ liệu hoặc nhận định khái niệm cần phương pháp kiểm tra tương ứng. Không suy ra tỷ lệ đáp án đúng từ kiểm tra cấu trúc hay từ sự trùng khớp khóa gốc."
       }
     },
     {
@@ -1028,9 +1028,9 @@
       "optionExplanations": {},
       "explanationMarkdown": "",
       "verification": {
-        "method": "python_execution",
-        "evidence": "Thực thi lan truyền và nhân bản mảng: Mảng kết quả `R = [[2, 3, 4], [2, 3, 4]]` có kích thước `(2, 3)`, kiểu `int32` và dung lượng `24` byte.",
-        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+        "method": "recorded_prompt_execution_not_key_proof",
+        "evidence": "B3-MR12: Quan sát đã ghi khi chạy các khối Python của đề trong tiến trình riêng:\n\n```json\n[\n  {\n    \"block\": 1,\n    \"status\": \"returned\",\n    \"stdout\": \"\",\n    \"warnings\": []\n  }\n]\n```",
+        "limitations": "Đây là bằng chứng thực thi trong môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5. Chạy được code, output rỗng hoặc một lỗi phát sinh không tự chứng minh lựa chọn A–D. Đoạn mã phụ thuộc lịch chạy notebook, module hoặc tệp ngoài cần được xét theo giả thiết đề. Báo cáo lưu tại qa/data-exam/code-execution-all.json."
       }
     }
   ]

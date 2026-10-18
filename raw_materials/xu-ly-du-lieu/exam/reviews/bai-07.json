@@ -37,8 +37,8 @@
       "id": "B7-003",
       "correctKey": "A",
       "optionExplanations": {
-        "A": "Replace mặc định `regex=`False` tìm nguyên văn [$,], không bỏ $ hay phẩy. Ba chuỗi có dữ liệu đều không chuyển được.",
-        "B": "Phương án này ngầm coi [$,] là lớp regex dù thiếu `regex=`True`.",
+        "A": "Replace mặc định `regex=False` tìm nguyên văn [$,], không bỏ $ hay phẩy. Ba chuỗi có dữ liệu đều không chuyển được.",
+        "B": "Phương án này ngầm coi [$,] là lớp regex dù thiếu `regex=True`.",
         "C": "Phương án này đếm cả `None` từ nguồn là lỗi chuyển đổi.",
         "D": "Phương án này ngộ nhận rằng coerce sửa mọi văn bản thành giá hợp lệ."
       },
@@ -69,7 +69,7 @@
       "id": "B7-005",
       "correctKey": "D",
       "optionExplanations": {
-        "A": "Phương án này coi nhóm đơn vị không bắt hoặc `expand=`False` luôn cho `Series`.",
+        "A": "Phương án này coi nhóm đơn vị không bắt hoặc `expand=False` luôn cho `Series`.",
         "B": "Phương án này nhầm lẫn cả đoạn khớp với các nhóm trả về.",
         "C": "Phương án này ngộ nhận rằng extract tự bỏ hàng Studio không khớp.",
         "D": "Cả số và đơn vị đều có nhóm bắt. Expand=`False` không ép nhiều nhóm thành `Series`."
@@ -312,7 +312,7 @@
       "correctKey": "C",
       "optionExplanations": {
         "A": "Phương án này áp dụng phần tiền tố của nhánh trái sang nhánh phải dù không có nhóm bao.",
-        "B": "Phương án này không chính xác do nhóm bắt đầu tiên chỉ là phần [0 - 9]+.",
+        "B": "Phương án này không chính xác do nhóm bắt đầu tiên chỉ là phần `[0-9]+`.",
         "C": "Thiếu ngoặc giới hạn phạm vi |. Có khớp nhưng nhóm 1 không tham gia nhánh đó.",
         "D": "Phương án này không chính xác do nhóm không tham gia là `None`, không tự sinh số lượng."
       },
@@ -773,7 +773,7 @@
       "id": "B7-054",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Phương án này coi `expand=`True` như mặc định `expand=`False`.",
+        "A": "Phương án này coi `expand=True` như mặc định `expand=False`.",
         "B": "Expand=`True` đưa các phần ra cột, chuỗi bắt đầu. Cho phần đầu rỗng. Không tự bỏ hàng D.",
         "C": "Phương án này tự ý bỏ chuỗi rỗng D dù không có lệnh lọc.",
         "D": "Phương án này tự ý bỏ phần rỗng trước dấu tách, làm lệch vị trí."
@@ -790,8 +790,8 @@
       "correctKey": "C",
       "optionExplanations": {
         "A": "Phương án này áp dụng miền ASCII cho mọi lớp của Python re mặc định.",
-        "B": "Phương án này coi [0 - 9] mở rộng thành mọi chữ số Unicode như \\d.",
-        "C": "Python \\d nhận chữ số Unicode. [0 - 9] chỉ ASCII. \\w nhận chữ Unicode, _ và số.",
+        "B": "Phương án này coi `[0-9]` mở rộng thành mọi chữ số Unicode như \\d.",
+        "C": "Python \\d nhận chữ số Unicode. `[0-9]` chỉ ASCII. \\w nhận chữ Unicode, _ và số.",
         "D": "Phương án này coi \\w chỉ chữ cái ASCII hoặc loại _/chữ số."
       },
       "explanationMarkdown": "",
@@ -1005,7 +1005,7 @@
       "id": "B7-R11",
       "correctKey": "C",
       "optionExplanations": {
-        "A": "Phương án này không chính xác do cho phần sau chấm rỗng như dùng [0 - 9]*.",
+        "A": "Phương án này không chính xác do cho phần sau chấm rỗng như dùng `[0-9]*`.",
         "B": "Phương án này không chính xác do thêm dấu cộng ngoài quy tắc.",
         "C": "Âm và 0 đầu được phép. Ba mục kia lần lượt thiếu phần sau chấm, có cộng, thiếu phần nguyên.",
         "D": "Phương án này không chính xác do cho phần nguyên vắng mặt ngoài quy tắc."

@@ -588,7 +588,7 @@
         "A": "Phương án này không chính xác do a khẳng định quá rộng: Chọn đúng nhãn03/03 vẫn được.",
         "B": "Phương án này nhầm lẫn sắp xếp với loại trùng.",
         "C": "Phương án này không chính xác do c suy thứ tự ngày từ id.",
-        "D": "Trên bảng này `r.sort_index().loc['2026 - 01':'2026 - 02']` trả id2,3. Không cần học thuộc thông báo lỗi. Cần hiểu index chưa sắp có thể không đáp ứng cắt khoảng theo nhãn rút gọn."
+        "D": "Trên bảng này `r.sort_index().loc['2026-01':'2026-02']` trả id2,3. Không cần học thuộc thông báo lỗi. Cần hiểu index chưa sắp có thể không đáp ứng cắt khoảng theo nhãn rút gọn."
       },
       "explanationMarkdown": "",
       "verification": {

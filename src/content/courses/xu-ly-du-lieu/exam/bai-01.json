@@ -11,26 +11,26 @@
         {
           "key": "A",
           "html": "<p>Thu thập → biến đổi → làm sạch.</p>\n",
-          "explanationHtml": "<p>Sai: Đảo ngược vai trò giữa loại trùng và nối bảng.</p>\n"
+          "explanationHtml": "<p>Sai: Phương án này đảo ngược thứ tự hai bước chuẩn bị: <code>'Xóa các bản ghi trùng'</code> thuộc khâu làm sạch, còn 'nối bảng theo mã' thuộc khâu biến đổi.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Thu thập → làm sạch → biến đổi.</p>\n",
-          "explanationHtml": "<p>Đúng: Lấy thêm dữ liệu là thu thập, loại trùng là làm sạch, nối các bảng là biến đổi. Các thao tác chuẩn bị này giúp chuyển dữ liệu thô thành thông tin sử dụng được.</p>\n"
+          "explanationHtml": "<p>Đúng: Lấy thêm file giá là thu thập dữ liệu; xóa các bản ghi trùng là làm sạch dữ liệu (loại trùng); nối bảng giá với chỗ ở theo mã là biến đổi dữ liệu (ghép nối bảng). Thứ tự chuẩn là Thu thập → Làm sạch → Biến đổi.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Làm sạch → thu thập → biến đổi.</p>\n",
-          "explanationHtml": "<p>Sai: Lấy file mới không phải là làm sạch và loại trùng không phải là thu thập.</p>\n"
+          "explanationHtml": "<p>Sai: Lấy file mới là thu thập (không phải làm sạch); xóa các bản ghi trùng là làm sạch (không phải thu thập).</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Biến đổi → làm sạch → trực quan.</p>\n",
-          "explanationHtml": "<p>Sai: Thao tác lấy file và nối bảng không tạo ra biểu đồ trực quan.</p>\n"
+          "explanationHtml": "<p>Sai: Lấy file là thu thập (không phải biến đổi); các thao tác chuẩn bị dữ liệu này chưa tạo ra biểu đồ trực quan hóa.</p>\n"
         }
       ],
       "correctKey": "B",
-      "answerHtml": "<p>Phương án B đúng. Trình tự kỹ thuật chuẩn trong vòng đời dữ liệu gồm ba giai đoạn: Thu thập dữ liệu từ nguồn bên ngoài, làm sạch các khuyết tật nội tại, sau đó biến đổi và kết hợp dữ liệu để phục vụ phân tích.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Phương án này đảo lộn thứ tự giữa biến đổi và làm sạch. Nếu tiến hành nối bảng dữ liệu khi các bản ghi trùng lặp chưa được loại bỏ, số lượng dòng sau phép nối sẽ bị nhân lên ngoài ý muốn theo tích Descartes của các khóa trùng. Điều đó khiến dữ liệu phình to bất thường và làm cho bước làm sạch tiếp theo trở nên phức tạp gấp nhiều lần.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Thao tác lấy tệp giá từ dịch vụ bên thứ ba đưa vào kho lưu trữ chính là công đoạn thu thập dữ liệu (data collection). Việc rà soát và xóa bỏ các bản ghi trùng lặp nhằm bảo đảm tính duy nhất của thực thể là bước làm sạch dữ liệu (data cleaning). Cuối cùng, việc nối bảng giá với bảng thông tin chỗ ở dựa trên mã định danh chung là bước biến đổi dữ liệu (data transformation) để tạo ra tập dữ liệu tích hợp giàu thông tin.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Phương án này nhận định việc lấy tệp giá mới là làm sạch và việc xóa trùng là thu thập. Đây là sự nhầm lẫn cơ bản về vai trò của từng công đoạn, vì thu thập phản ánh hành vi tiếp nhận dữ liệu mới vào hệ thống, còn làm sạch chỉ can thiệp vào cấu trúc và chất lượng của các bản ghi đã thu thập được.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Phương án này coi việc lấy tệp là biến đổi và coi việc nối bảng theo mã định danh là trực quan hóa. Trực quan hóa dữ liệu đòi hỏi việc dựng biểu đồ, đồ thị hình học hoặc bảng tổng hợp số liệu để truyền tải thông tin trực quan cho người đọc, trong khi phép nối bảng đơn thuần chỉ là thao tác quan hệ dữ liệu ở tầng lưu trữ.</p>\n"
+      "answerHtml": "<p>Phương án B đúng.</p>\n<h3 id=\"co-so-ly-thuyet-vong-đoi-va-cac-giai-đoan-xu-ly-du-lieu\" tabindex=\"-1\">Cơ sở lý thuyết: Vòng đời và các giai đoạn xử lý dữ liệu </h3>\n<p>Trong khoa học dữ liệu và quy trình chuẩn bị dữ liệu (Data Pipeline / Data Preparation Lifecycle), các công việc từ khi tiếp nhận dữ liệu thô cho tới khi sẵn sàng phục vụ phân tích được tổ chức thành các giai đoạn tuần tự sau:</p>\n<ol>\n<li>\n<p><strong>Giai đoạn 1: Thu thập dữ liệu (Data Collection / Data Ingestion):</strong></p>\n<ul>\n<li><strong>Mục tiêu:</strong> Tiếp nhận hoặc trích xuất dữ liệu thô từ các nguồn phát sinh bên ngoài đưa vào không gian lưu trữ và làm việc của dự án.</li>\n<li><strong>Các thao tác tiêu biểu:</strong> Tải tệp tin (CSV, Excel, JSON), gọi API từ các dịch vụ bên ngoài, cào dữ liệu từ trang web (web scraping), trích xuất bản ghi từ hệ thống cơ sở dữ liệu.</li>\n<li><strong>Ánh xạ vào câu hỏi:</strong> Thao tác <em>&quot;lấy thêm file giá từ một dịch vụ&quot;</em> chính là hành động thu thập dữ liệu thô từ nguồn dịch vụ bên thứ ba đưa vào hệ thống.</li>\n</ul>\n</li>\n<li>\n<p><strong>Giai đoạn 2: Làm sạch dữ liệu (Data Cleaning / Cleansing):</strong></p>\n<ul>\n<li><strong>Mục tiêu:</strong> Phát hiện, xử lý hoặc loại bỏ các khiếm khuyết nội tại của dữ liệu thô (dữ liệu bị lỗi, không nhất quán, dư thừa, khuyết thiếu) nhằm nâng cao chất lượng và độ tin cậy của tập dữ liệu trước khi xử lý sâu hơn.</li>\n<li><strong>Các thao tác tiêu biểu:</strong>\n<ul>\n<li><strong>Loại bỏ bản ghi trùng lặp (Deduplication / loại trùng):</strong> Khi thu thập từ nhiều nguồn hoặc ghi nhận nhiều lần, dữ liệu thường có các dòng bị lặp lại. Việc <em>&quot;xóa các bản ghi trùng&quot;</em> giúp bảo đảm tính duy nhất của từng thực thể, tránh tình trạng một thực thể bị đếm lặp lại nhiều lần gây sai lệch nghiêm trọng cho các chỉ số thống kê.</li>\n<li><strong>Xử lý giá trị khuyết thiếu (Missing values):</strong> Điền giá trị thay thế (imputation) hoặc loại bỏ các ô trống (<code>NaN</code>, <code>None</code>, <code>null</code>).</li>\n<li><strong>Chuẩn hóa định dạng và xử lý dị biệt:</strong> Sửa lỗi kiểu dữ liệu (chuyển chuỗi thành số), loại bỏ ký tự lạ, chuẩn hóa khoảng trắng thừa.</li>\n</ul>\n</li>\n<li><strong>Ánh xạ vào câu hỏi:</strong> Thao tác <em>&quot;xóa các bản ghi trùng&quot;</em> (loại trùng) là công việc trọng tâm của khâu làm sạch dữ liệu.</li>\n</ul>\n</li>\n<li>\n<p><strong>Giai đoạn 3: Biến đổi dữ liệu (Data Transformation):</strong></p>\n<ul>\n<li><strong>Mục tiêu:</strong> Tái cấu trúc, định dạng lại hoặc kết hợp các tập dữ liệu đã làm sạch để tạo ra cấu trúc dữ liệu mới, phù hợp cho bài toán phân tích, thống kê hoặc mô hình hóa.</li>\n<li><strong>Các thao tác tiêu biểu:</strong>\n<ul>\n<li><strong>Ghép nối / kết hợp bảng (Merge / Join):</strong> Khi dữ liệu nằm ở nhiều bảng riêng rẽ (ví dụ bảng giá và bảng chỗ ở), ta sử dụng một trường khóa chung (mã định danh chỗ ở) để nối các bảng lại với nhau. Thao tác <em>&quot;nối bảng giá với bảng chỗ ở theo mã&quot;</em> tích hợp hai nguồn dữ liệu thành một tập dữ liệu hợp nhất giàu ngữ cảnh.</li>\n<li><strong>Tạo đặc trưng mới (Feature engineering):</strong> Tính toán các cột chỉ số phái sinh từ các cột hiện có.</li>\n<li><strong>Xoay bảng và tổng hợp (Pivot, Melt, GroupBy Aggregation):</strong> Thay đổi hình dạng dữ liệu và gom nhóm tính toán.</li>\n</ul>\n</li>\n<li><strong>Ánh xạ vào câu hỏi:</strong> Thao tác <em>&quot;nối bảng giá với bảng chỗ ở theo mã&quot;</em> (ghép nối bảng) là công việc thuộc khâu biến đổi và tích hợp dữ liệu.</li>\n</ul>\n</li>\n<li>\n<p><strong>Giai đoạn 4: Trực quan hóa và Kể chuyện dữ liệu (Data Visualization &amp; Storytelling):</strong></p>\n<ul>\n<li><strong>Mục tiêu:</strong> Dựng các đồ thị, biểu đồ hình học (cột, đường, phân tán, biểu đồ hộp...) để hiển thị trực quan các quy luật dữ liệu và diễn giải ý nghĩa số liệu phục vụ việc ra quyết định. Ba thao tác trong đề bài đều thuộc khâu chuẩn bị dữ liệu kỹ thuật, chưa bước sang khâu trực quan hóa.</li>\n</ul>\n</li>\n</ol>\n<p><strong>Tổng kết:</strong> Ba công việc trong đề bài tương ứng lần lượt với:</p>\n<ul>\n<li><em>&quot;Lấy thêm file giá từ một dịch vụ&quot;</em> <span class=\"static-math\"><mjx-container class=\"MathJax\" jax=\"SVG\" style=\"direction: ltr; position: relative;\"><svg style=\"overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.181ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -511 1000 522\" aria-hidden=\"true\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"2192\" d=\"M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z\" style=\"stroke-width: 3;\"/></g></g></g></svg><mjx-assistive-mml unselectable=\"on\" display=\"inline\" style=\"top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo stretchy=\"false\">→</mo></math></mjx-assistive-mml></mjx-container></span> <strong>Thu thập</strong> (Data Collection)</li>\n<li><em>&quot;Xóa các bản ghi trùng&quot;</em> <span class=\"static-math\"><mjx-container class=\"MathJax\" jax=\"SVG\" style=\"direction: ltr; position: relative;\"><svg style=\"overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.181ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -511 1000 522\" aria-hidden=\"true\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"2192\" d=\"M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z\" style=\"stroke-width: 3;\"/></g></g></g></svg><mjx-assistive-mml unselectable=\"on\" display=\"inline\" style=\"top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo stretchy=\"false\">→</mo></math></mjx-assistive-mml></mjx-container></span> <strong>Làm sạch</strong> (Data Cleaning - loại bỏ bản ghi trùng lặp)</li>\n<li><em>&quot;Nối bảng giá với bảng chỗ ở theo mã&quot;</em> <span class=\"static-math\"><mjx-container class=\"MathJax\" jax=\"SVG\" style=\"direction: ltr; position: relative;\"><svg style=\"overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.181ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -511 1000 522\" aria-hidden=\"true\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"2192\" d=\"M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z\" style=\"stroke-width: 3;\"/></g></g></g></svg><mjx-assistive-mml unselectable=\"on\" display=\"inline\" style=\"top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo stretchy=\"false\">→</mo></math></mjx-assistive-mml></mjx-container></span> <strong>Biến đổi</strong> (Data Transformation - ghép nối bảng dữ liệu theo khóa chung)</li>\n</ul>\n<p>Thứ tự chuẩn là: <strong>Thu thập → Làm sạch → Biến đổi</strong> (Phương án B).</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Phương án này đảo lộn thứ tự giữa biến đổi và làm sạch (Thu thập → Biến đổi → Làm sạch). Trong kỹ thuật dữ liệu, nếu thực hiện ghép nối hai bảng khi các bản ghi trùng lặp chưa được xóa bỏ, phép nối theo mã khóa chung sẽ gây ra hiện tượng nhân dòng ngoài ý muốn theo tích Descartes (<span class=\"static-math\"><mjx-container class=\"MathJax\" jax=\"SVG\" style=\"direction: ltr; position: relative;\"><svg style=\"overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.11ex\" height=\"1.136ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -491 2700.4 502\" aria-hidden=\"true\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"1D45A\" d=\"M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z\" style=\"stroke-width: 3;\"/></g><g data-mml-node=\"mo\" transform=\"translate(1100.2,0)\"><path data-c=\"D7\" d=\"M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z\" style=\"stroke-width: 3;\"/></g><g data-mml-node=\"mi\" transform=\"translate(2100.4,0)\"><path data-c=\"1D45B\" d=\"M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z\" style=\"stroke-width: 3;\"/></g></g></g></svg><mjx-assistive-mml unselectable=\"on\" display=\"inline\" style=\"top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>m</mi><mo>×</mo><mi>n</mi></math></mjx-assistive-mml></mjx-container></span>). Điều đó khiến tập dữ liệu bị phình to bất thường với các dòng trùng lặp giả tạo, làm sai lệch hoàn toàn kết quả phân tích sau đó và khiến việc làm sạch tiếp theo trở nên phức tạp gấp bội. Cần làm sạch dữ liệu trước khi thực hiện ghép nối.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Phương án này xác định hoàn toàn chính xác theo đúng tiến trình kỹ thuật:</p>\n<ul>\n<li>Thu thập dữ liệu là bước đưa tệp giá từ dịch vụ ngoài vào hệ thống.</li>\n<li>Làm sạch dữ liệu là bước rà soát và xóa các bản ghi trùng để đảm bảo dữ liệu chuẩn xác và duy nhất.</li>\n<li>Biến đổi dữ liệu là bước dùng mã định danh để liên kết bảng giá với bảng chỗ ở, tạo tập dữ liệu sẵn sàng cho việc phân tích.</li>\n</ul>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Phương án này nhầm lẫn khi xếp thao tác lấy tệp giá mới vào khâu làm sạch và xóa bản ghi trùng vào khâu thu thập. Khâu làm sạch chỉ có thể thực hiện trên dữ liệu đã thu thập được vào hệ thống; đồng thời, xóa bản ghi trùng là hành động thanh lọc chất lượng dữ liệu nội bộ chứ không phải tiếp nhận nguồn dữ liệu mới từ bên ngoài.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Phương án này nhầm lẫn khi coi việc nhận tệp là biến đổi và coi việc nối bảng theo mã là trực quan hóa. Việc tải tệp không làm thay đổi cấu trúc dữ liệu nên không phải biến đổi. Thao tác nối hai bảng bằng mã định danh chỉ là phép kết hợp dữ liệu dạng bảng quan hệ ở tầng lưu trữ, hoàn toàn không tạo ra bất kỳ biểu đồ hay đồ thị trực quan nào cho người xem.</p>\n"
     },
     {
       "id": "B1-002",
@@ -90,7 +90,7 @@
         }
       ],
       "correctKey": "C",
-      "answerHtml": "<p>Phương án C đúng. Môi trường ảo tạo từ Python 3.11.9 sẽ cố định đường dẫn đến trình thông dịch đó bên trong tệp cấu hình <code>pyvenv.cfg</code>. Việc ghi tệp <code>.python-version</code> và chạy lại lệnh kích hoạt không thể thay đổi trình thông dịch nền của môi trường ảo đã được tạo từ trước.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Kịch bản kích hoạt tiêu chuẩn <code>activate</code> của <code>venv</code> chỉ thực hiện điều chỉnh biến môi trường <code>PATH</code> để ưu tiên thư mục chứa mã nhị phân trong <code>.venv/bin</code>. Kịch bản này không tích hợp cơ chế tự động phân tích tệp <code>.python-version</code> hay tự tái tạo môi trường bằng phiên bản Python mới.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Lệnh <code>pip freeze</code> chỉ có nhiệm vụ quét các gói thư viện đã cài trong thư mục <code>site-packages</code> của môi trường hiện hành và liệt kê ra danh sách. Lệnh này hoàn toàn không có khả năng nhận biết tệp <code>.python-version</code> hoặc thay đổi phiên bản của trình thông dịch Python đang thực thi.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Khi khởi tạo môi trường ảo với Python 3.11.9, liên kết đến phiên bản này đã được thiết lập vĩnh viễn trong cấu trúc thư mục của <code>.venv</code>. Nếu muốn chuyển sang Python 3.12.3 khi không có công cụ quản lý phiên bản chuyên dụng như <code>pyenv</code>, người dùng bắt buộc phải xóa môi trường ảo cũ hoặc chỉ định đúng đường dẫn của trình thông dịch Python 3.12.3 để khởi tạo một môi trường ảo mới.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Công cụ <code>pip</code> chỉ là trình quản lý gói thư viện cài thêm cho Python chứ không quản lý chính bản thân trình thông dịch Python. <code>pip</code> không thể tự nâng cấp lõi Python nền từ 3.11.9 lên 3.12.3 bên trong một môi trường ảo đang hoạt động.</p>\n"
+      "answerHtml": "<p>Phương án C đúng. Môi trường ảo tạo từ Python 3.11.9 sẽ cố định đường dẫn đến trình thông dịch đó bên trong tệp cấu hình <code>pyvenv.cfg</code>. Việc ghi tệp <code>.python-version</code> và chạy lại lệnh kích hoạt không thể thay đổi trình thông dịch nền của môi trường ảo đã được tạo từ trước.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Kịch bản kích hoạt tiêu chuẩn của <code>venv</code> điều chỉnh <code>PATH</code> để ưu tiên thư mục chứa trình thông dịch của môi trường: <code>.venv/bin</code> trên POSIX hoặc <code>.venv\\Scripts</code> trên Windows. Kịch bản này không tích hợp cơ chế tự động phân tích tệp <code>.python-version</code> hay tự tái tạo môi trường bằng phiên bản Python mới.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Lệnh <code>pip freeze</code> chỉ có nhiệm vụ quét các gói thư viện đã cài trong thư mục <code>site-packages</code> của môi trường hiện hành và liệt kê ra danh sách. Lệnh này hoàn toàn không có khả năng nhận biết tệp <code>.python-version</code> hoặc thay đổi phiên bản của trình thông dịch Python đang thực thi.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Môi trường <code>.venv</code> hiện tại được tạo bằng Python 3.11.9, nên đổi tệp <code>.python-version</code> rồi kích hoạt lại vẫn dùng trình thông dịch cũ. Để dùng Python 3.12.3 trong tình huống này, hãy gọi đúng trình thông dịch 3.12.3 để tạo môi trường mới và cài lại các gói cần thiết. Có thể tạo môi trường ở thư mục khác để giữ môi trường cũ. Tùy chọn <code>venv --upgrade</code> dành cho trường hợp Python nền đã được nâng cấp tại chỗ, không phải cơ chế tự đọc <code>.python-version</code>.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Công cụ <code>pip</code> chỉ là trình quản lý gói thư viện cài thêm cho Python chứ không quản lý chính bản thân trình thông dịch Python. <code>pip</code> không thể tự nâng cấp lõi Python nền từ 3.11.9 lên 3.12.3 bên trong một môi trường ảo đang hoạt động.</p>\n"
     },
     {
       "id": "B1-004",
@@ -150,7 +150,7 @@
         }
       ],
       "correctKey": "D",
-      "answerHtml": "<p>Phương án D đúng. Môi trường ảo (<code>venv</code>) tạo ra không gian lưu trữ cô lập cho các gói thư viện bên trong từng dự án, ngăn ngừa hoàn toàn tình trạng xung đột phiên bản khi làm việc với nhiều ứng dụng trên cùng một máy tính.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Thao tác đổi tên thư mục dự án chỉ thay đổi đường dẫn tệp mã nguồn trên hệ thống tệp tin, hoàn toàn không làm thay đổi vị trí cài đặt thư viện chung của hệ điều hành. Một môi trường Python duy nhất không thể chứa đồng thời hai phiên bản khác nhau của cùng một thư viện trong cùng một thư mục <code>site-packages</code>.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Việc viết nhiều tệp <code>requirements.txt</code> nhưng tiếp tục dùng chung một môi trường Python sẽ dẫn đến việc lệnh cài đặt sau ghi đè lên thư viện đã cài trước đó. Điều này làm phá vỡ sự ổn định của dự án cũ và gây ra các lỗi không tương thích phiên bản khi chạy mã.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Tệp notebook <code>.ipynb</code> chỉ là định dạng lưu trữ nội dung văn bản và mã nguồn theo chuẩn JSON. Bản thân tệp notebook không sở hữu cơ chế đóng gói hay cô lập môi trường thực thi. Các notebook chạy trên cùng một kernel sẽ dùng chung toàn bộ thư viện đã cài đặt trong môi trường đó.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Giải pháp kỹ thuật chuẩn mực là khởi tạo môi trường ảo riêng biệt cho mỗi dự án, cài đặt đúng phiên bản thư viện cần thiết vào từng môi trường và lưu lại thông tin phiên bản. Trình soạn thảo VS Code hỗ trợ nhận diện và chuyển đổi linh hoạt giữa các trình thông dịch của từng môi trường ảo, giúp bảo vệ tính toàn vẹn của mã nguồn.</p>\n"
+      "answerHtml": "<p>Phương án D đúng. Môi trường ảo (<code>venv</code>) tạo ra không gian lưu trữ cô lập cho các gói thư viện bên trong từng dự án, giúp hai dự án dùng các phiên bản thư viện khác nhau mà không ghi đè gói của nhau. Môi trường ảo không tự giải quyết yêu cầu phụ thuộc mâu thuẫn bên trong cùng một dự án, nên vẫn cần chọn các phiên bản tương thích.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Thao tác đổi tên thư mục dự án chỉ thay đổi đường dẫn tệp mã nguồn trên hệ thống tệp tin, hoàn toàn không làm thay đổi vị trí cài đặt thư viện chung của hệ điều hành. Một môi trường Python duy nhất không thể chứa đồng thời hai phiên bản khác nhau của cùng một thư viện trong cùng một thư mục <code>site-packages</code>.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Việc viết nhiều tệp <code>requirements.txt</code> nhưng tiếp tục dùng chung một môi trường Python sẽ dẫn đến việc lệnh cài đặt sau ghi đè lên thư viện đã cài trước đó. Điều này làm phá vỡ sự ổn định của dự án cũ và gây ra các lỗi không tương thích phiên bản khi chạy mã.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Tệp notebook <code>.ipynb</code> chỉ là định dạng lưu trữ nội dung văn bản và mã nguồn theo chuẩn JSON. Bản thân tệp notebook không sở hữu cơ chế đóng gói hay cô lập môi trường thực thi. Các notebook chạy trên cùng một kernel sẽ dùng chung toàn bộ thư viện đã cài đặt trong môi trường đó.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Giải pháp kỹ thuật chuẩn mực là khởi tạo môi trường ảo riêng biệt cho mỗi dự án, cài đặt đúng phiên bản thư viện cần thiết vào từng môi trường và lưu lại thông tin phiên bản. Trình soạn thảo VS Code hỗ trợ nhận diện và chuyển đổi linh hoạt giữa các trình thông dịch của từng môi trường ảo, giúp chạy mã bằng đúng môi trường đã chuẩn bị.</p>\n"
     },
     {
       "id": "B1-006",
@@ -248,22 +248,22 @@
         {
           "key": "A",
           "html": "<p>Bỏ dấu tiền là đủ; ô thiếu có thể tính như giá 0 để giữ số hàng.</p>\n",
-          "explanationHtml": "<p>Sai: Kernel không tự động quét thực thi trước các cell phía dưới khi người dùng chưa nhấn chạy.</p>\n"
+          "explanationHtml": "<p>Sai: Giá thiếu chưa biết không được tự coi là 0 nếu chưa có quy ước có căn cứ.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Xóa giá 1 vì nhỏ hơn các giá còn lại là đủ để dữ liệu sạch.</p>\n",
-          "explanationHtml": "<p>Sai: Thứ tự vị trí trong tệp không đồng nghĩa với thứ tự thực thi trong bộ nhớ kernel.</p>\n"
+          "explanationHtml": "<p>Sai: Giá $1 cần được kiểm tra nguồn và đơn vị, không thể xóa chỉ vì nhỏ.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Dùng biểu đồ trước; nếu biểu đồ đọc được thì không cần xem định dạng và thiếu.</p>\n",
-          "explanationHtml": "<p>Sai: Việc nhìn thấy code trên giao diện không chứng minh code đó đã chạy và tạo ra biến.</p>\n"
+          "explanationHtml": "<p>Sai: Biểu đồ không thay cho kiểm tra kiểu chuỗi, giá thiếu và giá trị bất thường.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Cần làm rõ dạng chuỗi, ô thiếu và kiểm chứng giá lạ trước khi thống kê, diễn giải.</p>\n",
-          "explanationHtml": "<p>Đúng: Phiên làm việc mới khởi tạo kernel ở trạng thái sạch chưa có biến. Mã nguồn chỉ tạo ra giá trị trong bộ nhớ khi cell tương ứng được thực thi, do đó cần chạy tuần tự từ cell định nghĩa biến trước khi sử dụng.</p>\n"
+          "explanationHtml": "<p>Đúng: Làm rõ định dạng, dữ liệu thiếu và giá lạ trước khi thống kê, diễn giải.</p>\n"
         }
       ],
       "correctKey": "D",
@@ -308,22 +308,22 @@
         {
           "key": "A",
           "html": "<p>Vào A vì môi trường đang kích hoạt luôn thắng đường dẫn Python trong lệnh.</p>\n",
-          "explanationHtml": "<p>Sai: Cú pháp này không hợp lệ trong hệ sinh thái dòng lệnh Python tiêu chuẩn.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh gọi đường dẫn Python của B sẽ dùng B, dù A đang kích hoạt.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Vào cả A và B vì một nơi được kích hoạt còn một nơi được ghi trong lệnh.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh này dùng để lưu lại danh sách gói đã cài chứ không phải để cài đặt thêm gói mới.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh chạy qua đúng một interpreter được gọi đích danh, nên chỉ cài vào B.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Vào B vì lệnh gọi đích danh Python của B, dù shell vẫn kích hoạt A.</p>\n",
-          "explanationHtml": "<p>Đúng: Lệnh <code>pip install</code> là cú pháp chuẩn xác để cài đặt thêm gói thư viện vào môi trường ảo đang kích hoạt.</p>\n"
+          "explanationHtml": "<p>Đúng: <code>/du_an_B/.venv/bin/python -m pip</code> gọi đúng trình thông dịch của B để cài gói, dù A vẫn đang kích hoạt.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Vào Python hệ thống vì dùng đường dẫn tuyệt đối sẽ bỏ qua venv.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh này dùng để gỡ bỏ gói thư viện khỏi môi trường chứ không phải để cài mới.</p>\n"
+          "explanationHtml": "<p>Sai: Đường dẫn tuyệt đối tới Python trong venv vẫn dùng chính venv đó, không chuyển sang Python hệ thống.</p>\n"
         }
       ],
       "correctKey": "C",
@@ -338,22 +338,22 @@
         {
           "key": "A",
           "html": "<p>Không dùng AI ở quiz này; lượng trợ giúp nhỏ không thay đổi chế độ đóng.</p>\n",
-          "explanationHtml": "<p>Đúng: Quy trình học tập chuẩn mực đòi hỏi người học tự suy nghĩ hướng tiếp cận trước, sử dụng AI làm trợ lý gợi ý có ngữ cảnh, sau đó tự tay kiểm chứng từng dòng mã và khai báo minh bạch theo quy định.</p>\n"
+          "explanationHtml": "<p>Đúng: Quiz đóng cấm dùng AI dù chỉ xin một gợi ý.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Được hỏi nếu không chép nguyên câu trả lời của AI.</p>\n",
-          "explanationHtml": "<p>Sai: Việc sao chép trực tiếp toàn bộ lời giải của AI mà không hiểu bản chất là vi phạm quy chế học tập.</p>\n"
+          "explanationHtml": "<p>Sai: Không chép nguyên văn không làm thay đổi lệnh cấm AI trong quiz đóng.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Được hỏi nếu ghi công cụ vào cuối bài ngay sau quiz.</p>\n",
-          "explanationHtml": "<p>Sai: Chỉ dựa vào việc mã nguồn chạy không báo lỗi là chưa đủ để khẳng định kết quả xử lý dữ liệu đúng đắn về mặt logic học thuật.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo sau quiz không cấp quyền dùng AI trong lúc làm bài.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Được hỏi nếu chỉ yêu cầu khái niệm thay vì giải câu cụ thể.</p>\n",
-          "explanationHtml": "<p>Sai: Tự ý bỏ qua bước kiểm chứng độc lập khiến kết quả dễ rơi vào bẫy ảo giác của các mô hình ngôn ngữ lớn.</p>\n"
+          "explanationHtml": "<p>Sai: Hỏi khái niệm vẫn là dùng AI trong hoạt động đóng.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -368,26 +368,26 @@
         {
           "key": "A",
           "html": "<p>freeze tự thêm các gói phổ biến chưa được cài để dự án dễ chạy hơn.</p>\n",
-          "explanationHtml": "<p>Sai: Colab không lưu trữ vĩnh viễn tệp tạm thời trên máy ảo sau khi phiên làm việc bị ngắt kết nối.</p>\n"
+          "explanationHtml": "<p>Sai: <code>pip freeze</code> chỉ liệt kê gói đã cài, không tự thêm thư viện phổ biến.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Các dòng thêm là mọi phiên bản cũ từng được cài của hai gói.</p>\n",
-          "explanationHtml": "<p>Sai: Cả hai môi trường đều hỗ trợ định dạng notebook <code>.ipynb</code> một cách hoàn chỉnh.</p>\n"
+          "explanationHtml": "<p>Sai: Danh sách phản ánh các gói hiện có, không lưu mọi phiên bản từng được cài.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Các dòng thêm phải đến từ Python hệ thống ngoài venv.</p>\n",
-          "explanationHtml": "<p>Sai: VS Code cục bộ không bị phụ thuộc vào giới hạn thời gian thực thi (timeout) của dịch vụ đám mây công cộng.</p>\n"
+          "explanationHtml": "<p>Sai: Venv thông thường không lấy gói từ Python hệ thống.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Danh sách có thể gồm các gói phụ thuộc được cài kèm đang hiện diện trong venv.</p>\n",
-          "explanationHtml": "<p>Đúng: Google Colab cung cấp môi trường đám mây có sẵn tài nguyên GPU và thư viện phổ biến nhưng chỉ duy trì phiên tạm thời, trong khi môi trường VS Code cục bộ giúp người học làm chủ hoàn toàn mã nguồn, dữ liệu và phiên bản phần mềm trên máy tính cá nhân.</p>\n"
+          "explanationHtml": "<p>Đúng: Các gói phụ thuộc đã cài trong venv cũng xuất hiện trong kết quả freeze.</p>\n"
         }
       ],
       "correctKey": "D",
-      "answerHtml": "<p>Phương án D đúng. Các thư viện phân tích dữ liệu lớn như <code>pandas</code> và <code>matplotlib</code> đòi hỏi nhiều thư viện nền tảng khác để hoạt động. Khi cài đặt, <code>pip</code> tự động tải các gói phụ thuộc này, và lệnh <code>pip freeze</code> sẽ liệt kê toàn bộ mọi gói đang có mặt trong môi trường ảo.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Lệnh <code>pip freeze</code> chỉ có chức năng rà soát và kết xuất danh sách các gói thực sự đang tồn tại trong môi trường ảo hiện hành. Lệnh này không chứa cơ chế tự ý phỏng đoán nhu cầu của dự án để thêm vào các gói chưa từng được cài đặt.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Mỗi môi trường ảo Python chỉ lưu trữ một phiên bản duy nhất cho mỗi thư viện tại một thời điểm trong thư mục <code>site-packages</code>. Kết quả của <code>pip freeze</code> phản ánh chính xác trạng thái hiện thời của môi trường chứ không lưu lại lịch sử các phiên bản cũ đã từng được cài trước đây.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Theo mô hình cấu hình mặc định, môi trường ảo hoàn toàn cô lập và không kế thừa các gói từ Python hệ thống bên ngoài. Các dòng gói thư viện xuất hiện thêm nằm ngay trong thư mục <code>site-packages</code> của chính môi trường ảo đó do tiến trình cài đặt tự động bổ sung.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Khi người dùng ra lệnh cài đặt <code>pandas</code> và <code>matplotlib</code>, công cụ <code>pip</code> sẽ phân giải cây phụ thuộc và cài đặt thêm các thư viện nền tảng bắt buộc như <code>numpy</code>, <code>python-dateutil</code>, <code>pytz</code>, <code>kiwisolver</code>, <code>pillow</code> và <code>fonttools</code>. Do lệnh <code>pip freeze</code> quét toàn bộ thư mục <code>site-packages</code>, danh sách xuất ra sẽ bao gồm đầy đủ cả hai gói chính và toàn bộ các gói phụ thuộc gián tiếp này.</p>\n"
+      "answerHtml": "<p>Phương án D đúng. Các thư viện phân tích dữ liệu lớn như <code>pandas</code> và <code>matplotlib</code> đòi hỏi nhiều thư viện nền tảng khác để hoạt động. Khi cài đặt, <code>pip</code> tự động tải các gói phụ thuộc này, và lệnh <code>pip freeze</code> xuất danh sách các gói đã cài theo định dạng requirements. Mặc định, lệnh có thể bỏ qua một số công cụ đóng gói tùy phiên bản Python. Dùng <code>pip freeze --all</code> khi cần đưa cả những gói đó vào danh sách.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Lệnh <code>pip freeze</code> chỉ có chức năng rà soát và kết xuất danh sách các gói thực sự đang tồn tại trong môi trường ảo hiện hành. Lệnh này không chứa cơ chế tự ý phỏng đoán nhu cầu của dự án để thêm vào các gói chưa từng được cài đặt.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Mỗi môi trường ảo Python chỉ lưu trữ một phiên bản duy nhất cho mỗi thư viện tại một thời điểm trong thư mục <code>site-packages</code>. Kết quả của <code>pip freeze</code> phản ánh chính xác trạng thái hiện thời của môi trường chứ không lưu lại lịch sử các phiên bản cũ đã từng được cài trước đây.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Theo mô hình cấu hình mặc định, môi trường ảo hoàn toàn cô lập và không kế thừa các gói từ Python hệ thống bên ngoài. Các dòng gói thư viện xuất hiện thêm nằm ngay trong thư mục <code>site-packages</code> của chính môi trường ảo đó do tiến trình cài đặt tự động bổ sung.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Khi cài <code>pandas</code> và <code>matplotlib</code>, <code>pip</code> phân giải các yêu cầu phụ thuộc của đúng phiên bản gói trên môi trường hiện tại. Vì vậy, <code>pip freeze</code> có thể liệt kê thêm những thư viện mà người dùng không trực tiếp ghi trong lệnh cài, chẳng hạn <code>numpy</code>. Danh sách cụ thể phụ thuộc phiên bản và nền tảng, không phải một bộ tên cố định. Ví dụ, <code>pytz</code> không còn là phụ thuộc bắt buộc của pandas 3. Cần xem metadata gói hoặc tài liệu cài đặt của phiên bản đang dùng.</p>\n"
     },
     {
       "id": "B1-016",
@@ -398,22 +398,22 @@
         {
           "key": "A",
           "html": "<p>Hỏi giảng viên xác nhận chế độ trước khi dùng AI cho bài này.</p>\n",
-          "explanationHtml": "<p>Đúng: Nhãn hoạt động quy định rõ phạm vi công cụ được phép sử dụng: Chế độ mở cho phép tham khảo tài liệu và dùng AI có khai báo, còn chế độ đóng cấm hoàn toàn sự can thiệp của các công cụ hỗ trợ bên ngoài.</p>\n"
+          "explanationHtml": "<p>Đúng: Chưa rõ nhãn thì cần hỏi giảng viên trước khi dùng AI.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Dùng rồi khai báo đầy đủ vì tự kiểm tra sẽ bảo đảm được phép.</p>\n",
-          "explanationHtml": "<p>Sai: Khai báo trung thực không làm thay đổi bản chất của một bài kiểm tra đã được quy định là chế độ đóng.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo và tự kiểm tra không xác nhận rằng việc dùng AI được phép.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Dùng vì bài ở nhà và ít điểm, chỉ hỏi nếu đề ghi đóng.</p>\n",
-          "explanationHtml": "<p>Sai: Hoạt động đóng không cho phép bất kỳ mức độ hỗ trợ tự động nào từ các công cụ AI.</p>\n"
+          "explanationHtml": "<p>Sai: Làm ở nhà hoặc ít điểm không tự biến bài thành hoạt động mở.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Nhờ AI viết nháp nhưng không nộp nguyên văn nên không cần xác nhận chế độ.</p>\n",
-          "explanationHtml": "<p>Sai: Quy định về nhãn áp dụng bình đẳng cho mọi sinh viên trong cùng một đợt đánh giá.</p>\n"
+          "explanationHtml": "<p>Sai: Viết lại bản nháp vẫn là đã dùng AI, nên cần xác nhận chế độ trước.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -428,22 +428,22 @@
         {
           "key": "A",
           "html": "<p>Lab 10%; kiểm tra lớp 20%; giữa kỳ 10%; BTL và vấn đáp 60%; vấn đáp đóng.</p>\n",
-          "explanationHtml": "<p>Sai: Việc hỏi lại chính AI đó không thể coi là phép kiểm chứng khách quan và độc lập.</p>\n"
+          "explanationHtml": "<p>Sai: Tỷ trọng kiểm tra lớp và giữa kỳ bị hoán đổi.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Lab 10%; kiểm tra lớp 10%; giữa kỳ 20%; BTL và vấn đáp 60%; vấn đáp mở vì thuộc BTL.</p>\n",
-          "explanationHtml": "<p>Sai: Mã nguồn chạy thành công không đồng nghĩa với việc các phép tính thống kê bên trong phản ánh đúng yêu cầu thực tế.</p>\n"
+          "explanationHtml": "<p>Sai: Phần vấn đáp thuộc BTL không làm phiên vấn đáp trở thành mở.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Lab 10% mở; kiểm tra lớp 10% đóng; giữa kỳ 20% đóng; BTL/vấn đáp 60%, mở ở nhà và đóng khi vấn đáp.</p>\n",
-          "explanationHtml": "<p>Đúng: Kiểm chứng độc lập đòi hỏi người học tự tạo các tập dữ liệu thử nghiệm nhỏ có kết quả tính tay trước hoặc đối chiếu với các quy luật toán học để xác minh mã do AI sinh ra có hoạt động chính xác hay không.</p>\n"
+          "explanationHtml": "<p>Đúng: Lab mở, kiểm tra lớp và giữa kỳ đóng, BTL mở ở nhà nhưng vấn đáp đóng.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Lab 20%; kiểm tra lớp 10%; giữa kỳ 20%; BTL và vấn đáp 50%; vấn đáp đóng.</p>\n",
-          "explanationHtml": "<p>Sai: Chỉ kiểm tra kiểu dữ liệu đầu ra là chưa đủ để khẳng định tính đúng đắn của logic tính toán.</p>\n"
+          "explanationHtml": "<p>Sai: Tỷ trọng các thành phần không khớp cơ cấu điểm của môn.</p>\n"
         }
       ],
       "correctKey": "C",
@@ -485,22 +485,22 @@
         {
           "key": "A",
           "html": "<p>Làm sạch → trực quan → kể chuyện, vì tính số theo khu là sửa dữ liệu.</p>\n",
-          "explanationHtml": "<p>Sai: Thao tác này xóa trạng thái cũ trong bộ nhớ chứ không giữ lại các biến đã tính từ trước.</p>\n"
+          "explanationHtml": "<p>Sai: Tính số chỗ ở theo khu là phân tích/biến đổi, không phải làm sạch.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Biến đổi để tạo thông tin → trực quan hóa → kể chuyện hỗ trợ quyết định.</p>\n",
-          "explanationHtml": "<p>Đúng: Lệnh khởi động lại kernel và chạy toàn bộ từ trên xuống dưới giúp kiểm tra tính liền mạch của dòng dữ liệu và đảm bảo kết quả có thể tái lập độc lập mà không phụ thuộc vào thứ tự thao tác thủ công.</p>\n"
+          "explanationHtml": "<p>Đúng: Biến đổi tạo thông tin, trực quan hóa kết quả, rồi truyền đạt khuyến nghị.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Biến đổi → kể chuyện → trực quan, vì biểu đồ chỉ có vai trò sau khuyến nghị.</p>\n",
-          "explanationHtml": "<p>Sai: Thao tác này không có chức năng tự động sửa lỗi cú pháp trong mã nguồn.</p>\n"
+          "explanationHtml": "<p>Sai: Khuyến nghị được xây từ kết quả đã phân tích và trực quan, không đi trước biểu đồ.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Trực quan → biến đổi → kể chuyện, vì bảng tổng hợp đã là biểu đồ.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh này không can thiệp vào các tệp dữ liệu lưu trữ trên ổ cứng.</p>\n"
+          "explanationHtml": "<p>Sai: Cần biến đổi/tổng hợp trước khi trực quan hóa.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -515,22 +515,22 @@
         {
           "key": "A",
           "html": "<p>Dùng Markdown cho cả hướng dẫn và lệnh !; dấu ! chỉ biến dòng thành ghi chú.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh này không tự động tải hoặc cập nhật các gói lên phiên bản mới nhất.</p>\n"
+          "explanationHtml": "<p>Sai: Cell Markdown dành cho chữ; dấu <code>!</code> gọi lệnh hệ điều hành trong cell code.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Dùng Markdown cho chữ, code cho !; lệnh đổi Python theo .python-version của repo.</p>\n",
-          "explanationHtml": "<p>Sai: Tệp xuất ra chỉ chứa tên gói và phiên bản phần mềm, không đóng gói dữ liệu đầu vào của dự án.</p>\n"
+          "explanationHtml": "<p>Sai: <code>.python-version</code> không làm lệnh <code>python --version</code> đổi phiên bản Colab.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Dùng Markdown cho chữ, code cho !; lệnh báo phiên bản Python của máy cá nhân.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh này không xóa các gói thừa mà chỉ phản ánh trạng thái cài đặt hiện tại.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh chạy trong runtime Colab, không báo phiên bản Python máy cá nhân.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Markdown viết hướng dẫn; cell code dùng ! chạy lệnh hệ điều hành, ở đây xem phiên bản Python của Colab.</p>\n",
-          "explanationHtml": "<p>Đúng: Lệnh <code>pip freeze &gt; requirements.txt</code> xuất toàn bộ danh sách các gói thư viện kèm theo phiên bản chính xác đang có trong môi trường ảo, giúp người khác có thể tái lập chính xác môi trường làm việc thông qua lệnh cài đặt tương ứng.</p>\n"
+          "explanationHtml": "<p>Đúng: Viết hướng dẫn bằng Markdown và chạy <code>!python --version</code> trong cell code để xem Python của Colab.</p>\n"
         }
       ],
       "correctKey": "D",
@@ -545,22 +545,22 @@
         {
           "key": "A",
           "html": "<p>Không thiếu gì; các dòng gói==phiên_bản đồng thời cố định Python chạy chúng.</p>\n",
-          "explanationHtml": "<p>Sai: Cell Markdown không thực thi được mã nguồn Python như cell code.</p>\n"
+          "explanationHtml": "<p>Sai: <code>requirements.txt</code> ghim gói, không ghim phiên bản Python.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chỉ chạy pip freeze ở máy mới; lệnh đó sẽ khôi phục môi trường cũ.</p>\n",
-          "explanationHtml": "<p>Sai: Cell code không hỗ trợ cú pháp định dạng văn bản nâng cao như Markdown.</p>\n"
+          "explanationHtml": "<p>Sai: <code>pip freeze</code> ghi danh sách gói hiện tại, không khôi phục môi trường cũ.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Biết và chọn đúng phiên bản Python đã kiểm thử trước khi tạo venv, rồi cài requirements.</p>\n",
-          "explanationHtml": "<p>Đúng: Cell code có chức năng thực thi mã lệnh và hiển thị kết quả xử lý, trong khi cell Markdown đóng vai trò ghi chú, giải thích lý do xử lý và cấu trúc báo cáo một cách khoa học.</p>\n"
+          "explanationHtml": "<p>Đúng: Chọn đúng phiên bản Python đã kiểm thử, tạo venv rồi cài requirements.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Chỉ ghi tên Python trong README; không cần biết phiên bản nào đã dùng để kiểm thử.</p>\n",
-          "explanationHtml": "<p>Sai: Cả hai loại cell đều được lưu trữ chung trong cùng một tệp định dạng <code>.ipynb</code>.</p>\n"
+          "explanationHtml": "<p>Sai: Chỉ nêu Python mà không biết phiên bản đã kiểm thử thì chưa đủ để dựng môi trường tương ứng.</p>\n"
         }
       ],
       "correctKey": "C",
@@ -575,26 +575,26 @@
         {
           "key": "A",
           "html": "<p>Không mất điểm nội dung vì đã khai báo công cụ gây ra lỗi.</p>\n",
-          "explanationHtml": "<p>Sai: Việc lưu tệp không tự động sắp xếp lại thứ tự thực thi của các cell trong bộ nhớ.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo AI không miễn trách nhiệm về độ đúng của phép tính.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chỉ cần sửa AI_USAGE.md để số liệu sai được chấp nhận.</p>\n",
-          "explanationHtml": "<p>Sai: Chạy nhảy cóc không làm tăng tốc độ xử lý tổng thể của chu trình dữ liệu.</p>\n"
+          "explanationHtml": "<p>Sai: Sửa tệp khai báo không sửa được phép tính nhầm cột.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Nhóm vẫn chịu điểm sai của bài; khai báo đúng không bảo đảm số liệu đúng.</p>\n",
-          "explanationHtml": "<p>Đúng: Chạy cell theo thứ tự lộn xộn khiến các biến trong bộ nhớ phụ thuộc vào lịch sử thao tác của người dùng, dẫn đến việc notebook thất bại khi thực thi tuần tự trong môi trường kiểm thử sạch.</p>\n"
+          "explanationHtml": "<p>Đúng: Bài vẫn bị đánh giá theo kết quả sai; khai báo đúng không bảo đảm độ chính xác.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Kết quả sai tự chứng minh nhóm đã gian lận ở chế độ đóng.</p>\n",
-          "explanationHtml": "<p>Sai: Notebook không tự phát hiện và ngăn chặn được các thao tác chạy cell không tuần tự.</p>\n"
+          "explanationHtml": "<p>Sai: Sai số liệu tự nó không chứng minh có gian lận trong đánh giá đóng.</p>\n"
         }
       ],
       "correctKey": "C",
-      "answerHtml": "<p>Phương án C đúng. Việc khai báo trung thực việc sử dụng công cụ AI bảo đảm người học không vi phạm quy chế về tính trung thực học thuật. Tuy nhiên, nhóm vẫn phải chịu trách nhiệm hoàn toàn về độ chính xác của kết quả chuyên môn, và sai sót do tính nhầm cột vẫn bị trừ điểm theo thang đánh giá.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Khai báo sử dụng công cụ là nghĩa vụ minh bạch hóa quy trình làm bài chứ không phải là điều khoản miễn trừ trách nhiệm đối với kết quả đầu ra. Nhóm sinh viên là chủ thể duy nhất chịu trách nhiệm về tính đúng đắn của dữ liệu và báo cáo đã nộp.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Tệp <code>AI_USAGE.md</code> có mục đích phản ánh trung thực tiến trình sử dụng công nghệ trợ giúp, không phải là công cụ hợp thức hóa các sai sót chuyên môn. Việc sửa đổi nội dung khai báo không thể biến một phép tính toán sai lệch trở thành đúng đắn.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Quy trình đánh giá phân biệt rõ ràng giữa hai khía cạnh: Liêm chính học thuật và chất lượng chuyên môn. Nhóm đã thực hiện đúng quy định khai báo nên không bị coi là gian lận, nhưng việc chọn nhầm cột dữ liệu làm sai lệch kết quả báo cáo sẽ bị trừ điểm tương ứng với tiêu chí độ chính xác của bài làm.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Hoạt động đánh giá diễn ra ở chế độ mở và nhóm đã chủ động khai báo đầy đủ quy trình sử dụng AI. Sai sót tính toán do chọn nhầm cột đơn thuần là lỗi kỹ thuật trong quá trình thao tác dữ liệu, không thể quy kết thành hành vi gian lận thi cử.</p>\n"
+      "answerHtml": "<p>Phương án C đúng. Trong tình huống bài mở đã nêu, nhóm hiểu mã và khai báo trung thực việc sử dụng AI. Những dữ kiện đó không làm cho kết quả tính toán tự động đúng và cũng không tạo ra quyền miễn trừ các quy định khác. Tuy nhiên, nhóm vẫn phải chịu trách nhiệm hoàn toàn về độ chính xác của kết quả chuyên môn, và sai sót do tính nhầm cột vẫn bị trừ điểm theo thang đánh giá.</p>\n<h3 id=\"phuong-an-a\" tabindex=\"-1\">Phương án A </h3>\n<p>Khai báo sử dụng công cụ là nghĩa vụ minh bạch hóa quy trình làm bài chứ không phải là điều khoản miễn trừ trách nhiệm đối với kết quả đầu ra. Nhóm sinh viên là chủ thể duy nhất chịu trách nhiệm về tính đúng đắn của dữ liệu và báo cáo đã nộp.</p>\n<h3 id=\"phuong-an-b\" tabindex=\"-1\">Phương án B </h3>\n<p>Tệp <code>AI_USAGE.md</code> có mục đích phản ánh trung thực tiến trình sử dụng công nghệ trợ giúp, không phải là công cụ hợp thức hóa các sai sót chuyên môn. Việc sửa đổi nội dung khai báo không thể biến một phép tính toán sai lệch trở thành đúng đắn.</p>\n<h3 id=\"phuong-an-c\" tabindex=\"-1\">Phương án C </h3>\n<p>Quy trình đánh giá phân biệt rõ ràng giữa hai khía cạnh: Liêm chính học thuật và chất lượng chuyên môn. Theo các dữ kiện của đề, không có căn cứ coi lỗi chọn nhầm cột là hành vi che giấu sử dụng AI. Tuy nhiên, báo cáo vẫn sai về chuyên môn và nhóm vẫn chịu trách nhiệm về điểm nội dung.</p>\n<h3 id=\"phuong-an-d\" tabindex=\"-1\">Phương án D </h3>\n<p>Hoạt động đánh giá diễn ra ở chế độ mở và nhóm đã chủ động khai báo đầy đủ quy trình sử dụng AI. Sai sót tính toán do chọn nhầm cột đơn thuần là lỗi kỹ thuật trong quá trình thao tác dữ liệu, không thể quy kết thành hành vi gian lận thi cử.</p>\n"
     },
     {
       "id": "B1-025",
@@ -605,22 +605,22 @@
         {
           "key": "A",
           "html": "<p><code>source .venv/bin/activate</code></p>\n",
-          "explanationHtml": "<p>Đúng: Mọi mã nguồn và dữ liệu công khai trên Internet đều chịu sự điều chỉnh của giấy phép bản quyền tương ứng, người học cần kiểm tra kỹ điều khoản về quyền sử dụng, tái phân phối và nghĩa vụ ghi nhận tác giả trước khi tích hợp vào dự án.</p>\n"
+          "explanationHtml": "<p>Đúng: <code>source .venv/bin/activate</code> kích hoạt venv trên Linux/Bash.</p>\n"
         },
         {
           "key": "B",
           "html": "<p><code>cd .venv</code></p>\n",
-          "explanationHtml": "<p>Sai: Tải được tệp từ mạng không đồng nghĩa với việc có toàn quyền sử dụng cho mọi mục đích mà không cần tuân thủ giấy phép.</p>\n"
+          "explanationHtml": "<p>Sai: <code>cd .venv</code> chỉ đổi thư mục làm việc, không kích hoạt môi trường.</p>\n"
         },
         {
           "key": "C",
           "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
-          "explanationHtml": "<p>Sai: Các giấy phép mã nguồn mở có các điều kiện ràng buộc khác nhau về việc phân phối lại mã phái sinh.</p>\n"
+          "explanationHtml": "<p>Sai: <code>pip freeze</code> ghi danh sách gói, không kích hoạt venv.</p>\n"
         },
         {
           "key": "D",
           "html": "<p><code>python -m venv .venv</code></p>\n",
-          "explanationHtml": "<p>Sai: Dữ liệu công khai vẫn có thể bị giới hạn chỉ dùng cho mục đích nghiên cứu học thuật phi thương mại.</p>\n"
+          "explanationHtml": "<p>Sai: <code>python -m venv .venv</code> tạo venv mới, không kích hoạt venv đã có.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -635,22 +635,22 @@
         {
           "key": "A",
           "html": "<p>Đối chiếu từng nhóm với phép đếm tay: Phải là A60%, B30%, C10%.</p>\n",
-          "explanationHtml": "<p>Đúng: Quy trình chuẩn mực khởi đầu từ thu thập dữ liệu thô, tiến hành làm sạch loại bỏ sai lệch, biến đổi định dạng phù hợp, thực hiện phân tích thống kê và cuối cùng trực quan hóa để truyền tải phát hiện đến người dùng.</p>\n"
+          "explanationHtml": "<p>Đúng: Đếm tay cho A=6, B=3, C=1 trên 10 dòng nên tỷ lệ là 60%, 30%, 10%.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chấp nhận vì tổng 100% là điều kiện đủ cho từng nhóm đúng.</p>\n",
-          "explanationHtml": "<p>Sai: Trực quan hóa dữ liệu không thể tiến hành một cách khoa học trước khi hoàn thành việc thu thập và làm sạch.</p>\n"
+          "explanationHtml": "<p>Sai: Tổng bằng 100% không bảo đảm tỷ lệ từng nhóm đúng.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Đổi cách làm tròn để A và B tự trở về số đúng.</p>\n",
-          "explanationHtml": "<p>Sai: Bước làm sạch không thể tiến hành trước khi thu thập được dữ liệu đầu vào.</p>\n"
+          "explanationHtml": "<p>Sai: Làm tròn không thể sửa việc hoán đổi tỷ lệ giữa A và B.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Chỉ hỏi lại AI một lần; nếu cùng output thì coi là đối chiếu độc lập.</p>\n",
-          "explanationHtml": "<p>Sai: Bỏ qua bước làm sạch dữ liệu sẽ dẫn đến phân tích sai lệch trên dữ liệu lỗi.</p>\n"
+          "explanationHtml": "<p>Sai: Hỏi lại cùng AI không tạo kiểm chứng độc lập.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -665,22 +665,22 @@
         {
           "key": "A",
           "html": "<p>Có thể đổi thành phố tùy ý; chỉ cần ảnh đẹp là đã thay được pipeline và báo cáo.</p>\n",
-          "explanationHtml": "<p>Sai: Trình thông dịch hệ thống không tự động kế thừa các thư viện nằm trong môi trường ảo chưa được kích hoạt.</p>\n"
+          "explanationHtml": "<p>Sai: Nhóm phải theo thành phố được phân công và nộp đầy đủ sản phẩm, không chỉ biểu đồ.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Cần làm thành phố được phân công và sản phẩm chạy một lệnh qua QA, KPI, biểu đồ, báo cáo, kèm LLM trên review.</p>\n",
-          "explanationHtml": "<p>Đúng: Việc quên kích hoạt môi trường ảo khiến hệ điều hành sử dụng Python toàn cục, nơi không có sẵn các thư viện chuyên biệt đã cài riêng cho dự án, phát sinh lỗi không tìm thấy mô-đun khi chạy mã nguồn.</p>\n"
+          "explanationHtml": "<p>Đúng: Hoàn thành thành phố X và pipeline gồm QA, KPI, biểu đồ, báo cáo cùng phân tích review bằng LLM theo yêu cầu.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Giữ thành phố X nhưng chỉ nộp ảnh; QA và review được thay bằng output notebook cũ.</p>\n",
-          "explanationHtml": "<p>Sai: Tệp mã nguồn không tự động phát hiện và kích hoạt môi trường ảo tương ứng.</p>\n"
+          "explanationHtml": "<p>Sai: Output cũ không thay kiểm tra QA và phân tích review của sản phẩm hiện tại.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Làm đầy đủ pipeline thành phố Y là đủ; phân công trên Canvas chỉ là ví dụ gợi ý.</p>\n",
-          "explanationHtml": "<p>Sai: Thiếu gói thư viện phát sinh lỗi <code>ModuleNotFoundError</code> chứ không phải lỗi cú pháp <code>SyntaxError</code>.</p>\n"
+          "explanationHtml": "<p>Sai: Pipeline đầy đủ ở thành phố Y vẫn không đáp ứng phân công thành phố X.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -722,22 +722,22 @@
         {
           "key": "A",
           "html": "<p>Dùng hệ sinh thái Python từ thử nghiệm đến pipeline, đồng thời hiểu, chỉ đạo và kiểm chứng công cụ.</p>\n",
-          "explanationHtml": "<p>Đúng: Đường dẫn tương đối được xác định dựa trên vị trí của thư mục làm việc hiện hành, do đó khi di chuyển dự án sang máy khác thì đường dẫn tương đối giúp mã nguồn duy trì khả năng truy cập tệp chính xác.</p>\n"
+          "explanationHtml": "<p>Đúng: Môn dùng Python và hệ sinh thái dữ liệu, đồng thời đòi hỏi hiểu, chỉ đạo và kiểm chứng công cụ.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chỉ cần tự gõ mọi dòng; việc chỉ đạo công cụ và kiểm chứng không thuộc mục tiêu môn.</p>\n",
-          "explanationHtml": "<p>Sai: Đường dẫn tuyệt đối cố định vào ổ đĩa máy cá nhân nên rất dễ bị gãy khi chạy trên môi trường khác.</p>\n"
+          "explanationHtml": "<p>Sai: Tự gõ từng dòng không phải mục tiêu duy nhất; vẫn cần biết dùng và kiểm chứng công cụ.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Chỉ cần AI tạo code chạy được; phần hiểu từng dòng chỉ dành cho môn Python trước đó.</p>\n",
-          "explanationHtml": "<p>Sai: Đường dẫn tương đối không bắt buộc phải chứa ký tự phân cách tuyệt đối ở đầu chuỗi.</p>\n"
+          "explanationHtml": "<p>Sai: Code chạy được chưa đủ nếu người nộp không hiểu nội dung.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Chỉ cần nắm thư viện rời; xây quy trình hoàn chỉnh nằm ngoài phạm vi môn.</p>\n",
-          "explanationHtml": "<p>Sai: Cả hai loại đường dẫn đều được các thư viện đọc dữ liệu của Python hỗ trợ đầy đủ.</p>\n"
+          "explanationHtml": "<p>Sai: Xây quy trình xử lý dữ liệu đầy đủ nằm trong mục tiêu môn.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -752,22 +752,22 @@
         {
           "key": "A",
           "html": "<p><code>1; 1; 1</code></p>\n",
-          "explanationHtml": "<p>Sai: Phép cộng đã được thực thi và gán lại nên biến không giữ nguyên giá trị 0.</p>\n"
+          "explanationHtml": "<p>Sai: Lịch chạy có hai lần tăng liên tiếp trước khi A đặt lại dem về 0.</p>\n"
         },
         {
           "key": "B",
           "html": "<p><code>1; 2; 1</code></p>\n",
-          "explanationHtml": "<p>Đúng: Giá trị ban đầu là 0, sau phép gán tăng thêm 1 đơn vị thì biến <code>dem</code> lưu giá trị 1 và hàm <code>print()</code> in ra số 1 trên màn hình.</p>\n"
+          "explanationHtml": "<p>Đúng: Ba lần chạy B lần lượt in 1, 2, 1 vì A khởi tạo lại biến trước lần cuối.</p>\n"
         },
         {
           "key": "C",
           "html": "<p><code>1; 2; 3</code></p>\n",
-          "explanationHtml": "<p>Sai: Biến đã được khởi tạo rõ ràng trước khi dùng trong vế phải nên không phát sinh lỗi <code>NameError</code>.</p>\n"
+          "explanationHtml": "<p>Sai: Sau lần chạy A thứ hai, dem được đặt lại 0 nên B cuối in 1, không phải 3.</p>\n"
         },
         {
           "key": "D",
           "html": "<p><code>0; 1; 0</code></p>\n",
-          "explanationHtml": "<p>Sai: Biểu thức tính toán đơn giản tăng một đơn vị chứ không thể nhảy vọt lên giá trị 2.</p>\n"
+          "explanationHtml": "<p>Sai: Lần chạy B đầu tiên đã in 1, và lần B thứ hai in 2 trước khi A đặt lại biến.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -782,22 +782,22 @@
         {
           "key": "A",
           "html": "<p>File tải lỗi vì .ipynb đúng phải tự chứa bản pandas đã dùng trên Colab.</p>\n",
-          "explanationHtml": "<p>Sai: Định dạng script <code>.py</code> không hiển thị trực tiếp các bảng biểu tương tác như notebook.</p>\n"
+          "explanationHtml": "<p>Sai: Tệp <code>.ipynb</code> lưu code và output, không đóng gói thư viện pandas của Colab.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chỉ cần nhìn output cũ; nó chứng minh pandas đã sẵn trong phiên local mới.</p>\n",
-          "explanationHtml": "<p>Sai: Tệp script thuần túy không giữ cấu trúc cell riêng biệt như tệp <code>.ipynb</code>.</p>\n"
+          "explanationHtml": "<p>Sai: Output đã lưu không chứng minh pandas được cài trong phiên local mới.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Chạy lại cell cuối là đủ để lấy lại tất cả biến và import của Colab.</p>\n",
-          "explanationHtml": "<p>Sai: Tệp <code>.py</code> không tự động tối ưu tốc độ tính toán nếu thuật toán bên trong giữ nguyên.</p>\n"
+          "explanationHtml": "<p>Sai: Chạy riêng cell cuối không tái tạo import và biến từ runtime Colab.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Output cũ không cài thư viện hay tạo phiên sống; dựng/chọn môi trường local rồi chạy lại.</p>\n",
-          "explanationHtml": "<p>Đúng: Việc xuất mã nguồn sang tệp <code>.py</code> chuẩn giúp tái sử dụng các hàm xử lý dữ liệu, dễ dàng kiểm thử tự động và thuận tiện đưa vào các quy trình thực thi nền theo lịch biểu định kỳ.</p>\n"
+          "explanationHtml": "<p>Đúng: Output cũ không cài thư viện hay khôi phục phiên runtime; cần chọn/cài môi trường local rồi chạy lại.</p>\n"
         }
       ],
       "correctKey": "D",
@@ -812,22 +812,22 @@
         {
           "key": "A",
           "html": "<p>Khai công cụ và prompt nhưng chưa đọc code vì mô hình trả lời rất tự tin.</p>\n",
-          "explanationHtml": "<p>Sai: Ghi đè trực tiếp lên tệp dữ liệu gốc sẽ làm mất dữ liệu thô ban đầu và không thể kiểm tra lại nguồn gốc.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo không thay cho việc đọc hiểu code AI.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Tự đọc hiểu code, đối chiếu bằng mẫu tính tay, khai công cụ/công việc/prompt và cách kiểm chứng.</p>\n",
-          "explanationHtml": "<p>Đúng: Nguyên tắc cốt lõi trong xử lý dữ liệu là giữ nguyên vẹn dữ liệu thô làm nguồn đối chứng tin cậy, mọi thao tác lọc sạch và chuyển đổi định dạng đều phải ghi vào các tệp phái sinh riêng biệt.</p>\n"
+          "explanationHtml": "<p>Đúng: Cần hiểu code, kiểm chứng độc lập và khai báo trung thực công cụ, việc dùng, prompt và cách kiểm.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Hiểu và thử mẫu đúng nhưng ghi Không dùng AI vì chỉ nhận gợi ý.</p>\n",
-          "explanationHtml": "<p>Sai: Xóa dữ liệu thô sau khi biến đổi là vi phạm nguyên tắc kiểm tra tính minh bạch và tái lập.</p>\n"
+          "explanationHtml": "<p>Sai: Dùng AI để gợi ý vẫn phải khai báo, không thể ghi “Không dùng AI”.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Đọc code và hỏi lại cùng chatbot hai lần, không ghi nội dung đã dùng vào bài.</p>\n",
-          "explanationHtml": "<p>Sai: Chỉ lưu trữ dữ liệu trong bộ nhớ tạm thời của máy tính là không an toàn đối với các chu trình dài hạn.</p>\n"
+          "explanationHtml": "<p>Sai: Hỏi cùng chatbot không phải kiểm chứng độc lập và còn thiếu khai báo.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -842,22 +842,22 @@
         {
           "key": "A",
           "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
-          "explanationHtml": "<p>Sai: Tệp <code>.gitignore</code> không có chức năng xóa các tệp trên ổ đĩa vật lý của máy tính.</p>\n"
+          "explanationHtml": "<p>Sai: <code>pip freeze</code> xuất danh sách gói ra tệp, không cài theo danh sách.</p>\n"
         },
         {
           "key": "B",
           "html": "<p><code>python -m pip install -r requirements.txt</code></p>\n",
-          "explanationHtml": "<p>Đúng: Tệp cấu hình <code>.gitignore</code> thông báo cho Git bỏ qua việc theo dõi các thư mục rác, môi trường ảo phụ thuộc vào máy cục bộ và các tệp dữ liệu lớn không phù hợp lưu trên kho mã nguồn.</p>\n"
+          "explanationHtml": "<p>Đúng: <code>python -m pip install -r requirements.txt</code> cài các gói được liệt kê vào Python đang hoạt động.</p>\n"
         },
         {
           "key": "C",
           "html": "<p><code>python -m pip install pandas</code></p>\n",
-          "explanationHtml": "<p>Sai: Đưa toàn bộ thư mục môi trường ảo vào Git sẽ làm phình to dung lượng kho lưu trữ và gây lỗi tương thích trên hệ điều hành khác.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh này chỉ cài pandas, không cài toàn bộ requirements.</p>\n"
         },
         {
           "key": "D",
           "html": "<p><code>python --version</code></p>\n",
-          "explanationHtml": "<p>Sai: Tệp <code>.gitignore</code> không dùng để cấu hình thông tin đăng nhập tài khoản người dùng.</p>\n"
+          "explanationHtml": "<p>Sai: <code>python --version</code> chỉ xem phiên bản Python.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -872,22 +872,22 @@
         {
           "key": "A",
           "html": "<p>Đối chiếu tài liệu chính thức và chạy mẫu nhỏ có đáp án tự tính, hoặc so với cách tính độc lập.</p>\n",
-          "explanationHtml": "<p>Đúng: Kiểm chứng chéo yêu cầu so sánh kết quả phân tích với một nguồn dữ liệu độc lập khác hoặc sử dụng một phương pháp đo lường độc lập để phát hiện các sai lệch hệ thống tiềm ẩn.</p>\n"
+          "explanationHtml": "<p>Đúng: Đối chiếu tài liệu chính thức và chạy ca nhỏ có kết quả tự tính để kiểm chứng độc lập.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Hỏi lần thứ ba cùng nội dung; ba phản hồi giống nhau là đủ thay ca thử.</p>\n",
-          "explanationHtml": "<p>Sai: Lặp lại nhiều lần cùng một câu truy vấn trên cùng một nguồn dữ liệu không tạo thành phép kiểm chứng độc lập.</p>\n"
+          "explanationHtml": "<p>Sai: Hỏi cùng AI thêm lần nữa vẫn dùng cùng nguồn, không thay phép kiểm độc lập.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Chụp hai phản hồi để thay kiểm thử vì đã có bằng chứng AI nhất quán.</p>\n",
-          "explanationHtml": "<p>Sai: Tự ý bỏ qua các số liệu ngoại lai mà không kiểm tra nguyên nhân có thể che giấu các lỗi nghiêm trọng.</p>\n"
+          "explanationHtml": "<p>Sai: Ảnh chụp hai câu trả lời giống nhau không xác minh đúng sai của hàm.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Chỉ đổi tên biến rồi chạy không lỗi; như vậy đã có cách tính khác.</p>\n",
-          "explanationHtml": "<p>Sai: Khối lượng dữ liệu lớn không đảm bảo chất lượng và tính chính xác nếu nguồn thu thập bị sai từ đầu.</p>\n"
+          "explanationHtml": "<p>Sai: Đổi tên biến và chạy không lỗi không kiểm tra logic hay kết quả.</p>\n"
         }
       ],
       "correctKey": "A",
@@ -902,22 +902,22 @@
         {
           "key": "A",
           "html": "<p>Giữ output cũ thay việc chạy test vì notebook đã là bản ghi kết quả.</p>\n",
-          "explanationHtml": "<p>Sai: Runtime cục bộ không yêu cầu kết nối mạng liên tục để thực thi các tác vụ tính toán cơ bản.</p>\n"
+          "explanationHtml": "<p>Sai: Output lưu sẵn không chứng minh repo chạy lại được từ đầu trên máy khác.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Chỉ cho một thành viên hiểu hết; vấn đáp người đó đại diện toàn nhóm là đủ.</p>\n",
-          "explanationHtml": "<p>Sai: Môi trường đám mây công cộng không cho phép tùy biến toàn quyền phần cứng vật lý bên dưới.</p>\n"
+          "explanationHtml": "<p>Sai: Mỗi thành viên cần sẵn sàng giải thích phần việc của mình.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Hoàn thiện repo để chạy test chung và chuẩn bị từng người tự giải thích.</p>\n",
-          "explanationHtml": "<p>Đúng: Môi trường cục bộ gắn liền với phần cứng và hệ thống tệp của máy cá nhân, còn hosted runtime chạy trên máy chủ ảo của nhà cung cấp dịch vụ với giới hạn về thời gian hoạt động và khả năng chia sẻ tài nguyên.</p>\n"
+          "explanationHtml": "<p>Đúng: Chuẩn bị repo chạy test chung từ đầu và để từng thành viên giải thích được phần code.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Chỉ bổ sung AI_USAGE.md; khai báo đầy đủ thay được cả test và vấn đáp.</p>\n",
-          "explanationHtml": "<p>Sai: Dịch vụ đám mây miễn phí có cơ chế tự động ngắt phiên khi người dùng không tương tác trong một khoảng thời gian nhất định.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo AI không thay thế khả năng chạy lại và vấn đáp.</p>\n"
         }
       ],
       "correctKey": "C",
@@ -1019,22 +1019,22 @@
         {
           "key": "A",
           "html": "<p>Cài ở cửa sổ1 vào B; freeze ở cửa sổ2 đọc B vì cả hai cwd đều là B.</p>\n",
-          "explanationHtml": "<p>Sai: Việc cài đặt ở cửa sổ 1 không tự động đồng bộ sang môi trường độc lập của cửa sổ 2.</p>\n"
+          "explanationHtml": "<p>Sai: <code>cwd</code> giống nhau không đổi interpreter đã kích hoạt trong từng cửa sổ.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Cài ở cửa sổ1 vào cả A và B; freeze B thấy gói vì hai shell cùng máy.</p>\n",
-          "explanationHtml": "<p>Sai: Hai cửa sổ có biến môi trường <code>PATH</code> riêng biệt dựa vào trạng thái kích hoạt của từng bên.</p>\n"
+          "explanationHtml": "<p>Sai: Gói chỉ được cài vào venv A của cửa sổ 1.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Cài ở cửa sổ1 vào A; freeze ở cửa sổ2 ghi nhận các gói của B mà nó thu được.</p>\n",
-          "explanationHtml": "<p>Đúng: Cửa sổ 1 đã kích hoạt môi trường ảo A nên gói mới được cài vào A, trong khi cửa sổ 2 hoạt động với môi trường hiện hành của nó nên lệnh <code>pip freeze</code> chỉ xuất các gói mà tiến trình của cửa sổ 2 thu thập được.</p>\n"
+          "explanationHtml": "<p>Đúng: Cửa sổ 1 cài vào A; cửa sổ 2 freeze các gói của B.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Cài ở cửa sổ1 vào A; freeze ở cửa sổ2 tự chuyển sang A để theo lần cài gần nhất.</p>\n",
-          "explanationHtml": "<p>Sai: Các thao tác cài đặt gói cục bộ không đòi hỏi quyền can thiệp hệ thống nếu chạy trong môi trường ảo của người dùng.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh ở cửa sổ 2 không tự chuyển sang A vì một cài đặt vừa diễn ra.</p>\n"
         }
       ],
       "correctKey": "C",
@@ -1049,22 +1049,22 @@
         {
           "key": "A",
           "html": "<p>Để trống vì chỉ người có dùng AI mới được ghi mục khai báo.</p>\n",
-          "explanationHtml": "<p>Sai: Bịa đặt thông tin công cụ khi không sử dụng là hành vi khai báo gian dối.</p>\n"
+          "explanationHtml": "<p>Sai: Theo mẫu, cần ghi rõ “Không dùng AI” thay vì để trống.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Ghi rõ Không dùng AI theo mẫu, không cần bịa công cụ hay prompt.</p>\n",
-          "explanationHtml": "<p>Đúng: Khi thực tế không sử dụng công cụ AI trong quá trình hoàn thành bài tập, người học chỉ cần điền rõ 'Không sử dụng AI' theo mẫu quy định, bảo đảm tính trung thực tuyệt đối.</p>\n"
+          "explanationHtml": "<p>Đúng: Ghi “Không dùng AI” trung thực theo mẫu.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Ghi một chatbot quen thuộc để mục khai báo đủ hình thức.</p>\n",
-          "explanationHtml": "<p>Sai: Bỏ trống phần khai báo có thể bị coi là không hoàn thành nghĩa vụ kê khai theo quy định bài học.</p>\n"
+          "explanationHtml": "<p>Sai: Không được bịa công cụ hoặc prompt khi không dùng AI.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Ghi Không dùng AI và xin miễn kiểm chứng vì bài hoàn toàn tự viết.</p>\n",
-          "explanationHtml": "<p>Sai: Tự ý sao chép thông tin khai báo của người khác là vi phạm quy chế thi cử.</p>\n"
+          "explanationHtml": "<p>Sai: Tự viết bài không miễn các yêu cầu kiểm chứng nội dung.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -1175,22 +1175,22 @@
         {
           "key": "A",
           "html": "<p>Dùng môn này để học mô hình dự đoán ngay; dữ liệu sạch được giả định có sẵn.</p>\n",
-          "explanationHtml": "<p>Sai: Môn học không chỉ dừng lại ở lập trình cơ bản mà tập trung vào các công cụ chuyên dụng cho xử lý dữ liệu.</p>\n"
+          "explanationHtml": "<p>Sai: Môn xây kỹ năng xử lý dữ liệu, không giả định dữ liệu đã sạch để học mô hình ngay.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Dùng Python cơ bản đã có để xây kỹ năng xử lý dữ liệu với hệ sinh thái công cụ, phục vụ các môn sau.</p>\n",
-          "explanationHtml": "<p>Đúng: Môn học tận dụng nền tảng Python cơ bản đã học để xây dựng năng lực xử lý, làm sạch và phân tích dữ liệu với hệ sinh thái thư viện hiện đại, tạo nền móng vững chắc cho các môn học chuyên sâu về sau.</p>\n"
+          "explanationHtml": "<p>Đúng: Dùng nền tảng Python cơ bản để học xử lý dữ liệu và hệ sinh thái công cụ, làm nền cho môn sau.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Tập trung dùng thư viện trên bảng mẫu; xử lý dữ liệu thô chỉ cần ở môn Học máy.</p>\n",
-          "explanationHtml": "<p>Sai: Môn học không thay thế các kiến thức về thuật toán học máy chuyên sâu mà đóng vai trò chuẩn bị dữ liệu đầu vào.</p>\n"
+          "explanationHtml": "<p>Sai: Chuẩn bị và xử lý dữ liệu thô cũng là nội dung của môn này.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Tập trung thao tác Colab; kiến thức Python của môn tiên quyết chưa cần áp dụng.</p>\n",
-          "explanationHtml": "<p>Sai: Phạm vi môn học không giới hạn trong việc sử dụng bảng tính đơn giản.</p>\n"
+          "explanationHtml": "<p>Sai: Môn không chỉ thao tác Colab; kiến thức Python tiên quyết vẫn được dùng.</p>\n"
         }
       ],
       "correctKey": "B",
@@ -1235,22 +1235,22 @@
         {
           "key": "A",
           "html": "<p>Dùng 3.11.9 vì .python-version luôn được ưu tiên hơn tên executable.</p>\n",
-          "explanationHtml": "<p>Sai: Tệp văn bản cấu hình không có cơ chế tự động can thiệp vào trình thông dịch khi gọi lệnh tường minh.</p>\n"
+          "explanationHtml": "<p>Sai: Tệp <code>.python-version</code> không ghi đè executable gọi đích danh khi không có trình quản lý phiên bản.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Dùng bản Python mới nhất trên máy vì venv bỏ qua python 3.12.</p>\n",
-          "explanationHtml": "<p>Sai: Lệnh gọi cụ thể <code>python3.12</code> sẽ khởi chạy đúng phiên bản nhị phân tương ứng của nó trong hệ thống.</p>\n"
+          "explanationHtml": "<p>Sai: Lệnh <code>python3.12</code> gọi đúng Python 3.12.3 đã xác nhận, không phải bản mới nhất bất kỳ.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Chưa có Python cho đến khi pip install -r hoàn tất.</p>\n",
-          "explanationHtml": "<p>Sai: Hệ điều hành không tự động tạo môi trường ảo mới nếu người dùng không ra lệnh cụ thể.</p>\n"
+          "explanationHtml": "<p>Sai: Venv mới dùng Python 3.12.3 ngay khi tạo; pip chỉ cài gói sau đó.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Dùng 3.12.3; phải làm rõ việc khác bản ghi 3.11.9, tệp không tự đổi Python.</p>\n",
-          "explanationHtml": "<p>Đúng: Câu lệnh gọi trực tiếp <code>python3.12</code> sẽ khởi chạy phiên bản 3.12.3 có sẵn trong hệ thống, tệp <code>.python-version</code> chỉ là tài liệu ghi nhận và không thể tự động thay đổi hành vi của lệnh gọi tường minh.</p>\n"
+          "explanationHtml": "<p>Đúng: Venv mới dùng Python 3.12.3; cần ghi nhận khác biệt với <code>.python-version</code> 3.11.9.</p>\n"
         }
       ],
       "correctKey": "D",
@@ -1265,22 +1265,22 @@
         {
           "key": "A",
           "html": "<p>Vẫn dùng AI ở chế độ đóng; gợi ý ít hoặc khai báo không cấp quyền.</p>\n",
-          "explanationHtml": "<p>Đúng: Hoạt động kiểm tra ở chế độ đóng nghiêm cấm mọi hình thức can thiệp của công cụ AI. Việc nhận gợi ý mã nguồn tự động dù chỉ vài từ vẫn là hành vi sử dụng trợ giúp trái phép trong phòng thi đóng.</p>\n"
+          "explanationHtml": "<p>Đúng: Trợ lý AI gợi code vẫn là công cụ AI; chế độ đóng cấm sử dụng dù gợi ý ít.</p>\n"
         },
         {
           "key": "B",
           "html": "<p>Được phép vì chỉ chatbot mới tính là AI trong môn.</p>\n",
-          "explanationHtml": "<p>Sai: Số lượng từ gợi ý ít không làm thay đổi bản chất của việc sử dụng công cụ bị cấm trong phòng thi đóng.</p>\n"
+          "explanationHtml": "<p>Sai: Cấm không chỉ áp dụng cho chatbot mà còn gồm trợ lý AI gợi code.</p>\n"
         },
         {
           "key": "C",
           "html": "<p>Được phép vì nhận vài từ chưa đủ thành một đoạn code hoàn chỉnh.</p>\n",
-          "explanationHtml": "<p>Sai: Theo giả thiết đề bài, không có ngưỡng số từ tối thiểu nào để được miễn áp dụng quy chế kiểm tra đóng.</p>\n"
+          "explanationHtml": "<p>Sai: Độ dài gợi ý không tạo ngoại lệ cho chế độ đóng.</p>\n"
         },
         {
           "key": "D",
           "html": "<p>Được phép nếu bản khai cuối bài ghi đúng công cụ đã dùng.</p>\n",
-          "explanationHtml": "<p>Sai: Khai báo sau bài thi không thể hợp thức hóa cho hành vi vi phạm quy chế trong giờ kiểm tra đóng.</p>\n"
+          "explanationHtml": "<p>Sai: Khai báo sau bài không hợp thức hóa việc dùng AI trong bài đóng.</p>\n"
         }
       ],
       "correctKey": "A",

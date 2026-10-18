@@ -5,9 +5,9 @@
       "id": "B6-001",
       "correctKey": "B",
       "optionExplanations": {
-        "A": "Phương án này ngộ nhận rằng `astype`(str)` khôi phục văn bản mã ban đầu.",
+        "A": "Phương án này ngộ nhận rằng `astype(str)` khôi phục văn bản mã ban đầu.",
         "B": "Pandas suy luận id thành số khi đọc. Đổi sang chuỗi sau đó chỉ đổi các số đã mất số 0 đầu.",
-        "C": "Phương án này bỏ qua phép `astype`(str)`, trả số thay chuỗi.",
+        "C": "Phương án này bỏ qua phép `astype(str)`, trả số thay chuỗi.",
         "D": "Phương án này không chính xác do chuỗi chữ số trong CSV có thể được suy luận thành số, không gây lỗi chỉ vì có 0 đầu."
       },
       "explanationMarkdown": "",

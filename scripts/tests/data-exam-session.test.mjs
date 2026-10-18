@@ -5,6 +5,18 @@ import { resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { parse, compileScript, compileTemplate } from 'vue/compiler-sfc';
 
+test('Reviewed feedback preserves question topics and signed indexing literals', () => {
+  const loadReview = lesson => new Map(JSON.parse(readFileSync(resolve(`raw_materials/xu-ly-du-lieu/exam/reviews/bai-${lesson}.json`), 'utf8')).items.map(item => [item.id, item]));
+  const first = loadReview('01');
+  const third = loadReview('03');
+  assert.match(first.get('B1-015').optionExplanations.D, /phụ thuộc/);
+  assert.doesNotMatch(JSON.stringify(first.get('B1-015').optionExplanations), /Colab|VS Code/);
+  assert.match(first.get('B1-024').optionExplanations.C, /khai báo/);
+  assert.doesNotMatch(JSON.stringify(first.get('B1-024').optionExplanations), /cell|kernel|notebook/);
+  assert.match(third.get('B3-003').optionExplanations.A, /`-1`/);
+  assert.match(third.get('B3-MR09').optionExplanations.C, /`-1`/);
+});
+
 import {
   VALID_MODES,
   DEFAULT_MODE,

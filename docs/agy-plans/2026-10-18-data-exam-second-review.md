@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEW_COMPLETE_WITH_TRANSPORT_LIMITATION
 
 # Independent data exam answer review
 
@@ -19,3 +19,5 @@ Verification: Run each evidence script under the owned directory with Python, sa
 Output: Incremental `blind-conclusions.json`, `findings.json`, `report.md`, executable evidence scripts and result JSON under the owned directory. Report exact reviewed IDs, derived answer, key agreement, explanation errors, unresolved assumptions, changed files, test commands/results, final status and permission errors. Include official source URLs for documentary claims.
 
 Stop: Preserve artifacts on timeout, authentication/permission failure or insufficient assumptions. Do not guess. One initial AGY call and at most two evidence-based corrections. No production work delegated.
+
+Final result: Recovered 46-item artifacts reviewed independently by Sol and Codex. Five source explanation findings accepted, one blind draft retracted, no key changes. Report narrative mistakes rejected. Initial bridge became unknown; continuation returned a NoneType error. No further AGY calls needed. All 47 baseline hashes unchanged. Worktree retained for audit. See `raw_materials/xu-ly-du-lieu/exam/second-review-report.md`.
