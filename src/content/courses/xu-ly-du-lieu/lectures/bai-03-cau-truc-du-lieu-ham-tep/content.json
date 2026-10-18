@@ -11,7 +11,7 @@
     "vong-lap"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-02.md"
   ],
   "examples": [],
   "exercises": [
@@ -31,19 +31,79 @@
       "title": "Bài tập 3: Gom nhóm dữ liệu và đếm tần suất với defaultdict"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 5,
-      "title": "Ba phép kiểm tra trước khi đọc tệp"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 36,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 31,
-      "title": "Khảo sát bảng chỗ ở mà chưa dùng pandas"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 126,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 107,
-      "title": "Mở rộng từ năm khu sang toàn bộ khu đủ dữ liệu"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 213,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 303,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 439,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 544,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 721,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 922,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1126,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1254,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1480,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1614,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1968,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 2198,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 2318,
+      "title": ""
     }
   ],
   "solutions": [
@@ -63,18 +123,78 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 11,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 47,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 42,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 137,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md",
-      "line": 111,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 224,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 314,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 450,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 555,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 737,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 934,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1137,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1265,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1494,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1628,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 1983,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 2214,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-02.md",
+      "line": 2332,
       "title": ""
     }
   ],

@@ -1,0 +1,825 @@
+{
+  "lab": "07-regex",
+  "title": "Biểu thức chính quy: 20 bài tập thực hành từ cơ bản đến nâng cao",
+  "template_source": null,
+  "course_source": "course/2627-1/notebooks/lab-07-regex.ipynb",
+  "template_cells": [],
+  "course_cells": [
+    {
+      "cell_index": 0,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề, lộ trình và nguồn học tập của bài thực hành regex",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Phần quản lý học phần, điểm số và lộ trình học tập theo quy ước loại bỏ"
+    },
+    {
+      "cell_index": 1,
+      "cell_type": "markdown",
+      "summary": "Quy ước chung về xử lý chuỗi và biểu thức chính quy",
+      "status": "included",
+      "exercise_id": null,
+      "reason": "Quy ước kỹ thuật chung về ASCII, cờ regex và kiểu dữ liệu được tổng hợp vào phần giới thiệu tài liệu"
+    },
+    {
+      "cell_index": 2,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 1 (Trích dãy chữ số đầu tiên)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-01",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 1"
+    },
+    {
+      "cell_index": 3,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 1",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-01",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 1"
+    },
+    {
+      "cell_index": 4,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 1",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-01",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 1"
+    },
+    {
+      "cell_index": 5,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 1",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-01",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 1"
+    },
+    {
+      "cell_index": 6,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 1",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-01",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 1"
+    },
+    {
+      "cell_index": 7,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 2 (Dấu chấm thường và ký tự đại diện)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-02",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 2"
+    },
+    {
+      "cell_index": 8,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 2",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-02",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 2"
+    },
+    {
+      "cell_index": 9,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 2",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-02",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 2"
+    },
+    {
+      "cell_index": 10,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 2",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-02",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 2"
+    },
+    {
+      "cell_index": 11,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 2",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-02",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 2"
+    },
+    {
+      "cell_index": 12,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 3 (Chọn ký tự trong một tập)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-03",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 3"
+    },
+    {
+      "cell_index": 13,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 3",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-03",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 3"
+    },
+    {
+      "cell_index": 14,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 3",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-03",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 3"
+    },
+    {
+      "cell_index": 15,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 3",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-03",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 3"
+    },
+    {
+      "cell_index": 16,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 3",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-03",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 3"
+    },
+    {
+      "cell_index": 17,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 4 (Kết hợp các khoảng ký tự)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-04",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 4"
+    },
+    {
+      "cell_index": 18,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 4",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-04",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 4"
+    },
+    {
+      "cell_index": 19,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 4",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-04",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 4"
+    },
+    {
+      "cell_index": 20,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 4",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-04",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 4"
+    },
+    {
+      "cell_index": 21,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 4",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-04",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 4"
+    },
+    {
+      "cell_index": 22,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 5 (Giới hạn số lần lặp)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-05",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 5"
+    },
+    {
+      "cell_index": 23,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 5",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-05",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 5"
+    },
+    {
+      "cell_index": 24,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 5",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-05",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 5"
+    },
+    {
+      "cell_index": 25,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 5",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-05",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 5"
+    },
+    {
+      "cell_index": 26,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 5",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-05",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 5"
+    },
+    {
+      "cell_index": 27,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 6 (Phân biệt không lần và ít nhất một lần)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-06",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 6"
+    },
+    {
+      "cell_index": 28,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 6",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-06",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 6"
+    },
+    {
+      "cell_index": 29,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 6",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-06",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 6"
+    },
+    {
+      "cell_index": 30,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 6",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-06",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 6"
+    },
+    {
+      "cell_index": 31,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 6",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-06",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 6"
+    },
+    {
+      "cell_index": 32,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 7 (Ký tự tùy chọn và dấu hỏi thường)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-07",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 7"
+    },
+    {
+      "cell_index": 33,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 7",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-07",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 7"
+    },
+    {
+      "cell_index": 34,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 7",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-07",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 7"
+    },
+    {
+      "cell_index": 35,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 7",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-07",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 7"
+    },
+    {
+      "cell_index": 36,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 7",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-07",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 7"
+    },
+    {
+      "cell_index": 37,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 8 (Yêu cầu có ký tự trắng phân cách)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-08",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 8"
+    },
+    {
+      "cell_index": 38,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 8",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-08",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 8"
+    },
+    {
+      "cell_index": 39,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 8",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-08",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 8"
+    },
+    {
+      "cell_index": 40,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 8",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-08",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 8"
+    },
+    {
+      "cell_index": 41,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 8",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-08",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 8"
+    },
+    {
+      "cell_index": 42,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 9 (Trích tên tệp PDF bằng nhóm bắt)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-09",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 9"
+    },
+    {
+      "cell_index": 43,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 9",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-09",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 9"
+    },
+    {
+      "cell_index": 44,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 9",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-09",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 9"
+    },
+    {
+      "cell_index": 45,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 9",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-09",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 9"
+    },
+    {
+      "cell_index": 46,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 9",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-09",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 9"
+    },
+    {
+      "cell_index": 47,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 10 (Trích số phòng với phép hoặc và ranh giới từ)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-10",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 10"
+    },
+    {
+      "cell_index": 48,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 10",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-10",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 10"
+    },
+    {
+      "cell_index": 49,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 10",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-10",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 10"
+    },
+    {
+      "cell_index": 50,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 10",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-10",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 10"
+    },
+    {
+      "cell_index": 51,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 10",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-10",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 10"
+    },
+    {
+      "cell_index": 52,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 11 (Kiểm tra số nguyên và số thập phân đơn giản)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-11",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 11"
+    },
+    {
+      "cell_index": 53,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 11",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-11",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 11"
+    },
+    {
+      "cell_index": 54,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 11",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-11",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 11"
+    },
+    {
+      "cell_index": 55,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 11",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-11",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 11"
+    },
+    {
+      "cell_index": 56,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 11",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-11",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 11"
+    },
+    {
+      "cell_index": 57,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 12 (Kiểm tra số có phân cách hàng nghìn và số mũ)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-12",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 12"
+    },
+    {
+      "cell_index": 58,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 12",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-12",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 12"
+    },
+    {
+      "cell_index": 59,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 12",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-12",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 12"
+    },
+    {
+      "cell_index": 60,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 12",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-12",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 12"
+    },
+    {
+      "cell_index": 61,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 12",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-12",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 12"
+    },
+    {
+      "cell_index": 62,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 13 (Trích mã vùng điện thoại)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-13",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 13"
+    },
+    {
+      "cell_index": 63,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 13",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-13",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 13"
+    },
+    {
+      "cell_index": 64,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 13",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-13",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 13"
+    },
+    {
+      "cell_index": 65,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 13",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-13",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 13"
+    },
+    {
+      "cell_index": 66,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 13",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-13",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 13"
+    },
+    {
+      "cell_index": 67,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 14 (Trích tên tài khoản email trước bộ lọc)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-14",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 14"
+    },
+    {
+      "cell_index": 68,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 14",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-14",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 14"
+    },
+    {
+      "cell_index": 69,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 14",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-14",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 14"
+    },
+    {
+      "cell_index": 70,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 14",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-14",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 14"
+    },
+    {
+      "cell_index": 71,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 14",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-14",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 14"
+    },
+    {
+      "cell_index": 72,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 15 (Trích tên thẻ mở đầu tiên)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-15",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 15"
+    },
+    {
+      "cell_index": 73,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 15",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-15",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 15"
+    },
+    {
+      "cell_index": 74,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 15",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-15",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 15"
+    },
+    {
+      "cell_index": 75,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 15",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-15",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 15"
+    },
+    {
+      "cell_index": 76,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 15",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-15",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 15"
+    },
+    {
+      "cell_index": 77,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 16 (Chọn tệp ảnh và trích phần mở rộng)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-16",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 16"
+    },
+    {
+      "cell_index": 78,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 16",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-16",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 16"
+    },
+    {
+      "cell_index": 79,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 16",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-16",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 16"
+    },
+    {
+      "cell_index": 80,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 16",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-16",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 16"
+    },
+    {
+      "cell_index": 81,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 16",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-16",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 16"
+    },
+    {
+      "cell_index": 82,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 17 (Sửa mẫu cắt khoảng trắng bị tham lam)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-17",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 17"
+    },
+    {
+      "cell_index": 83,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 17",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-17",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 17"
+    },
+    {
+      "cell_index": 84,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 17",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-17",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 17"
+    },
+    {
+      "cell_index": 85,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 17",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-17",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 17"
+    },
+    {
+      "cell_index": 86,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 17",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-17",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 17"
+    },
+    {
+      "cell_index": 87,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 18 (Trích dữ liệu từ dòng ngăn xếp lỗi)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-18",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 18"
+    },
+    {
+      "cell_index": 88,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 18",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-18",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 18"
+    },
+    {
+      "cell_index": 89,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 18",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-18",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 18"
+    },
+    {
+      "cell_index": 90,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 18",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-18",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 18"
+    },
+    {
+      "cell_index": 91,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 18",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-18",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 18"
+    },
+    {
+      "cell_index": 92,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 19 (Trích giao thức, máy chủ và cổng URL)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-19",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 19"
+    },
+    {
+      "cell_index": 93,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 19",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-19",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 19"
+    },
+    {
+      "cell_index": 94,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 19",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-19",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 19"
+    },
+    {
+      "cell_index": 95,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 19",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-19",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 19"
+    },
+    {
+      "cell_index": 96,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 19",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-19",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 19"
+    },
+    {
+      "cell_index": 97,
+      "cell_type": "markdown",
+      "summary": "Đề bài, bối cảnh thực tế và đoạn văn đầu vào của Câu 20 (Trích đường dẫn URL, loại truy vấn và đoạn neo)",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-20",
+      "reason": "Yêu cầu kỹ thuật và ngữ cảnh thực tế của Bài 20"
+    },
+    {
+      "cell_index": 98,
+      "cell_type": "code",
+      "summary": "Mã khởi đầu PATTERN và khung hàm solve của Câu 20",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-20",
+      "reason": "Khung hàm và mẫu regex cơ sở cho Bài 20"
+    },
+    {
+      "cell_index": 99,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề bộ test kiểm định của Câu 20",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-20",
+      "reason": "Phần định hướng kiểm thử độc lập cho Bài 20"
+    },
+    {
+      "cell_index": 100,
+      "cell_type": "code",
+      "summary": "Bộ test CASES và đoạn văn PASSAGE kiểm tra của Câu 20",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-20",
+      "reason": "Dữ liệu kiểm thử và trường hợp biên đối chiếu cho Bài 20"
+    },
+    {
+      "cell_index": 101,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu giải thích chi tiết mẫu regex của Câu 20",
+      "status": "included",
+      "exercise_id": "data-lab-07-regex-20",
+      "reason": "Yêu cầu giải thích bản chất cú pháp và giải thuật cho Bài 20"
+    }
+  ]
+}

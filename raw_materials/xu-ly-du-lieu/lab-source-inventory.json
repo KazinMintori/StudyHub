@@ -1,0 +1,1748 @@
+{
+  "schemaVersion": 1,
+  "sourcePolicy": "Only technical exercises, input/output requirements and data. Administrative cells and grading infrastructure are excluded.",
+  "sources": [
+    {
+      "source": "template",
+      "notebook": "lab-01.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-01.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "9c7a2bea2102856e62cfec65b61b9a6ea8c733d066bfbc20350049377a519d80",
+      "cells": 42,
+      "technicalSections": [
+        {
+          "cell": 0,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 2,
+          "heading": "Phần 0 · Khởi động — khoảng"
+        },
+        {
+          "cell": 4,
+          "heading": "Phần 1 · Trạng thái notebook — khoảng"
+        },
+        {
+          "cell": 10,
+          "heading": "Q1 · Thông tin và hai dự đoán"
+        },
+        {
+          "cell": 14,
+          "heading": "Giải thích trạng thái"
+        },
+        {
+          "cell": 16,
+          "heading": "Dữ liệu: thử nhanh và thực hành trên snapshot thật"
+        },
+        {
+          "cell": 19,
+          "heading": "Q2 · Đọc bảng đang sử dụng"
+        },
+        {
+          "cell": 23,
+          "heading": "Phần 3 · Một vòng làm việc với AI"
+        },
+        {
+          "cell": 24,
+          "heading": "Tự phác trước khi hỏi"
+        },
+        {
+          "cell": 26,
+          "heading": "Q3 · Tính tỷ lệ bằng code"
+        },
+        {
+          "cell": 29,
+          "heading": "Diễn giải"
+        },
+        {
+          "cell": 33,
+          "heading": "E1 · Câu hỏi tự chọn: đóng gói kết quả phân tích"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-02.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-02.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "68669a5c55f13d262746412110d2c3e30dfadba15076d787f27f956dace3af81",
+      "cells": 53,
+      "technicalSections": [
+        {
+          "cell": 0,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 2,
+          "heading": "Phần 0 · Khởi động có hướng dẫn — khoảng"
+        },
+        {
+          "cell": 4,
+          "heading": "Dữ liệu: thử nhanh và thực hành trên snapshot thật"
+        },
+        {
+          "cell": 6,
+          "heading": "Phần 1 · Xây các bước xử lý — khoảng"
+        },
+        {
+          "cell": 7,
+          "heading": "Q1 · Đọc CSV"
+        },
+        {
+          "cell": 10,
+          "heading": "Q2 · Chuyển giá sang số"
+        },
+        {
+          "cell": 15,
+          "heading": "Q3 · Tóm tắt cột giá đã làm sạch"
+        },
+        {
+          "cell": 19,
+          "heading": "Q4 · Tìm phòng đắt nhất"
+        },
+        {
+          "cell": 22,
+          "heading": "Q5 · Đếm phòng theo khu"
+        },
+        {
+          "cell": 25,
+          "heading": "Q6 · Giá trung vị theo khu"
+        },
+        {
+          "cell": 28,
+          "heading": "Q7 · Phòng chưa review và kiểm tra chéo"
+        },
+        {
+          "cell": 31,
+          "heading": "Q8 · Ghi và đọc lại JSON"
+        },
+        {
+          "cell": 34,
+          "heading": "Phần 2 · Ghép quy trình trên dữ liệu thực hành"
+        },
+        {
+          "cell": 36,
+          "heading": "Diễn giải và bằng chứng"
+        },
+        {
+          "cell": 38,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 39,
+          "heading": "E1 · Xếp hạng khu theo trung vị giá"
+        },
+        {
+          "cell": 44,
+          "heading": "E2 · Đếm review theo năm"
+        },
+        {
+          "cell": 49,
+          "heading": "Nhận xét phần mở rộng"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-03.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-03.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "e541f19a3ab85e1a5494e5d14e3183be0b21f61c286d079bcbbec5ffadd921ec",
+      "cells": 45,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Đọc cấu trúc mảng"
+        },
+        {
+          "cell": 9,
+          "heading": "Bài 2 · Lát cắt và view"
+        },
+        {
+          "cell": 13,
+          "heading": "Bài 3 · View và bản sao"
+        },
+        {
+          "cell": 19,
+          "heading": "Bài 4 · Chọn phần tử"
+        },
+        {
+          "cell": 23,
+          "heading": "Bài 5 · Broadcasting"
+        },
+        {
+          "cell": 28,
+          "heading": "Bài 6 · Sửa phép tính theo hàng"
+        },
+        {
+          "cell": 33,
+          "heading": "Bài 7 · Đo thời gian"
+        },
+        {
+          "cell": 36,
+          "heading": "Bài 8 · Thống kê giá và lấy mẫu"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-04.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-04.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "7881b1ca546afce3cf4c881763183b133bf1fa6e359e6d4218c7e15eb8da4854",
+      "cells": 54,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Khởi động: chọn cột, chọn hàng và tỷ lệ"
+        },
+        {
+          "cell": 9,
+          "heading": "Thói quen 5 bước — chạy và đọc kết quả"
+        },
+        {
+          "cell": 16,
+          "heading": "Bài 2 · Cắt riêng một quận"
+        },
+        {
+          "cell": 20,
+          "heading": "Bài 3 · Lọc kết hợp trong quận"
+        },
+        {
+          "cell": 24,
+          "heading": "Bài 4 · Kiểm tra các chỗ ở có giá thấp nhất quận"
+        },
+        {
+          "cell": 29,
+          "heading": "Bài 5 · Sửa bảng bằng `.loc` và tính lại cột phụ thuộc"
+        },
+        {
+          "cell": 34,
+          "heading": "Bài 6 · So sánh với thành phố và ảnh hưởng của NaN"
+        },
+        {
+          "cell": 39,
+          "heading": "Bài 7 · Cơ cấu loại phòng và mức thiếu — hoàn thiện hồ sơ"
+        },
+        {
+          "cell": 43,
+          "heading": "Bài 8 · Xuất hồ sơ ra file và đọc lại"
+        },
+        {
+          "cell": 47,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 47,
+          "heading": "Tự làm 1 · Hồ sơ quận thứ hai"
+        },
+        {
+          "cell": 47,
+          "heading": "Tự làm 2 · Quận có giá thấp và nhiều lựa chọn"
+        },
+        {
+          "cell": 47,
+          "heading": "Tự làm 3 · AI là đề bài — vì sao bảng không đổi?"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-05.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-05.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "54fee2e02fdc5c91f71c8d4745cfa43a395c252bf674502d5b8ba61a69290ac0",
+      "cells": 48,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Khởi động: `loc` theo nhãn, `iloc` theo vị trí"
+        },
+        {
+          "cell": 8,
+          "heading": "Bài 2 · Alignment: phép toán tự khớp theo index"
+        },
+        {
+          "cell": 12,
+          "heading": "Phần 1 · Phân tích thị trường theo hai chiều"
+        },
+        {
+          "cell": 12,
+          "heading": "Bài 3 · Sinh cột phân khúc bằng `map` với hàm"
+        },
+        {
+          "cell": 16,
+          "heading": "Bài 4 · `agg` đặt tên — thống kê ba phân khúc"
+        },
+        {
+          "cell": 21,
+          "heading": "Bài 5 · Host chuyên nghiệp"
+        },
+        {
+          "cell": 26,
+          "heading": "Bài 6 · `transform` — gắn quy mô quận vào từng dòng"
+        },
+        {
+          "cell": 30,
+          "heading": "Bài 7 · `pivot_table` — phân khúc × kiểu host"
+        },
+        {
+          "cell": 35,
+          "heading": "Bài 8 · `merge` bảng tra cứu + `validate`"
+        },
+        {
+          "cell": 41,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 41,
+          "heading": "Tự làm 1 · Phòng đắt nhất từng quận"
+        },
+        {
+          "cell": 41,
+          "heading": "Tự làm 2 · Cơ cấu phân khúc theo quận"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-06.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-06.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "b10419e1b0e0493327ed0e5908f4a751c97fa78ea1c0e142f55fa402a5b088ce",
+      "cells": 46,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu và thư viện"
+        },
+        {
+          "cell": 6,
+          "heading": "Bài 1 · Đọc có chọn lọc: `usecols` + `parse_dates` (khởi động + bảng 90 cột)"
+        },
+        {
+          "cell": 10,
+          "heading": "Bài 2 · Làm sạch cột giá dạng chuỗi"
+        },
+        {
+          "cell": 14,
+          "heading": "Bài 3 · CSV hay Parquet: kích thước và kiểu dữ liệu"
+        },
+        {
+          "cell": 19,
+          "heading": "Bài 4 · API lịch sử: lưu response thô rồi mới chuyển thành bảng"
+        },
+        {
+          "cell": 23,
+          "heading": "Bài 5 · Đếm review theo ngày trong một khoảng"
+        },
+        {
+          "cell": 26,
+          "heading": "Bài 6 · Ghép thời tiết với số review theo ngày"
+        },
+        {
+          "cell": 31,
+          "heading": "Bài 7 · DuckDB: truy vấn trực tiếp trên file CSV"
+        },
+        {
+          "cell": 34,
+          "heading": "Bài 8 · DuckDB `JOIN`: review theo loại phòng"
+        },
+        {
+          "cell": 39,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 39,
+          "heading": "Tự làm 1 · So sánh với tháng 7"
+        },
+        {
+          "cell": 39,
+          "heading": "Tự làm 2 · Truy vấn listing có nhiều review"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-07.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-07.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "31d3d620bed6821a381cf9094bb39557dc5efb0fac1058b6a78aa8b84332583b",
+      "cells": 43,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Khởi động: chuẩn hoá trước khi đếm"
+        },
+        {
+          "cell": 8,
+          "heading": "Bài 2 · Khởi động: bẫy NaN của `contains`"
+        },
+        {
+          "cell": 12,
+          "heading": "Bài 3 · Nhìn tổng quan cột chữ"
+        },
+        {
+          "cell": 17,
+          "heading": "Bài 4 · Thẻ HTML `<br/>`"
+        },
+        {
+          "cell": 20,
+          "heading": "Bài 5 · Quy tắc nhận diện ngôn ngữ"
+        },
+        {
+          "cell": 23,
+          "heading": "Bài 6 · So độ dài hai nhóm"
+        },
+        {
+          "cell": 28,
+          "heading": "Bài 7 · `str.extract` trên văn bản tự do"
+        },
+        {
+          "cell": 31,
+          "heading": "Bài 8 · Bảng tần suất địa điểm và các trường hợp khớp nhầm"
+        },
+        {
+          "cell": 36,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 36,
+          "heading": "Tự làm 1 · Từ khoá hai ngôn ngữ"
+        },
+        {
+          "cell": 36,
+          "heading": "Tự làm 2 · Cải thiện mẫu \"cerca de\""
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-08.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-08.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "49b61226ed1d5920f07b9de45a5df280cc41bb17561d3a9e3e44c558400974ee",
+      "cells": 42,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Khởi động: loại ngày sau mốc chụp, đưa `date` vào chỉ mục"
+        },
+        {
+          "cell": 9,
+          "heading": "Bài 2 · Khởi động: cắt lát bằng chuỗi + đối chiếu số đã biết"
+        },
+        {
+          "cell": 13,
+          "heading": "Bài 3 · Tổng hợp theo quý và nhận diện kỳ chưa trọn"
+        },
+        {
+          "cell": 17,
+          "heading": "Bài 4 · Quý cao nhất và quý thấp nhất một giai đoạn"
+        },
+        {
+          "cell": 21,
+          "heading": "Bài 5 · Đếm theo ngày của một năm"
+        },
+        {
+          "cell": 24,
+          "heading": "Bài 6 · Làm mượt bằng cửa sổ trượt"
+        },
+        {
+          "cell": 30,
+          "heading": "Bài 7 · So cùng kỳ — con số báo cáo được"
+        },
+        {
+          "cell": 35,
+          "heading": "Bài tự làm"
+        },
+        {
+          "cell": 35,
+          "heading": "Tự làm 1 · Điều tra ngày kỷ lục"
+        },
+        {
+          "cell": 35,
+          "heading": "Tự làm 2 · Thời gian từ đánh giá gần nhất"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-10.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-10.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "cc256e819c039ce5accec261d122f1d601882f15dbc97218580b12fcafe4ca98",
+      "cells": 38,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Miền thời gian của bảng đánh giá"
+        },
+        {
+          "cell": 9,
+          "heading": "Bài 2 · Khoá ngoại: đánh giá không khớp chỗ ở"
+        },
+        {
+          "cell": 13,
+          "heading": "Bài 3 · Khoá tự nhiên: bảng đánh giá rút gọn có khoá không?"
+        },
+        {
+          "cell": 17,
+          "heading": "Bài 4 · Đối chiếu cột dẫn xuất với con số tự đếm"
+        },
+        {
+          "cell": 21,
+          "heading": "Bài 5 · Cột LTM: lệch định nghĩa cửa sổ 12 tháng"
+        },
+        {
+          "cell": 26,
+          "heading": "Bài 6 · Đóng gói `qa_report`"
+        },
+        {
+          "cell": 30,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-11.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-11.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "14153e579e5d928debf2e7b073ee94c8feb1ada2edce91841d5e26584baf6533",
+      "cells": 41,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu và thư viện"
+        },
+        {
+          "cell": 5,
+          "heading": "Phần 0 · Chọn mẫu & ước chi phí"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Chọn mẫu tái lập được"
+        },
+        {
+          "cell": 8,
+          "heading": "Bài 2 · Ước lượng token và chi phí trước khi gọi"
+        },
+        {
+          "cell": 12,
+          "heading": "Phần 1 · Schema là tầng kiểm tra đầu tiên"
+        },
+        {
+          "cell": 12,
+          "heading": "Bài 3 · Viết schema Pydantic có enum"
+        },
+        {
+          "cell": 12,
+          "heading": "Hợp đồng lớp · 15 điểm tự động"
+        },
+        {
+          "cell": 15,
+          "heading": "Phần 2 · Đánh giá đầu ra LLM bằng nhãn tay"
+        },
+        {
+          "cell": 17,
+          "heading": "Bài 4 · Kiểm tra hàng loạt — schema phát hiện được gì?"
+        },
+        {
+          "cell": 22,
+          "heading": "Bài 5 · Độ chính xác của nhãn cảm xúc"
+        },
+        {
+          "cell": 26,
+          "heading": "Nhìn vào chỗ sai — phân loại lỗi"
+        },
+        {
+          "cell": 28,
+          "heading": "Bài 6 · Hậu kiểm tự động"
+        },
+        {
+          "cell": 33,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-12.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-12.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "052236031d7933fdd01ffec0802329e117984968636d14b159c0176bea947a33",
+      "cells": 39,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 5,
+          "heading": "Hình 1 · Biểu đồ đường — số đánh giá của một quận"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Chuỗi số đánh giá theo tháng của một quận"
+        },
+        {
+          "cell": 8,
+          "heading": "Bài 2 · Vẽ biểu đồ đường hoàn chỉnh và lưu vào `figures/`"
+        },
+        {
+          "cell": 12,
+          "heading": "Hình 2 · Biểu đồ thanh ngang — tỷ lệ nguyên căn theo quận"
+        },
+        {
+          "cell": 12,
+          "heading": "Bài 3 · Bảng tỷ lệ nguyên căn theo quận"
+        },
+        {
+          "cell": 15,
+          "heading": "Bài 4 · Vẽ thanh ngang có nhãn giá trị"
+        },
+        {
+          "cell": 19,
+          "heading": "Hình 3 · Histogram — phân phối hai đỉnh"
+        },
+        {
+          "cell": 19,
+          "heading": "Bài 5 · Histogram và hai nhóm hành vi"
+        },
+        {
+          "cell": 24,
+          "heading": "Hình 4 · Sửa biểu đồ gây hiểu sai"
+        },
+        {
+          "cell": 26,
+          "heading": "Bài 6 · Vẽ lại trung thực"
+        },
+        {
+          "cell": 31,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-13.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-13.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "1effc86a87828b3cc3277f894a00dcf528bc09aecb52ffc04623d4377ece5e65",
+      "cells": 36,
+      "technicalSections": [
+        {
+          "cell": 3,
+          "heading": "Dữ liệu và thư viện"
+        },
+        {
+          "cell": 5,
+          "heading": "Bài 1 · Boxplot và hue: giá theo nhóm chủ nhà"
+        },
+        {
+          "cell": 10,
+          "heading": "Bài 2 · Cặp bản đồ giá và số chỗ ở — bước ghép dữ liệu"
+        },
+        {
+          "cell": 15,
+          "heading": "Bước 3 · Hồ sơ lỗi cho hình chọn mốc có lợi"
+        },
+        {
+          "cell": 17,
+          "heading": "Bài 3 · Số đánh giá theo năm trong một khoảng"
+        },
+        {
+          "cell": 20,
+          "heading": "Bài 4 · Cùng một năm cuối, đổi mốc so sánh"
+        },
+        {
+          "cell": 23,
+          "heading": "Bài 5 · Bản sửa trung thực"
+        },
+        {
+          "cell": 28,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "template",
+      "notebook": "lab-14.ipynb",
+      "url": "https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template/blob/cf1beb6aad027e524dd81a63d8c05a675c3bd01e/lab-14.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "sha256": "7a26f9f184e1ee911b9181524c8d4a189eb46142daf4790d3ce670927136097f",
+      "cells": 39,
+      "technicalSections": [
+        {
+          "cell": 4,
+          "heading": "Bài 1 · Xếp kim tự tháp"
+        },
+        {
+          "cell": 4,
+          "heading": "Câu trả lời · 10 điểm tự động"
+        },
+        {
+          "cell": 9,
+          "heading": "Bài 2 · Lời đúng mức với số liệu"
+        },
+        {
+          "cell": 9,
+          "heading": "Câu trả lời · 15 điểm tự động (3 điểm mỗi cặp)"
+        },
+        {
+          "cell": 14,
+          "heading": "Bài 3 · Tự tạo một nghịch lý Simpson"
+        },
+        {
+          "cell": 18,
+          "heading": "Bài 4 · Cơ cấu mẫu thay đổi"
+        },
+        {
+          "cell": 23,
+          "heading": "Bài 5 · Thẩm định một kết luận mới — bước 1: truy số"
+        },
+        {
+          "cell": 28,
+          "heading": "Bài 6 · Bước 2 (phương pháp) và bước 3 (diễn giải): phán quyết"
+        },
+        {
+          "cell": 28,
+          "heading": "Câu trả lời · 10 điểm tự động"
+        },
+        {
+          "cell": 32,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-01.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-01.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "7d54d71c729657c69a0c337d84a5dbb0c6ec602b166ad29a5e7f8cf45c949fc8",
+      "cells": 30,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 3,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 6,
+          "heading": "Phần 1 · Trạng thái notebook — một nguồn lỗi thường gặp"
+        },
+        {
+          "cell": 7,
+          "heading": "Bước 1 · Thứ tự chạy quan trọng"
+        },
+        {
+          "cell": 11,
+          "heading": "Bước 2 · Cell chạy nhiều lần — giá trị cộng dồn"
+        },
+        {
+          "cell": 16,
+          "heading": "Phần 2 · Phân tích đầu tiên trên dữ liệu thật"
+        },
+        {
+          "cell": 22,
+          "heading": "Phần 3 · Một vòng quy trình 5 bước với AI"
+        },
+        {
+          "cell": 23,
+          "heading": "Bước 1 · Tự phác trước khi hỏi"
+        },
+        {
+          "cell": 24,
+          "heading": "Bước 2–3 · Hỏi AI, rồi đọc hiểu"
+        },
+        {
+          "cell": 28,
+          "heading": "Phần 4 · Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-02.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-02.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "f74bdce68084cedf5082c4054dea1e16ff2f35f966014c487a0a32c219aa130c",
+      "cells": 40,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 3,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 7,
+          "heading": "Phần 1 · Khảo sát thị trường Airbnb Santiago"
+        },
+        {
+          "cell": 8,
+          "heading": "Bước 1 · Tải và đọc dữ liệu"
+        },
+        {
+          "cell": 12,
+          "heading": "Bước 2 · Hàm làm sạch giá"
+        },
+        {
+          "cell": 14,
+          "heading": "Bước 3 · Áp hàm cho cả cột giá"
+        },
+        {
+          "cell": 17,
+          "heading": "Bước 4 · So sánh trung bình và trung vị"
+        },
+        {
+          "cell": 23,
+          "heading": "Bước 5 · Đếm phòng theo khu"
+        },
+        {
+          "cell": 26,
+          "heading": "Bước 6 · So sánh giá giữa các khu"
+        },
+        {
+          "cell": 29,
+          "heading": "Bước 7 · Phòng chưa từng có review"
+        },
+        {
+          "cell": 32,
+          "heading": "Bước 8 · Xuất báo cáo JSON"
+        },
+        {
+          "cell": 34,
+          "heading": "Phần 2 · Bài tự làm"
+        },
+        {
+          "cell": 35,
+          "heading": "Tự làm 1 · Bảng xếp hạng khu"
+        },
+        {
+          "cell": 37,
+          "heading": "Tự làm 2 · Dòng thời gian review (nâng cao)"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-03.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-03.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "8ea658090ace81e646a927e511d7d020b8ca6f29a65369f488c9951efa0a5ec7",
+      "cells": 40,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Dữ liệu dùng trong lab"
+        },
+        {
+          "cell": 4,
+          "heading": "Bài 1 · Đọc cấu trúc mảng"
+        },
+        {
+          "cell": 8,
+          "heading": "Bài 2 · Lát cắt và view"
+        },
+        {
+          "cell": 12,
+          "heading": "Bài 3 · View và bản sao"
+        },
+        {
+          "cell": 18,
+          "heading": "Bài 4 · Chọn phần tử"
+        },
+        {
+          "cell": 22,
+          "heading": "Bài 5 · Broadcasting"
+        },
+        {
+          "cell": 26,
+          "heading": "Bài 6 · Sửa phép tính theo hàng"
+        },
+        {
+          "cell": 31,
+          "heading": "Bài 7 · Đo thời gian"
+        },
+        {
+          "cell": 34,
+          "heading": "Bài 8 · Thống kê giá và lấy mẫu"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-04.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-04.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "35e187c74282e7e99fee413f97b3234a12cf1be809982ed5b74095b630e56595",
+      "cells": 37,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 3,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 8,
+          "heading": "Phần 1 · Hồ sơ quận Ñuñoa"
+        },
+        {
+          "cell": 9,
+          "heading": "Bước 1 · Thói quen 5 bước — chạy và đọc kết quả"
+        },
+        {
+          "cell": 16,
+          "heading": "Bước 2 · Cắt riêng quận Ñuñoa"
+        },
+        {
+          "cell": 18,
+          "heading": "Bước 3 · Lọc kết hợp trong quận"
+        },
+        {
+          "cell": 20,
+          "heading": "Bước 4 · Kiểm tra 5 chỗ ở có giá thấp nhất quận"
+        },
+        {
+          "cell": 23,
+          "heading": "Bước 5 · Sửa bảng bằng `.loc` và tính lại cột phụ thuộc"
+        },
+        {
+          "cell": 27,
+          "heading": "Bước 6 · So sánh Ñuñoa với thành phố và xem ảnh hưởng của NaN"
+        },
+        {
+          "cell": 30,
+          "heading": "Bước 7 · Cơ cấu loại phòng và mức thiếu — hoàn thiện hồ sơ"
+        },
+        {
+          "cell": 32,
+          "heading": "Bước 8 · Xuất hồ sơ ra file"
+        },
+        {
+          "cell": 34,
+          "heading": "Phần 2 · Bài tự làm"
+        },
+        {
+          "cell": 34,
+          "heading": "Tự làm 1 · Hồ sơ quận thứ hai"
+        },
+        {
+          "cell": 34,
+          "heading": "Tự làm 2 · Quận có giá thấp và nhiều lựa chọn"
+        },
+        {
+          "cell": 34,
+          "heading": "Tự làm 2 · AI là đề bài — vì sao bảng không đổi?"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-05.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-05.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "b43554429ab2f8d637b14d7de11cbf3ef1dd85e86f0f4c4b9c233118399668ad",
+      "cells": 27,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 3,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 6,
+          "heading": "Phần 1 · Phân tích thị trường theo hai chiều"
+        },
+        {
+          "cell": 8,
+          "heading": "Bước 1 · Sinh cột phân khúc bằng map với hàm"
+        },
+        {
+          "cell": 10,
+          "heading": "Bước 2 · agg đặt tên — thống kê ba phân khúc"
+        },
+        {
+          "cell": 13,
+          "heading": "Bước 3 · Host chuyên nghiệp"
+        },
+        {
+          "cell": 16,
+          "heading": "Bước 4 · transform — gắn quy mô quận vào từng dòng"
+        },
+        {
+          "cell": 18,
+          "heading": "Bước 5 · pivot_table — phân khúc × kiểu host"
+        },
+        {
+          "cell": 21,
+          "heading": "Bước 6 · merge bảng tra cứu + validate"
+        },
+        {
+          "cell": 24,
+          "heading": "Phần 2 · Bài tự làm"
+        },
+        {
+          "cell": 24,
+          "heading": "Tự làm 1 · Phòng đắt nhất từng quận"
+        },
+        {
+          "cell": 24,
+          "heading": "Tự làm 2 · Cơ cấu phân khúc theo quận"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-06.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-06.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "9e6fcc2763b03d5d3726824bd420de9021c476553d25f39cc078a1f8ba88e96d",
+      "cells": 37,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 4,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 7,
+          "heading": "Phần 1 · Bảng đầy đủ 90 cột: đọc có chọn lọc và lưu Parquet"
+        },
+        {
+          "cell": 9,
+          "heading": "Bước 1 · Đọc cả bảng và chỉ đọc 5 cột"
+        },
+        {
+          "cell": 12,
+          "heading": "Bước 2 · Lưu CSV và Parquet, đọc lại và so kiểu cột"
+        },
+        {
+          "cell": 15,
+          "heading": "Phần 2 · API lịch sử và số đánh giá theo ngày"
+        },
+        {
+          "cell": 15,
+          "heading": "Bước 3 · Chọn tham số và gọi API"
+        },
+        {
+          "cell": 18,
+          "heading": "Bước 4 · Tạo bảng theo ngày và kiểm tra đơn vị"
+        },
+        {
+          "cell": 20,
+          "heading": "Bước 5 · Đếm đánh giá theo ngày"
+        },
+        {
+          "cell": 22,
+          "heading": "Bước 6 · Ghép hai nguồn và đo tương quan"
+        },
+        {
+          "cell": 25,
+          "heading": "Phần 3 · SQL với DuckDB"
+        },
+        {
+          "cell": 25,
+          "heading": "Bước 7 · Đếm đánh giá theo năm và đối chiếu với lab 2"
+        },
+        {
+          "cell": 27,
+          "heading": "Bước 8 · `COUNT(*)` và `COUNT(cột)` trên file Parquet"
+        },
+        {
+          "cell": 29,
+          "heading": "Bước 9 · Ghép đánh giá với loại chỗ ở bằng `LEFT JOIN`"
+        },
+        {
+          "cell": 32,
+          "heading": "Bước 10 · Lọc nhóm bằng `HAVING`"
+        },
+        {
+          "cell": 34,
+          "heading": "Phần 4 · Bài tự làm"
+        },
+        {
+          "cell": 34,
+          "heading": "Tự làm 1 · So sánh với tháng 7"
+        },
+        {
+          "cell": 34,
+          "heading": "Tự làm 2 · Chỗ ở có nhiều đánh giá nhất"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-07-regex.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-07-regex.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "fab55d7da2596ef24b018c2778e89949b52c4254bc20bc4d46668ce42467a48f",
+      "cells": 102,
+      "technicalSections": [
+        {
+          "cell": 1,
+          "heading": "Quy ước chung"
+        },
+        {
+          "cell": 2,
+          "heading": "Câu 1. Trích dãy chữ số đầu tiên"
+        },
+        {
+          "cell": 2,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 6,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 7,
+          "heading": "Câu 2. Dấu chấm thường và ký tự đại diện"
+        },
+        {
+          "cell": 7,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 11,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 12,
+          "heading": "Câu 3. Chọn ký tự trong một tập"
+        },
+        {
+          "cell": 12,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 16,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 17,
+          "heading": "Câu 4. Kết hợp các khoảng ký tự"
+        },
+        {
+          "cell": 17,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 21,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 22,
+          "heading": "Câu 5. Giới hạn số lần lặp"
+        },
+        {
+          "cell": 22,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 26,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 27,
+          "heading": "Câu 6. Phân biệt không lần và ít nhất một lần"
+        },
+        {
+          "cell": 27,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 31,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 32,
+          "heading": "Câu 7. Ký tự tùy chọn và dấu hỏi thường"
+        },
+        {
+          "cell": 32,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 36,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 37,
+          "heading": "Câu 8. Yêu cầu có ký tự trắng phân cách"
+        },
+        {
+          "cell": 37,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 41,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 42,
+          "heading": "Câu 9. Trích tên tệp PDF bằng nhóm bắt"
+        },
+        {
+          "cell": 42,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 46,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 47,
+          "heading": "Câu 10. Trích số phòng với phép hoặc và ranh giới từ"
+        },
+        {
+          "cell": 47,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 51,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 52,
+          "heading": "Câu 11. Kiểm tra số nguyên và số thập phân đơn giản"
+        },
+        {
+          "cell": 52,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 56,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 57,
+          "heading": "Câu 12. Kiểm tra số có phân cách hàng nghìn và số mũ"
+        },
+        {
+          "cell": 57,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 61,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 62,
+          "heading": "Câu 13. Trích mã vùng điện thoại"
+        },
+        {
+          "cell": 62,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 66,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 67,
+          "heading": "Câu 14. Trích tên tài khoản email trước bộ lọc"
+        },
+        {
+          "cell": 67,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 71,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 72,
+          "heading": "Câu 15. Trích tên thẻ mở đầu tiên"
+        },
+        {
+          "cell": 72,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 76,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 77,
+          "heading": "Câu 16. Chọn tệp ảnh và trích phần mở rộng"
+        },
+        {
+          "cell": 77,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 81,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 82,
+          "heading": "Câu 17. Sửa mẫu cắt khoảng trắng bị tham lam"
+        },
+        {
+          "cell": 82,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 86,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 87,
+          "heading": "Câu 18. Trích dữ liệu từ dòng ngăn xếp lỗi"
+        },
+        {
+          "cell": 87,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 91,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 92,
+          "heading": "Câu 19. Trích giao thức, máy chủ và cổng URL"
+        },
+        {
+          "cell": 92,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 96,
+          "heading": "Giải thích"
+        },
+        {
+          "cell": 97,
+          "heading": "Câu 20. Trích đường dẫn URL, loại truy vấn và đoạn neo"
+        },
+        {
+          "cell": 97,
+          "heading": "Đoạn văn đầu vào"
+        },
+        {
+          "cell": 101,
+          "heading": "Giải thích"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-07.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-07.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "a5b0d5af1d25c59870c73c6b2ca5f08dc13d5fd1bfc53c4c9130c5de7ac83bc0",
+      "cells": 41,
+      "technicalSections": [
+        {
+          "cell": 1,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 2,
+          "heading": "Chuẩn bị"
+        },
+        {
+          "cell": 5,
+          "heading": "Phần 0 · Khởi động"
+        },
+        {
+          "cell": 9,
+          "heading": "Phần 1 · Đổi giá sang số và giữ lại lỗi chuyển đổi"
+        },
+        {
+          "cell": 11,
+          "heading": "Kiểm cả chuỗi, tránh chỉ đọc một phần"
+        },
+        {
+          "cell": 13,
+          "heading": "Phần 2 · Làm sạch và kiểm quy tắc trên đánh giá thật"
+        },
+        {
+          "cell": 15,
+          "heading": "Bước 1 · Khảo sát trước khi xử lý"
+        },
+        {
+          "cell": 19,
+          "heading": "Bước 2 · Thay đúng đoạn HTML đã biết"
+        },
+        {
+          "cell": 21,
+          "heading": "Bước 3 · Lấy từ đứng sau near hoặc cerca de"
+        },
+        {
+          "cell": 29,
+          "heading": "Phần 3 · Tính tiện nghi theo chỗ ở"
+        },
+        {
+          "cell": 31,
+          "heading": "Bước 4 · Đọc JSON rồi tách thành từng mục"
+        },
+        {
+          "cell": 33,
+          "heading": "Bước 5 · Giữ đúng mẫu số"
+        },
+        {
+          "cell": 35,
+          "heading": "Bước 6 · Phân biệt danh sách rỗng với dữ liệu thiếu"
+        },
+        {
+          "cell": 37,
+          "heading": "Phần 4 · Bài tự làm"
+        },
+        {
+          "cell": 37,
+          "heading": "Tự làm 1 · Kiểm một kết luận từ từ khoá"
+        },
+        {
+          "cell": 37,
+          "heading": "Tự làm 2 · Trích diện tích có thêm cách viết"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-08.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-08.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "04ecc73e58a157140a3c1f736615648fb235f5d185567c397e47ed752e76fe6d",
+      "cells": 40,
+      "technicalSections": [
+        {
+          "cell": 1,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 2,
+          "heading": "Chuẩn bị"
+        },
+        {
+          "cell": 5,
+          "heading": "Phần 1 · Kiểm cách đọc ngày"
+        },
+        {
+          "cell": 5,
+          "heading": "Tính số đêm lưu trú"
+        },
+        {
+          "cell": 8,
+          "heading": "Xác định ngày không đọc được"
+        },
+        {
+          "cell": 10,
+          "heading": "Phần 2 · Tổng hợp đánh giá theo quý"
+        },
+        {
+          "cell": 10,
+          "heading": "Đọc đúng snapshot"
+        },
+        {
+          "cell": 12,
+          "heading": "Giới hạn phạm vi ngày"
+        },
+        {
+          "cell": 14,
+          "heading": "Chọn các quý đã kết thúc"
+        },
+        {
+          "cell": 18,
+          "heading": "Kiểm cách chọn kỳ cuối"
+        },
+        {
+          "cell": 21,
+          "heading": "Phần 3 · Cửa sổ trượt bảy ngày"
+        },
+        {
+          "cell": 21,
+          "heading": "Tìm giai đoạn có nhiều đánh giá"
+        },
+        {
+          "cell": 26,
+          "heading": "Xem khoảng thời gian vừa tính"
+        },
+        {
+          "cell": 29,
+          "heading": "Phần 4 · So cùng kỳ"
+        },
+        {
+          "cell": 29,
+          "heading": "So quý I qua hai năm"
+        },
+        {
+          "cell": 31,
+          "heading": "Đối chiếu với ngày gốc"
+        },
+        {
+          "cell": 34,
+          "heading": "Phần 5 · Bài tự làm"
+        },
+        {
+          "cell": 34,
+          "heading": "So tháng 2 với tháng 1 theo số đánh giá mỗi ngày"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-10.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-10.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "b4b0060ee8b110136381d3e7077b60ab3540a867a424385c2472fb49475c8411",
+      "cells": 62,
+      "technicalSections": [
+        {
+          "cell": 1,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 2,
+          "heading": "Chuẩn bị"
+        },
+        {
+          "cell": 5,
+          "heading": "Phần 1 · Giá trị thiếu"
+        },
+        {
+          "cell": 7,
+          "heading": "Điền 0 khi có căn cứ"
+        },
+        {
+          "cell": 11,
+          "heading": "Điền giá theo nhóm"
+        },
+        {
+          "cell": 15,
+          "heading": "Phần 2 · Viết quy tắc kiểm tra giá"
+        },
+        {
+          "cell": 20,
+          "heading": "Phần 3 · Ngưỡng, bỏ hàng và chặn giá"
+        },
+        {
+          "cell": 24,
+          "heading": "Phần 4 · Trùng lặp"
+        },
+        {
+          "cell": 24,
+          "heading": "Bản nhập lặp hay hai đánh giá cùng ngày?"
+        },
+        {
+          "cell": 31,
+          "heading": "Phần 5 · Bộ quy tắc kiểm tra ngày và mã chỗ ở"
+        },
+        {
+          "cell": 37,
+          "heading": "Lưu báo cáo kiểm tra"
+        },
+        {
+          "cell": 39,
+          "heading": "Giữ các hàng cần đối chiếu"
+        },
+        {
+          "cell": 41,
+          "heading": "Phần 6 · Bài tự làm"
+        },
+        {
+          "cell": 42,
+          "heading": "Tự làm 1 · Tách nhóm giá mâu thuẫn trước khi gộp"
+        },
+        {
+          "cell": 47,
+          "heading": "Tự làm 2 · Đối chiếu số đánh giá trong cùng phạm vi"
+        },
+        {
+          "cell": 51,
+          "heading": "Tự làm 3 · Đối chiếu số đánh giá trong 12 tháng"
+        },
+        {
+          "cell": 55,
+          "heading": "Tự làm 4 · Mốt, giá trị phía trước và nội suy"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-11.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-11.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "971661dfcfbf7d0a388bd7359ee3c11bab45b4aeaa2efab2563310071e140189",
+      "cells": 26,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 4,
+          "heading": "Phần 0 · Chọn mẫu & ước chi phí"
+        },
+        {
+          "cell": 7,
+          "heading": "Phần 1 · Schema là tầng kiểm tra đầu tiên"
+        },
+        {
+          "cell": 9,
+          "heading": "Phần 2 · Đánh giá đầu ra LLM bằng nhãn tay"
+        },
+        {
+          "cell": 11,
+          "heading": "Bước 1 · Kiểm tra hàng loạt — schema phát hiện được gì?"
+        },
+        {
+          "cell": 15,
+          "heading": "Bước 2 · Độ chính xác của nhãn cảm xúc"
+        },
+        {
+          "cell": 17,
+          "heading": "Bước 3 · Nhìn vào chỗ sai — phân loại lỗi"
+        },
+        {
+          "cell": 19,
+          "heading": "Bước 4 · Hậu kiểm tự động"
+        },
+        {
+          "cell": 22,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-12.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-12.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "523c538b06114af272fab84cf8db81fcc412739ff123214ab6c8d1d5cca41044",
+      "cells": 19,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 4,
+          "heading": "Hình 1 · Biểu đồ đường — số đánh giá của một quận"
+        },
+        {
+          "cell": 7,
+          "heading": "Hình 2 · Biểu đồ thanh ngang — tỷ lệ nguyên căn theo quận"
+        },
+        {
+          "cell": 9,
+          "heading": "Hình 3 · Histogram — phân phối hai đỉnh"
+        },
+        {
+          "cell": 12,
+          "heading": "Hình 4 · Sửa biểu đồ gây hiểu sai"
+        },
+        {
+          "cell": 15,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-13.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-13.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "bcc870fda25cdd49a19b2e823aad698d19cb4f1f6e5ed89781156d4626266be6",
+      "cells": 19,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 4,
+          "heading": "Bước 1 · Boxplot và hue: giá theo nhóm chủ nhà"
+        },
+        {
+          "cell": 7,
+          "heading": "Bước 2 · Cặp bản đồ giá và số chỗ ở"
+        },
+        {
+          "cell": 12,
+          "heading": "Bước 3 · Hồ sơ lỗi cho hình chọn kỳ gốc có lợi"
+        },
+        {
+          "cell": 15,
+          "heading": "Bài tự làm"
+        }
+      ]
+    },
+    {
+      "source": "course",
+      "notebook": "lab-14.ipynb",
+      "url": "https://github.com/uet-iai-course/programming-for-data-processing/blob/fc6911497e6353be3b228c9d1cc20335616b5597/2627-1/notebooks/lab-14.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "sha256": "146a0445936712de5df5a7f2b458eea92999fadeb086f90522932c2ffb4841b7",
+      "cells": 20,
+      "technicalSections": [
+        {
+          "cell": 2,
+          "heading": "Mục tiêu"
+        },
+        {
+          "cell": 3,
+          "heading": "Bước 1 · Xếp kim tự tháp"
+        },
+        {
+          "cell": 6,
+          "heading": "Bước 2 · Lời đúng mức với số liệu"
+        },
+        {
+          "cell": 9,
+          "heading": "Bước 3 · Tự tạo một nghịch lý Simpson"
+        },
+        {
+          "cell": 12,
+          "heading": "Bước 4 · Thẩm định một kết luận mới"
+        },
+        {
+          "cell": 16,
+          "heading": "Bài tự làm"
+        }
+      ]
+    }
+  ]
+}

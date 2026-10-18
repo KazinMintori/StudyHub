@@ -1,0 +1,200 @@
+{
+  "lab": "04",
+  "title": "Lập hồ sơ một quận bằng pandas",
+  "topic": "xu-ly-du-lieu",
+  "sources": [
+    {
+      "source": "template",
+      "path": "C:/Users/Ai/AppData/Local/Temp/studyhub-lab-sources-20261018/template/lab-04.ipynb",
+      "commit": "cf1beb6aad027e524dd81a63d8c05a675c3bd01e",
+      "totalCells": 54,
+      "cells": [
+        {"cellIndex": 0, "type": "markdown", "title": "Mục tiêu bài lab", "status": "merged", "target": "lab-intro", "reason": "Chuyển thành phần mục tiêu và bối cảnh ở đầu tài liệu bài lab."},
+        {"cellIndex": 1, "type": "markdown", "title": "Cách làm và nộp bài, Rubric dự kiến", "status": "excluded", "reason": "Chính sách môn học, thang điểm và quy định nộp bài không thuộc nội dung kỹ thuật."},
+        {"cellIndex": 2, "type": "code", "title": "Cơ sở hạ tầng public_check", "status": "excluded", "reason": "Hạ tầng chấm điểm tự động và thông báo kết quả của notebook nguồn."},
+        {"cellIndex": 3, "type": "markdown", "title": "Dữ liệu dùng trong lab (DEMO, URL snapshot)", "status": "merged", "target": "lab-data", "reason": "Chuyển thành mô tả dữ liệu mẫu DEMO và đường dẫn snapshot Santiago ở đầu tài liệu."},
+        {"cellIndex": 4, "type": "code", "title": "Khởi tạo dữ liệu DEMO 12 dòng và cấu hình CoW", "status": "merged", "target": "lab-data", "reason": "Dữ liệu mẫu 12 dòng chuẩn bị sẵn dùng chung cho toàn bộ các bài tập."},
+        {"cellIndex": 5, "type": "markdown", "title": "Bài 1: Khởi động - chọn cột, chọn hàng và tỷ lệ", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 6, "type": "code", "title": "Hàm select_basics(df)", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 7, "type": "code", "title": "Kiểm tra check_q1()", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 8, "type": "markdown", "title": "Dự đoán kiểu dữ liệu và giải thích Q1", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 9, "type": "markdown", "title": "Thói quen 5 bước - Bối cảnh quận Ñuñoa", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 10, "type": "code", "title": "Bước 1: df.shape", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 11, "type": "code", "title": "Bước 2: df.sample()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 12, "type": "code", "title": "Bước 3: df.info()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 13, "type": "code", "title": "Bước 4: df['price'].describe()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 14, "type": "code", "title": "Bước 5: df['room_type'].value_counts()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 15, "type": "markdown", "title": "Đọc và ghi nhận 4 chỉ số thống kê từ output", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 16, "type": "markdown", "title": "Bài 2: Cắt riêng một quận", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 17, "type": "code", "title": "Hàm filter_district(df, ten_quan)", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 18, "type": "code", "title": "Kiểm tra check_q2()", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 19, "type": "code", "title": "Xem trước thuc_hanh_q2()", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 20, "type": "markdown", "title": "Bài 3: Lọc kết hợp trong quận", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 21, "type": "code", "title": "Hàm count_segment(listings, room_type, gia_toi_da)", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 22, "type": "code", "title": "Kiểm tra check_q3()", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 23, "type": "code", "title": "Xem trước kết quả Bài 3", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 24, "type": "markdown", "title": "Bài 4: Kiểm tra các chỗ ở có giá thấp nhất quận", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 25, "type": "code", "title": "Hàm cheapest(listings, n)", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 26, "type": "code", "title": "Kiểm tra check_q4()", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 27, "type": "code", "title": "Xem trước kết quả Bài 4", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 28, "type": "markdown", "title": "Nhận xét giá ngoại lai bất thường 2.228 CLP", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 29, "type": "markdown", "title": "Bài 5: Sửa bảng bằng .loc và tính lại cột phụ thuộc", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 30, "type": "code", "title": "Minh họa cột phụ thuộc không tự cập nhật sau khi sửa giá", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 31, "type": "code", "title": "Hàm discount_quote(listings, room_type, giam)", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 32, "type": "code", "title": "Kiểm tra check_q5()", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 33, "type": "markdown", "title": "Giải thích tính chất lưu giá trị và lỗi hai lần ngoặc", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 34, "type": "markdown", "title": "Bài 6: So sánh với thành phố và ảnh hưởng của NaN", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 35, "type": "code", "title": "Hàm share_below(prices, nguong)", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 36, "type": "code", "title": "Kiểm tra check_q6()", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 37, "type": "code", "title": "Xem trước kết quả Bài 6", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 38, "type": "markdown", "title": "Giải thích bản chất mẫu số và ảnh hưởng của NaN", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 39, "type": "markdown", "title": "Bài 7: Cơ cấu loại phòng và mức thiếu", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 40, "type": "code", "title": "Hàm room_mix(listings)", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 41, "type": "code", "title": "Kiểm tra check_q7()", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 42, "type": "code", "title": "Xem trước kết quả Bài 7", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 43, "type": "markdown", "title": "Bài 8: Xuất hồ sơ ra file và đọc lại", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 44, "type": "code", "title": "Hàm export_profile(listings, ten_quan, path)", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 45, "type": "code", "title": "Kiểm tra check_q8()", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 46, "type": "code", "title": "Thực hành xuất file và kiểm tra bất biến", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 47, "type": "markdown", "title": "Phần tự làm: Giới thiệu 3 bài tự làm mở rộng", "status": "covered", "exerciseId": "data-lab-04-10, data-lab-04-11, data-lab-04-12"},
+        {"cellIndex": 48, "type": "code", "title": "Khung thực hiện bài tự làm", "status": "covered", "exerciseId": "data-lab-04-10, data-lab-04-11, data-lab-04-12"},
+        {"cellIndex": 49, "type": "markdown", "title": "Phần ghi nhận kết quả bài tự làm", "status": "covered", "exerciseId": "data-lab-04-10, data-lab-04-11, data-lab-04-12"},
+        {"cellIndex": 50, "type": "markdown", "title": "Khai báo sử dụng AI", "status": "excluded", "reason": "Chính sách liêm chính học thuật và nộp bài môn học."},
+        {"cellIndex": 51, "type": "markdown", "title": "Tóm tắt bài lab", "status": "merged", "target": "lab-summary", "reason": "Chuyển thành bảng tóm tắt kiến thức cốt lõi cuối bài lab."},
+        {"cellIndex": 52, "type": "markdown", "title": "Thông tin sinh viên và quy định nộp bài", "status": "excluded", "reason": "Thủ tục hành chính và hướng dẫn commit/tag nộp bài."},
+        {"cellIndex": 53, "type": "code", "title": "Hàm show_public_summary()", "status": "excluded", "reason": "Hạ tầng tổng kết kết quả kiểm thử tự động của notebook nguồn."}
+      ]
+    },
+    {
+      "source": "course",
+      "path": "C:/Users/Ai/AppData/Local/Temp/studyhub-lab-sources-20261018/course/2627-1/notebooks/lab-04.ipynb",
+      "commit": "fc6911497e6353be3b228c9d1cc20335616b5597",
+      "totalCells": 37,
+      "cells": [
+        {"cellIndex": 0, "type": "markdown", "title": "Tiêu đề và bối cảnh quận Ñuñoa", "status": "merged", "target": "lab-intro", "reason": "Gộp vào phần mở đầu bài lab."},
+        {"cellIndex": 1, "type": "markdown", "title": "Cách làm việc trong bài lab", "status": "excluded", "reason": "Quy định giờ thực hành trên lớp."},
+        {"cellIndex": 2, "type": "markdown", "title": "Mục tiêu bài học", "status": "merged", "target": "lab-intro", "reason": "Gộp vào mục tiêu bài lab."},
+        {"cellIndex": 3, "type": "markdown", "title": "Phần 0: Khởi động", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 4, "type": "code", "title": "Nạp dữ liệu URL và kiểm tra shape", "status": "merged", "target": "lab-data", "reason": "Chuyển thành phần hướng dẫn tải snapshot thật và kiểm tra kích thước."},
+        {"cellIndex": 5, "type": "code", "title": "W1: Chọn cột Series và DataFrame", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 6, "type": "code", "title": "W2: Tỷ lệ phòng riêng bằng mean trên bool", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 7, "type": "code", "title": "W3: Lọc hàng bằng [] và trích xuất ô bằng .loc", "status": "covered", "exerciseId": "data-lab-04-01"},
+        {"cellIndex": 8, "type": "markdown", "title": "Phần 1: Hồ sơ quận Ñuñoa", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 9, "type": "markdown", "title": "Bước 1: Thói quen 5 bước", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 10, "type": "code", "title": "Lệnh 1: df.shape", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 11, "type": "code", "title": "Lệnh 2: df.sample(3)", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 12, "type": "code", "title": "Lệnh 3: df.info()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 13, "type": "code", "title": "Lệnh 4: df['price'].describe()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 14, "type": "code", "title": "Lệnh 5: df['room_type'].value_counts()", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 15, "type": "code", "title": "Gán và kiểm tra 4 chỉ số đọc được", "status": "covered", "exerciseId": "data-lab-04-02"},
+        {"cellIndex": 16, "type": "markdown", "title": "Bước 2: Cắt riêng quận Ñuñoa", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 17, "type": "code", "title": "Lọc bảng quận nu và tính ty_trong", "status": "covered", "exerciseId": "data-lab-04-03"},
+        {"cellIndex": 18, "type": "markdown", "title": "Bước 3: Lọc kết hợp trong quận", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 19, "type": "code", "title": "Đếm so_can nguyên căn giá <= 60000", "status": "covered", "exerciseId": "data-lab-04-04"},
+        {"cellIndex": 20, "type": "markdown", "title": "Bước 4: Kiểm tra 5 chỗ ở giá thấp nhất", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 21, "type": "code", "title": "Lấy 5 dòng giá thấp nhất bằng nsmallest", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 22, "type": "markdown", "title": "Nhận xét mức giá 2.228 CLP cần kiểm tra", "status": "covered", "exerciseId": "data-lab-04-05"},
+        {"cellIndex": 23, "type": "markdown", "title": "Bước 5: Sửa bảng bằng .loc và tính lại cột", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 24, "type": "code", "title": "Sửa giá nguyên căn giảm 10% bằng .loc", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 25, "type": "code", "title": "Tính lại cột tien_3_dem từ giá mới", "status": "covered", "exerciseId": "data-lab-04-06"},
+        {"cellIndex": 26, "type": "markdown", "title": "Phân tích lỗi ChainedAssignmentError khi dùng hai lần ngoặc", "status": "covered", "exerciseId": "data-lab-04-06, data-lab-04-12"},
+        {"cellIndex": 27, "type": "markdown", "title": "Bước 6: So sánh với thành phố và ảnh hưởng của NaN", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 28, "type": "code", "title": "Tính ty_le_tho và ty_le_sach so với med_tp", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 29, "type": "markdown", "title": "Giải thích nguyên nhân lệch tỷ lệ do NaN", "status": "covered", "exerciseId": "data-lab-04-07"},
+        {"cellIndex": 30, "type": "markdown", "title": "Bước 7: Cơ cấu loại phòng và mức thiếu", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 31, "type": "code", "title": "Tính cơ cấu loại phòng và tỷ lệ thiếu giá", "status": "covered", "exerciseId": "data-lab-04-08"},
+        {"cellIndex": 32, "type": "markdown", "title": "Bước 8: Xuất hồ sơ ra file", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 33, "type": "code", "title": "Tạo ho_so, to_csv và doc_lai kiểm tra", "status": "covered", "exerciseId": "data-lab-04-09"},
+        {"cellIndex": 34, "type": "markdown", "title": "Phần 2: Giới thiệu 3 bài tự làm", "status": "covered", "exerciseId": "data-lab-04-10, data-lab-04-11, data-lab-04-12"},
+        {"cellIndex": 35, "type": "code", "title": "Thực hiện bài tự làm", "status": "covered", "exerciseId": "data-lab-04-10, data-lab-04-11, data-lab-04-12"},
+        {"cellIndex": 36, "type": "markdown", "title": "Tóm tắt bài lab", "status": "merged", "target": "lab-summary", "reason": "Gộp vào bảng tóm tắt kiến thức cuối bài lab."}
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "data-lab-04-01",
+      "title": "Trích xuất cột, lọc hàng và tính tỷ lệ trên bảng dữ liệu",
+      "templateCells": [5, 6, 7, 8],
+      "courseCells": [3, 5, 6, 7],
+      "concept": "Phân biệt Series và DataFrame khi trích xuất cột, tính tỷ lệ bằng mean trên mảng boolean, so sánh df[mask] và df.loc[mask, cot]."
+    },
+    {
+      "id": "data-lab-04-02",
+      "title": "Thói quen 5 bước khám phá dữ liệu và rút trích chỉ số thống kê",
+      "templateCells": [9, 10, 11, 12, 13, 14, 15],
+      "courseCells": [8, 9, 10, 11, 12, 13, 14, 15],
+      "concept": "Quy trình 5 bước khám phá dữ liệu dạng bảng (shape, sample, info, describe, value_counts) và kỹ năng đọc hiểu chỉ số thống kê."
+    },
+    {
+      "id": "data-lab-04-03",
+      "title": "Lọc hồ sơ theo quận và tính tỷ trọng thị trường",
+      "templateCells": [16, 17, 18, 19],
+      "courseCells": [16, 17],
+      "concept": "Lọc phân đoạn dữ liệu theo giá trị chuỗi danh mục và tính tỷ trọng phân bố trên tổng thể."
+    },
+    {
+      "id": "data-lab-04-04",
+      "title": "Lọc kết hợp đa điều kiện logic bằng toán tử bitwise",
+      "templateCells": [20, 21, 22, 23],
+      "courseCells": [18, 19],
+      "concept": "Kết hợp nhiều mặt nạ boolean bằng toán tử bitwise (&), ưu tiên toán tử bằng cặp dấu ngoặc đơn và xử lý giá trị khuyết."
+    },
+    {
+      "id": "data-lab-04-05",
+      "title": "Truy xuất top chỗ ở giá thấp nhất bằng nsmallest và gắn cờ bất thường",
+      "templateCells": [24, 25, 26, 27, 28],
+      "courseCells": [20, 21, 22],
+      "concept": "Sử dụng nsmallest để lấy n phần tử có giá trị nhỏ nhất, bảo toàn chỉ mục và phân tích giá trị ngoại lai (outlier)."
+    },
+    {
+      "id": "data-lab-04-06",
+      "title": "Cập nhật giá trị bằng .loc và đồng bộ hóa cột phụ thuộc",
+      "templateCells": [29, 30, 31, 32, 33],
+      "courseCells": [23, 24, 25, 26],
+      "concept": "Gán giá trị chuẩn mực bằng .loc[mask, cot], nhận biết tính chất lưu trữ giá trị tĩnh của cột và cơ chế Copy-on-Write."
+    },
+    {
+      "id": "data-lab-04-07",
+      "title": "So sánh ngưỡng thống kê và phân tích độ lệch mẫu số do dữ liệu khuyết (NaN)",
+      "templateCells": [34, 35, 36, 37, 38],
+      "courseCells": [27, 28, 29],
+      "concept": "So sánh phân vị với trung vị tổng thể, phân biệt tỷ lệ thô (tính cả NaN) và tỷ lệ sạch (chỉ tính trên giá trị hợp lệ)."
+    },
+    {
+      "id": "data-lab-04-08",
+      "title": "Phân tích cơ cấu loại phòng và tỷ lệ khuyết dữ liệu",
+      "templateCells": [39, 40, 41, 42],
+      "courseCells": [30, 31],
+      "concept": "Chuẩn hóa tần suất bằng value_counts(normalize=True) và tính tỷ lệ phần trăm dữ liệu khuyết."
+    },
+    {
+      "id": "data-lab-04-09",
+      "title": "Đóng gói hồ sơ quận xuất file CSV và kiểm chứng tính bất biến",
+      "templateCells": [43, 44, 45, 46],
+      "courseCells": [32, 33],
+      "concept": "Tổng hợp chỉ số vào DataFrame một dòng, xuất tệp CSV không lưu chỉ mục dòng và kiểm tra tính toàn vẹn dữ liệu khi đọc lại."
+    },
+    {
+      "id": "data-lab-04-10",
+      "title": "Mở rộng 1: Tự động hóa lập hồ sơ quận qua tham số cấu hình",
+      "templateCells": [47, 48, 49],
+      "courseCells": [34, 35],
+      "concept": "Thiết kế hàm pipeline tham số hóa để tái sử dụng toàn bộ quy trình phân tích cho quận bất kỳ."
+    },
+    {
+      "id": "data-lab-04-11",
+      "title": "Mở rộng 2: Tìm quận quy mô lớn có giá trung vị thấp nhất bằng groupby",
+      "templateCells": [47, 48, 49],
+      "courseCells": [34, 35],
+      "concept": "Phân nhóm với groupby, tổng hợp đa chỉ số bằng agg, lọc theo ngưỡng số lượng và tìm giá trị tối ưu."
+    },
+    {
+      "id": "data-lab-04-12",
+      "title": "Mở rộng 3: Phân tích bản chất bộ nhớ và khắc phục bẫy gán chuỗi (ChainedAssignmentError)",
+      "templateCells": [47, 48, 49],
+      "courseCells": [26, 34, 35],
+      "concept": "Phân tích cơ chế bộ nhớ của phép gán chuỗi hai lần ngoặc, hiểu cảnh báo/lỗi trong pandas 3 và thực hành giải pháp an toàn."
+    }
+  ]
+}

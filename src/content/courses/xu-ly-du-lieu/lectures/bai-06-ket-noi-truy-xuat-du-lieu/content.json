@@ -11,7 +11,7 @@
     "ham-lap-trinh"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-06.md"
   ],
   "examples": [],
   "exercises": [
@@ -31,19 +31,64 @@
       "title": "Bài tập 3: Đếm số chỗ ở thiếu giá theo từng khu bằng SQL"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 5,
-      "title": "So sánh hai cách lưu bảng"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 158,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 40,
-      "title": "Giữ phản hồi API và kiểm tra đơn vị"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 405,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 87,
-      "title": "Kiểm chứng SQL bằng pandas"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 644,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 941,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1188,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1444,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1781,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2022,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2314,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2664,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2915,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 3325,
+      "title": ""
     }
   ],
   "solutions": [
@@ -63,18 +108,63 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 9,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 176,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 44,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 419,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-6.md",
-      "line": 95,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 659,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 958,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1205,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1461,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 1796,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2038,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2333,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2683,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 2931,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-06.md",
+      "line": 3345,
       "title": ""
     }
   ],

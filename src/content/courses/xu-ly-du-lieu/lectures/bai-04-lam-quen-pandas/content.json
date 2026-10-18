@@ -11,7 +11,8 @@
     "mang"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md"
   ],
   "examples": [],
   "exercises": [
@@ -51,19 +52,154 @@
       "title": "Bài tập 7: Tính toán chi phí có điều kiện và miễn phí dọn dẹp"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 7,
-      "title": "Kiểm tra các kiểu kết quả và phép khớp nhãn"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 100,
+      "title": "Bài tập 1: Trích xuất cột, lọc hàng và tính tỷ lệ trên bảng dữ liệu"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 39,
-      "title": "Hồ sơ Ñuñoa và một quận tự chọn"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 102,
+      "title": "Chọn cột, chọn hàng và tính tỷ lệ"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 101,
-      "title": "Vì sao bảng không đổi trong pandas 3?"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 370,
+      "title": "Bài tập 2: Thói quen 5 bước khám phá dữ liệu và rút trích chỉ số thống kê"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 372,
+      "title": "Khám phá tổng quan bảng dữ liệu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 600,
+      "title": "Bài tập 3: Lọc hồ sơ theo quận và tính tỷ trọng thị trường"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 602,
+      "title": "Cắt riêng bảng dữ liệu quận mục tiêu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 829,
+      "title": "Bài tập 4: Lọc kết hợp đa điều kiện logic bằng toán tử bitwise"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 831,
+      "title": "Đếm số chỗ ở phân khúc cạnh tranh mục tiêu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1050,
+      "title": "Bài tập 5: Truy xuất top chỗ ở giá thấp nhất bằng nsmallest và gắn cờ bất thường"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1052,
+      "title": "Tìm n chỗ ở có mức giá thấp nhất quận"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1264,
+      "title": "Bài tập 6: Cập nhật giá trị bằng .loc và đồng bộ hóa cột phụ thuộc"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1266,
+      "title": "Mô phỏng chính sách giảm giá và tính lại báo giá 3 đêm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1499,
+      "title": "Bài tập 7: So sánh ngưỡng thống kê và phân tích độ lệch mẫu số do dữ liệu khuyết (NaN)"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1501,
+      "title": "Phân tích tác động của NaN lên tỷ lệ giá dưới ngưỡng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1731,
+      "title": "Bài tập 8: Phân tích cơ cấu loại phòng và tỷ lệ khuyết dữ liệu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1733,
+      "title": "Tổng hợp phân bố loại hình và tỷ lệ dữ liệu thiếu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1955,
+      "title": "Bài tập 9: Đóng gói hồ sơ quận xuất file CSV và kiểm chứng tính bất biến"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1957,
+      "title": "Xuất bản báo cáo hồ sơ quận ra tệp CSV và kiểm tra tính toàn vẹn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2210,
+      "title": "Bài tập 10 (mở rộng 1): Tự động hóa lập hồ sơ quận qua tham số cấu hình"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2212,
+      "title": "Thiết kế pipeline lập hồ sơ tái sử dụng cho quận bất kỳ"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2447,
+      "title": "Bài tập 11 (mở rộng 2): Tìm quận quy mô lớn có giá trung vị thấp nhất bằng groupby"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2449,
+      "title": "Khảo sát nhóm thị trường quy mô lớn bằng groupby"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2666,
+      "title": "Bài tập 12 (mở rộng 3): Phân tích bản chất bộ nhớ và khắc phục bẫy gán chuỗi (ChainedAssignmentError)"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2668,
+      "title": "Phân tích cơ chế gán chuỗi hai lần ngoặc vuông"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 64,
+      "title": "Bài tập 1: Phân biệt truy xuất theo nhãn với loc và theo vị trí với iloc"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 66,
+      "title": "Phân biệt loc và iloc trên Series"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 178,
+      "title": "Bài tập 2: Cơ chế căn chỉnh tự động theo index khi tính toán số học"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 180,
+      "title": "Phép toán số học tự khớp theo nhãn chỉ mục"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 313,
+      "title": "Bài tập 3: Phân loại dải giá bằng map với hàm tự định nghĩa"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 315,
+      "title": "Phân chia phân khúc giá phòng bằng map"
     }
   ],
   "solutions": [
@@ -103,18 +239,78 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 13,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 113,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 47,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 387,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md",
-      "line": 105,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 612,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 842,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1060,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1278,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1513,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1741,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 1971,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2219,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2456,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
+      "line": 2682,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 76,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 190,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md",
+      "line": 326,
       "title": ""
     }
   ],

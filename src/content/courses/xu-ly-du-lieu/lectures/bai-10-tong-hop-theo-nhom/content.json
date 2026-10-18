@@ -11,7 +11,7 @@
     "gia-tri-thieu"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md"
   ],
   "examples": [
     {
@@ -42,14 +42,64 @@
       "title": "Bài tập 1: Tính giá trung bình chung từ thống kê nhóm"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
-      "line": 5,
-      "title": "Từ từng hàng đến bảng so sánh nhóm"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 86,
+      "title": "Bài tập 4: Thống kê đặc trưng các phân khúc giá bằng agg đặt tên"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
-      "line": 64,
-      "title": "Kiểm tra lại một kết quả từ groupby"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 88,
+      "title": "Thống kê ba phân khúc giá"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 317,
+      "title": "Bài tập 5: Phân nhóm theo số niêm yết và so sánh giá cùng lượt đánh giá"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 319,
+      "title": "Phân loại host và so sánh nhóm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 570,
+      "title": "Bài tập 6: Gắn quy mô quận vào từng dòng bằng transform và lọc quận lớn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 572,
+      "title": "Gắn quy mô quận và lọc bảng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 809,
+      "title": "Bài tập 7: Bảng chéo tương tác phân khúc giá và kiểu host bằng pivot table"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 811,
+      "title": "Bảng chéo hai chiều pivot table"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1043,
+      "title": "Bài tập 8: Tìm phòng có giá niêm yết cao nhất trong từng quận bằng transform"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1045,
+      "title": "Tìm phòng đắt nhất theo quận"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1271,
+      "title": "Bài tập 9: Phân tích cơ cấu phân khúc giá theo từng quận lớn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1273,
+      "title": "Cơ cấu phân khúc giá theo quận"
     }
   ],
   "solutions": [
@@ -59,13 +109,33 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
-      "line": 16,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 99,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-10.md",
-      "line": 68,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 334,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 582,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 823,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1055,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-groupby.md",
+      "line": 1282,
       "title": ""
     }
   ],

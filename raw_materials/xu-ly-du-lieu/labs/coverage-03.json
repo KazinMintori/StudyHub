@@ -1,0 +1,620 @@
+{
+  "lab": "lab-03",
+  "title": "NumPy và tư duy vector hoá",
+  "total_exercises": 8,
+  "exercise_ids": [
+    "data-lab-03-01",
+    "data-lab-03-02",
+    "data-lab-03-03",
+    "data-lab-03-04",
+    "data-lab-03-05",
+    "data-lab-03-06",
+    "data-lab-03-07",
+    "data-lab-03-08"
+  ],
+  "source_files": [
+    "course/2627-1/notebooks/lab-03.ipynb",
+    "template/lab-03.ipynb"
+  ],
+  "cells": {
+    "course/2627-1/notebooks/lab-03.ipynb": [
+      {
+        "cell_index": 0,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Chuyển thành phần tiêu đề, mục tiêu sư phạm và bối cảnh dữ liệu đầu tài liệu."
+      },
+      {
+        "cell_index": 1,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Quản lý học phần, chính sách AI và quy định nộp bài."
+      },
+      {
+        "cell_index": 2,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Chuyển thành mục bối cảnh dữ liệu chung của lab."
+      },
+      {
+        "cell_index": 3,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Đưa vào khối mã khởi tạo môi trường và dữ liệu dùng chung."
+      },
+      {
+        "cell_index": 4,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-01",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-01: Đọc cấu trúc mảng, strides và byte offset."
+      },
+      {
+        "cell_index": 5,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-01",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần câu hỏi dự đoán và giải thích bản chất trong lời giải bài 1."
+      },
+      {
+        "cell_index": 6,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-01",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-01."
+      },
+      {
+        "cell_index": 7,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-01",
+        "status": "mapped",
+        "reason": "Chuyển thành bộ kiểm định giá trị và trường hợp biên trong verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 8,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-02",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-02: Lát cắt và tính chất view chia sẻ bộ nhớ."
+      },
+      {
+        "cell_index": 9,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-02",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần dự đoán và phân tích kiến trúc bộ nhớ trong lời giải bài 2."
+      },
+      {
+        "cell_index": 10,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-02",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-02."
+      },
+      {
+        "cell_index": 11,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-02",
+        "status": "mapped",
+        "reason": "Chuyển thành bộ kiểm định giá trị và thuộc tính chia sẻ bộ nhớ trong verify script."
+      },
+      {
+        "cell_index": 12,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài phần 1 của data-lab-03-03: Thực nghiệm đột biến trên View và Copy."
+      },
+      {
+        "cell_index": 13,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần giải thích nguyên lý đột biến dữ liệu trong lời giải bài 3."
+      },
+      {
+        "cell_index": 14,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Chuyển thành mã thực nghiệm đối chiếu trong lời giải bài 3."
+      },
+      {
+        "cell_index": 15,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Biên soạn thành yêu cầu phần 2 của đề bài data-lab-03-03: Tạo bản sao an toàn D."
+      },
+      {
+        "cell_index": 16,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-03."
+      },
+      {
+        "cell_index": 17,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "mapped",
+        "reason": "Chuyển thành kiểm định độc lập bộ nhớ trong verify script."
+      },
+      {
+        "cell_index": 18,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-04",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-04: Chọn phần tử qua Mask, Fancy Indexing và np.ix_."
+      },
+      {
+        "cell_index": 19,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-04",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-04."
+      },
+      {
+        "cell_index": 20,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-04",
+        "status": "mapped",
+        "reason": "Chuyển thành kiểm định shape và giá trị trong verify script."
+      },
+      {
+        "cell_index": 21,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-04",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần phân tích chuyên sâu nguyên lý phát sóng chỉ mục trong lời giải bài 4."
+      },
+      {
+        "cell_index": 22,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-05",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-05: Cơ chế Broadcasting cộng vector theo hàng và cột."
+      },
+      {
+        "cell_index": 23,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-05",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-05."
+      },
+      {
+        "cell_index": 24,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-05",
+        "status": "mapped",
+        "reason": "Chuyển thành kiểm định ma trận K và tính bất biến của A trong verify script."
+      },
+      {
+        "cell_index": 25,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-05",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần phân tích quy tắc căn lề chiều sau cùng trong lời giải bài 5."
+      },
+      {
+        "cell_index": 26,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-06",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-06: Sửa phép tính theo hàng và lỗi trục axis."
+      },
+      {
+        "cell_index": 27,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "mapped",
+        "reason": "Đưa vào phần mô tả lỗi sai thực tế trong đề bài data-lab-03-06."
+      },
+      {
+        "cell_index": 28,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-06."
+      },
+      {
+        "cell_index": 29,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "mapped",
+        "reason": "Chuyển thành kiểm định shape (3, 1) và mean hàng bằng 0 trong verify script."
+      },
+      {
+        "cell_index": 30,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-06",
+        "status": "mapped",
+        "reason": "Tích hợp vào phần giải thích bản chất hình học của broadcasting trong lời giải bài 6."
+      },
+      {
+        "cell_index": 31,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-07",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-07: Đo thời gian thực thi giữa lặp Python và vector hóa."
+      },
+      {
+        "cell_index": 32,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-07",
+        "status": "mapped",
+        "reason": "Chuyển thành mã thực nghiệm đo thời gian trong lời giải Cách 1 của data-lab-03-07."
+      },
+      {
+        "cell_index": 33,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-07",
+        "status": "mapped",
+        "reason": "Tích hợp thành 3 mục trả lời sư phạm chuyên sâu về hiệu năng trong lời giải bài 7."
+      },
+      {
+        "cell_index": 34,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-08",
+        "status": "mapped",
+        "reason": "Biên soạn thành đề bài data-lab-03-08: Thống kê mô tả giá chỗ ở và lấy mẫu ngẫu nhiên."
+      },
+      {
+        "cell_index": 35,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-08",
+        "status": "mapped",
+        "reason": "Chuyển thành mã nguồn lời giải Cách 1 của data-lab-03-08."
+      },
+      {
+        "cell_index": 36,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-08",
+        "status": "mapped",
+        "reason": "Chuyển thành kiểm định thống kê và mẫu ngẫu nhiên trong verify script."
+      },
+      {
+        "cell_index": 37,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-08",
+        "status": "mapped",
+        "reason": "Tích hợp thành 4 câu trả lời sư phạm chi tiết về thống kê và ngoại lai trong lời giải bài 8."
+      },
+      {
+        "cell_index": 38,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Chính sách khai báo AI của trường học."
+      },
+      {
+        "cell_index": 39,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "summary",
+        "reason": "Chuyển thành bảng tóm tắt kiến thức cốt lõi ở cuối tài liệu."
+      }
+    ],
+    "template/lab-03.ipynb": [
+      {
+        "cell_index": 0,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "merged",
+        "reason": "Gộp cùng Cell 0 của course vào phần tiêu đề và mục tiêu sư phạm."
+      },
+      {
+        "cell_index": 1,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Khung điểm và rubric chấm điểm 100 điểm."
+      },
+      {
+        "cell_index": 2,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Hệ thống public checks và helper chấm điểm."
+      },
+      {
+        "cell_index": 3,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "merged",
+        "reason": "Gộp cùng Cell 2 của course vào phần bối cảnh dữ liệu chung."
+      },
+      {
+        "cell_index": 4,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "merged",
+        "reason": "Gộp cùng Cell 3 của course vào khối khởi tạo dữ liệu chung."
+      },
+      {
+        "cell_index": 5,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-01",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm array_layout) cho data-lab-03-01."
+      },
+      {
+        "cell_index": 6,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-01",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 5 của course vào lời giải bài 1."
+      },
+      {
+        "cell_index": 7,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-01",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm array_layout) của data-lab-03-01."
+      },
+      {
+        "cell_index": 8,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-01",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 9,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-02",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm slice_view) cho data-lab-03-02."
+      },
+      {
+        "cell_index": 10,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-02",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 9 của course vào lời giải bài 2."
+      },
+      {
+        "cell_index": 11,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-02",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm slice_view) của data-lab-03-02."
+      },
+      {
+        "cell_index": 12,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-02",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 13,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm copy_columns) cho data-lab-03-03."
+      },
+      {
+        "cell_index": 14,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 13 của course vào lời giải bài 3."
+      },
+      {
+        "cell_index": 15,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 14 của course vào thực nghiệm đối chiếu bài 3."
+      },
+      {
+        "cell_index": 16,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 15 của course vào đề bài data-lab-03-03."
+      },
+      {
+        "cell_index": 17,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm copy_columns) của data-lab-03-03."
+      },
+      {
+        "cell_index": 18,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-03",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 19,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-04",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm select_elements) cho data-lab-03-04."
+      },
+      {
+        "cell_index": 20,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-04",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm select_elements) của data-lab-03-04."
+      },
+      {
+        "cell_index": 21,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-04",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 22,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-04",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 21 của course vào lời giải bài 4."
+      },
+      {
+        "cell_index": 23,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-05",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm broadcast_add) cho data-lab-03-05."
+      },
+      {
+        "cell_index": 24,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-05",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 23 của course vào đề bài bài 5."
+      },
+      {
+        "cell_index": 25,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-05",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm broadcast_add) của data-lab-03-05."
+      },
+      {
+        "cell_index": 26,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-05",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 27,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-05",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 25 của course vào lời giải bài 5."
+      },
+      {
+        "cell_index": 28,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-06",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm center_rows) cho data-lab-03-06."
+      },
+      {
+        "cell_index": 29,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 27 của course vào đề bài bài 6."
+      },
+      {
+        "cell_index": 30,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm center_rows) của data-lab-03-06."
+      },
+      {
+        "cell_index": 31,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-06",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 32,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-06",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 30 của course vào lời giải bài 6."
+      },
+      {
+        "cell_index": 33,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-07",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 31 của course vào đề bài bài 7."
+      },
+      {
+        "cell_index": 34,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-07",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 32 của course vào lời giải bài 7."
+      },
+      {
+        "cell_index": 35,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-07",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 33 của course vào lời giải bài 7."
+      },
+      {
+        "cell_index": 36,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-08",
+        "status": "merged",
+        "reason": "Gộp vào đề bài và làm cơ sở thiết kế Cách 2 (hàm price_statistics) cho data-lab-03-08."
+      },
+      {
+        "cell_index": 37,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-08",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 35 của course vào đề bài bài 8."
+      },
+      {
+        "cell_index": 38,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-08",
+        "status": "merged",
+        "reason": "Chuyển thành lời giải Cách 2 (đóng gói hàm price_statistics) của data-lab-03-08."
+      },
+      {
+        "cell_index": 39,
+        "cell_type": "code",
+        "exercise_id": "data-lab-03-08",
+        "status": "merged",
+        "reason": "Tích hợp vào bộ kiểm thử của verify-data-lab-03.py."
+      },
+      {
+        "cell_index": 40,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-03-08",
+        "status": "merged",
+        "reason": "Gộp cùng Cell 37 của course vào lời giải bài 8."
+      },
+      {
+        "cell_index": 41,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Chính sách khai báo AI của trường học."
+      },
+      {
+        "cell_index": 42,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "merged",
+        "reason": "Gộp cùng Cell 39 của course vào bảng tóm tắt kiến thức cuối tài liệu."
+      },
+      {
+        "cell_index": 43,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Hướng dẫn nộp bài và tạo tag git."
+      },
+      {
+        "cell_index": 44,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ theo quy chuẩn: Lệnh hiển thị bảng tóm tắt public checks."
+      }
+    ]
+  }
+}

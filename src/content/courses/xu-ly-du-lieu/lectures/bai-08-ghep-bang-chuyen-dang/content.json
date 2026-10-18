@@ -11,7 +11,7 @@
     "chi-muc"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-05-merge.md"
   ],
   "examples": [],
   "exercises": [
@@ -21,9 +21,14 @@
       "title": "Bài tập 1: Ghép trái khi khóa lặp ở cả hai bảng"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md",
-      "line": 3,
-      "title": "Giữ số dòng và giải thích những giá trị không ghép được"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-merge.md",
+      "line": 96,
+      "title": "Bài tập 10: Ghép bảng tra cứu biểu phí dịch vụ và kiểm định quan hệ với validate='m:1'"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-merge.md",
+      "line": 98,
+      "title": "Ghép bảng tra cứu và kiểm định quan hệ nhiều - một"
     }
   ],
   "solutions": [
@@ -33,8 +38,8 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-8.md",
-      "line": 7,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-05-merge.md",
+      "line": 116,
       "title": ""
     }
   ],

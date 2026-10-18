@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "bai-01-tong-quan-cong-cu-chinh-sach-ai",
+    "files": [
+      "lab-01.md"
+    ]
+  },
+  {
+    "slug": "bai-03-cau-truc-du-lieu-ham-tep",
+    "files": [
+      "lab-02.md"
+    ]
+  },
+  {
+    "slug": "bai-03-numpy",
+    "files": [
+      "lab-03.md"
+    ]
+  },
+  {
+    "slug": "bai-04-lam-quen-pandas",
+    "files": [
+      "lab-04.md",
+      "lab-05-pandas.md"
+    ]
+  },
+  {
+    "slug": "bai-06-ket-noi-truy-xuat-du-lieu",
+    "files": [
+      "lab-06.md"
+    ]
+  },
+  {
+    "slug": "bai-10-lam-sach-du-lieu",
+    "files": [
+      "lab-07.md",
+      "lab-07-regex.md",
+      "lab-10.md",
+      "lab-11.md"
+    ]
+  },
+  {
+    "slug": "bai-08-ghep-bang-chuyen-dang",
+    "files": [
+      "lab-05-merge.md"
+    ]
+  },
+  {
+    "slug": "bai-12-truc-quan-hoa-co-ban",
+    "files": [
+      "lab-12.md",
+      "lab-13.md"
+    ]
+  },
+  {
+    "slug": "bai-10-tong-hop-theo-nhom",
+    "files": [
+      "lab-05-groupby.md"
+    ]
+  },
+  {
+    "slug": "bai-08-du-lieu-thoi-gian",
+    "files": [
+      "lab-08.md"
+    ]
+  },
+  {
+    "slug": "bai-14-ke-chuyen-bang-du-lieu",
+    "files": [
+      "lab-14.md"
+    ]
+  }
+]

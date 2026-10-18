@@ -1,6 +1,7 @@
 import { staticMathPlugin } from '../static-math-plugin.mjs'
 import { termLinks } from '../../docs/.vitepress/term-links.mjs'
 import { physicsImageLabels } from '../../docs/.vitepress/physics-image-labels.mjs'
+import { responsiveTablesPlugin } from './responsive-tables.mjs'
 
 const HTML_TOKEN_RE = /<!--[\s\S]*?(?:-->|$)|<script\b(?:[^>"']|"[^"]*"|'[^']*')*(?:\/>|>[\s\S]*?(?:<\/script\s*>|$))|<style\b(?:[^>"']|"[^"]*"|'[^']*')*(?:\/>|>[\s\S]*?(?:<\/style\s*>|$))|(<img\b)((?:[^>"']|"[^"]*"|'[^']*')*?)(\s*\/?>)/gi
 
@@ -82,6 +83,7 @@ function renderFigureCaption(md, image, env) {
 }
 
 export function configureStudyMarkdown(md, { base }) {
+      md.use(responsiveTablesPlugin)
       md.use(staticMathPlugin)
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = state.src

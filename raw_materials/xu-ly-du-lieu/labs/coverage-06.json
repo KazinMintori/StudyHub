@@ -1,0 +1,610 @@
+{
+  "lab": "lab-06",
+  "title": "Dữ liệu ngoài: Đọc tệp lớn có chọn lọc, API lịch sử, lưu trữ Parquet và truy vấn DuckDB",
+  "total_exercises": 12,
+  "exercise_ids": [
+    "data-lab-06-01",
+    "data-lab-06-02",
+    "data-lab-06-03",
+    "data-lab-06-04",
+    "data-lab-06-05",
+    "data-lab-06-06",
+    "data-lab-06-07",
+    "data-lab-06-08",
+    "data-lab-06-09",
+    "data-lab-06-10",
+    "data-lab-06-11",
+    "data-lab-06-12"
+  ],
+  "source_files": [
+    "course/2627-1/notebooks/lab-06.ipynb",
+    "template/lab-06.ipynb"
+  ],
+  "cells": {
+    "template/lab-06.ipynb": [
+      {
+        "cell_index": 0,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Tiêu đề và bối cảnh dữ liệu đầu tài liệu."
+      },
+      {
+        "cell_index": 1,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Quản lý học phần, chính sách AI và quy định nộp bài."
+      },
+      {
+        "cell_index": 2,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Khung chấm điểm public_check và preview."
+      },
+      {
+        "cell_index": 3,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Mục tiêu bài lab và bối cảnh snapshot Inside Airbnb Santiago."
+      },
+      {
+        "cell_index": 4,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Khởi tạo thư viện duckdb và pyarrow."
+      },
+      {
+        "cell_index": 5,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Khởi tạo các bộ fixture mẫu: DEMO_REVIEWS, DEMO_LISTINGS_FULL, DEMO_WEATHER."
+      },
+      {
+        "cell_index": 6,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 1: Đọc có chọn lọc với usecols và parse_dates."
+      },
+      {
+        "cell_index": 7,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Hàm read_selected đọc file có chọn lọc cột và parse ngày."
+      },
+      {
+        "cell_index": 8,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử và trường hợp biên của read_selected."
+      },
+      {
+        "cell_index": 9,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Thực hành đo bộ nhớ và thời gian đọc cả bảng 90 cột so với 5 cột."
+      },
+      {
+        "cell_index": 10,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-02",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 2: Làm sạch cột giá tiền dạng chuỗi."
+      },
+      {
+        "cell_index": 11,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-02",
+        "status": "mapped",
+        "reason": "Hàm clean_price loại bỏ ký hiệu tiền tệ và dấu phẩy phân cách."
+      },
+      {
+        "cell_index": 12,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-02",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử và trường hợp biên của clean_price."
+      },
+      {
+        "cell_index": 13,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-02",
+        "status": "mapped",
+        "reason": "Thực hành gán cột price_num và tính trung vị giá."
+      },
+      {
+        "cell_index": 14,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 3: So sánh định dạng CSV và Parquet về kích thước và kiểu dữ liệu."
+      },
+      {
+        "cell_index": 15,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Hàm save_formats xuất file CSV và Parquet, đọc lại kiểm tra kiểu."
+      },
+      {
+        "cell_index": 16,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử của save_formats và kiểm tra bảo toàn kiểu ngày."
+      },
+      {
+        "cell_index": 17,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Thực hành save_formats trên DataFrame dữ liệu mẫu."
+      },
+      {
+        "cell_index": 18,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Nhận xét so sánh kích thước tệp và cơ chế bảo toàn kiểu dữ liệu."
+      },
+      {
+        "cell_index": 19,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 4: API lịch sử thời tiết và lưu trữ phản hồi thô."
+      },
+      {
+        "cell_index": 20,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Hàm weather_table lưu response thô JSON và chuyển daily thành bảng."
+      },
+      {
+        "cell_index": 21,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử của weather_table và kiểm tra trung bình nhiệt độ."
+      },
+      {
+        "cell_index": 22,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Thực hành gọi API thời tiết lịch sử Open-Meteo và lưu trữ JSON."
+      },
+      {
+        "cell_index": 23,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-05",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 5: Thống kê số lượng đánh giá theo ngày."
+      },
+      {
+        "cell_index": 24,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-05",
+        "status": "mapped",
+        "reason": "Hàm reviews_per_day lọc theo khoảng thời gian và gom nhóm ngày."
+      },
+      {
+        "cell_index": 25,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-05",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử reviews_per_day và xử lý ngày không có đánh giá."
+      },
+      {
+        "cell_index": 26,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 6: Ghép thời tiết với số review và đo tương quan tuyến tính."
+      },
+      {
+        "cell_index": 27,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Hàm join_weather ghép bảng theo ngày bằng LEFT JOIN và tính corr."
+      },
+      {
+        "cell_index": 28,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử join_weather và kiểm tra giá trị khuyết thiếu."
+      },
+      {
+        "cell_index": 29,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Thực hành nối chuỗi pipeline từ Bài 5 và Bài 6."
+      },
+      {
+        "cell_index": 30,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Phân tích diễn giải ý nghĩa của hệ số tương quan yếu."
+      },
+      {
+        "cell_index": 31,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-07",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 7: DuckDB truy vấn trực tiếp trên tệp CSV."
+      },
+      {
+        "cell_index": 32,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-07",
+        "status": "mapped",
+        "reason": "Hàm sql_reviews_by_year gom nhóm theo năm và đếm đánh giá."
+      },
+      {
+        "cell_index": 33,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-07",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử sql_reviews_by_year và đối chiếu kết quả."
+      },
+      {
+        "cell_index": 34,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Biên soạn Bài 9: Ghép nối bảng DuckDB bằng JOIN theo loại phòng."
+      },
+      {
+        "cell_index": 35,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Hàm sql_reviews_by_room_type ghép reviews và listings bằng SQL."
+      },
+      {
+        "cell_index": 36,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Đặc tả kiểm thử sql_reviews_by_room_type và loại trừ bản ghi không khớp."
+      },
+      {
+        "cell_index": 37,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Thực hành truy vấn SQL và phân tích tổng số đánh giá sau khi JOIN."
+      },
+      {
+        "cell_index": 38,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Diễn giải tỷ trọng đánh giá nhà nguyên căn so với tổng số chỗ ở."
+      },
+      {
+        "cell_index": 39,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-11",
+        "status": "mapped",
+        "reason": "Biên soạn Bài mở rộng 11 và 12: Giới thiệu bài tự làm mở."
+      },
+      {
+        "cell_index": 40,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-11",
+        "status": "mapped",
+        "reason": "Mã nguồn bài tập tự làm mở rộng (so sánh tháng 7 và top listing)."
+      },
+      {
+        "cell_index": 41,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-11",
+        "status": "mapped",
+        "reason": "Kết quả thực hiện bài tự làm mở rộng."
+      },
+      {
+        "cell_index": 42,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Khai báo sử dụng công cụ AI theo quy định học phần."
+      },
+      {
+        "cell_index": 43,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Tóm tắt các kiến thức kỹ thuật cốt lõi trong lab."
+      },
+      {
+        "cell_index": 44,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Thông tin sinh viên, mã số và quy trình nộp bài git tag."
+      },
+      {
+        "cell_index": 45,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Hàm show_public_summary hiển thị tổng kết chấm."
+      }
+    ],
+    "course/2627-1/notebooks/lab-06.ipynb": [
+      {
+        "cell_index": 0,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Tiêu đề và giới thiệu bài học."
+      },
+      {
+        "cell_index": 1,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Hướng dẫn học tập và quy định làm việc."
+      },
+      {
+        "cell_index": 2,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Mục tiêu bài lab."
+      },
+      {
+        "cell_index": 3,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "excluded",
+        "reason": "Loại bỏ: Lệnh cài đặt gói pip trên môi trường Colab."
+      },
+      {
+        "cell_index": 4,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Phần 0 khởi động: Khai báo kiểu và xử lý giá trị khuyết thiếu."
+      },
+      {
+        "cell_index": 5,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Khởi động W1: Đọc tệp với dtype chuỗi giữ số 0 và na_values."
+      },
+      {
+        "cell_index": 6,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Khởi động W2: Đọc file reviews lớn với parse_dates và mã dạng chuỗi."
+      },
+      {
+        "cell_index": 7,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Phần 1: Giới thiệu bảng đầy đủ 90 cột listings_full.csv.gz."
+      },
+      {
+        "cell_index": 8,
+        "cell_type": "code",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Tải dữ liệu snapshot Inside Airbnb về thư mục data/raw."
+      },
+      {
+        "cell_index": 9,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Bước 1: Đọc cả bảng 90 cột và chỉ đọc 5 cột cần thiết."
+      },
+      {
+        "cell_index": 10,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Mã đo dung lượng bộ nhớ (deep=True) và thời gian đọc tệp."
+      },
+      {
+        "cell_index": 11,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-01",
+        "status": "mapped",
+        "reason": "Phân tích nguyên nhân bộ nhớ giảm nhiều nhưng thời gian quét file giảm ít."
+      },
+      {
+        "cell_index": 12,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Bước 2: Lưu CSV và Parquet, đọc lại và so sánh kiểu dữ liệu."
+      },
+      {
+        "cell_index": 13,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Mã ghi file Parquet/CSV và đối chiếu kiểm tra kiểu sau khi đọc lại."
+      },
+      {
+        "cell_index": 14,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-03",
+        "status": "mapped",
+        "reason": "Nhận xét về hạn chế mất kiểu của CSV so với Parquet."
+      },
+      {
+        "cell_index": 15,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Phần 2: API lịch sử và số lượng đánh giá theo ngày."
+      },
+      {
+        "cell_index": 16,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Bước 3: Thiết lập tham số tọa độ, khoảng thời gian và múi giờ Open-Meteo."
+      },
+      {
+        "cell_index": 17,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Lưu trữ phản hồi thô kèm metadata URL và thời điểm tải về."
+      },
+      {
+        "cell_index": 18,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Bước 4: Tạo bảng theo ngày và kiểm tra đơn vị đo lường."
+      },
+      {
+        "cell_index": 19,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-04",
+        "status": "mapped",
+        "reason": "Kiểm tra đơn vị °C của cột nhiệt độ và tính nhiệt độ trung bình."
+      },
+      {
+        "cell_index": 20,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-05",
+        "status": "mapped",
+        "reason": "Bước 5: Thống kê số lượng đánh giá theo ngày."
+      },
+      {
+        "cell_index": 21,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-05",
+        "status": "mapped",
+        "reason": "Lọc tháng 1/2025, nhóm bằng dt.strftime và đếm số lượng đánh giá."
+      },
+      {
+        "cell_index": 22,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Bước 6: Ghép nối hai nguồn dữ liệu và đo tương quan tuyến tính."
+      },
+      {
+        "cell_index": 23,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Thực hiện LEFT JOIN giữa thời tiết và đánh giá, tính corr()."
+      },
+      {
+        "cell_index": 24,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-06",
+        "status": "mapped",
+        "reason": "Nhận xét về ý nghĩa thực tế của hệ số tương quan yếu."
+      },
+      {
+        "cell_index": 25,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-07",
+        "status": "mapped",
+        "reason": "Phần 3: Truy vấn SQL với DuckDB."
+      },
+      {
+        "cell_index": 26,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-07",
+        "status": "mapped",
+        "reason": "Bước 7: Đếm đánh giá theo năm và đối chiếu kết quả với lab 2."
+      },
+      {
+        "cell_index": 27,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-08",
+        "status": "mapped",
+        "reason": "Bước 8: Phân biệt COUNT(*) và COUNT(cột) trên tệp Parquet."
+      },
+      {
+        "cell_index": 28,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-08",
+        "status": "mapped",
+        "reason": "Truy vấn đếm tổng số chỗ ở và số chỗ ở đã từng có đánh giá."
+      },
+      {
+        "cell_index": 29,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Bước 9: Ghép đánh giá với loại chỗ ở bằng LEFT JOIN trong DuckDB."
+      },
+      {
+        "cell_index": 30,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Thực hiện SQL LEFT JOIN giữa rv và tệp Parquet listings."
+      },
+      {
+        "cell_index": 31,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-09",
+        "status": "mapped",
+        "reason": "Phân tích tỷ trọng 91% đánh giá của chỗ ở nguyên căn."
+      },
+      {
+        "cell_index": 32,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-10",
+        "status": "mapped",
+        "reason": "Bước 10: Lọc nhóm bằng mệnh đề HAVING trong SQL."
+      },
+      {
+        "cell_index": 33,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-10",
+        "status": "mapped",
+        "reason": "Truy vấn HAVING count(*) >= 100 và kiểm chứng chéo bằng pandas."
+      },
+      {
+        "cell_index": 34,
+        "cell_type": "markdown",
+        "exercise_id": "data-lab-06-11",
+        "status": "mapped",
+        "reason": "Phần 4: Giới thiệu hai bài tự làm mở rộng (so sánh tháng 7 và top chỗ ở)."
+      },
+      {
+        "cell_index": 35,
+        "cell_type": "code",
+        "exercise_id": "data-lab-06-12",
+        "status": "mapped",
+        "reason": "Triển khai hai bài toán mở rộng: Phân tích tháng 7 và top 5 listing nhiều review nhất."
+      },
+      {
+        "cell_index": 36,
+        "cell_type": "markdown",
+        "exercise_id": null,
+        "status": "preamble",
+        "reason": "Tóm tắt các kiến thức kỹ thuật cốt lõi trong lab."
+      }
+    ]
+  }
+}

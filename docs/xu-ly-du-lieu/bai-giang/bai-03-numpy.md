@@ -564,49 +564,6 @@ V = A[::2, 1:]
    - Do đó, $V[1, 0]$ ánh xạ trực tiếp tới phần tử $A[2, 1]$. Khi gán `V[1, 0] = 999`, giá trị $33$ của $A[2, 1]$ sẽ bị ghi đè thành $999$.
 :::
 
-<span id="iai-03-bai-5"></span>
-
-::: exercise Bài tập 5: Cộng theo hàng và cột bằng quy tắc phát sóng (Broadcasting)
-Cho mảng hai chiều $A$ có kích thước 4 hàng, 3 cột:
-$$
-A = \begin{bmatrix}
-10 & 12 & 11 \\
-20 & 21 & 24 \\
-30 & 33 & 31 \\
-40 & 44 & 42
-\end{bmatrix}
-$$
-Cần tạo mảng $B$ qua hai bước:
-- Từ $A$, cộng lần lượt $1, 2, 3$ vào các cột $0, 1, 2$.
-- Trên kết quả vừa tính, cộng lần lượt $10, 20, 30, 40$ vào các hàng $0, 1, 2, 3$.
-1. Viết mã lệnh NumPy thực hiện hai bước trên mà không sử dụng vòng lặp `for`. Nêu rõ kích thước `shape` của các mảng tham gia phép toán.
-2. Với hàng đầu tiên $A[0] = [10, 12, 11]$, hãy tính toán giá trị hàng đầu tiên $B[0]$ của kết quả.
-:::
-
-::: solution Lời giải
-1. Mã lệnh NumPy sử dụng Broadcasting:
-```python
-b = np.array([1, 2, 3])            # shape = (3,)
-d = np.array([10, 20, 30, 40])     # shape = (4,)
-
-# Biến đổi d thành mảng cột hai chiều (4, 1)
-B = A + b + d[:, None]
-```
-   Quy tắc phát sóng căn chỉnh kích thước:
-   - Phép cộng `A + b`: Mảng $A$ có shape $(4, 3)$, mảng $b$ có shape $(3,)$. Mảng $b$ được kéo dài dọc theo 4 hàng để trở thành $(4, 3)$.
-   - Phép cộng với `d[:, None]`: Mảng `d[:, None]` có shape $(4, 1)$. Mảng này được kéo dài ngang qua 3 cột để trở thành $(4, 3)$.
-   - Phép toán tổng hợp được thực thi đồng thời trên mảng kết quả kích thước $(4, 3)$.
-2. Tính toán giá trị hàng đầu tiên $B[0]$:
-   $$
-   \begin{aligned}
-   B[0, 0] &= 10 + 1 + 10 = 21, \\
-   B[0, 1] &= 12 + 2 + 10 = 24, \\
-   B[0, 2] &= 11 + 3 + 10 = 24.
-   \end{aligned}
-   $$
-   Hàng đầu tiên của $B$ là $[21, 24, 24]$.
-:::
-
 <span id="iai-03-bai-6"></span>
 
 ::: exercise Bài tập 6: Sửa lỗi phép trừ trung bình hàng do hiểu sai Broadcasting
@@ -640,7 +597,18 @@ chenh_lech = M - tb_chuan
    - Chênh lệch: $[10 - 11, 12 - 11, 11 - 11] = [-1, 1, 0]$. Phép tính hoàn toàn chính xác.
 :::
 
-<!--@include: ../../../raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-4.md-->
+
+
+
+
+<!-- data-labs:start -->
+<section class="data-lab-set" data-lab="lab-03">
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/labs/lab-03.md-->
+
+</section>
+
+<!-- data-labs:end -->
 
 ## Tài liệu tham khảo
 
@@ -650,5 +618,7 @@ chenh_lech = M - tb_chuan
 - Viện Trí tuệ Nhân tạo, Trường Đại học Công nghệ, ĐHQGHN. *Học liệu môn học Lập trình xử lý dữ liệu: Bài 3 - NumPy: Mảng và tư duy vector hoá*. Các bài tập thực hành 1–6 trong bài giảng được biên soạn và chuẩn hóa dựa trên học liệu mở của IAI UET theo giấy phép [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
 
 - IAI, [Lập trình xử lý dữ liệu, học liệu và notebook](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các đề thực hành đã được biên tập cách diễn đạt và bổ sung lời giải, giữ [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [Giấy phép học liệu](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+
+- IAI. [Notebook thực hành](https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template) và [học liệu thực hành 2627-1](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các yêu cầu kỹ thuật được đối chiếu, biên tập và bổ sung lời giải cùng dữ liệu minh họa. Phần thích nghi từ học liệu IAI áp dụng giấy phép [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 </div>

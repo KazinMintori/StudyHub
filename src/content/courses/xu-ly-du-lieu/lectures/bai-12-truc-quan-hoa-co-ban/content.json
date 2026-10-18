@@ -11,31 +11,12 @@
     "thong-ke-mo-ta"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-    "raw_materials/xu-ly-du-lieu/practice/visual-reading.md"
+    "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-13.md"
   ],
   "examples": [],
   "exercises": [
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 5,
-      "title": "Tạo hình có thể chạy lại"
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 76,
-      "title": "Đọc phân phối theo hai cách chia nhóm"
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 100,
-      "title": "Ghép ranh giới và giải thích giá trị thiếu"
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 134,
-      "title": "Sửa phạm vi thời gian và xem từng điểm"
-    },
     {
       "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
       "line": 11,
@@ -55,29 +36,154 @@
       "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
       "line": 75,
       "title": "Tính hộp, ngưỡng và râu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 115,
+      "title": "Bài tập 1: Lọc dữ liệu theo quận và tổng hợp chuỗi đánh giá theo tháng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 117,
+      "title": "Tổng hợp chuỗi đánh giá theo tháng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 318,
+      "title": "Bài tập 2: Kiểm soát mốc chụp dữ liệu và nhận diện kỳ chưa trọn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 320,
+      "title": "Lọc theo mốc chụp dữ liệu"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 538,
+      "title": "Bài tập 3: Dựng biểu đồ đường hoàn chỉnh cho chuỗi thời gian"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 540,
+      "title": "Dựng biểu đồ đường đạt chuẩn xuất bản"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 833,
+      "title": "Bài tập 4: Thống kê số lượng chỗ ở và tỷ lệ loại phòng nguyên căn theo quận"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 835,
+      "title": "Lập bảng tỷ lệ phân loại phòng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1017,
+      "title": "Bài tập 5: Dựng biểu đồ thanh ngang có nhãn tỷ lệ phần trăm và gốc tọa độ chuẩn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1019,
+      "title": "Dựng biểu đồ thanh ngang chuẩn mực"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1255,
+      "title": "Bài tập 6: Dựng biểu đồ tần suất số ngày mở lịch và trích xuất hai nhóm hành vi"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1257,
+      "title": "Dựng histogram và nhận diện phân phối hai đỉnh"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1493,
+      "title": "Bài tập 7: Phân tích phân phối hai đỉnh và rủi ro khi chỉ dựa vào số bình quân"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1495,
+      "title": "Phân tích bản chất phân phối hai đỉnh"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1701,
+      "title": "Bài tập 8: Nhận diện biểu đồ gây hiểu sai và đo lường hệ số phóng đại thị giác"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1703,
+      "title": "Đo lường sự sai lệch khi cắt ngắn trục tung"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1853,
+      "title": "Bài tập 9: Sửa biểu đồ cột thành biểu đồ trung thực có gốc tọa độ chuẩn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1855,
+      "title": "Vẽ lại biểu đồ trung thực"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2005,
+      "title": "Bài tập 10: Tự động hóa kiểm tra cấu trúc biểu đồ bằng hệ thống khẳng định"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2007,
+      "title": "Kiểm định chất lượng biểu đồ tự động"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2321,
+      "title": "Bài tập 11: So sánh phân phối giữa các nhóm trên biểu đồ ghép cùng thang đo"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2323,
+      "title": "Dựng biểu đồ ghép cùng thang đo"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 127,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 381,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 570,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 948,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1137,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1317,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1590,
+      "title": ""
     }
   ],
   "solutions": [
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 14,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 80,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 106,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-9.md",
-      "line": 139,
-      "title": ""
-    },
     {
       "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
       "line": 15,
@@ -96,6 +202,96 @@
     {
       "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
       "line": 79,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 128,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 330,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 552,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 848,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1032,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1269,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1506,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1726,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1868,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2019,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2335,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 147,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 402,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 593,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 966,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1156,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1337,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1613,
       "title": ""
     }
   ],
@@ -123,6 +319,114 @@
       "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
       "line": 71,
       "source": "docs/xu-ly-du-lieu/bai-giang/img/lec-13/boxplot.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/providencia-monthly-reviews.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 689,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/providencia-monthly-reviews.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/providencia-monthly-reviews.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 827,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/providencia-monthly-reviews.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/entire-home-share-barh.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1144,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/entire-home-share-barh.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/entire-home-share-barh.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1249,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/entire-home-share-barh.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/availability-365-hist.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1376,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/availability-365-hist.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/availability-365-hist.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1487,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/availability-365-hist.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/misleading-truncated-bar.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1787,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/misleading-truncated-bar.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/misleading-truncated-bar.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1847,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/misleading-truncated-bar.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/honest-zero-baseline-bar.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1934,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/honest-zero-baseline-bar.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/honest-zero-baseline-bar.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 1999,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/honest-zero-baseline-bar.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/comparative-groups-distribution.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2444,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/comparative-groups-distribution.svg"
+    },
+    {
+      "reference": "img/labs/lab-12/comparative-groups-distribution.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
+      "line": 2547,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-12/comparative-groups-distribution.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-01-boxplot-gia-chu-nha.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 268,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-01-boxplot-gia-chu-nha.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-02-ban-do-so-cho-o.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 774,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-02-ban-do-so-cho-o.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-03-cap-ban-do-gia-va-so-luong.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 776,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-03-cap-ban-do-gia-va-so-luong.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-04-hinh-loi-chon-ky-goc.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1235,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-04-hinh-loi-chon-ky-goc.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-05-ban-sua-trung-thuc-xu-huong.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1451,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-05-ban-sua-trung-thuc-xu-huong.svg"
+    },
+    {
+      "reference": "/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-06-mo-rong-khong-gian-da-chieu.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-13.md",
+      "line": 1769,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-13/hinh-13-06-mo-rong-khong-gian-da-chieu.svg"
     }
   ]
 }

@@ -344,10 +344,24 @@ Kết quả:
 - Giá trị trung bình trên 3 giao dịch hợp lệ đạt $\frac{350\,000}{3} \approx 116\,666{,}67$ đồng.
 :::
 
+
+
+
+<!-- data-labs:start -->
+<section class="data-lab-set" data-lab="lab-01">
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/labs/lab-01.md-->
+
+</section>
+
+<!-- data-labs:end -->
+
 ## Tài liệu tham khảo
 
 - Wes McKinney. *Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter*, tái bản lần 3. O'Reilly Media, 2022. Chương 1: Preliminaries.
 - Project Jupyter Documentation. *Jupyter and the Future of Interactive Computing*. https://docs.jupyter.org/
 - Python Software Foundation. *PEP 668 – Marking Python base environments as "externally managed"*. https://peps.python.org/pep-0668/
+
+- IAI. [Notebook thực hành](https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template) và [học liệu thực hành 2627-1](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các yêu cầu kỹ thuật được đối chiếu, biên tập và bổ sung lời giải cùng dữ liệu minh họa. Phần thích nghi từ học liệu IAI áp dụng giấy phép [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 </div>

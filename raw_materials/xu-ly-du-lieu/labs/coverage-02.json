@@ -1,0 +1,754 @@
+{
+  "lab": "02",
+  "title": "Xử lý dữ liệu bằng thư viện chuẩn Python",
+  "template_source": "template/lab-02.ipynb",
+  "course_source": "course/2627-1/notebooks/lab-02.ipynb",
+  "template_cells": [
+    {
+      "cell_index": 0,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề, mục tiêu môn học và rubric dự kiến 100 điểm",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Phần quản lý học phần và khung điểm theo quy ước loại bỏ"
+    },
+    {
+      "cell_index": 1,
+      "cell_type": "code",
+      "summary": "Hệ thống public checks tự động",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Hạ tầng chấm điểm tự động theo quy ước loại bỏ"
+    },
+    {
+      "cell_index": 2,
+      "cell_type": "markdown",
+      "summary": "Phần 0 Khởi động có hướng dẫn",
+      "status": "included",
+      "exercise_id": "data-lab-02-01",
+      "reason": "Khởi động định dạng số và tập hợp"
+    },
+    {
+      "cell_index": 3,
+      "cell_type": "code",
+      "summary": "Mã khởi động f-string, lọc None và set difference",
+      "status": "included",
+      "exercise_id": "data-lab-02-01",
+      "reason": "Chia thành các bài thực hành chuyên sâu Bài 1, 2, 3"
+    },
+    {
+      "cell_index": 4,
+      "cell_type": "markdown",
+      "summary": "Mô tả nguồn dữ liệu và 6 dòng giả lập",
+      "status": "included",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Cung cấp fixture dữ liệu mẫu 6 dòng và snapshot Santiago"
+    },
+    {
+      "cell_index": 5,
+      "cell_type": "code",
+      "summary": "Nạp dữ liệu DEMO_CSV bằng csv.DictReader",
+      "status": "included",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Thao tác đọc dữ liệu bảng bằng Python thuần"
+    },
+    {
+      "cell_index": 6,
+      "cell_type": "markdown",
+      "summary": "Phần 1: Xây các bước xử lý dữ liệu du lịch",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Bối cảnh nghiệp vụ của pipeline xử lý dữ liệu"
+    },
+    {
+      "cell_index": 7,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q1 đọc CSV bằng csv.DictReader",
+      "status": "included",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Đặc tả hàm read_listings và xử lý UTF-8"
+    },
+    {
+      "cell_index": 8,
+      "cell_type": "code",
+      "summary": "Khung hàm read_listings",
+      "status": "included",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Triển khai lời giải đọc tệp CSV"
+    },
+    {
+      "cell_index": 9,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q1 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Tích hợp vào bài kiểm định hàm read_listings"
+    },
+    {
+      "cell_index": 10,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q2 chuyển giá sang số bằng to_float",
+      "status": "included",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Đặc tả hàm to_float phòng thủ"
+    },
+    {
+      "cell_index": 11,
+      "cell_type": "code",
+      "summary": "Khung hàm to_float",
+      "status": "included",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Triển khai lời giải chuyển đổi kiểu an toàn"
+    },
+    {
+      "cell_index": 12,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q2 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Tích hợp kiểm thử số hợp lệ và 0.0"
+    },
+    {
+      "cell_index": 13,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q2 ví dụ 2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Tích hợp kiểm thử None và chuỗi rỗng"
+    },
+    {
+      "cell_index": 14,
+      "cell_type": "code",
+      "summary": "Hàm phụ trợ trung_vi được cung cấp",
+      "status": "included",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Cung cấp thuật toán tính trung vị chuẩn xác"
+    },
+    {
+      "cell_index": 15,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q3 tóm tắt phân phối giá summarize_prices",
+      "status": "included",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Đặc tả hàm summarize_prices"
+    },
+    {
+      "cell_index": 16,
+      "cell_type": "code",
+      "summary": "Khung hàm summarize_prices",
+      "status": "included",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Triển khai lời giải thống kê tóm tắt"
+    },
+    {
+      "cell_index": 17,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q3 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Tích hợp kiểm thử danh sách số và None"
+    },
+    {
+      "cell_index": 18,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q3 ví dụ 2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Tích hợp kiểm thử danh sách rỗng"
+    },
+    {
+      "cell_index": 19,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q4 tìm phòng đắt nhất most_expensive",
+      "status": "included",
+      "exercise_id": "data-lab-02-08",
+      "reason": "Đặc tả hàm most_expensive kèm điều kiện hòa điểm"
+    },
+    {
+      "cell_index": 20,
+      "cell_type": "code",
+      "summary": "Khung hàm most_expensive",
+      "status": "included",
+      "exercise_id": "data-lab-02-08",
+      "reason": "Triển khai lời giải tìm phần tử cực đại"
+    },
+    {
+      "cell_index": 21,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q4 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-08",
+      "reason": "Tích hợp kiểm thử max key"
+    },
+    {
+      "cell_index": 22,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q5 đếm phòng theo khu count_by_area",
+      "status": "included",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Đặc tả hàm count_by_area"
+    },
+    {
+      "cell_index": 23,
+      "cell_type": "code",
+      "summary": "Khung hàm count_by_area",
+      "status": "included",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Triển khai lời giải đếm theo nhóm"
+    },
+    {
+      "cell_index": 24,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q5 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Tích hợp kiểm thử đếm từ điển cộng dồn"
+    },
+    {
+      "cell_index": 25,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q6 giá trung vị theo khu median_by_area",
+      "status": "included",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Đặc tả hàm median_by_area"
+    },
+    {
+      "cell_index": 26,
+      "cell_type": "code",
+      "summary": "Khung hàm median_by_area",
+      "status": "included",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Triển khai lời giải tính trung vị từng khu"
+    },
+    {
+      "cell_index": 27,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q6 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Tích hợp kiểm thử trung vị nhóm"
+    },
+    {
+      "cell_index": 28,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q7 kiểm tra chéo review_qa",
+      "status": "included",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Đặc tả hàm kiểm định dữ liệu review_qa"
+    },
+    {
+      "cell_index": 29,
+      "cell_type": "code",
+      "summary": "Khung hàm review_qa",
+      "status": "included",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Triển khai lời giải đối chiếu chéo hai cột"
+    },
+    {
+      "cell_index": 30,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q7 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Tích hợp kiểm thử logic QA"
+    },
+    {
+      "cell_index": 31,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu câu hỏi Q8 ghi và đọc lại JSON save_report",
+      "status": "included",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Đặc tả hàm xuất báo cáo JSON"
+    },
+    {
+      "cell_index": 32,
+      "cell_type": "code",
+      "summary": "Khung hàm save_report",
+      "status": "included",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Triển khai lời giải ghi và đọc JSON an toàn"
+    },
+    {
+      "cell_index": 33,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động Q8 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Tích hợp kiểm thử ghi tệp và đọc lại"
+    },
+    {
+      "cell_index": 34,
+      "cell_type": "markdown",
+      "summary": "Phần 2: Ghép quy trình trên dữ liệu thực hành",
+      "status": "merged",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Ghép nối pipeline phân tích tổng thể"
+    },
+    {
+      "cell_index": 35,
+      "cell_type": "code",
+      "summary": "Hàm build_current_report ghép nối các hàm",
+      "status": "merged",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Tích hợp vào quy trình xuất báo cáo"
+    },
+    {
+      "cell_index": 36,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu diễn giải và bằng chứng về mean vs median, if price, và QA",
+      "status": "included",
+      "exercise_id": "data-lab-02-15",
+      "reason": "Chuyển thành bài học phân tích định lượng và suy luận"
+    },
+    {
+      "cell_index": 37,
+      "cell_type": "markdown",
+      "summary": "Ô điền câu trả lời diễn giải",
+      "status": "merged",
+      "exercise_id": "data-lab-02-15",
+      "reason": "Tích hợp vào ma trận phân tích rủi ro kỹ thuật"
+    },
+    {
+      "cell_index": 38,
+      "cell_type": "markdown",
+      "summary": "Phần bài tự làm mở rộng E1 và E2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Giới thiệu hai bài toán mở rộng"
+    },
+    {
+      "cell_index": 39,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu bài E1 xếp hạng khu rank_areas",
+      "status": "included",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Đặc tả hàm xếp hạng khu đa tiêu chí"
+    },
+    {
+      "cell_index": 40,
+      "cell_type": "code",
+      "summary": "Khung hàm rank_areas",
+      "status": "included",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Triển khai lời giải xếp hạng khu"
+    },
+    {
+      "cell_index": 41,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động E1 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Tích hợp kiểm thử hòa điểm và kiểu dữ liệu"
+    },
+    {
+      "cell_index": 42,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động E1 ví dụ 2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Tích hợp kiểm thử danh sách rỗng và giá 0.0"
+    },
+    {
+      "cell_index": 43,
+      "cell_type": "code",
+      "summary": "Hàm hiển thị bảng xếp hạng f-string show_area_ranking",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Tích hợp vào định dạng bảng f-string"
+    },
+    {
+      "cell_index": 44,
+      "cell_type": "markdown",
+      "summary": "Yêu cầu bài E2 đếm review theo năm review_counts_by_year",
+      "status": "included",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Đặc tả hàm đếm chuỗi thời gian review theo năm"
+    },
+    {
+      "cell_index": 45,
+      "cell_type": "code",
+      "summary": "Khung hàm review_counts_by_year",
+      "status": "included",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Triển khai lời giải đếm review theo năm"
+    },
+    {
+      "cell_index": 46,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động E2 ví dụ 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Tích hợp kiểm thử cắt chuỗi năm và cộng dồn"
+    },
+    {
+      "cell_index": 47,
+      "cell_type": "code",
+      "summary": "Kiểm tra tự động E2 ví dụ 2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Tích hợp kiểm thử ngày rỗng"
+    },
+    {
+      "cell_index": 48,
+      "cell_type": "code",
+      "summary": "Nạp file reviews.csv và chạy thử E2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Tích hợp đối chiếu kết quả chuỗi thời gian"
+    },
+    {
+      "cell_index": 49,
+      "cell_type": "markdown",
+      "summary": "Nhận xét phần mở rộng về so sánh năm chưa đủ 2026",
+      "status": "merged",
+      "exercise_id": "data-lab-02-15",
+      "reason": "Tích hợp vào phân tích bẫy dữ liệu thời gian chưa đầy đủ"
+    },
+    {
+      "cell_index": 50,
+      "cell_type": "markdown",
+      "summary": "Hướng dẫn kiểm tra trước khi nộp",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Quy trình nộp bài môn học"
+    },
+    {
+      "cell_index": 51,
+      "cell_type": "markdown",
+      "summary": "Mẫu khai báo AI",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Mẫu chính sách AI"
+    },
+    {
+      "cell_index": 52,
+      "cell_type": "code",
+      "summary": "Hiển thị tổng kết public checks",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Hạ tầng báo cáo kiểm tra"
+    }
+  ],
+  "course_cells": [
+    {
+      "cell_index": 0,
+      "cell_type": "markdown",
+      "summary": "Tiêu đề và giới thiệu lab 2 bản khóa học",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Nội dung giới thiệu chung"
+    },
+    {
+      "cell_index": 1,
+      "cell_type": "markdown",
+      "summary": "Cách làm việc trong bài lab",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Quy định làm việc môn học"
+    },
+    {
+      "cell_index": 2,
+      "cell_type": "markdown",
+      "summary": "Mục tiêu bài lab",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Mục tiêu chung"
+    },
+    {
+      "cell_index": 3,
+      "cell_type": "markdown",
+      "summary": "Phần 0 Khởi động",
+      "status": "merged",
+      "exercise_id": "data-lab-02-01",
+      "reason": "Gộp vào bài 1 khởi động"
+    },
+    {
+      "cell_index": 4,
+      "cell_type": "code",
+      "summary": "W1: f-string định dạng tiền tệ và tỷ lệ",
+      "status": "included",
+      "exercise_id": "data-lab-02-01",
+      "reason": "Thao tác định dạng f-string nâng cao"
+    },
+    {
+      "cell_index": 5,
+      "cell_type": "code",
+      "summary": "W2: None là thiếu không phải 0",
+      "status": "included",
+      "exercise_id": "data-lab-02-02",
+      "reason": "Thao tác lọc None và tính trung bình"
+    },
+    {
+      "cell_index": 6,
+      "cell_type": "code",
+      "summary": "W3: Set so sánh hai snapshot",
+      "status": "included",
+      "exercise_id": "data-lab-02-03",
+      "reason": "Thao tác hiệu tập hợp phòng"
+    },
+    {
+      "cell_index": 7,
+      "cell_type": "markdown",
+      "summary": "Phần 1: Khảo sát thị trường Santiago bằng Python thuần",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Bối cảnh dữ liệu"
+    },
+    {
+      "cell_index": 8,
+      "cell_type": "markdown",
+      "summary": "Bước 1: Tải và đọc dữ liệu",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Gộp vào bài đọc CSV"
+    },
+    {
+      "cell_index": 9,
+      "cell_type": "code",
+      "summary": "Tải file và đọc bằng csv.DictReader",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Gộp vào bài đọc CSV"
+    },
+    {
+      "cell_index": 10,
+      "cell_type": "code",
+      "summary": "Assert đọc đủ 18534 phòng",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Gộp vào kiểm định kích thước tập dữ liệu"
+    },
+    {
+      "cell_index": 11,
+      "cell_type": "markdown",
+      "summary": "Giải thích mọi giá trị CSV là chuỗi và bảng mô tả cột",
+      "status": "merged",
+      "exercise_id": "data-lab-02-04",
+      "reason": "Tích hợp vào giải thích bản chất chuỗi của CSV"
+    },
+    {
+      "cell_index": 12,
+      "cell_type": "markdown",
+      "summary": "Bước 2: Hàm làm sạch giá",
+      "status": "merged",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Gộp vào bài to_float"
+    },
+    {
+      "cell_index": 13,
+      "cell_type": "code",
+      "summary": "Cài đặt to_float bắt ValueError và TypeError",
+      "status": "merged",
+      "exercise_id": "data-lab-02-05",
+      "reason": "Gộp vào bài to_float"
+    },
+    {
+      "cell_index": 14,
+      "cell_type": "markdown",
+      "summary": "Bước 3: Áp hàm cho cả cột giá",
+      "status": "included",
+      "exercise_id": "data-lab-02-06",
+      "reason": "Chuyển thành bài thực hành làm sạch cột giá"
+    },
+    {
+      "cell_index": 15,
+      "cell_type": "code",
+      "summary": "Comprehension tạo gia, gia_hop_le, so_thieu",
+      "status": "included",
+      "exercise_id": "data-lab-02-06",
+      "reason": "Thao tác lọc cột giá và đếm số lượng thiếu"
+    },
+    {
+      "cell_index": 16,
+      "cell_type": "markdown",
+      "summary": "Câu hỏi vì sao if g is not None chứ không phải if g",
+      "status": "merged",
+      "exercise_id": "data-lab-02-02",
+      "reason": "Tích hợp vào giải thích bẫy lọc giá trị 0"
+    },
+    {
+      "cell_index": 17,
+      "cell_type": "markdown",
+      "summary": "Bước 4: So sánh trung bình và trung vị",
+      "status": "merged",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Gộp vào bài tóm tắt phân phối"
+    },
+    {
+      "cell_index": 18,
+      "cell_type": "code",
+      "summary": "Hàm trung_vi",
+      "status": "merged",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Tích hợp vào hàm trung vị"
+    },
+    {
+      "cell_index": 19,
+      "cell_type": "code",
+      "summary": "Tính giá trung bình tb và trung vị tv",
+      "status": "merged",
+      "exercise_id": "data-lab-02-07",
+      "reason": "Gộp vào bài toán so sánh mean và median"
+    },
+    {
+      "cell_index": 20,
+      "cell_type": "markdown",
+      "summary": "Phân tích trung bình gấp đôi trung vị và tìm phòng đắt nhất",
+      "status": "merged",
+      "exercise_id": "data-lab-02-08",
+      "reason": "Gộp vào bài tìm giá trị cực đại"
+    },
+    {
+      "cell_index": 21,
+      "cell_type": "code",
+      "summary": "Tìm phòng dat_nhat bằng max key lambda",
+      "status": "merged",
+      "exercise_id": "data-lab-02-08",
+      "reason": "Gộp vào bài most_expensive"
+    },
+    {
+      "cell_index": 22,
+      "cell_type": "markdown",
+      "summary": "Phân tích phòng ngoại lai 97 triệu CLP",
+      "status": "merged",
+      "exercise_id": "data-lab-02-15",
+      "reason": "Tích hợp vào phân tích tác động của giá trị ngoại lai"
+    },
+    {
+      "cell_index": 23,
+      "cell_type": "markdown",
+      "summary": "Bước 5: Đếm phòng theo khu",
+      "status": "merged",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Gộp vào bài count_by_area"
+    },
+    {
+      "cell_index": 24,
+      "cell_type": "code",
+      "summary": "Vòng lặp đếm dem_khu bằng dict get",
+      "status": "merged",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Gộp vào bài count_by_area"
+    },
+    {
+      "cell_index": 25,
+      "cell_type": "code",
+      "summary": "Sắp xếp lấy top 5 khu đông nhất",
+      "status": "merged",
+      "exercise_id": "data-lab-02-09",
+      "reason": "Tích hợp vào trích xuất top 5"
+    },
+    {
+      "cell_index": 26,
+      "cell_type": "markdown",
+      "summary": "Bước 6: So sánh giá giữa các khu",
+      "status": "merged",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Gộp vào bài median_by_area"
+    },
+    {
+      "cell_index": 27,
+      "cell_type": "code",
+      "summary": "Hàm gia_khu và dict comprehension tv_khu cho top 5",
+      "status": "merged",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Gộp vào bài median_by_area"
+    },
+    {
+      "cell_index": 28,
+      "cell_type": "markdown",
+      "summary": "Phân tích Lo Barnechea cao gấp 9 lần Santiago",
+      "status": "merged",
+      "exercise_id": "data-lab-02-10",
+      "reason": "Tích hợp vào nhận xét chênh lệch giá"
+    },
+    {
+      "cell_index": 29,
+      "cell_type": "markdown",
+      "summary": "Bước 7: Phòng chưa từng có review",
+      "status": "merged",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Gộp vào bài review_qa"
+    },
+    {
+      "cell_index": 30,
+      "cell_type": "code",
+      "summary": "Lọc chua_review và kiểm tra chéo last_review trống",
+      "status": "merged",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Gộp vào bài review_qa"
+    },
+    {
+      "cell_index": 31,
+      "cell_type": "markdown",
+      "summary": "Giải thích quy tắc kiểm tra chéo hai cột QA",
+      "status": "merged",
+      "exercise_id": "data-lab-02-11",
+      "reason": "Tích hợp vào lý thuyết kiểm tra chéo"
+    },
+    {
+      "cell_index": 32,
+      "cell_type": "markdown",
+      "summary": "Bước 8: Xuất báo cáo JSON",
+      "status": "merged",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Gộp vào bài save_report"
+    },
+    {
+      "cell_index": 33,
+      "cell_type": "code",
+      "summary": "Xuất bao_cao_santiago.json và đọc lại bằng json.load",
+      "status": "merged",
+      "exercise_id": "data-lab-02-12",
+      "reason": "Gộp vào bài save_report"
+    },
+    {
+      "cell_index": 34,
+      "cell_type": "markdown",
+      "summary": "Phần 2: Bài tự làm mở rộng",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Giới thiệu phần mở rộng"
+    },
+    {
+      "cell_index": 35,
+      "cell_type": "markdown",
+      "summary": "Tự làm 1: Bảng xếp hạng khu với ngưỡng min_valid 100",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Gộp vào bài E1 rank_areas"
+    },
+    {
+      "cell_index": 36,
+      "cell_type": "code",
+      "summary": "Ô code Tự làm 1",
+      "status": "merged",
+      "exercise_id": "data-lab-02-13",
+      "reason": "Gộp vào bài E1 rank_areas"
+    },
+    {
+      "cell_index": 37,
+      "cell_type": "markdown",
+      "summary": "Tự làm 2: Dòng thời gian review với reviews.csv",
+      "status": "merged",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Gộp vào bài E2 review_counts_by_year"
+    },
+    {
+      "cell_index": 38,
+      "cell_type": "code",
+      "summary": "Ô code Tự làm 2",
+      "status": "merged",
+      "exercise_id": "data-lab-02-14",
+      "reason": "Gộp vào bài E2 review_counts_by_year"
+    },
+    {
+      "cell_index": 39,
+      "cell_type": "markdown",
+      "summary": "Tóm tắt bài lab 2",
+      "status": "excluded",
+      "exercise_id": null,
+      "reason": "Bảng tóm tắt kết thúc buổi học"
+    }
+  ]
+}

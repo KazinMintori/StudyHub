@@ -3,6 +3,77 @@
 .Layout.lecture-exercises-layout .main > .vp-doc { display: block; }
 .lecture-exercises-layout .lecture-notes-content { display: none; }
 .lecture-exercises-layout .lecture-exercises-content { display: block; }
+.data-lab-set { min-width: 0; }
+.vp-doc .data-lab-set table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  overflow-x: auto;
+  font-size: var(--fs-ui);
+}
+.vp-doc .data-lab-set :is(th, td) {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: normal;
+  vertical-align: top;
+}
+.vp-doc .data-lab-set :is(th, td) code {
+  white-space: normal;
+  overflow-wrap: normal;
+}
+.vp-doc .data-lab-set :not(pre) > code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.vp-doc .data-lab-set :is(th, td) code { white-space: nowrap; }
+.vp-doc .data-lab-set :is(pre, div[class*="language-"]) { max-width: 100%; }
+.vp-doc .data-lab-set div[class*="language-"] > button.copy {
+  min-width: 44px;
+  min-height: 44px;
+}
+.vp-doc .data-lab-set img { max-width: 100%; height: auto; }
+@media (max-width: 600px) {
+  .vp-doc .data-lab-set div[class*="language-"] > button.copy { opacity: 1; }
+  .vp-doc .data-lab-set .study-data-table {
+    display: block;
+    overflow: visible;
+    border: 0;
+  }
+  .vp-doc .data-lab-set .study-data-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .vp-doc .data-lab-set .study-data-table tbody { display: block; }
+  .vp-doc .data-lab-set .study-data-table tbody tr {
+    display: block;
+    margin: var(--space-3) 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md, 8px);
+  }
+  .vp-doc .data-lab-set .study-data-table td {
+    display: block;
+    width: auto;
+    border: 0;
+    padding: var(--space-3);
+  }
+  .vp-doc .data-lab-set .study-data-table td + td { border-top: 1px solid var(--rule); }
+  .vp-doc .data-lab-set .study-data-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--space-1);
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  .vp-doc .data-lab-set .study-data-table td code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
 .lecture-panels:empty { display: none; }
 .lecture-panels { margin: 0; padding: 0; }
 .lecture-layout .lecture-notes-content > :first-child,

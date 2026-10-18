@@ -10,9 +10,10 @@
     "dataframe"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-    "raw_materials/xu-ly-du-lieu/practice/iai-bc-schema-chapter-7.md",
-    "raw_materials/xu-ly-du-lieu/practice/regex.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+    "raw_materials/xu-ly-du-lieu/labs/lab-11.md"
   ],
   "examples": [],
   "exercises": [
@@ -47,169 +48,284 @@
       "title": "Bài tập 6: Giữ giá cập nhật sau cùng theo từng khóa"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 5,
-      "title": "Kiểm tra cả chuỗi giá"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 87,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 36,
-      "title": "Khảo sát cột đánh giá trước khi suy luận"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 195,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 74,
-      "title": "Tỷ lệ chỗ ở liệt kê Wifi"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 296,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 108,
-      "title": "Mở rộng quy tắc trích diện tích"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 416,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 125,
-      "title": "Tách giá quan sát khỏi giá được điền"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 532,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 147,
-      "title": "Thử cả float64 và Float64"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 694,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 179,
-      "title": "Giữ hai đánh giá khác nhau trong cùng ngày"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 850,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 198,
-      "title": "Giữ cả hàng bị cờ và mẫu số của từng bảng"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1010,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 231,
-      "title": "Một giá cho mỗi cặp mã và kỳ"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1200,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 258,
-      "title": "Giữ các mã có số đếm bằng 0"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1375,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 286,
-      "title": "Ba quy tắc điền khác nhau"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1516,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-schema-chapter-7.md",
-      "line": 5,
-      "title": "Lọc trước khi lấy mẫu"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1675,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-schema-chapter-7.md",
-      "line": 26,
-      "title": "Kiểm tra mười phản hồi JSON"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1883,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 9,
-      "title": "Regex 1"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 2028,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 30,
-      "title": "Regex 2"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 2283,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 51,
-      "title": "Regex 3"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 25,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 72,
-      "title": "Regex 4"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 143,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 93,
-      "title": "Regex 5"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 246,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 114,
-      "title": "Regex 6"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 348,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 135,
-      "title": "Regex 7"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 451,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 156,
-      "title": "Regex 8"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 554,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 177,
-      "title": "Regex 9"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 657,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 198,
-      "title": "Regex 10"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 774,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 219,
-      "title": "Regex 11"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 878,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 240,
-      "title": "Regex 12"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 995,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 261,
-      "title": "Regex 13"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1114,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 282,
-      "title": "Regex 14"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1217,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 303,
-      "title": "Regex 15"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1323,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 329,
-      "title": "Regex 16"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1442,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 350,
-      "title": "Regex 17"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1561,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 371,
-      "title": "Regex 18"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1693,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 392,
-      "title": "Regex 19"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1811,
+      "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 413,
-      "title": "Regex 20"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1914,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 2036,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 2157,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 120,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 269,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 431,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 603,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 848,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1028,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1381,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1652,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1919,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 2290,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 2682,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 3190,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 3382,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 91,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 264,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 370,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 490,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 679,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 925,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 1271,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 1521,
+      "title": ""
     }
   ],
   "solutions": [
@@ -244,168 +360,283 @@
       "title": "Lời giải"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 11,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 42,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 80,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 112,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 131,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 153,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 183,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 204,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 241,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 264,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-7.md",
-      "line": 292,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-schema-chapter-7.md",
-      "line": 9,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-schema-chapter-7.md",
-      "line": 96,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 13,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 34,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 55,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 76,
-      "title": ""
-    },
-    {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
       "line": 97,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 118,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 205,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 139,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 306,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 160,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 426,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 181,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 542,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 202,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 704,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 223,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 860,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 244,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1020,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 265,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1210,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 286,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1385,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 307,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1526,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 333,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1685,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 354,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 1893,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 375,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 2038,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 396,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07.md",
+      "line": 2293,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/regex.md",
-      "line": 417,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 35,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 153,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 256,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 358,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 461,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 564,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 667,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 784,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 888,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1005,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1124,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1227,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1333,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1452,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1571,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1703,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1821,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 1924,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 2046,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-07-regex.md",
+      "line": 2167,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 137,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 283,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 445,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 618,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 863,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1042,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1394,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1665,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 1934,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 2306,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 2697,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 3204,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
+      "line": 3403,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 102,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 279,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 384,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 500,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 689,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 938,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 1284,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-11.md",
+      "line": 1535,
       "title": ""
     }
   ],

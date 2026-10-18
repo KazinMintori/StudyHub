@@ -453,7 +453,18 @@ Kết quả:
 - Cơ chế `defaultdict` giúp loại bỏ hoàn toàn các câu lệnh kiểm tra điều kiện tồn tại của khóa trước khi cập nhật dữ liệu.
 :::
 
-<!--@include: ../../../raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-3.md-->
+
+
+
+
+<!-- data-labs:start -->
+<section class="data-lab-set" data-lab="lab-02">
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/labs/lab-02.md-->
+
+</section>
+
+<!-- data-labs:end -->
 
 ## Tài liệu tham khảo
 
@@ -462,5 +473,7 @@ Kết quả:
 - David Beazley. *Python Cookbook*, tái bản lần 3. O'Reilly Media, 2013.
 
 - IAI, [Lập trình xử lý dữ liệu, học liệu và notebook](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các đề thực hành đã được biên tập cách diễn đạt và bổ sung lời giải, giữ [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [Giấy phép học liệu](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+
+- IAI. [Notebook thực hành](https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template) và [học liệu thực hành 2627-1](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các yêu cầu kỹ thuật được đối chiếu, biên tập và bổ sung lời giải cùng dữ liệu minh họa. Phần thích nghi từ học liệu IAI áp dụng giấy phép [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 </div>

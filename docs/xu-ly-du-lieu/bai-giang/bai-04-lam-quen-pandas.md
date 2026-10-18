@@ -572,7 +572,25 @@ Kết quả tính toán:
 - Lượt `P3` (8 đêm $\ge 7$, miễn phí): $60 \times 8 + 0 = 480$ USD.
 :::
 
-<!--@include: ../../../raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-5.md-->
+
+
+
+
+
+<!-- data-labs:start -->
+<section class="data-lab-set" data-lab="lab-04">
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/labs/lab-04.md-->
+
+</section>
+
+<section class="data-lab-set" data-lab="lab-05-pandas">
+
+<!--@include: ../../../raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md-->
+
+</section>
+
+<!-- data-labs:end -->
 
 ## Tài liệu tham khảo
 
@@ -581,5 +599,7 @@ Kết quả tính toán:
 - Viện Trí tuệ Nhân tạo, Trường Đại học Công nghệ, ĐHQGHN. *Học liệu môn học Lập trình xử lý dữ liệu: Bài 4 - Làm quen với pandas và Bài 5 - Series & DataFrame chuyên sâu*. Các bài tập thực hành trong bài giảng được biên soạn và chuẩn hóa dựa trên học liệu mở của IAI UET theo giấy phép [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
 
 - IAI, [Lập trình xử lý dữ liệu, học liệu và notebook](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các đề thực hành đã được biên tập cách diễn đạt và bổ sung lời giải, giữ [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [Giấy phép học liệu](https://github.com/uet-iai-course/programming-for-data-processing/blob/main/LICENSE).
+
+- IAI. [Notebook thực hành](https://github.com/uet-iai-notebook-labs-2026/notebook-labs-template) và [học liệu thực hành 2627-1](https://courses.iaidev.com/programming-for-data-processing/2627-1/). Các yêu cầu kỹ thuật được đối chiếu, biên tập và bổ sung lời giải cùng dữ liệu minh họa. Phần thích nghi từ học liệu IAI áp dụng giấy phép [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 </div>

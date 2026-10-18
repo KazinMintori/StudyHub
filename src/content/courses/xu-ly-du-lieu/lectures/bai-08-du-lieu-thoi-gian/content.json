@@ -11,8 +11,7 @@
     "chi-muc"
   ],
   "fragments": [
-    "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-11.md",
-    "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md"
+    "raw_materials/xu-ly-du-lieu/labs/lab-08.md"
   ],
   "examples": [],
   "exercises": [
@@ -32,24 +31,144 @@
       "title": "Bài tập 3: Nhận diện tháng tăng trưởng đột biến"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-11.md",
-      "line": 3,
-      "title": "Tổng hợp một bản chụp có năm chưa trọn"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 101,
+      "title": "Bài tập 1: Đọc chuỗi ngày tháng theo định dạng nguồn và tính số đêm lưu trú"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 5,
-      "title": "Theo dõi lỗi chuyển đổi ngày"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 103,
+      "title": "Tính số đêm lưu trú"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 29,
-      "title": "Không dùng kỳ chưa trọn để kết luận giảm"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 222,
+      "title": "Bài tập 2: Phân biệt lỗi chuyển đổi ngày không hợp lệ với dữ liệu khuyết từ nguồn"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 77,
-      "title": "Chọn đúng kỳ gốc"
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 224,
+      "title": "Phát hiện lỗi chuyển đổi ngày"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 336,
+      "title": "Bài tập 3: Loại bỏ dòng sau mốc chụp dữ liệu và thiết lập chỉ mục thời gian"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 338,
+      "title": "Thiết lập chỉ mục thời gian và loại bỏ mốc tương lai"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 512,
+      "title": "Bài tập 4: Cắt lát chuỗi thời gian bằng nhãn chuỗi và đối chiếu số lượng đánh giá"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 514,
+      "title": "Cắt lát theo nhãn năm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 705,
+      "title": "Bài tập 5: Tổng hợp dữ liệu theo quý và nhận diện kỳ chưa trọn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 707,
+      "title": "Tổng hợp theo quý và loại bỏ kỳ chưa trọn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 922,
+      "title": "Bài tập 6: Kiểm tra quy tắc lọc kỳ chưa trọn tại các mốc thời gian biên"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 924,
+      "title": "Kiểm định mốc thời gian biên của kỳ"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1020,
+      "title": "Bài tập 7: Xác định quý cao nhất toàn chuỗi và quý thấp nhất trong một giai đoạn"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1022,
+      "title": "Tìm kiếm cực trị theo quý"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1280,
+      "title": "Bài tập 8: Tổng hợp dữ liệu theo ngày và điền đầy đủ các ngày không có lượt đánh giá"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1282,
+      "title": "Tổng hợp theo lịch ngày liên tục"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1488,
+      "title": "Bài tập 9: Làm mượt chuỗi thời gian bằng cửa sổ trượt 7 ngày và nhận diện đỉnh điểm"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1490,
+      "title": "Làm mượt bằng cửa sổ trượt"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1737,
+      "title": "Bài tập 10: So sánh cùng kỳ theo quý và khắc phục lỗi lệch chu kỳ"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1739,
+      "title": "So sánh cùng kỳ theo quý"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1987,
+      "title": "Bài tập 11: So sánh theo tháng: So với kỳ liền trước và so với cùng kỳ năm trước"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1989,
+      "title": "Tính toán hai hệ quy chiếu so sánh"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2219,
+      "title": "Bài tập 12: Chuẩn hóa độ dài tháng và xử lý năm nhuận khi so sánh chu kỳ tháng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2221,
+      "title": "Điều chỉnh số ngày khác biệt của các tháng"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2462,
+      "title": "Bài tập 13: Mở rộng 1: Điều tra ngày kỷ lục và vùng lân cận bằng chuỗi ngày"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2464,
+      "title": "Điều tra ngày kỷ lục"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2697,
+      "title": "Bài tập 14: Mở rộng 2: Tính khoảng cách thời gian từ lần đánh giá gần nhất"
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2699,
+      "title": "Gắn cờ chỗ ở lâu chưa có đánh giá"
     }
   ],
   "solutions": [
@@ -69,25 +188,88 @@
       "title": "Lời giải chi tiết"
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-a-chapter-11.md",
-      "line": 7,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 112,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 9,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 230,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 35,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 346,
       "title": ""
     },
     {
-      "source": "raw_materials/xu-ly-du-lieu/practice/iai-bc-chapter-11.md",
-      "line": 82,
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 520,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 715,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 936,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1031,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1288,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1505,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1749,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2004,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2231,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2473,
+      "title": ""
+    },
+    {
+      "source": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 2710,
       "title": ""
     }
   ],
-  "assets": []
+  "assets": [
+    {
+      "reference": "img/labs/lab-08/rolling-7d-2025.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1618,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-08/rolling-7d-2025.svg"
+    },
+    {
+      "reference": "img/labs/lab-08/rolling-7d-2025.svg",
+      "declaredIn": "raw_materials/xu-ly-du-lieu/labs/lab-08.md",
+      "line": 1731,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/labs/lab-08/rolling-7d-2025.svg"
+    }
+  ]
 }
