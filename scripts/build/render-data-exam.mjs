@@ -110,6 +110,7 @@ for (let number = 1; number <= 8; number++) {
   const counts = { total: questions.length, quiz: questions.filter(q => q.kind === 'quiz').length, essay: questions.filter(q => q.kind === 'essay').length }
   catalog.push({ lesson, title: compiled.title, ...counts })
   audit.push({ lesson, sourceQuestionIds: bank.questions.map(q => q.id), renderedQuestionIds: questions.map(q => q.id),
+    inputSha256: createHash('sha256').update(JSON.stringify({bank,review,detailed,questionContext})).digest('hex'),
     reviewed: reviews.size, contentSha256: createHash('sha256').update(JSON.stringify(compiled)).digest('hex') })
 }
 await writeFile(path.join(output, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n')

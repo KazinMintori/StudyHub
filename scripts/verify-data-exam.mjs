@@ -48,6 +48,8 @@ for (let number = 1; number <= 8; number++) {
     reviewed = new Map(review.items.map(item => [item.id, item]))
     assert.equal(reviewed.size, expected[number - 1], 'No duplicate review IDs')
     const details = await read(path.join(directory, `detailed-solutions/bai-${lesson}.json`))
+    const inputsHash = createHash('sha256').update(JSON.stringify({bank,review,detailed:details,questionContext:context})).digest('hex')
+    assert.equal(rendered[number - 1].inputSha256, inputsHash, `${lesson}: rendered bank must be regenerated after any source, feedback, solution or context change`)
     detailedSolutions = new Map(details.items.map(item => [item.id, item.markdown]))
     const quizIds = bank.questions.filter(q => q.kind === 'quiz').map(q => q.id)
     assert.equal(detailedSolutions.size, details.items.length, 'No duplicate detailed solutions')
