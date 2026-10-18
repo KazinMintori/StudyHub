@@ -1,0 +1,2046 @@
+{
+  "lesson": "03",
+  "sourceTitle": "BÀI 3 — NUMPY, MẢNG VÀ TƯ DUY VECTOR HOÁ",
+  "questions": [
+    {
+      "id": "B3-001",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Cho đoạn code:\n```python\nA = np.array([[3, 6, 9], [2, 4, 8]], dtype=np.int32)\nprint(A.ndim, A.size, A.itemsize, A.nbytes)\n```\nBốn giá trị được in lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`2, 6, 24, 4`"
+        },
+        {
+          "key": "B",
+          "markdown": "`2, 6, 4, 24`"
+        },
+        {
+          "key": "C",
+          "markdown": "`2, 2, 4, 8`"
+        },
+        {
+          "key": "D",
+          "markdown": "`6, 2, 4, 24`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: đảo byte mỗi ô với byte toàn mảng.\n- B đúng: 2 chiều, 6 ô, mỗi int32 là 4 byte, tổng 24 byte.\n- C sai: lấy số hàng làm size.\n- D sai: đảo ndim và size.\n\n**Đối chiếu:** nhóm 1; K01; mức Nền tảng. **Kiến thức và bẫy:** ndarray: shape, ndim, size, dtype, itemsize, nbytes. **Đọc lại:** BG §1; NB ô 2–7; LAB bài 1.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 122,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 41,
+        "questionSha256": "bd5a275cbe81ca3c83f430c86c929f1c88b13c521e403af8d1dd4805e78449e7",
+        "answerSha256": "909243edbba9b43c566ac855175b1b086038650e5e08efffa3d9227f240691fa"
+      }
+    },
+    {
+      "id": "B3-002",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([2, -3, 5, 0], dtype=np.int32)\ny = x * 2\n```\nNhận định nào đúng về `y` và phép tính?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`y` lặp lại dãy x hai lần, shape `(8,)`."
+        },
+        {
+          "key": "B",
+          "markdown": "`y` là một số bằng tổng x nhân 2."
+        },
+        {
+          "key": "C",
+          "markdown": "`y=[4,-6,10,0]`, dtype int64 vì số 2 là int Python."
+        },
+        {
+          "key": "D",
+          "markdown": "`y=[4,-6,10,0]`, dtype int32; tương đương `np.multiply(x,2)`."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: áp quy tắc list * 2 cho ndarray.\n- B sai: nhầm phép toán từng phần tử với tổng hợp.\n- C sai: với số 2 biểu diễn được, phép nhân này trong NumPy 2.x giữ int32.\n- D đúng: mỗi y[i]=x[i]*2; shape (4,), dtype int32.\n\n**Đối chiếu:** nhóm 2; K07; mức Nền tảng. **Kiến thức và bẫy:** Ufunc từng phần tử; x*2 tương đương multiply; vector hoá phép biến đổi. **Đọc lại:** BG §2 ufunc; NB ô 24–25.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 139,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 54,
+        "questionSha256": "16410a0c88a4eafc38c17954585d382b22acd4de7223fc96d6ac20b25ca22986",
+        "answerSha256": "b78dd1209ff6c6c8f80722f91fba57447cc8231a08ae53965ef5d7b476922776"
+      }
+    },
+    {
+      "id": "B3-003",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 4, 7], [2, 5, 8]], dtype=np.int64)\np = A[-1, :]\nq = A[-1:, :]\n```\nShape của p và q lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(3,)` và `(1,3)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(1,3)` và `(1,3)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(3,)` và `(3,1)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(2,3)` và `(1,3)`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: -1 chọn hàng cuối bằng chỉ mục nguyên nên bỏ chiều; -1: giữ chiều hàng.\n- B sai: tưởng chỉ mục nguyên giữ chiều.\n- C sai: tưởng giữ chiều tức tạo cột.\n- D sai: tưởng -1 là một lát cắt lấy cả hai hàng.\n\n**Đối chiếu:** nhóm 3; K12; mức Vận dụng. **Kiến thức và bẫy:** Chỉ mục hàng/cột, chỉ mục âm; chỉ mục nguyên bỏ chiều, slicing giữ chiều. **Đọc lại:** BG §3; NB ô 42–43,95–96.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 155,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 67,
+        "questionSha256": "c0df88135a38a7f09a09c10ed276a4547fd8ffba1df0dc8942ca51289e0b442c",
+        "answerSha256": "056d5bf846650224326d42bdaf0ce17803ec00f6cdc8d15828b0532f7b7ad5fd"
+      }
+    },
+    {
+      "id": "B3-004",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 7, 4], [9, 6, 1]], dtype=np.int64)\nm = A % 2 == 0\nB = A[m]\n```\nGiá trị, shape và quan hệ bộ nhớ của B với A là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[[2,4],[6,1]]`, `(2,2)`, dùng chung."
+        },
+        {
+          "key": "B",
+          "markdown": "`[2,6,4]`, `(3,)`, không dùng chung."
+        },
+        {
+          "key": "C",
+          "markdown": "`[2,4,6]`, `(3,)`, không dùng chung."
+        },
+        {
+          "key": "D",
+          "markdown": "`[2,4,6]`, `(3,)`, dùng chung."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: mask cùng shape chọn từng ô True, không giữ hình chữ nhật và không lấy số 1.\n- B sai: duyệt theo cột thay vì theo hàng.\n- C đúng: lấy A[0,0], A[0,2], A[1,1]; đọc mask tạo bản sao.\n- D sai: nhầm boolean indexing với basic slicing.\n\n**Đối chiếu:** nhóm 4; K23; mức Vận dụng. **Kiến thức và bẫy:** Mask bool cùng shape chọn ô theo hàng; mask 1D chọn hàng. **Đọc lại:** BG §3; NB ô 66–67.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 172,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 80,
+        "questionSha256": "65cedc483affe73b529fc76757733e61d85a40a5fe2656d25588151fda373504",
+        "answerSha256": "afa70bce29864a75215fd335eeb1f7a24bf39e0eaae617ca7355e6c946ae1a69"
+      }
+    },
+    {
+      "id": "B3-005",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.zeros((2, 3), dtype=np.int32)\nb = np.array([1, 4, 6], dtype=np.int32)\nC = A + b\n```\nSau phép cộng, cặp `(b.shape, C.shape)` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`((1,3),(2,3))`"
+        },
+        {
+          "key": "B",
+          "markdown": "`((3,),(2,3))`"
+        },
+        {
+          "key": "C",
+          "markdown": "`((3,),(3,2))`"
+        },
+        {
+          "key": "D",
+          "markdown": "Phép cộng báo ValueError vì số chiều khác nhau."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: chiều 1 dùng để đối chiếu không được tự thêm vào metadata của b.\n- B đúng: (2,3)+(3,)→(2,3); C[i,j]=A[i,j]+b[j], b vẫn (3,).\n- C sai: đảo shape kết quả theo thứ tự toán hạng.\n- D sai: broadcasting cho phép chiều thiếu xem như 1.\n\n**Đối chiếu:** nhóm 5; K33; mức Vận dụng. **Kiến thức và bẫy:** Broadcast từ phải sang trái; chiều thiếu như 1 không đổi shape gốc. **Đọc lại:** BG §4 quy tắc broadcasting.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 189,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 93,
+        "questionSha256": "a9781bbcc3394ce7e31ef816d20d3d7272481f5d26805cfe19cdcfe02c6cc953",
+        "answerSha256": "243c3171378e7ea2572a2a3e3c231df134d60c67c238cefec2f3c7768e961302"
+      }
+    },
+    {
+      "id": "B3-006",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.arange(8, dtype=np.int16).reshape(2, 4, order='C')\nR = A.reshape(4, 2, order='C')\nF = A.astype(np.float64)\n```\nChọn cặp đúng gồm `(A.nbytes, R.nbytes, F.nbytes)` và `F.strides` tính bằng byte.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(16,8,64)` và `(32,8)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(2,2,8)` và `(32,8)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(16,16,16)` và `(8,2)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(16,16,64)` và `(32,8)`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: đổi shape không giảm số ô.\n- B sai: trả itemsize thay vì nbytes.\n- C sai: giữ dung lượng và strides cũ dù astype đổi itemsize từ 2 lên 8.\n- D đúng: 8 ô × 2 byte; R vẫn 8 ô int16; F có 8 ô float64, 4 ô mỗi hàng nên strides (4*8,8)=(32,8). Các nbytes chưa gồm metadata.\n\n**Đối chiếu:** nhóm 1; K03; mức Vận dụng. **Kiến thức và bẫy:** Đổi shape giữ số ô; đổi dtype đổi itemsize, nbytes, strides; nbytes không gồm metadata. **Đọc lại:** BG §1 dung lượng; LAB bài 1.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 206,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 106,
+        "questionSha256": "189862fd658dfd2680ca659b49621920132b24540f3328da15006a5ec39cb266",
+        "answerSha256": "ba38860c084b7aeea9cd7075480ca45d67dbd7220ab25e2e6f0b6f51b9a5013c"
+      }
+    },
+    {
+      "id": "B3-007",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Năm giá giả lập, cùng đơn vị USD/đêm, đều đã xác nhận hợp lệ:\n```python\ngia = np.array([20, 30, 40, 50, 260], dtype=np.float64)\n```\nNhận định nào phù hợp nhất khi mô tả mức giá điển hình ít bị một giá rất cao kéo lệch?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mean 80, median 40; có thể dùng median 40 và vẫn giữ giá 260 hợp lệ."
+        },
+        {
+          "key": "B",
+          "markdown": "Mean 40, median 80; chọn mean vì ít nhạy với giá cực lớn."
+        },
+        {
+          "key": "C",
+          "markdown": "Mean 80, median 40; bắt buộc xoá 260 vì nó lớn nhất."
+        },
+        {
+          "key": "D",
+          "markdown": "Mean 80, median 260; median là số cuối theo thứ tự thu thập."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: tổng 400/5=80; số giữa sau sắp xếp là 40. Median phù hợp mục tiêu đã nêu.\n- B sai: đảo mean và median, đồng thời đảo tính nhạy với cực trị.\n- C sai: độ lớn chưa phải bằng chứng giá sai, và đề xác nhận hợp lệ.\n- D sai: median không phải phần tử cuối của dãy.\n\n**Đối chiếu:** nhóm 6; K40; mức Nền tảng. **Kiến thức và bẫy:** Mean, median, min/max, sum; giá cực lớn và mức giá điển hình. **Đọc lại:** BG §5 mô tả mức giá; LAB bài 8.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 223,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 119,
+        "questionSha256": "7686e3ac35b7a4c67d20009c24db916ec77c613900272ea7fbb2e8b90cfeb3a6",
+        "answerSha256": "b33587a015de09a846aa32bfd1e6a660420e9436c79fbe9217e2de7f2662583c"
+      }
+    },
+    {
+      "id": "B3-008",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A được tạo liên tục theo hàng (C-order):\n```python\nA = np.arange(16, dtype=np.int32).reshape(4, 4, order='C')\nV = A[1::2, 1::2]\nV[1, 0] = 90\n```\nNêu shape, strides của V; offset ô đầu V tính từ byte đầu dữ liệu A. Ô nào của A bị sửa? Tính offset của ô đó từ đầu A và giải thích vì sao chỉ dùng `1*V.strides[0]` là thiếu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "V có shape `(2,2)`, strides `(32,8)` byte, ô đầu là A[1,1], offset `16+4=20` byte. V[1,0] là A[3,1], được đổi từ 13 thành 90, offset `20+1*32+0*8=52` byte. Số 32 chỉ là độ lệch từ đầu V, còn đầu V đã lệch 20 byte so với đầu A. V dùng chung dữ liệu với A; mỗi ô V[i,j] ánh xạ A[1+2*i,1+2*j].\n\n**Hướng dẫn chấm:** 2 điểm: shape và strides 0,5; offset đầu 0,5; ô/offset bị sửa 0,5; giải thích cộng offset và dùng chung 0,5.\n\n**Đối chiếu:** nhóm 3; K14, K13; mức Phân loại. **Kiến thức và bẫy:** Offset từ đầu view khác đầu gốc; ánh xạ phép gán qua view; start:stop:step, stop loại trừ, shape và strides byte của view. **Đọc lại:** BG §3 bài tập 4; LAB bài 2.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 239,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 132,
+        "questionSha256": "41cd46c0b08acf5900db71890ec6de6d81237b4eb9119d04e94a707c9a14fe96",
+        "answerSha256": "22fcbc340dc683c56370d7a117251219eb4d548b9be84dc2b2f6d1537bd22caa"
+      }
+    },
+    {
+      "id": "B3-009",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 4, 6], [8, 10, 12], [14, 16, 18]], dtype=np.int32)\nC = A[[2, 0], 1:]\nW = C.T\nW[1, 0] = 77\n```\nÔ nào của C bị sửa, C và A sau cùng là gì? Trong ba cặp `(A,C)`, `(C,W)`, `(A,W)`, cặp nào dùng chung dữ liệu? Giải thích ngắn.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "W[1,0] chính là C[0,1], nên C=`[[16,77],[4,6]]`; A vẫn `[[2,4,6],[8,10,12],[14,16,18]]`. Chỉ `(C,W)` dùng chung. C được đọc bằng chỉ mục nâng cao nên đã là bản sao; transpose W dùng chung với C, không nối về A. Ban đầu C[0,1] lấy giá trị A[2,2], nhưng sau khi sao chép đó là hai ô dữ liệu độc lập.\n\n**Hướng dẫn chấm:** 2 điểm: ánh xạ và C 0,75; A 0,5; ba quan hệ dùng chung và nguyên nhân 0,75.\n\n**Đối chiếu:** nhóm 4; K29, K32; mức Phân loại. **Kiến thức và bẫy:** View sau advanced indexing chỉ dùng chung với bản sao; ánh xạ ô; B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** BG §3 view/copy; DS1 câu 15 (biến thể cơ chế).\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 249,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 142,
+        "questionSha256": "abd5559f0c54776238fee29091cc1fd4019276010588585d974233d8efd31b8c",
+        "answerSha256": "dc9a1eb32471090b45e2a2b09fee4d1a5c66c2819f233f5a522d116a1aa5b7ee"
+      }
+    },
+    {
+      "id": "B3-010",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là giá một chỗ ở qua ba kỳ, đơn vị USD/đêm (giả lập). Cần trừ trung bình của chính hàng:\n```python\nP = np.array([[12., 18., 24.], [30., 36., 42.]])\ntb = P.mean(axis=1)\nlech = P - tb\n```\n(a) Vì sao dòng cuối lỗi? (b) Viết một biểu thức sửa đúng, không dùng for. (c) Nêu shape, kết quả và một cách kiểm chứng đúng ý nghĩa.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) P `(2,3)` còn tb `(2,)`; so chiều cuối 3 với 2 không ghép được, gây ValueError. (b) `lech = P - P.mean(axis=1, keepdims=True)`. Cũng nhận `P - tb[:,None]` hoặc `P - tb.reshape(-1,1,order='C')`. (c) Trung bình `(2,1)` là `[[18],[36]]`; đầu ra `(2,3)`, float64, `[[−6,0,6],[−6,0,6]]`. Mỗi `lech[i,j]=P[i,j]−mean(P[i,:])`, đơn vị USD/đêm. Kiểm hàng đầu tính tay và `np.allclose(lech.mean(axis=1),0,rtol=0,atol=1e-12)`.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm gồm hai shape và lỗi chiều cuối; (b) 1 điểm biểu thức đúng; (c) 1 điểm gồm kết quả/ý nghĩa 0,5 và kiểm chứng 0,5.\n\n**Đối chiếu:** nhóm 5; K37, K36, K39; mức Vận dụng. **Kiến thức và bẫy:** Trừ trung bình chính hàng; ma trận chữ nhật báo lỗi, ma trận vuông che lỗi; Axis là chiều gộp; tập phần tử, mẫu số; shape sum/mean có/không keepdims; Kiểm chứng ý nghĩa bằng ô tính tay và bất biến; assert chỉ là kiểm một số yêu cầu. **Đọc lại:** BG §5; LAB bài 6; GK câu 21 về cấu trúc giải thích/sửa/diễn giải.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 259,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 152,
+        "questionSha256": "d8be7813ec0f1b00bc78cdf39120a4e322c7d2aaea754804f90e99cb0c0f791d",
+        "answerSha256": "899268c833a39aa655089a125812e059c3958701b173090316948e4ae4e4ba25"
+      }
+    },
+    {
+      "id": "B3-MR01",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\ngoc = np.arange(8, dtype=np.int32)\na = goc.reshape(2, 4, order='C')\nb = a[:, 1:]\n```\nTrên môi trường của bài, `b.base is a` là False. Kết luận nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "b chắc chắn không dùng chung dữ liệu với a."
+        },
+        {
+          "key": "B",
+          "markdown": "b có giá trị bằng một phần a nên chắc chắn là bản sao."
+        },
+        {
+          "key": "C",
+          "markdown": "`.base` có thể trỏ qua a tới goc; `np.shares_memory(a,b)` là True."
+        },
+        {
+          "key": "D",
+          "markdown": "Vì a là view nên mọi slicing trên a buộc phải sao chép."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: kiểm tra đồng nhất .base không phải phép kiểm tổng quát về dùng chung.\n- B sai: giá trị bằng nhau không quyết định copy/view.\n- C đúng: b dùng chung các ô của a dù .base bỏ qua mảng trung gian.\n- D sai: view của view vẫn có thể dùng chung. b[i,j] ánh xạ a[i,j+1].\n\n**Đối chiếu:** nhóm 3; K47; mức Bổ sung. **Kiến thức và bẫy:** .base có thể bỏ qua mảng trung gian; dùng shares_memory. **Đọc lại:** NB ô 64–65: Đọc thêm .base.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 271,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 164,
+        "questionSha256": "9e29aafd398f8873c34928795f5803e6ddd381f04dd783eb15a7fb8b7b93e40b",
+        "answerSha256": "fb6dd08b95ea8a51f68f2d0844413a1ddffba2cedb4383b4c277a5602dbdab2f"
+      }
+    },
+    {
+      "id": "B3-MR02",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Với ndarray thông thường, không dùng tối ưu gộp biểu thức ngoài NumPy:\n```python\nA = np.array([2., 4., 6., 8.])\nR = A * 3 + 5\n```\nMô tả nào đúng ở mức các phép toán mảng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Phép nhân tạo kết quả tạm; phép cộng đọc kết quả tạm và tạo R."
+        },
+        {
+          "key": "B",
+          "markdown": "Vì viết một dòng nên chỉ có một lượt đọc A và không có kết quả tạm."
+        },
+        {
+          "key": "C",
+          "markdown": "NumPy tự biến biểu thức thành một vòng for Python."
+        },
+        {
+          "key": "D",
+          "markdown": "Phép cộng 5 sửa trực tiếp A nên không cần R mới."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: có thể tách t=A*3; R=t+5, tương ứng hai phép tính và các vùng kết quả riêng.\n- B sai: một dòng mã không đồng nghĩa một phép toán hợp nhất.\n- C sai: các phép tính chạy trong thư viện, không sinh for Python cho người dùng.\n- D sai: toán tử * và + thông thường ở đây tạo mảng mới, không phải phép gán tại chỗ.\n\n**Đối chiếu:** nhóm 2; K48; mức Bổ sung. **Kiến thức và bẫy:** Một biểu thức có thể tạo nhiều mảng tạm và nhiều lượt đọc/ghi. **Đọc lại:** NB ô 40: Đọc thêm mảng trung gian.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 288,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 177,
+        "questionSha256": "aff018d8b9f730b7a3652a68d8da42dd371d900f0deaf73a4f2bad0d8d7ff2a9",
+        "answerSha256": "e0c16c9544964c52acfe81c684f36dd549e71c956bd82554a730e24158d190d1"
+      }
+    },
+    {
+      "id": "B3-011",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Xét list CPython, ndarray dtype số và ndarray dtype=object. Nhận định nào mô tả đúng cách lưu?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mảng số hai chiều là một list chứa các list; shape chỉ đếm các list con."
+        },
+        {
+          "key": "B",
+          "markdown": "List lưu trực tiếp mọi giá trị số trong ô kích thước bằng nhau như int32."
+        },
+        {
+          "key": "C",
+          "markdown": "List lưu tham chiếu; ndarray dtype số lưu giá trị cùng kiểu; dtype=object lưu tham chiếu. Shape/dtype là metadata, không phải các giá trị trong vùng dữ liệu."
+        },
+        {
+          "key": "D",
+          "markdown": "Một mảng số C-order lưu hết cột 0 trước rồi mới tới cột 1; metadata được tính vào nbytes."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: ndarray số 2D không phải cấu trúc list lồng nhau.\n- B sai: dãy ô liên tiếp của list là các tham chiếu tới đối tượng, không phải các số int32 lưu trực tiếp.\n- C đúng: phân biệt nội dung ô và metadata; không áp mô hình mảng số cho object.\n- D sai: C-order đi theo hàng; nbytes không tính metadata.\n\n**Đối chiếu:** nhóm 1; K02; mức Nền tảng. **Kiến thức và bẫy:** Metadata, C-order; list CPython lưu tham chiếu; mảng số và dtype=object. **Đọc lại:** BG §1 cách lưu list/ndarray, ghi chú dtype=object; NB ô 4–9.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 313,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 198,
+        "questionSha256": "29a5f85cac0aed0ba9a38398455965e078c57756ad7ec923f828f9dd2ab1926a",
+        "answerSha256": "0d591c82445ace09bd8bab77f4cc46c561f3c32f7edde62f86c3ab096055ca4b"
+      }
+    },
+    {
+      "id": "B3-012",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai mảng cùng vị trí mô tả cùng một cảm biến:\n```python\nx = np.array([3, 5, 8, 10], dtype=np.int32)\ny = np.array([5, 4, 8, 13], dtype=np.int32)\n```\nBiểu thức nào trả về bình phương chênh lệch từng cặp, shape `(4,)`, mà không dùng vòng lặp Python?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(y-x)**2`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(y-x).sum()**2`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[int(v-u)**2 for u,v in zip(x,y)]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`y**2-x**2`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: ghép y[i] với x[i], kết quả [4,1,0,9], dtype int32.\n- B sai: gộp các chênh lệch rồi bình phương, cho scalar 16.\n- C sai: giá trị đúng nhưng vẫn dùng vòng lặp Python và trả list, không đáp ứng yêu cầu. Không phủ nhận nó đúng nếu đề cho phép vòng lặp/list.\n- D sai: hiệu hai bình phương khác bình phương của hiệu.\n\n**Đối chiếu:** nhóm 2; K07; mức Vận dụng. **Kiến thức và bẫy:** Ufunc từng phần tử; x*2 tương đương multiply; vector hoá phép biến đổi. **Đọc lại:** BG §2 bài tập 2; LAB bài 7.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 325,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 211,
+        "questionSha256": "3b6a4d23c88735ccae1f6013db0b918677aac5a0e522dd814c8f408eac32624e",
+        "answerSha256": "320c44c273c858a894071f47c4df2a777294ff0a56103ec565c631fee9964aae"
+      }
+    },
+    {
+      "id": "B3-013",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.arange(16, dtype=np.int32).reshape(4, 4, order='C')\nV = A[1:4:2, :3:2]\n```\nShape và strides của V lần lượt là gì? A ban đầu liên tục theo hàng.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(2,2)` và `(16,8)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(2,3)` và `(32,8)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(2,2)` và `(8,2)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(2,2)` và `(32,8)`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: quên nhân stride hàng với bước 2.\n- B sai: đếm cả stop=3 như một cột được lấy; cột chỉ có 0 và 2.\n- C sai: dùng đơn vị phần tử thay cho byte.\n- D đúng: hàng 1,3 và cột 0,2; A.strides=(16,4), nhân bước từng chiều ra (32,8).\n\n**Đối chiếu:** nhóm 3; K13; mức Vận dụng. **Kiến thức và bẫy:** start:stop:step, stop loại trừ, shape và strides byte của view. **Đọc lại:** BG §3 strides; LAB bài 2; GK câu 6.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 342,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 224,
+        "questionSha256": "239f47f3fe09c69b1f140aa49d0d472fca228071cd01c120a3a37dc846284515",
+        "answerSha256": "88bdc4aeae13d4ab2ca0cca1e402fc70199ec0c8d487372a9af0b5bf312c92b1"
+      }
+    },
+    {
+      "id": "B3-014",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 9], [7, 1], [8, 6]], dtype=np.int32)\nr = A[A[:, 0] >= 7]\ns = A[A >= 7]\n```\nShape của r và s lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(3,)` và `(2,2)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(2,2)` và `(3,)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(2,)` và `(3,2)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(2,2)` và `(2,2)`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: hoán đổi mask chọn hàng với mask chọn ô.\n- B đúng: mask hàng (3,) chọn hàng 1,2 giữ hai cột; mask ô (3,2) chọn 9,7,8 theo hàng.\n- C sai: tưởng mask hàng chỉ trả phần tử cột 0, còn mask ô giữ nguyên toàn bảng.\n- D sai: tưởng mask cùng shape luôn cho hình chữ nhật. Cả r và s đều là bản sao của dữ liệu được chọn.\n\n**Đối chiếu:** nhóm 4; K23; mức Vận dụng. **Kiến thức và bẫy:** Mask bool cùng shape chọn ô theo hàng; mask 1D chọn hàng. **Đọc lại:** BG §3; NB ô 66–67; LAB bài 4.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 358,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 237,
+        "questionSha256": "e5ea3fef09e53fac380761a3203a838b773efebc7875275d7ec2e40e87d11c1f",
+        "answerSha256": "0980ff5bd5c1fa0d3c9c63906a8b02ffbd95bc4695560ba2fb653c2d53769a60"
+      }
+    },
+    {
+      "id": "B3-015",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 4, 6], [3, 5, 7]], dtype=np.int32)\nd = np.array([10, 20], dtype=np.int32)\n```\nCần cộng số 10 vào hàng 0 và số 20 vào hàng 1. Nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`A+d` đúng vì len(d) bằng số hàng."
+        },
+        {
+          "key": "B",
+          "markdown": "`A+d.reshape(1,2,order=\"C\")` đúng vì có đủ hai chiều."
+        },
+        {
+          "key": "C",
+          "markdown": "`A+d` lỗi do 3 khác 2 ở chiều cuối; `A+d[:,None]` thực hiện đúng yêu cầu."
+        },
+        {
+          "key": "D",
+          "markdown": "`A.T+d` cho ngay kết quả đúng shape `(2,3)` nên không cần đổi lại."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: broadcasting so chiều cuối trước, không đoán ý nghĩa số hàng.\n- B sai: (2,3)+(1,2) vẫn không khớp chiều cuối.\n- C đúng: (2,3)+(2,1)→(2,3); kết quả[i,j]=A[i,j]+d[i].\n- D sai: A.T+d có shape (3,2), không phải shape yêu cầu; transpose lại mới có thể là cách tương đương đúng.\n\n**Đối chiếu:** nhóm 5; K33, K34; mức Vận dụng. **Kiến thức và bẫy:** Broadcast từ phải sang trái; chiều thiếu như 1 không đổi shape gốc; Hệ số riêng theo cột, theo hàng, kết hợp cả hai. **Đọc lại:** BG §4 Vì sao A+d bị lỗi.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 375,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 250,
+        "questionSha256": "b08e29199b536fadb1091d7fc164c9f7192e18dc755af267d10d54693a37ee0b",
+        "answerSha256": "9deccb570a0b9188eb48f8a40ef112444d88f0fd26681e1b59a6014a6c8b7643"
+      }
+    },
+    {
+      "id": "B3-016",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([70, 100], dtype=np.int8)\na = (x * 2).astype(np.int16)\nb = x.astype(np.int16) * 2\n```\nCặp giá trị `(a,b)` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`([-116,-56], [140,200])`"
+        },
+        {
+          "key": "B",
+          "markdown": "`([140,200], [140,200])`"
+        },
+        {
+          "key": "C",
+          "markdown": "`([-116,-56], [-116,-56])`"
+        },
+        {
+          "key": "D",
+          "markdown": "`([140,200], [-116,-56])`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: nhân trong int8 tràn trước; đổi trước sang int16 giữ kết quả toán học. a và b đều int16 nhưng khác giá trị.\n- B sai: cho rằng astype sau phép nhân có thể khôi phục giá trị.\n- C sai: cho rằng đổi trước vẫn buộc tính trong int8.\n- D sai: đảo thời điểm tác dụng của chuyển kiểu.\n\n**Đối chiếu:** nhóm 1; K04; mức Nền tảng. **Kiến thức và bẫy:** Giới hạn int8, khác int Python; astype trước/sau tràn. **Đọc lại:** BG §1 bài tập 1; NB ô 10–17.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 391,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 263,
+        "questionSha256": "a912c565f18bbe93e00e28936abe9d8dc98caef13ed4f19af1df5b53dde7bc41",
+        "answerSha256": "bfbbb23e53c5f15d41740247ad024336acca8687b46795531c5e77667361e6cf"
+      }
+    },
+    {
+      "id": "B3-017",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([8, 2, 10, 4], dtype=np.int32)\nprint(x.sum(), x.min(), x.max(), x.mean(), np.median(x))\n```\nCác giá trị được in lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`24,2,10,6,5`"
+        },
+        {
+          "key": "B",
+          "markdown": "`24,2,10,6,10`"
+        },
+        {
+          "key": "C",
+          "markdown": "`24,2,10,24,6`"
+        },
+        {
+          "key": "D",
+          "markdown": "`24,2,10,6,6`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: lấy trung bình hai phần tử đầu theo thứ tự thu thập (8+2)/2=5, chưa sắp xếp.\n- B sai: median không phải phần tử lớn nhất.\n- C sai: mean phải chia tổng cho 4.\n- D đúng: sắp xếp [2,4,8,10], median=(4+8)/2=6; tổng 24, min 2, max 10.\n\n**Đối chiếu:** nhóm 6; K40; mức Nền tảng. **Kiến thức và bẫy:** Mean, median, min/max, sum; giá cực lớn và mức giá điển hình. **Đọc lại:** BG §5; NB ô 102–105.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 408,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 276,
+        "questionSha256": "931edb77427f728a41c12e9ff95b6a6dc86c48494ae344bbabbbde1933221635",
+        "answerSha256": "c943d1a3170c5c40e30ad596f707f52dc10d53d3ec0ecceac74dd2a7fbc8e512"
+      }
+    },
+    {
+      "id": "B3-018",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A liên tục theo hàng:\n```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\nP = A[:, ::2].reshape(6, order='C')\nQ = A[:, 1:3].reshape(6, order='C')\n```\nCho giá trị P, Q và cặp `(np.shares_memory(A,P), np.shares_memory(A,Q))`. Giải thích bằng khoảng cách byte giữa các ô liên tiếp khi đọc phẳng. Có thể kết luận “không C-contiguous thì reshape luôn copy” không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "P=`[0,2,4,6,8,10]`, Q=`[1,2,5,6,9,10]`; cặp `(True,False)`. Các ô P cách đều 8 byte nên một chiều stride 8 đọc được dù lát cắt không C-contiguous. Với Q, các bước là 4,12,4,12,4 byte; không thể là view 1D có một stride cố định theo thứ tự C đó nên reshape tạo dữ liệu riêng so với A. Cả hai dtype int32, shape (6,), nbytes 24. Không thể kết luận chỉ từ việc không C-contiguous.\n\n**Hướng dẫn chấm:** 2 điểm: hai giá trị 0,5; quan hệ dùng chung 0,5; phân tích bước byte 0,75; bác bỏ khẳng định quá mức 0,25.\n\n**Đối chiếu:** nhóm 3; K17; mức Phân loại. **Kiến thức và bẫy:** Reshape mảng không liên tục có thể view hoặc copy; kiểm shares_memory và ô bị sửa. **Đọc lại:** BG §3 reshape; DS1 câu 14; AI2 câu 2.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 424,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 289,
+        "questionSha256": "fafc0ef377eb286b141c0e0e9dac0c20e564ccce08ad042ba17f9b18f5d98283",
+        "answerSha256": "c78a6a28388375cfa3d5646c514c970c941f91605fe790b701f0feeb262c9e57"
+      }
+    },
+    {
+      "id": "B3-019",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Cần đặt hai ô A[0,1] và A[2,1] thành 0, giữ các ô khác:\n```python\nA = np.array([[2, 4, 6], [8, 10, 12], [14, 16, 18]], dtype=np.int32)\nT = A.T\nT[[1], :][:, [0, 2]] = 0\n```\n(a) A có thay đổi không, vì sao? (b) Thay dòng cuối bằng một phép gán qua T đúng yêu cầu. (c) Nêu các ô thực sự đổi và một cách kiểm chứng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) A không đổi: đọc `T[[1],:]` tạo bản sao do chỉ mục nâng cao, phép gán sau ghi vào bản sao tạm. T vẫn là view của A nhưng không làm bước chọn đầu thành view. (b) `T[np.ix_([1],[0,2])] = 0`; cũng nhận `T[1,[0,2]]=0`. (c) T[1,0]↔A[0,1] và T[1,2]↔A[2,1]; A=`[[2,0,6],[8,10,12],[14,0,18]]`. Kiểm toàn A với mảng kỳ vọng và `np.shares_memory(A,T)` là True. Đích ix_ shape (1,2), scalar 0 shape () được dùng cho hai ô.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm xác định copy tạm; (b) 1 điểm gán đúng; (c) 1 điểm ánh xạ/kết quả 0,5 và kiểm chứng 0,5.\n\n**Đối chiếu:** nhóm 4; K28, K15, K30; mức Phân loại. **Kiến thức và bẫy:** Chọn nâng cao trước rồi gán bước sau chỉ sửa bản sao tạm; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]; ix_ chỉ tạo chỉ mục; đọc tạo copy, gán trực tiếp và broadcasting RHS. **Đọc lại:** BG §3 ghi chú ix_; DS2 câu 12.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 434,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 299,
+        "questionSha256": "f028ca231195c9063cad231949097623fa32ac62647ef3fa6072bc1575a82bc6",
+        "answerSha256": "b5f7db9d52a8dee9aa4dc72dbbc9ffc902ff90cc92b4bd46535c6c42aef4f27a"
+      }
+    },
+    {
+      "id": "B3-020",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một cửa hàng, mỗi cột là một ngày:\n```python\nD = np.array([[2., 4., 6.], [8., 10., 12.]])\nu = D.mean(axis=0)\nv = D.sum(axis=1, keepdims=True)\nt = D.mean()\n```\nNêu giá trị và shape của u, v, t. Những ô nào tham gia u[1], mẫu số của nó là bao nhiêu? Diễn giải u và v theo bảng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "u=`[5,7,9]`, shape (3,): trung bình hai cửa hàng theo từng ngày. u[1]=(D[0,1]+D[1,1])/2=(4+10)/2=7. v=`[[12],[30]]`, shape (2,1): tổng ba ngày của từng cửa hàng, giữ chiều cột bằng 1. t=7, shape (): trung bình tất cả 6 ô, tổng 42/6. Cả ba kết quả có dtype float64. Axis 0 gộp hàng; axis 1 gộp cột.\n\n**Hướng dẫn chấm:** 2 điểm: giá trị/shape ba kết quả 1 điểm; tập ô và mẫu số u[1] 0,5; diễn giải theo hàng/cột 0,5.\n\n**Đối chiếu:** nhóm 5; K36; mức Vận dụng. **Kiến thức và bẫy:** Axis là chiều gộp; tập phần tử, mẫu số; shape sum/mean có/không keepdims. **Đọc lại:** BG §5 axis/keepdims; NB ô 106–109.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 444,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 309,
+        "questionSha256": "462d749fefc8fd91f9a06791da3531371ab1fa65e21576963628a0fe5bcc388b",
+        "answerSha256": "e1e7e40cecb796d8df9d41dd6d7dc17304f8e1bd183fddd7fa97bf3c83d7c682"
+      }
+    },
+    {
+      "id": "B3-MR03",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\na = np.float32(100_000_000)\nb = a + np.float32(1)\nc = np.float64(100_000_000) + np.float64(1)\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "b tăng chính xác 1 vì số 1 là nhỏ và dễ lưu."
+        },
+        {
+          "key": "B",
+          "markdown": "b có cùng giá trị a; c bằng 100000001; phần tăng nhỏ có thể mất trong float32 ở độ lớn này."
+        },
+        {
+          "key": "C",
+          "markdown": "In b với .12f làm b tăng thành 100000001."
+        },
+        {
+          "key": "D",
+          "markdown": "b không đổi chứng minh phép cộng đã không được thực hiện."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: khả năng giữ phần tăng phụ thuộc độ lớn và số bit có nghĩa, không chỉ giá trị của số cộng.\n- B đúng: phép cộng được làm rồi làm tròn về giá trị float32 biểu diễn được; float64 giữ được 1 ở ví dụ này.\n- C sai: định dạng in không sửa giá trị đã lưu.\n- D sai: bằng nhau sau làm tròn không có nghĩa không tính phép cộng.\n\n**Đối chiếu:** nhóm 1; K49, K05; mức Bổ sung. **Kiến thức và bẫy:** float32 với số lớn có thể làm mất phần tăng nhỏ; float32/64: bộ nhớ, gần đúng, chữ số in không tăng độ chính xác. **Đọc lại:** NB ô 118: Tự học sai số theo độ lớn.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 457,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 321,
+        "questionSha256": "3657eb4e769108822000caa1e87fdd8ddfb09db29b133c770545355c3058103e",
+        "answerSha256": "4adc257cd6f9e644d1287a3c1cde0382f8a4c23e8bcafd4baf1a23e6f20cb979"
+      }
+    },
+    {
+      "id": "B3-MR04",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "```python\nb = np.array([2, 5, 8], dtype=np.int32)\nV = np.broadcast_to(b, (4, 3))\n```\nCho strides, nbytes của V, quan hệ bộ nhớ V với b và offset V[3,1] tính từ byte đầu b. V có cấp phát 48 byte dữ liệu mới không? Lệnh `V[0,0]=9` thành công, chỉ cảnh báo hay gây ngoại lệ?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Strides `(0,4)` byte; V.nbytes=4*3*4=48, nhưng chỉ dùng lại ba ô b.nbytes=12, không cấp phát 48 byte dữ liệu phần tử mới. Metadata view vẫn được tạo. `np.shares_memory(b,V)` True; mọi V[i,j] đọc b[j]. V[3,1] offset `3*0+1*4=4` byte, giá trị 5. V là view chỉ đọc; phép gán gây ValueError và không sửa b, không phải chỉ cảnh báo. Khoảng byte bao trùm các ô thực đọc là 12 byte.\n\n**Hướng dẫn chấm:** 2 điểm: strides/nbytes 0,5; dùng chung/cấp phát 0,5; offset/ánh xạ 0,5; chỉ đọc và ValueError 0,5.\n\n**Đối chiếu:** nhóm 5; K50, K19; mức Bổ sung. **Kiến thức và bẫy:** broadcast_to: stride 0, chia sẻ, chỉ đọc; broadcasting không sao toán hạng nhưng phép cộng tạo kết quả; nbytes của view khác khoảng byte bao trùm và lượng dữ liệu mới cấp phát. **Đọc lại:** NB ô 119–120: Đọc thêm stride 0.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 474,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 334,
+        "questionSha256": "f4660a0d22f5cdfb2d8044ab40766ab11d4d6d380792da9d1d3e07a26881251e",
+        "answerSha256": "b65b6cb148b428e0e7d9de2ea3865b55fbbb29f17b9b54aecd1be9796aac35ba"
+      }
+    },
+    {
+      "id": "B3-021",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một số gần đúng đã được tính và lưu trong float32. Người viết chỉ đổi định dạng từ `.6f` sang `.12f`, không tính lại. Nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Dtype tự đổi thành float64 vì cần 12 chữ số."
+        },
+        {
+          "key": "B",
+          "markdown": "Số byte và giá trị được lưu không đổi; số chữ số hiển thị tăng, không làm số gần đúng chính xác hơn."
+        },
+        {
+          "key": "C",
+          "markdown": "Giá trị float32 trở thành giá trị thực chính xác vì in thêm chữ số."
+        },
+        {
+          "key": "D",
+          "markdown": "float64 luôn biểu diễn chính xác mọi số thực nên chuyển kiểu sau đó sẽ khôi phục giá trị thật."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: định dạng in không đổi dtype.\n- B đúng: đây là thay đổi cách trình bày, không đổi các bit dữ liệu.\n- C sai: hiển thị thêm không bổ sung thông tin chính xác đã mất.\n- D sai: float64 cũng hữu hạn; chuyển từ float32 không khôi phục thông tin đã làm tròn.\n\n**Đối chiếu:** nhóm 1; K05; mức Nền tảng. **Kiến thức và bẫy:** float32/64: bộ nhớ, gần đúng, chữ số in không tăng độ chính xác. **Đọc lại:** BG §1 độ chính xác; NB ô 12–13; AI5 câu 1, DS1 câu 6.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 490,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 352,
+        "questionSha256": "e1ec72c09f1d19461c5322893488593fb0221c0ff3638279372a14d9da69f44a",
+        "answerSha256": "b6ff28752c721ea8295795b578db7aec991c79dcd02a611be551381aded4a575"
+      }
+    },
+    {
+      "id": "B3-022",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nhóm đổi `ds` là list các số sang `x=np.array(ds,dtype=np.int64)` nhưng vẫn tính `[v*2 for v in x]`. Một bạn nói: “Giờ vòng for đã được NumPy biên dịch nên chắc chắn có tốc độ như x*2”. Giải thích nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Đúng vì đổi vùng chứa tự động biên dịch toàn bộ code Python phía sau."
+        },
+        {
+          "key": "B",
+          "markdown": "Đúng vì int64 và float64 đều 8 byte nên dùng cùng cách diễn giải số và mã tính."
+        },
+        {
+          "key": "C",
+          "markdown": "Sai: for vẫn chạy trong Python; x*2 gọi vòng lặp thư viện biên dịch sẵn, chọn cách đọc/tính theo dtype."
+        },
+        {
+          "key": "D",
+          "markdown": "Sai chỉ vì NumPy không thể nhân số nguyên, phải đổi sang float64."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: NumPy không tự JIT vòng for của người dùng khi tạo ndarray.\n- B sai: cùng itemsize không đồng nghĩa cùng kiểu số hay cùng mã tính.\n- C đúng: vẫn phải tính từng số, nhưng nơi xử lý vòng lặp và chi phí đối tượng khác nhau.\n- D sai: NumPy có phép nhân int64; không cần chuyển sang float để vector hoá.\n\n**Đối chiếu:** nhóm 2; K08, K07; mức Vận dụng. **Kiến thức và bẫy:** Vòng lặp thư viện biên dịch sẵn, dtype chọn cách đọc/tính; for Python vẫn còn chi phí; Ufunc từng phần tử; x*2 tương đương multiply; vector hoá phép biến đổi. **Đọc lại:** BG §2; NB ô 23–29; GK câu 7.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 502,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 365,
+        "questionSha256": "73bf4104eea819bfd56f1bc9be410ac0e02481d9901fb36afa376cebe3f019dd",
+        "answerSha256": "503ae9038e3da0668abf563815618e0b7bbd567b3d197e05206fc67810f9504e"
+      }
+    },
+    {
+      "id": "B3-023",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 2, 3], [4, 5, 6]], dtype=np.int32)\nT = A.T\n```\nA liên tục theo hàng. Shape, strides của T và giá trị T[2,1] là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(3,2)`, `(4,12)`, `6`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(3,2)`, `(8,4)`, `6`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(2,3)`, `(12,4)`, `6`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(3,2)`, `(4,12)`, `5`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: hoán thứ tự shape/strides; T[2,1]=A[1,2]=6. T dùng chung với A.\n- B sai: cho rằng transpose sắp lại dữ liệu thành C-order liên tục mới.\n- C sai: tưởng transpose không đổi metadata.\n- D sai: truy về A[1,1], bỏ qua chỉ mục cột 2.\n\n**Đối chiếu:** nhóm 3; K15; mức Nền tảng. **Kiến thức và bẫy:** Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** BG §3 chuyển vị; NB ô 58–59.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 514,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 378,
+        "questionSha256": "718c5c41b68d4417ea39002c05a45f025567648b729b7447a284f149cb2f68de",
+        "answerSha256": "1a114d03b7848c89851a570dfc98e969d354c9dc20cb5aa9dfa9a5c3430ee110"
+      }
+    },
+    {
+      "id": "B3-024",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\ndem = np.array([0, 1, 7, 8, 30], dtype=np.int32)\n```\nCần giữ số đêm lớn hơn 0 và không quá 8. Cách nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`dem[(dem>0) and (dem<=8)]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`dem[(dem>=0) & (dem<8)]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`dem[(dem>0) | (dem<=8)]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`dem[(dem>0) & (dem<=8)]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: and cần truth value đơn, mảng nhiều phần tử gây ValueError; đây không phải vấn đề tốc độ.\n- B sai: lấy thêm 0 và bỏ 8 do sai cả hai biên.\n- C sai: hợp hai điều kiện chọn mọi ô ở ví dụ này.\n- D đúng: hai mask có ngoặc, giao điều kiện, kết quả [1,7,8].\n\n**Đối chiếu:** nhóm 4; K24; mức Vận dụng. **Kiến thức và bẫy:** Điều kiện biên, &, |, ngoặc; and/or đòi truth value đơn. **Đọc lại:** BG §3 nhiều điều kiện; DS2 câu 7.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 530,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 391,
+        "questionSha256": "97164dd7d18c4ee4f57cf9b478170d86ab20ea6c27b3ce587f400c6beab9d6ad",
+        "answerSha256": "57f58c7c036cb8be100b9665bf47f9b3b4797f4e58205e268feb5984cfc63020"
+      }
+    },
+    {
+      "id": "B3-025",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[3, 6, 9], [4, 8, 12]], dtype=np.int32)\nc = np.array([10, 20, 30], dtype=np.int32)\nR = A + c\n```\nR bằng gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[[13,16,19],[24,28,32]]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[[13,26,39],[14,28,42]]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[[30,120,270],[40,160,360]]`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo lỗi vì A có 2 hàng còn c có 3 phần tử."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: lấy c[0] cho hàng 0, c[1] cho hàng 1 và bỏ c[2], không theo quy tắc ghép từ phải.\n- B đúng: (2,3)+(3,)→(2,3), R[i,j]=A[i,j]+c[j].\n- C sai: làm phép nhân thay phép cộng.\n- D sai: c khớp số cột, chiều hàng thiếu được xem như 1.\n\n**Đối chiếu:** nhóm 5; K34, K33; mức Vận dụng. **Kiến thức và bẫy:** Hệ số riêng theo cột, theo hàng, kết hợp cả hai; Broadcast từ phải sang trái; chiều thiếu như 1 không đổi shape gốc. **Đọc lại:** BG §4 cộng theo cột; LAB bài 5.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 545,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 404,
+        "questionSha256": "38996353611b3d864a113fdcd29b8d87211d484c3a3a1198986e79bd84dabc11",
+        "answerSha256": "b7c819b7a5595935dea41c2d41e269b75b7a3dc5c102c0acbbb2d243931555ec"
+      }
+    },
+    {
+      "id": "B3-026",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bốn giá giả lập USD/đêm:\n```python\nx = np.array([10., 10., 30., 30.])\n```\n`np.var(x)` và `np.std(x)` mặc định biểu diễn gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`100 USD²` và `10 USD`, vì ddof=0 chia tổng bình phương độ lệch cho 4."
+        },
+        {
+          "key": "B",
+          "markdown": "`10 USD` và `100 USD²`, vì var và std cùng cách tính."
+        },
+        {
+          "key": "C",
+          "markdown": "`400 USD²` và `20 USD`, vì không cần chia số quan sát."
+        },
+        {
+          "key": "D",
+          "markdown": "`400/3 USD²` và `sqrt(400/3) USD`, vì NumPy mặc định ddof=1."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: mean=20, độ lệch ±10; tổng bình phương 400, chia 4 được 100 rồi căn 10.\n- B sai: đảo var/std và đơn vị.\n- C sai: quên bước lấy trung bình bình phương.\n- D sai: dùng ddof=1 thay mặc định 0; công thức đó không phải lời gọi đã cho.\n\n**Đối chiếu:** nhóm 6; K41; mức Nền tảng. **Kiến thức và bẫy:** Var/std ddof=0, đơn vị; cùng mean khác phân tán. **Đọc lại:** BG §5 độ phân tán; NB ô 104–105.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 562,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 417,
+        "questionSha256": "579c2048c6c84c42a81cd0bf0be6fdd396f3e2d84c6abefc5926d3647756e757",
+        "answerSha256": "f469462b02c3492376b32860c3714bc9a3d30d4fe54519f5921374083c32a483"
+      }
+    },
+    {
+      "id": "B3-027",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Sáu giá giả lập đều hợp lệ, USD/đêm:\n```python\ngia = np.array([0., 20., 20., 40., 60., 100.])\nty_le = (gia <= 40).mean()\n```\nty_le có giá trị và ý nghĩa nào?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`3/6`: tỷ lệ trong sáu chỗ ở có giá không quá 40."
+        },
+        {
+          "key": "B",
+          "markdown": "`4/4`: tỷ lệ trong chính các giá được chọn, nên luôn bằng 1."
+        },
+        {
+          "key": "C",
+          "markdown": "`4/6`: tỷ lệ trong sáu chỗ ở có giá không quá 40, gồm cả giá 0 hợp lệ."
+        },
+        {
+          "key": "D",
+          "markdown": "`80/6`: tổng các giá được chọn chia tổng số chỗ ở."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: đếm với <40 được ba ô, nhưng đề dùng <=40 nên phải lấy thêm giá 40.\n- B sai: mẫu số phải là toàn bộ 6 phần tử mask, không phải riêng số True.\n- C đúng: mask [True,True,True,True,False,False], True tính như 1 khi lấy mean.\n- D sai: mean mask lấy số True chia số quan sát, không cộng giá.\n\n**Đối chiếu:** nhóm 6; K42, K24; mức Vận dụng. **Kiến thức và bẫy:** Mean mask bool là tỷ lệ True với đúng tập đối tượng và mẫu số; Điều kiện biên, &, |, ngoặc; and/or đòi truth value đơn. **Đọc lại:** LAB bài 8 tỷ lệ; BG §3 điều kiện biên.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 578,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 430,
+        "questionSha256": "4a78fbedbeffe6bb7eeeea1a7cd55fc7a7f5ed479ebb22da94b14eb908abdd8d",
+        "answerSha256": "1ec431dc68e1cd0e2635538d7c934044e3162f3dffd8d4f534a521e52a419558"
+      }
+    },
+    {
+      "id": "B3-028",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A liên tục theo hàng, V không rỗng:\n```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\nV = A[::2, 1::2].T\n```\nTính (i) V.shape, V.strides và V.nbytes; (ii) đoạn byte liên tục ngắn nhất chứa trọn các ô V tính cả khoảng bỏ qua và toàn ô cuối, nêu hai offset đầu/cuối từ đầu A; (iii) V cấp phát bao nhiêu byte dữ liệu phần tử mới?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Trước T, các ô có offset từ đầu A là 4,12,36,44 byte. Sau T, V=`[[1,9],[3,11]]`, shape (2,2), strides (8,32). V.nbytes=4*4=16 byte. Ô có offset nhỏ nhất 4, ô cuối bắt đầu ở 44 và chiếm [44,48), nên đoạn bao trùm [4,48) dài `44−4+4=44` byte. V dùng chung A, không cấp phát dữ liệu phần tử mới (0 byte); metadata view vẫn mới. Ba con số 16,44,0 trả lời ba câu hỏi khác nhau.\n\n**Hướng dẫn chấm:** 2 điểm: shape/strides/nbytes 0,75; hai đầu và chiều dài bao trùm 0,75; cấp phát/dùng chung 0,5.\n\n**Đối chiếu:** nhóm 3; K19, K15; mức Phân loại. **Kiến thức và bẫy:** nbytes của view khác khoảng byte bao trùm và lượng dữ liệu mới cấp phát; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** BG §1 nbytes, §3 strides; AI5 câu 11.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 595,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 443,
+        "questionSha256": "ff1bb00a1c6e1ab021db2c521cb48f02b4152c9218249da50a0a206442b543af",
+        "answerSha256": "1760c5c99acefd4452b52fbd97d295e8832a76236c1847347b2950c843201f6b"
+      }
+    },
+    {
+      "id": "B3-029",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\nidx = np.ix_([2, 0], [1, 3])\nB = A[idx]\nB[:] = -1\nA[idx] = np.array([50, 60], dtype=np.int32)\n```\nNêu shape các mảng chỉ mục trong idx, B sau cùng, A sau cùng. Vì sao sửa B và gán trực tiếp A[idx] có tác động khác? Vế phải được ghép theo hàng hay cột của vùng chọn? Nếu riêng dòng cuối thay RHS bằng `[50,60,70]`, phép gán có hợp lệ không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "idx gồm mảng hàng shape (2,1) và cột shape (1,2); ix_ chỉ tạo bộ chỉ mục. Đọc A[idx] mới tạo B shape (2,2) độc lập với A, ban đầu `[[9,11],[1,3]]`, sau sửa thành toàn −1 và không đổi nữa. Gán trực tiếp sửa A[2,1]=50, A[2,3]=60, A[0,1]=50, A[0,3]=60. A=`[[0,50,2,60],[4,5,6,7],[8,50,10,60]]`. RHS (2,) được so như (1,2), lặp qua hàng của vùng chọn (2,2): ô vùng chọn [i,j] nhận RHS[j]. Không phải mỗi hàng nhận một số. RHS [50,60,70] có shape (3,), không ghép được chiều cuối 2 của vùng chọn, gây ValueError.\n\n**Hướng dẫn chấm:** 2 điểm: shape chỉ mục/B và copy 0,5; B sau cùng 0,25; A/ánh xạ 0,75; broadcasting RHS đúng và trường hợp lỗi 0,5.\n\n**Đối chiếu:** nhóm 4; K30, K26; mức Vận dụng. **Kiến thức và bẫy:** ix_ chỉ tạo chỉ mục; đọc tạo copy, gán trực tiếp và broadcasting RHS; Hai mảng chỉ mục ghép từng cặp; ix_ chọn tích hàng × cột. **Đọc lại:** BG §3 ix_ đọc/gán; NB ô 78–83.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 604,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 453,
+        "questionSha256": "4ace60491d4561588fbfff118eca91f7e01f9b161adddc288aad3cd1be736d81",
+        "answerSha256": "d4f2e9df40571deb4e20fd427f36d942c65ca47146c1989f623ffe112257f6fe"
+      }
+    },
+    {
+      "id": "B3-030",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một kho, mỗi cột là một tuần; cần tỷ trọng từng tuần trong tổng của chính kho đó:\n```python\nD = np.array([[2., 6.], [3., 9.]])\nP = D / D.sum(axis=1)\n```\n(a) Code có lỗi chạy không? Nêu P hiện tại và nó chia mỗi cột cho số nào. (b) Sửa một dòng NumPy. (c) Nêu kết quả đúng, ý nghĩa và cách kiểm chứng theo hàng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) Không lỗi: D (2,2), tổng hàng (2,) là [8,12]; broadcasting chia cột j cho tổng hàng j, dù đó không phải kho chứa phần tử. P=`[[1/4,1/2],[3/8,3/4]]`. (b) `P=D/D.sum(axis=1,keepdims=True)`. (c) Mẫu số (2,1) là [[8],[12]], P đúng=`[[1/4,3/4],[1/4,3/4]]`, float64, shape (2,2). P[i,j]=D[i,j]/sum(D[i,:]); mỗi hàng biểu diễn phân bố lượt của chính kho qua các tuần. Kiểm tay 6/8=3/4 và `np.allclose(P.sum(axis=1),1,rtol=0,atol=1e-12)`.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm shape/kết quả/ghép sai; (b) 1 điểm sửa; (c) 1 điểm gồm ý nghĩa/kết quả 0,5 và kiểm chứng 0,5.\n\n**Đối chiếu:** nhóm 5; K38, K39; mức Phân loại. **Kiến thức và bẫy:** Chia cho tổng hàng/cột: shape, mẫu số và ý nghĩa khác nhau; Kiểm chứng ý nghĩa bằng ô tính tay và bất biến; assert chỉ là kiểm một số yêu cầu. **Đọc lại:** BG §4–5; GK câu 21 (biến thể vuông và kiểm chứng).\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 615,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 463,
+        "questionSha256": "bf100850ecfda3a39407d87e9c5636d4a0cacabc7f24b85effdeb03201066eba",
+        "answerSha256": "b11c2d84d6ea867db5b60d408dde6d2ed3c4599336434c40cdbea284daea6b1e"
+      }
+    },
+    {
+      "id": "B3-MR05",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\nx = np.array([0., 10., 20., 30.])\np = np.percentile(x, 25, method='linear')\nq = np.quantile(x, 0.25, method='linear')\n```\nVới phương pháp linear, vị trí là `(n-1)*t`, nội suy tuyến tính giữa hai vị trí kề nhau (t là tỷ lệ 0–1). Cặp `(p,q)` bằng gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(10,10)`, vì phân vị phải là một ô có sẵn."
+        },
+        {
+          "key": "B",
+          "markdown": "`(0.075,7.5)`, vì percentile cũng nhận tỷ lệ 0–1."
+        },
+        {
+          "key": "C",
+          "markdown": "`(7.5,0.075)`, vì quantile nhận phần trăm."
+        },
+        {
+          "key": "D",
+          "markdown": "`(7.5,7.5)`, phân vị có thể nằm giữa hai giá trị dữ liệu."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: bỏ qua nội suy được đề cung cấp.\n- B sai: nhầm thang đo đối số của percentile; 25 là 25%, không phải 0.25%.\n- C sai: nhầm thang đo quantile; 0.25 là 25%, không phải 0.25%.\n- D đúng: vị trí 3*0.25=0.75, nội suy 0+0.75*(10−0)=7.5. Hai hàm dùng cùng mức phân vị.\n\n**Đối chiếu:** nhóm 6; K51; mức Bổ sung. **Kiến thức và bẫy:** Percentile 0–100, quantile 0–1; phương pháp linear và nội suy. **Đọc lại:** NB ô 125–127: phân vị tự học.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 626,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 475,
+        "questionSha256": "9062b19381fb32ccbe224689665b300b7e19c6011123f4980c572af81f0a9361",
+        "answerSha256": "88ea928d57bbe8d07e9787d66e629befba5219f4e9b000f9ab1b899a17cd9dcb"
+      }
+    },
+    {
+      "id": "B3-MR06",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\nrng = np.random.default_rng(19)\na = rng.integers(2, 5, size=4)\nb = rng.random(size=4)\n```\nKhông cần nhớ mẫu sinh được. Nhận định nào đúng về miền giá trị?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mỗi a[i] thuộc {2,3,4}; mỗi b[i] thoả 0<=b[i]<1."
+        },
+        {
+          "key": "B",
+          "markdown": "a có thể chứa 5; b có thể bằng đúng 1."
+        },
+        {
+          "key": "C",
+          "markdown": "Mỗi a[i] thuộc {3,4,5}; b luôn lớn hơn 0 và không quá 1."
+        },
+        {
+          "key": "D",
+          "markdown": "Seed 19 khiến mọi giá trị a và b nhỏ hơn 19 và không lặp."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: integers loại cận trên; random lấy trong [0,1); cả hai có shape (4,).\n- B sai: đóng cả hai cận trên vốn bị loại trừ.\n- C sai: mở cận dưới, đóng cận trên trái quy ước.\n- D sai: seed không đặt giới hạn giá trị hay ngăn lặp; miền do hàm/tham số quy định.\n\n**Đối chiếu:** nhóm 6; K52; mức Bổ sung. **Kiến thức và bẫy:** integers cận trên loại trừ; random thuộc [0,1). **Đọc lại:** NB ô 128–131: tra cứu thêm tự học.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 643,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 488,
+        "questionSha256": "803da3e43cefe6b834b5ce0e37999868101785edf2ae167f57f9d06a358e0393",
+        "answerSha256": "4aa7ebd8c5a42342309f985a0eccbe1aee58c7cbdab8e6881937e196c15438fd"
+      }
+    },
+    {
+      "id": "B3-031",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([126, 127], dtype=np.int8)\na = x + 1\nb = (x + 1).astype(np.int16)\nc = np.array([int(v) + 1 for v in x], dtype=np.int16)\n```\nSo sánh nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "a, b, c đều `[127,128]`; NumPy tự tăng số byte như int Python."
+        },
+        {
+          "key": "B",
+          "markdown": "a tràn nhưng b và c đều `[127,128]`, vì cứ đổi sang int16 là khôi phục được."
+        },
+        {
+          "key": "C",
+          "markdown": "a và b đều `[127,-128]`; c cũng vậy vì int(v) giữ int8."
+        },
+        {
+          "key": "D",
+          "markdown": "a và b có giá trị `[127,-128]`; c là `[127,128]` vì đã đổi từng scalar sang int Python trước phép cộng."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: int8 cố định 1 byte, không tự mở rộng như int Python.\n- B sai: b đổi sau khi tràn nên giữ giá trị −128 đã sai.\n- C sai: int(v) chuyển sang int Python, phép cộng sau đó không chạy trong int8.\n- D đúng: a dtype int8, b/c dtype int16; c đúng giá trị nhưng vẫn dùng vòng lặp Python.\n\n**Đối chiếu:** nhóm 1; K04; mức Vận dụng. **Kiến thức và bẫy:** Giới hạn int8, khác int Python; astype trước/sau tràn. **Đọc lại:** BG §1 int8; NB ô 10–17.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 668,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 509,
+        "questionSha256": "cbd46024a0fe631cf39f8de238fcc389b7a242b00524392a1766e407809e89dc",
+        "answerSha256": "24ec610612f76460eaed9111813a3f08893e8c78fa1a7165c446ee1b57ee455f"
+      }
+    },
+    {
+      "id": "B3-032",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Khi duyệt liên tiếp một mảng số theo cách bố trí trong bộ nhớ, vì sao cache thường có lợi?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cache nén mảng để loại bớt các phép nhân cần thực hiện."
+        },
+        {
+          "key": "B",
+          "markdown": "Một khối được nạp có thể chứa các số sắp đọc; nếu còn trong cache, truy cập tiếp giảm chờ RAM."
+        },
+        {
+          "key": "C",
+          "markdown": "Cache chỉ tồn tại khi chạy nhiều lõi, một luồng không hưởng lợi."
+        },
+        {
+          "key": "D",
+          "markdown": "Các tham chiếu trong list CPython luôn rải rác nên bảng tham chiếu của list không thể được cache."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: cache không thay đổi số phần tử hay số phép toán về mặt bài toán.\n- B đúng: tận dụng tính gần nhau của dữ liệu; còn phụ thuộc cách duyệt, kích thước và phép tính.\n- C sai: một luồng cũng sử dụng cache.\n- D sai: bảng tham chiếu list cũng liên tiếp; còn có bước truy cập đối tượng được tham chiếu. Không suy ra NumPy luôn nhanh hơn ở mọi kích thước.\n\n**Đối chiếu:** nhóm 2; K09; mức Nền tảng. **Kiến thức và bẫy:** Truy cập liên tiếp và cache; không suy ra tốc độ từ một yếu tố. **Đọc lại:** BG §2 cache; NB ô 30.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 686,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 522,
+        "questionSha256": "235db20e7eec1d2e47252fed4c9a20e5bcf2fd66ba089bd81c439276e756960d",
+        "answerSha256": "8d8f3a1a3bc517e5cf90891c159239be93fc26c36e7358ad1cd447d0cefcf198"
+      }
+    },
+    {
+      "id": "B3-033",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 5, 8], [3, 6, 9]], dtype=np.int32)\nR = A.reshape(3, 2, order='C')\nT = A.T\n```\nHàng thứ hai (chỉ mục 1) của R và T lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[5,6]` và `[8,3]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[8,3]` và `[8,3]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[8,3]` và `[5,6]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[3,8]` và `[6,5]`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: hoán đổi kết quả reshape với transpose.\n- B sai: đồng nhất transpose với đọc lại dãy C-order.\n- C đúng: dãy C là [2,5,8,3,6,9], chia thành cặp; T[1] lấy cột 1 của A.\n- D sai: đảo thứ tự trong mỗi cặp dù không có thao tác đảo chiều.\n\n**Đối chiếu:** nhóm 3; K16, K15; mức Vận dụng. **Kiến thức và bẫy:** Reshape C-order giữ thứ tự đọc và số phần tử; khác transpose; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** BG §3 transpose/reshape; NB ô 58–61.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 698,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 535,
+        "questionSha256": "4f5251ecf764b4dc2968cf6d22f16bfc052d4a0fbc20811f4d884616f25e2a8a",
+        "answerSha256": "85857eb41199ce7611e838c90fcd9f9066ae6508c9198d4a4d69e7c7eae4936d"
+      }
+    },
+    {
+      "id": "B3-034",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([3, 8, 5, 10], dtype=np.int32)\nm = x >= 8\ny = x[m]\ny[:] = 0\nx[m] = 1\nprint(x.sum(), y.sum())\n```\nHai tổng được in ra là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`10,0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`26,0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`10,2`"
+        },
+        {
+          "key": "D",
+          "markdown": "`8,0`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: x thành [3,1,5,1], y độc lập thành [0,0].\n- B sai: tưởng advanced indexing tạo copy nên gán trực tiếp x[m] cũng không sửa được x.\n- C sai: tưởng y vẫn đồng bộ với các ô đã chọn trong x sau phép gán.\n- D sai: tưởng sửa y làm x thành [3,0,5,0] và bỏ qua gán trực tiếp sau đó.\n\n**Đối chiếu:** nhóm 4; K25; mức Vận dụng. **Kiến thức và bẫy:** Đọc A[mask] là copy; gán A[mask]=... sửa đích. **Đọc lại:** BG §3 mask đọc/gán; NB ô 68–71.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 715,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 548,
+        "questionSha256": "4075a0614ff1a1642f9452cf147d122446a41408a59e239e7c091456537cdec1",
+        "answerSha256": "f7006de5121e2496c523d1457b91683b11939d88a440f29e5ea7537e561836e3"
+      }
+    },
+    {
+      "id": "B3-035",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 2, 3], [4, 5, 6]], dtype=np.int32)\nr = np.array([10, 20], dtype=np.int32)\nc = np.array([2, 4, 6], dtype=np.int32)\nB = A + r[:, None] + c\n```\nGiá trị B[1,2] và shape của B là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`28` và `(2,3)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`12` và `(2,3)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`32` và `(2,1)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`32` và `(2,3)`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: chỉ cộng hệ số c[0]=2 thay c[2]=6.\n- B sai: quên số cộng theo hàng r[1]=20.\n- C sai: cho rằng shape cuối bị r[:,None] ép còn một cột.\n- D đúng: (2,3)+(2,1)+(3,)→(2,3); B[i,j]=A[i,j]+r[i]+c[j], nên 6+20+6=32.\n\n**Đối chiếu:** nhóm 5; K34, K33; mức Vận dụng. **Kiến thức và bẫy:** Hệ số riêng theo cột, theo hàng, kết hợp cả hai; Broadcast từ phải sang trái; chiều thiếu như 1 không đổi shape gốc. **Đọc lại:** BG §4 bài tập 5; LAB bài 5.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 735,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 561,
+        "questionSha256": "a2659769ee7ea8bfe5ff743a8a67343f0ca9b6ccad178acce1155c0700ee973a",
+        "answerSha256": "b99ae6e0867986699401abf3e0ddf71a8825c701a4f6a2c6741f1c303408d33a"
+      }
+    },
+    {
+      "id": "B3-036",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai nhóm giá giả lập USD/đêm:\n```python\nX = np.array([40., 40., 40., 40.])\nY = np.array([20., 20., 60., 60.])\n```\nNhận định nào đúng khi dùng std mặc định của NumPy?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cùng mean 40 nên std cũng bằng nhau."
+        },
+        {
+          "key": "B",
+          "markdown": "Mean đều 40; std của X là 0 và Y là 20; chỉ báo mean sẽ bỏ mất khác biệt phân tán."
+        },
+        {
+          "key": "C",
+          "markdown": "Std của Y là 400 USD vì bình phương độ lệch là 400."
+        },
+        {
+          "key": "D",
+          "markdown": "Y có std 20 chứng minh hai nhóm có cùng phân phối."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: cùng vị trí trung tâm không quyết định độ phân tán.\n- B đúng: Y lệch ±20, phương sai 400 USD² và std 20 USD; X không lệch.\n- C sai: nhầm phương sai với độ lệch chuẩn và đơn vị.\n- D sai: vài thống kê không xác định phân phối, và hai dãy ở đây khác nhau rõ ràng.\n\n**Đối chiếu:** nhóm 6; K41; mức Nền tảng. **Kiến thức và bẫy:** Var/std ddof=0, đơn vị; cùng mean khác phân tán. **Đọc lại:** BG §5 độ phân tán; NB ô 104–105.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 753,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 574,
+        "questionSha256": "e996d8cd396cc6057d74e95ab9e662669ffccc291ec18dd8d921cbe9eab396f2",
+        "answerSha256": "8283bf935210153352a7afa8e27eb2aa6380a6cab33902777753cf805dd2f427"
+      }
+    },
+    {
+      "id": "B3-037",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một bản ghi `[mã, giá]`, dữ liệu giả lập:\n```python\nA = np.array([[101, 40], [102, 70], [103, 40], [104, 90]], dtype=np.int32)\nrng = np.random.default_rng(25)\nidx = rng.choice(len(A), size=2, replace=False)\n```\nKhông yêu cầu nhớ output rng. Nếu lần chạy này idx là `[2,0]`, cách nào lấy đúng hai bản ghi theo thứ tự đó và giữ mã đi cùng giá?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`A[[0,2], :]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`A[idx, idx]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`A[idx, :]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`A[:, idx]`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: trả các bản ghi đúng cặp nhưng sai thứ tự yêu cầu: mã 101 trước 103 thay vì 103 trước 101; giá tình cờ bằng nhau không xoá được khác biệt chỉ mục.\n- B sai: ghép cặp chỉ mục hàng/cột; cột 2 còn vượt phạm vi.\n- C đúng: [[103,40],[101,40]], shape (2,2); chọn cùng chỉ mục cho toàn bộ trường của mỗi dòng.\n- D sai: idx là chỉ mục dòng, dùng cho cột sẽ chọn sai chiều và cột 2 vượt phạm vi.\n\n**Đối chiếu:** nhóm 6; K43, K44; mức Vận dụng. **Kiến thức và bẫy:** default_rng, choice, size; lấy mẫu chỉ mục giữ các cột cùng bản ghi; replace=False không trùng vị trí nhưng giá trị có thể trùng; giới hạn size. **Đọc lại:** BG §5 lấy mẫu; LAB bài 8.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 770,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 587,
+        "questionSha256": "208ebc4f19e013f7474e70dfc9923a0c597442bdad23dcf0cabe6aa021c2256f",
+        "answerSha256": "a43050e565686dcba55ecfcb9b1f6870421c8e53c856df7e323b8f6be62d7630"
+      }
+    },
+    {
+      "id": "B3-038",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A ban đầu C-order:\n```python\nA = np.array([[1, 4, 7], [2, 5, 8]], dtype=np.int32)\nT = A.T\nR = T.reshape(2, 3, order='C')\nW = R[:, 1:]\nW[0, 0] = 99\n```\nNêu R và A sau cùng. W[0,0] sửa ô nào của R? Nêu quan hệ dùng chung của `(A,T)`, `(A,R)`, `(R,W)`, `(A,W)` và giải thích bước làm tách dữ liệu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "T được đọc C-order theo dãy [1,2,4,5,7,8]. R trước sửa là [[1,2,4],[5,7,8]], sau sửa [[1,99,4],[5,7,8]]. W[0,0]↔R[0,1]. A vẫn [[1,4,7],[2,5,8]]. Các cặp lần lượt True, False, True, False. T là view của A; reshape theo C ở cách bố trí này phải copy so với A. W chỉ là view của vùng dữ liệu R, không nối trở lại A. Không suy luận copy chỉ từ giá trị hay `.base`.\n\n**Hướng dẫn chấm:** 2 điểm: dãy đọc/R 0,75; A và ánh xạ W 0,5; bốn quan hệ và bước copy 0,75.\n\n**Đối chiếu:** nhóm 3; K18, K15; mức Phân loại. **Kiến thức và bẫy:** Transpose rồi reshape C-order có thể copy; view của copy không nối về gốc; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** BG §3; NB ô 58–59; AI2 câu 14.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 788,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 600,
+        "questionSha256": "deb62d43ec4ad7cb2c53830a5e650d2410281093c8ea7718b83cacce57f00107",
+        "answerSha256": "e6b9f5a47e39e1512d62a1eb327b468d5df2ae620bca6059001be960c8d3aba8"
+      }
+    },
+    {
+      "id": "B3-039",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([4, 9, 6, 12], dtype=np.int32)\nv = x[1:]\nm = v >= 9\nv[:] = [1, 20, 2]\nv[m] = v[m] + 5\n```\nNêu m, v và x sau cùng. Những ô nào thực sự được cộng 5? Vì sao giá trị 20 có/không được cộng? Phân biệt bản sao ở vế phải với mảng bị gán ở vế trái.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "m được tính một lần là [True,False,True], không tự cập nhật. Sau gán v[:] thì v=[1,20,2]; lệnh cuối đọc bản sao v[m]=[1,2], cộng 5 được [6,7], rồi gán trực tiếp vào v[0],v[2]. v cuối [6,20,7], x cuối [4,6,20,7]. Ô x[1] và x[3] được cộng, x[2]=20 không được cộng vì m[1] đã là False. v dùng chung x, còn các kết quả đọc nâng cao không dùng chung dữ liệu v; gán trực tiếp vẫn ghi vào v và qua đó sửa x.\n\n**Hướng dẫn chấm:** 2 điểm: mask giữ nguyên 0,5; v/x 0,75; ô sửa và 20 0,5; phân biệt đọc/gán 0,25.\n\n**Đối chiếu:** nhóm 4; K31, K25, K32; mức Phân loại. **Kiến thức và bẫy:** Mask đã tính không tự tính lại khi mảng số bị sửa; Đọc A[mask] là copy; gán A[mask]=... sửa đích; B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** BG §3 mask đọc/gán; AI2 câu 12 (biến thể không bước âm).\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 800,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 610,
+        "questionSha256": "b0eb15b69d07d20b0f42423e1445f205eed8d43623e2719f02047d46e4c1eda5",
+        "answerSha256": "023b6c4e1a351e40540aafefe5f77ecd7dedc3cad13c9d2c257a3a9defc84513"
+      }
+    },
+    {
+      "id": "B3-040",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Cần trừ trung bình của chính hàng; ma trận giá giả lập USD/đêm:\n```python\nP = np.array([[2., 4.], [10., 14.]])\ntb = P.mean(axis=1)\nlech = P - tb\n```\n(a) Vì sao code vẫn chạy, lech hiện tại là gì? (b) Sửa một biểu thức. (c) Nêu kết quả đúng và kiểm chứng theo hàng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) P (2,2), tb (2,)=[3,12]; chiều cuối khớp nên phép trừ dùng tb[j] cho cột j. lech sai=[[-1,−8],[7,2]]. (b) `lech=P-P.mean(axis=1,keepdims=True)`, hoặc `P-tb[:,None]`. (c) tb đúng để dùng lại có shape (2,1); lech=[[-1,1],[−2,2]], shape (2,2), float64. Ô [i,j] trừ mean của hàng i; mỗi hàng có mean gần 0. Chấp nhận kiểm `np.allclose(lech.mean(axis=1),0,rtol=0,atol=1e-12)` và ví dụ 4−3=1.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm nêu shape, hướng ghép và lech; (b) 1 điểm sửa; (c) 1 điểm kết quả/ý nghĩa và kiểm chứng.\n\n**Đối chiếu:** nhóm 5; K37, K39; mức Vận dụng. **Kiến thức và bẫy:** Trừ trung bình chính hàng; ma trận chữ nhật báo lỗi, ma trận vuông che lỗi; Kiểm chứng ý nghĩa bằng ô tính tay và bất biến; assert chỉ là kiểm một số yêu cầu. **Đọc lại:** BG §5 bài tập 6; LAB bài 6.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 811,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 620,
+        "questionSha256": "0f7da07fefe48d3da46bd3a4a596f53cbf75fe10a031f9733d8e81de28ff04dc",
+        "answerSha256": "8dae12a80424090867fd468df53ea7c2f57ed3aac2b78f5a4fb4aa23686d990d"
+      }
+    },
+    {
+      "id": "B3-MR07",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\nrng = np.random.default_rng(9)\nx = rng.normal(loc=50, scale=5, size=4)\n```\nNhận định nào đúng, không cần biết bốn số cụ thể?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`x.mean()` bắt buộc bằng 50 và `x.std()` bắt buộc bằng 5."
+        },
+        {
+          "key": "B",
+          "markdown": "Mọi x[i] bắt buộc nằm trong [45,55]."
+        },
+        {
+          "key": "C",
+          "markdown": "50 và 5 là trung bình/độ lệch chuẩn của phân phối sinh mẫu; một mẫu bốn số không buộc có đúng hai thống kê đó."
+        },
+        {
+          "key": "D",
+          "markdown": "Vì size=4, mỗi giá trị 45,50,55 xuất hiện đúng số lần để giữ mean 50."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: nhầm tham số phân phối với thống kê chính xác của mẫu nhỏ.\n- B sai: scale=5 không phải giới hạn cứng một độ lệch chuẩn quanh loc.\n- C đúng: kích thước đầu ra (4,), thống kê mẫu có dao động; seed chỉ giúp tái lập trong điều kiện đã nêu.\n- D sai: normal không phân phối các giá trị cố định theo hạn ngạch.\n\n**Đối chiếu:** nhóm 6; K53; mức Bổ sung. **Kiến thức và bẫy:** normal: tham số phân phối khác thống kê chính xác của mẫu nhỏ. **Đọc lại:** NB ô 130–131: normal tự học.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 823,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 632,
+        "questionSha256": "e97d1d7f92e79456306df92874aff318d6cb71cbd134819f3a341206e48f7d5b",
+        "answerSha256": "b15f5ab9816d369c18296b110d670b6e389b943facbb9336c81664b486698bc7"
+      }
+    },
+    {
+      "id": "B3-MR08",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "Quy ước trong câu: với n>1, `var(ddof=d)=sum((x-mean(x))**2)/(n-d)` và std là căn bậc hai của var. ddof=0 mô tả dãy đã cho; ddof=1 thường dùng khi ước lượng phương sai tổng thể từ mẫu theo giả định phù hợp.\n```python\nx = np.array([2., 4., 6.])  # đơn vị USD\n```\nTính var/std với ddof=0 và ddof=1, ghi đơn vị; vì sao không thể nói hai lời gọi NumPy tính mâu thuẫn? Chấp nhận căn hoặc làm tròn 6 chữ số sau dấu chấm.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Mean=4, tổng bình phương độ lệch=4+0+4=8. ddof=0: var=8/3 USD², std=sqrt(8/3)≈1.632993 USD. ddof=1: var=8/2=4 USD², std=2 USD. Hai cách dùng mẫu số/quy ước khác nhau chứ không mâu thuẫn; lời gọi mặc định NumPy dùng ddof=0. Không yêu cầu chứng minh tính không chệch hay thuộc quy ước ngoài phần đã cho.\n\n**Hướng dẫn chấm:** 2 điểm: tổng bình phương và mẫu số 0,5; bốn kết quả 1 điểm; đơn vị và giải thích 0,5. Với giá trị làm tròn nhận sai số tuyệt đối 5e-7.\n\n**Đối chiếu:** nhóm 6; K54, K41; mức Bổ sung. **Kiến thức và bẫy:** ddof=1 với công thức và quy ước được cung cấp; Var/std ddof=0, đơn vị; cùng mean khác phân tán. **Đọc lại:** BG §5 ghi chú ddof=1; bổ sung theo yêu cầu, cung cấp công thức.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 839,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 645,
+        "questionSha256": "ab8ac7484f1b3532ddb109dee548fb6676e4709a881ad572780f4dae9fe7989e",
+        "answerSha256": "d00633018806c211c6205f6c9ee997726c925751d82372cb45523263b0067193"
+      }
+    },
+    {
+      "id": "B3-041",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Cần lưu 6 số gần đúng, so sánh hai lựa chọn float32 và float64. Phát biểu nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Phần dữ liệu lần lượt 24 và 48 byte; float64 thường lưu gần đúng chính xác hơn nhưng không biểu diễn chính xác mọi số thực."
+        },
+        {
+          "key": "B",
+          "markdown": "Cả hai đều 48 byte vì số chữ số in ra được đặt giống nhau."
+        },
+        {
+          "key": "C",
+          "markdown": "float32 dùng 24 byte và luôn đúng 7 chữ số sau dấu chấm bất kể độ lớn."
+        },
+        {
+          "key": "D",
+          "markdown": "float64 dùng 48 byte và luôn lưu chính xác 1/3."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: 6*4 và 6*8 byte; độ chính xác hữu hạn của cả hai kiểu.\n- B sai: định dạng in không quyết định số byte phần tử.\n- C sai: không có bảo đảm cố định 7 vị trí sau dấu chấm cho mọi độ lớn.\n- D sai: 1/3 là ví dụ cả hai kiểu chỉ lưu gần đúng.\n\n**Đối chiếu:** nhóm 1; K05; mức Nền tảng. **Kiến thức và bẫy:** float32/64: bộ nhớ, gần đúng, chữ số in không tăng độ chính xác. **Đọc lại:** BG §1 float32/64; NB ô 12–13.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 855,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 663,
+        "questionSha256": "d7dd81017a7ed87810d5230d91e1ed6d6aa1558f204972fde4cad8488afefabe",
+        "answerSha256": "91e00a829a776bf670a67d8a51b1fd76df7606662ed37602378c7387c8e7e8a3"
+      }
+    },
+    {
+      "id": "B3-042",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một lần quan sát thấy `x*2` trên mảng số lớn dùng một lõi; `A@B` trên ma trận float64 lớn dùng nhiều lõi. Cả hai nhanh hơn vòng Python tương ứng. Giải thích nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "SIMD nghĩa là phân chia mảng cho nhiều lõi nên x*2 không thể dùng SIMD."
+        },
+        {
+          "key": "B",
+          "markdown": "Tất cả phép NumPy phải dùng nhiều luồng; quan sát một lõi luôn là lỗi đo."
+        },
+        {
+          "key": "C",
+          "markdown": "A@B và x*2 luôn dùng cùng một thư viện BLAS và cùng số luồng."
+        },
+        {
+          "key": "D",
+          "markdown": "Ufunc có thể chạy một luồng với mã biên dịch sẵn và có thể dùng SIMD; nhân ma trận có thể dùng BLAS nhiều luồng tuỳ cấu hình."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: SIMD xử lý nhiều dữ liệu trên lệnh máy, một luồng/một lõi vẫn dùng được.\n- B sai: không có cam kết mọi phép NumPy dùng nhiều luồng.\n- C sai: phép nhân từng phần tử thông thường không đồng nhất với gọi BLAS nhân ma trận.\n- D đúng: phân biệt ba cơ chế; không khẳng định mọi dtype, layout, độ dài đều dùng SIMD hoặc luôn nhanh hơn.\n\n**Đối chiếu:** nhóm 2; K10, K08; mức Vận dụng. **Kiến thức và bẫy:** SIMD khác nhiều luồng; ufunc và nhân ma trận qua BLAS; không cam kết mọi phép đều nhanh; Vòng lặp thư viện biên dịch sẵn, dtype chọn cách đọc/tính; for Python vẫn còn chi phí. **Đọc lại:** BG §2 SIMD/luồng; NB ô 31–32; DS2 câu 8.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 867,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 676,
+        "questionSha256": "fda4f061e30ff20d6dd996bb677178c30d915dfb4078a2333d5faa400ac6126e",
+        "answerSha256": "9c06ef288a879e258e687db64bb32198bb9707faeadeff24c91bdd3d3a9c1710"
+      }
+    },
+    {
+      "id": "B3-043",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([2, 4, 6, 8], dtype=np.int32)\na = x.T\nb = x.reshape(1, 4, order='C')\nc = x[:, None]\n```\nShape của a, b, c lần lượt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(4,1)`, `(1,4)`, `(4,1)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(4,)`, `(1,4)`, `(4,1)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(1,4)`, `(4,1)`, `(4,)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(4,)`, `(4,)`, `(4,)`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: transpose 1D không tự tạo chiều mới.\n- B đúng: a vẫn một chiều; b là một hàng 2D; c thêm chiều cột dài 1.\n- C sai: đảo chiều thêm vào và coi T tạo hàng.\n- D sai: bỏ qua metadata mới do reshape và None. Cả ba ở ví dụ này dùng chung dữ liệu với x.\n\n**Đối chiếu:** nhóm 3; K21, K15; mức Vận dụng. **Kiến thức và bẫy:** Shape (n,), (1,n), (n,1); transpose 1D không tạo cột; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** BG §4; NB ô 91–96; cơ chế transpose §3.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 879,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 689,
+        "questionSha256": "410118e1b1b06e8561b6412874e384be5b248491225a9e3364f9b59cfc72ed80",
+        "answerSha256": "5687314c350c4c7a9053097ad35bff1f5afdcbfa574bb6a85dd43057e40ca93a"
+      }
+    },
+    {
+      "id": "B3-044",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 3, 5], [7, 9, 11], [13, 15, 17]], dtype=np.int32)\np = A[[0, 2], [1, 2]]\nq = A[np.ix_([0, 2], [1, 2])]\n```\nBộ ba `(p.shape, q.shape, q[1,0])` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`((2,),(2,),15)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`((2,),(2,2),17)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`((2,),(2,2),15)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`((2,2),(2,2),15)`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: tưởng ix_ cũng ghép cặp để q còn một chiều; khi đó q[1,0] không hợp lệ.\n- B sai: xác định shape đúng nhưng nhầm q[1,0] với ô A[2,2] thay A[2,1].\n- C đúng: p=[3,17], q=[[3,5],[15,17]]; q[1,0] là A[2,1]=15.\n- D sai: tưởng hai danh sách chỉ mục tự lấy mọi giao điểm cho p. Cả hai khi đọc đều không dùng chung dữ liệu A.\n\n**Đối chiếu:** nhóm 4; K26; mức Vận dụng. **Kiến thức và bẫy:** Hai mảng chỉ mục ghép từng cặp; ix_ chọn tích hàng × cột. **Đọc lại:** BG §3; LAB bài 4; AI5 câu 14.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 897,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 702,
+        "questionSha256": "6ca8449c7e01fc4a981c2dfc80ca1951228c9c81d6538256c32747e0e506cc00",
+        "answerSha256": "e9fd1dbf96ccbf615d612a68657c7a214bd8e81d862b7f35d3bb1d70f92e6dbd"
+      }
+    },
+    {
+      "id": "B3-045",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[2, 4, 6], [10, 20, 30]], dtype=np.int32)\n```\nCần cộng giá trị đầu của chính hàng vào mọi phần tử hàng đó, giữ shape `(2,3)`. Biểu thức nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`A + A[:,0:1]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`A + A[:,0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`A + A[0,:]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`A + A[:,0].reshape(1,2,order=\"C\")`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: (2,3)+(2,1)→(2,3), R[i,j]=A[i,j]+A[i,0]. Có thể dùng A[:,0][:,None] hay np.newaxis.\n- B sai: A[:,0] shape (2,), chiều cuối không khớp 3.\n- C sai: (3,) cộng theo cột các số của hàng đầu; chạy được nhưng không đúng ý nghĩa.\n- D sai: thêm chiều thành (1,2) vẫn không khớp chiều cuối.\n\n**Đối chiếu:** nhóm 5; K35, K12, K34; mức Vận dụng. **Kiến thức và bẫy:** Thêm chiều bằng None/newaxis/reshape; A[:,0] khác A[:,0:1]; Chỉ mục hàng/cột, chỉ mục âm; chỉ mục nguyên bỏ chiều, slicing giữ chiều; Hệ số riêng theo cột, theo hàng, kết hợp cả hai. **Đọc lại:** BG §4 giữ cột; NB ô 95–96.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 914,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 715,
+        "questionSha256": "e401db042df8e927d69b37a4302a0b6f4e216cdc3c748de1dd57ed0861c2ac16",
+        "answerSha256": "b7b62bff39e621235fc77005e4e9fbc42dec7335ee09572782561c96197c710d"
+      }
+    },
+    {
+      "id": "B3-046",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\ngia = np.array([40, 40, 70, 90], dtype=np.int32)\nrng = np.random.default_rng(6)\nidx = rng.choice(gia.size, size=3, replace=False)\n```\nNhận định nào đúng, không cần nhớ idx cụ thể?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mẫu chắc chắn có ba giá trị số khác nhau vì replace=False."
+        },
+        {
+          "key": "B",
+          "markdown": "Có thể chọn lại cùng một vị trí nhiều lần nhưng không được trùng giá trị."
+        },
+        {
+          "key": "C",
+          "markdown": "Có thể tăng size lên 5 mà vẫn replace=False vì có thể đọc lại các vị trí."
+        },
+        {
+          "key": "D",
+          "markdown": "Ba vị trí không trùng; các giá trị được lấy vẫn có thể trùng, chẳng hạn 40 ở hai vị trí khác nhau."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: không hoàn lại là quy tắc theo vị trí, không khử trùng giá trị.\n- B sai: đảo quy tắc vị trí/giá trị.\n- C sai: không thể chọn 5 vị trí khác nhau từ 4, lời gọi sẽ gây ValueError.\n- D đúng: ví dụ chỉ mục [0,1,2] cho [40,40,70] mà vẫn không lặp vị trí.\n\n**Đối chiếu:** nhóm 6; K44, K43; mức Nền tảng. **Kiến thức và bẫy:** replace=False không trùng vị trí nhưng giá trị có thể trùng; giới hạn size; default_rng, choice, size; lấy mẫu chỉ mục giữ các cột cùng bản ghi. **Đọc lại:** BG §5 lấy mẫu; LAB bài 8.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 929,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 728,
+        "questionSha256": "423eae28985f5f698a41050771b98f08262f98ba0cdd0e299cfcb703ff4f6e0f",
+        "answerSha256": "e4d320633cf638766762cb24e7e6b440a8da3ce4d3e6e80fab368ba4a7be2367"
+      }
+    },
+    {
+      "id": "B3-047",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nrng = np.random.default_rng(28)\na = rng.choice(8, size=3, replace=False)\nb = rng.choice(8, size=3, replace=False)\nrng2 = np.random.default_rng(28)\nc = rng2.choice(8, size=3, replace=False)\n```\nKhông tính các chỉ mục cụ thể. Trong cùng môi trường và thứ tự gọi, c tái lập a hay b? Hai lời gọi trên cùng rng có phải khởi tạo lại không? Có bắt buộc b khác a, hoặc mẫu có mean bằng toàn bộ dữ liệu không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "c tái lập a vì cùng seed và cùng lời gọi đầu tiên trên bộ sinh mới. Lời gọi tạo b dùng trạng thái tiếp theo của rng, không tự khởi tạo lại seed. Không thể cam kết hai mẫu hữu hạn bắt buộc khác nhau: chúng có thể tình cờ giống. Mỗi mảng có shape (3,), chỉ mục trong 0..7 và không lặp trong chính lần gọi; hai lần gọi vẫn có thể chung vị trí. Seed không bảo đảm tính đại diện hay mean mẫu bằng mean toàn bộ.\n\n**Hướng dẫn chấm:** 2 điểm: c=a và lý do 0,75; trạng thái tiếp theo 0,5; không cam kết khác/đại diện/mean 0,5; không lặp trong mỗi lần gọi khác không lặp giữa hai lần 0,25.\n\n**Đối chiếu:** nhóm 6; K45; mức Vận dụng. **Kiến thức và bẫy:** Seed tái lập theo môi trường/thứ tự gọi; gọi tiếp khác khởi tạo lại; không bảo đảm đại diện/khác mẫu. **Đọc lại:** BG §5 seed; NB ô 128–129; LAB bài 8.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 946,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 741,
+        "questionSha256": "8a8dac04f89484280252cc80ed782b0697195268ffd654bff94e875254c4ff19",
+        "answerSha256": "948e0e8c9d1d160b1c30fff1b994c25eb60e44d2762cd031c9d0398fe6987822"
+      }
+    },
+    {
+      "id": "B3-048",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A liên tục C-order:\n```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\nV = A[:, ::2]\nR = V.reshape(2, 3, order='C')\nS = A[:, 1:3].reshape(2, 3, order='C')\nR[1, 1] = 50\nS[0, 0] = 90\n```\nNêu hàng cuối A sau cùng; giá trị R[1,1] ban đầu ánh xạ ô nào của A? R, S dùng chung với A như thế nào? Giải thích vì sao hai reshape có kết quả bộ nhớ khác nhau.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "V đọc [0,2,4,6,8,10] với bước đều 8 byte; R dùng chung A và R[1,1]↔A[2,0], ban đầu là 8, nay 50. A[2] cuối [50,9,10,11]. S đọc [1,2,5,6,9,10] theo C-order, bước 4 rồi 12 byte xen kẽ nên reshape này copy so với A; S[0,0]=90 không sửa A[0,1] (vẫn 1). Quan hệ shares_memory(A,R)=True, shares_memory(A,S)=False. Cả V và lát cắt A[:,1:3] đều không C-contiguous, nhưng điều đó một mình không quyết định có copy.\n\n**Hướng dẫn chấm:** 2 điểm: hàng A và ánh xạ 0,75; hai quan hệ và tác động S 0,5; giải thích bước đều/không đều, không suy quá mức 0,75.\n\n**Đối chiếu:** nhóm 3; K17, K32; mức Phân loại. **Kiến thức và bẫy:** Reshape mảng không liên tục có thể view hoặc copy; kiểm shares_memory và ô bị sửa; B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** BG §3 reshape; DS1 câu 14; AI2 câu 2.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 957,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 751,
+        "questionSha256": "eb2876ddef214239fcb8d4a25c85edbb72a2905a9ab7a49443f96bdf2395025c",
+        "answerSha256": "817dcd5a184a3af4385a3bed8dada3e8d99912ead7e8ee550f4c296d2122864f"
+      }
+    },
+    {
+      "id": "B3-049",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([2, 4, 6, 8], dtype=np.int32)\nB = A\nC = A.copy()\nV = C[1:3]\nB[0] = 20\nV[0] = 40\n```\nCho A, C sau cùng và giải thích ba quan hệ `(A,B)`, `(A,C)`, `(C,V)`. Ngay sau dòng tạo C, A và C có cùng giá trị không; điều đó có đủ chứng minh dùng chung không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "A=[20,4,6,8]; C=[2,40,6,8]. B chính là cùng đối tượng ndarray A, dùng chung toàn bộ dữ liệu nên B[0] sửa A[0]. C là copy độc lập với A, dù ngay sau khi tạo có giá trị bằng A. V là view của C; V[0]↔C[1], không sửa A[1]. Shares_memory lần lượt True,False,True. Giá trị bằng nhau chỉ kiểm nội dung, không quyết định dùng chung; có thể đối chiếu bằng array_equal và shares_memory riêng.\n\n**Hướng dẫn chấm:** 2 điểm: A/C 0,75; alias/copy/view và ánh xạ 0,75; bằng giá trị không suy ra dùng chung 0,5.\n\n**Đối chiếu:** nhóm 4; K32; mức Vận dụng. **Kiến thức và bẫy:** B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** BG §3; LAB bài 3.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 970,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 761,
+        "questionSha256": "4140771c33ddea4ce1fcd0a873f2659c9b53445b9cfb1263d14c1aa99ac3cbde",
+        "answerSha256": "353b4117090c4697cec9ce6fdb5ac550ff03446807304f536ddc259ba0cca175"
+      }
+    },
+    {
+      "id": "B3-050",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Hàng là cửa hàng, cột là tuần. Cần thị phần của từng cửa hàng trong tổng lượt toàn hệ thống ở chính tuần đó:\n```python\nD = np.array([[2., 6.], [6., 6.]])\nP = D / D.sum(axis=1, keepdims=True)\nassert np.isclose(P.sum(), 2, rtol=0, atol=1e-12)\n```\n(a) Code và assert có chạy qua không; P đang có ý nghĩa gì? (b) Sửa một dòng tính P. (c) Cho kết quả đúng và một kiểm tra phù hợp hơn với mục tiêu; vì sao chỉ kiểm tổng toàn mảng bằng 2 chưa đủ?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) Đều chạy qua. Mẫu số (2,1)=[[8],[12]], P=[[1/4,3/4],[1/2,1/2]] là tỷ trọng các tuần bên trong từng cửa hàng; mỗi hàng tổng 1 nên toàn mảng tổng 2. (b) `P=D/D.sum(axis=0,keepdims=True)`; cũng nhận `D/D.sum(axis=0)`. (c) Tổng theo tuần (1,2)=[[8,12]], P=[[1/4,1/2],[3/4,1/2]], shape (2,2), float64. P[i,j]=D[i,j]/sum(D[:,j]), so các cửa hàng trong tuần j. Kiểm `np.allclose(P.sum(axis=0),1,rtol=0,atol=1e-12)` và tính tay 6/(2+6)=3/4. Cả hai cách đều có tổng toàn mảng 2 nên assert đó không phân biệt đúng ý nghĩa.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm trạng thái/ý nghĩa; (b) 1 điểm sửa đúng theo tuần; (c) 1 điểm kết quả/kiểm cột và giới hạn assert.\n\n**Đối chiếu:** nhóm 5; K38, K39, K36; mức Phân loại. **Kiến thức và bẫy:** Chia cho tổng hàng/cột: shape, mẫu số và ý nghĩa khác nhau; Kiểm chứng ý nghĩa bằng ô tính tay và bất biến; assert chỉ là kiểm một số yêu cầu; Axis là chiều gộp; tập phần tử, mẫu số; shape sum/mean có/không keepdims. **Đọc lại:** BG §4–5; GK câu 21 (biến thể đổi tập đối tượng).\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 982,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 771,
+        "questionSha256": "c8547db10a0223ff00452ceb494e59f6b70c932c01a4afe181c89ab8193a4713",
+        "answerSha256": "89efe33ba12a34a2b75f88ccc504978e45a5c0913b3d5b8d7067f498ee6e392e"
+      }
+    },
+    {
+      "id": "B3-MR09",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "```python\nx = np.array([2, 4, 6, 8, 10, 12], dtype=np.int32)\n```\nCần đọc các vị trí gốc 5,3,1 theo đúng thứ tự và sửa kết quả phải sửa các ô tương ứng của x. Biểu thức nào đáp ứng cả hai yêu cầu?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`x[[5,3,1]]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`x[5:1:-2]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`x[5:-1:-2]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`x[5:0:-2]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: giá trị/thứ tự đúng nhưng đọc advanced indexing tạo copy.\n- B sai: stop=1 không được lấy, chỉ chọn 5,3.\n- C sai: -1 được chuẩn hoá là chỉ mục 5, nên start và stop trùng nhau với bước âm, kết quả rỗng.\n- D đúng: chọn 5,3,1, view stride −8 byte; ô đầu ở x[5], không phải địa chỉ âm.\n\n**Đối chiếu:** nhóm 3; K56, K32; mức Bổ sung. **Kiến thức và bẫy:** Bước cắt âm, thứ tự duyệt, stride âm, offset từ gốc không phải địa chỉ âm; B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** NB ô 84–85: lát cắt ngược đọc thêm; AI5 câu 5.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 994,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 783,
+        "questionSha256": "aaeafd138814178f921a76fabe2888fac3a75820af22a4c3cc84f49f8b98f838",
+        "answerSha256": "c1fdc4db34aaf26ed366a5e3e95545060004870f01527ddc92cf501a7c6495a8"
+      }
+    },
+    {
+      "id": "B3-MR10",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "A ban đầu C-order:\n```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\nV = A[1:, ::-2].T\nW = V[::-1, :]\nW[0, 1] = 99\n```\nTính shape/strides W, offset ô đầu W từ đầu A; chỉ ra ô A bị sửa và offset của ô đó từ đầu A. Tại sao stride âm không có nghĩa địa chỉ vật lý âm?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Lát cắt A[1:,::-2] chọn hàng 1,2 và cột 3,1: [[7,5],[11,9]], strides (16,−8). Tạo V=[[7,11],[5,9]], strides (−8,16); đảo hàng V tạo W=[[5,9],[7,11]], shape (2,2), strides (8,16), ô đầu A[1,1] offset 20. W[0,1]↔A[2,1], offset 20+0*8+1*16=36, đổi 9 thành 99. Tất cả V,W dùng chung A. Stride âm là bước dịch so với ô đầu view nằm ở vị trí phù hợp trong dữ liệu A; không phải một địa chỉ tuyệt đối âm. Đảo tiếp chiều âm có thể tạo stride dương như W.\n\n**Hướng dẫn chấm:** 2 điểm: shape/strides/offset đầu 0,75; ô và offset bị sửa 0,75; dùng chung và giải thích dấu stride 0,5.\n\n**Đối chiếu:** nhóm 3; K56, K14, K15; mức Bổ sung. **Kiến thức và bẫy:** Bước cắt âm, thứ tự duyệt, stride âm, offset từ gốc không phải địa chỉ âm; Offset từ đầu view khác đầu gốc; ánh xạ phép gán qua view; Transpose đổi shape/strides; T[i,j] ánh xạ A[j,i]. **Đọc lại:** NB ô 84–85 đọc thêm; AI1 câu 2; DS2 câu 10.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1009,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 796,
+        "questionSha256": "1f0a896ab87f3872fc671a2dc6856618ddc9e5fc212e5f3e18be5ec564365634",
+        "answerSha256": "44c9bbdc471798e870825a49cf92a38601800c4a3d88752d2edb3671bac55952"
+      }
+    },
+    {
+      "id": "B3-051",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([1.0, 1.0], dtype=np.float64)\ny = np.array([1.0 + 1e-9, 1.0 + 1e-7], dtype=np.float64)\nm = np.isclose(x, y, rtol=0, atol=1e-8)\nt = np.allclose(x, y, rtol=0, atol=1e-8)\n```\nm và t lần lượt là gì? Sai số ở đây được chấp nhận khi chênh lệch tuyệt đối không quá 1e-8.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[True,True]` và True"
+        },
+        {
+          "key": "B",
+          "markdown": "`[True,False]` và False"
+        },
+        {
+          "key": "C",
+          "markdown": "`[False,False]` và False"
+        },
+        {
+          "key": "D",
+          "markdown": "`[True,False]` và True"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: bỏ qua tolerance đã chỉ định, có thể đã áp rtol mặc định thay rtol=0.\n- B đúng: sai lệch thứ nhất khoảng 1e-9 trong ngưỡng, thứ hai khoảng 1e-7 ngoài ngưỡng; allclose cần mọi cặp gần nhau.\n- C sai: dùng so sánh bằng tuyệt đối thay so gần đúng.\n- D sai: hiểu allclose như chỉ cần ít nhất một cặp gần nhau.\n\n**Đối chiếu:** nhóm 1; K06; mức Vận dụng. **Kiến thức và bẫy:** So sánh số thực với isclose/allclose và tolerance cho trước. **Đọc lại:** NB ô 18–19; LAB bài 6 assert_allclose.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1028,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 814,
+        "questionSha256": "14ff1b4e33287e5a6bf8ba5b209c4377414a3c81373545aad9a6187972e8ed9b",
+        "answerSha256": "b484f22059adec92a3a00fb562e80f3c21ae276ab82bc2907ed179d7f5fa2899"
+      }
+    },
+    {
+      "id": "B3-052",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nhóm muốn so vòng for Python với phép toán mảng cho cùng phép nhân 2. Phương án đo nào hỗ trợ kết luận đáng tin cậy nhất?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Chuẩn bị hai đầu vào tương đương ngoài phần đo, kiểm kết quả bằng nhau, đo lặp ở vài kích thước; báo môi trường và giới hạn kết luận."
+        },
+        {
+          "key": "B",
+          "markdown": "Đo một lần cho NumPy gồm cả tạo mảng, còn for dùng list có sẵn; không cần kiểm kết quả vì nhanh là đủ."
+        },
+        {
+          "key": "C",
+          "markdown": "Đổi sang ndarray nhưng vẫn for rồi kết luận mọi phép NumPy dùng nhiều lõi nếu thời gian giảm."
+        },
+        {
+          "key": "D",
+          "markdown": "Dùng tỷ lệ nhanh hơn của máy giảng viên làm kết quả cho máy mình; không cần chạy lại vì dtype giống nhau."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án: A.**\n\n- A đúng: tách chuẩn bị dữ liệu, kiểm tính tương đương, giảm nhiễu và tránh kết luận vượt phạm vi đo.\n- B sai: hai phần đo chứa công việc khác nhau; tốc độ không chứng minh đúng kết quả.\n- C sai: vòng for vẫn chạy trong Python; thời gian không tự chứng minh số luồng hay SIMD.\n- D sai: hiệu năng phụ thuộc môi trường, kích thước, cấu hình và chi phí gọi; không có tỷ lệ cần học thuộc.\n\n**Đối chiếu:** nhóm 2; K11, K08; mức Vận dụng. **Kiến thức và bẫy:** Benchmark tương đương kết quả, chuẩn bị ngoài đo, lặp đo và giới hạn kết luận; Vòng lặp thư viện biên dịch sẵn, dtype chọn cách đọc/tính; for Python vẫn còn chi phí. **Đọc lại:** NB ô 33–35; LAB bài 7; BG kiểm chứng AI.\n\n**Kiểm chứng:** Đã kiểm bằng suy luận; không có code cần thực thi. Không đo hiệu năng thực tế.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1046,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 827,
+        "questionSha256": "b1bd8aca7158d24f8432bc626ac353fa7a026bd39cab7fb614ef890c6be83e8f",
+        "answerSha256": "d33d30d80d63651c7d37dcbae40b1af0b7e58c3e44156af7ae2051a9ccc1b41d"
+      }
+    },
+    {
+      "id": "B3-053",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.arange(6, dtype=np.int32)\nR = x.reshape(2, 4, order='C')\nprint(x.sum())\n```\nĐiều gì xảy ra nếu không bắt ngoại lệ?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "R tự thêm hai số 0, rồi in 15."
+        },
+        {
+          "key": "B",
+          "markdown": "R chỉ cần metadata mới nên reshape luôn thành công, rồi in 15."
+        },
+        {
+          "key": "C",
+          "markdown": "reshape gây ValueError vì cần 8 ô nhưng x chỉ có 6; dòng print không được thực hiện."
+        },
+        {
+          "key": "D",
+          "markdown": "reshape chỉ phát cảnh báo và trả view shape (2,4), rồi in 15."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: reshape không tự đệm dữ liệu.\n- B sai: thay metadata vẫn phải giữ số phần tử.\n- C đúng: 2*4≠6, ngoại lệ dừng trước dòng print; x không bị sửa.\n- D sai: đây là ngoại lệ, không phải cảnh báo có thể chạy tiếp bình thường.\n\n**Đối chiếu:** nhóm 3; K22, K16; mức Nền tảng. **Kiến thức và bẫy:** Reshape sai số phần tử gây ngoại lệ; khác cảnh báo và không tự cắt/đệm; Reshape C-order giữ thứ tự đọc và số phần tử; khác transpose. **Đọc lại:** BG §3 reshape giữ số phần tử.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1058,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 840,
+        "questionSha256": "c8c88d2113ca9d11fa18344fd6f18faddb3c280c1940e40c85b9413b5bd9fbef",
+        "answerSha256": "2a67bf13c4e68231c10bdab42a9bbe278ed03c93c789d2e2be8a3f6f4340d5ca"
+      }
+    },
+    {
+      "id": "B3-054",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]], dtype=np.int32)\np = A[[2, 0, 2], [1, 2, 1]]\n```\nGiá trị và shape của p là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[8,3]`, `(2,)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[[8,9,8],[2,3,2],[8,9,8]]`, `(3,3)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[3,8,8]`, `(3,)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[8,3,8]`, `(3,)`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án: D.**\n\n- A sai: tự khử chỉ mục trùng, làm mất một lần đọc A[2,1].\n- B sai: lấy tích hàng × cột như ix_ thay ghép từng cặp.\n- C sai: tự sắp xếp giá trị trong khi chỉ mục phải giữ thứ tự đã cho.\n- D đúng: cặp (2,1),(0,2),(2,1), nên số 8 tham gia hai lần; p.sum()=19. Đọc nâng cao tạo copy.\n\n**Đối chiếu:** nhóm 4; K27, K26; mức Vận dụng. **Kiến thức và bẫy:** Chỉ mục đọc lặp/đổi thứ tự; số lần tham gia tổng; Hai mảng chỉ mục ghép từng cặp; ix_ chọn tích hàng × cột. **Đọc lại:** BG §3 lặp chỉ mục; NB ô 76–77; AI1 câu 1.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1075,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 853,
+        "questionSha256": "140fde6a5de4e54cea53d1448199543186d3acf74a79b2558c0e2950969af2c1",
+        "answerSha256": "75afbe1c2bddb2be7d3e08e964b65f172b661b5ad4ddc4269f2c14902d9610ae"
+      }
+    },
+    {
+      "id": "B3-055",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "```python\nA = np.array([[1, 3, 5], [2, 4, 6]], dtype=np.int32)\ns = A.sum(axis=0, keepdims=True)\n```\nGiá trị và shape của s là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[3,7,11]`, `(3,)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[[3,7,11]]`, `(1,3)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[[9],[12]]`, `(2,1)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`21`, `()`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: bỏ qua keepdims=True.\n- B đúng: gộp hai hàng ở từng cột; s[0,j]=A[0,j]+A[1,j], giữ chiều hàng bằng 1.\n- C sai: gộp cột theo axis=1 thay vì axis=0.\n- D sai: tổng toàn mảng thay tổng theo cột. Dtype của phép sum không được hỏi vì có thể phụ thuộc kiểu tích luỹ mặc định của môi trường.\n\n**Đối chiếu:** nhóm 5; K36; mức Nền tảng. **Kiến thức và bẫy:** Axis là chiều gộp; tập phần tử, mẫu số; shape sum/mean có/không keepdims. **Đọc lại:** BG §5 axis/keepdims; NB ô 106–109.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1091,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 866,
+        "questionSha256": "51ee09c16fd46750edce002c9d482eff7a78a63d7c4dfe487c46c74f6ded572a",
+        "answerSha256": "8da4b008d770341840068ad5e64bb7d89a9ee4cb86968e43db63b983a1858027"
+      }
+    },
+    {
+      "id": "B3-056",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai nhóm cùng lấy mẫu hai dòng không hoàn lại từ bảng hợp lệ. Nhóm thứ nhất khởi tạo lại cùng seed trước mỗi lần chạy; nhóm thứ hai đổi seed. Nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cùng seed buộc mean mẫu bằng mean bảng, bất kể dữ liệu."
+        },
+        {
+          "key": "B",
+          "markdown": "Seed quyết định không trùng vị trí; replace=False chỉ giúp kết quả chạy lại giống nhau."
+        },
+        {
+          "key": "C",
+          "markdown": "Cùng seed, môi trường và thứ tự gọi hỗ trợ tái lập; hai seed khác nhau vẫn có thể tình cờ lấy cùng mẫu hữu hạn."
+        },
+        {
+          "key": "D",
+          "markdown": "Đổi seed luôn tạo hai mẫu khác nhau và ít nhất một mẫu chắc chắn đại diện."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án: C.**\n\n- A sai: tái lập không bảo đảm mean hay tính đại diện.\n- B sai: đảo vai trò seed và replace=False.\n- C đúng: tái lập có điều kiện; không có ràng buộc ánh xạ một-một từ seed tới mọi mẫu hữu hạn.\n- D sai: cả tính khác nhau lẫn đại diện đều không được bảo đảm. Ví dụ chọn hết hai vị trí rồi xét tập vị trí thì mọi seed đều cho cùng tập.\n\n**Đối chiếu:** nhóm 6; K45, K44; mức Vận dụng. **Kiến thức và bẫy:** Seed tái lập theo môi trường/thứ tự gọi; gọi tiếp khác khởi tạo lại; không bảo đảm đại diện/khác mẫu; replace=False không trùng vị trí nhưng giá trị có thể trùng; giới hạn size. **Đọc lại:** BG §5 seed; NB ô 114–117; AI1 câu 6.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1107,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 879,
+        "questionSha256": "dee8113bb435a179e9d25c23032648244e51a659ced5d10f194e0df8a81d392e",
+        "answerSha256": "bfa1e7c59ea7951c1afe12c3873a61e4fd5ff161c3b7eed2bd014566ef0cdc93"
+      }
+    },
+    {
+      "id": "B3-057",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Bốn giá USD/đêm giả lập đều đã xác nhận hợp lệ. Máy có thể tính trên cả bốn giá:\n```python\ngia = np.array([10., 20., 30., 140.])\nidx = np.array([0, 1], dtype=np.int64)  # chỉ mục mẫu đã sinh\n```\nMột bạn định thử nhiều seed, giữ mẫu có mean thấp nhất và ghi đó là giá trung bình toàn bộ. Tính mean toàn bộ và mean mẫu hiện tại; viết lệnh cho kết quả cần báo cáo. Giải thích ngắn vai trò hữu ích của đọc mẫu và vì sao không được tự xoá 140.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Mean toàn bộ=(10+20+30+140)/4=50 USD/đêm; mẫu hiện tại [10,20] có mean=15. Báo cáo trung bình của toàn bộ bằng `gia.mean()` (50), không thay bằng mẫu thuận ý; thử seed đến khi có kết quả thấp làm lựa chọn thiên lệch. Mẫu hữu ích để đọc/kiểm tra từng bản ghi khi bảng lớn, không cần thiết để thay phép tính chính xác đã làm được trên cả dữ liệu hợp lệ. Giá 140 đã được xác nhận hợp lệ; cao hơn các giá khác không tự chứng minh sai để xoá. Nếu muốn mô tả mức điển hình bằng median thì phải nói rõ đó là đại lượng khác, không đổi tên thành mean.\n\n**Hướng dẫn chấm:** 2 điểm: hai mean 0,5; lệnh và tập dữ liệu/mẫu số đúng 0,5; phê bình chọn seed 0,5; vai trò mẫu và giữ giá hợp lệ 0,5.\n\n**Đối chiếu:** nhóm 6; K46, K40, K45; mức Vận dụng. **Kiến thức và bẫy:** Thống kê toàn bộ dữ liệu hợp lệ khi có thể; mẫu để đọc kiểm tra, tránh chọn seed thuận ý; Mean, median, min/max, sum; giá cực lớn và mức giá điển hình; Seed tái lập theo môi trường/thứ tự gọi; gọi tiếp khác khởi tạo lại; không bảo đảm đại diện/khác mẫu. **Đọc lại:** BG §5 diễn giải mẫu; LAB bài 8; AI2 câu 3.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1119,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 892,
+        "questionSha256": "bfcbfe7d7e39f31d6606a504729e52d989b124d67a1c5b2ad8d515b94bc5235c",
+        "answerSha256": "259f960fad7cdc532fe9d79fc9ba5bfe03c87159d09e9f2fddd3034fa4e60be0"
+      }
+    },
+    {
+      "id": "B3-058",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "A C-order có các giá trị đôi một khác nhau:\n```python\nA = np.arange(12, dtype=np.int32).reshape(3, 4, order='C')\n```\nCần B hai chiều cùng dtype, shape `(3,2)`, đọc đúng thứ tự:\n```\nB = [[A[0,0], A[0,2]],\n     [A[1,0], A[1,2]],\n     [A[2,1], A[2,3]]]\n```\nB có thể là view không di chuyển dữ liệu không? Dùng bước byte của các ô đầu hàng để giải thích. Sau đó viết một biểu thức NumPy tạo B đúng giá trị bằng bản sao, không dùng for hay API bộ nhớ khác.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Không thể là view ndarray thông thường như yêu cầu. Các ô đầu hàng bắt đầu ở offset 0,16,36 byte từ đầu A; hai bước hàng 16 và 20 khác nhau, trong khi một stride hàng phải cố định. Dù trong mỗi hàng hai ô cách 8 byte, điều đó chưa đủ. Một biểu thức đúng: `B=A.reshape(-1,order='C')[[0,2,4,6,9,11]].reshape(3,2,order='C')`. Kết quả [[0,2],[4,6],[9,11]], int32, không dùng chung A vì bước đọc bằng list chỉ mục tạo copy; reshape sau chỉ tổ chức bản sao đó. Không dùng as_strided để ép một bố trí không phù hợp.\n\n**Hướng dẫn chấm:** 2 điểm: offset/bước và kết luận không view 1 điểm; biểu thức đúng 0,75; giải thích copy/shape 0,25. Nhận các biểu thức chỉ mục nâng cao tương đương, hoặc ghép các lát cắt bằng API đã học nếu tạo đúng bản sao.\n\n**Đối chiếu:** nhóm 3; K20, K16, K32; mức Phân loại. **Kiến thức và bẫy:** Điều kiện bước byte cố định để bố trí yêu cầu có thể là view; Reshape C-order giữ thứ tự đọc và số phần tử; khác transpose; B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory. **Đọc lại:** BG §3 strides; AI1 câu 14 (biến thể bố trí và tạo bản sao).\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1128,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 902,
+        "questionSha256": "7fc65f562ade1912f0cce34fec325046bfad00f4e51b5b90fc494d22535cfeca",
+        "answerSha256": "e83e75103e746083e06629857a2020d9437faf508a07c9377d4603efd11f4b40"
+      }
+    },
+    {
+      "id": "B3-059",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "```python\nx = np.array([3, 8, 5, 10], dtype=np.int32)\nm = x >= 8\ny = x[1:4:2]\ny[:] = 0\nx[m] = 1\n```\nCho x, y sau cùng và hai tổng x.sum(), y.sum(). Nêu quan hệ bộ nhớ và ánh xạ các ô y; mask m có được tính lại sau khi sửa y không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "y là basic view, y[0]↔x[1], y[1]↔x[3], stride 8 byte; shares_memory True. Sửa y thành 0 làm x=[3,0,5,0]. m vẫn [False,True,False,True], không tính lại; gán x[m]=1 làm x=[3,1,5,1] và y nhìn thấy [1,1]. Hai tổng 10 và 2. Dù giá trị x ở các vị trí đó đã dưới 8, mask cũ vẫn chọn chúng.\n\n**Hướng dẫn chấm:** 2 điểm: x/y và hai tổng 0,75; view/ánh xạ/strides 0,75; mask không tính lại và tác động gán 0,5.\n\n**Đối chiếu:** nhóm 4; K32, K25, K31; mức Vận dụng. **Kiến thức và bẫy:** B=A, copy, basic view, advanced copy; giá trị bằng nhau khác shares_memory; Đọc A[mask] là copy; gán A[mask]=... sửa đích; Mask đã tính không tự tính lại khi mảng số bị sửa. **Đọc lại:** BG §3 view/copy, mask đọc/gán.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1142,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 912,
+        "questionSha256": "f2aa394f810272ba2b906e49b5edd634994430fabc37b2e9c2fe305a02889c4b",
+        "answerSha256": "6909ce270fd41fb3eb6eca649e3871702181a561cbef98d6649baf8bbeaaafd4"
+      }
+    },
+    {
+      "id": "B3-060",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Hàng là chỗ ở, cột là hai kỳ thu thập theo thứ tự thời gian. Cần chênh lệch so với mean chính hàng, đồng thời giữ nguyên ý nghĩa và thứ tự cột:\n```python\nP = np.array([[2., 6.], [10., 14.]])\nZ = P - P.mean(axis=1, keepdims=True)\nZ = Z[:, [1, 0]]\nassert np.allclose(Z.mean(axis=1), 0, rtol=0, atol=1e-12)\n```\n(a) Assert có qua không; code đã đúng toàn bộ yêu cầu chưa? (b) Viết một biểu thức tạo Z đúng. (c) Nêu kết quả đúng và một kiểm tra có thể phát hiện việc đảo cột mà kiểm mean hàng không phát hiện.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) Assert qua: đảo cột vẫn giữ mean từng hàng bằng 0. Nhưng Z hiện tại [[2,−2],[2,−2]] đã gán chênh lệch kỳ 2 sang vị trí kỳ 1, sai yêu cầu thứ tự. (b) `Z=P-P.mean(axis=1,keepdims=True)`, bỏ bước chọn [1,0]. Shape (2,2) trừ (2,1) cho (2,2), float64; Z[i,j]=P[i,j]−mean(P[i,:]), giữ j. (c) Đúng là [[−2,2],[−2,2]]. Kiểm ô đầu 2−4=−2, hoặc `np.allclose(Z, np.array([[-2.,2.],[-2.,2.]]),rtol=0,atol=1e-12)`. Bất biến mean hàng là điều kiện cần trong ví dụ, không đủ chứng minh đúng ánh xạ cột. Bước advanced indexing đọc tạo dữ liệu mới và đổi thứ tự; copy không tự bảo đảm đúng ý nghĩa.\n\n**Hướng dẫn chấm:** 3 điểm: (a) 1 điểm nhận assert qua nhưng sai thứ tự; (b) 1 điểm sửa đúng; (c) 1 điểm gồm giá trị/ánh xạ và kiểm tra phân biệt được đảo cột. Không trừ điểm cách kiểm tương đương.\n\n**Đối chiếu:** nhóm 5; K39, K37, K27; mức Phân loại. **Kiến thức và bẫy:** Kiểm chứng ý nghĩa bằng ô tính tay và bất biến; assert chỉ là kiểm một số yêu cầu; Trừ trung bình chính hàng; ma trận chữ nhật báo lỗi, ma trận vuông che lỗi; Chỉ mục đọc lặp/đổi thứ tự; số lần tham gia tổng. **Đọc lại:** BG kiểm chứng AI; LAB bài 6; BG §3 đổi thứ tự chỉ mục.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1153,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 922,
+        "questionSha256": "7eef13b6ac13976184ec545a9c24528cf2d85ee7afb3dd59efc9b160c7bdc300",
+        "answerSha256": "75a60bed7d19e58827a7a86239200497e40a4bde789d2adb61c3198f22c67460"
+      }
+    },
+    {
+      "id": "B3-MR11",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "**Đọc thêm, không yêu cầu trên lớp.** Câu cung cấp quy ước: float32 có 1 bit dấu, 8 bit số mũ lưu E=e+127, 23 bit phần trị sau dấu chấm; số chuẩn hoá hiểu ngầm bit 1 trước dấu chấm. Cho `−13 = −1.101₂ × 2³`. Bộ ba `(bit dấu, E thập phân, các bit đầu phần trị)` nào đúng? Không yêu cầu nhớ struct hay giải mã giá trị đặc biệt.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(0,130,101...)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(1,130,101...)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(1,3,101...)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(1,130,1101...)`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án: B.**\n\n- A sai: bỏ dấu âm, dùng bit dấu cho số dương.\n- B đúng: âm nên dấu 1, E=3+127=130, bỏ bit 1 ngầm và lưu 101 rồi 20 bit 0. Tổng trường bit 1+8+23=32.\n- C sai: lưu số mũ thật thay số mũ đã cộng bias.\n- D sai: lưu cả bit 1 trước dấu chấm vào phần trị 23 bit. Không yêu cầu trường hợp NaN, vô cực hay số dưới chuẩn.\n\n**Đối chiếu:** nhóm 1; K55; mức Bổ sung. **Kiến thức và bẫy:** float32: dấu, số mũ bias 127, 23 bit phần trị và số chuẩn hoá. **Đọc lại:** NB ô 123–124: Đọc thêm, không yêu cầu trên lớp.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1166,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 934,
+        "questionSha256": "d80733d2ea1e5d5e25b59875258b5949f55155b0d6bda88a50b3087739715dcd",
+        "answerSha256": "dcba4ae364b4f2eef59d973cfcff67582e3e0bc5eb51bb7eebbabfe841f318b0"
+      }
+    },
+    {
+      "id": "B3-MR12",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "```python\nA = np.ones((2, 3), dtype=np.int32)\nb = np.array([1, 2, 3], dtype=np.int32)\nV = np.broadcast_to(b, A.shape)\nR = A + b\n```\nNêu giá trị, shape, dtype và nbytes của R; kiểm các cặp `(b,V)`, `(b,R)`, `(A,R)` có dùng chung dữ liệu không. Giải thích câu “broadcasting không nhân bản toàn bộ b” có mâu thuẫn với việc R cần vùng dữ liệu mới không. So sánh V.nbytes với số byte dữ liệu của b và nêu một cách kiểm chứng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "R=[[2,3,4],[2,3,4]], shape (2,3), dtype int32, nbytes=24. Các cặp shares_memory lần lượt True,False,False. V có strides (0,4), nbytes=24 nhưng dùng lại b.nbytes=12, không có bản sao vật lý cho từng hàng. Ngược lại R do phép cộng thông thường tạo ra cần vùng dữ liệu riêng 24 byte cho 6 giá trị; hai phát biểu nói về toán hạng và đầu ra nên không mâu thuẫn. R[i,j]=A[i,j]+b[j], không cần gọi broadcast_to trước A+b. Kiểm bằng assert_array_equal cho R và shares_memory cho từng cặp; sửa b sau đó đổi V nhưng không tự tính lại R. Không lấy nbytes của V làm số byte cấp phát mới.\n\n**Hướng dẫn chấm:** 2 điểm: R/thuộc tính 0,5; ba quan hệ 0,5; phân biệt toán hạng/kết quả và byte 0,75; kiểm chứng phù hợp 0,25.\n\n**Đối chiếu:** nhóm 5; K50, K48, K19; mức Bổ sung. **Kiến thức và bẫy:** broadcast_to: stride 0, chia sẻ, chỉ đọc; broadcasting không sao toán hạng nhưng phép cộng tạo kết quả; Một biểu thức có thể tạo nhiều mảng tạm và nhiều lượt đọc/ghi; nbytes của view khác khoảng byte bao trùm và lượng dữ liệu mới cấp phát. **Đọc lại:** NB ô 40,119–120: mảng tạm, stride 0 đọc thêm.\n\n**Kiểm chứng:** Đã thực thi kiểm chứng bằng NumPy 2.3.5; các assert liên quan đều đạt.",
+      "source": {
+        "questionFile": "Bai3_72_cau_hoi.md",
+        "questionLine": 1178,
+        "answerFile": "Bai3_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 947,
+        "questionSha256": "207af19ee8980a9c7e39ad6124d02981c30ac3e40c3cbf053c19da3cf54a105b",
+        "answerSha256": "255dccd9f97928384f36c5bf2337d360fb3a1781d609ddcde547dbc06121cb12"
+      }
+    }
+  ]
+}

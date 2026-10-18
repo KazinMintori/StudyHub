@@ -1,0 +1,1037 @@
+{
+  "lesson": "06",
+  "items": [
+    {
+      "id": "B6-001",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này ngộ nhận rằng `astype`(str)` khôi phục văn bản mã ban đầu.",
+        "B": "Pandas suy luận id thành số khi đọc. Đổi sang chuỗi sau đó chỉ đổi các số đã mất số 0 đầu.",
+        "C": "Phương án này bỏ qua phép `astype`(str)`, trả số thay chuỗi.",
+        "D": "Phương án này không chính xác do chuỗi chữ số trong CSV có thể được suy luận thành số, không gây lỗi chỉ vì có 0 đầu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nOutput:\n\n```text\n['1', '10', '101', '3']\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-002",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Phù hợp bảng trung gian. Kích thước/tốc độ còn phụ thuộc dữ liệu và cấu hình.",
+        "B": "Phương án này nhầm lẫn hai định dạng lưu trữ.",
+        "C": "Phương án này không chính xác do lưu định dạng mới không sửa sai dữ liệu có trước.",
+        "D": "Phương án này không có cam kết tuyệt đối về kích thước hay tỷ lệ thời gian."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nphù hợp bảng trung gian; kích thước/tốc độ còn phụ thuộc dữ liệu và cấu hình.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-003",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này bỏ qua vai trò tham số truy vấn.",
+        "B": "Phương án này không chính xác do jSON là nội dung phản hồi, không mặc định là bản sao tham số yêu cầu.",
+        "C": "R.url cho địa chỉ đã gửi kèm tham số. Mô phỏng không chứng minh dịch vụ thật chấp nhận một tên mới.",
+        "D": "Phương án này không chính xác do hTTP thành công khác yêu cầu phân tích đúng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nr.url cho địa chỉ đã gửi kèm tham số; mô phỏng không chứng minh dịch vụ thật chấp nhận một tên mới.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-004",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này giữ đúng hàng nhưng bỏ ORDER BY DESC.",
+        "B": "Giữ 100 và 80, loại NULL vì so sánh không TRUE, rồi sắp giảm dần.",
+        "C": "Phương án này cho rằng NULL tự đạt ngưỡng hoặc luôn được giữ.",
+        "D": "Phương án này không chính xác do dùng >80 thay >=80, bỏ biên P."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   id    gia\n0  P   80.0\n1  Q  100.0\n2  R    NaN\n3  S    0.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-005",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này nhầm lẫn số hàng nguồn với số hàng kết quả COUNT tổng hợp.",
+        "B": "Phương án này không chính xác do .df() đã yêu cầu chuyển kết quả thành `DataFrame`.",
+        "C": "DuckDB chạy cùng chương trình trong ví dụ, không cần dựng máy chủ riêng. .df() trả `DataFrame`.",
+        "D": "Phương án này không chính xác do duckDB có thể truy vấn `DataFrame` Python theo tên biến trong cách dùng bài học."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nOutput:\n\n```text\nDataFrame 1 4\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-006",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này ngộ nhận rằng dtype str đồng thời tắt nhận diện giá trị thiếu.",
+        "B": "Phương án này bỏ qua dtype id đã được khai báo.",
+        "C": "Dtype chuỗi bảo vệ mã id nhưng không tắt danh sách nhận diện NA,N/A,null mặc định.",
+        "D": "Phương án này bỏ quên NA,N/A cũng thuộc các dấu hiệu thiếu mặc định trong câu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     id  khu\n0  001  NaN\n1  002  NaN\n2  003   TB\n3  004  NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-007",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do json() giải mã nội dung, không thay raise_for_status.",
+        "B": "Phương án này nhầm lẫn đúng cú pháp JSON với trạng thái HTTP thành công.",
+        "C": "Phương án này không chính xác do 400 là mã phản hồi lỗi đã cho, không phải bằng chứng timeout.",
+        "D": "JSON lỗi vẫn giải mã được. Mã 400 vẫn là lỗi HTTP. Nên kiểm HTTP trước xử lý dữ liệu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nNgoại lệ quan sát được: `HTTPError`.",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-008",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   khu    gia\n0   A   40.0\n1   A   80.0\n2   A    NaN\n3   B   60.0\n4   B  100.0\n5   C    NaN\n6   C    NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-009",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nMột cách đọc:\n```python\nd = pd.read_csv('gia.csv', dtype={'id':'str','khu':'str','gia':'float64'},\n    keep_default_na=False, na_values={'gia':['?','-','']})\ntb = d.groupby('khu')['gia'].mean()\n```\nMean NA=10 (một giá biết), TB=15 từ (0+30)/2, khu -=NaN vì không có giá biết nhưng mã khu vẫn được giữ. Có ba gia thiếu. na_values chung chứa '-' sẽ làm mất mã khu '-' hợp lệ; để mặc định còn có thể mất mã NA. Giữ id đầu 001; không coi 0 là thiếu.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-010",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =    id   price\n0   1  $12.00\n1   2  $20.00\n2   3  $30.00\n3   4  $40.00\nr =    id   price\n0   1  $12.00\n1   2  $20.00\n2   3  $30.00\n3   4  $40.00\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-MR01",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này không có quy tắc tự thêm quan sát cho đủ khối.",
+        "B": "Phương án này không chính xác do chọn cột không vô hiệu hoá chunksize.",
+        "C": "Chunksize giới hạn số hàng mỗi khối, khối cuối có thể ngắn hơn. Không gom các khối thì không cần giữ toàn bảng.",
+        "D": "Phương án này không chính xác do header được dùng làm tên cột, không là quan sát."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\ndoc = <pandas.io.parsers.readers.TextFileReader object at 0x000001DDF9900440>\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-MR02",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này lấy trung bình hai `mean` khối (10+40)/2, cho khối ít giá ngang trọng số.",
+        "B": "Phương án này không chính xác do dùng tổng số hàng gồm hai giá thiếu làm mẫu số.",
+        "C": "Cộng sum 10+120=130 và `count` 1+3=4 rồi chia. Không chia theo số khối hay tổng sáu hàng.",
+        "D": "Phương án này lấy tổng giá 130 chia số khối 2 thay số giá biết."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\ncộng sum 10+120=130 và count 1+3=4 rồi chia; không chia theo số khối hay tổng sáu hàng.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-011",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Kết quả là chuỗi 7 và 70, không khôi phục số 0 đầu.",
+        "B": "Phương án này không chính xác do định dạng lưu mới giữ các giá trị 7,70 đã sai mã.",
+        "C": "Phương án này không chính xác do có thể nhập nhằng các mã phân biệt bằng số 0 đầu. Thay quy ước khóa không có căn cứ.",
+        "D": "Giữ văn bản nguồn thay vì đoán cách đệm lại thông tin đã mất."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\ngiữ văn bản nguồn thay vì đoán cách đệm lại thông tin đã mất.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-012",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Parquet lưu schema của d. Kiểm round-trip trên môi trường đang dùng, không suy mọi backend phải có cùng biểu diễn chuỗi.",
+        "B": "Phương án này không chính xác do ghi/đọc thông thường không có yêu cầu lọc hàng thiếu.",
+        "C": "Phương án này bỏ qua thông tin kiểu đã lưu trong Parquet.",
+        "D": "Phương án này không chính xác do `shape` không kiểm nội dung, nhãn mã hay kiểu dữ liệu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     id   gia\n0  001  10.0\n1  002   NaN\n2  003   0.0\n3  004  40.0\nr =     id   gia\n0  001  10.0\n1  002   NaN\n2  003   0.0\n3  004  40.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-013",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do trạng thái và số hàng không chứng minh đúng phạm vi ngày.",
+        "B": "Phương án này thay đổi nhãn không biến số đo tháng 1 thành tháng 2.",
+        "C": "Phương án này không chính xác do timeout không sửa tham số sai.",
+        "D": "URL và nhánh daily cùng cho thấy tháng 1, khác mục tiêu tháng 2 dù số ngày bằng nhau."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nURL và nhánh daily cùng cho thấy tháng 1, khác mục tiêu tháng 2 dù số ngày bằng nhau.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-014",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "0 là giá đã biết. `IS NOT NULL` loại B,D.",
+        "B": "Phương án này nhầm lẫn giá 0 với thiếu.",
+        "C": "Phương án này đảo `IS NOT NULL` thành `IS NULL`.",
+        "D": "Phương án này coi `IS NOT NULL` không lọc những giá thiếu từ `DataFrame`."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   id   gia\n0  A   0.0\n1  B   NaN\n2  C  20.0\n3  D   NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-015",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này cho rằng LEFT JOIN luôn giữ nguyên số hàng trái dù khóa phải lặp.",
+        "B": "Phương án này đếm đúng năm cặp khớp nhưng bỏ hàng S không khớp.",
+        "C": "P và Q mỗi listing ghép hai hàng A: 4 cặp. R ghép một B. S không khớp được giữ một hàng phi NULL: Tổng 6.",
+        "D": "Phương án này đếm số mã khu khác nhau thay hàng kết quả ghép."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id khu\n0  P   A\n1  Q   A\n2  R   B\n3  S   C\nt =   khu  phi\n0   A  5.0\n1   A  8.0\n2   B  3.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-016",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không có quy tắc coi chưa biết là miễn phí.",
+        "B": "Dtype yêu cầu kiểu, không định nghĩa dấu hiệu thiếu mới. Dtype id chuỗi chỉ giữ mã.",
+        "C": "Phương án này không chính xác do ép kiểu không tự tạo quy tắc NA cho mọi chuỗi không hợp lệ.",
+        "D": "Phương án này không chính xác do dtype chuỗi không thay keep_default_na hay `na_values`."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "exact_source_assertion",
+        "evidence": "Kiểm tra bằng dữ liệu và quy tắc của câu hỏi, có assert đối chiếu kết quả.\n\n```text\n'ValueError'\n```",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "B6-017",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này coi NULL là 0 và chia cho bốn hàng.",
+        "B": "Phương án này loại bỏ giá 0 cùng giá thiếu khỏi `COUNT(gia)` và AVG.",
+        "C": "Phương án này nhầm lẫn `COUNT(*)` cũng bỏ hàng có gia NULL.",
+        "D": "`COUNT(*)` lấy bốn hàng. `COUNT(gia)` và mẫu số AVG dùng ba giá biết 0,10,20."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     gia\n0   0.0\n1  10.0\n2   NaN\n3  20.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-018",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n(a) JSON hợp lệ chỉ bảo đảm giải mã được dict. HTTP 503 là lỗi; x không có nhánh daily nên truy cập ấy gây KeyError, không phải dữ liệu ngày.\n```python\nr.raise_for_status()\nx = r.json()\nd = pd.DataFrame(x['daily'])\n```\n(b) Với 503, dòng đầu gây HTTPError và không chạy bước sau. (c) Kiểm đơn vị trong daily_units; kiểm ngày/địa điểm và timezone đúng yêu cầu (cũng kiểm độ dài các danh sách tương ứng). 200 và ba hàng chưa đủ chứng minh các điều này.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-019",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nrv =   listing_id       date  diem\n0          A 2024-12-30   5.0\n1          A 2025-01-01   4.0\n2          A 2025-02-01   NaN\n3          B 2025-01-02   3.0\n4          B 2025-02-02   5.0\n5          C 2025-03-01   NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-020",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nDanh sách NA chung làm khu của 101 và 104 thành thiếu. Dtype chuỗi không ngăn việc nhận diện NA.\n```python\nd = pd.read_csv('d.csv', keep_default_na=False,\n    na_values={'gia':['?']},\n    dtype={'id':'str','khu':'str','gia':'float64'})\nassert d['khu'].tolist() == ['?','NA','TB','?']\nassert d['gia'].isna().sum() == 1 and d.loc[3,'gia'] == 0\n```\nKiểm giữ mã khu và thiếu giá/giá 0, không chỉ shape (4,3).",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR03",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do khác công việc cần làm, không tách tác động chọn cột.",
+        "B": "Phương án này không chính xác do kích thước file không là thời gian đọc hay RAM `DataFrame`.",
+        "C": "Kết quả đọc chịu ảnh hưởng cache và môi trường, cần diễn giải thận trọng.",
+        "D": "Giữ cùng công việc và tách ba đại lượng, không suy tỷ lệ từ một lần đo."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\ngiữ cùng công việc và tách ba đại lượng, không suy tỷ lệ từ một lần đo.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR04",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n```python\ns = 0.0; n = 0\nfor c in pd.read_csv('gia.csv', usecols=['gia'], chunksize=3):\n    s += c['gia'].sum()\n    n += c['gia'].count()\ntb = s/n if n else np.nan\n```\ns=130,n=4,tb=32.5 USD/đêm. Các count khối là 1,3,0; không lấy mean của các mean khối và không chia cho bảy listing.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-021",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này nhầm lẫn cột với hàng.",
+        "B": "Phương án này không chính xác do cSV không có tổ chức cột nhị phân như Parquet để suy ra tỷ lệ byte đó.",
+        "C": "Usecols chọn cột đưa vào `DataFrame`, không lọc hàng hay cam kết tỷ lệ thời gian.",
+        "D": "Phương án này không chính xác do usecols loại cột khỏi bảng kết quả, không tạo cột đệm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     id  gia\n0  001   10\n1  002   10\n2  003   10\n3  004   10\n4  005   10\n5  006   10\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-022",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không có thông tin độ dài mã gốc trong cột số đã ghi.",
+        "B": "Parquet giữ hai giá trị số 1. Kiểm số hàng/kiểu số không chứng minh giữ đúng khóa định danh.",
+        "C": "Phương án này không chính xác do số hàng khác số khóa phân biệt.",
+        "D": "Phương án này không chính xác do mã là định danh, kiểu số có thể làm mất phân biệt có ý nghĩa."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nParquet giữ hai giá trị số 1; kiểm số hàng/kiểu số không chứng minh giữ đúng khóa định danh.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-023",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do lớp ngoài còn metadata và là object, không phải danh sách quan sát.",
+        "B": "Phương án này không chính xác do json() đã giải mã object lồng nhau thành dict.",
+        "C": "Object thành dict, array thành list. Nhánh daily chứa các dãy quan sát theo ngày.",
+        "D": "Phương án này không chính xác do daily_units mô tả đơn vị, không chứa các quan sát ngày."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nobject thành dict, array thành list; nhánh daily chứa các dãy quan sát theo ngày.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-024",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này coi HAVING lọc từng giá trước khi tính `mean`.",
+        "B": "Phương án này coi WHERE không làm đổi tập giá tham gia `mean`.",
+        "C": "Phương án này không chính xác do dùng >60 thay >=60 ở HAVING nên loại nhầm A.",
+        "D": "Q1 bỏ giá 20 trước `mean`. Q2 tính `mean` A=(20+100)/2 rồi giữ A ở biên 60."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   khu    gia\n0   A   20.0\n1   A  100.0\n2   B   70.0\n3   B   90.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-025",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "A có phí 5. B không đạt ngưỡng, C không khớp và D khớp nhưng phi NULL đều không cho điều kiện TRUE.",
+        "B": "Phương án này cho rằng LEFT JOIN vẫn bắt buộc giữ C sau mọi điều kiện WHERE bên phải.",
+        "C": "Phương án này coi NULL tự thỏa phi<=10 hoặc dùng OR `IS NULL` chưa có trong truy vấn.",
+        "D": "Phương án này không chính xác do phân biệt C không khớp nhưng vẫn cho phi thiếu của D đạt ngưỡng số."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id\n0  A\n1  B\n2  C\n3  D\nt =   id   phi\n0  A   5.0\n1  B  20.0\n2  D   NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-026",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do chia tổng 60 cho cả bốn hàng, ngầm coi thiếu là 0.",
+        "B": "(0+20+40)/3. Thiếu ? không tham gia mẫu số nhưng 0 có.",
+        "C": "Phương án này loại bỏ cả giá 0 như một dấu hiệu thiếu.",
+        "D": "Phương án này coi chỉ một giá thiếu làm mọi giá đều không biết, bỏ quy tắc `mean` trên tập biết."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n(0+20+40)/3; thiếu ? không tham gia mẫu số nhưng 0 có.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-027",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do so trực tiếp các số °F với ngưỡng 35°C.",
+        "B": "Sau đổi đơn vị được 35,30,40,20°C. Giữ cả biên 35.",
+        "C": "Phương án này thay đổi đúng đơn vị nhưng dùng >35 thay từ 35 trở lên.",
+        "D": "Phương án này thay đổi đúng đơn vị nhưng đảo điều kiện thành dưới 35°C, lấy phần bù của tập cần tìm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nsau đổi đơn vị được 35,30,40,20°C; giữ cả biên 35.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-028",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   khu   gia\n0   A  10.0\n1   A  20.0\n2   B   NaN\n3   B  30.0\n4   C   NaN\n5   C   NaN\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-029",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n```python\nd = pd.read_csv('raw/gia.csv', dtype={'id':'str','gia':'float64'})\nd.to_parquet('processed/gia.parquet', index=False)\nr = pd.read_parquet('processed/gia.parquet')\npd.testing.assert_frame_equal(d, r)\nassert r.loc[0,'id']=='001' and r['gia'].isna().sum()==1\n```\nGiả sử các thư mục đã tồn tại. Không ghi đè raw: có thể đọc lại đúng đầu vào để sửa quy tắc xử lý. Kiểm round-trip này xác nhận môi trường đang chạy; schema logic không có nghĩa mọi backend/phiên bản có biểu diễn dtype giống hệt. Kiểm thêm shape (4,2) và giá 0 nếu dùng kiểm rời thay assert_frame_equal.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-030",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id\n0  A\n1  B\n2  C\n3  D\nt =   id   phi\n0  A  20.0\n1  C   5.0\n2  D   8.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-MR05",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này nhầm lẫn kế hoạch với dữ liệu kết quả.",
+        "B": "Phương án này không chính xác do eXPLAIN không bảo đảm thời gian thực nghiệm hay bỏ ảnh hưởng môi trường.",
+        "C": "Phương án này không chính xác do query plan không là danh sách các quan sát nguồn.",
+        "D": "EXPLAIN cho biết cách thực hiện dự kiến, không phải bảng thống kê kết quả và không tự là phép đo tốc độ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     gia\n0  10.0\n1  20.0\n2  30.0\np =      explain_key                                      explain_value\n0  physical_plan  ┌───────────────────────────┐\\n│    UNGROUPED_...\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-MR06",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do chia sẻ notebook cũng làm lộ key.",
+        "B": "Tách bí mật khỏi mã và chỉ gửi theo cách tài liệu dịch vụ yêu cầu.",
+        "C": "Phương án này không chính xác do tên biến không che giá trị literal có trong file.",
+        "D": "Phương án này không chính xác do vẫn đưa bí mật vào nơi không cần chia sẻ. Xóa tên biến không thu hồi thông tin đã lộ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\ntách bí mật khỏi mã và chỉ gửi theo cách tài liệu dịch vụ yêu cầu.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-031",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này cho rằng ô trống luôn là `NaN` ngay cả khi đã tắt mặc định.",
+        "B": "Phương án này không chính xác do biết chuỗi rỗng được giữ nhưng vẫn tính nó là giá trị thiếu theo `isna`.",
+        "C": "Phương án này cho rằng dtype chuỗi tự thay ô trống bằng chuỗi số 0, dù không có quy tắc thay giá trị.",
+        "D": "Tắt danh sách thiếu mặc định mà không khai báo lại ô trống nên gia hàng 1 là chuỗi rỗng. Mã NA cũng được giữ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "exact_source_assertion",
+        "evidence": "Kiểm tra bằng dữ liệu và quy tắc của câu hỏi, có assert đối chiếu kết quả.\n\n```text\n'True 0'\n```",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "B6-032",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này đảo chiều hàng/cột.",
+        "B": "Columns chọn cột. Không phải yêu cầu chỉ giữ hàng có giá biết.",
+        "C": "Phương án này đọc chọn cột không tạo lại cột không chọn.",
+        "D": "Phương án này không chính xác do parquet giữ thông tin kiểu của bảng đã lưu đúng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =     id   gia\n0  001  10.0\n1  002  20.0\n2  003   NaN\n3  004  40.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-033",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Chọn nguồn lịch sử và phạm vi/đại lượng/múi giờ theo bảng đã cho, sau đó vẫn kiểm phản hồi.",
+        "B": "Phương án này không chính xác do số ngày bằng nhau không làm dự báo thành dữ liệu lịch sử.",
+        "C": "Phương án này không chính xác do khác đại lượng cần phân tích.",
+        "D": "Phương án này không chính xác do ngày trong phản hồi cần được diễn giải theo quy ước múi giờ phù hợp."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nchọn nguồn lịch sử và phạm vi/đại lượng/múi giờ theo bảng đã cho, sau đó vẫn kiểm phản hồi.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-034",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này đếm mọi năm trước khi áp điều kiện số review.",
+        "B": "Phương án này không chính xác do lọc năm đúng nhưng bỏ HAVING.",
+        "C": "Chỉ hai review P năm 2025 tham gia. Q và R mỗi listing một review năm đó nên không đạt HAVING.",
+        "D": "Phương án này giữ đúng listing có đủ review năm 2025 nhưng hiển thị n từ mọi năm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nrv =   listing_id       date\n0          P 2024-12-31\n1          P 2025-01-01\n2          P 2025-01-02\n3          Q 2024-01-01\n4          Q 2025-02-01\n5          R 2025-03-01\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-035",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do cOUNT(*) đếm hàng hiện tại, không tự khử lặp id.",
+        "B": "Hai cặp cho A, hai cho B, một cho C và một hàng không khớp cho D. Cần kiểm khóa host trước diễn giải.",
+        "C": "Phương án này không chính xác do vừa bỏ sai phạm vi listing vừa giữ các bản sao do ghép H1.",
+        "D": "Phương án này không chính xác do jOIN mặc định tạo các cặp khớp, không tự áp ràng buộc duy nhất."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id host_id\n0  A      H1\n1  B      H1\n2  C      H2\n3  D      H3\nh =   host_id nhom\n0      H1  nho\n1      H1  lon\n2      H2  nho\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-036",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này nhầm lẫn list khác độ dài với `Series` có nhãn có thể căn chỉnh.",
+        "B": "Phương án này không có quy tắc tự cắt danh sách dài cho vừa.",
+        "C": "`DataFrame` từ dict các list yêu cầu số phần tử tương ứng. Không tự quyết ngày nào thiếu.",
+        "D": "Phương án này không chính xác do raise_for_status kiểm mã HTTP, không kiểm cấu trúc nghiệp vụ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "exact_source_assertion",
+        "evidence": "Kiểm tra bằng dữ liệu và quy tắc của câu hỏi, có assert đối chiếu kết quả.\n\n```text\n'ValueError'\n```",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "B6-037",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này coi hai NULL là giá 0 đã biết.",
+        "B": "Phương án này nhầm lẫn không giá biết với không có hàng.",
+        "C": "Nhóm có hai hàng, không giá biết, `mean` là NULL. Nhóm không tự biến mất.",
+        "D": "Phương án này coi GROUP BY mặc định loại mọi nhóm toàn giá thiếu, dù khóa A không thiếu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   khu   gia\n0   A   NaN\n1   A   NaN\n2   B   0.0\n3   B  20.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-038",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n(a) Hai file cùng nguồn/cùng tên cột vẫn có thể khác schema. usecols chỉ chọn cột; không chuyển '$12.00' thành số.\n```python\nd = pd.read_csv('ban_day_du.csv.gz', usecols=['id','price'],\n                dtype={'id':'str','price':'str'})\nassert d.shape == (4,2)\nassert d.loc[0,'id']=='001' and d.loc[0,'price']=='$12.00'\n```\n(c) Xác định đơn vị tiền và quy tắc thiếu, xử lý chuỗi tiền tệ thành số đúng rồi kiểm cùng id/snapshot/phạm vi trước so mean. Không suy schema từ bản rút gọn hay chỉ từ bốn hàng đọc thành công.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-039",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id        loai first_review\n0  A  nguyen_can   2025-01-01\n1  B  nguyen_can          NaT\n2  C  nguyen_can          NaT\n3  D       phong   2024-01-01\n4  E       phong   2025-02-01\n5  F       phong          NaT\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-040",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n400 là mã phản hồi lỗi đã nhận; lý do đề cho là tham số ngày, không phải bằng chứng Timeout. Cần đối chiếu tham số/tài liệu và nội dung lỗi, không kỳ vọng timeout tự sửa ngày.\ntimeout=20 giới hạn chờ kết nối/nhận dữ liệu theo Requests, không là deadline cứng cho toàn bộ thời gian yêu cầu.\n```python\nr.raise_for_status()\nx = r.json()\n```\nVới 400, dòng đầu gây HTTPError, không chạy dòng thứ hai. Có thể đọc body để chẩn đoán lỗi trong xử lý ngoại lệ, nhưng không dùng nó như dữ liệu quan sát thành công.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR07",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "429 liên quan giới hạn truy cập. Cách xử lý phụ thuộc dịch vụ và thông tin được cung cấp.",
+        "B": "Phương án này không chính xác do bịa quy tắc chờ cố định và bỏ hạn mức dịch vụ.",
+        "C": "Phương án này không chính xác do giải mã JSON không làm yêu cầu bị giới hạn thành thành công.",
+        "D": "Phương án này không chính xác do timeout điều chỉnh chờ kết nối/đọc, không cấp thêm quota."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n429 liên quan giới hạn truy cập; cách xử lý phụ thuộc dịch vụ và thông tin được cung cấp.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR08",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nKhông. 0.8/0.2=4 chỉ mô tả hai lần đọc khác số cột; chưa tách hiệu ứng chọn cột khỏi định dạng, và RAM khác số byte file.\n1. Đọc cùng bảng, cùng cột (CSV usecols; Parquet columns), cùng schema/NA cần thiết.\n2. Kiểm shape, mã và giá trị tương đương trước so thời gian.\n3. Đo lặp, nêu cache/môi trường và tách chi phí chuẩn bị/ghi khỏi phần đo đọc.\n4. Báo riêng kích thước file, RAM DataFrame và thời gian; không suy cam kết mọi lần chạy.\nKhông cần tạo benchmark thật để trả lời.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-041",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Ít cột có thể giảm RAM bảng nhưng không chứng minh thời gian hoặc kích thước file giảm còn 3/20.",
+        "B": "Phương án này nhầm lẫn lựa chọn cột với lấy mẫu hàng.",
+        "C": "Phương án này đọc có chọn lọc không ghi đè hay rút gọn file trên đĩa.",
+        "D": "Phương án này không chính xác do usecols không thay cấu trúc file hay bỏ việc giải nén."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nít cột có thể giảm RAM bảng nhưng không chứng minh thời gian hoặc kích thước file giảm còn 3/20.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-042",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do xử lý có thể mất thông tin. Parquet không là phép đảo mọi biến đổi.",
+        "B": "Phương án này không chính xác do nguồn có thể cập nhật, không bảo đảm đúng đầu vào cũ.",
+        "C": "Raw giữ bằng chứng đầu vào, processed phục vụ phân tích. Lợi ích cột không là cam kết mọi file nhỏ/nhanh hơn.",
+        "D": "Phương án này thay đổi tên không chuyển định dạng hay xử lý kiểu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nraw giữ bằng chứng đầu vào, processed phục vụ phân tích; lợi ích cột không là cam kết mọi file nhỏ/nhanh hơn.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-043",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Các list ghép theo vị trí, không tự khớp nhiệt độ theo giá trị ngày.",
+        "B": "Phương án này không chính xác do list không có nhãn quan sát để tự căn chỉnh.",
+        "C": "Phương án này không chính xác do độ dài vẫn bằng nhau nên có thể sai âm thầm, không nhất thiết báo lỗi.",
+        "D": "Phương án này không chính xác do thứ tự nhiệt độ không quyết định thứ tự ngày, cách này chỉ có thể tình cờ đúng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\ndaily = {'time': ['2025-01-03', '2025-01-01', '2025-01-02'], 'temperature_2m_max': [40, 20, 30]}\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-044",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Ba giá biết là 0,10,100. Trung vị 10, `mean` 110/3, không bỏ giá 0.",
+        "B": "Phương án này không chính xác do thay NULL bằng 0 rồi tính trên 0,0,10,100.",
+        "C": "Phương án này bỏ qua cả giá 0 và NULL, còn 10,100.",
+        "D": "Phương án này không chính xác do trung vị/`count` bỏ NULL nhưng mẫu số `mean` vẫn dùng cả bốn hàng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =      gia\n0    0.0\n1   10.0\n2    NaN\n3  100.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-045",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "A hai hàng, B một, C và D mỗi bên một hàng đệm. Ba rid đã khớp nhưng chỉ hai phí biết.",
+        "B": "Phương án này cho rằng mỗi listing luôn một hàng sau ghép dù A có hai đối ứng.",
+        "C": "Phương án này coi COUNT(rid) đếm cả hai hàng đệm NULL như `COUNT(*)`.",
+        "D": "Phương án này coi ghi nhận A có phí thiếu là không khớp khóa nên bỏ cả rid r2."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id\n0  A\n1  B\n2  C\n3  D\nt =   id rid  phi\n0  A  r1  5.0\n1  A  r2  NaN\n2  B  r3  7.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-046",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này thay đổi câu hỏi sang `mean` nhóm và tổng hàng, giữ cả A dù chỉ một giá đạt ngưỡng.",
+        "B": "Phương án này không chính xác do giá biết không đồng nghĩa giá đạt ngưỡng. A có 20 biết nhưng không đạt.",
+        "C": "Phương án này chưa kiểm ít nhất hai listing, sẽ giữ nhầm A.",
+        "D": "Lọc giá trước đếm/tính `mean`. A còn một hàng nên bị loại, B hai hàng `mean` 80."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nlọc giá trước đếm/tính mean; A còn một hàng nên bị loại, B hai hàng mean 80.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-047",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n```python\nd = pd.read_csv('reviews.csv.gz', usecols=['listing_id','date','diem'],\n    dtype={'listing_id':'str','diem':'float64'},\n    na_values={'diem':['?']}, parse_dates=['date'])\nassert pd.api.types.is_datetime64_any_dtype(d['date'])\nassert len(d)==4 and d.loc[0,'listing_id']=='001'\nassert d.loc[0,'date']==pd.Timestamp('2025-01-01') and d['diem'].isna().sum()==1\n```\nKhông; truyền parse_dates vẫn cần kiểm kiểu và nội dung sau đọc. Đuôi .gz cho pandas nhận nén, không thay quy tắc mã/thiếu. Một listing có thể có nhiều review; bốn hàng không là bốn listing khác nhau.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-048",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nOutput:\n\n```text\n{'daily_units': {'temperature_2m_max': '°F'}, 'daily': {'time': ['2025-02-01', '2025-02-02', '2025-02-03'], 'temperature_2m_max': [95, 86, 104]}}\n```\n\nMột số giá trị sau khối code:\n\n```text\nr = <Response [200]>\nd =          time  temperature_2m_max\n0  2025-02-01                  95\n1  2025-02-02                  86\n2  2025-02-03                 104\nhot =          time  temperature_2m_max\n0  2025-02-01                  95\n1  2025-02-02                  86\n2  2025-02-03                 104\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-049",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =    khu   gia\n0    A  10.0\n1  NaN  20.0\n2    A   NaN\n3    B  30.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-050",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n(a) Lưu cả bytes phản hồi để giữ daily, đơn vị và timezone. Khóa ngày review phải cùng quy ước ngày địa phương; cùng chuỗi ngày nhưng khác cách xác định ngày có thể ghép sai.\n```python\nPath(raw_path).write_bytes(r.content)\nmeta = {'url':r.url, 'downloaded_at':downloaded_at}\nPath(meta_path).write_text(json.dumps(meta), encoding='utf-8')\n```\nGiả sử raw_path/meta_path đã chọn riêng và thư mục tồn tại. (c) Timestamp theo giây có thể trùng tên và ghi đè; dùng tên/đường dẫn không trùng hoặc kiểm tồn tại trước ghi. Đọc lại kiểm khoảng ngày, đơn vị, địa điểm/metadata; tên file không chứng minh nội dung đúng. Không cần thuộc cách định dạng thời điểm.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR09",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Nhận diện lựa chọn cột, không suy toàn bộ định dạng plan hay cam kết thời gian.",
+        "B": "Phương án này không chính xác do projections mô tả cột được dùng, không là giá trị tổng hợp.",
+        "C": "Phương án này không chính xác do projection chọn cột, không có nghĩa LIMIT 1.",
+        "D": "Phương án này không chính xác do plan không là phép benchmark hay bảo đảm tỷ lệ tốc độ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nnhận diện lựa chọn cột, không suy toàn bộ định dạng plan hay cam kết thời gian.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR10",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n```python\ns = 0.0; n = 0\nfor c in pd.read_csv('gia.csv', usecols=['gia'], chunksize=3):\n    v = c.loc[c['gia']>=30, 'gia']\n    s += v.sum(); n += v.count()\ntb = s/n if n else np.nan\n```\nTập đúng 30,50,70,110: sum=260,count=4,mean=65. Mean khối sau lọc là 30,60,110; trung bình không trọng số của chúng là 200/3, khác 65 vì count khối là 1,2,1. Chia bảy tính cả hàng ngoài ngưỡng và thiếu. Cần thuật toán sum/count, kể cả khi vài khối rỗng sau lọc.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-051",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do `read_csv` hỗ trợ nhận gzip theo đuôi file trong cách dùng bài.",
+        "B": "Nén thay cách lưu byte trên đĩa, không làm nội dung CSV tự có schema. Dtype giữ mã lúc đọc.",
+        "C": "Phương án này không chính xác do cột mã không phải bộ đếm dòng.",
+        "D": "Phương án này không chính xác do cSV nén vẫn được suy luận kiểu như văn bản khi đọc. Nén không lưu schema mã."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   listing_id\n0        001\n1        001\n2        002\n3        003\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn. Tệp và phản hồi bên ngoài được mô phỏng theo dữ kiện đề, không gọi dịch vụ thật."
+      }
+    },
+    {
+      "id": "B6-052",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "SQL truy vấn trực tiếp Parquet và trả kết quả tổng hợp. Pandas cũng có thể đọc chọn cột, chọn công cụ theo nhu cầu/bộ nhớ.",
+        "B": "Phương án này bỏ qua cách truy vấn Parquet trực tiếp đã học.",
+        "C": "Phương án này không có bảo đảm tốc độ tuyệt đối.",
+        "D": "Phương án này không chính xác do `read_parquet` có columns, `read_csv` có usecols/chunksize trong phạm vi tự học."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nSQL truy vấn trực tiếp Parquet và trả kết quả tổng hợp; pandas cũng có thể đọc chọn cột, chọn công cụ theo nhu cầu/bộ nhớ.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-053",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do uRL và tham số không là cam kết bất biến của nguồn.",
+        "B": "Phương án này không chính xác do tên file không thay kiểm metadata/nội dung.",
+        "C": "Phương án này không chính xác do khác thời điểm/nguồn dữ liệu và không tái lập snapshot.",
+        "D": "Snapshot giữ đúng bytes phản hồi cũ. Cùng URL/khoảng quá khứ vẫn có thể được dịch vụ cập nhật."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nsnapshot giữ đúng bytes phản hồi cũ; cùng URL/khoảng quá khứ vẫn có thể được dịch vụ cập nhật.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-054",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do so sánh bằng NULL không cho TRUE để WHERE giữ hàng.",
+        "B": "Phương án này không chính xác do giá 0 là giá đã biết, không là dấu hiệu thiếu.",
+        "C": "Phương án này lấy phần bù: Các giá đã biết 10 và 0.",
+        "D": "Kiểm thiếu bằng `IS NULL`. Ở ví dụ `DataFrame` này hai np.nan được tiếp nhận thành NULL."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nkiểm thiếu bằng IS NULL; ở ví dụ DataFrame này hai np.nan được tiếp nhận thành NULL.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-055",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do lặp review của một listing không tạo bốn listing khác nhau.",
+        "B": "Hai tỷ lệ có đơn vị quan sát/mẫu số khác nhau. Review không tự bằng booking và tương quan yếu không loại mọi dạng quan hệ.",
+        "C": "Phương án này không chính xác do dùng cơ cấu listing làm cơ cấu review.",
+        "D": "Phương án này không chính xác do khái quát từ tương quan tuyến tính yếu sang mọi quan hệ và cả booking chưa quan sát."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nhai tỷ lệ có đơn vị quan sát/mẫu số khác nhau; review không tự bằng booking và tương quan yếu không loại mọi dạng quan hệ.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-056",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do đã trả lời số review mọi năm, giữ nhầm A.",
+        "B": "Phương án này chưa áp điều kiện ít nhất hai review.",
+        "C": "Phương án này không chính xác do dùng tập hàng khác cho điều kiện giữ nhóm và số đếm được yêu cầu.",
+        "D": "Lọc phạm vi năm trước tính n. A không đủ dù có nhiều review cũ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\nlọc phạm vi năm trước tính n; A không đủ dù có nhiều review cũ.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-057",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nd =   listing_id khu       date  diem\n0        001  NA 2025-01-01   4.0\n1        001  TB 2025-01-02   NaN\n2        002  NA 2025-01-03   0.0\n3        003  TB 2025-01-04   5.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-058",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\n```python\nparams = dict(latitude=-33.45, longitude=-70.67,\n    start_date='2025-07-01', end_date='2025-07-03',\n    daily='temperature_2m_max', timezone='America/Santiago')\n```\nĐối chiếu daily.time đúng ba ngày 01–03/07; nhánh đại lượng và các dãy có độ dài tương ứng; daily_units và timezone đúng (cần °C hoặc chuyển đúng đơn vị). Kiểm địa điểm/URL thực gửi khi đối chiếu metadata; giữ cùng quy ước ngày với review. Lưu phản hồi thô và URL/thời điểm tải; các lần phân tích sau đọc snapshot đó, không coi gọi lại archive cùng khoảng ngày là giữ nguyên nội dung.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-059",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nl =   id\n0  A\n1  B\n2  C\n3  D\nrv =   rid listing_id       date  diem\n0  r1          A 2024-12-01   5.0\n1  r2          A 2025-01-01   NaN\n2  r3          B 2025-02-01   4.0\n3  r4          B 2025-02-02   5.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-060",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nrv =   listing_id       date\n0        001 2025-01-01\n1        001 2025-01-01\n2        002 2025-01-02\n3        003 2025-01-02\n```\n\nMột số giá trị sau khối code:\n\n```text\nrv =   listing_id       date\n0        001 2025-01-01\n1        001 2025-01-01\n2        002 2025-01-02\n3        003 2025-01-02\nw =          time   t_c\n0  2025-01-01  30.0\n1  2025-01-01  31.0\n2  2025-01-02  32.0\n3  2025-01-03  33.0\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    },
+    {
+      "id": "B6-MR11",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Phương án này không chính xác do công khai key không nâng quota và làm lộ bí mật.",
+        "B": "Tránh gọi lại không cần thiết, giữ đầu vào ổn định và không lộ bí mật. Vẫn tôn trọng quota.",
+        "C": "Phương án này không chính xác do jSON lỗi không là quan sát để thêm vào bảng.",
+        "D": "Phương án này không chính xác do cùng URL không miễn hạn mức và không bảo đảm nội dung bất biến."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu bằng lập luận theo giả thiết và cấu trúc phép toán trong đề.\n\ntránh gọi lại không cần thiết, giữ đầu vào ổn định và không lộ bí mật; vẫn tôn trọng quota.",
+        "limitations": "Không ghi nhận phép thử thực thi cho câu này trong báo cáo code. Không xem việc so sánh khóa đáp án với chính nó là kiểm chứng."
+      }
+    },
+    {
+      "id": "B6-MR12",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "prompt_execution_with_reasoning",
+        "evidence": "Đã thực thi các khối Python của đề trong một tiến trình riêng.\n\nMột số giá trị sau khối code:\n\n```text\nrv =   listing_id       date\n0          1 2024-01-01\n1          1 2025-01-01\n2          1 2025-01-02\n3          2 2025-01-03\n4          2 2025-01-04\n5          3 2025-01-05\nl =    id  name\n0   1    An\n1   2  Binh\n2   3   Chi\n3   4  Dung\n```",
+        "limitations": "Code chạy trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5, DuckDB 1.5.6 và PyArrow 25.0.0. Kết quả thực thi được kết hợp với phân tích ý nghĩa của từng lựa chọn."
+      }
+    }
+  ]
+}

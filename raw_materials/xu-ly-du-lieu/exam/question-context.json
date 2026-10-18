@@ -1,0 +1,11 @@
+{
+  "B4-015": "Dùng pandas 3.x với Copy-on-Write. Cảnh báo được hiển thị và không được chuyển thành ngoại lệ.",
+  "B4-019": "Dùng pandas 3.x với Copy-on-Write. Cảnh báo được hiển thị và không được chuyển thành ngoại lệ.",
+  "B4-029": "Dùng pandas 3.x với Copy-on-Write.",
+  "B4-045": "Dùng pandas 3.x với Copy-on-Write.",
+  "B4-054": "Dùng pandas 3.x với Copy-on-Write.",
+  "B7-003": "Dùng pandas 3.x.",
+  "B8-010": "Dùng pandas 3.x.",
+  "B8-019": "Dùng pandas 3.x.",
+  "B8-057": "Dùng pandas 3.x. Khi sửa hai dòng, chạy lại toàn bộ đoạn code trên dữ liệu chuỗi ban đầu, không tiếp tục từ cột ngày đã được đọc sai."
+}

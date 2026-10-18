@@ -1,0 +1,865 @@
+{
+  "lesson": "04",
+  "items": [
+    {
+      "id": "B4-001",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Đếm thêm index như một cột dữ liệu.",
+        "B": "Sai: Đảo số hàng với số cột.",
+        "C": "Đúng: Ba hàng, hai cột dữ liệu `ma`, `gia`. Index không được tính vào số cột.",
+        "D": "Sai: Dùng nhãn hàng thay cho tên cột."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: (3, 2) ['ma', 'gia']. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-002",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Phép nhân tạo Series mới, giữ tên và nhãn, lan truyền NaN, giá trong `df` không đổi.",
+        "B": "Sai: Phép toán không đánh lại index.",
+        "C": "Sai: NaN không tự biến thành 0.",
+        "D": "Sai: Chưa có phép gán kết quả trở lại bảng gốc."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: Gia ['r3', 'r1', 'r8'] [80.0, nan, 0.0] 40.0. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-003",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Đổi chỗ ở thành lượt đặt phòng và diễn giải sai mã.",
+        "B": "Đúng: `read_csv` tạo DataFrame. Ý nghĩa một hàng và đơn vị giá phải theo mô tả nguồn. Số 102 là trung bình các mã số, không phải thống kê giá.",
+        "C": "Sai: Đọc cả CSV ở đây trả DataFrame, không phải Series.",
+        "D": "Sai: Phép tính dùng cột `id`, không dùng cột `price`."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi pd.read_csv với tệp cho_o.csv: Cột price chứa NaN được tự động ép sang float64, df['price'].mean() bỏ qua NaN và tính trung bình đúng ra 60.0. Khớp đáp án B.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B4-004",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: `count()` không đếm NaN.",
+        "B": "Sai: Dùng mẫu số 3 trong khi code lấy mean trên bốn giá trị bool.",
+        "C": "Đúng: Có bốn hàng, ba giá đã biết. Mask là `[True, False, True, False]`, nên mean bằng 2/4.",
+        "D": "Sai: Loại giá 0 hợp lệ khỏi tử số."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 3 0.5. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-005",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: 210 là tổng cả bảng lọc, không phải lát loc.",
+        "B": "Sai: Coi hai cách cắt dùng cùng cơ chế.",
+        "C": "Sai: Đảo kết quả nhãn và vị trí.",
+        "D": "Đúng: Sau lọc, nhãn là `[1,2,4,5]`, giá tương ứng `[30,70,50,90]`. `loc[2:4]` lấy nhãn 2 và 4: 120. `iloc[2:4]` lấy vị trí 2 và 3: 140."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 120.0 140.0. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-006",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Coi copy như gán thêm tên.",
+        "B": "Đúng: `a` và `df` cùng một bảng, `b` là bảng riêng. Hai cột `hai_dem` đều còn giá trị cũ 160.",
+        "C": "Sai: Coi cột dẫn xuất tự cập nhật.",
+        "D": "Sai: Coi phép gán tên tạo bản sao."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [100.0, 160.0] [5.0, 160.0]. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-007",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: `index=False` bỏ index dù nó có tên, bảng được xuất chỉ gồm `gia`.",
+        "B": "Sai: Tên index không làm vô hiệu index=False.",
+        "C": "Sai: Code đã yêu cầu bỏ index.",
+        "D": "Sai: CSV không bắt buộc có cột chỉ mục, read_csv tạo index mặc định."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: (3, 1) ['gia']. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-008",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 0.4.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-009",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [120.0, 360.0].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-010",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến KeyError (1).",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B4-011",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Đảo shape của Series và DataFrame.",
+        "B": "Sai: Đảo kiểu trả về của tên đơn và danh sách tên.",
+        "C": "Sai: Giá là float64, không phải int64.",
+        "D": "Đúng: Một tên cột cho Series một chiều shape(3,), dtype float64. Danh sách một tên cột giữ DataFrame hai chiều shape(3,1)."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: Series (3,) float64 DataFrame (3, 1). Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-012",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Mean bỏ qua hai NaN. Nếu tự thay chúng bằng 0, mean thành 200/6≈33,33, không phải50.",
+        "B": "Đúng: Có 6 hàng, gia có 4 non-null nên thiếu 2. Bốn giá biết20,40,60,80 có tổng 200 và mean 200/4=50.",
+        "C": "Sai: Đọc số không thiếu 4 thành số thiếu 4.",
+        "D": "Sai: 50% là trung vị, không phải tỷ lệ giá bằng 50. Không giá nào trong bảng bằng 50, median là trung bình40 và60."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: <class 'pandas.DataFrame'> RangeIndex: 6 entries, 0 to 5 Data columns (total 3 columns): # Column Non-Null Count Dtype, -,,,,,, - 0 id 6 non-null int64 1 loai 6 non-null str 2 gia 4 non-null float64 dtypes: Float64(1), int64(1), str(1) memory usage: 288.0 bytes count 4.000000 mean 50.000000 std 25.819889 min 20.000000 25% 35.000000 50% 50.000000 75% 65.000000 max 80.000000 Name: Gia, dtype: Float64. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-013",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: S==np.nan cho bốn False, isna nhận đúng một ô thiếu, count đếm ba giá biết gồm cả0.",
+        "B": "Sai: Phép bằng không xác định NaN.",
+        "C": "Sai: Bỏ sót NaN và tính nó như giá đã biết.",
+        "D": "Sai: Coi0 là giá thiếu thứ hai."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 0 1 3. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-014",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Giữ H4 do nhầm < với <= ở ngưỡng75.",
+        "B": "Sai: Bỏ H3 do nhầm <= với < ở ngưỡng100.",
+        "C": "Sai: Như thể yêu cầu đồng thời là Studio và Phòng riêng, thay vì hoặc giữa hai nhánh.",
+        "D": "Đúng: H1,H3 là Studio giá 90,100 thỏa <=100, H2 là Phòng riêng giá 60 thỏa <75. H4 giá 75 không thỏa <75, H5 khác loại, H6 thiếu giá nên so sánh cho False."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['H1', 'H2', 'H3']. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-015",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Tưởng phép gán nối tiếp đã đổi A thành 60.",
+        "B": "Sai: Coi cảnh báo là ngoại lệ dừng dưới giả định đã nêu.",
+        "C": "Đúng: Gán nối tiếp không sửa df và phát cảnh báo ChainedAssignmentError. Code vẫn chạy, loc sau đó đặt giá hàng B thành 45. Hai hàng A giữ80,100.",
+        "D": "Sai: Tưởng cảnh báo làm lệnh loc tiếp theo cũng không có tác dụng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [80.0, 45.0, 100.0]. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-016",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: To_csv mặc định ghi index. Vì index tên dong, cột được ghi mang tên dong, chứa7,2,9. id vẫn là cột dữ liệu riêng chứaM8,M2,M5.",
+        "B": "Sai: Tưởng mặc định index=False.",
+        "C": "Sai: Quên index đã được đặt tên dong.",
+        "D": "Sai: Lấy nhãn index thay giá trị của cột id."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['dong', 'id', 'gia'] ['M8', 'M2', 'M5']. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-017",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Đếm thiếu như một nhãn thứ tư.",
+        "B": "Đúng: Các nhãn không thiếu khác nhau là Bắc,Nam,Tây, nunique mặc định bỏ thiếu. khu có nhãn phân loại lặp, id có sáu mã riêng.",
+        "C": "Sai: Chọn khóa riêng từng hàng thay cho nhãn lặp.",
+        "D": "Sai: Lấy số hàng làm số nhãn khác nhau."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 3. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-018",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi phân tích biến động giá giữa hai lần đo: Tính toán chênh lệch `df[\"lan_2\"] - df[\"lan_1\"]`, xác định số chỗ ở tăng giá, giữ nguyên và giảm giá chính xác theo từng hàng.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-019",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 380.0 760.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-020",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm tra điều kiện lọc: Xác định các bản ghi thỏa mãn điều kiện loại phòng và mức giá, đồng thời phân tích tính đại diện của mẫu dữ liệu.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-021",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Dtypes không phải DataFrame.",
+        "B": "Sai: Nhãn của Series dtype là tên cột, không phải nhãn hàng của df.",
+        "C": "Sai: Dùng kết quả suy luận chuỗi kiểu cũ thay cho giả định pandas 3. Dtype của từng cột cũng không phải dtype chung của cả bảng.",
+        "D": "Đúng: Dtypes là Series, nhãn của nó là tên các cột. Pandas 3 suy luận cột chuỗi này là str, giá là float64. index và columns đều là đối tượng Index."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: Series ['loai', 'gia'] str float64 True True. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-022",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Head không lấy ngẫu nhiên, sample không tối ưu giá.",
+        "B": "Sai: Khả năng lặp lại khác với tính đại diện.",
+        "C": "Đúng: Head(2) lấy A,B theo vị trí đầu. Seed giúp lặp lại mẫu trong điều kiện đã nêu, không chứng minh tính đại diện hay bảo đảm thống kê mẫu khớp toàn bảng.",
+        "D": "Sai: Seed không ép trung bình mẫu bằng trung bình toàn bảng."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi phương thức `sort_values(\"gia\")` và `head(2)`: Lấy hai bản ghi có giá nhỏ nhất từ bảng dữ liệu sau khi sắp xếp, thứ tự chỉ mục phản ánh đúng vị trí ban đầu. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-023",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Bốn giá biết có tổng 400, mean 100, median (20+30)/2=25, min 10, max 340, thứ tự kết quả theo danh sách hàm.",
+        "B": "Sai: Là thống kê nếu tự thay NaN bằng 0, trái với code.",
+        "C": "Sai: Chọn phần tử giữa phía trên thay vì trung bình hai phần tử giữa.",
+        "D": "Sai: Sum mặc định bỏ qua NaN trong ví dụ có giá đã biết này."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [100.0, 25.0, 10.0, 340.0, 400.0]. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-024",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Tự đưa hàng về thứ tự gốc.",
+        "B": "Sai: Tự đưa cột về thứ tự gốc rồi lấy phí thay vì giá.",
+        "C": "Đúng: Hai danh sách quyết định thứ tự hàng r,p và cột phi,gia. k là DataFrame (2,2), ô vị trí [0,1] là giá của r, bằng 80.",
+        "D": "Sai: Chọn nhiều hàng và danh sách cột tạo DataFrame, không phải Series."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: DataFrame ['r', 'p'] ['phi', 'gia'] 80.0. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-025",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Quên đếm cột mới.",
+        "B": "Sai: Coi giá thiếu là 0.",
+        "C": "Sai: Nhân cả phí với 2, khác biểu thức đã cho.",
+        "D": "Đúng: Gán tên cột mới thêm cột thứ ba. Tổng là 25*2+5=55, NaN*2+10 vẫn NaN, 40*2=80."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: (3, 3) [55.0, nan, 80.0]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-026",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Nhân cả phí một lần với số đêm.",
+        "B": "Sai: Bỏ phí trong cả hai trường hợp.",
+        "C": "Đúng: Hai đêm: 200, 140+80=220, 100+200=300. Tám đêm: 800, 560+80=640, 400+200=600. A rẻ nhất cho hai đêm, C rẻ nhất cho tám đêm.",
+        "D": "Sai: Chỉ bỏ phí ở trường hợp tám đêm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [200.0, 220.0, 300.0] [800.0, 640.0, 600.0]. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-027",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Shape/tổng là điều kiện chưa đủ để chứng minh đúng từng cặp.",
+        "B": "Đúng: Hai bảng cùng shape (3,2), cùng tổng 70 nhưng A đổi từ 10 sang 40, C từ 40 sang 10. Hai phép kiểm không kiểm quan hệ mã–giá.",
+        "C": "Sai: Hoán đổi không thay tổng.",
+        "D": "Sai: Hoán đổi không thay số hàng/cột."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: True True. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-028",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi tính toán số liệu thống kê mô tả: So sánh giá trị trung bình chịu ảnh hưởng mạnh của ngoại lai 860 với giá trị trung vị có tính kháng nhiễu cao.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-029",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [60.0, 50.0, 100.0].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-030",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến ValueError (The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().).",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B4-031",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Gán đơn vị giá cho một trung bình mã.",
+        "B": "Sai: Mã bình quân không phải mã điển hình hay mức giá đại diện.",
+        "C": "Đúng: Pandas có thể tính toán trên dtype số, nhưng không tự biết vai trò nghiệp vụ. id là khóa, còn gia là số đo có đơn vị USD/đêm.",
+        "D": "Sai: Phép tính số học này vẫn chạy, vấn đề là ý nghĩa, không phải lỗi dtype."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 40.0 70.0. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-032",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Count không đếm NaN.",
+        "B": "Sai: Tưởng round trên thống kê sửa giá gốc.",
+        "C": "Đúng: Describe đếm bốn giá đã biết. Các phân vị trước làm tròn là 17,7,25,2,32,7. round(0) làm tròn Series thống kê trả về, không sửa s.",
+        "D": "Sai: Coi tên các mức phân vị như chính giá trị thống kê. Làm tròn để báo cáo không tăng độ chính xác dữ liệu nguồn."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [4.0, 18.0, 25.0, 33.0] 10.2. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-033",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Tỷ lệ 0,5 tương ứng 50%, không phải 0,5%.",
+        "B": "Đúng: P=3/6=0,5, q=3/4=0,75, (q-p)*100=25 điểm phần trăm.",
+        "C": "Sai: Mức tăng tương đối là (0,75−0,5)/0,5=50%, 25 là điểm phần trăm.",
+        "D": "Sai: Đảo mẫu số và kết quả hai phép tính."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 0.5 0.75 25.0. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-034",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Hai giá lớn nhất là 150(T2),120(T4), theo thứ tự giảm dần, danh sách chọn cột giữ gia trước id. Giữ id giúp tra nguồn.",
+        "B": "Sai: Lấy hai giá nhỏ nhất.",
+        "C": "Sai: Đảo thứ tự hai hàng đã chọn.",
+        "D": "Sai: Bỏ qua thứ tự cột được yêu cầu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['T2', 'T4'] ['gia', 'id']. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-035",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: B độc lập với df, còn a là tên khác của b. Sửa a làm b đổi nhưng không làm df đổi.",
+        "B": "Sai: Bỏ qua copy.",
+        "C": "Sai: Tưởng a=b cũng tạo bản sao riêng.",
+        "D": "Sai: Đảo bảng bị sửa và bảng giữ nguyên."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 10.0 99.0. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-036",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Giả định công thức đã được sửa và tự cập nhật.",
+        "B": "Sai: Giả định tự tính lại biểu thức sai (40+20)*3.",
+        "C": "Sai: Giả định tổng cũ đã dùng đúng phí một lần: 50*3+20.",
+        "D": "Đúng: Tong lưu giá trị cũ (50+20)*3=210. Tổng đúng theo giá mới là 40*3+20=140. Code có cả lỗi nhân phí một lần và chưa tính lại cột."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [40.0, 210.0]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-037",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Index=False vẫn loại index, index_label không đưa mã trở lại.",
+        "B": "Sai: Giữ mã nhưng đặt tên id, không đúng yêu cầu tên ma.",
+        "C": "Sai: Ma chưa là cột dữ liệu để chọn bằng columns, phát KeyError. Giữ index hay chuyển nó thành cột đều là cách hợp lệ nếu đáp ứng đúng yêu cầu, nhưng chỉ D trong các lựa chọn này đúng.",
+        "D": "Đúng: Mặc định index=True, index_label đặt tiêu đề ma cho cột chứa A,B,C."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi xuất DataFrame ra tệp CSV với tham số `index_label=\"ma\"`: Cột chỉ mục được đặt tên nhãn là `ma` ở dòng tiêu đề đầu tiên trong tệp CSV xuất ra. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-038",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 12.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-039",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [63.0, 330.0].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-040",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 60.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-041",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Thay tỷ trọng toàn bảng bằng tỷ trọng trong mẫu nhỏ.",
+        "B": "Đúng: B có 4/7 hàng, PR có 3/7 hàng, 7−6=1 giá thiếu, trung vị sáu giá 10,20,40,50,60,70 là45. Mẫu hai hàng không bảo đảm đại diện snapshot, các tỷ trọng còn giới hạn ở bảng đang khảo sát, chưa đại diện toàn bộ thị trường.",
+        "C": "Sai: Quy mô quận đếm mọi chỗ ở, không chỉ hàng có giá.",
+        "D": "Sai: Dùng số hàng NC làm số hàng PR."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: (7, 3) quan loai gia 6 B PR 70.0 2 A NC NaN <class 'pandas.DataFrame'> RangeIndex: 7 entries, 0 to 6 Data columns (total 3 columns): # Column Non-Null Count Dtype, -,,,,,, - 0 quan 7 non-null str 1 loai 7 non-null str 2 gia 6 non-null float64 dtypes: Float64(1), str(2) memory usage: 321.0 bytes count 6.000000 mean 41.666667 std 23.166067 min 10.000000 25% 25.000000 50% 45.000000 75% 57.500000 max 70.000000 Name: Gia, dtype: Float64 loai NC 4 PR 3 Name: Count, dtype: Int64. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-042",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Đảo mean và median.",
+        "B": "Sai: Median của số lượng chẵn có thể là trung bình hai giá giữa.",
+        "C": "Sai: Chênh lệch hai thống kê không tự chứng minh lỗi dữ liệu.",
+        "D": "Đúng: Tổng 1000/4=250, median=(30+40)/2=35. Một giá rất lớn kéo mean lên mạnh, median phản ánh vị trí giữa. Cần kiểm nguồn trước khi kết luận lỗi."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 250.0 35.0. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-043",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Sau lọc còn A95,B40,D60,E50. Hai giá nhỏ nhất là B40,E50.",
+        "B": "Sai: Lấy C dù loại Shared bị loại trước top-k.",
+        "C": "Sai: Lấy hai giá lớn nhất của tập được phép.",
+        "D": "Sai: Lấy hai hàng đầu thay vì hai giá nhỏ nhất."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['B', 'E']. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-044",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Dùng cả hai như vị trí.",
+        "B": "Đúng: Nhãn 0 nằm ở hàng thứ hai, giá 25. Vị trí0 là hàng đầu nhãn 2, giá 15. Hai kết quả là giá trị một ô, không phải DataFrame.",
+        "C": "Sai: Dùng cả hai như nhãn.",
+        "D": "Sai: Đảo cơ chế loc và iloc."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 25.0 15.0. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-045",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Copy giữ df độc lập. Sửa s khiến Series này tách khỏi b theo CoW, giá 99 chỉ ở s. Gán loc sửa b thành 5 ở hàng 0.",
+        "B": "Sai: Bỏ qua copy và làm df đổi theo b.",
+        "C": "Sai: Tưởng sửa s ghi trở lại b.",
+        "D": "Sai: Tưởng phép gán trực tiếp loc không sửa được b."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [10.0, 20.0, 30.0] [5.0, 20.0, 30.0] [10.0, 99.0, 30.0]. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-046",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Suy từ tính nhất quán file thành tính đúng nguồn.",
+        "B": "Sai: Code không có bước điền0.",
+        "C": "Đúng: Hai cột id,gia được giữ, một giá thiếu vẫn thiếu. Hai sum đều bỏ qua NaN và bằng 100. Đây là kiểm chứng một số bất biến ghi/đọc, chưa xác nhận giá nguồn đúng thực tế hay tự thay thế kiểm từng cặp mã–giá.",
+        "D": "Sai: Với dữ liệu này hai sum đều bằng 100."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi df.to_csv và pd.read_csv: Shape (3, 2), tên cột ['id', 'gia'], số ô NaN là 1, tổng cột gia trước và sau ghi đều là 100.0 (True). In ra '(3, 2) [\\'id\\', \\'gia\\'] 1 True'. Khớp đáp án C.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B4-047",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: True.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-048",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi thao tác tạo bản sao và cập nhật có điều kiện: Dùng `nguon.copy()` để không làm thay đổi bảng gốc, áp dụng `loc[df[\"loai\"] == \"NC\", \"gia\"] *= 0.5` để giảm 50% giá phòng nguyên căn.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-049",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi phương thức đếm tần suất: `value_counts()` mặc định bỏ qua `NaN` đếm được `NC: 2`, `PR: 1`, `Shared: 1`, khi thêm `dropna=False` ghi nhận thêm 2 giá trị khuyết.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-050",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi gom nhóm dữ liệu `groupby(\"khu\")[\"gia\"].agg([\"count\", \"mean\"])`: Tính toán chính xác số lượng phòng và giá trung bình cho từng khu vực.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-051",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Không truyền index thì nhãn mặc định0,1,2.",
+        "B": "Đúng: Mỗi khóa dict tạo một cột, index=nhan đặt nhãn hàng và không tạo cột thứ ba. id giữ vai trò khóa.",
+        "C": "Sai: Ma_hang được tạo thành cột thứ ba, không thành index, shape(3,3).",
+        "D": "Sai: Cách tạo đúng nhưng diễn giải mean(id) thành giá là sai, giá trung bình ở đây là60."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi khởi tạo DataFrame từ từ điển kèm danh sách chỉ mục: `pd.DataFrame(du_lieu, index=nhan)` tạo bảng kích thước `(3, 2)` với các nhãn hàng lần lượt là `K1`, `K2`, `K3`. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-052",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: False của <50 có cả NaN, không đồng nghĩa biết >=50.",
+        "B": "Đúng: <50 là T,F,F,F, >=50 là F,T,T,F. Cả hai mask là bool không thiếu, mẫu số đều4. Tổng tỷ lệ0,75 vì hàng chưa biết không thuộc nhóm so sánh nào.",
+        "C": "Sai: So sánh diễn ra trước mean, chuyển ô NaN thành False chứ không bỏ hàng.",
+        "D": "Sai: <50 không bao gồm giá 50."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 0.25 0.5 0.75. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-053",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Nhãn hàng đơn không giữ kết quả dưới dạng bảng ở cách chọn này.",
+        "B": "Sai: Series có hai giá trị, không phải một.",
+        "C": "Sai: Đảo số hàng và số cột của b.",
+        "D": "Đúng: Một nhãn hàng đơn cho Series chứa hai phần tử phi,gia. Danh sách một nhãn giữ hàng dưới dạng DataFrame một hàng, hai cột."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: Series (2,) DataFrame (1, 2). Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-054",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Cho rằng chained assignment có tác dụng và cột dẫn xuất tự cập nhật.",
+        "B": "Sai: Cho rằng chained assignment có tác dụng.",
+        "C": "Sai: Cho rằng a là bản sao, hoặc cảnh báo chặn cả lệnh loc sau đó.",
+        "D": "Đúng: Gán nối tiếp vào b phát cảnh báo và không sửa bảng. a=df nên gán loc ở hàng a sửa df thành 8. Cột hai giữ giá trị cũ."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [8.0, 20.0, 30.0] [20.0, 40.0, 60.0]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-055",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Tưởng index=False xóa cả cột id sau reset_index.",
+        "B": "Sai: Tưởng index mới vẫn được ghi dù index=False.",
+        "C": "Đúng: Reset_index chuyển index tên id thành cột id. index=False chỉ bỏ index mới, không bỏ cột id vừa tạo. NaN vẫn thiếu, sum15+45=60.",
+        "D": "Sai: Tưởng CSV tự thay thiếu bằng 0. Mã đọc lại theo thứ tự S3,S1,S2."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: (3, 3) ['id', 'gia', 'loai'] 1 60.0. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-056",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Có năm nhãn không thiếu, A xuất hiện2 nên tỷ lệ2/5=0,4. Có ba nhãn khác nhau A,B,C, count=5.",
+        "B": "Sai: Dùng len=6 cho cả normalize và count.",
+        "C": "Sai: Tính thiếu như một nhãn trong nunique mặc định.",
+        "D": "Sai: Bỏ qua normalize=True và trả số đếm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 0.4 3 5. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-057",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi chuyển đổi kiểu dữ liệu bằng `pd.to_numeric(errors=\"coerce\")`: Phát hiện và chuyển đổi các giá trị văn bản không hợp lệ thành `NaN`, bảo đảm tính toán thống kê số học không bị lỗi.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-058",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi các phương pháp điền khuyết thiếu: So sánh việc điền bằng giá trị trung vị với việc giữ nguyên `NaN` hoặc đánh dấu danh mục riêng.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    },
+    {
+      "id": "B4-059",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 540.0 360.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B4-060",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi tính toán cột tổng chi phí: Áp dụng cơ chế Copy-on-Write bảo đảm việc gán cột mới hoặc sửa đổi giá trị không gây tác dụng phụ ngoài ý muốn lên DataFrame gốc.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với chế độ Copy-on-Write mặc định."
+      }
+    }
+  ]
+}

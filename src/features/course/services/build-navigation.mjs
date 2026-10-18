@@ -11,7 +11,8 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
         {text: course.name, items:[
           {text:'Tổng quan môn học',link:`/${course.id}/`},
-          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : [])
+          ...(!course.review ? [{text:'Bài tập ôn luyện',link:`/${course.id}/bai-tap`}] : []),
+          ...(course.id === 'xu-ly-du-lieu' ? [{text:'Ôn thi',link:`/${course.id}/on-thi/`}] : [])
         ]},
         ...(course.review ? [
           {text:'Ôn luyện',collapsed:false,items:[

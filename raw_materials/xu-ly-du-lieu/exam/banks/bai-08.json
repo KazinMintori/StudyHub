@@ -1,0 +1,2046 @@
+{
+  "lesson": "08",
+  "sourceTitle": "Bài 8 — Xử lý dữ liệu thời gian: ngân hàng 72 câu hỏi",
+  "questions": [
+    {
+      "id": "B8-001",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn quy định **DD/MM/YYYY**, dữ liệu chỉ có ngày. Xét:\n\n```python\ns = pd.Series([\"04/09/2026\", \"09/04/2026\"])\nd = pd.to_datetime(s, format=\"%d/%m/%Y\")\nprint(d.dt.month.tolist())\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[4, 9]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[9, 4]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[9, 9]`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo lỗi vì hai chuỗi có thể đọc theo cả hai quy ước."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** A đảo ngày/tháng theo MM/DD/YYYY. B đúng: 04/09 là ngày 4 tháng 9, 09/04 là ngày 9 tháng 4. C áp tháng của hàng đầu cho mọi hàng. D sai: `format` đã xác định cách đọc; tính mơ hồ khi chưa biết nguồn không làm hai ngày hợp lệ phát sinh lỗi. `%d` là ngày, `%m` là tháng, `%Y` là năm bốn chữ số. Không có giá trị thiếu.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K02. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Đảo ngày/tháng dù cả hai đều hợp lệ. Tham chiếu cách hỏi: GK26(a).\n\n**Đọc lại:** G §1; L ô 6–10.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 100,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 50,
+        "questionSha256": "da957567d466278668f40dcb5281b4a5a46c0bb94aa1daaa1bd640a2fd51ebca",
+        "answerSha256": "8adf143217129e8a4996b3c90eaba46667cd8a029443f5eb79c274634fd3b420"
+      }
+    },
+    {
+      "id": "B8-002",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi phần tử sau là **một review**, có giờ, cùng giờ địa phương không gắn timezone. Đã thu đủ mọi ngày 01–04/08/2026; không có hàng nghĩa là không có review.\n\n```python\nt = pd.to_datetime([\"2026-08-01 08:00\", \"2026-08-01 19:00\",\n                    \"2026-08-02 09:00\", \"2026-08-02 11:00\",\n                    \"2026-08-04 10:00\"])\ns = pd.Series(1, index=t).resample(\"D\").size()\nprint(s.pct_change(fill_method=None).head(3).tolist())\n```\n\nDòng cuối in ra gì? `nan` ký hiệu giá trị thiếu; kết quả ở dạng **tỷ lệ**.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[nan, 0.0, -100.0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[nan, 0.0, 0.0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[nan, 1.0, -1.0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[nan, 0.0, -1.0]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** Lịch ngày là 01, 02, 03, 04/08 với số review `[2,2,0,1]`. Kỳ gốc của 02/08 là 01/08: `2/2-1=0`; của 03/08 là 02/08: `0/2-1=-1`. A đã nhân phần tử giảm với 100 dù đề cần tỷ lệ. B bỏ qua ngày có số đếm 0. C dùng `kỳ này/kỳ gốc` mà quên trừ 1 ở ngày thứ hai. D đúng. Ngày đầu thiếu vì chưa có kỳ gốc; 03/08 là 0 đã biết, không phải ngày chưa thu thập.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K12; phụ K14, K21. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Bỏ ngày 0; nhầm tỷ lệ với phần trăm.\n\n**Đọc lại:** L ô 39–44, 67–69; GK câu 19.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 121,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 62,
+        "questionSha256": "3f64d7042b812cbb026f30b0c53dcc4cf62cea596eccbe9867056984e926a583",
+        "answerSha256": "a5b0e4c920fd75b77886bfd5ae85306dd25de2f5f459be25a6ecfb8c8692930f"
+      }
+    },
+    {
+      "id": "B8-003",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Biết 31/12/2026 là **thứ Năm**; Việt Nam là UTC+7.\n\n```python\nt = pd.Timestamp(\"2026-12-31 19:15\", tz=\"UTC\")\nv = t.tz_convert(\"Asia/Ho_Chi_Minh\")\nprint(v.year, v.month, v.dayofweek)\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`2026 12 3`"
+        },
+        {
+          "key": "B",
+          "markdown": "`2027 1 5`"
+        },
+        {
+          "key": "C",
+          "markdown": "`2027 1 4`"
+        },
+        {
+          "key": "D",
+          "markdown": "`2026 12 4`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Giờ Việt Nam là 02:15 ngày 01/01/2027, thứ Sáu; `dayofweek=4` vì thứ Hai bằng 0. A giữ nguyên ngày giờ UTC. B đếm thứ Hai bằng 1. C đúng. D chỉ đổi thứ nhưng giữ sai tháng và năm. `tz_convert` giữ cùng thời điểm thực, thay cách biểu diễn theo múi giờ.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K06. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Đổi múi giờ nhưng quên đổi ngày, năm hoặc quy ước thứ.\n\n**Đọc lại:** L ô 26–28; GK câu 20.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 144,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 74,
+        "questionSha256": "bef409cb4eb5a69d4e7c6786b9942db994c94d3e0efdff238692cd95ed69e0ef",
+        "answerSha256": "bc31b6f4ebb1a5f663cefcd3650a133966d8615fadbf023996e272c8c0160b9a"
+      }
+    },
+    {
+      "id": "B8-004",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bảng sau ghi ngày review theo YYYY-MM-DD, chỉ có ngày, không có giá trị thiếu. Mỗi hàng là một review khác nhau, kể cả khi trùng ngày. Nguồn đã thu đủ tháng 3/2026.\n\n```python\ndf = pd.DataFrame({\"date\": [\"2026-03-03\", \"2026-03-01\",\n                             \"2026-03-03\", \"2026-02-28\"],\n                   \"id\": [11, 12, 13, 14]})\ndf[\"date\"] = pd.to_datetime(df[\"date\"], format=\"%Y-%m-%d\")\nr = df.set_index(\"date\").sort_index()\nprint(len(r.loc[\"2026-03\"]))\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`3`"
+        },
+        {
+          "key": "B",
+          "markdown": "`2`"
+        },
+        {
+          "key": "C",
+          "markdown": "`4`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo lỗi vì chỉ mục ngày bị trùng."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Có ba review tháng 3: id 12, 11, 13. A đúng. B đếm hai ngày khác nhau thay vì review. C không lọc tháng và tính cả 28/02. D sai vì DatetimeIndex cho phép trùng ngày. Ngày review không tự là ngày booking/nhận phòng; không xóa hai review ngày 03/03 chỉ vì cùng ngày.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K08; phụ K09. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Nhầm nhiều sự kiện cùng ngày với bản ghi trùng cần xóa.\n\n**Đọc lại:** L ô 30–38.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 165,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 86,
+        "questionSha256": "eb02dadb9f2023a6cd9e2354ffe9eaef8fa367f85e5e4c1fc02f7ab440784599",
+        "answerSha256": "76208b4fef5f4ad37d596a8ef40e4cacd5903f3f3a27ea7e437fd1b699b444f3"
+      }
+    },
+    {
+      "id": "B8-005",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "`s` đã là số review của bốn tháng trọn liên tiếp, sắp đúng lịch, không thiếu.\n\n```python\ns = pd.Series([6, 18, 12, 24],\n              index=pd.date_range(\"2026-01-31\", periods=4, freq=\"ME\"))\nt = s.rolling(3, min_periods=3, center=False).mean()\nprint(t.iloc[-1])\n```\n\nGiá trị cuối được tính thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`12.0`, trung bình tháng 1–3."
+        },
+        {
+          "key": "B",
+          "markdown": "`18.0`, trung bình tháng 2–4."
+        },
+        {
+          "key": "C",
+          "markdown": "`54.0`, tổng tháng 2–4."
+        },
+        {
+          "key": "D",
+          "markdown": "`24.0`, chỉ lấy tháng 4 vì cửa sổ kết thúc ở tháng 4."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Cửa sổ cuối chứa các nhãn 28/02, 31/03, 30/04 với giá trị `[18,12,24]`; tổng 54, trung bình 18 review/tháng. A dùng cửa sổ trước. B đúng. C nhầm `mean` thành `sum`. D nhầm nhãn cuối cửa sổ với toàn bộ dữ liệu dùng để tính. Hai kết quả đầu là NaN vì chưa đủ ba giá trị không thiếu.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K16; phụ K17. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm nhãn gắn kết quả, cửa sổ hoặc sum/mean.\n\n**Đọc lại:** L ô 51–56.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 189,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 98,
+        "questionSha256": "e843b85800cbe28c3d546263618433295f87d3f62bf422bce50c896a01c8bf54",
+        "answerSha256": "c11575620a1f484ccad87c9f296603908a65695c7bc81c4bffe246141be77b16"
+      }
+    },
+    {
+      "id": "B8-006",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi sau đã tổng hợp theo tháng, có đủ tháng 1–4/2026, sắp tăng dần.\n\n```python\ns = pd.Series([8, 10, 15, 12],\n              index=pd.date_range(\"2026-01-31\", periods=4, freq=\"ME\"))\np = s.shift(1)\nprint(p.loc[\"2026-03-31\"], p.index.equals(s.index))\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`15.0 True`"
+        },
+        {
+          "key": "B",
+          "markdown": "`12.0 False`"
+        },
+        {
+          "key": "C",
+          "markdown": "`10.0 True`"
+        },
+        {
+          "key": "D",
+          "markdown": "`10.0 False`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** `shift(1)` ở đây dịch giá trị xuống một hàng, giữ nhãn. Tháng 3 nhận 10 của tháng 2, chỉ mục không đổi. A không dịch giá trị. B đọc giá trị hàng sau và cho rằng nhãn cũng dịch. C đúng. D có giá trị đúng nhưng hiểu sai việc giữ nhãn. Hàng đầu của `p` thiếu kỳ gốc.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K20. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Coi shift không có freq là dịch nhãn ngày.\n\n**Đọc lại:** L ô 59–64.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 211,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 110,
+        "questionSha256": "9adb00596cc3dbbd77fd309b881da4d7d40133eeb95abedbae092c10709d37d0",
+        "answerSha256": "984e23b8b3233cadecd0ac89e9c734680fd2eabe9ab53e0b469d51757e5e52af"
+      }
+    },
+    {
+      "id": "B8-007",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn dùng DD/MM/YYYY; `None` là thiếu từ nguồn, chuỗi khác None phải là một ngày hợp lệ theo quy ước đó.\n\n```python\nraw = pd.Series([\"30/04/2026\", None, \"31/04/2026\", \"05/04/2026\"],\n                index=[\"R1\", \"R2\", \"R3\", \"R4\"])\nparsed = pd.to_datetime(raw, format=\"%d/%m/%Y\", errors=\"coerce\")\nbad = raw.notna() & parsed.isna()\nprint(bad[bad].index.tolist())\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`['R2', 'R3']`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`['R2']`"
+        },
+        {
+          "key": "D",
+          "markdown": "`['R3']`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** R3 chứa ngày không tồn tại, còn R2 đã thiếu từ nguồn. Cả hai thành NaT nhưng chỉ R3 thỏa `raw.notna() & parsed.isna()`. A chỉ nhìn cột đã chuyển và gộp mọi nguyên nhân thiếu. B coi coerce đã sửa được ngày sai. C chỉ đánh dấu thiếu nguồn, ngược mục tiêu. D đúng. `coerce` tạo dấu thiếu để tiếp tục xử lý, không khôi phục ngày đúng.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K04. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Chỉ nhìn cột đã đổi kiểu để giải thích mọi NaT.\n\n**Đọc lại:** L ô 11–15; Lab ô 5–9.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 233,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 122,
+        "questionSha256": "c160ae8459ab9f8a459778a692755c752b14495ad45321b954625433e58a414e",
+        "answerSha256": "233520e84b6ceb9a273fe72fb6b41225a5d0b16c38ca9c81e6b77024e01f4ca0"
+      }
+    },
+    {
+      "id": "B8-008",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một lượt lưu trú, ngày theo DD/MM/YYYY, không có giờ. Năm 2024 nhuận, tháng 2 có 29 ngày.\n\n```python\ndat = pd.DataFrame({\"vao\": [\"28/02/2024\", \"30/12/2025\", \"31/04/2026\", None],\n                    \"ra\": [\"01/03/2024\", \"02/01/2026\", \"03/05/2026\", \"04/05/2026\"]},\n                   index=[\"D1\", \"D2\", \"D3\", \"D4\"])\n```\n\nViết code tạo `vao`, `ra`, `so_dem` và mask `loi_vao` chỉ đánh dấu lỗi chuyển đổi. Nêu số đêm từng hàng và lý do không điền mọi số đêm thiếu bằng 0. Khoảng 6 dòng code cùng giải thích ngắn.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nvao = pd.to_datetime(dat[\"vao\"], format=\"%d/%m/%Y\", errors=\"coerce\")\nra = pd.to_datetime(dat[\"ra\"], format=\"%d/%m/%Y\", errors=\"coerce\")\nso_dem = (ra - vao).dt.days\nloi_vao = dat[\"vao\"].notna() & vao.isna()\n```\n\nSố đêm D1=2, D2=3, D3 và D4 thiếu. D3 là lỗi ngày không tồn tại; D4 thiếu từ nguồn. `loi_vao` chỉ đúng ở D3. Thiếu một toán hạng hợp lệ khiến hiệu là NaT, số ngày là thiếu, không phải khoảng thời gian 0. Giữ dữ liệu gốc để truy vết; 0 đêm sẽ là một giá trị đã biết khác về ý nghĩa.\n\n**Chấm 5 điểm:** đổi đúng cả hai cột, có format và coerce (1,5); hiệu và `.dt.days` đúng (1); kết quả 2,3, thiếu, thiếu (1); mask đúng (1); giải thích không điền 0 (0,5). Chấp nhận cách tương đương, không buộc đúng tên biến trung gian.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K05; phụ K04, K07. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** NaT bị đổi thành 0 đêm; quên năm nhuận hoặc ranh giới năm.\n\n**Đọc lại:** Lab ô 5–9; L ô 19–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 256,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 134,
+        "questionSha256": "99768dbcac02be30810019a0eea8fedd838f371e3aea2e1717b2bbf61346e359",
+        "answerSha256": "23544cc5ef0d12703b61f0a77df4571dbdf6147be591ce3c6df444a973755376"
+      }
+    },
+    {
+      "id": "B8-009",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Đây là **tổng review của từng tháng trọn**, cùng cách thu thập, đã quan sát đầy đủ hai tháng đầu của mỗi năm. Không có tháng thiếu.\n\n| Tháng | 2025 | 2026 |\n|---|---:|---:|\n| 1 | 20 | 40 |\n| 2 | 180 | 198 |\n\nMột bạn lấy trung bình hai tỷ lệ tăng từng tháng và báo “tổng hai tháng tăng 55%”. Hãy tính mức thay đổi đúng của **tổng hai tháng** (làm tròn 1 chữ số phần trăm), viết phép tính bằng Python và giải thích mẫu số/trọng số gây khác biệt. Có được từ kết quả này kết luận nguyên nhân là chiến dịch quảng cáo không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ngoc = pd.Series([20, 180])\nnay = pd.Series([40, 198])\ndoi_tong = nay.sum() / goc.sum() - 1\nprint(f\"{doi_tong:.1%}\")\n```\n\nTổng kỳ này 238, tổng kỳ gốc 200; tăng 19,0%. Tỷ lệ tháng là 100% và 10%; trung bình không trọng số là 55%. Tỷ lệ của tổng dùng trọng số theo số review kỳ gốc (20/200, 180/200), không cho mỗi tháng cùng trọng số. Kỳ gốc là tổng tháng 1–2/2025; mẫu số 200 review. Hai giai đoạn đầy đủ và tương ứng, nhưng số review không xác định nguyên nhân biến động; cần bằng chứng khác về quảng cáo.\n\n**Chấm 5 điểm:** xác định hai tổng và kỳ gốc (1); công thức/code và 19,0% (1,5); giải thích 55% cùng trọng số tháng khác với tỷ lệ tổng (1,5); giới hạn kết luận nguyên nhân (1).\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K24; phụ K23. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Trung bình tỷ lệ thay đổi thay cho tỷ lệ của tổng; so cùng kỳ thành kết luận nhân quả.\n\n**Đọc lại:** G §3 Bài tập 3; L ô 82–83.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 268,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 155,
+        "questionSha256": "8e72e35b85874deedd43ba68545af5efd41fe9997c12eed293bdb0d71e45a4bc",
+        "answerSha256": "f6bb163d4024c74697cfe9e1c820ac46dc5c570cd53fff36f7cc8f0d3b692691"
+      }
+    },
+    {
+      "id": "B8-010",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một review; ngày DD/MM/YYYY, chỉ có ngày, đều hợp lệ. Đã thu đủ **01/04 đến hết 12/06/2026**; sau đó chưa biết. Các ngày trong phạm vi không xuất hiện nghĩa là không có review. Code sau được viết cho pandas 3.0.3:\n\n```python\nrv = pd.DataFrame({\"ngay\": [\"05/04/2026\", \"08/04/2026\", \"09/05/2026\",\n                             \"10/05/2026\", \"11/06/2026\", \"12/06/2026\"]})\nrv[\"ngay\"] = pd.to_datetime(rv[\"ngay\"])\nthang = rv.set_index(\"ngay\").resample(\"M\").size()\ntang = thang.pct_change(fill_method=None)\n```\n\n(a) Dòng đọc ngày có thể sai ngữ nghĩa thế nào khi không báo lỗi? (b) Sửa **hai dòng đọc ngày và tổng hợp**. (c) Có nên dùng `tang` tháng 6 để kết luận xu hướng tháng trọn không? Nêu hai kỳ đang được so và cách xử lý phù hợp. Khoảng 6 dòng code/giải thích.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nrv[\"ngay\"] = pd.to_datetime(rv[\"ngay\"], format=\"%d/%m/%Y\")\nthang = rv.set_index(\"ngay\").sort_index().resample(\"ME\").size()\ntron = thang.loc[thang.index <= pd.Timestamp(\"2026-05-31\")]\ntang_tron = tron.pct_change(fill_method=None)\n```\n\n(a) Bỏ format có thể đọc 05/04 thành 4/5 theo tháng/ngày; các chuỗi trong bảng đều có thể bị đọc nhầm mà vẫn là ngày hợp lệ. (b) Dùng `%d/%m/%Y`, đổi `M` sang `ME`. (c) Nhãn 30/06 chỉ là nhãn: số đếm `[2,2,2]` gồm tháng 4 trọn, tháng 5 trọn và 01–12/06. Tỷ lệ tháng 6 là `2/2-1=0`, so 12 ngày tháng 6 với toàn tháng 5 (31 ngày), không đủ cơ sở kết luận xu hướng tháng trọn. Bỏ tháng 6 theo phạm vi đã biết hoặc so 01–12/06 với 01–12/05 và ghi rõ giới hạn; không coi ngày 13–30/06 là 0.\n\n**Chấm 5 điểm:** nhận diện lỗi đọc ngày (1); sửa format (1); sửa ME (1); nêu tháng 6 chưa trọn, kỳ gốc tháng 5 và mẫu số 2 review (1); cách chọn kỳ/phạm vi tương ứng và giới hạn kết luận (1).\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K12; phụ K02, K11. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Cấu trúc (a)(b)(c) gần GK26; API cũ, ngày mơ hồ và kỳ chưa trọn.\n\n**Đọc lại:** L ô 23–25,39–47; GK câu 26.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 279,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 176,
+        "questionSha256": "0933068a5523bf167e7933e122251456ae385afd1df73727c5d18120d13b55c4",
+        "answerSha256": "1e470ec31f033d3f9279373417cdc461414b327509794d999352b22ea4e9d260"
+      }
+    },
+    {
+      "id": "B8-MR01",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Chuỗi đã tổng hợp tại **ba ngày không liên tiếp**, chỉ có ngày, index tăng dần, không thiếu giá trị. Không suy ra gì về các ngày không được liệt kê.\n\n```python\ns = pd.Series([3, 5, 7], index=pd.to_datetime([\n    \"2026-06-01\", \"2026-06-04\", \"2026-06-08\"]))\na = s.rolling(3, min_periods=1, center=False).sum()\nb = s.rolling(\"3D\", min_periods=1, center=False, closed=\"right\").sum()\nprint(a.iloc[-1], b.iloc[-1])\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`15.0 15.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`7.0 7.0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`15.0 12.0`"
+        },
+        {
+          "key": "D",
+          "markdown": "`15.0 7.0`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** `a` lấy ba hàng 01,04,08/06, tổng 15; `b` ở 08/06 lấy khoảng `(05/06 00:00,08/06 00:00]`, chỉ có 7. A coi ba hàng là ba ngày. B áp cửa sổ thời gian cho cả `a`. C lấy hai hàng gần nhất dù 04/06 nằm ngoài ba ngày. D đúng. Hai lệnh có cùng min_periods nên khác biệt do thành phần cửa sổ, không do điều kiện đủ dữ liệu.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31; phụ K16. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Đồng nhất cửa sổ số hàng và số ngày.\n\n**Đọc lại:** L ô 88–89.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 296,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 200,
+        "questionSha256": "eb6d47d07c28bac710d4e5e8cbd9be5902ab8ee94601e0b0941fa4b71e209b43",
+        "answerSha256": "c06f5648fab9ea843126c4a15ad08d66f4abe71f1c4193cbd16d6bf3b95503bf"
+      }
+    },
+    {
+      "id": "B8-MR02",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "Nguồn cho biết các chuỗi sau là **giờ UTC**, chưa có timezone trong kiểu dữ liệu; mỗi hàng là một review. Việt Nam UTC+7. Hệ thống đã thu đủ cả ngày **01/07/2026 theo giờ Việt Nam**; ngoài ngày này không cần suy luận độ đầy đủ.\n\n```python\nraw = pd.Series([\"2026-06-30 16:30\", \"2026-06-30 17:00\",\n                 \"2026-07-01 10:00\", \"2026-07-01 17:00\"])\n```\n\nViết code gắn đúng múi giờ, đổi sang giờ Việt Nam, lọc trọn ngày 01/07 bằng khoảng phải mở và đếm review. Nêu các hàng được giữ (chỉ mục 0–3). Vì sao không dùng `tz_localize(\"Asia/Ho_Chi_Minh\")` trực tiếp cho các giá trị gốc?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nu = pd.to_datetime(raw, format=\"%Y-%m-%d %H:%M\").dt.tz_localize(\"UTC\")\nv = u.dt.tz_convert(\"Asia/Ho_Chi_Minh\")\ndau = pd.Timestamp(\"2026-07-01\", tz=\"Asia/Ho_Chi_Minh\")\ncuoi = pd.Timestamp(\"2026-07-02\", tz=\"Asia/Ho_Chi_Minh\")\ngiu = (v >= dau) & (v < cuoi)\nso = int(giu.sum())\n```\n\nGiờ Việt Nam lần lượt 30/06 23:30, 01/07 00:00, 01/07 17:00, 02/07 00:00; giữ hàng 1,2, số review=2. Localize trực tiếp sang Việt Nam sẽ coi giờ UTC trên mặt đồng hồ là giờ Việt Nam, gán sai thời điểm thực. Dùng `.dt` vì đây là Series. Mẫu số nếu tính review/ngày cho phạm vi này là một ngày đã thu đủ.\n\n**Chấm 5 điểm:** parse và localize UTC (1); convert Việt Nam (1); hai mốc cùng timezone và phải mở (1,5); hàng 1,2 và số đếm 2 (1); giải thích gán sai thời điểm (0,5).\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K30, K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Gắn sai múi giờ nguồn; lấy ngày theo UTC hoặc bỏ sự kiện cuối ngày.\n\n**Đọc lại:** L ô 86–91.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 319,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 212,
+        "questionSha256": "53883283afe9206a6329eaf3e4cb24d5428eeb0a380d037386d74d67c1ca9f5f",
+        "answerSha256": "f586986568a13771b7cb1a8787a126de53ef1c04631ade95632c7663473e1750"
+      }
+    },
+    {
+      "id": "B8-011",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn dùng DD/MM/YYYY, chỉ có ngày. Xét riêng hai thao tác trên danh sách chuỗi `x`:\n\n```python\nx = [\"02/12/2026\", \"15/01/2026\", \"03/02/2026\"]\nthu_tu = sorted(x)\n# Thao tác thứ hai, chạy riêng:\nhieu = x[0] - x[1]\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`thu_tu` theo đúng thời gian; `hieu` là số ngày từ 15/01 đến 02/12."
+        },
+        {
+          "key": "B",
+          "markdown": "`thu_tu` bắt đầu bằng `15/01/2026`; phép trừ báo lỗi kiểu."
+        },
+        {
+          "key": "C",
+          "markdown": "`thu_tu` bắt đầu bằng `02/12/2026`; phép trừ báo lỗi kiểu."
+        },
+        {
+          "key": "D",
+          "markdown": "`thu_tu` bắt đầu bằng `02/12/2026`; `hieu` bằng 0 vì hai chuỗi cùng năm."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Sắp từ điển xét ký tự đầu nên thứ tự là 02/12,03/02,15/01; thứ tự thời gian là 15/01,03/02,02/12. Trừ hai chuỗi báo TypeError. A coi chuỗi tự là ngày giờ. B lấy thứ tự thời gian cho một phép sắp chuỗi. C đúng. D tự diễn giải phần năm rồi tạo khoảng 0 không có căn cứ. Cần parse theo `%d/%m/%Y`, sau đó mới sắp và trừ hai Timestamp để được Timedelta.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K01; phụ K07. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Đồng nhất sắp văn bản với sắp thời gian và trừ chuỗi.\n\n**Đọc lại:** L ô 6–7,19–22.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 335,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 265,
+        "questionSha256": "4e4d70986cb47de8b866d862a1338c4e5dc7efacf2952c6ecc55df9d9563b984",
+        "answerSha256": "727e72038934ccd51b28d2ccd1739ac7a874279421c02f17cd04d338d2226656"
+      }
+    },
+    {
+      "id": "B8-012",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review của các tháng trọn sau có **DatetimeIndex duy nhất**, độ chính xác ngày, sắp tăng dần; nhãn đều ở 00:00, không gắn timezone.\n\n```python\ns = pd.Series([8, 10, 12, 15], index=pd.to_datetime([\n    \"2026-01-31\", \"2026-02-28\", \"2026-03-31\", \"2026-04-30\"]))\na = s.loc[\"2026-03-31\"]\nb = s.loc[\"2026-03\"]\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`a` là một giá trị số 12; `b` là Series một phần tử."
+        },
+        {
+          "key": "B",
+          "markdown": "Cả `a` và `b` đều là giá trị số 12 vì chỉ có một hàng tháng 3."
+        },
+        {
+          "key": "C",
+          "markdown": "Cả `a` và `b` đều là Series vì chỉ mục có kiểu ngày giờ."
+        },
+        {
+          "key": "D",
+          "markdown": "`a` là Series; `b` là một giá trị số vì nhãn ngắn hơn."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Nhãn đầy đủ khớp duy nhất một phần tử nên lấy số 12; nhãn tháng là chọn một khoảng nên vẫn là Series. B bỏ qua kiểu chọn rút gọn. C suy mọi truy cập DatetimeIndex đều trả Series. D đảo ngược hai cơ chế. Kết luận về scalar dựa trên index duy nhất và độ chính xác đã cho; không áp máy móc khi index trùng hoặc có nhiều thời điểm trong một ngày.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K08. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Một hàng được chọn không đồng nghĩa luôn trả scalar.\n\n**Đọc lại:** L ô 70–72.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 357,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 277,
+        "questionSha256": "07293d44175f34f18a2fba7f00cee7f7d7deb3b140d1689992eced9234d191d3",
+        "answerSha256": "61ceecf1a330d69b99734602c5e8785723bf6eabd61169a8eb88b322eeb4f4a4"
+      }
+    },
+    {
+      "id": "B8-013",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review theo tháng đã sắp, nhãn cuối tháng. Tháng 2/2026 **chưa thu thập**, các tháng liệt kê đã thu đủ.\n\n```python\ns = pd.Series([12, 18, 24, 30], index=pd.to_datetime([\n    \"2026-01-31\", \"2026-03-31\", \"2026-04-30\", \"2026-05-31\"]))\na = s.shift(1).loc[\"2026-03-31\"]\nb = s.asfreq(\"ME\").shift(1).loc[\"2026-03-31\"]\n```\n\nCặp `(a, b)` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(12, 12)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(0, 0)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(12, 0)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(12, NaN)`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** Trước chuẩn lịch, hàng trước tháng 3 là tháng 1 nên `a=12`. `asfreq('ME')` thêm tháng 2 với NaN; sau dịch, tháng 3 nhận NaN. A coi asfreq không thêm nhãn. B và C đồng nhất chưa thu thập với 0 review. D đúng. Không được điền 0 cho tháng 2 khi chưa biết dữ liệu; asfreq chỉ đưa chuỗi đã tổng hợp về lịch giữa hai đầu, không suy ra số review.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K20; phụ K15, K14. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Hàng trước không luôn là tháng trước; chưa biết không phải 0.\n\n**Đọc lại:** L ô 62–66.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 379,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 289,
+        "questionSha256": "66933b7e8d2cc5f717dfa744f29600e01ddcf7426e1d87f9559765d68f894c45",
+        "answerSha256": "9547d782a4928375968c0dde0c795b668952f34a338a53ebe492a10270b7ce54"
+      }
+    },
+    {
+      "id": "B8-014",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là số review một ngày trên lịch 01–05/06/2026 liên tiếp, sắp tăng dần. 0 nghĩa là đã quan sát không có review; NaN nghĩa là ngày chưa có số liệu.\n\n```python\ns = pd.Series([2, 0, float(\"nan\"), 4, 6],\n              index=pd.date_range(\"2026-06-01\", periods=5, freq=\"D\"))\nt = s.rolling(3, min_periods=3, center=False).mean()\nprint(t.iloc[-1])\n```\n\nDòng cuối cho kết quả nào?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`10/3` vì đủ ba vị trí cuối."
+        },
+        {
+          "key": "B",
+          "markdown": "`NaN` vì cửa sổ cuối chỉ có hai giá trị không thiếu."
+        },
+        {
+          "key": "C",
+          "markdown": "`5.0` vì mean luôn bỏ NaN bất kể min_periods."
+        },
+        {
+          "key": "D",
+          "markdown": "`0.0` vì cửa sổ có một ngày chưa biết."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Cửa sổ cuối 03–05/06 chứa `[NaN,4,6]`, chỉ hai giá trị không thiếu, không đạt min_periods=3. A ngầm thay NaN bằng 0. B đúng. C áp phép bỏ thiếu của mean nhưng bỏ qua min_periods. D thay kết quả chưa biết bằng 0. 0 ở 02/06 là một giá trị hợp lệ được đếm; vấn đề ở đây là NaN ngày 03/06.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K17; phụ K16. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Đủ k hàng bị hiểu là đủ k giá trị không thiếu.\n\n**Đọc lại:** L ô 51–53; Lab ô 21–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 401,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 301,
+        "questionSha256": "c58191efbc7d5ddce30421a46f97323cb26f37eb253290f372db1bd3e36334d8",
+        "answerSha256": "eeb5459e66c2e155260b22a5a689d994562490c357327cfdf3cd7d4ff083fb40"
+      }
+    },
+    {
+      "id": "B8-015",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai tháng 2 sau đều thu đủ; số review tương ứng là 280 và 290, không thiếu ngày trong phạm vi thu thập. Năm 2024 nhuận.\n\n```python\ni = pd.to_datetime([\"2023-02-28\", \"2024-02-29\"])\ns = pd.Series([280, 290], index=i)\nprint((s / s.index.days_in_month).tolist())\n```\n\nDòng cuối in ra gì (review/ngày)?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[10.0, 10.0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[10.0, 290/28]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[280/29, 10.0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[280.0, 290.0]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** DatetimeIndex có `.days_in_month` trực tiếp, trả 28 và 29, kể cả năm nhuận. A đúng. B mặc định tháng 2 luôn 28 ngày. C mặc định cả hai năm có 29 ngày. D báo tổng review như mức review/ngày, chưa chia số ngày. Các mẫu số là mọi ngày của từng tháng đã thu đủ, không phải số ngày có review.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K27; phụ K06. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Quên năm nhuận hoặc nhầm tổng với mức mỗi ngày.\n\n**Đọc lại:** Lab ô 34–36.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 423,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 313,
+        "questionSha256": "b4e82eefd77f5fac58047c1144a66cd2031a065cde182df02c7492281412a550",
+        "answerSha256": "897c1479f503045df399679858ee9c37d623e4376f2ff0ddf84d695ee2fe88c1"
+      }
+    },
+    {
+      "id": "B8-016",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn xác nhận các chuỗi chỉ có ngày theo DD/MM/YYYY. Nhiệm vụ hiện tại chỉ yêu cầu đọc đúng các giá trị đã cho, **không yêu cầu kiểm định dạng chặt**.\n\n```python\ns = pd.Series([\"06/08/2026\", \"11/08/2026\"])\na = pd.to_datetime(s, dayfirst=True)\nb = pd.to_datetime(s, format=\"%d/%m/%Y\")\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`a` chắc chắn sai vì chỉ `format` mới đọc được DD/MM/YYYY."
+        },
+        {
+          "key": "B",
+          "markdown": "Có thể xác nhận quy ước của mọi nguồn chỉ bằng chuỗi `06/08/2026`."
+        },
+        {
+          "key": "C",
+          "markdown": "Nếu kết quả hiển thị YYYY-MM-DD thì pandas đã đọc chuỗi gốc theo YYYY-MM-DD."
+        },
+        {
+          "key": "D",
+          "markdown": "Cả hai cách đọc đúng hai giá trị này; biết định dạng nguồn thì khai báo format phù hợp giúp thể hiện quy ước rõ ràng."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** `a` và `b` đều là 06/08 và 11/08/2026 (tháng 8). A đánh dấu sai một cách thực sự đáp ứng đề. B sai vì 06/08 cũng hợp lệ theo MM/DD nên cần quy ước nguồn. C nhầm cách hiển thị với cách diễn giải chuỗi. D đúng. `dayfirst=True` là ưu tiên; không suy từ ví dụ này rằng nó sẽ kiểm chặt mọi yêu cầu về định dạng. Khi yêu cầu chặt, cần nêu và kiểm quy tắc tương ứng.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K03; phụ K02. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Coi dayfirst luôn sai; suy quy ước chỉ từ một ngày mơ hồ/cách hiển thị.\n\n**Đọc lại:** G §1; L ô 8–10,23–25,84.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 444,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 325,
+        "questionSha256": "3be1059502e0e3beee0de27b8ec2d9b99610ffea0509d2ac7242b50fb1f45662",
+        "answerSha256": "bdd31df0030f62f373b25c8768c59dc170b115432e8f9624fefe38c3d7c5f38d"
+      }
+    },
+    {
+      "id": "B8-017",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review bốn tháng trọn liên tiếp, sắp tăng, không thiếu. Cần in phần trăm thay đổi tháng 2 so tháng 1, một chữ số thập phân.\n\n```python\ns = pd.Series([40, 50, 60, 72],\n              index=pd.date_range(\"2026-01-31\", periods=4, freq=\"ME\"))\np = s.pct_change(fill_method=None).iloc[1]\n```\n\nDòng nào in đúng **`25.0%`**?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`print(f\"{p:.1f}%\")`"
+        },
+        {
+          "key": "B",
+          "markdown": "`print(f\"{p * 100:.1%}\")`"
+        },
+        {
+          "key": "C",
+          "markdown": "`print(f\"{p:.1%}\")`"
+        },
+        {
+          "key": "D",
+          "markdown": "`print(f\"{1 + p:.1%}\")`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Kỳ này 50 review, kỳ gốc 40 review, `p=50/40-1=0.25`. A in `0.2%` theo quy tắc làm tròn của định dạng trong trường hợp này, vì thêm dấu % không tự đổi đơn vị. B in `2500.0%`, nhân 100 hai lần. C định dạng tỷ lệ thành phần trăm một lần. D in `125.0%`, là mức kỳ này bằng bao nhiêu phần trăm kỳ gốc, khác phần trăm tăng.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K21. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhân 100 hai lần hoặc nhầm tỷ số mức với tỷ lệ tăng.\n\n**Đọc lại:** L ô 67–72; AI5 câu 4.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 465,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 337,
+        "questionSha256": "07c1e0326a9c9b1285e01687c7472c7cefa0126a48f6bd302a33d2dc01bd0551",
+        "answerSha256": "1a4142e2b28fe20a5ec92ffcf2d27f28c164d0eda6bab996cd30e2f937e80eaf"
+      }
+    },
+    {
+      "id": "B8-018",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng sau là một review; ngày YYYY-MM-DD, chỉ có ngày. Nguồn thu đủ 01–29/06/2026; ngày ngoài khoảng vẫn có thể hợp lệ do thu muộn. Hàng NaT không xác định được thuộc phạm vi nào.\n\n```python\nraw = pd.DataFrame({\"id\": [1,2,3,4,5,6],\n                    \"date\": [\"2026-06-29\", \"2026-06-02\", \"2026-06-29\",\n                             \"2026-06-30\", None, \"2026-06-31\"]})\n```\n\nViết code giữ cột gốc, đổi kiểu có coerce, tạo `r` đã lọc phạm vi và sắp ngày để tổng hợp sau đó. Báo số hàng giữ, số hàng có ngày hợp lệ ngoài phạm vi, số lỗi đọc và số thiếu nguồn. Có nên xóa một trong hai hàng ngày 29/06 không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nd = pd.to_datetime(raw[\"date\"], format=\"%Y-%m-%d\", errors=\"coerce\")\nloi = raw[\"date\"].notna() & d.isna()\nngoai = d.notna() & ((d < \"2026-06-01\") | (d > \"2026-06-29\"))\ngiu = d.notna() & (d >= \"2026-06-01\") & (d <= \"2026-06-29\")\nr = raw.assign(ngay=d).loc[giu].set_index(\"ngay\").sort_index()\n```\n\nGiữ 3 hàng (id 2,1,3 theo ngày; không yêu cầu thứ tự hai hàng cùng ngày). Ngoài phạm vi có 1 hàng id4; lỗi đọc 1 hàng id6; thiếu nguồn 1 hàng id5. Hai hàng không có ngày hợp lệ được loại khỏi phân tích ngày và báo riêng, không coi là “sau mốc”. Không xóa review cùng ngày; ngày trùng không chứng minh cùng một sự kiện. Ngày 30/06 chưa tự là lỗi nhập, chỉ ngoài phạm vi đang xét.\n\n**Chấm 5 điểm:** parse và giữ raw, phân loại thiếu/lỗi (1,5); mask trong/ngoài với ngày hợp lệ (1); index/sort đúng (1); bốn số đếm đúng (1); không xóa ngày trùng và không kết luận ngoài mốc là sai (0,5).\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K10; phụ K09, K04. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Mất truy vết NaT; xóa review trùng ngày; đồng nhất ngoài phạm vi với lỗi nguồn.\n\n**Đọc lại:** L ô 30–38,84–85; Lab ô 12–13.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 486,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 349,
+        "questionSha256": "9151dd52226657a6a232cd838edf62779b76fe0d2ab1bf665104a6b2e94cbf66",
+        "answerSha256": "a6470519c25b3059c01b9579e0faae6e8b27955923e7bcda0c310aa5bf4924e7"
+      }
+    },
+    {
+      "id": "B8-019",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Nguồn DD/MM/YYYY, chỉ có ngày; mỗi hàng là một review. Đã thu đủ **01/01 đến hết 29/06/2026**, ngày không có hàng trong khoảng đó là 0 review; 30/06 chưa biết. Năm 2026: quý I có 90 ngày; tháng 4 có 30 ngày, tháng 5 có 31 ngày.\n\n```python\nrv = pd.DataFrame({\"ngay\": [\"02/01/2026\", \"03/02/2026\", \"04/03/2026\",\n                             \"05/04/2026\", \"06/05/2026\", \"07/06/2026\"]})\nrv[\"ngay\"] = pd.to_datetime(rv[\"ngay\"])\nq = rv.set_index(\"ngay\").resample(\"Q\").size()\ndoi = q.pct_change(fill_method=None)\n```\n\n(a) Chỉ ra vấn đề đọc ngày và mã tần suất. (b) Sửa hai dòng đó; viết thêm cách chọn quý đã trọn dựa trên mốc 29/06. (c) Quý II có nhãn 30/06 thì đã trọn chưa? Tính số ngày thực sự đã quan sát của hai quý, kiểm tổng số review và nhận xét về kết luận “quý II bằng quý I nên xu hướng không đổi”.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nrv[\"ngay\"] = pd.to_datetime(rv[\"ngay\"], format=\"%d/%m/%Y\")\nq = rv.set_index(\"ngay\").sort_index().resample(\"QE\").size()\ntron = q.loc[q.index <= pd.Timestamp(\"2026-06-29\")]\nassert q.sum() == len(rv)\n```\n\n(a) Bỏ format có thể đảo ngày/tháng; `Q` không dùng trong pandas 3, cần `QE`. (b) Nhãn quý 31/03 và 30/06 có số đếm `[3,3]`; chỉ quý I được giữ. (c) Quý I đã quan sát 90 ngày, quý II mới có `30+31+29=90` ngày, chưa đủ 91 ngày của quý. Hai số đếm bằng nhau và hai khoảng tình cờ cùng 90 ngày không chứng minh quý II trọn hoặc xu hướng ổn định. Mẫu số của tỷ lệ hiện tại là 3 review quý I; chưa biết tổng quý II. Nếu báo hai giai đoạn 90 ngày, phải ghi rõ phạm vi, không gọi là so hai quý trọn.\n\n**Chấm 5 điểm:** hai vấn đề (1); sửa format/QE (1,5); chọn quý I theo mốc (0,5); 90/90 ngày và đối chiếu tổng 6 review (1); giới hạn kết luận, không suy đủ kỳ từ nhãn (1).\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K12; phụ K11, K02. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Cấu trúc GK26; nhãn quý II bị hiểu đã đủ 30/06; khớp tổng bị hiểu thành chứng minh xu hướng.\n\n**Đọc lại:** Lab ô 14–20; L ô 39–47; GK26.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 498,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 371,
+        "questionSha256": "bef82c52001f90b3b573451f9395abb167a28acccf1ac9b2e567ddf4713f0cca",
+        "answerSha256": "13991def3176ce518f6f6f4ec3dce7119deceaf937a412dc0aa2fae5dd879c64"
+      }
+    },
+    {
+      "id": "B8-020",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Để so **phân bố theo tháng số 1–12 qua nhiều năm**, bạn có tổng review từng tháng của hai năm 2024–2025 đã thu đủ cả năm và năm 2026 mới thu đủ tháng 1–2. Bảng nhỏ ghi riêng hai tháng cần tính; mười tháng khác trong mỗi năm trọn đều có tổng 30:\n\n| Năm | Tháng 1 | Tháng 2 |\n|---|---:|---:|\n| 2024 | 20 | 30 |\n| 2025 | 40 | 30 |\n| 2026 | 60 | 60 |\n\nMột bạn gộp mọi năm theo `.index.month` và cho rằng tháng nào cao hơn là mùa cao điểm đã loại xu hướng.\nHãy chọn phạm vi năm phù hợp, tính tổng tháng 1, tổng tháng 2 và chỉ số của chúng với **100 = trung bình 12 tổng tháng**. Giải thích thông tin mất đi khi lấy `.month`, rủi ro từ năm 2026 và hai giới hạn còn lại của chỉ số. Không cần viết bảng 36 hàng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Chỉ dùng 2024–2025 để mỗi tháng cùng đóng góp từ hai năm. Tháng 1: `20+40=60`; tháng 2: `30+30=60`; mỗi tháng khác `30+30=60`, nên trung bình 12 tổng là 60 và hai chỉ số đều 100.\n\n```python\ndem = pd.Series([60] * 12, index=range(1, 13))\nchi_so = dem / dem.mean() * 100\n```\n\n`.month` bỏ năm: phù hợp mục tiêu gộp tháng số, sai nếu cần tách từng tháng của từng năm. Dùng 2026 khiến tháng 1–2 có ba năm đóng góp nhưng tháng 3–12 chỉ hai năm, không so tương ứng. Chỉ số còn chịu xu hướng dài hạn và độ dài tháng; chưa thể gọi là thành phần mùa đã tách xu hướng hoặc giải thích nguyên nhân.\n\n**Chấm 5 điểm:** chọn hai năm trọn và nêu chênh số năm nếu thêm 2026 (1,5); tổng 60/60, trung bình 60 và chỉ số 100/100 (1,5); ý nghĩa mất năm/có chủ ý theo mục tiêu (1); hai giới hạn xu hướng và số ngày (1).\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K25; phụ K26, K23. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Gộp số năm không đều; chỉ số 100 bị hiểu là đã loại xu hướng và số ngày.\n\n**Đọc lại:** L ô 77–80.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 512,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 392,
+        "questionSha256": "488f81ff4da234d804487711eb02e51250112a1cd7573c93666b332e565b3e1d",
+        "answerSha256": "5eaaeaf7804f446c8700cfdc03e2f2b4ca43e976adb6c8570522baef755bfc37"
+      }
+    },
+    {
+      "id": "B8-MR03",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Chuỗi sau có giờ, không gắn timezone, chỉ mục tăng dần. Các giá trị đã biết; không suy ra dữ liệu ngoài những thời điểm cho sẵn.\n\n```python\ns = pd.Series([2, 5, 7, 11], index=pd.to_datetime([\n    \"2026-08-01 12:00\", \"2026-08-02 12:00\",\n    \"2026-08-04 11:00\", \"2026-08-04 12:00\"]))\nt = s.rolling(\"3D\", min_periods=1, closed=\"right\").sum()\nprint(t.iloc[-1])\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`23.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`25.0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`18.0`"
+        },
+        {
+          "key": "D",
+          "markdown": "`11.0`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Tại 04/08 12:00 cửa sổ là `(01/08 12:00,04/08 12:00]`; loại đúng điểm biên trái có giá trị2, giữ 5,7,11, tổng 23. A đúng. B đóng cả hai biên, cộng thêm2. C bỏ nhầm hàng ngày 02 vì đếm ba ngày theo nhãn không theo giờ. D chỉ lấy thời điểm cuối. Không có bù 0 cho những thời điểm không xuất hiện.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Lấy cả điểm đúng biên trái của cửa sổ phải đóng.\n\n**Đọc lại:** L ô 88–89.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 528,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 416,
+        "questionSha256": "f0cb1e8f8739cbd7f7f1961027d203ecc27179ec071d6d8bae523e1d17069858",
+        "answerSha256": "85c0de27d8f49d1d7bdb7b0478d44587d40c0b551d71958f807b66ebdb1383c3"
+      }
+    },
+    {
+      "id": "B8-MR04",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Chuỗi ba ngày không liên tiếp, chỉ có ngày, index sắp tăng, không thiếu giá trị:\n\n```python\ns = pd.Series([2, 4, 6], index=pd.to_datetime([\n    \"2026-06-01\", \"2026-06-03\", \"2026-06-08\"]))\na = s.rolling(3).mean()\nb = s.rolling(\"3D\", closed=\"right\").mean()\n```\n\nKhông truyền `min_periods`. Cặp giá trị **đầu tiên** của `(a,b)` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(2.0, 2.0)`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(NaN, NaN)`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(NaN, 2.0)`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(2.0, NaN)`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Với cửa sổ số hàng 3, default min_periods=3 nên a đầu thiếu. Với cửa sổ thời gian3D, default min_periods=1 nên b đầu=2, cửa sổ chỉ chứa hàng 01/06. A áp mặc định1 cho cả hai. B áp mặc định3 cho cả hai. C đúng. D đảo ngược mặc định. Muốn chỉ kiểm sự khác nhau giữa hàng và thời gian thì nên đặt cùng min_periods như MR01.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31; phụ K17. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm mặc định min_periods giữa hai loại cửa sổ.\n\n**Đọc lại:** L ô 52,88–89.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 551,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 428,
+        "questionSha256": "dd5c02886f06bbe06345dfa44b1404c7bf17c7a8c6a1c73a7fc083a62d0ce768",
+        "answerSha256": "44b9cbd2a2eb8ec18ee2a9cf9abbd1d7e020de0425f9cc6ab6d44c7503677910"
+      }
+    },
+    {
+      "id": "B8-021",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dữ liệu chỉ có ngày, không gắn timezone. Năm 2025 không nhuận.\n\n```python\na = pd.Timestamp(\"2025-12-30\")\nb = pd.Timestamp(\"2026-01-02\")\nd = b - a\nprint(type(d).__name__, d.days)\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`Timedelta 3`"
+        },
+        {
+          "key": "B",
+          "markdown": "`Timestamp 3`"
+        },
+        {
+          "key": "C",
+          "markdown": "`Timedelta 2`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo lỗi vì `.days` chỉ dùng qua `.dt`."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Hiệu hai Timestamp là Timedelta scalar, từ30/12 đến02/01 là 3 ngày, dùng `.days` trực tiếp. A đúng. B nhầm khoảng thời gian với thời điểm. C bỏ mất một ngày ở ranh giới năm. D áp accessor dành cho Series cho một scalar; Series khoảng thời gian mới dùng `.dt.days`.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K07; phụ K06. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Nhầm Timestamp/Timedelta hoặc .days/.dt.days.\n\n**Đọc lại:** L ô 19–22.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 578,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 463,
+        "questionSha256": "12c712e56d4a5ed55336998af728c7c8be2b0d108fa41049674bd8170f0d2035",
+        "answerSha256": "590cbaab6da3c98bbb6e44ff711467e65dc174eb38352dd0c1d548221a99a39f"
+      }
+    },
+    {
+      "id": "B8-022",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "`s` là **số review đã tổng hợp của từng ngày có review**, không phải mỗi hàng một review. Đã thu đủ 01–04/09/2026, ngày không liệt kê là 0 review. Mọi giá trị trong s không thiếu.\n\n```python\ns = pd.Series([4, 2, 6], index=pd.to_datetime([\n    \"2026-09-01\", \"2026-09-03\", \"2026-09-04\"]))\n```\n\nCần tổng review tháng 9 trong **phạm vi 01–04/09 đã quan sát**. Lệnh và kết quả nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`s.resample(\"ME\").size()` cho 12 review."
+        },
+        {
+          "key": "B",
+          "markdown": "`s.resample(\"ME\").count()` cho 12 review."
+        },
+        {
+          "key": "C",
+          "markdown": "`s.resample(\"ME\").sum()` cho 12 review."
+        },
+        {
+          "key": "D",
+          "markdown": "`s.resample(\"ME\").mean()` cho 12 review."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Tổng4+2+6=12 review. A đếm3 hàng trong bảng tổng hợp. B đếm3 giá trị không thiếu. C đúng. D trả4 review trên một ngày có review, không phải tổng 12 hay trung bình trên mọi ngày đã quan sát. Với lịch đầy đủ bốn ngày `[4,0,2,6]`, review/ngày là 3. Nhãn30/09 không biến 4 ngày này thành cả tháng trọn.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K13; phụ K14. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Dùng size/count trên bảng số đếm thay vì cộng review.\n\n**Đọc lại:** L ô 39–50.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 600,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 475,
+        "questionSha256": "31205a5a380c2b9ca4b8a74c25c61d86b019851bd15c6a8f61d1a8c91553b878",
+        "answerSha256": "689796ebfc422295fc8e877e8bbb6b707f0bf4b0cbe003da2713fbc17a8992be"
+      }
+    },
+    {
+      "id": "B8-023",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Đây là số review sáu ngày liên tiếp đã thu đủ, sắp theo ngày. Không có đồng hạng cực đại trong chuỗi gốc hoặc chuỗi rolling.\n\n```python\ns = pd.Series([12, 0, 8, 9, 10, 0],\n              index=pd.date_range(\"2026-06-01\", periods=6, freq=\"D\"))\nt = s.rolling(3, min_periods=3, center=False).mean()\nprint(t.idxmax().day, t.max())\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`1 12.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`5 9.0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`5 10.0`"
+        },
+        {
+          "key": "D",
+          "markdown": "`4 9.0`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Các trung bình đủ cửa sổ kết thúc03–06/06 là 20/3,17/3,9,19/3. Cực đại tại05/06, từ cửa sổ 03–05/06 `[8,9,10]`. A dùng cực đại gốc ngày 01 có12. B đúng. C lấy nhãn cực đại rolling nhưng giá trị gốc 10 thay mean 9. D gắn trung bình vào giữa cửa sổ dù center=False. `idxmax` trả nhãn; `max` trả giá trị9 review/ngày trong cửa sổ.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K19; phụ K16. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm nhãn/giá trị cực đại rolling với cực đại ngày gốc.\n\n**Đọc lại:** Lab ô 21–28; L ô 51–57.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 620,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 487,
+        "questionSha256": "396870105fb770a90e801796e8c0af7b675daf429254ff5e65343e37bdb29680",
+        "answerSha256": "cc7f9270fba77564f76aea1698114ed21081fec6bbc7e0c4ef19e47f2302f738"
+      }
+    },
+    {
+      "id": "B8-024",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai tháng trọn liên tiếp tháng 4 và tháng 5/2026 được thu đầy đủ, tổng review lần lượt 80 và100. Lấy tháng 4 làm kỳ gốc. Bộ ba nào lần lượt là **chênh lệch tuyệt đối; phần trăm tăng; kỳ này bằng bao nhiêu phần trăm kỳ gốc**?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`20 review; 20%; 120%`"
+        },
+        {
+          "key": "B",
+          "markdown": "`20 review; 125%; 25%`"
+        },
+        {
+          "key": "C",
+          "markdown": "`0.25 review; 25%; 125%`"
+        },
+        {
+          "key": "D",
+          "markdown": "`20 review; 25%; 125%`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** Chênh100−80=20 review; tăng `(100−80)/80=0.25=25%`; tỷ số 100/80=1.25=125%. A chia chênh cho kỳ hiện tại100, sai kỳ gốc. B đảo tỷ lệ tăng và tỷ số mức. C dùng tỷ lệ như số review. D đúng. Mẫu số so sánh là 80 review tháng 4, không phải100 và không phải số ngày.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K21; phụ K23. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Nhầm chênh tuyệt đối, tỷ lệ tăng và tỷ số mức.\n\n**Đọc lại:** L ô 67–76.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 642,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 499,
+        "questionSha256": "c03cc158c296100ece25118db2415a499bdc249c37aeaa7084de0d799d8adcbc",
+        "answerSha256": "c721c63ca749ee20d6d92c6a21908c3ae1e5cf41ee33b75562b2c8afbc975896"
+      }
+    },
+    {
+      "id": "B8-025",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn xác nhận đã thu đầy đủ **01/04 đến hết 30/06/2026**, dữ liệu chỉ có ngày. Review cuối cùng xảy ra 29/06; ngày 30/06 đã kiểm tra và không có review. Sau tổng hợp, chuỗi quý có nhãn30/06.\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Phải bỏ quý II vì sự kiện cuối không rơi vào30/06."
+        },
+        {
+          "key": "B",
+          "markdown": "Phải bỏ hàng cuối bằng `iloc[:-1]` để tránh mọi kỳ chưa trọn."
+        },
+        {
+          "key": "C",
+          "markdown": "Quý II trọn theo phạm vi thu thập đã xác nhận; có thể giữ, dù ngày cuối có0 review."
+        },
+        {
+          "key": "D",
+          "markdown": "Quý II trọn chỉ vì nhãn của resample là 30/06, không cần biết phạm vi thu thập."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** A nhầm ngày sự kiện cuối với ngày quan sát cuối. B xóa máy móc kỳ cuối đã trọn. C đúng vì đã xác nhận thu đủ cả30/06 và 0 là đã biết. D dựa nhãn tổng hợp để suy độ đầy đủ; cùng nhãn30/06 vẫn có thể là quý thiếu dữ liệu nếu nguồn dừng sớm. Không cần có sự kiện ở ngày cuối mới gọi là đã quan sát ngày đó.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K11; phụ K14. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Luôn bỏ kỳ cuối; dùng sự kiện cuối hoặc nhãn để suy độ đầy đủ.\n\n**Đọc lại:** L ô 45–47; Lab ô 18–20.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 655,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 511,
+        "questionSha256": "2bbb76544a7a33420ab7d82fba8dbed7a90f1f5e793fb79f3b77082a1043c93c",
+        "answerSha256": "a26aac74527448a2e1ab206353b4a9d8df4a655ffea0aaa0bbbb1eb9e18514c4"
+      }
+    },
+    {
+      "id": "B8-026",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "API xác nhận chuỗi giờ gốc là UTC nhưng chưa gắn timezone trong kiểu dữ liệu. Cần một cột giờ Việt Nam (UTC+7).\n\n```python\ns = pd.Series(pd.to_datetime([\"2026-07-01 20:00\", \"2026-07-02 01:00\"],\n                             format=\"%Y-%m-%d %H:%M\"))\n```\n\nBiểu thức nào thực hiện đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`s.dt.tz_convert(\"Asia/Ho_Chi_Minh\")`"
+        },
+        {
+          "key": "B",
+          "markdown": "`s.dt.tz_localize(\"UTC\").dt.tz_convert(\"Asia/Ho_Chi_Minh\")`"
+        },
+        {
+          "key": "C",
+          "markdown": "`s.dt.tz_localize(\"Asia/Ho_Chi_Minh\")`"
+        },
+        {
+          "key": "D",
+          "markdown": "`s.dt.tz_localize(\"UTC\").dt.tz_localize(\"Asia/Ho_Chi_Minh\")`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** A gọi convert trên dữ liệu naive nên lỗi. B gắn quy ước nguồn UTC rồi đổi biểu diễn cùng thời điểm sang Việt Nam:02/07 03:00 và02/07 08:00. C gán các giờ trên mặt đồng hồ thành giờ Việt Nam nên sai thời điểm. D localize lần hai trên dữ liệu đã aware nên lỗi. `.dt` cần thiết để xử lý các giá trị của Series; không tự gán UTC nếu nguồn chỉ đưa ngày thuần và không nói múi giờ.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Nhầm gắn quy ước nguồn và đổi cách biểu diễn.\n\n**Đọc lại:** L ô 26–28,86–87.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 670,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 523,
+        "questionSha256": "2bd4bc430ebaeec8bba0163887cad1c1aa01742d76049ebfcb03a7e97d7d43a8",
+        "answerSha256": "2e85a1e22c6e5e9686f40732c7d75552b259d88a596542421adc4b0eefc9923e"
+      }
+    },
+    {
+      "id": "B8-027",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một khoảng lưu trú có **cả giờ**, cùng giờ địa phương không gắn timezone, không xét đổi múi giờ. Nguồn dùng YYYY-MM-DD HH:MM. Cần khoảng thời gian theo **ngày dạng số thực**, không phải quy tắc tính phí đêm.\n\n```python\ndat = pd.DataFrame({\"vao\": [\"2026-06-30 18:00\", \"2026-12-31 12:00\", None],\n                    \"ra\": [\"2026-07-02 06:00\", \"2027-01-01 18:00\", \"2026-07-03 12:00\"]})\n```\n\nViết phép chuyển kiểu và tính số ngày dạng số thực, đồng thời nêu `.dt.days` trả gì ở hai hàng đầu. Giữ thiếu ở hàng 2. Kết quả làm tròn2 chữ số hoặc sai số tuyệt đối không quá1e-9.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nvao = pd.to_datetime(dat[\"vao\"], format=\"%Y-%m-%d %H:%M\", errors=\"coerce\")\nra = pd.to_datetime(dat[\"ra\"], format=\"%Y-%m-%d %H:%M\", errors=\"coerce\")\nkhoang = ra - vao\nngay_thuc = khoang.dt.total_seconds() / 86400\nngay_nguyen = khoang.dt.days\n```\n\nHai hiệu đầu là 36 giờ=1,50 ngày và30 giờ=1,25 ngày; `.dt.days` trả1 và1, chỉ phần ngày nguyên, không phải số ngày thập phân. Hàng2 thiếu từ nguồn nên hiệu là NaT, số ngày thiếu. Hiệu của hai Timestamp scalar dùng `.days` hoặc `.total_seconds()` trực tiếp; các cột ở đây là Series nên dùng `.dt`.\n\n**Chấm 5 điểm:** parse đúng định dạng giờ (1); hiệu và total_seconds/86400 (1,5); kết quả1,50/1,25/thiếu (1); .dt.days=1/1 và giải thích phần nguyên (1); giữ thiếu, không bù0 (0,5).\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K07; phụ K05. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm phần ngày nguyên với số ngày thập phân; mất NaT.\n\n**Đọc lại:** L ô 19–22.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 690,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 535,
+        "questionSha256": "40b2b049a8a846109ca36aa3a485aa1bf1fe9658eefd40eb4927775a72300442",
+        "answerSha256": "d9761773c2963398c27e228c876e30ed5eb879f484d3e9ca8ae0b55569f0bdd6"
+      }
+    },
+    {
+      "id": "B8-028",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "`s` đã là số review từng ngày có review; nguồn xác nhận thu đủ **01–05/06/2026**, các ngày không liệt kê trong khoảng này có0 review. Dữ liệu chỉ có ngày, index sắp tăng, không trùng. Ngày06/06 chưa biết.\n\n```python\ns = pd.Series([2, 4], index=pd.to_datetime([\"2026-06-02\", \"2026-06-04\"]))\nlich = pd.date_range(\"2026-06-01\", \"2026-06-05\", freq=\"D\")\n```\n\nDùng lịch cho sẵn để tạo `du`, rồi tính trung bình review trên **mọi ngày đã quan sát**. Vì sao chỉ `s.resample(\"D\").sum()` hoặc `s.asfreq(\"D\", fill_value=0)` chưa đủ lịch cần thiết? Nếu thêm ngày 06 vào lịch, có được tự điền0 không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ndu = s.reindex(lich, fill_value=0)\ntb = du.mean()\nassert du.sum() == s.sum()\n```\n\n`du=[0,2,0,4,0]`; tổng 6 review, mẫu số 5 ngày, trung bình1,2 review/ngày. Resample/asfreq chỉ đi từ02–04/06 trong dữ liệu này, không tự biết01 và05 cũng đã thu đủ. Resample cần sum vì dữ liệu đã là số đếm; asfreq không tổng hợp sự kiện. Chỉ điền0 cho ngày vắng thuộc phạm vi **đã xác nhận**; ngày 06 chưa biết phải để NaN nếu đưa vào lịch, không tự coi không review.\n\n**Chấm 5 điểm:** reindex đúng lịch và0 trong phạm vi xác nhận (1,5); dãy/tổng/trung bình và mẫu số 5 (1,5); giới hạn hai đầu resample/asfreq (1); ngày 06 giữ chưa biết (1).\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K15; phụ K14, K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Không bổ sung hai đầu lịch; điền0 cho ngày chưa thu thập.\n\n**Đọc lại:** L ô 39–50,62–66.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 701,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 557,
+        "questionSha256": "c5eeb473867fba83409da5846f5b734e62432852ea2a2738a39d51167b530e6a",
+        "answerSha256": "f66c5523ff0a0adeaf10669bff00a80e4073bdf657789306e70d27bdb01ec3cd"
+      }
+    },
+    {
+      "id": "B8-029",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Chuỗi sau là số review của **tám ngày liên tiếp đã thu đủ**, 01–08/11/2026, không thiếu, index tăng dần. Chỉ dùng dữ liệu trong chuỗi, không dùng ngày trước 01/11. Không có đồng hạng cực đại.\n\n```python\ns = pd.Series([14, 0, 0, 3, 4, 5, 6, 7],\n              index=pd.date_range(\"2026-11-01\", periods=8, freq=\"D\"))\n```\n\nTạo trung bình7 ngày kết thúc tại ngày đang xét, `min_periods=7`, `center=False`. Tìm ngày đạt trung bình lớn nhất và kiểm lại bằng các giá trị gốc. Nêu sáu kết quả đầu, ngày gốc có nhiều review nhất và nhận xét về câu “đỉnh đường mượt luôn trễ6 ngày và dự báo ngày mai có cùng mức”.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ntb7 = s.rolling(7, min_periods=7, center=False).mean()\nngay = tb7.idxmax()\ncua_so = s.loc[ngay - pd.Timedelta(days=6):ngay]\nassert len(cua_so) == 7\nassert abs(cua_so.mean() - tb7.loc[ngay]) < 1e-9\n```\n\nSáu kết quả đầu NaN vì chưa đủ 7 giá trị. Cửa sổ01–07/11 là `[14,0,0,3,4,5,6]`, tổng 32, mean 32/7≈4,5714; cửa sổ 02–08/11 `[0,0,3,4,5,6,7]`, tổng 25, mean 25/7. Cực đại rolling tại07/11, khác cực đại gốc 01/11=14. Khoảng trễ6 ngày chỉ xảy ra trong dữ liệu này, không phải quy luật cố định. Rolling mô tả/làm mượt quá khứ, không tự dự báo ngày mai hoặc giải thích nguyên nhân. So sánh số thực dùng sai số 1e-9.\n\n**Chấm 5 điểm:** rolling đúng và sáu NaN đầu (1,5); idxmax ngày 07 và liệt kê đúng cửa sổ, tính lại32/7 (1,5); phân biệt cực đại gốc (0,5); bác trễ cố định/dự báo và nêu giới hạn (1,5).\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K18; phụ K19, K32. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Nhầm idxmax/max; làm mượt thành dự báo; khẳng định trễ cố định.\n\n**Đọc lại:** Lab ô 21–28; L ô 54–57.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 712,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 577,
+        "questionSha256": "b9df6679b0de67588274682ea95fe9047a7fef8f9bf8c8cfb73df3d2216b0603",
+        "answerSha256": "210b8a8f2e67ff26d06b3900b2a36b711131463bfcf59e8fb7b412eefa5389b7"
+      }
+    },
+    {
+      "id": "B8-030",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Chuỗi `q` là tổng review các quý trọn liên tiếp, sắp tăng, không thiếu. Nguồn đã thu đủ toàn bộ năm 2025 và quýI/2026. Dữ liệu chỉ có ngày. Mỗi nhãn là cuối quý.\n\n```python\nq = pd.Series([40, 60, 80, 100, 50], index=pd.to_datetime([\n    \"2025-03-31\", \"2025-06-30\", \"2025-09-30\", \"2025-12-31\", \"2026-03-31\"]))\ndoi = q / q.shift(12) - 1\n```\n\nSửa dòng `doi` để đo quýI/2026 so quýI/2025; nêu tỷ lệ và phần trăm. Nếu có đủ lịch xa hơn, `shift(12)` tại quýI/2026 sẽ lấy quý nào? Viết mask ngày để kiểm độc lập số review quýI/2025 nếu có bảng sự kiện `rv` với cột ngày giờ `date` đã chuyển kiểu (không gắn timezone), không cần tạo dữ liệu rv.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ndoi = q / q.shift(4) - 1\np = doi.loc[\"2026-03-31\"]\n# Nếu có bảng review gốc rv:\n# dem = ((rv[\"date\"] >= \"2025-01-01\") & (rv[\"date\"] < \"2025-04-01\")).sum()\n# assert dem == q.loc[\"2025-03-31\"]\n```\n\nKỳ này50, kỳ gốc 40 review; tỷ lệ0,25, tăng25%. Cần4 hàng vì mỗi hàng là một quý; shift 12 là 12 quý=3 năm, sẽ lấy quýI/2023 nếu đủ lịch, không phải cùng quý năm trước. Trong chuỗi5 hàng đã cho, shift 12 làm mọi kỳ gốc thiếu. Mask phải lấy từ01/01 đến trước 01/04, bao gồm mọi giờ của31/03.\n\n**Chấm 5 điểm:** sửa4 hàng (1,5); chỉ kỳ gốc và0,25/25% (1); shift 12 làquýI/2023, hiện thiếu (1); mask đúng và đối chiếu count40 (1,5).\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K22; phụ K23, K32. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Dùng12 hàng cho chuỗi quý; kiểm quý bằng biên ngày thiếu giờ.\n\n**Đọc lại:** Lab ô 29–33.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 723,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 599,
+        "questionSha256": "f1ba8246b2a7348d833eb55e052f7cc38f41d773df71908b5d60ba8ec17905a7",
+        "answerSha256": "eb31704d15afd6403d87ab7f0e694aed455ff32947d649fdff5e8316c2c8a297"
+      }
+    },
+    {
+      "id": "B8-MR05",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Nguồn xác nhận giá trị `t` là giờ **địa phương Việt Nam UTC+7**, chưa gắn timezone. Cần biểu diễn chính thời điểm đó ở UTC.\n\n```python\nt = pd.Timestamp(\"2026-08-01 02:00\")\n```\n\nLệnh nào đúng và cho giờ UTC tương ứng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`t.tz_convert(\"UTC\")` → 01/08 02:00 UTC."
+        },
+        {
+          "key": "B",
+          "markdown": "`t.tz_localize(\"UTC\")` → 01/08 02:00 UTC."
+        },
+        {
+          "key": "C",
+          "markdown": "`t.tz_localize(\"Asia/Ho_Chi_Minh\").tz_convert(\"UTC\")` → 31/07 19:00 UTC."
+        },
+        {
+          "key": "D",
+          "markdown": "`t.tz_localize(\"Asia/Ho_Chi_Minh\").tz_convert(\"UTC\")` → 01/08 09:00 UTC."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** A convert trên naive nên lỗi. B gán sai quy ước nguồn, làm thay thời điểm. C đúng: gắn giờ Việt Nam rồi trừ7 giờ khi biểu diễn UTC, lùi ngày/tháng. D cộng7 thay vì trừ7. Nếu sẵn aware thì không localize lại; nếu là Series thì dùng `.dt`.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Gắn UTC cho giờ địa phương; đổi múi giờ sai chiều.\n\n**Đọc lại:** L ô 86–87.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 738,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 624,
+        "questionSha256": "b8236cc7461cd7508e91945a76412bf649aef93c6e3aa448bc4e52332c492960",
+        "answerSha256": "ee82568b00e63f84d3c0b47e45999dacace7657d0758361c5ad6d5d8aa998de5"
+      }
+    },
+    {
+      "id": "B8-MR06",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "Chuỗi số đo đã tổng hợp tại bốn thời điểm sau, cùng giờ địa phương không gắn timezone. Index tăng; NaN là số đo chưa biết, không phải0. Không được tự bổ sung các thời điểm vắng.\n\n```python\ns = pd.Series([2, 0, float(\"nan\"), 8], index=pd.to_datetime([\n    \"2026-06-01 09:00\", \"2026-06-02 09:00\",\n    \"2026-06-04 09:00\", \"2026-06-05 09:00\"]))\n```\n\nTại05/06 09:00, so `rolling(3, min_periods=2).mean()` với `rolling(\"3D\", min_periods=2, closed=\"right\").mean()`, cả hai center=False. Liệt kê thành phần hai cửa sổ và giải thích kết quả; không điền NaN bằng 0. Sai số 1e-9.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\na = s.rolling(3, min_periods=2, center=False).mean()\nb = s.rolling(\"3D\", min_periods=2, center=False, closed=\"right\").mean()\n```\n\nCửa sổ3 hàng lấy02/06,04/06,05/06: `[0,NaN,8]`, có2 giá trị không thiếu nên mean 4. Cửa sổ3 ngày là `(02/06 09:00,05/06 09:00]`, loại đúng biên trái02/06; còn `[NaN,8]`, chỉ 1 giá trị không thiếu nên kết quả NaN. 0 vẫn là giá trị đã biết, không bị bỏ khi đếm min_periods. Không thể suy ngày 03/06 bằng 0 từ dữ liệu đã cho.\n\n**Chấm 5 điểm:** hai lệnh đúng/cùng min_periods (1); liệt kê cửa sổ 3 hàng và mean 4 (1,5); biên trái mở, cửa sổ 3D và NaN (1,5); giải thích0/thiếu và không tự thêm dữ liệu (1).\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31; phụ K17. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Bỏ0 như thiếu; lấy biên trái; đếm vị trí thay giá trị đã biết.\n\n**Đọc lại:** L ô 88–89; Lab ô 21–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 757,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 636,
+        "questionSha256": "6e808116a050e26d0a8ed341d5b8998a35b44c3f11a4605f25c6a6b94cfec1c5",
+        "answerSha256": "56667ae1b540afae8b9fe27a18d0d53b323a417cc08bf1c1da428416147d961f"
+      }
+    },
+    {
+      "id": "B8-031",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn chỉ có ngày, dùng DD/MM/YYYY; None là thiếu từ nguồn.\n\n```python\nraw = pd.Series([\"29/02/2025\", \"28/02/2025\", None])\n# Xét độc lập, mỗi lần khởi tạo lại raw như trên:\na = pd.to_datetime(raw, format=\"%d/%m/%Y\", errors=\"raise\")\nb = pd.to_datetime(raw, format=\"%d/%m/%Y\", errors=\"coerce\")\n```\n\nBiết2025 không nhuận, nhận định nào đúng? Hai lệnh được xét **riêng**, không hỏi việc chương trình có chạy tiếp sau lỗi hay không.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`a` và `b` đều đổi hàng 0 thành28/02/2025."
+        },
+        {
+          "key": "B",
+          "markdown": "`a` chỉ báo lỗi vì None; `b` chỉ thiếu ở hàng 2."
+        },
+        {
+          "key": "C",
+          "markdown": "`a` trả NaT; `b` báo lỗi cho ngày 29/02."
+        },
+        {
+          "key": "D",
+          "markdown": "`a` báo lỗi vì ngày 29/02 không tồn tại; `b` có NaT ở hàng 0 và2."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** Ngày29/02/2025 không tồn tại; raise dừng bằng lỗi chuyển đổi, coerce chuyển ngày sai thành NaT. None cũng thành NaT theo coerce. A coi chuyển kiểu tự sửa ngày. B nhầm nguyên nhân lỗi và bỏ qua ngày không tồn tại. C đảo hai chế độ. D đúng. Riêng cột b không phân biệt được hai nguyên nhân thiếu nếu bỏ raw; cần đối chiếu nguồn.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K04. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Coerce bị hiểu là sửa ngày; đảo chế độ raise/coerce.\n\n**Đọc lại:** L ô 11–15; Lab ô 5–9.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 774,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 674,
+        "questionSha256": "0659965c5e7c9d55fc351102c1625e0aacdf26703a60f1f9b3c6afa6b1e8a825",
+        "answerSha256": "f1ef6000bd939b9043a0e0b08a08ba7e796ff845a255ba53fa310852373a1d57"
+      }
+    },
+    {
+      "id": "B8-032",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một review trong tháng 6/2026 đã thu đủ; ngày YYYY-MM-DD chỉ có ngày. `diem` có thể thiếu nhưng review vẫn tồn tại. `id` luôn có giá trị.\n\n```python\nrv = pd.DataFrame({\"date\": pd.to_datetime([\n    \"2026-06-01\", \"2026-06-01\", \"2026-06-02\", \"2026-06-03\"]),\n    \"id\": [11,12,13,14], \"diem\": [5, None, 4, 3]}).set_index(\"date\")\n```\n\nMuốn đếm số review tháng 6, nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Chỉ `rv.resample(\"ME\")[\"diem\"].count()` cho 4, vì count luôn đếm mọi hàng."
+        },
+        {
+          "key": "B",
+          "markdown": "`rv.resample(\"ME\").size()` và `rv.resample(\"ME\")[\"id\"].count()` đều cho 4; count trên `diem` cho 3."
+        },
+        {
+          "key": "C",
+          "markdown": "`rv.resample(\"ME\")[\"diem\"].mean()` cho 4, nên đó cũng là số review đúng theo ý nghĩa phép tính."
+        },
+        {
+          "key": "D",
+          "markdown": "Mọi cách dùng count đều sai dù cột được chọn không thiếu."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** size đếm4 hàng; id không thiếu nên count cũng trả4 đúng yêu cầu trên dữ liệu này. A sai vì count bỏ điểm thiếu và trả3. B đúng. C có mean(5,4,3)=4 nhưng đơn vị là điểm/review có điểm, số 4 trùng ngẫu nhiên với số review không làm phép tính đáp ứng yêu cầu. D phủ nhận một cách đúng trên cột id không thiếu. Đây là lý do phải kiểm đối tượng và đơn vị, không chỉ kiểm con số cuối.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm count với size; bác mọi count; trùng số bị hiểu là đúng ý nghĩa.\n\n**Đọc lại:** L ô 39–50.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 796,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 686,
+        "questionSha256": "5f6c9588361bec834110496a1dcaa1e021d5432fb03c803b3599c8f4cf91e810",
+        "answerSha256": "44c4d8c2fd4f6f241d9cfe0a70bc09b381c3ebf8a68b5de1be04d16ebacd4474"
+      }
+    },
+    {
+      "id": "B8-033",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tháng liên tiếp có nhãn cuối tháng, sắp tăng. Tháng2 chưa thu thập nên NaN; các tháng khác đã thu đủ.\n\n```python\ns = pd.Series([10.0, float(\"nan\"), 15.0, 30.0],\n              index=pd.date_range(\"2026-01-31\", periods=4, freq=\"ME\"))\nprint(s.pct_change(fill_method=None).tolist())\n```\n\nDòng cuối in ra gì, ở dạng tỷ lệ?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[nan, nan, nan, 1.0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[nan, 0.0, 0.5, 1.0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[nan, -1.0, inf, 1.0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[nan, nan, 0.5, 1.0]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Tháng1 chưa có kỳ gốc; tháng 2 thiếu kỳ này; tháng 3 thiếu kỳ gốc tháng 2; tháng 4=30/15−1=1. A đúng. B ngầm điền giá trị10 cho tháng 2. C tự điền0. D bỏ tháng thiếu khi tìm kỳ gốc, so tháng 3 với tháng 1 thay vì tháng 2. `fill_method=None` không ngầm bù số liệu trước phép tính.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K21; phụ K14. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Tự bù hoặc bỏ tháng chưa biết trước pct_change.\n\n**Đọc lại:** L ô 62–69.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 817,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 698,
+        "questionSha256": "c0763044af739ecd7825bb7c4c92b59fdfd9710870b44f602e1976ae2c4f899a",
+        "answerSha256": "21017a6df11e633d73fdb960dfeab249ed1921652d3a1b2dcf42307c790f1e5a"
+      }
+    },
+    {
+      "id": "B8-034",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hai tháng 2/2023 và2/2024 đều thu đủ, tổng review tương ứng280 và580. Tháng2/2023 có28 ngày, tháng 2/2024 có29 ngày. Cần **mức review/ngày gộp chung của hai tháng 2**, mọi ngày quan sát có trọng số như nhau.\n\nPhép tính nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(280/28 + 580/29)/2 = 15`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(280+580)/29`, vì dùng số ngày năm gần nhất."
+        },
+        {
+          "key": "C",
+          "markdown": "`(280+580)/(28+29) = 860/57`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(280+580)/(28*2) = 860/56`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** Tử số 860 review, mẫu số 57 ngày đã quan sát. A cho mỗi năm cùng trọng số dù năm 2024 có29 ngày; mean 15 khác860/57≈15,0877. B chia tổng hai năm cho ngày chỉ một năm. C đúng. D bỏ ngày nhuận. Cách tổng/tổng cân theo số ngày; không mặc định mean các mức năm bằng mức gộp chung.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K28; phụ K27. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Chia tổng nhiều năm cho ngày một năm hoặc mean các mức không cùng trọng số.\n\n**Đọc lại:** Lab ô 34–37.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 838,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 710,
+        "questionSha256": "e62c8962abaea60707b8c019a470576d72b906257f0806eba3969a2cfae5e857",
+        "answerSha256": "705a15d84db277aeaf2acd69a9bc3b4a04729c606f66583226b31891b3c5060f"
+      }
+    },
+    {
+      "id": "B8-035",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bảng sự kiện chỉ có ngày hợp lệ, index chưa sắp, không trùng. Xét:\n\n```python\nr = pd.DataFrame({\"id\": [1,2,3,4]}, index=pd.to_datetime([\n    \"2026-03-03\", \"2026-01-02\", \"2026-02-10\", \"2026-03-01\"]))\n```\n\nCần chọn từ tháng 1 đến hết tháng 2/2026. Nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mọi phép `.loc`, kể cả chọn đúng một nhãn có sẵn, đều luôn lỗi khi index chưa sắp."
+        },
+        {
+          "key": "B",
+          "markdown": "`sort_index()` xóa các ngày trùng nên luôn phải tránh dùng."
+        },
+        {
+          "key": "C",
+          "markdown": "Dữ liệu đã được sắp theo id thì chắc chắn cũng sắp đúng ngày."
+        },
+        {
+          "key": "D",
+          "markdown": "Nên sắp index trước khi cắt khoảng nhãn; việc cắt khoảng trên index chưa sắp có thể lỗi, nhưng chọn nhãn có sẵn không vì thế mà luôn lỗi."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** A khẳng định quá rộng: chọn đúng nhãn03/03 vẫn được. B nhầm sắp xếp với loại trùng. C suy thứ tự ngày từ id. D đúng; trên bảng này `r.sort_index().loc['2026-01':'2026-02']` trả id2,3. Không cần học thuộc thông báo lỗi; cần hiểu index chưa sắp có thể không đáp ứng cắt khoảng theo nhãn rút gọn.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K08. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Khẳng định mọi chọn nhãn trên index chưa sắp đều lỗi.\n\n**Đọc lại:** L ô 36–38.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 853,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 722,
+        "questionSha256": "d3bbc5e3ad3106f45adada7ce8897012800249b8bacfd241ad6b7912c5255ca7",
+        "answerSha256": "a1581c86e7e20de873a7b517ca23617d3e798a9f2f24766301b5a1d06e9c6e76"
+      }
+    },
+    {
+      "id": "B8-036",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "`s` đã tổng hợp ở bốn ngày được liệt kê, chỉ có ngày, index tăng. Chưa biết số liệu ở các ngày khác.\n\n```python\ns = pd.Series([2, 4, 6, 8], index=pd.to_datetime([\n    \"2026-06-01\", \"2026-06-02\", \"2026-06-08\", \"2026-06-09\"]))\nt = s.rolling(3, min_periods=3, center=False).sum()\n```\n\nGiá trị `t` tại09/06 dùng những ngày nào?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "02/06,08/06,09/06; tổng 18."
+        },
+        {
+          "key": "B",
+          "markdown": "07/06,08/06,09/06; tổng 14 vì mặc định07/06 là 0."
+        },
+        {
+          "key": "C",
+          "markdown": "Chỉ08/06,09/06; tổng 14."
+        },
+        {
+          "key": "D",
+          "markdown": "01/06,02/06,08/06; tổng 12."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** rolling(3) lấy ba hàng cuối là 02,08,09/06, `[4,6,8]`, tổng 18. A đúng. B tự chuyển số hàng thành số ngày, thêm0 không được xác nhận. C loại hàng 02 vì quá xa theo lịch dù code không dùng cửa sổ thời gian. D dùng cửa sổ kết thúc ở hàng trước. Không có giả định các ngày vắng là 0 trong đề này.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K16. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Cửa sổ theo hàng bị hiểu là theo ngày trên lịch khuyết.\n\n**Đọc lại:** L ô 51–53.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 873,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 734,
+        "questionSha256": "5225ad21a3eac1244a84117c5db4d9cf2e844b218189dbd01166d7980b395f57",
+        "answerSha256": "95d84889c7d2fdf73bc4c10039430c064b5a7f42830c579a4f73c19780149fc4"
+      }
+    },
+    {
+      "id": "B8-037",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tháng1/2026 có310 review trên31 ngày đã thu đủ; tháng 2/2026 có294 review trên28 ngày đã thu đủ. Các ngày không review đã được ghi nhận là 0, không có thiếu nguồn. Lấy tháng 1 làm kỳ gốc.\n\nNhận định nào đúng (làm tròn1 chữ số phần trăm)?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Theo tổng tăng5,0%; theo review/ngày giảm5,2%."
+        },
+        {
+          "key": "B",
+          "markdown": "Theo tổng giảm5,2%; theo review/ngày tăng5,0%."
+        },
+        {
+          "key": "C",
+          "markdown": "Theo cả hai cách đều giảm5,2% vì cùng dùng hai tháng."
+        },
+        {
+          "key": "D",
+          "markdown": "Theo review/ngày tăng10,7% vì `31/28 - 1` là tỷ lệ cần báo."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Theo tổng:294/310−1≈−5,2%. Theo ngày: tháng 1=10, tháng 2=10,5 review/ngày;10,5/10−1=5,0%. A đảo kết quả/chiều biến động. B đúng. C bỏ ảnh hưởng mẫu số ngày. D dùng tỷ số số ngày 31/28−1≈10,7% thay tỷ lệ giữa hai mức review/ngày, bỏ qua số review294 và310. Mẫu số mức ngày là 31 và28 ngày, còn mẫu số tỷ lệ so hai mức là 10 review/ngày tháng 1.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K27; phụ K23. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** So tổng tháng thay cho so mức review/ngày hoặc chỉ ước lượng từ tên tháng.\n\n**Đọc lại:** Lab ô 34–37.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 894,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 746,
+        "questionSha256": "a88349ba83c0616c7ca7575add1b8b3fa7e351efc619069421e0f0e33d29870f",
+        "answerSha256": "86721e8385b39929985316efa7c3184367ef6bcb370f59c382660cb3d7616841"
+      }
+    },
+    {
+      "id": "B8-038",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Nguồn khẳng định DD/MM/YYYY, chỉ có ngày, không thiếu. Hai chuỗi là ngày vào/ra của một lượt lưu trú.\n\n```python\nvao_raw = \"04/08/2026\"\nra_raw = \"07/08/2026\"\nvao = pd.to_datetime(vao_raw)\nra = pd.to_datetime(ra_raw)\nprint(vao.strftime(\"%Y-%m-%d\"), ra.strftime(\"%Y-%m-%d\"), (ra-vao).days)\n```\n\nCho biết code trên có thể chạy nhưng trả kết quả sai yêu cầu thế nào; sửa hai phép chuyển kiểu và nêu kết quả đúng. Vì sao nhìn thấy YYYY-MM-DD ở output không chứng minh chuỗi đầu vào được đọc đúng? Chỉ riêng `04/08/2026` có xác định được quy ước của một nguồn chưa biết không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Trong pandas3.0.3, không nêu format ở ví dụ này đọc thành08/04 và08/07, hiển thị `2026-04-08 2026-07-08`, hiệu91 ngày, vẫn không báo lỗi vì cả hai đều hợp lệ theo MM/DD/YYYY.\n\n```python\nvao = pd.to_datetime(vao_raw, format=\"%d/%m/%Y\")\nra = pd.to_datetime(ra_raw, format=\"%d/%m/%Y\")\nso_dem = (ra - vao).days\n```\n\nĐúng là 04/08 đến07/08, 3 đêm. YYYY-MM-DD chỉ là cách biểu diễn giá trị đã diễn giải; không chứng minh cách đọc chuỗi nguồn đúng. Một chuỗi mơ hồ có thể mang hai ngày khác nhau nên cần quy ước nguồn. Với các giá trị này, cách `dayfirst=True` cũng được chấp nhận nếu đọc đúng và không yêu cầu kiểm định dạng chặt.\n\n**Chấm 5 điểm:** mô tả hai ngày đọc sai và91 (1,5); sửa hai chuyển kiểu và3 đêm (1,5); hiển thị khác diễn giải (1); không suy nguồn từ một ngày mơ hồ (1).\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K02; phụ K03. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Chạy được/hiển thị ISO bị hiểu là đọc đúng ngữ nghĩa.\n\n**Đọc lại:** G §1; L ô 8–10,23–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 909,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 758,
+        "questionSha256": "a84beda6ba972111ff15ea98094e0a00cb0c44251f05014fd20a6f025550ddd9",
+        "answerSha256": "14dc79e1fe364d9c15de88484a1b00db341b9204c34be7f6dae4ff8b3333e25b"
+      }
+    },
+    {
+      "id": "B8-039",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng là một review, nguồn DD/MM/YYYY, chỉ có ngày. Đã thu đủ **01/04 đến hết30/06/2026**, không có review trong ngày đã thu thì số đếm0. Review cuối xảy ra 29/06; không có review30/06.\n\n```python\nrv = pd.DataFrame({\"date\": [\"02/04/2026\", \"03/04/2026\", \"04/05/2026\",\n                            \"05/05/2026\", \"06/06/2026\", \"29/06/2026\"]})\nrv[\"date\"] = pd.to_datetime(rv[\"date\"])\nm = rv.set_index(\"date\").resample(\"M\").size()\nm = m.iloc[:-1]\n```\n\n(a) Nêu vấn đề của đọc ngày và API. (b) Sửa hai dòng đầu có vấn đề; thay dòng chọn kỳ cuối bằng điều kiện dựa trên phạm vi đã thu. (c) Đếm tháng 6 trực tiếp bằng mask để đối chiếu; nếu cả tổng số đếm và phép đếm này khớp thì đã chứng minh xu hướng/ nguyên nhân chưa? Nếu dùng AI cho bài tự làm, phần khai báo cần nêu những gì và bạn sẽ tự kiểm kết quả nào ở đây?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nrv[\"date\"] = pd.to_datetime(rv[\"date\"], format=\"%d/%m/%Y\")\nm = rv.set_index(\"date\").sort_index().resample(\"ME\").size()\nm = m.loc[m.index <= pd.Timestamp(\"2026-06-30\")]\ndem6 = ((rv[\"date\"] >= \"2026-06-01\") & (rv[\"date\"] < \"2026-07-01\")).sum()\nassert dem6 == m.loc[\"2026-06-30\"]\nassert m.sum() == len(rv)\n```\n\n(a) Bỏ format có nguy cơ đảo ngày/tháng (trong bảng này còn có thể lỗi khi gặp29/06 sau khi suy cách đọc từ đầu); mã M cần đổi thành ME. (b) Giữ cả tháng 6 vì nguồn đã thu hết30/06; không luôn bỏ hàng cuối. (c) Ba tháng có số đếm `[2,2,2]`, dem6=2, tổng 6. Các kiểm tra xác nhận phép đếm trên dữ liệu/phạm vi cho sẵn; không xác định nguyên nhân, không chứng minh xu hướng dài hạn từ ba tháng bằng nhau. Ngày sự kiện cuối29/06 không làm tháng 6 thiếu. Nếu dùng AI, khai báo công cụ, yêu cầu chính và kết quả tự kiểm; ví dụ tự đếm hai review tháng 6 bằng mask độc lập. Khi nhờ AI cần nêu định dạng, phạm vi, kỳ gốc, phép gộp và cửa sổ nếu có.\n\n**Chấm 5 điểm:** hai lỗi (1); hai dòng sửa (1,5); giữ tháng 6 dựa trên phạm vi (0,5); mask và đối chiếu2/tổng 6 (1); giới hạn assert/xu hướng/nguyên nhân (0,5); khai báo AI kèm kết quả tự kiểm (0,5).\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K12; phụ K11, K32. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Cấu trúc GK26; luôn bỏ kỳ cuối đã trọn; assert khớp bị hiểu là chứng minh kết luận.\n\n**Đọc lại:** L ô 39–47,84–85; Lab ô 18–20; GK26.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 923,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 780,
+        "questionSha256": "75e87c10471cb69caf27574a7800414ddd97f811b96349098568f2d84afd2d59",
+        "answerSha256": "0b2c7fb02b4f63e29a081d2b4a6d7836582c34417fb6e459d424b2e756df62d9"
+      }
+    },
+    {
+      "id": "B8-040",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Đã thu đủ tháng 1–3 của cả hai năm 2025–2026. Mỗi phần tử là **tổng review một tháng**, theo thứ tự tháng 1,2,3; các vị trí hai Series mô tả tháng tương ứng, không thiếu.\n\n```python\ngoc = pd.Series([40, 160, 200], index=[1,2,3])\nnay = pd.Series([80, 160, 180], index=[1,2,3])\nbao_cao = (nay / goc - 1).mean()\n```\n\n(a) `bao_cao` cho tỷ lệ nào và đang đặt trọng số lên đối tượng nào? (b) Chỉ thay dòng `bao_cao` để trả lời “tổng quýI/2026 thay đổi bao nhiêu so với tổng quýI/2025”; in phần trăm1 chữ số. (c) Tháng3/2026 giảm so cùng tháng năm trước thì có mâu thuẫn với kết quả tổng quý không? Nêu kỳ gốc của hai phép so.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nbao_cao = nay.sum() / goc.sum() - 1\nprint(f\"{bao_cao:.1%}\")\n```\n\n(a) Code cũ lấy mean(1,0, −0,1)=0,3, tức30%, mỗi tháng cùng trọng số. (b) Tổng420 so400 review, tăng5,0%; mẫu số 400 review quýI/2025. Tỷ lệ tổng tương đương trung bình tỷ lệ tháng với trọng số 40/400,160/400,200/400. (c) Không mâu thuẫn: riêng tháng 3 là 180/200−1=−10%, kỳ gốc tháng 3/2025, còn tổng quý dùng toàn quýI/2025. Một phần giảm không bắt buộc tổng giảm.\n\n**Chấm 5 điểm:**0,3 và trọng số đều theo tháng (1); sửa dòng, tổng 420/400 và5,0% (2); −10% và hai kỳ gốc (1); giải thích không mâu thuẫn nhờ phạm vi khác nhau (1).\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K24; phụ K23. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Mean tỷ lệ thay tổng; một tháng giảm bị hiểu là cả giai đoạn giảm.\n\n**Đọc lại:** L ô 70–76,82–83.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 937,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 803,
+        "questionSha256": "2fd28ed9af412d57175e7e953e0c6a3369c9f9b4f838aed7716d8036387adaea",
+        "answerSha256": "6ad74e9683d9a8cd2d9735ad8d5ef54098522316a468a6fff889f0df00b68107"
+      }
+    },
+    {
+      "id": "B8-MR07",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Nhật ký cùng giờ địa phương không gắn timezone, nguồn YYYY-MM-DD HH:MM, mỗi hàng là một sự kiện. Cần lấy **trọn ngày 15/08/2026**. Hệ thống thu đủ ngày này.\n\n```python\nt = pd.Series(pd.to_datetime([\"2026-08-15 00:00\", \"2026-08-15 14:20\",\n                               \"2026-08-15 23:59\", \"2026-08-16 00:00\"]))\n```\n\nMask nào đáp ứng yêu cầu, giữ đúng3 hàng đầu?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`(t >= \"2026-08-15\") & (t <= \"2026-08-15\")`"
+        },
+        {
+          "key": "B",
+          "markdown": "`(t >= \"2026-08-15\") & (t < \"2026-08-16\")`"
+        },
+        {
+          "key": "C",
+          "markdown": "`(t >= \"2026-08-15\") & (t <= \"2026-08-16\")`"
+        },
+        {
+          "key": "D",
+          "markdown": "`(t > \"2026-08-15\") & (t < \"2026-08-16\")`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** A chỉ lấy00:00 ngày 15. B đúng với khoảng `[15/08 00:00,16/08 00:00)`, lấy cả14:20 và23:59. C nhận thừa00:00 ngày 16. D bỏ mất00:00 ngày 15. Không dùng <=ngày cuối ở00:00 để lấy mọi giờ của ngày đó. Các mốc phải thống nhất timezone nếu dữ liệu aware.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K30. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm00:00 với hết ngày; đóng sai một trong hai biên.\n\n**Đọc lại:** L ô 90–91.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 952,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 825,
+        "questionSha256": "70690e1d36efdc7f87a7ad689c6e4f39e6e770eb594844085681686c662ac691",
+        "answerSha256": "874a07c3aa020b91dfba3e1ed9922bf414ad88cd070fca358324b84590c69b40"
+      }
+    },
+    {
+      "id": "B8-MR08",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Việt Nam UTC+7; biết31/12/2025 là thứ Tư.\n\n```python\ns = pd.Series(pd.to_datetime([\"2025-12-31 21:00\"], utc=True))\nv = s.dt.tz_convert(\"Asia/Ho_Chi_Minh\")\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cần thay convert bằng localize vì s đã có UTC."
+        },
+        {
+          "key": "B",
+          "markdown": "`v` vẫn là 31/12/2025 thứ Tư vì chuyển múi giờ không đổi ngày."
+        },
+        {
+          "key": "C",
+          "markdown": "`v` là 01/01/2026 thứ Năm nhưng là một thời điểm thực muộn hơn s đúng7 giờ."
+        },
+        {
+          "key": "D",
+          "markdown": "`v` là 01/01/2026 04:00 thứ Năm, dayofweek=3; cùng thời điểm thực với s."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** A localize lại dữ liệu aware sẽ lỗi. B nhầm cùng thời điểm thực với cùng ngày trên lịch. C có ngày đúng nhưng hiểu sai thời điểm; chỉ biểu diễn đổi. D đúng: UTC+7 đẩy sang năm mới và thứ Năm=3. `utc=True` phù hợp ở đây vì đề đã cho chuỗi ghi UTC, không dùng như quy tắc mặc định cho cột chỉ có ngày.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K06. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Nhầm ngày với thời điểm thực; localize dữ liệu đã aware.\n\n**Đọc lại:** L ô 26–28,86–87; GK20.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 972,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 837,
+        "questionSha256": "95d715f7679c99bbe5aea463cd5ca96f8152619a965c4df32bae34f466f7b91c",
+        "answerSha256": "fccf925ce01e1730adb392cdc06b999f41713c67b59e834c315369ee6eae5651"
+      }
+    },
+    {
+      "id": "B8-041",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dữ liệu chỉ có ngày, YYYY-MM-DD. Biết02/07/2026 là thứ Năm.\n\n```python\ns = pd.Series(pd.to_datetime([\"2026-07-02\"], format=\"%Y-%m-%d\"))\nprint(s.dt.year.iloc[0], s.dt.quarter.iloc[0], s.dt.dayofweek.iloc[0])\n```\n\nDòng cuối in ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`2026 2 3`"
+        },
+        {
+          "key": "B",
+          "markdown": "`2026 3 3`"
+        },
+        {
+          "key": "C",
+          "markdown": "`2026 3 4`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo lỗi vì Series chỉ có một phần tử không dùng được `.dt`."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Tháng7 thuộc quýIII; thứ Năm=3 khi thứ Hai=0. A cho tháng 7 vào quýII. B đúng. C đếm thứ Hai bằng 1. D nhầm độ dài Series với khả năng dùng accessor: Series ngày giờ dùng được .dt dù chỉ một phần tử. Các thuộc tính lấy từ ngày đã chuyển, không từ cách viết chuỗi.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K06. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Sai quý hoặc quy ước thứ; nhầm .dt với độ dài dữ liệu.\n\n**Đọc lại:** L ô 16–18.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 997,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 866,
+        "questionSha256": "2170d46311f1987e6288602efeb9dde30227794a0ef7fdabc151e41e2a73392e",
+        "answerSha256": "9df6987983a0d03527382d963262d452f4cbda1c7d1b120244dd838512bbe8bc"
+      }
+    },
+    {
+      "id": "B8-042",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Snapshot có mốc phân tích29/06/2026, chỉ có ngày review theo YYYY-MM-DD. Nguồn cho biết thu các chỗ ở trong29/06–02/07 nên có một số review ngày 30/06 và01/07 hợp lệ. Nhiệm vụ là phân tích đến hết29/06; **không có thông tin về ngày nhận phòng**.\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mọi hàng sau29/06 là lỗi nhập và phải sửa thành29/06."
+        },
+        {
+          "key": "B",
+          "markdown": "Ngày30/06 cho biết khách nhận phòng30/06 nên có thể tính số đêm từ đó."
+        },
+        {
+          "key": "C",
+          "markdown": "Có nhãn30/06 sau resample thì được dùng toàn tháng 6 như tháng trọn."
+        },
+        {
+          "key": "D",
+          "markdown": "Giữ dữ liệu gốc, báo số hàng ngoài mốc, rồi lọc ngày hợp lệ trong phạm vi trước khi tổng hợp; chưa đủ cơ sở coi ngày ngoài mốc là lỗi."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** A biến giới hạn phân tích thành quy tắc sửa dữ liệu. B đánh đồng ngày ghi review với nhận phòng. C suy đủ tháng từ nhãn. D đúng: phạm vi câu hỏi quyết định hàng dùng; nguồn giải thích hợp lý việc có ngày sau mốc nhưng không khiến các hàng ấy thuộc phạm vi phân tích. Dữ liệu chỉ có ngày nên <=29/06 bao gồm toàn ngày theo độ chính xác đã cho; nếu có giờ thì phải xét biên khác.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K10; phụ K09, K11. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Sửa ngày ngoài mốc; nhầm review với ngày lưu trú; suy trọn kỳ từ nhãn.\n\n**Đọc lại:** L ô 30–38; Lab ô 12–17.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1017,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 878,
+        "questionSha256": "d59319341bb7e33c79cd3bf5665481175f0b5141d740d41451df1571db71bf9e",
+        "answerSha256": "54cd2f491e6110b5cd1a700673f9df243f2176f4a11a657e862c3505c7383cff"
+      }
+    },
+    {
+      "id": "B8-043",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một chuỗi tổng review **theo quý** có mọi quý liên tiếp, index nhãn cuối quý, sắp tăng. Tất cả các quý dùng đều đã thu đủ. Bạn muốn so quýIII/2026 với cùng quý năm trước nhưng dùng `q / q.shift(12) - 1`. Trong phần lịch liên quan, quýIII/2023 có40 review, quýIII/2025 có80, quýIII/2026 có100.\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Code so với quýIII/2025 và cho 25%;12 hàng luôn bằng một năm."
+        },
+        {
+          "key": "B",
+          "markdown": "Code so với quýII/2026 vì shift chỉ lùi một kỳ."
+        },
+        {
+          "key": "C",
+          "markdown": "Code so với quýIII/2023 và cho 150%; sửa thành shift 4 để được25% so quýIII/2025."
+        },
+        {
+          "key": "D",
+          "markdown": "Code so với quýIII/2023 và cho 25%; chỉ cần đổi nhãn kỳ gốc trong báo cáo."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.**12 hàng là 12 quý=3 năm:100/40−1=1,5=150%. Đúng cùng kỳ năm trước là 4 quý:100/80−1=0,25=25%. A áp quy tắc chuỗi tháng cho chuỗi quý. B bỏ qua periods 12. C đúng. D gắn tỷ lệ của kỳ gốc 80 cho phép chia thực tế có mẫu số 40; đổi mô tả không sửa phép tính.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K22; phụ K23. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** 12 kỳ quý bị coi là 12 tháng; đổi lời diễn giải thay vì sửa mẫu số.\n\n**Đọc lại:** Lab ô 29–33; L ô 73–76.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1032,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 890,
+        "questionSha256": "9bbe45e9b2fb85053d8bb5c26101b12d6dc1a5f7702aac0b0af805810347f866",
+        "answerSha256": "3fa195c4a9ef52eae7f773bf7e33d4263785e1ed3481dd10c37a9bf21e749615"
+      }
+    },
+    {
+      "id": "B8-044",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng sau là một review chỉ có ngày, cùng lịch địa phương, không thiếu. Biết06/07/2026 là thứ Hai,12/07 là Chủ nhật; đã thu đủ 06–19/07.\n\n```python\nt = pd.to_datetime([\"2026-07-06\", \"2026-07-12\", \"2026-07-12\", \"2026-07-13\"])\ns = pd.Series(1, index=t).resample(\"W-SUN\").size()\nprint(s.tolist())\n```\n\nDòng cuối in ra gì? W-SUN gộp tuần kết thúc Chủ nhật.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[3, 1]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[1, 3]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[2, 1]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[4]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Nhãn12/07 nhận review06/07 và hai review12/07, tổng 3; nhãn19/07 nhận13/07, tổng 1. A đúng. B chuyển nhầm review Chủ nhật sang tuần sau. C đếm hai ngày khác nhau06 và12/07 thay ba review trong tuần đầu; tuần sau có một ngày 13/07. D bỏ qua ranh giới tuần, gộp hết thành một kỳ. W-SUN gộp theo lịch, không phải mỗi7 hàng.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K12; phụ K13. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Gộp sai biên Chủ nhật hoặc đếm ngày thay review.\n\n**Đọc lại:** L ô 39–44.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1047,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 902,
+        "questionSha256": "11ea3ce0a2d52eeed2ddc8d801b0136724696a5adf665df4221066c9461afc3f",
+        "answerSha256": "3d1e08583bb02c1ae7b3dd18ca5e332587a7de3cb7e1a6d43586c7b8ae6554f0"
+      }
+    },
+    {
+      "id": "B8-045",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Đã thu đủ 01–06/06/2026. Bảng **đã tổng hợp** chỉ ghi ngày có review:02/06 có2,04/06 có4; mọi ngày còn lại trong khoảng thu có0. Dữ liệu chỉ có ngày, không thiếu số đếm. Muốn báo trung bình review **trên mọi ngày đã quan sát**.\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Mẫu số 2 vì có hai hàng tổng hợp; kết quả3 review/ngày."
+        },
+        {
+          "key": "B",
+          "markdown": "Mẫu số 3 vì khoảng giữa02 và04 có ba ngày; kết quả2 review/ngày."
+        },
+        {
+          "key": "C",
+          "markdown": "Mẫu số 6 nhưng tử số 2 là số hàng; kết quả1/3 review/ngày."
+        },
+        {
+          "key": "D",
+          "markdown": "Mẫu số 6 và tử số 6 review; kết quả1 review/ngày."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** A tính trên ngày có review, khác câu hỏi. B chỉ dùng phạm vi giữa hai ngày có sự kiện, bỏ hai đầu đã quan sát. C dùng số hàng thay tổng review. D đúng: (2+4)/6=1 review/ngày. Nguồn cho phép điền0 vào các ngày đã thu không có sự kiện; không suy chính sách này cho ngày ngoài01–06/06.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K27; phụ K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Mẫu số ngày có review/giữa hai sự kiện thay mọi ngày đã quan sát.\n\n**Đọc lại:** L ô 48–50; Lab ô 34–37.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1068,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 914,
+        "questionSha256": "505ce053867eaf853b0975cb871fadbecdd0a793773aefb5dc939e45870dce7b",
+        "answerSha256": "4f33e321e0b4eb93642370cb9a7ecbe4e92c1a51a5bbeb4a6f59562581903824"
+      }
+    },
+    {
+      "id": "B8-046",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review nhãn cuối tháng đã sắp. Chỉ tháng 1,3,4,5/2026 đã thu đủ, tháng 2 chưa biết.\n\n```python\ns = pd.Series([20, 30, 60, 90], index=pd.to_datetime([\n    \"2026-01-31\", \"2026-03-31\", \"2026-04-30\", \"2026-05-31\"]))\np = s.asfreq(\"ME\").pct_change(fill_method=None)\nprint(p.loc[\"2026-03-31\"], p.loc[\"2026-04-30\"])\n```\n\nDòng cuối in ra gì, ở dạng tỷ lệ?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`0.5 1.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`nan 1.0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`inf 1.0`"
+        },
+        {
+          "key": "D",
+          "markdown": "`nan 100.0`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** Sau asfreq, tháng 2 là NaN. Tháng3 không có kỳ gốc tháng 2 nên tỷ lệ NaN; tháng 4 có kỳ gốc tháng 3=30,60/30−1=1. A bỏ tháng 2 và so tháng 3 với tháng 1. B đúng. C điền0 cho tháng 2 chưa thu. D nhầm tỷ lệ với phần trăm ở tháng 4. Dòng code trả lời thay đổi theo tháng lịch, không phải theo lần có số liệu trước.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K20; phụ K15, K21. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Lịch thiếu kéo sai kỳ gốc; nhầm0/NaN và tỷ lệ/phần trăm.\n\n**Đọc lại:** L ô 62–69.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1083,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 926,
+        "questionSha256": "d4b9ed4890a7d78bb6991cc24cfeebc041e712787ba1229e904e55df1f8cf037",
+        "answerSha256": "fa22585eb97e109519046a25b2efe7a1ea732b0030f95b542824fa9e14a6613f"
+      }
+    },
+    {
+      "id": "B8-047",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn DD/MM/YYYY, chỉ có ngày; None là thiếu từ nguồn. Đây là các lượt lưu trú, không có quy tắc coi thiếu là ở0 đêm.\n\n```python\nvao = pd.to_datetime(pd.Series([\"01/06/2026\", None]), format=\"%d/%m/%Y\")\nra = pd.to_datetime(pd.Series([\"03/06/2026\", \"05/06/2026\"]), format=\"%d/%m/%Y\")\ndem = (ra - vao).dt.days\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`dem` là 2 vàthiếu; thiếu ngày vào không xác định được số đêm hàng 1."
+        },
+        {
+          "key": "B",
+          "markdown": "`dem` là 2 và0 vì NaT là khoảng thời gian bằng 0."
+        },
+        {
+          "key": "C",
+          "markdown": "`dem` là 3 và5 vì cần lấy ngày trong tháng của ngày ra."
+        },
+        {
+          "key": "D",
+          "markdown": "Phải điền ngày vào thiếu bằng ngày ra để tạo số đêm hợp lệ bằng 0."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Hàng0 hiệu03−01=2 ngày; hàng 1 có NaT ở ngày vào nên số đêm thiếu. A đúng. B đồng nhất thiếu ngày giờ với khoảng0. C dùng thành phần ngày thay hiệu ngày. D tự tạo một ngày vào không có trong nguồn, thay đổi ý nghĩa dữ liệu. NaT khác một ngày hợp lệ và khác Timedelta0.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K05; phụ K04. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** NaT bị hiểu là số đêm0 hoặc bị sửa bằng một ngày tự đặt.\n\n**Đọc lại:** L ô 11–22; Lab ô 5–9.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1105,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 938,
+        "questionSha256": "4b1f1a7c722ea84782ea11149577de1652088d56e9492c1daf5d3c54f478b430",
+        "answerSha256": "d6fcf8473ac99524cb1eaf7f1439848d9afb248717a14ceec2653d7dc174bc1e"
+      }
+    },
+    {
+      "id": "B8-048",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Các sự kiện có giờ cùng giờ địa phương không gắn timezone. Mỗi phần tử là một review. Nguồn xác nhận đã thu đủ 01–30/06/2026; dữ liệu01/07 chỉ là mẫu một phần, chưa biết đầy đủ.\n\n```python\nt = pd.Series(pd.to_datetime([\"2026-06-01 09:00\", \"2026-06-29 20:00\",\n                               \"2026-06-30 00:00\", \"2026-06-30 18:00\",\n                               \"2026-07-01 00:00\"]))\ngiu = t <= pd.Timestamp(\"2026-06-30\")\n```\n\nSửa mask để lấy mọi review trong **tháng 6 trọn** rồi đếm số hàng. Có nên loại tháng 6 vì thời điểm cắt đang viết là 00:00 hay vì dữ liệu có một hàng tháng 7? Phân biệt lỗi lọc của code với phạm vi thu thập đã được nguồn xác nhận.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ngiu = (t >= pd.Timestamp(\"2026-06-01\")) & (t < pd.Timestamp(\"2026-07-01\"))\nso = int(giu.sum())\n```\n\nGiữ hàng 0–3,4 review; code cũ giữ3 và bỏ review30/06 18:00. Nguồn xác nhận tháng 6 đã thu đủ, nên được giữ sau sửa mask. Mốc00:00 trong code là lỗi biểu diễn biên trên của câu hỏi, không chứng minh nguồn chỉ thu đến00:00. Hàng01/07 bị loại vì ngoài phạm vi tháng 6; sự tồn tại của nó không chứng minh tháng 7 trọn hoặc ngày đó sai nguồn.\n\n**Chấm 5 điểm:** khoảng đầu tháng đến trước đầu tháng sau (2); đếm4 và chỉ ra hàng bị mất ở code cũ (1); phân biệt mốc lọc với độ đầy đủ nguồn (1); giữ tháng 6/không suy tháng 7 trọn hoặc sai nguồn (1).\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K11; phụ K30, K10. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Lẫn thời điểm cắt code với phạm vi nguồn; bỏ phần ngày còn giờ.\n\n**Đọc lại:** L ô 45–47,90–91; Lab ô 18–20.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1126,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 950,
+        "questionSha256": "c06ef61a4a0a7c4d534722699b7838989d9363d228f0c7f03153ff6e9e7141a3",
+        "answerSha256": "f6776013ffde03c22153e98da872e724fa674761cfe75535f1807730923c0282"
+      }
+    },
+    {
+      "id": "B8-049",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "`s` là số review trên lịch01–08/06/2026 liên tiếp, index tăng. Các ngày có0 đã thu đủ và không review; riêng03/06 chưa biết số đếm nên NaN.\n\n```python\ns = pd.Series([0, 2, float(\"nan\"), 4, 0, 6, 8, 10],\n              index=pd.date_range(\"2026-06-01\", periods=8, freq=\"D\"))\ntb = s.rolling(7, min_periods=7, center=False).mean().fillna(0)\n```\n\n(a) Vì sao điền NaN sau rolling thành0 làm báo cáo sai ý nghĩa? (b) Sửa dòng tính để giữ ý nghĩa yêu cầu đủ 7 giá trị; nêu kết quả07 và08/06 cùng thành phần cửa sổ 08/06. (c) Nếu chủ động đổi yêu cầu thành tối thiểu6 giá trị đã biết, kết quả08/06 là bao nhiêu, và có được gọi đó là trung bình đã biết của đủ 7 ngày không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ntb = s.rolling(7, min_periods=7, center=False).mean()\ntb6 = s.rolling(7, min_periods=6, center=False).mean()\n```\n\n(a) Sáu hàng đầu chưa đủ cửa sổ; hai hàng sau có một ngày chưa biết. Điền0 tạo thông tin “trung bình0 review/ngày” không có căn cứ. (b) Cả07 và08/06 là NaN. Cửa sổ08/06 gồm02–08/06 `[2,NaN,4,0,6,8,10]`, chỉ 6 giá trị hợp lệ. (c) Mean trên6 giá trị đã biết là 30/6=5 review/ngày có số liệu, không phải trung bình xác định của đủ 7 ngày;0 ở05/06 vẫn được tính trong mẫu số 6. Không được tự coi NaN là 0 để lấy30/7.\n\n**Chấm 5 điểm:** giải thích thiếu đầu chuỗi/thiếu trong cửa sổ và không bù0 (1,5); sửa và hai NaN (1); đúng7 ngày/6 giá trị (1); mean 5 với mẫu số 6, diễn giải giới hạn đúng (1,5).\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K17; phụ K18, K32. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Điền NaN đầu chuỗi/thiếu nguồn thành0 cho đẹp; min_periods theo số vị trí.\n\n**Đọc lại:** L ô 51–53; Lab ô 21–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1139,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 969,
+        "questionSha256": "cb1f8b30db0735a62ed776079538f8d26208df677ed5463c1aa252d1c323a2f5",
+        "answerSha256": "e5eb1efc84d94c0c7dd6559008dee3265f57cd2ec30e0a9fa1001a5133069a97"
+      }
+    },
+    {
+      "id": "B8-050",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Tổng review các tháng sau đã thu đủ, không thiếu ngày. Năm2023 không nhuận;2024 nhuận. Các nhãn là cuối tháng, chỉ có ngày, index tăng.\n\n```python\nm = pd.Series([310, 280, 620, 580], index=pd.to_datetime([\n    \"2023-01-31\", \"2023-02-28\", \"2024-01-31\", \"2024-02-29\"]))\n```\n\nGộp cùng tháng qua hai năm. Tính (i) tỷ lệ thay đổi tổng tháng 2 so tháng 1; (ii) tỷ lệ thay đổi review/ngày tháng 2 so tháng 1, mỗi mức gộp bằng tổng review/tổng số ngày. Dùng `.index.days_in_month`; in phần trăm1 chữ số. Vì sao mean hai mức review/ngày tháng 2 của từng năm không cho đúng mức gộp? Nêu tổng số ngày của hai tháng và chiều biến động theo hai cách.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nngay = pd.Series(m.index.days_in_month, index=m.index)\ntong = m.groupby(m.index.month).sum()\ntong_ngay = ngay.groupby(ngay.index.month).sum()\ntb = tong / tong_ngay\np_tong = tong.loc[2] / tong.loc[1] - 1\np_ngay = tb.loc[2] / tb.loc[1] - 1\n```\n\nTháng1:930 review/62 ngày=15/ngày. Tháng2:860 review/57 ngày≈15,087719/ngày. Theo tổng giảm7,5%; theo ngày tăng0,6%. Kỳ gốc là tổng tháng 1 hoặc mức/ngày tháng 1 tương ứng, không dùng lẫn mẫu số. Mean các mức tháng 2 là(10+20)/2=15, cho mỗi năm cùng trọng số; mức gộp cân theo28 và29 ngày. Số ngày tháng 2 ít hơn tháng 1 khoảng8,1% (57/62−1), nên không thể đọc chiều biến động mức ngày từ tổng mà bỏ mẫu số.\n\n**Chấm 5 điểm:** groupby tháng số và tổng review đúng (1); days_in_month/tổng 62,57 (1); hai mức/ngày đúng (1); hai tỷ lệ và chiều giảm/tăng đúng, kỳ gốc rõ (1); giải thích mean năm sai trọng số (1). Chấp nhận tính tay hoặc code tương đương; tỷ lệ sai số 1e-9 trước làm tròn.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K28; phụ K27, K23. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Tổng nhiều năm chia ngày một năm; mean năm thay tổng/tổng; chiều biến động đảo sau chuẩn ngày.\n\n**Đọc lại:** Lab ô 34–37.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1151,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 988,
+        "questionSha256": "b275094c9f262dd24c09f6b03dc4224d4df4039884fd638edbed91c0e2ecc918",
+        "answerSha256": "81d9bf6702659cace75571d1af09b997520af26598cf4ca2fe4cefd7330dcf62"
+      }
+    },
+    {
+      "id": "B8-MR09",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Cần tính cửa sổ theo khoảng3 ngày trên chuỗi số đo tại các ngày không đều. Chưa có ý định bù dữ liệu ở ngày vắng. Nhận định nào phù hợp cách dùng trong bài?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`rolling(\"3D\")` chỉ cần index là các chuỗi nhìn giống ngày, không cần chuyển kiểu."
+        },
+        {
+          "key": "B",
+          "markdown": "Dùng chỉ mục ngày giờ phù hợp đã sắp theo thời gian; nêu min_periods và biên khi chúng ảnh hưởng câu hỏi."
+        },
+        {
+          "key": "C",
+          "markdown": "Cần xóa mọi hàng trùng ngày trước vì một cửa sổ không được chứa nhiều sự kiện cùng ngày."
+        },
+        {
+          "key": "D",
+          "markdown": "Phải `fillna(0)` và thêm mọi ngày trước khi gọi rolling theo thời gian, dù số liệu các ngày đó chưa biết."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** A nhầm văn bản giống ngày với DatetimeIndex cần cho cách dùng cửa sổ theo thời gian. B đúng theo bài: chuyển kiểu, sắp index, chỉ rõ điều kiện đủ giá trị và biên. C xóa sự kiện hợp lệ chỉ vì cùng ngày. D tự tạo số 0 cho dữ liệu chưa biết; rolling theo thời gian có thể làm việc trên lịch không đều mà không cần điền mọi ngày. Chỉ số 0 đã được xác nhận mới được coi là giá trị biết.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31; phụ K08. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Để index chuỗi; bắt bổ sung0/xóa ngày trùng khi không có căn cứ.\n\n**Đọc lại:** L ô 88–89.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1165,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1014,
+        "questionSha256": "01b35d4160392c94acb981e75f3052f13607accabead3920aa2b53dca019d083",
+        "answerSha256": "50aa3cbd6f989cb51fa25d38758edce116d71611c51f0f9810630c188abbf4a8"
+      }
+    },
+    {
+      "id": "B8-MR10",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "Nguồn API ghi **giờ UTC dạng YYYY-MM-DD HH:MM**, chưa có timezone trong kiểu. Mỗi hàng là một review. Nguồn xác nhận đã thu đủ cả ngày 01/01/2027 theo giờ Việt Nam UTC+7; ngày 02/01 chưa biết. Không có review khác trong ngày 01/01 ngoài các hàng đã cho.\n\n```python\nraw = pd.Series([\"2026-12-31 16:59\", \"2026-12-31 17:00\",\n                 \"2027-01-01 16:59\", \"2027-01-01 17:00\"])\n```\n\nViết code đổi múi giờ, đếm review ngày 01/01/2027 theo Việt Nam bằng biên phải mở. Cho sẵn lịch hai ngày để lập chuỗi báo cáo: `lich = pd.date_range(\"2027-01-01\", \"2027-01-02\", tz=\"Asia/Ho_Chi_Minh\", freq=\"D\")`. Kết quả báo cáo phải phân biệt ngày 02/01 chưa biết với ngày đã quan sát. Nêu số review/ngày cho phạm vi **đã thu đủ**. Vì sao không lấy mọi hàng chuyển đổi rồi coi số đếm ngày 02/01 là tổng trọn ngày?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nv = pd.to_datetime(raw, format=\"%Y-%m-%d %H:%M\").dt.tz_localize(\"UTC\").dt.tz_convert(\"Asia/Ho_Chi_Minh\")\ndau = pd.Timestamp(\"2027-01-01\", tz=\"Asia/Ho_Chi_Minh\")\ncuoi = pd.Timestamp(\"2027-01-02\", tz=\"Asia/Ho_Chi_Minh\")\ngiu = (v >= dau) & (v < cuoi)\ndem = pd.Series(1, index=pd.DatetimeIndex(v[giu])).resample(\"D\").size()\nbao_cao = dem.reindex(lich)\n```\n\nGiữ hàng 1,2; báo cáo ngày 01 là 2, ngày 02 là NaN. Giờ Việt Nam lần lượt31/12 23:59,01/01 00:00,01/01 23:59,02/01 00:00. Phạm vi đã thu đủ là 1 ngày nên2 review/ngày. Một hàng 02/01 chỉ chứng minh có sự kiện lúc00:00, không xác nhận tổng trọn ngày; không bù0 hoặc dùng số 1 như tổng ngày đã biết. Nếu ngày 01 không có sự kiện vẫn phải tạo số 0 dựa trên lịch/phạm vi thu đủ, không để resample tự đoán ngoài hai đầu.\n\n**Chấm 5 điểm:** gắn UTC/convert đúng (1); mask ngày Việt Nam phải mở (1); giữ hàng 1,2 và tổng 2 (1); reindex giữ ngày 02 NaN (1); mẫu số 1 ngày/không suy trọn ngày từ hàng có sẵn (1).\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K30, K15. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Lấy ngày UTC; nhầm hàng đầu ngày chưa thu đủ với tổng ngày; fill0 ngoài phạm vi.\n\n**Đọc lại:** L ô 86–91,48–50,62–66.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1178,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1026,
+        "questionSha256": "6029333d1885a5a869872421a10a371591ba8a97ed4dabaffa0b89f02a7ca8e9",
+        "answerSha256": "dde21ae04d357b559b36c9be5a913fcaa311d5a63612120eb76627fc789e3720"
+      }
+    },
+    {
+      "id": "B8-051",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Nguồn yêu cầu đọc theo **DD/MM/YYYY**; ngày 13 tháng 5 phải ghi `13/05/2026`. Chuỗi `05/13/2026` không hợp lệ theo quy ước nguồn. Cần đánh dấu các chuỗi không đọc được theo **format nguồn**, không chấp nhận tự đổi sang tháng/ngày. Xét độc lập:\n\n```python\nraw = pd.Series([\"05/13/2026\"])\na = pd.to_datetime(raw, dayfirst=True, errors=\"coerce\")\nb = pd.to_datetime(raw, format=\"%d/%m/%Y\", errors=\"coerce\")\n```\n\nTrong pandas3.0.3, nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cả a và b đều là NaT vì dayfirst kiểm định dạng nguồn chặt."
+        },
+        {
+          "key": "B",
+          "markdown": "Cả a và b đều là 13/05 vì format chỉ quyết định cách hiển thị."
+        },
+        {
+          "key": "C",
+          "markdown": "a có thể đọc thành13/05 do ưu tiên ngày trước không cấm cách đọc khác; b là NaT và đáp ứng yêu cầu của đề."
+        },
+        {
+          "key": "D",
+          "markdown": "a là NaT còn b là 13/05 vì format tự đổi vị trí ngày/tháng khi tháng 13 không hợp lệ."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** A coi dayfirst là bộ kiểm chặt. B coi format chỉ là cách in và không áp quy ước khi parse. C đúng: với chuỗi này, pandas đọc a theo tháng/ngày sau khi cách ưu tiên không hợp lệ (có thể cảnh báo); b không đọc được tháng 13 theo `%d/%m/%Y` nên NaT. D đảo hai hành vi. Đây là câu có yêu cầu rõ về quy ước, khác việc chỉ cần đọc đúng một bộ ngày cụ thể. `raw.notna() & b.isna()` đánh dấu hàng 0 là lỗi chuyển đổi, không phải thiếu nguồn.\n\n**Hồ sơ câu:** Nhóm chính 1 — Đọc ngày, NaT, thành phần ngày và khoảng thời gian. Mục tiêu chính K03; phụ K02, K04. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Ưu tiên dayfirst bị hiểu là yêu cầu định dạng không có ngoại lệ.\n\n**Đọc lại:** G §1; L ô 8–15,84.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1194,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1066,
+        "questionSha256": "21d174311103195a2b068f452d16ff54909708e9af47957d0c5d394f18c5bf30",
+        "answerSha256": "a1dfe65b2392d00ed8c3def0d2b68f8a3c823f5060279b1c05a6539f3541718d"
+      }
+    },
+    {
+      "id": "B8-052",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "`s` là chuỗi **đã tổng hợp** số review từng ngày có review, index duy nhất tăng dần; đã thu đủ 01–05/06/2026, ngày vắng trong phạm vi này là 0. Không có thông tin ngoài phạm vi.\n\n```python\ns = pd.Series([3, 5], index=pd.to_datetime([\"2026-06-02\", \"2026-06-04\"]))\nt = s.asfreq(\"D\", fill_value=0)\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "t có nhãn02,03,04/06, giá trị `[3,0,5]`; cần lịch01–05/06 cho sẵn và reindex nếu muốn đủ phạm vi đã thu."
+        },
+        {
+          "key": "B",
+          "markdown": "t tự thêm01 và05/06 vì asfreq biết nguồn đã thu đủ năm ngày."
+        },
+        {
+          "key": "C",
+          "markdown": "t có tổng 2 vì asfreq luôn đếm số hàng gốc như size."
+        },
+        {
+          "key": "D",
+          "markdown": "Nếu đưa bảng nhiều review cùng ngày vào asfreq thì nó tự gộp số review thay resample."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** A đúng: asfreq đưa chuỗi đã tổng hợp về lịch giữa hai đầu, không biết các ngày quan sát ngoài khoảng nhãn gốc. B gán thông tin nguồn mà hàm không nhận. C nhầm đưa về lịch với đếm hàng; tổng vẫn8 review. D nhầm asfreq với tổng hợp nhiều sự kiện; index trùng còn có thể không reindex được. Với lịch đã biết01–05, `s.reindex(lich,fill_value=0)` cho `[0,3,0,5,0]`.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K15; phụ K14, K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Asfreq bị hiểu là tổng hợp sự kiện hoặc biết hai đầu lịch ngoài dữ liệu.\n\n**Đọc lại:** L ô 39–50,62–66.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1215,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1078,
+        "questionSha256": "a7947cd6a52d3c3d5753ed29aa4277dd5aa2d3b919b9abbf7367cf0af79f6d57",
+        "answerSha256": "7a11e0cbc5daf9ffeb9d6a7bbf9a7b004de9b29b7b761fcb66e0f014ad66c6d1"
+      }
+    },
+    {
+      "id": "B8-053",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Số review của sáu tháng trọn liên tiếp đã thu đủ là `[18, 2, 8, 9, 10, 11]`, theo thứ tự tháng 1–6/2026. Index tăng, không thiếu. Bạn tính `rolling(3, min_periods=3, center=False).mean()` và thấy cực đại trung bình ở tháng 6, còn cực đại gốc ở tháng 1. Hai cực đại đều duy nhất.\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Rolling dự báo tháng 7 có đúng10 review vì giá trị cuối là 10."
+        },
+        {
+          "key": "B",
+          "markdown": "Cửa sổ cuối `[9,10,11]` có mean 10; đó là mô tả ba tháng đã qua, không tự chứng minh nguyên nhân hoặc số review tháng tới."
+        },
+        {
+          "key": "C",
+          "markdown": "Dữ liệu sai vì cực đại rolling và cực đại gốc buộc phải cùng tháng."
+        },
+        {
+          "key": "D",
+          "markdown": "Hai nhãn cực đại cách5 tháng nên mọi đường rolling3 đều trễ đúng5 tháng."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "**Đáp án B.** A biến làm mượt thành dự báo. B đúng: các mean đủ cửa sổ là 28/3,19/3,9,10; cực đại duy nhất10 gắn tháng 6 từ cửa sổ tháng 4–6 `[9,10,11]`. C sai vì hai kiểu cực đại đo khác đối tượng. D suy độ trễ cố định từ một ví dụ. Giá trị gốc lớn chỉ ảnh hưởng các cửa sổ chứa nó, không quyết định mọi nhãn cực đại đường mượt. Mẫu số ở mỗi trung bình là 3 tháng, không phải số ngày.\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K19; phụ K16. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Làm mượt thành dự báo, yêu cầu cực đại trùng nhau hoặc trễ cố định.\n\n**Đọc lại:** L ô 51–57; Lab ô 24–28.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1235,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1090,
+        "questionSha256": "da1489183580413a58c24fe0acf14382ef47d6454a7f1b72e72d404bed07293f",
+        "answerSha256": "e8df135dcca63d4ff8737836e9269dcb7792fa6c30b4cc43daa5cfd3026a0643"
+      }
+    },
+    {
+      "id": "B8-054",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review sau có lịch tháng liên tiếp, nhãn cuối tháng, sắp tăng; mọi tháng đã thu đủ,0 là không có review.\n\n```python\ns = pd.Series(10, index=pd.date_range(\"2025-01-31\", periods=15, freq=\"ME\"))\ns.loc[[\"2025-03-31\", \"2026-02-28\", \"2026-03-31\"]] = [40, 60, 80]\ns.loc[\"2025-06-30\"] = 0\nrut = s[s > 0]\n```\n\nTại tháng 3/2026, xét `s/s.shift(12)-1`, `s/s.shift(1)-1` và `rut/rut.shift(12)-1`. Nhận định nào đúng (phần trăm làm tròn1 chữ số)?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Cả ba đều so cùng tháng năm trước và tăng100,0%."
+        },
+        {
+          "key": "B",
+          "markdown": "Phép đầu tăng33,3% vì kỳ gốc tháng 2/2026; phép thứ hai tăng100,0%."
+        },
+        {
+          "key": "C",
+          "markdown": "Phép trên rut vẫn so tháng 3/2025 vì việc xóa tháng 0 không đổi khoảng12 hàng."
+        },
+        {
+          "key": "D",
+          "markdown": "Phép đầu tăng100,0% so tháng 3/2025; phép thứ hai tăng33,3% so tháng 2/2026; phép trên rut lấy nhầm tháng 2/2025, cho 700,0%."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "**Đáp án D.** Chuỗi đầy đủ: cùng năm 80/40−1=100%; tháng trước 80/60−1≈33,3%. Sau xóa tháng 6/2025,12 hàng trước tháng 3/2026 trở thành tháng 2/2025=10, nên80/10−1=700%. A coi mọi kỳ gốc giống nhau. B đảo phép cùng kỳ và tháng trước. C bỏ qua việc shift đếm hàng, không tự dò tháng. D đúng.0 là quan sát hợp lệ phải giữ trong lịch; không dùng fill0 để thay cho tháng chưa biết trong trường hợp khác.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K22; phụ K20, K23. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Xóa tháng 0 làm lịch lệch; cùng kỳ khác tháng trước.\n\n**Đọc lại:** L ô 62–76.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1250,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1102,
+        "questionSha256": "112f3afb5760befa397709798a158247be0590a3b1a1b359e628e008b71f7934",
+        "answerSha256": "c53200b338fb4e4bd0e897ba6b2d9ffcbc0069ee0ceb1a775235fa269a9329cb"
+      }
+    },
+    {
+      "id": "B8-055",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Chuỗi tổng review bốn tháng trọn liên tiếp, index tăng, đã thu đủ và không thiếu:\n\n```python\ns = pd.Series([0, 0, 5, 10],\n              index=pd.date_range(\"2026-01-31\", periods=4, freq=\"ME\"))\nprint(s.pct_change(fill_method=None).tolist())\n```\n\nDòng cuối in ra gì? `inf` là vô cực, không phải tỷ lệ tăng hữu hạn.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[nan, nan, inf, 1.0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[nan, 0.0, 5.0, 1.0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[0.0, 0.0, 100.0, 100.0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[nan, nan, 1.0, 1.0]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Hàng đầu không có kỳ gốc; tháng 2 là 0/0−1 nên NaN; tháng 3 là 5/0−1 nêninf; tháng 4 là 10/5−1=1. A đúng. B gán0 cho 0/0 và dùng chênh tuyệt đối5 thay tỷ lệ. C gán phần trăm hữu hạn cho chia0, đồng thời đổi đơn vị. D cho rằng từ0 lên dương luôn tăng100%. Không báo một tỷ lệ tăng trưởng hữu hạn khi mẫu số 0; cần nêu số đếm gốc và quy tắc báo riêng.\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K21. Mức độ: Nền tảng.\n\n**Sai lầm được kiểm tra:** Chia0 bị báo thành tăng hữu hạn;0/0 thành0.\n\n**Đọc lại:** L ô 67–69.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1272,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1114,
+        "questionSha256": "5c431f5db9f8f9c8115a5c524eea111a2971097cb9c611aa5f24009089a7483e",
+        "answerSha256": "f03da5317fe997099210cb0cb208e61baa702652c672b12af35d19a4780fc102"
+      }
+    },
+    {
+      "id": "B8-056",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi hàng của `r` là một review, index ngày giờ chỉ có ngày, đã sắp. Nguồn thu đủ 01/2025–12/2026, các ngày không có hàng là 0 review.\n\n```python\nr = pd.Series(1, index=pd.to_datetime([\n    \"2025-01-02\", \"2025-02-03\", \"2026-01-04\", \"2026-01-05\"]))\nx = r.groupby(r.index.month).size()\n```\n\nYêu cầu báo số review **từng tháng của từng năm**. Nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "x giữ năm vì DatetimeIndex tự thêm năm vào mỗi nhóm month."
+        },
+        {
+          "key": "B",
+          "markdown": "x sai cú pháp vì phải viết `r.index.dt.month`."
+        },
+        {
+          "key": "C",
+          "markdown": "x gộp tháng 1 hai năm thành3; muốn tách năm-tháng có thể dùng resample ME và bổ sung lịch hai đầu đã thu nếu cần cả khoảng."
+        },
+        {
+          "key": "D",
+          "markdown": "Chỉ cần đổi `.size()` thành `.count()` là x sẽ tách được từng năm."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "**Đáp án C.** `.index.month` là thuộc tính trực tiếp, chỉ còn số tháng, nên x có tháng 1=3 và tháng 2=1. A cho rằng năm còn trong khóa nhóm. B dùng .dt không đúng cho DatetimeIndex. C đúng: resample ME giữ nhãn năm-tháng; nếu cần mọi tháng đến12/2026, phải bổ sung lịch vì sự kiện cuối ở01/2026. D đổi phép đếm không khôi phục thông tin năm bị bỏ khỏi khóa nhóm. Gộp theo month có thể đúng nếu mục tiêu là phân bố tháng qua năm, nhưng khác yêu cầu ở đây.\n\n**Hồ sơ câu:** Nhóm chính 2 — DatetimeIndex, chọn khoảng và phạm vi quan sát. Mục tiêu chính K08; phụ K25, K06. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** month bỏ năm; đổi count không thể sửa khóa nhóm.\n\n**Đọc lại:** L ô 36–44,77–79.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1293,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1126,
+        "questionSha256": "03cda7eb62c9a2709a25b5d8476e0877de8c0e50e63cba0672a7601a30a5f973",
+        "answerSha256": "ae7598b4da93cc19d10737df36d389e49dceb6d08ecb0d732a340ce5f9793154"
+      }
+    },
+    {
+      "id": "B8-057",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Nguồn DD/MM/YYYY, chỉ có ngày. Đây là **bảng số review đã tổng hợp theo ngày có review**, không phải một hàng một review. Đã thu đủ 01/01 đến hết05/02/2024; trong khoảng này ngày vắng là 0, sau05/02 chưa biết. Tháng1 có31 ngày.\n\n```python\ndf = pd.DataFrame({\"date\": [\"04/01/2024\", \"11/01/2024\", \"03/02/2024\", \"05/02/2024\"],\n                   \"n\": [8, 12, 6, 4]})\ndf[\"date\"] = pd.to_datetime(df[\"date\"])\nm = df.set_index(\"date\")[\"n\"].resample(\"M\").size()\n```\n\n(a) Nêu vấn đề đọc ngày/API và đơn vị đang được đếm. (b) Sửa hai dòng để có **tổng review từng tháng trong phần đã quan sát**. (c) Tháng1 và tháng 2 đang chia cho bao nhiêu ngày nếu tính review/ngày? Tính hai mức; có nên gọi biến động tổng tháng 2 là thay đổi của cả tháng trọn không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\ndf[\"date\"] = pd.to_datetime(df[\"date\"], format=\"%d/%m/%Y\")\nm = df.set_index(\"date\")[\"n\"].resample(\"ME\").sum()\ntb1 = m.loc[\"2024-01-31\"] / 31\ntb2 = m.loc[\"2024-02-29\"] / 5\n```\n\n(a) Bỏ format có thể đảo ngày/tháng; M cần ME. size đếm số dòng ngày, không cộng số review. (b) Tổng tháng 1=20, phần quan sát tháng 2=10; tổng 30 bằng `df['n'].sum()`, khác4 hàng. (c) Mẫu số 31 ngày tháng 1 và5 ngày 01–05/02, mức 20/31≈0,645161 và2 review/ngày. Không chia phần tháng 2 cho 29 ngày vì chưa thu đủ tháng; tổng giảm50% là so5 ngày với 31 ngày, không là mức giảm của tháng 2 trọn. Có thể so01–05 của hai tháng với 10 so8 review, ghi rõ phạm vi, không suy nguyên nhân.\n\n**Chấm 5 điểm:** vấn đề format/API/đếm sai đơn vị (1,5); sửa hai dòng và tổng 20/10 (1,5); mẫu số 31/5 và hai mức (1); giới hạn kỳ chưa trọn và cách diễn giải đúng (1). Chấp nhận lời giải không tính tỷ lệ của tổng vì đề chỉ yêu cầu nhận xét tính hợp lý.\n\n**Hồ sơ câu:** Nhóm chính 3 — Resample, lịch đầy đủ và phép tổng hợp. Mục tiêu chính K13; phụ K12, K11. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Cấu trúc GK26; size bảng tổng hợp; lấy số ngày cả tháng cho kỳ chưa trọn.\n\n**Đọc lại:** L ô 39–50; Lab ô 34–37; GK26.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1314,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1138,
+        "questionSha256": "8ad9b8667ca786cc93195598f0d35119e8821aeaeff47477b5b292de0c015d79",
+        "answerSha256": "7717f2088c560d004ff6ec17507e1a240a5e306eb9c33969a8f67ce413f01502"
+      }
+    },
+    {
+      "id": "B8-058",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Nguồn đã thu đủ 31/12/2024–07/01/2025. Chuỗi sau là số review mỗi ngày trên lịch liên tiếp, sắp tăng, không thiếu. Bài phân tích yêu cầu **chỉ dùng ngày thuộc năm 2025**, không dùng lịch sử năm 2024 để tạo cửa sổ.\n\n```python\ns = pd.Series([70, 1, 1, 1, 1, 1, 1, 7],\n              index=pd.date_range(\"2024-12-31\", periods=8, freq=\"D\"))\nsai = s.rolling(7, min_periods=7, center=False).mean().loc[\"2025\"]\n```\n\nViết cách tính đúng, nêu sáu kết quả đầu và giá trị07/01. Liệt kê cửa sổ dùng cho 07/01, đối chiếu bằng số gốc. Vì sao tính trước rồi lọc năm như code trên không đáp ứng yêu cầu?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nnam = s.loc[\"2025\"]\ntb7 = nam.rolling(7, min_periods=7, center=False).mean()\nw = nam.loc[\"2025-01-01\":\"2025-01-07\"]\nassert abs(tb7.loc[\"2025-01-07\"] - w.mean()) < 1e-9\n```\n\n01–06/01 đều NaN vì chỉ dùng năm 2025 nên chưa đủ 7 giá trị. Cửa sổ07/01 chứa `[1,1,1,1,1,1,7]`, tổng 13, mean 13/7≈1,857143. Code sai có kết quả06/01=(70+6)/7, dùng31/12/2024, dù sau đó lọc nhãn về năm 2025; nhãn kết quả trong năm không bảo đảm mọi dữ liệu cửa sổ cũng trong năm. Không dùng dữ liệu sau ngày đang xét.\n\n**Chấm 5 điểm:** lọc năm trước rolling (1,5); sáu NaN đầu (1); cửa sổ và13/7, đối chiếu đúng (1,5); nêu rò dữ liệu ngoài phạm vi của cách cũ (1).\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K18; phụ K17, K10. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Lọc nhãn sau rolling bị hiểu là đã giới hạn dữ liệu đầu vào của cửa sổ.\n\n**Đọc lại:** Lab ô 21–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1327,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1159,
+        "questionSha256": "4a769b809b4a905e35dd6bfba902cec5d83fe6336a53d63e000cd252c2921267",
+        "answerSha256": "9600b416db9a0c7fd3b6cc3886b5bc4360255fb4dccd2f9e3370fa2c4631841a"
+      }
+    },
+    {
+      "id": "B8-059",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Trong một báo cáo dùng **cùng các năm trọn 2022–2025**, tổng review tháng 8 qua các năm là 1500 và trung bình của12 tổng tháng là 1000. Báo cáo gọi `1500/1000*100` là chỉ số tháng 8.\n\nMột kiểm tra bổ sung cung cấp hai hàng tháng trọn cụ thể sau; các giá trị trung bình trượt12 tháng đã được tính đúng từ lịch đầy đủ và được **cho sẵn**, không yêu cầu tính lại:\n\n| Nhãn tháng | Review gốc | Trung bình trượt12 tháng |\n|---|---:|---:|\n| 2025-07-31 | 180 | 120 |\n| 2025-08-31 | 264 | 240 |\n\nTheo quy tắc minh họa của tài liệu, mức điều chỉnh mỗi hàng = review gốc / trung bình trượt12 tháng của hàng đó.\n\n(a) Chỉ số tháng 8 bằngbao nhiêu,100 nghĩa là gì? (b) Tính hai mức điều chỉnh; tháng có review gốc cao hơn có còn có mức điều chỉnh cao hơn không? (c) Hai phép tính khớp quy tắc có chứng minh đã tách hoàn toàn mùa hoặc nguyên nhân không? Nêu ảnh hưởng chưa được giải quyết khi chỉ dùng chỉ số tháng gốc.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nchi_so8 = 1500 / 1000 * 100\ngoc = pd.Series([180, 264], index=[\"2025-07\", \"2025-08\"])\nmuot12 = pd.Series([120, 240], index=goc.index)\ndieu_chinh = goc / muot12\n```\n\n(a) Chỉ số 150: tổng tháng 8 bằng 150% mức trung bình của12 tổng tháng (cao hơn50%);100 là mức trung bình, không phải100 review hay xác suất100%. (b) Mức1,5 và1,1; tháng 8/2025 có264 review cao hơn nhưng tỷ số điều chỉnh thấp hơn tháng 7/2025. Mẫu số điều chỉnh thay theo tháng, khác mẫu số 1000 review trong chỉ số gộp. (c) Chỉ số gốc chưa loại xu hướng dài hạn và số ngày tháng. Chia theo quy tắc minh họa không tự chứng minh đã tách hoàn toàn mùa, đã chuẩn số ngày, hay nguyên nhân biến động; hai kiểm tra số học chỉ xác nhận cách tính trên đầu vào đã cho. Không cần mô hình phân rã nâng cao.\n\n**Chấm 5 điểm:**150 và định nghĩa100 chính xác (1,5); hai tỷ số/chiều xếp hạng đúng (1,5); phân biệt mẫu số (0,5); giới hạn xu hướng, số ngày và kiểm chứng/nhân quả (1,5).\n\n**Hồ sơ câu:** Nhóm chính 5 — Shift, pct_change và so sánh giữa các kỳ. Mục tiêu chính K26; phụ K25, K32. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Chỉ số 100 bị hiểu là số đếm hoặc đã loại xu hướng; kiểm số học bị hiểu là chứng minh mô hình/nhân quả.\n\n**Đọc lại:** G §3 chỉ số theo tháng; L ô 77–85.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1339,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1180,
+        "questionSha256": "9758a1efca121a82b2a19696d67595e98d8f408a88c62c629e39912576b1d4b0",
+        "answerSha256": "18451d24708ca71a6bb33dbb9ce1676f97426b65071a2cddfb52320e61035240"
+      }
+    },
+    {
+      "id": "B8-060",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "API xác nhận các chuỗi là **giờ UTC**, chưa gắn timezone; mỗi hàng là một review. Việt Nam UTC+7. Nguồn đã thu đầy đủ ngày 01/01/2027 theo Việt Nam, không có review nào khác trong ngày này. Các ngày khác không được xác nhận đầy đủ. Biết31/12/2026 là thứ Năm.\n\n```python\nraw = pd.Series([\"2026-12-31 16:30\", \"2026-12-31 17:00\", \"2026-12-31 23:00\",\n                 \"2027-01-01 16:30\", \"2027-01-01 17:00\"])\n```\n\nViết cách đếm review trọn ngày 01/01/2027 theo Việt Nam, nêu các hàng giữ và mức review/ngày trong phạm vi đầy đủ. Xác định ngày/thứ tại Việt Nam của hàng 2. Nếu một bảng khác chỉ có cột ngày review `2027-01-01`, không có giờ hay thông tin múi giờ, có được tự coi đó là 00:00 UTC và đổi ngày theo cùng code không? Giải thích.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nv = pd.to_datetime(raw, format=\"%Y-%m-%d %H:%M\").dt.tz_localize(\"UTC\").dt.tz_convert(\"Asia/Ho_Chi_Minh\")\ndau = pd.Timestamp(\"2027-01-01\", tz=\"Asia/Ho_Chi_Minh\")\ncuoi = pd.Timestamp(\"2027-01-02\", tz=\"Asia/Ho_Chi_Minh\")\ngiu = (v >= dau) & (v < cuoi)\nso = int(giu.sum())\n```\n\nGiữ hàng 1,2,3: giờ địa phương lần lượt01/01 00:00,06:00,23:30; tổng 3 review/1 ngày đã thu đủ=3 review/ngày. Hàng2 thuộc01/01/2027 thứ Sáu, dayofweek=4. Hàng0 là 31/12 23:30, hàng 4 là 02/01 00:00, bị loại. Không tự gán UTC cho bảng chỉ có ngày khi nguồn không nói; ngày review không cung cấp thời điểm00:00 UTC, gán như vậy tự thêm giả định và có thể làm sai việc gộp theo lịch.\n\n**Chấm 5 điểm:** localize/convert theo nguồn (1); biên ngày cùngtimezone đúng (1); giữ1,2,3 và3/ngày, mẫu số 1 (1); ngày/thứ của hàng 2 đúng (1); không tựgán UTC cho ngày thuần và lý do (1).\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K30, K27. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Gộp theo ngày UTC thay ngày Việt Nam; mặc định gán UTC cho cột chỉ có ngày.\n\n**Đọc lại:** L ô 26–28,86–91; Lab ô 34–37.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1354,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1201,
+        "questionSha256": "fe97d83fb1293b77c7c4488a98e3eb9b011492a6353fe68b59654632f35cd211",
+        "answerSha256": "8774ec77eb6784d2fc11731eb7dbcd10a1b277d48ecb43838b18729fc165f527"
+      }
+    },
+    {
+      "id": "B8-MR11",
+      "kind": "quiz",
+      "group": "extension",
+      "promptMarkdown": "Mỗi hàng là một review có thời điểm UTC; Việt Nam UTC+7. Đã thu đủ cả ngày 01/08/2026 tại Việt Nam; không có review khác trong ngày này. Các sự kiện ngoài ngày này không dùng để suy độ đầy đủ.\n\n```python\nt = pd.to_datetime([\"2026-07-31 18:00\", \"2026-08-01 01:00\",\n                    \"2026-08-01 17:30\"], utc=True)\nu = pd.Series(1, index=t).resample(\"D\").size()\nv = pd.Series(1, index=t.tz_convert(\"Asia/Ho_Chi_Minh\")).resample(\"D\").size()\n```\n\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "u đếm `[1,2]` theo ngày UTC; v đếm `[2,1]` theo ngày Việt Nam. Muốn tổng trọn ngày 01/08 Việt Nam phải dùng số 2 ởv."
+        },
+        {
+          "key": "B",
+          "markdown": "u và v đều đếm `[1,2]`, vì convert giữ nguyên thời điểm thực nên giữ nguyên nhóm ngày."
+        },
+        {
+          "key": "C",
+          "markdown": "v đếm `[3]`, vì tất cả giờ UTC phải cộng vào cùng ngày 01/08."
+        },
+        {
+          "key": "D",
+          "markdown": "Cần thay convert bằng localize Việt Nam để resample biết dời ngày."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "**Đáp án A.** Giờ Việt Nam là 01/08 01:00,01/08 08:00,02/08 00:30; v có2 ở01/08,1 ở02/08. UTC có1 ở31/07,2 ở01/08. A đúng. B nhầm bất biến thời điểm với bất biến nhóm ngày. C quên review17:30UTC đã sang02/08. D localize lại dữ liệu aware sai cách. Chỉ số 2 ngày 01/08 Việt Nam có đủ phạm vi nguồn; số 1 ngày 02/08 chưa được bảo đảm là tổng trọn ngày.\n\n**Hồ sơ câu:** Nhóm chính 6 — Múi giờ, lịch và chuẩn hóa theo số ngày. Mục tiêu chính K29; phụ K13. Mức độ: Vận dụng.\n\n**Sai lầm được kiểm tra:** Đổi timezone sau khi đã gộp ngày bị hiểu tương đương đổi trước gộp.\n\n**Đọc lại:** L ô 86–87,39–44.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1368,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1226,
+        "questionSha256": "1f732b8afaab4281355d277dbfbc74ecee05c4924670b0905c5505e190db49ae",
+        "answerSha256": "caa0af57b792e519a6daa549f817ef063629447273381933a580e6b80dd79408"
+      }
+    },
+    {
+      "id": "B8-MR12",
+      "kind": "essay",
+      "group": "extension",
+      "promptMarkdown": "Mỗi chuỗi dưới là thời điểm một review theo UTC; Việt Nam UTC+7. Nguồn đã thu đủ 30/06–04/07/2026 theo Việt Nam, không có review khác; ngày vắng trong khoảng là 0. Không có thiếu nguồn.\n\n```python\nraw = [\"2026-06-29 18:00\", \"2026-06-30 18:00\",\n       \"2026-07-02 17:00\", \"2026-07-03 18:00\"]\nlich = pd.date_range(\"2026-06-30\", \"2026-07-04\", freq=\"D\", tz=\"Asia/Ho_Chi_Minh\")\n```\n\nSau khi đổi về Việt Nam, cần hai đại lượng:\n(a) Tổng review trong khoảng3 ngày kết thúc **đúng00:00 ngày 03/07**, biên `(t-3D,t]`, giữ giờ sự kiện gốc.\n(b) Tổng review của **ba ngày lịch nguyên01,02,03/07**, lấy trọn ngày 03/07, tính từ chuỗi đếm ngày đầy đủ bằng rolling3 hàng, min_periods=3, center=False.\n\nViết code ngắn cho hai giá trị, liệt kê sự kiện/ngày thuộc mỗi cửa sổ và giải thích vì sao kết quả khác nhau không mâu thuẫn. Không dùng kết quả(a) như thể đã mô tả trọn ba ngày lịch của(b).",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nv = pd.to_datetime(raw, format=\"%Y-%m-%d %H:%M\", utc=True).tz_convert(\"Asia/Ho_Chi_Minh\")\nev = pd.Series(1, index=v).sort_index()\na = ev.rolling(\"3D\", min_periods=1, closed=\"right\").sum().loc[pd.Timestamp(\"2026-07-03\", tz=\"Asia/Ho_Chi_Minh\")]\nd = ev.resample(\"D\").size().reindex(lich, fill_value=0)\nb = d.rolling(3, min_periods=3, center=False).sum().loc[\"2026-07-03\"]\n```\n\nGiờ Việt Nam:30/06 01:00,01/07 01:00,03/07 00:00,04/07 01:00.\n(a) Khoảng `(30/06 00:00,03/07 00:00]` cóba sự kiện đầu, tổng 3.\n(b) Lịch ngày `[1,1,0,1,1]`; cửa sổ 01–03/07 có `[1,0,1]`, tổng 2; tương ứng phạm vi `[01/07 00:00,04/07 00:00)`.\nHai cửa sổ khác cả điểm bắt đầu và điểm kết thúc; “3D đến đúng một thời điểm” không tự là “ba ngày lịch nguyên kết thúc hết ngày đó”. Không cần bù dữ liệu ngoài lịch đã thu đủ.\n\n**Chấm 5 điểm:** parse UTC/convert và giữ index sự kiện có giờ (1); (a) biên đúng, ba sự kiện/tổng 3 (1,5); (b) lịch ngày đầy đủ/rolling/cửa sổ 1,0,1/tổng 2 (1,5); giải thích khác phạm vi và không mâu thuẫn (1). Chấp nhận mask trực tiếp tương đương nếu liệt kê đúng cửa sổ và vẫn nêu cách rolling theo yêu cầu(b).\n\n**Hồ sơ câu:** Nhóm chính 4 — Rolling và diễn giải cửa sổ trượt. Mục tiêu chính K31; phụ K29, K18. Mức độ: Phân loại.\n\n**Sai lầm được kiểm tra:** Đồng nhất3 ngày tính lùi từ thời điểm với ba ngày lịch đã quan sát trọn.\n\n**Đọc lại:** L ô 86–91; Lab ô 21–25.\n\n**Kiểm chứng:** Đã thực thi ca độc lập bằng pandas 3.0.3, PASS; phần diễn giải/lựa chọn đã rà bằng suy luận.",
+      "source": {
+        "questionFile": "Bai8_72_cau_hoi.md",
+        "questionLine": 1390,
+        "answerFile": "Bai8_Dap_an_va_huong_dan_cham.md",
+        "answerLine": 1238,
+        "questionSha256": "57b79459915045cdb3390d7a2f78b19f92776708e1fafdeb29cfebe0b0b8be18",
+        "answerSha256": "5e20d2ad6c92f5378f4a575ac80f8d3f34e325a25e2f53ab9525e9d3a4769735"
+      }
+    }
+  ]
+}

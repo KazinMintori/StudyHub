@@ -1,0 +1,1706 @@
+{
+  "lesson": "02",
+  "sourceTitle": "Bài 2 — Python cơ bản cho xử lý dữ liệu",
+  "questions": [
+    {
+      "id": "B2-001",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Cột số lượng được nhập dưới dạng chuỗi. Dòng cuối in gì?\n```python\na = \"12\"\nb = \"3\"\nprint(a + b, int(a) + float(b))\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`15 15.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`123 15.0`"
+        },
+        {
+          "key": "C",
+          "markdown": "`123 123`"
+        },
+        {
+          "key": "D",
+          "markdown": "`15 123`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "Cộng hai chuỗi là nối thành \"123\"; sau chuyển kiểu, 12 + 3.0 là 15.0.\n\n- **A sai:** Tự coi phép cộng chuỗi đầu tiên là cộng số.\n- **C sai:** Bỏ qua việc int/float chuyển chuỗi sang số trước phép cộng thứ hai.\n- **D sai:** Đảo cơ chế cộng chuỗi và cộng số.\n\n**Mục tiêu:** nhóm chính 1; chính K01. **Mức:** nền tảng. **Bẫy:** Nhầm biểu diễn số bằng chuỗi với số dùng tính toán.\n\n**Đọc lại:** G§1,§3; L2,13,21; T11–13.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 13,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 184,
+        "questionSha256": "15feb70aabc859c470c86b884c39db916a84c05f84f7ba01084e324121a25bc7",
+        "answerSha256": "0abde6380237a205c8039de7574bf27b7ca91fd2effa2130398362eb3184cad8"
+      }
+    },
+    {
+      "id": "B2-002",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Trong dữ liệu cảm biến, chỉ xét cơ chế truthiness của Python. Dòng cuối in danh sách nào?\n```python\nxs = [None, 0, 0.0, \"\", \"0\", -2]\nprint([bool(x) for x in xs])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[False, False, False, False, True, True]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[False, False, False, False, False, True]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[False, False, False, False, True, False]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[False, True, True, False, True, True]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "None, số 0 và chuỗi rỗng là falsy; \"0\" là chuỗi không rỗng, số âm khác 0 là truthy.\n\n- **B sai:** Coi chuỗi \"0\" như số 0 khi kiểm truthiness.\n- **C sai:** Coi truthy là phải lớn hơn 0, nên loại nhầm số âm.\n- **D sai:** Coi số 0 là truthy chỉ vì nó là dữ liệu đã biết.\n\n**Mục tiêu:** nhóm chính 1; chính K02. **Mức:** nền tảng. **Bẫy:** Trộn quy tắc nghiệp vụ với truthiness.\n\n**Đọc lại:** G§1–2; L14–15; T5,15–16.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 27,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 198,
+        "questionSha256": "5d967e3b08d913fa8be98b5e538015ddb5be203eab4d802c7e8e0e2bbd4e016b",
+        "answerSha256": "656f05e2925640525daf72450856694fff1b86b0d1761403805469ab29e5d5e5"
+      }
+    },
+    {
+      "id": "B2-003",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi số là khối lượng một kiện, đơn vị gam: None chưa đo, số âm hỏng, 0 hợp lệ. Vòng lặp sau vừa lọc vừa đổi sang kg:\n```python\ngam = [1200, None, -10, 0, 2400]\nkq = []\nfor g in gam:\n    if g is not None and g >= 0:\n        kq.append(g / 1000)\n```\nComprehension nào cho đúng cùng danh sách?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[g for g in gam if g is not None and g >= 0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[g / 1000 for g in gam if g is not None and g > 0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[g / 1000 for g in gam if g is not None and g >= 0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[g / 1000 for g in gam if g]`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Phải giữ cả điều kiện bảo vệ None, giữ 0 và phép đổi đơn vị; kết quả [1.2,0.0,2.4].\n\n- **A sai:** Lọc đúng nhưng chưa đổi từ gam sang kg.\n- **B sai:** Tự loại kiện có khối lượng0 đang được đề cho hợp lệ.\n- **D sai:** Loại0 nhưng giữ -10; truthy không thay được quy tắc không âm.\n\n**Mục tiêu:** nhóm chính 2; chính K15; phụ K36. **Mức:** vận dụng. **Bẫy:** Đúng bước lọc nhưng quên biến đổi, hoặc dùng sai tập được giữ.\n\n**Đọc lại:** G§2; L8–10,22–23; T15,27; G§2–3; L22–25 (cần sửa truthiness); T15–16,27.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 40,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 212,
+        "questionSha256": "31d94cc07d7c8679ece372e1410f9c655205c5b304a0e6ae59620c0dbc6757bb",
+        "answerSha256": "f71a40fe751f277988cc5d26b9a825b6ee0fce23683214d51bd073ed94fa364f"
+      }
+    },
+    {
+      "id": "B2-004",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Ba kho theo thứ tự K2, K1, K3 có số kiện 4,9,2. Đoạn code in gì?\n```python\nten = [\"K2\", \"K1\", \"K3\"]\nso_kien = [4, 9, 2]\nbang = dict(zip(sorted(ten), so_kien))\nprint(bang[\"K1\"], bang[\"K2\"])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`4 9`"
+        },
+        {
+          "key": "B",
+          "markdown": "`9 4`"
+        },
+        {
+          "key": "C",
+          "markdown": "`2 9`"
+        },
+        {
+          "key": "D",
+          "markdown": "`2 4`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Sắp tên thành K1, K2, K3 rồi zip theo vị trí với4,9,2; quan hệ gốc đã sai, zip không tự tìm đúng kho.\n\n- **B sai:** Tưởng zip tự dùng quan hệ kho/số kiện ban đầu dù tên đã được sắp riêng.\n- **C sai:** Đọc từ cuối dãy số kiện thay vì ghép theo cùng chỉ mục.\n- **D sai:** Sắp độc lập cả dãy số kiện tăng dần trước khi ghép với tên đã sắp.\n\n**Mục tiêu:** nhóm chính 2; chính K19; phụ K20. **Mức:** vận dụng. **Bẫy:** Sắp riêng nhãn rồi tưởng zip khôi phục cặp ban đầu.\n\n**Đọc lại:** G§2; G§2 zip (áp dụng); T25 (cặp items).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 57,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 226,
+        "questionSha256": "8f67a6e1776697ff054ff59a57826ceec8cb863830641e9e3c87616e4427a8b3",
+        "answerSha256": "4e9d6babe8217d1867cff607f466cab4f0b7fb93310c84ae6f209d30627a7dbd"
+      }
+    },
+    {
+      "id": "B2-005",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Giá âm không hợp lệ cho báo cáo; 0 được phép là miễn phí. Hàm dưới chỉ chuyển định dạng. Dòng cuối in gì?\n```python\ndef clean_price(s):\n    try:\n        return float(s.replace(\"$\", \"\").replace(\",\", \"\"))\n    except (ValueError, AttributeError):\n        return None\nraw = [\"$2,050.00\", \"-5\", \"\", \"$0\"]\nprint([clean_price(s) for s in raw])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[2050.0, None, None, 0.0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[2050.0, -5.0, None, 0.0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[2050.0, -5.0, 0.0, 0.0]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[2050.0, None, None, None]`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "replace rồi float chuyển được -5 và 0; hàm chưa có điều kiện nghiệp vụ để loại giá âm. Chuỗi rỗng phát sinh ValueError và trả None.\n\n- **A sai:** Gán cho hàm một quy tắc loại âm mà thân hàm chưa viết.\n- **C sai:** Tưởng chuỗi rỗng được float chuyển thành 0 thay vì báo lỗi.\n- **D sai:** Tưởng chuyển kiểu đã bao gồm việc loại mọi giá không dương.\n\n**Mục tiêu:** nhóm chính 3; chính K30; phụ K31. **Mức:** vận dụng. **Bẫy:** Chuyển được sang float bị nhầm là đã đạt quy tắc giá.\n\n**Đọc lại:** G§3 clean_price; L13; T12–13 (float không dấu tiền); G§2–3; L13–15,22–25; T13,15–16.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 72,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 240,
+        "questionSha256": "35480a884f360bff0dd94173599a18002fb590e43e9a5b19d601817d8942921c",
+        "answerSha256": "a24f678d3d5a3fde5536abaf3ab5bf8e5ffd297de9e5c963afd42328c73184d9"
+      }
+    },
+    {
+      "id": "B2-006",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp note.txt có đúng nội dung `Dữ liệu`, mã hóa UTF-8 và mở được. Thuộc tính f.closed cho biết file đã đóng hay chưa. Sau đoạn code, dòng cuối in gì?\n```python\nwith open(\"note.txt\", encoding=\"utf-8\") as f:\n    text = f.read()\nprint(f.closed, text)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`False Dữ liệu`"
+        },
+        {
+          "key": "B",
+          "markdown": "`True None`"
+        },
+        {
+          "key": "C",
+          "markdown": "`False None`"
+        },
+        {
+          "key": "D",
+          "markdown": "`True Dữ liệu`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "with đã đóng file khi ra khỏi khối; chuỗi đã đọc vẫn tồn tại trong text.\n\n- **A sai:** Tưởng with chỉ mở file và cần gọi close riêng.\n- **B sai:** Tưởng đóng file tự xóa giá trị chuỗi đã đọc.\n- **C sai:** Nhầm cả trạng thái file và dữ liệu đã đọc.\n\n**Mục tiêu:** nhóm chính 4; chính K38. **Mức:** nền tảng. **Bẫy:** Nhầm vòng đời file mở với dữ liệu đọc vào bộ nhớ.\n\n**Đọc lại:** G§4; L17–19; T9,33.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 90,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 254,
+        "questionSha256": "d7001c1f21317d7b7f3789bcc38a6a09a7f403604b749592defdbc13cfa68dde",
+        "answerSha256": "d86a4f28c900efe0452fd4f0628fd02d023cc76454745f36042dd1c624a31af0"
+      }
+    },
+    {
+      "id": "B2-007",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp rev.csv dưới đây, mỗi dòng là một phòng và luot là số review; tệp UTF-8 mở được.\n```csv\nma,luot\nR1,0\nR2,2\nR3,0\nR4,11\n```\n```python\nimport csv\nwith open(\"rev.csv\", encoding=\"utf-8\") as f:\n    rows = list(csv.DictReader(f))\nprint(sum(r[\"luot\"] == 0 for r in rows),\n      sum(r[\"luot\"] == \"0\" for r in rows))\n```\nDòng cuối in gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`2 2`"
+        },
+        {
+          "key": "B",
+          "markdown": "`0 2`"
+        },
+        {
+          "key": "C",
+          "markdown": "`2 0`"
+        },
+        {
+          "key": "D",
+          "markdown": "`0 0`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "DictReader giữ luot là chuỗi; không chuỗi nào bằng số 0, còn hai dòng có chuỗi \"0\".\n\n- **A sai:** Tưởng DictReader tự đổi chuỗi số sang số nguyên.\n- **C sai:** Đảo vai trò so với số 0 và chuỗi \"0\".\n- **D sai:** Nhận ra kiểu chuỗi nhưng bỏ qua hai chuỗi \"0\" trong file.\n\n**Mục tiêu:** nhóm chính 4; chính K39; phụ K40. **Mức:** vận dụng. **Bẫy:** CSV đọc lên là chuỗi nhưng lại so với số.\n\n**Đọc lại:** G§4; L17–18; T9–11,30; L18; T11–16,29–30.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 104,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 268,
+        "questionSha256": "42348b74079d99eea775b8a8212c6a0094246303a56b811f3003856b2a9f75e0",
+        "answerSha256": "8137db008374b5aa68de99f41394171015142ce09d43f19de73f865689328dfa"
+      }
+    },
+    {
+      "id": "B2-008",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Ba dict sau lần lượt biểu diễn phí chưa rõ, phí miễn và chưa có khóa phí:\n```python\na = {\"phi\": None}\nb = {\"phi\": 0}\nc = {}\nprint([r.get(\"phi\", 5) for r in [a, b, c]])\n```\nNêu output, sau đó cho biết `c[\"phi\"]` có cho cùng kết quả với `c.get(\"phi\",5)` không và vì sao; 1–2 câu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Output là `[None,0,5]`: mặc định5 chỉ áp dụng khi thiếu khóa. `c[\"phi\"]` gây KeyError, còn get trả 5; get không tự thay None hay0 đã được lưu.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Output đúng None, 0,5 theo thứ tự | 1 |\n| Phân biệt KeyError với get mặc định; nêu chỉ dùng mặc định khi thiếu khóa | 1 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 1; chính K09; phụ K10. **Mức:** vận dụng. **Bẫy:** get mặc định không phải phép điền mọi giá trị thiếu hoặc falsy.\n\n**Đọc lại:** G§1; L2,5; T9,11; G§1 (cơ chế get); L5; T24 (ứng dụng get).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 128,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 282,
+        "questionSha256": "421d213e60d4bde3448a35f928540e4e5c4e256e35f7c2a66bade82fb3401a84",
+        "answerSha256": "0c90e2475469450aa94f0bac876b16a1c641a0b2e67b3b1a348a5902534731ac"
+      }
+    },
+    {
+      "id": "B2-009",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Báo cáo chỉ chấp nhận giá >0; dữ liệu hỏng cần thành None. Hàm và đoạn áp dụng hiện tại:\n```python\ndef to_float(s):\n    try:\n        return float(s)\n    except ValueError:\n        return None\nraw = [\"8\", \"0\", \"-2\", \"bad\", None]\nv = [to_float(s) for s in raw]\n```\n(a) Vì sao chưa tạo xong v? (b) Sửa mệnh đề except đúng phạm vi lỗi của float, rồi viết một comprehension lấy giá >0 an toàn từ v. (c) Nêu hai ca biên cho thấy đổi kiểu và lọc giá là hai việc khác nhau.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "(a) float(None) phát sinh TypeError, chưa bị bắt. (b) Đổi thành `except (ValueError,TypeError):` rồi lọc `[x for x in v if x is not None and x > 0]`, được `[8.0]`. (c) \"0\" và \"-2\" đổi được thành 0.0,-2.0 nhưng đều bị loại theo quy tắc >0.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Chỉ đúng TypeError ở float(None), không chỉ nói lỗi dữ liệu | 0,5 |\n| Bắt ValueError/TypeError và giữ None khi hỏng | 0,5 |\n| Lọc bảo vệ None trước >0 và kết quả [8.0] | 0,5 |\n| Hai ca chuyển được nhưng không đạt >0, như0 và âm | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 3; chính K32; phụ K33, K36. **Mức:** phân loại. **Bẫy:** Bắt sai lỗi và quên bảo vệ None; chuyển số chưa bảo đảm nghiệp vụ.\n\n**Đọc lại:** G§3; L13,21; T12–13; G§3 try/except, AI; G§2–3; L22–25 (cần sửa truthiness); T15–16,27.\n\n**Kiểm chứng:** đã chạy code gốc, xác nhận TypeError tại thao tác giải thích ở trên; đã chạy lời giải sửa và ca biên liên quan.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 139,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 301,
+        "questionSha256": "bf050e42a676d24c8e2177f1875d7ab424197459c5932a3e6dd7aee0f203eccf",
+        "answerSha256": "fc6cd50a4e8dc69651cd70bae6a0a56ae95a766489efa735a5d9397685bed5e6"
+      }
+    },
+    {
+      "id": "B2-010",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi phần tử là giá một phòng, đơn vị USD/đêm; 0 miễn phí hợp lệ, None chưa biết. Code hiện tại:\n```python\ngia = [0, None, 60, 60]\nco_gia = [g for g in gia if g is not None]\nprint(sum(co_gia) / len(gia))\n```\n(a) In gì, vì sao sai yêu cầu “trung bình các phòng đã khai giá”? (b) Sửa mẫu số và nêu kết quả đúng. (c) Nếu mọi giá đều None, cần xử lý thế nào? Trả lời ngắn, có thể dùng một dòng điều kiện.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Code in 30.0 do vẫn chia 4 dòng trong khi chỉ có 3 giá đã biết. Sửa thành `sum(co_gia)/len(co_gia)` được 40.0, giữ giá 0 hợp lệ. Nếu danh sách rỗng thì không chia; chẳng hạn đặt `tb = sum(co_gia)/len(co_gia) if co_gia else None` và ghi rõ quy ước chưa có trung bình.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| 30.0 và sai mẫu số 4 thay vì3 | 0,75 |\n| Đúng mẫu số và 40.0, giữ 0 | 0,75 |\n| Tập rỗng không chia, quy ước đầu ra rõ | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 5; chính K04; phụ K48, K37. **Mức:** phân loại. **Bẫy:** Lọc đúng tử số nhưng chia theo toàn bảng; quên trường hợp không có giá.\n\n**Đọc lại:** G§1; L14; T5,15,19; G§1,§3; L14,26; T15,33,35,37; G§1 trung bình (giới hạn); L26 (quy ước cần nêu); T18 không rỗng (điều kiện).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 153,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 322,
+        "questionSha256": "1e8246a5a5df8155287725762891ceacabb8fb2edaab1d6e680fda244a80bc2e",
+        "answerSha256": "924908cf38b8be27bb0445db878cce6f8bda688e2d08b866beee747448f9bd19"
+      }
+    },
+    {
+      "id": "B2-011",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Số lượt thuê từ thứ Hai đến Chủ nhật theo thứ tự:\n```python\nluot = [4, 7, 5, 8, 6, 9, 3]\n```\nBiểu thức nào tính đúng tổng từ thứ Ba đến hết thứ Năm?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`sum(luot[1:4])`"
+        },
+        {
+          "key": "B",
+          "markdown": "`sum(luot[1:3])`"
+        },
+        {
+          "key": "C",
+          "markdown": "`sum(luot[2:5])`"
+        },
+        {
+          "key": "D",
+          "markdown": "`sum(luot[:4])`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Ba ngày cần lấy chỉ mục 1,2,3; stop 4 không được lấy. Tổng là 20.\n\n- **B sai:** Bỏ ngày thứ Năm vì stop 3 không được lấy.\n- **C sai:** Dịch cả khoảng sang thứ Tư đến thứ Sáu.\n- **D sai:** Lấy thêm thứ Hai, thành bốn ngày.\n\n**Mục tiêu:** nhóm chính 1; chính K08. **Mức:** nền tảng. **Bẫy:** Slicing không lấy stop; ngày thứ hai ứng với chỉ mục 1.\n\n**Đọc lại:** G§1; L6; T37 (chuỗi năm); kiến thức nền.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 167,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 361,
+        "questionSha256": "e4b8bb12544c15c0fb1067db2372f6378dab7a2d71544b46afd31277ad65fd7b",
+        "answerSha256": "09e9b7dffc467a3af94fe8870296366843c7b291db870953167d45c54a5df0fb"
+      }
+    },
+    {
+      "id": "B2-012",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dict dem cho số phòng ở từng khu, không có đồng hạng. Dòng cuối in gì?\n```python\ndem = {\"B\": 4, \"A\": 8, \"D\": 2, \"C\": 6}\ntop = sorted(dem.items(), key=lambda kv: kv[1], reverse=True)[:2]\nprint(top)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[(\"A\",8),(\"B\",4)]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[(\"D\",2),(\"B\",4)]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[(\"A\",8),(\"C\",6)]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[8,6]`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Mỗi phần tử items là cặp (khóa, giá trị); key lấy số phòng, reverse=True giảm dần rồi lấy hai cặp đầu.\n\n- **A sai:** Sắp theo tên khu thay vì số phòng.\n- **B sai:** Sắp số phòng tăng dần vì bỏ reverse=True.\n- **D sai:** Nhầm sorted các cặp trả riêng giá trị của key.\n\n**Mục tiêu:** nhóm chính 2; chính K21; phụ K24, K13. **Mức:** vận dụng. **Bẫy:** Nhầm đối tượng được sắp với giá trị dùng làm khóa sắp.\n\n**Đọc lại:** G§3 lambda; T25,27; G§2 dict,§3 lambda; L10; T24–27; G§1; T25,27 (items/cặp).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 180,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 375,
+        "questionSha256": "a27d05606c906a4629bd6f8a7a8ed1f598c5a3e1bb43dbd630b9347031b5211f",
+        "answerSha256": "5adb7b93c99e3a62108855ce270ee2334d94ca6835dc3325aca280e400106a86"
+      }
+    },
+    {
+      "id": "B2-013",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Không có try/except trong hai biểu thức đang xét. Cặp loại lỗi đúng lần lượt của `float(None)` và `None.replace(\"$\", \"\")` là gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "ValueError; AttributeError."
+        },
+        {
+          "key": "B",
+          "markdown": "TypeError; AttributeError."
+        },
+        {
+          "key": "C",
+          "markdown": "TypeError; ValueError."
+        },
+        {
+          "key": "D",
+          "markdown": "AttributeError; TypeError."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "float không nhận None như một số/chuỗi số; None cũng không có phương thức replace. Lỗi phụ thuộc thao tác, không phải tên cột.\n\n- **A sai:** Gán lỗi của float(\"N/A\") cho float(None).\n- **C sai:** Tưởng chưa tới float mà gọi replace trên None cũng là lỗi chuyển giá trị số.\n- **D sai:** Đảo thao tác gọi hàm chuyển kiểu và tra phương thức.\n\n**Mục tiêu:** nhóm chính 3; chính K32. **Mức:** vận dụng. **Bẫy:** Loại lỗi được quyết định bởi thao tác thực tế.\n\n**Đọc lại:** G§3; L13,21; T12–13.\n\n**Kiểm chứng:** đã chạy code gốc, xác nhận TypeError tại thao tác giải thích ở trên; đã chạy lời giải sửa và ca biên liên quan.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 194,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 389,
+        "questionSha256": "0980368c9220e58f377f7ef3034ea07a27612719bc1be69db28fa1f0c25bde60",
+        "answerSha256": "d425d4056c1d425a96da3c76694753b74258cb1a9361d42f1cebcc9b1bca4d3e"
+      }
+    },
+    {
+      "id": "B2-014",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Đọc hàm sau; quy tắc nghiệp vụ của báo cáo riêng yêu cầu số đêm >0.\n```python\ndef clean_nights(s) -> int | None:\n    \"\"\"Đổi được sang int thì trả số; dữ liệu không đổi được trả None.\"\"\"\n    try:\n        return int(s)\n    except (ValueError, TypeError):\n        return None\nprint(clean_nights(\"-2\"), clean_nights(None))\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "In `None None`; type hint int tự loại giá trị âm."
+        },
+        {
+          "key": "B",
+          "markdown": "In `-2 0`; đầu vào None được đổi thành số nguyên 0."
+        },
+        {
+          "key": "C",
+          "markdown": "In `-2 None`; hàm chưa tự áp quy tắc >0."
+        },
+        {
+          "key": "D",
+          "markdown": "Dừng ở ValueError; int không chấp nhận chuỗi có dấu trừ."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Docstring và thân hàm mô tả chuyển kiểu; type hint không chặn số âm. Quy tắc dương cần bước kiểm riêng.\n\n- **A sai:** int bao gồm số âm; type hint không làm kiểm tra nghiệp vụ.\n- **B sai:** int(None) phát sinh TypeError, hàm trả None.\n- **D sai:** Chuỗi \"-2\" chuyển được sang số nguyên -2.\n\n**Mục tiêu:** nhóm chính 3; chính K28; phụ K31. **Mức:** nền tảng. **Bẫy:** Đọc type hint như bộ ép kiểu/kiểm tra dương tự động.\n\n**Đọc lại:** G§3; L13,21; T13,18; G§2–3; L13–15,22–25; T13,15–16.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 203,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 403,
+        "questionSha256": "9e1b4319dd43daf3daf7255b444ce00966dfe6bd7d3e2abc0e5603b7aa0f7f36",
+        "answerSha256": "c71957e5ce0782c37e5ecc1c87e3c997666f09a438656021a2af5f6ffd000b74"
+      }
+    },
+    {
+      "id": "B2-015",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp dem.csv UTF-8 mở được, mỗi dòng là một lượt thuê:\n```csv\nma,dem\nA,3\nB,20\nC,100\nD,8\n```\n```python\nimport csv\nwith open(\"dem.csv\", encoding=\"utf-8\") as f:\n    rows = list(csv.DictReader(f))\nkq = sorted(rows, key=lambda r: r[\"dem\"])[:2]\nprint([r[\"ma\"] for r in kq])\n```\nDòng cuối in gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[\"A\",\"D\"]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[\"D\",\"A\"]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[\"C\",\"B\"]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[\"A\",\"B\"]`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Chuỗi tăng dần là \"100\",\"20\",\"3\",\"8\". Hai mã C, B được chọn, chưa phải hai lượt có số đêm nhỏ nhất.\n\n- **A sai:** Tự giả định dem đã được chuyển thành int.\n- **B sai:** Đọc như sắp chuỗi giảm dần thay vì tăng dần.\n- **D sai:** Tưởng sorted chỉ lấy hai dòng đầu theo thứ tự file.\n\n**Mục tiêu:** nhóm chính 4; chính K39; phụ K41, K22. **Mức:** vận dụng. **Bẫy:** Sắp chuỗi số như thể đã có dữ liệu số.\n\n**Đọc lại:** G§4; L17–18; T9–11,30; L21–23; T11–15,21,30; G§4 CSV + §3 lambda; L18; T11,25 (áp dụng).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 222,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 417,
+        "questionSha256": "cdaa868e181b3690d763c86a1119df592ba908bd18e4ac4297b47b2e395479bd",
+        "answerSha256": "9d625a6022c05d94336952926b0fe3360fcd5e2a73d67a00014dd36f8602fc6c"
+      }
+    },
+    {
+      "id": "B2-016",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "JSON dưới là chuỗi, không phải dict Python viết sẵn. Dòng cuối in gì?\n```python\nimport json\ns = '{\"n\":4,\"ok\":true,\"x\":null,\"tags\":[\"null\",false]}'\nd = json.loads(s)\nprint(d[\"n\"] + 1, d[\"x\"], d[\"ok\"], repr(d[\"tags\"][0]), d[\"tags\"][1])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`5 'null' True 'null' False`"
+        },
+        {
+          "key": "B",
+          "markdown": "`5 None true 'null' false`"
+        },
+        {
+          "key": "C",
+          "markdown": "`5 None True 'null' False`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo TypeError tại phép cộng với1."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Số 4 thành int, null thành None, true/false thành True/False; phần tử có dấu nháy \"null\" vẫn là chuỗi.\n\n- **A sai:** Nhầm null không có dấu nháy cũng thành chuỗi.\n- **B sai:** Giữ nguyên true/false của văn bản JSON thay vì bool Python.\n- **D sai:** Tưởng số 4 trong JSON được đọc thành chuỗi \"4\" như CSV.\n\n**Mục tiêu:** nhóm chính 4; chính K43; phụ K44. **Mức:** vận dụng. **Bẫy:** Nhầm ký hiệu JSON với chuỗi hoặc cú pháp bool của Python.\n\n**Đọc lại:** G§4; L19; T33.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 246,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 431,
+        "questionSha256": "0af705f73744b9c5314fbab96a6b8c0c336db5abc8358bd03b15cb2486b708b0",
+        "answerSha256": "6b371da71a06ef5b6b89c78dfe921c3a7973012b960ed91cc4e8f19426e977d4"
+      }
+    },
+    {
+      "id": "B2-017",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Ban đầu chỉ có tệp `out/keep.txt`, nội dung là `giu`; chưa có thư mục out/2026 và thang10. Các đường dẫn đều mở/tạo được.\n```python\nfrom pathlib import Path\np = Path(\"out\") / \"2026\" / \"thang10\"\np.mkdir(parents=True, exist_ok=True)\np.mkdir(parents=True, exist_ok=True)\n```\nTrạng thái nào đúng sau cả hai lần mkdir?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Có cây `out/2026/thang10`; `out/keep.txt` bị xóa để tạo lại cây sạch."
+        },
+        {
+          "key": "B",
+          "markdown": "Có cây `out/2026/thang10`; `out/keep.txt` vẫn có nội dung giu."
+        },
+        {
+          "key": "C",
+          "markdown": "Lần thứ hai báo FileExistsError; keep.txt còn nguyên."
+        },
+        {
+          "key": "D",
+          "markdown": "Lần đầu báo FileNotFoundError vì thư mục `out/2026` chưa tồn tại."
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "parents hỗ trợ tạo cha khi cần; exist_ok cho phép đích là thư mục đã tồn tại, không xóa file hay cây cũ.\n\n- **A sai:** Nhầm mkdir thành lệnh xóa và dựng lại.\n- **C sai:** Bỏ qua exist_ok=True khi đích đã là thư mục.\n- **D sai:** Bỏ qua parents=True cho phép tạo thư mục cha còn thiếu.\n\n**Mục tiêu:** nhóm chính 6; chính K60. **Mức:** nền tảng. **Bẫy:** mkdir(exist_ok=True) không phải thao tác reset dữ liệu.\n\n**Đọc lại:** G§4 pathlib; L17.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 261,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 445,
+        "questionSha256": "9fea7d980a632883e96544f3020d580452caa515572e37c19881dbd4280de648",
+        "answerSha256": "28c4ff061ba1ff37b8b3f605ddb14fe27ced43fb528aefb938c5537da6a5ef03"
+      }
+    },
+    {
+      "id": "B2-018",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Một cặp chứa tên khu và số phòng. Viết chính xác dòng output, dùng dấu | để thể hiện ranh giới cột; nêu giá trị n sau khi in.\n```python\nten, n = (\"An\", 1200)\nprint(f\"|{ten:<5}|{n:>6,}|\")\n```\nTrả lời trong một khối code ngắn và một câu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```text\n|An   | 1,200|\n```\nTên có ba dấu cách sau An; số có một dấu cách trước 1,200. n vẫn là số nguyên 1200; định dạng không sửa giá trị gốc.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Giải nén đúng và căn tên đủ rộng 5: ba dấu cách | 0,75 |\n| Số 1,200 căn phải rộng 6: một dấu cách đầu | 0,75 |\n| n vẫn là int 1200, không thành chuỗi hoặc thay giá trị | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 1; chính K07; phụ K13, K05. **Mức:** vận dụng. **Bẫy:** Độ rộng là tối thiểu của cả trường đã định dạng, không phải số dấu cách.\n\n**Đọc lại:** G§1 (ngữ cảnh định dạng); T25,27,35–36; G§1; T25,27 (items/cặp); L13,14,19; T4,25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 277,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 459,
+        "questionSha256": "d76f20e611c9b8267e4844a2f90a0776f9e4caf0bbfdfcb9270ab310f6a3c22d",
+        "answerSha256": "c9ffb4d8a682b71b1cee20a34aef4e557041d124c985d2f68aceb5b34d120d6c"
+      }
+    },
+    {
+      "id": "B2-019",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi dict là một phòng; mọi giá đều đã biết, 0 hợp lệ. Chỉ có các khóa phẳng như dưới đây:\n```python\na = [{\"id\":1,\"gia\":20}, {\"id\":2,\"gia\":40},\n     {\"id\":3,\"gia\":60}, {\"id\":4,\"gia\":80}]\nb = a.copy()\nb[0][\"gia\"] = 0\nb.append({\"id\":5,\"gia\":100})\nprint(len(a), a[0][\"gia\"], len(b))\n```\n(a) In gì? (b) Vì sao sửa giá và append tác động khác nhau tới a? (c) Nếu cần sửa giá thử nghiệm mà giữ nguyên a, thay dòng tạo b thế nào? Không dùng deepcopy.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "In `4 0 5`: list ngoài đã tách, nhưng dict phòng 1 còn được dùng chung, nên đổi trường gia tác động cả a. append chỉ thêm vào list b. Với các dict phẳng đã cho, có thể tạo `b = [{\"id\":r[\"id\"],\"gia\":r[\"gia\"]} for r in a]` trước mọi phép sửa; hoặc copy từng dict, không chỉ copy list ngoài.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Kết quả4,0,5 đúng | 0,75 |\n| Tách list ngoài nhưng dùng chung dict; append không thêm vào a | 0,75 |\n| Tạo dict mới cho mỗi dòng trước khi sửa; chấp nhận [r.copy() for r in a] với dữ liệu phẳng | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 2; chính K25; phụ K26. **Mức:** phân loại. **Bẫy:** Coi copy list là sao chép sâu cả các dict chứa bên trong.\n\n**Đọc lại:** G§2; L11; G§2 copy (giới hạn kỹ thuật); L11 (list phẳng).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 286,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 482,
+        "questionSha256": "c7e3df26c9f21d20b31c7f859a95e8241a4700a36f6ad85e472776c0470176a0",
+        "answerSha256": "8d42b036daf9b8fa52e0ff3149d9a9fed6710acc05d148cf240592a33308e653"
+      }
+    },
+    {
+      "id": "B2-020",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi dòng là một phòng, giá USD/đêm đã là số; chỉ giá >0 hợp lệ cho xếp hạng. Nhóm cần các khu có ít nhất 2 giá hợp lệ.\n```python\nrows = [{\"khu\":\"A\",\"gia\":0}, {\"khu\":\"A\",\"gia\":None},\n        {\"khu\":\"A\",\"gia\":90}, {\"khu\":\"B\",\"gia\":40},\n        {\"khu\":\"B\",\"gia\":80}, {\"khu\":\"B\",\"gia\":None}]\ndem = {}\nfor r in rows:\n    k = r[\"khu\"]\n    dem[k] = dem.get(k, 0) + 1\nprint(sorted(k for k in dem if dem[k] >= 2))\n```\n(a) Code chọn khu nào, sai ở tập đếm nào? (b) Viết hàm gia_khu(ten) trả list giá hợp lệ của khu và một dòng chọn khu đúng. (c) Nêu list giá B và lý do không dùng tổng số phòng để thay số có giá.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Code chọn A, B do đếm mọi phòng; thực tế A có 1 giá >0, B có 2 nên chỉ B đạt. Có thể sửa:\n```python\ndef gia_khu(ten):\n    return [r[\"gia\"] for r in rows if r[\"khu\"] == ten\n            and r[\"gia\"] is not None and r[\"gia\"] > 0]\nchon = sorted(k for k in dem if len(gia_khu(k)) >= 2)\n```\ngia_khu(\"B\") là `[40,80]`; các phòng thiếu hoặc giá 0 vẫn là phòng nhưng không thuộc tập giá hợp lệ của xếp hạng này.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Hiện tại A, B; đúng chỉ B vì A1/B2 giá hợp lệ | 0,75 |\n| Hàm gom đúng khu, bỏ None và giá<=0, trả list; chọn theo len list | 0,75 |\n| B có [40,80], phân biệt tổng dòng với số giá | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 5; chính K53; phụ K49, K47. **Mức:** phân loại. **Bẫy:** Chọn đúng thao tác đếm nhưng trên sai tập bản ghi.\n\n**Đọc lại:** G§1 dữ liệu thiếu (áp dụng); L26; T35–36; G§2–3; T26–27; G§1–2 dict (ngữ cảnh); T24.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 299,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 502,
+        "questionSha256": "1154e9b9f807fd4272c5a6bdb371220b075617f945be0f47e2285c39965b5ff0",
+        "answerSha256": "162534f06afe9616af894817a1d70fceeb9350b1271ad5192bf37953b3449445"
+      }
+    },
+    {
+      "id": "B2-021",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Số đo được lưu ở biến gia, chỉ cần đổi cách hiển thị. Dòng cuối in gì?\n```python\ngia = 12340.75\ns = f\"{gia:,.0f}\"\nprint(s, gia)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`12,341 12341.0`"
+        },
+        {
+          "key": "B",
+          "markdown": "`12341 12340.75`"
+        },
+        {
+          "key": "C",
+          "markdown": "`12,341 12340.75`"
+        },
+        {
+          "key": "D",
+          "markdown": "`12,340.75 12340.75`"
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Dấu phẩy nhóm hàng nghìn; .0f hiển thị không có phần thập phân, làm tròn12340.75 thành 12341 khi hiển thị. gia vẫn là số ban đầu.\n\n- **A sai:** Tưởng định dạng s đồng thời làm tròn giá trị gốc gia.\n- **B sai:** Bỏ qua dấu phẩy phân cách nghìn.\n- **D sai:** Dùng hiệu ứng .2f thay vì .0f.\n\n**Mục tiêu:** nhóm chính 1; chính K05. **Mức:** nền tảng. **Bẫy:** Định dạng báo cáo không sửa dữ liệu số gốc.\n\n**Đọc lại:** G§1; L13,14,19; T4,25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 318,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 548,
+        "questionSha256": "c5fcf151b2a913a7d0bc3cb66013df47fb882514f8ffd5568c9f7910cb316eb1",
+        "answerSha256": "b5a148dd6ed19c09a9ce474e98ade1c0db37b60049231c20e79214a84cbff321"
+      }
+    },
+    {
+      "id": "B2-022",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bốn bản ghi phòng chỉ có mã và loại. Dòng cuối in gì?\n```python\nrows = [{\"id\":1,\"loai\":\"B\"}, {\"id\":2,\"loai\":\"A\"},\n        {\"id\":3,\"loai\":\"B\"}, {\"id\":4,\"loai\":\"C\"}]\nloai = {r[\"loai\"] for r in rows}\nprint(sorted(loai), \"D\" in loai)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[\"A\",\"B\",\"C\"] False`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[\"B\",\"A\",\"B\",\"C\"] False`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[\"A\",\"B\",\"B\",\"C\"] False`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[\"A\",\"B\",\"C\"] True`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Set comprehension bỏ trùng loạiB; sorted tạo thứ tự A, B, C; D không có trong tập.\n\n- **B sai:** Coi comprehension dùng ngoặc nhọn vẫn tạo list giữ trùng và thứ tự dòng.\n- **C sai:** Có sắp xếp nhưng chưa hiểu set đã loại trùng.\n- **D sai:** Nhầm kiểm thành viên với việc D có thể là một nhãn loại trong miền dữ liệu.\n\n**Mục tiêu:** nhóm chính 2; chính K18; phụ K11. **Mức:** vận dụng. **Bẫy:** Set loại trùng; thứ tự cần qua sorted, không dựa vào repr của set.\n\n**Đọc lại:** G§2; L9; T6 (ngữ cảnh); G§1; L7,9; T6.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 332,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 562,
+        "questionSha256": "1ef3bbdc654caf6f8436cc6df0e50162b199b2796dc80a8db48dfedfff390d9f",
+        "answerSha256": "66ef02cdb36c10f0608d4fab6ed7a8447192fa85174e33dc206611729a77da52"
+      }
+    },
+    {
+      "id": "B2-023",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi dict là một phòng, giá USD/đêm dương và khác nhau. Dòng cuối in gì?\n```python\nrows = [{\"id\":\"P1\",\"gia\":40}, {\"id\":\"P2\",\"gia\":15},\n        {\"id\":\"P3\",\"gia\":90}, {\"id\":\"P4\",\"gia\":60}]\np = max(rows, key=lambda r: r[\"gia\"])\nprint(p[\"id\"], p[\"gia\"])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`P4 60`"
+        },
+        {
+          "key": "B",
+          "markdown": "`P2 15`"
+        },
+        {
+          "key": "C",
+          "markdown": "`P3 90`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo TypeError vì p chỉ là số 90."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "max trả bản ghi có khóa gia lớn nhất, nên vẫn tra được id và gia của cùng phòng.\n\n- **A sai:** Lấy phòng có id lớn nhất hoặc dòng cuối thay vì key gia.\n- **B sai:** Chọn cực tiểu thay vì cực đại.\n- **D sai:** Nhầm max trả riêng giá trị của hàm key; thực tế p là dict.\n\n**Mục tiêu:** nhóm chính 2; chính K23; phụ K21. **Mức:** vận dụng. **Bẫy:** max với key trả phần tử gốc, không chỉ trả khóa so sánh.\n\n**Đọc lại:** G§3 lambda (ngữ cảnh); T20–22; G§3 lambda; T25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 347,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 576,
+        "questionSha256": "686a5a612e70a6f54568463ccc5cd02c3b0aecee38d30b7afbcadab0d46b064a",
+        "answerSha256": "89cd5ae9f9402d6006b0658258ea6875150c667ec2fa1588337cdc415351ddef"
+      }
+    },
+    {
+      "id": "B2-024",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hàm sau đã định nghĩa; raw chứa các chuỗi giá:\n```python\ndef clean_price(s):\n    return float(s.replace(\"$\", \"\"))\nraw = [\"$2\", \"$0\", \"$5\", \"$8\"]\n```\nBiểu thức nào tạo list `[2.0,0.0,5.0,8.0]` bằng map?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`list(map(clean_price(), raw))`"
+        },
+        {
+          "key": "B",
+          "markdown": "`list(map(clean_price, raw))`"
+        },
+        {
+          "key": "C",
+          "markdown": "`list(map(clean_price(raw), raw))`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[clean_price for s in raw]`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "Đối số đầu map là chính hàm, chưa gọi; list thu các kết quả áp hàm lên từng chuỗi.\n\n- **A sai:** Gọi hàm ngay mà thiếu đối số s, phát sinh TypeError trước khi map chạy.\n- **C sai:** Gọi hàm một lần trên cả list; list không có phương thức replace.\n- **D sai:** Tạo list chứa các tham chiếu hàm, chưa áp hàm lên s.\n\n**Mục tiêu:** nhóm chính 3; chính K29; phụ K30. **Mức:** nền tảng. **Bẫy:** Nhầm truyền hàm vào map với gọi hàm ngay hoặc chỉ lấy tên hàm.\n\n**Đọc lại:** G§3 hàm là giá trị; L13–14; T13–15; G§3 clean_price; L13; T12–13 (float không dấu tiền).\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 362,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 590,
+        "questionSha256": "5bf064041c75e7f53926d354fb4a10bf85080492128a3f9e947d8b99f8056a49",
+        "answerSha256": "14bc9d0304fe729b19051ee8482baf47aff94bcd4c085f5dbb3ae229f6e06f77"
+      }
+    },
+    {
+      "id": "B2-025",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp ghi_chu.txt ban đầu chứa đúng `cũ`, là UTF-8 và mở được. Dòng cuối in gì?\n```python\nwith open(\"ghi_chu.txt\", encoding=\"utf-8\") as f:\n    truoc = f.read()\nwith open(\"ghi_chu.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(\"mới\")\nwith open(\"ghi_chu.txt\", encoding=\"utf-8\") as f:\n    sau = f.read()\nprint(truoc, sau)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`mới mới`"
+        },
+        {
+          "key": "B",
+          "markdown": "`cũ mới`"
+        },
+        {
+          "key": "C",
+          "markdown": "`cũ cũmới`"
+        },
+        {
+          "key": "D",
+          "markdown": "`cũ cũ`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "Mở w ghi đè nội dung file; biến truoc đã nhận chuỗi cũ nên không bị đổi theo file.\n\n- **A sai:** Tưởng biến truoc giữ liên kết sống với nội dung file.\n- **C sai:** Nhầm ghi đè w với ghi nối.\n- **D sai:** Tưởng with chỉ đóng file mà không lưu nội dung đã ghi.\n\n**Mục tiêu:** nhóm chính 4; chính K38. **Mức:** vận dụng. **Bẫy:** Nhầm đọc dữ liệu vào biến, ghi đè và ghi nối.\n\n**Đọc lại:** G§4; L17–19; T9,33.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 377,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 604,
+        "questionSha256": "4c78d0a59ed0b977fd9b2e61673243359a63a2db7a5dd1ed73b53fbc400aa437",
+        "answerSha256": "d477699e03931729d5a6317ce6ee45104fba79922ff3b6a67910ee607ad3b88e"
+      }
+    },
+    {
+      "id": "B2-026",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp mới gia.csv mở được. Code ghi bằng thư viện csv:\n```python\nimport csv\nwith open(\"gia.csv\", \"w\", encoding=\"utf-8\", newline=\"\") as f:\n    w = csv.DictWriter(f, fieldnames=[\"id\", \"gia\"])\n    w.writeheader()\n    w.writerow({\"id\":\"P1\", \"gia\":\"$1,200\"})\n```\nBỏ qua khác biệt ký tự xuống dòng giữa hệ điều hành, hai dòng văn bản nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`id,gia` rồi `P1,$1,200`."
+        },
+        {
+          "key": "B",
+          "markdown": "`P1,\"$1,200\"` rồi không còn dòng nào."
+        },
+        {
+          "key": "C",
+          "markdown": "`id,gia` rồi `P1,\"$1,200\"`."
+        },
+        {
+          "key": "D",
+          "markdown": "`id,gia` rồi `P1,1200.0`."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "fieldnames quyết định cột và writeheader ghi tiêu đề. Giá có dấu phẩy được đặt trong dấu nháy để không thành hai trường; newline=\"\" để csv quản lý xuống dòng.\n\n- **A sai:** Bỏ trích dẫn trường có dấu phẩy, khiến dòng giống ba trường.\n- **B sai:** Bỏ qua writeheader đã ghi dòng tên cột.\n- **D sai:** Tưởng DictWriter tự làm sạch giá và chuyển chuỗi tiền thành số.\n\n**Mục tiêu:** nhóm chính 4; chính K42. **Mức:** nền tảng. **Bẫy:** Nhầm dấu phẩy trong trường với dấu phân cách cột.\n\n**Đọc lại:** G§4 (CSV ngữ cảnh); L17.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 395,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 618,
+        "questionSha256": "4184771ba21a91f41561d8d4330eee9b1fc13eaf0ae57d042bf068d8795ab421",
+        "answerSha256": "a7e6238766d43066b0915401e2e9c1a80323d166a1c1cfc4a8040123f06ec916"
+      }
+    },
+    {
+      "id": "B2-027",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Giá bốn phòng tính bằng USD/đêm; chưa có bằng chứng phòng giá 140 sai. Hàm trung vị nhận list không rỗng:\n```python\ndef trung_vi(xs):\n    xs = sorted(xs)\n    n = len(xs)\n    if n % 2 == 1:\n        return xs[n // 2]\n    return (xs[n // 2 - 1] + xs[n // 2]) / 2\ngia = [140, 10, 30, 20]\nprint(trung_vi([9, 1, 5]), sum(gia)/len(gia), trung_vi(gia), gia[0])\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "In `5 50.0 25.0 140`; giá lớn kéo trung bình lên nhưng chưa đủ để xóa."
+        },
+        {
+          "key": "B",
+          "markdown": "In `5 50.0 25.0 10`; sorted đã đổi list gốc nên phần tử đầu là 10."
+        },
+        {
+          "key": "C",
+          "markdown": "In `5 25.0 50.0 140`; trung bình và trung vị cho hai mức giá đó."
+        },
+        {
+          "key": "D",
+          "markdown": "In `5 20.0 20.0 140`; hàm tự bỏ 140 vì đó là ngoại lai."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "List lẻ cho 5; list chẵn sắp 10,20,30,140 có trung vị 25 và trung bình 50. sorted tạo list mới nên gia[0] vẫn140; chênh lệch hai thống kê không tự xác nhận lỗi dữ liệu.\n\n- **B sai:** sorted trong hàm tạo list mới, không sắp tại chỗ gia.\n- **C sai:** Đảo trung bình 50 và trung vị 25.\n- **D sai:** Không có lệnh loại140; giá lớn không tự bị hàm trung vị xóa.\n\n**Mục tiêu:** nhóm chính 5; chính K50; phụ K51. **Mức:** vận dụng. **Bẫy:** Trung bình khác trung vị; sorted không sửa đầu vào; ngoại lai cần kiểm chứng.\n\n**Đọc lại:** G§1 trung bình; L14; T17–19; L24; T20–22,28.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 412,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 632,
+        "questionSha256": "8039b10685718514086d2ecffafadeae9b5461564d675e00dc0221b5f0070265",
+        "answerSha256": "038a2e95172d392e2c822d8c413d73c8e0cbd620fb22e134249c8c43d7a624bb"
+      }
+    },
+    {
+      "id": "B2-028",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Hai tập mã cảm biến hoạt động:\n```python\ncu = {11, 12, 13, 14}\nmoi = {13, 14, 15, 16}\nbien_mat = moi - cu\nprint(sorted(bien_mat))\n```\nCode hiện in gì và có đúng tên bien_mat không? Sửa phép trừ để tìm mã biến mất, rồi tính `sorted((cu | moi) - (cu & moi))` và giải thích tập đó trong 1–3 câu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Hiện in `[15,16]`, là mã mới thêm chứ không phải biến mất. Sửa `bien_mat = cu - moi`, được `[11,12]` sau sorted. Biểu thức cuối cho `[11,12,15,16]`, gồm mã chỉ có ở một trong hai đợt (cả biến mất lẫn mới thêm), không gồm mã còn ở cả hai.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Output hiện tại và ý nghĩa mới thêm đúng | 0,5 |\n| Sửa đúng chiều, xác định11,12 | 0,75 |\n| Kết hợp hợp-trừ-giao cho 11,12,15,16 và giải thích | 0,75 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 1; chính K12; phụ K11. **Mức:** vận dụng. **Bẫy:** Đảo chiều trừ set; nhầm mọi thay đổi với chỉ mã mới hoặc chỉ mã mất.\n\n**Đọc lại:** G§1; L7; T6; L7,9.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 432,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 646,
+        "questionSha256": "bfa8f33b2b2d6b4f6fa90290b7f437715401d7838b3e88a8af70730686e461a9",
+        "answerSha256": "f399d3b500f2b0af52869bd753b2678b7f764c19437b343527f6ea3b9c4aa4a4"
+      }
+    },
+    {
+      "id": "B2-029",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Quy tắc giá USD/đêm: 0 miễn phí hợp lệ, âm không hợp lệ, None thiếu. Hàm chuyển giá như sau:\n```python\ndef clean_price(s):\n    try:\n        return float(s.replace(\"$\", \"\"))\n    except (ValueError, AttributeError):\n        return None\nv = [clean_price(s) for s in [\"$30\", \"$0\", \"$-3\", \"N/A\", None]]\ngiu = [x for x in v if x]\nprint(giu, sum(giu)/len(giu))\n```\n(a) Code in gì, sai quy tắc nào? (b) Thay điều kiện lọc để tính đúng, nêu trung bình đúng. (c) Hai đầu vào biên nào cần giữ trong bộ thử để bắt lỗi này?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "In `[30.0,-3.0] 13.5`: truthiness bỏ 0 hợp lệ và giữ giá âm. Sửa `[x for x in v if x is not None and x >= 0]`, được `[30.0,0.0]`, trung bình 15.0. Cần ca \"$0\" và \"$-3\" (hoặc các giá 0/âm tương đương); các ca chuỗi hỏng chỉ kiểm chuyển kiểu chưa kiểm quy tắc này.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Output và cả hai lỗi giữ âm/mất0 | 0,75 |\n| Điều kiện đúng, bảo vệ None, trung bình 15.0 | 0,75 |\n| Hai ca 0 và âm, phân biệt chuyển kiểu với hợp lệ | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 3; chính K31; phụ K34, K35. **Mức:** phân loại. **Bẫy:** if x vừa làm mất giá 0 hợp lệ vừa giữ số âm không hợp lệ.\n\n**Đọc lại:** G§2–3; L13–15,22–25; T13,15–16; G§1,§3; L13–15; T13–16; G AI kiểm chứng; L13,21; T13,16.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 443,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 666,
+        "questionSha256": "011583c907811caae8bd697f8c9bd1dc80d259e27240b55641ccc016adc7b6ce",
+        "answerSha256": "41d50dcc83dd9d395882d2cdf5ae8282b87feb3a63ea0a2ee0f6553dc4fa4877"
+      }
+    },
+    {
+      "id": "B2-030",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Cùng thư mục chạy có module cleaning.py mở/import được, nội dung:\n```python\ndef clean_price(s):\n    return float(s.replace(\"$\", \"\"))\n```\nFile chạy chính chỉ có:\n```python\nfrom cleaning import clean_price\nprint(cleaning.clean_price(\"$80\"))\n```\n(a) File chính gặp lỗi gì? (b) Nêu một cách sửa lời gọi hoặc import. (c) Vì sao gom hàm này vào module giúp tái sử dụng; phương thức replace thuộc về đối tượng nào? Trả lời ngắn.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "File chính gặp NameError vì chỉ tên clean_price được nhập, chưa có tên cleaning. Sửa lời gọi thành `clean_price(\"$80\")`, hoặc dùng `import cleaning` và giữ lời gọi cũ; đều cho 80.0. Module cho nhiều bước dùng chung hàm chuyển giá; replace là phương thức của chuỗi s, hàm này không sửa biến ngoài.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| NameError ở tên cleaning, không nhầm thiếu file/module | 0,5 |\n| Một cách import/lời gọi khớp nhau và 80.0 | 0,75 |\n| Tái sử dụng hàm một việc; replace thuộc chuỗi, không sửa lén biến ngoài | 0,75 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 6; chính K62; phụ K63, K27. **Mức:** phân loại. **Bẫy:** from module import hàm không tạo tên module trong không gian gọi.\n\n**Đọc lại:** G§3 module; L17,19; T9,33; G§3 dấu chấm, module; L13,17; T13; G§3 viết hàm tốt; L13,21; T13,18,27.\n\n**Kiểm chứng:** đã chạy code gốc, xác nhận NameError tại thao tác giải thích ở trên; đã chạy lời giải sửa và ca biên liên quan.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 458,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 686,
+        "questionSha256": "bff2b591e2dfde45cc7533eb9cb192d36f6eb39d4863f634d829e20e08a7c8a0",
+        "answerSha256": "187dae4851195d5e93d637b0db567a11d89225f5c799af165709b20f5db4870c"
+      }
+    },
+    {
+      "id": "B2-031",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một tỷ lệ được lưu dưới dạng 0–1. Dòng cuối in gì?\n```python\np = 0.04\nprint(f\"{p:.1%}\", f\"{p:.1f}%\")\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`4.0% 4.0%`"
+        },
+        {
+          "key": "B",
+          "markdown": "`0.0% 0.0%`"
+        },
+        {
+          "key": "C",
+          "markdown": "`400.0% 4.0%`"
+        },
+        {
+          "key": "D",
+          "markdown": "`4.0% 0.0%`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "Đuôi % tự nhân 100 để hiển thị; .1f chỉ định dạng số 0.04 thành 0.0 rồi ghép ký tự %. Không có phép gán sửa p.\n\n- **A sai:** Tưởng chỉ ghép ký tự % cũng tự đổi tỷ lệ sang phần trăm.\n- **B sai:** Bỏ qua phép đổi thang của đuôi định dạng %.\n- **C sai:** Nhân thêm 100 ngoài hiệu ứng của định dạng và nhầm f cũng đổi thang.\n\n**Mục tiêu:** nhóm chính 1; chính K06. **Mức:** nền tảng. **Bẫy:** Nhầm .1% với .1f kèm ký tự %, hoặc nhân 100 thêm lần nữa.\n\n**Đọc lại:** G§1; T4,15.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 476,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 725,
+        "questionSha256": "7383968c33be585ef7ff01da7db623deb08b7bc20fea907062058291381c9a9d",
+        "answerSha256": "9ae4288586d76a934438e35880e9cc183e8c302c4c6fb28d69f61daa7741ebd6"
+      }
+    },
+    {
+      "id": "B2-032",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bốn mã phòng và giá USD/đêm ban đầu khớp theo vị trí. Cần hai cặp có giá thấp nhất, vẫn đúng mã-giá, giá không đồng hạng.\n```python\nma = [\"P4\", \"P1\", \"P3\", \"P2\"]\ngia = [50, 40, 10, 20]\n```\nBiểu thức nào đáp ứng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`sorted(zip(ma, gia), key=lambda x: x[1])[:2]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`list(zip(ma, sorted(gia)))[:2]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`list(zip(sorted(ma), gia))[:2]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`sorted(zip(ma, gia))[:2]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Ghép các cặp gốc trước, sau đó sắp theo giá và lấy hai cặp: P3–10, P2–20.\n\n- **B sai:** Sắp riêng giá làm P4 bị ghép với10.\n- **C sai:** Sắp riêng mã làm P1 bị ghép với50.\n- **D sai:** Sắp theo mã chọn P1–40, P2–20, không phải hai phòng rẻ nhất.\n\n**Mục tiêu:** nhóm chính 2; chính K19; phụ K20, K21. **Mức:** vận dụng. **Bẫy:** Ghép theo vị trí và chỉ sắp cả cặp; không tự suy quan hệ từ tên.\n\n**Đọc lại:** G§2; G§2 zip (áp dụng); T25 (cặp items); G§3 lambda; T25,27.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 489,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 739,
+        "questionSha256": "ae05f74825585e998dc5302dd2638191486faf084f2169c7f2e32a2da25a9b3c",
+        "answerSha256": "ae4c784cb32ffe9d265d3ec1679db157e82a839520644eb9bb1e501d97c06cb3"
+      }
+    },
+    {
+      "id": "B2-033",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Danh sách số lượng kiểm kê được sửa qua hai tên khác nhau. Dòng cuối in gì?\n```python\na = [7, 3, 5, 1]\nb = a\nc = a.copy()\nb[1] = 9\nc.append(2)\nprint(a, c)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[7,3,5,1] [7,3,5,1,2]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[7,9,5,1,2] [7,9,5,1,2]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[7,9,5,1] [7,9,5,1,2]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[7,9,5,1] [7,3,5,1,2]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "b và a cùng list nên sửa b[1] sửa a; c là list ngoài khác, được tạo trước lúc đổi3 thành 9.\n\n- **A sai:** Tưởng gán b=a đã sao chép.\n- **B sai:** Tưởng c vẫn là alias của a và hai thao tác đều lan sang cả hai.\n- **C sai:** Hiểu append tách biệt nhưng tưởng sửa a còn lan sang bản copy phẳng c.\n\n**Mục tiêu:** nhóm chính 2; chính K25; phụ K26. **Mức:** vận dụng. **Bẫy:** Phân biệt alias và copy của list số phẳng.\n\n**Đọc lại:** G§2; L11; G§2 copy (giới hạn kỹ thuật); L11 (list phẳng).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 503,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 753,
+        "questionSha256": "f447cf1c556cf5d91f31a4091b143aec5561bfdd17891723821c7c0ef2bb7e1c",
+        "answerSha256": "ef2183e41a3fb4f928d28e5995920353b446b9aafbee3ad144668e8df7866d12"
+      }
+    },
+    {
+      "id": "B2-034",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Quy ước của bước chuyển giá: trả số hoặc None và không sửa dữ liệu ngoài. Đọc code sau:\n```python\nnhat_ky = []\ndef to_float(s) -> float | None:\n    \"\"\"Đổi chuỗi số; chuỗi hỏng trả None.\"\"\"\n    nhat_ky.append(s)\n    try:\n        return float(s)\n    except (ValueError, TypeError):\n        return None\nprint(to_float(\"10\"), nhat_ky)\n```\nNhận định nào đúng với quy ước đã nêu?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Trả 10.0 và không sửa ngoài; type hint đã bảo đảm điều đó."
+        },
+        {
+          "key": "B",
+          "markdown": "Trả None vì type hint float không nhận chuỗi đầu vào."
+        },
+        {
+          "key": "C",
+          "markdown": "Trả 10.0 nên đã đáp ứng toàn bộ quy ước, dù nhat_ky đổi."
+        },
+        {
+          "key": "D",
+          "markdown": "Trả 10.0 nhưng sửa nhat_ky; cần tách việc ghi nhật ký khỏi hàm chuyển."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "Hàm đã chuyển được nhưng có tác động ngoài qua append. Type hint/docstring không tự bảo đảm tính chất không sửa biến ngoài.\n\n- **A sai:** Type hint mô tả kiểu dự kiến, không chặn append vào list ngoài.\n- **B sai:** Hint nằm ở đầu ra và không ép kiểm tra đầu vào; float(\"10\") thành công.\n- **C sai:** Đúng giá trị trả về chưa đủ đáp ứng điều kiện không sửa ngoài.\n\n**Mục tiêu:** nhóm chính 3; chính K27; phụ K28. **Mức:** vận dụng. **Bẫy:** Hàm trả kết quả đúng nhưng còn vi phạm một phần giao ước.\n\n**Đọc lại:** G§3 viết hàm tốt; L13,21; T13,18,27; G§3; T13,18.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 520,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 767,
+        "questionSha256": "b4aa207ef7b63afb51bc1c199693222b6d48755f687ee39ef27b81a00d91324f",
+        "answerSha256": "06108ac94c7be9b7f13f5e28e9120785f116bb010dfafcb4f34f96122f697b7f"
+      }
+    },
+    {
+      "id": "B2-035",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp mới bao_cao.json mở được. Đoạn ghi và đọc lại:\n```python\nimport json\nobj = {\"khu\": \"Đồi\", \"n\": 2}\nwith open(\"bao_cao.json\", \"w\", encoding=\"utf-8\") as f:\n    json.dump(obj, f, ensure_ascii=False, indent=2)\nwith open(\"bao_cao.json\", encoding=\"utf-8\") as f:\n    doc = json.load(f)\nprint(doc[\"khu\"], doc[\"n\"] + 1)\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "In `Đồi 3`; ensure_ascii và indent tác động biểu diễn, không biến n thành chuỗi."
+        },
+        {
+          "key": "B",
+          "markdown": "In `Đồi 21`; ensure_ascii=False chuyển cả số 2 thành chuỗi."
+        },
+        {
+          "key": "C",
+          "markdown": "Báo TypeError vì mọi giá trị đọc từ file đều là chuỗi."
+        },
+        {
+          "key": "D",
+          "markdown": "In `Đồi 3`; indent=2 làm mọi số trong báo cáo có hai chữ số thập phân."
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "ensure_ascii=False cho chữ không ASCII được ghi trực tiếp; indent dùng khoảng trắng/xuống dòng. Số 2 vẫn đọc lại thành số.\n\n- **B sai:** Cờ này không quyết định kiểu số khi đọc JSON.\n- **C sai:** Nhầm JSON với giá trị trường CSV qua DictReader.\n- **D sai:** indent là độ thụt dòng, không phải định dạng số .2f.\n\n**Mục tiêu:** nhóm chính 4; chính K45; phụ K46. **Mức:** nền tảng. **Bẫy:** Nhầm biểu diễn ký tự/độ thụt dòng với kiểu dữ liệu.\n\n**Đọc lại:** G§4; L19; T33.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 541,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 781,
+        "questionSha256": "f262f341d3bc7be98529b86cb74733e6e663146cfd6c6aa6d9cfd0b6b9fcf050",
+        "answerSha256": "4fca0f7de22ead92f0ea6894129a66e459c00639ba94026990d5e2a22d49c52a"
+      }
+    },
+    {
+      "id": "B2-036",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dict dem là số phòng, tv là giá trung vị USD/đêm; không có đồng hạng. Cần chọn khu giá cao nhất trong hai khu đông phòng nhất.\n```python\ndem = {\"A\": 5, \"B\": 2, \"C\": 3, \"D\": 1}\ntv = {\"A\": 20, \"B\": 90, \"C\": 50, \"D\": 40}\ntop = sorted(dem, key=lambda k: dem[k], reverse=True)[:2]\nchon = max(top, key=lambda k: tv[k])\nprint(chon)\n```\nDòng cuối in gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`B`"
+        },
+        {
+          "key": "B",
+          "markdown": "`C`"
+        },
+        {
+          "key": "C",
+          "markdown": "`A`"
+        },
+        {
+          "key": "D",
+          "markdown": "`D`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "Hai khu đông nhất là A, C; trong tập này C có giá trung vị 50 cao hơn 20 của A. B đắt nhất toàn bộ nhưng không thuộc tập được xét.\n\n- **A sai:** Chọn giá cao nhất toàn bộ khu, bỏ điều kiện hai khu đông nhất.\n- **C sai:** Dừng ở khu đông nhất mà chưa so giá trong tập hai khu.\n- **D sai:** Chọn khu ít phòng nhất do đọc chiều sắp xếp ngược.\n\n**Mục tiêu:** nhóm chính 5; chính K52; phụ K24, K21. **Mức:** vận dụng. **Bẫy:** Đúng thao tác max nhưng có thể dùng sai tập khu.\n\n**Đọc lại:** G§3 lambda (áp dụng); L26; T24–28,35; G§2 dict,§3 lambda; L10; T24–27; G§3 lambda; T25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 560,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 795,
+        "questionSha256": "8db0a89b73c1690bc3be8716bd3e604e4157297e8f946a289be727dfd9f7dafc",
+        "answerSha256": "144655e750b0b58c8f39db3de2576d8f95126a5b3474e18d48c5111037a70641"
+      }
+    },
+    {
+      "id": "B2-037",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Cây ban đầu có đúng ba tệp dưới đây, cùng các thư mục cha của chúng, không có mục nào khác:\n```text\ndata/raw/bang.csv\ndata/raw/HaNoi/a.csv\ndata/raw/Hue/b.csv\n```\n```python\nfrom pathlib import Path\nDATA = Path(\"data\") / \"raw\" / \"HaNoi\"\nprint(sorted(p.name for p in DATA.parent.glob(\"*.csv\")))\n```\nDòng cuối in gì? p.name trả tên tệp ở cuối đường dẫn; không cần xét cách repr của Path theo hệ điều hành.",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[\"a.csv\"]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[\"a.csv\",\"b.csv\",\"bang.csv\"]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[\"HaNoi\",\"Hue\"]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[\"bang.csv\"]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "parent của HaNoi là data/raw; glob(\"*.csv\") chỉ khớp các file CSV ngay ở đó, không tự đi vào hai thư mục con.\n\n- **A sai:** Dùng DATA thay vì DATA.parent.\n- **B sai:** Tưởng glob mẫu *.csv tự tìm đệ quy qua mọi thư mục con.\n- **C sai:** Bỏ qua mẫu *.csv và tưởng trả tên các thư mục con.\n\n**Mục tiêu:** nhóm chính 6; chính K61; phụ K60. **Mức:** vận dụng. **Bẫy:** Nhầm đường dẫn cha hoặc mức duyệt của glob.\n\n**Đọc lại:** G§4 pathlib; L17.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 577,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 809,
+        "questionSha256": "12277de79e2d86cff57c6f03345dd324b1d7d0159e24e8a3ab9d22e8c77904dd",
+        "answerSha256": "166a0376c8a8483a0a666a62a295419d4d2d3fd2538e7c9e5da6b6cc667d60eb"
+      }
+    },
+    {
+      "id": "B2-038",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Thiết kế dữ liệu cho một báo cáo: (i) doanh thu từng ngày cần giữ thứ tự để cắt khoảng; (ii) tra giá theo mã phòng; (iii) so tập mã giữa hai snapshot, không cần giữ trùng; (iv) lưu một cặp tọa độ không thay đổi. Chọn list/dict/set/tuple cho từng việc và minh họa cách giải nén cặp (10,106), trong 1–3 câu hoặc một dòng lệnh.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Lần lượt dùng list, dict, set và tuple: theo thứ tự ngày, tra theo khóa, so tập mã và giữ một bộ giá trị. Cặp tọa độ được giải nén bằng `lat, lon = (10,106)`, khi đó lat=10, lon=106.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Chọn đúng bốn cấu trúc, mỗi loại0,375 điểm | 1,5 |\n| Giải nén đúng cặp và ý nghĩa hai thành phần | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 1; chính K14; phụ K13. **Mức:** vận dụng. **Bẫy:** Dùng một cấu trúc cho mọi mục tiêu hoặc nhầm tập mã với dãy thời gian.\n\n**Đọc lại:** G§1 bảng chọn cấu trúc; L4–11; T6,9,24; G§1; T25,27 (items/cặp).\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 597,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 823,
+        "questionSha256": "33c929b1d22a0aa6507bded59290d5ac61953e85cb7729f82374d094fc4ada6e",
+        "answerSha256": "633886f1053c9c374122b8162c43311c1fefc06e92d7e18f8a825b1b39b2ad1c"
+      }
+    },
+    {
+      "id": "B2-039",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Giá hợp lệ đều dương; chuỗi hỏng hoặc rỗng là chưa biết, không phải giá 0. Code hiện tại:\n```python\ndef clean_price(s):\n    try:\n        return float(s.replace(\"$\", \"\"))\n    except (ValueError, AttributeError):\n        return 0\nraw = [\"$30\", \"N/A\", \"$90\", \"\"]\nv = [clean_price(s) for s in raw]\nprint(sum(v)/len(v))\n```\n(a) Output và trung bình đúng của các giá đã biết là bao nhiêu? (b) Sửa quy ước trả về và bước lọc. (c) Nếu chỉ có dữ liệu hỏng, quy định đầu ra trung bình thế nào để không che sự thiếu dữ liệu?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Hiện in 30.0 do v chứa30,0,90,0; giá đã biết thực tế có trung bình 60.0. Trả None khi hỏng, rồi lọc `[x for x in v if x is not None]` sau khi chạy lại hàm đã sửa. Nếu không có giá, trả None/ghi chưa có trung bình thay vì chia rỗng hay báo0 như một giá thật.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| 30.0 và 60.0, giải thích hai số 0 giả làm tăng mẫu số | 0,75 |\n| Sửa trả None, tính lại v và lọc bỏ None | 0,75 |\n| Tập rỗng có quy ước rõ, không biến thiếu thành trung bình 0 | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 3; chính K34; phụ K35, K37. **Mức:** phân loại. **Bẫy:** Thay dữ liệu hỏng bằng 0 làm lệch thống kê và che thiếu dữ liệu.\n\n**Đọc lại:** G§1,§3; L13–15; T13–16; G AI kiểm chứng; L13,21; T13,16; G§1 trung bình (giới hạn); L26 (quy ước cần nêu); T18 không rỗng (điều kiện).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 601,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 842,
+        "questionSha256": "c6bdd15a6e8fa68a9452f4d8c3c53ae0dabb2bedef17ad9ad67c5243ad98aaf4",
+        "answerSha256": "3d6f87c5d862e6c5a51ac438334d56034e6a8a3f47b1b971284d5acb5084f14a"
+      }
+    },
+    {
+      "id": "B2-040",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Tệp p.csv UTF-8 mở được; giá USD/đêm, ô trống chưa biết, 0 miễn phí hợp lệ:\n```csv\nid,gia\nP1,9\nP2,100\nP3,\nP4,20\n```\n```python\nimport csv\nwith open(\"p.csv\", encoding=\"utf-8\") as f:\n    rows = list(csv.DictReader(f))\ngia = [r[\"gia\"] for r in rows if r[\"gia\"]]\nprint(max(gia))\n```\n(a) Code in gì và vì sao không phải giá lớn nhất? (b) Sửa dòng tạo gia để được số, bỏ đúng ô trống; nêu max đúng. (c) Nếu thêm dòng giá \"0\", dòng đó có cần bị loại không? Nêu thêm điều kiện trước max khi mọi ô đều trống.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Code in 9 vì sắp/so chuỗi theo thứ tự từ điển, chưa so số. Sửa `gia = [float(r[\"gia\"]) for r in rows if r[\"gia\"] != \"\"]`, được max100.0; chuỗi \"0\" vẫn được giữ thành 0.0 hợp lệ. Trước max phải kiểm gia không rỗng; nếu rỗng, báo chưa có giá lớn nhất hoặc dùng quy ước None.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| In 9 do so chuỗi, không phải100 | 0,5 |\n| Đổi float và bỏ chỉ ô trống, max100.0 | 0,75 |\n| Giữ giá 0 theo đề và có bảo vệ tập rỗng trước max | 0,75 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 4; chính K39; phụ K40, K41. **Mức:** phân loại. **Bẫy:** CSV là chuỗi; lọc rỗng chưa đủ để tính/sắp theo giá trị số.\n\n**Đọc lại:** G§4; L17–18; T9–11,30; L18; T11–16,29–30; L21–23; T11–15,21,30.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 616,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 862,
+        "questionSha256": "97da74fabca83b992c220a16c8ee16cfdca9b6825ad274b93b2708ca66e7abb5",
+        "answerSha256": "7659a48023d72344688b84f54aac8b807129f2dfa94e30992e32b78dbfbd5d75"
+      }
+    },
+    {
+      "id": "B2-041",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dãy lượt thuê được lưu đúng thứ tự thời gian. Dòng cuối in gì?\n```python\nluot = [4, 7, 5, 8, 6, 9, 3]\nprint(luot[0], luot[-1], luot[-2])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`4 9 6`"
+        },
+        {
+          "key": "B",
+          "markdown": "`4 3 9`"
+        },
+        {
+          "key": "C",
+          "markdown": "`7 3 9`"
+        },
+        {
+          "key": "D",
+          "markdown": "`4 3 7`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "Chỉ mục 0 lấy đầu dãy, -1 lấy cuối, -2 lấy phần tử liền trước cuối.\n\n- **A sai:** Đếm chỉ mục âm như thể -1 đã bỏ qua phần tử cuối.\n- **C sai:** Đếm phần tử đầu bằng chỉ mục 1 thay vì0.\n- **D sai:** Đọc -2 thành phần tử thứ hai từ đầu, thay vì thứ hai từ cuối.\n\n**Mục tiêu:** nhóm chính 1; chính K08. **Mức:** nền tảng. **Bẫy:** Chỉ mục đầu/cuối và âm phải theo vị trí Python thực tế.\n\n**Đọc lại:** G§1; L6; T37 (chuỗi năm); kiến thức nền.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 639,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 901,
+        "questionSha256": "abbbdf587de7649b5a7c81c0e8b9f8f66ea4f67e77b29986b9cab4693bb6110c",
+        "answerSha256": "9355d56a90c6c61ef9e3201971f08a57972c5d68c34a67b1bb36ca0967b0c890"
+      }
+    },
+    {
+      "id": "B2-042",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Các chuỗi đều chuyển được sang int. Dòng cuối in gì?\n```python\nv = [\"40\", \"8\", \"120\", \"3\"]\nprint(sorted(v, key=int)[:2], sorted(v)[:2])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[\"3\",\"8\"] [\"120\",\"3\"]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[3,8] [\"120\",\"3\"]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[\"120\",\"3\"] [\"3\",\"8\"]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[\"3\",\"8\"] [\"3\",\"8\"]`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "key=int so theo số nhưng trả các phần tử chuỗi gốc; sorted không key so từ điển.\n\n- **B sai:** Tưởng hàm key còn thay phần tử kết quả thành int.\n- **C sai:** Đảo sắp theo số và theo chuỗi.\n- **D sai:** Tưởng sorted tự nhận biết chuỗi chứa số ngay cả khi không có key.\n\n**Mục tiêu:** nhóm chính 2; chính K22; phụ K21. **Mức:** vận dụng. **Bẫy:** key chỉ dùng so sánh, không tự đổi kiểu phần tử trả về.\n\n**Đọc lại:** G§4 CSV + §3 lambda; L18; T11,25 (áp dụng); G§3 lambda; T25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 652,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 915,
+        "questionSha256": "3c1da19eb6f1c16e672f0be8c9511931f7382ffac7a75e6f8aad8593b6eaf6fe",
+        "answerSha256": "9f3a3588fee0ddb2614075c68f7ee2347837caccc8a4356f1c5bb907cfad3ca2"
+      }
+    },
+    {
+      "id": "B2-043",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Bộ thử chỉ có hai ca ở dưới và đều qua. Nhận định nào đúng?\n```python\ndef clean(s):\n    try:\n        return float(s.replcae(\"$\", \"\"))\n    except Exception:\n        return None\nassert clean(\"\") is None\nassert clean(None) is None\nprint(clean(\"$10\"))\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "In None; chỉ đổi except thành AttributeError là hàm đã chuyển giá đúng."
+        },
+        {
+          "key": "B",
+          "markdown": "In None; hai assert đã đủ chứng minh hàm đổi đúng mọi giá bình thường."
+        },
+        {
+          "key": "C",
+          "markdown": "Dừng ở AttributeError vì except Exception chỉ bắt lỗi dữ liệu số."
+        },
+        {
+          "key": "D",
+          "markdown": "In None; sai tên phương thức bị che, cần sửa và thử cả giá bình thường."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "replcae viết sai gây AttributeError ngay cả với \"$10\"; except Exception che lỗi. Bắt AttributeError có chủ đích cho None cũng không tự phát hiện lỗi gõ này: phải sửa tên và có ca đầu vào bình thường.\n\n- **A sai:** Bắt hẹp hơn không sửa tên replcae và vẫn có thể che lỗi này.\n- **B sai:** Hai ca đều kiểm đầu ra None, không kiểm chuyển thành công.\n- **C sai:** Exception bắt cả AttributeError này, nên lỗi lập trình bị che.\n\n**Mục tiêu:** nhóm chính 3; chính K33; phụ K35, K32. **Mức:** vận dụng. **Bẫy:** Qua vài ca lỗi không chứng minh đường chuyển thành công; catch rộng che bug.\n\n**Đọc lại:** G§3 try/except, AI; L13,21; T12–13; G AI kiểm chứng; T13,16; G§3.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 665,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 929,
+        "questionSha256": "4482136abef87d33d194da8e63512db60af878ac495b67d7d446b6d428615f9b",
+        "answerSha256": "01458dc6f5fbccc3c45b5007cc4f667813dae7cddf657ec65f1fc8ef07a17daa"
+      }
+    },
+    {
+      "id": "B2-044",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một tệp bc.json UTF-8 mở được chứa `{\"n\":4}`; biến s cũng là chuỗi `'{\"n\":4}'`. Với file đang mở ở tên f, cặp lời gọi nào đọc đúng cả hai nguồn theo thứ tự file rồi chuỗi?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`json.loads(f)` và `json.load(s)`."
+        },
+        {
+          "key": "B",
+          "markdown": "`json.dump(f)` và `json.loads(s)`."
+        },
+        {
+          "key": "C",
+          "markdown": "`json.load(f)` và `json.loads(s)`."
+        },
+        {
+          "key": "D",
+          "markdown": "`json.load(f)` và `json.dump(s)`."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "load nhận file có phương thức read; loads nhận văn bản JSON. dump là ghi đối tượng ra file.\n\n- **A sai:** Đảo nguồn file với nguồn chuỗi.\n- **B sai:** Dùng hàm ghi thay cho đọc, đồng thời thiếu đối số file đích của dump.\n- **D sai:** Dùng dump để đọc chuỗi, không đúng vai trò API.\n\n**Mục tiêu:** nhóm chính 4; chính K43. **Mức:** nền tảng. **Bẫy:** Tên gần nhau nhưng load/loads/dump nhận nguồn/đích khác nhau.\n\n**Đọc lại:** G§4; L19; T33.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 684,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 943,
+        "questionSha256": "d4daf388c5421b5f0a2f7bc3aba778d33acb652ca1a09604fa3b8af5b8c0f510",
+        "answerSha256": "2903b6f237ed5cba9d877bf4a430857416c4c1b3b2d3a9c99efc9879815ca093"
+      }
+    },
+    {
+      "id": "B2-045",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi tuple là (id phòng, giá USD/đêm, số đêm tối thiểu). Quy tắc: giá phải >0, số đêm không quá 30. Chỉ gắn cờ để kiểm, chưa xóa dòng.\n```python\nrows = [(1,0,2), (2,40,3), (3,-2,40),\n        (4,0,60), (5,80,10), (6,50,31)]\nsai_gia = {i for i, g, n in rows if g <= 0}\nsai_dem = {i for i, g, n in rows if n > 30}\nprint(len(sai_gia | sai_dem), len(rows))\n```\nDòng cuối in gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`4 6`"
+        },
+        {
+          "key": "B",
+          "markdown": "`6 6`"
+        },
+        {
+          "key": "C",
+          "markdown": "`4 2`"
+        },
+        {
+          "key": "D",
+          "markdown": "`2 6`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Sai giá 1,3,4; sai đêm3,4,6. Hợp có 4 phòng khác nhau, rows vẫn6 dòng vì chưa có lệnh xóa.\n\n- **B sai:** Cộng hai số lỗi mà đếm trùng phòng 3,4.\n- **C sai:** Tưởng tính/gắn cờ tự xóa4 dòng khỏi rows.\n- **D sai:** Dùng giao (cùng sai cả hai) thay điều kiện sai ít nhất một.\n\n**Mục tiêu:** nhóm chính 5; chính K54; phụ K55. **Mức:** vận dụng. **Bẫy:** QA OR cần hợp mã và không đếm trùng; gắn cờ khác xóa.\n\n**Đọc lại:** G§2 lọc (áp dụng); L24–25; T31 (kiểm dữ liệu); T22.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 693,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 957,
+        "questionSha256": "6c5e727217e3c2e23f5780b8e422314452226ab005869d2d3c4b39ce34ba1700",
+        "answerSha256": "583000857f03721fae2398457d85cc85f0138f422780587dde9ab919aa658989"
+      }
+    },
+    {
+      "id": "B2-046",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi dòng là một phòng, number_of_reviews là chuỗi. Quy ước nhất quán mong muốn: số review 0 thì last_review trống; số review dương thì có ngày. Code chỉ kiểm như sau:\n```python\nrows = [{\"id\":\"A\",\"number_of_reviews\":\"0\",\"last_review\":\"\"},\n        {\"id\":\"B\",\"number_of_reviews\":\"1\",\"last_review\":\"\"},\n        {\"id\":\"C\",\"number_of_reviews\":\"2\",\"last_review\":\"2026-01-02\"},\n        {\"id\":\"D\",\"number_of_reviews\":\"0\",\"last_review\":\"\"}]\nchua = [r for r in rows if r[\"number_of_reviews\"] == \"0\"]\nassert all(r[\"last_review\"] == \"\" for r in chua)\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Assert qua, vậy cả hai chiều của quan hệ đều được xác nhận."
+        },
+        {
+          "key": "B",
+          "markdown": "Assert lỗi ở B vì all tự quét mọi dòng của rows."
+        },
+        {
+          "key": "C",
+          "markdown": "Assert lỗi ở A, D vì chuỗi \"0\" là truthy nên phải có ngày."
+        },
+        {
+          "key": "D",
+          "markdown": "Assert qua; phòng B sai chiều còn lại nhưng chưa nằm trong tập được kiểm."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "chua chỉ gồm A, D; cả hai có ngày trống. B có 1 review nhưng thiếu ngày, nên phép kiểm một chiều không phát hiện được.\n\n- **A sai:** Suy ngược từ kiểm số review 0 sang mọi dòng có ngày trống.\n- **B sai:** all chỉ duyệt chua đã lọc, không tự quay lại toàn rows.\n- **C sai:** Quy tắc đang so chuỗi bằng \"0\", không dùng truthiness để suy số review.\n\n**Mục tiêu:** nhóm chính 5; chính K56; phụ K57. **Mức:** vận dụng. **Bẫy:** Kiểm đúng một tập con không chứng minh chiều ngược hoặc toàn bảng.\n\n**Đọc lại:** T29–31; G AI kiểm chứng (ngữ cảnh); T30–31 (giới hạn assert).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 710,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 971,
+        "questionSha256": "6b5d9eebe75c51f32bb389df18454b1309c6b2081171a79a063aeeeb83e654b0",
+        "answerSha256": "9711437fa059951f4ca7b6b7d7ea0997d347aa2c569642af7937395db1d6f6d8"
+      }
+    },
+    {
+      "id": "B2-047",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi phần tử là nhiệt độ °C, số âm và 0 đều hợp lệ; chỉ None là chưa đo.\n```python\nnhiet = [-4, 0, None, 8]\ngiu = [x for x in nhiet if x]\nprint(giu, sum(giu)/len(giu))\n```\nNêu output và sửa điều kiện theo yêu cầu, kèm trung bình đúng. Vì sao không thay bằng điều kiện x>0? Trả lời 1–3 câu.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "In `[-4,8] 2.0`; sửa thành `[x for x in nhiet if x is not None]` để giữ `[-4,0,8]`, trung bình 4/3°C. Dùng >0 sẽ bỏ cả nhiệt độ âm hợp lệ và 0, ngoài ra so None với0 gây TypeError nếu không bảo vệ trước.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Output đúng và nhận ra mất0 | 0,5 |\n| Sửa chỉ bỏ None, đúng tập và trung bình 4/3 | 1 |\n| Âm/0 hợp lệ, >0 không tương đương và cần bảo vệ None khi so số | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 1; chính K03; phụ K02, K04. **Mức:** vận dụng. **Bẫy:** Quy tắc khác None không tương đương truthy hoặc dương.\n\n**Đọc lại:** G§1–2; L14–15,22–25; T15–16; L14–15; T5,15–16; G§1; L14; T5,15,19.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 728,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 985,
+        "questionSha256": "1e07b5b8c6ae0e3fb8d8d88885574d67acc364058a4a86f6dd6bdbbfdc9b0e77",
+        "answerSha256": "094485cd6b9d3b687027ed9db6dc2519f53ac0750d2255724b06eb32824f35cf"
+      }
+    },
+    {
+      "id": "B2-048",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Bốn phòng đã có giá số USD/đêm; 0 hợp lệ, âm hỏng, None thiếu:\n```python\nrows = [{\"id\":\"P1\",\"gia\":None}, {\"id\":\"P2\",\"gia\":0},\n        {\"id\":\"P3\",\"gia\":-2}, {\"id\":\"P4\",\"gia\":50}]\n```\nViết (i) một comprehension lấy id các phòng có giá hợp lệ theo thứ tự gốc; (ii) một dict comprehension ánh xạ id→giá của đúng các phòng ấy. Nêu hai kết quả.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nids = [r[\"id\"] for r in rows if r[\"gia\"] is not None and r[\"gia\"] >= 0]\nbang = {r[\"id\"]: r[\"gia\"] for r in rows\n        if r[\"gia\"] is not None and r[\"gia\"] >= 0}\n```\nKết quả là `[\"P2\",\"P4\"]` và `{\"P2\":0,\"P4\":50}`; không đảo chiều ánh xạ và không loại0.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| List comprehension đúng tập và thứ tự P2, P4 | 0,75 |\n| Dict comprehension đúng chiều và cùng tập bản ghi | 0,75 |\n| Hai kết quả đúng, giữ 0/bỏ âm và None | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 2; chính K16; phụ K17, K15. **Mức:** vận dụng. **Bẫy:** Đúng cấu trúc comprehension nhưng sai tập lọc hoặc chiều id→giá.\n\n**Đọc lại:** G§2; L6,22–23,25; T30; L10,22–23; T27; L8–10,22–23; T15,27.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 738,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1005,
+        "questionSha256": "33eb841db61b3ce89797856d47a0026eebf164e837772175136724f2b214f129",
+        "answerSha256": "41024465e1c824db85782c69ec0bb45151f8de210e508576096951e99dfd3fba"
+      }
+    },
+    {
+      "id": "B2-049",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Chỉ giá >0 hợp lệ; chuỗi hỏng chuyển None. Hàm đã đúng cho việc chuyển kiểu:\n```python\ndef to_float(s):\n    try:\n        return float(s)\n    except (ValueError, TypeError):\n        return None\nv = list(map(to_float, [\"10\", \"bad\", \"0\", \"-5\", None]))\npos = [x for x in v if x > 0]\nprint(sum(pos)/len(pos))\n```\n(a) Dừng ở đâu, lỗi gì? (b) Sửa dòng lọc, nêu pos và trung bình sau sửa. (c) Viết một dòng tính trung bình trả None khi không còn giá, để ca toàn dữ liệu hỏng không chia rỗng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Dừng trong comprehension tạo pos vì gặp None>0, gây TypeError; map đã tạo đủ `[10.0,None,0.0,-5.0,None]`. Sửa `pos = [x for x in v if x is not None and x > 0]`, được `[10.0]`, trung bình 10.0. Dùng `tb = sum(pos)/len(pos) if pos else None`.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| TypeError trong lọc, không nhầm lỗi còn ở hàm chuyển/map | 0,75 |\n| Điều kiện bảo vệ đúng thứ tự; pos và trung bình đúng | 0,75 |\n| Tập rỗng trả None bằng điều kiện rõ | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 3; chính K29; phụ K36, K37. **Mức:** phân loại. **Bẫy:** Bắt lỗi chuyển kiểu chưa bảo vệ phép so sánh ở bước sau.\n\n**Đọc lại:** G§3 hàm là giá trị; L13–14; T13–15; G§2–3; L22–25 (cần sửa truthiness); T15–16,27; G§1 trung bình (giới hạn); L26 (quy ước cần nêu); T18 không rỗng (điều kiện).\n\n**Kiểm chứng:** đã chạy code gốc, xác nhận TypeError tại thao tác giải thích ở trên; đã chạy lời giải sửa và ca biên liên quan.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 747,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1030,
+        "questionSha256": "44010a9a94e8b7e55371ba20c5de20d389ffd0963c40f0b6b3d91d4d0ff6f00e",
+        "answerSha256": "b51c0d3d976d53ca6b67685a6459bb08e48ca432c40bcd9f00a0270b4ef907e4"
+      }
+    },
+    {
+      "id": "B2-050",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Tệp bc.json mới mở được. Báo cáo quy định so_phong phải là số nguyên, không phải chuỗi.\n```python\nimport json\nobj = {\"khu\":\"Đồi\", \"so_phong\":\"4\", \"gia\":[0,30,None], \"dat\":True}\nwith open(\"bc.json\", \"w\", encoding=\"utf-8\") as f:\n    json.dump(obj, f, ensure_ascii=False, indent=2)\nwith open(\"bc.json\", encoding=\"utf-8\") as f:\n    doc = json.load(f)\nprint(doc == obj)\n```\n(a) In gì; so_phong đã đúng kiểu yêu cầu chưa? (b) Sửa trước khi ghi. (c) Nêu phép kiểm bổ sung để equality không bị dùng như bằng chứng dữ liệu nguồn đã đúng.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "In True nhưng so_phong vẫn là chuỗi \"4\", nên chưa đạt yêu cầu. Trước dump thêm `obj[\"so_phong\"] = int(obj[\"so_phong\"])` rồi ghi/đọc lại. Kiểm `isinstance(doc[\"so_phong\"],int)` và đối chiếu giá trị với số phòng nguồn đã đếm độc lập; equality chỉ chứng minh dữ liệu phù hợp này đã ghi-đọc khớp, không sửa kiểu hay kiểm nghiệp vụ giúp ta.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| True và vẫn là chuỗi, chỉ ra không đạt quy định | 0,75 |\n| Chuyển int trước ghi rồi đọc lại | 0,5 |\n| Kiểm kiểu và đối chiếu số đếm nguồn, nêu giới hạn equality | 0,75 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 4; chính K44; phụ K45, K46. **Mức:** phân loại. **Bẫy:** Đọc lại bằng nhau chưa chứng minh báo cáo đúng kiểu hoặc đúng số liệu.\n\n**Đọc lại:** G§4; L19; T33.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 762,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1050,
+        "questionSha256": "e9d15116f2e582a6ebe1f547d44429f2afe74662fe9f6d6734ed263e54f761a5",
+        "answerSha256": "4fad51c3d9c756fd4e4d83f0c6ed7cae21f5b99c1f9d195b8b4ed15ce2184b78"
+      }
+    },
+    {
+      "id": "B2-051",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Một trường đọc từ CSV là chuỗi `\"3.5\"`. Biểu thức nào cho số thực 3.5 để cộng với các số đo khác, giữ phần thập phân?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`int(\"3.5\")`"
+        },
+        {
+          "key": "B",
+          "markdown": "`str(\"3.5\")`"
+        },
+        {
+          "key": "C",
+          "markdown": "`bool(\"3.5\")`"
+        },
+        {
+          "key": "D",
+          "markdown": "`float(\"3.5\")`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "float chuyển chuỗi thập phân thành số thực 3.5; int không nhận trực tiếp chuỗi dạng này.\n\n- **A sai:** int của chuỗi \"3.5\" phát sinh ValueError, không tự cắt phần thập phân.\n- **B sai:** Vẫn là chuỗi, không trở thành số thực để cộng số.\n- **C sai:** Chuỗi không rỗng cho True, không phải số đo3.5.\n\n**Mục tiêu:** nhóm chính 1; chính K01. **Mức:** nền tảng. **Bẫy:** Phân biệt chuyển thành số, giữ chuỗi và chỉ kiểm truthiness.\n\n**Đọc lại:** G§1,§3; L2,13,21; T11–13.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 780,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1089,
+        "questionSha256": "a1b35940145d406a70de5adf84db6b538207e676708ebfe7106b36334d769683",
+        "answerSha256": "48d64c064fe9bdf1d37ceed9736e3557baf33c314c748677f7586f1e12c74918"
+      }
+    },
+    {
+      "id": "B2-052",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Dict ghi số kiện tại bốn kho; không có đồng hạng. Dòng cuối in gì?\n```python\nton = {\"B\":2, \"A\":9, \"C\":5, \"D\":1}\ntheo_ma = sorted(ton.items())[:2]\ntheo_so = sorted(ton.items(), key=lambda kv: kv[1], reverse=True)[:2]\nprint(theo_ma, theo_so)\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[(\"D\",1),(\"B\",2)] [(\"A\",9),(\"C\",5)]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[(\"A\",9),(\"B\",2)] [(\"D\",1),(\"B\",2)]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[(\"A\",9),(\"C\",5)] [(\"A\",9),(\"B\",2)]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[(\"A\",9),(\"B\",2)] [(\"A\",9),(\"C\",5)]`"
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "Sắp cặp mặc định xét khóa chuỗi A, B,…; key lấy giá trị và reverse=True chọn9,5.\n\n- **A sai:** Tưởng sorted(items) mặc định dùng số kiện tăng dần.\n- **B sai:** Bỏ qua reverse=True ở cách sắp theo số.\n- **C sai:** Đảo cách sắp theo mã và theo số.\n\n**Mục tiêu:** nhóm chính 2; chính K24; phụ K21. **Mức:** vận dụng. **Bẫy:** items là cặp; khóa dict khác khóa sắp xếp key.\n\n**Đọc lại:** G§2 dict,§3 lambda; L10; T24–27; G§3 lambda; T25,27.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 789,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1103,
+        "questionSha256": "1c6b66f05ec99e9665cf33b857d0c93b683c8db8d3b033ae35e6d26966e0c460",
+        "answerSha256": "c5a96314466fd16f7d24f421fde109c94bac55f88b171d01ea75557407c621b8"
+      }
+    },
+    {
+      "id": "B2-053",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Hàm chỉ chuyển kiểu số đêm, chưa lọc nghiệp vụ >0. Dòng cuối in gì?\n```python\ndef clean_nights(s):\n    try:\n        return int(s)\n    except (ValueError, TypeError):\n        return None\nraw = [\"3\", \"3.0\", \"-2\", \"0\"]\nprint([clean_nights(s) for s in raw])\n```",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`[3,3,-2,0]`"
+        },
+        {
+          "key": "B",
+          "markdown": "`[3,None,-2,0]`"
+        },
+        {
+          "key": "C",
+          "markdown": "`[3,None,None,None]`"
+        },
+        {
+          "key": "D",
+          "markdown": "`[3,3,None,None]`"
+        }
+      ],
+      "correctKey": "B",
+      "answerMarkdown": "int(\"3.0\") gây ValueError, còn \"-2\" và \"0\" đổi được. Chưa có điều kiện loại không dương.\n\n- **A sai:** Tưởng int tự chuyển chuỗi thập phân qua float rồi cắt phần lẻ.\n- **C sai:** Tự thêm quy tắc dương vào một hàm chỉ chuyển kiểu.\n- **D sai:** Vừa tự chuyển chuỗi \"3.0\", vừa tự loại0 và âm.\n\n**Mục tiêu:** nhóm chính 3; chính K32; phụ K31, K35. **Mức:** vận dụng. **Bẫy:** Ca chuyển kiểu được/chưa được khác ca đạt quy tắc số đêm.\n\n**Đọc lại:** G§3; L13,21; T12–13; G§2–3; L13–15,22–25; T13,15–16; G AI kiểm chứng; T13,16.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 804,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1117,
+        "questionSha256": "d0d5a06e147223e90996671d154aaff2b9bde6d86d677d4a36fd72cfbe66048f",
+        "answerSha256": "fd5748bc9b04bd73773a95e16d5d267901a61f8e256dc5a97cf98a897617faf1"
+      }
+    },
+    {
+      "id": "B2-054",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Tệp gia.csv UTF-8 mở được, mỗi dòng là một phòng; ô trống chưa biết, 0 miễn phí hợp lệ.\n```csv\nid,gia\nP1,0\nP2,15\nP3,\nP4,30\n```\n```python\nimport csv\nwith open(\"gia.csv\", encoding=\"utf-8\") as f:\n    rows = list(csv.DictReader(f))\nv = [float(r[\"gia\"]) for r in rows if r[\"gia\"] != \"\"]\nprint(len(v), sum(v)/len(v))\n```\nDòng cuối in gì?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`2 22.5`"
+        },
+        {
+          "key": "B",
+          "markdown": "`3 11.25`"
+        },
+        {
+          "key": "C",
+          "markdown": "`3 15.0`"
+        },
+        {
+          "key": "D",
+          "markdown": "Báo ValueError do ô trống."
+        }
+      ],
+      "correctKey": "C",
+      "answerMarkdown": "Chỉ bỏ chuỗi rỗng; \"0\" được đổi thành 0.0 và giữ trong 3 giá. Tổng 45 chia 3.\n\n- **A sai:** Loại nhầm giá 0 hợp lệ bằng truthiness sau chuyển kiểu.\n- **B sai:** Đếm 3 giá nhưng chia tổng cho 4 dòng nguồn.\n- **D sai:** Bỏ qua điều kiện đã loại chuỗi rỗng trước float.\n\n**Mục tiêu:** nhóm chính 4; chính K40; phụ K41, K04. **Mức:** vận dụng. **Bẫy:** Ô trống khác giá 0; dùng đúng mẫu số của tập giá đã biết.\n\n**Đọc lại:** G§4; L18; T11–16,29–30; L21–23; T11–15,21,30; G§1; L14; T5,15,19.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 822,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1131,
+        "questionSha256": "77003659207a3c161b825aa01f77ee0e70c13902a16a068c501408021c4f3b2c",
+        "answerSha256": "657ee96fd576695659924f8a8a4707692f10af9fec6d5f0a6e1c3a19185918b2"
+      }
+    },
+    {
+      "id": "B2-055",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Mỗi chuỗi là ngày của một review riêng. Nguồn đầy đủ cho 2025 và chỉ đến 30/06/2026; mọi ngày đúng YYYY-MM-DD.\n```python\ndates = [\"2025-01-03\", \"2025-04-10\", \"2026-01-05\",\n         \"2025-09-02\", \"2026-05-20\", \"2025-12-15\"]\ndem = {}\nfor date in dates:\n    nam = date[:4]\n    dem[nam] = dem.get(nam, 0) + 1\nprint(sorted(dem.items()))\n```\nNhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "Đếm 2025: 4,2026: 2; đủ kết luận cả năm 2026 chắc chắn giảm một nửa."
+        },
+        {
+          "key": "B",
+          "markdown": "Đếm 2025: 4,2026: 2; phép đếm đã xác định nguyên nhân giảm là giá thuê tăng."
+        },
+        {
+          "key": "C",
+          "markdown": "Đếm 2025: 1,2026: 1; dict chỉ giữ một lần xuất hiện cho mỗi năm."
+        },
+        {
+          "key": "D",
+          "markdown": "Đếm 2025: 4,2026: 2; chưa thể kết luận xu hướng cả năm hoặc nguyên nhân từ hai số này."
+        }
+      ],
+      "correctKey": "D",
+      "answerMarkdown": "Lát cắt[: 4] lấy năm và dict cộng dồn số review. Năm 2026 mới nửa năm, khác cửa sổ quan sát của2025; số đếm không tự chỉ ra nguyên nhân.\n\n- **A sai:** So năm chưa trọn với năm trọn như cùng thời lượng.\n- **B sai:** Số đếm không cung cấp bằng chứng nguyên nhân giá tăng.\n- **C sai:** Nhầm khử trùng khóa với cộng dồn giá trị bằng get(nam, 0)+1.\n\n**Mục tiêu:** nhóm chính 5; chính K58; phụ K59. **Mức:** vận dụng. **Bẫy:** Code đếm đúng chưa đủ để suy xu hướng cả năm hoặc nguyên nhân.\n\n**Đọc lại:** G§1 slicing (cơ chế); T37–38; T37 snapshot 29/06/2026.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 846,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1145,
+        "questionSha256": "8ed9f192f56d18b68e56c1959cc69c88833ac6e3aad92be815aa569996338992",
+        "answerSha256": "83496939a663d6f61156754dad9bf36dad74addb85fb837833244bc6c882669f"
+      }
+    },
+    {
+      "id": "B2-056",
+      "kind": "quiz",
+      "group": "core",
+      "promptMarkdown": "Ba hàm đã có giao ước: load_csv(path) trả list các dict từ CSV; summarize(rows) nhận list đó và trả dict báo cáo; save_json(obj, path) nhận dict rồi ghi file. Tệp in.csv UTF-8 mở được, chứa:\n```csv\nid,gia\nP1,10\nP2,20\nP3,30\nP4,40\n```\nBiểu thức nào ghép đúng thứ tự và đúng kiểu đầu vào/đầu ra để ghi out.json?",
+      "options": [
+        {
+          "key": "A",
+          "markdown": "`save_json(summarize(load_csv(\"in.csv\")), \"out.json\")`"
+        },
+        {
+          "key": "B",
+          "markdown": "`summarize(save_json(load_csv(\"in.csv\"), \"out.json\"))`"
+        },
+        {
+          "key": "C",
+          "markdown": "`save_json(load_csv(summarize(\"in.csv\")), \"out.json\")`"
+        },
+        {
+          "key": "D",
+          "markdown": "`save_json(summarize(\"in.csv\"), \"out.json\")`"
+        }
+      ],
+      "correctKey": "A",
+      "answerMarkdown": "Đọc dữ liệu trước, dùng list rows để tổng hợp, rồi dùng dict báo cáo để ghi. Các hàm nhỏ ghép theo giao ước thay vì truyền đường dẫn vào hàm cần rows.\n\n- **B sai:** Ghi list thay vì dict báo cáo và đưa kết quả hàm ghi vào summarize.\n- **C sai:** Truyền chuỗi đường dẫn vào summarize rồi dùng báo cáo làm đường dẫn load.\n- **D sai:** Bỏ bước load; summarize cần list dict chứ không phải tên file.\n\n**Mục tiêu:** nhóm chính 6; chính K64. **Mức:** nền tảng. **Bẫy:** Đúng tên hàm nhưng sai trình tự hoặc kiểu dữ liệu giữa các bước.\n\n**Đọc lại:** G§3 hàm; L26–27; T33.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 865,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1159,
+        "questionSha256": "11c105534f1d0ea49dcd9b034ba491296fa1d11610ec50f0cb839b0100b08d8a",
+        "answerSha256": "23b7640ea4864c7cf2eabd0f6865d2591ee4339c1068299fc19fc79169178418"
+      }
+    },
+    {
+      "id": "B2-057",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Mỗi tuple là (mã phòng, giá USD/đêm); giá đều dương, khác nhau:\n```python\nphong = [(\"P1\",40), (\"P2\",10), (\"P3\",90), (\"P4\",20)]\ndat = max(phong, key=lambda p: p[1])\nprint(dat)\n```\nNêu output và kiểu kết quả. Viết một biểu thức lấy mã hai phòng rẻ nhất theo giá tăng dần; sau khi dùng sorted, phần tử đầu phong có còn là (\"P1\", 40) không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Output là `('P3',90)`, một tuple của bản ghi gốc, không chỉ là số 90. Hai mã rẻ nhất lấy bằng `[m for m,g in sorted(phong,key=lambda p:p[1])[:2]]`, cho `[\"P2\",\"P4\"]`. sorted tạo list kết quả nên phong[0] vẫn là (\"P1\", 40).\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Tuple P3,90 và giải thích max trả bản ghi | 0,75 |\n| Biểu thức đúng sắp giá rồi lấy hai mã P2, P4 | 0,75 |\n| Giải nén m, g đúng; đầu vào không đổi bởi sorted | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 2; chính K23; phụ K21, K13. **Mức:** vận dụng. **Bẫy:** Nhầm max trả số; nhầm sorted sửa list gốc hoặc lấy top-k theo mã.\n\n**Đọc lại:** G§3 lambda (ngữ cảnh); T20–22; G§3 lambda; T25,27; G§1; T25,27 (items/cặp).\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 882,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1173,
+        "questionSha256": "38c45026caad3a91939cf08e31178e096cafd539ac670301f2280c0e9cf1b7bd",
+        "answerSha256": "50c0a9d2961cbb01b40632bf55411cb3d3493ffaf710ba1e0990c28bac780f97"
+      }
+    },
+    {
+      "id": "B2-058",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Báo cáo chỉ nhận giá dương; giá 0 và giá âm không hợp lệ. Hàm sau được thử chuỗi bình thường, rỗng và N/A; chưa thử None:\n```python\ndef clean_price(s):\n    try:\n        return float(s.replace(\"$\", \"\"))\n    except (ValueError, TypeError):\n        return None\nraw = [\"$10\", None, \"$0\", \"$-2\"]\nv = list(map(clean_price, raw))\n```\n(a) Lỗi thực tế ở đâu, loại gì? (b) Sửa except đúng với thao tác; nêu v sau sửa và một comprehension lấy giá hợp lệ. (c) Ca 0/âm còn cần dù hàm đã bắt lỗi không, vì sao?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "None không có replace nên phát sinh AttributeError trước float; TypeError đang bắt không xử lý lỗi đó. Sửa `except (ValueError,AttributeError):`, v thành `[10.0,None,0.0,-2.0]`, lọc `[x for x in v if x is not None and x > 0]` được `[10.0]`. Vẫn cần ca 0/âm vì chuyển được sang số chưa đồng nghĩa hợp lệ, còn bộ thử cũ cũng thiếu None.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| AttributeError tại replace trên None, phân biệt với float(None) | 0,75 |\n| Except đúng, v và lọc >0 có bảo vệ None | 0,75 |\n| Ca 0/âm để kiểm nghiệp vụ, ca None kiểm đường lỗi thực tế | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 3; chính K30; phụ K32, K35. **Mức:** phân loại. **Bẫy:** Tên hàm giống nhau nhưng lỗi phụ thuộc thao tác chạy trước; test chưa đủ ca biên.\n\n**Đọc lại:** G§3 clean_price; L13; T12–13 (float không dấu tiền); G§3; L13,21; T12–13; G AI kiểm chứng; T13,16.\n\n**Kiểm chứng:** đã chạy code gốc, xác nhận AttributeError tại thao tác giải thích ở trên; đã chạy lời giải sửa và ca biên liên quan.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 892,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1193,
+        "questionSha256": "2ef37b06d9d751c1101b9e84cb76916221c8c6b03b0fd41304fc48df5b78c54b",
+        "answerSha256": "13db3f7198f7753d49c245df9399fed24166d376d8e5d970e121ec3aaf851076"
+      }
+    },
+    {
+      "id": "B2-059",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Tệp phong.csv UTF-8 hiện có nội dung cũ, được phép ghi đè và mở được. Cần ghi đúng một bản ghi dưới đây, có header; nhan chứa dấu phẩy trong một trường:\n```python\nrow = {\"ma\":\"S1\", \"nhan\":\"Nam, Bắc\", \"gia\":\"0\"}\n```\nViết đoạn ghi bằng csv.DictWriter, thứ tự cột ma, nhan, gia; chỉ rõ encoding và newline. Khi đọc lại bằng DictReader, nhan và gia là gì? Nêu vai trò newline=\"\"; không phải xử lý mọi biến thể CSV.",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "```python\nimport csv\nwith open(\"phong.csv\", \"w\", encoding=\"utf-8\", newline=\"\") as f:\n    w = csv.DictWriter(f, fieldnames=[\"ma\",\"nhan\",\"gia\"])\n    w.writeheader()\n    w.writerow(row)\n```\nDictReader đọc nhan là chuỗi \"Nam, Bắc\", gia là chuỗi \"0\"; writer tự trích dẫn trường chứa dấu phẩy. newline=\"\" để thư viện csv quản lý ký tự kết thúc dòng, tránh chuyển đổi xuống dòng thêm của lớp text; w ghi đè nội dung cũ.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| with open w, UTF8 và newline=\"\" | 0,5 |\n| DictWriter đúng fieldnames, writeheader và writerow | 0,75 |\n| Giữ nguyên một trường nhan và gia là chuỗi \"0\" | 0,5 |\n| Giải thích newline quản lý xuống dòng, không đổi kiểu dữ liệu | 0,25 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 4; chính K42; phụ K38, K39. **Mức:** vận dụng. **Bẫy:** Ghép CSV thủ công làm vỡ trường có dấu phẩy; đọc lại vẫn là chuỗi.\n\n**Đọc lại:** G§4 (CSV ngữ cảnh); L17; G§4; L17–19; T9,33; L17–18; T9–11,30.\n\n**Kiểm chứng:** đã chạy biểu thức/lời giải tương ứng trong dữ kiện đề và các kiểm tra bổ sung; câu không nhất thiết có lệnh print sẵn.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 906,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1213,
+        "questionSha256": "71227b480678d17c25d610af74c507a793bbd0cd6104de7e89409ccaf9961098",
+        "answerSha256": "9702c94deedab2b47b88b9d4e1ae5d547400b167940a94a4edaaf62487b973cf"
+      }
+    },
+    {
+      "id": "B2-060",
+      "kind": "essay",
+      "group": "core",
+      "promptMarkdown": "Cần đếm từng review theo năm. Nguồn có đủ 2025 nhưng chỉ đến 30/06/2026. Một nhóm lại dùng bảng phòng (mỗi dòng một phòng) thay vì bảng reviews (mỗi dòng một review):\n```python\nphong = [{\"id\":1,\"last_review\":\"2026-02-01\"},\n         {\"id\":2,\"last_review\":\"2025-12-02\"},\n         {\"id\":3,\"last_review\":\"\"},\n         {\"id\":4,\"last_review\":\"2026-03-02\"}]\nreviews = [{\"date\":\"2025-01-02\"}, {\"date\":\"2025-05-03\"},\n           {\"date\":\"2025-09-01\"}, {\"date\":\"2025-12-02\"},\n           {\"date\":\"2026-02-01\"}, {\"date\":\"2026-03-02\"}]\ndem = {}\nfor p in phong:\n    if p[\"last_review\"]:\n        nam = p[\"last_review\"][:4]\n        dem[nam] = dem.get(nam, 0) + 1\nprint(sorted(dem.items()))\n```\n(a) Output đang đếm gì? (b) Thay vòng lặp bằng đoạn ngắn để đếm đúng review; nêu kết quả. (c) Hai số theo năm có đủ kết luận thị trường 2026 suy giảm hoặc xác định nguyên nhân không?",
+      "options": [],
+      "correctKey": null,
+      "answerMarkdown": "Hiện in `[('2025',1),('2026',2)]`, đếm phòng theo năm của review gần nhất, không phải mọi review. Đếm đúng:\n```python\ndem = {}\nfor r in reviews:\n    nam = r[\"date\"][:4]\n    dem[nam] = dem.get(nam, 0) + 1\n```\nKết quả2025: 4,2026: 2; 2026 mới nửa năm nên chưa so trực tiếp để suy cả năm, và số đếm riêng cũng chưa chứng minh nguyên nhân biến động.\n\n**Hướng dẫn chấm — 2 điểm**\n\n| Ý cần đạt | Điểm |\n|---|---:|\n| Output1/2 và đúng đơn vị phòng theo review gần nhất | 0,75 |\n| Đổi sang reviews, date[: 4], cộng dồn và kết quả4/2 | 0,75 |\n| Giới hạn năm chưa trọn và không suy nguyên nhân từ số đếm | 0,5 |\n\nChấp nhận cách đúng tương đương; xem quy ước chấm ở đầu tệp.\n\n**Mục tiêu:** nhóm chính 5; chính K58; phụ K59, K48. **Mức:** phân loại. **Bẫy:** Thao tác đếm/năm đúng nhưng dùng sai bảng và sai đơn vị quan sát.\n\n**Đọc lại:** G§1 slicing (cơ chế); T37–38; T37 snapshot 29/06/2026; G§1,§3; L14,26; T15,33,35,37.\n\n**Kiểm chứng:** đã chạy code gốc, đối chiếu output; lời giải sửa/ca biên nếu có được kiểm riêng.",
+      "source": {
+        "questionFile": "Bai2_60_cau_hoi.md",
+        "questionLine": 914,
+        "answerFile": "Bai2_Dap_an_chi_tiet_va_huong_dan_cham.md",
+        "answerLine": 1241,
+        "questionSha256": "1487e432fef69b5ae6111da94d059bdc7cbcf2ce0bd48c26e2a556d737c6e4b1",
+        "answerSha256": "68a2e12c8cd1ab2b6232cb130ba8803e5755396653f45c31fe1c2b0ec6a14eb8"
+      }
+    }
+  ]
+}

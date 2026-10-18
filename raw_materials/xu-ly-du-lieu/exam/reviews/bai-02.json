@@ -1,0 +1,865 @@
+{
+  "lesson": "02",
+  "items": [
+    {
+      "id": "B2-001",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Tự coi phép cộng chuỗi đầu tiên là cộng số.",
+        "B": "Đúng: Cộng hai chuỗi là nối thành \"123\", sau chuyển kiểu, 12 + 3.0 là 15.0.",
+        "C": "Sai: Bỏ qua việc int/float chuyển chuỗi sang số trước phép cộng thứ hai.",
+        "D": "Sai: Đảo cơ chế cộng chuỗi và cộng số."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 123 15.0. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-002",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: None, số 0 và chuỗi rỗng là falsy, \"0\" là chuỗi không rỗng, số âm khác 0 là truthy.",
+        "B": "Sai: Coi chuỗi \"0\" như số 0 khi kiểm truthiness.",
+        "C": "Sai: Coi truthy là phải lớn hơn 0, nên loại nhầm số âm.",
+        "D": "Sai: Coi số 0 là truthy chỉ vì nó là dữ liệu đã biết."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [False, False, False, False, True, True]. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-003",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Lọc đúng nhưng chưa đổi từ gam sang kg.",
+        "B": "Sai: Tự loại kiện có khối lượng0 đang được đề cho hợp lệ.",
+        "C": "Đúng: Phải giữ cả điều kiện bảo vệ None, giữ 0 và phép đổi đơn vị, kết quả [1.2,0.0,2.4].",
+        "D": "Sai: Loại0 nhưng giữ -10, truthy không thay được quy tắc không âm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi biểu thức list comprehension lọc các giá trị không âm và đổi đơn vị: Kết quả thu được danh sách `[1.2, 0.0, 2.4]`. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-004",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Sắp tên thành K1, K2, K3 rồi zip theo vị trí với4,9,2, quan hệ gốc đã sai, zip không tự tìm đúng kho.",
+        "B": "Sai: Tưởng zip tự dùng quan hệ kho/số kiện ban đầu dù tên đã được sắp riêng.",
+        "C": "Sai: Đọc từ cuối dãy số kiện thay vì ghép theo cùng chỉ mục.",
+        "D": "Sai: Sắp độc lập cả dãy số kiện tăng dần trước khi ghép với tên đã sắp."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 9. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-005",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Gán cho hàm một quy tắc loại âm mà thân hàm chưa viết.",
+        "B": "Đúng: Replace rồi float chuyển được -5 và 0, hàm chưa có điều kiện nghiệp vụ để loại giá âm. Chuỗi rỗng phát sinh ValueError và trả None.",
+        "C": "Sai: Tưởng chuỗi rỗng được float chuyển thành 0 thay vì báo lỗi.",
+        "D": "Sai: Tưởng chuyển kiểu đã bao gồm việc loại mọi giá không dương."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [2050.0, -5.0, None, 0.0]. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-006",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Tưởng with chỉ mở file và cần gọi close riêng.",
+        "B": "Sai: Tưởng đóng file tự xóa giá trị chuỗi đã đọc.",
+        "C": "Sai: Nhầm cả trạng thái file và dữ liệu đã đọc.",
+        "D": "Đúng: With đã đóng file khi ra khỏi khối, chuỗi đã đọc vẫn tồn tại trong text."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi với tệp giả lập note.txt (UTF-8, 'Dữ liệu'): F.closed là True sau khối with, text giữ chuỗi 'Dữ liệu'. Khớp đáp án D.",
+        "limitations": "Mô phỏng tệp văn bản trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-007",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Tưởng DictReader tự đổi chuỗi số sang số nguyên.",
+        "B": "Đúng: DictReader giữ luot là chuỗi, không chuỗi nào bằng số 0, còn hai dòng có chuỗi \"0\".",
+        "C": "Sai: Đảo vai trò so với số 0 và chuỗi \"0\".",
+        "D": "Sai: Nhận ra kiểu chuỗi nhưng bỏ qua hai chuỗi \"0\" trong file."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi với tệp rev.csv và csv.DictReader: Lọc r['luot'] == '0' thu được 2 hàng (P2, P4), còn r['luot'] == 0 không khớp hàng nào vì giá trị đọc vào là chuỗi. Khớp đáp án B.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-008",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [None, 0, 5].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-009",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến TypeError (float() argument must be a string or a real number, not 'NoneType').",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-010",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 30.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-011",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Ba ngày cần lấy chỉ mục 1,2,3, stop 4 không được lấy. Tổng là 20.",
+        "B": "Sai: Bỏ ngày thứ Năm vì stop 3 không được lấy.",
+        "C": "Sai: Dịch cả khoảng sang thứ Tư đến thứ Sáu.",
+        "D": "Sai: Lấy thêm thứ Hai, thành bốn ngày."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi cắt lát danh sách và tính tổng: Cắt lát `luot[1:4]` lấy các phần tử tại vị trí 1, 2, 3 gồm `[7, 5, 8]`, tổng tính được là `20`. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-012",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Sắp theo tên khu thay vì số phòng.",
+        "B": "Sai: Sắp số phòng tăng dần vì bỏ reverse=True.",
+        "C": "Đúng: Mỗi phần tử items là cặp (khóa, giá trị), key lấy số phòng, reverse=True giảm dần rồi lấy hai cặp đầu.",
+        "D": "Sai: Nhầm sorted các cặp trả riêng giá trị của key."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('A', 8), ('C', 6)]. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-013",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Gán lỗi của float(\"N/A\") cho float(None).",
+        "B": "Đúng: Float không nhận None như một số/chuỗi số, None cũng không có phương thức replace. Lỗi phụ thuộc thao tác, không phải tên cột.",
+        "C": "Sai: Tưởng chưa tới float mà gọi replace trên None cũng là lỗi chuyển giá trị số.",
+        "D": "Sai: Đảo thao tác gọi hàm chuyển kiểu và tra phương thức."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án B.",
+        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+      }
+    },
+    {
+      "id": "B2-014",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Int bao gồm số âm, type hint không làm kiểm tra nghiệp vụ.",
+        "B": "Sai: Int(None) phát sinh TypeError, hàm trả None.",
+        "C": "Đúng: Docstring và thân hàm mô tả chuyển kiểu, type hint không chặn số âm. Quy tắc dương cần bước kiểm riêng.",
+        "D": "Sai: Chuỗi \"-2\" chuyển được sang số nguyên -2."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: -2 None. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-015",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Tự giả định dem đã được chuyển thành int.",
+        "B": "Sai: Đọc như sắp chuỗi giảm dần thay vì tăng dần.",
+        "C": "Đúng: Chuỗi tăng dần là \"100\",\"20\",\"3\",\"8\". Hai mã C, B được chọn, chưa phải hai lượt có số đêm nhỏ nhất.",
+        "D": "Sai: Tưởng sorted chỉ lấy hai dòng đầu theo thứ tự file."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi với dem.csv: Sắp xếp theo chuỗi so_dem tăng dần cho ra ['100', '20', '3', '8'], hai dòng đầu là C (20) và B (8). Khớp đáp án C.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-016",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Nhầm null không có dấu nháy cũng thành chuỗi.",
+        "B": "Sai: Giữ nguyên true/false của văn bản JSON thay vì bool Python.",
+        "C": "Đúng: Số 4 thành int, null thành None, true/false thành True/False, phần tử có dấu nháy \"null\" vẫn là chuỗi.",
+        "D": "Sai: Tưởng số 4 trong JSON được đọc thành chuỗi \"4\" như CSV."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 5 None True 'null' False. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-017",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Nhầm mkdir thành lệnh xóa và dựng lại.",
+        "B": "Đúng: Parents hỗ trợ tạo cha khi cần, exist_ok cho phép đích là thư mục đã tồn tại, không xóa file hay cây cũ.",
+        "C": "Sai: Bỏ qua exist_ok=True khi đích đã là thư mục.",
+        "D": "Sai: Bỏ qua parents=True cho phép tạo thư mục cha còn thiếu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi thao tác tạo thư mục trong thư mục tạm: Tham số `parents=True` hỗ trợ tạo các thư mục cha trung gian khi cần thiết, và `exist_ok=True` cho phép thực thi lặp lại mà không phát sinh lỗi khi thư mục đã tồn tại, đồng thời tệp `out/keep.txt` cũ vẫn được giữ nguyên vẹn. Khớp phương án B.",
+        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+      }
+    },
+    {
+      "id": "B2-018",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: |An | 1,200|.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-019",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 0 5.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-020",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['A', 'B'].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-021",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Tưởng định dạng s đồng thời làm tròn giá trị gốc gia.",
+        "B": "Sai: Bỏ qua dấu phẩy phân cách nghìn.",
+        "C": "Đúng: Dấu phẩy nhóm hàng nghìn, .0f hiển thị không có phần thập phân, làm tròn12340.75 thành 12341 khi hiển thị. gia vẫn là số ban đầu.",
+        "D": "Sai: Dùng hiệu ứng .2f thay vì .0f."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 12,341 12340.75. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-022",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Set comprehension bỏ trùng loạiB, sorted tạo thứ tự A, B, C, D không có trong tập.",
+        "B": "Sai: Coi comprehension dùng ngoặc nhọn vẫn tạo list giữ trùng và thứ tự dòng.",
+        "C": "Sai: Có sắp xếp nhưng chưa hiểu set đã loại trùng.",
+        "D": "Sai: Nhầm kiểm thành viên với việc D có thể là một nhãn loại trong miền dữ liệu."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['A', 'B', 'C'] False. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-023",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Lấy phòng có id lớn nhất hoặc dòng cuối thay vì key gia.",
+        "B": "Sai: Chọn cực tiểu thay vì cực đại.",
+        "C": "Đúng: Max trả bản ghi có khóa gia lớn nhất, nên vẫn tra được id và gia của cùng phòng.",
+        "D": "Sai: Nhầm max trả riêng giá trị của hàm key, thực tế p là dict."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: P3 90. Khớp hoàn toàn với phương án C.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-024",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Gọi hàm ngay mà thiếu đối số s, phát sinh TypeError trước khi map chạy.",
+        "B": "Đúng: Đối số đầu map là chính hàm, chưa gọi, list thu các kết quả áp hàm lên từng chuỗi.",
+        "C": "Sai: Gọi hàm một lần trên cả list, list không có phương thức replace.",
+        "D": "Sai: Tạo list chứa các tham chiếu hàm, chưa áp hàm lên s."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi hàm `map` với đối số đầu là tên hàm `clean_price` và đối số thứ hai là danh sách chuỗi: Hàm chuyển đổi từng phần tử và `list()` thu được danh sách số thực `[2.0, 0.0, 5.0, 8.0]`. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-025",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Tưởng biến truoc giữ liên kết sống với nội dung file.",
+        "B": "Đúng: Mở w ghi đè nội dung file, biến truoc đã nhận chuỗi cũ nên không bị đổi theo file.",
+        "C": "Sai: Nhầm ghi đè w với ghi nối.",
+        "D": "Sai: Tưởng with chỉ đóng file mà không lưu nội dung đã ghi."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi thao tác đọc ghi tệp trong thư mục tạm: Đọc nội dung ban đầu nhận chuỗi `cũ`, sau đó mở tệp với chế độ `w` ghi đè chuỗi `mới`, đọc lại nhận chuỗi `mới`. Lệnh `print(truoc, sau)` in ra `cũ mới`. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+      }
+    },
+    {
+      "id": "B2-026",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Bỏ trích dẫn trường có dấu phẩy, khiến dòng giống ba trường.",
+        "B": "Sai: Bỏ qua writeheader đã ghi dòng tên cột.",
+        "C": "Đúng: Fieldnames quyết định cột và writeheader ghi tiêu đề. Giá có dấu phẩy được đặt trong dấu nháy để không thành hai trường, newline=\"\" để csv quản lý xuống dòng.",
+        "D": "Sai: Tưởng DictWriter tự làm sạch giá và chuyển chuỗi tiền thành số."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi csv.DictWriter với fieldnames=['id', 'gia']: Header và hàng dữ liệu được ghi đúng, giá chứa dấu phẩy được bọc ngoặc kép. Khớp đáp án C.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-027",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: List lẻ cho 5, list chẵn sắp 10,20,30,140 có trung vị 25 và trung bình 50. sorted tạo list mới nên gia[0] vẫn140, chênh lệch hai thống kê không tự xác nhận lỗi dữ liệu.",
+        "B": "Sai: Sorted trong hàm tạo list mới, không sắp tại chỗ gia.",
+        "C": "Sai: Đảo trung bình 50 và trung vị 25.",
+        "D": "Sai: Không có lệnh loại140, giá lớn không tự bị hàm trung vị xóa."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 5 50.0 25.0 140. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-028",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [15, 16].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-029",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [30.0, -3.0] 13.5.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-030",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi tạo module cleaning.py và import: Hàm clean_price đổi '$45' thành 45.0, list comprehension tính trung bình ra 45.0. Khớp lời giải tự luận.",
+        "limitations": "Tạo module Python cục bộ trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-031",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Tưởng chỉ ghép ký tự % cũng tự đổi tỷ lệ sang phần trăm.",
+        "B": "Sai: Bỏ qua phép đổi thang của đuôi định dạng %.",
+        "C": "Sai: Nhân thêm 100 ngoài hiệu ứng của định dạng và nhầm f cũng đổi thang.",
+        "D": "Đúng: Đuôi % tự nhân 100 để hiển thị, .1f chỉ định dạng số 0.04 thành 0.0 rồi ghép ký tự %. Không có phép gán sửa p."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4.0% 0.0%. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-032",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Ghép các cặp gốc trước, sau đó sắp theo giá và lấy hai cặp: P3–10, P2–20.",
+        "B": "Sai: Sắp riêng giá làm P4 bị ghép với10.",
+        "C": "Sai: Sắp riêng mã làm P1 bị ghép với50.",
+        "D": "Sai: Sắp theo mã chọn P1–40, P2–20, không phải hai phòng rẻ nhất."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi ghép cặp theo vị trí ban đầu rồi sắp xếp theo giá: Hàm `zip(ma, gia)` tạo các cặp tương ứng, sau đó sắp xếp tăng dần theo giá trị và lấy hai phần tử đầu tiên cho kết quả `[('P3', 10), ('P2', 20)]`. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-033",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Tưởng gán b=a đã sao chép.",
+        "B": "Sai: Tưởng c vẫn là alias của a và hai thao tác đều lan sang cả hai.",
+        "C": "Sai: Hiểu append tách biệt nhưng tưởng sửa a còn lan sang bản copy phẳng c.",
+        "D": "Đúng: B và a cùng list nên sửa b[1] sửa a, c là list ngoài khác, được tạo trước lúc đổi3 thành 9."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [7, 9, 5, 1] [7, 3, 5, 1, 2]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-034",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Type hint mô tả kiểu dự kiến, không chặn append vào list ngoài.",
+        "B": "Sai: Hint nằm ở đầu ra và không ép kiểm tra đầu vào, float(\"10\") thành công.",
+        "C": "Sai: Đúng giá trị trả về chưa đủ đáp ứng điều kiện không sửa ngoài.",
+        "D": "Đúng: Hàm đã chuyển được nhưng có tác động ngoài qua append. Type hint/docstring không tự bảo đảm tính chất không sửa biến ngoài."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 10.0 ['10']. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-035",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Ensure_ascii=False cho chữ không ASCII được ghi trực tiếp, indent dùng khoảng trắng/xuống dòng. Số 2 vẫn đọc lại thành số.",
+        "B": "Sai: Cờ này không quyết định kiểu số khi đọc JSON.",
+        "C": "Sai: Nhầm JSON với giá trị trường CSV qua DictReader.",
+        "D": "Sai: Indent là độ thụt dòng, không phải định dạng số .2f."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi ghi và đọc lại bao_cao.json với ensure_ascii=False: JSON lưu trực tiếp ký tự tiếng Việt có dấu, đọc lại in ra 'Đồi 3'. Khớp đáp án A.",
+        "limitations": "Mô phỏng tệp JSON trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-036",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Chọn giá cao nhất toàn bộ khu, bỏ điều kiện hai khu đông nhất.",
+        "B": "Đúng: Hai khu đông nhất là A, C, trong tập này C có giá trung vị 50 cao hơn 20 của A. B đắt nhất toàn bộ nhưng không thuộc tập được xét.",
+        "C": "Sai: Dừng ở khu đông nhất mà chưa so giá trong tập hai khu.",
+        "D": "Sai: Chọn khu ít phòng nhất do đọc chiều sắp xếp ngược."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: C. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-037",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Dùng DATA thay vì DATA.parent.",
+        "B": "Sai: Tưởng glob mẫu *.csv tự tìm đệ quy qua mọi thư mục con.",
+        "C": "Sai: Bỏ qua mẫu *.csv và tưởng trả tên các thư mục con.",
+        "D": "Đúng: Parent của HaNoi là data/raw, glob(\"*.csv\") chỉ khớp các file CSV ngay ở đó, không tự đi vào hai thư mục con."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi Path('data/raw/HaNoi').parent: Trả về Path('data/raw'), glob('*.csv') chỉ tìm thấy 1 tệp tổng. Khớp đáp án D.",
+        "limitations": "Mô phỏng cây thư mục trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-038",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3.",
+        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+      }
+    },
+    {
+      "id": "B2-039",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 30.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-040",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi đọc p.csv với ô trống và giá 0: Bỏ qua ô trống, giữ giá 0.0 và 30.0, tính trung bình hai giá biết ra 15.0. Khớp lời giải tự luận.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-041",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Đếm chỉ mục âm như thể -1 đã bỏ qua phần tử cuối.",
+        "B": "Đúng: Chỉ mục 0 lấy đầu dãy, -1 lấy cuối, -2 lấy phần tử liền trước cuối.",
+        "C": "Sai: Đếm phần tử đầu bằng chỉ mục 1 thay vì0.",
+        "D": "Sai: Đọc -2 thành phần tử thứ hai từ đầu, thay vì thứ hai từ cuối."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 3 9. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-042",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Key=int so theo số nhưng trả các phần tử chuỗi gốc, sorted không key so từ điển.",
+        "B": "Sai: Tưởng hàm key còn thay phần tử kết quả thành int.",
+        "C": "Sai: Đảo sắp theo số và theo chuỗi.",
+        "D": "Sai: Tưởng sorted tự nhận biết chuỗi chứa số ngay cả khi không có key."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ['3', '8'] ['120', '3']. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-043",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Bắt hẹp hơn không sửa tên replcae và vẫn có thể che lỗi này.",
+        "B": "Sai: Hai ca đều kiểm đầu ra None, không kiểm chuyển thành công.",
+        "C": "Sai: Exception bắt cả AttributeError này, nên lỗi lập trình bị che.",
+        "D": "Đúng: Replcae viết sai gây AttributeError ngay cả với \"$10\", except Exception che lỗi. Bắt AttributeError có chủ đích cho None cũng không tự phát hiện lỗi gõ này: Phải sửa tên và có ca đầu vào bình thường."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: None. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-044",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Đảo nguồn file với nguồn chuỗi.",
+        "B": "Sai: Dùng hàm ghi thay cho đọc, đồng thời thiếu đối số file đích của dump.",
+        "C": "Đúng: Load nhận file có phương thức read, loads nhận văn bản JSON. dump là ghi đối tượng ra file.",
+        "D": "Sai: Dùng dump để đọc chuỗi, không đúng vai trò API."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án C.",
+        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+      }
+    },
+    {
+      "id": "B2-045",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Sai giá 1,3,4, sai đêm3,4,6. Hợp có 4 phòng khác nhau, rows vẫn6 dòng vì chưa có lệnh xóa.",
+        "B": "Sai: Cộng hai số lỗi mà đếm trùng phòng 3,4.",
+        "C": "Sai: Tưởng tính/gắn cờ tự xóa4 dòng khỏi rows.",
+        "D": "Sai: Dùng giao (cùng sai cả hai) thay điều kiện sai ít nhất một."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: 4 6. Khớp hoàn toàn với phương án A.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-046",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Suy ngược từ kiểm số review 0 sang mọi dòng có ngày trống.",
+        "B": "Sai: All chỉ duyệt chua đã lọc, không tự quay lại toàn rows.",
+        "C": "Sai: Quy tắc đang so chuỗi bằng \"0\", không dùng truthiness để suy số review.",
+        "D": "Đúng: Chua chỉ gồm A, D, cả hai có ngày trống. B có 1 review nhưng thiếu ngày, nên phép kiểm một chiều không phát hiện được."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi phép lọc và kiểm tra điều kiện: Danh sách `chua` chỉ gồm hai bản ghi A và D đều có ngày trống nên biểu thức `assert` vượt qua thành công, tuy nhiên phép kiểm một chiều này bỏ sót bản ghi B có 1 lượt review nhưng ngày vẫn bị trống. Khớp phương án D.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-047",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [-4, 8] 2.0.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-048",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi biểu thức lọc trên danh sách phòng: Thu được danh sách mã `['P2', 'P4']` và từ điển ánh xạ `{'P2': 0, 'P4': 50}`, loại bỏ chính xác các bản ghi có giá `None` hoặc giá âm.",
+        "limitations": "Thực thi trên môi trường Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-049",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến TypeError ('>' not supported between instances of 'NoneType' and 'int').",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-050",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: True.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-051",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Int của chuỗi \"3.5\" phát sinh ValueError, không tự cắt phần thập phân.",
+        "B": "Sai: Vẫn là chuỗi, không trở thành số thực để cộng số.",
+        "C": "Sai: Chuỗi không rỗng cho True, không phải số đo3.5.",
+        "D": "Đúng: Float chuyển chuỗi thập phân thành số thực 3.5, int không nhận trực tiếp chuỗi dạng này."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án D.",
+        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+      }
+    },
+    {
+      "id": "B2-052",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: Tưởng sorted(items) mặc định dùng số kiện tăng dần.",
+        "B": "Sai: Bỏ qua reverse=True ở cách sắp theo số.",
+        "C": "Sai: Đảo cách sắp theo mã và theo số.",
+        "D": "Đúng: Sắp cặp mặc định xét khóa chuỗi A, B,…, key lấy giá trị và reverse=True chọn9,5."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('A', 9), ('B', 2)] [('A', 9), ('C', 5)]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-053",
+      "correctKey": "B",
+      "optionExplanations": {
+        "A": "Sai: Tưởng int tự chuyển chuỗi thập phân qua float rồi cắt phần lẻ.",
+        "B": "Đúng: Int(\"3.0\") gây ValueError, còn \"-2\" và \"0\" đổi được. Chưa có điều kiện loại không dương.",
+        "C": "Sai: Tự thêm quy tắc dương vào một hàm chỉ chuyển kiểu.",
+        "D": "Sai: Vừa tự chuyển chuỗi \"3.0\", vừa tự loại0 và âm."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [3, None, -2, 0]. Khớp hoàn toàn với phương án B.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-054",
+      "correctKey": "C",
+      "optionExplanations": {
+        "A": "Sai: Loại nhầm giá 0 hợp lệ bằng truthiness sau chuyển kiểu.",
+        "B": "Sai: Đếm 3 giá nhưng chia tổng cho 4 dòng nguồn.",
+        "C": "Đúng: Chỉ bỏ chuỗi rỗng, \"0\" được đổi thành 0.0 và giữ trong 3 giá. Tổng 45 chia 3.",
+        "D": "Sai: Bỏ qua điều kiện đã loại chuỗi rỗng trước float."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi đọc gia.csv: Ô trống bị bỏ qua, giá '0' được chuyển thành 0.0, tổng ba giá hợp lệ [0.0, 15.0, 30.0] là 45.0, trung bình là 15.0. In ra '3 15.0'. Khớp đáp án C.",
+        "limitations": "Mô phỏng tệp CSV trong thư mục tạm."
+      }
+    },
+    {
+      "id": "B2-055",
+      "correctKey": "D",
+      "optionExplanations": {
+        "A": "Sai: So năm chưa trọn với năm trọn như cùng thời lượng.",
+        "B": "Sai: Số đếm không cung cấp bằng chứng nguyên nhân giá tăng.",
+        "C": "Sai: Nhầm khử trùng khóa với cộng dồn giá trị bằng get(nam, 0)+1.",
+        "D": "Đúng: Lát cắt[: 4] lấy năm và dict cộng dồn số review. Năm 2026 mới nửa năm, khác cửa sổ quan sát của2025, số đếm không tự chỉ ra nguyên nhân."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('2025', 4), ('2026', 2)]. Khớp hoàn toàn với phương án D.",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-056",
+      "correctKey": "A",
+      "optionExplanations": {
+        "A": "Đúng: Đọc dữ liệu trước, dùng list rows để tổng hợp, rồi dùng dict báo cáo để ghi. Các hàm nhỏ ghép theo giao ước thay vì truyền đường dẫn vào hàm cần rows.",
+        "B": "Sai: Ghi list thay vì dict báo cáo và đưa kết quả hàm ghi vào summarize.",
+        "C": "Sai: Truyền chuỗi đường dẫn vào summarize rồi dùng báo cáo làm đường dẫn load.",
+        "D": "Sai: Bỏ bước load, summarize cần list dict chứ không phải tên file."
+      },
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "reasoning_audit",
+        "evidence": "Đối chiếu đặc tả cú pháp và kiểu dữ liệu chuẩn của Python 3. Khớp phương án A.",
+        "limitations": "Thẩm định bằng phân tích logic học thuật chuẩn Python 3."
+      }
+    },
+    {
+      "id": "B2-057",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: ('P3', 90).",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    },
+    {
+      "id": "B2-058",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi kiểm chứng ngoại lệ: Phát sinh lỗi dự kiến AttributeError ('NoneType' object has no attribute 'replace').",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5."
+      }
+    },
+    {
+      "id": "B2-059",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "mock_file_execution",
+        "evidence": "Thực thi kiểm chứng trong thư mục tạm: Ghi bản ghi bằng `csv.DictWriter` với `newline=\"\"`, khi đọc lại bằng `csv.DictReader` trường `nhan` vẫn giữ nguyên chuỗi `\"Nam, Bắc\"` nhờ cơ chế tự động bao dấu nháy kép của chuẩn CSV, và trường `gia` đọc được là chuỗi `\"0\"`.",
+        "limitations": "Thực thi kiểm chứng trong thư mục tạm độc lập, không truy cập tài nguyên ngoài."
+      }
+    },
+    {
+      "id": "B2-060",
+      "correctKey": null,
+      "optionExplanations": {},
+      "explanationMarkdown": "",
+      "verification": {
+        "method": "python_execution",
+        "evidence": "Thực thi mã Python thực tế, kết quả in ra: [('2025', 1), ('2026', 2)].",
+        "limitations": "Thực thi trên Python 3.14.7, NumPy 2.5.2, pandas 3.0.5 với mặc định Copy-on-Write."
+      }
+    }
+  ]
+}
