@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEWED_WITH_TRANSPORT_LIMITATION
 
 # Review the Airbnb assignment after explaining assigned inputs
 
@@ -21,3 +21,5 @@ Verification: Record input SHA256, run the lecture text review on the output, `g
 Output: `brief.md`, `findings.json` with passage/problem/change/reason for each material edit, and `report.md` including all reads, files written, verification and any blocker. Save artifacts incrementally before final response because prior bridge calls lost their transport result.
 
 Stop: One initial call and at most two corrections in the same scope. Preserve worktree on failure. No work outside the three named output files.
+
+Result: One call saved all three artifacts with 51 proposed edits, then returned the known NoneType bridge error. Codex read the complete diff, verified the original input hash, seven unchanged code blocks and 48 baseline file hashes, and adapted five concerns (findings 6, 15, 21, 33 and 43). Other rewrites were not applied. In particular, the claim that a DataFrame index only expresses row position was rejected, as were blanket JSON-format claims, unnecessary emphatic prose and new mandatory processed-data wording. No raw assigned workbook was copied. Codex separately fixed figure captions and mobile tables and retained all official source requirements.

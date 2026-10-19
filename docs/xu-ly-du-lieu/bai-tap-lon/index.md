@@ -3,6 +3,7 @@ title: "Đề bài tập lớn: Phân tích thị trường Airbnb"
 description: "Giải thích đầy đủ yêu cầu, dữ liệu, sản phẩm bàn giao và cách đánh giá bài tập lớn Inside Airbnb."
 course: xu-ly-du-lieu
 section: project
+pageClass: data-project-brief
 outline: [2, 3]
 prev: false
 next: false
@@ -23,7 +24,7 @@ Sản phẩm gồm mã nguồn chạy lại được và một báo cáo giải 
 
 Đây là bài tập lớn Inside Airbnb của học phần Lập trình xử lý dữ liệu, mã UET.DSE2049, học kì 1 năm học 2026–2027, thuộc Viện Trí tuệ nhân tạo, Trường Đại học Công nghệ, ĐHQGHN. Bài tập lớn và vấn đáp chiếm **60% điểm học phần**. Các mốc, danh sách dữ liệu và điều kiện bàn giao trong trang này được đối chiếu với [đề bài chính thức](https://courses.iaidev.com/programming-for-data-processing/2627-1/projects/project_airbnb.html).
 
-[Ghi chú diễn giải được cung cấp thêm](https://docs.google.com/document/d/17hqvglaYTn27vNw7siVPxpMGhL6goMkDngQfSOMF8NY/edit?tab=t.0) có một số thông tin khác với trang đề. Những điểm cần đối chiếu được giải thích tại [mục 15](#doi-chieu-ghi-chu), đặc biệt là thành phố, số lượng mẫu và cách chia khu vực. Nhóm cần phân biệt yêu cầu chung với thông báo bổ sung dành riêng cho dữ liệu được giao.
+Ngoài đề chung, nhóm còn có thể được giao một bảng hướng dẫn kèm danh sách mã dữ liệu và mẫu đánh giá. [Mục 15](#doi-chieu-ghi-chu) giải thích cách đọc các phần này và dùng chúng để lấy đúng dữ liệu của nhóm. Các bảng minh họa trong mục đó đều dùng dữ liệu giả định.
 
 Nếu đang chuẩn bị tải dữ liệu, có thể đến ngay phần [phân biệt bảy loại tệp và cách nối các bảng](#cac-tep-du-lieu), rồi quay lại các bước QA và KPI sau khi hiểu đầu vào.
 
@@ -58,7 +59,7 @@ Khi một bước chạy được, lưu kết quả và nối nó với bước 
 | Chuẩn bị review, nhãn tay và hai phương pháp | Giữ liên kết từ văn bản đến nhãn tay, dự đoán baseline và dự đoán LLM để chấm cùng các trường hợp. |
 | Nối các bước, sinh hình và hoàn thiện báo cáo | Một lệnh đọc cấu hình, chạy các phần cần thiết và tạo ra các tệp đã mô tả trong README. |
 
-“Xong bước” không chỉ nghĩa là chương trình không báo lỗi. Chẳng hạn, tải được một tệp nhưng nhầm ngày snapshot thì đầu vào vẫn sai. Phần thực hành sau sẽ minh họa một cách xây toàn bộ quy trình, còn tại đây nhóm cần hiểu công việc và cách tự xác nhận kết quả của từng bước.
+Một bước hoàn thành khi kết quả đáp ứng yêu cầu. Chẳng hạn, tải được một tệp nhưng nhầm ngày snapshot thì đầu vào vẫn sai, dù chương trình không báo lỗi. Phần thực hành sau sẽ minh họa một cách xây toàn bộ quy trình, còn tại đây nhóm cần hiểu công việc và cách tự xác nhận kết quả của từng bước.
 
 ## 2. Những từ cần hiểu trước khi bắt đầu
 
@@ -148,6 +149,10 @@ Tại [Get the Data](https://insideairbnb.com/get-the-data/), mỗi khối thàn
 | `neighbourhoods.csv` | Danh sách tên hoặc nhóm khu vực trong `visualisations/`. Có tên khu vực không có nghĩa đã có đường bao để vẽ bản đồ. |
 | `neighbourhoods.geojson` | Hình học ranh giới và thuộc tính khu vực trong `visualisations/`, dùng cho bản đồ và liên kết thông tin không gian. |
 
+![Hình 1: Bảy liên kết tải trong cột File Name trên Inside Airbnb.](img/inside-airbnb-downloads.png)
+
+Ảnh chụp riêng cột tên tệp trên [Inside Airbnb](https://insideairbnb.com/get-the-data/). Có hai liên kết listings và hai liên kết reviews, nên cần phân biệt cả đuôi tệp lẫn thư mục. Vai trò của từng tệp được giải thích trong bảng trên.
+
 Các mô tả dưới đây được đối chiếu [Data Dictionary của Inside Airbnb](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit) và đọc thử cấu trúc các tệp Santiago ngày 23/09/2026. Đây là một lần kiểm tra cấu trúc, không thay đổi bốn snapshot bắt buộc của đề. Các cột có thể thay đổi theo phiên bản, nên script phải kiểm tra lại tệp nhóm được giao.
 
 #### `listings.csv.gz`: Thông tin một chỗ ở trong một snapshot
@@ -161,9 +166,9 @@ Mỗi hàng mô tả một listing được ghi nhận trong lần thu thập đ
 - Giá và điều kiện lưu trú: `price`, `minimum_nights`, `maximum_nights` cùng các trường liên quan tùy phiên bản.
 - Thống kê review và lịch: Chẳng hạn `number_of_reviews`, `review_scores_rating`, `availability_365` nếu có trong snapshot.
 
-`number_of_reviews` là một con số tổng hợp, không phải phần bình luận để đưa vào LLM. `amenities` là danh sách tiện nghi, có thể được lưu như văn bản biểu diễn JSON, nên không tách danh sách một cách tùy tiện bằng mọi dấu phẩy.
+`number_of_reviews` là số lượng đánh giá tổng hợp, không chứa văn bản bình luận để đưa vào LLM. `amenities` là danh sách tiện nghi, có thể được lưu như văn bản biểu diễn JSON. Cần đọc đúng cấu trúc danh sách, vì dấu phẩy có thể nằm ngay trong tên một tiện nghi.
 
-Một listing là một mục đăng, có thể cho thuê cả chỗ ở hoặc chỉ một phòng. Vì vậy, số listing không tự đồng nghĩa với số căn nhà vật lý riêng biệt. Khi ghi chú nói “1.000 ngôi nhà”, cần xác nhận đơn vị thực sự được yêu cầu là listing hay đối tượng khác.
+Một listing là một mục đăng, có thể cho thuê cả chỗ ở hoặc chỉ một phòng. Vì vậy, số listing không tự đồng nghĩa với số căn nhà vật lý riêng biệt. Trước khi đếm hoặc chọn mẫu, xác định rõ đang xét listing, host hay căn nhà.
 
 Từ điển nguồn mô tả giá theo tiền tệ địa phương. Ký hiệu tiền trong chuỗi xuất ra không đủ để kết luận đó là USD. Cần xác nhận loại tiền của thành phố, cách đọc giá và ý nghĩa các trường giá trong đúng snapshot.
 
@@ -245,7 +250,7 @@ Một mã listing xuất hiện ở nhiều snapshot không mặc nhiên là dò
 
 `neighbourhood_cleansed` thường dùng để phân biệt khu vực bên trong thành phố, không phải cột tên thành phố. Ý nghĩa chính xác và mức độ đầy đủ vẫn phải khảo sát trên dữ liệu được giao. Nếu có thêm cột `analysis_area`, cần giữ rõ đó là vùng phân tích được tạo ra theo quy tắc riêng, chưa chắc trùng khu vực có sẵn trong dữ liệu.
 
-Mã định danh cũng khác với chỉ số hàng. `id` hoặc `listing_id` dùng để nhận diện chỗ ở theo quy ước của bảng, còn index của DataFrame có thể chỉ là vị trí hàng hiện tại. Đặt lại index không sửa được một phép nối dùng sai khóa và không tạo ra danh tính mới cho chỗ ở.
+Mã định danh cũng khác với index của DataFrame. `id` hoặc `listing_id` dùng để nhận diện chỗ ở theo quy ước của bảng, còn index là nhãn hàng. Index mặc định có thể là dãy số thứ tự, nhưng cũng có thể được đặt bằng một cột dữ liệu. Thao tác `reset_index()` không sửa được một phép nối dùng sai khóa và không tạo ra danh tính mới cho chỗ ở.
 
 Không coi ngày chụp là ngày phát sinh mọi review hoặc mọi dòng lịch bên trong tệp. Cũng không nối bốn snapshot rồi tuyên bố đã quan sát đầy đủ mọi ngày giữa các mốc. Phạm vi thời gian phải được xác định từ ý nghĩa của các cột và việc thu thập thực tế.
 
@@ -381,7 +386,7 @@ JSON là cách biểu diễn dữ liệu bằng các trường tên và giá tr�
 
 Công cụ được hướng dẫn là Gemini API gói miễn phí. Có thể dùng nhà cung cấp khác nếu nhóm tự chịu chi phí và ghi rõ trong `AI_USAGE.md`. Gói miễn phí vẫn có điều kiện và hạn mức, nên cần xem tài liệu dịch vụ tại thời điểm thực hiện.
 
-Cỡ mẫu và cách chọn mẫu do nhóm quyết định rồi giải thích. Đề không bắt xử lý tất cả review bằng LLM và không ấn định mẫu phải có 3.000 phần tử. Con số 3.000 chỉ xuất hiện trong cấu hình minh họa.
+Cỡ mẫu và cách chọn mẫu trong đề chung do nhóm quyết định rồi giải thích. Đề không bắt xử lý tất cả review bằng LLM và không ấn định mẫu phải có 3.000 phần tử. Con số 3.000 chỉ xuất hiện trong cấu hình minh họa. Nếu bảng giao dữ liệu đã chỉ rõ các review cần xử lý, phải dùng đúng tập được giao theo hướng dẫn đi kèm.
 
 Khi chọn mẫu, cần nói nhóm chọn từ snapshot nào, lọc trùng ra sao và các review đó đại diện cho phạm vi nào. Nếu chỉ lấy review mới nhất hoặc review của một khu vực, cần nêu giới hạn đó trước khi diễn giải KPI.
 
@@ -423,7 +428,7 @@ Ngôn ngữ, cảm xúc và các khía cạnh khen/chê có cấu trúc nhãn kh
 
 Với danh sách khía cạnh, một review có thể mang nhiều nhãn. Có hai câu hỏi đo khác nhau. Một cách xét dự đoán có khớp nguyên cả danh sách nhãn hay không. Cách khác đếm nhãn đúng, nhãn dự đoán thừa và nhãn bị bỏ sót. Không gọi hai cách đó là cùng một phép đo.
 
-Ví dụ nhỏ chỉ để hiểu cách chấm: Nhãn tay của một review là “sạch sẽ” và “vị trí”, còn mô hình dự đoán “sạch sẽ” và “tiếng ồn”. Mô hình có một nhãn đúng, một nhãn thừa và bỏ sót một nhãn. Khi chỉ chấm tập nhỏ này theo từng nhãn được dự đoán, precision và recall đều bằng một nửa, F1 bằng 0,5. Nếu yêu cầu khớp cả danh sách, trường hợp này bị tính sai hoàn toàn.
+Ví dụ nhỏ chỉ để hiểu cách chấm: Nhãn tay của một review là “sạch sẽ” và “vị trí”, còn mô hình dự đoán “sạch sẽ” và “tiếng ồn”. Mô hình có một nhãn đúng (“sạch sẽ”), một nhãn thừa (“tiếng ồn”) và bỏ sót một nhãn (“vị trí”). Khi gộp các nhãn đúng, thừa và thiếu của review này, precision và recall đều bằng một nửa, F1 bằng 0,5. Nếu yêu cầu khớp cả danh sách, trường hợp này bị tính sai hoàn toàn.
 
 Trên nhiều review, cách tính micro cộng các lần đúng, thừa và bỏ sót trước khi tính điểm. Cách tính macro tính điểm cho từng nhãn rồi lấy trung bình đều. Nhóm không bắt buộc chọn cùng một cách trong mọi tình huống, nhưng phải ghi cách đã dùng, xử lý nhãn không xuất hiện ra sao và áp dụng nhất quán cho cả hai phương pháp. Có thể đối chiếu cách tính với [tài liệu F1](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) và [accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html).
 
@@ -629,60 +634,133 @@ Danh sách này giúp kiểm tra các yêu cầu của đề, không thay bộ t
 
 Clone là tạo một bản sao repo từ GitHub về máy, gồm mã nguồn và lịch sử Git. Việc clone vào thư mục mới và tạo lại kết quả là yêu cầu tự kiểm của đề. Thử thêm một snapshot khác là cách chuẩn bị hữu ích cho tình huống bộ test chung đổi mốc, không phải một mốc nộp thứ tư.
 
-## 15. Đối chiếu ghi chú tham khảo với đề chính thức {#doi-chieu-ghi-chu}
+## 15. Đọc và sử dụng thông tin được giao cho nhóm {#doi-chieu-ghi-chu}
 
-[Tài liệu Google Docs được cung cấp](https://docs.google.com/document/d/17hqvglaYTn27vNw7siVPxpMGhL6goMkDngQfSOMF8NY/edit?tab=t.0) là một bản ghi lại cách hiểu bài tập lớn. Tài liệu giúp nhìn công việc theo các bước tải dữ liệu, QA, KPI, biểu đồ và báo cáo. Tuy nhiên, tài liệu còn nhắc đến một bảng phân công và những số lượng cụ thể chưa xuất hiện trong trang đề chính thức được đối chiếu ngày 19/10/2026.
+Đề chung cho biết sản phẩm cần hoàn thành. Bảng giao dữ liệu cho biết nhóm phải làm trên phần dữ liệu nào. Khi nhận bảng, cần đọc hướng dẫn trước, tìm đúng phần của nhóm, rồi mới tải và lọc dữ liệu. Một tệp tải từ Inside Airbnb thường chứa dữ liệu của cả thành phố, chưa phải ngay tập dữ liệu được giao.
 
-Nếu các chi tiết đó đến từ thông báo hoặc bộ dữ liệu bổ sung của giảng viên, chúng có thể áp dụng cho nhóm được giao. Cần giữ lại thông báo hoặc đường dẫn bảng tương ứng để biết chính xác phạm vi. Việc chưa thấy trên trang đề không đủ để khẳng định thông tin bổ sung sai, nhưng cũng chưa đủ để áp dụng nó cho mọi nhóm.
+Phần này dùng các mã như `LST-A`, `RV-A` và `Vùng-Mẫu-A` để minh họa. Đây là ký hiệu tự đặt, không phải mã thật để tìm trên Inside Airbnb. Tên người, mã sinh viên, mã nhóm, ID và tọa độ của bất kỳ nhóm cụ thể nào đều không được dùng trong các ví dụ.
 
-### 15.1. Thành phố, số lượng chỗ ở và review
+### 15.1. Những phần cần tìm trong bảng giao dữ liệu
 
-- Ghi chú nhắc Sydney. Danh sách 26 thành phố hiện công khai có Melbourne và chưa có Sydney. Nhóm cần đối chiếu phân công trên Canvas hoặc bảng được giảng viên gửi. Không lấy tên trong một ghi chú của nhóm khác để thay thành phố của mình.
-- Ghi chú chọn 1.000 chỗ ở và nhắc lấy 5.000 review của mỗi chỗ ở. Đề công khai chưa ấn định hai số lượng này. Cần xác nhận 5.000 là tổng review, số tối đa hay số trên mỗi listing, tính ở snapshot nào và xử lý thế nào nếu nguồn không có đủ review.
-- Ghi chú mô tả mỗi chỗ ở có 365 ngày trong calendar. Khi làm, phải đọc khoảng ngày thực có trong từng snapshot và xác minh độ đầy đủ. Không tự thêm số liệu chỉ để mỗi listing đủ 365 hàng.
-- Đề yêu cầu tải đủ bốn snapshot bằng script. Có thể lấy đúng từng bộ tại địa chỉ của snapshot, không cần tải mọi phiên bản lịch sử của cả thành phố rồi lọc lại bốn ngày. Lọc ngày của review hoặc calendar là một công việc khác với chọn ngày snapshot.
+Thông tin của nhóm có thể được chia thành nhiều trang tính. Hãy tìm theo nội dung và hướng dẫn đi kèm, vì tên trang tính hoặc vị trí cột có thể thay đổi.
 
-Các số lượng hoặc cách chọn mẫu của một bộ dữ liệu riêng phải được ghi thành điều kiện đầu vào đã xác nhận. Với yêu cầu tự chọn mẫu trong đề chung, nhóm phải giải thích phương pháp và giới hạn mẫu của mình.
+| Phần thông tin | Nhóm dùng để làm gì? |
+| --- | --- |
+| Hướng dẫn sử dụng dữ liệu | Đọc cách tải, cách lọc, phạm vi phân tích và các điều kiện cần đối chiếu sau khi lọc. |
+| Thành viên và thông tin nhận diện nhóm | Xác định đúng lớp, nhóm và phần dữ liệu được giao. Thông tin cá nhân không phải đầu vào để tính KPI thị trường. |
+| Phân công dữ liệu | Lấy thành phố, quốc gia, tiền tệ, mã bộ dữ liệu, các ngày snapshot và địa chỉ tải gốc để đưa vào cấu hình. |
+| Danh sách chỗ ở | Lấy các mã listing được phép đưa vào phân tích và mã vùng đi kèm nếu đã được giao sẵn. |
+| Danh sách review và cột đánh dấu | Lấy đúng review cần giữ, phân biệt tập chạy LLM với tập phải gán nhãn tay. |
+| Vùng phân tích | Đọc mã vùng và phạm vi không gian để kiểm tra, tổng hợp hoặc vẽ kết quả theo vùng. |
 
-### 15.2. Tám vùng và những số đếm được ghi trong tài liệu
+Nếu số thứ tự nhóm được dùng lại ở nhiều lớp, lọc chỉ theo số nhóm sẽ lấy lẫn dữ liệu. Cần xác định đồng thời lớp và nhóm, rồi đối chiếu mã bộ dữ liệu giữa các phần. Mã bộ dữ liệu giúp nhận diện phần được giao, còn `listing_id` và `review_id` dùng để tìm bản ghi trong các tệp Airbnb. Chúng có vai trò khác nhau.
 
-Ghi chú đề cập cột `analysis_area` tạo từ kinh độ, vĩ độ và chia thành tám vùng. Nó còn nêu các số đếm sau:
+Nên giữ một bản đầu vào của nhóm ở trạng thái ban đầu và ghi ngày nhận. Khi cần thêm cột hoặc làm sạch, tạo bản làm việc riêng để còn đối chiếu. Không đưa danh sách thành viên hoặc dữ liệu của nhóm khác vào các tệp kết quả công khai.
 
-- Trong 1.000 listing có 875 mục loại `Entire home/apt` và 125 mục loại `Private room`.
-- Số listing không có review ở bốn mốc lần lượt là 50, 30, 25 và 25.
-- Mốc thứ tư có 20 listing không có giá.
-- Mỗi vùng có 120–130 listing.
+### 15.2. Chuyển thông tin phân công thành cấu hình
 
-Những con số này chưa được quy định trên trang đề công khai đang lưu. Nếu có bộ test hoặc bảng phân công bổ sung, cần đọc cách chọn mẫu, cách chia vùng, định nghĩa “không có review” và thời điểm áp dụng từng số đếm. Không sửa giá, xóa review hay tạo hàng giả để ép dữ liệu tự khớp số lượng.
+Trước khi viết bước tải, cần xác định được thành phố, tiền tệ, các mốc chụp và URL gốc. Kiểm tra URL gốc đã chứa phần nào để ghép đúng đường dẫn. Không nối thêm thành phố lần nữa nếu nó đã có trong URL, hoặc để thiếu dấu `/` giữa ngày và tên thư mục.
 
-`analysis_area` có thể là cách nhóm chia vùng để phân tích, nhưng nó không tự thay yêu cầu phân tích theo `neighbourhood_cleansed`. Nếu được giao chia tám vùng, cần biết ranh giới và cách gán listing ở biên vùng. “Cắt theo kinh độ, vĩ độ” chưa xác định được duy nhất một phương pháp chia.
+Hai đường dẫn sau chỉ thể hiện cấu trúc, không phải liên kết tải thật:
 
-### 15.3. Dấu X, nhãn tay và kết quả của baseline
+```text
+<URL gốc>/<ngày snapshot>/data/listings.csv.gz
+<URL gốc>/<ngày snapshot>/visualisations/neighbourhoods.geojson
+```
 
-Ghi chú nhắc 1.000 review được đánh dấu X để chạy LLM và 100 trường hợp được đánh dấu để chấm tay. Trên trang đề công khai, cỡ mẫu LLM do nhóm chọn và giải thích, còn tập nhãn tay phải có ít nhất 100 trường hợp. Nếu được phát thêm bảng đánh dấu, cần xác nhận bảng, cột và mã review tương ứng trước khi chọn dữ liệu.
+Các bảng phải được lấy từ đúng bộ Inside Airbnb được chỉ định. Tải tệp công khai từ Inside Airbnb khác với tự thu thập dữ liệu từ trang đặt phòng `airbnb.com`. Hãy dùng nguồn được giao và ghi nguồn trong báo cáo.
 
-Khi đã biết tập được giao, giữ mã review để nối nhãn tay, dự đoán baseline và dự đoán LLM. Không dựa vào thứ tự dòng sau lọc, vì thứ tự có thể thay đổi. Nhãn `en`, `vi`, `fr` trong ghi chú là ví dụ về mã ngôn ngữ, không phải bằng chứng mọi review đều thuộc đúng ba ngôn ngữ ấy.
+Nếu hướng dẫn riêng giới hạn phân tích giá ở một snapshot, phải giữ giới hạn đó trong cấu hình, KPI và chú thích hình. Chẳng hạn, khi chỉ được dùng giá ở mốc cuối, không lấy giá của các mốc trước để vẽ xu hướng giá. Tiền tệ cũng phải lấy từ thông tin phân công, không đoán từ quốc gia hoặc tự đổi sang đồng tiền khác.
 
-Một baseline là mốc so sánh. Đề công khai yêu cầu đo accuracy/F1 của cả baseline và LLM, nhưng không quy định LLM bắt buộc thắng baseline. Nếu LLM kém hơn, cần báo kết quả thật và phân tích nguyên nhân. Chọn lại tập chấm hoặc sửa nhãn để làm LLM có vẻ tốt hơn sẽ làm phép đánh giá mất ý nghĩa.
+Yêu cầu phân tích theo thời gian vẫn có thể được đáp ứng bằng chỉ số khác phù hợp, chẳng hạn tỷ lệ listing chưa có review ở từng snapshot. Trước khi chọn, cần xác định chỉ số đó phục vụ mục tiêu báo cáo và có thể so sánh giữa các mốc.
 
-### 15.4. Chạy lại, dữ liệu trong repo và thông tin cần xác nhận
+### 15.3. Dùng danh sách mã để lấy đúng các hàng được giao
 
-Đề đã nêu người chấm có thể đổi snapshot bằng cấu hình. Ghi chú còn mở rộng sang đổi thành phố. Nhóm có thể thiết kế cấu hình linh hoạt để chuẩn bị, nhưng cần đối chiếu thông báo chính thức trước khi coi việc đổi thành phố là một điều kiện chấm đã được công bố.
+Danh sách mã là danh sách để chọn hàng, chưa chứa đủ thông tin phân tích. Nhóm vẫn phải tải các tệp chi tiết rồi tìm những hàng có mã tương ứng. Ví dụ giả định một phần danh sách chỗ ở như sau:
 
-Không commit dữ liệu thô không có nghĩa repo phải thiếu mọi thư mục dữ liệu. Đề có `data/samples/` cho mẫu thử và nhãn tay, cùng `data/processed/` cho dữ liệu xử lý đáp ứng giới hạn kích thước. Script cần tự tạo thư mục lưu đầu vào khi tải. Việc tải tệp qua URL cũng không đồng nghĩa với việc phải có khóa API như dịch vụ LLM.
+| Mã listing | Vùng phân tích được giao |
+| --- | --- |
+| `LST-A` | `Vùng-Mẫu-A` |
+| `LST-B` | `Vùng-Mẫu-B` |
 
-Tệp `.env` chỉ chứa cấu hình hoặc bí mật cục bộ và phải được bỏ qua khi commit. Python không tự đọc mọi tệp `.env`. Nếu chọn cách này, chương trình hoặc lệnh khởi chạy phải nạp giá trị đúng cách. Dù dùng cách nạp nào, chương trình vẫn phải nhận được khóa do giảng viên cung cấp qua biến môi trường theo README.
+Với bảng này, cách dùng mã trong ba tệp khác nhau:
 
-Trước khi áp dụng các điều kiện riêng trong ghi chú, ghi lại các việc cần xác nhận sau:
+- Trong listings, chọn hàng có cột `id` thuộc danh sách listing được giao. Sau đó ghép vùng phân tích theo mã listing.
+- Trong calendar, chọn hàng có `listing_id` thuộc cùng danh sách. Một listing có nhiều hàng lịch, vì mỗi hàng còn gắn với một ngày. Không lọc cột `date` bằng đúng ngày snapshot nếu hướng dẫn yêu cầu giữ lịch của nhiều ngày.
+- Trong reviews, chọn theo mã review đã được giao bằng cách đối chiếu với cột `id` của bảng review chi tiết. Đồng thời xác nhận `listing_id` của review khớp chỗ ở tương ứng trong danh sách.
 
-1. Thành phố, bốn snapshot và địa chỉ tải chính xác của bộ dữ liệu nhóm được giao.
-2. Có hay không mẫu cố định 1.000 listing và các số đếm theo loại phòng, review, giá thiếu.
-3. Nếu chia tám vùng, ranh giới và cách gán vùng cụ thể là gì?
-4. Số 5.000 review áp dụng cho toàn mẫu hay từng listing, ở mốc nào?
-5. Bảng đánh dấu X ở đâu, mã review và vai trò từng dấu X là gì?
-6. Bộ test yêu cầu đổi snapshot, đổi thành phố hay cả hai?
+Chỉ lọc reviews theo `listing_id` có thể giữ cả những review không được giao. Chỉ lọc theo vị trí hàng cũng không đúng, vì thứ tự có thể đổi khi tải lại hoặc sắp xếp. Phải dùng đúng loại mã cho đúng bảng.
 
-Đây là các điểm cần xác nhận từ dữ liệu và hướng dẫn được giao, không phải sáu yêu cầu mới của đề. Trong lúc chờ thông tin, nhóm vẫn có thể dựng môi trường, đọc cấu trúc tệp, thiết kế cấu hình và chuẩn bị cách ghi QA. Tránh gắn cố định các con số chưa được xác nhận vào mã.
+Nên đọc các cột mã dưới dạng chuỗi ký tự để giữ nguyên từng chữ số và định dạng. Nếu đổi một mã dài sang số thực và bị làm tròn, chương trình có thể không tìm được đúng bản ghi. Với tệp bảng tính, cần kiểm tra giá trị thật lưu trong ô, thay vì chỉ nhìn cách hiển thị rút gọn.
+
+Lặp lại việc đối chiếu ở từng snapshot. Nếu hướng dẫn yêu cầu cùng một tập listing qua các mốc, dùng lại danh sách mã được giao, thay vì tự chọn một tập khác ở mỗi lần tải. Nếu mã nào không tìm thấy, ghi lại mã, bảng và snapshot liên quan để xác minh. Không âm thầm bỏ mã đó khỏi mọi mốc để các tập trông có vẻ khớp nhau.
+
+### 15.4. Phân biệt mẫu chạy LLM với mẫu gán nhãn tay
+
+Một review có thể được giữ để phân tích chung nhưng không nằm trong mẫu LLM. Trong mẫu LLM, một phần review còn được đánh dấu để người trong nhóm gán nhãn tay. Các cột đánh dấu vì thế cho biết những công việc khác nhau.
+
+Ví dụ giả định dưới đây dùng dấu `x` để minh họa. Khi làm thật, đọc đúng quy ước đánh dấu trong bảng được giao.
+
+| Review trong ví dụ | Việc cần thực hiện |
+| --- | --- |
+| `RV-A`, thuộc `LST-A`, được đánh dấu ở cả hai cột | Chạy LLM và đọc để gán nhãn tay. Dùng kết quả nhãn tay làm tham chiếu khi chấm. |
+| `RV-B`, thuộc `LST-B`, chỉ được đánh dấu ở cột mẫu LLM | Chạy LLM. Không tự coi kết quả LLM là nhãn tay. |
+| `RV-C`, thuộc `LST-A`, không được đánh dấu ở hai cột | Giữ nếu thuộc danh sách review cần phân tích, nhưng không tự đưa vào hai mẫu đã được ấn định. |
+
+Nếu bảng chỉ đánh dấu những review cần gán nhãn, nhóm vẫn phải đọc văn bản và tự điền cảm xúc, khía cạnh và ngôn ngữ theo hướng dẫn. Dấu `x` chỉ chọn trường hợp cần làm, không phải đáp án của trường hợp đó.
+
+Nếu tập nhãn tay được giao là một phần của mẫu LLM, cần kiểm tra quan hệ này sau khi lọc. Khi phát hiện một review được chọn để chấm tay nhưng không có trong mẫu LLM, phải xem lại cách đọc cột đánh dấu và hướng dẫn. Không tự đổi dấu trong bảng gốc để che sự khác nhau.
+
+Một review có thể xuất hiện lại trong nhiều snapshot. Nếu đó là cùng một review, không đếm mỗi lần xuất hiện thành một nhãn tay độc lập hoặc đưa bản sao sang cả tập điều chỉnh và tập đánh giá. Với kết quả dùng lại, vẫn phải đối chiếu nội dung và cấu hình trích xuất, không chỉ nhìn mã.
+
+Đề chung yêu cầu ít nhất 100 nhãn tay và cho nhóm giải thích cách chọn mẫu LLM. Nếu đã được giao một mẫu cụ thể, hãy thực hiện đúng mẫu đó theo hướng dẫn đi kèm. Không bỏ tập được giao để tự chọn các review dễ đọc hơn.
+
+### 15.5. Dùng mã vùng và hiểu ranh giới vùng
+
+Vùng phân tích có thể được giao bằng mã kèm các giới hạn kinh độ, vĩ độ. Khi vùng được mô tả bằng một hình chữ nhật, hai cặp giới hạn cho biết phần bản đồ từ kinh độ nhỏ nhất đến lớn nhất và từ vĩ độ nhỏ nhất đến lớn nhất. Đây là phạm vi do cách chia vùng xác định, không mặc nhiên là quận, phường hoặc ranh giới hành chính.
+
+![Hình 2: Hai listing trong hai vùng phân tích hình chữ nhật giả định.](img/vung-phan-tich-minh-hoa.svg)
+
+`LST-A` nằm trong `Vùng-Mẫu-A`, còn `LST-B` nằm trong `Vùng-Mẫu-B`. Trục ngang là kinh độ, trục dọc là vĩ độ. Hình không dùng tọa độ thật và không quy định cách chia vùng của bài tập.
+
+Nếu danh sách listing đã có cột `analysis_area`, hãy ghép mã vùng đó vào dữ liệu theo `listing_id`. Không tự chia lại các vùng hoặc đổi mã theo cách thuận tiện hơn. Nếu cần đối chiếu với bảng vùng, phải giữ cả thành phố và mã vùng khi mã có thể được dùng lại ở nhiều thành phố.
+
+Tọa độ và ranh giới giúp kiểm tra sự phù hợp hoặc vẽ kết quả. Với điểm nằm đúng đường biên, cần đọc quy tắc gán vùng của bộ dữ liệu. Không tự đặt cách xử lý biên rồi coi đó là quy định đã được giao. Nếu mã vùng đã có sẵn nhưng phép kiểm tra tọa độ cho kết quả khác, ghi rõ trường hợp để xác minh trước khi thay mã.
+
+Giữ riêng `analysis_area` và `neighbourhood_cleansed`. Một cột có thể là vùng do bộ bài tập chia, còn cột kia là khu vực trong dữ liệu Inside Airbnb. Yêu cầu phân tích theo `neighbourhood_cleansed` của đề chung không tự biến mất khi nhận thêm vùng phân tích.
+
+Tệp GeoJSON của Inside Airbnb cũng không tự trở thành ranh giới của các vùng tự chia. Trước khi vẽ, xác định rõ bản đồ đang thể hiện khu vực nào và phép ghép bảng nào được dùng. Hai vùng có cùng tên hoặc mã nhìn giống nhau chưa đủ để kết luận chúng là cùng một đối tượng.
+
+### 15.6. Đối chiếu kết quả lọc trước khi chạy QA
+
+Hướng dẫn riêng có thể cho số lượng mong đợi theo bảng, snapshot, loại phòng hoặc vùng, cùng một số điều kiện về giá trị thiếu. Đây là những điều kiện để xác nhận đã lấy đúng đầu vào. Chúng khác với quy tắc QA do nhóm tự đề xuất sau khi khảo sát.
+
+Sau khi lọc, cần đối chiếu:
+
+- Danh sách mã tìm thấy với danh sách được giao, gồm cả mã còn thiếu và hàng trùng.
+- Số hàng và số mã phân biệt của từng bảng tại từng snapshot. Nhiều hàng calendar của một listing là bình thường nếu chúng thuộc các ngày khác nhau.
+- Số lượng theo loại phòng, vùng và các điều kiện đầu vào khác được hướng dẫn nêu rõ.
+- Mẫu LLM, mẫu nhãn tay và mối liên hệ giữa review với listing.
+- Kiểu dữ liệu của mã, tiền tệ, ngày snapshot và phạm vi ngày trong calendar.
+
+Nếu kết quả không khớp, kiểm tra lại lớp và nhóm đã chọn, tệp tải, snapshot, cột mã và cách đọc mã. Một số nguyên nhân khác cần xác minh là thiếu bản ghi ở nguồn hoặc thay đổi bộ dữ liệu. Không xóa review, đổi loại phòng, điền giá hay tạo hàng giả chỉ để đạt số lượng mong đợi.
+
+Hãy ghi kết quả đối chiếu trước khi làm sạch. Chẳng hạn, nếu bộ giao nêu trước một lượng giá bị thiếu, việc điền giá ngay rồi mới đếm sẽ xóa mất thông tin cần đối chiếu. Sau khi xác nhận đầu vào, nhóm mới áp dụng QA và ghi rõ tác động trước, sau như mục 7 yêu cầu.
+
+Tệp calendar có thể lớn hơn nhiều so với phần nhóm cần giữ. Có thể đọc theo khối, chỉ lấy cột cần thiết và lọc theo danh sách listing ngay trong từng khối. Cách đọc này giúp giảm lượng dữ liệu giữ trong bộ nhớ, nhưng vẫn phải xử lý đủ các khối cần thiết.
+
+### 15.7. Những yêu cầu vẫn phải hoàn thành sau khi có đầu vào
+
+Nhận được danh sách mã không có nghĩa đã nhận sẵn dữ liệu sạch, KPI, nhãn cảm xúc hoặc lời giải. Sau khi lấy đúng dữ liệu, nhóm vẫn phải đề xuất QA, chọn KPI, làm phần LLM và baseline, chấm bằng nhãn tay, sinh hình và viết báo cáo.
+
+Mỗi quyết định cần gắn với phạm vi thực sự đã phân tích. Nếu chỉ làm trên tập listing được giao, báo cáo phải nói rõ điều đó, thay vì gọi kết quả là số đo đầy đủ của cả thành phố. Nếu chỉ dùng giá tại một mốc, chỉ số giá phải ghi đúng mốc ấy.
+
+Kết quả đối chứng cũng phải được báo cáo trung thực. Đề chung không quy định LLM bắt buộc thắng baseline. Cần đo cả hai trên cùng nhiệm vụ và tập tham chiếu, rồi giải thích các lỗi đã quan sát được.
+
+Cuối cùng, giữ khả năng chạy lại theo yêu cầu chấm. Đề công khai nêu việc có thể đổi snapshot bằng cấu hình. Nếu hướng dẫn riêng còn yêu cầu đổi thành phố, cần đọc rõ các danh sách mã, vùng và tiền tệ đi kèm đầu vào mới. Không mang tập mã của thành phố cũ sang thành phố mới.
+
+Python không tự đọc mọi tệp `.env`. Nếu chọn lưu cấu hình cục bộ trong tệp này, phải có cách nạp giá trị vào môi trường chạy và vẫn nhận được khóa API của người chấm như README đã hướng dẫn. Quy định không commit dữ liệu thô không có nghĩa repo phải thiếu mọi thư mục dữ liệu. Cấu trúc bàn giao vẫn có `data/samples/` và phần dữ liệu xử lý đáp ứng giới hạn đã nêu.
+
 
 ## Tài liệu tham khảo
 

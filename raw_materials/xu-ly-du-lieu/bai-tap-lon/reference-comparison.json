@@ -9,136 +9,138 @@
       "id": "R01",
       "referenceClaim": "Thành phố Sydney",
       "classification": "not_stated_in_public_assignment",
-      "pageHandling": "Sydney chưa có trong danh sách 26 thành phố của đề, cần đối chiếu phân công riêng trên Canvas.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "Sydney",
-        "Melbourne",
-        "Canvas"
+        "thành phố",
+        "thông tin phân công"
       ]
     },
     {
       "id": "R02",
       "referenceClaim": "1.000 chỗ ở và 5.000 review cho mỗi chỗ ở",
-      "classification": "requires_scope_confirmation",
-      "pageHandling": "Đề chung chưa ấn định các số lượng này, cần xác nhận đơn vị và phạm vi trước khi chọn mẫu.",
+      "classification": "distinguish_assigned_review_list_from_reviews_per_listing",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "1.000 chỗ ở",
-        "5.000 review của mỗi chỗ ở",
-        "tổng review"
-      ]
+        "danh sách listing được giao"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "requires_scope_confirmation"
     },
     {
       "id": "R03",
       "referenceClaim": "Mỗi listing có đủ 365 ngày trong calendar",
       "classification": "verify_actual_data",
-      "pageHandling": "Cần khảo sát khoảng ngày và độ đầy đủ thực tế, không tự tạo hàng để đủ số lượng.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "365 ngày",
-        "khoảng ngày thực"
-      ]
+        "phạm vi ngày trong calendar"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas."
     },
     {
       "id": "R04",
       "referenceClaim": "Tải toàn bộ lịch sử thành phố rồi lọc bốn snapshot",
       "classification": "distinguish_snapshot_from_event_dates",
-      "pageHandling": "Có thể tải trực tiếp đúng bộ ở từng ngày snapshot; khác với lọc ngày review hoặc ngày lịch bên trong tệp.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "mọi phiên bản lịch sử",
         "ngày snapshot"
       ]
     },
     {
       "id": "R05",
       "referenceClaim": "Tạo analysis_area với tám vùng từ tọa độ",
-      "classification": "not_stated_in_public_assignment",
-      "pageHandling": "Cần hướng dẫn bổ sung xác định ranh giới; chưa tự thay yêu cầu theo neighbourhood_cleansed.",
+      "classification": "assignment_specific_condition_not_general_quota",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
         "analysis_area",
-        "tám vùng",
-        "không tự thay"
-      ]
+        "hình chữ nhật"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "not_stated_in_public_assignment"
     },
     {
       "id": "R06",
       "referenceClaim": "875 Entire home/apt và 125 Private room",
-      "classification": "not_stated_in_public_assignment",
-      "pageHandling": "Cần xác nhận mẫu và phạm vi, không sửa dữ liệu để ép khớp.",
+      "classification": "assignment_specific_condition_not_general_quota",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "875",
-        "125",
-        "Entire home/apt",
-        "Private room"
-      ]
+        "loại phòng",
+        "điều kiện đầu vào"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "not_stated_in_public_assignment"
     },
     {
       "id": "R07",
       "referenceClaim": "Không review theo mốc là 50, 30, 25, 25 và thiếu giá ở mốc 4 là 20",
-      "classification": "not_stated_in_public_assignment",
-      "pageHandling": "Cần nguồn của điều kiện đầu vào và định nghĩa không có review theo từng mốc.",
+      "classification": "assignment_specific_condition_not_general_quota",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "50, 30, 25 và 25",
-        "20 listing không có giá"
-      ]
+        "giá bị thiếu",
+        "trước khi làm sạch"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "not_stated_in_public_assignment"
     },
     {
       "id": "R08",
       "referenceClaim": "Mỗi vùng có 120–130 listing",
-      "classification": "not_stated_in_public_assignment",
-      "pageHandling": "Cần quy tắc phân vùng và chọn mẫu đã xác nhận, không tạo hàng giả.",
+      "classification": "assignment_specific_condition_not_general_quota",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "120–130",
-        "tạo hàng giả"
-      ]
+        "Số lượng theo loại phòng, vùng"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "not_stated_in_public_assignment"
     },
     {
       "id": "R09",
       "referenceClaim": "Bắt buộc có một cột index",
       "classification": "distinguish_position_from_identity",
-      "pageHandling": "Phân biệt chỉ số hàng DataFrame với khóa nhận diện listing.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "Mã định danh",
-        "chỉ số hàng",
-        "listing_id"
-      ]
+        "Mã bộ dữ liệu",
+        "listing_id",
+        "review_id"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas."
     },
     {
       "id": "R10",
       "referenceClaim": "Dấu X đánh dấu 1.000 review chạy LLM và 100 review chấm tay",
-      "classification": "requires_external_sheet",
-      "pageHandling": "Chưa được cung cấp bảng đánh dấu; đề chung để nhóm chọn mẫu LLM và yêu cầu ít nhất 100 nhãn tay.",
+      "classification": "assigned_subset_roles_inspected",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "1.000 review được đánh dấu X",
-        "100 trường hợp",
-        "mã review"
-      ]
+        "mẫu LLM",
+        "mẫu nhãn tay",
+        "cột đánh dấu"
+      ],
+      "supplementStatus": "Input roles and instructions inspected; conditions stay scoped to supplied assignment, not general quotas.",
+      "initialClassification": "requires_external_sheet"
     },
     {
       "id": "R11",
       "referenceClaim": "Ngôn ngữ en, vi, fr",
       "classification": "examples_not_exhaustive",
-      "pageHandling": "Đây là các mã ngôn ngữ ví dụ, không chứng minh mọi review chỉ thuộc ba ngôn ngữ.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
-        "en",
-        "vi",
-        "fr",
-        "ba ngôn ngữ"
+        "ngôn ngữ"
       ]
     },
     {
       "id": "R12",
       "referenceClaim": "LLM phải thắng baseline",
       "classification": "unsupported_mandatory_outcome",
-      "pageHandling": "Đề yêu cầu đo và giải thích trung thực, không ấn định LLM bắt buộc tốt hơn baseline.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
         "không quy định LLM bắt buộc thắng baseline",
-        "kết quả thật"
+        "báo cáo trung thực"
       ]
     },
     {
       "id": "R13",
       "referenceClaim": "Người chấm đổi thành phố",
       "classification": "broader_than_public_test_description",
-      "pageHandling": "Đề chung nêu đổi snapshot; thay thành phố cần đối chiếu thông báo bổ sung.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
         "đổi thành phố",
         "đổi snapshot"
@@ -148,7 +150,7 @@
       "id": "R14",
       "referenceClaim": "Repo không được có bất kỳ thư mục dữ liệu nào",
       "classification": "contradicts_published_repo_structure",
-      "pageHandling": "Raw không commit; samples và processed có trong cấu trúc bàn giao của đề.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
         "không có nghĩa repo phải thiếu mọi thư mục dữ liệu",
         "data/samples/"
@@ -158,22 +160,17 @@
       "id": "R15",
       "referenceClaim": "Để khóa vào .env và dùng khóa của giảng viên khi chấm",
       "classification": "clarify_environment_loading",
-      "pageHandling": "Python không tự nạp .env; chương trình phải nhận khóa qua biến môi trường, không commit bí mật.",
+      "pageHandling": "Generalized explanation in section 15, using only fictional examples. No group-specific quantities or records reproduced.",
       "markers": [
         "Python không tự đọc mọi tệp `.env`",
         "biến môi trường"
       ]
     }
   ],
-  "numericChecks": {
-    "roomTypeSum": 1000,
-    "eightRegionsMin": 960,
-    "eightRegionsMax": 1040,
-    "areDataObservations": false
-  },
   "limitations": [
-    "No assignment spreadsheet or marked review file was supplied in this task.",
-    "Counts reported by a note are not validated observations of any downloaded dataset.",
-    "All existing general assignment requirements remain preserved."
+    "New assigned-input sheet inspected in memory. No workbook, group records or source identifier retained.",
+    "Prior note claims remain an audit of that note; website now teaches the generic procedure without reproducing quotas.",
+    "Structural inspection does not verify data quality or completeness of any group dataset.",
+    "All original public assignment requirements remain preserved."
   ]
 }

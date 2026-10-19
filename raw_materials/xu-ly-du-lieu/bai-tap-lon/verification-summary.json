@@ -92,5 +92,47 @@
     "currentResponsiveThemeChecks": 6,
     "lectureSkillTests": 39,
     "lectureStructureErrors": 0
+  },
+  "assignedInputUpdate": {
+    "sourceInspectedInMemoryOnly": true,
+    "groupRecordsReproduced": false,
+    "fictionalExamplesOnly": true,
+    "sourceRequirementsMapped": 54,
+    "illustrations": 2,
+    "privateWorkbookArchived": false,
+    "languageReview": {
+      "provider": "Antigravity",
+      "callCount": 1,
+      "suggestions": 51,
+      "adaptedConcerns": [
+        6,
+        15,
+        21,
+        33,
+        43
+      ],
+      "bridgeResult": "NoneType transport failure after three artifacts were saved; artifacts independently read and checked",
+      "inputByteHashVerified": true,
+      "baselineFilesUnchanged": 48,
+      "codeBlocksPreserved": 7
+    },
+    "checks": {
+      "projectTests": 5,
+      "lectureSkillTests": 39,
+      "lectureStructureErrors": 0,
+      "localFullTextWidths": [
+        360,
+        1280
+      ],
+      "deepLayoutWidths": [
+        360,
+        375,
+        768,
+        1280,
+        1920
+      ],
+      "responsiveThemeCases": 6,
+      "workingTreeFullSuite": "One unrelated uncommitted exam-bank edit disagreed with its render audit; committed HEAD banks independently match their audit. No exam file changed by this task."
+    }
   }
 }

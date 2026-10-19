@@ -52,3 +52,13 @@ Sau khi đọc báo cáo lại, tác giả cũng giới hạn ba suy luận còn
 - Giải thích micro và macro không có nghĩa bắt buộc báo cáo cả hai cách trong mọi bài. Nhóm phải ghi rõ cách chọn và so sánh nhất quán.
 - Gợi ý chọn review thuộc ngôn ngữ có thể đọc không cho phép tự đổi một tập mẫu cố định do giảng viên giao.
 - Nêu cách dùng cache hoặc để từ điển dữ liệu ở tệp riêng là hướng dẫn thiết kế, không bổ sung một rubric mới hay ngoại lệ số trang PDF.
+
+## Lượt biên tập sau khi giải thích đầu vào được giao
+
+Antigravity được giao đọc toàn bài một lần nữa, áp dụng `studyhub-lecture` cùng các cẩm nang tiếng Việt, rồi đề xuất chỉnh câu. Tác tử lưu 51 đề xuất và một bản biên tập hoàn chỉnh. Bridge tiếp tục báo lỗi `NoneType` sau khi các tệp đã được lưu, vì vậy kết quả không được ghi nhận là một lần chạy thành công.
+
+Tác giả đọc toàn bộ phần thay đổi và vận dụng năm nhận xét về cách xác nhận một bước đã xong, cột review và tiện nghi, index của DataFrame, ví dụ chấm nhãn, cùng việc giữ mã dưới dạng chuỗi. Các đoạn được viết lại có chọn lọc. Không chép nguyên bản dài hơn của tác tử hoặc dùng việc hết cảnh báo từ bộ dò từ ngữ làm bằng chứng văn phong đã tốt.
+
+Một đề xuất cho rằng index chỉ phản ánh vị trí hàng bị bác bỏ. Index là nhãn hàng, có thể được đặt bằng dữ liệu. Cũng không nhận các cách viết khẳng định mọi amenities đều là JSON, biến dữ liệu processed thành phần bắt buộc phải commit hoặc thay nhiều câu rõ bằng các cụm nhấn mạnh dài dòng. Bảy khối mã giữ nguyên, hash đầu vào đã được xác minh và 48 tệp có sẵn trong worktree không thay đổi.
+
+Phần đầu vào được giao dùng ví dụ giả định, không công bố dữ liệu cụ thể của nhóm. Đã bổ sung ảnh chụp cột tên tệp trên Inside Airbnb và hình vùng giả định. Bảng trên điện thoại được trình bày theo từng khối dọc để đọc đủ nội dung.

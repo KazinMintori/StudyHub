@@ -458,7 +458,8 @@
       "type": "choice",
       "requirement": "Nhóm tự chọn và giải thích cỡ mẫu, cách lấy mẫu.",
       "presentMarkers": [
-        "Cỡ mẫu và cách chọn mẫu do nhóm quyết định"
+        "Cỡ mẫu và cách chọn mẫu trong đề chung",
+        "nhóm quyết định"
       ],
       "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
     },

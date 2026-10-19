@@ -34,14 +34,18 @@ test('Project brief includes required deliverables while worked example remains 
   assert(!/\|.*\|.*\|.*\|.*\|/.test(brief),'Keep tables narrow for mobile')
 })
 
-test('Reference note quotas stay source-qualified instead of becoming general assignment rules', async () => {
+test('Assigned input guidance uses fictional examples and preserves source distinctions', async () => {
   const brief=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/index.md','utf8')
   const comparison=JSON.parse(await readFile('raw_materials/xu-ly-du-lieu/bai-tap-lon/reference-comparison.json','utf8'))
   assert.equal(comparison.claims.length,15)
   assert.equal(comparison.claims.find(c=>c.id==='R12').classification,'unsupported_mandatory_outcome')
   assert(brief.includes('không quy định LLM bắt buộc thắng baseline'))
   assert(brief.includes('Python không tự đọc mọi tệp `.env`'))
-  assert(brief.includes('Những con số này chưa được quy định trên trang đề công khai'))
+  const assigned=brief.slice(brief.indexOf('## 15.'),brief.indexOf('## Tài liệu tham khảo'))
+  assert(assigned.includes('LST-A')&&assigned.includes('RV-A')&&assigned.includes('Vùng-Mẫu-A'))
+  assert(!assigned.includes('docs.google.com'))
+  assert(assigned.includes('mẫu LLM')&&assigned.includes('mẫu nhãn tay'))
+  assert(assigned.includes('trước khi làm sạch'))
   assert(brief.includes('Dấu hiệu cho thấy đã có thể chuyển sang bước tiếp'))
 })
 

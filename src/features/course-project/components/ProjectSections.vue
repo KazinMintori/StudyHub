@@ -25,4 +25,49 @@ defineProps({ active: { type: String, default: 'brief' } })
 .project-section-number { flex: 0 0 auto; font-size: 14px; color: var(--tim); }
 .project-sections small { display: block; font-size: 12px; color: var(--ink-3); font-weight: 400; }
 @media (max-width: 480px) { .project-sections { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  :global(.data-project-brief .vp-doc .study-data-table) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    border: 0;
+  }
+  :global(.data-project-brief .vp-doc .study-data-table thead) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  :global(.data-project-brief .vp-doc .study-data-table tbody) { display: block; }
+  :global(.data-project-brief .vp-doc .study-data-table tbody tr) {
+    display: block;
+    margin: var(--space-3) 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md, 8px);
+  }
+  :global(.data-project-brief .vp-doc .study-data-table td) {
+    display: block;
+    width: auto;
+    min-width: 0;
+    padding: var(--space-3);
+    border: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  :global(.data-project-brief .vp-doc .study-data-table td + td) { border-top: 1px solid var(--rule); }
+  :global(.data-project-brief .vp-doc .study-data-table td::before) {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--space-1);
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  :global(.data-project-brief .vp-doc .study-data-table td code) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
 </style>

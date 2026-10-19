@@ -35,10 +35,16 @@ Các kiểm tra liên quan còn gồm bộ câu hỏi ôn thi để xác nhận 
 
 Người dùng yêu cầu Antigravity đóng vai sinh viên biết Python cơ bản và mới học môn xử lý dữ liệu. Bản ghi lượt đọc đầu được lưu trước khi cung cấp bản sửa. Đây là mô phỏng vai đọc, không phải khảo sát người học thật. Những nhận xét được đối chiếu lại với đề trước khi bổ sung hướng dẫn. Ví dụ, không nhận đề xuất bỏ yêu cầu KPI trong báo cáo QA hoặc mặc định GeoJSON mọi mốc giống nhau.
 
-`airbnb-reference-google-doc.txt` lưu bản xuất văn bản nguyên vẹn từ Google Docs do người dùng gửi. `reference-manifest.json` ghi nguồn và hash, `reference-comparison.json` ghi 15 điểm đối chiếu. Các số lượng trong ghi chú chưa có trên đề chung được phân biệt rõ với yêu cầu đã xác nhận. Chưa có bảng phân công hoặc tệp đánh dấu X được gửi kèm để kiểm tra những điều kiện riêng ấy.
+`airbnb-reference-google-doc.txt` lưu bản xuất văn bản nguyên vẹn từ Google Docs do người dùng gửi. `reference-manifest.json` ghi nguồn và hash, `reference-comparison.json` ghi 15 điểm đối chiếu. Ở lượt đầu chưa có bảng giao dữ liệu để hiểu những chi tiết riêng được ghi lại trong tài liệu.
+
+Sau đó, người dùng cung cấp một bảng giao dữ liệu và yêu cầu chỉ tham khảo cấu trúc, không lấy thông tin cụ thể. Bảng được đọc trong bộ nhớ, không lưu workbook hoặc dữ liệu hàng vào repo. `assigned-input-guidance.json` chỉ ghi các vai trò đầu vào và thao tác cần giải thích. Không lưu URL của bảng, thông tin cá nhân, mã nhóm, ID thật hoặc tọa độ thật. Mục 15 trên website được viết lại bằng mã giả định, thay cho việc nhắc lại các số lượng riêng trong ghi chú cũ.
+
+Hướng dẫn bổ sung phân biệt danh sách mã với dữ liệu chi tiết, cách lọc listings/calendar/reviews, mẫu LLM với mẫu nhãn tay, vùng được giao với khu vực hành chính, cùng việc đối chiếu đầu vào trước khi QA. Các điều kiện riêng được giữ trong phạm vi hướng dẫn của bộ giao, không biến thành định mức chung. Toàn bộ 54 nhóm yêu cầu của đề công khai vẫn được đối chiếu riêng.
 
 Đã vào trang Get the Data và Data Assumptions của Inside Airbnb, đồng thời đọc Data Dictionary do trang đó liên kết. Các bản nguồn được lưu và kiểm hash bằng `data-source-manifest.json`. `insideairbnb-santiago-download-links.json` giữ bảy liên kết tại một snapshot. `insideairbnb-file-inspection.json` ghi kết quả đọc hàng tiêu đề sáu bảng và cấu trúc GeoJSON của Santiago ngày 23/09/2026.
 
 Chỉ đọc luồng đến hàng tiêu đề cho các CSV hoặc CSV nén, không tải toàn bộ chúng vào repo. Phần GeoJSON được đọc để xác định cấu trúc và thuộc tính. Không dùng việc đọc cấu trúc để khẳng định số hàng, chất lượng dữ liệu hoặc kết quả kinh doanh. Đặc biệt, calendar được kiểm tra không có cột giá, còn reviews tổng hợp không có comments. Những thay đổi schema đó được nêu rõ để tránh áp dụng một mô tả cũ cho mọi snapshot.
 
 Các giải thích bổ sung gồm bước bắt đầu, tệp nén, khóa nối, hình học khu vực, mẫu nhãn tay, cách chấm đa nhãn, thời điểm hoàn thiện báo cáo QA và phạm vi cache. Chưa viết chương trình thực hành hoặc gọi LLM thật. Ví dụ chấm nhãn nhỏ được tính lại bằng Python, bằng chứng nằm trong `qa/airbnb-student-review-20261019/metric-example.json`.
+
+Hai minh họa được thêm để nhận diện đầu vào. Ảnh tải tệp là ảnh chụp nguyên trạng cột tên tệp công khai trên Inside Airbnb, không chụp bảng giao dữ liệu. Hình vùng là SVG minh họa giả định với hai listing và hai vùng, không dùng tọa độ thật. `illustrations.json` ghi nguồn, phương pháp và hash của các ảnh.

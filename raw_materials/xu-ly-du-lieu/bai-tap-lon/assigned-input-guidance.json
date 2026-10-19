@@ -1,0 +1,36 @@
+{
+  "reviewDate": "2026-10-19",
+  "sourceRole": "User-provided example of assigned group inputs, inspected read-only in memory",
+  "retention": "No workbook, personal records, actual assignment IDs, real coordinates or source URL copied into repository",
+  "publicTreatment": "Explain input roles and actions using fictional examples only",
+  "roles": [
+    "Instructions for obtaining and checking assigned data",
+    "Group identity and member metadata, separate from analysis inputs",
+    "City, currency, dataset identifier, snapshot dates and base URL",
+    "Listing identifiers and assigned area mapping",
+    "Review identifiers, listing relationship and selection markers",
+    "Analysis area identifiers and spatial bounds"
+  ],
+  "actions": [
+    "Identify the correct class and group and cross-check dataset identity",
+    "Download designated Inside Airbnb snapshots without scraping the booking website",
+    "Filter listings and calendar by assigned listing IDs, reviews by assigned review IDs",
+    "Validate review-to-listing relationships and preserve identifier text",
+    "Use assigned LLM and manual-label subsets when supplied",
+    "Use provided area mappings and distinguish them from administrative neighbourhoods",
+    "Check assigned input conditions before applying QA",
+    "Respect snapshot restrictions for price analysis and declared currency"
+  ],
+  "examples": {
+    "listingIdentifiers": ["LST-A", "LST-B"],
+    "reviewIdentifiers": ["RV-A", "RV-B", "RV-C"],
+    "areaIdentifiers": ["Vùng-Mẫu-A", "Vùng-Mẫu-B"],
+    "areSourceRecords": false
+  },
+  "limits": [
+    "This structural explanation does not publish or validate any particular group's dataset",
+    "Assigned conditions are not converted into universal quotas",
+    "Original public project requirements remain intact",
+    "Worked project remains reserved for a later user request"
+  ]
+}

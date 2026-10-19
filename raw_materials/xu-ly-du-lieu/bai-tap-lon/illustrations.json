@@ -1,0 +1,17 @@
+[
+  {
+    "file": "img/inside-airbnb-downloads.png",
+    "kind": "screenshot",
+    "source": "https://insideairbnb.com/get-the-data/",
+    "capturedAt": "2026-10-19T05:18:56.326Z",
+    "method": "Unaltered browser screenshot clipped to the public File Name column; no assigned workbook data included",
+    "sha256": "bf0456d48d2576310396cb01afd2bb4df8bc7116cea7377b94ab739474c936a8"
+  },
+  {
+    "file": "img/vung-phan-tich-minh-hoa.svg",
+    "kind": "original fictional teaching diagram",
+    "source": "StudyHub",
+    "method": "Two fictitious listing IDs and areas; no actual coordinate values or private source records",
+    "sha256": "3d799f375af8e1146114d8963e2214e7974c8d94ceebd5008f04d04159e90452"
+  }
+]
