@@ -1,0 +1,19 @@
+Status: READY_FOR_AGY
+
+# Independent runnable Porto example
+
+Scope: User explicitly chose both planning and implementation. Create a small real-data, reproducible educational pipeline for Porto using public Inside Airbnb files, independent of private group workbooks. No actual group membership, IDs, coordinates or quotas are supplied. Code may use public source listing IDs locally but not publish personal review text.
+
+Antigravity workdir: `C:/Users/Ai/.codex/worktrees/data-course-20261018-a`. Owned path: Only `qa/airbnb-example-20261019/output/**` (source code, config, README, tests, report). All other files and all preexisting modifications are read-only. Codex copies accepted source into `examples/airbnb-porto/`, runs the actual dataset, inspects all numerical outputs/figures and publishes aggregate evidence only.
+
+Authorization: Exact worktree A was explicitly authorized by the user for data-course authoring and QA, with standing full-tool permission. `dangerously_skip_permissions=true` is permitted only for the owned output directory. No private sheets, credentials, API calls, installation, Git mutation, push, deploy or full site build by AGY.
+
+Design: Python standard library preferred, CSV/gzip/json/urllib/statistics/SVG, bounded downloads and streamed CSVs. Four assigned public Porto dates2025-09-21,2025-12-25,2026-03-26,2026-06-23. Default seeded cohort120listing IDs in intersection of all four listings. Keep every source snapshot distinguishable. Calendar horizon next30days with explicit date bounds per snapshot, raw files retained locally and not committed. Reviews deduplicated by review ID with changed-content conflicts logged.
+
+Outputs: Source manifest; selected listings/calendar/reviews; rule-by-rule QA evidence; all7KPIdefinitions with6computed nonLLM +LLMstatus pending; baseline predictions; blank manual-label template; LLM/evaluation readiness status; at least5actual SVGfigures for count map, availability trend, room-type share, latest price distribution and missing-review heatmap; Markdown report. Price only latest snapshot. No occupancy, ADR or revenue claims from unavailable data. No silently clipped data or fabricated rows. Missing price doesn't remove listing from count metrics.
+
+LLM: Implement Gemini REST adapter reading environment key, configurable model, structured validation for sentiment/aspects/language, bounded retries, content/model/prompt keyed cache, explicit skip mode. Do not call it during AGY work. No secret values printed. Evaluate only genuine completed manual labels, never baseline/AI as human truth. Report pending when labels or calls absent. Empty predictions must not yield fake accuracy/F1. Review failures and coverage remain visible.
+
+Verification: Meaningful unit tests for locale price parsing, snapshot keys, dedupe, KPI denominators, rolling calendar bounds, QAactions, F1 arithmetic, missing prediction coverage, cache keys and no fabricated manual labels. Synthetic fixtures clearly separate from actual run. No external dependency installation. Codex separately validates actual public runs.
+
+Deliverables: `run_pipeline.py`, supporting `src/*.py` if helpful, `configs/porto.json`, README, `.gitignore`, `.env.example`, `.python-version` matching a tested local runtime, `requirements.txt` declaring standard library if no third-party dependencies, `AI_USAGE.md`, tests and report. Save source incrementally. At most one initial call and two bounded corrections. Report actual actions and limits, never claim full graded assignment complete without real LLM and human evaluation.
