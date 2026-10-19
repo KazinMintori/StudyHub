@@ -21,3 +21,13 @@ test('Preserves exact code, URLs and case-sensitive Python identifiers', () => {
 test('Treats quoted program data after a colon as literal code, preserving its case', () => {
   assert(md.render("Dữ liệu: 'wifi'.").includes("<code>'wifi'</code>"))
 })
+
+test('Keeps accented Vietnamese words whole instead of detecting ASCII identifier prefixes', () => {
+  for (const word of ['máy', 'mảng', 'số', 'cột', 'xử', 'tỷ', 'ma\u0301y']) {
+    const html = md.render(`Linux/Bash: ${word} có dữ liệu.`)
+    assert(!html.includes('<code>'), `${word}: prose must not become inline code`)
+    assert(html.includes(word[0].toLocaleUpperCase('vi-VN') + word.slice(1)))
+  }
+  assert(md.render('Giá trị: m.').includes('<code>m</code>'))
+  assert(md.render('Giá trị: np.nan.').includes('<code>np.nan</code>'))
+})

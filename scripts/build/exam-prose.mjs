@@ -46,7 +46,9 @@ export function examProsePlugin(md) {
               }
             }
             if (/[“‘(]/.test(char)) { content += char; continue }
-            const name = token.content.slice(index).match(/^[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*(?:\([^\n)]*\))?/)
+            // ASCII identifiers must end at a full Unicode word boundary.
+            // Otherwise “máy” can be misread as the identifier “m” + “áy”.
+            const name = token.content.slice(index).match(/^[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*(?:\([^\n)]*\))?(?![\p{L}\p{M}\p{N}_])/u)
             if (name && (identifiers.has(name[0].split(/[.(]/)[0]) || /^\w+_\w/.test(name[0]))) {
               flush()
               const code = new state.Token('code_inline', 'code', 0)
