@@ -284,7 +284,7 @@ Ngôn ngữ, cảm xúc và các khía cạnh khen/chê có cấu trúc nhãn kh
 
 Nhóm phải ước tính chi phí nếu xử lý hết review của thành phố. Cần dựa trên số review, lượng đầu vào/đầu ra dự kiến, cách gọi và mức giá của dịch vụ đang dùng. Phải ghi các giả thiết của ước tính. Yêu cầu ước tính không đồng nghĩa với yêu cầu thực sự gọi API cho toàn bộ thành phố.
 
-Đây là dự toán cần trình bày trong báo cáo. Có thể dùng thông tin về số token đầu vào và đầu ra của mẫu đã xử lý để giải thích cơ sở tính chi phí, đồng thời ghi ngày tra bảng giá.
+Đây là dự toán cần trình bày trong báo cáo. Có thể dùng thông tin về số token đầu vào và đầu ra của mẫu đã xử lý để giải thích cơ sở tính chi phí, đồng thời ghi ngày tra bảng giá. Token là đơn vị mô hình dùng để đếm lượng văn bản, không nhất thiết tương ứng với một từ. Nhà cung cấp có thể áp dụng mức giá khác nhau cho token gửi vào và token được tạo ra.
 
 Lưu kết quả LLM có thể giảm thời gian và số lần gọi khi phát triển. Để tránh dùng lại nhầm, nên nhận diện cache theo review, nội dung đầu vào, mô hình và phiên bản prompt hoặc cấu hình liên quan. Khi đổi cách trích xuất, kết quả cũ có thể không còn phù hợp.
 
@@ -320,6 +320,8 @@ Báo cáo cần giúp người đọc nối được kết luận với con số
 - `.env.example` chỉ ghi tên biến hoặc giá trị mẫu không phải bí mật. Khóa thật đặt trong biến môi trường hoặc công cụ quản lý bí mật thích hợp, không commit.
 
 Tệp `.python-version` chỉ ghi nhận phiên bản, không tự cài hoặc thay Python. Tương tự, một danh sách thư viện thiếu gói cần thiết sẽ không đủ để người chấm dựng lại môi trường, dù máy người viết đã có sẵn gói đó.
+
+Ghim phiên bản nghĩa là chỉ rõ phiên bản sẽ cài, thay vì luôn lấy bản mới nhất. Lockfile là tệp do công cụ quản lý môi trường tạo để ghi lại bộ phiên bản đã chọn, thường gồm cả các gói phụ thuộc. Nhóm chỉ cần chọn một cách quản lý đáp ứng yêu cầu và hướng dẫn cách sử dụng trong README.
 
 ### 11.2. Cây thư mục và vai trò của từng phần
 
@@ -413,7 +415,7 @@ seed: 42
 
 Đây là định dạng YAML. Một dòng gán tên cho một giá trị, phần thụt vào nhóm các lựa chọn cùng chủ đề, còn dấu `-` biểu diễn phần tử của một danh sách. Tệp cấu hình chỉ chứa lựa chọn, chương trình Python phải đọc tệp rồi thực hiện công việc tương ứng.
 
-`currency` ghi loại tiền để diễn giải giá. Các khóa dưới `qa` là ví dụ nơi đặt tham số cho quy tắc, không chứng minh ngưỡng giá 5.000.000 CLP hoặc số đêm 365 là đúng cho mọi bài. `dedupe_keys` chỉ ra các cột dự định dùng nhận diện trùng, nhưng nhóm vẫn phải kiểm tra chúng có phù hợp với đơn vị quan sát hay không.
+`currency` ghi loại tiền để diễn giải giá. Trong ví dụ Santiago, `CLP` là mã đồng peso Chile. Các khóa dưới `qa` là ví dụ nơi đặt tham số cho quy tắc, không chứng minh ngưỡng giá 5.000.000 CLP hoặc số đêm 365 là đúng cho mọi bài. `dedupe_keys` chỉ ra các cột dự định dùng nhận diện trùng, nhưng nhóm vẫn phải kiểm tra chúng có phù hợp với đơn vị quan sát hay không.
 
 `area_col` cho biết cột dùng phân nhóm khu vực. `provider` là nhà cung cấp LLM. `aspects` liệt kê những khía cạnh muốn trích xuất. `cache` là nơi ghi kết quả đã lưu, còn `seed` giúp tái lập những thao tác ngẫu nhiên có hỗ trợ tham số này. Cố định seed không bảo đảm mẫu đại diện và không buộc mọi dịch vụ LLM trả cùng một kết quả.
 
@@ -476,7 +478,7 @@ Danh sách này giúp kiểm tra các yêu cầu của đề, không thay bộ t
 - [ ] Tag `final` trỏ đúng bản muốn nộp và đã được đẩy lên GitHub đúng hạn.
 - [ ] Từng thành viên giải thích được lựa chọn QA, công thức KPI, cách đánh giá LLM và các con số trong báo cáo.
 
-Việc clone vào thư mục mới và tạo lại kết quả là yêu cầu tự kiểm của đề. Thử thêm một snapshot khác là cách chuẩn bị hữu ích cho tình huống bộ test chung đổi mốc, không phải một mốc nộp thứ tư.
+Clone là tạo một bản sao repo từ GitHub về máy, gồm mã nguồn và lịch sử Git. Việc clone vào thư mục mới và tạo lại kết quả là yêu cầu tự kiểm của đề. Thử thêm một snapshot khác là cách chuẩn bị hữu ích cho tình huống bộ test chung đổi mốc, không phải một mốc nộp thứ tư.
 
 ## Tài liệu tham khảo
 
