@@ -638,7 +638,7 @@ Clone là tạo một bản sao repo từ GitHub về máy, gồm mã nguồn v�
 
 Đề chung cho biết sản phẩm cần hoàn thành. Bảng giao dữ liệu cho biết nhóm phải làm trên phần dữ liệu nào. Khi nhận bảng, cần đọc hướng dẫn trước, tìm đúng phần của nhóm, rồi mới tải và lọc dữ liệu. Một tệp tải từ Inside Airbnb thường chứa dữ liệu của cả thành phố, chưa phải ngay tập dữ liệu được giao.
 
-Phần này dùng các mã như `LST-A`, `RV-A` và `Vùng-Mẫu-A` để minh họa. Đây là ký hiệu tự đặt, không phải mã thật để tìm trên Inside Airbnb. Tên người, mã sinh viên, mã nhóm, ID và tọa độ của bất kỳ nhóm cụ thể nào đều không được dùng trong các ví dụ.
+Phần này dùng các mã giả định như `LST-A`, `RV-A` và `Vùng-Mẫu-A` để minh họa. Khi làm bài, hãy thay chúng bằng các mã trong bảng được giao. Các mã minh họa không dùng để tìm dữ liệu thật trên Inside Airbnb.
 
 ### 15.1. Những phần cần tìm trong bảng giao dữ liệu
 
@@ -770,6 +770,6 @@ Python không tự đọc mọi tệp `.env`. Nếu chọn lưu cấu hình cụ
 - [Inside Airbnb: Từ điển trường dữ liệu](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit).
 - [Inside Airbnb: Các giả thiết và giới hạn của dữ liệu](https://insideairbnb.com/data-assumptions/).
 - [RFC 7946: Định dạng GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946).
-- [Ghi chú cách hiểu bài tập lớn do người dùng cung cấp](https://docs.google.com/document/d/17hqvglaYTn27vNw7siVPxpMGhL6goMkDngQfSOMF8NY/edit?tab=t.0).
+- [Ghi chú về các bước thực hiện bài tập lớn](https://docs.google.com/document/d/17hqvglaYTn27vNw7siVPxpMGhL6goMkDngQfSOMF8NY/edit?tab=t.0).
 
 Đối chiếu đề và chính sách ngày 19/10/2026. Các nội dung được ghi là sẽ công bố sau, như format báo cáo và trọng số rubric, cần tiếp tục theo dõi thông báo của học phần.
