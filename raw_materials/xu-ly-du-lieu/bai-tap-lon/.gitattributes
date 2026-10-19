@@ -1,3 +1,4 @@
-*.html -text
-airbnb-reference-google-doc.txt -text
-insideairbnb-data-dictionary.csv -text
+# Source snapshots keep their exact bytes, including source whitespace.
+*.html -text -whitespace
+airbnb-reference-google-doc.txt -text -whitespace
+insideairbnb-data-dictionary.csv -text -whitespace
