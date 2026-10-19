@@ -103,6 +103,8 @@ test('Exam is independent and the sidebar routes to individual topic pages', asy
   const config = buildThemeConfig({ courseCatalog: [course], wikiGroups: [], concepts: {} })
   const sidebar = config.sidebar[`/${course.id}/`]
   assert.deepEqual(sidebar[0].items.map(item => item.text), ['Học tập', 'Ôn thi'])
+  assert.deepEqual(sidebar[0].items[1].items.map(item=>item.text), ['Chương I','Chương II','Chương III'])
+  await access(`docs${sidebar[0].items[1].items[2].link}.md`)
   assert.equal(sidebar.length, 4)
   assert.equal(sidebar.slice(1).flatMap(chapter => chapter.items).length, 19)
   for (const chapter of sidebar.slice(1)) for (const topic of chapter.items) {
@@ -115,8 +117,8 @@ test('Exam chapters lead to separate balanced practice tests', async () => {
   const source = await readFile(`docs/${course.id}/on-thi/index.md`, 'utf8')
   assert(source.includes('<PhilosophyExamOverview />'))
   const catalog=JSON.parse(await readFile(`src/content/courses/${course.id}/exam/catalog.json`,'utf8'))
-  assert.equal(catalog.banks.length,2)
-  assert.deepEqual(catalog.banks.map(bank=>bank.count),[360,440])
+  assert.equal(catalog.banks.length,3)
+  assert.deepEqual(catalog.banks.map(bank=>bank.count),[360,440,450])
   for(const bank of catalog.banks) {
     const page=await readFile(`docs/${course.id}/on-thi/${bank.id}.md`,'utf8')
     assert(page.includes(`<PhilosophyPracticeChapter chapter-id="${bank.id}" />`))

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "course": "triet-hoc-mac-lenin",
-  "totalCount": 800,
+  "totalCount": 1250,
   "banks": [
     {
       "id": "chuong-1",
@@ -145,6 +145,14 @@
           "count": 10
         }
       ]
+    },
+    {
+      "id": "chuong-3",
+      "chapter": 3,
+      "title": "Chương III. Chủ nghĩa duy vật lịch sử",
+      "count": 450,
+      "file": "chuong-3.json",
+      "groups": []
     }
   ]
 }

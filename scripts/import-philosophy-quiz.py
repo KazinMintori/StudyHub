@@ -37,6 +37,14 @@ SPECS = (
         "answerFile": "02_Dap_an_Giai_thich_Ma_tran_Chuong_II.md",
         "title": "Chương II. Chủ nghĩa duy vật biện chứng",
     },
+    {
+        "chapter": 3,
+        "prefix": "CIII-",
+        "count": 450,
+        "questionFile": "01_Cau_hoi_Chuong_III.md",
+        "answerFile": "02_Dap_an_huong_dan_Chuong_III.md",
+        "title": "Chương III. Chủ nghĩa duy vật lịch sử",
+    },
 )
 CHAPTER_ONE_GROUPS = {
     "I.1": ("A", "Khái lược triết học và thế giới quan"),
@@ -64,7 +72,14 @@ def plain(text: str) -> str:
 
 def records(text: str, prefix: str, answer: bool = False) -> dict[str, str]:
     # Stop at any next heading, so the final record cannot absorb source reports.
-    level = "####" if answer else ("###" if prefix == "CH" else "##")
+    level = ("###" if prefix == "CIII-" else "####") if answer else ("###" if prefix == "CH" else "##")
+    if prefix == "CIII-":
+        # Reject malformed IDs/keys instead of silently skipping a source record.
+        suffix = r"\s+[—–-]\s+[A-D]" if answer else ""
+        valid = re.compile(rf"^{level} {re.escape(prefix)}\d{{3}}{suffix}\s*$")
+        for line in text.splitlines():
+            if re.match(r"^#{1,6}\s+CIII", line):
+                require(valid.fullmatch(line) is not None, f"Unknown chapter III record heading: {line}")
     heading = re.compile(
         rf"^{level} ({prefix}\d{{3}})(?:[^\n]*)$", re.MULTILINE
     )
@@ -99,7 +114,8 @@ def parse_questions(text: str, prefix: str) -> dict[str, dict]:
 
 
 def parse_quick_answers(text: str, prefix: str) -> dict[str, str]:
-    marker = re.search(r"^### Bảng đáp án nhanh\s*$", text, re.MULTILINE)
+    level = "##" if prefix == "CIII-" else "###"
+    marker = re.search(rf"^{level} Bảng đáp án nhanh\s*$", text, re.MULTILINE)
     require(marker is not None, "Missing independent quick-answer table")
     tail = text[marker.end():]
     end = re.search(r"^#{1,6} ", tail, re.MULTILINE)
@@ -119,6 +135,8 @@ def field(block: str, label: str, question_id: str) -> str:
 
 
 def parse_answers(text: str, prefix: str) -> dict[str, dict]:
+    if prefix == "CIII-":
+        return parse_chapter_three_answers(text)
     result = {}
     for question_id, raw_block in records(text, prefix, answer=True).items():
         block = plain(raw_block)
@@ -163,6 +181,31 @@ def parse_answers(text: str, prefix: str) -> dict[str, dict]:
     return result
 
 
+def parse_chapter_three_answers(text: str) -> dict[str, dict]:
+    """Read the supplied short guide, which has no matrix or source metadata."""
+    result = {}
+    for question_id, raw_block in records(text, "CIII-", answer=True).items():
+        heading, body = plain(raw_block).split("\n", 1)
+        key = re.fullmatch(r"### CIII-\d{3}\s+[—–-]\s+([A-D])", heading.strip()).group(1)
+        matches = list(re.finditer(r"^- ([A-D]):[ \t]*(.*)$", body, re.MULTILINE))
+        expected = set("ABCD") - {key}
+        require(len(matches) == 3 and {match.group(1) for match in matches} == expected,
+                f"{question_id}: Need one explanation for each of the three incorrect options")
+        explanation = body[:matches[0].start()].strip()
+        require(bool(explanation), f"{question_id}: Missing correct rationale")
+        distractors = []
+        for index, match in enumerate(matches):
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+            value = body[match.start(2):end].strip()
+            require(bool(value), f"{question_id}: Empty distractor explanation {match.group(1)}")
+            distractors.append({"key": match.group(1), "explanation": value})
+        result[question_id] = {
+            "correctKey": key, "explanation": explanation, "distractors": distractors,
+            "takeaway": "", "sourceReference": "", "knowledgeIds": [], "level": "", "questionType": "",
+        }
+    return result
+
+
 def parse_matrix(text: str, prefix: str) -> dict[str, dict]:
     start = text.index("### Ma trận đầy đủ")
     tail = text[start:]
@@ -203,7 +246,7 @@ def build_bank(question_text: str, answer_text: str, spec: dict) -> tuple[dict, 
     answers = parse_answers(answer_text, prefix)
     answer_blocks = records(answer_text, prefix, answer=True)
     quick = parse_quick_answers(answer_text, prefix)
-    matrix = parse_matrix(answer_text, prefix)
+    matrix = {} if prefix == "CIII-" else parse_matrix(answer_text, prefix)
     expected_ids = {f"{prefix}{number:03d}" for number in range(1, expected_count + 1)}
     for name, values in (("questions", questions), ("answers", answers), ("quick answers", quick)):
         require(set(values) == expected_ids,
@@ -212,6 +255,9 @@ def build_bank(question_text: str, answer_text: str, spec: dict) -> tuple[dict, 
     for question_id in questions:
         answer = answers[question_id]
         require(quick[question_id] == answer["correctKey"], f"{question_id}: Quick table and detailed answer disagree")
+        if prefix == "CIII-":
+            questions[question_id].update(answer, group="", groupTitle="")
+            continue
         summary_pattern = (r"^- Đáp án:\s*[A-D]\s*[—–-]\s*(.+)$" if prefix == "CH"
                            else r"(?:Vì vậy|Do đó) chọn [A-D]:\s*(.+)$")
         summary = re.search(summary_pattern, plain(answer_blocks[question_id]), re.MULTILINE)
@@ -241,10 +287,19 @@ def build_bank(question_text: str, answer_text: str, spec: dict) -> tuple[dict, 
     report = {
         "id": bank["id"], "questionCount": len(questions), "quickAnswerCount": len(quick),
         "knowledgeCount": len(matrix), "answerDistribution": dict(sorted(Counter(quick.values()).items())),
-        "questionTypes": dict(Counter(item["questionType"] for item in questions.values())),
-        "levels": dict(Counter(item["level"] for item in questions.values())),
+        "questionTypes": dict(Counter(item["questionType"] for item in questions.values() if item["questionType"])),
+        "levels": dict(Counter(item["level"] for item in questions.values() if item["level"])),
         "groups": [{"id": group, "title": next(q["groupTitle"] for q in questions.values() if q["group"] == group), "count": count}
-                   for group, count in sorted(Counter(q["group"] for q in questions.values()).items())],
+                   for group, count in sorted(Counter(q["group"] for q in questions.values() if q["group"]).items())],
+        "validation": {
+            "selectedOptionMatchesDetailedAnswer": prefix != "CIII-",
+            "knowledgeMatrixCrossChecked": prefix != "CIII-",
+            "referencesAndTakeawaysPresent": prefix != "CIII-",
+            "detailedAnswersMatchQuickTable": True,
+            "threeDistractorExplanations": True,
+        },
+        "unavailableSourceFields": (["selectedOptionSummary", "knowledgeMatrix", "sourceReference", "takeaway", "level", "questionType"]
+                                    if prefix == "CIII-" else []),
         "warnings": warnings,
     }
     return bank, report
@@ -252,6 +307,8 @@ def build_bank(question_text: str, answer_text: str, spec: dict) -> tuple[dict, 
 
 def source_notes(answer_text: str, chapter: int) -> list[dict]:
     answer_text = answer_text.replace("\r\n", "\n")
+    if chapter == 3:
+        return []
     if chapter == 1:
         notes = []
         for line in answer_text.splitlines():
@@ -292,14 +349,16 @@ def run(source_dir: Path, check: bool = False) -> dict:
     report = {
         "schemaVersion": 1, "totalQuestions": catalog["totalCount"], "files": files,
         "validation": {"idsComplete": True, "fourOptionsPerQuestion": True, "detailedAnswersMatchQuickTable": True,
-                       "selectedOptionMatchesDetailedAnswer": True,
-                       "threeDistractorExplanations": True, "referencesAndTakeawaysPresent": True, "knowledgeMatrixCrossChecked": True,
+                       "selectedOptionMatchesDetailedAnswer": {"chapters": [1, 2], "passed": True},
+                       "threeDistractorExplanations": True,
+                       "referencesAndTakeawaysPresent": {"chapters": [1, 2], "passed": True},
+                       "knowledgeMatrixCrossChecked": {"chapters": [1, 2], "passed": True},
                        "wordingRewritten": False, "historicalAndFactualClaimsIndependentlyVerified": False},
         "chapters": chapter_reports,
         "notes": ["Source files are copied byte for byte. Inline Markdown emphasis is removed from display text only.",
                   "Group metadata comes from the matrix. Primary group follows the first knowledge ID in each detailed answer.",
                   "Source caveats and difficulty labels are supplied author metadata, not independent factual or psychometric verification.",
-                  "No chapter III bank was supplied or generated."],
+                  "Chapter III supplies answer keys, correct rationales and distractor explanations, but no knowledge matrix, source references, takeaways, difficulty or question-type metadata. Those fields remain empty."],
     }
     outputs = {OUTPUT_DIR / f"{bank['id']}.json": bank for bank in banks}
     outputs[OUTPUT_DIR / "catalog.json"] = catalog
@@ -323,7 +382,7 @@ def run(source_dir: Path, check: bool = False) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-dir", type=Path, help="Directory containing the four supplied Markdown files")
+    parser.add_argument("--source-dir", type=Path, help="Directory containing the six supplied Markdown files")
     parser.add_argument("--check", action="store_true", help="Validate the preserved sources and generated JSON without writing")
     args = parser.parse_args()
     source_dir = args.source_dir or (RAW_DIR if args.check else Path.home() / "Downloads")

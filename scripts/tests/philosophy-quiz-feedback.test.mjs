@@ -3,9 +3,9 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { cleanQuestionFeedback, cleanQuizFeedback } from '../../src/features/philosophy/services/quiz-feedback.mjs'
 
-const banks = [1, 2].map(chapter => JSON.parse(readFileSync(new URL(`../../src/content/courses/triet-hoc-mac-lenin/exam/chuong-${chapter}.json`, import.meta.url), 'utf8')))
+const banks = [1, 2, 3].map(chapter => JSON.parse(readFileSync(new URL(`../../src/content/courses/triet-hoc-mac-lenin/exam/chuong-${chapter}.json`, import.meta.url), 'utf8')))
 const questions = banks.flatMap(bank => bank.questions)
-const feedback = question => [question.explanation, question.takeaway, ...question.distractors.map(item => item.explanation)]
+const feedback = question => [question.explanation, ...(question.takeaway ? [question.takeaway] : []), ...question.distractors.map(item => item.explanation)]
 const sourceNarration = /nguồn(?!\s+(?:gốc|lực|lý luận|tri thức)\b)|giáo trình|bản nguồn|tham chiếu(?:\s*:| tài liệu)|(?:trang|PDF|tr\.)\s*\d|đối chiếu\s*:|kiến thức\s*:|dữ kiện(?:\/cách hiểu)? quyết định|(?:vì vậy|do đó)\s+chọn\s+[ABCD](?=$|[\s.:])|→\s*chọn/iu
 
 test('authoring labels become knowledge and a substantive distinction', () => {
@@ -24,8 +24,8 @@ test('selection boilerplate and page citations disappear without deleting philos
   assert.equal(cleanQuizFeedback('Nguồn: **Triết học có tính hệ thống** → đối chiếu: Đúng nội dung trang 5. → chọn A.'), 'Triết học có tính hệ thống.')
 })
 
-test('all 800 questions retain their identity, exact question text, options and scoring', () => {
-  assert.equal(questions.length, 800)
+test('all 1250 questions retain their identity, exact question text, options and scoring', () => {
+  assert.equal(questions.length, 1250)
   for (const question of questions) {
     const snapshot = structuredClone(question)
     const result = cleanQuestionFeedback(question)
@@ -66,6 +66,8 @@ test('reviewed purely editorial feedback explains the actual concept', () => {
   assert.match(byId('Q022').explanation, /quan hệ vật chất.*duy vật lịch sử/u)
   assert.match(byId('Q339').explanation, /cơ sở nội tại.*giữ lại và cải tạo/u)
   assert.match(byId('Q415').takeaway, /phản ánh đầy đủ.*biết trọn vẹn/u)
+  assert.match(byId('CIII-010').explanation, /không có nghĩa.*chưa có quy tắc/u)
+  assert.match(byId('CIII-254').explanation, /thị trường.*liên kết kinh tế/u)
   assert.equal(cleanQuizFeedback(null), '')
   assert.equal(cleanQuestionFeedback(null), null)
 })

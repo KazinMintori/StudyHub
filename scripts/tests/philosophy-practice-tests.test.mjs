@@ -7,12 +7,13 @@ const readJson = async file => JSON.parse(await readFile(file,'utf8'))
 test('chapters divide into balanced tests of at most 60 without a short leftover', () => {
   assert.deepEqual(chapterPracticeTests({id:'chuong-1',chapter:1,count:360}).map(test=>test.count),[60,60,60,60,60,60])
   assert.deepEqual(chapterPracticeTests({id:'chuong-2',chapter:2,count:440}).map(test=>test.count),[55,55,55,55,55,55,55,55])
+  assert.deepEqual(chapterPracticeTests({id:'chuong-3',chapter:3,count:450}).map(test=>test.count),[57,57,56,56,56,56,56,56])
   assert.deepEqual(chapterPracticeTests({count:0}),[])
 })
 
 test('every original question occurs exactly once in its chapter tests', async () => {
   const ids=[]
-  for (const chapter of [1,2]) {
+  for (const chapter of [1,2,3]) {
     const parent=await readJson(`src/content/courses/triet-hoc-mac-lenin/exam/chuong-${chapter}.json`)
     const covered=[]
     for (const spec of chapterPracticeTests(parent)) {
@@ -36,6 +37,6 @@ test('every original question occurs exactly once in its chapter tests', async (
     assert.deepEqual(covered,parent.questions.map(question=>question.id))
     assert.equal(new Set(covered).size,parent.questions.length)
   }
-  assert.equal(ids.length,14)
-  assert.equal(new Set(ids).size,14)
+  assert.equal(ids.length,22)
+  assert.equal(new Set(ids).size,22)
 })

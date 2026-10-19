@@ -3,16 +3,22 @@ import { studyLink } from '../../../core/routing/links.js'
 import { course } from '../../../content/courses/triet-hoc-mac-lenin/course.mjs'
 import catalog from '../../../content/courses/triet-hoc-mac-lenin/exam/catalog.json'
 import { chapterPracticeTests } from '../services/practice-tests.mjs'
+const chapterLabels = ['I', 'II', 'III']
+const descriptions = [
+  'Nguồn gốc và vấn đề cơ bản của triết học, biện chứng và siêu hình, sự hình thành học thuyết và vai trò của triết học.',
+  'Vật chất và ý thức, các nguyên lý, phạm trù, quy luật, thực tiễn, nhận thức và chân lý.',
+  'Sản xuất vật chất, hình thái kinh tế – xã hội, giai cấp, dân tộc, nhà nước, ý thức xã hội và con người.',
+]
 </script>
 
 <template>
   <section class="philosophy-exam-overview" aria-label="Chọn chương ôn thi">
-    <p class="exam-intro">Chọn chương và bài để luyện trắc nghiệm. Khi chọn phương án, bạn sẽ thấy ngay kết quả và giải thích. Tiến độ được lưu riêng từng bài để bạn tiếp tục hoặc luyện lại các câu sai.</p>
+    <p class="exam-intro">Chọn chương và bài để luyện trắc nghiệm. Khi chọn phương án, bạn sẽ thấy ngay kết quả và giải thích. Tiến độ được lưu riêng từng bài để bạn tiếp tục phần đang làm.</p>
     <div class="exam-bank-list">
       <article v-for="bank in catalog.banks" :key="bank.id" class="exam-bank">
-        <p class="exam-bank-label">Chương {{ bank.chapter === 1 ? 'I' : 'II' }} · {{ chapterPracticeTests(bank).length }} bài · {{ bank.count }} câu hỏi</p>
+        <p class="exam-bank-label">Chương {{ chapterLabels[bank.chapter - 1] || bank.chapter }} · {{ chapterPracticeTests(bank).length }} bài · {{ bank.count }} câu hỏi</p>
         <h2>{{ course.lessons[bank.chapter - 1].title }}</h2>
-        <p>{{ bank.chapter === 1 ? 'Nguồn gốc và vấn đề cơ bản của triết học, biện chứng và siêu hình, sự hình thành học thuyết và vai trò của triết học.' : 'Vật chất và ý thức, các nguyên lý, phạm trù, quy luật, thực tiễn, nhận thức và chân lý.' }}</p>
+        <p>{{ descriptions[bank.chapter - 1] }}</p>
         <a class="exam-start" :href="studyLink(`/triet-hoc-mac-lenin/on-thi/${bank.id}`)">Chọn bài <span aria-hidden="true">→</span></a>
       </article>
     </div>

@@ -5,7 +5,7 @@ import { toExamBank } from '../../src/features/philosophy/services/exam-bank.mjs
 import { cleanQuestionFeedback } from '../../src/features/philosophy/services/quiz-feedback.mjs'
 
 test('The shared exam adapter retains every prompt, option and individual explanation', async () => {
-  for (const chapter of [1, 2]) {
+  for (const chapter of [1, 2, 3]) {
     const bank = JSON.parse(await readFile(`src/content/courses/triet-hoc-mac-lenin/exam/chuong-${chapter}.json`, 'utf8'))
     bank.questions = bank.questions.map(cleanQuestionFeedback)
     const adapted = toExamBank(bank)
@@ -31,7 +31,7 @@ test('Plain question text cannot inject markup into the shared renderer', () => 
 })
 
 test('All philosophy tests use the same page layout as Data Processing', async () => {
-  for (const [chapter,count] of [[1,6],[2,8]]) for (let number=1; number<=count; number++) {
+  for (const [chapter,count] of [[1,6],[2,8],[3,8]]) for (let number=1; number<=count; number++) {
     const page=await readFile(`docs/triet-hoc-mac-lenin/on-thi/chuong-${chapter}/bai-${number}.md`, 'utf8')
     assert.match(page, /layout: page/)
     assert.match(page, /sidebar: false/)

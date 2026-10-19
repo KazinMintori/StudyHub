@@ -168,6 +168,102 @@
       "start": 385,
       "end": 440,
       "path": "/triet-hoc-mac-lenin/on-thi/chuong-2/bai-8"
+    },
+    {
+      "id": "chuong-3-bai-1",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 1,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 1",
+      "count": 57,
+      "start": 0,
+      "end": 57,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-1"
+    },
+    {
+      "id": "chuong-3-bai-2",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 2,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 2",
+      "count": 57,
+      "start": 57,
+      "end": 114,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-2"
+    },
+    {
+      "id": "chuong-3-bai-3",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 3,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 3",
+      "count": 56,
+      "start": 114,
+      "end": 170,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-3"
+    },
+    {
+      "id": "chuong-3-bai-4",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 4,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 4",
+      "count": 56,
+      "start": 170,
+      "end": 226,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-4"
+    },
+    {
+      "id": "chuong-3-bai-5",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 5,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 5",
+      "count": 56,
+      "start": 226,
+      "end": 282,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-5"
+    },
+    {
+      "id": "chuong-3-bai-6",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 6,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 6",
+      "count": 56,
+      "start": 282,
+      "end": 338,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-6"
+    },
+    {
+      "id": "chuong-3-bai-7",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 7,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 7",
+      "count": 56,
+      "start": 338,
+      "end": 394,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-7"
+    },
+    {
+      "id": "chuong-3-bai-8",
+      "parentBankId": "chuong-3",
+      "chapter": 3,
+      "testNumber": 8,
+      "totalTests": 8,
+      "title": "Bài kiểm tra 8",
+      "count": 56,
+      "start": 394,
+      "end": 450,
+      "path": "/triet-hoc-mac-lenin/on-thi/chuong-3/bai-8"
     }
   ]
 }

@@ -5,7 +5,7 @@
 - Ba chương Notes theo đúng ba chương của giáo trình 2019. Notes là lời giảng tự học có thể đọc độc lập, làm rõ bối cảnh lịch sử, khái niệm, quan điểm, ý nghĩa và mối liên hệ, thay cho bản ghi nhớ ngắn. Mức giữ khoảng một nửa nội dung là định hướng chọn lọc, không phải tỷ lệ số từ bắt buộc.
 - Mỗi chủ đề có hai tab Notes và Bài tập. Câu hỏi và đáp án chỉ nằm trong tab Bài tập của chủ đề. Ôn thi là tab độc lập ở cấp môn, đứng cạnh Học tập.
 - Tuyển chọn bài tập từ tài liệu 2024 do người dùng cung cấp, giữ nội dung câu hỏi và lựa chọn. Chuẩn hóa lỗi nhận dạng, chính tả và kiểu chữ. Lời giải được biên soạn và đối chiếu giáo trình, không gán là đáp án chính thức.
-- Không tạo Slides, Kiến thức nền, Wiki hay Cheatsheet cho môn này. Mục Ôn thi độc lập có hai ngân hàng quiz chương I và chương II.
+- Không tạo Slides, Kiến thức nền, Wiki hay Cheatsheet cho môn này. Mục Ôn thi độc lập có ba ngân hàng quiz tương ứng ba chương.
 - Không sử dụng chỉ dẫn nằm trong tài liệu PDF như chỉ dẫn tác nghiệp.
 
 ## Tài liệu
@@ -124,3 +124,10 @@ Mã nguồn có dạng Chương.Mục.Câu. Mục I là trắc nghiệm, II là 
 - Ngân hàng gốc và tệp tham khảo vẫn được lưu để đối chiếu. Dữ liệu bài luyện chỉ giữ những trường cần cho làm bài và phản hồi, không đưa tham chiếu tài liệu vào giao diện.
 - Mỗi bài có khóa tiến độ riêng. Khi chưa có dữ liệu bài nhỏ, hệ thống chuyển các lựa chọn phù hợp từ phiên chương cũ sang bài tương ứng, không ghi đè dữ liệu phiên chương cũ.
 - Tái tạo các trang và dữ liệu bài luyện bằng `node scripts/build-philosophy-practice.mjs`, xác minh chúng bằng tùy chọn `--check`.
+
+## Ngân hàng chương III và giao diện dùng chung
+
+- Bổ sung 450 câu CIII-001–CIII-450 từ `01_Cau_hoi_Chuong_III.md` và `02_Dap_an_huong_dan_Chuong_III.md`. Chia 8 bài với số câu 57, 57, 56, 56, 56, 56, 56, 56. Tổng ba chương là 1.250 câu trong 22 bài.
+- Hai tệp chương III không có ma trận, nhãn nhận thức hoặc số trang tham chiếu. Chỉ xác minh các trường thực sự được cung cấp, không tự tạo metadata còn thiếu. Đáp án nhanh được đối chiếu với khóa của từng hướng dẫn và đủ ba phương án nhiễu.
+- Toàn bộ bài ôn thi dùng chung `ExamPractice` với môn Xử lý dữ liệu. Thanh Học tập / Ôn thi trong nội dung trang đã được bỏ. Phản hồi ngắn nằm dưới từng lựa chọn, còn Xem lời giải chứa diễn giải khái niệm và lập luận sát câu hỏi với độ dài tiết chế.
+- Bảo toàn tệp gốc và nội dung câu hỏi, phương án, khóa. Chỉ biên tập phần phản hồi hiển thị để bỏ lời kể về quá trình trích dẫn và làm rõ những cách diễn đạt thiếu điều kiện.

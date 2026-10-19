@@ -272,8 +272,8 @@ test('empty and malformed question lists are handled without invalid navigation'
   assert.equal(restartQuizSession(emptyBank, empty), empty)
 })
 
-test('both published philosophy banks retain every question and remain independent', () => {
-  for (const [id, count] of [['chuong-1', 360], ['chuong-2', 440]]) {
+test('all published philosophy banks retain every question and remain independent', () => {
+  for (const [id, count] of [['chuong-1', 360], ['chuong-2', 440], ['chuong-3', 450]]) {
     const source = JSON.parse(readFileSync(`src/content/courses/triet-hoc-mac-lenin/exam/${id}.json`, 'utf8'))
     assert.equal(source.id, id)
     assert.equal(source.schemaVersion, QUIZ_SESSION_VERSION)

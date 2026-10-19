@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "totalQuestions": 800,
+  "totalQuestions": 1250,
   "files": [
     {
       "path": "raw_materials/triet-hoc-mac-lenin/exam/01_Ngan_hang_cau_hoi_Chuong_I (1).md",
@@ -21,16 +21,44 @@
       "path": "raw_materials/triet-hoc-mac-lenin/exam/02_Dap_an_Giai_thich_Ma_tran_Chuong_II.md",
       "sha256": "c89d3d4d86eb30de4c36e0b928c514a61b3424c9400d077b4ceed06e2c88a79e",
       "bytes": 547427
+    },
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/01_Cau_hoi_Chuong_III.md",
+      "sha256": "ff7e398c1ec75911aa2035c82e6fae1f891c12d657af90c2f3c05bff84a98233",
+      "bytes": 201719
+    },
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/02_Dap_an_huong_dan_Chuong_III.md",
+      "sha256": "9b1cb7ac0cf7dee0e77f01e9f325d9857bd18582b3ffb8a895e1f195dd9ff7ce",
+      "bytes": 183144
     }
   ],
   "validation": {
     "idsComplete": true,
     "fourOptionsPerQuestion": true,
     "detailedAnswersMatchQuickTable": true,
-    "selectedOptionMatchesDetailedAnswer": true,
+    "selectedOptionMatchesDetailedAnswer": {
+      "chapters": [
+        1,
+        2
+      ],
+      "passed": true
+    },
     "threeDistractorExplanations": true,
-    "referencesAndTakeawaysPresent": true,
-    "knowledgeMatrixCrossChecked": true,
+    "referencesAndTakeawaysPresent": {
+      "chapters": [
+        1,
+        2
+      ],
+      "passed": true
+    },
+    "knowledgeMatrixCrossChecked": {
+      "chapters": [
+        1,
+        2
+      ],
+      "passed": true
+    },
     "wordingRewritten": false,
     "historicalAndFactualClaimsIndependentlyVerified": false
   },
@@ -90,6 +118,14 @@
           "count": 28
         }
       ],
+      "validation": {
+        "selectedOptionMatchesDetailedAnswer": true,
+        "knowledgeMatrixCrossChecked": true,
+        "referencesAndTakeawaysPresent": true,
+        "detailedAnswersMatchQuickTable": true,
+        "threeDistractorExplanations": true
+      },
+      "unavailableSourceFields": [],
       "warnings": [],
       "sourceCaveats": [
         {
@@ -255,6 +291,14 @@
           "count": 10
         }
       ],
+      "validation": {
+        "selectedOptionMatchesDetailedAnswer": true,
+        "knowledgeMatrixCrossChecked": true,
+        "referencesAndTakeawaysPresent": true,
+        "detailedAnswersMatchQuickTable": true,
+        "threeDistractorExplanations": true
+      },
+      "unavailableSourceFields": [],
       "warnings": [],
       "sourceCaveats": [
         {
@@ -270,12 +314,44 @@
           "sourceCaveat": "Bản này đi thẳng vào định nghĩa phủ định biện chứng ở trang 121, không tách một định nghĩa riêng hoàn chỉnh cho phủ định nói chung. Ngân hàng kiểm tra phân biệt mất đi/phá hủy với phủ định tạo tiền đề phát triển theo chính đoạn đó; không nhập thêm định nghĩa ngoài nguồn. Tính tuyệt đối của chân lý giữ cách trình bày ở trang 141, gồm cả giới hạn giai đoạn và yêu cầu không hiểu là đã nắm trọn mọi hiện thực."
         }
       ]
+    },
+    {
+      "id": "chuong-3",
+      "questionCount": 450,
+      "quickAnswerCount": 450,
+      "knowledgeCount": 0,
+      "answerDistribution": {
+        "A": 113,
+        "B": 113,
+        "C": 112,
+        "D": 112
+      },
+      "questionTypes": {},
+      "levels": {},
+      "groups": [],
+      "validation": {
+        "selectedOptionMatchesDetailedAnswer": false,
+        "knowledgeMatrixCrossChecked": false,
+        "referencesAndTakeawaysPresent": false,
+        "detailedAnswersMatchQuickTable": true,
+        "threeDistractorExplanations": true
+      },
+      "unavailableSourceFields": [
+        "selectedOptionSummary",
+        "knowledgeMatrix",
+        "sourceReference",
+        "takeaway",
+        "level",
+        "questionType"
+      ],
+      "warnings": [],
+      "sourceCaveats": []
     }
   ],
   "notes": [
     "Source files are copied byte for byte. Inline Markdown emphasis is removed from display text only.",
     "Group metadata comes from the matrix. Primary group follows the first knowledge ID in each detailed answer.",
     "Source caveats and difficulty labels are supplied author metadata, not independent factual or psychometric verification.",
-    "No chapter III bank was supplied or generated."
+    "Chapter III supplies answer keys, correct rationales and distractor explanations, but no knowledge matrix, source references, takeaways, difficulty or question-type metadata. Those fields remain empty."
   ]
 }

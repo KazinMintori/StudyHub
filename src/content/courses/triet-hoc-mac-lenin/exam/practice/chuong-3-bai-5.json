@@ -1,0 +1,2363 @@
+{
+  "schemaVersion": 1,
+  "id": "chuong-3-bai-5",
+  "parentBankId": "chuong-3",
+  "chapter": 3,
+  "testNumber": 5,
+  "totalTests": 8,
+  "title": "Bài kiểm tra 5",
+  "questions": [
+    {
+      "id": "CIII-227",
+      "kind": "quiz",
+      "prompt": "Một người học nghề từ thế hệ trước rồi tự thử, sửa để có kỹ năng mới. Nhận định nào đúng về sự hình thành người ấy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kỹ năng mới chứng minh các điều kiện quá khứ không có tác dụng."
+        },
+        {
+          "key": "B",
+          "text": "Năng lực mới tự tạo nên, không chịu tiền đề người dạy."
+        },
+        {
+          "key": "C",
+          "text": "Sản phẩm lịch sử, tự phát triển qua hoạt động."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ là sản phẩm thụ động của người dạy, không có sáng tạo."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Thông tin có học tiếp thu và thực hành đổi mới. Đúng sự thống nhất sản phẩm lịch sử với chủ thể phát triển bản thân.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Kế thừa là tiền đề, không bị sáng tạo mới phủ nhận."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ quá trình tiếp thu kinh nghiệm thế hệ trước."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ khâu tự thử và sửa."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-228",
+      "kind": "quiz",
+      "prompt": "Theo giáo trình, đặc thù điểm xuất phát quá độ của Việt Nam là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Từ cộng sản nguyên thủy chưa có giai cấp và nhà nước."
+        },
+        {
+          "key": "B",
+          "text": "Thuộc địa nửa phong kiến, lực lượng thấp, bỏ chế độ tư bản."
+        },
+        {
+          "key": "C",
+          "text": "Từ xã hội đã hoàn thiện công hữu mọi tư liệu sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Từ xã hội tư bản phát triển cao, lực lượng hiện đại và đồng đều."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Quá độ gián tiếp, sản xuất nhỏ và nhiều thành phần tạo điều kiện kinh tế đặc thù.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ các giai đoạn xã hội thực tế được trình bày."
+        },
+        {
+          "key": "C",
+          "explanation": "Gán trạng thái hoàn thiện cho điểm bắt đầu."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi điểm xuất phát lịch sử đã nêu."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-229",
+      "kind": "quiz",
+      "prompt": "Cơ sở hạ tầng theo nghĩa duy vật lịch sử là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Toàn bộ quan điểm kinh tế và thiết chế tư tưởng tương ứng."
+        },
+        {
+          "key": "B",
+          "text": "Toàn bộ công trình giao thông hợp thành nền tảng kỹ thuật."
+        },
+        {
+          "key": "C",
+          "text": "Các quan hệ sản xuất trong cơ cấu kinh tế hiện thực."
+        },
+        {
+          "key": "D",
+          "text": "Toàn bộ sinh hoạt vật chất và điều kiện vật chất xã hội."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Đối tượng của khái niệm là quan hệ sản xuất trong vận động hiện thực, không phải các công trình vật chất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đưa quan điểm, tư tưởng vào cơ sở kinh tế."
+        },
+        {
+          "key": "B",
+          "explanation": "Dùng nghĩa hạ tầng kỹ thuật thông thường."
+        },
+        {
+          "key": "D",
+          "explanation": "Đó là phạm vi rộng hơn của tồn tại xã hội."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-230",
+      "kind": "quiz",
+      "prompt": "Phạm vi trực tiếp của ý thức đạo đức được xác định bằng gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan niệm hợp pháp–bất hợp pháp cùng quyền lực cưỡng chế."
+        },
+        {
+          "key": "B",
+          "text": "Thiện–ác, lương tâm và chuẩn mực điều chỉnh ứng xử."
+        },
+        {
+          "key": "C",
+          "text": "Hình tượng cái đẹp dùng để khái quát đời sống."
+        },
+        {
+          "key": "D",
+          "text": "Lý thuyết về nhà nước, giai cấp và giành chính quyền."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Trung tâm ở chuẩn mực giá trị và quan hệ ứng xử cá nhân–xã hội. Có giao thoa không xóa đặc trưng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lẫn pháp quyền và công cụ nhà nước."
+        },
+        {
+          "key": "C",
+          "explanation": "Lẫn phương thức phản ánh thẩm mỹ."
+        },
+        {
+          "key": "D",
+          "explanation": "Lẫn nội dung chính trị."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-231",
+      "kind": "quiz",
+      "prompt": "Cơ sở hình thành tư tưởng Hồ Chí Minh về con người được nguồn nêu gồm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinh nghiệm riêng, tách các thành tựu tư tưởng nhân loại."
+        },
+        {
+          "key": "B",
+          "text": "Quan niệm gia đình, không mở rộng tới lợi ích nhân loại."
+        },
+        {
+          "key": "C",
+          "text": "Sao chép lý luận, không xét điều kiện Việt Nam."
+        },
+        {
+          "key": "D",
+          "text": "Thực tiễn Việt Nam, truyền thống, tinh hoa nhân loại và lý luận Mác–Lênin."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tiếp thu, vận dụng sáng tạo và phát triển theo yêu cầu khách quan lịch sử–xã hội Việt Nam.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ các nền tảng văn hóa, lý luận và thực tiễn xã hội."
+        },
+        {
+          "key": "B",
+          "explanation": "Thu hẹp cả nền tảng và phạm vi quan niệm người."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ tính vận dụng sáng tạo, lịch sử–cụ thể."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-232",
+      "kind": "quiz",
+      "prompt": "Thực chất nội dung mới của đấu tranh vô sản trong thời kỳ quá độ là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ phân chia chức vụ giữa các nhóm trong bộ máy."
+        },
+        {
+          "key": "B",
+          "text": "Chấm dứt mọi hoạt động xây dựng để ưu tiên đối đầu."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ lặp lại nhiệm vụ lật đổ chính quyền đã hoàn thành."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc đấu tranh hai con đường xã hội chủ nghĩa–tư bản."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Mục tiêu chuyển sang xây dựng chủ nghĩa xã hội toàn diện, bảo vệ và cải tạo, không dừng ở giành quyền.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu hẹp vấn đề con đường phát triển thành chức vụ."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo nhiệm vụ cơ bản xây dựng thành ngừng xây dựng."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ thay đổi nhiệm vụ sau chính quyền."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-233",
+      "kind": "quiz",
+      "prompt": "Vai trò “quyết định trực tiếp quy mô, tốc độ, hiệu quả sản xuất” thuộc mặt nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan hệ giữa người với giới tự nhiên."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sở hữu tư liệu sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Quan hệ tổ chức, quản lý sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Quan hệ hưởng thụ sản phẩm lao động."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tổ chức–quản lý tác động trực tiếp hiệu quả với sở hữu quyết định bản chất và phân phối kích thích lợi ích.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không phải một mặt quan hệ sản xuất."
+        },
+        {
+          "key": "B",
+          "explanation": "Sở hữu quyết định nền tảng, khác vai trò trực tiếp đang hỏi."
+        },
+        {
+          "key": "D",
+          "explanation": "Phân phối được nhấn ở kích thích lợi ích."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-234",
+      "kind": "quiz",
+      "prompt": "Nguyên tắc đánh giá con người nào rút từ quan hệ cá nhân–xã hội?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xét ý muốn đủ đánh giá, không cần điều kiện và quan hệ."
+        },
+        {
+          "key": "B",
+          "text": "Toàn diện, lịch sử cụ thể, tránh tuyệt đối một mặt."
+        },
+        {
+          "key": "C",
+          "text": "Dùng một hành vi nổi bật làm đại diện đầy đủ bản chất."
+        },
+        {
+          "key": "D",
+          "text": "Xét hoàn cảnh đủ giải thích, không cần hoạt động cá nhân."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Toàn diện, lịch sử–cụ thể. Cả đề cao cá nhân lẫn bỏ cá nhân đều sai lệch.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chủ quan hóa, bỏ cơ sở xã hội hình thành người."
+        },
+        {
+          "key": "C",
+          "explanation": "Lấy một biểu hiện thay tổng hòa quan hệ."
+        },
+        {
+          "key": "D",
+          "explanation": "Biến người thành sản phẩm thụ động của điều kiện."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-235",
+      "kind": "quiz",
+      "prompt": "Nhận định nào diễn đạt đúng quan hệ sản xuất vật chất với đời sống tinh thần?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cung cấp vật phẩm; quan hệ kinh tế lại do tư tưởng hình thành."
+        },
+        {
+          "key": "B",
+          "text": "Tạo cơ sở kinh tế và phương tiện cho hoạt động tinh thần."
+        },
+        {
+          "key": "C",
+          "text": "Tạo sẵn từng tư tưởng mà không cần hoạt động nhận thức."
+        },
+        {
+          "key": "D",
+          "text": "Là kết quả cuối cùng của các quan điểm pháp quyền có trước."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Sản xuất hình thành quan hệ kinh tế và điều kiện tinh thần. Không trực tiếp viết sẵn nội dung mọi tư tưởng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thừa nhận vật phẩm nhưng đảo cơ sở quan hệ kinh tế."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ hoạt động chủ động của con người."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo chiều quan hệ nền tảng."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-236",
+      "kind": "quiz",
+      "prompt": "Một truyện xây nhân vật cụ thể để làm nổi quan hệ, vấn đề chung trong cuộc sống. Xét phương thức phản ánh, nhận xét nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Truyện phải dùng công thức quy luật mới có nhận thức."
+        },
+        {
+          "key": "B",
+          "text": "Có ý nghĩa chung thì nhân vật không còn giá trị thẩm mỹ."
+        },
+        {
+          "key": "C",
+          "text": "Cái chung thể hiện trong hình tượng riêng điển hình."
+        },
+        {
+          "key": "D",
+          "text": "Có nhân vật riêng thì chưa thể có nhận thức khái quát."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Thông tin nhân vật–vấn đề chung đúng cấu trúc hình tượng. Khái quát nghệ thuật khác ngôn ngữ lý thuyết.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Áp tiêu chí trình bày khoa học cho nghệ thuật."
+        },
+        {
+          "key": "B",
+          "explanation": "Đặt giá trị nhận thức đối lập giá trị thẩm mỹ."
+        },
+        {
+          "key": "D",
+          "explanation": "Đối lập cái riêng với cái chung trong hình tượng."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-237",
+      "kind": "quiz",
+      "prompt": "Theo phê phán của giáo trình, giới hạn chủ yếu của Huntington nằm ở đâu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xem trình độ kinh tế là tiêu chí phân chia các nền văn minh."
+        },
+        {
+          "key": "B",
+          "text": "Không thừa nhận văn hóa có liên hệ nào với xung đột xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Đề cao văn minh, xem nhẹ yếu tố khác và xung đột nội bộ."
+        },
+        {
+          "key": "D",
+          "text": "Đề cao quan hệ sản xuất, hạ thấp yếu tố văn hóa trong xung đột."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Ông lấy xung đột văn hóa làm trung tâm. Phản biện bằng các yếu tố bị xem nhẹ và xung đột nội bộ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm tiêu chí của luận điểm văn hóa đang được phân tích."
+        },
+        {
+          "key": "B",
+          "explanation": "Ngược luận điểm đề cao văn hóa của ông."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo nội dung luận điểm Huntington đang được phê phán."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-238",
+      "kind": "quiz",
+      "prompt": "Phân biệt đối tượng lao động với tư liệu lao động dựa trước hết vào đâu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vai trò chịu tác động hoặc làm phương tiện tác động."
+        },
+        {
+          "key": "B",
+          "text": "Độ mới hay cũ của yếu tố sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Nguồn gốc tự nhiên hay nhân tạo của vật phẩm."
+        },
+        {
+          "key": "D",
+          "text": "Giá mua cao hay thấp của yếu tố vật chất."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Tiêu chí là chức năng trong quá trình xác định. Đối tượng bị biến đổi, tư liệu được dùng để biến đổi nó.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Tuổi của vật không quyết định vai trò."
+        },
+        {
+          "key": "C",
+          "explanation": "Cả hai có thể mang nguồn gốc khác nhau."
+        },
+        {
+          "key": "D",
+          "explanation": "Giá cả không xác định chức năng lao động."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-239",
+      "kind": "quiz",
+      "prompt": "Con người là sản phẩm của lịch sử và chính bản thân mình được hiểu thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ hình thành do giáo dục, không liên quan sản xuất hay tự nhiên."
+        },
+        {
+          "key": "B",
+          "text": "Kế thừa tự nhiên, xã hội và tự hình thành qua hoạt động của mình."
+        },
+        {
+          "key": "C",
+          "text": "Tự tạo bản thân nên không cần các thế hệ và điều kiện trước."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ nhận tác động quá khứ, không góp phần biến đổi chính mình."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Con người vừa là sản phẩm phát triển tự nhiên, xã hội lâu dài, vừa tự hình thành qua hoạt động. Hai mặt chống cách nhìn thụ động hoặc tự tạo ngoài điều kiện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối hóa một nhân tố xã hội riêng lẻ."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ tiền đề lịch sử, tự nhiên."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ năng lực thực tiễn và tự phát triển."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-240",
+      "kind": "quiz",
+      "prompt": "Cơ chế nào làm phát minh, sáng chế thành tác nhân biến đổi lực lượng theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chuyển mọi tri thức thành quan hệ sở hữu, thay cấu trúc lực lượng."
+        },
+        {
+          "key": "B",
+          "text": "Đổi tên công nghệ trong năng lực và cách vận hành giữ nguyên."
+        },
+        {
+          "key": "C",
+          "text": "Ứng dụng, kết tinh tri thức vào yếu tố sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Công bố lý thuyết thay khâu ứng dụng vào sản xuất."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Của cải, hàng hóa đặc biệt là phát minh, bí mật công nghệ. Hiệu lực sản xuất gắn thâm nhập và ứng dụng nhanh.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn quan hệ sản xuất với các yếu tố lực lượng."
+        },
+        {
+          "key": "B",
+          "explanation": "Tên gọi không tự tạo biến đổi lực lượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ cơ chế hiện thực hóa năng lực sản xuất của tri thức."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-241",
+      "kind": "quiz",
+      "prompt": "Cách nhìn nào đúng một con người cụ thể về cá nhân, dân tộc, giai cấp, nhân loại?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tính nhân loại có nghĩa không còn đặc thù dân tộc hay cá nhân."
+        },
+        {
+          "key": "B",
+          "text": "Một phương diện giữ vai trò thay cho các phương diện còn lại."
+        },
+        {
+          "key": "C",
+          "text": "Tính dân tộc khiến lợi ích cá nhân không bao giờ biến đổi."
+        },
+        {
+          "key": "D",
+          "text": "Các phương diện tác động nhau trong điều kiện lịch sử."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Mỗi người mang đồng thời cái riêng, đặc thù cộng đồng và cái chung. Tương quan biểu hiện vận động.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đặt chung đối lập với cái riêng, đặc thù."
+        },
+        {
+          "key": "B",
+          "explanation": "Thu hẹp chỉnh thể thành một dấu hiệu đơn lẻ."
+        },
+        {
+          "key": "C",
+          "explanation": "Đóng cứng lợi ích bất chấp lịch sử, hoạt động."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-242",
+      "kind": "quiz",
+      "prompt": "Yêu cầu nào đúng với giai cấp công nhân khi giải quyết vấn đề dân tộc theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kết hợp lợi ích giai cấp–dân tộc và đoàn kết các lực lượng bị áp bức."
+        },
+        {
+          "key": "B",
+          "text": "Đồng nhất mọi lợi ích của các giai cấp trong một quốc gia."
+        },
+        {
+          "key": "C",
+          "text": "Lấy lợi ích toàn cầu thay nhiệm vụ dân tộc cụ thể."
+        },
+        {
+          "key": "D",
+          "text": "Bảo vệ lợi ích trong nước thay nhiệm vụ đoàn kết dân tộc bị áp bức."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Đại biểu chân chính dân tộc đồng thời đoàn kết vô sản và dân tộc bị áp bức.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phủ nhận khác biệt, đối lập giai cấp có thể có."
+        },
+        {
+          "key": "C",
+          "explanation": "Trừu tượng hóa nhân loại, bỏ cấp độ hiện thực."
+        },
+        {
+          "key": "D",
+          "explanation": "Biệt lập hóa lợi ích giai cấp và dân tộc."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-243",
+      "kind": "quiz",
+      "prompt": "Trong lần làm bánh xác định, bột là nguyên liệu, lò là công cụ, người làm có kỹ năng. Tổ hợp nào chỉ gồm tư liệu sản xuất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lò và người làm."
+        },
+        {
+          "key": "B",
+          "text": "Bột và lò."
+        },
+        {
+          "key": "C",
+          "text": "Người làm và kỹ năng."
+        },
+        {
+          "key": "D",
+          "text": "Bột và kỹ năng."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tư liệu sản xuất gồm yếu tố vật chất để tác động và chịu tác động. Người cùng kỹ năng thuộc yếu tố lao động sống.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đưa chủ thể vào tập tư liệu."
+        },
+        {
+          "key": "C",
+          "explanation": "Cả hai đều thuộc phía chủ thể, không phải tư liệu."
+        },
+        {
+          "key": "D",
+          "explanation": "Kỹ năng là năng lực của người lao động."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-244",
+      "kind": "quiz",
+      "prompt": "Đối chiếu bản tính con người trong Nho giáo nào đúng theo bản giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cả ba: bản tính chỉ do quan hệ sản xuất quyết định."
+        },
+        {
+          "key": "B",
+          "text": "Khổng Tử: thiện; Mạnh Tử và Tuân Tử: ác bất biến."
+        },
+        {
+          "key": "C",
+          "text": "Khổng–Mạnh: thiện; Tuân Tử: ác, có thể cải tạo."
+        },
+        {
+          "key": "D",
+          "text": "Khổng–Mạnh: ác; Tuân Tử: thiện không cần giáo dục."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Đây là khác biệt nội bộ học phái được trình bày trực tiếp, đồng thời giữ khả năng giáo dục, cải tạo ở Tuân Tử.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Gán cách tiếp cận Mác cho toàn bộ Nho giáo."
+        },
+        {
+          "key": "B",
+          "explanation": "Sai về Mạnh Tử, sai tính bất biến ở Tuân Tử."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo các quan điểm và bỏ vai trò giáo dục."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-245",
+      "kind": "quiz",
+      "prompt": "“Vô vi” của Lão Tử theo cách giải thích trong nguồn là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hành động thuận tự nhiên, không để dục vọng riêng chi phối."
+        },
+        {
+          "key": "B",
+          "text": "Hành động tùy mục tiêu cá nhân để thắng mọi quy luật."
+        },
+        {
+          "key": "C",
+          "text": "Tuân mệnh lệnh chính trị thay quy luật của tự nhiên."
+        },
+        {
+          "key": "D",
+          "text": "Thuận tự nhiên nghĩa là ngồi chờ việc tự hoàn thành."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Vô vi được hiểu là hành động thuận theo Đạo của tự nhiên, không đồng nghĩa với hoàn toàn không làm gì.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đảo “thuận Đạo” thành tùy dục vọng."
+        },
+        {
+          "key": "C",
+          "explanation": "Lẫn Đạo tự nhiên với mệnh lệnh quản lý."
+        },
+        {
+          "key": "D",
+          "explanation": "Hiểu sai vô vi thành bất động."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-246",
+      "kind": "quiz",
+      "prompt": "Từ nhiều quan sát việc học, nhóm phân tích, xây hệ khái niệm và giải thích quan hệ tất yếu. Xét trình độ phản ánh, thay đổi chính là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Từ kinh nghiệm rời sang nhận thức lý luận có hệ thống."
+        },
+        {
+          "key": "B",
+          "text": "Từ tri thức sang một bộ máy cưỡng chế pháp luật."
+        },
+        {
+          "key": "C",
+          "text": "Từ ý thức sang tồn tại vật chất của xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Từ quan hệ xã hội sang đặc tính di truyền."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thông tin không chỉ tăng quan sát mà đã tổng hợp, khái quát quan hệ. Đó là dấu hiệu trình độ lý luận.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Hệ khái niệm không phải cơ quan quyền lực."
+        },
+        {
+          "key": "C",
+          "explanation": "Tri thức vẫn thuộc tinh thần dù có tính hệ thống."
+        },
+        {
+          "key": "D",
+          "explanation": "Không có thay đổi nền sinh học trong tình huống."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-247",
+      "kind": "quiz",
+      "prompt": "Nhà nước phối hợp cơ quan nước ngoài về giáo dục. Nếu phân loại theo phạm vi quan hệ, chọn gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kiểu nhà nước, vì giáo dục làm thay giai cấp thống trị."
+        },
+        {
+          "key": "B",
+          "text": "Chức năng xã hội, vì tiêu chí đang hỏi là bản chất giai cấp."
+        },
+        {
+          "key": "C",
+          "text": "Đối nội, vì người học trong nước có thể hưởng lợi."
+        },
+        {
+          "key": "D",
+          "text": "Đối ngoại; có thể cùng mang nội dung xã hội."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Quan hệ với chủ thể nước ngoài xác định phạm vi đối ngoại. Mục tiêu xã hội thuộc một góc phân loại khác.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chức năng giáo dục không đủ chứng minh chuyển kiểu."
+        },
+        {
+          "key": "B",
+          "explanation": "Nội dung xã hội có thể đúng nhưng không đáp tiêu chí phạm vi."
+        },
+        {
+          "key": "C",
+          "explanation": "Đích thụ hưởng trong nước không đổi chủ thể quan hệ bên ngoài."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-248",
+      "kind": "quiz",
+      "prompt": "Tổ hợp nào đủ các dấu hiệu cơ bản của lãnh tụ theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nổi tiếng rộng rãi, có nhiều người theo dõi và thu nhập cao."
+        },
+        {
+          "key": "B",
+          "text": "Nắm chức vụ lâu năm, ít liên hệ quần chúng nhưng có uy quyền."
+        },
+        {
+          "key": "C",
+          "text": "Phong trào, nhiệm vụ lịch sử, tín nhiệm và năng lực tổ chức."
+        },
+        {
+          "key": "D",
+          "text": "Có tài chuyên môn, không cần mục tiêu hay gắn bó lợi ích chung."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Vai trò lãnh tụ gắn với phẩm chất cá nhân, việc nhận thức nhiệm vụ lịch sử, sự hy sinh vì lợi ích chung và quan hệ mật thiết với quần chúng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Danh tiếng không thay quan hệ và năng lực lãnh đạo lịch sử."
+        },
+        {
+          "key": "B",
+          "explanation": "Chức vụ, thời gian không đủ tín nhiệm, liên hệ thực tiễn."
+        },
+        {
+          "key": "D",
+          "explanation": "Chuyên môn riêng không bao quát phẩm chất xã hội của lãnh tụ."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-249",
+      "kind": "quiz",
+      "prompt": "Sức mạnh thói quen và điều kiện mới chưa đủ xóa tập quán cũ chứng minh điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Biến đổi tồn tại không xóa ngay mọi tâm lý cũ."
+        },
+        {
+          "key": "B",
+          "text": "Tập quán có từ trước là lạc hậu, cần xóa trong cùng một đợt."
+        },
+        {
+          "key": "C",
+          "text": "Tập quán lâu đời không bao giờ có thể thay đổi."
+        },
+        {
+          "key": "D",
+          "text": "Tồn tại không còn vai trò khi tập quán đã hình thành."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Sự bền vững tương đối, tính bảo thủ. Không suy bất biến hay đánh giá mọi truyền thống tiêu cực.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đồng nhất cái cũ với tiêu cực và nóng vội hành chính."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ giới hạn “tương đối”."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận quyết định lâu dài của điều kiện sống."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-250",
+      "kind": "quiz",
+      "prompt": "Theo giáo trình, chủ trương đổi mới kinh tế–chính trị ở Việt Nam được diễn đạt thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinh tế là trung tâm, chính trị đổi mới từng bước vững chắc."
+        },
+        {
+          "key": "B",
+          "text": "Chính trị đổi ngay toàn bộ, kinh tế giữ nguyên cơ cấu."
+        },
+        {
+          "key": "C",
+          "text": "Lấy đổi mới kinh tế thay nhiệm vụ đổi mới chính trị."
+        },
+        {
+          "key": "D",
+          "text": "Kinh tế và chính trị tách rời để tránh ảnh hưởng lẫn nhau."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Đổi mới toàn diện, bước đi thích hợp, giải quyết đổi mới–ổn định–phát triển và giữ định hướng.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đảo và tuyệt đối hóa nhịp đổi mới chính trị."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm vị trí trung tâm với thay thế mặt còn lại."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận gắn bó hữu cơ của hai mặt."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-251",
+      "kind": "quiz",
+      "prompt": "“Phát huy vai trò con người” được nguồn hiểu theo nội dung nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tích cực, tự giác, sáng tạo, phẩm chất và năng lực."
+        },
+        {
+          "key": "B",
+          "text": "Tăng số người được huy động trong các nhiệm vụ."
+        },
+        {
+          "key": "C",
+          "text": "Mở rộng quyền ra lệnh của bộ phận quản lý."
+        },
+        {
+          "key": "D",
+          "text": "Cải thiện thể lực thay cho nhận thức và đạo đức."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Cả nhận thức và thực tiễn, vật chất và tinh thần. Nhân tố con người không phải chỉ lượng lao động.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đúng mặt số lượng nhưng không đủ phát huy nhân tố người."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất phát huy người với quyền lực một phía."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp phát triển người thành phương diện sinh học."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-252",
+      "kind": "quiz",
+      "prompt": "Tồn tại xã hội quyết định ý thức xã hội ở những phương diện nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thời điểm phát sinh tư tưởng, không phải nội dung về sau."
+        },
+        {
+          "key": "B",
+          "text": "Sự hình thành, nội dung và hình thức biểu hiện."
+        },
+        {
+          "key": "C",
+          "text": "Mức tương đồng quan điểm giữa những người cùng địa phương."
+        },
+        {
+          "key": "D",
+          "text": "Tên gọi hình thái, không phải đặc điểm phản ánh của chúng."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Quyết định ở khởi nguyên. Điều kiện vật chất tiếp tục chi phối nội dung, cách phản ánh.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cắt sự quy định sau khi ý thức ra đời."
+        },
+        {
+          "key": "C",
+          "explanation": "Không bao quát nội dung, hình thức và nguồn gốc ý thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp vai trò quyết định vào danh nghĩa."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-253",
+      "kind": "quiz",
+      "prompt": "Cặp phân biệt nào đúng kết cấu ý thức tôn giáo?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tâm lý là quyền lực cưỡng chế; hệ tư tưởng là quan hệ sở hữu."
+        },
+        {
+          "key": "B",
+          "text": "Tâm lý: hệ thống giáo lý; hệ tư tưởng: cảm xúc tự phát."
+        },
+        {
+          "key": "C",
+          "text": "Tâm lý là thực nghiệm; hệ tư tưởng là hệ tư liệu sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Tâm lý: biểu tượng, tình cảm; hệ tư tưởng: hệ thống giáo lý."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Giáo lý do thần học, chức sắc tạo dựng, truyền bá. Tâm lý tạo cơ sở cho sự xâm nhập, tiếp nhận.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn ý thức với quyền lực và kinh tế."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo cấp độ trực tiếp và lý luận."
+        },
+        {
+          "key": "C",
+          "explanation": "Trộn hình thái nhận thức khác và vật chất vào tôn giáo."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-254",
+      "kind": "quiz",
+      "prompt": "Vì sao liên kết kinh tế, nhất là thị trường, quan trọng với hình thành dân tộc?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phản ánh huyết thống chung vốn đã cố kết dân cư."
+        },
+        {
+          "key": "B",
+          "text": "Làm kinh tế quốc gia không còn vấn đề độc lập, tự chủ."
+        },
+        {
+          "key": "C",
+          "text": "Tạo liên kết kinh tế thống nhất, ổn định trên lãnh thổ rộng."
+        },
+        {
+          "key": "D",
+          "text": "Thay toàn bộ ngôn ngữ, văn hóa bằng trao đổi hàng hóa."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Sự phát triển sản xuất và thị trường tạo những liên kết kinh tế ổn định trên phạm vi lãnh thổ rộng, góp phần gắn kết các cộng đồng thành dân tộc. Liên kết ấy không xóa yêu cầu về độc lập, tự chủ kinh tế.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo liên kết kinh tế thành biểu hiện huyết thống."
+        },
+        {
+          "key": "B",
+          "explanation": "Liên kết kinh tế vẫn gắn với yêu cầu bảo vệ chủ quyền kinh tế quốc gia."
+        },
+        {
+          "key": "D",
+          "explanation": "Tuyệt đối hóa kinh tế, loại các đặc trưng khác."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-255",
+      "kind": "quiz",
+      "prompt": "Vì sao thiết lập thượng tầng chính trị xã hội chủ nghĩa có thể là tiền đề xây cơ sở mới?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cơ sở mới đã tự phát hoàn thiện trước khi giành chính quyền."
+        },
+        {
+          "key": "B",
+          "text": "Thượng tầng thay thế vai trò nền tảng của cơ sở kinh tế."
+        },
+        {
+          "key": "C",
+          "text": "Chính trị tạo ra nền kinh tế mới bất kể lực lượng sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Chính quyền tổ chức cải tạo kinh tế theo điều kiện khách quan."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tính chủ động tổ chức xây dựng, không phủ nhận củng cố thượng tầng phải dựa phát triển kinh tế.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trái đặc điểm không hình thành đầy đủ tự phát."
+        },
+        {
+          "key": "B",
+          "explanation": "Đổi tiền đề chính trị thành quyết định xét đến cùng."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa khả năng tạo lập của chính trị."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-256",
+      "kind": "quiz",
+      "prompt": "Tổ hợp tiền đề nào của hình thái cộng sản được giáo trình nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng hiện đại, vô sản phát triển, lý luận khoa học, đấu tranh."
+        },
+        {
+          "key": "B",
+          "text": "Tuyên bố chính trị, xóa tri thức cũ và thay đổi tên thiết chế."
+        },
+        {
+          "key": "C",
+          "text": "Dân số tăng, địa lý thuận lợi, tập quán cũ và sự chờ đợi."
+        },
+        {
+          "key": "D",
+          "text": "Công nghệ cao, giữ nguyên quan hệ tư bản và loại đấu tranh xã hội."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Lực lượng hiện đại, vô sản phát triển và lý luận khoa học là các tiền đề khác loại. Chuyển hình thái còn đòi đấu tranh và cách mạng, không chỉ có kỹ thuật.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Ý chí, tên gọi không thay điều kiện khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Không thay các tiền đề đặc thù đã nêu."
+        },
+        {
+          "key": "D",
+          "explanation": "Thừa nhận công nghệ nhưng bỏ thay đổi quan hệ và đấu tranh."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-257",
+      "kind": "quiz",
+      "prompt": "Phương pháp nào đúng khi vận dụng quan hệ quần chúng–lãnh tụ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đề cao lãnh tụ bằng cách thu hẹp sự tham gia của nhân dân."
+        },
+        {
+          "key": "B",
+          "text": "Đề cao quần chúng bằng hạn chế sáng kiến cá nhân."
+        },
+        {
+          "key": "C",
+          "text": "Chống sùng bái, coi trọng sáng kiến cá nhân và kết hợp hai vai trò."
+        },
+        {
+          "key": "D",
+          "text": "Coi hai vai trò ngang nhau ở mọi nhiệm vụ, hoàn cảnh."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Cả thần thánh hóa lãnh tụ lẫn xem nhẹ cá nhân. Kết hợp phù hợp tạo sức mạnh tổng hợp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Hạn chế nền tảng quyết định của phong trào."
+        },
+        {
+          "key": "B",
+          "explanation": "Xem nhẹ thành phần sáng tạo của chính quần chúng."
+        },
+        {
+          "key": "D",
+          "explanation": "Kết hợp không có nghĩa đồng hạng bất kể điều kiện."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-258",
+      "kind": "quiz",
+      "prompt": "Hai nhóm cùng hiểu lợi ích tiết kiệm nước nhưng chỉ nhóm có dụng cụ và tổ chức thực hiện mới giảm lãng phí. Nên kết luận gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức cần điều kiện, hoạt động triển khai tương ứng."
+        },
+        {
+          "key": "B",
+          "text": "Điều kiện vật chất có vai trò nên nhận thức không có tác dụng."
+        },
+        {
+          "key": "C",
+          "text": "Nhóm chưa giảm lãng phí chắc chắn không có ý thức gì."
+        },
+        {
+          "key": "D",
+          "text": "Cùng nhận thức đúng phải tạo kết quả thực hành như nhau."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thông tin cô lập nhận thức chung nhưng khác điều kiện triển khai. Phù hợp tính có điều kiện của tác động trở lại.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đối lập vai trò vật chất với tác dụng định hướng."
+        },
+        {
+          "key": "C",
+          "explanation": "Từ kết quả chưa có suy quá về toàn bộ ý thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ sự khác nhau về điều kiện và tổ chức."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-259",
+      "kind": "quiz",
+      "prompt": "Theo nguồn, nhà nước vô sản tự tiêu vong trong điều kiện nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vừa giảm một số cơ quan, dù cơ sở kinh tế không thay đổi."
+        },
+        {
+          "key": "B",
+          "text": "Vừa giành chính quyền, trước khi xây dựng trật tự xã hội mới."
+        },
+        {
+          "key": "C",
+          "text": "Hoàn thành chức năng, xã hội phát triển cao, trật tự tự giác."
+        },
+        {
+          "key": "D",
+          "text": "Vừa đổi tên bộ máy, dù đối kháng giai cấp vẫn nguyên vẹn."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tiêu vong gắn điều kiện kinh tế–xã hội chín muồi và hoàn thành sứ mệnh, không phải quyết định giản đơn giải thể bộ máy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu gọn hành chính không đồng nghĩa tiêu vong lịch sử."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ quá trình quá độ và điều kiện hoàn thiện."
+        },
+        {
+          "key": "D",
+          "explanation": "Tên gọi không xóa cơ sở tồn tại quyền lực."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-260",
+      "kind": "quiz",
+      "prompt": "Trong lập luận nguồn, khác biệt nào củng cố vai trò quyết định của người so với công cụ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Người tạo giá trị mới nên không cần tư liệu sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Công cụ sáng tạo giá trị mới; người chỉ chuyển giá trị cũ."
+        },
+        {
+          "key": "C",
+          "text": "Hai bên cùng chuyển nguyên giá trị cũ, không bên nào sáng tạo."
+        },
+        {
+          "key": "D",
+          "text": "Người sáng tạo giá trị mới; công cụ chuyển giá trị."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Khả năng sáng tạo của lao động sống để giải thích nhân tố hàng đầu. Không triển khai ngoài luận điểm đó.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng mặt sáng tạo nhưng suy sai bỏ điều kiện vật chất."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo vai trò lao động sống với công cụ."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ nhận phần sáng tạo được trình bày."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-261",
+      "kind": "quiz",
+      "prompt": "Thấy đồ dùng gia đình có hàng từ nhiều nước, một bạn cho rằng mọi quốc gia đã mất nền kinh tế độc lập. Suy luận thiếu gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trao đổi, hội nhập khác mất chủ quyền kinh tế."
+        },
+        {
+          "key": "B",
+          "text": "Lấy một loại hàng trong nhà thay toàn bộ cơ cấu kinh tế."
+        },
+        {
+          "key": "C",
+          "text": "Thêm số hàng nhập để chắc chắn mọi lợi ích đã đồng nhất."
+        },
+        {
+          "key": "D",
+          "text": "Đổi tiêu chí sang ngôn ngữ in trên bao bì là đủ."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Hội nhập cùng yêu cầu độc lập, tự chủ. Có hàng nhập không đủ kết luận mất chủ quyền.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đó chính là lỗi lấy phần thay toàn thể, không phải bổ sung đúng."
+        },
+        {
+          "key": "C",
+          "explanation": "Tăng thống kê không sửa lỗi đánh đồng khái niệm."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhãn ngôn ngữ không xác định địa vị nền kinh tế."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-262",
+      "kind": "quiz",
+      "prompt": "Cư dân tự bàn, học kỹ năng và tổ chức hoạt động cải thiện đời sống. Nếu hỏi riêng vai trò chủ thể–động lực, dữ kiện nào quyết định?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hoạt động có tên gọi chung được ghi trong thông báo."
+        },
+        {
+          "key": "B",
+          "text": "Chính họ tự giác, sáng tạo thực hiện hoạt động chung."
+        },
+        {
+          "key": "C",
+          "text": "Họ là người được hưởng điều kiện sống tốt hơn."
+        },
+        {
+          "key": "D",
+          "text": "Khu dân cư là nơi có nhiều vật dụng sinh hoạt."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Chủ thể–động lực nhấn hành động tạo kết quả. Được hưởng kết quả nhấn mục tiêu, hai mặt có thể cùng tồn tại nhưng câu hỏi đã chọn phương diện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tên gọi không chứng minh năng lực, hoạt động thực tế."
+        },
+        {
+          "key": "C",
+          "explanation": "Có thể đúng về mục tiêu nhưng chưa đáp vai trò đang hỏi."
+        },
+        {
+          "key": "D",
+          "explanation": "Có vật dụng không xác định tính tích cực chủ thể."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-263",
+      "kind": "quiz",
+      "prompt": "Quan hệ đức–tài trong phát triển con người toàn diện theo nguồn là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tài đáp ứng nhiệm vụ nên đã đủ bảo đảm phẩm chất đạo đức."
+        },
+        {
+          "key": "B",
+          "text": "Cần đức–tài, đức làm gốc; học tập phát triển tài."
+        },
+        {
+          "key": "C",
+          "text": "Đức làm gốc nên chuyên môn chỉ có vai trò danh nghĩa."
+        },
+        {
+          "key": "D",
+          "text": "Đức là danh vọng riêng; tài là lợi thế để đứng ngoài lợi ích chung."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Vừa hồng vừa chuyên đòi cả đạo đức vì lợi ích chung và năng lực đáp ứng nhiệm vụ. Đức làm gốc không cho phép xem tài vô giá trị.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đánh tráo năng lực thực hiện với định hướng giá trị."
+        },
+        {
+          "key": "C",
+          "explanation": "Hạ thấp tài trái yêu cầu vừa hồng vừa chuyên."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo nội dung đạo đức mới và mục đích năng lực."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-264",
+      "kind": "quiz",
+      "prompt": "Căn cứ nào giúp thượng tầng tác động trở lại cơ sở hạ tầng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Độc lập tương đối của tinh thần và sức mạnh thiết chế."
+        },
+        {
+          "key": "B",
+          "text": "Sự tương đương cấu trúc với toàn bộ lực lượng sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Khả năng tư tưởng tự tạo vật chất không qua con người."
+        },
+        {
+          "key": "D",
+          "text": "Quy luật nội tại tách thượng tầng khỏi cơ sở kinh tế sinh ra nó."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thượng tầng có quy luật nội tại và bộ máy tổ chức, nên không phản ánh thụ động mà có hiệu lực thực tiễn.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Hai phạm trù không đồng cấu hay đồng nhất."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ trung gian hoạt động thực tiễn."
+        },
+        {
+          "key": "D",
+          "explanation": "Nâng tính độc lập tương đối thành tách rời."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-265",
+      "kind": "quiz",
+      "prompt": "Cơ sở hạ tầng quyết định kiến trúc thượng tầng theo cách nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quy định nguồn gốc; cơ cấu về sau do tư tưởng tự quyết định."
+        },
+        {
+          "key": "B",
+          "text": "Quy định nguồn gốc, cơ cấu, tính chất và biến đổi."
+        },
+        {
+          "key": "C",
+          "text": "Quy định thiết chế chính trị nhưng không quy định các quan điểm xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Quy định tên gọi pháp lý mà không liên quan nội dung."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cơ cấu kinh tế hiện thực sinh ra và chi phối kiểu thượng tầng. Tác động không dừng ở thời điểm ra đời.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cắt quan hệ quyết định sau giai đoạn ra đời."
+        },
+        {
+          "key": "C",
+          "explanation": "Thu hẹp phạm vi quyết định của cơ sở hạ tầng."
+        },
+        {
+          "key": "D",
+          "explanation": "Tách hình thức gọi tên khỏi bản chất kinh tế."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-266",
+      "kind": "quiz",
+      "prompt": "Xây dựng nhà nước pháp quyền xã hội chủ nghĩa theo giáo trình cần kết hợp gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đạo đức với thay thế pháp luật bằng uy tín cá nhân."
+        },
+        {
+          "key": "B",
+          "text": "Dân chủ với loại mọi yêu cầu kỷ cương trong điều hành."
+        },
+        {
+          "key": "C",
+          "text": "Pháp quyền với giảm quyền làm chủ để thuận quản lý."
+        },
+        {
+          "key": "D",
+          "text": "Dân chủ, nguyên tắc pháp quyền và nền tảng đạo đức xã hội."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Nhà nước của dân–do dân–vì dân với pháp quyền và coi trọng đạo đức, không đặt ba mặt loại trừ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy đạo đức loại công cụ quản lý chủ yếu."
+        },
+        {
+          "key": "B",
+          "explanation": "Nhầm dân chủ với bỏ nguyên tắc pháp quyền."
+        },
+        {
+          "key": "C",
+          "explanation": "Đối lập pháp quyền với dân chủ."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-267",
+      "kind": "quiz",
+      "prompt": "Những thời kỳ phát triển dân tộc nào được nguồn nêu trong đoạn châu Âu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thời tư sản; giải phóng dân tộc; dân tộc xã hội chủ nghĩa."
+        },
+        {
+          "key": "B",
+          "text": "Công hữu, tư hữu, thuế khóa, chính thể quân chủ lập hiến."
+        },
+        {
+          "key": "C",
+          "text": "Nông nghiệp, công nghiệp, sau công nghiệp, văn minh tin học."
+        },
+        {
+          "key": "D",
+          "text": "Thị tộc, bộ lạc, bộ tộc, hình thành gia đình cá thể."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Gắn cách mạng tư sản, phong trào giải phóng và ra đời dân tộc xã hội chủ nghĩa. Không cố định dân tộc vào một giai đoạn.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Trộn quan hệ sở hữu và hình thức nhà nước thành một tiêu chí."
+        },
+        {
+          "key": "C",
+          "explanation": "Lẫn cách tiếp cận văn minh với lịch sử dân tộc."
+        },
+        {
+          "key": "D",
+          "explanation": "Lẫn các cộng đồng trước dân tộc với các thời kỳ dân tộc."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-268",
+      "kind": "quiz",
+      "prompt": "Phân tích kết cấu giai cấp cần chú ý điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dùng hiện trạng làm đủ căn cứ, không cần xét xu hướng phát triển."
+        },
+        {
+          "key": "B",
+          "text": "Đặt biến đổi kết cấu vào thời điểm chuyển hình thái kinh tế–xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Biến đổi cả trong một phương thức lẫn khi thay phương thức."
+        },
+        {
+          "key": "D",
+          "text": "Thống kê số lượng để thay việc xác định địa vị và thái độ chính trị."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Xét vận động để xác định mâu thuẫn, lực lượng, đối tượng và nhiệm vụ cách mạng phù hợp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thiếu chiều vận động cần cho nhiệm vụ và lực lượng cách mạng."
+        },
+        {
+          "key": "B",
+          "explanation": "Đúng một thời điểm nhưng bỏ biến đổi trong cùng phương thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Lượng không đủ nhận thức bản chất, vai trò giai cấp."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-269",
+      "kind": "quiz",
+      "prompt": "Theo cách phân biệt trong nguồn, cá thể trở thành cá nhân khi nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có khả năng sinh sản nhưng chưa có quan hệ xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức, giao tiếp và các quan hệ xã hội xác định."
+        },
+        {
+          "key": "C",
+          "text": "Có thu nhập riêng, chưa cần ý thức và giao tiếp xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Đạt một mức tuổi tự nhiên giống nhau ở mọi xã hội."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Quá trình xã hội hóa, không dùng tuổi, sinh sản hay thu nhập làm điều kiện định nghĩa cá nhân.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chỉ nêu phát triển sinh học."
+        },
+        {
+          "key": "C",
+          "explanation": "Thu nhập không thay các điều kiện định nghĩa cá nhân."
+        },
+        {
+          "key": "D",
+          "explanation": "Thay tiêu chí xã hội bằng mốc sinh học."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-270",
+      "kind": "quiz",
+      "prompt": "Từ tính lịch sử của giai cấp, kết luận nào đúng theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đổi tên các tầng lớp là đủ chấm dứt phân chia giai cấp."
+        },
+        {
+          "key": "B",
+          "text": "Xóa cơ sở tư hữu trong quá trình cải biến kinh tế–xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Đề cao tình đoàn kết tự nó làm cơ sở giai cấp biến mất."
+        },
+        {
+          "key": "D",
+          "text": "Điều chỉnh chênh lệch tiêu dùng đã đủ chấm dứt địa vị giai cấp."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Giai cấp gắn điều kiện sản xuất và tư hữu. Khắc phục phải tác động cơ sở hiện thực, không chỉ biểu hiện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tên gọi không đổi quan hệ sản xuất."
+        },
+        {
+          "key": "C",
+          "explanation": "Tinh thần không tự thay thế cơ sở kinh tế."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ sở hữu và tổ chức, lấy phân phối thay toàn bộ cơ sở."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-271",
+      "kind": "quiz",
+      "prompt": "Khác biệt giải phóng theo Mác–Lênin với giải thoát tôn giáo nằm ở đâu theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pháp luật tự nó là phương tiện đủ cho giải phóng toàn diện."
+        },
+        {
+          "key": "B",
+          "text": "Đổi cảm xúc người lao động trong đời sống xã hội giữ nguyên."
+        },
+        {
+          "key": "C",
+          "text": "Cải biến quan hệ hiện thực và lao động, không đặt mục tiêu ở kiếp sau."
+        },
+        {
+          "key": "D",
+          "text": "Chấp nhận hiện tại để được đền bù trong thế giới bên kia."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Giải phóng với thế giới con người hiện thực, phê phán giải thoát siêu nhiên và các phương tiện đơn lẻ tự đủ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối hóa một phương tiện riêng lẻ."
+        },
+        {
+          "key": "B",
+          "explanation": "Tâm lý không thay cải biến các quan hệ hiện thực."
+        },
+        {
+          "key": "D",
+          "explanation": "Đó là giải thoát đối chiếu, không giải phóng hiện thực."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-272",
+      "kind": "quiz",
+      "prompt": "Hạn chế chung trong cách giải thích chủ thể lịch sử trước Mác được nguồn nêu là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đã phân tích đầy đủ quan hệ biện chứng quần chúng–lãnh tụ."
+        },
+        {
+          "key": "B",
+          "text": "Đã nhận thức mọi biến đổi từ hệ thống quan hệ sản xuất lịch sử."
+        },
+        {
+          "key": "C",
+          "text": "Đã nhất quán lấy thực tiễn của toàn thể quần chúng làm nền tảng."
+        },
+        {
+          "key": "D",
+          "text": "Tuyệt đối thần linh, vĩ nhân hoặc một nhân tố tinh thần riêng biệt."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Các lập trường nhưng chỉ ra ngay duy vật trước Mác có thể rơi duy tâm khi tuyệt đối đạo đức, tình yêu, phê phán.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Gán thành tựu Mác cho quan niệm trước Mác bị phê phán."
+        },
+        {
+          "key": "B",
+          "explanation": "Gán cơ sở duy vật lịch sử cho các giải thích phiến diện."
+        },
+        {
+          "key": "C",
+          "explanation": "Gán thành tựu Mác cho các hạn chế tiền bối."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-273",
+      "kind": "quiz",
+      "prompt": "Một nhóm bỏ qua sáng kiến riêng vì “tập thể là tất cả”, khiến công việc giảm chất lượng. Sai lầm quan hệ cá nhân–xã hội là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xem sáng kiến riêng có thể được bàn và chọn lọc."
+        },
+        {
+          "key": "B",
+          "text": "Đặt công việc cá nhân trong điều kiện hợp tác chung."
+        },
+        {
+          "key": "C",
+          "text": "Tuyệt đối tập thể và xem nhẹ đóng góp của cá nhân."
+        },
+        {
+          "key": "D",
+          "text": "Thừa nhận kết quả chung cần phối hợp các thành viên."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Đề cao xã hội bỏ cá nhân. Tập thể có được qua hoạt động, sáng tạo những con người cụ thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đó là cách khắc phục hợp lý, không phải lỗi."
+        },
+        {
+          "key": "B",
+          "explanation": "Đó là nguyên tắc đúng, không phải cực đoan đang mô tả."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là luận điểm đúng, không phải sai lầm trong tình huống."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-274",
+      "kind": "quiz",
+      "prompt": "Một lớp dùng “Có thực mới vực được đạo” theo nghĩa phải bảo đảm ăn ở để học tập, sinh hoạt tinh thần. Liên hệ nào có căn cứ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Điều kiện vật chất là tiền đề cho hoạt động tinh thần."
+        },
+        {
+          "key": "B",
+          "text": "Nhu cầu học tập tạo thức ăn mà không cần lao động."
+        },
+        {
+          "key": "C",
+          "text": "Ăn ở được bảo đảm đã đủ hình thành tri thức, đạo đức."
+        },
+        {
+          "key": "D",
+          "text": "Nội dung học tập suy trực tiếp từ khẩu phần vật chất."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thông tin nhấn điều kiện duy trì người học. Phù hợp vai trò tiền đề vật chất, không khẳng định vật chất là điều kiện đủ.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Bỏ hoạt động sản xuất hiện thực."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến tiền đề cần thành đủ cho phát triển tinh thần."
+        },
+        {
+          "key": "D",
+          "explanation": "Cơ giới hóa quan hệ vật chất–tinh thần."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-275",
+      "kind": "quiz",
+      "prompt": "Một tổ giữ nguyên máy và quyền sở hữu, sửa cách chia thành quả để ghi nhận đóng góp, khiến thành viên tích cực hơn. Cơ chế trực tiếp là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sở hữu máy đã chuyển cho một chủ thể khác."
+        },
+        {
+          "key": "B",
+          "text": "Công cụ mới tự làm tăng năng lực kỹ thuật."
+        },
+        {
+          "key": "C",
+          "text": "Đối tượng lao động đổi nên nhu cầu tăng."
+        },
+        {
+          "key": "D",
+          "text": "Phân phối kích thích lợi ích và động lực lao động."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tình huống cô lập thay đổi phân phối. Động lực tăng qua cách hưởng thành quả, không thể suy đã đổi sở hữu hay máy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không có chuyển quyền sở hữu."
+        },
+        {
+          "key": "B",
+          "explanation": "Máy không thay đổi trong thông tin."
+        },
+        {
+          "key": "C",
+          "explanation": "Không có thay đổi nguyên liệu, nhu cầu trong mô tả."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-276",
+      "kind": "quiz",
+      "prompt": "Tính giai cấp của đạo đức có loại trừ yếu tố toàn nhân loại không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; khác giai cấp thì các chuẩn mực của họ không có điểm chung."
+        },
+        {
+          "key": "B",
+          "text": "Không; các hệ thống đạo đức đều phản ánh lợi ích như nhau."
+        },
+        {
+          "key": "C",
+          "text": "Có; giá trị đạo đức chung đòi xã hội không còn giai cấp."
+        },
+        {
+          "key": "D",
+          "text": "Không; vẫn có quy tắc chung điều chỉnh đời sống cộng đồng lâu dài."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Ý thức xã hội có nội dung giai cấp và những yếu tố chung giữa các giai cấp. Không thể đồng nhất hai mặt hoặc lấy mặt này để phủ nhận hoàn toàn mặt kia.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối khác biệt, bỏ yếu tố toàn nhân loại."
+        },
+        {
+          "key": "B",
+          "explanation": "Đúng có điểm chung nhưng sai khi đồng nhất nội dung giai cấp."
+        },
+        {
+          "key": "C",
+          "explanation": "Đặt sai điều kiện cho yếu tố chung đã có trong lịch sử."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-277",
+      "kind": "quiz",
+      "prompt": "Con người là thực thể sinh học–xã hội phải hiểu ra sao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sinh học–xã hội thống nhất, không quy hết một phía."
+        },
+        {
+          "key": "B",
+          "text": "Hai phương diện cùng có nhưng không tác động lẫn nhau."
+        },
+        {
+          "key": "C",
+          "text": "Xã hội tạo bản chất nên mọi quy luật sinh học hết hiệu lực."
+        },
+        {
+          "key": "D",
+          "text": "Sinh học tạo bản chất, xã hội là biểu hiện bên ngoài."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Nền tự nhiên và bản chất xã hội trong một chỉnh thể, chống cả sinh học hóa và phủ nhận sinh học.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thừa nhận hai mặt nhưng bỏ sự thống nhất hữu cơ."
+        },
+        {
+          "key": "C",
+          "explanation": "Đánh tráo nhấn xã hội với xóa tiền đề tự nhiên."
+        },
+        {
+          "key": "D",
+          "explanation": "Sinh học hóa bản chất, hạ tính xã hội thành thứ yếu."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-278",
+      "kind": "quiz",
+      "prompt": "Hai nhà nước chủ nô có hình thức quân chủ và cộng hòa dân chủ khác nhau cho phép suy ra gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khác tổ chức quyền lực, cùng bản chất giai cấp chủ nô."
+        },
+        {
+          "key": "B",
+          "text": "Khác hình thức nên nhất thiết thuộc hai kiểu giai cấp."
+        },
+        {
+          "key": "C",
+          "text": "Có bầu cử thì không thể tồn tại chế độ nô lệ."
+        },
+        {
+          "key": "D",
+          "text": "Có chữ dân chủ thì quyền lực không còn mang tính giai cấp."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Ví dụ để phân biệt kiểu với hình thức. Bản chất được xác định bởi giai cấp được bảo vệ.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đồng nhất thay hình thức với thay kiểu."
+        },
+        {
+          "key": "C",
+          "explanation": "Bầu cử tự nó không xác định cơ sở quan hệ sản xuất."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy danh nghĩa dân chủ để bỏ bản chất lịch sử."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-279",
+      "kind": "quiz",
+      "prompt": "Tiêu chí phân biệt hệ tư tưởng khoa học và không khoa học là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có hệ thống khái niệm hay không có bất kỳ hệ thống nào."
+        },
+        {
+          "key": "B",
+          "text": "Được trình bày thành sách thay việc truyền miệng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Tính khách quan, đúng đắn của phản ánh hiện thực."
+        },
+        {
+          "key": "D",
+          "text": "Có nhiều người tin theo hay ít người tiếp nhận."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hệ tư tưởng đều có trình độ lý luận. Tính khoa học đòi phản ánh đúng, không chỉ cấu trúc hoặc mức phổ biến.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Có hệ thống chưa đủ đúng hiện thực."
+        },
+        {
+          "key": "B",
+          "explanation": "Phương tiện truyền đạt không xác định tính khoa học."
+        },
+        {
+          "key": "D",
+          "explanation": "Niềm tin phổ biến không thay căn cứ khách quan."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-280",
+      "kind": "quiz",
+      "prompt": "Trước lời đồn về nguyên nhân cây trồng kém, nhóm quan sát, so sánh điều kiện, kiểm tra giả thuyết rồi kết luận có giới hạn. Cách phản ánh nào được thực hiện?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tạo giáo lý bất biến để giải thích mọi vụ mùa."
+        },
+        {
+          "key": "B",
+          "text": "Tìm tri thức chân thực bằng sự thật và lý trí."
+        },
+        {
+          "key": "C",
+          "text": "Xác định chân lý bằng số người nhắc lại lời đồn."
+        },
+        {
+          "key": "D",
+          "text": "Dùng hình tượng để thay việc kiểm tra nhận định."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Thông tin nhấn kiểm tra căn cứ và giới hạn kết luận. Phù hợp ý thức khoa học, không cần tri thức trồng trọt chuyên ngành.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Giáo lý bất biến trái kiểm tra và giới hạn."
+        },
+        {
+          "key": "C",
+          "explanation": "Mức phổ biến lời đồn không bảo đảm tính đúng."
+        },
+        {
+          "key": "D",
+          "explanation": "Hình tượng không thực hiện khâu kiểm chứng được mô tả."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-281",
+      "kind": "quiz",
+      "prompt": "Nhóm hiểu “Một cây làm chẳng nên non / Ba cây chụm lại nên hòn núi cao” là cần phối hợp đóng góp riêng để làm việc chung. Liên hệ nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quy mô nhóm đông tự nó đã tạo điều kiện làm việc đủ."
+        },
+        {
+          "key": "B",
+          "text": "Phối hợp có hiệu quả cần năng lực thành viên đồng dạng."
+        },
+        {
+          "key": "C",
+          "text": "Kết quả tập thể không cần sáng kiến của từng thành viên."
+        },
+        {
+          "key": "D",
+          "text": "Cá nhân phát huy trong phối hợp với tập thể."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Cách hiểu đề cho nhấn kết hợp cái riêng–chung. Không lấy câu dân gian làm chứng minh quy luật hay xóa vai trò cá nhân.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Số lượng không thay tổ chức, năng lực và phương tiện."
+        },
+        {
+          "key": "B",
+          "explanation": "Thống nhất hoạt động không xóa đặc thù cá nhân."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ đóng góp riêng được ngữ cảnh xác định."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    },
+    {
+      "id": "CIII-282",
+      "kind": "quiz",
+      "prompt": "Khẳng định nào đúng về ba mặt quan hệ sản xuất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tác động hữu cơ; sở hữu quyết định bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Tách biệt chức năng, mỗi mặt phát triển ngoài hai mặt kia."
+        },
+        {
+          "key": "C",
+          "text": "Có vai trò ngang nhau trong xác định bản chất."
+        },
+        {
+          "key": "D",
+          "text": "Phân phối quyết định bản chất, sở hữu tác động trở lại phân phối."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Quan hệ sản xuất là chỉnh thể. Các mặt ảnh hưởng nhau nhưng quan hệ sở hữu giữ vai trò quyết định.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phủ nhận liên hệ nội tại."
+        },
+        {
+          "key": "C",
+          "explanation": "Đánh đồng tác động qua lại với vai trò ngang nhau."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo vai trò giữa hai mặt quan hệ sản xuất."
+        }
+      ],
+      "takeaway": "",
+      "group": "",
+      "groupTitle": ""
+    }
+  ]
+}
