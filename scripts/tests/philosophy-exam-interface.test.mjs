@@ -26,6 +26,8 @@ test('Plain question text cannot inject markup into the shared renderer', () => 
   assert(!bank.questions[0].promptHtml.includes('<img'))
   assert.equal(bank.questions[0].options[0].html, '<p>&lt;b&gt;literal&lt;/b&gt;</p>')
   assert(!bank.questions[0].options[0].explanationHtml.includes('<script>'))
+  assert(!bank.questions[0].answerHtml.includes('<script>'))
+  assert(!bank.questions[0].answerHtml.includes('<b>literal</b>'))
 })
 
 test('All philosophy tests use the same page layout as Data Processing', async () => {
