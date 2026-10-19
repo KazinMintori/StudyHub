@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEWED_WITH_TRANSPORT_LIMITATION
 
 # Visual project guide and independent project plan
 
@@ -17,3 +17,5 @@ Verification: Read `studyhub-lecture/references/writing-vi.md`, `professor-voice
 Output: Incremental component and report saved before the final response. One initial call plus at most two evidence-based corrections within the same ownership. Preserve all artifacts if the bridge returns its known NoneType transport error.
 
 Final review phase: Codex may provide finished Markdown snapshots for a second, read-only prose/design review. Any suggestions go into the same owned report, never website files.
+
+Review outcome (2026-10-19): Both bridge calls failed with a NoneType transport error after saving artifacts. Codex read the artifacts, rejected the original component's inaccurate data descriptions and layout issues, and implemented the adopted component independently. The second report informed dependency clarification without accepting blanket wording replacements or unsupported claims. All 48 preexisting worktree files retain their recorded hashes, HEAD is unchanged, and Git diff checks pass. Browser verification is performed by Codex, not claimed as an Antigravity result.

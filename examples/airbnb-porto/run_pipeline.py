@@ -33,6 +33,7 @@ def get_sources(root, config):
     manifest_path = raw/'source-manifest.json'
     old = json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else []
     previous = {r['url']: r for r in old}
+    previous_locations = {(r['snapshot_date'], r['file']): r for r in old}
     tasks = [(date, 'data/'+name+'.csv.gz', name+'.csv.gz') for date in config['snapshots'] for name in ['listings', 'calendar', 'reviews']]
     tasks.append((config['latest_snapshot'], 'visualisations/neighbourhoods.geojson', 'neighbourhoods.geojson'))
     manifest = []
@@ -40,6 +41,9 @@ def get_sources(root, config):
         url = 'https://data.insideairbnb.com/'+config['public_root'].strip('/')+'/'+date+'/'+relative
         path = raw/date/filename
         path.parent.mkdir(parents=True, exist_ok=True)
+        recorded = previous_locations.get((date, filename))
+        if path.exists() and (not recorded or recorded['url'] != url):
+            raise ValueError('Cached source is not associated with the requested URL: '+filename+' '+date)
         if not path.exists():
             temporary = path.with_suffix(path.suffix+'.part')
             for attempt in range(3):
@@ -110,7 +114,7 @@ def main():
         raise ValueError('--run-llm needs a selected model and GEMINI_API_KEY')
     if args.llm_limit < 1:
         raise ValueError('--llm-limit must be positive')
-    run_id = time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())+'-'+hashlib.sha256(config_path.read_bytes()).hexdigest()[:8]
+    run_id = time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())+'-'+hashlib.sha256(config_path.read_bytes()).hexdigest()[:8]+'-'+str(time.time_ns())[-6:]
     run = root/'runs'/run_id
     processed = run/'processed'
     reports = run/'reports'
@@ -152,7 +156,7 @@ def main():
     valid = [r for r in llm if r.get('status') == 'success']
     negative = sum(r['prediction']['sentiment'] == 'negative' for r in valid)
     # Deduplicated review sample has one aggregation scope; never repeat its result across snapshots.
-    values.append({'kpi_id': 'negative_review_share', 'snapshot_date': 'review_sample', 'aggregation_level': 'city_sample', 'neighbourhood': 'all', 'value': 100*negative/len(valid) if valid else '', 'unit': 'percent', 'numerator': negative if valid else '', 'denominator': len(valid), 'eligible_count': len(valid), 'population_count': len(sample), 'currency': '', 'status': 'computed_unvalidated' if valid and evaluation['status'] != 'completed' else 'completed' if valid else 'not_run', 'notes': 'LLM predictions only; coverage='+str(len(valid)/len(sample) if sample else 0)})
+    values.append({'kpi_id': 'negative_review_share', 'snapshot_date': 'review_sample', 'aggregation_level': 'city_sample', 'neighbourhood': 'all', 'value': 100*negative/len(valid) if valid else '', 'unit': 'percent', 'numerator': negative if valid else '', 'denominator': len(valid), 'eligible_count': len(valid), 'population_count': len(sample), 'currency': '', 'status': 'computed_unvalidated' if valid and evaluation['status'] != 'completed' else 'completed' if valid else 'no_valid_predictions' if llm else 'not_run', 'notes': 'LLM predictions only; coverage='+str(len(valid)/len(sample) if sample else 0)})
     write_csv(processed/'kpi_city.csv', [k for k in values if k['aggregation_level'] == 'city_sample'])
     write_csv(processed/'kpi_neighbourhood.csv', [k for k in values if k['aggregation_level'] == 'neighbourhood'])
     write_csv(reports/'qa_report.csv', qa_summary(listings, exceptions, values, config))

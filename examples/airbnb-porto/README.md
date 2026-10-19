@@ -1,17 +1,17 @@
 # Thực hành phân tích Porto
 
-Dự án minh họa chạy trên dữ liệu công khai Inside Airbnb, không dùng danh sách mã hoặc kế hoạch riêng của một nhóm. Mẫu mặc định gồm120listing có mặt ở cả bốn snapshot. Số lượng mẫu, seed và cửa sổ30ngày là lựa chọn minh họa, không phải định mức bài nộp của môn.
+Dự án minh họa chạy trên dữ liệu công khai Inside Airbnb, không dùng danh sách mã hoặc kế hoạch riêng của một nhóm. Mẫu mặc định gồm 120 listing có mặt ở cả bốn snapshot. Số lượng mẫu, seed và cửa sổ 30 ngày là lựa chọn minh họa, không phải định mức bài nộp của môn.
 
 ## Chạy phần dữ liệu
 
-Đã kiểm thử với Python3.14.7 ghi trong `.python-version`. Mã chỉ dùng thư viện chuẩn, không cần cài thêm gói. Tệp phiên bản không tự cài Python. Sau khi giải nén, mở terminal tại thư mục dự án:
+Đã kiểm thử với Python 3.14.7 ghi trong `.python-version`. Mã chỉ dùng thư viện chuẩn, không cần cài thêm gói. Tệp phiên bản không tự cài Python. Sau khi giải nén, mở terminal tại thư mục dự án:
 
 ```bash
 python --version
 python run_pipeline.py --config configs/porto.json --skip-llm
 ```
 
-Lần đầu tải13tệp từ Inside Airbnb, khoảng642MB cho các snapshot hiện tại. Dữ liệu CSV sau giải nén được đọc theo luồng, không tạo một bản CSV đầy đủ trên đĩa. Chương trình giữ toàn bộ tệp nguồn nén để đối chiếu. Lần sau kiểm checksum rồi dùng lại các tệp này. Nếu tệp bắt buộc không có, tải không hoàn chỉnh hoặc khóa bị trùng, chương trình báo lỗi. Không có chế độ tự thay dữ liệu thật bằng dữ liệu giả.
+Lần đầu tải 13 tệp từ Inside Airbnb, khoảng 642 MB cho các snapshot hiện tại. Dữ liệu CSV sau giải nén được đọc theo luồng, không tạo một bản CSV đầy đủ trên đĩa. Chương trình giữ toàn bộ tệp nguồn nén để đối chiếu. Lần sau kiểm checksum rồi dùng lại các tệp này. Nếu tệp bắt buộc không có, tải không hoàn chỉnh hoặc khóa bị trùng, chương trình báo lỗi. Không có chế độ tự thay dữ liệu thật bằng dữ liệu giả.
 
 Đọc `latest-run.json` để tìm lần chạy thành công gần nhất. Mỗi lần chạy có thư mục riêng trong `runs/`. Con trỏ này chỉ đổi khi bước tính và sinh hình hoàn thành. Một lần chạy lỗi không được coi là bản kết quả mới.
 
@@ -42,7 +42,7 @@ Những tệp chứa văn bản review chỉ lưu cục bộ. Bản tải mã ng
 
 ## Nhãn tay và so sánh hai phương pháp
 
-Mẫu160review gồm40review phát triển và120review kiểm tra. Chọn `split` được ghi sẵn. Người đọc điền các cột sau trước khi xem dự đoán:
+Mẫu 160 review gồm 40 review phát triển và 120 review kiểm tra. Chọn `split` được ghi sẵn. Người đọc điền các cột sau trước khi xem dự đoán:
 
 - `sentiment`: Một trong `positive`, `mixed`, `negative`.
 - `aspects_json`: Mảng JSON. Mỗi phần tử có `aspect` và `polarity`. Các khía cạnh là `location`, `cleanliness`, `host`, `amenities`, `noise`, `value`. Hai sắc thái `praised` và `criticized` có thể cùng có ở một khía cạnh. Khi không có khía cạnh nào, điền `[]`.
@@ -53,7 +53,7 @@ Không dùng nhãn baseline hoặc mô hình làm nhãn người. Nếu đổi m
 
 Baseline dùng từ vựng tiếng Anh/Bồ Đào Nha và quy tắc đơn giản. Nhãn cảm xúc mặc định `mixed` khi không có dấu hiệu, phát hiện ngôn ngữ ngoài phạm vi có thể trả `und`. Đây là một đối chứng yếu có chủ đích, chưa được khẳng định chính xác trên mọi ngôn ngữ.
 
-Khi có ít nhất100nhãn kiểm tra hoàn chỉnh, chương trình đo accuracy và macroF1 cho cảm xúc/ngôn ngữ, microF1 theo cặp khía cạnh–sắc thái. Các nhãn cảm xúc vắng mặt vẫn có F1bằng0trong macro trên ba nhãn đã khai báo. Nhãn ngôn ngữ dùng hợp các mã ở nhãn người và dự đoán. Dự đoán lỗi hoặc thiếu được tính là bỏ sót, độ phủ được báo riêng.
+Khi có ít nhất 100 nhãn kiểm tra hoàn chỉnh, chương trình đo accuracy và macro F1 cho cảm xúc/ngôn ngữ, micro F1 theo cặp khía cạnh–sắc thái. Các nhãn cảm xúc vắng mặt vẫn có F1 bằng 0 trong macro trên ba nhãn đã khai báo. Nhãn ngôn ngữ dùng hợp các mã ở nhãn người và dự đoán. Dự đoán lỗi hoặc thiếu được tính là bỏ sót, độ phủ được báo riêng.
 
 ## Gọi Gemini thật
 
@@ -68,7 +68,7 @@ python run_pipeline.py --config configs/porto.json --run-llm --model <ten-model-
 
 Không đưa khóa vào dòng lệnh hoặc repo. `.env.example` chỉ là ví dụ tên biến, Python không tự nạp tệp này. Chương trình gửi khóa trong header, không ghi giá trị khóa vào log. Các bài review sẽ được gửi tới dịch vụ khi bạn bật chế độ này.
 
-Adapter giới hạn retry cho lỗi tạm thời, kiểm schema và nhãn, rồi lưu cache theo ID, nội dung, model, prompt và tham số. Lỗi không được lưu như thành công. Lần chạy sau có thể thử lại review lỗi. `--skip-llm` không dùng baseline làm dự đoán LLM và không tạo accuracy/F1giả khi thiếu nhãn người.
+Adapter giới hạn retry cho lỗi tạm thời, kiểm schema và nhãn, rồi lưu cache theo ID, nội dung, model, prompt và tham số. Lỗi không được lưu như thành công. Lần chạy sau có thể thử lại review lỗi. `--skip-llm` không dùng baseline làm dự đoán LLM và không tạo accuracy/F1 giả khi thiếu nhãn người.
 
 Lệnh mặc định không gọi API, không phát sinh phí dịch vụ. Chi phí xử lý toàn bộ review cần tính từ usage token của lần gọi thật và bảng giá tại thời điểm chạy. Chưa gọi API thì chưa có số đo chi phí thực tế để báo cáo.
 
@@ -86,6 +86,6 @@ Các fixture kiểm thử là giả định và nằm riêng, không được d�
 
 ## Tài liệu tham khảo
 
-- [Inside Airbnb](https://insideairbnb.com/get-the-data/), giấy phép CC BY4.0.
+- [Inside Airbnb](https://insideairbnb.com/get-the-data/), giấy phép CC BY 4.0.
 - [Giả thiết và giới hạn](https://insideairbnb.com/data-assumptions/).
 - [Gemini REST và đầu ra có cấu trúc](https://ai.google.dev/gemini-api/docs/structured-output).

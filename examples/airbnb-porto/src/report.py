@@ -12,9 +12,14 @@ def export_report(reports, figures, summary, values):
     escape = lambda value: html.escape(str(value))
     selected = [k for k in values if k['aggregation_level'] == 'city_sample' and k['value'] != '' and k['kpi_id'] != 'negative_review_share']
     names = {'listing_count': 'Số listing', 'entire_home_share': 'Cả chỗ ở (%)', 'median_minimum_nights': 'Số đêm tối thiểu (trung vị)', 'no_review_share': 'Chưa có review (%)', 'mean_available_next30': 'Lịch sẵn có (%)', 'median_advertised_price_latest': 'Giá chào (EUR/đêm)'}
-    table = ''.join(f'<tr><td>{escape(k["snapshot_date"])}</td><td>{escape(names[k["kpi_id"]])}</td><td>{float(k["value"]):.2f}</td><td>{k["eligible_count"]}</td></tr>' for k in selected)
+    def formatted(kpi):
+        value = float(kpi['value'])
+        if kpi['unit'] in {'listings', 'nights'} and value.is_integer():
+            return str(int(value))
+        return f'{value:.2f}'.replace('.', ',')
+    table = ''.join(f'<tr><td>{escape(k["snapshot_date"])}</td><td>{escape(names[k["kpi_id"]])}</td><td>{formatted(k)}</td><td>{k["eligible_count"]}</td></tr>' for k in selected)
     sheets = [f'''<article><p class="eyebrow">StudyHub · Dự án thực hành độc lập</p><h1>Phân tích Porto</h1><p>Mẫu {summary['cohort_size']} listing thuộc giao {summary['cohort_intersection']} ID qua bốn snapshot. Dữ liệu xử lý gồm {summary['listing_rows']} hàng listing và {summary['calendar_rows']} hàng lịch trong các cửa sổ đã chọn.</p><h2>Kết quả tổng hợp</h2><table><thead><tr><th>Snapshot</th><th>Chỉ số</th><th>Giá trị</th><th>N hợp lệ</th></tr></thead><tbody>{table}</tbody></table><h2>Cách đọc</h2><p>Giá chỉ dùng mốc cuối. Lịch sẵn có không xác nhận giao dịch đặt phòng. Mẫu theo giao ID không đo listing mới xuất hiện hoặc biến mất.</p><p>Baseline đã chạy trên {summary['sampled_reviews']} review duy nhất. Lượt này không công bố chất lượng LLM hoặc nhãn người chưa đo.</p><p class="source">Lượt chạy: {escape(summary['run_id'])}<br>Nguồn: Inside Airbnb, CC BY 4.0. URL và checksum nằm trong source-manifest.json.</p></article>''']
-    captions = ['Phân bố listing trong mẫu theo khu vực, không phải mật độ toàn thành phố.', 'Các cửa sổ tương lai cùng dài30ngày, thuộc các snapshot khác nhau. Độ phủ ghi trong CSV.', 'Loại phòng được tổng hợp từ mẫu mốc cuối.', 'Giá chào nguồn, không phải doanh thu hoặc ADR thực thu.', 'Tỷ lệ listing chưa có review không trực tiếp đo mức hài lòng.']
+    captions = ['Phân bố listing trong mẫu theo ranh giới của bộ Porto, không phải mật độ toàn thành phố.', 'Các cửa sổ tương lai cùng dài 30 ngày, thuộc các snapshot khác nhau. Độ phủ ghi trong CSV.', 'Loại phòng được tổng hợp từ mẫu mốc cuối.', 'Giá chào nguồn, không phải doanh thu hoặc ADR thực thu.', 'Tỷ lệ listing chưa có review không trực tiếp đo mức hài lòng.']
     for i, image in enumerate(sorted(figures.glob('*.svg'))):
         caption = captions[i] if i < len(captions) else 'Kết quả LLM, đối chiếu độ phủ và evaluation.json.'
         area_table = ''

@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEWED_WITH_TRANSPORT_LIMITATION
 
 # Independent runnable Porto example
 
@@ -17,3 +17,5 @@ LLM: Implement Gemini REST adapter reading environment key, configurable model, 
 Verification: Meaningful unit tests for locale price parsing, snapshot keys, dedupe, KPI denominators, rolling calendar bounds, QAactions, F1 arithmetic, missing prediction coverage, cache keys and no fabricated manual labels. Synthetic fixtures clearly separate from actual run. No external dependency installation. Codex separately validates actual public runs.
 
 Deliverables: `run_pipeline.py`, supporting `src/*.py` if helpful, `configs/porto.json`, README, `.gitignore`, `.env.example`, `.python-version` matching a tested local runtime, `requirements.txt` declaring standard library if no third-party dependencies, `AI_USAGE.md`, tests and report. Save source incrementally. At most one initial call and two bounded corrections. Report actual actions and limits, never claim full graded assignment complete without real LLM and human evaluation.
+
+Review outcome (2026-10-19): The initial call saved a draft before a NoneType transport failure. Codex rejected synthetic fallbacks, silent imputations, calendar extrapolation and repeated-review aggregation, then rewrote the pipeline. A corrective review timed out after saving candidate regression tests. Codex independently reproduced and fixed the cached-city mismatch, rather than treating the timeout or the saved tests as verified success. All 41 preexisting worktree files retain their hashes and HEAD is unchanged. Twelve maintained tests, an independent raw-data calculation and a fresh extracted-source execution pass. No API call or human-label result is claimed.

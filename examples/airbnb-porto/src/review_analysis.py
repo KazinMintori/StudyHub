@@ -132,6 +132,11 @@ def evaluate(manual_path, baseline, llm, sample):
         return {'status': 'pending_human_labels', 'completed_test_labels': len(labels), 'required': 100, 'metrics': None}
     output = {'status': 'completed' if llm else 'pending_llm_predictions', 'completed_test_labels': len(labels), 'metrics': {}}
     for name, source in [('baseline', baseline), ('llm', llm)]:
+        if len({r['review_id'] for r in source}) != len(source):
+            raise ValueError('Duplicate prediction review ID')
+        for row in source:
+            if row.get('status') == 'success':
+                validate(row['prediction'])
         by_id = {r['review_id']: r['prediction'] for r in source if r.get('status') == 'success'}
         if not source:
             output['metrics'][name] = None

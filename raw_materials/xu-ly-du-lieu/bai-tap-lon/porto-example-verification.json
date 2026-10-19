@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-19",
+  "scope": "Independent Porto plan, real-data run, concise assignment presentation",
+  "run": {
+    "city": "Porto",
+    "snapshots": [
+      "2025-09-21",
+      "2025-12-25",
+      "2026-03-26",
+      "2026-06-23"
+    ],
+    "cohort_size": 120,
+    "cohort_intersection": 12453,
+    "listing_rows": 480,
+    "calendar_rows": 13842,
+    "unique_cohort_reviews": 9502,
+    "sampled_reviews": 300,
+    "source_bytes": 641266885,
+    "source_files": 13,
+    "baseline_predictions": 300,
+    "llm_success": 0,
+    "manual_evaluation": "pending_human_labels",
+    "run_id": "20261019T090839Z-1e963514-850900",
+    "figures": 5,
+    "config_sha256": "1e963514104eb641552ba524a8eaab08762052773e5b6110ca62ab3b84084918",
+    "report_export": {
+      "pdf": "exported",
+      "bytes": 411996
+    }
+  },
+  "published": {
+    "airbnb-porto.zip": {
+      "bytes": 30617,
+      "sha256": "bb6dd5d7a04fa4e73310135657940af37b3233e01fc196ce41a5b287dbfbf2d9"
+    },
+    "bao-cao-porto.pdf": {
+      "bytes": 411996,
+      "sha256": "638262e900290fa9f9436b94bc982f87d4a24054285501062f61d4064bf56bb5"
+    },
+    "ke-hoach-doc-lap.csv": {
+      "bytes": 5489,
+      "sha256": "46762cbe77a279f83b0a67020f8294c39ee5bcbebef98b7102829825efead743"
+    },
+    "kpi-porto.csv": {
+      "bytes": 2818,
+      "sha256": "ceeaace7a85e761f88acd9ba42a903898429d9d1a07b9c86a07da16b62ffff23"
+    },
+    "nguon-porto.json": {
+      "bytes": 3699,
+      "sha256": "a3b2b6d25dba1bf128765a52eab5940b2dc086b4966143f6010dcc21a97dd109"
+    }
+  },
+  "checks": {
+    "exampleUnitTests": 12,
+    "projectTests": 5,
+    "lectureSkillTests": 39,
+    "featureTests": 108,
+    "lectureStructureErrors": 0,
+    "responsiveThemeCases": 16,
+    "browserErrors": [],
+    "architectureModules": 316,
+    "plan": {
+      "stages": 8,
+      "tasks": 24,
+      "acyclic": true
+    },
+    "sourceCodeBlocksPreserved": 7,
+    "independentRawCalculation": [
+      {
+        "snapshot": "2025-09-21",
+        "listingCount": 120,
+        "independentMetrics": {
+          "listing_count": 120,
+          "entire_home_share": 85.0,
+          "median_minimum_nights": 2.0,
+          "no_review_share": 14.166666666666666,
+          "mean_available_next30": 34.05747126436782
+        },
+        "validCalendarDays": 3596,
+        "method": "Independent raw CSV+Decimal and pandas chunked calendar aggregation"
+      },
+      {
+        "snapshot": "2025-12-25",
+        "listingCount": 120,
+        "independentMetrics": {
+          "listing_count": 120,
+          "entire_home_share": 84.16666666666667,
+          "median_minimum_nights": 2.0,
+          "no_review_share": 11.666666666666666,
+          "mean_available_next30": 49.894444444444446
+        },
+        "validCalendarDays": 3530,
+        "method": "Independent raw CSV+Decimal and pandas chunked calendar aggregation"
+      },
+      {
+        "snapshot": "2026-03-26",
+        "listingCount": 120,
+        "independentMetrics": {
+          "listing_count": 120,
+          "entire_home_share": 84.16666666666667,
+          "median_minimum_nights": 2.0,
+          "no_review_share": 10.0,
+          "mean_available_next30": 36.50075493897333
+        },
+        "validCalendarDays": 3324,
+        "method": "Independent raw CSV+Decimal and pandas chunked calendar aggregation"
+      },
+      {
+        "snapshot": "2026-06-23",
+        "listingCount": 120,
+        "independentMetrics": {
+          "listing_count": 120,
+          "entire_home_share": 84.16666666666667,
+          "median_minimum_nights": 2.0,
+          "no_review_share": 9.166666666666666,
+          "mean_available_next30": 35.62103174603175,
+          "median_advertised_price_latest": 109.55
+        },
+        "validCalendarDays": 3392,
+        "method": "Independent raw CSV+Decimal and pandas chunked calendar aggregation"
+      }
+    ],
+    "finalImageThemeCases": 4,
+    "downloadByteChecks": 5,
+    "svgTextBoundsChecks": 5,
+    "pdfPagesVisuallyReviewed": 6,
+    "proseSuggestionsRead": 2
+  },
+  "antigravity": {
+    "visualCalls": 2,
+    "pipelineCalls": 2,
+    "verifiedToolSuccess": false,
+    "result": "Saved artifacts reviewed independently after NoneType transport errors and one timeout",
+    "baselineFilesUnchanged": [
+      41,
+      48
+    ]
+  },
+  "limits": [
+    "No real Gemini call in this run",
+    "No completed human reference labels, so no measured accuracy/F1",
+    "The intersection cohort is a teaching sample, not the entire city market"
+  ],
+  "figures": {
+    "01-ban-do.svg": {
+      "sha256": "15b1f39b399a64906f8d22fceae6dcd4f30baaa6fdae2b283e6bdb0e354fbe95",
+      "bytes": 808490
+    },
+    "02-lich-san-co.svg": {
+      "sha256": "8577dbb3b2c26e2cae28226e9aa41bbc32e51a8d9d5f824cb309a73f9a9da597",
+      "bytes": 4051
+    },
+    "03-loai-cho-o.svg": {
+      "sha256": "5be4868acccce66829e57c92cf2a6e4c74dcd32bd32c8a6fc134050cec0bfe72",
+      "bytes": 1314
+    },
+    "04-phan-bo-gia.svg": {
+      "sha256": "3185bb45e2d846ea2348553043ca2f345f481cecfea00e0e691a009205bb02d5",
+      "bytes": 3349
+    },
+    "05-review-theo-khu.svg": {
+      "sha256": "cbb12d5758c28e8a8ec64453016c0fcba461e79ff0da51608890a20eaf16fabf",
+      "bytes": 12622
+    }
+  }
+}

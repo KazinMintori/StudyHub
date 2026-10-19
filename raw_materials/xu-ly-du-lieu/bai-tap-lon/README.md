@@ -1,7 +1,7 @@
 # Nguồn và đối chiếu đề bài tập lớn Inside Airbnb
 
 Trang trình bày: `docs/xu-ly-du-lieu/bai-tap-lon/index.md`.
-Trang dành cho phần thực hành sau này: `docs/xu-ly-du-lieu/bai-tap-lon/thuc-hanh.md`.
+Trang kế hoạch và thực hành Porto: `docs/xu-ly-du-lieu/bai-tap-lon/thuc-hanh.md`.
 
 Hai bản HTML được tải nguyên vẹn ngày 19/10/2026. `source-manifest.json` ghi URL, số byte và SHA256. Tệp `.gitattributes` giữ nguyên byte HTML khi checkout. Các tệp `.txt` là bản trích văn bản để đọc, không thay bản HTML lưu trữ.
 
@@ -17,7 +17,7 @@ Danh sách thành phố được trích từ từng thẻ `article.city` của H
 - Giữ rõ format PDF và trọng số rubric sẽ được công bố sau.
 - Phần LLM phải có khả năng gọi thật bằng khóa người chấm. Cache không thay khả năng này.
 - Phân biệt snapshot với kỳ sự kiện, listing với host/review, và trạng thái lịch với bằng chứng có giao dịch đặt phòng.
-- Không tạo ví dụ dự án, dữ liệu phân tích hay kết quả thực nghiệm cho phần 2 trong lượt này.
+- Phân biệt yêu cầu của đề với lựa chọn triển khai của ví dụ độc lập.
 
 Antigravity được giao đọc nguồn và rà văn phong trong worktree A, chỉ được ghi các tệp QA. Bản hướng dẫn đầu có một số khái quát không được nhận vào trang, như coi YAML là lựa chọn duy nhất, dùng tần suất lỗi không có số liệu hoặc coi cache chỉ theo review ID là đủ. Mọi đề xuất được đối chiếu lại với nguồn và bản thảo trước khi áp dụng. Biên bản và ảnh QA chi tiết nằm trong `qa/airbnb-project-20261019/`, được Git bỏ qua.
 
@@ -30,6 +30,20 @@ python .agents/skills/studyhub-lecture/scripts/review_teaching_text.py --format 
 ```
 
 Các kiểm tra liên quan còn gồm bộ câu hỏi ôn thi để xác nhận điều hướng cũ vẫn hoạt động, các kiểm thử chức năng, công cụ bài giảng và mô hình nội dung. Trình duyệt kiểm hai trang, sidebar, font, bảng, mã, thẻ thành phố và chữ hoa sau dấu hai chấm ở 360 px, 375 px và 1280 px, cả sáng lẫn tối. Toàn bộ build và deploy do GitHub Actions thực hiện, không build toàn site cục bộ.
+
+## Kế hoạch và lượt thực hành Porto
+
+Trang đầu giữ 54 nhóm yêu cầu trong các mục mở rộng, đồng thời bổ sung sơ đồ xử lý và bản tóm tắt sản phẩm cần nộp. Bảy khối mã của bản trước vẫn giữ nguyên. Rubric trong ảnh được phân biệt với các thông tin còn chờ công bố trên trang đề, không tự thay bốn snapshot thành ba.
+
+Kế hoạch gồm 8 giai đoạn và 24 công việc có đầu ra, điều kiện nghiệm thu và quan hệ phụ thuộc. Bảng kế hoạch riêng của người dùng chỉ được đọc để hiểu cách phối hợp. Không lưu workbook, URL, tên thành viên, phân công hoặc bản sao các hàng của nhóm.
+
+`examples/airbnb-porto/` là dự án Python chạy trên 13 tệp công khai thật, không sinh dữ liệu thay thế khi tải thất bại. Lượt công bố chọn 120 listing thuộc giao 12.453 ID qua bốn snapshot và xử lý 480 hàng listing, 13.842 hàng calendar trong cửa sổ đã chọn. Mẫu phân tích văn bản có 300 review duy nhất. Dữ liệu thô và nội dung review không nằm trong gói tải mã nguồn hoặc bản xuất công khai.
+
+Sáu KPI không phụ thuộc LLM đã được tính. Một chương trình độc lập đọc lại nguồn bằng pandas và Decimal để đối chiếu cả bốn snapshot. Nhánh API, cache và chấm nhãn có mã nguồn, nhưng lượt này chưa gọi LLM và chưa có nhãn người để công bố accuracy/F1.
+
+Năm hình SVG và báo cáo PDF được tạo từ cùng lượt chạy. Bản đồ dùng GeoJSON nguồn, giữ hình đủ lớn và đưa bảng khu vực ra ngoài SVG để tránh co toàn hình theo một danh sách chú giải dài. `porto-example-verification.json` ghi cấu hình, kết quả và hash của các tệp công bố.
+
+Hai tác vụ Antigravity trong worktree A/B lưu được bản nháp và nhận xét nhưng không có trạng thái công cụ thành công. Một lượt sửa hết thời gian, các lượt khác gặp lỗi truyền NoneType. Codex đọc từng đề xuất, loại các cách tự bù dữ liệu và khẳng định thiếu cơ sở, rồi kiểm chứng bản tích hợp độc lập. Kiểm tra sau tác vụ xác nhận 41 và 48 tệp có sẵn trong hai worktree không đổi.
 
 ## Bổ sung từ lượt đọc như sinh viên và nguồn tham khảo
 

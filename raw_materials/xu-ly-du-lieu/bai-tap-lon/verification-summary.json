@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "scope": "Assignment explanation and two-section navigation; worked example reserved",
+  "scope": "Assignment explanation, concise visual overview, independent plan and runnable real-data Porto example",
   "sourceRequirementsMapped": 54,
   "cities": 26,
   "snapshotDates": 104,
@@ -48,9 +48,9 @@
     "baselineFilesUnchanged": 41
   },
   "limits": [
-    "Source-to-page markers supplement manual reading; they do not prove semantics automatically.",
-    "No worked pipeline or actual Airbnb data/LLM execution is supplied in part2.",
-    "Report format and rubric weights remain pending as the official assignment states."
+    "Source markers supplement manual reading, not automatic semantic proof",
+    "The worked run includes real data, six non-LLM KPIs, baseline and five figures; API and human-label evaluation were not executed",
+    "Class-specific report format and rubric differences remain explicitly distinguished"
   ],
   "studentReview": {
     "date": "2026-10-19",
@@ -134,5 +134,21 @@
       "responsiveThemeCases": 6,
       "workingTreeFullSuite": "One unrelated uncommitted exam-bank edit disagreed with its render audit; committed HEAD banks independently match their audit. No exam file changed by this task."
     }
+  },
+  "portoExample": {
+    "verificationFile": "porto-example-verification.json",
+    "realSourceFiles": 13,
+    "cohort": 120,
+    "snapshots": 4,
+    "listingRows": 480,
+    "calendarRows": 13842,
+    "uniqueSampleReviews": 300,
+    "sourceZipFiles": 15,
+    "pdfPages": 6,
+    "independentMetricChecks": 4,
+    "exampleUnitTests": 12,
+    "responsiveThemeCases": 16,
+    "actualApiCalls": 0,
+    "measuredModelAccuracy": null
   }
 }

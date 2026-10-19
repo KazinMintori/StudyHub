@@ -1,4 +1,5 @@
 import csv
+import gzip
 import json
 import tempfile
 import unittest
@@ -7,11 +8,45 @@ from unittest.mock import patch
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.core import blank_manual_template, kpis, number, price, rows
+from src.core import blank_manual_template, kpis, number, price, rows, read_selected
 from src.review_analysis import cache_key, class_metrics, evaluate, multilabel_metrics, validate
+from run_pipeline import get_sources
 
 
 class ExampleTests(unittest.TestCase):
+    def test_cache_from_another_city_is_not_relabelled_as_porto(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            raw = root/'data/raw'
+            path = raw/'2026-06-23/listings.csv.gz'
+            path.parent.mkdir(parents=True)
+            path.write_bytes(b'another source')
+            (raw/'source-manifest.json').write_text(json.dumps([{'snapshot_date':'2026-06-23','file':'listings.csv.gz','url':'https://data.insideairbnb.com/another-city/listings.csv.gz','sha256':'unused'}]),encoding='utf-8')
+            with patch('urllib.request.urlopen',side_effect=AssertionError('Network must not be used for this check')):
+                with self.assertRaisesRegex(ValueError,'not associated'):
+                    get_sources(root,{'snapshots':['2026-06-23'],'latest_snapshot':'2026-06-23','public_root':'portugal/norte/porto'})
+
+    def test_streamed_calendar_bounds_and_invalid_state(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            raw = root/'raw'
+            date = '2026-06-23'
+            (raw/date).mkdir(parents=True)
+            def fixture(name, records):
+                with gzip.open(raw/date/(name+'.csv.gz'),'wt',encoding='utf-8',newline='') as f:
+                    writer=csv.DictWriter(f,fieldnames=list(records[0]));writer.writeheader();writer.writerows(records)
+            fixture('listings',[{'id':'0001','room_type':'Private room','minimum_nights':'bad','number_of_reviews':'','neighbourhood_cleansed':'A','price':'$100.00'}])
+            fixture('calendar',[{'listing_id':'0001','date':day,'available':state} for day,state in [('2026-06-22','t'),('2026-06-23','t'),('2026-07-22','invalid'),('2026-07-23','t')]])
+            fixture('reviews',[{'id':'0007','listing_id':'0001','date':'2026-06-01','comments':'Fixture text'}])
+            config={'snapshots':[date],'latest_snapshot':date,'calendar_window_days':30,'cohort_seed':42,'review_sample_size':1}
+            ls,calendar,*_=read_selected(raw,config,{'0001'},root/'output')
+            self.assertEqual(ls[0]['id'],'0001')
+            self.assertIsNone(ls[0]['minimum_nights'])
+            self.assertIsNone(ls[0]['number_of_reviews'])
+            self.assertEqual([r['date'] for r in calendar],['2026-06-23','2026-07-22'])
+            self.assertFalse(calendar[-1]['valid'])
+            self.assertEqual(calendar[-1]['available'],'invalid')
+
     def test_price_uses_explicit_separators_and_rejects_nonfinite(self):
         self.assertEqual(price('$1,234.50'), 1234.5)
         self.assertEqual(price('1.234,50 €', ',', '.'), 1234.5)

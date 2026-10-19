@@ -65,6 +65,12 @@ def render_all(listings, kpis, config, geojson, output):
     scale = min(310/((x1-x0)*cos), 240/(y1-y0))
     project = lambda p: (25+(p[0]-x0)*cos*scale, 100+(y1-p[1])*scale)
     svg = SVG('Listing mẫu theo khu vực', f'Bộ Porto · {config["latest_snapshot"]} · N = {count}', 450)
+    groups = {}
+    for feature in features:
+        properties = feature['properties']
+        groups.setdefault(properties.get('neighbourhood', ''), set()).add(properties.get('neighbourhood_group', ''))
+    if set(counts)-{'unmapped'}-set(groups) or any(len(groups.get(area, set())) > 1 for area in counts):
+        raise ValueError('A sampled neighbourhood cannot be mapped unambiguously; include its neighbourhood group')
     maximum = max(counts.values(), default=1)
     for feature in features:
         name = feature['properties'].get('neighbourhood', '')
@@ -82,7 +88,7 @@ def render_all(listings, kpis, config, geojson, output):
     ranges = [('#e7e2ef', '0'), ('#c8badf', f'1–{first}'), ('#9d83c5', f'{first+1}–{second}'), (PURPLE, f'{second+1}–{maximum}')]
     for i, (color, label) in enumerate(ranges):
         svg.rect(20+i*80, 390, 28, 18, color)
-        svg.text(54+i*80, 405, label, 12)
+        svg.text(54+i*80, 405, label, 14)
     svg.text(20, 435, 'Ranh giới giản lược từ GeoJSON nguồn.', 14, MUTED)
     svg.save(output/'01-ban-do.svg')
 
