@@ -29,6 +29,15 @@ Một kết quả học tập không chỉ phản ánh thời gian ngồi học.
 
 Khẳng định tính phổ biến của mối liên hệ không đồng nghĩa với việc mọi cặp sự vật đều trực tiếp tác động nhau mạnh như nhau. Quan hệ có thể qua nhiều khâu trung gian, có mức độ và phạm vi khác nhau. Một sự giống nhau hoặc sự xuất hiện đồng thời cũng chưa đủ chứng minh giữa chúng có quan hệ nhân quả.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-2/lien-he-va-phat-trien.webp" alt="Ong đang kiếm ăn trên một bông hoa." width="900" height="900" loading="lazy" decoding="async" />
+  <figcaption>Hình 2.4: Ong đang kiếm ăn trên một bông hoa.</figcaption>
+</figure>
+
+Khi quan sát bông hoa, ta có thể dễ bỏ qua con ong nhỏ bên cạnh. Nhưng sự di chuyển của côn trùng góp phần vào quá trình thụ phấn, qua đó nối hoạt động kiếm ăn với sự sinh sản của thực vật. Một quan hệ có ý nghĩa không nhất thiết là quan hệ dễ nhìn thấy nhất. Mặt khác, tác dụng của nó còn tùy loài cây và điều kiện sinh thái cụ thể.
+
 ## Ba tính chất của mối liên hệ
 
 Mối liên hệ có tính khách quan vì nó thuộc bản thân hiện thực, không do ta tùy ý đặt ra. Cách con người gọi tên và giải thích quan hệ có thể thay đổi, nhưng sự phụ thuộc thực của cây vào điều kiện sống không vì thế mà mất đi.
@@ -59,6 +68,16 @@ Ngụy biện còn có thể xuất hiện khi tùy tiện đổi vị trí gi�
 
 Quan điểm toàn diện vì thế đòi hỏi cả sự bao quát lẫn phân biệt. Bao quát để không bỏ mất những quan hệ cần thiết. Phân biệt để tìm đúng vai trò của chúng trong hoàn cảnh cụ thể. Hai yêu cầu giúp người nghiên cứu đi từ danh sách thông tin đến một sự giải thích có thứ bậc và trọng tâm.
 
+## Một buổi đi học muộn
+
+Giả sử một người đến lớp muộn sau khi xe buýt đổi hành trình. Có thể kết luận ngay họ thiếu trách nhiệm, nhưng cũng có thể đi sang thái cực khác là kể mọi yếu tố từ thời tiết đến giao thông rồi coi việc tìm nguyên nhân là bất khả. Cả hai cách đều chưa làm rõ quan hệ thực sự chi phối tình huống.
+
+Xem xét toàn diện đòi hỏi biết người ấy nhận thông tin vào lúc nào, đã dự kiến hành trình ra sao và sự thay đổi tác động đến quãng đường thế nào. Những yếu tố ấy không có vai trò ngang nhau. Nếu việc đổi tuyến đã được thông báo và có lựa chọn thay thế, nhận xét sẽ khác với trường hợp thông báo chỉ xuất hiện khi người ấy đã lên xe.
+
+Nhìn hoàn cảnh không có nghĩa xóa trách nhiệm. Nó giúp đặt trách nhiệm đúng vào phần việc mà chủ thể có thể biết và có thể làm. Ngược lại, đòi trách nhiệm mà không xem điều kiện cũng có thể chỉ là lấy điều mình biết sau sự việc để áp ngược cho người đang ở trong tình huống.
+
+Từ một lần đến muộn, ta biết được điều gì về một người và còn chưa biết điều gì? Giữ lại khoảng chưa biết ấy không phải né tránh đánh giá. Nó ngăn một biểu hiện riêng lẻ bị kéo thành lời phán quyết về toàn bộ con người.
+
 ## Phát triển khác với biến đổi nói chung
 
 Vận động bao gồm mọi biến đổi, còn **phát triển** chỉ quá trình vận động theo khuynh hướng từ thấp đến cao, từ kém hoàn thiện đến hoàn thiện hơn, từ chất cũ đến chất mới ở trình độ cao hơn. Vì thế, tăng số lượng, thay đổi vị trí hoặc lặp lại trạng thái cũ chưa tự nó chứng tỏ có phát triển.
@@ -83,6 +102,16 @@ Nhưng khó khăn không phải bằng chứng tự động về triển vọng.
 
 Khi gắn cái mới với lịch sử cụ thể, ta có thể phân biệt sự bảo thủ với việc thận trọng có căn cứ. Thận trọng khảo sát điều kiện để thay đổi thành công. Bảo thủ giữ nguyên cách cũ dù những giới hạn của nó và khả năng thay thế đã được xác định. Sự phân biệt nằm ở nội dung phân tích và hành động.
 
+## Sắp xếp lại một căn phòng đang ở
+
+Một căn phòng có thêm nhiều đồ mới chưa chắc đã trở nên phù hợp hơn với người ở. Nếu chỗ đi lại bị chặn, ánh sáng bị che và việc sinh hoạt khó hơn thì sự tăng thêm ấy là biến đổi, nhưng chưa đủ căn cứ gọi là phát triển xét theo chức năng của căn phòng.
+
+Ngược lại, bỏ bớt đồ hoặc đổi cách bố trí có thể tạo ra một không gian sống thuận tiện hơn. Sự phát triển ở đây cần được đánh giá bằng những quan hệ và năng lực mới của chỉnh thể, thay vì chỉ dựa vào số lượng hoặc vẻ ngoài mới lạ. Cái xuất hiện muộn hơn không tự động có giá trị cao hơn.
+
+Trong quá trình sửa, căn phòng có lúc bừa bộn hơn trước. Một thời điểm bất tiện chưa đủ để kết luận toàn bộ việc sửa là thoái bộ. Nhưng cũng không thể dùng lời hứa về tương lai để biện hộ cho mọi thiệt hại hiện tại. Cần có những thay đổi và điều kiện cụ thể cho thấy kết quả dự kiến có khả năng hình thành.
+
+Ví dụ làm rõ cách nhận diện khuynh hướng qua một quá trình, không phải tiêu chuẩn chung đo sự phát triển của mọi xã hội hoặc mọi con người. Đối tượng khác nhau có cấu trúc và chức năng khác nhau. Chính yêu cầu tìm tiêu chuẩn thích hợp mới giữ cho quan điểm phát triển khỏi trở thành một lời khen có thể gắn vào bất kỳ sự đổi mới nào.
+
 ## Nhận ra khuynh hướng qua một quá trình phức tạp
 
 Khuynh hướng đi lên không có nghĩa mọi bước đều tiến thẳng. Phát triển có thể bao gồm quanh co, gián đoạn, thậm chí những bước lùi cục bộ. Vì vậy, một thời điểm bất lợi chưa đủ phủ nhận cả quá trình. Ngược lại, một thành công ngắn hạn cũng chưa chứng minh xu hướng phát triển bền vững.
@@ -97,44 +126,147 @@ Hai nguyên lý hỗ trợ nhau. Mối liên hệ giúp giải thích điều ki
 
 <template #exercises>
 
+<!-- workbook: WB2-MC26; PDF 47 -->
 
-<!-- Bài tập 2.9: II.I.27; tr.46; PDF47 -->
+::: exercise Bài 1
 
-::: exercise Bài 2.9. Tính khách quan của mối liên hệ
+Biện chứng khách quan là phạm trù dùng để chỉ...
 
-Phát biểu nào dưới đây sai?
-
-- a. Mối liên hệ phổ biến có tính khách quan.
-- b. Mối liên hệ phổ biến có tính đa dạng, phong phú.
-- c. Mối liên hệ giữa các sự vật, hiện tượng có tính phổ biến.
-- d. Mối liên hệ giữa các sự vật, hiện tượng chỉ là do con người tưởng tượng ra.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: D. Mối liên hệ giữa các sự vật, hiện tượng chỉ là do con người tưởng tượng ra.
-
-Nhận thức có thể phản ánh đúng hoặc sai một mối liên hệ. Sự phụ thuộc và tác động qua lại thực sự giữa các đối tượng không do ý muốn của người quan sát tạo ra.
+- A. Biện chứng của chính quá trình nhận thức thế giới bởi con người.
+- B. Biện chứng của tư duy phản ánh thế giới vào bộ óc con người.
+- C. Biện chứng của bản thân thế giới tồn tại khách quan, độc lập với ý thức con người.
+- D. Sự phản ánh của biện chứng khách quan vào đầu óc con người.
 
 :::
 
-<!-- Bài tập 2.10: II.II.6; tr.58; PDF59 -->
+::: solution Giải thích
 
-::: exercise Bài 2.10. Phát triển có phải mọi thay đổi về chất?
+Đáp án: C.
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Theo phép biện chứng duy vật, phát triển là sự thay đổi thuần túy về chất của sự vật.
+Biện chứng khách quan là những mối liên hệ, vận động và phát triển vốn có của hiện thực. A, B và D đều nói đến quá trình tư duy hoặc sự phản ánh của con người, thuộc phương diện biện chứng chủ quan. Tư duy phản ánh các quan hệ ấy, không sáng tạo ra sự tồn tại khách quan của chúng.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+<!-- workbook: WB2-MC27; PDF 47 -->
+
+::: exercise Bài 2
+
+Phát biểu nào dưới đây là SAI?
+
+- A. Mối liên hệ phổ biến có tính khách quan.
+- B. Mối liên hệ phổ biến có tính đa dạng, phong phú.
+- C. Mối liên hệ giữa các sự vật, hiện tượng có tính phổ biến.
+- D. Mối liên hệ giữa các sự vật, hiện tượng chỉ là do con người tưởng tượng ra.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Các mối liên hệ thuộc về sự vật, không chờ con người hình dung mới có. Tính phổ biến không có nghĩa mọi cặp đối tượng đều liên hệ trực tiếp hoặc giữ vai trò ngang nhau. A, B và C nêu ba tính chất cần được hiểu cùng với sự khác biệt giữa những quan hệ cụ thể.
+
+:::
+
+<!-- workbook: WB2-MC28; PDF 47–48 -->
+
+::: exercise Bài 3
+
+Quan niệm triết học nào cho rằng cơ sở của mối liên hệ các sự vật, hiện tượng là ở tính thống nhất vật chất của thế giới?
+
+- A. Chủ nghĩa duy vật chất phác.
+- B. Chủ nghĩa duy vật siêu hình.
+- C. Chủ nghĩa duy tâm khách quan.
+- D. Chủ nghĩa duy vật biện chứng.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Các sự vật rất khác nhau nhưng đều thuộc thế giới vật chất và tồn tại trong sự tác động, quy định lẫn nhau. Lập trường duy vật biện chứng gắn tính khách quan của liên hệ với sự thống nhất vật chất ấy. Duy tâm khách quan tìm cơ sở ở tinh thần, còn duy vật siêu hình xem nhẹ sự liên hệ và chuyển hóa.
+
+:::
+
+<!-- workbook: WB2-MC29; PDF 48 -->
+
+::: exercise Bài 4
+
+Câu chuyện dân gian nào sau đây đưa ra bài học về sự cần thiết phải có quan điểm toàn diện trong nhận thức?
+
+- A. Đẽo cày giữa đường.
+- B. Trí khôn của ta đây.
+- C. Cóc kiện trời.
+- D. Thầy bói xem voi.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Mỗi người mới tiếp xúc một bộ phận nhưng lại xem phần ấy là toàn bộ con voi. Câu chuyện cho thấy cần kết hợp các mặt trong những quan hệ thực của đối tượng. Toàn diện không phải gom mọi ý kiến rồi coi chúng đúng ngang nhau. “Đẽo cày giữa đường” gợi vấn đề lập trường và việc tiếp nhận ý kiến thiếu căn cứ hơn là sai lầm lấy bộ phận thay toàn thể.
+
+:::
+
+<!-- workbook: WB2-MC30; PDF 48 -->
+
+::: exercise Bài 5
+
+Chủ nghĩa duy vật biện chứng cho rằng:
+
+- A. Phát triển chỉ là sự tăng lên đơn thuần về lượng.
+- B. Phát triển chỉ là kết quả của cảm giác con người.
+- C. Phát triển chỉ diễn ra trong lĩnh vực xã hội và xét tới cùng cũng chỉ là sự tha hóa của ý niệm tuyệt đối.
+- D. Phát triển là sự vận động đi lên, từ đơn giản đến phức tạp, từ kém hoàn thiện đến hoàn thiện hơn.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Phát triển chỉ khuynh hướng vận động hình thành trình độ mới, không phải mọi biến đổi hay mọi tăng thêm về lượng. A thu hẹp phát triển, B và C quy nó về tinh thần. D phải được hiểu qua toàn bộ quá trình có quanh co và bước lùi, không phải mọi thời điểm đều đi lên đều đặn.
+
+:::
+
+<!-- workbook: WB2-MC31; PDF 48 -->
+
+::: exercise Bài 6
+
+Từ nguyên lý về sự phát triển của phép biện chứng duy vật, chúng ta rút ra nguyên tắc phương pháp luận nào cho hoạt động lý luận và thực tiễn?
+
+- A. Nguyên tắc khách quan.
+- B. Nguyên tắc phát triển.
+- C. Nguyên tắc toàn diện.
+- D. Nguyên tắc thống nhất giữa lý luận và thực tiễn.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: B.
+
+Nguyên tắc phát triển đòi hỏi xem đối tượng trong quá trình hình thành, biến đổi và những khả năng tiếp theo. Cần nhận diện cái mới có căn cứ và tạo điều kiện cho nó, đồng thời tính đến những trở ngại. Các nguyên tắc còn lại có giá trị nhưng không phải tên nguyên tắc rút trực tiếp từ nguyên lý đang hỏi.
+
+:::
+
+<!-- workbook: WB2-TF06; PDF 59 -->
+
+::: exercise Bài 7
+
+Xác định đúng hoặc sai và giải thích: Theo phép biện chứng duy vật, phát triển là sự thay đổi thuần túy về chất của sự vật.
+
+:::
+
+::: solution Giải thích
 
 Đáp án: Sai.
 
-Phát triển là quá trình vận động theo khuynh hướng đi lên, có sự tác động qua lại giữa biến đổi về lượng và biến đổi về chất. Không phải mọi thay đổi về chất đều là phát triển, vì có biến đổi dẫn đến suy thoái hoặc tan rã.
+Không phải mọi thay đổi về chất đều là phát triển. Phát triển là quá trình vận động theo khuynh hướng đi lên, có sự hình thành trình độ mới và bao hàm quan hệ giữa biến đổi lượng với biến đổi chất. Cần sửa bằng cách giữ cả khuynh hướng và quá trình, thay vì lấy riêng thay đổi về chất làm tiêu chuẩn đủ.
 
 :::
-
 
 </template>
 
@@ -144,3 +276,4 @@ Phát triển là quá trình vận động theo khuynh hướng đi lên, có s
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 2, tr. 61–143.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 2, phần Bài tập.
+3. Kapteinkos. [Ong đang kiếm ăn trên một bông hoa.](https://commons.wikimedia.org/wiki/File:Honey_bee_on_a_flower.jpg). [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Bản thu nhỏ.

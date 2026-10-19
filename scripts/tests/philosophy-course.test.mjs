@@ -36,7 +36,9 @@ test('Each topic is a complete independent page with Notes and isolated exercise
       assert(containers.length >= 2)
       assert.equal(containers.length % 2, 0)
       containers.forEach((kind, i) => assert.equal(kind, i % 2 ? 'solution' : 'exercise'))
-      assert.equal((exercises.match(/<!-- Bài tập /g) || []).length, containers.length / 2)
+      assert.equal((exercises.match(/<!-- workbook: /g) || []).length, containers.length / 2)
+      assert(notes.includes('<figure class="philosophy-figure">'), 'Each topic needs a relevant, captioned illustration')
+      assert(!/Câu hỏi đáng suy ngẫm|Liên hệ thực tiễn\s*:/i.test(notes), 'Reflection belongs in the argument, without announcing an editorial purpose')
       for (const solution of exercises.matchAll(/^::: solution[^\n]*\n([\s\S]*?)^:::/gm)) {
         assert(solution[1].trim().length > 40, 'Every question needs an explanatory answer')
       }
@@ -47,7 +49,54 @@ test('Each topic is a complete independent page with Notes and isolated exercise
     assert.equal(manifest.slides, null)
     assert.equal(manifest.topics.length,chapter.topics.length)
   }
-  assert.equal(total, 46)
+  assert.equal(total, 253)
+})
+
+test('Every workbook exercise appears once in its matching topic with its complete prompt and options', async () => {
+  const expected = [
+    { multipleChoice: 35, trueFalse: 5, essay: 3 },
+    { multipleChoice: 80, trueFalse: 20, essay: 5 },
+    { multipleChoice: 80, trueFalse: 20, essay: 5 },
+  ]
+  const identifiers = new Set()
+  for (const [index, chapter] of course.lessons.entries()) {
+    const workbook = JSON.parse(await readFile(`raw_materials/${course.id}/workbook/chapter-${index + 1}.json`, 'utf8'))
+    assert.deepEqual(workbook.expected, expected[index])
+    const pages = new Map(await Promise.all(chapter.topics.map(async topic => [topic.slug, await readFile(`docs/${course.id}/bai-giang/${chapter.slug}/${topic.slug}.md`, 'utf8')])))
+    for (const [kind, count] of Object.entries(expected[index])) {
+      const entries = workbook.exercises.filter(item => item.kind === kind)
+      assert.equal(entries.length, count)
+      assert.deepEqual(entries.map(item => item.number).sort((a,b)=>a-b), Array.from({length:count},(_,i)=>i+1))
+    }
+    for (const exercise of workbook.exercises) {
+      assert(!identifiers.has(exercise.id), exercise.id)
+      identifiers.add(exercise.id)
+      assert(pages.has(exercise.topic), exercise.topic)
+      const page = pages.get(exercise.topic)
+      assert.equal([...pages.values()].filter(text => text.includes(`workbook: ${exercise.id};`)).length, 1, exercise.id)
+      assert(page.includes(exercise.prompt), `Complete question ${exercise.id}`)
+      if (exercise.kind === 'multipleChoice') {
+        assert.deepEqual(exercise.options.map(option=>option.key), ['A','B','C','D'])
+        for (const option of exercise.options) assert(page.includes(option.text), `Option ${exercise.id}-${option.key}`)
+      }
+      assert(exercise.explanation?.trim().length > 40)
+      if (exercise.answer === null && exercise.kind !== 'essay') assert(exercise.note?.trim(), `Ambiguous question ${exercise.id} needs an explicit note`)
+      assert.deepEqual(exercise.pdfPages, exercise.printedPages.map(number=>number+1))
+    }
+  }
+  assert.equal(identifiers.size, 253)
+})
+
+test('Illustrations have local assets, recorded authorship and a reuse license', async () => {
+  const sources = JSON.parse(await readFile(`raw_materials/${course.id}/image-sources.json`, 'utf8'))
+  assert.equal(sources.length, 19)
+  assert.equal(new Set(sources.map(image=>image.topic)).size, 19)
+  for (const image of sources) {
+    await access(image.file)
+    assert(image.width > 200 && image.height > 100)
+    assert(image.page.startsWith('https://commons.wikimedia.org/wiki/File:'))
+    assert(image.license && image.sha256)
+  }
 })
 
 test('Exam is independent and the sidebar routes to individual topic pages', async () => {

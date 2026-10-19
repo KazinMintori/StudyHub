@@ -65,6 +65,25 @@ Thực tiễn là cơ sở vì con người tiếp xúc và tác động vào th
 
 Thực tiễn là động lực vì nó không ngừng đặt ra vấn đề cần giải quyết. Khó khăn trong sản xuất, giao thông hay tổ chức đời sống thúc đẩy việc tìm hiểu những quan hệ chưa rõ. Đồng thời, thực tiễn cung cấp phương tiện và năng lực mới giúp con người đi sâu hơn vào đối tượng. Động lực vì thế vừa nằm ở nhu cầu vừa nằm ở điều kiện mở rộng khả năng nghiên cứu.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-2/thuc-tien-va-nhan-thuc.webp" alt="Louis Pasteur trong phòng thí nghiệm, tranh của Albert Edelfelt." width="590" height="900" loading="lazy" decoding="async" />
+  <figcaption>Hình 2.7: Louis Pasteur trong phòng thí nghiệm, tranh của Albert Edelfelt.</figcaption>
+</figure>
+
+Dụng cụ thí nghiệm không chỉ giúp nhà khoa học nhìn rõ hơn. Chúng cho phép con người chủ động tạo và thay đổi điều kiện để kiểm tra một nhận định. Bức tranh nhắc tới mặt hoạt động ấy của nhận thức. Sự quan sát và suy luận vẫn cần thiết, nhưng phải được nối với những thao tác có thể kiểm tra và lặp lại.
+
+## Một giàn cây ngoài ban công
+
+Giả sử một gia đình trồng cây trên ban công nhưng cây phát triển không như mong đợi. Nhu cầu chăm cây tốt hơn đặt ra những câu hỏi về nước, ánh sáng và đất. Hoạt động ấy cung cấp đối tượng cho nhận thức, đồng thời tạo động lực tìm hiểu những quan hệ trước đó người trồng chưa chú ý.
+
+Khi thay đổi một điều kiện rồi theo dõi kết quả, họ có thêm tài liệu để so sánh dự đoán với hiện thực. Cây có thể phản ứng khác điều đã nghĩ, buộc họ xét lại giả thuyết. Hiểu biết không chỉ hình thành trong lúc ngồi đọc hướng dẫn, cũng không tự xuất hiện đầy đủ ngay khi bắt tay làm. Nó phát triển trong quan hệ giữa tài liệu, suy luận và sự tác động thực tế.
+
+Đọc tài liệu do người khác viết không trái với việc thừa nhận thực tiễn là cơ sở nhận thức. Người đọc đang tiếp nhận tri thức xã hội mà mình không phải tự xây dựng lại từ đầu. Điều còn phải xác định là tri thức ấy nói về điều kiện nào và có thể vận dụng đến đâu ở ban công của mình.
+
+Nếu cây tốt lên sau một thay đổi, liệu đã biết chắc nguyên nhân chưa? Trong thời gian ấy, những điều kiện khác có thể cũng thay đổi. Tôn trọng thực tiễn không phải thấy kết quả thuận lợi là dừng mọi câu hỏi. Nó đòi hỏi xem kết quả được tạo ra trong hoàn cảnh nào và có lặp lại khi ta hiểu đúng điều kiện ấy hay không.
+
 ## Kinh nghiệm cần được khái quát và lý luận cần trở lại đời sống
 
 Kinh nghiệm thường gắn với những tình huống chủ thể đã trải qua hoặc những kết quả quan sát được tích lũy. Nó giúp giải quyết công việc trong những điều kiện quen thuộc. Nhưng khi quy mô, đối tượng hoặc môi trường thay đổi, cách làm từng có hiệu quả có thể bộc lộ giới hạn.
@@ -76,6 +95,16 @@ Một người quản lý có thể biết cách phối hợp một nhóm nhỏ 
 Ở chiều khác, một mô hình tổ chức có thể được trình bày mạch lạc nhưng chưa phù hợp nguồn lực và quan hệ thực. Việc vận dụng đòi hỏi khảo sát, điều chỉnh và tổng kết kết quả. Nếu chỉ viện dẫn mô hình để bỏ qua những khó khăn đã quan sát, người thực hiện đang tách lý luận khỏi thực tiễn.
 
 Thống nhất lý luận và thực tiễn vì thế là một quá trình qua lại. Hoạt động đặt ra vấn đề, kinh nghiệm cung cấp tài liệu, lý luận khái quát và định hướng, rồi việc thực hiện tiếp tục kiểm tra. Qua những vòng ấy, cả hiểu biết lẫn năng lực hành động có thể được phát triển.
+
+## Từ bản hướng dẫn đến chiếc áo mặc được
+
+Một người có thể trình bày lưu loát các bước may áo sau khi đọc hướng dẫn. Nhưng khi trực tiếp xử lý vải, họ mới gặp việc vật liệu bị xê dịch, đường may chưa đều hoặc các bộ phận chưa khớp. Những khó khăn ấy không chứng minh lý thuyết vô dụng. Chúng làm rõ các yêu cầu mà việc hiểu bằng lời chưa chuyển thành kỹ năng thực hiện.
+
+Ngược lại, may được một chiếc áo vừa người quen chưa có nghĩa đã biết giải thích và điều chỉnh cho mọi dáng người, mọi loại vải. Kinh nghiệm thành công có giá trị nhưng gắn với phạm vi đã trải qua. Khái quát về kích thước, cấu trúc và tính chất vật liệu giúp người làm xử lý những tình huống mới có căn cứ hơn.
+
+Lý luận và kinh nghiệm gặp nhau ở việc người làm biết vì sao cần một thao tác, thao tác ấy giải quyết điều kiện nào và khi nào phải đổi cách làm. Kết quả thực hiện lại chỉ ra những điều bản hướng dẫn đã nói quá rộng hoặc người đọc đã hiểu thiếu. Học và làm vì thế không phải hai chặng hoàn tất riêng rồi mới ghép lại.
+
+Ví dụ không đặt ra yêu cầu ai muốn biết về áo cũng phải tự làm mọi chiếc áo. Phân công xã hội cho phép con người tiếp nhận tri thức của nhau. Yêu cầu là giữ mối liên hệ giữa lời giải thích với đối tượng và điều kiện thực hiện, thay vì coi khả năng nhắc lại lời giải thích là bằng chứng đã có đầy đủ năng lực hành động.
 
 ## Thực tiễn là mục đích và tiêu chuẩn kiểm tra
 
@@ -95,60 +124,269 @@ Trên cơ sở vai trò của thực tiễn, cần làm rõ hơn quá trình hì
 
 <template #exercises>
 
+<!-- workbook: WB2-MC66; PDF 55 -->
 
-<!-- Bài tập 2.17: II.II.17; tr.60; PDF61 -->
+::: exercise Bài 1
 
-::: exercise Bài 2.17. Thực tiễn và thực tế
+Theo quan điểm của triết học Mác - Lênin, bản chất của nhận thức là:
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Thực tiễn và thực tế là một.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: Sai.
-
-Thực tế chỉ cái đang tồn tại hoặc diễn ra trong hiện thực. Thực tiễn là hoạt động vật chất có mục đích, mang tính lịch sử - xã hội của con người nhằm cải tạo tự nhiên và xã hội. Hai khái niệm có liên hệ nhưng không đồng nghĩa.
+- A. Tự nhận thức của con người.
+- B. Sự tiến gần của tư duy đến khách thể.
+- C. Quá trình phản ánh thế giới khách quan của mọi sinh vật sống.
+- D. Sự phản ánh tích cực, tự giác và sáng tạo thế giới khách quan vào bộ óc con người trên cơ sở thực tiễn, nhằm tạo ra tri thức mới về hiện thực khách quan.
 
 :::
 
-<!-- Bài tập 2.18: II.II.18; tr.60; PDF61 -->
+::: solution Giải thích
 
-::: exercise Bài 2.18. Các hình thức thực tiễn
+Đáp án: D.
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Hoạt động nghiên cứu khoa học là hoạt động thực tiễn cơ bản nhất, quan trọng nhất.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: Sai.
-
-Sản xuất vật chất là hình thức thực tiễn cơ bản nhất. Cần phân biệt nghiên cứu lý thuyết với thực nghiệm khoa học. Thực nghiệm là một hình thức thực tiễn, nhưng hoạt động nghiên cứu khoa học còn có những thao tác tư duy lý luận.
+D nêu đủ đối tượng phản ánh, tính tích cực sáng tạo và cơ sở thực tiễn của nhận thức. A chỉ nói một trường hợp con người nhận thức chính mình. B gợi sự vận động của hiểu biết nhưng chưa đủ. C đồng nhất nhận thức người với mọi hình thức phản ánh của sinh vật.
 
 :::
 
-<!-- Bài tập 2.19: II.I.80; tr.57; PDF58 -->
+<!-- workbook: WB2-MC67; PDF 56 -->
 
-::: exercise Bài 2.19. Vai trò của thực tiễn đối với nhận thức
+::: exercise Bài 2
+
+Trường phái triết học nào cho rằng nhận thức không phải là sự phản ánh thế giới khách quan bởi con người mà chỉ là sự phản ánh trạng thái chủ quan của con người?
+
+- A. Chủ nghĩa duy tâm chủ quan.
+- B. Chủ nghĩa duy tâm khách quan.
+- C. Chủ nghĩa duy vật biện chứng.
+- D. Chủ nghĩa duy vật siêu hình.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: A.
+
+Duy tâm chủ quan lấy cảm giác và trạng thái của chủ thể làm cơ sở giải thích nhận thức, thay vì thừa nhận thế giới khách quan được phản ánh. Duy tâm khách quan quy về tinh thần khách quan. Hai hình thức duy vật đều thừa nhận đối tượng khách quan, dù duy vật trước Mác còn những hạn chế về cách giải thích quá trình nhận thức.
+
+:::
+
+<!-- workbook: WB2-MC68; PDF 56 -->
+
+::: exercise Bài 3
+
+Trường phái triết học nào cho rằng: Nhận thức là tự nhận thức của “Tinh thần thế giới” hay “Ý niệm tuyệt đối”?
+
+- A. Chủ nghĩa duy tâm chủ quan.
+- B. Chủ nghĩa duy tâm khách quan.
+- C. Chủ nghĩa duy vật biện chứng.
+- D. Chủ nghĩa duy vật siêu hình.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: B.
+
+Nhận thức được xem là quá trình một tinh thần có trước và độc lập với cá nhân tự nhận biết chính nó. Đó là lập trường duy tâm khách quan. A đặt cơ sở ở chủ thể cá nhân, còn C và D không coi tinh thần thế giới là nguồn gốc của hiện thực.
+
+:::
+
+<!-- workbook: WB2-MC73; PDF 57 -->
+
+::: exercise Bài 4
+
+Chọn cụm từ thích hợp, điền vào chỗ trống để có định nghĩa đúng về phạm trù thực tiễn: “Thực tiễn là toàn bộ ... có mục đích mang tính lịch sử - xã hội của con người nhằm cải tạo tự nhiên và xã hội”.
+
+- A. Hoạt động vật chất.
+- B. Hoạt động tinh thần.
+- C. Hoạt động vật chất và tinh thần.
+- D. Hoạt động sản xuất.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: A.
+
+Thực tiễn là hoạt động vật chất có mục đích, trong đó con người sử dụng lực lượng và công cụ vật chất tác động làm biến đổi đối tượng. Nó có sự định hướng của ý thức nhưng không vì thế bao gồm mọi hoạt động tinh thần. D thu hẹp thực tiễn vào sản xuất và bỏ qua các hình thức khác.
+
+:::
+
+<!-- workbook: WB2-MC74; PDF 57 -->
+
+::: exercise Bài 5
+
+Phát biểu nào dưới đây là SAI?
+
+- A. Thực tiễn không phải là toàn bộ hoạt động của con người mà chỉ là những hoạt động vật chất - cảm tính.
+- B. Thực tiễn là những hoạt động mang tính lịch sử - xã hội của con người.
+- C. Thực tiễn là hoạt động có tính mục đích nhằm cải tạo tự nhiên và xã hội phục vụ con người.
+- D. Thực tiễn là toàn bộ những hoạt động vật chất và tinh thần của con người.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Thực tiễn có những đặc trưng vật chất, có mục đích và mang tính lịch sử, xã hội. Không phải mọi suy nghĩ, tưởng tượng hoặc hoạt động biểu đạt tinh thần đều là thực tiễn theo nghĩa triết học. A, B và C cùng nêu những đặc trưng của nó, không phải ba cách định nghĩa loại trừ nhau.
+
+:::
+
+<!-- workbook: WB2-MC75; PDF 57 -->
+
+::: exercise Bài 6
+
+Hình thức hoạt động thực tiễn cơ bản, đầu tiên là:
+
+- A. Hoạt động thực nghiệm khoa học.
+- B. Hoạt động nghiên cứu khoa học.
+- C. Hoạt động sản xuất vật chất.
+- D. Hoạt động chính trị - xã hội.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Sản xuất vật chất tạo tư liệu để con người và xã hội tồn tại, đồng thời cung cấp điều kiện cho những hoạt động khác. Thực nghiệm khoa học và hoạt động chính trị, xã hội là những hình thức cơ bản khác. B có thể bao gồm cả nghiên cứu lý thuyết nên không đồng nghĩa với một hình thức thực tiễn.
+
+:::
+
+<!-- workbook: WB2-MC76; PDF 57–58 -->
+
+::: exercise Bài 7
+
+Điền từ thích hợp vào chỗ trống (...) trong câu sau: “... là hoạt động thực tiễn thể hiện tính tự giác cao của con người nhằm biến đổi, cải tạo xã hội, phát triển các thiết chế xã hội, các quan hệ xã hội, v.v.”.
+
+- A. Hoạt động thực nghiệm khoa học.
+- B. Hoạt động nghiên cứu khoa học.
+- C. Hoạt động sản xuất vật chất.
+- D. Hoạt động chính trị - xã hội.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Đối tượng được tác động ở đây là các quan hệ, thiết chế và tổ chức xã hội. Đó là dấu hiệu phân biệt với sản xuất vật chất hoặc thực nghiệm khoa học. Các hình thức có liên hệ với nhau nhưng không vì thế mất đối tượng và vai trò đặc thù.
+
+:::
+
+<!-- workbook: WB2-MC78; PDF 58 -->
+
+::: exercise Bài 8
+
+Đâu KHÔNG PHẢI là hoạt động thực tiễn?
+
+- A. Giảng dạy triết học trên lớp.
+- B. Viết nhật ký cá nhân không chia sẻ với ai.
+- C. Trình diễn nhạc giao hưởng trước đám đông.
+- D. Nghiên cứu khoa học thực nghiệm trong phòng thí nghiệm.
+
+:::
+
+::: solution Giải thích
+
+Đề chưa đủ chặt để có một đáp án duy nhất. B là hoạt động biểu đạt và tự phản tỉnh tinh thần. Tuy nhiên, nếu xét nội dung chủ yếu, A thuộc hoạt động giáo dục và C thuộc hoạt động nghệ thuật, cũng không tự động trở thành thực tiễn chỉ vì diễn ra trước người khác. D là trường hợp rõ của thực nghiệm khoa học khi có tác động vật chất lên đối tượng. Tiêu chí phân biệt là tính chất hoạt động, không phải riêng tư hay công khai. Không nên ghi nhớ B bằng cách coi mọi hoạt động có đông người đều là thực tiễn.
+
+:::
+
+<!-- workbook: WB2-MC79; PDF 58 -->
+
+::: exercise Bài 9
+
+Thực tiễn là gì?
+
+- A. Là hoạt động vật chất và hoạt động tinh thần của con người.
+- B. Là hoạt động vật chất có mục đích mang tính lịch sử - xã hội của con người nhằm cải tạo tự nhiên và xã hội.
+- C. Là hoạt động tinh thần của con người.
+- D. Là hoạt động vật chất, hoạt động tinh thần, hoạt động giải trí của con người.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: B.
+
+B giữ đủ những đặc trưng vật chất, mục đích, tính lịch sử và xã hội. A và D mở rộng thành gần như mọi hoạt động người, còn C biến thực tiễn thành hoạt động tinh thần. Một kế hoạch có thể hướng dẫn thực tiễn nhưng bản thân việc suy nghĩ ra kế hoạch chưa đồng nhất với quá trình thực hiện nó.
+
+:::
+
+<!-- workbook: WB2-MC80; PDF 58 -->
+
+::: exercise Bài 10
 
 Thực tiễn đóng vai trò gì đối với nhận thức?
 
-- a. Là điểm khởi đầu của nhận thức.
-- b. Là đích đến của nhận thức.
-- c. Là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn của chân lý.
-- d. Tồn tại song hành, hỗ trợ quá trình nhận thức.
+- A. Là điểm khởi đầu của nhận thức.
+- B. Là đích đến của nhận thức.
+- C. Là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn của chân lý.
+- D. Tồn tại song hành, hỗ trợ quá trình nhận thức.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution Giải thích
 
-Đáp án: C. Là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn của chân lý.
+Đáp án: C.
 
-Thực tiễn cung cấp đối tượng, tài liệu và phương tiện nhận thức. Những nhu cầu do thực tiễn đặt ra thúc đẩy việc tìm tri thức mới. Tri thức hướng đến giải quyết công việc thực tiễn và phải được kiểm nghiệm trong hoạt động thực tiễn. Phương án A và B chỉ nêu từng mặt, còn C bao quát đầy đủ các vai trò.
+Thực tiễn cung cấp đối tượng và tài liệu, đặt ra nhu cầu tìm hiểu, định hướng việc vận dụng tri thức và kiểm tra nhận thức. A và B mới nêu từng mặt nên chưa đầy đủ. D xem thực tiễn như một yếu tố hỗ trợ bên cạnh nhận thức, làm mờ vai trò nền tảng của nó.
 
 :::
 
+<!-- workbook: WB2-TF17; PDF 61 -->
+
+::: exercise Bài 11
+
+Xác định đúng hoặc sai và giải thích: Thực tiễn và thực tế là một.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Sai.
+
+Thực tế là phạm vi hiện thực đang tồn tại, bao gồm cả những quá trình không phải hoạt động cải tạo của con người. Thực tiễn là hoạt động vật chất có mục đích, mang tính lịch sử và xã hội nhằm cải tạo tự nhiên, xã hội. Một cơn mưa là thực tế, còn xây và vận hành hệ thống dẫn nước là hoạt động thực tiễn.
+
+:::
+
+<!-- workbook: WB2-TF18; PDF 61 -->
+
+::: exercise Bài 12
+
+Xác định đúng hoặc sai và giải thích: Hoạt động nghiên cứu khoa học là hoạt động thực tiễn cơ bản nhất, quan trọng nhất.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Sai.
+
+Sản xuất vật chất mới là hình thức thực tiễn đầu tiên, cơ bản nhất và giữ vai trò nền tảng đối với đời sống xã hội. Nghiên cứu khoa học còn bao gồm cả hoạt động lý thuyết, không phải toàn bộ đều đồng nhất với thực tiễn. Thực nghiệm khoa học là một hình thức thực tiễn cơ bản, có quan hệ chặt chẽ với sản xuất và những hoạt động khác.
+
+:::
+
+<!-- workbook: WB2-ES05; PDF 63 -->
+
+::: exercise Bài 13
+
+Vai trò của thực tiễn đối với quá trình nhận thức?
+
+:::
+
+::: solution Giải thích
+
+Thực tiễn là hoạt động vật chất có mục đích, mang tính lịch sử và xã hội, qua đó con người cải tạo tự nhiên và xã hội. Vai trò của nó đối với nhận thức không chỉ là cung cấp một ví dụ sau khi lý thuyết đã hoàn tất. Nó gắn với cả quá trình hình thành, phát triển và kiểm tra tri thức.
+
+Trước hết, thực tiễn là cơ sở của nhận thức. Khi tác động lên đối tượng bằng công cụ và phương tiện, con người làm những thuộc tính của nó bộc lộ và thu được tài liệu để suy nghĩ. Tri thức của một cá nhân không nhất thiết xuất phát từ việc chính người ấy tự làm mọi thí nghiệm. Họ còn tiếp nhận thành quả thực tiễn và nhận thức tích lũy trong xã hội.
+
+Thực tiễn đồng thời là động lực. Nhu cầu sản xuất và đời sống đặt ra những vấn đề mà tri thức hiện có chưa giải quyết được, thúc đẩy tìm hiểu đối tượng và tạo phương tiện quan sát mới. Tuy nhiên, không phải mọi nghiên cứu đều đáp ứng ngay một nhu cầu trước mắt. Nhận thức có tính độc lập tương đối và có thể phát triển qua những vấn đề lý luận của chính nó.
+
+Thực tiễn là mục đích vì tri thức giúp con người định hướng hoạt động, dự kiến kết quả và cải biến điều kiện sống. Một người nghiên cứu cách bảo quản nông sản không chỉ cần mô tả hiện tượng hư hỏng mà còn cần tìm điều kiện bảo quản thích hợp. Mục đích ấy không hạ thấp nghiên cứu cơ bản chỉ vì chưa thấy ứng dụng tức thời.
+
+Cuối cùng, thực tiễn là tiêu chuẩn của chân lý. Một nhận định phải được đối chiếu với kết quả tác động và những bằng chứng khách quan, không được coi đúng chỉ vì người nói có uy tín hoặc nhiều người tán thành. Chẳng hạn, một cách bảo quản được đề xuất phải được thử trong những điều kiện được nêu rõ, so sánh và tiếp tục kiểm tra.
+
+Tiêu chuẩn thực tiễn có tính tuyệt đối ở vai trò kiểm tra khách quan, đồng thời có tính tương đối vì mỗi trình độ thực tiễn còn giới hạn. Một lần thành công không chứng minh nhận định đúng trong mọi hoàn cảnh. Do đó, nhận thức cần trở lại thực tiễn để được vận dụng, điều chỉnh và tiếp tục mở rộng.
+
+:::
 
 </template>
 
@@ -158,3 +396,4 @@ Thực tiễn cung cấp đối tượng, tài liệu và phương tiện nhận
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 2, tr. 61–143.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 2, phần Bài tập.
+3. Albert Edelfelt; Science History Institute. [Louis Pasteur trong phòng thí nghiệm, tranh của Albert Edelfelt.](https://commons.wikimedia.org/wiki/File:M._(Monsieur)_Louis_Pasteur_in_his_Laboratory_-_DPLA_-_cf562a067828965f91bb71ee340cc921.jpg). Phạm vi công cộng. Bản thu nhỏ.

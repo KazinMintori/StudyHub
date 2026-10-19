@@ -33,6 +33,14 @@ Trong những điều kiện xác định, cái đơn nhất và cái chung có 
 
 Ý nghĩa phương pháp luận là đi từ các trường hợp cụ thể để nhận ra cái chung, rồi vận dụng cái chung có điều chỉnh vào từng trường hợp. Chỉ sao chép hình thức của một kinh nghiệm sẽ bỏ qua điều kiện khiến kinh nghiệm ấy có hiệu quả. Ngược lại, tuyệt đối hóa sự khác biệt sẽ khiến ta không nhận ra quy luật hoặc kinh nghiệm có thể vận dụng.
 
+## Chiếc cốc giống nhau và chiếc cốc không thể thay thế
+
+Hai chiếc cốc cùng kiểu có thể thay cho nhau khi ta cần đựng nước. Nhưng một chiếc được người thân tặng lại có ý nghĩa riêng đối với người giữ nó. Trong quan hệ sử dụng, những thuộc tính chung như cấu tạo và công dụng được đặt lên trước. Trong quan hệ tình cảm, lịch sử của chiếc cốc này trở thành yếu tố không thể thay nguyên bằng chiếc cùng mẫu.
+
+Điều ấy không làm cái chung biến mất hoặc khiến chiếc cốc tồn tại ngoài những quan hệ khách quan. Nó cho thấy một cái riêng luôn phong phú hơn một đặc điểm được trừu tượng hóa. Nói các cốc cùng loại có công dụng chung không đồng nghĩa chúng đồng nhất ở mọi phương diện.
+
+Nếu một chiếc cốc được làm đẹp hơn nhưng cầm khó hơn và dễ đổ hơn thì nên đánh giá ra sao? Không thể chỉ tách phần trang trí rồi gọi toàn bộ hình thức là tốt. Hình thức còn là cấu trúc và cách tổ chức giúp nội dung thực hiện chức năng. Cũng cần nói rõ đang xét đồ dùng hay vật trưng bày, bởi cùng một đặc điểm có thể phù hợp mục đích này mà chưa phù hợp mục đích khác.
+
 ## Nguyên nhân và kết quả
 
 **Nguyên nhân** là sự tác động lẫn nhau giữa các mặt trong một sự vật hoặc giữa các sự vật, làm nảy sinh biến đổi nhất định. **Kết quả** là biến đổi xuất hiện do sự tác động ấy. Nguyên nhân vì vậy cần được hiểu như một quá trình tác động, không chỉ như tên một đồ vật đứng trước đồ vật khác.
@@ -83,6 +91,16 @@ Hiện tượng có thể biểu hiện bản chất dưới hình thức dễ g
 
 Về phương pháp, phải thu thập và phân tích hiện tượng, phân biệt biểu hiện chủ yếu với thứ yếu, rồi tìm những quan hệ tương đối ổn định. Kết luận về bản chất phải tiếp tục được kiểm tra qua các biểu hiện và điều kiện mới. Không thể dùng một lời khẳng định trừu tượng để thay thế việc giải thích dữ kiện.
 
+## Cửa hàng vắng khách sau khi thay bảng hiệu
+
+Giả sử một cửa hàng thay bảng hiệu rồi lượng khách giảm. Hai sự kiện nối tiếp nhau khiến chủ cửa hàng nghĩ ngay bảng hiệu là nguyên nhân. Nhưng còn cần xem giá bán, giờ mở cửa, chất lượng phục vụ và những thay đổi xung quanh. Cái xảy ra trước là nơi nên khảo sát, chưa tự trở thành nguyên nhân đã được chứng minh.
+
+Một buổi vắng khách là hiện tượng có thật. Nó có thể biểu hiện một vấn đề bền vững của cửa hàng, nhưng cũng có thể chịu ảnh hưởng của một tình huống nhất thời. Muốn tìm bản chất phải xem nhiều biểu hiện và cơ chế liên hệ giữa chúng. Việc chỉ chọn những ngày thuận với lời giải thích ban đầu sẽ làm dữ kiện bị đặt dưới mong muốn.
+
+Trong quá trình khảo sát, những nguyên nhân và điều kiện không giữ vai trò giống nhau. Một đợt mưa có thể ảnh hưởng thời điểm khách đến, trong khi sự phục vụ thiếu ổn định có thể tiếp tục tác động khi thời tiết đã đổi. Không vì cần tìm yếu tố chủ yếu mà được phép bỏ qua điều kiện ngẫu nhiên, bởi nó vẫn có thể làm thay đổi kết quả của một giai đoạn.
+
+Nếu cửa hàng có đội ngũ biết nghề nhưng cách phối hợp còn kém, cải thiện phục vụ là một khả năng có căn cứ. Tuy nhiên, khả năng không đồng nghĩa kết quả đã hiện diện. Còn phải đổi cách phân công, thực hiện và theo dõi phản hồi. Nhìn rõ triển vọng mà không nhận ra những điều kiện cần tạo thêm dễ khiến chủ cửa hàng nhầm hy vọng với một kết quả đã được bảo đảm.
+
 ## Khả năng và hiện thực
 
 **Khả năng** là những tiền đề và xu hướng làm cho sự vật có thể hình thành khi có các điều kiện thích hợp. **Hiện thực** là những gì đang tồn tại, trong đó có kết quả của khả năng đã được thực hiện. Khả năng khách quan khác với bất cứ điều gì con người có thể tưởng tượng.
@@ -97,59 +115,332 @@ Trong hoạt động xã hội, con người có thể chủ động tạo đi�
 
 Các cặp phạm trù giúp phân biệt những mặt của đối tượng và quan hệ giữa chúng. Ba quy luật cơ bản sẽ tiếp tục làm rõ những quan hệ ấy khi xem xét động lực, cách thức và khuynh hướng của sự phát triển.
 
+
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-2/sau-cap-pham-tru.webp" alt="Các giai đoạn từ hạt đậu đến cây con." width="1086" height="900" loading="lazy" decoding="async" />
+  <figcaption>Hình 2.5: Các giai đoạn từ hạt đậu đến cây con.</figcaption>
+</figure>
+
+Hạt có khả năng nảy mầm nhưng không phải hạt nào cũng thực sự trở thành cây. Độ ẩm, nhiệt độ và tình trạng của phôi tham gia vào quá trình hiện thực hóa khả năng ấy. Khi phân tích một kết quả, cần tìm cả điều kiện bên trong lẫn bên ngoài. Chỉ nhìn vào hình cuối cùng sẽ che khuất những điều kiện đã giúp nó hình thành.
 </template>
 
 <template #exercises>
 
+<!-- workbook: WB2-MC32; PDF 48 -->
 
-<!-- Bài tập 2.11: II.II.8; tr.59; PDF60 -->
+::: exercise Bài 1
 
-::: exercise Bài 2.11. Cái chung và cái đơn nhất
+Giả sử Hà Nội là một cái riêng thì yếu tố nào sau đây là cái đơn nhất của nó?
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Cái chung và cái đơn nhất có thể chuyển hóa cho nhau.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: Đúng, trong những điều kiện xác định.
-
-Một đặc điểm mới ban đầu chỉ có ở một sự vật có thể lan rộng và trở thành cái chung. Ngược lại, một đặc điểm từng phổ biến có thể thu hẹp dần, chỉ còn ở một trường hợp trước khi mất đi.
+- A. Thủ đô nước CHXHCN Việt Nam.
+- B. Mật độ dân số cao.
+- C. Ô nhiễm không khí nghiêm trọng.
+- D. Lối sống đô thị.
 
 :::
 
-<!-- Bài tập 2.12: II.II.10; tr.59; PDF60 -->
+::: solution Giải thích
 
-::: exercise Bài 2.12. Bản chất và hiện tượng
+Đáp án: A.
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Hiện tượng nào, bản chất ấy.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: Sai.
-
-Không thể tuyệt đối hóa và xếp hai giai đoạn như hai yếu tố thay thế nhau. Bản chất biểu hiện qua hiện tượng, nhưng một bản chất có thể biểu hiện bằng nhiều hiện tượng khác nhau. Hoàn cảnh cụ thể còn có thể làm biểu hiện bị biến dạng. Cần xem xét nhiều biểu hiện và mối liên hệ để nhận ra bản chất.
+Trong phạm vi so sánh các đô thị Việt Nam của đề bài, tư cách thủ đô phân biệt Hà Nội với các đô thị khác. Các đặc điểm B, C và D có thể lặp lại ở nhiều đô thị nên không phải cái đơn nhất. Cái đơn nhất phải được xác định trong một phạm vi so sánh, không phải mọi thuộc tính của một đối tượng riêng đều là đơn nhất.
 
 :::
 
-<!-- Bài tập 2.13: II.II.11; tr.59; PDF60 -->
+<!-- workbook: WB2-MC33; PDF 48–49 -->
 
-::: exercise Bài 2.13. Tất nhiên và ngẫu nhiên trong hành động
+::: exercise Bài 2
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Trong nhận thức và hoạt động thực tiễn, chúng ta phải dựa vào cái tất nhiên chứ không dựa vào cái ngẫu nhiên để cải tạo sự vật.
+Phát biểu nào sau đây là đúng với quan niệm của triết học Mác - Lênin?
 
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: Sai.
-
-Mệnh đề loại bỏ vai trò của cái ngẫu nhiên. Cần dựa vào cái tất nhiên để xác định xu hướng, nhưng cái tất nhiên biểu hiện thông qua những cái ngẫu nhiên. Phải tính đến tình huống ngẫu nhiên, điều kiện và phương án dự phòng để hành động phù hợp.
+- A. Cái chung là cái bao trùm toàn bộ cái riêng.
+- B. Chỉ có cái chung tồn tại thực còn cái riêng không tồn tại.
+- C. Chỉ có cái riêng tồn tại thực còn cái chung chỉ là tên gọi trống rỗng.
+- D. Cái chung, cái riêng cùng tồn tại khách quan, giữa chúng có mối quan hệ hữu cơ.
 
 :::
 
+::: solution Giải thích
+
+Đáp án: D.
+
+Cái chung tồn tại trong cái riêng, thông qua cái riêng. Mỗi cái riêng còn có những đặc điểm đơn nhất nên không bị cái chung bao trùm hết như A. B và C tuyệt đối hóa một mặt rồi phủ nhận mặt còn lại.
+
+:::
+
+<!-- workbook: WB2-MC34; PDF 49 -->
+
+::: exercise Bài 3
+
+Vì sao trong nhận thức và hoạt động thực tiễn chúng ta phải phân tích, xem xét kỹ các nguyên nhân gây ra một kết quả nào đó?
+
+- A. Vì một kết quả do nhiều nguyên nhân sinh ra và các nguyên nhân ấy có vị trí, vai trò như nhau.
+- B. Vì mọi kết quả đều có một nguyên nhân nào đó sinh ra.
+- C. Vì một kết quả do nhiều nguyên nhân sinh ra và các nguyên nhân ấy có vị trí, vai trò khác nhau.
+- D. Vì một nguyên nhân sinh ra nhiều kết quả và các kết quả có vị trí, vai trò khác nhau.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Việc xác định nguyên nhân chủ yếu, thứ yếu, bên trong và bên ngoài giúp chọn đúng khâu tác động. A san bằng vai trò các nguyên nhân. B mới nêu nguyên tắc nhân quả chung, còn D chuyển sang nhiều kết quả của một nguyên nhân, chưa trả lời trực tiếp việc phân tích các nguyên nhân của kết quả đang xét.
+
+:::
+
+<!-- workbook: WB2-MC35; PDF 49 -->
+
+::: exercise Bài 4
+
+Vì sao trong nhận thức và hoạt động thực tiễn chúng ta không được phủ nhận mối quan hệ nhân - quả?
+
+- A. Vì mối liên hệ nhân - quả biểu hiện rất phức tạp.
+- B. Vì nguyên nhân và kết quả có sự chuyển hóa lẫn nhau.
+- C. Vì nguyên nhân là cái có trước, kết quả là cái có sau.
+- D. Vì mối liên hệ nhân - quả tồn tại khách quan.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Không thể dùng ý muốn để xóa bỏ một quan hệ tồn tại khách quan. Nhận thức và hành động phải tìm đúng cơ chế sinh ra kết quả. A, B và C mô tả những phương diện của quan hệ nhân quả, nhưng tính khách quan mới là căn cứ trực tiếp cho yêu cầu không phủ nhận nó. Riêng C không cho phép suy rằng mọi sự kiện xảy ra trước đều là nguyên nhân.
+
+:::
+
+<!-- workbook: WB2-MC36; PDF 49 -->
+
+::: exercise Bài 5
+
+Điền từ thích hợp vào chỗ trống (...) để có được một định nghĩa đúng: “Phạm trù tất nhiên dùng để chỉ cái do ... của kết cấu vật chất quyết định và trong những điều kiện nhất định, nó phải xảy ra như thế, không thể khác”.
+
+- A. Những nguyên nhân cơ bản, bên trong.
+- B. Những nguyên nhân bên ngoài.
+- C. Những nguyên nhân không cơ bản.
+- D. Những nguyên nhân thứ yếu.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: A.
+
+Tất nhiên gắn với những nguyên nhân cơ bản bên trong của đối tượng, xét trong các điều kiện xác định. Những điều kiện ấy không được lược bỏ khi vận dụng. B, C và D không diễn đạt căn cứ làm cho một quá trình nhất thiết xảy ra theo cách đang xét.
+
+:::
+
+<!-- workbook: WB2-MC37; PDF 49 -->
+
+::: exercise Bài 6
+
+Triết học Mác - Lênin cho rằng:
+
+- A. Cả tất nhiên và ngẫu nhiên đều có tính quy luật.
+- B. Ngẫu nhiên mang tính xác suất, chỉ có tất nhiên có tính quy luật.
+- C. Mọi thứ đều là tất nhiên, ngẫu nhiên là cái tất nhiên không có quy luật.
+- D. Tất nhiên và ngẫu nhiên đều không có tính quy luật.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: A.
+
+Ngẫu nhiên có nguyên nhân và tồn tại khách quan, không phải cái tùy tiện đứng ngoài mọi quan hệ. Tính quy luật ở đây phải hiểu theo nghĩa có thể khảo sát những quan hệ khách quan, trong đó có quy luật thống kê. Nó không biến từng sự kiện ngẫu nhiên thành điều bắt buộc phải xảy ra. B đối lập xác suất với quy luật như thể quy luật thống kê không tồn tại. C phủ nhận ngẫu nhiên, còn D phủ nhận tính quy luật của cả hai.
+
+:::
+
+<!-- workbook: WB2-MC38; PDF 50 -->
+
+::: exercise Bài 7
+
+Điền từ thích hợp vào chỗ trống (...) để có được một định nghĩa đúng: “Triết học Mác - Lênin dùng phạm trù ... để chỉ cách thức liên hệ, tổ chức, sắp xếp các phần tử, yếu tố, bộ phận cấu thành một đối tượng nhất định”.
+
+- A. Bản chất.
+- B. Hiện tượng.
+- C. Nội dung.
+- D. Hình thức.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Hình thức là phương thức tổ chức và hệ thống liên hệ tương đối bền vững giữa các yếu tố của nội dung. Nội dung chỉ tổng thể những mặt, yếu tố cấu thành. Bản chất chỉ những quan hệ tất nhiên tương đối ổn định bên trong, còn hiện tượng là sự biểu hiện của chúng. Hình thức không chỉ là vẻ trang trí bên ngoài.
+
+:::
+
+<!-- workbook: WB2-MC39; PDF 50 -->
+
+::: exercise Bài 8
+
+Vì sao trong nhận thức và hoạt động thực tiễn ta không được xem nhẹ hình thức?
+
+- A. Vì hình thức là yếu tố thường xuyên biến đổi.
+- B. Vì hình thức là yếu tố ổn định hơn nội dung.
+- C. Vì hình thức có tính độc lập tương đối đối với nội dung.
+- D. Vì hình thức quyết định nội dung.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Tính độc lập tương đối khiến hình thức có thể tác động trở lại, thúc đẩy hoặc cản trở nội dung tùy mức độ phù hợp. B mới nói một phương diện về độ ổn định, chưa chỉ rõ căn cứ của vai trò tác động. D đảo vai trò quyết định giữa nội dung với hình thức.
+
+:::
+
+<!-- workbook: WB2-MC40; PDF 50 -->
+
+::: exercise Bài 9
+
+Phạm trù nào được dùng để chỉ tổng thể các mối liên hệ khách quan, tất nhiên, tương đối ổn định bên trong, quy định sự vận động, phát triển của đối tượng và thể hiện mình qua các hiện tượng tương ứng của đối tượng?
+
+- A. Nội dung.
+- B. Hình thức.
+- C. Bản chất.
+- D. Hiện tượng.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Các dấu hiệu tất nhiên, tương đối ổn định bên trong và quy định vận động là nội dung của phạm trù bản chất. Hiện tượng là biểu hiện của bản chất trong điều kiện cụ thể. Nội dung và hình thức trả lời những câu hỏi khác về các yếu tố cấu thành và cách tổ chức chúng.
+
+:::
+
+<!-- workbook: WB2-MC41; PDF 50 -->
+
+::: exercise Bài 10
+
+Trong các hiện tượng sau đây, hiện tượng nào vi phạm nguyên tắc phương pháp luận được rút ra từ nội dung lý luận của mối quan hệ giữa hiện tượng và bản chất?
+
+- A. Không ngừng thu thập và tổng kết các hiện tượng.
+- B. Đề cao kinh nghiệm, tuyệt đối hóa vai trò của kinh nghiệm.
+- C. Phát triển khoa học để tìm ra bản chất của sự vật, hiện tượng.
+- D. Căn cứ vào cái bản chất để cải tạo hiện thực.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: B.
+
+Kinh nghiệm là điểm xuất phát cần thiết nhưng tuyệt đối hóa nó sẽ dừng ở những biểu hiện đã gặp, không đi sâu tìm cơ chế và quan hệ bản chất. A và C góp phần thực hiện quá trình ấy. D đúng khi bản chất đã được nhận thức có căn cứ và được vận dụng trong điều kiện phù hợp.
+
+:::
+
+<!-- workbook: WB2-MC42; PDF 50 -->
+
+::: exercise Bài 11
+
+Nhận định nào dưới đây là đúng?
+
+- A. Trong hoạt động thực tiễn chỉ cần dựa vào khả năng để xác định chủ trương, phương hướng, mục đích hành động của mình.
+- B. Trong hoạt động thực tiễn chỉ cần dựa vào hiện thực, không cần tính đến khả năng để xác định chủ trương, phương hướng, mục đích hành động của mình.
+- C. Trong hoạt động thực tiễn cần dựa vào hiện thực và cũng phải tính đến các khả năng để xác định chủ trương, phương hướng, mục đích hành động của mình.
+- D. Trong hoạt động thực tiễn không cần dựa vào hiện thực, mà chỉ cần dựa theo suy nghĩ chủ quan của bản thân để xác định chủ trương, phương hướng, mục đích hành động.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Hiện thực cung cấp những điều kiện và giới hạn đang có. Những khả năng có căn cứ cho biết các hướng biến đổi và điều kiện cần tạo thêm. A tách khả năng khỏi nền tảng hiện thực, B bỏ qua triển vọng phát triển, còn D thay khảo sát khách quan bằng mong muốn chủ quan.
+
+:::
+
+<!-- workbook: WB2-MC43; PDF 50–51 -->
+
+::: exercise Bài 12
+
+Việc áp dụng một cách dập khuôn cách học của người này cho người khác là vi phạm nguyên tắc phương pháp luận của cặp phạm trù nào sau đây?
+
+- A. Nguyên nhân và kết quả.
+- B. Bản chất và hiện tượng.
+- C. Cái chung và cái riêng.
+- D. Khả năng và hiện thực.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Kinh nghiệm có thể chứa yếu tố chung đáng học, nhưng mỗi người có nền tảng, mục tiêu và điều kiện riêng. Vận dụng cái chung phải cụ thể hóa theo cái riêng, thay vì sao chép toàn bộ hình thức. Điều ấy cũng không có nghĩa mọi kinh nghiệm đều không thể chia sẻ.
+
+:::
+
+<!-- workbook: WB2-TF08; PDF 60 -->
+
+::: exercise Bài 13
+
+Xác định đúng hoặc sai và giải thích: Cái chung và cái đơn nhất có thể chuyển hóa cho nhau.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Trong những điều kiện xác định, một đặc điểm ban đầu chỉ có ở một trường hợp có thể được tiếp nhận và trở nên phổ biến. Một đặc điểm từng phổ biến cũng có thể thu hẹp, chỉ còn ở một trường hợp trước khi mất đi. Sự chuyển hóa liên quan các đặc điểm trong những cái riêng, không phải cái chung tồn tại như một vật thể riêng rồi tự biến hình.
+
+:::
+
+<!-- workbook: WB2-TF09; PDF 60 -->
+
+::: exercise Bài 14
+
+Xác định đúng hoặc sai và giải thích: Thế giới này được tạo thành bởi một chuỗi các quan hệ nhân quả.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Có thể chấp nhận nếu “chuỗi” được hiểu là những quan hệ nhân quả liên hệ và chuyển hóa không ngừng, không phải thế giới chỉ là một hàng đơn tuyến. Một kết quả có thể do nhiều nguyên nhân, đồng thời trở thành nguyên nhân trong quan hệ tiếp theo. Không được suy rằng mỗi hiện tượng chỉ có một nguyên nhân duy nhất hoặc rằng mọi sự kiện nối tiếp nhau đều có quan hệ nhân quả trực tiếp.
+
+:::
+
+<!-- workbook: WB2-TF10; PDF 60 -->
+
+::: exercise Bài 15
+
+Xác định đúng hoặc sai và giải thích: Hiện tượng nào, bản chất ấy.
+
+:::
+
+::: solution Giải thích
+
+Câu quá ngắn nên có hai cách hiểu cần phân biệt. Nếu nói hiện tượng là biểu hiện của một bản chất xác định thì có cơ sở. Nếu suy mỗi biểu hiện đơn lẻ bộc lộ trực tiếp, đầy đủ và duy nhất bản chất thì sai. Một bản chất có thể biểu hiện qua nhiều hiện tượng, còn hiện tượng chịu tác động của điều kiện và có thể làm ta hiểu sai. Phát biểu chặt hơn là: Bản chất biểu hiện qua hiện tượng, nhưng phải khảo sát nhiều biểu hiện trong quan hệ cụ thể mới nhận thức được bản chất.
+
+:::
+
+<!-- workbook: WB2-TF11; PDF 60 -->
+
+::: exercise Bài 16
+
+Xác định đúng hoặc sai và giải thích: Trong nhận thức và hoạt động thực tiễn, chúng ta phải dựa vào cái tất nhiên chứ không dựa vào cái ngẫu nhiên để cải tạo sự vật.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Đúng khi nói về cơ sở chủ yếu để xác định phương hướng hành động: Cần tìm những quan hệ tất nhiên thay vì trông chờ may rủi. Không được hiểu câu này là bỏ qua mọi ngẫu nhiên. Tất nhiên biểu hiện thông qua ngẫu nhiên, còn sự cố ngẫu nhiên có thể làm đổi nhịp độ hoặc tiến trình. Vì vậy vẫn phải dự phòng và theo dõi những điều kiện cụ thể.
+
+:::
 
 </template>
 
@@ -159,3 +450,4 @@ Mệnh đề loại bỏ vai trò của cái ngẫu nhiên. Cần dựa vào cá
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 2, tr. 61–143.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 2, phần Bài tập.
+3. HudsonFlagg. [Các giai đoạn từ hạt đậu đến cây con.](https://commons.wikimedia.org/wiki/File:Sequential_Steps_of_Bean_Seedling_Germination.svg). [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en). Bản thu nhỏ.

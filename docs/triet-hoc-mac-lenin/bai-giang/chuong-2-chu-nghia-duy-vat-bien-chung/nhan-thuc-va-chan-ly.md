@@ -43,6 +43,23 @@ Con đường nhận thức được khái quát từ trực quan sinh động �
 
 Chẳng hạn, từ các biểu hiện cây héo, người chăm cây hình thành giả thuyết về điều kiện sống. Họ đối chiếu thêm dấu hiệu, điều chỉnh điều kiện thích hợp và theo dõi kết quả. Tri thức mới được hình thành qua cả quan sát, suy luận và hoạt động thực, không phải chỉ từ một cảm giác riêng lẻ.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-2/nhan-thuc-va-chan-ly.webp" alt="Bản phục dựng kính thiên văn thời Galileo tại Đài thiên văn Griffith." width="1100" height="825" loading="lazy" decoding="async" />
+  <figcaption>Hình 2.8: Bản phục dựng kính thiên văn thời Galileo tại Đài thiên văn Griffith.</figcaption>
+</figure>
+
+Dụng cụ mở rộng những gì giác quan có thể tiếp cận, nhưng hình ảnh nhìn thấy vẫn cần được giải thích. Người quan sát phải phân biệt đặc điểm của đối tượng với sai lệch do thiết bị và điều kiện quan sát. Vì vậy, nhận thức khách quan không đòi hỏi con người hoàn toàn không có trung gian. Nó đòi hỏi hiểu và kiểm soát những trung gian đang tham gia vào việc nhận biết.
+
+## Chùm chìa khóa ở đâu trong trí nhớ
+
+Một người nhớ đã nhìn thấy chìa khóa trên bàn buổi sáng và nói chắc rằng hiện giờ nó vẫn ở đó. Hình ảnh được nhớ lại có thể rất rõ, nhưng độ rõ của biểu tượng không bảo đảm trạng thái hiện tại của đối tượng. Trong lúc người ấy vắng nhà, chìa khóa có thể đã được chuyển chỗ.
+
+Ở đây, cảm giác và tri giác ban đầu cung cấp tài liệu về vị trí chìa khóa trong một thời điểm. Biểu tượng tái hiện tài liệu ấy khi đối tượng không còn trước mắt. Phán đoán “chìa khóa hiện vẫn ở trên bàn” lại thêm một nội dung khác: Vị trí không đổi trong khoảng thời gian đã qua. Nội dung thêm ấy cần căn cứ, không tự có chỉ vì ký ức sinh động.
+
+Sự suy nghĩ có thể giúp tìm nơi nên xem trước, chẳng hạn nhớ lại công việc đã làm sau khi cất chìa khóa. Tuy nhiên, một suy luận mạch lạc vẫn phải đối chiếu với đối tượng và những thông tin mới. Việc tìm lại không chỉ minh họa quan hệ cảm tính với lý tính mà còn cho thấy mỗi kết luận phải giữ đúng thời điểm và điều kiện mà tài liệu cho phép.
+
 ## Nhận thức kinh nghiệm và nhận thức lý luận
 
 Phân chia cảm tính và lý tính xét những hình thức, giai đoạn phản ánh của nhận thức. Phân chia kinh nghiệm và lý luận lại chú ý trình độ cùng cách hình thành tri thức. Hai cách phân chia có liên hệ, nhưng không nên đồng nhất từng cặp thuật ngữ như những tên gọi thay thế hoàn toàn.
@@ -77,6 +94,16 @@ Sự kiểm tra cần dựa vào thực tiễn trong tính lịch sử và phát
 
 Thái độ khoa học kết hợp sự kiên định với nội dung đã có căn cứ và sự sẵn sàng sửa nhận thức. Kiên định không phải giữ mọi cách diễn đạt cũ. Sẵn sàng sửa cũng không phải phủ nhận sạch những kết quả đã được kiểm nghiệm. Hai yêu cầu giúp hiểu tri thức như một quá trình tiến sâu vào hiện thực.
 
+## Hai con đường và một lời khuyên đi lại
+
+Giả sử một người khuyên đi theo con đường quen vì hôm trước họ đến nơi thuận lợi. Lời khuyên có thể có căn cứ trong trải nghiệm ấy, nhưng muốn khẳng định nó vẫn phù hợp hôm nay còn cần biết giờ đi, phương tiện và điều kiện đường sá. Một nhận định đúng trong hoàn cảnh cũ có thể bị dùng sai khi những điều kiện gắn với nó đã thay đổi.
+
+Nếu phát hiện con đường hôm nay bị chặn, ta không cần phủ nhận rằng hôm trước người kia đã đi thành công. Cần sửa phạm vi của lời khuyên và tìm thông tin phù hợp hiện tại. Tri thức phát triển có thể giữ một phần đúng đồng thời bác bỏ sự khái quát quá rộng từ phần đúng ấy.
+
+Cũng không thể vì điều kiện có thể đổi mà nói mọi lời chỉ đường đều đúng theo cách riêng. Có những sự kiện khách quan có thể khảo sát như đường có thông hay không và phương tiện có đi qua được hay không. Sự thận trọng về giới hạn khác với thái độ coi mọi nhận định đều có giá trị ngang nhau.
+
+Khi nghe một lời khẳng định rất chắc chắn, ta có thể dừng lại ở việc nó được nói rõ ràng đến đâu, hoặc đi xa hơn để nhận ra điều gì làm nó đúng. Đối tượng, điều kiện và cách kiểm tra chính là những điểm tựa cho bước đi xa hơn ấy. Sự sẵn sàng sửa một nhận định có căn cứ mới không làm suy yếu việc tìm chân lý, mà giữ cho việc tìm kiếm còn gắn với hiện thực.
+
 ## Chân lý tương đối, tuyệt đối và tính cụ thể
 
 **Chân lý tương đối** là tri thức đúng nhưng chưa đầy đủ, phản ánh một mặt hoặc một phạm vi của hiện thực trong những điều kiện xác định. “Tương đối” không có nghĩa sai hoặc đúng tùy ý mỗi người. Nó nêu giới hạn lịch sử và mức độ hoàn chỉnh của tri thức.
@@ -93,39 +120,142 @@ Nhấn mạnh tính tuyệt đối đến mức xem hiểu biết hiện có là
 
 <template #exercises>
 
+<!-- workbook: WB2-MC69; PDF 56 -->
 
-<!-- Bài tập 2.20: II.II.19; tr.61; PDF62 -->
+::: exercise Bài 1
 
-::: exercise Bài 2.20. Hai giai đoạn của nhận thức
+Luận điểm sau đây là của nhà triết học nào (1) và được viết trong tác phẩm nào (2): “Từ trực quan sinh động đến tư duy trừu tượng và từ tư duy trừu tượng đến thực tiễn, đó là con đường biện chứng của sự nhận thức chân lý, nhận thức thực tại khách quan”.
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Nhận thức lý tính quan trọng hơn nhận thức cảm tính.
+- A. (1) C. Mác, (2) Luận cương về Phoiơbắc.
+- B. (1) V.I. Lênin, (2) Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán.
+- C. (1) Ph. Ăngghen, (2) Biện chứng của tự nhiên.
+- D. (1) V.I. Lênin, (2) Bút ký triết học.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution Giải thích
+
+Đáp án: D.
+
+Luận điểm nêu sự vận động từ tài liệu cảm tính đến khái quát lý tính rồi trở về thực tiễn để kiểm tra và vận dụng. Tác giả là V.I. Lênin và tác phẩm là Bút ký triết học. B đúng tác giả nhưng sai tác phẩm. A và C đều không khớp cặp tác giả với tác phẩm được hỏi.
+
+:::
+
+<!-- workbook: WB2-MC70; PDF 56 -->
+
+::: exercise Bài 2
+
+Giai đoạn nhận thức diễn ra trên cơ sở sự tác động trực tiếp của các sự vật lên các giác quan của con người là giai đoạn nhận thức nào?
+
+- A. Nhận thức lý tính.
+- B. Nhận thức lý luận.
+- C. Nhận thức cảm tính.
+- D. Nhận thức khoa học.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Nhận thức cảm tính gồm cảm giác, tri giác và biểu tượng, gắn với những tài liệu cảm giác có được từ tiếp xúc với đối tượng. Biểu tượng có thể tái hiện đối tượng khi nó không còn trực tiếp hiện diện. A và B gắn với khái quát, còn D phân biệt theo tính chất và trình độ nghiên cứu, không phải tên giai đoạn cảm tính.
+
+:::
+
+<!-- workbook: WB2-MC71; PDF 56–57 -->
+
+::: exercise Bài 3
+
+Luận điểm sau đây thuộc lập trường triết học nào: “Cảm giác là hình ảnh chủ quan về thế giới khách quan”.
+
+- A. Chủ nghĩa duy tâm chủ quan.
+- B. Chủ nghĩa duy tâm khách quan.
+- C. Thuyết nhị nguyên.
+- D. Chủ nghĩa duy vật biện chứng.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: D.
+
+Luận điểm thừa nhận đối tượng tồn tại khách quan và cảm giác là hình ảnh của đối tượng ở chủ thể. “Chủ quan” không có nghĩa đối tượng do chủ thể sáng tạo ra. Hai hình thức duy tâm đều không giữ cách giải quyết duy vật này, còn nhị nguyên tách vật chất và tinh thần thành hai nguồn gốc độc lập.
+
+:::
+
+<!-- workbook: WB2-MC72; PDF 57 -->
+
+::: exercise Bài 4
+
+Nhận thức lý tính được thực hiện dưới những hình thức nào?
+
+- A. Cảm giác, tri giác và biểu tượng.
+- B. Cảm giác, khái niệm, suy luận.
+- C. Khái niệm, phán đoán, suy luận.
+- D. Tri giác, biểu tượng, khái niệm.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Khái niệm khái quát thuộc tính chung, bản chất. Phán đoán khẳng định hoặc phủ định một quan hệ, còn suy luận rút tri thức mới từ những phán đoán theo quan hệ xác định. A gồm các hình thức cảm tính. B và D trộn hình thức của hai giai đoạn.
+
+:::
+
+<!-- workbook: WB2-MC77; PDF 58 -->
+
+::: exercise Bài 5
+
+Lựa chọn phát biểu đúng:
+
+- A. Thực tiễn là tiêu chuẩn của chân lý hoàn toàn có tính chất tuyệt đối.
+- B. Thực tiễn là tiêu chuẩn của chân lý hoàn toàn có tính chất tương đối.
+- C. Thực tiễn là tiêu chuẩn của chân lý vừa có tính chất tuyệt đối, vừa có tính chất tương đối.
+- D. Thực tiễn không phải là tiêu chuẩn khách quan để kiểm tra chân lý.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Tính tuyệt đối thể hiện ở vai trò tiêu chuẩn khách quan của thực tiễn, không thể thay bằng mong muốn hay sự tán thành chủ quan. Tính tương đối thể hiện ở giới hạn lịch sử của mỗi trình độ thực tiễn, bởi một lần kiểm nghiệm không giải quyết mọi mặt của đối tượng. A và B tuyệt đối hóa một phương diện, còn D phủ nhận vai trò tiêu chuẩn.
+
+:::
+
+<!-- workbook: WB2-TF19; PDF 62 -->
+
+::: exercise Bài 6
+
+Xác định đúng hoặc sai và giải thích: Nhận thức lý tính quan trọng hơn nhận thức cảm tính.
+
+:::
+
+::: solution Giải thích
 
 Đáp án: Sai.
 
-Không thể tuyệt đối hóa và xếp hai giai đoạn như hai yếu tố thay thế nhau. Nhận thức cảm tính cung cấp tài liệu trực tiếp. Nhận thức lý tính khái quát bản chất và quy luật, đồng thời định hướng việc quan sát. Hai giai đoạn cần nhau và đều phải gắn với thực tiễn.
+Không thể xếp hạng tuyệt đối hai giai đoạn như những yếu tố thay thế được cho nhau. Cảm tính cung cấp tài liệu trực tiếp, còn lý tính khái quát những thuộc tính và quan hệ bản chất, đồng thời định hướng quan sát. Lý tính thiếu tài liệu cảm tính và sự kiểm tra thực tiễn có thể thành suy diễn rỗng, còn cảm tính không được khái quát có thể dừng ở biểu hiện bề ngoài.
 
 :::
 
-<!-- Bài tập 2.21: II.II.20; tr.61; PDF62 -->
+<!-- workbook: WB2-TF20; PDF 62 -->
 
-::: exercise Bài 2.21. Các tính chất của chân lý
+::: exercise Bài 7
 
-Xác định đúng hoặc sai và giải thích ngắn gọn: Chân lý có tính tương đối, tính tuyệt đối, tính cụ thể.
+Xác định đúng hoặc sai và giải thích: Chân lý có tính tương đối, tính tuyệt đối, tính cụ thể.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution Giải thích
 
 Đáp án: Đúng.
 
-Cần hiểu các tính chất trong sự thống nhất và bổ sung tính khách quan. Tính tương đối phản ánh giới hạn lịch sử của tri thức. Tính tuyệt đối chỉ nội dung đúng không bị bác bỏ trong phạm vi xác định. Tính cụ thể đòi hỏi nêu điều kiện, đối tượng và quan hệ áp dụng. Không thể suy ra rằng chân lý tùy thuộc sở thích cá nhân.
+Ba tính chất được nêu đều đúng, nhưng chưa phải danh sách đầy đủ vì còn tính khách quan. Tương đối nói về giới hạn lịch sử của hiểu biết. Tuyệt đối nói về nội dung đúng khách quan được giữ lại trong sự phát triển tri thức. Cụ thể đòi hỏi gắn nhận định với đối tượng và điều kiện áp dụng. Không được suy từ tính tương đối rằng chân lý tùy sở thích cá nhân.
 
 :::
-
 
 </template>
 
@@ -135,3 +265,4 @@ Cần hiểu các tính chất trong sự thống nhất và bổ sung tính kh�
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 2, tr. 61–143.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 2, phần Bài tập.
+3. Michael Dunn. [Bản phục dựng kính thiên văn thời Galileo tại Đài thiên văn Griffith.](https://commons.wikimedia.org/wiki/File:Galileo_telescope_replica.jpg). [CC BY 2.5](https://creativecommons.org/licenses/by/2.5). Bản thu nhỏ.

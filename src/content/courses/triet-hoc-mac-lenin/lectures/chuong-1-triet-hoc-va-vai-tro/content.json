@@ -33,116 +33,467 @@
   "exercises": [
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
-      "line": 87,
-      "title": "Bài 1.1. Nguồn gốc của triết học"
+      "line": 113,
+      "title": "Bài 1"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
-      "line": 108,
-      "title": "Bài 1.2. Ý nghĩa của triết học trong truyền thống Hy Lạp"
+      "line": 134,
+      "title": "Bài 2"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 155,
+      "title": "Bài 3"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 176,
+      "title": "Bài 4"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 197,
+      "title": "Bài 5"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 218,
+      "title": "Bài 6"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
-      "line": 96,
-      "title": "Bài 1.3. Mặt thứ nhất của vấn đề cơ bản"
+      "line": 122,
+      "title": "Bài 1"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 143,
+      "title": "Bài 2"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 164,
+      "title": "Bài 3"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 185,
+      "title": "Bài 4"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 206,
+      "title": "Bài 5"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 227,
+      "title": "Bài 6"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 248,
+      "title": "Bài 7"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 269,
+      "title": "Bài 8"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 290,
+      "title": "Bài 9"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 311,
+      "title": "Bài 10"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 332,
+      "title": "Bài 11"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 353,
+      "title": "Bài 12"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 374,
+      "title": "Bài 13"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 395,
+      "title": "Bài 14"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 118,
+      "title": "Bài 1"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 139,
+      "title": "Bài 2"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 160,
+      "title": "Bài 3"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 129,
+      "title": "Bài 1"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 150,
+      "title": "Bài 2"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 171,
+      "title": "Bài 3"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 192,
+      "title": "Bài 4"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 213,
+      "title": "Bài 5"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 234,
+      "title": "Bài 6"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 255,
+      "title": "Bài 7"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 276,
+      "title": "Bài 8"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 297,
+      "title": "Bài 9"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 318,
+      "title": "Bài 10"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 339,
+      "title": "Bài 11"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 360,
+      "title": "Bài 12"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 380,
+      "title": "Bài 13"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 400,
+      "title": "Bài 14"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
       "line": 117,
-      "title": "Bài 1.4. Mặt thứ hai của vấn đề cơ bản"
+      "title": "Bài 1"
     },
     {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
       "line": 138,
-      "title": "Bài 1.5. Hai mặt của vấn đề cơ bản"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
-      "line": 92,
-      "title": "Bài 1.6. Nhận diện phương pháp biện chứng"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
-      "line": 113,
-      "title": "Bài 1.7. Các hình thức lịch sử của phép biện chứng"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
-      "line": 103,
-      "title": "Bài 1.8. Kế thừa và cải tạo tư tưởng"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
-      "line": 119,
-      "title": "Bài 1.9. Điều kiện lịch sử và bước chuyển trong triết học"
+      "title": "Bài 2"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
-      "line": 91,
-      "title": "Bài 1.10. Hai chức năng cơ bản"
+      "line": 159,
+      "title": "Bài 3"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
-      "line": 112,
-      "title": "Bài 1.11. Phạm vi của phương pháp luận"
+      "line": 180,
+      "title": "Bài 4"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 200,
+      "title": "Bài 5"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 220,
+      "title": "Bài 6"
     }
   ],
   "solutions": [
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
-      "line": 98,
-      "title": "Lời giải: Đáp án và giải thích"
+      "line": 124,
+      "title": "Giải thích"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
-      "line": 119,
-      "title": "Lời giải: Đáp án và giải thích"
+      "line": 145,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 166,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 187,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 208,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 229,
+      "title": "Giải thích"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
-      "line": 107,
-      "title": "Lời giải: Đáp án và giải thích"
+      "line": 133,
+      "title": "Giải thích"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 154,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 175,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 196,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 217,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 238,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 259,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 280,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 301,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 322,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 343,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 364,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 385,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 401,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 129,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 150,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 166,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 140,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 161,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 182,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 203,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 224,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 245,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 266,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 287,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 308,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 329,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 350,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 368,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 388,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 406,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
       "line": 128,
-      "title": "Lời giải: Đáp án và giải thích"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
-      "line": 144,
-      "title": "Lời giải: Đáp án và giải thích"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
-      "line": 103,
-      "title": "Lời giải: Đáp án và giải thích"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
-      "line": 119,
-      "title": "Lời giải: Đáp án và giải thích"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
-      "line": 109,
-      "title": "Lời giải: Đáp án và giải thích"
-    },
-    {
-      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
-      "line": 125,
-      "title": "Lời giải: Đáp án và giải thích"
+      "title": "Giải thích"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
-      "line": 102,
-      "title": "Lời giải: Đáp án và giải thích"
+      "line": 149,
+      "title": "Giải thích"
     },
     {
       "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
-      "line": 123,
-      "title": "Lời giải: Đáp án và giải thích"
+      "line": 170,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 188,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 208,
+      "title": "Giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 228,
+      "title": "Giải thích"
     }
   ],
-  "assets": []
+  "assets": [
+    {
+      "reference": "../img/chuong-1/nguon-goc-triet-hoc.webp",
+      "declaredIn": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 31,
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/img/chuong-1/nguon-goc-triet-hoc.webp"
+    },
+    {
+      "reference": "../img/chuong-1/van-de-co-ban.webp",
+      "declaredIn": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 54,
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/img/chuong-1/van-de-co-ban.webp"
+    },
+    {
+      "reference": "../img/chuong-1/bien-chung-va-sieu-hinh.webp",
+      "declaredIn": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 38,
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/img/chuong-1/bien-chung-va-sieu-hinh.webp"
+    },
+    {
+      "reference": "../img/chuong-1/su-hinh-thanh-va-phat-trien.webp",
+      "declaredIn": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 31,
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/img/chuong-1/su-hinh-thanh-va-phat-trien.webp"
+    },
+    {
+      "reference": "../img/chuong-1/doi-tuong-chuc-nang-vai-tro.webp",
+      "declaredIn": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 73,
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/img/chuong-1/doi-tuong-chuc-nang-vai-tro.webp"
+    }
+  ]
 }

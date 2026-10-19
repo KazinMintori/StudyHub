@@ -67,11 +67,38 @@ Kết quả còn phải được đặt trong giới hạn của dữ liệu. M�
 
 Quan hệ này có chiều ngược lại. Những khó khăn và phát hiện của khoa học làm nảy sinh vấn đề mới đối với triết học. Triết học khái quát từ thành tựu của các ngành, đồng thời phải điều chỉnh cách hiểu khi tri thức phát triển. Vì vậy, quan hệ giữa triết học với khoa học không phải sự chỉ đạo một chiều từ những kết luận bất biến.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-1/doi-tuong-chuc-nang-vai-tro.webp" alt="Bản đồ các ca tử vong do dịch tả tại London năm 1854 do John Snow lập." width="959" height="900" loading="lazy" decoding="async" />
+  <figcaption>Hình 1.5: Bản đồ các ca tử vong do dịch tả tại London năm 1854 do John Snow lập.</figcaption>
+</figure>
+
+Những vạch đen được đặt vào vị trí cụ thể trên đường phố, nhờ đó việc xem xét quan hệ có một đối tượng kiểm tra. Tuy vậy, một cụm điểm trên bản đồ chưa tự chứng minh quan hệ nhân quả. Muốn đi tới kết luận còn cần đối chiếu điều kiện cấp nước và những chứng cứ khác. Phương pháp luận định hướng câu hỏi, còn nghiên cứu chuyên môn phải làm rõ câu trả lời.
+
 ## Quan hệ giữa tính khoa học, lập trường xã hội và thực tiễn
 
 Triết học Mác – Lênin gắn việc giải thích những quy luật khách quan với lập trường của giai cấp công nhân và mục tiêu cải biến các quan hệ xã hội. Trong cách tiếp cận này, tính khoa học và tính cách mạng được đặt trong quan hệ thống nhất. Muốn cải biến có hiệu quả phải nhận thức điều kiện thật, còn nhận thức xã hội cần chú ý con người và những quan hệ lợi ích hiện thực.
 
 Sự thống nhất ấy là yêu cầu phải thực hiện trong nghiên cứu và hành động. Nó không có nghĩa mọi phát biểu được đưa ra nhân danh học thuyết đều tự động đúng. Một kết luận cụ thể cần căn cứ, còn việc vận dụng phải được xem xét qua kết quả và những điều kiện thực hiện.
+
+## Một cuộc họp không trở nên dân chủ chỉ vì có nhiều người
+
+Giả sử một tổ dân cư mời mọi người dự họp nhưng chỉ đưa ra một phương án đã quyết định sẵn. Số người có mặt cho biết quy mô tham dự, chưa đủ cho biết họ có thể trao đổi và tác động đến quyết định đến đâu. Muốn đánh giá sự tham gia, phải xem thông tin được cung cấp, cách tiếp nhận ý kiến và quyền quyết định thực tế.
+
+Nguyên tắc xem xét toàn diện gợi ta nhìn cả hình thức tổ chức lẫn quan hệ đang diễn ra bên trong. Tuy nhiên, nó không tự quy định một thủ tục họp phù hợp cho mọi nơi. Các thành viên còn cần hiểu công việc chung, điều kiện địa phương và cách tổ chức trao đổi. Một yêu cầu triết học chỉ thành tác dụng thực khi đi vào những thao tác có thể thực hiện.
+
+Mục tiêu vì con người cũng cần được đánh giá theo cách ấy. Nói đến lợi ích chung chưa đủ nếu những người chịu tác động không có điều kiện bày tỏ nhu cầu. Mặt khác, có nhiều ý kiến chưa bảo đảm mọi ý kiến đều đúng. Việc lắng nghe phải gắn với lý lẽ, thông tin và trách nhiệm về hệ quả của quyết định.
+
+## Một lần không đạt kết quả và cách hiểu về bản thân
+
+Sau một lần xin việc không thành công, một người có thể cho rằng mình hoàn toàn không có năng lực. Người khác lại kết luận tất cả đều do hoàn cảnh nên không cần thay đổi điều gì. Cả hai cách hiểu đều đóng việc tìm nguyên nhân trước khi những điều kiện cụ thể được xem xét.
+
+Ứng viên cần phân biệt kỹ năng đang có, yêu cầu của vị trí, cách chuẩn bị hồ sơ và những điều kiện ngoài tầm kiểm soát. Có phần cần rèn luyện, có phần cần tìm thông tin, cũng có phần chỉ có thể chấp nhận hoặc lựa chọn một môi trường khác. Tôn trọng khách quan không dẫn đến phó mặc, vì chính việc nhận đúng điều kiện mới xác định được phần việc có thể làm.
+
+Thế giới quan tác động ở cách người ấy hiểu quan hệ giữa mình với hoàn cảnh. Phương pháp luận tác động ở cách phân tích nguyên nhân và lựa chọn hành động. Nhưng để cải thiện kỹ năng hoặc hồ sơ, họ vẫn cần kiến thức nghề nghiệp và phản hồi cụ thể. Một nguyên lý chung không thể viết thay một bản hồ sơ phù hợp.
+
+Giá trị của lý luận có khi thể hiện trong việc giúp ta chậm lại trước một kết luận dễ dãi về người khác hoặc về bản thân. Nếu một cách giải thích làm ta yên tâm nhưng ngăn ta tìm hiểu thêm, sự yên tâm ấy có phải là dấu hiệu của hiểu biết không?
 
 ## Ý nghĩa đối với đời sống và công cuộc đổi mới
 
@@ -85,49 +112,128 @@ Nhìn theo mạch toàn môn, chương này xác lập những câu hỏi và ph
 
 <template #exercises>
 
+<!-- workbook: WB1-MC32; PDF 17 -->
 
-<!-- Bài tập 1.10: I.I.34; tr.16; PDF17 -->
+::: exercise Bài 1
 
-::: exercise Bài 1.10. Hai chức năng cơ bản
+Đâu KHÔNG phải là giá trị khoa học của chủ nghĩa Mác - Lênin?
 
-Chức năng của triết học Mác – Lênin là:
-
-- a. Chức năng chú giải văn bản.
-- b. Chức năng làm sáng tỏ cấu trúc ngôn ngữ.
-- c. Chức năng khoa học của các khoa học.
-- d. Chức năng thế giới quan và phương pháp luận.
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Đáp án: D. Chức năng thế giới quan và phương pháp luận.
-
-Thế giới quan định hướng cách nhìn thế giới và vị trí con người. Phương pháp luận định hướng những nguyên tắc chung của nhận thức và hoạt động.
+- A. Thế giới quan duy vật biện chứng và phương pháp luận biện chứng duy vật.
+- B. Giá trị phê phán đối với chủ nghĩa tư bản; thức tỉnh tinh thần nhân văn, đấu tranh giải phóng phát triển con người và xã hội.
+- C. Giá trị dự báo khoa học và gợi mở lý luận cho các mô hình thực tiễn xã hội chủ nghĩa.
+- D. Đặt nền móng cho sự ra đời của triết học phương Tây hiện đại.
 
 :::
 
-<!-- Bài tập 1.11: I.I.35; tr.16–17; PDF17–18 -->
+::: solution Giải thích
 
-::: exercise Bài 1.11. Phạm vi của phương pháp luận
+Đáp án: D.
 
-Chức năng phương pháp luận của triết học Mác – Lênin được hiểu là gì?
-
-- a. Là phương pháp tối ưu, vạn năng để nhận thức thế giới.
-- b. Cung cấp những nguyên tắc chung nhất để định hướng hoạt động nhận thức và thực tiễn.
-- c. Thay thế các phương pháp nghiên cứu trong các khoa học cụ thể.
-- d. Là lý luận về phương pháp của các khoa học.
+D quy sự hình thành toàn bộ triết học phương Tây hiện đại về một nguồn duy nhất nên không phù hợp. Các hướng triết học hiện đại có nhiều tiền đề và quá trình phát triển khác nhau. A, B và C nêu những giá trị được học phần xem xét, nhưng giá trị dự báo không có nghĩa mọi dự báo hoặc mọi cách vận dụng đều mặc nhiên đúng.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+<!-- workbook: WB1-MC34; PDF 17 -->
 
-Đáp án: B. Cung cấp những nguyên tắc chung nhất để định hướng hoạt động nhận thức và thực tiễn.
+::: exercise Bài 2
 
-Các nguyên tắc chung cần được cụ thể hóa theo đối tượng nghiên cứu. Chúng không thay thế thí nghiệm, điều tra, phân tích dữ liệu hay phương pháp chuyên ngành.
+Chức năng của triết học Mác - Lênin là:
+
+- A. Chức năng chú giải văn bản.
+- B. Chức năng làm sáng tỏ cấu trúc ngôn ngữ.
+- C. Chức năng khoa học của các khoa học.
+- D. Chức năng thế giới quan và phương pháp luận.
 
 :::
 
+::: solution Giải thích
+
+Đáp án: D.
+
+Thế giới quan định hướng cách hiểu thế giới và vị trí con người. Phương pháp luận định hướng những nguyên tắc chung của nhận thức và hoạt động. Chú giải hoặc phân tích ngôn ngữ có thể xuất hiện trong nghiên cứu, nhưng không thay thế hai chức năng cơ bản. Triết học cũng không phải một khoa học đứng trên và thay thế mọi khoa học chuyên ngành.
+
+:::
+
+<!-- workbook: WB1-MC35; PDF 17, 18 -->
+
+::: exercise Bài 3
+
+Chức năng phương pháp luận của triết học Mác - Lênin được hiểu là gì?
+
+- A. Là phương pháp tối ưu, vạn năng để nhận thức thế giới.
+- B. Cung cấp những nguyên tắc chung nhất để định hướng hoạt động nhận thức và thực tiễn.
+- C. Thay thế các phương pháp nghiên cứu trong các khoa học cụ thể.
+- D. Là lý luận về phương pháp của các khoa học.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: B.
+
+B nói đúng tác dụng định hướng ở mức chung nhất. Các nguyên tắc phải được cụ thể hóa bằng tri thức, phương pháp chuyên ngành và kinh nghiệm thực tiễn. A và C tuyệt đối hóa vai trò triết học. D gần với định nghĩa phương pháp luận nói chung nhưng chưa xác định chức năng định hướng chung nhất của phương pháp luận triết học.
+
+:::
+
+<!-- workbook: WB1-TF03; PDF 18 -->
+
+::: exercise Bài 4
+
+Xác định đúng hoặc sai và giải thích ngắn gọn.
+
+Chủ nghĩa Mác - Lênin là vũ khí lý luận, là hệ tư tưởng cách mạng của giai cấp công nhân.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Theo nội dung học phần, học thuyết cung cấp thế giới quan, phương pháp luận và sự giải thích những điều kiện giải phóng giai cấp công nhân, gắn mục tiêu ấy với giải phóng con người. “Vũ khí lý luận” nói đến vai trò định hướng nhận thức và hoạt động.
+
+Tác dụng đó cần thông qua việc hiểu đúng hoàn cảnh, tổ chức lực lượng và hành động thực tiễn. Một lý luận không thay thế được những điều kiện vật chất và hoạt động của các chủ thể xã hội.
+
+:::
+
+<!-- workbook: WB1-TF04; PDF 18 -->
+
+::: exercise Bài 5
+
+Xác định đúng hoặc sai và giải thích ngắn gọn.
+
+Chủ nghĩa Mác - Lênin vừa mang tính cách mạng, vừa mang tính khoa học.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Tính khoa học thể hiện ở yêu cầu nhận thức các điều kiện và quy luật khách quan. Tính cách mạng thể hiện ở mục tiêu cải biến những quan hệ cản trở sự giải phóng, phát triển con người. Nhận thức điều kiện hiện thực là cơ sở để việc cải biến có căn cứ.
+
+Sự thống nhất này là yêu cầu lý luận và thực tiễn cần thực hiện. Không thể suy rằng một chủ trương tự nhận tính cách mạng thì tất nhiên đúng về khoa học hoặc chắc chắn thành công.
+
+:::
+
+<!-- workbook: WB1-TF05; PDF 18 -->
+
+::: exercise Bài 6
+
+Xác định đúng hoặc sai và giải thích ngắn gọn.
+
+Chủ nghĩa Mác - Lênin mang tính nhân văn, nhân đạo.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: Đúng.
+
+Mục tiêu giải phóng con người khỏi những điều kiện áp bức, bất công và tạo điều kiện phát triển năng lực thể hiện nội dung nhân văn, nhân đạo của học thuyết. Con người được xét trong đời sống và những quan hệ xã hội cụ thể.
+
+Vì thế, nội dung này không dừng ở lòng thương cảm hay lời kêu gọi đạo đức. Nó đòi hỏi phân tích cơ sở của những hạn chế đối với con người và điều kiện hiện thực để khắc phục chúng. Mục tiêu nhân văn cũng không tự chứng minh mọi biện pháp nhân danh mục tiêu ấy là đúng.
+
+:::
 
 </template>
 
@@ -137,3 +243,4 @@ Các nguyên tắc chung cần được cụ thể hóa theo đối tượng ngh
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 1, tr. 5–60.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 1, phần Bài tập.
+3. John Snow. [Bản đồ các ca tử vong do dịch tả tại London năm 1854 do John Snow lập.](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg). Phạm vi công cộng. Bản thu nhỏ.

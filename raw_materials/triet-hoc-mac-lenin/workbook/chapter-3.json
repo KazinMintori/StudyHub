@@ -1,0 +1,3048 @@
+{
+  "chapter": 3,
+  "expected": {
+    "multipleChoice": 80,
+    "trueFalse": 20,
+    "essay": 5
+  },
+  "exercises": [
+    {
+      "id": "WB3-MC01",
+      "kind": "multipleChoice",
+      "number": 1,
+      "pdfPages": [
+        82
+      ],
+      "printedPages": [
+        81
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Xã hội có các loại hình sản xuất cơ bản là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sản xuất ra văn hóa, con người và đời sống tinh thần."
+        },
+        {
+          "key": "B",
+          "text": "Sản xuất ra của cải vật chất, đời sống tinh thần và nghệ thuật."
+        },
+        {
+          "key": "C",
+          "text": "Sản xuất vật chất, sản xuất tinh thần, sản xuất ra bản thân con người."
+        },
+        {
+          "key": "D",
+          "text": "Sản xuất vật chất, sản xuất tinh thần, sản xuất văn hóa."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Ba phương diện là sản xuất vật chất, sản xuất tinh thần và sản xuất ra bản thân con người. Văn hóa, nghệ thuật thuộc đời sống tinh thần nên không thay thế được phương diện tái sản xuất con người. Ba phương diện liên hệ với nhau, trong đó sản xuất vật chất tạo điều kiện tồn tại cơ bản cho đời sống xã hội."
+    },
+    {
+      "id": "WB3-MC02",
+      "kind": "multipleChoice",
+      "number": 2,
+      "pdfPages": [
+        82
+      ],
+      "printedPages": [
+        81
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Tiền đề xuất phát của quan điểm duy vật lịch sử là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con người trừu tượng."
+        },
+        {
+          "key": "B",
+          "text": "Con người hành động."
+        },
+        {
+          "key": "C",
+          "text": "Con người tư duy."
+        },
+        {
+          "key": "D",
+          "text": "Con người hiện thực."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Con người hiện thực là những con người đang sống, hoạt động và sản xuất trong những điều kiện lịch sử xác định. Cách xuất phát này bao gồm tư duy và hành động nhưng không tách chúng khỏi cơ thể, nhu cầu, quan hệ xã hội và điều kiện sinh hoạt vật chất."
+    },
+    {
+      "id": "WB3-MC03",
+      "kind": "multipleChoice",
+      "number": 3,
+      "pdfPages": [
+        82
+      ],
+      "printedPages": [
+        81
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền thêm từ để hoàn thiện nhận định sau đây và xác định đó là nhận định của ai: “Điểm khác biệt căn bản giữa xã hội loài người với xã hội loài vật là ở chỗ: Loài vật may mắn lắm chỉ hái lượm trong khi con người lại ...(1)...” (...(2)...).",
+      "options": [
+        {
+          "key": "A",
+          "text": "1) Biết sáng tạo, 2) Ph. Ăngghen."
+        },
+        {
+          "key": "B",
+          "text": "1) Sản xuất, 2) Ph. Ăngghen."
+        },
+        {
+          "key": "C",
+          "text": "1) Tiến hành lao động, 2) C. Mác."
+        },
+        {
+          "key": "D",
+          "text": "1) Tư duy, 2) V.I. Lênin."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Hai chỗ trống tương ứng với “sản xuất” và Ph. Ăngghen. Điểm cần hiểu là con người tạo ra tư liệu sinh hoạt bằng hoạt động sản xuất có công cụ và có tính xã hội. Nhận định không phủ nhận các dạng hoạt động hay sử dụng vật thể ở động vật."
+    },
+    {
+      "id": "WB3-MC04",
+      "kind": "multipleChoice",
+      "number": 4,
+      "pdfPages": [
+        82
+      ],
+      "printedPages": [
+        81
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền từ còn thiếu vào chỗ trống: ... là cơ sở của sự tồn tại và phát triển của xã hội loài người, và xét đến cùng quyết định toàn bộ sự vận động, phát triển của đời sống xã hội.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hoạt động tinh thần."
+        },
+        {
+          "key": "B",
+          "text": "Sản xuất tinh thần."
+        },
+        {
+          "key": "C",
+          "text": "Hoạt động vật chất."
+        },
+        {
+          "key": "D",
+          "text": "Sản xuất vật chất."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Sản xuất vật chất tạo ra tư liệu sinh hoạt, phương tiện lao động và những điều kiện để các hoạt động xã hội khác được duy trì. “Xét đến cùng” chỉ vai trò nền tảng, không có nghĩa mọi sự kiện chính trị, nghệ thuật hay đạo đức đều do kinh tế tác động trực tiếp và duy nhất."
+    },
+    {
+      "id": "WB3-MC05",
+      "kind": "multipleChoice",
+      "number": 5,
+      "pdfPages": [
+        82
+      ],
+      "printedPages": [
+        81
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Tiêu chuẩn quan trọng nhất để phân biệt các thời đại kinh tế là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thể chế chính trị."
+        },
+        {
+          "key": "B",
+          "text": "Hình thức nhà nước."
+        },
+        {
+          "key": "C",
+          "text": "Phương thức sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Hình thức tôn giáo."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Phương thức sản xuất cho biết con người sản xuất bằng những lực lượng nào và trong những quan hệ kinh tế nào. Vì vậy, đây là căn cứ để phân biệt các thời đại kinh tế. Thể chế chính trị, hình thức nhà nước và tôn giáo không thay thế được căn cứ kinh tế ấy."
+    },
+    {
+      "id": "WB3-MC06",
+      "kind": "multipleChoice",
+      "number": 6,
+      "pdfPages": [
+        83
+      ],
+      "printedPages": [
+        82
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Phương thức sản xuất là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cách thức con người tiến hành mọi hoạt động sản xuất qua các giai đoạn lịch sử."
+        },
+        {
+          "key": "B",
+          "text": "Cách thức con người sản xuất ra của cải vật chất cho xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Cách thức con người thực hiện các quan hệ xã hội ở những giai đoạn lịch sử nhất định của xã hội loài người."
+        },
+        {
+          "key": "D",
+          "text": "Cách thức con người thực hiện trong quá trình sản xuất vật chất ở những giai đoạn lịch sử nhất định của xã hội loài người."
+        }
+      ],
+      "answer": null,
+      "explanation": "D nêu rõ cả sản xuất vật chất lẫn tính lịch sử nên diễn đạt sát định nghĩa đầy đủ hơn. B cũng nêu nội dung cốt lõi là cách thức sản xuất của cải vật chất, nhưng lược mất điều kiện lịch sử. Vì đề không yêu cầu chọn cách diễn đạt đầy đủ nhất, B và D chưa được phân biệt đủ chặt để chấm như một câu chỉ có một đáp án. Khái niệm cần nhớ là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất trong một giai đoạn lịch sử nhất định.",
+      "note": "Phương án B và D gần nghĩa. Phương án đầu bị in nhầm nhãn c, được chuẩn hóa thành A theo thứ tự bốn lựa chọn."
+    },
+    {
+      "id": "WB3-MC07",
+      "kind": "multipleChoice",
+      "number": 7,
+      "pdfPages": [
+        83
+      ],
+      "printedPages": [
+        82
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền từ còn thiếu vào chỗ trống: ... là tổng hợp các yếu tố vật chất và tinh thần tạo thành sức mạnh thực tiễn cải biến giới tự nhiên theo nhu cầu sinh tồn, phát triển của con người.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Công cụ lao động."
+        },
+        {
+          "key": "B",
+          "text": "Lực lượng sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Người lao động."
+        },
+        {
+          "key": "D",
+          "text": "Tư liệu sản xuất."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Lực lượng sản xuất biểu hiện năng lực thực tiễn cải biến tự nhiên của con người. Năng lực ấy hình thành từ sự kết hợp người lao động với tư liệu sản xuất, bao gồm tri thức, kinh nghiệm, kỹ năng và những phương tiện vật chất. Một công cụ hoặc riêng người lao động chưa diễn tả toàn bộ sự kết hợp này."
+    },
+    {
+      "id": "WB3-MC08",
+      "kind": "multipleChoice",
+      "number": 8,
+      "pdfPages": [
+        83
+      ],
+      "printedPages": [
+        82
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Lực lượng sản xuất bao gồm các nhân tố nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Người lao động và tư liệu sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Người lao động và công cụ lao động."
+        },
+        {
+          "key": "C",
+          "text": "Người lao động và tư liệu lao động."
+        },
+        {
+          "key": "D",
+          "text": "Người lao động và đối tượng lao động."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Tư liệu sản xuất bao gồm tư liệu lao động và đối tượng lao động. Kết hợp chúng với người lao động mới tạo thành lực lượng sản xuất. B, C và D đều chỉ nêu một bộ phận của tư liệu sản xuất nên chưa đầy đủ."
+    },
+    {
+      "id": "WB3-MC09",
+      "kind": "multipleChoice",
+      "number": 9,
+      "pdfPages": [
+        83
+      ],
+      "printedPages": [
+        82
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Tư liệu sản xuất bao gồm những yếu tố nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tư liệu lao động và đối tượng lao động."
+        },
+        {
+          "key": "B",
+          "text": "Công cụ lao động và tư liệu lao động."
+        },
+        {
+          "key": "C",
+          "text": "Phương tiện lao động và công cụ lao động."
+        },
+        {
+          "key": "D",
+          "text": "Công cụ lao động và đối tượng lao động."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Đối tượng lao động là cái được con người tác động vào, còn tư liệu lao động là phương tiện để thực hiện tác động ấy. Công cụ lao động nằm trong tư liệu lao động, bên cạnh nhà xưởng, hệ thống vận chuyển và các phương tiện hỗ trợ. D vì thế chưa bao quát toàn bộ tư liệu lao động."
+    },
+    {
+      "id": "WB3-MC10",
+      "kind": "multipleChoice",
+      "number": 10,
+      "pdfPages": [
+        83
+      ],
+      "printedPages": [
+        82
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Yếu tố phản ánh rõ nhất trình độ phát triển của lực lượng sản xuất là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phương tiện lao động."
+        },
+        {
+          "key": "B",
+          "text": "Công cụ lao động."
+        },
+        {
+          "key": "C",
+          "text": "Đối tượng lao động."
+        },
+        {
+          "key": "D",
+          "text": "Sản phẩm của lao động."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Công cụ lao động thể hiện rõ trình độ con người tác động vào tự nhiên và là yếu tố động trong tư liệu sản xuất. Cần phân biệt câu này với câu hỏi về yếu tố quan trọng nhất của lực lượng sản xuất: Vai trò chủ thể sáng tạo vẫn thuộc về người lao động."
+    },
+    {
+      "id": "WB3-MC11",
+      "kind": "multipleChoice",
+      "number": 11,
+      "pdfPages": [
+        83,
+        84
+      ],
+      "printedPages": [
+        82,
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền từ còn thiếu vào chỗ trống: “... là nội dung vật chất của quá trình sản xuất”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Phương thức sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Sản xuất vật chất."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Lực lượng sản xuất là nội dung vật chất, biểu hiện năng lực thực tế của quá trình sản xuất. Quan hệ sản xuất là hình thức xã hội của quá trình ấy. Phương thức sản xuất là sự thống nhất của cả hai mặt."
+    },
+    {
+      "id": "WB3-MC12",
+      "kind": "multipleChoice",
+      "number": 12,
+      "pdfPages": [
+        84
+      ],
+      "printedPages": [
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Quan hệ sản xuất là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mối quan hệ giữa con người với đối tượng lao động."
+        },
+        {
+          "key": "B",
+          "text": "Mối quan hệ giữa con người với công cụ lao động."
+        },
+        {
+          "key": "C",
+          "text": "Mối quan hệ giữa con người với tư liệu sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Mối quan hệ giữa người với người trong quá trình sản xuất."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Quan hệ sản xuất là quan hệ kinh tế giữa người với người, bao gồm sở hữu tư liệu sản xuất, tổ chức và quản lý lao động, phân phối sản phẩm. Quan hệ sở hữu được biểu hiện qua quyền đối với vật, nhưng bản chất vẫn là quan hệ xã hội giữa những người có quyền và nghĩa vụ khác nhau đối với vật đó."
+    },
+    {
+      "id": "WB3-MC13",
+      "kind": "multipleChoice",
+      "number": 13,
+      "pdfPages": [
+        84
+      ],
+      "printedPages": [
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Quan hệ cơ bản nhất, đóng vai trò quyết định trong hệ thống quan hệ sản xuất là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan hệ tổ chức sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ quản lý sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Quan hệ phân phối."
+        },
+        {
+          "key": "D",
+          "text": "Quan hệ sở hữu về tư liệu sản xuất."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Quan hệ sở hữu về tư liệu sản xuất quy định ai có quyền kiểm soát những điều kiện sản xuất chủ yếu, qua đó chi phối tổ chức lao động và phân phối kết quả. Tổ chức, quản lý và phân phối vẫn có tính độc lập tương đối và tác động trở lại quan hệ sở hữu."
+    },
+    {
+      "id": "WB3-MC14",
+      "kind": "multipleChoice",
+      "number": 14,
+      "pdfPages": [
+        84
+      ],
+      "printedPages": [
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Mối quan hệ “song trùng” của nền sản xuất vật chất mà C. Mác nhắc đến là quan hệ nào sau đây?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan hệ giữa con người với tự nhiên và quan hệ giữa con người với sản phẩm của quá trình sản xuất vật chất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ giữa con người với tự nhiên và quan hệ giữa con người với tư liệu sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Quan hệ giữa con người với tự nhiên và quan hệ giữa người với người trong quá trình sản xuất vật chất."
+        },
+        {
+          "key": "D",
+          "text": "Quan hệ giữa người với người trong sản xuất vật chất và quan hệ giai cấp trong xã hội."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Sản xuất vừa là quá trình con người cải biến tự nhiên, vừa là quá trình họ liên kết với nhau trong những quan hệ kinh tế. Mặt thứ nhất được biểu hiện ở lực lượng sản xuất, mặt thứ hai ở quan hệ sản xuất. Hai mặt chỉ tồn tại trong sự thống nhất của hoạt động sản xuất hiện thực."
+    },
+    {
+      "id": "WB3-MC15",
+      "kind": "multipleChoice",
+      "number": 15,
+      "pdfPages": [
+        84
+      ],
+      "printedPages": [
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Sự biến đổi của quan hệ sản xuất do yếu tố nào quyết định?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự phong phú của đối tượng lao động."
+        },
+        {
+          "key": "B",
+          "text": "Thể chế chính trị."
+        },
+        {
+          "key": "C",
+          "text": "Trình độ của lực lượng sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Trình độ của người lao động."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Trình độ lực lượng sản xuất đặt ra yêu cầu đối với sở hữu, tổ chức và phân phối. Trình độ người lao động là một yếu tố quan trọng nhưng chưa đại diện cho toàn bộ lực lượng sản xuất. Chính trị có thể tác động mạnh đến quá trình biến đổi, song không thay thế được căn cứ vật chất ấy."
+    },
+    {
+      "id": "WB3-MC16",
+      "kind": "multipleChoice",
+      "number": 16,
+      "pdfPages": [
+        84
+      ],
+      "printedPages": [
+        83
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền các từ còn thiếu: “...(1)... và ...(2)... là hai mặt cơ bản, tất yếu của quá trình sản xuất”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cơ sở hạ tầng / kiến trúc thượng tầng."
+        },
+        {
+          "key": "B",
+          "text": "Cơ sở hạ tầng / quan hệ sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Lực lượng sản xuất / quan hệ sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Lực lượng sản xuất / kiến trúc thượng tầng."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Lực lượng sản xuất là nội dung vật chất, quan hệ sản xuất là hình thức xã hội của quá trình sản xuất. Cơ sở hạ tầng và kiến trúc thượng tầng chỉ một quan hệ khác, rộng hơn, giữa cơ cấu kinh tế với đời sống tư tưởng và các thiết chế tương ứng."
+    },
+    {
+      "id": "WB3-MC17",
+      "kind": "multipleChoice",
+      "number": 17,
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        84
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Phát biểu nào sau đây phản ánh đúng đắn mối quan hệ giữa lực lượng sản xuất và quan hệ sản xuất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất phụ thuộc vào quan hệ sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sản xuất phụ thuộc vào trình độ phát triển của lực lượng sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Quan hệ sản xuất và lực lượng sản xuất tồn tại độc lập với nhau."
+        },
+        {
+          "key": "D",
+          "text": "Quan hệ sản xuất và lực lượng sản xuất đều hoàn toàn phụ thuộc vào quyền lực nhà nước."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Vai trò quyết định thuộc lực lượng sản xuất, vì quan hệ sản xuất phải phù hợp với trình độ phát triển của nó. Quan hệ sản xuất đồng thời tác động trở lại, có thể thúc đẩy hoặc kìm hãm lực lượng sản xuất. B đúng về chiều quyết định nhưng không bao quát toàn bộ sự tác động hai chiều."
+    },
+    {
+      "id": "WB3-MC18",
+      "kind": "multipleChoice",
+      "number": 18,
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        84
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền từ còn thiếu: “... là hình thức xã hội của quá trình sản xuất”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Phương thức sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Sản xuất vật chất."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Quan hệ sản xuất xác định cách con người liên kết với nhau về kinh tế để thực hiện sản xuất. Nó là hình thức xã hội, còn lực lượng sản xuất là nội dung vật chất. Cả hai thống nhất trong một phương thức sản xuất."
+    },
+    {
+      "id": "WB3-MC19",
+      "kind": "multipleChoice",
+      "number": 19,
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        84
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Yếu tố quan trọng nhất trong lực lượng sản xuất là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Công cụ lao động."
+        },
+        {
+          "key": "B",
+          "text": "Tư liệu sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Người lao động."
+        },
+        {
+          "key": "D",
+          "text": "Tài nguyên khoáng sản."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Người lao động chế tạo, sử dụng và cải tiến công cụ bằng tri thức, kỹ năng và kinh nghiệm. Tài nguyên và máy móc chỉ trở thành sức mạnh sản xuất hiện thực trong sự kết hợp với hoạt động của con người. Vai trò ấy không có nghĩa người lao động có thể bỏ qua những điều kiện vật chất."
+    },
+    {
+      "id": "WB3-MC20",
+      "kind": "multipleChoice",
+      "number": 20,
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        84
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Theo quan niệm của triết học Mác – Lênin, quan hệ sản xuất:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hoàn toàn bị quy định bởi những người lãnh đạo các cơ sở sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Hoàn toàn bị quy định bởi chế độ chính trị xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Hoàn toàn bị quy định bởi truyền thống và tập tục."
+        },
+        {
+          "key": "D",
+          "text": "Tồn tại khách quan và không phụ thuộc vào ý thức của con người."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Tính khách quan nghĩa là quan hệ sản xuất không thể được lựa chọn tùy ý, vì chịu sự quy định của trình độ lực lượng sản xuất và những điều kiện lịch sử. Quan hệ ấy vẫn được con người xác lập, duy trì và cải biến bằng hoạt động có ý thức. “Không phụ thuộc vào ý thức” vì thế không đồng nghĩa không chịu tác động của con người."
+    },
+    {
+      "id": "WB3-MC21",
+      "kind": "multipleChoice",
+      "number": 21,
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        84
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điền từ còn thiếu: “Trong một ...(1)... thì ...(2)... là yếu tố thường xuyên biến đổi, còn ...(3)... là yếu tố tương đối ổn định”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1) Quan hệ sản xuất, 2) Quan hệ phân phối, 3) Quan hệ sở hữu."
+        },
+        {
+          "key": "B",
+          "text": "1) Lực lượng sản xuất, 2) Người lao động, 3) Tư liệu sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "1) Phương thức sản xuất, 2) Lực lượng sản xuất, 3) Quan hệ sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "1) Phương thức sản xuất, 2) Quan hệ sản xuất, 3) Tư liệu sản xuất."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Trong phương thức sản xuất, lực lượng sản xuất thường xuyên được cải tiến thông qua lao động và tích lũy tri thức. Quan hệ sản xuất gắn với sở hữu, tổ chức và lợi ích nên có độ ổn định tương đối. “Tương đối ổn định” không có nghĩa quan hệ sản xuất bất biến."
+    },
+    {
+      "id": "WB3-MC22",
+      "kind": "multipleChoice",
+      "number": 22,
+      "pdfPages": [
+        85,
+        86
+      ],
+      "printedPages": [
+        84,
+        85
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Theo quan điểm của chủ nghĩa duy vật lịch sử, quan hệ sản xuất tác động trở lại lực lượng sản xuất thông qua yếu tố nào của lực lượng sản xuất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Công cụ lao động."
+        },
+        {
+          "key": "B",
+          "text": "Tư liệu sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Người lao động."
+        },
+        {
+          "key": "D",
+          "text": "Đối tượng lao động."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Sở hữu, tổ chức và phân phối ảnh hưởng đến lợi ích, động cơ, khả năng hợp tác và sáng tạo của người lao động. Thông qua hoạt động của họ, những quan hệ ấy thúc đẩy hoặc kìm hãm việc sử dụng và cải tiến công cụ, vật liệu và kỹ thuật."
+    },
+    {
+      "id": "WB3-MC23",
+      "kind": "multipleChoice",
+      "number": 23,
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        85
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Sự tồn tại nền kinh tế hàng hóa nhiều thành phần trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam là do:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đặc điểm tự nhiên của Việt Nam quy định."
+        },
+        {
+          "key": "B",
+          "text": "Thành phần giai cấp trong xã hội Việt Nam quy định."
+        },
+        {
+          "key": "C",
+          "text": "Trình độ của lực lượng sản xuất của Việt Nam quy định."
+        },
+        {
+          "key": "D",
+          "text": "Nhận thức chính trị của Việt Nam quy định."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Trình độ lực lượng sản xuất đa dạng và không đồng đều tạo cơ sở khách quan cho nhiều hình thức sở hữu, tổ chức sản xuất và thành phần kinh tế cùng tồn tại. Chính sách cần nhận thức đặc điểm ấy và tạo sự phù hợp, thay vì đồng nhất mọi đơn vị sản xuất bằng một hình thức duy nhất."
+    },
+    {
+      "id": "WB3-MC24",
+      "kind": "multipleChoice",
+      "number": 24,
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        85
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Trong thời kỳ quá độ lên chủ nghĩa xã hội, Việt Nam cần:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chủ động thiết lập quan hệ sản xuất trước, sau đó phát triển lực lượng sản xuất phù hợp."
+        },
+        {
+          "key": "B",
+          "text": "Chủ động xây dựng lực lượng sản xuất trước, sau đó phát triển quan hệ sản xuất phù hợp."
+        },
+        {
+          "key": "C",
+          "text": "Kết hợp đồng thời phát triển lực lượng sản xuất với xác lập quan hệ sản xuất phù hợp."
+        },
+        {
+          "key": "D",
+          "text": "Tôn trọng quy luật khách quan và tuyệt đối không can thiệp vào sự phát triển của lực lượng sản xuất và quan hệ sản xuất."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Phát triển lực lượng sản xuất và từng bước xác lập quan hệ sản xuất phù hợp phải gắn bó với nhau. Không thể áp đặt một quan hệ vượt xa điều kiện vật chất, cũng không nên bỏ mặc những quan hệ đã cản trở sản xuất. Tôn trọng quy luật vẫn đòi hỏi hoạt động chủ động của con người."
+    },
+    {
+      "id": "WB3-MC25",
+      "kind": "multipleChoice",
+      "number": 25,
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        85
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Cơ sở hạ tầng là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Toàn bộ đất đai, máy móc, phương tiện để sản xuất của cải vật chất trong xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Toàn bộ những quan hệ sản xuất hợp thành cơ sở kinh tế của một xã hội nhất định."
+        },
+        {
+          "key": "C",
+          "text": "Toàn bộ sinh hoạt vật chất và điều kiện sinh hoạt vật chất của một xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Toàn bộ cơ cấu công - nông nghiệp của một nền kinh tế, xã hội nhất định."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Trong chủ nghĩa duy vật lịch sử, cơ sở hạ tầng là cơ cấu các quan hệ sản xuất. Đất đai, máy móc và công trình kỹ thuật thuộc những điều kiện vật chất, còn toàn bộ sinh hoạt vật chất có phạm vi rộng hơn, thuộc khái niệm tồn tại xã hội."
+    },
+    {
+      "id": "WB3-MC26",
+      "kind": "multipleChoice",
+      "number": 26,
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        85
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Nhân tố nào trong kiến trúc thượng tầng có tác động trực tiếp và mạnh mẽ nhất tới cơ sở kinh tế của xã hội?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các chính đảng."
+        },
+        {
+          "key": "B",
+          "text": "Nhà nước."
+        },
+        {
+          "key": "C",
+          "text": "Các đoàn thể chính trị - xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Giáo hội."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Nhà nước có quyền lực công, pháp luật và bộ máy tổ chức thực hiện những quyết định có tính bắt buộc. Nhờ đó, nó có khả năng tác động trực tiếp, mạnh mẽ đến quan hệ sở hữu, tổ chức sản xuất và phân phối. Các bộ phận khác của kiến trúc thượng tầng cũng tác động nhưng bằng những phương thức khác."
+    },
+    {
+      "id": "WB3-MC27",
+      "kind": "multipleChoice",
+      "number": 27,
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        85
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Cơ sở làm phát sinh các quan điểm chính trị, pháp luật, đạo đức là do:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kiến trúc thượng tầng."
+        },
+        {
+          "key": "B",
+          "text": "Trình độ nhận thức của con người ngày càng cao."
+        },
+        {
+          "key": "C",
+          "text": "Cơ sở hạ tầng."
+        },
+        {
+          "key": "D",
+          "text": "Trình độ của lực lượng sản xuất."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Các quan điểm chính trị, pháp luật và đạo đức thuộc kiến trúc thượng tầng, hình thành trên một cơ sở hạ tầng xác định. Lực lượng sản xuất tác động sâu xa thông qua những quan hệ kinh tế và các khâu trung gian. Năng lực nhận thức là điều kiện của hoạt động tư tưởng nhưng không tự giải thích nội dung xã hội của các quan điểm ấy."
+    },
+    {
+      "id": "WB3-MC28",
+      "kind": "multipleChoice",
+      "number": 28,
+      "pdfPages": [
+        86,
+        87
+      ],
+      "printedPages": [
+        85,
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Phát biểu nào sau đây khẳng định đúng vai trò của kiến trúc thượng tầng đối với cơ sở hạ tầng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kiến trúc thượng tầng chịu sự quyết định hoàn toàn của cơ sở hạ tầng."
+        },
+        {
+          "key": "B",
+          "text": "Kiến trúc thượng tầng luôn có tác động tích cực đối với cơ sở hạ tầng."
+        },
+        {
+          "key": "C",
+          "text": "Kiến trúc thượng tầng thường xuyên có vai trò tác động trở lại cơ sở hạ tầng của xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Kiến trúc thượng tầng quyết định cơ sở hạ tầng."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Kiến trúc thượng tầng có tính độc lập tương đối và tác động trở lại nền kinh tế. Tác động có thể hỗ trợ hoặc cản trở phát triển, tùy nội dung và sự phù hợp với điều kiện khách quan. Vì vậy, không thể khẳng định nó luôn tích cực hoặc đảo chiều quan hệ quyết định."
+    },
+    {
+      "id": "WB3-MC29",
+      "kind": "multipleChoice",
+      "number": 29,
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Thực chất của quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng có thể quy về:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan hệ giữa đời sống vật chất và đời sống tinh thần."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ giữa vật chất và ý thức."
+        },
+        {
+          "key": "C",
+          "text": "Quan hệ giữa tồn tại xã hội và ý thức xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Quan hệ giữa kinh tế và chính trị."
+        }
+      ],
+      "answer": "D",
+      "explanation": "D diễn đạt quan hệ kinh tế và chính trị, là phương diện trung tâm của quan hệ cơ sở hạ tầng với kiến trúc thượng tầng. A, B và C nêu những quan hệ có phạm vi khái quát rộng hơn. Không được suy ngược rằng toàn bộ kiến trúc thượng tầng chỉ có chính trị, vì nó còn gồm pháp luật, đạo đức, tôn giáo, nghệ thuật và các thiết chế tương ứng."
+    },
+    {
+      "id": "WB3-MC30",
+      "kind": "multipleChoice",
+      "number": 30,
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Nguyên nhân sâu xa sự biến đổi của cơ sở hạ tầng dẫn đến biến đổi kiến trúc thượng tầng là do sự biến đổi của yếu tố nào sau đây?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sản xuất."
+        },
+        {
+          "key": "C",
+          "text": "Cơ sở hạ tầng."
+        },
+        {
+          "key": "D",
+          "text": "Nhà nước."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Lực lượng sản xuất phát triển làm xuất hiện yêu cầu điều chỉnh quan hệ sản xuất. Quan hệ sản xuất hợp thành cơ sở hạ tầng, nên sự thay đổi của nó tiếp tục đặt ra yêu cầu đối với kiến trúc thượng tầng. Câu hỏi hỏi nguyên nhân sâu xa nên cần đi đến lực lượng sản xuất."
+    },
+    {
+      "id": "WB3-MC31",
+      "kind": "multipleChoice",
+      "number": 31,
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Trong các nội dung sau, nội dung nào thể hiện đúng nhất sự thay đổi của kiến trúc thượng tầng khi cơ sở hạ tầng thay đổi?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mọi yếu tố của kiến trúc thượng tầng sẽ thay đổi theo ngay."
+        },
+        {
+          "key": "B",
+          "text": "Nhà nước, tôn giáo, đạo đức thay đổi theo ngay."
+        },
+        {
+          "key": "C",
+          "text": "Tôn giáo, nghệ thuật, triết học thay đổi theo ngay."
+        },
+        {
+          "key": "D",
+          "text": "Không phải mọi yếu tố của kiến trúc thượng tầng sẽ thay đổi theo ngay."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Các yếu tố của kiến trúc thượng tầng có lịch sử, cách tổ chức và mức độ liên hệ với kinh tế khác nhau. Chúng có thể biến đổi không cùng nhịp, kế thừa những giá trị cũ hoặc tiếp tục tồn tại một thời gian. Vai trò quyết định của cơ sở hạ tầng không đồng nghĩa sự thay đổi đồng loạt và tức thời."
+    },
+    {
+      "id": "WB3-MC32",
+      "kind": "multipleChoice",
+      "number": 32,
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Bàn về kiến trúc thượng tầng, chủ nghĩa duy vật lịch sử KHÔNG cho rằng:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cơ sở hạ tầng quyết định sự hình thành của kiến trúc thượng tầng."
+        },
+        {
+          "key": "B",
+          "text": "Cơ sở hạ tầng thay đổi thì kiến trúc thượng tầng thay đổi theo."
+        },
+        {
+          "key": "C",
+          "text": "Mọi sự thay đổi của kiến trúc thượng tầng đều do sự thay đổi của cơ sở hạ tầng gây ra."
+        },
+        {
+          "key": "D",
+          "text": "Kiến trúc thượng tầng có thể lạc hậu so với cơ sở hạ tầng."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C tuyệt đối hóa tác động kinh tế và phủ nhận tính độc lập tương đối của kiến trúc thượng tầng. Những thay đổi còn có thể bắt nguồn từ tác động qua lại giữa các bộ phận, sự kế thừa tư tưởng và giao lưu văn hóa. B được hiểu là quan hệ quyết định xét trong quá trình lịch sử, không phải một phản ứng tức thời."
+    },
+    {
+      "id": "WB3-MC33",
+      "kind": "multipleChoice",
+      "number": 33,
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        86
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Hãy chỉ ra luận điểm SAI:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cơ sở hạ tầng thay đổi kéo theo sự thay đổi của kiến trúc thượng tầng."
+        },
+        {
+          "key": "B",
+          "text": "Khi cơ sở hạ tầng thay đổi, ngay lập tức mọi bộ phận của kiến trúc thượng tầng thay đổi."
+        },
+        {
+          "key": "C",
+          "text": "Kiến trúc thượng tầng có tính độc lập tương đối so với cơ sở hạ tầng."
+        },
+        {
+          "key": "D",
+          "text": "Kiến trúc thượng tầng có khả năng kìm hãm sự phát triển của cơ sở hạ tầng."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Từ “ngay lập tức mọi bộ phận” làm B sai. Sự thay đổi có thể không đồng đều và đi qua nhiều khâu trung gian. Tính độc lập tương đối cũng giải thích vì sao một thiết chế cũ có thể tiếp tục tồn tại và cản trở những quan hệ kinh tế mới."
+    },
+    {
+      "id": "WB3-MC34",
+      "kind": "multipleChoice",
+      "number": 34,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Cơ sở hạ tầng của Việt Nam trong thời kỳ quá độ đi lên chủ nghĩa xã hội được xác định là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hệ thống điện - đường - trường - trạm hiện đại, rộng khắp cả nước."
+        },
+        {
+          "key": "B",
+          "text": "Nền kinh tế thị trường."
+        },
+        {
+          "key": "C",
+          "text": "Nền kinh tế hàng hóa nhiều thành phần theo định hướng xã hội chủ nghĩa."
+        },
+        {
+          "key": "D",
+          "text": "Nền sản xuất được công nghiệp hóa, hiện đại hóa ở trình độ tiên tiến."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C nêu sự đa dạng của các quan hệ kinh tế trong thời kỳ quá độ và định hướng phát triển của chúng. Ở đây phải đọc cơ sở hạ tầng theo nghĩa cơ cấu quan hệ sản xuất. A mô tả kết cấu hạ tầng kỹ thuật, còn D chủ yếu mô tả trình độ sản xuất."
+    },
+    {
+      "id": "WB3-MC35",
+      "kind": "multipleChoice",
+      "number": 35,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Chọn phương án đúng: Đâu là cấu trúc của một hình thái kinh tế - xã hội?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất, quan hệ sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng."
+        },
+        {
+          "key": "C",
+          "text": "Cơ sở hạ tầng và kiến trúc thượng tầng."
+        },
+        {
+          "key": "D",
+          "text": "Tồn tại xã hội và ý thức xã hội."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Ba yếu tố cơ bản là lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng. C mới nêu quan hệ giữa cơ cấu kinh tế với tư tưởng và thiết chế, chưa trực tiếp nêu lực lượng sản xuất như một yếu tố cấu thành hình thái."
+    },
+    {
+      "id": "WB3-MC36",
+      "kind": "multipleChoice",
+      "number": 36,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Điền thêm từ vào câu sau đây và xác định đó là luận điểm của ai: “Sự phát triển của các hình thái kinh tế - xã hội là một quá trình ...”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lịch sử tất yếu theo quy luật / V.I. Lênin."
+        },
+        {
+          "key": "B",
+          "text": "Lịch sử đi lên / Ph. Ăngghen."
+        },
+        {
+          "key": "C",
+          "text": "Lịch sử - tự nhiên / C. Mác."
+        },
+        {
+          "key": "D",
+          "text": "Lịch sử của các dân tộc / Hồ Chí Minh."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Luận điểm của C. Mác xác định tính lịch sử - tự nhiên của quá trình phát triển xã hội. Các quy luật khách quan tác động thông qua hoạt động có ý thức của con người trong những điều kiện lịch sử xác định, chứ không vận động tách rời con người."
+    },
+    {
+      "id": "WB3-MC37",
+      "kind": "multipleChoice",
+      "number": 37,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Theo chủ nghĩa duy vật lịch sử, ba yếu tố cơ bản của hình thái kinh tế - xã hội tác động biện chứng, tạo thành các quy luật cơ bản chi phối sự vận động, phát triển lịch sử xã hội là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất, quan hệ sản xuất, kiến trúc thượng tầng."
+        },
+        {
+          "key": "B",
+          "text": "Tồn tại xã hội, ý thức xã hội, cơ sở hạ tầng."
+        },
+        {
+          "key": "C",
+          "text": "Cơ sở hạ tầng, kiến trúc thượng tầng, tồn tại xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Lực lượng sản xuất, quan hệ sản xuất, tồn tại xã hội."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Quan hệ giữa lực lượng sản xuất và quan hệ sản xuất, cùng quan hệ giữa cơ sở hạ tầng và kiến trúc thượng tầng, tạo thành những quy luật cơ bản của vận động xã hội. Quan hệ sản xuất vừa thuộc phương thức sản xuất, vừa hợp thành cơ sở hạ tầng của xã hội."
+    },
+    {
+      "id": "WB3-MC38",
+      "kind": "multipleChoice",
+      "number": 38,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Khẳng định tính lịch sử - tự nhiên của sự phát triển các hình thái kinh tế - xã hội tức là khẳng định sự phát triển của xã hội:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hoàn toàn tuân theo quy luật khách quan của lịch sử."
+        },
+        {
+          "key": "B",
+          "text": "Hoàn toàn là một quá trình tự nhiên và khách quan."
+        },
+        {
+          "key": "C",
+          "text": "Tuân theo quy luật khách quan nhưng đồng thời cũng chịu tác động của các nhân tố chủ quan của con người."
+        },
+        {
+          "key": "D",
+          "text": "Là kết quả của vô số hoạt động chủ quan, tự nhiên của con người."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C giữ cả tính khách quan của quy luật lẫn vai trò hoạt động có ý thức. Không thể hiểu lịch sử - tự nhiên thành một quá trình tự động, không cần con người. A nêu tính quy luật nhưng chưa làm rõ đặc thù của quy luật xã hội, còn B dễ xóa nhòa đặc thù ấy."
+    },
+    {
+      "id": "WB3-MC39",
+      "kind": "multipleChoice",
+      "number": 39,
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        87
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Nguồn gốc sâu xa của sự vận động và phát triển của các hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự tăng lên không ngừng của năng suất lao động."
+        },
+        {
+          "key": "B",
+          "text": "Áp bức, bất công và mâu thuẫn giai cấp."
+        },
+        {
+          "key": "C",
+          "text": "Động cơ chính trị của các vĩ nhân, lãnh tụ."
+        },
+        {
+          "key": "D",
+          "text": "Mâu thuẫn giữa lực lượng sản xuất với quan hệ sản xuất."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Lực lượng sản xuất phát triển có thể làm quan hệ sản xuất đang tồn tại trở nên chật hẹp. Mâu thuẫn ấy đặt ra yêu cầu cải biến những quan hệ kinh tế và kiến trúc thượng tầng tương ứng. Đấu tranh giai cấp là một hình thức xã hội của việc giải quyết mâu thuẫn trong xã hội có đối kháng giai cấp."
+    },
+    {
+      "id": "WB3-MC40",
+      "kind": "multipleChoice",
+      "number": 40,
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        88
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Về tổng thể, lịch sử nhân loại là quá trình thay thế tuần tự của các hình thái kinh tế - xã hội:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cộng sản nguyên thủy - Chiếm hữu nô lệ - Phong kiến - Tư bản chủ nghĩa - Xã hội chủ nghĩa."
+        },
+        {
+          "key": "B",
+          "text": "Cộng sản nguyên thủy - Phong kiến - Tư bản chủ nghĩa - Xã hội chủ nghĩa - Cộng sản chủ nghĩa."
+        },
+        {
+          "key": "C",
+          "text": "Cộng sản nguyên thủy - Chiếm hữu nô lệ - Phong kiến - Tư bản chủ nghĩa - Cộng sản chủ nghĩa."
+        },
+        {
+          "key": "D",
+          "text": "Chiếm hữu nô lệ - Phong kiến - Tư bản chủ nghĩa - Xã hội chủ nghĩa - Cộng sản chủ nghĩa."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C nêu sơ đồ khái quát năm hình thái trong học thuyết Mác. Chủ nghĩa xã hội được xác định là giai đoạn đầu của hình thái cộng sản chủ nghĩa, không phải hình thái thứ sáu. Đây là khái quát lý luận về lịch sử nhân loại, không buộc mỗi dân tộc phải lần lượt trải qua đầy đủ năm hình thái."
+    },
+    {
+      "id": "WB3-MC41",
+      "kind": "multipleChoice",
+      "number": 41,
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        88
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Đặc điểm bao trùm của thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lực lượng sản xuất lạc hậu."
+        },
+        {
+          "key": "B",
+          "text": "Quan hệ sản xuất lạc hậu."
+        },
+        {
+          "key": "C",
+          "text": "Năng suất lao động thấp."
+        },
+        {
+          "key": "D",
+          "text": "Từ một nền sản xuất nhỏ bỏ qua chế độ tư bản chủ nghĩa."
+        }
+      ],
+      "answer": "D",
+      "explanation": "D nêu đặc điểm xuất phát và con đường quá độ được đặt ra trong nội dung lý luận. Các phương án còn lại nêu những mặt riêng về trình độ kinh tế, chưa chỉ ra quan hệ giữa điểm xuất phát với nhiệm vụ xây dựng xã hội mới. Cần hiểu đây là đặc điểm lịch sử của quá trình quá độ, không phải nhận định rằng mọi bộ phận kinh tế hiện nay đều đồng nhất."
+    },
+    {
+      "id": "WB3-MC42",
+      "kind": "multipleChoice",
+      "number": 42,
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        88
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Thực chất của việc phát triển bỏ qua giai đoạn tư bản chủ nghĩa ở nước ta là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bỏ qua toàn bộ hệ thống kinh tế tư bản chủ nghĩa."
+        },
+        {
+          "key": "B",
+          "text": "Bỏ qua sự thống trị của kiến trúc thượng tầng tư bản chủ nghĩa."
+        },
+        {
+          "key": "C",
+          "text": "Bỏ qua lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa."
+        },
+        {
+          "key": "D",
+          "text": "Bỏ qua các giai đoạn phát triển tuần tự như các nước tư bản chủ nghĩa Tây Âu."
+        }
+      ],
+      "answer": null,
+      "explanation": "Không có phương án nào diễn đạt đầy đủ và chính xác. Nội dung cần xác định là bỏ qua việc xác lập địa vị thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa, đồng thời tiếp thu những thành tựu mà nhân loại đã đạt được, nhất là khoa học và công nghệ. B chỉ nêu kiến trúc thượng tầng nên còn thiếu quan hệ sản xuất. A và C dễ dẫn đến phủ nhận cả những thành tựu cần kế thừa, còn D chỉ mô tả sự khác nhau về con đường phát triển.",
+      "note": "Đề thiếu phương án đủ hai mặt: Quan hệ sản xuất và kiến trúc thượng tầng; không chấm cưỡng ép B thành định nghĩa đầy đủ."
+    },
+    {
+      "id": "WB3-MC43",
+      "kind": "multipleChoice",
+      "number": 43,
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        88
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, xã hội đầu tiên xuất hiện giai cấp là xã hội nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xã hội cộng sản nguyên thủy."
+        },
+        {
+          "key": "B",
+          "text": "Xã hội phong kiến."
+        },
+        {
+          "key": "C",
+          "text": "Xã hội chiếm hữu nô lệ."
+        },
+        {
+          "key": "D",
+          "text": "Xã hội tư bản."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Trong sơ đồ khái quát các hình thái kinh tế - xã hội, chiếm hữu nô lệ là xã hội có giai cấp đầu tiên. Cộng sản nguyên thủy chưa có sự phân hóa giai cấp. Sự xuất hiện giai cấp gắn với lực lượng sản xuất phát triển, sản phẩm dư thừa và chế độ tư hữu."
+    },
+    {
+      "id": "WB3-MC44",
+      "kind": "multipleChoice",
+      "number": 44,
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        88
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, trong xã hội có giai cấp đối kháng, giai cấp nào sẽ là giai cấp thống trị?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giai cấp đông đảo nhất trong xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Giai cấp đóng vai trò là lực lượng sản xuất chủ yếu của xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Giai cấp nắm quyền sở hữu tư liệu sản xuất chủ yếu của xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Tầng lớp có trình độ hiểu biết về khoa học cao nhất trong xã hội."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Quyền sở hữu những tư liệu sản xuất chủ yếu tạo cơ sở kinh tế cho sự thống trị giai cấp. Số lượng người, mức độ trực tiếp lao động hay học vấn không tự tạo ra địa vị ấy. Khi nghiên cứu lịch sử cụ thể, còn cần phân tích cách quyền lực kinh tế được tổ chức thành quyền lực chính trị."
+    },
+    {
+      "id": "WB3-MC45",
+      "kind": "multipleChoice",
+      "number": 45,
+      "pdfPages": [
+        89,
+        90
+      ],
+      "printedPages": [
+        88,
+        89
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Nhận định nào sau đây là SAI với quan điểm của triết học Mác – Lênin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giai cấp cơ bản của xã hội là các giai cấp được sinh ra từ chính phương thức sản xuất đang giữ địa vị thống trị trong xã hội đó."
+        },
+        {
+          "key": "B",
+          "text": "Trong mỗi xã hội có giai cấp, ngoài giai cấp cơ bản còn tồn tại các giai cấp không cơ bản và tầng lớp trung gian."
+        },
+        {
+          "key": "C",
+          "text": "Giai cấp gắn với phương thức sản xuất tàn dư của xã hội cũ là giai cấp không cơ bản của xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Trí thức là một giai cấp cơ bản trong xã hội."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Trí thức được xác định chủ yếu bởi đặc điểm lao động trí óc và trình độ chuyên môn, nên là một tầng lớp xã hội. Họ có thể xuất thân và gắn với các địa vị kinh tế khác nhau. Chỉ có học vấn hoặc nghề nghiệp chung chưa tạo thành một giai cấp theo tiêu chí quan hệ với tư liệu sản xuất."
+    },
+    {
+      "id": "WB3-MC46",
+      "kind": "multipleChoice",
+      "number": 46,
+      "pdfPages": [
+        90
+      ],
+      "printedPages": [
+        89
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, đâu là nguyên nhân trực tiếp quyết định sự ra đời giai cấp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự phân công lao động xã hội phát triển, tách lao động trí óc khỏi lao động chân tay."
+        },
+        {
+          "key": "B",
+          "text": "Năng suất lao động cao có sản phẩm dư thừa tương đối."
+        },
+        {
+          "key": "C",
+          "text": "Sự xuất hiện chế độ sở hữu tư nhân về tư liệu sản xuất."
+        },
+        {
+          "key": "D",
+          "text": "Công cụ sản xuất bằng kim loại thay thế công cụ bằng đá."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Sản phẩm dư thừa và sự phát triển công cụ tạo điều kiện sâu xa cho phân hóa xã hội. Chế độ sở hữu tư nhân về tư liệu sản xuất là nguyên nhân trực tiếp vì làm xuất hiện những tập đoàn có quyền kiểm soát điều kiện sản xuất khác nhau, từ đó có khả năng chiếm đoạt lao động của nhau."
+    },
+    {
+      "id": "WB3-MC47",
+      "kind": "multipleChoice",
+      "number": 47,
+      "pdfPages": [
+        90
+      ],
+      "printedPages": [
+        89
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, trong xã hội tư bản chủ nghĩa, giai cấp tư sản là giai cấp thống trị bởi vì:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giai cấp tư sản đông đảo nhất trong xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Giai cấp tư sản là lực lượng trực tiếp sản xuất ra của cải của xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Giai cấp tư sản là giai cấp sở hữu tư liệu sản xuất chủ yếu trong xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Giai cấp tư sản có trình độ văn hóa, khoa học kỹ thuật cao."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Địa vị thống trị được giải thích trước hết từ quyền sở hữu tư liệu sản xuất chủ yếu. Quyền ấy tạo khả năng chi phối tổ chức sản xuất và phân phối, đồng thời làm cơ sở cho quyền lực chính trị. Nó không được xác định bằng số lượng thành viên hay học vấn của từng cá nhân."
+    },
+    {
+      "id": "WB3-MC48",
+      "kind": "multipleChoice",
+      "number": 48,
+      "pdfPages": [
+        90
+      ],
+      "printedPages": [
+        89
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, nguyên nhân khách quan của đấu tranh giai cấp là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Do một lý thuyết khoa học về giai cấp thúc đẩy quần chúng nhân dân nổi dậy."
+        },
+        {
+          "key": "B",
+          "text": "Do sự lôi kéo của một thủ lĩnh có uy tín trong nhân dân phát động và lãnh đạo."
+        },
+        {
+          "key": "C",
+          "text": "Do sự nghèo khổ của quần chúng nhân dân."
+        },
+        {
+          "key": "D",
+          "text": "Do mâu thuẫn giữa trình độ phát triển của lực lượng sản xuất xã hội với quan hệ sản xuất đã trở nên lỗi thời."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Mâu thuẫn kinh tế được biểu hiện thành xung đột lợi ích giữa những lực lượng xã hội gắn với quan hệ sản xuất cũ và những lực lượng đòi hỏi thay đổi. Học thuyết và người tổ chức có thể ảnh hưởng đến nhận thức, hình thức đấu tranh nhưng không tạo ra nguyên nhân kinh tế khách quan của nó."
+    },
+    {
+      "id": "WB3-MC49",
+      "kind": "multipleChoice",
+      "number": 49,
+      "pdfPages": [
+        90
+      ],
+      "printedPages": [
+        89
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Nhận định nào dưới đây là SAI với quan điểm của triết học Mác – Lênin về đấu tranh giai cấp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trong thời kỳ quá độ đi lên chủ nghĩa xã hội ở Việt Nam vẫn tồn tại giai cấp và đấu tranh giai cấp."
+        },
+        {
+          "key": "B",
+          "text": "Trong thời kỳ quá độ đi lên chủ nghĩa xã hội ở Việt Nam do không còn đối kháng giai cấp nên không còn đấu tranh giai cấp."
+        },
+        {
+          "key": "C",
+          "text": "Trong thời kỳ quá độ ở Việt Nam, cuộc đấu tranh giai cấp diễn ra trên nhiều lĩnh vực với nội dung và hình thức khác nhau."
+        },
+        {
+          "key": "D",
+          "text": "Đấu tranh trên lĩnh vực kinh tế là một biểu hiện của cuộc đấu tranh giai cấp trong thời kỳ quá độ đi lên chủ nghĩa xã hội ở Việt Nam."
+        }
+      ],
+      "answer": "B",
+      "explanation": "B phủ nhận đấu tranh giai cấp trong thời kỳ quá độ. Trong hệ thống lý luận đang xét, các giai cấp, khác biệt lợi ích và những lực lượng cản trở phát triển vẫn tồn tại, còn nội dung và hình thức đấu tranh đã biến đổi. Không thể đồng nhất đấu tranh giai cấp với mọi bất đồng hoặc mặc định nó chỉ có hình thức bạo lực."
+    },
+    {
+      "id": "WB3-MC50",
+      "kind": "multipleChoice",
+      "number": 50,
+      "pdfPages": [
+        90,
+        91
+      ],
+      "printedPages": [
+        89,
+        90
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Nhận định nào dưới đây là SAI với quan điểm của triết học Mác – Lênin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giai cấp tồn tại trong mọi xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Giai cấp là một phạm trù lịch sử."
+        },
+        {
+          "key": "C",
+          "text": "Giai cấp là những tập đoàn người mà tập đoàn này có thể chiếm đoạt lao động của tập đoàn khác."
+        },
+        {
+          "key": "D",
+          "text": "Sự ra đời của giai cấp không phụ thuộc vào ý muốn chủ quan của con người."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Giai cấp chỉ xuất hiện khi có những điều kiện kinh tế - xã hội nhất định, vì thế là phạm trù lịch sử. Xã hội cộng sản nguyên thủy chưa phân chia giai cấp. Những tập đoàn trong quan hệ giai cấp khác nhau về địa vị sản xuất, không chỉ về mức thu nhập hoặc sở thích."
+    },
+    {
+      "id": "WB3-MC51",
+      "kind": "multipleChoice",
+      "number": 51,
+      "pdfPages": [
+        91
+      ],
+      "printedPages": [
+        90
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Theo chủ nghĩa duy vật lịch sử, trong xã hội có giai cấp:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bất cứ giai cấp nào cũng có thể làm cho hệ tư tưởng của nó trở thành hệ tư tưởng thống trị trong toàn xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ có đội ngũ trí thức mới có thể làm cho hệ tư tưởng của nó trở thành hệ tư tưởng thống trị trong toàn xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ có giai cấp nắm quyền sở hữu tư liệu sản xuất chủ yếu mới có thể làm cho hệ tư tưởng của nó trở thành hệ tư tưởng thống trị trong toàn xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ có giai cấp ưu tú trong xã hội mới có thể làm cho hệ tư tưởng của nó trở thành tư tưởng thống trị trong toàn xã hội."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C phản ánh mối liên hệ giữa địa vị thống trị về kinh tế và sức mạnh tổ chức, truyền bá hệ tư tưởng trong trật tự xã hội xác định. Điều này không có nghĩa giai cấp bị trị không có hệ tư tưởng riêng hoặc tư tưởng thống trị được mọi người chấp nhận hoàn toàn. Sự tác động tư tưởng vẫn có đấu tranh, kế thừa và ảnh hưởng qua lại."
+    },
+    {
+      "id": "WB3-MC52",
+      "kind": "multipleChoice",
+      "number": 52,
+      "pdfPages": [
+        91
+      ],
+      "printedPages": [
+        90
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin, sự ra đời của nhà nước là do:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nguyện vọng của giai cấp thống trị."
+        },
+        {
+          "key": "B",
+          "text": "Nguyện vọng của mỗi quốc gia, dân tộc."
+        },
+        {
+          "key": "C",
+          "text": "Tất yếu, khách quan, do nguyên nhân kinh tế."
+        },
+        {
+          "key": "D",
+          "text": "Do sự phát triển của xã hội."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Nhà nước ra đời từ những điều kiện kinh tế - xã hội khách quan: Lực lượng sản xuất phát triển, chế độ tư hữu xuất hiện và mâu thuẫn giai cấp không thể điều hòa. D quá chung, chưa chỉ ra điều kiện làm cho một tổ chức quyền lực công đặc biệt trở nên cần thiết trong trật tự đó."
+    },
+    {
+      "id": "WB3-MC53",
+      "kind": "multipleChoice",
+      "number": 53,
+      "pdfPages": [
+        91
+      ],
+      "printedPages": [
+        90
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Phát biểu nào sau đây phản ánh đúng bản chất của nhà nước theo quan điểm mácxít?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Công cụ quyền lực quản lý xã hội vì mục đích chung."
+        },
+        {
+          "key": "B",
+          "text": "Công cụ quyền lực thực hiện chuyên chính giai cấp của giai cấp thống trị."
+        },
+        {
+          "key": "C",
+          "text": "Công cụ quyền lực thực hiện chuyên chính giai cấp."
+        },
+        {
+          "key": "D",
+          "text": "Công cụ quyền lực của giai cấp thống trị."
+        }
+      ],
+      "answer": null,
+      "explanation": "B diễn đạt đầy đủ nhất vai trò công cụ chuyên chính của giai cấp thống trị. Tuy nhiên, C và D cũng nêu những nội dung đúng, chỉ ít cụ thể hơn. Vì câu hỏi không yêu cầu chọn phát biểu đầy đủ nhất, ba phương án này chồng lấn và không đủ cơ sở để chấm duy nhất một lựa chọn. A chỉ nêu chức năng quản lý việc chung mà bỏ qua bản chất giai cấp.",
+      "note": "B, C và D chồng lấn về nội dung; phân biệt cách diễn đạt đầy đủ với tính đúng của từng nhận định."
+    },
+    {
+      "id": "WB3-MC54",
+      "kind": "multipleChoice",
+      "number": 54,
+      "pdfPages": [
+        91
+      ],
+      "printedPages": [
+        90
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Theo quan điểm của chủ nghĩa duy vật lịch sử, nguyên nhân trực tiếp làm xuất hiện nhà nước là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự thỏa thuận của mọi tầng lớp trong xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Những mâu thuẫn giai cấp không thể điều hòa được."
+        },
+        {
+          "key": "C",
+          "text": "Tham vọng quyền lực của các chính trị gia."
+        },
+        {
+          "key": "D",
+          "text": "Lý tưởng cao đẹp của những người ưu tú trong xã hội."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Những mâu thuẫn giai cấp không thể điều hòa trong trật tự hiện có dẫn đến sự ra đời của một quyền lực công đặc biệt để duy trì trật tự đó. Cần phân biệt nguyên nhân trực tiếp này với nguyên nhân sâu xa nằm trong sự phát triển sản xuất, sản phẩm dư thừa và chế độ tư hữu."
+    },
+    {
+      "id": "WB3-MC55",
+      "kind": "multipleChoice",
+      "number": 55,
+      "pdfPages": [
+        91,
+        92
+      ],
+      "printedPages": [
+        90,
+        91
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Theo quan điểm của chủ nghĩa duy vật lịch sử, nguyên nhân sâu xa làm xuất hiện nhà nước là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự thỏa thuận của mọi tầng lớp trong xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Sự ra đời của chế độ tư hữu."
+        },
+        {
+          "key": "C",
+          "text": "Mong ước của nhân dân vì một xã hội tốt đẹp."
+        },
+        {
+          "key": "D",
+          "text": "Đấu tranh giai cấp."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Trong các lựa chọn, chế độ tư hữu là căn cứ kinh tế dẫn đến phân hóa và đối kháng giai cấp. Đi sâu hơn, chính lực lượng sản xuất phát triển và sản phẩm dư thừa tương đối tạo điều kiện cho tư hữu xuất hiện. Mâu thuẫn giai cấp không thể điều hòa là nguyên nhân trực tiếp của nhà nước."
+    },
+    {
+      "id": "WB3-MC56",
+      "kind": "multipleChoice",
+      "number": 56,
+      "pdfPages": [
+        92
+      ],
+      "printedPages": [
+        91
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Nhận định nào sau đây là SAI?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giai cấp bị trị chịu ảnh hưởng tư tưởng của giai cấp thống trị."
+        },
+        {
+          "key": "B",
+          "text": "Giai cấp thống trị không chịu ảnh hưởng tư tưởng của giai cấp bị trị."
+        },
+        {
+          "key": "C",
+          "text": "Giai cấp bị trị có thể có hệ tư tưởng riêng của mình."
+        },
+        {
+          "key": "D",
+          "text": "Giai cấp thống trị luôn tìm cách áp đặt hệ tư tưởng của mình cho các giai cấp khác."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Sự tác động tư tưởng không chỉ diễn ra một chiều. Các giai cấp có thể chịu ảnh hưởng của nhau thông qua tranh luận, đấu tranh và đời sống chung, dù khả năng tổ chức và truyền bá không ngang nhau. Có địa vị thống trị không có nghĩa đứng ngoài mọi ảnh hưởng tư tưởng của lực lượng bị trị."
+    },
+    {
+      "id": "WB3-MC57",
+      "kind": "multipleChoice",
+      "number": 57,
+      "pdfPages": [
+        92
+      ],
+      "printedPages": [
+        91
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Điền vào chỗ trống: “Theo quan điểm của chủ nghĩa duy vật lịch sử, nhà nước xuất hiện và tồn tại ...”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ngay khi xã hội loài người xuất hiện."
+        },
+        {
+          "key": "B",
+          "text": "Trong một giai đoạn lịch sử nhất định."
+        },
+        {
+          "key": "C",
+          "text": "Từ trước khi xã hội có giai cấp."
+        },
+        {
+          "key": "D",
+          "text": "Trong mọi giai đoạn lịch sử."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Nhà nước là phạm trù lịch sử, gắn với sự xuất hiện của chế độ tư hữu và những mâu thuẫn giai cấp không thể điều hòa. Cộng đồng người có thể có tổ chức tự quản trước khi nhà nước ra đời. Lý luận Mác cũng đặt ra khả năng nhà nước tiêu vong khi những điều kiện tồn tại của nó được khắc phục."
+    },
+    {
+      "id": "WB3-MC58",
+      "kind": "multipleChoice",
+      "number": 58,
+      "pdfPages": [
+        92
+      ],
+      "printedPages": [
+        91
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Chức năng giai cấp của nhà nước theo quan điểm của chủ nghĩa duy vật lịch sử là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Củng cố, mở rộng cơ sở chính trị xã hội cho sự thống trị của giai cấp cầm quyền."
+        },
+        {
+          "key": "B",
+          "text": "Tổ chức kiến tạo kết cấu giai cấp của xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Thực hiện chuyên chính, trấn áp các giai cấp đối lập."
+        },
+        {
+          "key": "D",
+          "text": "Thúc đẩy sự hình thành và phát triển của các giai cấp mới."
+        }
+      ],
+      "answer": null,
+      "explanation": "C nêu trực tiếp nội dung chuyên chính và trấn áp lực lượng đối lập. A cũng mô tả hoạt động phục vụ duy trì sự thống trị của giai cấp cầm quyền, nên thuộc phương diện chức năng giai cấp. B và D không phải định nghĩa của chức năng này. Nếu yêu cầu một đáp án duy nhất, đề cần bổ sung tiêu chí phân biệt A với C thay vì coi A hoàn toàn sai.",
+      "note": "A và C đều phản ánh chức năng giai cấp ở mức độ khác nhau; không đủ điều kiện chấm độc nhất."
+    },
+    {
+      "id": "WB3-MC59",
+      "kind": "multipleChoice",
+      "number": 59,
+      "pdfPages": [
+        92
+      ],
+      "printedPages": [
+        91
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Căn cứ để phân loại kiểu nhà nước theo quan điểm của chủ nghĩa duy vật lịch sử là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chức năng của nhà nước."
+        },
+        {
+          "key": "B",
+          "text": "Bản chất giai cấp của nhà nước."
+        },
+        {
+          "key": "C",
+          "text": "Nguồn gốc của nhà nước."
+        },
+        {
+          "key": "D",
+          "text": "Cách thức tổ chức quyền lực nhà nước."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Kiểu nhà nước được phân biệt theo bản chất giai cấp và cơ sở kinh tế tương ứng. Cách thức tổ chức quyền lực dùng để nhận diện hình thức nhà nước, chẳng hạn quân chủ hoặc cộng hòa. Hai cách phân loại trả lời những câu hỏi khác nhau nên không thể đồng nhất."
+    },
+    {
+      "id": "WB3-MC60",
+      "kind": "multipleChoice",
+      "number": 60,
+      "pdfPages": [
+        92
+      ],
+      "printedPages": [
+        91
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Nhà nước trong thời kỳ quá độ lên chủ nghĩa xã hội là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nhà nước dân chủ cộng hòa."
+        },
+        {
+          "key": "B",
+          "text": "Nhà nước dân chủ tư sản."
+        },
+        {
+          "key": "C",
+          "text": "Cộng hòa đại nghị."
+        },
+        {
+          "key": "D",
+          "text": "Nhà nước dân chủ nhân dân."
+        }
+      ],
+      "answer": null,
+      "explanation": "Cần xác định bản chất là nhà nước kiểu mới của giai cấp công nhân và nhân dân lao động, không lấy một hình thức tổ chức làm định nghĩa chung cho mọi trường hợp quá độ. D gợi đến một hình thức lịch sử của nhà nước dân chủ nhân dân nhưng chưa đủ để khẳng định đó là tên gọi phổ quát. A và C cũng là các cách gọi về hình thức tổ chức, còn B không thể hiện bản chất cần xác định. Vì các lựa chọn lẫn tiêu chí, câu hỏi chưa có một đáp án chung đủ chính xác.",
+      "note": "Phân biệt kiểu nhà nước với hình thức nhà nước; D không phải tên gọi phổ quát cho mọi thời kỳ quá độ."
+    },
+    {
+      "id": "WB3-MC61",
+      "kind": "multipleChoice",
+      "number": 61,
+      "pdfPages": [
+        92,
+        93
+      ],
+      "printedPages": [
+        91,
+        92
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Xu hướng phát triển của nhà nước trong chủ nghĩa cộng sản là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Củng cố vững chắc quyền lực giai cấp."
+        },
+        {
+          "key": "B",
+          "text": "Chuyển hóa thành nhà nước cộng sản."
+        },
+        {
+          "key": "C",
+          "text": "Chuyển hóa thành nhà nước toàn cầu."
+        },
+        {
+          "key": "D",
+          "text": "Nhà nước tự tiêu vong."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Trong lý luận Mác – Lênin, khi những điều kiện kinh tế - xã hội làm nảy sinh đối kháng giai cấp được khắc phục, nhà nước với tư cách bộ máy thống trị giai cấp sẽ dần tiêu vong. Đây là một quá trình có điều kiện, không phải quyết định xóa nhà nước ngay lập tức. Việc tổ chức những công việc chung của xã hội vẫn cần được thực hiện."
+    },
+    {
+      "id": "WB3-MC62",
+      "kind": "multipleChoice",
+      "number": 62,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Việc lật đổ một chế độ chính trị đã lỗi thời và thiết lập một chế độ chính trị tiến bộ hơn của giai cấp cách mạng được gọi là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đảo chính."
+        },
+        {
+          "key": "B",
+          "text": "Cách mạng xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Bạo loạn."
+        },
+        {
+          "key": "D",
+          "text": "Cách mạng văn hóa."
+        }
+      ],
+      "answer": "B",
+      "explanation": "B phù hợp nhất với nội dung thay đổi chế độ và quyền lực chính trị. Tuy nhiên, cách mạng xã hội có nghĩa rộng hơn việc thay người cầm quyền: Đó là biến đổi căn bản về chất của xã hội, gắn với quan hệ kinh tế và kiến trúc thượng tầng. Một cuộc đảo chính chỉ thay nhóm nắm quyền chưa đủ tạo thành cách mạng xã hội."
+    },
+    {
+      "id": "WB3-MC63",
+      "kind": "multipleChoice",
+      "number": 63,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Khái niệm nào sau đây được dùng để chỉ một cộng đồng người ổn định được hình thành trong lịch sử trong một lãnh thổ nhất định, có chung mối liên hệ về kinh tế, ngôn ngữ và một nền văn hóa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bộ lạc."
+        },
+        {
+          "key": "B",
+          "text": "Dân tộc."
+        },
+        {
+          "key": "C",
+          "text": "Quốc gia."
+        },
+        {
+          "key": "D",
+          "text": "Bộ tộc."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Các dấu hiệu về lãnh thổ, liên hệ kinh tế, ngôn ngữ và văn hóa hướng đến khái niệm dân tộc theo nghĩa cộng đồng lịch sử rộng lớn. Cần phân biệt với bộ lạc dựa nhiều vào liên kết thị tộc và với quốc gia như một tổ chức cộng đồng chính trị. Trong tiếng Việt, dân tộc còn có nghĩa tộc người, nên phải đọc đúng ngữ cảnh của câu hỏi."
+    },
+    {
+      "id": "WB3-MC64",
+      "kind": "multipleChoice",
+      "number": 64,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Tồn tại xã hội bao gồm những yếu tố nào sau đây?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phương thức sản xuất và điều kiện tự nhiên - hoàn cảnh địa lý."
+        },
+        {
+          "key": "B",
+          "text": "Phương thức sản xuất, điều kiện tự nhiên - hoàn cảnh địa lý và dân cư."
+        },
+        {
+          "key": "C",
+          "text": "Phương thức sản xuất, xã hội và dân cư."
+        },
+        {
+          "key": "D",
+          "text": "Điều kiện tự nhiên - hoàn cảnh địa lý và dân cư."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Tồn tại xã hội bao gồm sinh hoạt vật chất và các điều kiện sinh hoạt vật chất của xã hội. Những yếu tố cơ bản được nêu là phương thức sản xuất, điều kiện tự nhiên - hoàn cảnh địa lý và dân cư. Phương thức sản xuất giữ vai trò cơ bản nhất trong sự tác động giữa các yếu tố này."
+    },
+    {
+      "id": "WB3-MC65",
+      "kind": "multipleChoice",
+      "number": 65,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Khái niệm ý thức xã hội dùng để chỉ:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phương diện sinh hoạt vật chất của xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Phương diện sinh hoạt tinh thần của một giai cấp."
+        },
+        {
+          "key": "C",
+          "text": "Phương diện sinh hoạt tinh thần của đời sống xã hội, nảy sinh từ tồn tại xã hội và phản ánh tồn tại xã hội trong những giai đoạn nhất định."
+        },
+        {
+          "key": "D",
+          "text": "Những đặc trưng về tâm lý, tính cách của một cộng đồng dân tộc."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Ý thức xã hội có phạm vi rộng, gồm những quan điểm, tư tưởng, tình cảm, tâm trạng và truyền thống phản ánh đời sống xã hội. Nó không chỉ là tinh thần của một giai cấp hoặc tâm lý của một dân tộc. A mô tả mặt vật chất, thuộc tồn tại xã hội."
+    },
+    {
+      "id": "WB3-MC66",
+      "kind": "multipleChoice",
+      "number": 66,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Mối quan hệ giữa ý thức xã hội và ý thức cá nhân biểu thị mối quan hệ giữa:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nội dung và hình thức."
+        },
+        {
+          "key": "B",
+          "text": "Cái chung và cái riêng."
+        },
+        {
+          "key": "C",
+          "text": "Bản chất và hiện tượng."
+        },
+        {
+          "key": "D",
+          "text": "Cái chung và cái đơn nhất."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Ý thức xã hội biểu hiện những phương diện chung trong đời sống tinh thần, còn ý thức cá nhân là đời sống tinh thần của một con người cụ thể. Cái riêng bao hàm cái chung và những nét riêng biệt. Không thể coi ý thức cá nhân chỉ là cái đơn nhất, hoàn toàn không có nội dung xã hội chung."
+    },
+    {
+      "id": "WB3-MC67",
+      "kind": "multipleChoice",
+      "number": 67,
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        92
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Lựa chọn phương án đúng về đặc điểm hệ tư tưởng:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hệ tư tưởng ra đời trực tiếp từ tâm lý xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Hệ tư tưởng là hệ thống những quan điểm, hệ thống hóa, khái quát hóa thành lý luận, thành các học thuyết chính trị - xã hội phản ánh lợi ích của một giai cấp nhất định."
+        },
+        {
+          "key": "C",
+          "text": "Trong xã hội có giai cấp thì chỉ có hệ tư tưởng biểu hiện tính giai cấp của ý thức xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Hệ tư tưởng không ảnh hưởng đến sự phát triển của khoa học."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Hệ tư tưởng được hình thành qua hoạt động khái quát và xây dựng lý luận, không phải sự cộng lại tự phát của tâm trạng hay thói quen. Nó liên hệ và tác động qua lại với tâm lý xã hội. Tính giai cấp cũng có thể biểu hiện trong tâm lý xã hội, còn hệ tư tưởng có thể ảnh hưởng tới định hướng nghiên cứu khoa học."
+    },
+    {
+      "id": "WB3-MC68",
+      "kind": "multipleChoice",
+      "number": 68,
+      "pdfPages": [
+        93,
+        94
+      ],
+      "printedPages": [
+        92,
+        93
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Lựa chọn phương án đúng về vai trò của tồn tại xã hội trong quan hệ biện chứng với ý thức xã hội:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức xã hội hoàn toàn phụ thuộc một cách thụ động vào tồn tại xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Tồn tại xã hội quyết định ý thức xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Khi tồn tại xã hội thay đổi thì toàn bộ các yếu tố cấu thành ý thức xã hội sẽ biến đổi ngay cùng tồn tại xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Tồn tại xã hội có vai trò quyết định đối với các hình thái ý thức xã hội một cách đơn giản, trực tiếp, không qua các khâu trung gian."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Tồn tại xã hội quy định nguồn gốc, nội dung và chiều hướng biến đổi cơ bản của ý thức xã hội. Sự quy định diễn ra qua những khâu trung gian và không xóa tính độc lập tương đối. Vì vậy, ý thức có thể biến đổi chậm, có thể dự báo vượt trước và có thể tác động trở lại đời sống vật chất."
+    },
+    {
+      "id": "WB3-MC69",
+      "kind": "multipleChoice",
+      "number": 69,
+      "pdfPages": [
+        94
+      ],
+      "printedPages": [
+        93
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Nhận định nào sau đây là đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không phải ý thức quyết định đời sống mà chính đời sống quyết định ý thức."
+        },
+        {
+          "key": "B",
+          "text": "Không phải đời sống quyết định ý thức mà chính ý thức quyết định đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Đời sống không quyết định ý thức, mà ý thức cũng không quyết định đời sống."
+        },
+        {
+          "key": "D",
+          "text": "Đời sống và ý thức tồn tại độc lập với nhau."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Trong ngữ cảnh duy vật lịch sử, đời sống chỉ những điều kiện và hoạt động hiện thực của con người. Tư tưởng cần được giải thích từ đời sống ấy, thay vì coi nó là nguyên nhân tự thân của lịch sử. Thừa nhận chiều quyết định không phủ nhận khả năng tư tưởng định hướng hành động và tác động trở lại xã hội."
+    },
+    {
+      "id": "WB3-MC70",
+      "kind": "multipleChoice",
+      "number": 70,
+      "pdfPages": [
+        94
+      ],
+      "printedPages": [
+        93
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Lựa chọn phương án đúng về tính độc lập tương đối của ý thức xã hội:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Những tư tưởng khoa học tiên tiến có thể vượt trước sự phát triển của tồn tại xã hội nên có thể thoát ly tồn tại xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Tồn tại xã hội thay đổi nhưng có một số bộ phận của ý thức xã hội chưa thay đổi ngay cùng với tồn tại xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Các hình thái ý thức xã hội trong sự phát triển không thể tác động qua lại lẫn nhau."
+        },
+        {
+          "key": "D",
+          "text": "Trong xã hội có giai cấp, tính chất kế thừa của ý thức xã hội không gắn liền với tính giai cấp của nó."
+        }
+      ],
+      "answer": "B",
+      "explanation": "B mô tả độ trễ của một bộ phận ý thức xã hội. A sai ở kết luận “thoát ly”, vì dự báo khoa học vẫn phải dựa vào việc nhận thức những quan hệ và xu hướng hiện thực. Các hình thái ý thức có tác động qua lại, còn việc kế thừa tư tưởng chịu ảnh hưởng của điều kiện và lợi ích xã hội."
+    },
+    {
+      "id": "WB3-MC71",
+      "kind": "multipleChoice",
+      "number": 71,
+      "pdfPages": [
+        94
+      ],
+      "printedPages": [
+        93
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Ý thức xã hội gồm các hình thái ý thức xã hội cơ bản nào sau đây?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức chính trị, ý thức pháp quyền, ý thức đạo đức, ý thức văn hóa, ý thức tôn giáo, ý thức khoa học, ý thức triết học."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức chính trị, ý thức pháp quyền, ý thức đạo đức, ý thức thẩm mỹ, ý thức tôn giáo, ý thức khoa học, ý thức triết học."
+        },
+        {
+          "key": "C",
+          "text": "Ý thức chính trị, ý thức pháp quyền, ý thức đạo đức, ý thức dân tộc, ý thức tôn giáo, ý thức khoa học, ý thức triết học."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức chính trị, ý thức pháp quyền, ý thức văn hóa, ý thức môi trường, ý thức tôn giáo, ý thức khoa học, ý thức triết học."
+        }
+      ],
+      "answer": "B",
+      "explanation": "B nêu các hình thái cơ bản trong cách phân chia đang học. Chúng được phân biệt theo đối tượng phản ánh, phương thức phản ánh và vai trò xã hội. “Văn hóa” có phạm vi rộng, không dùng để thay tên hình thái ý thức thẩm mỹ trong danh sách này."
+    },
+    {
+      "id": "WB3-MC72",
+      "kind": "multipleChoice",
+      "number": 72,
+      "pdfPages": [
+        94,
+        95
+      ],
+      "printedPages": [
+        93,
+        94
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Xét đến cùng, nhân tố quyết định sự thắng lợi của một chế độ xã hội mới theo quan điểm của chủ nghĩa duy vật lịch sử là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sức mạnh của nhà nước."
+        },
+        {
+          "key": "B",
+          "text": "Sức mạnh của pháp luật."
+        },
+        {
+          "key": "C",
+          "text": "Năng suất lao động xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Hiệu quả hoạt động của hệ thống chính trị."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Năng suất lao động xã hội biểu hiện khả năng tạo ra những điều kiện vật chất để duy trì và phát triển đời sống. Trong lập luận này, ưu thế của một chế độ phải được thể hiện trên nền tảng sản xuất hiện thực. “Xét đến cùng” không loại bỏ vai trò tổ chức của nhà nước, pháp luật và những điều kiện lịch sử khác."
+    },
+    {
+      "id": "WB3-MC73",
+      "kind": "multipleChoice",
+      "number": 73,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Trong các hình thái ý thức xã hội dưới đây, hình thái ý thức xã hội nào ra đời ngay trong xã hội cộng sản nguyên thủy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức triết học."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức thẩm mỹ."
+        },
+        {
+          "key": "C",
+          "text": "Ý thức chính trị."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức giai cấp."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Ý thức thẩm mỹ đã xuất hiện trong đời sống cộng đồng trước khi có phân hóa giai cấp và nhà nước. Ý thức chính trị và giai cấp gắn với sự phân chia giai cấp, còn triết học hình thành ở trình độ khái quát lý luận cao hơn. Việc xác định giai đoạn hình thành không có nghĩa hình thái ấy đã phát triển đầy đủ như về sau."
+    },
+    {
+      "id": "WB3-MC74",
+      "kind": "multipleChoice",
+      "number": 74,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Chủ nghĩa duy vật lịch sử coi con người là một bộ phận của giới tự nhiên, còn giới tự nhiên là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đối tượng chinh phục của con người."
+        },
+        {
+          "key": "B",
+          "text": "Đối tượng cải tạo của con người."
+        },
+        {
+          "key": "C",
+          "text": "Thân thể vô cơ của con người."
+        },
+        {
+          "key": "D",
+          "text": "Đối tượng vô cơ của con người."
+        }
+      ],
+      "answer": "C",
+      "explanation": "“Thân thể vô cơ” chỉ giới tự nhiên bên ngoài cơ thể mà con người phải liên hệ thường xuyên để sống và lao động. Không khí, nước, đất và vật liệu là những điều kiện tồn tại ấy. Cách nói nhấn mạnh sự phụ thuộc và gắn bó với tự nhiên, không cho phép coi tự nhiên chỉ là đối tượng khai thác tùy ý."
+    },
+    {
+      "id": "WB3-MC75",
+      "kind": "multipleChoice",
+      "number": 75,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Nội dung nào thể hiện đúng nhất quan điểm của chủ nghĩa duy vật lịch sử về con người?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con người là sản phẩm của lịch sử, luôn chịu tác động của lịch sử."
+        },
+        {
+          "key": "B",
+          "text": "Con người vừa là chủ thể của lịch sử, vừa là sản phẩm của lịch sử."
+        },
+        {
+          "key": "C",
+          "text": "Con người sáng tạo ra lịch sử theo mong muốn chủ quan của mình."
+        },
+        {
+          "key": "D",
+          "text": "Con người vừa là sản phẩm của lịch sử, vừa là bộ phận của lịch sử."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Con người tiếp nhận những điều kiện đã có từ lịch sử, đồng thời cải biến chúng bằng hoạt động thực tiễn. Vai trò chủ thể luôn có điều kiện, còn vai trò sản phẩm không đồng nghĩa thụ động. A và D chỉ nhấn mạnh một phía, trong khi C tuyệt đối hóa ý muốn cá nhân."
+    },
+    {
+      "id": "WB3-MC76",
+      "kind": "multipleChoice",
+      "number": 76,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Điền vào chỗ trống: “Bản chất con người không phải là một cái trừu tượng cố hữu của cá nhân riêng biệt. Trong ...(1)... của nó, bản chất con người là ...(2)... những quan hệ xã hội”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1) Tính vật chất, 2) Tổng hòa."
+        },
+        {
+          "key": "B",
+          "text": "1) Tính vật chất, 2) Tổng hợp."
+        },
+        {
+          "key": "C",
+          "text": "1) Tính hiện thực, 2) Tổng số."
+        },
+        {
+          "key": "D",
+          "text": "1) Tính hiện thực, 2) Tổng hòa."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Hai cụm cần điền là “tính hiện thực” và “tổng hòa”. Con người phải được xem trong những quan hệ xã hội cụ thể, có lịch sử. Tổng hòa chỉ sự liên hệ và tác động giữa các quan hệ ấy, không phải phép cộng cơ học và cũng không phủ nhận cơ sở sinh học của con người."
+    },
+    {
+      "id": "WB3-MC77",
+      "kind": "multipleChoice",
+      "number": 77,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Nội dung nào trong các nội dung được nêu dưới đây thể hiện đúng nhất xuất phát điểm nghiên cứu chủ nghĩa duy vật lịch sử của C. Mác và Ph. Ăngghen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con người cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Con người trừu tượng."
+        },
+        {
+          "key": "C",
+          "text": "Con người hiện thực."
+        },
+        {
+          "key": "D",
+          "text": "Con người lý tưởng."
+        }
+      ],
+      "answer": "C",
+      "explanation": "“Con người hiện thực” là cách xác định đầy đủ tiền đề: Những con người đang sống và hoạt động trong các điều kiện vật chất, lịch sử nhất định. “Con người cụ thể” ở A có thể gần nghĩa trong cách nói thông thường, nhưng chưa tự xác định nội dung về hoạt động và điều kiện sinh hoạt mà khái niệm đang nhấn mạnh."
+    },
+    {
+      "id": "WB3-MC78",
+      "kind": "multipleChoice",
+      "number": 78,
+      "pdfPages": [
+        95
+      ],
+      "printedPages": [
+        94
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Cống hiến quan trọng nhất của triết học Mác về bản chất con người là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ ra bản chất con người là chủ thể sáng tạo ra lịch sử."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ ra hai mặt cơ bản tạo thành bản chất con người là cái sinh học và cái xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ ra vai trò của các quan hệ xã hội trong việc hình thành bản chất con người."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ ra bản chất con người là kết quả của sự tiến hóa lâu dài của giới tự nhiên."
+        }
+      ],
+      "answer": "C",
+      "explanation": "C thể hiện bước chuyển từ con người trừu tượng, biệt lập sang con người trong tổng hòa những quan hệ xã hội có lịch sử. Các mặt sinh học, tiến hóa và vai trò sáng tạo đều cần được xét đến, nhưng riêng chúng chưa nêu điểm phát triển có tính quyết định của luận điểm về bản chất xã hội."
+    },
+    {
+      "id": "WB3-MC79",
+      "kind": "multipleChoice",
+      "number": 79,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Trong các nội dung được nêu dưới đây, nội dung nào KHÔNG thể hiện đúng quan điểm của triết học Mác – Lênin về hiện tượng tha hóa của con người?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tha hóa con người là phạm trù vĩnh viễn."
+        },
+        {
+          "key": "B",
+          "text": "Tha hóa con người là hiện tượng mang tính lịch sử."
+        },
+        {
+          "key": "C",
+          "text": "Tha hóa con người không chỉ tồn tại trong lĩnh vực đạo đức."
+        },
+        {
+          "key": "D",
+          "text": "Tha hóa con người phát triển cao độ trong xã hội tư bản chủ nghĩa."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Tha hóa gắn với những điều kiện xã hội và quan hệ sản xuất xác định, vì vậy có tính lịch sử và có thể được khắc phục khi những điều kiện ấy thay đổi. Nó không chỉ chỉ sự suy thoái đạo đức, mà còn chỉ quan hệ trong đó hoạt động và sản phẩm do con người tạo ra trở thành lực lượng xa lạ, chi phối họ."
+    },
+    {
+      "id": "WB3-MC80",
+      "kind": "multipleChoice",
+      "number": 80,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Theo quan điểm của triết học Mác – Lênin:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lịch sử được quyết định bởi quần chúng nhân dân."
+        },
+        {
+          "key": "B",
+          "text": "Lịch sử được quyết định bởi mệnh trời."
+        },
+        {
+          "key": "C",
+          "text": "Lịch sử được quyết định bởi cá nhân hào kiệt."
+        },
+        {
+          "key": "D",
+          "text": "Lịch sử không do ai quyết định, vì nó diễn ra theo quy luật tự nhiên."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Quần chúng nhân dân là lực lượng tạo ra của cải, giá trị tinh thần và thực hiện những biến đổi xã hội. Vai trò quyết định của họ không phủ nhận đóng góp của cá nhân kiệt xuất, nhưng đóng góp ấy chỉ được hiện thực hóa trong những điều kiện lịch sử và hoạt động của những lực lượng xã hội cụ thể."
+    },
+    {
+      "id": "WB3-TF01",
+      "kind": "trueFalse",
+      "number": 1,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Sản xuất vật chất là hoạt động cơ bản phân biệt giữa con người với các loài động vật.",
+      "answer": "Đúng",
+      "explanation": "Con người sản xuất tư liệu sinh hoạt bằng công cụ, có mục đích và trong những quan hệ hợp tác được truyền lại qua các thế hệ. Chính hoạt động sản xuất xã hội ấy tạo nền tảng cho ngôn ngữ, tư duy và các quan hệ người. Nhận định không phủ nhận động vật có hoạt động kiếm ăn hay những hành vi sử dụng vật thể."
+    },
+    {
+      "id": "WB3-TF02",
+      "kind": "trueFalse",
+      "number": 2,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Điều kiện tự nhiên là yếu tố quyết định sự phát triển của sản xuất vật chất và do đó là yếu tố quyết định sự phát triển của xã hội loài người.",
+      "answer": "Sai",
+      "explanation": "Điều kiện tự nhiên là tiền đề thường xuyên, có thể thuận lợi hoặc gây trở ngại, nhưng tác dụng của nó được thực hiện thông qua trình độ sản xuất và tổ chức xã hội. Những xã hội có điều kiện tự nhiên gần nhau vẫn có thể có con đường phát triển khác nhau. Không thể dùng địa lý làm nhân tố duy nhất quyết định lịch sử."
+    },
+    {
+      "id": "WB3-TF03",
+      "kind": "trueFalse",
+      "number": 3,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Trình độ của lực lượng sản xuất nói lên trình độ chinh phục tự nhiên của con người.",
+      "answer": "Đúng",
+      "explanation": "Ở đây “chinh phục” được hiểu là năng lực nhận thức và cải biến tự nhiên để tạo ra tư liệu sinh hoạt, biểu hiện qua người lao động, công cụ, tri thức và tổ chức kỹ thuật. Năng lực ấy vẫn chịu các quy luật tự nhiên và giới hạn sinh thái, không có nghĩa con người được tùy ý phá hủy điều kiện sống của mình."
+    },
+    {
+      "id": "WB3-TF04",
+      "kind": "trueFalse",
+      "number": 4,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Quan hệ sản xuất là mối quan hệ giữa con người với con người trong lĩnh vực sản xuất, do đó nó phụ thuộc vào con người và mang tính chủ quan.",
+      "answer": "Sai",
+      "explanation": "Vế đầu đúng nhưng kết luận không đúng. Quan hệ do con người thực hiện vẫn chịu sự quy định khách quan của lực lượng sản xuất và điều kiện lịch sử. Hoạt động có ý thức có thể cải biến các quan hệ ấy, nhưng không tạo ra bất cứ kiểu quan hệ sản xuất nào chỉ bằng mong muốn."
+    },
+    {
+      "id": "WB3-TF05",
+      "kind": "trueFalse",
+      "number": 5,
+      "pdfPages": [
+        96
+      ],
+      "printedPages": [
+        95
+      ],
+      "topic": "san-xuat-vat-chat",
+      "prompt": "Sự phát triển của lực lượng sản xuất chỉ bị kìm hãm khi quan hệ sản xuất lạc hậu hơn so với trình độ phát triển của lực lượng sản xuất.",
+      "answer": "Sai",
+      "explanation": "Sự không phù hợp không chỉ có dạng quan hệ sản xuất lạc hậu. Việc áp đặt những quan hệ vượt quá điều kiện vật chất có thể làm suy yếu động lực, hợp tác và hiệu quả sản xuất. Điều cần xem là sự phù hợp thực chất với trình độ và tính chất lực lượng sản xuất, không phải một tên gọi được coi là tiến bộ."
+    },
+    {
+      "id": "WB3-TF06",
+      "kind": "trueFalse",
+      "number": 6,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Khi cơ sở hạ tầng thay đổi thì ngay lập tức, mọi bộ phận của kiến trúc thượng tầng sẽ phải thay đổi theo.",
+      "answer": "Sai",
+      "explanation": "Kiến trúc thượng tầng có tính độc lập tương đối, các bộ phận có thể thay đổi không cùng nhịp và còn kế thừa những yếu tố cũ. Tư tưởng, tập quán hoặc thiết chế có thể tồn tại sau khi những điều kiện kinh tế từng sản sinh ra chúng đã biến đổi. Vai trò quyết định không đồng nghĩa quan hệ đồng thời tuyệt đối."
+    },
+    {
+      "id": "WB3-TF07",
+      "kind": "trueFalse",
+      "number": 7,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Chủ nghĩa cộng sản là một tất yếu của lịch sử.",
+      "answer": "Đúng",
+      "explanation": "Trong học thuyết hình thái kinh tế - xã hội của Mác, đây là kết luận lý luận về xu hướng thay thế phương thức sản xuất tư bản chủ nghĩa, gắn với sự phát triển và tính xã hội hóa của lực lượng sản xuất. “Tất yếu” không có nghĩa tự động diễn ra hoặc có thể xác định một lịch trình cố định. Quá trình vẫn đòi hỏi những tiền đề vật chất, tổ chức và hoạt động có ý thức của con người."
+    },
+    {
+      "id": "WB3-TF08",
+      "kind": "trueFalse",
+      "number": 8,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Mọi xã hội trong lịch sử đều phát triển tuần tự theo năm hình thái kinh tế - xã hội từ thấp đến cao.",
+      "answer": "Sai",
+      "explanation": "Sơ đồ năm hình thái là khái quát lý luận về tiến trình chung, không phải lịch trình bắt buộc của từng dân tộc. Điều kiện lịch sử, giao lưu và khả năng tiếp thu thành tựu cho phép những con đường khác nhau hoặc phát triển rút ngắn. Bỏ qua một hình thái không có nghĩa bỏ qua các điều kiện vật chất cần thiết của phát triển."
+    },
+    {
+      "id": "WB3-TF09",
+      "kind": "trueFalse",
+      "number": 9,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Quá trình phát triển của các hình thái kinh tế - xã hội là quá trình ngẫu nhiên.",
+      "answer": "Sai",
+      "explanation": "Quá trình có tính lịch sử - tự nhiên và chịu sự chi phối của những quy luật khách quan, nhất là quan hệ giữa lực lượng sản xuất với quan hệ sản xuất và giữa cơ sở hạ tầng với kiến trúc thượng tầng. Các yếu tố ngẫu nhiên vẫn ảnh hưởng đến hình thức, nhịp độ và kết quả cụ thể, nhưng không làm toàn bộ tiến trình trở thành ngẫu nhiên thuần túy."
+    },
+    {
+      "id": "WB3-TF10",
+      "kind": "trueFalse",
+      "number": 10,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Nhà nước là bộ máy hành chính đứng trên mọi giai cấp, bảo vệ quyền lợi của mọi cá nhân trong xã hội.",
+      "answer": "Sai",
+      "explanation": "Lý luận Mác – Lênin xác định nhà nước mang bản chất giai cấp, bảo vệ những quan hệ kinh tế và trật tự xã hội nhất định. Nhà nước có thể có mức độ độc lập tương đối và thực hiện những công việc chung, nhưng từ đó không thể suy ra mọi lợi ích cá nhân đều được bảo vệ như nhau hoặc quyền lực đứng ngoài các quan hệ giai cấp."
+    },
+    {
+      "id": "WB3-TF11",
+      "kind": "trueFalse",
+      "number": 11,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "nha-nuoc-va-cach-mang",
+      "prompt": "Nhà nước của giai cấp vô sản về bản chất cũng chỉ là bộ máy chuyên chế để thực hiện mục tiêu chính trị của giai cấp này.",
+      "answer": "Sai",
+      "explanation": "Từ “chỉ” thu hẹp nhà nước kiểu mới vào một chức năng. Trong quan niệm Mác – Lênin, nhà nước của giai cấp công nhân và nhân dân lao động còn có nhiệm vụ tổ chức xây dựng xã hội, phát triển sản xuất và mở rộng quyền làm chủ của nhân dân. Không thể dùng bản chất giai cấp để phủ nhận chức năng xã hội và mục tiêu giải phóng con người."
+    },
+    {
+      "id": "WB3-TF12",
+      "kind": "trueFalse",
+      "number": 12,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Sự khác nhau về giai cấp là do có sự khác nhau về nòi giống.",
+      "answer": "Sai",
+      "explanation": "Giai cấp được xác định bằng địa vị trong hệ thống sản xuất, quan hệ với tư liệu sản xuất, vai trò tổ chức lao động và cách hưởng của cải xã hội. Nòi giống hoặc những đặc điểm sinh học không phải căn cứ phân chia này. Những người cùng tộc người có thể thuộc những giai cấp khác nhau."
+    },
+    {
+      "id": "WB3-TF13",
+      "kind": "trueFalse",
+      "number": 13,
+      "pdfPages": [
+        97
+      ],
+      "printedPages": [
+        96
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Chủ nghĩa dân tộc và đấu tranh giai cấp không có liên quan gì với nhau.",
+      "answer": "Sai",
+      "explanation": "Quan điểm về dân tộc được hình thành và thực hiện bởi những lực lượng xã hội có lợi ích cụ thể, nên có liên hệ với quan hệ và đấu tranh giai cấp. Tuy nhiên, không thể đồng nhất lợi ích dân tộc với lợi ích riêng của một giai cấp. Cũng cần phân biệt lòng yêu nước và yêu cầu độc lập dân tộc với chủ nghĩa dân tộc hẹp hòi, cực đoan."
+    },
+    {
+      "id": "WB3-TF14",
+      "kind": "trueFalse",
+      "number": 14,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Ở các thị tộc và bộ lạc thời nguyên thủy chưa có sự phân hóa giai cấp.",
+      "answer": "Đúng",
+      "explanation": "Nhận định đúng khi nói về thị tộc, bộ lạc trong chế độ cộng sản nguyên thủy. Lực lượng sản xuất còn thấp và quan hệ cộng đồng chưa tạo thành sự phân chia các giai cấp đối kháng. Cuối thời nguyên thủy, sự phát triển sản xuất và tư hữu mới dẫn đến phân hóa, nên không được gán tình trạng không có giai cấp cho mọi cộng đồng mang tên bộ lạc ở mọi thời điểm."
+    },
+    {
+      "id": "WB3-TF15",
+      "kind": "trueFalse",
+      "number": 15,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Trí thức là một giai cấp quan trọng trong xã hội hiện đại.",
+      "answer": "Sai",
+      "explanation": "Trí thức là một tầng lớp có đặc trưng lao động trí óc và chuyên môn, không phải một giai cấp riêng chỉ vì có trình độ học vấn. Các thành viên có thể có quan hệ sở hữu và địa vị sản xuất khác nhau. Việc sửa cách phân loại không làm giảm vai trò của tri thức và đội ngũ trí thức đối với phát triển xã hội."
+    },
+    {
+      "id": "WB3-TF16",
+      "kind": "trueFalse",
+      "number": 16,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Suy cho cùng, ý thức xã hội bao giờ cũng chịu sự quy định của tồn tại xã hội.",
+      "answer": "Đúng",
+      "explanation": "Ý thức xã hội nảy sinh và phát triển trong những điều kiện sống hiện thực, nên xét đến cùng chịu sự quy định của tồn tại xã hội. Sự quy định có thể thông qua những khâu trung gian và truyền thống tư tưởng. Tính độc lập tương đối, khả năng dự báo hoặc tác động trở lại đều không biến ý thức thành lực lượng thoát ly đời sống xã hội."
+    },
+    {
+      "id": "WB3-TF17",
+      "kind": "trueFalse",
+      "number": 17,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Tâm lý xã hội thường là sự phản ánh tự giác đời sống xã hội của một cộng đồng người.",
+      "answer": "Sai",
+      "explanation": "Tâm lý xã hội chủ yếu hình thành trực tiếp, tự phát từ điều kiện sinh hoạt hằng ngày, biểu hiện ở tình cảm, tâm trạng, thói quen và tập quán. Hoạt động khái quát có hệ thống, tự giác thành quan điểm và học thuyết thuộc trình độ hệ tư tưởng. Hai trình độ có quan hệ và ảnh hưởng qua lại, không tách biệt tuyệt đối."
+    },
+    {
+      "id": "WB3-TF18",
+      "kind": "trueFalse",
+      "number": 18,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Con người vừa có bản chất tự nhiên, vừa có bản chất xã hội.",
+      "answer": "Đúng",
+      "explanation": "Con người là thực thể sinh học - xã hội thống nhất. Cơ thể và nhu cầu sống thuộc tự nhiên, còn lao động, ngôn ngữ và nhân cách phát triển trong quan hệ xã hội. Tính xã hội giữ vai trò đặc trưng đối với con người hiện thực, nhưng không xóa bỏ những điều kiện sinh học và sinh thái."
+    },
+    {
+      "id": "WB3-TF19",
+      "kind": "trueFalse",
+      "number": 19,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Con người là sản phẩm thụ động của hoàn cảnh.",
+      "answer": "Sai",
+      "explanation": "Con người tiếp nhận những điều kiện tự nhiên, lịch sử và xã hội có trước mình, đồng thời cải biến chúng bằng lao động và các hoạt động thực tiễn. Mỗi hành động đều có điều kiện nên không thể tùy ý sáng tạo lịch sử, nhưng sự quy định của hoàn cảnh không tước bỏ vai trò chủ thể."
+    },
+    {
+      "id": "WB3-TF20",
+      "kind": "trueFalse",
+      "number": 20,
+      "pdfPages": [
+        98
+      ],
+      "printedPages": [
+        97
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Lịch sử của nhân loại là lịch sử của các vị anh hùng, hào kiệt, các cá nhân kiệt xuất.",
+      "answer": "Sai",
+      "explanation": "Nhận định tuyệt đối hóa cá nhân và bỏ qua quần chúng nhân dân, lực lượng sản xuất của cải, sáng tạo giá trị tinh thần và thực hiện những biến đổi xã hội. Cá nhân kiệt xuất có thể định hướng, tổ chức và thúc đẩy hành động, nhưng tác dụng ấy gắn với điều kiện khách quan và hoạt động của các lực lượng xã hội."
+    },
+    {
+      "id": "WB3-ES01",
+      "kind": "essay",
+      "number": 1,
+      "pdfPages": [
+        99
+      ],
+      "printedPages": [
+        98
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Hãy chỉ ra các yếu tố thuộc về cơ sở hạ tầng, kiến trúc thượng tầng ở Việt Nam hiện nay?",
+      "answer": null,
+      "explanation": "Trước hết cần xác định đúng tiêu chí. Cơ sở hạ tầng là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế, còn kiến trúc thượng tầng là các quan điểm xã hội cùng những thiết chế tương ứng hình thành trên cơ sở ấy.\n\nVề cơ sở hạ tầng, có thể phân tích sự tồn tại của nhiều hình thức sở hữu và tổ chức kinh tế. Xét quan hệ giữa những người cùng góp vốn và lao động trong một hợp tác xã, quan hệ giữa chủ sở hữu và người lao động hưởng lương trong doanh nghiệp, hoặc quan hệ tổ chức và phân phối trong các đơn vị kinh tế khác. Điều cần nhận diện là quyền đối với tư liệu sản xuất, quyền quản lý và cách phân phối kết quả, không chỉ liệt kê tên nhà máy hoặc máy móc.\n\nVề kiến trúc thượng tầng, có thể chỉ ra các quan điểm chính trị, pháp luật, đạo đức, tôn giáo, nghệ thuật và triết học. Những thiết chế như Nhà nước, các tổ chức chính trị, tổ chức chính trị - xã hội và thiết chế tôn giáo là các bộ phận tương ứng. Trong một giao dịch lao động, quan hệ kinh tế giữa các bên thuộc cơ sở hạ tầng, còn những quan điểm và quy tắc pháp lý điều chỉnh giao dịch ấy thuộc kiến trúc thượng tầng.\n\nHai mặt không tách biệt trong đời sống. Quan hệ kinh tế đặt ra nhu cầu điều chỉnh pháp luật và tổ chức quản lý, còn pháp luật và bộ máy thực hiện có thể hỗ trợ hoặc cản trở hoạt động kinh tế. Đường sá, trường học và trạm điện là những công trình vật chất, không phải định nghĩa cơ sở hạ tầng trong câu hỏi này. Khi dùng một quy định pháp luật cụ thể làm dẫn chứng, cần kiểm tra văn bản đang có hiệu lực thay vì suy từ tên khái niệm."
+    },
+    {
+      "id": "WB3-ES02",
+      "kind": "essay",
+      "number": 2,
+      "pdfPages": [
+        99
+      ],
+      "printedPages": [
+        98
+      ],
+      "topic": "hinh-thai-kinh-te-xa-hoi",
+      "prompt": "Tại sao nói sự phát triển của hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên?",
+      "answer": null,
+      "explanation": "Một hình thái kinh tế - xã hội là một chỉnh thể gồm lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng tương ứng. Những yếu tố ấy liên hệ và tác động qua lại theo những quy luật khách quan, không do ý muốn tùy tiện của cá nhân tạo ra.\n\nLực lượng sản xuất phát triển đặt ra yêu cầu đối với quan hệ sản xuất. Khi những quan hệ cũ trở thành trở lực, mâu thuẫn giữa hai mặt tạo yêu cầu cải biến cơ cấu kinh tế. Sự thay đổi ấy tiếp tục tác động đến kiến trúc thượng tầng, trong khi chính trị, pháp luật và tư tưởng có thể tác động trở lại. Con người không thể bỏ qua các quan hệ khách quan này chỉ bằng một quyết định chủ quan.\n\nTuy vậy, quy luật xã hội được thực hiện thông qua hoạt động có ý thức của con người. Các thế hệ kế thừa những điều kiện sẵn có, nhận thức và giải quyết mâu thuẫn trong hoàn cảnh xác định. Mục tiêu, cách tổ chức và năng lực hành động ảnh hưởng tới hình thức, nhịp độ và kết quả của biến đổi. Vì thế, “tự nhiên” chỉ tính khách quan của quá trình, không biến con người thành người quan sát thụ động.\n\nTính quy luật cũng không bắt mọi dân tộc đi qua đầy đủ một lịch trình giống nhau. Điều kiện địa lý, truyền thống, giao lưu quốc tế và khả năng tiếp thu thành tựu tạo nên những con đường cụ thể khác nhau, kể cả phát triển rút ngắn khi có đủ điều kiện. Cần giữ đồng thời tính khách quan, tính lịch sử và vai trò chủ thể, tránh cả duy ý chí lẫn cách hiểu tự động về tiến trình xã hội."
+    },
+    {
+      "id": "WB3-ES03",
+      "kind": "essay",
+      "number": 3,
+      "pdfPages": [
+        99
+      ],
+      "printedPages": [
+        98
+      ],
+      "topic": "giai-cap-va-dan-toc",
+      "prompt": "Tại sao nói mâu thuẫn giai cấp là biểu hiện xã hội của mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất?",
+      "answer": null,
+      "explanation": "Lực lượng sản xuất và quan hệ sản xuất không tồn tại bên ngoài hoạt động của con người. Một quan hệ sở hữu, tổ chức hoặc phân phối luôn gắn với những tập đoàn có địa vị và lợi ích khác nhau. Vì vậy, mâu thuẫn kinh tế có thể được biểu hiện thành quan hệ giữa những lực lượng xã hội cụ thể.\n\nKhi quan hệ sản xuất cũ đã trở thành trở lực đối với sự phát triển lực lượng sản xuất, giai cấp được hưởng lợi từ quan hệ ấy có xu hướng bảo vệ nó. Những lực lượng gắn với yêu cầu phát triển mới lại có lợi ích trong việc thay đổi các quan hệ đang cản trở. Sự đối lập không chỉ là bất đồng nhận thức mà bắt nguồn từ địa vị trong hệ thống sản xuất và cách hưởng của cải xã hội.\n\nTrong phân tích về xã hội tư bản chủ nghĩa của Mác, tính xã hội hóa ngày càng cao của sản xuất mâu thuẫn với quan hệ chiếm hữu tư nhân tư bản chủ nghĩa. Về mặt xã hội, mâu thuẫn được biểu hiện tập trung trong quan hệ giữa giai cấp công nhân và giai cấp tư sản. Muốn hiểu biểu hiện ấy phải nối yêu cầu phát triển sản xuất với quan hệ sở hữu, tổ chức lao động và phân phối.\n\nTuy nhiên, không được quy mọi tranh chấp hoặc mọi mâu thuẫn giai cấp riêng lẻ trực tiếp về một thay đổi kỹ thuật. Chúng còn chịu tác động của chính trị, tư tưởng và điều kiện lịch sử. Đấu tranh giai cấp là một phương thức xã hội để giải quyết mâu thuẫn trong xã hội có đối kháng, còn kết quả cụ thể phụ thuộc vào lực lượng, mục tiêu và khả năng tổ chức thực tiễn."
+    },
+    {
+      "id": "WB3-ES04",
+      "kind": "essay",
+      "number": 4,
+      "pdfPages": [
+        100
+      ],
+      "printedPages": [
+        99
+      ],
+      "topic": "ton-tai-va-y-thuc-xa-hoi",
+      "prompt": "Tại sao một bộ phận ý thức xã hội thường lạc hậu hơn so với tồn tại xã hội?",
+      "answer": null,
+      "explanation": "Ý thức xã hội phản ánh đời sống xã hội nhưng có cách hình thành và biến đổi riêng. Tính độc lập tương đối giải thích vì sao điều kiện vật chất đã thay đổi mà một số tư tưởng, tâm trạng hoặc tập quán vẫn còn tồn tại.\n\nMột nguyên nhân là tốc độ biến đổi của đời sống hiện thực có thể nhanh hơn quá trình nhận biết và điều chỉnh quan niệm. Một phương tiện sản xuất mới xuất hiện chưa lập tức làm mọi người hiểu đúng tác dụng và những yêu cầu tổ chức của nó. Sự phản ánh cần thời gian, trải nghiệm và hoạt động giáo dục.\n\nNguyên nhân khác là sức bền của thói quen, tập quán và truyền thống. Những cách ứng xử được lặp lại trong gia đình và cộng đồng có thể tiếp tục được truyền lại ngay cả khi một phần điều kiện từng làm chúng hình thành đã mất đi. Ngoài ra, một số tư tưởng còn gắn với lợi ích của những nhóm xã hội muốn duy trì trật tự cũ, nên được chủ động bảo vệ và tái tạo.\n\nTừ đó, thay đổi đời sống tinh thần cần gắn với cải thiện điều kiện vật chất, giáo dục, đối thoại và những cách tổ chức thực tế phù hợp. Không thể chỉ ra lệnh bỏ một thói quen rồi cho rằng cơ sở của nó đã biến mất. Cũng không được quy mọi giá trị kế thừa thành lạc hậu, vì truyền thống có thể chứa những giá trị cần tiếp tục phát triển.\n\nCuối cùng, câu hỏi chỉ nói một bộ phận ý thức xã hội. Tư tưởng khoa học có khả năng dự báo và vượt trước hiện thực khi nhận thức đúng những quan hệ khách quan. Vì vậy, độ trễ không phải thuộc tính của mọi tư tưởng ở mọi thời điểm."
+    },
+    {
+      "id": "WB3-ES05",
+      "kind": "essay",
+      "number": 5,
+      "pdfPages": [
+        100
+      ],
+      "printedPages": [
+        99
+      ],
+      "topic": "con-nguoi",
+      "prompt": "Hãy giải thích luận điểm của C. Mác: “Trong tính hiện thực của nó, bản chất con người là tổng hòa các quan hệ xã hội”.",
+      "answer": null,
+      "explanation": "“Trong tính hiện thực” đặt việc tìm hiểu con người vào đời sống cụ thể. Một người không chỉ là cơ thể sinh học hoặc một chủ thể tư duy trừu tượng. Người ấy sống, lao động, giao tiếp và hình thành nhân cách trong những quan hệ gia đình, kinh tế, chính trị, giáo dục và văn hóa có lịch sử.\n\n“Tổng hòa” không phải tổng số các mối quan hệ được cộng lại một cách cơ học. Những quan hệ ấy tác động qua lại và có vị trí khác nhau. Điều kiện lao động có thể ảnh hưởng tới đời sống gia đình, cơ hội giáo dục ảnh hưởng tới hoạt động nghề nghiệp, còn chuẩn mực cộng đồng định hướng việc đánh giá và lựa chọn hành vi. Bản chất xã hội được hình thành và thể hiện trong sự liên hệ ấy.\n\nChẳng hạn, một người học nghề không chỉ tiếp thu thao tác kỹ thuật. Trong quan hệ với người hướng dẫn, đồng nghiệp và người sử dụng sản phẩm, họ học sự hợp tác, trách nhiệm và cách đánh giá chất lượng công việc. Khi những quan hệ và cơ hội hoạt động thay đổi, năng lực và cách ứng xử của họ cũng có điều kiện phát triển khác đi.\n\nLuận điểm không phủ nhận cơ sở sinh học, tính độc đáo của cá nhân hoặc khả năng lựa chọn. Con người tiếp nhận hoàn cảnh thông qua hoạt động của chính mình, đồng thời có thể cải biến những quan hệ đang tác động tới mình. Vì vậy, không thể kết luận cá nhân chỉ là sản phẩm thụ động của môi trường.\n\nÝ nghĩa phương pháp là đánh giá con người trong hoàn cảnh và quan hệ cụ thể, đồng thời gắn việc phát triển cá nhân với cải thiện các điều kiện xã hội. Khuyên một người học tập, lao động có trách nhiệm cần đi cùng việc tạo cơ hội tiếp cận tri thức, hợp tác và tham gia đời sống chung. Sự tác động xã hội và nỗ lực tự rèn luyện phải được xem trong mối quan hệ với nhau."
+    }
+  ]
+}

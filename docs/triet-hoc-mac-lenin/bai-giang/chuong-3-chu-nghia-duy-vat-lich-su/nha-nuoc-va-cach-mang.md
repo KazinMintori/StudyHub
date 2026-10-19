@@ -45,6 +45,10 @@ Nhà nước có bộ máy quyền lực chuyên nghiệp và những phương t
 
 Nhà nước còn huy động nguồn lực tài chính, đặc biệt qua hệ thống thuế, để duy trì bộ máy và thực hiện chức năng. Ba đặc trưng về lãnh thổ, quyền lực chuyên nghiệp và thuế khóa cần được xem trong sự liên hệ. Một tổ chức có thu phí hay có người lãnh đạo chưa vì thế trở thành nhà nước.
 
+Một câu lạc bộ sinh viên cũng có ban điều hành, nội quy và quỹ hoạt động. Tuy nhiên, quyền của ban điều hành gắn với phạm vi tham gia câu lạc bộ, không phải quyền lực công đối với toàn bộ dân cư trên một lãnh thổ. Việc thu một khoản đóng góp của thành viên cũng khác với quyền tổ chức hệ thống thuế của nhà nước.
+
+Nếu một thành viên rời câu lạc bộ, những nghĩa vụ công dân của người ấy không vì thế chấm dứt. Sự khác nhau này làm rõ đặc trưng của quyền lực nhà nước hơn việc chỉ tìm xem tổ chức nào có người lãnh đạo. Câu hỏi cần đặt là quyền lực áp dụng đối với ai, trong phạm vi nào và được bảo đảm bằng những phương tiện gì.
+
 ## Phân biệt kiểu nhà nước và hình thức nhà nước
 
 Kiểu nhà nước được phân biệt dựa trên bản chất giai cấp và cơ sở kinh tế. Lý luận khái quát các kiểu nhà nước chủ nô, phong kiến, tư sản và vô sản. Hình thức nhà nước chỉ cách tổ chức và thực hiện quyền lực, chẳng hạn quân chủ hay cộng hòa.
@@ -52,6 +56,10 @@ Kiểu nhà nước được phân biệt dựa trên bản chất giai cấp v�
 Cùng một kiểu có thể có nhiều hình thức. Thay đổi cách lựa chọn người đứng đầu chưa tự chứng minh bản chất kinh tế và giai cấp của nhà nước đã thay đổi. Ngược lại, những khác biệt hình thức vẫn có tác động thực tế đến cách quyền lực vận hành, nên không được coi là hoàn toàn không có ý nghĩa.
 
 Quan niệm Mác - Lênin xem nhà nước xã hội chủ nghĩa gắn với quyền lực của giai cấp công nhân và nhân dân lao động, cùng nhiệm vụ cải tạo xã hội. Nhà nước tiêu vong được đặt trong điều kiện những cơ sở của sự phân chia giai cấp đã được khắc phục và xã hội không còn giai cấp. Điều này không đồng nghĩa xóa bỏ mọi hoạt động quản lý xã hội.
+
+Hãy xét việc tổ chức một hệ thống thủy lợi dùng chung. Dòng nước không dừng ở ranh giới từng thửa ruộng, nên việc điều phối cần vượt khỏi quyết định riêng lẻ của mỗi người. Nhiệm vụ ấy cho thấy ý nghĩa của chức năng xã hội: Tổ chức những điều kiện mà nhiều người cùng cần nhưng khó tự giải quyết khi đứng riêng.
+
+Tuy nhiên, quyết định đặt cống ở đâu, thu chi phí từ ai và ưu tiên khu vực nào cũng phân bố lợi ích. Có công việc chung không có nghĩa các phương án đều có tác dụng ngang nhau đối với mọi nhóm. Khi nghiên cứu quyền lực, cần đọc cả mục tiêu được tuyên bố lẫn cách quyết định được thực hiện. Những người chịu tác động có thể tham gia bằng cách nào, và trách nhiệm của người điều hành được xác định ra sao?
 
 ## Nhà nước, chính quyền và nhiệm vụ tổ chức đời sống chung
 
@@ -75,6 +83,15 @@ Cải cách thay đổi một hoặc một số mặt trong khuôn khổ xã h�
 
 Vì thế, quy mô biến động hoặc mức độ bạo lực không phải tiêu chí duy nhất để xác định cách mạng. Cần xem những quan hệ nào được thay đổi, lực lượng nào tham gia và trật tự nào hình thành. Một biến cố gây chấn động vẫn có thể chỉ thay người cầm quyền.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-3/nha-nuoc-va-cach-mang.webp" alt="Chiến lũy tại phố Castiglione trong Công xã Paris năm 1871." width="1100" height="846" loading="lazy" decoding="async" />
+  <figcaption>Hình 3.4: Chiến lũy tại phố Castiglione trong Công xã Paris năm 1871.</figcaption>
+</figure>
+
+Một chiến lũy cho thấy xung đột đã đi vào đời sống vật chất của thành phố. Tuy nhiên, đánh giá tính chất một cuộc cách mạng không thể chỉ dựa vào mức độ đối đầu nhìn thấy. Còn phải xác định lực lượng tham gia, mục tiêu chính trị và sự thay đổi của những quan hệ xã hội. Hình thức của một biến cố và nội dung lịch sử của nó cần được phân biệt.
+
 ## Nguyên nhân, điều kiện và vai trò của chủ thể
 
 Nguyên nhân sâu xa của cách mạng xã hội, trong cách giải thích duy vật lịch sử, là mâu thuẫn giữa lực lượng sản xuất phát triển và quan hệ sản xuất đã trở thành trở lực. Trong xã hội có đối kháng, mâu thuẫn ấy biểu hiện qua những lực lượng xã hội có lợi ích đối lập.
@@ -87,6 +104,10 @@ Nhân tố chủ quan gồm trình độ nhận thức, mục tiêu, năng lực
 
 Lý luận Mác - Lênin phân tích cả phương pháp bạo lực và khả năng chuyển biến bằng phương pháp hòa bình khi có điều kiện. Phương pháp phải được xem xét trong hoàn cảnh lịch sử cụ thể. Không thể lấy mức độ sử dụng bạo lực làm thước đo mặc nhiên của tính tiến bộ.
 
+Sự phân biệt giữa thay người và thay quan hệ cũng có thể thấy trong những tổ chức quen thuộc. Một tập thể đổi người phụ trách nhưng giữ nguyên cách ra quyết định, phân công và giải trình có thể tiếp tục gặp những trở ngại cũ. Ngược lại, sửa một quy tắc có thể tạo tác dụng lớn mà chưa làm thay đổi toàn bộ bản chất của tổ chức.
+
+Trường hợp ấy chỉ giúp nhận ra sự khác nhau giữa nhân sự và cấu trúc, không phải mô hình thu nhỏ đầy đủ của cách mạng xã hội. Khi trở lại lịch sử, cần xác định sự biến đổi đã đi đến những quan hệ nào: Quyền sở hữu, tổ chức quyền lực hay chỉ một vị trí cầm quyền? Chính nội dung thay đổi, cùng điều kiện và lực lượng thực hiện, mới cho phép đánh giá ý nghĩa của biến cố.
+
 ## Ý nghĩa của cách tiếp cận lịch sử
 
 Nghiên cứu nhà nước và cách mạng đòi hỏi nối kinh tế với chính trị, lợi ích với tổ chức và điều kiện khách quan với hoạt động chủ thể. Cách tiếp cận này giúp phân biệt thay đổi nhân sự, cải cách thiết chế và biến đổi nền tảng xã hội. Nó cũng ngăn cách giải thích lịch sử chỉ bằng phẩm chất của vài cá nhân.
@@ -95,49 +116,241 @@ Nghiên cứu nhà nước và cách mạng đòi hỏi nối kinh tế với ch
 
 <template #exercises>
 
+<!-- workbook: WB3-MC52; PDF 91 -->
 
-<!-- Bài tập 3.8: III.I.54; tr.90; PDF91 -->
+::: exercise Bài 1
 
-::: exercise Bài 3.8. Nguyên nhân trực tiếp xuất hiện nhà nước
+Theo quan điểm của triết học Mác – Lênin, sự ra đời của nhà nước là do:
+
+- A. Nguyện vọng của giai cấp thống trị.
+- B. Nguyện vọng của mỗi quốc gia, dân tộc.
+- C. Tất yếu, khách quan, do nguyên nhân kinh tế.
+- D. Do sự phát triển của xã hội.
+
+:::
+
+::: solution
+
+Đáp án: C.
+
+Nhà nước ra đời từ những điều kiện kinh tế - xã hội khách quan: Lực lượng sản xuất phát triển, chế độ tư hữu xuất hiện và mâu thuẫn giai cấp không thể điều hòa. D quá chung, chưa chỉ ra điều kiện làm cho một tổ chức quyền lực công đặc biệt trở nên cần thiết trong trật tự đó.
+
+:::
+
+<!-- workbook: WB3-MC53; PDF 91 -->
+
+::: exercise Bài 2
+
+Phát biểu nào sau đây phản ánh đúng bản chất của nhà nước theo quan điểm mácxít?
+
+- A. Công cụ quyền lực quản lý xã hội vì mục đích chung.
+- B. Công cụ quyền lực thực hiện chuyên chính giai cấp của giai cấp thống trị.
+- C. Công cụ quyền lực thực hiện chuyên chính giai cấp.
+- D. Công cụ quyền lực của giai cấp thống trị.
+
+:::
+
+::: solution
+
+B diễn đạt đầy đủ nhất vai trò công cụ chuyên chính của giai cấp thống trị. Tuy nhiên, C và D cũng nêu những nội dung đúng, chỉ ít cụ thể hơn. Vì câu hỏi không yêu cầu chọn phát biểu đầy đủ nhất, ba phương án này chồng lấn và không đủ cơ sở để chấm duy nhất một lựa chọn. A chỉ nêu chức năng quản lý việc chung mà bỏ qua bản chất giai cấp.
+
+:::
+
+<!-- workbook: WB3-MC54; PDF 91 -->
+
+::: exercise Bài 3
 
 Theo quan điểm của chủ nghĩa duy vật lịch sử, nguyên nhân trực tiếp làm xuất hiện nhà nước là:
 
-- a. Sự thỏa thuận của mọi tầng lớp trong xã hội.
-- b. Những mâu thuẫn giai cấp không thể điều hòa được.
-- c. Tham vọng quyền lực của các chính trị gia.
-- d. Lý tưởng cao đẹp của những người ưu tú trong xã hội.
+- A. Sự thỏa thuận của mọi tầng lớp trong xã hội.
+- B. Những mâu thuẫn giai cấp không thể điều hòa được.
+- C. Tham vọng quyền lực của các chính trị gia.
+- D. Lý tưởng cao đẹp của những người ưu tú trong xã hội.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution
 
-Đáp án: B. Những mâu thuẫn giai cấp không thể điều hòa được.
+Đáp án: B.
 
-Trong cách giải thích của chủ nghĩa duy vật lịch sử, nhà nước xuất hiện khi xã hội phân hóa giai cấp và mâu thuẫn giai cấp không thể điều hòa. Không thể quy nguồn gốc của nó về ý muốn riêng của một cá nhân.
+Những mâu thuẫn giai cấp không thể điều hòa trong trật tự hiện có dẫn đến sự ra đời của một quyền lực công đặc biệt để duy trì trật tự đó. Cần phân biệt nguyên nhân trực tiếp này với nguyên nhân sâu xa nằm trong sự phát triển sản xuất, sản phẩm dư thừa và chế độ tư hữu.
 
 :::
 
-<!-- Bài tập 3.9: III.I.62; tr.92; PDF93 -->
+<!-- workbook: WB3-MC55; PDF 91, 92 -->
 
-::: exercise Bài 3.9. Cách mạng xã hội
+::: exercise Bài 4
+
+Theo quan điểm của chủ nghĩa duy vật lịch sử, nguyên nhân sâu xa làm xuất hiện nhà nước là:
+
+- A. Sự thỏa thuận của mọi tầng lớp trong xã hội.
+- B. Sự ra đời của chế độ tư hữu.
+- C. Mong ước của nhân dân vì một xã hội tốt đẹp.
+- D. Đấu tranh giai cấp.
+
+:::
+
+::: solution
+
+Đáp án: B.
+
+Trong các lựa chọn, chế độ tư hữu là căn cứ kinh tế dẫn đến phân hóa và đối kháng giai cấp. Đi sâu hơn, chính lực lượng sản xuất phát triển và sản phẩm dư thừa tương đối tạo điều kiện cho tư hữu xuất hiện. Mâu thuẫn giai cấp không thể điều hòa là nguyên nhân trực tiếp của nhà nước.
+
+:::
+
+<!-- workbook: WB3-MC57; PDF 92 -->
+
+::: exercise Bài 5
+
+Điền vào chỗ trống: “Theo quan điểm của chủ nghĩa duy vật lịch sử, nhà nước xuất hiện và tồn tại ...”.
+
+- A. Ngay khi xã hội loài người xuất hiện.
+- B. Trong một giai đoạn lịch sử nhất định.
+- C. Từ trước khi xã hội có giai cấp.
+- D. Trong mọi giai đoạn lịch sử.
+
+:::
+
+::: solution
+
+Đáp án: B.
+
+Nhà nước là phạm trù lịch sử, gắn với sự xuất hiện của chế độ tư hữu và những mâu thuẫn giai cấp không thể điều hòa. Cộng đồng người có thể có tổ chức tự quản trước khi nhà nước ra đời. Lý luận Mác cũng đặt ra khả năng nhà nước tiêu vong khi những điều kiện tồn tại của nó được khắc phục.
+
+:::
+
+<!-- workbook: WB3-MC58; PDF 92 -->
+
+::: exercise Bài 6
+
+Chức năng giai cấp của nhà nước theo quan điểm của chủ nghĩa duy vật lịch sử là:
+
+- A. Củng cố, mở rộng cơ sở chính trị xã hội cho sự thống trị của giai cấp cầm quyền.
+- B. Tổ chức kiến tạo kết cấu giai cấp của xã hội.
+- C. Thực hiện chuyên chính, trấn áp các giai cấp đối lập.
+- D. Thúc đẩy sự hình thành và phát triển của các giai cấp mới.
+
+:::
+
+::: solution
+
+C nêu trực tiếp nội dung chuyên chính và trấn áp lực lượng đối lập. A cũng mô tả hoạt động phục vụ duy trì sự thống trị của giai cấp cầm quyền, nên thuộc phương diện chức năng giai cấp. B và D không phải định nghĩa của chức năng này. Nếu yêu cầu một đáp án duy nhất, đề cần bổ sung tiêu chí phân biệt A với C thay vì coi A hoàn toàn sai.
+
+:::
+
+<!-- workbook: WB3-MC59; PDF 92 -->
+
+::: exercise Bài 7
+
+Căn cứ để phân loại kiểu nhà nước theo quan điểm của chủ nghĩa duy vật lịch sử là:
+
+- A. Chức năng của nhà nước.
+- B. Bản chất giai cấp của nhà nước.
+- C. Nguồn gốc của nhà nước.
+- D. Cách thức tổ chức quyền lực nhà nước.
+
+:::
+
+::: solution
+
+Đáp án: B.
+
+Kiểu nhà nước được phân biệt theo bản chất giai cấp và cơ sở kinh tế tương ứng. Cách thức tổ chức quyền lực dùng để nhận diện hình thức nhà nước, chẳng hạn quân chủ hoặc cộng hòa. Hai cách phân loại trả lời những câu hỏi khác nhau nên không thể đồng nhất.
+
+:::
+
+<!-- workbook: WB3-MC60; PDF 92 -->
+
+::: exercise Bài 8
+
+Nhà nước trong thời kỳ quá độ lên chủ nghĩa xã hội là:
+
+- A. Nhà nước dân chủ cộng hòa.
+- B. Nhà nước dân chủ tư sản.
+- C. Cộng hòa đại nghị.
+- D. Nhà nước dân chủ nhân dân.
+
+:::
+
+::: solution
+
+Cần xác định bản chất là nhà nước kiểu mới của giai cấp công nhân và nhân dân lao động, không lấy một hình thức tổ chức làm định nghĩa chung cho mọi trường hợp quá độ. D gợi đến một hình thức lịch sử của nhà nước dân chủ nhân dân nhưng chưa đủ để khẳng định đó là tên gọi phổ quát. A và C cũng là các cách gọi về hình thức tổ chức, còn B không thể hiện bản chất cần xác định. Vì các lựa chọn lẫn tiêu chí, câu hỏi chưa có một đáp án chung đủ chính xác.
+
+:::
+
+<!-- workbook: WB3-MC61; PDF 92, 93 -->
+
+::: exercise Bài 9
+
+Xu hướng phát triển của nhà nước trong chủ nghĩa cộng sản là:
+
+- A. Củng cố vững chắc quyền lực giai cấp.
+- B. Chuyển hóa thành nhà nước cộng sản.
+- C. Chuyển hóa thành nhà nước toàn cầu.
+- D. Nhà nước tự tiêu vong.
+
+:::
+
+::: solution
+
+Đáp án: D.
+
+Trong lý luận Mác – Lênin, khi những điều kiện kinh tế - xã hội làm nảy sinh đối kháng giai cấp được khắc phục, nhà nước với tư cách bộ máy thống trị giai cấp sẽ dần tiêu vong. Đây là một quá trình có điều kiện, không phải quyết định xóa nhà nước ngay lập tức. Việc tổ chức những công việc chung của xã hội vẫn cần được thực hiện.
+
+:::
+
+<!-- workbook: WB3-MC62; PDF 93 -->
+
+::: exercise Bài 10
 
 Việc lật đổ một chế độ chính trị đã lỗi thời và thiết lập một chế độ chính trị tiến bộ hơn của giai cấp cách mạng được gọi là gì?
 
-- a. Đảo chính.
-- b. Cách mạng xã hội.
-- c. Bạo loạn.
-- d. Cách mạng văn hóa.
+- A. Đảo chính.
+- B. Cách mạng xã hội.
+- C. Bạo loạn.
+- D. Cách mạng văn hóa.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution
 
-Đáp án: B. Cách mạng xã hội.
+Đáp án: B.
 
-Câu hỏi nêu phương diện chính trị của cách mạng xã hội. Xét đầy đủ, cách mạng xã hội còn là sự thay đổi căn bản về chất của xã hội, gắn với việc thay thế hình thái kinh tế - xã hội. Thay người cầm quyền đơn thuần chưa đủ để kết luận có cách mạng xã hội.
+B phù hợp nhất với nội dung thay đổi chế độ và quyền lực chính trị. Tuy nhiên, cách mạng xã hội có nghĩa rộng hơn việc thay người cầm quyền: Đó là biến đổi căn bản về chất của xã hội, gắn với quan hệ kinh tế và kiến trúc thượng tầng. Một cuộc đảo chính chỉ thay nhóm nắm quyền chưa đủ tạo thành cách mạng xã hội.
 
 :::
 
+<!-- workbook: WB3-TF10; PDF 97 -->
+
+::: exercise Bài 11
+
+Xác định đúng hoặc sai và giải thích ngắn gọn: Nhà nước là bộ máy hành chính đứng trên mọi giai cấp, bảo vệ quyền lợi của mọi cá nhân trong xã hội.
+
+:::
+
+::: solution
+
+Đáp án: Sai.
+
+Lý luận Mác – Lênin xác định nhà nước mang bản chất giai cấp, bảo vệ những quan hệ kinh tế và trật tự xã hội nhất định. Nhà nước có thể có mức độ độc lập tương đối và thực hiện những công việc chung, nhưng từ đó không thể suy ra mọi lợi ích cá nhân đều được bảo vệ như nhau hoặc quyền lực đứng ngoài các quan hệ giai cấp.
+
+:::
+
+<!-- workbook: WB3-TF11; PDF 97 -->
+
+::: exercise Bài 12
+
+Xác định đúng hoặc sai và giải thích ngắn gọn: Nhà nước của giai cấp vô sản về bản chất cũng chỉ là bộ máy chuyên chế để thực hiện mục tiêu chính trị của giai cấp này.
+
+:::
+
+::: solution
+
+Đáp án: Sai.
+
+Từ “chỉ” thu hẹp nhà nước kiểu mới vào một chức năng. Trong quan niệm Mác – Lênin, nhà nước của giai cấp công nhân và nhân dân lao động còn có nhiệm vụ tổ chức xây dựng xã hội, phát triển sản xuất và mở rộng quyền làm chủ của nhân dân. Không thể dùng bản chất giai cấp để phủ nhận chức năng xã hội và mục tiêu giải phóng con người.
+
+:::
 
 </template>
 
@@ -147,3 +360,4 @@ Câu hỏi nêu phương diện chính trị của cách mạng xã hội. Xét 
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 3, tr. 144–254.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 3, phần Bài tập.
+3. Bruno Braquehais. [Chiến lũy tại phố Castiglione trong Công xã Paris năm 1871.](https://commons.wikimedia.org/wiki/File:Commune_de_Paris_barricade_de_la_rue_de_Castiglione.jpg). Phạm vi công cộng. Bản thu nhỏ.

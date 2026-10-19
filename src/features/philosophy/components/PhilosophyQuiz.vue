@@ -33,9 +33,7 @@ const current = computed(() => questions.value[currentIndex.value] || null)
 const response = computed(() => quizResponse(session.value, current.value?.id))
 const checked = computed(() => response.value?.checked === true)
 const correct = computed(() => checked.value && response.value.selectedKey === current.value?.correctKey)
-const correctOption = computed(() => current.value?.options.find(option => option.key === current.value.correctKey))
 const options = computed(() => [...(current.value?.options || [])].sort((a, b) => a.key.localeCompare(b.key)))
-const wrongExplanations = computed(() => (current.value?.distractors || []).filter(item => item.key !== current.value.correctKey).sort((a, b) => a.key.localeCompare(b.key)))
 const nextUnanswered = computed(() => nextUnansweredId(props.bank, session.value))
 const groups = computed(() => [...new Map(questions.value.filter(question => question.group).map(question => [question.group, question.groupTitle || question.group])).entries()].map(([id, title]) => ({ id, title })))
 const filtered = computed(() => filterQuizQuestions(props.bank, session.value, filter.value, search.value, group.value))
@@ -117,6 +115,11 @@ function statusLabel(question) {
   return { correct: 'Đúng', wrong: 'Sai', unanswered: 'Chưa làm' }[questionStatus(question, session.value)]
 }
 
+function optionExplanation(key) {
+  if (key === current.value?.correctKey) return current.value.explanation
+  return current.value?.distractors?.find(item => item.key === key)?.explanation || ''
+}
+
 async function closeList() {
   listOpen.value = false
   await nextTick()
@@ -181,23 +184,21 @@ async function closeList() {
       <h2 :id="`${prefix}-question`" ref="questionHeading" class="quiz-question-position" tabindex="-1"><span>Câu {{ currentIndex + 1 }} / {{ questions.length }}</span><span class="quiz-question-id">{{ current.id }}</span></h2>
         <fieldset class="quiz-choices" :disabled="checked">
           <legend><MathText :text="current.prompt" /></legend>
-          <label v-for="option in options" :key="option.key" class="quiz-option" :class="{ 'is-selected': response?.selectedKey === option.key, 'is-correct': checked && option.key === current.correctKey, 'is-wrong': checked && response?.selectedKey === option.key && option.key !== current.correctKey, 'is-locked': checked }">
-            <input type="radio" :name="`${prefix}-${current.id}`" :value="option.key" :checked="response?.selectedKey === option.key" @change="select(option.key)" />
-            <span class="quiz-option-key">{{ option.key }}</span>
-            <span class="quiz-option-body"><MathText :text="option.text" /><span v-if="checked && option.key === current.correctKey" class="quiz-option-verdict">{{ response?.selectedKey === option.key ? 'Bạn chọn · Đúng' : 'Đáp án đúng' }}</span><span v-else-if="checked && response?.selectedKey === option.key" class="quiz-option-verdict">Bạn chọn · Sai</span></span>
-          </label>
+          <p v-if="checked" :id="`${prefix}-result`" ref="resultHeading" class="quiz-result-summary" :class="correct ? 'is-correct' : 'is-wrong'" tabindex="-1">{{ correct ? 'Chính xác' : 'Chưa chính xác' }} · Đáp án {{ current.correctKey }}</p>
+          <div v-for="option in options" :key="option.key" class="quiz-option" :class="{ 'is-selected': response?.selectedKey === option.key, 'is-correct': checked && option.key === current.correctKey, 'is-wrong': checked && response?.selectedKey === option.key && option.key !== current.correctKey, 'is-locked': checked }">
+            <label class="quiz-option-header" :for="`${prefix}-${current.id}-${option.key}`">
+              <input :id="`${prefix}-${current.id}-${option.key}`" type="radio" :name="`${prefix}-${current.id}`" :value="option.key" :checked="response?.selectedKey === option.key" :aria-describedby="checked && optionExplanation(option.key) ? `${prefix}-${current.id}-${option.key}-explanation` : undefined" @change="select(option.key)" />
+              <span class="quiz-option-key">{{ option.key }}.</span>
+              <span class="quiz-option-body"><MathText :text="option.text" /><span v-if="checked && response?.selectedKey === option.key" class="quiz-option-selected">Câu trả lời của bạn</span><span v-if="checked && option.key === current.correctKey" class="quiz-option-verdict">✓ Câu trả lời chính xác</span><span v-else-if="checked && response?.selectedKey === option.key" class="quiz-option-verdict">✕ Không chính xác</span></span>
+            </label>
+            <MathText v-if="checked && optionExplanation(option.key)" :id="`${prefix}-${current.id}-${option.key}-explanation`" class="quiz-option-explanation" :text="optionExplanation(option.key)" as="p" />
+          </div>
         </fieldset>
 
-      <section v-if="checked" class="quiz-result" :class="correct ? 'is-correct' : 'is-wrong'" :aria-labelledby="`${prefix}-result`">
-        <h3 :id="`${prefix}-result`" ref="resultHeading" tabindex="-1">{{ correct ? 'Chính xác' : 'Chưa chính xác' }}</h3>
-        <p class="quiz-correct-answer"><strong>Đáp án đúng: {{ current.correctKey }}.</strong> <MathText :text="correctOption?.text || ''" /></p>
-        <MathText class="quiz-explanation" :text="current.explanation" as="p" />
-        <template v-if="wrongExplanations.length">
-          <h4>Vì sao các phương án còn lại chưa đúng</h4>
-          <ul class="quiz-distractors"><li v-for="item in wrongExplanations" :key="item.key"><strong>{{ item.key }}.</strong><MathText :text="item.explanation" as="p" /></li></ul>
-        </template>
-        <MathText v-if="current.takeaway" class="quiz-takeaway" :text="current.takeaway" as="p" />
-      </section>
+      <details v-if="checked && current.takeaway" class="quiz-takeaway">
+        <summary>Giải thích thêm</summary>
+        <MathText :text="current.takeaway" as="p" />
+      </details>
 
       <div v-if="stats.answered === stats.total && stats.total" class="quiz-complete" role="status"><strong>Đã hoàn thành lượt này.</strong><span>{{ stats.correct }} câu đúng, {{ stats.wrong }} câu sai. {{ stats.wrong ? 'Bạn có thể luyện lại các câu sai ở phía trên.' : 'Bạn đã trả lời đúng toàn bộ các câu trong lượt.' }}</span></div>
       <nav class="quiz-navigation" aria-label="Chuyển câu hỏi">
@@ -266,38 +267,33 @@ async function closeList() {
 .quiz-question-position { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2); margin: 0 0 var(--space-4); padding: 0; border: 0; color: var(--ink-2); font-size: var(--fs-ui); font-weight: 500; line-height: 1.7; scroll-margin-top: calc(var(--vp-nav-height) + var(--space-5)); }
 .quiz-question-position:focus { outline: none; }
 .quiz-question-position:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; border-radius: var(--radius-sm); }
-.quiz-question-id { color: var(--ink-3); font-size: var(--fs-meta); overflow-wrap: anywhere; }
+.quiz-question-id { display: none; }
 .quiz-choices { min-width: 0; margin: 0; padding: 0; border: 0; }
 .quiz-choices legend { display: block; max-width: 100%; padding: 0; margin-bottom: var(--space-5); font: 600 var(--fs-h3)/1.7 var(--font-read); overflow-wrap: anywhere; white-space: pre-line; }
-.quiz-option { display: grid; grid-template-columns: 20px 22px minmax(0, 1fr); gap: var(--space-3); align-items: start; min-height: 60px; padding: var(--space-4); margin-bottom: var(--space-3); border: 1px solid var(--control); border-radius: var(--radius); background: var(--paper); cursor: pointer; line-height: 1.8; transition: background var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease); }
+.quiz-option { min-width: 0; margin-bottom: var(--space-3); border: 1px solid var(--control); border-radius: var(--radius); background: var(--paper); line-height: 1.8; overflow: hidden; transition: background var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease); }
+.quiz-option-header { display: grid; grid-template-columns: 20px 22px minmax(0, 1fr); gap: var(--space-3); align-items: start; min-height: 60px; padding: var(--space-4); cursor: pointer; }
 .quiz-option:not(.is-locked):hover { border-color: var(--tim); background: var(--tim-soft); }
 .quiz-option:has(input:focus-visible) { outline: 2px solid var(--tim); outline-offset: 3px; }
-.quiz-option input { appearance: auto; width: 20px; height: 20px; margin: 4px 0 0; accent-color: var(--tim); flex-shrink: 0; }
-.quiz-option-key { color: var(--ink-2); font-weight: 600; }
+.quiz-option input { appearance: auto; width: 20px; height: 20px; margin: 4px 0 0; accent-color: var(--tim); }
+.quiz-option-key { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
 .quiz-option-body { min-width: 0; font: var(--fs-read)/1.75 var(--font-read); overflow-wrap: anywhere; white-space: pre-line; }
 .quiz-option.is-selected { background: var(--tim-soft); border-color: var(--tim); }
 .quiz-option.is-correct { background: var(--xanh-soft); border-color: var(--xanh); }
 .quiz-option.is-wrong { background: var(--do-soft); border-color: var(--do); }
-.quiz-option.is-locked { cursor: default; }
+.quiz-option.is-locked .quiz-option-header { cursor: default; }
+.quiz-option-selected { display: block; margin-top: var(--space-2); font: var(--fs-small)/1.6 var(--font-ui); color: var(--ink-2); }
 .quiz-option-verdict { display: block; margin-top: var(--space-2); font: 600 var(--fs-small)/1.6 var(--font-ui); color: var(--ink-2); }
 .quiz-option.is-correct .quiz-option-verdict { color: var(--xanh); }
 .quiz-option.is-wrong .quiz-option-verdict { color: var(--do); }
-.quiz-result { min-width: 0; padding: var(--space-5); margin-top: var(--space-5); border: 1px solid var(--rule); border-top: 3px solid var(--xanh); border-radius: var(--radius); background: var(--canvas); font: var(--fs-read)/1.85 var(--font-read); overflow-wrap: anywhere; }
-.quiz-result.is-wrong { border-top-color: var(--do); }
-.quiz-result h3 { margin: 0 0 var(--space-3); font: 600 var(--fs-lead)/1.5 var(--font-ui); color: var(--xanh); }
-.quiz-result h3:focus { outline: none; }
-.quiz-result h3:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; border-radius: var(--radius-sm); }
-.quiz-result.is-wrong h3 { color: var(--do); }
-.quiz-correct-answer { margin-bottom: var(--space-4) !important; }
-.quiz-correct-answer strong { font-weight: 600; }
-.quiz-explanation { white-space: pre-line; }
-.quiz-result h4 { margin: var(--space-5) 0 var(--space-3); font: 600 var(--fs-ui)/1.7 var(--font-ui); }
-.quiz-distractors { display: grid; gap: var(--space-4); padding: 0; margin: 0; list-style: none; }
-.quiz-distractors li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: var(--space-2); margin: 0; }
-.quiz-distractors li > strong { font: 600 var(--fs-ui)/1.85 var(--font-ui); }
-.quiz-distractors p { white-space: pre-line; }
-.quiz-takeaway { margin-top: var(--space-5) !important; border-top: 1px solid var(--rule); padding-top: var(--space-4); white-space: pre-line; }
-.quiz-takeaway strong { font-weight: 600; }
+.philosophy-quiz .quiz-option-explanation { margin: 0 var(--space-4) var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); font: var(--fs-read)/1.85 var(--font-read); color: var(--ink-2); overflow-wrap: anywhere; white-space: pre-line; }
+.philosophy-quiz .quiz-result-summary { margin-bottom: var(--space-4); font: 600 var(--fs-ui)/1.7 var(--font-ui); color: var(--xanh); }
+.quiz-result-summary.is-wrong { color: var(--do); }
+.quiz-result-summary:focus { outline: none; }
+.quiz-result-summary:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; }
+.quiz-takeaway { margin-top: var(--space-4); padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--canvas); }
+.quiz-takeaway summary { cursor: pointer; font: 500 var(--fs-ui)/1.8 var(--font-ui); }
+.quiz-takeaway summary:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; }
+.quiz-takeaway p { margin-top: var(--space-3); font: var(--fs-read)/1.85 var(--font-read); overflow-wrap: anywhere; white-space: pre-line; }
 .quiz-complete { display: grid; gap: var(--space-2); padding: var(--space-4); margin-top: var(--space-5); background: var(--tim-soft); border-radius: var(--radius); color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.8; }
 .quiz-navigation { display: grid; gap: var(--space-3); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-size: var(--fs-ui); }
 .quiz-adjacent { display: flex; justify-content: space-between; gap: var(--space-3); }
@@ -314,8 +310,9 @@ async function closeList() {
   .quiz-stats dd span { display: block; margin-top: var(--space-1); }
   .quiz-tools { gap: var(--space-2); }
   .quiz-tools button { padding-inline: var(--space-3); }
-  .quiz-confirm, .quiz-list, .quiz-result { padding: var(--space-4); }
-  .quiz-option { grid-template-columns: 20px 18px minmax(0, 1fr); gap: var(--space-2); padding: var(--space-3); }
+  .quiz-confirm, .quiz-list { padding: var(--space-4); }
+  .quiz-option-header { grid-template-columns: 20px 22px minmax(0, 1fr); gap: var(--space-2); padding: var(--space-3); }
+  .philosophy-quiz .quiz-option-explanation { margin-inline: var(--space-3); margin-bottom: var(--space-3); }
   .quiz-next-unanswered { justify-self: stretch; }
   .quiz-question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .quiz-list-pages button { padding-inline: var(--space-2); }

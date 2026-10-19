@@ -72,4 +72,7 @@ onUnmounted(() => {
 .philosophy-topic-tabs button:hover { color: var(--tim); background: var(--tim-soft); }
 .philosophy-topic-tabs button:focus-visible, .philosophy-topic-panel:focus-visible { outline: 2px solid var(--tim); outline-offset: 3px; }
 .philosophy-topic-panel { min-width: 0; }
+.philosophy-topic-panel :deep(.philosophy-figure) { margin: var(--space-6) 0; }
+.philosophy-topic-panel :deep(.philosophy-figure img) { display: block; max-width: 100%; max-height: 560px; width: auto; height: auto; margin-inline: auto; object-fit: contain; border-radius: var(--radius-sm); }
+.philosophy-topic-panel :deep(.philosophy-figure figcaption) { margin-top: var(--space-3); color: var(--ink-2); font: var(--fs-small)/1.8 var(--font-ui); text-align: center; }
 </style>

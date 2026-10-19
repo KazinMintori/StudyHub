@@ -65,6 +65,15 @@ Một bản thiết kế không tự biến thành cây cầu. Người xây d�
 
 Tác động trở lại cũng không làm ý thức trở thành yếu tố quyết định xét đến cùng. Một quyết tâm dù mạnh vẫn không thể tùy ý xóa bỏ thuộc tính vật liệu hay những điều kiện khách quan. Sức mạnh của chủ thể thể hiện ở khả năng nhận biết và vận dụng các điều kiện ấy.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-2/vat-chat-va-y-thuc.webp" alt="Người lao động trên công trường cầu Go Between tại Australia." width="1100" height="733" loading="lazy" decoding="async" />
+  <figcaption>Hình 2.3: Người lao động trên công trường cầu Go Between tại Australia.</figcaption>
+</figure>
+
+Một ý tưởng về cây cầu chỉ trở thành công trình qua hoạt động của những con người cụ thể. Vật liệu, thiết bị, kỹ năng và phối hợp lao động là các khâu trung gian. Nếu bản thiết kế không phù hợp điều kiện chịu lực, quyết tâm không thể bù cho sai lầm ấy. Ngược lại, hiểu đúng điều kiện giúp con người tìm được cách tổ chức và cải biến hiện thực.
+
 ## Tác động của ý thức cần được đánh giá qua những khâu trung gian
 
 Ý thức có thể hướng dẫn hoạt động theo chiều tích cực hoặc tiêu cực. Một cách hiểu đúng giúp chủ thể chọn mục tiêu và phương tiện phù hợp. Một cách hiểu sai có thể dẫn tới sử dụng nguồn lực không đúng hoặc làm nảy sinh hậu quả trái mục đích. Sự tác động ấy diễn ra thông qua hành động của con người.
@@ -76,6 +85,24 @@ Vì vậy, đánh giá vai trò của tư tưởng cần phân tích cả nội 
 Quan hệ lợi ích cũng ảnh hưởng việc con người tiếp nhận và thực hiện mục tiêu chung. Yêu cầu tổ chức hoạt động phải đi cùng việc hiểu động cơ, trách nhiệm và điều kiện tham gia. Chỉ truyền đạt ý tưởng mà bỏ qua những quan hệ ấy có thể khiến chủ trương không trở thành hành động thống nhất.
 
 Mối quan hệ vật chất và ý thức vì thế dẫn tới yêu cầu kết hợp hiểu biết với tổ chức thực tiễn. Năng lực tư duy tạo ra định hướng, còn điều kiện và hoạt động hiện thực quyết định định hướng ấy được thực hiện đến đâu. Phân tích từng khâu giúp việc đánh giá tránh dừng ở lời khen tinh thần hoặc sự quy kết ý chí.
+
+## Khi khu nhà bắt đầu phân loại rác
+
+Giả sử những người cùng sống trong một khu nhà thống nhất muốn phân loại rác. Lời kêu gọi có thể rõ ràng và mọi người đều tán thành, nhưng hoạt động vẫn khó duy trì nếu chỉ có một thùng chung, không thống nhất nơi bỏ từng loại và không có cách thu gom tương ứng.
+
+Trong trường hợp ấy, giải thích mọi thất bại bằng câu “mọi người chưa có ý thức” sẽ bỏ qua những khâu vật chất và tổ chức đang thiếu. Ngược lại, đặt thêm thùng mà không giải thích cách dùng hoặc không phân công công việc cũng chưa bảo đảm có kết quả. Tri thức và thái độ phải được chuyển thành một cách tổ chức khả thi.
+
+Đặt vấn đề như vậy không san bằng vai trò của vật chất và ý thức. Điều kiện hiện thực quy định hoạt động có thể diễn ra theo những cách nào. Ý thức giúp nhận ra điều kiện cần thay đổi, dự kiến cách phối hợp và điều chỉnh dự định. Sự tác động trở lại chỉ thành hiện thực qua những việc có người làm, có phương tiện và có kết quả quan sát được.
+
+Khi một việc tốt chưa thực hiện được, điều cần hỏi không chỉ là mọi người có muốn hay không. Giữa mong muốn và kết quả còn những khâu nào chưa được tạo ra? Câu hỏi ấy đưa trách nhiệm từ một lời phê bình chung trở về những việc cụ thể có thể làm.
+
+## Một bữa ăn trong điều kiện có hạn
+
+Một gia đình muốn chuẩn bị bữa ăn chung nhưng phải tính đến tiền mua nguyên liệu, thời gian và dụng cụ đang có. Những giới hạn này không mất đi vì mọi người rất nhiệt tình. Tuy vậy, cùng những điều kiện ấy, cách phân công, lựa chọn món và chuẩn bị trước có thể tạo ra kết quả khác nhau.
+
+Tôn trọng khách quan là nhận diện đúng những giới hạn và khả năng ấy. Chủ động là lựa chọn mục tiêu phù hợp rồi tổ chức thực hiện, thay vì hoặc đòi một bữa ăn vượt mọi điều kiện, hoặc kết luận rằng đã thiếu thốn thì không thể cải thiện điều gì. Không có ý chí nào thay được nguyên liệu, nhưng cách dùng nguyên liệu cũng không tự quyết định nếu thiếu con người.
+
+Ví dụ chỉ cho thấy vai trò của những khâu trung gian trong hoạt động có mục đích. Nó không cho phép quy mọi hoàn cảnh khó khăn về sự thiếu cố gắng của cá nhân. Có những điều kiện vượt quá khả năng thay đổi của một người, đòi hỏi hợp tác hoặc sự thay đổi ở phạm vi rộng hơn. Nhận ra giới hạn của hành động cá nhân cũng là một phần của thái độ tôn trọng hiện thực.
 
 ## Tôn trọng khách quan và phát huy tính chủ động
 
@@ -93,49 +120,68 @@ Muốn nhận biết đúng hoàn cảnh và điều kiện, cần một cách x
 
 <template #exercises>
 
+<!-- workbook: WB2-MC23; PDF 46–47 -->
 
-<!-- Bài tập 2.7: II.I.24; tr.46; PDF47 -->
+::: exercise Bài 1
 
-::: exercise Bài 2.7. Sự tác động trở lại của ý thức
+Chủ nghĩa duy vật biện chứng khẳng định rằng:
+
+- A. Ý thức quyết định vật chất, vật chất có tính độc lập tương đối và tác động trở lại ý thức.
+- B. Ý thức quyết định vật chất, vật chất hoàn toàn độc lập và tác động trở lại ý thức.
+- C. Vật chất quyết định ý thức, ý thức có tính độc lập tương đối và tác động trở lại vật chất.
+- D. Vật chất quyết định ý thức, ý thức hoàn toàn độc lập và tác động trở lại vật chất.
+
+:::
+
+::: solution Giải thích
+
+Đáp án: C.
+
+Vật chất quyết định nguồn gốc, nội dung và những điều kiện phát triển của ý thức. Ý thức có tính độc lập tương đối và tác động trở lại thông qua hoạt động thực tiễn của con người. A và B đảo vai trò quyết định. D biến độc lập tương đối thành hoàn toàn tách rời cơ sở vật chất.
+
+:::
+
+<!-- workbook: WB2-MC24; PDF 47 -->
+
+::: exercise Bài 2
 
 Xác định câu trả lời đúng theo quan điểm của chủ nghĩa duy vật biện chứng về vai trò của ý thức:
 
-- a. Vai trò của ý thức là sự phản ánh sáng tạo thực tại khách quan và đồng thời có sự tác động trở lại thực tại đó thông qua hoạt động thực tiễn của con người.
-- b. Ý thức là cái phụ thuộc vào nguồn gốc sinh ra nó, vì vậy chỉ có vật chất là cái năng động, tích cực.
-- c. Ý thức chỉ là sự sao chép nguyên xi thế giới hiện thực nên không có vai trò gì đối với thực tiễn.
-- d. Ý thức tự nó chỉ làm thay đổi tư tưởng, do đó ý thức hoàn toàn không có vai trò gì đối với thực tiễn.
+- A. Vai trò của ý thức là sự phản ánh sáng tạo thực tại khách quan và đồng thời có sự tác động trở lại thực tại đó thông qua hoạt động thực tiễn của con người.
+- B. Ý thức là cái phụ thuộc vào nguồn gốc sinh ra nó, vì vậy chỉ có vật chất là cái năng động, tích cực.
+- C. Ý thức chỉ là sự sao chép nguyên xi thế giới hiện thực nên không có vai trò gì đối với thực tiễn.
+- D. Ý thức tự nó chỉ làm thay đổi tư tưởng, do đó ý thức hoàn toàn không có vai trò gì đối với thực tiễn.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution Giải thích
 
-Đáp án: A. Vai trò của ý thức là sự phản ánh sáng tạo thực tại khách quan và đồng thời có sự tác động trở lại thực tại đó thông qua hoạt động thực tiễn của con người.
+Đáp án: A.
 
-Tri thức, mục tiêu và ý chí có thể định hướng hành động, nhưng phải được hiện thực hóa bằng hoạt động thực tiễn và những điều kiện vật chất tương ứng.
+Tri thức, mục tiêu và ý chí có thể định hướng việc lựa chọn công cụ, tổ chức hoạt động và điều chỉnh hành động. Tác động ấy cần những khâu thực tiễn để làm thay đổi hiện thực. B, C và D đều phủ nhận tính tích cực hoặc vai trò thực tế của ý thức.
 
 :::
 
-<!-- Bài tập 2.8: II.I.25; tr.46; PDF47 -->
+<!-- workbook: WB2-MC25; PDF 47 -->
 
-::: exercise Bài 2.8. Nguyên tắc phương pháp luận
+::: exercise Bài 3
 
 Từ mối quan hệ giữa vật chất và ý thức, chúng ta rút ra nguyên tắc phương pháp luận chủ đạo nào cho hoạt động nhận thức và thực tiễn?
 
-- a. Nguyên tắc toàn diện.
-- b. Nguyên tắc lịch sử - cụ thể.
-- c. Nguyên tắc thống nhất giữa lý luận và thực tiễn.
-- d. Nguyên tắc tôn trọng tính khách quan kết hợp với phát huy tính năng động, chủ quan.
+- A. Nguyên tắc toàn diện.
+- B. Nguyên tắc lịch sử - cụ thể.
+- C. Nguyên tắc thống nhất giữa lý luận và thực tiễn.
+- D. Nguyên tắc tôn trọng tính khách quan kết hợp với phát huy tính năng động, chủ quan.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution Giải thích
 
-Đáp án: D. Nguyên tắc tôn trọng tính khách quan kết hợp với phát huy tính năng động, chủ quan.
+Đáp án: D.
 
-Phải xuất phát từ điều kiện thực tế và quy luật khách quan, đồng thời chủ động lựa chọn mục tiêu, phương pháp và tổ chức thực hiện. Tôn trọng khách quan không có nghĩa là thụ động.
+Phải xuất phát từ điều kiện và quy luật khách quan, đồng thời chủ động đặt mục tiêu, lựa chọn cách làm và tổ chức thực hiện. A, B và C là những nguyên tắc có ý nghĩa nhưng D diễn đạt trực tiếp yêu cầu rút ra từ quan hệ vật chất với ý thức. Tôn trọng khách quan không đồng nghĩa với chấp nhận thụ động hoàn cảnh hiện có.
 
 :::
-
 
 </template>
 
@@ -145,3 +191,4 @@ Phải xuất phát từ điều kiện thực tế và quy luật khách quan, 
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 2, tr. 61–143.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 2, phần Bài tập.
+3. Brisbane City Council. [Người lao động trên công trường cầu Go Between tại Australia.](https://commons.wikimedia.org/wiki/File:Go_Between_Bridge_Construction_Workers_(5159662865).jpg). [CC BY 2.0](https://creativecommons.org/licenses/by/2.0). Bản thu nhỏ.

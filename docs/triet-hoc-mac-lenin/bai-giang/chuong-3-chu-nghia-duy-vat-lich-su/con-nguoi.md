@@ -57,6 +57,10 @@ Chẳng hạn, một người học nghề không chỉ tiếp nhận kỹ thu�
 
 Vì vậy, đánh giá con người cần đặt họ trong những quan hệ và hoàn cảnh cụ thể. Một biểu hiện đơn lẻ chưa cho phép suy ra toàn bộ nhân cách. Muốn phát triển con người, không thể chỉ khuyên họ cố gắng mà bỏ qua những điều kiện cản trở việc học tập, lao động và tham gia cộng đồng.
 
+Một sinh viên ít phát biểu có thể im lặng vì chưa hiểu bài, nhưng cũng có thể vì từng bị chế giễu khi nói sai hoặc chưa quen ngôn ngữ học thuật. Nếu chỉ gọi người ấy là thiếu tự tin, ta đã đặt tên cho biểu hiện mà chưa giải thích nó. Quan hệ với thầy cô, bạn học và những trải nghiệm trước đó đều cần được xem xét.
+
+Khi nhóm học tạo cách trao đổi cho phép hỏi lại và sửa ý, người ấy có thể dần nói rõ suy nghĩ hơn. Điều kiện quan hệ đã đổi, nhưng việc đọc, tập diễn đạt và chủ động tham gia vẫn phải do chính người học thực hiện. Bao nhiêu năng lực đang chưa được bộc lộ vì thiếu điều kiện phù hợp? Câu hỏi ấy không xóa trách nhiệm cá nhân, mà giúp trách nhiệm có một con đường thực hiện.
+
 ## Con người vừa là sản phẩm, vừa là chủ thể của lịch sử
 
 Mỗi người sinh ra trong những điều kiện tự nhiên và xã hội có trước mình. Họ thừa hưởng ngôn ngữ, công cụ, thiết chế, tri thức và những vấn đề chưa được giải quyết. Theo nghĩa ấy, con người là sản phẩm của lịch sử.
@@ -75,6 +79,10 @@ C. Mác gắn hiện tượng ấy với chế độ tư hữu tư liệu sản 
 
 Chẳng hạn, nếu người lao động chỉ được làm những thao tác lặp lại, không có khả năng hiểu hoặc tác động đến quá trình chung, hoạt động có thể hạn chế sự phát triển năng lực của họ. Khi phân tích trường hợp cụ thể, cần xét quyền kiểm soát, mục đích lao động và cách hưởng thành quả. Không thể chỉ thấy máy móc rồi kết luận có tha hóa.
 
+Hãy hình dung một nhóm lao động cùng xây dựng hệ thống ghi nhận tiến độ. Ban đầu, dữ liệu giúp họ nhận ra chỗ công việc bị nghẽn. Về sau, nếu chỉ tiêu do người khác áp đặt khiến họ không được giải thích hoàn cảnh, phương tiện từng được tạo để hỗ trợ có thể quay lại chi phối cách họ làm việc.
+
+Tình huống gợi đến vấn đề tha hóa nhưng chưa đủ để kết luận chỉ cần có dữ liệu hoặc chỉ tiêu là có tha hóa lao động. Cần xét ai kiểm soát hệ thống, người lao động có quyền tác động đến mục đích và quy trình hay không, và thành quả được phân phối thế nào. Một cảm giác chán nản cũng không tự chứng minh toàn bộ quan hệ tha hóa. Phân tích phải đi từ trải nghiệm đến những quan hệ làm trải nghiệm ấy nảy sinh.
+
 ## Giải phóng con người và sự phát triển tự do
 
 Trong quan niệm Mác - Lênin, giải phóng con người là khắc phục những quan hệ áp bức, bóc lột và những điều kiện làm con người bị tha hóa. Mục tiêu không chỉ là thay đổi danh nghĩa pháp lý. Con người cần có điều kiện thực tế để lao động sáng tạo, học tập, tham gia xã hội và phát triển năng lực.
@@ -91,6 +99,15 @@ Xã hội cung cấp ngôn ngữ, tri thức, tổ chức và cơ hội để c�
 
 Tuyệt đối hóa cá nhân làm mất những điều kiện xã hội của thành tựu riêng. Tuyệt đối hóa tập thể có thể làm mờ nhu cầu, quyền lợi và năng lực sáng tạo của từng người. Cần tìm những cách tổ chức trong đó sự đóng góp và sự phát triển của cá nhân hỗ trợ đời sống chung.
 
+
+<!-- philosophy-figure -->
+<figure class="philosophy-figure">
+  <img src="../img/chuong-3/con-nguoi.webp" alt="Những người tình nguyện phối hợp trồng cây." width="1100" height="825" loading="lazy" decoding="async" />
+  <figcaption>Hình 3.6: Những người tình nguyện phối hợp trồng cây.</figcaption>
+</figure>
+
+Việc trồng một cây có thể là hành động của cá nhân, nhưng việc phục hồi một khu vực cần nhiều năng lực và sự phối hợp. Mỗi người tham gia mang theo kỹ năng và lý do riêng, đồng thời được rèn luyện thêm trong công việc chung. Quan hệ xã hội vì thế vừa tạo điều kiện cho hành động, vừa được con người duy trì hoặc thay đổi qua chính hành động ấy.
+
 ## Quần chúng nhân dân và lãnh tụ trong lịch sử
 
 Quần chúng nhân dân là những lực lượng đông đảo có lợi ích cơ bản chung, liên kết hành động để thực hiện những nhiệm vụ lịch sử cụ thể, trước hết là những người lao động. Nội dung cụ thể của khái niệm thay đổi theo thời kỳ và nhiệm vụ lịch sử. Cơ sở lợi ích và sự liên kết hành động giúp phân biệt quần chúng nhân dân với mọi tập hợp đông người.
@@ -100,6 +117,10 @@ Quần chúng tạo ra của cải vật chất, sáng tạo những giá trị 
 Cá nhân kiệt xuất và lãnh tụ có thể nhận ra yêu cầu lịch sử, đề xuất phương hướng, tập hợp và tổ chức lực lượng. Vai trò ấy gắn với điều kiện khách quan và hoạt động của quần chúng. Đề cao lãnh tụ đến mức coi một cá nhân tạo ra toàn bộ lịch sử sẽ dẫn đến sùng bái cá nhân.
 
 Ngược lại, thừa nhận vai trò quần chúng không có nghĩa mọi cá nhân đều tác động như nhau. Năng lực nhận thức, lựa chọn và tổ chức có thể ảnh hưởng lớn đến kết quả. Cần đánh giá cá nhân qua đóng góp thực tế trong quan hệ với cộng đồng và nhiệm vụ lịch sử.
+
+Trong một dự án chung, người trình bày trước công chúng có thể là gương mặt dễ được ghi nhớ nhất. Nhưng kết quả còn dựa vào những người chuẩn bị dữ liệu, thử nghiệm, tổ chức và sửa lỗi. Nhìn thấy lao động tích lũy ấy không làm đóng góp của người đại diện mất đi. Nó đặt đóng góp cá nhân vào mạng lưới hợp tác đã làm nó trở thành hiện thực.
+
+Khi kể lại một thành tựu, ta đã nhìn thấy những người tạo nên điều kiện của nó đến đâu? Từ câu hỏi nhỏ ấy có thể hiểu vì sao nghiên cứu lịch sử vừa cần đánh giá cá nhân kiệt xuất, vừa phải đi vào đời sống và hoạt động của quần chúng. Con người sáng tạo trong những quan hệ có trước mình, rồi bằng hoạt động chung lại mở thêm khả năng cho người đến sau.
 
 ## Phát triển con người trong điều kiện Việt Nam
 
@@ -111,53 +132,243 @@ Từ cách tiếp cận ấy, phát triển con người cần quan tâm đồng
 
 <template #exercises>
 
+<!-- workbook: WB3-MC02; PDF 82 -->
 
-<!-- Bài tập 3.12: III.II.19; tr.97; PDF98 -->
+::: exercise Bài 1
 
-::: exercise Bài 3.12. Con người và hoàn cảnh
+Tiền đề xuất phát của quan điểm duy vật lịch sử là:
+
+- A. Con người trừu tượng.
+- B. Con người hành động.
+- C. Con người tư duy.
+- D. Con người hiện thực.
+
+:::
+
+::: solution
+
+Đáp án: D.
+
+Con người hiện thực là những con người đang sống, hoạt động và sản xuất trong những điều kiện lịch sử xác định. Cách xuất phát này bao gồm tư duy và hành động nhưng không tách chúng khỏi cơ thể, nhu cầu, quan hệ xã hội và điều kiện sinh hoạt vật chất.
+
+:::
+
+<!-- workbook: WB3-MC74; PDF 95 -->
+
+::: exercise Bài 2
+
+Chủ nghĩa duy vật lịch sử coi con người là một bộ phận của giới tự nhiên, còn giới tự nhiên là:
+
+- A. Đối tượng chinh phục của con người.
+- B. Đối tượng cải tạo của con người.
+- C. Thân thể vô cơ của con người.
+- D. Đối tượng vô cơ của con người.
+
+:::
+
+::: solution
+
+Đáp án: C.
+
+“Thân thể vô cơ” chỉ giới tự nhiên bên ngoài cơ thể mà con người phải liên hệ thường xuyên để sống và lao động. Không khí, nước, đất và vật liệu là những điều kiện tồn tại ấy. Cách nói nhấn mạnh sự phụ thuộc và gắn bó với tự nhiên, không cho phép coi tự nhiên chỉ là đối tượng khai thác tùy ý.
+
+:::
+
+<!-- workbook: WB3-MC75; PDF 95 -->
+
+::: exercise Bài 3
+
+Nội dung nào thể hiện đúng nhất quan điểm của chủ nghĩa duy vật lịch sử về con người?
+
+- A. Con người là sản phẩm của lịch sử, luôn chịu tác động của lịch sử.
+- B. Con người vừa là chủ thể của lịch sử, vừa là sản phẩm của lịch sử.
+- C. Con người sáng tạo ra lịch sử theo mong muốn chủ quan của mình.
+- D. Con người vừa là sản phẩm của lịch sử, vừa là bộ phận của lịch sử.
+
+:::
+
+::: solution
+
+Đáp án: B.
+
+Con người tiếp nhận những điều kiện đã có từ lịch sử, đồng thời cải biến chúng bằng hoạt động thực tiễn. Vai trò chủ thể luôn có điều kiện, còn vai trò sản phẩm không đồng nghĩa thụ động. A và D chỉ nhấn mạnh một phía, trong khi C tuyệt đối hóa ý muốn cá nhân.
+
+:::
+
+<!-- workbook: WB3-MC76; PDF 95 -->
+
+::: exercise Bài 4
+
+Điền vào chỗ trống: “Bản chất con người không phải là một cái trừu tượng cố hữu của cá nhân riêng biệt. Trong ...(1)... của nó, bản chất con người là ...(2)... những quan hệ xã hội”.
+
+- A. 1) Tính vật chất, 2) Tổng hòa.
+- B. 1) Tính vật chất, 2) Tổng hợp.
+- C. 1) Tính hiện thực, 2) Tổng số.
+- D. 1) Tính hiện thực, 2) Tổng hòa.
+
+:::
+
+::: solution
+
+Đáp án: D.
+
+Hai cụm cần điền là “tính hiện thực” và “tổng hòa”. Con người phải được xem trong những quan hệ xã hội cụ thể, có lịch sử. Tổng hòa chỉ sự liên hệ và tác động giữa các quan hệ ấy, không phải phép cộng cơ học và cũng không phủ nhận cơ sở sinh học của con người.
+
+:::
+
+<!-- workbook: WB3-MC77; PDF 95 -->
+
+::: exercise Bài 5
+
+Nội dung nào trong các nội dung được nêu dưới đây thể hiện đúng nhất xuất phát điểm nghiên cứu chủ nghĩa duy vật lịch sử của C. Mác và Ph. Ăngghen?
+
+- A. Con người cụ thể.
+- B. Con người trừu tượng.
+- C. Con người hiện thực.
+- D. Con người lý tưởng.
+
+:::
+
+::: solution
+
+Đáp án: C.
+
+“Con người hiện thực” là cách xác định đầy đủ tiền đề: Những con người đang sống và hoạt động trong các điều kiện vật chất, lịch sử nhất định. “Con người cụ thể” ở A có thể gần nghĩa trong cách nói thông thường, nhưng chưa tự xác định nội dung về hoạt động và điều kiện sinh hoạt mà khái niệm đang nhấn mạnh.
+
+:::
+
+<!-- workbook: WB3-MC78; PDF 95 -->
+
+::: exercise Bài 6
+
+Cống hiến quan trọng nhất của triết học Mác về bản chất con người là:
+
+- A. Chỉ ra bản chất con người là chủ thể sáng tạo ra lịch sử.
+- B. Chỉ ra hai mặt cơ bản tạo thành bản chất con người là cái sinh học và cái xã hội.
+- C. Chỉ ra vai trò của các quan hệ xã hội trong việc hình thành bản chất con người.
+- D. Chỉ ra bản chất con người là kết quả của sự tiến hóa lâu dài của giới tự nhiên.
+
+:::
+
+::: solution
+
+Đáp án: C.
+
+C thể hiện bước chuyển từ con người trừu tượng, biệt lập sang con người trong tổng hòa những quan hệ xã hội có lịch sử. Các mặt sinh học, tiến hóa và vai trò sáng tạo đều cần được xét đến, nhưng riêng chúng chưa nêu điểm phát triển có tính quyết định của luận điểm về bản chất xã hội.
+
+:::
+
+<!-- workbook: WB3-MC79; PDF 96 -->
+
+::: exercise Bài 7
+
+Trong các nội dung được nêu dưới đây, nội dung nào KHÔNG thể hiện đúng quan điểm của triết học Mác – Lênin về hiện tượng tha hóa của con người?
+
+- A. Tha hóa con người là phạm trù vĩnh viễn.
+- B. Tha hóa con người là hiện tượng mang tính lịch sử.
+- C. Tha hóa con người không chỉ tồn tại trong lĩnh vực đạo đức.
+- D. Tha hóa con người phát triển cao độ trong xã hội tư bản chủ nghĩa.
+
+:::
+
+::: solution
+
+Đáp án: A.
+
+Tha hóa gắn với những điều kiện xã hội và quan hệ sản xuất xác định, vì vậy có tính lịch sử và có thể được khắc phục khi những điều kiện ấy thay đổi. Nó không chỉ chỉ sự suy thoái đạo đức, mà còn chỉ quan hệ trong đó hoạt động và sản phẩm do con người tạo ra trở thành lực lượng xa lạ, chi phối họ.
+
+:::
+
+<!-- workbook: WB3-MC80; PDF 96 -->
+
+::: exercise Bài 8
+
+Theo quan điểm của triết học Mác – Lênin:
+
+- A. Lịch sử được quyết định bởi quần chúng nhân dân.
+- B. Lịch sử được quyết định bởi mệnh trời.
+- C. Lịch sử được quyết định bởi cá nhân hào kiệt.
+- D. Lịch sử không do ai quyết định, vì nó diễn ra theo quy luật tự nhiên.
+
+:::
+
+::: solution
+
+Đáp án: A.
+
+Quần chúng nhân dân là lực lượng tạo ra của cải, giá trị tinh thần và thực hiện những biến đổi xã hội. Vai trò quyết định của họ không phủ nhận đóng góp của cá nhân kiệt xuất, nhưng đóng góp ấy chỉ được hiện thực hóa trong những điều kiện lịch sử và hoạt động của những lực lượng xã hội cụ thể.
+
+:::
+
+<!-- workbook: WB3-TF18; PDF 98 -->
+
+::: exercise Bài 9
+
+Xác định đúng hoặc sai và giải thích ngắn gọn: Con người vừa có bản chất tự nhiên, vừa có bản chất xã hội.
+
+:::
+
+::: solution
+
+Đáp án: Đúng.
+
+Con người là thực thể sinh học - xã hội thống nhất. Cơ thể và nhu cầu sống thuộc tự nhiên, còn lao động, ngôn ngữ và nhân cách phát triển trong quan hệ xã hội. Tính xã hội giữ vai trò đặc trưng đối với con người hiện thực, nhưng không xóa bỏ những điều kiện sinh học và sinh thái.
+
+:::
+
+<!-- workbook: WB3-TF19; PDF 98 -->
+
+::: exercise Bài 10
 
 Xác định đúng hoặc sai và giải thích ngắn gọn: Con người là sản phẩm thụ động của hoàn cảnh.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution
 
 Đáp án: Sai.
 
-Con người chịu sự quy định của điều kiện tự nhiên, lịch sử và xã hội, đồng thời cải biến hoàn cảnh bằng hoạt động thực tiễn. Vai trò chủ thể không loại bỏ điều kiện khách quan, còn sự quy định của hoàn cảnh không biến con người thành đối tượng hoàn toàn thụ động.
+Con người tiếp nhận những điều kiện tự nhiên, lịch sử và xã hội có trước mình, đồng thời cải biến chúng bằng lao động và các hoạt động thực tiễn. Mỗi hành động đều có điều kiện nên không thể tùy ý sáng tạo lịch sử, nhưng sự quy định của hoàn cảnh không tước bỏ vai trò chủ thể.
 
 :::
 
-<!-- Bài tập 3.13: III.II.20; tr.97; PDF98 -->
+<!-- workbook: WB3-TF20; PDF 98 -->
 
-::: exercise Bài 3.13. Quần chúng và cá nhân trong lịch sử
+::: exercise Bài 11
 
 Xác định đúng hoặc sai và giải thích ngắn gọn: Lịch sử của nhân loại là lịch sử của các vị anh hùng, hào kiệt, các cá nhân kiệt xuất.
 
 :::
 
-::: solution Lời giải: Đáp án và giải thích
+::: solution
 
 Đáp án: Sai.
 
-Quần chúng nhân dân sáng tạo của cải vật chất, giá trị tinh thần và thực hiện những biến đổi xã hội. Cá nhân kiệt xuất, lãnh tụ có vai trò quan trọng trong định hướng và tổ chức hoạt động, nhưng vai trò đó gắn với điều kiện lịch sử và sự tham gia của quần chúng.
+Nhận định tuyệt đối hóa cá nhân và bỏ qua quần chúng nhân dân, lực lượng sản xuất của cải, sáng tạo giá trị tinh thần và thực hiện những biến đổi xã hội. Cá nhân kiệt xuất có thể định hướng, tổ chức và thúc đẩy hành động, nhưng tác dụng ấy gắn với điều kiện khách quan và hoạt động của các lực lượng xã hội.
 
 :::
 
-<!-- Bài tập 3.14: III.III.5; tr.99; PDF100 -->
+<!-- workbook: WB3-ES05; PDF 100 -->
 
-::: exercise Bài 3.14. Bản chất xã hội của con người
+::: exercise Bài 12
 
-Hãy giải thích luận điểm của C. Mác: “Trong tính hiện thực của nó, bản chất con người là tổng hòa các quan hệ xã hội.”
-
-:::
-
-::: solution Lời giải: Đáp án và giải thích
-
-Con người hiện thực hình thành và phát triển trong các quan hệ lao động, kinh tế, chính trị, gia đình, văn hóa và giáo dục. Các quan hệ ấy gắn bó, tác động qua lại, chứ không phải những yếu tố có thể cộng cơ học. Luận điểm nhấn mạnh tính xã hội và tính lịch sử của bản chất con người. Nó không phủ nhận cơ sở sinh học, đặc điểm cá nhân hoặc năng lực con người cải biến chính các quan hệ của mình.
+Hãy giải thích luận điểm của C. Mác: “Trong tính hiện thực của nó, bản chất con người là tổng hòa các quan hệ xã hội”.
 
 :::
 
+::: solution
+
+“Trong tính hiện thực” đặt việc tìm hiểu con người vào đời sống cụ thể. Một người không chỉ là cơ thể sinh học hoặc một chủ thể tư duy trừu tượng. Người ấy sống, lao động, giao tiếp và hình thành nhân cách trong những quan hệ gia đình, kinh tế, chính trị, giáo dục và văn hóa có lịch sử.
+
+“Tổng hòa” không phải tổng số các mối quan hệ được cộng lại một cách cơ học. Những quan hệ ấy tác động qua lại và có vị trí khác nhau. Điều kiện lao động có thể ảnh hưởng tới đời sống gia đình, cơ hội giáo dục ảnh hưởng tới hoạt động nghề nghiệp, còn chuẩn mực cộng đồng định hướng việc đánh giá và lựa chọn hành vi. Bản chất xã hội được hình thành và thể hiện trong sự liên hệ ấy.
+
+Chẳng hạn, một người học nghề không chỉ tiếp thu thao tác kỹ thuật. Trong quan hệ với người hướng dẫn, đồng nghiệp và người sử dụng sản phẩm, họ học sự hợp tác, trách nhiệm và cách đánh giá chất lượng công việc. Khi những quan hệ và cơ hội hoạt động thay đổi, năng lực và cách ứng xử của họ cũng có điều kiện phát triển khác đi.
+
+Luận điểm không phủ nhận cơ sở sinh học, tính độc đáo của cá nhân hoặc khả năng lựa chọn. Con người tiếp nhận hoàn cảnh thông qua hoạt động của chính mình, đồng thời có thể cải biến những quan hệ đang tác động tới mình. Vì vậy, không thể kết luận cá nhân chỉ là sản phẩm thụ động của môi trường.
+
+Ý nghĩa phương pháp là đánh giá con người trong hoàn cảnh và quan hệ cụ thể, đồng thời gắn việc phát triển cá nhân với cải thiện các điều kiện xã hội. Khuyên một người học tập, lao động có trách nhiệm cần đi cùng việc tạo cơ hội tiếp cận tri thức, hợp tác và tham gia đời sống chung. Sự tác động xã hội và nỗ lực tự rèn luyện phải được xem trong mối quan hệ với nhau.
+
+:::
 
 </template>
 
@@ -167,3 +378,4 @@ Con người hiện thực hình thành và phát triển trong các quan hệ l
 
 1. Hội đồng biên soạn, Phạm Văn Đức (chủ biên, 2019). *Giáo trình Triết học Mác – Lênin*. Dành cho bậc đại học, khối các ngành ngoài lý luận chính trị. Hà Nội. Chương 3, tr. 144–254.
 2. Khoa Triết học, Trường Đại học Khoa học Xã hội và Nhân văn (2024). *Bài tập Triết học Mác - Lênin*. Hà Nội. Chương 3, phần Bài tập.
+3. U.S. Fish and Wildlife Service. [Những người tình nguyện phối hợp trồng cây.](https://commons.wikimedia.org/wiki/File:Volunteers_Assist_With_Planting_(26402804327).jpg). Phạm vi công cộng. Bản thu nhỏ.
