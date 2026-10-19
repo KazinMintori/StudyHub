@@ -28,15 +28,15 @@ Hình 28.3: Từ trường của phần tử dòng điện có dạng tương t�
 
 $$
 \begin{aligned}
-dB &= \frac{\mu_0}{4\pi} \times\frac{|dQ|v_d\sin\phi}{r^2} \\
-&= \frac{\mu_0}{4\pi} \times n|q|A v_d \times\frac{d\ell\sin\phi}{r^2}.
+dB &= \frac{\mu_0}{4\pi} \frac{|dQ|v_d\sin\phi}{r^2} \\
+&= \frac{\mu_0}{4\pi} n|q|A v_d \frac{d\ell\sin\phi}{r^2}.
 \end{aligned}
 $$
 
 Dòng điện là lượng điện tích quy ước đi qua tiết diện trong một đơn vị thời gian. Với các hạt tải có cùng tốc độ trôi, độ lớn dòng điện là $I=n|q|v_dA$. Thay tích này vào biểu thức trên, ta được định luật Biot–Savart ở dạng độ lớn:
 
 $$
-dB = \frac{\mu_0 I}{4\pi} \times d\ell \times\frac{\sin\phi}{r^2}.
+dB = \frac{\mu_0 I}{4\pi} \frac{d\ell\sin\phi}{r^2}.
 $$
 
 Véc-tơ dòng điện luôn chỉ theo chiều dòng điện quy ước. Với hạt tải âm, vận tốc trôi ngược chiều dòng điện nhưng điện tích $q$ cũng mang dấu âm, nên $q\vec v_d$ vẫn cùng chiều dòng điện. Vì thế, biểu thức dùng $I\,d\vec\ell$ mô tả đúng hướng từ trường dù dòng điện do electron hay ion dương tạo ra.
@@ -56,10 +56,7 @@ Nếu đặt vật liệu gần dây dẫn, sự từ hóa của vật liệu c�
 Để tìm từ trường của cả dây, ta chia dây thành các đoạn vi phân. Mỗi đoạn tạo một véc-tơ $d\vec B$ tại điểm cần xét. Từ trường tổng là tích phân véc-tơ trên toàn đường dây mang dòng điện:
 
 $$
-\begin{aligned}
-\vec B &= \frac{\mu_0 I}{4\pi} \times\int_{\mathrm{wire}} \\
-&\qquad\frac{d\vec\ell\times\hat r}{r^2}.
-\end{aligned} \tag{28.7}
+\vec B = \frac{\mu_0 I}{4\pi} \int_{\mathrm{wire}} \frac{d\vec\ell\times\hat r}{r^2}. \tag{28.7}
 $$
 
 Tích phân này là phép cộng liên tục các đóng góp trên toàn bộ dây. Nếu các véc-tơ $d\vec B$ cùng hướng, ta có thể cộng độ lớn. Nếu hướng khác nhau, phải phân tích thành phần rồi cộng theo từng trục.
@@ -111,7 +108,7 @@ Tại $P_2$, véc-tơ đơn vị là $\hat r_2=-\cos30^\circ\,\hat\imath+\sin30^
 $$
 \begin{aligned}
 \vec B_2 &= \frac{\mu_0 I}{4\pi r^2} \left[-d\ell\,\hat\imath\times\hat r_2\right] \\
-&= -\frac{\mu_0 I d\ell\sin30^\circ}{4\pi r^2} \times\hat k \\
+&= -\frac{\mu_0 I d\ell\sin30^\circ}{4\pi r^2}\,\hat k \\
 &= -4{,}3\times10^{-8}\,\hat k\,\mathrm T.
 \end{aligned}
 $$

@@ -22,7 +22,7 @@ $$
 Quy tắc bàn tay phải cho thấy mọi $d\vec B$ tại điểm P đều hướng vào mặt phẳng hình. Vì vậy, ta có thể cộng các độ lớn bằng tích phân theo $y$ từ đầu dưới $-a$ đến đầu trên $a$:
 
 $$
-B = \frac{\mu_0 I}{4\pi} \times\int_{-a}^{a}\frac{x\,dy}{(x^2+y^2)^{3/2}}.
+B = \frac{\mu_0 I}{4\pi} \int_{-a}^{a} \frac{x\,dy}{(x^2+y^2)^{3/2}}.
 $$
 
 Với $x>0$, đặt $u=y/x$, nên $dy=x\,du$. Để tách phần biến thiên khỏi biểu thức dài, đặt $f(y)=x/(x^2+y^2)^{3/2}$ và $g(u)=1/(1+u^2)^{3/2}$. Nguyên hàm của $g(u)/x$ là $G(u)=u/[x\sqrt{1+u^2}]$. Khi đổi biến và thế hai cận, ta được:
@@ -64,7 +64,7 @@ Hình 28.6: Từ trường quanh dây dẫn dài có các đường sức tròn,
 Đường sức điện của điện tích đường tỏa ra hoặc hướng vào điện tích. Trái lại, đường sức từ do dòng điện luôn khép kín. Điều đó phù hợp với định luật Gauss cho từ trường, theo đó tổng từ thông qua mọi mặt kín bằng không:
 
 $$
-\oiint_S\vec B\cdot d\vec A = 0. \tag{28.10}
+\oint_S \vec B\cdot d\vec A = 0. \tag{28.10}
 $$
 
 Mọi đường sức từ đi vào mặt kín đều phải đi ra khỏi mặt ấy. Từ trường không có điểm bắt đầu hay kết thúc như đường sức của điện tích đơn lẻ.

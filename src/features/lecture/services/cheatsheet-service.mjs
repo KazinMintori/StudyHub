@@ -27,6 +27,28 @@ import { potentialCheatsheet } from '../../../../docs/.vitepress/physics-potenti
 import { capacitanceCheatsheet } from '../../../../docs/.vitepress/physics-capacitance-course.mjs'
 import { mathAiReviewCheatsheet } from '../../../content/courses/toan-cho-ai/lectures/on-luyen/review-course.mjs'
 
+import {
+  unitsVectorsCheatsheet,
+  motion3dCheatsheet,
+  newtonLawsCheatsheet,
+  newtonApplicationsCheatsheet,
+  workEnergyCheatsheet,
+  potentialEnergyCheatsheet,
+  momentumCheatsheet,
+  rotationKinematicsCheatsheet,
+  rotationDynamicsCheatsheet,
+  equilibriumElasticityCheatsheet,
+  fluidMechanicsCheatsheet,
+  gravitationCheatsheet,
+  oscillationsCheatsheet,
+  mechanicalWavesCheatsheet,
+  acousticsCheatsheet,
+  temperatureHeatCheatsheet,
+  kineticTheoryCheatsheet,
+  firstLawThermoCheatsheet,
+  secondLawEntropyCheatsheet
+} from '../../../../docs/.vitepress/physics1-cheatsheets.mjs'
+
 export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/17-thuyet-tuong-doi': relativityCheatsheet, 'vat-ly-2/16-nhieu-xa': diffractionCheatsheet, 'vat-ly-2/15-giao-thoa': interferenceCheatsheet, 'vat-ly-2/14-quang-hinh-hoc': geometricOpticsCheatsheet, 'vat-ly-2/13-truyen-anh-sang': opticsCheatsheet, 'vat-ly-2/12-song-dien-tu': emWaveCheatsheet, 'vat-ly-2/11-dong-dien-xoay-chieu': acCheatsheet, 'vat-ly-2/10-tu-cam': inductanceCheatsheet, 'vat-ly-2/09-cam-ung-dien-tu': inductionCheatsheet, 'vat-ly-2/08-nguon-tu-truong': sourcesCheatsheet, 'vat-ly-2/07-tu-truong-luc-tu': magneticCheatsheet, 'vat-ly-2/06-mach-dien-mot-chieu': dcCheatsheet, 'vat-ly-2/05-dong-dien-dien-tro': currentCheatsheet, 'vat-ly-2/04-tu-dien-dien-moi': capacitanceCheatsheet, 'vat-ly-1/02-chuyen-dong-thang': physicsMotionCheatsheet, 'vat-ly-2/01-dien-truong-coulomb': electrostaticsCheatsheet, 'vat-ly-2/03-dinh-luat-gauss': gaussCheatsheet, 'vat-ly-2/02-dien-the': potentialCheatsheet, 'toan-cho-ai/on-luyen': mathAiReviewCheatsheet,
   'vat-ly-2/19-song-vat-chat': matterWavesCheatsheet,
   'vat-ly-2/20-ham-song-schrodinger': quantumWaveCheatsheet,
@@ -34,15 +56,34 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-2/22-chat-ran-ban-dan': moleculesCheatsheet,
   'vat-ly-2/23-vat-ly-hat-nhan': nuclearCheatsheet,
   'vat-ly-2/24-hat-co-ban-vu-tru': particlesCosmologyCheatsheet,
+  'vat-ly-1/01-don-vi-vector': unitsVectorsCheatsheet,
+  'vat-ly-1/03-chuyen-dong-khong-gian': motion3dCheatsheet,
+  'vat-ly-1/04-dinh-luat-newton': newtonLawsCheatsheet,
+  'vat-ly-1/05-ung-dung-newton': newtonApplicationsCheatsheet,
+  'vat-ly-1/06-cong-dong-nang': workEnergyCheatsheet,
+  'vat-ly-1/07-the-nang-bao-toan-co-nang': potentialEnergyCheatsheet,
+  'vat-ly-1/08-dong-luong-va-cham': momentumCheatsheet,
+  'vat-ly-1/09-dong-hoc-vat-ran': rotationKinematicsCheatsheet,
+  'vat-ly-1/10-dong-luc-hoc-quay': rotationDynamicsCheatsheet,
+  'vat-ly-1/11-can-bang-dan-hoi': equilibriumElasticityCheatsheet,
+  'vat-ly-1/12-co-hoc-chat-luu': fluidMechanicsCheatsheet,
+  'vat-ly-1/13-hap-dan': gravitationCheatsheet,
+  'vat-ly-1/14-dao-dong': oscillationsCheatsheet,
+  'vat-ly-1/15-song-co': mechanicalWavesCheatsheet,
+  'vat-ly-1/16-am-hoc': acousticsCheatsheet,
+  'vat-ly-1/17-nhiet-do-nhiet-luong': temperatureHeatCheatsheet,
+  'vat-ly-1/18-thuyet-dong-hoc-chat-khi': kineticTheoryCheatsheet,
+  'vat-ly-1/19-nguyen-ly-thu-nhat': firstLawThermoCheatsheet,
+  'vat-ly-1/20-nguyen-ly-thu-hai-entropy': secondLawEntropyCheatsheet,
 }
 
 export function getLectureCheatsheet(course, lesson) {
   if (!course || !lesson) return null
-  if (['vat-ly-1', 'vat-ly-2'].includes(course.id) && lesson.status !== 'ready') return null
   const key = `${course.id}/${lesson.slug}`
   if (cheatsheets[key]) {
     return cheatsheets[key]
   }
+  if (['vat-ly-1', 'vat-ly-2'].includes(course.id) && lesson.status !== 'ready') return null
 
   // Synthesize a structured cheatsheet dynamically
   const slides = lectureSlides(course, lesson)

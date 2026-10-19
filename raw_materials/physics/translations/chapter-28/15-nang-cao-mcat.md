@@ -242,9 +242,9 @@ $$
 
 $$
 \begin{aligned}
-B_x &= \frac{\mu_0\sigma\omega R^3}{4\pi} \times\iint_D \frac{d\phi\,dx}{r(x)^3}, \\
-B_y &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \times\iint_D \frac{x\cos\phi\,d\phi\,dx}{r(x)^3}, \\
-B_z &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \times\iint_D \frac{x\sin\phi\,d\phi\,dx}{r(x)^3}.
+B_x &= \frac{\mu_0\sigma\omega R^3}{4\pi} \iint_D \frac{d\phi\,dx}{r(x)^3}, \\
+B_y &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \iint_D \frac{x\cos\phi\,d\phi\,dx}{r(x)^3}, \\
+B_z &= -\frac{\mu_0\sigma\omega R^2}{4\pi} \iint_D \frac{x\sin\phi\,d\phi\,dx}{r(x)^3}.
 \end{aligned}
 $$
 
@@ -252,7 +252,7 @@ Các tích phân góc của $\cos\phi$ và $\sin\phi$ đều bằng không, nên
 
 $$
 \begin{aligned}
-B_x &= \frac{\mu_0\sigma\omega R^3}{2} \times\int_{-W/2}^{W/2}\frac{dx}{r(x)^3} \\
+B_x &= \frac{\mu_0\sigma\omega R^3}{2} \int_{-W/2}^{W/2}\frac{dx}{r(x)^3} \\
 &= \frac{\mu_0\sigma\omega RW}{2}\left[R^2+(W/2)^2\right]^{-1/2} \\
 &= \frac{\mu_0Q\omega}{4\pi}\left[R^2+(W/2)^2\right]^{-1/2}.
 \end{aligned}
@@ -317,7 +317,7 @@ Gọi $S$ là tích phân bình phương dòng theo thời gian. Ta tính riêng
 $$
 \begin{aligned}
 S &= \int_0^\infty I(t)^2\,dt, \\
-S &= \frac{Q_0^2}{R^2C^2} \times\int_0^\infty e^{-2t/(RC)}\,dt \\
+S &= \frac{Q_0^2}{R^2C^2} \int_0^\infty e^{-2t/(RC)}\,dt \\
 &= \frac{Q_0^2}{R^2C^2}\frac{RC}{2} \\
 &= \frac{Q_0^2}{2RC}.
 \end{aligned}
