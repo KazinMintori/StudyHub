@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "scope": "Assignment explanation and two-section navigation; worked example reserved",
+  "sourceRequirementsMapped": 54,
+  "cities": 26,
+  "snapshotDates": 104,
+  "browserChecks": 6,
+  "browserWidths": [
+    360,
+    375,
+    1280
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "browserErrors": 0,
+  "repoTests": 110,
+  "featureTests": 108,
+  "lectureSkillTests": 39,
+  "lectureStructureErrors": 0,
+  "architecture": "pass",
+  "contentModel": "pass",
+  "designTokens": "pass",
+  "sourceUrls": [
+    "https://courses.iaidev.com/programming-for-data-processing/2627-1/projects/project_airbnb.html",
+    "https://courses.iaidev.com/programming-for-data-processing/2627-1/ai-policy.html"
+  ],
+  "languageReview": {
+    "provider": "Antigravity",
+    "reviewedDraft": "477 lines before final clarifications",
+    "suggestions": 6,
+    "acceptedParts": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "notAdopted": [
+      3,
+      5
+    ],
+    "reasonsNotAdopted": [
+      "Avoid assigning unsupported stakeholder preferences and occupancy interpretation.",
+      "Keep novice-friendly F1 explanation without adding unexplained metric abbreviations."
+    ],
+    "bridgeResult": "Both calls failed with NoneType after artifacts were saved; findings were recovered and independently reviewed.",
+    "baselineFilesUnchanged": 41
+  },
+  "limits": [
+    "Source-to-page markers supplement manual reading; they do not prove semantics automatically.",
+    "No worked pipeline or actual Airbnb data/LLM execution is supplied in part2.",
+    "Report format and rubric weights remain pending as the official assignment states."
+  ]
+}

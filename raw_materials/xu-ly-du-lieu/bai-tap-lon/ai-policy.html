@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Quy định về sử dụng công cụ AI trong học phần Lập trình xử lý dữ liệu (UET.DSE2049), học kì 1 năm học 2026-2027">
+  <title>Chính sách AI | Lập trình xử lý dữ liệu 2026-2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../index-pages.css">
+  <style>
+    /* Trang này là văn bản quy định: giữ bảng màu chung nhưng giảm bo tròn, bóng và trang trí */
+    .page-shell {
+      max-width: 920px;
+    }
+
+    .hero,
+    .panel {
+      border-radius: 10px;
+      box-shadow: 0 1px 2px rgba(44, 26, 6, 0.06);
+      backdrop-filter: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-text p {
+      color: var(--text);
+      font-size: 1.02rem;
+    }
+
+    .doc-meta {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 6px 22px;
+      margin: 22px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    .doc-meta dt {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-top: 3px;
+    }
+
+    .doc-meta dd {
+      margin: 0;
+    }
+
+    .summary {
+      margin-top: 22px;
+      padding: 14px 18px;
+      border-left: 4px solid var(--accent-dark);
+      background: rgba(217, 119, 6, 0.05);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .summary p {
+      margin: 0 0 6px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .summary ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .summary li {
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+
+    /* Điều khoản đánh số tự động: 1., 1.1, 1.2 … */
+    .doc {
+      counter-reset: sec;
+    }
+
+    .doc-section {
+      counter-increment: sec;
+      counter-reset: cl;
+      margin-top: 20px;
+      padding: 22px 26px 20px;
+    }
+
+    .doc-section h2 {
+      font-size: 1.2rem;
+      margin: 0 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .doc-section h2::before {
+      content: counter(sec) ". ";
+    }
+
+    .clauses {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .clauses > li {
+      counter-increment: cl;
+      position: relative;
+      padding-left: 2.9em;
+      margin-bottom: 12px;
+    }
+
+    .clauses > li:last-child {
+      margin-bottom: 0;
+    }
+
+    .clauses > li::before {
+      content: counter(sec) "." counter(cl);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      color: var(--accent-dark);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .clauses ul,
+    .clauses ol {
+      margin: 6px 0 0;
+      padding-left: 22px;
+    }
+
+    .clauses ol {
+      list-style: lower-alpha;
+    }
+
+    .clauses li li {
+      margin-bottom: 4px;
+    }
+
+    .mode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin: 8px 0 16px;
+    }
+
+    .mode {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 14px 16px 12px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .mode h3 {
+      margin: 0 0 4px;
+      font-size: 1rem;
+    }
+
+    .mode-closed h3 {
+      color: #8A4B1A;
+    }
+
+    .mode-open h3 {
+      color: #2F6B4B;
+    }
+
+    .mode .mode-desc {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mode ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .mode li {
+      margin-bottom: 3px;
+      line-height: 1.55;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 1px 8px;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      font-size: 0.9em;
+      white-space: nowrap;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 4px;
+      font-size: 0.97rem;
+    }
+
+    .doc-table th,
+    .doc-table td {
+      text-align: left;
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .doc-table thead th {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--line-strong);
+    }
+
+    .doc-table td:nth-child(2) {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .doc-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .doc-footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .doc-footer .footer {
+      margin: 0;
+    }
+
+    @media (max-width: 820px) {
+      .doc-section {
+        padding: 18px 18px 16px;
+      }
+
+      .doc-meta {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .doc-meta dd {
+        margin-bottom: 8px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .hero,
+      .panel,
+      .mode {
+        box-shadow: none;
+        background: #fff;
+      }
+
+      .hero-actions,
+      .doc-footer .secondary-link {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">IAI · UET · VNU</p>
+      <h1>Chính sách sử dụng công cụ AI</h1>
+      <p class="hero-subtitle">Lập trình xử lý dữ liệu · Học kì 1, năm học 2026–2027</p>
+      <div class="hero-text">
+        <p>
+          Văn bản này quy định việc sử dụng công cụ trí tuệ nhân tạo (AI) trong các hoạt động học tập
+          và đánh giá của học phần. Học phần cho phép sử dụng AI một cách có trách nhiệm, trên hai điều kiện:
+          sinh viên phải có <strong>năng lực nền tảng</strong> của chính mình và phải <strong>minh bạch</strong>
+          về việc sử dụng AI.
+        </p>
+      </div>
+      <div class="summary">
+        <p>Tóm tắt</p>
+        <ol>
+          <li>Bài thực hành, bài tập về nhà và bài tập lớn: <strong>được dùng AI</strong>, với điều kiện khai báo đầy đủ và tự kiểm chứng kết quả.</li>
+          <li>Kiểm tra trên lớp, thi giữa kỳ và vấn đáp: <strong>không được dùng AI</strong>; các hoạt động này đánh giá năng lực cá nhân.</li>
+          <li>Sinh viên chịu trách nhiệm hoàn toàn về sản phẩm mang tên mình, kể cả phần do AI tạo ra.</li>
+        </ol>
+      </div>
+      <div class="hero-actions">
+        <a class="secondary-link" href="./">
+          <span aria-hidden="true">←</span>
+          <span>Quay lại trang môn học</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="doc">
+
+      <section class="panel doc-section">
+        <h2>Phạm vi và nguyên tắc</h2>
+        <ol class="clauses">
+          <li>Chính sách này áp dụng cho mọi hoạt động có tính điểm của học phần: bài thực hành, bài tập về nhà,
+            kiểm tra trên lớp, thi giữa kỳ, bài tập lớn và vấn đáp.</li>
+          <li>"Công cụ AI" trong văn bản này bao gồm chatbot và trợ lý lập trình (ví dụ ChatGPT, Claude, Gemini,
+            GitHub Copilot, Cursor, Claude Code), mô hình ngôn ngữ gọi qua API, và các công cụ hỗ trợ viết có sử dụng AI.</li>
+          <li>Việc sử dụng AI được cho phép hay không tuỳ theo <em>chế độ đánh giá</em> của từng hoạt động (mục 2).
+            Ở chế độ được phép, sinh viên có ba nghĩa vụ: <strong>khai báo</strong>, <strong>hiểu</strong> và
+            <strong>kiểm chứng</strong> mọi nội dung mình nộp.</li>
+          <li>Với mọi sản phẩm mang tên mình, sinh viên là tác giả chịu trách nhiệm về tính đúng đắn, nguồn dữ liệu
+            và các vấn đề đạo đức. AI là công cụ và không thay thế trách nhiệm của người nộp bài.</li>
+        </ol>
+      </section>
+
+      <section class="panel doc-section">
+        <h2>Hai chế độ đánh giá</h2>
+        <div class="mode-grid">
+          <article class="mode mode-closed">
+            <h3>Chế độ đóng — không dùng AI</h3>
+            <p class="mode-desc">Đánh giá năng lực nền tảng của cá nhân.</p>
+            <ul>
+              <li>Kiểm tra trên lớp: 2 bài kiểm tra giấy 15 phút</li>
+              <li>Thi giữa kỳ (trên lớp)</li>
+              <li>Vấn đáp bài tập lớn: trả lời trực tiếp và làm bài thực hành tại chỗ</li>
+            </ul>
+          </article>
+          <article class="mode mode-open">
+            <h3>Chế độ mở — được dùng AI</h3>
+            <p class="mode-desc">Đánh giá khả năng chỉ đạo công cụ và kiểm chứng kết quả.</p>
+            <ul>
+              <li>Bài thực hành: nộp bài lab qua GitHub Classroom</li>
+              <li>Bài tập về nhà (trừ khi đề ghi rõ chế độ đóng)</li>
+              <li>Thực hiện bài tập lớn nhóm ngoài giờ lên lớp</li>
+            </ul>
+          </article>
+        </div>
+        <ol class="clauses">
+          <li>Ở <strong>chế độ đóng</strong>, sinh viên không được sử dụng công cụ AI dưới bất kì hình thức nào,
+            không được nhận trợ giúp của người khác; các tài liệu khác chỉ được sử dụng khi đề bài cho phép.
+            Sử dụng AI ở chế độ đóng được coi là gian lận thi cử.</li>
+          <li>Ở <strong>chế độ mở</strong>, sinh viên được sử dụng bất kì công cụ AI nào theo quy định tại mục 3,
+            với điều kiện khai báo theo mục 4, hiểu và kiểm chứng được nội dung mình nộp.</li>
+          <li>Chế độ áp dụng cho từng đầu điểm:
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Đầu điểm</th>
+                  <th>Trọng số</th>
+                  <th>Chế độ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thực hành — nộp bài lab</td>
+                  <td>10%</td>
+                  <td>Mở</td>
+                </tr>
+                <tr>
+                  <td>Kiểm tra trên lớp — 2 bài giấy 15 phút</td>
+                  <td>10%</td>
+                  <td>Đóng</td>
+                </tr>
+                <tr>
+                  <td>Thi giữa kỳ</td>
+                  <td>20%</td>
+                  <td>Đóng</td>
+                </tr>
+                <tr>
+                  <td>Bài tập lớn nhóm và vấn đáp</td>
+                  <td>60%</td>
+                  <td>Mở khi làm tại nhà; đóng khi vấn đáp</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Mỗi đề bài của học phần ghi rõ chế độ bằng nhãn <span class="label">🚫 đóng</span> hoặc
+            <span class="label">✅ mở</span>. Nếu đề bài không có nhãn, sinh viên phải hỏi giảng viên
+            <em>trước khi</em> sử dụng AI.</li>
+        </ol>
+      </section>
+
+      <section class="panel doc-section">
+        <h2>Công cụ và dữ liệu ở chế độ mở</h2>
+        <ol class="clauses">
+          <li>Sinh viên được sử dụng chatbot và trợ lý lập trình nêu tại mục 1.2 hoặc công cụ tương đương.</li>
+          <li>Khi gọi mô hình ngôn ngữ qua API trong bài làm, học phần hướng dẫn chính thức
+            <strong>Gemini API (free tier)</strong>. Sinh viên có thể dùng nhà cung cấp khác nếu tự chịu chi phí
+            và ghi rõ trong phần khai báo.</li>
+          <li>Được dùng công cụ AI hỗ trợ viết (sửa ngữ pháp, dịch) cho báo cáo; nội dung, lập luận và số liệu
+            trong báo cáo vẫn phải là của nhóm.</li>
+          <li>Không đưa dữ liệu cá nhân, dữ liệu nhạy cảm hoặc thông tin của người khác vào công cụ AI.
+            Sinh viên cần kiểm tra điều khoản xử lý dữ liệu của công cụ trước khi sử dụng.</li>
+          <li>Không đưa API key vào mã nguồn hoặc commit lên kho mã; phải dùng biến môi trường hoặc Colab Secrets.</li>
+        </ol>
+      </section>
+
+      <section class="panel doc-section">
+        <h2>Nghĩa vụ khai báo</h2>
+        <ol class="clauses">
+          <li>Với <strong>bài tập lớn</strong>, kho mã của nhóm bắt buộc có tệp <code>AI_USAGE.md</code> ghi rõ:
+            <ol>
+              <li>công cụ đã dùng và dùng vào việc gì;</li>
+              <li>các prompt then chốt;</li>
+              <li>những chỗ AI làm sai và cách nhóm phát hiện;</li>
+              <li>cách nhóm kiểm chứng kết quả do AI tạo ra.</li>
+            </ol>
+          </li>
+          <li>Với <strong>bài tập về nhà</strong>, sinh viên ghi mục "Khai báo AI" ở cuối bài (2–4 câu, theo mẫu trong đề).</li>
+          <li>Nếu không dùng AI, sinh viên ghi rõ "Không dùng AI"; đây cũng là một khai báo.</li>
+          <li>Khai báo đầy đủ không phải là căn cứ trừ điểm. Ngược lại, tính minh bạch là một tiêu chí chấm của bài tập lớn.</li>
+        </ol>
+      </section>
+
+      <section class="panel doc-section">
+        <h2>Vi phạm và xử lý</h2>
+        <ol class="clauses">
+          <li>Các hành vi sau bị coi là <strong>gian lận</strong> và xử lý theo quy chế:
+            <ol>
+              <li>sử dụng AI hoặc bất kì trợ giúp nào khác ở chế độ đóng (kiểm tra trên lớp, thi giữa kỳ, vấn đáp);</li>
+              <li>giấu hoặc khai man việc sử dụng AI ở chế độ mở;</li>
+              <li>chép bài của nhóm khác hoặc dùng chung mã nguồn giữa các nhóm, kể cả khi đã dùng AI để viết lại;</li>
+              <li>tạo số liệu hoặc kết quả thí nghiệm không có thật, dù do sinh viên hay AI thực hiện.</li>
+            </ol>
+          </li>
+          <li>Hình thức xử lý:
+            <ul>
+              <li>Gian lận ở chế độ đóng: <strong>0 điểm</strong> cho đầu điểm đó, lập biên bản và xử lý theo quy chế
+                đào tạo của Trường Đại học Công nghệ và ĐHQGHN (có thể đến mức đình chỉ học phần).</li>
+              <li>Khai man hoặc giấu việc sử dụng AI trong bài tập lớn: trừ đáng kể điểm minh bạch của cả nhóm;
+                trường hợp nghiêm trọng xử lý như gian lận.</li>
+              <li>Tái phạm: chuyển hồ sơ lên Viện Trí tuệ nhân tạo xem xét kỷ luật.</li>
+            </ul>
+          </li>
+          <li>Các trường hợp sau <strong>không phải gian lận</strong> nhưng ảnh hưởng trực tiếp đến điểm:
+            <ul>
+              <li>Nộp mã nguồn do AI viết mà sinh viên hiểu, đã kiểm chứng và có khai báo: được chấp nhận.</li>
+              <li>Nộp mã nguồn do AI viết mà sinh viên không hiểu: không bị kỷ luật, nhưng sẽ được phát hiện khi vấn đáp.
+                Phần không giải thích được nhận 0 điểm đối với cá nhân đó; điểm của các thành viên trong nhóm được phép khác nhau.</li>
+              <li>AI đưa ra kết quả sai mà sinh viên không kiểm tra: mất điểm vì bài sai, như mọi bài sai khác.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="panel doc-section">
+        <h2>Hiệu lực</h2>
+        <ol class="clauses">
+          <li>Chính sách này có hiệu lực từ đầu học kì 1, năm học 2026–2027 và được phổ biến trong buổi học đầu tiên.
+            Sinh viên có trách nhiệm đọc và nắm nội dung trước khi nộp bất kì bài nào.</li>
+          <li>Những tình huống chưa được quy định trong văn bản này do giảng viên phụ trách học phần quyết định;
+            sinh viên hỏi giảng viên trước khi thực hiện.</li>
+        </ol>
+      </section>
+
+    </div>
+
+    <div class="doc-footer">
+      <p class="footer">
+        Phiên bản 07/2026 · Viện Trí tuệ nhân tạo · Trường Đại học Công nghệ · ĐHQGHN
+      </p>
+      <a class="secondary-link" href="./">
+        <span aria-hidden="true">←</span>
+        <span>Quay lại trang môn học</span>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>

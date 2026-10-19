@@ -22,7 +22,13 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
             link:`/${course.id}/bai-tap`,
             ...(course.problemSets ? {items:course.problemSets.map(set=>({text:set.title,link:`/${course.id}/problem-set/${set.slug}`}))} : {})
           }] : []),
-          ...(course.id === 'xu-ly-du-lieu' ? [{text:'Ôn thi',link:`/${course.id}/on-thi/`}] : [])
+          ...(course.id === 'xu-ly-du-lieu' ? [
+            {text:'Ôn thi',link:`/${course.id}/on-thi/`},
+            {text:'Bài tập lớn',link:`/${course.id}/bai-tap-lon/`,items:[
+              {text:'Đề bài tập lớn',link:`/${course.id}/bai-tap-lon/`},
+              {text:'Ví dụ thực hành',link:`/${course.id}/bai-tap-lon/thuc-hanh`}
+            ]}
+          ] : [])
         ]},
         ...(course.review ? [
           {text:'Ôn luyện',collapsed:false,items:[

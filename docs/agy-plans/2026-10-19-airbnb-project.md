@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEWED_WITH_BRIDGE_LIMITATION
 
 # Airbnb project brief and Vietnamese language review
 
@@ -17,3 +17,5 @@ Output: Incremental `prose-guide.md`, `requirements-audit.json` and final `repor
 Verification: Read local source snapshots and record coverage. Run `git status --short`, `git diff --name-only` and `git diff --check`. Do not build, install packages, mutate Git, push, deploy, read credentials, call LLM APIs, or download Airbnb datasets. Codex independently audits workdir hashes and applies only verified improvements.
 
 Stop: Preserve artifacts on bridge failure, permission/authentication error or missing evidence. One initial call and at most two bounded corrections. Keep worktree for recoverable audit.
+
+Result: Antigravity produced source inventory, prose guidance and six concrete draft suggestions. Codex accepted parts of suggestions 1, 2, 4 and 6 after source review, rejected invented stakeholder/occupancy assumptions and extra unexplained metric jargon. Both bridge calls ended with a NoneType transport error despite saved artifacts. No success inferred from that error. Recovered artifacts were read and independently checked; all 41 baseline files and non-QA paths unchanged. Codex verified six responsive/theme cases, exact 26-city/104-date source parity, navigation and complete source mapping. No third call required.

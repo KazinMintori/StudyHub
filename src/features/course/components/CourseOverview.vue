@@ -24,6 +24,7 @@ const {
       <span>{{ lessons.length }} bài giảng</span>
       <a :href="studyLink(`/${course.id}/bai-tap`)">{{ course.problemSets ? 'Problem Set' : 'Bài tập ôn luyện' }}</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/on-thi/`)">Ôn thi</a>
+      <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/bai-tap-lon/`)">Bài tập lớn</a>
       <a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a>
     </div>
     <nav v-if="review" class="workspace-tabs course-overview-tabs" aria-label="Nội dung môn học">

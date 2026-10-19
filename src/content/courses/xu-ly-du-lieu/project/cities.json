@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Barcelona",
+    "region": "Tây Ban Nha & Bồ Đào Nha",
+    "dataRoot": "spain/catalonia/barcelona",
+    "snapshots": [
+      "2025-09-14",
+      "2025-12-14",
+      "2026-03-21",
+      "2026-06-24"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Madrid",
+    "region": "Tây Ban Nha & Bồ Đào Nha",
+    "dataRoot": "spain/comunidad-de-madrid/madrid",
+    "snapshots": [
+      "2025-09-14",
+      "2025-12-14",
+      "2026-03-24",
+      "2026-06-20"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Lisbon",
+    "region": "Tây Ban Nha & Bồ Đào Nha",
+    "dataRoot": "portugal/lisbon/lisbon",
+    "snapshots": [
+      "2025-09-21",
+      "2025-12-25",
+      "2026-03-26",
+      "2026-06-23"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Porto",
+    "region": "Tây Ban Nha & Bồ Đào Nha",
+    "dataRoot": "portugal/norte/porto",
+    "snapshots": [
+      "2025-09-21",
+      "2025-12-25",
+      "2026-03-26",
+      "2026-06-23"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Paris",
+    "region": "Tây Âu",
+    "dataRoot": "france/ile-de-france/paris",
+    "snapshots": [
+      "2025-09-12",
+      "2025-12-13",
+      "2026-03-21",
+      "2026-06-16"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "London",
+    "region": "Tây Âu",
+    "dataRoot": "united-kingdom/england/london",
+    "snapshots": [
+      "2025-09-14",
+      "2025-12-13",
+      "2026-03-21",
+      "2026-06-19"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Amsterdam",
+    "region": "Tây Âu",
+    "dataRoot": "the-netherlands/north-holland/amsterdam",
+    "snapshots": [
+      "2025-09-11",
+      "2025-12-12",
+      "2026-03-19",
+      "2026-06-15"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Berlin",
+    "region": "Tây Âu",
+    "dataRoot": "germany/be/berlin",
+    "snapshots": [
+      "2025-09-23",
+      "2025-12-27",
+      "2026-03-28",
+      "2026-06-26"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Rome",
+    "region": "Nam Âu & Trung Âu",
+    "dataRoot": "italy/lazio/rome",
+    "snapshots": [
+      "2025-09-14",
+      "2025-12-16",
+      "2026-03-24",
+      "2026-06-20"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Athens",
+    "region": "Nam Âu & Trung Âu",
+    "dataRoot": "greece/attica/athens",
+    "snapshots": [
+      "2025-09-26",
+      "2025-12-28",
+      "2026-03-30",
+      "2026-06-28"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Prague",
+    "region": "Nam Âu & Trung Âu",
+    "dataRoot": "czech-republic/prague/prague",
+    "snapshots": [
+      "2025-09-23",
+      "2025-12-27",
+      "2026-03-29",
+      "2026-06-27"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Montreal",
+    "region": "Canada",
+    "dataRoot": "canada/qc/montreal",
+    "snapshots": [
+      "2025-09-18",
+      "2025-12-22",
+      "2026-03-16",
+      "2026-06-15"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Toronto",
+    "region": "Canada",
+    "dataRoot": "canada/on/toronto",
+    "snapshots": [
+      "2025-09-11",
+      "2025-11-11",
+      "2026-03-19",
+      "2026-06-15"
+    ],
+    "monthly": true
+  },
+  {
+    "name": "Vancouver",
+    "region": "Canada",
+    "dataRoot": "canada/bc/vancouver",
+    "snapshots": [
+      "2025-09-14",
+      "2025-12-14",
+      "2026-03-21",
+      "2026-05-24"
+    ],
+    "monthly": true
+  },
+  {
+    "name": "New York City",
+    "region": "Mỹ",
+    "dataRoot": "united-states/ny/new-york-city",
+    "snapshots": [
+      "2025-09-01",
+      "2025-12-04",
+      "2026-03-16",
+      "2026-06-14"
+    ],
+    "monthly": true
+  },
+  {
+    "name": "New Orleans",
+    "region": "Mỹ",
+    "dataRoot": "united-states/la/new-orleans",
+    "snapshots": [
+      "2025-09-11",
+      "2025-12-12",
+      "2026-03-19",
+      "2026-06-16"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Chicago",
+    "region": "Mỹ",
+    "dataRoot": "united-states/il/chicago",
+    "snapshots": [
+      "2025-09-22",
+      "2025-12-25",
+      "2026-03-27",
+      "2026-06-24"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Buenos Aires",
+    "region": "Nam Mỹ",
+    "dataRoot": "argentina/ciudad-autónoma-de-buenos-aires/buenos-aires",
+    "snapshots": [
+      "2025-09-27",
+      "2025-12-29",
+      "2026-03-30",
+      "2026-06-29"
+    ],
+    "monthly": true
+  },
+  {
+    "name": "Santiago",
+    "region": "Nam Mỹ",
+    "dataRoot": "chile/rm/santiago",
+    "snapshots": [
+      "2025-09-27",
+      "2025-12-29",
+      "2026-03-30",
+      "2026-06-29"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Rio de Janeiro",
+    "region": "Nam Mỹ",
+    "dataRoot": "brazil/rj/rio-de-janeiro",
+    "snapshots": [
+      "2025-09-26",
+      "2025-12-28",
+      "2026-03-30",
+      "2026-06-24"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Cape Town",
+    "region": "Châu Phi & châu Úc",
+    "dataRoot": "south-africa/wc/cape-town",
+    "snapshots": [
+      "2025-09-28",
+      "2025-12-29",
+      "2026-03-30",
+      "2026-06-29"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Melbourne",
+    "region": "Châu Phi & châu Úc",
+    "dataRoot": "australia/vic/melbourne",
+    "snapshots": [
+      "2025-09-12",
+      "2025-12-12",
+      "2026-03-21",
+      "2026-06-16"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Bangkok",
+    "region": "Châu Á",
+    "dataRoot": "thailand/central-thailand/bangkok",
+    "snapshots": [
+      "2025-09-26",
+      "2025-12-28",
+      "2026-03-30",
+      "2026-06-29"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Singapore",
+    "region": "Châu Á",
+    "dataRoot": "singapore/sg/singapore",
+    "snapshots": [
+      "2025-09-28",
+      "2025-12-29",
+      "2026-03-30",
+      "2026-06-29"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Taipei",
+    "region": "Châu Á",
+    "dataRoot": "taiwan/northern-taiwan/taipei",
+    "snapshots": [
+      "2025-09-30",
+      "2025-12-31",
+      "2026-03-31",
+      "2026-06-30"
+    ],
+    "monthly": false
+  },
+  {
+    "name": "Tokyo",
+    "region": "Châu Á",
+    "dataRoot": "japan/kantō/tokyo",
+    "snapshots": [
+      "2025-09-29",
+      "2025-12-29",
+      "2026-03-30",
+      "2026-06-30"
+    ],
+    "monthly": false
+  }
+]

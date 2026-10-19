@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Bài tập lớn Inside Airbnb, môn Lập trình xử lý dữ liệu (UET.DSE2049), học kỳ 1 năm học 2026-2027">
+  <title>Bài tập lớn: Inside Airbnb | LTXLDL 2026-2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../index-pages.css?v=20260815">
+  <style>
+    /* Brief in: cùng palette site, không thẻ bo / bóng / viên thuốc */
+
+    .page-shell--doc {
+      counter-reset: sec;
+    }
+
+    .page-shell--doc .hero {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      padding: 4px 0 0;
+    }
+
+    .page-shell--doc .eyebrow {
+      letter-spacing: 0.04em;
+      font-size: 0.78rem;
+    }
+
+    .page-shell--doc .hero h1 {
+      font-size: clamp(2.35rem, 4vw, 3.15rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .page-shell--doc .hero-subtitle {
+      margin-top: 12px;
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .page-shell--doc .hero-text {
+      margin-top: 12px;
+    }
+
+    .page-shell--doc .hero-text p {
+      max-width: none;
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .page-shell--doc .hero-actions {
+      margin-top: 14px;
+    }
+
+    .page-shell--doc .secondary-link {
+      border-radius: 0;
+      border-color: var(--text);
+      background: transparent;
+      padding: 6px 0;
+      border-width: 0;
+      gap: 6px;
+    }
+
+    .page-shell--doc .secondary-link:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .hero-toc {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.25rem;
+      row-gap: 6px;
+      margin: 20px 0 0;
+      padding: 14px 0 18px;
+      border-top: 1px solid var(--text);
+      border-bottom: 3px solid var(--text);
+      font-size: 0.88rem;
+    }
+
+    .hero-toc a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .hero-toc a:hover {
+      border-bottom-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    .hero-toc span {
+      display: none;
+    }
+
+    .page-shell--doc .section-title {
+      counter-increment: sec;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin: 40px 0 14px;
+      padding: 0 0 8px;
+      font-size: 1.45rem;
+      letter-spacing: -0.025em;
+      text-transform: none;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+    }
+
+    #thong-tin-chung .section-title {
+      margin-top: 32px;
+    }
+
+    .page-shell--doc .section-title::before {
+      content: counter(sec, decimal-leading-zero);
+      flex: 0 0 auto;
+      min-width: 3.4rem;
+      font-size: 2.15rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      font-variant-numeric: tabular-nums;
+      color: var(--accent-dark);
+    }
+
+    .page-shell--doc .section-title code {
+      font-size: 0.78em;
+    }
+
+    .section-anchor {
+      scroll-margin-top: 20px;
+    }
+
+    .lead {
+      margin: 0 0 20px;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .prose p,
+    .prose li,
+    .task-card p,
+    .task-card li,
+    .callout,
+    .callout li,
+    .fact-card p,
+    .fact-card li,
+    .timeline p,
+    section>p {
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .prose p,
+    section>p {
+      margin: 0 0 12px;
+    }
+
+    .prose ul,
+    .prose ol {
+      margin: 0 0 12px;
+      padding-left: 1.15em;
+    }
+
+    .prose li+li,
+    .fact-card li+li,
+    .task-card li+li,
+    .callout li+li {
+      margin-top: 7px;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 0 0 22px;
+      border-top: 1px solid var(--text);
+      border-bottom: 1px solid var(--text);
+    }
+
+    .fact-card {
+      margin: 0;
+      padding: 16px 22px 16px 0;
+      border: 0;
+      border-right: 1px solid var(--line-strong);
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .fact-card:last-child {
+      border-right: 0;
+      padding: 16px 0 16px 22px;
+    }
+
+    .fact-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .fact-card ul {
+      margin: 0;
+      padding-left: 1.1em;
+    }
+
+    .subhead {
+      margin: 26px 0 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .milestones {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 20px;
+      margin: 8px 0 22px;
+      padding: 0;
+    }
+
+    .milestones li {
+      min-width: 0;
+    }
+
+    .milestones .mark {
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px;
+    }
+
+    .milestones .n {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 0.28rem 0.5rem;
+      border: 1.5px solid var(--text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      background: #FFF8EE;
+    }
+
+    .milestones li:not(:last-child) .mark::after {
+      content: "";
+      flex: 1 1 auto;
+      height: 1px;
+      margin-left: 8px;
+      background: var(--text);
+    }
+
+    .milestones .due {
+      margin: 0 0 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .milestones p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .callout {
+      border: 0;
+      border-radius: 0;
+      border-top: 2px solid var(--text);
+      background: transparent;
+      padding: 10px 0 12px;
+      margin: 0 0 18px;
+    }
+
+    .callout ul,
+    .callout ol {
+      margin: 8px 0 0;
+      padding-left: 1.15em;
+    }
+
+    .callout--warn {
+      border-top-color: var(--accent-dark);
+    }
+
+    .callout--danger {
+      border-top-color: #8B1E16;
+    }
+
+    .callout--accent,
+    .callout--info,
+    .callout--good,
+    .callout--muted {
+      border-top-color: var(--text);
+    }
+
+    .callout h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .page-shell--doc .panel {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+
+
+    .task-card {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      padding: 0 0 20px;
+      margin: 0 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .task-card:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .task-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+    }
+
+    .task-card p {
+      margin: 0 0 8px;
+    }
+
+    .task-card ul {
+      margin: 0;
+      padding-left: 1.15em;
+    }
+
+    .task-card .callout {
+      margin: 12px 0 0;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.86em;
+      background: rgba(44, 26, 6, 0.07);
+      border-radius: 0;
+      padding: 0 3px;
+      overflow-wrap: anywhere;
+    }
+
+    pre {
+      background: var(--text);
+      color: #F5E9D6;
+      border-radius: 0;
+      padding: 12px 14px;
+      overflow-x: auto;
+      margin: 10px 0 0;
+      line-height: 1.5;
+    }
+
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: 0.8rem;
+      white-space: pre;
+    }
+
+    pre.pre-wrap {
+      overflow-x: visible;
+    }
+
+    pre.pre-wrap code {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .city-details { margin-top: 10px; }
+    .city-details > summary {
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      user-select: none;
+    }
+    .city-details > summary::-webkit-details-marker { display: none; }
+    .city-details > summary::before { content: "▸"; font-size: 0.9em; }
+    .city-details[open] > summary::before { content: "▾"; }
+    .city-details[open] > summary { margin-bottom: 6px; }
+    .city-board {
+      margin: 4px 0 16px;
+    }
+
+    .city-group {
+      margin: 0 0 18px;
+    }
+
+    .city-group h4 {
+      margin: 0 0 2px;
+      padding: 0 0 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--text);
+    }
+
+    .city {
+      display: grid;
+      grid-template-columns: minmax(13.5rem, 0.85fr) minmax(0, 1fr);
+      gap: 1px 14px;
+      align-items: center;
+      padding: 7px 0 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .city-id {
+      white-space: nowrap;
+    }
+
+    .city-id strong {
+      display: inline;
+    }
+
+    .city-id .tag {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .city-path {
+      grid-column: 1;
+      justify-self: start;
+      font-size: 0.72rem;
+    }
+
+    .city-dates {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .city-dates li {
+      padding: 5px 0;
+      border: 1px solid var(--line-strong);
+      text-align: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.76rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rubric {
+      margin: 8px 0 0;
+    }
+
+    .rubric-item {
+      margin: 0 0 8px;
+      padding: 0 0 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rubric-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .rubric-item h4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin: 16px 0 8px;
+      font-size: 1.02rem;
+      letter-spacing: -0.015em;
+    }
+
+    .rubric-item h4 em {
+      font-style: normal;
+      font-variant-numeric: tabular-nums;
+      color: var(--accent-dark);
+      font-size: 0.9rem;
+    }
+
+    .rubric-item dl {
+      margin: 0;
+    }
+
+    .rubric-item dl>div {
+      display: grid;
+      grid-template-columns: 8.2rem minmax(0, 1fr);
+      gap: 4px 16px;
+      padding: 7px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .rubric-item dt {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .rubric-item dt span {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.74rem;
+    }
+
+    .rubric-item dd {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .fine-print {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .closing-line {
+      text-align: left;
+      margin: 40px 0 8px;
+      padding-top: 16px;
+      border-top: 3px solid var(--text);
+      color: var(--muted);
+    }
+
+    .page-shell--doc .footer {
+      margin-top: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .fact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fact-card,
+      .fact-card:last-child {
+        border-right: 0;
+        padding: 14px 0;
+      }
+
+      .fact-card+.fact-card {
+        border-top: 1px solid var(--line);
+      }
+
+      .milestones {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .milestones li:not(:last-child) .mark::after {
+        display: none;
+      }
+
+      .milestones li {
+        padding-left: 14px;
+        border-left: 2px solid var(--text);
+      }
+
+      .rubric-item dl>div {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .city {
+        grid-template-columns: 1fr;
+      }
+
+      .city-path {
+        justify-self: start;
+      }
+
+      .city-dates {
+        grid-column: 1;
+        grid-row: auto;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 4px;
+      }
+    }
+
+    @media print {
+
+      .hero-actions,
+      .hero-toc {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+
+<body>
+  <main class="page-shell page-shell--doc">
+
+    <section class="hero">
+      <p class="eyebrow">IAI · UET · VNU</p>
+      <h1>Bài tập lớn: Inside Airbnb</h1>
+      <p class="hero-subtitle">Xây dựng quy trình phân tích thị trường Airbnb của một thành phố</p>
+      <div class="hero-text">
+        <p>
+          Môn học: <strong>Lập trình xử lý dữ liệu (UET.DSE2049)</strong>.
+          Học kì 1, năm học 2026-2027. <strong>Trọng số: 60% điểm học phần.</strong>
+        </p>
+      </div>
+      <p class="hero-meta">Viện Trí tuệ nhân tạo · Trường Đại học Công nghệ, ĐHQGHN</p>
+      <div class="hero-actions">
+        <a class="secondary-link" href="../"><span aria-hidden="true">←</span><span>Trang môn học</span></a>
+      </div>
+      <nav class="hero-toc" aria-label="Mục lục đề bài">
+        <a href="#thong-tin-chung">Thông tin chung</a><span aria-hidden="true">·</span>
+        <a href="#du-lieu">Dữ liệu</a><span aria-hidden="true">·</span>
+        <a href="#cong-viec">Công việc</a><span aria-hidden="true">·</span>
+        <a href="#llm">Phân tích dùng LLM</a><span aria-hidden="true">·</span>
+        <a href="#minh-bach">Minh bạch AI</a><span aria-hidden="true">·</span>
+        <a href="#san-pham">Sản phẩm</a><span aria-hidden="true">·</span>
+        <a href="#cham-diem">Chấm điểm</a>
+      </nav>
+    </section>
+
+    <section id="thong-tin-chung" class="section-anchor">
+      <h2 class="section-title">Thông tin chung</h2>
+
+      <p class="lead">
+        Bối cảnh: nhóm sinh viên môn Lập trình xử lý dữ liệu đóng vai một đội phân tích dữ liệu Airbnb. Nhóm tự chọn bên đặt hàng phân tích dữ liệu,
+        ghi rõ trong báo cáo (ví dụ: chính quyền thành phố,
+        quỹ đầu tư, hiệp hội du lịch, ...). Sản phẩm cần nộp
+        là mã nguồn chạy được và một báo cáo về quá trình xử lý dữ liệu và kết quả đạt được.
+        Mọi thành viên phải giải thích được <strong>mọi thứ nhóm mình nộp</strong> (code, số liệu, quyết định), không chỉ phần mình phụ trách.
+      </p>
+
+      <div class="fact-grid">
+        <article class="fact-card">
+          <h3>Nhóm và thành phố</h3>
+          <p style="margin-bottom:0">
+            Mỗi nhóm có <strong>4-5 sinh viên</strong> và một thành phố (không trùng với nhóm khác), giao ngay từ đầu kỳ.
+            Phân công chính thức sẽ được đăng trên Canvas Portal.
+          </p>
+        </article>
+        <article class="fact-card">
+          <h3>GitHub repo</h3>
+          <ul>
+            <li>Tạo GitHub repo <strong>riêng tư</strong>, tên gợi ý <code>2627-LTXLDL-Airbnb-&lt;TenNhom&gt;</code>.
+              Mời cả nhóm cùng tài khoản giảng viên.</li>
+            <li><strong>Commit thường xuyên từ đầu kì</strong>
+              (<code>git add</code> → <code>commit</code> → <code>push</code>).
+              Nộp mốc bằng <code>git tag</code> rồi <code>git push origin &lt;tên-tag&gt;</code>.</li>
+            <li>Điền liên kết repo vào bảng tính. Thêm <code>data/raw/</code> vào <code>.gitignore</code>.</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="subhead">Các mốc thời gian</h3>
+      <p class="fine-print" style="margin-top:0">Hạn 23:59 Chủ nhật, theo giờ GitHub commit. Lịch vấn đáp theo lịch thi của Trường.</p>
+      <ol class="milestones">
+        <li>
+          <div class="mark"><span class="n">Mốc 1</span></div>
+          <p class="due">Không cần tag · 23:59 Chủ nhật <strong>20/09/2026</strong> (tuần 2)</p>
+          <p>Lập nhóm, tạo repo, nhận thành phố, điền liên kết vào bảng tính.</p>
+        </li>
+        <li>
+          <div class="mark"><span class="n">Mốc 2</span></div>
+          <p class="due"><code>git tag final</code> · 23:59 Chủ nhật <strong>22/11/2026</strong> (tuần 11)</p>
+          <p>Nộp bản cuối. Ghi mã commit vào báo cáo.</p>
+        </li>
+        <li>
+          <div class="mark"><span class="n">Mốc 3</span></div>
+          <p class="due">Theo lịch thi của Trường</p>
+          <p>Vấn đáp khoảng 20 phút. Hỏi riêng từng thành viên trong nhóm.</p>
+        </li>
+      </ol>
+
+      <div class="callout callout--danger">
+        <strong>Chính sách AI</strong>
+
+        <ul>
+          <li>Làm bài ở nhà theo chế độ ✅ mở (xem
+            <a href="../ai-policy.html">chính sách AI của môn</a>). GitHub repo bắt buộc có <code>AI_USAGE.md</code>.
+          </li>
+          <li>
+            Vấn đáp theo chế độ 🚫 đóng: mỗi thành viên phải tự giải thích được mã nguồn và số liệu mà nhóm mình đã nộp.</li>
+          <li>
+            Phần phân tích dùng LLM là bắt buộc.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Dữ liệu -->
+    <section id="du-lieu" class="section-anchor">
+      <h2 class="section-title">Dữ liệu Inside Airbnb</h2>
+
+      <div class="panel prose">
+        <p style="margin-top:0">
+          Nguồn: <a href="https://insideairbnb.com/get-the-data/" target="_blank" rel="noopener">Inside Airbnb</a>,
+          giấy phép CC BY 4.0. Báo cáo phải ghi nguồn và ngày của từng mốc chụp (snapshot); không commit dữ liệu thô lên Github.
+          Cấu trúc từng tệp, kiểu dữ liệu và các điểm lạ của mỗi bản chụp: nhóm tự khảo sát và ghi vào phần QA.
+        </p>
+        <ul class="plain-list">
+          <li><code>data/listings.csv.gz</code> — chỗ ở</li>
+          <li><code>data/calendar.csv.gz</code> — lịch trống / đã đặt theo ngày</li>
+          <li><code>data/reviews.csv.gz</code> — đánh giá văn bản (đầu vào phần LLM)</li>
+          <li><code>visualisations/neighbourhoods.geojson</code> — ranh giới khu vực</li>
+        </ul>
+        <pre class="pre-wrap"
+          style="margin-bottom:0"><code>https://data.insideairbnb.com/&lt;country&gt;/&lt;region&gt;/&lt;city&gt;/&lt;YYYY-MM-DD&gt;/data/&lt;bảng&gt;.csv.gz
+https://data.insideairbnb.com/&lt;country&gt;/&lt;region&gt;/&lt;city&gt;/&lt;YYYY-MM-DD&gt;/visualisations/neighbourhoods.geojson</code></pre>
+      </div>
+
+
+      <h3 class="subhead">Phân công thành phố</h3>
+      <p>
+        Mỗi nhóm một thành phố, phân tích sâu trên bốn mốc chụp.
+      </p>
+      <p>
+        Bốn mốc bản chụp dưới đây là bắt buộc sử dụng với thành phố tương ứng (các mốc cách nhau khoảng một quý). Thành phố thu thập hàng tháng được dùng thêm mốc khác,
+        nhưng vẫn phải đủ bốn mốc này.
+      </p>
+
+      <details class="city-details">
+        <summary>Danh sách thành phố và bốn mốc chụp (26 thành phố)</summary>
+      <div class="city-board">
+        <div class="city-group">
+          <h4>Tây Ban Nha &amp; Bồ Đào Nha</h4>
+          <article class="city">
+            <div class="city-id"><strong>Barcelona</strong></div>
+            <code class="city-path">spain/catalonia/barcelona</code>
+            <ol class="city-dates">
+              <li>2025-09-14</li>
+              <li>2025-12-14</li>
+              <li>2026-03-21</li>
+              <li>2026-06-24</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Madrid</strong></div>
+            <code class="city-path">spain/comunidad-de-madrid/madrid</code>
+            <ol class="city-dates">
+              <li>2025-09-14</li>
+              <li>2025-12-14</li>
+              <li>2026-03-24</li>
+              <li>2026-06-20</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Lisbon</strong></div>
+            <code class="city-path">portugal/lisbon/lisbon</code>
+            <ol class="city-dates">
+              <li>2025-09-21</li>
+              <li>2025-12-25</li>
+              <li>2026-03-26</li>
+              <li>2026-06-23</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Porto</strong></div>
+            <code class="city-path">portugal/norte/porto</code>
+            <ol class="city-dates">
+              <li>2025-09-21</li>
+              <li>2025-12-25</li>
+              <li>2026-03-26</li>
+              <li>2026-06-23</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Tây Âu</h4>
+          <article class="city">
+            <div class="city-id"><strong>Paris</strong></div>
+            <code class="city-path">france/ile-de-france/paris</code>
+            <ol class="city-dates">
+              <li>2025-09-12</li>
+              <li>2025-12-13</li>
+              <li>2026-03-21</li>
+              <li>2026-06-16</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>London</strong></div>
+            <code class="city-path">united-kingdom/england/london</code>
+            <ol class="city-dates">
+              <li>2025-09-14</li>
+              <li>2025-12-13</li>
+              <li>2026-03-21</li>
+              <li>2026-06-19</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Amsterdam</strong></div>
+            <code class="city-path">the-netherlands/north-holland/amsterdam</code>
+            <ol class="city-dates">
+              <li>2025-09-11</li>
+              <li>2025-12-12</li>
+              <li>2026-03-19</li>
+              <li>2026-06-15</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Berlin</strong></div>
+            <code class="city-path">germany/be/berlin</code>
+            <ol class="city-dates">
+              <li>2025-09-23</li>
+              <li>2025-12-27</li>
+              <li>2026-03-28</li>
+              <li>2026-06-26</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Nam Âu &amp; Trung Âu</h4>
+          <article class="city">
+            <div class="city-id"><strong>Rome</strong></div>
+            <code class="city-path">italy/lazio/rome</code>
+            <ol class="city-dates">
+              <li>2025-09-14</li>
+              <li>2025-12-16</li>
+              <li>2026-03-24</li>
+              <li>2026-06-20</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Athens</strong></div>
+            <code class="city-path">greece/attica/athens</code>
+            <ol class="city-dates">
+              <li>2025-09-26</li>
+              <li>2025-12-28</li>
+              <li>2026-03-30</li>
+              <li>2026-06-28</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Prague</strong></div>
+            <code class="city-path">czech-republic/prague/prague</code>
+            <ol class="city-dates">
+              <li>2025-09-23</li>
+              <li>2025-12-27</li>
+              <li>2026-03-29</li>
+              <li>2026-06-27</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Canada</h4>
+          <article class="city">
+            <div class="city-id"><strong>Montreal</strong></div>
+            <code class="city-path">canada/qc/montreal</code>
+            <ol class="city-dates">
+              <li>2025-09-18</li>
+              <li>2025-12-22</li>
+              <li>2026-03-16</li>
+              <li>2026-06-15</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Toronto</strong> <span class="tag">hàng tháng</span></div>
+            <code class="city-path">canada/on/toronto</code>
+            <ol class="city-dates">
+              <li>2025-09-11</li>
+              <li>2025-11-11</li>
+              <li>2026-03-19</li>
+              <li>2026-06-15</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Vancouver</strong> <span class="tag">hàng tháng</span></div>
+            <code class="city-path">canada/bc/vancouver</code>
+            <ol class="city-dates">
+              <li>2025-09-14</li>
+              <li>2025-12-14</li>
+              <li>2026-03-21</li>
+              <li>2026-05-24</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Mỹ</h4>
+          <article class="city">
+            <div class="city-id"><strong>New York City</strong> <span class="tag">hàng tháng</span></div>
+            <code class="city-path">united-states/ny/new-york-city</code>
+            <ol class="city-dates">
+              <li>2025-09-01</li>
+              <li>2025-12-04</li>
+              <li>2026-03-16</li>
+              <li>2026-06-14</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>New Orleans</strong></div>
+            <code class="city-path">united-states/la/new-orleans</code>
+            <ol class="city-dates">
+              <li>2025-09-11</li>
+              <li>2025-12-12</li>
+              <li>2026-03-19</li>
+              <li>2026-06-16</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Chicago</strong></div>
+            <code class="city-path">united-states/il/chicago</code>
+            <ol class="city-dates">
+              <li>2025-09-22</li>
+              <li>2025-12-25</li>
+              <li>2026-03-27</li>
+              <li>2026-06-24</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Nam Mỹ</h4>
+          <article class="city">
+            <div class="city-id"><strong>Buenos Aires</strong> <span class="tag">hàng tháng</span></div>
+            <code class="city-path">argentina/ciudad-autónoma-de-buenos-aires/buenos-aires</code>
+            <ol class="city-dates">
+              <li>2025-09-27</li>
+              <li>2025-12-29</li>
+              <li>2026-03-30</li>
+              <li>2026-06-29</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Santiago</strong></div>
+            <code class="city-path">chile/rm/santiago</code>
+            <ol class="city-dates">
+              <li>2025-09-27</li>
+              <li>2025-12-29</li>
+              <li>2026-03-30</li>
+              <li>2026-06-29</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Rio de Janeiro</strong></div>
+            <code class="city-path">brazil/rj/rio-de-janeiro</code>
+            <ol class="city-dates">
+              <li>2025-09-26</li>
+              <li>2025-12-28</li>
+              <li>2026-03-30</li>
+              <li>2026-06-24</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Châu Phi &amp; châu Úc</h4>
+          <article class="city">
+            <div class="city-id"><strong>Cape Town</strong></div>
+            <code class="city-path">south-africa/wc/cape-town</code>
+            <ol class="city-dates">
+              <li>2025-09-28</li>
+              <li>2025-12-29</li>
+              <li>2026-03-30</li>
+              <li>2026-06-29</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Melbourne</strong></div>
+            <code class="city-path">australia/vic/melbourne</code>
+            <ol class="city-dates">
+              <li>2025-09-12</li>
+              <li>2025-12-12</li>
+              <li>2026-03-21</li>
+              <li>2026-06-16</li>
+            </ol>
+          </article>
+        </div>
+        <div class="city-group">
+          <h4>Châu Á</h4>
+          <article class="city">
+            <div class="city-id"><strong>Bangkok</strong></div>
+            <code class="city-path">thailand/central-thailand/bangkok</code>
+            <ol class="city-dates">
+              <li>2025-09-26</li>
+              <li>2025-12-28</li>
+              <li>2026-03-30</li>
+              <li>2026-06-29</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Singapore</strong></div>
+            <code class="city-path">singapore/sg/singapore</code>
+            <ol class="city-dates">
+              <li>2025-09-28</li>
+              <li>2025-12-29</li>
+              <li>2026-03-30</li>
+              <li>2026-06-29</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Taipei</strong></div>
+            <code class="city-path">taiwan/northern-taiwan/taipei</code>
+            <ol class="city-dates">
+              <li>2025-09-30</li>
+              <li>2025-12-31</li>
+              <li>2026-03-31</li>
+              <li>2026-06-30</li>
+            </ol>
+          </article>
+          <article class="city">
+            <div class="city-id"><strong>Tokyo</strong></div>
+            <code class="city-path">japan/kantō/tokyo</code>
+            <ol class="city-dates">
+              <li>2025-09-29</li>
+              <li>2025-12-29</li>
+              <li>2026-03-30</li>
+              <li>2026-06-30</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+      </details>
+    </section>
+
+    <!-- Công việc -->
+    <section id="cong-viec" class="section-anchor">
+      <h2 class="section-title">Công việc và tiêu chuẩn chất lượng</h2>
+
+      <p>Đề bài chỉ nêu <em>sản phẩm phải nộp</em>. Nhóm tự lựa chọn QA, KPI và cách trình bày,
+        sau đó <strong>bảo vệ các lựa chọn đó khi vấn đáp</strong>.</p>
+
+      <div class="task-card">
+        <h3>1) Quy trình chạy bằng một lệnh</h3>
+        <p>Sau khi cài môi trường theo <code>README.md</code>, một lệnh chạy toàn bộ quy trình, ví dụ:</p>
+        <pre><code>python run_pipeline.py --config configs/lisbon.yaml</code></pre>
+        <ul>
+          <li>Thành phố và mốc chụp nằm trong <strong>tệp cấu hình</strong>, không ghi cứng trong mã.</li>
+          <li>Chạy được trên máy sạch theo <a href="#moi-truong">yêu cầu môi trường và thư viện</a> bên dưới.</li>
+        </ul>
+        <div class="callout callout--warn">
+          <strong>Bộ test chung.</strong> Khi chấm, giảng viên chạy <em>cùng một bộ kiểm thử</em> trên repo của mọi nhóm:
+          dựng môi trường theo README, chạy quy trình bằng một lệnh trên mốc chụp do giảng viên chọn (có thể là mốc nhóm
+          chưa xử lý, chỉ sửa tệp cấu hình), rồi kiểm tra các tệp đầu ra. <strong>Bước LLM cũng được chạy lại thật</strong>
+          trong lúc test, với khoá API do giảng viên đặt trong biến môi trường; vì vậy mã phải đọc khoá từ biến môi trường
+          và chạy được với khoá bất kỳ. Phần phân tích dùng LLM được chấm thêm trên bộ nhãn tay của nhóm.
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>2) Thu thập dữ liệu</h3>
+        <ul>
+          <li>Tải đủ bốn mốc của thành phố nhóm bằng script; kiểm tệp tồn tại và có cột khoá.</li>
+          <li>Dữ liệu thô vào <code>data/raw/</code> (gitignore); chỉ commit <code>data/processed/</code> khi dưới 50 MB.</li>
+        </ul>
+      </div>
+
+      <div class="task-card">
+        <h3>3) QA do nhóm tự đề xuất</h3>
+        <ul>
+          <li>Mỗi quy tắc: <em>tên → điều kiện → lý do → hành động</em>; ưu tiên <strong>gắn cờ</strong>.</li>
+          <li>Bao gồm ít nhất các trường hợp sau: thiếu, ngoại lai, trùng (trong và giữa các mốc), kiểu sai, danh mục lệch.</li>
+          <li>Ghi vào <code>reports/qa_report.csv</code> các tác động (số dòng; KPI trước và sau).</li>
+        </ul>
+      </div>
+
+      <div class="task-card">
+        <h3>4) KPI: 5-8 chỉ số, gắn với bên liên quan</h3>
+        <ul>
+          <li>Mỗi KPI: <em>tên → mục tiêu → công thức → đơn vị</em>; tính <strong>sau QA</strong>; ghi rõ tiền tệ.</li>
+          <li>Ít nhất một KPI theo khu vực (<code>neighbourhood_cleansed</code>) và theo thời gian; ít nhất một KPI dùng kết quả LLM.</li>
+          <li>Ghi KPI vào <code>data/processed/kpi_*.csv</code>.</li>
+        </ul>
+      </div>
+
+      <div class="task-card">
+        <h3>5) Trực quan hoá</h3>
+        <ul>
+          <li>Vẽ theo các góc độ sau: không gian, thời gian, LLM.</li>
+          <li>Hình sinh tự động vào <code>figures/</code>.</li>
+        </ul>
+      </div>
+
+      <div class="task-card">
+        <h3>6) Báo cáo kỹ thuật</h3>
+        <ul>
+          <li>PDF (tối đa 10 trang, theo format sẽ được công bố sau) trong <code>reports/</code>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Phân tích dùng LLM -->
+    <section id="llm" class="section-anchor">
+      <h2 class="section-title">Phần phân tích dùng LLM</h2>
+      <p>Dùng LLM biến một mẫu bảng <code>reviews</code> thành dữ liệu có cấu trúc, rồi tự đo chất lượng kết quả.</p>
+
+      <div class="task-card">
+        <ul>
+          <li><strong>Trích xuất mỗi đánh giá:</strong> cảm xúc (<code>positive / mixed / negative</code>), khía cạnh khen/chê, ngôn ngữ.
+            Đầu ra có cấu trúc.</li>
+          <li><strong>Công cụ:</strong> Gemini API gói miễn phí; nhà cung cấp khác nếu tự trả phí và ghi trong <code>AI_USAGE.md</code>.</li>
+          <li><strong>Mẫu:</strong> cỡ mẫu và cách chọn do nhóm quyết định và giải thích.</li>
+          <li><strong>Kiểm chứng:</strong> phương pháp đối chứng không dùng LLM và ít nhất 100 nhãn tay;
+            báo cáo accuracy/F1 của cả hai, kèm phân tích lỗi.</li>
+          <li><strong>Chi phí:</strong> ước tính nếu xử lý hết đánh giá của thành phố.</li>
+          <li><strong>Tích hợp:</strong> ít nhất một KPI và một hình dùng kết quả LLM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Minh bạch AI -->
+    <section id="minh-bach" class="section-anchor">
+      <h2 class="section-title">Minh bạch AI: <code>AI_USAGE.md</code></h2>
+      <div class="panel">
+        <p style="margin-top:0">
+          Đây là tệp bắt buộc ở gốc GitHub repo, cần cập nhật suốt kì. Khai báo đầy đủ không bị trừ điểm.
+          Giấu hoặc khai man là vi phạm <a href="../ai-policy.html">chính sách AI</a>.
+        </p>
+        <pre style="margin-bottom:0"><code># AI_USAGE.md
+## Công cụ đã dùng (vào việc gì)
+## Prompt then chốt (5-10): bước nào, vào tệp nào
+## AI sai ở đâu (ví dụ thật)
+## Nhóm kiểm chứng thế nào</code></pre>
+      </div>
+    </section>
+
+    <!-- Sản phẩm -->
+    <section id="san-pham" class="section-anchor">
+      <h2 class="section-title">Sản phẩm bàn giao</h2>
+      <div class="panel">
+        <h3 id="moi-truong" class="subhead section-anchor" style="margin-top:0">Môi trường chạy và thư viện</h3>
+        <ul class="plain-list" style="margin-bottom:18px">
+          <li><strong>Python 3</strong>; thư viện tự chọn (không bắt buộc pandas), miễn giải thích và kiểm chứng được.</li>
+          <li><code>.python-version</code>: một dòng, phiên bản Python đã chạy thử (<code>3.x.y</code>).</li>
+          <li><code>requirements.txt</code> ghim <code>==</code> đủ để chạy quy trình (hoặc lockfile tương đương).</li>
+          <li><code>README.md</code>: cách cài, lệnh chạy, tên biến môi trường chứa khoá API, tệp kết quả để đối chiếu.</li>
+          <li><strong>Tự kiểm trước khi nộp:</strong> clone vào thư mục mới, dựng môi trường theo README, chạy một lệnh,
+            tạo lại được số liệu và hình trong báo cáo.</li>
+        </ul>
+
+        <h3 class="subhead">Cấu trúc GitHub repo yêu cầu</h3>
+        <pre><code>.
+├── configs/
+│   └── &lt;city&gt;.yaml           # mỗi thành phố một tệp: dataRoot, danh sách mốc chụp, tham số QA/KPI/LLM
+├── data/
+│   ├── raw/                  # dữ liệu thô: KHÔNG commit (gitignore), do script tải sinh ra
+│   ├── processed/            # dữ liệu sạch, kpi_*.csv, kết quả LLM đã lưu (commit nếu &lt;50 MB)
+│   └── samples/              # mẫu nhỏ để test nhanh + tệp ≥100 nhãn tay (review_id, nhãn)
+├── src/                      # mã nguồn quy trình, tách mô-đun (gợi ý):
+│   ├── download.py           #   tải + kiểm toàn vẹn
+│   ├── qa.py                 #   làm sạch + bộ quy tắc QA, xuất qa_report.csv
+│   ├── kpi.py                #   tính KPI
+│   ├── llm.py                #   trích xuất bằng LLM (có cache, --skip-llm)
+│   ├── baseline.py           #   phương pháp đối chứng không LLM
+│   ├── evaluate.py           #   chấm LLM vs đối chứng trên nhãn tay
+│   └── viz.py                #   sinh hình vào figures/
+├── figures/                  # hình sinh tự động từ quy trình
+├── reports/                  # report.pdf, qa_report.csv, từ điển dữ liệu
+├── notebooks/                # notebook khám phá (nếu có), không phải quy trình chính
+├── run_pipeline.py           # (hoặc Makefile) một lệnh gọi các mô-đun theo thứ tự
+├── .python-version           # một dòng: phiên bản Python đã kiểm thử (3.x.y)
+├── .env.example              # tên biến môi trường cho khoá API (KHÔNG chứa khoá thật)
+├── .gitignore                # loại data/raw/, .venv/, .env và mọi tệp chứa khoá
+├── AI_USAGE.md               # khai báo AI (bắt buộc)
+├── README.md                 # tham chiếu .python-version; môi trường, cài đặt, cách chạy/chấm lại
+└── requirements.txt          # thư viện ghim phiên bản (hoặc bộ tệp lockfile tương đương)</code></pre>
+        <br>
+        <h3 class="subhead">Ví dụ <code>configs/&lt;city&gt;.yaml</code></h3>
+        <p class="fine-print" style="margin-top:0">Giá trị dưới đây là minh hoạ.</p>
+        <pre><code>city: santiago
+data_root: chile/rm/santiago      # dựng URL: data.insideairbnb.com/&lt;data_root&gt;/&lt;mốc&gt;/...
+currency: CLP
+snapshots: [2025-09-27, 2025-12-29, 2026-03-30, 2026-06-29]
+
+qa:
+  price_max_clp: 5000000          # ngưỡng ngoại lai giá
+  min_nights_cap: 365
+  dedupe_keys: [id, last_scraped]
+
+kpi:
+  area_col: neighbourhood_cleansed
+
+llm:
+  provider: gemini                # model tuỳ chọn
+  sample_size: 3000               # nhóm giải thích cỡ mẫu
+  aspects: [vị trí, sạch sẽ, chủ nhà, giá trị, tiện nghi, độ ồn, an toàn]
+  cache: data/processed/llm_cache.jsonl
+
+seed: 42</code></pre>
+      </div>
+      <div class="callout callout--danger" style="margin-top:14px">
+        <strong>Bảo mật:</strong> không commit khoá API (biến môi trường / Colab Secrets). Khi chấm, giảng viên dùng khoá
+        riêng đặt trong biến môi trường.
+      </div>
+    </section>
+
+    <!-- Chấm điểm -->
+    <section id="cham-diem" class="section-anchor">
+      <h2 class="section-title">Chấm điểm</h2>
+
+      <div class="panel">
+        <h3 class="subhead" style="margin-top:0">Vấn đáp: hỏi riêng từng thành viên</h3>
+        <ul class="plain-list">
+          <li>Mỗi nhóm khoảng 20 phút, <strong>không có phần trình bày</strong>: vào thẳng <strong>hỏi riêng từng người</strong>
+            (mở ngẫu nhiên <strong>bất kỳ đoạn mã hoặc số liệu</strong> trong sản phẩm mà nhóm nộp).</li>
+          <li>Điểm nhóm là trần; vấn đáp điều chỉnh điểm từng người.
+            <strong>Mỗi thành viên chịu trách nhiệm cho toàn bộ sản phẩm</strong>: không giải thích được phần được hỏi
+            thì cá nhân đó bị trừ điểm, dù phần đó do người khác trong nhóm viết.</li>
+          <li>Dùng AI lúc vấn đáp là gian lận (chế độ 🚫 đóng).</li>
+        </ul>
+      </div>
+
+      <h3 class="subhead">Rubric</h3>
+      <p>Bốn tiêu chí: <strong>thiết kế và tái lập quy trình</strong> · <strong>lưu trữ và thao tác dữ liệu</strong> ·
+        <strong>trực quan hoá và phát hiện</strong> · <strong>làm việc nhóm, đạo đức và minh bạch AI</strong>.
+        Điểm nhóm (thang 10) được điều chỉnh từng người qua vấn đáp.</p>
+      <p class="fine-print">Trọng số và mô tả các mức điểm: <em>công bố dần</em>.</p>
+    </section>
+
+    <p class="closing-line">Hết đề bài. Chúc các nhóm hoàn thành tốt bài tập lớn.</p>
+
+    <p class="footer">
+      Viện Trí tuệ nhân tạo · Trường Đại học Công nghệ · Đại học Quốc gia Hà Nội
+    </p>
+  </main>
+</body>
+
+</html>

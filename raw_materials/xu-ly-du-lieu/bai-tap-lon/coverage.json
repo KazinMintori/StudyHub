@@ -1,0 +1,723 @@
+{
+  "source": "project-airbnb.html",
+  "sourceSha256": "1a73cf156d72bbeaa8bed3847fd6d1e11e9e24c5b7ffe27be8a60a0298f0b020",
+  "reviewDate": "2026-10-19",
+  "sectionsCovered": [
+    "header",
+    "thong-tin-chung",
+    "du-lieu",
+    "cong-viec",
+    "llm",
+    "minh-bach",
+    "san-pham",
+    "cham-diem"
+  ],
+  "requirements": [
+    {
+      "id": "P001",
+      "sourceSection": "header",
+      "targetHeading": "# Đề bài tập lớn",
+      "type": "info",
+      "requirement": "Thông tin học phần, đơn vị tổ chức, học kì và trọng số 60%.",
+      "presentMarkers": [
+        "UET.DSE2049",
+        "2026–2027",
+        "60%"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P002",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "choice",
+      "requirement": "Nhóm chọn bên đặt hàng và nêu rõ trong báo cáo.",
+      "presentMarkers": [
+        "bên đặt hàng",
+        "báo cáo"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P003",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "# Đề bài tập lớn",
+      "type": "required",
+      "requirement": "Sản phẩm gồm mã nguồn chạy được và báo cáo quá trình, kết quả.",
+      "presentMarkers": [
+        "mã nguồn",
+        "báo cáo"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P004",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "required",
+      "requirement": "Mọi thành viên giải thích được toàn bộ mã, số liệu và quyết định.",
+      "presentMarkers": [
+        "toàn bộ sản phẩm"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P005",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "required",
+      "requirement": "Nhóm 4–5 người, một thành phố không trùng, phân công trên Canvas đầu kỳ.",
+      "presentMarkers": [
+        "4–5",
+        "Canvas Portal"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P006",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "required",
+      "requirement": "Repo riêng tư có thành viên và giảng viên, tên repo chỉ là gợi ý.",
+      "presentMarkers": [
+        "riêng tư",
+        "2627-LTXLDL-Airbnb-<TenNhom>"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P007",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "required",
+      "requirement": "Commit và push thường xuyên, điền liên kết repo vào bảng tính.",
+      "presentMarkers": [
+        "bảng tính",
+        "commit",
+        "push"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P008",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 3.",
+      "type": "required",
+      "requirement": "Bỏ qua dữ liệu thô trong Git, nộp mốc bằng tag và đẩy tag lên GitHub.",
+      "presentMarkers": [
+        ".gitignore",
+        "git push origin final"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P009",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 4.",
+      "type": "required",
+      "requirement": "Hạn 23:59 Chủ nhật theo thời gian commit trên GitHub.",
+      "presentMarkers": [
+        "23:59",
+        "thời gian commit trên GitHub"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P010",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 4.",
+      "type": "required",
+      "requirement": "Mốc 1 ngày 20/09/2026 tuần 2 không cần tag, gồm nhóm, repo, thành phố và liên kết.",
+      "presentMarkers": [
+        "20/09/2026",
+        "tuần 2",
+        "không cần tag"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P011",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 4.",
+      "type": "required",
+      "requirement": "Mốc 2 ngày 22/11/2026 tuần 11 dùng tag final và ghi commit vào báo cáo.",
+      "presentMarkers": [
+        "22/11/2026",
+        "tuần 11",
+        "git tag final"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P012",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 4.",
+      "type": "required",
+      "requirement": "Mốc 3 theo lịch thi, vấn đáp khoảng 20 phút và hỏi riêng từng người.",
+      "presentMarkers": [
+        "lịch thi",
+        "20 phút"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P013",
+      "sourceSection": "thong-tin-chung",
+      "targetHeading": "## 12.",
+      "type": "required",
+      "requirement": "Làm ở nhà mở, vấn đáp đóng, AI_USAGE và phần LLM bắt buộc.",
+      "presentMarkers": [
+        "chế độ mở",
+        "chế độ đóng",
+        "AI_USAGE.md",
+        "LLM"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P014",
+      "sourceSection": "du-lieu",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Nguồn Inside Airbnb, giấy phép CC BY 4.0, ghi ngày snapshot và khảo sát cấu trúc.",
+      "presentMarkers": [
+        "CC BY 4.0",
+        "kiểu dữ liệu"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P015",
+      "sourceSection": "du-lieu",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Bốn loại tệp gồm listings, calendar, reviews và GeoJSON ranh giới.",
+      "presentMarkers": [
+        "data/listings.csv.gz",
+        "data/calendar.csv.gz",
+        "data/reviews.csv.gz",
+        "visualisations/neighbourhoods.geojson"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P016",
+      "sourceSection": "du-lieu",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Hai dạng URL giữ đúng quốc gia, vùng, thành phố, ngày và tên tệp.",
+      "presentMarkers": [
+        "https://data.insideairbnb.com",
+        "<country>/<region>/<city>/<YYYY-MM-DD>/data/<bảng>.csv.gz"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P017",
+      "sourceSection": "du-lieu",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Giữ đủ 26 thành phố, đường dẫn và 104 ngày snapshot chính xác.",
+      "presentMarkers": [
+        "<ProjectCities />"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P018",
+      "sourceSection": "du-lieu",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Dùng đủ bốn mốc bắt buộc, thành phố hằng tháng được bổ sung mốc khác.",
+      "presentMarkers": [
+        "bốn mốc bắt buộc",
+        "hằng tháng"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P019",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 7.",
+      "type": "choice",
+      "requirement": "Nhóm tự chọn QA, KPI và cách trình bày rồi bảo vệ lựa chọn.",
+      "presentMarkers": [
+        "tự đề xuất",
+        "tự chọn"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P020",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 6.",
+      "type": "required",
+      "requirement": "Chạy một lệnh sau khi cài môi trường, tham số không ghi cố định trong mã.",
+      "presentMarkers": [
+        "--config configs/lisbon.yaml",
+        "ghi cố định"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P021",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 6.",
+      "type": "required",
+      "requirement": "Bộ test chung có thể thay snapshot mới chỉ bằng cấu hình.",
+      "presentMarkers": [
+        "bộ test chung",
+        "mốc nhóm chưa xử lý"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P022",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 6.",
+      "type": "required",
+      "requirement": "LLM chạy lại thật với khóa giảng viên trong biến môi trường và được chấm bằng nhãn tay.",
+      "presentMarkers": [
+        "gọi lại thật",
+        "biến môi trường",
+        "nhãn tay"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P023",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Tải đủ bốn snapshot bằng script và xác minh tệp cùng các cột khóa.",
+      "presentMarkers": [
+        "bằng chương trình",
+        "cột khóa"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P024",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 5.",
+      "type": "required",
+      "requirement": "Dữ liệu thô không commit, dữ liệu xử lý chỉ commit khi dưới 50 MB.",
+      "presentMarkers": [
+        "50 MB",
+        "data/processed/"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P025",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 7.",
+      "type": "required",
+      "requirement": "Quy tắc QA có tên, điều kiện, lý do, hành động và ưu tiên gắn cờ.",
+      "presentMarkers": [
+        "điều kiện",
+        "lý do",
+        "hành động",
+        "gắn cờ"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P026",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 7.",
+      "type": "required",
+      "requirement": "QA bao quát thiếu, ngoại lai, trùng trong và giữa snapshot, sai kiểu và lệch danh mục.",
+      "presentMarkers": [
+        "Giá trị thiếu",
+        "Ngoại lai",
+        "Trùng lặp",
+        "Trùng giữa",
+        "Sai kiểu",
+        "Danh mục"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P027",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 7.",
+      "type": "required",
+      "requirement": "qa_report.csv ghi tác động lên số dòng và KPI trước, sau QA.",
+      "presentMarkers": [
+        "reports/qa_report.csv",
+        "KPI trước, sau"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P028",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 8.",
+      "type": "required",
+      "requirement": "Có 5–8 KPI với mục tiêu, công thức, đơn vị, tiền tệ và tính sau QA.",
+      "presentMarkers": [
+        "5–8 KPI",
+        "công thức",
+        "tiền tệ"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P029",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 8.",
+      "type": "required",
+      "requirement": "KPI bao quát khu vực neighbourhood_cleansed, thời gian và ít nhất một KPI từ LLM.",
+      "presentMarkers": [
+        "neighbourhood_cleansed",
+        "Theo thời gian",
+        "Dùng kết quả LLM"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P030",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 8.",
+      "type": "required",
+      "requirement": "Xuất KPI vào data/processed/kpi_*.csv.",
+      "presentMarkers": [
+        "data/processed/kpi_*.csv"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P031",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 10.",
+      "type": "required",
+      "requirement": "Hình bao quát không gian, thời gian và LLM, được sinh tự động vào figures.",
+      "presentMarkers": [
+        "không gian, thời gian",
+        "figures/"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P032",
+      "sourceSection": "cong-viec",
+      "targetHeading": "## 10.",
+      "type": "required",
+      "requirement": "Báo cáo PDF trong reports tối đa 10 trang, format sẽ công bố sau.",
+      "presentMarkers": [
+        "PDF",
+        "10 trang",
+        "Định dạng chi tiết sẽ được công bố sau"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P033",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "LLM chuyển một mẫu review thành dữ liệu có cấu trúc.",
+      "presentMarkers": [
+        "mẫu review",
+        "có cấu trúc"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P034",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "Trích xuất cảm xúc positive/mixed/negative, khía cạnh khen/chê và ngôn ngữ.",
+      "presentMarkers": [
+        "positive",
+        "mixed",
+        "negative",
+        "khía cạnh",
+        "Ngôn ngữ"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P035",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "choice",
+      "requirement": "Gemini API miễn phí là hướng dẫn, nhà cung cấp khác được dùng khi tự trả phí và khai báo.",
+      "presentMarkers": [
+        "Gemini API",
+        "tự chịu chi phí"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P036",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "choice",
+      "requirement": "Nhóm tự chọn và giải thích cỡ mẫu, cách lấy mẫu.",
+      "presentMarkers": [
+        "Cỡ mẫu và cách chọn mẫu do nhóm quyết định"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P037",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "Có phương pháp đối chứng không dùng LLM và ít nhất 100 nhãn tay.",
+      "presentMarkers": [
+        "phương pháp đối chứng",
+        "ít nhất 100"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P038",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "Báo cáo accuracy/F1 của cả hai phương pháp và phân tích lỗi.",
+      "presentMarkers": [
+        "accuracy/F1 của cả LLM",
+        "phân tích lỗi"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P039",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "Ước tính chi phí xử lý toàn bộ review của thành phố.",
+      "presentMarkers": [
+        "ước tính chi phí nếu xử lý hết review"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P040",
+      "sourceSection": "llm",
+      "targetHeading": "## 9.",
+      "type": "required",
+      "requirement": "Ít nhất một KPI và một hình sử dụng kết quả LLM.",
+      "presentMarkers": [
+        "ít nhất một KPI và một hình"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P041",
+      "sourceSection": "minh-bach",
+      "targetHeading": "## 12.",
+      "type": "required",
+      "requirement": "AI_USAGE ở gốc repo và được cập nhật trong quá trình làm.",
+      "presentMarkers": [
+        "AI_USAGE.md",
+        "cập nhật trong quá trình làm"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P042",
+      "sourceSection": "minh-bach",
+      "targetHeading": "## 12.",
+      "type": "required",
+      "requirement": "Khai công cụ, công việc, prompt, bước/tệp liên quan, lỗi thật và cách đối chiếu.",
+      "presentMarkers": [
+        "5–10",
+        "tệp liên quan",
+        "AI thực sự làm sai",
+        "Cách nhóm đối chiếu"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P043",
+      "sourceSection": "minh-bach",
+      "targetHeading": "## 12.",
+      "type": "required",
+      "requirement": "Khai đầy đủ không bị trừ điểm vì dùng AI, giấu hoặc khai man vi phạm chính sách.",
+      "presentMarkers": [
+        "không làm bị trừ điểm",
+        "Giấu hoặc khai man"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P044",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 11.",
+      "type": "choice",
+      "requirement": "Python 3 với thư viện tự chọn, không bắt buộc pandas.",
+      "presentMarkers": [
+        "Python 3",
+        "Không bắt buộc dùng pandas"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P045",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 11.",
+      "type": "required",
+      "requirement": "Phiên bản Python, khóa phiên bản thư viện và README đủ thông tin cài, chạy, khóa API, kết quả.",
+      "presentMarkers": [
+        ".python-version",
+        "`==`",
+        "lockfile",
+        "README.md"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P046",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 14.",
+      "type": "required",
+      "requirement": "Tự clone vào thư mục mới, dựng môi trường và tạo lại số liệu, hình bằng một lệnh.",
+      "presentMarkers": [
+        "Clone repo vào thư mục mới",
+        "tạo lại được số liệu"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P047",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 11.",
+      "type": "required",
+      "requirement": "Giữ đầy đủ nhóm thư mục, tệp môi trường, từ điển dữ liệu và mẫu nhãn tay.",
+      "presentMarkers": [
+        "configs/",
+        "data/raw/",
+        "data/processed/",
+        "data/samples/",
+        "src/",
+        "figures/",
+        "reports/",
+        "notebooks/",
+        "run_pipeline.py",
+        ".env.example",
+        ".gitignore",
+        "AI_USAGE.md",
+        "README.md",
+        "requirements.txt"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P048",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 11.",
+      "type": "example",
+      "requirement": "Tên mô-đun Python là gợi ý, có cache/skip LLM và notebook khảo sát tùy chọn.",
+      "presentMarkers": [
+        "download.py",
+        "qa.py",
+        "kpi.py",
+        "llm.py",
+        "baseline.py",
+        "evaluate.py",
+        "viz.py",
+        "--skip-llm"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P049",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 11.",
+      "type": "example",
+      "requirement": "Cấu hình Santiago giữ đủ khóa, ngày, tiền tệ, ngưỡng, cỡ mẫu, khía cạnh, cache và seed ví dụ.",
+      "presentMarkers": [
+        "city: santiago",
+        "currency: CLP",
+        "price_max_clp: 5000000",
+        "min_nights_cap: 365",
+        "dedupe_keys: [id, last_scraped]",
+        "area_col: neighbourhood_cleansed",
+        "sample_size: 3000",
+        "data/processed/llm_cache.jsonl",
+        "seed: 42"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P050",
+      "sourceSection": "san-pham",
+      "targetHeading": "## 12.",
+      "type": "required",
+      "requirement": "Không để khóa trong mã/Git, dùng biến môi trường hoặc công cụ bí mật và hỗ trợ khóa của giảng viên.",
+      "presentMarkers": [
+        "Không commit khóa API",
+        "biến môi trường"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P051",
+      "sourceSection": "cham-diem",
+      "targetHeading": "## 13.",
+      "type": "required",
+      "requirement": "Vấn đáp khoảng 20 phút, không thuyết trình, hỏi bất kỳ mã hoặc số liệu của sản phẩm.",
+      "presentMarkers": [
+        "20 phút",
+        "Không có phần thuyết trình",
+        "bất kỳ đoạn mã hoặc con số"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P052",
+      "sourceSection": "cham-diem",
+      "targetHeading": "## 13.",
+      "type": "required",
+      "requirement": "Điểm nhóm là trần, điểm cá nhân điều chỉnh theo khả năng giải thích và không dùng AI khi vấn đáp.",
+      "presentMarkers": [
+        "mức trần",
+        "cá nhân",
+        "toàn bộ",
+        "Dùng AI trong buổi vấn đáp"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P053",
+      "sourceSection": "cham-diem",
+      "targetHeading": "## 13.",
+      "type": "required",
+      "requirement": "Bốn nhóm tiêu chí và thang điểm nhóm 10.",
+      "presentMarkers": [
+        "Thiết kế và tái lập",
+        "Lưu trữ và thao tác",
+        "Trực quan hóa và phát hiện",
+        "Làm việc nhóm, đạo đức",
+        "thang 10"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    },
+    {
+      "id": "P054",
+      "sourceSection": "cham-diem",
+      "targetHeading": "## 13.",
+      "type": "pending",
+      "requirement": "Trọng số rubric và mô tả mức điểm chưa được công bố đầy đủ.",
+      "presentMarkers": [
+        "Trọng số chi tiết",
+        "công bố dần"
+      ],
+      "review": "Compared manually with complete source snapshot; markers only detect accidental omissions, not semantic correctness."
+    }
+  ],
+  "cities": 26,
+  "snapshotDates": 104,
+  "limits": [
+    "Coverage markers are not proof of pedagogical quality.",
+    "All source sections read; administrative identity/footer represented in opening and references.",
+    "Internal empty anchor moi-truong is navigation, not an omitted requirement.",
+    "Worked example intentionally pending per user instruction."
+  ]
+}

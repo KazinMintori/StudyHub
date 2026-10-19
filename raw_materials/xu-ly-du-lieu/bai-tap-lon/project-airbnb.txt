@@ -1,0 +1,473 @@
+Bài tập lớn: Inside Airbnb | LTXLDL 2026-2027
+IAI · UET · VNU
+Bài tập lớn: Inside Airbnb
+Xây dựng quy trình phân tích thị trường Airbnb của một thành phố
+Môn học:
+Lập trình xử lý dữ liệu (UET.DSE2049)
+.
+          Học kì 1, năm học 2026-2027.
+Trọng số: 60% điểm học phần.
+Viện Trí tuệ nhân tạo · Trường Đại học Công nghệ, ĐHQGHN
+←
+Trang môn học
+Thông tin chung
+·
+Dữ liệu
+·
+Công việc
+·
+Phân tích dùng LLM
+·
+Minh bạch AI
+·
+Sản phẩm
+·
+Chấm điểm
+Thông tin chung
+Bối cảnh: nhóm sinh viên môn Lập trình xử lý dữ liệu đóng vai một đội phân tích dữ liệu Airbnb. Nhóm tự chọn bên đặt hàng phân tích dữ liệu,
+        ghi rõ trong báo cáo (ví dụ: chính quyền thành phố,
+        quỹ đầu tư, hiệp hội du lịch, ...). Sản phẩm cần nộp
+        là mã nguồn chạy được và một báo cáo về quá trình xử lý dữ liệu và kết quả đạt được.
+        Mọi thành viên phải giải thích được
+mọi thứ nhóm mình nộp
+(code, số liệu, quyết định), không chỉ phần mình phụ trách.
+Nhóm và thành phố
+Mỗi nhóm có
+4-5 sinh viên
+và một thành phố (không trùng với nhóm khác), giao ngay từ đầu kỳ.
+            Phân công chính thức sẽ được đăng trên Canvas Portal.
+GitHub repo
+Tạo GitHub repo
+riêng tư
+, tên gợi ý
+2627-LTXLDL-Airbnb-<TenNhom>
+.
+              Mời cả nhóm cùng tài khoản giảng viên.
+Commit thường xuyên từ đầu kì
+(
+git add
+→
+commit
+→
+push
+).
+              Nộp mốc bằng
+git tag
+rồi
+git push origin <tên-tag>
+.
+Điền liên kết repo vào bảng tính. Thêm
+data/raw/
+vào
+.gitignore
+.
+Các mốc thời gian
+Hạn 23:59 Chủ nhật, theo giờ GitHub commit. Lịch vấn đáp theo lịch thi của Trường.
+Mốc 1
+Không cần tag · 23:59 Chủ nhật
+20/09/2026
+(tuần 2)
+Lập nhóm, tạo repo, nhận thành phố, điền liên kết vào bảng tính.
+Mốc 2
+git tag final
+· 23:59 Chủ nhật
+22/11/2026
+(tuần 11)
+Nộp bản cuối. Ghi mã commit vào báo cáo.
+Mốc 3
+Theo lịch thi của Trường
+Vấn đáp khoảng 20 phút. Hỏi riêng từng thành viên trong nhóm.
+Chính sách AI
+Làm bài ở nhà theo chế độ ✅ mở (xem
+chính sách AI của môn
+). GitHub repo bắt buộc có
+AI_USAGE.md
+.
+Vấn đáp theo chế độ 🚫 đóng: mỗi thành viên phải tự giải thích được mã nguồn và số liệu mà nhóm mình đã nộp.
+Phần phân tích dùng LLM là bắt buộc.
+Dữ liệu Inside Airbnb
+Nguồn:
+Inside Airbnb
+,
+          giấy phép CC BY 4.0. Báo cáo phải ghi nguồn và ngày của từng mốc chụp (snapshot); không commit dữ liệu thô lên Github.
+          Cấu trúc từng tệp, kiểu dữ liệu và các điểm lạ của mỗi bản chụp: nhóm tự khảo sát và ghi vào phần QA.
+data/listings.csv.gz
+— chỗ ở
+data/calendar.csv.gz
+— lịch trống / đã đặt theo ngày
+data/reviews.csv.gz
+— đánh giá văn bản (đầu vào phần LLM)
+visualisations/neighbourhoods.geojson
+— ranh giới khu vực
+https://data.insideairbnb.com/<country>/<region>/<city>/<YYYY-MM-DD>/data/<bảng>.csv.gz
+https://data.insideairbnb.com/<country>/<region>/<city>/<YYYY-MM-DD>/visualisations/neighbourhoods.geojson
+Phân công thành phố
+Mỗi nhóm một thành phố, phân tích sâu trên bốn mốc chụp.
+Bốn mốc bản chụp dưới đây là bắt buộc sử dụng với thành phố tương ứng (các mốc cách nhau khoảng một quý). Thành phố thu thập hàng tháng được dùng thêm mốc khác,
+        nhưng vẫn phải đủ bốn mốc này.
+Danh sách thành phố và bốn mốc chụp (26 thành phố)
+Tây Ban Nha & Bồ Đào Nha
+Barcelona
+spain/catalonia/barcelona
+2025-09-14
+2025-12-14
+2026-03-21
+2026-06-24
+Madrid
+spain/comunidad-de-madrid/madrid
+2025-09-14
+2025-12-14
+2026-03-24
+2026-06-20
+Lisbon
+portugal/lisbon/lisbon
+2025-09-21
+2025-12-25
+2026-03-26
+2026-06-23
+Porto
+portugal/norte/porto
+2025-09-21
+2025-12-25
+2026-03-26
+2026-06-23
+Tây Âu
+Paris
+france/ile-de-france/paris
+2025-09-12
+2025-12-13
+2026-03-21
+2026-06-16
+London
+united-kingdom/england/london
+2025-09-14
+2025-12-13
+2026-03-21
+2026-06-19
+Amsterdam
+the-netherlands/north-holland/amsterdam
+2025-09-11
+2025-12-12
+2026-03-19
+2026-06-15
+Berlin
+germany/be/berlin
+2025-09-23
+2025-12-27
+2026-03-28
+2026-06-26
+Nam Âu & Trung Âu
+Rome
+italy/lazio/rome
+2025-09-14
+2025-12-16
+2026-03-24
+2026-06-20
+Athens
+greece/attica/athens
+2025-09-26
+2025-12-28
+2026-03-30
+2026-06-28
+Prague
+czech-republic/prague/prague
+2025-09-23
+2025-12-27
+2026-03-29
+2026-06-27
+Canada
+Montreal
+canada/qc/montreal
+2025-09-18
+2025-12-22
+2026-03-16
+2026-06-15
+Toronto
+hàng tháng
+canada/on/toronto
+2025-09-11
+2025-11-11
+2026-03-19
+2026-06-15
+Vancouver
+hàng tháng
+canada/bc/vancouver
+2025-09-14
+2025-12-14
+2026-03-21
+2026-05-24
+Mỹ
+New York City
+hàng tháng
+united-states/ny/new-york-city
+2025-09-01
+2025-12-04
+2026-03-16
+2026-06-14
+New Orleans
+united-states/la/new-orleans
+2025-09-11
+2025-12-12
+2026-03-19
+2026-06-16
+Chicago
+united-states/il/chicago
+2025-09-22
+2025-12-25
+2026-03-27
+2026-06-24
+Nam Mỹ
+Buenos Aires
+hàng tháng
+argentina/ciudad-autónoma-de-buenos-aires/buenos-aires
+2025-09-27
+2025-12-29
+2026-03-30
+2026-06-29
+Santiago
+chile/rm/santiago
+2025-09-27
+2025-12-29
+2026-03-30
+2026-06-29
+Rio de Janeiro
+brazil/rj/rio-de-janeiro
+2025-09-26
+2025-12-28
+2026-03-30
+2026-06-24
+Châu Phi & châu Úc
+Cape Town
+south-africa/wc/cape-town
+2025-09-28
+2025-12-29
+2026-03-30
+2026-06-29
+Melbourne
+australia/vic/melbourne
+2025-09-12
+2025-12-12
+2026-03-21
+2026-06-16
+Châu Á
+Bangkok
+thailand/central-thailand/bangkok
+2025-09-26
+2025-12-28
+2026-03-30
+2026-06-29
+Singapore
+singapore/sg/singapore
+2025-09-28
+2025-12-29
+2026-03-30
+2026-06-29
+Taipei
+taiwan/northern-taiwan/taipei
+2025-09-30
+2025-12-31
+2026-03-31
+2026-06-30
+Tokyo
+japan/kantō/tokyo
+2025-09-29
+2025-12-29
+2026-03-30
+2026-06-30
+Công việc và tiêu chuẩn chất lượng
+Đề bài chỉ nêu
+sản phẩm phải nộp
+. Nhóm tự lựa chọn QA, KPI và cách trình bày,
+        sau đó
+bảo vệ các lựa chọn đó khi vấn đáp
+.
+1) Quy trình chạy bằng một lệnh
+Sau khi cài môi trường theo
+README.md
+, một lệnh chạy toàn bộ quy trình, ví dụ:
+python run_pipeline.py --config configs/lisbon.yaml
+Thành phố và mốc chụp nằm trong
+tệp cấu hình
+, không ghi cứng trong mã.
+Chạy được trên máy sạch theo
+yêu cầu môi trường và thư viện
+bên dưới.
+Bộ test chung.
+Khi chấm, giảng viên chạy
+cùng một bộ kiểm thử
+trên repo của mọi nhóm:
+          dựng môi trường theo README, chạy quy trình bằng một lệnh trên mốc chụp do giảng viên chọn (có thể là mốc nhóm
+          chưa xử lý, chỉ sửa tệp cấu hình), rồi kiểm tra các tệp đầu ra.
+Bước LLM cũng được chạy lại thật
+trong lúc test, với khoá API do giảng viên đặt trong biến môi trường; vì vậy mã phải đọc khoá từ biến môi trường
+          và chạy được với khoá bất kỳ. Phần phân tích dùng LLM được chấm thêm trên bộ nhãn tay của nhóm.
+2) Thu thập dữ liệu
+Tải đủ bốn mốc của thành phố nhóm bằng script; kiểm tệp tồn tại và có cột khoá.
+Dữ liệu thô vào
+data/raw/
+(gitignore); chỉ commit
+data/processed/
+khi dưới 50 MB.
+3) QA do nhóm tự đề xuất
+Mỗi quy tắc:
+tên → điều kiện → lý do → hành động
+; ưu tiên
+gắn cờ
+.
+Bao gồm ít nhất các trường hợp sau: thiếu, ngoại lai, trùng (trong và giữa các mốc), kiểu sai, danh mục lệch.
+Ghi vào
+reports/qa_report.csv
+các tác động (số dòng; KPI trước và sau).
+4) KPI: 5-8 chỉ số, gắn với bên liên quan
+Mỗi KPI:
+tên → mục tiêu → công thức → đơn vị
+; tính
+sau QA
+; ghi rõ tiền tệ.
+Ít nhất một KPI theo khu vực (
+neighbourhood_cleansed
+) và theo thời gian; ít nhất một KPI dùng kết quả LLM.
+Ghi KPI vào
+data/processed/kpi_*.csv
+.
+5) Trực quan hoá
+Vẽ theo các góc độ sau: không gian, thời gian, LLM.
+Hình sinh tự động vào
+figures/
+.
+6) Báo cáo kỹ thuật
+PDF (tối đa 10 trang, theo format sẽ được công bố sau) trong
+reports/
+.
+Phần phân tích dùng LLM
+Dùng LLM biến một mẫu bảng
+reviews
+thành dữ liệu có cấu trúc, rồi tự đo chất lượng kết quả.
+Trích xuất mỗi đánh giá:
+cảm xúc (
+positive / mixed / negative
+), khía cạnh khen/chê, ngôn ngữ.
+            Đầu ra có cấu trúc.
+Công cụ:
+Gemini API gói miễn phí; nhà cung cấp khác nếu tự trả phí và ghi trong
+AI_USAGE.md
+.
+Mẫu:
+cỡ mẫu và cách chọn do nhóm quyết định và giải thích.
+Kiểm chứng:
+phương pháp đối chứng không dùng LLM và ít nhất 100 nhãn tay;
+            báo cáo accuracy/F1 của cả hai, kèm phân tích lỗi.
+Chi phí:
+ước tính nếu xử lý hết đánh giá của thành phố.
+Tích hợp:
+ít nhất một KPI và một hình dùng kết quả LLM.
+Minh bạch AI:
+AI_USAGE.md
+Đây là tệp bắt buộc ở gốc GitHub repo, cần cập nhật suốt kì. Khai báo đầy đủ không bị trừ điểm.
+          Giấu hoặc khai man là vi phạm
+chính sách AI
+.
+# AI_USAGE.md
+## Công cụ đã dùng (vào việc gì)
+## Prompt then chốt (5-10): bước nào, vào tệp nào
+## AI sai ở đâu (ví dụ thật)
+## Nhóm kiểm chứng thế nào
+Sản phẩm bàn giao
+Môi trường chạy và thư viện
+Python 3
+; thư viện tự chọn (không bắt buộc pandas), miễn giải thích và kiểm chứng được.
+.python-version
+: một dòng, phiên bản Python đã chạy thử (
+3.x.y
+).
+requirements.txt
+ghim
+==
+đủ để chạy quy trình (hoặc lockfile tương đương).
+README.md
+: cách cài, lệnh chạy, tên biến môi trường chứa khoá API, tệp kết quả để đối chiếu.
+Tự kiểm trước khi nộp:
+clone vào thư mục mới, dựng môi trường theo README, chạy một lệnh,
+            tạo lại được số liệu và hình trong báo cáo.
+Cấu trúc GitHub repo yêu cầu
+.
+├── configs/
+│   └── <city>.yaml           # mỗi thành phố một tệp: dataRoot, danh sách mốc chụp, tham số QA/KPI/LLM
+├── data/
+│   ├── raw/                  # dữ liệu thô: KHÔNG commit (gitignore), do script tải sinh ra
+│   ├── processed/            # dữ liệu sạch, kpi_*.csv, kết quả LLM đã lưu (commit nếu <50 MB)
+│   └── samples/              # mẫu nhỏ để test nhanh + tệp ≥100 nhãn tay (review_id, nhãn)
+├── src/                      # mã nguồn quy trình, tách mô-đun (gợi ý):
+│   ├── download.py           #   tải + kiểm toàn vẹn
+│   ├── qa.py                 #   làm sạch + bộ quy tắc QA, xuất qa_report.csv
+│   ├── kpi.py                #   tính KPI
+│   ├── llm.py                #   trích xuất bằng LLM (có cache, --skip-llm)
+│   ├── baseline.py           #   phương pháp đối chứng không LLM
+│   ├── evaluate.py           #   chấm LLM vs đối chứng trên nhãn tay
+│   └── viz.py                #   sinh hình vào figures/
+├── figures/                  # hình sinh tự động từ quy trình
+├── reports/                  # report.pdf, qa_report.csv, từ điển dữ liệu
+├── notebooks/                # notebook khám phá (nếu có), không phải quy trình chính
+├── run_pipeline.py           # (hoặc Makefile) một lệnh gọi các mô-đun theo thứ tự
+├── .python-version           # một dòng: phiên bản Python đã kiểm thử (3.x.y)
+├── .env.example              # tên biến môi trường cho khoá API (KHÔNG chứa khoá thật)
+├── .gitignore                # loại data/raw/, .venv/, .env và mọi tệp chứa khoá
+├── AI_USAGE.md               # khai báo AI (bắt buộc)
+├── README.md                 # tham chiếu .python-version; môi trường, cài đặt, cách chạy/chấm lại
+└── requirements.txt          # thư viện ghim phiên bản (hoặc bộ tệp lockfile tương đương)
+Ví dụ
+configs/<city>.yaml
+Giá trị dưới đây là minh hoạ.
+city: santiago
+data_root: chile/rm/santiago      # dựng URL: data.insideairbnb.com/<data_root>/<mốc>/...
+currency: CLP
+snapshots: [2025-09-27, 2025-12-29, 2026-03-30, 2026-06-29]
+
+qa:
+  price_max_clp: 5000000          # ngưỡng ngoại lai giá
+  min_nights_cap: 365
+  dedupe_keys: [id, last_scraped]
+
+kpi:
+  area_col: neighbourhood_cleansed
+
+llm:
+  provider: gemini                # model tuỳ chọn
+  sample_size: 3000               # nhóm giải thích cỡ mẫu
+  aspects: [vị trí, sạch sẽ, chủ nhà, giá trị, tiện nghi, độ ồn, an toàn]
+  cache: data/processed/llm_cache.jsonl
+
+seed: 42
+Bảo mật:
+không commit khoá API (biến môi trường / Colab Secrets). Khi chấm, giảng viên dùng khoá
+        riêng đặt trong biến môi trường.
+Chấm điểm
+Vấn đáp: hỏi riêng từng thành viên
+Mỗi nhóm khoảng 20 phút,
+không có phần trình bày
+: vào thẳng
+hỏi riêng từng người
+(mở ngẫu nhiên
+bất kỳ đoạn mã hoặc số liệu
+trong sản phẩm mà nhóm nộp).
+Điểm nhóm là trần; vấn đáp điều chỉnh điểm từng người.
+Mỗi thành viên chịu trách nhiệm cho toàn bộ sản phẩm
+: không giải thích được phần được hỏi
+            thì cá nhân đó bị trừ điểm, dù phần đó do người khác trong nhóm viết.
+Dùng AI lúc vấn đáp là gian lận (chế độ 🚫 đóng).
+Rubric
+Bốn tiêu chí:
+thiết kế và tái lập quy trình
+·
+lưu trữ và thao tác dữ liệu
+·
+trực quan hoá và phát hiện
+·
+làm việc nhóm, đạo đức và minh bạch AI
+.
+        Điểm nhóm (thang 10) được điều chỉnh từng người qua vấn đáp.
+Trọng số và mô tả các mức điểm:
+công bố dần
+.
+Hết đề bài. Chúc các nhóm hoàn thành tốt bài tập lớn.
+Viện Trí tuệ nhân tạo · Trường Đại học Công nghệ · Đại học Quốc gia Hà Nội
